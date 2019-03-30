@@ -17,26 +17,26 @@
 //
 
 
-goog.provide('sre.ClearspeakFractions');
+goog.provide('sre.ClearspeakEnglishFractions');
 
-goog.require('sre.ClearspeakRuleTest');
+goog.require('sre.ClearspeakEnglishRuleTest');
 
 
 
 /**
 * @constructor
-* @extends {sre.ClearspeakRuleTest}
+* @extends {sre.ClearspeakEnglishRuleTest}
 */
-sre.ClearspeakFractions = function() {
-  sre.ClearspeakFractions.base(this, 'constructor');
+sre.ClearspeakEnglishFractions = function() {
+  sre.ClearspeakEnglishFractions.base(this, 'constructor');
 
   /**
 * @override
   */
-  this.information = 'ClearspeakFractions rule tests.';
+  this.information = 'ClearspeakEnglishFractions rule tests.';
 
 };
-goog.inherits(sre.ClearspeakFractions, sre.ClearspeakRuleTest);
+goog.inherits(sre.ClearspeakEnglishFractions, sre.ClearspeakEnglishRuleTest);
 
 
 
@@ -46,9 +46,9 @@ goog.inherits(sre.ClearspeakFractions, sre.ClearspeakRuleTest);
 
 
 /**
- * Testing ClearspeakFractions Example Frac001
+ * Testing ClearspeakEnglishFractions Example Frac001
  */
-sre.ClearspeakFractions.prototype.testFrac001 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac001 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>';
   var speech = 'one half';
@@ -57,9 +57,9 @@ sre.ClearspeakFractions.prototype.testFrac001 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac002
+ * Testing ClearspeakEnglishFractions Example Frac002
  */
-sre.ClearspeakFractions.prototype.testFrac002 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac002 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32' +
       '</mn></mrow></mfrac></mrow></math>';
@@ -69,9 +69,9 @@ sre.ClearspeakFractions.prototype.testFrac002 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac002a
+ * Testing ClearspeakEnglishFractions Example Frac002a
  */
-sre.ClearspeakFractions.prototype.testFrac002a = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac002a = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mi>x</mi><mi>y</mi></mfrac></mrow></math>';
   var speech = 'x over y';
@@ -80,9 +80,9 @@ sre.ClearspeakFractions.prototype.testFrac002a = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac002b
+ * Testing ClearspeakEnglishFractions Example Frac002b
  */
-sre.ClearspeakFractions.prototype.testFrac002b = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac002b = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mn>2</mn><mi>x</mi></mrow><mrow>' +
       '<mn>3</mn><mi>y</mi></mrow></mfrac></mrow></math>';
@@ -92,9 +92,9 @@ sre.ClearspeakFractions.prototype.testFrac002b = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac002c
+ * Testing ClearspeakEnglishFractions Example Frac002c
  */
-sre.ClearspeakFractions.prototype.testFrac002c = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac002c = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mi>y</mi></mrow><mrow>' +
       '<mi>c</mi><mi>d</mi></mrow></mfrac></mrow></math>';
@@ -104,9 +104,9 @@ sre.ClearspeakFractions.prototype.testFrac002c = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac002d
+ * Testing ClearspeakEnglishFractions Example Frac002d
  */
-sre.ClearspeakFractions.prototype.testFrac002d = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac002d = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mfrac><mn>1</mn><mn>2</mn>' +
       '</mfrac></mrow><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow>' +
@@ -117,9 +117,9 @@ sre.ClearspeakFractions.prototype.testFrac002d = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac002e
+ * Testing ClearspeakEnglishFractions Example Frac002e
  */
-sre.ClearspeakFractions.prototype.testFrac002e = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac002e = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mo>−</mo><mi>x</mi></mrow><mi>y' +
       '</mi></mfrac></mrow></math>';
@@ -129,9 +129,9 @@ sre.ClearspeakFractions.prototype.testFrac002e = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac002f
+ * Testing ClearspeakEnglishFractions Example Frac002f
  */
-sre.ClearspeakFractions.prototype.testFrac002f = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac002f = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mo>−</mo><mn>2</mn><mi>x</mi>' +
       '</mrow><mrow><mn>3</mn><mi>y</mi></mrow></mfrac></mrow></math>';
@@ -141,9 +141,9 @@ sre.ClearspeakFractions.prototype.testFrac002f = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac002g
+ * Testing ClearspeakEnglishFractions Example Frac002g
  */
-sre.ClearspeakFractions.prototype.testFrac002g = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac002g = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mi>y</mi></mrow><mrow>' +
       '<mo>−</mo><mi>c</mi><mi>d</mi></mrow></mfrac></mrow></math>';
@@ -153,9 +153,9 @@ sre.ClearspeakFractions.prototype.testFrac002g = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac002h
+ * Testing ClearspeakEnglishFractions Example Frac002h
  */
-sre.ClearspeakFractions.prototype.testFrac002h = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac002h = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mfrac><mn>1</mn><mn>2</mn>' +
       '</mfrac></mrow><mrow><mo>−</mo><mfrac><mn>1</mn><mn>3</mn></mfrac>' +
@@ -166,9 +166,9 @@ sre.ClearspeakFractions.prototype.testFrac002h = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac003
+ * Testing ClearspeakEnglishFractions Example Frac003
  */
-sre.ClearspeakFractions.prototype.testFrac003 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac003 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn>' +
       '</mrow><mrow><mn>13</mn></mrow></mfrac></mrow></math>';
@@ -178,9 +178,9 @@ sre.ClearspeakFractions.prototype.testFrac003 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac004
+ * Testing ClearspeakEnglishFractions Example Frac004
  */
-sre.ClearspeakFractions.prototype.testFrac004 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac004 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mn>2</mn></mfrac></mrow></math>';
@@ -190,9 +190,9 @@ sre.ClearspeakFractions.prototype.testFrac004 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac005
+ * Testing ClearspeakEnglishFractions Example Frac005
  */
-sre.ClearspeakFractions.prototype.testFrac005 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac005 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></mrow>' +
@@ -204,9 +204,9 @@ sre.ClearspeakFractions.prototype.testFrac005 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac006
+ * Testing ClearspeakEnglishFractions Example Frac006
  */
-sre.ClearspeakFractions.prototype.testFrac006 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac006 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo>' +
@@ -218,9 +218,9 @@ sre.ClearspeakFractions.prototype.testFrac006 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac007
+ * Testing ClearspeakEnglishFractions Example Frac007
  */
-sre.ClearspeakFractions.prototype.testFrac007 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac007 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mtext>miles</mtext></mrow><mrow>' +
       '<mtext>gallon</mtext></mrow></mfrac></mrow></math>';
@@ -230,9 +230,9 @@ sre.ClearspeakFractions.prototype.testFrac007 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac008
+ * Testing ClearspeakEnglishFractions Example Frac008
  */
-sre.ClearspeakFractions.prototype.testFrac008 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac008 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mn>2</mn><mtext>miles</mtext>' +
       '</mrow><mrow><mn>3</mn><mtext>gallons</mtext></mrow></mfrac></mrow>' +
@@ -243,9 +243,9 @@ sre.ClearspeakFractions.prototype.testFrac008 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac009
+ * Testing ClearspeakEnglishFractions Example Frac009
  */
-sre.ClearspeakFractions.prototype.testFrac009 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac009 = function() {
   var preference = 'Fraction_Over';
   var mathml = '<math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>';
   var speech = '1 over 2';
@@ -254,9 +254,9 @@ sre.ClearspeakFractions.prototype.testFrac009 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac010
+ * Testing ClearspeakEnglishFractions Example Frac010
  */
-sre.ClearspeakFractions.prototype.testFrac010 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac010 = function() {
   var preference = 'Fraction_Over';
   var mathml = '<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32' +
       '</mn></mrow></mfrac></mrow></math>';
@@ -266,9 +266,9 @@ sre.ClearspeakFractions.prototype.testFrac010 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac011
+ * Testing ClearspeakEnglishFractions Example Frac011
  */
-sre.ClearspeakFractions.prototype.testFrac011 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac011 = function() {
   var preference = 'Fraction_Over';
   var mathml = '<math><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn>' +
       '</mrow><mrow><mn>13</mn></mrow></mfrac></mrow></math>';
@@ -278,9 +278,9 @@ sre.ClearspeakFractions.prototype.testFrac011 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac012
+ * Testing ClearspeakEnglishFractions Example Frac012
  */
-sre.ClearspeakFractions.prototype.testFrac012 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac012 = function() {
   var preference = 'Fraction_Over';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mn>2</mn></mfrac></mrow></math>';
@@ -290,9 +290,9 @@ sre.ClearspeakFractions.prototype.testFrac012 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac013
+ * Testing ClearspeakEnglishFractions Example Frac013
  */
-sre.ClearspeakFractions.prototype.testFrac013 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac013 = function() {
   var preference = 'Fraction_Over';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></mrow>' +
@@ -303,9 +303,9 @@ sre.ClearspeakFractions.prototype.testFrac013 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac014
+ * Testing ClearspeakEnglishFractions Example Frac014
  */
-sre.ClearspeakFractions.prototype.testFrac014 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac014 = function() {
   var preference = 'Fraction_Over';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo>' +
@@ -316,9 +316,9 @@ sre.ClearspeakFractions.prototype.testFrac014 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac015
+ * Testing ClearspeakEnglishFractions Example Frac015
  */
-sre.ClearspeakFractions.prototype.testFrac015 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac015 = function() {
   var preference = 'Fraction_Over';
   var mathml = '<math><mrow><mfrac><mrow><mtext>miles</mtext></mrow><mrow>' +
       '<mtext>gallon</mtext></mrow></mfrac></mrow></math>';
@@ -328,9 +328,9 @@ sre.ClearspeakFractions.prototype.testFrac015 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac016
+ * Testing ClearspeakEnglishFractions Example Frac016
  */
-sre.ClearspeakFractions.prototype.testFrac016 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac016 = function() {
   var preference = 'Fraction_Over';
   var mathml = '<math><mrow><mfrac><mrow><mn>2</mn><mtext>miles</mtext>' +
       '</mrow><mrow><mn>3</mn><mtext>gallons</mtext></mrow></mfrac></mrow>' +
@@ -341,9 +341,9 @@ sre.ClearspeakFractions.prototype.testFrac016 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac017
+ * Testing ClearspeakEnglishFractions Example Frac017
  */
-sre.ClearspeakFractions.prototype.testFrac017 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac017 = function() {
   var preference = 'Fraction_OverEndFrac';
   var mathml = '<math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>';
   var speech = '1 over 2, end fraction';
@@ -352,9 +352,9 @@ sre.ClearspeakFractions.prototype.testFrac017 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac018
+ * Testing ClearspeakEnglishFractions Example Frac018
  */
-sre.ClearspeakFractions.prototype.testFrac018 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac018 = function() {
   var preference = 'Fraction_OverEndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32' +
       '</mn></mrow></mfrac></mrow></math>';
@@ -364,9 +364,9 @@ sre.ClearspeakFractions.prototype.testFrac018 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac019
+ * Testing ClearspeakEnglishFractions Example Frac019
  */
-sre.ClearspeakFractions.prototype.testFrac019 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac019 = function() {
   var preference = 'Fraction_OverEndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn>' +
       '</mrow><mrow><mn>13</mn></mrow></mfrac></mrow></math>';
@@ -376,9 +376,9 @@ sre.ClearspeakFractions.prototype.testFrac019 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac020
+ * Testing ClearspeakEnglishFractions Example Frac020
  */
-sre.ClearspeakFractions.prototype.testFrac020 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac020 = function() {
   var preference = 'Fraction_OverEndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mn>2</mn></mfrac></mrow></math>';
@@ -388,9 +388,9 @@ sre.ClearspeakFractions.prototype.testFrac020 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac021
+ * Testing ClearspeakEnglishFractions Example Frac021
  */
-sre.ClearspeakFractions.prototype.testFrac021 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac021 = function() {
   var preference = 'Fraction_OverEndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></mrow>' +
@@ -401,9 +401,9 @@ sre.ClearspeakFractions.prototype.testFrac021 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac022
+ * Testing ClearspeakEnglishFractions Example Frac022
  */
-sre.ClearspeakFractions.prototype.testFrac022 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac022 = function() {
   var preference = 'Fraction_OverEndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo>' +
@@ -415,9 +415,9 @@ sre.ClearspeakFractions.prototype.testFrac022 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac023
+ * Testing ClearspeakEnglishFractions Example Frac023
  */
-sre.ClearspeakFractions.prototype.testFrac023 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac023 = function() {
   var preference = 'Fraction_OverEndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mtext>miles</mtext></mrow><mrow>' +
       '<mtext>gallons</mtext></mrow></mfrac></mrow></math>';
@@ -427,9 +427,9 @@ sre.ClearspeakFractions.prototype.testFrac023 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac024
+ * Testing ClearspeakEnglishFractions Example Frac024
  */
-sre.ClearspeakFractions.prototype.testFrac024 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac024 = function() {
   var preference = 'Fraction_OverEndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mn>2</mn><mtext>miles</mtext>' +
       '</mrow><mrow><mn>3</mn><mtext>gallons</mtext></mrow></mfrac></mrow>' +
@@ -440,9 +440,9 @@ sre.ClearspeakFractions.prototype.testFrac024 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac025
+ * Testing ClearspeakEnglishFractions Example Frac025
  */
-sre.ClearspeakFractions.prototype.testFrac025 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac025 = function() {
   var preference = 'Fraction_GeneralEndFrac';
   var mathml = '<math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>';
   var speech = 'the fraction with numerator 1, and denominator 2, end fraction';
@@ -451,9 +451,9 @@ sre.ClearspeakFractions.prototype.testFrac025 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac026
+ * Testing ClearspeakEnglishFractions Example Frac026
  */
-sre.ClearspeakFractions.prototype.testFrac026 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac026 = function() {
   var preference = 'Fraction_GeneralEndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32' +
       '</mn></mrow></mfrac></mrow></math>';
@@ -464,9 +464,9 @@ sre.ClearspeakFractions.prototype.testFrac026 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac027
+ * Testing ClearspeakEnglishFractions Example Frac027
  */
-sre.ClearspeakFractions.prototype.testFrac027 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac027 = function() {
   var preference = 'Fraction_GeneralEndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn>' +
       '</mrow><mrow><mn>13</mn></mrow></mfrac></mrow></math>';
@@ -477,9 +477,9 @@ sre.ClearspeakFractions.prototype.testFrac027 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac028
+ * Testing ClearspeakEnglishFractions Example Frac028
  */
-sre.ClearspeakFractions.prototype.testFrac028 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac028 = function() {
   var preference = 'Fraction_GeneralEndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mn>2</mn></mfrac></mrow></math>';
@@ -490,9 +490,9 @@ sre.ClearspeakFractions.prototype.testFrac028 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac029
+ * Testing ClearspeakEnglishFractions Example Frac029
  */
-sre.ClearspeakFractions.prototype.testFrac029 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac029 = function() {
   var preference = 'Fraction_GeneralEndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></mrow>' +
@@ -504,9 +504,9 @@ sre.ClearspeakFractions.prototype.testFrac029 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac030
+ * Testing ClearspeakEnglishFractions Example Frac030
  */
-sre.ClearspeakFractions.prototype.testFrac030 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac030 = function() {
   var preference = 'Fraction_GeneralEndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo>' +
@@ -519,9 +519,9 @@ sre.ClearspeakFractions.prototype.testFrac030 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac031
+ * Testing ClearspeakEnglishFractions Example Frac031
  */
-sre.ClearspeakFractions.prototype.testFrac031 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac031 = function() {
   var preference = 'Fraction_GeneralEndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mtext>miles</mtext></mrow><mrow>' +
       '<mtext>gallon</mtext></mrow></mfrac></mrow></math>';
@@ -532,9 +532,9 @@ sre.ClearspeakFractions.prototype.testFrac031 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac032
+ * Testing ClearspeakEnglishFractions Example Frac032
  */
-sre.ClearspeakFractions.prototype.testFrac032 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac032 = function() {
   var preference = 'Fraction_General';
   var mathml = '<math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>';
   var speech = 'the fraction with numerator 1, and denominator 2';
@@ -543,9 +543,9 @@ sre.ClearspeakFractions.prototype.testFrac032 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac033
+ * Testing ClearspeakEnglishFractions Example Frac033
  */
-sre.ClearspeakFractions.prototype.testFrac033 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac033 = function() {
   var preference = 'Fraction_General';
   var mathml = '<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32' +
       '</mn></mrow></mfrac></mrow></math>';
@@ -555,9 +555,9 @@ sre.ClearspeakFractions.prototype.testFrac033 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac034
+ * Testing ClearspeakEnglishFractions Example Frac034
  */
-sre.ClearspeakFractions.prototype.testFrac034 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac034 = function() {
   var preference = 'Fraction_General';
   var mathml = '<math><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn>' +
       '</mrow><mrow><mn>13</mn></mrow></mfrac></mrow></math>';
@@ -567,9 +567,9 @@ sre.ClearspeakFractions.prototype.testFrac034 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac035
+ * Testing ClearspeakEnglishFractions Example Frac035
  */
-sre.ClearspeakFractions.prototype.testFrac035 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac035 = function() {
   var preference = 'Fraction_General';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mn>2</mn></mfrac></mrow></math>';
@@ -579,9 +579,9 @@ sre.ClearspeakFractions.prototype.testFrac035 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac036
+ * Testing ClearspeakEnglishFractions Example Frac036
  */
-sre.ClearspeakFractions.prototype.testFrac036 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac036 = function() {
   var preference = 'Fraction_General';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></mrow>' +
@@ -593,9 +593,9 @@ sre.ClearspeakFractions.prototype.testFrac036 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac037
+ * Testing ClearspeakEnglishFractions Example Frac037
  */
-sre.ClearspeakFractions.prototype.testFrac037 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac037 = function() {
   var preference = 'Fraction_General';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo>' +
@@ -607,9 +607,9 @@ sre.ClearspeakFractions.prototype.testFrac037 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac038
+ * Testing ClearspeakEnglishFractions Example Frac038
  */
-sre.ClearspeakFractions.prototype.testFrac038 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac038 = function() {
   var preference = 'Fraction_General';
   var mathml = '<math><mrow><mfrac><mrow><mtext>miles</mtext></mrow><mrow>' +
       '<mtext>gallon</mtext></mrow></mfrac></mrow></math>';
@@ -619,9 +619,9 @@ sre.ClearspeakFractions.prototype.testFrac038 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac039
+ * Testing ClearspeakEnglishFractions Example Frac039
  */
-sre.ClearspeakFractions.prototype.testFrac039 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac039 = function() {
   var preference = 'Fraction_General';
   var mathml = '<math><mrow><mfrac><mrow><mn>2</mn><mtext>miles</mtext>' +
       '</mrow><mrow><mn>3</mn><mtext>gallons</mtext></mrow></mfrac></mrow>' +
@@ -632,9 +632,9 @@ sre.ClearspeakFractions.prototype.testFrac039 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac040
+ * Testing ClearspeakEnglishFractions Example Frac040
  */
-sre.ClearspeakFractions.prototype.testFrac040 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac040 = function() {
   var preference = 'Fraction_FracOver';
   var mathml = '<math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>';
   var speech = 'the fraction 1 over 2';
@@ -643,9 +643,9 @@ sre.ClearspeakFractions.prototype.testFrac040 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac041
+ * Testing ClearspeakEnglishFractions Example Frac041
  */
-sre.ClearspeakFractions.prototype.testFrac041 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac041 = function() {
   var preference = 'Fraction_FracOver';
   var mathml = '<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32' +
       '</mn></mrow></mfrac></mrow></math>';
@@ -655,9 +655,9 @@ sre.ClearspeakFractions.prototype.testFrac041 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac042
+ * Testing ClearspeakEnglishFractions Example Frac042
  */
-sre.ClearspeakFractions.prototype.testFrac042 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac042 = function() {
   var preference = 'Fraction_FracOver';
   var mathml = '<math><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn>' +
       '</mrow><mrow><mn>13</mn></mrow></mfrac></mrow></math>';
@@ -667,9 +667,9 @@ sre.ClearspeakFractions.prototype.testFrac042 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac043
+ * Testing ClearspeakEnglishFractions Example Frac043
  */
-sre.ClearspeakFractions.prototype.testFrac043 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac043 = function() {
   var preference = 'Fraction_FracOver';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mn>2</mn></mfrac></mrow></math>';
@@ -679,9 +679,9 @@ sre.ClearspeakFractions.prototype.testFrac043 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac044
+ * Testing ClearspeakEnglishFractions Example Frac044
  */
-sre.ClearspeakFractions.prototype.testFrac044 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac044 = function() {
   var preference = 'Fraction_FracOver';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></mrow>' +
@@ -692,9 +692,9 @@ sre.ClearspeakFractions.prototype.testFrac044 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac045
+ * Testing ClearspeakEnglishFractions Example Frac045
  */
-sre.ClearspeakFractions.prototype.testFrac045 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac045 = function() {
   var preference = 'Fraction_FracOver';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo>' +
@@ -706,9 +706,9 @@ sre.ClearspeakFractions.prototype.testFrac045 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac046
+ * Testing ClearspeakEnglishFractions Example Frac046
  */
-sre.ClearspeakFractions.prototype.testFrac046 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac046 = function() {
   var preference = 'Fraction_FracOver';
   var mathml = '<math><mrow><mfrac><mrow><mtext>miles</mtext></mrow><mrow>' +
       '<mtext>gallon</mtext></mrow></mfrac></mrow></math>';
@@ -718,9 +718,9 @@ sre.ClearspeakFractions.prototype.testFrac046 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac047
+ * Testing ClearspeakEnglishFractions Example Frac047
  */
-sre.ClearspeakFractions.prototype.testFrac047 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac047 = function() {
   var preference = 'Fraction_FracOver';
   var mathml = '<math><mrow><mfrac><mrow><mn>2</mn><mtext>miles</mtext>' +
       '</mrow><mrow><mn>3</mn><mtext>gallons</mtext></mrow></mfrac></mrow>' +
@@ -731,9 +731,9 @@ sre.ClearspeakFractions.prototype.testFrac047 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac048
+ * Testing ClearspeakEnglishFractions Example Frac048
  */
-sre.ClearspeakFractions.prototype.testFrac048 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac048 = function() {
   var preference = 'Fraction_Per';
   var mathml = '<math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>';
   var speech = '1 per 2';
@@ -742,9 +742,9 @@ sre.ClearspeakFractions.prototype.testFrac048 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac049
+ * Testing ClearspeakEnglishFractions Example Frac049
  */
-sre.ClearspeakFractions.prototype.testFrac049 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac049 = function() {
   var preference = 'Fraction_Per';
   var mathml = '<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32' +
       '</mn></mrow></mfrac></mrow></math>';
@@ -754,9 +754,9 @@ sre.ClearspeakFractions.prototype.testFrac049 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac050
+ * Testing ClearspeakEnglishFractions Example Frac050
  */
-sre.ClearspeakFractions.prototype.testFrac050 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac050 = function() {
   var preference = 'Fraction_Per';
   var mathml = '<math><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn>' +
       '</mrow><mrow><mn>13</mn></mrow></mfrac></mrow></math>';
@@ -766,9 +766,9 @@ sre.ClearspeakFractions.prototype.testFrac050 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac051
+ * Testing ClearspeakEnglishFractions Example Frac051
  */
-sre.ClearspeakFractions.prototype.testFrac051 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac051 = function() {
   var preference = 'Fraction_Per';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mn>2</mn></mfrac></mrow></math>';
@@ -778,9 +778,9 @@ sre.ClearspeakFractions.prototype.testFrac051 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac052
+ * Testing ClearspeakEnglishFractions Example Frac052
  */
-sre.ClearspeakFractions.prototype.testFrac052 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac052 = function() {
   var preference = 'Fraction_Per';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></mrow>' +
@@ -791,9 +791,9 @@ sre.ClearspeakFractions.prototype.testFrac052 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac053
+ * Testing ClearspeakEnglishFractions Example Frac053
  */
-sre.ClearspeakFractions.prototype.testFrac053 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac053 = function() {
   var preference = 'Fraction_Per';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo>' +
@@ -804,9 +804,9 @@ sre.ClearspeakFractions.prototype.testFrac053 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac054
+ * Testing ClearspeakEnglishFractions Example Frac054
  */
-sre.ClearspeakFractions.prototype.testFrac054 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac054 = function() {
   var preference = 'Fraction_Per';
   var mathml = '<math><mrow><mfrac><mrow><mtext>miles</mtext></mrow><mrow>' +
       '<mtext>gallon</mtext></mrow></mfrac></mrow></math>';
@@ -816,9 +816,9 @@ sre.ClearspeakFractions.prototype.testFrac054 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac055
+ * Testing ClearspeakEnglishFractions Example Frac055
  */
-sre.ClearspeakFractions.prototype.testFrac055 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac055 = function() {
   var preference = 'Fraction_Per';
   var mathml = '<math><mrow><mfrac><mrow><mn>2</mn><mtext>miles</mtext>' +
       '</mrow><mrow><mn>3</mn><mtext>gallons</mtext></mrow></mfrac></mrow>' +
@@ -829,9 +829,9 @@ sre.ClearspeakFractions.prototype.testFrac055 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac056
+ * Testing ClearspeakEnglishFractions Example Frac056
  */
-sre.ClearspeakFractions.prototype.testFrac056 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac056 = function() {
   var preference = 'Fraction_Ordinal';
   var mathml = '<math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>';
   var speech = 'one half';
@@ -840,9 +840,9 @@ sre.ClearspeakFractions.prototype.testFrac056 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac057
+ * Testing ClearspeakEnglishFractions Example Frac057
  */
-sre.ClearspeakFractions.prototype.testFrac057 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac057 = function() {
   var preference = 'Fraction_Ordinal';
   var mathml = '<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32' +
       '</mn></mrow></mfrac></mrow></math>';
@@ -852,9 +852,9 @@ sre.ClearspeakFractions.prototype.testFrac057 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac058
+ * Testing ClearspeakEnglishFractions Example Frac058
  */
-sre.ClearspeakFractions.prototype.testFrac058 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac058 = function() {
   var preference = 'Fraction_Ordinal';
   var mathml = '<math><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn>' +
       '</mrow><mrow><mn>13</mn></mrow></mfrac></mrow></math>';
@@ -864,9 +864,9 @@ sre.ClearspeakFractions.prototype.testFrac058 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac059
+ * Testing ClearspeakEnglishFractions Example Frac059
  */
-sre.ClearspeakFractions.prototype.testFrac059 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac059 = function() {
   var preference = 'Fraction_Ordinal';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mn>2</mn></mfrac></mrow></math>';
@@ -876,9 +876,9 @@ sre.ClearspeakFractions.prototype.testFrac059 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac060
+ * Testing ClearspeakEnglishFractions Example Frac060
  */
-sre.ClearspeakFractions.prototype.testFrac060 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac060 = function() {
   var preference = 'Fraction_Ordinal';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></mrow>' +
@@ -890,9 +890,9 @@ sre.ClearspeakFractions.prototype.testFrac060 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac061
+ * Testing ClearspeakEnglishFractions Example Frac061
  */
-sre.ClearspeakFractions.prototype.testFrac061 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac061 = function() {
   var preference = 'Fraction_Ordinal';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo>' +
@@ -904,9 +904,9 @@ sre.ClearspeakFractions.prototype.testFrac061 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac062
+ * Testing ClearspeakEnglishFractions Example Frac062
  */
-sre.ClearspeakFractions.prototype.testFrac062 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac062 = function() {
   var preference = 'Fraction_Ordinal';
   var mathml = '<math><mrow><mfrac><mrow><mtext>miles</mtext></mrow><mrow>' +
       '<mtext>gallon</mtext></mrow></mfrac></mrow></math>';
@@ -916,9 +916,9 @@ sre.ClearspeakFractions.prototype.testFrac062 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac063
+ * Testing ClearspeakEnglishFractions Example Frac063
  */
-sre.ClearspeakFractions.prototype.testFrac063 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac063 = function() {
   var preference = 'Fraction_Ordinal';
   var mathml = '<math><mrow><mfrac><mrow><mn>2</mn><mtext>miles</mtext>' +
       '</mrow><mrow><mn>3</mn><mtext>gallons</mtext></mrow></mfrac></mrow>' +
@@ -929,9 +929,9 @@ sre.ClearspeakFractions.prototype.testFrac063 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac064
+ * Testing ClearspeakEnglishFractions Example Frac064
  */
-sre.ClearspeakFractions.prototype.testFrac064 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac064 = function() {
   var preference = 'Fraction_EndFrac';
   var mathml = '<math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>';
   var speech = 'one half';
@@ -940,9 +940,9 @@ sre.ClearspeakFractions.prototype.testFrac064 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac065
+ * Testing ClearspeakEnglishFractions Example Frac065
  */
-sre.ClearspeakFractions.prototype.testFrac065 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac065 = function() {
   var preference = 'Fraction_EndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32' +
       '</mn></mrow></mfrac></mrow></math>';
@@ -952,9 +952,9 @@ sre.ClearspeakFractions.prototype.testFrac065 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac066
+ * Testing ClearspeakEnglishFractions Example Frac066
  */
-sre.ClearspeakFractions.prototype.testFrac066 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac066 = function() {
   var preference = 'Fraction_EndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn>' +
       '</mrow><mrow><mn>13</mn></mrow></mfrac></mrow></math>';
@@ -965,9 +965,9 @@ sre.ClearspeakFractions.prototype.testFrac066 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac067
+ * Testing ClearspeakEnglishFractions Example Frac067
  */
-sre.ClearspeakFractions.prototype.testFrac067 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac067 = function() {
   var preference = 'Fraction_EndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mn>2</mn></mfrac></mrow></math>';
@@ -978,9 +978,9 @@ sre.ClearspeakFractions.prototype.testFrac067 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac068
+ * Testing ClearspeakEnglishFractions Example Frac068
  */
-sre.ClearspeakFractions.prototype.testFrac068 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac068 = function() {
   var preference = 'Fraction_EndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></mrow>' +
@@ -992,9 +992,9 @@ sre.ClearspeakFractions.prototype.testFrac068 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac069
+ * Testing ClearspeakEnglishFractions Example Frac069
  */
-sre.ClearspeakFractions.prototype.testFrac069 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac069 = function() {
   var preference = 'Fraction_EndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo>' +
@@ -1006,9 +1006,9 @@ sre.ClearspeakFractions.prototype.testFrac069 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac070
+ * Testing ClearspeakEnglishFractions Example Frac070
  */
-sre.ClearspeakFractions.prototype.testFrac070 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac070 = function() {
   var preference = 'Fraction_EndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mtext>miles</mtext></mrow><mrow>' +
       '<mtext>gallons</mtext></mrow></mfrac></mrow></math>';
@@ -1018,9 +1018,9 @@ sre.ClearspeakFractions.prototype.testFrac070 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Frac071
+ * Testing ClearspeakEnglishFractions Example Frac071
  */
-sre.ClearspeakFractions.prototype.testFrac071 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrac071 = function() {
   var preference = 'Fraction_EndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mn>2</mn><mtext>miles</mtext>' +
       '</mrow><mrow><mn>3</mn><mtext>gallons</mtext></mrow></mfrac></mrow>' +
@@ -1036,9 +1036,9 @@ sre.ClearspeakFractions.prototype.testFrac071 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example FrTxt001
+ * Testing ClearspeakEnglishFractions Example FrTxt001
  */
-sre.ClearspeakFractions.prototype.testFrTxt001 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrTxt001 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mn>2</mn><mtext></mtext>' +
       '<mtext>miles</mtext></mrow><mrow><mn>3</mn><mtext></mtext>' +
@@ -1049,9 +1049,9 @@ sre.ClearspeakFractions.prototype.testFrTxt001 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example FrTxt002
+ * Testing ClearspeakEnglishFractions Example FrTxt002
  */
-sre.ClearspeakFractions.prototype.testFrTxt002 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrTxt002 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mtext>rise</mtext></mrow><mrow>' +
       '<mtext>run</mtext></mrow></mfrac></mrow></math>';
@@ -1061,9 +1061,9 @@ sre.ClearspeakFractions.prototype.testFrTxt002 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example FrTxt003
+ * Testing ClearspeakEnglishFractions Example FrTxt003
  */
-sre.ClearspeakFractions.prototype.testFrTxt003 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrTxt003 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mfrac><mtext>successful outcomes</mtext><mtext>total' +
       ' outcomes</mtext></mfrac></math>';
@@ -1073,9 +1073,9 @@ sre.ClearspeakFractions.prototype.testFrTxt003 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example FrTxt004
+ * Testing ClearspeakEnglishFractions Example FrTxt004
  */
-sre.ClearspeakFractions.prototype.testFrTxt004 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFrTxt004 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mn>6</mn><mtext>ways of rolling a' +
       ' 7</mtext></mrow><mrow><mn>36</mn><mtext>ways of rolling the pair of' +
@@ -1091,9 +1091,9 @@ sre.ClearspeakFractions.prototype.testFrTxt004 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac001
+ * Testing ClearspeakEnglishFractions Example NestFrac001
  */
-sre.ClearspeakFractions.prototype.testNestFrac001 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac001 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mfrac><mn>1</mn><mn>2</mn>' +
       '</mfrac></mrow><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow>' +
@@ -1104,9 +1104,9 @@ sre.ClearspeakFractions.prototype.testNestFrac001 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac002
+ * Testing ClearspeakEnglishFractions Example NestFrac002
  */
-sre.ClearspeakFractions.prototype.testNestFrac002 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac002 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mn>1</mn><mrow><mfrac><mn>2</mn><mrow>' +
       '<mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></mfrac></mrow></mfrac>' +
@@ -1118,9 +1118,9 @@ sre.ClearspeakFractions.prototype.testNestFrac002 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac003
+ * Testing ClearspeakEnglishFractions Example NestFrac003
  */
-sre.ClearspeakFractions.prototype.testNestFrac003 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac003 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mfrac><mn>1</mn><mn>2</mn>' +
       '</mfrac></mrow><mn>3</mn></mfrac></mrow></math>';
@@ -1130,9 +1130,9 @@ sre.ClearspeakFractions.prototype.testNestFrac003 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac004
+ * Testing ClearspeakEnglishFractions Example NestFrac004
  */
-sre.ClearspeakFractions.prototype.testNestFrac004 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac004 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mn>1</mn><mrow><mfrac><mn>2</mn><mn>3' +
       '</mn></mfrac></mrow></mfrac></mrow></math>';
@@ -1142,9 +1142,9 @@ sre.ClearspeakFractions.prototype.testNestFrac004 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac005
+ * Testing ClearspeakEnglishFractions Example NestFrac005
  */
-sre.ClearspeakFractions.prototype.testNestFrac005 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac005 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mfrac><mrow><mn>11</mn></mrow>' +
       '<mrow><mn>32</mn></mrow></mfrac></mrow><mrow><mfrac><mrow><mn>16' +
@@ -1157,9 +1157,9 @@ sre.ClearspeakFractions.prototype.testNestFrac005 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac006
+ * Testing ClearspeakEnglishFractions Example NestFrac006
  */
-sre.ClearspeakFractions.prototype.testNestFrac006 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac006 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mn>11</mn></mrow><mrow><mfrac>' +
       '<mrow><mn>32</mn></mrow><mrow><mfrac><mrow><mn>16</mn></mrow><mrow>' +
@@ -1171,9 +1171,9 @@ sre.ClearspeakFractions.prototype.testNestFrac006 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac007
+ * Testing ClearspeakEnglishFractions Example NestFrac007
  */
-sre.ClearspeakFractions.prototype.testNestFrac007 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac007 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mfrac><mn>4' +
       '</mn><mi>x</mi></mfrac></mrow><mn>2</mn></mfrac></mrow></math>';
@@ -1184,9 +1184,9 @@ sre.ClearspeakFractions.prototype.testNestFrac007 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac008
+ * Testing ClearspeakEnglishFractions Example NestFrac008
  */
-sre.ClearspeakFractions.prototype.testNestFrac008 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac008 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mn>3</mn><mrow><mn>2</mn><mo>+</mo>' +
       '<mfrac><mn>4</mn><mi>x</mi></mfrac></mrow></mfrac></mrow></math>';
@@ -1197,9 +1197,9 @@ sre.ClearspeakFractions.prototype.testNestFrac008 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac009
+ * Testing ClearspeakEnglishFractions Example NestFrac009
  */
-sre.ClearspeakFractions.prototype.testNestFrac009 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac009 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mfrac><mrow><mn>10</mn></mrow>' +
       '<mrow><mn>22</mn></mrow></mfrac></mrow><mrow><mfrac><mn>1</mn><mn>2' +
@@ -1211,9 +1211,9 @@ sre.ClearspeakFractions.prototype.testNestFrac009 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac010
+ * Testing ClearspeakEnglishFractions Example NestFrac010
  */
-sre.ClearspeakFractions.prototype.testNestFrac010 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac010 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mfrac><mn>2' +
       '</mn><mn>3</mn></mfrac></mrow><mrow><mn>1</mn><mo>−</mo><mfrac><mn>2' +
@@ -1225,9 +1225,9 @@ sre.ClearspeakFractions.prototype.testNestFrac010 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac011
+ * Testing ClearspeakEnglishFractions Example NestFrac011
  */
-sre.ClearspeakFractions.prototype.testNestFrac011 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac011 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mfrac><mi>x' +
       '</mi><mn>2</mn></mfrac></mrow><mrow><mn>1</mn><mo>−</mo><mfrac><mi>x' +
@@ -1239,9 +1239,9 @@ sre.ClearspeakFractions.prototype.testNestFrac011 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac012
+ * Testing ClearspeakEnglishFractions Example NestFrac012
  */
-sre.ClearspeakFractions.prototype.testNestFrac012 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac012 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mfrac><mrow><mi>x</mi><mo>+</mo>' +
       '<mn>1</mn></mrow><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></mfrac>' +
@@ -1254,9 +1254,9 @@ sre.ClearspeakFractions.prototype.testNestFrac012 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac013
+ * Testing ClearspeakEnglishFractions Example NestFrac013
  */
-sre.ClearspeakFractions.prototype.testNestFrac013 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac013 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mfrac><mrow><mi>x</mi><mo>+</mo>' +
       '<mn>1</mn></mrow><mrow><mi>x</mi><mo>−</mo><mn>4</mn></mrow></mfrac>' +
@@ -1271,9 +1271,9 @@ sre.ClearspeakFractions.prototype.testNestFrac013 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac014
+ * Testing ClearspeakEnglishFractions Example NestFrac014
  */
-sre.ClearspeakFractions.prototype.testNestFrac014 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac014 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mn>1</mn><mo>+</mo><mfrac><mi>x</mi><mrow>' +
       '<mn>1</mn><mo>+</mo><mfrac><mn>2</mn><mi>x</mi></mfrac></mrow>' +
@@ -1285,9 +1285,9 @@ sre.ClearspeakFractions.prototype.testNestFrac014 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac015
+ * Testing ClearspeakEnglishFractions Example NestFrac015
  */
-sre.ClearspeakFractions.prototype.testNestFrac015 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac015 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mn>1</mn><mo>+</mo><mfrac><mrow><mi>x</mi>' +
       '<mo>+</mo><mn>3</mn></mrow><mrow><mn>1</mn><mo>+</mo><mfrac><mn>2' +
@@ -1301,9 +1301,9 @@ sre.ClearspeakFractions.prototype.testNestFrac015 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac016
+ * Testing ClearspeakEnglishFractions Example NestFrac016
  */
-sre.ClearspeakFractions.prototype.testNestFrac016 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac016 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow>' +
       '<mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo>' +
@@ -1317,9 +1317,9 @@ sre.ClearspeakFractions.prototype.testNestFrac016 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac017
+ * Testing ClearspeakEnglishFractions Example NestFrac017
  */
-sre.ClearspeakFractions.prototype.testNestFrac017 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac017 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow>' +
       '<mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo>' +
@@ -1333,9 +1333,9 @@ sre.ClearspeakFractions.prototype.testNestFrac017 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac018
+ * Testing ClearspeakEnglishFractions Example NestFrac018
  */
-sre.ClearspeakFractions.prototype.testNestFrac018 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac018 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo>' +
       '<mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo>' +
@@ -1351,9 +1351,9 @@ sre.ClearspeakFractions.prototype.testNestFrac018 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac019
+ * Testing ClearspeakEnglishFractions Example NestFrac019
  */
-sre.ClearspeakFractions.prototype.testNestFrac019 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac019 = function() {
   var preference = 'Fraction_EndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mfrac><mn>1</mn><mn>2</mn>' +
       '</mfrac></mrow><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow>' +
@@ -1364,9 +1364,9 @@ sre.ClearspeakFractions.prototype.testNestFrac019 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac020
+ * Testing ClearspeakEnglishFractions Example NestFrac020
  */
-sre.ClearspeakFractions.prototype.testNestFrac020 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac020 = function() {
   var preference = 'Fraction_EndFrac';
   var mathml = '<math><mrow><mfrac><mn>1</mn><mrow><mfrac><mn>2</mn><mrow>' +
       '<mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></mfrac></mrow></mfrac>' +
@@ -1378,9 +1378,9 @@ sre.ClearspeakFractions.prototype.testNestFrac020 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac021
+ * Testing ClearspeakEnglishFractions Example NestFrac021
  */
-sre.ClearspeakFractions.prototype.testNestFrac021 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac021 = function() {
   var preference = 'Fraction_EndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mfrac><mn>1</mn><mn>2</mn>' +
       '</mfrac></mrow><mn>3</mn></mfrac></mrow></math>';
@@ -1390,9 +1390,9 @@ sre.ClearspeakFractions.prototype.testNestFrac021 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac022
+ * Testing ClearspeakEnglishFractions Example NestFrac022
  */
-sre.ClearspeakFractions.prototype.testNestFrac022 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac022 = function() {
   var preference = 'Fraction_EndFrac';
   var mathml = '<math><mrow><mfrac><mn>1</mn><mrow><mfrac><mn>2</mn><mn>3' +
       '</mn></mfrac></mrow></mfrac></mrow></math>';
@@ -1402,9 +1402,9 @@ sre.ClearspeakFractions.prototype.testNestFrac022 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac023
+ * Testing ClearspeakEnglishFractions Example NestFrac023
  */
-sre.ClearspeakFractions.prototype.testNestFrac023 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac023 = function() {
   var preference = 'Fraction_EndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mfrac><mrow><mn>11</mn></mrow>' +
       '<mrow><mn>32</mn></mrow></mfrac></mrow><mrow><mfrac><mrow><mn>16' +
@@ -1417,9 +1417,9 @@ sre.ClearspeakFractions.prototype.testNestFrac023 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac024
+ * Testing ClearspeakEnglishFractions Example NestFrac024
  */
-sre.ClearspeakFractions.prototype.testNestFrac024 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac024 = function() {
   var preference = 'Fraction_EndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mn>11</mn></mrow><mrow><mfrac>' +
       '<mrow><mn>32</mn></mrow><mrow><mfrac><mrow><mn>16</mn></mrow><mrow>' +
@@ -1431,9 +1431,9 @@ sre.ClearspeakFractions.prototype.testNestFrac024 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac025
+ * Testing ClearspeakEnglishFractions Example NestFrac025
  */
-sre.ClearspeakFractions.prototype.testNestFrac025 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac025 = function() {
   var preference = 'Fraction_EndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mfrac><mn>4' +
       '</mn><mi>x</mi></mfrac></mrow><mn>2</mn></mfrac></mrow></math>';
@@ -1444,9 +1444,9 @@ sre.ClearspeakFractions.prototype.testNestFrac025 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac026
+ * Testing ClearspeakEnglishFractions Example NestFrac026
  */
-sre.ClearspeakFractions.prototype.testNestFrac026 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac026 = function() {
   var preference = 'Fraction_EndFrac';
   var mathml = '<math><mrow><mfrac><mn>3</mn><mrow><mn>2</mn><mo>+</mo>' +
       '<mfrac><mn>4</mn><mi>x</mi></mfrac></mrow></mfrac></mrow></math>';
@@ -1457,9 +1457,9 @@ sre.ClearspeakFractions.prototype.testNestFrac026 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac027
+ * Testing ClearspeakEnglishFractions Example NestFrac027
  */
-sre.ClearspeakFractions.prototype.testNestFrac027 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac027 = function() {
   var preference = 'Fraction_EndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mfrac><mrow><mn>10</mn></mrow>' +
       '<mrow><mn>22</mn></mrow></mfrac></mrow><mrow><mfrac><mn>1</mn><mn>2' +
@@ -1471,9 +1471,9 @@ sre.ClearspeakFractions.prototype.testNestFrac027 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac028
+ * Testing ClearspeakEnglishFractions Example NestFrac028
  */
-sre.ClearspeakFractions.prototype.testNestFrac028 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac028 = function() {
   var preference = 'Fraction_EndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mfrac><mn>2' +
       '</mn><mn>3</mn></mfrac></mrow><mrow><mn>1</mn><mo>−</mo><mfrac><mn>2' +
@@ -1485,9 +1485,9 @@ sre.ClearspeakFractions.prototype.testNestFrac028 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac029
+ * Testing ClearspeakEnglishFractions Example NestFrac029
  */
-sre.ClearspeakFractions.prototype.testNestFrac029 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac029 = function() {
   var preference = 'Fraction_EndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mfrac><mi>x' +
       '</mi><mn>2</mn></mfrac></mrow><mrow><mn>1</mn><mo>−</mo><mfrac><mi>x' +
@@ -1499,9 +1499,9 @@ sre.ClearspeakFractions.prototype.testNestFrac029 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac030
+ * Testing ClearspeakEnglishFractions Example NestFrac030
  */
-sre.ClearspeakFractions.prototype.testNestFrac030 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac030 = function() {
   var preference = 'Fraction_EndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mfrac><mrow><mi>x</mi><mo>+</mo>' +
       '<mn>1</mn></mrow><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></mfrac>' +
@@ -1515,9 +1515,9 @@ sre.ClearspeakFractions.prototype.testNestFrac030 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac031
+ * Testing ClearspeakEnglishFractions Example NestFrac031
  */
-sre.ClearspeakFractions.prototype.testNestFrac031 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac031 = function() {
   var preference = 'Fraction_EndFrac';
   var mathml = '<math><mrow><mfrac><mrow><mfrac><mrow><mi>x</mi><mo>+</mo>' +
       '<mn>1</mn></mrow><mrow><mi>x</mi><mo>−</mo><mn>4</mn></mrow></mfrac>' +
@@ -1532,9 +1532,9 @@ sre.ClearspeakFractions.prototype.testNestFrac031 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac032
+ * Testing ClearspeakEnglishFractions Example NestFrac032
  */
-sre.ClearspeakFractions.prototype.testNestFrac032 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac032 = function() {
   var preference = 'Fraction_EndFrac';
   var mathml = '<math><mrow><mn>1</mn><mo>+</mo><mfrac><mi>x</mi><mrow>' +
       '<mn>1</mn><mo>+</mo><mfrac><mn>2</mn><mi>x</mi></mfrac></mrow>' +
@@ -1546,9 +1546,9 @@ sre.ClearspeakFractions.prototype.testNestFrac032 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac033
+ * Testing ClearspeakEnglishFractions Example NestFrac033
  */
-sre.ClearspeakFractions.prototype.testNestFrac033 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac033 = function() {
   var preference = 'Fraction_EndFrac';
   var mathml = '<math><mrow><mn>1</mn><mo>+</mo><mfrac><mrow><mi>x</mi>' +
       '<mo>+</mo><mn>3</mn></mrow><mrow><mn>1</mn><mo>+</mo><mfrac><mn>2' +
@@ -1562,9 +1562,9 @@ sre.ClearspeakFractions.prototype.testNestFrac033 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac034
+ * Testing ClearspeakEnglishFractions Example NestFrac034
  */
-sre.ClearspeakFractions.prototype.testNestFrac034 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac034 = function() {
   var preference = 'Fraction_EndFrac';
   var mathml = '<math><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow>' +
       '<mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo>' +
@@ -1578,9 +1578,9 @@ sre.ClearspeakFractions.prototype.testNestFrac034 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac035
+ * Testing ClearspeakEnglishFractions Example NestFrac035
  */
-sre.ClearspeakFractions.prototype.testNestFrac035 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac035 = function() {
   var preference = 'Fraction_EndFrac';
   var mathml = '<math><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow>' +
       '<mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo>' +
@@ -1595,9 +1595,9 @@ sre.ClearspeakFractions.prototype.testNestFrac035 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example NestFrac036
+ * Testing ClearspeakEnglishFractions Example NestFrac036
  */
-sre.ClearspeakFractions.prototype.testNestFrac036 = function() {
+sre.ClearspeakEnglishFractions.prototype.testNestFrac036 = function() {
   var preference = 'Fraction_EndFrac';
   var mathml = '<math><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo>' +
       '<mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo>' +
@@ -1618,9 +1618,9 @@ sre.ClearspeakFractions.prototype.testNestFrac036 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Fracfunct001
+ * Testing ClearspeakEnglishFractions Example Fracfunct001
  */
-sre.ClearspeakFractions.prototype.testFracfunct001 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFracfunct001 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mi>x' +
@@ -1631,9 +1631,9 @@ sre.ClearspeakFractions.prototype.testFracfunct001 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Fracfunct002
+ * Testing ClearspeakEnglishFractions Example Fracfunct002
  */
-sre.ClearspeakFractions.prototype.testFracfunct002 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFracfunct002 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow><mo>+</mo><mi>g</mi><mrow><mo>(</mo><mi>x</mi>' +
@@ -1646,9 +1646,9 @@ sre.ClearspeakFractions.prototype.testFracfunct002 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Fracfunct003
+ * Testing ClearspeakEnglishFractions Example Fracfunct003
  */
-sre.ClearspeakFractions.prototype.testFracfunct003 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFracfunct003 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mrow>' +
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow>' +
@@ -1661,9 +1661,9 @@ sre.ClearspeakFractions.prototype.testFracfunct003 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Fracfunct004
+ * Testing ClearspeakEnglishFractions Example Fracfunct004
  */
-sre.ClearspeakFractions.prototype.testFracfunct004 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFracfunct004 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mn>2</mn></mfrac></mrow></math>';
@@ -1673,9 +1673,9 @@ sre.ClearspeakFractions.prototype.testFracfunct004 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Fracfunct005
+ * Testing ClearspeakEnglishFractions Example Fracfunct005
  */
-sre.ClearspeakFractions.prototype.testFracfunct005 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFracfunct005 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mn>2</mn><mrow><mi>f</mi><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></mfrac></mrow></math>';
@@ -1685,9 +1685,9 @@ sre.ClearspeakFractions.prototype.testFracfunct005 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Fracfunct006
+ * Testing ClearspeakEnglishFractions Example Fracfunct006
  */
-sre.ClearspeakFractions.prototype.testFracfunct006 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFracfunct006 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mn>2</mn><mrow><mi>g</mi><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow><mo>+</mo><mi>g</mi><mo' +
@@ -1700,9 +1700,9 @@ sre.ClearspeakFractions.prototype.testFracfunct006 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Fracfunct007
+ * Testing ClearspeakEnglishFractions Example Fracfunct007
  */
-sre.ClearspeakFractions.prototype.testFracfunct007 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFracfunct007 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>sin</mi><mi>x</mi></mrow>' +
       '<mrow><mi>cos</mi><mi>x</mi></mrow></mfrac></mrow></math>';
@@ -1712,11 +1712,11 @@ sre.ClearspeakFractions.prototype.testFracfunct007 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Fracfunct008
+ * Testing ClearspeakEnglishFractions Example Fracfunct008
  *
  * This is the same as 011. Mistake in Examples file.
  */
-sre.ClearspeakFractions.prototype.untestFracfunct008 = function() {
+sre.ClearspeakEnglishFractions.prototype.untestFracfunct008 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>sin</mi><mo>(</mo><mi>x</mi>' +
       '<mo>+</mo><mi>y</mi><mo>)</mo></mrow><mrow><mi>cos</mi><mo>(</mo>' +
@@ -1728,9 +1728,9 @@ sre.ClearspeakFractions.prototype.untestFracfunct008 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Fracfunct009
+ * Testing ClearspeakEnglishFractions Example Fracfunct009
  */
-sre.ClearspeakFractions.prototype.testFracfunct009 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFracfunct009 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>sin</mi><mi>x</mi><mo>+</mo>' +
       '<mi>cos</mi><mi>x</mi></mrow><mrow><mi>cos</mi><mi>x</mi></mrow>' +
@@ -1742,9 +1742,9 @@ sre.ClearspeakFractions.prototype.testFracfunct009 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Fracfunct010
+ * Testing ClearspeakEnglishFractions Example Fracfunct010
  */
-sre.ClearspeakFractions.prototype.testFracfunct010 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFracfunct010 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>sin</mi><mn>2</mn><mi>x</mi>' +
       '</mrow><mrow><mi>cos</mi><mn>3</mn><mi>x</mi></mrow></mfrac></mrow>' +
@@ -1755,9 +1755,9 @@ sre.ClearspeakFractions.prototype.testFracfunct010 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Fracfunct011
+ * Testing ClearspeakEnglishFractions Example Fracfunct011
  */
-sre.ClearspeakFractions.prototype.testFracfunct011 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFracfunct011 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>sin</mi><mrow><mo>(</mo><mrow>' +
       '<mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow>' +
@@ -1771,9 +1771,9 @@ sre.ClearspeakFractions.prototype.testFracfunct011 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Fracfunct012
+ * Testing ClearspeakEnglishFractions Example Fracfunct012
  */
-sre.ClearspeakFractions.prototype.testFracfunct012 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFracfunct012 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>g</mi>' +
@@ -1785,9 +1785,9 @@ sre.ClearspeakFractions.prototype.testFracfunct012 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Fracfunct013
+ * Testing ClearspeakEnglishFractions Example Fracfunct013
  */
-sre.ClearspeakFractions.prototype.testFracfunct013 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFracfunct013 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>log</mi><mi>x</mi></mrow>' +
       '<mrow><mi>log</mi><mi>y</mi></mrow></mfrac></mrow></math>';
@@ -1797,9 +1797,9 @@ sre.ClearspeakFractions.prototype.testFracfunct013 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Fracfunct014
+ * Testing ClearspeakEnglishFractions Example Fracfunct014
  */
-sre.ClearspeakFractions.prototype.testFracfunct014 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFracfunct014 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>log</mi><mn>2</mn><mi>x</mi>' +
       '</mrow><mrow><mi>log</mi><mn>3</mn><mi>y</mi></mrow></mfrac></mrow>' +
@@ -1810,9 +1810,9 @@ sre.ClearspeakFractions.prototype.testFracfunct014 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Fracfunct015
+ * Testing ClearspeakEnglishFractions Example Fracfunct015
  */
-sre.ClearspeakFractions.prototype.testFracfunct015 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFracfunct015 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><msub><mrow><mi>log</mi></mrow>' +
       '<mrow><mn>10</mn></mrow></msub><mi>x</mi></mrow><mrow><msub><mrow>' +
@@ -1824,9 +1824,9 @@ sre.ClearspeakFractions.prototype.testFracfunct015 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Fracfunct016
+ * Testing ClearspeakEnglishFractions Example Fracfunct016
  */
-sre.ClearspeakFractions.prototype.testFracfunct016 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFracfunct016 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><msub><mrow><mi>log</mi></mrow>' +
       '<mrow><mn>10</mn></mrow></msub><mn>2</mn><mi>x</mi></mrow><mrow>' +
@@ -1838,9 +1838,9 @@ sre.ClearspeakFractions.prototype.testFracfunct016 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Fracfunct017
+ * Testing ClearspeakEnglishFractions Example Fracfunct017
  */
-sre.ClearspeakFractions.prototype.testFracfunct017 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFracfunct017 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>log</mi><mrow><mo>(</mo><mrow>' +
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow>' +
@@ -1852,9 +1852,9 @@ sre.ClearspeakFractions.prototype.testFracfunct017 = function() {
 
 
 /**
- * Testing ClearspeakFractions Example Fracfunct018
+ * Testing ClearspeakEnglishFractions Example Fracfunct018
  */
-sre.ClearspeakFractions.prototype.testFracfunct018 = function() {
+sre.ClearspeakEnglishFractions.prototype.testFracfunct018 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><msub><mi>f</mi><mn>1</mn></msub>' +
       '<mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mrow><msub><mi>g' +

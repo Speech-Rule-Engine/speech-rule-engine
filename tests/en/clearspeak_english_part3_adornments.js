@@ -17,25 +17,25 @@
 //
 
 
-goog.provide('sre.ClearspeakPart3Adornments');
+goog.provide('sre.ClearspeakEnglishPart3Adornments');
 
-goog.require('sre.ClearspeakRuleTest');
+goog.require('sre.ClearspeakEnglishRuleTest');
 
 
 
 /**
 * @constructor
-* @extends {sre.ClearspeakRuleTest}
+* @extends {sre.ClearspeakEnglishRuleTest}
 */
-sre.ClearspeakPart3Adornments = function() {
-  sre.ClearspeakPart3Adornments.base(this, 'constructor');
+sre.ClearspeakEnglishPart3Adornments = function() {
+  sre.ClearspeakEnglishPart3Adornments.base(this, 'constructor');
 
   /**
 * @override
   */
-  this.information = 'ClearspeakPart3Adornments rule tests.';
+  this.information = 'ClearspeakEnglishPart3Adornments rule tests.';
 };
-goog.inherits(sre.ClearspeakPart3Adornments, sre.ClearspeakRuleTest);
+goog.inherits(sre.ClearspeakEnglishPart3Adornments, sre.ClearspeakEnglishRuleTest);
 
 
 
@@ -50,9 +50,9 @@ goog.inherits(sre.ClearspeakPart3Adornments, sre.ClearspeakRuleTest);
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime001
+ * Testing ClearspeakEnglishPart3Adornments Example Prime001
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime001 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime001 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><mrow><msup><mi>A</mi><mo>′</mo></msup><msup><mi>B' +
       '</mi><mo>′</mo></msup></mrow></math>';
@@ -62,9 +62,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime001 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime002
+ * Testing ClearspeakEnglishPart3Adornments Example Prime002
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime002 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime002 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><mrow><msup><mi>A</mi><mo>″</mo></msup><msup><mi>B' +
       '</mi><mo>″</mo></msup></mrow></math>';
@@ -74,9 +74,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime002 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime003
+ * Testing ClearspeakEnglishPart3Adornments Example Prime003
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime003 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime003 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><mrow><msup><mi>A</mi><mo>‴</mo></msup><msup><mi>B' +
       '</mi><mo>‴</mo></msup></mrow></math>';
@@ -86,9 +86,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime003 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime004
+ * Testing ClearspeakEnglishPart3Adornments Example Prime004
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime004 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime004 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><mrow><msup><mi>f</mi><mo>′</mo></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
@@ -98,9 +98,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime004 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime005
+ * Testing ClearspeakEnglishPart3Adornments Example Prime005
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime005 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime005 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><mrow><msup><mi>f</mi><mo>″</mo></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
@@ -110,9 +110,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime005 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime006
+ * Testing ClearspeakEnglishPart3Adornments Example Prime006
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime006 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime006 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><mrow><msup><mi>f</mi><mo>‴</mo></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
@@ -122,9 +122,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime006 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime007
+ * Testing ClearspeakEnglishPart3Adornments Example Prime007
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime007 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime007 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><msup><mn>1</mn><mo>′</mo></msup></math>';
   var speech = '1 foot';
@@ -133,9 +133,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime007 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime008
+ * Testing ClearspeakEnglishPart3Adornments Example Prime008
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime008 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime008 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><msup><mn>2</mn><mo>′</mo></msup></math>';
   var speech = '2 feet';
@@ -144,9 +144,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime008 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime009
+ * Testing ClearspeakEnglishPart3Adornments Example Prime009
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime009 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime009 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><msup><mn>1</mn><mo>″</mo></msup></math>';
   var speech = '1 inch';
@@ -155,9 +155,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime009 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime010
+ * Testing ClearspeakEnglishPart3Adornments Example Prime010
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime010 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime010 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><msup><mn>2</mn><mo>″</mo></msup></math>';
   var speech = '2 inches';
@@ -166,9 +166,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime010 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime011
+ * Testing ClearspeakEnglishPart3Adornments Example Prime011
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime011 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime011 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><mrow><msup><mn>16</mn><mo>′</mo></msup><msup><mn>10' +
       '</mn><mo>″</mo></msup></mrow></math>';
@@ -179,9 +179,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime011 = function() {
 
 // TODO: (Simons) Better handling of degrees.
 /**
- * Testing ClearspeakPart3Adornments Example Prime012
+ * Testing ClearspeakEnglishPart3Adornments Example Prime012
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime012 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime012 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><mrow><mn>45</mn><mo>°</mo><msup><mn>10</mn><mo>′' +
       '</mo></msup></mrow></math>';
@@ -191,9 +191,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime012 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime013
+ * Testing ClearspeakEnglishPart3Adornments Example Prime013
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime013 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime013 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><mrow><mi>x</mi><mo>°</mo><msup><mi>y</mi><mo>′</mo>' +
       '</msup></mrow></math>';
@@ -203,9 +203,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime013 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime014
+ * Testing ClearspeakEnglishPart3Adornments Example Prime014
  */
-sre.ClearspeakPart3Adornments.prototype.untestPrime014 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.untestPrime014 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><mrow><mn>45</mn><mo>°</mo><msup><mn>10</mn><mo>′' +
       '</mo></msup><msup><mn>25</mn><mo>″</mo></msup></mrow></math>';
@@ -215,9 +215,9 @@ sre.ClearspeakPart3Adornments.prototype.untestPrime014 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime015
+ * Testing ClearspeakEnglishPart3Adornments Example Prime015
  */
-sre.ClearspeakPart3Adornments.prototype.untestPrime015 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.untestPrime015 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><mrow><mi>x</mi><mo>°</mo><msup><mi>y</mi><mo>′</mo>' +
       '</msup><msup><mi>z</mi><mo>″</mo></msup></mrow></math>';
@@ -227,9 +227,9 @@ sre.ClearspeakPart3Adornments.prototype.untestPrime015 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime016
+ * Testing ClearspeakEnglishPart3Adornments Example Prime016
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime016 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime016 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><msup><mn>1</mn><mo>′</mo></msup></math>';
   var speech = '1 minute';
@@ -238,9 +238,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime016 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime017
+ * Testing ClearspeakEnglishPart3Adornments Example Prime017
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime017 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime017 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><msup><mi>x</mi><mo>′</mo></msup></math>';
   var speech = 'x minutes';
@@ -249,9 +249,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime017 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime018
+ * Testing ClearspeakEnglishPart3Adornments Example Prime018
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime018 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime018 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><msup><mn>2</mn><mo>′</mo></msup></math>';
   var speech = '2 minutes';
@@ -260,9 +260,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime018 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime019
+ * Testing ClearspeakEnglishPart3Adornments Example Prime019
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime019 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime019 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><msup><mn>1</mn><mo>″</mo></msup></math>';
   var speech = '1 second';
@@ -271,9 +271,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime019 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime020
+ * Testing ClearspeakEnglishPart3Adornments Example Prime020
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime020 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime020 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><msup><mi>x</mi><mo>″</mo></msup></math>';
   var speech = 'x seconds';
@@ -282,9 +282,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime020 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime021
+ * Testing ClearspeakEnglishPart3Adornments Example Prime021
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime021 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime021 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><msup><mn>2</mn><mo>″</mo></msup></math>';
   var speech = '2 seconds';
@@ -293,9 +293,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime021 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime022
+ * Testing ClearspeakEnglishPart3Adornments Example Prime022
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime022 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime022 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><mrow><msup><mn>16</mn><mo>′</mo></msup><msup><mn>10' +
       '</mn><mo>″</mo></msup></mrow></math>';
@@ -305,9 +305,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime022 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime023
+ * Testing ClearspeakEnglishPart3Adornments Example Prime023
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime023 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime023 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><mrow><msup><mi>x</mi><mo>′</mo></msup><msup><mi>y' +
       '</mi><mo>″</mo></msup></mrow></math>';
@@ -317,9 +317,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime023 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime024
+ * Testing ClearspeakEnglishPart3Adornments Example Prime024
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime024 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime024 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><mrow><mn>45</mn><mo>°</mo><msup><mn>10</mn><mo>′' +
       '</mo></msup></mrow></math>';
@@ -329,9 +329,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime024 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime025
+ * Testing ClearspeakEnglishPart3Adornments Example Prime025
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime025 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime025 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><mrow><mn>45</mn><mo>°</mo><msup><mn>10</mn><mo>′' +
       '</mo></msup><msup><mn>25</mn><mo>″</mo></msup></mrow></math>';
@@ -341,9 +341,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime025 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime026
+ * Testing ClearspeakEnglishPart3Adornments Example Prime026
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime026 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime026 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><mrow><msup><mi>A</mi><mo>′</mo></msup><msup><mi>B' +
       '</mi><mo>′</mo></msup></mrow></math>';
@@ -353,9 +353,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime026 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime027
+ * Testing ClearspeakEnglishPart3Adornments Example Prime027
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime027 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime027 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><mrow><msup><mi>A</mi><mo>″</mo></msup><msup><mi>B' +
       '</mi><mo>″</mo></msup></mrow></math>';
@@ -365,9 +365,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime027 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime028
+ * Testing ClearspeakEnglishPart3Adornments Example Prime028
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime028 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime028 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><mrow><msup><mi>A</mi><mo>‴</mo></msup><msup><mi>B' +
       '</mi><mo>‴</mo></msup></mrow></math>';
@@ -377,9 +377,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime028 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime029
+ * Testing ClearspeakEnglishPart3Adornments Example Prime029
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime029 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime029 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><mrow><msup><mi>f</mi><mo>′</mo></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
@@ -389,9 +389,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime029 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime030
+ * Testing ClearspeakEnglishPart3Adornments Example Prime030
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime030 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime030 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><mrow><msup><mi>f</mi><mo>″</mo></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
@@ -401,9 +401,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime030 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime031
+ * Testing ClearspeakEnglishPart3Adornments Example Prime031
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime031 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime031 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><mrow><msup><mi>f</mi><mo>‴</mo></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
@@ -413,9 +413,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime031 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime032
+ * Testing ClearspeakEnglishPart3Adornments Example Prime032
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime032 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime032 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><msup><mn>1</mn><mo>′</mo></msup></math>';
   var speech = '1 foot';
@@ -424,9 +424,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime032 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime033
+ * Testing ClearspeakEnglishPart3Adornments Example Prime033
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime033 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime033 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><msup><mi>x</mi><mo>′</mo></msup></math>';
   var speech = 'x feet';
@@ -435,9 +435,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime033 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime034
+ * Testing ClearspeakEnglishPart3Adornments Example Prime034
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime034 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime034 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><msup><mn>2</mn><mo>′</mo></msup></math>';
   var speech = '2 feet';
@@ -446,9 +446,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime034 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime035
+ * Testing ClearspeakEnglishPart3Adornments Example Prime035
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime035 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime035 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><msup><mn>1</mn><mo>″</mo></msup></math>';
   var speech = '1 inch';
@@ -457,9 +457,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime035 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime036
+ * Testing ClearspeakEnglishPart3Adornments Example Prime036
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime036 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime036 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><msup><mi>x</mi><mo>″</mo></msup></math>';
   var speech = 'x inches';
@@ -468,9 +468,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime036 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime037
+ * Testing ClearspeakEnglishPart3Adornments Example Prime037
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime037 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime037 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><msup><mn>2</mn><mo>″</mo></msup></math>';
   var speech = '2 inches';
@@ -480,9 +480,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime037 = function() {
 
 // TODO: (Simons) Rewrite prime etc into superscript.
 /**
- * Testing ClearspeakPart3Adornments Example Prime038
+ * Testing ClearspeakEnglishPart3Adornments Example Prime038
  */
-sre.ClearspeakPart3Adornments.prototype.untestPrime038 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.untestPrime038 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><mrow><mn>16</mn><mo>′</mo></msup><mn>10</mn><mo>″' +
       '</mo></msup></mrow></math>';
@@ -492,9 +492,9 @@ sre.ClearspeakPart3Adornments.prototype.untestPrime038 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime039
+ * Testing ClearspeakEnglishPart3Adornments Example Prime039
  */
-sre.ClearspeakPart3Adornments.prototype.untestPrime039 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.untestPrime039 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><mrow><msup><mi>x</mi><mo>′</mo></msup><msup><mi>y' +
       '</mi><mo>″</mo></msup></mrow></math>';
@@ -504,9 +504,9 @@ sre.ClearspeakPart3Adornments.prototype.untestPrime039 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime040
+ * Testing ClearspeakEnglishPart3Adornments Example Prime040
  */
-sre.ClearspeakPart3Adornments.prototype.untestPrime040 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.untestPrime040 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><mrow><mn>45</mn><mo>°</mo><mn>10</mn><mo>′</mo>' +
       '</msup></mrow></math>';
@@ -516,9 +516,9 @@ sre.ClearspeakPart3Adornments.prototype.untestPrime040 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime041
+ * Testing ClearspeakEnglishPart3Adornments Example Prime041
  */
-sre.ClearspeakPart3Adornments.prototype.untestPrime041 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.untestPrime041 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><mrow><mn>45</mn><mo>°</mo><mn>10</mn><mo>′</mo>' +
       '</msup><mn>25</mn><mo>″</mo></msup></mrow></math>';
@@ -528,9 +528,9 @@ sre.ClearspeakPart3Adornments.prototype.untestPrime041 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime042
+ * Testing ClearspeakEnglishPart3Adornments Example Prime042
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime042 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime042 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><mrow><msup><mi>A</mi><mo>′</mo></msup><msup><mi>B' +
       '</mi><mo>′</mo></msup></mrow></math>';
@@ -540,9 +540,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime042 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime043
+ * Testing ClearspeakEnglishPart3Adornments Example Prime043
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime043 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime043 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><mrow><msup><mi>A</mi><mo>″</mo></msup><msup><mi>B' +
       '</mi><mo>″</mo></msup></mrow></math>';
@@ -552,9 +552,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime043 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime044
+ * Testing ClearspeakEnglishPart3Adornments Example Prime044
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime044 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime044 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><mrow><msup><mi>A</mi><mo>‴</mo></msup><msup><mi>B' +
       '</mi><mo>‴</mo></msup></mrow></math>';
@@ -564,9 +564,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime044 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime045
+ * Testing ClearspeakEnglishPart3Adornments Example Prime045
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime045 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime045 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><mrow><msup><mi>f</mi><mo>′</mo></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
@@ -576,9 +576,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime045 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime046
+ * Testing ClearspeakEnglishPart3Adornments Example Prime046
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime046 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime046 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><mrow><msup><mi>f</mi><mo>″</mo></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
@@ -588,9 +588,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime046 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Prime047
+ * Testing ClearspeakEnglishPart3Adornments Example Prime047
  */
-sre.ClearspeakPart3Adornments.prototype.testPrime047 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testPrime047 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><mrow><msup><mi>f</mi><mo>‴</mo></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
@@ -611,9 +611,9 @@ sre.ClearspeakPart3Adornments.prototype.testPrime047 = function() {
 // TODO: (Simons) Have a cleanup heuristic to combine multiscripts with
 //                sub/superscripts.
 /**
- * Testing ClearspeakPart3Adornments Example CombPerm001
+ * Testing ClearspeakEnglishPart3Adornments Example CombPerm001
  */
-sre.ClearspeakPart3Adornments.prototype.untestCombPerm001 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.untestCombPerm001 = function() {
   var preference = 'CombinationPermutation_Auto';
   var mathml = '<math><mrow><mmultiscripts><mi>C</mi><mprescripts/><mi>n' +
       '</mi><none/></mmultiscripts><msub><mrow/><mi>r</mi></msub></mrow>' +
@@ -624,9 +624,9 @@ sre.ClearspeakPart3Adornments.prototype.untestCombPerm001 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example CombPerm002
+ * Testing ClearspeakEnglishPart3Adornments Example CombPerm002
  */
-sre.ClearspeakPart3Adornments.prototype.untestCombPerm002 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.untestCombPerm002 = function() {
   var preference = 'CombinationPermutation_Auto';
   var mathml = '<math><mrow><mmultiscripts><mi>P</mi><mprescripts/><mi>n' +
       '</mi><none/></mmultiscripts><msub><mrow/><mi>r</mi></msub></mrow>' +
@@ -637,9 +637,9 @@ sre.ClearspeakPart3Adornments.prototype.untestCombPerm002 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example CombPerm003
+ * Testing ClearspeakEnglishPart3Adornments Example CombPerm003
  */
-sre.ClearspeakPart3Adornments.prototype.untestCombPerm003 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.untestCombPerm003 = function() {
   var preference = 'CombinationPermutation_Auto';
   var mathml = '<math><mrow><mmultiscripts><mi>C</mi><mprescripts/><mrow>' +
       '<mn>10</mn></mrow><none/></mmultiscripts><msub><mrow/><mn>3</mn>' +
@@ -650,9 +650,9 @@ sre.ClearspeakPart3Adornments.prototype.untestCombPerm003 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example CombPerm004
+ * Testing ClearspeakEnglishPart3Adornments Example CombPerm004
  */
-sre.ClearspeakPart3Adornments.prototype.untestCombPerm004 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.untestCombPerm004 = function() {
   var preference = 'CombinationPermutation_Auto';
   var mathml = '<math><mrow><mmultiscripts><mi>P</mi><mprescripts/><mrow>' +
       '<mn>10</mn></mrow><none/></mmultiscripts><msub><mrow/><mn>3</mn>' +
@@ -663,9 +663,9 @@ sre.ClearspeakPart3Adornments.prototype.untestCombPerm004 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example CombPerm005
+ * Testing ClearspeakEnglishPart3Adornments Example CombPerm005
  */
-sre.ClearspeakPart3Adornments.prototype.untestCombPerm005 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.untestCombPerm005 = function() {
   var preference = 'CombinationPermutation_ChoosePermute';
   var mathml = '<math><mrow><mmultiscripts><mi>C</mi><mprescripts/><mi>n' +
       '</mi><none/></mmultiscripts><msub><mrow/><mi>r</mi></msub></mrow>' +
@@ -676,9 +676,9 @@ sre.ClearspeakPart3Adornments.prototype.untestCombPerm005 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example CombPerm006
+ * Testing ClearspeakEnglishPart3Adornments Example CombPerm006
  */
-sre.ClearspeakPart3Adornments.prototype.untestCombPerm006 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.untestCombPerm006 = function() {
   var preference = 'CombinationPermutation_ChoosePermute';
   var mathml = '<math><mrow><mmultiscripts><mi>P</mi><mprescripts/><mi>n' +
       '</mi><none/></mmultiscripts><msub><mrow/><mi>r</mi></msub></mrow>' +
@@ -689,9 +689,9 @@ sre.ClearspeakPart3Adornments.prototype.untestCombPerm006 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example CombPerm007
+ * Testing ClearspeakEnglishPart3Adornments Example CombPerm007
  */
-sre.ClearspeakPart3Adornments.prototype.untestCombPerm007 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.untestCombPerm007 = function() {
   var preference = 'CombinationPermutation_ChoosePermute';
   var mathml = '<math><mrow><mmultiscripts><mi>C</mi><mprescripts/><mrow>' +
       '<mn>10</mn></mrow><none/></mmultiscripts><msub><mrow/><mn>3</mn>' +
@@ -702,9 +702,9 @@ sre.ClearspeakPart3Adornments.prototype.untestCombPerm007 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example CombPerm008
+ * Testing ClearspeakEnglishPart3Adornments Example CombPerm008
  */
-sre.ClearspeakPart3Adornments.prototype.untestCombPerm008 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.untestCombPerm008 = function() {
   var preference = 'CombinationPermutation_ChoosePermute';
   var mathml = '<math><mrow><mmultiscripts><mi>P</mi><mprescripts/><mrow>' +
       '<mn>10</mn></mrow><none/></mmultiscripts><msub><mrow/><mn>3</mn>' +
@@ -716,9 +716,9 @@ sre.ClearspeakPart3Adornments.prototype.untestCombPerm008 = function() {
 
 // Cleaned up tests with the correct usage of multiscript elements.
 /**
- * Testing ClearspeakPart3Adornments Example CombPerm001
+ * Testing ClearspeakEnglishPart3Adornments Example CombPerm001
  */
-sre.ClearspeakPart3Adornments.prototype.testCombPerm001a = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testCombPerm001a = function() {
   var preference = 'CombinationPermutation_Auto';
   var mathml = '<math><mrow><mmultiscripts><mi>C</mi><mi>r</mi>' +
       '<mprescripts/><mi>n</mi><none/></mmultiscripts></mrow></math>';
@@ -728,9 +728,9 @@ sre.ClearspeakPart3Adornments.prototype.testCombPerm001a = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example CombPerm002
+ * Testing ClearspeakEnglishPart3Adornments Example CombPerm002
  */
-sre.ClearspeakPart3Adornments.prototype.testCombPerm002a = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testCombPerm002a = function() {
   var preference = 'CombinationPermutation_Auto';
   var mathml = '<math><mrow><mmultiscripts><mi>P</mi><mi>r</mi>' +
       '<mprescripts/><mi>n</mi><none/></mmultiscripts></mrow></math>';
@@ -740,9 +740,9 @@ sre.ClearspeakPart3Adornments.prototype.testCombPerm002a = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example CombPerm003
+ * Testing ClearspeakEnglishPart3Adornments Example CombPerm003
  */
-sre.ClearspeakPart3Adornments.prototype.testCombPerm003a = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testCombPerm003a = function() {
   var preference = 'CombinationPermutation_Auto';
   var mathml = '<math><mrow><mmultiscripts><mi>C</mi><mn>3</mn>' +
       '<mprescripts/><mrow><mn>10</mn></mrow><none/></mmultiscripts></mrow>' +
@@ -753,9 +753,9 @@ sre.ClearspeakPart3Adornments.prototype.testCombPerm003a = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example CombPerm004
+ * Testing ClearspeakEnglishPart3Adornments Example CombPerm004
  */
-sre.ClearspeakPart3Adornments.prototype.testCombPerm004a = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testCombPerm004a = function() {
   var preference = 'CombinationPermutation_Auto';
   var mathml = '<math><mrow><mmultiscripts><mi>P</mi><mn>3</mn>' +
       '<mprescripts/><mrow><mn>10</mn></mrow><none/></mmultiscripts></mrow>' +
@@ -766,9 +766,9 @@ sre.ClearspeakPart3Adornments.prototype.testCombPerm004a = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example CombPerm005
+ * Testing ClearspeakEnglishPart3Adornments Example CombPerm005
  */
-sre.ClearspeakPart3Adornments.prototype.testCombPerm005a = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testCombPerm005a = function() {
   var preference = 'CombinationPermutation_ChoosePermute';
   var mathml = '<math><mrow><mmultiscripts><mi>C</mi><mi>r</mi>' +
       '<mprescripts/><mi>n</mi><none/></mmultiscripts></mrow></math>';
@@ -778,9 +778,9 @@ sre.ClearspeakPart3Adornments.prototype.testCombPerm005a = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example CombPerm006
+ * Testing ClearspeakEnglishPart3Adornments Example CombPerm006
  */
-sre.ClearspeakPart3Adornments.prototype.testCombPerm006a = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testCombPerm006a = function() {
   var preference = 'CombinationPermutation_ChoosePermute';
   var mathml = '<math><mrow><mmultiscripts><mi>P</mi><mi>r</mi>' +
       '<mprescripts/><mi>n</mi><none/></mmultiscripts></mrow></math>';
@@ -790,9 +790,9 @@ sre.ClearspeakPart3Adornments.prototype.testCombPerm006a = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example CombPerm007
+ * Testing ClearspeakEnglishPart3Adornments Example CombPerm007
  */
-sre.ClearspeakPart3Adornments.prototype.testCombPerm007a = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testCombPerm007a = function() {
   var preference = 'CombinationPermutation_ChoosePermute';
   var mathml = '<math><mrow><mmultiscripts><mi>C</mi><mn>3</mn>' +
       '<mprescripts/><mrow><mn>10</mn></mrow><none/></mmultiscripts></mrow>' +
@@ -803,9 +803,9 @@ sre.ClearspeakPart3Adornments.prototype.testCombPerm007a = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example CombPerm008
+ * Testing ClearspeakEnglishPart3Adornments Example CombPerm008
  */
-sre.ClearspeakPart3Adornments.prototype.testCombPerm008a = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testCombPerm008a = function() {
   var preference = 'CombinationPermutation_ChoosePermute';
   var mathml = '<math><mrow><mmultiscripts><mi>P</mi><mn>3</mn>' +
       '<mprescripts/><mrow><mn>10</mn></mrow><none/></mmultiscripts></mrow>' +
@@ -821,9 +821,9 @@ sre.ClearspeakPart3Adornments.prototype.testCombPerm008a = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Bar001
+ * Testing ClearspeakEnglishPart3Adornments Example Bar001
  */
-sre.ClearspeakPart3Adornments.prototype.testBar001 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testBar001 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mover accent="true"><mi>f</mi><mo>¯</mo></mover></math>';
   var speech = 'f bar';
@@ -832,9 +832,9 @@ sre.ClearspeakPart3Adornments.prototype.testBar001 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Bar002
+ * Testing ClearspeakEnglishPart3Adornments Example Bar002
  */
-sre.ClearspeakPart3Adornments.prototype.testBar002 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testBar002 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mover accent="true"><mi>f</mi><mo>¯</mo>' +
       '</mover><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
@@ -844,9 +844,9 @@ sre.ClearspeakPart3Adornments.prototype.testBar002 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Bar003
+ * Testing ClearspeakEnglishPart3Adornments Example Bar003
  */
-sre.ClearspeakPart3Adornments.prototype.testBar003 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testBar003 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mover accent="true"><mrow><msub><mi>f</mi>' +
       '<mn>1</mn></msub></mrow><mo stretchy="true">¯</mo></mover></mrow>' +
@@ -857,9 +857,9 @@ sre.ClearspeakPart3Adornments.prototype.testBar003 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Bar004
+ * Testing ClearspeakEnglishPart3Adornments Example Bar004
  */
-sre.ClearspeakPart3Adornments.prototype.testBar004 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testBar004 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mover accent="true"><mrow><msub><mi>f</mi>' +
       '<mn>1</mn></msub></mrow><mo stretchy="true">¯</mo></mover><mrow>' +
@@ -870,9 +870,9 @@ sre.ClearspeakPart3Adornments.prototype.testBar004 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Bar005
+ * Testing ClearspeakEnglishPart3Adornments Example Bar005
  */
-sre.ClearspeakPart3Adornments.prototype.testBar005 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testBar005 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mover accent="true"><mi>z</mi><mo>¯</mo></mover></math>';
   var speech = 'z bar';
@@ -881,9 +881,9 @@ sre.ClearspeakPart3Adornments.prototype.testBar005 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Bar006
+ * Testing ClearspeakEnglishPart3Adornments Example Bar006
  */
-sre.ClearspeakPart3Adornments.prototype.testBar006 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testBar006 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mn>0</mn><mo>.</mo><mover accent="true"><mn>3' +
       '</mn><mo stretchy="true">¯</mo></mover></mrow></math>';
@@ -893,9 +893,9 @@ sre.ClearspeakPart3Adornments.prototype.testBar006 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Bar007
+ * Testing ClearspeakEnglishPart3Adornments Example Bar007
  */
-sre.ClearspeakPart3Adornments.prototype.testBar007 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testBar007 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mn>0</mn><mo>.</mo><mover accent="true"><mrow>' +
       '<mn>12</mn></mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
@@ -905,9 +905,9 @@ sre.ClearspeakPart3Adornments.prototype.testBar007 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Bar008
+ * Testing ClearspeakEnglishPart3Adornments Example Bar008
  */
-sre.ClearspeakPart3Adornments.prototype.testBar008 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testBar008 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mn>2</mn><mo>.</mo><mover accent="true"><mrow>' +
       '<mn>134</mn></mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
@@ -918,9 +918,9 @@ sre.ClearspeakPart3Adornments.prototype.testBar008 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Bar009
+ * Testing ClearspeakEnglishPart3Adornments Example Bar009
  */
-sre.ClearspeakPart3Adornments.prototype.testBar009 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testBar009 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mn>.13</mn><mover accent="true"><mrow><mn>467' +
       '</mn></mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
@@ -931,9 +931,9 @@ sre.ClearspeakPart3Adornments.prototype.testBar009 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Bar010
+ * Testing ClearspeakEnglishPart3Adornments Example Bar010
  */
-sre.ClearspeakPart3Adornments.prototype.testBar010 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testBar010 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mn>25.12</mn><mover accent="true"><mrow>' +
       '<mn>632</mn></mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
@@ -944,9 +944,9 @@ sre.ClearspeakPart3Adornments.prototype.testBar010 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Bar011
+ * Testing ClearspeakEnglishPart3Adornments Example Bar011
  */
-sre.ClearspeakPart3Adornments.prototype.testBar011 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testBar011 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mi>z</mi><mtext></mtext><mover accent="true">' +
       '<mi>z</mi><mo>¯</mo></mover></mrow></math>';
@@ -956,9 +956,9 @@ sre.ClearspeakPart3Adornments.prototype.testBar011 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Bar012
+ * Testing ClearspeakEnglishPart3Adornments Example Bar012
  */
-sre.ClearspeakPart3Adornments.prototype.testBar012 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testBar012 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mover accent="true"><mrow><mi>C</mi><mi>D</mi>' +
       '</mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
@@ -968,9 +968,9 @@ sre.ClearspeakPart3Adornments.prototype.testBar012 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Bar013
+ * Testing ClearspeakEnglishPart3Adornments Example Bar013
  */
-sre.ClearspeakPart3Adornments.prototype.testBar013 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testBar013 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mover accent="true"><mrow><msup><mi>C</mi>' +
       '<mo>′</mo></msup><msup><mi>D</mi><mo>′</mo></msup></mrow><mo' +
@@ -981,9 +981,9 @@ sre.ClearspeakPart3Adornments.prototype.testBar013 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Bar014
+ * Testing ClearspeakEnglishPart3Adornments Example Bar014
  */
-sre.ClearspeakPart3Adornments.prototype.testBar014 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testBar014 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mover accent="true"><mrow><msup><mi>C</mi>' +
       '<mo>″</mo></msup><msup><mi>D</mi><mo>″</mo></msup></mrow><mo' +
@@ -994,9 +994,9 @@ sre.ClearspeakPart3Adornments.prototype.testBar014 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Bar015
+ * Testing ClearspeakEnglishPart3Adornments Example Bar015
  */
-sre.ClearspeakPart3Adornments.prototype.testBar015 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testBar015 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mover accent="true"><mrow><msup><mi>C</mi>' +
       '<mo>‴</mo></msup><msup><mi>D</mi><mo>‴</mo></msup></mrow><mo' +
@@ -1007,9 +1007,9 @@ sre.ClearspeakPart3Adornments.prototype.testBar015 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Bar016
+ * Testing ClearspeakEnglishPart3Adornments Example Bar016
  */
-sre.ClearspeakPart3Adornments.prototype.testBar016 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testBar016 = function() {
   var preference = 'Bar_Conjugate';
   var mathml = '<math><mover accent="true"><mi>z</mi><mo>¯</mo></mover></math>';
   var speech = 'the complex conjugate of z';
@@ -1018,9 +1018,9 @@ sre.ClearspeakPart3Adornments.prototype.testBar016 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Bar017
+ * Testing ClearspeakEnglishPart3Adornments Example Bar017
  */
-sre.ClearspeakPart3Adornments.prototype.testBar017 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testBar017 = function() {
   var preference = 'Bar_Conjugate';
   var mathml = '<math><mrow><mi>z</mi><mtext></mtext><mover accent="true">' +
       '<mi>z</mi><mo>¯</mo></mover></mrow></math>';
@@ -1030,9 +1030,9 @@ sre.ClearspeakPart3Adornments.prototype.testBar017 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Bar018
+ * Testing ClearspeakEnglishPart3Adornments Example Bar018
  */
-sre.ClearspeakPart3Adornments.prototype.testBar018 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testBar018 = function() {
   var preference = 'Bar_Conjugate';
   var mathml = '<math><mrow><mover accent="true"><mrow><mn>3</mn><mo>−</mo>' +
       '<mn>2</mn><mi>i</mi></mrow><mo stretchy="true">¯</mo></mover><mo>=' +
@@ -1044,9 +1044,9 @@ sre.ClearspeakPart3Adornments.prototype.testBar018 = function() {
 
 // Added! Test that still decimal period still works.
 /**
- * Testing ClearspeakPart3Adornments Example Bar006
+ * Testing ClearspeakEnglishPart3Adornments Example Bar006
  */
-sre.ClearspeakPart3Adornments.prototype.testBar006a = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testBar006a = function() {
   var preference = 'Bar_Conjugate';
   var mathml = '<math><mrow><mn>0</mn><mo>.</mo><mover accent="true"><mn>3' +
       '</mn><mo stretchy="true">¯</mo></mover></mrow></math>';
@@ -1056,9 +1056,9 @@ sre.ClearspeakPart3Adornments.prototype.testBar006a = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Bar007
+ * Testing ClearspeakEnglishPart3Adornments Example Bar007
  */
-sre.ClearspeakPart3Adornments.prototype.testBar007a = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testBar007a = function() {
   var preference = 'Bar_Conjugate';
   var mathml = '<math><mrow><mn>0</mn><mo>.</mo><mover accent="true"><mrow>' +
       '<mn>12</mn></mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
@@ -1068,9 +1068,9 @@ sre.ClearspeakPart3Adornments.prototype.testBar007a = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Bar008
+ * Testing ClearspeakEnglishPart3Adornments Example Bar008
  */
-sre.ClearspeakPart3Adornments.prototype.testBar008a = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testBar008a = function() {
   var preference = 'Bar_Conjugate';
   var mathml = '<math><mrow><mn>2</mn><mo>.</mo><mover accent="true"><mrow>' +
       '<mn>134</mn></mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
@@ -1081,9 +1081,9 @@ sre.ClearspeakPart3Adornments.prototype.testBar008a = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Bar009
+ * Testing ClearspeakEnglishPart3Adornments Example Bar009
  */
-sre.ClearspeakPart3Adornments.prototype.testBar009a = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testBar009a = function() {
   var preference = 'Bar_Conjugate';
   var mathml = '<math><mrow><mn>.13</mn><mover accent="true"><mrow><mn>467' +
       '</mn></mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
@@ -1094,9 +1094,9 @@ sre.ClearspeakPart3Adornments.prototype.testBar009a = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Bar010
+ * Testing ClearspeakEnglishPart3Adornments Example Bar010
  */
-sre.ClearspeakPart3Adornments.prototype.testBar010a = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testBar010a = function() {
   var preference = 'Bar_Conjugate';
   var mathml = '<math><mrow><mn>25.12</mn><mover accent="true"><mrow>' +
       '<mn>632</mn></mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
@@ -1114,9 +1114,9 @@ sre.ClearspeakPart3Adornments.prototype.testBar010a = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Equal001
+ * Testing ClearspeakEnglishPart3Adornments Example Equal001
  */
-sre.ClearspeakPart3Adornments.prototype.testEqual001 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testEqual001 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mover><mo>=</mo><mrow><mtext>def</mtext>' +
       '</mrow></mover></mrow></math>';
@@ -1126,9 +1126,9 @@ sre.ClearspeakPart3Adornments.prototype.testEqual001 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Equal002
+ * Testing ClearspeakEnglishPart3Adornments Example Equal002
  */
-sre.ClearspeakPart3Adornments.prototype.testEqual002 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testEqual002 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>∘</mo><mi>g' +
       '</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
@@ -1142,9 +1142,9 @@ sre.ClearspeakPart3Adornments.prototype.testEqual002 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Equal003
+ * Testing ClearspeakEnglishPart3Adornments Example Equal003
  */
-sre.ClearspeakPart3Adornments.prototype.testEqual003 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testEqual003 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mover><mo>=</mo><mo>?</mo></mover></mrow></math>';
   var speech = 'equals sign with question mark over it';
@@ -1153,9 +1153,9 @@ sre.ClearspeakPart3Adornments.prototype.testEqual003 = function() {
 
 
 /**
- * Testing ClearspeakPart3Adornments Example Equal004
+ * Testing ClearspeakEnglishPart3Adornments Example Equal004
  */
-sre.ClearspeakPart3Adornments.prototype.testEqual004 = function() {
+sre.ClearspeakEnglishPart3Adornments.prototype.testEqual004 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mi>x</mi><mo>+</mo><mn>2</mn><mover><mo>=</mo>' +
       '<mo>?</mo></mover><mn>4</mn></mrow></math>';

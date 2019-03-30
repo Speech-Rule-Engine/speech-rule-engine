@@ -17,26 +17,26 @@
 //
 
 
-goog.provide('sre.ClearspeakExponents');
+goog.provide('sre.ClearspeakEnglishExponents');
 
-goog.require('sre.ClearspeakRuleTest');
+goog.require('sre.ClearspeakEnglishRuleTest');
 
 
 
 /**
 * @constructor
-* @extends {sre.ClearspeakRuleTest}
+* @extends {sre.ClearspeakEnglishRuleTest}
 */
-sre.ClearspeakExponents = function() {
-  sre.ClearspeakExponents.base(this, 'constructor');
+sre.ClearspeakEnglishExponents = function() {
+  sre.ClearspeakEnglishExponents.base(this, 'constructor');
 
   /**
 * @override
   */
-  this.information = 'ClearspeakExponents rule tests.';
+  this.information = 'ClearspeakEnglishExponents rule tests.';
 
 };
-goog.inherits(sre.ClearspeakExponents, sre.ClearspeakRuleTest);
+goog.inherits(sre.ClearspeakEnglishExponents, sre.ClearspeakEnglishRuleTest);
 
 
 
@@ -46,9 +46,9 @@ goog.inherits(sre.ClearspeakExponents, sre.ClearspeakRuleTest);
 
 
 /**
- * Testing ClearspeakExponents Example Exp001
+ * Testing ClearspeakEnglishExponents Example Exp001
  */
-sre.ClearspeakExponents.prototype.testExp001 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp001 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>2</mn></msup></mrow></math>';
   var speech = '3 squared';
@@ -57,9 +57,9 @@ sre.ClearspeakExponents.prototype.testExp001 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp002a
+ * Testing ClearspeakEnglishExponents Example Exp002a
  */
-sre.ClearspeakExponents.prototype.testExp002a = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp002a = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>3</mn></msup></mrow></math>';
   var speech = '3 cubed';
@@ -68,9 +68,9 @@ sre.ClearspeakExponents.prototype.testExp002a = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp003
+ * Testing ClearspeakEnglishExponents Example Exp003
  */
-sre.ClearspeakExponents.prototype.testExp003 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp003 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>5</mn></msup></mrow></math>';
   var speech = '3 to the fifth power';
@@ -79,9 +79,9 @@ sre.ClearspeakExponents.prototype.testExp003 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp004
+ * Testing ClearspeakEnglishExponents Example Exp004
  */
-sre.ClearspeakExponents.prototype.testExp004 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp004 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>1</mn></msup></mrow></math>';
   var speech = '3 to the first power';
@@ -90,9 +90,9 @@ sre.ClearspeakExponents.prototype.testExp004 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp005
+ * Testing ClearspeakEnglishExponents Example Exp005
  */
-sre.ClearspeakExponents.prototype.testExp005 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp005 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mi>b</mi><mn>1</mn></msup></mrow></math>';
   var speech = 'b to the first power';
@@ -101,9 +101,9 @@ sre.ClearspeakExponents.prototype.testExp005 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp006
+ * Testing ClearspeakEnglishExponents Example Exp006
  */
-sre.ClearspeakExponents.prototype.testExp006 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp006 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mn>5.0</mn></mrow>' +
       '</msup></mrow></math>';
@@ -113,9 +113,9 @@ sre.ClearspeakExponents.prototype.testExp006 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp007
+ * Testing ClearspeakEnglishExponents Example Exp007
  */
-sre.ClearspeakExponents.prototype.testExp007 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp007 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>0</mn></msup></mrow></math>';
   var speech = '3 to the 0 power';
@@ -124,9 +124,9 @@ sre.ClearspeakExponents.prototype.testExp007 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp008
+ * Testing ClearspeakEnglishExponents Example Exp008
  */
-sre.ClearspeakExponents.prototype.testExp008 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp008 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>4</mn><mrow><mn>11</mn></mrow></msup>' +
       '</mrow></math>';
@@ -136,9 +136,9 @@ sre.ClearspeakExponents.prototype.testExp008 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp009
+ * Testing ClearspeakEnglishExponents Example Exp009
  */
-sre.ClearspeakExponents.prototype.testExp009 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp009 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2</mn>' +
       '</mrow></msup></mrow></math>';
@@ -148,9 +148,9 @@ sre.ClearspeakExponents.prototype.testExp009 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp010a
+ * Testing ClearspeakEnglishExponents Example Exp010a
  */
-sre.ClearspeakExponents.prototype.testExp010a = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp010a = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2.0</mn>' +
       '</mrow></msup></mrow></math>';
@@ -160,9 +160,9 @@ sre.ClearspeakExponents.prototype.testExp010a = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp011
+ * Testing ClearspeakEnglishExponents Example Exp011
  */
-sre.ClearspeakExponents.prototype.testExp011 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp011 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>4</mn><mi>x</mi></msup></mrow></math>';
   var speech = '4 to the xth power';
@@ -171,9 +171,9 @@ sre.ClearspeakExponents.prototype.testExp011 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp012
+ * Testing ClearspeakEnglishExponents Example Exp012
  */
-sre.ClearspeakExponents.prototype.testExp012 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp012 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mi>y</mi><mo>+</mo><mn>2' +
       '</mn></mrow></msup></mrow></math>';
@@ -183,9 +183,9 @@ sre.ClearspeakExponents.prototype.testExp012 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp013
+ * Testing ClearspeakEnglishExponents Example Exp013
  */
-sre.ClearspeakExponents.prototype.testExp013 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp013 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn>' +
       '<mi>y</mi><mo>−</mo><mn>3</mn></mrow><mo>)</mo></mrow></mrow><mrow>' +
@@ -197,9 +197,9 @@ sre.ClearspeakExponents.prototype.testExp013 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp014
+ * Testing ClearspeakEnglishExponents Example Exp014
  */
-sre.ClearspeakExponents.prototype.testExp014 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp014 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msubsup><mi>p</mi><mn>1</mn><mn>2</mn>' +
       '</msubsup></mrow></math>';
@@ -209,9 +209,9 @@ sre.ClearspeakExponents.prototype.testExp014 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp015
+ * Testing ClearspeakEnglishExponents Example Exp015
  */
-sre.ClearspeakExponents.prototype.testExp015 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp015 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msubsup><mi>p</mi><mn>1</mn><mn>3</mn>' +
       '</msubsup></mrow></math>';
@@ -221,9 +221,9 @@ sre.ClearspeakExponents.prototype.testExp015 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp016
+ * Testing ClearspeakEnglishExponents Example Exp016
  */
-sre.ClearspeakExponents.prototype.testExp016 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp016 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msubsup><mi>p</mi><mn>1</mn><mn>4</mn>' +
       '</msubsup></mrow></math>';
@@ -233,9 +233,9 @@ sre.ClearspeakExponents.prototype.testExp016 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp017
+ * Testing ClearspeakEnglishExponents Example Exp017
  */
-sre.ClearspeakExponents.prototype.testExp017 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp017 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msubsup><mi>p</mi><mn>1</mn><mrow><mn>10</mn>' +
       '</mrow></msubsup></mrow></math>';
@@ -245,9 +245,9 @@ sre.ClearspeakExponents.prototype.testExp017 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp018
+ * Testing ClearspeakEnglishExponents Example Exp018
  */
-sre.ClearspeakExponents.prototype.testExp018 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp018 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msubsup><mi>p</mi><mn>1</mn><mrow><mi>x</mi>' +
       '<mo>+</mo><mn>1</mn></mrow></msubsup></mrow></math>';
@@ -257,9 +257,9 @@ sre.ClearspeakExponents.prototype.testExp018 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp019
+ * Testing ClearspeakEnglishExponents Example Exp019
  */
-sre.ClearspeakExponents.prototype.testExp019 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp019 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msubsup><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow><mn>2</mn></msubsup></mrow></math>';
@@ -269,9 +269,9 @@ sre.ClearspeakExponents.prototype.testExp019 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp010b
+ * Testing ClearspeakEnglishExponents Example Exp010b
  */
-sre.ClearspeakExponents.prototype.testExp010b = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp010b = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msubsup><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow><mn>3</mn></msubsup></mrow></math>';
@@ -281,9 +281,9 @@ sre.ClearspeakExponents.prototype.testExp010b = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp011b
+ * Testing ClearspeakEnglishExponents Example Exp011b
  */
-sre.ClearspeakExponents.prototype.testExp011b = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp011b = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msubsup><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow><mn>4</mn></msubsup></mrow></math>';
@@ -293,9 +293,9 @@ sre.ClearspeakExponents.prototype.testExp011b = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp012b
+ * Testing ClearspeakEnglishExponents Example Exp012b
  */
-sre.ClearspeakExponents.prototype.testExp012b = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp012b = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msubsup><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow><mrow><mn>10</mn></mrow></msubsup></mrow></math>';
@@ -305,9 +305,9 @@ sre.ClearspeakExponents.prototype.testExp012b = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp013b
+ * Testing ClearspeakEnglishExponents Example Exp013b
  */
-sre.ClearspeakExponents.prototype.testExp013b = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp013b = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msubsup><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow>' +
@@ -318,9 +318,9 @@ sre.ClearspeakExponents.prototype.testExp013b = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp014b
+ * Testing ClearspeakEnglishExponents Example Exp014b
  */
-sre.ClearspeakExponents.prototype.testExp014b = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp014b = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2' +
       '</mn></msup></mrow></msup></mrow></math>';
@@ -330,9 +330,9 @@ sre.ClearspeakExponents.prototype.testExp014b = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp015b
+ * Testing ClearspeakEnglishExponents Example Exp015b
  */
-sre.ClearspeakExponents.prototype.testExp015b = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp015b = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mn>2</mn><msup><mi>x' +
       '</mi><mn>2</mn></msup></mrow></msup></mrow></math>';
@@ -342,9 +342,9 @@ sre.ClearspeakExponents.prototype.testExp015b = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp016b
+ * Testing ClearspeakEnglishExponents Example Exp016b
  */
-sre.ClearspeakExponents.prototype.testExp016b = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp016b = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>5</mn><mrow><msup><mn>2</mn><mn>3' +
       '</mn></msup></mrow></msup></mrow></math>';
@@ -354,9 +354,9 @@ sre.ClearspeakExponents.prototype.testExp016b = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp017b
+ * Testing ClearspeakEnglishExponents Example Exp017b
  */
-sre.ClearspeakExponents.prototype.testExp017b = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp017b = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>5</mn><mrow><mn>2</mn><msup><mi>x' +
       '</mi><mn>3</mn></msup></mrow></msup></mrow></math>';
@@ -366,9 +366,9 @@ sre.ClearspeakExponents.prototype.testExp017b = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp018b
+ * Testing ClearspeakEnglishExponents Example Exp018b
  */
-sre.ClearspeakExponents.prototype.testExp018b = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp018b = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2' +
       '</mn></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>';
@@ -378,9 +378,9 @@ sre.ClearspeakExponents.prototype.testExp018b = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp019b
+ * Testing ClearspeakEnglishExponents Example Exp019b
  */
-sre.ClearspeakExponents.prototype.testExp019b = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp019b = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2' +
       '</mn></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow></math>';
@@ -390,9 +390,9 @@ sre.ClearspeakExponents.prototype.testExp019b = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp020
+ * Testing ClearspeakEnglishExponents Example Exp020
  */
-sre.ClearspeakExponents.prototype.testExp020 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp020 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>2' +
       '</mn></msup><mo>+</mo><mn>3</mn><msup><mi>x</mi><mn>3</mn></msup>' +
@@ -404,9 +404,9 @@ sre.ClearspeakExponents.prototype.testExp020 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp021
+ * Testing ClearspeakEnglishExponents Example Exp021
  */
-sre.ClearspeakExponents.prototype.testExp021 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp021 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4' +
       '</mn></msup></mrow></msup></mrow></math>';
@@ -416,9 +416,9 @@ sre.ClearspeakExponents.prototype.testExp021 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp022
+ * Testing ClearspeakEnglishExponents Example Exp022
  */
-sre.ClearspeakExponents.prototype.testExp022 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp022 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4' +
       '</mn></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>';
@@ -429,9 +429,9 @@ sre.ClearspeakExponents.prototype.testExp022 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp023
+ * Testing ClearspeakEnglishExponents Example Exp023
  */
-sre.ClearspeakExponents.prototype.testExp023 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp023 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4' +
       '</mn></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow></math>';
@@ -442,9 +442,9 @@ sre.ClearspeakExponents.prototype.testExp023 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp024
+ * Testing ClearspeakEnglishExponents Example Exp024
  */
-sre.ClearspeakExponents.prototype.testExp024 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp024 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>4' +
       '</mn></msup></mrow></msup></mrow></math>';
@@ -454,9 +454,9 @@ sre.ClearspeakExponents.prototype.testExp024 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp025
+ * Testing ClearspeakEnglishExponents Example Exp025
  */
-sre.ClearspeakExponents.prototype.testExp025 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp025 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><msup><mrow><mn>10</mn>' +
       '</mrow><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow></msup></mrow>' +
@@ -468,9 +468,9 @@ sre.ClearspeakExponents.prototype.testExp025 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp026
+ * Testing ClearspeakEnglishExponents Example Exp026
  */
-sre.ClearspeakExponents.prototype.testExp026 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp026 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow>' +
       '<mn>10</mn></mrow></msup></mrow></msup></mrow></math>';
@@ -480,9 +480,9 @@ sre.ClearspeakExponents.prototype.testExp026 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp027
+ * Testing ClearspeakEnglishExponents Example Exp027
  */
-sre.ClearspeakExponents.prototype.testExp027 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp027 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow>' +
       '<mn>10</mn></mrow></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow>' +
@@ -494,9 +494,9 @@ sre.ClearspeakExponents.prototype.testExp027 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp028
+ * Testing ClearspeakEnglishExponents Example Exp028
  */
-sre.ClearspeakExponents.prototype.testExp028 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp028 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow>' +
       '<mn>10</mn></mrow></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow>' +
@@ -508,9 +508,9 @@ sre.ClearspeakExponents.prototype.testExp028 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp029
+ * Testing ClearspeakEnglishExponents Example Exp029
  */
-sre.ClearspeakExponents.prototype.testExp029 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp029 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
@@ -522,9 +522,9 @@ sre.ClearspeakExponents.prototype.testExp029 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp030
+ * Testing ClearspeakEnglishExponents Example Exp030
  */
-sre.ClearspeakExponents.prototype.testExp030 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp030 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
@@ -536,9 +536,9 @@ sre.ClearspeakExponents.prototype.testExp030 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp031
+ * Testing ClearspeakEnglishExponents Example Exp031
  */
-sre.ClearspeakExponents.prototype.testExp031 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp031 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
@@ -551,9 +551,9 @@ sre.ClearspeakExponents.prototype.testExp031 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp032
+ * Testing ClearspeakEnglishExponents Example Exp032
  */
-sre.ClearspeakExponents.prototype.testExp032 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp032 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
@@ -566,9 +566,9 @@ sre.ClearspeakExponents.prototype.testExp032 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp033
+ * Testing ClearspeakEnglishExponents Example Exp033
  */
-sre.ClearspeakExponents.prototype.testExp033 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp033 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
@@ -583,9 +583,9 @@ sre.ClearspeakExponents.prototype.testExp033 = function() {
 // TODO: (Simons) This does not work as semantically we have a -(xy) rather than
 //       (-x)(y).
 /**
- * Testing ClearspeakExponents Example Exp034
+ * Testing ClearspeakEnglishExponents Example Exp034
  */
-sre.ClearspeakExponents.prototype.untestExp034 = function() {
+sre.ClearspeakEnglishExponents.prototype.untestExp034 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1' +
       '</mn><mn>2</mn></mfrac><msup><mi>x</mi><mn>2</mn></msup></mrow>' +
@@ -596,9 +596,9 @@ sre.ClearspeakExponents.prototype.untestExp034 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp035
+ * Testing ClearspeakEnglishExponents Example Exp035
  */
-sre.ClearspeakExponents.prototype.testExp035 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp035 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1' +
       '</mn><mn>2</mn></mfrac><msup><mrow><mrow><mo>(</mo><mrow><mfrac>' +
@@ -612,9 +612,9 @@ sre.ClearspeakExponents.prototype.testExp035 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp036
+ * Testing ClearspeakEnglishExponents Example Exp036
  */
-sre.ClearspeakExponents.prototype.testExp036 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp036 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mi>n</mi></msup></mrow></math>';
   var speech = '2 to the nth power';
@@ -623,9 +623,9 @@ sre.ClearspeakExponents.prototype.testExp036 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp037
+ * Testing ClearspeakEnglishExponents Example Exp037
  */
-sre.ClearspeakExponents.prototype.testExp037 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp037 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mi>m</mi></msup></mrow></math>';
   var speech = '2 to the mth power';
@@ -634,9 +634,9 @@ sre.ClearspeakExponents.prototype.testExp037 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp038
+ * Testing ClearspeakEnglishExponents Example Exp038
  */
-sre.ClearspeakExponents.prototype.testExp038 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp038 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mi>i</mi></msup></mrow></math>';
   var speech = '2 to the ith power';
@@ -645,9 +645,9 @@ sre.ClearspeakExponents.prototype.testExp038 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp039
+ * Testing ClearspeakEnglishExponents Example Exp039
  */
-sre.ClearspeakExponents.prototype.testExp039 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp039 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mi>j</mi></msup></mrow></math>';
   var speech = '2 to the jth power';
@@ -656,9 +656,9 @@ sre.ClearspeakExponents.prototype.testExp039 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp40
+ * Testing ClearspeakEnglishExponents Example Exp40
  */
-sre.ClearspeakExponents.prototype.testExp40 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp40 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mi>a</mi></msup></mrow></math>';
   var speech = '2 to the ath power';
@@ -667,9 +667,9 @@ sre.ClearspeakExponents.prototype.testExp40 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp041
+ * Testing ClearspeakEnglishExponents Example Exp041
  */
-sre.ClearspeakExponents.prototype.testExp041 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp041 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>2</mn></msup></mrow></math>';
   var speech = '3 to the second';
@@ -678,9 +678,9 @@ sre.ClearspeakExponents.prototype.testExp041 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp042
+ * Testing ClearspeakEnglishExponents Example Exp042
  */
-sre.ClearspeakExponents.prototype.testExp042 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp042 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>3</mn></msup></mrow></math>';
   var speech = '3 to the third';
@@ -689,9 +689,9 @@ sre.ClearspeakExponents.prototype.testExp042 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp043
+ * Testing ClearspeakEnglishExponents Example Exp043
  */
-sre.ClearspeakExponents.prototype.testExp043 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp043 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>0</mn></msup></mrow></math>';
   var speech = '3 to the zero';
@@ -700,9 +700,9 @@ sre.ClearspeakExponents.prototype.testExp043 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp044
+ * Testing ClearspeakEnglishExponents Example Exp044
  */
-sre.ClearspeakExponents.prototype.testExp044 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp044 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>1</mn></msup></mrow></math>';
   var speech = '3 to the first';
@@ -711,9 +711,9 @@ sre.ClearspeakExponents.prototype.testExp044 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp045
+ * Testing ClearspeakEnglishExponents Example Exp045
  */
-sre.ClearspeakExponents.prototype.testExp045 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp045 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>5</mn></msup></mrow></math>';
   var speech = '3 to the fifth';
@@ -722,9 +722,9 @@ sre.ClearspeakExponents.prototype.testExp045 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp046
+ * Testing ClearspeakEnglishExponents Example Exp046
  */
-sre.ClearspeakExponents.prototype.testExp046 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp046 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>4</mn><mrow><mn>3.0</mn></mrow>' +
       '</msup></mrow></math>';
@@ -734,9 +734,9 @@ sre.ClearspeakExponents.prototype.testExp046 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp047
+ * Testing ClearspeakEnglishExponents Example Exp047
  */
-sre.ClearspeakExponents.prototype.testExp047 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp047 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>4</mn><mrow><mn>11</mn></mrow></msup>' +
       '</mrow></math>';
@@ -746,9 +746,9 @@ sre.ClearspeakExponents.prototype.testExp047 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp048
+ * Testing ClearspeakEnglishExponents Example Exp048
  */
-sre.ClearspeakExponents.prototype.testExp048 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp048 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2</mn>' +
       '</mrow></msup></mrow></math>';
@@ -758,9 +758,9 @@ sre.ClearspeakExponents.prototype.testExp048 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp049
+ * Testing ClearspeakEnglishExponents Example Exp049
  */
-sre.ClearspeakExponents.prototype.testExp049 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp049 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2.0</mn>' +
       '</mrow></msup></mrow></math>';
@@ -770,9 +770,9 @@ sre.ClearspeakExponents.prototype.testExp049 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp050
+ * Testing ClearspeakEnglishExponents Example Exp050
  */
-sre.ClearspeakExponents.prototype.testExp050 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp050 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>4</mn><mi>x</mi></msup></mrow></math>';
   var speech = '4 to the xth';
@@ -781,9 +781,9 @@ sre.ClearspeakExponents.prototype.testExp050 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp051
+ * Testing ClearspeakEnglishExponents Example Exp051
  */
-sre.ClearspeakExponents.prototype.testExp051 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp051 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mi>y</mi><mo>+</mo><mn>2' +
       '</mn></mrow></msup></mrow></math>';
@@ -793,9 +793,9 @@ sre.ClearspeakExponents.prototype.testExp051 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp052
+ * Testing ClearspeakEnglishExponents Example Exp052
  */
-sre.ClearspeakExponents.prototype.testExp052 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp052 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn>' +
       '<mi>y</mi><mo>−</mo><mn>3</mn></mrow><mo>)</mo></mrow></mrow><mrow>' +
@@ -807,9 +807,9 @@ sre.ClearspeakExponents.prototype.testExp052 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp053
+ * Testing ClearspeakEnglishExponents Example Exp053
  */
-sre.ClearspeakExponents.prototype.testExp053 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp053 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/>' +
       '<mn>2</mn></msup></mrow></math>';
@@ -819,9 +819,9 @@ sre.ClearspeakExponents.prototype.testExp053 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp054
+ * Testing ClearspeakEnglishExponents Example Exp054
  */
-sre.ClearspeakExponents.prototype.testExp054 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp054 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/>' +
       '<mn>3</mn></msup></mrow></math>';
@@ -831,9 +831,9 @@ sre.ClearspeakExponents.prototype.testExp054 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp055
+ * Testing ClearspeakEnglishExponents Example Exp055
  */
-sre.ClearspeakExponents.prototype.testExp055 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp055 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/>' +
       '<mn>4</mn></msup></mrow></math>';
@@ -843,9 +843,9 @@ sre.ClearspeakExponents.prototype.testExp055 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp056
+ * Testing ClearspeakEnglishExponents Example Exp056
  */
-sre.ClearspeakExponents.prototype.testExp056 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp056 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/>' +
       '<mrow><mn>10</mn></mrow></msup></mrow></math>';
@@ -855,9 +855,9 @@ sre.ClearspeakExponents.prototype.testExp056 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp057
+ * Testing ClearspeakEnglishExponents Example Exp057
  */
-sre.ClearspeakExponents.prototype.testExp057 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp057 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/>' +
       '<mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>';
@@ -867,9 +867,9 @@ sre.ClearspeakExponents.prototype.testExp057 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp058
+ * Testing ClearspeakEnglishExponents Example Exp058
  */
-sre.ClearspeakExponents.prototype.testExp058 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp058 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow></msub><msup><mrow/><mn>2</mn></msup></mrow></math>';
@@ -879,9 +879,9 @@ sre.ClearspeakExponents.prototype.testExp058 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp059
+ * Testing ClearspeakEnglishExponents Example Exp059
  */
-sre.ClearspeakExponents.prototype.testExp059 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp059 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow></msub><msup><mrow/><mn>3</mn></msup></mrow></math>';
@@ -891,9 +891,9 @@ sre.ClearspeakExponents.prototype.testExp059 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp060
+ * Testing ClearspeakEnglishExponents Example Exp060
  */
-sre.ClearspeakExponents.prototype.testExp060 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp060 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow></msub><msup><mrow/><mn>4</mn></msup></mrow></math>';
@@ -903,9 +903,9 @@ sre.ClearspeakExponents.prototype.testExp060 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp061
+ * Testing ClearspeakEnglishExponents Example Exp061
  */
-sre.ClearspeakExponents.prototype.testExp061 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp061 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow></msub><msup><mrow/><mrow><mn>10</mn></mrow>' +
@@ -916,9 +916,9 @@ sre.ClearspeakExponents.prototype.testExp061 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp062
+ * Testing ClearspeakEnglishExponents Example Exp062
  */
-sre.ClearspeakExponents.prototype.testExp062 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp062 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow></msub><msup><mrow/><mrow><mi>y</mi><mo>+</mo>' +
@@ -929,9 +929,9 @@ sre.ClearspeakExponents.prototype.testExp062 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp063
+ * Testing ClearspeakEnglishExponents Example Exp063
  */
-sre.ClearspeakExponents.prototype.testExp063 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp063 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2' +
       '</mn></msup></mrow></msup></mrow></math>';
@@ -941,9 +941,9 @@ sre.ClearspeakExponents.prototype.testExp063 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp064
+ * Testing ClearspeakEnglishExponents Example Exp064
  */
-sre.ClearspeakExponents.prototype.testExp064 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp064 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mn>2</mn><msup><mi>x' +
       '</mi><mn>2</mn></msup></mrow></msup></mrow></math>';
@@ -953,9 +953,9 @@ sre.ClearspeakExponents.prototype.testExp064 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp065
+ * Testing ClearspeakEnglishExponents Example Exp065
  */
-sre.ClearspeakExponents.prototype.testExp065 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp065 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>5</mn><mrow><msup><mn>2</mn><mn>3' +
       '</mn></msup></mrow></msup></mrow></math>';
@@ -965,9 +965,9 @@ sre.ClearspeakExponents.prototype.testExp065 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp066
+ * Testing ClearspeakEnglishExponents Example Exp066
  */
-sre.ClearspeakExponents.prototype.testExp066 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp066 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>5</mn><mrow><mn>2</mn><msup><mi>x' +
       '</mi><mn>3</mn></msup></mrow></msup></mrow></math>';
@@ -977,9 +977,9 @@ sre.ClearspeakExponents.prototype.testExp066 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp067
+ * Testing ClearspeakEnglishExponents Example Exp067
  */
-sre.ClearspeakExponents.prototype.testExp067 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp067 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2' +
       '</mn></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>';
@@ -990,9 +990,9 @@ sre.ClearspeakExponents.prototype.testExp067 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp068
+ * Testing ClearspeakEnglishExponents Example Exp068
  */
-sre.ClearspeakExponents.prototype.testExp068 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp068 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2' +
       '</mn></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow></math>';
@@ -1003,9 +1003,9 @@ sre.ClearspeakExponents.prototype.testExp068 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp069
+ * Testing ClearspeakEnglishExponents Example Exp069
  */
-sre.ClearspeakExponents.prototype.testExp069 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp069 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>2' +
       '</mn></msup><mo>+</mo><mn>3</mn><msup><mi>x</mi><mn>3</mn></msup>' +
@@ -1017,9 +1017,9 @@ sre.ClearspeakExponents.prototype.testExp069 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp070
+ * Testing ClearspeakEnglishExponents Example Exp070
  */
-sre.ClearspeakExponents.prototype.testExp070 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp070 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4' +
       '</mn></msup></mrow></msup></mrow></math>';
@@ -1029,9 +1029,9 @@ sre.ClearspeakExponents.prototype.testExp070 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp071
+ * Testing ClearspeakEnglishExponents Example Exp071
  */
-sre.ClearspeakExponents.prototype.testExp071 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp071 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4' +
       '</mn></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>';
@@ -1042,9 +1042,9 @@ sre.ClearspeakExponents.prototype.testExp071 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp072
+ * Testing ClearspeakEnglishExponents Example Exp072
  */
-sre.ClearspeakExponents.prototype.testExp072 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp072 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4' +
       '</mn></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow></math>';
@@ -1055,9 +1055,9 @@ sre.ClearspeakExponents.prototype.testExp072 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp073
+ * Testing ClearspeakEnglishExponents Example Exp073
  */
-sre.ClearspeakExponents.prototype.testExp073 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp073 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>4' +
       '</mn></msup></mrow></msup></mrow></math>';
@@ -1067,9 +1067,9 @@ sre.ClearspeakExponents.prototype.testExp073 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp074
+ * Testing ClearspeakEnglishExponents Example Exp074
  */
-sre.ClearspeakExponents.prototype.testExp074 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp074 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><msup><mrow><mn>10</mn>' +
       '</mrow><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow></msup></mrow>' +
@@ -1081,9 +1081,9 @@ sre.ClearspeakExponents.prototype.testExp074 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp075
+ * Testing ClearspeakEnglishExponents Example Exp075
  */
-sre.ClearspeakExponents.prototype.testExp075 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp075 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow>' +
       '<mn>10</mn></mrow></msup></mrow></msup></mrow></math>';
@@ -1093,9 +1093,9 @@ sre.ClearspeakExponents.prototype.testExp075 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp076
+ * Testing ClearspeakEnglishExponents Example Exp076
  */
-sre.ClearspeakExponents.prototype.testExp076 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp076 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow>' +
       '<mn>10</mn></mrow></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow>' +
@@ -1106,9 +1106,9 @@ sre.ClearspeakExponents.prototype.testExp076 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp077
+ * Testing ClearspeakEnglishExponents Example Exp077
  */
-sre.ClearspeakExponents.prototype.testExp077 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp077 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow>' +
       '<mn>10</mn></mrow></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow>' +
@@ -1119,9 +1119,9 @@ sre.ClearspeakExponents.prototype.testExp077 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp078
+ * Testing ClearspeakEnglishExponents Example Exp078
  */
-sre.ClearspeakExponents.prototype.testExp078 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp078 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
@@ -1133,9 +1133,9 @@ sre.ClearspeakExponents.prototype.testExp078 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp079
+ * Testing ClearspeakEnglishExponents Example Exp079
  */
-sre.ClearspeakExponents.prototype.testExp079 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp079 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
@@ -1147,9 +1147,9 @@ sre.ClearspeakExponents.prototype.testExp079 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp080
+ * Testing ClearspeakEnglishExponents Example Exp080
  */
-sre.ClearspeakExponents.prototype.testExp080 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp080 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
@@ -1162,9 +1162,9 @@ sre.ClearspeakExponents.prototype.testExp080 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp081
+ * Testing ClearspeakEnglishExponents Example Exp081
  */
-sre.ClearspeakExponents.prototype.testExp081 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp081 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
@@ -1177,9 +1177,9 @@ sre.ClearspeakExponents.prototype.testExp081 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp082
+ * Testing ClearspeakEnglishExponents Example Exp082
  */
-sre.ClearspeakExponents.prototype.testExp082 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp082 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
@@ -1192,9 +1192,9 @@ sre.ClearspeakExponents.prototype.testExp082 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp083
+ * Testing ClearspeakEnglishExponents Example Exp083
  */
-sre.ClearspeakExponents.prototype.testExp083 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp083 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1' +
       '</mn><mn>2</mn></mfrac><msup><mi>x</mi><mn>2</mn></msup></mrow>' +
@@ -1206,9 +1206,9 @@ sre.ClearspeakExponents.prototype.testExp083 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp084
+ * Testing ClearspeakEnglishExponents Example Exp084
  */
-sre.ClearspeakExponents.prototype.testExp084 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp084 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1' +
       '</mn><mn>2</mn></mfrac><msup><mrow><mrow><mo>(</mo><mrow><mfrac>' +
@@ -1222,9 +1222,9 @@ sre.ClearspeakExponents.prototype.testExp084 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp085
+ * Testing ClearspeakEnglishExponents Example Exp085
  */
-sre.ClearspeakExponents.prototype.testExp085 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp085 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>2</mn></msup></mrow></math>';
   var speech = '3 to the second power';
@@ -1233,9 +1233,9 @@ sre.ClearspeakExponents.prototype.testExp085 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp086
+ * Testing ClearspeakEnglishExponents Example Exp086
  */
-sre.ClearspeakExponents.prototype.testExp086 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp086 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>3</mn></msup></mrow></math>';
   var speech = '3 to the third power';
@@ -1244,9 +1244,9 @@ sre.ClearspeakExponents.prototype.testExp086 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp087
+ * Testing ClearspeakEnglishExponents Example Exp087
  */
-sre.ClearspeakExponents.prototype.testExp087 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp087 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>0</mn></msup></mrow></math>';
   var speech = '3 to the zero power';
@@ -1255,9 +1255,9 @@ sre.ClearspeakExponents.prototype.testExp087 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp088
+ * Testing ClearspeakEnglishExponents Example Exp088
  */
-sre.ClearspeakExponents.prototype.testExp088 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp088 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>1</mn></msup></mrow></math>';
   var speech = '3 to the first power';
@@ -1266,9 +1266,9 @@ sre.ClearspeakExponents.prototype.testExp088 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp089
+ * Testing ClearspeakEnglishExponents Example Exp089
  */
-sre.ClearspeakExponents.prototype.testExp089 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp089 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>5</mn></msup></mrow></math>';
   var speech = '3 to the fifth power';
@@ -1277,9 +1277,9 @@ sre.ClearspeakExponents.prototype.testExp089 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp090
+ * Testing ClearspeakEnglishExponents Example Exp090
  */
-sre.ClearspeakExponents.prototype.testExp090 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp090 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mn>5.0</mn></mrow>' +
       '</msup></mrow></math>';
@@ -1289,9 +1289,9 @@ sre.ClearspeakExponents.prototype.testExp090 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp091
+ * Testing ClearspeakEnglishExponents Example Exp091
  */
-sre.ClearspeakExponents.prototype.testExp091 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp091 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>4</mn><mrow><mn>11</mn></mrow></msup>' +
       '</mrow></math>';
@@ -1301,9 +1301,9 @@ sre.ClearspeakExponents.prototype.testExp091 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp092
+ * Testing ClearspeakEnglishExponents Example Exp092
  */
-sre.ClearspeakExponents.prototype.testExp092 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp092 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2</mn>' +
       '</mrow></msup></mrow></math>';
@@ -1313,9 +1313,9 @@ sre.ClearspeakExponents.prototype.testExp092 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp093
+ * Testing ClearspeakEnglishExponents Example Exp093
  */
-sre.ClearspeakExponents.prototype.testExp093 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp093 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2.0</mn>' +
       '</mrow></msup></mrow></math>';
@@ -1325,9 +1325,9 @@ sre.ClearspeakExponents.prototype.testExp093 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp094
+ * Testing ClearspeakEnglishExponents Example Exp094
  */
-sre.ClearspeakExponents.prototype.testExp094 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp094 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>4</mn><mi>x</mi></msup></mrow></math>';
   var speech = '4 to the xth power';
@@ -1336,9 +1336,9 @@ sre.ClearspeakExponents.prototype.testExp094 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp095
+ * Testing ClearspeakEnglishExponents Example Exp095
  */
-sre.ClearspeakExponents.prototype.testExp095 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp095 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mi>y</mi><mo>+</mo><mn>2' +
       '</mn></mrow></msup></mrow></math>';
@@ -1348,9 +1348,9 @@ sre.ClearspeakExponents.prototype.testExp095 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp096
+ * Testing ClearspeakEnglishExponents Example Exp096
  */
-sre.ClearspeakExponents.prototype.testExp096 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp096 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn>' +
       '<mi>y</mi><mo>−</mo><mn>3</mn></mrow><mo>)</mo></mrow></mrow><mrow>' +
@@ -1362,9 +1362,9 @@ sre.ClearspeakExponents.prototype.testExp096 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp097
+ * Testing ClearspeakEnglishExponents Example Exp097
  */
-sre.ClearspeakExponents.prototype.testExp097 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp097 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/>' +
       '<mn>2</mn></msup></mrow></math>';
@@ -1374,9 +1374,9 @@ sre.ClearspeakExponents.prototype.testExp097 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp098
+ * Testing ClearspeakEnglishExponents Example Exp098
  */
-sre.ClearspeakExponents.prototype.testExp098 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp098 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/>' +
       '<mn>3</mn></msup></mrow></math>';
@@ -1386,9 +1386,9 @@ sre.ClearspeakExponents.prototype.testExp098 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp099
+ * Testing ClearspeakEnglishExponents Example Exp099
  */
-sre.ClearspeakExponents.prototype.testExp099 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp099 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/>' +
       '<mn>4</mn></msup></mrow></math>';
@@ -1398,9 +1398,9 @@ sre.ClearspeakExponents.prototype.testExp099 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp100
+ * Testing ClearspeakEnglishExponents Example Exp100
  */
-sre.ClearspeakExponents.prototype.testExp100 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp100 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/>' +
       '<mrow><mn>10</mn></mrow></msup></mrow></math>';
@@ -1410,9 +1410,9 @@ sre.ClearspeakExponents.prototype.testExp100 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp101
+ * Testing ClearspeakEnglishExponents Example Exp101
  */
-sre.ClearspeakExponents.prototype.testExp101 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp101 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/>' +
       '<mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>';
@@ -1422,9 +1422,9 @@ sre.ClearspeakExponents.prototype.testExp101 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp102
+ * Testing ClearspeakEnglishExponents Example Exp102
  */
-sre.ClearspeakExponents.prototype.testExp102 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp102 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow></msub><msup><mrow/><mn>2</mn></msup></mrow></math>';
@@ -1434,9 +1434,9 @@ sre.ClearspeakExponents.prototype.testExp102 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp103
+ * Testing ClearspeakEnglishExponents Example Exp103
  */
-sre.ClearspeakExponents.prototype.testExp103 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp103 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow></msub><msup><mrow/><mn>3</mn></msup></mrow></math>';
@@ -1446,9 +1446,9 @@ sre.ClearspeakExponents.prototype.testExp103 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp104
+ * Testing ClearspeakEnglishExponents Example Exp104
  */
-sre.ClearspeakExponents.prototype.testExp104 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp104 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow></msub><msup><mrow/><mn>4</mn></msup></mrow></math>';
@@ -1458,9 +1458,9 @@ sre.ClearspeakExponents.prototype.testExp104 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp105
+ * Testing ClearspeakEnglishExponents Example Exp105
  */
-sre.ClearspeakExponents.prototype.testExp105 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp105 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow></msub><msup><mrow/><mrow><mn>10</mn></mrow>' +
@@ -1471,9 +1471,9 @@ sre.ClearspeakExponents.prototype.testExp105 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp106
+ * Testing ClearspeakEnglishExponents Example Exp106
  */
-sre.ClearspeakExponents.prototype.testExp106 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp106 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow></msub><msup><mrow/><mrow><mi>y</mi><mo>+</mo>' +
@@ -1484,9 +1484,9 @@ sre.ClearspeakExponents.prototype.testExp106 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp107
+ * Testing ClearspeakEnglishExponents Example Exp107
  */
-sre.ClearspeakExponents.prototype.testExp107 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp107 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2' +
       '</mn></msup></mrow></msup></mrow></math>';
@@ -1496,9 +1496,9 @@ sre.ClearspeakExponents.prototype.testExp107 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp108
+ * Testing ClearspeakEnglishExponents Example Exp108
  */
-sre.ClearspeakExponents.prototype.testExp108 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp108 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mn>2</mn><msup><mi>x' +
       '</mi><mn>2</mn></msup></mrow></msup></mrow></math>';
@@ -1509,9 +1509,9 @@ sre.ClearspeakExponents.prototype.testExp108 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp109
+ * Testing ClearspeakEnglishExponents Example Exp109
  */
-sre.ClearspeakExponents.prototype.testExp109 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp109 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>5</mn><mrow><msup><mn>2</mn><mn>3' +
       '</mn></msup></mrow></msup></mrow></math>';
@@ -1521,9 +1521,9 @@ sre.ClearspeakExponents.prototype.testExp109 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp110
+ * Testing ClearspeakEnglishExponents Example Exp110
  */
-sre.ClearspeakExponents.prototype.testExp110 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp110 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>5</mn><mrow><mn>2</mn><msup><mi>x' +
       '</mi><mn>3</mn></msup></mrow></msup></mrow></math>';
@@ -1533,9 +1533,9 @@ sre.ClearspeakExponents.prototype.testExp110 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp111
+ * Testing ClearspeakEnglishExponents Example Exp111
  */
-sre.ClearspeakExponents.prototype.testExp111 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp111 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2' +
       '</mn></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>';
@@ -1546,9 +1546,9 @@ sre.ClearspeakExponents.prototype.testExp111 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp112
+ * Testing ClearspeakEnglishExponents Example Exp112
  */
-sre.ClearspeakExponents.prototype.testExp112 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp112 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2' +
       '</mn></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow></math>';
@@ -1559,9 +1559,9 @@ sre.ClearspeakExponents.prototype.testExp112 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp113
+ * Testing ClearspeakEnglishExponents Example Exp113
  */
-sre.ClearspeakExponents.prototype.testExp113 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp113 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>2' +
       '</mn></msup><mo>+</mo><mn>3</mn><msup><mi>x</mi><mn>3</mn></msup>' +
@@ -1573,9 +1573,9 @@ sre.ClearspeakExponents.prototype.testExp113 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp114
+ * Testing ClearspeakEnglishExponents Example Exp114
  */
-sre.ClearspeakExponents.prototype.testExp114 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp114 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4' +
       '</mn></msup></mrow></msup></mrow></math>';
@@ -1585,9 +1585,9 @@ sre.ClearspeakExponents.prototype.testExp114 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp115
+ * Testing ClearspeakEnglishExponents Example Exp115
  */
-sre.ClearspeakExponents.prototype.testExp115 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp115 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4' +
       '</mn></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>';
@@ -1598,9 +1598,9 @@ sre.ClearspeakExponents.prototype.testExp115 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp116
+ * Testing ClearspeakEnglishExponents Example Exp116
  */
-sre.ClearspeakExponents.prototype.testExp116 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp116 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4' +
       '</mn></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow></math>';
@@ -1611,9 +1611,9 @@ sre.ClearspeakExponents.prototype.testExp116 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp117
+ * Testing ClearspeakEnglishExponents Example Exp117
  */
-sre.ClearspeakExponents.prototype.testExp117 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp117 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>4' +
       '</mn></msup></mrow></msup></mrow></math>';
@@ -1623,9 +1623,9 @@ sre.ClearspeakExponents.prototype.testExp117 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp118
+ * Testing ClearspeakEnglishExponents Example Exp118
  */
-sre.ClearspeakExponents.prototype.testExp118 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp118 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><msup><mrow><mn>10</mn>' +
       '</mrow><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow></msup></mrow>' +
@@ -1637,9 +1637,9 @@ sre.ClearspeakExponents.prototype.testExp118 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp119
+ * Testing ClearspeakEnglishExponents Example Exp119
  */
-sre.ClearspeakExponents.prototype.testExp119 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp119 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow>' +
       '<mn>10</mn></mrow></msup></mrow></msup></mrow></math>';
@@ -1649,9 +1649,9 @@ sre.ClearspeakExponents.prototype.testExp119 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp120
+ * Testing ClearspeakEnglishExponents Example Exp120
  */
-sre.ClearspeakExponents.prototype.testExp120 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp120 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow>' +
       '<mn>10</mn></mrow></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow>' +
@@ -1663,9 +1663,9 @@ sre.ClearspeakExponents.prototype.testExp120 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp121
+ * Testing ClearspeakEnglishExponents Example Exp121
  */
-sre.ClearspeakExponents.prototype.testExp121 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp121 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow>' +
       '<mn>10</mn></mrow></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow>' +
@@ -1677,9 +1677,9 @@ sre.ClearspeakExponents.prototype.testExp121 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp122
+ * Testing ClearspeakEnglishExponents Example Exp122
  */
-sre.ClearspeakExponents.prototype.testExp122 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp122 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
@@ -1691,9 +1691,9 @@ sre.ClearspeakExponents.prototype.testExp122 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp123
+ * Testing ClearspeakEnglishExponents Example Exp123
  */
-sre.ClearspeakExponents.prototype.testExp123 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp123 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
@@ -1705,9 +1705,9 @@ sre.ClearspeakExponents.prototype.testExp123 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp124
+ * Testing ClearspeakEnglishExponents Example Exp124
  */
-sre.ClearspeakExponents.prototype.testExp124 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp124 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
@@ -1720,9 +1720,9 @@ sre.ClearspeakExponents.prototype.testExp124 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp125
+ * Testing ClearspeakEnglishExponents Example Exp125
  */
-sre.ClearspeakExponents.prototype.testExp125 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp125 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
@@ -1735,9 +1735,9 @@ sre.ClearspeakExponents.prototype.testExp125 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp126
+ * Testing ClearspeakEnglishExponents Example Exp126
  */
-sre.ClearspeakExponents.prototype.testExp126 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp126 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
@@ -1750,9 +1750,9 @@ sre.ClearspeakExponents.prototype.testExp126 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp127
+ * Testing ClearspeakEnglishExponents Example Exp127
  */
-sre.ClearspeakExponents.prototype.testExp127 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp127 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1' +
       '</mn><mn>2</mn></mfrac><msup><mi>x</mi><mn>2</mn></msup></mrow>' +
@@ -1764,9 +1764,9 @@ sre.ClearspeakExponents.prototype.testExp127 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp128
+ * Testing ClearspeakEnglishExponents Example Exp128
  */
-sre.ClearspeakExponents.prototype.testExp128 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp128 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1' +
       '</mn><mn>2</mn></mfrac><msup><mrow><mrow><mo>(</mo><mrow><mfrac>' +
@@ -1780,9 +1780,9 @@ sre.ClearspeakExponents.prototype.testExp128 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp129
+ * Testing ClearspeakEnglishExponents Example Exp129
  */
-sre.ClearspeakExponents.prototype.testExp129 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp129 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>2</mn></msup></mrow></math>';
   var speech = '3 raised to the power 2';
@@ -1791,9 +1791,9 @@ sre.ClearspeakExponents.prototype.testExp129 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp130
+ * Testing ClearspeakEnglishExponents Example Exp130
  */
-sre.ClearspeakExponents.prototype.testExp130 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp130 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>3</mn></msup></mrow></math>';
   var speech = '3 raised to the power 3';
@@ -1802,9 +1802,9 @@ sre.ClearspeakExponents.prototype.testExp130 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp131
+ * Testing ClearspeakEnglishExponents Example Exp131
  */
-sre.ClearspeakExponents.prototype.testExp131 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp131 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>1</mn></msup></mrow></math>';
   var speech = '3 raised to the power 1';
@@ -1813,9 +1813,9 @@ sre.ClearspeakExponents.prototype.testExp131 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp132b
+ * Testing ClearspeakEnglishExponents Example Exp132b
  */
-sre.ClearspeakExponents.prototype.testExp132b = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp132b = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>0</mn></msup></mrow></math>';
   var speech = '3 raised to the power 0';
@@ -1824,9 +1824,9 @@ sre.ClearspeakExponents.prototype.testExp132b = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp133
+ * Testing ClearspeakEnglishExponents Example Exp133
  */
-sre.ClearspeakExponents.prototype.testExp133 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp133 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>5</mn></msup></mrow></math>';
   var speech = '3 raised to the power 5';
@@ -1835,9 +1835,9 @@ sre.ClearspeakExponents.prototype.testExp133 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp134
+ * Testing ClearspeakEnglishExponents Example Exp134
  */
-sre.ClearspeakExponents.prototype.testExp134 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp134 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mn>5.0</mn></mrow>' +
       '</msup></mrow></math>';
@@ -1847,9 +1847,9 @@ sre.ClearspeakExponents.prototype.testExp134 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp135
+ * Testing ClearspeakEnglishExponents Example Exp135
  */
-sre.ClearspeakExponents.prototype.testExp135 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp135 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>4</mn><mrow><mn>11</mn></mrow></msup>' +
       '</mrow></math>';
@@ -1859,9 +1859,9 @@ sre.ClearspeakExponents.prototype.testExp135 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp136
+ * Testing ClearspeakEnglishExponents Example Exp136
  */
-sre.ClearspeakExponents.prototype.testExp136 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp136 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2</mn>' +
       '</mrow></msup></mrow></math>';
@@ -1871,9 +1871,9 @@ sre.ClearspeakExponents.prototype.testExp136 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp137
+ * Testing ClearspeakEnglishExponents Example Exp137
  */
-sre.ClearspeakExponents.prototype.testExp137 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp137 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2.0</mn>' +
       '</mrow></msup></mrow></math>';
@@ -1883,9 +1883,9 @@ sre.ClearspeakExponents.prototype.testExp137 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp138
+ * Testing ClearspeakEnglishExponents Example Exp138
  */
-sre.ClearspeakExponents.prototype.testExp138 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp138 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>4</mn><mi>x</mi></msup></mrow></math>';
   var speech = '4 raised to the power x';
@@ -1894,9 +1894,9 @@ sre.ClearspeakExponents.prototype.testExp138 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp139
+ * Testing ClearspeakEnglishExponents Example Exp139
  */
-sre.ClearspeakExponents.prototype.testExp139 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp139 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mi>y</mi><mo>+</mo><mn>2' +
       '</mn></mrow></msup></mrow></math>';
@@ -1906,9 +1906,9 @@ sre.ClearspeakExponents.prototype.testExp139 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp140
+ * Testing ClearspeakEnglishExponents Example Exp140
  */
-sre.ClearspeakExponents.prototype.testExp140 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp140 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn>' +
       '<mi>y</mi><mo>−</mo><mn>3</mn></mrow><mo>)</mo></mrow></mrow><mrow>' +
@@ -1920,9 +1920,9 @@ sre.ClearspeakExponents.prototype.testExp140 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp141
+ * Testing ClearspeakEnglishExponents Example Exp141
  */
-sre.ClearspeakExponents.prototype.testExp141 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp141 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/>' +
       '<mn>2</mn></msup></mrow></math>';
@@ -1932,9 +1932,9 @@ sre.ClearspeakExponents.prototype.testExp141 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp142
+ * Testing ClearspeakEnglishExponents Example Exp142
  */
-sre.ClearspeakExponents.prototype.testExp142 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp142 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/>' +
       '<mn>3</mn></msup></mrow></math>';
@@ -1944,9 +1944,9 @@ sre.ClearspeakExponents.prototype.testExp142 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp143
+ * Testing ClearspeakEnglishExponents Example Exp143
  */
-sre.ClearspeakExponents.prototype.testExp143 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp143 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/>' +
       '<mn>4</mn></msup></mrow></math>';
@@ -1956,9 +1956,9 @@ sre.ClearspeakExponents.prototype.testExp143 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp144
+ * Testing ClearspeakEnglishExponents Example Exp144
  */
-sre.ClearspeakExponents.prototype.testExp144 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp144 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/>' +
       '<mrow><mn>10</mn></mrow></msup></mrow></math>';
@@ -1968,9 +1968,9 @@ sre.ClearspeakExponents.prototype.testExp144 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp145
+ * Testing ClearspeakEnglishExponents Example Exp145
  */
-sre.ClearspeakExponents.prototype.testExp145 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp145 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/>' +
       '<mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>';
@@ -1980,9 +1980,9 @@ sre.ClearspeakExponents.prototype.testExp145 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp146
+ * Testing ClearspeakEnglishExponents Example Exp146
  */
-sre.ClearspeakExponents.prototype.testExp146 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp146 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow></msub><msup><mrow/><mn>2</mn></msup></mrow></math>';
@@ -1992,9 +1992,9 @@ sre.ClearspeakExponents.prototype.testExp146 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp147
+ * Testing ClearspeakEnglishExponents Example Exp147
  */
-sre.ClearspeakExponents.prototype.testExp147 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp147 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow></msub><msup><mrow/><mn>3</mn></msup></mrow></math>';
@@ -2004,9 +2004,9 @@ sre.ClearspeakExponents.prototype.testExp147 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp148
+ * Testing ClearspeakEnglishExponents Example Exp148
  */
-sre.ClearspeakExponents.prototype.testExp148 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp148 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow></msub><msup><mrow/><mn>4</mn></msup></mrow></math>';
@@ -2016,9 +2016,9 @@ sre.ClearspeakExponents.prototype.testExp148 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp149
+ * Testing ClearspeakEnglishExponents Example Exp149
  */
-sre.ClearspeakExponents.prototype.testExp149 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp149 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow></msub><msup><mrow/><mrow><mn>10</mn></mrow>' +
@@ -2029,9 +2029,9 @@ sre.ClearspeakExponents.prototype.testExp149 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp150
+ * Testing ClearspeakEnglishExponents Example Exp150
  */
-sre.ClearspeakExponents.prototype.testExp150 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp150 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow></msub><msup><mrow/><mrow><mi>y</mi><mo>+</mo>' +
@@ -2042,9 +2042,9 @@ sre.ClearspeakExponents.prototype.testExp150 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp151
+ * Testing ClearspeakEnglishExponents Example Exp151
  */
-sre.ClearspeakExponents.prototype.testExp151 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp151 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2' +
       '</mn></msup></mrow></msup></mrow></math>';
@@ -2055,9 +2055,9 @@ sre.ClearspeakExponents.prototype.testExp151 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp152
+ * Testing ClearspeakEnglishExponents Example Exp152
  */
-sre.ClearspeakExponents.prototype.testExp152 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp152 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mn>2</mn><msup><mi>x' +
       '</mi><mn>2</mn></msup></mrow></msup></mrow></math>';
@@ -2068,9 +2068,9 @@ sre.ClearspeakExponents.prototype.testExp152 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp153
+ * Testing ClearspeakEnglishExponents Example Exp153
  */
-sre.ClearspeakExponents.prototype.testExp153 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp153 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2' +
       '</mn></msup></mrow></msup></mrow></math>';
@@ -2081,9 +2081,9 @@ sre.ClearspeakExponents.prototype.testExp153 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp154
+ * Testing ClearspeakEnglishExponents Example Exp154
  */
-sre.ClearspeakExponents.prototype.testExp154 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp154 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mn>2</mn><msup><mi>x' +
       '</mi><mn>2</mn></msup></mrow></msup></mrow></math>';
@@ -2094,9 +2094,9 @@ sre.ClearspeakExponents.prototype.testExp154 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp155
+ * Testing ClearspeakEnglishExponents Example Exp155
  */
-sre.ClearspeakExponents.prototype.testExp155 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp155 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>5</mn><mrow><msup><mn>2</mn><mn>3' +
       '</mn></msup></mrow></msup></mrow></math>';
@@ -2107,9 +2107,9 @@ sre.ClearspeakExponents.prototype.testExp155 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp156
+ * Testing ClearspeakEnglishExponents Example Exp156
  */
-sre.ClearspeakExponents.prototype.testExp156 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp156 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>5</mn><mrow><mn>2</mn><msup><mi>x' +
       '</mi><mn>3</mn></msup></mrow></msup></mrow></math>';
@@ -2120,9 +2120,9 @@ sre.ClearspeakExponents.prototype.testExp156 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp157
+ * Testing ClearspeakEnglishExponents Example Exp157
  */
-sre.ClearspeakExponents.prototype.testExp157 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp157 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2' +
       '</mn></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>';
@@ -2133,9 +2133,9 @@ sre.ClearspeakExponents.prototype.testExp157 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp158
+ * Testing ClearspeakEnglishExponents Example Exp158
  */
-sre.ClearspeakExponents.prototype.testExp158 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp158 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2' +
       '</mn></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow></math>';
@@ -2146,9 +2146,9 @@ sre.ClearspeakExponents.prototype.testExp158 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp159
+ * Testing ClearspeakEnglishExponents Example Exp159
  */
-sre.ClearspeakExponents.prototype.testExp159 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp159 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>2' +
       '</mn></msup><mo>+</mo><mn>3</mn><msup><mi>x</mi><mn>3</mn></msup>' +
@@ -2160,9 +2160,9 @@ sre.ClearspeakExponents.prototype.testExp159 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp160
+ * Testing ClearspeakEnglishExponents Example Exp160
  */
-sre.ClearspeakExponents.prototype.testExp160 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp160 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4' +
       '</mn></msup></mrow></msup></mrow></math>';
@@ -2173,9 +2173,9 @@ sre.ClearspeakExponents.prototype.testExp160 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp161
+ * Testing ClearspeakEnglishExponents Example Exp161
  */
-sre.ClearspeakExponents.prototype.testExp161 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp161 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4' +
       '</mn></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>';
@@ -2186,9 +2186,9 @@ sre.ClearspeakExponents.prototype.testExp161 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp162
+ * Testing ClearspeakEnglishExponents Example Exp162
  */
-sre.ClearspeakExponents.prototype.testExp162 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp162 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4' +
       '</mn></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow></math>';
@@ -2199,9 +2199,9 @@ sre.ClearspeakExponents.prototype.testExp162 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp163
+ * Testing ClearspeakEnglishExponents Example Exp163
  */
-sre.ClearspeakExponents.prototype.testExp163 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp163 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>4' +
       '</mn></msup></mrow></msup></mrow></math>';
@@ -2212,9 +2212,9 @@ sre.ClearspeakExponents.prototype.testExp163 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp164
+ * Testing ClearspeakEnglishExponents Example Exp164
  */
-sre.ClearspeakExponents.prototype.testExp164 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp164 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><msup><mrow><mn>10</mn>' +
       '</mrow><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow></msup></mrow>' +
@@ -2226,9 +2226,9 @@ sre.ClearspeakExponents.prototype.testExp164 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp165
+ * Testing ClearspeakEnglishExponents Example Exp165
  */
-sre.ClearspeakExponents.prototype.testExp165 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp165 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow>' +
       '<mn>10</mn></mrow></msup></mrow></msup></mrow></math>';
@@ -2239,9 +2239,9 @@ sre.ClearspeakExponents.prototype.testExp165 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp166
+ * Testing ClearspeakEnglishExponents Example Exp166
  */
-sre.ClearspeakExponents.prototype.testExp166 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp166 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow>' +
       '<mn>10</mn></mrow></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow>' +
@@ -2253,9 +2253,9 @@ sre.ClearspeakExponents.prototype.testExp166 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp167
+ * Testing ClearspeakEnglishExponents Example Exp167
  */
-sre.ClearspeakExponents.prototype.testExp167 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp167 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow>' +
       '<mn>10</mn></mrow></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow>' +
@@ -2267,9 +2267,9 @@ sre.ClearspeakExponents.prototype.testExp167 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp168
+ * Testing ClearspeakEnglishExponents Example Exp168
  */
-sre.ClearspeakExponents.prototype.testExp168 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp168 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
@@ -2281,9 +2281,9 @@ sre.ClearspeakExponents.prototype.testExp168 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp169
+ * Testing ClearspeakEnglishExponents Example Exp169
  */
-sre.ClearspeakExponents.prototype.testExp169 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp169 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
@@ -2295,9 +2295,9 @@ sre.ClearspeakExponents.prototype.testExp169 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp170
+ * Testing ClearspeakEnglishExponents Example Exp170
  */
-sre.ClearspeakExponents.prototype.testExp170 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp170 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
@@ -2310,9 +2310,9 @@ sre.ClearspeakExponents.prototype.testExp170 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp171
+ * Testing ClearspeakEnglishExponents Example Exp171
  */
-sre.ClearspeakExponents.prototype.testExp171 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp171 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
@@ -2325,9 +2325,9 @@ sre.ClearspeakExponents.prototype.testExp171 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp172
+ * Testing ClearspeakEnglishExponents Example Exp172
  */
-sre.ClearspeakExponents.prototype.testExp172 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp172 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
@@ -2340,9 +2340,9 @@ sre.ClearspeakExponents.prototype.testExp172 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp173
+ * Testing ClearspeakEnglishExponents Example Exp173
  */
-sre.ClearspeakExponents.prototype.testExp173 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp173 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1' +
       '</mn><mn>2</mn></mfrac><msup><mi>x</mi><mn>2</mn></msup></mrow>' +
@@ -2354,9 +2354,9 @@ sre.ClearspeakExponents.prototype.testExp173 = function() {
 
 
 /**
- * Testing ClearspeakExponents Example Exp174
+ * Testing ClearspeakEnglishExponents Example Exp174
  */
-sre.ClearspeakExponents.prototype.testExp174 = function() {
+sre.ClearspeakEnglishExponents.prototype.testExp174 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1' +
       '</mn><mn>2</mn></mfrac><msup><mrow><mrow><mo>(</mo><mrow><mfrac>' +

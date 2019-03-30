@@ -17,25 +17,25 @@
 //
 
 
-goog.provide('sre.ClearspeakMultiLineEntries');
+goog.provide('sre.ClearspeakEnglishMultiLineEntries');
 
-goog.require('sre.ClearspeakRuleTest');
+goog.require('sre.ClearspeakEnglishRuleTest');
 
 
 
 /**
 * @constructor
-* @extends {sre.ClearspeakRuleTest}
+* @extends {sre.ClearspeakEnglishRuleTest}
 */
-sre.ClearspeakMultiLineEntries = function() {
-  sre.ClearspeakMultiLineEntries.base(this, 'constructor');
+sre.ClearspeakEnglishMultiLineEntries = function() {
+  sre.ClearspeakEnglishMultiLineEntries.base(this, 'constructor');
 
   /**
 * @override
   */
-  this.information = 'ClearspeakMultiLineEntries rule tests.';
+  this.information = 'ClearspeakEnglishMultiLineEntries rule tests.';
 };
-goog.inherits(sre.ClearspeakMultiLineEntries, sre.ClearspeakRuleTest);
+goog.inherits(sre.ClearspeakEnglishMultiLineEntries, sre.ClearspeakEnglishRuleTest);
 
 
 
@@ -45,9 +45,9 @@ goog.inherits(sre.ClearspeakMultiLineEntries, sre.ClearspeakRuleTest);
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline001
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline001
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline001 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline001 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto';
   var mathml = '<math><mtable><mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=' +
@@ -60,9 +60,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline001 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline002
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline002
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline002 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline002 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo>' +
@@ -77,9 +77,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline002 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline003
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline003
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline003 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline003 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto';
   var mathml = '<math><mrow><mtable><mtr><mtd><mi>x</mi></mtd><mtd><mo>+' +
@@ -95,9 +95,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline003 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline004
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline004
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline004 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline004 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto';
   var mathml = '<math><mtable><mtr><mtd><mtext>Equation 1:     </mtext>' +
@@ -111,9 +111,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline004 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline005
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline005
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline005 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline005 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mtext>Equation 1:' +
@@ -129,9 +129,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline005 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline006
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline006
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline006 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline006 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mtext>Equation 1:' +
@@ -148,9 +148,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline006 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline007
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline007
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline007 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline007 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto';
   var mathml = '<math><mtable><mtr><mtd><mn>4</mn><mi>x</mi><mo>+</mo><mn>3' +
@@ -168,9 +168,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline007 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline008
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline008
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline008 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline008 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mn>4</mn><mi>x</mi>' +
@@ -193,9 +193,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline008 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline009
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline009
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline009 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline009 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto';
   var mathml = '<math><mtable><mtr><mtd><mtext>Equation 1: </mtext><mn>4' +
@@ -214,9 +214,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline009 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline010
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline010
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline010 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline010 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto';
   var mathml = '<math><mtable columnalign="left"><mtr><mtd><mi>x</mi><mo>≥' +
@@ -231,9 +231,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline010 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline011
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline011
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline011 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline011 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto';
   var mathml = '<math><mtable><mtr><mtd><mn>3</mn><mi>x</mi><mo>+</mo><mn>8' +
@@ -248,9 +248,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline011 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline012
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline012
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline012 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline012 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mn>3</mn><mi>x</mi>' +
@@ -274,9 +274,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline012 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline013
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline013
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline013 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline013 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto';
   var mathml = '<math><mtable><mtr><mtd><mtext>Step 1:  </mtext><mn>3</mn>' +
@@ -294,9 +294,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline013 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline014
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline014
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline014 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline014 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
@@ -312,9 +312,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline014 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline015
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline015
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline015 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline015 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
@@ -330,9 +330,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline015 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline016
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline016
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline016 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline016 = function() {
   var preference = 'MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto:MultiLineLabel_Case';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
@@ -348,9 +348,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline016 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline017
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline017
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline017 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline017 = function() {
   var preference = 'MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto:MultiLineLabel_Case';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
@@ -366,9 +366,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline017 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline018
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline018
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline018 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline018 = function() {
   var preference = 'MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto:MultiLineLabel_Case';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mi>f</mi><mo' +
@@ -385,9 +385,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline018 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline019
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline019
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline019 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline019 = function() {
   var preference = 'MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto:MultiLineLabel_Equation';
   var mathml = '<math><mtable><mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=' +
@@ -400,9 +400,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline019 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline019a
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline019a
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline019a = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline019a = function() {
   var preference = 'MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto:MultiLineLabel_Equation';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo>' +
@@ -417,9 +417,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline019a = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline020
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline020
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline020 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline020 = function() {
   var preference = 'MultiLinePausesBetweenColumns_Auto:' +
       'MultiLineOverview_Auto:MultiLineLabel_Line';
   var mathml = '<math style="background-color:#"><semantics><mtable><mtr>' +
@@ -433,9 +433,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline020 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline021
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline021
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline021 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline021 = function() {
   var preference = 'MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto:MultiLineLabel_Line';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo>' +
@@ -450,9 +450,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline021 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline022
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline022
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline022 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline022 = function() {
   var preference = 'MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto:MultiLineLabel_Row';
   var mathml = '<math><mtable><mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=' +
@@ -465,9 +465,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline022 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline023
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline023
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline023 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline023 = function() {
   var preference = 'MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto:MultiLineLabel_Row';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo>' +
@@ -482,9 +482,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline023 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline024
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline024
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline024 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline024 = function() {
   var preference = 'MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto:MultiLineLabel_Step';
   var mathml = '<math><mtable><mtr><mtd><mn>3</mn><mi>x</mi><mo>+</mo><mn>8' +
@@ -499,9 +499,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline024 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline025
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline025
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline025 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline025 = function() {
   var preference = 'MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto:MultiLineLabel_Step';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mn>3</mn><mi>x</mi>' +
@@ -525,9 +525,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline025 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline026
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline026
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline026 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline026 = function() {
   var preference = 'MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto:MultiLineLabel_Constraint';
   var mathml = '<math><mtable columnalign="left"><mtr><mtd><mi>x</mi><mo>≥' +
@@ -543,9 +543,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline026 = function() {
 
 // Added examples for preference Label_None.
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline026a
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline026a
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline026a = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline026a = function() {
   var preference = 'MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto:MultiLineLabel_None';
   var mathml = '<math><mtable columnalign="left"><mtr><mtd><mi>x</mi><mo>≥' +
@@ -559,9 +559,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline026a = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline026b
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline026b
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline026b = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline026b = function() {
   var preference = 'MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto:MultiLineLabel_None';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mn>3</mn><mi>x</mi>' +
@@ -584,9 +584,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline026b = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline026c
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline026c
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline026c = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline026c = function() {
   var preference = 'MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Auto:MultiLineLabel_None';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
@@ -602,9 +602,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline026c = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline027
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline027
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline027 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline027 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Long';
   var mathml = '<math><mtable><mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=' +
@@ -617,9 +617,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline027 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline028
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline028
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline028 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline028 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Long';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo>' +
@@ -634,9 +634,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline028 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline029
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline029
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline029 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline029 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Long';
   var mathml = '<math><mrow><mtable><mtr><mtd><mi>x</mi></mtd><mtd><mo>+' +
@@ -652,9 +652,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline029 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline030
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline030
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline030 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline030 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Long';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mtext>Equation 1:' +
@@ -670,9 +670,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline030 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline031
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline031
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline031 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline031 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Long';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mtext>Equation 1:' +
@@ -689,9 +689,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline031 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline032
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline032
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline032 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline032 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Long';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mn>4</mn><mi>x</mi>' +
@@ -714,9 +714,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline032 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline033
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline033
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline033 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline033 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Long';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mn>3</mn><mi>x</mi>' +
@@ -740,9 +740,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline033 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline034
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline034
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline034 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline034 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Long';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
@@ -758,9 +758,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline034 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline035
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline035
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline035 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline035 = function() {
   var preference = 'MultiLineLabel_Case:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Long';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
@@ -776,9 +776,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline035 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline036
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline036
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline036 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline036 = function() {
   var preference = 'MultiLineLabel_Case:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Long';
   var mathml = '<math><mrow><mtext></mtext><mtable><mtr><mtd><mrow><mi>f' +
@@ -795,9 +795,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline036 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline037
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline037
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline037 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline037 = function() {
   var preference = 'MultiLineLabel_Equation:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Long';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo>' +
@@ -812,9 +812,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline037 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline038
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline038
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline038 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline038 = function() {
   var preference = 'MultiLineLabel_Line:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Long';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo>' +
@@ -829,9 +829,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline038 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline039
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline039
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline039 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline039 = function() {
   var preference = 'MultiLineLabel_Row:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Long';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo>' +
@@ -846,9 +846,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline039 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline040
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline040
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline040 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline040 = function() {
   var preference = 'MultiLineLabel_Step:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Long';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mn>3</mn><mi>x</mi>' +
@@ -872,9 +872,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline040 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline041
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline041
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline041 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline041 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Short';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo>' +
@@ -889,9 +889,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline041 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline042
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline042
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline042 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline042 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Short';
   var mathml = '<math><mrow><mtable><mtr><mtd><mi>x</mi></mtd><mtd><mo>+' +
@@ -907,9 +907,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline042 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline043
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline043
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline043 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline043 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Short';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mtext>Equation 1:' +
@@ -925,9 +925,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline043 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline044
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline044
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline044 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline044 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Short';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mtext>Equation 1:' +
@@ -944,9 +944,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline044 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline045
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline045
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline045 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline045 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Short';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mn>4</mn><mi>x</mi>' +
@@ -969,9 +969,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline045 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline046
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline046
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline046 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline046 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Short';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mn>3</mn><mi>x</mi>' +
@@ -995,9 +995,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline046 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline047
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline047
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline047 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline047 = function() {
   var preference = 'MultiLineLabel_Auto:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Short';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
@@ -1013,9 +1013,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline047 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline048
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline048
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline048 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline048 = function() {
   var preference = 'MultiLineLabel_Case:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Short';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
@@ -1031,9 +1031,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline048 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline049
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline049
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline049 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline049 = function() {
   var preference = 'MultiLineLabel_Case:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Short';
   var mathml = '<math><mrow><mtext></mtext><mtable><mtr><mtd><mrow><mi>f' +
@@ -1050,9 +1050,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline049 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline050
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline050
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline050 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline050 = function() {
   var preference = 'MultiLineLabel_Equation:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Short';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo>' +
@@ -1067,9 +1067,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline050 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline051
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline051
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline051 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline051 = function() {
   var preference = 'MultiLineLabel_Line:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Short';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo>' +
@@ -1084,9 +1084,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline051 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline052
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline052
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline052 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline052 = function() {
   var preference = 'MultiLineLabel_Row:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Short';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo>' +
@@ -1101,9 +1101,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline052 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline053
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline053
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline053 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline053 = function() {
   var preference = 'MultiLineLabel_Step:MultiLineOverview_Auto:' +
       'MultiLinePausesBetweenColumns_Short';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mn>3</mn><mi>x</mi>' +
@@ -1127,9 +1127,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline053 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline054
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline054
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline054 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline054 = function() {
   var preference = 'MultiLineLabel_Auto:' +
       'MultiLinePausesBetweenColumns_Auto:MultiLineOverview_None';
   var mathml = '<math><mtable><mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=' +
@@ -1141,9 +1141,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline054 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline055
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline055
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline055 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline055 = function() {
   var preference = 'MultiLineLabel_Auto:' +
       'MultiLinePausesBetweenColumns_Auto:MultiLineOverview_None';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo>' +
@@ -1157,9 +1157,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline055 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline056
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline056
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline056 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline056 = function() {
   var preference = 'MultiLineLabel_Auto:' +
       'MultiLinePausesBetweenColumns_Auto:MultiLineOverview_None';
   var mathml = '<math><mrow><mtable><mtr><mtd><mi>x</mi></mtd><mtd><mo>+' +
@@ -1175,9 +1175,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline056 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline057
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline057
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline057 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline057 = function() {
   var preference = 'MultiLineLabel_Auto:' +
       'MultiLinePausesBetweenColumns_Auto:MultiLineOverview_None';
   var mathml = '<math><mtable><mtr><mtd><mtext>Equation 1:     </mtext>' +
@@ -1191,9 +1191,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline057 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline058
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline058
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline058 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline058 = function() {
   var preference = 'MultiLineLabel_Auto:' +
       'MultiLinePausesBetweenColumns_Auto:MultiLineOverview_None';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mtext>Equation 1:' +
@@ -1209,9 +1209,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline058 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline059
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline059
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline059 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline059 = function() {
   var preference = 'MultiLineLabel_Auto:' +
       'MultiLinePausesBetweenColumns_Auto:MultiLineOverview_None';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mtext>Equation 1:' +
@@ -1228,9 +1228,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline059 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline060
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline060
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline060 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline060 = function() {
   var preference = 'MultiLineLabel_Auto:' +
       'MultiLinePausesBetweenColumns_Auto:MultiLineOverview_None';
   var mathml = '<math><mtable><mtr><mtd><mn>4</mn><mi>x</mi><mo>+</mo><mn>3' +
@@ -1248,9 +1248,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline060 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline061
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline061
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline061 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline061 = function() {
   var preference = 'MultiLineLabel_Auto:' +
       'MultiLinePausesBetweenColumns_Auto:MultiLineOverview_None';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mn>4</mn><mi>x</mi>' +
@@ -1273,9 +1273,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline061 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline062
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline062
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline062 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline062 = function() {
   var preference = 'MultiLineLabel_Auto:' +
       'MultiLinePausesBetweenColumns_Auto:MultiLineOverview_None';
   var mathml = '<math><mtable><mtr><mtd><mtext>Equation 1: </mtext><mn>4' +
@@ -1294,9 +1294,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline062 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline063
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline063
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline063 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline063 = function() {
   var preference = 'MultiLineLabel_Auto:' +
       'MultiLinePausesBetweenColumns_Auto:MultiLineOverview_None';
   var mathml = '<math><mtable><mtr><mtd><mtext>Step 1:  </mtext><mn>3</mn>' +
@@ -1314,9 +1314,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline063 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline064
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline064
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline064 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline064 = function() {
   var preference = 'MultiLineLabel_Auto:' +
       'MultiLinePausesBetweenColumns_Auto:MultiLineOverview_None';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
@@ -1332,9 +1332,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline064 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline065
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline065
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline065 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline065 = function() {
   var preference = 'MultiLineLabel_Auto:' +
       'MultiLinePausesBetweenColumns_Auto:MultiLineOverview_None';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
@@ -1350,9 +1350,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline065 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline066
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline066
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline066 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline066 = function() {
   var preference = 'MultiLineLabel_Case:MultiLineOverview_None:' +
       'MultiLinePausesBetweenColumns_Auto';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
@@ -1368,9 +1368,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline066 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline067
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline067
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline067 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline067 = function() {
   var preference = 'MultiLineLabel_Case:MultiLineOverview_None:' +
       'MultiLinePausesBetweenColumns_Auto';
   var mathml = '<math><mrow><mtext></mtext><mtable><mtr><mtd><mrow><mi>f' +
@@ -1387,9 +1387,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline067 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline068
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline068
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline068 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline068 = function() {
   var preference = 'MultiLineLabel_Equation:MultiLineOverview_None:' +
       'MultiLinePausesBetweenColumns_Auto';
   var mathml = '<math><mtable><mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=' +
@@ -1402,9 +1402,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline068 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline069
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline069
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline069 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline069 = function() {
   var preference = 'MultiLineLabel_Line:MultiLineOverview_None:' +
       'MultiLinePausesBetweenColumns_Auto';
   var mathml = '<math><mtable><mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=' +
@@ -1416,9 +1416,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline069 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline070
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline070
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline070 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline070 = function() {
   var preference = 'MultiLineLabel_Row:MultiLineOverview_None:' +
       'MultiLinePausesBetweenColumns_Auto';
   var mathml = '<math><mtable><mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=' +
@@ -1430,9 +1430,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline070 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline071
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline071
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline071 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline071 = function() {
   var preference = 'MultiLineLabel_Step:MultiLineOverview_None:' +
       'MultiLinePausesBetweenColumns_Auto';
   var mathml = '<math><mtable><mtr><mtd><mn>3</mn><mi>x</mi><mo>+</mo><mn>8' +
@@ -1447,9 +1447,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline071 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline072
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline072
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline072 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline072 = function() {
   var preference = 'MultiLineLabel_Step:MultiLineOverview_None:' +
       'MultiLinePausesBetweenColumns_Auto';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mn>3</mn><mi>x</mi>' +
@@ -1473,9 +1473,9 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline072 = function() {
 
 
 /**
- * Testing ClearspeakMultiLineEntries Example Multiline073
+ * Testing ClearspeakEnglishMultiLineEntries Example Multiline073
  */
-sre.ClearspeakMultiLineEntries.prototype.testMultiline073 = function() {
+sre.ClearspeakEnglishMultiLineEntries.prototype.testMultiline073 = function() {
   var preference = 'MultiLineLabel_Constraint:MultiLineOverview_None:' +
       'MultiLinePausesBetweenColumns_Auto';
   var mathml = '<math><mtable columnalign="left"><mtr><mtd><mi>x</mi><mo>≥' +

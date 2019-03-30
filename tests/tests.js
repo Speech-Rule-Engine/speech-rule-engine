@@ -31,9 +31,9 @@ goog.require('sre.EnrichSpeechTest');
 goog.require('sre.MarkupTest');
 goog.require('sre.MathAlphabetsTest');
 goog.require('sre.MathmlStoreTest');
+goog.require('sre.MathspeakEmbellishEnglishTest');
 goog.require('sre.MathspeakEmbellishFrenchTest');
 goog.require('sre.MathspeakEmbellishSpanishTest');
-goog.require('sre.MathspeakEmbellishTest');
 goog.require('sre.MathspeakEnglishTest');
 goog.require('sre.MathspeakFrenchTest');
 goog.require('sre.MathspeakSpanishTest');
@@ -99,7 +99,7 @@ sre.Tests.testList = [
   sre.MarkupTest,
   sre.MathAlphabetsTest,
   sre.MathmlStoreTest,
-  sre.MathspeakEmbellishTest,
+  sre.MathspeakEmbellishEnglishTest,
   sre.MathspeakEmbellishFrenchTest,
   sre.MathspeakEmbellishSpanishTest,
   sre.MathspeakEnglishTest,

@@ -17,25 +17,25 @@
 //
 
 
-goog.provide('sre.ClearspeakCapitalLetters');
+goog.provide('sre.ClearspeakEnglishCapitalLetters');
 
-goog.require('sre.ClearspeakRuleTest');
+goog.require('sre.ClearspeakEnglishRuleTest');
 
 
 
 /**
 * @constructor
-* @extends {sre.ClearspeakRuleTest}
+* @extends {sre.ClearspeakEnglishRuleTest}
 */
-sre.ClearspeakCapitalLetters = function() {
-  sre.ClearspeakCapitalLetters.base(this, 'constructor');
+sre.ClearspeakEnglishCapitalLetters = function() {
+  sre.ClearspeakEnglishCapitalLetters.base(this, 'constructor');
   /**
    * @override
    */
-  this.information = 'ClearspeakCapitalLetters rule tests.';
+  this.information = 'ClearspeakEnglishCapitalLetters rule tests.';
 
 };
-goog.inherits(sre.ClearspeakCapitalLetters, sre.ClearspeakRuleTest);
+goog.inherits(sre.ClearspeakEnglishCapitalLetters, sre.ClearspeakEnglishRuleTest);
 
 
 
@@ -46,9 +46,9 @@ goog.inherits(sre.ClearspeakCapitalLetters, sre.ClearspeakRuleTest);
 
 // TODO: (QUESTION) This is does not seem to follow the fraction rules.
 /**
- * Testing ClearspeakCapitalLetters Example Cap001
+ * Testing ClearspeakEnglishCapitalLetters Example Cap001
  */
-sre.ClearspeakCapitalLetters.prototype.testCap001 = function() {
+sre.ClearspeakEnglishCapitalLetters.prototype.testCap001 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>sin</mi><mi>A</mi></mrow><mi>a' +
       '</mi></mfrac><mo>=</mo><mfrac><mrow><mi>sin</mi><mi>B</mi></mrow>' +
@@ -61,9 +61,9 @@ sre.ClearspeakCapitalLetters.prototype.testCap001 = function() {
 
 
 /**
- * Testing ClearspeakCapitalLetters Example Cap002
+ * Testing ClearspeakEnglishCapitalLetters Example Cap002
  */
-sre.ClearspeakCapitalLetters.prototype.testCap002 = function() {
+sre.ClearspeakEnglishCapitalLetters.prototype.testCap002 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>=</mo>' +
       '<msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2' +
@@ -75,9 +75,9 @@ sre.ClearspeakCapitalLetters.prototype.testCap002 = function() {
 
 
 /**
- * Testing ClearspeakCapitalLetters Example Cap003
+ * Testing ClearspeakEnglishCapitalLetters Example Cap003
  */
-sre.ClearspeakCapitalLetters.prototype.testCap003 = function() {
+sre.ClearspeakEnglishCapitalLetters.prototype.testCap003 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mi>tan</mi><mi>A</mi><mo>=</mo><mfrac><mi>a' +
       '</mi><mi>b</mi></mfrac></mrow></math>';
@@ -87,9 +87,9 @@ sre.ClearspeakCapitalLetters.prototype.testCap003 = function() {
 
 
 /**
- * Testing ClearspeakCapitalLetters Example Cap004
+ * Testing ClearspeakEnglishCapitalLetters Example Cap004
  */
-sre.ClearspeakCapitalLetters.prototype.testCap004 = function() {
+sre.ClearspeakEnglishCapitalLetters.prototype.testCap004 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mi>A</mi><mi>B</mi></mrow></math>';
   var speech = 'A B';
@@ -98,9 +98,9 @@ sre.ClearspeakCapitalLetters.prototype.testCap004 = function() {
 
 
 /**
- * Testing ClearspeakCapitalLetters Example Cap005
+ * Testing ClearspeakEnglishCapitalLetters Example Cap005
  */
-sre.ClearspeakCapitalLetters.prototype.testCap005 = function() {
+sre.ClearspeakEnglishCapitalLetters.prototype.testCap005 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mi>a</mi><mi>A</mi></mrow></math>';
   var speech = 'a A';
@@ -109,9 +109,9 @@ sre.ClearspeakCapitalLetters.prototype.testCap005 = function() {
 
 
 /**
- * Testing ClearspeakCapitalLetters Example Cap006
+ * Testing ClearspeakEnglishCapitalLetters Example Cap006
  */
-sre.ClearspeakCapitalLetters.prototype.testCap006 = function() {
+sre.ClearspeakEnglishCapitalLetters.prototype.testCap006 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mi>b</mi><mi>A</mi></mrow></math>';
   var speech = 'b A';
@@ -120,9 +120,9 @@ sre.ClearspeakCapitalLetters.prototype.testCap006 = function() {
 
 
 /**
- * Testing ClearspeakCapitalLetters Example Cap007
+ * Testing ClearspeakEnglishCapitalLetters Example Cap007
  */
-sre.ClearspeakCapitalLetters.prototype.testCap007 = function() {
+sre.ClearspeakEnglishCapitalLetters.prototype.testCap007 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mi>B</mi><mi>a</mi></mrow></math>';
   var speech = 'B a';
@@ -131,9 +131,9 @@ sre.ClearspeakCapitalLetters.prototype.testCap007 = function() {
 
 
 /**
- * Testing ClearspeakCapitalLetters Example Cap008
+ * Testing ClearspeakEnglishCapitalLetters Example Cap008
  */
-sre.ClearspeakCapitalLetters.prototype.testCap008 = function() {
+sre.ClearspeakEnglishCapitalLetters.prototype.testCap008 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C</mi></mrow>' +
       '</math>';
@@ -143,9 +143,9 @@ sre.ClearspeakCapitalLetters.prototype.testCap008 = function() {
 
 
 /**
- * Testing ClearspeakCapitalLetters Example Cap009
+ * Testing ClearspeakEnglishCapitalLetters Example Cap009
  */
-sre.ClearspeakCapitalLetters.prototype.testCap009 = function() {
+sre.ClearspeakEnglishCapitalLetters.prototype.testCap009 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C' +
       '</mi></mrow></math>';
@@ -155,9 +155,9 @@ sre.ClearspeakCapitalLetters.prototype.testCap009 = function() {
 
 
 /**
- * Testing ClearspeakCapitalLetters Example Cap010
+ * Testing ClearspeakEnglishCapitalLetters Example Cap010
  */
-sre.ClearspeakCapitalLetters.prototype.testCap010 = function() {
+sre.ClearspeakEnglishCapitalLetters.prototype.testCap010 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi></mrow></math>';
   var speech = 'the measure of angle A';
@@ -167,9 +167,9 @@ sre.ClearspeakCapitalLetters.prototype.testCap010 = function() {
 
 // TODO: (QUESTION) This is does not seem to follow the fraction rules.
 /**
- * Testing ClearspeakCapitalLetters Example Cap011
+ * Testing ClearspeakEnglishCapitalLetters Example Cap011
  */
-sre.ClearspeakCapitalLetters.prototype.testCap011 = function() {
+sre.ClearspeakEnglishCapitalLetters.prototype.testCap011 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mfrac><mrow><mi>sin</mi><mi>A</mi></mrow><mi>a' +
       '</mi></mfrac><mo>=</mo><mfrac><mrow><mi>sin</mi><mi>B</mi></mrow>' +
@@ -182,9 +182,9 @@ sre.ClearspeakCapitalLetters.prototype.testCap011 = function() {
 
 
 /**
- * Testing ClearspeakCapitalLetters Example Cap012
+ * Testing ClearspeakEnglishCapitalLetters Example Cap012
  */
-sre.ClearspeakCapitalLetters.prototype.testCap012 = function() {
+sre.ClearspeakEnglishCapitalLetters.prototype.testCap012 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>=</mo>' +
       '<msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2' +
@@ -197,9 +197,9 @@ sre.ClearspeakCapitalLetters.prototype.testCap012 = function() {
 
 
 /**
- * Testing ClearspeakCapitalLetters Example Cap013
+ * Testing ClearspeakEnglishCapitalLetters Example Cap013
  */
-sre.ClearspeakCapitalLetters.prototype.testCap013 = function() {
+sre.ClearspeakEnglishCapitalLetters.prototype.testCap013 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mi>tan</mi><mi>A</mi><mo>=</mo><mfrac><mi>a' +
       '</mi><mi>b</mi></mfrac></mrow></math>';
@@ -209,9 +209,9 @@ sre.ClearspeakCapitalLetters.prototype.testCap013 = function() {
 
 
 /**
- * Testing ClearspeakCapitalLetters Example Cap014
+ * Testing ClearspeakEnglishCapitalLetters Example Cap014
  */
-sre.ClearspeakCapitalLetters.prototype.testCap014 = function() {
+sre.ClearspeakEnglishCapitalLetters.prototype.testCap014 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mi>A</mi><mi>B</mi></mrow></math>';
   var speech = 'cap A, cap B';
@@ -220,9 +220,9 @@ sre.ClearspeakCapitalLetters.prototype.testCap014 = function() {
 
 
 /**
- * Testing ClearspeakCapitalLetters Example Cap015
+ * Testing ClearspeakEnglishCapitalLetters Example Cap015
  */
-sre.ClearspeakCapitalLetters.prototype.testCap015 = function() {
+sre.ClearspeakEnglishCapitalLetters.prototype.testCap015 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mi>a</mi><mi>A</mi></mrow></math>';
   var speech = 'a, cap A';
@@ -231,9 +231,9 @@ sre.ClearspeakCapitalLetters.prototype.testCap015 = function() {
 
 
 /**
- * Testing ClearspeakCapitalLetters Example Cap016
+ * Testing ClearspeakEnglishCapitalLetters Example Cap016
  */
-sre.ClearspeakCapitalLetters.prototype.testCap016 = function() {
+sre.ClearspeakEnglishCapitalLetters.prototype.testCap016 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mi>b</mi><mi>A</mi></mrow></math>';
   var speech = 'b, cap A';
@@ -242,9 +242,9 @@ sre.ClearspeakCapitalLetters.prototype.testCap016 = function() {
 
 
 /**
- * Testing ClearspeakCapitalLetters Example Cap017
+ * Testing ClearspeakEnglishCapitalLetters Example Cap017
  */
-sre.ClearspeakCapitalLetters.prototype.testCap017 = function() {
+sre.ClearspeakEnglishCapitalLetters.prototype.testCap017 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mi>B</mi><mi>a</mi></mrow></math>';
   var speech = 'cap B, a';
@@ -253,9 +253,9 @@ sre.ClearspeakCapitalLetters.prototype.testCap017 = function() {
 
 
 /**
- * Testing ClearspeakCapitalLetters Example Cap018
+ * Testing ClearspeakEnglishCapitalLetters Example Cap018
  */
-sre.ClearspeakCapitalLetters.prototype.testCap018 = function() {
+sre.ClearspeakEnglishCapitalLetters.prototype.testCap018 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C</mi></mrow>' +
       '</math>';
@@ -265,9 +265,9 @@ sre.ClearspeakCapitalLetters.prototype.testCap018 = function() {
 
 
 /**
- * Testing ClearspeakCapitalLetters Example Cap019
+ * Testing ClearspeakEnglishCapitalLetters Example Cap019
  */
-sre.ClearspeakCapitalLetters.prototype.testCap019 = function() {
+sre.ClearspeakEnglishCapitalLetters.prototype.testCap019 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C' +
       '</mi></mrow></math>';
@@ -277,9 +277,9 @@ sre.ClearspeakCapitalLetters.prototype.testCap019 = function() {
 
 
 /**
- * Testing ClearspeakCapitalLetters Example Cap020
+ * Testing ClearspeakEnglishCapitalLetters Example Cap020
  */
-sre.ClearspeakCapitalLetters.prototype.testCap020 = function() {
+sre.ClearspeakEnglishCapitalLetters.prototype.testCap020 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi></mrow></math>';
   var speech = 'the measure of angle cap A';
@@ -288,9 +288,9 @@ sre.ClearspeakCapitalLetters.prototype.testCap020 = function() {
 
 
 /**
- * Testing ClearspeakCapitalLetters Example Cap020 (extra)
+ * Testing ClearspeakEnglishCapitalLetters Example Cap020 (extra)
  */
-sre.ClearspeakCapitalLetters.prototype.testCap020a = function() {
+sre.ClearspeakEnglishCapitalLetters.prototype.testCap020a = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mo>∠</mo><mi>A</mi></mrow></math>';
   var speech = 'angle cap A';
@@ -299,9 +299,9 @@ sre.ClearspeakCapitalLetters.prototype.testCap020a = function() {
 
 
 // /**
-//  * Testing ClearspeakCapitalLetters Example Cap020 (extra)
+//  * Testing ClearspeakEnglishCapitalLetters Example Cap020 (extra)
 //  */
-// sre.ClearspeakCapitalLetters.prototype.testCap020b = function() {
+// sre.ClearspeakEnglishCapitalLetters.prototype.testCap020b = function() {
 //   var preference = 'Caps_SayCaps';
 //   var mathml = '<math><mrow><mi>h</mi><mo>∠</mo><mi>A</mi></mrow></math>';
 //   var speech = 'angle cap A';

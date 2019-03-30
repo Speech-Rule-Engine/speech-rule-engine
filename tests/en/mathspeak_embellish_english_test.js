@@ -17,7 +17,7 @@
  * @author Volker.Sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.MathspeakEmbellishTest');
+goog.provide('sre.MathspeakEmbellishEnglishTest');
 
 goog.require('sre.AbstractRuleTest');
 
@@ -27,8 +27,8 @@ goog.require('sre.AbstractRuleTest');
  * @constructor
  * @extends {sre.AbstractRuleTest}
  */
-sre.MathspeakEmbellishTest = function() {
-  sre.MathspeakEmbellishTest.base(this, 'constructor');
+sre.MathspeakEmbellishEnglishTest = function() {
+  sre.MathspeakEmbellishEnglishTest.base(this, 'constructor');
 
   /**
    * @override
@@ -45,9 +45,9 @@ sre.MathspeakEmbellishTest = function() {
    */
   this.semantics = true;
 
-  this.setActive('EmbellishedSymbolsEnglish');
+  this.setActive('EmbellishEnglishedSymbolsEnglish');
 };
-goog.inherits(sre.MathspeakEmbellishTest, sre.AbstractRuleTest);
+goog.inherits(sre.MathspeakEmbellishEnglishTest, sre.AbstractRuleTest);
 
 
 // mml = '<mi>a</mi><msubsup><mo>+</mo><mn>m</mn><mn>\'</mn>' +
@@ -61,7 +61,7 @@ goog.inherits(sre.MathspeakEmbellishTest, sre.AbstractRuleTest);
 /**
  * Testing operator embellished with subscript.
  */
-sre.MathspeakEmbellishTest.prototype.testEmbellOpSubscript = function() {
+sre.MathspeakEmbellishEnglishTest.prototype.testEmbellOpSubscript = function() {
   var mml = '<mi>a</mi><msub><mo>+</mo><mn>2</mn></msub><mi>b</mi>';
   this.executeRuleTest(mml, 'a plus Subscript 2 Baseline b', 'default');
   this.executeRuleTest(mml, 'a plus Sub 2 Base b', 'brief');
@@ -73,7 +73,7 @@ sre.MathspeakEmbellishTest.prototype.testEmbellOpSubscript = function() {
  * Testing operator embellished with superscript. Making sure cases of squared
  * and cube are not used.
  */
-sre.MathspeakEmbellishTest.prototype.testEmbellOpSuperscript = function() {
+sre.MathspeakEmbellishEnglishTest.prototype.testEmbellOpSuperscript = function() {
   var mml = '<mi>a</mi><msup><mo>+</mo><mn>2</mn></msup><mi>b</mi>';
   this.executeRuleTest(mml, 'a plus Superscript 2 Baseline b', 'default');
   this.executeRuleTest(mml, 'a plus Sup 2 Base b', 'brief');
@@ -97,7 +97,7 @@ sre.MathspeakEmbellishTest.prototype.testEmbellOpSuperscript = function() {
  * Testing operator embellished with sub and superscript. Making sure cases of
  * squared and cube are not used.
  */
-sre.MathspeakEmbellishTest.prototype.testEmbellOpSubSuper = function() {
+sre.MathspeakEmbellishEnglishTest.prototype.testEmbellOpSubSuper = function() {
   var mml = '<mi>a</mi><msubsup><mo>+</mo><mi>m</mi><mn>2</mn>' +
       '</msubsup><mi>b</mi>';
   this.executeRuleTest(mml, 'a plus Subscript m Superscript 2 Baseline b',
@@ -125,7 +125,7 @@ sre.MathspeakEmbellishTest.prototype.testEmbellOpSubSuper = function() {
 /**
  * Testing operator embellished also from the left.
  */
-sre.MathspeakEmbellishTest.prototype.testEmbellOpTensor = function() {
+sre.MathspeakEmbellishEnglishTest.prototype.testEmbellOpTensor = function() {
   var mml = '<mi>a</mi><mmultiscripts><mo>+</mo><mi>m</mi><mn>2</mn>' +
       '</mmultiscripts><mi>b</mi>';
   this.executeRuleTest(mml, 'a plus Subscript m Superscript 2 Baseline b',
@@ -158,7 +158,7 @@ sre.MathspeakEmbellishTest.prototype.testEmbellOpTensor = function() {
 /**
  * Testing relation embellished with subscript.
  */
-sre.MathspeakEmbellishTest.prototype.testEmbellRelSubscript = function() {
+sre.MathspeakEmbellishEnglishTest.prototype.testEmbellRelSubscript = function() {
   var mml = '<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>b</mi>';
   this.executeRuleTest(mml, 'a equals Subscript 2 Baseline b', 'default');
   this.executeRuleTest(mml, 'a equals Sub 2 Base b', 'brief');
@@ -170,7 +170,7 @@ sre.MathspeakEmbellishTest.prototype.testEmbellRelSubscript = function() {
  * Testing relation embellished with superscript. Making sure cases of squared
  * and cube are not used.
  */
-sre.MathspeakEmbellishTest.prototype.testEmbellRelSuperscript = function() {
+sre.MathspeakEmbellishEnglishTest.prototype.testEmbellRelSuperscript = function() {
   var mml = '<mi>a</mi><msup><mo>=</mo><mn>2</mn></msup><mi>b</mi>';
   this.executeRuleTest(mml, 'a equals Superscript 2 Baseline b', 'default');
   this.executeRuleTest(mml, 'a equals Sup 2 Base b', 'brief');
@@ -194,7 +194,7 @@ sre.MathspeakEmbellishTest.prototype.testEmbellRelSuperscript = function() {
  * Testing relation embellished with sub and superscript. Making sure cases of
  * squared and cube are not used.
  */
-sre.MathspeakEmbellishTest.prototype.testEmbellRelSubSuper = function() {
+sre.MathspeakEmbellishEnglishTest.prototype.testEmbellRelSubSuper = function() {
   var mml = '<mi>a</mi><msubsup><mo>=</mo><mi>m</mi><mn>2</mn>' +
       '</msubsup><mi>b</mi>';
   this.executeRuleTest(mml, 'a equals Subscript m Superscript 2 Baseline b',
@@ -222,7 +222,7 @@ sre.MathspeakEmbellishTest.prototype.testEmbellRelSubSuper = function() {
 /**
  * Testing relation embellished also from the left.
  */
-sre.MathspeakEmbellishTest.prototype.testEmbellRelTensor = function() {
+sre.MathspeakEmbellishEnglishTest.prototype.testEmbellRelTensor = function() {
   var mml = '<mi>a</mi><mmultiscripts><mo>=</mo><mi>m</mi><mn>2</mn>' +
       '</mmultiscripts><mi>b</mi>';
   this.executeRuleTest(mml, 'a equals Subscript m Superscript 2 Baseline b',
@@ -255,7 +255,7 @@ sre.MathspeakEmbellishTest.prototype.testEmbellRelTensor = function() {
 /**
  * Testing multiple embellished relations.
  */
-sre.MathspeakEmbellishTest.prototype.testEmbellMultRelSubscript = function() {
+sre.MathspeakEmbellishEnglishTest.prototype.testEmbellMultRelSubscript = function() {
   var mml = '<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>b</mi>' +
       '<mo>=</mo><mi>c</mi>';
   this.executeRuleTest(mml, 'a equals Subscript 2 Baseline b equals c',
@@ -268,7 +268,7 @@ sre.MathspeakEmbellishTest.prototype.testEmbellMultRelSubscript = function() {
 /**
  * Testing punctuation embellished with subscript.
  */
-sre.MathspeakEmbellishTest.prototype.testEmbellPunctSubscript = function() {
+sre.MathspeakEmbellishEnglishTest.prototype.testEmbellPunctSubscript = function() {
   var mml = '<mi>a</mi><msub><mo>:</mo><mn>2</mn></msub><mi>b</mi>';
   this.executeRuleTest(mml, 'a colon Subscript 2 Baseline b', 'default');
   this.executeRuleTest(mml, 'a colon Sub 2 Base b', 'brief');
@@ -280,7 +280,7 @@ sre.MathspeakEmbellishTest.prototype.testEmbellPunctSubscript = function() {
  * Testing punctuation embellished with superscript. Making sure cases of
  * squared and cube are not used.
  */
-sre.MathspeakEmbellishTest.prototype.testEmbellPunctSuperscript = function() {
+sre.MathspeakEmbellishEnglishTest.prototype.testEmbellPunctSuperscript = function() {
   var mml = '<mi>a</mi><msup><mo>:</mo><mn>2</mn></msup><mi>b</mi>';
   this.executeRuleTest(mml, 'a colon Superscript 2 Baseline b', 'default');
   this.executeRuleTest(mml, 'a colon Sup 2 Base b', 'brief');
@@ -304,7 +304,7 @@ sre.MathspeakEmbellishTest.prototype.testEmbellPunctSuperscript = function() {
  * Testing punctuation embellished with sub and superscript. Making sure cases
  * of squared and cube are not used.
  */
-sre.MathspeakEmbellishTest.prototype.testEmbellPunctSubSuper = function() {
+sre.MathspeakEmbellishEnglishTest.prototype.testEmbellPunctSubSuper = function() {
   var mml = '<mi>a</mi><msubsup><mo>:</mo><mi>m</mi><mn>2</mn>' +
       '</msubsup><mi>b</mi>';
   this.executeRuleTest(mml, 'a colon Subscript m Superscript 2 Baseline b',
@@ -332,7 +332,7 @@ sre.MathspeakEmbellishTest.prototype.testEmbellPunctSubSuper = function() {
 /**
  * Testing punctuation embellished also from the left.
  */
-sre.MathspeakEmbellishTest.prototype.testEmbellPunctTensor = function() {
+sre.MathspeakEmbellishEnglishTest.prototype.testEmbellPunctTensor = function() {
   var mml = '<mi>a</mi><mmultiscripts><mo>:</mo><mi>m</mi><mn>2</mn>' +
       '</mmultiscripts><mi>b</mi>';
   this.executeRuleTest(mml, 'a colon Subscript m Superscript 2 Baseline b',
@@ -365,7 +365,7 @@ sre.MathspeakEmbellishTest.prototype.testEmbellPunctTensor = function() {
 /**
  * Testing multiple embellished punctuations.
  */
-sre.MathspeakEmbellishTest.prototype.testEmbellMultPunctSubscript = function() {
+sre.MathspeakEmbellishEnglishTest.prototype.testEmbellMultPunctSubscript = function() {
   var mml = '<mi>a</mi><msub><mo>:</mo><mn>2</mn></msub><mi>b</mi>' +
       '<mo>:</mo><mi>c</mi>';
   this.executeRuleTest(mml, 'a colon Subscript 2 Baseline b colon c',
@@ -378,7 +378,7 @@ sre.MathspeakEmbellishTest.prototype.testEmbellMultPunctSubscript = function() {
 /**
  * Expressions with semantic elements.
  */
-sre.MathspeakEmbellishTest.prototype.testSemanticsElement = function() {
+sre.MathspeakEmbellishEnglishTest.prototype.testSemanticsElement = function() {
   var mml = '<semantics></semantics>';
   this.executeRuleTest(mml, '', 'default');
   this.executeRuleTest(mml, '', 'brief');
@@ -401,7 +401,7 @@ sre.MathspeakEmbellishTest.prototype.testSemanticsElement = function() {
 /**
  * Expressions with semantic elements and annotations.
  */
-sre.MathspeakEmbellishTest.prototype.testSemanticsAnnotation = function() {
+sre.MathspeakEmbellishEnglishTest.prototype.testSemanticsAnnotation = function() {
   // This is not really legal markup.
   var mml = '<semantics><annotation>something</annotation></semantics>';
   this.executeRuleTest(mml, '', 'default');
@@ -432,7 +432,7 @@ sre.MathspeakEmbellishTest.prototype.testSemanticsAnnotation = function() {
 /**
  * Expressions with semantic elements and xml annotations.
  */
-sre.MathspeakEmbellishTest.prototype.testSemanticsAnnotationXml = function() {
+sre.MathspeakEmbellishEnglishTest.prototype.testSemanticsAnnotationXml = function() {
   // This is not really legal markup.
   var mml = '<semantics><annotation-xml><content>something</content>' +
       '</annotation-xml></semantics>';

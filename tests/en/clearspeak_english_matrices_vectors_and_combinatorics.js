@@ -17,27 +17,27 @@
 //
 
 
-goog.provide('sre.ClearspeakMatricesAndCombinatorics');
+goog.provide('sre.ClearspeakEnglishMatricesAndCombinatorics');
 
-goog.require('sre.ClearspeakRuleTest');
+goog.require('sre.ClearspeakEnglishRuleTest');
 
 
 
 /**
 * @constructor
-* @extends {sre.ClearspeakRuleTest}
+* @extends {sre.ClearspeakEnglishRuleTest}
 */
-sre.ClearspeakMatricesAndCombinatorics = function() {
-  sre.ClearspeakMatricesAndCombinatorics.base(this, 'constructor');
+sre.ClearspeakEnglishMatricesAndCombinatorics = function() {
+  sre.ClearspeakEnglishMatricesAndCombinatorics.base(this, 'constructor');
 
   /**
    * @override
    */
-  this.information = 'Clearspeak Matrices, Vectors, and Combinatorics ' +
+  this.information = 'ClearspeakEnglish Matrices, Vectors, and Combinatorics ' +
       'rule tests.';
 
 };
-goog.inherits(sre.ClearspeakMatricesAndCombinatorics, sre.ClearspeakRuleTest);
+goog.inherits(sre.ClearspeakEnglishMatricesAndCombinatorics, sre.ClearspeakEnglishRuleTest);
 
 
 
@@ -53,9 +53,9 @@ goog.inherits(sre.ClearspeakMatricesAndCombinatorics, sre.ClearspeakRuleTest);
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix001
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix001
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix001 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix001 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
@@ -67,9 +67,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix001 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix002
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix002
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix002 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix002 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
@@ -81,9 +81,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix002 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix003
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix003
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix003 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix003 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr>' +
@@ -95,9 +95,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix003 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix004
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix004
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix004 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix004 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr>' +
@@ -109,9 +109,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix004 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix005
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix005
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix005 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix005 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
@@ -122,9 +122,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix005 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix006
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix006
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix006 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix006 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
@@ -135,9 +135,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix006 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix007
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix007
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix007 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix007 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo>' +
@@ -148,9 +148,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix007 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix008
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix008
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix008 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix008 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo>' +
@@ -161,9 +161,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix008 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix008a
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix008a
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix008a = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix008a = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mrow><mo>(</mo><mn>3' +
       '</mn><mo>)</mo></mrow></mrow></mtd></mtr></mtable></mrow></math>';
@@ -173,10 +173,10 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix008a = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix008b
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix008b
  * (Added!)
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix008b = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix008b = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mo>(</mo><mtable><mtr><mtd><mrow><mrow><mn>3' +
       '</mn></mrow></mrow></mtd></mtr></mtable><mo>)</mo></mrow></math>';
@@ -186,9 +186,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix008b = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix009
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix009
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix009 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix009 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow>' +
@@ -200,9 +200,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix009 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix010
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix010
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix010 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix010 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1' +
@@ -214,9 +214,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix010 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix011
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix011
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix011 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix011 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mrow><mn>2</mn>' +
@@ -228,9 +228,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix011 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix012
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix012
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix012 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix012 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>6</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn>' +
@@ -242,9 +242,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix012 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix013
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix013
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix013 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix013 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
@@ -258,9 +258,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix013 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix014
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix014
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix014 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix014 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0' +
       '</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn>' +
@@ -279,9 +279,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix014 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix015
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix015
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix015 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix015 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>5</mn>' +
@@ -296,9 +296,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix015 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix016
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix016
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix016 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix016 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd>' +
@@ -313,9 +313,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix016 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix017
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix017
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix017 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix017 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
@@ -328,9 +328,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix017 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix018
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix018
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix018 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix018 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow></mtd>' +
@@ -344,9 +344,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix018 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix019
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix019
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix019 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix019 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
@@ -358,9 +358,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix019 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix019b = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix019b = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd></mtr><mtr>' +
@@ -373,9 +373,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix019b = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix020
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix020
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix020 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix020 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
@@ -390,9 +390,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix020 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix021
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix021
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix021 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix021 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<msub><mi>b</mi><mrow><mn>1</mn><mn>1</mn></mrow></msub></mrow>' +
@@ -408,9 +408,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix021 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix022
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix022
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix022 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix022 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
@@ -429,9 +429,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix022 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix023
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix023
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix023 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix023 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
@@ -452,9 +452,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix023 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix024
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix024
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix024 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix024 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mo></mo><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd>' +
@@ -480,9 +480,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix024 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix025
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix025
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix025 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix025 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
@@ -494,9 +494,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix025 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix026
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix026
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix026 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix026 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
@@ -508,9 +508,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix026 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix027
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix027
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix027 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix027 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
@@ -524,9 +524,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix027 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix028
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix028
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix028 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix028 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mn>2</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd>' +
@@ -540,9 +540,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix028 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix029
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix029
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix029 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix029 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>0' +
       '</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn>' +
@@ -562,9 +562,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix029 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix030
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix030
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix030 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix030 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd>' +
@@ -584,9 +584,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix030 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix031
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix031
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix031 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix031 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
@@ -599,9 +599,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix031 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix032
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix032
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix032 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix032 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
@@ -614,9 +614,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix032 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix033
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix033
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix033 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix033 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
@@ -629,9 +629,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix033 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix034
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix034
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix034 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix034 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd>' +
@@ -644,9 +644,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix034 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix035
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix035
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix035 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix035 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd></mtr><mtr>' +
@@ -660,9 +660,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix035 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix036
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix036
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix036 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix036 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd>' +
@@ -676,9 +676,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix036 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix037
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix037
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix037 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix037 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
@@ -693,9 +693,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix037 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix038
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix038
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix038 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix038 = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd>' +
@@ -710,9 +710,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix038 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix039
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix039
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix039 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix039 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
@@ -725,9 +725,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix039 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix040
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix040
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix040 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix040 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
@@ -740,9 +740,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix040 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix041
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix041
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix041 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix041 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr>' +
@@ -755,9 +755,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix041 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix042
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix042
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix042 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix042 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr>' +
@@ -770,9 +770,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix042 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix043
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix043
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix043 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix043 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
@@ -783,9 +783,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix043 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix044
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix044
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix044 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix044 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
@@ -796,9 +796,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix044 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix045
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix045
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix045 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix045 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo>' +
@@ -809,9 +809,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix045 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix046
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix046
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix046 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix046 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo>' +
@@ -822,9 +822,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix046 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix047
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix047
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix047 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix047 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn>' +
@@ -836,9 +836,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix047 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix048
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix048
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix048 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix048 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn>' +
@@ -850,9 +850,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix048 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix049
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix049
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix049 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix049 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
@@ -864,9 +864,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix049 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix050
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix050
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix050 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix050 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
@@ -878,9 +878,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix050 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix051
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix051
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix051 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix051 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow>' +
@@ -892,9 +892,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix051 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix052
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix052
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix052 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix052 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1' +
@@ -906,9 +906,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix052 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix053
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix053
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix053 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix053 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mrow><mn>2</mn>' +
@@ -920,9 +920,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix053 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix054
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix054
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix054 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix054 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>6</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn>' +
@@ -934,9 +934,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix054 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix055
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix055
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix055 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix055 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
@@ -951,9 +951,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix055 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix056
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix056
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix056 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix056 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0' +
       '</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn>' +
@@ -972,9 +972,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix056 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix057
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix057
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix057 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix057 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>5</mn>' +
@@ -989,9 +989,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix057 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix057a
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix057a
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix057a = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix057a = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd>' +
@@ -1006,9 +1006,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix057a = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix058
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix058
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix058 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix058 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
@@ -1021,9 +1021,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix058 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix059
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix059
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix059 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix059 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow></mtd>' +
@@ -1037,9 +1037,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix059 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix060
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix060
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix060 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix060 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
@@ -1052,9 +1052,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix060 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix061
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix061
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix061 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix061 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd></mtr><mtr>' +
@@ -1068,9 +1068,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix061 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix062
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix062
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix062 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix062 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
@@ -1085,9 +1085,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix062 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix063
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix063
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix063 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix063 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<msub><mi>b</mi><mrow><mn>1</mn><mn>1</mn></mrow></msub></mrow>' +
@@ -1103,9 +1103,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix063 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix064
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix064
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix064 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix064 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
@@ -1123,9 +1123,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix064 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix065
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix065
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix065 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix065 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
@@ -1146,9 +1146,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix065 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix066
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix066
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix066 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix066 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mo></mo><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd>' +
@@ -1174,9 +1174,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix066 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix067
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix067
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix067 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix067 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
@@ -1189,9 +1189,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix067 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix068
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix068
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix068 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix068 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
@@ -1204,9 +1204,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix068 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix069
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix069
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix069 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix069 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
@@ -1221,9 +1221,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix069 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix070
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix070
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix070 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix070 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mn>2</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd>' +
@@ -1238,9 +1238,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix070 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix071
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix071
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix071 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix071 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>0' +
       '</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn>' +
@@ -1260,9 +1260,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix071 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix072
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix072
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix072 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix072 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd>' +
@@ -1282,9 +1282,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix072 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix073
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix073
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix073 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix073 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
@@ -1297,9 +1297,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix073 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix074
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix074
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix074 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix074 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
@@ -1312,9 +1312,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix074 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix075
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix075
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix075 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix075 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
@@ -1327,9 +1327,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix075 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix076
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix076
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix076 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix076 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd>' +
@@ -1342,9 +1342,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix076 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix077
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix077
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix077 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix077 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd></mtr><mtr>' +
@@ -1358,9 +1358,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix077 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix078
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix078
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix078 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix078 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd>' +
@@ -1374,9 +1374,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix078 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix079
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix079
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix079 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix079 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
@@ -1392,9 +1392,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix079 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix080
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix080
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix080 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix080 = function() {
   var preference = 'Matrix_SpeakColNum';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd>' +
@@ -1410,9 +1410,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix080 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix081
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix081
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix081 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix081 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
@@ -1424,9 +1424,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix081 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix082
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix082
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix082 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix082 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
@@ -1438,9 +1438,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix082 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix083
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix083
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix083 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix083 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr>' +
@@ -1452,9 +1452,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix083 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix084
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix084
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix084 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix084 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr>' +
@@ -1466,9 +1466,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix084 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix085
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix085
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix085 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix085 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
@@ -1479,9 +1479,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix085 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix086
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix086
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix086 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix086 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
@@ -1492,9 +1492,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix086 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix087
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix087
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix087 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix087 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo>' +
@@ -1505,9 +1505,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix087 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix088
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix088
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix088 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix088 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo>' +
@@ -1518,9 +1518,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix088 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix089
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix089
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix089 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix089 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow>' +
@@ -1532,9 +1532,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix089 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix090
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix090
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix090 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix090 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1' +
@@ -1546,9 +1546,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix090 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix091
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix091
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix091 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix091 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mrow><mn>2</mn>' +
@@ -1560,9 +1560,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix091 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix092
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix092
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix092 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix092 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>6</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn>' +
@@ -1573,9 +1573,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix092 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix092a
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix092a
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix092a = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix092a = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
@@ -1589,9 +1589,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix092a = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix093
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix093
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix093 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix093 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0' +
       '</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn>' +
@@ -1608,9 +1608,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix093 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix094
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix094
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix094 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix094 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>5</mn>' +
@@ -1623,9 +1623,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix094 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix095
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix095
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix095 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix095 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd>' +
@@ -1639,9 +1639,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix095 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix096
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix096
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix096 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix096 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
@@ -1653,9 +1653,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix096 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix097
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix097
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix097 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix097 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow></mtd>' +
@@ -1668,9 +1668,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix097 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix098
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix098
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix098 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix098 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
@@ -1682,9 +1682,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix098 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix099
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix099
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix099 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix099 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd></mtr><mtr>' +
@@ -1697,9 +1697,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix099 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix100
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix100
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix100 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix100 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
@@ -1714,9 +1714,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix100 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix101
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix101
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix101 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix101 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<msub><mi>b</mi><mrow><mn>1</mn><mn>1</mn></mrow></msub></mrow>' +
@@ -1732,9 +1732,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix101 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix102
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix102
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix102 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix102 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
@@ -1750,9 +1750,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix102 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix103
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix103
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix103 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix103 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
@@ -1772,9 +1772,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix103 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix104
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix104
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix104 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix104 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mo></mo><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd>' +
@@ -1796,9 +1796,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix104 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix105
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix105
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix105 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix105 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
@@ -1810,9 +1810,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix105 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix106
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix106
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix106 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix106 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
@@ -1824,9 +1824,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix106 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix107
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix107
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix107 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix107 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
@@ -1840,9 +1840,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix107 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix108
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix108
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix108 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix108 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mn>2</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd>' +
@@ -1856,9 +1856,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix108 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix109
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix109
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix109 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix109 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>0' +
       '</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn>' +
@@ -1875,9 +1875,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix109 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix110
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix110
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix110 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix110 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd>' +
@@ -1894,9 +1894,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix110 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix111
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix111
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix111 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix111 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
@@ -1909,9 +1909,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix111 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix112
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix112
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix112 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix112 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
@@ -1924,9 +1924,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix112 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix113
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix113
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix113 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix113 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
@@ -1939,9 +1939,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix113 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix114
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix114
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix114 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix114 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd>' +
@@ -1954,9 +1954,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix114 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix115
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix115
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix115 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix115 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd></mtr><mtr>' +
@@ -1970,9 +1970,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix115 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix116
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix116
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix116 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix116 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd>' +
@@ -1986,9 +1986,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix116 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix117
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix117
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix117 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix117 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
@@ -2003,9 +2003,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix117 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix118
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix118
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix118 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix118 = function() {
   var preference = 'Matrix_SilentColNum';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd>' +
@@ -2020,9 +2020,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix118 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix119
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix119
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix119 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix119 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
@@ -2034,9 +2034,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix119 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix120
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix120
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix120 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix120 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
@@ -2048,9 +2048,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix120 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix121
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix121
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix121 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix121 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr>' +
@@ -2062,9 +2062,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix121 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix122
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix122
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix122 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix122 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr>' +
@@ -2076,9 +2076,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix122 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix123
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix123
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix123 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix123 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
@@ -2089,9 +2089,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix123 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix124
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix124
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix124 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix124 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
@@ -2102,9 +2102,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix124 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix125
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix125
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix125 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix125 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo>' +
@@ -2115,9 +2115,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix125 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix126
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix126
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix126 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix126 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo>' +
@@ -2128,9 +2128,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix126 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix127
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix127
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix127 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix127 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow>' +
@@ -2143,9 +2143,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix127 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix128
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix128
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix128 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix128 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1' +
@@ -2158,9 +2158,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix128 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix129
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix129
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix129 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix129 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mrow><mn>2</mn>' +
@@ -2173,9 +2173,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix129 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix130
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix130
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix130 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix130 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>6</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn>' +
@@ -2187,9 +2187,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix130 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix131
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix131
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix131 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix131 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
@@ -2203,9 +2203,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix131 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix132
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix132
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix132 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix132 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0' +
       '</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn>' +
@@ -2225,9 +2225,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix132 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix133
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix133
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix133 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix133 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>5</mn>' +
@@ -2242,9 +2242,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix133 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix134
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix134
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix134 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix134 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd>' +
@@ -2259,9 +2259,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix134 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix135
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix135
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix135 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix135 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
@@ -2274,9 +2274,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix135 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix136
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix136
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix136 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix136 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow></mtd>' +
@@ -2290,9 +2290,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix136 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix137
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix137
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix137 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix137 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
@@ -2304,9 +2304,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix137 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix138
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix138
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix138 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix138 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd></mtr><mtr>' +
@@ -2320,9 +2320,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix138 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix139
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix139
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix139 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix139 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
@@ -2339,9 +2339,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix139 = function() {
 // TODO: (Simons) Rewrite certain indices from implicit multiplication to
 // punctuation.
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix140
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix140
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix140 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix140 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<msub><mi>b</mi><mrow><mn>1</mn><mn>1</mn></mrow></msub></mrow>' +
@@ -2357,9 +2357,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix140 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix141
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix141
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix141 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix141 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
@@ -2376,9 +2376,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix141 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix142
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix142
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix142 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix142 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
@@ -2399,9 +2399,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix142 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix143
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix143
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix143 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix143 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mo></mo><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd>' +
@@ -2427,9 +2427,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix143 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix144
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix144
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix144 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix144 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
@@ -2442,9 +2442,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix144 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix145
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix145
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix145 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix145 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
@@ -2457,9 +2457,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix145 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix146
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix146
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix146 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix146 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
@@ -2473,9 +2473,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix146 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix147
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix147
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix147 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix147 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mn>2</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd>' +
@@ -2489,9 +2489,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix147 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix148
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix148
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix148 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix148 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>0' +
       '</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn>' +
@@ -2511,9 +2511,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix148 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix149
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix149
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix149 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix149 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd>' +
@@ -2533,9 +2533,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix149 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix150
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix150
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix150 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix150 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2' +
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
@@ -2548,9 +2548,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix150 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix151
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix151
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix151 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix151 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
@@ -2563,9 +2563,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix151 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix152
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix152
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix152 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix152 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
@@ -2578,9 +2578,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix152 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix153
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix153
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix153 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix153 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd>' +
@@ -2593,9 +2593,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix153 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix154
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix154
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix154 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix154 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd></mtr><mtr>' +
@@ -2609,9 +2609,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix154 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix155
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix155
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix155 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix155 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd>' +
@@ -2625,9 +2625,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix155 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix156
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix156
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix156 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix156 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
@@ -2642,9 +2642,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix156 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix157
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix157
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix157 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix157 = function() {
   var preference = 'Matrix_EndMatrix';
   var mathml = '<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr>' +
       '<mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd>' +
@@ -2659,9 +2659,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix157 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix158
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix158
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix158 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix158 = function() {
   var preference = 'Matrix_Vector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
@@ -2672,9 +2672,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix158 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix159
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix159
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix159 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix159 = function() {
   var preference = 'Matrix_Vector';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
@@ -2685,9 +2685,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix159 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix160
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix160
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix160 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix160 = function() {
   var preference = 'Matrix_Vector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo>' +
@@ -2698,9 +2698,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix160 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix161
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix161
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix161 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix161 = function() {
   var preference = 'Matrix_Vector';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo>' +
@@ -2711,9 +2711,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix161 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix162
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix162
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix162 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix162 = function() {
   var preference = 'Matrix_Vector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow>' +
@@ -2725,9 +2725,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix162 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix163
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix163
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix163 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix163 = function() {
   var preference = 'Matrix_Vector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1' +
@@ -2739,9 +2739,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix163 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix164
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix164
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix164 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix164 = function() {
   var preference = 'Matrix_Vector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mrow><mn>2</mn>' +
@@ -2753,9 +2753,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix164 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix165
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix165
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix165 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix165 = function() {
   var preference = 'Matrix_Vector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo>' +
@@ -2769,9 +2769,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix165 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix166
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix166
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix166 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix166 = function() {
   var preference = 'Matrix_Vector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>7</mn></mtd></mtr></mtable>' +
@@ -2787,9 +2787,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix166 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix167
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix167
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix167 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix167 = function() {
   var preference = 'Matrix_Vector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>9</mn></mtd>' +
@@ -2803,9 +2803,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix167 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix168
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix168
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix168 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix168 = function() {
   var preference = 'Matrix_Vector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr>' +
@@ -2822,9 +2822,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix168 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix169
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix169
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix169 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix169 = function() {
   var preference = 'Matrix_EndVector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
@@ -2835,9 +2835,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix169 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix170
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix170
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix170 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix170 = function() {
   var preference = 'Matrix_EndVector';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
@@ -2848,9 +2848,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix170 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix171
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix171
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix171 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix171 = function() {
   var preference = 'Matrix_EndVector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo>' +
@@ -2861,9 +2861,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix171 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix172
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix172
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix172 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix172 = function() {
   var preference = 'Matrix_EndVector';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo>' +
@@ -2874,9 +2874,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix172 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix173
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix173
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix173 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix173 = function() {
   var preference = 'Matrix_EndVector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow>' +
@@ -2889,9 +2889,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix173 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix174
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix174
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix174 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix174 = function() {
   var preference = 'Matrix_EndVector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1' +
@@ -2904,9 +2904,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix174 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix175
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix175
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix175 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix175 = function() {
   var preference = 'Matrix_EndVector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mrow><mn>2</mn>' +
@@ -2919,9 +2919,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix175 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix176
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix176
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix176 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix176 = function() {
   var preference = 'Matrix_EndVector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo>' +
@@ -2935,9 +2935,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix176 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix177
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix177
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix177 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix177 = function() {
   var preference = 'Matrix_EndVector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>7</mn></mtd></mtr></mtable>' +
@@ -2953,9 +2953,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix177 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix178
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix178
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix178 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix178 = function() {
   var preference = 'Matrix_EndVector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>9</mn></mtd>' +
@@ -2969,9 +2969,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix178 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix179
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix179
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix179 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix179 = function() {
   var preference = 'Matrix_EndVector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr>' +
@@ -2988,9 +2988,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix179 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix180
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix180
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix180 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix180 = function() {
   var preference = 'Matrix_Combinatoric';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mi>n' +
       '</mi></mtd></mtr><mtr><mtd><mi>r</mi></mtd></mtr></mtable></mrow>' +
@@ -3001,9 +3001,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix180 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix181
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix181
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix181 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix181 = function() {
   var preference = 'Matrix_Combinatoric';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mn>10</mn></mrow></mtd></mtr><mtr><mtd><mn>7</mn></mtd></mtr>' +
@@ -3014,9 +3014,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix181 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix182
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix182
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix182 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix182 = function() {
   var preference = 'Matrix_Combinatoric';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mn>15</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr>' +
@@ -3027,9 +3027,9 @@ sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix182 = function() {
 
 
 /**
- * Testing ClearspeakMatricesAndCombinatorics Example Matrix183
+ * Testing ClearspeakEnglishMatricesAndCombinatorics Example Matrix183
  */
-sre.ClearspeakMatricesAndCombinatorics.prototype.testMatrix183 = function() {
+sre.ClearspeakEnglishMatricesAndCombinatorics.prototype.testMatrix183 = function() {
   var preference = 'Matrix_Combinatoric';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>8' +
       '</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mrow>' +

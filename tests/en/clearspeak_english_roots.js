@@ -17,26 +17,26 @@
 //
 
 
-goog.provide('sre.ClearspeakRoots');
+goog.provide('sre.ClearspeakEnglishRoots');
 
-goog.require('sre.ClearspeakRuleTest');
+goog.require('sre.ClearspeakEnglishRuleTest');
 
 
 
 /**
 * @constructor
-* @extends {sre.ClearspeakRuleTest}
+* @extends {sre.ClearspeakEnglishRuleTest}
 */
-sre.ClearspeakRoots = function() {
-  sre.ClearspeakRoots.base(this, 'constructor');
+sre.ClearspeakEnglishRoots = function() {
+  sre.ClearspeakEnglishRoots.base(this, 'constructor');
 
   /**
 * @override
   */
-  this.information = 'ClearspeakRoots rule tests.';
+  this.information = 'ClearspeakEnglishRoots rule tests.';
 
 };
-goog.inherits(sre.ClearspeakRoots, sre.ClearspeakRuleTest);
+goog.inherits(sre.ClearspeakEnglishRoots, sre.ClearspeakEnglishRuleTest);
 
 
 
@@ -46,9 +46,9 @@ goog.inherits(sre.ClearspeakRoots, sre.ClearspeakRuleTest);
 
 
 /**
- * Testing ClearspeakRoots Example Root001
+ * Testing ClearspeakEnglishRoots Example Root001
  */
-sre.ClearspeakRoots.prototype.testRoot001 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot001 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<mrow><msqrt><mn>2</mn></msqrt></mrow>';
   var speech = 'the square root of 2';
@@ -57,9 +57,9 @@ sre.ClearspeakRoots.prototype.testRoot001 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root002
+ * Testing ClearspeakEnglishRoots Example Root002
  */
-sre.ClearspeakRoots.prototype.testRoot002 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot002 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><msqrt><mn>2</mn></msqrt>' +
       '</mrow></math>';
@@ -69,9 +69,9 @@ sre.ClearspeakRoots.prototype.testRoot002 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root003
+ * Testing ClearspeakEnglishRoots Example Root003
  */
-sre.ClearspeakRoots.prototype.testRoot003 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot003 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mn>3</mn><mo>±</mo><msqrt><mn>2</mn></msqrt>' +
       '</mrow></math>';
@@ -81,9 +81,9 @@ sre.ClearspeakRoots.prototype.testRoot003 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root004
+ * Testing ClearspeakEnglishRoots Example Root004
  */
-sre.ClearspeakRoots.prototype.testRoot004 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot004 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mn>3</mn><mo>∓</mo><msqrt><mn>2</mn></msqrt>' +
       '</mrow></math>';
@@ -93,9 +93,9 @@ sre.ClearspeakRoots.prototype.testRoot004 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root005
+ * Testing ClearspeakEnglishRoots Example Root005
  */
-sre.ClearspeakRoots.prototype.testRoot005 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot005 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
   var speech = 'the negative square root of 2';
@@ -104,9 +104,9 @@ sre.ClearspeakRoots.prototype.testRoot005 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root006
+ * Testing ClearspeakEnglishRoots Example Root006
  */
-sre.ClearspeakRoots.prototype.testRoot006 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot006 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mn>3</mn><mo>−</mo><msqrt><mn>2</mn></msqrt>' +
       '</mrow></math>';
@@ -116,9 +116,9 @@ sre.ClearspeakRoots.prototype.testRoot006 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root007
+ * Testing ClearspeakEnglishRoots Example Root007
  */
-sre.ClearspeakRoots.prototype.testRoot007 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot007 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mo>−</mo><msqrt><mn>2</mn>' +
       '</msqrt></mrow></math>';
@@ -128,9 +128,9 @@ sre.ClearspeakRoots.prototype.testRoot007 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root008
+ * Testing ClearspeakEnglishRoots Example Root008
  */
-sre.ClearspeakRoots.prototype.testRoot008 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot008 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mn>3</mn><mo>−</mo><mo>−</mo><msqrt><mn>2</mn>' +
       '</msqrt></mrow></math>';
@@ -140,9 +140,9 @@ sre.ClearspeakRoots.prototype.testRoot008 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root009
+ * Testing ClearspeakEnglishRoots Example Root009
  */
-sre.ClearspeakRoots.prototype.testRoot009 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot009 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−' +
       '</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>';
@@ -152,9 +152,9 @@ sre.ClearspeakRoots.prototype.testRoot009 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root010
+ * Testing ClearspeakEnglishRoots Example Root010
  */
-sre.ClearspeakRoots.prototype.testRoot010 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot010 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mn>3</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−' +
       '</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>';
@@ -165,9 +165,9 @@ sre.ClearspeakRoots.prototype.testRoot010 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root011
+ * Testing ClearspeakEnglishRoots Example Root011
  */
-sre.ClearspeakRoots.prototype.testRoot011 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot011 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>1</mn>' +
       '</mrow></msqrt></mrow></math>';
@@ -177,9 +177,9 @@ sre.ClearspeakRoots.prototype.testRoot011 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root011a
+ * Testing ClearspeakEnglishRoots Example Root011a
  */
-sre.ClearspeakRoots.prototype.testRoot011a = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot011a = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><msqrt><mi>x</mi></msqrt><mo>+</mo><mn>1</mn>' +
       '</mrow></math>';
@@ -189,9 +189,9 @@ sre.ClearspeakRoots.prototype.testRoot011a = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root012
+ * Testing ClearspeakEnglishRoots Example Root012
  */
-sre.ClearspeakRoots.prototype.testRoot012 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot012 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mo>−</mo><msqrt><mi>x</mi></msqrt></mrow></math>';
   var speech = 'the negative square root of x';
@@ -200,9 +200,9 @@ sre.ClearspeakRoots.prototype.testRoot012 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root013
+ * Testing ClearspeakEnglishRoots Example Root013
  */
-sre.ClearspeakRoots.prototype.testRoot013 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot013 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><msqrt><mi>x' +
       '</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow>' +
@@ -213,9 +213,9 @@ sre.ClearspeakRoots.prototype.testRoot013 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root014
+ * Testing ClearspeakEnglishRoots Example Root014
  */
-sre.ClearspeakRoots.prototype.testRoot014 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot014 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn>' +
@@ -227,9 +227,9 @@ sre.ClearspeakRoots.prototype.testRoot014 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root015
+ * Testing ClearspeakEnglishRoots Example Root015
  */
-sre.ClearspeakRoots.prototype.testRoot015 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot015 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><msup><mrow><msqrt><mi>x</mi></msqrt></mrow>' +
       '<mn>2</mn></msup></mrow></math>';
@@ -239,9 +239,9 @@ sre.ClearspeakRoots.prototype.testRoot015 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root016
+ * Testing ClearspeakEnglishRoots Example Root016
  */
-sre.ClearspeakRoots.prototype.testRoot016 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot016 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup>' +
       '</mrow></msqrt></mrow></math>';
@@ -251,9 +251,9 @@ sre.ClearspeakRoots.prototype.testRoot016 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root017
+ * Testing ClearspeakEnglishRoots Example Root017
  */
-sre.ClearspeakRoots.prototype.testRoot017 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot017 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup>' +
       '<mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt></mrow>' +
@@ -264,9 +264,9 @@ sre.ClearspeakRoots.prototype.testRoot017 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root018
+ * Testing ClearspeakEnglishRoots Example Root018
  */
-sre.ClearspeakRoots.prototype.testRoot018 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot018 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><msqrt><mrow><msub><mi>x</mi><mn>1</mn></msub>' +
       '<msup><mrow/><mn>2</mn></msup><mo>+</mo><msub><mi>x</mi><mn>2</mn>' +
@@ -277,9 +277,9 @@ sre.ClearspeakRoots.prototype.testRoot018 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root019
+ * Testing ClearspeakEnglishRoots Example Root019
  */
-sre.ClearspeakRoots.prototype.testRoot019 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot019 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><msqrt><mrow><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<msub><mi>x</mi><mn>2</mn></msub><mo>−</mo><msub><mi>x</mi><mn>1' +
@@ -295,9 +295,9 @@ sre.ClearspeakRoots.prototype.testRoot019 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root020
+ * Testing ClearspeakEnglishRoots Example Root020
  */
-sre.ClearspeakRoots.prototype.testRoot020 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot020 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><msqrt><mrow><mfrac><mn>1</mn><mn>2</mn>' +
       '</mfrac></mrow></msqrt></mrow></math>';
@@ -307,9 +307,9 @@ sre.ClearspeakRoots.prototype.testRoot020 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root021
+ * Testing ClearspeakEnglishRoots Example Root021
  */
-sre.ClearspeakRoots.prototype.testRoot021 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot021 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><msqrt><mrow><mfrac><mrow><mn>23</mn></mrow>' +
       '<mrow><mn>66</mn></mrow></mfrac></mrow></msqrt></mrow></math>';
@@ -319,9 +319,9 @@ sre.ClearspeakRoots.prototype.testRoot021 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root022
+ * Testing ClearspeakEnglishRoots Example Root022
  */
-sre.ClearspeakRoots.prototype.testRoot022 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot022 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><msqrt><mrow><mfrac><mrow><mi>x</mi><mo>+</mo>' +
       '<mn>1</mn></mrow><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn>' +
@@ -333,9 +333,9 @@ sre.ClearspeakRoots.prototype.testRoot022 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root023
+ * Testing ClearspeakEnglishRoots Example Root023
  */
-sre.ClearspeakRoots.prototype.testRoot023 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot023 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mo>−</mo><mi>b</mi><mo>±</mo>' +
       '<msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn>' +
@@ -348,9 +348,9 @@ sre.ClearspeakRoots.prototype.testRoot023 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root024
+ * Testing ClearspeakEnglishRoots Example Root024
  */
-sre.ClearspeakRoots.prototype.testRoot024 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot024 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><msqrt><mn>2</mn></msqrt></mrow></math>';
   var speech = 'the positive square root of 2';
@@ -359,9 +359,9 @@ sre.ClearspeakRoots.prototype.testRoot024 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root025
+ * Testing ClearspeakEnglishRoots Example Root025
  */
-sre.ClearspeakRoots.prototype.testRoot025 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot025 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><msqrt><mn>2</mn></msqrt>' +
       '</mrow></math>';
@@ -371,9 +371,9 @@ sre.ClearspeakRoots.prototype.testRoot025 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root026
+ * Testing ClearspeakEnglishRoots Example Root026
  */
-sre.ClearspeakRoots.prototype.testRoot026 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot026 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mn>3</mn><mo>±</mo><msqrt><mn>2</mn></msqrt>' +
       '</mrow></math>';
@@ -383,9 +383,9 @@ sre.ClearspeakRoots.prototype.testRoot026 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root027
+ * Testing ClearspeakEnglishRoots Example Root027
  */
-sre.ClearspeakRoots.prototype.testRoot027 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot027 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mn>3</mn><mo>∓</mo><msqrt><mn>2</mn></msqrt>' +
       '</mrow></math>';
@@ -395,9 +395,9 @@ sre.ClearspeakRoots.prototype.testRoot027 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root028
+ * Testing ClearspeakEnglishRoots Example Root028
  */
-sre.ClearspeakRoots.prototype.testRoot028 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot028 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
   var speech = 'the negative square root of 2';
@@ -406,9 +406,9 @@ sre.ClearspeakRoots.prototype.testRoot028 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root029
+ * Testing ClearspeakEnglishRoots Example Root029
  */
-sre.ClearspeakRoots.prototype.testRoot029 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot029 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mn>3</mn><mo>−</mo><msqrt><mn>2</mn></msqrt>' +
       '</mrow></math>';
@@ -418,9 +418,9 @@ sre.ClearspeakRoots.prototype.testRoot029 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root030
+ * Testing ClearspeakEnglishRoots Example Root030
  */
-sre.ClearspeakRoots.prototype.testRoot030 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot030 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mo>−</mo><msqrt><mn>2</mn>' +
       '</msqrt></mrow></math>';
@@ -430,9 +430,9 @@ sre.ClearspeakRoots.prototype.testRoot030 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root031
+ * Testing ClearspeakEnglishRoots Example Root031
  */
-sre.ClearspeakRoots.prototype.testRoot031 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot031 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mn>3</mn><mo>−</mo><mo>−</mo><msqrt><mn>2</mn>' +
       '</msqrt></mrow></math>';
@@ -442,9 +442,9 @@ sre.ClearspeakRoots.prototype.testRoot031 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root032
+ * Testing ClearspeakEnglishRoots Example Root032
  */
-sre.ClearspeakRoots.prototype.testRoot032 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot032 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−' +
       '</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>';
@@ -454,9 +454,9 @@ sre.ClearspeakRoots.prototype.testRoot032 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root033
+ * Testing ClearspeakEnglishRoots Example Root033
  */
-sre.ClearspeakRoots.prototype.testRoot033 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot033 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mn>3</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−' +
       '</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>';
@@ -467,9 +467,9 @@ sre.ClearspeakRoots.prototype.testRoot033 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root034
+ * Testing ClearspeakEnglishRoots Example Root034
  */
-sre.ClearspeakRoots.prototype.testRoot034 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot034 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>1</mn>' +
       '</mrow></msqrt></mrow></math>';
@@ -479,9 +479,9 @@ sre.ClearspeakRoots.prototype.testRoot034 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root034a
+ * Testing ClearspeakEnglishRoots Example Root034a
  */
-sre.ClearspeakRoots.prototype.testRoot034a = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot034a = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><msqrt><mi>x</mi></msqrt><mo>+</mo><mn>1</mn>' +
       '</mrow></math>';
@@ -491,9 +491,9 @@ sre.ClearspeakRoots.prototype.testRoot034a = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root035
+ * Testing ClearspeakEnglishRoots Example Root035
  */
-sre.ClearspeakRoots.prototype.testRoot035 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot035 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mo>−</mo><msqrt><mi>x</mi></msqrt></mrow></math>';
   var speech = 'the negative square root of x';
@@ -502,9 +502,9 @@ sre.ClearspeakRoots.prototype.testRoot035 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root036
+ * Testing ClearspeakEnglishRoots Example Root036
  */
-sre.ClearspeakRoots.prototype.testRoot036 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot036 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><msqrt><mi>x' +
       '</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow>' +
@@ -516,9 +516,9 @@ sre.ClearspeakRoots.prototype.testRoot036 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root037
+ * Testing ClearspeakEnglishRoots Example Root037
  */
-sre.ClearspeakRoots.prototype.testRoot037 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot037 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mo>−</mo>' +
       '<msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn>' +
@@ -530,9 +530,9 @@ sre.ClearspeakRoots.prototype.testRoot037 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root038
+ * Testing ClearspeakEnglishRoots Example Root038
  */
-sre.ClearspeakRoots.prototype.testRoot038 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot038 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn>' +
@@ -544,9 +544,9 @@ sre.ClearspeakRoots.prototype.testRoot038 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root039
+ * Testing ClearspeakEnglishRoots Example Root039
  */
-sre.ClearspeakRoots.prototype.testRoot039 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot039 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><msup><mrow><msqrt><mi>x</mi></msqrt></mrow>' +
       '<mn>2</mn></msup></mrow></math>';
@@ -556,9 +556,9 @@ sre.ClearspeakRoots.prototype.testRoot039 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root040
+ * Testing ClearspeakEnglishRoots Example Root040
  */
-sre.ClearspeakRoots.prototype.testRoot040 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot040 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup>' +
       '</mrow></msqrt></mrow></math>';
@@ -568,9 +568,9 @@ sre.ClearspeakRoots.prototype.testRoot040 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root041
+ * Testing ClearspeakEnglishRoots Example Root041
  */
-sre.ClearspeakRoots.prototype.testRoot041 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot041 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup>' +
       '<mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt></mrow>' +
@@ -581,9 +581,9 @@ sre.ClearspeakRoots.prototype.testRoot041 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root042
+ * Testing ClearspeakEnglishRoots Example Root042
  */
-sre.ClearspeakRoots.prototype.testRoot042 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot042 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><msqrt><mrow><msub><mi>x</mi><mn>1</mn></msub>' +
       '<msup><mrow/><mn>2</mn></msup><mo>+</mo><msub><mi>x</mi><mn>2</mn>' +
@@ -595,9 +595,9 @@ sre.ClearspeakRoots.prototype.testRoot042 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root043
+ * Testing ClearspeakEnglishRoots Example Root043
  */
-sre.ClearspeakRoots.prototype.testRoot043 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot043 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><msqrt><mrow><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<msub><mi>x</mi><mn>2</mn></msub><mo>−</mo><msub><mi>x</mi><mn>1' +
@@ -613,9 +613,9 @@ sre.ClearspeakRoots.prototype.testRoot043 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root044
+ * Testing ClearspeakEnglishRoots Example Root044
  */
-sre.ClearspeakRoots.prototype.testRoot044 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot044 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><msqrt><mrow><mfrac><mn>1</mn><mn>2</mn>' +
       '</mfrac></mrow></msqrt></mrow></math>';
@@ -625,9 +625,9 @@ sre.ClearspeakRoots.prototype.testRoot044 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root045
+ * Testing ClearspeakEnglishRoots Example Root045
  */
-sre.ClearspeakRoots.prototype.testRoot045 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot045 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><msqrt><mrow><mfrac><mrow><mn>23</mn></mrow>' +
       '<mrow><mn>66</mn></mrow></mfrac></mrow></msqrt></mrow></math>';
@@ -637,9 +637,9 @@ sre.ClearspeakRoots.prototype.testRoot045 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root046
+ * Testing ClearspeakEnglishRoots Example Root046
  */
-sre.ClearspeakRoots.prototype.testRoot046 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot046 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><msqrt><mrow><mfrac><mrow><mi>x</mi><mo>+</mo>' +
       '<mn>1</mn></mrow><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn>' +
@@ -651,9 +651,9 @@ sre.ClearspeakRoots.prototype.testRoot046 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root047
+ * Testing ClearspeakEnglishRoots Example Root047
  */
-sre.ClearspeakRoots.prototype.testRoot047 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot047 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mfrac><mrow><mo>−</mo><mi>b</mi><mo>±</mo>' +
       '<msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn>' +
@@ -666,9 +666,9 @@ sre.ClearspeakRoots.prototype.testRoot047 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root048
+ * Testing ClearspeakEnglishRoots Example Root048
  */
-sre.ClearspeakRoots.prototype.testRoot048 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot048 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><msqrt><mn>2</mn></msqrt></mrow></math>';
   var speech = 'the square root of 2, end root';
@@ -677,9 +677,9 @@ sre.ClearspeakRoots.prototype.testRoot048 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root049
+ * Testing ClearspeakEnglishRoots Example Root049
  */
-sre.ClearspeakRoots.prototype.testRoot049 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot049 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><msqrt><mn>2</mn></msqrt>' +
       '</mrow></math>';
@@ -689,9 +689,9 @@ sre.ClearspeakRoots.prototype.testRoot049 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root050
+ * Testing ClearspeakEnglishRoots Example Root050
  */
-sre.ClearspeakRoots.prototype.testRoot050 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot050 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mn>3</mn><mo>±</mo><msqrt><mn>2</mn></msqrt>' +
       '</mrow></math>';
@@ -701,9 +701,9 @@ sre.ClearspeakRoots.prototype.testRoot050 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root051
+ * Testing ClearspeakEnglishRoots Example Root051
  */
-sre.ClearspeakRoots.prototype.testRoot051 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot051 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mn>3</mn><mo>∓</mo><msqrt><mn>2</mn></msqrt>' +
       '</mrow></math>';
@@ -713,9 +713,9 @@ sre.ClearspeakRoots.prototype.testRoot051 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root052
+ * Testing ClearspeakEnglishRoots Example Root052
  */
-sre.ClearspeakRoots.prototype.testRoot052 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot052 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
   var speech = 'the negative square root of 2, end root';
@@ -724,9 +724,9 @@ sre.ClearspeakRoots.prototype.testRoot052 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root053
+ * Testing ClearspeakEnglishRoots Example Root053
  */
-sre.ClearspeakRoots.prototype.testRoot053 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot053 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mn>3</mn><mo>−</mo><msqrt><mn>2</mn></msqrt>' +
       '</mrow></math>';
@@ -736,9 +736,9 @@ sre.ClearspeakRoots.prototype.testRoot053 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root054
+ * Testing ClearspeakEnglishRoots Example Root054
  */
-sre.ClearspeakRoots.prototype.testRoot054 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot054 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mo>−</mo><msqrt><mn>2</mn>' +
       '</msqrt></mrow></math>';
@@ -748,9 +748,9 @@ sre.ClearspeakRoots.prototype.testRoot054 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root055
+ * Testing ClearspeakEnglishRoots Example Root055
  */
-sre.ClearspeakRoots.prototype.testRoot055 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot055 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mn>3</mn><mo>−</mo><mo>−</mo><msqrt><mn>2</mn>' +
       '</msqrt></mrow></math>';
@@ -760,9 +760,9 @@ sre.ClearspeakRoots.prototype.testRoot055 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root056
+ * Testing ClearspeakEnglishRoots Example Root056
  */
-sre.ClearspeakRoots.prototype.testRoot056 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot056 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−' +
       '</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>';
@@ -773,9 +773,9 @@ sre.ClearspeakRoots.prototype.testRoot056 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root057
+ * Testing ClearspeakEnglishRoots Example Root057
  */
-sre.ClearspeakRoots.prototype.testRoot057 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot057 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mn>3</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−' +
       '</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>';
@@ -786,9 +786,9 @@ sre.ClearspeakRoots.prototype.testRoot057 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root058
+ * Testing ClearspeakEnglishRoots Example Root058
  */
-sre.ClearspeakRoots.prototype.testRoot058 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot058 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>1</mn>' +
       '</mrow></msqrt></mrow></math>';
@@ -798,9 +798,9 @@ sre.ClearspeakRoots.prototype.testRoot058 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root058a
+ * Testing ClearspeakEnglishRoots Example Root058a
  */
-sre.ClearspeakRoots.prototype.testRoot058a = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot058a = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><msqrt><mi>x</mi></msqrt><mo>+</mo><mn>1</mn>' +
       '</mrow></math>';
@@ -810,9 +810,9 @@ sre.ClearspeakRoots.prototype.testRoot058a = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root059
+ * Testing ClearspeakEnglishRoots Example Root059
  */
-sre.ClearspeakRoots.prototype.testRoot059 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot059 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mo>−</mo><msqrt><mi>x</mi></msqrt></mrow></math>';
   var speech = 'the negative square root of x, end root';
@@ -821,9 +821,9 @@ sre.ClearspeakRoots.prototype.testRoot059 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root060
+ * Testing ClearspeakEnglishRoots Example Root060
  */
-sre.ClearspeakRoots.prototype.testRoot060 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot060 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><msqrt><mi>x' +
       '</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow>' +
@@ -835,9 +835,9 @@ sre.ClearspeakRoots.prototype.testRoot060 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root061
+ * Testing ClearspeakEnglishRoots Example Root061
  */
-sre.ClearspeakRoots.prototype.testRoot061 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot061 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn>' +
@@ -849,9 +849,9 @@ sre.ClearspeakRoots.prototype.testRoot061 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root062
+ * Testing ClearspeakEnglishRoots Example Root062
  */
-sre.ClearspeakRoots.prototype.testRoot062 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot062 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><msup><mrow><msqrt><mi>x</mi></msqrt></mrow>' +
       '<mn>2</mn></msup></mrow></math>';
@@ -861,9 +861,9 @@ sre.ClearspeakRoots.prototype.testRoot062 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root063
+ * Testing ClearspeakEnglishRoots Example Root063
  */
-sre.ClearspeakRoots.prototype.testRoot063 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot063 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup>' +
       '</mrow></msqrt></mrow></math>';
@@ -873,9 +873,9 @@ sre.ClearspeakRoots.prototype.testRoot063 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root064
+ * Testing ClearspeakEnglishRoots Example Root064
  */
-sre.ClearspeakRoots.prototype.testRoot064 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot064 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup>' +
       '<mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt></mrow>' +
@@ -886,9 +886,9 @@ sre.ClearspeakRoots.prototype.testRoot064 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root065
+ * Testing ClearspeakEnglishRoots Example Root065
  */
-sre.ClearspeakRoots.prototype.testRoot065 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot065 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><msqrt><mrow><msub><mi>x</mi><mn>1</mn></msub>' +
       '<msup><mrow/><mn>2</mn></msup><mo>+</mo><msub><mi>x</mi><mn>2</mn>' +
@@ -900,9 +900,9 @@ sre.ClearspeakRoots.prototype.testRoot065 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root066
+ * Testing ClearspeakEnglishRoots Example Root066
  */
-sre.ClearspeakRoots.prototype.testRoot066 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot066 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><msqrt><mrow><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<msub><mi>x</mi><mn>2</mn></msub><mo>−</mo><msub><mi>x</mi><mn>1' +
@@ -918,9 +918,9 @@ sre.ClearspeakRoots.prototype.testRoot066 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root067
+ * Testing ClearspeakEnglishRoots Example Root067
  */
-sre.ClearspeakRoots.prototype.testRoot067 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot067 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><msqrt><mrow><mfrac><mn>1</mn><mn>2</mn>' +
       '</mfrac></mrow></msqrt></mrow></math>';
@@ -930,9 +930,9 @@ sre.ClearspeakRoots.prototype.testRoot067 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root068
+ * Testing ClearspeakEnglishRoots Example Root068
  */
-sre.ClearspeakRoots.prototype.testRoot068 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot068 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><msqrt><mrow><mfrac><mrow><mn>23</mn></mrow>' +
       '<mrow><mn>66</mn></mrow></mfrac></mrow></msqrt></mrow></math>';
@@ -942,9 +942,9 @@ sre.ClearspeakRoots.prototype.testRoot068 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root069
+ * Testing ClearspeakEnglishRoots Example Root069
  */
-sre.ClearspeakRoots.prototype.testRoot069 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot069 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><msqrt><mrow><mfrac><mrow><mi>x</mi><mo>+</mo>' +
       '<mn>1</mn></mrow><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn>' +
@@ -956,9 +956,9 @@ sre.ClearspeakRoots.prototype.testRoot069 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root070
+ * Testing ClearspeakEnglishRoots Example Root070
  */
-sre.ClearspeakRoots.prototype.testRoot070 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot070 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mfrac><mrow><mo>−</mo><mi>b</mi><mo>±</mo>' +
       '<msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn>' +
@@ -971,9 +971,9 @@ sre.ClearspeakRoots.prototype.testRoot070 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root071
+ * Testing ClearspeakEnglishRoots Example Root071
  */
-sre.ClearspeakRoots.prototype.testRoot071 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot071 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><msqrt><mn>2</mn></msqrt></mrow></math>';
   var speech = 'the positive square root of 2, end root';
@@ -982,9 +982,9 @@ sre.ClearspeakRoots.prototype.testRoot071 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root072
+ * Testing ClearspeakEnglishRoots Example Root072
  */
-sre.ClearspeakRoots.prototype.testRoot072 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot072 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><msqrt><mn>2</mn></msqrt>' +
       '</mrow></math>';
@@ -994,9 +994,9 @@ sre.ClearspeakRoots.prototype.testRoot072 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root073
+ * Testing ClearspeakEnglishRoots Example Root073
  */
-sre.ClearspeakRoots.prototype.testRoot073 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot073 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mn>3</mn><mo>±</mo><msqrt><mn>2</mn></msqrt>' +
       '</mrow></math>';
@@ -1006,9 +1006,9 @@ sre.ClearspeakRoots.prototype.testRoot073 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root074
+ * Testing ClearspeakEnglishRoots Example Root074
  */
-sre.ClearspeakRoots.prototype.testRoot074 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot074 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mn>3</mn><mo>∓</mo><msqrt><mn>2</mn></msqrt>' +
       '</mrow></math>';
@@ -1018,9 +1018,9 @@ sre.ClearspeakRoots.prototype.testRoot074 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root075
+ * Testing ClearspeakEnglishRoots Example Root075
  */
-sre.ClearspeakRoots.prototype.testRoot075 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot075 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
   var speech = 'the negative square root of 2, end root';
@@ -1029,9 +1029,9 @@ sre.ClearspeakRoots.prototype.testRoot075 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root076
+ * Testing ClearspeakEnglishRoots Example Root076
  */
-sre.ClearspeakRoots.prototype.testRoot076 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot076 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mn>3</mn><mo>−</mo><msqrt><mn>2</mn></msqrt>' +
       '</mrow></math>';
@@ -1041,9 +1041,9 @@ sre.ClearspeakRoots.prototype.testRoot076 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root077
+ * Testing ClearspeakEnglishRoots Example Root077
  */
-sre.ClearspeakRoots.prototype.testRoot077 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot077 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mo>−</mo><msqrt><mn>2</mn>' +
       '</msqrt></mrow></math>';
@@ -1053,9 +1053,9 @@ sre.ClearspeakRoots.prototype.testRoot077 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root078
+ * Testing ClearspeakEnglishRoots Example Root078
  */
-sre.ClearspeakRoots.prototype.testRoot078 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot078 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mn>3</mn><mo>−</mo><mo>−</mo><msqrt><mn>2</mn>' +
       '</msqrt></mrow></math>';
@@ -1065,9 +1065,9 @@ sre.ClearspeakRoots.prototype.testRoot078 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root079
+ * Testing ClearspeakEnglishRoots Example Root079
  */
-sre.ClearspeakRoots.prototype.testRoot079 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot079 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−' +
       '</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>';
@@ -1078,9 +1078,9 @@ sre.ClearspeakRoots.prototype.testRoot079 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root080
+ * Testing ClearspeakEnglishRoots Example Root080
  */
-sre.ClearspeakRoots.prototype.testRoot080 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot080 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mn>3</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−' +
       '</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>';
@@ -1091,9 +1091,9 @@ sre.ClearspeakRoots.prototype.testRoot080 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root081
+ * Testing ClearspeakEnglishRoots Example Root081
  */
-sre.ClearspeakRoots.prototype.testRoot081 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot081 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>1</mn>' +
       '</mrow></msqrt></mrow></math>';
@@ -1103,9 +1103,9 @@ sre.ClearspeakRoots.prototype.testRoot081 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root081a
+ * Testing ClearspeakEnglishRoots Example Root081a
  */
-sre.ClearspeakRoots.prototype.testRoot081a = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot081a = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><msqrt><mi>x</mi></msqrt><mo>+</mo><mn>1</mn>' +
       '</mrow></math>';
@@ -1115,9 +1115,9 @@ sre.ClearspeakRoots.prototype.testRoot081a = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root082
+ * Testing ClearspeakEnglishRoots Example Root082
  */
-sre.ClearspeakRoots.prototype.testRoot082 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot082 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mo>−</mo><msqrt><mi>x</mi></msqrt></mrow></math>';
   var speech = 'the negative square root of x, end root';
@@ -1126,9 +1126,9 @@ sre.ClearspeakRoots.prototype.testRoot082 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root083
+ * Testing ClearspeakEnglishRoots Example Root083
  */
-sre.ClearspeakRoots.prototype.testRoot083 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot083 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><msqrt><mi>x' +
       '</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow>' +
@@ -1140,9 +1140,9 @@ sre.ClearspeakRoots.prototype.testRoot083 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root084
+ * Testing ClearspeakEnglishRoots Example Root084
  */
-sre.ClearspeakRoots.prototype.testRoot084 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot084 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mo>−</mo>' +
       '<msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn>' +
@@ -1154,9 +1154,9 @@ sre.ClearspeakRoots.prototype.testRoot084 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root085
+ * Testing ClearspeakEnglishRoots Example Root085
  */
-sre.ClearspeakRoots.prototype.testRoot085 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot085 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><msup><mrow><msqrt><mi>x</mi></msqrt></mrow>' +
       '<mn>2</mn></msup></mrow></math>';
@@ -1166,9 +1166,9 @@ sre.ClearspeakRoots.prototype.testRoot085 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root086
+ * Testing ClearspeakEnglishRoots Example Root086
  */
-sre.ClearspeakRoots.prototype.testRoot086 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot086 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup>' +
       '</mrow></msqrt></mrow></math>';
@@ -1178,9 +1178,9 @@ sre.ClearspeakRoots.prototype.testRoot086 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root087
+ * Testing ClearspeakEnglishRoots Example Root087
  */
-sre.ClearspeakRoots.prototype.testRoot087 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot087 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup>' +
       '<mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt></mrow>' +
@@ -1191,9 +1191,9 @@ sre.ClearspeakRoots.prototype.testRoot087 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root088
+ * Testing ClearspeakEnglishRoots Example Root088
  */
-sre.ClearspeakRoots.prototype.testRoot088 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot088 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><msqrt><mrow><msub><mi>x</mi><mn>1</mn></msub>' +
       '<msup><mrow/><mn>2</mn></msup><mo>+</mo><msub><mi>x</mi><mn>2</mn>' +
@@ -1205,9 +1205,9 @@ sre.ClearspeakRoots.prototype.testRoot088 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root089
+ * Testing ClearspeakEnglishRoots Example Root089
  */
-sre.ClearspeakRoots.prototype.testRoot089 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot089 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><msqrt><mrow><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<msub><mi>x</mi><mn>2</mn></msub><mo>−</mo><msub><mi>x</mi><mn>1' +
@@ -1223,9 +1223,9 @@ sre.ClearspeakRoots.prototype.testRoot089 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root090
+ * Testing ClearspeakEnglishRoots Example Root090
  */
-sre.ClearspeakRoots.prototype.testRoot090 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot090 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><msqrt><mrow><mfrac><mn>1</mn><mn>2</mn>' +
       '</mfrac></mrow></msqrt></mrow></math>';
@@ -1235,9 +1235,9 @@ sre.ClearspeakRoots.prototype.testRoot090 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root091
+ * Testing ClearspeakEnglishRoots Example Root091
  */
-sre.ClearspeakRoots.prototype.testRoot091 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot091 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><msqrt><mrow><mfrac><mrow><mn>23</mn></mrow>' +
       '<mrow><mn>66</mn></mrow></mfrac></mrow></msqrt></mrow></math>';
@@ -1247,9 +1247,9 @@ sre.ClearspeakRoots.prototype.testRoot091 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root092
+ * Testing ClearspeakEnglishRoots Example Root092
  */
-sre.ClearspeakRoots.prototype.testRoot092 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot092 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><msqrt><mrow><mfrac><mrow><mi>x</mi><mo>+</mo>' +
       '<mn>1</mn></mrow><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn>' +
@@ -1261,9 +1261,9 @@ sre.ClearspeakRoots.prototype.testRoot092 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example Root093
+ * Testing ClearspeakEnglishRoots Example Root093
  */
-sre.ClearspeakRoots.prototype.testRoot093 = function() {
+sre.ClearspeakEnglishRoots.prototype.testRoot093 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mfrac><mrow><mo>−</mo><mi>b</mi><mo>±</mo>' +
       '<msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn>' +
@@ -1281,9 +1281,9 @@ sre.ClearspeakRoots.prototype.testRoot093 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot001
+ * Testing ClearspeakEnglishRoots Example HighRoot001
  */
-sre.ClearspeakRoots.prototype.testHighRoot001 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot001 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mi>y</mi><mn>3</mn></mroot></mrow></math>';
   var speech = 'the cube root of y';
@@ -1292,9 +1292,9 @@ sre.ClearspeakRoots.prototype.testHighRoot001 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot002
+ * Testing ClearspeakEnglishRoots Example HighRoot002
  */
-sre.ClearspeakRoots.prototype.testHighRoot002 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot002 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>';
   var speech = 'the fourth root of n';
@@ -1303,9 +1303,9 @@ sre.ClearspeakRoots.prototype.testHighRoot002 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot003
+ * Testing ClearspeakEnglishRoots Example HighRoot003
  */
-sre.ClearspeakRoots.prototype.testHighRoot003 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot003 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn>' +
       '</mroot></mrow></math>';
@@ -1315,9 +1315,9 @@ sre.ClearspeakRoots.prototype.testHighRoot003 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot004
+ * Testing ClearspeakEnglishRoots Example HighRoot004
  */
-sre.ClearspeakRoots.prototype.testHighRoot004 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot004 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn>' +
       '</mroot></mrow></math>';
@@ -1327,9 +1327,9 @@ sre.ClearspeakRoots.prototype.testHighRoot004 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot005
+ * Testing ClearspeakEnglishRoots Example HighRoot005
  */
-sre.ClearspeakRoots.prototype.testHighRoot005 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot005 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mi>d</mi><mi>n</mi></mroot></mrow></math>';
   var speech = 'the nth root of d';
@@ -1338,9 +1338,9 @@ sre.ClearspeakRoots.prototype.testHighRoot005 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot006
+ * Testing ClearspeakEnglishRoots Example HighRoot006
  */
-sre.ClearspeakRoots.prototype.testHighRoot006 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot006 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi>' +
       '</mroot></mrow></math>';
@@ -1350,9 +1350,9 @@ sre.ClearspeakRoots.prototype.testHighRoot006 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot007
+ * Testing ClearspeakEnglishRoots Example HighRoot007
  */
-sre.ClearspeakRoots.prototype.testHighRoot007 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot007 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup>' +
       '</mrow><mi>i</mi></mroot></mrow></math>';
@@ -1362,9 +1362,9 @@ sre.ClearspeakRoots.prototype.testHighRoot007 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot008
+ * Testing ClearspeakEnglishRoots Example HighRoot008
  */
-sre.ClearspeakRoots.prototype.testHighRoot008 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot008 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi>' +
       '</mroot></mrow></math>';
@@ -1374,9 +1374,9 @@ sre.ClearspeakRoots.prototype.testHighRoot008 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot009
+ * Testing ClearspeakEnglishRoots Example HighRoot009
  */
-sre.ClearspeakRoots.prototype.testHighRoot009 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot009 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>y</mi><mn>3</mn></mroot>' +
       '</mrow></math>';
@@ -1386,9 +1386,9 @@ sre.ClearspeakRoots.prototype.testHighRoot009 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot010
+ * Testing ClearspeakEnglishRoots Example HighRoot010
  */
-sre.ClearspeakRoots.prototype.testHighRoot010 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot010 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot>' +
       '</mrow></math>';
@@ -1398,9 +1398,9 @@ sre.ClearspeakRoots.prototype.testHighRoot010 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot011
+ * Testing ClearspeakEnglishRoots Example HighRoot011
  */
-sre.ClearspeakRoots.prototype.testHighRoot011 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot011 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mi>y</mi><mn>3</mn></mroot></mrow></math>';
   var speech = 'the cube root of y, end root';
@@ -1409,9 +1409,9 @@ sre.ClearspeakRoots.prototype.testHighRoot011 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot012
+ * Testing ClearspeakEnglishRoots Example HighRoot012
  */
-sre.ClearspeakRoots.prototype.testHighRoot012 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot012 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>';
   var speech = 'the fourth root of n, end root';
@@ -1420,9 +1420,9 @@ sre.ClearspeakRoots.prototype.testHighRoot012 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot013
+ * Testing ClearspeakEnglishRoots Example HighRoot013
  */
-sre.ClearspeakRoots.prototype.testHighRoot013 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot013 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn>' +
       '</mroot></mrow></math>';
@@ -1432,9 +1432,9 @@ sre.ClearspeakRoots.prototype.testHighRoot013 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot014
+ * Testing ClearspeakEnglishRoots Example HighRoot014
  */
-sre.ClearspeakRoots.prototype.testHighRoot014 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot014 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn>' +
       '</mroot></mrow></math>';
@@ -1444,9 +1444,9 @@ sre.ClearspeakRoots.prototype.testHighRoot014 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot015
+ * Testing ClearspeakEnglishRoots Example HighRoot015
  */
-sre.ClearspeakRoots.prototype.testHighRoot015 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot015 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mi>d</mi><mi>n</mi></mroot></mrow></math>';
   var speech = 'the nth root of d, end root';
@@ -1455,9 +1455,9 @@ sre.ClearspeakRoots.prototype.testHighRoot015 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot016
+ * Testing ClearspeakEnglishRoots Example HighRoot016
  */
-sre.ClearspeakRoots.prototype.testHighRoot016 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot016 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi>' +
       '</mroot></mrow></math>';
@@ -1467,9 +1467,9 @@ sre.ClearspeakRoots.prototype.testHighRoot016 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot017
+ * Testing ClearspeakEnglishRoots Example HighRoot017
  */
-sre.ClearspeakRoots.prototype.testHighRoot017 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot017 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup>' +
       '</mrow><mi>i</mi></mroot></mrow></math>';
@@ -1479,9 +1479,9 @@ sre.ClearspeakRoots.prototype.testHighRoot017 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot018
+ * Testing ClearspeakEnglishRoots Example HighRoot018
  */
-sre.ClearspeakRoots.prototype.testHighRoot018 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot018 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi>' +
       '</mroot></mrow></math>';
@@ -1491,9 +1491,9 @@ sre.ClearspeakRoots.prototype.testHighRoot018 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot019
+ * Testing ClearspeakEnglishRoots Example HighRoot019
  */
-sre.ClearspeakRoots.prototype.testHighRoot019 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot019 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>y</mi><mn>3</mn></mroot>' +
       '</mrow></math>';
@@ -1503,9 +1503,9 @@ sre.ClearspeakRoots.prototype.testHighRoot019 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot020
+ * Testing ClearspeakEnglishRoots Example HighRoot020
  */
-sre.ClearspeakRoots.prototype.testHighRoot020 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot020 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot>' +
       '</mrow></math>';
@@ -1515,9 +1515,9 @@ sre.ClearspeakRoots.prototype.testHighRoot020 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot021
+ * Testing ClearspeakEnglishRoots Example HighRoot021
  */
-sre.ClearspeakRoots.prototype.testHighRoot021 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot021 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mi>y</mi><mn>3</mn></mroot></mrow></math>';
   var speech = 'the cube root of y';
@@ -1526,9 +1526,9 @@ sre.ClearspeakRoots.prototype.testHighRoot021 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot022
+ * Testing ClearspeakEnglishRoots Example HighRoot022
  */
-sre.ClearspeakRoots.prototype.testHighRoot022 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot022 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>';
   var speech = 'the fourth root of n';
@@ -1537,9 +1537,9 @@ sre.ClearspeakRoots.prototype.testHighRoot022 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot023
+ * Testing ClearspeakEnglishRoots Example HighRoot023
  */
-sre.ClearspeakRoots.prototype.testHighRoot023 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot023 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn>' +
       '</mroot></mrow></math>';
@@ -1549,9 +1549,9 @@ sre.ClearspeakRoots.prototype.testHighRoot023 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot024
+ * Testing ClearspeakEnglishRoots Example HighRoot024
  */
-sre.ClearspeakRoots.prototype.testHighRoot024 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot024 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn>' +
       '</mroot></mrow></math>';
@@ -1561,9 +1561,9 @@ sre.ClearspeakRoots.prototype.testHighRoot024 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot025
+ * Testing ClearspeakEnglishRoots Example HighRoot025
  */
-sre.ClearspeakRoots.prototype.testHighRoot025 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot025 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mi>d</mi><mi>n</mi></mroot></mrow></math>';
   var speech = 'the nth root of d';
@@ -1572,9 +1572,9 @@ sre.ClearspeakRoots.prototype.testHighRoot025 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot026
+ * Testing ClearspeakEnglishRoots Example HighRoot026
  */
-sre.ClearspeakRoots.prototype.testHighRoot026 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot026 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi>' +
       '</mroot></mrow></math>';
@@ -1584,9 +1584,9 @@ sre.ClearspeakRoots.prototype.testHighRoot026 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot027
+ * Testing ClearspeakEnglishRoots Example HighRoot027
  */
-sre.ClearspeakRoots.prototype.testHighRoot027 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot027 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup>' +
       '</mrow><mi>i</mi></mroot></mrow></math>';
@@ -1596,9 +1596,9 @@ sre.ClearspeakRoots.prototype.testHighRoot027 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot028
+ * Testing ClearspeakEnglishRoots Example HighRoot028
  */
-sre.ClearspeakRoots.prototype.testHighRoot028 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot028 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi>' +
       '</mroot></mrow></math>';
@@ -1608,9 +1608,9 @@ sre.ClearspeakRoots.prototype.testHighRoot028 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot029
+ * Testing ClearspeakEnglishRoots Example HighRoot029
  */
-sre.ClearspeakRoots.prototype.testHighRoot029 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot029 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>y</mi><mn>3</mn></mroot>' +
       '</mrow></math>';
@@ -1620,9 +1620,9 @@ sre.ClearspeakRoots.prototype.testHighRoot029 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot030
+ * Testing ClearspeakEnglishRoots Example HighRoot030
  */
-sre.ClearspeakRoots.prototype.testHighRoot030 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot030 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot>' +
       '</mrow></math>';
@@ -1632,9 +1632,9 @@ sre.ClearspeakRoots.prototype.testHighRoot030 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot031
+ * Testing ClearspeakEnglishRoots Example HighRoot031
  */
-sre.ClearspeakRoots.prototype.testHighRoot031 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot031 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mi>y</mi><mn>3</mn></mroot></mrow></math>';
   var speech = 'the cube root of y, end root';
@@ -1643,9 +1643,9 @@ sre.ClearspeakRoots.prototype.testHighRoot031 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot032
+ * Testing ClearspeakEnglishRoots Example HighRoot032
  */
-sre.ClearspeakRoots.prototype.testHighRoot032 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot032 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>';
   var speech = 'the fourth root of n, end root';
@@ -1654,9 +1654,9 @@ sre.ClearspeakRoots.prototype.testHighRoot032 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot033
+ * Testing ClearspeakEnglishRoots Example HighRoot033
  */
-sre.ClearspeakRoots.prototype.testHighRoot033 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot033 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn>' +
       '</mroot></mrow></math>';
@@ -1666,9 +1666,9 @@ sre.ClearspeakRoots.prototype.testHighRoot033 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot034
+ * Testing ClearspeakEnglishRoots Example HighRoot034
  */
-sre.ClearspeakRoots.prototype.testHighRoot034 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot034 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn>' +
       '</mroot></mrow></math>';
@@ -1678,9 +1678,9 @@ sre.ClearspeakRoots.prototype.testHighRoot034 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot035
+ * Testing ClearspeakEnglishRoots Example HighRoot035
  */
-sre.ClearspeakRoots.prototype.testHighRoot035 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot035 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mi>d</mi><mi>n</mi></mroot></mrow></math>';
   var speech = 'the nth root of d, end root';
@@ -1689,9 +1689,9 @@ sre.ClearspeakRoots.prototype.testHighRoot035 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot036
+ * Testing ClearspeakEnglishRoots Example HighRoot036
  */
-sre.ClearspeakRoots.prototype.testHighRoot036 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot036 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi>' +
       '</mroot></mrow></math>';
@@ -1701,9 +1701,9 @@ sre.ClearspeakRoots.prototype.testHighRoot036 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot037
+ * Testing ClearspeakEnglishRoots Example HighRoot037
  */
-sre.ClearspeakRoots.prototype.testHighRoot037 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot037 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup>' +
       '</mrow><mi>i</mi></mroot></mrow></math>';
@@ -1713,9 +1713,9 @@ sre.ClearspeakRoots.prototype.testHighRoot037 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot038
+ * Testing ClearspeakEnglishRoots Example HighRoot038
  */
-sre.ClearspeakRoots.prototype.testHighRoot038 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot038 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi>' +
       '</mroot></mrow></math>';
@@ -1725,9 +1725,9 @@ sre.ClearspeakRoots.prototype.testHighRoot038 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot039
+ * Testing ClearspeakEnglishRoots Example HighRoot039
  */
-sre.ClearspeakRoots.prototype.testHighRoot039 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot039 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>y</mi><mn>3</mn></mroot>' +
       '</mrow></math>';
@@ -1737,9 +1737,9 @@ sre.ClearspeakRoots.prototype.testHighRoot039 = function() {
 
 
 /**
- * Testing ClearspeakRoots Example HighRoot040
+ * Testing ClearspeakEnglishRoots Example HighRoot040
  */
-sre.ClearspeakRoots.prototype.testHighRoot040 = function() {
+sre.ClearspeakEnglishRoots.prototype.testHighRoot040 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot>' +
       '</mrow></math>';

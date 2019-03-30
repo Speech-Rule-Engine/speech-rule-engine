@@ -17,26 +17,26 @@
 //
 
 
-goog.provide('sre.ClearspeakLogarithms');
+goog.provide('sre.ClearspeakEnglishLogarithms');
 
-goog.require('sre.ClearspeakRuleTest');
+goog.require('sre.ClearspeakEnglishRuleTest');
 
 
 
 /**
 * @constructor
-* @extends {sre.ClearspeakRuleTest}
+* @extends {sre.ClearspeakEnglishRuleTest}
 */
-sre.ClearspeakLogarithms = function() {
-  sre.ClearspeakLogarithms.base(this, 'constructor');
+sre.ClearspeakEnglishLogarithms = function() {
+  sre.ClearspeakEnglishLogarithms.base(this, 'constructor');
 
   /**
 * @override
   */
-  this.information = 'ClearspeakLogarithms rule tests.';
+  this.information = 'ClearspeakEnglishLogarithms rule tests.';
 
 };
-goog.inherits(sre.ClearspeakLogarithms, sre.ClearspeakRuleTest);
+goog.inherits(sre.ClearspeakEnglishLogarithms, sre.ClearspeakEnglishRuleTest);
 
 
 
@@ -46,9 +46,9 @@ goog.inherits(sre.ClearspeakLogarithms, sre.ClearspeakRuleTest);
 
 
 /**
- * Testing ClearspeakLogarithms Example Log001
+ * Testing ClearspeakEnglishLogarithms Example Log001
  */
-sre.ClearspeakLogarithms.prototype.testLog001 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testLog001 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><mi>log</mi><mi>x</mi></mrow></math>';
   var speech = 'log x';
@@ -57,9 +57,9 @@ sre.ClearspeakLogarithms.prototype.testLog001 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example Log002
+ * Testing ClearspeakEnglishLogarithms Example Log002
  */
-sre.ClearspeakLogarithms.prototype.testLog002 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testLog002 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10' +
       '</mn></mrow></msub><mi>x</mi></mrow></math>';
@@ -69,9 +69,9 @@ sre.ClearspeakLogarithms.prototype.testLog002 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example Log003
+ * Testing ClearspeakEnglishLogarithms Example Log003
  */
-sre.ClearspeakLogarithms.prototype.testLog003 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testLog003 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><msub><mrow><mi>log</mi></mrow><mi>b</mi>' +
       '</msub><mi>a</mi><mi>x</mi><mo>=</mo><msub><mrow><mi>log</mi></mrow>' +
@@ -84,9 +84,9 @@ sre.ClearspeakLogarithms.prototype.testLog003 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example Log004
+ * Testing ClearspeakEnglishLogarithms Example Log004
  */
-sre.ClearspeakLogarithms.prototype.testLog004 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testLog004 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><msub><mrow><mi>log</mi></mrow><mi>b</mi>' +
       '</msub><mfrac><mi>S</mi><mi>T</mi></mfrac><mo>=</mo><msub><mrow>' +
@@ -99,9 +99,9 @@ sre.ClearspeakLogarithms.prototype.testLog004 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example Log005
+ * Testing ClearspeakEnglishLogarithms Example Log005
  */
-sre.ClearspeakLogarithms.prototype.testLog005 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testLog005 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><msub><mrow><mi>log</mi></mrow><mi>b</mi>' +
       '</msub><mrow><mo>(</mo><mrow><msup><mi>x</mi><mi>k</mi></msup>' +
@@ -114,9 +114,9 @@ sre.ClearspeakLogarithms.prototype.testLog005 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example Log006
+ * Testing ClearspeakEnglishLogarithms Example Log006
  */
-sre.ClearspeakLogarithms.prototype.testLog006 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testLog006 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><msup><mrow><mn>10</mn></mrow><mrow><msub>' +
       '<mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mi>x</mi>' +
@@ -127,9 +127,9 @@ sre.ClearspeakLogarithms.prototype.testLog006 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example Log007
+ * Testing ClearspeakEnglishLogarithms Example Log007
  */
-sre.ClearspeakLogarithms.prototype.testLog007 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testLog007 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10' +
       '</mn></mrow></msub><msup><mrow><mn>10</mn></mrow><mi>x</mi></msup>' +
@@ -140,9 +140,9 @@ sre.ClearspeakLogarithms.prototype.testLog007 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example Log008
+ * Testing ClearspeakEnglishLogarithms Example Log008
  */
-sre.ClearspeakLogarithms.prototype.testLog008 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testLog008 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><msup><mrow><mn>10</mn></mrow><mrow><msub>' +
       '<mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mn>5</mn>' +
@@ -153,9 +153,9 @@ sre.ClearspeakLogarithms.prototype.testLog008 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example Log009
+ * Testing ClearspeakEnglishLogarithms Example Log009
  */
-sre.ClearspeakLogarithms.prototype.testLog009 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testLog009 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10' +
       '</mn></mrow></msub><msup><mrow><mn>10</mn></mrow><mn>3</mn></msup>' +
@@ -166,9 +166,9 @@ sre.ClearspeakLogarithms.prototype.testLog009 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example Log010
+ * Testing ClearspeakEnglishLogarithms Example Log010
  */
-sre.ClearspeakLogarithms.prototype.testLog010 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testLog010 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><msub><mrow><mi>log</mi></mrow><mi>a</mi>' +
       '</msub><mi>x</mi><mo>=</mo><mfrac><mrow><msub><mrow><mi>log</mi>' +
@@ -181,9 +181,9 @@ sre.ClearspeakLogarithms.prototype.testLog010 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example Log011
+ * Testing ClearspeakEnglishLogarithms Example Log011
  */
-sre.ClearspeakLogarithms.prototype.testLog011 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testLog011 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><mfrac><mrow><msub><mrow><mi>log</mi></mrow>' +
       '<mrow><mn>10</mn></mrow></msub><mn>18</mn></mrow><mrow><msub><mrow>' +
@@ -197,9 +197,9 @@ sre.ClearspeakLogarithms.prototype.testLog011 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example Log012
+ * Testing ClearspeakEnglishLogarithms Example Log012
  */
-sre.ClearspeakLogarithms.prototype.testLog012 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testLog012 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>log</mi><mi>x</mi></mrow>' +
       '<mrow><mi>log</mi><mi>a</mi></mrow></mfrac></mrow></math>';
@@ -209,9 +209,9 @@ sre.ClearspeakLogarithms.prototype.testLog012 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example Log013
+ * Testing ClearspeakEnglishLogarithms Example Log013
  */
-sre.ClearspeakLogarithms.prototype.testLog013 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testLog013 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><mi>log</mi><mo stretchy="false">(</mo><mi>x' +
       '</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math>';
@@ -221,9 +221,9 @@ sre.ClearspeakLogarithms.prototype.testLog013 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example Log014
+ * Testing ClearspeakEnglishLogarithms Example Log014
  */
-sre.ClearspeakLogarithms.prototype.testLog014 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testLog014 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><mi>log</mi><msup><mrow><mo stretchy="false">(' +
       '</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo>' +
@@ -234,9 +234,9 @@ sre.ClearspeakLogarithms.prototype.testLog014 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example Log015
+ * Testing ClearspeakEnglishLogarithms Example Log015
  */
-sre.ClearspeakLogarithms.prototype.testLog015 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testLog015 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><mi>log</mi><mo stretchy="false">(</mo><mi>x' +
       '</mi><mi>y</mi><mo stretchy="false">)</mo></mrow></math>';
@@ -246,9 +246,9 @@ sre.ClearspeakLogarithms.prototype.testLog015 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example Log016
+ * Testing ClearspeakEnglishLogarithms Example Log016
  */
-sre.ClearspeakLogarithms.prototype.testLog016 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testLog016 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>log</mi><mrow><mo>(</mo><mrow>' +
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow>' +
@@ -262,9 +262,9 @@ sre.ClearspeakLogarithms.prototype.testLog016 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example Log017
+ * Testing ClearspeakEnglishLogarithms Example Log017
  */
-sre.ClearspeakLogarithms.prototype.testLog017 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testLog017 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><mfrac><mrow><msub><mrow><mi>log</mi></mrow>' +
       '<mn>6</mn></msub><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
@@ -279,9 +279,9 @@ sre.ClearspeakLogarithms.prototype.testLog017 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example Log018
+ * Testing ClearspeakEnglishLogarithms Example Log018
  */
-sre.ClearspeakLogarithms.prototype.testLog018 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testLog018 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>log</mi><mn>40</mn><mo>+</mo>' +
       '<mi>log</mi><mn>60</mn></mrow><mrow><mi>log</mi><mn>5</mn></mrow>' +
@@ -293,9 +293,9 @@ sre.ClearspeakLogarithms.prototype.testLog018 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example Log019
+ * Testing ClearspeakEnglishLogarithms Example Log019
  */
-sre.ClearspeakLogarithms.prototype.testLog019 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testLog019 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><mfrac><mrow><msub><mrow><mi>log</mi></mrow>' +
       '<mn>3</mn></msub><mn>40</mn><mo>+</mo><msub><mrow><mi>log</mi>' +
@@ -308,9 +308,9 @@ sre.ClearspeakLogarithms.prototype.testLog019 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example Log020
+ * Testing ClearspeakEnglishLogarithms Example Log020
  */
-sre.ClearspeakLogarithms.prototype.testLog020 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testLog020 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><mi>log</mi><mo stretchy="false">(</mo><msup>' +
       '<mn>3</mn><mn>4</mn></msup><msup><mrow><mn>12</mn></mrow><mn>9</mn>' +
@@ -323,9 +323,9 @@ sre.ClearspeakLogarithms.prototype.testLog020 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example Log021
+ * Testing ClearspeakEnglishLogarithms Example Log021
  */
-sre.ClearspeakLogarithms.prototype.testLog021 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testLog021 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mfrac><mi>x' +
       '</mi><mi>y</mi></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
@@ -335,10 +335,10 @@ sre.ClearspeakLogarithms.prototype.testLog021 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example Log022
+ * Testing ClearspeakEnglishLogarithms Example Log022
  */
 // TODO: Fix the vulgar fraction predicate!
-sre.ClearspeakLogarithms.prototype.testLog022 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testLog022 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mfrac><mrow>' +
       '<msup><mn>3</mn><mn>4</mn></msup></mrow><mrow><msup><mn>8</mn><mrow>' +
@@ -353,9 +353,9 @@ sre.ClearspeakLogarithms.prototype.testLog022 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example Log023
+ * Testing ClearspeakEnglishLogarithms Example Log023
  */
-sre.ClearspeakLogarithms.prototype.testLog023 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testLog023 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><msup><mrow><mn>10</mn></mrow><mrow><mi>log' +
       '</mi><mi>x</mi></mrow></msup></mrow></math>';
@@ -365,9 +365,9 @@ sre.ClearspeakLogarithms.prototype.testLog023 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example NatLog001
+ * Testing ClearspeakEnglishLogarithms Example NatLog001
  */
-sre.ClearspeakLogarithms.prototype.testNatLog001 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testNatLog001 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><mi>ln</mi><mi>x</mi></mrow></math>';
   var speech = 'l n x';
@@ -376,9 +376,9 @@ sre.ClearspeakLogarithms.prototype.testNatLog001 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example NatLog002
+ * Testing ClearspeakEnglishLogarithms Example NatLog002
  */
-sre.ClearspeakLogarithms.prototype.testNatLog002 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testNatLog002 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><mi>ln</mi><mi>x</mi><mo>−</mo><mi>ln</mi><mo' +
       ' stretchy="false">(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo' +
@@ -393,9 +393,9 @@ sre.ClearspeakLogarithms.prototype.testNatLog002 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example NatLog003
+ * Testing ClearspeakEnglishLogarithms Example NatLog003
  */
-sre.ClearspeakLogarithms.prototype.testNatLog003 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testNatLog003 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><mi>ln</mi><mrow><mo>(</mo><mrow><msup><mi>e' +
       '</mi><mi>x</mi></msup></mrow><mo>)</mo></mrow><mo>=</mo><mi>x</mi>' +
@@ -406,9 +406,9 @@ sre.ClearspeakLogarithms.prototype.testNatLog003 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example NatLog004
+ * Testing ClearspeakEnglishLogarithms Example NatLog004
  */
-sre.ClearspeakLogarithms.prototype.testNatLog004 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testNatLog004 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><msup><mi>e</mi><mrow><mi>ln</mi><mi>x</mi>' +
       '</mrow></msup><mo>=</mo><mi>x</mi></mrow></math>';
@@ -418,9 +418,9 @@ sre.ClearspeakLogarithms.prototype.testNatLog004 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example NatLog005
+ * Testing ClearspeakEnglishLogarithms Example NatLog005
  */
-sre.ClearspeakLogarithms.prototype.testNatLog005 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testNatLog005 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><mi>ln</mi><mrow><mo>(</mo><mrow><msup><mi>e' +
       '</mi><mi>x</mi></msup></mrow><mo>)</mo></mrow><mo>=</mo><mi>x</mi>' +
@@ -431,9 +431,9 @@ sre.ClearspeakLogarithms.prototype.testNatLog005 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example NatLog006
+ * Testing ClearspeakEnglishLogarithms Example NatLog006
  */
-sre.ClearspeakLogarithms.prototype.testNatLog006 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testNatLog006 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><msup><mi>e</mi><mrow><mi>ln</mi><mn>4</mn>' +
       '</mrow></msup><mo>=</mo><mn>4</mn></mrow></math>';
@@ -443,9 +443,9 @@ sre.ClearspeakLogarithms.prototype.testNatLog006 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example NatLog007
+ * Testing ClearspeakEnglishLogarithms Example NatLog007
  */
-sre.ClearspeakLogarithms.prototype.testNatLog007 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testNatLog007 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>ln</mi><mn>40</mn></mrow>' +
       '<mrow><mi>ln</mi><mn>5</mn></mrow></mfrac><mo>=</mo><msub><mrow>' +
@@ -456,9 +456,9 @@ sre.ClearspeakLogarithms.prototype.testNatLog007 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example NatLog008
+ * Testing ClearspeakEnglishLogarithms Example NatLog008
  */
-sre.ClearspeakLogarithms.prototype.testNatLog008 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testNatLog008 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>ln</mi><mn>40</mn><mo>+</mo>' +
       '<mi>ln</mi><mn>60</mn></mrow><mrow><mi>ln</mi><mn>5</mn></mrow>' +
@@ -470,9 +470,9 @@ sre.ClearspeakLogarithms.prototype.testNatLog008 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example NatLog009
+ * Testing ClearspeakEnglishLogarithms Example NatLog009
  */
-sre.ClearspeakLogarithms.prototype.testNatLog009 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testNatLog009 = function() {
   var preference = 'Log_LnAsNaturalLog';
   var mathml = '<math><mrow><mi>ln</mi><mi>x</mi></mrow></math>';
   var speech = 'natural log x';
@@ -481,9 +481,9 @@ sre.ClearspeakLogarithms.prototype.testNatLog009 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example NatLog010
+ * Testing ClearspeakEnglishLogarithms Example NatLog010
  */
-sre.ClearspeakLogarithms.prototype.testNatLog010 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testNatLog010 = function() {
   var preference = 'Log_LnAsNaturalLog';
   var mathml = '<math><mrow><mi>ln</mi><mi>x</mi><mo>−</mo><mi>ln</mi><mo' +
       ' stretchy="false">(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo' +
@@ -498,9 +498,9 @@ sre.ClearspeakLogarithms.prototype.testNatLog010 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example NatLog011
+ * Testing ClearspeakEnglishLogarithms Example NatLog011
  */
-sre.ClearspeakLogarithms.prototype.testNatLog011 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testNatLog011 = function() {
   var preference = 'Log_LnAsNaturalLog';
   var mathml = '<math><mrow><mi>ln</mi><mrow><mo>(</mo><mrow><msup><mi>e' +
       '</mi><mi>x</mi></msup></mrow><mo>)</mo></mrow><mo>=</mo><mi>x</mi>' +
@@ -512,9 +512,9 @@ sre.ClearspeakLogarithms.prototype.testNatLog011 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example NatLog012
+ * Testing ClearspeakEnglishLogarithms Example NatLog012
  */
-sre.ClearspeakLogarithms.prototype.testNatLog012 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testNatLog012 = function() {
   var preference = 'Log_LnAsNaturalLog';
   var mathml = '<math><mrow><msup><mi>e</mi><mrow><mi>ln</mi><mi>x</mi>' +
       '</mrow></msup><mo>=</mo><mi>x</mi></mrow></math>';
@@ -524,9 +524,9 @@ sre.ClearspeakLogarithms.prototype.testNatLog012 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example NatLog013
+ * Testing ClearspeakEnglishLogarithms Example NatLog013
  */
-sre.ClearspeakLogarithms.prototype.testNatLog013 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testNatLog013 = function() {
   var preference = 'Log_LnAsNaturalLog';
   var mathml = '<math><mrow><mi>ln</mi><mrow><mo>(</mo><mrow><msup><mi>e' +
       '</mi><mi>x</mi></msup></mrow><mo>)</mo></mrow><mo>=</mo><mi>x</mi>' +
@@ -538,9 +538,9 @@ sre.ClearspeakLogarithms.prototype.testNatLog013 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example NatLog014
+ * Testing ClearspeakEnglishLogarithms Example NatLog014
  */
-sre.ClearspeakLogarithms.prototype.testNatLog014 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testNatLog014 = function() {
   var preference = 'Log_LnAsNaturalLog';
   var mathml = '<math><mrow><msup><mi>e</mi><mrow><mi>ln</mi><mn>4</mn>' +
       '</mrow></msup><mo>=</mo><mn>4</mn></mrow></math>';
@@ -550,9 +550,9 @@ sre.ClearspeakLogarithms.prototype.testNatLog014 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example NatLog015
+ * Testing ClearspeakEnglishLogarithms Example NatLog015
  */
-sre.ClearspeakLogarithms.prototype.testNatLog015 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testNatLog015 = function() {
   var preference = 'Log_LnAsNaturalLog';
   var mathml = '<math><mrow><mfrac><mrow><mi>ln</mi><mn>40</mn></mrow>' +
       '<mrow><mi>ln</mi><mn>5</mn></mrow></mfrac><mo>=</mo><msub><mrow>' +
@@ -564,9 +564,9 @@ sre.ClearspeakLogarithms.prototype.testNatLog015 = function() {
 
 
 /**
- * Testing ClearspeakLogarithms Example NatLog016
+ * Testing ClearspeakEnglishLogarithms Example NatLog016
  */
-sre.ClearspeakLogarithms.prototype.testNatLog016 = function() {
+sre.ClearspeakEnglishLogarithms.prototype.testNatLog016 = function() {
   var preference = 'Log_LnAsNaturalLog';
   var mathml = '<math><mrow><mfrac><mrow><mi>ln</mi><mn>40</mn><mo>+</mo>' +
       '<mi>ln</mi><mn>60</mn></mrow><mrow><mi>ln</mi><mn>5</mn></mrow>' +

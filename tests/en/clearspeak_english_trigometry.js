@@ -17,26 +17,26 @@
 //
 
 
-goog.provide('sre.ClearspeakTrigometry');
+goog.provide('sre.ClearspeakEnglishTrigometry');
 
-goog.require('sre.ClearspeakRuleTest');
+goog.require('sre.ClearspeakEnglishRuleTest');
 
 
 
 /**
 * @constructor
-* @extends {sre.ClearspeakRuleTest}
+* @extends {sre.ClearspeakEnglishRuleTest}
 */
-sre.ClearspeakTrigometry = function() {
-  sre.ClearspeakTrigometry.base(this, 'constructor');
+sre.ClearspeakEnglishTrigometry = function() {
+  sre.ClearspeakEnglishTrigometry.base(this, 'constructor');
 
   /**
 * @override
   */
-  this.information = 'ClearspeakTrigometry rule tests.';
+  this.information = 'ClearspeakEnglishTrigometry rule tests.';
 
 };
-goog.inherits(sre.ClearspeakTrigometry, sre.ClearspeakRuleTest);
+goog.inherits(sre.ClearspeakEnglishTrigometry, sre.ClearspeakEnglishRuleTest);
 
 
 
@@ -51,9 +51,9 @@ goog.inherits(sre.ClearspeakTrigometry, sre.ClearspeakRuleTest);
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig001
+ * Testing ClearspeakEnglishTrigometry Example Trig001
  */
-sre.ClearspeakTrigometry.prototype.testTrig001 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig001 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sin</mi><mi>x</mi></mrow></math>';
   var speech = 'sine x';
@@ -62,9 +62,9 @@ sre.ClearspeakTrigometry.prototype.testTrig001 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig002
+ * Testing ClearspeakEnglishTrigometry Example Trig002
  */
-sre.ClearspeakTrigometry.prototype.testTrig002 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig002 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>cos</mi><mi>x</mi></mrow></math>';
   var speech = 'cosine x';
@@ -73,9 +73,9 @@ sre.ClearspeakTrigometry.prototype.testTrig002 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig003
+ * Testing ClearspeakEnglishTrigometry Example Trig003
  */
-sre.ClearspeakTrigometry.prototype.testTrig003 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig003 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>tan</mi><mi>θ</mi></mrow></math>';
   var speech = 'tangent theta';
@@ -84,9 +84,9 @@ sre.ClearspeakTrigometry.prototype.testTrig003 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig004
+ * Testing ClearspeakEnglishTrigometry Example Trig004
  */
-sre.ClearspeakTrigometry.prototype.testTrig004 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig004 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sec</mi><mi>θ</mi></mrow></math>';
   var speech = 'secant theta';
@@ -95,9 +95,9 @@ sre.ClearspeakTrigometry.prototype.testTrig004 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig005
+ * Testing ClearspeakEnglishTrigometry Example Trig005
  */
-sre.ClearspeakTrigometry.prototype.testTrig005 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig005 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>csc</mi><mi>x</mi></mrow></math>';
   var speech = 'cosecant x';
@@ -106,9 +106,9 @@ sre.ClearspeakTrigometry.prototype.testTrig005 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig006
+ * Testing ClearspeakEnglishTrigometry Example Trig006
  */
-sre.ClearspeakTrigometry.prototype.testTrig006 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig006 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>cot</mi><mi>x</mi></mrow></math>';
   var speech = 'cotangent x';
@@ -117,9 +117,9 @@ sre.ClearspeakTrigometry.prototype.testTrig006 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig007
+ * Testing ClearspeakEnglishTrigometry Example Trig007
  */
-sre.ClearspeakTrigometry.prototype.testTrig007 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig007 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mn>2</mn>' +
       '</msup><mi>x</mi></mrow></math>';
@@ -129,9 +129,9 @@ sre.ClearspeakTrigometry.prototype.testTrig007 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig008
+ * Testing ClearspeakEnglishTrigometry Example Trig008
  */
-sre.ClearspeakTrigometry.prototype.testTrig008 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig008 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mn>3</mn>' +
       '</msup><mi>x</mi></mrow></math>';
@@ -141,9 +141,9 @@ sre.ClearspeakTrigometry.prototype.testTrig008 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig009
+ * Testing ClearspeakEnglishTrigometry Example Trig009
  */
-sre.ClearspeakTrigometry.prototype.testTrig009 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig009 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mn>2</mn>' +
       '</msup><mi>x</mi></mrow></math>';
@@ -153,9 +153,9 @@ sre.ClearspeakTrigometry.prototype.testTrig009 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig010
+ * Testing ClearspeakEnglishTrigometry Example Trig010
  */
-sre.ClearspeakTrigometry.prototype.testTrig010 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig010 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sec</mi></mrow><mn>3</mn>' +
       '</msup><mi>x</mi></mrow></math>';
@@ -165,9 +165,9 @@ sre.ClearspeakTrigometry.prototype.testTrig010 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig011
+ * Testing ClearspeakEnglishTrigometry Example Trig011
  */
-sre.ClearspeakTrigometry.prototype.testTrig011 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig011 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>csc</mi></mrow><mn>2</mn>' +
       '</msup><mi>x</mi></mrow></math>';
@@ -177,9 +177,9 @@ sre.ClearspeakTrigometry.prototype.testTrig011 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig012
+ * Testing ClearspeakEnglishTrigometry Example Trig012
  */
-sre.ClearspeakTrigometry.prototype.testTrig012 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig012 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mn>2</mn>' +
       '</msup><mi>x</mi></mrow></math>';
@@ -189,9 +189,9 @@ sre.ClearspeakTrigometry.prototype.testTrig012 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig013
+ * Testing ClearspeakEnglishTrigometry Example Trig013
  */
-sre.ClearspeakTrigometry.prototype.testTrig013 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig013 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sin</mi><mn>2</mn><mi>π</mi></mrow></math>';
   var speech = 'sine 2 pi';
@@ -200,9 +200,9 @@ sre.ClearspeakTrigometry.prototype.testTrig013 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig014
+ * Testing ClearspeakEnglishTrigometry Example Trig014
  */
-sre.ClearspeakTrigometry.prototype.testTrig014 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig014 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mi>π</mi>' +
       '<mi>k</mi><mo>+</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mo>)' +
@@ -213,9 +213,9 @@ sre.ClearspeakTrigometry.prototype.testTrig014 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig015
+ * Testing ClearspeakEnglishTrigometry Example Trig015
  */
-sre.ClearspeakTrigometry.prototype.testTrig015 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig015 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>cos</mi><mfrac><mi>π</mi><mn>2</mn></mfrac>' +
       '</mrow></math>';
@@ -225,9 +225,9 @@ sre.ClearspeakTrigometry.prototype.testTrig015 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig016
+ * Testing ClearspeakEnglishTrigometry Example Trig016
  */
-sre.ClearspeakTrigometry.prototype.testTrig016 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig016 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sin</mi><mfrac><mi>π</mi><mn>2</mn></mfrac>' +
       '</mrow></math>';
@@ -237,9 +237,9 @@ sre.ClearspeakTrigometry.prototype.testTrig016 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig017
+ * Testing ClearspeakEnglishTrigometry Example Trig017
  */
-sre.ClearspeakTrigometry.prototype.testTrig017 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig017 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>sin</mi><mi>π</mi></mrow><mn>2' +
       '</mn></mfrac></mrow></math>';
@@ -249,9 +249,9 @@ sre.ClearspeakTrigometry.prototype.testTrig017 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig018
+ * Testing ClearspeakEnglishTrigometry Example Trig018
  */
-sre.ClearspeakTrigometry.prototype.testTrig018 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig018 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mfrac><mn>2</mn><mrow><mi>sin</mi><mi>π</mi>' +
       '</mrow></mfrac></mrow></math>';
@@ -261,9 +261,9 @@ sre.ClearspeakTrigometry.prototype.testTrig018 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig019
+ * Testing ClearspeakEnglishTrigometry Example Trig019
  */
-sre.ClearspeakTrigometry.prototype.testTrig019 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig019 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>sin</mi><mfrac><mi>π</mi><mn>2' +
       '</mn></mfrac></mrow><mn>3</mn></mfrac></mrow></math>';
@@ -274,9 +274,9 @@ sre.ClearspeakTrigometry.prototype.testTrig019 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig020
+ * Testing ClearspeakEnglishTrigometry Example Trig020
  */
-sre.ClearspeakTrigometry.prototype.testTrig020 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig020 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>tan</mi><mrow><mo>(</mo><mrow><mo>−</mo>' +
       '<mi>π</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -286,9 +286,9 @@ sre.ClearspeakTrigometry.prototype.testTrig020 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig021
+ * Testing ClearspeakEnglishTrigometry Example Trig021
  */
-sre.ClearspeakTrigometry.prototype.testTrig021 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig021 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>+</mo><mi>π</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -298,9 +298,9 @@ sre.ClearspeakTrigometry.prototype.testTrig021 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig022
+ * Testing ClearspeakEnglishTrigometry Example Trig022
  */
-sre.ClearspeakTrigometry.prototype.testTrig022 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig022 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>+</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mo>)</mo>' +
@@ -311,9 +311,9 @@ sre.ClearspeakTrigometry.prototype.testTrig022 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig023
+ * Testing ClearspeakEnglishTrigometry Example Trig023
  */
-sre.ClearspeakTrigometry.prototype.testTrig023 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig023 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><mfrac><mi>π' +
       '</mi><mn>2</mn></mfrac><mo>+</mo><mi>x</mi></mrow><mo>)</mo></mrow>' +
@@ -324,9 +324,9 @@ sre.ClearspeakTrigometry.prototype.testTrig023 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig024
+ * Testing ClearspeakEnglishTrigometry Example Trig024
  */
-sre.ClearspeakTrigometry.prototype.testTrig024 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig024 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mn>2</mn>' +
       '</msup><mi>x</mi><mo>+</mo><msup><mrow><mi>cos</mi></mrow><mn>2</mn>' +
@@ -337,9 +337,9 @@ sre.ClearspeakTrigometry.prototype.testTrig024 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig025
+ * Testing ClearspeakEnglishTrigometry Example Trig025
  */
-sre.ClearspeakTrigometry.prototype.testTrig025 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig025 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mn>4</mn>' +
       '</msup><mi>x</mi></mrow></math>';
@@ -349,9 +349,9 @@ sre.ClearspeakTrigometry.prototype.testTrig025 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig026
+ * Testing ClearspeakEnglishTrigometry Example Trig026
  */
-sre.ClearspeakTrigometry.prototype.testTrig026 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig026 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mn>5</mn>' +
       '</msup><mi>x</mi></mrow></math>';
@@ -361,9 +361,9 @@ sre.ClearspeakTrigometry.prototype.testTrig026 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig027
+ * Testing ClearspeakEnglishTrigometry Example Trig027
  */
-sre.ClearspeakTrigometry.prototype.testTrig027 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig027 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mi>n</mi>' +
       '</msup><mi>x</mi></mrow></math>';
@@ -373,9 +373,9 @@ sre.ClearspeakTrigometry.prototype.testTrig027 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig028
+ * Testing ClearspeakEnglishTrigometry Example Trig028
  */
-sre.ClearspeakTrigometry.prototype.testTrig028 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig028 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>sin</mi><mi>x</mi></mrow>' +
       '<mrow><mi>cos</mi><mi>x</mi></mrow></mfrac></mrow></math>';
@@ -385,9 +385,9 @@ sre.ClearspeakTrigometry.prototype.testTrig028 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig029
+ * Testing ClearspeakEnglishTrigometry Example Trig029
  */
-sre.ClearspeakTrigometry.prototype.testTrig029 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig029 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>tan</mi><mn>35</mn><mo>°</mo></mrow></math>';
   var speech = 'tangent 35 degrees';
@@ -397,9 +397,9 @@ sre.ClearspeakTrigometry.prototype.testTrig029 = function() {
 
 // TODO: (Simons) Handles degrees as a postfix function.
 /**
- * Testing ClearspeakTrigometry Example Trig030
+ * Testing ClearspeakEnglishTrigometry Example Trig030
  */
-sre.ClearspeakTrigometry.prototype.untestTrig030 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.untestTrig030 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mn>45</mn>' +
       '<mo>°</mo><mo>+</mo><mn>30</mn><mo>°</mo></mrow><mo>)</mo></mrow>' +
@@ -411,9 +411,9 @@ sre.ClearspeakTrigometry.prototype.untestTrig030 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig031
+ * Testing ClearspeakEnglishTrigometry Example Trig031
  */
-sre.ClearspeakTrigometry.prototype.testTrig031 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig031 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>tan</mi><mrow><mo>(</mo><mrow><mo>∠</mo>' +
       '<mi>D</mi><mi>E</mi><mi>F</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -423,9 +423,9 @@ sre.ClearspeakTrigometry.prototype.testTrig031 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig032
+ * Testing ClearspeakEnglishTrigometry Example Trig032
  */
-sre.ClearspeakTrigometry.prototype.testTrig032 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig032 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>tan</mi><mrow><mo>(</mo><mrow><mo>∠</mo>' +
       '<mi>D</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -435,9 +435,9 @@ sre.ClearspeakTrigometry.prototype.testTrig032 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig033
+ * Testing ClearspeakEnglishTrigometry Example Trig033
  */
-sre.ClearspeakTrigometry.prototype.testTrig033 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig033 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sin</mi><mo stretchy="false">(</mo><mi>x' +
       '</mi><mo>+</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo>' +
@@ -450,9 +450,9 @@ sre.ClearspeakTrigometry.prototype.testTrig033 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig034
+ * Testing ClearspeakEnglishTrigometry Example Trig034
  */
-sre.ClearspeakTrigometry.prototype.testTrig034 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig034 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>cos</mi><mo stretchy="false">(</mo><mi>x' +
       '</mi><mo>+</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo>' +
@@ -465,9 +465,9 @@ sre.ClearspeakTrigometry.prototype.testTrig034 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig035
+ * Testing ClearspeakEnglishTrigometry Example Trig035
  */
-sre.ClearspeakTrigometry.prototype.testTrig035 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig035 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>tan</mi><mo stretchy="false">(</mo><mi>x' +
       '</mi><mo>+</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo>' +
@@ -483,9 +483,9 @@ sre.ClearspeakTrigometry.prototype.testTrig035 = function() {
 
 // TODO: (Simons) Handle degrees as a postfix function.
 /**
- * Testing ClearspeakTrigometry Example Trig036
+ * Testing ClearspeakEnglishTrigometry Example Trig036
  */
-sre.ClearspeakTrigometry.prototype.untestTrig036 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.untestTrig036 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sin</mi><mn>30</mn><mo>°</mo><mi>cos</mi>' +
       '<mn>15</mn><mo>°</mo><mo>+</mo><mi>cos</mi><mn>30</mn><mo>°</mo>' +
@@ -497,9 +497,9 @@ sre.ClearspeakTrigometry.prototype.untestTrig036 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig037
+ * Testing ClearspeakEnglishTrigometry Example Trig037
  */
-sre.ClearspeakTrigometry.prototype.testTrig037 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig037 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>tan</mi><mrow><mo>(</mo><mrow><mfrac><mi>π' +
       '</mi><mn>6</mn></mfrac><mo>+</mo><mfrac><mrow><mn>2</mn><mi>π</mi>' +
@@ -518,9 +518,9 @@ sre.ClearspeakTrigometry.prototype.testTrig037 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig038
+ * Testing ClearspeakEnglishTrigometry Example Trig038
  */
-sre.ClearspeakTrigometry.prototype.testTrig038 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig038 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>tan</mi><mn>2</mn><mi>x</mi><mo>=</mo>' +
       '<mfrac><mrow><mn>2</mn><mi>tan</mi><mi>x</mi></mrow><mrow><mn>1</mn>' +
@@ -533,9 +533,9 @@ sre.ClearspeakTrigometry.prototype.testTrig038 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig039
+ * Testing ClearspeakEnglishTrigometry Example Trig039
  */
-sre.ClearspeakTrigometry.prototype.testTrig039 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig039 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>cos</mi><mn>2</mn><mi>x</mi><mo>=</mo><mn>2' +
       '</mn><msup><mrow><mi>cos</mi></mrow><mn>2</mn></msup><mi>x</mi><mo>−' +
@@ -546,9 +546,9 @@ sre.ClearspeakTrigometry.prototype.testTrig039 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig040
+ * Testing ClearspeakEnglishTrigometry Example Trig040
  */
-sre.ClearspeakTrigometry.prototype.testTrig040 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig040 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sin</mi><mfrac><mi>x</mi><mn>2</mn></mfrac>' +
       '<mo>=</mo><mo>±</mo><msqrt><mrow><mfrac><mrow><mn>1</mn><mo>−</mo>' +
@@ -561,9 +561,9 @@ sre.ClearspeakTrigometry.prototype.testTrig040 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig041
+ * Testing ClearspeakEnglishTrigometry Example Trig041
  */
-sre.ClearspeakTrigometry.prototype.testTrig041 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig041 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>tan</mi><mfrac><mi>x</mi><mn>2</mn></mfrac>' +
       '<mo>=</mo><mo>±</mo><msqrt><mrow><mfrac><mrow><mn>1</mn><mo>−</mo>' +
@@ -577,9 +577,9 @@ sre.ClearspeakTrigometry.prototype.testTrig041 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig042
+ * Testing ClearspeakEnglishTrigometry Example Trig042
  */
-sre.ClearspeakTrigometry.prototype.testTrig042 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig042 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>cos</mi><mi>x</mi><mi>cos</mi><mi>y</mi>' +
       '<mo>=</mo><mn>2</mn><mi>cos</mi><mfrac><mrow><mi>x</mi><mo>+</mo>' +
@@ -593,9 +593,9 @@ sre.ClearspeakTrigometry.prototype.testTrig042 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig043
+ * Testing ClearspeakEnglishTrigometry Example Trig043
  */
-sre.ClearspeakTrigometry.prototype.testTrig043 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig043 = function() {
   var preference = 'Trig_Auto:Roots_RootEnd';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo>' +
       '<mfrac><mi>π</mi><mn>8</mn></mfrac></mrow><mo>)</mo></mrow><mo>=' +
@@ -609,9 +609,9 @@ sre.ClearspeakTrigometry.prototype.testTrig043 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig044
+ * Testing ClearspeakEnglishTrigometry Example Trig044
  */
-sre.ClearspeakTrigometry.prototype.testTrig044 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig044 = function() {
   var preference = 'Trig_Auto:Roots_RootEnd';
   var mathml = '<math><mrow><mi>tan</mi><mfrac><mrow><mn>3</mn><mi>π</mi>' +
       '</mrow><mn>8</mn></mfrac><mo>=</mo><mfrac><mrow><msqrt><mrow><msqrt>' +
@@ -627,9 +627,9 @@ sre.ClearspeakTrigometry.prototype.testTrig044 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example Trig045
+ * Testing ClearspeakEnglishTrigometry Example Trig045
  */
-sre.ClearspeakTrigometry.prototype.testTrig045 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrig045 = function() {
   var preference = 'Trig_Auto:Roots_RootEnd';
   var mathml = '<math><mrow><mi>tan</mi><mfrac><mi>π</mi><mrow><mn>12</mn>' +
       '</mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msqrt>' +
@@ -647,9 +647,9 @@ sre.ClearspeakTrigometry.prototype.testTrig045 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInvAuto001
+ * Testing ClearspeakEnglishTrigometry Example TrigInvAuto001
  */
-sre.ClearspeakTrigometry.prototype.testTrigInvAuto001 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInvAuto001 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
@@ -659,9 +659,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto001 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInvAuto002
+ * Testing ClearspeakEnglishTrigometry Example TrigInvAuto002
  */
-sre.ClearspeakTrigometry.prototype.testTrigInvAuto002 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInvAuto002 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
@@ -671,9 +671,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto002 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInvAuto003
+ * Testing ClearspeakEnglishTrigometry Example TrigInvAuto003
  */
-sre.ClearspeakTrigometry.prototype.testTrigInvAuto003 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInvAuto003 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
@@ -683,9 +683,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto003 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInvAuto004
+ * Testing ClearspeakEnglishTrigometry Example TrigInvAuto004
  */
-sre.ClearspeakTrigometry.prototype.testTrigInvAuto004 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInvAuto004 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
@@ -695,9 +695,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto004 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInvAuto005
+ * Testing ClearspeakEnglishTrigometry Example TrigInvAuto005
  */
-sre.ClearspeakTrigometry.prototype.testTrigInvAuto005 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInvAuto005 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
@@ -707,9 +707,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto005 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInvAuto006
+ * Testing ClearspeakEnglishTrigometry Example TrigInvAuto006
  */
-sre.ClearspeakTrigometry.prototype.testTrigInvAuto006 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInvAuto006 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
@@ -719,9 +719,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto006 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInvAuto007
+ * Testing ClearspeakEnglishTrigometry Example TrigInvAuto007
  */
-sre.ClearspeakTrigometry.prototype.testTrigInvAuto007 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInvAuto007 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mfrac><mrow><msqrt><mn>2</mn></msqrt>' +
@@ -733,9 +733,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto007 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInvAuto008
+ * Testing ClearspeakEnglishTrigometry Example TrigInvAuto008
  */
-sre.ClearspeakTrigometry.prototype.testTrigInvAuto008 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInvAuto008 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>' +
@@ -746,9 +746,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto008 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInvAuto009
+ * Testing ClearspeakEnglishTrigometry Example TrigInvAuto009
  */
-sre.ClearspeakTrigometry.prototype.testTrigInvAuto009 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInvAuto009 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mn>17</mn></mrow></math>';
@@ -758,9 +758,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto009 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInvAuto010
+ * Testing ClearspeakEnglishTrigometry Example TrigInvAuto010
  */
-sre.ClearspeakTrigometry.prototype.testTrigInvAuto010 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInvAuto010 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mn>32</mn></mrow></math>';
@@ -770,9 +770,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto010 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInvAuto011
+ * Testing ClearspeakEnglishTrigometry Example TrigInvAuto011
  */
-sre.ClearspeakTrigometry.prototype.testTrigInvAuto011 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInvAuto011 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mn>100</mn></mrow></math>';
@@ -782,9 +782,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto011 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInvAuto012
+ * Testing ClearspeakEnglishTrigometry Example TrigInvAuto012
  */
-sre.ClearspeakTrigometry.prototype.testTrigInvAuto012 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInvAuto012 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mn>85</mn></mrow></math>';
@@ -794,9 +794,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto012 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInvAuto013
+ * Testing ClearspeakEnglishTrigometry Example TrigInvAuto013
  */
-sre.ClearspeakTrigometry.prototype.testTrigInvAuto013 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInvAuto013 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
@@ -807,9 +807,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto013 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInvAuto014
+ * Testing ClearspeakEnglishTrigometry Example TrigInvAuto014
  */
-sre.ClearspeakTrigometry.prototype.testTrigInvAuto014 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInvAuto014 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
@@ -820,9 +820,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto014 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInvAuto015
+ * Testing ClearspeakEnglishTrigometry Example TrigInvAuto015
  */
-sre.ClearspeakTrigometry.prototype.testTrigInvAuto015 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInvAuto015 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
@@ -834,9 +834,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto015 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInvAuto016
+ * Testing ClearspeakEnglishTrigometry Example TrigInvAuto016
  */
-sre.ClearspeakTrigometry.prototype.testTrigInvAuto016 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInvAuto016 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
@@ -848,9 +848,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto016 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInvAuto017
+ * Testing ClearspeakEnglishTrigometry Example TrigInvAuto017
  */
-sre.ClearspeakTrigometry.prototype.testTrigInvAuto017 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInvAuto017 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sin</mi><mn>0</mn>' +
@@ -861,9 +861,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto017 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInvAuto018
+ * Testing ClearspeakEnglishTrigometry Example TrigInvAuto018
  */
-sre.ClearspeakTrigometry.prototype.testTrigInvAuto018 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInvAuto018 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>csc</mi><mi>x</mi>' +
@@ -874,9 +874,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto018 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInvAuto019
+ * Testing ClearspeakEnglishTrigometry Example TrigInvAuto019
  */
-sre.ClearspeakTrigometry.prototype.testTrigInvAuto019 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInvAuto019 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><msup><mrow>' +
       '<mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow>' +
@@ -891,9 +891,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto019 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInvAuto020
+ * Testing ClearspeakEnglishTrigometry Example TrigInvAuto020
  */
-sre.ClearspeakTrigometry.prototype.testTrigInvAuto020 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInvAuto020 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><mo>−</mo>' +
       '<msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow>' +
@@ -908,9 +908,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto020 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInvAuto021
+ * Testing ClearspeakEnglishTrigometry Example TrigInvAuto021
  */
-sre.ClearspeakTrigometry.prototype.testTrigInvAuto021 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInvAuto021 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>cos</mi><mfrac>' +
@@ -922,9 +922,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto021 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInvAuto022
+ * Testing ClearspeakEnglishTrigometry Example TrigInvAuto022
  */
-sre.ClearspeakTrigometry.prototype.testTrigInvAuto022 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInvAuto022 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow>' +
       '<mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac>' +
@@ -935,9 +935,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto022 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInvAuto023
+ * Testing ClearspeakEnglishTrigometry Example TrigInvAuto023
  */
-sre.ClearspeakTrigometry.prototype.testTrigInvAuto023 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInvAuto023 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow>' +
       '<mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>1' +
@@ -948,9 +948,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto023 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInvAuto024
+ * Testing ClearspeakEnglishTrigometry Example TrigInvAuto024
  */
-sre.ClearspeakTrigometry.prototype.testTrigInvAuto024 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInvAuto024 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo>' +
       '<msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow>' +
@@ -962,9 +962,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto024 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInvAuto025
+ * Testing ClearspeakEnglishTrigometry Example TrigInvAuto025
  */
-sre.ClearspeakTrigometry.prototype.testTrigInvAuto025 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInvAuto025 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo>' +
       '<msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow>' +
@@ -977,9 +977,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto025 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInvAuto026
+ * Testing ClearspeakEnglishTrigometry Example TrigInvAuto026
  */
-sre.ClearspeakTrigometry.prototype.testTrigInvAuto026 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInvAuto026 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sec</mi><mi>x</mi>' +
@@ -990,9 +990,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto026 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInverse001
+ * Testing ClearspeakEnglishTrigometry Example TrigInverse001
  */
-sre.ClearspeakTrigometry.prototype.testTrigInverse001 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInverse001 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
@@ -1002,9 +1002,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse001 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInverse002
+ * Testing ClearspeakEnglishTrigometry Example TrigInverse002
  */
-sre.ClearspeakTrigometry.prototype.testTrigInverse002 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInverse002 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
@@ -1014,9 +1014,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse002 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInverse003
+ * Testing ClearspeakEnglishTrigometry Example TrigInverse003
  */
-sre.ClearspeakTrigometry.prototype.testTrigInverse003 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInverse003 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
@@ -1026,9 +1026,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse003 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInverse004
+ * Testing ClearspeakEnglishTrigometry Example TrigInverse004
  */
-sre.ClearspeakTrigometry.prototype.testTrigInverse004 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInverse004 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
@@ -1038,9 +1038,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse004 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInverse005
+ * Testing ClearspeakEnglishTrigometry Example TrigInverse005
  */
-sre.ClearspeakTrigometry.prototype.testTrigInverse005 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInverse005 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
@@ -1050,9 +1050,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse005 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInverse006
+ * Testing ClearspeakEnglishTrigometry Example TrigInverse006
  */
-sre.ClearspeakTrigometry.prototype.testTrigInverse006 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInverse006 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
@@ -1062,9 +1062,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse006 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInverse007
+ * Testing ClearspeakEnglishTrigometry Example TrigInverse007
  */
-sre.ClearspeakTrigometry.prototype.testTrigInverse007 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInverse007 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mfrac><mrow><msqrt><mn>2</mn></msqrt>' +
@@ -1076,9 +1076,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse007 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInverse008
+ * Testing ClearspeakEnglishTrigometry Example TrigInverse008
  */
-sre.ClearspeakTrigometry.prototype.testTrigInverse008 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInverse008 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>' +
@@ -1089,9 +1089,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse008 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInverse009
+ * Testing ClearspeakEnglishTrigometry Example TrigInverse009
  */
-sre.ClearspeakTrigometry.prototype.testTrigInverse009 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInverse009 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mn>17</mn></mrow></math>';
@@ -1101,9 +1101,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse009 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInverse010
+ * Testing ClearspeakEnglishTrigometry Example TrigInverse010
  */
-sre.ClearspeakTrigometry.prototype.testTrigInverse010 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInverse010 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mn>32</mn></mrow></math>';
@@ -1113,9 +1113,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse010 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInverse011
+ * Testing ClearspeakEnglishTrigometry Example TrigInverse011
  */
-sre.ClearspeakTrigometry.prototype.testTrigInverse011 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInverse011 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mn>100</mn></mrow></math>';
@@ -1125,9 +1125,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse011 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInverse012
+ * Testing ClearspeakEnglishTrigometry Example TrigInverse012
  */
-sre.ClearspeakTrigometry.prototype.testTrigInverse012 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInverse012 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mn>85</mn></mrow></math>';
@@ -1137,9 +1137,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse012 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInverse013
+ * Testing ClearspeakEnglishTrigometry Example TrigInverse013
  */
-sre.ClearspeakTrigometry.prototype.testTrigInverse013 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInverse013 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
@@ -1150,9 +1150,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse013 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInverse014
+ * Testing ClearspeakEnglishTrigometry Example TrigInverse014
  */
-sre.ClearspeakTrigometry.prototype.testTrigInverse014 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInverse014 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
@@ -1163,9 +1163,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse014 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInverse015
+ * Testing ClearspeakEnglishTrigometry Example TrigInverse015
  */
-sre.ClearspeakTrigometry.prototype.testTrigInverse015 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInverse015 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
@@ -1177,9 +1177,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse015 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInverse016
+ * Testing ClearspeakEnglishTrigometry Example TrigInverse016
  */
-sre.ClearspeakTrigometry.prototype.testTrigInverse016 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInverse016 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
@@ -1191,9 +1191,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse016 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInverse017
+ * Testing ClearspeakEnglishTrigometry Example TrigInverse017
  */
-sre.ClearspeakTrigometry.prototype.testTrigInverse017 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInverse017 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sin</mi><mn>0</mn>' +
@@ -1204,9 +1204,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse017 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInverse018
+ * Testing ClearspeakEnglishTrigometry Example TrigInverse018
  */
-sre.ClearspeakTrigometry.prototype.testTrigInverse018 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInverse018 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>csc</mi><mi>x</mi>' +
@@ -1217,9 +1217,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse018 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInverse019
+ * Testing ClearspeakEnglishTrigometry Example TrigInverse019
  */
-sre.ClearspeakTrigometry.prototype.testTrigInverse019 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInverse019 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><msup><mrow>' +
       '<mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow>' +
@@ -1234,9 +1234,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse019 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInverse020
+ * Testing ClearspeakEnglishTrigometry Example TrigInverse020
  */
-sre.ClearspeakTrigometry.prototype.testTrigInverse020 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInverse020 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><mo>−</mo>' +
       '<msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow>' +
@@ -1251,9 +1251,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse020 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInverse021
+ * Testing ClearspeakEnglishTrigometry Example TrigInverse021
  */
-sre.ClearspeakTrigometry.prototype.testTrigInverse021 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInverse021 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>cos</mi><mfrac>' +
@@ -1265,9 +1265,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse021 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInverse022
+ * Testing ClearspeakEnglishTrigometry Example TrigInverse022
  */
-sre.ClearspeakTrigometry.prototype.testTrigInverse022 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInverse022 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow>' +
       '<mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac>' +
@@ -1278,9 +1278,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse022 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInverse023
+ * Testing ClearspeakEnglishTrigometry Example TrigInverse023
  */
-sre.ClearspeakTrigometry.prototype.testTrigInverse023 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInverse023 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow>' +
       '<mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>1' +
@@ -1291,9 +1291,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse023 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInverse024
+ * Testing ClearspeakEnglishTrigometry Example TrigInverse024
  */
-sre.ClearspeakTrigometry.prototype.testTrigInverse024 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInverse024 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo>' +
       '<msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow>' +
@@ -1305,9 +1305,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse024 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInverse025
+ * Testing ClearspeakEnglishTrigometry Example TrigInverse025
  */
-sre.ClearspeakTrigometry.prototype.testTrigInverse025 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInverse025 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo>' +
       '<msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow>' +
@@ -1320,9 +1320,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse025 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example TrigInverse026
+ * Testing ClearspeakEnglishTrigometry Example TrigInverse026
  */
-sre.ClearspeakTrigometry.prototype.testTrigInverse026 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testTrigInverse026 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sec</mi><mi>x</mi>' +
@@ -1333,9 +1333,9 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse026 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example ArcTrig001
+ * Testing ClearspeakEnglishTrigometry Example ArcTrig001
  */
-sre.ClearspeakTrigometry.prototype.testArcTrig001 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testArcTrig001 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
@@ -1345,9 +1345,9 @@ sre.ClearspeakTrigometry.prototype.testArcTrig001 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example ArcTrig002
+ * Testing ClearspeakEnglishTrigometry Example ArcTrig002
  */
-sre.ClearspeakTrigometry.prototype.testArcTrig002 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testArcTrig002 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
@@ -1357,9 +1357,9 @@ sre.ClearspeakTrigometry.prototype.testArcTrig002 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example ArcTrig003
+ * Testing ClearspeakEnglishTrigometry Example ArcTrig003
  */
-sre.ClearspeakTrigometry.prototype.testArcTrig003 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testArcTrig003 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
@@ -1369,9 +1369,9 @@ sre.ClearspeakTrigometry.prototype.testArcTrig003 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example ArcTrig004
+ * Testing ClearspeakEnglishTrigometry Example ArcTrig004
  */
-sre.ClearspeakTrigometry.prototype.testArcTrig004 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testArcTrig004 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
@@ -1381,9 +1381,9 @@ sre.ClearspeakTrigometry.prototype.testArcTrig004 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example ArcTrig005
+ * Testing ClearspeakEnglishTrigometry Example ArcTrig005
  */
-sre.ClearspeakTrigometry.prototype.testArcTrig005 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testArcTrig005 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
@@ -1393,9 +1393,9 @@ sre.ClearspeakTrigometry.prototype.testArcTrig005 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example ArcTrig006
+ * Testing ClearspeakEnglishTrigometry Example ArcTrig006
  */
-sre.ClearspeakTrigometry.prototype.testArcTrig006 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testArcTrig006 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
@@ -1405,9 +1405,9 @@ sre.ClearspeakTrigometry.prototype.testArcTrig006 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example ArcTrig007
+ * Testing ClearspeakEnglishTrigometry Example ArcTrig007
  */
-sre.ClearspeakTrigometry.prototype.testArcTrig007 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testArcTrig007 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mfrac><mrow><msqrt><mn>2</mn></msqrt>' +
@@ -1419,9 +1419,9 @@ sre.ClearspeakTrigometry.prototype.testArcTrig007 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example ArcTrig008
+ * Testing ClearspeakEnglishTrigometry Example ArcTrig008
  */
-sre.ClearspeakTrigometry.prototype.testArcTrig008 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testArcTrig008 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>' +
@@ -1432,9 +1432,9 @@ sre.ClearspeakTrigometry.prototype.testArcTrig008 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example ArcTrig009
+ * Testing ClearspeakEnglishTrigometry Example ArcTrig009
  */
-sre.ClearspeakTrigometry.prototype.testArcTrig009 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testArcTrig009 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mn>17</mn></mrow></math>';
@@ -1444,9 +1444,9 @@ sre.ClearspeakTrigometry.prototype.testArcTrig009 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example ArcTrig010
+ * Testing ClearspeakEnglishTrigometry Example ArcTrig010
  */
-sre.ClearspeakTrigometry.prototype.testArcTrig010 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testArcTrig010 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mn>32</mn></mrow></math>';
@@ -1456,9 +1456,9 @@ sre.ClearspeakTrigometry.prototype.testArcTrig010 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example ArcTrig011
+ * Testing ClearspeakEnglishTrigometry Example ArcTrig011
  */
-sre.ClearspeakTrigometry.prototype.testArcTrig011 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testArcTrig011 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mn>100</mn></mrow></math>';
@@ -1468,9 +1468,9 @@ sre.ClearspeakTrigometry.prototype.testArcTrig011 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example ArcTrig012
+ * Testing ClearspeakEnglishTrigometry Example ArcTrig012
  */
-sre.ClearspeakTrigometry.prototype.testArcTrig012 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testArcTrig012 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mn>85</mn></mrow></math>';
@@ -1480,9 +1480,9 @@ sre.ClearspeakTrigometry.prototype.testArcTrig012 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example ArcTrig013
+ * Testing ClearspeakEnglishTrigometry Example ArcTrig013
  */
-sre.ClearspeakTrigometry.prototype.testArcTrig013 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testArcTrig013 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
@@ -1493,9 +1493,9 @@ sre.ClearspeakTrigometry.prototype.testArcTrig013 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example ArcTrig014
+ * Testing ClearspeakEnglishTrigometry Example ArcTrig014
  */
-sre.ClearspeakTrigometry.prototype.testArcTrig014 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testArcTrig014 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
@@ -1506,9 +1506,9 @@ sre.ClearspeakTrigometry.prototype.testArcTrig014 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example ArcTrig015
+ * Testing ClearspeakEnglishTrigometry Example ArcTrig015
  */
-sre.ClearspeakTrigometry.prototype.testArcTrig015 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testArcTrig015 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
@@ -1519,9 +1519,9 @@ sre.ClearspeakTrigometry.prototype.testArcTrig015 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example ArcTrig016
+ * Testing ClearspeakEnglishTrigometry Example ArcTrig016
  */
-sre.ClearspeakTrigometry.prototype.testArcTrig016 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testArcTrig016 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
@@ -1532,9 +1532,9 @@ sre.ClearspeakTrigometry.prototype.testArcTrig016 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example ArcTrig017
+ * Testing ClearspeakEnglishTrigometry Example ArcTrig017
  */
-sre.ClearspeakTrigometry.prototype.testArcTrig017 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testArcTrig017 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sin</mi><mn>0</mn>' +
@@ -1545,9 +1545,9 @@ sre.ClearspeakTrigometry.prototype.testArcTrig017 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example ArcTrig018
+ * Testing ClearspeakEnglishTrigometry Example ArcTrig018
  */
-sre.ClearspeakTrigometry.prototype.testArcTrig018 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testArcTrig018 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>csc</mi><mi>x</mi>' +
@@ -1558,9 +1558,9 @@ sre.ClearspeakTrigometry.prototype.testArcTrig018 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example ArcTrig019
+ * Testing ClearspeakEnglishTrigometry Example ArcTrig019
  */
-sre.ClearspeakTrigometry.prototype.testArcTrig019 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testArcTrig019 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><msup><mrow>' +
       '<mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow>' +
@@ -1575,9 +1575,9 @@ sre.ClearspeakTrigometry.prototype.testArcTrig019 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example ArcTrig020
+ * Testing ClearspeakEnglishTrigometry Example ArcTrig020
  */
-sre.ClearspeakTrigometry.prototype.testArcTrig020 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testArcTrig020 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><mo>−</mo>' +
       '<msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow>' +
@@ -1592,9 +1592,9 @@ sre.ClearspeakTrigometry.prototype.testArcTrig020 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example ArcTrig021
+ * Testing ClearspeakEnglishTrigometry Example ArcTrig021
  */
-sre.ClearspeakTrigometry.prototype.testArcTrig021 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testArcTrig021 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>cos</mi><mfrac>' +
@@ -1605,9 +1605,9 @@ sre.ClearspeakTrigometry.prototype.testArcTrig021 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example ArcTrig022
+ * Testing ClearspeakEnglishTrigometry Example ArcTrig022
  */
-sre.ClearspeakTrigometry.prototype.testArcTrig022 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testArcTrig022 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow>' +
       '<mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac>' +
@@ -1618,9 +1618,9 @@ sre.ClearspeakTrigometry.prototype.testArcTrig022 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example ArcTrig023
+ * Testing ClearspeakEnglishTrigometry Example ArcTrig023
  */
-sre.ClearspeakTrigometry.prototype.testArcTrig023 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testArcTrig023 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow>' +
       '<mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>1' +
@@ -1631,9 +1631,9 @@ sre.ClearspeakTrigometry.prototype.testArcTrig023 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example ArcTrig024
+ * Testing ClearspeakEnglishTrigometry Example ArcTrig024
  */
-sre.ClearspeakTrigometry.prototype.testArcTrig024 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testArcTrig024 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo>' +
       '<msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow>' +
@@ -1644,9 +1644,9 @@ sre.ClearspeakTrigometry.prototype.testArcTrig024 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example ArcTrig025
+ * Testing ClearspeakEnglishTrigometry Example ArcTrig025
  */
-sre.ClearspeakTrigometry.prototype.testArcTrig025 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testArcTrig025 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo>' +
       '<msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow>' +
@@ -1659,9 +1659,9 @@ sre.ClearspeakTrigometry.prototype.testArcTrig025 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example ArcTrig026
+ * Testing ClearspeakEnglishTrigometry Example ArcTrig026
  */
-sre.ClearspeakTrigometry.prototype.testArcTrig026 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testArcTrig026 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sec</mi><mi>x</mi>' +
@@ -1672,9 +1672,9 @@ sre.ClearspeakTrigometry.prototype.testArcTrig026 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example AllTrig01
+ * Testing ClearspeakEnglishTrigometry Example AllTrig01
  */
-sre.ClearspeakTrigometry.prototype.testAllTrig01 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testAllTrig01 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>arcsin</mi><mi>x</mi></mrow></math>';
   var speech = 'arc sine x';
@@ -1683,9 +1683,9 @@ sre.ClearspeakTrigometry.prototype.testAllTrig01 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example AllTrig02
+ * Testing ClearspeakEnglishTrigometry Example AllTrig02
  */
-sre.ClearspeakTrigometry.prototype.testAllTrig02 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testAllTrig02 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>arccos</mi><mi>x</mi></mrow></math>';
   var speech = 'arc cosine x';
@@ -1694,9 +1694,9 @@ sre.ClearspeakTrigometry.prototype.testAllTrig02 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example AllTrig03
+ * Testing ClearspeakEnglishTrigometry Example AllTrig03
  */
-sre.ClearspeakTrigometry.prototype.testAllTrig03 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testAllTrig03 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>arctan</mi><mi>x</mi></mrow></math>';
   var speech = 'arc tangent x';
@@ -1710,9 +1710,9 @@ sre.ClearspeakTrigometry.prototype.testAllTrig03 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example HypTrig001
+ * Testing ClearspeakEnglishTrigometry Example HypTrig001
  */
-sre.ClearspeakTrigometry.prototype.testHypTrig001 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testHypTrig001 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sinh</mi><mi>x</mi></mrow></math>';
   var speech = 'hyperbolic sine of x';
@@ -1721,9 +1721,9 @@ sre.ClearspeakTrigometry.prototype.testHypTrig001 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example HypTrig002
+ * Testing ClearspeakEnglishTrigometry Example HypTrig002
  */
-sre.ClearspeakTrigometry.prototype.testHypTrig002 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testHypTrig002 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>cosh</mi><mi>x</mi></mrow></math>';
   var speech = 'hyperbolic cosine of x';
@@ -1732,9 +1732,9 @@ sre.ClearspeakTrigometry.prototype.testHypTrig002 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example HypTrig003
+ * Testing ClearspeakEnglishTrigometry Example HypTrig003
  */
-sre.ClearspeakTrigometry.prototype.testHypTrig003 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testHypTrig003 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>tanh</mi><mi>x</mi></mrow></math>';
   var speech = 'hyperbolic tangent of x';
@@ -1743,9 +1743,9 @@ sre.ClearspeakTrigometry.prototype.testHypTrig003 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example HypTrig004
+ * Testing ClearspeakEnglishTrigometry Example HypTrig004
  */
-sre.ClearspeakTrigometry.prototype.testHypTrig004 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testHypTrig004 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>coth</mi><mi>x</mi></mrow></math>';
   var speech = 'hyperbolic cotangent of x';
@@ -1754,9 +1754,9 @@ sre.ClearspeakTrigometry.prototype.testHypTrig004 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example HypTrig005
+ * Testing ClearspeakEnglishTrigometry Example HypTrig005
  */
-sre.ClearspeakTrigometry.prototype.testHypTrig005 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testHypTrig005 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sech</mi><mi>x</mi></mrow></math>';
   var speech = 'hyperbolic secant of x';
@@ -1765,9 +1765,9 @@ sre.ClearspeakTrigometry.prototype.testHypTrig005 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example HypTrig006
+ * Testing ClearspeakEnglishTrigometry Example HypTrig006
  */
-sre.ClearspeakTrigometry.prototype.testHypTrig006 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testHypTrig006 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>csch</mi><mi>x</mi></mrow></math>';
   var speech = 'hyperbolic cosecant of x';
@@ -1776,9 +1776,9 @@ sre.ClearspeakTrigometry.prototype.testHypTrig006 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example HypTrig007
+ * Testing ClearspeakEnglishTrigometry Example HypTrig007
  */
-sre.ClearspeakTrigometry.prototype.testHypTrig007 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testHypTrig007 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sinh</mi></mrow><mrow><mo>−' +
       '</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
@@ -1788,9 +1788,9 @@ sre.ClearspeakTrigometry.prototype.testHypTrig007 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example HypTrig008
+ * Testing ClearspeakEnglishTrigometry Example HypTrig008
  */
-sre.ClearspeakTrigometry.prototype.testHypTrig008 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testHypTrig008 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>cosh</mi></mrow><mrow><mo>−' +
       '</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
@@ -1800,9 +1800,9 @@ sre.ClearspeakTrigometry.prototype.testHypTrig008 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example HypTrig009
+ * Testing ClearspeakEnglishTrigometry Example HypTrig009
  */
-sre.ClearspeakTrigometry.prototype.testHypTrig009 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testHypTrig009 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>tanh</mi></mrow><mrow><mo>−' +
       '</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
@@ -1812,9 +1812,9 @@ sre.ClearspeakTrigometry.prototype.testHypTrig009 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example HypTrig010
+ * Testing ClearspeakEnglishTrigometry Example HypTrig010
  */
-sre.ClearspeakTrigometry.prototype.testHypTrig010 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testHypTrig010 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>coth</mi></mrow><mrow><mo>−' +
       '</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
@@ -1824,9 +1824,9 @@ sre.ClearspeakTrigometry.prototype.testHypTrig010 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example HypTrig011
+ * Testing ClearspeakEnglishTrigometry Example HypTrig011
  */
-sre.ClearspeakTrigometry.prototype.testHypTrig011 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testHypTrig011 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sech</mi></mrow><mrow><mo>−' +
       '</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
@@ -1836,9 +1836,9 @@ sre.ClearspeakTrigometry.prototype.testHypTrig011 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example HypTrig012
+ * Testing ClearspeakEnglishTrigometry Example HypTrig012
  */
-sre.ClearspeakTrigometry.prototype.testHypTrig012 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testHypTrig012 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>csch</mi></mrow><mrow><mo>−' +
       '</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
@@ -1848,9 +1848,9 @@ sre.ClearspeakTrigometry.prototype.testHypTrig012 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example HypTrig013
+ * Testing ClearspeakEnglishTrigometry Example HypTrig013
  */
-sre.ClearspeakTrigometry.prototype.testHypTrig013 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testHypTrig013 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sinh</mi><mrow><mo>(</mo><mrow><msup><mrow>' +
       '<mi>sinh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x' +
@@ -1861,9 +1861,9 @@ sre.ClearspeakTrigometry.prototype.testHypTrig013 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example HypTrig014
+ * Testing ClearspeakEnglishTrigometry Example HypTrig014
  */
-sre.ClearspeakTrigometry.prototype.testHypTrig014 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testHypTrig014 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>cosh</mi><mrow><mo>(</mo><mrow><msup><mrow>' +
       '<mi>cosh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x' +
@@ -1874,9 +1874,9 @@ sre.ClearspeakTrigometry.prototype.testHypTrig014 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example HypTrig015
+ * Testing ClearspeakEnglishTrigometry Example HypTrig015
  */
-sre.ClearspeakTrigometry.prototype.testHypTrig015 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testHypTrig015 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>tanh</mi><mrow><mo>(</mo><mrow><msup><mrow>' +
       '<mi>tanh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x' +
@@ -1887,9 +1887,9 @@ sre.ClearspeakTrigometry.prototype.testHypTrig015 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example HypTrig016
+ * Testing ClearspeakEnglishTrigometry Example HypTrig016
  */
-sre.ClearspeakTrigometry.prototype.testHypTrig016 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testHypTrig016 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>coth</mi><mrow><mo>(</mo><mrow><msup><mrow>' +
       '<mi>coth</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x' +
@@ -1900,9 +1900,9 @@ sre.ClearspeakTrigometry.prototype.testHypTrig016 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example HypTrig017
+ * Testing ClearspeakEnglishTrigometry Example HypTrig017
  */
-sre.ClearspeakTrigometry.prototype.testHypTrig017 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testHypTrig017 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sinh</mi></mrow><mrow><mo>−' +
       '</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sinh</mi>' +
@@ -1913,9 +1913,9 @@ sre.ClearspeakTrigometry.prototype.testHypTrig017 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example HypTrig018
+ * Testing ClearspeakEnglishTrigometry Example HypTrig018
  */
-sre.ClearspeakTrigometry.prototype.testHypTrig018 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testHypTrig018 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>cosh</mi></mrow><mrow><mo>−' +
       '</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>cosh</mi>' +
@@ -1926,9 +1926,9 @@ sre.ClearspeakTrigometry.prototype.testHypTrig018 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example HypTrig019
+ * Testing ClearspeakEnglishTrigometry Example HypTrig019
  */
-sre.ClearspeakTrigometry.prototype.testHypTrig019 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testHypTrig019 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>tanh</mi></mrow><mrow><mo>−' +
       '</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>tanh</mi>' +
@@ -1939,9 +1939,9 @@ sre.ClearspeakTrigometry.prototype.testHypTrig019 = function() {
 
 
 /**
- * Testing ClearspeakTrigometry Example HypTrig020
+ * Testing ClearspeakEnglishTrigometry Example HypTrig020
  */
-sre.ClearspeakTrigometry.prototype.testHypTrig020 = function() {
+sre.ClearspeakEnglishTrigometry.prototype.testHypTrig020 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>coth</mi></mrow><mrow><mo>−' +
       '</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>coth</mi>' +
