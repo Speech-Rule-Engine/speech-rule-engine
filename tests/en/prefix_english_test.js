@@ -21,17 +21,13 @@
 
 goog.provide('sre.PrefixEnglishTest');
 
-goog.require('sre.AbstractRuleTest');
-goog.require('sre.AuralRendering');
-goog.require('sre.DynamicCstr');
-goog.require('sre.Semantic');
-goog.require('sre.SpeechGeneratorUtil');
+goog.require('sre.PrefixRuleTest');
 
 
 
 /**
  * @constructor
- * @extends {sre.AbstractRuleTest}
+ * @extends {sre.PrefixRuleTest}
  */
 sre.PrefixEnglishTest = function() {
   sre.PrefixEnglishTest.base(this, 'constructor');
@@ -39,60 +35,11 @@ sre.PrefixEnglishTest = function() {
   /**
    * @override
    */
-  this.information = 'Prefix rule tests.';
-
-  /**
-   * @override
-   */
-  this.modality = 'prefix';
-
-  /**
-   * @type {number}
-   */
-  this.id = 0;
-  this.subExpr = null;
+  this.information = 'Prefix English rule tests.';
 
   this.setActive('PrefixEnglish');
 };
-goog.inherits(sre.PrefixEnglishTest, sre.AbstractRuleTest);
-
-
-/**
- * Executes the prefix rule tests.
- * @param {string} expr The semantic tree as an XML string.
- * @param {number} id The id of the node to be considered.
- * @param {string} result The expected result.
- */
-sre.PrefixEnglishTest.prototype.executeTest = function(expr, id, result) {
-  this.id = id;
-  this.executeRuleTest(expr, result);
-};
-
-
-/**
- * @override
- */
-sre.PrefixEnglishTest.prototype.getSpeech = function(mml) {
-  var stree = sre.Semantic.getTreeFromString(mml);
-  var node = stree.root.querySelectorAll(x => x.id === this.id)[0];
-  this.subExpr = node.mathmlTree;
-  if (!node) {
-    this.assert.fail();
-    return '';
-  }
-  return sre.SpeechGeneratorUtil.retrievePrefix(node);
-};
-
-
-/**
- * @override
- */
-sre.PrefixEnglishTest.prototype.appendRuleExample = function(
-    input, output, style, rest) {
-  var sub = this.subExpr ? '<math>' + this.subExpr.toString() + '</math>' : '';
-  sre.PrefixEnglishTest.base(
-    this, 'appendRuleExample', input, output, style, [sub]);
-};
+goog.inherits(sre.PrefixEnglishTest, sre.PrefixRuleTest);
 
 
 /**
