@@ -19,7 +19,6 @@
 
 goog.provide('sre.Tests');
 
-goog.require('sre.AbstractionEnglishTest');
 goog.require('sre.ApiTest');
 goog.require('sre.ClearspeakAnnotationTest');
 goog.require('sre.ClearspeakFrenchTest');
@@ -51,6 +50,7 @@ goog.require('sre.SemanticApiTest');
 goog.require('sre.SemanticRuleTest');
 goog.require('sre.SemanticTreeTest');
 goog.require('sre.SpeechRuleTest');
+goog.require('sre.SummaryEnglishTest');
 goog.require('sre.System');
 goog.require('sre.TestRunner');
 goog.require('sre.WalkerMarkupTest');
@@ -89,7 +89,6 @@ sre.Tests.prototype.run = function() {
  */
 sre.Tests.testList = [
   sre.ApiTest,
-  sre.AbstractionEnglishTest,
   sre.ClearspeakAnnotationTest,
   sre.ColorPickerTest,
   sre.DomTest,
@@ -118,6 +117,7 @@ sre.Tests.testList = [
   sre.SemanticRuleTest,
   sre.SemanticTreeTest,
   sre.SpeechRuleTest,
+  sre.SummaryEnglishTest,
   sre.WalkerMarkupTest,
   sre.WalkerTest
 ];
