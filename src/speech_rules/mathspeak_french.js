@@ -287,7 +287,7 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
   // defineSpecialisedRule(
   //     'number-baseline', 'mathspeak.brief', 'mathspeak.sbrief');
   defineRule(
-      'number-baseline', 'mathspeak.brief',
+      'number-baseline', 'mathspeak.default',
       '[t] "position de base"; [n] . (grammar:baseline)',
       'self::number', 'not(contains(@grammar, "ignoreFont"))',
       'preceding-sibling::identifier', 'not(contains(@grammar, "baseline"))',
@@ -295,25 +295,14 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
       ' @role="otherletter"]',
       'parent::*/parent::infixop[@role="implicit"]');
   defineSpecialisedRule(
-      'number-baseline', 'mathspeak.brief', 'mathspeak.sbrief',
+      'number-baseline', 'mathspeak.default', 'mathspeak.brief',
       '[t] "base"; [n] . (grammar:baseline)');
+  defineSpecialisedRule(
+      'number-baseline', 'mathspeak.brief', 'mathspeak.sbrief');
 
 
-  // defineRule(
-  //     'number-baseline-font', 'mathspeak.default',
-  //     '[t] "position de base"; [n] . (grammar:ignoreFont=@font); [t] "en"; [t] @font',
-  //     'self::number', '@font', 'not(contains(@grammar, "ignoreFont"))',
-  //     '@font!="normal"', 'preceding-sibling::identifier',
-  //     'preceding-sibling::*[@role="latinletter" or @role="greekletter" or' +
-  //     ' @role="otherletter"]',
-  //     'parent::*/parent::infixop[@role="implicit"]');
-  // defineSpecialisedRule(
-  //     'number-baseline-font', 'mathspeak.default', 'mathspeak.brief',
-  //     '[t] "position de base"; [n] . (grammar:ignoreFont=@font); [t] "en"; [t] @font');
-  // defineSpecialisedRule(
-  //     'number-baseline-font', 'mathspeak.brief', 'mathspeak.sbrief');
   defineRule(
-      'number-baseline-font', 'mathspeak.brief',
+      'number-baseline-font', 'mathspeak.default',
       '[t] "position de base"; [n] . (grammar:ignoreFont=@font); [t] "en"; ' +
       '[t] @font (grammar:localFont)',
       'self::number', '@font', 'not(contains(@grammar, "ignoreFont"))',
@@ -322,7 +311,7 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
       ' @role="otherletter"]',
       'parent::*/parent::infixop[@role="implicit"]');
   defineSpecialisedRule(
-      'number-baseline-font', 'mathspeak.brief', 'mathspeak.sbrief',
+      'number-baseline-font', 'mathspeak.default', 'mathspeak.brief',
       '[t] "base"; [n] . (grammar:ignoreFont=@font); [t] "en"; ' +
       '[t] @font (grammar:localFont)');
   defineSpecialisedRule(

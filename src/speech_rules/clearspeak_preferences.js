@@ -79,7 +79,7 @@ sre.ClearspeakPreferences.PREFERENCES = new sre.DynamicProperties({
   Exponent: ['Auto', 'AfterPower', 'Ordinal', 'OrdinalPower'],
   Fraction: ['Auto', 'EndFrac', 'FracOver', 'General', 'GeneralEndFrac',
              'Ordinal', 'Over', 'OverEndFrac', 'Per'],
-  Functions: ['Auto', 'None'],
+  Functions: ['Auto', 'None', 'Reciprocal'],  // Reciprocal is French
   ImpliedTimes: ['Auto', 'MoreImpliedTimes', 'None'],
   Log: ['Auto', 'LnAsNaturalLog'],
   Matrix: ['Auto', 'Combinatoric', 'EndMatrix', 'EndVector', 'SilentColNum',
@@ -97,7 +97,7 @@ sre.ClearspeakPreferences.PREFERENCES = new sre.DynamicProperties({
   SetMemberSymbol: ['Auto', 'Belongs', 'Element', 'Member'],
   Sets: ['Auto', 'SilentBracket', 'woall', 'woAll'],
   TriangleSymbol: ['Auto', 'Delta'],
-  Trig: ['Auto', 'ArcTrig', 'TrigInverse'],
+  Trig: ['Auto', 'ArcTrig', 'TrigInverse', 'Reciprocal'], // Reciprocal French
   VerticalLine: ['Auto', 'Divides', 'Given', 'SuchThat']
 });
 

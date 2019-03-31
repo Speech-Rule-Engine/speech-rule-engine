@@ -631,7 +631,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testTrigInvAuto001 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
-  var speech = 'la reciproque de sinus x';
+  var speech = 'sinus inverse de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -643,7 +643,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testTrigInvAuto002 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
-  var speech = 'la reciproque de cosinus x';
+  var speech = 'cosinus inverse de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -655,7 +655,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testTrigInvAuto003 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
-  var speech = 'la reciproque de tangente x';
+  var speech = 'tangente inverse de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -667,7 +667,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testTrigInvAuto004 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
-  var speech = 'la reciproque de cotangente x';
+  var speech = 'cotangente inverse de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -679,7 +679,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testTrigInvAuto005 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
-  var speech = 'la reciproque de sécante x';
+  var speech = 'sécante inverse de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -691,7 +691,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testTrigInvAuto006 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
-  var speech = 'la reciproque de cosécante x';
+  var speech = 'cosécante inverse de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -704,7 +704,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testTrigInvAuto007 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mfrac><mrow><msqrt><mn>2</mn></msqrt>' +
       '</mrow><mn>2</mn></mfrac></mrow></math>';
-  var speech = 'la reciproque de sinus, fraction avec numérateur la racine carrée de 2, et dénominateur 2';
+  var speech = 'sinus inverse de, fraction avec numérateur la racine carrée de 2, et dénominateur 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -717,7 +717,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testTrigInvAuto008 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>' +
       '</math>';
-  var speech = 'la reciproque de cosinus un-demi';
+  var speech = 'cosinus inverse de un-demi';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -729,7 +729,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testTrigInvAuto009 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mn>17</mn></mrow></math>';
-  var speech = 'la reciproque de tangente 17';
+  var speech = 'tangente inverse de 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -741,7 +741,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testTrigInvAuto010 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mn>32</mn></mrow></math>';
-  var speech = 'la reciproque de cotangente 32';
+  var speech = 'cotangente inverse de 32';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -753,7 +753,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testTrigInvAuto011 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mn>100</mn></mrow></math>';
-  var speech = 'la reciproque de sécante 100';
+  var speech = 'sécante inverse de 100';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -765,7 +765,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testTrigInvAuto012 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mn>85</mn></mrow></math>';
-  var speech = 'la reciproque de cosécante 85';
+  var speech = 'cosécante inverse de 85';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -778,7 +778,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testTrigInvAuto013 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de sinus négatif x';
+  var speech = 'sinus inverse de négatif x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -791,7 +791,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testTrigInvAuto014 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de cosinus négatif x';
+  var speech = 'cosinus inverse de négatif x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -804,7 +804,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testTrigInvAuto015 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
       '<mo>+</mo><mn>12</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de tangente, parenthèse gauche, négatif x plus 12, parenthèse droite';
+  var speech = 'tangente inverse de, parenthèse gauche, négatif x plus 12, parenthèse droite';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -817,7 +817,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testTrigInvAuto016 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
       '<mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de cotangente, parenthèse gauche, négatif x moins 1, parenthèse droite';
+  var speech = 'cotangente inverse de, parenthèse gauche, négatif x moins 1, parenthèse droite';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -830,7 +830,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testTrigInvAuto017 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sin</mi><mn>0</mn>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de sinus sinus 0';
+  var speech = 'sinus inverse de sinus 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -843,7 +843,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testTrigInvAuto018 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>csc</mi><mi>x</mi>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de cosécante cosécante x';
+  var speech = 'cosécante inverse de cosécante x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -858,7 +858,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testTrigInvAuto019 = function() {
       '<mo>(</mo><mrow><mo>−</mo><mfrac><mrow><msqrt><mn>2</mn></msqrt>' +
       '</mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'cosinus de, parenthèse gauche, la reciproque de cosinus, parenthèse gauche, négatif, fraction avec numérateur la racine carrée de 2, et dénominateur 2, parenthèse droite, parenthèse droite';
+  var speech = 'cosinus de, parenthèse gauche, cosinus inverse de, parenthèse gauche, négatif, fraction avec numérateur la racine carrée de 2, et dénominateur 2, parenthèse droite, parenthèse droite';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -873,7 +873,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testTrigInvAuto020 = function() {
       '</msup><mrow><mo>(</mo><mrow><mfrac><mrow><msqrt><mn>2</mn></msqrt>' +
       '</mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'cosinus de, parenthèse gauche, négatif, la reciproque de cosinus, parenthèse gauche, fraction avec numérateur la racine carrée de 2, et dénominateur 2, parenthèse droite, parenthèse droite';
+  var speech = 'cosinus de, parenthèse gauche, négatif, cosinus inverse de, parenthèse gauche, fraction avec numérateur la racine carrée de 2, et dénominateur 2, parenthèse droite, parenthèse droite';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -886,7 +886,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testTrigInvAuto021 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>cos</mi><mfrac>' +
       '<mi>π</mi><mn>4</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de sinus, parenthèse gauche, cosinus de, pi sur 4, parenthèse droite';
+  var speech = 'sinus inverse de, parenthèse gauche, cosinus de, pi sur 4, parenthèse droite';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -899,7 +899,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testTrigInvAuto022 = function() {
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow>' +
       '<mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac>' +
       '<mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'sinus, la reciproque de cosinus un-demi';
+  var speech = 'sinus, cosinus inverse de un-demi';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -912,7 +912,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testTrigInvAuto023 = function() {
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow>' +
       '<mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>1' +
       '</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'sinus, la reciproque de tangente 1';
+  var speech = 'sinus, tangente inverse de 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -925,7 +925,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testTrigInvAuto024 = function() {
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo>' +
       '<msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow>' +
       '</msup><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'sinus de, parenthèse gauche, négatif, la reciproque de tangente 1, parenthèse droite';
+  var speech = 'sinus de, parenthèse gauche, négatif, tangente inverse de 1, parenthèse droite';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -939,7 +939,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testTrigInvAuto025 = function() {
       '<msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow>' +
       '</msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'sinus de, parenthèse gauche, négatif, la reciproque de tangente négatif 1, parenthèse droite';
+  var speech = 'sinus de, parenthèse gauche, négatif, tangente inverse de négatif 1, parenthèse droite';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -952,7 +952,341 @@ sre.ClearspeakFrenchTrigometry.prototype.testTrigInvAuto026 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sec</mi><mi>x</mi>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de sécante sécante x';
+  var speech = 'sécante inverse de sécante x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+// New: Reciprocal
+/**
+ * Testing ClearspeakFrenchTrigometry Example TrigReciprocal001
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testTrigReciprocal001 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
+      '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
+  var speech = 'la reciproque de sinus x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example TrigReciprocal002
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testTrigReciprocal002 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo>' +
+      '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
+  var speech = 'la reciproque de cosinus x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example TrigReciprocal003
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testTrigReciprocal003 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo>' +
+      '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
+  var speech = 'la reciproque de tangente x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example TrigReciprocal004
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testTrigReciprocal004 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo>' +
+      '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
+  var speech = 'la reciproque de cotangente x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example TrigReciprocal005
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testTrigReciprocal005 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo>' +
+      '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
+  var speech = 'la reciproque de sécante x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example TrigReciprocal006
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testTrigReciprocal006 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo>' +
+      '<mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
+  var speech = 'la reciproque de cosécante x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example TrigReciprocal007
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testTrigReciprocal007 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
+      '<mn>1</mn></mrow></msup><mfrac><mrow><msqrt><mn>2</mn></msqrt>' +
+      '</mrow><mn>2</mn></mfrac></mrow></math>';
+  var speech = 'la reciproque de sinus, fraction avec numérateur la racine carrée de 2, et dénominateur 2';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example TrigReciprocal008
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testTrigReciprocal008 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo>' +
+      '<mn>1</mn></mrow></msup><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>' +
+      '</math>';
+  var speech = 'la reciproque de cosinus un-demi';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example TrigReciprocal009
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testTrigReciprocal009 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo>' +
+      '<mn>1</mn></mrow></msup><mn>17</mn></mrow></math>';
+  var speech = 'la reciproque de tangente 17';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example TrigReciprocal010
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testTrigReciprocal010 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo>' +
+      '<mn>1</mn></mrow></msup><mn>32</mn></mrow></math>';
+  var speech = 'la reciproque de cotangente 32';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example TrigReciprocal011
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testTrigReciprocal011 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo>' +
+      '<mn>1</mn></mrow></msup><mn>100</mn></mrow></math>';
+  var speech = 'la reciproque de sécante 100';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example TrigReciprocal012
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testTrigReciprocal012 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo>' +
+      '<mn>1</mn></mrow></msup><mn>85</mn></mrow></math>';
+  var speech = 'la reciproque de cosécante 85';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example TrigReciprocal013
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testTrigReciprocal013 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
+      '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
+      '</mrow><mo>)</mo></mrow></mrow></math>';
+  var speech = 'la reciproque de sinus, négatif x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example TrigReciprocal014
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testTrigReciprocal014 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo>' +
+      '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
+      '</mrow><mo>)</mo></mrow></mrow></math>';
+  var speech = 'la reciproque de cosinus, négatif x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example TrigReciprocal015
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testTrigReciprocal015 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo>' +
+      '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
+      '<mo>+</mo><mn>12</mn></mrow><mo>)</mo></mrow></mrow></math>';
+  var speech = 'la reciproque de tangente, parenthèse gauche, négatif x plus 12, parenthèse droite';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example TrigReciprocal016
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testTrigReciprocal016 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo>' +
+      '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
+      '<mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
+  var speech = 'la reciproque de cotangente, parenthèse gauche, négatif x moins 1, parenthèse droite';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example TrigReciprocal017
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testTrigReciprocal017 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
+      '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sin</mi><mn>0</mn>' +
+      '</mrow><mo>)</mo></mrow></mrow></math>';
+  var speech = 'la reciproque de sinus, sinus 0';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example TrigReciprocal018
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testTrigReciprocal018 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo>' +
+      '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>csc</mi><mi>x</mi>' +
+      '</mrow><mo>)</mo></mrow></mrow></math>';
+  var speech = 'la reciproque de cosécante, cosécante x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example TrigReciprocal019
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testTrigReciprocal019 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><msup><mrow>' +
+      '<mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow>' +
+      '<mo>(</mo><mrow><mo>−</mo><mfrac><mrow><msqrt><mn>2</mn></msqrt>' +
+      '</mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo>' +
+      '</mrow></mrow></math>';
+  var speech = 'cosinus de, parenthèse gauche, la reciproque de cosinus, parenthèse gauche, négatif, fraction avec numérateur la racine carrée de 2, et dénominateur 2, parenthèse droite, parenthèse droite';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example TrigReciprocal020
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testTrigReciprocal020 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><mo>−</mo>' +
+      '<msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow>' +
+      '</msup><mrow><mo>(</mo><mrow><mfrac><mrow><msqrt><mn>2</mn></msqrt>' +
+      '</mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo>' +
+      '</mrow></mrow></math>';
+  var speech = 'cosinus de, parenthèse gauche, négatif, la reciproque de cosinus, parenthèse gauche, fraction avec numérateur la racine carrée de 2, et dénominateur 2, parenthèse droite, parenthèse droite';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example TrigReciprocal021
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testTrigReciprocal021 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
+      '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>cos</mi><mfrac>' +
+      '<mi>π</mi><mn>4</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
+  var speech = 'la reciproque de sinus, parenthèse gauche, cosinus de, pi sur 4, parenthèse droite';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example TrigReciprocal022
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testTrigReciprocal022 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow>' +
+      '<mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac>' +
+      '<mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
+  var speech = 'sinus, la reciproque de cosinus un-demi';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example TrigReciprocal023
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testTrigReciprocal023 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow>' +
+      '<mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>1' +
+      '</mn></mrow><mo>)</mo></mrow></mrow></math>';
+  var speech = 'sinus, la reciproque de tangente 1';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example TrigReciprocal024
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testTrigReciprocal024 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo>' +
+      '<msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow>' +
+      '</msup><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
+  var speech = 'sinus de, parenthèse gauche, négatif, la reciproque de tangente 1, parenthèse droite';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example TrigReciprocal025
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testTrigReciprocal025 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo>' +
+      '<msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow>' +
+      '</msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>)</mo>' +
+      '</mrow></mrow><mo>)</mo></mrow></mrow></math>';
+  var speech = 'sinus de, parenthèse gauche, négatif, la reciproque de tangente, négatif 1, parenthèse droite';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example TrigReciprocal026
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testTrigReciprocal026 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo>' +
+      '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sec</mi><mi>x</mi>' +
+      '</mrow><mo>)</mo></mrow></mrow></math>';
+  var speech = 'la reciproque de sécante, sécante x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1734,7 +2068,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testHypTrig007 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sinh</mi></mrow><mrow><mo>−' +
       '</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
-  var speech = 'la reciproque de sinus hyperbolique x';
+  var speech = 'sinus hyperbolique inverse de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1746,7 +2080,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testHypTrig008 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>cosh</mi></mrow><mrow><mo>−' +
       '</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
-  var speech = 'la reciproque de cosinus hyperbolique x';
+  var speech = 'cosinus hyperbolique inverse de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1758,7 +2092,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testHypTrig009 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>tanh</mi></mrow><mrow><mo>−' +
       '</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
-  var speech = 'la reciproque de tangente hyperbolique x';
+  var speech = 'tangente hyperbolique inverse de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1770,7 +2104,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testHypTrig010 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>coth</mi></mrow><mrow><mo>−' +
       '</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
-  var speech = 'la reciproque de cotangente hyperbolique x';
+  var speech = 'cotangente hyperbolique inverse de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1782,7 +2116,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testHypTrig011 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sech</mi></mrow><mrow><mo>−' +
       '</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
-  var speech = 'la reciproque de sécante hyperbolique x';
+  var speech = 'sécante hyperbolique inverse de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1794,7 +2128,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testHypTrig012 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>csch</mi></mrow><mrow><mo>−' +
       '</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
-  var speech = 'la reciproque de cosécante hyperbolique x';
+  var speech = 'cosécante hyperbolique inverse de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1807,7 +2141,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testHypTrig013 = function() {
   var mathml = '<math><mrow><mi>sinh</mi><mrow><mo>(</mo><mrow><msup><mrow>' +
       '<mi>sinh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x' +
       '</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'sinus hyperbolique de, la reciproque de sinus hyperbolique x';
+  var speech = 'sinus hyperbolique de, sinus hyperbolique inverse de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1820,7 +2154,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testHypTrig014 = function() {
   var mathml = '<math><mrow><mi>cosh</mi><mrow><mo>(</mo><mrow><msup><mrow>' +
       '<mi>cosh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x' +
       '</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'cosinus hyperbolique de, la reciproque de cosinus hyperbolique x';
+  var speech = 'cosinus hyperbolique de, cosinus hyperbolique inverse de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1833,7 +2167,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testHypTrig015 = function() {
   var mathml = '<math><mrow><mi>tanh</mi><mrow><mo>(</mo><mrow><msup><mrow>' +
       '<mi>tanh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x' +
       '</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'tangente hyperbolique de, la reciproque de tangente hyperbolique x';
+  var speech = 'tangente hyperbolique de, tangente hyperbolique inverse de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1846,7 +2180,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testHypTrig016 = function() {
   var mathml = '<math><mrow><mi>coth</mi><mrow><mo>(</mo><mrow><msup><mrow>' +
       '<mi>coth</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x' +
       '</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'cotangente hyperbolique de, la reciproque de cotangente hyperbolique x';
+  var speech = 'cotangente hyperbolique de, cotangente hyperbolique inverse de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1859,7 +2193,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testHypTrig017 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>sinh</mi></mrow><mrow><mo>−' +
       '</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sinh</mi>' +
       '<mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de sinus hyperbolique, sinus hyperbolique de x';
+  var speech = 'sinus hyperbolique inverse de, sinus hyperbolique de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1872,7 +2206,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testHypTrig018 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>cosh</mi></mrow><mrow><mo>−' +
       '</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>cosh</mi>' +
       '<mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de cosinus hyperbolique, cosinus hyperbolique de x';
+  var speech = 'cosinus hyperbolique inverse de, cosinus hyperbolique de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1885,7 +2219,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testHypTrig019 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>tanh</mi></mrow><mrow><mo>−' +
       '</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>tanh</mi>' +
       '<mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de tangente hyperbolique, tangente hyperbolique de x';
+  var speech = 'tangente hyperbolique inverse de, tangente hyperbolique de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1895,6 +2229,249 @@ sre.ClearspeakFrenchTrigometry.prototype.testHypTrig019 = function() {
  */
 sre.ClearspeakFrenchTrigometry.prototype.testHypTrig020 = function() {
   var preference = 'Trig_Auto';
+  var mathml = '<math><mrow><msup><mrow><mi>coth</mi></mrow><mrow><mo>−' +
+      '</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>coth</mi>' +
+      '<mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
+  var speech = 'cotangente hyperbolique inverse de, cotangente hyperbolique de x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+// Reciprocal
+/**
+ * Testing ClearspeakFrenchTrigometry Example HypTrigReciprocal001
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testHypTrigReciprocal001 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><mi>sinh</mi><mi>x</mi></mrow></math>';
+  var speech = 'sinus hyperbolique de x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example HypTrigReciprocal002
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testHypTrigReciprocal002 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><mi>cosh</mi><mi>x</mi></mrow></math>';
+  var speech = 'cosinus hyperbolique de x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example HypTrigReciprocal003
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testHypTrigReciprocal003 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><mi>tanh</mi><mi>x</mi></mrow></math>';
+  var speech = 'tangente hyperbolique de x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example HypTrigReciprocal004
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testHypTrigReciprocal004 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><mi>coth</mi><mi>x</mi></mrow></math>';
+  var speech = 'cotangente hyperbolique de x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example HypTrigReciprocal005
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testHypTrigReciprocal005 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><mi>sech</mi><mi>x</mi></mrow></math>';
+  var speech = 'sécante hyperbolique de x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example HypTrigReciprocal006
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testHypTrigReciprocal006 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><mi>csch</mi><mi>x</mi></mrow></math>';
+  var speech = 'cosécante hyperbolique de x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example HypTrigReciprocal007
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testHypTrigReciprocal007 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>sinh</mi></mrow><mrow><mo>−' +
+      '</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
+  var speech = 'la reciproque de sinus hyperbolique x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example HypTrigReciprocal008
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testHypTrigReciprocal008 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>cosh</mi></mrow><mrow><mo>−' +
+      '</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
+  var speech = 'la reciproque de cosinus hyperbolique x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example HypTrigReciprocal009
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testHypTrigReciprocal009 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>tanh</mi></mrow><mrow><mo>−' +
+      '</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
+  var speech = 'la reciproque de tangente hyperbolique x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example HypTrigReciprocal010
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testHypTrigReciprocal010 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>coth</mi></mrow><mrow><mo>−' +
+      '</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
+  var speech = 'la reciproque de cotangente hyperbolique x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example HypTrigReciprocal011
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testHypTrigReciprocal011 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>sech</mi></mrow><mrow><mo>−' +
+      '</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
+  var speech = 'la reciproque de sécante hyperbolique x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example HypTrigReciprocal012
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testHypTrigReciprocal012 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>csch</mi></mrow><mrow><mo>−' +
+      '</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
+  var speech = 'la reciproque de cosécante hyperbolique x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example HypTrigReciprocal013
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testHypTrigReciprocal013 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><mi>sinh</mi><mrow><mo>(</mo><mrow><msup><mrow>' +
+      '<mi>sinh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x' +
+      '</mi></mrow><mo>)</mo></mrow></mrow></math>';
+  var speech = 'sinus hyperbolique de, la reciproque de sinus hyperbolique x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example HypTrigReciprocal014
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testHypTrigReciprocal014 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><mi>cosh</mi><mrow><mo>(</mo><mrow><msup><mrow>' +
+      '<mi>cosh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x' +
+      '</mi></mrow><mo>)</mo></mrow></mrow></math>';
+  var speech = 'cosinus hyperbolique de, la reciproque de cosinus hyperbolique x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example HypTrigReciprocal015
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testHypTrigReciprocal015 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><mi>tanh</mi><mrow><mo>(</mo><mrow><msup><mrow>' +
+      '<mi>tanh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x' +
+      '</mi></mrow><mo>)</mo></mrow></mrow></math>';
+  var speech = 'tangente hyperbolique de, la reciproque de tangente hyperbolique x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example HypTrigReciprocal016
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testHypTrigReciprocal016 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><mi>coth</mi><mrow><mo>(</mo><mrow><msup><mrow>' +
+      '<mi>coth</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x' +
+      '</mi></mrow><mo>)</mo></mrow></mrow></math>';
+  var speech = 'cotangente hyperbolique de, la reciproque de cotangente hyperbolique x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example HypTrigReciprocal017
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testHypTrigReciprocal017 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>sinh</mi></mrow><mrow><mo>−' +
+      '</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sinh</mi>' +
+      '<mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
+  var speech = 'la reciproque de sinus hyperbolique, sinus hyperbolique de x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example HypTrigReciprocal018
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testHypTrigReciprocal018 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>cosh</mi></mrow><mrow><mo>−' +
+      '</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>cosh</mi>' +
+      '<mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
+  var speech = 'la reciproque de cosinus hyperbolique, cosinus hyperbolique de x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example HypTrigReciprocal019
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testHypTrigReciprocal019 = function() {
+  var preference = 'Trig_Reciprocal';
+  var mathml = '<math><mrow><msup><mrow><mi>tanh</mi></mrow><mrow><mo>−' +
+      '</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>tanh</mi>' +
+      '<mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
+  var speech = 'la reciproque de tangente hyperbolique, tangente hyperbolique de x';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakFrenchTrigometry Example HypTrigReciprocal020
+ */
+sre.ClearspeakFrenchTrigometry.prototype.testHypTrigReciprocal020 = function() {
+  var preference = 'Trig_Reciprocal';
   var mathml = '<math><mrow><msup><mrow><mi>coth</mi></mrow><mrow><mo>−' +
       '</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>coth</mi>' +
       '<mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';

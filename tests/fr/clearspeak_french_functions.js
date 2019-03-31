@@ -2212,7 +2212,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction011b = function() {
   var preference = 'Functions_Reciprocal';
   var mathml = '<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f inverse de x';
+  var speech = 'la reciproque de f de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2224,7 +2224,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction012b = function() {
   var preference = 'Functions_Reciprocal';
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g inverse de x';
+  var speech = 'la reciproque de g de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2236,7 +2236,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction013b = function() {
   var preference = 'Functions_Reciprocal';
   var mathml = '<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h inverse de x';
+  var speech = 'la reciproque de h de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2249,7 +2249,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction014b = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = 'f inverse de 2 x';
+  var speech = 'la reciproque de f de 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2262,7 +2262,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction015b = function() {
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g inverse de négatif 2 x';
+  var speech = 'la reciproque de g de négatif 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2275,7 +2275,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction016b = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mn>3</mn><mi>x</mi><mo>−</mo>' +
       '<mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f inverse de, parenthèse gauche, 3 x, moins 1, parenthèse droite';
+  var speech = 'la reciproque de f de, parenthèse gauche, 3 x, moins 1, parenthèse droite';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2288,7 +2288,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction017b = function() {
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>2</mn>' +
       '</msup></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g inverse de, parenthèse gauche, x au carré, parenthèse droite';
+  var speech = 'la reciproque de g de, parenthèse gauche, x au carré, parenthèse droite';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2301,7 +2301,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction018b = function() {
   var mathml = '<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn>' +
       '</mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h inverse de un-demi';
+  var speech = 'la reciproque de h de un-demi';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2316,7 +2316,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction019b = function() {
   var mathml = '<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn>' +
       '</mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h inverse de, 1 sur 2';
+  var speech = 'la reciproque de h de, 1 sur 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2329,7 +2329,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction020b = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f inverse de, f de x';
+  var speech = 'la reciproque de f de, f de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2342,7 +2342,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction021b = function() {
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g inverse de, g de x';
+  var speech = 'la reciproque de g de, g de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2355,7 +2355,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction022b = function() {
   var mathml = '<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h inverse de, h de x';
+  var speech = 'la reciproque de h de, h de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2369,7 +2369,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction023b = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'f inverse de, f de 2 x';
+  var speech = 'la reciproque de f de, f de 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2383,7 +2383,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction024b = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow>' +
       '<mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = 'g inverse de, g de négatif 2 x';
+  var speech = 'la reciproque de g de, g de négatif 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2397,7 +2397,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction025b = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'h inverse de, h de un-demi';
+  var speech = 'la reciproque de h de, h de un-demi';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2413,7 +2413,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction026b = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'h inverse de, h de, 1 sur 2';
+  var speech = 'la reciproque de h de, h de, 1 sur 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2427,7 +2427,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction027b = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mrow>' +
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)' +
       '</mo></mrow><mo>=</mo><mi>x</mi><mo>+</mo><mn>1</mn></mrow></math>';
-  var speech = 'f inverse de, parenthèse gauche, f de, parenthèse gauche, x plus 1, parenthèse droite, parenthèse droite, égale x plus 1';
+  var speech = 'la reciproque de f de, parenthèse gauche, f de, parenthèse gauche, x plus 1, parenthèse droite, parenthèse droite, égale x plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2441,7 +2441,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction028b = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow>' +
       '<mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g inverse de, parenthèse gauche, g de, parenthèse gauche, 2 x, plus 1, parenthèse droite, parenthèse droite';
+  var speech = 'la reciproque de g de, parenthèse gauche, g de, parenthèse gauche, 2 x, plus 1, parenthèse droite, parenthèse droite';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2455,7 +2455,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction029b = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow>' +
       '<msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'g inverse de, parenthèse gauche, g de, parenthèse gauche, x au carré, parenthèse droite, parenthèse droite';
+  var speech = 'la reciproque de g de, parenthèse gauche, g de, parenthèse gauche, x au carré, parenthèse droite, parenthèse droite';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2468,7 +2468,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction030b = function() {
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><msup><mi>f' +
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f de, f inverse de x';
+  var speech = 'f de, la reciproque de f de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2481,7 +2481,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction031b = function() {
   var mathml = '<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>g' +
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g de, g inverse de x';
+  var speech = 'g de, la reciproque de g de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2494,7 +2494,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction032b = function() {
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><msup><mi>h' +
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h de, h inverse de x';
+  var speech = 'h de, la reciproque de h de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2508,7 +2508,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction033b = function() {
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'f de, f inverse de 2 x';
+  var speech = 'f de, la reciproque de f de 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2522,7 +2522,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction034b = function() {
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow>' +
       '<mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = 'g de, g inverse de négatif 2 x';
+  var speech = 'g de, la reciproque de g de négatif 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2536,7 +2536,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction035b = function() {
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow>' +
       '<mn>3</mn><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f de, parenthèse gauche, f inverse de, parenthèse gauche, 3 x, moins 1, parenthèse droite, parenthèse droite';
+  var speech = 'f de, parenthèse gauche, la reciproque de f de, parenthèse gauche, 3 x, moins 1, parenthèse droite, parenthèse droite';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2550,7 +2550,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction036b = function() {
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow>' +
       '<msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'g de, g inverse de, parenthèse gauche, x au carré, parenthèse droite';
+  var speech = 'g de, la reciproque de g de, parenthèse gauche, x au carré, parenthèse droite';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2564,7 +2564,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction037b = function() {
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'h de, h inverse de un-demi';
+  var speech = 'h de, la reciproque de h de un-demi';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2580,7 +2580,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction038b = function() {
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'h de, h inverse de, fraction 1 sur 2';
+  var speech = 'h de, la reciproque de h de, fraction 1 sur 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -3062,7 +3062,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction075b = function() {
   var mathml = '<math><mrow><msubsup><mi>f</mi><mn>1</mn><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'f sub 1, inverse de x';
+  var speech = 'la reciproque de, f sub 1, de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -3075,7 +3075,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction076b = function() {
   var mathml = '<math><mrow><msubsup><mi>g</mi><mn>2</mn><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x' +
       '</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g sub 2, inverse de, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'la reciproque de, g sub 2, de, parenthèse gauche, 2 x, plus 1, parenthèse droite';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -3088,7 +3088,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction077b = function() {
   var mathml = '<math><mrow><msubsup><mi>h</mi><mi>n</mi><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'h sub n, inverse de x';
+  var speech = 'la reciproque de, h sub n, de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -3102,7 +3102,7 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction078b = function() {
       '<mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mrow><msub><mi>g</mi>' +
       '<mn>2</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'g sub 1, inverse de, g sub 2, de x';
+  var speech = 'la reciproque de, g sub 1, de, g sub 2, de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -3116,8 +3116,6 @@ sre.ClearspeakFrenchFunctions.prototype.testFunction079b = function() {
       '</mo><mrow><msubsup><mi>g</mi><mn>2</mn><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msubsup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'f sub 1, de, g sub 2, inverse de x';
+  var speech = 'f sub 1, de, la reciproque de, g sub 2, de x';
   this.executeRuleTest(mathml, speech, preference);
 };
-
-

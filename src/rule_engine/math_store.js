@@ -122,9 +122,23 @@ sre.MathStore.prototype.defineRulesAlias = function(name, query, var_args) {
         'Rule with name ' + name + ' does not exist.');
   }
   var cstrList = Array.prototype.slice.call(arguments, 2);
+  var keep = [];
+  var findKeep = function(rule) {
+    var cstr = rule.dynamicCstr.toString();
+    var action = rule.action.toString();
+    for (var i = 0, k; k = keep[i]; i++) {
+      if (k.action === action && k.cstr === cstr) {
+        return false;
+      }
+    }
+    keep.push({cstr: cstr, action: action});
+    return true;
+  };
   rules.forEach(goog.bind(
       function(rule) {
-        this.addAlias_(rule, query, cstrList);
+        if (findKeep(rule)) {
+          this.addAlias_(rule, query, cstrList);
+        }
       },
       this));
 };

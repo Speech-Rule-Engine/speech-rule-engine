@@ -214,7 +214,7 @@ sre.EmacspeakRules.initSemanticRules_ = function() {
 
   // Font rules
   defineRule(
-      'font', 'mathspeak.default',
+      'font', 'emacspeak.default',
       '[t] @font; [n] . (grammar:ignoreFont=@font)',
       'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"');
@@ -233,14 +233,14 @@ sre.EmacspeakRules.initSemanticRules_ = function() {
       '@role!="unit"');
 
   defineRule(
-      'font-identifier', 'mathspeak.default',
+      'font-identifier', 'emacspeak.default',
       '[t] @font; [n] . (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1',
       '@font', '@font="normal"', 'not(contains(@grammar, "ignoreFont"))',
       '@role!="unit"');
 
   defineRule(
-      'omit-font', 'mathspeak.default',
+      'omit-font', 'emacspeak.default',
       '[n] . (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1', '@font',
       'not(contains(@grammar, "ignoreFont"))', '@font="italic"');

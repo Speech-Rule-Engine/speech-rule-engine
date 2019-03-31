@@ -26,18 +26,6 @@
    "key": "oz",
    "names": ["oz", "oz."]
   },
-  {
-    "key": "µg",
-    "names": [
-      "µg",
-      "mcg"
-    ],
-    "mappings": {
-      "default": {
-        "default": "microgram"
-      }
-    }
-  },
   {"category": "weight",
    "mappings": {
      "default": {
@@ -63,7 +51,7 @@
      }
    },
    "key": "mcg",
-   "names": ["mg", "µg"]
+   "names": ["mcg", "µg"]
   },
   {"category": "weight",
    "mappings": {
