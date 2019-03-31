@@ -14,11 +14,11 @@
 // limitations under the License.
 
 /**
- * @fileoverview Abstraction rules for collapsed elements.
+ * @fileoverview Summary rules for collapsed elements.
  * @author v.sorge@mathjax.com (Volker Sorge)
  */
 
-goog.provide('sre.AbstractionFrench');
+goog.provide('sre.SummaryFrench');
 
 goog.require('sre.MathStore');
 
@@ -29,57 +29,62 @@ goog.require('sre.MathStore');
  * @constructor
  * @extends {sre.MathStore}
  */
-sre.AbstractionFrench = function() {
-  sre.AbstractionFrench.base(this, 'constructor');
+sre.SummaryFrench = function() {
+  sre.SummaryFrench.base(this, 'constructor');
 
   this.locale = 'fr';
 };
-goog.inherits(sre.AbstractionFrench, sre.MathStore);
-goog.addSingletonGetter(sre.AbstractionFrench);
+goog.inherits(sre.SummaryFrench, sre.MathStore);
+goog.addSingletonGetter(sre.SummaryFrench);
 
 
 /**
  * @type {sre.MathStore}
  */
-sre.AbstractionFrench.mathStore = sre.AbstractionFrench.getInstance();
+sre.SummaryFrench.mathStore = sre.SummaryFrench.getInstance();
 
 
 /** @private */
-sre.AbstractionFrench.defineRule_ = goog.bind(
-    sre.AbstractionFrench.mathStore.defineRule,
-    sre.AbstractionFrench.mathStore);
+sre.SummaryFrench.defineRule_ = goog.bind(
+    sre.SummaryFrench.mathStore.defineRule,
+    sre.SummaryFrench.mathStore);
 
 
 /** @private */
-sre.AbstractionFrench.defineRuleAlias_ = goog.bind(
-    sre.AbstractionFrench.mathStore.defineRulesAlias,
-    sre.AbstractionFrench.mathStore);
+sre.SummaryFrench.defineRuleAlias_ = goog.bind(
+    sre.SummaryFrench.mathStore.defineRulesAlias,
+    sre.SummaryFrench.mathStore);
 
 
 /** @private */
-sre.AbstractionFrench.defineSpecialisedRule_ = goog.bind(
-    sre.AbstractionFrench.mathStore.defineSpecialisedRule,
-    sre.AbstractionFrench.mathStore);
+sre.SummaryFrench.defineSpecialisedRule_ = goog.bind(
+    sre.SummaryFrench.mathStore.defineSpecialisedRule,
+    sre.SummaryFrench.mathStore);
 
 
 /** @private */
-sre.AbstractionFrench.defineUniqueRuleAlias_ = goog.bind(
-    sre.AbstractionFrench.mathStore.defineUniqueRuleAlias,
-    sre.AbstractionFrench.mathStore);
+sre.SummaryFrench.defineUniqueRuleAlias_ = goog.bind(
+    sre.SummaryFrench.mathStore.defineUniqueRuleAlias,
+    sre.SummaryFrench.mathStore);
 
 
 goog.scope(function() {
-var defineRule = sre.AbstractionFrench.defineRule_;
-var defineRuleAlias = sre.AbstractionFrench.defineRuleAlias_;
-var defineSpecialisedRule = sre.AbstractionFrench.defineSpecialisedRule_;
-var defineUniqueRuleAlias = sre.AbstractionFrench.defineUniqueRuleAlias_;
+var defineRule = sre.SummaryFrench.defineRule_;
+var defineRuleAlias = sre.SummaryFrench.defineRuleAlias_;
+var defineSpecialisedRule = sre.SummaryFrench.defineSpecialisedRule_;
+var defineUniqueRuleAlias = sre.SummaryFrench.defineUniqueRuleAlias_;
 
 
 /**
- * Abstraction rules.
+ * Summary rules.
  * @private
 */
-sre.AbstractionFrench.initAbstractionFrench_ = function() {
+sre.SummaryFrench.initSummaryFrench_ = function() {
+  // Initial rule
+  defineRule(
+      'stree', 'default.default',
+      '[n] ./*[1]', 'self::stree');
+
   //TODO: Need some means to prioritise these rules over other rules.
   // Collapsed prefix
   defineRule(
@@ -694,6 +699,6 @@ sre.AbstractionFrench.initAbstractionFrench_ = function() {
 });  // goog.scope
 
 
-sre.AbstractionFrench.getInstance().initializer = [
-  sre.AbstractionFrench.initAbstractionFrench_
+sre.SummaryFrench.getInstance().initializer = [
+  sre.SummaryFrench.initSummaryFrench_
 ];

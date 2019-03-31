@@ -136,9 +136,8 @@ sre.SpeechGeneratorUtil.computePrefix_ = function(semantic) {
                                      tree.xml())[0];
   return node ?
       sre.SpeechRuleEngine.getInstance().runInSetting(
-      {'domain': 'prefix', 'style': 'default',
-        'strict': true, 'cache': false, 'speech': true,
-        'rules': ['PrefixRules', 'PrefixSpanish', 'PrefixFrench']},
+      {'modality': 'prefix', 'domain': 'default', 'style': 'default',
+       'strict': true, 'cache': false, 'speech': true},
       function() {return sre.SpeechRuleEngine.getInstance().evaluateNode(node);}
       ) :
       [];
@@ -202,4 +201,33 @@ sre.SpeechGeneratorUtil.connectAllMactions = function(mml, stree) {
     var cst = sre.DomUtil.querySelectorAllByAttrValue(stree, 'id', mid)[0];
     cst.setAttribute('alternative', mid);
   }
+};
+
+
+/**
+ * Computes a speech summary if it exists.
+ * @param {Node} node The XML node.
+ * @return {string} The summary speech string.
+ */
+sre.SpeechGeneratorUtil.retrieveSummary = function(node) {
+  var descrs = sre.SpeechGeneratorUtil.computeSummary_(node);
+  return sre.AuralRendering.getInstance().markup(descrs);
+};
+
+
+/**
+ * Adds a speech summary if necessary.
+ * @param {Node} node The XML node.
+ * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions
+ *     for the summary.
+ * @private
+ */
+sre.SpeechGeneratorUtil.computeSummary_ = function(node) {
+  return node ?
+      sre.SpeechRuleEngine.getInstance().runInSetting(
+      {'modality': 'summary',
+        'strict': false, 'cache': false, 'speech': true},
+      function() {return sre.SpeechRuleEngine.getInstance().evaluateNode(node);}
+      ) :
+      [];
 };

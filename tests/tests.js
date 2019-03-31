@@ -19,11 +19,8 @@
 
 goog.provide('sre.Tests');
 
-goog.require('sre.AbstractionEnglishTest');
 goog.require('sre.ApiTest');
 goog.require('sre.ClearspeakAnnotationTest');
-goog.require('sre.ClearspeakFrenchTest');
-goog.require('sre.ClearspeakTest');
 goog.require('sre.ColorPickerTest');
 goog.require('sre.DomTest');
 goog.require('sre.EnrichMathmlTest');
@@ -31,26 +28,14 @@ goog.require('sre.EnrichSpeechTest');
 goog.require('sre.MarkupTest');
 goog.require('sre.MathAlphabetsTest');
 goog.require('sre.MathmlStoreTest');
-goog.require('sre.MathspeakEmbellishFrenchTest');
-goog.require('sre.MathspeakEmbellishSpanishTest');
-goog.require('sre.MathspeakEmbellishTest');
-goog.require('sre.MathspeakEnglishTest');
-goog.require('sre.MathspeakFrenchTest');
-goog.require('sre.MathspeakSpanishTest');
-goog.require('sre.MmlcloudEnglishTest');
-goog.require('sre.MmlcloudFrenchTest');
-goog.require('sre.MmlcloudSpanishTest');
-goog.require('sre.NobleEnglishTest');
-goog.require('sre.NobleFrenchTest');
-goog.require('sre.NobleSpanishTest');
-goog.require('sre.PrefixEnglishTest');
-goog.require('sre.PrefixFrenchTest');
-goog.require('sre.PrefixSpanishTest');
 goog.require('sre.RebuildStreeTest');
 goog.require('sre.SemanticApiTest');
 goog.require('sre.SemanticRuleTest');
 goog.require('sre.SemanticTreeTest');
+goog.require('sre.SpeechEnglishTest');
+goog.require('sre.SpeechFrenchTest');
 goog.require('sre.SpeechRuleTest');
+goog.require('sre.SpeechSpanishTest');
 goog.require('sre.System');
 goog.require('sre.TestRunner');
 goog.require('sre.WalkerMarkupTest');
@@ -89,7 +74,6 @@ sre.Tests.prototype.run = function() {
  */
 sre.Tests.testList = [
   sre.ApiTest,
-  sre.AbstractionEnglishTest,
   sre.ClearspeakAnnotationTest,
   sre.ColorPickerTest,
   sre.DomTest,
@@ -98,21 +82,6 @@ sre.Tests.testList = [
   sre.MarkupTest,
   sre.MathAlphabetsTest,
   sre.MathmlStoreTest,
-  sre.MathspeakEmbellishTest,
-  sre.MathspeakEmbellishFrenchTest,
-  sre.MathspeakEmbellishSpanishTest,
-  sre.MathspeakEnglishTest,
-  sre.MathspeakFrenchTest,
-  sre.MathspeakSpanishTest,
-  sre.MmlcloudEnglishTest,
-  sre.MmlcloudFrenchTest,
-  sre.MmlcloudSpanishTest,
-  sre.NobleEnglishTest,
-  sre.NobleFrenchTest,
-  sre.NobleSpanishTest,
-  sre.PrefixEnglishTest,
-  sre.PrefixFrenchTest,
-  sre.PrefixSpanishTest,
   sre.RebuildStreeTest,
   sre.SemanticApiTest,
   sre.SemanticRuleTest,
@@ -121,9 +90,9 @@ sre.Tests.testList = [
   sre.WalkerMarkupTest,
   sre.WalkerTest
 ];
-sre.Tests.testList = sre.Tests.testList.concat(sre.ClearspeakTest.testList),
-sre.Tests.testList = sre.Tests.testList.concat(sre.ClearspeakFrenchTest.testList),
-// sre.Tests.testList = sre.ClearspeakTest.testList;
+sre.Tests.testList = sre.Tests.testList.concat(sre.SpeechEnglishTest.testList);
+sre.Tests.testList = sre.Tests.testList.concat(sre.SpeechFrenchTest.testList);
+sre.Tests.testList = sre.Tests.testList.concat(sre.SpeechSpanishTest.testList);
 
 
 /**

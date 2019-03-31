@@ -148,6 +148,12 @@ sre.ClearspeakRules.initCustomFunctions_ = function() {
  * @private
 */
 sre.ClearspeakRules.initClearspeakRules_ = function() {
+  defineRule(
+      'collapsed', 'clearspeak.default',
+      '[t] "collapsed"; [n] . (engine:modality=summary,grammar:collapsed)',
+      'self::*', '@alternative', 'not(contains(@grammar, "collapsed"))',
+      'self::*', 'self::*', 'self::*', 'self::*', 'self::*'
+  );
 
   // Initial rule
   defineRule(

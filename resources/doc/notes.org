@@ -93,7 +93,7 @@ https://en.wikipedia.org/wiki/Bra%E2%80%93ket_notation
 *** class="MJX-TeXAtom-CLOSE"
 *** class="MJX-TeXAtom-OPEN"
 
-
+    
 * TODO For role computation: 
 ** DONE Tensor role.
 ** Punctuated with same punctuation does not seem to work.
@@ -182,7 +182,7 @@ https://en.wikipedia.org/wiki/Bra%E2%80%93ket_notation
 
 *** Ultimately we only need combined tries, not stores as custom functions will not be added.
 
-* TODO Multimodalities: 
+* DONE Multimodalities: 
 
 ** Make modalities a node above the locales inthe trie.
 
@@ -203,3 +203,9 @@ https://en.wikipedia.org/wiki/Bra%E2%80%93ket_notation
 ** Ulitmately we could make collapsed and summary modalities and do away with the @alternative role.
 
 ** Currently we test abstraction rules with mathspeak, all three styles, just in case.
+
+* TODO Inheritance in speech rule sets
+
+** TODO Have a basic class for speech rule sets that sets initial/dummy/collapse rules.
+
+** TODO Have a basic class for mathspeak/clearspeak/etc rule sets to inherit common Custom functions.

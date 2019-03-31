@@ -13,30 +13,30 @@
 // limitations under the License.
 
 //
-// Tests from the issues discovered in Clearspeak rules.
+// Tests from the issues discovered in ClearspeakEnglish rules.
 //
 
 
-goog.provide('sre.ClearspeakIssues');
+goog.provide('sre.ClearspeakEnglishIssues');
 
-goog.require('sre.ClearspeakRuleTest');
+goog.require('sre.ClearspeakEnglishRuleTest');
 
 
 
 /**
 * @constructor
-* @extends {sre.ClearspeakRuleTest}
+* @extends {sre.ClearspeakEnglishRuleTest}
 */
-sre.ClearspeakIssues = function() {
-  sre.ClearspeakIssues.base(this, 'constructor');
+sre.ClearspeakEnglishIssues = function() {
+  sre.ClearspeakEnglishIssues.base(this, 'constructor');
 
   /**
    * @override
    */
-  this.information = 'Clearspeak Issues tests.';
+  this.information = 'ClearspeakEnglish Issues tests.';
 
 };
-goog.inherits(sre.ClearspeakIssues, sre.ClearspeakRuleTest);
+goog.inherits(sre.ClearspeakEnglishIssues, sre.ClearspeakEnglishRuleTest);
 
 
 
@@ -45,7 +45,7 @@ goog.inherits(sre.ClearspeakIssues, sre.ClearspeakRuleTest);
 //
 
 
-sre.ClearspeakIssues.prototype.testIssue230 = function() {
+sre.ClearspeakEnglishIssues.prototype.testIssue230 = function() {
   var preference = 'default';
   this.executeRuleTest(
       '<mn>5</mn><mfrac><mn>3</mn><mn>224</mn></mfrac>',
@@ -56,7 +56,7 @@ sre.ClearspeakIssues.prototype.testIssue230 = function() {
 };
 
 
-sre.ClearspeakIssues.prototype.testIssueNumbers = function() {
+sre.ClearspeakEnglishIssues.prototype.testIssueNumbers = function() {
   var preference = 'default';
   this.executeRuleTest(
       '<mrow><mn>t2e4</mn></mrow>', 'number t 2 e 4', preference);

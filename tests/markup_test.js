@@ -47,7 +47,8 @@ goog.inherits(sre.MarkupTest, sre.AbstractTest);
  * @override
  */
 sre.MarkupTest.prototype.setUpTest = function() {
-  sre.System.getInstance().setupEngine({domain: 'default', style: 'short'});
+  sre.System.getInstance().setupEngine(
+      {modality: 'speech', domain: 'default', style: 'short'});
 };
 
 

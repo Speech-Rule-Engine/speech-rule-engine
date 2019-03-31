@@ -100,6 +100,9 @@ sre.SemanticNode.prototype.querySelectorAll = function(pred) {
   for (var i = 0, child; child = this.childNodes[i]; i++) {
     result = result.concat(child.querySelectorAll(pred));
   }
+  for (var i = 0, content; content = this.contentNodes[i]; i++) {
+    result = result.concat(content.querySelectorAll(pred));
+  }
   if (pred(this)) {
     result.unshift(this);
   }

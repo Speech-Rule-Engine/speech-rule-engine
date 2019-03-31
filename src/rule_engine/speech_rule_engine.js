@@ -274,6 +274,13 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
     if (component.grammar) {
       this.processGrammar(context, node, component.grammar);
     }
+    var saveEngine = null;
+    // Retooling the engine
+    if (attributes.engine) {
+      saveEngine = sre.Engine.getInstance().dynamicCstr.getComponents();
+      var features = sre.Grammar.parseInput(attributes.engine);
+      sre.Engine.getInstance().setDynamicCstr(features);
+    }
     switch (component.type) {
       case sre.SpeechRule.Type.NODE:
         var selected = context.applyQuery(node, content);
@@ -322,6 +329,9 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
     // Adding personality to the auditory descriptions.
     result = result.concat(this.addPersonality_(descrs, attributes, multi,
                                                 node));
+    if (saveEngine) {
+      sre.Engine.getInstance().setDynamicCstr(saveEngine);
+    }
   }
   this.pushCache_(node, result);
   return result;
@@ -524,10 +534,7 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
     save[key] = engine[key];
     engine[key] = settings[key];
   }
-  //TODO: This needs to be refactored as a message signal for the speech rule
-  //      engine to update itself.
-  engine.dynamicCstr = sre.DynamicCstr.create(
-      engine.locale, engine.domain, engine.style);
+  engine.setDynamicCstr();
   var result = callback();
   for (key in save) {
     engine[key] = save[key];
@@ -535,8 +542,7 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
   if (store) {
     this.activeStore_ = store;
   }
-  engine.dynamicCstr = sre.DynamicCstr.create(
-      engine.locale, engine.domain, engine.style);
+  engine.setDynamicCstr();
   return result;
 };
 
@@ -635,22 +641,39 @@ sre.SpeechRuleEngine.prototype.processGrammar = function(context, node, grammar)
 
 /**
  * Enriches the dynamic constraint with default properties.
- * @private
  */
+ // * @private
+// TODO: Exceptions and ordering between locale and modality?
+//       E.g, missing clearspeak defaults to mathspeak.
+//       What if there is no default for a particular locale or modality?
+//       We need a default constraint specification somewhere that defines the
+//       orders.
+//       Try to make this dependent on the order of the dynamicCstr.
 sre.SpeechRuleEngine.prototype.updateConstraint_ = function() {
   var dynamic = sre.Engine.getInstance().dynamicCstr;
   var strict = sre.Engine.getInstance().strict;
+  var trie = this.activeStore_.trie;
   var props = {};
-  var values = [dynamic.getValue(sre.DynamicCstr.Axis.LOCALE),
-                dynamic.getValue(sre.DynamicCstr.Axis.DOMAIN)];
-  var defLocale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
-  var defDomain = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN];
-  var exists = this.activeStore_.trie.hasSubtrie(values);
-  // Get the trie exceptions
-  props[sre.DynamicCstr.Axis.LOCALE] = [exists ? values[0] : defLocale];
-  exists = exists ? exists :
-      this.activeStore_.trie.hasSubtrie([defLocale, values[1]]);
-  props[sre.DynamicCstr.Axis.DOMAIN] = [exists ? values[1] : defDomain];
+  var locale = dynamic.getValue(sre.DynamicCstr.Axis.LOCALE);
+  var modality = dynamic.getValue(sre.DynamicCstr.Axis.MODALITY);
+  var domain = dynamic.getValue(sre.DynamicCstr.Axis.DOMAIN);
+  if (!trie.hasSubtrie([locale, modality, domain])) {
+    locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
+    if (!trie.hasSubtrie([locale, modality, domain])) {
+      modality = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY];
+      if (!trie.hasSubtrie([locale, modality, domain])) {
+        domain = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN];
+      }
+    }
+  }
+  props[sre.DynamicCstr.Axis.LOCALE] = [locale];
+  props[sre.DynamicCstr.Axis.MODALITY] =
+    // TODO: Improve, only summary allows fallback to speech.
+    [modality !== 'summary' ?
+     modality : sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY]];
+  props[sre.DynamicCstr.Axis.DOMAIN] =
+    [modality !== 'speech' ?
+     sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN] : domain];
   var order = dynamic.getOrder();
   for (var i = 0, axis; axis = order[i]; i++) {
     if (!props[axis]) {

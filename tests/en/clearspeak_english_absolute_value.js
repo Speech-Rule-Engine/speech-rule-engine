@@ -17,26 +17,26 @@
 //
 
 
-goog.provide('sre.ClearspeakAbsoluteValue');
+goog.provide('sre.ClearspeakEnglishAbsoluteValue');
 
-goog.require('sre.ClearspeakRuleTest');
+goog.require('sre.ClearspeakEnglishRuleTest');
 
 
 
 /**
 * @constructor
-* @extends {sre.ClearspeakRuleTest}
+* @extends {sre.ClearspeakEnglishRuleTest}
 */
-sre.ClearspeakAbsoluteValue = function() {
-  sre.ClearspeakAbsoluteValue.base(this, 'constructor');
+sre.ClearspeakEnglishAbsoluteValue = function() {
+  sre.ClearspeakEnglishAbsoluteValue.base(this, 'constructor');
 
   /**
 * @override
   */
-  this.information = 'ClearspeakAbsoluteValue rule tests.';
+  this.information = 'ClearspeakEnglishAbsoluteValue rule tests.';
 
 };
-goog.inherits(sre.ClearspeakAbsoluteValue, sre.ClearspeakRuleTest);
+goog.inherits(sre.ClearspeakEnglishAbsoluteValue, sre.ClearspeakEnglishRuleTest);
 
 
 
@@ -46,9 +46,9 @@ goog.inherits(sre.ClearspeakAbsoluteValue, sre.ClearspeakRuleTest);
 
 
 /**
- * Testing ClearspeakAbsoluteValue Example Abs01
+ * Testing ClearspeakEnglishAbsoluteValue Example Abs01
  */
-sre.ClearspeakAbsoluteValue.prototype.testAbs01 = function() {
+sre.ClearspeakEnglishAbsoluteValue.prototype.testAbs01 = function() {
   var preference = 'AbsoluteValue_Auto';
   var mathml = '<mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow></mrow>';
   var speech = 'the absolute value of x';
@@ -57,9 +57,9 @@ sre.ClearspeakAbsoluteValue.prototype.testAbs01 = function() {
 
 
 /**
- * Testing ClearspeakAbsoluteValue Example Abs02
+ * Testing ClearspeakEnglishAbsoluteValue Example Abs02
  */
-sre.ClearspeakAbsoluteValue.prototype.testAbs02 = function() {
+sre.ClearspeakEnglishAbsoluteValue.prototype.testAbs02 = function() {
   var preference = 'AbsoluteValue_Auto';
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn>' +
       '</mrow><mo>|</mo></mrow></mrow>';
@@ -69,9 +69,9 @@ sre.ClearspeakAbsoluteValue.prototype.testAbs02 = function() {
 
 
 /**
- * Testing ClearspeakAbsoluteValue Example Abs03
+ * Testing ClearspeakEnglishAbsoluteValue Example Abs03
  */
-sre.ClearspeakAbsoluteValue.prototype.testAbs03 = function() {
+sre.ClearspeakEnglishAbsoluteValue.prototype.testAbs03 = function() {
   var preference = 'AbsoluteValue_Auto';
   var mathml = '<mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>+</mo>' +
       '<mn>1</mn></mrow>';
@@ -81,9 +81,9 @@ sre.ClearspeakAbsoluteValue.prototype.testAbs03 = function() {
 
 
 /**
- * Testing ClearspeakAbsoluteValue Example Abs04
+ * Testing ClearspeakEnglishAbsoluteValue Example Abs04
  */
-sre.ClearspeakAbsoluteValue.prototype.testAbs04 = function() {
+sre.ClearspeakEnglishAbsoluteValue.prototype.testAbs04 = function() {
   var preference = 'AbsoluteValue_Auto';
   var mathml = '<mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>+</mo>' +
       '<mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow><mo>≥</mo><mrow><mo>|' +
@@ -95,9 +95,9 @@ sre.ClearspeakAbsoluteValue.prototype.testAbs04 = function() {
 
 
 /**
- * Testing ClearspeakAbsoluteValue Example AbsEnd01
+ * Testing ClearspeakEnglishAbsoluteValue Example AbsEnd01
  */
-sre.ClearspeakAbsoluteValue.prototype.testAbsEnd01 = function() {
+sre.ClearspeakEnglishAbsoluteValue.prototype.testAbsEnd01 = function() {
   var preference = 'AbsoluteValue_AbsEnd';
   var mathml = '<mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow></mrow>';
   var speech = 'the absolute value of x, end absolute value';
@@ -106,9 +106,9 @@ sre.ClearspeakAbsoluteValue.prototype.testAbsEnd01 = function() {
 
 
 /**
- * Testing ClearspeakAbsoluteValue Example AbsEnd02
+ * Testing ClearspeakEnglishAbsoluteValue Example AbsEnd02
  */
-sre.ClearspeakAbsoluteValue.prototype.testAbsEnd02 = function() {
+sre.ClearspeakEnglishAbsoluteValue.prototype.testAbsEnd02 = function() {
   var preference = 'AbsoluteValue_AbsEnd';
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn>' +
       '</mrow><mo>|</mo></mrow></mrow>';
@@ -118,9 +118,9 @@ sre.ClearspeakAbsoluteValue.prototype.testAbsEnd02 = function() {
 
 
 /**
- * Testing ClearspeakAbsoluteValue Example AbsEnd03
+ * Testing ClearspeakEnglishAbsoluteValue Example AbsEnd03
  */
-sre.ClearspeakAbsoluteValue.prototype.testAbsEnd03 = function() {
+sre.ClearspeakEnglishAbsoluteValue.prototype.testAbsEnd03 = function() {
   var preference = 'AbsoluteValue_AbsEnd';
   var mathml = '<mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>+</mo>' +
       '<mn>1</mn></mrow>';
@@ -130,9 +130,9 @@ sre.ClearspeakAbsoluteValue.prototype.testAbsEnd03 = function() {
 
 
 /**
- * Testing ClearspeakAbsoluteValue Example AbsEnd04
+ * Testing ClearspeakEnglishAbsoluteValue Example AbsEnd04
  */
-sre.ClearspeakAbsoluteValue.prototype.testAbsEnd04 = function() {
+sre.ClearspeakEnglishAbsoluteValue.prototype.testAbsEnd04 = function() {
   var preference = 'AbsoluteValue_AbsEnd';
   var mathml = '<mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>+</mo>' +
       '<mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow><mo>≥</mo><mrow><mo>|' +
@@ -145,9 +145,9 @@ sre.ClearspeakAbsoluteValue.prototype.testAbsEnd04 = function() {
 
 
 /**
- * Testing ClearspeakAbsoluteValue Example Card01
+ * Testing ClearspeakEnglishAbsoluteValue Example Card01
  */
-sre.ClearspeakAbsoluteValue.prototype.testCard01 = function() {
+sre.ClearspeakEnglishAbsoluteValue.prototype.testCard01 = function() {
   var preference = 'AbsoluteValue_Cardinality';
   var mathml = '<mrow><mrow><mo>|</mo><mi>S</mi><mo>|</mo></mrow></mrow>';
   var speech = 'the cardinality of S';
@@ -156,9 +156,9 @@ sre.ClearspeakAbsoluteValue.prototype.testCard01 = function() {
 
 
 /**
- * Testing ClearspeakAbsoluteValue Example Determinant01
+ * Testing ClearspeakEnglishAbsoluteValue Example Determinant01
  */
-sre.ClearspeakAbsoluteValue.prototype.testDeterminant01 = function() {
+sre.ClearspeakEnglishAbsoluteValue.prototype.testDeterminant01 = function() {
   var preference = 'AbsoluteValue_Determinant';
   var mathml = '<mrow><mrow><mo>|</mo><mi>M</mi><mo>|</mo></mrow></mrow>';
   var speech = 'the determinant of M';
@@ -172,9 +172,9 @@ sre.ClearspeakAbsoluteValue.prototype.testDeterminant01 = function() {
 
 
 /**
- * Testing ClearspeakAbsoluteValue Example AbsDet01
+ * Testing ClearspeakEnglishAbsoluteValue Example AbsDet01
  */
-sre.ClearspeakAbsoluteValue.prototype.testAbsDet01 = function() {
+sre.ClearspeakEnglishAbsoluteValue.prototype.testAbsDet01 = function() {
   var preference = 'AbsoluteValue_Auto';
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn>' +
       '</mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd>' +
@@ -185,9 +185,9 @@ sre.ClearspeakAbsoluteValue.prototype.testAbsDet01 = function() {
 
 
 /**
- * Testing ClearspeakAbsoluteValue Example AbsDet02
+ * Testing ClearspeakEnglishAbsoluteValue Example AbsDet02
  */
-sre.ClearspeakAbsoluteValue.prototype.testAbsDet02 = function() {
+sre.ClearspeakEnglishAbsoluteValue.prototype.testAbsDet02 = function() {
   var preference = 'AbsoluteValue_Auto';
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn>' +
       '</mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd>' +
@@ -201,9 +201,9 @@ sre.ClearspeakAbsoluteValue.prototype.testAbsDet02 = function() {
 
 
 /**
- * Testing ClearspeakAbsoluteValue Example AbsDet03
+ * Testing ClearspeakEnglishAbsoluteValue Example AbsDet03
  */
-sre.ClearspeakAbsoluteValue.prototype.testAbsDet03 = function() {
+sre.ClearspeakEnglishAbsoluteValue.prototype.testAbsDet03 = function() {
   var preference = 'AbsoluteValue_Auto';
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>0</mn>' +
       '</mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn>' +
@@ -223,9 +223,9 @@ sre.ClearspeakAbsoluteValue.prototype.testAbsDet03 = function() {
 
 
 /**
- * Testing ClearspeakAbsoluteValue Example AbsDet04
+ * Testing ClearspeakEnglishAbsoluteValue Example AbsDet04
  */
-sre.ClearspeakAbsoluteValue.prototype.testAbsDet04 = function() {
+sre.ClearspeakEnglishAbsoluteValue.prototype.testAbsDet04 = function() {
   var preference = 'AbsoluteValue_Auto';
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn>' +
       '</mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd>' +
@@ -238,9 +238,9 @@ sre.ClearspeakAbsoluteValue.prototype.testAbsDet04 = function() {
 
 
 /**
- * Testing ClearspeakAbsoluteValue Example AbsDet05
+ * Testing ClearspeakEnglishAbsoluteValue Example AbsDet05
  */
-sre.ClearspeakAbsoluteValue.prototype.testAbsDet05 = function() {
+sre.ClearspeakEnglishAbsoluteValue.prototype.testAbsDet05 = function() {
   var preference = 'AbsoluteValue_Auto';
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mn>2' +
       '</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd>' +
@@ -253,9 +253,9 @@ sre.ClearspeakAbsoluteValue.prototype.testAbsDet05 = function() {
 
 
 /**
- * Testing ClearspeakAbsoluteValue Example AbsDet06
+ * Testing ClearspeakEnglishAbsoluteValue Example AbsDet06
  */
-sre.ClearspeakAbsoluteValue.prototype.testAbsDet06 = function() {
+sre.ClearspeakEnglishAbsoluteValue.prototype.testAbsDet06 = function() {
   var preference = 'AbsoluteValue_Auto';
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mn>2' +
       '</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd></mtr><mtr><mtd>' +
@@ -269,9 +269,9 @@ sre.ClearspeakAbsoluteValue.prototype.testAbsDet06 = function() {
 
 
 /**
- * Testing ClearspeakAbsoluteValue Example AbsDet07
+ * Testing ClearspeakEnglishAbsoluteValue Example AbsDet07
  */
-sre.ClearspeakAbsoluteValue.prototype.testAbsDet07 = function() {
+sre.ClearspeakEnglishAbsoluteValue.prototype.testAbsDet07 = function() {
   var preference = 'AbsoluteValue_Auto';
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mfrac>' +
       '<mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2' +
@@ -286,9 +286,9 @@ sre.ClearspeakAbsoluteValue.prototype.testAbsDet07 = function() {
 
 
 /**
- * Testing ClearspeakAbsoluteValue Example AbsDet08
+ * Testing ClearspeakEnglishAbsoluteValue Example AbsDet08
  */
-sre.ClearspeakAbsoluteValue.prototype.testAbsDet08 = function() {
+sre.ClearspeakEnglishAbsoluteValue.prototype.testAbsDet08 = function() {
   var preference = 'AbsoluteValue_AbsEnd';
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn>' +
       '</mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd>' +
@@ -299,9 +299,9 @@ sre.ClearspeakAbsoluteValue.prototype.testAbsDet08 = function() {
 
 
 /**
- * Testing ClearspeakAbsoluteValue Example AbsDet09
+ * Testing ClearspeakEnglishAbsoluteValue Example AbsDet09
  */
-sre.ClearspeakAbsoluteValue.prototype.testAbsDet09 = function() {
+sre.ClearspeakEnglishAbsoluteValue.prototype.testAbsDet09 = function() {
   var preference = 'AbsoluteValue_AbsEnd';
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn>' +
       '</mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd>' +
@@ -315,9 +315,9 @@ sre.ClearspeakAbsoluteValue.prototype.testAbsDet09 = function() {
 
 
 /**
- * Testing ClearspeakAbsoluteValue Example AbsDet10
+ * Testing ClearspeakEnglishAbsoluteValue Example AbsDet10
  */
-sre.ClearspeakAbsoluteValue.prototype.testAbsDet10 = function() {
+sre.ClearspeakEnglishAbsoluteValue.prototype.testAbsDet10 = function() {
   var preference = 'AbsoluteValue_AbsEnd';
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>0</mn>' +
       '</mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn>' +
@@ -337,9 +337,9 @@ sre.ClearspeakAbsoluteValue.prototype.testAbsDet10 = function() {
 
 
 /**
- * Testing ClearspeakAbsoluteValue Example AbsDet11
+ * Testing ClearspeakEnglishAbsoluteValue Example AbsDet11
  */
-sre.ClearspeakAbsoluteValue.prototype.testAbsDet11 = function() {
+sre.ClearspeakEnglishAbsoluteValue.prototype.testAbsDet11 = function() {
   var preference = 'AbsoluteValue_AbsEnd';
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn>' +
       '</mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd>' +
@@ -352,9 +352,9 @@ sre.ClearspeakAbsoluteValue.prototype.testAbsDet11 = function() {
 
 
 /**
- * Testing ClearspeakAbsoluteValue Example AbsDet12
+ * Testing ClearspeakEnglishAbsoluteValue Example AbsDet12
  */
-sre.ClearspeakAbsoluteValue.prototype.testAbsDet12 = function() {
+sre.ClearspeakEnglishAbsoluteValue.prototype.testAbsDet12 = function() {
   var preference = 'AbsoluteValue_AbsEnd';
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mn>2' +
       '</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd>' +
@@ -367,9 +367,9 @@ sre.ClearspeakAbsoluteValue.prototype.testAbsDet12 = function() {
 
 
 /**
- * Testing ClearspeakAbsoluteValue Example AbsDet13
+ * Testing ClearspeakEnglishAbsoluteValue Example AbsDet13
  */
-sre.ClearspeakAbsoluteValue.prototype.testAbsDet13 = function() {
+sre.ClearspeakEnglishAbsoluteValue.prototype.testAbsDet13 = function() {
   var preference = 'AbsoluteValue_AbsEnd';
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mn>2' +
       '</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd></mtr><mtr><mtd>' +
@@ -383,9 +383,9 @@ sre.ClearspeakAbsoluteValue.prototype.testAbsDet13 = function() {
 
 
 /**
- * Testing ClearspeakAbsoluteValue Example AbsDet14
+ * Testing ClearspeakEnglishAbsoluteValue Example AbsDet14
  */
-sre.ClearspeakAbsoluteValue.prototype.testAbsDet14 = function() {
+sre.ClearspeakEnglishAbsoluteValue.prototype.testAbsDet14 = function() {
   var preference = 'AbsoluteValue_AbsEnd';
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mfrac>' +
       '<mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2' +

@@ -17,26 +17,26 @@
 //
 
 
-goog.provide('sre.ClearspeakImpliedTimes');
+goog.provide('sre.ClearspeakEnglishImpliedTimes');
 
-goog.require('sre.ClearspeakRuleTest');
+goog.require('sre.ClearspeakEnglishRuleTest');
 
 
 
 /**
 * @constructor
-* @extends {sre.ClearspeakRuleTest}
+* @extends {sre.ClearspeakEnglishRuleTest}
 */
-sre.ClearspeakImpliedTimes = function() {
-  sre.ClearspeakImpliedTimes.base(this, 'constructor');
+sre.ClearspeakEnglishImpliedTimes = function() {
+  sre.ClearspeakEnglishImpliedTimes.base(this, 'constructor');
 
   /**
 * @override
   */
-  this.information = 'ClearspeakImpliedTimes rule tests.';
+  this.information = 'ClearspeakEnglishImpliedTimes rule tests.';
 
 };
-goog.inherits(sre.ClearspeakImpliedTimes, sre.ClearspeakRuleTest);
+goog.inherits(sre.ClearspeakEnglishImpliedTimes, sre.ClearspeakEnglishRuleTest);
 
 
 
@@ -46,9 +46,9 @@ goog.inherits(sre.ClearspeakImpliedTimes, sre.ClearspeakRuleTest);
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes001
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes001
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes001 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes001 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mn>3</mn><mo>)</mo>' +
       '</mrow></mrow></math>';
@@ -58,9 +58,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes001 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes002
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes002
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes002 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes002 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mn>3</mn><mo>]</mo>' +
       '</mrow></mrow></math>';
@@ -70,9 +70,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes002 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes003
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes003
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes003 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes003 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mn>4</mn></msup><mrow><mo>(' +
       '</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>';
@@ -82,9 +82,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes003 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes004
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes004
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes004 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes004 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mo>+' +
       '</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow></math>';
@@ -94,9 +94,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes004 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes005
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes005
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes005 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes005 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mo>+' +
       '</mo><mn>4</mn></mrow><mo>]</mo></mrow></mrow></math>';
@@ -106,9 +106,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes005 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes006
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes006
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes006 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes006 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow>' +
       '<mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow></math>';
@@ -118,9 +118,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes006 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes007
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes007
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes007 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes007 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mn>2</mn><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow><mn>2' +
@@ -131,9 +131,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes007 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes008
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes008
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes008 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes008 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mo>+</mo><mn>7' +
       '</mn></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>−' +
@@ -145,9 +145,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes008 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes009
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes009
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes009 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes009 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mn>2</mn><mo>+</mo><mn>7' +
       '</mn></mrow><mo>]</mo></mrow><mrow><mo>[</mo><mrow><mn>3</mn><mo>−' +
@@ -159,10 +159,10 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes009 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes010
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes010
  */
 // TODO: (Simons) x is categorised as function!
-sre.ClearspeakImpliedTimes.prototype.untestImpTimes010 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.untestImpTimes010 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mi>z' +
       '</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -172,9 +172,9 @@ sre.ClearspeakImpliedTimes.prototype.untestImpTimes010 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes011
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes011
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes011 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes011 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mo>+' +
       '</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -184,9 +184,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes011 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes012
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes012
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes012 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes012 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mi>y</mi><mo>+' +
       '</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
@@ -196,9 +196,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes012 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes013
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes013
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes013 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes013 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>−</mo>' +
       '<mn>1</mn><mo stretchy="false">)</mo><mi>x</mi></mrow></math>';
@@ -208,9 +208,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes013 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes014
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes014
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes014 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes014 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><mrow><mo>(' +
       '</mo><mrow><mn>3</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow>' +
@@ -221,9 +221,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes014 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes015
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes015
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes015 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes015 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><msubsup><mi>p</mi><mn>1</mn><mrow><msub><mi>a' +
       '</mi><mn>1</mn></msub></mrow></msubsup><msubsup><mi>p</mi><mn>2</mn>' +
@@ -235,9 +235,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes015 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes016
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes016
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes016 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes016 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo>' +
@@ -251,9 +251,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes016 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes017
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes017
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes017 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes017 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><mn>4</mn><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow>' +
@@ -265,9 +265,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes017 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes018
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes018
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes018 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes018 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>x</mi><mi>y</mi></mrow></math>';
   var speech = 'x y';
@@ -276,9 +276,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes018 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes019
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes019
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes019 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes019 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><msup><mi>x</mi><mn>2</mn></msup><msup><mi>y' +
       '</mi><mn>3</mn></msup></mrow></math>';
@@ -288,9 +288,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes019 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes020
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes020
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes020 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes020 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>1' +
       '</mn></mrow></msup><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>2' +
@@ -301,9 +301,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes020 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes021
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes021
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes021 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes021 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><msqrt><mi>a</mi></msqrt><msqrt><mi>b</mi>' +
       '</msqrt><mo>=</mo><msqrt><mrow><mi>a</mi><mi>b</mi></mrow></msqrt>' +
@@ -315,9 +315,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes021 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes022
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes022
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes022 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes022 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><msqrt><mn>3</mn></msqrt><msqrt><mrow><mn>10' +
       '</mn></mrow></msqrt><mo>=</mo><msqrt><mrow><mn>30</mn></mrow>' +
@@ -329,9 +329,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes022 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes023
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes023
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes023 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes023 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mn>2</mn><msqrt><mn>3</mn></msqrt></mrow></math>';
   var speech = '2 the square root of 3';
@@ -340,9 +340,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes023 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes024
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes024
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes024 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes024 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mn>1</mn><mo>+</mo><mn>2</mn><msqrt><mn>3</mn>' +
       '</msqrt></mrow></math>';
@@ -352,9 +352,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes024 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes025
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes025
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes025 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes025 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi>' +
       '<mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn>' +
@@ -367,9 +367,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes025 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes026
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes026
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes026 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes026 = function() {
   var preference = 'ImpliedTimes_Auto:Functions_None';
   var mathml = '<math><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi>' +
       '<mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn>' +
@@ -382,9 +382,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes026 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes027
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes027
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes027 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes027 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>sin</mi><mi>x</mi><mi>cos</mi><mi>y</mi>' +
       '<mo>+</mo><mi>cos</mi><mi>x</mi><mi>sin</mi><mi>y</mi></mrow></math>';
@@ -394,9 +394,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes027 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes027a
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes027a
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes027a = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes027a = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mi>cos</mi><mrow><mo>(' +
@@ -409,9 +409,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes027a = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes028
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes028
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes028 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes028 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10' +
       '</mn></mrow></msub><mi>x</mi><mi>y</mi></mrow></math>';
@@ -421,9 +421,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes028 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes029
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes029
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes029 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes029 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>log</mi>' +
@@ -435,9 +435,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes029 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes030
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes030
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes030 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes030 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd>' +
@@ -452,9 +452,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes030 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes031
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes031
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes031 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes031 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn>' +
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
@@ -467,9 +467,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes031 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes032
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes032
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes032 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes032 = function() {
   var preference = 'ImpliedTimes_Auto:Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn>' +
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
@@ -483,9 +483,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes032 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes033
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes033
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes033 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes033 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn>' +
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
@@ -498,9 +498,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes033 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes034
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes034
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes034 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes034 = function() {
   var preference = 'ImpliedTimes_Auto:Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn>' +
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
@@ -514,9 +514,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes034 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes035
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes035
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes035 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes035 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>|</mo><mi>x</mi><mo>|</mo>' +
       '</mrow></mrow></math>';
@@ -526,9 +526,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes035 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes036
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes036
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes036 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes036 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow>' +
       '<mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow></mrow></math>';
@@ -538,9 +538,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes036 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes037
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes037
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes037 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes037 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mrow><mi>y</mi><mo>−' +
@@ -552,9 +552,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes037 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes037a
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes037a
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes037a = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes037a = function() {
   var preference = 'ImpliedTimes_Auto:AbsoluteValue_AbsEnd';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mrow><mi>y</mi><mo>−' +
@@ -566,9 +566,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes037a = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes038
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes038
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes038 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes038 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo>' +
@@ -580,9 +580,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes038 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes0381
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes0381
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes0381 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes0381 = function() {
   var preference = 'ImpliedTimes_Auto:AbsoluteValue_AbsEnd';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo>' +
@@ -594,9 +594,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes0381 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes039
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes039
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes039 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes039 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mn>3</mn><mo>)</mo>' +
       '</mrow></mrow></math>';
@@ -606,9 +606,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes039 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes040
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes040
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes040 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes040 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mn>3</mn><mo>]</mo>' +
       '</mrow></mrow></math>';
@@ -618,9 +618,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes040 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes041
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes041
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes041 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes041 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><msup><mn>2</mn><mn>4</mn></msup><mrow><mo>(' +
       '</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>';
@@ -630,9 +630,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes041 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes042
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes042
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes042 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes042 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mo>+' +
       '</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow></math>';
@@ -642,9 +642,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes042 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes043
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes043
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes043 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes043 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mo>+' +
       '</mo><mn>4</mn></mrow><mo>]</mo></mrow></mrow></math>';
@@ -654,9 +654,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes043 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes044
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes044
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes044 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes044 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow>' +
       '<mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow></math>';
@@ -666,9 +666,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes044 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes045
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes045
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes045 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes045 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mn>2</mn><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow><mn>2' +
@@ -679,9 +679,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes045 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes046
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes046
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes046 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes046 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mo>+</mo><mn>7' +
       '</mn></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>−' +
@@ -693,9 +693,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes046 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes047
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes047
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes047 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes047 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mn>2</mn><mo>+</mo><mn>7' +
       '</mn></mrow><mo>]</mo></mrow><mrow><mo>[</mo><mrow><mn>3</mn><mo>−' +
@@ -707,10 +707,10 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes047 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes048
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes048
  */
 // TODO: (Simons) x is categorised as function!
-sre.ClearspeakImpliedTimes.prototype.untestImpTimes048 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.untestImpTimes048 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mi>z' +
       '</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -720,9 +720,9 @@ sre.ClearspeakImpliedTimes.prototype.untestImpTimes048 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes049
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes049
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes049 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes049 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mo>+' +
       '</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -732,9 +732,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes049 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes050
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes050
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes050 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes050 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mi>y</mi><mo>+' +
       '</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
@@ -744,9 +744,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes050 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes051
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes051
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes051 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes051 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>−</mo>' +
       '<mn>1</mn><mo stretchy="false">)</mo><mi>x</mi></mrow></math>';
@@ -756,9 +756,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes051 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes052
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes052
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes052 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes052 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><mrow><mo>(' +
       '</mo><mrow><mn>3</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow>' +
@@ -769,9 +769,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes052 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes053
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes053
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes053 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes053 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><msubsup><mi>p</mi><mn>1</mn><mrow><msub><mi>a' +
       '</mi><mn>1</mn></msub></mrow></msubsup><msubsup><mi>p</mi><mn>2</mn>' +
@@ -783,9 +783,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes053 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes054
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes054
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes054 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes054 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo>' +
@@ -799,9 +799,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes054 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes055
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes055
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes055 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes055 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><mn>4</mn><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow>' +
@@ -813,9 +813,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes055 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes056
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes056
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes056 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes056 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mi>x</mi><mi>y</mi></mrow></math>';
   var speech = 'x times y';
@@ -824,9 +824,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes056 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes057
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes057
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes057 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes057 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><msup><mi>x</mi><mn>2</mn></msup><msup><mi>y' +
       '</mi><mn>3</mn></msup></mrow></math>';
@@ -836,9 +836,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes057 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes058
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes058
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes058 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes058 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>1' +
       '</mn></mrow></msup><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>2' +
@@ -850,9 +850,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes058 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes059
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes059
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes059 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes059 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><msqrt><mi>a</mi></msqrt><msqrt><mi>b</mi>' +
       '</msqrt><mo>=</mo><msqrt><mrow><mi>a</mi><mi>b</mi></mrow></msqrt>' +
@@ -864,9 +864,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes059 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes060
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes060
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes060 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes060 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><msqrt><mn>3</mn></msqrt><msqrt><mrow><mn>10' +
       '</mn></mrow></msqrt><mo>=</mo><msqrt><mrow><mn>30</mn></mrow>' +
@@ -878,9 +878,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes060 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes061
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes061
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes061 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes061 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mn>2</mn><msqrt><mn>3</mn></msqrt></mrow></math>';
   var speech = '2 times the square root of 3';
@@ -889,9 +889,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes061 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes062
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes062
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes062 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes062 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mn>1</mn><mo>+</mo><mn>2</mn><msqrt><mn>3</mn>' +
       '</msqrt></mrow></math>';
@@ -901,9 +901,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes062 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes063
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes063
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes063 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes063 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi>' +
       '<mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn>' +
@@ -916,9 +916,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes063 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes064
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes064
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes064 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes064 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimesAnd:Functions_None';
   var mathml = '<math><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi>' +
       '<mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn>' +
@@ -931,9 +931,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes064 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes065
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes065
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes065 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes065 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mi>sin</mi><mi>x</mi><mi>cos</mi><mi>y</mi>' +
       '<mo>+</mo><mi>cos</mi><mi>x</mi><mi>sin</mi><mi>y</mi></mrow></math>';
@@ -943,9 +943,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes065 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes065a
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes065a
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes065a = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes065a = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mi>cos</mi><mrow><mo>(' +
@@ -958,9 +958,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes065a = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes066
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes066
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes066 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes066 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10' +
       '</mn></mrow></msub><mi>x</mi><mi>y</mi></mrow></math>';
@@ -970,9 +970,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes066 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes067
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes067
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes067 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes067 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>log</mi>' +
@@ -984,9 +984,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes067 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes068
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes068
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes068 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes068 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd>' +
@@ -1001,9 +1001,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes068 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes069
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes069
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes069 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes069 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn>' +
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
@@ -1016,9 +1016,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes069 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes070
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes070
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes070 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes070 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes:Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn>' +
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
@@ -1032,9 +1032,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes070 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes070a
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes070a
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes070a = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes070a = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn>' +
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
@@ -1047,9 +1047,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes070a = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes071
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes071
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes071 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes071 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes:Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn>' +
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
@@ -1063,9 +1063,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes071 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes072
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes072
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes072 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes072 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>|</mo><mi>x</mi><mo>|</mo>' +
       '</mrow></mrow></math>';
@@ -1075,9 +1075,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes072 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes073
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes073
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes073 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes073 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow>' +
       '<mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow></mrow></math>';
@@ -1087,9 +1087,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes073 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes074
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes074
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes074 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes074 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mrow><mi>y</mi><mo>−' +
@@ -1101,9 +1101,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes074 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes074a
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes074a
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes074a = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes074a = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes:AbsoluteValue_AbsEnd';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mrow><mi>y</mi><mo>−' +
@@ -1115,9 +1115,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes074a = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes075
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes075
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes075 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes075 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo>' +
@@ -1129,9 +1129,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes075 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes076
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes076
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes076 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes076 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes:AbsoluteValue_AbsEnd';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo>' +
@@ -1143,9 +1143,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes076 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes077
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes077
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes077 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes077 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mn>3</mn><mo>)</mo>' +
       '</mrow></mrow></math>';
@@ -1155,9 +1155,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes077 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes078
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes078
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes078 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes078 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mn>3</mn><mo>]</mo>' +
       '</mrow></mrow></math>';
@@ -1167,9 +1167,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes078 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes079
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes079
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes079 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes079 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><msup><mn>2</mn><mn>4</mn></msup><mrow><mo>(' +
       '</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>';
@@ -1179,9 +1179,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes079 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes080
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes080
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes080 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes080 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mo>+' +
       '</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow></math>';
@@ -1191,9 +1191,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes080 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes081
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes081
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes081 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes081 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mo>+' +
       '</mo><mn>4</mn></mrow><mo>]</mo></mrow></mrow></math>';
@@ -1203,9 +1203,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes081 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes082
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes082
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes082 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes082 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow>' +
       '<mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow></math>';
@@ -1215,9 +1215,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes082 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes083
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes083
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes083 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes083 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mn>2</mn><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow><mn>2' +
@@ -1228,9 +1228,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes083 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes084
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes084
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes084 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes084 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mo>+</mo><mn>7' +
       '</mn></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>−' +
@@ -1242,9 +1242,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes084 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes085
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes085
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes085 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes085 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mn>2</mn><mo>+</mo><mn>7' +
       '</mn></mrow><mo>]</mo></mrow><mrow><mo>[</mo><mrow><mn>3</mn><mo>−' +
@@ -1257,9 +1257,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes085 = function() {
 
 // TODO: (Simons) x is categorised as function!
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes086
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes086
  */
-sre.ClearspeakImpliedTimes.prototype.untestImpTimes086 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.untestImpTimes086 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mi>z' +
       '</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -1269,9 +1269,9 @@ sre.ClearspeakImpliedTimes.prototype.untestImpTimes086 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes087
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes087
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes087 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes087 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mo>+' +
       '</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -1281,9 +1281,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes087 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes088
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes088
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes088 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes088 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mi>y</mi><mo>+' +
       '</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
@@ -1293,9 +1293,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes088 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes089
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes089
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes089 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes089 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>−</mo>' +
       '<mn>1</mn><mo stretchy="false">)</mo><mi>x</mi></mrow></math>';
@@ -1305,9 +1305,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes089 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes090
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes090
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes090 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes090 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><mrow><mo>(' +
       '</mo><mrow><mn>3</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow>' +
@@ -1318,9 +1318,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes090 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes091
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes091
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes091 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes091 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><msubsup><mi>p</mi><mn>1</mn><mrow><msub><mi>a' +
       '</mi><mn>1</mn></msub></mrow></msubsup><msubsup><mi>p</mi><mn>2</mn>' +
@@ -1332,9 +1332,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes091 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes092
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes092
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes092 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes092 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo>' +
@@ -1348,9 +1348,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes092 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes093
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes093
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes093 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes093 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><mn>4</mn><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow>' +
@@ -1361,9 +1361,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes093 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes094
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes094
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes094 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes094 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mi>x</mi><mi>y</mi></mrow></math>';
   var speech = 'x y';
@@ -1372,9 +1372,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes094 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes095
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes095
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes095 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes095 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><msup><mi>x</mi><mn>2</mn></msup><msup><mi>y' +
       '</mi><mn>3</mn></msup></mrow></math>';
@@ -1384,9 +1384,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes095 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes096
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes096
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes096 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes096 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>1' +
       '</mn></mrow></msup><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>2' +
@@ -1397,9 +1397,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes096 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes097
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes097
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes097 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes097 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><msqrt><mi>a</mi></msqrt><msqrt><mi>b</mi>' +
       '</msqrt><mo>=</mo><msqrt><mrow><mi>a</mi><mi>b</mi></mrow></msqrt>' +
@@ -1411,9 +1411,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes097 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes098
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes098
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes098 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes098 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><msqrt><mn>3</mn></msqrt><msqrt><mrow><mn>10' +
       '</mn></mrow></msqrt><mo>=</mo><msqrt><mrow><mn>30</mn></mrow>' +
@@ -1425,9 +1425,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes098 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes099
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes099
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes099 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes099 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mn>2</mn><msqrt><mn>3</mn></msqrt></mrow></math>';
   var speech = '2 the square root of 3';
@@ -1436,9 +1436,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes099 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes100
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes100
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes100 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes100 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mn>1</mn><mo>+</mo><mn>2</mn><msqrt><mn>3</mn>' +
       '</msqrt></mrow></math>';
@@ -1448,9 +1448,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes100 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes101
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes101
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes101 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes101 = function() {
   var preference = 'ImpliedTimes_None:Functions_Auto';
   var mathml = '<math><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi>' +
       '<mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn>' +
@@ -1463,9 +1463,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes101 = function() {
 
 // TODO: (Simons) Need to be able to specify excluded preferences.
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes102
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes102
  */
-sre.ClearspeakImpliedTimes.prototype.untestImpTimes102 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.untestImpTimes102 = function() {
   var preference = 'ImpliedTimes_None:Functions_None';
   var mathml = '<math><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi>' +
       '<mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn>' +
@@ -1478,9 +1478,9 @@ sre.ClearspeakImpliedTimes.prototype.untestImpTimes102 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes103
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes103
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes103 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes103 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mi>sin</mi><mi>x</mi><mi>cos</mi><mi>y</mi>' +
       '<mo>+</mo><mi>cos</mi><mi>x</mi><mi>sin</mi><mi>y</mi></mrow></math>';
@@ -1490,9 +1490,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes103 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes104
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes104
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes104 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes104 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10' +
       '</mn></mrow></msub><mi>x</mi><mi>y</mi></mrow></math>';
@@ -1502,9 +1502,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes104 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes105
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes105
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes105 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes105 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>log</mi>' +
@@ -1516,9 +1516,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes105 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes106
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes106
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes106 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes106 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd>' +
@@ -1533,9 +1533,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes106 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes107
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes107
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes107 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes107 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn>' +
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
@@ -1548,9 +1548,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes107 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes108
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes108
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes108 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes108 = function() {
   var preference = 'ImpliedTimes_None:Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn>' +
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
@@ -1563,9 +1563,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes108 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes109
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes109
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes109 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes109 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn>' +
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
@@ -1578,9 +1578,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes109 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes110
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes110
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes110 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes110 = function() {
   var preference = 'ImpliedTimes_None:Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn>' +
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
@@ -1593,9 +1593,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes110 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes111
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes111
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes111 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes111 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>|</mo><mi>x</mi><mo>|</mo>' +
       '</mrow></mrow></math>';
@@ -1605,9 +1605,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes111 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes112
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes112
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes112 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes112 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow>' +
       '<mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow></mrow></math>';
@@ -1617,9 +1617,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes112 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes113
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes113
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes113 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes113 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mrow><mi>y</mi><mo>−' +
@@ -1631,9 +1631,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes113 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimes114
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimes114
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimes114 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimes114 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo>' +
@@ -1650,9 +1650,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes114 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimesSilPar001
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimesSilPar001
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar001 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimesSilPar001 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mn>3</mn><mo>)</mo>' +
       '</mrow></mrow></math>';
@@ -1662,9 +1662,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar001 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimesSilPar002
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimesSilPar002
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar002 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimesSilPar002 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mn>3</mn><mo>]</mo>' +
       '</mrow></mrow></math>';
@@ -1674,9 +1674,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar002 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimesSilPar003
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimesSilPar003
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar003 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimesSilPar003 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><msup><mn>2</mn><mn>4</mn></msup><mrow><mo>(' +
       '</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>';
@@ -1686,9 +1686,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar003 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimesSilPar004
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimesSilPar004
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar004 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimesSilPar004 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mo>+' +
       '</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow></math>';
@@ -1698,9 +1698,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar004 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimesSilPar005
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimesSilPar005
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar005 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimesSilPar005 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mo>+' +
       '</mo><mn>4</mn></mrow><mo>]</mo></mrow></mrow></math>';
@@ -1710,9 +1710,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar005 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimesSilPar006
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimesSilPar006
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar006 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimesSilPar006 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow>' +
       '<mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow></math>';
@@ -1722,9 +1722,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar006 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimesSilPar007
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimesSilPar007
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar007 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimesSilPar007 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow><mn>2' +
@@ -1735,9 +1735,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar007 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimesSilPar008
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimesSilPar008
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar008 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimesSilPar008 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mo>+</mo><mn>7' +
       '</mn></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>−' +
@@ -1749,9 +1749,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar008 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimesSilPar009
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimesSilPar009
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar009 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimesSilPar009 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mn>2</mn><mo>+</mo><mn>7' +
       '</mn></mrow><mo>]</mo></mrow><mrow><mo>[</mo><mrow><mn>3</mn><mo>−' +
@@ -1764,9 +1764,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar009 = function() {
 
 // TODO: (Simons) x is categorised as function!
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimesSilPar010
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimesSilPar010
  */
-sre.ClearspeakImpliedTimes.prototype.untestImpTimesSilPar010 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.untestImpTimesSilPar010 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mi>z' +
       '</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -1776,9 +1776,9 @@ sre.ClearspeakImpliedTimes.prototype.untestImpTimesSilPar010 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimesSilPar011
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimesSilPar011
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar011 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimesSilPar011 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mo>+' +
       '</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -1788,9 +1788,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar011 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimesSilPar012
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimesSilPar012
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar012 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimesSilPar012 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mi>y</mi><mo>+' +
       '</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
@@ -1800,9 +1800,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar012 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimesSilPar013
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimesSilPar013
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar013 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimesSilPar013 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>−</mo>' +
       '<mn>1</mn><mo stretchy="false">)</mo><mi>x</mi></mrow></math>';
@@ -1812,9 +1812,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar013 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimesSilPar014
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimesSilPar014
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar014 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimesSilPar014 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><mrow><mo>(' +
       '</mo><mrow><mn>3</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow>' +
@@ -1825,9 +1825,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar014 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimesSilPar015
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimesSilPar015
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar015 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimesSilPar015 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo>' +
@@ -1841,9 +1841,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar015 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimesSilPar016
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimesSilPar016
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar016 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimesSilPar016 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><mn>4</mn><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow>' +
@@ -1854,9 +1854,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar016 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimesSilPar017
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimesSilPar017
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar017 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimesSilPar017 = function() {
   var preference = 'ImpliedTimes_None';
   // preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi>' +
@@ -1870,9 +1870,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar017 = function() {
 
 // TODO: (Simons) Need to be able to specify excluded preferences.
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimesSilPar018
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimesSilPar018
  */
-sre.ClearspeakImpliedTimes.prototype.untestImpTimesSilPar018 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.untestImpTimesSilPar018 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent:Functions_None';
   var mathml = '<math><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi>' +
       '<mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn>' +
@@ -1885,9 +1885,9 @@ sre.ClearspeakImpliedTimes.prototype.untestImpTimesSilPar018 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimesSilPar019
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimesSilPar019
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar019 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimesSilPar019 = function() {
   var preference = 'ImpliedTimes_None';
   // preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi>' +
@@ -1900,9 +1900,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar019 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimesSilPar020
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimesSilPar020
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar020 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimesSilPar020 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd>' +
@@ -1917,9 +1917,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar020 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimesSilPar021
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimesSilPar021
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar021 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimesSilPar021 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn>' +
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
@@ -1932,9 +1932,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar021 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimesSilPar022
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimesSilPar022
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar022 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimesSilPar022 = function() {
   var preference = 'ImpliedTimes_None:Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn>' +
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
@@ -1947,9 +1947,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar022 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimesSilPar023
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimesSilPar023
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar023 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimesSilPar023 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn>' +
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
@@ -1962,9 +1962,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar023 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example ImpTimesSilPar024
+ * Testing ClearspeakEnglishImpliedTimes Example ImpTimesSilPar024
  */
-sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar024 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testImpTimesSilPar024 = function() {
   var preference = 'ImpliedTimes_None:Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn>' +
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
@@ -1987,9 +1987,9 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar024 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example Extra001
+ * Testing ClearspeakEnglishImpliedTimes Example Extra001
  */
-sre.ClearspeakImpliedTimes.prototype.testExtra001 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testExtra001 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>A</mi><mo>=</mo><mi>h</mi><mrow><mo>(</mo>' +
       '<mrow><mfrac><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>+</mo><msub>' +
@@ -2002,9 +2002,9 @@ sre.ClearspeakImpliedTimes.prototype.testExtra001 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example Extra002
+ * Testing ClearspeakEnglishImpliedTimes Example Extra002
  */
-sre.ClearspeakImpliedTimes.prototype.testExtra002 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testExtra002 = function() {
   var preference = 'ImpliedTimes_Auto:Functions_None';
   var mathml = '<math><mrow><mi>A</mi><mo>=</mo><mi>h</mi><mrow><mo>(</mo>' +
       '<mrow><mfrac><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>+</mo><msub>' +
@@ -2017,9 +2017,9 @@ sre.ClearspeakImpliedTimes.prototype.testExtra002 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example Extra003
+ * Testing ClearspeakEnglishImpliedTimes Example Extra003
  */
-sre.ClearspeakImpliedTimes.prototype.testExtra003 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testExtra003 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mn>0</mn><mo>)</mo>' +
       '</mrow><mo>=</mo><mn>0</mn><mrow><mo>(</mo><mi>a</mi><mo>)</mo>' +
@@ -2030,9 +2030,9 @@ sre.ClearspeakImpliedTimes.prototype.testExtra003 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example Extra004
+ * Testing ClearspeakEnglishImpliedTimes Example Extra004
  */
-sre.ClearspeakImpliedTimes.prototype.testExtra004 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testExtra004 = function() {
   var preference = 'ImpliedTimes_Auto:Functions_None';
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mn>0</mn><mo>)</mo>' +
       '</mrow><mo>=</mo><mn>0</mn><mrow><mo>(</mo><mi>a</mi><mo>)</mo>' +
@@ -2043,9 +2043,9 @@ sre.ClearspeakImpliedTimes.prototype.testExtra004 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example Extra005
+ * Testing ClearspeakEnglishImpliedTimes Example Extra005
  */
-sre.ClearspeakImpliedTimes.prototype.testExtra005 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testExtra005 = function() {
   var preference = 'ImpliedTimes_Auto';
   preference = 'Functions_None';
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>1' +
@@ -2057,9 +2057,9 @@ sre.ClearspeakImpliedTimes.prototype.testExtra005 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example Extra006
+ * Testing ClearspeakEnglishImpliedTimes Example Extra006
  */
-sre.ClearspeakImpliedTimes.prototype.testExtra006 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testExtra006 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>1' +
       '</mn></mrow><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mi>a</mi></mrow>' +
@@ -2071,9 +2071,9 @@ sre.ClearspeakImpliedTimes.prototype.testExtra006 = function() {
 
 // TODO: (Simons) a is categorised as function!
 /**
- * Testing ClearspeakImpliedTimes Example Extra007
+ * Testing ClearspeakEnglishImpliedTimes Example Extra007
  */
-sre.ClearspeakImpliedTimes.prototype.untestExtra007 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.untestExtra007 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mi>b</mi><mi>c' +
       '</mi></mrow><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mrow><mi>a' +
@@ -2085,9 +2085,9 @@ sre.ClearspeakImpliedTimes.prototype.untestExtra007 = function() {
 
 // TODO: (Simons) a is categorised as function!
 /**
- * Testing ClearspeakImpliedTimes Example Extra008
+ * Testing ClearspeakEnglishImpliedTimes Example Extra008
  */
-sre.ClearspeakImpliedTimes.prototype.untestExtra008 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.untestExtra008 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mfrac><mn>1' +
       '</mn><mi>a</mi></mfrac></mrow><mo>)</mo></mrow><mo>=</mo><mn>1</mn>' +
@@ -2098,9 +2098,9 @@ sre.ClearspeakImpliedTimes.prototype.untestExtra008 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example Extra009
+ * Testing ClearspeakEnglishImpliedTimes Example Extra009
  */
-sre.ClearspeakImpliedTimes.prototype.testExtra009 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testExtra009 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math style="background-color:#"> <semantics>  <mrow>   ' +
       '<mo>−</mo><mi>u</mi><mrow><mo>(</mo>    <mi>v</mi>   <mo>)</mo>' +
@@ -2114,9 +2114,9 @@ sre.ClearspeakImpliedTimes.prototype.testExtra009 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example Extra010
+ * Testing ClearspeakEnglishImpliedTimes Example Extra010
  */
-sre.ClearspeakImpliedTimes.prototype.testExtra010 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testExtra010 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>B</mi><mrow><mo>(</mo><mrow><mn>2</mn><mo>,' +
       '</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>';
@@ -2126,9 +2126,9 @@ sre.ClearspeakImpliedTimes.prototype.testExtra010 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example Extra012
+ * Testing ClearspeakEnglishImpliedTimes Example Extra012
  */
-sre.ClearspeakImpliedTimes.prototype.testExtra012 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testExtra012 = function() {
   var preference = 'ImpliedTimes_Auto:Functions_None';
   var mathml = '<math><mrow><mi>B</mi><mrow><mo>(</mo><mrow><mn>2</mn><mo>,' +
       '</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>';
@@ -2139,9 +2139,9 @@ sre.ClearspeakImpliedTimes.prototype.testExtra012 = function() {
 
 // TODO: (Simons) Explore exact speech.
 /**
- * Testing ClearspeakImpliedTimes Example Extra013
+ * Testing ClearspeakEnglishImpliedTimes Example Extra013
  */
-sre.ClearspeakImpliedTimes.prototype.untestExtra013 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.untestExtra013 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>B</mi><mrow><mo>(</mo><mrow><mn>2</mn><mo>,' +
       '</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>';
@@ -2151,9 +2151,9 @@ sre.ClearspeakImpliedTimes.prototype.untestExtra013 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example Extra014
+ * Testing ClearspeakEnglishImpliedTimes Example Extra014
  */
-sre.ClearspeakImpliedTimes.prototype.testExtra014 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testExtra014 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>p</mi><mrow><mo>(</mo><mi>w</mi><mo>)</mo>' +
       '</mrow></mrow></math>';
@@ -2163,9 +2163,9 @@ sre.ClearspeakImpliedTimes.prototype.testExtra014 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example Extra015
+ * Testing ClearspeakEnglishImpliedTimes Example Extra015
  */
-sre.ClearspeakImpliedTimes.prototype.testExtra015 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testExtra015 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo>' +
       '</mrow><mo>=</mo><mn>2</mn><mi>t</mi><mo>+</mo><mn>4</mn></mrow></math>';
@@ -2175,9 +2175,9 @@ sre.ClearspeakImpliedTimes.prototype.testExtra015 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example Extra016
+ * Testing ClearspeakEnglishImpliedTimes Example Extra016
  */
-sre.ClearspeakImpliedTimes.prototype.testExtra016 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testExtra016 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>k</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '</mrow><mo>=</mo><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>3' +
@@ -2191,9 +2191,9 @@ sre.ClearspeakImpliedTimes.prototype.testExtra016 = function() {
 
 // TODO: (Simons) a is categorised as function!
 /**
- * Testing ClearspeakImpliedTimes Example Extra017
+ * Testing ClearspeakEnglishImpliedTimes Example Extra017
  */
-sre.ClearspeakImpliedTimes.prototype.untestExtra017 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.untestExtra017 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mn>3</mn><msup><mi>a</mi><mn>2</mn></msup>' +
       '<mo>−</mo><mn>12</mn><mi>a</mi><mo>=</mo><mn>3</mn><mi>a</mi><mrow>' +
@@ -2206,9 +2206,9 @@ sre.ClearspeakImpliedTimes.prototype.untestExtra017 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example Extra018
+ * Testing ClearspeakEnglishImpliedTimes Example Extra018
  */
-sre.ClearspeakImpliedTimes.prototype.testExtra018 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testExtra018 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>T</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo>' +
       '</mrow><mo>=</mo><msub><mi>T</mi><mi>s</mi></msub><mo>+</mo><mrow>' +
@@ -2222,9 +2222,9 @@ sre.ClearspeakImpliedTimes.prototype.testExtra018 = function() {
 
 
 /**
- * Testing ClearspeakImpliedTimes Example Extra019
+ * Testing ClearspeakEnglishImpliedTimes Example Extra019
  */
-sre.ClearspeakImpliedTimes.prototype.testExtra019 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.testExtra019 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>V</mi><mo>=</mo><mi mathvariant="script">l' +
       '</mi><mi>w</mi><mrow><mo>(</mo><mn>8</mn><mo>)</mo></mrow></mrow>' +
@@ -2238,9 +2238,9 @@ sre.ClearspeakImpliedTimes.prototype.testExtra019 = function() {
 
 // TODO: (Simons) Explore exact speech.
 /**
- * Testing ClearspeakImpliedTimes Example Extra020
+ * Testing ClearspeakEnglishImpliedTimes Example Extra020
  */
-sre.ClearspeakImpliedTimes.prototype.untestExtra020 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.untestExtra020 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>V</mi><mo>=</mo><mi mathvariant="script">l' +
       '</mi><mi>w</mi><mrow><mo>(</mo><mn>8</mn><mo>)</mo></mrow></mrow>' +

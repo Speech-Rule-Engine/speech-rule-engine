@@ -317,10 +317,10 @@ sre.DynamicCstr.Order;
  */
 sre.DynamicCstr.DEFAULT_ORDER = [
   sre.DynamicCstr.Axis.LOCALE,
+  sre.DynamicCstr.Axis.MODALITY,
   sre.DynamicCstr.Axis.DOMAIN,
   sre.DynamicCstr.Axis.STYLE,
-  sre.DynamicCstr.Axis.TOPIC,
-  sre.DynamicCstr.Axis.MODALITY
+  sre.DynamicCstr.Axis.TOPIC
 ];
 
 
@@ -342,7 +342,7 @@ sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE] =
 sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.TOPIC] =
     sre.DynamicCstr.DEFAULT_VALUE;
 sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY] =
-    sre.DynamicCstr.DEFAULT_VALUE;
+    'speech';// sre.DynamicCstr.DEFAULT_VALUE;
 
 
 
@@ -535,6 +535,14 @@ sre.DynamicCstr.DefaultComparator.prototype.compare = function(cstr1, cstr2) {
     }
   }
   return 0;
+};
+
+
+/**
+ * @override
+ */
+sre.DynamicCstr.DefaultComparator.prototype.toString = function() {
+  return this.reference_.toString() + '\n' + this.fallback_.toString();
 };
 
 

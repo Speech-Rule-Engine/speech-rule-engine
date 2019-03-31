@@ -17,26 +17,26 @@
 //
 
 
-goog.provide('sre.ClearspeakNamedSets');
+goog.provide('sre.ClearspeakEnglishNamedSets');
 
-goog.require('sre.ClearspeakRuleTest');
+goog.require('sre.ClearspeakEnglishRuleTest');
 
 
 
 /**
 * @constructor
-* @extends {sre.ClearspeakRuleTest}
+* @extends {sre.ClearspeakEnglishRuleTest}
 */
-sre.ClearspeakNamedSets = function() {
-  sre.ClearspeakNamedSets.base(this, 'constructor');
+sre.ClearspeakEnglishNamedSets = function() {
+  sre.ClearspeakEnglishNamedSets.base(this, 'constructor');
 
   /**
 * @override
   */
-  this.information = 'ClearspeakNamedSets rule tests.';
+  this.information = 'ClearspeakEnglishNamedSets rule tests.';
 
 };
-goog.inherits(sre.ClearspeakNamedSets, sre.ClearspeakRuleTest);
+goog.inherits(sre.ClearspeakEnglishNamedSets, sre.ClearspeakEnglishRuleTest);
 
 
 
@@ -51,9 +51,9 @@ goog.inherits(sre.ClearspeakNamedSets, sre.ClearspeakRuleTest);
 
 
 /**
- * Testing ClearspeakNamedSets Example NumSys001
+ * Testing ClearspeakEnglishNamedSets Example NumSys001
  */
-sre.ClearspeakNamedSets.prototype.testNumSys001 = function() {
+sre.ClearspeakEnglishNamedSets.prototype.testNumSys001 = function() {
   var preference = 'default';
   var mathml = '<mi>ℝ</mi>';
   var speech = 'the real numbers';
@@ -62,9 +62,9 @@ sre.ClearspeakNamedSets.prototype.testNumSys001 = function() {
 
 
 /**
- * Testing ClearspeakNamedSets Example NumSys001 (variant)
+ * Testing ClearspeakEnglishNamedSets Example NumSys001 (variant)
  */
-sre.ClearspeakNamedSets.prototype.testNumSys001a = function() {
+sre.ClearspeakEnglishNamedSets.prototype.testNumSys001a = function() {
   var preference = 'default';
   var mathml = '<mi mathvariant="double-struck">R</mi>';
   var speech = 'the real numbers';
@@ -73,9 +73,9 @@ sre.ClearspeakNamedSets.prototype.testNumSys001a = function() {
 
 
 /**
- * Testing ClearspeakNamedSets Example NumSys002
+ * Testing ClearspeakEnglishNamedSets Example NumSys002
  */
-sre.ClearspeakNamedSets.prototype.testNumSys002 = function() {
+sre.ClearspeakEnglishNamedSets.prototype.testNumSys002 = function() {
   var preference = 'default';
   var mathml = '<mi>ℂ</mi>';
   var speech = 'the complex numbers';
@@ -84,9 +84,9 @@ sre.ClearspeakNamedSets.prototype.testNumSys002 = function() {
 
 
 /**
- * Testing ClearspeakNamedSets Example NumSys003
+ * Testing ClearspeakEnglishNamedSets Example NumSys003
  */
-sre.ClearspeakNamedSets.prototype.testNumSys003 = function() {
+sre.ClearspeakEnglishNamedSets.prototype.testNumSys003 = function() {
   var preference = 'default';
   var mathml = '<mi>ℤ</mi>';
   var speech = 'the integers';
@@ -95,9 +95,9 @@ sre.ClearspeakNamedSets.prototype.testNumSys003 = function() {
 
 
 /**
- * Testing ClearspeakNamedSets Example NumSys004
+ * Testing ClearspeakEnglishNamedSets Example NumSys004
  */
-sre.ClearspeakNamedSets.prototype.testNumSys004 = function() {
+sre.ClearspeakEnglishNamedSets.prototype.testNumSys004 = function() {
   var preference = 'default';
   var mathml = '<mi>ℚ</mi>';
   var speech = 'the rational numbers';
@@ -106,9 +106,9 @@ sre.ClearspeakNamedSets.prototype.testNumSys004 = function() {
 
 
 /**
- * Testing ClearspeakNamedSets Example NumSys005
+ * Testing ClearspeakEnglishNamedSets Example NumSys005
  */
-sre.ClearspeakNamedSets.prototype.testNumSys005 = function() {
+sre.ClearspeakEnglishNamedSets.prototype.testNumSys005 = function() {
   var preference = 'default';
   var mathml = '<mi>ℕ</mi>';
   var speech = 'the natural numbers';
@@ -117,9 +117,9 @@ sre.ClearspeakNamedSets.prototype.testNumSys005 = function() {
 
 
 /**
- * Testing ClearspeakNamedSets Example NumSys005
+ * Testing ClearspeakEnglishNamedSets Example NumSys005
  */
-sre.ClearspeakNamedSets.prototype.testNumSys005a = function() {
+sre.ClearspeakEnglishNamedSets.prototype.testNumSys005a = function() {
   var preference = 'default';
   var mathml = '<msub><mi>ℕ</mi><mn>0</mn></msub>';
   var speech = 'the natural numbers with zero';
@@ -128,9 +128,9 @@ sre.ClearspeakNamedSets.prototype.testNumSys005a = function() {
 
 
 /**
- * Testing ClearspeakNamedSets Example NumSys006
+ * Testing ClearspeakEnglishNamedSets Example NumSys006
  */
-sre.ClearspeakNamedSets.prototype.testNumSys006 = function() {
+sre.ClearspeakEnglishNamedSets.prototype.testNumSys006 = function() {
   var preference = 'default';
   var mathml = '<mrow><msup><mi>ℤ</mi><mo>+</mo></msup></mrow>';
   var speech = 'the positive integers';
@@ -139,9 +139,9 @@ sre.ClearspeakNamedSets.prototype.testNumSys006 = function() {
 
 
 /**
- * Testing ClearspeakNamedSets Example NumSys006
+ * Testing ClearspeakEnglishNamedSets Example NumSys006
  */
-sre.ClearspeakNamedSets.prototype.testNumSys006a = function() {
+sre.ClearspeakEnglishNamedSets.prototype.testNumSys006a = function() {
   var preference = 'default';
   var mathml = '<mrow><msup><mi>ℤ</mi><mo>-</mo></msup></mrow>';
   var speech = 'the negative integers';
@@ -150,9 +150,9 @@ sre.ClearspeakNamedSets.prototype.testNumSys006a = function() {
 
 
 /**
- * Testing ClearspeakNamedSets Example NumSys007
+ * Testing ClearspeakEnglishNamedSets Example NumSys007
  */
-sre.ClearspeakNamedSets.prototype.testNumSys007 = function() {
+sre.ClearspeakEnglishNamedSets.prototype.testNumSys007 = function() {
   var preference = 'default';
   var mathml = '<mrow><msup><mi>ℝ</mi><mn>2</mn></msup></mrow>';
   var speech = 'r-two';
@@ -161,9 +161,9 @@ sre.ClearspeakNamedSets.prototype.testNumSys007 = function() {
 
 
 /**
- * Testing ClearspeakNamedSets Example NumSys008
+ * Testing ClearspeakEnglishNamedSets Example NumSys008
  */
-sre.ClearspeakNamedSets.prototype.testNumSys008 = function() {
+sre.ClearspeakEnglishNamedSets.prototype.testNumSys008 = function() {
   var preference = 'default';
   var mathml = '<mrow><msup><mi>ℤ</mi><mn>3</mn></msup></mrow>';
   var speech = 'z-three';
@@ -172,9 +172,9 @@ sre.ClearspeakNamedSets.prototype.testNumSys008 = function() {
 
 
 /**
- * Testing ClearspeakNamedSets Example NumSys009
+ * Testing ClearspeakEnglishNamedSets Example NumSys009
  */
-sre.ClearspeakNamedSets.prototype.testNumSys009 = function() {
+sre.ClearspeakEnglishNamedSets.prototype.testNumSys009 = function() {
   var preference = 'default';
   var mathml = '<mrow><msup><mi>ℂ</mi><mi>n</mi></msup></mrow>';
   var speech = 'c-n';
@@ -183,9 +183,9 @@ sre.ClearspeakNamedSets.prototype.testNumSys009 = function() {
 
 
 /**
- * Testing ClearspeakNamedSets Example NumSys010
+ * Testing ClearspeakEnglishNamedSets Example NumSys010
  */
-sre.ClearspeakNamedSets.prototype.testNumSys010 = function() {
+sre.ClearspeakEnglishNamedSets.prototype.testNumSys010 = function() {
   var preference = 'default';
   var mathml = '<mrow><msup><mi>ℝ</mi><mi>∞</mi></msup></mrow>';
   var speech = 'r-infinity';

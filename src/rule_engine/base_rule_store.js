@@ -87,6 +87,12 @@ sre.BaseRuleStore = function() {
   this.locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
 
   /**
+   * Default modality.
+   * @type {string}
+   */
+  this.modality = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY];
+
+  /**
    * @type {boolean}
    */
   this.initialized = false;
@@ -325,5 +331,5 @@ sre.BaseRuleStore.prototype.setSpeechRules = function(rules) {
  * @return {!sre.DynamicCstr} The parsed constraint including locale.
  */
 sre.BaseRuleStore.prototype.parseCstr = function(cstr) {
-  return this.parser.parse(this.locale + '.' + cstr);
+  return this.parser.parse(this.locale + '.' + this.modality + '.' + cstr);
 };

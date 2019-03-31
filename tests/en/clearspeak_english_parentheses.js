@@ -17,26 +17,26 @@
 //
 
 
-goog.provide('sre.ClearspeakParentheses');
+goog.provide('sre.ClearspeakEnglishParentheses');
 
-goog.require('sre.ClearspeakRuleTest');
+goog.require('sre.ClearspeakEnglishRuleTest');
 
 
 
 /**
 * @constructor
-* @extends {sre.ClearspeakRuleTest}
+* @extends {sre.ClearspeakEnglishRuleTest}
 */
-sre.ClearspeakParentheses = function() {
-  sre.ClearspeakParentheses.base(this, 'constructor');
+sre.ClearspeakEnglishParentheses = function() {
+  sre.ClearspeakEnglishParentheses.base(this, 'constructor');
 
   /**
 * @override
   */
-  this.information = 'ClearspeakParentheses rule tests.';
+  this.information = 'ClearspeakEnglishParentheses rule tests.';
 
 };
-goog.inherits(sre.ClearspeakParentheses, sre.ClearspeakRuleTest);
+goog.inherits(sre.ClearspeakEnglishParentheses, sre.ClearspeakEnglishRuleTest);
 
 
 
@@ -46,9 +46,9 @@ goog.inherits(sre.ClearspeakParentheses, sre.ClearspeakRuleTest);
 
 
 /**
- * Testing ClearspeakParentheses Example Paren001
+ * Testing ClearspeakEnglishParentheses Example Paren001
  */
-sre.ClearspeakParentheses.prototype.testParen001 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen001 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>25</mn></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
@@ -58,9 +58,9 @@ sre.ClearspeakParentheses.prototype.testParen001 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren002
+ * Testing ClearspeakEnglishParentheses Example Paren002
  */
-sre.ClearspeakParentheses.prototype.testParen002 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen002 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
@@ -70,9 +70,9 @@ sre.ClearspeakParentheses.prototype.testParen002 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren003
+ * Testing ClearspeakEnglishParentheses Example Paren003
  */
-sre.ClearspeakParentheses.prototype.testParen003 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen003 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mn>2</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−' +
       '</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>';
@@ -82,9 +82,9 @@ sre.ClearspeakParentheses.prototype.testParen003 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren004
+ * Testing ClearspeakEnglishParentheses Example Paren004
  */
-sre.ClearspeakParentheses.prototype.testParen004 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen004 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mn>2</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−' +
       '</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>';
@@ -94,9 +94,9 @@ sre.ClearspeakParentheses.prototype.testParen004 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren005
+ * Testing ClearspeakEnglishParentheses Example Paren005
  */
-sre.ClearspeakParentheses.prototype.testParen005 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen005 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mn>2</mn><mo>−</mo><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow><mn>3' +
@@ -107,9 +107,9 @@ sre.ClearspeakParentheses.prototype.testParen005 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren006
+ * Testing ClearspeakEnglishParentheses Example Paren006
  */
-sre.ClearspeakParentheses.prototype.testParen006 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen006 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn>' +
       '<mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow>' +
@@ -120,9 +120,9 @@ sre.ClearspeakParentheses.prototype.testParen006 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren007
+ * Testing ClearspeakEnglishParentheses Example Paren007
  */
-sre.ClearspeakParentheses.prototype.testParen007 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen007 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn>' +
       '<mi>x</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>y</mi><mo>+</mo>' +
@@ -133,9 +133,9 @@ sre.ClearspeakParentheses.prototype.testParen007 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren008
+ * Testing ClearspeakEnglishParentheses Example Paren008
  */
-sre.ClearspeakParentheses.prototype.testParen008 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen008 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x' +
       '</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -145,9 +145,9 @@ sre.ClearspeakParentheses.prototype.testParen008 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren009
+ * Testing ClearspeakEnglishParentheses Example Paren009
  */
-sre.ClearspeakParentheses.prototype.testParen009 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen009 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mo>−</mo>' +
       '<mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup>' +
@@ -158,9 +158,9 @@ sre.ClearspeakParentheses.prototype.testParen009 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren010
+ * Testing ClearspeakEnglishParentheses Example Paren010
  */
-sre.ClearspeakParentheses.prototype.testParen010 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen010 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup>' +
@@ -171,9 +171,9 @@ sre.ClearspeakParentheses.prototype.testParen010 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren011
+ * Testing ClearspeakEnglishParentheses Example Paren011
  */
-sre.ClearspeakParentheses.prototype.testParen011 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen011 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2' +
       '</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
@@ -183,9 +183,9 @@ sre.ClearspeakParentheses.prototype.testParen011 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren012
+ * Testing ClearspeakEnglishParentheses Example Paren012
  */
-sre.ClearspeakParentheses.prototype.testParen012 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen012 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mn>3</mn><mn>4' +
       '</mn></mfrac><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -197,9 +197,9 @@ sre.ClearspeakParentheses.prototype.testParen012 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren013
+ * Testing ClearspeakEnglishParentheses Example Paren013
  */
-sre.ClearspeakParentheses.prototype.testParen013 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen013 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mn>11</mn>' +
       '</mrow><mrow><mn>22</mn></mrow></mfrac></mrow><mo>)</mo></mrow>' +
@@ -210,9 +210,9 @@ sre.ClearspeakParentheses.prototype.testParen013 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren014
+ * Testing ClearspeakEnglishParentheses Example Paren014
  */
-sre.ClearspeakParentheses.prototype.testParen014 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen014 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1' +
       '</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mn>4</mn>' +
@@ -223,9 +223,9 @@ sre.ClearspeakParentheses.prototype.testParen014 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren015
+ * Testing ClearspeakEnglishParentheses Example Paren015
  */
-sre.ClearspeakParentheses.prototype.testParen015 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen015 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mrow>' +
       '<mn>11</mn></mrow><mrow><mn>15</mn></mrow></mfrac></mrow><mo>)</mo>' +
@@ -236,9 +236,9 @@ sre.ClearspeakParentheses.prototype.testParen015 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren016
+ * Testing ClearspeakEnglishParentheses Example Paren016
  */
-sre.ClearspeakParentheses.prototype.testParen016 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen016 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>25</mn></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
@@ -248,9 +248,9 @@ sre.ClearspeakParentheses.prototype.testParen016 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren017
+ * Testing ClearspeakEnglishParentheses Example Paren017
  */
-sre.ClearspeakParentheses.prototype.testParen017 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen017 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
@@ -260,9 +260,9 @@ sre.ClearspeakParentheses.prototype.testParen017 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren018
+ * Testing ClearspeakEnglishParentheses Example Paren018
  */
-sre.ClearspeakParentheses.prototype.testParen018 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen018 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><mn>2</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−' +
       '</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>';
@@ -272,9 +272,9 @@ sre.ClearspeakParentheses.prototype.testParen018 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren019
+ * Testing ClearspeakEnglishParentheses Example Paren019
  */
-sre.ClearspeakParentheses.prototype.testParen019 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen019 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><mn>2</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−' +
       '</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>';
@@ -284,9 +284,9 @@ sre.ClearspeakParentheses.prototype.testParen019 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren020
+ * Testing ClearspeakEnglishParentheses Example Paren020
  */
-sre.ClearspeakParentheses.prototype.testParen020 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen020 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><mn>2</mn><mo>−</mo><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow><mn>3' +
@@ -297,9 +297,9 @@ sre.ClearspeakParentheses.prototype.testParen020 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren021
+ * Testing ClearspeakEnglishParentheses Example Paren021
  */
-sre.ClearspeakParentheses.prototype.testParen021 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen021 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn>' +
       '<mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow>' +
@@ -310,9 +310,9 @@ sre.ClearspeakParentheses.prototype.testParen021 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren022
+ * Testing ClearspeakEnglishParentheses Example Paren022
  */
-sre.ClearspeakParentheses.prototype.testParen022 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen022 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn>' +
       '<mi>x</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>y</mi><mo>+</mo>' +
@@ -323,9 +323,9 @@ sre.ClearspeakParentheses.prototype.testParen022 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren023
+ * Testing ClearspeakEnglishParentheses Example Paren023
  */
-sre.ClearspeakParentheses.prototype.testParen023 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen023 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x' +
       '</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -335,9 +335,9 @@ sre.ClearspeakParentheses.prototype.testParen023 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren024
+ * Testing ClearspeakEnglishParentheses Example Paren024
  */
-sre.ClearspeakParentheses.prototype.testParen024 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen024 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mo>−</mo>' +
       '<mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup>' +
@@ -348,9 +348,9 @@ sre.ClearspeakParentheses.prototype.testParen024 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren025
+ * Testing ClearspeakEnglishParentheses Example Paren025
  */
-sre.ClearspeakParentheses.prototype.testParen025 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen025 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup>' +
@@ -361,9 +361,9 @@ sre.ClearspeakParentheses.prototype.testParen025 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren026
+ * Testing ClearspeakEnglishParentheses Example Paren026
  */
-sre.ClearspeakParentheses.prototype.testParen026 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen026 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2' +
       '</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
@@ -373,9 +373,9 @@ sre.ClearspeakParentheses.prototype.testParen026 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren027
+ * Testing ClearspeakEnglishParentheses Example Paren027
  */
-sre.ClearspeakParentheses.prototype.testParen027 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen027 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mn>3</mn><mn>4' +
       '</mn></mfrac><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -385,9 +385,9 @@ sre.ClearspeakParentheses.prototype.testParen027 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren028
+ * Testing ClearspeakEnglishParentheses Example Paren028
  */
-sre.ClearspeakParentheses.prototype.testParen028 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen028 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mn>11</mn>' +
       '</mrow><mrow><mn>22</mn></mrow></mfrac></mrow><mo>)</mo></mrow>' +
@@ -398,9 +398,9 @@ sre.ClearspeakParentheses.prototype.testParen028 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren029
+ * Testing ClearspeakEnglishParentheses Example Paren029
  */
-sre.ClearspeakParentheses.prototype.testParen029 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen029 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1' +
       '</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mn>4</mn>' +
@@ -411,9 +411,9 @@ sre.ClearspeakParentheses.prototype.testParen029 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren030
+ * Testing ClearspeakEnglishParentheses Example Paren030
  */
-sre.ClearspeakParentheses.prototype.testParen030 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen030 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mrow>' +
       '<mn>11</mn></mrow><mrow><mn>15</mn></mrow></mfrac></mrow><mo>)</mo>' +
@@ -424,9 +424,9 @@ sre.ClearspeakParentheses.prototype.testParen030 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren031
+ * Testing ClearspeakEnglishParentheses Example Paren031
  */
-sre.ClearspeakParentheses.prototype.testParen031 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen031 = function() {
   var preference = 'Paren_CoordPoint';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mn>2' +
       '</mn></mrow><mo>)</mo></mrow></mrow></math>';
@@ -436,9 +436,9 @@ sre.ClearspeakParentheses.prototype.testParen031 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren032
+ * Testing ClearspeakEnglishParentheses Example Paren032
  */
-sre.ClearspeakParentheses.prototype.testParen032 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen032 = function() {
   var preference = 'Paren_CoordPoint';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y' +
       '</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -448,9 +448,9 @@ sre.ClearspeakParentheses.prototype.testParen032 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren033
+ * Testing ClearspeakEnglishParentheses Example Paren033
  */
-sre.ClearspeakParentheses.prototype.testParen033 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen033 = function() {
   var preference = 'Paren_CoordPoint';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mn>2' +
       '</mn><mo>,</mo><mn>3</mn></mrow><mo>)</mo></mrow></mrow></math>';
@@ -460,9 +460,9 @@ sre.ClearspeakParentheses.prototype.testParen033 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren034
+ * Testing ClearspeakEnglishParentheses Example Paren034
  */
-sre.ClearspeakParentheses.prototype.testParen034 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen034 = function() {
   var preference = 'Paren_CoordPoint';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y' +
       '</mi><mo>,</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -472,9 +472,9 @@ sre.ClearspeakParentheses.prototype.testParen034 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren035
+ * Testing ClearspeakEnglishParentheses Example Paren035
  */
-sre.ClearspeakParentheses.prototype.testParen035 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen035 = function() {
   var preference = 'Paren_CoordPoint';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mn>2' +
       '</mn><mo>,</mo><mn>386</mn></mrow><mo>)</mo></mrow></mrow></math>';
@@ -486,9 +486,9 @@ sre.ClearspeakParentheses.prototype.testParen035 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren036
+ * Testing ClearspeakEnglishParentheses Example Paren036
  */
-sre.ClearspeakParentheses.prototype.testParen036 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen036 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>,</mo>' +
       '<mtext></mtext><mi>b</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -498,9 +498,9 @@ sre.ClearspeakParentheses.prototype.testParen036 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren037
+ * Testing ClearspeakEnglishParentheses Example Paren037
  */
-sre.ClearspeakParentheses.prototype.testParen037 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen037 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>0</mn><mo>,</mo>' +
       '<mtext></mtext><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
@@ -510,9 +510,9 @@ sre.ClearspeakParentheses.prototype.testParen037 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren038
+ * Testing ClearspeakEnglishParentheses Example Paren038
  */
-sre.ClearspeakParentheses.prototype.testParen038 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen038 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mi>a</mi><mo>,</mo>' +
       '<mtext></mtext><mi>b</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -522,9 +522,9 @@ sre.ClearspeakParentheses.prototype.testParen038 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren039
+ * Testing ClearspeakEnglishParentheses Example Paren039
  */
-sre.ClearspeakParentheses.prototype.testParen039 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen039 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mn>0</mn><mo>,</mo>' +
       '<mtext></mtext><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
@@ -534,9 +534,9 @@ sre.ClearspeakParentheses.prototype.testParen039 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren040
+ * Testing ClearspeakEnglishParentheses Example Paren040
  */
-sre.ClearspeakParentheses.prototype.testParen040 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen040 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>,</mo>' +
       '<mtext></mtext><mi>b</mi></mrow><mo>]</mo></mrow></mrow></math>';
@@ -546,9 +546,9 @@ sre.ClearspeakParentheses.prototype.testParen040 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren041
+ * Testing ClearspeakEnglishParentheses Example Paren041
  */
-sre.ClearspeakParentheses.prototype.testParen041 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen041 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>0</mn><mo>,</mo>' +
       '<mtext></mtext><mn>1</mn></mrow><mo>]</mo></mrow></mrow></math>';
@@ -558,9 +558,9 @@ sre.ClearspeakParentheses.prototype.testParen041 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren042
+ * Testing ClearspeakEnglishParentheses Example Paren042
  */
-sre.ClearspeakParentheses.prototype.testParen042 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen042 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mi>a</mi><mo>,</mo>' +
       '<mtext></mtext><mi>b</mi></mrow><mo>]</mo></mrow></mrow></math>';
@@ -570,9 +570,9 @@ sre.ClearspeakParentheses.prototype.testParen042 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren043
+ * Testing ClearspeakEnglishParentheses Example Paren043
  */
-sre.ClearspeakParentheses.prototype.testParen043 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen043 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mn>0</mn><mo>,</mo>' +
       '<mtext></mtext><mn>1</mn></mrow><mo>]</mo></mrow></mrow></math>';
@@ -582,9 +582,9 @@ sre.ClearspeakParentheses.prototype.testParen043 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren044
+ * Testing ClearspeakEnglishParentheses Example Paren044
  */
-sre.ClearspeakParentheses.prototype.testParen044 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen044 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mi>∞</mi><mo>,' +
       '</mo><mtext></mtext><mi>b</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -594,9 +594,9 @@ sre.ClearspeakParentheses.prototype.testParen044 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren045
+ * Testing ClearspeakEnglishParentheses Example Paren045
  */
-sre.ClearspeakParentheses.prototype.testParen045 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen045 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mi>∞</mi><mo>,' +
       '</mo><mtext></mtext><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
@@ -606,9 +606,9 @@ sre.ClearspeakParentheses.prototype.testParen045 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren046
+ * Testing ClearspeakEnglishParentheses Example Paren046
  */
-sre.ClearspeakParentheses.prototype.testParen046 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen046 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mo stretchy="false">(</mo><mo>−</mo><mi>∞</mi>' +
       '<mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></math>';
@@ -618,9 +618,9 @@ sre.ClearspeakParentheses.prototype.testParen046 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren047
+ * Testing ClearspeakEnglishParentheses Example Paren047
  */
-sre.ClearspeakParentheses.prototype.testParen047 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen047 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mo stretchy="false">(</mo><mo>−</mo><mi>∞</mi>' +
       '<mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></math>';
@@ -630,9 +630,9 @@ sre.ClearspeakParentheses.prototype.testParen047 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren048
+ * Testing ClearspeakEnglishParentheses Example Paren048
  */
-sre.ClearspeakParentheses.prototype.testParen048 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen048 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>,</mo>' +
       '<mtext></mtext><mi>∞</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -642,9 +642,9 @@ sre.ClearspeakParentheses.prototype.testParen048 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren049
+ * Testing ClearspeakEnglishParentheses Example Paren049
  */
-sre.ClearspeakParentheses.prototype.testParen049 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen049 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo>' +
       '<mtext></mtext><mi>∞</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -654,9 +654,9 @@ sre.ClearspeakParentheses.prototype.testParen049 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren050
+ * Testing ClearspeakEnglishParentheses Example Paren050
  */
-sre.ClearspeakParentheses.prototype.testParen050 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen050 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo>' +
       '<mi>∞</mi><mo stretchy="false">)</mo></mrow></math>';
@@ -666,9 +666,9 @@ sre.ClearspeakParentheses.prototype.testParen050 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren051
+ * Testing ClearspeakEnglishParentheses Example Paren051
  */
-sre.ClearspeakParentheses.prototype.testParen051 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen051 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mo stretchy="false">[</mo><mn>1</mn><mo>,</mo>' +
       '<mi>∞</mi><mo stretchy="false">)</mo></mrow></math>';
@@ -678,9 +678,9 @@ sre.ClearspeakParentheses.prototype.testParen051 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren052
+ * Testing ClearspeakEnglishParentheses Example Paren052
  */
-sre.ClearspeakParentheses.prototype.testParen052 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen052 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mi>∞</mi><mo>,' +
       '</mo><mtext></mtext><mi>∞</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -690,9 +690,9 @@ sre.ClearspeakParentheses.prototype.testParen052 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Paren053
+ * Testing ClearspeakEnglishParentheses Example Paren053
  */
-sre.ClearspeakParentheses.prototype.testParen053 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testParen053 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mi>∞</mi><mo>,' +
       '</mo><mtext></mtext><mo>+</mo><mi>∞</mi></mrow><mo>)</mo></mrow>' +
@@ -703,9 +703,9 @@ sre.ClearspeakParentheses.prototype.testParen053 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Nest001
+ * Testing ClearspeakEnglishParentheses Example Nest001
  */
-sre.ClearspeakParentheses.prototype.testNest001 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testNest001 = function() {
   var preference = 'Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi>' +
       '<mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow>' +
@@ -716,9 +716,9 @@ sre.ClearspeakParentheses.prototype.testNest001 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Nest002
+ * Testing ClearspeakEnglishParentheses Example Nest002
  */
-sre.ClearspeakParentheses.prototype.testNest002 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testNest002 = function() {
   var preference = 'Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi>' +
       '<mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)' +
@@ -730,9 +730,9 @@ sre.ClearspeakParentheses.prototype.testNest002 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Nest003
+ * Testing ClearspeakEnglishParentheses Example Nest003
  */
-sre.ClearspeakParentheses.prototype.testNest003 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testNest003 = function() {
   var preference = 'Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mn>6</mn><mo>−</mo><mrow><mo>[</mo><mrow><mn>2' +
       '</mn><mo>−</mo><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>5</mn>' +
@@ -744,9 +744,9 @@ sre.ClearspeakParentheses.prototype.testNest003 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Nest004
+ * Testing ClearspeakEnglishParentheses Example Nest004
  */
-sre.ClearspeakParentheses.prototype.testNest004 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testNest004 = function() {
   var preference = 'Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mn>6</mn><mo>−</mo><mrow><mo>(</mo><mrow><mn>2' +
       '</mn><mo>−</mo><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>5</mn>' +
@@ -758,9 +758,9 @@ sre.ClearspeakParentheses.prototype.testNest004 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Nest005
+ * Testing ClearspeakEnglishParentheses Example Nest005
  */
-sre.ClearspeakParentheses.prototype.testNest005 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testNest005 = function() {
   var preference = 'Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mn>4</mn><mrow><mo>[</mo><mrow><mi>x</mi><mo>+' +
       '</mo><mn>3</mn><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo>' +
@@ -773,9 +773,9 @@ sre.ClearspeakParentheses.prototype.testNest005 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Nest006
+ * Testing ClearspeakEnglishParentheses Example Nest006
  */
-sre.ClearspeakParentheses.prototype.testNest006 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testNest006 = function() {
   var preference = 'Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mn>4</mn><mrow><mo>(</mo><mrow><mi>x</mi><mo>+' +
       '</mo><mn>3</mn><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo>' +
@@ -788,9 +788,9 @@ sre.ClearspeakParentheses.prototype.testNest006 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Nest007
+ * Testing ClearspeakEnglishParentheses Example Nest007
  */
-sre.ClearspeakParentheses.prototype.testNest007 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testNest007 = function() {
   var preference = 'Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mn>1</mn><mo>+</mo><mrow><mo>(</mo><mrow><mn>2' +
       '</mn><mo>+</mo><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>7</mn>' +
@@ -805,9 +805,9 @@ sre.ClearspeakParentheses.prototype.testNest007 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Nest008
+ * Testing ClearspeakEnglishParentheses Example Nest008
  */
-sre.ClearspeakParentheses.prototype.testNest008 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testNest008 = function() {
   var preference = 'Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mn>1</mn><mo>+</mo><mrow><mo>(</mo><mrow><mn>2' +
       '</mn><mo>+</mo><mrow><mo>(</mo><mrow><mn>3</mn><mo>−</mo><mrow><mo>(' +
@@ -821,9 +821,9 @@ sre.ClearspeakParentheses.prototype.testNest008 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example Nest009
+ * Testing ClearspeakEnglishParentheses Example Nest009
  */
-sre.ClearspeakParentheses.prototype.testNest009 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testNest009 = function() {
   var preference = 'Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow>' +
       '<mn>2</mn><mo>+</mo><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>4' +
@@ -843,9 +843,9 @@ sre.ClearspeakParentheses.prototype.testNest009 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example SilParen001
+ * Testing ClearspeakEnglishParentheses Example SilParen001
  */
-sre.ClearspeakParentheses.prototype.testSilParen001 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testSilParen001 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>25</mn></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
@@ -855,9 +855,9 @@ sre.ClearspeakParentheses.prototype.testSilParen001 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example SilParen002
+ * Testing ClearspeakEnglishParentheses Example SilParen002
  */
-sre.ClearspeakParentheses.prototype.testSilParen002 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testSilParen002 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
@@ -867,9 +867,9 @@ sre.ClearspeakParentheses.prototype.testSilParen002 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example SilParen003
+ * Testing ClearspeakEnglishParentheses Example SilParen003
  */
-sre.ClearspeakParentheses.prototype.testSilParen003 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testSilParen003 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−' +
       '</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>';
@@ -879,9 +879,9 @@ sre.ClearspeakParentheses.prototype.testSilParen003 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example SilParen004
+ * Testing ClearspeakEnglishParentheses Example SilParen004
  */
-sre.ClearspeakParentheses.prototype.testSilParen004 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testSilParen004 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−' +
       '</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>';
@@ -891,9 +891,9 @@ sre.ClearspeakParentheses.prototype.testSilParen004 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example SilParen005
+ * Testing ClearspeakEnglishParentheses Example SilParen005
  */
-sre.ClearspeakParentheses.prototype.testSilParen005 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testSilParen005 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mo>−</mo><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow><mn>3' +
@@ -904,9 +904,9 @@ sre.ClearspeakParentheses.prototype.testSilParen005 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example SilParen006
+ * Testing ClearspeakEnglishParentheses Example SilParen006
  */
-sre.ClearspeakParentheses.prototype.testSilParen006 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testSilParen006 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn>' +
       '<mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow>' +
@@ -917,9 +917,9 @@ sre.ClearspeakParentheses.prototype.testSilParen006 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example SilParen007
+ * Testing ClearspeakEnglishParentheses Example SilParen007
  */
-sre.ClearspeakParentheses.prototype.testSilParen007 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testSilParen007 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn>' +
       '<mi>x</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>y</mi><mo>+</mo>' +
@@ -930,9 +930,9 @@ sre.ClearspeakParentheses.prototype.testSilParen007 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example SilParen008
+ * Testing ClearspeakEnglishParentheses Example SilParen008
  */
-sre.ClearspeakParentheses.prototype.testSilParen008 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testSilParen008 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x' +
       '</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -942,9 +942,9 @@ sre.ClearspeakParentheses.prototype.testSilParen008 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example SilParen009
+ * Testing ClearspeakEnglishParentheses Example SilParen009
  */
-sre.ClearspeakParentheses.prototype.testSilParen009 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testSilParen009 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mo>−</mo>' +
       '<mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup>' +
@@ -955,9 +955,9 @@ sre.ClearspeakParentheses.prototype.testSilParen009 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example SilParen010
+ * Testing ClearspeakEnglishParentheses Example SilParen010
  */
-sre.ClearspeakParentheses.prototype.testSilParen010 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testSilParen010 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup>' +
@@ -968,9 +968,9 @@ sre.ClearspeakParentheses.prototype.testSilParen010 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example SilParen011
+ * Testing ClearspeakEnglishParentheses Example SilParen011
  */
-sre.ClearspeakParentheses.prototype.testSilParen011 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testSilParen011 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2' +
       '</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
@@ -980,9 +980,9 @@ sre.ClearspeakParentheses.prototype.testSilParen011 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example SilParen012
+ * Testing ClearspeakEnglishParentheses Example SilParen012
  */
-sre.ClearspeakParentheses.prototype.testSilParen012 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testSilParen012 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mn>3</mn><mn>4' +
       '</mn></mfrac><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -992,9 +992,9 @@ sre.ClearspeakParentheses.prototype.testSilParen012 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example SilParen013
+ * Testing ClearspeakEnglishParentheses Example SilParen013
  */
-sre.ClearspeakParentheses.prototype.testSilParen013 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testSilParen013 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mn>11</mn>' +
       '</mrow><mrow><mn>22</mn></mrow></mfrac></mrow><mo>)</mo></mrow>' +
@@ -1005,9 +1005,9 @@ sre.ClearspeakParentheses.prototype.testSilParen013 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example SilParen014
+ * Testing ClearspeakEnglishParentheses Example SilParen014
  */
-sre.ClearspeakParentheses.prototype.testSilParen014 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testSilParen014 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1' +
       '</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mn>4</mn>' +
@@ -1018,9 +1018,9 @@ sre.ClearspeakParentheses.prototype.testSilParen014 = function() {
 
 
 /**
- * Testing ClearspeakParentheses Example SilParen015
+ * Testing ClearspeakEnglishParentheses Example SilParen015
  */
-sre.ClearspeakParentheses.prototype.testSilParen015 = function() {
+sre.ClearspeakEnglishParentheses.prototype.testSilParen015 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mrow>' +
       '<mn>11</mn></mrow><mrow><mn>15</mn></mrow></mfrac></mrow><mo>)</mo>' +

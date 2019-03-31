@@ -17,26 +17,26 @@
 //
 
 
-goog.provide('sre.ClearspeakSetsEnclosedInSetBrackets');
+goog.provide('sre.ClearspeakEnglishSetsEnclosedInSetBrackets');
 
-goog.require('sre.ClearspeakRuleTest');
+goog.require('sre.ClearspeakEnglishRuleTest');
 
 
 
 /**
 * @constructor
-* @extends {sre.ClearspeakRuleTest}
+* @extends {sre.ClearspeakEnglishRuleTest}
 */
-sre.ClearspeakSetsEnclosedInSetBrackets = function() {
-  sre.ClearspeakSetsEnclosedInSetBrackets.base(this, 'constructor');
+sre.ClearspeakEnglishSetsEnclosedInSetBrackets = function() {
+  sre.ClearspeakEnglishSetsEnclosedInSetBrackets.base(this, 'constructor');
 
   /**
 * @override
   */
-  this.information = 'ClearspeakSetsEnclosedInSetBrackets rule tests.';
+  this.information = 'ClearspeakEnglishSetsEnclosedInSetBrackets rule tests.';
 
 };
-goog.inherits(sre.ClearspeakSetsEnclosedInSetBrackets, sre.ClearspeakRuleTest);
+goog.inherits(sre.ClearspeakEnglishSetsEnclosedInSetBrackets, sre.ClearspeakEnglishRuleTest);
 
 
 
@@ -46,9 +46,9 @@ goog.inherits(sre.ClearspeakSetsEnclosedInSetBrackets, sre.ClearspeakRuleTest);
 
 
 /**
- * Testing ClearspeakSetsEnclosedInSetBrackets Example Set001
+ * Testing ClearspeakEnglishSetsEnclosedInSetBrackets Example Set001
  */
-sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet001 = function() {
+sre.ClearspeakEnglishSetsEnclosedInSetBrackets.prototype.testSet001 = function() {
   var preference = 'Sets_Auto';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|' +
       '</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}' +
@@ -60,9 +60,9 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet001 = function() {
 
 
 /**
- * Testing ClearspeakSetsEnclosedInSetBrackets Example Set002
+ * Testing ClearspeakEnglishSetsEnclosedInSetBrackets Example Set002
  */
-sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet002 = function() {
+sre.ClearspeakEnglishSetsEnclosedInSetBrackets.prototype.testSet002 = function() {
   var preference = 'Sets_Auto';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>|</mo><mrow><mo>|</mo>' +
       '<mi>x</mi><mo>|</mo></mrow><mo>></mo><mn>2</mn><mo>}</mo></mrow></math>';
@@ -73,9 +73,9 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet002 = function() {
 
 
 /**
- * Testing ClearspeakSetsEnclosedInSetBrackets Example Set003
+ * Testing ClearspeakEnglishSetsEnclosedInSetBrackets Example Set003
  */
-sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet003 = function() {
+sre.ClearspeakEnglishSetsEnclosedInSetBrackets.prototype.testSet003 = function() {
   var preference = 'Sets_Auto';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>:' +
       '</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}' +
@@ -87,9 +87,9 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet003 = function() {
 
 
 /**
- * Testing ClearspeakSetsEnclosedInSetBrackets Example Set004
+ * Testing ClearspeakEnglishSetsEnclosedInSetBrackets Example Set004
  */
-sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet004 = function() {
+sre.ClearspeakEnglishSetsEnclosedInSetBrackets.prototype.testSet004 = function() {
   var preference = 'Sets_Auto';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℕ</mi><mo>:' +
       '</mo><mi>x</mi><mtext> is an even number</mtext><mo>}</mo></mrow>' +
@@ -101,9 +101,9 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet004 = function() {
 
 
 /**
- * Testing ClearspeakSetsEnclosedInSetBrackets Example Set005
+ * Testing ClearspeakEnglishSetsEnclosedInSetBrackets Example Set005
  */
-sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet005 = function() {
+sre.ClearspeakEnglishSetsEnclosedInSetBrackets.prototype.testSet005 = function() {
   var preference = 'Sets_Auto';
   var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo>' +
       '<mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mtext></mtext>' +
@@ -114,9 +114,9 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet005 = function() {
 
 
 /**
- * Testing ClearspeakSetsEnclosedInSetBrackets Example Set006
+ * Testing ClearspeakEnglishSetsEnclosedInSetBrackets Example Set006
  */
-sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet006 = function() {
+sre.ClearspeakEnglishSetsEnclosedInSetBrackets.prototype.testSet006 = function() {
   var preference = 'Sets_Auto';
   var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo>' +
       '<mn>112</mn><mo>,</mo><mtext></mtext><mn>1</mn><mo>,</mo><mn>253' +
@@ -127,9 +127,9 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet006 = function() {
 
 
 /**
- * Testing ClearspeakSetsEnclosedInSetBrackets Example Set007
+ * Testing ClearspeakEnglishSetsEnclosedInSetBrackets Example Set007
  */
-sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet007 = function() {
+sre.ClearspeakEnglishSetsEnclosedInSetBrackets.prototype.testSet007 = function() {
   var preference = 'Sets_woAll';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|' +
       '</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}' +
@@ -141,9 +141,9 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet007 = function() {
 
 
 /**
- * Testing ClearspeakSetsEnclosedInSetBrackets Example Set008
+ * Testing ClearspeakEnglishSetsEnclosedInSetBrackets Example Set008
  */
-sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet008 = function() {
+sre.ClearspeakEnglishSetsEnclosedInSetBrackets.prototype.testSet008 = function() {
   var preference = 'Sets_woAll';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>|</mo><mrow><mo>|</mo>' +
       '<mi>x</mi><mo>|</mo></mrow><mo>></mo><mn>2</mn><mo>}</mo></mrow></math>';
@@ -154,9 +154,9 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet008 = function() {
 
 
 /**
- * Testing ClearspeakSetsEnclosedInSetBrackets Example Set009
+ * Testing ClearspeakEnglishSetsEnclosedInSetBrackets Example Set009
  */
-sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet009 = function() {
+sre.ClearspeakEnglishSetsEnclosedInSetBrackets.prototype.testSet009 = function() {
   var preference = 'Sets_woAll';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>:' +
       '</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}' +
@@ -168,9 +168,9 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet009 = function() {
 
 
 /**
- * Testing ClearspeakSetsEnclosedInSetBrackets Example Set010
+ * Testing ClearspeakEnglishSetsEnclosedInSetBrackets Example Set010
  */
-sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet010 = function() {
+sre.ClearspeakEnglishSetsEnclosedInSetBrackets.prototype.testSet010 = function() {
   var preference = 'Sets_woAll';
   var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo>' +
       '<mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mtext></mtext>' +
@@ -181,9 +181,9 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet010 = function() {
 
 
 /**
- * Testing ClearspeakSetsEnclosedInSetBrackets Example Set011
+ * Testing ClearspeakEnglishSetsEnclosedInSetBrackets Example Set011
  */
-sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet011 = function() {
+sre.ClearspeakEnglishSetsEnclosedInSetBrackets.prototype.testSet011 = function() {
   var preference = 'Sets_woAll';
   var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo>' +
       '<mtext></mtext><mn>112</mn><mo>,</mo><mtext></mtext><mn>1</mn><mo>,' +
@@ -194,9 +194,9 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet011 = function() {
 
 
 /**
- * Testing ClearspeakSetsEnclosedInSetBrackets Example Set012
+ * Testing ClearspeakEnglishSetsEnclosedInSetBrackets Example Set012
  */
-sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet012 = function() {
+sre.ClearspeakEnglishSetsEnclosedInSetBrackets.prototype.testSet012 = function() {
   var preference = 'Sets_SilentBracket';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|' +
       '</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}' +
@@ -208,9 +208,9 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet012 = function() {
 
 
 /**
- * Testing ClearspeakSetsEnclosedInSetBrackets Example Set013
+ * Testing ClearspeakEnglishSetsEnclosedInSetBrackets Example Set013
  */
-sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet013 = function() {
+sre.ClearspeakEnglishSetsEnclosedInSetBrackets.prototype.testSet013 = function() {
   var preference = 'Sets_SilentBracket';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>|</mo><mrow><mo>|</mo>' +
       '<mi>x</mi><mo>|</mo></mrow><mo>></mo><mn>2</mn><mo>}</mo></mrow></math>';
@@ -221,9 +221,9 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet013 = function() {
 
 
 /**
- * Testing ClearspeakSetsEnclosedInSetBrackets Example Set014
+ * Testing ClearspeakEnglishSetsEnclosedInSetBrackets Example Set014
  */
-sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet014 = function() {
+sre.ClearspeakEnglishSetsEnclosedInSetBrackets.prototype.testSet014 = function() {
   var preference = 'Sets_SilentBracket';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>:' +
       '</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}' +
@@ -235,9 +235,9 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet014 = function() {
 
 
 /**
- * Testing ClearspeakSetsEnclosedInSetBrackets Example Set015
+ * Testing ClearspeakEnglishSetsEnclosedInSetBrackets Example Set015
  */
-sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet015 = function() {
+sre.ClearspeakEnglishSetsEnclosedInSetBrackets.prototype.testSet015 = function() {
   var preference = 'Sets_SilentBracket';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℕ</mi><mo>:' +
       '</mo><mi>x</mi><mtext> is an even number</mtext><mo>}</mo></mrow>' +
@@ -249,9 +249,9 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet015 = function() {
 
 
 /**
- * Testing ClearspeakSetsEnclosedInSetBrackets Example Set016
+ * Testing ClearspeakEnglishSetsEnclosedInSetBrackets Example Set016
  */
-sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet016 = function() {
+sre.ClearspeakEnglishSetsEnclosedInSetBrackets.prototype.testSet016 = function() {
   var preference = 'Sets_SilentBracket';
   var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo>' +
       '<mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mtext></mtext>' +
@@ -262,9 +262,9 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet016 = function() {
 
 
 /**
- * Testing ClearspeakSetsEnclosedInSetBrackets Example Set017
+ * Testing ClearspeakEnglishSetsEnclosedInSetBrackets Example Set017
  */
-sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet017 = function() {
+sre.ClearspeakEnglishSetsEnclosedInSetBrackets.prototype.testSet017 = function() {
   var preference = 'Sets_SilentBracket';
   var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo>' +
       '<mtext></mtext><mn>112</mn><mo>,</mo><mtext></mtext><mn>1</mn><mo>,' +

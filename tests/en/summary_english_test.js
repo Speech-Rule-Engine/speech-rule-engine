@@ -20,65 +20,33 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
-goog.provide('sre.AbstractionEnglishTest');
+goog.provide('sre.SummaryEnglishTest');
 
-goog.require('sre.AbstractRuleTest');
+goog.require('sre.SummaryRuleTest');
 
 
 
 /**
  * @constructor
- * @extends {sre.AbstractRuleTest}
+ * @extends {sre.SummaryRuleTest}
  */
-sre.AbstractionEnglishTest = function() {
-  sre.AbstractionEnglishTest.base(this, 'constructor');
+sre.SummaryEnglishTest = function() {
+  sre.SummaryEnglishTest.base(this, 'constructor');
 
   /**
    * @override
    */
-  this.information = 'Abstraction English tests.';
+  this.information = 'Summary English tests.';
 
-  /**
-   * @override
-   */
-  this.domain = 'mathspeak';
-
-  /**
-   * @override
-   */
-  this.semantics = true;
-
-  this.setActive('AbstractionEnglish');
+  this.setActive('SummaryEnglish');
 };
-goog.inherits(sre.AbstractionEnglishTest, sre.AbstractRuleTest);
+goog.inherits(sre.SummaryEnglishTest, sre.SummaryRuleTest);
 
 
 /**
- * @override
+ * Testing Summary Rule for abstr-addition.
  */
-sre.AbstractionEnglishTest.prototype.executeRuleTest = function(
-    mml, expected, opt_style, opt_steps) {
-  var style = opt_style || this.style;
-  sre.System.getInstance().setupEngine(
-      {semantics: this.semantics, domain: this.domain, style: style,
-       locale: this.locale});
-  var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
-      mml + '</math>';
-  sre.ProcessorFactory.process('walker', mathMl);
-  if (opt_steps) {
-    opt_steps.forEach(function(step) {
-      sre.ProcessorFactory.process('move', sre.EventUtil.KeyCode[step]);
-    });
-  }
-  var actual = sre.ProcessorFactory.process('move', sre.EventUtil.KeyCode['X']);
-  this.compareResult(mathMl, actual, expected, style);
-};
-
-
-/**
- * Testing Abstraction Rule for abstr-addition.
- */
-sre.AbstractionEnglishTest.prototype.testAbstrAddition = function() {
+sre.SummaryEnglishTest.prototype.testAbstrAddition = function() {
   var mml = '<mi>a</mi><mo>+</mo><mi>b</mi>';
   this.executeRuleTest(mml, 'sum with 2 summands', 'default');
   this.executeRuleTest(mml, 'sum', 'brief');
@@ -87,9 +55,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrAddition = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-bigop.
+ * Testing Summary Rule for abstr-bigop.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrBigop = function() {
+sre.SummaryEnglishTest.prototype.testAbstrBigop = function() {
   var mml = '<mo>&#x2211;</mo><mi>x</mi>';
   this.executeRuleTest(mml, 'sigma-summation', 'default');
   this.executeRuleTest(mml, 'sigma-summation', 'brief');
@@ -98,9 +66,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrBigop = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-binomial.
+ * Testing Summary Rule for abstr-binomial.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrBinomial = function() {
+sre.SummaryEnglishTest.prototype.testAbstrBinomial = function() {
   var mml = '<mfenced open="(" close=")"><mtable><mtr><mtd><mi>x</mi></mtd>' +
       '</mtr><mtr><mtd><mi>y</mi></mtd></mtr></mtable></mfenced>';
   this.executeRuleTest(mml, 'binomial', 'default');
@@ -110,9 +78,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrBinomial = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-cases.
+ * Testing Summary Rule for abstr-cases.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrCases = function() {
+sre.SummaryEnglishTest.prototype.testAbstrCases = function() {
   var mml = '<mfenced separators="" open="{" close=""><mtable>'
       + '<mtr><mtd><mi>y</mi></mtd><mtd><mn>0</mn></mtd></mtr>' +
       '<mtr><mtd><mi>y</mi></mtd><mtd><mn>2</mn></mtd></mtr>' +
@@ -125,22 +93,23 @@ sre.AbstractionEnglishTest.prototype.testAbstrCases = function() {
 
 // TODO
 /**
- * Testing Abstraction Rule for abstr-cell.
+ * Testing Summary Rule for abstr-cell.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrCell = function() {
+sre.SummaryEnglishTest.prototype.testAbstrCell = function() {
   var mml = '<mtable><mtr><mtd><mi>a</mi></mtd>' +
       '<mtd><mi>b</mi></mtd></mtr></mtable>';
-  var move = ['DOWN', 'DOWN'];
-  this.executeRuleTest(mml, '1st Column in table', 'default', move);
-  this.executeRuleTest(mml, '1st Column in table', 'brief', move);
-  this.executeRuleTest(mml, '1st Column in table', 'sbrief', move);
+  this.steps = ['DOWN', 'DOWN'];
+  this.executeRuleTest(mml, '1st Column in table', 'default');
+  this.executeRuleTest(mml, '1st Column in table', 'brief');
+  this.executeRuleTest(mml, '1st Column in table', 'sbrief');
+  this.steps = null;
 };
 
 
 /**
- * Testing Abstraction Rule for abstr-continued-fraction.
+ * Testing Summary Rule for abstr-continued-fraction.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrContinuedFraction = function() {
+sre.SummaryEnglishTest.prototype.testAbstrContinuedFraction = function() {
   var mml = '<mfrac><msub>' +
       '<mi>b</mi><mn>1</mn></msub><mrow><msub><mi>a</mi><mn>1</mn></msub>' +
       '<mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><mrow><msub>' +
@@ -154,9 +123,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrContinuedFraction = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-determinant.
+ * Testing Summary Rule for abstr-determinant.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrDeterminant = function() {
+sre.SummaryEnglishTest.prototype.testAbstrDeterminant = function() {
   var mml = '<mfenced open="|" close="|"><mtable>' +
       '<mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr>' +
       '<mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr>' +
@@ -168,9 +137,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrDeterminant = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-fraction.
+ * Testing Summary Rule for abstr-fraction.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrFraction = function() {
+sre.SummaryEnglishTest.prototype.testAbstrFraction = function() {
   var mml = '<mfrac><mn>1</mn><mi>x</mi></mfrac>';
   this.executeRuleTest(mml, 'fraction', 'default');
   this.executeRuleTest(mml, 'frac', 'brief');
@@ -179,9 +148,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrFraction = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-function.
+ * Testing Summary Rule for abstr-function.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrFunction = function() {
+sre.SummaryEnglishTest.prototype.testAbstrFunction = function() {
   // var mml = '<mi>sin</mi><mi>x</mi>';
   var mml = '<mi>sin</mi>';
   this.executeRuleTest(mml, 'functional expression', 'default');
@@ -191,9 +160,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrFunction = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-identifier.
+ * Testing Summary Rule for abstr-identifier.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrIdentifier = function() {
+sre.SummaryEnglishTest.prototype.testAbstrIdentifier = function() {
   var mml = '<mi>a</mi>';
   this.executeRuleTest(mml, 'identifier', 'default');
   this.executeRuleTest(mml, 'identifier', 'brief');
@@ -202,9 +171,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrIdentifier = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-infixop.
+ * Testing Summary Rule for abstr-infixop.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrInfixop = function() {
+sre.SummaryEnglishTest.prototype.testAbstrInfixop = function() {
   var mml = '<mi>a</mi><mo>/</mo><mi>b</mi>';
   this.executeRuleTest(mml, 'division with 2 elements', 'default');
   this.executeRuleTest(mml, 'division', 'brief');
@@ -213,9 +182,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrInfixop = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-integral.
+ * Testing Summary Rule for abstr-integral.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrIntegral = function() {
+sre.SummaryEnglishTest.prototype.testAbstrIntegral = function() {
   var mml = '<mo>∮</mo><mi>E</mi><mo>·</mo><mi>d</mi>' +
       '<mi mathvariant="bold">l</mi>';
   this.executeRuleTest(mml, 'integral', 'default');
@@ -225,9 +194,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrIntegral = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-lim.
+ * Testing Summary Rule for abstr-lim.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrLim = function() {
+sre.SummaryEnglishTest.prototype.testAbstrLim = function() {
   var mml = '<mi>lim</mi>';
   this.executeRuleTest(mml, 'limit function', 'default');
   this.executeRuleTest(mml, 'lim', 'brief');
@@ -237,21 +206,22 @@ sre.AbstractionEnglishTest.prototype.testAbstrLim = function() {
 
 // TODO
 /**
- * Testing Abstraction Rule for abstr-line.
+ * Testing Summary Rule for abstr-line.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrLine = function() {
+sre.SummaryEnglishTest.prototype.testAbstrLine = function() {
   var mml = '<mtable><mtr><mtd><mi>a</mi></mtd></mtr></mtable>';
-  var move = ['DOWN'];
-  this.executeRuleTest(mml, '1st Row in multiple lines', 'default', move);
-  this.executeRuleTest(mml, '1st Row in multiple lines', 'brief', move);
-  this.executeRuleTest(mml, '1st Row in multiple lines', 'sbrief', move);
+  this.steps = ['DOWN'];
+  this.executeRuleTest(mml, '1st Row in multiple lines', 'default');
+  this.executeRuleTest(mml, '1st Row in multiple lines', 'brief');
+  this.executeRuleTest(mml, '1st Row in multiple lines', 'sbrief');
+  this.steps = null;
 };
 
 
 /**
- * Testing Abstraction Rule for abstr-matrix.
+ * Testing Summary Rule for abstr-matrix.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrMatrix = function() {
+sre.SummaryEnglishTest.prototype.testAbstrMatrix = function() {
   var mml = '<mfenced open="[" close="]"><mtable>' +
       '<mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr>' +
       '<mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr>' +
@@ -264,20 +234,20 @@ sre.AbstractionEnglishTest.prototype.testAbstrMatrix = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-mixed-number.
+ * Testing Summary Rule for abstr-mixed-number.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrMixedNumber = function() {
+sre.SummaryEnglishTest.prototype.testAbstrMixedNumber = function() {
   var mml = '<mn>1</mn><mfrac><mn>2</mn><mn>3</mn></mfrac>';
-  this.executeRuleTest(mml, 'long mixed number', 'default');
+  this.executeRuleTest(mml, 'mixed number', 'default');
   this.executeRuleTest(mml, 'mixed number', 'brief');
   this.executeRuleTest(mml, 'mixed number', 'sbrief');
 };
 
 
 /**
- * Testing Abstraction Rule for abstr-multiplication.
+ * Testing Summary Rule for abstr-multiplication.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrMultiplication = function() {
+sre.SummaryEnglishTest.prototype.testAbstrMultiplication = function() {
   var mml = '<mi>a</mi><mo>*</mo><mi>b</mi>';
   this.executeRuleTest(mml, 'product with 2 factors', 'default');
   this.executeRuleTest(mml, 'product', 'brief');
@@ -286,9 +256,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrMultiplication = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-multirel.
+ * Testing Summary Rule for abstr-multirel.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrMultirel = function() {
+sre.SummaryEnglishTest.prototype.testAbstrMultirel = function() {
   var mml = '<mi>a</mi><mo>=</mo><mi>b</mi><mo>&#x2264;</mo><mi>b</mi>';
   this.executeRuleTest(mml, 'relation sequence with 3 elements', 'default');
   this.executeRuleTest(mml, 'relation sequence', 'brief');
@@ -297,9 +267,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrMultirel = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-number.
+ * Testing Summary Rule for abstr-number.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrNumber = function() {
+sre.SummaryEnglishTest.prototype.testAbstrNumber = function() {
   var mml = '<mn>123456</mn>';
   this.executeRuleTest(mml, 'number', 'default');
   this.executeRuleTest(mml, 'number', 'brief');
@@ -308,9 +278,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrNumber = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-punctuated.
+ * Testing Summary Rule for abstr-punctuated.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrPunctuated = function() {
+sre.SummaryEnglishTest.prototype.testAbstrPunctuated = function() {
   var mml = '<mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi>';
   this.executeRuleTest(mml, 'comma separated list of length 3', 'default');
   this.executeRuleTest(mml, 'comma separated list', 'brief');
@@ -319,9 +289,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrPunctuated = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-relation.
+ * Testing Summary Rule for abstr-relation.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrRelation = function() {
+sre.SummaryEnglishTest.prototype.testAbstrRelation = function() {
   var mml = '<mi>a</mi><mo>=</mo><mi>b</mi>';
   this.executeRuleTest(mml, 'equality', 'default');
   this.executeRuleTest(mml, 'equality', 'brief');
@@ -330,9 +300,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrRelation = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-relation-seq.
+ * Testing Summary Rule for abstr-relation-seq.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrRelationSeq = function() {
+sre.SummaryEnglishTest.prototype.testAbstrRelationSeq = function() {
   var mml = '<mi>a</mi><mo>=</mo><mi>b</mi><mo>=</mo><mi>b</mi>';
   this.executeRuleTest(mml, 'equality sequence with 3 elements', 'default');
   this.executeRuleTest(mml, 'equality sequence', 'brief');
@@ -341,9 +311,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrRelationSeq = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-root.
+ * Testing Summary Rule for abstr-root.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrRoot = function() {
+sre.SummaryEnglishTest.prototype.testAbstrRoot = function() {
   var mml = '<mroot><mi>x</mi><mn>3</mn></mroot>';
   this.executeRuleTest(mml, 'root of index 3', 'default');
   this.executeRuleTest(mml, 'root', 'brief');
@@ -352,9 +322,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrRoot = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-root-nested.
+ * Testing Summary Rule for abstr-root-nested.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrRootNested = function() {
+sre.SummaryEnglishTest.prototype.testAbstrRootNested = function() {
   var mml = '<mroot><mrow><mroot><mi>x</mi><mn>4</mn></mroot>' +
       '<mo>+</mo><mi>x</mi></mrow><mn>3</mn></mroot>';
   this.executeRuleTest(mml, 'nested root of index 3', 'default');
@@ -365,22 +335,23 @@ sre.AbstractionEnglishTest.prototype.testAbstrRootNested = function() {
 
 // TODO
 /**
- * Testing Abstraction Rule for abstr-row.
+ * Testing Summary Rule for abstr-row.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrRow = function() {
+sre.SummaryEnglishTest.prototype.testAbstrRow = function() {
   var mml = '<mtable><mtr><mtd><mi>a</mi></mtd>' +
       '<mtd><mi>b</mi></mtd></mtr></mtable>';
-  var move = ['DOWN'];
-  this.executeRuleTest(mml, '1st Row in table with 2 columns', 'default', move);
-  this.executeRuleTest(mml, '1st Row in table with 2 columns', 'brief', move);
-  this.executeRuleTest(mml, '1st Row in table with 2 columns', 'sbrief', move);
+  this.steps = ['DOWN'];
+  this.executeRuleTest(mml, '1st Row in table with 2 columns', 'default');
+  this.executeRuleTest(mml, '1st Row in table with 2 columns', 'brief');
+  this.executeRuleTest(mml, '1st Row in table with 2 columns', 'sbrief');
+  this.steps = null;
 };
 
 
 /**
- * Testing Abstraction Rule for abstr-rowvector.
+ * Testing Summary Rule for abstr-rowvector.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrRowvector = function() {
+sre.SummaryEnglishTest.prototype.testAbstrRowvector = function() {
   var mml = '<mfenced open="[" close="]"><mtable>' +
       '<mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr>' +
       '</mtable></mfenced>';
@@ -391,9 +362,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrRowvector = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-sqrt.
+ * Testing Summary Rule for abstr-sqrt.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrSqrt = function() {
+sre.SummaryEnglishTest.prototype.testAbstrSqrt = function() {
   var mml = '<msqrt><mn>2</mn></msqrt>';
   this.executeRuleTest(mml, 'square root', 'default');
   this.executeRuleTest(mml, 'square root', 'brief');
@@ -402,9 +373,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrSqrt = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-sqrt-nested.
+ * Testing Summary Rule for abstr-sqrt-nested.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrSqrtNested = function() {
+sre.SummaryEnglishTest.prototype.testAbstrSqrtNested = function() {
   var mml = '<msqrt><mn>2</mn><msqrt><mn>2</mn></msqrt></msqrt>';
   this.executeRuleTest(mml, 'nested square root', 'default');
   this.executeRuleTest(mml, 'nested square root', 'brief');
@@ -413,9 +384,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrSqrtNested = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-squarematrix.
+ * Testing Summary Rule for abstr-squarematrix.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrSquarematrix = function() {
+sre.SummaryEnglishTest.prototype.testAbstrSquarematrix = function() {
   var mml = '<mfenced open="[" close="]"><mtable>' +
       '<mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr>' +
       '<mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr>' +
@@ -427,9 +398,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrSquarematrix = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-subscript.
+ * Testing Summary Rule for abstr-subscript.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrSubscript = function() {
+sre.SummaryEnglishTest.prototype.testAbstrSubscript = function() {
   var mml = '<msub><mi>a</mi><mi>b</mi></msub>';
   this.executeRuleTest(mml, 'subscript', 'default');
   this.executeRuleTest(mml, 'subscript', 'brief');
@@ -438,9 +409,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrSubscript = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-subsup.
+ * Testing Summary Rule for abstr-subsup.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrSubsup = function() {
+sre.SummaryEnglishTest.prototype.testAbstrSubsup = function() {
   var mml = '<msubsup><mi>a</mi><mi>c</mi><mi>b</mi></msubsup>';
   this.executeRuleTest(mml, 'power with subscript', 'default');
   this.executeRuleTest(mml, 'power with subscript', 'brief');
@@ -449,9 +420,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrSubsup = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-superscript.
+ * Testing Summary Rule for abstr-superscript.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrSuperscript = function() {
+sre.SummaryEnglishTest.prototype.testAbstrSuperscript = function() {
   var mml = '<msup><mi>a</mi><mi>b</mi></msup>';
   this.executeRuleTest(mml, 'power', 'default');
   this.executeRuleTest(mml, 'power', 'brief');
@@ -460,9 +431,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrSuperscript = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-table.
+ * Testing Summary Rule for abstr-table.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrTable = function() {
+sre.SummaryEnglishTest.prototype.testAbstrTable = function() {
   var mml = '<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr>' +
       '<mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable>';
   this.executeRuleTest(mml, 'table with 2 rows and 2 columns', 'default');
@@ -472,9 +443,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrTable = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-text.
+ * Testing Summary Rule for abstr-text.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrText = function() {
+sre.SummaryEnglishTest.prototype.testAbstrText = function() {
   var mml = '<mtext>a b c</mtext>';
   this.executeRuleTest(mml, 'text', 'default');
   this.executeRuleTest(mml, 'text', 'brief');
@@ -483,9 +454,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrText = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-var-addition.
+ * Testing Summary Rule for abstr-var-addition.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrVarAddition = function() {
+sre.SummaryEnglishTest.prototype.testAbstrVarAddition = function() {
   var mml = '<mi>a</mi><mo>+</mo><mi>&#x2026;</mi><mo>+</mo><mi>b</mi>';
   this.executeRuleTest(mml, 'sum with variable number of summands', 'default');
   this.executeRuleTest(mml, 'sum', 'brief');
@@ -494,9 +465,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrVarAddition = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-var-cases.
+ * Testing Summary Rule for abstr-var-cases.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrVarCases = function() {
+sre.SummaryEnglishTest.prototype.testAbstrVarCases = function() {
   var mml = '<mo>{</mo><mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd>' +
       '<mo>&#x2026;</mo></mtd></mtr><mtr><mtd><mi>b</mi></mtd></mtr></mtable>';
   this.executeRuleTest(
@@ -507,9 +478,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrVarCases = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-var-determinant.
+ * Testing Summary Rule for abstr-var-determinant.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrVarDeterminant = function() {
+sre.SummaryEnglishTest.prototype.testAbstrVarDeterminant = function() {
   var mml = '<mo>|</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi>' +
       '</mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd />' +
       '<mtd><mo>&#x22EF;</mo></mtd><mtd /></mtr><mtr><mtd><mi>c</mi></mtd>' +
@@ -521,9 +492,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrVarDeterminant = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-var-matrix.
+ * Testing Summary Rule for abstr-var-matrix.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrVarMatrix = function() {
+sre.SummaryEnglishTest.prototype.testAbstrVarMatrix = function() {
   var mml = '<mo>(</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi>' +
       '</mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd />' +
       '<mtd><mo>&#x22EF;</mo></mtd><mtd /></mtr><mtr><mtd><mi>c</mi></mtd>' +
@@ -535,9 +506,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrVarMatrix = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-var-multiplication.
+ * Testing Summary Rule for abstr-var-multiplication.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrVarMultiplication = function() {
+sre.SummaryEnglishTest.prototype.testAbstrVarMultiplication = function() {
   var mml = '<mi>a</mi><mo>*</mo><mo>&#x2026;</mo><mo>*</mo><mi>b</mi>';
   this.executeRuleTest(
       mml, 'product with variable number of factors', 'default');
@@ -547,9 +518,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrVarMultiplication = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-var-multirel.
+ * Testing Summary Rule for abstr-var-multirel.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrVarMultirel = function() {
+sre.SummaryEnglishTest.prototype.testAbstrVarMultirel = function() {
   var mml = '<mi>a</mi><mo>=</mo><mo>&#x2026;</mo><mo>&#x2264;</mo><mi>b</mi>';
   this.executeRuleTest(
       mml, 'relation sequence with variable number of elements', 'default');
@@ -559,9 +530,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrVarMultirel = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-var-punctuated.
+ * Testing Summary Rule for abstr-var-punctuated.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrVarPunctuated = function() {
+sre.SummaryEnglishTest.prototype.testAbstrVarPunctuated = function() {
   var mml = '<mi>a</mi><mo>,</mo><mo>&#x2026;</mo><mo>,</mo><mi>b</mi>';
   this.executeRuleTest(
       mml, 'comma separated list of variable length', 'default');
@@ -571,9 +542,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrVarPunctuated = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-var-relation.
+ * Testing Summary Rule for abstr-var-relation.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrVarRelation = function() {
+sre.SummaryEnglishTest.prototype.testAbstrVarRelation = function() {
   var mml = '<mi>a</mi><mo>=</mo><mo>&#x2026;</mo><mo>=</mo><mi>b</mi>';
   this.executeRuleTest(
       mml, 'equality sequence with variable number of elements', 'default');
@@ -583,9 +554,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrVarRelation = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-var-vector.
+ * Testing Summary Rule for abstr-var-vector.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrVarVector = function() {
+sre.SummaryEnglishTest.prototype.testAbstrVarVector = function() {
   var mml = '<mfenced open="[" close="]"><mtable>' +
       '<mtr><mtd><mi>a</mi></mtd></mtr>' +
       '<mtr><mtd><mo>&#x22EE;</mo></mtd></mtr>' +
@@ -599,9 +570,9 @@ sre.AbstractionEnglishTest.prototype.testAbstrVarVector = function() {
 
 
 /**
- * Testing Abstraction Rule for abstr-vector.
+ * Testing Summary Rule for abstr-vector.
  */
-sre.AbstractionEnglishTest.prototype.testAbstrVector = function() {
+sre.SummaryEnglishTest.prototype.testAbstrVector = function() {
   var mml = '<mfenced open="[" close="]"><mtable>' +
       '<mtr><mtd><mi>a</mi></mtd></mtr>' +
       '<mtr><mtd><mi>c</mi></mtd></mtr>' +

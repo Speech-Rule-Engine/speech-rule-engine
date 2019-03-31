@@ -17,25 +17,25 @@
 //
 
 
-goog.provide('sre.ClearspeakPart2Symbols');
+goog.provide('sre.ClearspeakEnglishPart2Symbols');
 
-goog.require('sre.ClearspeakRuleTest');
+goog.require('sre.ClearspeakEnglishRuleTest');
 
 
 
 /**
 * @constructor
-* @extends {sre.ClearspeakRuleTest}
+* @extends {sre.ClearspeakEnglishRuleTest}
 */
-sre.ClearspeakPart2Symbols = function() {
-  sre.ClearspeakPart2Symbols.base(this, 'constructor');
+sre.ClearspeakEnglishPart2Symbols = function() {
+  sre.ClearspeakEnglishPart2Symbols.base(this, 'constructor');
 
   /**
    * @override
    */
-  this.information = 'ClearspeakPart2Symbols rule tests.';
+  this.information = 'ClearspeakEnglishPart2Symbols rule tests.';
 };
-goog.inherits(sre.ClearspeakPart2Symbols, sre.ClearspeakRuleTest);
+goog.inherits(sre.ClearspeakEnglishPart2Symbols, sre.ClearspeakEnglishRuleTest);
 
 
 
@@ -50,9 +50,9 @@ goog.inherits(sre.ClearspeakPart2Symbols, sre.ClearspeakRuleTest);
 
 
 /**
- * Testing ClearspeakPart2Symbols Example X001
+ * Testing ClearspeakEnglishPart2Symbols Example X001
  */
-sre.ClearspeakPart2Symbols.prototype.testX001 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testX001 = function() {
   var preference = 'MultsymbolX_Auto';
   var mathml = '<math><mrow><mn>6</mn><mo>×</mo><mn>8</mn></mrow></math>';
   var speech = '6 times 8';
@@ -61,9 +61,9 @@ sre.ClearspeakPart2Symbols.prototype.testX001 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example X002
+ * Testing ClearspeakEnglishPart2Symbols Example X002
  */
-sre.ClearspeakPart2Symbols.prototype.testX002 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testX002 = function() {
   var preference = 'MultsymbolX_Auto';
   var mathml = '<math><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></math>';
   var speech = 'm times n';
@@ -72,9 +72,9 @@ sre.ClearspeakPart2Symbols.prototype.testX002 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example X003
+ * Testing ClearspeakEnglishPart2Symbols Example X003
  */
-sre.ClearspeakPart2Symbols.prototype.testX003 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testX003 = function() {
   var preference = 'MultsymbolX_Auto';
   var mathml = '<math><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></math>';
   var speech = '3 times 3';
@@ -83,9 +83,9 @@ sre.ClearspeakPart2Symbols.prototype.testX003 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example X004
+ * Testing ClearspeakEnglishPart2Symbols Example X004
  */
-sre.ClearspeakPart2Symbols.prototype.testX004 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testX004 = function() {
   var preference = 'MultsymbolX_By';
   var mathml = '<math><mrow><mn>6</mn><mo>×</mo><mn>8</mn></mrow></math>';
   var speech = '6 by 8';
@@ -94,9 +94,9 @@ sre.ClearspeakPart2Symbols.prototype.testX004 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example X005
+ * Testing ClearspeakEnglishPart2Symbols Example X005
  */
-sre.ClearspeakPart2Symbols.prototype.testX005 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testX005 = function() {
   var preference = 'MultsymbolX_By';
   var mathml = '<math><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></math>';
   var speech = 'm by n';
@@ -105,9 +105,9 @@ sre.ClearspeakPart2Symbols.prototype.testX005 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example X006
+ * Testing ClearspeakEnglishPart2Symbols Example X006
  */
-sre.ClearspeakPart2Symbols.prototype.testX006 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testX006 = function() {
   var preference = 'MultsymbolX_By';
   var mathml = '<math><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></math>';
   var speech = '3 by 3';
@@ -116,9 +116,9 @@ sre.ClearspeakPart2Symbols.prototype.testX006 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example X007
+ * Testing ClearspeakEnglishPart2Symbols Example X007
  */
-sre.ClearspeakPart2Symbols.prototype.testX007 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testX007 = function() {
   var preference = 'MultsymbolX_Cross';
   var mathml = '<math><mrow><mstyle mathvariant="bold" mathsize="normal">' +
       '<mi>u</mi></mstyle><mo>×</mo><mstyle mathvariant="bold"' +
@@ -134,9 +134,9 @@ sre.ClearspeakPart2Symbols.prototype.testX007 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Dot001
+ * Testing ClearspeakEnglishPart2Symbols Example Dot001
  */
-sre.ClearspeakPart2Symbols.prototype.testDot001 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testDot001 = function() {
   var preference = 'MultsymbolDot_Auto';
   var mathml = '<math><mrow><mn>6</mn><mo>⋅</mo><mn>8</mn></mrow></math>';
   var speech = '6 times 8';
@@ -145,9 +145,9 @@ sre.ClearspeakPart2Symbols.prototype.testDot001 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Dot002
+ * Testing ClearspeakEnglishPart2Symbols Example Dot002
  */
-sre.ClearspeakPart2Symbols.prototype.testDot002 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testDot002 = function() {
   var preference = 'MultsymbolDot_Auto';
   var mathml = '<math><mrow><mi>m</mi><mo>⋅</mo><mi>n</mi></mrow></math>';
   var speech = 'm times n';
@@ -156,9 +156,9 @@ sre.ClearspeakPart2Symbols.prototype.testDot002 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Dot003
+ * Testing ClearspeakEnglishPart2Symbols Example Dot003
  */
-sre.ClearspeakPart2Symbols.prototype.testDot003 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testDot003 = function() {
   var preference = 'MultsymbolDot_Auto';
   var mathml = '<math><mrow><mn>3</mn><mo>⋅</mo><mn>3</mn></mrow></math>';
   var speech = '3 times 3';
@@ -167,9 +167,9 @@ sre.ClearspeakPart2Symbols.prototype.testDot003 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Dot004
+ * Testing ClearspeakEnglishPart2Symbols Example Dot004
  */
-sre.ClearspeakPart2Symbols.prototype.testDot004 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testDot004 = function() {
   var preference = 'MultsymbolDot_Dot';
   var mathml = '<math><mrow><mn>6</mn><mo>⋅</mo><mn>8</mn></mrow></math>';
   var speech = '6 dot 8';
@@ -178,9 +178,9 @@ sre.ClearspeakPart2Symbols.prototype.testDot004 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Dot005
+ * Testing ClearspeakEnglishPart2Symbols Example Dot005
  */
-sre.ClearspeakPart2Symbols.prototype.testDot005 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testDot005 = function() {
   var preference = 'MultsymbolDot_Dot';
   var mathml = '<math><mrow><mi>m</mi><mo>⋅</mo><mi>n</mi></mrow></math>';
   var speech = 'm dot n';
@@ -189,9 +189,9 @@ sre.ClearspeakPart2Symbols.prototype.testDot005 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Dot006
+ * Testing ClearspeakEnglishPart2Symbols Example Dot006
  */
-sre.ClearspeakPart2Symbols.prototype.testDot006 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testDot006 = function() {
   var preference = 'MultsymbolDot_Dot';
   var mathml = '<math><mrow><mn>3</mn><mo>⋅</mo><mn>3</mn></mrow></math>';
   var speech = '3 dot 3';
@@ -205,9 +205,9 @@ sre.ClearspeakPart2Symbols.prototype.testDot006 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Triangle001
+ * Testing ClearspeakEnglishPart2Symbols Example Triangle001
  */
-sre.ClearspeakPart2Symbols.prototype.testTriangle001 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testTriangle001 = function() {
   var preference = 'TriangleSymbol_Auto';
   var mathml = '<math><mrow><mi>Δ</mi><mi>A</mi><mi>B</mi><mi>C</mi></mrow>' +
       '</math>';
@@ -217,9 +217,9 @@ sre.ClearspeakPart2Symbols.prototype.testTriangle001 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Triangle002
+ * Testing ClearspeakEnglishPart2Symbols Example Triangle002
  */
-sre.ClearspeakPart2Symbols.prototype.testTriangle002 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testTriangle002 = function() {
   var preference = 'TriangleSymbol_Auto';
   var mathml = '<math><mrow><mi>Δ</mi><mi>D</mi><mi>E</mi><mi>F</mi></mrow>' +
       '</math>';
@@ -229,9 +229,9 @@ sre.ClearspeakPart2Symbols.prototype.testTriangle002 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Triangle003
+ * Testing ClearspeakEnglishPart2Symbols Example Triangle003
  */
-sre.ClearspeakPart2Symbols.prototype.testTriangle003 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testTriangle003 = function() {
   var preference = 'TriangleSymbol_Delta';
   var mathml = '<math><mrow><mi>Δ</mi><mi>x</mi></mrow></math>';
   var speech = 'Delta x';
@@ -240,9 +240,9 @@ sre.ClearspeakPart2Symbols.prototype.testTriangle003 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Triangle004
+ * Testing ClearspeakEnglishPart2Symbols Example Triangle004
  */
-sre.ClearspeakPart2Symbols.prototype.testTriangle004 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testTriangle004 = function() {
   var preference = 'TriangleSymbol_Delta';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+' +
       '</mo><mi>Δ</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -257,9 +257,9 @@ sre.ClearspeakPart2Symbols.prototype.testTriangle004 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Ellipses001
+ * Testing ClearspeakEnglishPart2Symbols Example Ellipses001
  */
-sre.ClearspeakPart2Symbols.prototype.testEllipses001 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testEllipses001 = function() {
   var preference = 'Ellipses_Auto';
   var mathml = '<math><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn>' +
       '<mo>,</mo><mtext></mtext><mn>3</mn><mo>,</mo><mtext></mtext><mo>…' +
@@ -270,9 +270,9 @@ sre.ClearspeakPart2Symbols.prototype.testEllipses001 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Ellipses002
+ * Testing ClearspeakEnglishPart2Symbols Example Ellipses002
  */
-sre.ClearspeakPart2Symbols.prototype.testEllipses002 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testEllipses002 = function() {
   var preference = 'Ellipses_Auto';
   var mathml = '<math><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn>' +
       '<mo>,</mo><mtext></mtext><mn>3</mn><mo>,</mo><mtext></mtext><mo>…' +
@@ -283,9 +283,9 @@ sre.ClearspeakPart2Symbols.prototype.testEllipses002 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Ellipses003
+ * Testing ClearspeakEnglishPart2Symbols Example Ellipses003
  */
-sre.ClearspeakPart2Symbols.prototype.testEllipses003 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testEllipses003 = function() {
   var preference = 'Ellipses_Auto';
   var mathml = '<math><mrow><mo>…</mo><mtext></mtext><mo>,</mo><mo>−</mo>' +
       '<mn>2</mn><mo>,</mo><mtext></mtext><mo>−</mo><mn>1</mn><mo>,</mo>' +
@@ -299,9 +299,9 @@ sre.ClearspeakPart2Symbols.prototype.testEllipses003 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Ellipses004
+ * Testing ClearspeakEnglishPart2Symbols Example Ellipses004
  */
-sre.ClearspeakPart2Symbols.prototype.testEllipses004 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testEllipses004 = function() {
   var preference = 'Ellipses_AndSoOn';
   var mathml = '<math><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn>' +
       '<mo>,</mo><mtext></mtext><mn>3</mn><mo>,</mo><mtext></mtext><mo>…' +
@@ -312,9 +312,9 @@ sre.ClearspeakPart2Symbols.prototype.testEllipses004 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Ellipses005
+ * Testing ClearspeakEnglishPart2Symbols Example Ellipses005
  */
-sre.ClearspeakPart2Symbols.prototype.testEllipses005 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testEllipses005 = function() {
   var preference = 'Ellipses_AndSoOn';
   var mathml = '<math><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn>' +
       '<mo>,</mo><mtext></mtext><mn>3</mn><mo>,</mo><mtext></mtext><mo>…' +
@@ -325,9 +325,9 @@ sre.ClearspeakPart2Symbols.prototype.testEllipses005 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Ellipses006
+ * Testing ClearspeakEnglishPart2Symbols Example Ellipses006
  */
-sre.ClearspeakPart2Symbols.prototype.testEllipses006 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testEllipses006 = function() {
   var preference = 'Ellipses_AndSoOn';
   var mathml = '<math><mrow><mo>…</mo><mtext></mtext><mo>,</mo><mo>−</mo>' +
       '<mn>2</mn><mo>,</mo><mtext></mtext><mo>−</mo><mn>1</mn><mo>,</mo>' +
@@ -346,9 +346,9 @@ sre.ClearspeakPart2Symbols.prototype.testEllipses006 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example VertLine001
+ * Testing ClearspeakEnglishPart2Symbols Example VertLine001
  */
-sre.ClearspeakPart2Symbols.prototype.testVertLine001 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testVertLine001 = function() {
   var preference = 'VerticalLine_Auto';
   var mathml = '<math><mrow><mn>3</mn><mo>|</mo><mn>6</mn></mrow></math>';
   var speech = '3 divides 6';
@@ -357,9 +357,9 @@ sre.ClearspeakPart2Symbols.prototype.testVertLine001 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example VertLine002
+ * Testing ClearspeakEnglishPart2Symbols Example VertLine002
  */
-sre.ClearspeakPart2Symbols.prototype.testVertLine002 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testVertLine002 = function() {
   var preference = 'VerticalLine_Auto';
   var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mi>x</mi><mo>|</mo><mi>x' +
       '</mi><mo>></mo><mn>0</mn></mrow><mo>}</mo></mrow></mrow></math>';
@@ -369,9 +369,9 @@ sre.ClearspeakPart2Symbols.prototype.testVertLine002 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example VertLine003
+ * Testing ClearspeakEnglishPart2Symbols Example VertLine003
  */
-sre.ClearspeakPart2Symbols.prototype.testVertLine003 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testVertLine003 = function() {
   var preference = 'VerticalLine_Auto';
   var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mi>x</mi><mo>|</mo>' +
       '<mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>></mo><mn>2</mn>' +
@@ -383,9 +383,9 @@ sre.ClearspeakPart2Symbols.prototype.testVertLine003 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example VertLine004
+ * Testing ClearspeakEnglishPart2Symbols Example VertLine004
  */
-sre.ClearspeakPart2Symbols.prototype.testVertLine004 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testVertLine004 = function() {
   var preference = 'VerticalLine_Auto';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '</mrow><msub><mo>|</mo><mrow><mi>x</mi><mo>=</mo><mn>5</mn></mrow>' +
@@ -396,9 +396,9 @@ sre.ClearspeakPart2Symbols.prototype.testVertLine004 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example VertLine005
+ * Testing ClearspeakEnglishPart2Symbols Example VertLine005
  */
-sre.ClearspeakPart2Symbols.prototype.testVertLine005 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testVertLine005 = function() {
   var preference = 'VerticalLine_Auto';
   var mathml = '<math><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo>' +
       '<mn>2</mn><mi>x</mi><msub><mo>|</mo><mrow><mi>x</mi><mo>=</mo><mn>2' +
@@ -409,9 +409,9 @@ sre.ClearspeakPart2Symbols.prototype.testVertLine005 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example VertLine006
+ * Testing ClearspeakEnglishPart2Symbols Example VertLine006
  */
-sre.ClearspeakPart2Symbols.prototype.testVertLine006 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testVertLine006 = function() {
   var preference = 'VerticalLine_Auto';
   var mathml = '<math><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo>' +
       '<mi>x</mi><msubsup><mstyle mathsize="140%" displaystyle="true"><mo>|' +
@@ -423,9 +423,9 @@ sre.ClearspeakPart2Symbols.prototype.testVertLine006 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example VertLine007
+ * Testing ClearspeakEnglishPart2Symbols Example VertLine007
  */
-sre.ClearspeakPart2Symbols.prototype.testVertLine007 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testVertLine007 = function() {
   var preference = 'VerticalLine_SuchThat';
   var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mi>x</mi><mo>|</mo><mi>x' +
       '</mi><mo>></mo><mn>0</mn></mrow><mo>}</mo></mrow></mrow></math>';
@@ -435,9 +435,9 @@ sre.ClearspeakPart2Symbols.prototype.testVertLine007 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example VertLine008
+ * Testing ClearspeakEnglishPart2Symbols Example VertLine008
  */
-sre.ClearspeakPart2Symbols.prototype.testVertLine008 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testVertLine008 = function() {
   var preference = 'VerticalLine_Divides';
   var mathml = '<math><mrow><mn>3</mn><mo>|</mo><mn>6</mn></mrow></math>';
   var speech = '3 divides 6';
@@ -446,9 +446,9 @@ sre.ClearspeakPart2Symbols.prototype.testVertLine008 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example VertLine009
+ * Testing ClearspeakEnglishPart2Symbols Example VertLine009
  */
-sre.ClearspeakPart2Symbols.prototype.testVertLine009 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testVertLine009 = function() {
   var preference = 'VerticalLine_Given';
   var mathml = '<math><mrow><mi>P</mi><mtext></mtext><mrow><mo>(</mo><mrow>' +
       '<mi>A</mi><mo>|</mo><mi>B</mi></mrow><mo>)</mo></mrow></mrow></math>';
@@ -463,9 +463,9 @@ sre.ClearspeakPart2Symbols.prototype.testVertLine009 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example MembSym001
+ * Testing ClearspeakEnglishPart2Symbols Example MembSym001
  */
-sre.ClearspeakPart2Symbols.prototype.testMembSym001 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testMembSym001 = function() {
   var preference = 'SetMemberSymbol_Auto';
   var mathml = '<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ' +
       '</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow>' +
@@ -477,9 +477,9 @@ sre.ClearspeakPart2Symbols.prototype.testMembSym001 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example MembSym002
+ * Testing ClearspeakEnglishPart2Symbols Example MembSym002
  */
-sre.ClearspeakPart2Symbols.prototype.testMembSym002 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testMembSym002 = function() {
   var preference = 'SetMemberSymbol_Auto';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|' +
       '</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
@@ -489,9 +489,9 @@ sre.ClearspeakPart2Symbols.prototype.testMembSym002 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example MembSym003
+ * Testing ClearspeakEnglishPart2Symbols Example MembSym003
  */
-sre.ClearspeakPart2Symbols.prototype.testMembSym003 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testMembSym003 = function() {
   var preference = 'SetMemberSymbol_Auto';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉' +
       '</mo><mi>ℝ</mi></mrow></math>';
@@ -501,9 +501,9 @@ sre.ClearspeakPart2Symbols.prototype.testMembSym003 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example MembSym004
+ * Testing ClearspeakEnglishPart2Symbols Example MembSym004
  */
-sre.ClearspeakPart2Symbols.prototype.testMembSym004 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testMembSym004 = function() {
   var preference = 'SetMemberSymbol_Member';
   var mathml = '<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ' +
       '</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow>' +
@@ -515,9 +515,9 @@ sre.ClearspeakPart2Symbols.prototype.testMembSym004 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example MembSym005
+ * Testing ClearspeakEnglishPart2Symbols Example MembSym005
  */
-sre.ClearspeakPart2Symbols.prototype.testMembSym005 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testMembSym005 = function() {
   var preference = 'SetMemberSymbol_Member';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|' +
       '</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
@@ -528,9 +528,9 @@ sre.ClearspeakPart2Symbols.prototype.testMembSym005 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example MembSym006
+ * Testing ClearspeakEnglishPart2Symbols Example MembSym006
  */
-sre.ClearspeakPart2Symbols.prototype.testMembSym006 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testMembSym006 = function() {
   var preference = 'SetMemberSymbol_Member';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉' +
       '</mo><mi>ℝ</mi></mrow></math>';
@@ -540,9 +540,9 @@ sre.ClearspeakPart2Symbols.prototype.testMembSym006 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example MembSym007
+ * Testing ClearspeakEnglishPart2Symbols Example MembSym007
  */
-sre.ClearspeakPart2Symbols.prototype.testMembSym007 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testMembSym007 = function() {
   var preference = 'SetMemberSymbol_Element';
   var mathml = '<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ' +
       '</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow>' +
@@ -554,9 +554,9 @@ sre.ClearspeakPart2Symbols.prototype.testMembSym007 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example MembSym008
+ * Testing ClearspeakEnglishPart2Symbols Example MembSym008
  */
-sre.ClearspeakPart2Symbols.prototype.testMembSym008 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testMembSym008 = function() {
   var preference = 'SetMemberSymbol_Element';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|' +
       '</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
@@ -567,9 +567,9 @@ sre.ClearspeakPart2Symbols.prototype.testMembSym008 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example MembSym009
+ * Testing ClearspeakEnglishPart2Symbols Example MembSym009
  */
-sre.ClearspeakPart2Symbols.prototype.testMembSym009 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testMembSym009 = function() {
   var preference = 'SetMemberSymbol_Element';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉' +
       '</mo><mi>ℝ</mi></mrow></math>';
@@ -579,9 +579,9 @@ sre.ClearspeakPart2Symbols.prototype.testMembSym009 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example MembSym010
+ * Testing ClearspeakEnglishPart2Symbols Example MembSym010
  */
-sre.ClearspeakPart2Symbols.prototype.testMembSym010 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testMembSym010 = function() {
   var preference = 'SetMemberSymbol_Belongs';
   var mathml = '<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ' +
       '</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow>' +
@@ -594,9 +594,9 @@ sre.ClearspeakPart2Symbols.prototype.testMembSym010 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example MembSym011
+ * Testing ClearspeakEnglishPart2Symbols Example MembSym011
  */
-sre.ClearspeakPart2Symbols.prototype.testMembSym011 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testMembSym011 = function() {
   var preference = 'SetMemberSymbol_Belongs';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|' +
       '</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
@@ -607,9 +607,9 @@ sre.ClearspeakPart2Symbols.prototype.testMembSym011 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example MembSym012
+ * Testing ClearspeakEnglishPart2Symbols Example MembSym012
  */
-sre.ClearspeakPart2Symbols.prototype.testMembSym012 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testMembSym012 = function() {
   var preference = 'SetMemberSymbol_Belongs';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉' +
       '</mo><mi>ℝ</mi></mrow></math>';
@@ -619,9 +619,9 @@ sre.ClearspeakPart2Symbols.prototype.testMembSym012 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example MembSym013
+ * Testing ClearspeakEnglishPart2Symbols Example MembSym013
  */
-sre.ClearspeakPart2Symbols.prototype.testMembSym013 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testMembSym013 = function() {
   var preference = 'SetMemberSymbol_Belongs';
   var mathml = '<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ' +
       '</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow>' +
@@ -633,9 +633,9 @@ sre.ClearspeakPart2Symbols.prototype.testMembSym013 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example MembSym014
+ * Testing ClearspeakEnglishPart2Symbols Example MembSym014
  */
-sre.ClearspeakPart2Symbols.prototype.testMembSym014 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testMembSym014 = function() {
   var preference = 'SetMemberSymbol_Belongs';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|' +
       '</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
@@ -646,9 +646,9 @@ sre.ClearspeakPart2Symbols.prototype.testMembSym014 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example MembSym015
+ * Testing ClearspeakEnglishPart2Symbols Example MembSym015
  */
-sre.ClearspeakPart2Symbols.prototype.testMembSym015 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testMembSym015 = function() {
   var preference = 'SetMemberSymbol_Belongs';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉' +
       '</mo><mi>ℝ</mi></mrow></math>';
@@ -663,9 +663,9 @@ sre.ClearspeakPart2Symbols.prototype.testMembSym015 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example SetMemb001
+ * Testing ClearspeakEnglishPart2Symbols Example SetMemb001
  */
-sre.ClearspeakPart2Symbols.prototype.testSetMemb001 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testSetMemb001 = function() {
   var preference = 'Sets_woAll:SetMemberSymbol_Belongs';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>:' +
       '</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}' +
@@ -677,9 +677,9 @@ sre.ClearspeakPart2Symbols.prototype.testSetMemb001 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example SetMemb002
+ * Testing ClearspeakEnglishPart2Symbols Example SetMemb002
  */
-sre.ClearspeakPart2Symbols.prototype.testSetMemb002 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testSetMemb002 = function() {
   var preference = 'Sets_woAll:SetMemberSymbol_Member';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|' +
       '</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
@@ -695,9 +695,9 @@ sre.ClearspeakPart2Symbols.prototype.testSetMemb002 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Sum001
+ * Testing ClearspeakEnglishPart2Symbols Example Sum001
  */
-sre.ClearspeakPart2Symbols.prototype.testSum001 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testSum001 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munderover><mo>∑' +
       '</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn>' +
@@ -708,9 +708,9 @@ sre.ClearspeakPart2Symbols.prototype.testSum001 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Sum002
+ * Testing ClearspeakEnglishPart2Symbols Example Sum002
  */
-sre.ClearspeakPart2Symbols.prototype.testSum002 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testSum002 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munderover><mo>∑' +
       '</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi>∞</mi>' +
@@ -721,9 +721,9 @@ sre.ClearspeakPart2Symbols.prototype.testSum002 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Sum003
+ * Testing ClearspeakEnglishPart2Symbols Example Sum003
  */
-sre.ClearspeakPart2Symbols.prototype.testSum003 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testSum003 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munder><mo>∑</mo>' +
       '<mrow><mi>i</mi><mo>∈</mo><msup><mi>ℤ</mi><mo>+</mo></msup></mrow>' +
@@ -734,9 +734,9 @@ sre.ClearspeakPart2Symbols.prototype.testSum003 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Sum004
+ * Testing ClearspeakEnglishPart2Symbols Example Sum004
  */
-sre.ClearspeakPart2Symbols.prototype.testSum004 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testSum004 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munder><mo>∑</mo>' +
       '<mi>S</mi></munder><mi>i</mi></mstyle></mrow></math>';
@@ -746,9 +746,9 @@ sre.ClearspeakPart2Symbols.prototype.testSum004 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Sum005
+ * Testing ClearspeakEnglishPart2Symbols Example Sum005
  */
-sre.ClearspeakPart2Symbols.prototype.testSum005 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testSum005 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><mo>∑</mo><mrow>' +
       '<msub><mi>a</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>';
@@ -758,9 +758,9 @@ sre.ClearspeakPart2Symbols.prototype.testSum005 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Sum006
+ * Testing ClearspeakEnglishPart2Symbols Example Sum006
  */
-sre.ClearspeakPart2Symbols.prototype.testSum006 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testSum006 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munderover><mo>∏' +
       '</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn>' +
@@ -771,9 +771,9 @@ sre.ClearspeakPart2Symbols.prototype.testSum006 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Sum007
+ * Testing ClearspeakEnglishPart2Symbols Example Sum007
  */
-sre.ClearspeakPart2Symbols.prototype.testSum007 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testSum007 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munder><mo>∏</mo>' +
       '<mrow><mi>i</mi><mo>∈</mo><msup><mi>ℤ</mi><mo>+</mo></msup></mrow>' +
@@ -786,9 +786,9 @@ sre.ClearspeakPart2Symbols.prototype.testSum007 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Sum008
+ * Testing ClearspeakEnglishPart2Symbols Example Sum008
  */
-sre.ClearspeakPart2Symbols.prototype.testSum008 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testSum008 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munder><mo>∏</mo>' +
       '<mrow><msup><mi>ℤ</mi><mo>+</mo></msup></mrow></munder><mrow><mfrac>' +
@@ -801,9 +801,9 @@ sre.ClearspeakPart2Symbols.prototype.testSum008 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Sum009
+ * Testing ClearspeakEnglishPart2Symbols Example Sum009
  */
-sre.ClearspeakPart2Symbols.prototype.testSum009 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testSum009 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><mo>∏</mo><mrow>' +
       '<msub><mi>a</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>';
@@ -813,9 +813,9 @@ sre.ClearspeakPart2Symbols.prototype.testSum009 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Sum010
+ * Testing ClearspeakEnglishPart2Symbols Example Sum010
  */
-sre.ClearspeakPart2Symbols.prototype.testSum010 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testSum010 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munderover><mo>∩' +
       '</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn>' +
@@ -827,9 +827,9 @@ sre.ClearspeakPart2Symbols.prototype.testSum010 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Sum011
+ * Testing ClearspeakEnglishPart2Symbols Example Sum011
  */
-sre.ClearspeakPart2Symbols.prototype.testSum011 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testSum011 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munderover><mo>∪' +
       '</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn>' +
@@ -841,9 +841,9 @@ sre.ClearspeakPart2Symbols.prototype.testSum011 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Sum012
+ * Testing ClearspeakEnglishPart2Symbols Example Sum012
  */
-sre.ClearspeakPart2Symbols.prototype.testSum012 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testSum012 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><mo>∩</mo><mrow>' +
       '<msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>';
@@ -853,9 +853,9 @@ sre.ClearspeakPart2Symbols.prototype.testSum012 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Sum013
+ * Testing ClearspeakEnglishPart2Symbols Example Sum013
  */
-sre.ClearspeakPart2Symbols.prototype.testSum013 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testSum013 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><mo>∪</mo><mrow>' +
       '<msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>';
@@ -865,9 +865,9 @@ sre.ClearspeakPart2Symbols.prototype.testSum013 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Sum014
+ * Testing ClearspeakEnglishPart2Symbols Example Sum014
  */
-sre.ClearspeakPart2Symbols.prototype.testSum014 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testSum014 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munder><mo>∩</mo>' +
       '<mi>C</mi></munder><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow>' +
@@ -878,9 +878,9 @@ sre.ClearspeakPart2Symbols.prototype.testSum014 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Sum015
+ * Testing ClearspeakEnglishPart2Symbols Example Sum015
  */
-sre.ClearspeakPart2Symbols.prototype.testSum015 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testSum015 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munder><mo>∪</mo>' +
       '<mi>C</mi></munder><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow>' +
@@ -891,9 +891,9 @@ sre.ClearspeakPart2Symbols.prototype.testSum015 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Sum016
+ * Testing ClearspeakEnglishPart2Symbols Example Sum016
  */
-sre.ClearspeakPart2Symbols.prototype.testSum016 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testSum016 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><mrow><mo>∫</mo>' +
       '<mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mtext>' +
@@ -904,9 +904,9 @@ sre.ClearspeakPart2Symbols.prototype.testSum016 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Sum017
+ * Testing ClearspeakEnglishPart2Symbols Example Sum017
  */
-sre.ClearspeakPart2Symbols.prototype.testSum017 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testSum017 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><mrow><msubsup>' +
       '<mo>∫</mo><mn>0</mn><mn>1</mn></msubsup><mrow><mi>f</mi><mrow><mo>(' +
@@ -918,9 +918,9 @@ sre.ClearspeakPart2Symbols.prototype.testSum017 = function() {
 
 
 /**
- * Testing ClearspeakPart2Symbols Example Sum018
+ * Testing ClearspeakEnglishPart2Symbols Example Sum018
  */
-sre.ClearspeakPart2Symbols.prototype.testSum018 = function() {
+sre.ClearspeakEnglishPart2Symbols.prototype.testSum018 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><mrow><munder><mo>∫' +
       '</mo><mi>ℝ</mi></munder><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi>' +

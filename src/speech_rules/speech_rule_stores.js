@@ -20,9 +20,6 @@
 
 goog.provide('sre.SpeechRuleStores');
 
-goog.require('sre.AbstractionFrench');
-goog.require('sre.AbstractionRules');
-goog.require('sre.AbstractionSpanish');
 goog.require('sre.BaseRuleStore');
 goog.require('sre.ClearspeakFrench');
 goog.require('sre.ClearspeakRules');
@@ -35,6 +32,9 @@ goog.require('sre.PrefixFrench');
 goog.require('sre.PrefixRules');
 goog.require('sre.PrefixSpanish');
 goog.require('sre.SemanticTreeRules');
+goog.require('sre.SummaryFrench');
+goog.require('sre.SummaryRules');
+goog.require('sre.SummarySpanish');
 
 
 /**
@@ -50,9 +50,9 @@ sre.SpeechRuleStores.RULE_SETS_ = {
   'ClearspeakFrench': sre.ClearspeakFrench,
   'ClearspeakRules': sre.ClearspeakRules,
   'EmacspeakRules': sre.EmacspeakRules,
-  'AbstractionFrench': sre.AbstractionFrench,
-  'AbstractionRules': sre.AbstractionRules,
-  'AbstractionSpanish': sre.AbstractionSpanish,
+  'SummaryFrench': sre.SummaryFrench,
+  'SummaryRules': sre.SummaryRules,
+  'SummarySpanish': sre.SummarySpanish,
   'PrefixFrench': sre.PrefixFrench,
   'PrefixRules': sre.PrefixRules,
   'PrefixSpanish': sre.PrefixSpanish
