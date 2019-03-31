@@ -56,7 +56,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime001 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><mrow><msup><mi>A</mi><mo>′</mo></msup><msup><mi>B' +
       '</mi><mo>′</mo></msup></mrow></math>';
-  var speech = '';
+  var speech = 'A prime, B prime';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -68,7 +68,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime002 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><mrow><msup><mi>A</mi><mo>″</mo></msup><msup><mi>B' +
       '</mi><mo>″</mo></msup></mrow></math>';
-  var speech = '';
+  var speech = 'A double prime, B double prime';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -80,7 +80,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime003 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><mrow><msup><mi>A</mi><mo>‴</mo></msup><msup><mi>B' +
       '</mi><mo>‴</mo></msup></mrow></math>';
-  var speech = '';
+  var speech = 'A triple prime, B triple prime';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -92,7 +92,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime004 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><mrow><msup><mi>f</mi><mo>′</mo></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'f prime de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -104,7 +104,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime005 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><mrow><msup><mi>f</mi><mo>″</mo></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'f double prime de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -116,7 +116,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime006 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><mrow><msup><mi>f</mi><mo>‴</mo></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'f triple prime de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -127,7 +127,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime006 = function() {
 sre.ClearspeakFrenchPart3Adornments.prototype.testPrime007 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><msup><mn>1</mn><mo>′</mo></msup></math>';
-  var speech = '';
+  var speech = '1 foot';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -138,7 +138,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime007 = function() {
 sre.ClearspeakFrenchPart3Adornments.prototype.testPrime008 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><msup><mn>2</mn><mo>′</mo></msup></math>';
-  var speech = '';
+  var speech = '2 feet';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -149,7 +149,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime008 = function() {
 sre.ClearspeakFrenchPart3Adornments.prototype.testPrime009 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><msup><mn>1</mn><mo>″</mo></msup></math>';
-  var speech = '';
+  var speech = '1 inch';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -160,7 +160,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime009 = function() {
 sre.ClearspeakFrenchPart3Adornments.prototype.testPrime010 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><msup><mn>2</mn><mo>″</mo></msup></math>';
-  var speech = '';
+  var speech = '2 inches';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -172,7 +172,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime011 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><mrow><msup><mn>16</mn><mo>′</mo></msup><msup><mn>10' +
       '</mn><mo>″</mo></msup></mrow></math>';
-  var speech = '';
+  var speech = '16 feet, 10 inches';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -185,7 +185,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime012 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><mrow><mn>45</mn><mo>°</mo><msup><mn>10</mn><mo>′' +
       '</mo></msup></mrow></math>';
-  var speech = '';
+  var speech = '45 degrés, 10 minutes';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -197,7 +197,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime013 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><mrow><mi>x</mi><mo>°</mo><msup><mi>y</mi><mo>′</mo>' +
       '</msup></mrow></math>';
-  var speech = '';
+  var speech = 'x degrés, y minutes';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -209,7 +209,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.untestPrime014 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><mrow><mn>45</mn><mo>°</mo><msup><mn>10</mn><mo>′' +
       '</mo></msup><msup><mn>25</mn><mo>″</mo></msup></mrow></math>';
-  var speech = '';
+  var speech = 'XXXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -221,7 +221,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.untestPrime015 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><mrow><mi>x</mi><mo>°</mo><msup><mi>y</mi><mo>′</mo>' +
       '</msup><msup><mi>z</mi><mo>″</mo></msup></mrow></math>';
-  var speech = '';
+  var speech = 'XXXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -232,7 +232,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.untestPrime015 = function() {
 sre.ClearspeakFrenchPart3Adornments.prototype.testPrime016 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><msup><mn>1</mn><mo>′</mo></msup></math>';
-  var speech = '';
+  var speech = '1 minute';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -243,7 +243,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime016 = function() {
 sre.ClearspeakFrenchPart3Adornments.prototype.testPrime017 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><msup><mi>x</mi><mo>′</mo></msup></math>';
-  var speech = '';
+  var speech = 'x minutes';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -254,7 +254,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime017 = function() {
 sre.ClearspeakFrenchPart3Adornments.prototype.testPrime018 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><msup><mn>2</mn><mo>′</mo></msup></math>';
-  var speech = '';
+  var speech = '2 minutes';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -265,7 +265,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime018 = function() {
 sre.ClearspeakFrenchPart3Adornments.prototype.testPrime019 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><msup><mn>1</mn><mo>″</mo></msup></math>';
-  var speech = '';
+  var speech = '1 second';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -276,7 +276,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime019 = function() {
 sre.ClearspeakFrenchPart3Adornments.prototype.testPrime020 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><msup><mi>x</mi><mo>″</mo></msup></math>';
-  var speech = '';
+  var speech = 'x seconds';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -287,7 +287,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime020 = function() {
 sre.ClearspeakFrenchPart3Adornments.prototype.testPrime021 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><msup><mn>2</mn><mo>″</mo></msup></math>';
-  var speech = '';
+  var speech = '2 seconds';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -299,7 +299,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime022 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><mrow><msup><mn>16</mn><mo>′</mo></msup><msup><mn>10' +
       '</mn><mo>″</mo></msup></mrow></math>';
-  var speech = '';
+  var speech = '16 minutes, 10 seconds';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -311,7 +311,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime023 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><mrow><msup><mi>x</mi><mo>′</mo></msup><msup><mi>y' +
       '</mi><mo>″</mo></msup></mrow></math>';
-  var speech = '';
+  var speech = 'x minutes, y seconds';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -323,7 +323,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime024 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><mrow><mn>45</mn><mo>°</mo><msup><mn>10</mn><mo>′' +
       '</mo></msup></mrow></math>';
-  var speech = '';
+  var speech = '45 degrees, 10 minutes';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -335,7 +335,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime025 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><mrow><mn>45</mn><mo>°</mo><msup><mn>10</mn><mo>′' +
       '</mo></msup><msup><mn>25</mn><mo>″</mo></msup></mrow></math>';
-  var speech = '';
+  var speech = '45 degrees, 10 minutes, 25 seconds';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -347,7 +347,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime026 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><mrow><msup><mi>A</mi><mo>′</mo></msup><msup><mi>B' +
       '</mi><mo>′</mo></msup></mrow></math>';
-  var speech = '';
+  var speech = 'A prime, B prime';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -359,7 +359,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime027 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><mrow><msup><mi>A</mi><mo>″</mo></msup><msup><mi>B' +
       '</mi><mo>″</mo></msup></mrow></math>';
-  var speech = '';
+  var speech = 'A double prime, B double prime';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -371,7 +371,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime028 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><mrow><msup><mi>A</mi><mo>‴</mo></msup><msup><mi>B' +
       '</mi><mo>‴</mo></msup></mrow></math>';
-  var speech = '';
+  var speech = 'A triple prime, B triple prime';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -383,7 +383,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime029 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><mrow><msup><mi>f</mi><mo>′</mo></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'f prime de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -395,7 +395,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime030 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><mrow><msup><mi>f</mi><mo>″</mo></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'f double prime de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -407,7 +407,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime031 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><mrow><msup><mi>f</mi><mo>‴</mo></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'f triple prime de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -418,7 +418,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime031 = function() {
 sre.ClearspeakFrenchPart3Adornments.prototype.testPrime032 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><msup><mn>1</mn><mo>′</mo></msup></math>';
-  var speech = '';
+  var speech = '1 foot';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -429,7 +429,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime032 = function() {
 sre.ClearspeakFrenchPart3Adornments.prototype.testPrime033 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><msup><mi>x</mi><mo>′</mo></msup></math>';
-  var speech = '';
+  var speech = 'x feet';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -440,7 +440,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime033 = function() {
 sre.ClearspeakFrenchPart3Adornments.prototype.testPrime034 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><msup><mn>2</mn><mo>′</mo></msup></math>';
-  var speech = '';
+  var speech = '2 feet';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -451,7 +451,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime034 = function() {
 sre.ClearspeakFrenchPart3Adornments.prototype.testPrime035 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><msup><mn>1</mn><mo>″</mo></msup></math>';
-  var speech = '';
+  var speech = '1 inch';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -462,7 +462,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime035 = function() {
 sre.ClearspeakFrenchPart3Adornments.prototype.testPrime036 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><msup><mi>x</mi><mo>″</mo></msup></math>';
-  var speech = '';
+  var speech = 'x inches';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -473,7 +473,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime036 = function() {
 sre.ClearspeakFrenchPart3Adornments.prototype.testPrime037 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><msup><mn>2</mn><mo>″</mo></msup></math>';
-  var speech = '';
+  var speech = '2 inches';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -486,7 +486,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.untestPrime038 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><mrow><mn>16</mn><mo>′</mo></msup><mn>10</mn><mo>″' +
       '</mo></msup></mrow></math>';
-  var speech = '';
+  var speech = 'XXXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -498,7 +498,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.untestPrime039 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><mrow><msup><mi>x</mi><mo>′</mo></msup><msup><mi>y' +
       '</mi><mo>″</mo></msup></mrow></math>';
-  var speech = '';
+  var speech = 'XXXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -510,7 +510,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.untestPrime040 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><mrow><mn>45</mn><mo>°</mo><mn>10</mn><mo>′</mo>' +
       '</msup></mrow></math>';
-  var speech = '';
+  var speech = 'XXXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -522,7 +522,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.untestPrime041 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><mrow><mn>45</mn><mo>°</mo><mn>10</mn><mo>′</mo>' +
       '</msup><mn>25</mn><mo>″</mo></msup></mrow></math>';
-  var speech = '';
+  var speech = 'XXXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -534,7 +534,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime042 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><mrow><msup><mi>A</mi><mo>′</mo></msup><msup><mi>B' +
       '</mi><mo>′</mo></msup></mrow></math>';
-  var speech = '';
+  var speech = 'A prime, B prime';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -546,7 +546,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime043 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><mrow><msup><mi>A</mi><mo>″</mo></msup><msup><mi>B' +
       '</mi><mo>″</mo></msup></mrow></math>';
-  var speech = '';
+  var speech = 'A double prime, B double prime';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -558,7 +558,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime044 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><mrow><msup><mi>A</mi><mo>‴</mo></msup><msup><mi>B' +
       '</mi><mo>‴</mo></msup></mrow></math>';
-  var speech = '';
+  var speech = 'A triple prime, B triple prime';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -570,7 +570,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime045 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><mrow><msup><mi>f</mi><mo>′</mo></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'f prime de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -582,7 +582,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime046 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><mrow><msup><mi>f</mi><mo>″</mo></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'f double prime de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -594,7 +594,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testPrime047 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><mrow><msup><mi>f</mi><mo>‴</mo></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'f triple prime de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -618,7 +618,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.untestCombPerm001 = function() {
   var mathml = '<math><mrow><mmultiscripts><mi>C</mi><mprescripts/><mi>n' +
       '</mi><none/></mmultiscripts><msub><mrow/><mi>r</mi></msub></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = 'XXXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -631,7 +631,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.untestCombPerm002 = function() {
   var mathml = '<math><mrow><mmultiscripts><mi>P</mi><mprescripts/><mi>n' +
       '</mi><none/></mmultiscripts><msub><mrow/><mi>r</mi></msub></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = 'XXXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -644,7 +644,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.untestCombPerm003 = function() {
   var mathml = '<math><mrow><mmultiscripts><mi>C</mi><mprescripts/><mrow>' +
       '<mn>10</mn></mrow><none/></mmultiscripts><msub><mrow/><mn>3</mn>' +
       '</msub></mrow></math>';
-  var speech = '';
+  var speech = 'XXXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -657,7 +657,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.untestCombPerm004 = function() {
   var mathml = '<math><mrow><mmultiscripts><mi>P</mi><mprescripts/><mrow>' +
       '<mn>10</mn></mrow><none/></mmultiscripts><msub><mrow/><mn>3</mn>' +
       '</msub></mrow></math>';
-  var speech = '';
+  var speech = 'XXXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -670,7 +670,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.untestCombPerm005 = function() {
   var mathml = '<math><mrow><mmultiscripts><mi>C</mi><mprescripts/><mi>n' +
       '</mi><none/></mmultiscripts><msub><mrow/><mi>r</mi></msub></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = 'XXXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -683,7 +683,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.untestCombPerm006 = function() {
   var mathml = '<math><mrow><mmultiscripts><mi>P</mi><mprescripts/><mi>n' +
       '</mi><none/></mmultiscripts><msub><mrow/><mi>r</mi></msub></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = 'XXXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -696,7 +696,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.untestCombPerm007 = function() {
   var mathml = '<math><mrow><mmultiscripts><mi>C</mi><mprescripts/><mrow>' +
       '<mn>10</mn></mrow><none/></mmultiscripts><msub><mrow/><mn>3</mn>' +
       '</msub></mrow></math>';
-  var speech = '';
+  var speech = 'XXXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -709,7 +709,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.untestCombPerm008 = function() {
   var mathml = '<math><mrow><mmultiscripts><mi>P</mi><mprescripts/><mrow>' +
       '<mn>10</mn></mrow><none/></mmultiscripts><msub><mrow/><mn>3</mn>' +
       '</msub></mrow></math>';
-  var speech = '';
+  var speech = 'XXXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -722,7 +722,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testCombPerm001a = function() {
   var preference = 'CombinationPermutation_Auto';
   var mathml = '<math><mrow><mmultiscripts><mi>C</mi><mi>r</mi>' +
       '<mprescripts/><mi>n</mi><none/></mmultiscripts></mrow></math>';
-  var speech = '';
+  var speech = 'n C r';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -734,7 +734,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testCombPerm002a = function() {
   var preference = 'CombinationPermutation_Auto';
   var mathml = '<math><mrow><mmultiscripts><mi>P</mi><mi>r</mi>' +
       '<mprescripts/><mi>n</mi><none/></mmultiscripts></mrow></math>';
-  var speech = '';
+  var speech = 'n P r';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -747,7 +747,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testCombPerm003a = function() {
   var mathml = '<math><mrow><mmultiscripts><mi>C</mi><mn>3</mn>' +
       '<mprescripts/><mrow><mn>10</mn></mrow><none/></mmultiscripts></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = '10 C 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -760,7 +760,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testCombPerm004a = function() {
   var mathml = '<math><mrow><mmultiscripts><mi>P</mi><mn>3</mn>' +
       '<mprescripts/><mrow><mn>10</mn></mrow><none/></mmultiscripts></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = '10 P 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -772,7 +772,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testCombPerm005a = function() {
   var preference = 'CombinationPermutation_ChoosePermute';
   var mathml = '<math><mrow><mmultiscripts><mi>C</mi><mi>r</mi>' +
       '<mprescripts/><mi>n</mi><none/></mmultiscripts></mrow></math>';
-  var speech = '';
+  var speech = 'combinaison de; parmi r';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -784,7 +784,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testCombPerm006a = function() {
   var preference = 'CombinationPermutation_ChoosePermute';
   var mathml = '<math><mrow><mmultiscripts><mi>P</mi><mi>r</mi>' +
       '<mprescripts/><mi>n</mi><none/></mmultiscripts></mrow></math>';
-  var speech = '';
+  var speech = 'permutation de n parmi r';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -797,7 +797,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testCombPerm007a = function() {
   var mathml = '<math><mrow><mmultiscripts><mi>C</mi><mn>3</mn>' +
       '<mprescripts/><mrow><mn>10</mn></mrow><none/></mmultiscripts></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = 'combinaison de; parmi 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -810,7 +810,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testCombPerm008a = function() {
   var mathml = '<math><mrow><mmultiscripts><mi>P</mi><mn>3</mn>' +
       '<mprescripts/><mrow><mn>10</mn></mrow><none/></mmultiscripts></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = 'permutation de 10 parmi 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -826,7 +826,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testCombPerm008a = function() {
 sre.ClearspeakFrenchPart3Adornments.prototype.testBar001 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mover accent="true"><mi>f</mi><mo>¯</mo></mover></math>';
-  var speech = '';
+  var speech = 'f macron';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -838,7 +838,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar002 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mover accent="true"><mi>f</mi><mo>¯</mo>' +
       '</mover><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'f macron de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -851,7 +851,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar003 = function() {
   var mathml = '<math><mrow><mover accent="true"><mrow><msub><mi>f</mi>' +
       '<mn>1</mn></msub></mrow><mo stretchy="true">¯</mo></mover></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = 'f sub 1, macron';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -864,7 +864,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar004 = function() {
   var mathml = '<math><mrow><mover accent="true"><mrow><msub><mi>f</mi>' +
       '<mn>1</mn></msub></mrow><mo stretchy="true">¯</mo></mover><mrow>' +
       '<mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'f sub 1, macron de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -875,7 +875,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar004 = function() {
 sre.ClearspeakFrenchPart3Adornments.prototype.testBar005 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mover accent="true"><mi>z</mi><mo>¯</mo></mover></math>';
-  var speech = '';
+  var speech = 'z macron';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -887,7 +887,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar006 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mn>0</mn><mo>.</mo><mover accent="true"><mn>3' +
       '</mn><mo stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = '';
+  var speech = 'the repeating decimal 0 point followed by repeating digit 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -899,7 +899,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar007 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mn>0</mn><mo>.</mo><mover accent="true"><mrow>' +
       '<mn>12</mn></mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = '';
+  var speech = 'the repeating decimal 0 point followed by repeating digits 1 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -911,7 +911,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar008 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mn>2</mn><mo>.</mo><mover accent="true"><mrow>' +
       '<mn>134</mn></mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = '';
+  var speech = 'the repeating decimal 2 point followed by repeating digits 1 3 4';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -923,7 +923,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar009 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mn>.13</mn><mover accent="true"><mrow><mn>467' +
       '</mn></mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = '';
+  var speech = 'the repeating decimal point 1 3 followed by repeating digits 4 6 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -935,7 +935,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar010 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mn>25.12</mn><mover accent="true"><mrow>' +
       '<mn>632</mn></mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = '';
+  var speech = 'the repeating decimal 2 5 point 1 2 followed by repeating digits 6 3 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -947,7 +947,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar011 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mi>z</mi><mtext></mtext><mover accent="true">' +
       '<mi>z</mi><mo>¯</mo></mover></mrow></math>';
-  var speech = '';
+  var speech = 'z, z macron';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -959,7 +959,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar012 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mover accent="true"><mrow><mi>C</mi><mi>D</mi>' +
       '</mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = '';
+  var speech = 'the line segment C D';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -972,7 +972,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar013 = function() {
   var mathml = '<math><mrow><mover accent="true"><mrow><msup><mi>C</mi>' +
       '<mo>′</mo></msup><msup><mi>D</mi><mo>′</mo></msup></mrow><mo' +
       ' stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = '';
+  var speech = 'the line segment C prime D prime';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -985,7 +985,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar014 = function() {
   var mathml = '<math><mrow><mover accent="true"><mrow><msup><mi>C</mi>' +
       '<mo>″</mo></msup><msup><mi>D</mi><mo>″</mo></msup></mrow><mo' +
       ' stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = '';
+  var speech = 'the line segment C double prime D double prime';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -998,7 +998,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar015 = function() {
   var mathml = '<math><mrow><mover accent="true"><mrow><msup><mi>C</mi>' +
       '<mo>‴</mo></msup><msup><mi>D</mi><mo>‴</mo></msup></mrow><mo' +
       ' stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = '';
+  var speech = 'the line segment C triple prime D triple prime';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1009,7 +1009,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar015 = function() {
 sre.ClearspeakFrenchPart3Adornments.prototype.testBar016 = function() {
   var preference = 'Bar_Conjugate';
   var mathml = '<math><mover accent="true"><mi>z</mi><mo>¯</mo></mover></math>';
-  var speech = '';
+  var speech = 'the complex conjugate of z';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1021,7 +1021,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar017 = function() {
   var preference = 'Bar_Conjugate';
   var mathml = '<math><mrow><mi>z</mi><mtext></mtext><mover accent="true">' +
       '<mi>z</mi><mo>¯</mo></mover></mrow></math>';
-  var speech = '';
+  var speech = 'z, the complex conjugate of z';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1034,7 +1034,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar018 = function() {
   var mathml = '<math><mrow><mover accent="true"><mrow><mn>3</mn><mo>−</mo>' +
       '<mn>2</mn><mi>i</mi></mrow><mo stretchy="true">¯</mo></mover><mo>=' +
       '</mo><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi></mrow></math>';
-  var speech = '';
+  var speech = 'the complex conjugate of 3 moins 2 i, égale 3 plus 2 i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1047,7 +1047,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar006a = function() {
   var preference = 'Bar_Conjugate';
   var mathml = '<math><mrow><mn>0</mn><mo>.</mo><mover accent="true"><mn>3' +
       '</mn><mo stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = '';
+  var speech = 'the repeating decimal 0 point followed by repeating digit 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1059,7 +1059,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar007a = function() {
   var preference = 'Bar_Conjugate';
   var mathml = '<math><mrow><mn>0</mn><mo>.</mo><mover accent="true"><mrow>' +
       '<mn>12</mn></mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = '';
+  var speech = 'the repeating decimal 0 point followed by repeating digits 1 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1071,7 +1071,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar008a = function() {
   var preference = 'Bar_Conjugate';
   var mathml = '<math><mrow><mn>2</mn><mo>.</mo><mover accent="true"><mrow>' +
       '<mn>134</mn></mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = '';
+  var speech = 'the repeating decimal 2 point followed by repeating digits 1 3 4';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1083,7 +1083,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar009a = function() {
   var preference = 'Bar_Conjugate';
   var mathml = '<math><mrow><mn>.13</mn><mover accent="true"><mrow><mn>467' +
       '</mn></mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = '';
+  var speech = 'the repeating decimal point 1 3 followed by repeating digits 4 6 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1095,7 +1095,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar010a = function() {
   var preference = 'Bar_Conjugate';
   var mathml = '<math><mrow><mn>25.12</mn><mover accent="true"><mrow>' +
       '<mn>632</mn></mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = '';
+  var speech = 'the repeating decimal 2 5 point 1 2 followed by repeating digits 6 3 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1114,7 +1114,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testEqual001 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mover><mo>=</mo><mrow><mtext>def</mtext>' +
       '</mrow></mover></mrow></math>';
-  var speech = '';
+  var speech = 'is defined to be';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1129,7 +1129,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testEqual002 = function() {
       '</mrow><mover><mo>=</mo><mrow><mtext>def</mtext></mrow></mover><mi>f' +
       '</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)' +
       '</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'parenthèse gauche, f opérateur rond g, parenthèse droite, de x, is defined to be, f de, g de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1140,7 +1140,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testEqual002 = function() {
 sre.ClearspeakFrenchPart3Adornments.prototype.testEqual003 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mover><mo>=</mo><mo>?</mo></mover></mrow></math>';
-  var speech = '';
+  var speech = 'égale sign with point d\'interrogation over it';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1152,6 +1152,6 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testEqual004 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mi>x</mi><mo>+</mo><mn>2</mn><mover><mo>=</mo>' +
       '<mo>?</mo></mover><mn>4</mn></mrow></math>';
-  var speech = '';
+  var speech = 'x plus 2 égale sign with point d\'interrogation over it 4';
   this.executeRuleTest(mathml, speech, preference);
 };

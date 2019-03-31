@@ -61,7 +61,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix001 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -75,7 +75,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix002 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -89,7 +89,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix003 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr>' +
       '<mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -103,7 +103,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix004 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr>' +
       '<mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd>' +
       '</mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -116,7 +116,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix005 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice colonne de dimension 3 par 1. 1, 2, 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -129,7 +129,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix006 = function(
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice colonne de dimension 3 par 1. 1, 2, 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -142,7 +142,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix007 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice ligne de dimension 1 par 2. 3, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -155,7 +155,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix008 = function(
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo>' +
       '</mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice ligne de dimension 1 par 2. 3, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -167,7 +167,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix008a = function
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mrow><mo>(</mo><mn>3' +
       '</mn><mo>)</mo></mrow></mrow></mtd></mtr></mtable></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 1 par 1 avec élément 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -180,7 +180,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix008b = function
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mo>(</mo><mtable><mtr><mtd><mrow><mrow><mn>3' +
       '</mn></mrow></mrow></mtd></mtr></mtable><mo>)</mo></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 1 par 1 avec élément 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -194,7 +194,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix009 = function(
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow>' +
       '<mi>x</mi><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice colonne de dimension 2 par 1. rangée 1: x plus 1 rangée 2: x moins 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -208,7 +208,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix010 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice colonne de dimension 4 par 1. rangée 1: 3 rangée 2: 6 rangée 3: 1 rangée 4: 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -222,7 +222,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix011 = function(
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mrow><mn>2</mn>' +
       '<mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = '';
+  var speech = 'la matrice ligne de dimension 1 par 2. colonne 1: x plus 1 colonne 2: 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -235,7 +235,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix012 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>6</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice ligne de dimension 1 par 4. colonne 1: 3 colonne 2: 6 colonne 3: 1 colonne 4: 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -250,7 +250,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix013 = function(
       '<mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd>' +
       '</mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -268,7 +268,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix014 = function(
       '</mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd>' +
       '<mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -283,7 +283,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix015 = function(
       '</mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd>' +
       '<mn>4</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>0' +
       '</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 5. rangée 1: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 5; colonne 5, 3. rangée 2: colonne 1, 3; colonne 2, 4; colonne 3, 2; colonne 4, 7; colonne 5, 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -298,7 +298,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix016 = function(
       '<mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn>' +
       '</mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 4 par 2. rangée 1: colonne 1, 1; colonne 2, 3. rangée 2: colonne 1, 4; colonne 2, 2. rangée 3: colonne 1, 2; colonne 2, 1. rangée 4: colonne 1, 0; colonne 2, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -312,7 +312,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix017 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -327,7 +327,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix018 = function(
       '<mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn>' +
       '</mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1 moins x; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -341,7 +341,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix019 = function(
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
       '<mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -356,7 +356,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix019b = function
       '<mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -372,7 +372,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix020 = function(
       '<mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
       '<mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -389,7 +389,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix021 = function(
       '<mn>2</mn><mn>1</mn></mrow></msub></mrow></mtd><mtd><mrow><msub>' +
       '<mi>b</mi><mrow><mn>2</mn><mn>2</mn></mrow></msub></mrow></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: b sub 1 1, b sub 1 2 rangée 2: b sub 2 1, b sub 2 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -406,8 +406,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix022 = function(
       '</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd>' +
       '<mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  // var speech = '';
-  var speech = '';
+  var speech = '3   la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5.   la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -427,7 +426,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix023 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd>' +
       '<mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième.   la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1 moins x; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -449,7 +448,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix024 = function(
       '</mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd>' +
       '<mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0.   la matrice de dimension 4 par 2. rangée 1: colonne 1, 1; colonne 2, 3. rangée 2: colonne 1, 4; colonne 2, 2. rangée 3: colonne 1, 2; colonne 2, 1. rangée 4: colonne 1, 0; colonne 2, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -463,7 +462,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix025 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -477,7 +476,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix026 = function(
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
       '</mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -492,7 +491,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix027 = function(
       '<mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd>' +
       '</mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn>' +
       '</mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -507,7 +506,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix028 = function(
       '</mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn>' +
       '</mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd>' +
       '<mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -525,7 +524,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix029 = function(
       '</mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd>' +
       '<mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>|' +
       '</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -543,7 +542,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix030 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd>' +
       '<mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -557,7 +556,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix031 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -571,7 +570,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix032 = function(
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
       '</mtd><mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -585,7 +584,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix033 = function(
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
       '<mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>' +
       '|</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -599,7 +598,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix034 = function(
       '<mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd>' +
       '</mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -614,7 +613,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix035 = function(
       '<mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -629,7 +628,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix036 = function(
       '</mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>' +
       '</mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -645,7 +644,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix037 = function(
       '<mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
       '<mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>|' +
       '</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -661,7 +660,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix038 = function(
       '<mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -675,7 +674,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix039 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -689,7 +688,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix040 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -703,7 +702,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix041 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr>' +
       '<mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -717,7 +716,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix042 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr>' +
       '<mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd>' +
       '</mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -730,7 +729,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix043 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice colonne de dimension 3 par 1. rangée 1: 1 rangée 2: 2 rangée 3: 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -743,7 +742,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix044 = function(
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice colonne de dimension 3 par 1. rangée 1: 1 rangée 2: 2 rangée 3: 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -756,7 +755,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix045 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice ligne de dimension 1 par 2. colonne 1: 3 colonne 2: 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -769,7 +768,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix046 = function(
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo>' +
       '</mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice ligne de dimension 1 par 2. colonne 1: 3 colonne 2: 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -782,7 +781,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix047 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice ligne de dimension 1 par 4. colonne 1: 1 colonne 2: 2 colonne 3: 3 colonne 4: 4';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -795,7 +794,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix048 = function(
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn>' +
       '</mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice ligne de dimension 1 par 4. colonne 1: 1 colonne 2: 2 colonne 3: 3 colonne 4: 4';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -809,7 +808,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix049 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice colonne de dimension 4 par 1. rangée 1: 1 rangée 2: 2 rangée 3: 3 rangée 4: 4';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -823,7 +822,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix050 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd></mtr></mtable></mrow>' +
       '<mo>]</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice colonne de dimension 4 par 1. rangée 1: 1 rangée 2: 2 rangée 3: 3 rangée 4: 4';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -837,7 +836,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix051 = function(
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow>' +
       '<mi>x</mi><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice colonne de dimension 2 par 1. rangée 1: x plus 1 rangée 2: x moins 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -851,7 +850,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix052 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice colonne de dimension 4 par 1. rangée 1: 3 rangée 2: 6 rangée 3: 1 rangée 4: 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -865,7 +864,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix053 = function(
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mrow><mn>2</mn>' +
       '<mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = '';
+  var speech = 'la matrice ligne de dimension 1 par 2. colonne 1: x plus 1 colonne 2: 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -878,7 +877,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix054 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>6</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice ligne de dimension 1 par 4. colonne 1: 3 colonne 2: 6 colonne 3: 1 colonne 4: 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -893,7 +892,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix055 = function(
       '<mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd>' +
       '</mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 3 par 3. rangée 1: colonne 1, 2; colonne 2, 4; colonne 3, 1. rangée 2: colonne 1, 3; colonne 2, 5; colonne 3, 2. rangée 3: colonne 1, 1; colonne 2, 4; colonne 3, 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -911,7 +910,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix056 = function(
       '</mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd>' +
       '<mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -926,7 +925,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix057 = function(
       '</mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd>' +
       '<mn>4</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>0' +
       '</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 5. rangée 1: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 5; colonne 5, 3. rangée 2: colonne 1, 3; colonne 2, 4; colonne 3, 2; colonne 4, 7; colonne 5, 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -941,7 +940,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix057a = function
       '<mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn>' +
       '</mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 4 par 2. rangée 1: colonne 1, 1; colonne 2, 3. rangée 2: colonne 1, 4; colonne 2, 2. rangée 3: colonne 1, 2; colonne 2, 1. rangée 4: colonne 1, 0; colonne 2, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -955,7 +954,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix058 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -970,7 +969,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix059 = function(
       '<mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn>' +
       '</mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1 moins x; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -984,7 +983,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix060 = function(
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
       '<mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: colonne 1, 2 x; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -999,7 +998,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix061 = function(
       '<mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: colonne 1, 2 x; colonne 2, y. rangée 2: colonne 1, un-demi; colonne 2, deux-tiers';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1015,7 +1014,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix062 = function(
       '<mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
       '<mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: colonne 1, un-demi; colonne 2, deux-tiers. rangée 2: colonne 1, trois-quarts; colonne 2, un-cinquième';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1032,7 +1031,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix063 = function(
       '<mn>2</mn><mn>1</mn></mrow></msub></mrow></mtd><mtd><mrow><msub>' +
       '<mi>b</mi><mrow><mn>2</mn><mn>2</mn></mrow></msub></mrow></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: colonne 1, b sub 1 1; colonne 2, b sub 1 2. rangée 2: colonne 1, b sub 2 1; colonne 2, b sub 2 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1049,7 +1048,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix064 = function(
       '</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd>' +
       '<mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = '3   la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5.   la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1069,7 +1068,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix065 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd>' +
       '<mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: colonne 1, un-demi; colonne 2, deux-tiers. rangée 2: colonne 1, trois-quarts; colonne 2, un-cinquième.   la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1 moins x; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1091,7 +1090,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix066 = function(
       '</mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd>' +
       '<mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0.   la matrice de dimension 4 par 2. rangée 1: colonne 1, 1; colonne 2, 3. rangée 2: colonne 1, 4; colonne 2, 2. rangée 3: colonne 1, 2; colonne 2, 1. rangée 4: colonne 1, 0; colonne 2, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1105,7 +1104,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix067 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1119,7 +1118,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix068 = function(
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
       '</mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1134,7 +1133,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix069 = function(
       '<mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd>' +
       '</mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn>' +
       '</mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 3 par 3. rangée 1: colonne 1, 2; colonne 2, 4; colonne 3, 1. rangée 2: colonne 1, 3; colonne 2, 5; colonne 3, 2. rangée 3: colonne 1, 1; colonne 2, 4; colonne 3, 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1149,7 +1148,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix070 = function(
       '</mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn>' +
       '</mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd>' +
       '<mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 3 par 3. rangée 1: colonne 1, 2; colonne 2, 4; colonne 3, 1. rangée 2: colonne 1, 3; colonne 2, 5; colonne 3, 2. rangée 3: colonne 1, 1; colonne 2, 4; colonne 3, 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1167,7 +1166,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix071 = function(
       '</mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd>' +
       '<mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>|' +
       '</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1185,7 +1184,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix072 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd>' +
       '<mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1199,7 +1198,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix073 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1213,7 +1212,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix074 = function(
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
       '</mtd><mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1227,7 +1226,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix075 = function(
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
       '<mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>' +
       '|</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2 x; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1241,7 +1240,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix076 = function(
       '<mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd>' +
       '</mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2 x; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1256,7 +1255,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix077 = function(
       '<mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2 x; colonne 2, y. rangée 2: colonne 1, un-demi; colonne 2, deux-tiers';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1271,7 +1270,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix078 = function(
       '</mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>' +
       '</mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2 x; colonne 2, y. rangée 2: colonne 1, un-demi; colonne 2, deux-tiers';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1287,7 +1286,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix079 = function(
       '<mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
       '<mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>|' +
       '</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, un-demi; colonne 2, deux-tiers. rangée 2: colonne 1, trois-quarts; colonne 2, un-cinquième';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1303,7 +1302,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix080 = function(
       '<mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, un-demi; colonne 2, deux-tiers. rangée 2: colonne 1, trois-quarts; colonne 2, un-cinquième';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1317,7 +1316,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix081 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1331,7 +1330,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix082 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1345,7 +1344,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix083 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr>' +
       '<mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1359,7 +1358,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix084 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr>' +
       '<mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd>' +
       '</mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1372,7 +1371,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix085 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice colonne de dimension 3 par 1. 1, 2, 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1385,7 +1384,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix086 = function(
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice colonne de dimension 3 par 1. 1, 2, 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1398,7 +1397,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix087 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice ligne de dimension 1 par 2. 3, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1411,7 +1410,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix088 = function(
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo>' +
       '</mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice ligne de dimension 1 par 2. 3, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1425,7 +1424,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix089 = function(
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow>' +
       '<mi>x</mi><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice colonne de dimension 2 par 1. x plus 1, x moins 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1439,7 +1438,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix090 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice colonne de dimension 4 par 1. 3, 6, 1, 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1453,7 +1452,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix091 = function(
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mrow><mn>2</mn>' +
       '<mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = '';
+  var speech = 'la matrice ligne de dimension 1 par 2. x plus 1, 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1466,7 +1465,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix092 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>6</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice ligne de dimension 1 par 4. 3, 6, 1, 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1481,7 +1480,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix092a = function
       '<mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd>' +
       '</mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1499,7 +1498,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix093 = function(
       '</mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd>' +
       '<mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 4 par 4. rangée 1: 0, 3, 4, 3 rangée 2: 2, 1, 0, 9 rangée 3: 3, 0, 2, 1 rangée 4: 6, 2, 9, 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1514,7 +1513,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix094 = function(
       '</mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd>' +
       '<mn>4</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>0' +
       '</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 5. rangée 1: 2, 1, 0, 5, 3 rangée 2: 3, 4, 2, 7, 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1529,7 +1528,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix095 = function(
       '<mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn>' +
       '</mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 4 par 2. rangée 1: 1, 3 rangée 2: 4, 2 rangée 3: 2, 1 rangée 4: 0, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1543,7 +1542,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix096 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5 plus x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1558,7 +1557,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix097 = function(
       '<mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn>' +
       '</mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 3. rangée 1: 3, 1 moins x, 4 rangée 2: 0, 2, 6';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1572,7 +1571,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix098 = function(
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
       '<mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1587,7 +1586,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix099 = function(
       '<mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1603,7 +1602,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix100 = function(
       '<mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
       '<mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1620,7 +1619,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix101 = function(
       '<mn>2</mn><mn>1</mn></mrow></msub></mrow></mtd><mtd><mrow><msub>' +
       '<mi>b</mi><mrow><mn>2</mn><mn>2</mn></mrow></msub></mrow></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: b sub 1 1, b sub 1 2 rangée 2: b sub 2 1, b sub 2 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1637,7 +1636,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix102 = function(
       '</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd>' +
       '<mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = '3   la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5.   la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1657,7 +1656,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix103 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd>' +
       '<mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième.   la matrice de dimension 2 par 3. rangée 1: 3, 1 moins x, 4 rangée 2: 0, 2, 6';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1679,7 +1678,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix104 = function(
       '</mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd>' +
       '<mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 4 par 4. rangée 1: 0, 3, 4, 3 rangée 2: 2, 1, 0, 9 rangée 3: 3, 0, 2, 1 rangée 4: 6, 2, 9, 0.   la matrice de dimension 4 par 2. rangée 1: 1, 3 rangée 2: 4, 2 rangée 3: 2, 1 rangée 4: 0, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1693,7 +1692,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix105 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1707,7 +1706,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix106 = function(
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
       '</mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1722,7 +1721,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix107 = function(
       '<mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd>' +
       '</mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn>' +
       '</mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1737,7 +1736,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix108 = function(
       '</mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn>' +
       '</mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd>' +
       '<mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1755,7 +1754,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix109 = function(
       '</mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd>' +
       '<mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>|' +
       '</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 4 par 4. rangée 1: 0, 3, 4, 3 rangée 2: 2, 1, 0, 9 rangée 3: 3, 0, 2, 1 rangée 4: 6, 2, 9, 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1773,7 +1772,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix110 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd>' +
       '<mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 4 par 4. rangée 1: 0, 3, 4, 3 rangée 2: 2, 1, 0, 9 rangée 3: 3, 0, 2, 1 rangée 4: 6, 2, 9, 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1787,7 +1786,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix111 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5 plus x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1801,7 +1800,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix112 = function(
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
       '</mtd><mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5 plus x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1815,7 +1814,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix113 = function(
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
       '<mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>' +
       '|</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1829,7 +1828,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix114 = function(
       '<mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd>' +
       '</mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1844,7 +1843,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix115 = function(
       '<mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1859,7 +1858,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix116 = function(
       '</mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>' +
       '</mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1875,7 +1874,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix117 = function(
       '<mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
       '<mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>|' +
       '</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1891,7 +1890,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix118 = function(
       '<mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1905,7 +1904,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix119 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1919,7 +1918,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix120 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1933,7 +1932,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix121 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr>' +
       '<mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1947,7 +1946,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix122 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr>' +
       '<mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd>' +
       '</mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1960,7 +1959,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix123 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice colonne de dimension 3 par 1. 1, 2, 3. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1973,7 +1972,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix124 = function(
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice colonne de dimension 3 par 1. 1, 2, 3. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1986,7 +1985,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix125 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice ligne de dimension 1 par 2. 3, 5. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1999,7 +1998,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix126 = function(
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo>' +
       '</mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice ligne de dimension 1 par 2. 3, 5. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2013,7 +2012,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix127 = function(
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow>' +
       '<mi>x</mi><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice colonne de dimension 2 par 1. rangée 1: x plus 1 rangée 2: x moins 1. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2027,7 +2026,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix128 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice colonne de dimension 4 par 1. rangée 1: 3 rangée 2: 6 rangée 3: 1 rangée 4: 2. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2041,7 +2040,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix129 = function(
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mrow><mn>2</mn>' +
       '<mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = '';
+  var speech = 'la matrice ligne de dimension 1 par 2. colonne 1: x plus 1 colonne 2: 2 x. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2054,7 +2053,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix130 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>6</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice ligne de dimension 1 par 4. colonne 1: 3 colonne 2: 6 colonne 3: 1 colonne 4: 2. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2069,7 +2068,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix131 = function(
       '<mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd>' +
       '</mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2087,7 +2086,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix132 = function(
       '</mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd>' +
       '<mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2102,7 +2101,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix133 = function(
       '</mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd>' +
       '<mn>4</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>0' +
       '</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 5. rangée 1: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 5; colonne 5, 3. rangée 2: colonne 1, 3; colonne 2, 4; colonne 3, 2; colonne 4, 7; colonne 5, 0. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2117,7 +2116,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix134 = function(
       '<mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn>' +
       '</mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 4 par 2. rangée 1: colonne 1, 1; colonne 2, 3. rangée 2: colonne 1, 4; colonne 2, 2. rangée 3: colonne 1, 2; colonne 2, 1. rangée 4: colonne 1, 0; colonne 2, 5. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2131,7 +2130,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix135 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2146,7 +2145,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix136 = function(
       '<mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn>' +
       '</mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1 moins x; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2160,7 +2159,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix137 = function(
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
       '<mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2175,7 +2174,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix138 = function(
       '<mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2191,7 +2190,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix139 = function(
       '<mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
       '<mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2210,7 +2209,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix140 = function(
       '<mn>2</mn><mn>1</mn></mrow></msub></mrow></mtd><mtd><mrow><msub>' +
       '<mi>b</mi><mrow><mn>2</mn><mn>2</mn></mrow></msub></mrow></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: b sub 1 1, b sub 1 2 rangée 2: b sub 2 1, b sub 2 2. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2227,7 +2226,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix141 = function(
       '</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd>' +
       '<mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = '3   la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5. fin matrice   la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2247,7 +2246,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix142 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd>' +
       '<mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième. fin matrice   la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1 moins x; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2269,7 +2268,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix143 = function(
       '</mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd>' +
       '<mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0. fin matrice   la matrice de dimension 4 par 2. rangée 1: colonne 1, 1; colonne 2, 3. rangée 2: colonne 1, 4; colonne 2, 2. rangée 3: colonne 1, 2; colonne 2, 1. rangée 4: colonne 1, 0; colonne 2, 5. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2283,7 +2282,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix144 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5. fin déterminant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2297,7 +2296,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix145 = function(
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
       '</mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2312,7 +2311,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix146 = function(
       '<mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd>' +
       '</mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn>' +
       '</mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7. fin déterminant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2327,7 +2326,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix147 = function(
       '</mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn>' +
       '</mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd>' +
       '<mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2345,7 +2344,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix148 = function(
       '</mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd>' +
       '<mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>|' +
       '</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0. fin déterminant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2363,7 +2362,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix149 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd>' +
       '<mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2377,7 +2376,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix150 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x. fin déterminant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2391,7 +2390,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix151 = function(
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
       '</mtd><mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2405,7 +2404,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix152 = function(
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
       '<mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>' +
       '|</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5. fin déterminant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2419,7 +2418,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix153 = function(
       '<mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd>' +
       '</mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2434,7 +2433,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix154 = function(
       '<mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers. fin déterminant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2449,7 +2448,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix155 = function(
       '</mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>' +
       '</mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2465,7 +2464,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix156 = function(
       '<mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
       '<mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>|' +
       '</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième. fin déterminant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2481,7 +2480,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix157 = function(
       '<mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2494,7 +2493,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix158 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le vecteur colonne de dimension 3 par 1. 1, 2, 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2507,7 +2506,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix159 = function(
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le vecteur colonne de dimension 3 par 1. 1, 2, 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2520,7 +2519,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix160 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le vecteur ligne de dimension 1 par 2. 3, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2533,7 +2532,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix161 = function(
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo>' +
       '</mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le vecteur ligne de dimension 1 par 2. 3, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2547,7 +2546,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix162 = function(
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow>' +
       '<mi>x</mi><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le vecteur colonne de dimension 2 par 1. rangée 1: x plus 1 rangée 2: x moins 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2561,7 +2560,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix163 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le vecteur colonne de dimension 4 par 1. rangée 1: 3 rangée 2: 6 rangée 3: 1 rangée 4: 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2575,7 +2574,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix164 = function(
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mrow><mn>2</mn>' +
       '<mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = '';
+  var speech = 'le vecteur ligne de dimension 1 par 2. colonne 1: x plus 1 colonne 2: 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2590,7 +2589,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix165 = function(
       '</mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd>' +
       '<mn>5</mn></mtd></mtr><mtr><mtd><mn>9</mn></mtd><mtd><mn>4</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le vecteur ligne de dimension 1 par 2. 3, 2.   la matrice de dimension 2 par 2. rangée 1: 0, 5 rangée 2: 9, 4';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2607,7 +2606,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix166 = function(
       '<mtr><mtd><mn>8</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>6</mn></mtd>' +
       '</mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>2</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le vecteur ligne de dimension 1 par 3. 1, 2, 7.   la matrice de dimension 3 par 3. rangée 1: 3, 5, 4 rangée 2: 8, 0, 6 rangée 3: 1, 4, 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2622,7 +2621,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix167 = function(
       '<mtd><mn>4</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow>' +
       '<mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd>' +
       '<mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: 0, 5 rangée 2: 9, 4.   le vecteur colonne de dimension 2 par 1. 3, 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2640,7 +2639,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix168 = function(
       '<mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd>' +
       '</mtr><mtr><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 3 par 3. rangée 1: 3, 5, 4 rangée 2: 8, 0, 6 rangée 3: 1, 4, 2.   le vecteur colonne de dimension 3 par 1. 1, 2, 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2653,7 +2652,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix169 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le vecteur colonne de dimension 3 par 1. 1, 2, 3. fin vecteur';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2666,7 +2665,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix170 = function(
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le vecteur colonne de dimension 3 par 1. 1, 2, 3. fin vecteur';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2679,7 +2678,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix171 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le vecteur ligne de dimension 1 par 2. 3, 5. fin vecteur';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2692,7 +2691,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix172 = function(
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo>' +
       '</mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le vecteur ligne de dimension 1 par 2. 3, 5. fin vecteur';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2706,7 +2705,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix173 = function(
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow>' +
       '<mi>x</mi><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le vecteur colonne de dimension 2 par 1. rangée 1: x plus 1 rangée 2: x moins 1. fin vecteur';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2720,7 +2719,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix174 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le vecteur colonne de dimension 4 par 1. rangée 1: 3 rangée 2: 6 rangée 3: 1 rangée 4: 2. fin vecteur';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2734,7 +2733,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix175 = function(
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mrow><mn>2</mn>' +
       '<mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = '';
+  var speech = 'le vecteur ligne de dimension 1 par 2. colonne 1: x plus 1 colonne 2: 2 x. fin vecteur';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2749,7 +2748,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix176 = function(
       '</mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd>' +
       '<mn>5</mn></mtd></mtr><mtr><mtd><mn>9</mn></mtd><mtd><mn>4</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le vecteur ligne de dimension 1 par 2. 3, 2. fin vecteur   la matrice de dimension 2 par 2. rangée 1: 0, 5 rangée 2: 9, 4. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2766,7 +2765,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix177 = function(
       '<mtr><mtd><mn>8</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>6</mn></mtd>' +
       '</mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>2</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'le vecteur ligne de dimension 1 par 3. 1, 2, 7. fin vecteur   la matrice de dimension 3 par 3. rangée 1: 3, 5, 4 rangée 2: 8, 0, 6 rangée 3: 1, 4, 2. fin matrice';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2781,7 +2780,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix178 = function(
       '<mtd><mn>4</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow>' +
       '<mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd>' +
       '<mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 2 par 2. rangée 1: 0, 5 rangée 2: 9, 4. fin matrice   le vecteur colonne de dimension 2 par 1. 3, 2. fin vecteur';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2799,7 +2798,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix179 = function(
       '<mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd>' +
       '</mtr><mtr><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = '';
+  var speech = 'la matrice de dimension 3 par 3. rangée 1: 3, 5, 4 rangée 2: 8, 0, 6 rangée 3: 1, 4, 2. fin matrice   le vecteur colonne de dimension 3 par 1. 1, 2, 7. fin vecteur';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2812,7 +2811,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix180 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mi>n' +
       '</mi></mtd></mtr><mtr><mtd><mi>r</mi></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'r parmi n';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2825,7 +2824,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix181 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mn>10</mn></mrow></mtd></mtr><mtr><mtd><mn>7</mn></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = '7 parmi 10';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2838,7 +2837,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix182 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mn>15</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = '0 parmi 15';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2851,6 +2850,6 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix183 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>8' +
       '</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = '3 parmi 8';
   this.executeRuleTest(mathml, speech, preference);
 };

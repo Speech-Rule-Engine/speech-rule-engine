@@ -53,8 +53,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap001 = function() {
   var mathml = '<math><mrow><mfrac><mrow><mi>sin</mi><mi>A</mi></mrow><mi>a' +
       '</mi></mfrac><mo>=</mo><mfrac><mrow><mi>sin</mi><mi>B</mi></mrow>' +
       '<mi>b</mi></mfrac></mrow></math>';
-  // var speech = '';
-  var speech = '';
+  var speech = 'sinus A sur a, égale, sinus B sur b';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -68,7 +67,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap002 = function() {
       '<msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2' +
       '</mn></msup><mo>−</mo><mn>2</mn><mi>a</mi><mi>b</mi><mi>cos</mi>' +
       '<mi>C</mi></mrow></math>';
-  var speech = '';
+  var speech = 'c au carré égale a au carré plus b au carré moins 2 a b cosinus C';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -80,7 +79,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap003 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mi>tan</mi><mi>A</mi><mo>=</mo><mfrac><mi>a' +
       '</mi><mi>b</mi></mfrac></mrow></math>';
-  var speech = '';
+  var speech = 'tangente A égale, a sur b';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -91,7 +90,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap003 = function() {
 sre.ClearspeakFrenchCapitalLetters.prototype.testCap004 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mi>A</mi><mi>B</mi></mrow></math>';
-  var speech = '';
+  var speech = 'A B';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -102,7 +101,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap004 = function() {
 sre.ClearspeakFrenchCapitalLetters.prototype.testCap005 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mi>a</mi><mi>A</mi></mrow></math>';
-  var speech = '';
+  var speech = 'a A';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -113,7 +112,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap005 = function() {
 sre.ClearspeakFrenchCapitalLetters.prototype.testCap006 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mi>b</mi><mi>A</mi></mrow></math>';
-  var speech = '';
+  var speech = 'b A';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -124,7 +123,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap006 = function() {
 sre.ClearspeakFrenchCapitalLetters.prototype.testCap007 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mi>B</mi><mi>a</mi></mrow></math>';
-  var speech = '';
+  var speech = 'B a';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -136,7 +135,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap008 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C</mi></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = 'angle A B C';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -148,7 +147,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap009 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C' +
       '</mi></mrow></math>';
-  var speech = '';
+  var speech = 'la mesure de l\'angle A B C';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -159,7 +158,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap009 = function() {
 sre.ClearspeakFrenchCapitalLetters.prototype.testCap010 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi></mrow></math>';
-  var speech = '';
+  var speech = 'la mesure de l\'angle A';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -173,8 +172,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap011 = function() {
   var mathml = '<math><mrow><mfrac><mrow><mi>sin</mi><mi>A</mi></mrow><mi>a' +
       '</mi></mfrac><mo>=</mo><mfrac><mrow><mi>sin</mi><mi>B</mi></mrow>' +
       '<mi>b</mi></mfrac></mrow></math>';
-  // var speech = '';
-  var speech = '';
+  var speech = 'sinus A majuscule sur a, égale, sinus B majuscule sur b';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -188,7 +186,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap012 = function() {
       '<msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2' +
       '</mn></msup><mo>−</mo><mn>2</mn><mi>a</mi><mi>b</mi><mi>cos</mi>' +
       '<mi>C</mi></mrow></math>';
-  var speech = '';
+  var speech = 'c au carré égale a au carré plus b au carré moins 2 a b cosinus C majuscule';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -200,7 +198,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap013 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mi>tan</mi><mi>A</mi><mo>=</mo><mfrac><mi>a' +
       '</mi><mi>b</mi></mfrac></mrow></math>';
-  var speech = '';
+  var speech = 'tangente A majuscule égale, a sur b';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -211,7 +209,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap013 = function() {
 sre.ClearspeakFrenchCapitalLetters.prototype.testCap014 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mi>A</mi><mi>B</mi></mrow></math>';
-  var speech = '';
+  var speech = 'A majuscule, B majuscule';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -222,7 +220,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap014 = function() {
 sre.ClearspeakFrenchCapitalLetters.prototype.testCap015 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mi>a</mi><mi>A</mi></mrow></math>';
-  var speech = '';
+  var speech = 'a, A majuscule';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -233,7 +231,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap015 = function() {
 sre.ClearspeakFrenchCapitalLetters.prototype.testCap016 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mi>b</mi><mi>A</mi></mrow></math>';
-  var speech = '';
+  var speech = 'b, A majuscule';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -244,7 +242,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap016 = function() {
 sre.ClearspeakFrenchCapitalLetters.prototype.testCap017 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mi>B</mi><mi>a</mi></mrow></math>';
-  var speech = '';
+  var speech = 'B majuscule, a';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -256,7 +254,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap018 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C</mi></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = 'angle A majuscule, B majuscule, C majuscule';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -268,7 +266,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap019 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C' +
       '</mi></mrow></math>';
-  var speech = '';
+  var speech = 'la mesure de l\'angle A majuscule, B majuscule, C majuscule';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -279,7 +277,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap019 = function() {
 sre.ClearspeakFrenchCapitalLetters.prototype.testCap020 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi></mrow></math>';
-  var speech = '';
+  var speech = 'la mesure de l\'angle A majuscule';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -290,7 +288,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap020 = function() {
 sre.ClearspeakFrenchCapitalLetters.prototype.testCap020a = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mo>∠</mo><mi>A</mi></mrow></math>';
-  var speech = '';
+  var speech = 'angle A majuscule';
   this.executeRuleTest(mathml, speech, preference);
 };
 

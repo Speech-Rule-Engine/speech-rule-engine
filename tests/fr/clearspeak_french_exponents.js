@@ -51,7 +51,7 @@ goog.inherits(sre.ClearspeakFrenchExponents, sre.ClearspeakFrenchRuleTest);
 sre.ClearspeakFrenchExponents.prototype.testExp001 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>2</mn></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 au carré';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -62,7 +62,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp001 = function() {
 sre.ClearspeakFrenchExponents.prototype.testExp002a = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>3</mn></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 au cube';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -73,7 +73,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp002a = function() {
 sre.ClearspeakFrenchExponents.prototype.testExp003 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>5</mn></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à la puissance 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -84,7 +84,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp003 = function() {
 sre.ClearspeakFrenchExponents.prototype.testExp004 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>1</mn></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à la puissance 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -95,7 +95,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp004 = function() {
 sre.ClearspeakFrenchExponents.prototype.testExp005 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mi>b</mi><mn>1</mn></msup></mrow></math>';
-  var speech = '';
+  var speech = 'b à la puissance 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -107,7 +107,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp006 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mn>5.0</mn></mrow>' +
       '</msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à la puissance 5,0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -118,7 +118,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp006 = function() {
 sre.ClearspeakFrenchExponents.prototype.testExp007 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>0</mn></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à la puissance 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -130,7 +130,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp008 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>4</mn><mrow><mn>11</mn></mrow></msup>' +
       '</mrow></math>';
-  var speech = '';
+  var speech = '4 à la puissance 11';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -142,7 +142,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp009 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2</mn>' +
       '</mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à la puissance négatif 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -154,7 +154,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp010a = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2.0</mn>' +
       '</mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à la puissance négatif 2,0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -165,7 +165,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp010a = function() {
 sre.ClearspeakFrenchExponents.prototype.testExp011 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>4</mn><mi>x</mi></msup></mrow></math>';
-  var speech = '';
+  var speech = '4 à la puissance x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -177,7 +177,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp012 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mi>y</mi><mo>+</mo><mn>2' +
       '</mn></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à la puissance y plus 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -190,7 +190,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp013 = function() {
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn>' +
       '<mi>y</mi><mo>−</mo><mn>3</mn></mrow><mo>)</mo></mrow></mrow><mrow>' +
       '<mn>3</mn><mi>z</mi><mo>+</mo><mn>8</mn></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = 'parenthèse gauche, 2 y, moins 3, parenthèse droite, à la puissance 3 z, plus 8';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -202,7 +202,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp014 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msubsup><mi>p</mi><mn>1</mn><mn>2</mn>' +
       '</msubsup></mrow></math>';
-  var speech = '';
+  var speech = 'p sub 1, au carré';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -214,7 +214,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp015 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msubsup><mi>p</mi><mn>1</mn><mn>3</mn>' +
       '</msubsup></mrow></math>';
-  var speech = '';
+  var speech = 'p sub 1, au cube';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -226,7 +226,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp016 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msubsup><mi>p</mi><mn>1</mn><mn>4</mn>' +
       '</msubsup></mrow></math>';
-  var speech = '';
+  var speech = 'p sub 1, à la puissance 4';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -238,7 +238,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp017 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msubsup><mi>p</mi><mn>1</mn><mrow><mn>10</mn>' +
       '</mrow></msubsup></mrow></math>';
-  var speech = '';
+  var speech = 'p sub 1, à la puissance 10';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -250,7 +250,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp018 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msubsup><mi>p</mi><mn>1</mn><mrow><mi>x</mi>' +
       '<mo>+</mo><mn>1</mn></mrow></msubsup></mrow></math>';
-  var speech = '';
+  var speech = 'p sub 1, à la puissance x plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -262,7 +262,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp019 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msubsup><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow><mn>2</mn></msubsup></mrow></math>';
-  var speech = '';
+  var speech = 'p sub, x sub 1, au carré';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -274,7 +274,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp010b = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msubsup><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow><mn>3</mn></msubsup></mrow></math>';
-  var speech = '';
+  var speech = 'p sub, x sub 1, au cube';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -286,7 +286,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp011b = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msubsup><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow><mn>4</mn></msubsup></mrow></math>';
-  var speech = '';
+  var speech = 'p sub, x sub 1, à la puissance 4';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -298,7 +298,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp012b = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msubsup><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow><mrow><mn>10</mn></mrow></msubsup></mrow></math>';
-  var speech = '';
+  var speech = 'p sub, x sub 1, à la puissance 10';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -311,7 +311,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp013b = function() {
   var mathml = '<math><mrow><msubsup><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow>' +
       '</msubsup></mrow></math>';
-  var speech = '';
+  var speech = 'p sub, x sub 1, à la puissance y plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -323,7 +323,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp014b = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2' +
       '</mn></msup></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à la puissance 2 au carré';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -335,7 +335,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp015b = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mn>2</mn><msup><mi>x' +
       '</mi><mn>2</mn></msup></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à la puissance 2 x au carré';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -347,7 +347,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp016b = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>5</mn><mrow><msup><mn>2</mn><mn>3' +
       '</mn></msup></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '5 à la puissance 2 au cube';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -359,7 +359,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp017b = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>5</mn><mrow><mn>2</mn><msup><mi>x' +
       '</mi><mn>3</mn></msup></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '5 à la puissance 2 x au cube';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -371,7 +371,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp018b = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2' +
       '</mn></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à l\'exposant, 2 au carré plus 1, fin exposant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -383,7 +383,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp019b = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2' +
       '</mn></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow></math>';
-  var speech = '';
+  var speech = '3 à la puissance 2 au carré; plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -396,7 +396,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp020 = function() {
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>2' +
       '</mn></msup><mo>+</mo><mn>3</mn><msup><mi>x</mi><mn>3</mn></msup>' +
       '</mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '2 à l\'exposant, x au carré plus 3 x au cube, fin exposant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -408,7 +408,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp021 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4' +
       '</mn></msup></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à l\'exposant, 3 à la puissance 4; fin exposant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -420,7 +420,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp022 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4' +
       '</mn></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à l\'exposant, 3 à la puissance 4; plus 2, fin exposant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -432,7 +432,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp023 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4' +
       '</mn></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow></math>';
-  var speech = '';
+  var speech = '3 à l\'exposant, 3 à la puissance 4; fin exposant, plus 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -444,7 +444,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp024 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>4' +
       '</mn></msup></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '2 à l\'exposant, x à la puissance 4; fin exposant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -457,7 +457,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp025 = function() {
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><msup><mrow><mn>10</mn>' +
       '</mrow><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow></msup></mrow>' +
       '</msup></mrow></math>';
-  var speech = '';
+  var speech = '2 à l\'exposant, 10 à la puissance x plus 3; fin exposant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -469,7 +469,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp026 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow>' +
       '<mn>10</mn></mrow></msup></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à l\'exposant, 3 à la puissance 10; fin exposant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -482,7 +482,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp027 = function() {
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow>' +
       '<mn>10</mn></mrow></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = '3 à l\'exposant, 3 à la puissance 10; plus 1, fin exposant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -495,7 +495,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp028 = function() {
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow>' +
       '<mn>10</mn></mrow></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = '3 à l\'exposant, 3 à la puissance 10; fin exposant, plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -508,7 +508,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp029 = function() {
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
       '</mrow><mn>2</mn></msup></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à l\'exposant, parenthèse gauche, x plus 1, parenthèse droite, au carré, fin exposant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -521,7 +521,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp030 = function() {
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
       '</mrow><mrow><mn>10</mn></mrow></msup></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à l\'exposant, parenthèse gauche, x plus 1, parenthèse droite, à la puissance 10; fin exposant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -535,7 +535,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp031 = function() {
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
       '</mrow><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow>' +
       '</msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à l\'exposant, parenthèse gauche, x plus 1, parenthèse droite, à la puissance y plus 2; fin exposant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -549,7 +549,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp032 = function() {
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
       '</mrow><mi>y</mi></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = '3 à l\'exposant, parenthèse gauche, x plus 1, parenthèse droite, à la puissance y; plus 2, fin exposant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -563,7 +563,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp033 = function() {
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
       '</mrow><mi>y</mi></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = '3 à l\'exposant, parenthèse gauche, x plus 1, parenthèse droite, à la puissance y; fin exposant, plus 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -578,7 +578,7 @@ sre.ClearspeakFrenchExponents.prototype.untestExp034 = function() {
   var mathml = '<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1' +
       '</mn><mn>2</mn></mfrac><msup><mi>x</mi><mn>2</mn></msup></mrow>' +
       '</msup></mrow></math>';
-  var speech = '';
+  var speech = 'XXXXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -592,7 +592,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp035 = function() {
       '</mn><mn>2</mn></mfrac><msup><mrow><mrow><mo>(</mo><mrow><mfrac>' +
       '<mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><mi>σ</mi></mfrac></mrow>' +
       '<mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = 'e à l\'exposant, négatif un-demi  , parenthèse gauche, fraction avec numérateur x moins mû, et dénominateur sigma, parenthèse droite, au carré, fin exposant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -603,7 +603,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp035 = function() {
 sre.ClearspeakFrenchExponents.prototype.testExp036 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mi>n</mi></msup></mrow></math>';
-  var speech = '';
+  var speech = '2 à la puissance n';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -614,7 +614,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp036 = function() {
 sre.ClearspeakFrenchExponents.prototype.testExp037 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mi>m</mi></msup></mrow></math>';
-  var speech = '';
+  var speech = '2 à la puissance m';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -625,7 +625,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp037 = function() {
 sre.ClearspeakFrenchExponents.prototype.testExp038 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mi>i</mi></msup></mrow></math>';
-  var speech = '';
+  var speech = '2 à la puissance i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -636,7 +636,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp038 = function() {
 sre.ClearspeakFrenchExponents.prototype.testExp039 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mi>j</mi></msup></mrow></math>';
-  var speech = '';
+  var speech = '2 à la puissance j';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -647,7 +647,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp039 = function() {
 sre.ClearspeakFrenchExponents.prototype.testExp40 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mi>a</mi></msup></mrow></math>';
-  var speech = '';
+  var speech = '2 à la puissance a';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -658,7 +658,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp40 = function() {
 sre.ClearspeakFrenchExponents.prototype.testExp041 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>2</mn></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 au carré';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -669,7 +669,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp041 = function() {
 sre.ClearspeakFrenchExponents.prototype.testExp042 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>3</mn></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 au cube';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -680,7 +680,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp042 = function() {
 sre.ClearspeakFrenchExponents.prototype.testExp043 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>0</mn></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à la puissance 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -691,7 +691,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp043 = function() {
 sre.ClearspeakFrenchExponents.prototype.testExp044 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>1</mn></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à la puissance 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -702,7 +702,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp044 = function() {
 sre.ClearspeakFrenchExponents.prototype.testExp045 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>5</mn></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à la puissance 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -714,7 +714,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp046 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>4</mn><mrow><mn>3.0</mn></mrow>' +
       '</msup></mrow></math>';
-  var speech = '';
+  var speech = '4 à la puissance 3,0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -726,7 +726,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp047 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>4</mn><mrow><mn>11</mn></mrow></msup>' +
       '</mrow></math>';
-  var speech = '';
+  var speech = '4 à la puissance 11';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -738,7 +738,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp048 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2</mn>' +
       '</mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à la puissance négatif 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -750,7 +750,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp049 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2.0</mn>' +
       '</mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à la puissance négatif 2,0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -761,7 +761,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp049 = function() {
 sre.ClearspeakFrenchExponents.prototype.testExp050 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>4</mn><mi>x</mi></msup></mrow></math>';
-  var speech = '';
+  var speech = '4 à la x-ième puissance';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -773,7 +773,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp051 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mi>y</mi><mo>+</mo><mn>2' +
       '</mn></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à la puissance y plus 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -786,7 +786,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp052 = function() {
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn>' +
       '<mi>y</mi><mo>−</mo><mn>3</mn></mrow><mo>)</mo></mrow></mrow><mrow>' +
       '<mn>3</mn><mi>z</mi><mo>+</mo><mn>8</mn></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = 'parenthèse gauche, 2 y, moins 3, parenthèse droite, à la puissance 3 z, plus 8';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -798,7 +798,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp053 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/>' +
       '<mn>2</mn></msup></mrow></math>';
-  var speech = '';
+  var speech = 'p sub 1, au carré';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -810,7 +810,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp054 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/>' +
       '<mn>3</mn></msup></mrow></math>';
-  var speech = '';
+  var speech = 'p sub 1, au cube';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -822,7 +822,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp055 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/>' +
       '<mn>4</mn></msup></mrow></math>';
-  var speech = '';
+  var speech = 'p sub 1, à la puissance 4';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -834,7 +834,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp056 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/>' +
       '<mrow><mn>10</mn></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = 'p sub 1, à la puissance 10';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -846,7 +846,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp057 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/>' +
       '<mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = 'p sub 1, à la puissance x plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -858,7 +858,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp058 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow></msub><msup><mrow/><mn>2</mn></msup></mrow></math>';
-  var speech = '';
+  var speech = 'p sub, x sub 1, au carré';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -870,7 +870,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp059 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow></msub><msup><mrow/><mn>3</mn></msup></mrow></math>';
-  var speech = '';
+  var speech = 'p sub, x sub 1, au cube';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -882,7 +882,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp060 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow></msub><msup><mrow/><mn>4</mn></msup></mrow></math>';
-  var speech = '';
+  var speech = 'p sub, x sub 1, à la puissance 4';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -895,7 +895,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp061 = function() {
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow></msub><msup><mrow/><mrow><mn>10</mn></mrow>' +
       '</msup></mrow></math>';
-  var speech = '';
+  var speech = 'p sub, x sub 1, à la puissance 10';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -908,7 +908,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp062 = function() {
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow></msub><msup><mrow/><mrow><mi>y</mi><mo>+</mo>' +
       '<mn>1</mn></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = 'p sub, x sub 1, à la puissance y plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -920,7 +920,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp063 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2' +
       '</mn></msup></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à la puissance 2 au carré';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -932,7 +932,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp064 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mn>2</mn><msup><mi>x' +
       '</mi><mn>2</mn></msup></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à la puissance 2 x au carré';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -944,7 +944,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp065 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>5</mn><mrow><msup><mn>2</mn><mn>3' +
       '</mn></msup></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '5 à la puissance 2 au cube';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -956,7 +956,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp066 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>5</mn><mrow><mn>2</mn><msup><mi>x' +
       '</mi><mn>3</mn></msup></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '5 à la puissance 2 x au cube';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -968,7 +968,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp067 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2' +
       '</mn></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à l\'exposant, 2 au carré plus 1, fin exposant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -980,7 +980,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp068 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2' +
       '</mn></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow></math>';
-  var speech = '';
+  var speech = '3 à la puissance 2 au carré; plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -993,7 +993,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp069 = function() {
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>2' +
       '</mn></msup><mo>+</mo><mn>3</mn><msup><mi>x</mi><mn>3</mn></msup>' +
       '</mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '2 à l\'exposant, x au carré plus 3 x au cube, fin exposant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1005,7 +1005,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp070 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4' +
       '</mn></msup></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à l\'exposant, 3 à la puissance 4; fin exposant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1017,7 +1017,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp071 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4' +
       '</mn></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à l\'exposant, 3 à la puissance 4; plus 2, fin exposant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1029,7 +1029,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp072 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4' +
       '</mn></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow></math>';
-  var speech = '';
+  var speech = '3 à l\'exposant, 3 à la puissance 4; fin exposant, plus 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1041,7 +1041,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp073 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>4' +
       '</mn></msup></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '2 à l\'exposant, x à la puissance 4; fin exposant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1054,7 +1054,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp074 = function() {
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><msup><mrow><mn>10</mn>' +
       '</mrow><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow></msup></mrow>' +
       '</msup></mrow></math>';
-  var speech = '';
+  var speech = '2 à l\'exposant, 10 à la puissance x plus 3; fin exposant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1066,7 +1066,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp075 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow>' +
       '<mn>10</mn></mrow></msup></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à l\'exposant, 3 à la puissance 10; fin exposant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1079,7 +1079,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp076 = function() {
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow>' +
       '<mn>10</mn></mrow></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = '3 à l\'exposant, 3 à la puissance 10; plus 1, fin exposant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1092,7 +1092,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp077 = function() {
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow>' +
       '<mn>10</mn></mrow></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = '3 à l\'exposant, 3 à la puissance 10; fin exposant, plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1105,7 +1105,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp078 = function() {
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
       '</mrow><mn>2</mn></msup></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à l\'exposant, parenthèse gauche, x plus 1, parenthèse droite, au carré, fin exposant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1118,7 +1118,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp079 = function() {
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
       '</mrow><mrow><mn>10</mn></mrow></msup></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à l\'exposant, parenthèse gauche, x plus 1, parenthèse droite, à la puissance 10; fin exposant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1132,7 +1132,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp080 = function() {
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
       '</mrow><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow>' +
       '</msup></mrow></math>';
-  var speech = '';
+  var speech = '3 à l\'exposant, parenthèse gauche, x plus 1, parenthèse droite, à la puissance y plus 2; fin exposant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1146,7 +1146,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp081 = function() {
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
       '</mrow><mi>y</mi></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = '3 à l\'exposant, parenthèse gauche, x plus 1, parenthèse droite, à la y-ième puissance; plus 2, fin exposant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1160,7 +1160,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp082 = function() {
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
       '</mrow><mi>y</mi></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = '3 à l\'exposant, parenthèse gauche, x plus 1, parenthèse droite, à la y-ième puissance; fin exposant, plus 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1173,7 +1173,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp083 = function() {
   var mathml = '<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1' +
       '</mn><mn>2</mn></mfrac><msup><mi>x</mi><mn>2</mn></msup></mrow>' +
       '</msup></mrow></math>';
-  var speech = '';
+  var speech = 'e à l\'exposant, négatif un-demi x au carré, fin exposant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1187,7 +1187,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp084 = function() {
       '</mn><mn>2</mn></mfrac><msup><mrow><mrow><mo>(</mo><mrow><mfrac>' +
       '<mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><mi>σ</mi></mfrac></mrow>' +
       '<mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msup></mrow></math>';
-  var speech = '';
+  var speech = 'e à l\'exposant, négatif un-demi  , parenthèse gauche, fraction avec numérateur x moins mû, et dénominateur sigma, parenthèse droite, au carré, fin exposant';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1198,7 +1198,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp084 = function() {
 sre.ClearspeakFrenchExponents.prototype.testExp036a = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>2</mn><mi>n</mi></msup></mrow></math>';
-  var speech = '';
+  var speech = '2 à la n-ième puissance';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1209,7 +1209,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp036a = function() {
 sre.ClearspeakFrenchExponents.prototype.testExp037a = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>2</mn><mi>m</mi></msup></mrow></math>';
-  var speech = '';
+  var speech = '2 à la m-ième puissance';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1220,7 +1220,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp037a = function() {
 sre.ClearspeakFrenchExponents.prototype.testExp038a = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>2</mn><mi>i</mi></msup></mrow></math>';
-  var speech = '';
+  var speech = '2 à la i-ième puissance';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1231,7 +1231,7 @@ sre.ClearspeakFrenchExponents.prototype.testExp038a = function() {
 sre.ClearspeakFrenchExponents.prototype.testExp039a = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>2</mn><mi>j</mi></msup></mrow></math>';
-  var speech = '';
+  var speech = '2 à la j-ième puissance';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1242,6 +1242,6 @@ sre.ClearspeakFrenchExponents.prototype.testExp039a = function() {
 sre.ClearspeakFrenchExponents.prototype.testExp40a = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>2</mn><mi>a</mi></msup></mrow></math>';
-  var speech = '';
+  var speech = '2 à la a-ième puissance';
   this.executeRuleTest(mathml, speech, preference);
 };
