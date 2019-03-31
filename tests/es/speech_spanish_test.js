@@ -15,13 +15,13 @@
 
 goog.provide('sre.SpeechSpanishTest');
 
-// goog.require('sre.CollapseSpanishTest');
+goog.require('sre.CollapseSpanishTest');
 goog.require('sre.MathspeakEmbellishSpanishTest');
 goog.require('sre.MathspeakSpanishTest');
 goog.require('sre.MmlcloudSpanishTest');
 goog.require('sre.NobleSpanishTest');
 goog.require('sre.PrefixSpanishTest');
-// goog.require('sre.SummarySpanishTest');
+goog.require('sre.SummarySpanishTest');
 
 
 /**
@@ -29,11 +29,11 @@ goog.require('sre.PrefixSpanishTest');
  * @type {Array}
  */
 sre.SpeechSpanishTest.testList = [
-  // sre.CollapseSpanishTest,
+  sre.CollapseSpanishTest,
   sre.MathspeakEmbellishSpanishTest,
   sre.MathspeakSpanishTest,
   sre.MmlcloudSpanishTest,
   sre.NobleSpanishTest,
   sre.PrefixSpanishTest,
-  // sre.SummarySpanishTest
+  sre.SummarySpanishTest
 ];

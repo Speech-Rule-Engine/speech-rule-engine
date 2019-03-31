@@ -52,20 +52,6 @@ goog.inherits(sre.CollapseEnglishTest, sre.CollapseRuleTest);
 
 
 /**
- * @override
- */
-sre.CollapseEnglishTest.prototype.getSpeech = function(mathMl) {
-  var mml = sre.DomUtil.parseInput(mathMl);
-  var stree = sre.Semantic.getTree(mml);
-  var xml = stree.xml();
-  xml.childNodes[0].setAttribute('id', 'A');
-  sre.SpeechGeneratorUtil.connectAllMactions(mml, xml);
-  var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
-  return sre.AuralRendering.getInstance().markup(descrs);
-};
-
-
-/**
  * Testing Collapse Rule for abstr-addition.
  */
 sre.CollapseEnglishTest.prototype.testCollapsedAddition = function() {

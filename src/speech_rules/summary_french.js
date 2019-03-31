@@ -80,6 +80,11 @@ var defineUniqueRuleAlias = sre.SummaryFrench.defineUniqueRuleAlias_;
  * @private
 */
 sre.SummaryFrench.initSummaryFrench_ = function() {
+  // Initial rule
+  defineRule(
+      'stree', 'default.default',
+      '[n] ./*[1]', 'self::stree');
+
   //TODO: Need some means to prioritise these rules over other rules.
   // Collapsed prefix
   defineRule(

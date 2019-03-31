@@ -72,3 +72,17 @@ sre.CollapseRuleTest.prototype.header = function() {
   return header + '<script type="text/javascript">' + script +
     '</script><button onclick="toggleAll()">Toggle All</button>\n';
 };
+
+
+/**
+ * @override
+ */
+sre.CollapseRuleTest.prototype.getSpeech = function(mathMl) {
+  var mml = sre.DomUtil.parseInput(mathMl);
+  var stree = sre.Semantic.getTree(mml);
+  var xml = stree.xml();
+  xml.childNodes[0].setAttribute('id', 'A');
+  sre.SpeechGeneratorUtil.connectAllMactions(mml, xml);
+  var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
+  return sre.AuralRendering.getInstance().markup(descrs);
+};

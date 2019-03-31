@@ -81,6 +81,11 @@ var defineUniqueRuleAlias = sre.SummarySpanish.defineUniqueRuleAlias_;
 */
 sre.SummarySpanish.initSummarySpanish_ = function() {
 
+  // Initial rule
+  defineRule(
+      'stree', 'default.default',
+      '[n] ./*[1]', 'self::stree');
+
   // Identifier
   defineRule(
       'abstr-identifier', 'default.default',
@@ -112,7 +117,7 @@ sre.SummarySpanish.initSummarySpanish_ = function() {
   );
   defineRule(
       'abstr-mixed-number', 'default.default',
-      '[t] "numero mixto"',
+      '[t] "número mixto"',
       'self::number', '@role="mixed"'
   );
 
