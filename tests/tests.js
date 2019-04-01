@@ -19,27 +19,12 @@
 
 goog.provide('sre.Tests');
 
-goog.require('sre.ApiTest');
-goog.require('sre.ClearspeakAnnotationTest');
-goog.require('sre.ColorPickerTest');
-goog.require('sre.DomTest');
-goog.require('sre.EnrichMathmlTest');
-goog.require('sre.EnrichSpeechTest');
-goog.require('sre.MarkupTest');
-goog.require('sre.MathAlphabetsTest');
-goog.require('sre.MathmlStoreTest');
-goog.require('sre.RebuildStreeTest');
-goog.require('sre.SemanticApiTest');
-goog.require('sre.SemanticRuleTest');
-goog.require('sre.SemanticTreeTest');
+goog.require('sre.BaseTests');
 goog.require('sre.SpeechEnglishTest');
 goog.require('sre.SpeechFrenchTest');
-goog.require('sre.SpeechRuleTest');
 goog.require('sre.SpeechSpanishTest');
 goog.require('sre.System');
 goog.require('sre.TestRunner');
-goog.require('sre.WalkerMarkupTest');
-goog.require('sre.WalkerTest');
 
 
 
@@ -72,24 +57,8 @@ sre.Tests.prototype.run = function() {
  * List of tests to run. Add new tests here!
  * @type {Array}
  */
-sre.Tests.testList = [
-  sre.ApiTest,
-  sre.ClearspeakAnnotationTest,
-  sre.ColorPickerTest,
-  sre.DomTest,
-  sre.EnrichMathmlTest,
-  sre.EnrichSpeechTest,
-  sre.MarkupTest,
-  sre.MathAlphabetsTest,
-  sre.MathmlStoreTest,
-  sre.RebuildStreeTest,
-  sre.SemanticApiTest,
-  sre.SemanticRuleTest,
-  sre.SemanticTreeTest,
-  sre.SpeechRuleTest,
-  sre.WalkerMarkupTest,
-  sre.WalkerTest
-];
+sre.Tests.testList = [];
+sre.Tests.testList = sre.Tests.testList.concat(sre.BaseTests.testList);
 sre.Tests.testList = sre.Tests.testList.concat(sre.SpeechEnglishTest.testList);
 sre.Tests.testList = sre.Tests.testList.concat(sre.SpeechFrenchTest.testList);
 sre.Tests.testList = sre.Tests.testList.concat(sre.SpeechSpanishTest.testList);
