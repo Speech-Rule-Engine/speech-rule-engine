@@ -89,7 +89,8 @@ sre.NumbersUtil.vulgarFraction = function(node) {
   if (conversion.convertible &&
       conversion.enumerator &&
       conversion.denominator) {
-    return sre.Messages.NUMBERS.numberToWords(conversion.enumerator) + ' ' +
+    return sre.Messages.NUMBERS.numberToWords(conversion.enumerator) +
+        sre.Messages.NUMBERS.vulgarSep +
         sre.Messages.NUMBERS.numberToOrdinal(conversion.denominator,
         conversion.enumerator !== 1);
   }

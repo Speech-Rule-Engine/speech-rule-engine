@@ -30,9 +30,8 @@ goog.require('sre.XpathUtil');
 /**
  * String representation of zero to nineteen.
  * @type {Array.<string>}
- * @private
  */
-sre.MathspeakSpanishUtil.onesOrdinals_ = [
+sre.MathspeakSpanishUtil.onesOrdinals = [
   'primera', 'segunda', 'tercera', 'cuarta', 'quinta', 'sexta', 'séptima',
   'octava', 'novena', 'décima', 'undécima', 'duodécima'
 ];
@@ -41,9 +40,8 @@ sre.MathspeakSpanishUtil.onesOrdinals_ = [
 /**
  * String representation of twenty to ninety.
  * @type {Array.<string>}
- * @private
  */
-sre.MathspeakSpanishUtil.tensOrdinals_ = [
+sre.MathspeakSpanishUtil.tensOrdinals = [
   'décima', 'vigésima', 'trigésima', 'cuadragésima', 'quincuagésima',
   'sexagésima', 'septuagésima', 'octogésima', 'nonagésima'
 ];
@@ -52,9 +50,8 @@ sre.MathspeakSpanishUtil.tensOrdinals_ = [
 /**
  * String representation of thousand to decillion.
  * @type {Array.<string>}
- * @private
  */
-sre.MathspeakSpanishUtil.hundredsOrdinals_ = [
+sre.MathspeakSpanishUtil.hundredsOrdinals = [
   'centésima', 'ducentésima', 'tricentésima', 'cuadringentésima',
   'quingentésima', 'sexcentésima', 'septingentésima', 'octingentésima',
   'noningentésima'
@@ -71,7 +68,7 @@ sre.MathspeakSpanishUtil.numberToOrdinal = function(num) {
     return num.toString() + 'a';
   }
   if (num <= 12) {
-    return sre.MathspeakSpanishUtil.onesOrdinals_[num - 1];
+    return sre.MathspeakSpanishUtil.onesOrdinals[num - 1];
   }
   var result = [];
   if (num > 1000) {
@@ -81,19 +78,19 @@ sre.MathspeakSpanishUtil.numberToOrdinal = function(num) {
   var pos = 0;
   pos = Math.floor(num / 100);
   if (pos > 0) {
-    result.push(sre.MathspeakSpanishUtil.hundredsOrdinals_[pos - 1]);
+    result.push(sre.MathspeakSpanishUtil.hundredsOrdinals[pos - 1]);
     num = num % 100;
   }
   if (num <= 12) {
-    result.push(sre.MathspeakSpanishUtil.onesOrdinals_[num - 1]);
+    result.push(sre.MathspeakSpanishUtil.onesOrdinals[num - 1]);
   } else {
     pos = Math.floor(num / 10);
     if (pos > 0) {
-      result.push(sre.MathspeakSpanishUtil.tensOrdinals_[pos - 1]);
+      result.push(sre.MathspeakSpanishUtil.tensOrdinals[pos - 1]);
       num = num % 10;
     }
     if (num > 0) {
-      result.push(sre.MathspeakSpanishUtil.onesOrdinals_[num - 1]);
+      result.push(sre.MathspeakSpanishUtil.onesOrdinals[num - 1]);
     }
   }
   return result.join(' ');
@@ -112,18 +109,6 @@ sre.MathspeakSpanishUtil.ordinalCounter = function(node, context) {
     return sre.MathspeakSpanishUtil.numberToOrdinal(++counter) + ' ' + context;
   };
 };
-
-
-/**
- * Creates a simple ordinal string from a number.
- * @param {number} number The number to be converted.
- * @param {string=} opt_gender The gender of the ordinal.
- * @return {string} The ordinal string.
- */
-sre.MathspeakSpanishUtil.simpleOrdinal = function(number, opt_gender) {
-  return number.toString() + (opt_gender === 'female' ? 'a' : 'o');
-};
-
 
 
 /**

@@ -143,6 +143,9 @@ sre.Locale.en = {
   PLURAL_UNIT: {
     'foot': 'feet',
     'inch': 'inches'
-  }
+  },
 
+  NUMBERS: sre.Numbers.en.NUMBERS
+  
 };
+

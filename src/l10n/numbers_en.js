@@ -178,9 +178,10 @@ sre.Numbers.en.simpleOrdinal = function(number) {
 };
 
 
-sre.Messages.NUMBERS = {};
-sre.Messages.NUMBERS.wordOrdinal = sre.Numbers.en.wordOrdinal;
-sre.Messages.NUMBERS.simpleOrdinal = sre.Numbers.en.simpleOrdinal;
-sre.Messages.NUMBERS.numberToWords = sre.Numbers.en.numberToWords;
-sre.Messages.NUMBERS.numberToOrdinal = sre.Numbers.en.numberToOrdinal;
-
+sre.Numbers.en.NUMBERS = {
+  wordOrdinal: sre.Numbers.en.wordOrdinal,
+  simpleOrdinal: sre.Numbers.en.simpleOrdinal,
+  numberToWords: sre.Numbers.en.numberToWords,
+  numberToOrdinal: sre.Numbers.en.numberToOrdinal,
+  vulgarSep: ' '
+};

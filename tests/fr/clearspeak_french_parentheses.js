@@ -758,7 +758,7 @@ sre.ClearspeakFrenchParentheses.prototype.testNest004 = function() {
   var mathml = '<math><mrow><mn>6</mn><mo>−</mo><mrow><mo>(</mo><mrow><mn>2' +
       '</mn><mo>−</mo><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>5</mn>' +
       '</mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '6 moins, parenthèse gauche, 2 moins, second parenthèse gauche, 3 plus 5, second parenthèse droite, parenthèse droite';
+  var speech = '6 moins, parenthèse gauche, 2 moins, deuxième parenthèse gauche, 3 plus 5, deuxième parenthèse droite, parenthèse droite';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -786,7 +786,7 @@ sre.ClearspeakFrenchParentheses.prototype.testNest006 = function() {
       '</mo><mn>3</mn><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo>' +
       '<mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow>' +
       '</math>';
-  var speech = '4  , parenthèse gauche, x plus 3  , second parenthèse gauche, 2 x, plus 1, second parenthèse droite, parenthèse droite';
+  var speech = '4  , parenthèse gauche, x plus 3  , deuxième parenthèse gauche, 2 x, plus 1, deuxième parenthèse droite, parenthèse droite';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -801,7 +801,7 @@ sre.ClearspeakFrenchParentheses.prototype.testNest007 = function() {
       '</mrow><mo>)</mo></mrow><mo>−</mo><mrow><mo>(</mo><mrow><mn>2</mn>' +
       '<mo>+</mo><mn>8</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = '1 plus, parenthèse gauche, 2 plus, second parenthèse gauche, 3 plus 7, second parenthèse droite, moins, second parenthèse gauche, 2 plus 8, second parenthèse droite, parenthèse droite';
+  var speech = '1 plus, parenthèse gauche, 2 plus, deuxième parenthèse gauche, 3 plus 7, deuxième parenthèse droite, moins, deuxième parenthèse gauche, 2 plus 8, deuxième parenthèse droite, parenthèse droite';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -815,7 +815,7 @@ sre.ClearspeakFrenchParentheses.prototype.testNest008 = function() {
       '</mn><mo>+</mo><mrow><mo>(</mo><mrow><mn>3</mn><mo>−</mo><mrow><mo>(' +
       '</mo><mrow><mn>4</mn><mo>−</mo><mn>5</mn></mrow><mo>)</mo></mrow>' +
       '</mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '1 plus, parenthèse gauche, 2 plus, second parenthèse gauche, 3 moins, third parenthèse gauche, 4 moins 5, third parenthèse droite, second parenthèse droite, parenthèse droite';
+  var speech = '1 plus, parenthèse gauche, 2 plus, deuxième parenthèse gauche, 3 moins, troisième parenthèse gauche, 4 moins 5, troisième parenthèse droite, deuxième parenthèse droite, parenthèse droite';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -833,7 +833,7 @@ sre.ClearspeakFrenchParentheses.prototype.testNest009 = function() {
       '<mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow>' +
       '<mo>+</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'parenthèse gauche, second parenthèse gauche, 2 plus, third parenthèse gauche, 3 plus 4, third parenthèse droite, plus 5, second parenthèse droite, plus 6 plus, second parenthèse gauche, third parenthèse gauche, 7 plus, fourth parenthèse gauche, 8 plus 1, fourth parenthèse droite, third parenthèse droite, plus 2, second parenthèse droite, parenthèse droite';
+  var speech = 'parenthèse gauche, deuxième parenthèse gauche, 2 plus, troisième parenthèse gauche, 3 plus 4, troisième parenthèse droite, plus 5, deuxième parenthèse droite, plus 6 plus, deuxième parenthèse gauche, troisième parenthèse gauche, 7 plus, quatrième parenthèse gauche, 8 plus 1, quatrième parenthèse droite, troisième parenthèse droite, plus 2, deuxième parenthèse droite, parenthèse droite';
   this.executeRuleTest(mathml, speech, preference);
 };
 

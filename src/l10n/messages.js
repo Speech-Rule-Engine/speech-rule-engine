@@ -228,3 +228,12 @@ sre.Messages.PLURAL_UNIT = { };
 sre.Messages.PLURAL = function(unit) {
   return (/.*s$/.test(unit)) ? unit : unit + 's';
 };
+
+
+sre.Messages.NUMBERS = {
+  wordOrdinal: function(n) {return n.toString();},
+  simpleOrdinal: function(n) {return n.toString();},
+  numberToWords: function(n) {return n.toString();},
+  numberToOrdinal: function(n, m) {return n.toString();},
+  vulgarSep: '-'
+};

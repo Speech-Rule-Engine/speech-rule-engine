@@ -21,6 +21,7 @@
 goog.provide('sre.Locale.es');
 
 goog.require('sre.Locale');
+// goog.require('sre.Numbers.es');
 
 
 /**
@@ -167,6 +168,8 @@ sre.Locale.es = {
     DIGIT_GROUP: '',
     JOINER_SUBSUPER: ' ',
     JOINER_FRAC: ' '
-  }
+  },
 
+  NUMBERS: {}// sre.Numbers.es.NUMBERS
+  
 };

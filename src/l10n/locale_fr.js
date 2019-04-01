@@ -22,6 +22,7 @@ goog.provide('sre.Locale.fr');
 
 goog.require('sre.Locale');
 goog.require('sre.Messages');
+goog.require('sre.Numbers.fr');
 
 
 /**
@@ -174,6 +175,8 @@ sre.Locale.fr = {
   PLURAL_UNIT: {
     'foot': 'feet',
     'inch': 'inches'
-  }
+  },
 
+  NUMBERS: sre.Numbers.fr.NUMBERS
+  
 };
