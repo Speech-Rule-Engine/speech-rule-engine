@@ -47,7 +47,7 @@ goog.inherits(sre.CollapseSpanishTest, sre.CollapseRuleTest);
 /**
  * Testing Collapse Rule for abstr-addition.
  */
-sre.CollapseSpanishTest.prototype.testAbstrAddition = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedAddition = function() {
   var mml = '<mi>a</mi><mo>+</mo><mi>b</mi>';
   this.executeRuleTest(mml, 'suma con 2 sumandos plegado', 'default');
   this.executeRuleTest(mml, 'suma plegado', 'brief');
@@ -58,7 +58,7 @@ sre.CollapseSpanishTest.prototype.testAbstrAddition = function() {
 /**
  * Testing Collapse Rule for abstr-bigop.
  */
-sre.CollapseSpanishTest.prototype.testAbstrBigop = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedBigop = function() {
   var mml = '<mo>&#x2211;</mo><mi>x</mi>';
   this.executeRuleTest(mml, 'sumatorio plegado', 'default');
   this.executeRuleTest(mml, 'sumatorio plegado', 'brief');
@@ -69,7 +69,7 @@ sre.CollapseSpanishTest.prototype.testAbstrBigop = function() {
 /**
  * Testing Collapse Rule for abstr-binomial.
  */
-sre.CollapseSpanishTest.prototype.testAbstrBinomial = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedBinomial = function() {
   var mml = '<mfenced open="(" close=")"><mtable><mtr><mtd><mi>x</mi></mtd>' +
       '</mtr><mtr><mtd><mi>y</mi></mtd></mtr></mtable></mfenced>';
   this.executeRuleTest(mml, 'binomio plegado', 'default');
@@ -81,7 +81,7 @@ sre.CollapseSpanishTest.prototype.testAbstrBinomial = function() {
 /**
  * Testing Collapse Rule for abstr-cases.
  */
-sre.CollapseSpanishTest.prototype.testAbstrCases = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedCases = function() {
   var mml = '<mfenced separators="" open="{" close=""><mtable>'
       + '<mtr><mtd><mi>y</mi></mtd><mtd><mn>0</mn></mtd></mtr>' +
       '<mtr><mtd><mi>y</mi></mtd><mtd><mn>2</mn></mtd></mtr>' +
@@ -95,7 +95,7 @@ sre.CollapseSpanishTest.prototype.testAbstrCases = function() {
 /**
  * Testing Collapse Rule for abstr-continued-fraction.
  */
-sre.CollapseSpanishTest.prototype.testAbstrContinuedFraction = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedContinuedFraction = function() {
   var mml = '<mfrac><msub>' +
       '<mi>b</mi><mn>1</mn></msub><mrow><msub><mi>a</mi><mn>1</mn></msub>' +
       '<mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><mrow><msub>' +
@@ -111,7 +111,7 @@ sre.CollapseSpanishTest.prototype.testAbstrContinuedFraction = function() {
 /**
  * Testing Collapse Rule for abstr-determinant.
  */
-sre.CollapseSpanishTest.prototype.testAbstrDeterminant = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedDeterminant = function() {
   var mml = '<mfenced open="|" close="|"><mtable>' +
       '<mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr>' +
       '<mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr>' +
@@ -125,7 +125,7 @@ sre.CollapseSpanishTest.prototype.testAbstrDeterminant = function() {
 /**
  * Testing Collapse Rule for abstr-fraction.
  */
-sre.CollapseSpanishTest.prototype.testAbstrFraction = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedFraction = function() {
   var mml = '<mfrac><mn>1</mn><mi>x</mi></mfrac>';
   this.executeRuleTest(mml, 'fracción plegado', 'default');
   this.executeRuleTest(mml, 'frac plegado', 'brief');
@@ -136,7 +136,7 @@ sre.CollapseSpanishTest.prototype.testAbstrFraction = function() {
 /**
  * Testing Collapse Rule for abstr-function.
  */
-sre.CollapseSpanishTest.prototype.testAbstrFunction = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedFunction = function() {
   // var mml = '<mi>sin</mi><mi>x</mi>';
   var mml = '<mi>sin</mi>';
   this.executeRuleTest(mml, 'expresión funcional plegado', 'default');
@@ -148,7 +148,7 @@ sre.CollapseSpanishTest.prototype.testAbstrFunction = function() {
 /**
  * Testing Collapse Rule for abstr-identifier.
  */
-sre.CollapseSpanishTest.prototype.testAbstrIdentifier = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedIdentifier = function() {
   var mml = '<mi>a</mi>';
   this.executeRuleTest(mml, 'identificador largo plegado', 'default');
   this.executeRuleTest(mml, 'identificador largo plegado', 'brief');
@@ -159,7 +159,7 @@ sre.CollapseSpanishTest.prototype.testAbstrIdentifier = function() {
 /**
  * Testing Collapse Rule for abstr-infixop.
  */
-sre.CollapseSpanishTest.prototype.testAbstrInfixop = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedInfixop = function() {
   var mml = '<mi>a</mi><mo>/</mo><mi>b</mi>';
   this.executeRuleTest(mml, 'división con 2 elementos plegado', 'default');
   this.executeRuleTest(mml, 'división plegado', 'brief');
@@ -170,7 +170,7 @@ sre.CollapseSpanishTest.prototype.testAbstrInfixop = function() {
 /**
  * Testing Collapse Rule for abstr-integral.
  */
-sre.CollapseSpanishTest.prototype.testAbstrIntegral = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedIntegral = function() {
   var mml = '<mo>∮</mo><mi>E</mi><mo>·</mo><mi>d</mi>' +
       '<mi mathvariant="bold">l</mi>';
   this.executeRuleTest(mml, 'integral plegado', 'default');
@@ -182,7 +182,7 @@ sre.CollapseSpanishTest.prototype.testAbstrIntegral = function() {
 /**
  * Testing Collapse Rule for abstr-lim.
  */
-sre.CollapseSpanishTest.prototype.testAbstrLim = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedLim = function() {
   var mml = '<mi>lim</mi>';
   this.executeRuleTest(mml, 'función de límite plegado', 'default');
   this.executeRuleTest(mml, 'límite plegado', 'brief');
@@ -193,7 +193,7 @@ sre.CollapseSpanishTest.prototype.testAbstrLim = function() {
 /**
  * Testing Collapse Rule for abstr-matrix.
  */
-sre.CollapseSpanishTest.prototype.testAbstrMatrix = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedMatrix = function() {
   var mml = '<mfenced open="[" close="]"><mtable>' +
       '<mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr>' +
       '<mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr>' +
@@ -208,7 +208,7 @@ sre.CollapseSpanishTest.prototype.testAbstrMatrix = function() {
 /**
  * Testing Collapse Rule for abstr-mixed-number.
  */
-sre.CollapseSpanishTest.prototype.testAbstrMixedNumber = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedMixedNumber = function() {
   var mml = '<mn>1</mn><mfrac><mn>2</mn><mn>3</mn></mfrac>';
   this.executeRuleTest(mml, 'número largo mixto plegado', 'default');
   this.executeRuleTest(mml, 'número largo mixto plegado', 'brief');
@@ -219,7 +219,7 @@ sre.CollapseSpanishTest.prototype.testAbstrMixedNumber = function() {
 /**
  * Testing Collapse Rule for abstr-multiplication.
  */
-sre.CollapseSpanishTest.prototype.testAbstrMultiplication = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedMultiplication = function() {
   var mml = '<mi>a</mi><mo>*</mo><mi>b</mi>';
   this.executeRuleTest(mml, 'producto con 2 factores plegado', 'default');
   this.executeRuleTest(mml, 'producto plegado', 'brief');
@@ -230,7 +230,7 @@ sre.CollapseSpanishTest.prototype.testAbstrMultiplication = function() {
 /**
  * Testing Collapse Rule for abstr-multirel.
  */
-sre.CollapseSpanishTest.prototype.testAbstrMultirel = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedMultirel = function() {
   var mml = '<mi>a</mi><mo>=</mo><mi>b</mi><mo>&#x2264;</mo><mi>b</mi>';
   this.executeRuleTest(mml, 'secuencia de relación con 3 elementos plegado', 'default');
   this.executeRuleTest(mml, 'secuencia de relación plegado', 'brief');
@@ -241,7 +241,7 @@ sre.CollapseSpanishTest.prototype.testAbstrMultirel = function() {
 /**
  * Testing Collapse Rule for abstr-number.
  */
-sre.CollapseSpanishTest.prototype.testAbstrNumber = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedNumber = function() {
   var mml = '<mn>123456</mn>';
   this.executeRuleTest(mml, 'número largo plegado', 'default');
   this.executeRuleTest(mml, 'número largo plegado', 'brief');
@@ -252,7 +252,7 @@ sre.CollapseSpanishTest.prototype.testAbstrNumber = function() {
 /**
  * Testing Collapse Rule for abstr-punctuated.
  */
-sre.CollapseSpanishTest.prototype.testAbstrPunctuated = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedPunctuated = function() {
   var mml = '<mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi>';
   this.executeRuleTest(mml, 'lista separada por coma de longitud 3 plegado', 'default');
   this.executeRuleTest(mml, 'lista separada por coma plegado', 'brief');
@@ -263,7 +263,7 @@ sre.CollapseSpanishTest.prototype.testAbstrPunctuated = function() {
 /**
  * Testing Collapse Rule for abstr-relation.
  */
-sre.CollapseSpanishTest.prototype.testAbstrRelation = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedRelation = function() {
   var mml = '<mi>a</mi><mo>=</mo><mi>b</mi>';
   this.executeRuleTest(mml, 'igualdad plegado', 'default');
   this.executeRuleTest(mml, 'igualdad plegado', 'brief');
@@ -274,7 +274,7 @@ sre.CollapseSpanishTest.prototype.testAbstrRelation = function() {
 /**
  * Testing Collapse Rule for abstr-relation-seq.
  */
-sre.CollapseSpanishTest.prototype.testAbstrRelationSeq = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedRelationSeq = function() {
   var mml = '<mi>a</mi><mo>=</mo><mi>b</mi><mo>=</mo><mi>b</mi>';
   this.executeRuleTest(mml, 'secuencia de igualdad con 3 elementos plegado', 'default');
   this.executeRuleTest(mml, 'secuencia de igualdad plegado', 'brief');
@@ -285,7 +285,7 @@ sre.CollapseSpanishTest.prototype.testAbstrRelationSeq = function() {
 /**
  * Testing Collapse Rule for abstr-root.
  */
-sre.CollapseSpanishTest.prototype.testAbstrRoot = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedRoot = function() {
   var mml = '<mroot><mi>x</mi><mn>3</mn></mroot>';
   this.executeRuleTest(mml, 'raíz del índice 3 plegado', 'default');
   this.executeRuleTest(mml, 'raíz plegado', 'brief');
@@ -296,7 +296,7 @@ sre.CollapseSpanishTest.prototype.testAbstrRoot = function() {
 /**
  * Testing Collapse Rule for abstr-root-nested.
  */
-sre.CollapseSpanishTest.prototype.testAbstrRootNested = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedRootNested = function() {
   var mml = '<mroot><mrow><mroot><mi>x</mi><mn>4</mn></mroot>' +
       '<mo>+</mo><mi>x</mi></mrow><mn>3</mn></mroot>';
   this.executeRuleTest(mml, 'raíz anidada del índice 3 plegado', 'default');
@@ -308,7 +308,7 @@ sre.CollapseSpanishTest.prototype.testAbstrRootNested = function() {
 /**
  * Testing Collapse Rule for abstr-rowvector.
  */
-sre.CollapseSpanishTest.prototype.testAbstrRowvector = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedRowvector = function() {
   var mml = '<mfenced open="[" close="]"><mtable>' +
       '<mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr>' +
       '</mtable></mfenced>';
@@ -321,7 +321,7 @@ sre.CollapseSpanishTest.prototype.testAbstrRowvector = function() {
 /**
  * Testing Collapse Rule for abstr-sqrt.
  */
-sre.CollapseSpanishTest.prototype.testAbstrSqrt = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedSqrt = function() {
   var mml = '<msqrt><mn>2</mn></msqrt>';
   this.executeRuleTest(mml, 'raíz cuadrada plegado', 'default');
   this.executeRuleTest(mml, 'raíz cuadrada plegado', 'brief');
@@ -332,7 +332,7 @@ sre.CollapseSpanishTest.prototype.testAbstrSqrt = function() {
 /**
  * Testing Collapse Rule for abstr-sqrt-nested.
  */
-sre.CollapseSpanishTest.prototype.testAbstrSqrtNested = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedSqrtNested = function() {
   var mml = '<msqrt><mn>2</mn><msqrt><mn>2</mn></msqrt></msqrt>';
   this.executeRuleTest(mml, 'raíz cuadrada anidada plegado', 'default');
   this.executeRuleTest(mml, 'raíz cuadrada anidada plegado', 'brief');
@@ -343,7 +343,7 @@ sre.CollapseSpanishTest.prototype.testAbstrSqrtNested = function() {
 /**
  * Testing Collapse Rule for abstr-squarematrix.
  */
-sre.CollapseSpanishTest.prototype.testAbstrSquarematrix = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedSquarematrix = function() {
   var mml = '<mfenced open="[" close="]"><mtable>' +
       '<mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr>' +
       '<mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr>' +
@@ -357,7 +357,7 @@ sre.CollapseSpanishTest.prototype.testAbstrSquarematrix = function() {
 /**
  * Testing Collapse Rule for abstr-subscript.
  */
-sre.CollapseSpanishTest.prototype.testAbstrSubscript = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedSubscript = function() {
   var mml = '<msub><mi>a</mi><mi>b</mi></msub>';
   this.executeRuleTest(mml, 'subíndice plegado', 'default');
   this.executeRuleTest(mml, 'subíndice plegado', 'brief');
@@ -368,7 +368,7 @@ sre.CollapseSpanishTest.prototype.testAbstrSubscript = function() {
 /**
  * Testing Collapse Rule for abstr-subsup.
  */
-sre.CollapseSpanishTest.prototype.testAbstrSubsup = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedSubsup = function() {
   var mml = '<msubsup><mi>a</mi><mi>c</mi><mi>b</mi></msubsup>';
   this.executeRuleTest(mml, 'potencia con subíndice plegado', 'default');
   this.executeRuleTest(mml, 'potencia con subíndice plegado', 'brief');
@@ -379,7 +379,7 @@ sre.CollapseSpanishTest.prototype.testAbstrSubsup = function() {
 /**
  * Testing Collapse Rule for abstr-superscript.
  */
-sre.CollapseSpanishTest.prototype.testAbstrSuperscript = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedSuperscript = function() {
   var mml = '<msup><mi>a</mi><mi>b</mi></msup>';
   this.executeRuleTest(mml, 'potencia plegado', 'default');
   this.executeRuleTest(mml, 'potencia plegado', 'brief');
@@ -390,7 +390,7 @@ sre.CollapseSpanishTest.prototype.testAbstrSuperscript = function() {
 /**
  * Testing Collapse Rule for abstr-table.
  */
-sre.CollapseSpanishTest.prototype.testAbstrTable = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedTable = function() {
   var mml = '<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr>' +
       '<mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable>';
   this.executeRuleTest(mml, 'mesa con 2 filas y 2 columnas plegado', 'default');
@@ -402,7 +402,7 @@ sre.CollapseSpanishTest.prototype.testAbstrTable = function() {
 /**
  * Testing Collapse Rule for abstr-text.
  */
-sre.CollapseSpanishTest.prototype.testAbstrText = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedText = function() {
   var mml = '<mtext>a b c</mtext>';
   this.executeRuleTest(mml, 'texto plegado', 'default');
   this.executeRuleTest(mml, 'texto plegado', 'brief');
@@ -413,7 +413,7 @@ sre.CollapseSpanishTest.prototype.testAbstrText = function() {
 /**
  * Testing Collapse Rule for abstr-var-addition.
  */
-sre.CollapseSpanishTest.prototype.testAbstrVarAddition = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedVarAddition = function() {
   var mml = '<mi>a</mi><mo>+</mo><mi>&#x2026;</mi><mo>+</mo><mi>b</mi>';
   this.executeRuleTest(mml, 'suma con número variable de sumandos plegado', 'default');
   this.executeRuleTest(mml, 'suma plegado', 'brief');
@@ -424,7 +424,7 @@ sre.CollapseSpanishTest.prototype.testAbstrVarAddition = function() {
 /**
  * Testing Collapse Rule for abstr-var-cases.
  */
-sre.CollapseSpanishTest.prototype.testAbstrVarCases = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedVarCases = function() {
   var mml = '<mo>{</mo><mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd>' +
       '<mo>&#x2026;</mo></mtd></mtr><mtr><mtd><mi>b</mi></mtd></mtr></mtable>';
   this.executeRuleTest(
@@ -437,7 +437,7 @@ sre.CollapseSpanishTest.prototype.testAbstrVarCases = function() {
 /**
  * Testing Collapse Rule for abstr-var-determinant.
  */
-sre.CollapseSpanishTest.prototype.testAbstrVarDeterminant = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedVarDeterminant = function() {
   var mml = '<mo>|</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi>' +
       '</mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd />' +
       '<mtd><mo>&#x22EF;</mo></mtd><mtd /></mtr><mtr><mtd><mi>c</mi></mtd>' +
@@ -451,7 +451,7 @@ sre.CollapseSpanishTest.prototype.testAbstrVarDeterminant = function() {
 /**
  * Testing Collapse Rule for abstr-var-matrix.
  */
-sre.CollapseSpanishTest.prototype.testAbstrVarMatrix = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedVarMatrix = function() {
   var mml = '<mo>(</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi>' +
       '</mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd />' +
       '<mtd><mo>&#x22EF;</mo></mtd><mtd /></mtr><mtr><mtd><mi>c</mi></mtd>' +
@@ -465,7 +465,7 @@ sre.CollapseSpanishTest.prototype.testAbstrVarMatrix = function() {
 /**
  * Testing Collapse Rule for abstr-var-multiplication.
  */
-sre.CollapseSpanishTest.prototype.testAbstrVarMultiplication = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedVarMultiplication = function() {
   var mml = '<mi>a</mi><mo>*</mo><mo>&#x2026;</mo><mo>*</mo><mi>b</mi>';
   this.executeRuleTest(
       mml, 'producto con una cantidad variable de factores plegado', 'default');
@@ -477,7 +477,7 @@ sre.CollapseSpanishTest.prototype.testAbstrVarMultiplication = function() {
 /**
  * Testing Collapse Rule for abstr-var-multirel.
  */
-sre.CollapseSpanishTest.prototype.testAbstrVarMultirel = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedVarMultirel = function() {
   var mml = '<mi>a</mi><mo>=</mo><mo>&#x2026;</mo><mo>&#x2264;</mo><mi>b</mi>';
   this.executeRuleTest(
       mml, 'secuencia de relación con número variable de elementos plegado', 'default');
@@ -489,7 +489,7 @@ sre.CollapseSpanishTest.prototype.testAbstrVarMultirel = function() {
 /**
  * Testing Collapse Rule for abstr-var-punctuated.
  */
-sre.CollapseSpanishTest.prototype.testAbstrVarPunctuated = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedVarPunctuated = function() {
   var mml = '<mi>a</mi><mo>,</mo><mo>&#x2026;</mo><mo>,</mo><mi>b</mi>';
   this.executeRuleTest(
       mml, 'lista separada por coma de longitud 3 plegado', 'default');
@@ -501,7 +501,7 @@ sre.CollapseSpanishTest.prototype.testAbstrVarPunctuated = function() {
 /**
  * Testing Collapse Rule for abstr-var-relation.
  */
-sre.CollapseSpanishTest.prototype.testAbstrVarRelation = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedVarRelation = function() {
   var mml = '<mi>a</mi><mo>=</mo><mo>&#x2026;</mo><mo>=</mo><mi>b</mi>';
   this.executeRuleTest(
       mml, 'secuencia de igualdad con una cantidad variable de elementos plegado', 'default');
@@ -513,7 +513,7 @@ sre.CollapseSpanishTest.prototype.testAbstrVarRelation = function() {
 /**
  * Testing Collapse Rule for abstr-var-vector.
  */
-sre.CollapseSpanishTest.prototype.testAbstrVarVector = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedVarVector = function() {
   var mml = '<mfenced open="[" close="]"><mtable>' +
       '<mtr><mtd><mi>a</mi></mtd></mtr>' +
       '<mtr><mtd><mo>&#x22EE;</mo></mtd></mtr>' +
@@ -529,7 +529,7 @@ sre.CollapseSpanishTest.prototype.testAbstrVarVector = function() {
 /**
  * Testing Collapse Rule for abstr-vector.
  */
-sre.CollapseSpanishTest.prototype.testAbstrVector = function() {
+sre.CollapseSpanishTest.prototype.testCollapsedVector = function() {
   var mml = '<mfenced open="[" close="]"><mtable>' +
       '<mtr><mtd><mi>a</mi></mtd></mtr>' +
       '<mtr><mtd><mi>c</mi></mtd></mtr>' +

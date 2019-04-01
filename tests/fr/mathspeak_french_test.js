@@ -872,8 +872,8 @@ sre.MathspeakFrenchTest.prototype.testSample_8_5_10 = function() {
 sre.MathspeakFrenchTest.prototype.testSample_8_6_1 = function() {
   var mml = '<mrow><mi>$</mi><mi>n</mi><mn>2</mn><mo>=</mo><mn>2</mn>' +
       '<mo>*</mo><mi>$</mi><mi>n</mi><mo>+</mo><mn>1</mn><mo>;</mo></mrow>';
-  this.executeRuleTest(mml, 'dollars n 2 égale 2 astérisque dollars n plus 1 point virgule', 'default');
-  this.executeRuleTest(mml, 'dollars n position de base 2 égale 2 astérisque dollars n plus 1 point virgule', 'brief');
+  this.executeRuleTest(mml, 'dollars n position de base 2 égale 2 astérisque dollars n plus 1 point virgule', 'default');
+  this.executeRuleTest(mml, 'dollars n base 2 égale 2 astérisque dollars n plus 1 point virgule', 'brief');
   this.executeRuleTest(mml, 'dollars n base 2 égale 2 astérisque dollars n plus 1 point virgule', 'sbrief');
 };
 

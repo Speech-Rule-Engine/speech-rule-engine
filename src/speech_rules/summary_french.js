@@ -31,8 +31,8 @@ goog.require('sre.MathStore');
  */
 sre.SummaryFrench = function() {
   sre.SummaryFrench.base(this, 'constructor');
-
   this.locale = 'fr';
+  this.modality = 'summary';
 };
 goog.inherits(sre.SummaryFrench, sre.MathStore);
 goog.addSingletonGetter(sre.SummaryFrench);
@@ -80,111 +80,94 @@ var defineUniqueRuleAlias = sre.SummaryFrench.defineUniqueRuleAlias_;
  * @private
 */
 sre.SummaryFrench.initSummaryFrench_ = function() {
+  // Collapsed output
+  defineRule(
+      'collapsed-masculine', 'default.end',
+      '[t] "compressé"',
+      'self::*', 'contains(@grammar, "collapsed")',
+      'contains(@grammar, "masculine")');
+  defineRule(
+      'collapsed-feminine', 'default.end',
+      '[t] "compressée"',
+      'self::*', 'contains(@grammar, "collapsed")',
+      'contains(@grammar, "feminine")');
+  defineRule(
+      'no-collapsed', 'default.end',
+      '[t] ""',
+      'self::*', 'not(contains(@grammar, "collapsed"))',
+      '(contains(@grammar, "masculine") or contains(@grammar, "feminine"))');
+
   // Initial rule
   defineRule(
       'stree', 'default.default',
       '[n] ./*[1]', 'self::stree');
 
-  //TODO: Need some means to prioritise these rules over other rules.
-  // Collapsed prefix
-  defineRule(
-      'abstr-collapsed', 'mathspeak.default',
-      '[t] "collapsed"; [n] . (grammar:collapsed)',
-      'self::*', '@alternative', 'not(@alternative="summary")',
-      'not(contains(@grammar, "collapsed"))', 'self::*', 'self::*',
-      'self::*', 'self::*'
-  );
-
   // Identifier
   defineRule(
-      'abstr-identifier', 'mathspeak.default',
-      '[t] "long identifier"',
-      'self::identifier', '@alternative',
-      'self::*', 'self::*', 'self::*', 'self::*'
+      'abstr-identifier', 'default.default',
+      '[t] "identifiant long"; [n] . (grammar:masculine,engine:style=end)',
+      'self::identifier', 'contains(@grammar, "collapsed")'
   );
   defineRule(
-      'abstr-identifier', 'mathspeak.default',
-      '[t] "identifier"',
-      'self::identifier', '@alternative="summary"', '@alternative',
-      'self::*', 'self::*', 'self::*', 'self::*'
-  );
-  defineRule(
-      'abstr-identifier', 'mathspeak.brief',
-      '[t] "identifier"',
-      'self::identifier', '@alternative',
-      'self::*', 'self::*', 'self::*', 'self::*'
-  );
-  defineSpecialisedRule(
-      'abstr-identifier', 'mathspeak.brief', 'mathspeak.sbrief'
+      'abstr-identifier', 'default.default',
+      '[t] "identifiant" (grammar:masculine,engine:style=end)',
+      'self::identifier'
   );
 
   // Numbers
   defineRule(
-      'abstr-number', 'mathspeak.default',
-      '[t] "long number"',
-      'self::number', '@alternative'
+      'abstr-number', 'default.default',
+      '[t] "nombre long"; [n] . (grammar:masculine,engine:style=end)',
+      'self::number', 'contains(@grammar, "collapsed")'
   );
   defineRule(
-      'abstr-number', 'mathspeak.default',
-      '[t] "number"',
-      'self::number', '@alternative', '@alternative="summary"'
-  );
-  defineRule(
-      'abstr-number', 'mathspeak.brief',
-      '[t] "number"',
-      'self::number', '@alternative'
-  );
-  defineSpecialisedRule(
-      'abstr-number', 'mathspeak.brief', 'mathspeak.sbrief'
+      'abstr-number', 'default.default',
+      '[t] "nombre"; [n] . (grammar:masculine,engine:style=end)',
+      'self::number',
   );
 
   defineRule(
-      'abstr-mixed-number', 'mathspeak.default',
-      '[t] "long mixed number"',
-      'self::number', '@alternative', '@role="mixed"'
+      'abstr-mixed-number', 'default.default',
+      '[t] "nombre fractionnaire long"; [n] . (grammar:masculine,engine:style=end)',
+      'self::number', '@role="mixed"', 'contains(@grammar, "collapsed")'
   );
   defineRule(
-      'abstr-mixed-number', 'mathspeak.brief',
-      '[t] "mixed number"',
-      'self::number', '@alternative', '@role="mixed"'
-  );
-  defineSpecialisedRule(
-      'abstr-mixed-number', 'mathspeak.brief', 'mathspeak.sbrief'
+      'abstr-mixed-number', 'default.default',
+      '[t] "nombre fractionnaire"; [n] . (grammar:masculine,engine:style=end)',
+      'self::number', '@role="mixed"'
   );
 
   // Text
   defineRule(
-      'abstr-text', 'mathspeak.default',
-      '[t] "text"',
-      'self::text', '@alternative'
+      'abstr-text', 'default.default',
+      '[t] "texte"; [n] . (grammar:masculine,engine:style=end)',
+      'self::text'
   );
 
   // Functions
   defineRule(
-      'abstr-function', 'mathspeak.default',
-      '[t] "functional expression"',
-      'self::function', '@alternative',
-      'self::*'
+      'abstr-function', 'default.default',
+      '[t] "expression fonctionnelle"; [n] . (grammar:feminine,engine:style=end)',
+      'self::function'
   );
   defineRule(
       'abstr-function', 'mathspeak.brief',
-      '[t] "function"',
-      'self::function', '@alternative',
-      'self::*'
+      '[t] "fonction"; [n] . (grammar:feminine,engine:style=end)',
+      'self::function'
   );
   defineSpecialisedRule(
       'abstr-function', 'mathspeak.brief', 'mathspeak.sbrief'
   );
 
   defineRule(
-      'abstr-lim', 'mathspeak.default',
-      '[t] "limit function"',
-      'self::function', '@alternative', '@role="limit function"'
+      'abstr-lim', 'default.default',
+      '[t] "fonction de limitation"; [n] . (grammar:feminine,engine:style=end)',
+      'self::function', '@role="limit function"'
   );
   defineRule(
       'abstr-lim', 'mathspeak.brief',
-      '[t] "lim"',
-      'self::function', '@alternative', '@role="limit function"'
+      '[t] "lim"; [n] . (grammar:feminine,engine:style=end)',
+      'self::function', '@role="limit function"'
   );
   defineSpecialisedRule(
       'abstr-lim', 'mathspeak.brief', 'mathspeak.sbrief'
@@ -193,32 +176,30 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
 
   // Fraction
   defineRule(
-      'abstr-fraction', 'mathspeak.default',
-      '[t] "fraction"',
-      'self::fraction', '@alternative'
+      'abstr-fraction', 'default.default',
+      '[t] "fraction"; [n] . (grammar:feminine,engine:style=end)',
+      'self::fraction',
   );
   defineRule(
       'abstr-fraction', 'mathspeak.brief',
-      '[t] "frac"',
-      'self::fraction', '@alternative'
+      '[t] "frac"; [n] . (grammar:feminine,engine:style=end)',
+      'self::fraction'
   );
   defineSpecialisedRule(
       'abstr-fraction', 'mathspeak.brief', 'mathspeak.sbrief'
   );
 
   defineRule(
-      'abstr-continued-fraction', 'mathspeak.default',
-      '[t] "continued fraction"',
-      'self::fraction', '@alternative',
-      'children/*[2]/descendant-or-self::*[@role="ellipsis"]',
-      'self::*', 'self::*'
+      'abstr-continued-fraction', 'default.default',
+      '[t] "fraction continue"; [n] . (grammar:feminine,engine:style=end)',
+      'self::fraction',
+      'children/*[2]/descendant-or-self::*[@role="ellipsis"]'
   );
   defineRule(
       'abstr-continued-fraction', 'mathspeak.brief',
-      '[t] "continued frac"',
-      'self::fraction', '@alternative',
-      'children/*[2]/descendant-or-self::*[@role="ellipsis"]',
-      'self::*', 'self::*'
+      '[t] "frac continue"; [n] . (grammar:feminine,engine:style=end)',
+      'self::fraction',
+      'children/*[2]/descendant-or-self::*[@role="ellipsis"]'
   );
   defineSpecialisedRule(
       'abstr-continued-fraction', 'mathspeak.brief', 'mathspeak.sbrief'
@@ -227,322 +208,299 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
 
   // Roots
   defineRule(
-      'abstr-sqrt', 'mathspeak.default',
-      '[t] "square root"',
-      'self::sqrt', '@alternative'
+      'abstr-sqrt', 'default.default',
+      '[t] "racine carrée"; [n] . (grammar:feminine,engine:style=end)',
+      'self::sqrt'
   );
-  defineSpecialisedRule(
-      'abstr-sqrt', 'mathspeak.default', 'mathspeak.brief'
-  );
-  defineSpecialisedRule(
-      'abstr-sqrt', 'mathspeak.brief', 'mathspeak.sbrief'
-  );
+
   defineRule(
-      'abstr-sqrt-nested', 'mathspeak.default',
-      '[t] "nested square root"',
-      'self::sqrt', '@alternative',
+      'abstr-sqrt-nested', 'default.default',
+      '[t] "racine carrée imbriquée"; [n] . (grammar:feminine,engine:style=end)',
+      'self::sqrt',
       'children/*/descendant-or-self::sqrt or' +
       ' children/*/descendant-or-self::root'
-  );
-  defineSpecialisedRule(
-      'abstr-sqrt-nested', 'mathspeak.default', 'mathspeak.brief'
-  );
-  defineSpecialisedRule(
-      'abstr-sqrt-nested', 'mathspeak.brief', 'mathspeak.sbrief'
   );
 
   // Content following the root expression.
   defineRule(
-      'abstr-root', 'mathspeak.default',
-      '[t] "root of index"; [n] children/*[1]; [t] "endindex"',
-      'self::root', '@alternative',
+      'abstr-root', 'default.default',
+      '[t] "racine d\'indice"; ' +
+      '[n] children/*[1] (engine:modality="speech"); [t] "fin indice"; ' +
+      '[n] . (grammar:feminine,engine:style=end);',
+      'self::root', 'contains(@grammar, "collapsed")',
       'following-sibling::* or ancestor::*/following-sibling::*'
   );
   defineRule(
+      'abstr-root', 'default.default',
+      '[t] "racine d\'indice";' +
+      '[n] children/*[1] (engine:modality=speech);  [n] . (grammar:feminine,engine:style=end)',
+      'self::root'
+  );
+  defineRule(
       'abstr-root', 'mathspeak.brief',
-      '[t] "root"',
-      'self::root', '@alternative'
+      '[t] "racine"; [n] . (grammar:feminine,engine:style=end)',
+      'self::root'
   );
   defineSpecialisedRule(
       'abstr-root', 'mathspeak.brief', 'mathspeak.sbrief'
   );
-  defineRule(
-      'abstr-root-nested', 'mathspeak.default',
-      '[t] "nested root of index"; [n] children/*[1]',
-      'self::root', '@alternative',
-      'children/*/descendant-or-self::sqrt or' +
-      ' children/*/descendant-or-self::root'
-  );
   // Content following the root expression.
   defineRule(
-      'abstr-root-nested', 'mathspeak.default',
-      '[t] "nested root of index"; [n] children/*[1]; [t] "endindex"',
-      'self::root', '@alternative',
+      'abstr-root-nested', 'default.default',
+      '[t] "racine imbriquée d\'indice"; [n] children/*[1] (engine:modality=speech);' +
+      ' [t] "fin indice"; [n] . (grammar:feminine,engine:style=end);',
+      'self::root', 'contains(@grammar, "collapsed")',
       'children/*/descendant-or-self::sqrt or' +
       ' children/*/descendant-or-self::root',
       'following-sibling::* or ancestor::*/following-sibling::*'
   );
   defineRule(
+      'abstr-root-nested', 'default.default',
+      '[t] "racine imbriquée d\'indice"; ' +
+      '[n] children/*[1] (engine:modality=speech);  [n] . (grammar:feminine,engine:style=end)',
+      'self::root', 'children/*/descendant-or-self::sqrt or' +
+      ' children/*/descendant-or-self::root'
+  );
+  defineRule(
       'abstr-root-nested', 'mathspeak.brief',
-      '[t] "nested root"',
-      'self::root', '@alternative',
-      'children/*/descendant-or-self::sqrt or ' +
+      '[t] "racine imbriquée"; [n] . (grammar:feminine,engine:style=end)',
+      'self::root', 'children/*/descendant-or-self::sqrt or ' +
       'children/*/descendant-or-self::root'
   );
   defineSpecialisedRule(
       'abstr-root-nested', 'mathspeak.brief', 'mathspeak.sbrief'
   );
 
-
   // Superscript
   defineRule(
-      'abstr-superscript', 'mathspeak.default',
-      '[t] "power"',
-      'self::superscript', '@alternative',
-      'self::*', 'self::*', 'self::*', 'self::*'
+      'abstr-superscript', 'default.default',
+      '[t] "puissance"; [n] . (grammar:feminine,engine:style=end)',
+      'self::superscript'
   );
-  defineSpecialisedRule(
-      'abstr-superscript', 'mathspeak.default', 'mathspeak.brief'
-  );
-  defineSpecialisedRule(
-      'abstr-superscript', 'mathspeak.brief', 'mathspeak.sbrief'
-  );
-
 
   // Subscript
   defineRule(
-      'abstr-subscript', 'mathspeak.default',
-      '[t] "subscript"',
-      'self::subscript', '@alternative',
-      'self::*', 'self::*', 'self::*'
+      'abstr-subscript', 'default.default',
+      '[t] "indice"; [n] . (grammar:masculine,engine:style=end)',
+      'self::subscript'
   );
-  defineSpecialisedRule(
-      'abstr-subscript', 'mathspeak.default', 'mathspeak.brief'
-  );
-  defineSpecialisedRule(
-      'abstr-subscript', 'mathspeak.brief', 'mathspeak.sbrief'
-  );
-
 
   // Subsuperscript
   defineRule(
-      'abstr-subsup', 'mathspeak.default',
-      '[t] "power with subscript"',
-      'self::superscript', '@alternative',
-      'name(children/*[1])="subscript"',
-      'self::*', 'self::*', 'self::*'
+      'abstr-subsup', 'default.default',
+      '[t] "puissance avec index"; [n] . (grammar:feminine,engine:style=end)',
+      'self::superscript',
+      'name(children/*[1])="subscript"'
   );
-  defineSpecialisedRule(
-      'abstr-subsup', 'mathspeak.default', 'mathspeak.brief'
-  );
-  defineSpecialisedRule(
-      'abstr-subsup', 'mathspeak.brief', 'mathspeak.sbrief'
-  );
-
 
   // Infixop
   defineRule(
-      'abstr-infixop', 'mathspeak.default',
-      '[t] @role (grammar:localRole); [t] "with"; [t] count(./children/*);' +
-      ' [t] "elements"',
-      'self::infixop', '@alternative'
+      'abstr-infixop', 'default.default',
+      '[t] @role (grammar:localRole); [t] "avec"; [t] count(./children/*);' +
+      ' [t] "éléments"; [n] . (grammar:masculine,engine:style=end)',
+      'self::infixop'
   );
   defineRule(
-      'abstr-infixop', 'mathspeak.default',
-      '[t] @role (grammar:localRole); [t] "with variable number of elements"',
-      'self::infixop', '@alternative', 'count(./children/*)>2',
+      'abstr-infixop', 'default.default',
+      '[t] @role (grammar:localRole); [t] "avec un nombre d\'éléments' +
+      ' variable"; [n] . (grammar:masculine,engine:style=end)',
+      'self::infixop', 'count(./children/*)>2',
       './children/punctuation[@role="ellipsis"]'
   );
   defineRule(
       'abstr-infixop', 'mathspeak.brief',
-      '[t] @role (grammar:localRole)',
-      'self::infixop', '@alternative'
+      '[t] @role (grammar:localRole); [n] . (grammar:masculine,engine:style=end)',
+      'self::infixop'
   );
   defineSpecialisedRule(
       'abstr-infixop', 'mathspeak.brief', 'mathspeak.sbrief'
   );
 
   defineRule(
-      'abstr-addition', 'mathspeak.default',
-      '[t] "sum with"; [t] count(./children/*); [t] "summands"',
-      'self::infixop', '@alternative', '@role="addition"'
+      'abstr-addition', 'default.default',
+      '[t] "somme avec"; [t] count(./children/*); ' +
+      '[t] "opérandes"; [n] . (grammar:feminine,engine:style=end)',
+      'self::infixop', '@role="addition"'
   );
   defineRule(
       'abstr-addition', 'mathspeak.brief',
-      '[t] "sum"',
-      'self::infixop', '@alternative', '@role="addition"'
+      '[t] "somme"; [n] . (grammar:feminine,engine:style=end)',
+      'self::infixop', '@role="addition"'
   );
   defineSpecialisedRule(
       'abstr-addition', 'mathspeak.brief', 'mathspeak.sbrief'
   );
   defineRule(
-      'abstr-var-addition', 'mathspeak.default',
-      '[t] "sum with variable number of summands"',
-      'self::infixop', '@alternative', '@role="addition"',
+      'abstr-var-addition', 'default.default',
+      '[t] "somme avec un nombre variable d\'opérandes"; [n] . (grammar:feminine,engine:style=end)',
+      'self::infixop', '@role="addition"',
       'count(./children/*)>2', './children/punctuation[@role="ellipsis"]'
   );
 
   defineRule(
-      'abstr-multiplication', 'mathspeak.default',
-      '[t] "product with"; [t] count(./children/*); [t] "factors"',
-      'self::infixop', '@alternative', '@role="multiplication"'
+      'abstr-multiplication', 'default.default',
+      '[t] "produit avec"; [t] count(./children/*);' +
+      ' [t] "facteurs"; [n] . (grammar:masculine,engine:style=end);',
+      'self::infixop', '@role="multiplication"'
   );
   defineRule(
       'abstr-multiplication', 'mathspeak.brief',
-      '[t] "product"',
-      'self::infixop', '@alternative', '@role="multiplication"'
+      '[t] "produit"; [n] . (grammar:masculine,engine:style=end)',
+      'self::infixop', '@role="multiplication"'
   );
   defineSpecialisedRule(
       'abstr-multiplication', 'mathspeak.brief', 'mathspeak.sbrief'
   );
   defineRuleAlias(
       'abstr-multiplication',
-      'self::infixop', '@alternative', '@role="implicit"'
+      'self::infixop', '@role="implicit"'
   );
   defineRule(
-      'abstr-var-multiplication', 'mathspeak.default',
-      '[t] "product with variable number of factors"',
-      'self::infixop', '@alternative', '@role="multiplication"',
+      'abstr-var-multiplication', 'default.default',
+      '[t] "produit avec un nombre de facteurs variable"; [n] . (grammar:masculine,engine:style=end)',
+      'self::infixop', '@role="multiplication"',
       'count(./children/*)>2', './children/punctuation[@role="ellipsis"]'
   );
   defineRuleAlias(
       'abstr-var-multiplication',
-      'self::infixop', '@alternative', '@role="implicit"',
+      'self::infixop', '@role="implicit"',
       'count(./children/*)>2', './children/punctuation[@role="ellipsis"]'
   );
 
 
   // Vector
   defineRule(
-      'abstr-vector', 'mathspeak.default',
-      '[t] "vecteur de dimension"; [t] count(./children/*)',
-      'self::vector', '@alternative'
+      'abstr-vector', 'default.default',
+      '[t] "vecteur de dimension"; [t] count(./children/*);' +
+      ' [n] . (grammar:masculine,engine:style=end)',
+      'self::vector'
   );
   defineRule(
       'abstr-vector', 'mathspeak.brief',
-      '[t] "vector"',
-      'self::vector', '@alternative'
+      '[t] "vecteur"; [n] . (grammar:masculine,engine:style=end)',
+      'self::vector'
   );
   defineSpecialisedRule(
       'abstr-vector', 'mathspeak.brief', 'mathspeak.sbrief'
   );
   defineRule(
-      'abstr-var-vector', 'mathspeak.default',
-      '[t] "n dimensional vector"',
-      'self::vector', '@alternative',
+      'abstr-var-vector', 'default.default',
+      '[t] "vecteur colonne de dimension n"; [n] . (grammar:masculine,engine:style=end)',
+      'self::vector',
       './children/*/children/punctuation[@role="ellipsis"]'
   );
 
   defineRule(
-      'abstr-binomial', 'mathspeak.default',
-      '[t] "binomial"',
-      'self::vector', '@alternative', '@role="binomial"'
+      'abstr-binomial', 'default.default',
+      '[t] "binomial"; [n] . (grammar:masculine,engine:style=end)',
+      'self::vector', '@role="binomial"'
   );
+  // These two are needed to avoid the vector rule firing.
   defineSpecialisedRule(
-      'abstr-binomial', 'mathspeak.default', 'mathspeak.brief');
+      'abstr-binomial', 'default.default', 'mathspeak.brief');
   defineSpecialisedRule(
-      'abstr-binomial', 'mathspeak.default', 'mathspeak.sbrief');
+      'abstr-binomial', 'default.default', 'mathspeak.sbrief');
 
 
   // Matrix
   defineRule(
-      'abstr-determinant', 'mathspeak.default',
-      '[t] count(./children/*);' +
-      ' [t] "dimensional determinant"',
-      'self::matrix', '@alternative', '@role="determinant"', 'self::*'
+      'abstr-determinant', 'default.default',
+      '[t] "déterminant de dimension"; [t] count(./children/*);' +
+      ' [n] . (grammar:masculine,engine:style=end)',
+      'self::matrix', '@role="determinant"'
   );
   defineRule(
       'abstr-determinant', 'mathspeak.brief',
-      '[t] "determinant"',
-      'self::matrix', '@alternative', '@role="determinant"', 'self::*'
+      '[t] "déterminant"; [n] . (grammar:masculine,engine:style=end)',
+      'self::matrix', '@role="determinant"'
   );
   defineSpecialisedRule(
       'abstr-determinant', 'mathspeak.brief', 'mathspeak.sbrief'
   );
   defineRule(
-      'abstr-var-determinant', 'mathspeak.default',
-      '[t] "n dimensional determinant"',
-      'self::matrix', '@alternative', '@role="determinant"',
+      'abstr-var-determinant', 'default.default',
+      '[t] "déterminant de dimension n"; [n] . (grammar:masculine,engine:style=end)',
+      'self::matrix', '@role="determinant"',
       './children/*/children/*/children/punctuation[@role="ellipsis"]'
   );
 
   defineRule(
-      'abstr-squarematrix', 'mathspeak.default',
-      '[t] count(./children/*);' +
-      ' [t] "dimensional square matrix"',
-      'self::matrix', '@alternative', '@role="squarematrix"'
+      'abstr-squarematrix', 'default.default',
+      '[t] "matrice carrée de dimension"; [t] count(./children/*); ' +
+      '[n] . (grammar:feminine,engine:style=end)',
+      'self::matrix', '@role="squarematrix"'
   );
   defineRule(
       'abstr-squarematrix', 'mathspeak.brief',
-      '[t] "square matrix"',
-      'self::matrix', '@alternative', '@role="squarematrix"'
+      '[t] "matrice carrée"; [n] . (grammar:feminine,engine:style=end)',
+      'self::matrix', '@role="squarematrix"'
   );
   defineSpecialisedRule(
       'abstr-squarematrix', 'mathspeak.brief', 'mathspeak.sbrief'
   );
 
   defineRule(
-      'abstr-rowvector', 'mathspeak.default',
-      '[t] count(./children/row/children/*); ' +
-      '[t] "dimensional row vector"',
-      'self::matrix', '@alternative', '@role="rowvector"'
+      'abstr-rowvector', 'default.default',
+      '[t] "vecteur ligne de dimension"; [t] count(./children/row/children/*); ' +
+      '[n] . (grammar:masculine,engine:style=end)',
+      'self::matrix', '@role="rowvector"'
   );
   defineRule(
       'abstr-rowvector', 'mathspeak.brief',
-      '[t] "row vector"',
-      'self::matrix', '@alternative', '@role="rowvector"'
+      '[t] "vecteur ligne"; [n] . (grammar:masculine,engine:style=end)',
+      'self::matrix', '@role="rowvector"'
   );
   defineSpecialisedRule(
       'abstr-rowvector', 'mathspeak.brief', 'mathspeak.sbrief'
   );
   defineRule(
-      'abstr-var-matrix', 'mathspeak.default',
-      '[t] "n dimensional row vector"',
-      'self::matrix', '@alternative', '@role="rowvector"',
+      'abstr-var-matrix', 'default.default',
+      '[t] "vecteur ligne de dimension n"',
+      'self::matrix', '@role="rowvector"',
       './children/*/children/*/children/punctuation[@role="ellipsis"]'
   );
 
   defineRule(
-      'abstr-matrix', 'mathspeak.default',
-      '[t] count(children/*);  [t] "by";' +
-      '[t] count(children/*[1]/children/*); [t] "matrix"',
-      'self::matrix', '@alternative'
+      'abstr-matrix', 'default.default',
+      '[t] "matrice"; [t] count(children/*);  [t] "par";' +
+      '[t] count(children/*[1]/children/*); [n] . (grammar:feminine,engine:style=end)',
+      'self::matrix'
   );
   defineRule(
       'abstr-matrix', 'mathspeak.brief',
-      '[t] "matrix"',
-      'self::matrix', '@alternative'
+      '[t] "matrice"; [n] . (grammar:feminine,engine:style=end)',
+      'self::matrix'
   );
   defineSpecialisedRule(
       'abstr-matrix', 'mathspeak.brief', 'mathspeak.sbrief'
   );
   defineRule(
-      'abstr-var-matrix', 'mathspeak.default',
-      '[t] "n by m dimensional matrix"',
-      'self::matrix', '@alternative',
+      'abstr-var-matrix', 'default.default',
+      '[t] "matrice de dimension n par m"; [n] . (grammar:feminine,engine:style=end)',
+      'self::matrix',
       './children/*/children/*/children/punctuation[@role="ellipsis"]'
   );
 
 
   // Cases
   defineRule(
-      'abstr-cases', 'mathspeak.default',
-      '[t] "case statement";' +
-      '[t] "with"; [t] count(children/*); [t] "cases"',
-      'self::cases', '@alternative'
+      'abstr-cases', 'default.default',
+      '[t] "déclaration de cas";' +
+      '[t] "avec"; [t] count(children/*); [t] "cas"; [n] . (grammar:feminine,engine:style=end)',
+      'self::cases'
   );
   defineRule(
       'abstr-cases', 'mathspeak.brief',
-      '[t] "case statement"',
-      'self::cases', '@alternative'
+      '[t] "déclaration de cas"; [n] . (grammar:feminine,engine:style=end)',
+      'self::cases'
   );
   defineSpecialisedRule(
       'abstr-cases', 'mathspeak.brief', 'mathspeak.sbrief'
   );
   defineRule(
-      'abstr-var-cases', 'mathspeak.default',
-      '[t] "case statement with variable number of cases"',
-      'self::cases', '@alternative',
+      'abstr-var-cases', 'default.default',
+      '[t] "déclaration de cas variable"; [n] . (grammar:feminine,engine:style=end)',
+      'self::cases',
       './children/row/children/cell/children/punctuation[@role="ellipsis"]' +
       'or ./children/line/children/punctuation[@role="ellipsis"]'
   );
@@ -550,148 +508,130 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
 
   // Punctuated
   defineRule(
-      'abstr-punctuated', 'mathspeak.default',
-      '[n] content/*[1]; [t] "separated list";' +
-      '[t] "of length"; [t] count(children/*) - count(content/*)',
-      'self::punctuated', '@alternative'
+      'abstr-punctuated', 'default.default',
+      '[t] "liste de longueur"; [t] count(children/*) - count(content/*);' +
+      ' [t] "séparée par des"; [n] content/*[1] (join:""); [t] "s";' +
+      ' [n] . (grammar:feminine,engine:style=end)',
+      'self::punctuated'
   );
   defineRule(
       'abstr-punctuated', 'mathspeak.brief',
-      '[n] content/*[1]; [t] "separated list"',
-      'self::punctuated', '@alternative'
+      '[t] "liste séparée par des"; [n] content/*[1] (join:""); [t] "s";' +
+      ' [n] . (grammar:feminine,engine:style=end)',
+      'self::punctuated'
   );
   defineSpecialisedRule(
       'abstr-punctuated', 'mathspeak.brief', 'mathspeak.sbrief'
   );
   defineRule(
-      'abstr-var-punctuated', 'mathspeak.default',
-      '[n] content/*[1]; [t] "separated list";' +
-      '[t] "of variable length"',
-      'self::punctuated', '@alternative',
+      'abstr-var-punctuated', 'default.default',
+      '[t] "liste de longueur variable séparée par des"; ' +
+      '[n] content/*[1] (join:""); [t] "s"; [n] . (grammar:feminine,engine:style=end)',
+      'self::punctuated',
       './children/punctuation[@role="ellipsis"]'
   );
 
 
   defineRule(
-      'abstr-bigop', 'mathspeak.default',
-      '[n] content/*[1]',
-      'self::bigop', '@alternative', 'self::*'
+      'abstr-bigop', 'default.default',
+      '[n] content/*[1]; [n] . (grammar:masculine,engine:style=end)',
+      'self::bigop'
   );
 
   defineRule(
-      'abstr-integral', 'mathspeak.default',
-      '[t] "integral"',
-      'self::*', '@alternative', '@role="integral"'
+      'abstr-integral', 'default.default',
+      '[t] "intégrale"; [n] . (grammar:feminine,engine:style=end)',
+      '@role="integral"'
   );
 
   defineRule(
-      'abstr-relation', 'mathspeak.default',
-      '[t] @role (grammar:localRole);',
-      'self::relseq', '@alternative', 'count(./children/*)=2'
-  );
-  defineSpecialisedRule(
-      'abstr-relation', 'mathspeak.default', 'mathspeak.brief'
-  );
-  defineSpecialisedRule(
-      'abstr-relation', 'mathspeak.brief', 'mathspeak.sbrief'
+      'abstr-relation', 'default.default',
+      '[t] @role (grammar:localRole); [n] . (grammar:masculine,engine:style=end);',
+      'self::relseq', 'count(./children/*)=2'
   );
 
   defineRule(
-      'abstr-relation', 'mathspeak.default',
-      '[t] @role (grammar:localRole); [t] "sequence";' +
-      ' [t] "with"; [t] count(./children/*); [t] "elements"',
-      'self::relseq', '@alternative', 'count(./children/*)>2'
+      'abstr-relation-seq', 'default.default',
+      '[t] @role (grammar:localRole); [t] "séquence";' +
+      ' [t] "avec"; [t] count(./children/*); [t] "éléments";' +
+      ' [n] . (grammar:feminine,engine:style=end)',
+      'self::relseq', 'count(./children/*)>2'
   );
   defineRule(
-      'abstr-relation', 'mathspeak.brief',
-      '[t] @role (grammar:localRole); [t] "sequence"',
-      'self::relseq', '@alternative', 'count(./children/*)>2'
+      'abstr-relation-seq', 'mathspeak.brief',
+      '[t] @role (grammar:localRole); [t] "séquence";'
+      + ' [n] . (grammar:feminine,engine:style=end)',
+      'self::relseq', 'count(./children/*)>2'
   );
   defineSpecialisedRule(
-      'abstr-relation', 'mathspeak.brief', 'mathspeak.sbrief'
+      'abstr-relation-seq', 'mathspeak.brief', 'mathspeak.sbrief'
   );
   defineRule(
-      'abstr-var-relation', 'mathspeak.default',
-      '[t] @role (grammar:localRole); [t] "sequence";' +
-      ' [t] "with variable number of elements"',
-      'self::relseq', '@alternative', 'count(./children/*)>2',
+      'abstr-var-relation', 'default.default',
+      '[t] @role (grammar:localRole); [t] "séquence";' +
+      ' [t] "avec un nombre de éléments variable";' +
+      ' [n] . (grammar:feminine,engine:style=end)',
+      'self::relseq', 'count(./children/*)>2',
       './children/punctuation[@role="ellipsis"]'
   );
 
   defineUniqueRuleAlias(
-      'abstr-relation', 'mathspeak.default',
-      'self::multirel', '@alternative',
+      'abstr-relation', 'default.default',
+      'self::multirel',
       '@role!="unknown"', 'count(./children/*)>2'
-  );
-  defineUniqueRuleAlias(
-      'abstr-relation', 'mathspeak.brief', 'self::multirel', '@alternative',
-      '@role!="unknown"', 'count(./children/*)>2'
-  );
-  defineSpecialisedRule(
-      'abstr-relation', 'mathspeak.brief', 'mathspeak.sbrief'
   );
   defineRuleAlias(
       'abstr-var-relation',
-      'self::multirel', '@alternative', '@role!="unknown"',
+      'self::multirel', '@role!="unknown"',
       'count(./children/*)>2', './children/punctuation[@role="ellipsis"]'
   );
 
   defineRule(
-      'abstr-multirel', 'mathspeak.default',
-      '[t] "relation sequence";' +
-      ' [t] "with"; [t] count(./children/*); [t] "elements"',
-      'self::multirel', '@alternative', 'count(./children/*)>2'
+      'abstr-multirel', 'default.default',
+      '[t] "séquence de relation";' +
+      ' [t] "avec"; [t] count(./children/*); [t] "éléments"; [n] . (grammar:feminine,engine:style=end)',
+      'self::multirel', 'count(./children/*)>2'
   );
   defineRule(
       'abstr-multirel', 'mathspeak.brief',
-      '[t] "relation sequence"',
-      'self::multirel', '@alternative', 'count(./children/*)>2'
+      '[t] "séquence de relation"; [n] . (grammar:feminine,engine:style=end)',
+      'self::multirel', 'count(./children/*)>2'
   );
   defineSpecialisedRule(
       'abstr-multirel', 'mathspeak.brief', 'mathspeak.sbrief'
   );
   defineRule(
-      'abstr-var-multirel', 'mathspeak.default',
-      '[t] "relation sequence with variable number of elements"',
-      'self::multirel', '@alternative', 'count(./children/*)>2',
+      'abstr-var-multirel', 'default.default',
+      '[t] "séquence de relation avec un nombre de éléments variable"; [n] . (grammar:feminine,engine:style=end)',
+      'self::multirel', 'count(./children/*)>2',
       './children/punctuation[@role="ellipsis"]'
   );
 
   defineRule(
-      'abstr-table', 'mathspeak.default',
-      '[t] "table with"; ' +
-      '[t] count(children/*); [t] "rows and";' +
-      '[t] count(children/*[1]/children/*); [t] "columns"',
-      'self::table', '@alternative'
-  );
-  defineSpecialisedRule(
-      'abstr-table', 'mathspeak.default', 'mathspeak.brief'
-  );
-  defineSpecialisedRule(
-      'abstr-table', 'mathspeak.brief', 'mathspeak.sbrief'
+      'abstr-table', 'default.default',
+      '[t] "table avec"; ' +
+      '[t] count(children/*); [t] "lignes et";' +
+      '[t] count(children/*[1]/children/*); ' +
+      '[t] "colonnes"; [n] . (grammar:feminine,engine:style=end);',
+      'self::table'
   );
   defineRule(
-      'abstr-line', 'mathspeak.default',
-      '[t] "in"; [t] @role (grammar:localRole);',
-      'self::line', '@alternative'
+      'abstr-line', 'default.default',
+      '[t] "dans"; [t] @role (grammar:localRole);' +
+      ' [n] . (grammar:masculine,engine:style=end)',
+      'self::line'
   );
   defineRule(
-      'abstr-row', 'mathspeak.default',
-      '[t] "in"; [t] @role (grammar:localRole);' +
-      '[t] count(preceding-sibling::..); [t] "with";' +
-      '[t] count(children/*); [t] "columns"',
-      'self::row', '@alternative', '*'
-  );
-  defineSpecialisedRule(
-      'abstr-row', 'mathspeak.default', 'mathspeak.brief'
-  );
-  defineSpecialisedRule(
-      'abstr-row', 'mathspeak.default', 'mathspeak.sbrief'
+      'abstr-row', 'default.default',
+      '[t] "dans"; [t] @role (grammar:localRole);' +
+      '[t] count(preceding-sibling::..); [t] "avec";' +
+      '[t] count(children/*); [t] "colonnes"; [n] . (grammar:feminine,engine:style=end)',
+      'self::row'
   );
   defineRule(
-      'abstr-cell', 'mathspeak.default',
-      '[t] "in"; [t] @role (grammar:localRole);',
-      'self::cell', '@alternative'
+      'abstr-cell', 'default.default',
+      '[t] "dans"; [t] @role (grammar:localRole); [n] . (grammar:feminine,engine:style=end);',
+      'self::cell'
   );
 
 };

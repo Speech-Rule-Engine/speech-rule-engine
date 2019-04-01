@@ -37,7 +37,6 @@ sre.ClearspeakFrenchRuleTest = function() {
    */
   this.locale = 'fr';
 
-  this.actual = true;
   this.setActive('ClearspeakFrench');
   this.startExamples();
 };

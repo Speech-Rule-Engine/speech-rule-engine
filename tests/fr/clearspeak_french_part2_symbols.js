@@ -55,7 +55,7 @@ goog.inherits(sre.ClearspeakFrenchPart2Symbols, sre.ClearspeakFrenchRuleTest);
 sre.ClearspeakFrenchPart2Symbols.prototype.testX001 = function() {
   var preference = 'MultsymbolX_Auto';
   var mathml = '<math><mrow><mn>6</mn><mo>×</mo><mn>8</mn></mrow></math>';
-  var speech = '';
+  var speech = '6 multiplié par 8';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -66,7 +66,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testX001 = function() {
 sre.ClearspeakFrenchPart2Symbols.prototype.testX002 = function() {
   var preference = 'MultsymbolX_Auto';
   var mathml = '<math><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></math>';
-  var speech = '';
+  var speech = 'm multiplié par n';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -77,7 +77,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testX002 = function() {
 sre.ClearspeakFrenchPart2Symbols.prototype.testX003 = function() {
   var preference = 'MultsymbolX_Auto';
   var mathml = '<math><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></math>';
-  var speech = '';
+  var speech = '3 multiplié par 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -88,7 +88,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testX003 = function() {
 sre.ClearspeakFrenchPart2Symbols.prototype.testX004 = function() {
   var preference = 'MultsymbolX_By';
   var mathml = '<math><mrow><mn>6</mn><mo>×</mo><mn>8</mn></mrow></math>';
-  var speech = '';
+  var speech = '6 multiplié par 8';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -99,7 +99,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testX004 = function() {
 sre.ClearspeakFrenchPart2Symbols.prototype.testX005 = function() {
   var preference = 'MultsymbolX_By';
   var mathml = '<math><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></math>';
-  var speech = '';
+  var speech = 'm multiplié par n';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -110,7 +110,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testX005 = function() {
 sre.ClearspeakFrenchPart2Symbols.prototype.testX006 = function() {
   var preference = 'MultsymbolX_By';
   var mathml = '<math><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></math>';
-  var speech = '';
+  var speech = '3 multiplié par 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -123,7 +123,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testX007 = function() {
   var mathml = '<math><mrow><mstyle mathvariant="bold" mathsize="normal">' +
       '<mi>u</mi></mstyle><mo>×</mo><mstyle mathvariant="bold"' +
       ' mathsize="normal"><mi>v</mi></mstyle></mrow></math>';
-  var speech = '';
+  var speech = 'u multiplié par v';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -139,7 +139,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testX007 = function() {
 sre.ClearspeakFrenchPart2Symbols.prototype.testDot001 = function() {
   var preference = 'MultsymbolDot_Auto';
   var mathml = '<math><mrow><mn>6</mn><mo>⋅</mo><mn>8</mn></mrow></math>';
-  var speech = '';
+  var speech = '6 opérateur point 8';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -150,7 +150,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testDot001 = function() {
 sre.ClearspeakFrenchPart2Symbols.prototype.testDot002 = function() {
   var preference = 'MultsymbolDot_Auto';
   var mathml = '<math><mrow><mi>m</mi><mo>⋅</mo><mi>n</mi></mrow></math>';
-  var speech = '';
+  var speech = 'm opérateur point n';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -161,7 +161,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testDot002 = function() {
 sre.ClearspeakFrenchPart2Symbols.prototype.testDot003 = function() {
   var preference = 'MultsymbolDot_Auto';
   var mathml = '<math><mrow><mn>3</mn><mo>⋅</mo><mn>3</mn></mrow></math>';
-  var speech = '';
+  var speech = '3 opérateur point 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -172,7 +172,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testDot003 = function() {
 sre.ClearspeakFrenchPart2Symbols.prototype.testDot004 = function() {
   var preference = 'MultsymbolDot_Dot';
   var mathml = '<math><mrow><mn>6</mn><mo>⋅</mo><mn>8</mn></mrow></math>';
-  var speech = '';
+  var speech = '6 opérateur point 8';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -183,7 +183,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testDot004 = function() {
 sre.ClearspeakFrenchPart2Symbols.prototype.testDot005 = function() {
   var preference = 'MultsymbolDot_Dot';
   var mathml = '<math><mrow><mi>m</mi><mo>⋅</mo><mi>n</mi></mrow></math>';
-  var speech = '';
+  var speech = 'm opérateur point n';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -194,7 +194,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testDot005 = function() {
 sre.ClearspeakFrenchPart2Symbols.prototype.testDot006 = function() {
   var preference = 'MultsymbolDot_Dot';
   var mathml = '<math><mrow><mn>3</mn><mo>⋅</mo><mn>3</mn></mrow></math>';
-  var speech = '';
+  var speech = '3 opérateur point 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -211,7 +211,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testTriangle001 = function() {
   var preference = 'TriangleSymbol_Auto';
   var mathml = '<math><mrow><mi>Δ</mi><mi>A</mi><mi>B</mi><mi>C</mi></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = 'Delta A B C';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -223,7 +223,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testTriangle002 = function() {
   var preference = 'TriangleSymbol_Auto';
   var mathml = '<math><mrow><mi>Δ</mi><mi>D</mi><mi>E</mi><mi>F</mi></mrow>' +
       '</math>';
-  var speech = '';
+  var speech = 'Delta D E F';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -234,7 +234,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testTriangle002 = function() {
 sre.ClearspeakFrenchPart2Symbols.prototype.testTriangle003 = function() {
   var preference = 'TriangleSymbol_Delta';
   var mathml = '<math><mrow><mi>Δ</mi><mi>x</mi></mrow></math>';
-  var speech = '';
+  var speech = 'Delta x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -246,7 +246,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testTriangle004 = function() {
   var preference = 'TriangleSymbol_Delta';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+' +
       '</mo><mi>Δ</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'f de, parenthèse gauche, x plus Delta x, parenthèse droite';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -264,7 +264,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testEllipses001 = function() {
   var mathml = '<math><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn>' +
       '<mo>,</mo><mtext></mtext><mn>3</mn><mo>,</mo><mtext></mtext><mo>…' +
       '</mo></mrow></math>';
-  var speech = '';
+  var speech = '1 virgule 2 virgule 3 virgule points de suspension';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -277,7 +277,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testEllipses002 = function() {
   var mathml = '<math><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn>' +
       '<mo>,</mo><mtext></mtext><mn>3</mn><mo>,</mo><mtext></mtext><mo>…' +
       '</mo><mtext></mtext><mo>,</mo><mn>20</mn></mrow></math>';
-  var speech = '';
+  var speech = '1 virgule 2 virgule 3 virgule points de suspension virgule 20';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -292,7 +292,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testEllipses003 = function() {
       '<mtext></mtext><mn>0</mn><mo>,</mo><mtext></mtext><mn>1</mn><mo>,' +
       '</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mo>…</mo>' +
       '</mrow></math>';
-  var speech = '';
+  var speech = 'points de suspension virgule, négatif 2, virgule, négatif 1, virgule 0 virgule 1 virgule 2 virgule points de suspension';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -305,7 +305,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testEllipses004 = function() {
   var mathml = '<math><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn>' +
       '<mo>,</mo><mtext></mtext><mn>3</mn><mo>,</mo><mtext></mtext><mo>…' +
       '</mo></mrow></math>';
-  var speech = '';
+  var speech = '1 virgule 2 virgule 3 virgule and so on';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -318,7 +318,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testEllipses005 = function() {
   var mathml = '<math><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn>' +
       '<mo>,</mo><mtext></mtext><mn>3</mn><mo>,</mo><mtext></mtext><mo>…' +
       '</mo><mtext></mtext><mo>,</mo><mn>20</mn></mrow></math>';
-  var speech = '';
+  var speech = '1 virgule 2 virgule 3 virgule and so on up to virgule 20';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -333,7 +333,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testEllipses006 = function() {
       '<mtext></mtext><mn>0</mn><mo>,</mo><mtext></mtext><mn>1</mn><mo>,' +
       '</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mo>…</mo>' +
       '</mrow></math>';
-  var speech = '';
+  var speech = 'points de suspension virgule, négatif 2, virgule, négatif 1, virgule 0 virgule 1 virgule 2 virgule points de suspension';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -349,7 +349,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testEllipses006 = function() {
 sre.ClearspeakFrenchPart2Symbols.prototype.testVertLine001 = function() {
   var preference = 'VerticalLine_Auto';
   var mathml = '<math><mrow><mn>3</mn><mo>|</mo><mn>6</mn></mrow></math>';
-  var speech = '';
+  var speech = '3 barre verticale 6';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -361,7 +361,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testVertLine002 = function() {
   var preference = 'VerticalLine_Auto';
   var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mi>x</mi><mo>|</mo><mi>x' +
       '</mi><mo>></mo><mn>0</mn></mrow><mo>}</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'the set of all x such that x supérieur à 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -374,7 +374,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testVertLine003 = function() {
   var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mi>x</mi><mo>|</mo>' +
       '<mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>></mo><mn>2</mn>' +
       '</mrow><mo>}</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'the set of all x such that, la valeur absolue de x, supérieur à 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -387,7 +387,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testVertLine004 = function() {
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '</mrow><msub><mo>|</mo><mrow><mi>x</mi><mo>=</mo><mn>5</mn></mrow>' +
       '</msub></mrow></math>';
-  var speech = '';
+  var speech = 'f de x, evaluated at x égale 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -400,7 +400,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testVertLine005 = function() {
   var mathml = '<math><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo>' +
       '<mn>2</mn><mi>x</mi><msub><mo>|</mo><mrow><mi>x</mi><mo>=</mo><mn>2' +
       '</mn></mrow></msub></mrow></math>';
-  var speech = '';
+  var speech = 'x au carré plus 2 x, evaluated at x égale 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -413,7 +413,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testVertLine006 = function() {
   var mathml = '<math><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo>' +
       '<mi>x</mi><msubsup><mstyle mathsize="140%" displaystyle="true"><mo>|' +
       '</mo></mstyle><mn>0</mn><mn>1</mn></msubsup></mrow></math>';
-  var speech = '';
+  var speech = 'x au carré plus x, evaluated at 1, minus the same expression evaluated at 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -425,7 +425,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testVertLine007 = function() {
   var preference = 'VerticalLine_SuchThat';
   var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mi>x</mi><mo>|</mo><mi>x' +
       '</mi><mo>></mo><mn>0</mn></mrow><mo>}</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'the set of all x such that x supérieur à 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -436,7 +436,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testVertLine007 = function() {
 sre.ClearspeakFrenchPart2Symbols.prototype.testVertLine008 = function() {
   var preference = 'VerticalLine_Divides';
   var mathml = '<math><mrow><mn>3</mn><mo>|</mo><mn>6</mn></mrow></math>';
-  var speech = '';
+  var speech = '3 divides 6';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -448,7 +448,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testVertLine009 = function() {
   var preference = 'VerticalLine_Given';
   var mathml = '<math><mrow><mi>P</mi><mtext></mtext><mrow><mo>(</mo><mrow>' +
       '<mi>A</mi><mo>|</mo><mi>B</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '';
+  var speech = 'P de, parenthèse gauche, A given B, parenthèse droite';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -466,7 +466,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym001 = function() {
   var mathml = '<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ' +
       '</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow>' +
       '<mtext> is an even  number.</mtext></math>';
-  var speech = '';
+  var speech = 'If x appartient à the integers then 2 x, is an even number point';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -478,7 +478,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym002 = function() {
   var preference = 'SetMemberSymbol_Auto';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|' +
       '</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
-  var speech = '';
+  var speech = 'the set of all x in the integers such that x supérieur à 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -490,7 +490,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym003 = function() {
   var preference = 'SetMemberSymbol_Auto';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉' +
       '</mo><mi>ℝ</mi></mrow></math>';
-  var speech = '';
+  var speech = '3 plus 2 i, n\'appartient pas à the real numbers';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -503,7 +503,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym004 = function() {
   var mathml = '<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ' +
       '</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow>' +
       '<mtext> is an even  number.</mtext></math>';
-  var speech = '';
+  var speech = 'If x appartient à the integers then 2 x, is an even number point';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -515,7 +515,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym005 = function() {
   var preference = 'SetMemberSymbol_Member';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|' +
       '</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
-  var speech = '';
+  var speech = 'the set of all x member of the integers such that x supérieur à 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -527,7 +527,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym006 = function() {
   var preference = 'SetMemberSymbol_Member';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉' +
       '</mo><mi>ℝ</mi></mrow></math>';
-  var speech = '';
+  var speech = '3 plus 2 i, n\'appartient pas à the real numbers';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -540,7 +540,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym007 = function() {
   var mathml = '<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ' +
       '</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow>' +
       '<mtext> is an even  number.</mtext></math>';
-  var speech = '';
+  var speech = 'If x appartient à the integers then 2 x, is an even number point';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -552,7 +552,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym008 = function() {
   var preference = 'SetMemberSymbol_Element';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|' +
       '</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
-  var speech = '';
+  var speech = 'the set of all x element of the integers such that x supérieur à 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -564,7 +564,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym009 = function() {
   var preference = 'SetMemberSymbol_Element';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉' +
       '</mo><mi>ℝ</mi></mrow></math>';
-  var speech = '';
+  var speech = '3 plus 2 i, n\'appartient pas à the real numbers';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -578,7 +578,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym010 = function() {
       '</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow>' +
       '<mtext> is an even  number.</mtext></math>';
   // var mathml = '<math><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>';
-  var speech = '';
+  var speech = 'If x appartient à the integers then 2 x, is an even number point';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -590,7 +590,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym011 = function() {
   var preference = 'SetMemberSymbol_Belongs';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|' +
       '</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
-  var speech = '';
+  var speech = 'the set of all x belonging to the integers such that x supérieur à 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -602,7 +602,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym012 = function() {
   var preference = 'SetMemberSymbol_Belongs';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉' +
       '</mo><mi>ℝ</mi></mrow></math>';
-  var speech = '';
+  var speech = '3 plus 2 i, n\'appartient pas à the real numbers';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -615,7 +615,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym013 = function() {
   var mathml = '<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ' +
       '</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow>' +
       '<mtext> is an even  number.</mtext></math>';
-  var speech = '';
+  var speech = 'If x appartient à the integers then 2 x, is an even number point';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -627,7 +627,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym014 = function() {
   var preference = 'SetMemberSymbol_Belongs';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|' +
       '</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
-  var speech = '';
+  var speech = 'the set of all x belonging to the integers such that x supérieur à 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -639,7 +639,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym015 = function() {
   var preference = 'SetMemberSymbol_Belongs';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉' +
       '</mo><mi>ℝ</mi></mrow></math>';
-  var speech = '';
+  var speech = '3 plus 2 i, n\'appartient pas à the real numbers';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -657,7 +657,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testSetMemb001 = function() {
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>:' +
       '</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}' +
       '</mo></mrow></math>';
-  var speech = '';
+  var speech = 'the set of x belonging to the integers such that 2 inférieur à x inférieur à 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -669,7 +669,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testSetMemb002 = function() {
   var preference = 'Sets_woAll:SetMemberSymbol_Member';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|' +
       '</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
-  var speech = '';
+  var speech = 'the set of x member of the integers such that x supérieur à 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -687,7 +687,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testSum001 = function() {
   var mathml = '<math><mrow><mstyle displaystyle="true"><munderover><mo>∑' +
       '</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn>' +
       '</mrow></munderover><mi>n</mi></mstyle></mrow></math>';
-  var speech = '';
+  var speech = 'le sommation de n égale 1 à 10 de n';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -700,7 +700,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testSum002 = function() {
   var mathml = '<math><mrow><mstyle displaystyle="true"><munderover><mo>∑' +
       '</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi>∞</mi>' +
       '</munderover><mi>n</mi></mstyle></mrow></math>';
-  var speech = '';
+  var speech = 'le sommation de n égale 1 à infini de n';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -713,7 +713,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testSum003 = function() {
   var mathml = '<math><mrow><mstyle displaystyle="true"><munder><mo>∑</mo>' +
       '<mrow><mi>i</mi><mo>∈</mo><msup><mi>ℤ</mi><mo>+</mo></msup></mrow>' +
       '</munder><mi>i</mi></mstyle></mrow></math>';
-  var speech = '';
+  var speech = 'le sommation sur i appartient à the positive integers, de i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -725,7 +725,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testSum004 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munder><mo>∑</mo>' +
       '<mi>S</mi></munder><mi>i</mi></mstyle></mrow></math>';
-  var speech = '';
+  var speech = 'le sommation sur S, de i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -737,7 +737,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testSum005 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><mo>∑</mo><mrow>' +
       '<msub><mi>a</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>';
-  var speech = '';
+  var speech = 'le sommation de, a sub i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -750,7 +750,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testSum006 = function() {
   var mathml = '<math><mrow><mstyle displaystyle="true"><munderover><mo>∏' +
       '</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn>' +
       '</mrow></munderover><mi>i</mi></mstyle></mrow></math>';
-  var speech = '';
+  var speech = 'le produit de i égale 1 à 10 de i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -764,7 +764,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testSum007 = function() {
       '<mrow><mi>i</mi><mo>∈</mo><msup><mi>ℤ</mi><mo>+</mo></msup></mrow>' +
       '</munder><mrow><mfrac><mi>i</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn>' +
       '</mrow></mfrac></mrow></mstyle></mrow></math>';
-  var speech = '';
+  var speech = 'le produit sur i appartient à the positive integers, de, fraction avec numérateur i, et dénominateur i plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -778,7 +778,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testSum008 = function() {
       '<mrow><msup><mi>ℤ</mi><mo>+</mo></msup></mrow></munder><mrow><mfrac>' +
       '<mi>i</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mrow>' +
       '</mstyle></mrow></math>';
-  var speech = '';
+  var speech = 'le produit sur the positive integers, de, fraction avec numérateur i, et dénominateur i plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -790,7 +790,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testSum009 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><mo>∏</mo><mrow>' +
       '<msub><mi>a</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>';
-  var speech = '';
+  var speech = 'le produit de, a sub i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -804,7 +804,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testSum010 = function() {
       '</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn>' +
       '</mrow></munderover><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow>' +
       '</mstyle></mrow></math>';
-  var speech = '';
+  var speech = 'le intersection de i égale 1 à 10 de, S sub i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -818,7 +818,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testSum011 = function() {
       '</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn>' +
       '</mrow></munderover><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow>' +
       '</mstyle></mrow></math>';
-  var speech = '';
+  var speech = 'le union de i égale 1 à 10 de, S sub i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -830,7 +830,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testSum012 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><mo>∩</mo><mrow>' +
       '<msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>';
-  var speech = '';
+  var speech = 'le intersection de, S sub i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -842,7 +842,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testSum013 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><mo>∪</mo><mrow>' +
       '<msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>';
-  var speech = '';
+  var speech = 'le union de, S sub i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -855,7 +855,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testSum014 = function() {
   var mathml = '<math><mrow><mstyle displaystyle="true"><munder><mo>∩</mo>' +
       '<mi>C</mi></munder><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow>' +
       '</mstyle></mrow></math>';
-  var speech = '';
+  var speech = 'le intersection sur C, de, S sub i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -868,7 +868,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testSum015 = function() {
   var mathml = '<math><mrow><mstyle displaystyle="true"><munder><mo>∪</mo>' +
       '<mi>C</mi></munder><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow>' +
       '</mstyle></mrow></math>';
-  var speech = '';
+  var speech = 'le union sur C, de, S sub i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -881,7 +881,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testSum016 = function() {
   var mathml = '<math><mrow><mstyle displaystyle="true"><mrow><mo>∫</mo>' +
       '<mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mtext>' +
       '</mtext></mrow></mrow></mstyle><mi>d</mi><mi>x</mi></mrow></math>';
-  var speech = '';
+  var speech = 'le intégrale de f de x, d x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -895,7 +895,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testSum017 = function() {
       '<mo>∫</mo><mn>0</mn><mn>1</mn></msubsup><mrow><mi>f</mi><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow></mstyle><mtext>' +
       '</mtext><mi>d</mi><mi>x</mi></mrow></math>';
-  var speech = '';
+  var speech = 'le intégrale de 0 à 1 de f de x, d x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -909,6 +909,6 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testSum018 = function() {
       '</mo><mi>ℝ</mi></munder><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi>' +
       '<mo>)</mo></mrow></mrow></mrow></mstyle><mtext></mtext><mi>d</mi>' +
       '<mi>x</mi></mrow></math>';
-  var speech = '';
+  var speech = 'le intégrale sur the real numbers, de f de x, d x';
   this.executeRuleTest(mathml, speech, preference);
 };

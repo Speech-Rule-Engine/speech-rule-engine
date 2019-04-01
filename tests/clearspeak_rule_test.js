@@ -66,4 +66,5 @@ sre.ClearspeakRuleTest.prototype.tearDownTest = function() {
       {markup: sre.Engine.Markup.NONE});
   sre.Engine.getInstance().parser =
       /** @type{!sre.DynamicCstr.Parser} */(this.oldParser);
+  sre.ClearspeakRuleTest.base(this, 'tearDownTest');
 };

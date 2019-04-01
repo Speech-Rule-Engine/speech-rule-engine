@@ -32,7 +32,7 @@ goog.require('sre.ClearspeakRuleTest');
 sre.ClearspeakEnglishRuleTest = function() {
   sre.ClearspeakEnglishRuleTest.base(this, 'constructor');
 
-  this.setActive('ClearspeakEnglishExamples');
+  this.setActive('ClearspeakEnglish');
   this.startExamples();
 };
 goog.inherits(sre.ClearspeakEnglishRuleTest, sre.ClearspeakRuleTest);

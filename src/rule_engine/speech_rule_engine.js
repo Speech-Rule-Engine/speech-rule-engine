@@ -236,8 +236,9 @@ sre.SpeechRuleEngine.prototype.evaluateNode_ = function(node) {
  * @private
  */
 sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
-  sre.Debugger.getInstance().output(node.toString());
   var engine = sre.Engine.getInstance();
+  sre.Debugger.getInstance().output(
+    engine.mode !== sre.Engine.Mode.HTTP ? node.toString() : node);
   if (engine.cache) {
     var result = this.getCacheForNode_(node);
     if (result) {
@@ -261,7 +262,8 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
   sre.Debugger.getInstance().generateOutput(
       goog.bind(function() {
         return ['Apply Rule:',
-                rule.name, rule.dynamicCstr.toString(), node.toString()];},
+                rule.name, rule.dynamicCstr.toString(),
+                engine.mode !== sre.Engine.Mode.HTTP ? node.toString() : node];},
       this));
   var context = rule.context || this.activeStore_.context;
   var components = rule.action.components;
@@ -275,10 +277,13 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
       this.processGrammar(context, node, component.grammar);
     }
     var saveEngine = null;
+    var oldCache = null;
     // Retooling the engine
     if (attributes.engine) {
       saveEngine = sre.Engine.getInstance().dynamicCstr.getComponents();
       var features = sre.Grammar.parseInput(attributes.engine);
+      oldCache = this.cache_;
+      this.clearCache();
       sre.Engine.getInstance().setDynamicCstr(features);
     }
     switch (component.type) {
@@ -330,6 +335,7 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
     result = result.concat(this.addPersonality_(descrs, attributes, multi,
                                                 node));
     if (saveEngine) {
+      this.cache_ = oldCache;
       sre.Engine.getInstance().setDynamicCstr(saveEngine);
     }
   }

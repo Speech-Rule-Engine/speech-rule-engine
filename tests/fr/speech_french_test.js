@@ -16,13 +16,13 @@
 goog.provide('sre.SpeechFrenchTest');
 
 goog.require('sre.ClearspeakFrenchTest');
-// goog.require('sre.CollapseFrenchTest');
+goog.require('sre.CollapseFrenchTest');
 goog.require('sre.MathspeakEmbellishFrenchTest');
 goog.require('sre.MathspeakFrenchTest');
 goog.require('sre.MmlcloudFrenchTest');
 goog.require('sre.NobleFrenchTest');
 goog.require('sre.PrefixFrenchTest');
-// goog.require('sre.SummaryFrenchTest');
+goog.require('sre.SummaryFrenchTest');
 
 
 /**
@@ -30,13 +30,13 @@ goog.require('sre.PrefixFrenchTest');
  * @type {Array}
  */
 sre.SpeechFrenchTest.testList = [
-  // sre.CollapseFrenchTest,
+  sre.CollapseFrenchTest,
   sre.MathspeakEmbellishFrenchTest,
   sre.MathspeakFrenchTest,
   sre.MmlcloudFrenchTest,
   sre.NobleFrenchTest,
   sre.PrefixFrenchTest,
-  // sre.SummaryFrenchTest
+  sre.SummaryFrenchTest
 ];
 sre.SpeechFrenchTest.testList =
   sre.SpeechFrenchTest.testList.concat(sre.ClearspeakFrenchTest.testList);

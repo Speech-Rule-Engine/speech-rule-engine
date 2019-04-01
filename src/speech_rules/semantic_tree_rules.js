@@ -380,7 +380,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
       'cases-cell', 'self::cell[@role="table"]');
 
   defineRule(
-      'empty-cell', 'mathspeak.default',
+      'empty-cell', 'default.default',
       '[t] "Blank"', 'self::cell', 'count(children/*)=0');
 
   // Rules for punctuated expressions.
