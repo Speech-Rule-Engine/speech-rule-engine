@@ -49,6 +49,11 @@ sre.AbstractRuleTest = function() {
   this.locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
 
   /**
+   * @type {string}
+   */
+  this.modality = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY];
+
+  /**
    * @type {boolean}
    */
   this.semantics = false;
@@ -95,12 +100,21 @@ sre.AbstractRuleTest.prototype.executeRuleTest = function(mml, answer,
   sre.SpeechRuleEngine.getInstance().clearCache();
   sre.System.getInstance().setupEngine(
       {semantics: this.semantics, domain: this.domain, style: style,
-        rules: this.rules, locale: this.locale});
-  var result = sre.System.getInstance().toSpeech(mathMl);
-  this.appendExample_(mathMl, this.actual ? result : answer, style);
-  if (!this.actual) {
-    this.assert.equal(result, answer);
-  }
+        modality: this.modality, rules: this.rules, locale: this.locale});
+  var result = this.getSpeech(mathMl);
+  var actual = this.actual ? result : answer;
+  this.appendRuleExample(mathMl, actual, style);
+  this.assert.equal(actual, result);
+};
+
+
+/**
+ * Retrieves the speech for a MathML element.
+ * @param {string} mathMl The element to transcribe.
+ * @return {string} The resulting speech.
+ */
+sre.AbstractRuleTest.prototype.getSpeech = function(mathMl) {
+  return sre.System.getInstance().toSpeech(mathMl);
 };
 
 
@@ -109,16 +123,17 @@ sre.AbstractRuleTest.prototype.executeRuleTest = function(mml, answer,
  * @param {string} input The input expression.
  * @param {string} output The expected output.
  * @param {string} style The speech style.
- * @private
+ * @param {Array.<string>=} opt_rest The rest that is to be appended.
  */
-sre.AbstractRuleTest.prototype.appendExample_ = function(input, output, style) {
+sre.AbstractRuleTest.prototype.appendRuleExample = function(
+  input, output, style, opt_rest) {
+  var rest = opt_rest || [];
   var key = '<h2>' + this.information + ' Locale: ' + this.locale +
       ', Style: ' +
       sre.AbstractRuleTest.htmlCell_(sre.AbstractRuleTest.styleMap_(style)) +
       '.</h2>';
-  this.appendExamples(key,
-                      sre.AbstractRuleTest.htmlCell_(input) +
-                      sre.AbstractRuleTest.htmlCell_(output));
+  this.appendExamples(
+    key, sre.AbstractRuleTest.htmlRow([input, output].concat(rest)));
 };
 
 
@@ -144,6 +159,16 @@ sre.AbstractRuleTest.styleMap_ = function(style) {
  */
 sre.AbstractRuleTest.htmlCell_ = function(entry) {
   return '<td>' + entry + '</td>';
+};
+
+
+/**
+ * Wraps an entry into an HTML cell.
+ * @param {Array.<number|string>} entries A list of entries.
+ * @return {string} The HTML cell.
+ */
+sre.AbstractRuleTest.htmlRow = function(entries) {
+  return entries.map(sre.AbstractRuleTest.htmlCell_).join('');
 };
 
 

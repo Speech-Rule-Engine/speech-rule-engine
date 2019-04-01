@@ -202,7 +202,11 @@ sre.MathspeakFrenchUtil.wordOrdinal = function(number) {
  * @return {string} The ordinal string.
  */
 sre.MathspeakFrenchUtil.simpleOrdinal = function(number) {
-  return number === 1 ? number.toString() + 're' : number.toString() + 'e';
+  var gender = /** @type{string} */(
+      sre.Grammar.getInstance().getParameter('gender'));
+  return number === 1 ?
+    number.toString() + (gender === 'male' ? 'er' : 're') :
+  number.toString() + 'e';
 };
 
 
@@ -356,5 +360,6 @@ sre.MathspeakFrenchUtil.leftSubscriptBrief = function(node) {
   var leftIndex = sre.MathspeakUtil.subscriptBrief(node);
   return leftIndex.replace(/^sub/, 'sub gauche');
 };
+
 
 });  // goog.scope

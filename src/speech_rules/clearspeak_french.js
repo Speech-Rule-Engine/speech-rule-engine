@@ -107,7 +107,6 @@ sre.ClearspeakFrench.addAnnotators_ = function() {
       sre.ClearspeakUtil.simpleExpression());
   sre.SemanticAnnotations.getInstance().register(
       sre.ClearspeakUtil.unitExpression());
-  // sre.Engine.getInstance().style = 'preferences';
 };
 
 
@@ -151,6 +150,12 @@ sre.ClearspeakFrench.initCustomFunctions_ = function() {
  * @private
 */
 sre.ClearspeakFrench.initClearspeakFrench_ = function() {
+  defineRule(
+      'collapsed', 'clearspeak.default',
+      '[t] "collapsed"; [n] . (engine:modality=summary,grammar:collapsed)',
+      'self::*', '@alternative', 'not(contains(@grammar, "collapsed"))',
+      'self::*', 'self::*', 'self::*', 'self::*', 'self::*'
+  );
 
   // Initial rule
   defineRule(
@@ -163,7 +168,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       'self::unknown');
 
   defineRule(
-      'protected', 'mathspeak.default', '[t] text()',
+      'protected', 'clearspeak.default', '[t] text()',
       'self::number', 'contains(@grammar, "protected")');
 
   defineRule(
@@ -203,13 +208,6 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   //
 
   // Capital letters
-  // defineRule(
-  //   'non-latin', 'clearspeak.default',
-  //   '[n] text() (pitch:0.6,grammar:ignoreFont="cap")',
-  //   'self::identifier',
-  //   '@role="latinletter" or @role="greekletter"',
-  //   'CQFisCapital');
-
   // TODO: Make that work on tensor elements?
   defineRule(
       'capital', 'clearspeak.default',
@@ -645,15 +643,28 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       'children/*[1]/children/*[2]/children/*[1][text()="1"]',
       'not(contains(@grammar, "functions_none"))');
 
-  // TODO: Test Reciprocal
+  // TODO: Maybe add a pause after function if argument is not simple.
+  // 'contains(children/*[2]/children/*[1]/@annotation, "clearspeak:simple")',
   defineRule(
       'function-prefix-inverse', 'clearspeak.Trig_Reciprocal',
       '[p] (pause:"short"); ' +
       '[t] "la reciproque de"; [n] children/*[1]/children/*[1];' +
-      ' [n] children/*[2]; [p] (pause:"short")',
+      ' [p] (pause:"short"); [n] children/*[2]; [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       'name(children/*[1])="superscript"',
       'name(children/*[1]/children/*[2])="prefixop"',
+      'children/*[1]/children/*[2][@role="negative"]',
+      'children/*[1]/children/*[2]/children/*[1][text()="1"]',
+      'not(contains(@grammar, "functions_none"))');
+  defineRule(
+      'function-prefix-inverse', 'clearspeak.Trig_Reciprocal',
+      '[p] (pause:"short"); ' +
+      '[t] "la reciproque de"; [n] children/*[1]/children/*[1];' +
+      '[n] children/*[2]; [p] (pause:"short")',
+      'self::appl', '@role="prefix function"',
+      'name(children/*[1])="superscript"',
+      'name(children/*[1]/children/*[2])="prefixop"',
+      'contains(children/*[2]/@annotation, "clearspeak:simple")',
       'children/*[1]/children/*[2][@role="negative"]',
       'children/*[1]/children/*[2]/children/*[1][text()="1"]',
       'not(contains(@grammar, "functions_none"))');
@@ -711,34 +722,19 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
 
   // TODO: Either of the two are firing but not separately!
   defineRule(
-      'function-inverse', 'clearspeak.Functions_Reciprocal',
-      '[t] "la reciproque de"; [n] children/*[1];',
-      'self::superscript', '@role="prefix function" or @role="simple function"',
-      'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
-      'children/*[2]/children/*[1][text()="1"]',
-      'not(contains(@grammar, "functions_none"))');
-
-  defineRule(
       'function-inverse', 'clearspeak.default',
       '[n] children/*[1]; [t] "inverse"',
       'self::superscript', '@role="prefix function" or @role="simple function"',
       'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
       'children/*[2]/children/*[1][text()="1"]',
       'not(contains(@grammar, "functions_none"))');
-
-  // defineRule(
-  //     'superscript-prefix-function', 'clearspeak.default',
-  //     '[t] "le"; [n] children/*[2] (grammar:ordinal);' +
-  //     ' [t] "power of"; [n] children/*[1]',
-  //     'self::superscript', '@role="prefix function"',
-  //     'name(children/*[2])="number"', 'children/*[2][@role="integer"]');
-  // defineRule(
-  //     'superscript-prefix-function', 'clearspeak.default',
-  //     '[t] "le"; [n] children/*[2] (grammar:ordinal); [t] "power of";' +
-  //     ' [n] children/*[1]',
-  //     'self::superscript', '@role="prefix function"',
-  //     'name(children/*[2])="identifier"');
-
+  defineRule(
+      'function-inverse', 'clearspeak.Functions_Reciprocal',
+      '[t] "la reciproque de"; [n] children/*[1]',
+      'self::superscript', '@role="prefix function" or @role="simple function"',
+      'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
+      'children/*[2]/children/*[1][text()="1"]',
+      'not(contains(@grammar, "functions_none"))');
 
   // TODO: (MS2.3) Better handling of preferences.
   defineRule(
@@ -793,8 +789,6 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       'superscript-simple-exponent', 'self::superscript',
       'children/*[2][@role="implicit"]', 'count(children/*[2]/children/*)=2',
       'contains(children/*[2]/children/*[1]/@annotation, "simple")',
-      // 'name(children/*[2]/children/*[1])="number" or ' +
-      //   'name(children/*[2]/children/*[1])="identifier"',
       'name(children/*[2]/children/*[2])="superscript"',
       '(name(children/*[2]/children/*[2]/children/*[1])="number" and ' +
       'contains(children/*[2]/children/*[2]/children/*[1]/@annotation,' +
@@ -803,113 +797,12 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       'children/*[2]/children/*[2]/children/*[2][text()="2"] or ' +
       'children/*[2]/children/*[2]/children/*[2][text()="3"]');
 
-  // defineRule(
-  //     'superscript-ordinal', 'clearspeak.default',
-  //     '[n] children/*[1]; [t] "à la"; ' +
-  //     '[n] children/*[2] (grammar:ordinal);' +
-  //     ' [t] "puissance" (pause:"short")',
-  //     'self::superscript', 'name(children/*[2])="number"',
-  //     'children/*[2][@role="integer"]', 'not(children/*[2]/text()="0")');
-  // defineRuleAlias(
-  //     'superscript-ordinal', 'self::superscript',
-  //     'name(children/*[2])="identifier"',
-  //     'children/*[2][@role="latinletter" or @role="greekletter" or' +
-  //     ' @role="otherletter"]');
-  // defineRule(
-  //     'superscript-non-ordinal', 'clearspeak.default',
-  //     '[n] children/*[1]; [t] "à la"; [n] children/*[2];' +
-  //     ' [t] "puissance" (pause:"short")',
-  //     'self::superscript', 'children/*[2][@role="negative"]',
-  //     'name(children/*[2]/children/*[1])="number"',
-  //     'children/*[2]/children/*[1][@role="integer"]');
-
-  // defineRule(
-  //     'superscript-simple-function', 'clearspeak.default',
-  //     '[t] "la"; [n] children/*[2] (grammar:ordinal);' +
-  //     ' [t] "puissance de" (pause:"short"); [n] children/*[1]',
-  //     'self::superscript', 'name(children/*[1])="identifier"',
-  //     'children/*[1][@role="simple function"]',
-  //     'children/*[2][@role!="prime"]',
-  //     'not(contains(@grammar, "functions_none"))');
-
   defineRule(
       'superscript-simple-function', 'clearspeak.Functions_None',
       '[n] . (grammar:functions_none)',
       'self::superscript', 'name(children/*[1])="identifier"',
       'children/*[1][@role="simple function"]',
       'not(contains(@grammar, "functions_none"))');
-
-  // defineRule(
-  //     'superscript-ordinal', 'clearspeak.Exponent_Ordinal',
-  //     '[n] children/*[1]; [t] "à la"; [n] children/*[2] (grammar:ordinal);' +
-  //     ' [t] "puissance"; [p] (pause:"short")',
-  //     'self::superscript', 'name(children/*[2])="number"',
-  //     'children/*[2][@role="integer"]');
-  // defineRule(
-  //     'superscript-ordinal', 'clearspeak.Exponent_Ordinal',
-  //     '[n] children/*[1]; [t] "à la"; [n] children/*[2]; [t] "puissance"; [p] (pause:"short")',
-  //     'self::superscript', 'name(children/*[2])="prefixop"',
-  //     'children/*[2][@role="negative"]',
-  //     'name(children/*[2]/children/*[1])="number"',
-  //     'children/*[2]/children/*[1][@role="integer"]');
-  // defineRule(
-  //     'superscript-ordinal', 'clearspeak.Exponent_Ordinal',
-  //     '[n] children/*[1]; [t] "à la"; [n] children/*[2] (grammar:ordinal);' +
-  //     ' [t] "puissance"; [p] (pause:"short")',
-  //     'self::superscript', 'name(children/*[2])="identifier"',
-  //     'children/*[2][@role="latinletter" or @role="greekletter" or ' +
-  //     '@role="otherletter"]');
-  // defineRule(
-  //     'superscript-ordinal-default', 'clearspeak.Exponent_Ordinal',
-  //     '[n] children/*[1]; [t] "à l\'exposant" (pause:"short"); ' +
-  //     '[n] children/*[2]; [p] (pause:"short");' +
-  //     ' [t] "fin exposant" (pause:"short")',
-  //     'self::superscript', 'children//superscript');
-
-  // defineRule(
-  //     'superscript-ordinal', 'clearspeak.Exponent_OrdinalPower',
-  //     '[n] children/*[1]; [t] "à la"; [n] children/*[2] (grammar:ordinal);' +
-  //     ' [t] "puissance"; [p] (pause:"short")',
-  //     'self::superscript', 'name(children/*[2])="number"',
-  //     'children/*[2][@role="integer"]');
-  // defineRule(
-  //     'superscript-ordinal', 'clearspeak.Exponent_OrdinalPower',
-  //     '[n] children/*[1]; [t] "à la"; [n] children/*[2];' +
-  //     ' [t] "puissance"; [p] (pause:"short")',
-  //     'self::superscript', 'name(children/*[2])="prefixop"',
-  //     'children/*[2][@role="negative"]',
-  //     'name(children/*[2]/children/*[1])="number"',
-  //     'children/*[2]/children/*[1][@role="integer"]');
-  // defineRule(
-  //     'superscript-ordinal', 'clearspeak.Exponent_OrdinalPower',
-  //     '[n] children/*[1]; [t] "à la"; [n] children/*[2] (grammar:ordinal);' +
-  //     ' [t] "puissance"; [p] (pause:"short")',
-  //     'self::superscript', 'name(children/*[2])="identifier"',
-  //     'children/*[2][@role="latinletter" or @role="greekletter" or ' +
-  //     '@role="otherletter"]');
-  // defineRule(
-  //     'superscript-ordinal-default', 'clearspeak.Exponent_OrdinalPower',
-  //     '[n] children/*[1]; [t] "à l\'exposant" (pause:"short"); ' +
-  //     '[n] children/*[2]; [p] (pause:"short");' +
-  //     ' [t] "fin exposant" (pause:"short")',
-  //     'self::superscript', 'children//superscript');
-
-  // TODO: QUESTION: Rules say there should be a power in the default case, but
-  //       it is neither in the examples, nor does it make sense.
-  //
-  // First exponent fin exposant, second internally use power.
-  //
-  // defineRule(
-  //     'superscript-power', 'clearspeak.Exponent_AfterPower',
-  //     '[n] children/*[1]; [t] "à la puissance";' +
-  //     ' [n] children/*[2] (grammar:afterPower); [p] (pause:"medium")',
-  //     'self::superscript');
-  // defineRule(
-  //     'superscript-power-default', 'clearspeak.Exponent_AfterPower',
-  //     '[n] children/*[1]; [t] "à l\'exposant" (pause:"short"); ' +
-  //     '[n] children/*[2]; [p] (pause:"short");' +
-  //     ' [t] "fin exposant" (pause:"short")',
-  //     'self::superscript', 'children//superscript');
 
   defineRule(
       'superscript-ordinal', 'clearspeak.Exponent_Ordinal',
@@ -924,12 +817,6 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       '[n] children/*[2]; [p] (pause:"medium")',
       'self::superscript', 'name(children/*[2])="identifier"',
       'children/*[2][@role="latinletter"]', 'CQFisCaptial');
-  // defineRuleAlias(
-  //     'superscript-ordinal', 'self::superscript',
-  //     'name(children/*[2])="identifier"',
-  //     'children/*[2][@role="latinletter" or @role="greekletter" or' +
-  //     ' @role="otherletter"]');
-
 
   // TODO....
   defineRule(
@@ -967,17 +854,6 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       'not(name(children/*[1])="text" and ' +
       '(name(../../../punctuated[@role="text"]/..)="stree" ' +
       'or name(..)="stree"))', 'self::*', 'self::*'
-
-      // ,
-      // 'name(children/*[1])!="subscript" or (' +
-      // // Keep squared if we have a simple subscript.
-      // 'name(children/*[1])="subscript" and ' +
-      // 'name(children/*[1]/children/*[1])="identifier" and ' +
-      // 'name(children/*[1]/children/*[2])="number" and ' +
-      // 'children/*[1]/children/*[2][@role!="mixed"] and ' +
-      // 'children/*[1]/children/*[2][@role!="othernumber"])',
-      // 'not(@embellished)'
-
   );
 
   // Cube
@@ -990,15 +866,6 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       'not(name(children/*[1])="text" and ' +
       '(name(../../../punctuated[@role="text"]/..)="stree" ' +
       'or name(..)="stree"))', 'self::*', 'self::*'
-      // ,
-      // 'name(children/*[1])!="subscript" or (' +
-      // // Keep cubed if we have a simple subscript.
-      // 'name(children/*[1])="subscript" and ' +
-      // 'name(children/*[1]/children/*[1])="identifier" and ' +
-      // 'name(children/*[1]/children/*[2])="number" and ' +
-      // 'children/*[1]/children/*[2][@role!="mixed"] and ' +
-      // 'children/*[1]/children/*[2][@role!="othernumber"])',
-      // 'not(@embellished)'
   );
 
 
@@ -1508,41 +1375,17 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       'negative', 'clearspeak.default',
       '[t] "négatif"; [n] children/*[1]',
       'self::prefixop', '@role="negative"');
-  //, 'contains(@annotation, "clearspeak:simple")');
   defineRule(
       'positive', 'clearspeak.default',
       '[t] "positif"; [n] children/*[1]',
       'self::prefixop', '@role="positive"');
 
   // Angle
-  // defineRule(
-  //   'angle-prefix', 'clearspeak.default',
-  //   '[n] content/*[1]; [n] children/*[1] (grammar:angle)',
-  //   'self::prefixop', 'content/*[1]/text()="∠"');
-  // defineRule(
-  //   'angle-infix', 'clearspeak.default',
-  //   '[n] content/*[1]; [n] children/*[1]; ' +
-  //     '[n] children/*[2] (grammar:angle)',
-  //   'self::infixop', 'content/*[1]/text()="∠"');
   defineRule(
       'angle-measure', 'clearspeak.default',
       '[t] "la mesure de l\'" (join:""); [n] content/*[1]; ' +
       '[n] children/*[2] (grammar:angle)',
       'self::infixop', 'content/*[1]/text()="∠"', 'children/*[1][text()="m"]');
-
-
-  // defineRuleAlias(
-  //     'negative',
-  //     'self::prefixop', '@role="negative"', 'children/number');
-  // defineRuleAlias(
-  //     'negative',
-  //     'self::prefixop', '@role="negative"',
-  //     'children/fraction[@role="vulgar"]');
-
-  // defineRule(
-  //     'negative', 'clearspeak.default',
-  //     '[t] "minus"; [n] children/*[1]',
-  //     'self::prefixop', '@role="negative"');
 
   // Operator rules
   defineRule(
@@ -1638,16 +1481,6 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       'relseq', 'clearspeak.default',
       '[m] children/* (sepFunc:CTXFcontentIterator)',
       'self::relseq');
-
-  // defineRule(
-  //     'equality', 'clearspeak.default',
-  //     '[n] children/*[1]; [n] content/*[1]; [n] children/*[2]',
-  //     'self::relseq', '@role="equality"', 'count(./children/*)=2');
-
-  // defineRule(
-  //     'multi-equality', 'clearspeak.default',
-  //     '[m] ./children/* (sepFunc:CTXFcontentIterator)',
-  //     'self::relseq', '@role="equality"', 'count(./children/*)>2');
 
   defineRule(
       'multrel', 'clearspeak.default',
@@ -2025,18 +1858,6 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       'self::cases', 'not(contains(@grammar, "layoutSummary"))', 'self::*'
   );
 
-  // defineRule(
-  //   'table-summary', 'clearspeak.default',
-  //   '[t] count(children/*); [t] "lines" (pause:short);' +
-  //     '  [n] . (grammar:layoutSummary)',
-  //   'self::table', 'not(contains(@grammar, "layoutSummary"))'
-  // );
-  // defineRule(
-  //   'table-summary', 'clearspeak.MultiLineOverview_None',
-  //   '[n] . (grammar:layoutSummary)',
-  //   'self::table', 'not(contains(@grammar, "layoutSummary"))'
-  // );
-
   defineRule(
       'lines', 'clearspeak.default',
       '[p] (pause:short);' +
@@ -2161,26 +1982,6 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   defineRuleAlias(
       'lines-rows', 'self::multiline');
 
-  // Step
-  defineRule(
-      'lines-steps-summary', 'clearspeak.MultiLineLabel_Step',
-      '[p] (pause:short); [t] count(children/*); [t] " étapes";' +
-      '  [n] . (grammar:layoutSummary)',
-      'self::multiline', 'not(contains(@grammar, "layoutSummary"))'
-  );
-  defineRuleAlias(
-      'lines-steps-summary', 'self::table',
-      'not(contains(@grammar, "layoutSummary"))'
-  );
-  defineRule(
-      'lines-steps', 'clearspeak.MultiLineLabel_Step',
-      '[p] (pause:short);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:" Étape-:",' +
-      'sepFunc:CTXFpauseSeparator,separator:"long");' +
-      ' [p] (pause:long)', 'self::table');
-  defineRuleAlias(
-      'lines-steps', 'self::multiline');
-
   // Constraint
   defineRule(
       'lines-constraints-summary', 'clearspeak.MultiLineLabel_Constraint',
@@ -2271,12 +2072,6 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       'self::underscore', '@role="underover"',
       'children/*[2][@role!="underaccent"]'
   );
-  // defineRule(
-  //   'underscript', 'clearspeak.default',
-  //   '[n] children/*[1]; [t] "with"; [n] children/*[2];' +
-  //     ' [t] "below" (pause:short)',
-  //   'self::underscore', ''
-  // );
 
   // Number rules
   defineRule(

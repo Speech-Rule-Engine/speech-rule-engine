@@ -80,13 +80,10 @@ sre.System.prototype.setupEngine = function(feature) {
   var setMulti = function(feat) {
     engine[feat] = feature[feat] || engine[feat];
   };
-  var binaryFeatures = ['strict', 'cache', 'semantics', 'structure', 'pprint'];
-  var stringFeatures = ['markup', 'style', 'domain', 'speech', 'walker',
-                        'locale', 'rate'];
   setMulti('mode');
   sre.System.prototype.configBlocks_(feature);
-  binaryFeatures.forEach(setIf);
-  stringFeatures.forEach(setMulti);
+  sre.Engine.BINARY_FEATURES.forEach(setIf);
+  sre.Engine.STRING_FEATURES.forEach(setMulti);
   if (feature.json) {
     sre.SystemExternal.jsonPath = sre.BaseUtil.makePath(feature.json);
   }
@@ -97,16 +94,7 @@ sre.System.prototype.setupEngine = function(feature) {
   engine.ruleSets = feature.rules ? feature.rules :
       sre.SpeechRuleStores.availableSets();
   sre.SpeechRuleEngine.getInstance().parameterize(engine.ruleSets);
-  engine.dynamicCstr = engine.parser.parse(
-      engine.locale + '.' + engine.domain + '.' + engine.style);
-  var comparator = engine.comparators[engine.domain];
-  engine.comparator = comparator ? comparator() :
-      new sre.DynamicCstr.DefaultComparator(
-      engine.dynamicCstr,
-      sre.DynamicProperties.create(
-      [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]],
-      [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN]],
-      ['short', sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE]]));
+  engine.setDynamicCstr();
   sre.L10n.setLocale();
 };
 
@@ -150,26 +138,14 @@ sre.System.setAsync = function() {
 
 
 sre.System.prototype.engineSetup = function() {
-  var engineFeatures = ['mode',
-                        'locale',
-                        'domain',
-                        'style',
-                        'walker',
-                        'markup',
-                        'rate',
-                        'semantics',
-                        'speech',
-                        'pprint',
-                        'structure',
-                        'strict',
-                        'cache'
-                       ];
+  var engineFeatures = ['mode'].
+      concat(sre.Engine.STRING_FEATURES, sre.Engine.BINARY_FEATURES);
   var engine = sre.Engine.getInstance();
   var features = {};
   engineFeatures.forEach(function(x) {features[x] = engine[x];});
   features.json = sre.SystemExternal.jsonPath;
   features.xpath = sre.SystemExternal.WGXpath;
-  features.rules = engine.ruleSets;
+  features.rules = engine.ruleSets.slice();
   return features;
 };
 

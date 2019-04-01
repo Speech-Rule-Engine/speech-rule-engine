@@ -115,6 +115,18 @@ sre.MathspeakSpanishUtil.ordinalCounter = function(node, context) {
 
 
 /**
+ * Creates a simple ordinal string from a number.
+ * @param {number} number The number to be converted.
+ * @param {string=} opt_gender The gender of the ordinal.
+ * @return {string} The ordinal string.
+ */
+sre.MathspeakSpanishUtil.simpleOrdinal = function(number, opt_gender) {
+  return number.toString() + (opt_gender === 'female' ? 'a' : 'o');
+};
+
+
+
+/**
  * Predicate to decide if a root has a small index, i.e., between 1 and 10.
  * @param {Node} node The root node.
  * @return {Array.<Node>} The list with the given node, if it is a root with a
