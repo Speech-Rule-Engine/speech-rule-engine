@@ -169,7 +169,7 @@ sre.MathspeakFrench.initCustomFunctions_ = function() {
 sre.MathspeakFrench.initMathspeakFrench_ = function() {
   defineRule(
       'collapsed', 'mathspeak.default',
-      '[t] "collapsed"; [n] . (engine:modality=summary,grammar:collapsed)',
+      '[n] . (engine:modality=summary,grammar:collapsed)',
       'self::*', '@alternative', 'not(contains(@grammar, "collapsed"))',
       'self::*', 'self::*', 'self::*', 'self::*', 'self::*'
   );
