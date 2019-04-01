@@ -58,10 +58,31 @@ sre.Tests.prototype.run = function() {
  * @type {Array}
  */
 sre.Tests.testList = [];
-sre.Tests.testList = sre.Tests.testList.concat(sre.BaseTests.testList);
-sre.Tests.testList = sre.Tests.testList.concat(sre.SpeechEnglishTest.testList);
-sre.Tests.testList = sre.Tests.testList.concat(sre.SpeechFrenchTest.testList);
-sre.Tests.testList = sre.Tests.testList.concat(sre.SpeechSpanishTest.testList);
+
+sre.Tests.allTests = [];
+sre.Tests.allTests = sre.Tests.allTests.concat(sre.BaseTests.testList);
+sre.Tests.allTests = sre.Tests.allTests.concat(sre.SpeechEnglishTest.testList);
+sre.Tests.allTests = sre.Tests.allTests.concat(sre.SpeechFrenchTest.testList);
+sre.Tests.allTests = sre.Tests.allTests.concat(sre.SpeechSpanishTest.testList);
+
+var file = sre.SystemExternal.process.env['FILE'];
+var locale = sre.SystemExternal.process.env['LOCALE'];
+if (file) {
+  sre.Tests.testList.push(sre[file]);
+}
+if (locale) {
+  if (locale === 'Base') {
+    sre.Tests.testList = sre.Tests.testList.concat(sre.BaseTests.testList);
+  } else {
+    try {
+      sre.Tests.testList =
+        sre.Tests.testList.concat(sre['Speech' + locale + 'Test'].testList);
+    } catch (e) { }
+  }
+}
+if (!sre.Tests.testList.length) {
+  sre.Tests.testList = sre.Tests.testList.concat(sre.Tests.allTests);
+}
 
 
 /**
