@@ -21,7 +21,7 @@
 goog.provide('sre.Locale.es');
 
 goog.require('sre.Locale');
-// goog.require('sre.Numbers.es');
+goog.require('sre.Numbers.es');
 
 
 /**
@@ -170,6 +170,6 @@ sre.Locale.es = {
     JOINER_FRAC: ' '
   },
 
-  NUMBERS: {}// sre.Numbers.es.NUMBERS
+  NUMBERS: sre.Numbers.es.NUMBERS
   
 };

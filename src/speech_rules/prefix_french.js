@@ -74,11 +74,6 @@ sre.PrefixFrench.addCustomString_ = goog.bind(
 sre.PrefixFrench.ordinalPosition = function(node) {
   var children = sre.DomUtil.toArray(node.parentNode.childNodes);
   return sre.Messages.NUMBERS.simpleOrdinal(children.indexOf(node) + 1).toString();
-  // TODO: redo gender
-  // var gender = /** @type{string} */(
-  //     sre.Grammar.getInstance().getParameter('gender'));
-  // return sre.MathspeakFrenchUtil.simpleOrdinal(
-  //     children.indexOf(node) + 1, gender).toString();
 };
 
 
