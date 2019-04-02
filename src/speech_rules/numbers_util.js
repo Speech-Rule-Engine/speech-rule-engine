@@ -116,3 +116,17 @@ sre.NumbersUtil.vulgarFractionSmall = function(node, enumer, denom) {
   }
   return false;
 };
+
+
+/**
+ * String function to turn a child position into an ordinal.
+ * @param {!Node} node The node for the string function.
+ * @return {string} The ordinal string corresponding to the child position of
+ *     the node.
+ */
+sre.NumbersUtil.ordinalPosition = function(node) {
+  var children = sre.DomUtil.toArray(node.parentNode.childNodes);
+  return sre.Messages.NUMBERS.simpleOrdinal(children.indexOf(node) + 1).toString();
+};
+
+
