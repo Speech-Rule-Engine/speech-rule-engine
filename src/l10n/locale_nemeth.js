@@ -153,6 +153,7 @@ sre.Locale.nemeth = {
     COLLAPSIBLE: 'collapsible',
     EXPANDABLE: 'expandable',
     LEVEL: 'Level'
-  }
+  },
 
+  NUMBERS: { }
 };

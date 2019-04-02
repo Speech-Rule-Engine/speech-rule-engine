@@ -106,7 +106,7 @@ sre.NemethRules.initCustomFunctions_ = function() {
   addCSF('CSFopenFraction', sre.NemethUtil.openingFraction);
   addCSF('CSFcloseFraction', sre.NemethUtil.closingFraction);
   addCSF('CSFoverFraction', sre.NemethUtil.overFraction);
-  addCSF('CSFvulgarFraction', sre.MathspeakUtil.vulgarFraction);
+  addCSF('CSFvulgarFraction', sre.NumbersUtil.vulgarFraction);
   addCQF('CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction);
 
   // Radical function.
@@ -123,7 +123,7 @@ sre.NemethRules.initCustomFunctions_ = function() {
   addCSF('CSFunderscript', sre.MathspeakUtil.nestedUnderscore);
   addCSF('CSFoverscript', sre.MathspeakUtil.nestedOverscore);
 
-  addCTXF('CTXFordinalCounter', sre.MathspeakUtil.ordinalCounter);
+  addCTXF('CTXFordinalCounter', sre.NumbersUtil.ordinalCounter);
   addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
 
   // Layout related.

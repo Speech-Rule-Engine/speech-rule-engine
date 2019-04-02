@@ -41,7 +41,7 @@ sre.Variables.VERSION = '3.0.0-beta.2';
  * @const
  * @type {Array.<string>}
  */
-sre.Variables.LOCALES = ['en', 'es', 'nemeth'];
+sre.Variables.LOCALES = ['en', 'es', 'fr', 'nemeth'];
 
 
 /**

@@ -19,7 +19,7 @@ SRC_DIR = $(abspath ./src)
 BIN_DIR = $(abspath ./bin)
 LIB_DIR = $(abspath ./lib)
 RES_DIR = $(abspath ./resources)
-SRC = $(SRC_DIR)/*/*.js
+SRC = $(SRC_DIR)/**/*.js
 TARGET = $(LIB_DIR)/sre.js
 DEPS = $(SRC_DIR)/deps.js
 BROWSER = $(LIB_DIR)/sre_browser.js
@@ -40,7 +40,7 @@ TEST_DIR = $(abspath ./tests)
 TEST_TARGET = $(LIB_DIR)/test.js
 TEST_DEPS = $(TEST_DIR)/deps.js
 TEST = $(BIN_DIR)/test_sre
-TEST_SRC = $(TEST_DIR)/*.js
+TEST_SRC = $(TEST_DIR)/**/*.js $(TEST_DIR)/*.js
 
 JSDOC = $(NODE_MODULES)/.bin/jsdoc
 JSDOC_FLAGS = -c $(PREFIX)/.jsdoc.json
@@ -141,7 +141,7 @@ $(INTERACTIVE):
 	@echo "process.env.SRE_JSON_PATH = '$(JSON_SRC)';" >> $@
 	@echo "require('$(DEPS)');" >> $@ 
 	@echo "goog.require('sre.System');" >> $@
-	@echo "sre.System.getInstance().setupEngine({'mode': sre.Engine.Mode.ASYNC});" >> $@
+	@echo "sre.System.setAsync()" >> $@
 
 clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax clean_iemaps
 	rm -f $(TARGET)

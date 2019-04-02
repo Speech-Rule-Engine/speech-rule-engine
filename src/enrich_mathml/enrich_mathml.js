@@ -823,7 +823,7 @@ sre.EnrichMathml.formattedOutput_ = function(element, name, wiki) {
     return;
   }
   console.info(name + ':\n```html\n' +
-              sre.EnrichMathml.removeAttributePrefix(output) + '\n```\n');
+      sre.EnrichMathml.removeAttributePrefix(output) + '\n```\n');
 };
 
 
