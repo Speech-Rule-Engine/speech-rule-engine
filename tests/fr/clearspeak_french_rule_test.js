@@ -37,6 +37,16 @@ sre.ClearspeakFrenchRuleTest = function() {
    */
   this.locale = 'fr';
 
+  /**
+   * @override
+   */
+  this.domain = 'clearspeak';
+
+  /**
+   * @override
+   */
+  this.semantics = true;
+
   this.setActive('ClearspeakFrench');
   this.startExamples();
 };

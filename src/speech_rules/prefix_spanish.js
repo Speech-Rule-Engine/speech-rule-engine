@@ -20,9 +20,8 @@
 
 goog.provide('sre.PrefixSpanish');
 
-goog.require('sre.DomUtil');
 goog.require('sre.MathStore');
-goog.require('sre.MathspeakUtil');
+goog.require('sre.NumbersUtil');
 
 
 
@@ -65,21 +64,6 @@ sre.PrefixSpanish.addCustomString_ = goog.bind(
     sre.PrefixSpanish.mathStore.customStrings);
 
 
-/**
- * String function to turn a child position into an ordinal.
- * @param {!Node} node The node for the string function.
- * @return {string} The ordinal string corresponding to the child position of
- *     the node.
- */
-sre.PrefixSpanish.ordinalPosition = function(node) {
-  var children = sre.DomUtil.toArray(node.parentNode.childNodes);
-  var gender = /** @type{string} */(
-      sre.Grammar.getInstance().getParameter('gender'));
-  return sre.MathspeakSpanishUtil.simpleOrdinal(
-      children.indexOf(node) + 1, gender).toString();
-};
-
-
 goog.scope(function() {
 var defineRule = sre.PrefixSpanish.defineRule_;
 var defineRuleAlias = sre.PrefixSpanish.defineRuleAlias_;
@@ -91,9 +75,7 @@ var addCSF = sre.PrefixSpanish.addCustomString_;
  * @private
  */
 sre.PrefixSpanish.initCustomFunctions_ = function() {
-
-  addCSF('CSFordinalPosition', sre.PrefixSpanish.ordinalPosition);
-
+  addCSF('CSFordinalPosition', sre.NumbersUtil.ordinalPosition);
 };
 
 

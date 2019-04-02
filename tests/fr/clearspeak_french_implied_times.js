@@ -462,7 +462,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes032 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2  , parenthèse gauche, 3  , second parenthèse gauche, third parenthèse gauche, 4 plus 5, third parenthèse droite, plus 6, second parenthèse droite, parenthèse droite';
+  var speech = '2  , parenthèse gauche, 3  , deuxième parenthèse gauche, troisième parenthèse gauche, 4 plus 5, troisième parenthèse droite, plus 6, deuxième parenthèse droite, parenthèse droite';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -490,7 +490,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes034 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2  , crochet gauche, 3  , parenthèse gauche, second parenthèse gauche, 4 plus 5, second parenthèse droite, plus 6, parenthèse droite, crochet droit';
+  var speech = '2  , crochet gauche, 3  , parenthèse gauche, deuxième parenthèse gauche, 4 plus 5, deuxième parenthèse droite, plus 6, parenthèse droite, crochet droit';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -988,7 +988,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes070 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2  , parenthèse gauche, 3  , second parenthèse gauche, third parenthèse gauche, 4 plus 5, third parenthèse droite, plus 6, second parenthèse droite, parenthèse droite';
+  var speech = '2  , parenthèse gauche, 3  , deuxième parenthèse gauche, troisième parenthèse gauche, 4 plus 5, troisième parenthèse droite, plus 6, deuxième parenthèse droite, parenthèse droite';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1016,7 +1016,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes071 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2  , crochet gauche, 3  , parenthèse gauche, second parenthèse gauche, 4 plus 5, second parenthèse droite, plus 6, parenthèse droite, crochet droit';
+  var speech = '2  , crochet gauche, 3  , parenthèse gauche, deuxième parenthèse gauche, 4 plus 5, deuxième parenthèse droite, plus 6, parenthèse droite, crochet droit';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1501,7 +1501,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes108 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2, parenthèse gauche, 3, second parenthèse gauche, third parenthèse gauche, 4 plus 5, third parenthèse droite, plus 6, second parenthèse droite, parenthèse droite';
+  var speech = '2, parenthèse gauche, 3, deuxième parenthèse gauche, troisième parenthèse gauche, 4 plus 5, troisième parenthèse droite, plus 6, deuxième parenthèse droite, parenthèse droite';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1529,7 +1529,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes110 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2, crochet gauche, 3, parenthèse gauche, second parenthèse gauche, 4 plus 5, second parenthèse droite, plus 6, parenthèse droite, crochet droit';
+  var speech = '2, crochet gauche, 3, parenthèse gauche, deuxième parenthèse gauche, 4 plus 5, deuxième parenthèse droite, plus 6, parenthèse droite, crochet droit';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1873,7 +1873,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimesSilPar022 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2, parenthèse gauche, 3, second parenthèse gauche, third parenthèse gauche, 4 plus 5, third parenthèse droite, plus 6, second parenthèse droite, parenthèse droite';
+  var speech = '2, parenthèse gauche, 3, deuxième parenthèse gauche, troisième parenthèse gauche, 4 plus 5, troisième parenthèse droite, plus 6, deuxième parenthèse droite, parenthèse droite';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1901,7 +1901,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimesSilPar024 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2, crochet gauche, 3, parenthèse gauche, second parenthèse gauche, 4 plus 5, second parenthèse droite, plus 6, parenthèse droite, crochet droit';
+  var speech = '2, crochet gauche, 3, parenthèse gauche, deuxième parenthèse gauche, 4 plus 5, deuxième parenthèse droite, plus 6, parenthèse droite, crochet droit';
   this.executeRuleTest(mathml, speech, preference);
 };
 

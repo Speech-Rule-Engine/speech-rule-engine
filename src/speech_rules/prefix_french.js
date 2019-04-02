@@ -20,9 +20,8 @@
 
 goog.provide('sre.PrefixFrench');
 
-goog.require('sre.DomUtil');
 goog.require('sre.MathStore');
-goog.require('sre.MathspeakUtil');
+goog.require('sre.NumbersUtil');
 
 
 
@@ -65,21 +64,6 @@ sre.PrefixFrench.addCustomString_ = goog.bind(
     sre.PrefixFrench.mathStore.customStrings);
 
 
-/**
- * String function to turn a child position into an ordinal.
- * @param {!Node} node The node for the string function.
- * @return {string} The ordinal string corresponding to the child position of
- *     the node.
- */
-sre.PrefixFrench.ordinalPosition = function(node) {
-  var children = sre.DomUtil.toArray(node.parentNode.childNodes);
-  var gender = /** @type{string} */(
-      sre.Grammar.getInstance().getParameter('gender'));
-  return sre.MathspeakFrenchUtil.simpleOrdinal(
-      children.indexOf(node) + 1, gender).toString();
-};
-
-
 goog.scope(function() {
 var defineRule = sre.PrefixFrench.defineRule_;
 var defineRuleAlias = sre.PrefixFrench.defineRuleAlias_;
@@ -91,9 +75,7 @@ var addCSF = sre.PrefixFrench.addCustomString_;
  * @private
  */
 sre.PrefixFrench.initCustomFunctions_ = function() {
-
-  addCSF('CSFordinalPosition', sre.PrefixFrench.ordinalPosition);
-
+  addCSF('CSFordinalPosition', sre.NumbersUtil.ordinalPosition);
 };
 
 
@@ -244,8 +226,3 @@ sre.PrefixFrench.getInstance().initializer = [
   sre.PrefixFrench.initCustomFunctions_,
   sre.PrefixFrench.initPrefixFrench_
 ];
-
-// TODO: Brief rules for indices:
-// IndInfDroit, IndInfGauche, IndSupDroit, IndSupGauche,
-//
-

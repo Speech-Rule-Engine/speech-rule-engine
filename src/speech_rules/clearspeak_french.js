@@ -128,12 +128,12 @@ sre.ClearspeakFrench.initCustomFunctions_ = function() {
   addCTXF('CTXFpauseSeparator', sre.StoreUtil.pauseSeparator);
   addCTXF('CTXFnodeCounter', sre.ClearspeakUtil.nodeCounter);
   addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
-  addCSF('CSFvulgarFraction', sre.MathspeakFrenchUtil.vulgarFraction);
+  addCSF('CSFvulgarFraction', sre.NumbersUtil.vulgarFraction);
   addCQF('CQFvulgarFractionSmall', sre.ClearspeakUtil.isSmallVulgarFraction);
   addCQF('CQFcellsSimple', sre.ClearspeakUtil.allCellsSimple);
   // TODO: Fix ordinals.
   addCSF('CSFordinalExponent', sre.ClearspeakUtil.ordinalExponent);
-  addCSF('CSFwordOrdinal', sre.ClearspeakUtil.wordOrdinal);
+  addCSF('CSFwordOrdinal', sre.Messages.NUMBERS.wordOrdinal);
   addCQF('CQFisCapital', sre.ClearspeakUtil.isCapitalLetter);
   addCQF('CQFmatchingFences', sre.ClearspeakUtil.matchingFences);
   addCSF('CSFnestingDepth', sre.ClearspeakUtil.nestingDepth);

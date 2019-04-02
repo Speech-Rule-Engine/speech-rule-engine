@@ -20,9 +20,8 @@
 
 goog.provide('sre.PrefixRules');
 
-goog.require('sre.DomUtil');
 goog.require('sre.MathStore');
-goog.require('sre.MathspeakUtil');
+goog.require('sre.NumbersUtil');
 
 
 
@@ -63,18 +62,6 @@ sre.PrefixRules.addCustomString_ = goog.bind(
     sre.PrefixRules.mathStore.customStrings);
 
 
-/**
- * String function to turn a child position into an ordinal.
- * @param {!Node} node The node for the string function.
- * @return {string} The ordinal string corresponding to the child position of
- *     the node.
- */
-sre.PrefixRules.ordinalPosition = function(node) {
-  var children = sre.DomUtil.toArray(node.parentNode.childNodes);
-  return sre.MathspeakUtil.simpleOrdinal(children.indexOf(node) + 1).toString();
-};
-
-
 goog.scope(function() {
 var defineRule = sre.PrefixRules.defineRule_;
 var defineRuleAlias = sre.PrefixRules.defineRuleAlias_;
@@ -86,9 +73,7 @@ var addCSF = sre.PrefixRules.addCustomString_;
  * @private
  */
 sre.PrefixRules.initCustomFunctions_ = function() {
-
-  addCSF('CSFordinalPosition', sre.PrefixRules.ordinalPosition);
-
+  addCSF('CSFordinalPosition', sre.NumbersUtil.ordinalPosition);
 };
 
 

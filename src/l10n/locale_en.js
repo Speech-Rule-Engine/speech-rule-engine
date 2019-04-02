@@ -22,6 +22,7 @@ goog.provide('sre.Locale.en');
 
 goog.require('sre.Locale');
 goog.require('sre.Messages');
+goog.require('sre.Numbers.en');
 
 
 /**
@@ -142,6 +143,9 @@ sre.Locale.en = {
   PLURAL_UNIT: {
     'foot': 'feet',
     'inch': 'inches'
-  }
+  },
 
+  NUMBERS: sre.Numbers.en.NUMBERS
+  
 };
+

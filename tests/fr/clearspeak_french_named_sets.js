@@ -155,7 +155,7 @@ sre.ClearspeakFrenchNamedSets.prototype.testNumSys006a = function() {
 sre.ClearspeakFrenchNamedSets.prototype.testNumSys007 = function() {
   var preference = 'default';
   var mathml = '<mrow><msup><mi>ℝ</mi><mn>2</mn></msup></mrow>';
-  var speech = 'r-two';
+  var speech = 'r-deux';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -166,7 +166,7 @@ sre.ClearspeakFrenchNamedSets.prototype.testNumSys007 = function() {
 sre.ClearspeakFrenchNamedSets.prototype.testNumSys008 = function() {
   var preference = 'default';
   var mathml = '<mrow><msup><mi>ℤ</mi><mn>3</mn></msup></mrow>';
-  var speech = 'z-three';
+  var speech = 'z-trois';
   this.executeRuleTest(mathml, speech, preference);
 };
 

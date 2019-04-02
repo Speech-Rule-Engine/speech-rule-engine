@@ -1264,7 +1264,7 @@ sre.ClearspeakFrenchRoots.prototype.testHighRoot001 = function() {
 sre.ClearspeakFrenchRoots.prototype.testHighRoot002 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>';
-  var speech = 'la fourth racine de n';
+  var speech = 'la quatrième racine de n';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1276,7 +1276,7 @@ sre.ClearspeakFrenchRoots.prototype.testHighRoot003 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn>' +
       '</mroot></mrow></math>';
-  var speech = 'la fifth racine de 35';
+  var speech = 'la cinquième racine de 35';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1288,7 +1288,7 @@ sre.ClearspeakFrenchRoots.prototype.testHighRoot004 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn>' +
       '</mroot></mrow></math>';
-  var speech = 'la ninth racine de 146';
+  var speech = 'la neuvième racine de 146';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1359,7 +1359,7 @@ sre.ClearspeakFrenchRoots.prototype.testHighRoot010 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot>' +
       '</mrow></math>';
-  var speech = 'négatif la fourth racine de n';
+  var speech = 'négatif la quatrième racine de n';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1381,7 +1381,7 @@ sre.ClearspeakFrenchRoots.prototype.testHighRoot011 = function() {
 sre.ClearspeakFrenchRoots.prototype.testHighRoot012 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>';
-  var speech = 'la fourth racine de n, fin racine';
+  var speech = 'la quatrième racine de n, fin racine';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1393,7 +1393,7 @@ sre.ClearspeakFrenchRoots.prototype.testHighRoot013 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn>' +
       '</mroot></mrow></math>';
-  var speech = 'la fifth racine de 35, fin racine';
+  var speech = 'la cinquième racine de 35, fin racine';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1405,7 +1405,7 @@ sre.ClearspeakFrenchRoots.prototype.testHighRoot014 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn>' +
       '</mroot></mrow></math>';
-  var speech = 'la ninth racine de 146, fin racine';
+  var speech = 'la neuvième racine de 146, fin racine';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1476,7 +1476,7 @@ sre.ClearspeakFrenchRoots.prototype.testHighRoot020 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot>' +
       '</mrow></math>';
-  var speech = 'négatif la fourth racine de n, fin racine';
+  var speech = 'négatif la quatrième racine de n, fin racine';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1498,7 +1498,7 @@ sre.ClearspeakFrenchRoots.prototype.testHighRoot021 = function() {
 sre.ClearspeakFrenchRoots.prototype.testHighRoot022 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>';
-  var speech = 'la fourth racine de n';
+  var speech = 'la quatrième racine de n';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1510,7 +1510,7 @@ sre.ClearspeakFrenchRoots.prototype.testHighRoot023 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn>' +
       '</mroot></mrow></math>';
-  var speech = 'la fifth racine de 35';
+  var speech = 'la cinquième racine de 35';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1522,7 +1522,7 @@ sre.ClearspeakFrenchRoots.prototype.testHighRoot024 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn>' +
       '</mroot></mrow></math>';
-  var speech = 'la ninth racine de 146';
+  var speech = 'la neuvième racine de 146';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1593,7 +1593,7 @@ sre.ClearspeakFrenchRoots.prototype.testHighRoot030 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot>' +
       '</mrow></math>';
-  var speech = 'négatif la fourth racine de n';
+  var speech = 'négatif la quatrième racine de n';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1615,7 +1615,7 @@ sre.ClearspeakFrenchRoots.prototype.testHighRoot031 = function() {
 sre.ClearspeakFrenchRoots.prototype.testHighRoot032 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>';
-  var speech = 'la fourth racine de n, fin racine';
+  var speech = 'la quatrième racine de n, fin racine';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1627,7 +1627,7 @@ sre.ClearspeakFrenchRoots.prototype.testHighRoot033 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn>' +
       '</mroot></mrow></math>';
-  var speech = 'la fifth racine de 35, fin racine';
+  var speech = 'la cinquième racine de 35, fin racine';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1639,7 +1639,7 @@ sre.ClearspeakFrenchRoots.prototype.testHighRoot034 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn>' +
       '</mroot></mrow></math>';
-  var speech = 'la ninth racine de 146, fin racine';
+  var speech = 'la neuvième racine de 146, fin racine';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1710,6 +1710,6 @@ sre.ClearspeakFrenchRoots.prototype.testHighRoot040 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot>' +
       '</mrow></math>';
-  var speech = 'négatif la fourth racine de n, fin racine';
+  var speech = 'négatif la quatrième racine de n, fin racine';
   this.executeRuleTest(mathml, speech, preference);
 };
