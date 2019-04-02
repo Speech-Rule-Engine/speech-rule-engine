@@ -82,20 +82,19 @@ var defineUniqueRuleAlias = sre.SummaryFrench.defineUniqueRuleAlias_;
 sre.SummaryFrench.initSummaryFrench_ = function() {
   // Collapsed output
   defineRule(
-      'collapsed-masculine', 'default.end',
+      'collapsed-masculine', 'default.masculine',
       '[t] "compressé"',
-      'self::*', 'contains(@grammar, "collapsed")',
-      'contains(@grammar, "masculine")');
+      'contains(@grammar, "collapsed")');
   defineRule(
-      'collapsed-feminine', 'default.end',
+      'collapsed-feminine', 'default.feminine',
       '[t] "compressée"',
-      'self::*', 'contains(@grammar, "collapsed")',
-      'contains(@grammar, "feminine")');
+      'contains(@grammar, "collapsed")');
   defineRule(
-      'no-collapsed', 'default.end',
-      '[t] ""',
-      'self::*', 'not(contains(@grammar, "collapsed"))',
-      '(contains(@grammar, "masculine") or contains(@grammar, "feminine"))');
+      'no-collapsed', 'default.masculine',
+      '[t] ""', 'not(contains(@grammar, "collapsed"))');
+  defineRule(
+      'no-collapsed', 'default.feminine',
+      '[t] ""', 'not(contains(@grammar, "collapsed"))');
 
   // Initial rule
   defineRule(
@@ -105,54 +104,54 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   // Identifier
   defineRule(
       'abstr-identifier', 'default.default',
-      '[t] "identifiant long"; [n] . (grammar:masculine,engine:style=end)',
+      '[t] "identifiant long"; [n] . (engine:style=masculine)',
       'self::identifier', 'contains(@grammar, "collapsed")'
   );
   defineRule(
       'abstr-identifier', 'default.default',
-      '[t] "identifiant" (grammar:masculine,engine:style=end)',
+      '[t] "identifiant"; [n] . (engine:style=masculine)',
       'self::identifier'
   );
 
   // Numbers
   defineRule(
       'abstr-number', 'default.default',
-      '[t] "nombre long"; [n] . (grammar:masculine,engine:style=end)',
+      '[t] "nombre long"; [n] . (engine:style=masculine)',
       'self::number', 'contains(@grammar, "collapsed")'
   );
   defineRule(
       'abstr-number', 'default.default',
-      '[t] "nombre"; [n] . (grammar:masculine,engine:style=end)',
+      '[t] "nombre"; [n] . (engine:style=masculine)',
       'self::number',
   );
 
   defineRule(
       'abstr-mixed-number', 'default.default',
-      '[t] "nombre fractionnaire long"; [n] . (grammar:masculine,engine:style=end)',
+      '[t] "nombre fractionnaire long"; [n] . (engine:style=masculine)',
       'self::number', '@role="mixed"', 'contains(@grammar, "collapsed")'
   );
   defineRule(
       'abstr-mixed-number', 'default.default',
-      '[t] "nombre fractionnaire"; [n] . (grammar:masculine,engine:style=end)',
+      '[t] "nombre fractionnaire"; [n] . (engine:style=masculine)',
       'self::number', '@role="mixed"'
   );
 
   // Text
   defineRule(
       'abstr-text', 'default.default',
-      '[t] "texte"; [n] . (grammar:masculine,engine:style=end)',
+      '[t] "texte"; [n] . (engine:style=masculine)',
       'self::text'
   );
 
   // Functions
   defineRule(
       'abstr-function', 'default.default',
-      '[t] "expression fonctionnelle"; [n] . (grammar:feminine,engine:style=end)',
+      '[t] "expression fonctionnelle"; [n] . (engine:style=feminine)',
       'self::function'
   );
   defineRule(
       'abstr-function', 'mathspeak.brief',
-      '[t] "fonction"; [n] . (grammar:feminine,engine:style=end)',
+      '[t] "fonction"; [n] . (engine:style=feminine)',
       'self::function'
   );
   defineSpecialisedRule(
@@ -161,12 +160,12 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
 
   defineRule(
       'abstr-lim', 'default.default',
-      '[t] "fonction de limitation"; [n] . (grammar:feminine,engine:style=end)',
+      '[t] "fonction de limitation"; [n] . (engine:style=feminine)',
       'self::function', '@role="limit function"'
   );
   defineRule(
       'abstr-lim', 'mathspeak.brief',
-      '[t] "lim"; [n] . (grammar:feminine,engine:style=end)',
+      '[t] "lim"; [n] . (engine:style=feminine)',
       'self::function', '@role="limit function"'
   );
   defineSpecialisedRule(
@@ -177,12 +176,12 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   // Fraction
   defineRule(
       'abstr-fraction', 'default.default',
-      '[t] "fraction"; [n] . (grammar:feminine,engine:style=end)',
+      '[t] "fraction"; [n] . (engine:style=feminine)',
       'self::fraction',
   );
   defineRule(
       'abstr-fraction', 'mathspeak.brief',
-      '[t] "frac"; [n] . (grammar:feminine,engine:style=end)',
+      '[t] "frac"; [n] . (engine:style=feminine)',
       'self::fraction'
   );
   defineSpecialisedRule(
@@ -191,13 +190,13 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
 
   defineRule(
       'abstr-continued-fraction', 'default.default',
-      '[t] "fraction continue"; [n] . (grammar:feminine,engine:style=end)',
+      '[t] "fraction continue"; [n] . (engine:style=feminine)',
       'self::fraction',
       'children/*[2]/descendant-or-self::*[@role="ellipsis"]'
   );
   defineRule(
       'abstr-continued-fraction', 'mathspeak.brief',
-      '[t] "frac continue"; [n] . (grammar:feminine,engine:style=end)',
+      '[t] "frac continue"; [n] . (engine:style=feminine)',
       'self::fraction',
       'children/*[2]/descendant-or-self::*[@role="ellipsis"]'
   );
@@ -209,13 +208,13 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   // Roots
   defineRule(
       'abstr-sqrt', 'default.default',
-      '[t] "racine carrée"; [n] . (grammar:feminine,engine:style=end)',
+      '[t] "racine carrée"; [n] . (engine:style=feminine)',
       'self::sqrt'
   );
 
   defineRule(
       'abstr-sqrt-nested', 'default.default',
-      '[t] "racine carrée imbriquée"; [n] . (grammar:feminine,engine:style=end)',
+      '[t] "racine carrée imbriquée"; [n] . (engine:style=feminine)',
       'self::sqrt',
       'children/*/descendant-or-self::sqrt or' +
       ' children/*/descendant-or-self::root'
@@ -226,19 +225,19 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
       'abstr-root', 'default.default',
       '[t] "racine d\'indice"; ' +
       '[n] children/*[1] (engine:modality="speech"); [t] "fin indice"; ' +
-      '[n] . (grammar:feminine,engine:style=end);',
+      '[n] . (engine:style=feminine);',
       'self::root', 'contains(@grammar, "collapsed")',
       'following-sibling::* or ancestor::*/following-sibling::*'
   );
   defineRule(
       'abstr-root', 'default.default',
       '[t] "racine d\'indice";' +
-      '[n] children/*[1] (engine:modality=speech);  [n] . (grammar:feminine,engine:style=end)',
+      '[n] children/*[1] (engine:modality=speech);  [n] . (engine:style=feminine)',
       'self::root'
   );
   defineRule(
       'abstr-root', 'mathspeak.brief',
-      '[t] "racine"; [n] . (grammar:feminine,engine:style=end)',
+      '[t] "racine"; [n] . (engine:style=feminine)',
       'self::root'
   );
   defineSpecialisedRule(
@@ -248,7 +247,7 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   defineRule(
       'abstr-root-nested', 'default.default',
       '[t] "racine imbriquée d\'indice"; [n] children/*[1] (engine:modality=speech);' +
-      ' [t] "fin indice"; [n] . (grammar:feminine,engine:style=end);',
+      ' [t] "fin indice"; [n] . (engine:style=feminine);',
       'self::root', 'contains(@grammar, "collapsed")',
       'children/*/descendant-or-self::sqrt or' +
       ' children/*/descendant-or-self::root',
@@ -257,13 +256,13 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   defineRule(
       'abstr-root-nested', 'default.default',
       '[t] "racine imbriquée d\'indice"; ' +
-      '[n] children/*[1] (engine:modality=speech);  [n] . (grammar:feminine,engine:style=end)',
+      '[n] children/*[1] (engine:modality=speech);  [n] . (engine:style=feminine)',
       'self::root', 'children/*/descendant-or-self::sqrt or' +
       ' children/*/descendant-or-self::root'
   );
   defineRule(
       'abstr-root-nested', 'mathspeak.brief',
-      '[t] "racine imbriquée"; [n] . (grammar:feminine,engine:style=end)',
+      '[t] "racine imbriquée"; [n] . (engine:style=feminine)',
       'self::root', 'children/*/descendant-or-self::sqrt or ' +
       'children/*/descendant-or-self::root'
   );
@@ -274,21 +273,21 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   // Superscript
   defineRule(
       'abstr-superscript', 'default.default',
-      '[t] "puissance"; [n] . (grammar:feminine,engine:style=end)',
+      '[t] "puissance"; [n] . (engine:style=feminine)',
       'self::superscript'
   );
 
   // Subscript
   defineRule(
       'abstr-subscript', 'default.default',
-      '[t] "indice"; [n] . (grammar:masculine,engine:style=end)',
+      '[t] "indice"; [n] . (engine:style=masculine)',
       'self::subscript'
   );
 
   // Subsuperscript
   defineRule(
       'abstr-subsup', 'default.default',
-      '[t] "puissance avec index"; [n] . (grammar:feminine,engine:style=end)',
+      '[t] "puissance avec index"; [n] . (engine:style=feminine)',
       'self::superscript',
       'name(children/*[1])="subscript"'
   );
@@ -297,19 +296,19 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   defineRule(
       'abstr-infixop', 'default.default',
       '[t] @role (grammar:localRole); [t] "avec"; [t] count(./children/*);' +
-      ' [t] "éléments"; [n] . (grammar:masculine,engine:style=end)',
+      ' [t] "éléments"; [n] . (engine:style=masculine)',
       'self::infixop'
   );
   defineRule(
       'abstr-infixop', 'default.default',
       '[t] @role (grammar:localRole); [t] "avec un nombre d\'éléments' +
-      ' variable"; [n] . (grammar:masculine,engine:style=end)',
+      ' variable"; [n] . (engine:style=masculine)',
       'self::infixop', 'count(./children/*)>2',
       './children/punctuation[@role="ellipsis"]'
   );
   defineRule(
       'abstr-infixop', 'mathspeak.brief',
-      '[t] @role (grammar:localRole); [n] . (grammar:masculine,engine:style=end)',
+      '[t] @role (grammar:localRole); [n] . (engine:style=masculine)',
       'self::infixop'
   );
   defineSpecialisedRule(
@@ -319,12 +318,12 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   defineRule(
       'abstr-addition', 'default.default',
       '[t] "somme avec"; [t] count(./children/*); ' +
-      '[t] "opérandes"; [n] . (grammar:feminine,engine:style=end)',
+      '[t] "opérandes"; [n] . (engine:style=feminine)',
       'self::infixop', '@role="addition"'
   );
   defineRule(
       'abstr-addition', 'mathspeak.brief',
-      '[t] "somme"; [n] . (grammar:feminine,engine:style=end)',
+      '[t] "somme"; [n] . (engine:style=feminine)',
       'self::infixop', '@role="addition"'
   );
   defineSpecialisedRule(
@@ -332,7 +331,7 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   );
   defineRule(
       'abstr-var-addition', 'default.default',
-      '[t] "somme avec un nombre variable d\'opérandes"; [n] . (grammar:feminine,engine:style=end)',
+      '[t] "somme avec un nombre variable d\'opérandes"; [n] . (engine:style=feminine)',
       'self::infixop', '@role="addition"',
       'count(./children/*)>2', './children/punctuation[@role="ellipsis"]'
   );
@@ -340,12 +339,12 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   defineRule(
       'abstr-multiplication', 'default.default',
       '[t] "produit avec"; [t] count(./children/*);' +
-      ' [t] "facteurs"; [n] . (grammar:masculine,engine:style=end);',
+      ' [t] "facteurs"; [n] . (engine:style=masculine);',
       'self::infixop', '@role="multiplication"'
   );
   defineRule(
       'abstr-multiplication', 'mathspeak.brief',
-      '[t] "produit"; [n] . (grammar:masculine,engine:style=end)',
+      '[t] "produit"; [n] . (engine:style=masculine)',
       'self::infixop', '@role="multiplication"'
   );
   defineSpecialisedRule(
@@ -357,7 +356,8 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   );
   defineRule(
       'abstr-var-multiplication', 'default.default',
-      '[t] "produit avec un nombre de facteurs variable"; [n] . (grammar:masculine,engine:style=end)',
+      '[t] "produit avec un nombre de facteurs variable";' +
+      ' [n] . (engine:style=masculine)',
       'self::infixop', '@role="multiplication"',
       'count(./children/*)>2', './children/punctuation[@role="ellipsis"]'
   );
@@ -372,12 +372,12 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   defineRule(
       'abstr-vector', 'default.default',
       '[t] "vecteur de dimension"; [t] count(./children/*);' +
-      ' [n] . (grammar:masculine,engine:style=end)',
+      ' [n] . (engine:style=masculine)',
       'self::vector'
   );
   defineRule(
       'abstr-vector', 'mathspeak.brief',
-      '[t] "vecteur"; [n] . (grammar:masculine,engine:style=end)',
+      '[t] "vecteur"; [n] . (engine:style=masculine)',
       'self::vector'
   );
   defineSpecialisedRule(
@@ -385,14 +385,14 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   );
   defineRule(
       'abstr-var-vector', 'default.default',
-      '[t] "vecteur colonne de dimension n"; [n] . (grammar:masculine,engine:style=end)',
+      '[t] "vecteur colonne de dimension n"; [n] . (engine:style=masculine)',
       'self::vector',
       './children/*/children/punctuation[@role="ellipsis"]'
   );
 
   defineRule(
       'abstr-binomial', 'default.default',
-      '[t] "binomial"; [n] . (grammar:masculine,engine:style=end)',
+      '[t] "binomial"; [n] . (engine:style=masculine)',
       'self::vector', '@role="binomial"'
   );
   // These two are needed to avoid the vector rule firing.
@@ -406,12 +406,12 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   defineRule(
       'abstr-determinant', 'default.default',
       '[t] "déterminant de dimension"; [t] count(./children/*);' +
-      ' [n] . (grammar:masculine,engine:style=end)',
+      ' [n] . (engine:style=masculine)',
       'self::matrix', '@role="determinant"'
   );
   defineRule(
       'abstr-determinant', 'mathspeak.brief',
-      '[t] "déterminant"; [n] . (grammar:masculine,engine:style=end)',
+      '[t] "déterminant"; [n] . (engine:style=masculine)',
       'self::matrix', '@role="determinant"'
   );
   defineSpecialisedRule(
@@ -419,7 +419,7 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   );
   defineRule(
       'abstr-var-determinant', 'default.default',
-      '[t] "déterminant de dimension n"; [n] . (grammar:masculine,engine:style=end)',
+      '[t] "déterminant de dimension n"; [n] . (engine:style=masculine)',
       'self::matrix', '@role="determinant"',
       './children/*/children/*/children/punctuation[@role="ellipsis"]'
   );
@@ -427,12 +427,12 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   defineRule(
       'abstr-squarematrix', 'default.default',
       '[t] "matrice carrée de dimension"; [t] count(./children/*); ' +
-      '[n] . (grammar:feminine,engine:style=end)',
+      '[n] . (engine:style=feminine)',
       'self::matrix', '@role="squarematrix"'
   );
   defineRule(
       'abstr-squarematrix', 'mathspeak.brief',
-      '[t] "matrice carrée"; [n] . (grammar:feminine,engine:style=end)',
+      '[t] "matrice carrée"; [n] . (engine:style=feminine)',
       'self::matrix', '@role="squarematrix"'
   );
   defineSpecialisedRule(
@@ -442,12 +442,12 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   defineRule(
       'abstr-rowvector', 'default.default',
       '[t] "vecteur ligne de dimension"; [t] count(./children/row/children/*); ' +
-      '[n] . (grammar:masculine,engine:style=end)',
+      '[n] . (engine:style=masculine)',
       'self::matrix', '@role="rowvector"'
   );
   defineRule(
       'abstr-rowvector', 'mathspeak.brief',
-      '[t] "vecteur ligne"; [n] . (grammar:masculine,engine:style=end)',
+      '[t] "vecteur ligne"; [n] . (engine:style=masculine)',
       'self::matrix', '@role="rowvector"'
   );
   defineSpecialisedRule(
@@ -463,12 +463,12 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   defineRule(
       'abstr-matrix', 'default.default',
       '[t] "matrice"; [t] count(children/*);  [t] "par";' +
-      '[t] count(children/*[1]/children/*); [n] . (grammar:feminine,engine:style=end)',
+      '[t] count(children/*[1]/children/*); [n] . (engine:style=feminine)',
       'self::matrix'
   );
   defineRule(
       'abstr-matrix', 'mathspeak.brief',
-      '[t] "matrice"; [n] . (grammar:feminine,engine:style=end)',
+      '[t] "matrice"; [n] . (engine:style=feminine)',
       'self::matrix'
   );
   defineSpecialisedRule(
@@ -476,7 +476,7 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   );
   defineRule(
       'abstr-var-matrix', 'default.default',
-      '[t] "matrice de dimension n par m"; [n] . (grammar:feminine,engine:style=end)',
+      '[t] "matrice de dimension n par m"; [n] . (engine:style=feminine)',
       'self::matrix',
       './children/*/children/*/children/punctuation[@role="ellipsis"]'
   );
@@ -486,12 +486,13 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   defineRule(
       'abstr-cases', 'default.default',
       '[t] "déclaration de cas";' +
-      '[t] "avec"; [t] count(children/*); [t] "cas"; [n] . (grammar:feminine,engine:style=end)',
+      '[t] "avec"; [t] count(children/*); [t] "cas";' +
+      ' [n] . (engine:style=feminine)',
       'self::cases'
   );
   defineRule(
       'abstr-cases', 'mathspeak.brief',
-      '[t] "déclaration de cas"; [n] . (grammar:feminine,engine:style=end)',
+      '[t] "déclaration de cas"; [n] . (engine:style=feminine)',
       'self::cases'
   );
   defineSpecialisedRule(
@@ -499,7 +500,7 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   );
   defineRule(
       'abstr-var-cases', 'default.default',
-      '[t] "déclaration de cas variable"; [n] . (grammar:feminine,engine:style=end)',
+      '[t] "déclaration de cas variable"; [n] . (engine:style=feminine)',
       'self::cases',
       './children/row/children/cell/children/punctuation[@role="ellipsis"]' +
       'or ./children/line/children/punctuation[@role="ellipsis"]'
@@ -511,13 +512,13 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
       'abstr-punctuated', 'default.default',
       '[t] "liste de longueur"; [t] count(children/*) - count(content/*);' +
       ' [t] "séparée par des"; [n] content/*[1] (join:""); [t] "s";' +
-      ' [n] . (grammar:feminine,engine:style=end)',
+      ' [n] . (engine:style=feminine)',
       'self::punctuated'
   );
   defineRule(
       'abstr-punctuated', 'mathspeak.brief',
       '[t] "liste séparée par des"; [n] content/*[1] (join:""); [t] "s";' +
-      ' [n] . (grammar:feminine,engine:style=end)',
+      ' [n] . (engine:style=feminine)',
       'self::punctuated'
   );
   defineSpecialisedRule(
@@ -526,7 +527,7 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   defineRule(
       'abstr-var-punctuated', 'default.default',
       '[t] "liste de longueur variable séparée par des"; ' +
-      '[n] content/*[1] (join:""); [t] "s"; [n] . (grammar:feminine,engine:style=end)',
+      '[n] content/*[1] (join:""); [t] "s"; [n] . (engine:style=feminine)',
       'self::punctuated',
       './children/punctuation[@role="ellipsis"]'
   );
@@ -534,19 +535,19 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
 
   defineRule(
       'abstr-bigop', 'default.default',
-      '[n] content/*[1]; [n] . (grammar:masculine,engine:style=end)',
+      '[n] content/*[1]; [n] . (engine:style=masculine)',
       'self::bigop'
   );
 
   defineRule(
       'abstr-integral', 'default.default',
-      '[t] "intégrale"; [n] . (grammar:feminine,engine:style=end)',
+      '[t] "intégrale"; [n] . (engine:style=feminine)',
       '@role="integral"'
   );
 
   defineRule(
       'abstr-relation', 'default.default',
-      '[t] @role (grammar:localRole); [n] . (grammar:masculine,engine:style=end);',
+      '[t] @role (grammar:localRole); [n] . (engine:style=masculine);',
       'self::relseq', 'count(./children/*)=2'
   );
 
@@ -554,13 +555,13 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
       'abstr-relation-seq', 'default.default',
       '[t] @role (grammar:localRole); [t] "séquence";' +
       ' [t] "avec"; [t] count(./children/*); [t] "éléments";' +
-      ' [n] . (grammar:feminine,engine:style=end)',
+      ' [n] . (engine:style=feminine)',
       'self::relseq', 'count(./children/*)>2'
   );
   defineRule(
       'abstr-relation-seq', 'mathspeak.brief',
       '[t] @role (grammar:localRole); [t] "séquence";'
-      + ' [n] . (grammar:feminine,engine:style=end)',
+      + ' [n] . (engine:style=feminine)',
       'self::relseq', 'count(./children/*)>2'
   );
   defineSpecialisedRule(
@@ -570,7 +571,7 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
       'abstr-var-relation', 'default.default',
       '[t] @role (grammar:localRole); [t] "séquence";' +
       ' [t] "avec un nombre de éléments variable";' +
-      ' [n] . (grammar:feminine,engine:style=end)',
+      ' [n] . (engine:style=feminine)',
       'self::relseq', 'count(./children/*)>2',
       './children/punctuation[@role="ellipsis"]'
   );
@@ -589,12 +590,13 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   defineRule(
       'abstr-multirel', 'default.default',
       '[t] "séquence de relation";' +
-      ' [t] "avec"; [t] count(./children/*); [t] "éléments"; [n] . (grammar:feminine,engine:style=end)',
+      ' [t] "avec"; [t] count(./children/*); [t] "éléments";' +
+      ' [n] . (engine:style=feminine)',
       'self::multirel', 'count(./children/*)>2'
   );
   defineRule(
       'abstr-multirel', 'mathspeak.brief',
-      '[t] "séquence de relation"; [n] . (grammar:feminine,engine:style=end)',
+      '[t] "séquence de relation"; [n] . (engine:style=feminine)',
       'self::multirel', 'count(./children/*)>2'
   );
   defineSpecialisedRule(
@@ -602,7 +604,8 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   );
   defineRule(
       'abstr-var-multirel', 'default.default',
-      '[t] "séquence de relation avec un nombre de éléments variable"; [n] . (grammar:feminine,engine:style=end)',
+      '[t] "séquence de relation avec un nombre de éléments variable";' +
+      ' [n] . (engine:style=feminine)',
       'self::multirel', 'count(./children/*)>2',
       './children/punctuation[@role="ellipsis"]'
   );
@@ -612,25 +615,25 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
       '[t] "table avec"; ' +
       '[t] count(children/*); [t] "lignes et";' +
       '[t] count(children/*[1]/children/*); ' +
-      '[t] "colonnes"; [n] . (grammar:feminine,engine:style=end);',
+      '[t] "colonnes"; [n] . (engine:style=feminine);',
       'self::table'
   );
   defineRule(
       'abstr-line', 'default.default',
       '[t] "dans"; [t] @role (grammar:localRole);' +
-      ' [n] . (grammar:masculine,engine:style=end)',
+      ' [n] . (engine:style=masculine)',
       'self::line'
   );
   defineRule(
       'abstr-row', 'default.default',
       '[t] "dans"; [t] @role (grammar:localRole);' +
       '[t] count(preceding-sibling::..); [t] "avec";' +
-      '[t] count(children/*); [t] "colonnes"; [n] . (grammar:feminine,engine:style=end)',
+      '[t] count(children/*); [t] "colonnes"; [n] . (engine:style=feminine)',
       'self::row'
   );
   defineRule(
       'abstr-cell', 'default.default',
-      '[t] "dans"; [t] @role (grammar:localRole); [n] . (grammar:feminine,engine:style=end);',
+      '[t] "dans"; [t] @role (grammar:localRole); [n] . (engine:style=feminine);',
       'self::cell'
   );
 
