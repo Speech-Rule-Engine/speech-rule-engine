@@ -33,7 +33,7 @@
   "dependencies": {
     "commander": "*",
     "wicked-good-xpath": "*",
-    "xmldom-sre": ">=0.1.31"
+    "xmldom-sre": "^0.1.31"
   },
   "devDependencies": {
     "closure-linter-wrapper": ">=1.1.0",

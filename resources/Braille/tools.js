@@ -322,3 +322,97 @@ Tools.writeFile = function(file, json) {
   json.unshift({"locale": "nemeth"});
   fs.writeFileSync(file, JSON.stringify(json, null, 2), function() {});
 };
+
+
+Tools.NEMETH_EXAMPLES = [
+  'gh Nemeth Rule Viewer.html',
+  'gh Nemeth Rule Viewer02.html',
+  'gh Nemeth Rule Viewer03.html',
+  'gh Nemeth Rule Viewer06.html',
+  'gh Nemeth Rule Viewer07.html',
+  'gh Nemeth Rule Viewer10.html',
+  'gh Nemeth Rule Viewer11.html',
+  'gh Nemeth Rule Viewer12.html',
+  'gh Nemeth Rule Viewer13.html',
+  'gh Nemeth Rule Viewer14.html',
+  'gh Nemeth Rule Viewer15.html',
+  'gh Nemeth Rule Viewer17.html',
+  'gh Nemeth Rule Viewer18.html',
+  'gh Nemeth Rule Viewer19.html',
+  'gh Nemeth Rule Viewer23.html'
+];
+
+Tools.NEMETH_PATH = '/home/sorge/git/speech-rule-engine/resources/Braille/tests/';
+
+
+// Loading xmldom and xpath.
+let xmldom = require('xmldom-sre');
+let xpath = function() {
+  var window = {document: {}};
+  var wgx = require('wicked-good-xpath');
+  wgx.install(window);
+  window.document.XPathResult = window.XPathResult;
+  return window.document;
+}();
+
+Tools.loadHtmlFile = function(file) {
+  let content = fs.readFileSync(file, {encoding: 'utf-8'});
+  let dp = new xmldom.DOMParser();
+  return dp.parseFromString(content, 'text/html');
+};
+
+
+Tools.retrieveBrailleBlocks = function(html) {
+  let braille = xpath.evaluate(
+    '//*[contains(@class, "unicodeBraille")]',
+    html, null, xpath.XPathResult.ORDERED_NODE_ITERATOR_TYPE);
+  let images = xpath.evaluate(
+    '//img[not(contains(@class, "audio"))]',
+    html, null, xpath.XPathResult.ORDERED_NODE_ITERATOR_TYPE);
+  let mathspeak = xpath.evaluate(
+    '//*[contains(@class, "mathSpeakCell") or contains(@class, "introMathSpeakCell")]',
+    html, null, xpath.XPathResult.ORDERED_NODE_ITERATOR_TYPE);
+  console.log(braille.snapshotLength + ' ' + images.snapshotLength + ' ' + mathspeak.snapshotLength);
+  var results = [];
+  // Convert result to JS array
+  var counter = 0;
+  var offset = braille.snapshotLength - images.snapshotLength;
+  for (var brailleNode = braille.iterateNext();
+       brailleNode;
+       brailleNode = braille.iterateNext()) {
+    counter++;
+    var braillebox = brailleNode.getAttribute('class').match(/brailleBox/);
+    // var mathspeakNode = mathspeak.iterateNext();
+    // var intro = mathspeakNode && mathspeakNode.getAttribute('class').match(/introMathSpeakCell/);
+    results.push(['<p>', brailleNode, (counter > offset) ? images.iterateNext() : '', mathspeak.iterateNext(),
+                  '</p>'].join('\n'));
+    // results.push(['<p>', brailleNode, images.iterateNext(), braillebox ? mathspeak.iterateNext() : '',
+    //               '</p>'].join('\n'));
+  }
+  return results.join('\n\n');
+};
+
+
+Tools.writeHtmlFile = function(html, counter) {
+  var output = '<html><body>' + html.replace(/Viewer([0-9])_/g, 'Viewer0$1_') + '</body></html>';
+  fs.writeFileSync(Tools.NEMETH_PATH + counter + '.html', output, function() {});
+};
+
+
+Tools.transformBrailleFiles = function() {
+  for (var i = 0, file; file = Tools.NEMETH_EXAMPLES[i]; i++) {
+    var path = Tools.NEMETH_PATH + file;
+    var html = Tools.retrieveBrailleBlocks(Tools.loadHtmlFile(path));
+    var counter = file.match(/[0-9]+/);
+    counter = counter ? counter[0] : '01';
+    console.log(counter);
+    Tools.writeHtmlFile(html, counter);
+  }
+};
+
+
+// Offset:
+// 14 ?? One mathspeak missing
+// 15 ?? too much offset!
+// 17 ?? functions need to be gotten extra
+// 18  4 missing in the middle

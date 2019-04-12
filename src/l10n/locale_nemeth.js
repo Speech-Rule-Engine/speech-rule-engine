@@ -64,7 +64,8 @@ sre.Locale.nemeth = {
   MS_FUNC: {
     FRAC_NEST_DEPTH: sre.Locale.vulgarNestingDepth,
     RADICAL_NEST_DEPTH: function(count) { return ''; },
-    COMBINE_ROOT_INDEX: function(postfix, index) {return postfix;}
+    COMBINE_ROOT_INDEX: function(postfix, index) {return postfix;},
+    FONT_REGEXP: function(font) {return RegExp('^' + font);}
   },
 
   MS_ROOT_INDEX: { },
