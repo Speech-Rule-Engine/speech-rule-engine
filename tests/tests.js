@@ -19,34 +19,12 @@
 
 goog.provide('sre.Tests');
 
-goog.require('sre.ApiTest');
-goog.require('sre.ClearspeakAnnotationTest');
-goog.require('sre.ClearspeakTest');
-goog.require('sre.ColorPickerTest');
-goog.require('sre.DomTest');
-goog.require('sre.EnrichMathmlTest');
-goog.require('sre.EnrichSpeechTest');
-goog.require('sre.MarkupTest');
-goog.require('sre.MathAlphabetsTest');
-goog.require('sre.MathmlStoreTest');
-goog.require('sre.MathspeakEmbellishSpanishTest');
-goog.require('sre.MathspeakEmbellishTest');
-goog.require('sre.MathspeakEnglishTest');
-goog.require('sre.MathspeakSpanishTest');
-goog.require('sre.MmlcloudEnglishTest');
-goog.require('sre.MmlcloudSpanishTest');
-goog.require('sre.NobleEnglishTest');
-goog.require('sre.NobleSpanishTest');
-goog.require('sre.PrefixRuleTest');
-goog.require('sre.RebuildStreeTest');
-goog.require('sre.SemanticApiTest');
-goog.require('sre.SemanticRuleTest');
-goog.require('sre.SemanticTreeTest');
-goog.require('sre.SpeechRuleTest');
+goog.require('sre.BaseTests');
+goog.require('sre.SpeechEnglishTest');
+goog.require('sre.SpeechFrenchTest');
+goog.require('sre.SpeechSpanishTest');
 goog.require('sre.System');
 goog.require('sre.TestRunner');
-goog.require('sre.WalkerMarkupTest');
-goog.require('sre.WalkerTest');
 
 
 
@@ -79,35 +57,32 @@ sre.Tests.prototype.run = function() {
  * List of tests to run. Add new tests here!
  * @type {Array}
  */
-sre.Tests.testList = [
-  sre.ApiTest,
-  sre.ClearspeakAnnotationTest,
-  sre.ColorPickerTest,
-  sre.DomTest,
-  sre.EnrichMathmlTest,
-  sre.EnrichSpeechTest,
-  sre.MarkupTest,
-  sre.MathAlphabetsTest,
-  sre.MathmlStoreTest,
-  sre.MathspeakEmbellishTest,
-  sre.MathspeakEmbellishSpanishTest,
-  sre.MathspeakEnglishTest,
-  sre.MathspeakSpanishTest,
-  sre.MmlcloudEnglishTest,
-  sre.MmlcloudSpanishTest,
-  sre.NobleEnglishTest,
-  sre.NobleSpanishTest,
-  sre.PrefixRuleTest,
-  sre.RebuildStreeTest,
-  sre.SemanticApiTest,
-  sre.SemanticRuleTest,
-  sre.SemanticTreeTest,
-  sre.SpeechRuleTest,
-  sre.WalkerMarkupTest,
-  sre.WalkerTest
-];
-sre.Tests.testList = sre.Tests.testList.concat(sre.ClearspeakTest.testList),
-// sre.Tests.testList = sre.ClearspeakTest.testList;
+sre.Tests.testList = [];
+
+sre.Tests.allTests = [];
+sre.Tests.allTests = sre.Tests.allTests.concat(sre.BaseTests.testList);
+sre.Tests.allTests = sre.Tests.allTests.concat(sre.SpeechEnglishTest.testList);
+sre.Tests.allTests = sre.Tests.allTests.concat(sre.SpeechFrenchTest.testList);
+sre.Tests.allTests = sre.Tests.allTests.concat(sre.SpeechSpanishTest.testList);
+
+var file = sre.SystemExternal.process.env['FILE'];
+var locale = sre.SystemExternal.process.env['LOCALE'];
+if (file) {
+  sre.Tests.testList.push(sre[file]);
+}
+if (locale) {
+  if (locale === 'Base') {
+    sre.Tests.testList = sre.Tests.testList.concat(sre.BaseTests.testList);
+  } else {
+    try {
+      sre.Tests.testList =
+        sre.Tests.testList.concat(sre['Speech' + locale + 'Test'].testList);
+    } catch (e) { }
+  }
+}
+if (!sre.Tests.testList.length) {
+  sre.Tests.testList = sre.Tests.testList.concat(sre.Tests.allTests);
+}
 
 
 /**

@@ -40,7 +40,6 @@ goog.require('sre.MathMap');
 goog.require('sre.MathStore');
 goog.require('sre.SpeechRule');
 goog.require('sre.SpeechRuleStores');
-goog.require('sre.XpathUtil');
 
 
 
@@ -75,6 +74,8 @@ sre.SpeechRuleEngine = function() {
    * @private
    */
   this.combinedStores_ = {};
+
+  // sre.Debugger.getInstance().init();
 
   sre.Engine.registerTest(
       goog.bind(function(x) {return this.ready_;}, this));
@@ -118,32 +119,6 @@ sre.SpeechRuleEngine.prototype.parameterize_ = function(ruleSets) {
     }
   }
   this.updateEngine();
-};
-
-
-/**
- * Constructs a string from the node and the given expression.
- * @param {!Node} node The initial node.
- * @param {string} expr An Xpath expression string, a name of a custom
- *     function or a string.
- * @return {string} The result of applying expression to node.
- */
-sre.SpeechRuleEngine.prototype.constructString = function(node, expr) {
-  if (!expr) {
-    return '';
-  }
-  if (expr.charAt(0) == '"') {
-    return expr.slice(1, -1);
-  }
-  var func = this.activeStore_.customStrings.lookup(expr);
-  if (func) {
-    // We always return the result of the custom function, in case it
-    // deliberately computes the empty string!
-    return func(node);
-  }
-  // Finally we assume expr to be an xpath expression and calculate a string
-  // value from the node.
-  return sre.XpathUtil.evaluateString(expr, node);
 };
 
 
@@ -261,8 +236,9 @@ sre.SpeechRuleEngine.prototype.evaluateNode_ = function(node) {
  * @private
  */
 sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
-  sre.Debugger.getInstance().output(node.toString());
   var engine = sre.Engine.getInstance();
+  sre.Debugger.getInstance().output(
+    engine.mode !== sre.Engine.Mode.HTTP ? node.toString() : node);
   if (engine.cache) {
     var result = this.getCacheForNode_(node);
     if (result) {
@@ -285,8 +261,11 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
   }
   sre.Debugger.getInstance().generateOutput(
       goog.bind(function() {
-        return [rule.name, rule.dynamicCstr.toString(), node.toString()];},
+        return ['Apply Rule:',
+                rule.name, rule.dynamicCstr.toString(),
+                engine.mode !== sre.Engine.Mode.HTTP ? node.toString() : node];},
       this));
+  var context = rule.context || this.activeStore_.context;
   var components = rule.action.components;
   result = [];
   for (var i = 0, component; component = components[i]; i++) {
@@ -295,29 +274,40 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
     var attributes = component.attributes || {};
     var multi = false;
     if (component.grammar) {
-      this.processGrammar(node, component.grammar);
+      this.processGrammar(context, node, component.grammar);
+    }
+    var saveEngine = null;
+    var oldCache = null;
+    // Retooling the engine
+    if (attributes.engine) {
+      saveEngine = sre.Engine.getInstance().dynamicCstr.getComponents();
+      var features = sre.Grammar.parseInput(attributes.engine);
+      oldCache = this.cache_;
+      this.clearCache();
+      sre.Engine.getInstance().setDynamicCstr(features);
     }
     switch (component.type) {
       case sre.SpeechRule.Type.NODE:
-        var selected = this.activeStore_.applyQuery(node, content);
+        var selected = context.applyQuery(node, content);
         if (selected) {
           descrs = this.evaluateTree_(selected);
         }
         break;
       case sre.SpeechRule.Type.MULTI:
         multi = true;
-        selected = this.activeStore_.applySelector(node, content);
+        selected = context.applySelector(node, content);
         if (selected.length > 0) {
           descrs = this.evaluateNodeList_(
+              context,
               selected,
               attributes['sepFunc'],
-              this.constructString(node, attributes['separator']),
+              context.constructString(node, attributes['separator']),
               attributes['ctxtFunc'],
-              this.constructString(node, attributes['context']));
+              context.constructString(node, attributes['context']));
         }
         break;
       case sre.SpeechRule.Type.TEXT:
-        selected = this.constructString(node, content);
+        selected = context.constructString(node, content);
         if (selected) {
           descrs = [sre.AuditoryDescription.create(
               {text: selected}, {adjust: true})];
@@ -331,7 +321,7 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
     if (descrs[0] && !multi) {
       if (attributes['context']) {
         descrs[0]['context'] =
-            this.constructString(node, attributes['context']) +
+            context.constructString(node, attributes['context']) +
             (descrs[0]['context'] || '');
       }
       if (attributes['annotation']) {
@@ -344,6 +334,10 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
     // Adding personality to the auditory descriptions.
     result = result.concat(this.addPersonality_(descrs, attributes, multi,
                                                 node));
+    if (saveEngine) {
+      this.cache_ = oldCache;
+      sre.Engine.getInstance().setDynamicCstr(saveEngine);
+    }
   }
   this.pushCache_(node, result);
   return result;
@@ -352,28 +346,30 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
 
 /**
  * Evaluates a list of nodes into a list of auditory descriptions.
+ * @param {sre.SpeechRuleContext} context The function context in which to
+ *     evaluate the nodes.
  * @param {!Array.<Node>} nodes Array of nodes.
  * @param {string} sepFunc Name of a function used to compute a separator
  *     between every element.
- * @param {string} separator A string that is used as argument to the sepFunc or
+ * @param {string} sepStr A string that is used as argument to the sepFunc or
  *     interspersed directly between each node if sepFunc is not supplied.
  * @param {string} ctxtFunc Name of a function applied to compute the context
  *     for every element in the list.
- * @param {string} context Additional context string that is given to the
+ * @param {string} ctxtStr Additional context string that is given to the
  *     ctxtFunc function or used directly if ctxtFunc is not supplied.
  * @return {Array.<sre.AuditoryDescription>} A list of Auditory descriptions.
  * @private
  */
 sre.SpeechRuleEngine.prototype.evaluateNodeList_ = function(
-    nodes, sepFunc, separator, ctxtFunc, context) {
+    context, nodes, sepFunc, sepStr, ctxtFunc, ctxtStr) {
   if (nodes == []) {
     return [];
   }
-  var sep = separator || '';
-  var cont = context || '';
-  var cFunc = this.activeStore_.contextFunctions.lookup(ctxtFunc);
+  var sep = sepStr || '';
+  var cont = ctxtStr || '';
+  var cFunc = context.contextFunctions.lookup(ctxtFunc);
   var ctxtClosure = cFunc ? cFunc(nodes, cont) : function() {return cont;};
-  var sFunc = this.activeStore_.contextFunctions.lookup(sepFunc);
+  var sFunc = context.contextFunctions.lookup(sepFunc);
   var sepClosure = sFunc ? sFunc(nodes, sep) :
       function() {return sre.AuditoryDescription.create(
       {text: sep}, {translate: true});};
@@ -426,9 +422,8 @@ sre.SpeechRuleEngine.prototype.addPersonality_ = function(
     this.addRelativePersonality_(descr, personality);
     this.addExternalAttributes_(descr, node);
   }
-  // MOSS: Removes the last joiner in a multi node element. This should be
-  //       reviewed.
-  if (multi) {
+  // Removes the last joiner in a multi node element.
+  if (multi && descrs.length) {
     delete descrs[descrs.length - 1].
         personality[sre.Engine.personalityProps.JOIN];
   }
@@ -439,7 +434,7 @@ sre.SpeechRuleEngine.prototype.addPersonality_ = function(
 sre.SpeechRuleEngine.prototype.addExternalAttributes_ = function(descr, node) {
   if (node.hasAttributes()) {
     var attrs = node.attributes;
-    for(var i = attrs.length - 1; i >= 0; i--) {
+    for (var i = attrs.length - 1; i >= 0; i--) {
       var key = attrs[i].name;
       if (!descr.attributes[key] && key.match(/^ext/)) {
         descr.attributes[key] = attrs[i].value;
@@ -545,10 +540,7 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
     save[key] = engine[key];
     engine[key] = settings[key];
   }
-  //TODO: This needs to be refactored as a message signal for the speech rule
-  //      engine to update itself.
-  engine.dynamicCstr = sre.DynamicCstr.create(
-      engine.locale, engine.domain, engine.style);
+  engine.setDynamicCstr();
   var result = callback();
   for (key in save) {
     engine[key] = save[key];
@@ -556,8 +548,7 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
   if (store) {
     this.activeStore_ = store;
   }
-  engine.dynamicCstr = sre.DynamicCstr.create(
-      engine.locale, engine.domain, engine.style);
+  engine.setDynamicCstr();
   return result;
 };
 
@@ -579,9 +570,9 @@ sre.SpeechRuleEngine.prototype.combineStores_ = function(ruleSets) {
     var store = ruleSets[name];
     store.initialize();
     store.getSpeechRules().forEach(function(x) {combined.trie.addRule(x);});
-    combined.contextFunctions.addStore(store.contextFunctions);
-    combined.customQueries.addStore(store.customQueries);
-    combined.customStrings.addStore(store.customStrings);
+    // combined.contextFunctions.addStore(store.contextFunctions);
+    // combined.customQueries.addStore(store.customQueries);
+    // combined.customStrings.addStore(store.customStrings);
   }
   combined.setSpeechRules(combined.trie.collectRules());
   this.combinedStores_[this.combinedStoreName_(Object.keys(ruleSets))] =
@@ -638,15 +629,17 @@ sre.SpeechRuleEngine.prototype.updateEngine = function() {
 
 /**
  * Processes the grammar annotations of a rule.
+ * @param {sre.SpeechRuleContext} context The function context in which to
+ *     evaluate the grammar expression.
  * @param {!Node} node The node to which the rule is applied.
  * @param {sre.Grammar.State} grammar The grammar annotations.
  */
-sre.SpeechRuleEngine.prototype.processGrammar = function(node, grammar) {
+sre.SpeechRuleEngine.prototype.processGrammar = function(context, node, grammar) {
   var assignment = {};
   for (var key in grammar) {
     var value = grammar[key];
     assignment[key] = (typeof(value) === 'string') ?
-        this.constructString(node, value) : value;
+        context.constructString(node, value) : value;
   }
   sre.Grammar.getInstance().pushState(assignment);
 };
@@ -654,22 +647,39 @@ sre.SpeechRuleEngine.prototype.processGrammar = function(node, grammar) {
 
 /**
  * Enriches the dynamic constraint with default properties.
- * @private
  */
+ // * @private
+// TODO: Exceptions and ordering between locale and modality?
+//       E.g, missing clearspeak defaults to mathspeak.
+//       What if there is no default for a particular locale or modality?
+//       We need a default constraint specification somewhere that defines the
+//       orders.
+//       Try to make this dependent on the order of the dynamicCstr.
 sre.SpeechRuleEngine.prototype.updateConstraint_ = function() {
   var dynamic = sre.Engine.getInstance().dynamicCstr;
   var strict = sre.Engine.getInstance().strict;
+  var trie = this.activeStore_.trie;
   var props = {};
-  var values = [dynamic.getValue(sre.DynamicCstr.Axis.LOCALE),
-                dynamic.getValue(sre.DynamicCstr.Axis.DOMAIN)];
-  var defLocale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
-  var defDomain = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN];
-  var exists = this.activeStore_.trie.hasSubtrie(values);
-  // Get the trie exceptions
-  props[sre.DynamicCstr.Axis.LOCALE] = [exists ? values[0] : defLocale];
-  exists = exists ? exists :
-      this.activeStore_.trie.hasSubtrie([defLocale, values[1]]);
-  props[sre.DynamicCstr.Axis.DOMAIN] = [exists ? values[1] : defDomain];
+  var locale = dynamic.getValue(sre.DynamicCstr.Axis.LOCALE);
+  var modality = dynamic.getValue(sre.DynamicCstr.Axis.MODALITY);
+  var domain = dynamic.getValue(sre.DynamicCstr.Axis.DOMAIN);
+  if (!trie.hasSubtrie([locale, modality, domain])) {
+    locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
+    if (!trie.hasSubtrie([locale, modality, domain])) {
+      modality = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY];
+      if (!trie.hasSubtrie([locale, modality, domain])) {
+        domain = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN];
+      }
+    }
+  }
+  props[sre.DynamicCstr.Axis.LOCALE] = [locale];
+  props[sre.DynamicCstr.Axis.MODALITY] =
+    // TODO: Improve, only summary allows fallback to speech.
+    [modality !== 'summary' ?
+     modality : sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY]];
+  props[sre.DynamicCstr.Axis.DOMAIN] =
+    [modality !== 'speech' ?
+     sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN] : domain];
   var order = dynamic.getOrder();
   for (var i = 0, axis; axis = order[i]; i++) {
     if (!props[axis]) {
@@ -704,7 +714,7 @@ sre.SpeechRuleEngine.prototype.makeSet_ = function(value, preferences) {
 
 // sre.SpeechRuleEngine.prototype.enumerate = function() {
 //   var root = sre.SpeechRuleEngine.getInstance().activeStore_.trie.root;
-  
+
 // };
 
 

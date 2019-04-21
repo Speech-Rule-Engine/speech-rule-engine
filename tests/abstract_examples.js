@@ -20,8 +20,8 @@
 goog.provide('sre.AbstractExamples');
 
 goog.require('sre.AbstractTest');
+goog.require('sre.Engine');
 goog.require('sre.ExamplesOutput');
-goog.require('sre.System');
 
 
 
@@ -80,6 +80,7 @@ sre.AbstractExamples = function() {
    * @private
    */
   this.examples_ = [];
+
 };
 goog.inherits(sre.AbstractExamples, sre.AbstractTest);
 
@@ -100,6 +101,7 @@ sre.AbstractExamples.prototype.startExamples = function() {
   if (!this.active_) return;
   try {
     sre.SystemExternal.fs.openSync(this.examplesFile_, 'w+');
+    sre.SystemExternal.fs.appendFileSync(this.examplesFile_, this.header());
   } catch (err) {
     this.fileError_ = 'Bad file name ' + this.examplesFile_;
   }
@@ -135,6 +137,7 @@ sre.AbstractExamples.prototype.endExamples = function() {
         sre.SystemExternal.fs.appendFileSync(
             this.examplesFile_, this.join(this.examples_[key]));
       }
+      sre.SystemExternal.fs.appendFileSync(this.examplesFile_, this.footer());
     } catch (err) {
       this.fileError_ = 'Could not append to file ' + this.examplesFile_;
     }
@@ -142,7 +145,7 @@ sre.AbstractExamples.prototype.endExamples = function() {
   this.examples_ = [];
   this.active_ = false;
   if (this.fileError_) {
-    throw new sre.System.Error(this.fileError_);
+    throw new sre.Engine.Error(this.fileError_);
   }
 };
 
@@ -182,3 +185,20 @@ sre.AbstractExamples.prototype.join = function(examples) {
   return 'Lab.' + this.fileName_ +
       ' = [\'' + examples.join('\',\n\'') + '\']';
 };
+
+
+/**
+ * @return {string} Output file header.
+ */
+sre.AbstractExamples.prototype.header = function() {
+  return '';
+};
+
+
+/**
+ * @return {string} Output file footer.
+ */
+sre.AbstractExamples.prototype.footer = function() {
+  return '';
+};
+

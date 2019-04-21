@@ -61,7 +61,6 @@ sre.SemanticOrdering.prototype.sort = function(meanings) {
 };
 
 
-
 /**
  * Get a list of priority meanings.
  * @param {Array.<sre.SemanticMeaning>} meanings A list of semantic meanings.
@@ -81,6 +80,7 @@ sre.SemanticOrdering.prototype.reduce = function(meanings) {
            this.apply(copy[copy.length - 1], last) === 0);
   return result;
 };
+
 
 
 /**
@@ -116,7 +116,7 @@ sre.SemanticComparator.prototype.compare = function(meaning1, meaning2) {
   return (this.type &&
           this.type === meaning1.type &&
           this.type === meaning2.type) ?
-    this.comparator(meaning1, meaning2) : 0;
+      this.comparator(meaning1, meaning2) : 0;
 };
 
 

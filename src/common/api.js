@@ -126,6 +126,7 @@ module.exports.setupEngine = sre.System.getInstance().setupEngine;
 
 /**
  * Exporting XML pretty printer.
+ * @deprecated Use engine option pprint.
  */
 module.exports.pprintXML = sre.DomUtil.formatXml;
 
@@ -133,24 +134,19 @@ module.exports.pprintXML = sre.DomUtil.formatXml;
 /**
  * Exporting readiness flag.
  */
-module.exports.engineReady = sre.Engine.isReady;
+module.exports.engineReady = sre.System.getInstance().engineReady;
 
 
 /**
- * Setting engine to async mode once it is ready.
+ * Returns the current setup.
  */
-sre.Api.setAsync = function() {
-  if (!sre.Engine.isReady()) {
-    setTimeout(sre.Api.setAsync, 500);
-  }
-  (sre.System.getInstance()).setupEngine({'mode': sre.Engine.Mode.ASYNC});
-};
+module.exports.engineSetup = sre.System.getInstance().engineSetup;
 
 
 /**
  * Default setup of the Engine.
  */
 if (global && global.SRE_JSON_PATH) {
-  sre.Api.setAsync();
+  sre.System.setAsync();
 }
 

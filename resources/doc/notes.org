@@ -18,7 +18,7 @@
    http://codepen.io/pkra/pen/jEodYw
    http://codepen.io/mathjax/pen/dgJHx
 
-* TODO List for mathml integration
+* DONE List for mathml integration
 
 ** [DONE] Parent attribute in outermost wrapped node should go to inner node.
 
@@ -93,7 +93,7 @@ https://en.wikipedia.org/wiki/Bra%E2%80%93ket_notation
 *** class="MJX-TeXAtom-CLOSE"
 *** class="MJX-TeXAtom-OPEN"
 
-
+    
 * TODO For role computation: 
 ** DONE Tensor role.
 ** Punctuated with same punctuation does not seem to work.
@@ -142,3 +142,70 @@ https://en.wikipedia.org/wiki/Bra%E2%80%93ket_notation
 
 
 
+
+* DONE Separate CQF function calls etc. clearly by rule set.
+
+** Solution: Introduce a context for functions.
+
+*** Context could inherit others.
+    Not sure if that is desirable. Don't implement yet.
+
+*** Function gets context assigned.
+    No, function lives in a context. Thus different contexts can have functions
+    of the same name. Speech rules get contexts.
+
+*** Each speech rule is defined exactly once!
+    At that point it gets the context of the store it is defined.  Context is
+    set in the addRule method of the store.  This context is retained even if it
+    is sorted into a combined new store.  Combined stores do not need combined
+    contexts. I.e., context of a combined store will be empty. This could be
+    changed once we allow for inheritance of stores or contexts.
+
+*** How to exploit contexts in the tests (which are run in the trie nodes)
+
+**** In addNode_ 
+     We need to add the store of the rule (or at least the context of the rule
+     to be added), not of the overall trie!
+
+**** Replace this.store_ with this.context_
+
+*** In speech rule engine redirect custom tests
+
+**** evaluateTree_: 
+     Use the rule context after the rule lookup, instead of activeStore_
+
+**** constructString:
+     Use rule instead of activeStore_ or refactor to context
+
+**** evaluateNodeList_
+     Context functions need to be looked up in the rule context.
+
+*** Ultimately we only need combined tries, not stores as custom functions will not be added.
+
+* DONE Multimodalities: 
+
+** Make modalities a node above the locales inthe trie.
+
+*** Default is regular speech.
+
+*** Other modalities are, e.g., Braille, Abstraction, Prefixes
+
+** We can then run prefixes or abstractions by simply setting up the engine. 
+
+*** Eg. for prefixes: 
+    set modality to prefix and run engine in strict mode to not get full speech
+    for prefixes, if there aren't any.
+
+*** Eg. for abstractions: 
+    set modality to abstraction (summary?) and run engine in normal mode. This
+    will default to full speech for an expression, if no summary is available.
+
+** Ulitmately we could make collapsed and summary modalities and do away with the @alternative role.
+
+** Currently we test abstraction rules with mathspeak, all three styles, just in case.
+
+* TODO Inheritance in speech rule sets
+
+** TODO Have a basic class for speech rule sets that sets initial/dummy/collapse rules.
+
+** TODO Have a basic class for mathspeak/clearspeak/etc rule sets to inherit common Custom functions.

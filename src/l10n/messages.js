@@ -86,6 +86,8 @@ sre.Messages.MS_FUNC = {
    */
   COMBINE_ROOT_INDEX: function(postfix, index) {return postfix;}
 
+  // TODO: Add new functions.
+
 };
 
 
@@ -144,7 +146,13 @@ sre.Messages.ROLE = {
   'rowvector': '',
   'binomial': '',
   'squarematrix': '',
+  // Sets
+  'set empty': '',
+  'set extended': '',
+  'set singleton': '',
+  'set collection': '',
   // Roles of rows, lines, cells.
+  'label': '',
   'multiline': '',
   'matrix': '',
   'vector': '',
@@ -201,7 +209,8 @@ sre.Messages.REGEXP = {
   TEXT: 'a-zA-Z',
   NUMBER: '',
   DECIMAL_MARK: '',
-  DIGIT_GROUP: ''
+  DIGIT_GROUP: '',
+  JOINER_SUBSUPER: ' '
 };
 
 
@@ -218,4 +227,13 @@ sre.Messages.PLURAL_UNIT = { };
  */
 sre.Messages.PLURAL = function(unit) {
   return (/.*s$/.test(unit)) ? unit : unit + 's';
+};
+
+
+sre.Messages.NUMBERS = {
+  wordOrdinal: function(n) {return n.toString();},
+  simpleOrdinal: function(n) {return n.toString();},
+  numberToWords: function(n) {return n.toString();},
+  numberToOrdinal: function(n, m) {return n.toString();},
+  vulgarSep: '-'
 };

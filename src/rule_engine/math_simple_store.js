@@ -130,6 +130,10 @@ sre.MathCompoundStore = function() {
    */
   this.locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
 
+  /**
+   * @type {string}
+   */
+  this.modality = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY];
 };
 goog.addSingletonGetter(sre.MathCompoundStore);
 
@@ -153,6 +157,7 @@ sre.MathCompoundStore.prototype.defineRules = function(
     store = new sre.MathSimpleStore();
     this.subStores_[str] = store;
   }
+  // TODO: Add modality?
   store.locale = this.locale;
   if (cat) {
     store.category = cat;
@@ -169,6 +174,7 @@ sre.MathCompoundStore.prototype.defineRules = function(
  * @private
  */
 sre.MathCompoundStore.prototype.changeLocale_ = function(json) {
+  // TODO: Add modality check.
   if (!json['locale']) {
     return false;
   }
