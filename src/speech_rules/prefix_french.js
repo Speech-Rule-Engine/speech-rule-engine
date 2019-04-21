@@ -20,9 +20,8 @@
 
 goog.provide('sre.PrefixFrench');
 
-goog.require('sre.DomUtil');
 goog.require('sre.MathStore');
-goog.require('sre.MathspeakUtil');
+goog.require('sre.NumbersUtil');
 
 
 
@@ -35,6 +34,7 @@ sre.PrefixFrench = function() {
   sre.PrefixFrench.base(this, 'constructor');
 
   this.locale = 'fr';
+  this.modality = 'prefix';
 };
 goog.inherits(sre.PrefixFrench, sre.MathStore);
 goog.addSingletonGetter(sre.PrefixFrench);
@@ -64,18 +64,6 @@ sre.PrefixFrench.addCustomString_ = goog.bind(
     sre.PrefixFrench.mathStore.customStrings);
 
 
-/**
- * String function to turn a child position into an ordinal.
- * @param {!Node} node The node for the string function.
- * @return {string} The ordinal string corresponding to the child position of
- *     the node.
- */
-sre.PrefixFrench.ordinalPosition = function(node) {
-  var children = sre.DomUtil.toArray(node.parentNode.childNodes);
-  return sre.MathspeakUtil.simpleOrdinal(children.indexOf(node) + 1).toString();
-};
-
-
 goog.scope(function() {
 var defineRule = sre.PrefixFrench.defineRule_;
 var defineRuleAlias = sre.PrefixFrench.defineRuleAlias_;
@@ -87,9 +75,7 @@ var addCSF = sre.PrefixFrench.addCustomString_;
  * @private
  */
 sre.PrefixFrench.initCustomFunctions_ = function() {
-
-  addCSF('CSFordinalPosition', sre.PrefixFrench.ordinalPosition);
-
+  addCSF('CSFordinalPosition', sre.NumbersUtil.ordinalPosition);
 };
 
 
@@ -99,17 +85,17 @@ sre.PrefixFrench.initCustomFunctions_ = function() {
 */
 sre.PrefixFrench.initPrefixFrench_ = function() {
   defineRule(
-      'numerator', 'prefix.default',
+      'numerator', 'default.default',
       '[t] "numérateur"; [p] (pause:200)',
       'self::*', 'name(../..)="fraction"',
       'count(preceding-sibling::*)=0');
   defineRule(
-      'denominator', 'prefix.default',
+      'denominator', 'default.default',
       '[t] "dénominateur"; [p] (pause:200)',
       'self::*', 'name(../..)="fraction"',
       'count(preceding-sibling::*)=1');
   defineRule(
-      'base', 'prefix.default',
+      'base', 'default.default',
       '[t] "base"; [p] (pause:200)',
       'self::*', 'name(../..)="superscript" or name(../..)="subscript"' +
       ' or name(../..)="overscore" or name(../..)="underscore"' +
@@ -117,111 +103,118 @@ sre.PrefixFrench.initPrefixFrench_ = function() {
       ' or name(../..)="limupper"',
       'count(preceding-sibling::*)=0');
   defineRule( // New Additions
-      'base-limit', 'prefix.default',
+      'base-limit', 'default.default',
       '[t] "base"; [p] (pause:200)',
       'self::*', 'name(../..)="limboth"');
   defineRule(
-      'exponent', 'prefix.default',
+      'exponent', 'default.default',
       '[t] "exposant"; [p] (pause:200)',
       'self::*', 'name(../..)="superscript"',
       'count(preceding-sibling::*)=1');
   defineRule(
-      'subscript', 'prefix.default',
+      'subscript', 'default.default',
       '[t] "indice"; [p] (pause:200)',
       'self::*', 'name(../..)="subscript"',
       'count(preceding-sibling::*)=1');
   defineRule( // NEW additions!
-      'overscript', 'prefix.default',
+      'overscript', 'default.default',
       '[t] "indice suscrit"; [p] (pause:200)',
       'self::*', 'name(../..)="overscore" or name(../..)="limupper" or name(../..)="limboth"',
       'count(preceding-sibling::*)=1 or count(preceding-sibling::*)=2');  // check this final disjunctive constraint
   defineRule( // NEW additions!
-      'underscript', 'prefix.default',
+      'underscript', 'default.default',
       '[t] "indice souscrit"; [p] (pause:200)',
       'self::*', 'name(../..)="underscore" or name(../..)="limlower" or name(../..)="limboth"',
       'count(preceding-sibling::*)=1');
   defineRule(
-      'radicand', 'prefix.default',
+      'radicand', 'default.default',
       '[t] "radicande"; [p] (pause:200)',
       'self::*', 'name(../..)="sqrt"');
   defineRule(
-      'radicand', 'prefix.default',
+      'radicand', 'default.default',
       '[t] "radicande"; [p] (pause:200)',
       'self::*', 'name(../..)="root"',
       'count(preceding-sibling::*)=1');
   defineRule(
-      'index', 'prefix.default',
+      'index', 'default.default',
       '[t] "indice"; [p] (pause:200)',
       'self::*', 'name(../..)="root"',
       'count(preceding-sibling::*)=0');
   defineRule(
-      'leftsub', 'prefix.default',
+      'leftsub', 'default.default',
       '[t] "indice inférieur gauche"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
       '@role="leftsub"');
   defineRule(
-      'leftsub', 'prefix.default',
-      '[t] CSFordinalPosition; [t] "indice inférieur gauche"; [p] (pause:200)',
+      'leftsub', 'default.default',
+      '[t] CSFordinalPosition (grammar:gender="male");' +
+      ' [t] "indice inférieur gauche"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
       '../../@role="leftsub"');
   defineRule(
-      'leftsuper', 'prefix.default',
+      'leftsuper', 'default.default',
       '[t] "indice supérieur gauche"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
       '@role="leftsuper"');
   defineRule(
-      'leftsuper', 'prefix.default',
-      '[t] CSFordinalPosition; [t] "indice supérieur gauche"; [p] (pause:200)',
+      'leftsuper', 'default.default',
+      '[t] CSFordinalPosition (grammar:gender="male");' +
+      ' [t] "indice supérieur gauche"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
       '../../@role="leftsuper"');
   defineRule(
-      'rightsub', 'prefix.default',
+      'rightsub', 'default.default',
       '[t] "indice inférieur droite"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
       '@role="rightsub"');
   defineRule(
-      'rightsub', 'prefix.default',
-      '[t] CSFordinalPosition; [t] "indice inférieur droite"; [p] (pause:200)',
+      'rightsub', 'default.default',
+      '[t] CSFordinalPosition (grammar:gender="male");' +
+      ' [t] "indice inférieur droite"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
       '../../@role="rightsub"');
   defineRule(
-      'rightsuper', 'prefix.default',
+      'rightsuper', 'default.default',
       '[t] "indice supérieur droite"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
       '@role="rightsuper"');
   defineRule(
-      'rightsuper', 'prefix.default',
-      '[t] CSFordinalPosition; [t] "indice supérieur droite"; [p] (pause:200)',
+      'rightsuper', 'default.default',
+      '[t] CSFordinalPosition (grammar:gender="male");' +
+      ' [t] "indice supérieur droite"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
       '../../@role="rightsuper"');
   defineRule(
-      'choice', 'prefix.default',
+      'choice', 'default.default',
       '[t] "nombre d\'éléments choisis"; [p] (pause:200)',
       'self::line', '@role="binomial"', 'parent::*/parent::vector',
       'count(preceding-sibling::*)=1');
   defineRule(
-      'select', 'prefix.default',
+      'select', 'default.default',
       '[t] "nombre d\'éléments disponibles"; [p] (pause:200)',
       'self::line', '@role="binomial"', 'parent::*/parent::vector',
       'count(preceding-sibling::*)=0');
 
   // Positions in tables
   defineRule(
-      'row', 'prefix.default',
-      '[t] CSFordinalPosition; [t] "rangée"; [p] (pause:200)',
+      'row', 'default.default',
+      '[t] CSFordinalPosition (grammar:gender="female");' +
+      ' [t] "rangée"; [p] (pause:200)',
       'self::row'
   );
   defineRuleAlias(
       'row', 'self::line'
   );
   defineRule(
-      'cell', 'prefix.default',
-      '[n] ../..; [t] CSFordinalPosition; [t] "colonne"; [p] (pause:200)',
+      'cell', 'default.default',
+      '[n] ../..; [t] CSFordinalPosition (grammar:gender="female"); ' +
+      '[t] "colonne"; [p] (pause:200)',
       'self::cell', 'contains(@grammar,"depth")'
   );
   defineRule(
-      'cell', 'prefix.default',
-      '[t] CSFordinalPosition; [t] "colonne"; [p] (pause:200)',
+      'cell', 'default.default',
+      '[t] CSFordinalPosition (grammar:gender="female"); ' +
+      '[t] "colonne"; [p] (pause:200)',
       'self::cell'
   );
 };
@@ -233,8 +226,3 @@ sre.PrefixFrench.getInstance().initializer = [
   sre.PrefixFrench.initCustomFunctions_,
   sre.PrefixFrench.initPrefixFrench_
 ];
-
-// TODO: Brief rules for indices:
-// IndInfDroit, IndInfGauche, IndSupDroit, IndSupGauche,
-//
-

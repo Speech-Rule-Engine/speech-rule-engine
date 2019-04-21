@@ -6,7 +6,7 @@
     "key": "1D6E2",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique italique alpha"
+        "default": "Alpha majuscule en italique"
       }
     },
     "category": "Lu"
@@ -15,7 +15,7 @@
     "key": "1D6E3",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique italique bêta"
+        "default": "Bêta majuscule en italique"
       }
     },
     "category": "Lu"
@@ -24,7 +24,7 @@
     "key": "1D6E4",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique italique gamma"
+        "default": "Gamma majuscule en italique"
       }
     },
     "category": "Lu"
@@ -33,7 +33,7 @@
     "key": "1D6E5",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique italique delta"
+        "default": "Delta majuscule en italique"
       }
     },
     "category": "Lu"
@@ -42,7 +42,7 @@
     "key": "1D6E6",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique italique epsilon"
+        "default": "Epsilon majuscule en italique"
       }
     },
     "category": "Lu"
@@ -51,7 +51,7 @@
     "key": "1D6E7",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique italique dzêta"
+        "default": "Dzêta majuscule en italique"
       }
     },
     "category": "Lu"
@@ -60,7 +60,7 @@
     "key": "1D6E8",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique italique êta"
+        "default": "Êta majuscule en italique"
       }
     },
     "category": "Lu"
@@ -69,7 +69,7 @@
     "key": "1D6E9",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique italique thêta"
+        "default": "Thêta majuscule en italique"
       }
     },
     "category": "Lu"
@@ -78,7 +78,7 @@
     "key": "1D6EA",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique italique iota"
+        "default": "Iota majuscule en italique"
       }
     },
     "category": "Lu"
@@ -87,7 +87,7 @@
     "key": "1D6EB",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique italique kappa"
+        "default": "Kappa majuscule en italique"
       }
     },
     "category": "Lu"
@@ -96,7 +96,7 @@
     "key": "1D6EC",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique italique lambda"
+        "default": "Lambda majuscule en italique"
       }
     },
     "category": "Lu"
@@ -105,7 +105,7 @@
     "key": "1D6ED",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique italique mu"
+        "default": "Mu majuscule en italique"
       }
     },
     "category": "Lu"
@@ -114,7 +114,7 @@
     "key": "1D6EE",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique italique nu"
+        "default": "Nu majuscule en italique"
       }
     },
     "category": "Lu"
@@ -123,7 +123,7 @@
     "key": "1D6EF",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique italique xi"
+        "default": "Xi majuscule en italique"
       }
     },
     "category": "Lu"
@@ -132,7 +132,7 @@
     "key": "1D6F0",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique italique omicron"
+        "default": "Omicron majuscule en italique"
       }
     },
     "category": "Lu"
@@ -141,7 +141,7 @@
     "key": "1D6F1",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique italique pi"
+        "default": "Pi majuscule en italique"
       }
     },
     "category": "Lu"
@@ -150,7 +150,7 @@
     "key": "1D6F2",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique italique rhô"
+        "default": "Rhô majuscule en italique"
       }
     },
     "category": "Lu"
@@ -159,7 +159,7 @@
     "key": "1D6F4",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique italique sigma"
+        "default": "Sigma majuscule en italique"
       }
     },
     "category": "Lu"
@@ -168,7 +168,7 @@
     "key": "1D6F5",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique italique tau"
+        "default": "Tau majuscule en italique"
       }
     },
     "category": "Lu"
@@ -177,7 +177,7 @@
     "key": "1D6F6",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique italique upsilon"
+        "default": "Upsilon majuscule en italique"
       }
     },
     "category": "Lu"
@@ -186,7 +186,7 @@
     "key": "1D6F7",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique italique phi"
+        "default": "Phi majuscule en italique"
       }
     },
     "category": "Lu"
@@ -195,7 +195,7 @@
     "key": "1D6F8",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique italique chi"
+        "default": "Chi majuscule en italique"
       }
     },
     "category": "Lu"
@@ -204,7 +204,7 @@
     "key": "1D6F9",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique italique psi"
+        "default": "Psi majuscule en italique"
       }
     },
     "category": "Lu"
@@ -213,7 +213,7 @@
     "key": "1D6FA",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique italique oméga"
+        "default": "Oméga majuscule en italique"
       }
     },
     "category": "Lu"
@@ -222,7 +222,7 @@
     "key": "1D6FC",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique italique alpha"
+        "default": "alpha en italique"
       }
     },
     "category": "Ll"
@@ -231,7 +231,7 @@
     "key": "1D6FD",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique italique bêta"
+        "default": "bêta en italique"
       }
     },
     "category": "Ll"
@@ -240,7 +240,7 @@
     "key": "1D6FE",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique italique gamma"
+        "default": "gamma en italique"
       }
     },
     "category": "Ll"
@@ -249,7 +249,7 @@
     "key": "1D6FF",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique italique delta"
+        "default": "delta en italique"
       }
     },
     "category": "Ll"
@@ -258,7 +258,7 @@
     "key": "1D700",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique italique epsilon"
+        "default": "epsilon en italique"
       }
     },
     "category": "Ll"
@@ -267,7 +267,7 @@
     "key": "1D701",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique italique dzêta"
+        "default": "dzêta en italique"
       }
     },
     "category": "Ll"
@@ -276,7 +276,7 @@
     "key": "1D702",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique italique êta"
+        "default": "êta en italique"
       }
     },
     "category": "Ll"
@@ -285,7 +285,7 @@
     "key": "1D703",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique italique thêta"
+        "default": "thêta en italique"
       }
     },
     "category": "Ll"
@@ -294,7 +294,7 @@
     "key": "1D704",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique italique iota"
+        "default": "iota en italique"
       }
     },
     "category": "Ll"
@@ -303,7 +303,7 @@
     "key": "1D705",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique italique kappa"
+        "default": "kappa en italique"
       }
     },
     "category": "Ll"
@@ -312,7 +312,7 @@
     "key": "1D706",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique italique lambda"
+        "default": "lambda en italique"
       }
     },
     "category": "Ll"
@@ -321,7 +321,7 @@
     "key": "1D707",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique italique mu"
+        "default": "mu en italique"
       }
     },
     "category": "Ll"
@@ -330,7 +330,7 @@
     "key": "1D708",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique italique nu"
+        "default": "nu en italique"
       }
     },
     "category": "Ll"
@@ -339,7 +339,7 @@
     "key": "1D709",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique italique xi"
+        "default": "xi en italique"
       }
     },
     "category": "Ll"
@@ -348,7 +348,7 @@
     "key": "1D70A",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique italique omicron"
+        "default": "omicron en italique"
       }
     },
     "category": "Ll"
@@ -357,7 +357,7 @@
     "key": "1D70B",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique italique pi"
+        "default": "pi en italique"
       }
     },
     "category": "Ll"
@@ -366,7 +366,7 @@
     "key": "1D70C",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique italique rhô"
+        "default": "rhô en italique"
       }
     },
     "category": "Ll"
@@ -375,7 +375,7 @@
     "key": "1D70D",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique italique sigma final"
+        "default": "mathématique italique sigma final"
       }
     },
     "category": "Ll"
@@ -384,7 +384,7 @@
     "key": "1D70E",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique italique sigma"
+        "default": "sigma en italique"
       }
     },
     "category": "Ll"
@@ -393,7 +393,7 @@
     "key": "1D70F",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique italique tau"
+        "default": "tau en italique"
       }
     },
     "category": "Ll"
@@ -402,7 +402,7 @@
     "key": "1D710",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique italique upsilon"
+        "default": "upsilon en italique"
       }
     },
     "category": "Ll"
@@ -411,7 +411,7 @@
     "key": "1D711",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique italique phi"
+        "default": "phi en italique"
       }
     },
     "category": "Ll"
@@ -420,7 +420,7 @@
     "key": "1D712",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique italique chi"
+        "default": "chi en italique"
       }
     },
     "category": "Ll"
@@ -429,7 +429,7 @@
     "key": "1D713",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique italique psi"
+        "default": "psi en italique"
       }
     },
     "category": "Ll"
@@ -438,7 +438,7 @@
     "key": "1D714",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique italique oméga"
+        "default": "oméga en italique"
       }
     },
     "category": "Ll"

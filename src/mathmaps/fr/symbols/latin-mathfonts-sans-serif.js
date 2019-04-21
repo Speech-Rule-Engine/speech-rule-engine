@@ -6,7 +6,7 @@
     "key": "1D5A0",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique sans empattement a"
+        "default": "A majuscule en sans empattement"
       }
     },
     "category": "Lu"
@@ -15,7 +15,7 @@
     "key": "1D5A1",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique sans empattement b"
+        "default": "B majuscule en sans empattement"
       }
     },
     "category": "Lu"
@@ -24,7 +24,7 @@
     "key": "1D5A2",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique sans empattement c"
+        "default": "C majuscule en sans empattement"
       }
     },
     "category": "Lu"
@@ -33,7 +33,7 @@
     "key": "1D5A3",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique sans empattement d"
+        "default": "D majuscule en sans empattement"
       }
     },
     "category": "Lu"
@@ -42,7 +42,7 @@
     "key": "1D5A4",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique sans empattement e"
+        "default": "E majuscule en sans empattement"
       }
     },
     "category": "Lu"
@@ -51,7 +51,7 @@
     "key": "1D5A5",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique sans empattement f"
+        "default": "F majuscule en sans empattement"
       }
     },
     "category": "Lu"
@@ -60,7 +60,7 @@
     "key": "1D5A6",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique sans empattement g"
+        "default": "G majuscule en sans empattement"
       }
     },
     "category": "Lu"
@@ -69,7 +69,7 @@
     "key": "1D5A7",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique sans empattement h"
+        "default": "H majuscule en sans empattement"
       }
     },
     "category": "Lu"
@@ -78,7 +78,7 @@
     "key": "1D5A8",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique sans empattement i"
+        "default": "I majuscule en sans empattement"
       }
     },
     "category": "Lu"
@@ -87,7 +87,7 @@
     "key": "1D5A9",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique sans empattement j"
+        "default": "J majuscule en sans empattement"
       }
     },
     "category": "Lu"
@@ -96,7 +96,7 @@
     "key": "1D5AA",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique sans empattement k"
+        "default": "K majuscule en sans empattement"
       }
     },
     "category": "Lu"
@@ -105,7 +105,7 @@
     "key": "1D5AB",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique sans empattement l"
+        "default": "L majuscule en sans empattement"
       }
     },
     "category": "Lu"
@@ -114,7 +114,7 @@
     "key": "1D5AC",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique sans empattement m"
+        "default": "M majuscule en sans empattement"
       }
     },
     "category": "Lu"
@@ -123,7 +123,7 @@
     "key": "1D5AD",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique sans empattement n"
+        "default": "N majuscule en sans empattement"
       }
     },
     "category": "Lu"
@@ -132,7 +132,7 @@
     "key": "1D5AE",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique sans empattement o"
+        "default": "O majuscule en sans empattement"
       }
     },
     "category": "Lu"
@@ -141,7 +141,7 @@
     "key": "1D5AF",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique sans empattement p"
+        "default": "P majuscule en sans empattement"
       }
     },
     "category": "Lu"
@@ -150,7 +150,7 @@
     "key": "1D5B0",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique sans empattement q"
+        "default": "Q majuscule en sans empattement"
       }
     },
     "category": "Lu"
@@ -159,7 +159,7 @@
     "key": "1D5B1",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique sans empattement r"
+        "default": "R majuscule en sans empattement"
       }
     },
     "category": "Lu"
@@ -168,7 +168,7 @@
     "key": "1D5B2",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique sans empattement s"
+        "default": "S majuscule en sans empattement"
       }
     },
     "category": "Lu"
@@ -177,7 +177,7 @@
     "key": "1D5B3",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique sans empattement t"
+        "default": "T majuscule en sans empattement"
       }
     },
     "category": "Lu"
@@ -186,7 +186,7 @@
     "key": "1D5B4",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique sans empattement u"
+        "default": "U majuscule en sans empattement"
       }
     },
     "category": "Lu"
@@ -195,7 +195,7 @@
     "key": "1D5B5",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique sans empattement v"
+        "default": "V majuscule en sans empattement"
       }
     },
     "category": "Lu"
@@ -204,7 +204,7 @@
     "key": "1D5B6",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique sans empattement w"
+        "default": "W majuscule en sans empattement"
       }
     },
     "category": "Lu"
@@ -213,7 +213,7 @@
     "key": "1D5B7",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique sans empattement x"
+        "default": "X majuscule en sans empattement"
       }
     },
     "category": "Lu"
@@ -222,7 +222,7 @@
     "key": "1D5B8",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique sans empattement y"
+        "default": "Y majuscule en sans empattement"
       }
     },
     "category": "Lu"
@@ -231,7 +231,7 @@
     "key": "1D5B9",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique sans empattement z"
+        "default": "Z majuscule en sans empattement"
       }
     },
     "category": "Lu"
@@ -240,7 +240,7 @@
     "key": "1D5BA",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique sans empattement a"
+        "default": "a en sans empattement"
       }
     },
     "category": "Ll"
@@ -249,7 +249,7 @@
     "key": "1D5BB",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique sans empattement b"
+        "default": "b en sans empattement"
       }
     },
     "category": "Ll"
@@ -258,7 +258,7 @@
     "key": "1D5BC",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique sans empattement c"
+        "default": "c en sans empattement"
       }
     },
     "category": "Ll"
@@ -267,7 +267,7 @@
     "key": "1D5BD",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique sans empattement d"
+        "default": "d en sans empattement"
       }
     },
     "category": "Ll"
@@ -276,7 +276,7 @@
     "key": "1D5BE",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique sans empattement e"
+        "default": "e en sans empattement"
       }
     },
     "category": "Ll"
@@ -285,7 +285,7 @@
     "key": "1D5BF",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique sans empattement f"
+        "default": "f en sans empattement"
       }
     },
     "category": "Ll"
@@ -294,7 +294,7 @@
     "key": "1D5C0",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique sans empattement g"
+        "default": "g en sans empattement"
       }
     },
     "category": "Ll"
@@ -303,7 +303,7 @@
     "key": "1D5C1",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique sans empattement h"
+        "default": "h en sans empattement"
       }
     },
     "category": "Ll"
@@ -312,7 +312,7 @@
     "key": "1D5C2",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique sans empattement i"
+        "default": "i en sans empattement"
       }
     },
     "category": "Ll"
@@ -321,7 +321,7 @@
     "key": "1D5C3",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique sans empattement j"
+        "default": "j en sans empattement"
       }
     },
     "category": "Ll"
@@ -330,7 +330,7 @@
     "key": "1D5C4",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique sans empattement k"
+        "default": "k en sans empattement"
       }
     },
     "category": "Ll"
@@ -339,7 +339,7 @@
     "key": "1D5C5",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique sans empattement l"
+        "default": "l en sans empattement"
       }
     },
     "category": "Ll"
@@ -348,7 +348,7 @@
     "key": "1D5C6",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique sans empattement m"
+        "default": "m en sans empattement"
       }
     },
     "category": "Ll"
@@ -357,7 +357,7 @@
     "key": "1D5C7",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique sans empattement n"
+        "default": "n en sans empattement"
       }
     },
     "category": "Ll"
@@ -366,7 +366,7 @@
     "key": "1D5C8",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique sans empattement o"
+        "default": "o en sans empattement"
       }
     },
     "category": "Ll"
@@ -375,7 +375,7 @@
     "key": "1D5C9",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique sans empattement p"
+        "default": "p en sans empattement"
       }
     },
     "category": "Ll"
@@ -384,7 +384,7 @@
     "key": "1D5CA",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique sans empattement q"
+        "default": "q en sans empattement"
       }
     },
     "category": "Ll"
@@ -393,7 +393,7 @@
     "key": "1D5CB",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique sans empattement r"
+        "default": "r en sans empattement"
       }
     },
     "category": "Ll"
@@ -402,7 +402,7 @@
     "key": "1D5CC",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique sans empattement s"
+        "default": "s en sans empattement"
       }
     },
     "category": "Ll"
@@ -411,7 +411,7 @@
     "key": "1D5CD",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique sans empattement t"
+        "default": "t en sans empattement"
       }
     },
     "category": "Ll"
@@ -420,7 +420,7 @@
     "key": "1D5CE",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique sans empattement u"
+        "default": "u en sans empattement"
       }
     },
     "category": "Ll"
@@ -429,7 +429,7 @@
     "key": "1D5CF",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique sans empattement v"
+        "default": "v en sans empattement"
       }
     },
     "category": "Ll"
@@ -438,7 +438,7 @@
     "key": "1D5D0",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique sans empattement w"
+        "default": "w en sans empattement"
       }
     },
     "category": "Ll"
@@ -447,7 +447,7 @@
     "key": "1D5D1",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique sans empattement x"
+        "default": "x en sans empattement"
       }
     },
     "category": "Ll"
@@ -456,7 +456,7 @@
     "key": "1D5D2",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique sans empattement y"
+        "default": "y en sans empattement"
       }
     },
     "category": "Ll"
@@ -465,7 +465,7 @@
     "key": "1D5D3",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique sans empattement z"
+        "default": "z en sans empattement"
       }
     },
     "category": "Ll"

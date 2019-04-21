@@ -28,8 +28,6 @@ fs.writeFile = function(name, data, callback) { };
 fs.appendFileSync = function(name, data) { };
 fs.openSync = function(name, parameters) { };
 fs.createWriteStream = function(name) { };
-var xm;
-xm.tojson = function(xml) { };
 
 
 /**

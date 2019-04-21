@@ -6,7 +6,7 @@
     "key": "1D6A8",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse alpha"
+        "default": "Alpha majuscule en gras"
       }
     },
     "category": "Lu"
@@ -15,7 +15,7 @@
     "key": "1D6A9",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse bêta"
+        "default": "Bêta majuscule en gras"
       }
     },
     "category": "Lu"
@@ -24,7 +24,7 @@
     "key": "1D6AA",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse gamma"
+        "default": "Gamma majuscule en gras"
       }
     },
     "category": "Lu"
@@ -33,7 +33,7 @@
     "key": "1D6AB",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse delta"
+        "default": "Delta majuscule en gras"
       }
     },
     "category": "Lu"
@@ -42,7 +42,7 @@
     "key": "1D6AC",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse epsilon"
+        "default": "Epsilon majuscule en gras"
       }
     },
     "category": "Lu"
@@ -51,7 +51,7 @@
     "key": "1D6AD",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse dzêta"
+        "default": "Dzêta majuscule en gras"
       }
     },
     "category": "Lu"
@@ -60,7 +60,7 @@
     "key": "1D6AE",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse êta"
+        "default": "Êta majuscule en gras"
       }
     },
     "category": "Lu"
@@ -69,7 +69,7 @@
     "key": "1D6AF",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse thêta"
+        "default": "Thêta majuscule en gras"
       }
     },
     "category": "Lu"
@@ -78,7 +78,7 @@
     "key": "1D6B0",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse iota"
+        "default": "Iota majuscule en gras"
       }
     },
     "category": "Lu"
@@ -87,7 +87,7 @@
     "key": "1D6B1",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse kappa"
+        "default": "Kappa majuscule en gras"
       }
     },
     "category": "Lu"
@@ -96,7 +96,7 @@
     "key": "1D6B2",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse lambda"
+        "default": "Lambda majuscule en gras"
       }
     },
     "category": "Lu"
@@ -105,7 +105,7 @@
     "key": "1D6B3",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse mu"
+        "default": "Mu majuscule en gras"
       }
     },
     "category": "Lu"
@@ -114,7 +114,7 @@
     "key": "1D6B4",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse nu"
+        "default": "Nu majuscule en gras"
       }
     },
     "category": "Lu"
@@ -123,7 +123,7 @@
     "key": "1D6B5",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse xi"
+        "default": "Xi majuscule en gras"
       }
     },
     "category": "Lu"
@@ -132,7 +132,7 @@
     "key": "1D6B6",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse omicron"
+        "default": "Omicron majuscule en gras"
       }
     },
     "category": "Lu"
@@ -141,7 +141,7 @@
     "key": "1D6B7",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse pi"
+        "default": "Pi majuscule en gras"
       }
     },
     "category": "Lu"
@@ -150,7 +150,7 @@
     "key": "1D6B8",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse rhô"
+        "default": "Rhô majuscule en gras"
       }
     },
     "category": "Lu"
@@ -159,7 +159,7 @@
     "key": "1D6BA",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sigma"
+        "default": "Sigma majuscule en gras"
       }
     },
     "category": "Lu"
@@ -168,7 +168,7 @@
     "key": "1D6BB",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse tau"
+        "default": "Tau majuscule en gras"
       }
     },
     "category": "Lu"
@@ -177,7 +177,7 @@
     "key": "1D6BC",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse upsilon"
+        "default": "Upsilon majuscule en gras"
       }
     },
     "category": "Lu"
@@ -186,7 +186,7 @@
     "key": "1D6BD",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse phi"
+        "default": "Phi majuscule en gras"
       }
     },
     "category": "Lu"
@@ -195,7 +195,7 @@
     "key": "1D6BE",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse chi"
+        "default": "Chi majuscule en gras"
       }
     },
     "category": "Lu"
@@ -204,7 +204,7 @@
     "key": "1D6BF",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse psi"
+        "default": "Psi majuscule en gras"
       }
     },
     "category": "Lu"
@@ -213,7 +213,7 @@
     "key": "1D6C0",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse oméga"
+        "default": "Oméga majuscule en gras"
       }
     },
     "category": "Lu"
@@ -222,7 +222,7 @@
     "key": "1D6C2",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse alpha"
+        "default": "alpha en gras"
       }
     },
     "category": "Ll"
@@ -231,7 +231,7 @@
     "key": "1D6C3",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse bêta"
+        "default": "bêta en gras"
       }
     },
     "category": "Ll"
@@ -240,7 +240,7 @@
     "key": "1D6C4",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse gamma"
+        "default": "gamma en gras"
       }
     },
     "category": "Ll"
@@ -249,7 +249,7 @@
     "key": "1D6C5",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse delta"
+        "default": "delta en gras"
       }
     },
     "category": "Ll"
@@ -258,7 +258,7 @@
     "key": "1D6C6",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse epsilon"
+        "default": "epsilon en gras"
       }
     },
     "category": "Ll"
@@ -267,7 +267,7 @@
     "key": "1D6C7",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse dzêta"
+        "default": "dzêta en gras"
       }
     },
     "category": "Ll"
@@ -276,7 +276,7 @@
     "key": "1D6C8",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse êta"
+        "default": "êta en gras"
       }
     },
     "category": "Ll"
@@ -285,7 +285,7 @@
     "key": "1D6C9",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse thêta"
+        "default": "thêta en gras"
       }
     },
     "category": "Ll"
@@ -294,7 +294,7 @@
     "key": "1D6CA",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse iota"
+        "default": "iota en gras"
       }
     },
     "category": "Ll"
@@ -303,7 +303,7 @@
     "key": "1D6CB",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse kappa"
+        "default": "kappa en gras"
       }
     },
     "category": "Ll"
@@ -312,7 +312,7 @@
     "key": "1D6CC",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse lambda"
+        "default": "lambda en gras"
       }
     },
     "category": "Ll"
@@ -321,7 +321,7 @@
     "key": "1D6CD",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse mu"
+        "default": "mu en gras"
       }
     },
     "category": "Ll"
@@ -330,7 +330,7 @@
     "key": "1D6CE",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse nu"
+        "default": "nu en gras"
       }
     },
     "category": "Ll"
@@ -339,7 +339,7 @@
     "key": "1D6CF",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse xi"
+        "default": "xi en gras"
       }
     },
     "category": "Ll"
@@ -348,7 +348,7 @@
     "key": "1D6D0",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse omicron"
+        "default": "omicron en gras"
       }
     },
     "category": "Ll"
@@ -357,7 +357,7 @@
     "key": "1D6D1",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse pi"
+        "default": "pi en gras"
       }
     },
     "category": "Ll"
@@ -366,7 +366,7 @@
     "key": "1D6D2",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse rhô"
+        "default": "rhô en gras"
       }
     },
     "category": "Ll"
@@ -375,7 +375,7 @@
     "key": "1D6D3",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sigma final"
+        "default": "mathématique grasse sigma final"
       }
     },
     "category": "Ll"
@@ -384,7 +384,7 @@
     "key": "1D6D4",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sigma"
+        "default": "sigma en gras"
       }
     },
     "category": "Ll"
@@ -393,7 +393,7 @@
     "key": "1D6D5",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse tau"
+        "default": "tau en gras"
       }
     },
     "category": "Ll"
@@ -402,7 +402,7 @@
     "key": "1D6D6",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse upsilon"
+        "default": "upsilon en gras"
       }
     },
     "category": "Ll"
@@ -411,7 +411,7 @@
     "key": "1D6D7",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse phi"
+        "default": "phi en gras"
       }
     },
     "category": "Ll"
@@ -420,7 +420,7 @@
     "key": "1D6D8",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse chi"
+        "default": "chi en gras"
       }
     },
     "category": "Ll"
@@ -429,7 +429,7 @@
     "key": "1D6D9",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse psi"
+        "default": "psi en gras"
       }
     },
     "category": "Ll"
@@ -438,7 +438,7 @@
     "key": "1D6DA",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse oméga"
+        "default": "oméga en gras"
       }
     },
     "category": "Ll"

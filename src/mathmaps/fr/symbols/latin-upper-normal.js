@@ -6,7 +6,7 @@
     "key": "0041",
     "mappings": {
       "default": {
-        "default": "a majuscule"
+        "default": "A majuscule"
       }
     },
     "category": "Lu"
@@ -15,7 +15,7 @@
     "key": "0042",
     "mappings": {
       "default": {
-        "default": "b majuscule"
+        "default": "B majuscule"
       }
     },
     "category": "Lu"
@@ -24,7 +24,7 @@
     "key": "0043",
     "mappings": {
       "default": {
-        "default": "c majuscule"
+        "default": "C majuscule"
       }
     },
     "category": "Lu"
@@ -33,7 +33,7 @@
     "key": "0044",
     "mappings": {
       "default": {
-        "default": "d majuscule"
+        "default": "D majuscule"
       }
     },
     "category": "Lu"
@@ -42,7 +42,7 @@
     "key": "0045",
     "mappings": {
       "default": {
-        "default": "e majuscule"
+        "default": "E majuscule"
       }
     },
     "category": "Lu"
@@ -51,7 +51,7 @@
     "key": "0046",
     "mappings": {
       "default": {
-        "default": "f majuscule"
+        "default": "F majuscule"
       }
     },
     "category": "Lu"
@@ -60,7 +60,7 @@
     "key": "0047",
     "mappings": {
       "default": {
-        "default": "g majuscule"
+        "default": "G majuscule"
       }
     },
     "category": "Lu"
@@ -69,7 +69,7 @@
     "key": "0048",
     "mappings": {
       "default": {
-        "default": "h majuscule"
+        "default": "H majuscule"
       }
     },
     "category": "Lu"
@@ -78,7 +78,7 @@
     "key": "0049",
     "mappings": {
       "default": {
-        "default": "i majuscule"
+        "default": "I majuscule"
       }
     },
     "category": "Lu"
@@ -87,7 +87,7 @@
     "key": "004A",
     "mappings": {
       "default": {
-        "default": "j majuscule"
+        "default": "J majuscule"
       }
     },
     "category": "Lu"
@@ -96,7 +96,7 @@
     "key": "004B",
     "mappings": {
       "default": {
-        "default": "k majuscule"
+        "default": "K majuscule"
       }
     },
     "category": "Lu"
@@ -105,7 +105,7 @@
     "key": "004C",
     "mappings": {
       "default": {
-        "default": "l majuscule"
+        "default": "L majuscule"
       }
     },
     "category": "Lu"
@@ -114,7 +114,7 @@
     "key": "004D",
     "mappings": {
       "default": {
-        "default": "m majuscule"
+        "default": "M majuscule"
       }
     },
     "category": "Lu"
@@ -123,7 +123,7 @@
     "key": "004E",
     "mappings": {
       "default": {
-        "default": "n majuscule"
+        "default": "N majuscule"
       }
     },
     "category": "Lu"
@@ -132,7 +132,7 @@
     "key": "004F",
     "mappings": {
       "default": {
-        "default": "o majuscule"
+        "default": "O majuscule"
       }
     },
     "category": "Lu"
@@ -141,7 +141,7 @@
     "key": "0050",
     "mappings": {
       "default": {
-        "default": "p majuscule"
+        "default": "P majuscule"
       }
     },
     "category": "Lu"
@@ -150,7 +150,7 @@
     "key": "0051",
     "mappings": {
       "default": {
-        "default": "q majuscule"
+        "default": "Q majuscule"
       }
     },
     "category": "Lu"
@@ -159,7 +159,7 @@
     "key": "0052",
     "mappings": {
       "default": {
-        "default": "r majuscule"
+        "default": "R majuscule"
       }
     },
     "category": "Lu"
@@ -168,7 +168,7 @@
     "key": "0053",
     "mappings": {
       "default": {
-        "default": "s majuscule"
+        "default": "S majuscule"
       }
     },
     "category": "Lu"
@@ -177,7 +177,7 @@
     "key": "0054",
     "mappings": {
       "default": {
-        "default": "t majuscule"
+        "default": "T majuscule"
       }
     },
     "category": "Lu"
@@ -186,7 +186,7 @@
     "key": "0055",
     "mappings": {
       "default": {
-        "default": "u majuscule"
+        "default": "U majuscule"
       }
     },
     "category": "Lu"
@@ -195,7 +195,7 @@
     "key": "0056",
     "mappings": {
       "default": {
-        "default": "v majuscule"
+        "default": "V majuscule"
       }
     },
     "category": "Lu"
@@ -204,7 +204,7 @@
     "key": "0057",
     "mappings": {
       "default": {
-        "default": "w majuscule"
+        "default": "W majuscule"
       }
     },
     "category": "Lu"
@@ -213,7 +213,7 @@
     "key": "0058",
     "mappings": {
       "default": {
-        "default": "x majuscule"
+        "default": "X majuscule"
       }
     },
     "category": "Lu"
@@ -222,7 +222,7 @@
     "key": "0059",
     "mappings": {
       "default": {
-        "default": "y majuscule"
+        "default": "Y majuscule"
       }
     },
     "category": "Lu"
@@ -231,7 +231,7 @@
     "key": "005A",
     "mappings": {
       "default": {
-        "default": "z majuscule"
+        "default": "Z majuscule"
       }
     },
     "category": "Lu"

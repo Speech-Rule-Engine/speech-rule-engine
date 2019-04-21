@@ -112,7 +112,7 @@ sre.MathspeakFrench.initCustomFunctions_ = function() {
   addCSF('CSFopenFracSbrief', sre.MathspeakUtil.openingFractionSbrief);
   addCSF('CSFcloseFracSbrief', sre.MathspeakUtil.closingFractionSbrief);
   addCSF('CSFoverFracSbrief', sre.MathspeakUtil.overFractionSbrief);
-  addCSF('CSFvulgarFraction', sre.MathspeakFrenchUtil.vulgarFraction);
+  addCSF('CSFvulgarFrFraction', sre.NumbersUtil.vulgarFraction);
   addCQF('CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction);
 
   // Radical function.
@@ -136,19 +136,19 @@ sre.MathspeakFrench.initCustomFunctions_ = function() {
   // Tensor specific:
   addCSF('CSFleftsuperscriptVerbose', sre.MathspeakFrenchUtil.leftSuperscriptVerbose);
   addCSF('CSFleftsubscriptVerbose', sre.MathspeakFrenchUtil.leftSubscriptVerbose);
-  addCSF('CSFrightsuperscriptVerbose', sre.MathspeakFrenchUtil.rightSuperscriptVerbose);
-  addCSF('CSFrightsubscriptVerbose', sre.MathspeakFrenchUtil.rightSubscriptVerbose);
+  addCSF('CSFrightsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose);
+  addCSF('CSFrightsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose);
   addCSF('CSFleftsuperscriptBrief', sre.MathspeakFrenchUtil.leftSuperscriptBrief);
   addCSF('CSFleftsubscriptBrief', sre.MathspeakFrenchUtil.leftSubscriptBrief);
-  addCSF('CSFrightsuperscriptBrief', sre.MathspeakFrenchUtil.rightSuperscriptBrief);
-  addCSF('CSFrightsubscriptBrief', sre.MathspeakFrenchUtil.rightSubscriptBrief);
+  addCSF('CSFrightsuperscriptBrief', sre.MathspeakUtil.superscriptBrief);
+  addCSF('CSFrightsubscriptBrief', sre.MathspeakUtil.subscriptBrief);
 
-  
+
   // Over- Underscore.
   addCSF('CSFunderscript', sre.MathspeakUtil.nestedUnderscore);
   addCSF('CSFoverscript', sre.MathspeakUtil.nestedOverscore);
 
-  addCTXF('CTXFordinalCounter', sre.MathspeakFrenchUtil.ordinalCounter);
+  addCTXF('CTXFordinalCounter', sre.NumbersUtil.ordinalCounter);
   addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
 
   // Layout related.
@@ -167,6 +167,17 @@ sre.MathspeakFrench.initCustomFunctions_ = function() {
  * @private
 */
 sre.MathspeakFrench.initMathspeakFrench_ = function() {
+  defineRule(
+      'collapsed', 'mathspeak.default',
+      '[n] . (engine:modality=summary,grammar:collapsed)',
+      'self::*', '@alternative', 'not(contains(@grammar, "collapsed"))',
+      'self::*', 'self::*', 'self::*', 'self::*', 'self::*'
+  );
+  defineSpecialisedRule(
+      'collapsed', 'mathspeak.default', 'mathspeak.brief');
+  defineSpecialisedRule(
+      'collapsed', 'mathspeak.brief', 'mathspeak.sbrief');
+
   // Initial rule
   defineRule(
       'stree', 'mathspeak.default',
@@ -276,7 +287,7 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
   // defineSpecialisedRule(
   //     'number-baseline', 'mathspeak.brief', 'mathspeak.sbrief');
   defineRule(
-      'number-baseline', 'mathspeak.brief',
+      'number-baseline', 'mathspeak.default',
       '[t] "position de base"; [n] . (grammar:baseline)',
       'self::number', 'not(contains(@grammar, "ignoreFont"))',
       'preceding-sibling::identifier', 'not(contains(@grammar, "baseline"))',
@@ -284,45 +295,45 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
       ' @role="otherletter"]',
       'parent::*/parent::infixop[@role="implicit"]');
   defineSpecialisedRule(
-      'number-baseline', 'mathspeak.brief', 'mathspeak.sbrief',
+      'number-baseline', 'mathspeak.default', 'mathspeak.brief',
       '[t] "base"; [n] . (grammar:baseline)');
+  defineSpecialisedRule(
+      'number-baseline', 'mathspeak.brief', 'mathspeak.sbrief');
 
 
-  // defineRule(
-  //     'number-baseline-font', 'mathspeak.default',
-  //     '[t] "position de base"; [n] . (grammar:ignoreFont=@font); [t] "en"; [t] @font',
-  //     'self::number', '@font', 'not(contains(@grammar, "ignoreFont"))',
-  //     '@font!="normal"', 'preceding-sibling::identifier',
-  //     'preceding-sibling::*[@role="latinletter" or @role="greekletter" or' +
-  //     ' @role="otherletter"]',
-  //     'parent::*/parent::infixop[@role="implicit"]');
-  // defineSpecialisedRule(
-  //     'number-baseline-font', 'mathspeak.default', 'mathspeak.brief',
-  //     '[t] "position de base"; [n] . (grammar:ignoreFont=@font); [t] "en"; [t] @font');
-  // defineSpecialisedRule(
-  //     'number-baseline-font', 'mathspeak.brief', 'mathspeak.sbrief');
   defineRule(
-      'number-baseline-font', 'mathspeak.brief',
-      '[t] "position de base"; [n] . (grammar:ignoreFont=@font); [t] "en"; [t] @font',
+      'number-baseline-font', 'mathspeak.default',
+      '[t] "position de base"; [n] . (grammar:ignoreFont=@font); [t] "en"; ' +
+      '[t] @font (grammar:localFont)',
       'self::number', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"', 'preceding-sibling::identifier',
       'preceding-sibling::*[@role="latinletter" or @role="greekletter" or' +
       ' @role="otherletter"]',
       'parent::*/parent::infixop[@role="implicit"]');
   defineSpecialisedRule(
-    'number-baseline-font', 'mathspeak.brief', 'mathspeak.sbrief',
-      '[t] "base"; [n] . (grammar:ignoreFont=@font); [t] "en"; [t] @font');
+      'number-baseline-font', 'mathspeak.default', 'mathspeak.brief',
+      '[t] "base"; [n] . (grammar:ignoreFont=@font); [t] "en"; ' +
+      '[t] @font (grammar:localFont)');
+  defineSpecialisedRule(
+      'number-baseline-font', 'mathspeak.brief', 'mathspeak.sbrief');
 
   // identifier
   defineRule(
       'identifier', 'mathspeak.default', '[m] CQFspaceoutIdentifier',
       'self::identifier', 'string-length(text())>1', '@role!="unit"',
       '@role!="protected"',
-      'not(@font) or @font="normal" or contains(@grammar, "ignoreFont")');
+      'not(@font) or @font="normal" or contains(@grammar, "ignoreFont")',
+      'text()!=translate(text(), ' +
+      '"abcdefghijklmnopqrstuvwxyz\u03B1\u03B2\u03B3\u03B4' +
+      '\u03B5\u03B6\u03B7\u03B8\u03B9\u03BA\u03BB\u03BC\u03BD\u03BE\u03BF' +
+      '\u03C0\u03C1\u03C2\u03C3\u03C4\u03C5\u03C6\u03C7\u03C8\u03C9' +
+      'ABCDEFGHIJKLMNOPQRSTUVWXYZ\u0391\u0392\u0393' +
+      '\u0394\u0395\u0396\u0397\u0398\u0399\u039A\u039B\u039C\u039D\u039E' +
+      '\u039F\u03A0\u03A1\u03A3\u03A3\u03A4\u03A5\u03A6\u03A7\u03A8\u03A9", ' +
+      '"")');
 
   defineRule(
-      'identifier', 'mathspeak.default', '[n] text()',
-      'self::identifier', '@role="protected"');
+      'identifier', 'mathspeak.default', '[n] text()', 'self::identifier');
 
   // minus sign
   defineRule(
@@ -467,7 +478,7 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
 
   defineRule(
       'vulgar-fraction', 'mathspeak.default',
-      '[t] CSFvulgarFraction',
+      '[t] CSFvulgarFrFraction',
       'self::fraction', '@role="vulgar"', 'CQFvulgarFractionSmall');
   defineSpecialisedRule(
       'vulgar-fraction', 'mathspeak.default', 'mathspeak.brief');
@@ -681,7 +692,7 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
   defineSpecialisedRule(
       'subscript-base', 'mathspeak.default', 'mathspeak.sbrief');
 
-  // Commented out for Lise. 
+  // Commented out for Lise.
   // defineRule(
   //     'subscript-simple', 'mathspeak.default',
   //     '[n] children/*[1]; [n] children/*[2]',
@@ -1296,115 +1307,11 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
 
 
 /**
- * Component strings for tensor speech rules.
- * @enum {string}
- * @private
- */
-sre.MathspeakFrench.componentString_ = {
-  3 : 'CSFleftsuperscript',
-  4 : 'CSFleftsubscript',
-  2 : 'CSFbaseline',
-  1 : 'CSFrightsubscript',
-  0 : 'CSFrightsuperscript'
-};
-
-
-/**
- * Child number translation for tensor speech rules.
- * @enum {number}
- * @private
- */
-sre.MathspeakFrench.childNumber_ = {
-  4 : 2,
-  3 : 3,
-  2 : 1,
-  1 : 4,
-  0 : 5
-};
-
-
-/**
- * Generates the rule strings and constraints for tensor rules.
- * @param {string} constellation Bitvector representing of possible tensor
- *     constellation.
- * @return {Array.<string>} A list consisting of additional constraints for the
- *     tensor rule, plus the strings for the verbose and brief rule, in that
- *     order.
- * @private
- */
-sre.MathspeakFrench.generateTensorRuleStrings_ = function(constellation) {
-  var constraints = [];
-  var verbString = '';
-  var briefString = '';
-  var constel = parseInt(constellation, 2);
-
-  for (var i = 0; i < 5; i++) {
-    var childString = 'children/*[' + sre.MathspeakFrench.childNumber_[i] + ']';
-    if (constel & 1) {
-      var compString = sre.MathspeakFrench.componentString_[i % 5];
-      verbString = '[t] ' + compString + 'Verbose; [n] ' + childString + ';' +
-          verbString;
-      briefString = '[t] ' + compString + 'Brief; [n] ' + childString + ';' +
-          briefString;
-    } else {
-      constraints.unshift('name(' + childString + ')="empty"');
-    }
-    constel >>= 1;
-  }
-  constraints.push(verbString);
-  constraints.push(briefString);
-  return constraints;
-};
-
-
-/**
  * Generator for tensor speech rules.
  * @private
  */
-sre.MathspeakFrench.generateMathspeakTensorRules_ = function() {
-  // Constellations are built as bitvectors with the meaning:
-  //
-  //  lsub lsuper base rsub rsuper
-  var constellations = ['11111', '11110', '11101', '11100',
-                        '10111', '10110', '10101', '10100',
-                        '01111', '01110', '01101', '01100'
-  ];
-  for (var i = 0, constel; constel = constellations[i]; i++) {
-    var name = 'tensor' + constel;
-    var components = sre.MathspeakFrench.generateTensorRuleStrings_(constel);
-    var briefStr = components.pop();
-    var verbStr = components.pop();
-    var verbList = [name, 'mathspeak.default', verbStr, 'self::tensor'].
-        concat(components);
-    var briefList = [name, 'mathspeak.brief', briefStr, 'self::tensor'].
-        concat(components);
-    // Rules without neighbour.
-    defineRule.apply(null, verbList);
-    defineRule.apply(null, briefList);
-    defineSpecialisedRule(name, 'mathspeak.brief', 'mathspeak.sbrief');
-    // Rules with baseline.
-    var baselineStr = sre.MathspeakFrench.componentString_[2];
-    verbStr += '; [t]' + baselineStr + 'Verbose';
-    briefStr += '; [t]' + baselineStr + 'Brief';
-    name = name + '-baseline';
-    verbList = [name, 'mathspeak.default', verbStr, 'self::tensor',
-                'following-sibling::*'].
-        concat(components);
-    briefList = [name, 'mathspeak.brief', briefStr, 'self::tensor',
-                 'following-sibling::*'].
-        concat(components);
-    defineRule.apply(null, verbList);
-    defineRule.apply(null, briefList);
-    defineSpecialisedRule(name, 'mathspeak.brief', 'mathspeak.sbrief');
-    // Rules without neighbour but baseline.
-    var aliasList = [name, 'self::tensor', 'not(following-sibling::*)',
-                     'ancestor::fraction|ancestor::punctuated|' +
-                     'ancestor::fenced|ancestor::root|ancestor::sqrt|' +
-                     'ancestor::relseq|ancestor::multirel|' +
-                     '@embellished'].
-        concat(components);
-    defineRuleAlias.apply(null, aliasList);
-  }
+sre.MathspeakFrench.generateTensorRules_ = function() {
+  sre.MathspeakUtil.generateTensorRules(sre.MathspeakFrench.mathStore);
 };
 
 });  // goog.scope
@@ -1414,5 +1321,5 @@ sre.MathspeakFrench.generateMathspeakTensorRules_ = function() {
 sre.MathspeakFrench.getInstance().initializer = [
   sre.MathspeakFrench.initCustomFunctions_,
   sre.MathspeakFrench.initMathspeakFrench_,
-  sre.MathspeakFrench.generateMathspeakTensorRules_
+  sre.MathspeakFrench.generateTensorRules_
 ];

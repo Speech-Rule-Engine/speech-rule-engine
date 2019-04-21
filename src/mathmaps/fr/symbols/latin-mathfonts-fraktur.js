@@ -6,7 +6,7 @@
     "key": "1D504",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique a"
+        "default": "A majuscule en gothique"
       }
     },
     "category": "Lu"
@@ -15,7 +15,7 @@
     "key": "1D505",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique b"
+        "default": "B majuscule en gothique"
       }
     },
     "category": "Lu"
@@ -24,7 +24,7 @@
     "key": "212D",
     "mappings": {
       "default": {
-        "default": "c gothique majuscule"
+        "default": "C majuscule en gothique"
       }
     },
     "category": "Lu"
@@ -33,7 +33,7 @@
     "key": "1D507",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique d"
+        "default": "D majuscule en gothique"
       }
     },
     "category": "Lu"
@@ -42,7 +42,7 @@
     "key": "1D508",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique e"
+        "default": "E majuscule en gothique"
       }
     },
     "category": "Lu"
@@ -51,7 +51,7 @@
     "key": "1D509",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique f"
+        "default": "F majuscule en gothique"
       }
     },
     "category": "Lu"
@@ -60,7 +60,7 @@
     "key": "1D50A",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique g"
+        "default": "G majuscule en gothique"
       }
     },
     "category": "Lu"
@@ -69,7 +69,7 @@
     "key": "210C",
     "mappings": {
       "default": {
-        "default": "h gothique majuscule"
+        "default": "H majuscule en gothique"
       }
     },
     "category": "Lu"
@@ -78,7 +78,7 @@
     "key": "2111",
     "mappings": {
       "default": {
-        "default": "i gothique majuscule"
+        "default": "I majuscule en gothique"
       }
     },
     "category": "Lu"
@@ -87,7 +87,7 @@
     "key": "1D50D",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique j"
+        "default": "J majuscule en gothique"
       }
     },
     "category": "Lu"
@@ -96,7 +96,7 @@
     "key": "1D50E",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique k"
+        "default": "K majuscule en gothique"
       }
     },
     "category": "Lu"
@@ -105,7 +105,7 @@
     "key": "1D50F",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique l"
+        "default": "L majuscule en gothique"
       }
     },
     "category": "Lu"
@@ -114,7 +114,7 @@
     "key": "1D510",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique m"
+        "default": "M majuscule en gothique"
       }
     },
     "category": "Lu"
@@ -123,7 +123,7 @@
     "key": "1D511",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique n"
+        "default": "N majuscule en gothique"
       }
     },
     "category": "Lu"
@@ -132,7 +132,7 @@
     "key": "1D512",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique o"
+        "default": "O majuscule en gothique"
       }
     },
     "category": "Lu"
@@ -141,7 +141,7 @@
     "key": "1D513",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique p"
+        "default": "P majuscule en gothique"
       }
     },
     "category": "Lu"
@@ -150,7 +150,7 @@
     "key": "1D514",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique q"
+        "default": "Q majuscule en gothique"
       }
     },
     "category": "Lu"
@@ -159,7 +159,7 @@
     "key": "211C",
     "mappings": {
       "default": {
-        "default": "r gothique majuscule"
+        "default": "R majuscule en gothique"
       }
     },
     "category": "Lu"
@@ -168,7 +168,7 @@
     "key": "1D516",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique s"
+        "default": "S majuscule en gothique"
       }
     },
     "category": "Lu"
@@ -177,7 +177,7 @@
     "key": "1D517",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique t"
+        "default": "T majuscule en gothique"
       }
     },
     "category": "Lu"
@@ -186,7 +186,7 @@
     "key": "1D518",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique u"
+        "default": "U majuscule en gothique"
       }
     },
     "category": "Lu"
@@ -195,7 +195,7 @@
     "key": "1D519",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique v"
+        "default": "V majuscule en gothique"
       }
     },
     "category": "Lu"
@@ -204,7 +204,7 @@
     "key": "1D51A",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique w"
+        "default": "W majuscule en gothique"
       }
     },
     "category": "Lu"
@@ -213,7 +213,7 @@
     "key": "1D51B",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique x"
+        "default": "X majuscule en gothique"
       }
     },
     "category": "Lu"
@@ -222,7 +222,7 @@
     "key": "1D51C",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique y"
+        "default": "Y majuscule en gothique"
       }
     },
     "category": "Lu"
@@ -231,7 +231,7 @@
     "key": "2128",
     "mappings": {
       "default": {
-        "default": "z gothique majuscule"
+        "default": "Z majuscule en gothique"
       }
     },
     "category": "Lu"
@@ -240,7 +240,7 @@
     "key": "1D51E",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique a"
+        "default": "a en gothique"
       }
     },
     "category": "Ll"
@@ -249,7 +249,7 @@
     "key": "1D51F",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique b"
+        "default": "b en gothique"
       }
     },
     "category": "Ll"
@@ -258,7 +258,7 @@
     "key": "1D520",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique c"
+        "default": "c en gothique"
       }
     },
     "category": "Ll"
@@ -267,7 +267,7 @@
     "key": "1D521",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique d"
+        "default": "d en gothique"
       }
     },
     "category": "Ll"
@@ -276,7 +276,7 @@
     "key": "1D522",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique e"
+        "default": "e en gothique"
       }
     },
     "category": "Ll"
@@ -285,7 +285,7 @@
     "key": "1D523",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique f"
+        "default": "f en gothique"
       }
     },
     "category": "Ll"
@@ -294,7 +294,7 @@
     "key": "1D524",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique g"
+        "default": "g en gothique"
       }
     },
     "category": "Ll"
@@ -303,7 +303,7 @@
     "key": "1D525",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique h"
+        "default": "h en gothique"
       }
     },
     "category": "Ll"
@@ -312,7 +312,7 @@
     "key": "1D526",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique i"
+        "default": "i en gothique"
       }
     },
     "category": "Ll"
@@ -321,7 +321,7 @@
     "key": "1D527",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique j"
+        "default": "j en gothique"
       }
     },
     "category": "Ll"
@@ -330,7 +330,7 @@
     "key": "1D528",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique k"
+        "default": "k en gothique"
       }
     },
     "category": "Ll"
@@ -339,7 +339,7 @@
     "key": "1D529",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique l"
+        "default": "l en gothique"
       }
     },
     "category": "Ll"
@@ -348,7 +348,7 @@
     "key": "1D52A",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique m"
+        "default": "m en gothique"
       }
     },
     "category": "Ll"
@@ -357,7 +357,7 @@
     "key": "1D52B",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique n"
+        "default": "n en gothique"
       }
     },
     "category": "Ll"
@@ -366,7 +366,7 @@
     "key": "1D52C",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique o"
+        "default": "o en gothique"
       }
     },
     "category": "Ll"
@@ -375,7 +375,7 @@
     "key": "1D52D",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique p"
+        "default": "p en gothique"
       }
     },
     "category": "Ll"
@@ -384,7 +384,7 @@
     "key": "1D52E",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique q"
+        "default": "q en gothique"
       }
     },
     "category": "Ll"
@@ -393,7 +393,7 @@
     "key": "1D52F",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique r"
+        "default": "r en gothique"
       }
     },
     "category": "Ll"
@@ -402,7 +402,7 @@
     "key": "1D530",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique s"
+        "default": "s en gothique"
       }
     },
     "category": "Ll"
@@ -411,7 +411,7 @@
     "key": "1D531",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique t"
+        "default": "t en gothique"
       }
     },
     "category": "Ll"
@@ -420,7 +420,7 @@
     "key": "1D532",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique u"
+        "default": "u en gothique"
       }
     },
     "category": "Ll"
@@ -429,7 +429,7 @@
     "key": "1D533",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique v"
+        "default": "v en gothique"
       }
     },
     "category": "Ll"
@@ -438,7 +438,7 @@
     "key": "1D534",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique w"
+        "default": "w en gothique"
       }
     },
     "category": "Ll"
@@ -447,7 +447,7 @@
     "key": "1D535",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique x"
+        "default": "x en gothique"
       }
     },
     "category": "Ll"
@@ -456,7 +456,7 @@
     "key": "1D536",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique y"
+        "default": "y en gothique"
       }
     },
     "category": "Ll"
@@ -465,7 +465,7 @@
     "key": "1D537",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique z"
+        "default": "z en gothique"
       }
     },
     "category": "Ll"

@@ -87,7 +87,7 @@
     "key": "03F4",
     "mappings": {
       "default": {
-        "default": "thêta majuscule"
+        "default": "Thêta majuscule"
       }
     },
     "category": "Lu"
@@ -96,7 +96,7 @@
     "key": "1D6B9",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse symbole thêta"
+        "default": "Thêta majuscule en grasse"
       }
     },
     "category": "Lu"
@@ -105,7 +105,7 @@
     "key": "1D6F3",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique italique symbole thêta"
+        "default": "Thêta majuscule en italique"
       }
     },
     "category": "Lu"
@@ -114,7 +114,7 @@
     "key": "1D767",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sans empattement symbole thêta"
+        "default": "Thêta majuscule en sans empattement grasse"
       }
     },
     "category": "Lu"

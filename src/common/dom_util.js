@@ -70,14 +70,13 @@ sre.DomUtil.XML_ENTITIES =
  * @return {!Element} The XML document structure corresponding to the node.
  */
 sre.DomUtil.parseInput = function(input, opt_error) {
-  var error = opt_error || Error;
+  var error = opt_error || sre.Engine.Error;
   var dp = new sre.SystemExternal.xmldom.DOMParser();
   var clean_input = sre.DomUtil.trimInput_(input);
   var allValues = clean_input.match(/\&(?!lt|gt|amp|quot|apos)\w+;/g);
   var html = !!allValues;
   if (!clean_input) {
-    var newError = new error('Empty input!');
-    throw newError;
+    throw new error('Empty input!');
   }
   try {
     var doc = dp.parseFromString(clean_input, html ? 'text/html' : 'text/xml');
@@ -149,38 +148,88 @@ sre.DomUtil.createTextNode = function(content) {
 
 
 /**
- * Pretty prints an XML representation.
+ * Pretty prints an XML representation while dealing with mixed content:
+ * Example:
+ *
+ * <a>A<b>B</b>C</a> is rewritten to
+ * <a>A
+ *   <b>B</b>
+ *    C
+ * </a>
  * @param {string} xml The serialised XML string.
  * @return {string} The formatted string.
  */
 sre.DomUtil.formatXml = function(xml) {
-  var reg = /(>)(<)(\/*)/g;
-  xml = xml.replace(reg, '$1\r\n$2$3');
-  reg = /(>)(.+)(<c)/g;
-  xml = xml.replace(reg, '$1\r\n$2\r\n$3');
   var formatted = '';
-  var padding = '';
-  xml.split('\r\n')
-      .forEach(function(node) {
-        if (node.match(/.+<\/\w[^>]*>$/)) {
-          // Node with content.
-          formatted += padding + node + '\r\n';
-        } else if (node.match(/^<\/\w/)) {
-          if (padding) {
-            // Closing tag
-            padding = padding.slice(2);
-            formatted += padding + node + '\r\n';
+  var reg = /(>)(<)(\/*)/g;  // Separate at touching tags.
+  xml = xml.replace(reg, '$1\r\n$2$3');
+  var pad = 0;
+  var split = xml.split('\r\n');
+  reg = /(\.)*(<)(\/*)/g;    // Separate at any remaining tags.
+  split = split.map(x => x.replace(reg, '$1\r\n$2$3').split('\r\n')).
+      reduce(function(x, y) {return x.concat(y);}, []);
+  while (split.length) {
+    var node = split.shift();
+    if (!node) continue;
+    var indent = 0;
+    if (node.match(/^<\w[^>\/]*>[^>]+$/)) {
+      // Start node with trailing content.
+      var match = sre.DomUtil.matchingStartEnd_(node, split[0]);
+      if (match[0]) {    // Combine with end node
+        if (match[1]) {  // Trailing mixed content after end node.
+          node = node + split.shift().slice(0, - match[1].length);
+          if (match[1].trim()) {  // In case of trailing spaces.
+            split.unshift(match[1]);
           }
-        } else if (node.match(/^<\w[^>]*[^\/]>.*$/)) {
-          // Opening tag
-          formatted += padding + node + '\r\n';
-          padding += '  ';
         } else {
-          // Empty tag
-          formatted += padding + node + '\r\n';
+          node = node + split.shift();
         }
-      });
+      } else {
+        indent = 1;
+      }
+    } else if (node.match(/^<\/\w/)) {
+      // End node.
+      if (pad != 0) {
+        pad -= 1;
+      }
+    } else if (node.match(/^<\w[^>]*[^\/]>.*$/)) {
+      // Simple start node.
+      indent = 1;
+    } else if (node.match(/^<\w[^>]*\/>.+$/)) {
+      // Empty tag node with trailing mixed content.
+      let position = node.indexOf('>') + 1;
+      let rest = node.slice(position);
+      if (rest.trim()) { // In case of trailing spaces.
+        split.unshift();
+      }
+      node = node.slice(0, position);
+    } else {
+      // Empty tag node
+      indent = 0;
+    }
+    formatted += new Array(pad + 1).join('  ') + node + '\r\n';
+    pad += indent;
+  }
   return formatted;
+};
+
+
+/**
+ * Checks for two tags if the second is a matching end tag for the first.
+ * @param {string} start The start tag.
+ * @param {string} end The next, possible end tag.
+ * @return {Array.<boolean| string>} A pair indicating success and the possible
+ *     remainder after the end tag, in case it is followed by mixed content.
+ * @private
+ */
+sre.DomUtil.matchingStartEnd_ = function(start, end) {
+  if (!end) {
+    return [false, ''];
+  }
+  var tag1 = start.match(/^<([^> ]+).*>/);
+  var tag2 = end.match(/^<\/([^>]+)>(.*)/);
+  return (tag1 && tag2 && tag1[1] === tag2[1]) ?
+      [true, tag2[2]] : [false, ''];
 };
 
 

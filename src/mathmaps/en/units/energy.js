@@ -110,15 +110,6 @@
   {"category": "energy",
    "mappings": {
      "default": {
-       "default": "ohm"
-     }
-   },
-   "key": "\u03A9",
-   "names": ["\u03A9"]
-  },
-  {"category": "energy",
-   "mappings": {
-     "default": {
        "default": "megaohm"
      }
    },

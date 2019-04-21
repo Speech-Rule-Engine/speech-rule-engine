@@ -23,6 +23,7 @@ goog.require('sre.AuditoryDescription');
 goog.require('sre.BaseUtil');
 goog.require('sre.DomUtil');
 goog.require('sre.MathspeakUtil');
+goog.require('sre.Messages');
 goog.require('sre.SemanticAnnotator');
 goog.require('sre.StoreUtil');
 
@@ -34,7 +35,7 @@ goog.require('sre.StoreUtil');
  */
 sre.ClearspeakUtil.numbersToAlpha = function(text) {
   return text.match(/\d+/) ?
-      sre.MathspeakUtil.numberToWords(parseInt(text, 10)) :
+      sre.Messages.NUMBERS.numberToWords(parseInt(text, 10)) :
       text;
 };
 
@@ -375,16 +376,6 @@ sre.ClearspeakUtil.allCellsSimple = function(node) {
 
 
 /**
- * String function that translates a vulgar fraction.
- * @param {!Node} node The node with the vulgar fraction
- * @return {string} Speech string for the vulgar fraction.
- */
-sre.ClearspeakUtil.vulgarFraction = function(node) {
-  return sre.MathspeakUtil.vulgarFraction(node, ' ');
-};
-
-
-/**
  * Custom query function to check if a vulgar fraction is small enough to be
  * spoken as numbers in MathSpeak.
  * @param {!Node} node Fraction node to be tested.
@@ -392,7 +383,7 @@ sre.ClearspeakUtil.vulgarFraction = function(node) {
  *     empty.
  */
 sre.ClearspeakUtil.isSmallVulgarFraction = function(node) {
-  return sre.MathspeakUtil.vulgarFractionSmall(node, 20, 11) ? [node] : [];
+  return sre.NumbersUtil.vulgarFractionSmall(node, 20, 11) ? [node] : [];
 };
 
 
@@ -454,8 +445,8 @@ sre.ClearspeakUtil.ordinalExponent = function(node) {
   if (isNaN(number)) {
     return node.textContent;
   }
-  return number > 10 ? sre.MathspeakUtil.simpleOrdinal(number) :
-      sre.MathspeakUtil.numberToOrdinal(number, false);
+  return number > 10 ? sre.Messages.NUMBERS.simpleOrdinal(number) :
+      sre.Messages.NUMBERS.wordOrdinal(number);
 };
 
 
@@ -495,7 +486,7 @@ sre.ClearspeakUtil.nestingDepth = function(node) {
     parent = parent.parentNode;
   }
   sre.ClearspeakUtil.NESTING_DEPTH = count > 1 ?
-      sre.MathspeakUtil.wordOrdinal(count) : '';
+      sre.Messages.NUMBERS.wordOrdinal(count) : '';
   return sre.ClearspeakUtil.NESTING_DEPTH;
 };
 
@@ -572,12 +563,12 @@ sre.ClearspeakUtil.simpleArguments = function(node) {
   var children = sre.XpathUtil.evalXPath('../../children/*', node);
   var index = content.indexOf(node);
   return (sre.ClearspeakUtil.simpleFactor_(children[index]) &&
-          children[index + 1] && 
+          children[index + 1] &&
           (sre.ClearspeakUtil.simpleFactor_(children[index + 1]) ||
            children[index + 1].tagName === sre.SemanticAttr.Type.ROOT ||
            children[index + 1].tagName === sre.SemanticAttr.Type.SQRT ||
          (children[index + 1].tagName === sre.SemanticAttr.Type.SUPERSCRIPT &&
-            children[index + 1].childNodes[0].childNodes[0] &&
+      children[index + 1].childNodes[0].childNodes[0] &&
            (children[index + 1].childNodes[0].childNodes[0].tagName ===
             sre.SemanticAttr.Type.NUMBER ||
             children[index + 1].childNodes[0].childNodes[0].tagName ===
@@ -674,11 +665,14 @@ sre.ClearspeakUtil.isLogarithmWithBase = function(node) {
 // TODO: (Simons) Add these into a category test constraint with xpath argument.
 
 
+// TODO: Move this into the number utils.
 /**
  * Translates a node into a word for an ordinal number.
  * @param {Element} node The node to translate.
  * @return {string} The ordinal as a word.
  */
 sre.ClearspeakUtil.wordOrdinal = function(node) {
-  return sre.MathspeakUtil.wordOrdinal(parseInt(node.textContent, 10));
+  return sre.Messages.NUMBERS.wordOrdinal(parseInt(node.textContent, 10));
 };
+
+

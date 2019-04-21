@@ -21,6 +21,7 @@
 goog.provide('sre.Locale.es');
 
 goog.require('sre.Locale');
+goog.require('sre.Numbers.es');
 
 
 /**
@@ -29,14 +30,14 @@ goog.require('sre.Locale');
 sre.Locale.es = {
 
   MS: {
-    START: 'empezar ',
+    START: 'empezar',
     FRAC_V: 'fracción',
     FRAC_B: 'frac',
     FRAC_S: 'frac',
     // TODO (localize): Could be problematic with space separators. Might need
     // to trim.
-    END: 'finalizar ',
-    FRAC_OVER: 'entre ',
+    END: 'finalizar',
+    FRAC_OVER: 'entre',
     TWICE: '',
     NEST_FRAC: '',
     ENDFRAC: '',
@@ -65,7 +66,8 @@ sre.Locale.es = {
     RADICAL_NEST_DEPTH: function(count) { return ''; },
     COMBINE_ROOT_INDEX: sre.Locale.combinePostfixIndex,
     COMBINE_NESTED_FRACTION: function(a, b, c) {return a + b + c;},
-    COMBINE_NESTED_RADICAL: function(a, b, c) {return a + c;}
+    COMBINE_NESTED_RADICAL: function(a, b, c) {return a + c;},
+    FONT_REGEXP: function(font) {return RegExp('^' + font + ' ');}
   },
 
   //  That is female ending!
@@ -161,10 +163,13 @@ sre.Locale.es = {
 
   REGEXP: {
     TEXT: 'a-zA-ZáéíóúñÁÉÍÓÚÑ',
-    NUMBER: '((\\d{1,3})(?=(\\.| ))((\\.| )\\d{3})*(,\\d+)?)|^\\d*,\\d+|^\\d+',
+    NUMBER: '((\\d{1,3})(?=( ))(( )\\d{3})*(,\\d+)?)|^\\d*,\\d+|^\\d+',
     DECIMAL_MARK: ',',
     DIGIT_GROUP: '',
-    JOINER_SUBSUPER: ' '
-  }
+    JOINER_SUBSUPER: ' ',
+    JOINER_FRAC: ' '
+  },
+
+  NUMBERS: sre.Numbers.es.NUMBERS
   
 };

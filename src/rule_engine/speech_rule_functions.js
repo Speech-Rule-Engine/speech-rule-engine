@@ -157,7 +157,7 @@ sre.SpeechRuleFunctions.Store_.prototype.
   if (!name.match(reg)) {
     console.error(
         'FunctionError: Invalid function name. Expected prefix ' +
-                this.prefix_);
+        this.prefix_);
     return false;
   }
   return true;

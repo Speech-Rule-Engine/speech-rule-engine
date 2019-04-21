@@ -19,7 +19,6 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 goog.provide('sre.System');
-goog.provide('sre.System.Error');
 
 goog.require('sre.AuralRendering');
 goog.require('sre.BaseUtil');
@@ -27,10 +26,12 @@ goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
 goog.require('sre.DynamicCstr');
 goog.require('sre.Engine');
+goog.require('sre.Engine.Error');
 goog.require('sre.Enrich');
 goog.require('sre.HighlighterFactory');
 goog.require('sre.L10n');
 goog.require('sre.MathStore');
+goog.require('sre.ProcessorFactory');
 goog.require('sre.Semantic');
 goog.require('sre.SpeechGeneratorFactory');
 goog.require('sre.SpeechGeneratorUtil');
@@ -58,41 +59,11 @@ sre.System = function() {
 goog.addSingletonGetter(sre.System);
 
 
-
 /**
- * Error object for signaling parsing errors.
- * @param {string} msg The error message.
- * @constructor
- * @extends {Error}
+ *  Setup Methods functionality.
  */
-sre.System.Error = function(msg) {
-  sre.System.Error.base(this, 'constructor');
-  this.message = msg || '';
-  this.name = 'System Error';
-};
-goog.inherits(sre.System.Error, Error);
-
-
-
-/**
- * A storage to hide members of the system class.
- * @constructor
- * @private
- */
-sre.System.LocalStorage_ = function() {
-
-  this.walker = null;
-
-  this.speechGenerator = null;
-
-};
-goog.addSingletonGetter(sre.System.LocalStorage_);
-
-
 // These are all API interface functions. Therefore, avoid any usage of "this"
 // in the code.
-//
-//TODO: Put in a full explanation of all the elements of the feature vector.
 /**
  * Method to setup and intialize the speech rule engine. Currently the feature
  * parameter is ignored, however, this could be used to fine tune the setup.
@@ -109,13 +80,10 @@ sre.System.prototype.setupEngine = function(feature) {
   var setMulti = function(feat) {
     engine[feat] = feature[feat] || engine[feat];
   };
-  var binaryFeatures = ['strict', 'cache', 'semantics', 'structure'];
-  var stringFeatures = ['markup', 'style', 'domain', 'speech', 'walker',
-                        'locale', 'rate'];
   setMulti('mode');
   sre.System.prototype.configBlocks_(feature);
-  binaryFeatures.forEach(setIf);
-  stringFeatures.forEach(setMulti);
+  sre.Engine.BINARY_FEATURES.forEach(setIf);
+  sre.Engine.STRING_FEATURES.forEach(setMulti);
   if (feature.json) {
     sre.SystemExternal.jsonPath = sre.BaseUtil.makePath(feature.json);
   }
@@ -126,16 +94,7 @@ sre.System.prototype.setupEngine = function(feature) {
   engine.ruleSets = feature.rules ? feature.rules :
       sre.SpeechRuleStores.availableSets();
   sre.SpeechRuleEngine.getInstance().parameterize(engine.ruleSets);
-  engine.dynamicCstr = engine.parser.parse(
-      engine.locale + '.' + engine.domain + '.' + engine.style);
-  var comparator = engine.comparators[engine.domain];
-  engine.comparator = comparator ? comparator() :
-      new sre.DynamicCstr.DefaultComparator(
-      engine.dynamicCstr,
-      sre.DynamicProperties.create(
-      [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]],
-      [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN]],
-      ['short', sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE]]));
+  engine.setDynamicCstr();
   sre.L10n.setLocale();
 };
 
@@ -167,6 +126,34 @@ sre.System.prototype.configBlocks_ = function(feature) {
 };
 
 
+/**
+ * Setting engine to async mode once it is ready.
+ */
+sre.System.setAsync = function() {
+  if (!sre.Engine.isReady()) {
+    setTimeout(sre.System.setAsync, 500);
+  }
+  (sre.System.getInstance()).setupEngine({'mode': sre.Engine.Mode.ASYNC});
+};
+
+
+sre.System.prototype.engineSetup = function() {
+  var engineFeatures = ['mode'].
+      concat(sre.Engine.STRING_FEATURES, sre.Engine.BINARY_FEATURES);
+  var engine = sre.Engine.getInstance();
+  var features = {};
+  engineFeatures.forEach(function(x) {features[x] = engine[x];});
+  features.json = sre.SystemExternal.jsonPath;
+  features.xpath = sre.SystemExternal.WGXpath;
+  features.rules = engine.ruleSets.slice();
+  return features;
+};
+
+
+sre.System.prototype.engineReady = function() {
+  return sre.Engine.isReady();
+};
+
 //
 // Naming convention:
 // Input is either an XML expression as a string or from a file.
@@ -180,10 +167,6 @@ sre.System.prototype.configBlocks_ = function(feature) {
 //
 // Output for the file version are strings.
 //
-// Deprecated:
-//  processExpression: same as toSpeech.
-//  processFile: same as fileToSpeech.
-//
 //TODO: (sorge) Need an async versions of these.
 /**
  * Main function to translate expressions into auditory descriptions.
@@ -191,12 +174,7 @@ sre.System.prototype.configBlocks_ = function(feature) {
  * @return {string} The aural rendering of the expression.
  */
 sre.System.prototype.toSpeech = function(expr) {
-  var xml = sre.System.getInstance().parseExpression_(
-      expr, sre.Engine.getInstance().semantics);
-  if (!xml) {
-    return '';
-  }
-  return sre.System.getInstance().processXml(xml);
+  return sre.System.getInstance().processString('speech', expr);
 };
 
 
@@ -212,23 +190,17 @@ sre.System.prototype.processExpression = sre.System.prototype.toSpeech;
  * @return {Node} The semantic tree as Xml.
  */
 sre.System.prototype.toSemantic = function(expr) {
-  return sre.System.getInstance().parseExpression_(expr, true);
+  return sre.System.getInstance().processString('semantic', expr);
 };
 
 
 /**
  * Function to translate MathML string into JSON version of the Semantic Tree.
- *
- * WARNING: API only works with Node!
  * @param {string} expr Processes a given MathML expression for translation.
  * @return {JSONType} The semantic tree as Json.
  */
 sre.System.prototype.toJson = function(expr) {
-  if (sre.Engine.getInstance().mode === sre.Engine.Mode.HTTP) {
-    throw new sre.System.Error('JSON translation not possible in browser.');
-  }
-  var stree = sre.System.getInstance().parseExpression_(expr, true);
-  return stree ? sre.SystemExternal.xm.tojson(stree.toString()) : {};
+  return sre.System.getInstance().processString('json', expr);
 };
 
 
@@ -238,13 +210,7 @@ sre.System.prototype.toJson = function(expr) {
  * @return {!Array.<sre.AuditoryDescription>} The auditory descriptions.
  */
 sre.System.prototype.toDescription = function(expr) {
-  var xml = sre.System.getInstance().parseExpression_(
-      expr, sre.Engine.getInstance().semantics);
-  if (!xml) {
-    return [];
-  }
-  var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
-  return descrs;
+  return sre.System.getInstance().processString('description', expr);
 };
 
 
@@ -254,22 +220,19 @@ sre.System.prototype.toDescription = function(expr) {
  * @return {!Element} The enriched MathML node.
  */
 sre.System.prototype.toEnriched = function(expr) {
-  var enr = sre.Enrich.semanticMathmlSync(expr);
-  var root = sre.WalkerUtil.getSemanticRoot(enr);
-  switch (sre.Engine.getInstance().speech) {
-    case sre.Engine.Speech.SHALLOW:
-      var generator = sre.SpeechGeneratorFactory.generator('Adhoc');
-      generator.getSpeech(root, enr);
-      break;
-    case sre.Engine.Speech.DEEP:
-      var generator = sre.SpeechGeneratorFactory.generator('Tree');
-      generator.getSpeech(root, enr);
-      break;
-    case sre.Engine.Speech.NONE:
-    default:
-      break;
-  }
-  return enr;
+  return sre.System.getInstance().processString('enriched', expr);
+};
+
+
+/**
+ * Processes an input string with the given processor.
+ * @param {string} processor The name of the processor to call.
+ * @param {string} input The input string.
+ * @return {T} The computed data structure.
+ * @template T
+ */
+sre.System.prototype.processString = function(processor, input) {
+  return sre.ProcessorFactory.process(processor, input);
 };
 
 
@@ -280,8 +243,7 @@ sre.System.prototype.toEnriched = function(expr) {
  * @param {string=} opt_output The output filename if one is given.
  */
 sre.System.prototype.fileToSpeech = function(input, opt_output) {
-  sre.System.getInstance().processFile_(sre.System.getInstance().toSpeech,
-                                        input, opt_output);
+  sre.System.getInstance().processFile('speech', input, opt_output);
 };
 
 
@@ -298,28 +260,18 @@ sre.System.prototype.processFile = sre.System.prototype.fileToSpeech;
  * @param {string=} opt_output The output filename if one is given.
  */
 sre.System.prototype.fileToSemantic = function(input, opt_output) {
-  sre.System.getInstance().processFile_(
-      function(x) {
-        return (sre.System.getInstance().toSemantic(x)).toString();
-      },
-      input, opt_output);
+  sre.System.getInstance().processFile('semantic', input, opt_output);
 };
 
 
 /**
  * Function to translate MathML string into JSON version of the Semantic Tree to
  * a file.
- *
- * WARNING: API only works with Node!
  * @param {string} input The input filename.
  * @param {string=} opt_output The output filename if one is given.
  */
 sre.System.prototype.fileToJson = function(input, opt_output) {
-  sre.System.getInstance().processFile_(
-      function(x) {
-        return JSON.stringify(sre.System.getInstance().toJson(x));
-      },
-      input, opt_output);
+  sre.System.getInstance().processFile('json', input, opt_output);
 };
 
 
@@ -330,11 +282,7 @@ sre.System.prototype.fileToJson = function(input, opt_output) {
  * @param {string=} opt_output The output filename if one is given.
  */
 sre.System.prototype.fileToDescription = function(input, opt_output) {
-  sre.System.getInstance().processFile_(
-      function(x) {
-        return JSON.stringify(sre.System.getInstance().toDescription(x));
-      },
-      input, opt_output);
+  sre.System.getInstance().processFile('description', input, opt_output);
 };
 
 
@@ -345,73 +293,21 @@ sre.System.prototype.fileToDescription = function(input, opt_output) {
  * @param {string=} opt_output The output filename if one is given.
  */
 sre.System.prototype.fileToEnriched = function(input, opt_output) {
-  sre.System.getInstance().processFile_(
-      function(x) {
-        return (sre.System.getInstance().toEnriched(x)).toString();
-      },
-      input, opt_output);
-};
-
-
-/**
- * Computes auditory descriptions for a given Xml node. This is a private method
- * as it might depend on a particular implementation of Xml Node API.
- * @param {!Node} xml The Xml node to describe.
- * @return {string} The aural rendering of the expression.
- */
-sre.System.prototype.processXml = function(xml) {
-  var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
-  var aural = sre.AuralRendering.getInstance();
-  return aural.finalize(aural.markup(descrs));
-};
-
-
-/**
- * Parses a string into a MathML expressions or a semantic tree.
- * @param {string} expr The string containing a MathML representation.
- * @param {boolean} semantic Replace parsed MathML by semantic tree
- *     representation.
- * @return {Node} The Xml node.
- * @private
- */
-sre.System.prototype.parseExpression_ = function(expr, semantic) {
-  var xml = null;
-  try {
-    xml = sre.DomUtil.parseInput(expr, sre.System.Error);
-    if (semantic) {
-      xml = sre.System.getInstance().getSemanticTree(xml);
-    }
-    sre.Debugger.getInstance().generateOutput(
-        goog.bind(function() {return xml.toString();}, this));
-  } catch (err) {
-    console.error('Parse Error: ' + err.message);
-  }
-  return xml;
-};
-
-
-/**
- * Creates a clean Xml version of the semantic tree for a given MathML node.
- * @param {!Element} mml The MathML node.
- * @return {Node} Semantic tree for input node as newly created Xml node.
- */
-sre.System.prototype.getSemanticTree = function(mml) {
-  return sre.Semantic.xmlTree(mml);
+  sre.System.getInstance().processFile('enriched', input, opt_output);
 };
 
 
 /**
  * Reads an xml expression from a file, processes with the given function and
  * returns the result either to a file or to stdout.
- * @param {function(string): *} processor The input filename.
+ * @param {string} processor The name of the processor to call.
  * @param {string} input The input filename.
  * @param {string=} opt_output The output filename if one is given.
- * @private
  */
-sre.System.prototype.processFile_ = function(processor, input, opt_output) {
+sre.System.prototype.processFile = function(processor, input, opt_output) {
   if (!sre.Engine.isReady()) {
     setTimeout(goog.bind(function() {
-      this.processFile_(processor, input, opt_output);
+      this.processFile(processor, input, opt_output);
     }, this), 100);
     return;
   }
@@ -433,7 +329,7 @@ sre.System.prototype.inputFileSync_ = function(file) {
   try {
     var expr = sre.SystemExternal.fs.readFileSync(file, {encoding: 'utf8'});
   } catch (err) {
-    throw new sre.System.Error('Can not open file: ' + file);
+    throw new sre.Engine.Error('Can not open file: ' + file);
   }
   return expr;
 };
@@ -442,22 +338,22 @@ sre.System.prototype.inputFileSync_ = function(file) {
 /**
  * Reads an xml expression from a file, processes with the given function and
  * returns the result either to a file or to stdout in synchronous mode.
- * @param {function(string): *} processor The input filename.
+ * @param {string} processor The name of the processor.
  * @param {string} input The input filename.
  * @param {string=} opt_output The output filename if one is given.
  * @private
  */
 sre.System.prototype.processFileSync_ = function(processor, input, opt_output) {
   var expr = sre.System.getInstance().inputFileSync_(input);
-  var result = processor(expr);
+  var result = sre.ProcessorFactory.output(processor, expr);
   if (!opt_output) {
     console.info(result);
     return;
   }
   try {
-    sre.SystemExternal.fs.writeFileSync(opt_output, result, function() {});
+    sre.SystemExternal.fs.writeFileSync(opt_output, result);
   } catch (err) {
-    throw new sre.System.Error('Can not write to file: ' + opt_output);
+    throw new sre.Engine.Error('Can not write to file: ' + opt_output);
   }
 };
 
@@ -473,7 +369,7 @@ sre.System.prototype.inputFileAsync_ = function(file, callback) {
       file, {encoding: 'utf8'},
       goog.bind(function(err, data) {
         if (err) {
-          throw new sre.System.Error('Can not open file: ' + file);
+          throw new sre.Engine.Error('Can not open file: ' + file);
         }
         callback(data);
       }, this)
@@ -484,7 +380,7 @@ sre.System.prototype.inputFileAsync_ = function(file, callback) {
 /**
  * Reads an xml expression from a file, processes with the given function and
  * returns the result either to a file or to stdout in asynchronous mode.
- * @param {function(string): *} processor The input filename.
+ * @param {string} processor The name of the processor.
  * @param {string} input The input filename.
  * @param {string=} opt_output The output filename if one is given.
  * @private
@@ -494,37 +390,28 @@ sre.System.prototype.processFileAsync_ = function(
   sre.System.getInstance().inputFileAsync_(
       input,
       goog.bind(function(expr) {
-        var result = processor(expr);
+        var result = sre.ProcessorFactory.output(processor, expr);
         if (!opt_output) {
           console.info(result);
           return;
         }
         sre.SystemExternal.fs.writeFile(opt_output, result, function(err) {
           if (err) {
-            throw new sre.System.Error('Can not write to file: ' + opt_output);
+            throw new sre.Engine.Error('Can not write to file: ' + opt_output);
           }
         });
       }, this));
 };
 
 
+// These are still considered experimental.
 /**
  * Walk a math expression provided by an external system.
  * @param {string} expr The string containing a MathML representation.
  * @return {string} The initial speech string for that expression.
  */
 sre.System.prototype.walk = function(expr) {
-  var generator = sre.SpeechGeneratorFactory.generator('Node');
-  sre.System.LocalStorage_.getInstance().speechGenerator = generator;
-  var highlighter = /** @type {!sre.Highlighter} */ (
-      sre.HighlighterFactory.highlighter(
-      {color: 'black'}, {color: 'white'}, {renderer: 'NativeMML'}));
-  var node = sre.System.getInstance().toEnriched(expr);
-  var eml = new sre.SystemExternal.xmldom.XMLSerializer().
-      serializeToString(node);
-  sre.System.LocalStorage_.getInstance().walker = sre.WalkerFactory.walker(
-      sre.Engine.getInstance().walker, node, generator, highlighter, eml);
-  return sre.System.LocalStorage_.getInstance().walker.speech();
+  return sre.ProcessorFactory.output('walker', expr);
 };
 
 
@@ -536,12 +423,5 @@ sre.System.prototype.walk = function(expr) {
  *     is hit.
  */
 sre.System.prototype.move = function(direction) {
-  if (!sre.System.LocalStorage_.getInstance().walker) {
-    return null;
-  }
-  var key = (typeof direction === 'string') ?
-      sre.EventUtil.KeyCode[direction.toUpperCase()] : direction;
-  var move = sre.System.LocalStorage_.getInstance().walker.move(key);
-  return move === false ? sre.AuralRendering.getInstance().error(direction) :
-      sre.System.LocalStorage_.getInstance().walker.speech();
+  return sre.ProcessorFactory.keypress('move', direction);
 };

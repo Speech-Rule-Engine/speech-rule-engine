@@ -84,7 +84,7 @@ sre.SemanticNode = function(id) {
    * @type {!Object.<string>}
    */
   this.attributes = {};
-  
+
 };
 
 
@@ -100,10 +100,31 @@ sre.SemanticNode.prototype.querySelectorAll = function(pred) {
   for (var i = 0, child; child = this.childNodes[i]; i++) {
     result = result.concat(child.querySelectorAll(pred));
   }
+  for (var i = 0, content; content = this.contentNodes[i]; i++) {
+    result = result.concat(content.querySelectorAll(pred));
+  }
   if (pred(this)) {
     result.unshift(this);
   }
   return result;
+};
+
+
+/**
+ * The attributes of a semantic node.
+ * @enum {string}
+ */
+sre.SemanticNode.Attribute = {
+  EMBELLISHED: 'embellished',
+  FENCEPOINTER: 'fencepointer',
+  FONT: 'font',
+  ID: 'id',
+  ANNOTATION: 'annotation',
+  ROLE: 'role',
+  TYPE: 'type',
+  CHILDREN: 'children',
+  CONTENT: 'content',
+  TEXT: '$t'
 };
 
 
@@ -134,10 +155,12 @@ sre.SemanticNode.prototype.xml = function(xml, opt_brief) {
   }
   node.textContent = this.textContent;
   if (this.contentNodes.length > 0) {
-    node.appendChild(xmlNodeList('content', this.contentNodes));
+    node.appendChild(xmlNodeList(sre.SemanticNode.Attribute.CONTENT,
+                                 this.contentNodes));
   }
   if (this.childNodes.length > 0) {
-    node.appendChild(xmlNodeList('children', this.childNodes));
+    node.appendChild(xmlNodeList(sre.SemanticNode.Attribute.CHILDREN,
+                                 this.childNodes));
   }
   return node;
 };
@@ -162,28 +185,50 @@ sre.SemanticNode.prototype.toString = function(opt_brief) {
  * @private
  */
 sre.SemanticNode.prototype.xmlAttributes_ = function(node) {
-  node.setAttribute('role', this.role);
-  if (this.font != sre.SemanticAttr.Font.UNKNOWN) {
-    node.setAttribute('font', this.font);
+  var attributes = this.allAttributes();
+  for (var i = 0, attr; attr = attributes[i]; i++) {
+    node.setAttribute(attr[0], attr[1]);
   }
-  if (Object.keys(this.annotation).length) {
-    node.setAttribute('annotation', this.xmlAnnotation());
-  }
-  if (this.embellished) {
-    node.setAttribute('embellished', this.embellished);
-  }
-  if (this.fencePointer) {
-    node.setAttribute('fencepointer', this.fencePointer);
-  }
-  node.setAttribute('id', this.id);
   this.addExternalAttributes_(node);
 };
 
+
+/**
+ * Computes a list of attributes of the semantic node.
+ * @return {!Array.<Array.<sre.SemanticNode.Attribute, string>>} A list of
+ *     pairs.
+ */
+sre.SemanticNode.prototype.allAttributes = function() {
+  var attributes = [];
+  attributes.push([sre.SemanticNode.Attribute.ROLE, this.role]);
+  if (this.font != sre.SemanticAttr.Font.UNKNOWN) {
+    attributes.push([sre.SemanticNode.Attribute.FONT, this.font]);
+  }
+  if (Object.keys(this.annotation).length) {
+    attributes.push([sre.SemanticNode.Attribute.ANNOTATION, this.xmlAnnotation()]);
+  }
+  if (this.embellished) {
+    attributes.push([sre.SemanticNode.Attribute.EMBELLISHED, this.embellished]);
+  }
+  if (this.fencePointer) {
+    attributes.push([sre.SemanticNode.Attribute.FENCEPOINTER,
+                     this.fencePointer]);
+  }
+  attributes.push([sre.SemanticNode.Attribute.ID, this.id]);
+  return attributes;
+};
+
+
+/**
+ * Adds the external attributes for this node to its XML representation.
+ * @param {Node} node The XML node.
+ */
 sre.SemanticNode.prototype.addExternalAttributes_ = function(node) {
   for (var attr in this.attributes) {
     node.setAttribute(attr, this.attributes[attr]);
   }
 };
+
 
 /**
  * Turns annotation structure into an attribute.
@@ -197,6 +242,32 @@ sre.SemanticNode.prototype.xmlAnnotation = function() {
     });
   }
   return result.join(';');
+};
+
+
+/**
+ * Turns node into JSON format.
+ * @return {JSONType} The JSON object for the node.
+ */
+sre.SemanticNode.prototype.toJson = function() {
+  var json = /** @type {JSONType} */({});
+  json[sre.SemanticNode.Attribute.TYPE] = this.type;
+  var attributes = this.allAttributes();
+  for (var i = 0, attr; attr = attributes[i]; i++) {
+    json[attr[0]] = attr[1].toString();
+  }
+  if (this.textContent) {
+    json[sre.SemanticNode.Attribute.TEXT] = this.textContent;
+  }
+  if (this.childNodes.length) {
+    json[sre.SemanticNode.Attribute.CHILDREN] =
+        this.childNodes.map(function(child) {return child.toJson();});
+  }
+  if (this.contentNodes.length) {
+    json[sre.SemanticNode.Attribute.CONTENT] =
+        this.contentNodes.map(function(child) {return child.toJson();});
+  }
+  return json;
 };
 
 

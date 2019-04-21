@@ -22,6 +22,7 @@ goog.provide('sre.Locale.fr');
 
 goog.require('sre.Locale');
 goog.require('sre.Messages');
+goog.require('sre.Numbers.fr');
 
 
 /**
@@ -30,12 +31,12 @@ goog.require('sre.Messages');
 sre.Locale.fr = {
 
   MS: {
-    START: 'début ',
+    START: 'début',
     FRAC_V: 'fraction',
     FRAC_B: 'frac',
     FRAC_S: 'frac',
-    END: 'fin ',
-    FRAC_OVER: 'sur ',
+    END: 'fin',
+    FRAC_OVER: 'sur',
     ONCE: '1',
     TWICE: '2',
     NEST_FRAC: 'imbriquée',
@@ -66,7 +67,8 @@ sre.Locale.fr = {
     RADICAL_NEST_DEPTH: sre.Locale.nestingToString,
     COMBINE_ROOT_INDEX: sre.Locale.combinePostfixIndex,
     COMBINE_NESTED_FRACTION: function(a, b, c) {return c.replace(/ $/g, '') + b + a;},
-    COMBINE_NESTED_RADICAL: function(a, b, c) {return c + ' ' + a;}
+    COMBINE_NESTED_RADICAL: function(a, b, c) {return c + ' ' + a;},
+    FONT_REGEXP: function(font) {return RegExp(' (en |)' + font + '$');}
   },
 
 
@@ -74,7 +76,7 @@ sre.Locale.fr = {
     '2': 'carrée',
     '3': 'cubique'
   },
-    
+
   FONT: {
     'bold': 'gras',
     'bold-fraktur': 'gothique gras',
@@ -83,7 +85,7 @@ sre.Locale.fr = {
     'caligraphic': 'calligraphique',
     'caligraphic-bold': 'calligraphique gras',
     'double-struck': 'ajouré',
-    'double-struck-italic': 'ajouré italique',
+    'double-struck-italic': 'ajouré en italique',  // TODO: Get the ajoure fonts right!
     'fraktur': 'gothique',
     'italic': 'italique',
     'monospace': 'chasse fixe',
@@ -162,16 +164,19 @@ sre.Locale.fr = {
 
   REGEXP: {
     TEXT: 'a-zA-ZàâæçéèêëîïôœùûüÿÀÂÆÇÉÈÊËÎÏÔŒÙÛÜŸ',
-    NUMBER: '((\\d{1,3})(?=(\\.| ))((\\.| )\\d{3})*(,\\d+)?)|^\\d*,\\d+|^\\d+',
+    NUMBER: '((\\d{1,3})(?=( ))(( )\\d{3})*(,\\d+)?)|^\\d*,\\d+|^\\d+',
     DECIMAL_MARK: ',',
     DIGIT_GROUP: '',
-    JOINER_SUBSUPER: '-'
+    JOINER_SUBSUPER: '-',
+    JOINER_FRAC: ' '
   },
 
   // TODO: These!
   PLURAL_UNIT: {
     'foot': 'feet',
     'inch': 'inches'
-  }
+  },
+
+  NUMBERS: sre.Numbers.fr.NUMBERS
   
 };
