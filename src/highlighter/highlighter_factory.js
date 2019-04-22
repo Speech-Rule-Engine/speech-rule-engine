@@ -21,6 +21,7 @@
 
 goog.provide('sre.HighlighterFactory');
 
+goog.require('sre.ChtmlHighlighter');
 goog.require('sre.ColorPicker');
 goog.require('sre.CssHighlighter');
 goog.require('sre.HtmlHighlighter');
@@ -82,6 +83,6 @@ sre.HighlighterFactory.highlighterMapping_ = {
   'HTML-CSS': new sre.HtmlHighlighter(),
   'MML-CSS': new sre.MmlCssHighlighter(),
   'CommonHTML': new sre.CssHighlighter(),
-  'CHTML': new sre.CssHighlighter()
+  'CHTML': new sre.ChtmlHighlighter()
 };
 
