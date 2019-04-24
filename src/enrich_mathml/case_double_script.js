@@ -46,7 +46,9 @@ goog.inherits(sre.CaseDoubleScript, sre.AbstractEnrichCase);
 
 
 /**
- * @override
+ * Applicability test of the case.
+ * @param {!sre.SemanticNode} semantic The semantic node.
+ * @return {boolean} True if case is applicable.
  */
 sre.CaseDoubleScript.test = function(semantic) {
   if (!semantic.mathmlTree || !semantic.childNodes.length) {
