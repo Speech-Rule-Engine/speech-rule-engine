@@ -305,7 +305,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testEllipses004 = function() {
   var mathml = '<math><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn>' +
       '<mo>,</mo><mtext></mtext><mn>3</mn><mo>,</mo><mtext></mtext><mo>…' +
       '</mo></mrow></math>';
-  var speech = '1 virgule 2 virgule 3 virgule and so on';
+  var speech = '1 virgule 2 virgule 3 virgule et ainsi de suite';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -318,7 +318,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testEllipses005 = function() {
   var mathml = '<math><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn>' +
       '<mo>,</mo><mtext></mtext><mn>3</mn><mo>,</mo><mtext></mtext><mo>…' +
       '</mo><mtext></mtext><mo>,</mo><mn>20</mn></mrow></math>';
-  var speech = '1 virgule 2 virgule 3 virgule and so on up to virgule 20';
+  var speech = '1 virgule 2 virgule 3 virgule et ainsi de suite jusqu\'à virgule 20';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -361,7 +361,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testVertLine002 = function() {
   var preference = 'VerticalLine_Auto';
   var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mi>x</mi><mo>|</mo><mi>x' +
       '</mi><mo>></mo><mn>0</mn></mrow><mo>}</mo></mrow></mrow></math>';
-  var speech = 'the set of all x such that x supérieur à 0';
+  var speech = 'ensemble des x tel que x supérieur à 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -374,7 +374,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testVertLine003 = function() {
   var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mi>x</mi><mo>|</mo>' +
       '<mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>></mo><mn>2</mn>' +
       '</mrow><mo>}</mo></mrow></mrow></math>';
-  var speech = 'the set of all x such that, la valeur absolue de x, supérieur à 2';
+  var speech = 'ensemble des x tel que, la valeur absolue de x, supérieur à 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -387,7 +387,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testVertLine004 = function() {
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '</mrow><msub><mo>|</mo><mrow><mi>x</mi><mo>=</mo><mn>5</mn></mrow>' +
       '</msub></mrow></math>';
-  var speech = 'f de x, evaluated at x égale 5';
+  var speech = 'f de x, évalué à x égale 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -400,7 +400,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testVertLine005 = function() {
   var mathml = '<math><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo>' +
       '<mn>2</mn><mi>x</mi><msub><mo>|</mo><mrow><mi>x</mi><mo>=</mo><mn>2' +
       '</mn></mrow></msub></mrow></math>';
-  var speech = 'x au carré plus 2 x, evaluated at x égale 2';
+  var speech = 'x au carré plus 2 x, évalué à x égale 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -413,7 +413,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testVertLine006 = function() {
   var mathml = '<math><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo>' +
       '<mi>x</mi><msubsup><mstyle mathsize="140%" displaystyle="true"><mo>|' +
       '</mo></mstyle><mn>0</mn><mn>1</mn></msubsup></mrow></math>';
-  var speech = 'x au carré plus x, evaluated at 1, minus the same expression evaluated at 0';
+  var speech = 'x au carré plus x, évalué à 1, moins la même expression évaluée à 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -425,7 +425,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testVertLine007 = function() {
   var preference = 'VerticalLine_SuchThat';
   var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mi>x</mi><mo>|</mo><mi>x' +
       '</mi><mo>></mo><mn>0</mn></mrow><mo>}</mo></mrow></mrow></math>';
-  var speech = 'the set of all x such that x supérieur à 0';
+  var speech = 'ensemble des x tel que x supérieur à 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -436,7 +436,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testVertLine007 = function() {
 sre.ClearspeakFrenchPart2Symbols.prototype.testVertLine008 = function() {
   var preference = 'VerticalLine_Divides';
   var mathml = '<math><mrow><mn>3</mn><mo>|</mo><mn>6</mn></mrow></math>';
-  var speech = '3 divides 6';
+  var speech = '3 diviseur de 6';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -448,7 +448,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testVertLine009 = function() {
   var preference = 'VerticalLine_Given';
   var mathml = '<math><mrow><mi>P</mi><mtext></mtext><mrow><mo>(</mo><mrow>' +
       '<mi>A</mi><mo>|</mo><mi>B</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'P de, parenthèse gauche, A given B, parenthèse droite';
+  var speech = 'P de, parenthèse gauche, A sachant B, parenthèse droite';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -466,7 +466,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym001 = function() {
   var mathml = '<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ' +
       '</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow>' +
       '<mtext> is an even  number.</mtext></math>';
-  var speech = 'If x appartient à the integers then 2 x, is an even number point';
+  var speech = 'If x appartient à les nombres entiers then 2 x, is an even number point';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -478,7 +478,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym002 = function() {
   var preference = 'SetMemberSymbol_Auto';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|' +
       '</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
-  var speech = 'the set of all x in the integers such that x supérieur à 5';
+  var speech = 'ensemble des x est un les nombres entiers tel que x supérieur à 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -490,7 +490,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym003 = function() {
   var preference = 'SetMemberSymbol_Auto';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉' +
       '</mo><mi>ℝ</mi></mrow></math>';
-  var speech = '3 plus 2 i, n\'appartient pas à the real numbers';
+  var speech = '3 plus 2 i, n\'appartient pas à les nombres réels';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -503,7 +503,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym004 = function() {
   var mathml = '<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ' +
       '</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow>' +
       '<mtext> is an even  number.</mtext></math>';
-  var speech = 'If x appartient à the integers then 2 x, is an even number point';
+  var speech = 'If x appartient à les nombres entiers then 2 x, is an even number point';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -515,7 +515,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym005 = function() {
   var preference = 'SetMemberSymbol_Member';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|' +
       '</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
-  var speech = 'the set of all x member of the integers such that x supérieur à 5';
+  var speech = 'ensemble des x appartient à les nombres entiers tel que x supérieur à 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -527,7 +527,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym006 = function() {
   var preference = 'SetMemberSymbol_Member';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉' +
       '</mo><mi>ℝ</mi></mrow></math>';
-  var speech = '3 plus 2 i, n\'appartient pas à the real numbers';
+  var speech = '3 plus 2 i, n\'appartient pas à les nombres réels';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -540,7 +540,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym007 = function() {
   var mathml = '<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ' +
       '</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow>' +
       '<mtext> is an even  number.</mtext></math>';
-  var speech = 'If x appartient à the integers then 2 x, is an even number point';
+  var speech = 'If x appartient à les nombres entiers then 2 x, is an even number point';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -552,7 +552,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym008 = function() {
   var preference = 'SetMemberSymbol_Element';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|' +
       '</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
-  var speech = 'the set of all x element of the integers such that x supérieur à 5';
+  var speech = 'ensemble des x est un élément de les nombres entiers tel que x supérieur à 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -564,7 +564,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym009 = function() {
   var preference = 'SetMemberSymbol_Element';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉' +
       '</mo><mi>ℝ</mi></mrow></math>';
-  var speech = '3 plus 2 i, n\'appartient pas à the real numbers';
+  var speech = '3 plus 2 i, n\'appartient pas à les nombres réels';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -578,7 +578,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym010 = function() {
       '</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow>' +
       '<mtext> is an even  number.</mtext></math>';
   // var mathml = '<math><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>';
-  var speech = 'If x appartient à the integers then 2 x, is an even number point';
+  var speech = 'If x appartient à les nombres entiers then 2 x, is an even number point';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -590,7 +590,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym011 = function() {
   var preference = 'SetMemberSymbol_Belongs';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|' +
       '</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
-  var speech = 'the set of all x belonging to the integers such that x supérieur à 5';
+  var speech = 'ensemble des x est dans les nombres entiers tel que x supérieur à 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -602,7 +602,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym012 = function() {
   var preference = 'SetMemberSymbol_Belongs';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉' +
       '</mo><mi>ℝ</mi></mrow></math>';
-  var speech = '3 plus 2 i, n\'appartient pas à the real numbers';
+  var speech = '3 plus 2 i, n\'appartient pas à les nombres réels';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -615,7 +615,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym013 = function() {
   var mathml = '<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ' +
       '</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow>' +
       '<mtext> is an even  number.</mtext></math>';
-  var speech = 'If x appartient à the integers then 2 x, is an even number point';
+  var speech = 'If x appartient à les nombres entiers then 2 x, is an even number point';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -627,7 +627,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym014 = function() {
   var preference = 'SetMemberSymbol_Belongs';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|' +
       '</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
-  var speech = 'the set of all x belonging to the integers such that x supérieur à 5';
+  var speech = 'ensemble des x est dans les nombres entiers tel que x supérieur à 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -639,7 +639,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testMembSym015 = function() {
   var preference = 'SetMemberSymbol_Belongs';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉' +
       '</mo><mi>ℝ</mi></mrow></math>';
-  var speech = '3 plus 2 i, n\'appartient pas à the real numbers';
+  var speech = '3 plus 2 i, n\'appartient pas à les nombres réels';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -657,7 +657,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testSetMemb001 = function() {
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>:' +
       '</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}' +
       '</mo></mrow></math>';
-  var speech = 'the set of x belonging to the integers such that 2 inférieur à x inférieur à 7';
+  var speech = 'ensemble de x est dans les nombres entiers tel que 2 inférieur à x inférieur à 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -669,7 +669,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testSetMemb002 = function() {
   var preference = 'Sets_woAll:SetMemberSymbol_Member';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|' +
       '</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
-  var speech = 'the set of x member of the integers such that x supérieur à 5';
+  var speech = 'ensemble de x appartient à les nombres entiers tel que x supérieur à 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -713,7 +713,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testSum003 = function() {
   var mathml = '<math><mrow><mstyle displaystyle="true"><munder><mo>∑</mo>' +
       '<mrow><mi>i</mi><mo>∈</mo><msup><mi>ℤ</mi><mo>+</mo></msup></mrow>' +
       '</munder><mi>i</mi></mstyle></mrow></math>';
-  var speech = 'le sommation sur i appartient à the positive integers, de i';
+  var speech = 'le sommation sur i appartient à les nombres entiers positif, de i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -764,7 +764,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testSum007 = function() {
       '<mrow><mi>i</mi><mo>∈</mo><msup><mi>ℤ</mi><mo>+</mo></msup></mrow>' +
       '</munder><mrow><mfrac><mi>i</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn>' +
       '</mrow></mfrac></mrow></mstyle></mrow></math>';
-  var speech = 'le produit sur i appartient à the positive integers, de, fraction avec numérateur i, et dénominateur i plus 1';
+  var speech = 'le produit sur i appartient à les nombres entiers positif, de, fraction avec numérateur i, et dénominateur i plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -778,7 +778,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testSum008 = function() {
       '<mrow><msup><mi>ℤ</mi><mo>+</mo></msup></mrow></munder><mrow><mfrac>' +
       '<mi>i</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mrow>' +
       '</mstyle></mrow></math>';
-  var speech = 'le produit sur the positive integers, de, fraction avec numérateur i, et dénominateur i plus 1';
+  var speech = 'le produit sur les nombres entiers positif, de, fraction avec numérateur i, et dénominateur i plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -909,6 +909,6 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testSum018 = function() {
       '</mo><mi>ℝ</mi></munder><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi>' +
       '<mo>)</mo></mrow></mrow></mrow></mstyle><mtext></mtext><mi>d</mi>' +
       '<mi>x</mi></mrow></math>';
-  var speech = 'le intégrale sur the real numbers, de f de x, d x';
+  var speech = 'le intégrale sur les nombres réels, de f de x, d x';
   this.executeRuleTest(mathml, speech, preference);
 };

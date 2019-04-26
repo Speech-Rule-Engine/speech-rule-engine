@@ -152,7 +152,7 @@ sre.ClearspeakFrench.initCustomFunctions_ = function() {
 sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   defineRule(
       'collapsed', 'clearspeak.default',
-      '[t] "collapsed"; [n] . (engine:modality=summary,grammar:collapsed)',
+      '[t] "compressée"; [n] . (engine:modality=summary,grammar:collapsed)',
       'self::*', '@alternative', 'not(contains(@grammar, "collapsed"))',
       'self::*', 'self::*', 'self::*', 'self::*', 'self::*'
   );
@@ -265,13 +265,13 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   // Ellipses
   defineRule(
       'ellipsis', 'clearspeak.Ellipses_AndSoOn',
-      '[t] "and so on"',
+      '[t] "et ainsi de suite"',
       'self::punctuation', '@role="ellipsis"', 'not(following-sibling::*[1])',
       'not(preceding-sibling::*[last()][@role="ellipsis"])'
   );
   defineRule(
       'ellipsis', 'clearspeak.Ellipses_AndSoOn',
-      '[t] "and so on up to"',
+      '[t] "et ainsi de suite jusqu\'à"',
       'self::punctuation', '@role="ellipsis"',
       'preceding-sibling::*[1]', 'following-sibling::*[1]'
   );
@@ -279,16 +279,16 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   // Vertical bar
   defineRule(
       'vbar-evaluated', 'clearspeak.default',
-      '[n] children/*[1]; [p] (pause:"short"); [t] "evaluated at";' +
+      '[n] children/*[1]; [p] (pause:"short"); [t] "évalué à";' +
       ' [n] content/*[1]/children/*[2]; [p] (pause:"short")',
       'self::punctuated', '@role="endpunct"', 'content/*[1][@role="vbar"]',
       'content/*[1][@embellished]', 'name(content/*[1])="subscript"'
   );
   defineRule(
       'vbar-evaluated', 'clearspeak.default',
-      '[n] children/*[1]; [p] (pause:"short"); [t] "evaluated at";' +
+      '[n] children/*[1]; [p] (pause:"short"); [t] "évalué à";' +
       ' [n] content/*[1]/children/*[2]; [p] (pause:"short"); ' +
-      '[t] "minus the same expression evaluated at";' +
+      '[t] "moins la même expression évaluée à";' +
       ' [n] content/*[1]/children/*[1]/children/*[2]; [p] (pause:"short")',
       'self::punctuated', '@role="endpunct"', 'content/*[1][@role="vbar"]',
       'content/*[1][@embellished]', 'name(content/*[1])="superscript"',
@@ -297,57 +297,61 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
 
   defineRule(
       'vbar-such-that', 'clearspeak.VerticalLine_SuchThat',
-      '[t] "such that"', 'self::punctuation', '@role="vbar"',
+      '[t] "tel que"', 'self::punctuation', '@role="vbar"',
       'not(parent::*/parent::*[@embellished="punctuation"])'
   );
   defineRule(
       'vbar-such-that', 'clearspeak.VerticalLine_Divides',
-      '[t] "divides"', 'self::punctuation', '@role="vbar"',
+      '[t] "diviseur de"', 'self::punctuation', '@role="vbar"',
       'not(parent::*/parent::*[@embellished="punctuation"])'
   );
   defineRule(
       'vbar-such-that', 'clearspeak.VerticalLine_Given',
-      '[t] "given"', 'self::punctuation', '@role="vbar"',
+      '[t] "sachant"', 'self::punctuation', '@role="vbar"',
       'not(parent::*/parent::*[@embellished="punctuation"])'
   );
 
   // Element/Member
+  // 
+  // TODO: Maybe rename the preferences to reflect the actual expressions?
   defineRule(
       'set-member', 'clearspeak.default',
-      '[t] "in"', 'self::operator', '@role="set extended"',
+      '[t] "est un"', 'self::operator', '@role="set extended"',
       'text()="\u2208" or text()="\u220A"');
   defineSpecialisedRule(
       'set-member', 'clearspeak.default', 'clearspeak.SetMemberSymbol_Member',
-      '[t] "member of"');
+      '[t] "appartient à"');
   defineSpecialisedRule(
       'set-member', 'clearspeak.default', 'clearspeak.SetMemberSymbol_Element',
-      '[t] "element of"');
+      '[t] "est un élément de"');
   defineSpecialisedRule(
       'set-member', 'clearspeak.default', 'clearspeak.SetMemberSymbol_Belongs',
-      '[t] "belonging to"');
+      '[t] "est dans"');
   defineRule(
       'set-not-member', 'clearspeak.default',
-      '[t] "not in"', 'self::operator', '@role="set extended"',
+      '[t] "n\'est pas un"', 'self::operator', '@role="set extended"',
       'text()="\u2209"'
   );
   defineSpecialisedRule(
       'set-not-member', 'clearspeak.default',
       'clearspeak.SetMemberSymbol_Member',
-      '[t] "not member of"');
+      '[t] "n\'appartient pas à"');
   defineSpecialisedRule(
       'set-not-member', 'clearspeak.default',
       'clearspeak.SetMemberSymbol_Element',
-      '[t] "not element of"');
+      '[t] "n\'est pas un élément de"');
   defineSpecialisedRule(
       'set-not-member', 'clearspeak.default',
       'clearspeak.SetMemberSymbol_Belongs',
-      '[t] "not belonging to"');
+      '[t] "n\'est pas dans"');
 
 
   // Adornments
   //
   // Primes
   // This rule uses some redundancy for ordering!
+  // 
+  // TODO: Fix together with units.
   defineRule(
       'prime', 'clearspeak.default',
       '[n] children/*[1]; [n] children/*[2]',
@@ -1100,24 +1104,24 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   // Set braces
   defineRule(
       'set-empty', 'clearspeak.default',
-      '[t] "the empty set"',
+      '[t] "ensemble vide"',
       'self::fenced', '@role="set empty"');
   defineRule(
       'set-extended', 'clearspeak.default',
-      '[t] "the set of all"; [n] children/*[1]/children/*[1]; ' +
-      '[t] "such that"; [n] children/*[1]/children/*[3]',
+      '[t] "ensemble des"; [n] children/*[1]/children/*[1]; ' +
+      '[t] "tel que"; [n] children/*[1]/children/*[3]',
       'self::fenced', '@role="set extended"');
   defineRule(
       'set-collection', 'clearspeak.default',
-      '[t] "the set"; [n] children/*[1]',
+      '[t] "ensemble"; [n] children/*[1]',
       'self::fenced', '@role="set collection"');
   defineRuleAlias(
       'set-collection', 'self::fenced', '@role="set singleton"');
 
   defineRule(
       'set-extended', 'clearspeak.Sets_woAll',
-      '[t] "the set of"; [n] children/*[1]/children/*[1]; ' +
-      '[t] "such that"; [n] children/*[1]/children/*[3]',
+      '[t] "ensemble de"; [n] children/*[1]/children/*[1]; ' +
+      '[t] "tel que"; [n] children/*[1]/children/*[3]',
       'self::fenced', '@role="set extended"');
   defineRule(
       'set-collection', 'clearspeak.Sets_SilentBracket',
@@ -1491,27 +1495,27 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   //
   defineRule(
       'natural-numbers', 'clearspeak.default',
-      '[t] "the natural numbers"', 'self::identifier',
+      '[t] "les nombres entier naturel"', 'self::identifier',
       'text()="\u2115" or (text()="N" and @font="double-struck")',
       'self::*', 'self::*', 'self::*');
   defineRule(
       'integers', 'clearspeak.default',
-      '[t] "the integers"', 'self::identifier',
+      '[t] "les nombres entiers"', 'self::identifier',
       'text()="\u2124" or (text()="Z" and @font="double-struck")',
       'self::*', 'self::*', 'self::*');
   defineRule(
       'rational-numbers', 'clearspeak.default',
-      '[t] "the rational numbers"', 'self::identifier',
+      '[t] "les Nombres rationnels"', 'self::identifier',
       'text()="\u211A" or (text()="Q" and @font="double-struck")',
       'self::*', 'self::*', 'self::*');
   defineRule(
       'real-numbers', 'clearspeak.default',
-      '[t] "the real numbers"', 'self::identifier',
+      '[t] "les nombres réels"', 'self::identifier',
       'text()="\u211D" or (text()="R" and @font="double-struck")',
       'self::*', 'self::*', 'self::*');
   defineRule(
       'complex-numbers', 'clearspeak.default',
-      '[t] "the complex numbers"', 'self::identifier',
+      '[t] "les nombres complexes"', 'self::identifier',
       'text()="\u2102" or (text()="C" and @font="double-struck")',
       'self::*', 'self::*', 'self::*');
 
@@ -1550,34 +1554,34 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   // Partial named sets.
   defineRule(
       'natural-numbers-with-zero', 'clearspeak.default',
-      '[t] "the natural numbers with zero"',
+      '[t] "les nombres entiers naturel avec zero"',
       'self::subscript', 'children/*[1]/text()="\u2115"' +
       ' or (children/*[1]/text()="N" and @font="double-struck")',
       'children/*[2]/text()="0"');
   defineRule(
       'positive-integers', 'clearspeak.default',
-      '[t] "the positive integers"',
+      '[t] "les nombres entiers positif"',
       'self::superscript', 'children/*[1]/text()="\u2124"' +
       ' or (children/*[1]/text()="Z" and @font="double-struck")',
       'children/*[2]/text()="+"',
       'self::*', 'self::*', 'self::*');
   defineRule(
       'positive-integers', 'clearspeak.default',
-      '[t] "the negative integers"',
+      '[t] "les nombres entiers négatif"',
       'self::superscript', 'children/*[1]/text()="\u2124"' +
       ' or (children/*[1]/text()="Z" and @font="double-struck")',
       'children/*[2]/text()="-"',
       'self::*', 'self::*', 'self::*');
   defineRule(
       'positive-rational-numbers', 'clearspeak.default',
-      '[t] "the positive rational numbers"',
+      '[t] "les nombres rationnels positif"',
       'self::superscript', 'children/*[1]/text()="\u211A"' +
       ' or (children/*[1]/text()="Q" and @font="double-struck")',
       'children/*[2]/text()="+"',
       'self::*', 'self::*', 'self::*');
   defineRule(
       'negative-rational-numbers', 'clearspeak.default',
-      '[t] "the negative rational numbers"',
+      '[t] "les nombres rationnels négatif"',
       'self::superscript', 'children/*[1]/text()="\u211A"' +
       ' or (children/*[1]/text()="Q" and @font="double-struck")',
       'children/*[2]/text()="-"',
@@ -1833,7 +1837,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   // Tables/Multiline elements
   defineRule(
       'lines-summary', 'clearspeak.default',
-      '[p] (pause:short); [t] count(children/*); [t] "lines";' +
+      '[p] (pause:short); [t] count(children/*); [t] "lignes";' +
       '  [n] . (grammar:layoutSummary)',
       'self::multiline', 'not(contains(@grammar, "layoutSummary"))', 'self::*'
   );
@@ -1861,7 +1865,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   defineRule(
       'lines', 'clearspeak.default',
       '[p] (pause:short);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Line-:",' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Ligne-:",' + // 
       'sepFunc:CTXFpauseSeparator,separator:"long");' +
       ' [p] (pause:long)', 'self::table');
   defineRuleAlias(
@@ -2082,16 +2086,17 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       'self::number', '@role="mixed"');
   defineRule(
       'number-with-chars', 'clearspeak.default',
-      '[t] "number"; [m] CQFspaceoutNumber (grammar:protected)',
+      '[t] "nombre"; [m] CQFspaceoutNumber (grammar:protected)',
       'self::number', '@role="othernumber"',
       '"" != translate(text(), "0123456789.,", "")',
       'not(contains(@grammar, "protected"))');
 
   // Decimal periods:
+  // TODO: Plural for chiffre repete!
   defineRule(
       'decimal-period', 'clearspeak.default',
-      '[t] "the repeating decimal"; [n] children/*[1] (grammar:spaceout); ' +
-      '[t] "point followed by repeating digits"; ' +
+      '[t] "la décimale"; [n] children/*[1] (grammar:spaceout); ' +
+      '[t] "virgule suivi par les chiffres répétés"; ' +
       ' [n] children/*[3]/children/*[1] (grammar:spaceout)',
       'self::punctuated', '@role="sequence"', 'count(./content/*)=1',
       './content/*[1][@role="fullstop"]',
@@ -2103,8 +2108,8 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   );
   defineRule(
       'decimal-period', 'clearspeak.default',
-      '[t] "the repeating decimal"; [n] children/*[1] (grammar:spaceout); ' +
-      '[t] "followed by repeating digits"; ' +
+      '[t] "la décimale"; [n] children/*[1] (grammar:spaceout); ' +
+      '[t] "suivi par les chiffres répétés"; ' +
       ' [n] children/*[2]/children/*[1] (grammar:spaceout);',
       'self::infixop', '@role="implicit"', 'count(./children/*)=2',
       'name(children/*[1])="number"', 'children/*[1][@role="float"]',
@@ -2115,8 +2120,8 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   );
   defineRule(
       'decimal-period-singular', 'clearspeak.default',
-      '[t] "the repeating decimal"; [n] children/*[1] (grammar:spaceout); ' +
-      '[t] "point followed by repeating digit"; ' +
+      '[t] "la décimale"; [n] children/*[1] (grammar:spaceout); ' +
+      '[t] "virgule suivi par le chiffre répété"; ' +
       ' [n] children/*[3]/children/*[1] (grammar:spaceout)',
       'self::punctuated', '@role="sequence"', 'count(./content/*)=1',
       './content/*[1][@role="fullstop"]',
@@ -2129,8 +2134,8 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   );
   defineRule(
       'decimal-period-singular', 'clearspeak.default',
-      '[t] "the repeating decimal"; [n] children/*[1] (grammar:spaceout); ' +
-      '[t] "followed by repeating digit"; ' +
+      '[t] "la décimale"; [n] children/*[1] (grammar:spaceout); ' +
+      '[t] "suivi par le chiffre répété"; ' +
       ' [n] children/*[2]/children/*[1] (grammar:spaceout);',
       'self::infixop', '@role="implicit"', 'count(./children/*)=2',
       'name(children/*[1])="number"', 'children/*[1][@role="float"]',
@@ -2152,7 +2157,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   // Line segments:
   defineRule(
       'line-segment', 'clearspeak.default',
-      '[t] "the line segment"; [n] children/*[1]/children/*[1]; ' +
+      '[t] "le segment"; [n] children/*[1]/children/*[1]; ' +
       '[n] children/*[1]/children/*[2]; [p] (pause:short)',
       'self::overscore', '@role="implicit"',
       'children/*[2][@role="overaccent"]',
@@ -2164,7 +2169,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   // Congutates:
   defineRule(
       'conjugate', 'clearspeak.Bar_Conjugate',
-      '[t] "the complex conjugate of"; [n] children/*[1]',
+      '[t] "le complexe conjugué de"; [n] children/*[1]',
       'self::overscore',
       'children/*[2][@role="overaccent"]',
       'children/*[2][text()="\u00AF" or text()="\uFFE3"' +
@@ -2174,18 +2179,18 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   // Special rules:
   defineRule(
       'defined-by', 'clearspeak.default',
-      '[t] "is defined to be" (pause:short)',
+      '[t] "est défini par" (pause:short)',
       'self::overscore', '@role="equality"', '@embellished="relation"',
       'name(children/*[2])="text"', 'children/*[2][text()]="def"'
   );
   defineRule(
       'adorned-sign', 'clearspeak.default',
-      '[n] children/*[1] ; [t] "sign with"; [n] children/*[2]; [t] "over it"',
+      '[t] "signe"; [n] children/*[1] ; [t] "avec"; [n] children/*[2]; [t] "dessus"',
       'self::overscore', '@embellished',
       'name(children/*[1])="operator" or name(children/*[1])="relation"'
   );
   defineRule(
-      'factorial', 'clearspeak.default', '[t] "factorial"', 'self::punctuation',
+      'factorial', 'clearspeak.default', '[t] "factorielle"', 'self::punctuation',
       'text()="!"', 'name(preceding-sibling::*[1])!="text"');
 
   // Tensors:
@@ -2197,45 +2202,45 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   );
   defineRule(
       'left-super', 'clearspeak.default',
-      '[t] "left super"; [n] text()', 'self::*[@role="leftsuper"]',
+      '[t] "exposant gauche"; [n] text()', 'self::*[@role="leftsuper"]',
       'not(contains(@grammar,"combinatorics"))'
   );
   defineRule(
       'left-super', 'clearspeak.default',
-      '[t] "left super"; [m] children/*',
+      '[t] "exposant gauche"; [m] children/*',
       'self::punctuated', '@role="leftsuper"',
       'not(contains(@grammar,"combinatorics"))'
   );
   defineRule(
       'left-sub', 'clearspeak.default',
-      '[t] "left sub"; [n] text()', 'self::*[@role="leftsub"]',
+      '[t] "indice gauche"; [n] text()', 'self::*[@role="leftsub"]',
       'not(contains(@grammar,"combinatorics"))'
   );
   defineRule(
       'left-sub', 'clearspeak.default',
-      '[t] "left sub"; [m] children/*',
+      '[t] "indice gauche"; [m] children/*',
       'self::punctuated', '@role="leftsub"',
       'not(contains(@grammar,"combinatorics"))'
   );
   defineRule(
       'right-super', 'clearspeak.default',
-      '[t] "right super"; [n] text()', 'self::*[@role="rightsuper"]',
+      '[t] "exposant droite"; [n] text()', 'self::*[@role="rightsuper"]',
       'not(contains(@grammar,"combinatorics"))'
   );
   defineRule(
       'right-super', 'clearspeak.default',
-      '[t] "right super"; [m] children/*',
+      '[t] "exposant droite"; [m] children/*',
       'self::punctuated', '@role="rightsuper"',
       'not(contains(@grammar,"combinatorics"))'
   );
   defineRule(
       'right-sub', 'clearspeak.default',
-      '[t] "right sub"; [n] text()', 'self::*[@role="rightsub"]',
+      '[t] "indice droite"; [n] text()', 'self::*[@role="rightsub"]',
       'not(contains(@grammar,"combinatorics"))'
   );
   defineRule(
       'right-sub', 'clearspeak.default',
-      '[t] "right sub"; [m] children/*',
+      '[t] "indice droite"; [m] children/*',
       'self::punctuated', '@role="rightsub"',
       'not(contains(@grammar,"combinatorics"))'
   );
