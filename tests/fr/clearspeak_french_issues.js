@@ -59,9 +59,9 @@ sre.ClearspeakFrenchIssues.prototype.testIssue230 = function() {
 sre.ClearspeakFrenchIssues.prototype.testIssueNumbers = function() {
   var preference = 'default';
   this.executeRuleTest(
-      '<mrow><mn>t2e4</mn></mrow>', 'number t 2 e 4', preference);
+      '<mrow><mn>t2e4</mn></mrow>', 'nombre t 2 e 4', preference);
   this.executeRuleTest(
-      '<mrow><mn>#FF0000</mn></mrow>', 'number dièse F F 0 0 0 0', preference);
+      '<mrow><mn>#FF0000</mn></mrow>', 'nombre dièse F F 0 0 0 0', preference);
   this.executeRuleTest(
-      '<mrow><mn>#FFFF</mn></mrow>', 'number dièse F F F F', preference);
+      '<mrow><mn>#FFFF</mn></mrow>', 'nombre dièse F F F F', preference);
 };

@@ -40,22 +40,6 @@ sre.EnrichCaseFactory.Case;
 
 
 /**
- * Returns the embellished case analysis.
- * @param {sre.SemanticNode} node The semantic node.
- * @return {sre.EnrichCase} The case analysis.
- */
-sre.EnrichCaseFactory.getEmbellishedCase = function(node) {
-  return new sre.EnrichCaseFactory.embellishedCase(node);
-};
-
-
-/**
- * @type {function(new:sre.AbstractEnrichCase, sre.SemanticNode)}
- */
-sre.EnrichCaseFactory.embellishedCase;
-
-
-/**
  * The cases of the factory can provide.
  * @type {Array.<sre.EnrichCaseFactory.Case>}
  */

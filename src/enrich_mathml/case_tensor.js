@@ -40,10 +40,13 @@ goog.inherits(sre.CaseTensor, sre.CaseMultiindex);
 
 
 /**
- * @override
+ * Applicability test of the case.
+ * @param {!sre.SemanticNode} semantic The semantic node.
+ * @return {boolean} True if case is applicable.
  */
 sre.CaseTensor.test = function(semantic) {
-  return semantic.mathmlTree && semantic.type === sre.SemanticAttr.Type.TENSOR;
+  return !!semantic.mathmlTree &&
+    semantic.type === sre.SemanticAttr.Type.TENSOR;
 };
 
 

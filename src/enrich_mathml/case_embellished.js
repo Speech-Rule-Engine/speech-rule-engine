@@ -90,10 +90,12 @@ goog.inherits(sre.CaseEmbellished, sre.AbstractEnrichCase);
 
 
 /**
- * @override
+ * Applicability test of the case.
+ * @param {!sre.SemanticNode} semantic The semantic node.
+ * @return {boolean} True if case is applicable.
  */
 sre.CaseEmbellished.test = function(semantic) {
-  return semantic.mathmlTree && semantic.fencePointer;
+  return !!(semantic.mathmlTree && semantic.fencePointer);
 };
 
 
