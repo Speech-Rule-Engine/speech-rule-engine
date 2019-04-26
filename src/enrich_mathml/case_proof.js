@@ -50,7 +50,7 @@ goog.inherits(sre.CaseProof, sre.AbstractEnrichCase);
  * @return {boolean} True if case is applicable.
  */
 sre.CaseProof.test = function(semantic) {
-  return semantic.mathmlTree &&
+  return !!semantic.mathmlTree &&
     (semantic.type === sre.SemanticAttr.Type.INFERENCE ||
      semantic.type === sre.SemanticAttr.Type.PREMISES);
 };
