@@ -887,7 +887,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar006 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mn>0</mn><mo>.</mo><mover accent="true"><mn>3' +
       '</mn><mo stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = 'the repeating decimal 0 point followed by repeating digit 3';
+  var speech = 'la décimale 0 virgule suivi par le chiffre répété 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -899,7 +899,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar007 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mn>0</mn><mo>.</mo><mover accent="true"><mrow>' +
       '<mn>12</mn></mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = 'the repeating decimal 0 point followed by repeating digits 1 2';
+  var speech = 'la décimale 0 virgule suivi par le chiffre répété 1 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -911,7 +911,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar008 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mn>2</mn><mo>.</mo><mover accent="true"><mrow>' +
       '<mn>134</mn></mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = 'the repeating decimal 2 point followed by repeating digits 1 3 4';
+  var speech = 'la décimale 2 virgule suivi par le chiffre répété 1 3 4';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -923,7 +923,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar009 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mn>.13</mn><mover accent="true"><mrow><mn>467' +
       '</mn></mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = 'the repeating decimal point 1 3 followed by repeating digits 4 6 7';
+  var speech = 'la décimale point 1 3 suivi par les chiffres répétés 4 6 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -935,7 +935,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar010 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mn>25.12</mn><mover accent="true"><mrow>' +
       '<mn>632</mn></mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = 'the repeating decimal 2 5 point 1 2 followed by repeating digits 6 3 2';
+  var speech = 'la décimale 2 5 point 1 2 suivi par les chiffres répétés 6 3 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -959,7 +959,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar012 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mover accent="true"><mrow><mi>C</mi><mi>D</mi>' +
       '</mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = 'the line segment C D';
+  var speech = 'le segment C D';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -972,7 +972,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar013 = function() {
   var mathml = '<math><mrow><mover accent="true"><mrow><msup><mi>C</mi>' +
       '<mo>′</mo></msup><msup><mi>D</mi><mo>′</mo></msup></mrow><mo' +
       ' stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = 'the line segment C prime D prime';
+  var speech = 'le segment C prime D prime';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -985,7 +985,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar014 = function() {
   var mathml = '<math><mrow><mover accent="true"><mrow><msup><mi>C</mi>' +
       '<mo>″</mo></msup><msup><mi>D</mi><mo>″</mo></msup></mrow><mo' +
       ' stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = 'the line segment C double prime D double prime';
+  var speech = 'le segment C double prime D double prime';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -998,7 +998,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar015 = function() {
   var mathml = '<math><mrow><mover accent="true"><mrow><msup><mi>C</mi>' +
       '<mo>‴</mo></msup><msup><mi>D</mi><mo>‴</mo></msup></mrow><mo' +
       ' stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = 'the line segment C triple prime D triple prime';
+  var speech = 'le segment C triple prime D triple prime';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1009,7 +1009,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar015 = function() {
 sre.ClearspeakFrenchPart3Adornments.prototype.testBar016 = function() {
   var preference = 'Bar_Conjugate';
   var mathml = '<math><mover accent="true"><mi>z</mi><mo>¯</mo></mover></math>';
-  var speech = 'the complex conjugate of z';
+  var speech = 'le complexe conjugué de z';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1021,7 +1021,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar017 = function() {
   var preference = 'Bar_Conjugate';
   var mathml = '<math><mrow><mi>z</mi><mtext></mtext><mover accent="true">' +
       '<mi>z</mi><mo>¯</mo></mover></mrow></math>';
-  var speech = 'z, the complex conjugate of z';
+  var speech = 'z, le complexe conjugué de z';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1034,7 +1034,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar018 = function() {
   var mathml = '<math><mrow><mover accent="true"><mrow><mn>3</mn><mo>−</mo>' +
       '<mn>2</mn><mi>i</mi></mrow><mo stretchy="true">¯</mo></mover><mo>=' +
       '</mo><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi></mrow></math>';
-  var speech = 'the complex conjugate of 3 moins 2 i, égale 3 plus 2 i';
+  var speech = 'le complexe conjugué de 3 moins 2 i, égale 3 plus 2 i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1047,7 +1047,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar006a = function() {
   var preference = 'Bar_Conjugate';
   var mathml = '<math><mrow><mn>0</mn><mo>.</mo><mover accent="true"><mn>3' +
       '</mn><mo stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = 'the repeating decimal 0 point followed by repeating digit 3';
+  var speech = 'la décimale 0 virgule suivi par le chiffre répété 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1059,7 +1059,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar007a = function() {
   var preference = 'Bar_Conjugate';
   var mathml = '<math><mrow><mn>0</mn><mo>.</mo><mover accent="true"><mrow>' +
       '<mn>12</mn></mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = 'the repeating decimal 0 point followed by repeating digits 1 2';
+  var speech = 'la décimale 0 virgule suivi par les chiffres répétés 1 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1071,7 +1071,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar008a = function() {
   var preference = 'Bar_Conjugate';
   var mathml = '<math><mrow><mn>2</mn><mo>.</mo><mover accent="true"><mrow>' +
       '<mn>134</mn></mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = 'the repeating decimal 2 point followed by repeating digits 1 3 4';
+  var speech = 'la décimale 2 virgule suivi par les chiffres répétés 1 3 4';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1083,7 +1083,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar009a = function() {
   var preference = 'Bar_Conjugate';
   var mathml = '<math><mrow><mn>.13</mn><mover accent="true"><mrow><mn>467' +
       '</mn></mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = 'the repeating decimal point 1 3 followed by repeating digits 4 6 7';
+  var speech = 'la décimale point 1 3 suivi par les chiffres répétés 4 6 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1095,7 +1095,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar010a = function() {
   var preference = 'Bar_Conjugate';
   var mathml = '<math><mrow><mn>25.12</mn><mover accent="true"><mrow>' +
       '<mn>632</mn></mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = 'the repeating decimal 2 5 point 1 2 followed by repeating digits 6 3 2';
+  var speech = 'la décimale 2 5 point 1 2 suivi par les chiffres répétés 6 3 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1114,7 +1114,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testEqual001 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mover><mo>=</mo><mrow><mtext>def</mtext>' +
       '</mrow></mover></mrow></math>';
-  var speech = 'is defined to be';
+  var speech = 'est défini par';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1129,7 +1129,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testEqual002 = function() {
       '</mrow><mover><mo>=</mo><mrow><mtext>def</mtext></mrow></mover><mi>f' +
       '</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)' +
       '</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'parenthèse gauche, f opérateur rond g, parenthèse droite, de x, is defined to be, f de, g de x';
+  var speech = 'parenthèse gauche, f opérateur rond g, parenthèse droite, de x, est défini par, f de, g de x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1140,7 +1140,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testEqual002 = function() {
 sre.ClearspeakFrenchPart3Adornments.prototype.testEqual003 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mover><mo>=</mo><mo>?</mo></mover></mrow></math>';
-  var speech = 'égale sign with point d\'interrogation over it';
+  var speech = 'signe égale avec point d\'interrogation dessus';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1152,6 +1152,6 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testEqual004 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mi>x</mi><mo>+</mo><mn>2</mn><mover><mo>=</mo>' +
       '<mo>?</mo></mover><mn>4</mn></mrow></math>';
-  var speech = 'x plus 2 égale sign with point d\'interrogation over it 4';
+  var speech = 'x plus 2 signe égale avec point d\'interrogation dessus 4';
   this.executeRuleTest(mathml, speech, preference);
 };
