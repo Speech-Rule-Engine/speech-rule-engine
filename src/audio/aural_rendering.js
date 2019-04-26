@@ -127,6 +127,17 @@ sre.AuralRendering.registerRenderer = function(type, renderer) {
 
 
 /**
+ * Checks if the current renderer is of a given type.
+ * @param {function(new:sre.AudioRenderer)} type This is a type.
+ * @return {boolean} True if it is an instance of the given type.
+ */
+sre.AuralRendering.ofType = function(type) {
+  return sre.AuralRendering.rendererMapping_[
+      sre.Engine.getInstance().markup] instanceof type;
+};
+
+
+/**
  * @type {Object.<sre.Engine.Markup, sre.AudioRenderer>}
  * @private
  */

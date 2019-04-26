@@ -89,17 +89,17 @@ sre.AbstractAudioRenderer.prototype.finalize = function(str) {
 sre.AbstractAudioRenderer.prototype.pauseValue = function(value) {
   var numeric;
   switch (value) {
-  case 'long':
-    numeric = 750;
-    break;
-  case 'medium':
-    numeric = 500;
-    break;
-  case 'short':
-    numeric = 250;
-    break;
-  default:
-    numeric = value;
+    case 'long':
+      numeric = 750;
+      break;
+    case 'medium':
+      numeric = 500;
+      break;
+    case 'short':
+      numeric = 250;
+      break;
+    default:
+      numeric = value;
   }
   return Math.floor(numeric *
                     parseInt(sre.Engine.getInstance().getRate(), 10) / 100);

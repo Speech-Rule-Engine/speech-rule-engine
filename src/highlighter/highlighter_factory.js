@@ -38,7 +38,7 @@ goog.require('sre.SvgHighlighter');
  *          browser: (undefined|string)}} rendererInfo
  *     Information on renderer, browser. Has to at least contain the
  *     renderer field.
- * @return {?sre.Highlighter} A new highlighter.
+ * @return {!sre.Highlighter} A new highlighter.
  */
 sre.HighlighterFactory.highlighter = function(back, fore, rendererInfo) {
   var colorPicker = new sre.ColorPicker(back, fore);
@@ -46,8 +46,8 @@ sre.HighlighterFactory.highlighter = function(back, fore, rendererInfo) {
                   rendererInfo.browser === 'Safari') ?
       'MML-CSS' : rendererInfo.renderer;
   var highlighter =
-      sre.HighlighterFactory.highlighterMapping_[renderer];
-  if (!highlighter) return null;
+      sre.HighlighterFactory.highlighterMapping_[renderer] ||
+      sre.HighlighterFactory.highlighterMapping_['NativeMML'];
   highlighter.setColor(colorPicker);
   return highlighter;
 };

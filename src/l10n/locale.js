@@ -35,7 +35,8 @@ goog.require('sre.Messages');
  *   ROLE: Object.<sre.SemanticAttr.Role>,
  *   ENCLOSE: Object.<sre.SemanticAttr.Role>,
  *   NAVIGATE: Object.<string>,
- *   REGEXP: Object.<string>
+ *   REGEXP: Object.<string>,
+ *   NUMBERS: Object.<Function|string>
  * }}
  */
 sre.Locale.Messages;
@@ -49,7 +50,7 @@ sre.Locale.Messages;
 sre.Locale.nestingToString = function(count) {
   switch (count) {
     case 1:
-      return '';
+      return sre.Messages.MS.ONCE || '';
     case 2:
       return sre.Messages.MS.TWICE;
     default:

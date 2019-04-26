@@ -104,7 +104,7 @@ sre.DynamicProperties.prototype.updateProperties = function(props) {
 sre.DynamicProperties.prototype.allProperties = function() {
   var propLists = [];
   this.order_.forEach(goog.bind(function(key) {
-    propLists.push(this.getProperty(key));
+    propLists.push(this.getProperty(key).slice());
   }, this));
   return propLists;
 };
@@ -180,6 +180,21 @@ sre.DynamicCstr.prototype.getValues = function() {
     cstrStrings.push(this.getValue(key));
   }, this));
   return cstrStrings;
+};
+
+
+/**
+ * @override
+ */
+sre.DynamicCstr.prototype.allProperties = function() {
+  var propLists = sre.DynamicCstr.base(this, 'allProperties');
+  for (var i = 0, props, key; props = propLists[i], key = this.order_[i]; i++) {
+    var value = this.getValue(key);
+    if (props.indexOf(value) === -1) {
+      props.unshift(value);
+    }
+  }
+  return propLists;
 };
 
 
@@ -302,10 +317,10 @@ sre.DynamicCstr.Order;
  */
 sre.DynamicCstr.DEFAULT_ORDER = [
   sre.DynamicCstr.Axis.LOCALE,
+  sre.DynamicCstr.Axis.MODALITY,
   sre.DynamicCstr.Axis.DOMAIN,
   sre.DynamicCstr.Axis.STYLE,
-  sre.DynamicCstr.Axis.TOPIC,
-  sre.DynamicCstr.Axis.MODALITY
+  sre.DynamicCstr.Axis.TOPIC
 ];
 
 
@@ -327,7 +342,7 @@ sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE] =
 sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.TOPIC] =
     sre.DynamicCstr.DEFAULT_VALUE;
 sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY] =
-    sre.DynamicCstr.DEFAULT_VALUE;
+    'speech';// sre.DynamicCstr.DEFAULT_VALUE;
 
 
 
@@ -520,6 +535,14 @@ sre.DynamicCstr.DefaultComparator.prototype.compare = function(cstr1, cstr2) {
     }
   }
   return 0;
+};
+
+
+/**
+ * @override
+ */
+sre.DynamicCstr.DefaultComparator.prototype.toString = function() {
+  return this.reference_.toString() + '\n' + this.fallback_.toString();
 };
 
 

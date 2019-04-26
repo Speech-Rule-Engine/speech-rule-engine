@@ -100,6 +100,9 @@ sre.SemanticNode.prototype.querySelectorAll = function(pred) {
   for (var i = 0, child; child = this.childNodes[i]; i++) {
     result = result.concat(child.querySelectorAll(pred));
   }
+  for (var i = 0, content; content = this.contentNodes[i]; i++) {
+    result = result.concat(content.querySelectorAll(pred));
+  }
   if (pred(this)) {
     result.unshift(this);
   }
@@ -244,7 +247,7 @@ sre.SemanticNode.prototype.xmlAnnotation = function() {
 
 /**
  * Turns node into JSON format.
- * @return {JSONType} The JSON object for the node. 
+ * @return {JSONType} The JSON object for the node.
  */
 sre.SemanticNode.prototype.toJson = function() {
   var json = /** @type {JSONType} */({});
@@ -258,11 +261,11 @@ sre.SemanticNode.prototype.toJson = function() {
   }
   if (this.childNodes.length) {
     json[sre.SemanticNode.Attribute.CHILDREN] =
-      this.childNodes.map(function(child) {return child.toJson();});
+        this.childNodes.map(function(child) {return child.toJson();});
   }
   if (this.contentNodes.length) {
     json[sre.SemanticNode.Attribute.CONTENT] =
-      this.contentNodes.map(function(child) {return child.toJson();});
+        this.contentNodes.map(function(child) {return child.toJson();});
   }
   return json;
 };

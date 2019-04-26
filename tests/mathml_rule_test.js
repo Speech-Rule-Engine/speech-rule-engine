@@ -40,11 +40,6 @@ sre.MathmlRuleTest = function() {
    */
   this.semantics = false;
 
-  /**
-   * @override
-   */
-  this.rules = ['MathmlStoreRules'];
-
 };
 goog.inherits(sre.MathmlRuleTest, sre.AbstractRuleTest);
 
