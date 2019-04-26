@@ -45,7 +45,9 @@ goog.inherits(sre.CaseProof, sre.AbstractEnrichCase);
 
 
 /**
- * @override
+ * Applicability test of the case.
+ * @param {!sre.SemanticNode} semantic The semantic node.
+ * @return {boolean} True if case is applicable.
  */
 sre.CaseProof.test = function(semantic) {
   return semantic.mathmlTree &&
