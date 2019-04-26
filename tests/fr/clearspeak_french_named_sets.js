@@ -56,7 +56,7 @@ goog.inherits(sre.ClearspeakFrenchNamedSets, sre.ClearspeakFrenchRuleTest);
 sre.ClearspeakFrenchNamedSets.prototype.testNumSys001 = function() {
   var preference = 'default';
   var mathml = '<mi>ℝ</mi>';
-  var speech = 'the real numbers';
+  var speech = 'les nombres réels';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -67,7 +67,7 @@ sre.ClearspeakFrenchNamedSets.prototype.testNumSys001 = function() {
 sre.ClearspeakFrenchNamedSets.prototype.testNumSys001a = function() {
   var preference = 'default';
   var mathml = '<mi mathvariant="double-struck">R</mi>';
-  var speech = 'the real numbers';
+  var speech = 'les nombres réels';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -78,7 +78,7 @@ sre.ClearspeakFrenchNamedSets.prototype.testNumSys001a = function() {
 sre.ClearspeakFrenchNamedSets.prototype.testNumSys002 = function() {
   var preference = 'default';
   var mathml = '<mi>ℂ</mi>';
-  var speech = 'the complex numbers';
+  var speech = 'les nombres complexes';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -89,7 +89,7 @@ sre.ClearspeakFrenchNamedSets.prototype.testNumSys002 = function() {
 sre.ClearspeakFrenchNamedSets.prototype.testNumSys003 = function() {
   var preference = 'default';
   var mathml = '<mi>ℤ</mi>';
-  var speech = 'the integers';
+  var speech = 'les nombres entiers';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -100,7 +100,7 @@ sre.ClearspeakFrenchNamedSets.prototype.testNumSys003 = function() {
 sre.ClearspeakFrenchNamedSets.prototype.testNumSys004 = function() {
   var preference = 'default';
   var mathml = '<mi>ℚ</mi>';
-  var speech = 'the rational numbers';
+  var speech = 'les Nombres rationnels';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -111,7 +111,7 @@ sre.ClearspeakFrenchNamedSets.prototype.testNumSys004 = function() {
 sre.ClearspeakFrenchNamedSets.prototype.testNumSys005 = function() {
   var preference = 'default';
   var mathml = '<mi>ℕ</mi>';
-  var speech = 'the natural numbers';
+  var speech = 'les nombres entier naturel';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -122,7 +122,7 @@ sre.ClearspeakFrenchNamedSets.prototype.testNumSys005 = function() {
 sre.ClearspeakFrenchNamedSets.prototype.testNumSys005a = function() {
   var preference = 'default';
   var mathml = '<msub><mi>ℕ</mi><mn>0</mn></msub>';
-  var speech = 'the natural numbers with zero';
+  var speech = 'les nombres entiers naturel avec zero';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -133,7 +133,7 @@ sre.ClearspeakFrenchNamedSets.prototype.testNumSys005a = function() {
 sre.ClearspeakFrenchNamedSets.prototype.testNumSys006 = function() {
   var preference = 'default';
   var mathml = '<mrow><msup><mi>ℤ</mi><mo>+</mo></msup></mrow>';
-  var speech = 'the positive integers';
+  var speech = 'les nombres entiers positif';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -144,7 +144,7 @@ sre.ClearspeakFrenchNamedSets.prototype.testNumSys006 = function() {
 sre.ClearspeakFrenchNamedSets.prototype.testNumSys006a = function() {
   var preference = 'default';
   var mathml = '<mrow><msup><mi>ℤ</mi><mo>-</mo></msup></mrow>';
-  var speech = 'the negative integers';
+  var speech = 'les nombres entiers négatif';
   this.executeRuleTest(mathml, speech, preference);
 };
 

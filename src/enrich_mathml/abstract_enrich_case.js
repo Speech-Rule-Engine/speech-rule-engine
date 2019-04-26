@@ -43,11 +43,3 @@ sre.AbstractEnrichCase = function(semantic) {
  * @override
  */
 sre.AbstractEnrichCase.prototype.getMathml = goog.abstractMethod;
-
-
-/**
- * Applicability test of the case.
- * @param {!sre.SemanticNode} semantic The semantic node.
- * @return {boolean} True if case is applicable.
- */
-sre.AbstractEnrichCase.test = goog.abstractMethod;
