@@ -9,6 +9,20 @@
 
 \section*{Quantities}
 
+%% NEW BEGIN
+\[
+  \pqty\Bigg{\pqty{\frac{\pqty\Bigg{a}}{b}}}
+  \qty(  \qty(\frac{a}{\frac{c}{b}})\frac{a}{\frac{c}{b}})
+    \eval(  \eval(\frac{A}{\frac{A}{\int x}}|_0^\infty\frac{A}{\frac{A}{\int x}}|_0^\infty
+  \]
+\[
+  \sin((\cos({\frac{(x}{y)}})))
+  \sin([\cos({\frac{(x}{y)}})))
+\]
+
+
+%% NEW END
+
 \[
   \quantity
   \quantity a
@@ -231,6 +245,10 @@
 \section*{Operators}
 
 \subsection*{Expressions}
+
+
+$\sin(\cos(\frac{x}{y}))$
+
 \[
   \sin(x)
   \sinh(x)
@@ -391,6 +409,22 @@ three\qif two
 
 \newpage
 \subsection*{Derivatives}
+
+%% NEW BEGIN
+\[
+  \pdv[n]{x}(\frac{x}{y})
+  \pdv[n]{x}{y}(\frac{x}{y})
+  \pdv[n]{x}{y}{f}(\frac{x}{y})
+\]
+\[
+  \dv[n]{f}(\dv[n]{f}(\frac{x}{y})\frac{x}{y})
+  \pdv[n]{f}{x}{y}(\pdv[n]{f}{x}{y}(\frac{x}{y})\frac{x}{y})
+  \pdv{f}{x}{y}(\pdv{f}{x}{y}(\frac{x}{y})\frac{x}{y})
+\]
+\[
+  \dd[4](\dd[4](\frac{\frac{\cos}{\theta}}{\theta})\frac{\dd[4](\frac{\frac{\cos}{\theta}}{\theta})\frac{\cos}{\theta}}{\theta})
+\]
+%% NEW END
 
 \[
   \dv x
@@ -595,6 +629,10 @@ three\qif two
 
 \section*{Matrices}
 
+%% NEW BEGIN
+$  \mqty*|a & \mqty*{a & b} \\ c& d| $
+%% NEW END
+
 $
 \begin{pmatrix}
   \mqty{a\\b} & d\\
@@ -760,6 +798,11 @@ $
 
 \newpage
 
+\[\qty\Bigg|\frac{a}{b}|
+  \qty{a}\cos
+  \qty((\qty(\frac{b}{c})))
+  \eval(x\eval(x|_0^n a |_0^\infty 
+\]
 
 
 \end{document}
