@@ -171,7 +171,8 @@ sre.EnrichMathml.walkTree = function(semantic) {
   newNode = sre.EnrichMathml.rewriteMfenced(newNode);
   sre.EnrichMathml.mergeChildren_(newNode, childrenList);
   sre.EnrichMathml.setAttributes(newNode, semantic);
-  return sre.EnrichMathml.ascendNewNode(newNode);
+  let res = sre.EnrichMathml.ascendNewNode(newNode);
+  return res;
 };
 
 

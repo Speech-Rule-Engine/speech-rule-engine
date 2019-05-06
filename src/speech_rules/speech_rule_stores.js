@@ -28,6 +28,7 @@ goog.require('sre.MathmlStoreRules');
 goog.require('sre.MathspeakFrench');
 goog.require('sre.MathspeakRules');
 goog.require('sre.MathspeakSpanish');
+goog.require('sre.NemethRules');
 goog.require('sre.PrefixFrench');
 goog.require('sre.PrefixRules');
 goog.require('sre.PrefixSpanish');
@@ -47,6 +48,7 @@ sre.SpeechRuleStores.RULE_SETS_ = {
   'MathspeakFrench': sre.MathspeakFrench,
   'MathspeakRules': sre.MathspeakRules,
   'MathspeakSpanish': sre.MathspeakSpanish,
+  'NemethRules': sre.NemethRules,
   'ClearspeakFrench': sre.ClearspeakFrench,
   'ClearspeakRules': sre.ClearspeakRules,
   'EmacspeakRules': sre.EmacspeakRules,

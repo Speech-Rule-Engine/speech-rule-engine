@@ -148,6 +148,12 @@ sre.SemanticMathml.prototype.semantics_ = function(node, children) {
  * @private
  */
 sre.SemanticMathml.prototype.rows_ = function(node, children) {
+  // Special cases:
+  let semantics = node.getAttribute('semantics');
+  if (semantics && semantics.match('bspr_')) {
+    return sre.SemanticProcessor.proof(node, semantics, goog.bind(this.parseNodes_, this));
+  }
+  // End special cases.
   children = sre.SemanticUtil.purgeNodes(children);
   // Single child node, i.e. the row is meaningless.
   if (children.length === 1) {
@@ -226,6 +232,10 @@ sre.SemanticMathml.prototype.sqrt_ = function(node, children) {
  * @private
  */
 sre.SemanticMathml.prototype.table_ = function(node, children) {
+  let semantics = node.getAttribute('semantics');
+  if (semantics && semantics.match('bspr_')) {
+    return sre.SemanticProcessor.proof(node, semantics, goog.bind(this.parseNodes_, this));
+  }
   var newNode = this.getFactory().makeBranchNode(
       sre.SemanticAttr.Type.TABLE, this.parseNodes_(children), []);
   sre.SemanticProcessor.tableToMultiline(newNode);

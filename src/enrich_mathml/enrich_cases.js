@@ -24,6 +24,7 @@ goog.require('sre.CaseDoubleScript');
 goog.require('sre.CaseEmbellished');
 goog.require('sre.CaseLine');
 goog.require('sre.CaseMultiscripts');
+goog.require('sre.CaseProof');
 goog.require('sre.CaseTable');
 goog.require('sre.CaseTensor');
 goog.require('sre.CaseText');
@@ -50,6 +51,8 @@ sre.EnrichCaseFactory.cases.push(
       constr: sre.CaseLine},
     {test: sre.CaseBinomial.test,
       constr: sre.CaseBinomial},
+    {test: sre.CaseProof.test,
+      constr: sre.CaseProof},
     {test: sre.CaseTable.test,
       constr: sre.CaseTable},
     {test: sre.CaseText.test,
