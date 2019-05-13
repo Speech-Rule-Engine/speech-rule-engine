@@ -106,6 +106,10 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
   this.keyMapping[sre.EventUtil.KeyCode.V] = goog.bind(this.virtualize, this);
   this.keyMapping[sre.EventUtil.KeyCode.P] = goog.bind(this.previous, this);
   this.keyMapping[sre.EventUtil.KeyCode.U] = goog.bind(this.undo, this);
+  this.keyMapping[sre.EventUtil.KeyCode.LESS] = goog.bind(this.previousRules,
+                                                          this);
+  this.keyMapping[sre.EventUtil.KeyCode.GREATER] = goog.bind(this.nextRules,
+                                                             this);
 
   this.dummy_ = function() {};
 
@@ -698,4 +702,29 @@ sre.AbstractWalker.prototype.undo = function() {
   }
   this.levels = previous.levels;
   return previous.focus;
+};
+
+
+var current = 'mathspeak';
+
+sre.AbstractWalker.prototype.nextRules = function() {
+  current = (current === 'mathspeak') ? 'clearspeak' : 'mathspeak';
+  sre.System.getInstance().setupEngine({domain: current});
+  sre.SpeechGeneratorFactory.generator('Tree').getSpeech(this.node, this.xml);
+  this.moved = sre.Walker.move.REPEAT;
+  return this.focus_.clone();
+};
+
+var braille = false;
+
+sre.AbstractWalker.prototype.previousRules = function() {
+  braille = !braille;
+  if (braille) {
+    sre.System.getInstance().setupEngine({locale: 'nemeth', domain: 'default'});
+  } else {
+    sre.System.getInstance().setupEngine({locale: 'en', domain : current});
+  }
+  sre.SpeechGeneratorFactory.generator('Tree').getSpeech(this.node, this.xml);
+  this.moved = sre.Walker.move.REPEAT;
+  return this.focus_.clone();
 };
