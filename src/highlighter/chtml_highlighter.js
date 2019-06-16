@@ -39,7 +39,6 @@ goog.inherits(sre.ChtmlHighlighter, sre.CssHighlighter);
  * @override
  */
 sre.ChtmlHighlighter.prototype.isMactionNode = function(node) {
-  console.log('In Chtml highlighter: ' + node.tagName);
   return node.tagName.toUpperCase() === this.mactionName.toUpperCase();
 };
 

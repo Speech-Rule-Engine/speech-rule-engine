@@ -74,10 +74,9 @@ sre.AbstractHighlighter.prototype.highlight = function(nodes) {
 /**
  * Highlights a single node.
  * @param {!Node} node The node to be highlighted.
- * @return {{node: !Node, opacity: (undefined|string),
- *          background: (undefined|string), foreground: (undefined|string)}
- *         } The old node
- *     information.
+ * @return {{node: !Node, opacity: (undefined|string), background:
+ *          (undefined|string), foreground: (undefined|string)} } The old node
+ *          information.
  * @protected
  */
 sre.AbstractHighlighter.prototype.highlightNode = goog.abstractMethod;

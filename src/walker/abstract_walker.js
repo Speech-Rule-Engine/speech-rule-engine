@@ -37,7 +37,6 @@ goog.require('sre.Walker');
 goog.require('sre.WalkerUtil');
 
 
-
 /**
  * @constructor
  * @implements {sre.Walker}
@@ -58,6 +57,14 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
    * @type {!Node}
    */
   this.node = node;
+  if (this.node.id) {
+    this.id = this.node.id;
+  } else if (this.node.hasAttribute('explorer-id')) {
+    this.id = this.node.getAttribute('explorer-id');
+  } else {
+    this.node.setAttribute('explorer-id', sre.AbstractWalker.ID_COUNTER);
+    this.id = sre.AbstractWalker.ID_COUNTER++;
+  }
 
   /**
    * The original xml/mathml node on which the walker is called.
@@ -144,6 +151,13 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
 };
 
 
+
+/**
+ * Unique id counter for walkers. Needed to regain states on rerendering.
+ * @type {number}
+ */
+sre.AbstractWalker.ID_COUNTER = 0;
+
 /**
  * @override
  */
@@ -180,7 +194,7 @@ sre.AbstractWalker.prototype.deactivate = function() {
   if (!this.isActive()) {
     return;
   }
-  this.highlighter.setState(this.node.id, this.primaryId());
+  this.highlighter.setState(this.id, this.primaryId());
   this.generator.end();
   this.toggleActive_();
 };
@@ -425,7 +439,7 @@ sre.AbstractWalker.prototype.expand = function() {
     return this.focus_;
   }
   this.moved = sre.Walker.move.EXPAND;
-  expandable.onclick();
+  expandable.dispatchEvent(new Event('click'));
   return this.focus_.clone();
 };
 
@@ -470,7 +484,7 @@ sre.AbstractWalker.prototype.collapsible = function(node) {
  */
 sre.AbstractWalker.prototype.restoreState = function() {
   if (!this.highlighter) return;
-  var state = this.highlighter.getState(this.node.id);
+  var state = this.highlighter.getState(this.id);
   if (!state) return;
   var node = this.rebuilt.nodeDict[state];
   var path = [];
@@ -491,7 +505,7 @@ sre.AbstractWalker.prototype.restoreState = function() {
 
 
 /**
- * Finds the focus on the current level for a given node id.
+ * Finds the focus on the current level for a given semantic node id.
  * @param {number} id The id number.
  * @return {sre.Focus} The focus on a particular level.
  */

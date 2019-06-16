@@ -102,7 +102,11 @@ sre.SvgHighlighter.prototype.unhighlightNode = function(info) {
  * @override
  */
 sre.SvgHighlighter.prototype.isMactionNode = function(node) {
+  // TODO: This is currently an MJ3 hack!
+  if (node.hasAttribute('data-mml-node')) {
+    return node.getAttribute('data-mml-node') === 'maction';
+  }
   var className = node.className || node.getAttribute('class');
-  className = className.baseVal ? className.baseVal : className;
+  className = className.baseVal !== undefined ? className.baseVal : className;
   return className ? className.match(new RegExp(this.mactionName)) : false;
 };
