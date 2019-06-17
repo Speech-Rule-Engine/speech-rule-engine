@@ -59,10 +59,10 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
   this.node = node;
   if (this.node.id) {
     this.id = this.node.id;
-  } else if (this.node.hasAttribute('explorer-id')) {
-    this.id = this.node.getAttribute('explorer-id');
+  } else if (this.node.hasAttribute(sre.AbstractWalker.SRE_ID_ATTR)) {
+    this.id = this.node.getAttribute(sre.AbstractWalker.SRE_ID_ATTR);
   } else {
-    this.node.setAttribute('explorer-id', sre.AbstractWalker.ID_COUNTER);
+    this.node.setAttribute(sre.AbstractWalker.SRE_ID_ATTR, sre.AbstractWalker.ID_COUNTER);
     this.id = sre.AbstractWalker.ID_COUNTER++;
   }
 
@@ -157,6 +157,7 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
  * @type {number}
  */
 sre.AbstractWalker.ID_COUNTER = 0;
+sre.AbstractWalker.SRE_ID_ATTR = 'sre-explorer-id';
 
 /**
  * @override

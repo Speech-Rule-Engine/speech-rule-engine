@@ -62,12 +62,19 @@ sre.AbstractHighlighter = function() {
 
 
 /**
+ * @type {string}
+ */
+sre.AbstractHighlighter.ATTR = 'sre-highlight';
+
+/**
  * @override
  */
 sre.AbstractHighlighter.prototype.highlight = function(nodes) {
   this.currentHighlights_.push(nodes.map(
-      goog.bind(function(node) {return this.highlightNode(node);},
-                this)));
+      goog.bind(function(node) {
+        node.setAttribute(sre.AbstractHighlighter.ATTR, true);
+        return this.highlightNode(node);
+      }, this)));
 };
 
 
@@ -100,8 +107,10 @@ sre.AbstractHighlighter.prototype.unhighlight = function() {
   var nodes = this.currentHighlights_.pop();
   if (!nodes) return;
   nodes.forEach(
-      goog.bind(function(node) {return this.unhighlightNode(node);},
-                this));
+      goog.bind(function(node) {
+        node.node.removeAttribute(sre.AbstractHighlighter.ATTR);
+        return this.unhighlightNode(node);
+      }, this));
 };
 
 
