@@ -22,6 +22,7 @@
 goog.provide('sre.SvgHighlighter');
 
 goog.require('sre.AbstractHighlighter');
+goog.require('sre.DomUtil');
 
 
 
@@ -49,7 +50,7 @@ sre.SvgHighlighter.prototype.highlightNode = function(node) {
     node.style.color = this.colorString().foreground;
     return info;
   }
-  var rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+  var rect = sre.DomUtil.createElementNS('http://www.w3.org/2000/svg', 'rect');
   var padding = 40, bbox;
   if (node.nodeName === 'use') {
     //
@@ -58,7 +59,7 @@ sre.SvgHighlighter.prototype.highlightNode = function(node) {
     //  (see https://code.google.com/p/chromium/issues/detail?id=512081)
     //  so we temporarily wrap the <use> in a <g> and use getBBox() on that.
     //
-    var g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    var g = sre.DomUtil.createElementNS('http://www.w3.org/2000/svg', 'g');
     node.parentNode.insertBefore(g, node);
     g.appendChild(node);
     bbox = g.getBBox();
