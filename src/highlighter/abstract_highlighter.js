@@ -169,7 +169,7 @@ sre.AbstractHighlighter.prototype.addEvents = function(node, events) {
 /**
  * Returns the maction sub nodes of a given node.
  * @param {!Node} node The root node.
- * @return {NodeList} The list of maction sub nodes.
+ * @return {NodeList|Array<Node>} The list of maction sub nodes.
  */
 sre.AbstractHighlighter.prototype.getMactionNodes = function(node) {
   return node.getElementsByClassName(this.mactionName);

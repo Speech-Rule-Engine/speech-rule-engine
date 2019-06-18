@@ -59,6 +59,8 @@ sre.SvgHighlighter.prototype.highlightNode = function(node) {
     //  (see https://code.google.com/p/chromium/issues/detail?id=512081)
     //  so we temporarily wrap the <use> in a <g> and use getBBox() on that.
     //
+    //  TODO: Check if this is still necessary.
+    //
     var g = sre.DomUtil.createElementNS('http://www.w3.org/2000/svg', 'g');
     node.parentNode.insertBefore(g, node);
     g.appendChild(node);
@@ -103,10 +105,6 @@ sre.SvgHighlighter.prototype.unhighlightNode = function(info) {
  * @override
  */
 sre.SvgHighlighter.prototype.isMactionNode = function(node) {
-  // TODO: This is currently an MJ3 hack!
-  if (node.hasAttribute('data-mml-node')) {
-    return node.getAttribute('data-mml-node') === 'maction';
-  }
   var className = node.className || node.getAttribute('class');
   className = className.baseVal !== undefined ? className.baseVal : className;
   return className ? className.match(new RegExp(this.mactionName)) : false;
