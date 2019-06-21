@@ -60,9 +60,12 @@ sre.Walker.prototype.speech = function() {};
 
 /**
  * The node the walker currently sits on.
+ * @param {boolean=} opt_update Flag indicating if the state should be
+ *     updated. This can be useful if the underlying DOM elements might have
+ *     changed.
  * @return {!sre.Focus} The current focus.
  */
-sre.Walker.prototype.getFocus = function() {};
+sre.Walker.prototype.getFocus = function(opt_update) {};
 
 
 /**

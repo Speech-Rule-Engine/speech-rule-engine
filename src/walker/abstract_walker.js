@@ -204,7 +204,10 @@ sre.AbstractWalker.prototype.deactivate = function() {
 /**
  * @override
  */
-sre.AbstractWalker.prototype.getFocus = function() {
+sre.AbstractWalker.prototype.getFocus = function(opt_update) {
+  if (opt_update) {
+    this.updateFocus();
+  }
   return this.focus_;
 };
 
@@ -502,6 +505,17 @@ sre.AbstractWalker.prototype.restoreState = function() {
     this.focus_ = focus;
   }
   this.moved = sre.Walker.move.ENTER;
+};
+
+
+/**
+ * Updates the walker's focus by recomputing the DOM elements.
+ */
+sre.AbstractWalker.prototype.updateFocus = function() {
+  this.setFocus(sre.Focus.factory(
+    this.focus_.getSemanticPrimary().id.toString(),
+    this.focus_.getSemanticNodes().map(x => x.id),
+    this.rebuilt, this.node));
 };
 
 
