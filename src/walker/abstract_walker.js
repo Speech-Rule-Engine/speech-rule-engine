@@ -228,6 +228,11 @@ sre.AbstractWalker.prototype.getDepth = function() {
 };
 
 
+sre.AbstractWalker.prototype.isSpeech = function() {
+  return this.generator.modality === sre.EnrichMathml.Attribute.SPEECH;
+};
+
+
 /**
  * @override
  */
@@ -269,7 +274,7 @@ sre.AbstractWalker.prototype.speech = function() {
  */
 sre.AbstractWalker.prototype.mergePrefix_ = function(speech, opt_pre) {
   var pre = opt_pre || [];
-  var prefix = this.prefix_();
+  var prefix = this.isSpeech() ? this.prefix_() : '';
   var aural = sre.AuralRendering.getInstance();
   if (prefix) speech.unshift(prefix);
   return aural.finalize(aural.merge(pre.concat(speech)));
@@ -370,7 +375,7 @@ sre.AbstractWalker.prototype.repeat = function() {
  * @protected
  */
 sre.AbstractWalker.prototype.depth = function() {
-  this.moved = sre.Walker.move.DEPTH;
+  this.moved = this.isSpeech() ? sre.Walker.move.DEPTH : sre.Walker.move.REPEAT;
   return this.focus_.clone();
 };
 
@@ -629,7 +634,7 @@ sre.AbstractWalker.prototype.focusFromId = function(id, ids) {
  * @protected
  */
 sre.AbstractWalker.prototype.summary = function() {
-  this.moved = sre.Walker.move.SUMMARY;
+  this.moved = this.isSpeech() ? sre.Walker.move.SUMMARY : sre.Walker.move.REPEAT;
   return this.focus_.clone();
 };
 
@@ -655,7 +660,7 @@ sre.AbstractWalker.prototype.summary_ = function() {
  * @protected
  */
 sre.AbstractWalker.prototype.detail = function() {
-  this.moved = sre.Walker.move.DETAIL;
+  this.moved = this.isSpeech() ? sre.Walker.move.DETAIL : sre.Walker.move.REPEAT;
   return this.focus_.clone();
 };
 

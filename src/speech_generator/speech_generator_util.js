@@ -94,10 +94,11 @@ sre.SpeechGeneratorUtil.retrieveSpeech = function(semantic) {
  * Add speech as a semantic attributes in a MathML node.
  * @param {!Element} mml The MathML node.
  * @param {!sre.SemanticNode} semantic The semantic tree node.
+ * @param {string=} opt_modality The speech modality.
  */
-sre.SpeechGeneratorUtil.addSpeech = function(mml, semantic) {
+sre.SpeechGeneratorUtil.addSpeech = function(mml, semantic, opt_modality) {
   var speech = sre.SpeechGeneratorUtil.retrieveSpeech(semantic);
-  mml.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
+  mml.setAttribute(opt_modality || sre.EnrichMathml.Attribute.SPEECH, speech);
 };
 
 
