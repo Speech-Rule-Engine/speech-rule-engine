@@ -22,6 +22,7 @@
 goog.provide('sre.AbstractHighlighter');
 
 goog.require('sre.ColorPicker');
+goog.require('sre.EnrichMathml.Attribute');
 goog.require('sre.Highlighter');
 
 
@@ -213,4 +214,36 @@ sre.AbstractHighlighter.prototype.setState = function(id, value) {
  */
 sre.AbstractHighlighter.prototype.getState = function(id) {
   return this.state_[id];
+};
+
+
+sre.AbstractHighlighter.prototype.colorizeAll = function(node) {
+  var allNodes = sre.XpathUtil.evalXPath(
+    './/*[@' + sre.EnrichMathml.Attribute.ID + ']', node);
+  allNodes.forEach(goog.bind(function(x) {this.colorize(x);}, this));
+};
+
+
+sre.AbstractHighlighter.prototype.uncolorizeAll = function(node) {
+  var allNodes = sre.XpathUtil.evalXPath(
+    './/*[@' + sre.EnrichMathml.Attribute.ID + ']', node);
+  allNodes.forEach(goog.bind(function(x) {this.uncolorize(x);}, this));
+};
+
+
+// TODO: Generalise this to use the highlighter method and background.
+sre.AbstractHighlighter.prototype.colorize = function(node) {
+  var fore = sre.EnrichMathml.addPrefix('foreground');
+  if (node.hasAttribute(fore)) {
+    node.setAttribute(fore + '-old', node.style.color);
+    node.style.color = node.getAttribute(fore);
+  }
+};
+
+
+sre.AbstractHighlighter.prototype.uncolorize = function(node) {
+  var fore = sre.EnrichMathml.addPrefix('foreground') + '-old';
+  if (node.hasAttribute(fore)) {
+    node.style.color = node.getAttribute(fore);
+  }
 };
