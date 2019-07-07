@@ -65,7 +65,7 @@ sre.SvgV3Highlighter.prototype.highlightNode = function(node) {
   rect.setAttribute('fill', this.colorString().background);
   node.parentNode.insertBefore(rect, node);
   info = {node: rect, foreground: node.getAttribute('fill')};
-  node.setAttribute('fill', this.colorString().foreground);
+  // node.setAttribute('fill', this.colorString().foreground);
   return info;
 };
 

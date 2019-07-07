@@ -53,12 +53,6 @@ sre.AbstractHighlighter = function() {
    */
   this.mactionName = '';
 
-  /**
-   * @type {!Object.<string>}
-   * @private
-   */
-  this.state_ = {};
-
 };
 
 
@@ -185,35 +179,6 @@ sre.AbstractHighlighter.prototype.getMactionNodes = function(node) {
 sre.AbstractHighlighter.prototype.isMactionNode = function(node) {
   var className = node.className || node.getAttribute('class');
   return className ? className.match(new RegExp(this.mactionName)) : false;
-};
-
-
-/**
- * Removes a state for a particular node.
- * @param {string} id A node id.
- */
-sre.AbstractHighlighter.prototype.resetState = function(id) {
-  delete(this.state_[id]);
-};
-
-
-/**
- * Sets a state value for a particular node.
- * @param {string} id A node id.
- * @param {string} value The state value.
- */
-sre.AbstractHighlighter.prototype.setState = function(id, value) {
-  this.state_[id] = value;
-};
-
-
-/**
- * Returns the state a particular node if it exists.
- * @param {string} id The node id.
- * @return {string} The state value.
- */
-sre.AbstractHighlighter.prototype.getState = function(id) {
-  return this.state_[id];
 };
 
 

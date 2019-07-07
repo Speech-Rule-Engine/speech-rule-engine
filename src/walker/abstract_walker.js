@@ -195,7 +195,7 @@ sre.AbstractWalker.prototype.deactivate = function() {
   if (!this.isActive()) {
     return;
   }
-  this.highlighter.setState(this.id, this.primaryId());
+  sre.Walker.setState(this.id, this.primaryId());
   this.generator.end();
   this.toggleActive_();
 };
@@ -493,7 +493,7 @@ sre.AbstractWalker.prototype.collapsible = function(node) {
  */
 sre.AbstractWalker.prototype.restoreState = function() {
   if (!this.highlighter) return;
-  var state = this.highlighter.getState(this.id);
+  var state = sre.Walker.getState(this.id);
   if (!state) return;
   var node = this.rebuilt.nodeDict[state];
   var path = [];
