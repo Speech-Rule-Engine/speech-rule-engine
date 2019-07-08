@@ -103,8 +103,10 @@ sre.AbstractHighlighter.prototype.unhighlight = function() {
   if (!nodes) return;
   nodes.forEach(
       goog.bind(function(node) {
-        node.node.removeAttribute(sre.AbstractHighlighter.ATTR);
-        return this.unhighlightNode(node);
+        if (node.node.hasAttribute(sre.AbstractHighlighter.ATTR)) {
+          node.node.removeAttribute(sre.AbstractHighlighter.ATTR);
+          this.unhighlightNode(node);
+        }
       }, this));
 };
 
