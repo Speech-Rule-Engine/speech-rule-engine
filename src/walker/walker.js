@@ -148,6 +148,5 @@ sre.Walker.setState = function(id, value) {
  * @return {string} The state value.
  */
 sre.Walker.getState = function(id) {
-  console.log(sre.Walker.STATE_);
   return sre.Walker.STATE_[id];
 };

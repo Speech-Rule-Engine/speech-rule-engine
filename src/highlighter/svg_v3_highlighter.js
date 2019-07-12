@@ -21,6 +21,7 @@
 
 goog.provide('sre.SvgV3Highlighter');
 
+goog.require('sre.ColorPicker');
 goog.require('sre.DomUtil');
 goog.require('sre.SvgHighlighter');
 goog.require('sre.XpathUtil');
@@ -43,6 +44,11 @@ goog.inherits(sre.SvgV3Highlighter, sre.SvgHighlighter);
  * @override
  */
 sre.SvgV3Highlighter.prototype.highlightNode = function(node) {
+  if (this.isHighlighted(node)) {
+    return {node: node,
+      background: this.colorString().background,
+      foreground: this.colorString().foreground};
+  }
   if (node.tagName === 'svg' || node.tagName === 'MJX-CONTAINER') {
     var info = {node: node,
       background: node.style.backgroundColor,
@@ -52,6 +58,7 @@ sre.SvgV3Highlighter.prototype.highlightNode = function(node) {
     return info;
   }
   var rect = sre.DomUtil.createElementNS('http://www.w3.org/2000/svg', 'rect');
+  rect.setAttribute('sre-highlighter-added', true); // Mark highlighting rect.
   var padding = 40, bbox;
   bbox = node.getBBox();
   rect.setAttribute('x', bbox.x - padding);
@@ -64,9 +71,31 @@ sre.SvgV3Highlighter.prototype.highlightNode = function(node) {
   }
   rect.setAttribute('fill', this.colorString().background);
   node.parentNode.insertBefore(rect, node);
-  info = {node: rect, foreground: node.getAttribute('fill')};
-  // node.setAttribute('fill', this.colorString().foreground);
+  info = {node: node, foreground: node.getAttribute('fill')};
+  if (node.nodeName === 'rect') {
+    let picker = new sre.ColorPicker({alpha: 0, color: 'black'});
+    node.setAttribute('fill', picker.rgba().foreground);
+  } else {
+    node.setAttribute('fill', this.colorString().foreground);
+  }
   return info;
+};
+
+
+/**
+ * @override
+ */
+sre.SvgV3Highlighter.prototype.unhighlightNode = function(info) {
+  let previous = info.node.previousSibling;
+  if (previous && previous.hasAttribute('sre-highlighter-added')) {
+    info.foreground ?
+      info.node.setAttribute('fill', info.foreground) :
+      info.node.removeAttribute('fill');
+    info.node.parentNode.removeChild(previous);
+    return;
+  }
+  info.node.style.backgroundColor = info.background;
+  info.node.style.color = info.foreground;
 };
 
 

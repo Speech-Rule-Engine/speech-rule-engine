@@ -156,5 +156,8 @@ sre.Locale.nemeth = {
     LEVEL: 'Level'
   },
 
-  NUMBERS: { }
+  NUMBERS: {
+    // TODO: We should not need this!
+    simpleOrdinal: function(x) {return x;}
+  }
 };
