@@ -329,7 +329,7 @@ sre.Engine.STRING_FEATURES = [
 
 /**
  * Sets the dynamic constraint for the engine.
- * @param {Object.<sre.DynamicCstr.Axis, string>=} opt_dynamic An optional
+ * @param {sre.DynamicCstr.Map=} opt_dynamic An optional
  *    constraint mapping. If given it is parsed into the engines constraint
  *    parameters.
  */

@@ -27,7 +27,7 @@ goog.require('sre.Engine');
 
 /**
  * @constructor
- * @param {!Object.<sre.DynamicCstr.Axis, string>} cstr The constraint mapping.
+ * @param {!sre.DynamicCstr.Map} cstr The constraint mapping.
  * @param {!Object.<string>} preference The preference.
  * @extends {sre.DynamicCstr}
  */
