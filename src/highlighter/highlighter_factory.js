@@ -28,6 +28,7 @@ goog.require('sre.HtmlHighlighter');
 goog.require('sre.MmlCssHighlighter');
 goog.require('sre.MmlHighlighter');
 goog.require('sre.SvgHighlighter');
+goog.require('sre.SvgV3Highlighter');
 
 
 /**
@@ -45,7 +46,10 @@ sre.HighlighterFactory.highlighter = function(back, fore, rendererInfo) {
   var colorPicker = new sre.ColorPicker(back, fore);
   var renderer = (rendererInfo.renderer === 'NativeMML' &&
                   rendererInfo.browser === 'Safari') ?
-      'MML-CSS' : rendererInfo.renderer;
+      'MML-CSS' : ((rendererInfo.renderer === 'SVG' &&
+                    rendererInfo.browser === 'v3') ?
+                   'SVG-V3' : rendererInfo.renderer
+                  );
   var highlighter =
       sre.HighlighterFactory.highlighterMapping_[renderer] ||
       sre.HighlighterFactory.highlighterMapping_['NativeMML'];
@@ -79,6 +83,7 @@ sre.HighlighterFactory.addEvents = function(node, events, rendererInfo) {
  */
 sre.HighlighterFactory.highlighterMapping_ = {
   'SVG': new sre.SvgHighlighter(),
+  'SVG-V3': new sre.SvgV3Highlighter(),
   'NativeMML': new sre.MmlHighlighter(),
   'HTML-CSS': new sre.HtmlHighlighter(),
   'MML-CSS': new sre.MmlCssHighlighter(),

@@ -62,22 +62,28 @@ sre.AbstractHighlighter = function() {
 
 
 /**
+ * @type {string}
+ */
+sre.AbstractHighlighter.ATTR = 'sre-highlight';
+
+/**
  * @override
  */
 sre.AbstractHighlighter.prototype.highlight = function(nodes) {
   this.currentHighlights_.push(nodes.map(
-      goog.bind(function(node) {return this.highlightNode(node);},
-                this)));
+      goog.bind(function(node) {
+        node.setAttribute(sre.AbstractHighlighter.ATTR, true);
+        return this.highlightNode(node);
+      }, this)));
 };
 
 
 /**
  * Highlights a single node.
  * @param {!Node} node The node to be highlighted.
- * @return {{node: !Node, opacity: (undefined|string),
- *          background: (undefined|string), foreground: (undefined|string)}
- *         } The old node
- *     information.
+ * @return {{node: !Node, opacity: (undefined|string), background:
+ *          (undefined|string), foreground: (undefined|string)} } The old node
+ *          information.
  * @protected
  */
 sre.AbstractHighlighter.prototype.highlightNode = goog.abstractMethod;
@@ -101,8 +107,10 @@ sre.AbstractHighlighter.prototype.unhighlight = function() {
   var nodes = this.currentHighlights_.pop();
   if (!nodes) return;
   nodes.forEach(
-      goog.bind(function(node) {return this.unhighlightNode(node);},
-                this));
+      goog.bind(function(node) {
+        node.node.removeAttribute(sre.AbstractHighlighter.ATTR);
+        return this.unhighlightNode(node);
+      }, this));
 };
 
 
@@ -161,7 +169,7 @@ sre.AbstractHighlighter.prototype.addEvents = function(node, events) {
 /**
  * Returns the maction sub nodes of a given node.
  * @param {!Node} node The root node.
- * @return {NodeList} The list of maction sub nodes.
+ * @return {NodeList|Array<Node>} The list of maction sub nodes.
  */
 sre.AbstractHighlighter.prototype.getMactionNodes = function(node) {
   return node.getElementsByClassName(this.mactionName);

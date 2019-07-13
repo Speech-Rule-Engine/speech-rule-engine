@@ -37,7 +37,6 @@ goog.require('sre.Walker');
 goog.require('sre.WalkerUtil');
 
 
-
 /**
  * @constructor
  * @implements {sre.Walker}
@@ -58,6 +57,14 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
    * @type {!Node}
    */
   this.node = node;
+  if (this.node.id) {
+    this.id = this.node.id;
+  } else if (this.node.hasAttribute(sre.AbstractWalker.SRE_ID_ATTR)) {
+    this.id = this.node.getAttribute(sre.AbstractWalker.SRE_ID_ATTR);
+  } else {
+    this.node.setAttribute(sre.AbstractWalker.SRE_ID_ATTR, sre.AbstractWalker.ID_COUNTER);
+    this.id = sre.AbstractWalker.ID_COUNTER++;
+  }
 
   /**
    * The original xml/mathml node on which the walker is called.
@@ -106,6 +113,10 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
   this.keyMapping[sre.EventUtil.KeyCode.V] = goog.bind(this.virtualize, this);
   this.keyMapping[sre.EventUtil.KeyCode.P] = goog.bind(this.previous, this);
   this.keyMapping[sre.EventUtil.KeyCode.U] = goog.bind(this.undo, this);
+  this.keyMapping[sre.EventUtil.KeyCode.LESS] = goog.bind(this.previousRules,
+                                                          this);
+  this.keyMapping[sre.EventUtil.KeyCode.GREATER] = goog.bind(this.nextRules,
+                                                             this);
 
   this.dummy_ = function() {};
 
@@ -139,6 +150,14 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
   this.cursors = [];
 };
 
+
+
+/**
+ * Unique id counter for walkers. Needed to regain states on rerendering.
+ * @type {number}
+ */
+sre.AbstractWalker.ID_COUNTER = 0;
+sre.AbstractWalker.SRE_ID_ATTR = 'sre-explorer-id';
 
 /**
  * @override
@@ -176,7 +195,7 @@ sre.AbstractWalker.prototype.deactivate = function() {
   if (!this.isActive()) {
     return;
   }
-  this.highlighter.setState(this.node.id, this.primaryId());
+  this.highlighter.setState(this.id, this.primaryId());
   this.generator.end();
   this.toggleActive_();
 };
@@ -185,7 +204,10 @@ sre.AbstractWalker.prototype.deactivate = function() {
 /**
  * @override
  */
-sre.AbstractWalker.prototype.getFocus = function() {
+sre.AbstractWalker.prototype.getFocus = function(opt_update) {
+  if (opt_update) {
+    this.updateFocus();
+  }
   return this.focus_;
 };
 
@@ -421,7 +443,7 @@ sre.AbstractWalker.prototype.expand = function() {
     return this.focus_;
   }
   this.moved = sre.Walker.move.EXPAND;
-  expandable.onclick();
+  expandable.dispatchEvent(new Event('click'));
   return this.focus_.clone();
 };
 
@@ -466,7 +488,7 @@ sre.AbstractWalker.prototype.collapsible = function(node) {
  */
 sre.AbstractWalker.prototype.restoreState = function() {
   if (!this.highlighter) return;
-  var state = this.highlighter.getState(this.node.id);
+  var state = this.highlighter.getState(this.id);
   if (!state) return;
   var node = this.rebuilt.nodeDict[state];
   var path = [];
@@ -487,7 +509,18 @@ sre.AbstractWalker.prototype.restoreState = function() {
 
 
 /**
- * Finds the focus on the current level for a given node id.
+ * Updates the walker's focus by recomputing the DOM elements.
+ */
+sre.AbstractWalker.prototype.updateFocus = function() {
+  this.setFocus(sre.Focus.factory(
+    this.focus_.getSemanticPrimary().id.toString(),
+    this.focus_.getSemanticNodes().map(x => x.id),
+    this.rebuilt, this.node));
+};
+
+
+/**
+ * Finds the focus on the current level for a given semantic node id.
  * @param {number} id The id number.
  * @return {sre.Focus} The focus on a particular level.
  */
@@ -698,4 +731,29 @@ sre.AbstractWalker.prototype.undo = function() {
   }
   this.levels = previous.levels;
   return previous.focus;
+};
+
+
+var current = 'mathspeak';
+
+sre.AbstractWalker.prototype.nextRules = function() {
+  current = (current === 'mathspeak') ? 'clearspeak' : 'mathspeak';
+  sre.System.getInstance().setupEngine({domain: current});
+  sre.SpeechGeneratorFactory.generator('Tree').getSpeech(this.node, this.xml);
+  this.moved = sre.Walker.move.REPEAT;
+  return this.focus_.clone();
+};
+
+var braille = false;
+
+sre.AbstractWalker.prototype.previousRules = function() {
+  braille = !braille;
+  if (braille) {
+    sre.System.getInstance().setupEngine({locale: 'nemeth', domain: 'default'});
+  } else {
+    sre.System.getInstance().setupEngine({locale: 'en', domain : current});
+  }
+  sre.SpeechGeneratorFactory.generator('Tree').getSpeech(this.node, this.xml);
+  this.moved = sre.Walker.move.REPEAT;
+  return this.focus_.clone();
 };
