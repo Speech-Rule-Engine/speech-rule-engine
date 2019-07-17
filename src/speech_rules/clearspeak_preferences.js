@@ -18,6 +18,8 @@
  */
 
 goog.provide('sre.ClearspeakPreferences');
+goog.provide('sre.ClearspeakPreferences.Comparator');
+goog.provide('sre.ClearspeakPreferences.Parser');
 
 goog.require('sre.DynamicCstr');
 goog.require('sre.DynamicProperties');
@@ -210,7 +212,23 @@ sre.ClearspeakPreferences.Parser.prototype.parse = function(str) {
          'domain': 'clearspeak',
          'style': sre.DynamicCstr.DEFAULT_VALUE}, {});
   }
-  var pairs = style.split(':');
+  var preferences = this.fromPreference(style);
+  return new sre.ClearspeakPreferences(
+    {'locale': locale,
+     'modality': sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY],
+     'domain': 'clearspeak',
+     'style': this.toPreference(preferences)}, preferences);
+};
+
+
+/**
+ * Parse the preferences from a string of the form:
+ * preference1_setting1:preference2_settting2:....:preferenceN_settingN
+ * @param {string} pref The preference string.
+ * @return {!Object.<string>} The preference settings.
+ */
+sre.ClearspeakPreferences.Parser.prototype.fromPreference = function(pref) {
+  var pairs = pref.split(':');
   var preferences = {};
   var properties = sre.ClearspeakPreferences.PREFERENCES.getProperties();
   var validKeys = Object.keys(properties);
@@ -226,11 +244,7 @@ sre.ClearspeakPreferences.Parser.prototype.parse = function(str) {
       preferences[pair[0]] = pair[1];
     }
   }
-  return new sre.ClearspeakPreferences(
-    {'locale': locale,
-     'modality': sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY],
-     'domain': 'clearspeak',
-     'style': this.combine_(preferences)}, preferences);
+  return preferences;
 };
 
 
@@ -240,9 +254,8 @@ sre.ClearspeakPreferences.Parser.prototype.parse = function(str) {
  * preference1_setting1:preference2_settting2:....:preferenceN_settingN
  * @param {!Object.<string>} preferences A preference mapping.
  * @return {string} A style string created from the preferences.
- * @private
  */
-sre.ClearspeakPreferences.Parser.prototype.combine_ = function(preferences) {
+sre.ClearspeakPreferences.Parser.prototype.toPreference = function(preferences) {
   var keys = Object.keys(preferences);
   var str = [];
   for (var i = 0; i < keys.length; i++) {

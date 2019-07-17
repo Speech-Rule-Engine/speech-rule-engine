@@ -23,6 +23,7 @@ goog.provide('sre.AbstractWalker');
 
 goog.require('sre.AuditoryDescription');
 goog.require('sre.AuralRendering');
+goog.require('sre.ClearspeakPreferences');
 goog.require('sre.DomUtil');
 goog.require('sre.EnrichMathml.Attribute');
 goog.require('sre.EventUtil.KeyCode');
@@ -739,11 +740,16 @@ sre.AbstractWalker.prototype.undo = function() {
 };
 
 
-var current = 'mathspeak';
-
+// TODO: Refactor this into the speech generators.
 sre.AbstractWalker.prototype.nextRules = function() {
-  current = (current === 'mathspeak') ? 'clearspeak' : 'mathspeak';
-  sre.System.getInstance().setupEngine({domain: current});
+  var options = this.generator.getOptions();
+  if (options.modality !== 'speech') {
+    return this.focus_;
+  }
+  // TODO: Check if domains exist for the current locale.
+  options.domain = (options.domain === 'mathspeak') ? 'clearspeak' : 'mathspeak';
+  this.generator.setOptions(options);
+  sre.System.getInstance().setupEngine(options);
   sre.SpeechGeneratorFactory.generator('Tree').getSpeech(this.node, this.xml);
   this.moved = sre.Walker.move.REPEAT;
   return this.focus_.clone();
@@ -751,13 +757,39 @@ sre.AbstractWalker.prototype.nextRules = function() {
 
 var braille = false;
 
-sre.AbstractWalker.prototype.previousRules = function() {
-  braille = !braille;
-  if (braille) {
-    sre.System.getInstance().setupEngine({locale: 'nemeth', domain: 'default'});
-  } else {
-    sre.System.getInstance().setupEngine({locale: 'en', domain : current});
+var styles = {
+  'mathspeak': ['default', 'brief', 'sbrief'],
+  'clearspeak': sre.ClearspeakPreferences.PREFERENCES
+};
+
+var clearspeakParser = new sre.ClearspeakPreferences.Parser();
+
+sre.AbstractWalker.nextStyle = function(domain, style) {
+  if (domain === 'mathspeak') {
+    var index = styles.mathspeak.indexOf(style);
+    if (index === -1) {
+      return style;
+    }
+    return (index >= styles.mathspeak.length - 1) ? styles.mathspeak[0] : styles.mathspeak[index + 1];
   }
+  if (domain === 'clearspeak') {
+    // var options = clearspeakParser.parse('ImpliedTimes_MoreImpliedTimes:Roots_RootEnd');
+    // return options.style;
+    // return 'Trig_Auto:Roots_RootEnd';
+    return 'ImpliedTimes_MoreImpliedTimes'; //':Roots_RootEnd'
+  }
+  return style;
+};
+
+
+sre.AbstractWalker.prototype.previousRules = function() {
+  var options = this.generator.getOptions();
+  if (options.modality !== 'speech') {
+    return this.focus_;
+  }
+  options.style = sre.AbstractWalker.nextStyle(options.domain, options.style);
+  this.generator.setOptions(options);
+  sre.System.getInstance().setupEngine(options);
   sre.SpeechGeneratorFactory.generator('Tree').getSpeech(this.node, this.xml);
   this.moved = sre.Walker.move.REPEAT;
   return this.focus_.clone();

@@ -346,14 +346,14 @@ sre.Engine.prototype.setDynamicCstr = function(opt_dynamic) {
     }
   }
   var dynamic = [this.locale, this.modality, this.domain, this.style].join('.');
-  this.dynamicCstr = this.parser.parse(dynamic);
   var fallback = sre.DynamicProperties.create(
       [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]],
       [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY]],
       [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN]],
       ['short', sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE]]);
-  this.dynamicCstr.updateProperties(fallback.getProperties());
   var comparator = this.comparators[this.domain];
+  this.dynamicCstr = this.parser.parse(dynamic);
+  this.dynamicCstr.updateProperties(fallback.getProperties());
   this.comparator = comparator ? comparator() :
       new sre.DynamicCstr.DefaultComparator(this.dynamicCstr);
 };
