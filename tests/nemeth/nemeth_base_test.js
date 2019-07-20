@@ -126,7 +126,7 @@ sre.NemethBaseTest.prototype.test_01_07_000_x_00_008 = function() {
  * 01/07_046_x_00_001
  */
 sre.NemethBaseTest.prototype.test_01_07_046_x_00_001 = function() {
-  var nemeth = '⠠⠁ ⠠⠉⠁⠝⠞⠕⠗ ⠈⠼ ⠎⠑⠞ ⠊⠎ ⠄⠄⠄';
+  var nemeth = '⠠⠁⠀⠠⠉⠁⠝⠞⠕⠗⠀⠈⠼⠀⠎⠑⠞⠀⠊⠎⠀⠄⠄⠄';
   var mml = '<msup>' +
       '<mtext>A Cantor</mtext>' +
       '<mo>∗<!-- ∗ --></mo>' +
@@ -153,7 +153,7 @@ sre.NemethBaseTest.prototype.test_01_07_046_x_00_002 = function() {
  * 01/07_047_x_00_001
  */
 sre.NemethBaseTest.prototype.test_01_07_047_x_00_001 = function() {
-  var nemeth = '⠠⠋⠔⠙ ⠮ ⠔⠙⠑⠭ ⠈⠻⠼⠂ ⠷⠮ ⠗⠁⠙⠊⠉⠁⠇⠲';
+  var nemeth = '⠠⠋⠔⠙⠀⠮⠀⠔⠙⠑⠭⠀⠈⠻⠼⠂⠀⠷⠮⠀⠗⠁⠙⠊⠉⠁⠇⠲';
   var mml = '<msup>' +
       '<mtext>Find the index</mtext>' +
       '<mn>1</mn>' +
@@ -167,7 +167,7 @@ sre.NemethBaseTest.prototype.test_01_07_047_x_00_001 = function() {
  * 01/07_048_a_00_001
  */
 sre.NemethBaseTest.prototype.test_01_07_048_a_00_001 = function() {
-  var nemeth = '⠠⠊⠗⠗⠠⠝⠁⠇ ⠈⠼ ⠝⠥⠍⠃⠻⠎ ⠄⠄⠄';
+  var nemeth = '⠠⠊⠗⠗⠠⠝⠁⠇⠀⠈⠼⠀⠝⠥⠍⠃⠻⠎⠀⠄⠄⠄';
   var mml = '<msup>' +
       '<mi></mi>' +
       '<mo>∗<!-- ∗ --></mo>' +
@@ -182,7 +182,7 @@ sre.NemethBaseTest.prototype.test_01_07_048_a_00_001 = function() {
  * 01/07_048_a_00_002
  */
 sre.NemethBaseTest.prototype.test_01_07_048_a_00_002 = function() {
-  var nemeth = '⠠⠊⠗⠗⠠⠝⠁⠇ ⠈⠼ ⠝⠥⠍⠃⠻⠎ ⠄⠄⠄';
+  var nemeth = '⠠⠊⠗⠗⠠⠝⠁⠇⠀⠈⠼⠀⠝⠥⠍⠃⠻⠎⠀⠄⠄⠄';
   var mml = '<msup>' +
       '<mtext>Irrational</mtext>' +
       '<mo>∗<!-- ∗ --></mo>' +
@@ -197,7 +197,7 @@ sre.NemethBaseTest.prototype.test_01_07_048_a_00_002 = function() {
  * 01/07_048_a_00_003
  */
 sre.NemethBaseTest.prototype.test_01_07_048_a_00_003 = function() {
-  var nemeth = '⠈⠼ ⠠⠊⠗⠗⠠⠝⠁⠇ ⠝⠥⠍⠃⠻⠎ ⠄⠄⠄';
+  var nemeth = '⠈⠼⠀⠠⠊⠗⠗⠠⠝⠁⠇⠀⠝⠥⠍⠃⠻⠎⠀⠄⠄⠄';
   var mml = '<msup>' +
       '<mi></mi>' +
       '<mo>∗<!-- ∗ --></mo>' +
@@ -212,7 +212,7 @@ sre.NemethBaseTest.prototype.test_01_07_048_a_00_003 = function() {
  * 01/07_048_a_00_004
  */
 sre.NemethBaseTest.prototype.test_01_07_048_a_00_004 = function() {
-  var nemeth = '⠄⠄⠄ ⠎⠑⠞⠎⠲ ⠈⠼';
+  var nemeth = '⠄⠄⠄⠀⠎⠑⠞⠎⠲⠀⠈⠼';
   var mml = '<mo>…<!-- … --></mo>' +
       '<msup>' +
       '<mtext>sets.</mtext>' +
@@ -226,7 +226,7 @@ sre.NemethBaseTest.prototype.test_01_07_048_a_00_004 = function() {
  * 01/07_048_a_00_005
  */
 sre.NemethBaseTest.prototype.test_01_07_048_a_00_005 = function() {
-  var nemeth = '⠄⠄⠄ ⠎⠑⠞⠎ ⠈⠼⠸⠲';
+  var nemeth = '⠄⠄⠄⠀⠎⠑⠞⠎⠀⠈⠼⠸⠲';
   var mml = '<mo>…<!-- … --></mo>' +
       '<msup>' +
       '<mtext>sets</mtext>' +
@@ -241,7 +241,7 @@ sre.NemethBaseTest.prototype.test_01_07_048_a_00_005 = function() {
  * 01/07_048_b_00_001
  */
 sre.NemethBaseTest.prototype.test_01_07_048_b_00_001 = function() {
-  var nemeth = '⠠⠁ ⠠⠉⠁⠝⠞⠕⠗ ⠈⠻⠼⠂ ⠎⠑⠞ ⠊⠎ ⠄⠄⠄';
+  var nemeth = '⠠⠁⠀⠠⠉⠁⠝⠞⠕⠗⠀⠈⠻⠼⠂⠀⠎⠑⠞⠀⠊⠎⠀⠄⠄⠄';
   var mml = '<msup>' +
       '<mtext>A Cantor</mtext>' +
       '<mn>1</mn>' +
@@ -297,7 +297,7 @@ sre.NemethBaseTest.prototype.test_01_07_048_b_00_005 = function() {
  * 01/07_048_b_00_006
  */
 sre.NemethBaseTest.prototype.test_01_07_048_b_00_006 = function() {
-  var nemeth = '⠈⠼ ⠠⠿ ⠑⠭⠞⠗⠁ ⠉⠗⠑⠙⠊⠞';
+  var nemeth = '⠈⠼⠀⠠⠿⠀⠑⠭⠞⠗⠁⠀⠉⠗⠑⠙⠊⠞';
   var mml = '<msup>' +
       '<mi></mi>' +
       '<mo>∗<!-- ∗ --></mo>' +
@@ -585,7 +585,7 @@ sre.NemethBaseTest.prototype.test_02_02_008_c_00_004 = function() {
  * 02/02_008_c_00_005
  */
 sre.NemethBaseTest.prototype.test_02_02_008_c_00_005 = function() {
-  var nemeth = '⠼⠨⠂⠬⠨⠆ ⠨⠥ ⠨⠐⠤⠤⠤⠤';
+  var nemeth = '⠼⠨⠂⠬⠨⠆⠀⠨⠥⠀⠨⠐⠤⠤⠤⠤';
   var mml = '<mn>.1</mn>' +
       '<mo>+</mo>' +
       '<mn>.2</mn>' +
@@ -612,7 +612,7 @@ sre.NemethBaseTest.prototype.test_02_02_009_a_00_001 = function() {
  * 02/02_009_a_00_002
  */
 sre.NemethBaseTest.prototype.test_02_02_009_a_00_002 = function() {
-  var nemeth = '⠠⠐⠮ ⠶ ⠼⠶ ⠃⠁⠇⠇⠎⠲';
+  var nemeth = '⠠⠐⠮⠀⠶⠀⠼⠶⠀⠃⠁⠇⠇⠎⠲';
   var mml = '<mtext>There were&nbsp;</mtext>' +
       '<mn>7</mn>' +
       '<mtext>&nbsp;balls</mtext>' +
@@ -625,7 +625,7 @@ sre.NemethBaseTest.prototype.test_02_02_009_a_00_002 = function() {
  * 02/02_009_a_00_003
  */
 sre.NemethBaseTest.prototype.test_02_02_009_a_00_003 = function() {
-  var nemeth = '⠼⠂⠬⠭⠬⠽ ⠨⠥ ⠼⠴';
+  var nemeth = '⠼⠂⠬⠭⠬⠽⠨⠥⠼⠴';
   var mml = '<mn>1</mn>' +
       '<mo>+</mo>' +
       '<mi>x</mi>' +
@@ -1037,7 +1037,7 @@ sre.NemethBaseTest.prototype.test_02_02_009_d_00_003 = function() {
  * 02/02_009_d_00_004
  */
 sre.NemethBaseTest.prototype.test_02_02_009_d_00_004 = function() {
-  var nemeth = '⠠⠎⠑⠑ ⠏⠁⠛⠑ ⠼⠂⠢ ⠈⠻⠼⠐⠸⠲';
+  var nemeth = '⠠⠎⠑⠑⠀⠏⠁⠛⠑⠀⠼⠂⠢⠀⠈⠻⠼⠐⠸⠲';
   var mml = '<mtext>See page&nbsp;</mtext>' +
       '<msup>' +
       '<mn>15</mn>' +
@@ -1133,7 +1133,7 @@ sre.NemethBaseTest.prototype.test_02_02_009_e_00_007 = function() {
  * 02/02_009_f_00_001
  */
 sre.NemethBaseTest.prototype.test_02_02_009_f_00_001 = function() {
-  var nemeth = '⠼⠂⠤⠞⠕⠤⠼⠂ ⠉⠕⠗⠗⠑⠎⠏⠕⠝⠙⠰⠑';
+  var nemeth = '⠼⠂⠤⠞⠕⠤⠼⠂⠀⠉⠕⠗⠗⠑⠎⠏⠕⠝⠙⠰⠑';
   var mml = '<mrow>' +
       '<mrow>' +
       '<mn>1</mn>' +
