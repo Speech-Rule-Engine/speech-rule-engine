@@ -201,7 +201,7 @@ sre.Cli.prototype.commandLine = function() {
       option('-t, --style [name]', 'Speech style [name].', set, 'style').
       option('-c, --locale [code]', 'Locale [code].', set, 'locale').
       option('-b, --modality [name]', 'Modality [name].', set, 'modality').
-      option('-s, --semantics', 'Switch OFF semantics interpretation.',
+      option('-s, --semantics', 'Switch OFF semantics interpretation. (Deprecated)',
              set, 'semantics').
       option('-k, --markup [name]', 'Generate speech output with markup tags.',
              set, 'markup').
