@@ -71,18 +71,27 @@ sre.Locale.nemeth = {
   MS_ROOT_INDEX: { },
 
   FONT: {
+    // TODO: Some font translations:
+    //
+    // Caligraphic: Currently translated as script. Caligraphic bold as script
+    //              bold (vs. bold-script)
+    //
+    // Double Struck: Currently translated as bold. Double-struck italic is
+    //                therefore the same as bold italic.
+    //
+    // Oldstyle and Monospace: Currently ignored.
+    // Normal: is currently just empty.
     'bold': '⠸',
     'bold-fraktur': '⠸⠀⠸',
     'bold-italic': '⠸⠨',
     'bold-script': '⠸⠈',
-    'caligraphic': '',
-    'caligraphic-bold': '⠸',
-    'double-struck': '⠈',
-    'double-struck-italic': '⠈⠨',
+    'caligraphic': '⠈',
+    'caligraphic-bold': '⠈⠸',
+    'double-struck': '⠸',
+    'double-struck-italic': '⠸⠨',
     'fraktur': '⠸',
     'italic': '⠨',
     'monospace': '',
-    // TODO: sort out the normal
     'normal': ' ',
     'oldstyle': '',
     'oldstyle-bold': '⠸',
