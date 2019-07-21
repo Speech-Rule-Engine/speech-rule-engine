@@ -50,6 +50,11 @@ sre.AataTest = function() {
    */
   this.locale = 'nemeth';
 
+  /**
+   * @override
+   */
+  this.modality = 'braille';
+
   this.setActive('Aata Nemeth');
 };
 goog.inherits(sre.AataTest, sre.AbstractRuleTest);

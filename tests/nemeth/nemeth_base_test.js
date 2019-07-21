@@ -50,6 +50,11 @@ sre.NemethBaseTest = function() {
    */
   this.locale = 'nemeth';
 
+  /**
+   * @override
+   */
+  this.modality = 'braille';
+
   this.setActive('Nemeth Base');
 };
 goog.inherits(sre.NemethBaseTest, sre.AbstractRuleTest);
