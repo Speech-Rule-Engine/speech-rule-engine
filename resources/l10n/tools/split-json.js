@@ -266,7 +266,7 @@ SplitJson.htmlRow = function(...row) {
 };
 
 SplitJson.HTML_CAPTIONS_ = new Map([
-  [SplitJson.SYMBOLS_, ['Char', 'English', 'Locale']],
+  [SplitJson.SYMBOLS_, ['Char', 'Unicode', 'English', 'Locale']],
   [SplitJson.FUNCTIONS_, ['Function', 'Alt. Names', 'English', 'Locale']],
   [SplitJson.UNITS_, ['Unit', 'Alt. Names', 'English', 'Plural', 'Singular', 'Dual']]
 ]);
@@ -300,7 +300,7 @@ SplitJson.compareLocaleToTable = function(english, locale, kind) {
       table.push(SplitJson.htmlRow(key, names, eng_text, loc_text));
       break;
     default:
-      table.push(SplitJson.htmlRow(`&#x${key};`, eng_text, loc_text));
+      table.push(SplitJson.htmlRow(`&#x${key};`, key, eng_text, loc_text));
     }
   }
   return table;
@@ -378,6 +378,7 @@ SplitJson.toOds = function(iso = 'en') {
 SplitJson.odsCreate = function(iso, kind) {
   SplitJson.localeToOds(iso, SplitJson.TEMPLATE_PATH_, kind);
   let outputPath = `${SplitJson.ODS_PATH_}/${iso}/`;
+  console.log(outputPath);
   shell.mkdir('-p', outputPath);
   let file = `${kind}-${iso}.ods`;
   shell.cd(SplitJson.TEMPLATE_PATH_);
