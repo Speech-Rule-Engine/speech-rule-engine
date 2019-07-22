@@ -520,7 +520,7 @@
     "category": "Pd",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠂⠴⠄"
+        "default": "⠤"
       }
     },
     "key": "2010"
@@ -538,7 +538,7 @@
     "category": "Pd",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠂⠆⠄"
+        "default": "⠤⠤"
       }
     },
     "key": "2012"
@@ -565,7 +565,7 @@
     "category": "Pd",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠂⠢⠄"
+        "default": "⠤⠤"
       }
     },
     "key": "2015"
@@ -664,7 +664,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠆⠴⠄"
+        "default": "⠸⠻"
       }
     },
     "key": "2020"
@@ -673,7 +673,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠆⠂⠄"
+        "default": "⠸⠸⠻"
       }
     },
     "key": "2021"
@@ -700,7 +700,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠆⠲⠄"
+        "default": "⠄"
       }
     },
     "key": "2024"
@@ -709,7 +709,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠆⠢⠄"
+        "default": "⠄⠄"
       }
     },
     "key": "2025"
@@ -718,7 +718,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "⠄"
+        "default": "⠄⠄⠄"
       }
     },
     "key": "2026"

@@ -156,7 +156,9 @@ sre.Locale.nemeth = {
     TEXT: 'a-zA-Z',
     NUMBER: '((\\d{1,3})(?=(,| ))((,| )\\d{3})*(\\.\\d+)?)|^\\d*\\.\\d+|^\\d+',
     DECIMAL_MARK: '.',
-    DIGIT_GROUP: ','
+    DIGIT_GROUP: ',',
+    JOINER_SUBSUPER: '',
+    JOINER_FRAC: ''
   },
 
   NAVIGATE: {
