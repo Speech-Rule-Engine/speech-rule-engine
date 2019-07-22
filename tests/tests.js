@@ -20,6 +20,7 @@
 goog.provide('sre.Tests');
 
 goog.require('sre.BaseTests');
+goog.require('sre.BrailleNemethTest');
 goog.require('sre.SpeechEnglishTest');
 goog.require('sre.SpeechFrenchTest');
 goog.require('sre.SpeechSpanishTest');
@@ -64,6 +65,7 @@ sre.Tests.allTests = sre.Tests.allTests.concat(sre.BaseTests.testList);
 sre.Tests.allTests = sre.Tests.allTests.concat(sre.SpeechEnglishTest.testList);
 sre.Tests.allTests = sre.Tests.allTests.concat(sre.SpeechFrenchTest.testList);
 sre.Tests.allTests = sre.Tests.allTests.concat(sre.SpeechSpanishTest.testList);
+sre.Tests.allTests = sre.Tests.allTests.concat(sre.BrailleNemethTest.testList);
 
 var file = sre.SystemExternal.process.env['FILE'];
 var locale = sre.SystemExternal.process.env['LOCALE'];
