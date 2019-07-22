@@ -18,6 +18,8 @@ SplitJson.ODS_TEMPLATE_ = '/home/sorge/git/speech-rule-engine/resources/l10n/tem
 
 SplitJson.INPUT_PATH_ = '/tmp/input';
 
+SplitJson.WWW_BASE_PATH = '/home/sorge/git/speech-rule-engine/resources/www';
+
 /**
  * Subpath to dir containing ChromeVox JSON definitions for symbols.
  * @type {string}
@@ -248,7 +250,12 @@ SplitJson.getFromMapping = function(mappings) {
 
 SplitJson.localeToTable = function(content, kind) {
   let table = [];
-  for (let key in content) {
+  let header = kind === SplitJson.UNITS_ ?
+      SplitJson.HTML_CAPTIONS_.get('unitsen') :
+      SplitJson.HTML_CAPTIONS_.get(kind).slice(0, -1);
+  table.push(SplitJson.htmlRow(...header).replace(/td/g, 'th'));
+  let keys = SplitJson.sortKeys(Object.keys(content));
+  for (let key of keys) {
     let mappings = content[key].mappings;
     if (!mappings) {
       console.log('Missing: ' + key);
@@ -256,7 +263,21 @@ SplitJson.localeToTable = function(content, kind) {
     }
     // TODO: Sort this out for kind!
     let text = SplitJson.getFromMapping(mappings);
-    table.push('<tr><td>&#x' + key + ';</td><td>' + text + '</td></tr>');
+    let names = '';
+    switch (kind) {
+    case 'units':
+      names = content[key].names.join(', ');
+      let singular = mappings.default.singular || '';
+      let dual = mappings.default.dual || '';
+      table.push(SplitJson.htmlRow(key, names, text, singular, dual));
+      break;
+    case 'functions':
+      names = content[key].names.join(', ');
+      table.push(SplitJson.htmlRow(key, names, text));
+      break;
+    default:
+      table.push(SplitJson.htmlRow(`&#x${key};`, key, text));
+    }
   }
   return table;
 };
@@ -268,13 +289,15 @@ SplitJson.htmlRow = function(...row) {
 SplitJson.HTML_CAPTIONS_ = new Map([
   [SplitJson.SYMBOLS_, ['Char', 'Unicode', 'English', 'Locale']],
   [SplitJson.FUNCTIONS_, ['Function', 'Alt. Names', 'English', 'Locale']],
-  [SplitJson.UNITS_, ['Unit', 'Alt. Names', 'English', 'Plural', 'Singular', 'Dual']]
+  [SplitJson.UNITS_, ['Unit', 'Alt. Names', 'English', 'Plural', 'Singular', 'Dual']],
+  ['unitsen', ['Unit', 'Alt. Names', 'Plural', 'Singular', 'Dual']]
 ]);
 
 SplitJson.compareLocaleToTable = function(english, locale, kind) {
   let table = [];
   table.push(SplitJson.htmlRow(...SplitJson.HTML_CAPTIONS_.get(kind)).replace(/td/g, 'th'));
-  for (let key in english) {
+  let keys = SplitJson.sortKeys(Object.keys(english));
+  for (let key of keys) {
     let mappings = english[key].mappings;
     if (!mappings) {
       console.log('Missing: ' + key);
@@ -341,7 +364,7 @@ SplitJson.localeToHTML = function(locale = 'en',
     files.push(name);
     let table = compare ?
         SplitJson.compareLocaleToTable(localeContent, content, kind) :
-        SplitJson.localeToTable(content);
+        SplitJson.localeToTable(content, kind);
     SplitJson.tableToHTML(name, table, path);
   }
   let index = `<html><head><title>${kind}</title></head>`;
@@ -550,6 +573,34 @@ SplitJson.numberToUnicode = function(number) {
 };
 
 
+SplitJson.moveFiles = function(locale) {
+  let wwwLocale = SplitJson.WWW_BASE_PATH + '/localisation/' + locale + '/';
+  shell.mkdir('-p', wwwLocale + 'sheets/');
+  shell.cp('-f', SplitJson.ODS_PATH_ + '/' + locale + '/*.ods', wwwLocale + 'sheets/');
+  shell.cp('-Rf', SplitJson.HTML_PATH_ + '/' + locale + '/*', wwwLocale);
+};
+
+
+SplitJson.sortKeys = function(keys) {
+  let closure = function(x, y) {
+    let xn = parseInt(x, 16);
+    let yn = parseInt(y, 16);
+    if (isNaN(xn)) {
+      return 1;
+    }
+    if (isNaN(yn)) {
+      return -1;
+    }
+    if (xn < yn) {
+      return -1;
+    }
+    if (xn > yn) {
+      return 1;
+    }
+    return 0;
+  };
+  return keys.sort(closure);
+};
 
 // SplitJson.defaultFiles = function() {
 //   SplitJson.allFiles(SplitJson.SYMBOLS_FILES_, SplitJson.FUNCTIONS_FILES_)
