@@ -221,6 +221,9 @@ sre.SemanticProcessor.prototype.text = function(content, font, type) {
   }
   var leaf = sre.SemanticProcessor.getInstance().factory_.
       makeLeafNode(content, font);
+  // TODO (simons): Here check if there is already a type or if we can compute
+  // an interesting number role. Than use this.
+  leaf.updateContent(content, true);
   leaf.type = sre.SemanticAttr.Type.TEXT;
   if (type === 'MS') {
     leaf.role = sre.SemanticAttr.Role.STRING;
