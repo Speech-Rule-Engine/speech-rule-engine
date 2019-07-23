@@ -232,26 +232,28 @@ sre.NemethRules.initNemethRules_ = function() {
       'number', 'default.default', '[n] text()', 'self::number');
 
   defineRule(
-      'number', 'default.default', '[t] "⠼"; [t] "here1"; [n] text()',
+      'number', 'default.default', '[t] "⠼"; [n] text()',
       'self::number', 'name(..)="stree"');
 
   defineRule(
-      'number', 'default.default', '[t] "⠼"; [t] "here2"; [n] text()',
+      'number', 'default.default', '[t] "⠼"; [n] text()',
       'self::number', 'name(../..)="cell"');
 
   defineRule(
-      'number', 'default.default', '[t] "⠼"; [t] "here3"; [n] text()',
+      'number', 'default.default', '[t] "⠼"; [n] text()',
       'self::number', 'name(../..)="punctuated"',
       'not(ancestor::fenced)');
 
   defineRule(
+    // TODO: Write tests to check that open/close frac is not repeated.
       'mixed-number', 'default.default',
-      '[n] children/*[1]; [n] children/*[2]; ',
+      '[n] children/*[1]; [t] "⠸⠹"; [n] children/*[2]; [t] "⠸⠼"',
       'self::number', '@role="mixed"');
 
   defineRule(
+    // TODO: Fix this with multipurpose indicator.
       'number-with-chars', 'default.default',
-      '[t] "⠼"; [t] "here"; [m] CQFspaceoutNumber', 'self::number',
+      '[t] "⠼"; [m] CQFspaceoutNumber', 'self::number',
       '"" != translate(text(), "0123456789.,", "")',
       'text() != translate(text(), "0123456789.,", "")');
 
