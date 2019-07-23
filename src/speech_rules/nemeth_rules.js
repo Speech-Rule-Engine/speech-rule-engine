@@ -377,7 +377,7 @@ sre.NemethRules.initNemethRules_ = function() {
   defineRule(
       'fences-open-close', 'default.default',
       '[n] content/*[1]; [n] children/*[1]; [n] content/*[2]',
-      'self::fenced', '@role="leftright"');
+      'self::fenced');
 
   // defineRule(
   //     'fences-neutral', 'default.default',
@@ -395,17 +395,17 @@ sre.NemethRules.initNemethRules_ = function() {
 
 
   // TODO (sorge) Maybe check for punctuated element and singleton?
-  defineRule(
-      'fences-set', 'default.default',
-      '[t] "StartSet"; [n] children/*[1]; [t] "EndSet"',
-      'self::fenced', '@role="set empty" or @role="set extended"' +
-      ' or @role="set singleton" or @role="set collection"',
-      // 'self::fenced', '@role="leftright"', 'content/*[1][text()]="{"',
-      // 'content/*[2][text()]="}"', 'count(children/*)=1',
-      'not(name(../..)="appl")');
-  defineSpecialisedRule(
-      'fences-set', 'default.default', 'default.sbrief',
-      '[t] "Set"; [n] children/*[1]; [t] "EndSet"');
+  // defineRule(
+  //     'fences-set', 'default.default',
+  //     '[t] "StartSet"; [n] children/*[1]; [t] "EndSet"',
+  //     'self::fenced', '@role="set empty" or @role="set extended"' +
+  //     ' or @role="set singleton" or @role="set collection"',
+  //     // 'self::fenced', '@role="leftright"', 'content/*[1][text()]="{"',
+  //     // 'content/*[2][text()]="}"', 'count(children/*)=1',
+  //     'not(name(../..)="appl")');
+  // defineSpecialisedRule(
+  //     'fences-set', 'default.default', 'default.sbrief',
+  //     '[t] "Set"; [n] children/*[1]; [t] "EndSet"');
 
 
   // Text rules

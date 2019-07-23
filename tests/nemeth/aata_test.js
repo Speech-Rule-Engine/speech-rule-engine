@@ -383,7 +383,7 @@ sre.AataTest.prototype.testAataExpression_14 = function() {
   '</msubsup>' +
   '<mo>}</mo>' +
   '</mrow>';
-  var nemeth = '⠠⠉⠀⠨⠅⠀StartSet⠸⠽⠱⠠⠛⠸⠭⠀⠨⠅⠀⠸⠽for⠸⠭⠈⠑⠈⠠⠵⠆⠘⠅⠐EndSet';
+  var nemeth = '⠠⠉⠀⠨⠅⠀⠨⠷⠸⠽⠱⠠⠛⠸⠭⠀⠨⠅⠀⠸⠽for⠸⠭⠈⠑⠈⠠⠵⠆⠘⠅⠐⠨⠾';
   this.executeRuleTest(mml, nemeth);
 };
 
@@ -489,7 +489,7 @@ sre.AataTest.prototype.testAataExpression_19 = function() {
   '<mtext>for some</mtext>' +
   '<mi>b</mi>' +
   '<mo fence="false" stretchy="false">}</mo>';
-  var nemeth = '⠠⠛⠴⠀⠨⠅⠀StartSet⠠⠁⠱⠷⠠⠁⠠⠃⠾⠈⠑⠠⠛forsome⠃EndSet';
+  var nemeth = '⠠⠛⠴⠀⠨⠅⠀⠨⠷⠠⠁⠱⠷⠠⠁⠠⠃⠾⠈⠑⠠⠛forsome⠃⠨⠾';
   this.executeRuleTest(mml, nemeth);
 };
 
@@ -2097,7 +2097,7 @@ sre.AataTest.prototype.testAataExpression_112 = function() {
   '<mn>1342</mn>' +
   '<mo stretchy="false">)</mo>' +
   '<mo fence="false" stretchy="false">}</mo>';
-  var nemeth = 'StartSet⠷13⠾⠠⠷13⠾⠷24⠾⠠⠷132⠾⠠⠷134⠾⠠⠷1324⠾⠠⠷1342⠾EndSet';
+  var nemeth = '⠨⠷⠷13⠾⠠⠷13⠾⠷24⠾⠠⠷132⠾⠠⠷134⠾⠠⠷1324⠾⠠⠷1342⠾⠨⠾';
   this.executeRuleTest(mml, nemeth);
 };
 
@@ -3026,7 +3026,7 @@ sre.AataTest.prototype.testAataExpression_174 = function() {
   '<mn>354</mn>' +
   '<mo stretchy="false">)</mo>' +
   '<mo fence="false" stretchy="false">}</mo>';
-  var nemeth = '⠠⠛⠀⠨⠅⠀StartSet⠷⠂⠾⠠⠷12⠾⠠⠷345⠾⠠⠷354⠾⠠⠷12⠾⠷345⠾⠠⠷12⠾⠷354⠾EndSet';
+  var nemeth = '⠠⠛⠀⠨⠅⠀⠨⠷⠷⠂⠾⠠⠷12⠾⠠⠷345⠾⠠⠷354⠾⠠⠷12⠾⠷345⠾⠠⠷12⠾⠷354⠾⠨⠾';
   this.executeRuleTest(mml, nemeth);
 };
 
@@ -3988,7 +3988,7 @@ sre.AataTest.prototype.testAataExpression_243 = function() {
   '<mo fence="false" stretchy="false">{</mo>' +
   '<mi>e</mi>' +
   '<mo fence="false" stretchy="false">}</mo>';
-  var nemeth = '⠠⠓⠀⠨⠅⠀StartSet⠑EndSet';
+  var nemeth = '⠠⠓⠀⠨⠅⠀⠨⠷⠑⠨⠾';
   this.executeRuleTest(mml, nemeth);
 };
 
@@ -4253,7 +4253,7 @@ sre.AataTest.prototype.testAataExpression_258 = function() {
   '<mo>,</mo>' +
   '<mn>3</mn>' +
   '<mo fence="false" stretchy="false">}</mo>';
-  var nemeth = '⠠⠎⠀⠨⠅⠀StartSet⠂⠠⠆⠠⠒EndSet';
+  var nemeth = '⠠⠎⠀⠨⠅⠀⠨⠷⠂⠠⠆⠠⠒⠨⠾';
   this.executeRuleTest(mml, nemeth);
 };
 
@@ -4333,7 +4333,7 @@ sre.AataTest.prototype.testAataExpression_261 = function() {
   '<mo>=</mo>' +
   '<mn>1</mn>' +
   '<mo fence="false" stretchy="false">}</mo>';
-  var nemeth = '⠈⠠⠞⠀⠨⠅⠀StartSet⠵⠈⠑⠈⠠⠉⠘⠈⠼⠐⠱⠳⠵⠳⠀⠨⠅⠀⠂EndSet';
+  var nemeth = '⠈⠠⠞⠀⠨⠅⠀⠨⠷⠵⠈⠑⠈⠠⠉⠘⠈⠼⠐⠱⠳⠵⠳⠀⠨⠅⠀⠂⠨⠾';
   this.executeRuleTest(mml, nemeth);
 };
 
@@ -4373,7 +4373,7 @@ sre.AataTest.prototype.testAataExpression_264 = function() {
   '<mo>,</mo>' +
   '<mi>W</mi>' +
   '<mo fence="false" stretchy="false">}</mo>';
-  var nemeth = '⠠⠽⠀⠨⠅⠀StartSet⠠⠃⠠⠠⠺EndSet';
+  var nemeth = '⠠⠽⠀⠨⠅⠀⠨⠷⠠⠃⠠⠠⠺⠨⠾';
   this.executeRuleTest(mml, nemeth);
 };
 
@@ -4436,7 +4436,7 @@ sre.AataTest.prototype.testAataExpression_267 = function() {
   '<mo>∼<!-- ∼ --></mo>' +
   '<mi>x</mi>' +
   '<mo fence="false" stretchy="false">}</mo>';
-  var nemeth = '⠈⠷⠭⠈⠾⠀⠨⠅⠀StartSet⠽⠈⠑⠠⠭⠱⠽⠄⡳⠭⠆⠆⠒⠉⠄⠭EndSet';
+  var nemeth = '⠈⠷⠭⠈⠾⠀⠨⠅⠀⠨⠷⠽⠈⠑⠠⠭⠱⠽⠄⡳⠭⠆⠆⠒⠉⠄⠭⠨⠾';
   this.executeRuleTest(mml, nemeth);
 };
 
@@ -4968,7 +4968,7 @@ sre.AataTest.prototype.testAataExpression_296 = function() {
   '<mo>,</mo>' +
   '<mi>y</mi>' +
   '<mo fence="false" stretchy="false">}</mo>';
-  var nemeth = '⠠⠁⠀⠨⠅⠀StartSet⠭⠠⠽EndSet';
+  var nemeth = '⠠⠁⠀⠨⠅⠀⠨⠷⠭⠠⠽⠨⠾';
   this.executeRuleTest(mml, nemeth);
 };
 
@@ -5199,7 +5199,7 @@ sre.AataTest.prototype.testAataExpression_308 = function() {
   '<mo fence="false" stretchy="false">{</mo>' +
   '<mn>0</mn>' +
   '<mo fence="false" stretchy="false">}</mo>';
-  var nemeth = '⠨⠝⠱⠈⠠⠵⠈⠷⠜⠒⠻⠊⠈⠾⠀⠫⠕⠀⠈⠠⠝⠨⠬StartSet⠴EndSet';
+  var nemeth = '⠨⠝⠱⠈⠠⠵⠈⠷⠜⠒⠻⠊⠈⠾⠀⠫⠕⠀⠈⠠⠝⠨⠬⠨⠷⠴⠨⠾';
   this.executeRuleTest(mml, nemeth);
 };
 

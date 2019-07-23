@@ -358,7 +358,7 @@
     "category": "Sk",
     "mappings": {
       "default": {
-        "default": "⠀"
+        "default": "⠱"
       }
     },
     "key": "00AF"
@@ -502,7 +502,7 @@
     "category": "Sk",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠆⠙⠉⠄"
+        "default": "⠈⠱"
       }
     },
     "key": "02DC"
@@ -862,7 +862,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠒⠑⠄"
+        "default": "⠱"
       }
     },
     "key": "203E"
@@ -1807,7 +1807,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠆⠒⠉⠄"
+        "default": "⠈⠱"
       }
     },
     "key": "223C"
@@ -7540,7 +7540,7 @@
     "category": "Pc",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠋⠋⠒⠋⠄"
+        "default": "⠱"
       }
     },
     "key": "FF3F"
@@ -7567,7 +7567,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠋⠋⠢⠑⠄"
+        "default": "⠈⠱o"
       }
     },
     "key": "FF5E"
@@ -7603,7 +7603,7 @@
     "category": "Sk",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠋⠋⠑⠒⠄"
+        "default": "⠱"
       }
     },
     "key": "FFE3"
