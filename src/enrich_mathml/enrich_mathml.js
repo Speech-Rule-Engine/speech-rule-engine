@@ -847,6 +847,18 @@ sre.EnrichMathml.removeAttributePrefix = function(mml) {
 
 
 /**
+ * Creates an data semantic attribute by adding the correct prefix.
+ * @param {string} attr The attribute.
+ * @return {sre.EnrichMathml.Attribute} The completed attribute.
+ */
+sre.EnrichMathml.addPrefix = function(attr) {
+  var upcase = attr.toUpperCase();
+  return sre.EnrichMathml.Attribute[upcase] ||
+    (sre.EnrichMathml.ATTRIBUTE_PREFIX_ + attr);
+};
+
+
+/**
  * Collapses a punctuated node that only contains invisible separators.
  * @param {sre.SemanticNode} semantic The punctuated node.
  * @param {Array.<Element>=} opt_children A list of children where the child

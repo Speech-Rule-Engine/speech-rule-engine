@@ -23,6 +23,7 @@
 goog.provide('sre.SpeechGeneratorFactory');
 
 goog.require('sre.AdhocSpeechGenerator');
+goog.require('sre.ColorGenerator');
 goog.require('sre.DirectSpeechGenerator');
 goog.require('sre.DummySpeechGenerator');
 goog.require('sre.NodeSpeechGenerator');
@@ -49,6 +50,7 @@ sre.SpeechGeneratorFactory.generator = function(type) {
  */
 sre.SpeechGeneratorFactory.generatorMapping_ = {
   Adhoc: sre.AdhocSpeechGenerator,
+  Color: sre.ColorGenerator,
   Direct: sre.DirectSpeechGenerator,
   Dummy: sre.DummySpeechGenerator,
   Node: sre.NodeSpeechGenerator,
