@@ -178,7 +178,7 @@ sre.NemethRules.initNemethRules_ = function() {
       'self::empty');
   defineRule(
       'blank-empty', 'default.default',
-      '[t] "Blank"', 'self::empty', 'count(../*)=1',
+      '[t] "⠀"', 'self::empty', 'count(../*)=1',
       'name(../..)="cell" or name(../..)="line"');
 
   // Font rules
@@ -1122,7 +1122,7 @@ sre.NemethRules.initNemethRules_ = function() {
       'empty-line-with-label', 'default.brief', 'default.sbrief');
 
   // Enclose
-  defineRule(
+  defineRule( // TODO: Localise the roles.
       'enclose', 'default.default',
       '[t] "StartEnclose"; [t] @role (grammar:localEnclose);' +
       ' [n] children/*[1]; [t] "EndEnclose"',
@@ -1133,23 +1133,25 @@ sre.NemethRules.initNemethRules_ = function() {
       'underbar', 'self::enclose', '@role="bottom"');
   defineRule(
       'leftbar', 'default.default',
-      '[t] "vertical-bar"; [n] children/*[1]',
+      '[t] "⠳"; [n] children/*[1]',
       'self::enclose', '@role="left"');
   defineRule(
       'rightbar', 'default.default',
-      '[n] children/*[1]; [t] "vertical-bar"',
+      '[n] children/*[1]; [t] "⠳"',
       'self::enclose', '@role="right"');
 
   // Crossout
   defineRule(
       'crossout', 'default.default',
-      '[t] "CrossOut"; [n] children/*[1]; [t] "EndCrossOut"',
+      '[t] "⠪"; [n] children/*[1]; [t] "⠻"',
       'self::enclose', '@role="updiagonalstrike" or' +
       ' @role="downdiagonalstrike" or @role="horizontalstrike"');
   defineRule(
+    // TODO: Q: How to deal with "With" linearly. Currently we are
+    // repeating the opening.
       'cancel', 'default.default',
-      '[t] "CrossOut"; [n] children/*[1]/children/*[1]; [t] "With";' +
-      ' [n] children/*[2]; [t] "EndCrossOut"',
+      '[t] "⠪"; [n] children/*[1]/children/*[1]; [t] "⠪";' +
+      ' [n] children/*[2]; [t] "⠻"',
       'self::overscore', '@role="updiagonalstrike" or' +
       ' @role="downdiagonalstrike" or @role="horizontalstrike"');
   defineSpecialisedRule(
@@ -1161,8 +1163,8 @@ sre.NemethRules.initNemethRules_ = function() {
       ' @role="downdiagonalstrike" or @role="horizontalstrike"');
   defineRule(
       'cancel-reverse', 'default.default',
-      '[t] "CrossOut"; [n] children/*[2]/children/*[1]; [t] "With";' +
-      ' [n] children/*[1]; [t] "EndCrossOut"',
+      '[t] "⠪"; [n] children/*[2]/children/*[1]; [t] "⠪";' +
+      ' [n] children/*[1]; [t] "⠻"',
       'self::overscore', 'name(children/*[2])="enclose"',
       'children/*[2][@role="updiagonalstrike" or' +
       ' @role="downdiagonalstrike" or @role="horizontalstrike"]');
