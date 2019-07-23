@@ -122,7 +122,7 @@ sre.NemethBaseTest.prototype.test_01_07_000_x_00_007 = function() {
  */
 sre.NemethBaseTest.prototype.test_01_07_000_x_00_008 = function() {
   var nemeth = '⠫⠎';
-  var mml = '';  // TODO
+  var mml = '<mo>☆</mo>';  // TODO
   this.executeRuleTest(mml, nemeth);
 };
 
@@ -131,6 +131,8 @@ sre.NemethBaseTest.prototype.test_01_07_000_x_00_008 = function() {
  * 01/07_046_x_00_001
  */
 sre.NemethBaseTest.prototype.test_01_07_046_x_00_001 = function() {
+  // var nemeth_orig = '⠠⠁⠀⠠⠉⠁⠝⠞⠕⠗⠀⠈⠼⠀⠎⠑⠞⠀⠊⠎⠀⠄⠄⠄';
+  // TODO: Replace US G2 by US G1
   var nemeth = '⠠⠁⠀⠠⠉⠁⠝⠞⠕⠗⠀⠈⠼⠀⠎⠑⠞⠀⠊⠎⠀⠄⠄⠄';
   var mml = '<msup>' +
       '<mtext>A Cantor</mtext>' +

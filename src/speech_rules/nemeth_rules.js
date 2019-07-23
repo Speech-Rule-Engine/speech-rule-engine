@@ -1259,6 +1259,23 @@ sre.NemethRules.initNemethRules_ = function() {
       '[n] children/*[1]; [t] "per"; [n] children/*[2]',
       'self::fraction', '@role="unit"');
 
+  // TODO: Add a semantical role for reference signs/footnotes.
+  //       Fix the number rule so that a footnote number is indicated.
+  defineRule(
+      'reference-sign', 'default.default',
+      '[n] children/*[1]; [n] children/*[2]',
+      'self::superscript', 'name(children/*[1])="text" or ' +
+        '(name(children/*[1])="punctuated" and children/*[1][@role="text"])',
+      'name(children/*[2])="operator" or name(children/*[2])="punctuation"'
+  );
+  defineRule(
+      'reference-number', 'default.default',
+      '[n] children/*[1]; [t] "⠈⠻"; [n] children/*[2]; [t] "⠐"',
+      'self::superscript', 'name(children/*[1])="text" or ' +
+        '(name(children/*[1])="punctuated" and children/*[1][@role="text"])',
+      'name(children/*[2])="number"', 'children/*[2][@role="integer"]'
+  );
+
 };
 
 
