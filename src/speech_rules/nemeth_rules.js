@@ -882,8 +882,14 @@ sre.NemethRules.initNemethRules_ = function() {
   // Modifiers
   defineRule(
       'overscore', 'default.default',
-      '[t] "ModifyingAbove"; [n] children/*[1]; [t] "With"; [n] children/*[2]',
+      '[t] "⠐"; [n] children/*[1]; [t] "⠣"; [n] children/*[2]; [t] "⠻"',
       'self::overscore', 'children/*[2][@role="overaccent"]'
+  );
+  defineRule(
+      'overscore', 'default.default',
+      '[n] children/*[1]; [t] "⠣"; [n] children/*[2]',
+      'self::overscore', 'children/*[2][@role="overaccent"]',
+      'contains(@grammar, "modified")'
   );
   defineSpecialisedRule(
       'overscore', 'default.default', 'default.brief',
@@ -894,8 +900,8 @@ sre.NemethRules.initNemethRules_ = function() {
 
   defineRule(
       'double-overscore', 'default.default',
-      '[t] "ModifyingAbove Above"; [n] children/*[1]; [t] "With";' +
-      ' [n] children/*[2]',
+      '[t] "⠐"; [n] children/*[1] (grammar:"modified"); [t] "⠣";' +
+      ' [n] children/*[2]; [t] "⠻"',
       'self::overscore', 'children/*[2][@role="overaccent"]',
       'name(children/*[1])="overscore"',
       'children/*[1]/children/*[2][@role="overaccent"]'
@@ -909,8 +915,14 @@ sre.NemethRules.initNemethRules_ = function() {
 
   defineRule(
       'underscore', 'default.default',
-      '[t] "ModifyingBelow"; [n] children/*[1]; [t] "With"; [n] children/*[2]',
+      '[t] "⠐"; [n] children/*[1]; [t] "⠩"; [n] children/*[2]; [t] "⠻"',
       'self::underscore', 'children/*[2][@role="underaccent"]'
+  );
+  defineRule(
+      'overscore', 'default.default',
+      '[n] children/*[1]; [t] "⠩"; [n] children/*[2]',
+      'self::underscore', 'children/*[2][@role="underaccent"]',
+      'contains(@grammar, "modified")'
   );
   defineSpecialisedRule(
       'underscore', 'default.default', 'default.brief',
@@ -921,8 +933,8 @@ sre.NemethRules.initNemethRules_ = function() {
 
   defineRule(
       'double-underscore', 'default.default',
-      '[t] "ModifyingBelow Below"; [n] children/*[1]; [t] "With";' +
-      ' [n] children/*[2]',
+      '[t] "⠐"; [n] children/*[1] (grammar:"modified"); [t] "⠩";' +
+      ' [n] children/*[2]; [t] "⠻"',
       'self::underscore', 'children/*[2][@role="underaccent"]',
       'name(children/*[1])="underscore"',
       'children/*[1]/children/*[2][@role="underaccent"]');
@@ -965,21 +977,22 @@ sre.NemethRules.initNemethRules_ = function() {
   defineSpecialisedRule(
       'underbar', 'default.brief', 'default.sbrief');
 
-  defineRule(
-      'overtilde', 'default.default',
-      '[n] children/*[1]; [t] "overTilde"',
-      'self::overscore',
-      'children/*[2][@role="overaccent"]',   // redundancy
-      '@role="latinletter" or @role="greekletter" or @role="otherletter"',
-      'children/*[2][text()="\u007E" or text()="\u02DC" or text()="\u223C"' +
-      ' or text()="\uFF5E"]'
-  );
-  defineSpecialisedRule(
-      'overtilde', 'default.default', 'default.brief',
-      '[n] children/*[1]; [t] "overtilde"'
-  );
-  defineSpecialisedRule(
-      'overtilde', 'default.brief', 'default.sbrief');
+  // TODO: Large tilde vs short tilde.
+  // defineRule(
+  //     'overtilde', 'default.default',
+  //     '[n] children/*[1]; [t] "overTilde"',
+  //     'self::overscore',
+  //     'children/*[2][@role="overaccent"]',   // redundancy
+  //     '@role="latinletter" or @role="greekletter" or @role="otherletter"',
+  //     'children/*[2][text()="\u007E" or text()="\u02DC" or text()="\u223C"' +
+  //     ' or text()="\uFF5E"]'
+  // );
+  // defineSpecialisedRule(
+  //     'overtilde', 'default.default', 'default.brief',
+  //     '[n] children/*[1]; [t] "overtilde"'
+  // );
+  // defineSpecialisedRule(
+  //     'overtilde', 'default.brief', 'default.sbrief');
 
   defineRule(
       'undertilde', 'default.default',
@@ -1005,7 +1018,7 @@ sre.NemethRules.initNemethRules_ = function() {
 
   defineRule(
       'matrix', 'default.default',
-      '[m] children/* (separator:"\n", join:"");',
+      '[m] children/* (separator:"⠀", join:"");',
       'self::matrix');
   defineRuleAlias(
       'matrix', 'self::vector');
