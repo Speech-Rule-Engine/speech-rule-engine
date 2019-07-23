@@ -423,21 +423,21 @@ sre.NemethRules.initNemethRules_ = function() {
   //     'self::operator', 'text()="\u002D"');
 
   defineRule(
-      'single-prime', 'default.default', '[t] "prime"',
+      'single-prime', 'default.default', '[t] "⠄"',
       'self::punctuated', '@role="prime"', 'count(children/*)=1');
   defineRule(
-      'double-prime', 'default.default', '[t] "double-prime"',
+      'double-prime', 'default.default', '[t] "⠄⠄"',
       'self::punctuated', '@role="prime"', 'count(children/*)=2');
   defineRule(
-      'triple-prime', 'default.default', '[t] "triple-prime"',
+      'triple-prime', 'default.default', '[t] "⠄⠄⠄"',
       'self::punctuated', '@role="prime"', 'count(children/*)=3');
   defineRule(
-      'quadruple-prime', 'default.default', '[t] "quadruple-prime"',
+      'quadruple-prime', 'default.default', '[t] "⠄⠄⠄⠄"',
       'self::punctuated', '@role="prime"', 'count(children/*)=4');
-  defineRule(
-      'counted-prime', 'default.default',
-      '[t] count(children/*); [t] "prime"',
-      'self::punctuated', '@role="prime"');
+  // defineRule(
+  //     'counted-prime', 'default.default',
+  //     '[t] count(children/*); [t] "prime"',
+  //     'self::punctuated', '@role="prime"');
 
   // Fraction rules
 
@@ -919,7 +919,7 @@ sre.NemethRules.initNemethRules_ = function() {
       'self::underscore', 'children/*[2][@role="underaccent"]'
   );
   defineRule(
-      'overscore', 'default.default',
+      'underscore', 'default.default',
       '[n] children/*[1]; [t] "⠩"; [n] children/*[2]',
       'self::underscore', 'children/*[2][@role="underaccent"]',
       'contains(@grammar, "modified")'
@@ -945,39 +945,40 @@ sre.NemethRules.initNemethRules_ = function() {
   defineSpecialisedRule(
       'double-underscore', 'default.brief', 'default.sbrief');
 
-  defineRule(
-      'overbar', 'default.default',
-      '[n] children/*[1]; [t] "overbar"',
-      'self::overscore',
-      '@role="latinletter" or @role="greekletter" or @role="otherletter"',
-      'children/*[2][@role="overaccent"]',   // redundancy
-      'children/*[2][text()="\u00AF" or text()="\uFFE3" or text()="\uFF3F"' +
-      ' or text()="\u005F" or text()="\u203E"]'
-  );
-  defineSpecialisedRule(
-      'overbar', 'default.default', 'default.brief',
-      '[n] children/*[1]; [t] "overBar"'
-  );
-  defineSpecialisedRule(
-      'overbar', 'default.brief', 'default.sbrief');
+  // defineRule(
+  //     'overbar', 'default.default',
+  //     '[n] children/*[1]; [t] "overbar"',
+  //     'self::overscore',
+  //     '@role="latinletter" or @role="greekletter" or @role="otherletter"',
+  //     'children/*[2][@role="overaccent"]',   // redundancy
+  //     'children/*[2][text()="\u00AF" or text()="\uFFE3" or text()="\uFF3F"' +
+  //     ' or text()="\u005F" or text()="\u203E"]'
+  // );
+  // defineSpecialisedRule(
+  //     'overbar', 'default.default', 'default.brief',
+  //     '[n] children/*[1]; [t] "overBar"'
+  // );
+  // defineSpecialisedRule(
+  //     'overbar', 'default.brief', 'default.sbrief');
 
-  defineRule(
-      'underbar', 'default.default',
-      '[n] children/*[1]; [t] "underbar"',
-      'self::underscore',
-      '@role="latinletter" or @role="greekletter" or @role="otherletter"',
-      'children/*[2][@role="underaccent"]',   // redundancy
-      'children/*[2][text()="\u00AF" or text()="\uFFE3" or text()="\uFF3F"' +
-      ' or text()="\u005F" or text()="\u203E"]'
-  );
-  defineSpecialisedRule(
-      'underbar', 'default.default', 'default.brief',
-      '[n] children/*[1]; [t] "underBar"'
-  );
-  defineSpecialisedRule(
-      'underbar', 'default.brief', 'default.sbrief');
+  // defineRule(
+  //     'underbar', 'default.default',
+  //     '[n] children/*[1]; [t] "underbar"',
+  //     'self::underscore',
+  //     '@role="latinletter" or @role="greekletter" or @role="otherletter"',
+  //     'children/*[2][@role="underaccent"]',   // redundancy
+  //     'children/*[2][text()="\u00AF" or text()="\uFFE3" or text()="\uFF3F"' +
+  //     ' or text()="\u005F" or text()="\u203E"]'
+  // );
+  // defineSpecialisedRule(
+  //     'underbar', 'default.default', 'default.brief',
+  //     '[n] children/*[1]; [t] "underBar"'
+  // );
+  // defineSpecialisedRule(
+  //     'underbar', 'default.brief', 'default.sbrief');
 
   // TODO: Large tilde vs short tilde.
+  //
   // defineRule(
   //     'overtilde', 'default.default',
   //     '[n] children/*[1]; [t] "overTilde"',
@@ -994,21 +995,21 @@ sre.NemethRules.initNemethRules_ = function() {
   // defineSpecialisedRule(
   //     'overtilde', 'default.brief', 'default.sbrief');
 
-  defineRule(
-      'undertilde', 'default.default',
-      '[n] children/*[1]; [t] "underTilde"',
-      'self::underscore',
-      '@role="latinletter" or @role="greekletter" or @role="otherletter"',
-      'children/*[2][@role="underaccent"]',   // redundancy
-      'children/*[2][text()="\u007E" or text()="\u02DC" or text()="\u223C"' +
-      ' or text()="\uFF5E"]'
-  );
-  defineSpecialisedRule(
-      'undertilde', 'default.default', 'default.brief',
-      '[n] children/*[1]; [t] "undertilde"'
-  );
-  defineSpecialisedRule(
-      'undertilde', 'default.brief', 'default.sbrief');
+  // defineRule(
+  //     'undertilde', 'default.default',
+  //     '[n] children/*[1]; [t] "underTilde"',
+  //     'self::underscore',
+  //     '@role="latinletter" or @role="greekletter" or @role="otherletter"',
+  //     'children/*[2][@role="underaccent"]',   // redundancy
+  //     'children/*[2][text()="\u007E" or text()="\u02DC" or text()="\u223C"' +
+  //     ' or text()="\uFF5E"]'
+  // );
+  // defineSpecialisedRule(
+  //     'undertilde', 'default.default', 'default.brief',
+  //     '[n] children/*[1]; [t] "undertilde"'
+  // );
+  // defineSpecialisedRule(
+  //     'undertilde', 'default.brief', 'default.sbrief');
 
   // Layout Elements
   defineRule(
@@ -1142,10 +1143,17 @@ sre.NemethRules.initNemethRules_ = function() {
       '[t] "StartEnclose"; [t] @role (grammar:localEnclose);' +
       ' [n] children/*[1]; [t] "EndEnclose"',
       'self::enclose');
-  defineRuleAlias(
-      'overbar', 'self::enclose', '@role="top"');
-  defineRuleAlias(
-      'underbar', 'self::enclose', '@role="bottom"');
+
+  // TODO: Possibly modify with (grammar: "modified")
+  defineRule(
+      'overbar', 'default.default',
+      '[t] "⠐"; [n] children/*[1]; [t] "⠣⠱⠻"',
+     'self::enclose', '@role="top"');
+  defineRule(
+      'underbar', 'default.default',
+      '[t] "⠐"; [n] children/*[1]; [t] "⠩⠱⠻"',
+      'self::enclose', '@role="bottom"');
+
   defineRule(
       'leftbar', 'default.default',
       '[t] "⠳"; [n] children/*[1]',

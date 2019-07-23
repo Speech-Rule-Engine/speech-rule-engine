@@ -772,7 +772,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠒⠲⠄"
+        "default": "⠄⠄⠄"
       }
     },
     "key": "2034"
