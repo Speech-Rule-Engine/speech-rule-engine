@@ -74,15 +74,22 @@ sre.AbstractSpeechGenerator.prototype.setRebuilt = function(rebuilt) {
 };
 
 
+/**
+ * @override
+ */
 sre.AbstractSpeechGenerator.prototype.setOptions = function(options) {
   this.options_ = options || {};
   this.modality = sre.EnrichMathml.addPrefix(this.options_.modality || 'speech');
 };
 
 
+/**
+ * @override
+ */
 sre.AbstractSpeechGenerator.prototype.getOptions = function() {
   return this.options_;
 };
+
 
 /**
  * @override
