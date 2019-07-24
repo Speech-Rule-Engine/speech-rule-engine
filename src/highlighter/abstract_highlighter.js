@@ -53,12 +53,6 @@ sre.AbstractHighlighter = function() {
    */
   this.mactionName = '';
 
-  /**
-   * @type {!Object.<string>}
-   * @private
-   */
-  this.state_ = {};
-
 };
 
 
@@ -73,8 +67,9 @@ sre.AbstractHighlighter.ATTR = 'sre-highlight';
 sre.AbstractHighlighter.prototype.highlight = function(nodes) {
   this.currentHighlights_.push(nodes.map(
       goog.bind(function(node) {
-        node.setAttribute(sre.AbstractHighlighter.ATTR, true);
-        return this.highlightNode(node);
+        let info = this.highlightNode(node);
+        this.setHighlighted(node);
+        return info;
       }, this)));
 };
 
@@ -109,8 +104,10 @@ sre.AbstractHighlighter.prototype.unhighlight = function() {
   if (!nodes) return;
   nodes.forEach(
       goog.bind(function(node) {
-        node.node.removeAttribute(sre.AbstractHighlighter.ATTR);
-        return this.unhighlightNode(node);
+        if (this.isHighlighted(node.node)) {
+          this.unhighlightNode(node);
+          this.unsetHighlighted(node.node);
+        }
       }, this));
 };
 
@@ -189,34 +186,34 @@ sre.AbstractHighlighter.prototype.isMactionNode = function(node) {
 
 
 /**
- * Removes a state for a particular node.
- * @param {string} id A node id.
+ * Check if a node is already highlighted.
+ * @param {Node} node The node.
+ * @return {boolean} True if already highlighted.
  */
-sre.AbstractHighlighter.prototype.resetState = function(id) {
-  delete(this.state_[id]);
+sre.AbstractHighlighter.prototype.isHighlighted = function(node) {
+  return node.hasAttribute(sre.AbstractHighlighter.ATTR);
 };
 
 
 /**
- * Sets a state value for a particular node.
- * @param {string} id A node id.
- * @param {string} value The state value.
+ * Sets the indicator attributge that node is already highlighted.
+ * @param {Node} node The node.
  */
-sre.AbstractHighlighter.prototype.setState = function(id, value) {
-  this.state_[id] = value;
+sre.AbstractHighlighter.prototype.setHighlighted = function(node) {
+  node.setAttribute(sre.AbstractHighlighter.ATTR, true);
 };
 
 
 /**
- * Returns the state a particular node if it exists.
- * @param {string} id The node id.
- * @return {string} The state value.
+ * Removes the indicator attributge that node is already highlighted.
+ * @param {Node} node The node.
  */
-sre.AbstractHighlighter.prototype.getState = function(id) {
-  return this.state_[id];
+sre.AbstractHighlighter.prototype.unsetHighlighted = function(node) {
+  node.removeAttribute(sre.AbstractHighlighter.ATTR);
 };
 
 
+// New colorization methods for v3.
 sre.AbstractHighlighter.prototype.colorizeAll = function(node) {
   var allNodes = sre.XpathUtil.evalXPath(
     './/*[@' + sre.EnrichMathml.Attribute.ID + ']', node);

@@ -174,6 +174,11 @@ sre.SpeechGeneratorUtil.connectMactions = function(node, mml, stree) {
     // Otherwise, we take the existing child, which is actually the collapsed
     // maction that needs to be linked into the node.
     cspan = span.childNodes[0];
+    // If this node was already a highlighting rect we ignore it. This means
+    // some other walker has introduced it already (e.g. in MJ3).
+    if (cspan.getAttribute('sre-highlighter-added')) {
+      continue;
+    }
     // Set parent pointer if necessary.
     var pid = lchild.getAttribute(sre.EnrichMathml.Attribute.PARENT);
     if (pid) {
