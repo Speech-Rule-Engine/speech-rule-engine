@@ -60,9 +60,12 @@ sre.Walker.prototype.speech = function() {};
 
 /**
  * The node the walker currently sits on.
+ * @param {boolean=} opt_update Flag indicating if the state should be
+ *     updated. This can be useful if the underlying DOM elements might have
+ *     changed.
  * @return {!sre.Focus} The current focus.
  */
-sre.Walker.prototype.getFocus = function() {};
+sre.Walker.prototype.getFocus = function(opt_update) {};
 
 
 /**
@@ -112,3 +115,38 @@ sre.Walker.move = {
  * @typedef {{focus: !sre.Focus, levels: !sre.Levels, undo: boolean}}
  */
 sre.Walker.Cursor;
+
+
+/**
+ * @type {!Object.<string>}
+ * @private
+ */
+sre.Walker.STATE_ = {};
+
+/**
+ * Removes a state for a particular node.
+ * @param {string} id A node id.
+ */
+sre.Walker.resetState = function(id) {
+  delete(sre.Walker.STATE_[id]);
+};
+
+
+/**
+ * Sets a state value for a particular node.
+ * @param {string} id A node id.
+ * @param {string} value The state value.
+ */
+sre.Walker.setState = function(id, value) {
+  sre.Walker.STATE_[id] = value;
+};
+
+
+/**
+ * Returns the state a particular node if it exists.
+ * @param {string} id The node id.
+ * @return {string} The state value.
+ */
+sre.Walker.getState = function(id) {
+  return sre.Walker.STATE_[id];
+};

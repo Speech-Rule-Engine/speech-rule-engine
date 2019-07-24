@@ -274,10 +274,16 @@ sre.SemanticNode.prototype.toJson = function() {
 /**
  * Updates the content of the node thereby possibly changing type and role.
  * @param {string} content The new content string.
+ * @param {boolean=} opt_text Text indicator. If true non-breaking spaces are
+ *     retained.
  */
-sre.SemanticNode.prototype.updateContent = function(content) {
+sre.SemanticNode.prototype.updateContent = function(content, opt_text = false) {
   // Remove superfluous whitespace only if it is not the only content!
-  var newContent = content.trim();
+  // But without removing non-breaking spaces if we have a text.
+  var newContent = opt_text ?
+      content.replace(/^[ \f\n\r\t\v​]*/, '').replace(/[ \f\n\r\t\v​]*$/, '') :
+      content.trim();
+  // TODO (simons): If content contains a space, then assume type to be text.
   content = (content && !newContent) ? content : newContent;
   if (this.textContent == content) {
     return;

@@ -33,7 +33,7 @@ sre.Variables = function() {};
  * @const
  * @type {string}
  */
-sre.Variables.VERSION = '2.4.0';
+sre.Variables.VERSION = '3.0.0-beta.4';
 
 
 /**
@@ -41,7 +41,7 @@ sre.Variables.VERSION = '2.4.0';
  * @const
  * @type {Array.<string>}
  */
-sre.Variables.LOCALES = ['en', 'es', 'fr'];
+sre.Variables.LOCALES = ['en', 'es', 'fr', 'nemeth'];
 
 
 /**
@@ -49,7 +49,7 @@ sre.Variables.LOCALES = ['en', 'es', 'fr'];
  * @const
  * @type {string}
  */
-sre.Variables.mathjaxVersion = '2.7.5';
+sre.Variables.mathjaxVersion = '3.0.0-beta.4';
 
 
 /**

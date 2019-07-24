@@ -122,19 +122,25 @@ sre.DynamicProperties.prototype.toString = function() {
 };
 
 
+/**
+ * @typedef {Object.<sre.DynamicCstr.Axis, string>}
+ */
+sre.DynamicCstr.Map;
+
+
 
 /**
  * Dynamic constraints are a means to specialize rules that can be changed
  * dynamically by the user, for example by choosing different styles, etc.
  * @constructor
- * @param {!Object.<sre.DynamicCstr.Axis, string>} cstr The constraint mapping.
+ * @param {!sre.DynamicCstr.Map} cstr The constraint mapping.
  * @param {sre.DynamicCstr.Order=} opt_order A parse order of the keys.
  * @extends {sre.DynamicProperties}
  */
 sre.DynamicCstr = function(cstr, opt_order) {
 
   /**
-   * @type {!Object.<sre.DynamicCstr.Axis, string>}
+   * @type {!sre.DynamicCstr.Map}
    * @private
    */
   this.components_ = cstr;
@@ -152,7 +158,7 @@ goog.inherits(sre.DynamicCstr, sre.DynamicProperties);
 
 
 /**
- * @return {!Object.<sre.DynamicCstr.Axis, string>} The components of the
+ * @return {!sre.DynamicCstr.Map} The components of the
  *     constraint.
  */
 sre.DynamicCstr.prototype.getComponents = function() {
@@ -331,7 +337,7 @@ sre.DynamicCstr.DEFAULT_VALUE = 'default';
 
 
 /**
- * @type {Object.<sre.DynamicCstr.Axis, string>}
+ * @type {sre.DynamicCstr.Map}
  */
 sre.DynamicCstr.DEFAULT_VALUES = {};
 sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE] = 'en';

@@ -9,7 +9,8 @@
       "mathspeak": {
         "default": "left-parenthesis",
         "brief": "left-p'ren",
-        "sbrief": "L p'ren"
+        "sbrief": "L p'ren",
+        "nemeth": "⠷"
       },
       "clearspeak": {
         "default": "open paren"
@@ -27,7 +28,8 @@
       "mathspeak": {
         "default": "right-parenthesis",
         "brief": "right-p'ren",
-        "sbrief": "R p'ren"
+        "sbrief": "R p'ren",
+        "nemeth": "⠾"
       },
       "clearspeak": {
         "default": "close paren"
@@ -45,7 +47,8 @@
       "mathspeak": {
         "default": "left-bracket",
         "brief": "left-brack",
-        "sbrief": "L brack"
+        "sbrief": "L brack",
+        "nemeth": "⠈⠷"
       },
       "clearspeak": {
         "default": "open bracket"
@@ -63,7 +66,8 @@
       "mathspeak": {
         "default": "right-bracket",
         "brief": "right-brack",
-        "sbrief": "R brack"
+        "sbrief": "R brack",
+        "nemeth": "⠈⠾"
       },
       "clearspeak": {
         "default": "close bracket"
@@ -80,7 +84,8 @@
       },
       "mathspeak": {
         "default": "left-brace",
-        "sbrief": "L brace"
+        "sbrief": "L brace",
+        "nemeth": "⠨⠷"
       },
       "clearspeak": {
         "default": "open brace"
@@ -97,7 +102,8 @@
       },
       "mathspeak": {
         "default": "right-brace",
-        "sbrief": "R brace"
+        "sbrief": "R brace",
+        "nemeth": "⠨⠾"
       },
       "clearspeak": {
         "default": "close brace"

@@ -24,6 +24,7 @@ goog.require('sre.Engine');
 goog.require('sre.Locale.en');
 goog.require('sre.Locale.es');
 goog.require('sre.Locale.fr');
+goog.require('sre.Locale.nemeth');
 goog.require('sre.Messages');
 
 

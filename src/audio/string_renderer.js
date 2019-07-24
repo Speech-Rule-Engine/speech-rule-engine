@@ -47,7 +47,10 @@ sre.StringRenderer.prototype.markup = function(descrs) {
   for (var i = 0; i < clean.length - 1; i++) {
     var descr = clean[i];
     var join = descr.personality[sre.Engine.personalityProps.JOIN];
-    join = (typeof join === 'undefined') ? this.getSeparator() : join;
+    // TODO: Do this via modalities.
+    var sep = sre.Engine.getInstance().locale === 'nemeth' ?
+        '' : this.getSeparator();
+    join = (typeof join === 'undefined') ? sep : join;
     str += descr.descriptionString() + join;
   }
   str += clean[i].descriptionString();

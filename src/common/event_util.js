@@ -41,6 +41,9 @@ sre.EventUtil.KeyCode = {
   RIGHT: 39,
   DOWN: 40,
   TAB: 9,
+  LESS: 188,
+  GREATER: 190,
+  DASH: 189,
   // Numeric
   0: 48,
   1: 49,

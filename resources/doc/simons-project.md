@@ -3,6 +3,5 @@ Improve:
 
 (p-1)!^n
 
-
 Try this:
 https://math.meta.stackexchange.com/questions/28253/how-to-set-name-above-a-part-of-a-matrix

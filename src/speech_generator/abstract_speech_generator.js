@@ -35,11 +35,26 @@ goog.require('sre.SpeechGeneratorUtil');
  */
 sre.AbstractSpeechGenerator = function() {
 
+
   /**
    * @type {sre.RebuildStree}
    * @private
    */
   this.rebuilt_ = null;
+
+
+  /**
+   * @type {Object.<string>}
+   * @private
+   */
+  this.options_ = {};
+
+
+  /**
+   * @type {sre.EnrichMathml.Attribute}
+   */
+  this.modality = sre.EnrichMathml.addPrefix('speech');
+
 };
 
 
@@ -56,6 +71,23 @@ sre.AbstractSpeechGenerator.prototype.getRebuilt = function() {
  */
 sre.AbstractSpeechGenerator.prototype.setRebuilt = function(rebuilt) {
   this.rebuilt_ = rebuilt;
+};
+
+
+/**
+ * @override
+ */
+sre.AbstractSpeechGenerator.prototype.setOptions = function(options) {
+  this.options_ = options || {};
+  this.modality = sre.EnrichMathml.addPrefix(this.options_.modality || 'speech');
+};
+
+
+/**
+ * @override
+ */
+sre.AbstractSpeechGenerator.prototype.getOptions = function() {
+  return this.options_;
 };
 
 
@@ -87,6 +119,7 @@ sre.AbstractSpeechGenerator.prototype.generateSpeech = function(node, xml) {
   if (!this.rebuilt_) {
     this.rebuilt_ = new sre.RebuildStree(xml);
   }
+  sre.System.getInstance().setupEngine(this.options_);
   var descrs = sre.SpeechGeneratorUtil.computeSpeech(this.getRebuilt().xml);
   return sre.AuralRendering.getInstance().markup(descrs);
 };
