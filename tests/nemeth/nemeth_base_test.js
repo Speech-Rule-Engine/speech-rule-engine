@@ -55,7 +55,8 @@ sre.NemethBaseTest = function() {
    */
   this.modality = 'braille';
 
-  this.setActive('Nemeth Base');
+  this.setActive('NemethBaseTest');
+  this.actual = true;
 };
 goog.inherits(sre.NemethBaseTest, sre.AbstractRuleTest);
 

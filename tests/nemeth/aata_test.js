@@ -55,7 +55,8 @@ sre.AataTest = function() {
    */
   this.modality = 'braille';
 
-  this.setActive('Aata Nemeth');
+  this.setActive('AataNemeth');
+  this.actual = true;
 };
 goog.inherits(sre.AataTest, sre.AbstractRuleTest);
 
