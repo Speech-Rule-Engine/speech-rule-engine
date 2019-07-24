@@ -283,7 +283,7 @@ Tools.translateSymbols = function(symbols, dest, decode) {
     let result8 = [];
     let resultUn = [];
     for (let element of json) {
-      let key = decode ? element.key : sre.SemanticUtil.numberToUnicode(parseInt(element.key, 16));
+      let key = decode ? element.key : Tools.numberToUnicode(parseInt(element.key, 16));
       let nemeth = Tools.translateCharacter(key);
       element.mappings = {default: {default: nemeth}};
       if (Tools.stringIs6Cell(nemeth)) {
@@ -416,3 +416,42 @@ Tools.transformBrailleFiles = function() {
 // 15 ?? too much offset!
 // 17 ?? functions need to be gotten extra
 // 18  4 missing in the middle
+
+
+Tools.numberToUnicode = function(number) {
+  if (number < 0x10000) {
+    return String.fromCharCode(number);
+  }
+  var hi = (number - 0x10000) / 0x0400 + 0xD800;
+  var lo = (number - 0x10000) % 0x0400 + 0xDC00;
+  return String.fromCharCode(hi, lo);
+};
+
+
+Tools.unicodeToNumber = function(unicode) {
+  if (!unicode || unicode.length > 2) {
+    return null;
+  }
+  // Treating surrogate pairs.
+  if (unicode.length == 2) {
+    var hi = unicode.charCodeAt(0);
+    var low = unicode.charCodeAt(1);
+    if (0xD800 <= hi && hi <= 0xDBFF && !isNaN(low)) {
+      return ((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000;
+    }
+    return null;
+  }
+  return unicode.charCodeAt(0);
+};
+
+
+Tools.hexcodeString = function(str) {
+  let result = '';
+  for (let i = 0; i < str.length; i++) {
+    let num = Tools.unicodeToNumber(str[i]);
+    if (num !== null) {
+      result += '\\u' + num.toString(16);
+    }
+  }
+  return result;
+};

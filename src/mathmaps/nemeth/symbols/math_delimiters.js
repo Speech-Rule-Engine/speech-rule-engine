@@ -78,7 +78,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠒⠴⠦⠄"
+        "default": "⠈⠘⠷"
       }
     },
     "key": "2308"
@@ -87,7 +87,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠒⠴⠔⠄"
+        "default": "⠈⠘⠾"
       }
     },
     "key": "2309"
@@ -96,7 +96,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠒⠴⠁⠄"
+        "default": "⠈⠰⠷"
       }
     },
     "key": "230A"
@@ -105,7 +105,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠒⠴⠃⠄"
+        "default": "⠈⠰⠾"
       }
     },
     "key": "230B"
@@ -150,7 +150,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠒⠂⠉⠄"
+        "default": "⠈⠘⠷"
       }
     },
     "key": "231C"
@@ -159,7 +159,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠒⠂⠙⠄"
+        "default": "⠈⠘⠾"
       }
     },
     "key": "231D"
@@ -168,7 +168,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠒⠂⠑⠄"
+        "default": "⠈⠰⠷"
       }
     },
     "key": "231E"
@@ -177,7 +177,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠒⠂⠋⠄"
+        "default": "⠈⠰⠾"
       }
     },
     "key": "231F"
@@ -204,7 +204,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠒⠆⠔⠄"
+        "default": "⠨⠨⠷"
       }
     },
     "key": "2329"
@@ -213,7 +213,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠒⠆⠁⠄"
+        "default": "⠨⠨⠾"
       }
     },
     "key": "232A"
@@ -699,7 +699,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠶⠑⠖⠄"
+        "default": "⠈⠸⠷"
       }
     },
     "key": "27E6"
@@ -708,7 +708,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠶⠑⠶⠄"
+        "default": "⠈⠸⠾"
       }
     },
     "key": "27E7"
@@ -717,7 +717,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠶⠑⠦⠄"
+        "default": "⠨⠨⠷"
       }
     },
     "key": "27E8"
@@ -726,7 +726,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠶⠑⠔⠄"
+        "default": "⠨⠨⠾"
       }
     },
     "key": "27E9"
@@ -735,7 +735,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠶⠑⠁⠄"
+        "default": "⠨⠨⠨⠷"
       }
     },
     "key": "27EA"
@@ -744,7 +744,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠶⠑⠃⠄"
+        "default": "⠨⠨⠨⠾"
       }
     },
     "key": "27EB"
@@ -789,7 +789,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠔⠦⠒⠄"
+        "default": "⠨⠸⠷"
       }
     },
     "key": "2983"
@@ -798,7 +798,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠔⠦⠲⠄"
+        "default": "⠨⠸⠾"
       }
     },
     "key": "2984"
@@ -1113,7 +1113,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠒⠴⠴⠦⠄"
+        "default": "⠨⠨⠷"
       }
     },
     "key": "3008"
@@ -1122,7 +1122,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠒⠴⠴⠔⠄"
+        "default": "⠨⠨⠾"
       }
     },
     "key": "3009"
@@ -1131,7 +1131,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠒⠴⠴⠁⠄"
+        "default": "⠨⠨⠨⠷"
       }
     },
     "key": "300A"
@@ -1140,7 +1140,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠒⠴⠴⠃⠄"
+        "default": "⠨⠨⠨⠾"
       }
     },
     "key": "300B"
@@ -1149,7 +1149,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠒⠴⠴⠉⠄"
+        "default": "⠈⠘⠷"
       }
     },
     "key": "300C"
@@ -1158,7 +1158,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠒⠴⠴⠙⠄"
+        "default": "⠈⠘⠾"
       }
     },
     "key": "300D"

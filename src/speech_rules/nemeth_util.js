@@ -116,7 +116,6 @@ sre.NemethUtil.closingRadical = function(node) {
  * @return {string} The middle string.
  */
 sre.NemethUtil.indexRadical = function(node) {
-  console.log('index radical');
   return sre.NemethUtil.nestedRadical(node, msg.MS.ROOTINDEX);
 };
 
