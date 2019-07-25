@@ -470,14 +470,14 @@ sre.NemethRules.initNemethRules_ = function() {
           ' [t] CSFoverFracSbrief; [n] children/*[2]; [t] CSFcloseFracSbrief',
       'self::fraction');
 
-  defineRule(
-      'vulgar-fraction', 'default.default',
-      '[t] CSFvulgarFraction',
-      'self::fraction', '@role="vulgar"', 'CQFvulgarFractionSmall');
-  defineSpecialisedRule(
-      'vulgar-fraction', 'default.default', 'default.brief');
-  defineSpecialisedRule(
-      'vulgar-fraction', 'default.default', 'default.sbrief');
+  // defineRule(
+  //     'vulgar-fraction', 'default.default',
+  //     '[t] CSFvulgarFraction',
+  //     'self::fraction', '@role="vulgar"', 'CQFvulgarFractionSmall');
+  // defineSpecialisedRule(
+  //     'vulgar-fraction', 'default.default', 'default.brief');
+  // defineSpecialisedRule(
+  //     'vulgar-fraction', 'default.default', 'default.sbrief');
 
   defineRule(
       'continued-fraction-outer', 'default.default',
