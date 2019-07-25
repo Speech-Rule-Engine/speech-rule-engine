@@ -44,15 +44,26 @@ goog.inherits(sre.NemethRules, sre.MathStore);
 goog.addSingletonGetter(sre.NemethRules);
 
 sre.NemethRules.prototype.evaluateDefault = function(node) {
-  var str = node.textContent;
+  console.log('HERE??');
+  var rest = node.textContent.slice(0);
   var descs = new Array();
-  if (str.match(/^\s+$/)) {
+  if (rest.match(/^\s+$/)) {
     // Nothing but whitespace: Ignore.
     return descs;
   }
-  for (var i = 0; i < str.length; i++) {
-    descs.push(sre.AuditoryDescription.create(
-      {text: str[i]}, {adjust: true, translate: true}));
+  while (rest) {
+    var chr = rest[0];
+    var code = chr.charCodeAt(0);
+    if (0xD800 <= code && code <= 0xDBFF &&
+        rest.length > 1 && !isNaN(rest.charCodeAt(1))) {
+      descs.push(sre.AuditoryDescription.create(
+        {text: rest.slice(0, 2)}, {adjust: true, translate: true}));
+      rest = rest.substring(2);
+    } else {
+      descs.push(sre.AuditoryDescription.create(
+        {text: chr}, {adjust: true, translate: true}));
+      rest = rest.substring(1);
+    }
   }
   return descs;
 };
@@ -309,11 +320,11 @@ sre.NemethRules.initNemethRules_ = function() {
       'number-baseline-font', 'default.brief', 'default.sbrief');
 
   // identifier
-  defineRule(
-      'identifier', 'default.default', '[m] CQFspaceoutIdentifier',
-      'self::identifier', 'string-length(text())>1', '@role!="unit"',
-      '@role!="protected"',
-      'not(@font) or @font="normal" or contains(@grammar, "ignoreFont")');
+  // defineRule(
+  //     'identifier', 'default.default', '[m] CQFspaceoutIdentifier',
+  //     'self::identifier', 'string-length(text())>1', '@role!="unit"',
+  //     '@role!="protected"',
+  //     'not(@font) or @font="normal" or contains(@grammar, "ignoreFont")');
 
   defineRule(
       'identifier', 'default.default', '[n] text()',
