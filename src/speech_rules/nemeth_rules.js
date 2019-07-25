@@ -224,6 +224,7 @@ sre.NemethRules.initNemethRules_ = function() {
       'omit-font', 'default.default',
       '[n] . (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1', '@font',
+      '@role!="greekletter"',
       'not(contains(@grammar, "ignoreFont"))', '@font="italic"');
 
   // defineRule(
