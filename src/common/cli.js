@@ -86,13 +86,39 @@ sre.Cli.prototype.processor = function(v, processor) {
  */
 sre.Cli.prototype.enumerate = function() {
   this.system.setupEngine(this.setup);
-  var values = sre.Engine.getInstance().getAxisValues();
-  var output = '';
-  for (var axis in values) {
-    output += axis.charAt(0).toUpperCase() + axis.slice(1) + ' options: ' +
-        values[axis].slice().sort().join(', ') + '\n';
+  // var values = sre.Engine.getInstance().getAxisValues();
+  // var output = '';
+  var dynamic = sre.SpeechRuleEngine.getInstance().enumerate();
+  var table = [sre.DynamicCstr.DEFAULT_ORDER.slice(0, -1)];  // No topics yet.
+  for (var ax1 in dynamic) {
+    var clear1 = true;
+    var dyna1 = dynamic[ax1];
+    for (var ax2 in dyna1) {
+      var clear2 = true;
+      var dyna2 = dyna1[ax2];
+      for (var ax3 in dyna2) {
+        // Here we have to add default in case it is missing from
+        // non-clearspeak elements.
+        //
+        // Sort out Clearspeak properly.
+        let styles = Object.keys(dyna2[ax3]).sort();
+        if (ax3 === 'clearspeak') {
+          console.log(sre.ClearspeakPreferences.PREFERENCES);
+          table.push([clear1 ? ax1 : '', clear2 ? ax2 : '', ax3, styles.join(', ')]);
+        } else {
+          table.push([clear1 ? ax1 : '', clear2 ? ax2 : '', ax3, styles.join(', ')]);
+        }
+        clear1 = false;
+        clear2 = false;
+      }
+    }
   }
-  console.info('\n' + output);
+  console.info(table.map(x => x.join('\t')).join('\n'));
+  // for (var axis of sre.DynamicCstr.DEFAULT_ORDER) {
+  //   output += axis.charAt(0).toUpperCase() + axis.slice(1) + ' options: ' +
+  //       values[axis].slice().sort().join(', ') + '\n';
+  // }
+  // console.info('\n' + output);
 };
 
 
@@ -228,7 +254,9 @@ sre.Cli.prototype.commandLine = function() {
              set, 'pprint').
       option('-v, --verbose', 'Verbose mode.').
       option('-l, --log [name]', 'Log file [name].').
-      on('--help', goog.bind(this.enumerate, this)).
+    option('--options', 'List engine setup options.').
+    on('option:options', goog.bind(function() {this.enumerate(); sre.SystemExternal.process.exit(0);}, this)).
+  // on('--help', goog.bind(this.enumerate, this)).
       parse(sre.SystemExternal.process.argv);
   this.system.setupEngine(this.setup);
   if (commander.verbose) {
