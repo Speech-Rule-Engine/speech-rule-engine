@@ -44,7 +44,6 @@ goog.inherits(sre.NemethRules, sre.MathStore);
 goog.addSingletonGetter(sre.NemethRules);
 
 sre.NemethRules.prototype.evaluateDefault = function(node) {
-  console.log('HERE??');
   var rest = node.textContent.slice(0);
   var descs = new Array();
   if (rest.match(/^\s+$/)) {
