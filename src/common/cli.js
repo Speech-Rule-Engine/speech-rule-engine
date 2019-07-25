@@ -95,10 +95,22 @@ sre.Cli.prototype.enumerate = function() {
   var compStr = function(str, length) {
     return str + (new Array(length - str.length + 1)).join(' ');
   };
-  // var values = sre.Engine.getInstance().getAxisValues();
-  // var output = '';
+  var csStyles = function(axis, styles) {
+    var allSty = sre.ClearspeakPreferences.PREFERENCES.getProperties()[axis];
+    console.log(allSty);
+    var result = [axis + '_Auto'];
+    if (!allSty) {
+      return result[0];
+    }
+    for (var sty of allSty) {
+      if (styles.indexOf(axis + '_' + sty) !== -1) {
+        result.push(axis + '_' + sty);
+      }
+    }
+    return result.join(', ');
+  };
   var dynamic = sre.SpeechRuleEngine.getInstance().enumerate();
-  var table = [sre.DynamicCstr.DEFAULT_ORDER.slice(0, -1)];  // No topics yet.
+  var table = [];
   var length1 = maxLength(dynamic, 0);
   for (var ax1 in dynamic) {
     var clear1 = true;
@@ -115,10 +127,15 @@ sre.Cli.prototype.enumerate = function() {
         // Sort out Clearspeak properly.
         let styles = Object.keys(dyna2[ax3]).sort();
         if (ax3 === 'clearspeak') {
-          console.log(sre.ClearspeakPreferences.PREFERENCES);
-          table.push([compStr(clear1 ? ax1 : '', length1),
-                      compStr(clear2 ? ax2 : '', length2),
-                      compStr(ax3, length3), styles.join(', ')]);
+          var clear3 = true;
+          for (var ax4 in sre.ClearspeakPreferences.PREFERENCES.getProperties()) {
+            console.log(ax4);
+            table.push([compStr(clear1 ? ax1 : '', length1),
+                        compStr(clear2 ? ax2 : '', length2),
+                        compStr(clear3 ? ax3 : '', length3),
+                        csStyles(ax4, styles)]);
+            clear3 = false;
+          }
         } else {
           table.push([compStr(clear1 ? ax1 : '', length1),
                       compStr(clear2 ? ax2 : '', length2),
@@ -129,12 +146,11 @@ sre.Cli.prototype.enumerate = function() {
       }
     }
   }
+  table.unshift(sre.DynamicCstr.DEFAULT_ORDER.slice(0, -1).
+                map(function(x) {
+                  compStr(x, length1)
+                }));  // No topics yet.
   console.info(table.map(x => x.join('')).join('\n'));
-  // for (var axis of sre.DynamicCstr.DEFAULT_ORDER) {
-  //   output += axis.charAt(0).toUpperCase() + axis.slice(1) + ' options: ' +
-  //       values[axis].slice().sort().join(', ') + '\n';
-  // }
-  // console.info('\n' + output);
 };
 
 
