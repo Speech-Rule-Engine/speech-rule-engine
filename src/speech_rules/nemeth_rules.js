@@ -427,7 +427,7 @@ sre.NemethRules.initNemethRules_ = function() {
 
   // Special symbols
   defineRule(
-      'factorial', 'default.default', '[t] "⠯"', 'self::punctuation',
+      'factorial', 'default.default', '[t] "⠖"', 'self::punctuation',
       'text()="!"', 'name(preceding-sibling::*[1])!="text"');
   // defineRule(
   //     'minus', 'default.default', '[t] "minus"',
@@ -1216,6 +1216,7 @@ sre.NemethRules.initNemethRules_ = function() {
       'end-punct', 'default.default',
       '[m] children/*',
       'self::punctuated', '@role="endpunct"');
+  // TODO: use punctuation indicator: "⠸"
 
   defineRule(
       'start-punct', 'default.default',
