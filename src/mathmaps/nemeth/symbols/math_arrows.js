@@ -402,7 +402,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠫⠒⠒⠕⠫⠪⠒⠒"
+        "default": "⠀⠫⠒⠒⠕⠫⠪⠒⠒⠀"
       }
     },
     "key": "21C4"
@@ -411,7 +411,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠫⠣⠒⠒⠕⠐⠫⠩⠒⠒⠕"
+        "default": "⠀⠫⠣⠒⠒⠕⠐⠫⠩⠒⠒⠕⠀"
       }
     },
     "key": "21C5"
@@ -420,7 +420,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠫⠪⠒⠒⠫⠒⠒⠕"
+        "default": "⠀⠫⠪⠒⠒⠫⠒⠒⠕⠀"
       }
     },
     "key": "21C6"
@@ -429,7 +429,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠫⠚⠒⠒⠫⠚⠒⠒"
+        "default": "⠀⠫⠚⠒⠒⠫⠚⠒⠒⠀"
       }
     },
     "key": "21C7"
@@ -438,7 +438,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠫⠣⠒⠒⠕⠐⠫⠣⠒⠒⠕"
+        "default": "⠀⠫⠣⠒⠒⠕⠐⠫⠣⠒⠒⠕⠀"
       }
     },
     "key": "21C8"
@@ -447,7 +447,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠫⠒⠒⠕⠫⠒⠒⠕"
+        "default": "⠀⠫⠒⠒⠕⠫⠒⠒⠕⠀"
       }
     },
     "key": "21C9"
@@ -456,7 +456,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠫⠩⠒⠒⠕⠐⠫⠩⠒⠒⠕"
+        "default": "⠀⠫⠩⠒⠒⠕⠐⠫⠩⠒⠒⠕⠀"
       }
     },
     "key": "21CA"

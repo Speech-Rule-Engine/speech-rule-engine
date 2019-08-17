@@ -78,7 +78,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠫⠈⠪⠒⠒⠫⠒⠒⠈⠕"
+        "default": "⠀⠫⠈⠪⠒⠒⠫⠒⠒⠈⠕⠀"
       }
     },
     "key": "21CB"
@@ -87,7 +87,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠫⠒⠒⠈⠕⠫⠈⠪⠒⠒"
+        "default": "⠀⠫⠒⠒⠈⠕⠫⠈⠪⠒⠒⠀"
       }
     },
     "key": "21CC"
