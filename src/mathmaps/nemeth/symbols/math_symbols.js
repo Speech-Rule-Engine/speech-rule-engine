@@ -124,7 +124,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "⠒
+        "default": "⠒"
       }
     },
     "key": "003A"

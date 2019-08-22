@@ -13,3 +13,9 @@ http://www.tsbvi.edu/nemeth-code
 Quite good:
 
 http://www.gh-mathspeak.com/examples/NemethBook/
+
+
+///
+** Spaces after function applications (cos, sin), punctuation in lists etc., denomination, ellipses.
+** Around Arrows
+** Endpunctuation with punctuation indicator.
