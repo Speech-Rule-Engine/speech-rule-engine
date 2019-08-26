@@ -105,62 +105,6 @@ sre.ClearspeakPreferences.PREFERENCES = new sre.DynamicProperties({
 
 
 /**
- * Cache of Mapping locales to clearspeak preferences.
- * @type {Object.<sre.DynamicProperties>}
- */
-sre.ClearspeakPreferences.LOCALE_PREFERENCES = null;
-
-
-/**
- * Computes the clearspeak preferences per locale and caches them.
- * @param {Object=} opt_dynamic Optionally a tree structure with the dynamic
- *     constraints.
- * @return {Object.<sre.DynamicProperties>} Mapping of locale to preferences.
- */
-sre.ClearspeakPreferences.getLocalePreferences = function(opt_dynamic) {
-  if (!sre.ClearspeakPreferences.LOCALE_PREFERENCES) {
-    var dynamic = opt_dynamic ||
-        sre.MathCompoundStore.getInstance().enumerate(
-          sre.SpeechRuleEngine.getInstance().enumerate());
-    sre.ClearspeakPreferences.LOCALE_PREFERENCES =
-      sre.ClearspeakPreferences.getLocalePreferences_(dynamic);
-  }
-  return sre.ClearspeakPreferences.LOCALE_PREFERENCES;
-};
-
-
-/**
- * Computes the clearspeak preferences per locale and caches them.
- * @param {Object} dynamic Optionally a tree structure with the dynamic
- *     constraints.
- * @return {Object.<sre.DynamicProperties>} Mapping of locale to preferences.
- */
-sre.ClearspeakPreferences.getLocalePreferences_ = function(dynamic) {
-  var result = {};
-  for (var locale in dynamic) {
-    if (!dynamic[locale]['speech'] || !dynamic[locale]['speech']['clearspeak']) {
-      continue;
-    }
-    var locPrefs = Object.keys(dynamic[locale]['speech']['clearspeak']);
-    var prefs = result[locale] = {};
-    for (var axis in sre.ClearspeakPreferences.PREFERENCES.getProperties()) {
-      var allSty = sre.ClearspeakPreferences.PREFERENCES.getProperties()[axis];
-      var values = [axis + '_Auto'];
-      if (allSty) {
-        for (var sty of allSty) {
-          if (locPrefs.indexOf(axis + '_' + sty) !== -1) {
-            values.push(axis + '_' + sty);
-          }
-        }
-      }
-      prefs[axis] = values;
-    }
-  }
-  return result;
-};
-
-
-/**
  * Exports the Clearspeak comparator with default settings.
  * @return {sre.ClearspeakPreferences.Comparator} The clearspeak comparator.
  */
@@ -318,4 +262,89 @@ sre.ClearspeakPreferences.Parser.prototype.toPreference = function(preferences) 
     str.push(keys[i] + '_' + preferences[keys[i]]);
   }
   return str.length ? str.join(':') : sre.DynamicCstr.DEFAULT_VALUE;
+};
+
+
+// The following is for ease of preference selection per locale.
+/**
+ * Cache of Mapping locales to clearspeak preferences.
+ * @type {Object.<sre.DynamicProperties>}
+ */
+sre.ClearspeakPreferences.LOCALE_PREFERENCES = null;
+
+
+/**
+ * Computes the clearspeak preferences per locale and caches them.
+ * @param {Object=} opt_dynamic Optionally a tree structure with the dynamic
+ *     constraints.
+ * @return {Object.<sre.DynamicProperties>} Mapping of locale to preferences.
+ */
+sre.ClearspeakPreferences.getLocalePreferences = function(opt_dynamic) {
+  if (!sre.ClearspeakPreferences.LOCALE_PREFERENCES) {
+    var dynamic = opt_dynamic ||
+        sre.MathCompoundStore.getInstance().enumerate(
+          sre.SpeechRuleEngine.getInstance().enumerate());
+    sre.ClearspeakPreferences.LOCALE_PREFERENCES =
+      sre.ClearspeakPreferences.getLocalePreferences_(dynamic);
+  }
+  return sre.ClearspeakPreferences.LOCALE_PREFERENCES;
+};
+
+
+/**
+ * Computes the clearspeak preferences per locale and caches them.
+ * @param {Object} dynamic Optionally a tree structure with the dynamic
+ *     constraints.
+ * @return {Object.<sre.DynamicProperties>} Mapping of locale to preferences.
+ */
+sre.ClearspeakPreferences.getLocalePreferences_ = function(dynamic) {
+  var result = {};
+  for (var locale in dynamic) {
+    if (!dynamic[locale]['speech'] || !dynamic[locale]['speech']['clearspeak']) {
+      continue;
+    }
+    var locPrefs = Object.keys(dynamic[locale]['speech']['clearspeak']);
+    var prefs = result[locale] = {};
+    for (var axis in sre.ClearspeakPreferences.PREFERENCES.getProperties()) {
+      var allSty = sre.ClearspeakPreferences.PREFERENCES.getProperties()[axis];
+      var values = [axis + '_Auto'];
+      if (allSty) {
+        for (var sty of allSty) {
+          if (locPrefs.indexOf(axis + '_' + sty) !== -1) {
+            values.push(axis + '_' + sty);
+          }
+        }
+      }
+      prefs[axis] = values;
+    }
+  }
+  return result;
+};
+
+
+sre.ClearspeakPreferences.SEMANTIC_MAPPING = {
+  AbsoluteValue: [sre.SemanticAttr.Type.FENCED, sre.SemanticAttr.Role.NEUTRAL],
+  Bar: [sre.SemanticAttr.Type.OVERSCORE, sre.SemanticAttr.Role.VBAR], // more
+  Caps: [sre.SemanticAttr.Type.IDENTIFIER, sre.SemanticAttr.Role.LATINLETTER], // more
+  CombinationPermutation: [sre.SemanticAttr.Type.APPL, sre.SemanticAttr.Role.UNKNOWN], // more
+  Ellipses: [sre.SemanticAttr.Type.PUNCTUATION, sre.SemanticAttr.Role.ELLIPSIS],
+  Exponent: [sre.SemanticAttr.Type.SUPERSCRIPT, ''],
+  Fraction: [sre.SemanticAttr.Type.FRACTION, ''],
+  Functions: [sre.SemanticAttr.Type.APPL, sre.SemanticAttr.Role.SIMPLEFUNC],
+  ImpliedTimes: [sre.SemanticAttr.Type.OPERATOR, sre.SemanticAttr.Role.IMPLICIT],
+  Log: [sre.SemanticAttr.Type.APPL, sre.SemanticAttr.Role.PREFIXFUNC], // specific
+  Matrix: [sre.SemanticAttr.Type.MATRIX, ''], // multiple
+  MultiLineLabel: [sre.SemanticAttr.Type.MULTILINE, sre.SemanticAttr.Role.LABEL], // more, multiple (table)
+  MultiLineOverview: [sre.SemanticAttr.Type.MULTILINE, sre.SemanticAttr.Role.TABLE], // more, multiple (table)
+  MultiLinePausesBetweenColumns: [sre.SemanticAttr.Type.MULTILINE, sre.SemanticAttr.Role.TABLE], // more, multiple (table)
+  MultsymbolDot: [sre.SemanticAttr.Type.OPERATOR, sre.SemanticAttr.Role.MULTIPLICATION], // multiple?
+  MultsymbolX: [sre.SemanticAttr.Type.OPERATOR, sre.SemanticAttr.Role.MULTIPLICATION], // multiple?
+  Paren: [sre.SemanticAttr.Type.FENCED, sre.SemanticAttr.Role.LEFTRIGHT],
+  Prime: [sre.SemanticAttr.Type.SUPERSCRIPT, sre.SemanticAttr.Role.PRIME],
+  Roots: [sre.SemanticAttr.Type.ROOT, ''], // multiple (sqrt)
+  SetMemberSymbol: [sre.SemanticAttr.Type.RELATION, sre.SemanticAttr.Role.ELEMENT],
+  Sets: [sre.SemanticAttr.Type.FENCED, sre.SemanticAttr.Role.SETEXT], // multiple
+  // TriangleSymbol: [sre.SemanticAttr.Type., ''], //????
+  Trig: [sre.SemanticAttr.Type.APPL, sre.SemanticAttr.Role.PREFIXFUNC], // specific
+  VerticalLine: [sre.SemanticAttr.Type.PUNCTUATED, sre.SemanticAttr.Role.VBAR]
 };
