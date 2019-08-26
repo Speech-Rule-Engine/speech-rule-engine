@@ -651,8 +651,8 @@ sre.SpeechRuleEngine.prototype.processGrammar = function(context, node, grammar)
 
 /**
  * Enriches the dynamic constraint with default properties.
+ * @private
  */
- // * @private
 // TODO: Exceptions and ordering between locale and modality?
 //       E.g, missing clearspeak defaults to mathspeak.
 //       What if there is no default for a particular locale or modality?

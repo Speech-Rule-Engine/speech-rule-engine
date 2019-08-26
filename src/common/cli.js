@@ -96,19 +96,6 @@ sre.Cli.prototype.enumerate = function() {
   var compStr = function(str, length) {
     return str + (new Array(length - str.length + 1)).join(' ');
   };
-  var csStyles = function(axis, styles) {
-    var allSty = sre.ClearspeakPreferences.PREFERENCES.getProperties()[axis];
-    var result = [axis + '_Auto'];
-    if (!allSty) {
-      return result[0];
-    }
-    for (var sty of allSty) {
-      if (styles.indexOf(axis + '_' + sty) !== -1) {
-        result.push(axis + '_' + sty);
-      }
-    }
-    return result.join(', ');
-  };
   var dynamic = sre.SpeechRuleEngine.getInstance().enumerate();
   dynamic = sre.MathCompoundStore.getInstance().enumerate(dynamic);
   var table = [];
@@ -125,11 +112,12 @@ sre.Cli.prototype.enumerate = function() {
         let styles = Object.keys(dyna2[ax3]).sort();
         if (ax3 === 'clearspeak') {
           var clear3 = true;
-          for (var ax4 in sre.ClearspeakPreferences.PREFERENCES.getProperties()) {
+          var prefs = sre.ClearspeakPreferences.getLocalePreferences(dynamic)[ax1];
+          for (var ax4 in prefs) {
             table.push([compStr(clear1 ? ax1 : '', length[0]),
                         compStr(clear2 ? ax2 : '', length[1]),
                         compStr(clear3 ? ax3 : '', length[2]),
-                        csStyles(ax4, styles)]);
+                        prefs[ax4].join(', ')]);
             clear3 = false;
           }
         } else {

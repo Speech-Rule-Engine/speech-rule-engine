@@ -105,6 +105,62 @@ sre.ClearspeakPreferences.PREFERENCES = new sre.DynamicProperties({
 
 
 /**
+ * Cache of Mapping locales to clearspeak preferences.
+ * @type {Object.<sre.DynamicProperties>}
+ */
+sre.ClearspeakPreferences.LOCALE_PREFERENCES = null;
+
+
+/**
+ * Computes the clearspeak preferences per locale and caches them.
+ * @param {Object=} opt_dynamic Optionally a tree structure with the dynamic
+ *     constraints.
+ * @return {Object.<sre.DynamicProperties>} Mapping of locale to preferences.
+ */
+sre.ClearspeakPreferences.getLocalePreferences = function(opt_dynamic) {
+  if (!sre.ClearspeakPreferences.LOCALE_PREFERENCES) {
+    var dynamic = opt_dynamic ||
+        sre.MathCompoundStore.getInstance().enumerate(
+          sre.SpeechRuleEngine.getInstance().enumerate());
+    sre.ClearspeakPreferences.LOCALE_PREFERENCES =
+      sre.ClearspeakPreferences.getLocalePreferences_(dynamic);
+  }
+  return sre.ClearspeakPreferences.LOCALE_PREFERENCES;
+};
+
+
+/**
+ * Computes the clearspeak preferences per locale and caches them.
+ * @param {Object} dynamic Optionally a tree structure with the dynamic
+ *     constraints.
+ * @return {Object.<sre.DynamicProperties>} Mapping of locale to preferences.
+ */
+sre.ClearspeakPreferences.getLocalePreferences_ = function(dynamic) {
+  var result = {};
+  for (var locale in dynamic) {
+    if (!dynamic[locale]['speech'] || !dynamic[locale]['speech']['clearspeak']) {
+      continue;
+    }
+    var locPrefs = Object.keys(dynamic[locale]['speech']['clearspeak']);
+    var prefs = result[locale] = {};
+    for (var axis in sre.ClearspeakPreferences.PREFERENCES.getProperties()) {
+      var allSty = sre.ClearspeakPreferences.PREFERENCES.getProperties()[axis];
+      var values = [axis + '_Auto'];
+      if (allSty) {
+        for (var sty of allSty) {
+          if (locPrefs.indexOf(axis + '_' + sty) !== -1) {
+            values.push(axis + '_' + sty);
+          }
+        }
+      }
+      prefs[axis] = values;
+    }
+  }
+  return result;
+};
+
+
+/**
  * Exports the Clearspeak comparator with default settings.
  * @return {sre.ClearspeakPreferences.Comparator} The clearspeak comparator.
  */
