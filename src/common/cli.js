@@ -110,7 +110,6 @@ sre.Cli.prototype.enumerate = function() {
     return result.join(', ');
   };
   var dynamic = sre.SpeechRuleEngine.getInstance().enumerate();
-  // var symbols = sre.MathCompoundStore.getInstance().enumerate();
   dynamic = sre.MathCompoundStore.getInstance().enumerate(dynamic);
   var table = [];
   maxLength(dynamic, 0);
@@ -123,15 +122,9 @@ sre.Cli.prototype.enumerate = function() {
       var dyna2 = dyna1[ax2];
       maxLength(dyna2, 2);
       for (var ax3 in dyna2) {
-        // Here we have to add default in case it is missing from
-        // non-clearspeak elements.
-        //
-        // Sort out Clearspeak properly.
         let styles = Object.keys(dyna2[ax3]).sort();
         if (ax3 === 'clearspeak') {
           var clear3 = true;
-          // TODO: Still incomplete as some preferences are done via symbol
-          //       mappings.
           for (var ax4 in sre.ClearspeakPreferences.PREFERENCES.getProperties()) {
             table.push([compStr(clear1 ? ax1 : '', length[0]),
                         compStr(clear2 ? ax2 : '', length[1]),
@@ -297,9 +290,9 @@ sre.Cli.prototype.commandLine = function() {
              set, 'pprint').
       option('-v, --verbose', 'Verbose mode.').
       option('-l, --log [name]', 'Log file [name].').
-    option('--options', 'List engine setup options.').
-    on('option:options', goog.bind(function() {this.enumerate(); sre.SystemExternal.process.exit(0);}, this)).
-  // on('--help', goog.bind(this.enumerate, this)).
+      option('--options', 'List engine setup options.').
+      on('option:options', goog.bind(function() {
+        this.enumerate(); sre.SystemExternal.process.exit(0);}, this)).
       parse(sre.SystemExternal.process.argv);
   this.system.setupEngine(this.setup);
   if (commander.verbose) {
