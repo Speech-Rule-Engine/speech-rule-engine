@@ -119,7 +119,7 @@ sre.MathSimpleStore.testDynamicConstraints_ = function(
 sre.MathCompoundStore = function() {
   /**
    * A set of efficient substores.
-   * @type {Object.<sre.MathStore>}
+   * @type {!Object.<sre.MathStore>}
    * @private
    */
   this.subStores_ = {};

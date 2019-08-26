@@ -86,18 +86,18 @@ sre.Cli.prototype.processor = function(v, processor) {
  */
 sre.Cli.prototype.enumerate = function() {
   this.system.setupEngine(this.setup);
+  var length = sre.DynamicCstr.DEFAULT_ORDER.map(x => x.length);
   var maxLength = function(obj, index) {
-    var axis = sre.DynamicCstr.DEFAULT_ORDER[index];
-    return Math.max(...Object.keys(obj).
-                    map(function(x) {return x.length;}),
-                    axis.length) + 2;
+    length[index] = Math.max.apply(null,
+                                   Object.keys(obj).
+                                   map(function(x) {return x.length;}).concat(
+                                     length[index]));
   };
   var compStr = function(str, length) {
     return str + (new Array(length - str.length + 1)).join(' ');
   };
   var csStyles = function(axis, styles) {
     var allSty = sre.ClearspeakPreferences.PREFERENCES.getProperties()[axis];
-    console.log(allSty);
     var result = [axis + '_Auto'];
     if (!allSty) {
       return result[0];
@@ -111,15 +111,15 @@ sre.Cli.prototype.enumerate = function() {
   };
   var dynamic = sre.SpeechRuleEngine.getInstance().enumerate();
   var table = [];
-  var length1 = maxLength(dynamic, 0);
+  maxLength(dynamic, 0);
   for (var ax1 in dynamic) {
     var clear1 = true;
     var dyna1 = dynamic[ax1];
-    var length2 = maxLength(dyna1, 1);
+    maxLength(dyna1, 1);
     for (var ax2 in dyna1) {
       var clear2 = true;
       var dyna2 = dyna1[ax2];
-      var length3 = maxLength(dyna2, 2);
+      maxLength(dyna2, 2);
       for (var ax3 in dyna2) {
         // Here we have to add default in case it is missing from
         // non-clearspeak elements.
@@ -128,29 +128,38 @@ sre.Cli.prototype.enumerate = function() {
         let styles = Object.keys(dyna2[ax3]).sort();
         if (ax3 === 'clearspeak') {
           var clear3 = true;
+          // TODO: Still incomplete as some preferences are done via symbol
+          //       mappings.
           for (var ax4 in sre.ClearspeakPreferences.PREFERENCES.getProperties()) {
-            console.log(ax4);
-            table.push([compStr(clear1 ? ax1 : '', length1),
-                        compStr(clear2 ? ax2 : '', length2),
-                        compStr(clear3 ? ax3 : '', length3),
+            table.push([compStr(clear1 ? ax1 : '', length[0]),
+                        compStr(clear2 ? ax2 : '', length[1]),
+                        compStr(clear3 ? ax3 : '', length[2]),
                         csStyles(ax4, styles)]);
             clear3 = false;
           }
         } else {
-          table.push([compStr(clear1 ? ax1 : '', length1),
-                      compStr(clear2 ? ax2 : '', length2),
-                      compStr(ax3, length3), styles.join(', ')]);
+          table.push([compStr(clear1 ? ax1 : '', length[0]),
+                      compStr(clear2 ? ax2 : '', length[1]),
+                      compStr(ax3, length[2]), styles.join(', ')]);
         }
         clear1 = false;
         clear2 = false;
       }
     }
   }
-  table.unshift(sre.DynamicCstr.DEFAULT_ORDER.slice(0, -1).
-                map(function(x) {
-                  compStr(x, length1)
-                }));  // No topics yet.
-  console.info(table.map(x => x.join('')).join('\n'));
+  var i = 0;
+  var output = '';
+  output += sre.DynamicCstr.DEFAULT_ORDER.slice(0, -1). // No topics yet.
+    map(function(x) {
+      return compStr(x, length[i++]);
+    }).join(' | ');
+  output += '\n';
+  length.forEach(function(x) {
+    output += new Array(x + 3).join('=');
+  });
+  output += '========================\n';
+  output += table.map(x => x.join(' | ')).join('\n');
+  console.info(output);
 };
 
 
