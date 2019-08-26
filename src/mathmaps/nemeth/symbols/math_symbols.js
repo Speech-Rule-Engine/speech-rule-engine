@@ -2140,7 +2140,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠸⠇"
+        "default": "⠀⠸⠇⠀"
       }
     },
     "key": "2261"
@@ -2149,7 +2149,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠌⠸⠇"
+        "default": "⠀⠌⠸⠇⠀"
       }
     },
     "key": "2262"

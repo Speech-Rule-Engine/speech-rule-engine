@@ -376,14 +376,18 @@ sre.NemethRules.initNemethRules_ = function() {
 
   // Function rules
   defineRule(
-      'function-unknown', 'default.default',
-      '[n] children/*[1]; [n] children/*[2]',
+      'function-named', 'default.default',
+      '[n] children/*[1]; [t] "⠀"; [n] children/*[2]',
       'self::appl');
-
   defineRule(
       'function-prefix', 'default.default',
+      '[n] content/*[1]; [t] "⠀"; [n] children/*[1]',
+      'self::prefixop', 'content/*[1][@role="infix function"]');
+
+  defineRule(
+      'function-simple', 'default.default',
       '[n] children/*[1]; [n] children/*[2]',
-      'self::appl', 'children/*[1][@role="prefix function"]');
+      'self::appl', 'children/*[1][@role="simple function"]');
 
 
   // Fences rules

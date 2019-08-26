@@ -16,6 +16,11 @@ http://www.gh-mathspeak.com/examples/NemethBook/
 
 
 ///
-** Spaces after function applications (cos, sin), punctuation in lists etc., denomination, ellipses.
+** Spaces after
+*** DONE function applications (cos, sin),
+*** DONE named infix operators like rem, mod (currently hardcoded)
+*** TODO punctuation in lists etc.,
+*** TODO denomination,
+*** TODO ellipses.
 ** Around Arrows
 ** Endpunctuation with punctuation indicator.
