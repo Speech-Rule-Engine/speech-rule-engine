@@ -110,6 +110,8 @@ sre.Cli.prototype.enumerate = function() {
     return result.join(', ');
   };
   var dynamic = sre.SpeechRuleEngine.getInstance().enumerate();
+  // var symbols = sre.MathCompoundStore.getInstance().enumerate();
+  dynamic = sre.MathCompoundStore.getInstance().enumerate(dynamic);
   var table = [];
   maxLength(dynamic, 0);
   for (var ax1 in dynamic) {

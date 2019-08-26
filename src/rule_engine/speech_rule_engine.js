@@ -752,27 +752,9 @@ sre.SpeechRuleEngine.prototype.getEvaluator = function(locale, modality) {
 /**
  * Collates information on dynamic constraint values of the currently active
  * trie of the engine.
+ * @param {Object=} opt_info Initial dynamic constraint information.
  * @return {Object} The collated information.
  */
-sre.SpeechRuleEngine.prototype.enumerate = function() {
-  var root = this.activeStore_.trie.root;
-  return this.enumerate_(root);
-};
-
-
-/**
- * Collates information on dynamic constraint values of a trie.
- * @param {sre.TrieNode} node The trie node from where to start.
- * @return {Object} The collated information.
- */
-sre.SpeechRuleEngine.prototype.enumerate_ = function(node) {
-  var result = {};
-  var children = node.getChildren();
-  for (var i = 0, child; child = children[i]; i++) {
-    if (child.kind !== sre.TrieNode.Kind.DYNAMIC) {
-      continue;
-    }
-    result[child.getConstraint()] = this.enumerate_(child);
-  }
-  return result;
+sre.SpeechRuleEngine.prototype.enumerate = function(opt_info) {
+  return this.activeStore_.trie.enumerate(opt_info);
 };

@@ -273,7 +273,22 @@ sre.MathCompoundStore.prototype.lookupString = function(text, dynamic) {
 
 
 /**
- * Parses a string with a hex representatino of a unicode code point into the
+ * Collates information on dynamic constraint values of the currently active
+ * trie of the engine.
+ * @param {Object=} opt_info Initial dynamic constraint information.
+ * @return {Object} The collated information.
+ */
+sre.MathCompoundStore.prototype.enumerate = function(opt_info) {
+  var info = opt_info || {};
+  for (var store in this.subStores_) {
+    info = this.subStores_[store].trie.enumerate(info);
+  }
+  return info;
+};
+
+
+/**
+ * Parses a string with a hex representation of a unicode code point into the
  * corresponding unicode character.
  * @param {string} number The code point to be parsed.
  * @return {string} The unicode character.
