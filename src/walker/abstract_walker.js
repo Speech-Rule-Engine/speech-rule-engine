@@ -772,7 +772,7 @@ sre.AbstractWalker.prototype.nextRules = function() {
 };
 
 
-sre.AbstractWalker.nextStyle = function(domain, style) {
+sre.AbstractWalker.prototype.nextStyle = function(domain, style) {
   if (domain === 'mathspeak') {
     var styles = ['default', 'brief', 'sbrief'];
     var index = styles.indexOf(style);
@@ -782,6 +782,15 @@ sre.AbstractWalker.nextStyle = function(domain, style) {
     return (index >= styles.length - 1) ? styles[0] : styles[index + 1];
   }
   if (domain === 'clearspeak') {
+    var prefs = sre.ClearspeakPreferences.getLocalePreferences();
+    var loc = prefs['en']; // TODO: correct!
+    if (!loc) {
+      return 'default';  // TODO: return the previous one?
+    }
+    var smart = sre.ClearspeakPreferences.relevantPreferences(
+      this.getFocus().getSemanticPrimary());
+    var options = loc[smart];
+    console.log(options);
     return 'ImpliedTimes_MoreImpliedTimes:Roots_RootEnd'; //''
   }
   return style;
@@ -793,7 +802,7 @@ sre.AbstractWalker.prototype.previousRules = function() {
   if (options.modality !== 'speech') {
     return this.focus_;
   }
-  options.style = sre.AbstractWalker.nextStyle(options.domain, options.style);
+  options.style = this.nextStyle(options.domain, options.style);
   this.update(options);
   this.moved = sre.Walker.move.REPEAT;
   return this.focus_.clone();

@@ -322,13 +322,30 @@ sre.ClearspeakPreferences.getLocalePreferences_ = function(dynamic) {
 };
 
 
-sre.ClearspeakPreferences.smartPreferences = function(locale) {
+// TODO: Sort this out in MathJax in the future!
+sre.ClearspeakPreferences.getSpeechExplorer = function(item) {
+  let explorers = item['attached'];
+  console.log(explorers);
+  if (!explorers || !explorers.length) {
+    return null;
+  }
+  return explorers.find(function(ex) {
+    return ex.speechGenerator &&
+      ex.speechGenerator.getOptions().modality === 'speech';
+  });
+};
+
+sre.ClearspeakPreferences.smartPreferences = function(item, locale) {
   var prefs = sre.ClearspeakPreferences.getLocalePreferences();
   var loc = prefs[locale];
   if (!loc) {
     return [];
   }
-  var smart = 'Bar'; // TODO: Lookup the right preference.
+  var explorer = sre.ClearspeakPreferences.getSpeechExplorer(item);
+  var smart = sre.ClearspeakPreferences.relevantPreferences(
+    explorer.walker.getFocus().getSemanticPrimary());
+  console.log(smart);
+  // var smart = 'Bar'; // TODO: Lookup the right preference.
   var items = [
     {type: 'radio',
      content: 'No Preferences',
@@ -352,9 +369,20 @@ sre.ClearspeakPreferences.smartPreferences = function(locale) {
 };
 
 
-sre.ClearspeakPreferences.SEMANTIC_MAPPING = {
+sre.ClearspeakPreferences.relevantPreferences = function(node) {
+  console.log(sre.ClearspeakPreferences.SEMANTIC_MAPPING_);
+  console.log(sre.ClearspeakPreferences.SEMANTIC_MAPPING_[node.type]);
+  let roles = sre.ClearspeakPreferences.SEMANTIC_MAPPING_[node.type];
+  if (!roles) {
+    return 'ImpliedTimes';
+  }
+  return roles[node.role] || roles[''] || 'ImpliedTimes';
+};
+
+
+sre.ClearspeakPreferences.REVERSE_MAPPING_ = {
   AbsoluteValue: [sre.SemanticAttr.Type.FENCED, sre.SemanticAttr.Role.NEUTRAL],
-  Bar: [sre.SemanticAttr.Type.OVERSCORE, sre.SemanticAttr.Role.VBAR], // more
+  Bar: [sre.SemanticAttr.Type.OVERSCORE, sre.SemanticAttr.Role.OVERACCENT], // more
   Caps: [sre.SemanticAttr.Type.IDENTIFIER, sre.SemanticAttr.Role.LATINLETTER], // more
   CombinationPermutation: [sre.SemanticAttr.Type.APPL, sre.SemanticAttr.Role.UNKNOWN], // more
   Ellipses: [sre.SemanticAttr.Type.PUNCTUATION, sre.SemanticAttr.Role.ELLIPSIS],
@@ -378,6 +406,25 @@ sre.ClearspeakPreferences.SEMANTIC_MAPPING = {
   Trig: [sre.SemanticAttr.Type.APPL, sre.SemanticAttr.Role.PREFIXFUNC], // specific
   VerticalLine: [sre.SemanticAttr.Type.PUNCTUATED, sre.SemanticAttr.Role.VBAR]
 };
+
+
+sre.ClearspeakPreferences.SEMANTIC_MAPPING_ = function() {
+  var result = {};
+  var keys = Object.keys(sre.ClearspeakPreferences.REVERSE_MAPPING_);
+  for (var i = 0, pref; pref = keys[i]; i++) {
+    var pair = sre.ClearspeakPreferences.REVERSE_MAPPING_[pref];
+    var role = result[pair[0]];
+    if (!role) {
+      role = {};
+      result[pair[0]] = role;
+    }
+    role[pair[1]] = pref;
+  }
+  // Additional!
+  result[sre.SemanticAttr.Type.SQRT] = {};
+  result[sre.SemanticAttr.Type.SQRT][''] = 'Roots';
+  return result;
+}();
 
 
 /**
