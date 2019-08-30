@@ -750,40 +750,38 @@ sre.AbstractWalker.prototype.update = function(options) {
 };
 
 
+// Facilities for keyboard driven rules cycling.
 // TODO: Refactor this into the speech generators.
+sre.AbstractWalker.style = {
+  'mathspeak': 'default',
+  'clearspeak': 'default'
+};
+
 sre.AbstractWalker.prototype.nextRules = function() {
   var options = this.generator.getOptions();
   if (options.modality !== 'speech') {
     return this.focus_;
   }
   // TODO: Check if domains exist for the current locale.
+  sre.AbstractWalker.style[options.domain] = options.style;
   options.domain = (options.domain === 'mathspeak') ? 'clearspeak' : 'mathspeak';
+  options.style = sre.AbstractWalker.style[options.domain];
   this.update(options);
   this.moved = sre.Walker.move.REPEAT;
   return this.focus_.clone();
 };
 
-var braille = false;
-
-var styles = {
-  'mathspeak': ['default', 'brief', 'sbrief'],
-  'clearspeak': sre.ClearspeakPreferences.PREFERENCES
-};
-
-var clearspeakParser = new sre.ClearspeakPreferences.Parser();
 
 sre.AbstractWalker.nextStyle = function(domain, style) {
   if (domain === 'mathspeak') {
-    var index = styles.mathspeak.indexOf(style);
+    var styles = ['default', 'brief', 'sbrief'];
+    var index = styles.indexOf(style);
     if (index === -1) {
       return style;
     }
-    return (index >= styles.mathspeak.length - 1) ? styles.mathspeak[0] : styles.mathspeak[index + 1];
+    return (index >= styles.length - 1) ? styles[0] : styles[index + 1];
   }
   if (domain === 'clearspeak') {
-    // var options = clearspeakParser.parse('ImpliedTimes_MoreImpliedTimes:Roots_RootEnd');
-    // return options.style;
-    // return 'Trig_Auto:Roots_RootEnd';
     return 'ImpliedTimes_MoreImpliedTimes:Roots_RootEnd'; //''
   }
   return style;

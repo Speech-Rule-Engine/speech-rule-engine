@@ -223,7 +223,7 @@ sre.ClearspeakPreferences.Parser.prototype.parse = function(str) {
 
 /**
  * Parse the preferences from a string of the form:
- * preference1_setting1:preference2_settting2:....:preferenceN_settingN
+ * preference1_setting1:preference2_setting2:....:preferenceN_settingN
  * @param {string} pref The preference string.
  * @return {!Object.<string>} The preference settings.
  */
@@ -251,7 +251,7 @@ sre.ClearspeakPreferences.Parser.prototype.fromPreference = function(pref) {
 /**
  * Creates a style string from a set of preference mappings, by joining them via
  * underscore and colon in the form:
- * preference1_setting1:preference2_settting2:....:preferenceN_settingN
+ * preference1_setting1:preference2_setting2:....:preferenceN_settingN
  * @param {!Object.<string>} preferences A preference mapping.
  * @return {string} A style string created from the preferences.
  */
@@ -329,7 +329,19 @@ sre.ClearspeakPreferences.smartPreferences = function(locale) {
     return [];
   }
   var smart = 'Bar'; // TODO: Lookup the right preference.
-  var items = [{type: 'label', content: smart}, {type: 'rule'}];
+  var items = [
+    {type: 'radio',
+     content: 'No Preferences',
+     id: 'clearspeak-default',
+     variable: 'speechRules'},
+    {type: 'radio',
+     content: 'Current Preferences',
+     id: 'clearspeak-default',
+     variable: 'speechRules'},
+    {type: 'rule'},
+    {type: 'label', content: 'Preferences for ' + smart},
+    {type: 'rule'}
+  ];
   return items.concat(loc[smart].map(function(x) {
     return {type: 'radio',
             content: x.split('_')[1],
