@@ -55,7 +55,9 @@ sre.Engine = function() {
   /**
    * @type {!sre.DynamicCstr.Parser}
    */
-  this.parser = new sre.DynamicCstr.Parser(sre.DynamicCstr.DEFAULT_ORDER);
+  this.defaultParser = new sre.DynamicCstr.Parser(sre.DynamicCstr.DEFAULT_ORDER);
+  this.parser = this.defaultParser;
+  this.parsers = {};
 
   /**
    * @type {!sre.DynamicCstr}
@@ -352,6 +354,8 @@ sre.Engine.prototype.setDynamicCstr = function(opt_dynamic) {
       [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN]],
       ['short', sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE]]);
   var comparator = this.comparators[this.domain];
+  var parser = this.parsers[this.domain];
+  this.parser = parser ? parser : this.defaultParser;
   this.dynamicCstr = this.parser.parse(dynamic);
   this.dynamicCstr.updateProperties(fallback.getProperties());
   this.comparator = comparator ? comparator() :

@@ -366,3 +366,10 @@ sre.ClearspeakPreferences.SEMANTIC_MAPPING = {
   Trig: [sre.SemanticAttr.Type.APPL, sre.SemanticAttr.Role.PREFIXFUNC], // specific
   VerticalLine: [sre.SemanticAttr.Type.PUNCTUATED, sre.SemanticAttr.Role.VBAR]
 };
+
+
+/**
+ * Add new comparator and parser.
+ */
+sre.Engine.getInstance().comparators['clearspeak'] = sre.ClearspeakPreferences.comparator;
+sre.Engine.getInstance().parsers['clearspeak'] = new sre.ClearspeakPreferences.Parser();
