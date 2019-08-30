@@ -740,6 +740,16 @@ sre.AbstractWalker.prototype.undo = function() {
 };
 
 
+/**
+ * @override
+ */
+sre.AbstractWalker.prototype.update = function(options) {
+  this.generator.setOptions(options);
+  sre.System.getInstance().setupEngine(options);
+  sre.SpeechGeneratorFactory.generator('Tree').getSpeech(this.node, this.xml);
+};
+
+
 // TODO: Refactor this into the speech generators.
 sre.AbstractWalker.prototype.nextRules = function() {
   var options = this.generator.getOptions();
@@ -748,9 +758,7 @@ sre.AbstractWalker.prototype.nextRules = function() {
   }
   // TODO: Check if domains exist for the current locale.
   options.domain = (options.domain === 'mathspeak') ? 'clearspeak' : 'mathspeak';
-  this.generator.setOptions(options);
-  sre.System.getInstance().setupEngine(options);
-  sre.SpeechGeneratorFactory.generator('Tree').getSpeech(this.node, this.xml);
+  this.update(options);
   this.moved = sre.Walker.move.REPEAT;
   return this.focus_.clone();
 };
@@ -776,7 +784,7 @@ sre.AbstractWalker.nextStyle = function(domain, style) {
     // var options = clearspeakParser.parse('ImpliedTimes_MoreImpliedTimes:Roots_RootEnd');
     // return options.style;
     // return 'Trig_Auto:Roots_RootEnd';
-    return 'ImpliedTimes_MoreImpliedTimes'; //':Roots_RootEnd'
+    return 'ImpliedTimes_MoreImpliedTimes:Roots_RootEnd'; //''
   }
   return style;
 };
@@ -788,9 +796,7 @@ sre.AbstractWalker.prototype.previousRules = function() {
     return this.focus_;
   }
   options.style = sre.AbstractWalker.nextStyle(options.domain, options.style);
-  this.generator.setOptions(options);
-  sre.System.getInstance().setupEngine(options);
-  sre.SpeechGeneratorFactory.generator('Tree').getSpeech(this.node, this.xml);
+  this.update(options);
   this.moved = sre.Walker.move.REPEAT;
   return this.focus_.clone();
 };

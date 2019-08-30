@@ -322,6 +322,24 @@ sre.ClearspeakPreferences.getLocalePreferences_ = function(dynamic) {
 };
 
 
+sre.ClearspeakPreferences.smartPreferences = function(locale) {
+  var prefs = sre.ClearspeakPreferences.getLocalePreferences();
+  var loc = prefs[locale];
+  if (!loc) {
+    return [];
+  }
+  var smart = 'Bar'; // TODO: Lookup the right preference.
+  var items = [{type: 'label', content: smart}, {type: 'rule'}];
+  return items.concat(loc[smart].map(function(x) {
+    return {type: 'radio',
+            content: x.split('_')[1],
+            id: 'clearspeak-' + x,
+            variable: 'speechRules'
+           };
+  }));
+};
+
+
 sre.ClearspeakPreferences.SEMANTIC_MAPPING = {
   AbsoluteValue: [sre.SemanticAttr.Type.FENCED, sre.SemanticAttr.Role.NEUTRAL],
   Bar: [sre.SemanticAttr.Type.OVERSCORE, sre.SemanticAttr.Role.VBAR], // more
