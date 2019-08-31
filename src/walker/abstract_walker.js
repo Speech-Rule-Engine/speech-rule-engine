@@ -752,20 +752,16 @@ sre.AbstractWalker.prototype.update = function(options) {
 
 // Facilities for keyboard driven rules cycling.
 // TODO: Refactor this into the speech generators.
-sre.AbstractWalker.style = {
-  'mathspeak': 'default',
-  'clearspeak': 'default'
-};
-
 sre.AbstractWalker.prototype.nextRules = function() {
   var options = this.generator.getOptions();
   if (options.modality !== 'speech') {
     return this.focus_;
   }
   // TODO: Check if domains exist for the current locale.
-  sre.AbstractWalker.style[options.domain] = options.style;
+  console.log(sre.Engine.DOMAIN_TO_STYLES);
+  sre.Engine.DOMAIN_TO_STYLES[options.domain] = options.style;
   options.domain = (options.domain === 'mathspeak') ? 'clearspeak' : 'mathspeak';
-  options.style = sre.AbstractWalker.style[options.domain];
+  options.style = sre.Engine.DOMAIN_TO_STYLES[options.domain];
   this.update(options);
   this.moved = sre.Walker.move.REPEAT;
   return this.focus_.clone();
@@ -783,15 +779,32 @@ sre.AbstractWalker.prototype.nextStyle = function(domain, style) {
   }
   if (domain === 'clearspeak') {
     var prefs = sre.ClearspeakPreferences.getLocalePreferences();
-    var loc = prefs['en']; // TODO: correct!
+    var loc = prefs['en']; // TODO: use correct locale.
     if (!loc) {
       return 'default';  // TODO: return the previous one?
     }
     var smart = sre.ClearspeakPreferences.relevantPreferences(
       this.getFocus().getSemanticPrimary());
-    var options = loc[smart];
+    console.log('Smart choice!');
+    var current = sre.ClearspeakPreferences.findPreference(style, smart);
+    var options = loc[smart].map(function(x) {
+      return x.split('_')[1];
+    });
+    console.log(current);
     console.log(options);
-    return 'ImpliedTimes_MoreImpliedTimes:Roots_RootEnd'; //''
+    var index = options.indexOf(current);
+    console.log(index);
+    if (index === -1) {
+      return style;
+    }
+    console.log('Returning: ');
+    var next = (index >= options.length - 1) ? options[0] : options[index + 1];
+    console.log(next);
+    var result = sre.ClearspeakPreferences.addPreference(style, smart, next);
+    return result;
+    // console.log(current);
+    // console.log(options);
+    // return 'ImpliedTimes_MoreImpliedTimes:Roots_RootEnd'; //''
   }
   return style;
 };

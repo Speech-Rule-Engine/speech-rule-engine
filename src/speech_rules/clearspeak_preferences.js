@@ -36,6 +36,7 @@ goog.require('sre.Engine');
 sre.ClearspeakPreferences = function(cstr, preference) {
   sre.ClearspeakPreferences.base(this, 'constructor', cstr);
 
+  // TODO: Make these into a proper class.
   this.preference = preference;
 };
 goog.inherits(sre.ClearspeakPreferences, sre.DynamicCstr);
@@ -228,6 +229,17 @@ sre.ClearspeakPreferences.Parser.prototype.parse = function(str) {
  * @return {!Object.<string>} The preference settings.
  */
 sre.ClearspeakPreferences.Parser.prototype.fromPreference = function(pref) {
+  return sre.ClearspeakPreferences.fromPreference(pref);
+};
+
+
+/**
+ * Parse the preferences from a string of the form:
+ * preference1_setting1:preference2_setting2:....:preferenceN_settingN
+ * @param {string} pref The preference string.
+ * @return {!Object.<string>} The preference settings.
+ */
+sre.ClearspeakPreferences.fromPreference = function(pref) {
   var pairs = pref.split(':');
   var preferences = {};
   var properties = sre.ClearspeakPreferences.PREFERENCES.getProperties();
@@ -256,6 +268,18 @@ sre.ClearspeakPreferences.Parser.prototype.fromPreference = function(pref) {
  * @return {string} A style string created from the preferences.
  */
 sre.ClearspeakPreferences.Parser.prototype.toPreference = function(preferences) {
+  return sre.ClearspeakPreferences.toPreference(preferences);
+};
+
+
+/**
+ * Creates a style string from a set of preference mappings, by joining them via
+ * underscore and colon in the form:
+ * preference1_setting1:preference2_setting2:....:preferenceN_settingN
+ * @param {!Object.<string>} preferences A preference mapping.
+ * @return {string} A style string created from the preferences.
+ */
+sre.ClearspeakPreferences.toPreference = function(preferences) {
   var keys = Object.keys(preferences);
   var str = [];
   for (var i = 0; i < keys.length; i++) {
@@ -325,7 +349,6 @@ sre.ClearspeakPreferences.getLocalePreferences_ = function(dynamic) {
 // TODO: Sort this out in MathJax in the future!
 sre.ClearspeakPreferences.getSpeechExplorer = function(item) {
   let explorers = item['attached'];
-  console.log(explorers);
   if (!explorers || !explorers.length) {
     return null;
   }
@@ -344,7 +367,7 @@ sre.ClearspeakPreferences.smartPreferences = function(item, locale) {
   var explorer = sre.ClearspeakPreferences.getSpeechExplorer(item);
   var smart = sre.ClearspeakPreferences.relevantPreferences(
     explorer.walker.getFocus().getSemanticPrimary());
-  console.log(smart);
+
   // var smart = 'Bar'; // TODO: Lookup the right preference.
   var items = [
     {type: 'radio',
@@ -370,8 +393,6 @@ sre.ClearspeakPreferences.smartPreferences = function(item, locale) {
 
 
 sre.ClearspeakPreferences.relevantPreferences = function(node) {
-  console.log(sre.ClearspeakPreferences.SEMANTIC_MAPPING_);
-  console.log(sre.ClearspeakPreferences.SEMANTIC_MAPPING_[node.type]);
   let roles = sre.ClearspeakPreferences.SEMANTIC_MAPPING_[node.type];
   if (!roles) {
     return 'ImpliedTimes';
@@ -380,51 +401,86 @@ sre.ClearspeakPreferences.relevantPreferences = function(node) {
 };
 
 
-sre.ClearspeakPreferences.REVERSE_MAPPING_ = {
-  AbsoluteValue: [sre.SemanticAttr.Type.FENCED, sre.SemanticAttr.Role.NEUTRAL],
-  Bar: [sre.SemanticAttr.Type.OVERSCORE, sre.SemanticAttr.Role.OVERACCENT], // more
-  Caps: [sre.SemanticAttr.Type.IDENTIFIER, sre.SemanticAttr.Role.LATINLETTER], // more
-  CombinationPermutation: [sre.SemanticAttr.Type.APPL, sre.SemanticAttr.Role.UNKNOWN], // more
-  Ellipses: [sre.SemanticAttr.Type.PUNCTUATION, sre.SemanticAttr.Role.ELLIPSIS],
-  Exponent: [sre.SemanticAttr.Type.SUPERSCRIPT, ''],
-  Fraction: [sre.SemanticAttr.Type.FRACTION, ''],
-  Functions: [sre.SemanticAttr.Type.APPL, sre.SemanticAttr.Role.SIMPLEFUNC],
-  ImpliedTimes: [sre.SemanticAttr.Type.OPERATOR, sre.SemanticAttr.Role.IMPLICIT],
-  Log: [sre.SemanticAttr.Type.APPL, sre.SemanticAttr.Role.PREFIXFUNC], // specific
-  Matrix: [sre.SemanticAttr.Type.MATRIX, ''], // multiple
-  MultiLineLabel: [sre.SemanticAttr.Type.MULTILINE, sre.SemanticAttr.Role.LABEL], // more, multiple (table)
-  MultiLineOverview: [sre.SemanticAttr.Type.MULTILINE, sre.SemanticAttr.Role.TABLE], // more, multiple (table)
-  MultiLinePausesBetweenColumns: [sre.SemanticAttr.Type.MULTILINE, sre.SemanticAttr.Role.TABLE], // more, multiple (table)
-  MultsymbolDot: [sre.SemanticAttr.Type.OPERATOR, sre.SemanticAttr.Role.MULTIPLICATION], // multiple?
-  MultsymbolX: [sre.SemanticAttr.Type.OPERATOR, sre.SemanticAttr.Role.MULTIPLICATION], // multiple?
-  Paren: [sre.SemanticAttr.Type.FENCED, sre.SemanticAttr.Role.LEFTRIGHT],
-  Prime: [sre.SemanticAttr.Type.SUPERSCRIPT, sre.SemanticAttr.Role.PRIME],
-  Roots: [sre.SemanticAttr.Type.ROOT, ''], // multiple (sqrt)
-  SetMemberSymbol: [sre.SemanticAttr.Type.RELATION, sre.SemanticAttr.Role.ELEMENT],
-  Sets: [sre.SemanticAttr.Type.FENCED, sre.SemanticAttr.Role.SETEXT], // multiple
-  // TriangleSymbol: [sre.SemanticAttr.Type., ''], //????
-  Trig: [sre.SemanticAttr.Type.APPL, sre.SemanticAttr.Role.PREFIXFUNC], // specific
-  VerticalLine: [sre.SemanticAttr.Type.PUNCTUATED, sre.SemanticAttr.Role.VBAR]
-};
+sre.ClearspeakPreferences.REVERSE_MAPPING_ = [
+  ['AbsoluteValue', sre.SemanticAttr.Type.FENCED, sre.SemanticAttr.Role.NEUTRAL],
+  ['Bar', sre.SemanticAttr.Type.OVERSCORE, sre.SemanticAttr.Role.OVERACCENT], // more
+  ['Caps', sre.SemanticAttr.Type.IDENTIFIER, sre.SemanticAttr.Role.LATINLETTER], // more
+  ['CombinationPermutation', sre.SemanticAttr.Type.APPL, sre.SemanticAttr.Role.UNKNOWN], // more
+  ['Ellipses', sre.SemanticAttr.Type.PUNCTUATION, sre.SemanticAttr.Role.ELLIPSIS],
+  ['Exponent', sre.SemanticAttr.Type.SUPERSCRIPT, ''],
+  ['Fraction', sre.SemanticAttr.Type.FRACTION, ''],
+  ['Functions', sre.SemanticAttr.Type.APPL, sre.SemanticAttr.Role.SIMPLEFUNC],
+  ['ImpliedTimes', sre.SemanticAttr.Type.OPERATOR, sre.SemanticAttr.Role.IMPLICIT],
+  ['Log', sre.SemanticAttr.Type.APPL, sre.SemanticAttr.Role.PREFIXFUNC], // specific
+  ['Matrix', sre.SemanticAttr.Type.MATRIX, ''], // multiple
+  ['Matrix', sre.SemanticAttr.Type.VECTOR, ''], // multiple
+  ['MultiLineLabel', sre.SemanticAttr.Type.MULTILINE, sre.SemanticAttr.Role.LABEL], // more, multiple (table)
+  ['MultiLineOverview', sre.SemanticAttr.Type.MULTILINE, sre.SemanticAttr.Role.TABLE], // more, multiple (table)
+  ['MultiLinePausesBetweenColumns', sre.SemanticAttr.Type.MULTILINE, sre.SemanticAttr.Role.TABLE], // more, multiple (table)
+  ['MultiLineLabel', sre.SemanticAttr.Type.TABLE, sre.SemanticAttr.Role.LABEL], // more, multiple (table)
+  ['MultiLineOverview', sre.SemanticAttr.Type.TABLE, sre.SemanticAttr.Role.TABLE], // more, multiple (table)
+  ['MultiLinePausesBetweenColumns', sre.SemanticAttr.Type.TABLE, sre.SemanticAttr.Role.TABLE], // more, multiple (table)
+  ['MultiLineLabel', sre.SemanticAttr.Type.CASES, sre.SemanticAttr.Role.LABEL], // more, multiple (table)
+  ['MultiLineOverview', sre.SemanticAttr.Type.CASES, sre.SemanticAttr.Role.TABLE], // more, multiple (table)
+  ['MultiLinePausesBetweenColumns', sre.SemanticAttr.Type.CASES, sre.SemanticAttr.Role.TABLE], // more, multiple (table)
+  ['MultsymbolDot', sre.SemanticAttr.Type.OPERATOR, sre.SemanticAttr.Role.MULTIPLICATION], // multiple?
+  ['MultsymbolX', sre.SemanticAttr.Type.OPERATOR, sre.SemanticAttr.Role.MULTIPLICATION], // multiple?
+  ['Paren', sre.SemanticAttr.Type.FENCED, sre.SemanticAttr.Role.LEFTRIGHT],
+  ['Prime', sre.SemanticAttr.Type.SUPERSCRIPT, sre.SemanticAttr.Role.PRIME],
+  ['Roots', sre.SemanticAttr.Type.ROOT, ''], // multiple (sqrt)
+  ['Roots', sre.SemanticAttr.Type.SQRT, ''], // multiple (sqrt)
+  ['SetMemberSymbol', sre.SemanticAttr.Type.RELATION, sre.SemanticAttr.Role.ELEMENT],
+  ['Sets', sre.SemanticAttr.Type.FENCED, sre.SemanticAttr.Role.SETEXT], // multiple
+  ['TriangleSymbol', sre.SemanticAttr.Type.IDENTIFIER, sre.SemanticAttr.Role.GREEKLETTER], //????
+  ['Trig', sre.SemanticAttr.Type.APPL, sre.SemanticAttr.Role.PREFIXFUNC], // specific
+  ['VerticalLine', sre.SemanticAttr.Type.PUNCTUATED, sre.SemanticAttr.Role.VBAR]
+];
 
 
 sre.ClearspeakPreferences.SEMANTIC_MAPPING_ = function() {
   var result = {};
-  var keys = Object.keys(sre.ClearspeakPreferences.REVERSE_MAPPING_);
-  for (var i = 0, pref; pref = keys[i]; i++) {
-    var pair = sre.ClearspeakPreferences.REVERSE_MAPPING_[pref];
-    var role = result[pair[0]];
+  for (var i = 0, triple; triple = sre.ClearspeakPreferences.REVERSE_MAPPING_[i]; i++) {
+    var pref = triple[0];
+    var role = result[triple[1]];
     if (!role) {
       role = {};
-      result[pair[0]] = role;
+      result[triple[1]] = role;
     }
-    role[pair[1]] = pref;
+    role[triple[2]] = pref;
   }
-  // Additional!
-  result[sre.SemanticAttr.Type.SQRT] = {};
-  result[sre.SemanticAttr.Type.SQRT][''] = 'Roots';
   return result;
 }();
+
+
+sre.ClearspeakPreferences.currentPreference = function(kind) {
+  let prefs = sre.Engine.DOMAIN_TO_STYLES['clearspeak'];
+  if (prefs === 'default') {
+    return sre.ClearspeakPreferences.AUTO;
+  }
+  let parsed = sre.ClearspeakPreferences.fromPreference(prefs);
+  return parsed[kind] || sre.ClearspeakPreferences.AUTO;
+};
+
+
+sre.ClearspeakPreferences.findPreference = function(prefs, kind) {
+  console.log('Preferences: ' + prefs);
+  if (prefs === 'default') {
+    return sre.ClearspeakPreferences.AUTO;
+  }
+  let parsed = sre.ClearspeakPreferences.fromPreference(prefs);
+  console.log(parsed);
+  return parsed[kind] || sre.ClearspeakPreferences.AUTO;
+};
+
+
+sre.ClearspeakPreferences.addPreference = function(prefs, kind, value) {
+  if (prefs === 'default') {
+    return kind + '_' +  value;
+  }
+  let parsed = sre.ClearspeakPreferences.fromPreference(prefs);
+  parsed[kind] = value;
+  return sre.ClearspeakPreferences.toPreference(parsed);
+};
 
 
 /**
@@ -432,3 +488,4 @@ sre.ClearspeakPreferences.SEMANTIC_MAPPING_ = function() {
  */
 sre.Engine.getInstance().comparators['clearspeak'] = sre.ClearspeakPreferences.comparator;
 sre.Engine.getInstance().parsers['clearspeak'] = new sre.ClearspeakPreferences.Parser();
+

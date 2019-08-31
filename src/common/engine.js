@@ -361,3 +361,10 @@ sre.Engine.prototype.setDynamicCstr = function(opt_dynamic) {
   this.comparator = comparator ? comparator() :
       new sre.DynamicCstr.DefaultComparator(this.dynamicCstr);
 };
+
+
+sre.Engine.DOMAIN_TO_STYLES = {
+  'mathspeak': 'default',
+  'clearspeak': 'default'
+};
+
