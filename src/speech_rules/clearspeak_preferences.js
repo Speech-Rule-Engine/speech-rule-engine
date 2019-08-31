@@ -358,6 +358,8 @@ sre.ClearspeakPreferences.getSpeechExplorer = function(item) {
   });
 };
 
+// This returns the menu settings.
+// item is the mathItem.
 sre.ClearspeakPreferences.smartPreferences = function(item, locale) {
   var prefs = sre.ClearspeakPreferences.getLocalePreferences();
   var loc = prefs[locale];
@@ -367,8 +369,8 @@ sre.ClearspeakPreferences.smartPreferences = function(item, locale) {
   var explorer = sre.ClearspeakPreferences.getSpeechExplorer(item);
   var smart = sre.ClearspeakPreferences.relevantPreferences(
     explorer.walker.getFocus().getSemanticPrimary());
-
   // var smart = 'Bar'; // TODO: Lookup the right preference.
+  var previous = sre.Engine.DOMAIN_TO_STYLES['clearspeak'];
   var items = [
     {type: 'radio',
      content: 'No Preferences',
@@ -376,16 +378,18 @@ sre.ClearspeakPreferences.smartPreferences = function(item, locale) {
      variable: 'speechRules'},
     {type: 'radio',
      content: 'Current Preferences',
-     id: 'clearspeak-default',
+     id: 'clearspeak-' + previous,
      variable: 'speechRules'},
     {type: 'rule'},
     {type: 'label', content: 'Preferences for ' + smart},
     {type: 'rule'}
   ];
   return items.concat(loc[smart].map(function(x) {
+    var pair = x.split('_');
     return {type: 'radio',
-            content: x.split('_')[1],
-            id: 'clearspeak-' + x,
+            content: pair[1],
+            id: 'clearspeak-' +
+            sre.ClearspeakPreferences.addPreference(previous, pair[0], pair[1]),
             variable: 'speechRules'
            };
   }));

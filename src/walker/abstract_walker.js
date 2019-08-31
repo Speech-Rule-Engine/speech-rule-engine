@@ -758,7 +758,6 @@ sre.AbstractWalker.prototype.nextRules = function() {
     return this.focus_;
   }
   // TODO: Check if domains exist for the current locale.
-  console.log(sre.Engine.DOMAIN_TO_STYLES);
   sre.Engine.DOMAIN_TO_STYLES[options.domain] = options.style;
   options.domain = (options.domain === 'mathspeak') ? 'clearspeak' : 'mathspeak';
   options.style = sre.Engine.DOMAIN_TO_STYLES[options.domain];
@@ -785,26 +784,17 @@ sre.AbstractWalker.prototype.nextStyle = function(domain, style) {
     }
     var smart = sre.ClearspeakPreferences.relevantPreferences(
       this.getFocus().getSemanticPrimary());
-    console.log('Smart choice!');
     var current = sre.ClearspeakPreferences.findPreference(style, smart);
     var options = loc[smart].map(function(x) {
       return x.split('_')[1];
     });
-    console.log(current);
-    console.log(options);
     var index = options.indexOf(current);
-    console.log(index);
     if (index === -1) {
       return style;
     }
-    console.log('Returning: ');
     var next = (index >= options.length - 1) ? options[0] : options[index + 1];
-    console.log(next);
     var result = sre.ClearspeakPreferences.addPreference(style, smart, next);
     return result;
-    // console.log(current);
-    // console.log(options);
-    // return 'ImpliedTimes_MoreImpliedTimes:Roots_RootEnd'; //''
   }
   return style;
 };

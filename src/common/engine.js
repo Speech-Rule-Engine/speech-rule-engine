@@ -347,6 +347,7 @@ sre.Engine.prototype.setDynamicCstr = function(opt_dynamic) {
       }
     }
   }
+  sre.Engine.DOMAIN_TO_STYLES[this.domain] = this.style;
   var dynamic = [this.locale, this.modality, this.domain, this.style].join('.');
   var fallback = sre.DynamicProperties.create(
       [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]],
