@@ -2456,6 +2456,16 @@ sre.SemanticProcessor.proof = function(node, semantics, parse) {
 
 
 sre.SemanticProcessor.prototype.proof = function(node, semantics, parse) {
+  // Axiom case!
+  if (semantics['axiom']) {
+    var cleaned = this.cleanInference(node.childNodes);
+    var axiom = cleaned.length ? this.factory_.makeBranchNode(
+      sre.SemanticAttr.Type.INFERENCE, parse(cleaned), []) :
+        this.factory_.makeEmptyNode();
+    axiom.role = sre.SemanticAttr.Role.AXIOM;
+    axiom.mathmlTree = node;
+    return axiom;
+  }
   if (!semantics['inference']) {
     console.log('Noise');
     // do some preprocessing!
@@ -2496,29 +2506,21 @@ sre.SemanticProcessor.prototype.inference = function(node, semantics, parse) {
 };
 
 sre.SemanticProcessor.prototype.getLabel = function(node, children, parse, side) {
-  var label = children.find(function(x) {
-    return sre.SemanticProcessor.findSemantics(x, 'prooflabel', side);
-  });
-  console.log(label);
+  var label = this.findNestedRow(children ,"prooflabel", side);
   var sem = this.factory_.makeBranchNode(sre.SemanticAttr.Type.RULELABEL,
                                          parse(label.childNodes), []);
   sem.role = side;
+  sem.mathmlTree = label;
   return sem;
 };
 
 
 sre.SemanticProcessor.prototype.getTable = function(node, children, parse) {
-  console.log('Getting table');
-  console.log(node);
-  var inf = children.length ? children.find(function(x) {
-    return sre.SemanticProcessor.findSemantics(x, 'inferenceRule');
-  }) : node;
-  console.log('Getting top row');
-  console.log(inf);
+  var inf = children.length ?
+      this.findNestedRow(children, "inferenceRule", null) // This needs to be optional.
+      : node;
   var premTable = inf.childNodes[0].childNodes[0].childNodes[0];
   var topRow = sre.DomUtil.toArray(premTable.childNodes[0].childNodes);
-  console.log(premTable);
-  console.log(topRow);
   var premNodes = [];
   var i = 1;
   for (var cell of topRow) {
@@ -2528,7 +2530,7 @@ sre.SemanticProcessor.prototype.getTable = function(node, children, parse) {
     i++;
   }
   var premises = parse(premNodes);
-  var botRow = inf.childNodes[1];
+  var botRow = inf.childNodes[1]; // TODO: Is this a cleanup case?
   var conclusion = parse(botRow.childNodes[0].childNodes)[0];
   var prem = this.factory_.makeBranchNode(
     sre.SemanticAttr.Type.PREMISES, premises, []);
@@ -2538,6 +2540,41 @@ sre.SemanticProcessor.prototype.getTable = function(node, children, parse) {
   conc.mathmlTree = botRow.childNodes[0].childNodes[0];
   return [conc, prem];
 };
+
+
+sre.SemanticProcessor.prototype.findNestedRow = function(a, b, c) {
+  return this.findNestedRow_(a, b, 0, c);
+};
+
+
+sre.SemanticProcessor.prototype.findNestedRow_ = function(a, b, c, d) {
+  if (c > 3) {
+    return null;
+  }
+  for (var e = 0, f; f = a[e]; e++) {
+    var g = sre.DomUtil.tagName(f);
+    if(g !== 'MSPACE') {
+      if(g === 'MROW') {
+        return this.findNestedRow_(sre.DomUtil.toArray(f.childNodes), b, c + 1, d);
+      }
+      if(sre.SemanticProcessor.findSemantics(f, b, d)) {
+        return f;
+      }
+    }
+  }
+  return null;
+};
+
+
+// Removes mspaces in a row.
+sre.SemanticProcessor.prototype.cleanInference = function(nodes) {
+  return sre.DomUtil.toArray(nodes).filter(function(x) {
+    return sre.DomUtil.tagName(x) !== 'MSPACE';
+  });
+};
+
+
+
 
 // Utilities
 // This one should be prefix specific!
@@ -2567,7 +2604,7 @@ sre.SemanticProcessor.getSemantics = function(node) {
     return null;
   }
   return sre.SemanticProcessor.separateSemantics(semantics);
-}
+};
 
 sre.SemanticProcessor.removePrefix = function(name) {
   var [prefix, ...rest] = name.split('_');
