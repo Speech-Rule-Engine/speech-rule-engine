@@ -2474,6 +2474,7 @@ sre.SemanticProcessor.prototype.proof = function(node, semantics, parse) {
   var inference = this.inference(node, semantics, parse);
   if (semantics['proof']) {
     inference.role = sre.SemanticAttr.Role.PROOF;
+    inference.childNodes[0].role = sre.SemanticAttr.Role.FINAL;
   }
   return inference;
 };
