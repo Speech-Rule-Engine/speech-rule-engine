@@ -33,7 +33,7 @@ sre.Variables = function() {};
  * @const
  * @type {string}
  */
-sre.Variables.VERSION = '3.0.0-beta.5';
+sre.Variables.VERSION = '3.0.0-beta.6';
 
 
 /**
@@ -49,7 +49,7 @@ sre.Variables.LOCALES = ['en', 'es', 'fr', 'nemeth'];
  * @const
  * @type {string}
  */
-sre.Variables.mathjaxVersion = '3.0.0-beta.4';
+sre.Variables.mathjaxVersion = '3.0.0';
 
 
 /**
