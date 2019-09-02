@@ -181,7 +181,7 @@ sre.SemanticTree.prototype.replaceNode = function(oldNode, newNode) {
 
 /**
  * Turns tree into JSON format.
- * @return {JSONType} The JSON object for the tree. 
+ * @return {JSONType} The JSON object for the tree.
  */
 sre.SemanticTree.prototype.toJson = function() {
   var json = /** @type {JSONType} */({});

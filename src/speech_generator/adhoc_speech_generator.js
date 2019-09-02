@@ -42,6 +42,6 @@ goog.inherits(sre.AdhocSpeechGenerator, sre.AbstractSpeechGenerator);
  */
 sre.AdhocSpeechGenerator.prototype.getSpeech = function(node, xml) {
   var speech = this.generateSpeech(node, xml);
-  node.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
+  node.setAttribute(this.modality, speech);
   return speech;
 };

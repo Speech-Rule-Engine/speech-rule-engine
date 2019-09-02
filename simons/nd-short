@@ -5,3 +5,14 @@
 
 
 \newcommand\hyp[1]{{\scriptstyle Hyp^{#1}}}\newcommand\imp{\rightarrow}\newcommand\andi{{\wedge_I}}\newcommand\impi{{\imp_I}}\newcommand\impe{{\imp_E}}\newcommand\rit{{\scriptstyle Rit}}\begin{prooftree}  \AXC{}  \RL{$\hyp{1}$}  \UIC{$P$}  \AXC{$P\imp Q$}  \RL{$\impe$}  \BIC{$Q^2$}  \AXC{$Q\imp R$}   \RL{$\impe$}   \BIC{$R$}   \AXC{$Q$}  \RL{$\rit^2$}   \UIC{$Q$}  \RL{$\andi$}  \BIC{$Q\wedge R$}  \RL{$\impi^1$}  \UIC{$P\imp Q\wedge R$}\end{prooftree}
+
+\\newcommand\\hyp[1]{{\\scriptstyle Hyp^{#1}}}\\newcommand\\imp{\\rightarrow}\\newcommand\\andi{{\\wedge_I}}\\newcommand\\impi{{\\imp_I}}\\newcommand\\impe{{\\imp_E}}\\newcommand\\rit{{\\scriptstyle Rit}}\\begin{prooftree}  \\AXC{}  \\RL{\$\\hyp{1}\$}  \\UIC{\$P\$}  \\AXC{\$P\\imp Q\$}  \\RL{\$\\impe\$}  \\BIC{\$Q^2\$}  \\AXC{\$Q\\imp R\$}   \\RL{\$\\impe\$}   \\BIC{\$R\$}   \\AXC{\$Q\$}  \\RL{\$\\rit^2\$}   \\UIC{\$Q\$}  \\RL{\$\\andi\$}  \\BIC{\$Q\\wedge R\$}  \\RL{\$\\impi^1\$}  \\UIC{\$P\\imp Q\\wedge R\$}\\end{prooftree}
+
+
+// No labels:
+
+\newcommand\hyp[1]{{\scriptstyle Hyp^{#1}}}\newcommand\imp{\rightarrow}\newcommand\andi{{\wedge_I}}\newcommand\impi{{\imp_I}}\newcommand\impe{{\imp_E}}\newcommand\rit{{\scriptstyle Rit}}\begin{prooftree}  \AXC{}   \UIC{$P$}  \AXC{$P\imp Q$}   \BIC{$Q^2$}  \AXC{$Q\imp R$}     \BIC{$R$}   \AXC{$Q$}    \UIC{$Q$}   \BIC{$Q\wedge R$}  \UIC{$P\imp Q\wedge R$}\end{prooftree}
+
+
+\\newcommand\\hyp[1]{{\\scriptstyle Hyp^{#1}}}\\newcommand\\imp{\\rightarrow}\\newcommand\\andi{{\\wedge_I}}\\newcommand\\impi{{\\imp_I}}\\newcommand\\impe{{\\imp_E}}\\newcommand\\rit{{\\scriptstyle Rit}}\\begin{prooftree}  \\AXC{}   \\UIC{\$P\$}  \\AXC{\$P\\imp Q\$}   \\BIC{\$Q^2\$}  \\AXC{\$Q\\imp R\$}     \\BIC{\$R\$}   \\AXC{\$Q\$}    \\UIC{\$Q\$}   \\BIC{\$Q\\wedge R\$}  \\UIC{\$P\\imp Q\\wedge R\$}\\end{prooftree}
+

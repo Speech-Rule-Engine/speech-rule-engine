@@ -2,7 +2,7 @@
   {"category": "time",
    "mappings": {
      "default": {
-       "default": "nanoseconds"
+       "default": "nanosecond"
      }
    },
    "key": "ns",
@@ -11,7 +11,7 @@
   {"category": "time",
    "mappings": {
      "default": {
-       "default": "microseconds"
+       "default": "microsecond"
      }
    },
    "key": "µs",
@@ -20,7 +20,7 @@
   {"category": "time",
    "mappings": {
      "default": {
-       "default": "milliseconds"
+       "default": "millisecond"
      }
    },
    "key": "ms",
@@ -29,7 +29,7 @@
   {"category": "time",
    "mappings": {
      "default": {
-       "default": "seconds"
+       "default": "second"
      }
    },
    "key": "s",
@@ -38,7 +38,7 @@
   {"category": "time",
    "mappings": {
      "default": {
-       "default": "minutes"
+       "default": "minute"
      }
    },
    "key": "min",
@@ -47,7 +47,7 @@
   {"category": "time",
    "mappings": {
      "default": {
-       "default": "hours"
+       "default": "hour"
      }
    },
    "key": "h",

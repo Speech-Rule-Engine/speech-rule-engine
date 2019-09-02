@@ -21,12 +21,14 @@
 
 goog.provide('sre.HighlighterFactory');
 
+goog.require('sre.ChtmlHighlighter');
 goog.require('sre.ColorPicker');
 goog.require('sre.CssHighlighter');
 goog.require('sre.HtmlHighlighter');
 goog.require('sre.MmlCssHighlighter');
 goog.require('sre.MmlHighlighter');
 goog.require('sre.SvgHighlighter');
+goog.require('sre.SvgV3Highlighter');
 
 
 /**
@@ -38,16 +40,19 @@ goog.require('sre.SvgHighlighter');
  *          browser: (undefined|string)}} rendererInfo
  *     Information on renderer, browser. Has to at least contain the
  *     renderer field.
- * @return {?sre.Highlighter} A new highlighter.
+ * @return {!sre.Highlighter} A new highlighter.
  */
 sre.HighlighterFactory.highlighter = function(back, fore, rendererInfo) {
   var colorPicker = new sre.ColorPicker(back, fore);
   var renderer = (rendererInfo.renderer === 'NativeMML' &&
                   rendererInfo.browser === 'Safari') ?
-      'MML-CSS' : rendererInfo.renderer;
+      'MML-CSS' : ((rendererInfo.renderer === 'SVG' &&
+                    rendererInfo.browser === 'v3') ?
+                   'SVG-V3' : rendererInfo.renderer
+                  );
   var highlighter =
-      sre.HighlighterFactory.highlighterMapping_[renderer];
-  if (!highlighter) return null;
+      new (sre.HighlighterFactory.highlighterMapping_[renderer] ||
+           sre.HighlighterFactory.highlighterMapping_['NativeMML'])();
   highlighter.setColor(colorPicker);
   return highlighter;
 };
@@ -67,21 +72,22 @@ sre.HighlighterFactory.addEvents = function(node, events, rendererInfo) {
   var highlighter =
       sre.HighlighterFactory.highlighterMapping_[rendererInfo.renderer];
   if (highlighter) {
-    highlighter.addEvents(node, events);
+    (new highlighter()).addEvents(node, events);
   }
 };
 
 
 /**
- * @type {Object.<sre.Highlighter>}
+ * @type {Object.<function(new:sre.Highlighter)>}
  * @private
  */
 sre.HighlighterFactory.highlighterMapping_ = {
-  'SVG': new sre.SvgHighlighter(),
-  'NativeMML': new sre.MmlHighlighter(),
-  'HTML-CSS': new sre.HtmlHighlighter(),
-  'MML-CSS': new sre.MmlCssHighlighter(),
-  'CommonHTML': new sre.CssHighlighter(),
-  'CHTML': new sre.CssHighlighter()
+  'SVG': sre.SvgHighlighter,
+  'SVG-V3': sre.SvgV3Highlighter,
+  'NativeMML': sre.MmlHighlighter,
+  'HTML-CSS': sre.HtmlHighlighter,
+  'MML-CSS': sre.MmlCssHighlighter,
+  'CommonHTML': sre.CssHighlighter,
+  'CHTML': sre.ChtmlHighlighter
 };
 

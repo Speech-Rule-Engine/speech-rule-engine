@@ -84,6 +84,13 @@ sre.SemanticTreeRules.initCustomFunctions_ = function() {
  * @private
 */
 sre.SemanticTreeRules.initSemanticRules_ = function() {
+  defineRule(
+      'collapsed', 'default.default',
+      '[t] "collapsed"; [n] . (engine:modality=summary,grammar:collapsed)',
+      'self::*', '@alternative', 'not(contains(@grammar, "collapsed"))',
+      'self::*', 'self::*', 'self::*', 'self::*', 'self::*'
+  );
+
   // Initial rule
   defineRule(
       'stree', 'default.default',
@@ -373,7 +380,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
       'cases-cell', 'self::cell[@role="table"]');
 
   defineRule(
-      'empty-cell', 'mathspeak.default',
+      'empty-cell', 'default.default',
       '[t] "Blank"', 'self::cell', 'count(children/*)=0');
 
   // Rules for punctuated expressions.
@@ -475,7 +482,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   defineRule(
       'unit', 'default.default',
-      '[t] text() (grammar:annotation="unit":translate)',
+      '[t] text() (grammar:annotation="unit":translate:plural)',
       'self::identifier', '@role="unit"');
   defineRule(
       'unit-square', 'default.default',

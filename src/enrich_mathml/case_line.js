@@ -45,10 +45,12 @@ goog.inherits(sre.CaseLine, sre.AbstractEnrichCase);
 
 
 /**
- * @override
+ * Applicability test of the case.
+ * @param {!sre.SemanticNode} semantic The semantic node.
+ * @return {boolean} True if case is applicable.
  */
 sre.CaseLine.test = function(semantic) {
-  return semantic.mathmlTree && semantic.type === sre.SemanticAttr.Type.LINE;
+  return !!semantic.mathmlTree && semantic.type === sre.SemanticAttr.Type.LINE;
 };
 
 

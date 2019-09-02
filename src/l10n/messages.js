@@ -86,6 +86,8 @@ sre.Messages.MS_FUNC = {
    */
   COMBINE_ROOT_INDEX: function(postfix, index) {return postfix;}
 
+  // TODO: Add new functions.
+
 };
 
 
@@ -144,7 +146,13 @@ sre.Messages.ROLE = {
   'rowvector': '',
   'binomial': '',
   'squarematrix': '',
+  // Sets
+  'set empty': '',
+  'set extended': '',
+  'set singleton': '',
+  'set collection': '',
   // Roles of rows, lines, cells.
+  'label': '',
   'multiline': '',
   'matrix': '',
   'vector': '',
@@ -190,4 +198,42 @@ sre.Messages.NAVIGATE = {
   COLLAPSIBLE: '',
   EXPANDABLE: '',
   LEVEL: ''
+};
+
+
+/**
+ * Regular expressions for text, digits, decimal marks, etc.
+ * @type {Object.<string>}
+ */
+sre.Messages.REGEXP = {
+  TEXT: 'a-zA-Z',
+  NUMBER: '',
+  DECIMAL_MARK: '',
+  DIGIT_GROUP: '',
+  JOINER_SUBSUPER: ' '
+};
+
+
+/**
+ * Mapping of units to their plural if they are not built regularly.
+ * @type {Object.<string>}
+ */
+sre.Messages.PLURAL_UNIT = { };
+
+
+/**
+ * Function to build regular plurals for units.
+ * @type {function(string): string}
+ */
+sre.Messages.PLURAL = function(unit) {
+  return (/.*s$/.test(unit)) ? unit : unit + 's';
+};
+
+
+sre.Messages.NUMBERS = {
+  wordOrdinal: function(n) {return n.toString();},
+  simpleOrdinal: function(n) {return n.toString();},
+  numberToWords: function(n) {return n.toString();},
+  numberToOrdinal: function(n, m) {return n.toString();},
+  vulgarSep: '-'
 };

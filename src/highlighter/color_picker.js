@@ -21,6 +21,7 @@
  */
 
 goog.provide('sre.ColorPicker');
+goog.provide('sre.ContrastPicker');
 
 
 
@@ -203,4 +204,64 @@ sre.ColorPicker.prototype.hex = function() {
 sre.ColorPicker.toHex_ = function(number) {
   var hex = number.toString(16);
   return hex.length === 1 ? '0' + hex : hex;
+};
+
+
+// Auxiliary methods for HSL.
+//
+// TODO: Rewrite into ChannelColor_ format.
+/**
+ * @constructor
+ */
+sre.ContrastPicker = function() {
+  this.hue = 10;
+  this.sat = 100;
+  this.light = 50;
+  this.incr = 50;
+};
+
+sre.ContrastPicker.prototype.generate = function() {
+ return sre.ColorPicker.RGB2hex_(
+   sre.ColorPicker.rgb2RGB_(
+     sre.ColorPicker.hsl2rgb_(
+       this.hue, this.sat, this.light)));
+};
+
+sre.ContrastPicker.prototype.increment = function() {
+  this.hue = (this.hue + this.incr) % 360;
+};
+
+
+sre.ColorPicker.hsl2rgb_ = function(h, s, l) {
+  s = s > 1 ? s / 100 : s;
+  l = l > 1 ? l / 100 : l;
+  let c = (1 - Math.abs(2 * l - 1)) * s;
+  let x = c * (1 - Math.abs((h / 60) % 2 - 1));
+  let m = l - c / 2;
+  let [r, g, b] = [0, 0, 0];
+  if (0 <= h && h < 60) {
+    [r, g, b] = [c, x, 0];
+  } else if (60 <= h && h < 120) {
+    [r, g, b] = [x, c, 0];
+  } else if (120 <= h && h < 180) {
+    [r, g, b] = [0, c, x];
+  } else if (180 <= h && h < 240) {
+    [r, g, b] = [0, x, c];
+  } else if (240 <= h && h < 300) {
+    [r, g, b] = [x, 0, c];
+  } else if (300 <= h && h < 360) {
+    [r, g, b] = [c, 0, x];
+  }
+  return [r, g, b].map(x => x + m);
+};
+
+sre.ColorPicker.rgb2RGB_ = function([red, green, blue]) {
+  return {red: Math.round(255 * red),
+          green: Math.round(255 * green),
+          blue: Math.round(255 * blue)};
+};
+
+sre.ColorPicker.RGB2hex_ = function(col) {
+  return 'rgb(' + col.red + ',' + col.green + ',' +
+        col.blue + ')';
 };

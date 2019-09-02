@@ -88,7 +88,7 @@ sre.SystemExternal.document = sre.SystemExternal.documentSupported() ?
 sre.SystemExternal.xpath = sre.SystemExternal.documentSupported() ?
     document :
     function() {
-      var window = {document: {}};
+      var window = {document: {}, XPathResult: {}};
       var wgx = sre.SystemExternal.require('wicked-good-xpath');
       wgx.install(window);
       window.document.XPathResult = window.XPathResult;
@@ -110,14 +110,6 @@ sre.SystemExternal.commander = sre.SystemExternal.documentSupported() ?
  */
 sre.SystemExternal.fs = sre.SystemExternal.documentSupported() ?
     null : sre.SystemExternal.require('fs');
-
-
-/**
- *
- * @type {Object}
- */
-// sre.SystemExternal.xm = sre.SystemExternal.documentSupported() ?
-//     null : sre.SystemExternal.require('xml-mapping');
 
 
 /**

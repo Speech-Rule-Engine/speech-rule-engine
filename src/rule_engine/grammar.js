@@ -57,6 +57,16 @@ sre.Grammar = function() {
    */
   this.stateStack_ = [];
 
+  /**
+   * Current processing flags of the grammar. This is only filled during
+   * application of grammatical structures to an input text.
+   * @type {{adjust: (undefined|boolean),
+   *         preprocess: (undefined|boolean),
+   *         correct: (undefined|boolean),
+   *         translate: (undefined|boolean)}}
+   */
+  this.currentFlags = {};
+
 };
 goog.addSingletonGetter(sre.Grammar);
 
@@ -264,16 +274,17 @@ sre.Grammar.translateString_ = function(text) {
  * @return {string} The transformed text.
  */
 sre.Grammar.prototype.apply = function(text, opt_flags) {
-  var flags = opt_flags || {};
-  text = (flags.adjust || flags.preprocess) ?
+  this.currentFlags = opt_flags || {};
+  text = (this.currentFlags.adjust || this.currentFlags.preprocess) ?
       sre.Grammar.getInstance().preprocess(text) :
       text;
-  if (this.parameters_['translate'] || flags.translate) {
+  if (this.parameters_['translate'] || this.currentFlags.translate) {
     text = sre.Grammar.translateString_(text);
   }
-  text = (flags.adjust || flags.correct) ?
+  text = (this.currentFlags.adjust || this.currentFlags.correct) ?
       sre.Grammar.getInstance().correct(text) :
       text;
+  this.currentFlags = {};
   return text;
 };
 
@@ -331,10 +342,10 @@ sre.Grammar.correctFont_ = function(text, correction) {
     return text;
   }
   // TODO: Combine with localFont.
-  correction = sre.L10n.getLocale().FONT[correction] || correction;
-  var correctionComp = correction.split(/ |-/);
-  var regExp = new RegExp('^' + correctionComp.join('( |-)') + '( |-)');
-  return text.replace(regExp, '');
+  correction = sre.Messages.MS_FUNC.FONT_REGEXP(sre.L10n.getLocale().FONT[correction] || correction);
+  // var correctionComp = correction.split(/ |-/);
+  // var regExp = new RegExp('^' + correctionComp.join('( |-)') + '( |-)');
+  return text.replace(correction, '');
 };
 
 
@@ -349,8 +360,16 @@ sre.Grammar.addAnnotation_ = function(text, annotation) {
   return text + ':' + annotation;
 };
 
+sre.Grammar.noTranslateText_ = function(text) {
+  if (text.match(new RegExp('^[' + sre.Messages.REGEXP.TEXT + ']+$'))) {
+    sre.Grammar.getInstance().currentFlags['translate'] = false;
+  }
+  return text;
+};
 
 sre.Grammar.getInstance().setCorrection('ignoreFont',
                                         sre.Grammar.correctFont_);
 sre.Grammar.getInstance().setPreprocessor('annotation',
                                           sre.Grammar.addAnnotation_);
+sre.Grammar.getInstance().setPreprocessor('noTranslateText',
+                                          sre.Grammar.noTranslateText_);

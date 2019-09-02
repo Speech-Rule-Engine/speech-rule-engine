@@ -50,10 +50,12 @@ goog.inherits(sre.CaseTable, sre.AbstractEnrichCase);
 
 
 /**
- * @override
+ * Applicability test of the case.
+ * @param {!sre.SemanticNode} semantic The semantic node.
+ * @return {boolean} True if case is applicable.
  */
 sre.CaseTable.test = function(semantic) {
-  return semantic.mathmlTree &&
+  return !!semantic.mathmlTree &&
       (semantic.type === sre.SemanticAttr.Type.MATRIX ||
       semantic.type === sre.SemanticAttr.Type.VECTOR ||
       semantic.type === sre.SemanticAttr.Type.CASES);

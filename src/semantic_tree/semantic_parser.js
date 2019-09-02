@@ -42,6 +42,15 @@ sre.SemanticParser.prototype.parse = function(representation) { };
 
 
 /**
+ * Parse a list of element into a list of semantic nodes.
+ * @param {!Array.<T>} list A list of elements.
+ * @return {!Array.<sre.SemanticNode>} The list of resulting semantic
+ *     node.
+ */
+sre.SemanticParser.prototype.parseList = function(list) { };
+
+
+/**
  * @return {!sre.SemanticNodeFactory} The node factory of the parser.
  */
 sre.SemanticParser.prototype.getFactory = function() { };
@@ -112,3 +121,13 @@ sre.SemanticAbstractParser.prototype.getType = function() {
 sre.SemanticAbstractParser.prototype.parse = goog.abstractMethod;
 
 
+/**
+ * @override
+ */
+sre.SemanticAbstractParser.prototype.parseList = function(list) {
+  var result = [];
+  for (var i = 0, element; element = list[i]; i++) {
+    result.push(this.parse(element));
+  }
+  return result;
+};

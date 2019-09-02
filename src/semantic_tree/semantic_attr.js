@@ -1301,7 +1301,7 @@ sre.SemanticAttr = function() {
       role: sre.SemanticAttr.Role.PREFIXFUNC},
     {set: this.infixFunctions,
       type: sre.SemanticAttr.Type.OPERATOR,
-      role: sre.SemanticAttr.Role.MULTIPLICATION
+      role: sre.SemanticAttr.Role.INFIXFUNC
     }
     // TODO (sorge) Add some of the remaining elements.
   ];
@@ -1391,9 +1391,16 @@ sre.SemanticAttr.Type = {
   // Enclosed (counterpart for menclosed).
   ENCLOSE: 'enclose',
 
+  // Proofs and Inferences
+  INFERENCE: 'inference',
+  RULELABEL: 'rulelabel',
+  CONCLUSION: 'conclusion',
+  PREMISES: 'premises',
+  
   // General.
   UNKNOWN: 'unknown',
   EMPTY: 'empty'
+
 };
 
 
@@ -1523,9 +1530,22 @@ sre.SemanticAttr.Role = {
   CASES: 'cases',
   TABLE: 'table',
 
+  // Inference Roles
+  PROOF: 'proof',
+  LEFT: 'left',
+  RIGHT: 'right',
+  UP: 'up',
+  DOWN: 'down',
+  // conclusion types
+  FINAL: 'final',
+  // premise types
+  SINGLE: 'single',
+  HYP: 'hyp',
+  AXIOM: 'axiom',
+
   // General
-  UNKNOWN: 'unknown',
-  PROTECTED: 'protected'
+  UNKNOWN: 'unknown'
+  
 };
 
 

@@ -40,7 +40,7 @@ sre.SemanticNodeFactory = function() {
    * @type {number}
    * @private
    */
-  this.idCounter_ = 0;
+  this.idCounter_ = -1;
 
   /**
    * @type {sre.SemanticNodeCollator}
@@ -59,12 +59,30 @@ sre.SemanticNodeFactory = function() {
 
 };
 
-/** Creates a new node object.
- * @return {sre.SemanticNode} The newly created node.
+/**
+ * Creates a new node object.
+ * @param {number=} opt_id Optional ID. It will be maxed with the current id.
+ * @return {!sre.SemanticNode} The newly created node.
  * @private
  */
-sre.SemanticNodeFactory.prototype.createNode_ = function() {
-  return new sre.SemanticNode(this.idCounter_++);
+sre.SemanticNodeFactory.prototype.createNode_ = function(opt_id) {
+  if (typeof opt_id !== 'undefined') {
+    var id = opt_id;
+    this.idCounter_ = Math.max(this.idCounter_, id);
+  } else {
+    id = ++this.idCounter_;
+  }
+  return new sre.SemanticNode(id);
+};
+
+
+/**
+ * Creates a new node object with a given id.
+ * @param {number} id The node id.
+ * @return {!sre.SemanticNode} The newly created node.
+ */
+sre.SemanticNodeFactory.prototype.makeNode = function(id) {
+  return this.createNode_(id);
 };
 
 

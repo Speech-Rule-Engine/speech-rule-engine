@@ -38,6 +38,17 @@ goog.inherits(sre.SableRenderer, sre.XmlRenderer);
 /**
  * @override
  */
+sre.SableRenderer.prototype.finalize = function(str) {
+  return '<?xml version="1.0"?>' +
+      '<!DOCTYPE SABLE PUBLIC "-//SABLE//DTD SABLE speech mark up//EN"' +
+      ' "Sable.v0_2.dtd" []><SABLE>' +
+      this.getSeparator() + str + this.getSeparator() + '</SABLE>';
+};
+
+
+/**
+ * @override
+ */
 sre.SableRenderer.prototype.pause = function(pause) {
   return '<BREAK ' + 'MSEC="' +
       this.pauseValue(pause[sre.Engine.personalityProps.PAUSE]) + '"/>';

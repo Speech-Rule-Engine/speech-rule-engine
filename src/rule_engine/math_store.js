@@ -25,6 +25,8 @@ goog.require('sre.BaseRuleStore');
 goog.require('sre.BaseUtil');
 goog.require('sre.DynamicCstr');
 goog.require('sre.Engine');
+goog.require('sre.Locale.en');
+goog.require('sre.Messages');
 goog.require('sre.SpeechRule');
 goog.require('sre.Trie');
 
@@ -120,9 +122,23 @@ sre.MathStore.prototype.defineRulesAlias = function(name, query, var_args) {
         'Rule with name ' + name + ' does not exist.');
   }
   var cstrList = Array.prototype.slice.call(arguments, 2);
+  var keep = [];
+  var findKeep = function(rule) {
+    var cstr = rule.dynamicCstr.toString();
+    var action = rule.action.toString();
+    for (var i = 0, k; k = keep[i]; i++) {
+      if (k.action === action && k.cstr === cstr) {
+        return false;
+      }
+    }
+    keep.push({cstr: cstr, action: action});
+    return true;
+  };
   rules.forEach(goog.bind(
       function(rule) {
-        this.addAlias_(rule, query, cstrList);
+        if (findKeep(rule)) {
+          this.addAlias_(rule, query, cstrList);
+        }
       },
       this));
 };
@@ -199,22 +215,27 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
     // Nothing but whitespace: Ignore.
     return descs;
   }
+  // Case of numbers with whitespace for seperation.
+  var num = this.matchNumber_(str);
+  if (num && num.length === str.length) {
+    descs.push(this.evaluate_(num.number));
+    return descs;
+  }
   var split = sre.BaseUtil.removeEmpty(str.replace(/\s/g, ' ').split(' '));
   for (var i = 0, s; s = split[i]; i++) {
     if (s.length == 1) {
       descs.push(this.evaluate_(s));
-    } else if (s.match(/^[a-zA-Z]+$/)) {
+    } else if (s.match(new RegExp('^[' + sre.Messages.REGEXP.TEXT + ']+$'))) {
       descs.push(this.evaluate_(s));
     } else {
       // Break up string even further wrt. symbols vs alphanum substrings.
       var rest = s;
       while (rest) {
-        var num = rest.match(
-            /^((\d{1,3})(?=,)(,\d{3})*(\.\d+)?)|^\d*\.\d+|^\d+/);
-        var alpha = rest.match(/^[a-zA-Z]+/);
+        num = this.matchNumber_(rest);
+        var alpha = rest.match(new RegExp('^[' + sre.Messages.REGEXP.TEXT + ']+'));
         if (num) {
-          descs.push(this.evaluate_(num[0]));
-          rest = rest.substring(num[0].length);
+          descs.push(this.evaluate_(num.number));
+          rest = rest.substring(num.length);
         } else if (alpha) {
           descs.push(this.evaluate_(alpha[0]));
           rest = rest.substring(alpha[0].length);
@@ -235,6 +256,32 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
     }
   }
   return descs;
+};
+
+
+/**
+ * Matches a number with respect to locale. If it discovers it is a number in
+ * English writing, it will attempt to translate it.
+ * @param {string} str The string to match.
+ * @return {?{number: string, length: number}} The number and its length.
+ */
+sre.MathStore.prototype.matchNumber_ = function(str) {
+  var locNum = str.match(new RegExp('^' + sre.Messages.REGEXP.NUMBER));
+  var enNum = str.match(new RegExp('^' + sre.Locale.en.REGEXP.NUMBER));
+  if (!locNum && !enNum) {
+    return null;
+  }
+  var isEn = enNum && enNum[0] === str;
+  var isLoc = (locNum && locNum[0] === str) || !isEn;
+  if (isLoc) {
+    return {number: locNum[0], length: locNum[0].length};
+  }
+  var number = enNum[0].
+      replace(new RegExp(sre.Locale.en.REGEXP.DIGIT_GROUP, 'g'), 'X').
+      replace(new RegExp(sre.Locale.en.REGEXP.DECIMAL_MARK, 'g'),
+              sre.Messages.REGEXP.DECIMAL_MARK).
+      replace(/X/g, sre.Messages.REGEXP.DIGIT_GROUP);
+  return {number: number, length: enNum[0].length};
 };
 
 

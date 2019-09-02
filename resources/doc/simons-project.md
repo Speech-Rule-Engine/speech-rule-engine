@@ -1,6 +1,3 @@
-Improve:
-\textrm{exp}(A)=I+A+A^2/2!+A^3/3!+\dots
-
 ## Second semantic phase
 
 * Semantic ordering: Decides when a type/role combination is stronger than
@@ -64,6 +61,13 @@ https://tex.stackexchange.com/questions/196574/a-notation-for-continued-fraction
     sre.ClearspeakPart2Symbols.prototype.testVertLine003 is a good example.
   *
 
+### Other Notes:
+
+Improve:
+\textrm{exp}(A)=I+A+A^2/2!+A^3/3!+\dots
+
+(p-1)!^n
 
 Try this:
 https://math.meta.stackexchange.com/questions/28253/how-to-set-name-above-a-part-of-a-matrix
+

@@ -39,7 +39,7 @@ goog.require('sre.TrieNodeFactory');
 sre.Trie = function(store) {
   this.store = store;
   this.root = sre.TrieNodeFactory.getNode(
-      sre.TrieNode.Kind.ROOT, '', this.store);
+      sre.TrieNode.Kind.ROOT, '', this.store.context);
 };
 
 
@@ -49,14 +49,15 @@ sre.Trie = function(store) {
  */
 sre.Trie.prototype.addRule = function(rule) {
   var node = this.root;
+  var context = rule.context;
   var dynamicCstr = rule.dynamicCstr.getValues();
   for (var i = 0, l = dynamicCstr.length; i < l; i++) {
-    node = this.addNode_(node, dynamicCstr[i], sre.TrieNode.Kind.DYNAMIC);
+    node = this.addNode_(node, dynamicCstr[i], sre.TrieNode.Kind.DYNAMIC, context);
   }
-  node = this.addNode_(node, rule.precondition.query, sre.TrieNode.Kind.QUERY);
+  node = this.addNode_(node, rule.precondition.query, sre.TrieNode.Kind.QUERY, context);
   var booleans = rule.precondition.constraints;
   for (i = 0, l = booleans.length; i < l; i++) {
-    node = this.addNode_(node, booleans[i], sre.TrieNode.Kind.BOOLEAN);
+    node = this.addNode_(node, booleans[i], sre.TrieNode.Kind.BOOLEAN, context);
   }
   node.setRule(rule);
 };
@@ -67,13 +68,14 @@ sre.Trie.prototype.addRule = function(rule) {
  * @param {sre.TrieNode} node The current node in the trie.
  * @param {string} constraint The constraint string.
  * @param {sre.TrieNode.Kind} kind The kind of node.
+ * @param {sre.SpeechRuleContext} context The context of the speech rule to add.
  * @return {sre.TrieNode} The trie node corresponding to the constraint.
  * @private
  */
-sre.Trie.prototype.addNode_ = function(node, constraint, kind) {
+sre.Trie.prototype.addNode_ = function(node, constraint, kind, context) {
   var nextNode = node.getChild(constraint);
   if (!nextNode) {
-    nextNode = sre.TrieNodeFactory.getNode(kind, constraint, this.store);
+    nextNode = sre.TrieNodeFactory.getNode(kind, constraint, context);
     node.addChild(nextNode);
   }
   return nextNode;
@@ -225,4 +227,33 @@ sre.Trie.collectRules_ = function(root) {
     explore = explore.concat(node.getChildren());
   }
   return rules;
+};
+
+
+/**
+ * Collates information on dynamic constraint values of this trie.
+ * @param {Object=} opt_info Initial dynamic constraint information.
+ * @return {Object} The collated information.
+ */
+sre.Trie.prototype.enumerate = function(opt_info) {
+  return this.enumerate_(this.root, opt_info);
+};
+
+
+/**
+ * Collates information on dynamic constraint values of this trie.
+ * @param {sre.TrieNode} node The trie node from where to start.
+ * @param {Object|undefined} info Initial dynamic constraint information.
+ * @return {Object} The collated information.
+ */
+sre.Trie.prototype.enumerate_ = function(node, info) {
+  info = info || {};
+  var children = node.getChildren();
+  for (var i = 0, child; child = children[i]; i++) {
+    if (child.kind !== sre.TrieNode.Kind.DYNAMIC) {
+      continue;
+    }
+    info[child.getConstraint()] = this.enumerate_(child, info[child.getConstraint()]);
+  }
+  return info;
 };

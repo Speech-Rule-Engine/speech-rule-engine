@@ -19,7 +19,7 @@ SRC_DIR = $(abspath ./src)
 BIN_DIR = $(abspath ./bin)
 LIB_DIR = $(abspath ./lib)
 RES_DIR = $(abspath ./resources)
-SRC = $(SRC_DIR)/*/*.js
+SRC = $(SRC_DIR)/**/*.js
 TARGET = $(LIB_DIR)/sre.js
 DEPS = $(SRC_DIR)/deps.js
 BROWSER = $(LIB_DIR)/sre_browser.js
@@ -40,7 +40,7 @@ TEST_DIR = $(abspath ./tests)
 TEST_TARGET = $(LIB_DIR)/test.js
 TEST_DEPS = $(TEST_DIR)/deps.js
 TEST = $(BIN_DIR)/test_sre
-TEST_SRC = $(TEST_DIR)/*.js
+TEST_SRC = $(TEST_DIR)/**/*.js $(TEST_DIR)/*.js
 
 JSDOC = $(NODE_MODULES)/.bin/jsdoc
 JSDOC_FLAGS = -c $(PREFIX)/.jsdoc.json
@@ -76,8 +76,8 @@ COMPILER_FLAGS = $(EXTERN_FLAGS) $(ERROR_FLAGS)
 CLOSURE_LIB_NAME = google-closure-library
 CLOSURE_LIB = $(NODE_MODULES)/$(CLOSURE_LIB_NAME)
 CLOSURE_ROOT = $(CLOSURE_LIB)/closure/bin/build
-COMPILER_JAR = $(NODE_MODULES)/google-closure-compiler/compiler.jar
-CLOSURE_COMPILER = java -jar $(COMPILER_JAR) --dependency_mode=STRICT $(CLOSURE_LIB)/closure/goog/base.js $(ERROR_FLAGS) $(EXTERN_FLAGS) '!**externs.js' --output_wrapper_file $(LICENSE)
+COMPILER_JAR = $(NODE_MODULES)/google-closure-compiler/cli.js
+CLOSURE_COMPILER = $(COMPILER_JAR) --dependency_mode=STRICT $(CLOSURE_LIB)/closure/goog/base.js $(ERROR_FLAGS) $(EXTERN_FLAGS) '!**externs.js' --output_wrapper_file $(LICENSE)
 DEPSWRITER = python $(CLOSURE_ROOT)/depswriter.py
 
 space = $(null) #
@@ -141,7 +141,7 @@ $(INTERACTIVE):
 	@echo "process.env.SRE_JSON_PATH = '$(JSON_SRC)';" >> $@
 	@echo "require('$(DEPS)');" >> $@ 
 	@echo "goog.require('sre.System');" >> $@
-	@echo "sre.System.getInstance().setupEngine({'mode': sre.Engine.Mode.ASYNC});" >> $@
+	@echo "sre.System.setAsync()" >> $@
 
 clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax clean_iemaps
 	rm -f $(TARGET)

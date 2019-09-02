@@ -23,6 +23,7 @@ goog.provide('sre.AbstractWalker');
 
 goog.require('sre.AuditoryDescription');
 goog.require('sre.AuralRendering');
+goog.require('sre.ClearspeakPreferences');
 goog.require('sre.DomUtil');
 goog.require('sre.EnrichMathml.Attribute');
 goog.require('sre.EventUtil.KeyCode');
@@ -35,7 +36,6 @@ goog.require('sre.SpeechGenerator');
 goog.require('sre.SpeechGeneratorUtil');
 goog.require('sre.Walker');
 goog.require('sre.WalkerUtil');
-
 
 
 /**
@@ -58,6 +58,14 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
    * @type {!Node}
    */
   this.node = node;
+  if (this.node.id) {
+    this.id = this.node.id;
+  } else if (this.node.hasAttribute(sre.AbstractWalker.SRE_ID_ATTR)) {
+    this.id = this.node.getAttribute(sre.AbstractWalker.SRE_ID_ATTR);
+  } else {
+    this.node.setAttribute(sre.AbstractWalker.SRE_ID_ATTR, sre.AbstractWalker.ID_COUNTER);
+    this.id = sre.AbstractWalker.ID_COUNTER++;
+  }
 
   /**
    * The original xml/mathml node on which the walker is called.
@@ -98,7 +106,7 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
   this.keyMapping[sre.EventUtil.KeyCode.RIGHT] = goog.bind(this.right, this);
   this.keyMapping[sre.EventUtil.KeyCode.LEFT] = goog.bind(this.left, this);
   this.keyMapping[sre.EventUtil.KeyCode.TAB] = goog.bind(this.repeat, this);
-  this.keyMapping[sre.EventUtil.KeyCode.ENTER] = goog.bind(this.expand, this);
+  this.keyMapping[sre.EventUtil.KeyCode.DASH] = goog.bind(this.expand, this);
   this.keyMapping[sre.EventUtil.KeyCode.SPACE] = goog.bind(this.depth, this);
   this.keyMapping[sre.EventUtil.KeyCode.HOME] = goog.bind(this.home, this);
   this.keyMapping[sre.EventUtil.KeyCode.X] = goog.bind(this.summary, this);
@@ -106,6 +114,10 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
   this.keyMapping[sre.EventUtil.KeyCode.V] = goog.bind(this.virtualize, this);
   this.keyMapping[sre.EventUtil.KeyCode.P] = goog.bind(this.previous, this);
   this.keyMapping[sre.EventUtil.KeyCode.U] = goog.bind(this.undo, this);
+  this.keyMapping[sre.EventUtil.KeyCode.LESS] = goog.bind(this.previousRules,
+                                                          this);
+  this.keyMapping[sre.EventUtil.KeyCode.GREATER] = goog.bind(this.nextRules,
+                                                             this);
 
   this.dummy_ = function() {};
 
@@ -139,6 +151,14 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
   this.cursors = [];
 };
 
+
+
+/**
+ * Unique id counter for walkers. Needed to regain states on rerendering.
+ * @type {number}
+ */
+sre.AbstractWalker.ID_COUNTER = 0;
+sre.AbstractWalker.SRE_ID_ATTR = 'sre-explorer-id';
 
 /**
  * @override
@@ -176,7 +196,7 @@ sre.AbstractWalker.prototype.deactivate = function() {
   if (!this.isActive()) {
     return;
   }
-  this.highlighter.setState(this.node.id, this.primaryId());
+  sre.Walker.setState(this.id, this.primaryId());
   this.generator.end();
   this.toggleActive_();
 };
@@ -185,7 +205,10 @@ sre.AbstractWalker.prototype.deactivate = function() {
 /**
  * @override
  */
-sre.AbstractWalker.prototype.getFocus = function() {
+sre.AbstractWalker.prototype.getFocus = function(opt_update) {
+  if (opt_update) {
+    this.updateFocus();
+  }
   return this.focus_;
 };
 
@@ -203,6 +226,11 @@ sre.AbstractWalker.prototype.setFocus = function(focus) {
  */
 sre.AbstractWalker.prototype.getDepth = function() {
   return this.levels.depth() - 1;
+};
+
+
+sre.AbstractWalker.prototype.isSpeech = function() {
+  return this.generator.modality === sre.EnrichMathml.Attribute.SPEECH;
 };
 
 
@@ -247,13 +275,13 @@ sre.AbstractWalker.prototype.speech = function() {
  */
 sre.AbstractWalker.prototype.mergePrefix_ = function(speech, opt_pre) {
   var pre = opt_pre || [];
-  var prefix = this.prefix_();
+  var prefix = this.isSpeech() ? this.prefix_() : '';
   var aural = sre.AuralRendering.getInstance();
   if (prefix) speech.unshift(prefix);
   return aural.finalize(aural.merge(pre.concat(speech)));
 };
 
-  
+
 /**
  * @return {string} The prefix of the currently focused element.
  * @private
@@ -348,7 +376,7 @@ sre.AbstractWalker.prototype.repeat = function() {
  * @protected
  */
 sre.AbstractWalker.prototype.depth = function() {
-  this.moved = sre.Walker.move.DEPTH;
+  this.moved = this.isSpeech() ? sre.Walker.move.DEPTH : sre.Walker.move.REPEAT;
   return this.focus_.clone();
 };
 
@@ -421,7 +449,7 @@ sre.AbstractWalker.prototype.expand = function() {
     return this.focus_;
   }
   this.moved = sre.Walker.move.EXPAND;
-  expandable.onclick();
+  expandable.dispatchEvent(new Event('click'));
   return this.focus_.clone();
 };
 
@@ -466,7 +494,7 @@ sre.AbstractWalker.prototype.collapsible = function(node) {
  */
 sre.AbstractWalker.prototype.restoreState = function() {
   if (!this.highlighter) return;
-  var state = this.highlighter.getState(this.node.id);
+  var state = sre.Walker.getState(this.id);
   if (!state) return;
   var node = this.rebuilt.nodeDict[state];
   var path = [];
@@ -487,7 +515,18 @@ sre.AbstractWalker.prototype.restoreState = function() {
 
 
 /**
- * Finds the focus on the current level for a given node id.
+ * Updates the walker's focus by recomputing the DOM elements.
+ */
+sre.AbstractWalker.prototype.updateFocus = function() {
+  this.setFocus(sre.Focus.factory(
+    this.focus_.getSemanticPrimary().id.toString(),
+    this.focus_.getSemanticNodes().map(x => x.id),
+    this.rebuilt, this.node));
+};
+
+
+/**
+ * Finds the focus on the current level for a given semantic node id.
  * @param {number} id The id number.
  * @return {sre.Focus} The focus on a particular level.
  */
@@ -596,7 +635,7 @@ sre.AbstractWalker.prototype.focusFromId = function(id, ids) {
  * @protected
  */
 sre.AbstractWalker.prototype.summary = function() {
-  this.moved = sre.Walker.move.SUMMARY;
+  this.moved = this.isSpeech() ? sre.Walker.move.SUMMARY : sre.Walker.move.REPEAT;
   return this.focus_.clone();
 };
 
@@ -610,14 +649,8 @@ sre.AbstractWalker.prototype.summary_ = function() {
   var sid = sprimary.id.toString();
   var snode = this.rebuilt.xml.getAttribute('id') === sid ? this.rebuilt.xml :
       sre.DomUtil.querySelectorAllByAttrValue(this.rebuilt.xml, 'id', sid)[0];
-  var oldAlt = snode.getAttribute('alternative');
-  snode.setAttribute('alternative', 'summary');
-  var descrs = sre.SpeechGeneratorUtil.computeSpeechWithoutCache(
-      /** @type {!Node} */(snode));
-  var summary = sre.AuralRendering.getInstance().markup(descrs);
+  var summary = sre.SpeechGeneratorUtil.retrieveSummary(snode);
   var speech = this.mergePrefix_([summary]);
-  oldAlt ? snode.setAttribute('alternative', oldAlt) :
-      snode.removeAttribute('alternative');
   return speech;
 };
 
@@ -628,7 +661,7 @@ sre.AbstractWalker.prototype.summary_ = function() {
  * @protected
  */
 sre.AbstractWalker.prototype.detail = function() {
-  this.moved = sre.Walker.move.DETAIL;
+  this.moved = this.isSpeech() ? sre.Walker.move.DETAIL : sre.Walker.move.REPEAT;
   return this.focus_.clone();
 };
 
@@ -704,4 +737,76 @@ sre.AbstractWalker.prototype.undo = function() {
   }
   this.levels = previous.levels;
   return previous.focus;
+};
+
+
+/**
+ * @override
+ */
+sre.AbstractWalker.prototype.update = function(options) {
+  this.generator.setOptions(options);
+  sre.System.getInstance().setupEngine(options);
+  sre.SpeechGeneratorFactory.generator('Tree').getSpeech(this.node, this.xml);
+};
+
+
+// Facilities for keyboard driven rules cycling.
+// TODO: Refactor this into the speech generators.
+sre.AbstractWalker.prototype.nextRules = function() {
+  var options = this.generator.getOptions();
+  if (options.modality !== 'speech') {
+    return this.focus_;
+  }
+  // TODO: Check if domains exist for the current locale.
+  sre.Engine.DOMAIN_TO_STYLES[options.domain] = options.style;
+  options.domain = (options.domain === 'mathspeak') ? 'clearspeak' : 'mathspeak';
+  options.style = sre.Engine.DOMAIN_TO_STYLES[options.domain];
+  this.update(options);
+  this.moved = sre.Walker.move.REPEAT;
+  return this.focus_.clone();
+};
+
+
+sre.AbstractWalker.prototype.nextStyle = function(domain, style) {
+  if (domain === 'mathspeak') {
+    var styles = ['default', 'brief', 'sbrief'];
+    var index = styles.indexOf(style);
+    if (index === -1) {
+      return style;
+    }
+    return (index >= styles.length - 1) ? styles[0] : styles[index + 1];
+  }
+  if (domain === 'clearspeak') {
+    var prefs = sre.ClearspeakPreferences.getLocalePreferences();
+    var loc = prefs['en']; // TODO: use correct locale.
+    if (!loc) {
+      return 'default';  // TODO: return the previous one?
+    }
+    var smart = sre.ClearspeakPreferences.relevantPreferences(
+      this.getFocus().getSemanticPrimary());
+    var current = sre.ClearspeakPreferences.findPreference(style, smart);
+    var options = loc[smart].map(function(x) {
+      return x.split('_')[1];
+    });
+    var index = options.indexOf(current);
+    if (index === -1) {
+      return style;
+    }
+    var next = (index >= options.length - 1) ? options[0] : options[index + 1];
+    var result = sre.ClearspeakPreferences.addPreference(style, smart, next);
+    return result;
+  }
+  return style;
+};
+
+
+sre.AbstractWalker.prototype.previousRules = function() {
+  var options = this.generator.getOptions();
+  if (options.modality !== 'speech') {
+    return this.focus_;
+  }
+  options.style = this.nextStyle(options.domain, options.style);
+  this.update(options);
+  this.moved = sre.Walker.move.REPEAT;
+  return this.focus_.clone();
 };

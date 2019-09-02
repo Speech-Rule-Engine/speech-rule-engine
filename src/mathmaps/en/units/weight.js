@@ -1,83 +1,71 @@
 [{"locale": "en"},
-  {"category": "",
+  {"category": "weight",
    "mappings": {
      "default": {
-       "default": "pounds"
+       "default": "pound"
      }
    },
    "key": "lb",
    "names": ["lb", "lb."]
   },
-  {"category": "",
+  {"category": "weight",
    "mappings": {
      "default": {
-       "default": "long tons"
+       "default": "long ton"
      }
    },
    "key": "LT",
    "names": ["LT", "L.T."]
   },
-  {"category": "",
+  {"category": "weight",
    "mappings": {
      "default": {
-       "default": "ounces"
+       "default": "ounce"
      }
    },
    "key": "oz",
    "names": ["oz", "oz."]
   },
-  {
-    "key": "µg",
-    "names": [
-      "µg",
-      "mcg"
-    ],
-    "mappings": {
-      "default": {
-        "default": "micrograms"
-      }
-    }
-  },
-  {"category": "",
+  {"category": "weight",
    "mappings": {
      "default": {
-       "default": "grams"
+       "default": "gram"
      }
    },
    "key": "gr",
    "names": ["g", "gr"]
   },
-  {"category": "",
+  {"category": "weight",
    "mappings": {
      "default": {
-       "default": "kilograms"
+       "default": "kilogram"
      }
    },
    "key": "kg",
    "names": ["kg"]
   },
-  {"category": "",
+  {"category": "weight",
    "mappings": {
      "default": {
-       "default": "micrograms"
+       "default": "microgram"
      }
    },
    "key": "mcg",
-   "names": ["mg", "µg"]
+   "names": ["mcg", "µg"]
   },
-  {"category": "",
+  {"category": "weight",
    "mappings": {
      "default": {
-       "default": "milligrams"
+       "default": "milligram"
      }
    },
    "key": "mg",
    "names": ["mg"]
   },
-  {"category": "",
+  {"category": "weight",
    "mappings": {
      "default": {
-       "default": "tons"
+       "default": "ton"
      }
    },
    "key": "t",
