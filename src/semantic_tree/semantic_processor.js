@@ -2526,7 +2526,6 @@ sre.SemanticProcessor.prototype.inference = function(node, semantics, parse) {
   if (label === 'right' || label === 'both') {
     content.push(this.getLabel(node, children, parse, sre.SemanticAttr.Role.RIGHT));
   }
-  // TODO: Up vs Down
   var formulas = this.getFormulas(node, children, parse);
   var inference = this.factory_.makeBranchNode(
     sre.SemanticAttr.Type.INFERENCE,
@@ -2569,7 +2568,10 @@ sre.SemanticProcessor.prototype.getLabel = function(node, children, parse, side)
 sre.SemanticProcessor.prototype.getFormulas = function(node, children, parse) {
   var inf = children.length ?
       this.findNestedRow(children, "inferenceRule") : node;
-  var premTable = inf.childNodes[0].childNodes[0].childNodes[0];
+  var up = sre.SemanticProcessor.getSemantics(inf)['inferenceRule'] === 'up';
+  var premRow = up ? inf.childNodes[1] : inf.childNodes[0];
+  var concRow = up ? inf.childNodes[0] : inf.childNodes[1];
+  var premTable = premRow.childNodes[0].childNodes[0];
   var topRow = sre.DomUtil.toArray(premTable.childNodes[0].childNodes);
   var premNodes = [];
   var i = 1;
@@ -2580,15 +2582,14 @@ sre.SemanticProcessor.prototype.getFormulas = function(node, children, parse) {
     i++;
   }
   var premises = parse(premNodes);
-  var botRow = inf.childNodes[1];
   var conclusion =
-      parse(sre.DomUtil.toArray(botRow.childNodes[0].childNodes))[0];
+      parse(sre.DomUtil.toArray(concRow.childNodes[0].childNodes))[0];
   var prem = this.factory_.makeBranchNode(
     sre.SemanticAttr.Type.PREMISES, premises, []);
   prem.mathmlTree = /** @type {Element} */(premTable);
   var conc = this.factory_.makeBranchNode(
     sre.SemanticAttr.Type.CONCLUSION, [conclusion], []);
-  conc.mathmlTree = /** @type {Element} */(botRow.childNodes[0].childNodes[0]);
+  conc.mathmlTree = /** @type {Element} */(concRow.childNodes[0].childNodes[0]);
   return {conclusion: conc, premises: prem};
 };
 
