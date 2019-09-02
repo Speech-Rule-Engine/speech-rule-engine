@@ -86,13 +86,63 @@ sre.Cli.prototype.processor = function(v, processor) {
  */
 sre.Cli.prototype.enumerate = function() {
   this.system.setupEngine(this.setup);
-  var values = sre.Engine.getInstance().getAxisValues();
-  var output = '';
-  for (var axis in values) {
-    output += axis.charAt(0).toUpperCase() + axis.slice(1) + ' options: ' +
-        values[axis].slice().sort().join(', ') + '\n';
+  var length = sre.DynamicCstr.DEFAULT_ORDER.map(x => x.length);
+  var maxLength = function(obj, index) {
+    length[index] = Math.max.apply(null,
+                                   Object.keys(obj).
+                                   map(function(x) {return x.length;}).concat(
+                                     length[index]));
+  };
+  var compStr = function(str, length) {
+    return str + (new Array(length - str.length + 1)).join(' ');
+  };
+  var dynamic = sre.SpeechRuleEngine.getInstance().enumerate();
+  dynamic = sre.MathCompoundStore.getInstance().enumerate(dynamic);
+  var table = [];
+  maxLength(dynamic, 0);
+  for (var ax1 in dynamic) {
+    var clear1 = true;
+    var dyna1 = dynamic[ax1];
+    maxLength(dyna1, 1);
+    for (var ax2 in dyna1) {
+      var clear2 = true;
+      var dyna2 = dyna1[ax2];
+      maxLength(dyna2, 2);
+      for (var ax3 in dyna2) {
+        let styles = Object.keys(dyna2[ax3]).sort();
+        if (ax3 === 'clearspeak') {
+          var clear3 = true;
+          var prefs = sre.ClearspeakPreferences.getLocalePreferences(dynamic)[ax1];
+          for (var ax4 in prefs) {
+            table.push([compStr(clear1 ? ax1 : '', length[0]),
+                        compStr(clear2 ? ax2 : '', length[1]),
+                        compStr(clear3 ? ax3 : '', length[2]),
+                        prefs[ax4].join(', ')]);
+            clear3 = false;
+          }
+        } else {
+          table.push([compStr(clear1 ? ax1 : '', length[0]),
+                      compStr(clear2 ? ax2 : '', length[1]),
+                      compStr(ax3, length[2]), styles.join(', ')]);
+        }
+        clear1 = false;
+        clear2 = false;
+      }
+    }
   }
-  console.info('\n' + output);
+  var i = 0;
+  var output = '';
+  output += sre.DynamicCstr.DEFAULT_ORDER.slice(0, -1). // No topics yet.
+    map(function(x) {
+      return compStr(x, length[i++]);
+    }).join(' | ');
+  output += '\n';
+  length.forEach(function(x) {
+    output += new Array(x + 3).join('=');
+  });
+  output += '========================\n';
+  output += table.map(x => x.join(' | ')).join('\n');
+  console.info(output);
 };
 
 
@@ -228,7 +278,9 @@ sre.Cli.prototype.commandLine = function() {
              set, 'pprint').
       option('-v, --verbose', 'Verbose mode.').
       option('-l, --log [name]', 'Log file [name].').
-      on('--help', goog.bind(this.enumerate, this)).
+      option('--options', 'List engine setup options.').
+      on('option:options', goog.bind(function() {
+        this.enumerate(); sre.SystemExternal.process.exit(0);}, this)).
       parse(sre.SystemExternal.process.argv);
   this.system.setupEngine(this.setup);
   if (commander.verbose) {

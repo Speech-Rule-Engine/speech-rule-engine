@@ -255,8 +255,8 @@ The following is a list of command line options for the speech rule engine.
 | -v | --verbose       | Verbose mode. Print additional information, useful for debugging. |
 | -l | --log [name]    | Log file [name]. Verbose output is redirected to this file. |
 ||| If not given verbose output is printed to stdout. |
-| -h | --help   | Usage information and enumerates all available domains and styles. |
-||| Note that not every style is implemented in every domain. |
+| -h | --help   | Enumerates all command line options. |
+|    | --options | Enumerates all available options for locale, modality, domain and style. |
 | -V | --version  |  Outputs the version number |
 
 

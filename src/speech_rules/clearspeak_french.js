@@ -37,8 +37,6 @@ goog.require('sre.StoreUtil');
 sre.ClearspeakFrench = function() {
   sre.ClearspeakFrench.base(this, 'constructor');
 
-  this.parser = new sre.ClearspeakPreferences.Parser();
-
   this.locale = 'fr';
 };
 goog.inherits(sre.ClearspeakFrench, sre.MathStore);
@@ -96,28 +94,6 @@ var defineSpecialisedRule = sre.ClearspeakFrench.defineSpecialisedRule_;
 var addCQF = sre.ClearspeakFrench.addCustomQuery_;
 var addCSF = sre.ClearspeakFrench.addCustomString_;
 var addCTXF = sre.ClearspeakFrench.addContextFunction_;
-
-
-/**
- * Adds the annotators.
- * @private
- */
-sre.ClearspeakFrench.addAnnotators_ = function() {
-  sre.SemanticAnnotations.getInstance().register(
-      sre.ClearspeakUtil.simpleExpression());
-  sre.SemanticAnnotations.getInstance().register(
-      sre.ClearspeakUtil.unitExpression());
-};
-
-
-/**
- * Changes the comparators.
- * @private
- */
-sre.ClearspeakFrench.addComparator_ = function() {
-  sre.Engine.getInstance().comparators['clearspeak'] =
-      sre.ClearspeakPreferences.comparator;
-};
 
 
 /**
@@ -2286,9 +2262,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
 
 sre.ClearspeakFrench.getInstance().initializer = [
   sre.ClearspeakFrench.initCustomFunctions_,
-  sre.ClearspeakFrench.initClearspeakFrench_,
-  sre.ClearspeakFrench.addAnnotators_,
-  sre.ClearspeakFrench.addComparator_
+  sre.ClearspeakFrench.initClearspeakFrench_
 ];
 
 

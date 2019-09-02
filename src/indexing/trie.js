@@ -228,3 +228,32 @@ sre.Trie.collectRules_ = function(root) {
   }
   return rules;
 };
+
+
+/**
+ * Collates information on dynamic constraint values of this trie.
+ * @param {Object=} opt_info Initial dynamic constraint information.
+ * @return {Object} The collated information.
+ */
+sre.Trie.prototype.enumerate = function(opt_info) {
+  return this.enumerate_(this.root, opt_info);
+};
+
+
+/**
+ * Collates information on dynamic constraint values of this trie.
+ * @param {sre.TrieNode} node The trie node from where to start.
+ * @param {Object|undefined} info Initial dynamic constraint information.
+ * @return {Object} The collated information.
+ */
+sre.Trie.prototype.enumerate_ = function(node, info) {
+  info = info || {};
+  var children = node.getChildren();
+  for (var i = 0, child; child = children[i]; i++) {
+    if (child.kind !== sre.TrieNode.Kind.DYNAMIC) {
+      continue;
+    }
+    info[child.getConstraint()] = this.enumerate_(child, info[child.getConstraint()]);
+  }
+  return info;
+};
