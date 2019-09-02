@@ -2101,11 +2101,7 @@ sre.ClearspeakEnglishImpliedTimes.prototype.untestExtra008 = function() {
 /**
  * Testing ClearspeakEnglishImpliedTimes Example Extra009
  */
-<<<<<<< HEAD:tests/clearspeak_implied_times.js
-sre.ClearspeakImpliedTimes.prototype.untestExtra009 = function() {
-=======
-sre.ClearspeakEnglishImpliedTimes.prototype.testExtra009 = function() {
->>>>>>> develop:tests/en/clearspeak_english_implied_times.js
+sre.ClearspeakEnglishImpliedTimes.prototype.untestExtra009 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math style="background-color:#"> <semantics>  <mrow>   ' +
       '<mo>−</mo><mi>u</mi><mrow><mo>(</mo>    <mi>v</mi>   <mo>)</mo>' +
