@@ -33,13 +33,13 @@ goog.require('sre.SemanticOrdering');
  * @constructor
  */
 sre.SemanticDefault = function() {
-  
+
   /**
    * @type {!Object.<sre.SemanticMeaning>}
    * @private
    */
   this.map_ = {};
-  
+
 };
 
 
@@ -104,19 +104,20 @@ sre.SemanticDefault.prototype.size = function() {
 };
 
 
+
 /**
  * @constructor
  * @private
  * @template T
  */
 sre.SemanticCollator_ = function() {
-  
+
   /**
    * @type {!Object.<Array.<T>>}
    * @private
    */
   this.map_ = {};
-  
+
 };
 
 
@@ -171,7 +172,7 @@ sre.SemanticCollator_.prototype.retrieveNode = function(node) {
 
 
 /**
- * @return {sre.SemanticCollator_} An empty copy of the collator. 
+ * @return {sre.SemanticCollator_} An empty copy of the collator.
  * @protected
  */
 sre.SemanticCollator_.prototype.copy_ = goog.abstractMethod;
@@ -209,7 +210,7 @@ sre.SemanticCollator_.prototype.reduce = function() {
   for (var key in this.map_) {
     if (this.map_[key].length !== 1) {
       this.map_[key] =
-        sre.SemanticOrdering.getInstance().reduce(this.map_[key]);
+          sre.SemanticOrdering.getInstance().reduce(this.map_[key]);
     }
   }
 };
@@ -250,6 +251,7 @@ sre.SemanticCollator_.prototype.isMultiValued = function() {
 sre.SemanticCollator_.prototype.isEmpty = function() {
   return !Object.keys(this.map_).length;
 };
+
 
 
 /**
@@ -297,9 +299,10 @@ sre.SemanticNodeCollator.prototype.collateMeaning = function() {
     collator.map_[key] = this.map_[key].map(function(node) {
       return node.meaning();
     });
-  };
+  }
   return collator;
 };
+
 
 
 /**
@@ -321,7 +324,7 @@ sre.SemanticMeaningCollator.prototype.copy_ = function() {
 
 
 sre.SemanticMeaningCollator.prototype.addKey = function(key, entry) {
-  
+
 };
 
 
@@ -332,9 +335,9 @@ sre.SemanticMeaningCollator.prototype.add = function(symbol, entry) {
   var list = this.retrieve(symbol, entry.font);
   if (!list ||
       !list.find(
-        function(x) {return sre.SemanticAttr.equal(x, entry);}
+      function(x) {return sre.SemanticAttr.equal(x, entry);}
       )) {
-    sre.SemanticMeaningCollator.base(this,'add', symbol, entry);
+    sre.SemanticMeaningCollator.base(this, 'add', symbol, entry);
   }
 };
 
@@ -369,7 +372,7 @@ sre.SemanticMeaningCollator.prototype.toString = function() {
 
 /**
  * Derives a default mapping from the collator.
- * @return {sre.SemanticDefault} The unambiguous default mapping. 
+ * @return {sre.SemanticDefault} The unambiguous default mapping.
  */
 sre.SemanticMeaningCollator.prototype.default = function() {
   var def = new sre.SemanticDefault();
@@ -392,5 +395,5 @@ sre.SemanticMeaningCollator.prototype.newDefault = function() {
   this.reduce();
   var newDefault = this.default();
   return (oldDefault.size() !== newDefault.size()) ?
-    newDefault : null;
+      newDefault : null;
 };

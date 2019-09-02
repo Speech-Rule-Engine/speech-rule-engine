@@ -78,7 +78,7 @@ if (locale) {
   } else {
     try {
       sre.Tests.testList =
-        sre.Tests.testList.concat(sre['Speech' + locale + 'Test'].testList);
+          sre.Tests.testList.concat(sre['Speech' + locale + 'Test'].testList);
     } catch (e) { }
   }
 }

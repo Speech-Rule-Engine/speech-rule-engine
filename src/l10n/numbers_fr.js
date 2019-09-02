@@ -24,6 +24,7 @@ goog.require('sre.Messages');
 
 sre.Numbers.fr.SUB_ISO = 'fr';
 
+
 /**
  * String representation of zero to nineteen.
  * @type {Array.<string>}
@@ -194,11 +195,11 @@ sre.Numbers.fr.wordOrdinal = function(number) {
  * @return {string} The ordinal string.
  */
 sre.Numbers.fr.simpleOrdinal = function(number) {
-  var gender = /** @type{string} */(
+  var gender = /** @type {string} */(
       sre.Grammar.getInstance().getParameter('gender'));
   return number === 1 ?
-    number.toString() + (gender === 'male' ? 'er' : 're') :
-  number.toString() + 'e';
+      number.toString() + (gender === 'male' ? 'er' : 're') :
+      number.toString() + 'e';
 };
 
 

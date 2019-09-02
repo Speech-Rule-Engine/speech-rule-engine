@@ -1396,7 +1396,7 @@ sre.SemanticAttr.Type = {
   RULELABEL: 'rulelabel',
   CONCLUSION: 'conclusion',
   PREMISES: 'premises',
-  
+
   // General.
   UNKNOWN: 'unknown',
   EMPTY: 'empty'
@@ -1545,7 +1545,7 @@ sre.SemanticAttr.Role = {
 
   // General
   UNKNOWN: 'unknown'
-  
+
 };
 
 
@@ -1580,7 +1580,7 @@ sre.SemanticAttr.Font = {
 
 /**
  * @typedef {{type: sre.SemanticAttr.Type,
- *            role: sre.SemanticAttr.Role, 
+ *            role: sre.SemanticAttr.Role,
  *            font: sre.SemanticAttr.Font}}
  */
 sre.SemanticMeaning;
@@ -1594,8 +1594,8 @@ sre.SemanticMeaning;
  */
 sre.SemanticAttr.equal = function(meaning1, meaning2) {
   return meaning1.type === meaning2.type &&
-    meaning1.role === meaning2.role &&
-    meaning1.font === meaning2.font;
+      meaning1.role === meaning2.role &&
+      meaning1.font === meaning2.font;
 };
 
 

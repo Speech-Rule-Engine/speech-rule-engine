@@ -1341,12 +1341,12 @@ sre.SemanticProcessor.prototype.getFunctionArgs_ = function(
           partition.tail.unshift(partition.div);
         }
       }
-    // TODO: (simons) If we have a prefix/simple function or implicit with
-    //       prefix/simple function children only (i.e., a function composition)
-    //       then we combine them via a function composition. Function
-    //       composition is currently implicit, but we might want to remember
-    //       this a bit better.
-    funcNode = sre.SemanticProcessor.getInstance().functionNode_(func, arg);
+      // TODO: (simons) If we have a prefix/simple function or implicit with
+      //       prefix/simple function children only (i.e., a function composition)
+      //       then we combine them via a function composition. Function
+      //       composition is currently implicit, but we might want to remember
+      //       this a bit better.
+      funcNode = sre.SemanticProcessor.getInstance().functionNode_(func, arg);
       partition.tail.unshift(funcNode);
       return partition.tail;
       break;
@@ -2498,7 +2498,7 @@ sre.SemanticProcessor.prototype.proof = function(node, semantics, parse) {
   if (semantics['axiom']) {
     var cleaned = this.cleanInference(node.childNodes);
     var axiom = cleaned.length ? this.factory_.makeBranchNode(
-      sre.SemanticAttr.Type.INFERENCE, parse(cleaned), []) :
+        sre.SemanticAttr.Type.INFERENCE, parse(cleaned), []) :
         this.factory_.makeEmptyNode();
     axiom.role = sre.SemanticAttr.Role.AXIOM;
     axiom.mathmlTree = node;
@@ -2525,9 +2525,9 @@ sre.SemanticProcessor.prototype.inference = function(node, semantics, parse) {
   if (semantics['inferenceRule']) {
     var formulas = this.getFormulas(node, [], parse);
     var inference = this.factory_.makeBranchNode(
-      sre.SemanticAttr.Type.INFERENCE,
-      [formulas.conclusion, formulas.premises], []);
-  // Setting role
+        sre.SemanticAttr.Type.INFERENCE,
+        [formulas.conclusion, formulas.premises], []);
+    // Setting role
     return inference;
   }
   var label = semantics['labelledRule'];
@@ -2541,8 +2541,8 @@ sre.SemanticProcessor.prototype.inference = function(node, semantics, parse) {
   }
   var formulas = this.getFormulas(node, children, parse);
   var inference = this.factory_.makeBranchNode(
-    sre.SemanticAttr.Type.INFERENCE,
-    [formulas.conclusion, formulas.premises], content);
+      sre.SemanticAttr.Type.INFERENCE,
+      [formulas.conclusion, formulas.premises], content);
   // Setting role
   inference.mathmlTree = node;
   return inference;
@@ -2559,11 +2559,11 @@ sre.SemanticProcessor.prototype.inference = function(node, semantics, parse) {
  * @return {!sre.SemanticNode} The semantic node for the label.
  */
 sre.SemanticProcessor.prototype.getLabel = function(node, children, parse, side) {
-  var label = this.findNestedRow(children ,"prooflabel", side);
+  var label = this.findNestedRow(children, 'prooflabel', side);
   var sem = this.factory_.makeBranchNode(
-    sre.SemanticAttr.Type.RULELABEL,
-    parse(sre.DomUtil.toArray(label.childNodes)), []);
-  sem.role = /** @type{sre.SemanticAttr.Role} */(side);
+      sre.SemanticAttr.Type.RULELABEL,
+      parse(sre.DomUtil.toArray(label.childNodes)), []);
+  sem.role = /** @type {sre.SemanticAttr.Role} */(side);
   sem.mathmlTree = label;
   return sem;
 };
@@ -2580,7 +2580,7 @@ sre.SemanticProcessor.prototype.getLabel = function(node, children, parse, side)
  */
 sre.SemanticProcessor.prototype.getFormulas = function(node, children, parse) {
   var inf = children.length ?
-      this.findNestedRow(children, "inferenceRule") : node;
+      this.findNestedRow(children, 'inferenceRule') : node;
   var up = sre.SemanticProcessor.getSemantics(inf)['inferenceRule'] === 'up';
   var premRow = up ? inf.childNodes[1] : inf.childNodes[0];
   var concRow = up ? inf.childNodes[0] : inf.childNodes[1];
@@ -2598,10 +2598,10 @@ sre.SemanticProcessor.prototype.getFormulas = function(node, children, parse) {
   var conclusion =
       parse(sre.DomUtil.toArray(concRow.childNodes[0].childNodes))[0];
   var prem = this.factory_.makeBranchNode(
-    sre.SemanticAttr.Type.PREMISES, premises, []);
+      sre.SemanticAttr.Type.PREMISES, premises, []);
   prem.mathmlTree = /** @type {Element} */(premTable);
   var conc = this.factory_.makeBranchNode(
-    sre.SemanticAttr.Type.CONCLUSION, [conclusion], []);
+      sre.SemanticAttr.Type.CONCLUSION, [conclusion], []);
   conc.mathmlTree = /** @type {Element} */(concRow.childNodes[0].childNodes[0]);
   return {conclusion: conc, premises: prem};
 };
@@ -2616,7 +2616,7 @@ sre.SemanticProcessor.prototype.getFormulas = function(node, children, parse) {
  *     (and has its value if the latter is given.)
  */
 sre.SemanticProcessor.prototype.findNestedRow = function(
-  nodes, semantic, opt_value) {
+    nodes, semantic, opt_value) {
   return this.findNestedRow_(nodes, semantic, 0, opt_value);
 };
 
@@ -2632,7 +2632,7 @@ sre.SemanticProcessor.prototype.findNestedRow = function(
  * @return {Element} The first matching element in the row.
  */
 sre.SemanticProcessor.prototype.findNestedRow_ = function(
-  nodes, semantic, level, value) {
+    nodes, semantic, level, value) {
   if (level > 3) {
     return null;
   }
@@ -2641,7 +2641,7 @@ sre.SemanticProcessor.prototype.findNestedRow_ = function(
     if (tag !== 'MSPACE') {
       if (tag === 'MROW') {
         return this.findNestedRow_(
-          sre.DomUtil.toArray(node.childNodes), semantic, level + 1, value);
+            sre.DomUtil.toArray(node.childNodes), semantic, level + 1, value);
       }
       if (sre.SemanticProcessor.findSemantics(node, semantic, value)) {
         return node;
@@ -2720,9 +2720,9 @@ sre.SemanticProcessor.removePrefix = function(name) {
 sre.SemanticProcessor.separateSemantics = function(attr) {
   var result = {};
   attr.split(';').
-    forEach(function(x) {
-      var [name, value] = x.split(':');
-      result[sre.SemanticProcessor.removePrefix(name)] = value;
-    });
+      forEach(function(x) {
+        var [name, value] = x.split(':');
+        result[sre.SemanticProcessor.removePrefix(name)] = value;
+      });
   return result;
 };

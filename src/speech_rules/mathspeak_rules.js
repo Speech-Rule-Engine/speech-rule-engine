@@ -1298,20 +1298,20 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[t] "premises"',
       'self::inference');
   defineRule(
-      'inference','mathspeak.default',
+      'inference', 'mathspeak.default',
       '[t] "inference rule"; ; [m] content/*; [t] "with conclusion"; ' +
       '[n] children/*[1]; [t] "and"; [t] count(children/*[2]/children/*); ' +
       '[t] "premise"',
-      'self::inference','count(children/*[2]/children/*)<2');
+      'self::inference', 'count(children/*[2]/children/*)<2');
   defineRule(
-      'premise','mathspeak.default',
+      'premise', 'mathspeak.default',
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"premise ");',
       'self::premises');
   defineRule(
-      'conclusion','mathspeak.default',
-      '[n] children/*[1]','self::conclusion');
+      'conclusion', 'mathspeak.default',
+      '[n] children/*[1]', 'self::conclusion');
   defineRule(
-      'label','mathspeak.default',
+      'label', 'mathspeak.default',
       '[t] "label"; [n] children/*[1]',
       'self::rulelabel');
   defineRule(

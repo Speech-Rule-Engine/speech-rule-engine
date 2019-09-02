@@ -138,7 +138,7 @@ sre.SpeechGeneratorUtil.computePrefix_ = function(semantic) {
   return node ?
       sre.SpeechRuleEngine.getInstance().runInSetting(
       {'modality': 'prefix', 'domain': 'default', 'style': 'default',
-       'strict': true, 'cache': false, 'speech': true},
+        'strict': true, 'cache': false, 'speech': true},
       function() {return sre.SpeechRuleEngine.getInstance().evaluateNode(node);}
       ) :
       [];

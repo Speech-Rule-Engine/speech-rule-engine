@@ -207,6 +207,7 @@ sre.ColorPicker.toHex_ = function(number) {
 };
 
 
+
 // Auxiliary methods for HSL.
 //
 // TODO: Rewrite into ChannelColor_ format.
@@ -221,9 +222,9 @@ sre.ContrastPicker = function() {
 };
 
 sre.ContrastPicker.prototype.generate = function() {
- return sre.ColorPicker.RGB2hex_(
-   sre.ColorPicker.rgb2RGB_(
-     sre.ColorPicker.hsl2rgb_(
+  return sre.ColorPicker.RGB2hex_(
+      sre.ColorPicker.rgb2RGB_(
+      sre.ColorPicker.hsl2rgb_(
        this.hue, this.sat, this.light)));
 };
 
@@ -238,7 +239,7 @@ sre.ColorPicker.hsl2rgb_ = function(h, s, l) {
   let c = (1 - Math.abs(2 * l - 1)) * s;
   let x = c * (1 - Math.abs((h / 60) % 2 - 1));
   let m = l - c / 2;
-  let [r, g, b] = [0, 0, 0];
+  let[r, g, b] = [0, 0, 0];
   if (0 <= h && h < 60) {
     [r, g, b] = [c, x, 0];
   } else if (60 <= h && h < 120) {

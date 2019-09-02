@@ -59,6 +59,7 @@ sre.SemanticNodeFactory = function() {
 
 };
 
+
 /**
  * Creates a new node object.
  * @param {number=} opt_id Optional ID. It will be maxed with the current id.

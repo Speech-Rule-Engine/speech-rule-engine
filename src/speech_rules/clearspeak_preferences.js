@@ -209,16 +209,16 @@ sre.ClearspeakPreferences.Parser.prototype.parse = function(str) {
   if (style === sre.DynamicCstr.DEFAULT_VALUE) {
     return new sre.ClearspeakPreferences(
         {'locale': locale,
-         'modality': sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY],
-         'domain': 'clearspeak',
-         'style': sre.DynamicCstr.DEFAULT_VALUE}, {});
+          'modality': sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY],
+          'domain': 'clearspeak',
+          'style': sre.DynamicCstr.DEFAULT_VALUE}, {});
   }
   var preferences = this.fromPreference(style);
   return new sre.ClearspeakPreferences(
-    {'locale': locale,
-     'modality': sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY],
-     'domain': 'clearspeak',
-     'style': this.toPreference(preferences)}, preferences);
+      {'locale': locale,
+        'modality': sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY],
+        'domain': 'clearspeak',
+        'style': this.toPreference(preferences)}, preferences);
 };
 
 
@@ -307,9 +307,9 @@ sre.ClearspeakPreferences.getLocalePreferences = function(opt_dynamic) {
   if (!sre.ClearspeakPreferences.LOCALE_PREFERENCES) {
     var dynamic = opt_dynamic ||
         sre.MathCompoundStore.getInstance().enumerate(
-          sre.SpeechRuleEngine.getInstance().enumerate());
+        sre.SpeechRuleEngine.getInstance().enumerate());
     sre.ClearspeakPreferences.LOCALE_PREFERENCES =
-      sre.ClearspeakPreferences.getLocalePreferences_(dynamic);
+        sre.ClearspeakPreferences.getLocalePreferences_(dynamic);
   }
   return sre.ClearspeakPreferences.LOCALE_PREFERENCES;
 };
@@ -354,7 +354,7 @@ sre.ClearspeakPreferences.getSpeechExplorer = function(item) {
   }
   return explorers.find(function(ex) {
     return ex.speechGenerator &&
-      ex.speechGenerator.getOptions().modality === 'speech';
+        ex.speechGenerator.getOptions().modality === 'speech';
   });
 };
 
@@ -368,18 +368,18 @@ sre.ClearspeakPreferences.smartPreferences = function(item, locale) {
   }
   var explorer = sre.ClearspeakPreferences.getSpeechExplorer(item);
   var smart = sre.ClearspeakPreferences.relevantPreferences(
-    explorer.walker.getFocus().getSemanticPrimary());
+      explorer.walker.getFocus().getSemanticPrimary());
   // var smart = 'Bar'; // TODO: Lookup the right preference.
   var previous = sre.Engine.DOMAIN_TO_STYLES['clearspeak'];
   var items = [
     {type: 'radio',
-     content: 'No Preferences',
-     id: 'clearspeak-default',
-     variable: 'speechRules'},
+      content: 'No Preferences',
+      id: 'clearspeak-default',
+      variable: 'speechRules'},
     {type: 'radio',
-     content: 'Current Preferences',
-     id: 'clearspeak-' + previous,
-     variable: 'speechRules'},
+      content: 'Current Preferences',
+      id: 'clearspeak-' + previous,
+      variable: 'speechRules'},
     {type: 'rule'},
     {type: 'label', content: 'Preferences for ' + smart},
     {type: 'rule'}
@@ -387,11 +387,11 @@ sre.ClearspeakPreferences.smartPreferences = function(item, locale) {
   return items.concat(loc[smart].map(function(x) {
     var pair = x.split('_');
     return {type: 'radio',
-            content: pair[1],
-            id: 'clearspeak-' +
-            sre.ClearspeakPreferences.addPreference(previous, pair[0], pair[1]),
-            variable: 'speechRules'
-           };
+      content: pair[1],
+      id: 'clearspeak-' +
+          sre.ClearspeakPreferences.addPreference(previous, pair[0], pair[1]),
+      variable: 'speechRules'
+    };
   }));
 };
 
@@ -479,7 +479,7 @@ sre.ClearspeakPreferences.findPreference = function(prefs, kind) {
 
 sre.ClearspeakPreferences.addPreference = function(prefs, kind, value) {
   if (prefs === 'default') {
-    return kind + '_' +  value;
+    return kind + '_' + value;
   }
   let parsed = sre.ClearspeakPreferences.fromPreference(prefs);
   parsed[kind] = value;

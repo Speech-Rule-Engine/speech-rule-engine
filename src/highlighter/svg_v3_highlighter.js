@@ -89,8 +89,8 @@ sre.SvgV3Highlighter.prototype.unhighlightNode = function(info) {
   let previous = info.node.previousSibling;
   if (previous && previous.hasAttribute('sre-highlighter-added')) {
     info.foreground ?
-      info.node.setAttribute('fill', info.foreground) :
-      info.node.removeAttribute('fill');
+        info.node.setAttribute('fill', info.foreground) :
+        info.node.removeAttribute('fill');
     info.node.parentNode.removeChild(previous);
     return;
   }
@@ -103,7 +103,7 @@ sre.SvgV3Highlighter.prototype.unhighlightNode = function(info) {
  * @override
  */
 sre.SvgV3Highlighter.prototype.isMactionNode = function(node) {
-    return node.getAttribute('data-mml-node') === this.mactionName;
+  return node.getAttribute('data-mml-node') === this.mactionName;
 };
 
 

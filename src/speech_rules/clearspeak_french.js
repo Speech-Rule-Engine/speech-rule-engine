@@ -288,7 +288,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   );
 
   // Element/Member
-  // 
+  //
   // TODO: Maybe rename the preferences to reflect the actual expressions?
   defineRule(
       'set-member', 'clearspeak.default',
@@ -326,7 +326,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   //
   // Primes
   // This rule uses some redundancy for ordering!
-  // 
+  //
   // TODO: Fix together with units.
   defineRule(
       'prime', 'clearspeak.default',
@@ -1841,7 +1841,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   defineRule(
       'lines', 'clearspeak.default',
       '[p] (pause:short);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Ligne-:",' + // 
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Ligne-:",' + //
       'sepFunc:CTXFpauseSeparator,separator:"long");' +
       ' [p] (pause:long)', 'self::table');
   defineRuleAlias(

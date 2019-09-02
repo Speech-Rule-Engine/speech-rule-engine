@@ -53,9 +53,9 @@ goog.inherits(sre.CollapseRuleTest, sre.AbstractRuleTest);
  * @override
  */
 sre.CollapseRuleTest.prototype.executeRuleTest = function(
-  mml, answer, opt_style) {
+    mml, answer, opt_style) {
   mml = '<maction><mtext>action</mtext><mrow data-semantic-id="A">' +
-    mml + '</mrow></maction>';
+      mml + '</mrow></maction>';
   sre.CollapseRuleTest.base(this, 'executeRuleTest', mml, answer, opt_style);
 };
 
@@ -70,7 +70,7 @@ sre.CollapseRuleTest.prototype.header = function() {
       ' for (var i = 0, action; action = actions[i]; i++) {' +
       '  action.onclick(); } }';
   return header + '<script type="text/javascript">' + script +
-    '</script><button onclick="toggleAll()">Toggle All</button>\n';
+      '</script><button onclick="toggleAll()">Toggle All</button>\n';
 };
 
 

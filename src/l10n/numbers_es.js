@@ -21,6 +21,7 @@ goog.provide('sre.Numbers.es');
 
 goog.require('sre.Messages');
 
+
 /**
  * String representation of zero to nineteen.
  * @type {Array.<string>}
@@ -101,7 +102,7 @@ sre.Numbers.es.numberToOrdinal = function(num, plural) {
  * @return {string} The ordinal string.
  */
 sre.Numbers.es.simpleOrdinal = function(number) {
-  var gender = /** @type{string} */(
+  var gender = /** @type {string} */(
       sre.Grammar.getInstance().getParameter('gender'));
   return number.toString() + (gender === 'female' ? 'a' : 'o');
 };

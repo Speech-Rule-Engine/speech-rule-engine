@@ -339,7 +339,7 @@ sre.Engine.prototype.setDynamicCstr = function(opt_dynamic) {
   if (opt_dynamic) {
     var keys = Object.keys(opt_dynamic);
     for (var i = 0; i < keys.length; i++) {
-      var feature = /** @type{sre.DynamicCstr.Axis} */(keys[i]);
+      var feature = /** @type {sre.DynamicCstr.Axis} */(keys[i]);
       // Checks that we only have correct components.
       if (sre.DynamicCstr.DEFAULT_ORDER.indexOf(feature) !== -1) {
         var value = opt_dynamic[feature];

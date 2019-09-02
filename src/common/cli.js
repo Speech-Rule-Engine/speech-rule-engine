@@ -91,7 +91,7 @@ sre.Cli.prototype.enumerate = function() {
     length[index] = Math.max.apply(null,
                                    Object.keys(obj).
                                    map(function(x) {return x.length;}).concat(
-                                     length[index]));
+        length[index]));
   };
   var compStr = function(str, length) {
     return str + (new Array(length - str.length + 1)).join(' ');
@@ -133,9 +133,9 @@ sre.Cli.prototype.enumerate = function() {
   var i = 0;
   var output = '';
   output += sre.DynamicCstr.DEFAULT_ORDER.slice(0, -1). // No topics yet.
-    map(function(x) {
-      return compStr(x, length[i++]);
-    }).join(' | ');
+      map(function(x) {
+        return compStr(x, length[i++]);
+      }).join(' | ');
   output += '\n';
   length.forEach(function(x) {
     output += new Array(x + 3).join('=');

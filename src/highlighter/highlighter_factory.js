@@ -49,7 +49,7 @@ sre.HighlighterFactory.highlighter = function(back, fore, rendererInfo) {
       'MML-CSS' : ((rendererInfo.renderer === 'SVG' &&
                     rendererInfo.browser === 'v3') ?
                    'SVG-V3' : rendererInfo.renderer
-                  );
+      );
   var highlighter =
       new (sre.HighlighterFactory.highlighterMapping_[renderer] ||
            sre.HighlighterFactory.highlighterMapping_['NativeMML'])();

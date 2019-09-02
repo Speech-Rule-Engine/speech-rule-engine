@@ -244,7 +244,7 @@ sre.SpeechRuleEngine.prototype.evaluateNode_ = function(node) {
 sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
   var engine = sre.Engine.getInstance();
   sre.Debugger.getInstance().output(
-    engine.mode !== sre.Engine.Mode.HTTP ? node.toString() : node);
+      engine.mode !== sre.Engine.Mode.HTTP ? node.toString() : node);
   if (engine.cache) {
     var result = this.getCacheForNode_(node);
     if (result) {
@@ -678,12 +678,12 @@ sre.SpeechRuleEngine.prototype.updateConstraint_ = function() {
   }
   props[sre.DynamicCstr.Axis.LOCALE] = [locale];
   props[sre.DynamicCstr.Axis.MODALITY] =
-    // TODO: Improve, only summary allows fallback to speech.
-    [modality !== 'summary' ?
-     modality : sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY]];
+      // TODO: Improve, only summary allows fallback to speech.
+      [modality !== 'summary' ?
+       modality : sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY]];
   props[sre.DynamicCstr.Axis.DOMAIN] =
-    [modality !== 'speech' ?
-     sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN] : domain];
+      [modality !== 'speech' ?
+       sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN] : domain];
   var order = dynamic.getOrder();
   for (var i = 0, axis; axis = order[i]; i++) {
     if (!props[axis]) {

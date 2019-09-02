@@ -38,6 +38,7 @@ goog.require('sre.Walker');
 goog.require('sre.WalkerUtil');
 
 
+
 /**
  * @constructor
  * @implements {sre.Walker}
@@ -152,13 +153,13 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
 };
 
 
-
 /**
  * Unique id counter for walkers. Needed to regain states on rerendering.
  * @type {number}
  */
 sre.AbstractWalker.ID_COUNTER = 0;
 sre.AbstractWalker.SRE_ID_ATTR = 'sre-explorer-id';
+
 
 /**
  * @override
@@ -519,9 +520,9 @@ sre.AbstractWalker.prototype.restoreState = function() {
  */
 sre.AbstractWalker.prototype.updateFocus = function() {
   this.setFocus(sre.Focus.factory(
-    this.focus_.getSemanticPrimary().id.toString(),
-    this.focus_.getSemanticNodes().map(x => x.id),
-    this.rebuilt, this.node));
+      this.focus_.getSemanticPrimary().id.toString(),
+      this.focus_.getSemanticNodes().map(x => x.id),
+      this.rebuilt, this.node));
 };
 
 
@@ -783,7 +784,7 @@ sre.AbstractWalker.prototype.nextStyle = function(domain, style) {
       return 'default';  // TODO: return the previous one?
     }
     var smart = sre.ClearspeakPreferences.relevantPreferences(
-      this.getFocus().getSemanticPrimary());
+        this.getFocus().getSemanticPrimary());
     var current = sre.ClearspeakPreferences.findPreference(style, smart);
     var options = loc[smart].map(function(x) {
       return x.split('_')[1];

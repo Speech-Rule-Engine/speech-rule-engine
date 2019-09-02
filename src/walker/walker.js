@@ -130,6 +130,7 @@ sre.Walker.Cursor;
  */
 sre.Walker.STATE_ = {};
 
+
 /**
  * Removes a state for a particular node.
  * @param {string} id A node id.
