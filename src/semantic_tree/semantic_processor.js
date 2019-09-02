@@ -46,7 +46,7 @@ goog.addSingletonGetter(sre.SemanticProcessor);
 
 /**
  * Sets the node factory the processor is using.
- * @param {!sre.SemanticNodeFactory} factory new node factory.
+ * @param {!sre.SemanticNodeFactory} factory New node factory.
  */
 sre.SemanticProcessor.prototype.setNodeFactory = function(factory) {
   this.factory_ = factory;
@@ -2447,15 +2447,38 @@ sre.SemanticProcessor.prototype.propagateComposedFunction = function(node) {
 };
 
 
+//
 // Inference rules (Simons)
-// 
+//
+// This is top down parsing, so we have to keep the bottom-up processor
+// available.
+//
+/**
+ * Parses a proof node.
+ * @param {Element} node The node.
+ * @param {string} semantics Its semantics attribute value.
+ * @param {Function} parse The current semantic parser.
+ * @return {!sre.SemanticNode} The semantic node.
+ */
 sre.SemanticProcessor.proof = function(node, semantics, parse) {
   var attrs = sre.SemanticProcessor.separateSemantics(semantics);
   return sre.SemanticProcessor.getInstance().proof(node, attrs, parse);
 };
 
 
+/**
+ * Parses a proof node.
+ * @param {Element} node The node.
+ * @param {Object.<string>} semantics Association of semantic keys to values.
+ * @param {Function} parse The current semantic parser.
+ * @return {!sre.SemanticNode} The semantic node for the proof.
+ */
 sre.SemanticProcessor.prototype.proof = function(node, semantics, parse) {
+  if (!semantics['inference'] && !semantics['axiom']) {
+    console.log('Noise');
+    // do some preprocessing!
+    // Put in an invisible comma!
+  }
   // Axiom case!
   if (semantics['axiom']) {
     var cleaned = this.cleanInference(node.childNodes);
@@ -2466,11 +2489,6 @@ sre.SemanticProcessor.prototype.proof = function(node, semantics, parse) {
     axiom.mathmlTree = node;
     return axiom;
   }
-  if (!semantics['inference']) {
-    console.log('Noise');
-    // do some preprocessing!
-    // Put in an invisible comma!
-  }
   var inference = this.inference(node, semantics, parse);
   if (semantics['proof']) {
     inference.role = sre.SemanticAttr.Role.PROOF;
@@ -2480,11 +2498,19 @@ sre.SemanticProcessor.prototype.proof = function(node, semantics, parse) {
 };
 
 
+/**
+ * Parses a single inference node.
+ * @param {Element} node The node.
+ * @param {Object.<string>} semantics Association of semantic keys to values.
+ * @param {Function} parse The current semantic parser.
+ * @return {!sre.SemanticNode} The semantic node for the inference.
+ */
 sre.SemanticProcessor.prototype.inference = function(node, semantics, parse) {
   if (semantics['inferenceRule']) {
-    var [conclusion, premises] = this.getTable(node, [], parse);
+    var formulas = this.getFormulas(node, [], parse);
     var inference = this.factory_.makeBranchNode(
-      sre.SemanticAttr.Type.INFERENCE, [conclusion, premises], []);
+      sre.SemanticAttr.Type.INFERENCE,
+      [formulas.conclusion, formulas.premises], []);
   // Setting role
     return inference;
   }
@@ -2498,28 +2524,45 @@ sre.SemanticProcessor.prototype.inference = function(node, semantics, parse) {
     content.push(this.getLabel(node, children, parse, sre.SemanticAttr.Role.RIGHT));
   }
   // TODO: Up vs Down
-  var [conclusion, premises] = this.getTable(node, children, parse);
+  var formulas = this.getFormulas(node, children, parse);
   var inference = this.factory_.makeBranchNode(
-    sre.SemanticAttr.Type.INFERENCE, [conclusion, premises], content);
+    sre.SemanticAttr.Type.INFERENCE,
+    [formulas.conclusion, formulas.premises], content);
   // Setting role
   inference.mathmlTree = node;
   return inference;
 };
 
+
+/**
+ * Parses the label of an inference rule.
+ * @param {Element} node The inference node.
+ * @param {Array.<Element>} children The node's children containing the label.
+ * @param {Function} parse The current semantic parser.
+ * @param {string} side The side the label is on.
+ * @return {!sre.SemanticNode} The semantic node for the label.
+ */
 sre.SemanticProcessor.prototype.getLabel = function(node, children, parse, side) {
   var label = this.findNestedRow(children ,"prooflabel", side);
   var sem = this.factory_.makeBranchNode(sre.SemanticAttr.Type.RULELABEL,
                                          parse(label.childNodes), []);
-  sem.role = side;
+  sem.role = /** @type{sre.SemanticAttr.Role} */(side);
   sem.mathmlTree = label;
   return sem;
 };
 
 
-sre.SemanticProcessor.prototype.getTable = function(node, children, parse) {
+/**
+ * Retrieves and parses premises and conclusion of an inference rule.
+ * @param {Element} node The inference rule node.
+ * @param {Array.<Element>} children The node's children containing.
+ * @param {Function} parse The current semantic parser.
+ * @return {{conclusion: sre.SemanticNode, premises: sre.SemanticNode}} A pair
+ *       of conclusion and premises.
+ */
+sre.SemanticProcessor.prototype.getFormulas = function(node, children, parse) {
   var inf = children.length ?
-      this.findNestedRow(children, "inferenceRule", null) // This needs to be optional.
-      : node;
+      this.findNestedRow(children, "inferenceRule") : node;
   var premTable = inf.childNodes[0].childNodes[0].childNodes[0];
   var topRow = sre.DomUtil.toArray(premTable.childNodes[0].childNodes);
   var premNodes = [];
@@ -2531,35 +2574,56 @@ sre.SemanticProcessor.prototype.getTable = function(node, children, parse) {
     i++;
   }
   var premises = parse(premNodes);
-  var botRow = inf.childNodes[1]; // TODO: Is this a cleanup case?
+  var botRow = inf.childNodes[1];
   var conclusion = parse(botRow.childNodes[0].childNodes)[0];
   var prem = this.factory_.makeBranchNode(
     sre.SemanticAttr.Type.PREMISES, premises, []);
-  prem.mathmlTree = premTable;
+  prem.mathmlTree = /** @type {Element} */(premTable);
   var conc = this.factory_.makeBranchNode(
     sre.SemanticAttr.Type.CONCLUSION, [conclusion], []);
-  conc.mathmlTree = botRow.childNodes[0].childNodes[0];
-  return [conc, prem];
+  conc.mathmlTree = /** @type {Element} */(botRow.childNodes[0].childNodes[0]);
+  return {conclusion: conc, premises: prem};
 };
 
 
-sre.SemanticProcessor.prototype.findNestedRow = function(a, b, c) {
-  return this.findNestedRow_(a, b, 0, c);
+/**
+ * Find a inference element nested in a row.
+ * @param {Array.<Element>} nodes A node list.
+ * @param {string} semantic A semantic key.
+ * @param {string=} opt_value Optionally the semantic value.
+ * @return {Element} The first element in that row that contains the semantic key
+ *     (and has its value if the latter is given.)
+ */
+sre.SemanticProcessor.prototype.findNestedRow = function(
+  nodes, semantic, opt_value) {
+  return this.findNestedRow_(nodes, semantic, 0, opt_value);
 };
 
 
-sre.SemanticProcessor.prototype.findNestedRow_ = function(a, b, c, d) {
-  if (c > 3) {
+/**
+ * Searches the given row of elements for first element with the given semantic
+ * key or key/value pair if a value is not null. Ignores space elements and
+ * descents at most 3 levels.
+ * @param {Array.<Element>} nodes A node list.
+ * @param {string} semantic A semantic key.
+ * @param {number} level The maximum level to search.
+ * @param {string|undefined} value Optionally the semantic value.
+ * @return {Element} The first matching element in the row.
+ */
+sre.SemanticProcessor.prototype.findNestedRow_ = function(
+  nodes, semantic, level, value) {
+  if (level > 3) {
     return null;
   }
-  for (var e = 0, f; f = a[e]; e++) {
-    var g = sre.DomUtil.tagName(f);
-    if(g !== 'MSPACE') {
-      if(g === 'MROW') {
-        return this.findNestedRow_(sre.DomUtil.toArray(f.childNodes), b, c + 1, d);
+  for (var i = 0, node; node = nodes[i]; i++) {
+    var tag = sre.DomUtil.tagName(node);
+    if (tag !== 'MSPACE') {
+      if (tag === 'MROW') {
+        return this.findNestedRow_(
+          sre.DomUtil.toArray(node.childNodes), semantic, level + 1, value);
       }
-      if(sre.SemanticProcessor.findSemantics(f, b, d)) {
-        return f;
+      if (sre.SemanticProcessor.findSemantics(node, semantic, value)) {
+        return node;
       }
     }
   }
@@ -2567,7 +2631,11 @@ sre.SemanticProcessor.prototype.findNestedRow_ = function(a, b, c, d) {
 };
 
 
-// Removes mspaces in a row.
+/**
+ * Removes mspaces in a row.
+ * @param {!NodeList} nodes The list of nodes.
+ * @return {!Array.<Element>} The list with all space elements removed.
+ */
 sre.SemanticProcessor.prototype.cleanInference = function(nodes) {
   return sre.DomUtil.toArray(nodes).filter(function(x) {
     return sre.DomUtil.tagName(x) !== 'MSPACE';
@@ -2575,12 +2643,10 @@ sre.SemanticProcessor.prototype.cleanInference = function(nodes) {
 };
 
 
-
-
 // Utilities
 // This one should be prefix specific!
 /**
- * 
+ *
  * @param {Element} node The mml node.
  * @param {string} attr The attribute name.
  * @param {string=} opt_value The attribute value.
@@ -2599,6 +2665,12 @@ sre.SemanticProcessor.findSemantics = function(node, attr, opt_value) {
 };
 
 
+/**
+ * Retrieves the content of a semantic attribute in a node as an association
+ * list.
+ * @param {Element} node The mml node.
+ * @return {Object.<string>} The association list.
+ */
 sre.SemanticProcessor.getSemantics = function(node) {
   let semantics = node.getAttribute('semantics');
   if (!semantics) {
@@ -2607,11 +2679,23 @@ sre.SemanticProcessor.getSemantics = function(node) {
   return sre.SemanticProcessor.separateSemantics(semantics);
 };
 
+
+/**
+ * Removes prefix from a semantic attribute.
+ * @param {string} name The semantic attribute.
+ * @return {string} Name with prefix removed.
+ */
 sre.SemanticProcessor.removePrefix = function(name) {
   var [prefix, ...rest] = name.split('_');
   return rest.join('_');
 };
 
+
+/**
+ * Separates a semantic attribute into it's components.
+ * @param {string} attr Content of the semantic attribute.
+ * @return {Object.<string>} Association list of semantic attributes.
+ */
 sre.SemanticProcessor.separateSemantics = function(attr) {
   var result = {};
   attr.split(';').
