@@ -31,8 +31,8 @@ sre.ClearspeakEnglishImpliedTimes = function() {
   sre.ClearspeakEnglishImpliedTimes.base(this, 'constructor');
 
   /**
-* @override
-  */
+   * @override
+   */
   this.information = 'ClearspeakEnglishImpliedTimes rule tests.';
 
 };
@@ -2097,10 +2097,11 @@ sre.ClearspeakEnglishImpliedTimes.prototype.untestExtra008 = function() {
 };
 
 
+// TODO: (Simons) a is categorised as function!
 /**
  * Testing ClearspeakEnglishImpliedTimes Example Extra009
  */
-sre.ClearspeakEnglishImpliedTimes.prototype.testExtra009 = function() {
+sre.ClearspeakEnglishImpliedTimes.prototype.untestExtra009 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math style="background-color:#"> <semantics>  <mrow>   ' +
       '<mo>−</mo><mi>u</mi><mrow><mo>(</mo>    <mi>v</mi>   <mo>)</mo>' +
@@ -2108,7 +2109,7 @@ sre.ClearspeakEnglishImpliedTimes.prototype.testExtra009 = function() {
       '<mi>v</mi></mrow>   <mo>)</mo></mrow><mo>=</mo><mo>−</mo><mrow><mo>(' +
       '</mo>    <mrow>     <mi>u</mi><mi>v</mi></mrow>   <mo>)</mo></mrow>' +
       '</mrow>   </semantics></math>';
-  var speech = 'negative u of v, equals u of negative v, equals negative u v';
+  var speech = 'negative u times v, equals u times negative v, equals negative u v';
   this.executeRuleTest(mathml, speech, preference);
 };
 

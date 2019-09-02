@@ -48,6 +48,7 @@
  */
 
 goog.provide('sre.SemanticAttr');
+goog.provide('sre.SemanticMeaning');
 
 goog.require('sre.SemanticUtil');
 
@@ -924,7 +925,7 @@ sre.SemanticAttr = function() {
    * @type  {Array.<{set: Array.<string>,
    *         role: sre.SemanticAttr.Role,
    *         type: sre.SemanticAttr.Type,
-   *         font: sre.SemanticAttr.Font}>} The semantic meaning of the symbol.
+   *         font: sre.SemanticAttr.Font}>} Assigns sets of symbols to meaning.
    * @private
    */
   this.symbolSetToSemantic_ = [
@@ -1578,6 +1579,27 @@ sre.SemanticAttr.Font = {
 
 
 /**
+ * @typedef {{type: sre.SemanticAttr.Type,
+ *            role: sre.SemanticAttr.Role, 
+ *            font: sre.SemanticAttr.Font}}
+ */
+sre.SemanticMeaning;
+
+
+/**
+ * Equality on meaning objects.
+ * @param {sre.SemanticMeaning} meaning1 First meaning.
+ * @param {sre.SemanticMeaning} meaning2 Second meaning.
+ * @return {boolean} True if both contain the same field entries.
+ */
+sre.SemanticAttr.equal = function(meaning1, meaning2) {
+  return meaning1.type === meaning2.type &&
+    meaning1.role === meaning2.role &&
+    meaning1.font === meaning2.font;
+};
+
+
+/**
  * Lookup the semantic type of a symbol.
  * @param {string} symbol The symbol to which we want to determine the type.
  * @return {sre.SemanticAttr.Type} The semantic type of the symbol.
@@ -1600,8 +1622,7 @@ sre.SemanticAttr.prototype.lookupRole = function(symbol) {
 /**
  * Lookup the semantic meaning of a symbol in terms of type and role.
  * @param {string} symbol The symbol to which we want to determine the meaning.
- * @return {{role: sre.SemanticAttr.Role,
- *           type: sre.SemanticAttr.Type}} The semantic meaning of the symbol.
+ * @return {sre.SemanticMeaning} The semantic meaning of the symbol.
  */
 sre.SemanticAttr.lookupMeaning = function(symbol) {
   return sre.SemanticAttr.getInstance().lookupMeaning_(symbol);
@@ -1732,10 +1753,8 @@ sre.SemanticAttr.prototype.isMatchingFence_ = function(open, close) {
 
 /**
  * Initializes the dictionary mapping strings to meaning.
- * @return {Object.<{role: sre.SemanticAttr.Role,
- *           type: sre.SemanticAttr.Type,
- *           font: sre.SemanticAttr.Font}>} The dictionary mapping strings to
- * semantic attributes.
+ * @return {Object.<sre.SemanticMeaning>} The dictionary mapping strings to
+ *     semantic attributes.
  * @private
  */
 sre.SemanticAttr.prototype.initMeaning_ = function() {
@@ -1755,9 +1774,7 @@ sre.SemanticAttr.prototype.initMeaning_ = function() {
 /**
  * Lookup the semantic meaning of a symbol in terms of type and role.
  * @param {string} symbol The symbol to which we want to determine the meaning.
- * @return {{role: sre.SemanticAttr.Role,
- *           type: sre.SemanticAttr.Type,
- *           font: sre.SemanticAttr.Font}} The semantic meaning of the symbol.
+ * @return {sre.SemanticMeaning} The semantic meaning of the symbol.
  * @private
  */
 sre.SemanticAttr.prototype.lookupMeaning_ = function(symbol) {
