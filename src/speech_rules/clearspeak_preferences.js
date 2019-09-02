@@ -367,6 +367,12 @@ sre.ClearspeakPreferences.smartPreferences = function(item, locale) {
     return [];
   }
   var explorer = sre.ClearspeakPreferences.getSpeechExplorer(item);
+  if (!explorer) {
+    return [{type: 'radio',
+             content: 'Standard',
+             id: 'clearspeak-default',
+             variable: 'speechRules'}];
+  }
   var smart = sre.ClearspeakPreferences.relevantPreferences(
       explorer.walker.getFocus().getSemanticPrimary());
   // var smart = 'Bar'; // TODO: Lookup the right preference.
