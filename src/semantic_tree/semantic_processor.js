@@ -2457,7 +2457,8 @@ sre.SemanticProcessor.prototype.propagateComposedFunction = function(node) {
  * Parses a proof node.
  * @param {Element} node The node.
  * @param {string} semantics Its semantics attribute value.
- * @param {Function} parse The current semantic parser.
+ * @param {function(!Array.<Element>): !Array.<sre.SemanticNode>} parse The
+ *     current semantic parser for list of nodes.
  * @return {!sre.SemanticNode} The semantic node.
  */
 sre.SemanticProcessor.proof = function(node, semantics, parse) {
@@ -2470,7 +2471,8 @@ sre.SemanticProcessor.proof = function(node, semantics, parse) {
  * Parses a proof node.
  * @param {Element} node The node.
  * @param {Object.<string>} semantics Association of semantic keys to values.
- * @param {Function} parse The current semantic parser.
+ * @param {function(!Array.<Element>): !Array.<sre.SemanticNode>} parse The
+ *     current semantic parser for list of nodes.
  * @return {!sre.SemanticNode} The semantic node for the proof.
  */
 sre.SemanticProcessor.prototype.proof = function(node, semantics, parse) {
@@ -2502,7 +2504,8 @@ sre.SemanticProcessor.prototype.proof = function(node, semantics, parse) {
  * Parses a single inference node.
  * @param {Element} node The node.
  * @param {Object.<string>} semantics Association of semantic keys to values.
- * @param {Function} parse The current semantic parser.
+ * @param {function(!Array.<Element>): !Array.<sre.SemanticNode>} parse The
+ *     current semantic parser for list of nodes.
  * @return {!sre.SemanticNode} The semantic node for the inference.
  */
 sre.SemanticProcessor.prototype.inference = function(node, semantics, parse) {
@@ -2538,14 +2541,16 @@ sre.SemanticProcessor.prototype.inference = function(node, semantics, parse) {
  * Parses the label of an inference rule.
  * @param {Element} node The inference node.
  * @param {Array.<Element>} children The node's children containing the label.
- * @param {Function} parse The current semantic parser.
+ * @param {function(!Array.<Element>): !Array.<sre.SemanticNode>} parse The
+ *     current semantic parser for list of nodes.
  * @param {string} side The side the label is on.
  * @return {!sre.SemanticNode} The semantic node for the label.
  */
 sre.SemanticProcessor.prototype.getLabel = function(node, children, parse, side) {
   var label = this.findNestedRow(children ,"prooflabel", side);
-  var sem = this.factory_.makeBranchNode(sre.SemanticAttr.Type.RULELABEL,
-                                         parse(label.childNodes), []);
+  var sem = this.factory_.makeBranchNode(
+    sre.SemanticAttr.Type.RULELABEL,
+    parse(sre.DomUtil.toArray(label.childNodes)), []);
   sem.role = /** @type{sre.SemanticAttr.Role} */(side);
   sem.mathmlTree = label;
   return sem;
@@ -2556,7 +2561,8 @@ sre.SemanticProcessor.prototype.getLabel = function(node, children, parse, side)
  * Retrieves and parses premises and conclusion of an inference rule.
  * @param {Element} node The inference rule node.
  * @param {Array.<Element>} children The node's children containing.
- * @param {Function} parse The current semantic parser.
+ * @param {function(!Array.<Element>): !Array.<sre.SemanticNode>} parse The
+ *     current semantic parser for list of nodes.
  * @return {{conclusion: sre.SemanticNode, premises: sre.SemanticNode}} A pair
  *       of conclusion and premises.
  */
@@ -2575,7 +2581,8 @@ sre.SemanticProcessor.prototype.getFormulas = function(node, children, parse) {
   }
   var premises = parse(premNodes);
   var botRow = inf.childNodes[1];
-  var conclusion = parse(botRow.childNodes[0].childNodes)[0];
+  var conclusion =
+      parse(sre.DomUtil.toArray(botRow.childNodes[0].childNodes))[0];
   var prem = this.factory_.makeBranchNode(
     sre.SemanticAttr.Type.PREMISES, premises, []);
   prem.mathmlTree = /** @type {Element} */(premTable);

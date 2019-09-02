@@ -187,8 +187,8 @@ sre.SemanticUtil.hasEmptyTag = function(node) {
  * ignored if they have empty children.
  * Observe that this is currently not recursive, i.e. will not take care of
  * pathological cases, where content is hidden in incorrectly used tags!
- * @param {Array.<Element>} nodes The node list to be cleaned.
- * @return {Array.<Element>} The cleansed list.
+ * @param {!Array.<Element>} nodes The node list to be cleaned.
+ * @return {!Array.<Element>} The cleansed list.
  */
 sre.SemanticUtil.purgeNodes = function(nodes) {
   var nodeArray = [];
