@@ -20,6 +20,8 @@
 
 goog.provide('sre.SemanticUtil');
 
+goog.require('sre.DomUtil');
+
 
 
 /**
@@ -30,7 +32,7 @@ sre.SemanticUtil = function() { };
 
 /**
  * Merges keys of objects into an array.
- * @param {...Object.<string, string>} var_args Optional objects.
+ * @param {...Object.<string>} var_args Optional objects.
  * @return {Array.<string>} Array of all keys of the objects.
  */
 sre.SemanticUtil.objectsToKeys = function(var_args) {
@@ -42,7 +44,7 @@ sre.SemanticUtil.objectsToKeys = function(var_args) {
 
 /**
  * Merges values of objects into an array.
- * @param {...Object.<string, string>} var_args Optional objects.
+ * @param {...Object.<string>} var_args Optional objects.
  * @return {Array.<string>} Array of all values of the objects.
  */
 sre.SemanticUtil.objectsToValues = function(var_args) {
@@ -81,6 +83,7 @@ sre.SemanticUtil.unicodeToNumber = function(unicode) {
 };
 
 
+// TODO: Refactor with similar function in MathSimpleStore.
 /**
  * Transforms a numberic representation of a unicode character into its
  * corresponding string.
@@ -88,12 +91,12 @@ sre.SemanticUtil.unicodeToNumber = function(unicode) {
  * @return {string} The string representation.
  */
 sre.SemanticUtil.numberToUnicode = function(number) {
-  if (number >= 0x10000) {
-    var hi = (number - 0x10000) / 0x0400 + 0xD800;
-    var lo = (number - 0x10000) % 0x0400 + 0xDC00;
-    return String.fromCharCode(hi, lo);
+  if (number < 0x10000) {
+    return String.fromCharCode(number);
   }
-  return String.fromCharCode(number);
+  var hi = (number - 0x10000) / 0x0400 + 0xD800;
+  var lo = (number - 0x10000) % 0x0400 + 0xDC00;
+  return String.fromCharCode(hi, lo);
 };
 
 
@@ -118,16 +121,6 @@ sre.SemanticUtil.splitUnicode = function(str) {
 
 
 /**
- * Returns the tagname of an element node in upper case.
- * @param {Element} node The node.
- * @return {string} The node's tagname.
- */
-sre.SemanticUtil.tagName = function(node) {
-  return node.tagName.toUpperCase();
-};
-
-
-/**
  * List of MathML Tags that are considered to be leafs.
  * @type {Array.<string>}
  * @const
@@ -141,8 +134,8 @@ sre.SemanticUtil.LEAFTAGS = ['MO', 'MI', 'MN', 'MTEXT', 'MS'];
  * @const
  */
 sre.SemanticUtil.IGNORETAGS = [
-  'MERROR', 'MPHANTOM', 'MSPACE', 'MACTION', 'MALIGNGROUP', 'MALIGNMARK',
-  'NONE', 'MPRESCRIPTS'
+  'MERROR', 'MPHANTOM', 'MSPACE', 'MALIGNGROUP', 'MALIGNMARK',
+  'MPRESCRIPTS', 'ANNOTATION', 'ANNOTATION-XML'
 ];
 
 
@@ -151,7 +144,9 @@ sre.SemanticUtil.IGNORETAGS = [
  * @type {Array.<string>}
  * @const
  */
-sre.SemanticUtil.EMPTYTAGS = ['MATH', 'MROW', 'MPADDED', 'MSTYLE'];
+sre.SemanticUtil.EMPTYTAGS = [
+  'MATH', 'MROW', 'MPADDED', 'MACTION', 'NONE', 'MSTYLE', 'SEMANTICS'
+];
 
 
 /**
@@ -160,7 +155,7 @@ sre.SemanticUtil.EMPTYTAGS = ['MATH', 'MROW', 'MPADDED', 'MSTYLE'];
  * @return {boolean} True if element is an math node.
  */
 sre.SemanticUtil.hasMathTag = function(node) {
-  return !!node && sre.SemanticUtil.tagName(node) === 'MATH';
+  return !!node && sre.DomUtil.tagName(node) === 'MATH';
 };
 
 
@@ -172,7 +167,7 @@ sre.SemanticUtil.hasMathTag = function(node) {
 sre.SemanticUtil.hasIgnoreTag = function(node) {
   return !!node &&
       sre.SemanticUtil.IGNORETAGS.indexOf(
-          sre.SemanticUtil.tagName(node)) !== -1;
+          sre.DomUtil.tagName(node)) !== -1;
 };
 
 
@@ -183,7 +178,7 @@ sre.SemanticUtil.hasIgnoreTag = function(node) {
  */
 sre.SemanticUtil.hasEmptyTag = function(node) {
   return !!node &&
-      sre.SemanticUtil.EMPTYTAGS.indexOf(sre.SemanticUtil.tagName(node)) !== -1;
+      sre.SemanticUtil.EMPTYTAGS.indexOf(sre.DomUtil.tagName(node)) !== -1;
 };
 
 
@@ -192,13 +187,13 @@ sre.SemanticUtil.hasEmptyTag = function(node) {
  * ignored if they have empty children.
  * Observe that this is currently not recursive, i.e. will not take care of
  * pathological cases, where content is hidden in incorrectly used tags!
- * @param {Array.<Element>} nodes The node list to be cleaned.
- * @return {Array.<Element>} The cleansed list.
+ * @param {!Array.<Element>} nodes The node list to be cleaned.
+ * @return {!Array.<Element>} The cleansed list.
  */
 sre.SemanticUtil.purgeNodes = function(nodes) {
   var nodeArray = [];
   for (var i = 0, node; node = nodes[i]; i++) {
-    var tagName = sre.SemanticUtil.tagName(node);
+    var tagName = sre.DomUtil.tagName(node);
     if (sre.SemanticUtil.IGNORETAGS.indexOf(tagName) != -1) continue;
     if (sre.SemanticUtil.EMPTYTAGS.indexOf(tagName) != -1 &&
         node.childNodes.length == 0)
@@ -207,3 +202,30 @@ sre.SemanticUtil.purgeNodes = function(nodes) {
   }
   return nodeArray;
 };
+
+
+/**
+ * Determines if an attribute represents zero or negative length.
+ * @param {string} length The lenght value.
+ * @return {boolean} True if the attribute represents zero length.
+ */
+sre.SemanticUtil.isZeroLength = function(length) {
+  if (!length) {
+    return false;
+  }
+  var negativeNamedSpaces = [
+    'negativeveryverythinmathspace', 'negativeverythinmathspace',
+    'negativethinmathspace', 'negativemediummathspace',
+    'negativethickmathspace', 'negativeverythickmathspace',
+    'negativeveryverythickmathspace'];
+  if (negativeNamedSpaces.indexOf(length) !== -1) {
+    return true;
+  }
+  var value = length.match(/[0-9\.]+/);
+  if (!value) {
+    return false;
+  }
+  return parseFloat(value) === 0 ? true : false;
+};
+
+

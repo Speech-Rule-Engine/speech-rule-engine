@@ -1,8 +1,13 @@
-bin/
 lib/
+tmp/
 *.bak
 *~
 deps.js
+bugs/
 samples/mathspeak/
+samples/mathml/
 src/closure-library
 *.html
+*.aux
+*.log
+node_modules/

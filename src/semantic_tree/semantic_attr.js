@@ -44,14 +44,11 @@
  * This file is part of the content script as we do not want to call out to the
  * background page every time we need to look up the semantic of a symbol.
  *
- * TODO (sorge) Move semantic tree translation into the background page
- *    alongside MathJax.
- *
  * @author sorge@google.com (Volker Sorge)
  */
 
 goog.provide('sre.SemanticAttr');
-goog.provide('sre.SemanticAttr.Role');
+goog.provide('sre.SemanticMeaning');
 
 goog.require('sre.SemanticUtil');
 
@@ -81,6 +78,13 @@ sre.SemanticAttr = function() {
         '﹉', '﹊', '﹋', '﹌', '﹐', '﹔', '﹕', '﹖', '﹗', '﹟', '﹠', '﹡', '﹨',
         '﹪', '﹫', '！', '＂', '＃', '％', '＆', '＇', '＊', '，', '／', '：',
         '；', '？', '＠', '＼'
+      ];
+  /**
+   * @type {Array.<string>}
+   */
+  this.colons =
+      [
+        ':', '：', '﹕'
       ];
   /**
    * @type {string}
@@ -122,13 +126,20 @@ sre.SemanticAttr = function() {
       [
         '\'', '′', '″', '‴', '‵', '‶', '‷', '⁗'
       ];
+  /**
+   * @type {Array.<string>}
+   */
+  this.degrees =
+      [
+        '°'
+      ];
 
   // Fences.
   // Fences are treated slightly differently from other symbols as we want to
   // record pairs of opening/closing and top/bottom fences.
   /**
    * Mapping opening to closing fences.
-   * @type {Object.<string, string>}
+   * @type {Object.<string>}
    */
   this.openClosePairs =
       {
@@ -157,7 +168,7 @@ sre.SemanticAttr = function() {
       };
   /**
    * Mapping top to bottom fences.
-   * @type {Object.<string, string>}
+   * @type {Object.<string>}
    */
   this.topBottomPairs =
       {
@@ -192,7 +203,7 @@ sre.SemanticAttr = function() {
   /** Array of all fences.
    * @type {Array.<string>}
    */
-  this.fences = this.neutralFences.concat(
+  this.allFences = this.neutralFences.concat(
       this.leftFences, this.rightFences, this.topFences, this.bottomFences);
 
   // Identifiers.
@@ -493,6 +504,34 @@ sre.SemanticAttr = function() {
       [
         'ℼ', 'ℽ', 'ℾ', 'ℿ'
       ];
+  /**
+   * @type {Array.<string>}
+   */
+  this.greekSpecial =
+      [
+        'ϐ', 'ϑ', 'ϕ', 'ϖ', 'ϗ', 'ϰ', 'ϱ', 'ϵ', '϶', 'ϴ'
+      ];
+  /**
+   * @type {Array.<string>}
+   */
+  this.greekSpecialBold =
+      [
+        '𝛜', '𝛝', '𝛞', '𝛟', '𝛠', '𝛡'
+      ];
+  /**
+   * @type {Array.<string>}
+   */
+  this.greekSpecialItalic =
+      [
+        '𝜖', '𝜗', '𝜘', '𝜙', '𝜚', '𝜛'
+      ];
+  /**
+   * @type {Array.<string>}
+   */
+  this.greekSpecialSansSerifBold =
+      [
+        '𝞊', '𝞋', '𝞌', '𝞍', '𝞎', '𝞏'
+      ];
 
   // Other alphabets.
   /**
@@ -518,7 +557,10 @@ sre.SemanticAttr = function() {
       this.latinDoubleStruckItalic, this.capitalGreek, this.smallGreek,
       this.capitalGreekBold, this.smallGreekBold, this.capitalGreekItalic,
       this.smallGreekItalic, this.capitalGreekSansSerifBold,
-      this.smallGreekSansSerifBold, this.greekDoubleStruck, this.hebrewLetters);
+      this.smallGreekSansSerifBold, this.greekDoubleStruck, this.greekSpecial,
+      this.greekSpecialBold, this.greekSpecialItalic,
+      this.greekSpecialSansSerifBold,
+      this.hebrewLetters);
 
   //Operator symbols
   /**
@@ -672,8 +714,21 @@ sre.SemanticAttr = function() {
   this.prefixOps =
       // TODO (sorge) Insert nabla, differential operators etc.
       [
-        '∀', '∃'
+        '∀', '∃', '∆', '∇', '∂', '∁', '∄'
       ];
+  /**
+   * @type {Array.<string>}
+   */
+  this.prefixOpsBold = ['𝛁', '𝛛', '𝟊', '𝟋'];
+  /**
+   * @type {Array.<string>}
+   */
+  this.prefixOpsItalic = ['𝛻', '𝜕'];
+  /**
+   * @type {Array.<string>}
+   */
+  this.prefixOpsSansSerifBold = ['𝝯', '𝞉'];
+
   /**
    * @type {Array.<string>}
    */
@@ -870,7 +925,7 @@ sre.SemanticAttr = function() {
    * @type  {Array.<{set: Array.<string>,
    *         role: sre.SemanticAttr.Role,
    *         type: sre.SemanticAttr.Type,
-   *         font: sre.SemanticAttr.Font}>} The semantic meaning of the symbol.
+   *         font: sre.SemanticAttr.Font}>} Assigns sets of symbols to meaning.
    * @private
    */
   this.symbolSetToSemantic_ = [
@@ -878,6 +933,10 @@ sre.SemanticAttr = function() {
     {set: this.generalPunctuations,
       type: sre.SemanticAttr.Type.PUNCTUATION,
       role: sre.SemanticAttr.Role.UNKNOWN
+    },
+    {set: this.colons,
+      type: sre.SemanticAttr.Type.PUNCTUATION,
+      role: sre.SemanticAttr.Role.COLON
     },
     {set: this.commas,
       type: sre.SemanticAttr.Type.PUNCTUATION,
@@ -898,6 +957,10 @@ sre.SemanticAttr = function() {
     {set: this.primes,
       type: sre.SemanticAttr.Type.PUNCTUATION,
       role: sre.SemanticAttr.Role.PRIME
+    },
+    {set: this.degrees,
+      type: sre.SemanticAttr.Type.PUNCTUATION,
+      role: sre.SemanticAttr.Role.DEGREE
     },
     // Fences
     {set: this.leftFences,
@@ -1103,6 +1166,26 @@ sre.SemanticAttr = function() {
       role: sre.SemanticAttr.Role.GREEKLETTER,
       font: sre.SemanticAttr.Font.DOUBLESTRUCK
     },
+    {set: this.greekSpecial,
+      type: sre.SemanticAttr.Type.IDENTIFIER,
+      role: sre.SemanticAttr.Role.GREEKLETTER,
+      font: sre.SemanticAttr.Font.NORMAL
+    },
+    {set: this.greekSpecialBold,
+      type: sre.SemanticAttr.Type.IDENTIFIER,
+      role: sre.SemanticAttr.Role.GREEKLETTER,
+      font: sre.SemanticAttr.Font.BOLD
+    },
+    {set: this.greekSpecialItalic,
+      type: sre.SemanticAttr.Type.IDENTIFIER,
+      role: sre.SemanticAttr.Role.GREEKLETTER,
+      font: sre.SemanticAttr.Font.ITALIC
+    },
+    {set: this.greekSpecialSansSerifBold,
+      type: sre.SemanticAttr.Type.IDENTIFIER,
+      role: sre.SemanticAttr.Role.GREEKLETTER,
+      font: sre.SemanticAttr.Font.SANSSERIFBOLD
+    },
     // Other alphabets.
     {set: this.hebrewLetters,
       type: sre.SemanticAttr.Type.IDENTIFIER,
@@ -1170,6 +1253,21 @@ sre.SemanticAttr = function() {
       type: sre.SemanticAttr.Type.PREFIXOP,
       role: sre.SemanticAttr.Role.PREFIXFUNC
     },
+    {set: this.prefixOpsBold,
+      type: sre.SemanticAttr.Type.PREFIXOP,
+      role: sre.SemanticAttr.Role.PREFIXFUNC,
+      font: sre.SemanticAttr.Font.BOLD
+    },
+    {set: this.prefixOpsItalic,
+      type: sre.SemanticAttr.Type.PREFIXOP,
+      role: sre.SemanticAttr.Role.PREFIXFUNC,
+      font: sre.SemanticAttr.Font.ITALIC
+    },
+    {set: this.prefixOpsSansSerifBold,
+      type: sre.SemanticAttr.Type.PREFIXOP,
+      role: sre.SemanticAttr.Role.PREFIXFUNC,
+      font: sre.SemanticAttr.Font.SANSSERIFBOLD
+    },
     // Relations
     {set: this.equalities,
       type: sre.SemanticAttr.Type.RELATION,
@@ -1203,14 +1301,14 @@ sre.SemanticAttr = function() {
       role: sre.SemanticAttr.Role.PREFIXFUNC},
     {set: this.infixFunctions,
       type: sre.SemanticAttr.Type.OPERATOR,
-      role: sre.SemanticAttr.Role.MULTIPLICATION
+      role: sre.SemanticAttr.Role.INFIXFUNC
     }
     // TODO (sorge) Add some of the remaining elements.
   ];
 
   /**
    * Dictionary mapping symbols to meanings.
-   * @type{Object.<string, {role: sre.SemanticAttr.Role,
+   * @type {Object.<{role: sre.SemanticAttr.Role,
    *           type: sre.SemanticAttr.Type,
    *           font: sre.SemanticAttr.Font}>}
    * @private
@@ -1293,9 +1391,16 @@ sre.SemanticAttr.Type = {
   // Enclosed (counterpart for menclosed).
   ENCLOSE: 'enclose',
 
+  // Proofs and Inferences
+  INFERENCE: 'inference',
+  RULELABEL: 'rulelabel',
+  CONCLUSION: 'conclusion',
+  PREMISES: 'premises',
+
   // General.
   UNKNOWN: 'unknown',
   EMPTY: 'empty'
+
 };
 
 
@@ -1303,6 +1408,7 @@ sre.SemanticAttr.Type = {
  * Mapping for roles of nodes.
  * Roles are more specific than types.
  * @enum {string}
+ * @final
  */
 sre.SemanticAttr.Role = {
   // Punctuation.
@@ -1311,7 +1417,9 @@ sre.SemanticAttr.Role = {
   FULLSTOP: 'fullstop',
   DASH: 'dash',
   PRIME: 'prime',   // Superscript.
+  DEGREE: 'degree',   // Superscript.
   VBAR: 'vbar',  // A vertical bar.
+  COLON: 'colon',  // A vertical bar.
   OPENFENCE: 'openfence',
   CLOSEFENCE: 'closefence',
   APPLICATION: 'application', // Function Application.
@@ -1319,6 +1427,9 @@ sre.SemanticAttr.Role = {
 
   // Identifier that describes a unit.
   UNIT: 'unit',
+
+  // Expression that is used as a label.
+  LABEL: 'label',
 
   // Fences.
   OPEN: 'open',
@@ -1344,6 +1455,7 @@ sre.SemanticAttr.Role = {
   UNDERACCENT: 'underaccent',
 
   // Index and tensor roles.
+  UNDEROVER: 'underover',
   SUBSUP: 'subsup',
   LEFTSUB: 'leftsub',
   LEFTSUPER: 'leftsuper',
@@ -1353,6 +1465,12 @@ sre.SemanticAttr.Role = {
   // Fenced.
   LEFTRIGHT: 'leftright',
   ABOVEBELOW: 'abovebelow',
+
+  // Sets.
+  SETEMPTY: 'set empty',
+  SETEXT: 'set extended',
+  SETSINGLE: 'set singleton',
+  SETCOLLECT: 'set collection',
 
   // Text.
   STRING: 'string',
@@ -1365,6 +1483,7 @@ sre.SemanticAttr.Role = {
 
   // Operators.
   NEGATIVE: 'negative',
+  POSITIVE: 'positive',
   NEGATION: 'negation',
   MULTIOP: 'multiop',
 
@@ -1374,6 +1493,7 @@ sre.SemanticAttr.Role = {
   PREFIXFUNC: 'prefix function',
   POSTFIXFUNC: 'postfix function',
   SIMPLEFUNC: 'simple function',
+  COMPFUNC: 'composed function',
 
   // Large operators.
   SUM: 'sum',
@@ -1393,7 +1513,6 @@ sre.SemanticAttr.Role = {
   EQUALITY: 'equality',
   INEQUALITY: 'inequality',
   ELEMENT: 'element',
-  BINREL: 'binrel',
   ARROW: 'arrow',
 
   // Roles of matrices or vectors.
@@ -1411,9 +1530,22 @@ sre.SemanticAttr.Role = {
   CASES: 'cases',
   TABLE: 'table',
 
+  // Inference Roles
+  PROOF: 'proof',
+  LEFT: 'left',
+  RIGHT: 'right',
+  UP: 'up',
+  DOWN: 'down',
+  // conclusion types
+  FINAL: 'final',
+  // premise types
+  SINGLE: 'single',
+  HYP: 'hyp',
+  AXIOM: 'axiom',
+
   // General
-  UNKNOWN: 'unknown',
-  PROTECTED: 'protected'
+  UNKNOWN: 'unknown'
+
 };
 
 
@@ -1427,18 +1559,43 @@ sre.SemanticAttr.Font = {
   BOLDFRAKTUR: 'bold-fraktur',
   BOLDITALIC: 'bold-italic',
   BOLDSCRIPT: 'bold-script',
+  CALIGRAPHIC: 'caligraphic',
+  CALIGRAPHICBOLD: 'caligraphic-bold',
   DOUBLESTRUCK: 'double-struck',
   DOUBLESTRUCKITALIC: 'double-struck-italic',
   FRAKTUR: 'fraktur',
   ITALIC: 'italic',
   MONOSPACE: 'monospace',
   NORMAL: 'normal',
+  OLDSTYLE: 'oldstyle',
+  OLDSTYLEBOLD: 'oldstyle-bold',
   SCRIPT: 'script',
   SANSSERIF: 'sans-serif',
   SANSSERIFITALIC: 'sans-serif-italic',
   SANSSERIFBOLD: 'sans-serif-bold',
   SANSSERIFBOLDITALIC: 'sans-serif-bold-italic',
   UNKNOWN: 'unknown'
+};
+
+
+/**
+ * @typedef {{type: sre.SemanticAttr.Type,
+ *            role: sre.SemanticAttr.Role,
+ *            font: sre.SemanticAttr.Font}}
+ */
+sre.SemanticMeaning;
+
+
+/**
+ * Equality on meaning objects.
+ * @param {sre.SemanticMeaning} meaning1 First meaning.
+ * @param {sre.SemanticMeaning} meaning2 Second meaning.
+ * @return {boolean} True if both contain the same field entries.
+ */
+sre.SemanticAttr.equal = function(meaning1, meaning2) {
+  return meaning1.type === meaning2.type &&
+      meaning1.role === meaning2.role &&
+      meaning1.font === meaning2.font;
 };
 
 
@@ -1465,8 +1622,7 @@ sre.SemanticAttr.prototype.lookupRole = function(symbol) {
 /**
  * Lookup the semantic meaning of a symbol in terms of type and role.
  * @param {string} symbol The symbol to which we want to determine the meaning.
- * @return {{role: sre.SemanticAttr.Role,
- *           type: sre.SemanticAttr.Type}} The semantic meaning of the symbol.
+ * @return {sre.SemanticMeaning} The semantic meaning of the symbol.
  */
 sre.SemanticAttr.lookupMeaning = function(symbol) {
   return sre.SemanticAttr.getInstance().lookupMeaning_(symbol);
@@ -1551,10 +1707,24 @@ sre.SemanticAttr.isClosingFence = function(fence) {
 };
 
 
+/**
+ * Determines if a symbol type can be embellished. Primitives that can be
+ * embellished are operators, punctuations, relations, and fences.
+ * @param {sre.SemanticAttr.Type} type The type.
+ * @return {boolean} True if the type can be embellished.
+ */
+sre.SemanticAttr.isEmbellishedType = function(type) {
+  return (type === sre.SemanticAttr.Type.OPERATOR ||
+          type === sre.SemanticAttr.Type.RELATION ||
+          type === sre.SemanticAttr.Type.FENCE ||
+          type === sre.SemanticAttr.Type.PUNCTUATION);
+};
+
+
 // TODO (sorge) Make this depended on position in the alphabets.
 /**
  * Check if a character is a small 'd' in some font.
- * @param {!string} chr The character string.
+ * @param {string} chr The character string.
  * @return {boolean} True if the character is indeed a single small d.
  */
 sre.SemanticAttr.isCharacterD = function(chr) {
@@ -1567,8 +1737,8 @@ sre.SemanticAttr.isCharacterD = function(chr) {
 /**
  * Decide when opening and closing fences match. For neutral fences they have to
  * be the same.
- * @param {!string} open Opening fence.
- * @param {!string} close Closing fence.
+ * @param {string} open Opening fence.
+ * @param {string} close Closing fence.
  * @return {boolean} True if the fences are matching.
  * @private
  */
@@ -1583,10 +1753,8 @@ sre.SemanticAttr.prototype.isMatchingFence_ = function(open, close) {
 
 /**
  * Initializes the dictionary mapping strings to meaning.
- * @return {Object.<string, {role: sre.SemanticAttr.Role,
- *           type: sre.SemanticAttr.Type,
- *           font: sre.SemanticAttr.Font}>} The dictionary mapping strings to
- * semantic attributes.
+ * @return {Object.<sre.SemanticMeaning>} The dictionary mapping strings to
+ *     semantic attributes.
  * @private
  */
 sre.SemanticAttr.prototype.initMeaning_ = function() {
@@ -1605,10 +1773,8 @@ sre.SemanticAttr.prototype.initMeaning_ = function() {
 
 /**
  * Lookup the semantic meaning of a symbol in terms of type and role.
- * @param {!string} symbol The symbol to which we want to determine the meaning.
- * @return {{role: sre.SemanticAttr.Role,
- *           type: sre.SemanticAttr.Type,
- *           font: sre.SemanticAttr.Font}} The semantic meaning of the symbol.
+ * @param {string} symbol The symbol to which we want to determine the meaning.
+ * @return {sre.SemanticMeaning} The semantic meaning of the symbol.
  * @private
  */
 sre.SemanticAttr.prototype.lookupMeaning_ = function(symbol) {

@@ -1,0 +1,1104 @@
+* Notes on Preferences:
+
+** Part_3
+
+*** Bar preference missing
+    Added in html file.
+    [DONE] 
+
+*** Equals sign with adornment has not preference
+    make default?
+
+
+** Part2
+
+*** Two preferences set...
+
+*** No preference for sums, etc.
+
+** Multi-Line Entries
+
+*** ImpliedTimes
+*** No implied time and silent parens
+
+** QUESTION What does preferences cleared really mean:
+   All preferences are set to Auto or Auto has to be set explicitly?
+   ANSWER: Everything reset to Auto.
+
+* Emacs helper
+
+
+(defun js2-compare-actual-expected ()
+  (interactive)
+  (search-forward "actual: ")
+  (forward-char 1)
+  (delete-backward-char 10)
+  (end-of-line)
+  (delete-backward-char 2)
+  (search-forward "expected: ")
+  (forward-char 1)
+  (delete-backward-char 12)
+  (end-of-line)
+  (delete-backward-char 2)
+  )
+
+
+(defun js2-copy-name () 
+  (interactive)
+  (search-backward "test")
+  (forward-char 4)
+  (set-mark (point))
+  (search-forward " ")
+  (backward-char 1)
+  (copy-region-as-kill (region-beginning) (region-end))
+  (other-window 1)
+  (yank)
+  (insert ", ")
+  (other-window 1)
+  )
+
+(defun js2-decap ()
+  (interactive)
+  (setq case-fold-search nil)
+  (search-forward-regexp "var speech = '[A-Z]")
+  (backward-char 1)
+  (downcase-word 1)
+  )
+
+
+(add-hook 'js2-mode-hook
+          '(lambda ()
+             (local-set-key "\C-cn" 'js2-copy-name)
+             (local-set-key "\C-cm" 'js2-decap)
+             ))
+(global-set-key "\C-ch" 'js2-compare-actual-expected)
+
+
+* Pausing
+
+** Remarks
+   Don't forget to add if necessary
+   Generate two samples, one with ssml and one without.
+
+** Positions
+*** Around  parenthesis
+*** After (or before?) of
+*** Multiline expressions
+
+* Prosody
+
+** Remarks 
+   Generate two samples each.
+
+** Positions
+*** Only for caps!
+
+** What do the commata mean in CapitalLetters?
+   Likely pausing!
+
+
+* Mistakes in the original examples:
+
+** Add spaces between 2x 3y etc?
+I have done it.
+
+** frtxt004: changes six to 6
+
+** testNestFrac002: added pausing commas
+
+** Check all the unit examples with fractions!
+
+** Decapitalise most of them.
+
+** testFrac012-015: X -> x
+
+** testFrac015,testFrac046,testFrac062: gallons -> gallon
+
+** testFrac022, testFrac053: missing pause comma
+
+** testFrac057: numbers to alpha
+
+** testFrac059: Decap X
+
+
+** testFrac061: Missing pause comma
+
+
+** testFrac062,testFrac070: Decap Miles
+
+
+** testFrac064: Decap One
+
+** testFrac069: Missing pause comma
+
+
+** testNestFrac007: And -> and, 
+
+** Problems with pausing commas: 
+   testNestFrac005, testNestFrac006, testNestFrac007, testNestFrac008,
+   testNestFrac018 (around sub),
+
+   testNestFrac023, testNestFrac024, testNestFrac025 (incorrect, goes after 1 plus), testNestFrac026,
+   testNestFrac027, testNestFrac028, testNestFrac029, testNestFrac030,
+   testNestFrac031, testNestFrac032, testNestFrac033, testNestFrac034,
+   testNestFrac035, testNestFrac036
+
+** testNestFrac013: 1 16th to 1 over 16
+
+** testNestFrac014, testNestFrac016, testNestFrac017: one to 1
+
+** testNestFrac023 ending .
+** testNestFrac029 "the x" should be "x"
+** testNestFrac032/33/34 one -> 1
+** testFracfunct caps: 001, 007, 008
+ 010, 011, 012, 013, 014
+** testFracfunct pause comma: 001, 002, 006, 012, 018 (around functions)
+** emphasis removed 014
+
+** testFracfunct spelling:
+
+*** 008 slose -> close
+*** 009 sin -> sine
+
+
+** Functions:
+
+*** Corrections:
+
+**** 005 2 x -> 2x
+
+**** 007 one -> 1
+
+**** 033 f instead of h
+
+**** 034 g instead of h
+
+**** 042: Missing open paren inserted.
+
+**** 088: 2 x -> 2x
+
+**** 090: Missing mentioning of fraction preference, one -> 1
+
+*** Pausing commas: 043
+
+*** Capitalisation removed:
+    Function044, Function045, Function046, Function047, Function048,
+    Function049, Function126, Function127, Function128, Function129,
+    Function130, Function131,
+
+** Exponents:
+
+*** Emphasis removed:
+    Exp012, Exp013, Exp018, Exp019, Exp010b, Exp011b, Exp012b, Exp013b, Exp013b,
+    Exp015b, Exp017b, Exp020, Exp020, Exp024, Exp025, Exp029, Exp030, Exp031,
+    Exp031, Exp032, Exp033, Exp034, Exp035, Exp051, Exp052, Exp057, Exp058,
+    Exp059, Exp060, Exp061, Exp062, Exp062, Exp064, Exp066, Exp069, Exp069,
+    Exp073, Exp074, Exp078, Exp079, Exp080, Exp080, Exp081, Exp082, Exp083,
+    Exp083, Exp084, Exp084, Exp095, Exp096, Exp101, Exp102, Exp103, Exp104,
+    Exp105, Exp106, Exp106, Exp108, Exp110, Exp113, Exp113, Exp117, Exp118,
+    Exp122, Exp123, Exp124, Exp124, Exp125, Exp126, Exp127, Exp128, Exp138,
+    Exp139, Exp140, Exp145, Exp146, Exp147, Exp148, Exp149, Exp150, Exp150,
+    Exp152, Exp154, Exp156, Exp159, Exp159, Exp161, Exp163, Exp164, Exp168,
+    Exp169, Exp170, Exp170, Exp171, Exp171, Exp172, Exp172, Exp173, Exp174,
+
+*** Corrections: 
+**** Exp012: + -> plus
+
+
+**** Exp013: + -> plus and added spaces
+
+*** Decap: 013
+
+*** Rewritten ordinals: 016, 017
+
+*** Added spacing: 
+    017b: 2x -> 2 x
+
+** Missing Bar_ preference in part_3
+
+** Starting letters should not be capitalised! This seems to be a word artefact!
+   It is particularly confusing for distinguishing capital letters and non-caps!
+
+** ImpliedTimes Extra017 should be 'a squared'
+
+** All the exact speech stuff in ImpliedTimes?
+
+** Fractions Fracfunct014: Why emphasise?
+
+** Enumeration problems
+
+*** multiline
+    missing between Multiline019 and Multiline020
+
+    SOLVED: renamed to Multiline019a
+
+*** Exponent
+    Exp002a + Exp10a. Why?
+    Then repetition of Exp010 to Exp019?
+
+    SOLVED: Renamed second set of Exp010-Exp019 to Exp010b-Exp019b
+
+*** Exponent
+    Exp124 twice. Second should be Exp134.
+    
+    SOLVED: Corrected to Exp134
+
+*** Fractions
+
+**** Frac027 twice. Second should be Frac029.
+    SOLVED: Corrected to Frac029
+
+**** Frac067 twice. Second should be Frac069.
+
+    SOLVED: Corrected to Frac069
+
+**** FracFunct008:
+     QUESTION: This is incorrect: This is the same expression as Fracfunct011, which has a
+     different speech string. Probably wrong!
+
+
+*** ImpliedTimes
+    ImpTimes070 twice.
+
+    SOLVED: renamed second to ImpTimes070a
+
+**** Simple spaceout:
+     ImpTimes028, 
+
+*** Matrices
+    Matrix027 twice. Second should be Matrix029.
+
+    SOLVED: Corrected to Matrix029
+
+*** Matrices
+    Missing identifier between Matrix057 and Matrix058.
+
+    SOLVED: Renamed to Matrix057a
+    
+
+** Other errors or corrections
+
+*** Absolute Value
+    Pausing/punctuation problems. The following is not consistent:
+    , sometimes before end absolute value
+    , sometimes before "the absolute value of"
+    Changes to:
+**** remove cap: Abs04, AbsEnd01 - AbsEnd04, Card01, Determinant01
+**** Abs04: Added ,
+**** AbsEnd02: , before end absolute value
+**** AbsEnd04: 
+***** , in x end absolute value
+***** rewrite "equal, to the absolute value" to "equal to, the absolute value"
+**** AbsDet02: last comma is wrong: "4 ,7"
+
+**** simple expression rewritten: 2x -> 2 x
+     AbsDet05, AbsDet06, AbsDet12, AbsDet13
+
+* Sentence markup
+
+** Capitalise start and end with period?
+
+** Matrix columns etc, with ; . : , . What is all that about?
+
+*** Currently we do these as short (,), medium (;), long (.) pauses.
+
+* Additions to tests:
+
+** Named sets
+   
+*** NumSys001a
+    mathvariant
+*** NumSys005a
+    Natural numbers with zero.
+*** NumSys006a
+    positive vs negative integers.
+
+
+* Additions to JSON files.
+
+** General rule: we've only added what was necessary for the tests at the moment.
+** Might need to resolve conflicts once merged with the version for MathJax 2.7.2.
+
+** Math-Symbols:
+*** plus minus symbol
+*** all less than and greater than variants
+**** default: with preceding is
+**** 003B, 003B, 003E, 225A - 2279
+Helper function for Emacs:
+
+(defun add-is ()
+  (interactive)
+  (beginning-of-line)
+  (search-forward ": \"")
+  (insert-char 105)
+  (insert-char 115)
+  (insert-char 32)
+  )
+
+* Errors in example documents
+  Correspond to corrections to single tests (the list is not necessarily exhaustive!)
+
+** frtxt004: changes six to 6
+
+** testNestFrac002: added pausing commas
+
+** Check all the unit examples with fractions!
+
+** Decapitalise most of them.
+
+** testFrac012-015: X -> x
+
+** testFrac015,testFrac046,testFrac062: gallons -> gallon
+
+** testFrac022, testFrac053: missing pause comma
+
+** testFrac057: numbers to alpha
+
+** testFrac059: Decap X
+
+
+** testFrac061: Missing pause comma
+
+
+** testFrac062,testFrac070: Decap Miles
+
+
+** testFrac064: Decap One
+
+** testFrac069: Missing pause comma
+
+
+** testNestFrac007: And -> and, 
+   
+** Problems with pausing commas: 
+   testNestFrac00, testNestFrac005, testNestFrac006, testNestFrac007, testNestFrac008,
+   testNestFrac018 (around sub),
+
+   testNestFrac023, testNestFrac024, testNestFrac025 (incorrect, goes after 1 plus), testNestFrac026,
+   testNestFrac027, testNestFrac028, testNestFrac029, testNestFrac030,
+   testNestFrac031, testNestFrac032, testNestFrac033, testNestFrac034,
+   testNestFrac035, testNestFrac036
+
+   testFracfunct003, testFracfunct006
+
+** testNestFrac013: 1 16th to 1 over 16
+
+** testNestFrac014, testNestFrac016, testNestFrac017: one to 1
+
+** testNestFrac023 ending .
+** testNestFrac029 "the x" should be "x"
+** testNestFrac032/33/34 one -> 1
+** testFracfunct caps: 001, 007, 008
+ 010, 011, 012, 013, 014
+** testFracfunct pause comma: 001, 002, 006, 012, 018 (around functions)
+** emphasis removed 014
+
+** testFracfunct spelling:
+
+*** 008 slose -> close
+*** 009 sin -> sine
+
+
+** Frac simple exrepssion rewritten:
+
+*** xy -> x y
+
+*** cd -> c d
+
+** Fracfunct simple expressions rewritten:
+
+**** 2x -> 2 x
+
+**** 3y -> 3 y
+
+
+** Functions:
+
+*** Simple: 2x and 3x and 2y  to   2 x, and 3 x, and 2 y,
+*** Corrections:
+
+**** 005 2 x -> 2x
+
+**** 007,026,109 one -> 1
+
+**** 033 f instead of h
+
+**** 034 g instead of h
+
+**** 042: Missing open paren inserted.
+
+**** 053, 061, 063, 071, 076, 088, 107, 135, 143, 145, 153: 2 x -> 2x
+
+**** 090: Missing mentioning of fraction preference, one -> 1
+
+**** 081: close -> close paren
+
+**** 113: mssing close paren
+
+**** 120, 121: H -> h
+
+**** removed <mtext></mtext> 
+
+**** 144: timesx -> times x
+
+*** Pausing commas: 
+    043, 008, 027, 044, 047, 048, 049, 061, 066, 072-080, 091, 099, 100, 118,
+    124, 125, 126, 127, 131, 145, 149, 154, 156, 157
+
+*** Pausing comma questionable:
+    050, 051, 132, 133
+
+*** Capitalisation removed:
+    Function044, Function045, Function046, Function047, Function048,
+    Function049, Function126, Function127, Function128, Function129,
+    Function130, Function131, Function056, Function057, Function058,
+    Function059, Function060, Function061, Function066, Function067,
+    Function068, Function069, Function070
+
+
+** Exponents:
+
+*** Emphasis removed:
+    Exp012, Exp013, Exp018, Exp019, Exp010b, Exp011b, Exp012b, Exp013b, Exp013b,
+    Exp015b, Exp017b, Exp020, Exp020, Exp024, Exp025, Exp029, Exp030, Exp031,
+    Exp031, Exp032, Exp033, Exp034, Exp035, Exp051, Exp052, Exp057, Exp058,
+    Exp059, Exp060, Exp061, Exp062, Exp062, Exp064, Exp066, Exp069, Exp069,
+    Exp073, Exp074, Exp078, Exp079, Exp080, Exp080, Exp081, Exp082, Exp083,
+    Exp083, Exp084, Exp084, Exp095, Exp096, Exp101, Exp102, Exp103, Exp104,
+    Exp105, Exp106, Exp106, Exp108, Exp110, Exp113, Exp113, Exp117, Exp118,
+    Exp122, Exp123, Exp124, Exp124, Exp125, Exp126, Exp127, Exp128, Exp138,
+    Exp139, Exp140, Exp145, Exp146, Exp147, Exp148, Exp149, Exp150, Exp150,
+    Exp152, Exp154, Exp156, Exp159, Exp159, Exp161, Exp163, Exp164, Exp168,
+    Exp169, Exp170, Exp170, Exp171, Exp171, Exp172, Exp172, Exp173, Exp174,
+
+*** Corrections: 
+**** Exp012: + -> plus
+
+
+**** Exp013: + -> plus and added spaces
+
+*** Decap: 013
+
+*** Rewritten ordinals: 016, 017
+
+*** Added spacing: 
+    Exp017b: 2x -> 2 x
+    Exp013: 2y -> 2 y, 3z -> 3 z
+
+
+
+
+
+
+** Part2_Symbols
+
+*** Decap: 
+    X002, X005, Dot002, Dot005, Ellipses003, Ellipses006, VertLine002,
+    VertLine003, VertLine007, MembSym002, MembSym005, MembSym008, MembSym011,
+    MembSym014, SetMemb001, SetMemb002, Sum001, Sum002, Sum003, Sum004, Sum005,
+    Sum006, Sum007, Sum008, Sum009, Sum010, Sum011, Sum012, Sum013, Sum014,
+    Sum015, Sum016, Sum017, Sum018, VertLine005, Triangle004
+
+*** Pausing commata: 
+    Ellipses002, Ellipses003, Ellipses004, Ellipses006, VertLine004, VertLine005, VertLine006
+    
+*** Empty <mtext/> elements.
+    
+*** Missing "comma": 
+    Ellipses006, Ellipses004, Ellipses005, 
+    Check with Neil on those!
+
+*** Corrections
+
+**** VertLine003: 
+     added "all", 
+     added commas around absolute value
+
+**** VertLine004, VertLine005:
+     = to equals
+     Caps + commas
+
+**** Sum001, Sum002, Sum006, Sum010, = -> equals
+
+**** Sum003, Sum004, Sum005, Sum007, decap I
+
+**** Sum007, Sum008, + -> plus,  1 -> i
+**** Sum016, Sum017, Sum018,  spaceout dx
+**** SetMemb001, remove period.
+**** testSetMemb001, testSetMemb002: woall -> woAll
+
+*** Space out: Triangle001, Triangle002, Triangle003, Triangle004
+
+*** Simple spaced out:
+    VertLine005, MembSym001, MembSym004, MembSym007, MembSym010, MembSym013,
+    MembSym003, MembSym006, MembSym009, MembSym012, MembSym015
+
+*** QUESTIONS:
+
+****  VertLine009: 
+      why // (To get this speech a space was inserted after P and exact speech “of” was entered there.)</p>';
+      ANSWER: Should not be necessary.
+
+**** How about element inside of Set but not bound in set extension?
+     Currently we treat this similar to outside.
+
+*** Replaced ending . with period in speech:
+    MembSym001, MembSym004, MembSym007, MembSym010, MembSym013
+
+*** Somethings wrong with the MathType in MembSym010
+
+
+** Sets enclosed in brackets
+
+*** Removes <em>:
+    Set001, Set001, Set002, Set002, Set003, Set003, Set004, Set004, Set007,
+    Set007, Set008, Set008, Set009, Set009, Set012, Set012, Set013, Set013,
+    Set014, Set014, Set015, Set015,
+
+*** Decap:
+    Set001, Set002, Set003, Set004, Set005, Set006, Set007, Set008, Set009,
+    Set010, Set011, Set012, Set013, Set014, Set015,
+
+*** Trailing period removed:
+    Set001, Set003, Set007, Set009, Set012, Set014
+
+*** Pausing commata:
+    Set002, Set008, Set013
+
+
+** Captital Letters
+
+*** Decap:
+    Cap001, Cap002, Cap003, Cap005, Cap006, Cap007 (the a), Cap009, Cap010,
+    Cap011, Cap012, Cap013, Cap014, Cap015, Cap016, Cap019, Cap020
+
+    Cap017: second a!
+
+*** Pausing commata:
+
+**** Cap005,Cap006 Why are there commata?
+     removed
+     
+**** Cap007 Why is there no comma?
+
+**** added:
+     Cap013
+
+*** Measure of angle:
+    Cap009, Cap010, Cap019, Cap020
+
+*** Simple spaced out:
+    Cap004, Cap008, Cap009
+
+*** Cap011: = -> equals
+
+** Trigonometry
+
+*** Decap:
+    Trig001, Trig002, Trig003, Trig004, Trig005, Trig006, Trig007, Trig008,
+    Trig009, Trig010, Trig011, Trig012, Trig013, Trig014, Trig015, Trig016,
+    Trig019, Trig021, Trig022, Trig023, Trig024, Trig025, Trig026, Trig027,
+    Trig028, Trig029, Trig030, Trig031, Trig032, Trig033, Trig034, Trig035,
+    Trig036, Trig037, Trig038, Trig039, Trig040, Trig041, Trig042, Trig043,
+    Trig044, Trig045, TrigInvAuto001, TrigInvAuto002, TrigInvAuto003,
+    TrigInvAuto004, TrigInvAuto005, TrigInvAuto006, TrigInvAuto007,
+    TrigInvAuto008, TrigInvAuto009, TrigInvAuto010, TrigInvAuto011,
+    TrigInvAuto012, TrigInvAuto013, TrigInvAuto014, TrigInvAuto015,
+    TrigInvAuto016, TrigInvAuto017, TrigInvAuto018, TrigInvAuto019,
+    TrigInvAuto020, TrigInvAuto021, TrigInvAuto022, TrigInvAuto023,
+    TrigInvAuto024, TrigInvAuto025, TrigInvAuto026, TrigInverse001,
+    TrigInverse002, TrigInverse003, TrigInverse004, TrigInverse005,
+    TrigInverse006, TrigInverse007, TrigInverse008, TrigInverse009,
+    TrigInverse010, TrigInverse011, TrigInverse012, TrigInverse013,
+    TrigInverse014, TrigInverse015, TrigInverse016, TrigInverse017,
+    TrigInverse018, TrigInverse019, TrigInverse020, TrigInverse021,
+    TrigInverse022, TrigInverse023, TrigInverse024, TrigInverse025,
+    TrigInverse026, ArcTrig001, ArcTrig002, ArcTrig003, ArcTrig004, ArcTrig005,
+    ArcTrig006, ArcTrig007, ArcTrig008, ArcTrig009, ArcTrig010, ArcTrig011,
+    ArcTrig012, ArcTrig013, ArcTrig014, ArcTrig015, ArcTrig016, ArcTrig017,
+    ArcTrig018, ArcTrig019, ArcTrig020, ArcTrig021, ArcTrig022, ArcTrig023,
+    ArcTrig024, ArcTrig025, ArcTrig026, AllTrig01, AllTrig02, AllTrig03,
+    HypTrig007, HypTrig008, HypTrig009, HypTrig010, HypTrig011, HypTrig012,
+    HypTrig017, HypTrig018, HypTrig019, HypTrig020,
+
+
+** Parentheses
+
+*** Pausing commmata:
+    Paren009, Paren024, Paren036-Paren050, Nest002, Nest009, SilParen003,
+    SilParen004, SilParen009, SilParen012, SilParen014, Nest005, Nest006, 
+
+*** Simple expression: 
+    Paren002, Paren006, Paren007, Paren008, Paren009, Paren010, Paren017,
+    Paren021, Paren022, Paren023, Paren024, Paren025, SilParen002, SilParen006,
+    SilParen007, SilParen008, SilParen009, SilParen010,
+
+*** Decap:
+    Paren006, Paren007, Paren008, Paren009, Paren010, Paren011, Paren012,
+    Paren013, Paren014, Paren015, Paren016, Paren017, Paren021, Paren022,
+    Paren023, Paren024, Paren025, Paren026, Paren027, Paren028, Paren029,
+    Paren030, Paren031, Paren032, Paren033, Paren034, Paren035, Paren036,
+    Paren037, Paren038, Paren039, Paren040, Paren041, Paren042, Paren043,
+    Paren044, Paren045, Paren046, Paren047, Paren048, Paren049, Paren050,
+    Paren051, Paren052, Paren053, SilParen008, SilParen010, SilParen011,
+    SilParen012, SilParen014,
+
+*** Corrections:
+
+**** Paren007: plus1 -> plus 1
+
+**** Paren012: 
+  // This is against the Paren_Auto rules! (page 31)!
+  // var speech = 'open paren, three fourths, x, close paren';
+  var speech = 'three fourths x';
+
+**** Paren019: missing space
+
+**** Paren022: missing space
+
+**** Paren023: Decap Negative
+
+**** Paren026: Decap One
+
+**** Paren027: Remove , before x
+
+**** Paren029: Decap One
+
+**** Paren045: missing infinity
+
+*** Remove emphasis:
+    Paren036, Paren036, Paren036, Paren036, Paren038, Paren038, Paren038,
+    Paren040, Paren040, Paren040, Paren042, Paren042, Paren042, Paren042,
+    Paren044, Paren044, Paren046, Paren046, Paren048, Paren048, Paren050,
+    Paren050,
+
+** Implied Times
+
+*** Corrections:
+    ImpTimes003,
+
+**** ImpTimes040: 4th -> fourth
+
+**** ImpTimes066, missing times
+
+**** ImpTimes076: absoluete -> absolute
+**** ImpTimesSilPar003, ImpTimes079: change 4th and three
+
+**** ImpTimes097: missing "equals the square root of a b"
+
+
+**** ImpTimes100: missing "3"
+
+
+**** ImpTimes102: paren in the test are incorrect. Duplication of x, close paren
+
+**** ImpTimesSilPar022: Nessting -> Nesting
+**** Reverse columns: Extra009
+
+**** Extra001, Extra002: Content of parentheses is wrong!
+
+**** Extra003: z should be 0.
+
+
+**** Extra017: s should be a
+
+
+**** Extra019/20: script L -> script l
+
+*** Pausing commata:
+    ImpTimes007, ImpTimes015, ImpTimes024, ImpTimes025, ImpTimes026,
+    ImpTimes027, ImpTimes035, testImpTimes041, testImpTimes042, testImpTimes043,
+    testImpTimes045, testImpTimes046, testImpTimes051, testImpTimes053,
+    testImpTimes056, testImpTimes057, testImpTimes058, testImpTimes059,
+    testImpTimes060, testImpTimes061, testImpTimes062, testImpTimes063,
+    testImpTimes065, testImpTimes065a, testImpTimes067, testImpTimes068,
+    testImpTimes069, testImpTimes072, testImpTimes075, testImpTimes101,
+    testImpTimes103, testImpTimes104, testImpTimes105, testImpTimes106,
+    testImpTimes111, testImpTimesSilPar003, testImpTimesSilPar006,
+    testImpTimesSilPar007, testImpTimesSilPar015, testImpTimesSilPar017,
+    testImpTimesSilPar020
+
+**** Remove commata around times! It appears there are pauses wrt. identifiers but not numbers.
+     We get rid of the former! x plus y is the same as x times y.
+     ImpTimes010, ImpTimes011, ImpTimes013, ImpTimes014, 
+
+*** Decap:
+    ImpTimes008, ImpTimes009, ImpTimes013, ImpTimes014, ImpTimes015,
+    ImpTimes016, ImpTimes021, ImpTimes022, ImpTimes027, ImpTimes027a,
+    ImpTimes028, ImpTimes029, ImpTimes036, ImpTimes037, ImpTimes037a,
+    ImpTimes038, ImpTimes0381, ImpTimes046, ImpTimes047, ImpTimes051,
+    ImpTimes052, ImpTimes053, ImpTimes054, ImpTimes059, ImpTimes060,
+    ImpTimes065, ImpTimes065a, ImpTimes066, ImpTimes067, ImpTimes073,
+    ImpTimes074, ImpTimes074a, ImpTimes075, ImpTimes076, ImpTimes082,
+    ImpTimes084, ImpTimes085, ImpTimes089, ImpTimes090, ImpTimes091,
+    ImpTimes092, ImpTimes097, ImpTimes098, ImpTimes102, ImpTimes103,
+    ImpTimes104, ImpTimes105, ImpTimes112, ImpTimes113, ImpTimes114,
+    ImpTimesSilPar006, ImpTimesSilPar008, ImpTimesSilPar009, ImpTimesSilPar013,
+    ImpTimesSilPar014, ImpTimesSilPar015, ImpTimesSilPar019, Extra003, Extra004,
+    Extra005, Extra006, Extra007, Extra008, Extra009, Extra013, Extra014,
+    ImpTimesSilPar020, ImpTimes106,
+
+*** Simple:
+**** yz
+     ImpTimes010, ImpTimes086, ImpTimesSilPar010, 
+**** xy
+     ImpTimes104,
+**** bc
+     Extra007,
+**** ab
+     Extra007,
+**** 2t
+     Extra015,
+**** 3a
+     Extra017, 
+**** uv 
+     Extra009
+** Trigonometry
+
+Table1
+
+*** Pause commmata:
+    Trig014, Trig015, Trig016, Trig019, Trig021, Trig024, Trig034, Trig035, 
+    Trig037, Trig040, Trig041, Trig042, Trig045, Trig044, Trig043, 
+
+*** Simple spacing: 
+    Trig031, Trig038, Trig039, 
+
+*** Decap (most of the 'The ... ')
+    Trig037, Trig044, 
+
+*** Corrections
+
+**** Trig034: missing space, decap cosine
+
+**** Trig043: Removed times before square root following roots/implied times rules.
+
+**** Trig045: Removed times before square root following roots/implied times rules.
+
+Table2
+
+*** Pause commata:
+    TrigInvAuto007, TrigInvAuto019, TrigInvAuto020, TrigInvAuto021,
+    TrigInvAuto024, TrigInverse019, TrigInverse020, TrigInverse021, ArcTrig007, ArcTrig019, ArcTrig020, 
+
+*** Corections:
+**** TrigInvAuto017: zero to 0
+**** TrigInverse007: missing "the" in square root
+**** TrigInverse016, x -> 1
+**** TrigInverse017, sin -> sine
+**** AllTrig03, tan -> tangent
+**** ArcTrig011, Removed of (QUESTION: is that because arg > 100)? ANSWER: No it's a mistake.
+**** ArcTrig017, sin -> sine
+**** TrigTrig016, x -> 1
+**** AllTrig01,  sin -> sine
+
+*** Decap
+    Most arc Sine etc.
+
+*** QUESTION on preference Trig_ArcTrig: 
+    arc sine or arcsine? In rules there is no space!
+    ANSWER: Have with space. Better for TTS. So correct in rules.
+
+Table 3
+
+*** Pause commata:
+    
+
+*** Corrections:
+
+**** HypTrig016, change comma position
+
+** Logarithm
+
+*** Decap
+    Log001, Log002, Log003, Log004, Log005, Log007, Log009, Log010, Log012,
+    Log013, Log014, Log016, Log017, Log018, Log019, Log020, Log021, Log022,
+    NatLog002, NatLog008, NatLog011, NatLog013, NatLog015, NatLog016,
+
+*** Pause commata:
+    Log003, Log004, Log005, Log008, Log009, Log017, Log019, Log020, Log018,
+    NatLog007, Log008, NatLog005, NatLog007, NatLog008, NatLog010, NatLog012,
+    NatLog010, NatLog015, NatLog016,
+
+
+*** Corrections:
+
+**** Log020, = to equals
+
+**** NatLog004, ln -> l n
+
+**** NatLog007, ln -> l n
+
+**** NatLog003, missing close paren
+
+**** Log022, 10th -> tenth
+
+** Matrices
+
+*** Decap:
+    Matrix001, Matrix002, Matrix003, Matrix004, Matrix005, Matrix006, Matrix007,
+    Matrix008, Matrix008a, Matrix009, Matrix010, Matrix011, Matrix012,
+    Matrix013, Matrix014, Matrix015, Matrix016, Matrix017, Matrix018, Matrix019,
+    , Matrix020, Matrix021, Matrix023, Matrix024, Matrix025, Matrix026,
+    Matrix027, Matrix028, Matrix029, Matrix030, Matrix031, Matrix032, Matrix033,
+    Matrix034, Matrix035, Matrix036, Matrix037, Matrix038, Matrix039, Matrix040,
+    Matrix041, Matrix042, Matrix043, Matrix044, Matrix045, Matrix046, Matrix047,
+    Matrix048, Matrix049, Matrix050, Matrix051, Matrix052, Matrix053, Matrix054,
+    Matrix055, Matrix056, Matrix057, Matrix057a, Matrix058, Matrix059,
+    Matrix060, Matrix061, Matrix062, Matrix063, Matrix065, Matrix066, Matrix067,
+    Matrix068, Matrix069, Matrix070, Matrix071, Matrix072, Matrix073, Matrix074,
+    Matrix075, Matrix076, Matrix077, Matrix078, Matrix079, Matrix080, Matrix081,
+    Matrix082, Matrix083, Matrix084, Matrix085, Matrix086, Matrix087, Matrix088,
+    Matrix089, Matrix090, Matrix091, Matrix092, Matrix092a, Matrix093,
+    Matrix094, Matrix095, Matrix096, Matrix097, Matrix098, Matrix099, Matrix100,
+    Matrix101, Matrix103, Matrix104, Matrix105, Matrix106, Matrix107, Matrix108,
+    Matrix109, Matrix110, Matrix111, Matrix112, Matrix113, Matrix114, Matrix115,
+    Matrix116, Matrix117, Matrix118, Matrix119, Matrix120, Matrix121, Matrix122,
+    Matrix123, Matrix124, Matrix125, Matrix126, Matrix127, Matrix128, Matrix129,
+    Matrix130, Matrix131, Matrix132, Matrix133, Matrix134, Matrix135, Matrix136,
+    Matrix137, Matrix138, Matrix139, Matrix140, Matrix142, Matrix143, Matrix144,
+    Matrix145, Matrix146, Matrix147, Matrix148, Matrix149, Matrix150, Matrix151,
+    Matrix152, Matrix153, Matrix154, Matrix155, Matrix156, Matrix157, Matrix158,
+    Matrix159, Matrix160, Matrix161, Matrix162, Matrix163, Matrix164, Matrix165,
+    Matrix166, Matrix167, Matrix168, Matrix169, Matrix170, Matrix171, Matrix172,
+    Matrix173, Matrix174, Matrix175, Matrix176, Matrix177, Matrix178, Matrix179,
+    Matrix180,
+
+
+*** Pausing Commata, semi-colons, periods:
+    Matrix009, Matrix010, Matrix015, Matrix016, Matrix134, Matrix015, Matrix023,
+    Matrix018, Matrix019b, Matrix023, Matrix039, Matrix049, Matrix050,
+    Matrix051, Matrix052, Matrix089, Matrix090, Matrix127, Matrix128, Matrix055,
+    Matrix056, testMatrix057, testMatrix057a, testMatrix058, testMatrix059,
+    testMatrix060, testMatrix061, testMatrix062, testMatrix063, testMatrix064,
+    testMatrix065, testMatrix066, testMatrix068, testMatrix069, testMatrix070,
+    testMatrix071, testMatrix072, testMatrix073, testMatrix074, testMatrix075,
+    testMatrix076, testMatrix077, testMatrix078, testMatrix079, testMatrix080,
+    testMatrix095, testMatrix097, testMatrix102, testMatrix103, testMatrix104,
+    testMatrix110, testMatrix119, testMatrix120, testMatrix121, testMatrix122,
+    testMatrix123, testMatrix124, testMatrix125, testMatrix126, testMatrix127,
+    testMatrix128, testMatrix129, testMatrix130, testMatrix131, testMatrix132,
+    testMatrix133, testMatrix134, testMatrix135, testMatrix136, testMatrix137,
+    testMatrix138, testMatrix139, testMatrix140, testMatrix141, testMatrix142,
+    testMatrix143, testMatrix144, testMatrix145, testMatrix146, testMatrix147,
+    testMatrix148, testMatrix149, testMatrix150, testMatrix151, testMatrix152,
+    testMatrix153, testMatrix154, testMatrix155, testMatrix156, testMatrix157,
+    ...(all inbetween), testMatrix169, testMatrix170, testMatrix171,
+    testMatrix172, testMatrix173, testMatrix174, testMatrix175, testMatrix176,
+    testMatrix177, testMatrix178, testMatrix179
+
+**** ; row to . Row
+     Matrix040, Matrix055, Matrix056, Matrix067, Matrix070, Matrix071,
+     Matrix071, Matrix095,
+
+*** Spreadout simple:
+    Matrix011, Matrix019, Matrix019b, Matrix033, Matrix034, Matrix035,
+    Matrix036, Matrix053, Matrix060, Matrix061, Matrix075, Matrix076, Matrix077,
+    Matrix078, Matrix091, Matrix098, Matrix099, Matrix113, Matrix114, Matrix115,
+    Matrix116, Matrix129, Matrix137, Matrix138, Matrix152, Matrix153, Matrix154,
+    Matrix155, Matrix164, Matrix175,
+
+*** Corrections: 
+**** Missing space:
+    Matrix013, Matrix108, Matrix107, Matrix131, Matrix146, Matrix108, Matrix131,
+    Matrix013, Matrix087, Matrix088, Matrix013, Matrix027,
+
+**** Superfluous spaces around ,:
+    Matrix013, Matrix013, Matrix013, Matrix013, Matrix014, Matrix019, ,
+    Matrix024, Matrix027, Matrix087, Matrix088, Matrix101, Matrix107, Matrix107,
+    Matrix108, Matrix108, Matrix108, Matrix131, Matrix131, Matrix131, Matrix131,
+    Matrix132, Matrix137, Matrix138, Matrix143, Matrix146,
+
+**** Remove trailing period:
+    Matrix014, Matrix016, Matrix017, Matrix018, Matrix022, Matrix023,
+    Matrix024, Matrix029, Matrix030, Matrix031, Matrix032, Matrix041,
+
+**** Colon after matrix: to matrix.
+     Matrix012, Matrix054, Matrix130, Matrix165, Matrix166, Matrix167,
+     Matrix168, Matrix176, Matrix177, Matrix178, Matrix179,
+
+**** (pause) to .
+     Matrix133, Matrix015,
+
+**** QUESTION: MathML for Matrix021, Matrix063, Matrix101, Matrix140, is incorrect.
+     b_11 where 11 is a single number, can't be split!
+     All these are corrected to single indices.
+     ANSWER: MathML error.
+
+**** Matrix022, QUESTION
+     Why is that not a simple matrix without columns?
+     ANSWER: Should be simple!
+
+**** Matrix030, Last column 3 should be column 4
+
+**** Matrix051, column. matrix -> column matrix.
+
+**** QUESTION: Is it End Matrix, EndMatrix or end matrix
+     Choice: end matrix as this is given in the rules.
+     ANSWER: end matrix (end other)
+
+**** Column matrix -> column matrix:
+     Matrix123, Matrix124, Matrix127, Matrix128, testMatrix085, testMatrix086, testMatrix089, testMatrix090
+
+**** QUESTION: Is it also a long pause '.' after row/column vector?
+     ANSWER: Yes.
+
+** Fractions
+
+*** Pausing commata:
+    testFracfunct010, testFracfunct014, testFracfunct015, testFracfunct016,
+    testFracfunct017
+
+*** QUESTION: Some of the pausing commas are inconsistent! 
+    (e.g testFracfunct010 vs testFracfunct014)
+
+** Roots
+
+*** Decap:
+    Root001, Root011, Root011a, Root013, Root014, Root015, Root016, Root017,
+    Root018, Root019, Root020, Root021, Root022, Root023, Root024, Root028,
+    Root034, Root034a, Root035, Root036, Root037, Root038, Root039, Root040,
+    Root041, Root042, Root043, Root044, Root045, Root046, Root047, Root048,
+    Root058, Root058a, Root060, Root061, Root064, Root065, Root066, Root067,
+    Root068, Root069, Root070, Root071, Root081, Root081a, Root083, Root085,
+    Root086, Root087, Root088, Root089, Root090, Root091, Root092, Root093,
+    HighRoot001, HighRoot002, HighRoot003, HighRoot004, HighRoot005,
+    HighRoot006, HighRoot007, HighRoot008, HighRoot009, HighRoot010,
+    HighRoot011, HighRoot012, HighRoot013, HighRoot014, HighRoot015,
+    HighRoot016, HighRoot017, HighRoot018, HighRoot019, HighRoot020,
+    HighRoot021, HighRoot022, HighRoot023, HighRoot024, HighRoot025,
+    HighRoot026, HighRoot027, HighRoot028, HighRoot029, HighRoot030,
+    HighRoot031, HighRoot032, HighRoot033, HighRoot034, HighRoot035,
+    HighRoot036, HighRoot037, HighRoot038, HighRoot039, HighRoot040,
+
+*** Trailing period:
+    Root005, Root079, Root080,
+
+*** Pausing commata:
+    testRoot016, testRoot018, testRoot019, testRoot021, testRoot022, testRoot023
+    testRoot031, testRoot040, testRoot042, testRoot043, testRoot045,
+    testRoot046, testRoot047, testRoot052, testRoot054, testRoot055,
+    testRoot056, testRoot057, testRoot059, testRoot061, testRoot063,
+    testRoot065, testRoot066, testRoot068, testRoot069, testRoot070
+
+*** Simple spaceout:
+    testRoot093
+
+*** Corrections:
+
+**** Root011, Root011a,
+
+**** Root032: 2->3
+
+**** testRoot033, testRoot034, Missing parentheses.
+
+**** testRoot079, testRoot080, testRoot083 Missing close paren
+
+**** Root079, Root080, Root084, Root084, parenthesis -> paren
+
+**** HighRoot007, HighRoot017, HighRoot027, HighRoot037, 
+     Replace raised to the power i by to the ith power as this follows the
+     exponent rules!
+
+**** HighRoot035, superfluous comma
+
+** Exponents
+
+*** Corrections
+
+**** Exp018b, missing the
+
+**** Exp026, Exp027, Exp028, Exp030,  10th -> tenth
+
+**** Exp035, rewrite Greek letters.
+
+**** Exp128, Exp084, Exp128, Exp174, rewrite Greek letters. parenthesis -> paren
+
+**** Exp052, simple expression, + -> plus, decap
+
+**** Exp062, decap
+
+**** Exp067,Exp113,  missing the
+
+**** Exp069, 3->2
+
+**** Exp080, Exp079, remove , after the
+
+**** Exp096, Exp140, decap, split 3z
+
+**** Exp112, msssing power
+
+**** Exp127, Exp154, missing end exponent
+
+**** Exp161, 2->3, x -> 3
+
+**** Exp158, 3->2
+
+**** Exp162, 2->3
+
+*** Pausing commata:
+    Exp108, Exp109, Exp110, Exp127, Exp173, Exp125, Exp113, Exp157, Exp158, Exp159, Exp170, Exp172, Exp173, 
+
+
+** Adornments
+
+*** Corrections
+
+**** Prime011, Prime012, Prime011, Numbers combined in MathML!
+
+**** Equal004: + -> plus
+
+**** Bar006: zero -> 0, removes period at end.
+
+**** Bar007: one two -> 1 2
+
+**** Bar009: removes ,
+
+**** Bar015: transpose triple/C
+
+*** MathML: 
+    Corrected MathML for CombPerm001-004, by pulling subscript into Multiscript???
+
+    Corrected Prime022, 025, 39, 40, 41:
+    <mn>1</mn><msup><mn>0</mn> -> <mn>10</mn>
+
+*** Decap
+    Bar006, Bar007, Bar008, Bar009, Bar010, Bar012, Bar013, Bar014, Bar015,
+    Bar016, Bar018, CombPerm006
+
+*** Pausing commata:
+    Prime042, Prime044, Prime043, Prime028, Prime027, Prime026, Bar018, 
+
+*** QUESTION: period or point?
+    ANSWER: period
+
+*** Simple spaceout: 
+    Bar012, Bar018,
+
+** Multiline
+
+*** QUESTIONS:
+
+**** What about empty cells?
+    Currently decided on blank.
+    ANSWER: Ignore empty cells. Pauses might become longer or shrink by combining them.
+
+**** Equation: examples?
+
+**** Pause after summary? How long?
+     If I want to.
+
+**** What about cases in other preferences (constraints, etc.)
+
+     ANSWER: In cases preference cases will be spoken even without constraints.
+     In other preferences cases will be overwritten by preference!
+
+**** What about constraints in equality mode etc.
+     Would it not make more sense to actually distinguish equalities vs inequalities.
+
+**** Why is there a separate _Line preference for multiline labels?
+     ANSER: No, labels have not been considered.
+
+*** Examples for label_none are missing!
+
+    Just say nothing for the labels and that's it.

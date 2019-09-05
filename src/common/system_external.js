@@ -23,6 +23,8 @@
  */
 goog.provide('sre.SystemExternal');
 
+goog.require('sre.Variables');
+
 
 
 /**
@@ -32,29 +34,12 @@ sre.SystemExternal = function() { };
 
 
 /**
- * Path to JSON files.
- * @const
- * @type {string}
- */
-sre.SystemExternal.jsonPath = function() {
-  if (typeof process !== 'undefined' &&
-      typeof global !== 'undefined') {
-    return (process.env.SRE_JSON_PATH ||
-            global.SRE_JSON_PATH ||
-            process.cwd() + '/mathmaps') +
-        '/';
-  }
-  return undefined;
-}();
-
-
-/**
  * The local require function for NodeJS.
  * @param {string} library A library name.
  * @return {Object} The library object that has been loaded.
  */
 sre.SystemExternal.require = function(library) {
-  if (typeof require !== 'undefined') {
+  if (typeof process !== 'undefined' && typeof require !== 'undefined') {
     return require(library);
   }
   return null;
@@ -71,12 +56,19 @@ sre.SystemExternal.documentSupported = function() {
 
 
 /**
+ * Process library.
+ * @type {Object}
+ */
+sre.SystemExternal.process = sre.SystemExternal.require('process');
+
+
+/**
  * Xmldom library.
  * @type {Object}
  */
 sre.SystemExternal.xmldom = sre.SystemExternal.documentSupported() ?
     window :
-    sre.SystemExternal.require('xmldom');
+    sre.SystemExternal.require('xmldom-sre');
 
 
 /**
@@ -94,7 +86,14 @@ sre.SystemExternal.document = sre.SystemExternal.documentSupported() ?
  * @type {Object}
  */
 sre.SystemExternal.xpath = sre.SystemExternal.documentSupported() ?
-    document : sre.SystemExternal.require('xpath');
+    document :
+    function() {
+      var window = {document: {}, XPathResult: {}};
+      var wgx = sre.SystemExternal.require('wicked-good-xpath');
+      wgx.install(window);
+      window.document.XPathResult = window.XPathResult;
+      return window.document;
+    }();
 
 
 /**
@@ -111,3 +110,38 @@ sre.SystemExternal.commander = sre.SystemExternal.documentSupported() ?
  */
 sre.SystemExternal.fs = sre.SystemExternal.documentSupported() ?
     null : sre.SystemExternal.require('fs');
+
+
+/**
+ * The URL for SRE resources.
+ * @const
+ * @type {string}
+ */
+sre.SystemExternal.url = sre.Variables.url;
+
+
+/**
+ * Path to JSON files.
+ * @type {string}
+ */
+sre.SystemExternal.jsonPath = function() {
+  return ((sre.SystemExternal.process && typeof global !== 'undefined') ?
+      (sre.SystemExternal.process.env.SRE_JSON_PATH || global.SRE_JSON_PATH ||
+         sre.SystemExternal.process.cwd()) :
+          sre.SystemExternal.url) +
+      '/';
+}();
+
+
+/**
+ * Path to Xpath library file.
+ * @type {string}
+ */
+sre.SystemExternal.WGXpath = sre.Variables.WGXpath;
+
+
+/**
+ * WGXpath library.
+ * @type {Object}
+ */
+sre.SystemExternal.wgxpath = null;

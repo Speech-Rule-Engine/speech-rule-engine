@@ -23,14 +23,12 @@
 
 goog.provide('sre.SpeechRuleEvaluator');
 
-goog.require('sre.SpeechRule');
-
 
 
 /**
  * @interface
  */
-sre.SpeechRuleEvaluator = goog.abstractMethod;
+sre.SpeechRuleEvaluator = function() { };
 
 
 /**

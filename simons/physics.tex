@@ -1,0 +1,808 @@
+\documentclass{article}
+
+\usepackage[landscape]{geometry}
+\usepackage{amsmath}
+\usepackage{physics}
+\DeclareMathOperator{\ddx}{{\rm d}(\it x)}
+
+\begin{document}
+
+\section*{Quantities}
+
+%% NEW BEGIN
+\[
+  \pqty\Bigg{\pqty{\frac{\pqty\Bigg{a}}{b}}}
+  \qty(  \qty(\frac{a}{\frac{c}{b}})\frac{a}{\frac{c}{b}})
+    \eval(  \eval(\frac{A}{\frac{A}{\int x}}|_0^\infty\frac{A}{\frac{A}{\int x}}|_0^\infty
+  \]
+\[
+  \sin((\cos({\frac{(x}{y)}})))
+  \sin([\cos({\frac{(x}{y)}})))
+\]
+
+
+%% NEW END
+
+\[
+  \quantity
+  \quantity a
+  \quantity\bigg a
+  \quantity[c]
+  \quantity\sin
+  \qty\Bigg ab
+  \quantity\bigg\sin
+  \qty(a)
+  \qty(\frac{a}{\frac{c}{b}})
+  \qty[\frac{a}{\frac{c}{b}}]
+  \qty\Bigg{a}
+\]
+
+\subsection*{Empty}
+
+\[
+  \qty\big{}[]
+  \qty\Bigg{}[]
+  \qty\Bigg{}\Bigg[]
+  \qty\Bigg{}\qty\Bigg[]
+  \Bigg[]
+  \Bigg[ \times \Bigg]
+  \Biggl[ \times \Biggr]
+  \qty\Bigg[\times]
+  \qty\Bigg{\times}
+  \qty(\frac{a}{b})\langle\rangle
+  \qty<\frac{a}{b}>\langle\rangle
+\]
+
+\subsection*{Big}
+
+\[
+  \quantity\big(\frac{a}{b})
+  \quantity\bigg(\frac{a}{b})
+  \quantity\Big(\frac{a}{b})
+  \quantity\Bigg(\frac{a}{b})
+  \pqty\Bigg{} 
+  \pqty{\frac{a}{b}}
+  \pqty\Bigg{\frac{a}{b}}
+  \pqty\big{\frac{a}{b}}
+  \Bqty{\frac{a}{b}}
+  \Bqty\Bigg{\frac{a}{b}}
+  \Bqty\big{\frac{a}{b}}
+  \quantity*\Bigg(\frac{a}{b})
+\]
+
+\subsection*{Absolute Value}
+\[
+  \absolutevalue\Bigg{\frac{a}{b}}
+  \absolutevalue{}
+  \abs\Bigg{\frac{a}{b}}
+  \abs*\Bigg{\frac{a}{b}}
+  \norm\Bigg{\frac{a}{b}}
+  \norm*\Bigg{\frac{a}{b}}
+  \norm{}
+\]
+
+
+\newpage
+\subsection*{Eval}
+
+\[
+  \evaluated{x}_0^\infty
+  \eval{x}_0^\infty
+  \eval*{x}_0^\infty
+  \eval[x|_0^\infty
+  \eval*(x|_0^\infty
+  \eval*{\frac{A}{\frac{A}{\int x}}}_0^\infty
+  \eval{\frac{A}{\frac{A}{\int x}}}_0^\infty
+  \eval*(\frac{A}{\frac{A}{\int x}}|_0^\infty
+  \eval(\frac{A}{\frac{A}{\int x}}|_0^\infty
+  \eval*[\frac{A}{\frac{A}{\int x}}|_0^\infty
+  \eval[\frac{A}{\frac{A}{\int x}}|_0^\infty
+\]
+
+
+\newpage
+\subsection*{Order}
+
+\[
+  \order{}
+  \order{x^2}
+  \order\Bigg{x^2}
+  \order{\frac{A}{\frac{A}{\int x}}}
+  \order*{\frac{A}{\frac{A}{\int x}}}
+\]
+
+\subsection*{Commutator}
+
+\[
+  \comm{A}{B}
+  \comm{\frac{A}{\frac{A}{\int x}}}{B}
+  \comm\Bigg{A}{B}
+  \comm*{\frac{A}{\frac{A}{\int x}}}{B}
+  \comm*\Bigg{\frac{X}{Y}}{B}
+  \comm{A}B
+\]
+
+\[
+  \acomm{A}{B}
+  \anticommutator{A}{B}
+  \poissonbracket{A}{B}
+  \pb{A}{B}
+  \acomm{\frac{A}{\frac{A}{\int x}}}{B}
+  \acomm\Bigg{A}{B}
+  \acomm*{\frac{A}{\frac{A}{\int x}}}{B}
+  \acomm{A}B
+\]
+
+\newpage
+
+\section*{Vector Notation}
+
+\[
+  \vectorbold{a}
+  \vectorbold*{a}
+  \vb{a}
+  \vb{\Gamma}\Gamma
+  \vb{2}2
+  \vb{\theta}
+  \vb{\theta\Gamma a\delta \frac{\theta}{b}}\frac{\theta}{b}
+  \vb*{a}
+  \vb*{2}
+  \vb*{\Gamma}
+  \vb*{\theta}
+\]
+
+
+\[
+  \vb{\mbox{ab}}
+  \vb{B}
+  \vb{\mathcal{B}}
+  \mathcal{\vb{B}}
+  \mathit{\vb{B}}
+  \vb{\mathit{B}}
+  \vb{\mathit{a}b}
+  \vb{a+\theta}{\bf +}
+  \vb{\hat{a}}
+  \vb{[}[
+  \vb{\hat{}}
+  \vb{=}
+  \vb{\hat{=}}\hat{=}
+\]
+
+
+
+
+
+\[
+  \va{=}
+  \vectorarrow{a}
+  \va{a}
+  \va{\Gamma}\Gamma
+  \va{2}2
+  \va{\theta}
+  \va{\theta\Gamma a\delta \frac{\theta}{b}}\frac{\theta}{b}
+  \vectorarrow*{a}
+  \va*{a}
+  \va*{2}
+  \va*{\Gamma}
+  \va*{\theta}
+  \va{a}\vec{a}
+\]
+
+
+\[
+  \vu{=}
+  \vectorunit{a}
+  \vu{a}
+  \vu{\Gamma}\Gamma
+  \vu{2}2
+  \vu{\theta}
+  \vu{\theta\Gamma a\delta \frac{\theta}{b}}\frac{\theta}{b}
+  \vectorunit*{a}
+  \vu*{a}
+  \vu*{2}
+  \vu*{\Gamma}
+  \vu*{\theta}
+  \vu{a}\hat{a}
+\]
+
+
+\[
+  \gradient 
+  \gradient(\frac{a}{b})
+  \gradient[\frac{a}{b}]
+  \gradient{\frac{a}{b}}
+  \grad 
+  \grad(\frac{a}{b})
+  \grad[\frac{a}{b}]
+  \grad{\frac{a}{b}}
+\]
+
+\[
+  a\dotproduct b \vdot c
+  \divergence{\frac{a}{b}c}
+  \div{\frac{a}{b}c}
+  \div{(\frac{a}{b}c)}
+  \div(\frac{a}{b}c)
+  {\bf\nabla} \cdot \left(\frac{a}{b}c\right)
+\]
+
+\[
+  \curl 
+  \curl(\frac{a}{b})
+  \curl[\frac{a}{b}]
+  \curl{\frac{a}{b}}
+\]
+
+\[
+  \laplacian 
+  \laplacian(\frac{a}{b})
+  \laplacian[\frac{a}{b}]
+  \laplacian{\frac{a}{b}}
+\]
+
+\newpage
+
+\section*{Operators}
+
+\subsection*{Expressions}
+
+
+$\sin(\cos(\frac{x}{y}))$
+
+\[
+  \sin(x)
+  \sinh(x)
+  \arcsin(x)
+  \asin(x)
+  \cos(x)
+  \cosh(x)
+  \arccos(x)
+  \acos(x)
+  \tan(x)
+  \tanh(x)
+  \arctan(x)
+  \atan(x)
+\]
+
+\[
+  \csc(x)
+  \csch(x)
+  \arccsc(x)
+  \acsc(x)
+  \sec(x)
+  \sech(x)
+  \arcsec(x)
+  \asec(x)
+  \cot(x)
+  \coth(x)
+  \arccot(x)
+  \acot(x)
+\]
+
+\[
+  \sin(\frac{x}{y})
+  \sinh(\frac{x}{y})
+  \arcsin(\frac{x}{y})
+  \asin(\frac{x}{y})
+  \cos(\frac{x}{y})
+  \cosh(\frac{x}{y})
+  \arccos(\frac{x}{y})
+  \acos(\frac{x}{y})
+  \tan(\frac{x}{y})
+  \tanh(\frac{x}{y})
+  \arctan(\frac{x}{y})
+  \atan(\frac{x}{y})
+\]
+
+\[
+  \csc(\frac{x}{y})
+  \csch(\frac{x}{y})
+  \arccsc(\frac{x}{y})
+  \acsc(\frac{x}{y})
+  \sec(\frac{x}{y})
+  \sech(\frac{x}{y})
+  \arcsec(\frac{x}{y})
+  \asec(\frac{x}{y})
+  \cot(\frac{x}{y})
+  \coth(\frac{x}{y})
+  \arccot(\frac{x}{y})
+  \acot(\frac{x}{y})
+\]
+
+
+\[
+  \sin x
+  \sin{x}
+  \sin[x]
+  \sin[2]{x}
+  \sin[2]x
+  \sin[2]
+  \sin|\frac{x}{y}|
+  \sin[\frac{x}{y}]
+  \sin['](\frac{x}{y})
+  \sin[']{\frac{x}{y}}
+  \sine(\frac{x}{y})
+  \hypsine
+  \log[2](x)
+  \ln[2](x)
+  \exp[2](x)
+  \det[2](x)
+  \Pr[2](x)
+\]
+
+\newpage
+\subsection*{New Operators}
+
+\[
+  \tr\rho
+  \tr(\frac{x}{y})
+  \tr[2](\frac{x}{y})
+  \rank\rho
+  \rank(\frac{x}{y})
+  \rank[2](\frac{x}{y})
+  \erf\rho
+  \erf(\frac{x}{y})
+  \erf[2](\frac{x}{y})
+  \Res\rho
+  \Res(\frac{x}{y})
+  \Res[\frac{x}{y}]
+  \Res{\frac{x}{y}}
+  \Res|\frac{x}{y}|
+  \Res \frac{x}{y}
+  \Res[2](\frac{x}{y})
+\]
+
+
+\[
+  \principalvalue{\int f(z) \dd{z}}
+  \pv{\int f(z) \dd{z}}
+  \pv{\int f(z) \dd{z}}a
+  \pv\int f(z) \dd{z}a
+  \pv(\int f(z))
+  \pv|\int f(z)|
+  \pv[\int f(z)]
+  \PV{\int f(z) \dd{z}}
+  \PV{\int f(z) \dd{z}}a
+  \PV\int f(z) \dd{z}a
+\]
+
+\[
+  \Re\rho
+  \Re(\frac{x}{y})
+  \Re[\frac{x}{y}]
+  \Re{\frac{x}{y}}
+  \Re|\frac{x}{y}|
+  \Re \frac{x}{y}
+  \Re[2](\frac{x}{y})
+  \real
+  \real{x}
+  \Im\rho
+  \Im(\frac{x}{y})
+  \Im[\frac{x}{y}]
+  \Im{\frac{x}{y}}
+  \Im|\frac{x}{y}|
+  \Im \frac{x}{y}
+  \Im[2](\frac{x}{y})
+  \imaginary
+  \imaginary{x}
+\]
+
+
+\newpage
+\section*{Quick Quad Text}
+
+\qcc
+\qand
+a\qc b
+
+a\qqtext{hello}b
+
+a\qqtext*{hello}b
+
+a\qqtext ab
+
+a\qqtext* ab
+
+three\qif two
+
+
+
+\newpage
+\subsection*{Derivatives}
+
+%% NEW BEGIN
+\[
+  \pdv[n]{x}(\frac{x}{y})
+  \pdv[n]{x}{y}(\frac{x}{y})
+  \pdv[n]{x}{y}{f}(\frac{x}{y})
+\]
+\[
+  \dv[n]{f}(\dv[n]{f}(\frac{x}{y})\frac{x}{y})
+  \pdv[n]{f}{x}{y}(\pdv[n]{f}{x}{y}(\frac{x}{y})\frac{x}{y})
+  \pdv{f}{x}{y}(\pdv{f}{x}{y}(\frac{x}{y})\frac{x}{y})
+\]
+\[
+  \dd[4](\dd[4](\frac{\frac{\cos}{\theta}}{\theta})\frac{\dd[4](\frac{\frac{\cos}{\theta}}{\theta})\frac{\cos}{\theta}}{\theta})
+\]
+%% NEW END
+
+\[
+  \dv x
+  \dv x(ll)
+  \dv{x}{y}
+  \dv[n]{f}{x}
+  \dv{f}{x}{y}
+  \dv{f}{x}y
+  \dv{x}y
+  \dv[n]{f}(\frac{x}{y})
+  \dv[n]{f}{x}{y}(\frac{x}{y})
+  \dv*[n]{f}{x}{y}(\frac{x}{y})
+  \dv*[]{f}{x}{y}(\frac{x}{y})
+  \dv[]{f}{x}{y}(\frac{x}{y})
+  \dv[5](\frac{x}{y})
+  \dv[5]{f}
+  \dv{f}
+\]
+
+\[
+  \flatfrac{x}{y}
+  \flatfrac{x^2}{y}
+  \pdv x
+  \pdv x(ll)
+  \pdv{f}
+  \pdv{x}{y}
+  \pdv[n]{f}{x}
+  \pdv{f}{x}{y}
+  \pdv{f}{x}y
+  \pdv{x}y
+  \pdv*{f}{x}
+  \pdv*[3]{f}{x}
+  \pdv[n]{f}(\frac{x}{y})
+  \pdv[n]{f}{x}{y}(\frac{x}{y})
+  \pdv*[n]{f}{x}{y}(\frac{x}{y})
+  \pdv*[]{f}{x}{y}(\frac{x}{y})
+  \pdv[]{f}{x}{y}(\frac{x}{y})
+  \pdv[5](\frac{x}{y})
+  \pdv[5]{f}
+\]
+
+\[
+  \fdv x
+  \fdv x(ll)
+  \fdv{x}{y}
+  \fdv{f}
+  \fdv[n]{f}{x}
+  \fdv{f}{x}{y}
+  \fdv{f}{x}y
+  \fdv{x}y
+  \functionalderivative*{F}{x}
+  \fderivative*{F}{x}
+  \fdv*{F}{x}
+  \fdv{F}{x}
+  \fdv[2]{F}{x}
+  \fdv[n]{f}(\frac{x}{y})
+  \fdv[n]{f}{x}{y}(\frac{x}{y})
+  \fdv*[n]{f}{x}{y}(\frac{x}{y})
+  \fdv*[]{f}{x}{y}(\frac{x}{y})
+  \fdv[]{f}{x}{y}(\frac{x}{y})
+  \fdv[5]{f}
+\]
+
+\[
+  \var A
+  \var{A}
+  \var{A}{B}
+  \var[4]{A} B
+  \var{F[g(x)]}
+  \var(E-TS)
+  \var{F[g(\frac{x}{y})]}
+  \var{F[g\left(\frac{x}{y}\right)]}
+  \var(\frac{a}{b})
+  A \var A B
+  A \var{A} B
+  A \var{A}{B} B
+  A \var[4]{A} B
+\]
+
+
+\[
+  \dd
+  \dd x
+  \dd{x}
+  \dd[3]{x}
+  \dd[3]x
+  \dd(\frac{\frac{\cos}{\theta}}{\theta})
+  \dd[4](\frac{\frac{\cos}{\theta}}{\theta})
+  \dd{x}(\frac{\frac{\cos}{\theta}}{\theta})
+  \dd[4]{x}(\frac{\frac{\cos}{\theta}}{\theta})
+  \dd[5]
+\]
+
+\[
+  A\dd A
+  A\dd x A
+  A\dd{x} A
+  A\ddx A
+  A{{\rm d}(\it x)}A
+  A\dd[3]{x} A
+  A\dd[3]x A
+  A\dd(\frac{\frac{\cos}{\theta}}{\theta}) A
+  A\dd[4](\frac{\frac{\cos}{\theta}}{\theta})A
+  A\dd{x}(\frac{\frac{\cos}{\theta}}{\theta})A
+  A\dd[4]{x}(\frac{\frac{\cos}{\theta}}{\theta})A
+  A{\rm d}\left(\frac{\frac{\cos}{\theta}}{\theta}\right) A
+  A{\rm d}{\left(\frac{\frac{\cos}{\theta}}{\theta}\right)} A
+\]
+
+
+\newpage
+\subsection*{Bra-Ket}
+
+\[
+  \bra{\phi}\ket{\psi}
+  \bra{A}\ket{B}
+  \bra{\phi}\dyad{\psi}{\xi}
+  \bra A  \ket B
+  \bra*{\frac{a}{b}}  \ket{\frac{a}{b}}
+  \bra{\frac{a}{b}}  \ket*{\frac{a}{b}}
+  \bra A\ket{B}
+  \bra A\ket 
+  \bra {A}\ket 
+  \bra {A}\ket B
+  \bra {\frac{a}{b}} \ket* \alpha
+  \ket{A}
+  \ket{\frac{a}{b}}
+  \ket*{A}
+  \ket a
+  \ket* a
+  \ket \alpha
+\]
+
+\[
+  \braket{A}
+  \braket{\frac{a}{b}}
+  \braket*{A}
+  \braket*{\frac{a}{b}}
+  \braket a
+  \braket* a
+  \braket \alpha
+  \braket{\frac{a}{b}}{A}
+  \braket*{\frac{a}{b}}{A}
+  \braket{\frac{a}{b}}  A
+  \braket*{\frac{a}{b}}   A
+  \braket{\frac{a}{b}}{} 
+  \braket*{\frac{a}{b}}{}
+\]
+
+\[
+  \ketbra{A}
+  \ketbra{\frac{a}{b}}
+  \ketbra*{A}
+  \ketbra*{\frac{a}{b}}
+  \ketbra a
+  \ketbra* a
+  \ketbra \alpha
+  \ketbra{\frac{a}{b}}{A}
+  \ketbra*{\frac{a}{b}}{A}
+  \ketbra{\frac{a}{b}}  A
+  \ketbra*{\frac{a}{b}}   A
+  \ketbra{\frac{a}{b}}{} 
+  \ketbra*{\frac{a}{b}}{}
+\]
+
+\[
+  \ev{A}
+  \ev{\frac{A}{B}}
+  \ev*{\frac{A}{B}}
+  \ev**{\frac{A}{B}}
+  \ev{A}{\frac{A}{B}}
+  \ev{\frac{A}{B}}{A}
+  \ev*{A}{\frac{A}{B}}
+  \ev**{A} {\frac{A}{B}}
+  \ev A B
+  \ev A {\frac{A}{B}}
+  \ev {\frac{A}{B}} A
+  \ev* A {\frac{A}{B}}
+  \ev** A {\frac{A}{B}}
+\]
+
+\[
+  \ev{\frac{A}{B}}{\frac{\Psi}{\Phi}}
+  \ev{\frac{A}{B}}{{\Psi}}
+  \ev*{\frac{A}{B}}{\frac{\Psi}{\Phi}}
+  \ev**{\frac{A}{B}}{\frac{\Psi}{\Phi}}
+\]
+
+
+\[
+  \left\vert A \middle\rangle\middle\langle B\right\vert
+  \ketbra{A}{B}
+  \mel A B C
+  \mel**{n}{\frac{a}{b}}{m}
+  \outerproduct{A}{B}
+  \dyad{a}{b}
+\]
+
+
+\newpage
+
+
+\section*{Matrices}
+
+%% NEW BEGIN
+$  \mqty*|a & \mqty*{a & b} \\ c& d| $
+%% NEW END
+
+$
+\begin{pmatrix}
+  \mqty{a\\b} & d\\
+  \mqty{c & d} & e
+\end{pmatrix}
+$
+
+
+\[
+  \matrixquantity{Q}
+  \matrixquantity*{a & b \\ c & d}
+  \matrixquantity*(a & b \\ c & d)
+  \matrixquantity(a & b \\ c & d)
+  \matrixquantity[a & b \\ c & d]
+  \matrixquantity|a & b \\ c & d|
+  \mqty{a & b \\ c & d}
+  \mqty(a & b \\ c & d)
+  \mqty*(a & b \\ c & d)
+  \mqty[a & b \\ c & d]
+  \mqty|a & b \\ c & d|
+  \mqty*|a & b\\ c& d|
+\]
+
+\[
+  \pmqty{Q} \mqty(R)
+  \Pmqty{Q} \mqty*(R)
+  \bmqty{Q} \mqty[R]
+  \vmqty{Q} \mqty|R|
+  \pmqty{a & b \\ c & d}
+  \Pmqty{a & b \\ c & d}
+  \bmqty{a & b \\ c & d}
+  \vmqty{a & b \\ c & d}
+\]
+
+\[
+  \smallmatrixquantity{Q}
+  \smallmatrixquantity*{a & b \\ c & d}
+  \smallmatrixquantity*(a & b \\ c & d)
+  \smallmatrixquantity(a & b \\ c & d)
+  \smallmatrixquantity[a & b \\ c & d]
+  \smallmatrixquantity|a & b \\ c & d|
+  \smqty{a & b \\ c & d}
+  \smqty(a & b \\ c & d)
+  \smqty*(a & b \\ c & d)
+  \smqty[a & b \\ c & d]
+  \smqty|a & b \\ c & d|
+\]
+
+\[
+  \spmqty{Q} \smqty(R)
+  \sPmqty{Q} \smqty*(R)
+  \sbmqty{Q} \smqty[R]
+  \svmqty{Q} \smqty|R|
+  \spmqty{a & b \\ c & d}
+  \sPmqty{a & b \\ c & d}
+  \sbmqty{a & b \\ c & d}
+  \svmqty{a & b \\ c & d}
+\]
+
+\[
+  \matrixdeterminant{a & b \\ c & d}
+  \mdet{a & b \\ c & d}
+  \smdet{a & b \\ c & d} 
+  \matrixdeterminant a b
+  \mdet a b
+  \smdet a b
+\]
+
+\subsection*{Identity}
+\[
+  \mqty{\imat{3}}
+  \vmqty{\imat{5}}
+  \vmqty{\imat{0}}
+  \vmqty{\imat{1}}
+  \vmqty{\imat{-1}}
+  \pmqty{\imat{3}\pmat{0}}
+\]
+
+\subsection*{XMatrix}
+\[
+  \smqty(\xmat{1}{2}{3})
+  \smqty(\xmat{a}{3}{3}) 
+  \smqty(\xmat{a}{3}{1}) 
+  \smqty(\xmat{a}{1}{3})
+  \smqty(\xmat*{1}{2}{3})
+  \smqty(\xmat*{a}{3}{3})
+  \smqty(\xmat*{a}{3}{1})
+  \smqty(\xmat*{a}{1}{3})
+  \smqty(\xmat*{a}{1}{1})
+  \smqty(\xmat*{a}{-1}{-1})
+  \smqty(\zmat{1}{3})
+  \smqty(\zmat{2}{3})
+  \smqty(\zmat{3}{1})
+\]
+
+
+\subsection*{Pauli}
+\[
+  \mqty{\pmat{0}}
+  \pmqty{\pmat{0}}
+  \mqty{\pmat{1}}
+  \mqty{\pmat{2}}
+  \mqty{\pmat{3}}
+  \mqty{\pmat{4}}
+  \mqty{\pmat{x}}
+  \mqty{\pmat{y}}
+  \mqty{\pmat{z}}
+  \mqty{\pmat{a}}
+  \pmqty{\pmat{a}}
+  \mqty{\pmat{aa}}
+  \pmqty{\pmat{0.a}}
+\]
+
+%% P pauli %% NOT
+\[
+  \pmqty{\pmat{1}}
+  \pmqty{\pmat{2}}
+  \pmqty{\pmat{3}}
+  \pmqty{\pmat{4}}
+  \pmqty{\pmat{x}}
+  \pmqty{\pmat{y}}
+  \pmqty{\pmat{z}}
+  \pmqty{\pmat{aa}}
+\]
+
+
+\[
+  \left\lgroup\frac{a}{b}\right\rgroup
+  \begin{smallmatrix} a & b \\ c & d \end{smallmatrix}
+  \smqty{\imat{3}}
+  \mqty{\imat{10}}
+\]
+
+\[
+  \mqty(\dmat{1,2&3\\4&5})
+  \mqty(\dmat 1)
+  \mqty(\dmat 1,2)
+  \mqty(\dmat{1,2&3\\4&5&6,7,8})
+  \mqty(\dmat{1,2&3\\4&5,6,7,8})
+  \mqty(\dmat{1,2\\3\\4\\5\\6,7,8})
+  \mqty(\dmat{1,2&3\\4&5&6,7,8,\dmat{9,10}})
+\]
+
+
+\[
+  \mqty(\admat{1,2&3\\4&5})
+  \mqty(\admat 1)
+  \mqty(\admat 1,2)
+  \mqty(\admat{1,2&3\\4&5&6,7,8})
+  \mqty(\admat{1,2&3\\4&5,6,7,8})
+  \mqty(\admat{1,2&3\\4&5&6,7,8,\dmat{9,10}})
+\]
+
+\[ 
+  \mqty a
+  \mqty1
+  \pmqty* 34
+  \mqty(\dmat{1,2&3,4&4&5\\4&5,33,4,5,7,8\\0\\10&20\\3,200}) 
+  \mqty(\dmat{1,2&3\\4&5}) 
+  \mqty(\dmat{1,2&3\\4&5&6,\imat{3},7,8,\dmat{9,10}})
+  \mqty(\mqty{1}\\ & \mqty{2 & 3\\ 4 & 5 & 6}\\ & & \mqty{\imat{3}} \\ & & & \mqty{7})
+\]
+
+\newpage
+
+\[\qty\Bigg|\frac{a}{b}|
+  \qty{a}\cos
+  \qty((\qty(\frac{b}{c})))
+  \eval(x\eval(x|_0^n a |_0^\infty 
+\]
+
+
+\end{document}

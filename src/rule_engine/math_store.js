@@ -20,10 +20,15 @@
 
 goog.provide('sre.MathStore');
 
+goog.require('sre.AuditoryDescription');
 goog.require('sre.BaseRuleStore');
-goog.require('sre.DomUtil');
+goog.require('sre.BaseUtil');
+goog.require('sre.DynamicCstr');
 goog.require('sre.Engine');
+goog.require('sre.Locale.en');
+goog.require('sre.Messages');
 goog.require('sre.SpeechRule');
+goog.require('sre.Trie');
 
 
 
@@ -33,77 +38,27 @@ goog.require('sre.SpeechRule');
  * @extends {sre.BaseRuleStore}
  */
 sre.MathStore = function() {
-  goog.base(this);
+  sre.MathStore.base(this, 'constructor');
 
   /**
-   * @override
+   * @type {Array.<function()>}
    */
-  this.dynamicCstrAttribs = [
-    sre.SpeechRule.DynamicCstrAttrib.DOMAIN,
-    sre.SpeechRule.DynamicCstrAttrib.STYLE
-  ];
-
-  /**
-   * @override
-   */
-  this.defaultTtsProps = [sre.Engine.personalityProps.PITCH,
-                          sre.Engine.personalityProps.RATE];
+  this.initializer = [];
 
 };
 goog.inherits(sre.MathStore, sre.BaseRuleStore);
 
 
-/** This adds domain to dynamic constraint annotation. */
-sre.SpeechRule.DynamicCstrAttrib.DOMAIN = 'domain';
-
-
 /**
  * @override
  */
-sre.MathStore.prototype.defineRule = function(
-    name, dynamic, action, query, cstr) {
-  var dynamicCstr = this.parseDynamicConstraint(dynamic);
-  var cstrList = Array.prototype.slice.call(arguments, 4);
-  // We can not use goog.base due to variable number of constraint arguments.
-  var rule = sre.MathStore.superClass_.defineRule.apply(
-      this, [name, dynamicCstr[sre.SpeechRule.DynamicCstrAttrib.STYLE],
-             action, query].concat(cstrList));
-  // In the superclass the dynamic constraint only contains style annotations.
-  // We now set the proper dynamic constraint that contains in addition a
-  // a domain attribute/value pair.
-  rule.dynamicCstr = dynamicCstr;
-  this.removeDuplicates(rule);
-  return rule;
-};
-
-
-/**
- * Parses the dynamic constraint for math rules, consisting of a domain and
- * style information, given as 'domain.style'.
- * @param {string} cstr A string representation of the dynamic constraint.
- * @return {!sre.SpeechRule.DynamicCstr} The dynamic constraint.
- */
-sre.MathStore.prototype.parseDynamicConstraint = function(cstr) {
-  var domainStyle = cstr.split('.');
-  if (!domainStyle[0] || !domainStyle[1]) {
-    throw new sre.SpeechRule.OutputError('Invalid domain assignment:' + cstr);
+sre.MathStore.prototype.initialize = function() {
+  if (this.initialized) return;
+  for (var i = 0, func; func = this.initializer[i]; i++) {
+    func();
   }
-  return sre.MathStore.createDynamicConstraint(domainStyle[0], domainStyle[1]);
-};
-
-
-/**
- * Creates a dynamic constraint annotation for math rules from domain and style
- * values.
- * @param {string} domain Domain annotation.
- * @param {string} style Style annotation.
- * @return {!sre.SpeechRule.DynamicCstr}
- */
-sre.MathStore.createDynamicConstraint = function(domain, style) {
-  var dynamicCstr = {};
-  dynamicCstr[sre.SpeechRule.DynamicCstrAttrib.DOMAIN] = domain;
-  dynamicCstr[sre.SpeechRule.DynamicCstrAttrib.STYLE] = style;
-  return dynamicCstr;
+  this.setSpeechRules(this.trie.collectRules());
+  this.initialized = true;
 };
 
 
@@ -116,12 +71,13 @@ sre.MathStore.createDynamicConstraint = function(domain, style) {
  */
 sre.MathStore.prototype.defineUniqueRuleAlias = function(
     name, dynamic, query, var_args) {
-  var dynamicCstr = this.parseDynamicConstraint(dynamic);
+  var dynamicCstr = this.parseCstr(dynamic);
   var rule = this.findRule(
       goog.bind(
           function(rule) {
             return rule.name == name &&
-                this.testDynamicConstraints(dynamicCstr, rule);},
+                dynamicCstr.equal(rule.dynamicCstr);
+          },
           this));
   if (!rule) {
     throw new sre.SpeechRule.OutputError(
@@ -131,6 +87,11 @@ sre.MathStore.prototype.defineUniqueRuleAlias = function(
 };
 
 
+// TODO: Possibly defines a number of duplicate rules.
+// (E.g., superscript-baseline in Mathspeak)
+// These are automatically discarded in the Trie, but might still be worthwhile
+// looking into the definition methods.
+//
 /**
  * Adds an alias for an existing rule.
  * @param {string} name The name of the rule.
@@ -161,9 +122,23 @@ sre.MathStore.prototype.defineRulesAlias = function(name, query, var_args) {
         'Rule with name ' + name + ' does not exist.');
   }
   var cstrList = Array.prototype.slice.call(arguments, 2);
+  var keep = [];
+  var findKeep = function(rule) {
+    var cstr = rule.dynamicCstr.toString();
+    var action = rule.action.toString();
+    for (var i = 0, k; k = keep[i]; i++) {
+      if (k.action === action && k.cstr === cstr) {
+        return false;
+      }
+    }
+    keep.push({cstr: cstr, action: action});
+    return true;
+  };
   rules.forEach(goog.bind(
       function(rule) {
-        this.addAlias_(rule, query, cstrList);
+        if (findKeep(rule)) {
+          this.addAlias_(rule, query, cstrList);
+        }
       },
       this));
 };
@@ -196,19 +171,19 @@ sre.MathStore.prototype.addAlias_ = function(rule, query, cstrList) {
  */
 sre.MathStore.prototype.defineSpecialisedRule = function(
     name, oldDynamic, newDynamic, opt_action) {
-  var dynamicCstr = this.parseDynamicConstraint(oldDynamic);
+  var dynamicCstr = this.parseCstr(oldDynamic);
   var rule = this.findRule(
       goog.bind(
           function(rule) {
             return rule.name == name &&
-                this.testDynamicConstraints(dynamicCstr, rule);},
+                dynamicCstr.equal(rule.dynamicCstr);},
           this));
   if (!rule) {
     throw new sre.SpeechRule.OutputError(
         'Rule named ' + name + ' with style ' +
         oldDynamic + ' does not exist.');
   }
-  var newCstr = this.parseDynamicConstraint(newDynamic);
+  var newCstr = this.parseCstr(newDynamic);
   var action = opt_action ? sre.SpeechRule.Action.fromString(opt_action) :
           rule.action;
   var newRule = new sre.SpeechRule(
@@ -240,23 +215,27 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
     // Nothing but whitespace: Ignore.
     return descs;
   }
-  var split = sre.DomUtil.removeEmpty(str.replace(/\s/g, ' ').split(' '));
+  // Case of numbers with whitespace for seperation.
+  var num = this.matchNumber_(str);
+  if (num && num.length === str.length) {
+    descs.push(this.evaluate_(num.number));
+    return descs;
+  }
+  var split = sre.BaseUtil.removeEmpty(str.replace(/\s/g, ' ').split(' '));
   for (var i = 0, s; s = split[i]; i++) {
     if (s.length == 1) {
       descs.push(this.evaluate_(s));
-    } else if (s.match(/^[a-zA-Z]+$/)) {
+    } else if (s.match(new RegExp('^[' + sre.Messages.REGEXP.TEXT + ']+$'))) {
       descs.push(this.evaluate_(s));
     } else {
       // Break up string even further wrt. symbols vs alphanum substrings.
       var rest = s;
-      var count = 0;
       while (rest) {
-        var num = rest.match(
-            /^((\d{1,3})(?=,)(,\d{3})*(\.\d+)?)|^\d*\.\d+|^\d+/);
-        var alpha = rest.match(/^[a-zA-Z]+/);
+        num = this.matchNumber_(rest);
+        var alpha = rest.match(new RegExp('^[' + sre.Messages.REGEXP.TEXT + ']+'));
         if (num) {
-          descs.push(this.evaluate_(num[0]));
-          rest = rest.substring(num[0].length);
+          descs.push(this.evaluate_(num.number));
+          rest = rest.substring(num.length);
         } else if (alpha) {
           descs.push(this.evaluate_(alpha[0]));
           rest = rest.substring(alpha[0].length);
@@ -281,6 +260,32 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
 
 
 /**
+ * Matches a number with respect to locale. If it discovers it is a number in
+ * English writing, it will attempt to translate it.
+ * @param {string} str The string to match.
+ * @return {?{number: string, length: number}} The number and its length.
+ */
+sre.MathStore.prototype.matchNumber_ = function(str) {
+  var locNum = str.match(new RegExp('^' + sre.Messages.REGEXP.NUMBER));
+  var enNum = str.match(new RegExp('^' + sre.Locale.en.REGEXP.NUMBER));
+  if (!locNum && !enNum) {
+    return null;
+  }
+  var isEn = enNum && enNum[0] === str;
+  var isLoc = (locNum && locNum[0] === str) || !isEn;
+  if (isLoc) {
+    return {number: locNum[0], length: locNum[0].length};
+  }
+  var number = enNum[0].
+      replace(new RegExp(sre.Locale.en.REGEXP.DIGIT_GROUP, 'g'), 'X').
+      replace(new RegExp(sre.Locale.en.REGEXP.DECIMAL_MARK, 'g'),
+              sre.Messages.REGEXP.DECIMAL_MARK).
+      replace(/X/g, sre.Messages.REGEXP.DIGIT_GROUP);
+  return {number: number, length: enNum[0].length};
+};
+
+
+/**
  * Creates a new Auditory Description for a math expression.
  * @param {string} text to be translated.
  * @return {sre.AuditoryDescription} Auditory description for the math
@@ -288,12 +293,6 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
  * @private
  */
 sre.MathStore.prototype.evaluate_ = function(text) {
-  return new sre.AuditoryDescription(
-      {
-        'text': text,
-        'preprocess': true,
-        'correction':
-            sre.SpeechRuleEngine.getInstance().getGlobalParameter('remove') ||
-            ''
-      });
+  return sre.AuditoryDescription.create(
+      {text: text}, {adjust: true, translate: true});
 };

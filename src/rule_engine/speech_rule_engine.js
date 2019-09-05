@@ -32,10 +32,14 @@ goog.provide('sre.SpeechRuleEngine');
 
 goog.require('sre.AuditoryDescription');
 goog.require('sre.BaseRuleStore');
+goog.require('sre.BaseUtil');
 goog.require('sre.Debugger');
+goog.require('sre.DynamicCstr');
 goog.require('sre.Engine');
+goog.require('sre.MathMap');
+goog.require('sre.MathStore');
 goog.require('sre.SpeechRule');
-goog.require('sre.XpathUtil');
+goog.require('sre.SpeechRuleStores');
 
 
 
@@ -51,101 +55,152 @@ sre.SpeechRuleEngine = function() {
   this.activeStore_ = null;
 
   /**
-   * Dynamic constraint annotation.
-   * @type {!sre.SpeechRule.DynamicCstr}
-   */
-  this.dynamicCstr = {};
-  this.dynamicCstr[sre.SpeechRule.DynamicCstrAttrib.STYLE] = 'short';
-
-  /**
-   * Object holding global parameters that can be set by the stores.
-   * @type {Object.<string, string>}
+   * Caches speech strings by node id.
+   * @type {Object.<!Array.<sre.AuditoryDescription>>}
    * @private
    */
-  this.globalParameters_ = {};
+  this.cache_ = {};
+
+  /**
+   * Flag indicating if the engine is ready. Not ready while it is updating!
+   * @type {boolean}
+   * @private
+   */
+  this.ready_ = true;
+
+  /**
+   * Caches combined stores that have already been constructed.
+   * @type {Object.<sre.BaseRuleStore>}
+   * @private
+   */
+  this.combinedStores_ = {};
+
+  /**
+   * Default evaluators collated by locale and modality.
+   * @type {Object.<Object.<function(!Node): !Array<sre.AuditoryDescription>>>}
+   */
+  this.evaluators_ = {};
+
+  // sre.Debugger.getInstance().init();
+
+  sre.Engine.registerTest(
+      goog.bind(function(x) {return this.ready_;}, this));
+
 };
 goog.addSingletonGetter(sre.SpeechRuleEngine);
 
 
 /**
- * Sets a global parameter in the speech rule engine's store.
- * @param {string} parameter The parameter name.
- * @param {string} value The parameter's value.
+ * Parameterizes the speech rule engine.
+ * @param {!Array.<string>} ruleSetNames The name of rule sets to use.
  */
-sre.SpeechRuleEngine.prototype.setGlobalParameter = function(parameter, value) {
-  this.globalParameters_[parameter] = value;
-};
-
-
-/**
- * Returns the a global parameter if it exists.
- * @param {string} parameter The parameter name.
- * @return {string} The parameter's value.
- */
-sre.SpeechRuleEngine.prototype.getGlobalParameter = function(parameter) {
-  return this.globalParameters_[parameter];
+sre.SpeechRuleEngine.prototype.parameterize = function(ruleSetNames) {
+  var ruleSets = {};
+  for (var i = 0, m = ruleSetNames.length; i < m; i++) {
+    var name = ruleSetNames[i];
+    var set = sre.SpeechRuleStores.getConstructor(name);
+    if (set && set.getInstance) {
+      ruleSets[name] = set.getInstance();
+    }
+  }
+  this.parameterize_(ruleSets);
 };
 
 
 /**
  * Parameterizes the speech rule engine.
- * @param {sre.BaseRuleStore} store A speech rule store.
+ * @param {!Object.<sre.BaseRuleStore>} ruleSets A list of rule sets to use as
+ *     name to constructor mapping.
+ * @private
  */
-sre.SpeechRuleEngine.prototype.parameterize = function(store) {
+sre.SpeechRuleEngine.prototype.parameterize_ = function(ruleSets) {
   try {
-    store.initialize();
+    this.activeStore_ = this.combineStores_(ruleSets);
   } catch (err) {
     if (err.name == 'StoreError') {
-      console.log('Store Error:', err.message);
+      console.error('Store Error:', err.message);
     }
     else {
       throw err;
     }
   }
-  this.activeStore_ = store;
+  this.updateEngine();
 };
 
 
 /**
- * Parameterizes the dynamic constraint annotation for the speech rule
- * engine. This is a separate function as this can be done interactively, while
- * a particular speech rule store is active.
- * @param {sre.SpeechRule.DynamicCstr} dynamic The new dynamic constraint.
+ * Clears the cache.
  */
-sre.SpeechRuleEngine.prototype.setDynamicConstraint = function(dynamic) {
-  if (dynamic) {
-    this.dynamicCstr = dynamic;
+sre.SpeechRuleEngine.prototype.clearCache = function() {
+  this.cache_ = {};
+};
+
+
+/**
+ * An iterator over the cache elements.
+ * @param {function(string, !Array.<sre.AuditoryDescription>)} iter
+ *     The iterator function.
+ */
+sre.SpeechRuleEngine.prototype.forCache = function(iter) {
+  for (var key in this.cache_) {
+    iter(key, this.cache_[key]);
   }
 };
 
 
 /**
- * Constructs a string from the node and the given expression.
- * @param {!Node} node The initial node.
- * @param {string} expr An Xpath expression string, a name of a custom
- *     function or a string.
- * @return {string} The result of applying expression to node.
+ * Retrieves a cached value for a particular element.
+ * @param {Node} node The element to lookup.
+ * @return {Array.<sre.AuditoryDescription>} The cached value if it exists.
+ * @private
  */
-sre.SpeechRuleEngine.prototype.constructString = function(node, expr) {
-  if (!expr) {
-    return '';
+sre.SpeechRuleEngine.prototype.getCacheForNode_ = function(node) {
+  if (!node || !node.getAttribute) return null;
+  var key = node.getAttribute('id');
+  if (key === 'undefined' || key === '') return null;
+  return this.getCache(key);
+};
+
+
+/**
+ * Retrieves a cached value by key.
+ * @param {string} key The node id.
+ * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions.
+ */
+sre.SpeechRuleEngine.prototype.getCache = function(key) {
+  var descr = this.cache_[key];
+  return descr ? this.cloneCache(descr) : descr;
+};
+
+
+/**
+ * Clones a list of auditory descriptions to insulate cache from changes.
+ * @param {!Array.<sre.AuditoryDescription>} descrs List of descriptions.
+ * @return {!Array.<sre.AuditoryDescription>} The cloned list.
+ */
+sre.SpeechRuleEngine.prototype.cloneCache = function(descrs) {
+  return descrs.map(function(x) {return x.clone();});
+};
+
+
+/**
+ * Caches speech for a particular node.
+ * @param {!Node} node The node to cache speech for.
+ * @param {!Array.<sre.AuditoryDescription>} speech A list of auditory
+ *     descriptions.
+ * @private
+ */
+sre.SpeechRuleEngine.prototype.pushCache_ = function(node, speech) {
+  if (!sre.Engine.getInstance().cache || !node.getAttribute) return;
+  var id = node.getAttribute('id');
+  if (id) {
+    this.cache_[id] = this.cloneCache(speech);
   }
-  if (expr.charAt(0) == '"') {
-    return expr.slice(1, -1);
-  }
-  var func = this.activeStore_.customStrings.lookup(expr);
-  if (func) {
-    // We always return the result of the custom function, in case it
-    // deliberately computes the empty string!
-    return func(node);
-  }
-  // Finally we assume expr to be an xpath expression and calculate a string
-  // value from the node.
-  return sre.XpathUtil.evaluateString(expr, node);
 };
 
 
 // Dispatch functionality.
+// The timing function is temporary until the MOSS deliverable is done.
 /**
  * Computes a speech object for a given node. Returns the empty list if
  * no node is given.
@@ -154,9 +209,28 @@ sre.SpeechRuleEngine.prototype.constructString = function(node, expr) {
  *   for that node.
  */
 sre.SpeechRuleEngine.prototype.evaluateNode = function(node) {
+  var timeIn = (new Date()).getTime();
+  var result = this.evaluateNode_(node);
+  var timeOut = (new Date()).getTime();
+  sre.Debugger.getInstance().output('Time:', timeOut - timeIn);
+  return result;
+};
+
+
+/**
+ * Computes a speech object for a given node. Returns the empty list if
+ * no node is given.
+ * @param {Node} node The node to be evaluated.
+ * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions
+ *   for that node.
+ * @private
+ */
+sre.SpeechRuleEngine.prototype.evaluateNode_ = function(node) {
   if (!node) {
     return [];
   }
+  // Update the preferences of the dynamic constraint.
+  this.updateConstraint_();
   return this.evaluateTree_(node);
 };
 
@@ -168,95 +242,143 @@ sre.SpeechRuleEngine.prototype.evaluateNode = function(node) {
  * @private
  */
 sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
-  var rule = this.activeStore_.lookupRule(node, this.dynamicCstr);
+  var engine = sre.Engine.getInstance();
+  sre.Debugger.getInstance().output(
+      engine.mode !== sre.Engine.Mode.HTTP ? node.toString() : node);
+  if (engine.cache) {
+    var result = this.getCacheForNode_(node);
+    if (result) {
+      if (node.attributes) {
+        this.addPersonality_(result, {}, false, node);
+      }
+      return result;
+    }
+  }
+  sre.Grammar.getInstance().setAttribute(node);
+  var rule = this.activeStore_.lookupRule(node, engine.dynamicCstr);
   if (!rule) {
-    return this.activeStore_.evaluateDefault(node);
+    if (engine.strict) return [];
+    result = this.getEvaluator(engine.locale, engine.modality)(node);
+    if (node.attributes) {
+      this.addPersonality_(result, {}, false, node);
+    }
+    this.pushCache_(node, result);
+    return result;
   }
   sre.Debugger.getInstance().generateOutput(
       goog.bind(function() {
-        return [rule.name,
-                sre.SpeechRule.stringifyCstr(rule.dynamicCstr),
-                node.toString()];},
+        return ['Apply Rule:',
+                rule.name, rule.dynamicCstr.toString(),
+                engine.mode !== sre.Engine.Mode.HTTP ? node.toString() : node];},
       this));
+  var context = rule.context || this.activeStore_.context;
   var components = rule.action.components;
-  var result = [];
+  result = [];
   for (var i = 0, component; component = components[i]; i++) {
     var descrs = [];
-    var content = component['content'] || '';
+    var content = component.content || '';
+    var attributes = component.attributes || {};
+    var multi = false;
+    if (component.grammar) {
+      this.processGrammar(context, node, component.grammar);
+    }
+    var saveEngine = null;
+    var oldCache = null;
+    // Retooling the engine
+    if (attributes.engine) {
+      saveEngine = sre.Engine.getInstance().dynamicCstr.getComponents();
+      var features = sre.Grammar.parseInput(attributes.engine);
+      oldCache = this.cache_;
+      this.clearCache();
+      sre.Engine.getInstance().setDynamicCstr(features);
+    }
     switch (component.type) {
       case sre.SpeechRule.Type.NODE:
-        var selected = this.activeStore_.applyQuery(node, content);
+        var selected = context.applyQuery(node, content);
         if (selected) {
           descrs = this.evaluateTree_(selected);
         }
         break;
       case sre.SpeechRule.Type.MULTI:
-        selected = this.activeStore_.applySelector(node, content);
+        multi = true;
+        selected = context.applySelector(node, content);
         if (selected.length > 0) {
           descrs = this.evaluateNodeList_(
+              context,
               selected,
-              component['sepFunc'],
-              this.constructString(node, component['separator']),
-              component['ctxtFunc'],
-              this.constructString(node, component['context']));
+              attributes['sepFunc'],
+              context.constructString(node, attributes['separator']),
+              attributes['ctxtFunc'],
+              context.constructString(node, attributes['context']));
         }
         break;
       case sre.SpeechRule.Type.TEXT:
-        selected = this.constructString(node, content);
+        selected = context.constructString(node, content);
         if (selected) {
-          descrs = [new sre.AuditoryDescription({text: selected})];
+          descrs = [sre.AuditoryDescription.create(
+              {text: selected}, {adjust: true})];
         }
         break;
       case sre.SpeechRule.Type.PERSONALITY:
       default:
-        descrs = [new sre.AuditoryDescription({text: content})];
+        descrs = [sre.AuditoryDescription.create({text: content})];
     }
     // Adding overall context and annotation if they exist.
-    if (descrs[0] && component.type != sre.SpeechRule.Type.MULTI) {
-      if (component['context']) {
+    if (descrs[0] && !multi) {
+      if (attributes['context']) {
         descrs[0]['context'] =
-            this.constructString(node, component['context']) +
+            context.constructString(node, attributes['context']) +
             (descrs[0]['context'] || '');
       }
-      if (component['annotation']) {
-        descrs[0]['annotation'] = component['annotation'];
-      }
-      if (component['preprocess']) {
-        descrs[0]['preprocess'] = true;
+      if (attributes['annotation']) {
+        descrs[0]['annotation'] = attributes['annotation'];
       }
     }
+    if (component.grammar) {
+      sre.Grammar.getInstance().popState();
+    }
     // Adding personality to the auditory descriptions.
-    result = result.concat(this.addPersonality_(descrs, component));
+    result = result.concat(this.addPersonality_(descrs, attributes, multi,
+                                                node));
+    if (saveEngine) {
+      this.cache_ = oldCache;
+      sre.Engine.getInstance().setDynamicCstr(saveEngine);
+    }
   }
+  this.pushCache_(node, result);
   return result;
 };
 
 
 /**
  * Evaluates a list of nodes into a list of auditory descriptions.
+ * @param {sre.SpeechRuleContext} context The function context in which to
+ *     evaluate the nodes.
  * @param {!Array.<Node>} nodes Array of nodes.
  * @param {string} sepFunc Name of a function used to compute a separator
  *     between every element.
- * @param {string} separator A string that is used as argument to the sepFunc or
+ * @param {string} sepStr A string that is used as argument to the sepFunc or
  *     interspersed directly between each node if sepFunc is not supplied.
  * @param {string} ctxtFunc Name of a function applied to compute the context
  *     for every element in the list.
- * @param {string} context Additional context string that is given to the
+ * @param {string} ctxtStr Additional context string that is given to the
  *     ctxtFunc function or used directly if ctxtFunc is not supplied.
  * @return {Array.<sre.AuditoryDescription>} A list of Auditory descriptions.
  * @private
  */
 sre.SpeechRuleEngine.prototype.evaluateNodeList_ = function(
-    nodes, sepFunc, separator, ctxtFunc, context) {
+    context, nodes, sepFunc, sepStr, ctxtFunc, ctxtStr) {
   if (nodes == []) {
     return [];
   }
-  var sep = separator || '';
-  var cont = context || '';
-  var cFunc = this.activeStore_.contextFunctions.lookup(ctxtFunc);
+  var sep = sepStr || '';
+  var cont = ctxtStr || '';
+  var cFunc = context.contextFunctions.lookup(ctxtFunc);
   var ctxtClosure = cFunc ? cFunc(nodes, cont) : function() {return cont;};
-  var sFunc = this.activeStore_.contextFunctions.lookup(sepFunc);
-  var sepClosure = sFunc ? sFunc(nodes, sep) : function() {return sep;};
+  var sFunc = context.contextFunctions.lookup(sepFunc);
+  var sepClosure = sFunc ? sFunc(nodes, sep) :
+      function() {return sre.AuditoryDescription.create(
+      {text: sep}, {translate: true});};
   var result = [];
   for (var i = 0, node; node = nodes[i]; i++) {
     var descrs = this.evaluateTree_(node);
@@ -265,10 +387,7 @@ sre.SpeechRuleEngine.prototype.evaluateNodeList_ = function(
       result = result.concat(descrs);
       if (i < nodes.length - 1) {
         var text = sepClosure();
-        if (text) {
-          result.push(new sre.AuditoryDescription({text: text,
-            preprocess: true}));
-        }
+        result = result.concat(text);
       }
     }
   }
@@ -281,23 +400,53 @@ sre.SpeechRuleEngine.prototype.evaluateNodeList_ = function(
  * @param {Array.<sre.AuditoryDescription>} descrs A list of Auditory
  *     descriptions.
  * @param {Object} props Property dictionary.
- * TODO (sorge) Fully specify, when we have finalised the speech rule
- * format.
+ * @param {boolean} multi Multinode flag.
+ * @param {Node} node The original XML node.
  * @return {Array.<sre.AuditoryDescription>} The modified array.
  * @private
  */
-sre.SpeechRuleEngine.prototype.addPersonality_ = function(descrs, props) {
+sre.SpeechRuleEngine.prototype.addPersonality_ = function(
+    descrs, props, multi, node) {
   var personality = {};
   for (var key in sre.Engine.personalityProps) {
-    var value = parseFloat(props[sre.Engine.personalityProps[key]]);
-    if (!isNaN(value)) {
-      personality[key] = value;
+    var value = props[sre.Engine.personalityProps[key]];
+    if (typeof value === 'undefined') {
+      continue;
+    }
+    var numeral = parseFloat(value);
+    // if (!isNaN(numeral)) {
+    //   personality[sre.Engine.personalityProps[key]] = numeral;
+    // }
+    personality[sre.Engine.personalityProps[key]] =
+        isNaN(numeral) ?
+        ((value.charAt(0) == '"') ? value.slice(1, -1) : value) :
+        numeral;
+  }
+  // TODO: Deal with non-numeric values for personalities here.
+  //       Possibly use simply an overwrite mechanism without adding.
+  for (var i = 0, descr; descr = descrs[i]; i++) {
+    this.addRelativePersonality_(descr, personality);
+    this.addExternalAttributes_(descr, node);
+  }
+  // Removes the last joiner in a multi node element.
+  if (multi && descrs.length) {
+    delete descrs[descrs.length - 1].
+        personality[sre.Engine.personalityProps.JOIN];
+  }
+  return descrs;
+};
+
+
+sre.SpeechRuleEngine.prototype.addExternalAttributes_ = function(descr, node) {
+  if (node.hasAttributes()) {
+    var attrs = node.attributes;
+    for (var i = attrs.length - 1; i >= 0; i--) {
+      var key = attrs[i].name;
+      if (!descr.attributes[key] && key.match(/^ext/)) {
+        descr.attributes[key] = attrs[i].value;
+      }
     }
   }
-  descrs.forEach(goog.bind(function(descr) {
-    this.addRelativePersonality_(descr, personality);
-  }, this));
-  return descrs;
 };
 
 
@@ -318,7 +467,8 @@ sre.SpeechRuleEngine.prototype.addRelativePersonality_ = function(
   var descrPersonality = descr['personality'];
   for (var p in personality) {
     // This could be capped by some upper and lower bound.
-    if (descrPersonality[p] && typeof(descrPersonality[p]) == 'number') {
+    if (descrPersonality[p] && typeof(descrPersonality[p]) == 'number' &&
+        typeof(personality[p]) == 'number') {
       descrPersonality[p] = descrPersonality[p] + personality[p];
     } else {
       descrPersonality[p] = personality[p];
@@ -366,9 +516,245 @@ sre.SpeechRuleEngine.debugNamedSpeechRule = function(name, node) {
     for (var i = 0, rule; rule = allRules[i]; i++) {
       sre.Debugger.getInstance().output(
           'Rule', name, 'DynamicCstr:',
-          sre.SpeechRule.stringifyCstr(rule.dynamicCstr),
+          rule.dynamicCstr.toString(),
           'number', i);
       store.debugSpeechRule(rule, node);
     }
   }
+};
+
+
+/**
+ * Runs a function in the temporary context of the speech rule engine.
+ * @param {Object} settings The temporary settings for the speech rule
+ *     engine. They can contain the usual features.
+ * @param {function():!Array.<sre.AuditoryDescription>} callback The runnable
+ *     function that computes speech results.
+ * @return {!Array.<sre.AuditoryDescription>} The result of the callback.
+ */
+sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
+  var engine = sre.Engine.getInstance();
+  var save = {};
+  var store = null;
+  for (var key in settings) {
+    if (key === 'rules') {
+      store = this.activeStore_;
+      engine.ruleSets = settings[key];
+      this.parameterize(engine.ruleSets);
+      continue;
+    }
+    save[key] = engine[key];
+    engine[key] = settings[key];
+  }
+  engine.setDynamicCstr();
+  var result = callback();
+  for (key in save) {
+    engine[key] = save[key];
+  }
+  if (store) {
+    this.activeStore_ = store;
+  }
+  engine.setDynamicCstr();
+  return result;
+};
+
+
+/**
+ * Initializes the combined rule store
+ * @param {!Object.<sre.BaseRuleStore>} ruleSets A list of rule sets to use as
+ *     name to constructor mapping.
+ * @return {!sre.BaseRuleStore} The combined math store.
+ * @private
+ */
+sre.SpeechRuleEngine.prototype.combineStores_ = function(ruleSets) {
+  var combined = this.cachedStore_(ruleSets);
+  if (combined) {
+    return combined;
+  }
+  combined = new sre.MathStore();
+  for (var name in ruleSets) {
+    var store = ruleSets[name];
+    store.initialize();
+    store.getSpeechRules().forEach(function(x) {combined.trie.addRule(x);});
+    this.addEvaluator(store);
+  }
+  combined.setSpeechRules(combined.trie.collectRules());
+  this.combinedStores_[this.combinedStoreName_(Object.keys(ruleSets))] =
+      combined;
+  return combined;
+};
+
+
+/**
+ * Compute a standardized name for combined stores.
+ * @param {!Array.<string>} names A list of individual store names.
+ * @return {string} The combined name.
+ * @private
+ */
+sre.SpeechRuleEngine.prototype.combinedStoreName_ = function(names) {
+  return names.sort().join('-');
+};
+
+
+/**
+ * Retrieves a cached combined store if it exists. If one of the individual
+ * stores is not yet initialized or needs reinitialization, it also returns
+ * null.
+ * @param {!Object.<sre.BaseRuleStore>} ruleSets A list of rule sets to use as
+ *     name to constructor mapping.
+ * @return {?sre.BaseRuleStore} The combined store if it exists.
+ * @private
+ */
+sre.SpeechRuleEngine.prototype.cachedStore_ = function(ruleSets) {
+  var names = Object.keys(ruleSets);
+  if (names.some(function(name) {return !ruleSets[name].initialized;})) {
+    return null;
+  }
+  return this.combinedStores_[this.combinedStoreName_(names)];
+};
+
+
+/**
+ * Updates adminstrative info in the base Engine.
+ * During update the engine is not ready!
+ */
+sre.SpeechRuleEngine.prototype.updateEngine = function() {
+  this.ready_ = true;
+  var maps = sre.MathMap.getInstance();
+  if (!sre.Engine.isReady()) {
+    this.ready_ = false;
+    setTimeout(goog.bind(this.updateEngine, this), 250);
+    return;
+  }
+  sre.Engine.getInstance().evaluator =
+      goog.bind(maps.store.lookupString, maps.store);
+};
+
+
+/**
+ * Processes the grammar annotations of a rule.
+ * @param {sre.SpeechRuleContext} context The function context in which to
+ *     evaluate the grammar expression.
+ * @param {!Node} node The node to which the rule is applied.
+ * @param {sre.Grammar.State} grammar The grammar annotations.
+ */
+sre.SpeechRuleEngine.prototype.processGrammar = function(context, node, grammar) {
+  var assignment = {};
+  for (var key in grammar) {
+    var value = grammar[key];
+    assignment[key] = (typeof(value) === 'string') ?
+        context.constructString(node, value) : value;
+  }
+  sre.Grammar.getInstance().pushState(assignment);
+};
+
+
+/**
+ * Enriches the dynamic constraint with default properties.
+ * @private
+ */
+// TODO: Exceptions and ordering between locale and modality?
+//       E.g, missing clearspeak defaults to mathspeak.
+//       What if there is no default for a particular locale or modality?
+//       We need a default constraint specification somewhere that defines the
+//       orders.
+//       Try to make this dependent on the order of the dynamicCstr.
+sre.SpeechRuleEngine.prototype.updateConstraint_ = function() {
+  var dynamic = sre.Engine.getInstance().dynamicCstr;
+  var strict = sre.Engine.getInstance().strict;
+  var trie = this.activeStore_.trie;
+  var props = {};
+  var locale = dynamic.getValue(sre.DynamicCstr.Axis.LOCALE);
+  var modality = dynamic.getValue(sre.DynamicCstr.Axis.MODALITY);
+  var domain = dynamic.getValue(sre.DynamicCstr.Axis.DOMAIN);
+  if (!trie.hasSubtrie([locale, modality, domain])) {
+    locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
+    if (!trie.hasSubtrie([locale, modality, domain])) {
+      modality = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY];
+      if (!trie.hasSubtrie([locale, modality, domain])) {
+        domain = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN];
+      }
+    }
+  }
+  props[sre.DynamicCstr.Axis.LOCALE] = [locale];
+  props[sre.DynamicCstr.Axis.MODALITY] =
+      // TODO: Improve, only summary allows fallback to speech.
+      [modality !== 'summary' ?
+       modality : sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY]];
+  props[sre.DynamicCstr.Axis.DOMAIN] =
+      [modality !== 'speech' ?
+       sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN] : domain];
+  var order = dynamic.getOrder();
+  for (var i = 0, axis; axis = order[i]; i++) {
+    if (!props[axis]) {
+      var value = dynamic.getValue(axis);
+      var valueSet = this.makeSet_(
+          value, /** @type {sre.ClearspeakPreferences} */(dynamic).preference);
+      var def = sre.DynamicCstr.DEFAULT_VALUES[axis];
+      if (!strict && value !== def) {
+        valueSet.push(def);
+      }
+      props[axis] = valueSet;
+    }}
+  dynamic.updateProperties(props);
+};
+
+
+/**
+ * Splits preference form style names into set of preference settings.
+ * @param {string} value The value of the style setting.
+ * @param {?Object.<string>} preferences Set of Clearspeak preferences or null.
+ * @return {Array.<string>} The style settings. Either a single element or a
+ *      pair associating a Clearspeak preference with a value.
+ * @private
+ */
+sre.SpeechRuleEngine.prototype.makeSet_ = function(value, preferences) {
+  if (!preferences || !Object.keys(preferences).length) {
+    return [value];
+  }
+  return value.split(':');
+};
+
+
+/**
+ * Adds an evaluation method by locale and modality.
+ * @param {sre.SpeechRuleEvaluator} store The store whose evaluation method is
+ *     added.
+ */
+sre.SpeechRuleEngine.prototype.addEvaluator = function(store) {
+  var fun = goog.bind(store.evaluateDefault, store);
+  var loc = this.evaluators_[store.locale];
+  if (loc) {
+    loc[store.modality] = fun;
+    return;
+  }
+  let mod = {};
+  mod[store.modality] = fun;
+  this.evaluators_[store.locale] = mod;
+};
+
+
+/**
+ * Selects a default evaluation method by locale and modality. If none exists it
+ * takes the default evaluation method of the active combined store.
+ * @param {string} locale The locale.
+ * @param {string} modality The modality.
+ * @return {!function(!Node): !Array<sre.AuditoryDescription>} The evaluation
+ *     method.
+ */
+sre.SpeechRuleEngine.prototype.getEvaluator = function(locale, modality) {
+  var loc = this.evaluators_[locale];
+  var fun = loc ? loc[modality] : null;
+  return fun ? fun : goog.bind(this.activeStore_.evaluateDefault, this.activeStore_);
+};
+
+
+/**
+ * Collates information on dynamic constraint values of the currently active
+ * trie of the engine.
+ * @param {Object=} opt_info Initial dynamic constraint information.
+ * @return {Object} The collated information.
+ */
+sre.SpeechRuleEngine.prototype.enumerate = function(opt_info) {
+  return this.activeStore_.trie.enumerate(opt_info);
 };

@@ -20,9 +20,6 @@
  */
 
 goog.provide('sre.SpeechRuleFunctions');
-goog.provide('sre.SpeechRuleFunctions.ContextFunctions');
-goog.provide('sre.SpeechRuleFunctions.CustomQueries');
-goog.provide('sre.SpeechRuleFunctions.CustomStrings');
 
 
 
@@ -37,7 +34,7 @@ sre.SpeechRuleFunctions = function() { };
  * Private superclass of all the custom function stores.
  * @constructor
  * @param {string} prefix A prefix string for the function names.
- * @param {Object.<string, Function>} store Storage object.
+ * @param {!Object.<Function>} store Storage object.
  * @private
  */
 sre.SpeechRuleFunctions.Store_ = function(prefix, store) {
@@ -56,6 +53,18 @@ sre.SpeechRuleFunctions.Store_ = function(prefix, store) {
 sre.SpeechRuleFunctions.Store_.prototype.add = function(name, func) {
   if (this.checkCustomFunctionSyntax_(name)) {
     this.store_[name] = func;
+  }
+};
+
+
+/**
+ * Adds the functions of another store.
+ * @param {sre.SpeechRuleFunctions.Store_} store A speech rule store.
+ */
+sre.SpeechRuleFunctions.Store_.prototype.addStore = function(store) {
+  var keys = Object.keys(store.store_);
+  for (var i = 0, key; key = keys[i]; i++) {
+    this.add(key, /** @type {!Function} */(store.store_[key]));
   }
 };
 
@@ -84,8 +93,8 @@ sre.SpeechRuleFunctions.CustomQuery;
  */
 sre.SpeechRuleFunctions.CustomQueries = function() {
   var store =
-      /** @type {Object.<string, sre.SpeechRuleFunctions.CustomQuery>} */ ({});
-  goog.base(this, 'CQF', store);
+      /** @type {!Object.<sre.SpeechRuleFunctions.CustomQuery>} */ ({});
+  sre.SpeechRuleFunctions.CustomQueries.base(this, 'constructor', 'CQF', store);
 };
 goog.inherits(sre.SpeechRuleFunctions.CustomQueries,
               sre.SpeechRuleFunctions.Store_);
@@ -105,9 +114,9 @@ sre.SpeechRuleFunctions.CustomString;
  */
 sre.SpeechRuleFunctions.CustomStrings = function() {
   var store =
-      /** @type {Object.<string, sre.SpeechRuleFunctions.CustomString>} */
+      /** @type {!Object.<sre.SpeechRuleFunctions.CustomString>} */
       ({});
-  goog.base(this, 'CSF', store);
+  sre.SpeechRuleFunctions.CustomStrings.base(this, 'constructor', 'CSF', store);
 };
 goog.inherits(sre.SpeechRuleFunctions.CustomStrings,
               sre.SpeechRuleFunctions.Store_);
@@ -127,9 +136,10 @@ sre.SpeechRuleFunctions.ContextFunction;
  */
 sre.SpeechRuleFunctions.ContextFunctions = function() {
   var store =
-      /** @type {Object.<string, sre.SpeechRuleFunctions.ContextFunction>} */
+      /** @type {!Object.<sre.SpeechRuleFunctions.ContextFunction>} */
       ({});
-  goog.base(this, 'CTXF', store);
+  sre.SpeechRuleFunctions.ContextFunctions.base(
+      this, 'constructor', 'CTXF', store);
 };
 goog.inherits(sre.SpeechRuleFunctions.ContextFunctions,
               sre.SpeechRuleFunctions.Store_);
@@ -138,16 +148,16 @@ goog.inherits(sre.SpeechRuleFunctions.ContextFunctions,
 /**
  * Checks validity for a custom function name.
  * @param {string} name The name of the custom function.
- * @return {!boolean} True if the name is valid.
+ * @return {boolean} True if the name is valid.
  * @private
  */
 sre.SpeechRuleFunctions.Store_.prototype.
     checkCustomFunctionSyntax_ = function(name) {
   var reg = new RegExp('^' + this.prefix_);
   if (!name.match(reg)) {
-    console.log(
+    console.error(
         'FunctionError: Invalid function name. Expected prefix ' +
-                this.prefix_);
+        this.prefix_);
     return false;
   }
   return true;

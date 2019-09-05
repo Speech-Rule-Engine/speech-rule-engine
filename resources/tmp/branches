@@ -1,0 +1,17 @@
+clearspeak-rules  (Implementation of the clearspeak rules. Part of the MOSS project.)
+
+closure_new_type_inference (Testing the new closure NID)
+
+develop (Currently v2.0.0)
+
+diagram_project  (Formerly Diagram project. Will be v2.1.0)
+
+fix_bracketting (this contains the bra-ket heuristics but has a merge conflict on semantic tree!)
+
+gh-pages
+
+master
+  
+moss_project (The moss project.)
+
+jsonify (CLI functionality to jsonify speech rules. Might be useful in the future. In sync with v2.1.0)

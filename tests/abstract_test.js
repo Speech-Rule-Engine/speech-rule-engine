@@ -23,7 +23,6 @@ goog.require('sre.TestExternal');
 
 
 
-// TODO(sorge): Implement a cleanup/teardown method.
 /**
  * @constructor
  */

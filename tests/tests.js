@@ -19,13 +19,11 @@
 
 goog.provide('sre.Tests');
 
-goog.require('sre.MathmlCloudTest');
-goog.require('sre.MathmlStoreTest');
-goog.require('sre.MathspeakRuleTest');
-goog.require('sre.SemanticMathmlTest');
-goog.require('sre.SemanticRuleTest');
-goog.require('sre.SemanticTreeTest');
-goog.require('sre.SpeechRuleTest');
+goog.require('sre.BaseTests');
+goog.require('sre.BrailleNemethTest');
+goog.require('sre.SpeechEnglishTest');
+goog.require('sre.SpeechFrenchTest');
+goog.require('sre.SpeechSpanishTest');
 goog.require('sre.System');
 goog.require('sre.TestRunner');
 
@@ -44,11 +42,15 @@ goog.addSingletonGetter(sre.Tests);
  * Runs the set of tests.
  */
 sre.Tests.prototype.run = function() {
+  var timeIn = (new Date()).getTime();
   for (var i = 0, test; test = sre.Tests.testList[i]; i++) {
-    this.runner.registerTest(new test);
+    this.runner.registerTest(new test());
   }
   this.runner.runTests();
   this.runner.summary();
+  var timeOut = (new Date()).getTime();
+  this.runner.output('Time for tests: ' + (timeOut - timeIn) + 'ms\n');
+  process.exit(this.runner.success() ? 0 : 1);
 };
 
 
@@ -56,15 +58,33 @@ sre.Tests.prototype.run = function() {
  * List of tests to run. Add new tests here!
  * @type {Array}
  */
-sre.Tests.testList = [
-  // sre.MathmlCloudTest,
-  // sre.MathmlStoreTest,
-  // sre.MathspeakRuleTest,
-  sre.SemanticMathmlTest,
-  // sre.SemanticRuleTest,
-  sre.SemanticTreeTest
-  // sre.SpeechRuleTest
-];
+sre.Tests.testList = [];
+
+sre.Tests.allTests = [];
+sre.Tests.allTests = sre.Tests.allTests.concat(sre.BaseTests.testList);
+sre.Tests.allTests = sre.Tests.allTests.concat(sre.SpeechEnglishTest.testList);
+sre.Tests.allTests = sre.Tests.allTests.concat(sre.SpeechFrenchTest.testList);
+sre.Tests.allTests = sre.Tests.allTests.concat(sre.SpeechSpanishTest.testList);
+sre.Tests.allTests = sre.Tests.allTests.concat(sre.BrailleNemethTest.testList);
+
+var file = sre.SystemExternal.process.env['FILE'];
+var locale = sre.SystemExternal.process.env['LOCALE'];
+if (file) {
+  sre.Tests.testList.push(sre[file]);
+}
+if (locale) {
+  if (locale === 'Base') {
+    sre.Tests.testList = sre.Tests.testList.concat(sre.BaseTests.testList);
+  } else {
+    try {
+      sre.Tests.testList =
+          sre.Tests.testList.concat(sre['Speech' + locale + 'Test'].testList);
+    } catch (e) { }
+  }
+}
+if (!sre.Tests.testList.length) {
+  sre.Tests.testList = sre.Tests.testList.concat(sre.Tests.allTests);
+}
 
 
 /**

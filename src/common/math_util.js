@@ -265,29 +265,6 @@ sre.MathUtil.isNotWhitespace = function(element) {
 
 
 /**
- * Computes the difference of two arrays.
- * @param {Array} a An array.
- * @param {Array} b Another array.
- * @return {Array} Difference of a and b, i.e. a-b.
- */
-sre.MathUtil.setdifference = function(a, b) {
-  return a.filter(function(x) {return b.indexOf(x) < 0;});
-};
-
-
-/**
- * Computes the union of two arrays (not in a strictly set theoretical sense
- * as all duplicate elements in either array still remain as duplicates!).
- * @param {Array} a An array.
- * @param {Array} b Another array.
- * @return {Array} Union of a and b.
- */
-sre.MathUtil.union = function(a, b) {
-  return a.concat(sre.MathUtil.setdifference(b, a));
-};
-
-
-/**
  * Constructs a closure that returns separators for an MathML mfenced
  * expression.
  * Separators in MathML are represented by a list and used up one by one
@@ -295,7 +272,7 @@ sre.MathUtil.union = function(a, b) {
  * Example: a b c d e  and separators [+,-,*]
  * would result in a + b - c * d * e.
  * @param {string} separators String representing a list of mfenced separators.
- * @return {function(): string|null} A closure that returns the next separator
+ * @return {?function(): string} A closure that returns the next separator
  * for an mfenced expression starting with the first node in nodes.
  */
 sre.MathUtil.nextSeparatorFunction = function(separators) {

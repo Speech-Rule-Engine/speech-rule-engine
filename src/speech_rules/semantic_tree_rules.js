@@ -21,7 +21,6 @@
 goog.provide('sre.SemanticTreeRules');
 
 goog.require('sre.MathStore');
-goog.require('sre.MathmlStore');
 goog.require('sre.MathmlStoreUtil');
 goog.require('sre.StoreUtil');
 
@@ -30,18 +29,19 @@ goog.require('sre.StoreUtil');
 /**
  * Rule initialization.
  * @constructor
+ * @extends {sre.MathStore}
  */
 sre.SemanticTreeRules = function() {
-  sre.SemanticTreeRules.initCustomFunctions_();
-  sre.SemanticTreeRules.initSemanticRules_();
+  sre.SemanticTreeRules.base(this, 'constructor');
 };
+goog.inherits(sre.SemanticTreeRules, sre.MathStore);
 goog.addSingletonGetter(sre.SemanticTreeRules);
 
 
 /**
  * @type {sre.MathStore}
  */
-sre.SemanticTreeRules.mathStore = sre.MathmlStore.getInstance();
+sre.SemanticTreeRules.mathStore = sre.SemanticTreeRules.getInstance();
 
 
 /** @private */
@@ -62,24 +62,10 @@ sre.SemanticTreeRules.addContextFunction_ = goog.bind(
     sre.SemanticTreeRules.mathStore.contextFunctions);
 
 
-/** @private */
-sre.SemanticTreeRules.addCustomQuery_ = goog.bind(
-    sre.SemanticTreeRules.mathStore.customQueries.add,
-    sre.SemanticTreeRules.mathStore.customQueries);
-
-
-/** @private */
-sre.SemanticTreeRules.addCustomString_ = goog.bind(
-    sre.SemanticTreeRules.mathStore.customStrings.add,
-    sre.SemanticTreeRules.mathStore.customStrings);
-
-
 goog.scope(function() {
 var defineRule = sre.SemanticTreeRules.defineRule_;
 var defineRuleAlias = sre.SemanticTreeRules.defineRuleAlias_;
 
-var addCQF = sre.SemanticTreeRules.addCustomQuery_;
-var addCSF = sre.SemanticTreeRules.addCustomString_;
 var addCTXF = sre.SemanticTreeRules.addContextFunction_;
 
 
@@ -90,9 +76,6 @@ var addCTXF = sre.SemanticTreeRules.addContextFunction_;
 sre.SemanticTreeRules.initCustomFunctions_ = function() {
   addCTXF('CTXFnodeCounter', sre.StoreUtil.nodeCounter);
   addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
-
-  addCQF('CQFhideFont', sre.MathmlStoreUtil.hideFont);
-  addCSF('CSFshowFont', sre.MathmlStoreUtil.showFont);
 };
 
 
@@ -101,6 +84,13 @@ sre.SemanticTreeRules.initCustomFunctions_ = function() {
  * @private
 */
 sre.SemanticTreeRules.initSemanticRules_ = function() {
+  defineRule(
+      'collapsed', 'default.default',
+      '[t] "collapsed"; [n] . (engine:modality=summary,grammar:collapsed)',
+      'self::*', '@alternative', 'not(contains(@grammar, "collapsed"))',
+      'self::*', 'self::*', 'self::*', 'self::*', 'self::*'
+  );
+
   // Initial rule
   defineRule(
       'stree', 'default.default',
@@ -113,65 +103,66 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   defineRule(
       'variable-equality', 'default.default',
-      '[t] "equation sequence"; [m] ./children/* ' +
-          '(context:"part",ctxtFunc:CTXFnodeCounter,separator:./text())',
+      '[t] "equation sequence"; [m] children/* ' +
+          '(context:"part",ctxtFunc:CTXFnodeCounter,' +
+          'sepFunc:CTXFcontentIterator)',
       'self::relseq[@role="equality"]', 'count(./children/*)>2',
-      './children/punct[@role="ellipsis"]');// Make that better!
+      './children/punctuation[@role="ellipsis"]');// Make that better!
 
   defineRule(
       'multi-equality', 'default.default',
-      '[t] "equation sequence"; [m] ./children/* ' +
-          '(context:"part",ctxtFunc:CTXFnodeCounter,separator:./text())',
+      '[t] "equation sequence"; [m] children/* ' +
+          '(context:"part",ctxtFunc:CTXFnodeCounter,' +
+          'sepFunc:CTXFcontentIterator)',
       'self::relseq[@role="equality"]', 'count(./children/*)>2');
 
   defineRule(
       'multi-equality', 'default.short',
-      '[t] "equation sequence"; [m] ./children/* ' +
-          '(separator:./text())',
+      '[t] "equation sequence"; [m] children/* ' +
+          '(sepFunc:CTXFcontentIterator)',
       'self::relseq[@role="equality"]', 'count(./children/*)>2');
 
   defineRule(
       'equality', 'default.default',
-      '[t] "equation"; [t] "left hand side"; [n] children/*[1];' +
-          '[p] (pause:200); [n] text() (pause:200);' +
-          '[t] "right hand side"; [n] children/*[2]',
+      '[n] children/*[1]; [p] (pause:200); [n] content/*[1] (pause:200);' +
+          '[n] children/*[2]',
       'self::relseq[@role="equality"]', 'count(./children/*)=2');
 
   defineRule(
       'simple-equality', 'default.default',
-      '[n] children/*[1]; [p] (pause:200); [n] text() (pause:200);' +
+      '[n] children/*[1]; [p] (pause:200); [n] content/*[1] (pause:200);' +
           '[n] children/*[2]',
       'self::relseq[@role="equality"]', 'count(./children/*)=2',
       './children/identifier or ./children/number');
 
   defineRule(
       'simple-equality2', 'default.default',
-      '[n] children/*[1]; [p] (pause:200); [n] text() (pause:200);' +
+      '[n] children/*[1]; [p] (pause:200); [n] content/*[1] (pause:200);' +
           '[n] children/*[2]',
       'self::relseq[@role="equality"]', 'count(./children/*)=2',
       './children/function or ./children/appl');
 
   defineRule(
       'relseq', 'default.default',
-      '[m] children/* (separator:./text())',
+      '[m] children/* (sepFunc:CTXFcontentIterator)',
       'self::relseq');
 
   defineRule(
       'binary-operation', 'default.default',
-      '[m] children/* (separator:text());',
+      '[m] children/* (sepFunc:CTXFcontentIterator);',
       'self::infixop');
 
   defineRule(
       'variable-addition', 'default.default',
       '[t] "sum with variable number of summands";' +
-          '[p] (pause:400); [m] children/* (separator:./text())',
+          '[p] (pause:400); [m] children/* (sepFunc:CTXFcontentIterator)',
       'self::infixop[@role="addition"]', 'count(children/*)>2',
-      'children/punct[@role="ellipsis"]');// Make that better!
+      'children/punctuation[@role="ellipsis"]');// Make that better!
 
   defineRule(
       'multi-addition', 'default.default',
-      '[t] "sum with,"; [t] count(./children/*); [t] ", summands";' +
-          '[p] (pause:400); [m] ./children/* (separator:./text())',
+      '[t] "sum with"; [t] count(./children/*); [t] "summands";' +
+          '[p] (pause:400); [m] children/* (sepFunc:CTXFcontentIterator)',
       'self::infixop[@role="addition"]', 'count(./children/*)>2');
 
   // Prefix Operator
@@ -200,17 +191,24 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
       'number', 'default.default',
       '[n] text()', 'self::number');
 
+  defineRule(
+      'mixed-number', 'default.default',
+      '[n] children/*[1]; [t] "and"; [n] children/*[2]; ',
+      'self::number', '@role="mixed"');
+
   // Font rules
   defineRule(
       'font', 'default.default',
-      '[t] @font; [n] CQFhideFont; [t] CSFshowFont',
-      'self::*', '@font', '@font!="normal"');
+      '[t] @font; [n] . (grammar:ignoreFont=@font)',
+      'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
+      '@font!="normal"');
 
   defineRule(
       'font-identifier-short', 'default.default',
-      '[t] @font; [n] CQFhideFont; [t] CSFshowFont',
+      '[t] @font; [n] . (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1',
-      '@font', '@font="normal"', '""=translate(text(), ' +
+      '@font', 'not(contains(@grammar, "ignoreFont"))', '@font="normal"',
+      '""=translate(text(), ' +
       '"abcdefghijklmnopqrstuvwxyz\u03B1\u03B2\u03B3\u03B4' +
       '\u03B5\u03B6\u03B7\u03B8\u03B9\u03BA\u03BB\u03BC\u03BD\u03BE\u03BF' +
       '\u03C0\u03C1\u03C2\u03C3\u03C4\u03C5\u03C6\u03C7\u03C8\u03C9' +
@@ -221,20 +219,22 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   defineRule(
       'font-identifier', 'default.default',
-      '[t] @font; [n] CQFhideFont; [t] CSFshowFont',
+      '[t] @font; [n] . (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1',
-      '@font', '@font="normal"', '@role!="unit"');
+      '@font', '@font="normal"', 'not(contains(@grammar, "ignoreFont"))',
+      '@role!="unit"');
 
   defineRule(
       'omit-font', 'default.default',
-      '[n] CQFhideFont; [t] CSFshowFont',
-      'self::identifier', 'string-length(text())=1', '@font', '@font="italic"');
+      '[n] . (grammar:ignoreFont=@font)',
+      'self::identifier', 'string-length(text())=1', '@font',
+      'not(contains(@grammar, "ignoreFont"))', '@font="italic"');
 
   // Fraction
   defineRule(
       'fraction', 'default.default',
-      '[p] (pause:250); [n] children/*[1] (pitch:0.3); [p] (pause:250);' +
-          ' [t] "divided by"; [n] children/*[2] (pitch:-0.3); [p] (pause:400)',
+      '[p] (pause:250); [n] children/*[1] (rate:0.35); [p] (pause:250);' +
+          ' [t] "divided by"; [n] children/*[2] (rate:-0.35); [p] (pause:400)',
       'self::fraction');
 
   defineRule(
@@ -250,25 +250,19 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   defineRule(
       'ellipsis', 'default.default',
-      '[p] (pause:200); [t] "dot dot dot"; [p] (pause:300)',
-      'self::punct', 'self::punct[@role="ellipsis"]');
+      '[p] (pause:200); [t] "ellipsis"; [p] (pause:300)',
+      'self::punctuation', 'self::punctuation[@role="ellipsis"]');
 
   defineRule(
       'fence-single', 'default.default',
       '[n] text()',
-      'self::punct', 'self::punct[@role="openfence"]');
-  defineRuleAlias('fence-single', 'self::punct',
-                  'self::punct[@role="closefence"]');
-  defineRuleAlias('fence-single', 'self::punct',
-                  'self::punct[@role="vbar"]');
-  defineRuleAlias('fence-single', 'self::punct',
-                  'self::punct[@role="application"]');
-
-  // TODO (sorge) Refine punctuations further.
-  defineRule(
-      'omit-punct', 'default.default',
-      '[p] (pause:200);',
-      'self::punct');
+      'self::punctuation', 'self::punctuation[@role="openfence"]');
+  defineRuleAlias('fence-single', 'self::punctuation',
+                  'self::punctuation[@role="closefence"]');
+  defineRuleAlias('fence-single', 'self::punctuation',
+                  'self::punctuation[@role="vbar"]');
+  defineRuleAlias('fence-single', 'self::punctuation',
+                  'self::punctuation[@role="application"]');
 
   defineRule(
       'omit-empty', 'default.default',
@@ -278,13 +272,13 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
   // Fences rules.
   defineRule(
       'fences-open-close', 'default.default',
-      '[p] (pause:100); [t] "open"; [n] children/*[1]; [p] (pause:200);' +
-      '[t] "close"',
+      '[p] (pause:100); [n] content/*[1]; ' +
+      '[n] children/*[1]; [n] content/*[2]; [p] (pause:100)',
       'self::fenced', '@role="leftright"');
 
   defineRule(
       'fences-open-close-in-appl', 'default.default',
-      '[p] (pause:100); [n] children/*[1]; [p] (pause:200);',
+      '[p] (pause:200); [n] children/*[1]; [p] (pause:200);',
       'self::fenced[@role="leftright"]', './parent::children/parent::appl');
 
   defineRule(
@@ -356,6 +350,12 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
       'self::multiline');
 
   defineRule(
+      'multiline-ineq', 'default.default',
+      '[t] "multiline inequality";' +
+      '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"row",pause:100)',
+      'self::multiline', '@role="inequality"');
+
+  defineRule(
       'line', 'default.default',
       '[m] children/*', 'self::line');
 
@@ -367,12 +367,21 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
       'self::table');
 
   defineRule(
+      'table-ineq', 'default.default',
+      '[t] "multiline inequality";' +
+      '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"row",pause:200)',
+      'self::table', '@role="inequality"');
+
+  defineRule(
       'table-row', 'default.default',
       '[m] children/* (pause:100)', 'self::row[@role="table"]');
 
   defineRuleAlias(
       'cases-cell', 'self::cell[@role="table"]');
 
+  defineRule(
+      'empty-cell', 'default.default',
+      '[t] "Blank"', 'self::cell', 'count(children/*)=0');
 
   // Rules for punctuated expressions.
   defineRule(
@@ -445,7 +454,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   defineRule(
       'sqrt', 'default.default',
-      '[t] "Square root of"; [n] children/*[1] (rate:0.2); [p] (pause:400)',
+      '[t] "Square root of"; [n] children/*[1] (rate:0.35); [p] (pause:400)',
       'self::sqrt');
 
   defineRule(
@@ -463,14 +472,8 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
   defineRule(
       'root', 'default.default',
       '[t] "root of order"; [n] children/*[1];' +
-          '[t] "over"; [n] children/*[1] (rate:0.2); [p] (pause:400)',
+          '[t] "over"; [n] children/*[1] (rate:0.35); [p] (pause:400)',
       'self::root');
-
-  // TODO (sorge) This is probably unnecessary now!
-  defineRule(
-      'text-no-mult', 'default.default',
-      '[n] children/*[1]; [p] (pause:200); [n] children/*[2]',
-      'self::infixop', 'children/text');
 
   defineRule(
       'text', 'default.default',
@@ -479,7 +482,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   defineRule(
       'unit', 'default.default',
-      '[t] text() (annotation:unit, preprocess)',
+      '[t] text() (grammar:annotation="unit":translate:plural)',
       'self::identifier', '@role="unit"');
   defineRule(
       'unit-square', 'default.default',
@@ -518,3 +521,9 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 };
 
 });  // goog.scope
+
+
+sre.SemanticTreeRules.getInstance().initializer = [
+  sre.SemanticTreeRules.initCustomFunctions_,
+  sre.SemanticTreeRules.initSemanticRules_
+];

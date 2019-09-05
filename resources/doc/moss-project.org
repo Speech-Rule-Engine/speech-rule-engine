@@ -1,0 +1,325 @@
+# Musings/ideas/design decision on the MOSS project
+
+* Constraint redesign 
+
+
+** Purpose: to improve on the applicability tests
+
+** Three types of constraints: Dynamic, Query, Boolean
+
+** Changes for Dynamic Constraints:
+
+*** Remain basically as is. Make testing more efficient.
+
+*** Can have a flexible number of axis. 
+
+**** However that number is fixed by the rule store (via the parser).
+
+**** Otherwise similar to what we had
+
+*** Comparison of Dynamic Constraints
+
+**** DONE We need a parser to parse constraints from strings. This is specific to the rule store.
+
+**** TODO Value list for 
+
+**** DONE Equality of constraints. This is a method of constraints.
+     
+**** TODO Have a priority order to compare against. This can be done globally, i.e., each 
+
+***** Parser order can be different from priority order!
+
+***** Reference constraint is the global dynamic constraint
+
+      Example: mathspeak.brief  < mathspeak.default if
+
+***** Compare method for ordering with respect to the global constraint.
+      What flexibility do we allow for ordering? Is a simple order list of axis/attributes enough?
+      Or an order list per axis.
+
+***** Match method to determine if we have a rule that is to be considered.
+      Allow sets of axis. 
+      Example: mathspeak, [default, brief]
+
+***** DO WE STILL WANT THE DEFAULT AS BOTTOM LINE?
+
+
+** Changes for Static constraints:
+
+*** Query vs boolean constraints
+    
+*** Query should be simplified, when possible, i.e. self::NAME
+
+**** Markup as different forms
+
+***** If query is of the form self::TAGNAME 
+       Mark as 'tag' and test with node.tagname
+       Take care of self::*!
+       Take care of namespaces (e.g., self::mathml:math)
+
+***** If query is of the form @attr
+      Mark as 'attr' and test with hasAttribute.
+      
+***** If query is of the form @attr="something"
+      Mark as 'attrEQ' and test with hasAttribute & getAttribute= 
+
+***** If query is of the form @attr!="something"
+      Mark as 'attrNEQ' and test with !hasAttribute || getAttribute!=
+
+***** Test speed of the above against XPATH first!
+
+
+**** Other speedup potential
+
+***** count(children/*)=n
+
+***** Usage of Xpath in postconditions
+
+*** Inspect and mark constraints when sorting into Trie. Maybe annotate Trie node?
+
+
+*** Ordering
+
+**** Currently only by number. 
+
+**** Is there a better way? 
+     Priorities?
+     Explicit ordering by name? Can be problematic as there can be multiple
+     rules with the same name.
+     If done by name, we could have an explicit order definition statement in a
+     rule store that would need to be collected and applied by a comparator.
+
+**** Again ordering is independent of the Trie
+
+** Changes to constraints of simple store elements
+
+*** Special constraints: For single string elements
+
+*** They only work on text nodes. 
+
+*** Rewriting application tests:
+
+**** recognise the query self::text() and combine with boolean query.
+
+**** Immediately do this when sorting into Trie
+
+**** Stop building a "rule" query and instead have trie subtype that specialised on simple stores.
+
+*** Again test speed trade-off!
+
+** Dynamic Constraints vs Property Test Sets
+
+*** What do we mean by this: Dynamic constraints are "fixed" to a rule. 
+    They are the one that are tested against the properties chosen by the user.
+    
+*** Property sets are values for dynamic constraints that can be selected by the user.
+    Dynamic constraints are then tested against that set.
+    
+*** Fallbacks are dynamic constraints that a rule set can use to control, if defaults
+
+**** This could get us tighter control, how we deal with fallbacks.
+
+**** We could completely get rid of the "default" fallback and always force explicit fallback definition.
+
+**** How does that work together with the strict setting?
+
+***** When do we use strict?
+
+***** If it is only used on particular sets, then they should not define fallbacks.
+
+***** Simply do not use fallbacks when in strict mode.
+
+** TODO Make rule definition robust against errors!
+
+* Trie design ideas:
+
+** Usage
+
+*** Have one trie per rule store or per domain?
+
+**** One trie per rule store. They get the query and constraint function as static function.
+
+**** They get string matching with respect to axes for the dynamic constraints.
+
+**** add/delete/findRule are being run on the Trie.
+
+*** When combining rule sets, combine tries or rather search through list of tries?
+   The former is probably too expensive and also might not make sense when swapping rule sets regularly.
+   Is that a use case? How often would we swap rule sets?
+
+*** What about the simple rule stores? Should we simply go back to using the dictionary lookup?
+
+** Design
+
+*** Trie starting with dynamic constraint? Yes
+
+*** Trie starting with query? No
+
+*** Combine rule stores are to be replaced by a combined trie
+
+** DataStructure
+
+*** Node with
+
+**** Type (root, dynamic, query, boolean, rule = leaf?)
+
+
+***** We should probably have a class per node type.
+      
+**** Leaf or Rule nodes are not necessary. Instead we have a abstract class of constraint nodes. 
+     They can have a single rule come off.
+
+**** SubType (string)
+
+***** Dynamic: The axis name
+
+***** Static: the form or xpath
+
+***** Rule: name
+
+**** The actual content (string)
+
+***** Dynamic: value of axis
+
+***** Static: xpath expression
+
+***** Rule: postcondition or full rule object
+
+**** Auxiliary content (static only) (string)
+
+***** The comparison string or empty if none is necessary.
+
+*** Should every node bring their own test? Or select test according to type? 
+    Probably better the former, but has to be a static function! 
+    Should be assigned during sub-type computation.
+    For dynamic computation that will be a bit problematic!
+    Dynamic match needs to use the global comparator.
+
+*** Children implemented as Object.<string, node> where the string is the actual content.
+
+*** Lookup of rules
+
+**** Two types: Dynamic Constraint, Static Constraint
+
+**** For dynamic constraints: Use order, test each constraint against a list of constraints. 
+     E.g., [short, default].
+
+***** Child node is accepted, if it is a dynamic node and constraint is member of given constraint list
+
+***** or if it is a static node. 
+      This means we have a node that has a shorter dynamic constraint spec. 
+      These can be used as defaults.
+
+**** For static constraints: 
+
+***** Child nodes is accepted, if the test returns true.
+
+**** Collecting rules along the valid paths in the trie:
+
+***** If a matching (static) node contains a rule, it is collected.
+
+*** Depth and balancing might be interesting.
+    We could effectively invert order of dynamic and static constraints. Not sure if that makes any sense.
+    
+    No, it does not. Better have some clever way of checking on the query
+    level. That is the bottle neck. E.g. try to only have tagname checks there (and *)
+    
+
+* Symbol mappings
+
+** Could be done with a trie. But at the moment it turns out to be more efficient to leave as is.
+   See the abandoned tweak_simple_stores branch for a failed attempt.
+
+** Maybe change mappings to contain entire dynamic constraints as they will get unwieldy with more axis.
+
+** Give them a standard order: i.e., keep default, style: short>default
+
+* Grammar structure
+
+** General idea
+
+*** Grammar elements are added and removed via personality annotations.
+
+*** Keywords are mapped to either a string or a boolean.
+
+*** XML element gets special grammar attribute with space separated list of keywords and strings, or boolean.
+    
+*** This way we can check in the rules if a grammatical case is applicable.
+
+**** This only works for the next level. Needs to be repeated, if necessary.
+     
+**** Alternative, always propagate the grammar attribute.
+
+*** Should work both for [n] and [m] nodes.
+
+** To subsume preprocess, correction, remove, sre_flag, font/hiddenfont, annotation:unit
+   Got rid of font, sre_flag, remove.
+
+** Singleton structure similar to global parameters
+
+*** Holds mappings of grammar keywords to either strings or booleans.
+
+*** Equipped with mappings to correction functions for certain grammar keywords.
+
+** Dispatch in extra grammar keyword in personality annotations.
+
+*** Test with determinant simple and hidden fonts.
+
+*** New grammar syntax in personality annotations:
+
+**** grammar:aa:bb="something":cc=@font:dd=CSFsomething:!ee
+     Note the overall separator is : as not to conflict with separators between
+     personality annotations.
+
+***** Adds boolean aa
+
+***** Adds bb with value something
+
+***** Adds cc with font name of the current node
+
+***** Adds dd with string computed by CSFsomething
+
+***** Removes ee 
+
+*** We might want to have special function for grammar checking instead of the grammar attribute
+    Check after integration with the Trie (WP1.3)
+
+* Clearspeak
+
+** Semantic treatment of prime, degree etc. regardless whether or not they are superscripts or just punctuations.
+
+```
+else if (sre.SemanticPred.endpunctIsSuper(nodes, punctuations)) {
+      sre.SemanticProcessor.endpunctToSuper(newNode, nodes[0]);
+}
+
+sre.SemanticProcessor.endpunctToSuper = function(node, base) {
+  node.type = sre.SemanticAttr.Type.SUPERSCRIPT;
+  node.role = base.role;
+};
+
+sre.SemanticPred.endpunctIsSuper = function(nodes, punctuations) {
+  var superPunct = [sre.SemanticAttr.Role.PRIME, sre.SemanticAttr.Role.DEGREE];
+  return nodes.length === 2 && punctuations.length === 1 &&
+    nodes[1] === punctuations[0] &&
+    superPunct.indexOf(punctuations[0].role) !== -1;
+};
+
+```
+
+** Preferences are effectively a set of dynamic constraints on their own.
+
+*** Each preference is an axis
+
+*** Each axis has a number of values to choose from
+
+*** Equate Auto to default in the comparator.
+
+** MathJax integration: Use submenus and radio buttons.
+
+** Tests and things that can only be handled after the Simons project:
+   They have mainly to do with necessary improvements and restructuring of
+   semantic heuristics.
+*** Trig030, Trig036: Needs better handling of degrees as postfix function.
+*** Exp034: Needs a heuristic to pull the negation sign into the (mixed) number.
+

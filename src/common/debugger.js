@@ -39,7 +39,7 @@ sre.Debugger = function() {
    * @type {function(string)} Output function.
    * @private
    */
-  this.outputFunction_ = console.log;
+  this.outputFunction_ = console.info;
   /**
    * @type {?stream} Output stream of the debug file.
    * @private
@@ -64,7 +64,7 @@ sre.Debugger.prototype.init = function(opt_file) {
 /**
  * Initialises the debug file.
  * This is handled asynchronously.
- * @param {!string} filename The filename to route debug output to.
+ * @param {string} filename The filename to route debug output to.
  * @private
  */
 sre.Debugger.prototype.startDebugFile_ = function(filename) {
@@ -77,12 +77,12 @@ sre.Debugger.prototype.startDebugFile_ = function(filename) {
       this);
   this.stream_.on('error', goog.bind(
       function(error) {
-        console.log('Invalid log file. Debug information sent to console.');
-        this.outputFunction_ = console.log;
+        console.info('Invalid log file. Debug information sent to console.');
+        this.outputFunction_ = console.info;
       },
       this));
-  this.stream_.on('finish', function(error) {
-    console.log('Finalizing debug file.');
+  this.stream_.on('finish', function() {
+    console.info('Finalizing debug file.');
   });
 };
 
@@ -94,7 +94,7 @@ sre.Debugger.prototype.startDebugFile_ = function(filename) {
  */
 sre.Debugger.prototype.output_ = function(outputList) {
   this.outputFunction_.apply(
-      this.outputFunction_,
+      console.info === this.outputFunction_ ? console : this.outputFunction_,
       ['Speech Rule Engine Debugger:'].concat(outputList));
 };
 
@@ -125,10 +125,13 @@ sre.Debugger.prototype.generateOutput = function(func) {
 
 /**
  * Gracefully exits the debugger.
+ * @param {function()=} opt_callback Function to be executed after exiting the
+ *     debugger.
  */
-sre.Debugger.prototype.exit = function() {
+sre.Debugger.prototype.exit = function(opt_callback) {
+  var callback = opt_callback || function() {};
   if (this.isActive_ && this.stream_) {
-    this.stream_.end();
+    this.stream_.end('', '', callback);
   }
-  this.isActive_ = false;
+  // this.isActive_ = false;
 };

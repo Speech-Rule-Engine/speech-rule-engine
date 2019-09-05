@@ -1,0 +1,195 @@
+Notes from the Diagram project
+
+* Refactoring the tree generation.
+
+** Separate out into three types of methods:
+
+*** MathML parsing with parseXYZ
+*** Semantic Node processing with processXYZ
+*** Semantic Node building with makeXYZ
+
+** Factory, Parser and Processor
+
+*** Factory contains a counter a limited number of methods.
+    
+*** Processor is a singleton with a factory
+    
+*** Parser is a singleton with a factory
+    
+*** Each tree contains its factory.
+
+** Predicates
+
+*** Specialist predicates are in a separate utility class:
+    sre.SemanticPred
+    Basic idea is to keep all boolean methods separate for clean, smaller files.
+
+*** They are important for some of the heuristics. 
+    However, they are quite independent of the processing. Changes in predicates
+    can very much influence the result of the semantic interpretation,
+    processing should not so much.
+
+    Example: How we precisely define what the (dx) of an integral is, is
+    independent of finding it in a row.
+
+
+** TODO Include Bra-ket heuristic.
+   These are essentially the new methods in fix_bracketting branch:
+
+*** sre.SemanticTree.prototype.processFencesNew_
+*** sre.SemanticTree.prototype.processOpenNeutralFences_
+*** sre.SemanticTree.prototype.processNeutralFencesNew_
+*** sre.SemanticTree.prototype.combineFencesEagerly_
+*** sre.SemanticTree.prototype.combineFencedContentNew_
+
+* Fixing up the enrichment and rebuild for tables and mulit-index structures
+
+** Intoduces explicit semantic skeleton structure
+** Handling explicit content nodes in skeleton with prefix c
+** Retains now role for indices in punctuation.
+
+* Refactoring walking
+
+** focus are generated on semantic tree nodes
+
+** focus contains
+
+*** primary: semantic tree
+
+*** semantic-nodes: List of all nodes in the 
+
+*** nodes: existing DOM nodes. Can contain null.
+
+** Walking in general then happens on the semantic tree.
+
+** Speech generation: if null node, then
+
+*** try to get the node from semantic tree and
+
+*** the speech from the rebuilt tree.
+
+** Highlighting works on the existing nodes and potential children.
+
+*** Recurse over children, if they do not have a DOM node until exhausted:
+
+*** Create focus from semantic nodes together with xml structure.
+
+* TODO
+
+** binomial coefficient bug
+** finish commenting rebuild stree
+** cleanup skeleton structure
+** refactor recompute speech
+** change semantic node id to string!
+** prefix for multi-index structures
+** cache problems with context
+** spaces (> normal)
+*** Special punctuation element?
+** labels
+*** Content element of rows or lines.
+
+* Testing ideas
+
+** multiline equations
+*** Current MathML cloud rendering 
+    multiline equation line 1 a line 2 b (this is effectively ChromeVox short)
+*** Partial MathSpeak rendering
+    multiline equation 1st line a 2nd line b
+*** Correct MathSpeak rendering
+    StartLayout 1st line a 2nd line b EndLayout
+
+** Labels 
+
+*** with or without parenthesis.
+
+*** Label announcement with end label announcement.
+
+*** Equation number ...
+
+*** Line number ...
+
+** Examples:
+
+*** Binomial equation
+ (e.g., cubic)
+
+*** Longer equation 
+(e.g., http://www.bbc.co.uk/schools/gcsebitesize/maths/algebra/equationshirev1.shtml
+or http://www.bbc.co.uk/schools/gcsebitesize/maths/algebra/quadequationshirev4.shtml)
+
+*** Simple inequality
+ (e.g., http://www.bbc.co.uk/schools/gcsebitesize/maths/algebra/inequalitiesrev4.shtml)
+
+*** Complex inequality
+ (e.g., http://math.stackexchange.com/questions/170173/proving-inequalities-using-induction)
+
+*** Really complex inequality
+    (e.g., https://en.wikipedia.org/wiki/Hoeffding%27s_inequality)
+
+
+
+* Reworking Multiline Tables:
+
+** This is from the current TODO statement.
+// TODO (sorge) This heuristic is very primitive. We could start reworking
+// multilines by
+// 
+// 1. combining all cells, semantically rewriting the entire line
+// and see if there are any similarities.
+// 
+// 2. Alternatively, we could look for
+// similarities in columns (e.g., single relation symbols, like equalities or
+// inequalities in the same column could indicate an equation array).
+
+*** We have decided on going with 2.
+
+Reasons: The author might have had an intention of structuring a particular equation system.
+So we want to exploit the existing structure as much as possible.
+More points see in the semantics document.
+
+* Table walkers:
+
+** Extension of syntax walker
+
+** Allow walking in the table with shift-up and shift-down
+
+*** Need to remember that we are in an eligible table, that is no multiline.
+
+**** Matrix 
+
+***** (not rowvector?)
+
+**** Table 
+
+***** (what about single rows prettending to be a table?) 
+
+***** We might want to rewrite those into spaced out elements. Enrichment problems?
+
+*** Both give you the next row plus columns
+
+  // Here's roughly the algorithm is it is currently implemented.
+  // 1. remember the current position in this level
+  // 2. get parent via previous level, pop level
+  // 3. get position of parent in current level
+  // 4. if position is 0 undo
+  // 5. else push singleton focus with parent-pos -/+1
+  // 6. push children
+  // 7. return singleton focus of child at position of old level
+  //
+* Speech Synthesis API:
+** SSML test with quadratic:
+
+   synth = speechSynthesis;
+   quad = new SpeechSynthesisUtterance('x <PROSODY RATE="-5%"> equals </PROSODY> <BREAK TIME="200ms"/> start frac <PROSODY PITCH="+15%"> <PROSODY RATE="-5%"> minus </PROSODY> b <PROSODY RATE="-5%"> plus minus </PROSODY> Square root of <PROSODY RATE="+10%"> b </PROSODY> </PROSODY> <PROSODY RATE="+10%"> <PROSODY PITCH="+32.5%"> square </PROSODY> <PROSODY PITCH="+15%"> <BREAK TIME="300ms"/> </PROSODY> </PROSODY> <PROSODY PITCH="+15%"> <PROSODY RATE="+5%"> minus </PROSODY> <PROSODY RATE="+10%"> four a c </PROSODY> <BREAK TIME="400ms"/> </PROSODY> over <PROSODY PITCH="-15%"> two a </PROSODY> <BREAK TIME="400ms"/> end frac');
+   quad.voice = synth.getVoices()[1];
+   synth.speak(quad);
+
+   quad.pitch = 2;
+   quad.rate = 3;
+
+** IBM Watson
+   
+   From IBM Watson Demo https://text-to-speech-demo.mybluemix.net/
+
+   ll = new SpeechSynthesisUtterance('<speak>I have been assigned to handle your order status request.<express-as type="Apology"> I am sorry to inform you that the items you requested are back-ordered. We apologize for the inconvenience.</express-as><express-as type="Uncertainty"> We don\'t know when those items will become available. Maybe next week but we are not sure at this time.</express-as><express-as type="GoodNews">Because we want you to be a happy customer, management has decided to give you a 50% discount! </express-as></speak>');
+
