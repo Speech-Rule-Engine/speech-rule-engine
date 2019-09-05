@@ -38,6 +38,7 @@ goog.require('sre.Walker');
 goog.require('sre.WalkerUtil');
 
 
+
 /**
  * @constructor
  * @implements {sre.Walker}
@@ -152,13 +153,13 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
 };
 
 
-
 /**
  * Unique id counter for walkers. Needed to regain states on rerendering.
  * @type {number}
  */
 sre.AbstractWalker.ID_COUNTER = 0;
 sre.AbstractWalker.SRE_ID_ATTR = 'sre-explorer-id';
+
 
 /**
  * @override
@@ -519,9 +520,9 @@ sre.AbstractWalker.prototype.restoreState = function() {
  */
 sre.AbstractWalker.prototype.updateFocus = function() {
   this.setFocus(sre.Focus.factory(
-    this.focus_.getSemanticPrimary().id.toString(),
-    this.focus_.getSemanticNodes().map(x => x.id),
-    this.rebuilt, this.node));
+      this.focus_.getSemanticPrimary().id.toString(),
+      this.focus_.getSemanticNodes().map(x => x.id),
+      this.rebuilt, this.node));
 };
 
 
@@ -740,6 +741,17 @@ sre.AbstractWalker.prototype.undo = function() {
 };
 
 
+/**
+ * @override
+ */
+sre.AbstractWalker.prototype.update = function(options) {
+  this.generator.setOptions(options);
+  sre.System.getInstance().setupEngine(options);
+  sre.SpeechGeneratorFactory.generator('Tree').getSpeech(this.node, this.xml);
+};
+
+
+// Facilities for keyboard driven rules cycling.
 // TODO: Refactor this into the speech generators.
 sre.AbstractWalker.prototype.nextRules = function() {
   var options = this.generator.getOptions();
@@ -747,36 +759,43 @@ sre.AbstractWalker.prototype.nextRules = function() {
     return this.focus_;
   }
   // TODO: Check if domains exist for the current locale.
+  sre.Engine.DOMAIN_TO_STYLES[options.domain] = options.style;
   options.domain = (options.domain === 'mathspeak') ? 'clearspeak' : 'mathspeak';
-  this.generator.setOptions(options);
-  sre.System.getInstance().setupEngine(options);
-  sre.SpeechGeneratorFactory.generator('Tree').getSpeech(this.node, this.xml);
+  options.style = sre.Engine.DOMAIN_TO_STYLES[options.domain];
+  this.update(options);
   this.moved = sre.Walker.move.REPEAT;
   return this.focus_.clone();
 };
 
-var braille = false;
 
-var styles = {
-  'mathspeak': ['default', 'brief', 'sbrief'],
-  'clearspeak': sre.ClearspeakPreferences.PREFERENCES
-};
-
-var clearspeakParser = new sre.ClearspeakPreferences.Parser();
-
-sre.AbstractWalker.nextStyle = function(domain, style) {
+sre.AbstractWalker.prototype.nextStyle = function(domain, style) {
   if (domain === 'mathspeak') {
-    var index = styles.mathspeak.indexOf(style);
+    var styles = ['default', 'brief', 'sbrief'];
+    var index = styles.indexOf(style);
     if (index === -1) {
       return style;
     }
-    return (index >= styles.mathspeak.length - 1) ? styles.mathspeak[0] : styles.mathspeak[index + 1];
+    return (index >= styles.length - 1) ? styles[0] : styles[index + 1];
   }
   if (domain === 'clearspeak') {
-    // var options = clearspeakParser.parse('ImpliedTimes_MoreImpliedTimes:Roots_RootEnd');
-    // return options.style;
-    // return 'Trig_Auto:Roots_RootEnd';
-    return 'ImpliedTimes_MoreImpliedTimes'; //':Roots_RootEnd'
+    var prefs = sre.ClearspeakPreferences.getLocalePreferences();
+    var loc = prefs['en']; // TODO: use correct locale.
+    if (!loc) {
+      return 'default';  // TODO: return the previous one?
+    }
+    var smart = sre.ClearspeakPreferences.relevantPreferences(
+        this.getFocus().getSemanticPrimary());
+    var current = sre.ClearspeakPreferences.findPreference(style, smart);
+    var options = loc[smart].map(function(x) {
+      return x.split('_')[1];
+    });
+    var index = options.indexOf(current);
+    if (index === -1) {
+      return style;
+    }
+    var next = (index >= options.length - 1) ? options[0] : options[index + 1];
+    var result = sre.ClearspeakPreferences.addPreference(style, smart, next);
+    return result;
   }
   return style;
 };
@@ -787,10 +806,8 @@ sre.AbstractWalker.prototype.previousRules = function() {
   if (options.modality !== 'speech') {
     return this.focus_;
   }
-  options.style = sre.AbstractWalker.nextStyle(options.domain, options.style);
-  this.generator.setOptions(options);
-  sre.System.getInstance().setupEngine(options);
-  sre.SpeechGeneratorFactory.generator('Tree').getSpeech(this.node, this.xml);
+  options.style = this.nextStyle(options.domain, options.style);
+  this.update(options);
   this.moved = sre.Walker.move.REPEAT;
   return this.focus_.clone();
 };

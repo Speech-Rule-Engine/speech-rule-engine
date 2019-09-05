@@ -51,8 +51,8 @@ goog.inherits(sre.CaseProof, sre.AbstractEnrichCase);
  */
 sre.CaseProof.test = function(semantic) {
   return !!semantic.mathmlTree &&
-    (semantic.type === sre.SemanticAttr.Type.INFERENCE ||
-     semantic.type === sre.SemanticAttr.Type.PREMISES);
+      (semantic.type === sre.SemanticAttr.Type.INFERENCE ||
+      semantic.type === sre.SemanticAttr.Type.PREMISES);
 };
 
 
@@ -60,15 +60,24 @@ sre.CaseProof.test = function(semantic) {
  * @override
  */
 sre.CaseProof.prototype.getMathml = function() {
-  console.log('Getting math for: ' + this.semantic.type);
-  console.log(this.mml);
   if (!this.semantic.childNodes.length) {
     return this.mml;
   }
+  this.semantic.contentNodes.forEach(
+      function(x) {
+        sre.EnrichMathml.walkTree(/**@type{!sre.SemanticNode}*/(x));
+        // TODO: This needs to be done more principled.
+        sre.EnrichMathml.setAttributes(/**@type{!Element}*/(x.mathmlTree), x);
+      });
   this.semantic.childNodes.forEach(
-    function(x) {
-      sre.EnrichMathml.walkTree(/**@type{!sre.SemanticNode}*/(x));
-    });
+      function(x) {
+        sre.EnrichMathml.walkTree(/**@type{!sre.SemanticNode}*/(x));
+      });
   sre.EnrichMathml.setAttributes(this.mml, this.semantic);
+  // TODO: The obsolete parent pointer is related to the issue above.
+  if (this.mml.getAttribute('data-semantic-id') ===
+      this.mml.getAttribute('data-semantic-parent')) {
+    this.mml.removeAttribute('data-semantic-parent');
+  }
   return this.mml;
 };

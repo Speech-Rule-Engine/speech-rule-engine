@@ -73,7 +73,7 @@ sre.ColorGenerator.prototype.colorLeaves_ = function(node) {
     let success = false;
     if (Array.isArray(id)) {
       success = id.map(x => this.colorLeave_(node, x, color)).
-        reduce((x, y) => x || y, false);
+          reduce((x, y) => x || y, false);
     } else {
       success = this.colorLeave_(node, id, color);
     }

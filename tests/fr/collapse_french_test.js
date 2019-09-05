@@ -84,8 +84,8 @@ sre.CollapseFrenchTest.prototype.testCollapsedBinomial = function() {
  * Testing Collapse Rule for abstr-cases.
  */
 sre.CollapseFrenchTest.prototype.testCollapsedCases = function() {
-  var mml = '<mfenced separators="" open="{" close=""><mtable>'
-      + '<mtr><mtd><mi>y</mi></mtd><mtd><mn>0</mn></mtd></mtr>' +
+  var mml = '<mfenced separators="" open="{" close=""><mtable>' +
+      '<mtr><mtd><mi>y</mi></mtd><mtd><mn>0</mn></mtd></mtr>' +
       '<mtr><mtd><mi>y</mi></mtd><mtd><mn>2</mn></mtd></mtr>' +
       '</mtable></mfenced>';
   this.executeRuleTest(mml, 'déclaration de cas avec 2 cas compressée', 'default');

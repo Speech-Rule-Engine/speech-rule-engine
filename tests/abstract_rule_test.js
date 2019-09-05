@@ -126,14 +126,14 @@ sre.AbstractRuleTest.prototype.getSpeech = function(mathMl) {
  * @param {Array.<string>=} opt_rest The rest that is to be appended.
  */
 sre.AbstractRuleTest.prototype.appendRuleExample = function(
-  input, output, style, opt_rest) {
+    input, output, style, opt_rest) {
   var rest = opt_rest || [];
   var key = '<h2>' + this.information + ' Locale: ' + this.locale +
       ', Style: ' +
       sre.AbstractRuleTest.htmlCell_(sre.AbstractRuleTest.styleMap_(style)) +
       '.</h2>';
   this.appendExamples(
-    key, sre.AbstractRuleTest.htmlRow([input, output].concat(rest)));
+      key, sre.AbstractRuleTest.htmlRow([input, output].concat(rest)));
 };
 
 

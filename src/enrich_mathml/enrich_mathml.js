@@ -854,7 +854,7 @@ sre.EnrichMathml.removeAttributePrefix = function(mml) {
 sre.EnrichMathml.addPrefix = function(attr) {
   var upcase = attr.toUpperCase();
   return sre.EnrichMathml.Attribute[upcase] ||
-    (sre.EnrichMathml.ATTRIBUTE_PREFIX_ + attr);
+      (sre.EnrichMathml.ATTRIBUTE_PREFIX_ + attr);
 };
 
 

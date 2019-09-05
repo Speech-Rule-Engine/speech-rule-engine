@@ -178,5 +178,5 @@ sre.Locale.fr = {
   },
 
   NUMBERS: sre.Numbers.fr.NUMBERS
-  
+
 };

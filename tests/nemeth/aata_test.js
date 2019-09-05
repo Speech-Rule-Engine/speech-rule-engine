@@ -14,13 +14,14 @@
 
 /**
  * @fileoverview Testcases from the Pretext/NFB project.
- * 
+ *
  * @author Volker.Sorge@gmail.com (Volker Sorge)
  */
 
 goog.provide('sre.AataTest');
 
 goog.require('sre.AbstractRuleTest');
+
 
 
 /**
@@ -66,14 +67,14 @@ goog.inherits(sre.AataTest, sre.AbstractRuleTest);
  */
 sre.AataTest.prototype.testAataExpression_1 = function() {
   var mml = '<mi>r</mi>' +
-  '<mo>≡<!-- ≡ --></mo>' +
-  '<mi>s</mi>' +
-  '<mspace width="0.444em"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>mod</mi>' +
-  '<mspace width="0.333em"></mspace>' +
-  '<mi>n</mi>' +
-  '<mo stretchy="false">)</mo>';
+      '<mo>≡<!-- ≡ --></mo>' +
+      '<mi>s</mi>' +
+      '<mspace width="0.444em"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>mod</mi>' +
+      '<mspace width="0.333em"></mspace>' +
+      '<mi>n</mi>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠗⠸⠇⠎⠷⠍⠕⠙⠝⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -84,16 +85,16 @@ sre.AataTest.prototype.testAataExpression_1 = function() {
  */
 sre.AataTest.prototype.testAataExpression_2 = function() {
   var mml = '<mi>y</mi>' +
-  '<mo>=</mo>' +
-  '<msup>' +
-  '<mi>x</mi>' +
-  '<mi>E</mi>' +
-  '</msup>' +
-  '<mspace width="0.667em"></mspace>' +
-  '<mi>mod</mi>' +
-  '<mspace width="thinmathspace"></mspace>' +
-  '<mspace width="thinmathspace"></mspace>' +
-  '<mi>n</mi>';
+      '<mo>=</mo>' +
+      '<msup>' +
+      '<mi>x</mi>' +
+      '<mi>E</mi>' +
+      '</msup>' +
+      '<mspace width="0.667em"></mspace>' +
+      '<mi>mod</mi>' +
+      '<mspace width="thinmathspace"></mspace>' +
+      '<mspace width="thinmathspace"></mspace>' +
+      '<mi>n</mi>';
   var nemeth = '⠽⠀⠨⠅⠀⠭⠘⠠⠑⠐⠍⠕⠙⠝';
   this.executeRuleTest(mml, nemeth);
 };
@@ -104,26 +105,26 @@ sre.AataTest.prototype.testAataExpression_2 = function() {
  */
 sre.AataTest.prototype.testAataExpression_3 = function() {
   var mml = '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo stretchy="false">|</mo>' +
-  '</mrow>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mover>' +
-  '<mi>X</mi>' +
-  '<mo>~<!-- ~ --></mo>' +
-  '</mover>' +
-  '</mrow>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo stretchy="false">|</mo>' +
-  '</mrow>' +
-  '<mo>=</mo>' +
-  '<msup>' +
-  '<mn>2</mn>' +
-  '<mn>4</mn>' +
-  '</msup>' +
-  '<mo>=</mo>' +
-  '<mtext>' +
-  '</mtext>' +
-  '<mn>16</mn>';
+      '<mo stretchy="false">|</mo>' +
+      '</mrow>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mover>' +
+      '<mi>X</mi>' +
+      '<mo>~<!-- ~ --></mo>' +
+      '</mover>' +
+      '</mrow>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo stretchy="false">|</mo>' +
+      '</mrow>' +
+      '<mo>=</mo>' +
+      '<msup>' +
+      '<mn>2</mn>' +
+      '<mn>4</mn>' +
+      '</msup>' +
+      '<mo>=</mo>' +
+      '<mtext>' +
+      '</mtext>' +
+      '<mn>16</mn>';
   var nemeth = '⠳⠠⠭overTilde⠳⠀⠨⠅⠀⠆⠘⠲⠐⠀⠨⠅⠀16';
   this.executeRuleTest(mml, nemeth);
 };
@@ -134,8 +135,8 @@ sre.AataTest.prototype.testAataExpression_3 = function() {
  */
 sre.AataTest.prototype.testAataExpression_4 = function() {
   var mml = '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi class="MJX-tex-caligraphic" mathvariant="script">S</mi>' +
-  '</mrow>';
+      '<mi class="MJX-tex-caligraphic" mathvariant="script">S</mi>' +
+      '</mrow>';
   var nemeth = 'caligraphic⠠⠎';
   this.executeRuleTest(mml, nemeth);
 };
@@ -146,17 +147,17 @@ sre.AataTest.prototype.testAataExpression_4 = function() {
  */
 sre.AataTest.prototype.testAataExpression_5 = function() {
   var mml = '<mi>a</mi>' +
-  '<msup>' +
-  '<mi>x</mi>' +
-  '<mn>2</mn>' +
-  '</msup>' +
-  '<mo>+</mo>' +
-  '<mi>b</mi>' +
-  '<mi>x</mi>' +
-  '<mo>+</mo>' +
-  '<mi>c</mi>' +
-  '<mo>=</mo>' +
-  '<mn>0</mn>';
+      '<msup>' +
+      '<mi>x</mi>' +
+      '<mn>2</mn>' +
+      '</msup>' +
+      '<mo>+</mo>' +
+      '<mi>b</mi>' +
+      '<mi>x</mi>' +
+      '<mo>+</mo>' +
+      '<mi>c</mi>' +
+      '<mo>=</mo>' +
+      '<mn>0</mn>';
   var nemeth = '⠁⠭⠘⠆⠐⠬⠃⠭⠬⠉⠀⠨⠅⠀⠴';
   this.executeRuleTest(mml, nemeth);
 };
@@ -167,17 +168,17 @@ sre.AataTest.prototype.testAataExpression_5 = function() {
  */
 sre.AataTest.prototype.testAataExpression_6 = function() {
   var mml = '<mi>A</mi>' +
-  '<mrow class="MJX-TeXAtom-REL">' +
-  '<mover>' +
-  '<mrow class="MJX-TeXAtom-OP MJX-fixedlimits">' +
-  '<mo stretchy="false">→<!-- → --></mo>' +
-  '</mrow>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi>f</mi>' +
-  '</mrow>' +
-  '</mover>' +
-  '</mrow>' +
-  '<mi>B</mi>';
+      '<mrow class="MJX-TeXAtom-REL">' +
+      '<mover>' +
+      '<mrow class="MJX-TeXAtom-OP MJX-fixedlimits">' +
+      '<mo stretchy="false">→<!-- → --></mo>' +
+      '</mrow>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi>f</mi>' +
+      '</mrow>' +
+      '</mover>' +
+      '</mrow>' +
+      '<mi>B</mi>';
   var nemeth = '⠠⠁⠐⠀⠫⠕⠀⠣⠋⠻⠠⠃';
   this.executeRuleTest(mml, nemeth);
 };
@@ -188,14 +189,14 @@ sre.AataTest.prototype.testAataExpression_6 = function() {
  */
 sre.AataTest.prototype.testAataExpression_7 = function() {
   var mml = '<mi>g</mi>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>x</mi>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>=</mo>' +
-  '<mroot>' +
-  '<mi>x</mi>' +
-  '<mn>3</mn>' +
-  '</mroot>';
+      '<mo stretchy="false">(</mo>' +
+      '<mi>x</mi>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>=</mo>' +
+      '<mroot>' +
+      '<mi>x</mi>' +
+      '<mn>3</mn>' +
+      '</mroot>';
   var nemeth = '⠛⠷⠭⠾⠀⠨⠅⠀⠣⠒⠜⠭⠻';
   this.executeRuleTest(mml, nemeth);
 };
@@ -206,26 +207,26 @@ sre.AataTest.prototype.testAataExpression_7 = function() {
  */
 sre.AataTest.prototype.testAataExpression_8 = function() {
   var mml = '<msubsup>' +
-  '<mi>T</mi>' +
-  '<mi>A</mi>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo>−<!-- − --></mo>' +
-  '<mn>1</mn>' +
-  '</mrow>' +
-  '</msubsup>' +
-  '<mo>=</mo>' +
-  '<msub>' +
-  '<mi>T</mi>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<msup>' +
-  '<mi>A</mi>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo>−<!-- − --></mo>' +
-  '<mn>1</mn>' +
-  '</mrow>' +
-  '</msup>' +
-  '</mrow>' +
-  '</msub>';
+      '<mi>T</mi>' +
+      '<mi>A</mi>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo>−<!-- − --></mo>' +
+      '<mn>1</mn>' +
+      '</mrow>' +
+      '</msubsup>' +
+      '<mo>=</mo>' +
+      '<msub>' +
+      '<mi>T</mi>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<msup>' +
+      '<mi>A</mi>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo>−<!-- − --></mo>' +
+      '<mn>1</mn>' +
+      '</mrow>' +
+      '</msup>' +
+      '</mrow>' +
+      '</msub>';
   var nemeth = '⠠⠞⠰⠠⠁⠘⠤⠂⠐⠀⠨⠅⠀⠠⠞⠰⠠⠁⠰⠘⠤⠂';
   this.executeRuleTest(mml, nemeth);
 };
@@ -236,15 +237,15 @@ sre.AataTest.prototype.testAataExpression_8 = function() {
  */
 sre.AataTest.prototype.testAataExpression_9 = function() {
   var mml = '<munder>' +
-  '<mo>⋃<!-- ⋃ --></mo>' +
-  '<mi>k</mi>' +
-  '</munder>' +
-  '<msub>' +
-  '<mi>X</mi>' +
-  '<mi>k</mi>' +
-  '</msub>' +
-  '<mo>=</mo>' +
-  '<mi>X</mi>';
+      '<mo>⋃<!-- ⋃ --></mo>' +
+      '<mi>k</mi>' +
+      '</munder>' +
+      '<msub>' +
+      '<mi>X</mi>' +
+      '<mi>k</mi>' +
+      '</msub>' +
+      '<mo>=</mo>' +
+      '<mi>X</mi>';
   var nemeth = '⠐⠄⡳⠭⠆⠆⠉⠒⠄⠩⠅⠻⠠⠭⠰⠅⠐⠀⠨⠅⠀⠠⠭';
   this.executeRuleTest(mml, nemeth);
 };
@@ -255,28 +256,28 @@ sre.AataTest.prototype.testAataExpression_9 = function() {
  */
 sre.AataTest.prototype.testAataExpression_10 = function() {
   var mml = '<mstyle displaystyle="true" scriptlevel="0">' +
-  '<mi>f</mi>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>p</mi>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo>/</mo>' +
-  '</mrow>' +
-  '<mi>q</mi>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>=</mo>' +
-  '<mfrac>' +
-  '<mrow>' +
-  '<mi>p</mi>' +
-  '<mo>+</mo>' +
-  '<mn>1</mn>' +
-  '</mrow>' +
-  '<mrow>' +
-  '<mi>p</mi>' +
-  '<mo>−<!-- − --></mo>' +
-  '<mn>2</mn>' +
-  '</mrow>' +
-  '</mfrac>' +
-  '</mstyle>';
+      '<mi>f</mi>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>p</mi>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo>/</mo>' +
+      '</mrow>' +
+      '<mi>q</mi>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>=</mo>' +
+      '<mfrac>' +
+      '<mrow>' +
+      '<mi>p</mi>' +
+      '<mo>+</mo>' +
+      '<mn>1</mn>' +
+      '</mrow>' +
+      '<mrow>' +
+      '<mi>p</mi>' +
+      '<mo>−<!-- − --></mo>' +
+      '<mn>2</mn>' +
+      '</mrow>' +
+      '</mfrac>' +
+      '</mstyle>';
   var nemeth = '⠋⠷⠏⠌⠟⠾⠀⠨⠅⠀⠹⠏⠬⠂⠌⠏⠤⠆⠼';
   this.executeRuleTest(mml, nemeth);
 };
@@ -287,19 +288,19 @@ sre.AataTest.prototype.testAataExpression_10 = function() {
  */
 sre.AataTest.prototype.testAataExpression_11 = function() {
   var mml = '<mi>X</mi>' +
-  '<mo>=</mo>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="double-struck">N</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo>∪<!-- ∪ --></mo>' +
-  '<mo fence="false" stretchy="false">{</mo>' +
-  '<msqrt>' +
-  '<mn>2</mn>' +
-  '</msqrt>' +
-  '<mspace width="thinmathspace"></mspace>' +
-  '<mo fence="false" stretchy="false">}</mo>';
+      '<mo>=</mo>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="double-struck">N</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo>∪<!-- ∪ --></mo>' +
+      '<mo fence="false" stretchy="false">{</mo>' +
+      '<msqrt>' +
+      '<mn>2</mn>' +
+      '</msqrt>' +
+      '<mspace width="thinmathspace"></mspace>' +
+      '<mo fence="false" stretchy="false">}</mo>';
   var nemeth = '⠠⠭⠀⠨⠅⠀⠈⠠⠝⠨⠬⠨⠷⠜⠆⠻⠨⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -310,14 +311,14 @@ sre.AataTest.prototype.testAataExpression_11 = function() {
  */
 sre.AataTest.prototype.testAataExpression_12 = function() {
   var mml = '<mover>' +
-  '<mi>z</mi>' +
-  '<mo accent="false">¯<!-- ¯ --></mo>' +
-  '</mover>' +
-  '<mo>=</mo>' +
-  '<mi>a</mi>' +
-  '<mo>−<!-- − --></mo>' +
-  '<mi>b</mi>' +
-  '<mi>i</mi>';
+      '<mi>z</mi>' +
+      '<mo accent="false">¯<!-- ¯ --></mo>' +
+      '</mover>' +
+      '<mo>=</mo>' +
+      '<mi>a</mi>' +
+      '<mo>−<!-- − --></mo>' +
+      '<mi>b</mi>' +
+      '<mi>i</mi>';
   var nemeth = '⠵overbar⠀⠨⠅⠀⠁⠤⠃⠊';
   this.executeRuleTest(mml, nemeth);
 };
@@ -328,13 +329,13 @@ sre.AataTest.prototype.testAataExpression_12 = function() {
  */
 sre.AataTest.prototype.testAataExpression_13 = function() {
   var mml = '<mrow class="MJX-TeXAtom-ORD">' +
-  '<msub>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="double-struck">Z</mi>' +
-  '</mrow>' +
-  '<mn>8</mn>' +
-  '</msub>' +
-  '</mrow>';
+      '<msub>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="double-struck">Z</mi>' +
+      '</mrow>' +
+      '<mn>8</mn>' +
+      '</msub>' +
+      '</mrow>';
   var nemeth = '⠈⠠⠵⠦';
   this.executeRuleTest(mml, nemeth);
 };
@@ -345,45 +346,45 @@ sre.AataTest.prototype.testAataExpression_13 = function() {
  */
 sre.AataTest.prototype.testAataExpression_14 = function() {
   var mml = '<mi>C</mi>' +
-  '<mo>=</mo>' +
-  '<mrow>' +
-  '<mo>{</mo>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">y</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo>:</mo>' +
-  '<mi>G</mi>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">x</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo>=</mo>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">y</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mtext>for</mtext>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">x</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo>∈<!-- ∈ --></mo>' +
-  '<msubsup>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="double-struck">Z</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mn>2</mn>' +
-  '<mi>k</mi>' +
-  '</msubsup>' +
-  '<mo>}</mo>' +
-  '</mrow>';
+      '<mo>=</mo>' +
+      '<mrow>' +
+      '<mo>{</mo>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">y</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo>:</mo>' +
+      '<mi>G</mi>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">x</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo>=</mo>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">y</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mtext>for</mtext>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">x</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo>∈<!-- ∈ --></mo>' +
+      '<msubsup>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="double-struck">Z</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mn>2</mn>' +
+      '<mi>k</mi>' +
+      '</msubsup>' +
+      '<mo>}</mo>' +
+      '</mrow>';
   var nemeth = '⠠⠉⠀⠨⠅⠀⠨⠷⠸⠽⠱⠠⠛⠸⠭⠀⠨⠅⠀⠸⠽for⠸⠭⠈⠑⠈⠠⠵⠆⠘⠅⠐⠨⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -394,12 +395,12 @@ sre.AataTest.prototype.testAataExpression_14 = function() {
  */
 sre.AataTest.prototype.testAataExpression_15 = function() {
   var mml = '<msqrt>' +
-  '<mn>2</mn>' +
-  '<mo>+</mo>' +
-  '<msqrt>' +
-  '<mn>3</mn>' +
-  '</msqrt>' +
-  '</msqrt>';
+      '<mn>2</mn>' +
+      '<mo>+</mo>' +
+      '<msqrt>' +
+      '<mn>3</mn>' +
+      '</msqrt>' +
+      '</msqrt>';
   var nemeth = '⠜⠆⠬⠨⠜⠒⠨⠻⠻';
   this.executeRuleTest(mml, nemeth);
 };
@@ -410,13 +411,13 @@ sre.AataTest.prototype.testAataExpression_15 = function() {
  */
 sre.AataTest.prototype.testAataExpression_16 = function() {
   var mml = '<msqrt>' +
-  '<mroot>' +
-  '<mn>2</mn>' +
-  '<mn>3</mn>' +
-  '</mroot>' +
-  '<mo>−<!-- − --></mo>' +
-  '<mi>i</mi>' +
-  '</msqrt>';
+      '<mroot>' +
+      '<mn>2</mn>' +
+      '<mn>3</mn>' +
+      '</mroot>' +
+      '<mo>−<!-- − --></mo>' +
+      '<mi>i</mi>' +
+      '</msqrt>';
   var nemeth = '⠜⠨⠣⠒⠜⠆⠨⠻⠤⠊⠻';
   this.executeRuleTest(mml, nemeth);
 };
@@ -427,13 +428,13 @@ sre.AataTest.prototype.testAataExpression_16 = function() {
  */
 sre.AataTest.prototype.testAataExpression_17 = function() {
   var mml = '<msup>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="double-struck">R</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mn>3</mn>' +
-  '</msup>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="double-struck">R</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mn>3</mn>' +
+      '</msup>';
   var nemeth = '⠈⠠⠗⠘⠒';
   this.executeRuleTest(mml, nemeth);
 };
@@ -444,25 +445,25 @@ sre.AataTest.prototype.testAataExpression_17 = function() {
  */
 sre.AataTest.prototype.testAataExpression_18 = function() {
   var mml = '<msub>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mover>' +
-  '<mi>X</mi>' +
-  '<mo>~<!-- ~ --></mo>' +
-  '</mover>' +
-  '</mrow>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>1</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '</mrow>' +
-  '</msub>' +
-  '<mo>=</mo>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mover>' +
-  '<mi>X</mi>' +
-  '<mo>~<!-- ~ --></mo>' +
-  '</mover>' +
-  '</mrow>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mover>' +
+      '<mi>X</mi>' +
+      '<mo>~<!-- ~ --></mo>' +
+      '</mover>' +
+      '</mrow>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>1</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '</mrow>' +
+      '</msub>' +
+      '<mo>=</mo>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mover>' +
+      '<mi>X</mi>' +
+      '<mo>~<!-- ~ --></mo>' +
+      '</mover>' +
+      '</mrow>';
   var nemeth = '⠠⠭overTilde⠰⠷⠂⠾⠐⠀⠨⠅⠀⠠⠭overTilde';
   this.executeRuleTest(mml, nemeth);
 };
@@ -473,23 +474,23 @@ sre.AataTest.prototype.testAataExpression_18 = function() {
  */
 sre.AataTest.prototype.testAataExpression_19 = function() {
   var mml = '<msub>' +
-  '<mi>G</mi>' +
-  '<mn>0</mn>' +
-  '</msub>' +
-  '<mo>=</mo>' +
-  '<mo fence="false" stretchy="false">{</mo>' +
-  '<mi>A</mi>' +
-  '<mo>:</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>A</mi>' +
-  '<mo>,</mo>' +
-  '<mi>b</mi>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>∈<!-- ∈ --></mo>' +
-  '<mi>G</mi>' +
-  '<mtext>for some</mtext>' +
-  '<mi>b</mi>' +
-  '<mo fence="false" stretchy="false">}</mo>';
+      '<mi>G</mi>' +
+      '<mn>0</mn>' +
+      '</msub>' +
+      '<mo>=</mo>' +
+      '<mo fence="false" stretchy="false">{</mo>' +
+      '<mi>A</mi>' +
+      '<mo>:</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>A</mi>' +
+      '<mo>,</mo>' +
+      '<mi>b</mi>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>∈<!-- ∈ --></mo>' +
+      '<mi>G</mi>' +
+      '<mtext>for some</mtext>' +
+      '<mi>b</mi>' +
+      '<mo fence="false" stretchy="false">}</mo>';
   var nemeth = '⠠⠛⠴⠀⠨⠅⠀⠨⠷⠠⠁⠱⠷⠠⠁⠠⠃⠾⠈⠑⠠⠛forsome⠃⠨⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -500,7 +501,7 @@ sre.AataTest.prototype.testAataExpression_19 = function() {
  */
 sre.AataTest.prototype.testAataExpression_20 = function() {
   var mml = '<mn>300</mn>' +
-  '<mo>!</mo>';
+      '<mo>!</mo>';
   var nemeth = '⠼300⠯';
   this.executeRuleTest(mml, nemeth);
 };
@@ -511,20 +512,20 @@ sre.AataTest.prototype.testAataExpression_20 = function() {
  */
 sre.AataTest.prototype.testAataExpression_21 = function() {
   var mml = '<mi>A</mi>' +
-  '<mo>∪<!-- ∪ --></mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>B</mi>' +
-  '<mo>∪<!-- ∪ --></mo>' +
-  '<mi>C</mi>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>=</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>A</mi>' +
-  '<mo>∪<!-- ∪ --></mo>' +
-  '<mi>B</mi>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>∪<!-- ∪ --></mo>' +
-  '<mi>C</mi>';
+      '<mo>∪<!-- ∪ --></mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>B</mi>' +
+      '<mo>∪<!-- ∪ --></mo>' +
+      '<mi>C</mi>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>=</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>A</mi>' +
+      '<mo>∪<!-- ∪ --></mo>' +
+      '<mi>B</mi>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>∪<!-- ∪ --></mo>' +
+      '<mi>C</mi>';
   var nemeth = '⠠⠁⠨⠬⠷⠠⠃⠨⠬⠠⠉⠾⠀⠨⠅⠀⠷⠠⠁⠨⠬⠠⠃⠾⠨⠬⠠⠉';
   this.executeRuleTest(mml, nemeth);
 };
@@ -535,21 +536,21 @@ sre.AataTest.prototype.testAataExpression_21 = function() {
  */
 sre.AataTest.prototype.testAataExpression_22 = function() {
   var mml = '<mrow>' +
-  '<mstyle scriptlevel="0">' +
-  '<mrow class="MJX-TeXAtom-OPEN">' +
-  '<mo maxsize="1.2em" minsize="1.2em">(</mo>' +
-  '</mrow>' +
-  '</mstyle>' +
-  '<mfrac linethickness="0">' +
-  '<mi>n</mi>' +
-  '<mi>k</mi>' +
-  '</mfrac>' +
-  '<mstyle scriptlevel="0">' +
-  '<mrow class="MJX-TeXAtom-CLOSE">' +
-  '<mo maxsize="1.2em" minsize="1.2em">)</mo>' +
-  '</mrow>' +
-  '</mstyle>' +
-  '</mrow>';
+      '<mstyle scriptlevel="0">' +
+      '<mrow class="MJX-TeXAtom-OPEN">' +
+      '<mo maxsize="1.2em" minsize="1.2em">(</mo>' +
+      '</mrow>' +
+      '</mstyle>' +
+      '<mfrac linethickness="0">' +
+      '<mi>n</mi>' +
+      '<mi>k</mi>' +
+      '</mfrac>' +
+      '<mstyle scriptlevel="0">' +
+      '<mrow class="MJX-TeXAtom-CLOSE">' +
+      '<mo maxsize="1.2em" minsize="1.2em">)</mo>' +
+      '</mrow>' +
+      '</mstyle>' +
+      '</mrow>';
   var nemeth = '⠝⠅';
   this.executeRuleTest(mml, nemeth);
 };
@@ -560,16 +561,16 @@ sre.AataTest.prototype.testAataExpression_22 = function() {
  */
 sre.AataTest.prototype.testAataExpression_23 = function() {
   var mml = '<mn>3</mn>' +
-  '<mo>+</mo>' +
-  '<mn>56</mn>' +
-  '<mo>−<!-- − --></mo>' +
-  '<mn>13</mn>' +
-  '<mo>+</mo>' +
-  '<mn>8</mn>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo>/</mo>' +
-  '</mrow>' +
-  '<mn>2</mn>';
+      '<mo>+</mo>' +
+      '<mn>56</mn>' +
+      '<mo>−<!-- − --></mo>' +
+      '<mn>13</mn>' +
+      '<mo>+</mo>' +
+      '<mn>8</mn>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo>/</mo>' +
+      '</mrow>' +
+      '<mn>2</mn>';
   var nemeth = '⠒⠬56⠤13⠬⠦⠌⠆';
   this.executeRuleTest(mml, nemeth);
 };
@@ -580,28 +581,28 @@ sre.AataTest.prototype.testAataExpression_23 = function() {
  */
 sre.AataTest.prototype.testAataExpression_24 = function() {
   var mml = '<mi>w</mi>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">x</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>=</mo>' +
-  '<mi>d</mi>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">x</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo>,</mo>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mn mathvariant="bold">0</mn>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo stretchy="false">)</mo>';
+      '<mo stretchy="false">(</mo>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">x</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>=</mo>' +
+      '<mi>d</mi>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">x</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo>,</mo>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mn mathvariant="bold">0</mn>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠺⠷⠸⠭⠾⠀⠨⠅⠀⠙⠷⠸⠭⠠⠸⠴⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -612,9 +613,9 @@ sre.AataTest.prototype.testAataExpression_24 = function() {
  */
 sre.AataTest.prototype.testAataExpression_25 = function() {
   var mml = '<mn>6.00000</mn>' +
-  '<mo>+</mo>' +
-  '<mn>0.00000</mn>' +
-  '<mi>i</mi>';
+      '<mo>+</mo>' +
+      '<mn>0.00000</mn>' +
+      '<mi>i</mi>';
   var nemeth = '6.00000⠬0.00000⠊';
   this.executeRuleTest(mml, nemeth);
 };
@@ -625,8 +626,8 @@ sre.AataTest.prototype.testAataExpression_25 = function() {
  */
 sre.AataTest.prototype.testAataExpression_26 = function() {
   var mml = '<mi>p</mi>' +
-  '<mo>=</mo>' +
-  '<mn>0.0001</mn>';
+      '<mo>=</mo>' +
+      '<mn>0.0001</mn>';
   var nemeth = '⠏⠀⠨⠅⠀0.0001';
   this.executeRuleTest(mml, nemeth);
 };
@@ -637,8 +638,8 @@ sre.AataTest.prototype.testAataExpression_26 = function() {
  */
 sre.AataTest.prototype.testAataExpression_27 = function() {
   var mml = '<mi>p</mi>' +
-  '<mo>=</mo>' +
-  '<mn>0.01</mn>';
+      '<mo>=</mo>' +
+      '<mn>0.01</mn>';
   var nemeth = '⠏⠀⠨⠅⠀0.01';
   this.executeRuleTest(mml, nemeth);
 };
@@ -649,8 +650,8 @@ sre.AataTest.prototype.testAataExpression_27 = function() {
  */
 sre.AataTest.prototype.testAataExpression_28 = function() {
   var mml = '<mi>p</mi>' +
-  '<mo>=</mo>' +
-  '<mn>0.995</mn>';
+      '<mo>=</mo>' +
+      '<mn>0.995</mn>';
   var nemeth = '⠏⠀⠨⠅⠀0.995';
   this.executeRuleTest(mml, nemeth);
 };
@@ -661,8 +662,8 @@ sre.AataTest.prototype.testAataExpression_28 = function() {
  */
 sre.AataTest.prototype.testAataExpression_29 = function() {
   var mml = '<mi>p</mi>' +
-  '<mo>=</mo>' +
-  '<mn>0.999</mn>';
+      '<mo>=</mo>' +
+      '<mn>0.999</mn>';
   var nemeth = '⠏⠀⠨⠅⠀0.999';
   this.executeRuleTest(mml, nemeth);
 };
@@ -673,18 +674,18 @@ sre.AataTest.prototype.testAataExpression_29 = function() {
  */
 sre.AataTest.prototype.testAataExpression_30 = function() {
   var mml = '<mtext>A</mtext>' +
-  '<mo>=</mo>' +
-  '<mn>00</mn>' +
-  '<mo>,</mo>' +
-  '<mtext>B</mtext>' +
-  '<mo>=</mo>' +
-  '<mn>01</mn>' +
-  '<mo>,</mo>' +
-  '<mo>…<!-- … --></mo>' +
-  '<mo>,</mo>' +
-  '<mtext>Z</mtext>' +
-  '<mo>=</mo>' +
-  '<mn>25</mn>';
+      '<mo>=</mo>' +
+      '<mn>00</mn>' +
+      '<mo>,</mo>' +
+      '<mtext>B</mtext>' +
+      '<mo>=</mo>' +
+      '<mn>01</mn>' +
+      '<mo>,</mo>' +
+      '<mo>…<!-- … --></mo>' +
+      '<mo>,</mo>' +
+      '<mtext>Z</mtext>' +
+      '<mo>=</mo>' +
+      '<mn>25</mn>';
   var nemeth = '⠠⠁⠀⠨⠅⠀00⠠⠠⠃⠀⠨⠅⠀01⠠⠄⠠⠠⠵⠀⠨⠅⠀25';
   this.executeRuleTest(mml, nemeth);
 };
@@ -695,8 +696,8 @@ sre.AataTest.prototype.testAataExpression_30 = function() {
  */
 sre.AataTest.prototype.testAataExpression_31 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>000</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>000</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷000⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -717,17 +718,17 @@ sre.AataTest.prototype.testAataExpression_32 = function() {
  */
 sre.AataTest.prototype.testAataExpression_33 = function() {
   var mml = '<msub>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">c</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mn>1</mn>' +
-  '</msub>' +
-  '<mo>=</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>00000</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">c</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mn>1</mn>' +
+      '</msub>' +
+      '<mo>=</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>00000</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠸⠉⠂⠀⠨⠅⠀⠷00000⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -738,10 +739,10 @@ sre.AataTest.prototype.testAataExpression_33 = function() {
  */
 sre.AataTest.prototype.testAataExpression_34 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>00001</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>+</mo>' +
-  '<mi>C</mi>';
+      '<mn>00001</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>+</mo>' +
+      '<mi>C</mi>';
   var nemeth = '⠷00001⠾⠬⠠⠉';
   this.executeRuleTest(mml, nemeth);
 };
@@ -752,8 +753,8 @@ sre.AataTest.prototype.testAataExpression_34 = function() {
  */
 sre.AataTest.prototype.testAataExpression_35 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>0000101100</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>0000101100</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷0000101100⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -764,10 +765,10 @@ sre.AataTest.prototype.testAataExpression_35 = function() {
  */
 sre.AataTest.prototype.testAataExpression_36 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>00010</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>+</mo>' +
-  '<mi>C</mi>';
+      '<mn>00010</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>+</mo>' +
+      '<mi>C</mi>';
   var nemeth = '⠷00010⠾⠬⠠⠉';
   this.executeRuleTest(mml, nemeth);
 };
@@ -778,14 +779,14 @@ sre.AataTest.prototype.testAataExpression_36 = function() {
  */
 sre.AataTest.prototype.testAataExpression_37 = function() {
   var mml = '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">z</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo>=</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>00011</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">z</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo>=</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>00011</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠸⠵⠀⠨⠅⠀⠷00011⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -806,10 +807,10 @@ sre.AataTest.prototype.testAataExpression_38 = function() {
  */
 sre.AataTest.prototype.testAataExpression_39 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>00100</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>+</mo>' +
-  '<mi>C</mi>';
+      '<mn>00100</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>+</mo>' +
+      '<mi>C</mi>';
   var nemeth = '⠷00100⠾⠬⠠⠉';
   this.executeRuleTest(mml, nemeth);
 };
@@ -820,8 +821,8 @@ sre.AataTest.prototype.testAataExpression_39 = function() {
  */
 sre.AataTest.prototype.testAataExpression_40 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>0010000101</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>0010000101</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷0010000101⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -832,8 +833,8 @@ sre.AataTest.prototype.testAataExpression_40 = function() {
  */
 sre.AataTest.prototype.testAataExpression_41 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>001001</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>001001</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷001001⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -844,17 +845,17 @@ sre.AataTest.prototype.testAataExpression_41 = function() {
  */
 sre.AataTest.prototype.testAataExpression_42 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>01000</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>00101</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>11011</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>10110</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>01000</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>00101</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>11011</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>10110</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷01000⠾⠷00101⠾⠷11011⠾⠷10110⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -875,10 +876,10 @@ sre.AataTest.prototype.testAataExpression_43 = function() {
  */
 sre.AataTest.prototype.testAataExpression_44 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>00110</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>+</mo>' +
-  '<mi>C</mi>';
+      '<mn>00110</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>+</mo>' +
+      '<mi>C</mi>';
   var nemeth = '⠷00110⠾⠬⠠⠉';
   this.executeRuleTest(mml, nemeth);
 };
@@ -889,17 +890,17 @@ sre.AataTest.prototype.testAataExpression_44 = function() {
  */
 sre.AataTest.prototype.testAataExpression_45 = function() {
   var mml = '<msub>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">c</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mn>2</mn>' +
-  '</msub>' +
-  '<mo>=</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>00111</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">c</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mn>2</mn>' +
+      '</msub>' +
+      '<mo>=</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>00111</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠸⠉⠆⠀⠨⠅⠀⠷00111⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -920,10 +921,10 @@ sre.AataTest.prototype.testAataExpression_46 = function() {
  */
 sre.AataTest.prototype.testAataExpression_47 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>0100</mn>' +
-  '<mspace width="thickmathspace"></mspace>' +
-  '<mn>0101</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>0100</mn>' +
+      '<mspace width="thickmathspace"></mspace>' +
+      '<mn>0101</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷01000101⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -934,10 +935,10 @@ sre.AataTest.prototype.testAataExpression_47 = function() {
  */
 sre.AataTest.prototype.testAataExpression_48 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>01000</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>+</mo>' +
-  '<mi>C</mi>';
+      '<mn>01000</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>+</mo>' +
+      '<mi>C</mi>';
   var nemeth = '⠷01000⠾⠬⠠⠉';
   this.executeRuleTest(mml, nemeth);
 };
@@ -948,17 +949,17 @@ sre.AataTest.prototype.testAataExpression_48 = function() {
  */
 sre.AataTest.prototype.testAataExpression_49 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>00100</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>01001</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>10111</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>11010</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>00100</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>01001</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>10111</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>11010</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷00100⠾⠷01001⠾⠷10111⠾⠷11010⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -969,17 +970,17 @@ sre.AataTest.prototype.testAataExpression_49 = function() {
  */
 sre.AataTest.prototype.testAataExpression_50 = function() {
   var mml = '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">x</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo>=</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>010011</mn>' +
-  '<msup>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mtext>t</mtext>' +
-  '</msup>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">x</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo>=</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>010011</mn>' +
+      '<msup>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mtext>t</mtext>' +
+      '</msup>';
   var nemeth = '⠸⠭⠀⠨⠅⠀⠷010011⠾⠘⠞';
   this.executeRuleTest(mml, nemeth);
 };
@@ -990,17 +991,17 @@ sre.AataTest.prototype.testAataExpression_50 = function() {
  */
 sre.AataTest.prototype.testAataExpression_51 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>00111</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>01010</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>10100</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>11001</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>00111</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>01010</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>10100</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>11001</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷00111⠾⠷01010⠾⠷10100⠾⠷11001⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1011,36 +1012,36 @@ sre.AataTest.prototype.testAataExpression_51 = function() {
  */
 sre.AataTest.prototype.testAataExpression_52 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>011100</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mspace width="thickmathspace"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>011011</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mspace width="thickmathspace"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>111011</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mspace width="thickmathspace"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>100011</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mspace linebreak="newline"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>000000</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mspace width="thickmathspace"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>010101</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mspace width="thickmathspace"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>110100</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mspace width="thickmathspace"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>110011</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>011100</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mspace width="thickmathspace"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>011011</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mspace width="thickmathspace"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>111011</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mspace width="thickmathspace"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>100011</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mspace linebreak="newline"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>000000</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mspace width="thickmathspace"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>010101</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mspace width="thickmathspace"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>110100</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mspace width="thickmathspace"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>110011</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷011100⠾⠷011011⠾⠷111011⠾⠷100011⠾⠷000000⠾⠷010101⠾⠷110100⠾⠷110011⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1051,12 +1052,12 @@ sre.AataTest.prototype.testAataExpression_52 = function() {
  */
 sre.AataTest.prototype.testAataExpression_53 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>11110101</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>,</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>01010100</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>11110101</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>,</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>01010100</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷11110101⠾⠠⠷01010100⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1067,17 +1068,17 @@ sre.AataTest.prototype.testAataExpression_53 = function() {
  */
 sre.AataTest.prototype.testAataExpression_54 = function() {
   var mml = '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">z</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo>=</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>010111</mn>' +
-  '<msup>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mtext>t</mtext>' +
-  '</msup>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">z</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo>=</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>010111</mn>' +
+      '<msup>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mtext>t</mtext>' +
+      '</msup>';
   var nemeth = '⠸⠵⠀⠨⠅⠀⠷010111⠾⠘⠞';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1098,8 +1099,8 @@ sre.AataTest.prototype.testAataExpression_55 = function() {
  */
 sre.AataTest.prototype.testAataExpression_56 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>0110</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>0110</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷0110⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1110,17 +1111,17 @@ sre.AataTest.prototype.testAataExpression_56 = function() {
  */
 sre.AataTest.prototype.testAataExpression_57 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>00001</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>01100</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>10010</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>11111</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>00001</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>01100</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>10010</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>11111</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷00001⠾⠷01100⠾⠷10010⠾⠷11111⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1131,17 +1132,17 @@ sre.AataTest.prototype.testAataExpression_57 = function() {
  */
 sre.AataTest.prototype.testAataExpression_58 = function() {
   var mml = '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">x</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo>=</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>011001</mn>' +
-  '<msup>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mtext>t</mtext>' +
-  '</msup>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">x</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo>=</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>011001</mn>' +
+      '<msup>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mtext>t</mtext>' +
+      '</msup>';
   var nemeth = '⠸⠭⠀⠨⠅⠀⠷011001⠾⠘⠞';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1152,12 +1153,12 @@ sre.AataTest.prototype.testAataExpression_58 = function() {
  */
 sre.AataTest.prototype.testAataExpression_59 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>011010</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>,</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>011100</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>011010</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>,</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>011100</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷011010⠾⠠⠷011100⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1168,36 +1169,36 @@ sre.AataTest.prototype.testAataExpression_59 = function() {
  */
 sre.AataTest.prototype.testAataExpression_60 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>0110110</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mspace width="thickmathspace"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>0111100</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mspace width="thickmathspace"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>1110000</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mspace width="thickmathspace"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>1111111</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mspace linebreak="newline"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>1001001</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mspace width="thickmathspace"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>1000011</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mspace width="thickmathspace"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>0001111</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mspace width="thickmathspace"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>0000000</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>0110110</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mspace width="thickmathspace"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>0111100</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mspace width="thickmathspace"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>1110000</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mspace width="thickmathspace"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>1111111</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mspace linebreak="newline"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>1001001</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mspace width="thickmathspace"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>1000011</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mspace width="thickmathspace"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>0001111</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mspace width="thickmathspace"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>0000000</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷0110110⠾⠷0111100⠾⠷1110000⠾⠷1111111⠾⠷1001001⠾⠷1000011⠾⠷0001111⠾⠷0000000⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1208,12 +1209,12 @@ sre.AataTest.prototype.testAataExpression_60 = function() {
  */
 sre.AataTest.prototype.testAataExpression_61 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>1001</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>,</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>0111</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>1001</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>,</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>0111</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷1001⠾⠠⠷0111⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1224,17 +1225,17 @@ sre.AataTest.prototype.testAataExpression_61 = function() {
  */
 sre.AataTest.prototype.testAataExpression_62 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>10000</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>11101</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>00011</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>01110</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>10000</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>11101</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>00011</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>01110</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷10000⠾⠷11101⠾⠷00011⠾⠷01110⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1245,17 +1246,17 @@ sre.AataTest.prototype.testAataExpression_62 = function() {
  */
 sre.AataTest.prototype.testAataExpression_63 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>00010</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>01111</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>10001</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>11100</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>00010</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>01111</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>10001</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>11100</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷00010⠾⠷01111⠾⠷10001⠾⠷11100⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1266,18 +1267,18 @@ sre.AataTest.prototype.testAataExpression_63 = function() {
  */
 sre.AataTest.prototype.testAataExpression_64 = function() {
   var mml = '<mtext>A</mtext>' +
-  '<mo>=</mo>' +
-  '<mn>00</mn>' +
-  '<mo>,</mo>' +
-  '<mtext>B</mtext>' +
-  '<mo>=</mo>' +
-  '<mn>02</mn>' +
-  '<mo>,</mo>' +
-  '<mo>…<!-- … --></mo>' +
-  '<mo>,</mo>' +
-  '<mtext>Z</mtext>' +
-  '<mo>=</mo>' +
-  '<mn>25</mn>';
+      '<mo>=</mo>' +
+      '<mn>00</mn>' +
+      '<mo>,</mo>' +
+      '<mtext>B</mtext>' +
+      '<mo>=</mo>' +
+      '<mn>02</mn>' +
+      '<mo>,</mo>' +
+      '<mo>…<!-- … --></mo>' +
+      '<mo>,</mo>' +
+      '<mtext>Z</mtext>' +
+      '<mo>=</mo>' +
+      '<mn>25</mn>';
   var nemeth = '⠠⠁⠀⠨⠅⠀00⠠⠠⠃⠀⠨⠅⠀02⠠⠄⠠⠠⠵⠀⠨⠅⠀25';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1288,14 +1289,14 @@ sre.AataTest.prototype.testAataExpression_64 = function() {
  */
 sre.AataTest.prototype.testAataExpression_65 = function() {
   var mml = '<mi>c</mi>' +
-  '<mo>=</mo>' +
-  '<mn>4</mn>' +
-  '<mspace width="thinmathspace"></mspace>' +
-  '<mn>598</mn>' +
-  '<mspace width="thinmathspace"></mspace>' +
-  '<mn>037</mn>' +
-  '<mspace width="thinmathspace"></mspace>' +
-  '<mn>234</mn>';
+      '<mo>=</mo>' +
+      '<mn>4</mn>' +
+      '<mspace width="thinmathspace"></mspace>' +
+      '<mn>598</mn>' +
+      '<mspace width="thinmathspace"></mspace>' +
+      '<mn>037</mn>' +
+      '<mspace width="thinmathspace"></mspace>' +
+      '<mn>234</mn>';
   var nemeth = '⠉⠀⠨⠅⠀⠲598037234';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1306,8 +1307,8 @@ sre.AataTest.prototype.testAataExpression_65 = function() {
  */
 sre.AataTest.prototype.testAataExpression_66 = function() {
   var mml = '<mtext>E</mtext>' +
-  '<mo>=</mo>' +
-  '<mn>04</mn>';
+      '<mo>=</mo>' +
+      '<mn>04</mn>';
   var nemeth = '⠠⠑⠀⠨⠅⠀04';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1318,12 +1319,12 @@ sre.AataTest.prototype.testAataExpression_66 = function() {
  */
 sre.AataTest.prototype.testAataExpression_67 = function() {
   var mml = '<mn>10</mn>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo>/</mo>' +
-  '</mrow>' +
-  '<mn>5</mn>' +
-  '<mo>=</mo>' +
-  '<mn>2</mn>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo>/</mo>' +
+      '</mrow>' +
+      '<mn>5</mn>' +
+      '<mo>=</mo>' +
+      '<mn>2</mn>';
   var nemeth = '10⠌⠢⠀⠨⠅⠀⠆';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1334,13 +1335,13 @@ sre.AataTest.prototype.testAataExpression_67 = function() {
  */
 sre.AataTest.prototype.testAataExpression_68 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>1254</mn>' +
-  '<msup>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mn>100</mn>' +
-  '</mrow>' +
-  '</msup>';
+      '<mn>1254</mn>' +
+      '<msup>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mn>100</mn>' +
+      '</mrow>' +
+      '</msup>';
   var nemeth = '⠷1254⠾⠘100';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1361,10 +1362,10 @@ sre.AataTest.prototype.testAataExpression_69 = function() {
  */
 sre.AataTest.prototype.testAataExpression_70 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>10000</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>+</mo>' +
-  '<mi>C</mi>';
+      '<mn>10000</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>+</mo>' +
+      '<mi>C</mi>';
   var nemeth = '⠷10000⠾⠬⠠⠉';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1375,10 +1376,10 @@ sre.AataTest.prototype.testAataExpression_70 = function() {
  */
 sre.AataTest.prototype.testAataExpression_71 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>1001</mn>' +
-  '<mspace width="thickmathspace"></mspace>' +
-  '<mn>1000</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>1001</mn>' +
+      '<mspace width="thickmathspace"></mspace>' +
+      '<mn>1000</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷10011000⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1389,8 +1390,8 @@ sre.AataTest.prototype.testAataExpression_71 = function() {
  */
 sre.AataTest.prototype.testAataExpression_72 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>101</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>101</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷101⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1401,14 +1402,14 @@ sre.AataTest.prototype.testAataExpression_72 = function() {
  */
 sre.AataTest.prototype.testAataExpression_73 = function() {
   var mml = '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">y</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo>=</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>1010</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">y</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo>=</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>1010</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠸⠽⠀⠨⠅⠀⠷1010⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1419,10 +1420,10 @@ sre.AataTest.prototype.testAataExpression_73 = function() {
  */
 sre.AataTest.prototype.testAataExpression_74 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>10100</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>+</mo>' +
-  '<mi>C</mi>';
+      '<mn>10100</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>+</mo>' +
+      '<mi>C</mi>';
   var nemeth = '⠷10100⠾⠬⠠⠉';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1433,14 +1434,14 @@ sre.AataTest.prototype.testAataExpression_74 = function() {
  */
 sre.AataTest.prototype.testAataExpression_75 = function() {
   var mml = '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">x</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo>=</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>10101</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">x</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo>=</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>10101</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠸⠭⠀⠨⠅⠀⠷10101⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1451,8 +1452,8 @@ sre.AataTest.prototype.testAataExpression_75 = function() {
  */
 sre.AataTest.prototype.testAataExpression_76 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>101011</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>101011</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷101011⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1463,8 +1464,8 @@ sre.AataTest.prototype.testAataExpression_76 = function() {
  */
 sre.AataTest.prototype.testAataExpression_77 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>1011</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>1011</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷1011⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1475,20 +1476,20 @@ sre.AataTest.prototype.testAataExpression_77 = function() {
  */
 sre.AataTest.prototype.testAataExpression_78 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>000000</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>,</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>010111</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>,</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>101101</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>,</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>111010</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>000000</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>,</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>010111</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>,</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>101101</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>,</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>111010</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷000000⠾⠠⠷010111⠾⠠⠷101101⠾⠠⠷111010⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1499,13 +1500,13 @@ sre.AataTest.prototype.testAataExpression_78 = function() {
  */
 sre.AataTest.prototype.testAataExpression_79 = function() {
   var mml = '<mo movablelimits="true" form="prefix">gcd</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>120</mn>' +
-  '<mo>,</mo>' +
-  '<mn>102</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>=</mo>' +
-  '<mn>6</mn>';
+      '<mo stretchy="false">(</mo>' +
+      '<mn>120</mn>' +
+      '<mo>,</mo>' +
+      '<mn>102</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>=</mo>' +
+      '<mn>6</mn>';
   var nemeth = '⠛⠉⠙⠷120⠠102⠾⠀⠨⠅⠀⠖';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1536,14 +1537,14 @@ sre.AataTest.prototype.testAataExpression_81 = function() {
  */
 sre.AataTest.prototype.testAataExpression_82 = function() {
   var mml = '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">y</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo>=</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>1100</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">y</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo>=</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>1100</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠸⠽⠀⠨⠅⠀⠷1100⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1554,17 +1555,17 @@ sre.AataTest.prototype.testAataExpression_82 = function() {
  */
 sre.AataTest.prototype.testAataExpression_83 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>00110</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>01011</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>10101</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>11000</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>00110</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>01011</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>10101</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>11000</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷00110⠾⠷01011⠾⠷10101⠾⠷11000⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1575,20 +1576,20 @@ sre.AataTest.prototype.testAataExpression_83 = function() {
  */
 sre.AataTest.prototype.testAataExpression_84 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>011010</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mspace width="thickmathspace"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>011100</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mspace width="thickmathspace"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>110111</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mspace width="thickmathspace"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>110000</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>011010</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mspace width="thickmathspace"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>011100</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mspace width="thickmathspace"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>110111</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mspace width="thickmathspace"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>110000</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷011010⠾⠷011100⠾⠷110111⠾⠷110000⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1599,20 +1600,20 @@ sre.AataTest.prototype.testAataExpression_84 = function() {
  */
 sre.AataTest.prototype.testAataExpression_85 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>000000</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mspace width="thickmathspace"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>011100</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mspace width="thickmathspace"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>110101</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mspace width="thickmathspace"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>110001</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>000000</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mspace width="thickmathspace"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>011100</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mspace width="thickmathspace"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>110101</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mspace width="thickmathspace"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>110001</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷000000⠾⠷011100⠾⠷110101⠾⠷110001⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1623,14 +1624,14 @@ sre.AataTest.prototype.testAataExpression_85 = function() {
  */
 sre.AataTest.prototype.testAataExpression_86 = function() {
   var mml = '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">x</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo>=</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>1101</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">x</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo>=</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>1101</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠸⠭⠀⠨⠅⠀⠷1101⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1641,14 +1642,14 @@ sre.AataTest.prototype.testAataExpression_86 = function() {
  */
 sre.AataTest.prototype.testAataExpression_87 = function() {
   var mml = '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">y</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo>=</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>11010</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">y</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo>=</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>11010</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠸⠽⠀⠨⠅⠀⠷11010⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1659,17 +1660,17 @@ sre.AataTest.prototype.testAataExpression_87 = function() {
  */
 sre.AataTest.prototype.testAataExpression_88 = function() {
   var mml = '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">y</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo>=</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>110101</mn>' +
-  '<msup>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mtext>t</mtext>' +
-  '</msup>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">y</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo>=</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>110101</mn>' +
+      '<msup>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mtext>t</mtext>' +
+      '</msup>';
   var nemeth = '⠸⠽⠀⠨⠅⠀⠷110101⠾⠘⠞';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1680,17 +1681,17 @@ sre.AataTest.prototype.testAataExpression_88 = function() {
  */
 sre.AataTest.prototype.testAataExpression_89 = function() {
   var mml = '<msub>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">c</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mn>4</mn>' +
-  '</msub>' +
-  '<mo>=</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>11011</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">c</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mn>4</mn>' +
+      '</msub>' +
+      '<mo>=</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>11011</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠸⠉⠲⠀⠨⠅⠀⠷11011⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1701,8 +1702,8 @@ sre.AataTest.prototype.testAataExpression_89 = function() {
  */
 sre.AataTest.prototype.testAataExpression_90 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>110110</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>110110</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷110110⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1713,8 +1714,8 @@ sre.AataTest.prototype.testAataExpression_90 = function() {
  */
 sre.AataTest.prototype.testAataExpression_91 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>111</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>111</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷111⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1725,12 +1726,12 @@ sre.AataTest.prototype.testAataExpression_91 = function() {
  */
 sre.AataTest.prototype.testAataExpression_92 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>0110</mn>' +
-  '<mspace width="thickmathspace"></mspace>' +
-  '<mn>1110</mn>' +
-  '<mspace width="thickmathspace"></mspace>' +
-  '<mn>0110</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>0110</mn>' +
+      '<mspace width="thickmathspace"></mspace>' +
+      '<mn>1110</mn>' +
+      '<mspace width="thickmathspace"></mspace>' +
+      '<mn>0110</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷011011100110⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1741,17 +1742,17 @@ sre.AataTest.prototype.testAataExpression_92 = function() {
  */
 sre.AataTest.prototype.testAataExpression_93 = function() {
   var mml = '<msub>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">c</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mn>3</mn>' +
-  '</msub>' +
-  '<mo>=</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>11100</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">c</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mn>3</mn>' +
+      '</msub>' +
+      '<mo>=</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>11100</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠸⠉⠒⠀⠨⠅⠀⠷11100⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1772,17 +1773,17 @@ sre.AataTest.prototype.testAataExpression_94 = function() {
  */
 sre.AataTest.prototype.testAataExpression_95 = function() {
   var mml = '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">x</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo>=</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>111110</mn>' +
-  '<msup>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mtext>t</mtext>' +
-  '</msup>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">x</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo>=</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>111110</mn>' +
+      '<msup>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mtext>t</mtext>' +
+      '</msup>';
   var nemeth = '⠸⠭⠀⠨⠅⠀⠷111110⠾⠘⠞';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1793,17 +1794,17 @@ sre.AataTest.prototype.testAataExpression_95 = function() {
  */
 sre.AataTest.prototype.testAataExpression_96 = function() {
   var mml = '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">y</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo>=</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>111111</mn>' +
-  '<msup>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mtext>t</mtext>' +
-  '</msup>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">y</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo>=</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>111111</mn>' +
+      '<msup>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mtext>t</mtext>' +
+      '</msup>';
   var nemeth = '⠸⠽⠀⠨⠅⠀⠷111111⠾⠘⠞';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1814,8 +1815,8 @@ sre.AataTest.prototype.testAataExpression_96 = function() {
  */
 sre.AataTest.prototype.testAataExpression_97 = function() {
   var mml = '<mn>112135</mn>' +
-  '<mn>25032</mn>' +
-  '<mn>442</mn>';
+      '<mn>25032</mn>' +
+      '<mn>442</mn>';
   var nemeth = '11213525032442';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1826,13 +1827,13 @@ sre.AataTest.prototype.testAataExpression_97 = function() {
  */
 sre.AataTest.prototype.testAataExpression_98 = function() {
   var mml = '<msup>' +
-  '<mn>7</mn>' +
-  '<mn>6</mn>' +
-  '</msup>' +
-  '<mo>=</mo>' +
-  '<mn>117</mn>' +
-  '<mspace width="thinmathspace"></mspace>' +
-  '<mn>649</mn>';
+      '<mn>7</mn>' +
+      '<mn>6</mn>' +
+      '</msup>' +
+      '<mo>=</mo>' +
+      '<mn>117</mn>' +
+      '<mspace width="thinmathspace"></mspace>' +
+      '<mn>649</mn>';
   var nemeth = '⠶⠘⠖⠐⠀⠨⠅⠀117649';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1843,13 +1844,13 @@ sre.AataTest.prototype.testAataExpression_98 = function() {
  */
 sre.AataTest.prototype.testAataExpression_99 = function() {
   var mml = '<mo movablelimits="true" form="prefix">gcd</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>24</mn>' +
-  '<mo>,</mo>' +
-  '<mn>36</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>=</mo>' +
-  '<mn>12</mn>';
+      '<mo stretchy="false">(</mo>' +
+      '<mn>24</mn>' +
+      '<mo>,</mo>' +
+      '<mn>36</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>=</mo>' +
+      '<mn>12</mn>';
   var nemeth = '⠛⠉⠙⠷24⠠36⠾⠀⠨⠅⠀12';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1860,16 +1861,16 @@ sre.AataTest.prototype.testAataExpression_99 = function() {
  */
 sre.AataTest.prototype.testAataExpression_100 = function() {
   var mml = '<mi>n</mi>' +
-  '<mo>=</mo>' +
-  '<mn>120979</mn>' +
-  '<mo>,</mo>' +
-  '<mi>E</mi>' +
-  '<mo>=</mo>' +
-  '<mn>13251</mn>' +
-  '<mo>,</mo>' +
-  '<mi>x</mi>' +
-  '<mo>=</mo>' +
-  '<mn>142371</mn>';
+      '<mo>=</mo>' +
+      '<mn>120979</mn>' +
+      '<mo>,</mo>' +
+      '<mi>E</mi>' +
+      '<mo>=</mo>' +
+      '<mn>13251</mn>' +
+      '<mo>,</mo>' +
+      '<mi>x</mi>' +
+      '<mo>=</mo>' +
+      '<mn>142371</mn>';
   var nemeth = '⠝⠀⠨⠅⠀120979⠠⠠⠑⠀⠨⠅⠀13251⠠⠭⠀⠨⠅⠀142371';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1880,11 +1881,11 @@ sre.AataTest.prototype.testAataExpression_100 = function() {
  */
 sre.AataTest.prototype.testAataExpression_101 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>12345</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>678</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>12345</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>678</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷12345⠾⠷678⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1895,19 +1896,19 @@ sre.AataTest.prototype.testAataExpression_101 = function() {
  */
 sre.AataTest.prototype.testAataExpression_102 = function() {
   var mml = '<mo stretchy="false">[</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>1235</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>467</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<msup>' +
-  '<mo stretchy="false">]</mo>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo>−<!-- − --></mo>' +
-  '<mn>1</mn>' +
-  '</mrow>' +
-  '</msup>';
+      '<mo stretchy="false">(</mo>' +
+      '<mn>1235</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>467</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<msup>' +
+      '<mo stretchy="false">]</mo>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo>−<!-- − --></mo>' +
+      '<mn>1</mn>' +
+      '</mrow>' +
+      '</msup>';
   var nemeth = '⠈⠷⠷1235⠾⠷467⠾⠈⠾⠘⠤⠂';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1918,16 +1919,16 @@ sre.AataTest.prototype.testAataExpression_102 = function() {
  */
 sre.AataTest.prototype.testAataExpression_103 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mi>n</mi>' +
-  '<mo>,</mo>' +
-  '<mi>E</mi>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>=</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>37986733</mn>' +
-  '<mo>,</mo>' +
-  '<mn>12371</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mi>n</mi>' +
+      '<mo>,</mo>' +
+      '<mi>E</mi>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>=</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>37986733</mn>' +
+      '<mo>,</mo>' +
+      '<mn>12371</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷⠝⠠⠠⠑⠾⠀⠨⠅⠀⠷37986733⠠12371⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1938,8 +1939,8 @@ sre.AataTest.prototype.testAataExpression_103 = function() {
  */
 sre.AataTest.prototype.testAataExpression_104 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>12453</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>12453</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷12453⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1950,11 +1951,11 @@ sre.AataTest.prototype.testAataExpression_104 = function() {
  */
 sre.AataTest.prototype.testAataExpression_105 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>12</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>1253</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>12</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>1253</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷12⠾⠷1253⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1965,14 +1966,14 @@ sre.AataTest.prototype.testAataExpression_105 = function() {
  */
 sre.AataTest.prototype.testAataExpression_106 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>12537</mn>' +
-  '<msup>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo>−<!-- − --></mo>' +
-  '<mn>1</mn>' +
-  '</mrow>' +
-  '</msup>';
+      '<mn>12537</mn>' +
+      '<msup>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo>−<!-- − --></mo>' +
+      '<mn>1</mn>' +
+      '</mrow>' +
+      '</msup>';
   var nemeth = '⠷12537⠾⠘⠤⠂';
   this.executeRuleTest(mml, nemeth);
 };
@@ -1983,14 +1984,14 @@ sre.AataTest.prototype.testAataExpression_106 = function() {
  */
 sre.AataTest.prototype.testAataExpression_107 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>1254</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>13</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>25</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>1254</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>13</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>25</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷1254⠾⠷13⠾⠷25⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2011,15 +2012,15 @@ sre.AataTest.prototype.testAataExpression_108 = function() {
  */
 sre.AataTest.prototype.testAataExpression_109 = function() {
   var mml = '<msup>' +
-  '<mn>128</mn>' +
-  '<mn>4</mn>' +
-  '</msup>' +
-  '<mo>=</mo>' +
-  '<mn>268</mn>' +
-  '<mo>,</mo>' +
-  '<mn>435</mn>' +
-  '<mo>,</mo>' +
-  '<mn>456</mn>';
+      '<mn>128</mn>' +
+      '<mn>4</mn>' +
+      '</msup>' +
+      '<mo>=</mo>' +
+      '<mn>268</mn>' +
+      '<mo>,</mo>' +
+      '<mn>435</mn>' +
+      '<mo>,</mo>' +
+      '<mn>456</mn>';
   var nemeth = '128⠘⠲⠐⠀⠨⠅⠀268⠠⠼435⠠⠼456';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2030,16 +2031,16 @@ sre.AataTest.prototype.testAataExpression_109 = function() {
  */
 sre.AataTest.prototype.testAataExpression_110 = function() {
   var mml = '<mi>n</mi>' +
-  '<mo>=</mo>' +
-  '<mn>79403</mn>' +
-  '<mo>,</mo>' +
-  '<mi>D</mi>' +
-  '<mo>=</mo>' +
-  '<mn>671</mn>' +
-  '<mo>,</mo>' +
-  '<mi>y</mi>' +
-  '<mo>=</mo>' +
-  '<mn>129381</mn>';
+      '<mo>=</mo>' +
+      '<mn>79403</mn>' +
+      '<mo>,</mo>' +
+      '<mi>D</mi>' +
+      '<mo>=</mo>' +
+      '<mn>671</mn>' +
+      '<mo>,</mo>' +
+      '<mi>y</mi>' +
+      '<mo>=</mo>' +
+      '<mn>129381</mn>';
   var nemeth = '⠝⠀⠨⠅⠀79403⠠⠠⠙⠀⠨⠅⠀671⠠⠽⠀⠨⠅⠀129381';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2050,17 +2051,17 @@ sre.AataTest.prototype.testAataExpression_110 = function() {
  */
 sre.AataTest.prototype.testAataExpression_111 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>1423</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>34</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>56</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>1324</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>1423</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>34</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>56</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>1324</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷1423⠾⠷34⠾⠷56⠾⠷1324⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2071,33 +2072,33 @@ sre.AataTest.prototype.testAataExpression_111 = function() {
  */
 sre.AataTest.prototype.testAataExpression_112 = function() {
   var mml = '<mo fence="false" stretchy="false">{</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>13</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>,</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>13</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>24</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>,</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>132</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>,</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>134</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>,</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>1324</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>,</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>1342</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo fence="false" stretchy="false">}</mo>';
+      '<mo stretchy="false">(</mo>' +
+      '<mn>13</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>,</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>13</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>24</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>,</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>132</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>,</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>134</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>,</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>1324</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>,</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>1342</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo fence="false" stretchy="false">}</mo>';
   var nemeth = '⠨⠷⠷13⠾⠠⠷13⠾⠷24⠾⠠⠷132⠾⠠⠷134⠾⠠⠷1324⠾⠠⠷1342⠾⠨⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2108,11 +2109,11 @@ sre.AataTest.prototype.testAataExpression_112 = function() {
  */
 sre.AataTest.prototype.testAataExpression_113 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>1345</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>234</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>1345</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>234</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷1345⠾⠷234⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2133,8 +2134,8 @@ sre.AataTest.prototype.testAataExpression_114 = function() {
  */
 sre.AataTest.prototype.testAataExpression_115 = function() {
   var mml = '<mi>x</mi>' +
-  '<mo>=</mo>' +
-  '<mn>142528</mn>';
+      '<mo>=</mo>' +
+      '<mn>142528</mn>';
   var nemeth = '⠭⠀⠨⠅⠀142528';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2145,11 +2146,11 @@ sre.AataTest.prototype.testAataExpression_115 = function() {
  */
 sre.AataTest.prototype.testAataExpression_116 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>1426</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>142</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>1426</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>142</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷1426⠾⠷142⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2160,8 +2161,8 @@ sre.AataTest.prototype.testAataExpression_116 = function() {
  */
 sre.AataTest.prototype.testAataExpression_117 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>142637</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>142637</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷142637⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2172,8 +2173,8 @@ sre.AataTest.prototype.testAataExpression_117 = function() {
  */
 sre.AataTest.prototype.testAataExpression_118 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>14356</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>14356</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷14356⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2184,12 +2185,12 @@ sre.AataTest.prototype.testAataExpression_118 = function() {
  */
 sre.AataTest.prototype.testAataExpression_119 = function() {
   var mml = '<mn>191</mn>' +
-  '<mi>E</mi>' +
-  '<mo>=</mo>' +
-  '<mn>1</mn>' +
-  '<mo>+</mo>' +
-  '<mn>151</mn>' +
-  '<mi>m</mi>';
+      '<mi>E</mi>' +
+      '<mo>=</mo>' +
+      '<mn>1</mn>' +
+      '<mo>+</mo>' +
+      '<mn>151</mn>' +
+      '<mi>m</mi>';
   var nemeth = '191⠠⠑⠀⠨⠅⠀⠂⠬151⠍';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2220,14 +2221,14 @@ sre.AataTest.prototype.testAataExpression_121 = function() {
  */
 sre.AataTest.prototype.testAataExpression_122 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>17254</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>1423</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>154632</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>17254</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>1423</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>154632</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷17254⠾⠷1423⠾⠷154632⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2238,11 +2239,11 @@ sre.AataTest.prototype.testAataExpression_122 = function() {
  */
 sre.AataTest.prototype.testAataExpression_123 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>156</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>234</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>156</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>234</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷156⠾⠷234⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2253,9 +2254,9 @@ sre.AataTest.prototype.testAataExpression_123 = function() {
  */
 sre.AataTest.prototype.testAataExpression_124 = function() {
   var mml = '<mi>s</mi>' +
-  '<mo>=</mo>' +
-  '<mo>−<!-- − --></mo>' +
-  '<mn>16</mn>';
+      '<mo>=</mo>' +
+      '<mo>−<!-- − --></mo>' +
+      '<mn>16</mn>';
   var nemeth = '⠎⠀⠨⠅⠀⠤16';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2266,8 +2267,8 @@ sre.AataTest.prototype.testAataExpression_124 = function() {
  */
 sre.AataTest.prototype.testAataExpression_125 = function() {
   var mml = '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mn mathvariant="bold">16</mn>' +
-  '</mrow>';
+      '<mn mathvariant="bold">16</mn>' +
+      '</mrow>';
   var nemeth = '⠸⠼16';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2288,10 +2289,10 @@ sre.AataTest.prototype.testAataExpression_126 = function() {
  */
 sre.AataTest.prototype.testAataExpression_127 = function() {
   var mml = '<mi>μ<!-- μ --></mi>' +
-  '<mo>=</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>1634</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mo>=</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>1634</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠨⠍⠀⠨⠅⠀⠷1634⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2302,16 +2303,16 @@ sre.AataTest.prototype.testAataExpression_127 = function() {
  */
 sre.AataTest.prototype.testAataExpression_128 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mi>n</mi>' +
-  '<mo>,</mo>' +
-  '<mi>E</mi>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>=</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>16394854313</mn>' +
-  '<mo>,</mo>' +
-  '<mn>34578451</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mi>n</mi>' +
+      '<mo>,</mo>' +
+      '<mi>E</mi>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>=</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>16394854313</mn>' +
+      '<mo>,</mo>' +
+      '<mn>34578451</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷⠝⠠⠠⠑⠾⠀⠨⠅⠀⠷16394854313⠠34578451⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2322,12 +2323,12 @@ sre.AataTest.prototype.testAataExpression_128 = function() {
  */
 sre.AataTest.prototype.testAataExpression_129 = function() {
   var mml = '<mn>5</mn>' +
-  '<mo>⋅<!-- ⋅ --></mo>' +
-  '<mn>7</mn>' +
-  '<mo>⋅<!-- ⋅ --></mo>' +
-  '<mn>47</mn>' +
-  '<mo>=</mo>' +
-  '<mn>1645</mn>';
+      '<mo>⋅<!-- ⋅ --></mo>' +
+      '<mn>7</mn>' +
+      '<mo>⋅<!-- ⋅ --></mo>' +
+      '<mn>47</mn>' +
+      '<mo>=</mo>' +
+      '<mn>1645</mn>';
   var nemeth = '⠢⠡⠶⠡47⠀⠨⠅⠀1645';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2358,14 +2359,14 @@ sre.AataTest.prototype.testAataExpression_131 = function() {
  */
 sre.AataTest.prototype.testAataExpression_132 = function() {
   var mml = '<mn>41</mn>' +
-  '<mo>≡<!-- ≡ --></mo>' +
-  '<mn>17</mn>' +
-  '<mspace width="0.444em"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>mod</mi>' +
-  '<mspace width="0.333em"></mspace>' +
-  '<mn>8</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mo>≡<!-- ≡ --></mo>' +
+      '<mn>17</mn>' +
+      '<mspace width="0.444em"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>mod</mi>' +
+      '<mspace width="0.333em"></mspace>' +
+      '<mn>8</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '41⠸⠇17⠷⠍⠕⠙⠦⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2376,8 +2377,8 @@ sre.AataTest.prototype.testAataExpression_132 = function() {
  */
 sre.AataTest.prototype.testAataExpression_133 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>17352</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>17352</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷17352⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2408,11 +2409,11 @@ sre.AataTest.prototype.testAataExpression_135 = function() {
  */
 sre.AataTest.prototype.testAataExpression_136 = function() {
   var mml = '<msup>' +
-  '<mn>180</mn>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo>∘<!-- ∘ --></mo>' +
-  '</mrow>' +
-  '</msup>';
+      '<mn>180</mn>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo>∘<!-- ∘ --></mo>' +
+      '</mrow>' +
+      '</msup>';
   var nemeth = '180⠘⠘⠨⠡';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2433,16 +2434,16 @@ sre.AataTest.prototype.testAataExpression_137 = function() {
  */
 sre.AataTest.prototype.testAataExpression_138 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mi>n</mi>' +
-  '<mo>,</mo>' +
-  '<mi>E</mi>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>=</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>3053</mn>' +
-  '<mo>,</mo>' +
-  '<mn>1921</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mi>n</mi>' +
+      '<mo>,</mo>' +
+      '<mi>E</mi>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>=</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>3053</mn>' +
+      '<mo>,</mo>' +
+      '<mn>1921</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷⠝⠠⠠⠑⠾⠀⠨⠅⠀⠷3053⠠1921⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2453,8 +2454,8 @@ sre.AataTest.prototype.testAataExpression_138 = function() {
  */
 sre.AataTest.prototype.testAataExpression_139 = function() {
   var mml = '<mn>196,833</mn>' +
-  '<mo>×<!-- × --></mo>' +
-  '<mn>196,833</mn>';
+      '<mo>×<!-- × --></mo>' +
+      '<mn>196,833</mn>';
   var nemeth = '196,833⠡196,833';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2475,16 +2476,16 @@ sre.AataTest.prototype.testAataExpression_140 = function() {
  */
 sre.AataTest.prototype.testAataExpression_141 = function() {
   var mml = '<mi>n</mi>' +
-  '<mo>=</mo>' +
-  '<mn>3551</mn>' +
-  '<mo>,</mo>' +
-  '<mi>D</mi>' +
-  '<mo>=</mo>' +
-  '<mn>1997</mn>' +
-  '<mo>,</mo>' +
-  '<mi>y</mi>' +
-  '<mo>=</mo>' +
-  '<mn>2791</mn>';
+      '<mo>=</mo>' +
+      '<mn>3551</mn>' +
+      '<mo>,</mo>' +
+      '<mi>D</mi>' +
+      '<mo>=</mo>' +
+      '<mn>1997</mn>' +
+      '<mo>,</mo>' +
+      '<mi>y</mi>' +
+      '<mo>=</mo>' +
+      '<mn>2791</mn>';
   var nemeth = '⠝⠀⠨⠅⠀3551⠠⠠⠙⠀⠨⠅⠀1997⠠⠽⠀⠨⠅⠀2791';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2515,17 +2516,17 @@ sre.AataTest.prototype.testAataExpression_143 = function() {
  */
 sre.AataTest.prototype.testAataExpression_144 = function() {
   var mml = '<msup>' +
-  '<mn>2071</mn>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mn>9521</mn>' +
-  '</mrow>' +
-  '</msup>' +
-  '<mspace width="0.444em"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>mod</mi>' +
-  '<mspace width="0.333em"></mspace>' +
-  '<mn>4724</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>2071</mn>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mn>9521</mn>' +
+      '</mrow>' +
+      '</msup>' +
+      '<mspace width="0.444em"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>mod</mi>' +
+      '<mspace width="0.333em"></mspace>' +
+      '<mn>4724</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '2071⠘9521⠐⠷⠍⠕⠙4724⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2546,14 +2547,14 @@ sre.AataTest.prototype.testAataExpression_145 = function() {
  */
 sre.AataTest.prototype.testAataExpression_146 = function() {
   var mml = '<mi>x</mi>' +
-  '<mo>≡<!-- ≡ --></mo>' +
-  '<mn>214</mn>' +
-  '<mspace width="0.444em"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>mod</mi>' +
-  '<mspace width="0.333em"></mspace>' +
-  '<mn>2772</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mo>≡<!-- ≡ --></mo>' +
+      '<mn>214</mn>' +
+      '<mspace width="0.444em"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>mod</mi>' +
+      '<mspace width="0.333em"></mspace>' +
+      '<mn>2772</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠭⠸⠇214⠷⠍⠕⠙2772⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2564,8 +2565,8 @@ sre.AataTest.prototype.testAataExpression_146 = function() {
  */
 sre.AataTest.prototype.testAataExpression_147 = function() {
   var mml = '<mn>2234</mn>' +
-  '<mo>+</mo>' +
-  '<mn>4121</mn>';
+      '<mo>+</mo>' +
+      '<mn>4121</mn>';
   var nemeth = '2234⠬4121';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2576,16 +2577,16 @@ sre.AataTest.prototype.testAataExpression_147 = function() {
  */
 sre.AataTest.prototype.testAataExpression_148 = function() {
   var mml = '<mi>n</mi>' +
-  '<mo>=</mo>' +
-  '<mn>2257</mn>' +
-  '<mo>,</mo>' +
-  '<mi>E</mi>' +
-  '<mo>=</mo>' +
-  '<mn>47</mn>' +
-  '<mo>,</mo>' +
-  '<mi>x</mi>' +
-  '<mo>=</mo>' +
-  '<mn>23</mn>';
+      '<mo>=</mo>' +
+      '<mn>2257</mn>' +
+      '<mo>,</mo>' +
+      '<mi>E</mi>' +
+      '<mo>=</mo>' +
+      '<mn>47</mn>' +
+      '<mo>,</mo>' +
+      '<mi>x</mi>' +
+      '<mo>=</mo>' +
+      '<mn>23</mn>';
   var nemeth = '⠝⠀⠨⠅⠀2257⠠⠠⠑⠀⠨⠅⠀47⠠⠭⠀⠨⠅⠀23';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2596,16 +2597,16 @@ sre.AataTest.prototype.testAataExpression_148 = function() {
  */
 sre.AataTest.prototype.testAataExpression_149 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mi>n</mi>' +
-  '<mo>,</mo>' +
-  '<mi>E</mi>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>=</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>451</mn>' +
-  '<mo>,</mo>' +
-  '<mn>231</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mi>n</mi>' +
+      '<mo>,</mo>' +
+      '<mi>E</mi>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>=</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>451</mn>' +
+      '<mo>,</mo>' +
+      '<mn>231</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷⠝⠠⠠⠑⠾⠀⠨⠅⠀⠷451⠠231⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2616,16 +2617,16 @@ sre.AataTest.prototype.testAataExpression_149 = function() {
  */
 sre.AataTest.prototype.testAataExpression_150 = function() {
   var mml = '<mi>n</mi>' +
-  '<mo>=</mo>' +
-  '<mn>45629</mn>' +
-  '<mo>,</mo>' +
-  '<mi>E</mi>' +
-  '<mo>=</mo>' +
-  '<mn>781</mn>' +
-  '<mo>,</mo>' +
-  '<mi>x</mi>' +
-  '<mo>=</mo>' +
-  '<mn>231561</mn>';
+      '<mo>=</mo>' +
+      '<mn>45629</mn>' +
+      '<mo>,</mo>' +
+      '<mi>E</mi>' +
+      '<mo>=</mo>' +
+      '<mn>781</mn>' +
+      '<mo>,</mo>' +
+      '<mi>x</mi>' +
+      '<mo>=</mo>' +
+      '<mn>231561</mn>';
   var nemeth = '⠝⠀⠨⠅⠀45629⠠⠠⠑⠀⠨⠅⠀781⠠⠭⠀⠨⠅⠀231561';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2656,10 +2657,10 @@ sre.AataTest.prototype.testAataExpression_152 = function() {
  */
 sre.AataTest.prototype.testAataExpression_153 = function() {
   var mml = '<mn>41</mn>' +
-  '<mo>−<!-- − --></mo>' +
-  '<mn>17</mn>' +
-  '<mo>=</mo>' +
-  '<mn>24</mn>';
+      '<mo>−<!-- − --></mo>' +
+      '<mn>17</mn>' +
+      '<mo>=</mo>' +
+      '<mn>24</mn>';
   var nemeth = '41⠤17⠀⠨⠅⠀24';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2670,17 +2671,17 @@ sre.AataTest.prototype.testAataExpression_153 = function() {
  */
 sre.AataTest.prototype.testAataExpression_154 = function() {
   var mml = '<mn>72</mn>' +
-  '<mo>∈<!-- ∈ --></mo>' +
-  '<msub>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="double-struck">Z</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mn>240</mn>' +
-  '</mrow>' +
-  '</msub>';
+      '<mo>∈<!-- ∈ --></mo>' +
+      '<msub>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="double-struck">Z</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mn>240</mn>' +
+      '</mrow>' +
+      '</msub>';
   var nemeth = '72⠈⠑⠈⠠⠵240';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2701,8 +2702,8 @@ sre.AataTest.prototype.testAataExpression_155 = function() {
  */
 sre.AataTest.prototype.testAataExpression_156 = function() {
   var mml = '<mi>N</mi>' +
-  '<mo>=</mo>' +
-  '<mn>250</mn>';
+      '<mo>=</mo>' +
+      '<mn>250</mn>';
   var nemeth = '⠠⠝⠀⠨⠅⠀250';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2723,17 +2724,17 @@ sre.AataTest.prototype.testAataExpression_157 = function() {
  */
 sre.AataTest.prototype.testAataExpression_158 = function() {
   var mml = '<msup>' +
-  '<mn>2557</mn>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mn>341</mn>' +
-  '</mrow>' +
-  '</msup>' +
-  '<mspace width="0.444em"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>mod</mi>' +
-  '<mspace width="0.333em"></mspace>' +
-  '<mn>5681</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>2557</mn>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mn>341</mn>' +
+      '</mrow>' +
+      '</msup>' +
+      '<mspace width="0.444em"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>mod</mi>' +
+      '<mspace width="0.333em"></mspace>' +
+      '<mn>5681</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '2557⠘341⠐⠷⠍⠕⠙5681⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2744,13 +2745,13 @@ sre.AataTest.prototype.testAataExpression_158 = function() {
  */
 sre.AataTest.prototype.testAataExpression_159 = function() {
   var mml = '<msup>' +
-  '<mn>2</mn>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mn>8</mn>' +
-  '</mrow>' +
-  '</msup>' +
-  '<mo>=</mo>' +
-  '<mn>256</mn>';
+      '<mn>2</mn>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mn>8</mn>' +
+      '</mrow>' +
+      '</msup>' +
+      '<mo>=</mo>' +
+      '<mn>256</mn>';
   var nemeth = '⠆⠘⠦⠐⠀⠨⠅⠀256';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2761,17 +2762,17 @@ sre.AataTest.prototype.testAataExpression_159 = function() {
  */
 sre.AataTest.prototype.testAataExpression_160 = function() {
   var mml = '<mn>5</mn>' +
-  '<mi>x</mi>' +
-  '<mo>+</mo>' +
-  '<mn>1</mn>' +
-  '<mo>≡<!-- ≡ --></mo>' +
-  '<mn>13</mn>' +
-  '<mspace width="0.444em"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>mod</mi>' +
-  '<mspace width="0.333em"></mspace>' +
-  '<mn>26</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mi>x</mi>' +
+      '<mo>+</mo>' +
+      '<mn>1</mn>' +
+      '<mo>≡<!-- ≡ --></mo>' +
+      '<mn>13</mn>' +
+      '<mspace width="0.444em"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>mod</mi>' +
+      '<mspace width="0.333em"></mspace>' +
+      '<mn>26</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠢⠭⠬⠂⠸⠇13⠷⠍⠕⠙26⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2782,18 +2783,18 @@ sre.AataTest.prototype.testAataExpression_160 = function() {
  */
 sre.AataTest.prototype.testAataExpression_161 = function() {
   var mml = '<mn>2600</mn>' +
-  '<mo>=</mo>' +
-  '<msup>' +
-  '<mn>2</mn>' +
-  '<mn>3</mn>' +
-  '</msup>' +
-  '<mo>×<!-- × --></mo>' +
-  '<msup>' +
-  '<mn>5</mn>' +
-  '<mn>2</mn>' +
-  '</msup>' +
-  '<mo>×<!-- × --></mo>' +
-  '<mn>13</mn>';
+      '<mo>=</mo>' +
+      '<msup>' +
+      '<mn>2</mn>' +
+      '<mn>3</mn>' +
+      '</msup>' +
+      '<mo>×<!-- × --></mo>' +
+      '<msup>' +
+      '<mn>5</mn>' +
+      '<mn>2</mn>' +
+      '</msup>' +
+      '<mo>×<!-- × --></mo>' +
+      '<mn>13</mn>';
   var nemeth = '2600⠀⠨⠅⠀⠆⠘⠒⠐⠡⠢⠘⠆⠐⠡13';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2804,15 +2805,15 @@ sre.AataTest.prototype.testAataExpression_161 = function() {
  */
 sre.AataTest.prototype.testAataExpression_162 = function() {
   var mml = '<msub>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="double-struck">Z</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mn>27</mn>' +
-  '</mrow>' +
-  '</msub>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="double-struck">Z</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mn>27</mn>' +
+      '</mrow>' +
+      '</msub>';
   var nemeth = '⠈⠠⠵27';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2823,17 +2824,17 @@ sre.AataTest.prototype.testAataExpression_162 = function() {
  */
 sre.AataTest.prototype.testAataExpression_163 = function() {
   var mml = '<msup>' +
-  '<mn>271</mn>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mn>321</mn>' +
-  '</mrow>' +
-  '</msup>' +
-  '<mspace width="0.444em"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>mod</mi>' +
-  '<mspace width="0.333em"></mspace>' +
-  '<mn>481</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>271</mn>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mn>321</mn>' +
+      '</mrow>' +
+      '</msup>' +
+      '<mspace width="0.444em"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>mod</mi>' +
+      '<mspace width="0.333em"></mspace>' +
+      '<mn>481</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '271⠘321⠐⠷⠍⠕⠙481⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2844,16 +2845,16 @@ sre.AataTest.prototype.testAataExpression_163 = function() {
  */
 sre.AataTest.prototype.testAataExpression_164 = function() {
   var mml = '<mi>n</mi>' +
-  '<mo>=</mo>' +
-  '<mn>120979</mn>' +
-  '<mo>,</mo>' +
-  '<mi>D</mi>' +
-  '<mo>=</mo>' +
-  '<mn>27331</mn>' +
-  '<mo>,</mo>' +
-  '<mi>y</mi>' +
-  '<mo>=</mo>' +
-  '<mn>112135</mn>';
+      '<mo>=</mo>' +
+      '<mn>120979</mn>' +
+      '<mo>,</mo>' +
+      '<mi>D</mi>' +
+      '<mo>=</mo>' +
+      '<mn>27331</mn>' +
+      '<mo>,</mo>' +
+      '<mi>y</mi>' +
+      '<mo>=</mo>' +
+      '<mn>112135</mn>';
   var nemeth = '⠝⠀⠨⠅⠀120979⠠⠠⠙⠀⠨⠅⠀27331⠠⠽⠀⠨⠅⠀112135';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2884,8 +2885,8 @@ sre.AataTest.prototype.testAataExpression_166 = function() {
  */
 sre.AataTest.prototype.testAataExpression_167 = function() {
   var mml = '<mi>q</mi>' +
-  '<mo>=</mo>' +
-  '<mn>29</mn>';
+      '<mo>=</mo>' +
+      '<mn>29</mn>';
   var nemeth = '⠟⠀⠨⠅⠀29';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2896,17 +2897,17 @@ sre.AataTest.prototype.testAataExpression_167 = function() {
  */
 sre.AataTest.prototype.testAataExpression_168 = function() {
   var mml = '<msup>' +
-  '<mn>292</mn>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mn>3171</mn>' +
-  '</mrow>' +
-  '</msup>' +
-  '<mspace width="0.444em"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>mod</mi>' +
-  '<mspace width="0.333em"></mspace>' +
-  '<mn>582</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>292</mn>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mn>3171</mn>' +
+      '</mrow>' +
+      '</msup>' +
+      '<mspace width="0.444em"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>mod</mi>' +
+      '<mspace width="0.333em"></mspace>' +
+      '<mn>582</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '292⠘3171⠐⠷⠍⠕⠙582⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2917,10 +2918,10 @@ sre.AataTest.prototype.testAataExpression_168 = function() {
  */
 sre.AataTest.prototype.testAataExpression_169 = function() {
   var mml = '<mn>2134</mn>' +
-  '<mo>⋅<!-- ⋅ --></mo>' +
-  '<mn>1531</mn>' +
-  '<mo>=</mo>' +
-  '<mn>3,267,154</mn>';
+      '<mo>⋅<!-- ⋅ --></mo>' +
+      '<mn>1531</mn>' +
+      '<mo>=</mo>' +
+      '<mn>3,267,154</mn>';
   var nemeth = '2134⠡1531⠀⠨⠅⠀3,267,154';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2931,9 +2932,9 @@ sre.AataTest.prototype.testAataExpression_169 = function() {
  */
 sre.AataTest.prototype.testAataExpression_170 = function() {
   var mml = '<mi>U</mi>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>30</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mo stretchy="false">(</mo>' +
+      '<mn>30</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠠⠥⠷30⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2944,16 +2945,16 @@ sre.AataTest.prototype.testAataExpression_170 = function() {
  */
 sre.AataTest.prototype.testAataExpression_171 = function() {
   var mml = '<mi>n</mi>' +
-  '<mo>=</mo>' +
-  '<mn>3551</mn>' +
-  '<mo>,</mo>' +
-  '<mi>E</mi>' +
-  '<mo>=</mo>' +
-  '<mn>629</mn>' +
-  '<mo>,</mo>' +
-  '<mi>x</mi>' +
-  '<mo>=</mo>' +
-  '<mn>31</mn>';
+      '<mo>=</mo>' +
+      '<mn>3551</mn>' +
+      '<mo>,</mo>' +
+      '<mi>E</mi>' +
+      '<mo>=</mo>' +
+      '<mn>629</mn>' +
+      '<mo>,</mo>' +
+      '<mi>x</mi>' +
+      '<mo>=</mo>' +
+      '<mn>31</mn>';
   var nemeth = '⠝⠀⠨⠅⠀3551⠠⠠⠑⠀⠨⠅⠀629⠠⠭⠀⠨⠅⠀31';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2964,17 +2965,17 @@ sre.AataTest.prototype.testAataExpression_171 = function() {
  */
 sre.AataTest.prototype.testAataExpression_172 = function() {
   var mml = '<mn>312</mn>' +
-  '<mo>∈<!-- ∈ --></mo>' +
-  '<msub>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="double-struck">Z</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mn>471</mn>' +
-  '</mrow>' +
-  '</msub>';
+      '<mo>∈<!-- ∈ --></mo>' +
+      '<msub>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="double-struck">Z</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mn>471</mn>' +
+      '</mrow>' +
+      '</msub>';
   var nemeth = '312⠈⠑⠈⠠⠵471';
   this.executeRuleTest(mml, nemeth);
 };
@@ -2995,38 +2996,38 @@ sre.AataTest.prototype.testAataExpression_173 = function() {
  */
 sre.AataTest.prototype.testAataExpression_174 = function() {
   var mml = '<mi>G</mi>' +
-  '<mo>=</mo>' +
-  '<mo fence="false" stretchy="false">{</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>1</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>,</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>12</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>,</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>345</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>,</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>354</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>,</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>12</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>345</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>,</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>12</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>354</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo fence="false" stretchy="false">}</mo>';
+      '<mo>=</mo>' +
+      '<mo fence="false" stretchy="false">{</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>1</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>,</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>12</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>,</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>345</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>,</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>354</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>,</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>12</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>345</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>,</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>12</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>354</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo fence="false" stretchy="false">}</mo>';
   var nemeth = '⠠⠛⠀⠨⠅⠀⠨⠷⠷⠂⠾⠠⠷12⠾⠠⠷345⠾⠠⠷354⠾⠠⠷12⠾⠷345⠾⠠⠷12⠾⠷354⠾⠨⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3037,10 +3038,10 @@ sre.AataTest.prototype.testAataExpression_174 = function() {
  */
 sre.AataTest.prototype.testAataExpression_175 = function() {
   var mml = '<mn>44</mn>' +
-  '<mspace width="thinmathspace"></mspace>' +
-  '<mn>352</mn>' +
-  '<mspace width="thinmathspace"></mspace>' +
-  '<mn>000</mn>';
+      '<mspace width="thinmathspace"></mspace>' +
+      '<mn>352</mn>' +
+      '<mspace width="thinmathspace"></mspace>' +
+      '<mn>000</mn>';
   var nemeth = '44352000';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3051,11 +3052,11 @@ sre.AataTest.prototype.testAataExpression_175 = function() {
  */
 sre.AataTest.prototype.testAataExpression_176 = function() {
   var mml = '<msup>' +
-  '<mn>360</mn>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo>∘<!-- ∘ --></mo>' +
-  '</mrow>' +
-  '</msup>';
+      '<mn>360</mn>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo>∘<!-- ∘ --></mo>' +
+      '</mrow>' +
+      '</msup>';
   var nemeth = '360⠘⠘⠨⠡';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3106,10 +3107,10 @@ sre.AataTest.prototype.testAataExpression_180 = function() {
  */
 sre.AataTest.prototype.testAataExpression_181 = function() {
   var mml = '<mn>391</mn>' +
-  '<mo>=</mo>' +
-  '<mn>17</mn>' +
-  '<mo>⋅<!-- ⋅ --></mo>' +
-  '<mn>23</mn>';
+      '<mo>=</mo>' +
+      '<mn>17</mn>' +
+      '<mo>⋅<!-- ⋅ --></mo>' +
+      '<mn>23</mn>';
   var nemeth = '391⠀⠨⠅⠀17⠡23';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3120,8 +3121,8 @@ sre.AataTest.prototype.testAataExpression_181 = function() {
  */
 sre.AataTest.prototype.testAataExpression_182 = function() {
   var mml = '<mi>x</mi>' +
-  '<mo>=</mo>' +
-  '<mn>4</mn>';
+      '<mo>=</mo>' +
+      '<mn>4</mn>';
   var nemeth = '⠭⠀⠨⠅⠀⠲';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3152,9 +3153,9 @@ sre.AataTest.prototype.testAataExpression_184 = function() {
  */
 sre.AataTest.prototype.testAataExpression_185 = function() {
   var mml = '<mn>43</mn>' +
-  '<mo>−<!-- − --></mo>' +
-  '<mn>18</mn>' +
-  '<mi>i</mi>';
+      '<mo>−<!-- − --></mo>' +
+      '<mn>18</mn>' +
+      '<mi>i</mi>';
   var nemeth = '43⠤18⠊';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3165,10 +3166,10 @@ sre.AataTest.prototype.testAataExpression_185 = function() {
  */
 sre.AataTest.prototype.testAataExpression_186 = function() {
   var mml = '<mi>n</mi>' +
-  '<mo>=</mo>' +
-  '<mn>8779</mn>' +
-  '<mo>⋅<!-- ⋅ --></mo>' +
-  '<mn>4327</mn>';
+      '<mo>=</mo>' +
+      '<mn>8779</mn>' +
+      '<mo>⋅<!-- ⋅ --></mo>' +
+      '<mn>4327</mn>';
   var nemeth = '⠝⠀⠨⠅⠀8779⠡4327';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3179,7 +3180,7 @@ sre.AataTest.prototype.testAataExpression_186 = function() {
  */
 sre.AataTest.prototype.testAataExpression_187 = function() {
   var mml = '<mo>−<!-- − --></mo>' +
-  '<mn>4357</mn>';
+      '<mn>4357</mn>';
   var nemeth = '⠤4357';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3220,11 +3221,11 @@ sre.AataTest.prototype.testAataExpression_190 = function() {
  */
 sre.AataTest.prototype.testAataExpression_191 = function() {
   var mml = '<msub>' +
-  '<mi>D</mi>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mn>470448</mn>' +
-  '</mrow>' +
-  '</msub>';
+      '<mi>D</mi>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mn>470448</mn>' +
+      '</mrow>' +
+      '</msub>';
   var nemeth = '⠠⠙470448';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3245,15 +3246,15 @@ sre.AataTest.prototype.testAataExpression_192 = function() {
  */
 sre.AataTest.prototype.testAataExpression_193 = function() {
   var mml = '<msub>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="double-struck">Z</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mn>48</mn>' +
-  '</mrow>' +
-  '</msub>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="double-struck">Z</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mn>48</mn>' +
+      '</mrow>' +
+      '</msub>';
   var nemeth = '⠈⠠⠵48';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3264,8 +3265,8 @@ sre.AataTest.prototype.testAataExpression_193 = function() {
  */
 sre.AataTest.prototype.testAataExpression_194 = function() {
   var mml = '<mi>E</mi>' +
-  '<mo>=</mo>' +
-  '<mn>487</mn>';
+      '<mo>=</mo>' +
+      '<mn>487</mn>';
   var nemeth = '⠠⠑⠀⠨⠅⠀487';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3276,9 +3277,9 @@ sre.AataTest.prototype.testAataExpression_194 = function() {
  */
 sre.AataTest.prototype.testAataExpression_195 = function() {
   var mml = '<mi>U</mi>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>49</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mo stretchy="false">(</mo>' +
+      '<mn>49</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠠⠥⠷49⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3289,10 +3290,10 @@ sre.AataTest.prototype.testAataExpression_195 = function() {
  */
 sre.AataTest.prototype.testAataExpression_196 = function() {
   var mml = '<mn>2</mn>' +
-  '<mo>+</mo>' +
-  '<mn>3</mn>' +
-  '<mo>=</mo>' +
-  '<mn>5</mn>';
+      '<mo>+</mo>' +
+      '<mn>3</mn>' +
+      '<mo>=</mo>' +
+      '<mn>5</mn>';
   var nemeth = '⠆⠬⠒⠀⠨⠅⠀⠢';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3313,9 +3314,9 @@ sre.AataTest.prototype.testAataExpression_197 = function() {
  */
 sre.AataTest.prototype.testAataExpression_198 = function() {
   var mml = '<mn>7</mn>' +
-  '<mo>!</mo>' +
-  '<mo>=</mo>' +
-  '<mn>5040</mn>';
+      '<mo>!</mo>' +
+      '<mo>=</mo>' +
+      '<mn>5040</mn>';
   var nemeth = '⠼⠶⠯⠀⠨⠅⠀5040';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3336,13 +3337,13 @@ sre.AataTest.prototype.testAataExpression_199 = function() {
  */
 sre.AataTest.prototype.testAataExpression_200 = function() {
   var mml = '<msup>' +
-  '<mn>2</mn>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mn>511</mn>' +
-  '</mrow>' +
-  '</msup>' +
-  '<mo>−<!-- − --></mo>' +
-  '<mn>1</mn>';
+      '<mn>2</mn>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mn>511</mn>' +
+      '</mrow>' +
+      '</msup>' +
+      '<mo>−<!-- − --></mo>' +
+      '<mn>1</mn>';
   var nemeth = '⠆⠘511⠐⠤⠂';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3383,18 +3384,18 @@ sre.AataTest.prototype.testAataExpression_203 = function() {
  */
 sre.AataTest.prototype.testAataExpression_204 = function() {
   var mml = '<mn>540</mn>' +
-  '<mo>=</mo>' +
-  '<msup>' +
-  '<mn>2</mn>' +
-  '<mn>2</mn>' +
-  '</msup>' +
-  '<mo>⋅<!-- ⋅ --></mo>' +
-  '<msup>' +
-  '<mn>3</mn>' +
-  '<mn>3</mn>' +
-  '</msup>' +
-  '<mo>⋅<!-- ⋅ --></mo>' +
-  '<mn>5</mn>';
+      '<mo>=</mo>' +
+      '<msup>' +
+      '<mn>2</mn>' +
+      '<mn>2</mn>' +
+      '</msup>' +
+      '<mo>⋅<!-- ⋅ --></mo>' +
+      '<msup>' +
+      '<mn>3</mn>' +
+      '<mn>3</mn>' +
+      '</msup>' +
+      '<mo>⋅<!-- ⋅ --></mo>' +
+      '<mn>5</mn>';
   var nemeth = '540⠀⠨⠅⠀⠆⠘⠆⠐⠡⠒⠘⠒⠐⠡⠢';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3425,26 +3426,26 @@ sre.AataTest.prototype.testAataExpression_206 = function() {
  */
 sre.AataTest.prototype.testAataExpression_207 = function() {
   var mml = '<mn>57</mn>' +
-  '<mo>=</mo>' +
-  '<msup>' +
-  '<mn>2</mn>' +
-  '<mn>0</mn>' +
-  '</msup>' +
-  '<mo>+</mo>' +
-  '<msup>' +
-  '<mn>2</mn>' +
-  '<mn>3</mn>' +
-  '</msup>' +
-  '<mo>+</mo>' +
-  '<msup>' +
-  '<mn>2</mn>' +
-  '<mn>4</mn>' +
-  '</msup>' +
-  '<mo>+</mo>' +
-  '<msup>' +
-  '<mn>2</mn>' +
-  '<mn>5</mn>' +
-  '</msup>';
+      '<mo>=</mo>' +
+      '<msup>' +
+      '<mn>2</mn>' +
+      '<mn>0</mn>' +
+      '</msup>' +
+      '<mo>+</mo>' +
+      '<msup>' +
+      '<mn>2</mn>' +
+      '<mn>3</mn>' +
+      '</msup>' +
+      '<mo>+</mo>' +
+      '<msup>' +
+      '<mn>2</mn>' +
+      '<mn>4</mn>' +
+      '</msup>' +
+      '<mo>+</mo>' +
+      '<msup>' +
+      '<mn>2</mn>' +
+      '<mn>5</mn>' +
+      '</msup>';
   var nemeth = '57⠀⠨⠅⠀⠆⠘⠴⠐⠬⠆⠘⠒⠐⠬⠆⠘⠲⠐⠬⠆⠘⠢';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3465,16 +3466,16 @@ sre.AataTest.prototype.testAataExpression_208 = function() {
  */
 sre.AataTest.prototype.testAataExpression_209 = function() {
   var mml = '<mi>n</mi>' +
-  '<mo>=</mo>' +
-  '<mn>5893</mn>' +
-  '<mo>,</mo>' +
-  '<mi>D</mi>' +
-  '<mo>=</mo>' +
-  '<mn>81</mn>' +
-  '<mo>,</mo>' +
-  '<mi>y</mi>' +
-  '<mo>=</mo>' +
-  '<mn>34</mn>';
+      '<mo>=</mo>' +
+      '<mn>5893</mn>' +
+      '<mo>,</mo>' +
+      '<mi>D</mi>' +
+      '<mo>=</mo>' +
+      '<mn>81</mn>' +
+      '<mo>,</mo>' +
+      '<mi>y</mi>' +
+      '<mo>=</mo>' +
+      '<mn>34</mn>';
   var nemeth = '⠝⠀⠨⠅⠀5893⠠⠠⠙⠀⠨⠅⠀81⠠⠽⠀⠨⠅⠀34';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3495,9 +3496,9 @@ sre.AataTest.prototype.testAataExpression_210 = function() {
  */
 sre.AataTest.prototype.testAataExpression_211 = function() {
   var mml = '<mn>2</mn>' +
-  '<mi>x</mi>' +
-  '<mo>=</mo>' +
-  '<mn>6</mn>';
+      '<mi>x</mi>' +
+      '<mo>=</mo>' +
+      '<mn>6</mn>';
   var nemeth = '⠆⠭⠀⠨⠅⠀⠖';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3518,35 +3519,35 @@ sre.AataTest.prototype.testAataExpression_212 = function() {
  */
 sre.AataTest.prototype.testAataExpression_213 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mn>1</mn>' +
-  '<mo>,</mo>' +
-  '<mn>2</mn>' +
-  '<mo>,</mo>' +
-  '<mn>4</mn>' +
-  '<mo>,</mo>' +
-  '<mn>8</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>3</mn>' +
-  '<mo>,</mo>' +
-  '<mn>6.12</mn>' +
-  '<mo>,</mo>' +
-  '<mn>9</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>5</mn>' +
-  '<mo>,</mo>' +
-  '<mn>10</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>7</mn>' +
-  '<mo>,</mo>' +
-  '<mn>14</mn>' +
-  '<mo>,</mo>' +
-  '<mn>13</mn>' +
-  '<mo>,</mo>' +
-  '<mn>11</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>1</mn>' +
+      '<mo>,</mo>' +
+      '<mn>2</mn>' +
+      '<mo>,</mo>' +
+      '<mn>4</mn>' +
+      '<mo>,</mo>' +
+      '<mn>8</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>3</mn>' +
+      '<mo>,</mo>' +
+      '<mn>6.12</mn>' +
+      '<mo>,</mo>' +
+      '<mn>9</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>5</mn>' +
+      '<mo>,</mo>' +
+      '<mn>10</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>7</mn>' +
+      '<mo>,</mo>' +
+      '<mn>14</mn>' +
+      '<mo>,</mo>' +
+      '<mn>13</mn>' +
+      '<mo>,</mo>' +
+      '<mn>11</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷⠂⠠⠆⠠⠲⠠⠦⠾⠷⠒⠠6.12⠠⠔⠾⠷⠢⠠10⠾⠷⠶⠠14⠠13⠠11⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3557,16 +3558,16 @@ sre.AataTest.prototype.testAataExpression_213 = function() {
  */
 sre.AataTest.prototype.testAataExpression_214 = function() {
   var mml = '<mi>z</mi>' +
-  '<mo>=</mo>' +
-  '<mn>2</mn>' +
-  '<mi>cis</mi>' +
-  '<mo>⁡<!-- ⁡ --></mo>' +
-  '<msup>' +
-  '<mn>60</mn>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo>∘<!-- ∘ --></mo>' +
-  '</mrow>' +
-  '</msup>';
+      '<mo>=</mo>' +
+      '<mn>2</mn>' +
+      '<mi>cis</mi>' +
+      '<mo>⁡<!-- ⁡ --></mo>' +
+      '<msup>' +
+      '<mn>60</mn>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo>∘<!-- ∘ --></mo>' +
+      '</mrow>' +
+      '</msup>';
   var nemeth = '⠵⠀⠨⠅⠀⠆⠉⠊⠎60⠘⠘⠨⠡';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3577,27 +3578,27 @@ sre.AataTest.prototype.testAataExpression_214 = function() {
  */
 sre.AataTest.prototype.testAataExpression_215 = function() {
   var mml = '<msup>' +
-  '<mi>x</mi>' +
-  '<mn>4</mn>' +
-  '</msup>' +
-  '<mo>−<!-- − --></mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>2</mn>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo>/</mo>' +
-  '</mrow>' +
-  '<mn>3</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<msup>' +
-  '<mi>x</mi>' +
-  '<mn>2</mn>' +
-  '</msup>' +
-  '<mo>−<!-- − --></mo>' +
-  '<mn>62</mn>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo>/</mo>' +
-  '</mrow>' +
-  '<mn>9</mn>';
+      '<mi>x</mi>' +
+      '<mn>4</mn>' +
+      '</msup>' +
+      '<mo>−<!-- − --></mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>2</mn>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo>/</mo>' +
+      '</mrow>' +
+      '<mn>3</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<msup>' +
+      '<mi>x</mi>' +
+      '<mn>2</mn>' +
+      '</msup>' +
+      '<mo>−<!-- − --></mo>' +
+      '<mn>62</mn>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo>/</mo>' +
+      '</mrow>' +
+      '<mn>9</mn>';
   var nemeth = '⠭⠘⠲⠐⠤⠷⠆⠌⠒⠾⠭⠘⠆⠤62⠌⠔';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3608,18 +3609,18 @@ sre.AataTest.prototype.testAataExpression_215 = function() {
  */
 sre.AataTest.prototype.testAataExpression_216 = function() {
   var mml = '<mo stretchy="false">[</mo>' +
-  '<mi>GF</mi>' +
-  '<mo>⁡<!-- ⁡ --></mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>625</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>:</mo>' +
-  '<mi>GF</mi>' +
-  '<mo>⁡<!-- ⁡ --></mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>25</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">]</mo>';
+      '<mi>GF</mi>' +
+      '<mo>⁡<!-- ⁡ --></mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>625</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>:</mo>' +
+      '<mi>GF</mi>' +
+      '<mo>⁡<!-- ⁡ --></mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>25</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">]</mo>';
   var nemeth = '⠈⠷⠠⠛⠠⠋⠷625⠾⠱⠠⠛⠠⠋⠷25⠾⠈⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3650,16 +3651,16 @@ sre.AataTest.prototype.testAataExpression_218 = function() {
  */
 sre.AataTest.prototype.testAataExpression_219 = function() {
   var mml = '<msup>' +
-  '<mn>2</mn>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<msup>' +
-  '<mn>2</mn>' +
-  '<mn>4</mn>' +
-  '</msup>' +
-  '</mrow>' +
-  '</msup>' +
-  '<mo>=</mo>' +
-  '<mn>65,536</mn>';
+      '<mn>2</mn>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<msup>' +
+      '<mn>2</mn>' +
+      '<mn>4</mn>' +
+      '</msup>' +
+      '</mrow>' +
+      '</msup>' +
+      '<mo>=</mo>' +
+      '<mn>65,536</mn>';
   var nemeth = '⠆⠘⠆⠘⠘⠲⠐⠀⠨⠅⠀65,536';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3700,17 +3701,17 @@ sre.AataTest.prototype.testAataExpression_222 = function() {
  */
 sre.AataTest.prototype.testAataExpression_223 = function() {
   var mml = '<msup>' +
-  '<mn>971</mn>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mn>321</mn>' +
-  '</mrow>' +
-  '</msup>' +
-  '<mspace width="0.444em"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>mod</mi>' +
-  '<mspace width="0.333em"></mspace>' +
-  '<mn>765</mn>' +
-  '<mo stretchy="false">)</mo>';
+      '<mn>971</mn>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mn>321</mn>' +
+      '</mrow>' +
+      '</msup>' +
+      '<mspace width="0.444em"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>mod</mi>' +
+      '<mspace width="0.333em"></mspace>' +
+      '<mn>765</mn>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '971⠘321⠐⠷⠍⠕⠙765⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3731,37 +3732,37 @@ sre.AataTest.prototype.testAataExpression_224 = function() {
  */
 sre.AataTest.prototype.testAataExpression_225 = function() {
   var mml = '<msub>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="double-struck">Z</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mn>10</mn>' +
-  '</mrow>' +
-  '</msub>' +
-  '<mo>×<!-- × --></mo>' +
-  '<msub>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="double-struck">Z</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mn>24</mn>' +
-  '</mrow>' +
-  '</msub>' +
-  '<mo>×<!-- × --></mo>' +
-  '<msub>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="double-struck">Z</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mn>80</mn>' +
-  '</mrow>' +
-  '</msub>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="double-struck">Z</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mn>10</mn>' +
+      '</mrow>' +
+      '</msub>' +
+      '<mo>×<!-- × --></mo>' +
+      '<msub>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="double-struck">Z</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mn>24</mn>' +
+      '</mrow>' +
+      '</msub>' +
+      '<mo>×<!-- × --></mo>' +
+      '<msub>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="double-struck">Z</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mn>80</mn>' +
+      '</mrow>' +
+      '</msub>';
   var nemeth = '⠈⠠⠵10⠡⠈⠠⠵24⠡⠈⠠⠵80';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3772,13 +3773,13 @@ sre.AataTest.prototype.testAataExpression_225 = function() {
  */
 sre.AataTest.prototype.testAataExpression_226 = function() {
   var mml = '<msup>' +
-  '<mn>7</mn>' +
-  '<mn>5</mn>' +
-  '</msup>' +
-  '<mo>=</mo>' +
-  '<mn>16</mn>' +
-  '<mspace width="thinmathspace"></mspace>' +
-  '<mn>807</mn>';
+      '<mn>7</mn>' +
+      '<mn>5</mn>' +
+      '</msup>' +
+      '<mo>=</mo>' +
+      '<mn>16</mn>' +
+      '<mspace width="thinmathspace"></mspace>' +
+      '<mn>807</mn>';
   var nemeth = '⠶⠘⠢⠐⠀⠨⠅⠀16807';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3799,14 +3800,14 @@ sre.AataTest.prototype.testAataExpression_227 = function() {
  */
 sre.AataTest.prototype.testAataExpression_228 = function() {
   var mml = '<mn>95</mn>' +
-  '<mo>⋅<!-- ⋅ --></mo>' +
-  '<mn>97</mn>' +
-  '<mo>⋅<!-- ⋅ --></mo>' +
-  '<mn>98</mn>' +
-  '<mo>⋅<!-- ⋅ --></mo>' +
-  '<mn>99</mn>' +
-  '<mo>=</mo>' +
-  '<mn>89,403,930</mn>';
+      '<mo>⋅<!-- ⋅ --></mo>' +
+      '<mn>97</mn>' +
+      '<mo>⋅<!-- ⋅ --></mo>' +
+      '<mn>98</mn>' +
+      '<mo>⋅<!-- ⋅ --></mo>' +
+      '<mn>99</mn>' +
+      '<mo>=</mo>' +
+      '<mn>89,403,930</mn>';
   var nemeth = '95⠡97⠡98⠡99⠀⠨⠅⠀89,403,930';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3817,11 +3818,11 @@ sre.AataTest.prototype.testAataExpression_228 = function() {
  */
 sre.AataTest.prototype.testAataExpression_229 = function() {
   var mml = '<msup>' +
-  '<mn>90</mn>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo>∘<!-- ∘ --></mo>' +
-  '</mrow>' +
-  '</msup>';
+      '<mn>90</mn>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo>∘<!-- ∘ --></mo>' +
+      '</mrow>' +
+      '</msup>';
   var nemeth = '90⠘⠘⠨⠡';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3902,8 +3903,8 @@ sre.AataTest.prototype.testAataExpression_236 = function() {
  */
 sre.AataTest.prototype.testAataExpression_237 = function() {
   var mml = '<mi>a</mi>' +
-  '<mo>∈<!-- ∈ --></mo>' +
-  '<mi>A</mi>';
+      '<mo>∈<!-- ∈ --></mo>' +
+      '<mi>A</mi>';
   var nemeth = '⠁⠈⠑⠠⠁';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3914,10 +3915,10 @@ sre.AataTest.prototype.testAataExpression_237 = function() {
  */
 sre.AataTest.prototype.testAataExpression_238 = function() {
   var mml = '<mi>Aut</mi>' +
-  '<mo>⁡<!-- ⁡ --></mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>G</mi>' +
-  '<mo stretchy="false">)</mo>';
+      '<mo>⁡<!-- ⁡ --></mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>G</mi>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠠⠁⠥⠞⠷⠠⠛⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3928,8 +3929,8 @@ sre.AataTest.prototype.testAataExpression_238 = function() {
  */
 sre.AataTest.prototype.testAataExpression_239 = function() {
   var mml = '<mi>A</mi>' +
-  '<mo>⊂<!-- ⊂ --></mo>' +
-  '<mi>B</mi>';
+      '<mo>⊂<!-- ⊂ --></mo>' +
+      '<mi>B</mi>';
   var nemeth = '⠠⠁⠸⠐⠅⠠⠃';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3940,10 +3941,10 @@ sre.AataTest.prototype.testAataExpression_239 = function() {
  */
 sre.AataTest.prototype.testAataExpression_240 = function() {
   var mml = '<mi>h</mi>' +
-  '<mo>:</mo>' +
-  '<mi>C</mi>' +
-  '<mo stretchy="false">→<!-- → --></mo>' +
-  '<mi>D</mi>';
+      '<mo>:</mo>' +
+      '<mi>C</mi>' +
+      '<mo stretchy="false">→<!-- → --></mo>' +
+      '<mi>D</mi>';
   var nemeth = '⠓⠱⠠⠉⠀⠫⠕⠀⠠⠙';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3954,10 +3955,10 @@ sre.AataTest.prototype.testAataExpression_240 = function() {
  */
 sre.AataTest.prototype.testAataExpression_241 = function() {
   var mml = '<mi>G</mi>' +
-  '<mo>×<!-- × --></mo>' +
-  '<mi>G</mi>' +
-  '<mo stretchy="false">→<!-- → --></mo>' +
-  '<mi>G</mi>';
+      '<mo>×<!-- × --></mo>' +
+      '<mi>G</mi>' +
+      '<mo stretchy="false">→<!-- → --></mo>' +
+      '<mi>G</mi>';
   var nemeth = '⠠⠛⠡⠠⠛⠀⠫⠕⠀⠠⠛';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3968,13 +3969,13 @@ sre.AataTest.prototype.testAataExpression_241 = function() {
  */
 sre.AataTest.prototype.testAataExpression_242 = function() {
   var mml = '<mi>GF</mi>' +
-  '<mo>⁡<!-- ⁡ --></mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<msup>' +
-  '<mi>p</mi>' +
-  '<mi>n</mi>' +
-  '</msup>' +
-  '<mo stretchy="false">)</mo>';
+      '<mo>⁡<!-- ⁡ --></mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<msup>' +
+      '<mi>p</mi>' +
+      '<mi>n</mi>' +
+      '</msup>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠠⠛⠠⠋⠷⠏⠘⠝⠐⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3985,10 +3986,10 @@ sre.AataTest.prototype.testAataExpression_242 = function() {
  */
 sre.AataTest.prototype.testAataExpression_243 = function() {
   var mml = '<mi>H</mi>' +
-  '<mo>=</mo>' +
-  '<mo fence="false" stretchy="false">{</mo>' +
-  '<mi>e</mi>' +
-  '<mo fence="false" stretchy="false">}</mo>';
+      '<mo>=</mo>' +
+      '<mo fence="false" stretchy="false">{</mo>' +
+      '<mi>e</mi>' +
+      '<mo fence="false" stretchy="false">}</mo>';
   var nemeth = '⠠⠓⠀⠨⠅⠀⠨⠷⠑⠨⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -3999,10 +4000,10 @@ sre.AataTest.prototype.testAataExpression_243 = function() {
  */
 sre.AataTest.prototype.testAataExpression_244 = function() {
   var mml = '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="double-struck">H</mi>' +
-  '</mrow>' +
-  '</mrow>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="double-struck">H</mi>' +
+      '</mrow>' +
+      '</mrow>';
   var nemeth = '⠈⠠⠓';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4013,12 +4014,12 @@ sre.AataTest.prototype.testAataExpression_244 = function() {
  */
 sre.AataTest.prototype.testAataExpression_245 = function() {
   var mml = '<mi>Hom</mi>' +
-  '<mo>⁡<!-- ⁡ --></mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>V</mi>' +
-  '<mo>,</mo>' +
-  '<mi>W</mi>' +
-  '<mo stretchy="false">)</mo>';
+      '<mo>⁡<!-- ⁡ --></mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>V</mi>' +
+      '<mo>,</mo>' +
+      '<mi>W</mi>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠠⠓⠕⠍⠷⠠⠧⠠⠠⠺⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4029,10 +4030,10 @@ sre.AataTest.prototype.testAataExpression_245 = function() {
  */
 sre.AataTest.prototype.testAataExpression_246 = function() {
   var mml = '<mi>Inn</mi>' +
-  '<mo>⁡<!-- ⁡ --></mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>G</mi>' +
-  '<mo stretchy="false">)</mo>';
+      '<mo>⁡<!-- ⁡ --></mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>G</mi>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠠⠊⠝⠝⠷⠠⠛⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4043,17 +4044,17 @@ sre.AataTest.prototype.testAataExpression_246 = function() {
  */
 sre.AataTest.prototype.testAataExpression_247 = function() {
   var mml = '<mi>G</mi>' +
-  '<msub>' +
-  '<mi>L</mi>' +
-  '<mn>2</mn>' +
-  '</msub>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="double-struck">R</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo stretchy="false">)</mo>';
+      '<msub>' +
+      '<mi>L</mi>' +
+      '<mn>2</mn>' +
+      '</msub>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="double-struck">R</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠠⠛⠠⠇⠆⠷⠈⠠⠗⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4064,24 +4065,24 @@ sre.AataTest.prototype.testAataExpression_247 = function() {
  */
 sre.AataTest.prototype.testAataExpression_248 = function() {
   var mml = '<mi>ϕ<!-- ϕ --></mi>' +
-  '<mo>:</mo>' +
-  '<msub>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi class="MJX-tex-caligraphic" mathvariant="script">L</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mi>H</mi>' +
-  '</msub>' +
-  '<mo stretchy="false">→<!-- → --></mo>' +
-  '<msub>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi class="MJX-tex-caligraphic" mathvariant="script">R</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mi>H</mi>' +
-  '</msub>';
+      '<mo>:</mo>' +
+      '<msub>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi class="MJX-tex-caligraphic" mathvariant="script">L</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mi>H</mi>' +
+      '</msub>' +
+      '<mo stretchy="false">→<!-- → --></mo>' +
+      '<msub>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi class="MJX-tex-caligraphic" mathvariant="script">R</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mi>H</mi>' +
+      '</msub>';
   var nemeth = '⠨⠋⠱caligraphic⠠⠇⠰⠠⠓⠐⠀⠫⠕⠀caligraphic⠠⠗⠰⠠⠓⠐';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4092,20 +4093,20 @@ sre.AataTest.prototype.testAataExpression_248 = function() {
  */
 sre.AataTest.prototype.testAataExpression_249 = function() {
   var mml = '<msub>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="double-struck">M</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mn>2</mn>' +
-  '</msub>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="double-struck">R</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo stretchy="false">)</mo>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="double-struck">M</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mn>2</mn>' +
+      '</msub>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="double-struck">R</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠈⠠⠍⠆⠷⠈⠠⠗⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4116,10 +4117,10 @@ sre.AataTest.prototype.testAataExpression_249 = function() {
  */
 sre.AataTest.prototype.testAataExpression_250 = function() {
   var mml = '<mi>R</mi>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo>/</mo>' +
-  '</mrow>' +
-  '<mi>M</mi>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo>/</mo>' +
+      '</mrow>' +
+      '<mi>M</mi>';
   var nemeth = '⠠⠗⠌⠠⠍';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4130,10 +4131,10 @@ sre.AataTest.prototype.testAataExpression_250 = function() {
  */
 sre.AataTest.prototype.testAataExpression_251 = function() {
   var mml = '<mn>1</mn>' +
-  '<mo>&lt;</mo>' +
-  '<mi>n</mi>' +
-  '<mo>&lt;</mo>' +
-  '<mi>N</mi>';
+      '<mo>&lt;</mo>' +
+      '<mi>n</mi>' +
+      '<mo>&lt;</mo>' +
+      '<mi>N</mi>';
   var nemeth = '⠂⠀⠐⠅⠀⠝⠀⠐⠅⠀⠠⠝';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4144,10 +4145,10 @@ sre.AataTest.prototype.testAataExpression_251 = function() {
  */
 sre.AataTest.prototype.testAataExpression_252 = function() {
   var mml = '<mi>Null</mi>' +
-  '<mo>⁡<!-- ⁡ --></mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>H</mi>' +
-  '<mo stretchy="false">)</mo>';
+      '<mo>⁡<!-- ⁡ --></mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>H</mi>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠠⠝⠥⠇⠇⠷⠠⠓⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4158,9 +4159,9 @@ sre.AataTest.prototype.testAataExpression_252 = function() {
  */
 sre.AataTest.prototype.testAataExpression_253 = function() {
   var mml = '<mi>O</mi>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>n</mi>' +
-  '<mo stretchy="false">)</mo>';
+      '<mo stretchy="false">(</mo>' +
+      '<mi>n</mi>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠠⠕⠷⠝⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4171,16 +4172,16 @@ sre.AataTest.prototype.testAataExpression_253 = function() {
  */
 sre.AataTest.prototype.testAataExpression_254 = function() {
   var mml = '<mi>P</mi>' +
-  '<mi>A</mi>' +
-  '<msup>' +
-  '<mi>P</mi>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo>−<!-- − --></mo>' +
-  '<mn>1</mn>' +
-  '</mrow>' +
-  '</msup>' +
-  '<mo>=</mo>' +
-  '<mi>B</mi>';
+      '<mi>A</mi>' +
+      '<msup>' +
+      '<mi>P</mi>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo>−<!-- − --></mo>' +
+      '<mn>1</mn>' +
+      '</mrow>' +
+      '</msup>' +
+      '<mo>=</mo>' +
+      '<mi>B</mi>';
   var nemeth = '⠠⠏⠠⠁⠠⠏⠘⠤⠂⠐⠀⠨⠅⠀⠠⠃';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4191,17 +4192,17 @@ sre.AataTest.prototype.testAataExpression_254 = function() {
  */
 sre.AataTest.prototype.testAataExpression_255 = function() {
   var mml = '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="double-struck">P</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="double-struck">R</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo stretchy="false">)</mo>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="double-struck">P</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="double-struck">R</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠈⠠⠏⠷⠈⠠⠗⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4212,16 +4213,16 @@ sre.AataTest.prototype.testAataExpression_255 = function() {
  */
 sre.AataTest.prototype.testAataExpression_256 = function() {
   var mml = '<mi>Q</mi>' +
-  '<mi>B</mi>' +
-  '<msup>' +
-  '<mi>Q</mi>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo>−<!-- − --></mo>' +
-  '<mn>1</mn>' +
-  '</mrow>' +
-  '</msup>' +
-  '<mo>=</mo>' +
-  '<mi>C</mi>';
+      '<mi>B</mi>' +
+      '<msup>' +
+      '<mi>Q</mi>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo>−<!-- − --></mo>' +
+      '<mn>1</mn>' +
+      '</mrow>' +
+      '</msup>' +
+      '<mo>=</mo>' +
+      '<mi>C</mi>';
   var nemeth = '⠠⠟⠠⠃⠠⠟⠘⠤⠂⠐⠀⠨⠅⠀⠠⠉';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4232,10 +4233,10 @@ sre.AataTest.prototype.testAataExpression_256 = function() {
  */
 sre.AataTest.prototype.testAataExpression_257 = function() {
   var mml = '<mi>R</mi>' +
-  '<mo>⊂<!-- ⊂ --></mo>' +
-  '<mi>X</mi>' +
-  '<mo>×<!-- × --></mo>' +
-  '<mi>X</mi>';
+      '<mo>⊂<!-- ⊂ --></mo>' +
+      '<mi>X</mi>' +
+      '<mo>×<!-- × --></mo>' +
+      '<mi>X</mi>';
   var nemeth = '⠠⠗⠸⠐⠅⠠⠭⠡⠠⠭';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4246,14 +4247,14 @@ sre.AataTest.prototype.testAataExpression_257 = function() {
  */
 sre.AataTest.prototype.testAataExpression_258 = function() {
   var mml = '<mi>S</mi>' +
-  '<mo>=</mo>' +
-  '<mo fence="false" stretchy="false">{</mo>' +
-  '<mn>1</mn>' +
-  '<mo>,</mo>' +
-  '<mn>2</mn>' +
-  '<mo>,</mo>' +
-  '<mn>3</mn>' +
-  '<mo fence="false" stretchy="false">}</mo>';
+      '<mo>=</mo>' +
+      '<mo fence="false" stretchy="false">{</mo>' +
+      '<mn>1</mn>' +
+      '<mo>,</mo>' +
+      '<mn>2</mn>' +
+      '<mo>,</mo>' +
+      '<mn>3</mn>' +
+      '<mo fence="false" stretchy="false">}</mo>';
   var nemeth = '⠠⠎⠀⠨⠅⠀⠨⠷⠂⠠⠆⠠⠒⠨⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4264,8 +4265,8 @@ sre.AataTest.prototype.testAataExpression_258 = function() {
  */
 sre.AataTest.prototype.testAataExpression_259 = function() {
   var mml = '<mtext>S</mtext>' +
-  '<mo>=</mo>' +
-  '<mn>18</mn>';
+      '<mo>=</mo>' +
+      '<mn>18</mn>';
   var nemeth = '⠠⠎⠀⠨⠅⠀18';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4276,27 +4277,27 @@ sre.AataTest.prototype.testAataExpression_259 = function() {
  */
 sre.AataTest.prototype.testAataExpression_260 = function() {
   var mml = '<msub>' +
-  '<mi>T</mi>' +
-  '<mi>A</mi>' +
-  '</msub>' +
-  '<mo>:</mo>' +
-  '<msup>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="double-struck">R</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mn>2</mn>' +
-  '</msup>' +
-  '<mo stretchy="false">→<!-- → --></mo>' +
-  '<msup>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="double-struck">R</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mn>2</mn>' +
-  '</msup>';
+      '<mi>T</mi>' +
+      '<mi>A</mi>' +
+      '</msub>' +
+      '<mo>:</mo>' +
+      '<msup>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="double-struck">R</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mn>2</mn>' +
+      '</msup>' +
+      '<mo stretchy="false">→<!-- → --></mo>' +
+      '<msup>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="double-struck">R</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mn>2</mn>' +
+      '</msup>';
   var nemeth = '⠠⠞⠰⠠⠁⠐⠱⠈⠠⠗⠘⠆⠐⠀⠫⠕⠀⠈⠠⠗⠘⠆';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4307,33 +4308,33 @@ sre.AataTest.prototype.testAataExpression_260 = function() {
  */
 sre.AataTest.prototype.testAataExpression_261 = function() {
   var mml = '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="double-struck">T</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo>=</mo>' +
-  '<mo fence="false" stretchy="false">{</mo>' +
-  '<mi>z</mi>' +
-  '<mo>∈<!-- ∈ --></mo>' +
-  '<msup>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="double-struck">C</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo>∗<!-- ∗ --></mo>' +
-  '</msup>' +
-  '<mo>:</mo>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo stretchy="false">|</mo>' +
-  '</mrow>' +
-  '<mi>z</mi>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo stretchy="false">|</mo>' +
-  '</mrow>' +
-  '<mo>=</mo>' +
-  '<mn>1</mn>' +
-  '<mo fence="false" stretchy="false">}</mo>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="double-struck">T</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo>=</mo>' +
+      '<mo fence="false" stretchy="false">{</mo>' +
+      '<mi>z</mi>' +
+      '<mo>∈<!-- ∈ --></mo>' +
+      '<msup>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="double-struck">C</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo>∗<!-- ∗ --></mo>' +
+      '</msup>' +
+      '<mo>:</mo>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo stretchy="false">|</mo>' +
+      '</mrow>' +
+      '<mi>z</mi>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo stretchy="false">|</mo>' +
+      '</mrow>' +
+      '<mo>=</mo>' +
+      '<mn>1</mn>' +
+      '<mo fence="false" stretchy="false">}</mo>';
   var nemeth = '⠈⠠⠞⠀⠨⠅⠀⠨⠷⠵⠈⠑⠈⠠⠉⠘⠈⠼⠐⠱⠳⠵⠳⠀⠨⠅⠀⠂⠨⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4344,8 +4345,8 @@ sre.AataTest.prototype.testAataExpression_261 = function() {
  */
 sre.AataTest.prototype.testAataExpression_262 = function() {
   var mml = '<mi>A</mi>' +
-  '<mo>⊂<!-- ⊂ --></mo>' +
-  '<mi>U</mi>';
+      '<mo>⊂<!-- ⊂ --></mo>' +
+      '<mi>U</mi>';
   var nemeth = '⠠⠁⠸⠐⠅⠠⠥';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4356,8 +4357,8 @@ sre.AataTest.prototype.testAataExpression_262 = function() {
  */
 sre.AataTest.prototype.testAataExpression_263 = function() {
   var mml = '<mi>v</mi>' +
-  '<mo>∈<!-- ∈ --></mo>' +
-  '<mi>V</mi>';
+      '<mo>∈<!-- ∈ --></mo>' +
+      '<mi>V</mi>';
   var nemeth = '⠧⠈⠑⠠⠧';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4368,12 +4369,12 @@ sre.AataTest.prototype.testAataExpression_263 = function() {
  */
 sre.AataTest.prototype.testAataExpression_264 = function() {
   var mml = '<mi>Y</mi>' +
-  '<mo>=</mo>' +
-  '<mo fence="false" stretchy="false">{</mo>' +
-  '<mi>B</mi>' +
-  '<mo>,</mo>' +
-  '<mi>W</mi>' +
-  '<mo fence="false" stretchy="false">}</mo>';
+      '<mo>=</mo>' +
+      '<mo fence="false" stretchy="false">{</mo>' +
+      '<mi>B</mi>' +
+      '<mo>,</mo>' +
+      '<mi>W</mi>' +
+      '<mo fence="false" stretchy="false">}</mo>';
   var nemeth = '⠠⠽⠀⠨⠅⠀⠨⠷⠠⠃⠠⠠⠺⠨⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4384,10 +4385,10 @@ sre.AataTest.prototype.testAataExpression_264 = function() {
  */
 sre.AataTest.prototype.testAataExpression_265 = function() {
   var mml = '<mi>f</mi>' +
-  '<mo>:</mo>' +
-  '<mi>X</mi>' +
-  '<mo stretchy="false">→<!-- → --></mo>' +
-  '<mi>Y</mi>';
+      '<mo>:</mo>' +
+      '<mi>X</mi>' +
+      '<mo stretchy="false">→<!-- → --></mo>' +
+      '<mi>Y</mi>';
   var nemeth = '⠋⠱⠠⠭⠀⠫⠕⠀⠠⠽';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4398,23 +4399,23 @@ sre.AataTest.prototype.testAataExpression_265 = function() {
  */
 sre.AataTest.prototype.testAataExpression_266 = function() {
   var mml = '<msub>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="double-struck">M</mi>' +
-  '</mrow>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi>m</mi>' +
-  '<mo>×<!-- × --></mo>' +
-  '<mi>n</mi>' +
-  '</mrow>' +
-  '</msub>' +
-  '<mo stretchy="false">(</mo>' +
-  '<msub>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">Z</mi>' +
-  '</mrow>' +
-  '<mn>2</mn>' +
-  '</msub>' +
-  '<mo stretchy="false">)</mo>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="double-struck">M</mi>' +
+      '</mrow>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi>m</mi>' +
+      '<mo>×<!-- × --></mo>' +
+      '<mi>n</mi>' +
+      '</mrow>' +
+      '</msub>' +
+      '<mo stretchy="false">(</mo>' +
+      '<msub>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">Z</mi>' +
+      '</mrow>' +
+      '<mn>2</mn>' +
+      '</msub>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠈⠠⠍⠰⠍⠡⠝⠐⠷⠸⠠⠵⠆⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4425,18 +4426,18 @@ sre.AataTest.prototype.testAataExpression_266 = function() {
  */
 sre.AataTest.prototype.testAataExpression_267 = function() {
   var mml = '<mo stretchy="false">[</mo>' +
-  '<mi>x</mi>' +
-  '<mo stretchy="false">]</mo>' +
-  '<mo>=</mo>' +
-  '<mo fence="false" stretchy="false">{</mo>' +
-  '<mi>y</mi>' +
-  '<mo>∈<!-- ∈ --></mo>' +
-  '<mi>X</mi>' +
-  '<mo>:</mo>' +
-  '<mi>y</mi>' +
-  '<mo>∼<!-- ∼ --></mo>' +
-  '<mi>x</mi>' +
-  '<mo fence="false" stretchy="false">}</mo>';
+      '<mi>x</mi>' +
+      '<mo stretchy="false">]</mo>' +
+      '<mo>=</mo>' +
+      '<mo fence="false" stretchy="false">{</mo>' +
+      '<mi>y</mi>' +
+      '<mo>∈<!-- ∈ --></mo>' +
+      '<mi>X</mi>' +
+      '<mo>:</mo>' +
+      '<mi>y</mi>' +
+      '<mo>∼<!-- ∼ --></mo>' +
+      '<mi>x</mi>' +
+      '<mo fence="false" stretchy="false">}</mo>';
   var nemeth = '⠈⠷⠭⠈⠾⠀⠨⠅⠀⠨⠷⠽⠈⠑⠠⠭⠱⠽⠄⡳⠭⠆⠆⠒⠉⠄⠭⠨⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4447,9 +4448,9 @@ sre.AataTest.prototype.testAataExpression_267 = function() {
  */
 sre.AataTest.prototype.testAataExpression_268 = function() {
   var mml = '<mi>F</mi>' +
-  '<mo fence="false" stretchy="false">[</mo>' +
-  '<mi>x</mi>' +
-  '<mo fence="false" stretchy="false">]</mo>';
+      '<mo fence="false" stretchy="false">[</mo>' +
+      '<mi>x</mi>' +
+      '<mo fence="false" stretchy="false">]</mo>';
   var nemeth = '⠠⠋⠈⠷⠭⠈⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4460,8 +4461,8 @@ sre.AataTest.prototype.testAataExpression_268 = function() {
  */
 sre.AataTest.prototype.testAataExpression_269 = function() {
   var mml = '<mi>char</mi>' +
-  '<mo>⁡<!-- ⁡ --></mo>' +
-  '<mi>R</mi>';
+      '<mo>⁡<!-- ⁡ --></mo>' +
+      '<mi>R</mi>';
   var nemeth = '⠉⠓⠁⠗⠠⠗';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4472,9 +4473,9 @@ sre.AataTest.prototype.testAataExpression_269 = function() {
  */
 sre.AataTest.prototype.testAataExpression_270 = function() {
   var mml = '<mi>r</mi>' +
-  '<mi>cis</mi>' +
-  '<mo>⁡<!-- ⁡ --></mo>' +
-  '<mi>θ<!-- θ --></mi>';
+      '<mi>cis</mi>' +
+      '<mo>⁡<!-- ⁡ --></mo>' +
+      '<mi>θ<!-- θ --></mi>';
   var nemeth = '⠗⠉⠊⠎⠨⠹';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4485,12 +4486,12 @@ sre.AataTest.prototype.testAataExpression_270 = function() {
  */
 sre.AataTest.prototype.testAataExpression_271 = function() {
   var mml = '<mi>α<!-- α --></mi>' +
-  '<mi>β<!-- β --></mi>' +
-  '<mo>=</mo>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="normal">i</mi>' +
-  '<mi mathvariant="normal">d</mi>' +
-  '</mrow>';
+      '<mi>β<!-- β --></mi>' +
+      '<mo>=</mo>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="normal">i</mi>' +
+      '<mi mathvariant="normal">d</mi>' +
+      '</mrow>';
   var nemeth = '⠨⠁⠨⠃⠀⠨⠅⠀⠊⠙';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4501,13 +4502,13 @@ sre.AataTest.prototype.testAataExpression_271 = function() {
  */
 sre.AataTest.prototype.testAataExpression_272 = function() {
   var mml = '<mi>deg</mi>' +
-  '<mo>⁡<!-- ⁡ --></mo>' +
-  '<mi>f</mi>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>x</mi>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>=</mo>' +
-  '<mi>n</mi>';
+      '<mo>⁡<!-- ⁡ --></mo>' +
+      '<mi>f</mi>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>x</mi>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>=</mo>' +
+      '<mi>n</mi>';
   var nemeth = '⠙⠑⠛⠋⠷⠭⠾⠀⠨⠅⠀⠝';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4518,15 +4519,15 @@ sre.AataTest.prototype.testAataExpression_272 = function() {
  */
 sre.AataTest.prototype.testAataExpression_273 = function() {
   var mml = '<mo movablelimits="true" form="prefix">det</mo>' +
-  '<mi>A</mi>' +
-  '<mo>=</mo>' +
-  '<mi>a</mi>' +
-  '<mi>d</mi>' +
-  '<mo>−<!-- − --></mo>' +
-  '<mi>b</mi>' +
-  '<mi>c</mi>' +
-  '<mo>≠<!-- ≠ --></mo>' +
-  '<mn>0</mn>';
+      '<mi>A</mi>' +
+      '<mo>=</mo>' +
+      '<mi>a</mi>' +
+      '<mi>d</mi>' +
+      '<mo>−<!-- − --></mo>' +
+      '<mi>b</mi>' +
+      '<mi>c</mi>' +
+      '<mo>≠<!-- ≠ --></mo>' +
+      '<mn>0</mn>';
   var nemeth = '⠙⠑⠞⠠⠁⠀⠨⠅⠀⠁⠙⠤⠃⠉⠀⠌⠨⠅⠀⠴';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4537,10 +4538,10 @@ sre.AataTest.prototype.testAataExpression_273 = function() {
  */
 sre.AataTest.prototype.testAataExpression_274 = function() {
   var mml = '<mi>dim</mi>' +
-  '<mo>⁡<!-- ⁡ --></mo>' +
-  '<mi>V</mi>' +
-  '<mo>=</mo>' +
-  '<mi>n</mi>';
+      '<mo>⁡<!-- ⁡ --></mo>' +
+      '<mi>V</mi>' +
+      '<mo>=</mo>' +
+      '<mi>n</mi>';
   var nemeth = '⠙⠊⠍⠠⠧⠀⠨⠅⠀⠝';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4551,20 +4552,20 @@ sre.AataTest.prototype.testAataExpression_274 = function() {
  */
 sre.AataTest.prototype.testAataExpression_275 = function() {
   var mml = '<msup>' +
-  '<mi>f</mi>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo>−<!-- − --></mo>' +
-  '<mn>1</mn>' +
-  '</mrow>' +
-  '</msup>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>x</mi>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>=</mo>' +
-  '<msup>' +
-  '<mi>e</mi>' +
-  '<mi>x</mi>' +
-  '</msup>';
+      '<mi>f</mi>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo>−<!-- − --></mo>' +
+      '<mn>1</mn>' +
+      '</mrow>' +
+      '</msup>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>x</mi>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>=</mo>' +
+      '<msup>' +
+      '<mi>e</mi>' +
+      '<mi>x</mi>' +
+      '</msup>';
   var nemeth = '⠋⠘⠤⠂⠐⠷⠭⠾⠀⠨⠅⠀⠑⠘⠭';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4575,10 +4576,10 @@ sre.AataTest.prototype.testAataExpression_275 = function() {
  */
 sre.AataTest.prototype.testAataExpression_276 = function() {
   var mml = '<mi>f</mi>' +
-  '<mo>⊂<!-- ⊂ --></mo>' +
-  '<mi>A</mi>' +
-  '<mo>×<!-- × --></mo>' +
-  '<mi>B</mi>';
+      '<mo>⊂<!-- ⊂ --></mo>' +
+      '<mi>A</mi>' +
+      '<mo>×<!-- × --></mo>' +
+      '<mi>B</mi>';
   var nemeth = '⠋⠸⠐⠅⠠⠁⠡⠠⠃';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4589,11 +4590,11 @@ sre.AataTest.prototype.testAataExpression_276 = function() {
  */
 sre.AataTest.prototype.testAataExpression_277 = function() {
   var mml = '<mi>g</mi>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>1</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>=</mo>' +
-  '<mi>a</mi>';
+      '<mo stretchy="false">(</mo>' +
+      '<mn>1</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>=</mo>' +
+      '<mi>a</mi>';
   var nemeth = '⠛⠷⠂⠾⠀⠨⠅⠀⠁';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4604,13 +4605,13 @@ sre.AataTest.prototype.testAataExpression_277 = function() {
  */
 sre.AataTest.prototype.testAataExpression_278 = function() {
   var mml = '<mi>d</mi>' +
-  '<mo>=</mo>' +
-  '<mo movablelimits="true" form="prefix">gcd</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>a</mi>' +
-  '<mo>,</mo>' +
-  '<mi>b</mi>' +
-  '<mo stretchy="false">)</mo>';
+      '<mo>=</mo>' +
+      '<mo movablelimits="true" form="prefix">gcd</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>a</mi>' +
+      '<mo>,</mo>' +
+      '<mi>b</mi>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠙⠀⠨⠅⠀⠛⠉⠙⠷⠁⠠⠃⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4621,16 +4622,16 @@ sre.AataTest.prototype.testAataExpression_278 = function() {
  */
 sre.AataTest.prototype.testAataExpression_279 = function() {
   var mml = '<msub>' +
-  '<mi>X</mi>' +
-  '<mi>i</mi>' +
-  '</msub>' +
-  '<mo>∩<!-- ∩ --></mo>' +
-  '<msub>' +
-  '<mi>X</mi>' +
-  '<mi>j</mi>' +
-  '</msub>' +
-  '<mo>=</mo>' +
-  '<mi mathvariant="normal">∅<!-- ∅ --></mi>';
+      '<mi>X</mi>' +
+      '<mi>i</mi>' +
+      '</msub>' +
+      '<mo>∩<!-- ∩ --></mo>' +
+      '<msub>' +
+      '<mi>X</mi>' +
+      '<mi>j</mi>' +
+      '</msub>' +
+      '<mo>=</mo>' +
+      '<mi mathvariant="normal">∅<!-- ∅ --></mi>';
   var nemeth = '⠠⠭⠰⠊⠐⠨⠩⠠⠭⠰⠚⠐⠀⠨⠅⠀⠸⠴';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4641,8 +4642,8 @@ sre.AataTest.prototype.testAataExpression_279 = function() {
  */
 sre.AataTest.prototype.testAataExpression_280 = function() {
   var mml = '<mi>ker</mi>' +
-  '<mo>⁡<!-- ⁡ --></mo>' +
-  '<mi>ϕ<!-- ϕ --></mi>';
+      '<mo>⁡<!-- ⁡ --></mo>' +
+      '<mi>ϕ<!-- ϕ --></mi>';
   var nemeth = '⠅⠑⠗⠨⠋';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4653,11 +4654,11 @@ sre.AataTest.prototype.testAataExpression_280 = function() {
  */
 sre.AataTest.prototype.testAataExpression_281 = function() {
   var mml = '<mi>s</mi>' +
-  '<mo>−<!-- − --></mo>' +
-  '<mi>t</mi>' +
-  '<mo>=</mo>' +
-  '<mi>l</mi>' +
-  '<mi>n</mi>';
+      '<mo>−<!-- − --></mo>' +
+      '<mi>t</mi>' +
+      '<mo>=</mo>' +
+      '<mi>l</mi>' +
+      '<mi>n</mi>';
   var nemeth = '⠎⠤⠞⠀⠨⠅⠀⠇⠝';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4668,12 +4669,12 @@ sre.AataTest.prototype.testAataExpression_281 = function() {
  */
 sre.AataTest.prototype.testAataExpression_282 = function() {
   var mml = '<mi>lcm</mi>' +
-  '<mo>⁡<!-- ⁡ --></mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>a</mi>' +
-  '<mo>,</mo>' +
-  '<mi>b</mi>' +
-  '<mo stretchy="false">)</mo>';
+      '<mo>⁡<!-- ⁡ --></mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>a</mi>' +
+      '<mo>,</mo>' +
+      '<mi>b</mi>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠇⠉⠍⠷⠁⠠⠃⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4684,40 +4685,40 @@ sre.AataTest.prototype.testAataExpression_282 = function() {
  */
 sre.AataTest.prototype.testAataExpression_283 = function() {
   var mml = '<munder>' +
-  '<mo movablelimits="true" form="prefix">lim</mo>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi>n</mi>' +
-  '<mo stretchy="false">→<!-- → --></mo>' +
-  '<mi mathvariant="normal">∞<!-- ∞ --></mi>' +
-  '</mrow>' +
-  '</munder>' +
-  '<msub>' +
-  '<mi>f</mi>' +
-  '<mi>n</mi>' +
-  '</msub>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo>/</mo>' +
-  '</mrow>' +
-  '<msub>' +
-  '<mi>f</mi>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi>n</mi>' +
-  '<mo>+</mo>' +
-  '<mn>1</mn>' +
-  '</mrow>' +
-  '</msub>' +
-  '<mo>=</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<msqrt>' +
-  '<mn>5</mn>' +
-  '</msqrt>' +
-  '<mo>−<!-- − --></mo>' +
-  '<mn>1</mn>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo>/</mo>' +
-  '</mrow>' +
-  '<mn>2</mn>';
+      '<mo movablelimits="true" form="prefix">lim</mo>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi>n</mi>' +
+      '<mo stretchy="false">→<!-- → --></mo>' +
+      '<mi mathvariant="normal">∞<!-- ∞ --></mi>' +
+      '</mrow>' +
+      '</munder>' +
+      '<msub>' +
+      '<mi>f</mi>' +
+      '<mi>n</mi>' +
+      '</msub>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo>/</mo>' +
+      '</mrow>' +
+      '<msub>' +
+      '<mi>f</mi>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi>n</mi>' +
+      '<mo>+</mo>' +
+      '<mn>1</mn>' +
+      '</mrow>' +
+      '</msub>' +
+      '<mo>=</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<msqrt>' +
+      '<mn>5</mn>' +
+      '</msqrt>' +
+      '<mo>−<!-- − --></mo>' +
+      '<mn>1</mn>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo>/</mo>' +
+      '</mrow>' +
+      '<mn>2</mn>';
   var nemeth = '⠐⠇⠊⠍⠩⠝⠀⠫⠕⠀⠠⠿⠻⠋⠰⠝⠐⠌⠋⠰⠝⠬⠂⠐⠀⠨⠅⠀⠷⠜⠢⠻⠤⠂⠾⠌⠆';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4728,13 +4729,13 @@ sre.AataTest.prototype.testAataExpression_283 = function() {
  */
 sre.AataTest.prototype.testAataExpression_284 = function() {
   var mml = '<mi>f</mi>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>x</mi>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>=</mo>' +
-  '<mi>ln</mi>' +
-  '<mo>⁡<!-- ⁡ --></mo>' +
-  '<mi>x</mi>';
+      '<mo stretchy="false">(</mo>' +
+      '<mi>x</mi>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>=</mo>' +
+      '<mi>ln</mi>' +
+      '<mo>⁡<!-- ⁡ --></mo>' +
+      '<mi>x</mi>';
   var nemeth = '⠋⠷⠭⠾⠀⠨⠅⠀⠇⠝⠀⠭';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4745,13 +4746,13 @@ sre.AataTest.prototype.testAataExpression_284 = function() {
  */
 sre.AataTest.prototype.testAataExpression_285 = function() {
   var mml = '<msup>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="double-struck">R</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mi>m</mi>' +
-  '</msup>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="double-struck">R</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mi>m</mi>' +
+      '</msup>';
   var nemeth = '⠈⠠⠗⠘⠍';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4762,35 +4763,35 @@ sre.AataTest.prototype.testAataExpression_285 = function() {
  */
 sre.AataTest.prototype.testAataExpression_286 = function() {
   var mml = '<mi>deg</mi>' +
-  '<mo>⁡<!-- ⁡ --></mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>p</mi>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>x</mi>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>+</mo>' +
-  '<mi>q</mi>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>x</mi>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>≤<!-- ≤ --></mo>' +
-  '<mo movablelimits="true" form="prefix">max</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>deg</mi>' +
-  '<mo>⁡<!-- ⁡ --></mo>' +
-  '<mi>p</mi>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>x</mi>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>,</mo>' +
-  '<mi>deg</mi>' +
-  '<mo>⁡<!-- ⁡ --></mo>' +
-  '<mi>q</mi>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>x</mi>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">)</mo>';
+      '<mo>⁡<!-- ⁡ --></mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>p</mi>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>x</mi>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>+</mo>' +
+      '<mi>q</mi>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>x</mi>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>≤<!-- ≤ --></mo>' +
+      '<mo movablelimits="true" form="prefix">max</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>deg</mi>' +
+      '<mo>⁡<!-- ⁡ --></mo>' +
+      '<mi>p</mi>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>x</mi>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>,</mo>' +
+      '<mi>deg</mi>' +
+      '<mo>⁡<!-- ⁡ --></mo>' +
+      '<mi>q</mi>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>x</mi>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠙⠑⠛⠷⠏⠷⠭⠾⠬⠟⠷⠭⠾⠾⠀⠀⠅⠱⠀⠍⠁⠭⠀⠷⠙⠑⠛⠏⠷⠭⠾⠠⠙⠑⠛⠟⠷⠭⠾⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4801,11 +4802,11 @@ sre.AataTest.prototype.testAataExpression_286 = function() {
  */
 sre.AataTest.prototype.testAataExpression_287 = function() {
   var mml = '<msub>' +
-  '<mi>d</mi>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo movablelimits="true" form="prefix">min</mo>' +
-  '</mrow>' +
-  '</msub>';
+      '<mi>d</mi>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo movablelimits="true" form="prefix">min</mo>' +
+      '</mrow>' +
+      '</msub>';
   var nemeth = '⠙⠰⠍⠊⠝⠀';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4816,8 +4817,8 @@ sre.AataTest.prototype.testAataExpression_287 = function() {
  */
 sre.AataTest.prototype.testAataExpression_288 = function() {
   var mml = '<mi>r</mi>' +
-  '<mo>=</mo>' +
-  '<mi>s</mi>';
+      '<mo>=</mo>' +
+      '<mi>s</mi>';
   var nemeth = '⠗⠀⠨⠅⠀⠎';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4828,10 +4829,10 @@ sre.AataTest.prototype.testAataExpression_288 = function() {
  */
 sre.AataTest.prototype.testAataExpression_289 = function() {
   var mml = '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">r</mi>' +
-  '</mrow>' +
-  '</mrow>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">r</mi>' +
+      '</mrow>' +
+      '</mrow>';
   var nemeth = '⠸⠗';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4842,13 +4843,13 @@ sre.AataTest.prototype.testAataExpression_289 = function() {
  */
 sre.AataTest.prototype.testAataExpression_290 = function() {
   var mml = '<mi>f</mi>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>x</mi>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>=</mo>' +
-  '<mi>sin</mi>' +
-  '<mo>⁡<!-- ⁡ --></mo>' +
-  '<mi>x</mi>';
+      '<mo stretchy="false">(</mo>' +
+      '<mi>x</mi>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>=</mo>' +
+      '<mi>sin</mi>' +
+      '<mo>⁡<!-- ⁡ --></mo>' +
+      '<mi>x</mi>';
   var nemeth = '⠋⠷⠭⠾⠀⠨⠅⠀⠎⠊⠝⠀⠭';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4859,16 +4860,16 @@ sre.AataTest.prototype.testAataExpression_290 = function() {
  */
 sre.AataTest.prototype.testAataExpression_291 = function() {
   var mml = '<mi>r</mi>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo>/</mo>' +
-  '</mrow>' +
-  '<mi>s</mi>' +
-  '<mo>∼<!-- ∼ --></mo>' +
-  '<mi>t</mi>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo>/</mo>' +
-  '</mrow>' +
-  '<mi>u</mi>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo>/</mo>' +
+      '</mrow>' +
+      '<mi>s</mi>' +
+      '<mo>∼<!-- ∼ --></mo>' +
+      '<mi>t</mi>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo>/</mo>' +
+      '</mrow>' +
+      '<mi>u</mi>';
   var nemeth = '⠗⠌⠎⠄⡳⠭⠆⠆⠒⠉⠄⠞⠌⠥';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4879,19 +4880,19 @@ sre.AataTest.prototype.testAataExpression_291 = function() {
  */
 sre.AataTest.prototype.testAataExpression_292 = function() {
   var mml = '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">b</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo>=</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mn>2</mn>' +
-  '<mo>,</mo>' +
-  '<mn>2</mn>' +
-  '<msup>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mtext>t</mtext>' +
-  '</msup>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">b</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo>=</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mn>2</mn>' +
+      '<mo>,</mo>' +
+      '<mn>2</mn>' +
+      '<msup>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mtext>t</mtext>' +
+      '</msup>';
   var nemeth = '⠸⠃⠀⠨⠅⠀⠷⠆⠠⠆⠾⠘⠞';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4902,15 +4903,15 @@ sre.AataTest.prototype.testAataExpression_292 = function() {
  */
 sre.AataTest.prototype.testAataExpression_293 = function() {
   var mml = '<mi>v</mi>' +
-  '<mo>∈<!-- ∈ --></mo>' +
-  '<msup>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="double-struck">R</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mn>2</mn>' +
-  '</msup>';
+      '<mo>∈<!-- ∈ --></mo>' +
+      '<msup>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="double-struck">R</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mn>2</mn>' +
+      '</msup>';
   var nemeth = '⠧⠈⠑⠈⠠⠗⠘⠆';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4921,10 +4922,10 @@ sre.AataTest.prototype.testAataExpression_293 = function() {
  */
 sre.AataTest.prototype.testAataExpression_294 = function() {
   var mml = '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">w</mi>' +
-  '</mrow>' +
-  '</mrow>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">w</mi>' +
+      '</mrow>' +
+      '</mrow>';
   var nemeth = '⠸⠺';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4935,24 +4936,24 @@ sre.AataTest.prototype.testAataExpression_294 = function() {
  */
 sre.AataTest.prototype.testAataExpression_295 = function() {
   var mml = '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">x</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo>=</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<msub>' +
-  '<mi>x</mi>' +
-  '<mn>1</mn>' +
-  '</msub>' +
-  '<mo>,</mo>' +
-  '<mo>…<!-- … --></mo>' +
-  '<mo>,</mo>' +
-  '<msub>' +
-  '<mi>x</mi>' +
-  '<mi>n</mi>' +
-  '</msub>' +
-  '<mo stretchy="false">)</mo>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">x</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo>=</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<msub>' +
+      '<mi>x</mi>' +
+      '<mn>1</mn>' +
+      '</msub>' +
+      '<mo>,</mo>' +
+      '<mo>…<!-- … --></mo>' +
+      '<mo>,</mo>' +
+      '<msub>' +
+      '<mi>x</mi>' +
+      '<mi>n</mi>' +
+      '</msub>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠸⠭⠀⠨⠅⠀⠷⠭⠂⠠⠄⠠⠭⠰⠝⠐⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4963,12 +4964,12 @@ sre.AataTest.prototype.testAataExpression_295 = function() {
  */
 sre.AataTest.prototype.testAataExpression_296 = function() {
   var mml = '<mi>A</mi>' +
-  '<mo>=</mo>' +
-  '<mo fence="false" stretchy="false">{</mo>' +
-  '<mi>x</mi>' +
-  '<mo>,</mo>' +
-  '<mi>y</mi>' +
-  '<mo fence="false" stretchy="false">}</mo>';
+      '<mo>=</mo>' +
+      '<mo fence="false" stretchy="false">{</mo>' +
+      '<mi>x</mi>' +
+      '<mo>,</mo>' +
+      '<mi>y</mi>' +
+      '<mo fence="false" stretchy="false">}</mo>';
   var nemeth = '⠠⠁⠀⠨⠅⠀⠨⠷⠭⠠⠽⠨⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -4979,24 +4980,24 @@ sre.AataTest.prototype.testAataExpression_296 = function() {
  */
 sre.AataTest.prototype.testAataExpression_297 = function() {
   var mml = '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">y</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo>=</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<msub>' +
-  '<mi>y</mi>' +
-  '<mn>1</mn>' +
-  '</msub>' +
-  '<mo>,</mo>' +
-  '<mo>…<!-- … --></mo>' +
-  '<mo>,</mo>' +
-  '<msub>' +
-  '<mi>y</mi>' +
-  '<mi>n</mi>' +
-  '</msub>' +
-  '<mo stretchy="false">)</mo>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">y</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo>=</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<msub>' +
+      '<mi>y</mi>' +
+      '<mn>1</mn>' +
+      '</msub>' +
+      '<mo>,</mo>' +
+      '<mo>…<!-- … --></mo>' +
+      '<mo>,</mo>' +
+      '<msub>' +
+      '<mi>y</mi>' +
+      '<mi>n</mi>' +
+      '</msub>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠸⠽⠀⠨⠅⠀⠷⠽⠂⠠⠄⠠⠽⠰⠝⠐⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5007,16 +5008,16 @@ sre.AataTest.prototype.testAataExpression_297 = function() {
  */
 sre.AataTest.prototype.testAataExpression_298 = function() {
   var mml = '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo stretchy="false">|</mo>' +
-  '</mrow>' +
-  '<mi>x</mi>' +
-  '<mo>−<!-- − --></mo>' +
-  '<mi>y</mi>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo stretchy="false">|</mo>' +
-  '</mrow>' +
-  '<mo>≤<!-- ≤ --></mo>' +
-  '<mn>4</mn>';
+      '<mo stretchy="false">|</mo>' +
+      '</mrow>' +
+      '<mi>x</mi>' +
+      '<mo>−<!-- − --></mo>' +
+      '<mi>y</mi>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo stretchy="false">|</mo>' +
+      '</mrow>' +
+      '<mo>≤<!-- ≤ --></mo>' +
+      '<mn>4</mn>';
   var nemeth = '⠳⠭⠤⠽⠳⠀⠀⠅⠱⠀⠲';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5027,11 +5028,11 @@ sre.AataTest.prototype.testAataExpression_298 = function() {
  */
 sre.AataTest.prototype.testAataExpression_299 = function() {
   var mml = '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mover>' +
-  '<mi>σ<!-- σ --></mi>' +
-  '<mo>~<!-- ~ --></mo>' +
-  '</mover>' +
-  '</mrow>';
+      '<mover>' +
+      '<mi>σ<!-- σ --></mi>' +
+      '<mo>~<!-- ~ --></mo>' +
+      '</mover>' +
+      '</mrow>';
   var nemeth = '⠨⠎overTilde';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5042,8 +5043,8 @@ sre.AataTest.prototype.testAataExpression_299 = function() {
  */
 sre.AataTest.prototype.testAataExpression_300 = function() {
   var mml = '<mi>A</mi>' +
-  '<mo>×<!-- × --></mo>' +
-  '<mi>B</mi>';
+      '<mo>×<!-- × --></mo>' +
+      '<mi>B</mi>';
   var nemeth = '⠠⠁⠡⠠⠃';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5054,15 +5055,15 @@ sre.AataTest.prototype.testAataExpression_300 = function() {
  */
 sre.AataTest.prototype.testAataExpression_301 = function() {
   var mml = '<mi mathvariant="normal">Δ<!-- Δ --></mi>' +
-  '<mo>=</mo>' +
-  '<msup>' +
-  '<mi>b</mi>' +
-  '<mn>2</mn>' +
-  '</msup>' +
-  '<mo>−<!-- − --></mo>' +
-  '<mn>4</mn>' +
-  '<mi>a</mi>' +
-  '<mi>c</mi>';
+      '<mo>=</mo>' +
+      '<msup>' +
+      '<mi>b</mi>' +
+      '<mn>2</mn>' +
+      '</msup>' +
+      '<mo>−<!-- − --></mo>' +
+      '<mn>4</mn>' +
+      '<mi>a</mi>' +
+      '<mi>c</mi>';
   var nemeth = '⠨⠠⠙⠀⠨⠅⠀⠃⠘⠆⠐⠤⠲⠁⠉';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5093,32 +5094,32 @@ sre.AataTest.prototype.testAataExpression_303 = function() {
  */
 sre.AataTest.prototype.testAataExpression_304 = function() {
   var mml = '<mo fence="false" stretchy="false">⟨<!-- ⟨ --></mo>' +
-  '<msub>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">a</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mi>r</mi>' +
-  '</msub>' +
-  '<mo>,</mo>' +
-  '<msub>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="bold">a</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mi>s</mi>' +
-  '</msub>' +
-  '<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>' +
-  '<mo>=</mo>' +
-  '<msub>' +
-  '<mi>δ<!-- δ --></mi>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi>r</mi>' +
-  '<mi>s</mi>' +
-  '</mrow>' +
-  '</msub>';
+      '<msub>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">a</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mi>r</mi>' +
+      '</msub>' +
+      '<mo>,</mo>' +
+      '<msub>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="bold">a</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mi>s</mi>' +
+      '</msub>' +
+      '<mo fence="false" stretchy="false">⟩<!-- ⟩ --></mo>' +
+      '<mo>=</mo>' +
+      '<msub>' +
+      '<mi>δ<!-- δ --></mi>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi>r</mi>' +
+      '<mi>s</mi>' +
+      '</mrow>' +
+      '</msub>';
   var nemeth = '⠄⡳⠭⠆⠶⠑⠦⠄⠸⠁⠰⠗⠐⠠⠸⠁⠰⠎⠐⠄⡳⠭⠆⠶⠑⠔⠄⠀⠨⠅⠀⠨⠙⠰⠗⠎';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5129,17 +5130,17 @@ sre.AataTest.prototype.testAataExpression_304 = function() {
  */
 sre.AataTest.prototype.testAataExpression_305 = function() {
   var mml = '<mi>η<!-- η --></mi>' +
-  '<mo>:</mo>' +
-  '<mi>G</mi>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mo>/</mo>' +
-  '</mrow>' +
-  '<mi>K</mi>' +
-  '<mo stretchy="false">→<!-- → --></mo>' +
-  '<mi>ψ<!-- ψ --></mi>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>G</mi>' +
-  '<mo stretchy="false">)</mo>';
+      '<mo>:</mo>' +
+      '<mi>G</mi>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo>/</mo>' +
+      '</mrow>' +
+      '<mi>K</mi>' +
+      '<mo stretchy="false">→<!-- → --></mo>' +
+      '<mi>ψ<!-- ψ --></mi>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>G</mi>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠨⠦⠱⠠⠛⠌⠠⠅⠀⠫⠕⠀⠨⠓⠷⠠⠛⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5160,13 +5161,13 @@ sre.AataTest.prototype.testAataExpression_306 = function() {
  */
 sre.AataTest.prototype.testAataExpression_307 = function() {
   var mml = '<msub>' +
-  '<mi>μ<!-- μ --></mi>' +
-  '<mn>1</mn>' +
-  '</msub>' +
-  '<msub>' +
-  '<mi>ρ<!-- ρ --></mi>' +
-  '<mn>1</mn>' +
-  '</msub>';
+      '<mi>μ<!-- μ --></mi>' +
+      '<mn>1</mn>' +
+      '</msub>' +
+      '<msub>' +
+      '<mi>ρ<!-- ρ --></mi>' +
+      '<mn>1</mn>' +
+      '</msub>';
   var nemeth = '⠨⠍⠂⠨⠗⠂';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5177,29 +5178,29 @@ sre.AataTest.prototype.testAataExpression_307 = function() {
  */
 sre.AataTest.prototype.testAataExpression_308 = function() {
   var mml = '<mi>ν<!-- ν --></mi>' +
-  '<mo>:</mo>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="double-struck">Z</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo stretchy="false">[</mo>' +
-  '<msqrt>' +
-  '<mn>3</mn>' +
-  '</msqrt>' +
-  '<mspace width="thinmathspace"></mspace>' +
-  '<mi>i</mi>' +
-  '<mo stretchy="false">]</mo>' +
-  '<mo stretchy="false">→<!-- → --></mo>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="double-struck">N</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo>∪<!-- ∪ --></mo>' +
-  '<mo fence="false" stretchy="false">{</mo>' +
-  '<mn>0</mn>' +
-  '<mo fence="false" stretchy="false">}</mo>';
+      '<mo>:</mo>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="double-struck">Z</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo stretchy="false">[</mo>' +
+      '<msqrt>' +
+      '<mn>3</mn>' +
+      '</msqrt>' +
+      '<mspace width="thinmathspace"></mspace>' +
+      '<mi>i</mi>' +
+      '<mo stretchy="false">]</mo>' +
+      '<mo stretchy="false">→<!-- → --></mo>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="double-struck">N</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo>∪<!-- ∪ --></mo>' +
+      '<mo fence="false" stretchy="false">{</mo>' +
+      '<mn>0</mn>' +
+      '<mo fence="false" stretchy="false">}</mo>';
   var nemeth = '⠨⠝⠱⠈⠠⠵⠈⠷⠜⠒⠻⠊⠈⠾⠀⠫⠕⠀⠈⠠⠝⠨⠬⠨⠷⠴⠨⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5210,10 +5211,10 @@ sre.AataTest.prototype.testAataExpression_308 = function() {
  */
 sre.AataTest.prototype.testAataExpression_309 = function() {
   var mml = '<mi>π<!-- π --></mi>' +
-  '<mo>:</mo>' +
-  '<mi>S</mi>' +
-  '<mo stretchy="false">→<!-- → --></mo>' +
-  '<mi>S</mi>';
+      '<mo>:</mo>' +
+      '<mi>S</mi>' +
+      '<mo stretchy="false">→<!-- → --></mo>' +
+      '<mi>S</mi>';
   var nemeth = '⠨⠏⠱⠠⠎⠀⠫⠕⠀⠠⠎';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5234,11 +5235,11 @@ sre.AataTest.prototype.testAataExpression_310 = function() {
  */
 sre.AataTest.prototype.testAataExpression_311 = function() {
   var mml = '<mi>w</mi>' +
-  '<mo>=</mo>' +
-  '<mi>s</mi>' +
-  '<mi>cis</mi>' +
-  '<mo>⁡<!-- ⁡ --></mo>' +
-  '<mi>ϕ<!-- ϕ --></mi>';
+      '<mo>=</mo>' +
+      '<mi>s</mi>' +
+      '<mi>cis</mi>' +
+      '<mo>⁡<!-- ⁡ --></mo>' +
+      '<mi>ϕ<!-- ϕ --></mi>';
   var nemeth = '⠺⠀⠨⠅⠀⠎⠉⠊⠎⠨⠋';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5249,9 +5250,9 @@ sre.AataTest.prototype.testAataExpression_311 = function() {
  */
 sre.AataTest.prototype.testAataExpression_312 = function() {
   var mml = '<msup>' +
-  '<mi>A</mi>' +
-  '<mo>′</mo>' +
-  '</msup>';
+      '<mi>A</mi>' +
+      '<mo>′</mo>' +
+      '</msup>';
   var nemeth = '⠠⠁⠄';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5262,9 +5263,9 @@ sre.AataTest.prototype.testAataExpression_312 = function() {
  */
 sre.AataTest.prototype.testAataExpression_313 = function() {
   var mml = '<msup>' +
-  '<mi>g</mi>' +
-  '<mo>″</mo>' +
-  '</msup>';
+      '<mi>g</mi>' +
+      '<mo>″</mo>' +
+      '</msup>';
   var nemeth = '⠛⠄⠄';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5285,10 +5286,10 @@ sre.AataTest.prototype.testAataExpression_314 = function() {
  */
 sre.AataTest.prototype.testAataExpression_315 = function() {
   var mml = '<mi>f</mi>' +
-  '<mo>:</mo>' +
-  '<mi>A</mi>' +
-  '<mo stretchy="false">→<!-- → --></mo>' +
-  '<mi>B</mi>';
+      '<mo>:</mo>' +
+      '<mi>A</mi>' +
+      '<mo stretchy="false">→<!-- → --></mo>' +
+      '<mi>B</mi>';
   var nemeth = '⠋⠱⠠⠁⠀⠫⠕⠀⠠⠃';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5299,10 +5300,10 @@ sre.AataTest.prototype.testAataExpression_315 = function() {
  */
 sre.AataTest.prototype.testAataExpression_316 = function() {
   var mml = '<mi>f</mi>' +
-  '<mo>:</mo>' +
-  '<mi>a</mi>' +
-  '<mo stretchy="false">↦<!-- ↦ --></mo>' +
-  '<mi>b</mi>';
+      '<mo>:</mo>' +
+      '<mi>a</mi>' +
+      '<mo stretchy="false">↦<!-- ↦ --></mo>' +
+      '<mi>b</mi>';
   var nemeth = '⠋⠱⠁⠀⠫⠳⠒⠒⠕⠀⠃';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5313,8 +5314,8 @@ sre.AataTest.prototype.testAataExpression_316 = function() {
  */
 sre.AataTest.prototype.testAataExpression_317 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mo stretchy="false">⇐<!-- ⇐ --></mo>' +
-  '<mo stretchy="false">)</mo>';
+      '<mo stretchy="false">⇐<!-- ⇐ --></mo>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷⠀⠫⠪⠪⠒⠒⠀⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5335,9 +5336,9 @@ sre.AataTest.prototype.testAataExpression_318 = function() {
  */
 sre.AataTest.prototype.testAataExpression_319 = function() {
   var mml = '<mo>−<!-- − --></mo>' +
-  '<mn>3</mn>' +
-  '<mo>∉<!-- ∉ --></mo>' +
-  '<mi>E</mi>';
+      '<mn>3</mn>' +
+      '<mo>∉<!-- ∉ --></mo>' +
+      '<mi>E</mi>';
   var nemeth = '⠤⠒⠌⠈⠑⠠⠑';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5348,13 +5349,13 @@ sre.AataTest.prototype.testAataExpression_319 = function() {
  */
 sre.AataTest.prototype.testAataExpression_320 = function() {
   var mml = '<msup>' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mrow class="MJX-TeXAtom-ORD">' +
-  '<mi mathvariant="double-struck">C</mi>' +
-  '</mrow>' +
-  '</mrow>' +
-  '<mo>∗<!-- ∗ --></mo>' +
-  '</msup>';
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mi mathvariant="double-struck">C</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo>∗<!-- ∗ --></mo>' +
+      '</msup>';
   var nemeth = '⠈⠠⠉⠘⠈⠼';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5365,21 +5366,21 @@ sre.AataTest.prototype.testAataExpression_320 = function() {
  */
 sre.AataTest.prototype.testAataExpression_321 = function() {
   var mml = '<mo stretchy="false">(</mo>' +
-  '<mi>g</mi>' +
-  '<mo>∘<!-- ∘ --></mo>' +
-  '<mi>f</mi>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>x</mi>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo>=</mo>' +
-  '<mi>g</mi>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>f</mi>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>x</mi>' +
-  '<mo stretchy="false">)</mo>' +
-  '<mo stretchy="false">)</mo>';
+      '<mi>g</mi>' +
+      '<mo>∘<!-- ∘ --></mo>' +
+      '<mi>f</mi>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>x</mi>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo>=</mo>' +
+      '<mi>g</mi>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>f</mi>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>x</mi>' +
+      '<mo stretchy="false">)</mo>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠷⠛⠘⠨⠡⠋⠾⠷⠭⠾⠀⠨⠅⠀⠛⠷⠋⠷⠭⠾⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5390,8 +5391,8 @@ sre.AataTest.prototype.testAataExpression_321 = function() {
  */
 sre.AataTest.prototype.testAataExpression_322 = function() {
   var mml = '<mi>a</mi>' +
-  '<mo>∣<!-- ∣ --></mo>' +
-  '<mi>b</mi>';
+      '<mo>∣<!-- ∣ --></mo>' +
+      '<mi>b</mi>';
   var nemeth = '⠁⠳⠃';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5402,8 +5403,8 @@ sre.AataTest.prototype.testAataExpression_322 = function() {
  */
 sre.AataTest.prototype.testAataExpression_323 = function() {
   var mml = '<mi>p</mi>' +
-  '<mo>∤<!-- ∤ --></mo>' +
-  '<mi>a</mi>';
+      '<mo>∤<!-- ∤ --></mo>' +
+      '<mi>a</mi>';
   var nemeth = '⠏⠌⠳⠁';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5414,8 +5415,8 @@ sre.AataTest.prototype.testAataExpression_323 = function() {
  */
 sre.AataTest.prototype.testAataExpression_324 = function() {
   var mml = '<mi>a</mi>' +
-  '<mo>∧<!-- ∧ --></mo>' +
-  '<mi>b</mi>';
+      '<mo>∧<!-- ∧ --></mo>' +
+      '<mi>b</mi>';
   var nemeth = '⠁⠄⡳⠭⠆⠆⠆⠶⠄⠃';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5426,8 +5427,8 @@ sre.AataTest.prototype.testAataExpression_324 = function() {
  */
 sre.AataTest.prototype.testAataExpression_325 = function() {
   var mml = '<mi>a</mi>' +
-  '<mo>∨<!-- ∨ --></mo>' +
-  '<mi>b</mi>';
+      '<mo>∨<!-- ∨ --></mo>' +
+      '<mi>b</mi>';
   var nemeth = '⠁⠄⡳⠭⠆⠆⠆⠦⠄⠃';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5438,8 +5439,8 @@ sre.AataTest.prototype.testAataExpression_325 = function() {
  */
 sre.AataTest.prototype.testAataExpression_326 = function() {
   var mml = '<mi>A</mi>' +
-  '<mo>∪<!-- ∪ --></mo>' +
-  '<mi>B</mi>';
+      '<mo>∪<!-- ∪ --></mo>' +
+      '<mi>B</mi>';
   var nemeth = '⠠⠁⠨⠬⠠⠃';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5450,8 +5451,8 @@ sre.AataTest.prototype.testAataExpression_326 = function() {
  */
 sre.AataTest.prototype.testAataExpression_327 = function() {
   var mml = '<mi>x</mi>' +
-  '<mo>∼<!-- ∼ --></mo>' +
-  '<mi>y</mi>';
+      '<mo>∼<!-- ∼ --></mo>' +
+      '<mi>y</mi>';
   var nemeth = '⠭⠄⡳⠭⠆⠆⠒⠉⠄⠽';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5472,8 +5473,8 @@ sre.AataTest.prototype.testAataExpression_328 = function() {
  */
 sre.AataTest.prototype.testAataExpression_329 = function() {
   var mml = '<mi>a</mi>' +
-  '<mo>≠<!-- ≠ --></mo>' +
-  '<mn>0</mn>';
+      '<mo>≠<!-- ≠ --></mo>' +
+      '<mn>0</mn>';
   var nemeth = '⠁⠀⠌⠨⠅⠀⠴';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5494,14 +5495,14 @@ sre.AataTest.prototype.testAataExpression_330 = function() {
  */
 sre.AataTest.prototype.testAataExpression_331 = function() {
   var mml = '<mi>q</mi>' +
-  '<mo>≢</mo>' +
-  '<mn>1</mn>' +
-  '<mspace width="0.444em"></mspace>' +
-  '<mo stretchy="false">(</mo>' +
-  '<mi>mod</mi>' +
-  '<mspace width="0.333em"></mspace>' +
-  '<mi>p</mi>' +
-  '<mo stretchy="false">)</mo>';
+      '<mo>≢</mo>' +
+      '<mn>1</mn>' +
+      '<mspace width="0.444em"></mspace>' +
+      '<mo stretchy="false">(</mo>' +
+      '<mi>mod</mi>' +
+      '<mspace width="0.333em"></mspace>' +
+      '<mi>p</mi>' +
+      '<mo stretchy="false">)</mo>';
   var nemeth = '⠟⠄⡳⠭⠆⠆⠖⠆⠄⠂⠷⠍⠕⠙⠏⠾';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5512,8 +5513,8 @@ sre.AataTest.prototype.testAataExpression_331 = function() {
  */
 sre.AataTest.prototype.testAataExpression_332 = function() {
   var mml = '<mi>x</mi>' +
-  '<mo>≥<!-- ≥ --></mo>' +
-  '<mi>y</mi>';
+      '<mo>≥<!-- ≥ --></mo>' +
+      '<mi>y</mi>';
   var nemeth = '⠭⠀⠨⠂⠱⠀⠽';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5524,8 +5525,8 @@ sre.AataTest.prototype.testAataExpression_332 = function() {
  */
 sre.AataTest.prototype.testAataExpression_333 = function() {
   var mml = '<mi>B</mi>' +
-  '<mo>⊃<!-- ⊃ --></mo>' +
-  '<mi>A</mi>';
+      '<mo>⊃<!-- ⊃ --></mo>' +
+      '<mi>A</mi>';
   var nemeth = '⠠⠃⠸⠨⠂⠠⠁';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5536,8 +5537,8 @@ sre.AataTest.prototype.testAataExpression_333 = function() {
  */
 sre.AataTest.prototype.testAataExpression_334 = function() {
   var mml = '<mi>A</mi>' +
-  '<mo>⊄</mo>' +
-  '<mi>B</mi>';
+      '<mo>⊄</mo>' +
+      '<mi>B</mi>';
   var nemeth = '⠠⠁⠌⠸⠐⠅⠠⠃';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5548,10 +5549,10 @@ sre.AataTest.prototype.testAataExpression_334 = function() {
  */
 sre.AataTest.prototype.testAataExpression_335 = function() {
   var mml = '<mi>W</mi>' +
-  '<mo>=</mo>' +
-  '<mi>U</mi>' +
-  '<mo>⊕<!-- ⊕ --></mo>' +
-  '<mi>V</mi>';
+      '<mo>=</mo>' +
+      '<mi>U</mi>' +
+      '<mo>⊕<!-- ⊕ --></mo>' +
+      '<mi>V</mi>';
   var nemeth = '⠠⠺⠀⠨⠅⠀⠠⠥⠫⠉⠸⠫⠬⠻⠠⠧';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5562,8 +5563,8 @@ sre.AataTest.prototype.testAataExpression_335 = function() {
  */
 sre.AataTest.prototype.testAataExpression_336 = function() {
   var mml = '<mn>2</mn>' +
-  '<mo>⋅<!-- ⋅ --></mo>' +
-  '<mn>4</mn>';
+      '<mo>⋅<!-- ⋅ --></mo>' +
+      '<mn>4</mn>';
   var nemeth = '⠆⠡⠲';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5574,14 +5575,14 @@ sre.AataTest.prototype.testAataExpression_336 = function() {
  */
 sre.AataTest.prototype.testAataExpression_337 = function() {
   var mml = '<msub>' +
-  '<mi>Z</mi>' +
-  '<mn>3</mn>' +
-  '</msub>' +
-  '<mo>⋊<!-- ⋊ --></mo>' +
-  '<msub>' +
-  '<mi>Z</mi>' +
-  '<mn>4</mn>' +
-  '</msub>';
+      '<mi>Z</mi>' +
+      '<mn>3</mn>' +
+      '</msub>' +
+      '<mo>⋊<!-- ⋊ --></mo>' +
+      '<msub>' +
+      '<mi>Z</mi>' +
+      '<mn>4</mn>' +
+      '</msub>';
   var nemeth = '⠠⠵⠒⠄⡳⠭⠆⠆⠉⠁⠄⠠⠵⠲';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5592,9 +5593,9 @@ sre.AataTest.prototype.testAataExpression_337 = function() {
  */
 sre.AataTest.prototype.testAataExpression_338 = function() {
   var mml = '<mo>△<!-- △ --></mo>' +
-  '<mi>A</mi>' +
-  '<mi>B</mi>' +
-  '<mi>C</mi>';
+      '<mi>A</mi>' +
+      '<mi>B</mi>' +
+      '<mi>C</mi>';
   var nemeth = '⠫⠞⠠⠁⠠⠃⠠⠉';
   this.executeRuleTest(mml, nemeth);
 };
@@ -5605,8 +5606,8 @@ sre.AataTest.prototype.testAataExpression_338 = function() {
  */
 sre.AataTest.prototype.testAataExpression_339 = function() {
   var mml = '<mi>a</mi>' +
-  '<mo>⪯<!-- ⪯ --></mo>' +
-  '<mi>b</mi>';
+      '<mo>⪯<!-- ⪯ --></mo>' +
+      '<mi>b</mi>';
   var nemeth = '⠁⠄⡳⠭⠆⠁⠁⠋⠄⠃';
   this.executeRuleTest(mml, nemeth);
 };

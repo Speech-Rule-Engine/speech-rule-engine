@@ -39,4 +39,4 @@ sre.SpeechEnglishTest.testList = [
   sre.SummaryEnglishTest
 ];
 sre.SpeechEnglishTest.testList =
-  sre.SpeechEnglishTest.testList.concat(sre.ClearspeakEnglishTest.testList);
+    sre.SpeechEnglishTest.testList.concat(sre.ClearspeakEnglishTest.testList);

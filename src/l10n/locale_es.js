@@ -171,5 +171,5 @@ sre.Locale.es = {
   },
 
   NUMBERS: sre.Numbers.es.NUMBERS
-  
+
 };

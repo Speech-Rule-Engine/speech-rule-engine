@@ -39,4 +39,4 @@ sre.SpeechFrenchTest.testList = [
   sre.SummaryFrenchTest
 ];
 sre.SpeechFrenchTest.testList =
-  sre.SpeechFrenchTest.testList.concat(sre.ClearspeakFrenchTest.testList);
+    sre.SpeechFrenchTest.testList.concat(sre.ClearspeakFrenchTest.testList);

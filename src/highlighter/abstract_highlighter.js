@@ -61,6 +61,7 @@ sre.AbstractHighlighter = function() {
  */
 sre.AbstractHighlighter.ATTR = 'sre-highlight';
 
+
 /**
  * @override
  */
@@ -216,14 +217,14 @@ sre.AbstractHighlighter.prototype.unsetHighlighted = function(node) {
 // New colorization methods for v3.
 sre.AbstractHighlighter.prototype.colorizeAll = function(node) {
   var allNodes = sre.XpathUtil.evalXPath(
-    './/*[@' + sre.EnrichMathml.Attribute.ID + ']', node);
+      './/*[@' + sre.EnrichMathml.Attribute.ID + ']', node);
   allNodes.forEach(goog.bind(function(x) {this.colorize(x);}, this));
 };
 
 
 sre.AbstractHighlighter.prototype.uncolorizeAll = function(node) {
   var allNodes = sre.XpathUtil.evalXPath(
-    './/*[@' + sre.EnrichMathml.Attribute.ID + ']', node);
+      './/*[@' + sre.EnrichMathml.Attribute.ID + ']', node);
   allNodes.forEach(goog.bind(function(x) {this.uncolorize(x);}, this));
 };
 

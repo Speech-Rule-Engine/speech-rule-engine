@@ -21,8 +21,8 @@
 
 goog.provide('sre.SpeechGenerator');
 
-goog.require('sre.RebuildStree');
 goog.require('sre.DynamicCstr');
+goog.require('sre.RebuildStree');
 
 
 
@@ -66,6 +66,7 @@ sre.SpeechGenerator.prototype.setOptions = function(options) {};
  * @return {sre.DynamicCstr.Map} Dynamic constraint options of the generator.
  */
 sre.SpeechGenerator.prototype.getOptions = function() {};
+
 
 /**
  * Sets up or resets the speech generator.

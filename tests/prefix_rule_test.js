@@ -76,7 +76,7 @@ sre.PrefixRuleTest.prototype.executeTest = function(expr, id, result) {
 sre.PrefixRuleTest.prototype.getSpeech = function(mml) {
   var stree = sre.Semantic.getTreeFromString(mml);
   var node = stree.root.querySelectorAll(
-    goog.bind(function(x) {return x.id === this.id;}, this))[0];
+      goog.bind(function(x) {return x.id === this.id;}, this))[0];
   this.subExpr = node.mathmlTree;
   if (!node) {
     this.assert.fail();
@@ -93,7 +93,7 @@ sre.PrefixRuleTest.prototype.appendRuleExample = function(
     input, output, style, rest) {
   var sub = this.subExpr ? '<math>' + this.subExpr.toString() + '</math>' : '';
   sre.PrefixRuleTest.base(
-    this, 'appendRuleExample', input, output, style, [sub]);
+      this, 'appendRuleExample', input, output, style, [sub]);
 };
 
 

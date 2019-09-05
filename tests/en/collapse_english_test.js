@@ -45,7 +45,7 @@ sre.CollapseEnglishTest = function() {
    */
   this.semantics = true;
 
-    
+
   this.setActive('CollapseEnglish');
 };
 goog.inherits(sre.CollapseEnglishTest, sre.CollapseRuleTest);
@@ -89,8 +89,8 @@ sre.CollapseEnglishTest.prototype.testCollapsedBinomial = function() {
  * Testing Collapse Rule for abstr-cases.
  */
 sre.CollapseEnglishTest.prototype.testCollapsedCases = function() {
-  var mml = '<mfenced separators="" open="{" close=""><mtable>'
-      + '<mtr><mtd><mi>y</mi></mtd><mtd><mn>0</mn></mtd></mtr>' +
+  var mml = '<mfenced separators="" open="{" close=""><mtable>' +
+      '<mtr><mtd><mi>y</mi></mtd><mtd><mn>0</mn></mtd></mtr>' +
       '<mtr><mtd><mi>y</mi></mtd><mtd><mn>2</mn></mtd></mtr>' +
       '</mtable></mfenced>';
   this.executeRuleTest(mml, 'collapsed case statement with 2 cases', 'default');
@@ -488,8 +488,8 @@ sre.CollapseEnglishTest.prototype.testCollapsedVarMultiplication = function() {
 sre.CollapseEnglishTest.prototype.testCollapsedVarMultirel = function() {
   var mml = '<mi>a</mi><mo>=</mo><mo>&#x2026;</mo><mo>&#x2264;</mo><mi>b</mi>';
   this.executeRuleTest(
-    mml, 'collapsed relation sequence with variable number of elements',
-    'default');
+      mml, 'collapsed relation sequence with variable number of elements',
+      'default');
   this.executeRuleTest(mml, 'collapsed relation sequence', 'brief');
   this.executeRuleTest(mml, 'collapsed relation sequence', 'sbrief');
 };
@@ -513,8 +513,8 @@ sre.CollapseEnglishTest.prototype.testCollapsedVarPunctuated = function() {
 sre.CollapseEnglishTest.prototype.testCollapsedVarRelation = function() {
   var mml = '<mi>a</mi><mo>=</mo><mo>&#x2026;</mo><mo>=</mo><mi>b</mi>';
   this.executeRuleTest(
-    mml, 'collapsed equality sequence with variable number of elements',
-    'default');
+      mml, 'collapsed equality sequence with variable number of elements',
+      'default');
   this.executeRuleTest(mml, 'collapsed equality sequence', 'brief');
   this.executeRuleTest(mml, 'collapsed equality sequence', 'sbrief');
 };

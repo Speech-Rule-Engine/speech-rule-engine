@@ -3650,16 +3650,16 @@ sre.EnrichMathmlTest.prototype.testMathmlSimpleFuncsExplicitApp = function() {
       '<mi>f</mi><mo>&#x2061;</mo><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '<mo>)</mo><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>+</mo>' +
       '<mi>y</mi><mo>)</mo>',
-      '<math type="infixop" role="addition" id="22" children="19,21"' +
+      '<math type="infixop" role="addition" id="22" children="21,19"' +
       ' content="7">' +
-      '<mrow type="appl" role="simple function" id="19" children="0,15"' +
-      ' content="18,0" parent="22">' +
-      '<mi type="identifier" role="simple function" id="0" parent="19"' +
+      '<mrow type="appl" role="simple function" id="21" children="0,15"' +
+      ' content="20,0" parent="22">' +
+      '<mi type="identifier" role="simple function" id="0" parent="21"' +
       ' operator="appl">f</mi>' +
-      '<mo type="punctuation" role="application" id="18" parent="19"' +
+      '<mo type="punctuation" role="application" id="20" parent="21"' +
       ' added="true" operator="appl">⁡</mo>' +
       '<mrow type="fenced" role="leftright" id="15" children="14"' +
-      ' content="2,6" parent="19">' +
+      ' content="2,6" parent="21">' +
       '<mo type="fence" role="open" id="2" parent="15"' +
       ' operator="fenced">(</mo>' +
       '<mrow type="infixop" role="addition" id="14" children="3,5"' +
@@ -3675,13 +3675,14 @@ sre.EnrichMathmlTest.prototype.testMathmlSimpleFuncsExplicitApp = function() {
       '</mrow>' +
       '<mo type="operator" role="addition" id="7" parent="22"' +
       ' operator="infixop,+">+</mo>' +
-      '<mrow type="infixop" role="implicit" id="21" children="8,17"' +
-      ' content="20" parent="22">' +
-      '<mi type="identifier" role="latinletter" id="8" parent="21">f</mi>' +
-      '<mo type="operator" role="multiplication" id="20" parent="21"' +
-      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mrow type="appl" role="simple function" id="19" children="8,17"' +
+      ' content="18,8" parent="22">' +
+      '<mi type="identifier" role="simple function" id="8" parent="19"' +
+      ' operator="appl">f</mi>' +
+      '<mo type="punctuation" role="application" id="18" parent="19"' +
+      ' added="true" operator="appl">⁡</mo>' +
       '<mrow type="fenced" role="leftright" id="17" children="16"' +
-      ' content="9,13" parent="21">' +
+      ' content="9,13" parent="19">' +
       '<mo type="fence" role="open" id="9" parent="17"' +
       ' operator="fenced">(</mo>' +
       '<mrow type="infixop" role="addition" id="16" children="10,12"' +
@@ -3731,12 +3732,12 @@ sre.EnrichMathmlTest.prototype.testMathmlSimpleFuncsExplicitApp = function() {
       '<mo>&#x2061;</mo><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo>' +
       '<mo>+</mo><msup><msub><mi>f</mi><mi>m</mi></msub><mn>2</mn></msup>' +
       '<mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo>',
-      '<math type="infixop" role="addition" id="30" children="27,29"' +
+      '<math type="infixop" role="addition" id="30" children="29,27"' +
       ' content="11">' +
-      '<mrow type="appl" role="simple function" id="27" children="4,23"' +
-      ' content="26,0" parent="30">' +
+      '<mrow type="appl" role="simple function" id="29" children="4,23"' +
+      ' content="28,0" parent="30">' +
       '<msup type="superscript" role="simple function" id="4"' +
-      ' children="2,3" parent="27">' +
+      ' children="2,3" parent="29">' +
       '<msub type="subscript" role="simple function" id="2" children="0,1"' +
       ' parent="4">' +
       '<mi type="identifier" role="simple function" id="0" parent="2"' +
@@ -3745,10 +3746,10 @@ sre.EnrichMathmlTest.prototype.testMathmlSimpleFuncsExplicitApp = function() {
       '</msub>' +
       '<mn type="number" role="integer" id="3" parent="4">2</mn>' +
       '</msup>' +
-      '<mo type="punctuation" role="application" id="26" parent="27"' +
+      '<mo type="punctuation" role="application" id="28" parent="29"' +
       ' added="true" operator="appl">⁡</mo>' +
       '<mrow type="fenced" role="leftright" id="23" children="22"' +
-      ' content="6,10" parent="27">' +
+      ' content="6,10" parent="29">' +
       '<mo type="fence" role="open" id="6" parent="23"' +
       ' operator="fenced">(</mo>' +
       '<mrow type="infixop" role="addition" id="22" children="7,9"' +
@@ -3764,21 +3765,21 @@ sre.EnrichMathmlTest.prototype.testMathmlSimpleFuncsExplicitApp = function() {
       '</mrow>' +
       '<mo type="operator" role="addition" id="11" parent="30"' +
       ' operator="infixop,+">+</mo>' +
-      '<mrow type="infixop" role="implicit" id="29" children="16,25"' +
-      ' content="28" parent="30">' +
-      '<msup type="superscript" role="latinletter" id="16" children="14,15"' +
-      ' parent="29">' +
-      '<msub type="subscript" role="latinletter" id="14" children="12,13"' +
+      '<mrow type="appl" role="simple function" id="27" children="16,25"' +
+      ' content="26,12" parent="30">' +
+      '<msup type="superscript" role="simple function" id="16" children="14,15"' +
+      ' parent="27">' +
+      '<msub type="subscript" role="simple function" id="14" children="12,13"' +
       ' parent="16">' +
-      '<mi type="identifier" role="latinletter" id="12" parent="14">f</mi>' +
+      '<mi type="identifier" role="simple function" id="12" parent="14" operator="appl">f</mi>' +
       '<mi type="identifier" role="latinletter" id="13" parent="14">m</mi>' +
       '</msub>' +
       '<mn type="number" role="integer" id="15" parent="16">2</mn>' +
       '</msup>' +
-      '<mo type="operator" role="multiplication" id="28" parent="29"' +
-      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mo type="punctuation" role="application" id="26" parent="27"' +
+      ' added="true" operator="appl">⁡</mo>' +
       '<mrow type="fenced" role="leftright" id="25" children="24"' +
-      ' content="17,21" parent="29">' +
+      ' content="17,21" parent="27">' +
       '<mo type="fence" role="open" id="17" parent="25"' +
       ' operator="fenced">(</mo>' +
       '<mrow type="infixop" role="addition" id="24" children="18,20"' +

@@ -36,9 +36,6 @@ goog.require('sre.StoreUtil');
  */
 sre.ClearspeakRules = function() {
   sre.ClearspeakRules.base(this, 'constructor');
-
-  this.parser = new sre.ClearspeakPreferences.Parser();
-
 };
 goog.inherits(sre.ClearspeakRules, sre.MathStore);
 goog.addSingletonGetter(sre.ClearspeakRules);
@@ -105,16 +102,6 @@ sre.ClearspeakRules.addAnnotators_ = function() {
       sre.ClearspeakUtil.simpleExpression());
   sre.SemanticAnnotations.getInstance().register(
       sre.ClearspeakUtil.unitExpression());
-};
-
-
-/**
- * Changes the comparators.
- * @private
- */
-sre.ClearspeakRules.addComparator_ = function() {
-  sre.Engine.getInstance().comparators['clearspeak'] =
-      sre.ClearspeakPreferences.comparator;
 };
 
 
@@ -2352,8 +2339,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
 sre.ClearspeakRules.getInstance().initializer = [
   sre.ClearspeakRules.initCustomFunctions_,
   sre.ClearspeakRules.initClearspeakRules_,
-  sre.ClearspeakRules.addAnnotators_,
-  sre.ClearspeakRules.addComparator_
+  sre.ClearspeakRules.addAnnotators_
 ];
 
 

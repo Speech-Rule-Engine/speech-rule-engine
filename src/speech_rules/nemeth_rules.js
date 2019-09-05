@@ -56,16 +56,17 @@ sre.NemethRules.prototype.evaluateDefault = function(node) {
     if (0xD800 <= code && code <= 0xDBFF &&
         rest.length > 1 && !isNaN(rest.charCodeAt(1))) {
       descs.push(sre.AuditoryDescription.create(
-        {text: rest.slice(0, 2)}, {adjust: true, translate: true}));
+          {text: rest.slice(0, 2)}, {adjust: true, translate: true}));
       rest = rest.substring(2);
     } else {
       descs.push(sre.AuditoryDescription.create(
-        {text: chr}, {adjust: true, translate: true}));
+          {text: chr}, {adjust: true, translate: true}));
       rest = rest.substring(1);
     }
   }
   return descs;
 };
+
 
 /**
  * @type {sre.MathStore}
@@ -195,7 +196,7 @@ sre.NemethRules.initNemethRules_ = function() {
   defineRule(
       'font', 'default.default',
       '[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)',
-       'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
+      'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"');
 
   defineRule(
@@ -256,13 +257,13 @@ sre.NemethRules.initNemethRules_ = function() {
       'not(ancestor::fenced)');
 
   defineRule(
-    // TODO: Write tests to check that open/close frac is not repeated.
+      // TODO: Write tests to check that open/close frac is not repeated.
       'mixed-number', 'default.default',
       '[n] children/*[1]; [t] "⠸⠹"; [n] children/*[2]; [t] "⠸⠼"',
       'self::number', '@role="mixed"');
 
   defineRule(
-    // TODO: Fix this with multipurpose indicator.
+      // TODO: Fix this with multipurpose indicator.
       'number-with-chars', 'default.default',
       '[t] "⠼"; [m] CQFspaceoutNumber', 'self::number',
       '"" != translate(text(), "0123456789.,", "")',
@@ -376,14 +377,18 @@ sre.NemethRules.initNemethRules_ = function() {
 
   // Function rules
   defineRule(
-      'function-unknown', 'default.default',
-      '[n] children/*[1]; [n] children/*[2]',
+      'function-named', 'default.default',
+      '[n] children/*[1]; [t] "⠀"; [n] children/*[2]',
       'self::appl');
-
   defineRule(
       'function-prefix', 'default.default',
+      '[n] content/*[1]; [t] "⠀"; [n] children/*[1]',
+      'self::prefixop', 'content/*[1][@role="infix function"]');
+
+  defineRule(
+      'function-simple', 'default.default',
       '[n] children/*[1]; [n] children/*[2]',
-      'self::appl', 'children/*[1][@role="prefix function"]');
+      'self::appl', 'children/*[1][@role="simple function"]');
 
 
   // Fences rules
@@ -427,7 +432,7 @@ sre.NemethRules.initNemethRules_ = function() {
 
   // Special symbols
   defineRule(
-      'factorial', 'default.default', '[t] "⠯"', 'self::punctuation',
+      'factorial', 'default.default', '[t] "⠖"', 'self::punctuation',
       'text()="!"', 'name(preceding-sibling::*[1])!="text"');
   // defineRule(
   //     'minus', 'default.default', '[t] "minus"',
@@ -1159,7 +1164,7 @@ sre.NemethRules.initNemethRules_ = function() {
   defineRule(
       'overbar', 'default.default',
       '[t] "⠐"; [n] children/*[1]; [t] "⠣⠱⠻"',
-     'self::enclose', '@role="top"');
+      'self::enclose', '@role="top"');
   defineRule(
       'underbar', 'default.default',
       '[t] "⠐"; [n] children/*[1]; [t] "⠩⠱⠻"',
@@ -1181,8 +1186,8 @@ sre.NemethRules.initNemethRules_ = function() {
       'self::enclose', '@role="updiagonalstrike" or' +
       ' @role="downdiagonalstrike" or @role="horizontalstrike"');
   defineRule(
-    // TODO: Q: How to deal with "With" linearly. Currently we are
-    // repeating the opening.
+      // TODO: Q: How to deal with "With" linearly. Currently we are
+      // repeating the opening.
       'cancel', 'default.default',
       '[t] "⠪"; [n] children/*[1]/children/*[1]; [t] "⠪";' +
       ' [n] children/*[2]; [t] "⠻"',
@@ -1216,6 +1221,7 @@ sre.NemethRules.initNemethRules_ = function() {
       'end-punct', 'default.default',
       '[m] children/*',
       'self::punctuated', '@role="endpunct"');
+  // TODO: use punctuation indicator: "⠸"
 
   defineRule(
       'start-punct', 'default.default',
@@ -1276,14 +1282,14 @@ sre.NemethRules.initNemethRules_ = function() {
       'reference-sign', 'default.default',
       '[n] children/*[1]; [n] children/*[2]',
       'self::superscript', 'name(children/*[1])="text" or ' +
-        '(name(children/*[1])="punctuated" and children/*[1][@role="text"])',
+      '(name(children/*[1])="punctuated" and children/*[1][@role="text"])',
       'name(children/*[2])="operator" or name(children/*[2])="punctuation"'
   );
   defineRule(
       'reference-number', 'default.default',
       '[n] children/*[1]; [t] "⠈⠻"; [n] children/*[2]; [t] "⠐"',
       'self::superscript', 'name(children/*[1])="text" or ' +
-        '(name(children/*[1])="punctuated" and children/*[1][@role="text"])',
+      '(name(children/*[1])="punctuated" and children/*[1][@role="text"])',
       'name(children/*[2])="number"', 'children/*[2][@role="integer"]'
   );
 

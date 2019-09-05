@@ -91,6 +91,13 @@ sre.Walker.prototype.move = function(key) {};
 
 
 /**
+ * Updates speech in case of option changes.
+ * @param {sre.DynamicCstr.Map} options The dynamic constraint.
+ */
+sre.Walker.prototype.update = function(options) {};
+
+
+/**
  * Enumerator for different types of moves.
  * @enum {string}
  */
@@ -122,6 +129,7 @@ sre.Walker.Cursor;
  * @private
  */
 sre.Walker.STATE_ = {};
+
 
 /**
  * Removes a state for a particular node.

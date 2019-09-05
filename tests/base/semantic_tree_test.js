@@ -3627,9 +3627,10 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsExplicitApp = function() {
       '</fenced>' +
       '</children>' +
       '</appl>' +
-      '<infixop>\u2062' +
+      '<appl>' +
       '<content>' +
-      '<operator>\u2062</operator>' +
+      '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -3651,7 +3652,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsExplicitApp = function() {
       '</children>' +
       '</fenced>' +
       '</children>' +
-      '</infixop>' +
+      '</appl>' +
       '</children>' +
       '</infixop>');
 
@@ -3736,9 +3737,10 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsExplicitApp = function() {
       '</fenced>' +
       '</children>' +
       '</appl>' +
-      '<infixop>\u2062' +
+      '<appl>' +
       '<content>' +
-      '<operator>\u2062</operator>' +
+      '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<superscript>' +
@@ -3770,7 +3772,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsExplicitApp = function() {
       '</children>' +
       '</fenced>' +
       '</children>' +
-      '</infixop>' +
+      '</appl>' +
       '</children>' +
       '</infixop>');
 };

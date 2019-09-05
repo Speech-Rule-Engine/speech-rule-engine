@@ -55,7 +55,9 @@ sre.Engine = function() {
   /**
    * @type {!sre.DynamicCstr.Parser}
    */
-  this.parser = new sre.DynamicCstr.Parser(sre.DynamicCstr.DEFAULT_ORDER);
+  this.defaultParser = new sre.DynamicCstr.Parser(sre.DynamicCstr.DEFAULT_ORDER);
+  this.parser = this.defaultParser;
+  this.parsers = {};
 
   /**
    * @type {!sre.DynamicCstr}
@@ -337,7 +339,7 @@ sre.Engine.prototype.setDynamicCstr = function(opt_dynamic) {
   if (opt_dynamic) {
     var keys = Object.keys(opt_dynamic);
     for (var i = 0; i < keys.length; i++) {
-      var feature = /** @type{sre.DynamicCstr.Axis} */(keys[i]);
+      var feature = /** @type {sre.DynamicCstr.Axis} */(keys[i]);
       // Checks that we only have correct components.
       if (sre.DynamicCstr.DEFAULT_ORDER.indexOf(feature) !== -1) {
         var value = opt_dynamic[feature];
@@ -345,6 +347,7 @@ sre.Engine.prototype.setDynamicCstr = function(opt_dynamic) {
       }
     }
   }
+  sre.Engine.DOMAIN_TO_STYLES[this.domain] = this.style;
   var dynamic = [this.locale, this.modality, this.domain, this.style].join('.');
   var fallback = sre.DynamicProperties.create(
       [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]],
@@ -352,8 +355,17 @@ sre.Engine.prototype.setDynamicCstr = function(opt_dynamic) {
       [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN]],
       ['short', sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE]]);
   var comparator = this.comparators[this.domain];
+  var parser = this.parsers[this.domain];
+  this.parser = parser ? parser : this.defaultParser;
   this.dynamicCstr = this.parser.parse(dynamic);
   this.dynamicCstr.updateProperties(fallback.getProperties());
   this.comparator = comparator ? comparator() :
       new sre.DynamicCstr.DefaultComparator(this.dynamicCstr);
 };
+
+
+sre.Engine.DOMAIN_TO_STYLES = {
+  'mathspeak': 'default',
+  'clearspeak': 'default'
+};
+

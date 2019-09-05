@@ -14,13 +14,14 @@
 
 /**
  * @fileoverview Basic Testcases for Nemeth
- * 
+ *
  * @author Volker.Sorge@gmail.com (Volker Sorge)
  */
 
 goog.provide('sre.NemethBaseTest');
 
 goog.require('sre.AbstractRuleTest');
+
 
 
 /**
@@ -66,6 +67,7 @@ goog.inherits(sre.NemethBaseTest, sre.AbstractRuleTest);
  */
 sre.NemethBaseTest.prototype.test = function() {
 };
+
 
 /**
  * 01/07_000_x_00_002
@@ -959,7 +961,7 @@ sre.NemethBaseTest.prototype.test_02_02_009_c_00_001 = function() {
       '</mtr>' +
       '</mtable>' +
       '<mo>|</mo>' +
-      '</mrow>';  this.executeRuleTest(mml, nemeth);
+      '</mrow>'; this.executeRuleTest(mml, nemeth);
 };
 
 
@@ -1013,7 +1015,7 @@ sre.NemethBaseTest.prototype.test_02_02_009_d_00_001 = function() {
   var nemeth = '⠼⠒⠈⠠⠎⠼⠲';
   var mml = '<mn>3</mn>' +
       '<mi mathvariant="normal">§<!-- § --></mi>' +
-      '<mn>4</mn>';  this.executeRuleTest(mml, nemeth);
+      '<mn>4</mn>'; this.executeRuleTest(mml, nemeth);
 };
 
 
@@ -1051,7 +1053,7 @@ sre.NemethBaseTest.prototype.test_02_02_009_d_00_004 = function() {
       '<mn>15</mn>' +
       '<mn>1</mn>' +
       '</msup>' +
-      '<mo>.</mo>';  this.executeRuleTest(mml, nemeth);
+      '<mo>.</mo>'; this.executeRuleTest(mml, nemeth);
 };
 
 
