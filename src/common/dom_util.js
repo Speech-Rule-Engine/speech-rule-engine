@@ -50,7 +50,7 @@ sre.DomUtil.toArray = function(nodeList) {
  * @private
  */
 sre.DomUtil.trimInput_ = function(input) {
-  input = input.replace(/&nbsp;/g, ' ');
+  input = input.replace(/&nbsp;/g, ' ');
   return input.replace(/>\s+</g, '><').trim();
 };
 
@@ -133,6 +133,19 @@ sre.DomUtil.replaceNode = function(oldNode, newNode) {
  */
 sre.DomUtil.createElement = function(tag) {
   return sre.SystemExternal.document.createElement(tag);
+};
+
+
+/**
+ * Creates a node in the current document in a given namespace. This is a
+ * wrapper function that ensures that a node is created in the correct document
+ * tree.
+ * @param {string} url The namespace url for the node.
+ * @param {string} tag The tagname of the node.
+ * @return {!Element} The newly create node.
+ */
+sre.DomUtil.createElementNS = function(url, tag) {
+  return sre.SystemExternal.document.createElementNS(url, tag);
 };
 
 

@@ -171,7 +171,8 @@ sre.EnrichMathml.walkTree = function(semantic) {
   newNode = sre.EnrichMathml.rewriteMfenced(newNode);
   sre.EnrichMathml.mergeChildren_(newNode, childrenList);
   sre.EnrichMathml.setAttributes(newNode, semantic);
-  return sre.EnrichMathml.ascendNewNode(newNode);
+  let res = sre.EnrichMathml.ascendNewNode(newNode);
+  return res;
 };
 
 
@@ -842,6 +843,18 @@ sre.EnrichMathml.formattedOutput_ = function(element, name, wiki) {
 sre.EnrichMathml.removeAttributePrefix = function(mml) {
   return mml.toString().replace(
       new RegExp(sre.EnrichMathml.ATTRIBUTE_PREFIX_, 'g'), '');
+};
+
+
+/**
+ * Creates an data semantic attribute by adding the correct prefix.
+ * @param {string} attr The attribute.
+ * @return {sre.EnrichMathml.Attribute} The completed attribute.
+ */
+sre.EnrichMathml.addPrefix = function(attr) {
+  var upcase = attr.toUpperCase();
+  return sre.EnrichMathml.Attribute[upcase] ||
+      (sre.EnrichMathml.ATTRIBUTE_PREFIX_ + attr);
 };
 
 

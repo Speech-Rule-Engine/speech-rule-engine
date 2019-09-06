@@ -560,8 +560,8 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   );
   defineRule(
       'abstr-relation-seq', 'mathspeak.brief',
-      '[t] @role (grammar:localRole); [t] "séquence";'
-      + ' [n] . (engine:style=feminine)',
+      '[t] @role (grammar:localRole); [t] "séquence";' +
+      ' [n] . (engine:style=feminine)',
       'self::relseq', 'count(./children/*)>2'
   );
   defineSpecialisedRule(

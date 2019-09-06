@@ -81,8 +81,8 @@ sre.SummaryFrenchTest.prototype.testAbstrBinomial = function() {
  * Testing Summary Rule for abstr-cases.
  */
 sre.SummaryFrenchTest.prototype.testAbstrCases = function() {
-  var mml = '<mfenced separators="" open="{" close=""><mtable>'
-      + '<mtr><mtd><mi>y</mi></mtd><mtd><mn>0</mn></mtd></mtr>' +
+  var mml = '<mfenced separators="" open="{" close=""><mtable>' +
+      '<mtr><mtd><mi>y</mi></mtd><mtd><mn>0</mn></mtd></mtr>' +
       '<mtr><mtd><mi>y</mi></mtd><mtd><mn>2</mn></mtd></mtr>' +
       '</mtable></mfenced>';
   this.executeRuleTest(mml, 'déclaration de cas avec 2 cas', 'default');

@@ -41,8 +41,6 @@ sre.ClearspeakRuleTest = function() {
    * @override
    */
   this.semantics = true;
-
-  this.oldParser = null;
 };
 goog.inherits(sre.ClearspeakRuleTest, sre.AbstractRuleTest);
 
@@ -53,8 +51,6 @@ goog.inherits(sre.ClearspeakRuleTest, sre.AbstractRuleTest);
 sre.ClearspeakRuleTest.prototype.setUpTest = function() {
   sre.System.getInstance().setupEngine(
       {markup: sre.Engine.Markup.PUNCTUATION});
-  this.oldParser = sre.Engine.getInstance().parser;
-  sre.Engine.getInstance().parser = new sre.ClearspeakPreferences.Parser();
 };
 
 
@@ -64,7 +60,5 @@ sre.ClearspeakRuleTest.prototype.setUpTest = function() {
 sre.ClearspeakRuleTest.prototype.tearDownTest = function() {
   sre.System.getInstance().setupEngine(
       {markup: sre.Engine.Markup.NONE});
-  sre.Engine.getInstance().parser =
-      /** @type{!sre.DynamicCstr.Parser} */(this.oldParser);
   sre.ClearspeakRuleTest.base(this, 'tearDownTest');
 };

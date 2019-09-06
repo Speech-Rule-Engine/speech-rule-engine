@@ -94,10 +94,11 @@ sre.SpeechGeneratorUtil.retrieveSpeech = function(semantic) {
  * Add speech as a semantic attributes in a MathML node.
  * @param {!Element} mml The MathML node.
  * @param {!sre.SemanticNode} semantic The semantic tree node.
+ * @param {string=} opt_modality The speech modality.
  */
-sre.SpeechGeneratorUtil.addSpeech = function(mml, semantic) {
+sre.SpeechGeneratorUtil.addSpeech = function(mml, semantic, opt_modality) {
   var speech = sre.SpeechGeneratorUtil.retrieveSpeech(semantic);
-  mml.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
+  mml.setAttribute(opt_modality || sre.EnrichMathml.Attribute.SPEECH, speech);
 };
 
 
@@ -137,7 +138,7 @@ sre.SpeechGeneratorUtil.computePrefix_ = function(semantic) {
   return node ?
       sre.SpeechRuleEngine.getInstance().runInSetting(
       {'modality': 'prefix', 'domain': 'default', 'style': 'default',
-       'strict': true, 'cache': false, 'speech': true},
+        'strict': true, 'cache': false, 'speech': true},
       function() {return sre.SpeechRuleEngine.getInstance().evaluateNode(node);}
       ) :
       [];
@@ -173,6 +174,11 @@ sre.SpeechGeneratorUtil.connectMactions = function(node, mml, stree) {
     // Otherwise, we take the existing child, which is actually the collapsed
     // maction that needs to be linked into the node.
     cspan = span.childNodes[0];
+    // If this node was already a highlighting rect we ignore it. This means
+    // some other walker has introduced it already (e.g. in MJ3).
+    if (cspan.getAttribute('sre-highlighter-added')) {
+      continue;
+    }
     // Set parent pointer if necessary.
     var pid = lchild.getAttribute(sre.EnrichMathml.Attribute.PARENT);
     if (pid) {

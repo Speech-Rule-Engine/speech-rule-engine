@@ -46,7 +46,7 @@ goog.inherits(sre.CaseTensor, sre.CaseMultiindex);
  */
 sre.CaseTensor.test = function(semantic) {
   return !!semantic.mathmlTree &&
-    semantic.type === sre.SemanticAttr.Type.TENSOR;
+      semantic.type === sre.SemanticAttr.Type.TENSOR;
 };
 
 

@@ -39,8 +39,6 @@ sre.CaseMultiscripts = function(semantic) {
 goog.inherits(sre.CaseMultiscripts, sre.CaseMultiindex);
 
 
-
-
 /**
  * Applicability test of the case.
  * @param {!sre.SemanticNode} semantic The semantic node.

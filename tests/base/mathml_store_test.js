@@ -41,7 +41,7 @@ sre.MathmlStoreTest = function() {
 
   this.cstr =
       new sre.DynamicCstr({locale: 'en', modality: 'speech',
-                           domain: 'default', style: 'default'});
+        domain: 'default', style: 'default'});
 
   sre.Engine.getInstance().comparator =
       new sre.DynamicCstr.DefaultComparator(

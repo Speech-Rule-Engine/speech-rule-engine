@@ -75,6 +75,12 @@ sre.SpeechRuleEngine = function() {
    */
   this.combinedStores_ = {};
 
+  /**
+   * Default evaluators collated by locale and modality.
+   * @type {Object.<Object.<function(!Node): !Array<sre.AuditoryDescription>>>}
+   */
+  this.evaluators_ = {};
+
   // sre.Debugger.getInstance().init();
 
   sre.Engine.registerTest(
@@ -238,7 +244,7 @@ sre.SpeechRuleEngine.prototype.evaluateNode_ = function(node) {
 sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
   var engine = sre.Engine.getInstance();
   sre.Debugger.getInstance().output(
-    engine.mode !== sre.Engine.Mode.HTTP ? node.toString() : node);
+      engine.mode !== sre.Engine.Mode.HTTP ? node.toString() : node);
   if (engine.cache) {
     var result = this.getCacheForNode_(node);
     if (result) {
@@ -252,7 +258,7 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
   var rule = this.activeStore_.lookupRule(node, engine.dynamicCstr);
   if (!rule) {
     if (engine.strict) return [];
-    result = this.activeStore_.evaluateDefault(node);
+    result = this.getEvaluator(engine.locale, engine.modality)(node);
     if (node.attributes) {
       this.addPersonality_(result, {}, false, node);
     }
@@ -570,9 +576,7 @@ sre.SpeechRuleEngine.prototype.combineStores_ = function(ruleSets) {
     var store = ruleSets[name];
     store.initialize();
     store.getSpeechRules().forEach(function(x) {combined.trie.addRule(x);});
-    // combined.contextFunctions.addStore(store.contextFunctions);
-    // combined.customQueries.addStore(store.customQueries);
-    // combined.customStrings.addStore(store.customStrings);
+    this.addEvaluator(store);
   }
   combined.setSpeechRules(combined.trie.collectRules());
   this.combinedStores_[this.combinedStoreName_(Object.keys(ruleSets))] =
@@ -647,8 +651,8 @@ sre.SpeechRuleEngine.prototype.processGrammar = function(context, node, grammar)
 
 /**
  * Enriches the dynamic constraint with default properties.
+ * @private
  */
- // * @private
 // TODO: Exceptions and ordering between locale and modality?
 //       E.g, missing clearspeak defaults to mathspeak.
 //       What if there is no default for a particular locale or modality?
@@ -674,12 +678,12 @@ sre.SpeechRuleEngine.prototype.updateConstraint_ = function() {
   }
   props[sre.DynamicCstr.Axis.LOCALE] = [locale];
   props[sre.DynamicCstr.Axis.MODALITY] =
-    // TODO: Improve, only summary allows fallback to speech.
-    [modality !== 'summary' ?
-     modality : sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY]];
+      // TODO: Improve, only summary allows fallback to speech.
+      [modality !== 'summary' ?
+       modality : sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY]];
   props[sre.DynamicCstr.Axis.DOMAIN] =
-    [modality !== 'speech' ?
-     sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN] : domain];
+      [modality !== 'speech' ?
+       sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN] : domain];
   var order = dynamic.getOrder();
   for (var i = 0, axis; axis = order[i]; i++) {
     if (!props[axis]) {
@@ -712,26 +716,45 @@ sre.SpeechRuleEngine.prototype.makeSet_ = function(value, preferences) {
 };
 
 
-// sre.SpeechRuleEngine.prototype.enumerate = function() {
-//   var root = sre.SpeechRuleEngine.getInstance().activeStore_.trie.root;
-
-// };
-
-
-sre.SpeechRuleEngine.prototype.enumerate = function() {
-  var root = this.activeStore_.trie.root;
-  return this.enumerate_(root);
+/**
+ * Adds an evaluation method by locale and modality.
+ * @param {sre.SpeechRuleEvaluator} store The store whose evaluation method is
+ *     added.
+ */
+sre.SpeechRuleEngine.prototype.addEvaluator = function(store) {
+  var fun = goog.bind(store.evaluateDefault, store);
+  var loc = this.evaluators_[store.locale];
+  if (loc) {
+    loc[store.modality] = fun;
+    return;
+  }
+  let mod = {};
+  mod[store.modality] = fun;
+  this.evaluators_[store.locale] = mod;
 };
 
 
-sre.SpeechRuleEngine.prototype.enumerate_ = function(node) {
-  var result = {};
-  var children = node.getChildren();
-  for (var i = 0, child; child = children[i]; i++) {
-    if (child.kind !== sre.TrieNode.Kind.DYNAMIC) {
-      continue;
-    }
-    result[child.getConstraint()] = this.enumerate_(child);
-  }
-  return result;
+/**
+ * Selects a default evaluation method by locale and modality. If none exists it
+ * takes the default evaluation method of the active combined store.
+ * @param {string} locale The locale.
+ * @param {string} modality The modality.
+ * @return {!function(!Node): !Array<sre.AuditoryDescription>} The evaluation
+ *     method.
+ */
+sre.SpeechRuleEngine.prototype.getEvaluator = function(locale, modality) {
+  var loc = this.evaluators_[locale];
+  var fun = loc ? loc[modality] : null;
+  return fun ? fun : goog.bind(this.activeStore_.evaluateDefault, this.activeStore_);
+};
+
+
+/**
+ * Collates information on dynamic constraint values of the currently active
+ * trie of the engine.
+ * @param {Object=} opt_info Initial dynamic constraint information.
+ * @return {Object} The collated information.
+ */
+sre.SpeechRuleEngine.prototype.enumerate = function(opt_info) {
+  return this.activeStore_.trie.enumerate(opt_info);
 };

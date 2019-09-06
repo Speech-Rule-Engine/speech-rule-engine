@@ -22,6 +22,7 @@
 goog.provide('sre.HtmlHighlighter');
 
 goog.require('sre.AbstractHighlighter');
+goog.require('sre.DomUtil');
 
 
 
@@ -64,7 +65,7 @@ sre.HtmlHighlighter.prototype.highlightNode = function(node) {
     // vertical and horizontal padding
     var vpad = 0.05;
     var hpad = 0;
-    var span = document.createElement('span');
+    var span = sre.DomUtil.createElement('span');
     var left = parseFloat(node.style.paddingLeft || '0');
     span.style.backgroundColor = color.background;
     span.style.opacity = color.alphaback.toString();
