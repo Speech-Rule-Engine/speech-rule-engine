@@ -32,7 +32,9 @@ goog.require('sre.SpeechGeneratorUtil');
  * @constructor
  * @extends {sre.AbstractSpeechGenerator}
  */
-sre.SummarySpeechGenerator = function() { };
+sre.SummarySpeechGenerator = function() {
+  sre.SummarySpeechGenerator.base(this, 'constructor');
+};
 goog.inherits(sre.SummarySpeechGenerator, sre.AbstractSpeechGenerator);
 
 

@@ -30,11 +30,10 @@ goog.require('sre.DomUtil');
 goog.require('sre.DynamicCstr');
 goog.require('sre.Engine');
 goog.require('sre.SpeechRule');
+goog.require('sre.SpeechRuleContext');
 goog.require('sre.SpeechRuleEvaluator');
-goog.require('sre.SpeechRuleFunctions');
 goog.require('sre.SpeechRuleStore');
 goog.require('sre.Trie');
-goog.require('sre.XpathUtil');
 
 
 
@@ -44,23 +43,17 @@ goog.require('sre.XpathUtil');
  * @implements {sre.SpeechRuleStore}
  */
 sre.BaseRuleStore = function() {
-  /**
-   * Set of custom query functions for the store.
-   * @type {sre.SpeechRuleFunctions.CustomQueries}
-   */
-  this.customQueries = new sre.SpeechRuleFunctions.CustomQueries();
 
   /**
-   * Set of custom strings for the store.
-   * @type {sre.SpeechRuleFunctions.CustomStrings}
+   * Context for custom functions of this rule store.
+   * @type {sre.SpeechRuleContext}
    */
-  this.customStrings = new sre.SpeechRuleFunctions.CustomStrings();
+  this.context = new sre.SpeechRuleContext();
 
-  /**
-   * Set of context functions for the store.
-   * @type {sre.SpeechRuleFunctions.ContextFunctions}
-   */
-  this.contextFunctions = new sre.SpeechRuleFunctions.ContextFunctions();
+  // TODO: Temporary shortcuts for ease of goog.bind in store definitions.
+  this.customQueries = this.context.customQueries;
+  this.customStrings = this.context.customStrings;
+  this.contextFunctions = this.context.contextFunctions;
 
   /**
    * Set of speech rules in the store.
@@ -92,6 +85,12 @@ sre.BaseRuleStore = function() {
    * @type {string}
    */
   this.locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
+
+  /**
+   * Default modality.
+   * @type {string}
+   */
+  this.modality = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY];
 
   /**
    * @type {boolean}
@@ -146,6 +145,7 @@ sre.BaseRuleStore.prototype.defineRule = function(
  * @override
  */
 sre.BaseRuleStore.prototype.addRule = function(rule) {
+  rule.context = this.context;
   this.trie.addRule(rule);
   this.speechRules_.unshift(rule);
 };
@@ -198,13 +198,13 @@ sre.BaseRuleStore.prototype.evaluateDefault = function(node) {
  */
 sre.BaseRuleStore.prototype.debugSpeechRule = function(rule, node) {
   var prec = rule.precondition;
-  var queryResult = this.applyQuery(node, prec.query);
+  var queryResult = rule.context.applyQuery(node, prec.query);
   sre.Debugger.getInstance().output(
       prec.query, queryResult ? queryResult.toString() : queryResult);
   prec.constraints.forEach(
       goog.bind(function(cstr) {
         sre.Debugger.getInstance().output(
-            cstr, this.applyConstraint(node, cstr));},
+            cstr, rule.context.applyConstraint(node, cstr));},
       this));
 };
 
@@ -233,64 +233,6 @@ sre.BaseRuleStore.prototype.removeDuplicates = function(rule) {
       this.speechRules_.splice(i, 1);
     }
   }
-};
-
-
-/**
- * Checks if we have a custom query and applies it. Otherwise returns null.
- * @param {!Node} node The initial node.
- * @param {string} funcName A function name.
- * @return {Array.<Node>} The list of resulting nodes.
- */
-sre.BaseRuleStore.prototype.applyCustomQuery = function(
-    node, funcName) {
-  var func = this.customQueries.lookup(funcName);
-  return func ? func(node) : null;
-};
-
-
-/**
- * Applies either an Xpath selector or a custom query to the node
- * and returns the resulting node list.
- * @param {!Node} node The initial node.
- * @param {string} expr An Xpath expression string or a name of a custom
- *     query.
- * @return {Array.<Node>} The list of resulting nodes.
- */
-sre.BaseRuleStore.prototype.applySelector = function(node, expr) {
-  var result = this.applyCustomQuery(node, expr);
-  return result || sre.XpathUtil.evalXPath(expr, node);
-};
-
-
-/**
- * Applies either an Xpath selector or a custom query to the node
- * and returns the first result.
- * @param {!Node} node The initial node.
- * @param {string} expr An Xpath expression string or a name of a custom
- *     query.
- * @return {Node} The resulting node.
- */
-sre.BaseRuleStore.prototype.applyQuery = function(node, expr) {
-  var results = this.applySelector(node, expr);
-  if (results.length > 0) {
-    return results[0];
-  }
-  return null;
-};
-
-
-/**
- * Applies either an Xpath selector or a custom query to the node and returns
- * true if the application yields a non-empty result.
- * @param {!Node} node The initial node.
- * @param {string} expr An Xpath expression string or a name of a custom
- *     query.
- * @return {boolean} True if application was successful.
- */
-sre.BaseRuleStore.prototype.applyConstraint = function(node, expr) {
-  var result = this.applyQuery(node, expr);
-  return !!result || sre.XpathUtil.evaluateBoolean(expr, node);
 };
 
 
@@ -389,5 +331,5 @@ sre.BaseRuleStore.prototype.setSpeechRules = function(rules) {
  * @return {!sre.DynamicCstr} The parsed constraint including locale.
  */
 sre.BaseRuleStore.prototype.parseCstr = function(cstr) {
-  return this.parser.parse(this.locale + '.' + cstr);
+  return this.parser.parse(this.locale + '.' + this.modality + '.' + cstr);
 };

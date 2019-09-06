@@ -8,7 +8,8 @@
         "short": "factorial"
       },
       "mathspeak": {
-        "default": "exclamation-mark"
+        "default": "exclamation-mark",
+        "nemeth": "⠸⠖"
       },
       "clearspeak": {
         "default": "exclamation mark"
@@ -42,7 +43,8 @@
       "mathspeak": {
         "default": "number-sign",
         "brief": "num-sign",
-        "sbrief": "num-sign"
+        "sbrief": "num-sign",
+        "nemeth": "⠨⠼"
       },
       "clearspeak": {
         "default": "number sign"
@@ -58,7 +60,8 @@
         "short": "dollar"
       },
       "mathspeak": {
-        "default": "dollar-sign"
+        "default": "dollar-sign",
+        "nemeth": "⠈⠎"
       },
       "clearspeak": {
         "default": "dollar sign"
@@ -74,7 +77,8 @@
         "short": "percent"
       },
       "mathspeak": {
-        "default": "percent-sign"
+        "default": "percent-sign",
+        "nemeth": "⠈⠴"
       },
       "clearspeak": {
         "default": "percent sign"
@@ -87,6 +91,9 @@
     "mappings": {
       "default": {
         "default": "ampersand"
+      },
+      "mathspeak": {
+        "nemeth": "⠸⠯"
       }
     },
     "key": "0026"
@@ -99,7 +106,8 @@
         "alternative": "apostrophe quote"
       },
       "mathspeak": {
-        "default": "prime"
+        "default": "prime",
+        "nemeth": "⠄"
       }
     },
     "key": "0027"
@@ -109,6 +117,9 @@
     "mappings": {
       "default": {
         "default": "asterisk"
+      },
+      "mathspeak": {
+        "nemeth": "⠈⠼"
       }
     },
     "key": "002A"
@@ -119,6 +130,9 @@
       "default": {
         "default": "plus sign",
         "short": "plus"
+      },
+      "mathspeak": {
+        "nemeth": "⠬"
       }
     },
     "key": "002B"
@@ -128,6 +142,9 @@
     "mappings": {
       "default": {
         "default": "comma"
+      },
+      "mathspeak": {
+        "nemeth": "⠠"
       }
     },
     "key": "002C"
@@ -140,7 +157,8 @@
         "short": "minus"
       },
       "mathspeak": {
-        "default": "hyphen"
+        "default": "hyphen",
+        "nemeth": "⠸⠤"
       }
     },
     "key": "002D"
@@ -153,7 +171,8 @@
         "alternative": "period"
       },
       "mathspeak": {
-        "default": "period"
+        "default": "period",
+        "nemeth": "⠸⠲"
       }
     },
     "key": "002E"
@@ -166,7 +185,8 @@
         "alternative": "slash"
       },
       "mathspeak": {
-        "default": "slash"
+        "default": "slash",
+        "nemeth": "⠸⠌"
       },
       "emacspeak": {
         "default": "slash"
@@ -179,6 +199,9 @@
     "mappings": {
       "default": {
         "default": "colon"
+      },
+      "mathspeak": {
+        "nemeth": "⠸⠒"
       }
     },
     "key": "003A"
@@ -188,6 +211,9 @@
     "mappings": {
       "default": {
         "default": "semicolon"
+      },
+      "mathspeak": {
+        "nemeth": "⠸⠆"
       }
     },
     "key": "003B"
@@ -200,7 +226,8 @@
         "short": "less than"
       },
       "mathspeak": {
-        "default": "less-than"
+        "default": "less-than",
+        "nemeth": "⠀⠐⠅⠀"
       },
       "clearspeak": {
         "default": "is less than"
@@ -214,6 +241,9 @@
       "default": {
         "default": "equals sign",
         "short": "equals"
+      },
+      "mathspeak": {
+        "nemeth": "⠀⠨⠅⠀"
       }
     },
     "key": "003D"
@@ -226,7 +256,8 @@
         "short": "greater than"
       },
       "mathspeak": {
-        "default": "greater-than"
+        "default": "greater-than",
+        "nemeth": "⠀⠨⠂⠀"
       },
       "clearspeak": {
         "default": "is greater than"
@@ -241,7 +272,8 @@
         "default": "question mark"
       },
       "mathspeak": {
-        "default": "question-mark"
+        "default": "question-mark",
+        "nemeth": "⠸⠦"
       },
       "clearspeak": {
         "default": "question mark"
@@ -257,7 +289,8 @@
         "short": "at"
       },
       "mathspeak": {
-        "default": "commercial-at"
+        "default": "commercial-at",
+        "nemeth": "⠈⠁"
       }
     },
     "key": "0040"
@@ -572,7 +605,8 @@
         "short": "plus minus"
       },
       "mathspeak": {
-        "default": "plus-or-minus"
+        "default": "plus-or-minus",
+        "nemeth": "⠬⠤"
       },
       "clearspeak": {
         "default": "plus or minus"
@@ -2037,7 +2071,8 @@
         "default": "n ary summation"
       },
       "mathspeak": {
-        "default": "sigma-summation"
+        "default": "sigma-summation",
+        "nemeth": "⠨⠠⠎"
       },
       "clearspeak": {
         "default": "sum"
@@ -2051,6 +2086,9 @@
       "default": {
         "default": "minus sign",
         "short": "minus"
+      },
+      "mathspeak": {
+        "nemeth": "⠤"
       }
     },
     "key": "2212"
@@ -3036,7 +3074,8 @@
         "alternative": "less than or equals"
       },
       "mathspeak": {
-        "default": "less-than-or-equal-to"
+        "default": "less-than-or-equal-to",
+        "nemeth": "⠀⠐⠅⠱⠀"
       },
       "clearspeak": {
         "default": "is less than or equal to"
@@ -3052,7 +3091,8 @@
         "alternative": "greater than or equals"
       },
       "mathspeak": {
-        "default": "greater-than-or-equal-to"
+        "default": "greater-than-or-equal-to",
+        "nemeth": "⠀⠨⠂⠱⠀"
       },
       "clearspeak": {
         "default": "is greater than or equal to"
@@ -3068,7 +3108,8 @@
         "alternative": "less than over equals"
       },
       "mathspeak": {
-        "default": "less-than-over-equals"
+        "default": "less-than-over-equals",
+        "nemeth": "⠀⠐⠅⠨⠅⠀"
       },
       "clearspeak": {
         "default": "is less than over equals"
@@ -3084,7 +3125,8 @@
         "alternative": "greater than over equals"
       },
       "mathspeak": {
-        "default": "greater-than-over-equals"
+        "default": "greater-than-over-equals",
+        "nemeth": "⠀⠨⠂⠨⠅⠀"
       },
       "clearspeak": {
         "default": "is greater than over equals"
@@ -3100,7 +3142,8 @@
         "alternative": "less than but not equals"
       },
       "mathspeak": {
-        "default": "less-than-but-not-equals"
+        "default": "less-than-but-not-equals",
+        "nemeth": "⠀⠐⠅⠌⠨⠅⠀"
       },
       "clearspeak": {
         "default": "is less than but not equals"
@@ -3116,7 +3159,8 @@
         "alternative": "greater than but not equals"
       },
       "mathspeak": {
-        "default": "greater-than-but-not-equals"
+        "default": "greater-than-but-not-equals",
+        "nemeth": "⠀⠨⠂⠌⠨⠅⠀"
       },
       "clearspeak": {
         "default": "is greater than but not equals"
@@ -3132,7 +3176,8 @@
         "alternative": "much less than"
       },
       "mathspeak": {
-        "default": "much-less-than"
+        "default": "much-less-than",
+        "nemeth": "⠀⠐⠅⠈⠐⠅⠻⠀"
       },
       "clearspeak": {
         "default": "is much less than"
@@ -3148,7 +3193,8 @@
         "alternative": "much greater than"
       },
       "mathspeak": {
-        "default": "much-greater-than"
+        "default": "much-greater-than",
+        "nemeth": "⠀⠨⠂⠈⠨⠂⠻⠀"
       },
       "clearspeak": {
         "default": "is much greater than"
@@ -3172,7 +3218,8 @@
         "default": "not equivalent to"
       },
       "mathspeak": {
-        "default": "not-equivalent-to"
+        "default": "not-equivalent-to",
+        "nemeth": "⠀⠌⠈⠣⠠⠣⠀"
       },
       "clearspeak": {
         "default": "is not equivalent to"
@@ -3188,7 +3235,8 @@
         "alternative": "not less than"
       },
       "mathspeak": {
-        "default": "not-less-than"
+        "default": "not-less-than",
+        "nemeth": "⠀⠌⠐⠅⠀"
       },
       "clearspeak": {
         "default": "is not less than"
@@ -3204,7 +3252,8 @@
         "alternative": "not greater than"
       },
       "mathspeak": {
-        "default": "not-greater-than"
+        "default": "not-greater-than",
+        "nemeth": "⠀⠌⠨⠂⠀"
       },
       "clearspeak": {
         "default": "is not greater than"
@@ -3220,7 +3269,8 @@
         "alternative": "neither less than nor equals"
       },
       "mathspeak": {
-        "default": "neither-less-than-nor-equal-to"
+        "default": "neither-less-than-nor-equal-to",
+        "nemeth": "⠀⠌⠐⠅⠱⠀"
       },
       "clearspeak": {
         "default": "is neither less than nor equal to"
@@ -3236,7 +3286,8 @@
         "alternative": "neither greater than nor equals"
       },
       "mathspeak": {
-        "default": "neither-greater-than-nor-equal-to"
+        "default": "neither-greater-than-nor-equal-to",
+        "nemeth": "⠀⠌⠨⠂⠱⠀"
       },
       "clearspeak": {
         "default": "is neither greater than nor equal to"
@@ -3252,7 +3303,8 @@
         "alternative": "less than or equivalent to"
       },
       "mathspeak": {
-        "default": "less-than-or-equivalent-to"
+        "default": "less-than-or-equivalent-to",
+        "nemeth": "⠀⠐⠅⠈⠱⠀"
       },
       "clearspeak": {
         "default": "is less than or equivalent to"
@@ -3268,7 +3320,8 @@
         "alternative": "greater than or equivalent to"
       },
       "mathspeak": {
-        "default": "greater-than-or-equivalent-to"
+        "default": "greater-than-or-equivalent-to",
+        "nemeth": "⠀⠨⠂⠈⠱⠀"
       },
       "clearspeak": {
         "default": "is greater than or equivalent to"
@@ -3284,7 +3337,8 @@
         "alternative": "neither less than nor equivalent to"
       },
       "mathspeak": {
-        "default": "neither-less-than-nor-equivalent-to"
+        "default": "neither-less-than-nor-equivalent-to",
+        "nemeth": "⠀⠌⠐⠅⠈⠱⠀"
       },
       "clearspeak": {
         "default": "is neither less than nor equivalent to"
@@ -3300,7 +3354,8 @@
         "alternative": "neither greater than nor equivalent to"
       },
       "mathspeak": {
-        "default": "neither-greater-than-nor-equivalent-to"
+        "default": "neither-greater-than-nor-equivalent-to",
+        "nemeth": "⠀⠌⠨⠂⠈⠱⠀"
       },
       "clearspeak": {
         "default": "is neither greater than nor equivalent to"
@@ -3316,7 +3371,8 @@
         "alternative": "less than or greater than"
       },
       "mathspeak": {
-        "default": "less-than-or-greater-than"
+        "default": "less-than-or-greater-than",
+        "nemeth": "⠀⠐⠅⠨⠂⠀"
       },
       "clearspeak": {
         "default": "is less than or greater than"
@@ -3332,7 +3388,8 @@
         "alternative": "greater than or less than"
       },
       "mathspeak": {
-        "default": "greater-than-or-less-than"
+        "default": "greater-than-or-less-than",
+        "nemeth": "⠀⠨⠂⠐⠅⠀"
       },
       "clearspeak": {
         "default": "is greater than or less than"
@@ -3348,7 +3405,8 @@
         "alternative": "neither less than nor greater than"
       },
       "mathspeak": {
-        "default": "neither-less-than-nor-greater-than"
+        "default": "neither-less-than-nor-greater-than",
+        "nemeth": "⠀⠌⠐⠅⠨⠂⠀"
       },
       "clearspeak": {
         "default": "is neither less than nor greater than"
@@ -3364,7 +3422,8 @@
         "alternative": "neither greater than nor less than"
       },
       "mathspeak": {
-        "default": "neither-greater-than-nor-less-than"
+        "default": "neither-greater-than-nor-less-than",
+        "nemeth": "⠀⠌⠨⠂⠐⠅⠀"
       },
       "clearspeak": {
         "default": "is neither greater than nor less than"

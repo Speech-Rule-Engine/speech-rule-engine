@@ -43,8 +43,8 @@ goog.require('sre.Walker');
  * @return {!sre.Walker} The newly generated walker.
  */
 sre.WalkerFactory.walker = function(type, node, generator, highlighter, xml) {
-  var constructor = sre.WalkerFactory.walkerMapping_[type] ||
-      sre.WalkerFactory.walkerMapping_['Dummy'];
+  var constructor = sre.WalkerFactory.walkerMapping_[type.toLowerCase()] ||
+      sre.WalkerFactory.walkerMapping_['dummy'];
   return new constructor(node, generator, highlighter, xml);
 };
 
@@ -55,8 +55,8 @@ sre.WalkerFactory.walker = function(type, node, generator, highlighter, xml) {
  * @private
  */
 sre.WalkerFactory.walkerMapping_ = {
-  'Dummy': sre.DummyWalker,
-  'Semantic': sre.SemanticWalker,
-  'Syntax': sre.SyntaxWalker,
-  'Table': sre.TableWalker   // This is temporary.
+  'dummy': sre.DummyWalker,
+  'semantic': sre.SemanticWalker,
+  'syntax': sre.SyntaxWalker,
+  'table': sre.TableWalker   // This is temporary.
 };

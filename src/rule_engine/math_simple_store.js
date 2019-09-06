@@ -119,7 +119,7 @@ sre.MathSimpleStore.testDynamicConstraints_ = function(
 sre.MathCompoundStore = function() {
   /**
    * A set of efficient substores.
-   * @type {Object.<sre.MathStore>}
+   * @type {!Object.<sre.MathStore>}
    * @private
    */
   this.subStores_ = {};
@@ -130,6 +130,10 @@ sre.MathCompoundStore = function() {
    */
   this.locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
 
+  /**
+   * @type {string}
+   */
+  this.modality = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY];
 };
 goog.addSingletonGetter(sre.MathCompoundStore);
 
@@ -153,6 +157,7 @@ sre.MathCompoundStore.prototype.defineRules = function(
     store = new sre.MathSimpleStore();
     this.subStores_[str] = store;
   }
+  // TODO: Add modality?
   store.locale = this.locale;
   if (cat) {
     store.category = cat;
@@ -169,6 +174,7 @@ sre.MathCompoundStore.prototype.defineRules = function(
  * @private
  */
 sre.MathCompoundStore.prototype.changeLocale_ = function(json) {
+  // TODO: Add modality check.
   if (!json['locale']) {
     return false;
   }
@@ -267,7 +273,22 @@ sre.MathCompoundStore.prototype.lookupString = function(text, dynamic) {
 
 
 /**
- * Parses a string with a hex representatino of a unicode code point into the
+ * Collates information on dynamic constraint values of the currently active
+ * trie of the engine.
+ * @param {Object=} opt_info Initial dynamic constraint information.
+ * @return {Object} The collated information.
+ */
+sre.MathCompoundStore.prototype.enumerate = function(opt_info) {
+  var info = opt_info || {};
+  for (var store in this.subStores_) {
+    info = this.subStores_[store].trie.enumerate(info);
+  }
+  return info;
+};
+
+
+/**
+ * Parses a string with a hex representation of a unicode code point into the
  * corresponding unicode character.
  * @param {string} number The code point to be parsed.
  * @return {string} The unicode character.

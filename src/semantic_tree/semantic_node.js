@@ -100,6 +100,9 @@ sre.SemanticNode.prototype.querySelectorAll = function(pred) {
   for (var i = 0, child; child = this.childNodes[i]; i++) {
     result = result.concat(child.querySelectorAll(pred));
   }
+  for (var i = 0, content; content = this.contentNodes[i]; i++) {
+    result = result.concat(content.querySelectorAll(pred));
+  }
   if (pred(this)) {
     result.unshift(this);
   }
@@ -244,7 +247,7 @@ sre.SemanticNode.prototype.xmlAnnotation = function() {
 
 /**
  * Turns node into JSON format.
- * @return {JSONType} The JSON object for the node. 
+ * @return {JSONType} The JSON object for the node.
  */
 sre.SemanticNode.prototype.toJson = function() {
   var json = /** @type {JSONType} */({});
@@ -258,11 +261,11 @@ sre.SemanticNode.prototype.toJson = function() {
   }
   if (this.childNodes.length) {
     json[sre.SemanticNode.Attribute.CHILDREN] =
-      this.childNodes.map(function(child) {return child.toJson();});
+        this.childNodes.map(function(child) {return child.toJson();});
   }
   if (this.contentNodes.length) {
     json[sre.SemanticNode.Attribute.CONTENT] =
-      this.contentNodes.map(function(child) {return child.toJson();});
+        this.contentNodes.map(function(child) {return child.toJson();});
   }
   return json;
 };
@@ -271,10 +274,16 @@ sre.SemanticNode.prototype.toJson = function() {
 /**
  * Updates the content of the node thereby possibly changing type and role.
  * @param {string} content The new content string.
+ * @param {boolean=} opt_text Text indicator. If true non-breaking spaces are
+ *     retained.
  */
-sre.SemanticNode.prototype.updateContent = function(content) {
+sre.SemanticNode.prototype.updateContent = function(content, opt_text = false) {
   // Remove superfluous whitespace only if it is not the only content!
-  var newContent = content.trim();
+  // But without removing non-breaking spaces if we have a text.
+  var newContent = opt_text ?
+      content.replace(/^[ \f\n\r\t\v​]*/, '').replace(/[ \f\n\r\t\v​]*$/, '') :
+      content.trim();
+  // TODO (simons): If content contains a space, then assume type to be text.
   content = (content && !newContent) ? content : newContent;
   if (this.textContent == content) {
     return;
@@ -525,3 +534,9 @@ sre.SemanticNode.prototype.parseAnnotation = function(stateStr) {
 };
 
 
+/**
+ * @return {sre.SemanticMeaning} The semantic meaning of the node.
+ */
+sre.SemanticNode.prototype.meaning = function() {
+  return {type: this.type, role: this.role, font: this.font};
+};

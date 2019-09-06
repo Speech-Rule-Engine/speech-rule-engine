@@ -66,7 +66,7 @@ sre.Grammar = function() {
    *         translate: (undefined|boolean)}}
    */
   this.currentFlags = {};
-  
+
 };
 goog.addSingletonGetter(sre.Grammar);
 
@@ -283,7 +283,7 @@ sre.Grammar.prototype.apply = function(text, opt_flags) {
   }
   text = (this.currentFlags.adjust || this.currentFlags.correct) ?
       sre.Grammar.getInstance().correct(text) :
-    text;
+      text;
   this.currentFlags = {};
   return text;
 };
@@ -342,10 +342,10 @@ sre.Grammar.correctFont_ = function(text, correction) {
     return text;
   }
   // TODO: Combine with localFont.
-  correction = sre.L10n.getLocale().FONT[correction] || correction;
-  var correctionComp = correction.split(/ |-/);
-  var regExp = new RegExp('^' + correctionComp.join('( |-)') + '( |-)');
-  return text.replace(regExp, '');
+  correction = sre.Messages.MS_FUNC.FONT_REGEXP(sre.L10n.getLocale().FONT[correction] || correction);
+  // var correctionComp = correction.split(/ |-/);
+  // var regExp = new RegExp('^' + correctionComp.join('( |-)') + '( |-)');
+  return text.replace(correction, '');
 };
 
 

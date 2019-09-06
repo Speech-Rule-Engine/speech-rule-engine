@@ -711,16 +711,6 @@
   },
   {
     "category": "Ll",
-    "key": "021D",
-    "mappings": {
-      "default": {
-        "default": "latin small letter yogh",
-        "short": "yogh"
-      }
-    }
-  },
-  {
-    "category": "Ll",
     "key": "0221",
     "mappings": {
       "default": {
@@ -1118,17 +1108,6 @@
   },
   {
     "category": "Ll",
-    "key": "026E",
-    "mappings": {
-      "default": {
-        "default": "latin small letter lezh",
-        "alternative": "latin small letter l yogh",
-        "short": "lezh"
-      }
-    }
-  },
-  {
-    "category": "Ll",
     "key": "026F",
     "mappings": {
       "default": {
@@ -1432,28 +1411,6 @@
   },
   {
     "category": "Ll",
-    "key": "0292",
-    "mappings": {
-      "default": {
-        "default": "latin small letter ezh",
-        "alternative": "latin small letter yogh",
-        "short": "ezh"
-      }
-    }
-  },
-  {
-    "category": "Ll",
-    "key": "0293",
-    "mappings": {
-      "default": {
-        "default": "latin small letter ezh with curl",
-        "alternative": "latin small letter yogh curl",
-        "short": "ezh with curl"
-      }
-    }
-  },
-  {
-    "category": "Ll",
     "key": "0295",
     "mappings": {
       "default": {
@@ -1534,17 +1491,6 @@
         "default": "latin small letter dz digraph",
         "alternative": "latin small letter d z",
         "short": "dz digraph"
-      }
-    }
-  },
-  {
-    "category": "Ll",
-    "key": "02A4",
-    "mappings": {
-      "default": {
-        "default": "latin small letter dezh digraph",
-        "alternative": "latin small letter d yogh",
-        "short": "dezh digraph"
       }
     }
   },

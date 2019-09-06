@@ -40,7 +40,9 @@ goog.inherits(sre.CaseMultiscripts, sre.CaseMultiindex);
 
 
 /**
- * @override
+ * Applicability test of the case.
+ * @param {!sre.SemanticNode} semantic The semantic node.
+ * @return {boolean} True if case is applicable.
  */
 sre.CaseMultiscripts.test = function(semantic) {
   if (!semantic.mathmlTree) {

@@ -110,7 +110,8 @@ sre.MathMap.SYMBOLS_FILES_ = [
 
   // Greek Mathfonts
   'greek-mathfonts-bold.js', 'greek-mathfonts-italic.js',
-  'greek-mathfonts-sans-serif-bold.js',
+  'greek-mathfonts-bold-italic.js', 'greek-mathfonts-sans-serif-bold.js',
+  'greek-mathfonts-sans-serif-bold-italic.js',
 
   // Hebrew
   'hebrew_letters.js',
@@ -123,10 +124,11 @@ sre.MathMap.SYMBOLS_FILES_ = [
 
   // Latin Mathfonts
   'latin-mathfonts-bold-fraktur.js', 'latin-mathfonts-bold.js',
-  'latin-mathfonts-bold-script.js', 'latin-mathfonts-double-struck.js',
-  'latin-mathfonts-fraktur.js', 'latin-mathfonts-italic.js',
-  'latin-mathfonts-monospace.js', 'latin-mathfonts-sans-serif-bold.js',
-  'latin-mathfonts-sans-serif-italic.js', 'latin-mathfonts-sans-serif.js',
+  'latin-mathfonts-bold-italic.js', 'latin-mathfonts-bold-script.js',
+  'latin-mathfonts-double-struck.js', 'latin-mathfonts-fraktur.js',
+  'latin-mathfonts-italic.js', 'latin-mathfonts-monospace.js',
+  'latin-mathfonts-sans-serif-bold.js', 'latin-mathfonts-sans-serif-italic.js',
+  'latin-mathfonts-sans-serif-bold-italic.js', 'latin-mathfonts-sans-serif.js',
   'latin-mathfonts-script.js',
 
   // Math Symbols
