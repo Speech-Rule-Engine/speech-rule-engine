@@ -55,6 +55,16 @@ sre.SemanticTree = function(mml) {
   /** @type {!sre.SemanticNode} */
   this.root = this.parser.parse(mml);
 
+  this.collator = this.parser.getFactory().leafMap.collateMeaning();
+
+  var newDefault = this.collator.newDefault();
+  if (newDefault) {
+    // Reparse!
+    this.parser = new sre.SemanticMathml();
+    this.parser.getFactory().defaultMap = newDefault;
+    this.root = this.parser.parse(mml);
+  }
+
   sre.SemanticAnnotations.getInstance().annotate(this.root);
 
 };
@@ -171,7 +181,7 @@ sre.SemanticTree.prototype.replaceNode = function(oldNode, newNode) {
 
 /**
  * Turns tree into JSON format.
- * @return {JSONType} The JSON object for the tree. 
+ * @return {JSONType} The JSON object for the tree.
  */
 sre.SemanticTree.prototype.toJson = function() {
   var json = /** @type {JSONType} */({});

@@ -94,10 +94,11 @@ sre.SpeechGeneratorUtil.retrieveSpeech = function(semantic) {
  * Add speech as a semantic attributes in a MathML node.
  * @param {!Element} mml The MathML node.
  * @param {!sre.SemanticNode} semantic The semantic tree node.
+ * @param {string=} opt_modality The speech modality.
  */
-sre.SpeechGeneratorUtil.addSpeech = function(mml, semantic) {
+sre.SpeechGeneratorUtil.addSpeech = function(mml, semantic, opt_modality) {
   var speech = sre.SpeechGeneratorUtil.retrieveSpeech(semantic);
-  mml.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
+  mml.setAttribute(opt_modality || sre.EnrichMathml.Attribute.SPEECH, speech);
 };
 
 
@@ -136,9 +137,8 @@ sre.SpeechGeneratorUtil.computePrefix_ = function(semantic) {
                                      tree.xml())[0];
   return node ?
       sre.SpeechRuleEngine.getInstance().runInSetting(
-      {'domain': 'prefix', 'style': 'default',
-        'strict': true, 'cache': false, 'speech': true,
-        'rules': ['PrefixRules', 'PrefixSpanish']},
+      {'modality': 'prefix', 'domain': 'default', 'style': 'default',
+        'strict': true, 'cache': false, 'speech': true},
       function() {return sre.SpeechRuleEngine.getInstance().evaluateNode(node);}
       ) :
       [];
@@ -174,6 +174,11 @@ sre.SpeechGeneratorUtil.connectMactions = function(node, mml, stree) {
     // Otherwise, we take the existing child, which is actually the collapsed
     // maction that needs to be linked into the node.
     cspan = span.childNodes[0];
+    // If this node was already a highlighting rect we ignore it. This means
+    // some other walker has introduced it already (e.g. in MJ3).
+    if (cspan.getAttribute('sre-highlighter-added')) {
+      continue;
+    }
     // Set parent pointer if necessary.
     var pid = lchild.getAttribute(sre.EnrichMathml.Attribute.PARENT);
     if (pid) {
@@ -202,4 +207,33 @@ sre.SpeechGeneratorUtil.connectAllMactions = function(mml, stree) {
     var cst = sre.DomUtil.querySelectorAllByAttrValue(stree, 'id', mid)[0];
     cst.setAttribute('alternative', mid);
   }
+};
+
+
+/**
+ * Computes a speech summary if it exists.
+ * @param {Node} node The XML node.
+ * @return {string} The summary speech string.
+ */
+sre.SpeechGeneratorUtil.retrieveSummary = function(node) {
+  var descrs = sre.SpeechGeneratorUtil.computeSummary_(node);
+  return sre.AuralRendering.getInstance().markup(descrs);
+};
+
+
+/**
+ * Adds a speech summary if necessary.
+ * @param {Node} node The XML node.
+ * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions
+ *     for the summary.
+ * @private
+ */
+sre.SpeechGeneratorUtil.computeSummary_ = function(node) {
+  return node ?
+      sre.SpeechRuleEngine.getInstance().runInSetting(
+      {'modality': 'summary',
+        'strict': false, 'cache': false, 'speech': true},
+      function() {return sre.SpeechRuleEngine.getInstance().evaluateNode(node);}
+      ) :
+      [];
 };

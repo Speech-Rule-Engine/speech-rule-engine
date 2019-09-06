@@ -22,6 +22,7 @@ goog.provide('sre.Locale.en');
 
 goog.require('sre.Locale');
 goog.require('sre.Messages');
+goog.require('sre.Numbers.en');
 
 
 /**
@@ -62,7 +63,12 @@ sre.Locale.en = {
   MS_FUNC: {
     FRAC_NEST_DEPTH: sre.Locale.vulgarNestingDepth,
     RADICAL_NEST_DEPTH: sre.Locale.nestingToString,
-    COMBINE_ROOT_INDEX: function(postfix, index) {return postfix;}
+    COMBINE_ROOT_INDEX: function(postfix, index) {return postfix;},
+    COMBINE_NESTED_FRACTION: function(a, b, c) {return a + b + c;},
+    COMBINE_NESTED_RADICAL: function(a, b, c) {return a + b + c;},
+    FONT_REGEXP: function(font) {
+      return new RegExp('^' + font.split(/ |-/).join('( |-)') + '( |-)');
+    }
   },
 
 
@@ -128,13 +134,18 @@ sre.Locale.en = {
   REGEXP: {
     TEXT: 'a-zA-Z',
     NUMBER: '((\\d{1,3})(?=(,| ))((,| )\\d{3})*(\\.\\d+)?)|^\\d*\\.\\d+|^\\d+',
-    DECIMAL_MARK: '.',
-    DIGIT_GROUP: ','
+    DECIMAL_MARK: '\\.',
+    DIGIT_GROUP: ',',
+    JOINER_SUBSUPER: ' ',
+    JOINER_FRAC: ''
   },
 
   PLURAL_UNIT: {
     'foot': 'feet',
     'inch': 'inches'
-  }
-  
+  },
+
+  NUMBERS: sre.Numbers.en.NUMBERS
+
 };
+

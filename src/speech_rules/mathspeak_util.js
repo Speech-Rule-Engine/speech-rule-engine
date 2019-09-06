@@ -22,6 +22,7 @@ goog.provide('sre.MathspeakUtil');
 goog.require('sre.BaseUtil');
 goog.require('sre.DomUtil');
 goog.require('sre.Messages');
+goog.require('sre.NumbersUtil');
 goog.require('sre.Semantic');
 goog.require('sre.SemanticProcessor');
 goog.require('sre.SystemExternal');
@@ -62,7 +63,7 @@ sre.MathspeakUtil.spaceoutNodes = function(node, correction) {
     result.push(sn.xml(doc));
   }
   return result;
-  
+
 };
 
 
@@ -73,12 +74,12 @@ sre.MathspeakUtil.spaceoutNodes = function(node, correction) {
  */
 sre.MathspeakUtil.spaceoutNumber = function(node) {
   return sre.MathspeakUtil.spaceoutNodes(
-    node,
-    function(sn) {
-      if (!sn.textContent.match(/\W/)) {
-        sn.type = sre.Semantic.Type.NUMBER;
-      }
-    });
+      node,
+      function(sn) {
+        if (!sn.textContent.match(/\W/)) {
+          sn.type = sre.Semantic.Type.NUMBER;
+        }
+      });
 };
 
 
@@ -89,11 +90,11 @@ sre.MathspeakUtil.spaceoutNumber = function(node) {
  */
 sre.MathspeakUtil.spaceoutIdentifier = function(node) {
   return sre.MathspeakUtil.spaceoutNodes(
-    node,
-    function(sn) {
-      sn.font = sre.Semantic.Font.UNKNOWN;
-      sn.type = sre.Semantic.Type.IDENTIFIER;
-    });
+      node,
+      function(sn) {
+        sn.font = sre.Semantic.Font.UNKNOWN;
+        sn.type = sre.Semantic.Type.IDENTIFIER;
+      });
 };
 
 
@@ -251,13 +252,29 @@ sre.MathspeakUtil.fractionNestingDepth = function(node) {
 
 
 /**
+ * Computes disambiguations for nested fractions.
+ * @param {!Node} node The fraction node.
+ * @param {string} expr The disambiguating expression.
+ * @param {string=} opt_end Optional end expression.
+ * @return {string} The disambiguating string.
+ */
+sre.MathspeakUtil.nestedFraction = function(node, expr, opt_end) {
+  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
+  var annotation = Array.apply(null, Array(depth)).map(x => expr);
+  if (opt_end) {
+    annotation.push(opt_end);
+  }
+  return annotation.join(msg.REGEXP.JOINER_FRAC);
+};
+
+
+/**
  * Opening string for fractions in Mathspeak verbose mode.
  * @param {!Node} node The fraction node.
  * @return {string} The opening string.
  */
 sre.MathspeakUtil.openingFractionVerbose = function(node) {
-  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
-  return new Array(depth + 1).join(msg.MS.START) + msg.MS.FRAC_V;
+  return sre.MathspeakUtil.nestedFraction(node, msg.MS.START, msg.MS.FRAC_V);
 };
 
 
@@ -267,8 +284,7 @@ sre.MathspeakUtil.openingFractionVerbose = function(node) {
  * @return {string} The closing string.
  */
 sre.MathspeakUtil.closingFractionVerbose = function(node) {
-  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
-  return new Array(depth + 1).join(msg.MS.END) + msg.MS.FRAC_V;
+  return sre.MathspeakUtil.nestedFraction(node, msg.MS.END, msg.MS.FRAC_V);
 };
 
 
@@ -278,8 +294,7 @@ sre.MathspeakUtil.closingFractionVerbose = function(node) {
  * @return {string} The middle string.
  */
 sre.MathspeakUtil.overFractionVerbose = function(node) {
-  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
-  return new Array(depth + 1).join(msg.MS.FRAC_OVER).trim();
+  return sre.MathspeakUtil.nestedFraction(node, msg.MS.FRAC_OVER);
 };
 
 
@@ -289,8 +304,7 @@ sre.MathspeakUtil.overFractionVerbose = function(node) {
  * @return {string} The opening string.
  */
 sre.MathspeakUtil.openingFractionBrief = function(node) {
-  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
-  return new Array(depth + 1).join(msg.MS.START) + msg.MS.FRAC_B;
+  return sre.MathspeakUtil.nestedFraction(node, msg.MS.START, msg.MS.FRAC_B);
 };
 
 
@@ -300,8 +314,7 @@ sre.MathspeakUtil.openingFractionBrief = function(node) {
  * @return {string} The closing string.
  */
 sre.MathspeakUtil.closingFractionBrief = function(node) {
-  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
-  return new Array(depth + 1).join(msg.MS.END) + msg.MS.FRAC_B;
+  return sre.MathspeakUtil.nestedFraction(node, msg.MS.END, msg.MS.FRAC_B);
 };
 
 
@@ -315,8 +328,9 @@ sre.MathspeakUtil.openingFractionSbrief = function(node) {
   if (depth === 1) {
     return msg.MS.FRAC_S;
   }
-  return msg.MS.NEST_FRAC + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) +
-      msg.MS.FRAC_S;
+  return msg.MS_FUNC.COMBINE_NESTED_FRACTION(
+      msg.MS.NEST_FRAC, msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1),
+      msg.MS.FRAC_S);
 };
 
 
@@ -330,8 +344,10 @@ sre.MathspeakUtil.closingFractionSbrief = function(node) {
   if (depth === 1) {
     return msg.MS.ENDFRAC;
   }
-  return msg.MS.NEST_FRAC + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) +
-      msg.MS.ENDFRAC;
+  return msg.MS_FUNC.COMBINE_NESTED_FRACTION(
+      msg.MS.NEST_FRAC,
+      msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1),
+      msg.MS.ENDFRAC);
 };
 
 
@@ -345,256 +361,10 @@ sre.MathspeakUtil.overFractionSbrief = function(node) {
   if (depth === 1) {
     return msg.MS.FRAC_OVER;
   }
-  return msg.MS.NEST_FRAC + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) +
-      msg.MS.OVER;
-};
-
-
-/**
- * String representation of zero to nineteen.
- * @type {Array.<string>}
- */
-sre.MathspeakUtil.onesNumbers = [
-  '', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine',
-  'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen',
-  'seventeen', 'eighteen', 'nineteen'
-];
-
-
-/**
- * String representation of twenty to ninety.
- * @type {Array.<string>}
- */
-sre.MathspeakUtil.tensNumbers = [
-  '', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty',
-  'ninety'
-];
-
-
-/**
- * String representation of thousand to decillion.
- * @type {Array.<string>}
- */
-sre.MathspeakUtil.largeNumbers = [
-  '', 'thousand', 'million', 'billion', 'trillion', 'quadrillion',
-  'quintillion', 'sextillion', 'septillion', 'octillion', 'nonillion',
-  'decillion'
-];
-
-
-/**
- * Translates a number of up to twelve digits into a string representation.
- * @param {number} number The number to translate.
- * @return {string} The string representation of that number.
- */
-sre.MathspeakUtil.hundredsToWords = function(number) {
-  var n = number % 1000;
-  var str = '';
-  str += sre.MathspeakUtil.onesNumbers[Math.floor(n / 100)] ?
-      sre.MathspeakUtil.onesNumbers[Math.floor(n / 100)] + '-hundred' : '';
-  n = n % 100;
-  if (n) {
-    str += str ? '-' : '';
-    str += sre.MathspeakUtil.onesNumbers[n] ||
-      (sre.MathspeakUtil.tensNumbers[Math.floor(n / 10)] +
-       (n % 10 ? '-' + sre.MathspeakUtil.onesNumbers[n % 10] : ''));
-  }
-  return str;
-};
-
-
-/**
- * Translates a number of up to twelve digits into a string representation.
- * @param {number} number The number to translate.
- * @return {string} The string representation of that number.
- */
-sre.MathspeakUtil.numberToWords = function(number) {
-  if (number >= Math.pow(10, 36)) {
-    return number.toString();
-  }
-  var pos = 0;
-  var str = '';
-  while (number > 0) {
-    var hundreds = number % 1000;
-    if (hundreds) {
-      str = sre.MathspeakUtil.hundredsToWords(number % 1000) +
-        (pos ? '-' + sre.MathspeakUtil.largeNumbers[pos] +
-         '-' : '') +
-          str;
-    }
-    number = Math.floor(number / 1000);
-    pos++;
-  }
-  return str.replace(/-$/, '');
-};
-
-
-/**
- * Translates a number of up to twelve digits into a string representation of
- * its ordinal.
- * @param {number} num The number to translate.
- * @param {boolean} plural A flag indicating if the ordinal is in plural.
- * @return {string} The ordinal of the number as string.
- */
-sre.MathspeakUtil.numberToOrdinal = function(num, plural) {
-  if (num === 1) {
-    return plural ? 'oneths' : 'oneth';
-  }
-  if (num === 2) {
-    return plural ? 'halves' : 'half';
-  }
-  var ordinal = sre.MathspeakUtil.wordOrdinal(num);
-  return plural ? ordinal + 's' : ordinal;
-};
-
-
-/**
- * Creates a word ordinal string from a number.
- * @param {number} number The number to be converted.
- * @return {string} The ordinal string.
- */
-sre.MathspeakUtil.wordOrdinal = function(number) {
-  var ordinal = sre.MathspeakUtil.numberToWords(number);
-  if (ordinal.match(/one$/)) {
-    ordinal = ordinal.slice(0, -3) + 'first';
-  } else if (ordinal.match(/two$/)) {
-    ordinal = ordinal.slice(0, -3) + 'second';
-  } else if (ordinal.match(/three$/)) {
-    ordinal = ordinal.slice(0, -5) + 'third';
-  } else if (ordinal.match(/five$/)) {
-    ordinal = ordinal.slice(0, -4) + 'fifth';
-  } else if (ordinal.match(/eight$/)) {
-    ordinal = ordinal.slice(0, -5) + 'eighth';
-  } else if (ordinal.match(/nine$/)) {
-    ordinal = ordinal.slice(0, -4) + 'ninth';
-  } else if (ordinal.match(/twelve$/)) {
-    ordinal = ordinal.slice(0, -6) + 'twelfth';
-  } else if (ordinal.match(/ty$/)) {
-    ordinal = ordinal.slice(0, -2) + 'tieth';
-  } else {
-    ordinal = ordinal + 'th';
-  }
-  return ordinal;
-};
-
-
-/**
- * Creates a simple ordinal string from a number.
- * @param {number} number The number to be converted.
- * @return {string} The ordinal string.
- */
-sre.MathspeakUtil.simpleOrdinal = function(number) {
-  var tens = number % 100;
-  var numStr = number.toString();
-  if (tens > 10 && tens < 20) {
-    return numStr + 'th';
-  }
-  switch (number % 10) {
-    case 1:
-      return numStr + 'st';
-    case 2:
-      return numStr + 'nd';
-    case 3:
-      return numStr + 'rd';
-    default:
-      return numStr + 'th';
-  }
-};
-
-
-/**
- * Simple counter function for counting ordinals.
- * @param {!Node} node The node for the context function.
- * @param {string} context The context string.
- * @return {function(): string} The context function returning ordinals.
- */
-sre.MathspeakUtil.ordinalCounter = function(node, context) {
-  var counter = 0;
-  return function() {
-    return sre.MathspeakUtil.simpleOrdinal(++counter) + ' ' + context;
-  };
-};
-
-
-/**
- * Checks if a fraction is a convertible vulgar fraction. In this case it
- * translates enumerator and the denominator.
- * @param {!Node} node Fraction node to be translated.
- * @return {{convertible: boolean,
- *           content: (string|undefined),
- *           denominator: (number|undefined),
- *           enumerator: (number|undefined)}} If convertible denominator and
- *     enumerator are set. Otherwise only the text content is given.
- * @private
- */
-sre.MathspeakUtil.convertVulgarFraction_ = function(node) {
-  if (!node.childNodes || !node.childNodes[0] ||
-      !node.childNodes[0].childNodes ||
-      node.childNodes[0].childNodes.length < 2 ||
-      node.childNodes[0].childNodes[0].tagName !==
-          sre.SemanticAttr.Type.NUMBER ||
-      node.childNodes[0].childNodes[0].getAttribute('role') !==
-          sre.SemanticAttr.Role.INTEGER ||
-      node.childNodes[0].childNodes[1].tagName !==
-          sre.SemanticAttr.Type.NUMBER ||
-      node.childNodes[0].childNodes[1].getAttribute('role') !==
-          sre.SemanticAttr.Role.INTEGER
-  ) {
-    return {convertible: false,
-      content: node.textContent};
-  }
-  var denStr = node.childNodes[0].childNodes[1].textContent;
-  var enumStr = node.childNodes[0].childNodes[0].textContent;
-  var denominator = Number(denStr);
-  var enumerator = Number(enumStr);
-  if (isNaN(denominator) || isNaN(enumerator)) {
-    return {convertible: false,
-      content: enumStr + ' ' + msg.MS.FRAC_OVER + ' ' + denStr};
-  }
-  return {convertible: true,
-    enumerator: enumerator,
-    denominator: denominator};
-};
-
-
-/**
- * Converts a vulgar fraction into string representation of enumerator and
- * denominator as ordinal.
- * @param {!Node} node Fraction node to be translated.
- * @param {string=} opt_sep Separator string.
- * @return {string} The string representation if it is a valid vulgar fraction.
- */
-sre.MathspeakUtil.vulgarFraction = function(node, opt_sep) {
-  var sep = (typeof opt_sep === 'undefined') ? '-' : opt_sep;
-  var conversion = sre.MathspeakUtil.convertVulgarFraction_(node);
-  if (conversion.convertible &&
-      conversion.enumerator &&
-      conversion.denominator) {
-    return sre.MathspeakUtil.numberToWords(conversion.enumerator) + sep +
-        sre.MathspeakUtil.numberToOrdinal(conversion.denominator,
-        conversion.enumerator !== 1);
-  }
-  return conversion.content || '';
-};
-
-
-/**
- * Checks if a vulgar fraction is small enough to be convertible to string in
- * MathSpeak, i.e. enumerator in [1..9] and denominator in [1..99].
- * @param {!Node} node Fraction node to be tested.
- * @param {number} enumer Enumerator maximum.
- * @param {number} denom Denominator maximum.
- * @return {boolean} True if it is a valid, small enough fraction.
- */
-sre.MathspeakUtil.vulgarFractionSmall = function(node, enumer, denom) {
-  var conversion = sre.MathspeakUtil.convertVulgarFraction_(node);
-  if (conversion.convertible) {
-    var enumerator = conversion.enumerator;
-    var denominator = conversion.denominator;
-    return enumerator > 0 && enumerator < enumer &&
-        denominator > 0 && denominator < denom;
-  }
-  return false;
+  return msg.MS_FUNC.COMBINE_NESTED_FRACTION(
+      msg.MS.NEST_FRAC,
+      msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1),
+      msg.MS.FRAC_OVER);
 };
 
 
@@ -606,7 +376,7 @@ sre.MathspeakUtil.vulgarFractionSmall = function(node, enumer, denom) {
  *     empty.
  */
 sre.MathspeakUtil.isSmallVulgarFraction = function(node) {
-  return sre.MathspeakUtil.vulgarFractionSmall(node, 10, 100) ? [node] : [];
+  return sre.NumbersUtil.vulgarFractionSmall(node, 10, 100) ? [node] : [];
 };
 
 
@@ -628,14 +398,14 @@ sre.MathspeakUtil.nestedSubSuper = function(node, init, replace) {
         (parent.tagName === sre.Semantic.Type.TENSOR && nodeRole &&
         (nodeRole === sre.Semantic.Role.LEFTSUB ||
         nodeRole === sre.Semantic.Role.RIGHTSUB))) {
-      init = replace.sub + ' ' + init;
+      init = replace.sub + msg.REGEXP.JOINER_SUBSUPER + init;
     }
     if ((parent.tagName === sre.Semantic.Type.SUPERSCRIPT &&
          node === children.childNodes[1]) ||
         (parent.tagName === sre.Semantic.Type.TENSOR && nodeRole &&
         (nodeRole === sre.Semantic.Role.LEFTSUPER ||
         nodeRole === sre.Semantic.Role.RIGHTSUPER))) {
-      init = replace.sup + ' ' + init;
+      init = replace.sup + msg.REGEXP.JOINER_SUBSUPER + init;
     }
     node = parent;
   }
@@ -742,7 +512,8 @@ sre.MathspeakUtil.nestedRadical = function(node, prefix, postfix) {
   if (depth === 1) {
     return postfix;
   }
-  return prefix + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) + postfix;
+  return msg.MS_FUNC.COMBINE_NESTED_RADICAL(
+      prefix, msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1), postfix);
 };
 
 
@@ -987,9 +758,11 @@ sre.MathspeakUtil.removeParens = function(node) {
  * @private
  */
 sre.MathspeakUtil.componentString_ = {
+  3 : 'CSFleftsuperscript',
+  4 : 'CSFleftsubscript',
   2 : 'CSFbaseline',
-  1 : 'CSFsubscript',
-  0 : 'CSFsuperscript'
+  1 : 'CSFrightsubscript',
+  0 : 'CSFrightsuperscript'
 };
 
 
@@ -1025,7 +798,7 @@ sre.MathspeakUtil.generateTensorRuleStrings_ = function(constellation) {
   for (var i = 0; i < 5; i++) {
     var childString = 'children/*[' + sre.MathspeakUtil.childNumber_[i] + ']';
     if (constel & 1) {
-      var compString = sre.MathspeakUtil.componentString_[i % 3];
+      var compString = sre.MathspeakUtil.componentString_[i % 5];
       verbString = '[t] ' + compString + 'Verbose; [n] ' + childString + ';' +
           verbString;
       briefString = '[t] ' + compString + 'Brief; [n] ' + childString + ';' +
@@ -1094,5 +867,5 @@ sre.MathspeakUtil.generateTensorRules = function(store) {
   }
 };
 
-  
+
 });  // goog.scope

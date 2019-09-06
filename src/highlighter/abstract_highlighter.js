@@ -22,6 +22,7 @@
 goog.provide('sre.AbstractHighlighter');
 
 goog.require('sre.ColorPicker');
+goog.require('sre.EnrichMathml.Attribute');
 goog.require('sre.Highlighter');
 
 
@@ -52,13 +53,13 @@ sre.AbstractHighlighter = function() {
    */
   this.mactionName = '';
 
-  /**
-   * @type {!Object.<string>}
-   * @private
-   */
-  this.state_ = {};
-
 };
+
+
+/**
+ * @type {string}
+ */
+sre.AbstractHighlighter.ATTR = 'sre-highlight';
 
 
 /**
@@ -66,18 +67,20 @@ sre.AbstractHighlighter = function() {
  */
 sre.AbstractHighlighter.prototype.highlight = function(nodes) {
   this.currentHighlights_.push(nodes.map(
-      goog.bind(function(node) {return this.highlightNode(node);},
-                this)));
+      goog.bind(function(node) {
+        let info = this.highlightNode(node);
+        this.setHighlighted(node);
+        return info;
+      }, this)));
 };
 
 
 /**
  * Highlights a single node.
  * @param {!Node} node The node to be highlighted.
- * @return {{node: !Node, opacity: (undefined|string),
- *          background: (undefined|string), foreground: (undefined|string)}
- *         } The old node
- *     information.
+ * @return {{node: !Node, opacity: (undefined|string), background:
+ *          (undefined|string), foreground: (undefined|string)} } The old node
+ *          information.
  * @protected
  */
 sre.AbstractHighlighter.prototype.highlightNode = goog.abstractMethod;
@@ -101,8 +104,12 @@ sre.AbstractHighlighter.prototype.unhighlight = function() {
   var nodes = this.currentHighlights_.pop();
   if (!nodes) return;
   nodes.forEach(
-      goog.bind(function(node) {return this.unhighlightNode(node);},
-                this));
+      goog.bind(function(node) {
+        if (this.isHighlighted(node.node)) {
+          this.unhighlightNode(node);
+          this.unsetHighlighted(node.node);
+        }
+      }, this));
 };
 
 
@@ -161,7 +168,7 @@ sre.AbstractHighlighter.prototype.addEvents = function(node, events) {
 /**
  * Returns the maction sub nodes of a given node.
  * @param {!Node} node The root node.
- * @return {NodeList} The list of maction sub nodes.
+ * @return {NodeList|Array<Node>} The list of maction sub nodes.
  */
 sre.AbstractHighlighter.prototype.getMactionNodes = function(node) {
   return node.getElementsByClassName(this.mactionName);
@@ -180,29 +187,61 @@ sre.AbstractHighlighter.prototype.isMactionNode = function(node) {
 
 
 /**
- * Removes a state for a particular node.
- * @param {string} id A node id.
+ * Check if a node is already highlighted.
+ * @param {Node} node The node.
+ * @return {boolean} True if already highlighted.
  */
-sre.AbstractHighlighter.prototype.resetState = function(id) {
-  delete(this.state_[id]);
+sre.AbstractHighlighter.prototype.isHighlighted = function(node) {
+  return node.hasAttribute(sre.AbstractHighlighter.ATTR);
 };
 
 
 /**
- * Sets a state value for a particular node.
- * @param {string} id A node id.
- * @param {string} value The state value.
+ * Sets the indicator attributge that node is already highlighted.
+ * @param {Node} node The node.
  */
-sre.AbstractHighlighter.prototype.setState = function(id, value) {
-  this.state_[id] = value;
+sre.AbstractHighlighter.prototype.setHighlighted = function(node) {
+  node.setAttribute(sre.AbstractHighlighter.ATTR, true);
 };
 
 
 /**
- * Returns the state a particular node if it exists.
- * @param {string} id The node id.
- * @return {string} The state value.
+ * Removes the indicator attributge that node is already highlighted.
+ * @param {Node} node The node.
  */
-sre.AbstractHighlighter.prototype.getState = function(id) {
-  return this.state_[id];
+sre.AbstractHighlighter.prototype.unsetHighlighted = function(node) {
+  node.removeAttribute(sre.AbstractHighlighter.ATTR);
+};
+
+
+// New colorization methods for v3.
+sre.AbstractHighlighter.prototype.colorizeAll = function(node) {
+  var allNodes = sre.XpathUtil.evalXPath(
+      './/*[@' + sre.EnrichMathml.Attribute.ID + ']', node);
+  allNodes.forEach(goog.bind(function(x) {this.colorize(x);}, this));
+};
+
+
+sre.AbstractHighlighter.prototype.uncolorizeAll = function(node) {
+  var allNodes = sre.XpathUtil.evalXPath(
+      './/*[@' + sre.EnrichMathml.Attribute.ID + ']', node);
+  allNodes.forEach(goog.bind(function(x) {this.uncolorize(x);}, this));
+};
+
+
+// TODO: Generalise this to use the highlighter method and background.
+sre.AbstractHighlighter.prototype.colorize = function(node) {
+  var fore = sre.EnrichMathml.addPrefix('foreground');
+  if (node.hasAttribute(fore)) {
+    node.setAttribute(fore + '-old', node.style.color);
+    node.style.color = node.getAttribute(fore);
+  }
+};
+
+
+sre.AbstractHighlighter.prototype.uncolorize = function(node) {
+  var fore = sre.EnrichMathml.addPrefix('foreground') + '-old';
+  if (node.hasAttribute(fore)) {
+    node.style.color = node.getAttribute(fore);
+  }
 };

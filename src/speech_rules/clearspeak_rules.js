@@ -36,9 +36,6 @@ goog.require('sre.StoreUtil');
  */
 sre.ClearspeakRules = function() {
   sre.ClearspeakRules.base(this, 'constructor');
-
-  this.parser = new sre.ClearspeakPreferences.Parser();
-
 };
 goog.inherits(sre.ClearspeakRules, sre.MathStore);
 goog.addSingletonGetter(sre.ClearspeakRules);
@@ -105,17 +102,6 @@ sre.ClearspeakRules.addAnnotators_ = function() {
       sre.ClearspeakUtil.simpleExpression());
   sre.SemanticAnnotations.getInstance().register(
       sre.ClearspeakUtil.unitExpression());
-  // sre.Engine.getInstance().style = 'preferences';
-};
-
-
-/**
- * Changes the comparators.
- * @private
- */
-sre.ClearspeakRules.addComparator_ = function() {
-  sre.Engine.getInstance().comparators['clearspeak'] =
-      sre.ClearspeakPreferences.comparator;
 };
 
 
@@ -127,7 +113,7 @@ sre.ClearspeakRules.initCustomFunctions_ = function() {
   addCTXF('CTXFpauseSeparator', sre.StoreUtil.pauseSeparator);
   addCTXF('CTXFnodeCounter', sre.ClearspeakUtil.nodeCounter);
   addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
-  addCSF('CSFvulgarFraction', sre.ClearspeakUtil.vulgarFraction);
+  addCSF('CSFvulgarFraction', sre.NumbersUtil.vulgarFraction);
   addCQF('CQFvulgarFractionSmall', sre.ClearspeakUtil.isSmallVulgarFraction);
   addCQF('CQFcellsSimple', sre.ClearspeakUtil.allCellsSimple);
   addCSF('CSFordinalExponent', sre.ClearspeakUtil.ordinalExponent);
@@ -148,6 +134,12 @@ sre.ClearspeakRules.initCustomFunctions_ = function() {
  * @private
 */
 sre.ClearspeakRules.initClearspeakRules_ = function() {
+  defineRule(
+      'collapsed', 'clearspeak.default',
+      '[t] "collapsed"; [n] . (engine:modality=summary,grammar:collapsed)',
+      'self::*', '@alternative', 'not(contains(@grammar, "collapsed"))',
+      'self::*', 'self::*', 'self::*', 'self::*', 'self::*'
+  );
 
   // Initial rule
   defineRule(
@@ -160,7 +152,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'self::unknown');
 
   defineRule(
-      'protected', 'mathspeak.default', '[t] text()',
+      'protected', 'clearspeak.default', '[t] text()',
       'self::number', 'contains(@grammar, "protected")');
 
   defineRule(
@@ -210,13 +202,6 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   //
 
   // Capital letters
-  // defineRule(
-  //   'non-latin', 'clearspeak.default',
-  //   '[n] text() (pitch:0.6,grammar:ignoreFont="cap")',
-  //   'self::identifier',
-  //   '@role="latinletter" or @role="greekletter"',
-  //   'CQFisCapital');
-
   // TODO: Make that work on tensor elements?
   defineRule(
       'capital', 'clearspeak.default',
@@ -577,7 +562,6 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'self::appl', '@role="prefix function"',
       'name(children/*[1])="subscript"', 'self::*');
 
-
   // ln rules!
   // TODO: (QUESTION) These pauses are not consistent!
   defineRule(
@@ -750,7 +734,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[t] "power" (pause:"short")',
       'self::superscript', 'not(descendant::superscript)');
   defineRule(
-      'superscript-simple-exponent', 'clearspeak.default',
+      'superscript-simple-exponent-end', 'clearspeak.default',
       '[n] children/*[1]; [t] "raised to the"; [n] children/*[2]; ' +
       '[t] "power"',
       'self::superscript', 'not(descendant::superscript)',
@@ -780,8 +764,6 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'superscript-simple-exponent', 'self::superscript',
       'children/*[2][@role="implicit"]', 'count(children/*[2]/children/*)=2',
       'contains(children/*[2]/children/*[1]/@annotation, "simple")',
-      // 'name(children/*[2]/children/*[1])="number" or ' +
-      //   'name(children/*[2]/children/*[1])="identifier"',
       'name(children/*[2]/children/*[2])="superscript"',
       '(name(children/*[2]/children/*[2]/children/*[1])="number" and ' +
       'contains(children/*[2]/children/*[2]/children/*[1]/@annotation,' +
@@ -932,17 +914,6 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'not(name(children/*[1])="text" and ' +
       '(name(../../../punctuated[@role="text"]/..)="stree" ' +
       'or name(..)="stree"))', 'self::*', 'self::*'
-
-      // ,
-      // 'name(children/*[1])!="subscript" or (' +
-      // // Keep squared if we have a simple subscript.
-      // 'name(children/*[1])="subscript" and ' +
-      // 'name(children/*[1]/children/*[1])="identifier" and ' +
-      // 'name(children/*[1]/children/*[2])="number" and ' +
-      // 'children/*[1]/children/*[2][@role!="mixed"] and ' +
-      // 'children/*[1]/children/*[2][@role!="othernumber"])',
-      // 'not(@embellished)'
-
   );
 
   // Cube
@@ -955,15 +926,6 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'not(name(children/*[1])="text" and ' +
       '(name(../../../punctuated[@role="text"]/..)="stree" ' +
       'or name(..)="stree"))', 'self::*', 'self::*'
-      // ,
-      // 'name(children/*[1])!="subscript" or (' +
-      // // Keep cubed if we have a simple subscript.
-      // 'name(children/*[1])="subscript" and ' +
-      // 'name(children/*[1]/children/*[1])="identifier" and ' +
-      // 'name(children/*[1]/children/*[2])="number" and ' +
-      // 'children/*[1]/children/*[2][@role!="mixed"] and ' +
-      // 'children/*[1]/children/*[2][@role!="othernumber"])',
-      // 'not(@embellished)'
   );
 
 
@@ -1471,41 +1433,17 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'negative', 'clearspeak.default',
       '[t] "negative"; [n] children/*[1]',
       'self::prefixop', '@role="negative"');
-  //, 'contains(@annotation, "clearspeak:simple")');
   defineRule(
       'positive', 'clearspeak.default',
       '[t] "positive"; [n] children/*[1]',
       'self::prefixop', '@role="positive"');
 
   // Angle
-  // defineRule(
-  //   'angle-prefix', 'clearspeak.default',
-  //   '[n] content/*[1]; [n] children/*[1] (grammar:angle)',
-  //   'self::prefixop', 'content/*[1]/text()="∠"');
-  // defineRule(
-  //   'angle-infix', 'clearspeak.default',
-  //   '[n] content/*[1]; [n] children/*[1]; ' +
-  //     '[n] children/*[2] (grammar:angle)',
-  //   'self::infixop', 'content/*[1]/text()="∠"');
   defineRule(
       'angle-measure', 'clearspeak.default',
       '[t] "the measure of"; [n] content/*[1]; ' +
       '[n] children/*[2] (grammar:angle)',
       'self::infixop', 'content/*[1]/text()="∠"', 'children/*[1][text()="m"]');
-
-
-  // defineRuleAlias(
-  //     'negative',
-  //     'self::prefixop', '@role="negative"', 'children/number');
-  // defineRuleAlias(
-  //     'negative',
-  //     'self::prefixop', '@role="negative"',
-  //     'children/fraction[@role="vulgar"]');
-
-  // defineRule(
-  //     'negative', 'clearspeak.default',
-  //     '[t] "minus"; [n] children/*[1]',
-  //     'self::prefixop', '@role="negative"');
 
   // Operator rules
   defineRule(
@@ -1601,16 +1539,6 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'relseq', 'clearspeak.default',
       '[m] children/* (sepFunc:CTXFcontentIterator)',
       'self::relseq');
-
-  // defineRule(
-  //     'equality', 'clearspeak.default',
-  //     '[n] children/*[1]; [n] content/*[1]; [n] children/*[2]',
-  //     'self::relseq', '@role="equality"', 'count(./children/*)=2');
-
-  // defineRule(
-  //     'multi-equality', 'clearspeak.default',
-  //     '[m] ./children/* (sepFunc:CTXFcontentIterator)',
-  //     'self::relseq', '@role="equality"', 'count(./children/*)>2');
 
   defineRule(
       'multrel', 'clearspeak.default',
@@ -1988,18 +1916,6 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'self::cases', 'not(contains(@grammar, "layoutSummary"))', 'self::*'
   );
 
-  // defineRule(
-  //   'table-summary', 'clearspeak.default',
-  //   '[t] count(children/*); [t] "lines" (pause:short);' +
-  //     '  [n] . (grammar:layoutSummary)',
-  //   'self::table', 'not(contains(@grammar, "layoutSummary"))'
-  // );
-  // defineRule(
-  //   'table-summary', 'clearspeak.MultiLineOverview_None',
-  //   '[n] . (grammar:layoutSummary)',
-  //   'self::table', 'not(contains(@grammar, "layoutSummary"))'
-  // );
-
   defineRule(
       'lines', 'clearspeak.default',
       '[p] (pause:short);' +
@@ -2124,26 +2040,6 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRuleAlias(
       'lines-rows', 'self::multiline');
 
-  // Step
-  defineRule(
-      'lines-steps-summary', 'clearspeak.MultiLineLabel_Step',
-      '[p] (pause:short); [t] count(children/*); [t] "steps";' +
-      '  [n] . (grammar:layoutSummary)',
-      'self::multiline', 'not(contains(@grammar, "layoutSummary"))'
-  );
-  defineRuleAlias(
-      'lines-steps-summary', 'self::table',
-      'not(contains(@grammar, "layoutSummary"))'
-  );
-  defineRule(
-      'lines-steps', 'clearspeak.MultiLineLabel_Step',
-      '[p] (pause:short);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Step-:",' +
-      'sepFunc:CTXFpauseSeparator,separator:"long");' +
-      ' [p] (pause:long)', 'self::table');
-  defineRuleAlias(
-      'lines-steps', 'self::multiline');
-
   // Constraint
   defineRule(
       'lines-constraints-summary', 'clearspeak.MultiLineLabel_Constraint',
@@ -2175,7 +2071,6 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'contains(@grammar, "layoutSummary")');
   defineRuleAlias('lines-none', 'self::cases',
       'contains(@grammar, "layoutSummary")');
-
 
 
   //
@@ -2234,12 +2129,6 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'self::underscore', '@role="underover"',
       'children/*[2][@role!="underaccent"]'
   );
-  // defineRule(
-  //   'underscript', 'clearspeak.default',
-  //   '[n] children/*[1]; [t] "with"; [n] children/*[2];' +
-  //     ' [t] "below" (pause:short)',
-  //   'self::underscore', ''
-  // );
 
   // Number rules
   defineRule(
@@ -2450,8 +2339,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
 sre.ClearspeakRules.getInstance().initializer = [
   sre.ClearspeakRules.initCustomFunctions_,
   sre.ClearspeakRules.initClearspeakRules_,
-  sre.ClearspeakRules.addAnnotators_,
-  sre.ClearspeakRules.addComparator_
+  sre.ClearspeakRules.addAnnotators_
 ];
 
 

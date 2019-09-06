@@ -793,9 +793,9 @@
         "short": "dotless i"
       },
       "mathspeak": {
-        "default": "modifying above d with tless i",
-        "brief": "mod above d with tless i",
-        "sbrief": "mod above d with tless i"
+        "default": "modifying above dotless i",
+        "brief": "mod above dotless i",
+        "sbrief": "mod above dotless i"
       }
     }
   },
@@ -1785,9 +1785,9 @@
         "short": "dotless j"
       },
       "mathspeak": {
-        "default": "modifying above d with tless j",
-        "brief": "mod above d with tless j",
-        "sbrief": "mod above d with tless j"
+        "default": "modifying above dotless j",
+        "brief": "mod above dotless j",
+        "sbrief": "mod above dotless j"
       }
     }
   },

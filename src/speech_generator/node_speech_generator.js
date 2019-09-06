@@ -43,8 +43,7 @@ goog.inherits(sre.NodeSpeechGenerator, sre.TreeSpeechGenerator);
  * @override
  */
 sre.NodeSpeechGenerator.prototype.getSpeech = function(node, xml) {
-  var speech = sre.WalkerUtil.getAttribute(
-      node, sre.EnrichMathml.Attribute.SPEECH);
+  var speech = sre.WalkerUtil.getAttribute(node, this.modality);
   if (speech) return speech;
   return sre.NodeSpeechGenerator.base(this, 'getSpeech', node, xml);
 };

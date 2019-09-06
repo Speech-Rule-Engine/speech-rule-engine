@@ -107,7 +107,7 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
   addCSF('CSFopenFracSbrief', sre.MathspeakUtil.openingFractionSbrief);
   addCSF('CSFcloseFracSbrief', sre.MathspeakUtil.closingFractionSbrief);
   addCSF('CSFoverFracSbrief', sre.MathspeakUtil.overFractionSbrief);
-  addCSF('CSFvulgarFraction', sre.MathspeakUtil.vulgarFraction);
+  addCSF('CSFvulgarFraction', sre.NumbersUtil.vulgarFraction);
   addCQF('CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction);
 
   // Radical function.
@@ -127,12 +127,21 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
   addCSF('CSFsubscriptBrief', sre.MathspeakUtil.subscriptBrief);
   addCSF('CSFbaselineVerbose', sre.MathspeakUtil.baselineVerbose);
   addCSF('CSFbaselineBrief', sre.MathspeakUtil.baselineBrief);
+  // Tensor specific.
+  addCSF('CSFleftsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose);
+  addCSF('CSFleftsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose);
+  addCSF('CSFrightsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose);
+  addCSF('CSFrightsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose);
+  addCSF('CSFleftsuperscriptBrief', sre.MathspeakUtil.superscriptBrief);
+  addCSF('CSFleftsubscriptBrief', sre.MathspeakUtil.subscriptBrief);
+  addCSF('CSFrightsuperscriptBrief', sre.MathspeakUtil.superscriptBrief);
+  addCSF('CSFrightsubscriptBrief', sre.MathspeakUtil.subscriptBrief);
 
   // Over- Underscore.
   addCSF('CSFunderscript', sre.MathspeakUtil.nestedUnderscore);
   addCSF('CSFoverscript', sre.MathspeakUtil.nestedOverscore);
 
-  addCTXF('CTXFordinalCounter', sre.MathspeakUtil.ordinalCounter);
+  addCTXF('CTXFordinalCounter', sre.NumbersUtil.ordinalCounter);
   addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
 
   // Layout related.
@@ -150,6 +159,18 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
  * @private
 */
 sre.MathspeakRules.initMathspeakRules_ = function() {
+  // TODO: This needs to be prioritized!
+  defineRule(
+      'collapsed', 'mathspeak.default',
+      '[t] "collapsed"; [n] . (engine:modality=summary,grammar:collapsed)',
+      'self::*', '@alternative', 'not(contains(@grammar, "collapsed"))',
+      'self::*', 'self::*', 'self::*', 'self::*', 'self::*'
+  );
+  defineSpecialisedRule(
+      'collapsed', 'mathspeak.default', 'mathspeak.brief');
+  defineSpecialisedRule(
+      'collapsed', 'mathspeak.brief', 'mathspeak.sbrief');
+
   // Initial rule
   defineRule(
       'stree', 'mathspeak.default',
@@ -1270,6 +1291,38 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[n] children/*[1]; [t] "per"; [n] children/*[2]',
       'self::fraction', '@role="unit"');
 
+  defineRule(
+      'inference', 'mathspeak.default',
+      '[t] "inference rule"; [m] content/*; [t] "with conclusion"; ' +
+      '[n] children/*[1]; [t] "and"; [t] count(children/*[2]/children/*); ' +
+      '[t] "premises"',
+      'self::inference');
+  defineRule(
+      'inference', 'mathspeak.default',
+      '[t] "inference rule"; ; [m] content/*; [t] "with conclusion"; ' +
+      '[n] children/*[1]; [t] "and"; [t] count(children/*[2]/children/*); ' +
+      '[t] "premise"',
+      'self::inference', 'count(children/*[2]/children/*)<2');
+  defineRule(
+      'premise', 'mathspeak.default',
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"premise ");',
+      'self::premises');
+  defineRule(
+      'conclusion', 'mathspeak.default',
+      '[n] children/*[1]', 'self::conclusion');
+  defineRule(
+      'label', 'mathspeak.default',
+      '[t] "label"; [n] children/*[1]',
+      'self::rulelabel');
+  defineRule(
+      'axiom', 'mathspeak.default',
+      '[t] "axiom"; [m] children/*[1];',
+      'self::inference', '@role="axiom"');
+  defineRule(
+      'axiom', 'mathspeak.default',
+      '[t] "empty axiom";',
+      'self::empty', '@role="axiom"');
+
 };
 
 
@@ -1279,7 +1332,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
  */
 sre.MathspeakRules.generateTensorRules_ = function() {
   sre.MathspeakUtil.generateTensorRules(sre.MathspeakRules.mathStore);
-};  
+};
 
 });  // goog.scope
 

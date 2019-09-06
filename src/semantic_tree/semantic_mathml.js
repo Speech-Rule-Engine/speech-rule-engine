@@ -101,29 +101,13 @@ sre.SemanticMathml.prototype.parse = function(mml) {
 sre.SemanticMathml.prototype.addAttributes = function(to, from) {
   if (from.hasAttributes()) {
     var attrs = from.attributes;
-    for(var i = attrs.length - 1; i >= 0; i--) {
+    for (var i = attrs.length - 1; i >= 0; i--) {
       var key = attrs[i].name;
       if (key.match(/^ext/)) {
         to.attributes[key] = attrs[i].value;
       }
     }
   }
-};
-
-
-/**
- * Parse a list of MathML nodes into a list of semantic nodes.
- * @param {Array.<Element>} mmls A list of MathML nodes.
- * @return {!Array.<sre.SemanticNode>} The list of resulting semantic
- *     node.
- * @private
- */
-sre.SemanticMathml.prototype.parseNodes_ = function(mmls) {
-  var result = [];
-  for (var i = 0, mml; mml = mmls[i]; i++) {
-    result.push(this.parse(mml));
-  }
-  return result;
 };
 
 
@@ -143,11 +127,18 @@ sre.SemanticMathml.prototype.semantics_ = function(node, children) {
 /**
  * Parses inferred row elements.
  * @param {Element} node A MathML node.
- * @param {Array.<Element>} children The children of the node.
+ * @param {!Array.<Element>} children The children of the node.
  * @return {!sre.SemanticNode} The newly created semantic node.
  * @private
  */
 sre.SemanticMathml.prototype.rows_ = function(node, children) {
+  // Special cases:
+  let semantics = node.getAttribute('semantics');
+  if (semantics && semantics.match('bspr_')) {
+    return sre.SemanticProcessor.proof(
+        node, semantics, goog.bind(this.parseList, this));
+  }
+  // End special cases.
   children = sre.SemanticUtil.purgeNodes(children);
   // Single child node, i.e. the row is meaningless.
   if (children.length === 1) {
@@ -155,7 +146,7 @@ sre.SemanticMathml.prototype.rows_ = function(node, children) {
   } else {
     // Case of a 'meaningful' row, even if they are empty.
     newNode = sre.SemanticProcessor.getInstance().row(
-        this.parseNodes_(children));
+        this.parseList(children));
   }
   newNode.mathml.unshift(node);
   return newNode;
@@ -179,13 +170,13 @@ sre.SemanticMathml.prototype.fraction_ = function(node, children) {
 /**
  * Parses an expression with bounds.
  * @param {Element} node A MathML node.
- * @param {Array.<Element>} children The children of the node.
+ * @param {!Array.<Element>} children The children of the node.
  * @return {!sre.SemanticNode} The newly created semantic node.
  * @private
  */
 sre.SemanticMathml.prototype.limits_ = function(node, children) {
   return sre.SemanticProcessor.getInstance().limitNode(
-      sre.DomUtil.tagName(node), this.parseNodes_(children));
+      sre.DomUtil.tagName(node), this.parseList(children));
 };
 
 
@@ -206,12 +197,12 @@ sre.SemanticMathml.prototype.root_ = function(node, children) {
 /**
  * Parses a square root element.
  * @param {Element} node A MathML node.
- * @param {Array.<Element>} children The children of the node.
+ * @param {!Array.<Element>} children The children of the node.
  * @return {!sre.SemanticNode} The newly created semantic node.
  * @private
  */
 sre.SemanticMathml.prototype.sqrt_ = function(node, children) {
-  var semNodes = this.parseNodes_(sre.SemanticUtil.purgeNodes(children));
+  var semNodes = this.parseList(sre.SemanticUtil.purgeNodes(children));
   return this.getFactory().makeBranchNode(
       sre.SemanticAttr.Type.SQRT,
       [sre.SemanticProcessor.getInstance().row(semNodes)], []);
@@ -221,13 +212,18 @@ sre.SemanticMathml.prototype.sqrt_ = function(node, children) {
 /**
  * Parses a table structure.
  * @param {Element} node A MathML node.
- * @param {Array.<Element>} children The children of the node.
+ * @param {!Array.<Element>} children The children of the node.
  * @return {!sre.SemanticNode} The newly created semantic node.
  * @private
  */
 sre.SemanticMathml.prototype.table_ = function(node, children) {
+  let semantics = node.getAttribute('semantics');
+  if (semantics && semantics.match('bspr_')) {
+    return sre.SemanticProcessor.proof(
+        node, semantics, goog.bind(this.parseList, this));
+  }
   var newNode = this.getFactory().makeBranchNode(
-      sre.SemanticAttr.Type.TABLE, this.parseNodes_(children), []);
+      sre.SemanticAttr.Type.TABLE, this.parseList(children), []);
   sre.SemanticProcessor.tableToMultiline(newNode);
   return newNode;
 };
@@ -236,13 +232,13 @@ sre.SemanticMathml.prototype.table_ = function(node, children) {
 /**
  * Parses a row of a table.
  * @param {Element} node A MathML node.
- * @param {Array.<Element>} children The children of the node.
+ * @param {!Array.<Element>} children The children of the node.
  * @return {!sre.SemanticNode} The newly created semantic node.
  * @private
  */
 sre.SemanticMathml.prototype.tableRow_ = function(node, children) {
   var newNode = this.getFactory().makeBranchNode(
-      sre.SemanticAttr.Type.ROW, this.parseNodes_(children), []);
+      sre.SemanticAttr.Type.ROW, this.parseList(children), []);
   newNode.role = sre.SemanticAttr.Role.TABLE;
   return newNode;
 };
@@ -251,7 +247,7 @@ sre.SemanticMathml.prototype.tableRow_ = function(node, children) {
 /**
  * Parses a row of a table.
  * @param {Element} node A MathML node.
- * @param {Array.<Element>} children The children of the node.
+ * @param {!Array.<Element>} children The children of the node.
  * @return {!sre.SemanticNode} The newly created semantic node.
  * @private
  */
@@ -262,7 +258,7 @@ sre.SemanticMathml.prototype.tableLabeledRow_ = function(node, children) {
   var label = this.parse(children[0]);
   label.role = sre.SemanticAttr.Role.LABEL;
   var newNode = this.getFactory().makeBranchNode(
-      sre.SemanticAttr.Type.ROW, this.parseNodes_(children.slice(1)), [label]);
+      sre.SemanticAttr.Type.ROW, this.parseList(children.slice(1)), [label]);
   newNode.role = sre.SemanticAttr.Role.TABLE;
   return newNode;
 };
@@ -271,12 +267,12 @@ sre.SemanticMathml.prototype.tableLabeledRow_ = function(node, children) {
 /**
  * Parses a table cell.
  * @param {Element} node A MathML node.
- * @param {Array.<Element>} children The children of the node.
+ * @param {!Array.<Element>} children The children of the node.
  * @return {!sre.SemanticNode} The newly created semantic node.
  * @private
  */
 sre.SemanticMathml.prototype.tableCell_ = function(node, children) {
-  var semNodes = this.parseNodes_(sre.SemanticUtil.purgeNodes(children));
+  var semNodes = this.parseList(sre.SemanticUtil.purgeNodes(children));
   var childNodes;
   if (!semNodes.length) {
     childNodes = [];
@@ -299,7 +295,7 @@ sre.SemanticMathml.prototype.tableCell_ = function(node, children) {
 /**
  * Parses a text element.
  * @param {Element} node A MathML node.
- * @param {Array.<Element>} children The children of the node.
+ * @param {!Array.<Element>} children The children of the node.
  * @return {!sre.SemanticNode} The newly created semantic node.
  * @private
  */
@@ -315,7 +311,7 @@ sre.SemanticMathml.prototype.text_ = function(node, children) {
 /**
  * Create an identifier node, with particular emphasis on font disambiguation.
  * @param {Element} node A MathML node.
- * @param {Array.<Element>} children The children of the node.
+ * @param {!Array.<Element>} children The children of the node.
  * @return {!sre.SemanticNode} The new semantic identifier node.
  * @private
  */
@@ -340,7 +336,7 @@ sre.SemanticMathml.prototype.identifier_ = function(node, children) {
 /**
  * Parses a number.
  * @param {Element} node A MathML node.
- * @param {Array.<Element>} children The children of the node.
+ * @param {!Array.<Element>} children The children of the node.
  * @return {!sre.SemanticNode} The newly created semantic node.
  * @private
  */
@@ -354,7 +350,7 @@ sre.SemanticMathml.prototype.number_ = function(node, children) {
 /**
  * Parses an operator.
  * @param {Element} node A MathML node.
- * @param {Array.<Element>} children The children of the node.
+ * @param {!Array.<Element>} children The children of the node.
  * @return {!sre.SemanticNode} The newly created semantic node.
  * @private
  */
@@ -370,12 +366,12 @@ sre.SemanticMathml.prototype.operator_ = function(node, children) {
 /**
  * Parses a fenced element.
  * @param {!Element} node A MathML node.
- * @param {Array.<Element>} children The children of the node.
+ * @param {!Array.<Element>} children The children of the node.
  * @return {!sre.SemanticNode} The newly created semantic node.
  * @private
  */
 sre.SemanticMathml.prototype.fenced_ = function(node, children) {
-  var semNodes = this.parseNodes_(sre.SemanticUtil.purgeNodes(children));
+  var semNodes = this.parseList(sre.SemanticUtil.purgeNodes(children));
   var sepValue = sre.SemanticMathml.getAttribute_(node, 'separators', ',');
   var open = sre.SemanticMathml.getAttribute_(node, 'open', '(');
   var close = sre.SemanticMathml.getAttribute_(node, 'close', ')');
@@ -389,12 +385,12 @@ sre.SemanticMathml.prototype.fenced_ = function(node, children) {
 /**
  * Parses an enclosed element.
  * @param {Element} node A MathML node.
- * @param {Array.<Element>} children The children of the node.
+ * @param {!Array.<Element>} children The children of the node.
  * @return {!sre.SemanticNode} The newly created semantic node.
  * @private
  */
 sre.SemanticMathml.prototype.enclosed_ = function(node, children) {
-  var semNodes = this.parseNodes_(sre.SemanticUtil.purgeNodes(children));
+  var semNodes = this.parseList(sre.SemanticUtil.purgeNodes(children));
   var newNode = this.getFactory().makeBranchNode(
       sre.SemanticAttr.Type.ENCLOSE,
       [sre.SemanticProcessor.getInstance().row(semNodes)], []);
@@ -447,24 +443,24 @@ sre.SemanticMathml.prototype.multiscripts_ = function(node, children) {
       !sre.SemanticUtil.purgeNodes(lsub).length) {
     return sre.SemanticProcessor.getInstance().pseudoTensor(
         base,
-        this.parseNodes_(rsub),
-        this.parseNodes_(rsup));
+        this.parseList(rsub),
+        this.parseList(rsup));
   }
   // We really deal with a multiscript tensor.
   //
   return sre.SemanticProcessor.getInstance().tensor(
       base,
-      this.parseNodes_(lsub),
-      this.parseNodes_(lsup),
-      this.parseNodes_(rsub),
-      this.parseNodes_(rsup));
+      this.parseList(lsub),
+      this.parseList(lsup),
+      this.parseList(rsub),
+      this.parseList(rsup));
 };
 
 
 /**
  * Parses an empty element.
  * @param {Element} node A MathML node.
- * @param {Array.<Element>} children The children of the node.
+ * @param {!Array.<Element>} children The children of the node.
  * @return {!sre.SemanticNode} The newly created semantic node.
  * @private
  */
@@ -476,7 +472,7 @@ sre.SemanticMathml.prototype.empty_ = function(node, children) {
 /**
  * Parses an actionable element.
  * @param {Element} node A MathML node.
- * @param {Array.<Element>} children The children of the node.
+ * @param {!Array.<Element>} children The children of the node.
  * @return {!sre.SemanticNode} The newly created semantic node.
  * @private
  */
@@ -490,7 +486,7 @@ sre.SemanticMathml.prototype.action_ = function(node, children) {
 /**
  * Parses a dummy element for which no other case is known.
  * @param {Element} node A MathML node.
- * @param {Array.<Element>} children The children of the node.
+ * @param {!Array.<Element>} children The children of the node.
  * @return {!sre.SemanticNode} The newly created semantic node.
  * @private
  */

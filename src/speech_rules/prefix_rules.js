@@ -20,9 +20,8 @@
 
 goog.provide('sre.PrefixRules');
 
-goog.require('sre.DomUtil');
 goog.require('sre.MathStore');
-goog.require('sre.MathspeakUtil');
+goog.require('sre.NumbersUtil');
 
 
 
@@ -33,6 +32,7 @@ goog.require('sre.MathspeakUtil');
  */
 sre.PrefixRules = function() {
   sre.PrefixRules.base(this, 'constructor');
+  this.modality = 'prefix';
 };
 goog.inherits(sre.PrefixRules, sre.MathStore);
 goog.addSingletonGetter(sre.PrefixRules);
@@ -62,18 +62,6 @@ sre.PrefixRules.addCustomString_ = goog.bind(
     sre.PrefixRules.mathStore.customStrings);
 
 
-/**
- * String function to turn a child position into an ordinal.
- * @param {!Node} node The node for the string function.
- * @return {string} The ordinal string corresponding to the child position of
- *     the node.
- */
-sre.PrefixRules.ordinalPosition = function(node) {
-  var children = sre.DomUtil.toArray(node.parentNode.childNodes);
-  return sre.MathspeakUtil.simpleOrdinal(children.indexOf(node) + 1).toString();
-};
-
-
 goog.scope(function() {
 var defineRule = sre.PrefixRules.defineRule_;
 var defineRuleAlias = sre.PrefixRules.defineRuleAlias_;
@@ -85,9 +73,7 @@ var addCSF = sre.PrefixRules.addCustomString_;
  * @private
  */
 sre.PrefixRules.initCustomFunctions_ = function() {
-
-  addCSF('CSFordinalPosition', sre.PrefixRules.ordinalPosition);
-
+  addCSF('CSFordinalPosition', sre.NumbersUtil.ordinalPosition);
 };
 
 
@@ -97,110 +83,110 @@ sre.PrefixRules.initCustomFunctions_ = function() {
 */
 sre.PrefixRules.initPrefixRules_ = function() {
   defineRule(
-      'numerator', 'prefix.default',
+      'numerator', 'default.default',
       '[t] "Numerator"; [p] (pause:200)',
       'self::*', 'name(../..)="fraction"',
       'count(preceding-sibling::*)=0');
   defineRule(
-      'denominator', 'prefix.default',
+      'denominator', 'default.default',
       '[t] "Denominator"; [p] (pause:200)',
       'self::*', 'name(../..)="fraction"',
       'count(preceding-sibling::*)=1');
   defineRule(
-      'base', 'prefix.default',
+      'base', 'default.default',
       '[t] "Base"; [p] (pause:200)',
       'self::*', 'name(../..)="superscript" or name(../..)="subscript"' +
       ' or name(../..)="overscore" or name(../..)="underscore"' +
       ' or name(../..)="tensor"',
       'count(preceding-sibling::*)=0');
   defineRule(
-      'exponent', 'prefix.default',
+      'exponent', 'default.default',
       '[t] "Exponent"; [p] (pause:200)',
       'self::*', 'name(../..)="superscript"',
       'count(preceding-sibling::*)=1');
   defineRule(
-      'subscript', 'prefix.default',
+      'subscript', 'default.default',
       '[t] "Subscript"; [p] (pause:200)',
       'self::*', 'name(../..)="subscript"',
       'count(preceding-sibling::*)=1');
   defineRule(
-      'overscript', 'prefix.default',
+      'overscript', 'default.default',
       '[t] "Overscript"; [p] (pause:200)',
       'self::*', 'name(../..)="overscore"',
       'count(preceding-sibling::*)=1');
   defineRule(
-      'underscript', 'prefix.default',
+      'underscript', 'default.default',
       '[t] "Underscript"; [p] (pause:200)',
       'self::*', 'name(../..)="underscore"',
       'count(preceding-sibling::*)=1');
   defineRule(
-      'radicand', 'prefix.default',
+      'radicand', 'default.default',
       '[t] "Radicand"; [p] (pause:200)',
       'self::*', 'name(../..)="sqrt"');
   defineRule(
-      'radicand', 'prefix.default',
+      'radicand', 'default.default',
       '[t] "Radicand"; [p] (pause:200)',
       'self::*', 'name(../..)="root"',
       'count(preceding-sibling::*)=1');
   defineRule(
-      'index', 'prefix.default',
+      'index', 'default.default',
       '[t] "Index"; [p] (pause:200)',
       'self::*', 'name(../..)="root"',
       'count(preceding-sibling::*)=0');
   defineRule(
-      'leftsub', 'prefix.default',
+      'leftsub', 'default.default',
       '[t] "Left Subscript"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
       '@role="leftsub"');
   defineRule(
-      'leftsub', 'prefix.default',
+      'leftsub', 'default.default',
       '[t] CSFordinalPosition; [t] "Left Subscript"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
       '../../@role="leftsub"');
   defineRule(
-      'leftsuper', 'prefix.default',
+      'leftsuper', 'default.default',
       '[t] "Left Superscript"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
       '@role="leftsuper"');
   defineRule(
-      'leftsuper', 'prefix.default',
+      'leftsuper', 'default.default',
       '[t] CSFordinalPosition; [t] "Left Superscript"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
       '../../@role="leftsuper"');
   defineRule(
-      'rightsub', 'prefix.default',
+      'rightsub', 'default.default',
       '[t] "Right Subscript"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
       '@role="rightsub"');
   defineRule(
-      'rightsub', 'prefix.default',
+      'rightsub', 'default.default',
       '[t] CSFordinalPosition; [t] "Right Subscript"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
       '../../@role="rightsub"');
   defineRule(
-      'rightsuper', 'prefix.default',
+      'rightsuper', 'default.default',
       '[t] "Right Superscript"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
       '@role="rightsuper"');
   defineRule(
-      'rightsuper', 'prefix.default',
+      'rightsuper', 'default.default',
       '[t] CSFordinalPosition; [t] "Right Superscript"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
       '../../@role="rightsuper"');
   defineRule(
-      'choice', 'prefix.default',
+      'choice', 'default.default',
       '[t] "Choice Quantity"; [p] (pause:200)',
       'self::line', '@role="binomial"', 'parent::*/parent::vector',
       'count(preceding-sibling::*)=0');
   defineRule(
-      'select', 'prefix.default',
+      'select', 'default.default',
       '[t] "Selection Quantity"; [p] (pause:200)',
       'self::line', '@role="binomial"', 'parent::*/parent::vector',
       'count(preceding-sibling::*)=1');
 
   // Positions in tables
   defineRule(
-      'row', 'prefix.default',
+      'row', 'default.default',
       '[t] CSFordinalPosition; [t] "Row"; [p] (pause:200)',
       'self::row'
   );
@@ -208,12 +194,12 @@ sre.PrefixRules.initPrefixRules_ = function() {
       'row', 'self::line'
   );
   defineRule(
-      'cell', 'prefix.default',
+      'cell', 'default.default',
       '[n] ../..; [t] CSFordinalPosition; [t] "Column"; [p] (pause:200)',
       'self::cell', 'contains(@grammar,"depth")'
   );
   defineRule(
-      'cell', 'prefix.default',
+      'cell', 'default.default',
       '[t] CSFordinalPosition; [t] "Column"; [p] (pause:200)',
       'self::cell'
   );
