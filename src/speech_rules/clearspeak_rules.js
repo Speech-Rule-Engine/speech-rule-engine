@@ -1431,7 +1431,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   // minus sign
   defineRule(
       'negative', 'clearspeak.default',
-      '[t] "negative"; [n] children/*[1]',
+      '[t] "negative" (span:content/*[1]); [n] children/*[1]',
       'self::prefixop', '@role="negative"');
   defineRule(
       'positive', 'clearspeak.default',
