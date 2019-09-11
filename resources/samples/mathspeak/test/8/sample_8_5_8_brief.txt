@@ -1,1 +1,0 @@
-log sub 2 base left-p’ren x right-p’ren equals startfrac log sub 10 base left-p’ren x right-p’ren over log sub 10 base left-p’ren 2 right-p’ren endfrac

@@ -1,1 +1,0 @@
-frac 5 x crossout y endcrossout over 2 crossout y endcrossout endfrac equals five-halves x
