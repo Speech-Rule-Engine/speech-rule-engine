@@ -1,1 +1,0 @@
-startfraction d squared y over d x squared endfraction plus left-parenthesis a x squared plus b x plus c right-parenthesis y equals 0

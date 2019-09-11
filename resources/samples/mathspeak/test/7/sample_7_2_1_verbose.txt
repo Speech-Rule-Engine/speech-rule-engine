@@ -1,1 +1,0 @@
-startstartfraction startfraction x over y endfraction overover z endendfraction not-equals startstartfraction x overover startfraction y over z endfraction endendfraction

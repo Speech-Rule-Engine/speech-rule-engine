@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<!DOCTYPE SABLE PUBLIC "-//SABLE//DTD SABLE speech mark up//EN" 
-      "Sable.v0_2.dtd"
-[]>
-<SABLE>
-<SPEAKER NAME="female1">
-StartLayout <RATE SPEED="+50%"><PITCH BASE="-75%">1st Row 1st Column</PITCH></RATE> left-p'ren x plus 5 right-p'ren squared <BREAK MSEC="300"/> <RATE SPEED="+50%"><PITCH BASE="-75%">2nd Column</PITCH></RATE> equals <BREAK MSEC="300"/> <RATE SPEED="+50%"><PITCH BASE="-75%">3rd Column</PITCH></RATE> x squared plus 10 x plus 25 <BREAK MSEC="500"/> <RATE SPEED="+50%"><PITCH BASE="-75%">2nd Row 1st Column</PITCH></RATE> left-p'ren x minus 3 right-p'ren squared <BREAK MSEC="300"/> <RATE SPEED="+50%"><PITCH BASE="-75%">2nd Column</PITCH></RATE> equals <BREAK MSEC="300"/> <RATE SPEED="+50%"><PITCH BASE="-75%">3rd Column</PITCH></RATE> x squared minus 6 x plus 9 <BREAK MSEC="500"/> <RATE SPEED="+50%"><PITCH BASE="-75%">3rd Row 1st Column</PITCH></RATE> left-p'ren 4 x minus 1 right-p'ren squared <BREAK MSEC="300"/> <RATE SPEED="+50%"><PITCH BASE="-75%">2nd Column</PITCH></RATE> equals <BREAK MSEC="300"/> <RATE SPEED="+50%"><PITCH BASE="-75%">3rd Column</PITCH></RATE> 16 x squared minus 8 x plus 1 <BREAK MSEC="500"/> EndLayout
-</SPEAKER>
-</SABLE>

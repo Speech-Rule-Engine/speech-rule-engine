@@ -1,1 +1,0 @@
-the fibonacci numbers are colon set 0 comma 1 comma 1 comma 2 comma 3 comma 5 comma 8 comma ellipsis endset

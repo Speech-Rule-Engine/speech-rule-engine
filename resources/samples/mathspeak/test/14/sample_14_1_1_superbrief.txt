@@ -1,1 +1,0 @@
-layout 1st row 1st column upper h 2 2nd column plus 3rd column upper f 2 4th column r arrow 5th column 2 upper h upper f 2nd row 1st column hydrogen 2nd column blank 3rd column flourine 4th column blank 5th column hydrogen fluoride endlayout

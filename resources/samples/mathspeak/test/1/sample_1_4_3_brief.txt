@@ -1,1 +1,0 @@
-num 0 x 1 5 f f plus num 0 x 2 b 0 1 equals num 0 x 4 1 0 0

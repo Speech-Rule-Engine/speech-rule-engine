@@ -1,1 +1,0 @@
-binomialormatrix x choose y endbinomialormatrix

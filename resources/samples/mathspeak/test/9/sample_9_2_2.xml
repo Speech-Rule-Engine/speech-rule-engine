@@ -1,1 +1,0 @@
-<math mode="display" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mroot><msup><mi>x</mi><mi>m</mi></msup><mi>n</mi></mroot><mo>=</mo><msup><mfenced separators="" open="(" close=")"><mroot><mi>x</mi><mi>n</mi></mroot></mfenced><mi>m</mi></msup><mo>=</mo><msup><mi>x</mi><mfrac><mi>m</mi><mi>n</mi></mfrac></msup><mo>,</mo><mi>x</mi><mo>></mo><mn>0</mn></mrow></math>
