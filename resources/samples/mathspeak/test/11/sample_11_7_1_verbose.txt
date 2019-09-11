@@ -1,1 +1,0 @@
-sigma-summation underscript n equals 1 overscript infinity endscripts a subscript n

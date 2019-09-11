@@ -1,1 +1,0 @@
-one-half plus two-halves plus three-halves plus four-halves plus ellipsis equals sigma-summation underscript n equals 1 overscript infinity endscripts startfrac n over 2 endfrac

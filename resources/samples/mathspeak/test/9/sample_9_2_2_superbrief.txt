@@ -1,1 +1,0 @@
-index n root x sup m base endroot equals l p’ren index n root x endroot r p’ren sup m base equals x sup frac m over n endfrac base comma x greater-than 0

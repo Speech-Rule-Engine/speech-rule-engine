@@ -1,1 +1,0 @@
-startabsolutevalue a startabsolutevalue plus-or-minus b endabsolutevalue minus 15 endabsolutevalue not-equals startabsolutevalue a endabsolutevalue plus-or-minus b startabsolutevalue minus 15 endabsolutevalue
