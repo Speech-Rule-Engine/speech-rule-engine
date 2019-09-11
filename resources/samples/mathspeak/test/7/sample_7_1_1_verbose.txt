@@ -1,1 +1,0 @@
-startfraction 1 over x endfraction

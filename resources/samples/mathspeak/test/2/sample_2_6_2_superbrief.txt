@@ -1,1 +1,0 @@
-contour integral upper e dot d bold l equals minus frac d upper phi upper b over d t endfrac

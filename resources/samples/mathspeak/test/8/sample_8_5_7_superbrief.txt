@@ -1,1 +1,0 @@
-upper t sub n 1 plus n 0

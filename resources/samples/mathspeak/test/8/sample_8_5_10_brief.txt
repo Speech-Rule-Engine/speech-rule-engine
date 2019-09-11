@@ -1,1 +1,0 @@
-l n x equals integral sub 1 sup x base startfrac d t over t endfrac
