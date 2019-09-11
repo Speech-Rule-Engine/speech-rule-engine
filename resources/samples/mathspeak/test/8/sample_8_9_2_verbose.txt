@@ -1,1 +1,0 @@
-f triple-prime left-parenthesis y right-parenthesis equals startfraction d f double-prime left-parenthesis y right-parenthesis over d y endfraction

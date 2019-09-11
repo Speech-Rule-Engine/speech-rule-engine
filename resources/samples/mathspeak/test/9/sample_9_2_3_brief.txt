@@ -1,1 +1,0 @@
-rootindex 3 startroot x endroot equals x sup one-third

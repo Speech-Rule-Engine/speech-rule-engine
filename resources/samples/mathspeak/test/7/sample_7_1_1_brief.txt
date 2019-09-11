@@ -1,1 +1,0 @@
-startfrac 1 over x endfrac
