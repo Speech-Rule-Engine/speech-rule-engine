@@ -1,1 +1,0 @@
-frac 22 over 7 endfrac equals 3 point modabove 1 4 2 8 5 7 with bar

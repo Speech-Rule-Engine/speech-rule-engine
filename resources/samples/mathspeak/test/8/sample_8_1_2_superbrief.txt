@@ -1,1 +1,0 @@
-frac d squared y over d x squared endfrac plus l p’ren a x squared plus b x plus c r p’ren y equals 0

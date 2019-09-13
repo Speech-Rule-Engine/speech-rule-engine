@@ -1,1 +1,0 @@
-l n x equals integral subscript 1 superscript x baseline startfraction d t over t endfraction

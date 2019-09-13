@@ -1,1 +1,0 @@
-upper t superscript left-parenthesis x super superscript a superscript plus y super superscript b superscript right-parenthesis

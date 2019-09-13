@@ -1,1 +1,0 @@
-start 2 by 2 determinant 1st row a b 2nd row c d enddeterminant equals a d minus b c

@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<!DOCTYPE SABLE PUBLIC "-//SABLE//DTD SABLE speech mark up//EN" 
-      "Sable.v0_2.dtd"
-[]>
-<SABLE>
-<SPEAKER NAME="female1">
-StartLayout 1st Row 1st Column left-p'ren a plus 2 b right-p'ren left-p'ren 4 a minus b minus c right-p'ren <BREAK MSEC="300"/> 2nd Column Blank <BREAK MSEC="500"/> 2nd Row 1st Column a left-p'ren 4 a minus b minus c right-p'ren plus 2 b left-p'ren 4 a minus b minus c right-p'ren <BREAK MSEC="300"/> 2nd Column Use the distributive property period <BREAK MSEC="500"/> 3rd Row 1st Column 4 a squared minus a b minus a c plus 8 a b minus 2 b squared minus 2 b c <BREAK MSEC="300"/> 2nd Column Multiply period <BREAK MSEC="500"/> 4th Row 1st Column 4 a squared plus left-p'ren minus a b plus 8 a b right-p'ren minus a c minus 2 b squared minus 2 b c <BREAK MSEC="300"/> 2nd Column Combine like terms period <BREAK MSEC="500"/> 5th Row 1st Column 4 a squared plus 7 a b minus a c minus 2 b c minus 2 b squared <BREAK MSEC="300"/> 2nd Column Simplify period <BREAK MSEC="500"/> EndLayout
-</SPEAKER>
-</SABLE>
