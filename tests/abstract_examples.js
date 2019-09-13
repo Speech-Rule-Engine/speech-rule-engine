@@ -65,7 +65,7 @@ sre.AbstractExamples = function() {
    * @type {string}
    * @protected
    */
-  this.fileDirectory = 'resources/www/localisation';
+  this.fileDirectory = 'res/l10n';
 
   /**
    * Sets example output file for tests.
