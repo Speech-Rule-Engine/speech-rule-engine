@@ -241,7 +241,7 @@ sre.NemethRules.initNemethRules_ = function() {
 
   // Number rules
   defineRule(
-      'number', 'default.default', '[n] text()', 'self::number');
+      'number', 'default.default', '[t] "⠼"; [n] text() (pause:10)', 'self::number');
 
   defineRule(
       'number', 'default.default', '[t] "⠼"; [n] text()',
@@ -384,6 +384,10 @@ sre.NemethRules.initNemethRules_ = function() {
       'function-prefix', 'default.default',
       '[n] content/*[1]; [t] "⠀"; [n] children/*[1]',
       'self::prefixop', 'content/*[1][@role="infix function"]');
+  defineRule(
+      'function-infix', 'default.default',
+      '[n] children/*[1]; [n] content/*[1]; [t] "⠀"; [n] children/*[2]',
+      'self::infixop', '@role="infix function"');
 
   defineRule(
       'function-simple', 'default.default',
