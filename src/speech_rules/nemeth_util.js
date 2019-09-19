@@ -20,6 +20,7 @@
 goog.provide('sre.NemethUtil');
 
 goog.require('sre.MathspeakUtil');
+goog.require('sre.SemanticAnnotator');
 
 
 goog.scope(function() {
@@ -137,5 +138,31 @@ sre.NemethUtil.enlargeFence = function(text) {
 
 sre.Grammar.getInstance().setCorrection('enlargeFence',
                                         sre.NemethUtil.enlargeFence);
+
+
+/**
+ * 
+ * @param {sre.SemanticNode} node 
+ * @param {Object.<boolean>} info
+ * @return {*}
+ */
+sre.NemethUtil.propagateNumber = function(node, info) {
+  if (!info) {
+    return ['number', {number: true}];
+  }
+  if (node) {
+    
+  }
+};
+  
+
+/**
+ * @return {sre.SemanticAnnotator} A semantic annotator for unit expressions.
+ */
+sre.NemethUtil.numberIndicator = function() {
+  return new sre.SemanticAnnotator(
+      'nemeth', sre.NemethUtil.propagateNumber);
+};
+
 
 });  // goog.scope
