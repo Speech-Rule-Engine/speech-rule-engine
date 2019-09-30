@@ -69,21 +69,9 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
   }
 
   /**
-   * The original xml/mathml node on which the walker is called.
-   * @type {!Element}
-   */
-  this.xml = sre.DomUtil.parseInput(xml);
-
-  /**
    * @type {!sre.SpeechGenerator}
    */
   this.generator = generator;
-
-  /**
-   * @type {!sre.RebuildStree}
-   */
-  this.rebuilt = this.rebuildStree_();
-  this.generator.setRebuilt(this.rebuilt);
 
   //TODO: This is problematic as it will sometimes not be instantiated if called
   //      from MathJax.
@@ -93,10 +81,43 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
   this.highlighter = highlighter;
 
   /**
-   * @type {boolean}
+   * The span in the math expression that corresponds to the root of the
+   * semantic tree.
+   * @type {!Node}
+   */
+  this.rootNode = sre.WalkerUtil.getSemanticRoot(node);
+
+  /**
+   * Id of the root element of the semantic tree.
+   * @type {string}
+   */
+  this.rootId = this.rootNode.getAttribute(sre.EnrichMathml.Attribute.ID);
+
+  // All of these need to be initialised later!
+  /**
+   * The original xml/mathml node on which the walker is called.
+   * @type {Element}
+   */ // Change!
+  this.xml_ = null;
+
+  
+  this.xmlString_ = xml;
+  
+  
+  /**
+   * @type {sre.RebuildStree}
    * @private
    */
-  this.active_ = false;
+  this.rebuilt_ = null;
+
+  /**
+   * The node that currently inspected. Initially this is the entire math
+   * expression.
+   * @type {null|sre.Focus}
+   * @private
+   */
+  this.focus_ = null;
+  // End of uninitialised fields.
 
   /**
    * @type {Object.<sre.EventUtil.KeyCode, function()>}
@@ -120,24 +141,11 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
   this.keyMapping[sre.EventUtil.KeyCode.GREATER] = goog.bind(this.nextRules,
                                                              this);
 
-  this.dummy_ = function() {};
-
   /**
-   * The span in the math expression that corresponds to the root of the
-   * semantic tree.
-   * @type {!Node}
-   */
-  this.rootNode = sre.WalkerUtil.getSemanticRoot(node);
-
-  this.rootId = this.rebuilt.stree.root.id.toString();
-  /**
-   * The node that currently inspected. Initially this is the entire math
-   * expression.
-   * @type {!sre.Focus}
+   * @type {boolean}
    * @private
    */
-  this.focus_ = sre.Focus.factory(
-      this.rootId, [this.rootId], this.rebuilt, this.node);
+  this.active_ = false;
 
   /**
    * Flag indicating whether the last move actually moved focus.
@@ -150,6 +158,24 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
    * @type {Array.<sre.Walker.Cursor>}
    */
   this.cursors = [];
+};
+
+
+sre.AbstractWalker.prototype.getXml = function() {
+  if (!this.xml_) {
+    this.xml_ = sre.DomUtil.parseInput(this.xmlString_);
+  }
+  return this.xml_;
+};
+
+/**
+ * @override
+ */
+sre.AbstractWalker.prototype.getRebuilt = function() {
+  if (!this.rebuilt_) {
+    this.rebuilt_ = this.rebuildStree();
+  }
+  return this.rebuilt_;
 };
 
 
@@ -207,10 +233,14 @@ sre.AbstractWalker.prototype.deactivate = function() {
  * @override
  */
 sre.AbstractWalker.prototype.getFocus = function(opt_update) {
+  if (!this.focus_) {
+    this.focus_ = sre.Focus.factory(
+      this.rootId, [this.rootId], this.getRebuilt(), this.node);
+  }
   if (opt_update) {
     this.updateFocus();
   }
-  return this.focus_;
+  return /** @type {!sre.Focus} */(this.focus_);
 };
 
 
@@ -239,7 +269,7 @@ sre.AbstractWalker.prototype.isSpeech = function() {
  * @override
  */
 sre.AbstractWalker.prototype.speech = function() {
-  var nodes = this.focus_.getDomNodes();
+  var nodes = this.getFocus().getDomNodes();
   if (!nodes.length) return '';
   var special = this.specialMove();
   if (special !== null) {
@@ -254,11 +284,11 @@ sre.AbstractWalker.prototype.speech = function() {
       return this.detail_();
     default:
       var speech = [];
-      var snodes = this.focus_.getSemanticNodes();
+      var snodes = this.getFocus().getSemanticNodes();
       for (var i = 0, l = nodes.length; i < l; i++) {
         var node = nodes[i];
         var snode = /** @type {!sre.SemanticNode} */(snodes[i]);
-        speech.push(node ? this.generator.getSpeech(node, this.xml) :
+        speech.push(node ? this.generator.getSpeech(node, this.getXml()) :
                     sre.SpeechGeneratorUtil.retrieveSpeech(snode));
       }
       return this.mergePrefix_(speech);
@@ -288,8 +318,8 @@ sre.AbstractWalker.prototype.mergePrefix_ = function(speech, opt_pre) {
  * @private
  */
 sre.AbstractWalker.prototype.prefix_ = function() {
-  var nodes = this.focus_.getDomNodes();
-  var snodes = this.focus_.getSemanticNodes();
+  var nodes = this.getFocus().getDomNodes();
+  var snodes = this.getFocus().getSemanticNodes();
   return nodes[0] ? sre.WalkerUtil.getAttribute(
       /** @type {!Node} */(nodes[0]), sre.EnrichMathml.Attribute.PREFIX) :
       sre.SpeechGeneratorUtil.retrievePrefix(snodes[0]);
@@ -305,10 +335,10 @@ sre.AbstractWalker.prototype.move = function(key) {
     return null;
   }
   var focus = direction();
-  if (!focus || focus === this.focus_) {
+  if (!focus || focus === this.getFocus()) {
     return false;
   }
-  this.focus_ = focus;
+  this.setFocus(focus);
   if (this.moved === sre.Walker.move.HOME) {
     this.levels = this.initLevels();
   }
@@ -323,7 +353,7 @@ sre.AbstractWalker.prototype.move = function(key) {
  */
 sre.AbstractWalker.prototype.up = function() {
   this.moved = sre.Walker.move.UP;
-  return this.focus_;
+  return this.getFocus();
 };
 
 
@@ -334,7 +364,7 @@ sre.AbstractWalker.prototype.up = function() {
  */
 sre.AbstractWalker.prototype.down = function() {
   this.moved = sre.Walker.move.DOWN;
-  return this.focus_;
+  return this.getFocus();
 };
 
 
@@ -345,7 +375,7 @@ sre.AbstractWalker.prototype.down = function() {
  */
 sre.AbstractWalker.prototype.left = function() {
   this.moved = sre.Walker.move.LEFT;
-  return this.focus_;
+  return this.getFocus();
 };
 
 
@@ -356,7 +386,7 @@ sre.AbstractWalker.prototype.left = function() {
  */
 sre.AbstractWalker.prototype.right = function() {
   this.moved = sre.Walker.move.RIGHT;
-  return this.focus_;
+  return this.getFocus();
 };
 
 
@@ -367,7 +397,7 @@ sre.AbstractWalker.prototype.right = function() {
  */
 sre.AbstractWalker.prototype.repeat = function() {
   this.moved = sre.Walker.move.REPEAT;
-  return this.focus_.clone();
+  return this.getFocus().clone();
 };
 
 
@@ -378,7 +408,7 @@ sre.AbstractWalker.prototype.repeat = function() {
  */
 sre.AbstractWalker.prototype.depth = function() {
   this.moved = this.isSpeech() ? sre.Walker.move.DEPTH : sre.Walker.move.REPEAT;
-  return this.focus_.clone();
+  return this.getFocus().clone();
 };
 
 
@@ -389,7 +419,7 @@ sre.AbstractWalker.prototype.depth = function() {
 sre.AbstractWalker.prototype.depth_ = function() {
   var oldDepth = sre.Grammar.getInstance().getParameter('depth');
   sre.Grammar.getInstance().setParameter('depth', true);
-  var primary = this.focus_.getDomPrimary();
+  var primary = this.getFocus().getDomPrimary();
   var expand = (this.expandable(primary) &&
                 [sre.Messages.NAVIGATE.EXPANDABLE]) ||
       (this.collapsible(primary) && [sre.Messages.NAVIGATE.COLLAPSIBLE]) || [];
@@ -397,7 +427,7 @@ sre.AbstractWalker.prototype.depth_ = function() {
       [new sre.AuditoryDescription({text: sre.Messages.NAVIGATE.LEVEL +
          ' ' + this.getDepth(),
         personality: {}})])];
-  var snodes = this.focus_.getSemanticNodes();
+  var snodes = this.getFocus().getSemanticNodes();
   var prefix = sre.SpeechGeneratorUtil.retrievePrefix(snodes[0]);
   var aural = sre.AuralRendering.getInstance();
   if (prefix) {
@@ -416,7 +446,7 @@ sre.AbstractWalker.prototype.depth_ = function() {
 sre.AbstractWalker.prototype.home = function() {
   this.moved = sre.Walker.move.HOME;
   var focus = sre.Focus.factory(
-      this.rootId, [this.rootId], this.rebuilt, this.node);
+      this.rootId, [this.rootId], this.getRebuilt(), this.node);
   return focus;
 };
 
@@ -435,7 +465,7 @@ sre.AbstractWalker.prototype.getBySemanticId = function(id) {
  * @return {string} The id of the primary node of the current focus.
  */
 sre.AbstractWalker.prototype.primaryId = function() {
-  return this.focus_.getSemanticPrimary().id.toString();
+  return this.getFocus().getSemanticPrimary().id.toString();
 };
 
 
@@ -444,14 +474,14 @@ sre.AbstractWalker.prototype.primaryId = function() {
  * @return {sre.Focus} New focus element if actionable. O/w old focus.
  */
 sre.AbstractWalker.prototype.expand = function() {
-  var primary = this.focus_.getDomPrimary();
+  var primary = this.getFocus().getDomPrimary();
   var expandable = this.actionable_(primary);
   if (!expandable) {
-    return this.focus_;
+    return this.getFocus();
   }
   this.moved = sre.Walker.move.EXPAND;
   expandable.dispatchEvent(new Event('click'));
-  return this.focus_.clone();
+  return this.getFocus().clone();
 };
 
 
@@ -497,7 +527,7 @@ sre.AbstractWalker.prototype.restoreState = function() {
   if (!this.highlighter) return;
   var state = sre.Walker.getState(this.id);
   if (!state) return;
-  var node = this.rebuilt.nodeDict[state];
+  var node = this.getRebuilt().nodeDict[state];
   var path = [];
   while (node) {
     path.push(node.id);
@@ -509,7 +539,7 @@ sre.AbstractWalker.prototype.restoreState = function() {
     var id = path.pop();
     var focus = this.findFocusOnLevel(id);
     if (!focus) break;
-    this.focus_ = focus;
+    this.setFocus(focus);
   }
   this.moved = sre.Walker.move.ENTER;
 };
@@ -520,9 +550,9 @@ sre.AbstractWalker.prototype.restoreState = function() {
  */
 sre.AbstractWalker.prototype.updateFocus = function() {
   this.setFocus(sre.Focus.factory(
-      this.focus_.getSemanticPrimary().id.toString(),
-      this.focus_.getSemanticNodes().map(x => x.id),
-      this.rebuilt, this.node));
+      this.getFocus().getSemanticPrimary().id.toString(),
+      this.getFocus().getSemanticNodes().map(x => x.id),
+      this.getRebuilt(), this.node));
 };
 
 
@@ -545,11 +575,16 @@ sre.AbstractWalker.prototype.initLevels = goog.abstractMethod;
  * Rebuilds the semantic tree given in the input xml element fully connected
  * with maction elements.
  * @return {!sre.RebuildStree} The reconstructed semantic tree.
- * @private
+ * @protected
  */
-sre.AbstractWalker.prototype.rebuildStree_ = function() {
-  var rebuilt = new sre.RebuildStree(this.xml);
-  sre.SpeechGeneratorUtil.connectMactions(this.node, this.xml, rebuilt.xml);
+sre.AbstractWalker.prototype.rebuildStree = function() {
+  var rebuilt = new sre.RebuildStree(this.getXml());
+  this.rootId = rebuilt.stree.root.id.toString();
+  this.generator.setRebuilt(rebuilt);
+  this.focus_ = sre.Focus.factory(
+    this.rootId, [this.rootId], rebuilt, this.node);
+  this.levels = this.initLevels();
+  sre.SpeechGeneratorUtil.connectMactions(this.node, this.getXml(), rebuilt.xml);
   return rebuilt;
 };
 
@@ -559,10 +594,10 @@ sre.AbstractWalker.prototype.rebuildStree_ = function() {
  * @return {?string} The previous level.
  */
 sre.AbstractWalker.prototype.previousLevel = function() {
-  var dnode = this.focus_.getDomPrimary();
+  var dnode = this.getFocus().getDomPrimary();
   return dnode ?
       sre.WalkerUtil.getAttribute(dnode, sre.EnrichMathml.Attribute.PARENT) :
-      this.focus_.getSemanticPrimary().parent.id.toString();
+      this.getFocus().getSemanticPrimary().parent.id.toString();
 };
 
 
@@ -571,7 +606,7 @@ sre.AbstractWalker.prototype.previousLevel = function() {
  * @return {!Array.<T>} The next lower level.
  */
 sre.AbstractWalker.prototype.nextLevel = function() {
-  var dnode = this.focus_.getDomPrimary();
+  var dnode = this.getFocus().getDomPrimary();
   if (dnode) {
     var children = sre.WalkerUtil.splitAttribute(
         sre.WalkerUtil.getAttribute(dnode,
@@ -588,7 +623,7 @@ sre.AbstractWalker.prototype.nextLevel = function() {
         content, children);
   }
   var toIds = function(x) { return x.id.toString(); };
-  var snode = this.rebuilt.nodeDict[this.primaryId()];
+  var snode = this.getRebuilt().nodeDict[this.primaryId()];
   children = snode.childNodes.map(toIds);
   content = snode.contentNodes.map(toIds);
   if (children.length === 0) return [];
@@ -626,7 +661,7 @@ sre.AbstractWalker.prototype.singletonFocus = function(id) {
  * @return {!sre.Focus} The new focus.
  */
 sre.AbstractWalker.prototype.focusFromId = function(id, ids) {
-  return sre.Focus.factory(id, ids, this.rebuilt, this.node);
+  return sre.Focus.factory(id, ids, this.getRebuilt(), this.node);
 };
 
 
@@ -637,7 +672,7 @@ sre.AbstractWalker.prototype.focusFromId = function(id, ids) {
  */
 sre.AbstractWalker.prototype.summary = function() {
   this.moved = this.isSpeech() ? sre.Walker.move.SUMMARY : sre.Walker.move.REPEAT;
-  return this.focus_.clone();
+  return this.getFocus().clone();
 };
 
 
@@ -646,10 +681,10 @@ sre.AbstractWalker.prototype.summary = function() {
  * @private
  */
 sre.AbstractWalker.prototype.summary_ = function() {
-  var sprimary = this.focus_.getSemanticPrimary();
+  var sprimary = this.getFocus().getSemanticPrimary();
   var sid = sprimary.id.toString();
-  var snode = this.rebuilt.xml.getAttribute('id') === sid ? this.rebuilt.xml :
-      sre.DomUtil.querySelectorAllByAttrValue(this.rebuilt.xml, 'id', sid)[0];
+  var snode = this.getRebuilt().xml.getAttribute('id') === sid ? this.getRebuilt().xml :
+      sre.DomUtil.querySelectorAllByAttrValue(this.getRebuilt().xml, 'id', sid)[0];
   var summary = sre.SpeechGeneratorUtil.retrieveSummary(snode);
   var speech = this.mergePrefix_([summary]);
   return speech;
@@ -663,7 +698,7 @@ sre.AbstractWalker.prototype.summary_ = function() {
  */
 sre.AbstractWalker.prototype.detail = function() {
   this.moved = this.isSpeech() ? sre.Walker.move.DETAIL : sre.Walker.move.REPEAT;
-  return this.focus_.clone();
+  return this.getFocus().clone();
 };
 
 
@@ -672,10 +707,10 @@ sre.AbstractWalker.prototype.detail = function() {
  * @private
  */
 sre.AbstractWalker.prototype.detail_ = function() {
-  var sprimary = this.focus_.getSemanticPrimary();
+  var sprimary = this.getFocus().getSemanticPrimary();
   var sid = sprimary.id.toString();
-  var snode = this.rebuilt.xml.getAttribute('id') === sid ? this.rebuilt.xml :
-      sre.DomUtil.querySelectorAllByAttrValue(this.rebuilt.xml, 'id', sid)[0];
+  var snode = this.getRebuilt().xml.getAttribute('id') === sid ? this.getRebuilt().xml :
+      sre.DomUtil.querySelectorAllByAttrValue(this.getRebuilt().xml, 'id', sid)[0];
   var oldAlt = snode.getAttribute('alternative');
   snode.removeAttribute('alternative');
   var descrs = sre.SpeechGeneratorUtil.computeSpeechWithoutCache(
@@ -704,10 +739,10 @@ sre.AbstractWalker.prototype.specialMove = function() {
  * @return {sre.Focus} The new focus.
  */
 sre.AbstractWalker.prototype.virtualize = function(opt_undo) {
-  this.cursors.push({focus: this.focus_, levels: this.levels,
+  this.cursors.push({focus: this.getFocus(), levels: this.levels,
     undo: opt_undo || !this.cursors.length});
   this.levels = this.levels.clone();
-  return this.focus_.clone();
+  return this.getFocus().clone();
 };
 
 
@@ -718,7 +753,7 @@ sre.AbstractWalker.prototype.virtualize = function(opt_undo) {
 sre.AbstractWalker.prototype.previous = function() {
   var previous = this.cursors.pop();
   if (!previous) {
-    return this.focus_;
+    return this.getFocus();
   }
   this.levels = previous.levels;
   return previous.focus;
@@ -734,7 +769,7 @@ sre.AbstractWalker.prototype.undo = function() {
     var previous = this.cursors.pop();
   } while (previous && !previous.undo);
   if (!previous) {
-    return this.focus_;
+    return this.getFocus();
   }
   this.levels = previous.levels;
   return previous.focus;
@@ -747,7 +782,7 @@ sre.AbstractWalker.prototype.undo = function() {
 sre.AbstractWalker.prototype.update = function(options) {
   this.generator.setOptions(options);
   sre.System.getInstance().setupEngine(options);
-  sre.SpeechGeneratorFactory.generator('Tree').getSpeech(this.node, this.xml);
+  sre.SpeechGeneratorFactory.generator('Tree').getSpeech(this.node, this.getXml());
 };
 
 
@@ -756,7 +791,7 @@ sre.AbstractWalker.prototype.update = function(options) {
 sre.AbstractWalker.prototype.nextRules = function() {
   var options = this.generator.getOptions();
   if (options.modality !== 'speech') {
-    return this.focus_;
+    return this.getFocus();
   }
   // TODO: Check if domains exist for the current locale.
   sre.Engine.DOMAIN_TO_STYLES[options.domain] = options.style;
@@ -764,7 +799,7 @@ sre.AbstractWalker.prototype.nextRules = function() {
   options.style = sre.Engine.DOMAIN_TO_STYLES[options.domain];
   this.update(options);
   this.moved = sre.Walker.move.REPEAT;
-  return this.focus_.clone();
+  return this.getFocus().clone();
 };
 
 
@@ -804,10 +839,10 @@ sre.AbstractWalker.prototype.nextStyle = function(domain, style) {
 sre.AbstractWalker.prototype.previousRules = function() {
   var options = this.generator.getOptions();
   if (options.modality !== 'speech') {
-    return this.focus_;
+    return this.getFocus();
   }
   options.style = this.nextStyle(options.domain, options.style);
   this.update(options);
   this.moved = sre.Walker.move.REPEAT;
-  return this.focus_.clone();
+  return this.getFocus().clone();
 };
