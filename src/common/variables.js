@@ -66,7 +66,7 @@ sre.Variables.url = 'https://cdn.jsdelivr.net/npm/speech-rule-engine@' +
  * @const
  * @type {string}
  */
-sre.Variables.WGXpath = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/' +
-    sre.Variables.mathjaxVersion + '/extensions/a11y/wgxpath.install.js';
+sre.Variables.WGXpath =
+  'https://cdn.jsdelivr.net/npm/mathjax@2/extensions/a11y/wgxpath.install.js';
 
 
