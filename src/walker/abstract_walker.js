@@ -100,10 +100,8 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
    */ // Change!
   this.xml_ = null;
 
-  
   this.xmlString_ = xml;
-  
-  
+
   /**
    * @type {sre.RebuildStree}
    * @private
