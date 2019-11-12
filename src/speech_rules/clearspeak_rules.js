@@ -101,6 +101,8 @@ sre.ClearspeakRules.addAnnotators_ = function() {
   sre.SemanticAnnotations.getInstance().register(
       sre.ClearspeakUtil.simpleExpression());
   sre.SemanticAnnotations.getInstance().register(
+      sre.ClearspeakUtil.aakash());
+  sre.SemanticAnnotations.getInstance().register(
       sre.ClearspeakUtil.unitExpression());
 };
 
