@@ -67,6 +67,6 @@ sre.Variables.url = 'https://cdn.jsdelivr.net/npm/speech-rule-engine@' +
  * @type {string}
  */
 sre.Variables.WGXpath =
-  'https://cdn.jsdelivr.net/npm/mathjax@2/extensions/a11y/wgxpath.install.js';
+  'https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js';
 
 
