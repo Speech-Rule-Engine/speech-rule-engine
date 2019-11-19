@@ -253,7 +253,7 @@ sre.TableWalker.prototype.jumpCell_ = function(row, column) {
  */
 sre.TableWalker.prototype.isLegalJump_ = function(row, column) {
   var xmlTable = sre.DomUtil.querySelectorAllByAttrValue(
-      this.rebuilt.xml, 'id', this.currentTable_.id.toString())[0];
+      this.getRebuilt().xml, 'id', this.currentTable_.id.toString())[0];
   if (!xmlTable || xmlTable.hasAttribute('alternative')) {
     return false;
   }

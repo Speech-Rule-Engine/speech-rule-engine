@@ -39,9 +39,9 @@ sre.SemanticWalker = function(node, generator, highlighter, xml) {
 
   /**
    * Caching of levels.
-   * @type {!sre.Levels<sre.Focus>}
+   * @type {sre.Levels<sre.Focus>}
    */
-  this.levels = this.initLevels();
+  this.levels = null;
 
   this.restoreState();
 };

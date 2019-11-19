@@ -38,9 +38,9 @@ sre.SyntaxWalker = function(node, generator, highlighter, xml) {
 
   /**
    * Caching of levels.
-   * @type {!sre.Levels<string>}
+   * @type {sre.Levels<string>}
    */
-  this.levels = this.initLevels();
+  this.levels = null;
 
 
   this.restoreState();
