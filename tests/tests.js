@@ -50,6 +50,48 @@ sre.Tests.prototype.run = function() {
   this.runner.summary();
   var timeOut = (new Date()).getTime();
   this.runner.output('Time for tests: ' + (timeOut - timeIn) + 'ms\n');
+
+  
+  var constraints = {
+    en: {
+      default: ['default', 'short', 'alternative'],
+      mathspeak: ['default', 'brief', 'sbrief'],
+      clearspeak: ['default']
+    },
+    es: {
+      default: ['default'],
+      mathspeak: ['default', 'brief', 'sbrief']
+    },
+    fr: {
+      default: ['default'],
+      mathspeak: ['default', 'brief', 'sbrief'],
+      clearspeak: ['default']
+    },
+    nemeth: {
+      default: ['default']
+    }
+  };
+  var stores = sre.MathMap.getInstance().store['subStores_'];
+  var allRules = {};
+  sre.Variables.LOCALES.forEach(function(loc) {
+    allRules[loc] = [];
+  });
+  var keys = Object.keys(stores);
+  for (var loc of Object.keys(constraints)) {
+    var modality = loc === 'nemeth' ? 'braille' : 'speech';
+    for (var dom of Object.keys(constraints[loc])) {
+      for (var style of constraints[loc][dom]) {
+        for (var key of keys) {
+          sre.System.getInstance().setupEngine({domain: dom, modality: modality, locale: loc, style: style});
+          var xml = sre.DomUtil.createTextNode(key);
+          var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
+          var aural = sre.AuralRendering.getInstance();
+          allRules[loc].push(
+            [loc, modality, dom, style, key, aural.finalize(aural.markup(descrs))]);
+        }
+      }
+    }
+  }
   process.exit(this.runner.success() ? 0 : 1);
 };
 
