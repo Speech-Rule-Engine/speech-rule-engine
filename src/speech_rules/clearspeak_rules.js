@@ -26,7 +26,7 @@ goog.require('sre.Grammar');
 goog.require('sre.MathStore');
 goog.require('sre.MathspeakUtil');
 goog.require('sre.StoreUtil');
-
+goog.require('sre.SemanticComplexity');
 
 
 /**
@@ -101,7 +101,9 @@ sre.ClearspeakRules.addAnnotators_ = function() {
   sre.SemanticAnnotations.getInstance().register(
       sre.ClearspeakUtil.simpleExpression());
   sre.SemanticAnnotations.getInstance().register(
-      sre.ClearspeakUtil.aakash());
+      sre.SemanticComplexity.streeComplexity());
+  sre.SemanticAnnotations.getInstance().register(
+      sre.SemanticComplexity.streeDepth());
   sre.SemanticAnnotations.getInstance().register(
       sre.ClearspeakUtil.unitExpression());
 };
