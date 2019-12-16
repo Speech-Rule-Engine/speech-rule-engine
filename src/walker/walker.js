@@ -23,6 +23,8 @@ goog.provide('sre.Walker');
 
 goog.require('sre.EventUtil.KeyCode');
 goog.require('sre.Focus');
+goog.require('sre.Levels');
+goog.require('sre.RebuildStree');
 
 
 
@@ -56,6 +58,12 @@ sre.Walker.prototype.deactivate = function() {};
  * @return {string} The current speech string.
  */
 sre.Walker.prototype.speech = function() {};
+
+
+/**
+ * @return {!sre.RebuildStree} The rebuilt semantic tree for the walker.
+ */
+sre.Walker.prototype.getRebuilt = function() {};
 
 
 /**
