@@ -103,7 +103,13 @@ sre.ClearspeakRules.addAnnotators_ = function() {
   sre.SemanticAnnotations.getInstance().register(
       sre.SemanticComplexity.streeComplexity());
   sre.SemanticAnnotations.getInstance().register(
-      sre.SemanticComplexity.streeDepth());
+      sre.SemanticComplexity.subtreeHeight());
+  sre.SemanticAnnotations.getInstance().register(	  
+	  sre.SemanticComplexity.subtreeNodeCount());
+  sre.SemanticAnnotations.getInstance().register(
+      sre.SemanticComplexity.subtreeTermsHeight());
+  sre.SemanticAnnotations.getInstance().register(	  
+	  sre.SemanticComplexity.subtreeTermsNodeCount());
   sre.SemanticAnnotations.getInstance().register(
       sre.ClearspeakUtil.unitExpression());
 };

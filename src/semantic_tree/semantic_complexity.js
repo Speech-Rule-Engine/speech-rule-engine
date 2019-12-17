@@ -179,23 +179,90 @@ sre.SemanticComplexity.streeComplexity = function() {
 			return sre.SemanticComplexity.complexity(node);});
 };
 
-sre.SemanticComplexity.depth = function(node)	{
-	let streeDepth = 0;
-	var depth = 0;
+sre.SemanticComplexity.height = function(node)	{
+	let subtreeHeight = 0;
+	var height = 0;
 	if (node.childNodes.length < 1)
-		streeDepth = 1;
+		subtreeHeight = 1;
 	else {
 		for (var i=0; i<node.childNodes.length; i++) {
-			depth = node.childNodes[i].annotation.streeDepth[0];
-			if (depth > streeDepth)
-				streeDepth = depth+1;
+			height = node.childNodes[i].annotation.subtreeHeight[0];
+			if (height > subtreeHeight)
+				subtreeHeight = height+1;
 	}};
-	return streeDepth;
+	return subtreeHeight;
 };
 
-sre.SemanticComplexity.streeDepth = function() {
+sre.SemanticComplexity.subtreeHeight = function() {
 	return new sre.SemanticAnnotator(
-		'streeDepth',
+		'subtreeHeight',
 		function(node) {
-			return sre.SemanticComplexity.depth(node);});
+			return sre.SemanticComplexity.height(node);});
+};
+
+sre.SemanticComplexity.nodeCount = function(node)	{
+	var subtreeNodeCount = 0;
+	var nodeCount = 0;
+	if (node.childNodes.length < 1)
+		subtreeNodeCount = 1;
+	else {
+		for (var i=0; i<node.childNodes.length; i++){
+			nodeCount += node.childNodes[i].annotation.subtreeNodeCount[0];};
+		subtreeNodeCount = nodeCount+1;
+	};
+	return subtreeNodeCount;
+};
+
+sre.SemanticComplexity.subtreeNodeCount = function() {
+	return new sre.SemanticAnnotator(
+		'subtreeNodeCount',
+		function(node) {
+			return sre.SemanticComplexity.nodeCount(node);});
+};
+
+sre.SemanticComplexity.termsHeight = function(node)	{
+	let subtreeTermsHeight = 0;
+	var termsHeight = 0;
+	if (node.childNodes.length < 1)
+		subtreeTermsHeight = 1;
+	else {
+		for (var i=0; i<node.childNodes.length; i++) {
+			termsHeight = node.childNodes[i].annotation.subtreeTermsHeight[0];
+			if (termsHeight > subtreeTermsHeight) {
+				if (node.type === sre.SemanticAttr.Type.INFIXOP && node.role === 'implicit')
+					subtreeTermsHeight = termsHeight;
+				else
+					subtreeTermsHeight = termsHeight+1;
+			};
+	}};
+	return subtreeTermsHeight;
+};
+
+sre.SemanticComplexity.subtreeTermsHeight = function() {
+	return new sre.SemanticAnnotator(
+		'subtreeTermsHeight',
+		function(node) {
+			return sre.SemanticComplexity.termsHeight(node);});
+};
+
+sre.SemanticComplexity.termsNodeCount = function(node)	{
+	var subtreeTermsNodeCount = 0;
+	var termsNodeCount = 0;
+	if (node.childNodes.length < 1)
+		subtreeTermsNodeCount = 1;
+	else if (node.type === sre.SemanticAttr.Type.INFIXOP && node.role === 'implicit')
+		subtreeTermsNodeCount = 1;
+	else {
+		for (var i=0; i<node.childNodes.length; i++){
+			termsNodeCount += node.childNodes[i].annotation.subtreeTermsNodeCount[0];};
+		subtreeTermsNodeCount = termsNodeCount+1;
+	};
+	return subtreeTermsNodeCount;
+};
+
+sre.SemanticComplexity.subtreeTermsNodeCount = function() {
+	return new sre.SemanticAnnotator(
+		'subtreeTermsNodeCount',
+		function(node) {
+			return sre.SemanticComplexity.termsNodeCount(node);});
 };
