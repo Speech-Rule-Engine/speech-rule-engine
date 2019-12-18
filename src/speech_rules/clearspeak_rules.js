@@ -103,6 +103,8 @@ sre.ClearspeakRules.addAnnotators_ = function() {
   sre.SemanticAnnotations.getInstance().register(
       sre.SemanticComplexity.streeComplexity());
   sre.SemanticAnnotations.getInstance().register(
+      sre.SemanticComplexity.speech());  
+  sre.SemanticAnnotations.getInstance().register(
       sre.SemanticComplexity.subtreeHeight());
   sre.SemanticAnnotations.getInstance().register(	  
 	  sre.SemanticComplexity.subtreeNodeCount());

@@ -266,3 +266,16 @@ sre.SemanticComplexity.subtreeTermsNodeCount = function() {
 		function(node) {
 			return sre.SemanticComplexity.termsNodeCount(node);});
 };
+
+sre.SemanticComplexity.speech = function() {
+	return new sre.SemanticAnnotator(
+		'MathSpeakSpeech',
+		function(node) {
+			var xml = sre.DomUtil.parseInput('<stree></stree>');
+			var xmlRoot = node.xml(xml.ownerDocument);
+	        var descrs = sre.SpeechGeneratorUtil.computeSpeech(/**@type{!Node}*/(xmlRoot));
+			var aural = sre.AuralRendering.getInstance();
+			var text = aural.finalize(aural.markup(descrs));
+			console.log(text);
+			return text;
+		})};
