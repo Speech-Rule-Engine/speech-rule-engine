@@ -280,6 +280,7 @@ sre.SemanticNode.prototype.toJson = function() {
 sre.SemanticNode.prototype.updateContent = function(content, opt_text = false) {
   // Remove superfluous whitespace only if it is not the only content!
   // But without removing non-breaking spaces if we have a text.
+  console.log('here: ' + content + ' done');
   var newContent = opt_text ?
       content.replace(/^[ \f\n\r\t\v​]*/, '').replace(/[ \f\n\r\t\v​]*$/, '') :
       content.trim();

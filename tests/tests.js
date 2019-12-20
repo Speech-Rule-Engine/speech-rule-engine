@@ -80,18 +80,22 @@ sre.Tests.prototype.run = function() {
   for (var loc of Object.keys(constraints)) {
     var modality = loc === 'nemeth' ? 'braille' : 'speech';
     for (var dom of Object.keys(constraints[loc])) {
-      for (var style of constraints[loc][dom]) {
-        for (var key of keys) {
-          sre.System.getInstance().setupEngine({domain: dom, modality: modality, locale: loc, style: style});
-          var xml = sre.DomUtil.createTextNode(key);
+      for (var key of keys) {
+        var xml = sre.DomUtil.createTextNode(key);
+        var aural = sre.AuralRendering.getInstance();
+        var result = [loc, modality, dom, key];
+        for (var style of constraints[loc][dom]) {
+          sre.System.getInstance().setupEngine({
+            domain: dom, modality: modality, locale: loc, style: style});
           var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
-          var aural = sre.AuralRendering.getInstance();
-          allRules[loc].push(
-            [loc, modality, dom, style, key, aural.finalize(aural.markup(descrs))]);
+          result.push(aural.finalize(aural.markup(descrs)));
+          allRules[loc].push(result);
         }
+        console.log(`${result[0]}, ${result[2]}, "${result.slice(3).join('", "')}"`);
       }
     }
   }
+
   process.exit(this.runner.success() ? 0 : 1);
 };
 
