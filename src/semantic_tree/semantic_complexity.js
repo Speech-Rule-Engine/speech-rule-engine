@@ -22,13 +22,22 @@ goog.provide('sre.SemanticComplexity');
 
 goog.require('sre.SemanticAnnotator')
 
+///**
+// * A function which computes the complexity at a node on the basis of the //various
+// * parameters such as nodeType, nodeHeight, nodeCount, nodeTermsHeight, 
+// * nodeTermsCount, speechLegth, No. of different types of operators in the
+// * subtree, etc.
+// * @param (sre.SemanticNode) node The semantic node.
+// * @return (Integer) A numerical value representing the relative complexity at
+// * the given node.
+// */
+ 
 sre.SemanticComplexity.complexity = function(node)	{
 	let complexity = 0;
 	switch (node.type)	{
 		case sre.SemanticAttr.Type.INFIXOP:
 			for (var i=0; i<node.childNodes.length; i++)
 				complexity += node.childNodes[i].annotation.complexity[0];
-			console.log(complexity)
 			break;
 		case sre.SemanticAttr.Type.PUNCTUATION:
 			complexity = .2;
@@ -171,6 +180,9 @@ sre.SemanticComplexity.complexity = function(node)	{
 	return complexity;
 };
 
+/**
+ * @return {sre.SemanticAnnotator} A semantic annotator for complexity function.
+ */
 
 sre.SemanticComplexity.streeComplexity = function() {
 	return new sre.SemanticAnnotator(
@@ -179,6 +191,12 @@ sre.SemanticComplexity.streeComplexity = function() {
 			return sre.SemanticComplexity.complexity(node);});
 };
 
+///**
+// * A function to compute height of the given node.
+// * @param (sre.SemanticNode) node A semantic node.
+// * @return (Integer) Height of the given node.
+// */
+ 
 sre.SemanticComplexity.height = function(node)	{
 	let subtreeHeight = 0;
 	var height = 0;
@@ -192,6 +210,10 @@ sre.SemanticComplexity.height = function(node)	{
 	}};
 	return subtreeHeight;
 };
+
+/**
+ * @return {sre.SemanticAnnotator} A semantic annotator for height function.
+ */
 
 sre.SemanticComplexity.subtreeHeight = function() {
 	return new sre.SemanticAnnotator(
@@ -212,6 +234,10 @@ sre.SemanticComplexity.nodeCount = function(node)	{
 	};
 	return subtreeNodeCount;
 };
+
+/**
+ * @return {sre.SemanticAnnotator} A semantic annotator for nodeCount function.
+ */
 
 sre.SemanticComplexity.subtreeNodeCount = function() {
 	return new sre.SemanticAnnotator(
@@ -238,6 +264,10 @@ sre.SemanticComplexity.termsHeight = function(node)	{
 	return subtreeTermsHeight;
 };
 
+/**
+ * @return {sre.SemanticAnnotator} A semantic annotator for termsHeight function.
+ */
+
 sre.SemanticComplexity.subtreeTermsHeight = function() {
 	return new sre.SemanticAnnotator(
 		'subtreeTermsHeight',
@@ -260,6 +290,11 @@ sre.SemanticComplexity.termsNodeCount = function(node)	{
 	return subtreeTermsNodeCount;
 };
 
+/**
+ * @return {sre.SemanticAnnotator} A semantic annotator for termsNodeCount
+ * function.
+ */
+
 sre.SemanticComplexity.subtreeTermsNodeCount = function() {
 	return new sre.SemanticAnnotator(
 		'subtreeTermsNodeCount',
@@ -267,15 +302,107 @@ sre.SemanticComplexity.subtreeTermsNodeCount = function() {
 			return sre.SemanticComplexity.termsNodeCount(node);});
 };
 
+/**
+ * @return {sre.SemanticAnnotator} A semantic annotator for speech function.
+ */
+
 sre.SemanticComplexity.speech = function() {
 	return new sre.SemanticAnnotator(
-		'MathSpeakSpeech',
+		'speech',
 		function(node) {
 			var xml = sre.DomUtil.parseInput('<stree></stree>');
 			var xmlRoot = node.xml(xml.ownerDocument);
 	        var descrs = sre.SpeechGeneratorUtil.computeSpeech(/**@type{!Node}*/(xmlRoot));
 			var aural = sre.AuralRendering.getInstance();
 			var text = aural.finalize(aural.markup(descrs));
-			console.log(text);
 			return text;
 		})};
+
+/**
+ * @return {sre.SemanticAnnotator} A semantic annotator for word count in the 
+ * speech string.
+ */
+		
+sre.SemanticComplexity.speechWordCount = function() {
+	return new sre.SemanticAnnotator(
+		'SpeechWordCount',
+		function(node) {
+			const len = node.annotation.speech[0].split(' ').length;
+			return len;
+		})
+};
+
+/**
+ * @return {sre.SemanticAnnotator} A semantic annotator for word count in the 
+ * speech string.
+ */
+		
+sre.SemanticComplexity.speechOperatorCounter = function() {
+	return new sre.SemanticAnnotator(
+		'OperatorCounters',
+		function(node) {
+			const words = node.annotation.speech[0].split(' ');
+			var PlusCounter = 0;
+			var MinusCounter = 0;
+			var SupCounter = 0;
+			var SquCounter = 0;
+			var CubeCounter = 0;
+			var FracCounter = 0;
+			var RootCounter = 0;
+			var BracketCounter = 0;
+			var BraceCounter = 0;
+			var ParenthesisCounter = 0;
+			var ImplicitMultiCounter = 0;
+			var ExplicitMultiCounter = 0;
+			var ChancesOfError = 0;
+			for(var i=0; i < words.length; i++){
+				switch (words[i]){
+					case 'plus':
+						PlusCounter += 1;
+						break;
+					case 'minus':
+						MinusCounter += 1;
+						break;
+					case 'negative':
+						MinusCounter += 1;
+						break;
+					case 'StartFraction':
+						FracCounter += 1;
+						break;
+					case 'StartRoot':
+						RootCounter += 1;
+						break;
+					case 'Baseline':
+						ChancesOfError += 1;
+						break;
+					case 'Superscript':
+						SupCounter += 1;
+						break;
+					case 'squared':
+						SquCounter += 1;
+						break;
+					case 'cubed':
+						CubeCounter += 1;
+						break;
+					case 'left-bracket':
+						BracketCounter += 1;
+						break;
+					case 'left-brace':
+						BraceCounter += 1;
+						break;
+					case 'left-parenthesis':
+						ParenthesisCounter += 1;
+						break;
+					case 'times':
+						ExplicitMultiCounter += 1;
+						break;
+					default:
+						if (i < (words.length)-1){
+							if ((words[i]).length === 1){
+								if ((words[i+1]).length === 1)
+									ImplicitMultiCounter += 1;
+							}}};// ExplicitMulti, and paranthesis
+			};
+			return [PlusCounter, MinusCounter, FracCounter, RootCounter, ChancesOfError, SupCounter, SquCounter, CubeCounter, ExplicitMultiCounter, BracketCounter, BraceCounter, ParenthesisCounter, ImplicitMultiCounter];
+		})
+};
