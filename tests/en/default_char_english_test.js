@@ -1,4349 +1,4405 @@
-en, default, "0", "digit zero", "zero", "zero"
-en, default, "1", "digit one", "one", "one"
-en, default, "2", "digit two", "two", "two"
-en, default, "3", "digit three", "three", "three"
-en, default, "4", "digit four", "four", "four"
-en, default, "5", "digit five", "five", "five"
-en, default, "6", "digit six", "six", "six"
-en, default, "7", "digit seven", "seven", "seven"
-en, default, "8", "digit eight", "eight", "eight"
-en, default, "9", "digit nine", "nine", "nine"
-en, default, "deg", "degree", "degree", "degree"
-en, default, "det", "determinant", "det", "det"
-en, default, "dim", "dimension", "dimension", "dimension"
-en, default, "hom", "homomorphism", "hom", "hom"
-en, default, "Hom", "homomorphism", "hom", "hom"
-en, default, "ker", "kernel", "kernel", "kernel"
-en, default, "Tr", "trace", "trace", "trace"
-en, default, "tr", "trace", "trace", "trace"
-en, default, "log", "logarithm", "log", "logarithm function"
-en, default, "ln", "natural logarithm", "natural log", "natural logarithm function"
-en, default, "lg", "logarithm base 10", "log base 10", "log base 10"
-en, default, "exp", "exponential", "exp", "exponential function"
-en, default, "expt", "exponential", "exp", "exponential function"
-en, default, "gcd", "greatest common divisor", "gcd", "gcd"
-en, default, "lcm", "least common multiple", "lcm", "lcm"
-en, default, "arg", "argument", "arg", "arg"
-en, default, "im", "imaginary part", "imaginary", "imaginary"
-en, default, "re", "real part", "real", "real"
-en, default, "inf", "infimum", "inf", "inf"
-en, default, "lim", "limit", "lim", "lim"
-en, default, "lim inf", "limit infimum", "lim inf", "lim inf"
-en, default, "liminf", "infimum default", "liminf", "inferior limit"
-en, default, "lim sup", "limit supremum", "lim sup", "lim sup"
-en, default, "limsup", "supremum limit", "limsup", "superior limit"
-en, default, "max", "maximum", "max", "max"
-en, default, "min", "minimum", "min", "min"
-en, default, "sup", "supremum", "sup", "sup"
-en, default, "injlim", "injective limit", "colimit", "direct limit"
-en, default, "inj lim", "inj limit", "inj lim", "inj lim"
-en, default, "projlim", "projective limit", "limit", "inverse limit"
-en, default, "proj lim", "proj limit", "proj lim", "proj lim"
-en, default, "mod", "modulo", "mod", "mod"
-en, default, "Pr", "probability", "probability", "probability"
-en, default, "cosh", "hyperbolic cosine function", "hyperbolic cosine", "hyperbolic cosine"
-en, default, "coth", "hyperbolic cotangent function", "hyperbolic cotangent", "hyperbolic cotangent"
-en, default, "csch", "hyperbolic cosecant function", "hyperbolic cosecant", "hyperbolic cosecant"
-en, default, "sech", "hyperbolic secant function", "hyperbolic secant", "hyperbolic secant"
-en, default, "sinh", "hyperbolic sine function", "hyperbolic sine", "hyperbolic sine"
-en, default, "tanh", "hyperbolic tangent function", "hyperbolic tangent", "hyperbolic tangent"
-en, default, "arcosh", "inverse hyperbolic cosine function", "area hyperbolic cosine", "area hyperbolic cosine function"
-en, default, "arccosh", "inverse hyperbolic cosine function", "area hyperbolic cosine", "area hyperbolic cosine function"
-en, default, "arcoth", "inverse hyperbolic cotangent function", "area hyperbolic cotangent", "area hyperbolic cotangent function"
-en, default, "arccoth", "inverse hyperbolic cotangent function", "area hyperbolic cotangent", "area hyperbolic cotangent function"
-en, default, "arcsch", "inverse hyperbolic cosecant function", "area hyperbolic cosecant", "area hyperbolic cosecant function"
-en, default, "arccsch", "inverse hyperbolic cosecant function", "area hyperbolic cosecant", "area hyperbolic cosecant function"
-en, default, "arsech", "inverse hyperbolic secant function", "area hyperbolic secant", "area hyperbolic secant function"
-en, default, "arcsech", "inverse hyperbolic secant function", "area hyperbolic secant", "area hyperbolic secant function"
-en, default, "arsinh", "inverse hyperbolic sine function", "area hyperbolic sine", "area hyperbolic sine function"
-en, default, "arcsinh", "inverse hyperbolic sine function", "area hyperbolic sine", "area hyperbolic sine function"
-en, default, "artanh", "inverse hyperbolic tangent function", "area hyperbolic tangent", "area hyperbolic tangent function"
-en, default, "arctanh", "inverse hyperbolic tangent function", "area hyperbolic tangent", "area hyperbolic tangent function"
-en, default, "cos", "cosine function", "cosine", "cosine"
-en, default, "cosine", "cosine function", "cosine", "cosine"
-en, default, "cot", "cotangent function", "cotangent", "cotangent"
-en, default, "csc", "cosecant function", "cosecant", "cosecant"
-en, default, "sec", "secant function", "secant", "secant"
-en, default, "sin", "sine function", "sine", "sine function"
-en, default, "sine", "sine function", "sine", "sine function"
-en, default, "tan", "tangent function", "tangent", "tangent"
-en, default, "arccos", "inverse cosine function", "arc cosine", "arc cosine function"
-en, default, "arccot", "inverse cotangent function", "arc cotangent", "arc cotangent function"
-en, default, "arccsc", "inverse cosecant function", "arc cosecant", "arc cosecant function"
-en, default, "arcsec", "inverse secant function", "arc secant", "arc secant function"
-en, default, "arcsin", "inverse sine function", "arc sine", "arc sine function"
-en, default, "arctan", "inverse tangent function", "arc tangent", "arc tangent function"
-en, default, "Α", "greek capital letter alpha", "cap alpha", "cap alpha"
-en, default, "Β", "greek capital letter beta", "cap beta", "cap beta"
-en, default, "Γ", "greek capital letter gamma", "cap gamma", "cap gamma"
-en, default, "Δ", "greek capital letter delta", "cap delta", "cap delta"
-en, default, "Ε", "greek capital letter epsilon", "cap epsilon", "cap epsilon"
-en, default, "Ζ", "greek capital letter zeta", "cap zeta", "cap zeta"
-en, default, "Η", "greek capital letter eta", "cap eta", "cap eta"
-en, default, "Θ", "greek capital letter theta", "cap theta", "cap theta"
-en, default, "Ι", "greek capital letter iota", "cap iota", "cap iota"
-en, default, "Κ", "greek capital letter kappa", "cap kappa", "cap kappa"
-en, default, "Λ", "greek capital letter lamda", "cap lamda", "greek capital letter lambda"
-en, default, "Μ", "greek capital letter mu", "cap mu", "cap mu"
-en, default, "Ν", "greek capital letter nu", "cap nu", "cap nu"
-en, default, "Ξ", "greek capital letter xi", "cap xi", "cap xi"
-en, default, "Ο", "greek capital letter omicron", "cap omicron", "cap omicron"
-en, default, "Π", "greek capital letter pi", "cap pi", "cap pi"
-en, default, "Ρ", "greek capital letter rho", "cap rho", "cap rho"
-en, default, "Σ", "greek capital letter sigma", "cap sigma", "cap sigma"
-en, default, "Τ", "greek capital letter tau", "cap tau", "cap tau"
-en, default, "Υ", "greek capital letter upsilon", "cap upsilon", "cap upsilon"
-en, default, "Φ", "greek capital letter phi", "cap phi", "cap phi"
-en, default, "Χ", "greek capital letter chi", "cap chi", "cap chi"
-en, default, "Ψ", "greek capital letter psi", "cap psi", "cap psi"
-en, default, "Ω", "greek capital letter omega", "cap omega", "cap omega"
-en, default, "α", "greek small letter alpha", "alpha", "alpha"
-en, default, "β", "greek small letter beta", "beta", "beta"
-en, default, "γ", "greek small letter gamma", "gamma", "gamma"
-en, default, "δ", "greek small letter delta", "delta", "delta"
-en, default, "ε", "greek small letter epsilon", "epsilon", "epsilon"
-en, default, "ζ", "greek small letter zeta", "zeta", "zeta"
-en, default, "η", "greek small letter eta", "eta", "eta"
-en, default, "θ", "greek small letter theta", "theta", "theta"
-en, default, "ι", "greek small letter iota", "iota", "iota"
-en, default, "κ", "greek small letter kappa", "kappa", "kappa"
-en, default, "λ", "greek small letter lamda", "lamda", "greek small letter lambda"
-en, default, "μ", "greek small letter mu", "mu", "mu"
-en, default, "ν", "greek small letter nu", "nu", "nu"
-en, default, "ξ", "greek small letter xi", "xi", "xi"
-en, default, "ο", "greek small letter omicron", "omicron", "omicron"
-en, default, "π", "greek small letter pi", "pi", "pi"
-en, default, "ρ", "greek small letter rho", "rho", "rho"
-en, default, "ς", "greek small letter final sigma", "final sigma", "final sigma"
-en, default, "σ", "greek small letter sigma", "sigma", "sigma"
-en, default, "τ", "greek small letter tau", "tau", "tau"
-en, default, "υ", "greek small letter upsilon", "upsilon", "upsilon"
-en, default, "φ", "greek small letter phi", "phi", "phi"
-en, default, "χ", "greek small letter chi", "chi", "chi"
-en, default, "ψ", "greek small letter psi", "psi", "psi"
-en, default, "ω", "greek small letter omega", "omega", "omega"
-en, default, "ᴦ", "greek letter small capital gamma", "small cap gamma", "greek letter gamma"
-en, default, "ᴧ", "greek letter small capital lamda", "small cap lamda", "greek letter lamda"
-en, default, "ᴨ", "greek letter small capital pi", "small cap pi", "greek letter pi"
-en, default, "ᴩ", "greek letter small capital rho", "small cap rho", "greek letter rho"
-en, default, "ᴪ", "greek letter small capital psi", "small cap psi", "greek letter psi"
-en, default, "ᵞ", "modifier letter small greek gamma", "superscript gamma", "greek letter superscript gamma"
-en, default, "ᵠ", "modifier letter small greek phi", "superscript phi", "greek letter superscript phi"
-en, default, "ᵦ", "greek subscript small letter beta", "subscript beta", "subscript beta"
-en, default, "ᵧ", "greek subscript small letter gamma", "subscript gamma", "greek letter gamma"
-en, default, "ᵨ", "greek subscript small letter rho", "subscript rho", "greek letter rho"
-en, default, "ᵩ", "greek subscript small letter phi", "subscript phi", "greek letter phi"
-en, default, "ᵪ", "greek subscript small letter chi", "subscript chi", "greek letter chi"
-en, default, "ϐ", "greek beta symbol", "beta", "greek small letter curled beta"
-en, default, "ϑ", "greek theta symbol", "theta", "greek small letter script theta"
-en, default, "ϕ", "greek phi symbol", "phi", "greek small letter script phi"
-en, default, "ϖ", "greek pi symbol", "pi", "greek small letter omega pi"
-en, default, "ϗ", "greek kai symbol", "kai", "kai"
-en, default, "ϰ", "greek kappa symbol", "kappa", "greek small letter script kappa"
-en, default, "ϱ", "greek rho symbol", "rho", "greek small letter tailed rho"
-en, default, "ϵ", "greek lunate epsilon symbol", "epsilon", "epsilon"
-en, default, "϶", "greek reversed lunate epsilon symbol", "reversed epsilon", "reversed epsilon"
-en, default, "ϴ", "greek capital theta symbol", "cap theta", "cap theta"
-en, default, "𝚹", "mathematical bold capital theta symbol", "bold cap theta", "bold capital theta"
-en, default, "𝛳", "mathematical italic capital theta symbol", "italic cap theta", "italic capital theta"
-en, default, "𝝧", "mathematical sans serif bold capital theta symbol", "sans serif bold cap theta", "sans serif bold capital theta"
-en, default, "𝛁", "mathematical bold nabla", "mathematical bold nabla", "bold nabla"
-en, default, "𝛛", "mathematical bold partial differential", "bold partial differential", "bold partial differential"
-en, default, "𝛜", "mathematical bold epsilon symbol", "bold epsilon", "bold epsilon"
-en, default, "𝛝", "mathematical bold theta symbol", "bold theta", "bold theta"
-en, default, "𝛞", "mathematical bold kappa symbol", "bold kappa", "bold kappa"
-en, default, "𝛟", "mathematical bold phi symbol", "bold phi", "bold phi"
-en, default, "𝛠", "mathematical bold rho symbol", "bold rho", "bold rho"
-en, default, "𝛡", "mathematical bold pi symbol", "bold pi", "bold pi"
-en, default, "𝛻", "mathematical italic nabla", "italic nabla", "italic nabla"
-en, default, "𝜕", "mathematical italic partial differential", "italic partial differential", "italic partial differential"
-en, default, "𝜖", "mathematical italic epsilon symbol", "italic epsilon", "italic epsilon"
-en, default, "𝜗", "mathematical italic theta symbol", "italic theta", "italic theta"
-en, default, "𝜘", "mathematical italic kappa symbol", "italic kappa", "italic kappa"
-en, default, "𝜙", "mathematical italic phi symbol", "italic phi", "italic phi"
-en, default, "𝜚", "mathematical italic rho symbol", "italic rho", "italic rho"
-en, default, "𝜛", "mathematical italic pi symbol", "italic pi", "italic pi"
-en, default, "𝝯", "mathematical sans serif bold nabla", "sans serif bold nabla", "sans serif bold nabla"
-en, default, "𝞉", "mathematical sans serif bold partial differential", "sans serif bold partial differential", "sans serif bold partial differential"
-en, default, "𝞊", "mathematical sans serif bold epsilon symbol", "sans serif bold epsilon", "sans serif bold epsilon"
-en, default, "𝞋", "mathematical sans serif bold theta symbol", "sans serif bold theta", "sans serif bold theta"
-en, default, "𝞌", "mathematical sans serif bold kappa symbol", "sans serif bold kappa", "sans serif bold kappa"
-en, default, "𝞍", "mathematical sans serif bold phi symbol", "sans serif bold phi", "sans serif bold phi"
-en, default, "𝞎", "mathematical sans serif bold rho symbol", "sans serif bold rho", "sans serif bold rho"
-en, default, "𝞏", "mathematical sans serif bold pi symbol", "sans serif bold pi", "sans serif bold pi"
-en, default, "𝟊", "mathematical bold capital digamma", "bold cap digamma", "bold capital digamma"
-en, default, "𝟋", "mathematical bold small digamma", "bold digamma", "bold small digamma"
-en, default, "𝚨", "mathematical bold capital alpha", "bold cap alpha", "bold capital alpha"
-en, default, "𝚩", "mathematical bold capital beta", "bold cap beta", "bold capital beta"
-en, default, "𝚪", "mathematical bold capital gamma", "bold cap gamma", "bold capital gamma"
-en, default, "𝚫", "mathematical bold capital delta", "bold cap delta", "bold capital delta"
-en, default, "𝚬", "mathematical bold capital epsilon", "bold cap epsilon", "bold capital epsilon"
-en, default, "𝚭", "mathematical bold capital zeta", "bold cap zeta", "bold capital zeta"
-en, default, "𝚮", "mathematical bold capital eta", "bold cap eta", "bold capital eta"
-en, default, "𝚯", "mathematical bold capital theta", "bold cap theta", "bold capital theta"
-en, default, "𝚰", "mathematical bold capital iota", "bold cap iota", "bold capital iota"
-en, default, "𝚱", "mathematical bold capital kappa", "bold cap kappa", "bold capital kappa"
-en, default, "𝚲", "mathematical bold capital lamda", "bold cap lamda", "bold capital lamda"
-en, default, "𝚳", "mathematical bold capital mu", "bold cap mu", "bold capital mu"
-en, default, "𝚴", "mathematical bold capital nu", "bold cap nu", "bold capital nu"
-en, default, "𝚵", "mathematical bold capital xi", "bold cap xi", "bold capital xi"
-en, default, "𝚶", "mathematical bold capital omicron", "bold cap omicron", "bold capital omicron"
-en, default, "𝚷", "mathematical bold capital pi", "bold cap pi", "bold capital pi"
-en, default, "𝚸", "mathematical bold capital rho", "bold cap rho", "bold capital rho"
-en, default, "𝚺", "mathematical bold capital sigma", "bold cap sigma", "bold capital sigma"
-en, default, "𝚻", "mathematical bold capital tau", "bold cap tau", "bold capital tau"
-en, default, "𝚼", "mathematical bold capital upsilon", "bold cap upsilon", "bold capital upsilon"
-en, default, "𝚽", "mathematical bold capital phi", "bold cap phi", "bold capital phi"
-en, default, "𝚾", "mathematical bold capital chi", "bold cap chi", "bold capital chi"
-en, default, "𝚿", "mathematical bold capital psi", "bold cap psi", "bold capital psi"
-en, default, "𝛀", "mathematical bold capital omega", "bold cap omega", "bold capital omega"
-en, default, "𝛂", "mathematical bold small alpha", "bold alpha", "bold small alpha"
-en, default, "𝛃", "mathematical bold small beta", "bold beta", "bold small beta"
-en, default, "𝛄", "mathematical bold small gamma", "bold gamma", "bold small gamma"
-en, default, "𝛅", "mathematical bold small delta", "bold delta", "bold small delta"
-en, default, "𝛆", "mathematical bold small epsilon", "bold epsilon", "bold small epsilon"
-en, default, "𝛇", "mathematical bold small zeta", "bold zeta", "bold small zeta"
-en, default, "𝛈", "mathematical bold small eta", "bold eta", "bold small eta"
-en, default, "𝛉", "mathematical bold small theta", "bold theta", "bold small theta"
-en, default, "𝛊", "mathematical bold small iota", "bold iota", "bold small iota"
-en, default, "𝛋", "mathematical bold small kappa", "bold kappa", "bold small kappa"
-en, default, "𝛌", "mathematical bold small lamda", "bold lamda", "bold small lamda"
-en, default, "𝛍", "mathematical bold small mu", "bold mu", "bold small mu"
-en, default, "𝛎", "mathematical bold small nu", "bold nu", "bold small nu"
-en, default, "𝛏", "mathematical bold small xi", "bold xi", "bold small xi"
-en, default, "𝛐", "mathematical bold small omicron", "bold omicron", "bold small omicron"
-en, default, "𝛑", "mathematical bold small pi", "bold pi", "bold small pi"
-en, default, "𝛒", "mathematical bold small rho", "bold rho", "bold small rho"
-en, default, "𝛓", "mathematical bold small final sigma", "bold final sigma", "bold small final sigma"
-en, default, "𝛔", "mathematical bold small sigma", "bold sigma", "bold small sigma"
-en, default, "𝛕", "mathematical bold small tau", "bold tau", "bold small tau"
-en, default, "𝛖", "mathematical bold small upsilon", "bold upsilon", "bold small upsilon"
-en, default, "𝛗", "mathematical bold small phi", "bold phi", "bold small phi"
-en, default, "𝛘", "mathematical bold small chi", "bold chi", "bold small chi"
-en, default, "𝛙", "mathematical bold small psi", "bold psi", "bold small psi"
-en, default, "𝛚", "mathematical bold small omega", "bold omega", "bold small omega"
-en, default, "𝛢", "mathematical italic capital alpha", "italic cap alpha", "italic capital alpha"
-en, default, "𝛣", "mathematical italic capital beta", "italic cap beta", "italic capital beta"
-en, default, "𝛤", "mathematical italic capital gamma", "italic cap gamma", "italic capital gamma"
-en, default, "𝛥", "mathematical italic capital delta", "italic cap delta", "italic capital delta"
-en, default, "𝛦", "mathematical italic capital epsilon", "italic cap epsilon", "italic capital epsilon"
-en, default, "𝛧", "mathematical italic capital zeta", "italic cap zeta", "italic capital zeta"
-en, default, "𝛨", "mathematical italic capital eta", "italic cap eta", "italic capital eta"
-en, default, "𝛩", "mathematical italic capital theta", "italic cap theta", "italic capital theta"
-en, default, "𝛪", "mathematical italic capital iota", "italic cap iota", "italic capital iota"
-en, default, "𝛫", "mathematical italic capital kappa", "italic cap kappa", "italic capital kappa"
-en, default, "𝛬", "mathematical italic capital lamda", "italic cap lamda", "italic capital lamda"
-en, default, "𝛭", "mathematical italic capital mu", "italic cap mu", "italic capital mu"
-en, default, "𝛮", "mathematical italic capital nu", "italic cap nu", "italic capital nu"
-en, default, "𝛯", "mathematical italic capital xi", "italic cap xi", "italic capital xi"
-en, default, "𝛰", "mathematical italic capital omicron", "italic cap omicron", "italic capital omicron"
-en, default, "𝛱", "mathematical italic capital pi", "italic cap pi", "italic capital pi"
-en, default, "𝛲", "mathematical italic capital rho", "italic cap rho", "italic capital rho"
-en, default, "𝛴", "mathematical italic capital sigma", "italic cap sigma", "italic capital sigma"
-en, default, "𝛵", "mathematical italic capital tau", "italic cap tau", "italic capital tau"
-en, default, "𝛶", "mathematical italic capital upsilon", "italic cap upsilon", "italic capital upsilon"
-en, default, "𝛷", "mathematical italic capital phi", "italic cap phi", "italic capital phi"
-en, default, "𝛸", "mathematical italic capital chi", "italic cap chi", "italic capital chi"
-en, default, "𝛹", "mathematical italic capital psi", "italic cap psi", "italic capital psi"
-en, default, "𝛺", "mathematical italic capital omega", "italic cap omega", "italic capital omega"
-en, default, "𝛼", "mathematical italic small alpha", "italic alpha", "italic small alpha"
-en, default, "𝛽", "mathematical italic small beta", "italic beta", "italic small beta"
-en, default, "𝛾", "mathematical italic small gamma", "italic gamma", "italic small gamma"
-en, default, "𝛿", "mathematical italic small delta", "italic delta", "italic small delta"
-en, default, "𝜀", "mathematical italic small epsilon", "italic epsilon", "italic small epsilon"
-en, default, "𝜁", "mathematical italic small zeta", "italic zeta", "italic small zeta"
-en, default, "𝜂", "mathematical italic small eta", "italic eta", "italic small eta"
-en, default, "𝜃", "mathematical italic small theta", "italic theta", "italic small theta"
-en, default, "𝜄", "mathematical italic small iota", "italic iota", "italic small iota"
-en, default, "𝜅", "mathematical italic small kappa", "italic kappa", "italic small kappa"
-en, default, "𝜆", "mathematical italic small lamda", "italic lamda", "italic small lamda"
-en, default, "𝜇", "mathematical italic small mu", "italic mu", "italic small mu"
-en, default, "𝜈", "mathematical italic small nu", "italic nu", "italic small nu"
-en, default, "𝜉", "mathematical italic small xi", "italic xi", "italic small xi"
-en, default, "𝜊", "mathematical italic small omicron", "italic omicron", "italic small omicron"
-en, default, "𝜋", "mathematical italic small pi", "italic pi", "italic small pi"
-en, default, "𝜌", "mathematical italic small rho", "italic rho", "italic small rho"
-en, default, "𝜍", "mathematical italic small final sigma", "italic final sigma", "italic small final sigma"
-en, default, "𝜎", "mathematical italic small sigma", "italic sigma", "italic small sigma"
-en, default, "𝜏", "mathematical italic small tau", "italic tau", "italic small tau"
-en, default, "𝜐", "mathematical italic small upsilon", "italic upsilon", "italic small upsilon"
-en, default, "𝜑", "mathematical italic small phi", "italic phi", "italic small phi"
-en, default, "𝜒", "mathematical italic small chi", "italic chi", "italic small chi"
-en, default, "𝜓", "mathematical italic small psi", "italic psi", "italic small psi"
-en, default, "𝜔", "mathematical italic small omega", "italic omega", "italic small omega"
-en, default, "𝜜", "mathematical bold italic capital alpha", "bold italic cap alpha", "bold italic capital alpha"
-en, default, "𝜝", "mathematical bold italic capital beta", "bold italic cap beta", "bold italic capital beta"
-en, default, "𝜞", "mathematical bold italic capital gamma", "bold italic cap gamma", "bold italic capital gamma"
-en, default, "𝜟", "mathematical bold italic capital delta", "bold italic cap delta", "bold italic capital delta"
-en, default, "𝜠", "mathematical bold italic capital epsilon", "bold italic cap epsilon", "bold italic capital epsilon"
-en, default, "𝜡", "mathematical bold italic capital zeta", "bold italic cap zeta", "bold italic capital zeta"
-en, default, "𝜢", "mathematical bold italic capital eta", "bold italic cap eta", "bold italic capital eta"
-en, default, "𝜣", "mathematical bold italic capital theta", "bold italic cap theta", "bold italic capital theta"
-en, default, "𝜤", "mathematical bold italic capital iota", "bold italic cap iota", "bold italic capital iota"
-en, default, "𝜥", "mathematical bold italic capital kappa", "bold italic cap kappa", "bold italic capital kappa"
-en, default, "𝜦", "mathematical bold italic capital lamda", "bold italic cap lamda", "bold italic capital lamda"
-en, default, "𝜧", "mathematical bold italic capital mu", "bold italic cap mu", "bold italic capital mu"
-en, default, "𝜨", "mathematical bold italic capital nu", "bold italic cap nu", "bold italic capital nu"
-en, default, "𝜩", "mathematical bold italic capital xi", "bold italic cap xi", "bold italic capital xi"
-en, default, "𝜪", "mathematical bold italic capital omicron", "bold italic cap omicron", "bold italic capital omicron"
-en, default, "𝜫", "mathematical bold italic capital pi", "bold italic cap pi", "bold italic capital pi"
-en, default, "𝜬", "mathematical bold italic capital rho", "bold italic cap rho", "bold italic capital rho"
-en, default, "𝜮", "mathematical bold italic capital sigma", "bold italic cap sigma", "bold italic capital sigma"
-en, default, "𝜯", "mathematical bold italic capital tau", "bold italic cap tau", "bold italic capital tau"
-en, default, "𝜰", "mathematical bold italic capital upsilon", "bold italic cap upsilon", "bold italic capital upsilon"
-en, default, "𝜱", "mathematical bold italic capital phi", "bold italic cap phi", "bold italic capital phi"
-en, default, "𝜲", "mathematical bold italic capital chi", "bold italic cap chi", "bold italic capital chi"
-en, default, "𝜳", "mathematical bold italic capital psi", "bold italic cap psi", "bold italic capital psi"
-en, default, "𝜴", "mathematical bold italic capital omega", "bold italic cap omega", "bold italic capital omega"
-en, default, "𝜶", "mathematical bold italic small alpha", "bold italic alpha", "bold italic small alpha"
-en, default, "𝜷", "mathematical bold italic small beta", "bold italic beta", "bold italic small beta"
-en, default, "𝜸", "mathematical bold italic small gamma", "bold italic gamma", "bold italic small gamma"
-en, default, "𝜹", "mathematical bold italic small delta", "bold italic delta", "bold italic small delta"
-en, default, "𝜺", "mathematical bold italic small epsilon", "bold italic epsilon", "bold italic small epsilon"
-en, default, "𝜻", "mathematical bold italic small zeta", "bold italic zeta", "bold italic small zeta"
-en, default, "𝜼", "mathematical bold italic small eta", "bold italic eta", "bold italic small eta"
-en, default, "𝜽", "mathematical bold italic small theta", "bold italic theta", "bold italic small theta"
-en, default, "𝜾", "mathematical bold italic small iota", "bold italic iota", "bold italic small iota"
-en, default, "𝜿", "mathematical bold italic small kappa", "bold italic kappa", "bold italic small kappa"
-en, default, "𝝀", "mathematical bold italic small lamda", "bold italic lamda", "bold italic small lamda"
-en, default, "𝝁", "mathematical bold italic small mu", "bold italic mu", "bold italic small mu"
-en, default, "𝝂", "mathematical bold italic small nu", "bold italic nu", "bold italic small nu"
-en, default, "𝝃", "mathematical bold italic small xi", "bold italic xi", "bold italic small xi"
-en, default, "𝝄", "mathematical bold italic small omicron", "bold italic omicron", "bold italic small omicron"
-en, default, "𝝅", "mathematical bold italic small pi", "bold italic pi", "bold italic small pi"
-en, default, "𝝆", "mathematical bold italic small rho", "bold italic rho", "bold italic small rho"
-en, default, "𝝇", "mathematical bold italic small final sigma", "bold italic final sigma", "bold italic small final sigma"
-en, default, "𝝈", "mathematical bold italic small sigma", "bold italic sigma", "bold italic small sigma"
-en, default, "𝝉", "mathematical bold italic small tau", "bold italic tau", "bold italic small tau"
-en, default, "𝝊", "mathematical bold italic small upsilon", "bold italic upsilon", "bold italic small upsilon"
-en, default, "𝝋", "mathematical bold italic small phi", "bold italic phi", "bold italic small phi"
-en, default, "𝝌", "mathematical bold italic small chi", "bold italic chi", "bold italic small chi"
-en, default, "𝝍", "mathematical bold italic small psi", "bold italic psi", "bold italic small psi"
-en, default, "𝝎", "mathematical bold italic small omega", "bold italic omega", "bold italic small omega"
-en, default, "𝝖", "mathematical sans serif bold capital alpha", "sans serif bold cap alpha", "sans serif bold capital alpha"
-en, default, "𝝗", "mathematical sans serif bold capital beta", "sans serif bold cap beta", "sans serif bold capital beta"
-en, default, "𝝘", "mathematical sans serif bold capital gamma", "sans serif bold cap gamma", "sans serif bold capital gamma"
-en, default, "𝝙", "mathematical sans serif bold capital delta", "sans serif bold cap delta", "sans serif bold capital delta"
-en, default, "𝝚", "mathematical sans serif bold capital epsilon", "sans serif bold cap epsilon", "sans serif bold capital epsilon"
-en, default, "𝝛", "mathematical sans serif bold capital zeta", "sans serif bold cap zeta", "sans serif bold capital zeta"
-en, default, "𝝜", "mathematical sans serif bold capital eta", "sans serif bold cap eta", "sans serif bold capital eta"
-en, default, "𝝝", "mathematical sans serif bold capital theta", "sans serif bold cap theta", "sans serif bold capital theta"
-en, default, "𝝞", "mathematical sans serif bold capital iota", "sans serif bold cap iota", "sans serif bold capital iota"
-en, default, "𝝟", "mathematical sans serif bold capital kappa", "sans serif bold cap kappa", "sans serif bold capital kappa"
-en, default, "𝝠", "mathematical sans serif bold capital lamda", "sans serif bold cap lamda", "sans serif bold capital lamda"
-en, default, "𝝡", "mathematical sans serif bold capital mu", "sans serif bold cap mu", "sans serif bold capital mu"
-en, default, "𝝢", "mathematical sans serif bold capital nu", "sans serif bold cap nu", "sans serif bold capital nu"
-en, default, "𝝣", "mathematical sans serif bold capital xi", "sans serif bold cap xi", "sans serif bold capital xi"
-en, default, "𝝤", "mathematical sans serif bold capital omicron", "sans serif bold cap omicron", "sans serif bold capital omicron"
-en, default, "𝝥", "mathematical sans serif bold capital pi", "sans serif bold cap pi", "sans serif bold capital pi"
-en, default, "𝝦", "mathematical sans serif bold capital rho", "sans serif bold cap rho", "sans serif bold capital rho"
-en, default, "𝝨", "mathematical sans serif bold capital sigma", "sans serif bold cap sigma", "sans serif bold capital sigma"
-en, default, "𝝩", "mathematical sans serif bold capital tau", "sans serif bold cap tau", "sans serif bold capital tau"
-en, default, "𝝪", "mathematical sans serif bold capital upsilon", "sans serif bold cap upsilon", "sans serif bold capital upsilon"
-en, default, "𝝫", "mathematical sans serif bold capital phi", "sans serif bold cap phi", "sans serif bold capital phi"
-en, default, "𝝬", "mathematical sans serif bold capital chi", "sans serif bold cap chi", "sans serif bold capital chi"
-en, default, "𝝭", "mathematical sans serif bold capital psi", "sans serif bold cap psi", "sans serif bold capital psi"
-en, default, "𝝮", "mathematical sans serif bold capital omega", "sans serif bold cap omega", "sans serif bold capital omega"
-en, default, "𝝰", "mathematical sans serif bold small alpha", "sans serif bold alpha", "sans serif bold small alpha"
-en, default, "𝝱", "mathematical sans serif bold small beta", "sans serif bold beta", "sans serif bold small beta"
-en, default, "𝝲", "mathematical sans serif bold small gamma", "sans serif bold gamma", "sans serif bold small gamma"
-en, default, "𝝳", "mathematical sans serif bold small delta", "sans serif bold delta", "sans serif bold small delta"
-en, default, "𝝴", "mathematical sans serif bold small epsilon", "sans serif bold epsilon", "sans serif bold small epsilon"
-en, default, "𝝵", "mathematical sans serif bold small zeta", "sans serif bold zeta", "sans serif bold small zeta"
-en, default, "𝝶", "mathematical sans serif bold small eta", "sans serif bold eta", "sans serif bold small eta"
-en, default, "𝝷", "mathematical sans serif bold small theta", "sans serif bold theta", "sans serif bold small theta"
-en, default, "𝝸", "mathematical sans serif bold small iota", "sans serif bold iota", "sans serif bold small iota"
-en, default, "𝝹", "mathematical sans serif bold small kappa", "sans serif bold kappa", "sans serif bold small kappa"
-en, default, "𝝺", "mathematical sans serif bold small lamda", "sans serif bold lamda", "sans serif bold small lamda"
-en, default, "𝝻", "mathematical sans serif bold small mu", "sans serif bold mu", "sans serif bold small mu"
-en, default, "𝝼", "mathematical sans serif bold small nu", "sans serif bold nu", "sans serif bold small nu"
-en, default, "𝝽", "mathematical sans serif bold small xi", "sans serif bold xi", "sans serif bold small xi"
-en, default, "𝝾", "mathematical sans serif bold small omicron", "sans serif bold omicron", "sans serif bold small omicron"
-en, default, "𝝿", "mathematical sans serif bold small pi", "sans serif bold pi", "sans serif bold small pi"
-en, default, "𝞀", "mathematical sans serif bold small rho", "sans serif bold rho", "sans serif bold small rho"
-en, default, "𝞁", "mathematical sans serif bold small final sigma", "sans serif bold final sigma", "sans serif bold small final sigma"
-en, default, "𝞂", "mathematical sans serif bold small sigma", "sans serif bold sigma", "sans serif bold small sigma"
-en, default, "𝞃", "mathematical sans serif bold small tau", "sans serif bold tau", "sans serif bold small tau"
-en, default, "𝞄", "mathematical sans serif bold small upsilon", "sans serif bold upsilon", "sans serif bold small upsilon"
-en, default, "𝞅", "mathematical sans serif bold small phi", "sans serif bold phi", "sans serif bold small phi"
-en, default, "𝞆", "mathematical sans serif bold small chi", "sans serif bold chi", "sans serif bold small chi"
-en, default, "𝞇", "mathematical sans serif bold small psi", "sans serif bold psi", "sans serif bold small psi"
-en, default, "𝞈", "mathematical sans serif bold small omega", "sans serif bold omega", "sans serif bold small omega"
-en, default, "𝞐", "mathematical sans serif bold italic capital alpha", "sans serif bold italic cap alpha", "sans serif bold italic capital alpha"
-en, default, "𝞑", "mathematical sans serif bold italic capital beta", "sans serif bold italic cap beta", "sans serif bold italic capital beta"
-en, default, "𝞒", "mathematical sans serif bold italic capital gamma", "sans serif bold italic cap gamma", "sans serif bold italic capital gamma"
-en, default, "𝞓", "mathematical sans serif bold italic capital delta", "sans serif bold italic cap delta", "sans serif bold italic capital delta"
-en, default, "𝞔", "mathematical sans serif bold italic capital epsilon", "sans serif bold italic cap epsilon", "sans serif bold italic capital epsilon"
-en, default, "𝞕", "mathematical sans serif bold italic capital zeta", "sans serif bold italic cap zeta", "sans serif bold italic capital zeta"
-en, default, "𝞖", "mathematical sans serif bold italic capital eta", "sans serif bold italic cap eta", "sans serif bold italic capital eta"
-en, default, "𝞗", "mathematical sans serif bold italic capital theta", "sans serif bold italic cap theta", "sans serif bold italic capital theta"
-en, default, "𝞘", "mathematical sans serif bold italic capital iota", "sans serif bold italic cap iota", "sans serif bold italic capital iota"
-en, default, "𝞙", "mathematical sans serif bold italic capital kappa", "sans serif bold italic cap kappa", "sans serif bold italic capital kappa"
-en, default, "𝞚", "mathematical sans serif bold italic capital lamda", "sans serif bold italic cap lamda", "sans serif bold italic capital lamda"
-en, default, "𝞛", "mathematical sans serif bold italic capital mu", "sans serif bold italic cap mu", "sans serif bold italic capital mu"
-en, default, "𝞜", "mathematical sans serif bold italic capital nu", "sans serif bold italic cap nu", "sans serif bold italic capital nu"
-en, default, "𝞝", "mathematical sans serif bold italic capital xi", "sans serif bold italic cap xi", "sans serif bold italic capital xi"
-en, default, "𝞞", "mathematical sans serif bold italic capital omicron", "sans serif bold italic cap omicron", "sans serif bold italic capital omicron"
-en, default, "𝞟", "mathematical sans serif bold italic capital pi", "sans serif bold italic cap pi", "sans serif bold italic capital pi"
-en, default, "𝞠", "mathematical sans serif bold italic capital rho", "sans serif bold italic cap rho", "sans serif bold italic capital rho"
-en, default, "𝞢", "mathematical sans serif bold italic capital sigma", "sans serif bold italic cap sigma", "sans serif bold italic capital sigma"
-en, default, "𝞣", "mathematical sans serif bold italic capital tau", "sans serif bold italic cap tau", "sans serif bold italic capital tau"
-en, default, "𝞤", "mathematical sans serif bold italic capital upsilon", "sans serif bold italic cap upsilon", "sans serif bold italic capital upsilon"
-en, default, "𝞥", "mathematical sans serif bold italic capital phi", "sans serif bold italic cap phi", "sans serif bold italic capital phi"
-en, default, "𝞦", "mathematical sans serif bold italic capital chi", "sans serif bold italic cap chi", "sans serif bold italic capital chi"
-en, default, "𝞧", "mathematical sans serif bold italic capital psi", "sans serif bold italic cap psi", "sans serif bold italic capital psi"
-en, default, "𝞨", "mathematical sans serif bold italic capital omega", "sans serif bold italic cap omega", "sans serif bold italic capital omega"
-en, default, "𝞪", "mathematical sans serif bold italic small alpha", "sans serif bold italic alpha", "sans serif bold italic small alpha"
-en, default, "𝞫", "mathematical sans serif bold italic small beta", "sans serif bold italic beta", "sans serif bold italic small beta"
-en, default, "𝞬", "mathematical sans serif bold italic small gamma", "sans serif bold italic gamma", "sans serif bold italic small gamma"
-en, default, "𝞭", "mathematical sans serif bold italic small delta", "sans serif bold italic delta", "sans serif bold italic small delta"
-en, default, "𝞮", "mathematical sans serif bold italic small epsilon", "sans serif bold italic epsilon", "sans serif bold italic small epsilon"
-en, default, "𝞯", "mathematical sans serif bold italic small zeta", "sans serif bold italic zeta", "sans serif bold italic small zeta"
-en, default, "𝞰", "mathematical sans serif bold italic small eta", "sans serif bold italic eta", "sans serif bold italic small eta"
-en, default, "𝞱", "mathematical sans serif bold italic small theta", "sans serif bold italic theta", "sans serif bold italic small theta"
-en, default, "𝞲", "mathematical sans serif bold italic small iota", "sans serif bold italic iota", "sans serif bold italic small iota"
-en, default, "𝞳", "mathematical sans serif bold italic small kappa", "sans serif bold italic kappa", "sans serif bold italic small kappa"
-en, default, "𝞴", "mathematical sans serif bold italic small lamda", "sans serif bold italic lamda", "sans serif bold italic small lamda"
-en, default, "𝞵", "mathematical sans serif bold italic small mu", "sans serif bold italic mu", "sans serif bold italic small mu"
-en, default, "𝞶", "mathematical sans serif bold italic small nu", "sans serif bold italic nu", "sans serif bold italic small nu"
-en, default, "𝞷", "mathematical sans serif bold italic small xi", "sans serif bold italic xi", "sans serif bold italic small xi"
-en, default, "𝞸", "mathematical sans serif bold italic small omicron", "sans serif bold italic omicron", "sans serif bold italic small omicron"
-en, default, "𝞹", "mathematical sans serif bold italic small pi", "sans serif bold italic pi", "sans serif bold italic small pi"
-en, default, "𝞺", "mathematical sans serif bold italic small rho", "sans serif bold italic rho", "sans serif bold italic small rho"
-en, default, "𝞻", "mathematical sans serif bold italic small final sigma", "sans serif bold italic final sigma", "sans serif bold italic small final sigma"
-en, default, "𝞼", "mathematical sans serif bold italic small sigma", "sans serif bold italic sigma", "sans serif bold italic small sigma"
-en, default, "𝞽", "mathematical sans serif bold italic small tau", "sans serif bold italic tau", "sans serif bold italic small tau"
-en, default, "𝞾", "mathematical sans serif bold italic small upsilon", "sans serif bold italic upsilon", "sans serif bold italic small upsilon"
-en, default, "𝞿", "mathematical sans serif bold italic small phi", "sans serif bold italic phi", "sans serif bold italic small phi"
-en, default, "𝟀", "mathematical sans serif bold italic small chi", "sans serif bold italic chi", "sans serif bold italic small chi"
-en, default, "𝟁", "mathematical sans serif bold italic small psi", "sans serif bold italic psi", "sans serif bold italic small psi"
-en, default, "𝟂", "mathematical sans serif bold italic small omega", "sans serif bold italic omega", "sans serif bold italic small omega"
-en, default, "ℵ", "alef symbol", "alef", "first transfinite cardinal"
-en, default, "ℶ", "bet symbol", "bet", "second transfinite cardinal"
-en, default, "ℷ", "gimel symbol", "gimel", "third transfinite cardinal"
-en, default, "ℸ", "dalet symbol", "dalet", "fourth transfinite cardinal"
-en, default, "ǖ", "latin small letter u with diaeresis and macron", "u double overdot overbar", "latin small letter u double overdot overbar"
-en, default, "ǘ", "latin small letter u with diaeresis and acute", "u double overdot acute", "latin small letter u double overdot acute"
-en, default, "ǚ", "latin small letter u with diaeresis and caron", "u double overdot caron", "latin small letter u double overdot hacek"
-en, default, "ǜ", "latin small letter u with diaeresis and grave", "u double overdot grave", "latin small letter u double overdot grave"
-en, default, "ǟ", "latin small letter a with diaeresis and macron", "a double overdot overbar", "latin small letter a double overdot overbar"
-en, default, "ǡ", "latin small letter a with dot above and macron", "a overdot overbar", "latin small letter a dot overbar"
-en, default, "ǭ", "latin small letter o with ogonek and macron", "o ogonek overbar", "latin small letter o ogonek overbar"
-en, default, "ǻ", "latin small letter a with ring above and acute", "a ring above acute", "latin small letter a ring above acute"
-en, default, "ȫ", "latin small letter o with diaeresis and macron", "o double overdot overbar", "latin small letter o double overdot overbar"
-en, default, "ȭ", "latin small letter o with tilde and macron", "o tilde overbar", "latin small letter o tilde overbar"
-en, default, "ȱ", "latin small letter o with dot above and macron", "o overdot overbar", "latin small letter o overdot overbar"
-en, default, "ḉ", "latin small letter c with cedilla and acute", "c cedilla acute", "latin small letter c cedilla acute"
-en, default, "ḕ", "latin small letter e with macron and grave", "e overbar grave", "latin small letter e overbar grave"
-en, default, "ḗ", "latin small letter e with macron and acute", "e overbar acute", "latin small letter e overbar acute"
-en, default, "ḝ", "latin small letter e with cedilla and breve", "e cedilla breve", "latin small letter e cedilla breve"
-en, default, "ḯ", "latin small letter i with diaeresis and acute", "i double overdot acute", "latin small letter i double overdot acute"
-en, default, "ḹ", "latin small letter l with dot below and macron", "l underdot overbar", "latin small letter l underdot overbar"
-en, default, "ṍ", "latin small letter o with tilde and acute", "o tilde acute", "latin small letter o tilde acute"
-en, default, "ṏ", "latin small letter o with tilde and diaeresis", "o tilde double overdot", "latin small letter o tilde double overdot"
-en, default, "ṑ", "latin small letter o with macron and grave", "o overbar grave", "latin small letter o overbar grave"
-en, default, "ṓ", "latin small letter o with macron and acute", "o overbar acute", "latin small letter o overbar acute"
-en, default, "ṝ", "latin small letter r with dot below and macron", "r underdot overbar", "latin small letter r underdot overbar"
-en, default, "ṥ", "latin small letter s with acute and dot above", "s acute overdot", "latin small letter s acute overdot"
-en, default, "ṧ", "latin small letter s with caron and dot above", "s caron overdot", "latin small letter s caron overdot"
-en, default, "ṩ", "latin small letter s with dot below and dot above", "s underdot overdot", "latin small letter s underdot overdot"
-en, default, "ṹ", "latin small letter u with tilde and acute", "u tilde acute", "latin small letter u tilde acute"
-en, default, "ṻ", "latin small letter u with macron and diaeresis", "u overbar double overdot", "latin small letter u overbar double overdot"
-en, default, "ấ", "latin small letter a with circumflex and acute", "a hat acute", "latin small letter a hat acute"
-en, default, "ầ", "latin small letter a with circumflex and grave", "a hat grave", "latin small letter a hat grave"
-en, default, "ẩ", "latin small letter a with circumflex and hook above", "a hat hook above", "latin small letter a hat hook above"
-en, default, "ẫ", "latin small letter a with circumflex and tilde", "a hat tilde", "latin small letter a hat tilde"
-en, default, "ậ", "latin small letter a with circumflex and dot below", "a hat underdot", "latin small letter a hat underdot"
-en, default, "ắ", "latin small letter a with breve and acute", "a breve acute", "latin small letter a breve acute"
-en, default, "ằ", "latin small letter a with breve and grave", "a breve grave", "latin small letter a breve grave"
-en, default, "ẳ", "latin small letter a with breve and hook above", "a breve hook above", "latin small letter a breve hook above"
-en, default, "ẵ", "latin small letter a with breve and tilde", "a breve tilde", "latin small letter a breve tilde"
-en, default, "ặ", "latin small letter a with breve and dot below", "a breve underdot", "latin small letter a breve underdot"
-en, default, "ế", "latin small letter e with circumflex and acute", "e hat acute", "latin small letter e hat acute"
-en, default, "ề", "latin small letter e with circumflex and grave", "e hat grave", "latin small letter e hat grave"
-en, default, "ể", "latin small letter e with circumflex and hook above", "e hat hook above", "latin small letter e hat hook above"
-en, default, "ễ", "latin small letter e with circumflex and tilde", "e hat tilde", "latin small letter e hat tilde"
-en, default, "ệ", "latin small letter e with circumflex and dot below", "e hat underdot", "latin small letter e hat underdot"
-en, default, "ố", "latin small letter o with circumflex and acute", "o hat acute", "latin small letter o hat acute"
-en, default, "ồ", "latin small letter o with circumflex and grave", "o hat grave", "latin small letter o hat grave"
-en, default, "ổ", "latin small letter o with circumflex and hook above", "o hat hook above", "latin small letter o hat hook above"
-en, default, "ỗ", "latin small letter o with circumflex and tilde", "o hat tilde", "latin small letter o hat tilde"
-en, default, "ộ", "latin small letter o with circumflex and dot below", "o hat underdot", "latin small letter o hat underdot"
-en, default, "ớ", "latin small letter o with horn and acute", "o acute prime", "latin small letter o acute prime"
-en, default, "ờ", "latin small letter o with horn and grave", "o grave prime", "latin small letter o grave prime"
-en, default, "ở", "latin small letter o with horn and hook above", "o hook above prime", "latin small letter o hook above prime"
-en, default, "ỡ", "latin small letter o with horn and tilde", "o tilde prime", "latin small letter o tilde prime"
-en, default, "ợ", "latin small letter o with horn and dot below", "o underdot prime", "latin small letter o underdot prime"
-en, default, "ứ", "latin small letter u with horn and acute", "u acute prime", "latin small letter u acute prime"
-en, default, "ừ", "latin small letter u with horn and grave", "u grave prime", "latin small letter u grave prime"
-en, default, "ử", "latin small letter u with horn and hook above", "u hook above prime", "latin small letter u hook above prime"
-en, default, "ữ", "latin small letter u with horn and tilde", "u tilde prime", "latin small letter u tilde prime"
-en, default, "ự", "latin small letter u with horn and dot below", "u underdot prime", "latin small letter u underdot prime"
-en, default, "a", "latin small letter a", "a", "a"
-en, default, "b", "latin small letter b", "b", "b"
-en, default, "c", "latin small letter c", "c", "c"
-en, default, "d", "latin small letter d", "d", "d"
-en, default, "e", "latin small letter e", "e", "e"
-en, default, "f", "latin small letter f", "f", "f"
-en, default, "g", "latin small letter g", "g", "g"
-en, default, "h", "latin small letter h", "h", "h"
-en, default, "i", "latin small letter i", "i", "i"
-en, default, "j", "latin small letter j", "j", "j"
-en, default, "k", "latin small letter k", "k", "k"
-en, default, "l", "latin small letter l", "l", "l"
-en, default, "m", "latin small letter m", "m", "m"
-en, default, "n", "latin small letter n", "n", "n"
-en, default, "o", "latin small letter o", "o", "o"
-en, default, "p", "latin small letter p", "p", "p"
-en, default, "q", "latin small letter q", "q", "q"
-en, default, "r", "latin small letter r", "r", "r"
-en, default, "s", "latin small letter s", "s", "s"
-en, default, "t", "latin small letter t", "t", "t"
-en, default, "u", "latin small letter u", "u", "u"
-en, default, "v", "latin small letter v", "v", "v"
-en, default, "w", "latin small letter w", "w", "w"
-en, default, "x", "latin small letter x", "x", "x"
-en, default, "y", "latin small letter y", "y", "y"
-en, default, "z", "latin small letter z", "z", "z"
-en, default, "ａ", "fullwidth latin small letter a", "a", "a"
-en, default, "ｂ", "fullwidth latin small letter b", "b", "b"
-en, default, "ｃ", "fullwidth latin small letter c", "c", "c"
-en, default, "ｄ", "fullwidth latin small letter d", "d", "d"
-en, default, "ｅ", "fullwidth latin small letter e", "e", "e"
-en, default, "ｆ", "fullwidth latin small letter f", "f", "f"
-en, default, "ｇ", "fullwidth latin small letter g", "g", "g"
-en, default, "ｈ", "fullwidth latin small letter h", "h", "h"
-en, default, "ｉ", "fullwidth latin small letter i", "i", "i"
-en, default, "ｊ", "fullwidth latin small letter j", "j", "j"
-en, default, "ｋ", "fullwidth latin small letter k", "k", "k"
-en, default, "ｌ", "fullwidth latin small letter l", "l", "l"
-en, default, "ｍ", "fullwidth latin small letter m", "m", "m"
-en, default, "ｎ", "fullwidth latin small letter n", "n", "n"
-en, default, "ｏ", "fullwidth latin small letter o", "o", "o"
-en, default, "ｐ", "fullwidth latin small letter p", "p", "p"
-en, default, "ｑ", "fullwidth latin small letter q", "q", "q"
-en, default, "ｒ", "fullwidth latin small letter r", "r", "r"
-en, default, "ｓ", "fullwidth latin small letter s", "s", "s"
-en, default, "ｔ", "fullwidth latin small letter t", "t", "t"
-en, default, "ｕ", "fullwidth latin small letter u", "u", "u"
-en, default, "ｖ", "fullwidth latin small letter v", "v", "v"
-en, default, "ｗ", "fullwidth latin small letter w", "w", "w"
-en, default, "ｘ", "fullwidth latin small letter x", "x", "x"
-en, default, "ｙ", "fullwidth latin small letter y", "y", "y"
-en, default, "ｚ", "fullwidth latin small letter z", "z", "z"
-en, default, "ø", "latin small letter o with stroke", "o with stroke", "latin small letter o slash"
-en, default, "đ", "latin small letter d with stroke", "d with stroke", "latin small letter d bar"
-en, default, "ħ", "latin small letter h with stroke", "h with stroke", "latin small letter h bar"
-en, default, "ł", "latin small letter l with stroke", "l with stroke", "latin small letter l slash"
-en, default, "ŧ", "latin small letter t with stroke", "t with stroke", "latin small letter t bar"
-en, default, "ƀ", "latin small letter b with stroke", "b with stroke", "latin small letter b bar"
-en, default, "ƛ", "latin small letter lambda with stroke", "lambda with stroke", "latin small letter barred lambda"
-en, default, "ƶ", "latin small letter z with stroke", "z with stroke", "latin small letter z bar"
-en, default, "ƾ", "latin letter inverted glottal stop with stroke", "latin letter inverted glottal stop with stroke", "latin letter inverted glottal stop bar"
-en, default, "ǥ", "latin small letter g with stroke", "g with stroke", "latin small letter g bar"
-en, default, "ǿ", "latin small letter o with stroke and acute", "o with stroke and acute", "o with stroke and acute"
-en, default, "ȼ", "latin small letter c with stroke", "c with stroke", "c with stroke"
-en, default, "ɇ", "latin small letter e with stroke", "e with stroke", "e with stroke"
-en, default, "ɉ", "latin small letter j with stroke", "j with stroke", "j with stroke"
-en, default, "ɍ", "latin small letter r with stroke", "r with stroke", "r with stroke"
-en, default, "ɏ", "latin small letter y with stroke", "y with stroke", "y with stroke"
-en, default, "ɟ", "latin small letter dotless j with stroke", "dotless j with stroke", "latin small letter dotless j bar"
-en, default, "ɨ", "latin small letter i with stroke", "i with stroke", "latin small letter barred i"
-en, default, "ʄ", "latin small letter dotless j with stroke and hook", "dotless j with stroke and hook", "latin small letter dotless j bar hook"
-en, default, "ʡ", "latin letter glottal stop with stroke", "latin letter glottal stop with stroke", "latin letter glottal stop bar"
-en, default, "ʢ", "latin letter reversed glottal stop with stroke", "latin letter reversed glottal stop with stroke", "latin letter reversed glottal stop bar"
-en, default, "ᴓ", "latin small letter sideways o with stroke", "sideways o with stroke", "sideways o with stroke"
-en, default, "ᵼ", "latin small letter iota with stroke", "iota with stroke", "iota with stroke"
-en, default, "ᵽ", "latin small letter p with stroke", "p with stroke", "p with stroke"
-en, default, "ᵿ", "latin small letter upsilon with stroke", "upsilon with stroke", "upsilon with stroke"
-en, default, "ẜ", "latin small letter long s with diagonal stroke", "long s with diagonal stroke", "long s with diagonal stroke"
-en, default, "ẝ", "latin small letter long s with high stroke", "long s with high stroke", "long s with high stroke"
-en, default, "ƍ", "latin small letter turned delta", "turned delta", "turned delta"
-en, default, "ẛ", "latin small letter long s with dot above", "long s with dot above", "long s with dot above"
-en, default, "ẟ", "latin small letter delta", "delta", "delta"
-en, default, "ĸ", "latin small letter kra", "kra", "kra"
-en, default, "ſ", "latin small letter long s", "long s", "long s"
-en, default, "ƃ", "latin small letter b with topbar", "b with topbar", "latin small letter b topbar"
-en, default, "ƅ", "latin small letter tone six", "tone six", "tone six"
-en, default, "ƈ", "latin small letter c with hook", "c with hook", "latin small letter c hook"
-en, default, "ƌ", "latin small letter d with topbar", "d with topbar", "latin small letter d topbar"
-en, default, "ƒ", "latin small letter f with hook", "f with hook", "latin small letter script f"
-en, default, "ƕ", "latin small letter hv", "hv", "latin small letter h v"
-en, default, "ƙ", "latin small letter k with hook", "k with hook", "latin small letter k hook"
-en, default, "ƚ", "latin small letter l with bar", "l with bar", "latin small letter barred l"
-en, default, "ƞ", "latin small letter n with long right leg", "n with long right leg", "n with long right leg"
-en, default, "ơ", "latin small letter o with horn", "o with horn", "latin small letter o horn"
-en, default, "ƣ", "latin small letter oi", "oi", "latin small letter o i"
-en, default, "ƥ", "latin small letter p with hook", "p with hook", "latin small letter p hook"
-en, default, "ƨ", "latin small letter tone two", "tone two", "tone two"
-en, default, "ƪ", "latin letter reversed esh loop", "latin letter reversed esh loop", "latin letter reversed esh loop"
-en, default, "ƫ", "latin small letter t with palatal hook", "t with palatal hook", "latin small letter t palatal hook"
-en, default, "ƭ", "latin small letter t with hook", "t with hook", "latin small letter t hook"
-en, default, "ư", "latin small letter u with horn", "u with horn", "latin small letter u horn"
-en, default, "ƴ", "latin small letter y with hook", "y with hook", "latin small letter y hook"
-en, default, "ƹ", "latin small letter ezh reversed", "ezh reversed", "latin small letter reversed yogh"
-en, default, "ƺ", "latin small letter ezh with tail", "ezh with tail", "latin small letter yogh with tail"
-en, default, "ƽ", "latin small letter tone five", "tone five", "tone five"
-en, default, "ƿ", "latin letter wynn", "latin letter wynn", "latin letter wynn"
-en, default, "ǆ", "latin small letter dz with caron", "dz with caron", "latin small letter d z hacek"
-en, default, "ǉ", "latin small letter lj", "lj", "latin small letter l j"
-en, default, "ǌ", "latin small letter nj", "nj", "latin small letter n j"
-en, default, "ǣ", "latin small letter ae with macron", "ae with macron", "latin small letter a e macron"
-en, default, "ǯ", "latin small letter ezh with caron", "ezh with caron", "latin small letter yogh hacek"
-en, default, "ǳ", "latin small letter dz", "dz", "dz"
-en, default, "ȝ", "latin small letter yogh", "yogh", "yogh"
-en, default, "ɮ", "latin small letter lezh", "lezh", "latin small letter l yogh"
-en, default, "ʒ", "latin small letter ezh", "ezh", "latin small letter yogh"
-en, default, "ʓ", "latin small letter ezh with curl", "ezh with curl", "latin small letter yogh curl"
-en, default, "ʤ", "latin small letter dezh digraph", "dezh digraph", "latin small letter d yogh"
-en, default, "ǝ", "latin small letter turned e", "turned e", "turned e"
-en, default, "ǽ", "latin small letter ae with acute", "ae with acute", "ae with acute"
-en, default, "ȡ", "latin small letter d with curl", "d with curl", "d with curl"
-en, default, "ȣ", "latin small letter ou", "ou", "ou"
-en, default, "ȥ", "latin small letter z with hook", "z with hook", "z with hook"
-en, default, "ȴ", "latin small letter l with curl", "l with curl", "l with curl"
-en, default, "ȵ", "latin small letter n with curl", "n with curl", "n with curl"
-en, default, "ȶ", "latin small letter t with curl", "t with curl", "t with curl"
-en, default, "ȸ", "latin small letter db digraph", "db digraph", "db digraph"
-en, default, "ȹ", "latin small letter qp digraph", "qp digraph", "qp digraph"
-en, default, "ȿ", "latin small letter s with swash tail", "s with swash tail", "s with swash tail"
-en, default, "ɀ", "latin small letter z with swash tail", "z with swash tail", "z with swash tail"
-en, default, "ɂ", "latin small letter glottal stop", "glottal stop", "glottal stop"
-en, default, "ɋ", "latin small letter q with hook tail", "q with hook tail", "q with hook tail"
-en, default, "ɐ", "latin small letter turned a", "turned a", "turned a"
-en, default, "ɑ", "latin small letter alpha", "alpha", "latin small letter script a"
-en, default, "ɒ", "latin small letter turned alpha", "turned alpha", "latin small letter turned script a"
-en, default, "ɓ", "latin small letter b with hook", "b with hook", "latin small letter b hook"
-en, default, "ɔ", "latin small letter open o", "open o", "open o"
-en, default, "ɕ", "latin small letter c with curl", "c with curl", "latin small letter c curl"
-en, default, "ɖ", "latin small letter d with tail", "d with tail", "latin small letter d retroflex hook"
-en, default, "ɗ", "latin small letter d with hook", "d with hook", "latin small letter d hook"
-en, default, "ɘ", "latin small letter reversed e", "reversed e", "reversed e"
-en, default, "ə", "latin small letter schwa", "schwa", "schwa"
-en, default, "ɚ", "latin small letter schwa with hook", "schwa with hook", "latin small letter schwa hook"
-en, default, "ɛ", "latin small letter open e", "open e", "latin small letter epsilon"
-en, default, "ɜ", "latin small letter reversed open e", "reversed open e", "latin small letter reversed epsilon"
-en, default, "ɝ", "latin small letter reversed open e with hook", "reversed open e with hook", "latin small letter reversed epsilon hook"
-en, default, "ɞ", "latin small letter closed reversed open e", "closed reversed open e", "latin small letter closed reversed epsilon"
-en, default, "ɠ", "latin small letter g with hook", "g with hook", "latin small letter g hook"
-en, default, "ɡ", "latin small letter script g", "script g", "script g"
-en, default, "ɣ", "latin small letter gamma", "gamma", "gamma"
-en, default, "ɤ", "latin small letter rams horn", "rams horn", "latin small letter baby gamma"
-en, default, "ɥ", "latin small letter turned h", "turned h", "turned h"
-en, default, "ɦ", "latin small letter h with hook", "h with hook", "latin small letter h hook"
-en, default, "ɧ", "latin small letter heng with hook", "heng with hook", "latin small letter heng hook"
-en, default, "ɩ", "latin small letter iota", "iota", "iota"
-en, default, "ɫ", "latin small letter l with middle tilde", "l with middle tilde", "l with middle tilde"
-en, default, "ɬ", "latin small letter l with belt", "l with belt", "latin small letter l belt"
-en, default, "ɭ", "latin small letter l with retroflex hook", "l with retroflex hook", "latin small letter l retroflex hook"
-en, default, "ɯ", "latin small letter turned m", "turned m", "turned m"
-en, default, "ɰ", "latin small letter turned m with long leg", "turned m with long leg", "turned m with long leg"
-en, default, "ɱ", "latin small letter m with hook", "m with hook", "latin small letter m hook"
-en, default, "ɲ", "latin small letter n with left hook", "n with left hook", "latin small letter n hook"
-en, default, "ɳ", "latin small letter n with retroflex hook", "n with retroflex hook", "latin small letter n retroflex hook"
-en, default, "ɵ", "latin small letter barred o", "barred o", "barred o"
-en, default, "ɷ", "latin small letter closed omega", "closed omega", "closed omega"
-en, default, "ɸ", "latin small letter phi", "phi", "phi"
-en, default, "ɹ", "latin small letter turned r", "turned r", "turned r"
-en, default, "ɺ", "latin small letter turned r with long leg", "turned r with long leg", "turned r with long leg"
-en, default, "ɻ", "latin small letter turned r with hook", "turned r with hook", "latin small letter turned r hook"
-en, default, "ɼ", "latin small letter r with long leg", "r with long leg", "r with long leg"
-en, default, "ɽ", "latin small letter r with tail", "r with tail", "latin small letter r hook"
-en, default, "ɾ", "latin small letter r with fishhook", "r with fishhook", "latin small letter fishhook r"
-en, default, "ɿ", "latin small letter reversed r with fishhook", "reversed r with fishhook", "latin small letter reversed fishhook r"
-en, default, "ʂ", "latin small letter s with hook", "s with hook", "latin small letter s hook"
-en, default, "ʃ", "latin small letter esh", "esh", "esh"
-en, default, "ʅ", "latin small letter squat reversed esh", "squat reversed esh", "squat reversed esh"
-en, default, "ʆ", "latin small letter esh with curl", "esh with curl", "latin small letter esh curl"
-en, default, "ʇ", "latin small letter turned t", "turned t", "turned t"
-en, default, "ʈ", "latin small letter t with retroflex hook", "t with retroflex hook", "latin small letter t retroflex hook"
-en, default, "ʉ", "latin small letter u bar", "u bar", "u bar"
-en, default, "ʊ", "latin small letter upsilon", "upsilon", "upsilon"
-en, default, "ʋ", "latin small letter v with hook", "v with hook", "latin small letter script v"
-en, default, "ʌ", "latin small letter turned v", "turned v", "turned v"
-en, default, "ʍ", "latin small letter turned w", "turned w", "turned w"
-en, default, "ʎ", "latin small letter turned y", "turned y", "turned y"
-en, default, "ʐ", "latin small letter z with retroflex hook", "z with retroflex hook", "latin small letter z retroflex hook"
-en, default, "ʑ", "latin small letter z with curl", "z with curl", "latin small letter z curl"
-en, default, "ʕ", "latin letter pharyngeal voiced fricative", "latin letter pharyngeal voiced fricative", "latin letter reversed glottal stop"
-en, default, "ʖ", "latin letter inverted glottal stop", "latin letter inverted glottal stop", "latin letter inverted glottal stop"
-en, default, "ʗ", "latin letter stretched c", "latin letter stretched c", "latin letter stretched c"
-en, default, "ʘ", "latin letter bilabial click", "latin letter bilabial click", "latin letter bullseye"
-en, default, "ʚ", "latin small letter closed open e", "closed open e", "latin small letter closed epsilon"
-en, default, "ʞ", "latin small letter turned k", "turned k", "turned k"
-en, default, "ʠ", "latin small letter q with hook", "q with hook", "latin small letter q hook"
-en, default, "ʣ", "latin small letter dz digraph", "dz digraph", "latin small letter d z"
-en, default, "ʥ", "latin small letter dz digraph with curl", "dz digraph with curl", "latin small letter d z curl"
-en, default, "ʦ", "latin small letter ts digraph", "ts digraph", "latin small letter t s"
-en, default, "ʧ", "latin small letter tesh digraph", "tesh digraph", "latin small letter t esh"
-en, default, "ʨ", "latin small letter tc digraph with curl", "tc digraph with curl", "latin small letter t c curl"
-en, default, "ʩ", "latin small letter feng digraph", "feng digraph", "feng digraph"
-en, default, "ʪ", "latin small letter ls digraph", "ls digraph", "ls digraph"
-en, default, "ʫ", "latin small letter lz digraph", "lz digraph", "lz digraph"
-en, default, "ʬ", "latin letter bilabial percussive", "latin letter bilabial percussive", "latin letter bilabial percussive"
-en, default, "ʭ", "latin letter bidental percussive", "latin letter bidental percussive", "latin letter bidental percussive"
-en, default, "ʮ", "latin small letter turned h with fishhook", "turned h with fishhook", "turned h with fishhook"
-en, default, "ʯ", "latin small letter turned h with fishhook and tail", "turned h with fishhook and tail", "turned h with fishhook and tail"
-en, default, "ᴂ", "latin small letter turned ae", "turned ae", "turned ae"
-en, default, "ᴈ", "latin small letter turned open e", "turned open e", "turned open e"
-en, default, "ᴉ", "latin small letter turned i", "turned i", "turned i"
-en, default, "ᴑ", "latin small letter sideways o", "sideways o", "sideways o"
-en, default, "ᴒ", "latin small letter sideways open o", "sideways open o", "sideways open o"
-en, default, "ᴔ", "latin small letter turned oe", "turned oe", "turned oe"
-en, default, "ᴖ", "latin small letter top half o", "top half o", "top half o"
-en, default, "ᴗ", "latin small letter bottom half o", "bottom half o", "bottom half o"
-en, default, "ᴝ", "latin small letter sideways u", "sideways u", "sideways u"
-en, default, "ᴞ", "latin small letter sideways diaeresized u", "sideways diaeresized u", "sideways diaeresized u"
-en, default, "ᴟ", "latin small letter sideways turned m", "sideways turned m", "sideways turned m"
-en, default, "ᴤ", "latin letter voiced laryngeal spirant", "latin letter voiced laryngeal spirant", "latin letter voiced laryngeal spirant"
-en, default, "ᴥ", "latin letter ain", "latin letter ain", "latin letter ain"
-en, default, "ᵫ", "latin small letter ue", "ue", "ue"
-en, default, "ᵬ", "latin small letter b with middle tilde", "b with middle tilde", "b with middle tilde"
-en, default, "ᵭ", "latin small letter d with middle tilde", "d with middle tilde", "d with middle tilde"
-en, default, "ᵮ", "latin small letter f with middle tilde", "f with middle tilde", "f with middle tilde"
-en, default, "ᵯ", "latin small letter m with middle tilde", "m with middle tilde", "m with middle tilde"
-en, default, "ᵰ", "latin small letter n with middle tilde", "n with middle tilde", "n with middle tilde"
-en, default, "ᵱ", "latin small letter p with middle tilde", "p with middle tilde", "p with middle tilde"
-en, default, "ᵲ", "latin small letter r with middle tilde", "r with middle tilde", "r with middle tilde"
-en, default, "ᵳ", "latin small letter r with fishhook and middle tilde", "r with fishhook and middle tilde", "r with fishhook and middle tilde"
-en, default, "ᵴ", "latin small letter s with middle tilde", "s with middle tilde", "s with middle tilde"
-en, default, "ᵵ", "latin small letter t with middle tilde", "t with middle tilde", "t with middle tilde"
-en, default, "ᵶ", "latin small letter z with middle tilde", "z with middle tilde", "z with middle tilde"
-en, default, "ᵷ", "latin small letter turned g", "turned g", "turned g"
-en, default, "ᵹ", "latin small letter insular g", "insular g", "insular g"
-en, default, "ᵺ", "latin small letter th with strikethrough", "th with strikethrough", "th with strikethrough"
-en, default, "ᶀ", "latin small letter b with palatal hook", "b with palatal hook", "b with palatal hook"
-en, default, "ᶁ", "latin small letter d with palatal hook", "d with palatal hook", "d with palatal hook"
-en, default, "ᶂ", "latin small letter f with palatal hook", "f with palatal hook", "f with palatal hook"
-en, default, "ᶃ", "latin small letter g with palatal hook", "g with palatal hook", "g with palatal hook"
-en, default, "ᶄ", "latin small letter k with palatal hook", "k with palatal hook", "k with palatal hook"
-en, default, "ᶅ", "latin small letter l with palatal hook", "l with palatal hook", "l with palatal hook"
-en, default, "ᶆ", "latin small letter m with palatal hook", "m with palatal hook", "m with palatal hook"
-en, default, "ᶇ", "latin small letter n with palatal hook", "n with palatal hook", "n with palatal hook"
-en, default, "ᶈ", "latin small letter p with palatal hook", "p with palatal hook", "p with palatal hook"
-en, default, "ᶉ", "latin small letter r with palatal hook", "r with palatal hook", "r with palatal hook"
-en, default, "ᶊ", "latin small letter s with palatal hook", "s with palatal hook", "s with palatal hook"
-en, default, "ᶋ", "latin small letter esh with palatal hook", "esh with palatal hook", "esh with palatal hook"
-en, default, "ᶌ", "latin small letter v with palatal hook", "v with palatal hook", "v with palatal hook"
-en, default, "ᶍ", "latin small letter x with palatal hook", "x with palatal hook", "x with palatal hook"
-en, default, "ᶎ", "latin small letter z with palatal hook", "z with palatal hook", "z with palatal hook"
-en, default, "ᶏ", "latin small letter a with retroflex hook", "a with retroflex hook", "a with retroflex hook"
-en, default, "ᶐ", "latin small letter alpha with retroflex hook", "alpha with retroflex hook", "alpha with retroflex hook"
-en, default, "ᶑ", "latin small letter d with hook and tail", "d with hook and tail", "d with hook and tail"
-en, default, "ᶒ", "latin small letter e with retroflex hook", "e with retroflex hook", "e with retroflex hook"
-en, default, "ᶓ", "latin small letter open e with retroflex hook", "open e with retroflex hook", "open e with retroflex hook"
-en, default, "ᶔ", "latin small letter reversed open e with retroflex hook", "reversed open e with retroflex hook", "reversed open e with retroflex hook"
-en, default, "ᶕ", "latin small letter schwa with retroflex hook", "schwa with retroflex hook", "schwa with retroflex hook"
-en, default, "ᶖ", "latin small letter i with retroflex hook", "i with retroflex hook", "i with retroflex hook"
-en, default, "ᶗ", "latin small letter open o with retroflex hook", "open o with retroflex hook", "open o with retroflex hook"
-en, default, "ᶘ", "latin small letter esh with retroflex hook", "esh with retroflex hook", "esh with retroflex hook"
-en, default, "ᶙ", "latin small letter u with retroflex hook", "u with retroflex hook", "u with retroflex hook"
-en, default, "ᶚ", "latin small letter ezh with retroflex hook", "ezh with retroflex hook", "ezh with retroflex hook"
-en, default, "ŉ", "latin small letter n preceded by apostrophe", "n preceded by apostrophe", "latin small letter apostrophe n"
-en, default, "ŋ", "latin small letter eng", "eng", "eng"
-en, default, "à", "latin small letter a with grave", "a grave", "latin small letter a grave"
-en, default, "á", "latin small letter a with acute", "a acute", "latin small letter a acute"
-en, default, "â", "latin small letter a with circumflex", "a hat", "latin small letter a hat"
-en, default, "ã", "latin small letter a with tilde", "a tilde", "latin small letter a tilde"
-en, default, "ä", "latin small letter a with diaeresis", "a double overdot", "latin small letter a double overdot"
-en, default, "å", "latin small letter a with ring above", "a ring", "latin small letter a ring"
-en, default, "ç", "latin small letter c with cedilla", "c cedilla", "latin small letter c cedilla"
-en, default, "è", "latin small letter e with grave", "e grave", "latin small letter e grave"
-en, default, "é", "latin small letter e with acute", "e acute", "latin small letter e acute"
-en, default, "ê", "latin small letter e with circumflex", "e hat", "latin small letter e hat"
-en, default, "ë", "latin small letter e with diaeresis", "e double overdot", "latin small letter e double overdot"
-en, default, "ì", "latin small letter i with grave", "i grave", "latin small letter i grave"
-en, default, "í", "latin small letter i with acute", "i acute", "latin small letter i acute"
-en, default, "î", "latin small letter i with circumflex", "i hat", "latin small letter i hat"
-en, default, "ï", "latin small letter i with diaeresis", "i double overdot", "latin small letter i double overdot"
-en, default, "ñ", "latin small letter n with tilde", "n tilde", "latin small letter n tilde"
-en, default, "ò", "latin small letter o with grave", "o grave", "latin small letter o grave"
-en, default, "ó", "latin small letter o with acute", "o acute", "latin small letter o acute"
-en, default, "ô", "latin small letter o with circumflex", "o hat", "latin small letter o hat"
-en, default, "õ", "latin small letter o with tilde", "o tilde", "latin small letter o tilde"
-en, default, "ö", "latin small letter o with diaeresis", "o double overdot", "latin small letter o double overdot"
-en, default, "ù", "latin small letter u with grave", "u grave", "latin small letter u grave"
-en, default, "ú", "latin small letter u with acute", "u acute", "latin small letter u acute"
-en, default, "û", "latin small letter u with circumflex", "u hat", "latin small letter u hat"
-en, default, "ü", "latin small letter u with diaeresis", "u double overdot", "latin small letter u double overdot"
-en, default, "ý", "latin small letter y with acute", "y acute", "latin small letter y acute"
-en, default, "ÿ", "latin small letter y with diaeresis", "y double overdot", "latin small letter y double overdot"
-en, default, "ā", "latin small letter a with macron", "a overbar", "latin small letter a overbar"
-en, default, "ă", "latin small letter a with breve", "a breve", "latin small letter a breve"
-en, default, "ą", "latin small letter a with ogonek", "a ogonek", "latin small letter a ogonek"
-en, default, "ć", "latin small letter c with acute", "c acute", "latin small letter c acute"
-en, default, "ĉ", "latin small letter c with circumflex", "c hat", "latin small letter c hat"
-en, default, "ċ", "latin small letter c with dot above", "c overdot", "latin small letter c dot"
-en, default, "č", "latin small letter c with caron", "c caron", "latin small letter c hacek"
-en, default, "ď", "latin small letter d with caron", "d caron", "latin small letter d hacek"
-en, default, "ē", "latin small letter e with macron", "e overbar", "latin small letter e overbar"
-en, default, "ĕ", "latin small letter e with breve", "e breve", "latin small letter e breve"
-en, default, "ė", "latin small letter e with dot above", "e overdot", "latin small letter e dot"
-en, default, "ę", "latin small letter e with ogonek", "e ogonek", "latin small letter e ogonek"
-en, default, "ě", "latin small letter e with caron", "e caron", "latin small letter e hacek"
-en, default, "ĝ", "latin small letter g with circumflex", "g hat", "latin small letter g hat"
-en, default, "ğ", "latin small letter g with breve", "g breve", "latin small letter g breve"
-en, default, "ġ", "latin small letter g with dot above", "g overdot", "latin small letter g dot"
-en, default, "ģ", "latin small letter g with cedilla", "g cedilla", "latin small letter g cedilla"
-en, default, "ĥ", "latin small letter h with circumflex", "h hat", "latin small letter h hat"
-en, default, "ĩ", "latin small letter i with tilde", "i tilde", "latin small letter i tilde"
-en, default, "ī", "latin small letter i with macron", "i overbar", "latin small letter i overbar"
-en, default, "ĭ", "latin small letter i with breve", "i breve", "latin small letter i breve"
-en, default, "į", "latin small letter i with ogonek", "i ogonek", "latin small letter i ogonek"
-en, default, "ı", "latin small letter dotless i", "dotless i", "latin small letter dotless i"
-en, default, "ĵ", "latin small letter j circumflex", "j hat", "latin small letter j hat"
-en, default, "ķ", "latin small letter k with cedilla", "k cedilla", "latin small letter k cedilla"
-en, default, "ĺ", "latin small letter l with acute", "l acute", "latin small letter l acute"
-en, default, "ļ", "latin small letter l with cedilla", "l cedilla", "latin small letter l cedilla"
-en, default, "ľ", "latin small letter l with caron", "l caron", "latin small letter l hacek"
-en, default, "ŀ", "latin small letter l with middle dot", "l middle dot", "latin small letter l middle dot"
-en, default, "ń", "latin small letter n with acute", "n acute", "latin small letter n acute"
-en, default, "ņ", "latin small letter n with cedilla", "n cedilla", "latin small letter n cedilla"
-en, default, "ň", "latin small letter n with caron", "n caron", "latin small letter n hacek"
-en, default, "ō", "latin small letter o macron", "o overbar", "latin small letter o overbar"
-en, default, "ŏ", "latin small letter o with breve", "o breve", "latin small letter o breve"
-en, default, "ő", "latin small letter o with double acute", "o double acute", "latin small letter o double acute"
-en, default, "ŕ", "latin small letter r with acute", "r acute", "latin small letter r acute"
-en, default, "ŗ", "latin small letter r with cedilla", "r cedilla", "latin small letter r cedilla"
-en, default, "ř", "latin small letter r with caron", "r caron", "latin small letter r hacek"
-en, default, "ś", "latin small letter s with acute", "s acute", "latin small letter s acute"
-en, default, "ŝ", "latin small letter s with circumflex", "s hat", "latin small letter s hat"
-en, default, "ş", "latin small letter s with cedilla", "s cedilla", "latin small letter s cedilla"
-en, default, "š", "latin small letter s with caron", "s caron", "latin small letter s hacek"
-en, default, "ţ", "latin small letter t with cedilla", "t cedilla", "latin small letter t cedilla"
-en, default, "ť", "latin small letter t with caron", "t caron", "latin small letter t hacek"
-en, default, "ũ", "latin small letter u with tilde", "u tilde", "latin small letter u tilde"
-en, default, "ū", "latin small letter u with macron", "u overbar", "latin small letter u overbar"
-en, default, "ŭ", "latin small letter u with breve", "u breve", "latin small letter u breve"
-en, default, "ů", "latin small letter u with ring above", "u ring", "latin small letter u ring"
-en, default, "ű", "latin small letter u with double acute", "u double acute", "latin small letter u double acute"
-en, default, "ų", "latin small letter u with ogonek", "u ogonek", "latin small letter u ogonek"
-en, default, "ŵ", "latin small letter w with circumflex", "w hat", "latin small letter w hat"
-en, default, "ŷ", "latin small letter y with circumflex", "y hat", "latin small letter y hat"
-en, default, "ź", "latin small letter z with acute", "z acute", "latin small letter z acute"
-en, default, "ż", "latin small letter z with dot above", "z overdot", "latin small letter z dot"
-en, default, "ž", "latin small letter z with caron", "z caron", "latin small letter z hacek"
-en, default, "ǎ", "latin small letter a with caron", "a caron", "latin small letter a hacek"
-en, default, "ǐ", "latin small letter i with caron", "i caron", "latin small letter i hacek"
-en, default, "ǒ", "latin small letter o with caron", "o caron", "latin small letter o hacek"
-en, default, "ǔ", "latin small letter u with caron", "u caron", "latin small letter u hacek"
-en, default, "ǧ", "latin small letter g with caron", "g caron", "latin small letter g hacek"
-en, default, "ǩ", "latin small letter k with caron", "k caron", "latin small letter k hacek"
-en, default, "ǫ", "latin small letter o with ogonek", "o ogonek", "latin small letter o ogonek"
-en, default, "ǰ", "latin small letter j with caron", "j caron", "latin small letter j hacek"
-en, default, "ǵ", "latin small letter g with acute", "g acute", "latin small letter g acute"
-en, default, "ǹ", "latin small letter n with grave", "n grave", "latin small letter n grave"
-en, default, "ȁ", "latin small letter a with double grave", "a double grave", "latin small letter a double grave"
-en, default, "ȃ", "latin small letter a with inverted breve", "a inverted breve", "latin small letter a inverted breve"
-en, default, "ȅ", "latin small letter e with double grave", "e double grave", "latin small letter e double grave"
-en, default, "ȇ", "latin small letter e with inverted breve", "e inverted breve", "latin small letter e inverted breve"
-en, default, "ȉ", "latin small letter i with double grave", "i double grave", "latin small letter i double grave"
-en, default, "ȋ", "latin small letter i with inverted breve", "i inverted breve", "latin small letter i inverted breve"
-en, default, "ȍ", "latin small letter o with double grave", "o double grave", "latin small letter o double grave"
-en, default, "ȏ", "latin small letter o with inverted breve", "o inverted breve", "latin small letter o inverted breve"
-en, default, "ȑ", "latin small letter r with double grave", "r double grave", "latin small letter r double grave"
-en, default, "ȓ", "latin small letter r with inverted breve", "r inverted breve", "latin small letter r inverted breve"
-en, default, "ȕ", "latin small letter u with double grave", "u double grave", "latin small letter u double grave"
-en, default, "ȗ", "latin small letter u with inverted breve", "u inverted breve", "latin small letter u inverted breve"
-en, default, "ș", "latin small letter s with comma below", "s comma below", "latin small letter s comma below"
-en, default, "ț", "latin small letter t with comma below", "t comma below", "latin small letter t comma below"
-en, default, "ȟ", "latin small letter h with caron", "h caron", "latin small letter h caron"
-en, default, "ȧ", "latin small letter a with dot above", "a overdot", "latin small letter a overdot"
-en, default, "ȩ", "latin small letter e with cedilla", "e cedilla", "latin small letter e cedilla"
-en, default, "ȯ", "latin small letter o with dot above", "o overdot", "latin small letter o overdot"
-en, default, "ȳ", "latin small letter y with macron", "y overbar", "latin small letter y overbar"
-en, default, "ȷ", "latin small letter dotless j", "dotless j", "latin small letter dotless j"
-en, default, "ḁ", "latin small letter a ring below", "a ring below", "latin small letter a ring below"
-en, default, "ḃ", "latin small letter b with dot above", "b overdot", "latin small letter b overdot"
-en, default, "ḅ", "latin small letter b with dot below", "b underdot", "latin small letter b underdot"
-en, default, "ḇ", "latin small letter b with line below", "b underbar", "latin small letter b underbar"
-en, default, "ḋ", "latin small letter d with dot above", "d overdot", "latin small letter d overdot"
-en, default, "ḍ", "latin small letter d with dot below", "d underdot", "latin small letter d underdot"
-en, default, "ḏ", "latin small letter d with line below", "d underbar", "latin small letter d underbar"
-en, default, "ḑ", "latin small letter d with cedilla", "d cedilla", "latin small letter d cedilla"
-en, default, "ḓ", "latin small letter d with circumflex below", "d underhat", "latin small letter d underhat"
-en, default, "ḙ", "latin small letter e with circumflex below", "e underhat", "latin small letter e underhat"
-en, default, "ḛ", "latin small letter e with tilde below", "e tilde below", "latin small letter e tilde below"
-en, default, "ḟ", "latin small letter f with dot above", "f overdot", "latin small letter f overdot"
-en, default, "ḡ", "latin small letter g with macron", "g overbar", "latin small letter g overbar"
-en, default, "ḣ", "latin small letter h with dot above", "h overdot", "latin small letter h overdot"
-en, default, "ḥ", "latin small letter h with dot below", "h underdot", "latin small letter h underdot"
-en, default, "ḧ", "latin small letter h with diaeresis", "h double overdot", "latin small letter h double overdot"
-en, default, "ḩ", "latin small letter h with cedilla", "h cedilla", "latin small letter h cedilla"
-en, default, "ḫ", "latin small letter h with breve below", "h breve below", "latin small letter h breve below"
-en, default, "ḭ", "latin small letter i with tilde below", "i tilde below", "latin small letter i tilde below"
-en, default, "ḱ", "latin small letter k with acute", "k acute", "latin small letter k acute"
-en, default, "ḳ", "latin small letter k with dot below", "k underdot", "latin small letter k underdot"
-en, default, "ḵ", "latin small letter k with line below", "k underbar", "latin small letter k underbar"
-en, default, "ḷ", "latin small letter l with dot below", "l underdot", "latin small letter l underdot"
-en, default, "ḻ", "latin small letter l with line below", "l underbar", "latin small letter l underbar"
-en, default, "ḽ", "latin small letter l with circumflex below", "l underhat", "latin small letter l underhat"
-en, default, "ḿ", "latin small letter m with acute", "m acute", "latin small letter m acute"
-en, default, "ṁ", "latin small letter m with dot above", "m overdot", "latin small letter m overdot"
-en, default, "ṃ", "latin small letter m with dot below", "m underdot", "latin small letter m underdot"
-en, default, "ṅ", "latin small letter n with dot above", "n overdot", "latin small letter n overdot"
-en, default, "ṇ", "latin small letter n with dot below", "n underdot", "latin small letter n underdot"
-en, default, "ṉ", "latin small letter n with line below", "n underbar", "latin small letter n underbar"
-en, default, "ṋ", "latin small letter n with circumflex below", "n underhat", "latin small letter n underhat"
-en, default, "ṕ", "latin small letter p with acute", "p acute", "latin small letter p acute"
-en, default, "ṗ", "latin small letter p with dot above", "p overdot", "latin small letter p overdot"
-en, default, "ṙ", "latin small letter r with dot above", "r overdot", "latin small letter r overdot"
-en, default, "ṛ", "latin small letter r with dot below", "r underdot", "latin small letter r underdot"
-en, default, "ṟ", "latin small letter r with line below", "r underbar", "latin small letter r underbar"
-en, default, "ṡ", "latin small letter s with dot above", "s overdot", "latin small letter s overdot"
-en, default, "ṣ", "latin small letter s with dot below", "s underdot", "latin small letter s underdot"
-en, default, "ṫ", "latin small letter t with dot above", "t overdot", "latin small letter t overdot"
-en, default, "ṭ", "latin small letter t with dot below", "t underdot", "latin small letter t underdot"
-en, default, "ṯ", "latin small letter t with line below", "t underbar", "latin small letter t underbar"
-en, default, "ṱ", "latin small letter t with circumflex below", "t underhat", "latin small letter t underhat"
-en, default, "ṳ", "latin small letter u with diaeresis below", "u double underdot", "latin small letter u double underdot"
-en, default, "ṵ", "latin small letter u with tilde below", "u tilde below", "latin small letter u tilde below"
-en, default, "ṷ", "latin small letter u with circumflex below", "u underhat", "latin small letter u underhat"
-en, default, "ṽ", "latin small letter v with tilde", "v tilde", "latin small letter v tilde"
-en, default, "ṿ", "latin small letter v with dot below", "v underdot", "latin small letter v underdot"
-en, default, "ẁ", "latin small letter w with grave", "w grave", "latin small letter w grave"
-en, default, "ẃ", "latin small letter w with acute", "w acute", "latin small letter w acute"
-en, default, "ẅ", "latin small letter w with diaeresis", "w double overdot", "latin small letter w double overdot"
-en, default, "ẇ", "latin small letter w with dot above", "w overdot", "latin small letter w overdot"
-en, default, "ẉ", "latin small letter w with dot below", "w underdot", "latin small letter w underdot"
-en, default, "ẋ", "latin small letter x with dot above", "x overdot", "latin small letter x overdot"
-en, default, "ẍ", "latin small letter x with diaeresis", "x double overdot", "latin small letter x double overdot"
-en, default, "ẏ", "latin small letter y with dot above", "y overdot", "latin small letter y overdot"
-en, default, "ẑ", "latin small letter z with circumflex", "z hat", "latin small letter z hat"
-en, default, "ẓ", "latin small letter z with dot below", "z underdot", "latin small letter z underdot"
-en, default, "ẕ", "latin small letter z with line below", "z underbar", "latin small letter z underbar"
-en, default, "ẖ", "latin small letter h with line below", "h underbar", "latin small letter h underbar"
-en, default, "ẗ", "latin small letter t with diaeresis", "t double overdot", "latin small letter t double overdot"
-en, default, "ẘ", "latin small letter w with ring above", "w ring", "latin small letter w ring"
-en, default, "ẙ", "latin small letter y with ring above", "y ring", "latin small letter y ring"
-en, default, "ẚ", "latin small letter a with right half ring", "a right half ring", "latin small letter a right half ring"
-en, default, "ạ", "latin small letter a with dot below", "a underdot", "latin small letter a underdot"
-en, default, "ả", "latin small letter a with hook above", "a hook", "latin small letter a hook"
-en, default, "ẹ", "latin small letter e with dot below", "e underdot", "latin small letter e underdot"
-en, default, "ẻ", "latin small letter e with hook above", "e hook", "latin small letter e hook"
-en, default, "ẽ", "latin small letter e with tilde", "e tilde", "latin small letter e tilde"
-en, default, "ỉ", "latin small letter i with hook above", "i hook", "latin small letter i hook"
-en, default, "ị", "latin small letter i with dot below", "i underdot", "latin small letter i underdot"
-en, default, "ọ", "latin small letter o with dot below", "o underdot", "latin small letter o underdot"
-en, default, "ỏ", "latin small letter o with hook above", "o hook", "latin small letter o hook"
-en, default, "ụ", "latin small letter u with dot below", "u underdot", "latin small letter u underdot"
-en, default, "ủ", "latin small letter u with hook above", "u hook", "latin small letter u hook"
-en, default, "ỳ", "latin small letter y with grave", "y grave", "latin small letter y grave"
-en, default, "ỵ", "latin small letter y with dot below", "y underdot", "latin small letter y underdot"
-en, default, "ỷ", "latin small letter y with hook above", "y hook", "latin small letter y hook"
-en, default, "ỹ", "latin small letter y with tilde", "y tilde", "latin small letter y tilde"
-en, default, "ͣ", "combining latin small letter a", "combining a", "combining a"
-en, default, "ͤ", "combining latin small letter e", "combining e", "combining e"
-en, default, "ͥ", "combining latin small letter i", "combining i", "combining i"
-en, default, "ͦ", "combining latin small letter o", "combining o", "combining o"
-en, default, "ͧ", "combining latin small letter u", "combining u", "combining u"
-en, default, "ͨ", "combining latin small letter c", "combining c", "combining c"
-en, default, "ͩ", "combining latin small letter d", "combining d", "combining d"
-en, default, "ͪ", "combining latin small letter h", "combining h", "combining h"
-en, default, "ͫ", "combining latin small letter m", "combining m", "combining m"
-en, default, "ͬ", "combining latin small letter r", "combining r", "combining r"
-en, default, "ͭ", "combining latin small letter t", "combining t", "combining t"
-en, default, "ͮ", "combining latin small letter v", "combining v", "combining v"
-en, default, "ͯ", "combining latin small letter x", "combining x", "combining x"
-en, default, "ᵢ", "latin subscript small letter i", "subscript i", "subscript i"
-en, default, "ᵣ", "latin subscript small letter r", "subscript r", "subscript r"
-en, default, "ᵤ", "latin subscript small letter u", "subscript u", "subscript u"
-en, default, "ᵥ", "latin subscript small letter v", "subscript v", "subscript v"
-en, default, "᷊", "combining latin small letter r below", "combining r below", "combining r below"
-en, default, "ᷓ", "combining latin small letter flattened open a above", "combining flattened open a above", "combining flattened open a above"
-en, default, "ᷔ", "combining latin small letter ae", "combining ae", "combining ae"
-en, default, "ᷕ", "combining latin small letter ao", "combining ao", "combining ao"
-en, default, "ᷖ", "combining latin small letter av", "combining av", "combining av"
-en, default, "ᷗ", "combining latin small letter c cedilla", "combining c cedilla", "combining c cedilla"
-en, default, "ᷘ", "combining latin small letter insular d", "combining insular d", "combining insular d"
-en, default, "ᷙ", "combining latin small letter eth", "combining eth", "combining eth"
-en, default, "ᷚ", "combining latin small letter g", "combining g", "combining g"
-en, default, "ᷛ", "combining latin letter small capital g", "combining small cap g", "combining small cap g"
-en, default, "ᷜ", "combining latin small letter k", "combining k", "combining k"
-en, default, "ᷝ", "combining latin small letter l", "combining l", "combining l"
-en, default, "ᷞ", "combining latin letter small capital l", "combining small cap l", "combining small cap l"
-en, default, "ᷟ", "combining latin letter small capital m", "combining small cap m", "combining small cap m"
-en, default, "ᷠ", "combining latin small letter n", "combining n", "combining n"
-en, default, "ᷡ", "combining latin letter small capital n", "combining small cap n", "combining small cap n"
-en, default, "ᷢ", "combining latin letter small capital r", "combining small cap r", "combining small cap r"
-en, default, "ᷣ", "combining latin small letter r rotunda", "combining r rotunda", "combining r rotunda"
-en, default, "ᷤ", "combining latin small letter s", "combining s", "combining s"
-en, default, "ᷥ", "combining latin small letter long s", "combining long s", "combining long s"
-en, default, "ᷦ", "combining latin small letter z", "combining z", "combining z"
-en, default, "ⁱ", "superscript latin small letter i", "superscript i", "superscript i"
-en, default, "ⁿ", "superscript latin small letter n", "superscript n", "superscript n"
-en, default, "ₐ", "latin subscript small letter a", "subscript a", "subscript a"
-en, default, "ₑ", "latin subscript small letter e", "subscript e", "subscript e"
-en, default, "ₒ", "latin subscript small letter o", "subscript o", "subscript o"
-en, default, "ₓ", "latin subscript small letter x", "subscript x", "subscript x"
-en, default, "ₔ", "latin subscript small letter schwa", "subscript schwa", "subscript schwa"
-en, default, "ₕ", "latin subscript small letter h", "subscript h", "subscript h"
-en, default, "ₖ", "latin subscript small letter k", "subscript k", "subscript k"
-en, default, "ₗ", "latin subscript small letter l", "subscript l", "subscript l"
-en, default, "ₘ", "latin subscript small letter m", "subscript m", "subscript m"
-en, default, "ₙ", "latin subscript small letter n", "subscript n", "subscript n"
-en, default, "ₚ", "latin subscript small letter p", "subscript p", "subscript p"
-en, default, "ₛ", "latin subscript small letter s", "subscript s", "subscript s"
-en, default, "ₜ", "latin subscript small letter t", "subscript t", "subscript t"
-en, default, "⒜", "parenthesized latin small letter a", "parenthesized a", "parenthesized a"
-en, default, "⒝", "parenthesized latin small letter b", "parenthesized b", "parenthesized b"
-en, default, "⒞", "parenthesized latin small letter c", "parenthesized c", "parenthesized c"
-en, default, "⒟", "parenthesized latin small letter d", "parenthesized d", "parenthesized d"
-en, default, "⒠", "parenthesized latin small letter e", "parenthesized e", "parenthesized e"
-en, default, "⒡", "parenthesized latin small letter f", "parenthesized f", "parenthesized f"
-en, default, "⒢", "parenthesized latin small letter g", "parenthesized g", "parenthesized g"
-en, default, "⒣", "parenthesized latin small letter h", "parenthesized h", "parenthesized h"
-en, default, "⒤", "parenthesized latin small letter i", "parenthesized i", "parenthesized i"
-en, default, "⒥", "parenthesized latin small letter j", "parenthesized j", "parenthesized j"
-en, default, "⒦", "parenthesized latin small letter k", "parenthesized k", "parenthesized k"
-en, default, "⒧", "parenthesized latin small letter l", "parenthesized l", "parenthesized l"
-en, default, "⒨", "parenthesized latin small letter m", "parenthesized m", "parenthesized m"
-en, default, "⒩", "parenthesized latin small letter n", "parenthesized n", "parenthesized n"
-en, default, "⒪", "parenthesized latin small letter o", "parenthesized o", "parenthesized o"
-en, default, "⒫", "parenthesized latin small letter p", "parenthesized p", "parenthesized p"
-en, default, "⒬", "parenthesized latin small letter q", "parenthesized q", "parenthesized q"
-en, default, "⒭", "parenthesized latin small letter r", "parenthesized r", "parenthesized r"
-en, default, "⒮", "parenthesized latin small letter s", "parenthesized s", "parenthesized s"
-en, default, "⒯", "parenthesized latin small letter t", "parenthesized t", "parenthesized t"
-en, default, "⒰", "parenthesized latin small letter u", "parenthesized u", "parenthesized u"
-en, default, "⒱", "parenthesized latin small letter v", "parenthesized v", "parenthesized v"
-en, default, "⒲", "parenthesized latin small letter w", "parenthesized w", "parenthesized w"
-en, default, "⒳", "parenthesized latin small letter x", "parenthesized x", "parenthesized x"
-en, default, "⒴", "parenthesized latin small letter y", "parenthesized y", "parenthesized y"
-en, default, "⒵", "parenthesized latin small letter z", "parenthesized z", "parenthesized z"
-en, default, "Ⓐ", "circled latin capital letter a", "circled cap a", "circled cap a"
-en, default, "Ⓑ", "circled latin capital letter b", "circled cap b", "circled cap b"
-en, default, "Ⓒ", "circled latin capital letter c", "circled cap c", "circled cap c"
-en, default, "Ⓓ", "circled latin capital letter d", "circled cap d", "circled cap d"
-en, default, "Ⓔ", "circled latin capital letter e", "circled cap e", "circled cap e"
-en, default, "Ⓕ", "circled latin capital letter f", "circled cap f", "circled cap f"
-en, default, "Ⓖ", "circled latin capital letter g", "circled cap g", "circled cap g"
-en, default, "Ⓗ", "circled latin capital letter h", "circled cap h", "circled cap h"
-en, default, "Ⓘ", "circled latin capital letter i", "circled cap i", "circled cap i"
-en, default, "Ⓙ", "circled latin capital letter j", "circled cap j", "circled cap j"
-en, default, "Ⓚ", "circled latin capital letter k", "circled cap k", "circled cap k"
-en, default, "Ⓛ", "circled latin capital letter l", "circled cap l", "circled cap l"
-en, default, "Ⓜ", "circled latin capital letter m", "circled cap m", "circled cap m"
-en, default, "Ⓝ", "circled latin capital letter n", "circled cap n", "circled cap n"
-en, default, "Ⓞ", "circled latin capital letter o", "circled cap o", "circled cap o"
-en, default, "Ⓟ", "circled latin capital letter p", "circled cap p", "circled cap p"
-en, default, "Ⓠ", "circled latin capital letter q", "circled cap q", "circled cap q"
-en, default, "Ⓡ", "circled latin capital letter r", "circled cap r", "circled cap r"
-en, default, "Ⓢ", "circled latin capital letter s", "circled cap s", "circled cap s"
-en, default, "Ⓣ", "circled latin capital letter t", "circled cap t", "circled cap t"
-en, default, "Ⓤ", "circled latin capital letter u", "circled cap u", "circled cap u"
-en, default, "Ⓥ", "circled latin capital letter v", "circled cap v", "circled cap v"
-en, default, "Ⓦ", "circled latin capital letter w", "circled cap w", "circled cap w"
-en, default, "Ⓧ", "circled latin capital letter x", "circled cap x", "circled cap x"
-en, default, "Ⓨ", "circled latin capital letter y", "circled cap y", "circled cap y"
-en, default, "Ⓩ", "circled latin capital letter z", "circled cap z", "circled cap z"
-en, default, "ⓐ", "circled latin small letter a", "circled a", "circled a"
-en, default, "ⓑ", "circled latin small letter b", "circled b", "circled b"
-en, default, "ⓒ", "circled latin small letter c", "circled c", "circled c"
-en, default, "ⓓ", "circled latin small letter d", "circled d", "circled d"
-en, default, "ⓔ", "circled latin small letter e", "circled e", "circled e"
-en, default, "ⓕ", "circled latin small letter f", "circled f", "circled f"
-en, default, "ⓖ", "circled latin small letter g", "circled g", "circled g"
-en, default, "ⓗ", "circled latin small letter h", "circled h", "circled h"
-en, default, "ⓘ", "circled latin small letter i", "circled i", "circled i"
-en, default, "ⓙ", "circled latin small letter j", "circled j", "circled j"
-en, default, "ⓚ", "circled latin small letter k", "circled k", "circled k"
-en, default, "ⓛ", "circled latin small letter l", "circled l", "circled l"
-en, default, "ⓜ", "circled latin small letter m", "circled m", "circled m"
-en, default, "ⓝ", "circled latin small letter n", "circled n", "circled n"
-en, default, "ⓞ", "circled latin small letter o", "circled o", "circled o"
-en, default, "ⓟ", "circled latin small letter p", "circled p", "circled p"
-en, default, "ⓠ", "circled latin small letter q", "circled q", "circled q"
-en, default, "ⓡ", "circled latin small letter r", "circled r", "circled r"
-en, default, "ⓢ", "circled latin small letter s", "circled s", "circled s"
-en, default, "ⓣ", "circled latin small letter t", "circled t", "circled t"
-en, default, "ⓤ", "circled latin small letter u", "circled u", "circled u"
-en, default, "ⓥ", "circled latin small letter v", "circled v", "circled v"
-en, default, "ⓦ", "circled latin small letter w", "circled w", "circled w"
-en, default, "ⓧ", "circled latin small letter x", "circled x", "circled x"
-en, default, "ⓨ", "circled latin small letter y", "circled y", "circled y"
-en, default, "ⓩ", "circled latin small letter z", "circled z", "circled z"
-en, default, "ⱼ", "latin subscript small letter j", "subscript j", "subscript j"
-en, default, "🄐", "parenthesized latin capital letter a", "parenthesized cap a", "parenthesized cap a"
-en, default, "🄑", "parenthesized latin capital letter b", "parenthesized cap b", "parenthesized cap b"
-en, default, "🄒", "parenthesized latin capital letter c", "parenthesized cap c", "parenthesized cap c"
-en, default, "🄓", "parenthesized latin capital letter d", "parenthesized cap d", "parenthesized cap d"
-en, default, "🄔", "parenthesized latin capital letter e", "parenthesized cap e", "parenthesized cap e"
-en, default, "🄕", "parenthesized latin capital letter f", "parenthesized cap f", "parenthesized cap f"
-en, default, "🄖", "parenthesized latin capital letter g", "parenthesized cap g", "parenthesized cap g"
-en, default, "🄗", "parenthesized latin capital letter h", "parenthesized cap h", "parenthesized cap h"
-en, default, "🄘", "parenthesized latin capital letter i", "parenthesized cap i", "parenthesized cap i"
-en, default, "🄙", "parenthesized latin capital letter j", "parenthesized cap j", "parenthesized cap j"
-en, default, "🄚", "parenthesized latin capital letter k", "parenthesized cap k", "parenthesized cap k"
-en, default, "🄛", "parenthesized latin capital letter l", "parenthesized cap l", "parenthesized cap l"
-en, default, "🄜", "parenthesized latin capital letter m", "parenthesized cap m", "parenthesized cap m"
-en, default, "🄝", "parenthesized latin capital letter n", "parenthesized cap n", "parenthesized cap n"
-en, default, "🄞", "parenthesized latin capital letter o", "parenthesized cap o", "parenthesized cap o"
-en, default, "🄟", "parenthesized latin capital letter p", "parenthesized cap p", "parenthesized cap p"
-en, default, "🄠", "parenthesized latin capital letter q", "parenthesized cap q", "parenthesized cap q"
-en, default, "🄡", "parenthesized latin capital letter r", "parenthesized cap r", "parenthesized cap r"
-en, default, "🄢", "parenthesized latin capital letter s", "parenthesized cap s", "parenthesized cap s"
-en, default, "🄣", "parenthesized latin capital letter t", "parenthesized cap t", "parenthesized cap t"
-en, default, "🄤", "parenthesized latin capital letter u", "parenthesized cap u", "parenthesized cap u"
-en, default, "🄥", "parenthesized latin capital letter v", "parenthesized cap v", "parenthesized cap v"
-en, default, "🄦", "parenthesized latin capital letter w", "parenthesized cap w", "parenthesized cap w"
-en, default, "🄧", "parenthesized latin capital letter x", "parenthesized cap x", "parenthesized cap x"
-en, default, "🄨", "parenthesized latin capital letter y", "parenthesized cap y", "parenthesized cap y"
-en, default, "🄩", "parenthesized latin capital letter z", "parenthesized cap z", "parenthesized cap z"
-en, default, "🄪", "tortoise shell bracketed latin capital letter s", "tortoise shell bracketed cap s", "tortoise shell bracketed cap s"
-en, default, "🄫", "circled italic latin capital letter c", "circled italic cap c", "circled italic cap c"
-en, default, "🄬", "circled italic latin capital letter r", "circled italic cap r", "circled italic cap r"
-en, default, "🄰", "squared latin capital letter a", "squared cap a", "squared cap a"
-en, default, "🄱", "squared latin capital letter b", "squared cap b", "squared cap b"
-en, default, "🄲", "squared latin capital letter c", "squared cap c", "squared cap c"
-en, default, "🄳", "squared latin capital letter d", "squared cap d", "squared cap d"
-en, default, "🄴", "squared latin capital letter e", "squared cap e", "squared cap e"
-en, default, "🄵", "squared latin capital letter f", "squared cap f", "squared cap f"
-en, default, "🄶", "squared latin capital letter g", "squared cap g", "squared cap g"
-en, default, "🄷", "squared latin capital letter h", "squared cap h", "squared cap h"
-en, default, "🄸", "squared latin capital letter i", "squared cap i", "squared cap i"
-en, default, "🄹", "squared latin capital letter j", "squared cap j", "squared cap j"
-en, default, "🄺", "squared latin capital letter k", "squared cap k", "squared cap k"
-en, default, "🄻", "squared latin capital letter l", "squared cap l", "squared cap l"
-en, default, "🄼", "squared latin capital letter m", "squared cap m", "squared cap m"
-en, default, "🄽", "squared latin capital letter n", "squared cap n", "squared cap n"
-en, default, "🄾", "squared latin capital letter o", "squared cap o", "squared cap o"
-en, default, "🄿", "squared latin capital letter p", "squared cap p", "squared cap p"
-en, default, "🅀", "squared latin capital letter q", "squared cap q", "squared cap q"
-en, default, "🅁", "squared latin capital letter r", "squared cap r", "squared cap r"
-en, default, "🅂", "squared latin capital letter s", "squared cap s", "squared cap s"
-en, default, "🅃", "squared latin capital letter t", "squared cap t", "squared cap t"
-en, default, "🅄", "squared latin capital letter u", "squared cap u", "squared cap u"
-en, default, "🅅", "squared latin capital letter v", "squared cap v", "squared cap v"
-en, default, "🅆", "squared latin capital letter w", "squared cap w", "squared cap w"
-en, default, "🅇", "squared latin capital letter x", "squared cap x", "squared cap x"
-en, default, "🅈", "squared latin capital letter y", "squared cap y", "squared cap y"
-en, default, "🅉", "squared latin capital letter z", "squared cap z", "squared cap z"
-en, default, "🅐", "negative circled latin capital letter a", "negative circled cap a", "negative circled cap a"
-en, default, "🅑", "negative circled latin capital letter b", "negative circled cap b", "negative circled cap b"
-en, default, "🅒", "negative circled latin capital letter c", "negative circled cap c", "negative circled cap c"
-en, default, "🅓", "negative circled latin capital letter d", "negative circled cap d", "negative circled cap d"
-en, default, "🅔", "negative circled latin capital letter e", "negative circled cap e", "negative circled cap e"
-en, default, "🅕", "negative circled latin capital letter f", "negative circled cap f", "negative circled cap f"
-en, default, "🅖", "negative circled latin capital letter g", "negative circled cap g", "negative circled cap g"
-en, default, "🅗", "negative circled latin capital letter h", "negative circled cap h", "negative circled cap h"
-en, default, "🅘", "negative circled latin capital letter i", "negative circled cap i", "negative circled cap i"
-en, default, "🅙", "negative circled latin capital letter j", "negative circled cap j", "negative circled cap j"
-en, default, "🅚", "negative circled latin capital letter k", "negative circled cap k", "negative circled cap k"
-en, default, "🅛", "negative circled latin capital letter l", "negative circled cap l", "negative circled cap l"
-en, default, "🅜", "negative circled latin capital letter m", "negative circled cap m", "negative circled cap m"
-en, default, "🅝", "negative circled latin capital letter n", "negative circled cap n", "negative circled cap n"
-en, default, "🅞", "negative circled latin capital letter o", "negative circled cap o", "negative circled cap o"
-en, default, "🅟", "negative circled latin capital letter p", "negative circled cap p", "negative circled cap p"
-en, default, "🅠", "negative circled latin capital letter q", "negative circled cap q", "negative circled cap q"
-en, default, "🅡", "negative circled latin capital letter r", "negative circled cap r", "negative circled cap r"
-en, default, "🅢", "negative circled latin capital letter s", "negative circled cap s", "negative circled cap s"
-en, default, "🅣", "negative circled latin capital letter t", "negative circled cap t", "negative circled cap t"
-en, default, "🅤", "negative circled latin capital letter u", "negative circled cap u", "negative circled cap u"
-en, default, "🅥", "negative circled latin capital letter v", "negative circled cap v", "negative circled cap v"
-en, default, "🅦", "negative circled latin capital letter w", "negative circled cap w", "negative circled cap w"
-en, default, "🅧", "negative circled latin capital letter x", "negative circled cap x", "negative circled cap x"
-en, default, "🅨", "negative circled latin capital letter y", "negative circled cap y", "negative circled cap y"
-en, default, "🅩", "negative circled latin capital letter z", "negative circled cap z", "negative circled cap z"
-en, default, "🅰", "negative squared latin capital letter a", "negative squared cap a", "negative squared cap a"
-en, default, "🅱", "negative squared latin capital letter b", "negative squared cap b", "negative squared cap b"
-en, default, "🅲", "negative squared latin capital letter c", "negative squared cap c", "negative squared cap c"
-en, default, "🅳", "negative squared latin capital letter d", "negative squared cap d", "negative squared cap d"
-en, default, "🅴", "negative squared latin capital letter e", "negative squared cap e", "negative squared cap e"
-en, default, "🅵", "negative squared latin capital letter f", "negative squared cap f", "negative squared cap f"
-en, default, "🅶", "negative squared latin capital letter g", "negative squared cap g", "negative squared cap g"
-en, default, "🅷", "negative squared latin capital letter h", "negative squared cap h", "negative squared cap h"
-en, default, "🅸", "negative squared latin capital letter i", "negative squared cap i", "negative squared cap i"
-en, default, "🅹", "negative squared latin capital letter j", "negative squared cap j", "negative squared cap j"
-en, default, "🅺", "negative squared latin capital letter k", "negative squared cap k", "negative squared cap k"
-en, default, "🅻", "negative squared latin capital letter l", "negative squared cap l", "negative squared cap l"
-en, default, "🅼", "negative squared latin capital letter m", "negative squared cap m", "negative squared cap m"
-en, default, "🅽", "negative squared latin capital letter n", "negative squared cap n", "negative squared cap n"
-en, default, "🅾", "negative squared latin capital letter o", "negative squared cap o", "negative squared cap o"
-en, default, "🅿", "negative squared latin capital letter p", "negative squared cap p", "negative squared cap p"
-en, default, "🆀", "negative squared latin capital letter q", "negative squared cap q", "negative squared cap q"
-en, default, "🆁", "negative squared latin capital letter r", "negative squared cap r", "negative squared cap r"
-en, default, "🆂", "negative squared latin capital letter s", "negative squared cap s", "negative squared cap s"
-en, default, "🆃", "negative squared latin capital letter t", "negative squared cap t", "negative squared cap t"
-en, default, "🆄", "negative squared latin capital letter u", "negative squared cap u", "negative squared cap u"
-en, default, "🆅", "negative squared latin capital letter v", "negative squared cap v", "negative squared cap v"
-en, default, "🆆", "negative squared latin capital letter w", "negative squared cap w", "negative squared cap w"
-en, default, "🆇", "negative squared latin capital letter x", "negative squared cap x", "negative squared cap x"
-en, default, "🆈", "negative squared latin capital letter y", "negative squared cap y", "negative squared cap y"
-en, default, "🆉", "negative squared latin capital letter z", "negative squared cap z", "negative squared cap z"
-en, default, "🆊", "crossed negative squared latin capital letter p", "crossed negative squared cap p", "crossed negative squared cap p"
-en, default, "Ǖ", "latin capital letter u with diaeresis and macron", "cap u double overdot overbar", "latin capital letter u double overdot overbar"
-en, default, "Ǘ", "latin capital letter u with diaeresis and acute", "cap u double overdot acute", "latin capital letter u double overdot acute"
-en, default, "Ǚ", "latin capital letter u with diaeresis and caron", "cap u double overdot caron", "latin capital letter u double overdot hacek"
-en, default, "Ǜ", "latin capital letter u with diaeresis and grave", "cap u double overdot grave", "latin capital letter u double overdot grave"
-en, default, "Ǟ", "latin capital letter a with diaeresis and macron", "cap a double overdot overbar", "latin capital letter a double overdot overbar"
-en, default, "Ǡ", "latin capital letter a with dot above and macron", "cap a overdot overbar", "latin capital letter a dot overbar"
-en, default, "Ǭ", "latin capital letter o with ogonek and macron", "cap o ogonek overbar", "latin capital letter o ogonek overbar"
-en, default, "Ǻ", "latin capital letter a with ring above and acute", "cap a ring acute", "latin capital letter a ring acute"
-en, default, "Ȫ", "latin capital letter o with diaeresis and macron", "cap o double overdot overbar", "latin capital letter o double overdot overbar"
-en, default, "Ȭ", "latin capital letter o with tilde and macron", "cap o tilde overbar", "latin capital letter o tilde overbar"
-en, default, "Ȱ", "latin capital letter o with dot above and macron", "cap o overdot overbar", "latin capital letter o overdot overbar"
-en, default, "Ḉ", "latin capital letter c with cedilla and acute", "cap c cedilla acute", "latin capital letter c cedilla acute"
-en, default, "Ḕ", "latin capital letter e with macron and grave", "cap e overbar grave", "latin capital letter e overbar grave"
-en, default, "Ḗ", "latin capital letter e with macron and acute", "cap e overbar acute", "latin capital letter e overbar acute"
-en, default, "Ḝ", "latin capital letter e with cedilla and breve", "cap e cedilla breve", "latin capital letter e cedilla breve"
-en, default, "Ḯ", "latin capital letter i with diaeresis and acute", "cap i double overdot acute", "latin capital letter i double overdot acute"
-en, default, "Ḹ", "latin capital letter l with dot below and macron", "cap l underdot overbar", "latin capital letter l underdot overbar"
-en, default, "Ṍ", "latin capital letter o with tilde and acute", "cap o tilde acute", "latin capital letter o tilde acute"
-en, default, "Ṏ", "latin capital letter o with tilde and diaeresis", "cap o tilde double overdot", "latin capital letter o tilde double overdot"
-en, default, "Ṑ", "latin capital letter o with macron and grave", "cap o overbar grave", "latin capital letter o overbar grave"
-en, default, "Ṓ", "latin capital letter o with macron and acute", "cap o overbar acute", "latin capital letter o overbar acute"
-en, default, "Ṝ", "latin capital letter r with dot below and macron", "cap r overbar underdot", "cap r underdot and overbar"
-en, default, "Ṥ", "latin capital letter s with acute dot above", "cap s acute overdot", "latin capital letter s acute overdot"
-en, default, "Ṧ", "latin capital letter s with caron and dot above", "cap s caron overdot", "latin capital letter s caron overdot"
-en, default, "Ṩ", "latin capital letter s with dot below and dot above", "cap s underdot overdot", "latin capital letter s underdot overdot"
-en, default, "Ṹ", "latin capital letter u with tilde and acute", "cap u tilde acute", "latin capital letter u tilde acute"
-en, default, "Ṻ", "latin capital letter u with macron and diaeresis", "cap u overbar double overdot", "latin capital letter u overbar double overdot"
-en, default, "Ấ", "latin capital letter a with circumflex and acute", "cap a hat acute", "latin capital letter a hat acute"
-en, default, "Ầ", "latin capital letter a with circumflex and grave", "cap a hat grave", "latin capital letter a hat grave"
-en, default, "Ẩ", "latin capital letter a with circumflex and hook above", "cap a hat hook", "latin capital letter a hat hook"
-en, default, "Ẫ", "latin capital letter a with circumflex and tilde", "cap a hat tilde", "latin capital letter a hat tilde"
-en, default, "Ậ", "latin capital letter a with circumflex and dot below", "cap a hat underdot", "latin capital letter a hat underdot"
-en, default, "Ắ", "latin capital letter a with breve and acute", "cap a breve acute", "latin capital letter a breve acute"
-en, default, "Ằ", "latin capital letter a with breve and grave", "cap a breve grave", "latin capital letter a breve grave"
-en, default, "Ẳ", "latin capital letter a with breve and hook above", "cap a breve hook", "latin capital letter a breve hook"
-en, default, "Ẵ", "latin capital letter a with breve and tilde", "cap a breve tilde", "latin capital letter a breve tilde"
-en, default, "Ặ", "latin capital letter a with breve and dot below", "cap a breve underdot", "latin capital letter a breve underdot"
-en, default, "Ế", "latin capital letter e with circumflex and acute", "cap e hat acute", "latin capital letter e hat acute"
-en, default, "Ề", "latin capital letter e with circumflex and grave", "cap e hat grave", "latin capital letter e hat grave"
-en, default, "Ể", "latin capital letter e with circumflex and hook above", "cap e hat hook", "latin capital letter e hat hook"
-en, default, "Ễ", "latin capital letter e with circumflex and tilde", "cap e hat tilde", "latin capital letter e hat tilde"
-en, default, "Ệ", "latin capital letter e with circumflex and dot below", "cap e hat underdot", "latin capital letter e hat underdot"
-en, default, "Ố", "latin capital letter o with circumflex and acute", "cap o hat acute", "latin capital letter o hat acute"
-en, default, "Ồ", "latin capital letter o with circumflex and grave", "cap o hat grave", "latin capital letter o hat grave"
-en, default, "Ổ", "latin capital letter o with circumflex and hook above", "cap o hat hook", "latin capital letter o hat hook"
-en, default, "Ỗ", "latin capital letter o with circumflex and tilde", "cap o hat tilde", "latin capital letter o hat tilde"
-en, default, "Ộ", "latin capital letter o with circumflex and dot below", "cap o hat underdot", "latin capital letter o hat underdot"
-en, default, "Ớ", "latin capital letter o with horn and acute", "cap o acute prime", "latin capital letter o acute prime"
-en, default, "Ờ", "latin capital letter o with horn and grave", "cap o grave prime", "latin capital letter o grave prime"
-en, default, "Ở", "latin capital letter o with horn and hook above", "cap o hook prime", "latin capital letter o hook prime"
-en, default, "Ỡ", "latin capital letter o with horn and tilde", "cap o tilde prime", "latin capital letter o tilde prime"
-en, default, "Ợ", "latin capital letter o with horn and dot below", "cap o underdot prime", "latin capital letter o underdot prime"
-en, default, "Ứ", "latin capital letter u with horn and acute", "cap u acute prime", "latin capital letter u acute prime"
-en, default, "Ừ", "latin capital letter u with horn and grave", "cap u grave prime", "latin capital letter u grave prime"
-en, default, "Ử", "latin capital letter u with horn and hook above", "cap u hook prime", "latin capital letter u hook prime"
-en, default, "Ữ", "latin capital letter u with horn and tilde", "cap u tilde prime", "latin capital letter u tilde prime"
-en, default, "Ự", "latin capital letter u with horn and dot below", "cap u underdot prime", "latin capital letter u underdot prime"
-en, default, "A", "latin capital letter a", "cap a", "cap a"
-en, default, "B", "latin capital letter b", "cap b", "cap b"
-en, default, "C", "latin capital letter c", "cap c", "cap c"
-en, default, "D", "latin capital letter d", "cap d", "cap d"
-en, default, "E", "latin capital letter e", "cap e", "cap e"
-en, default, "F", "latin capital letter f", "cap f", "cap f"
-en, default, "G", "latin capital letter g", "cap g", "cap g"
-en, default, "H", "latin capital letter h", "cap h", "cap h"
-en, default, "I", "latin capital letter i", "cap i", "cap i"
-en, default, "J", "latin capital letter j", "cap j", "cap j"
-en, default, "K", "latin capital letter k", "cap k", "cap k"
-en, default, "L", "latin capital letter l", "cap l", "cap l"
-en, default, "M", "latin capital letter m", "cap m", "cap m"
-en, default, "N", "latin capital letter n", "cap n", "cap n"
-en, default, "O", "latin capital letter o", "cap o", "cap o"
-en, default, "P", "latin capital letter p", "cap p", "cap p"
-en, default, "Q", "latin capital letter q", "cap q", "cap q"
-en, default, "R", "latin capital letter r", "cap r", "cap r"
-en, default, "S", "latin capital letter s", "cap s", "cap s"
-en, default, "T", "latin capital letter t", "cap t", "cap t"
-en, default, "U", "latin capital letter u", "cap u", "cap u"
-en, default, "V", "latin capital letter v", "cap v", "cap v"
-en, default, "W", "latin capital letter w", "cap w", "cap w"
-en, default, "X", "latin capital letter x", "cap x", "cap x"
-en, default, "Y", "latin capital letter y", "cap y", "cap y"
-en, default, "Z", "latin capital letter z", "cap z", "cap z"
-en, default, "Ａ", "fullwidth latin capital letter a", "cap a", "fullwidth latin cap a"
-en, default, "Ｂ", "fullwidth latin capital letter b", "cap b", "fullwidth latin cap b"
-en, default, "Ｃ", "fullwidth latin capital letter c", "cap c", "fullwidth latin cap c"
-en, default, "Ｄ", "fullwidth latin capital letter d", "cap d", "fullwidth latin cap d"
-en, default, "Ｅ", "fullwidth latin capital letter e", "cap e", "fullwidth latin cap e"
-en, default, "Ｆ", "fullwidth latin capital letter f", "cap f", "fullwidth latin cap f"
-en, default, "Ｇ", "fullwidth latin capital letter g", "cap g", "fullwidth latin cap g"
-en, default, "Ｈ", "fullwidth latin capital letter h", "cap h", "fullwidth latin cap h"
-en, default, "Ｉ", "fullwidth latin capital letter i", "cap i", "fullwidth latin cap i"
-en, default, "Ｊ", "fullwidth latin capital letter j", "cap j", "fullwidth latin cap j"
-en, default, "Ｋ", "fullwidth latin capital letter k", "cap k", "fullwidth latin cap k"
-en, default, "Ｌ", "fullwidth latin capital letter l", "cap l", "fullwidth latin cap l"
-en, default, "Ｍ", "fullwidth latin capital letter m", "cap m", "fullwidth latin cap m"
-en, default, "Ｎ", "fullwidth latin capital letter n", "cap n", "fullwidth latin cap n"
-en, default, "Ｏ", "fullwidth latin capital letter o", "cap o", "fullwidth latin cap o"
-en, default, "Ｐ", "fullwidth latin capital letter p", "cap p", "fullwidth latin cap p"
-en, default, "Ｑ", "fullwidth latin capital letter q", "cap q", "fullwidth latin cap q"
-en, default, "Ｒ", "fullwidth latin capital letter r", "cap r", "fullwidth latin cap r"
-en, default, "Ｓ", "fullwidth latin capital letter s", "cap s", "fullwidth latin cap s"
-en, default, "Ｔ", "fullwidth latin capital letter t", "cap t", "fullwidth latin cap t"
-en, default, "Ｕ", "fullwidth latin capital letter u", "cap u", "fullwidth latin cap u"
-en, default, "Ｖ", "fullwidth latin capital letter v", "cap v", "fullwidth latin cap v"
-en, default, "Ｗ", "fullwidth latin capital letter w", "cap w", "fullwidth latin cap w"
-en, default, "Ｘ", "fullwidth latin capital letter x", "cap x", "fullwidth latin cap x"
-en, default, "Ｙ", "fullwidth latin capital letter y", "cap y", "fullwidth latin cap y"
-en, default, "Ｚ", "fullwidth latin capital letter z", "cap z", "fullwidth latin cap z"
-en, default, "À", "latin capital letter a with grave", "cap a grave", "latin capital letter a grave"
-en, default, "Á", "latin capital letter a with acute", "cap a acute", "latin capital letter a acute"
-en, default, "Â", "latin capital letter a with circumflex", "cap a hat", "latin capital letter a hat"
-en, default, "Ã", "latin capital letter a with tilde", "cap a tilde", "latin capital letter a tilde"
-en, default, "Ä", "latin capital letter a with diaeresis", "cap a double overdot", "latin capital letter a double overdot"
-en, default, "Å", "latin capital letter a with ring above", "cap a ring", "latin capital letter a ring"
-en, default, "Ç", "latin capital letter c cedilla", "cap c cedilla", "latin capital letter c cedilla"
-en, default, "È", "latin capital letter e with grave", "cap e grave", "latin capital letter e grave"
-en, default, "É", "latin capital letter e with acute", "cap e acute", "latin capital letter e acute"
-en, default, "Ê", "latin capital letter e with circumflex", "cap e hat", "latin capital letter e hat"
-en, default, "Ë", "latin capital letter e with diaeresis", "cap e double overdot", "latin capital letter e double overdot"
-en, default, "Ì", "latin capital letter i with grave", "cap i grave", "latin capital letter i grave"
-en, default, "Í", "latin capital letter i with acute", "cap i acute", "latin capital letter i acute"
-en, default, "Î", "latin capital letter i with circumflex", "cap i hat", "latin capital letter i hat"
-en, default, "Ï", "latin capital letter i with diaeresis", "cap i double overdot", "latin capital letter i double overdot"
-en, default, "Ñ", "latin capital letter n tilde", "cap n tilde", "latin capital letter n tilde"
-en, default, "Ò", "latin capital letter o with grave", "cap o grave", "latin capital letter o grave"
-en, default, "Ó", "latin capital letter o with acute", "cap o acute", "latin capital letter o acute"
-en, default, "Ô", "latin capital letter o with circumflex", "cap o hat", "latin capital letter o hat"
-en, default, "Õ", "latin capital letter o with tilde", "cap o tilde", "latin capital letter o tilde"
-en, default, "Ö", "latin capital letter o with diaeresis", "cap o double overdot", "latin capital letter o double overdot"
-en, default, "Ù", "latin capital letter u with grave", "cap u grave", "latin capital letter u grave"
-en, default, "Ú", "latin capital letter u with acute", "cap u acute", "latin capital letter u acute"
-en, default, "Û", "latin capital letter u with circumflex", "cap u hat", "latin capital letter u hat"
-en, default, "Ü", "latin capital letter u with diaeresis", "cap u double overdot", "latin capital letter u double overdot"
-en, default, "Ý", "latin capital letter y with acute", "cap y acute", "latin capital letter y acute"
-en, default, "Ā", "latin capital letter a macron", "cap a overbar", "latin capital letter a overbar"
-en, default, "Ă", "latin capital letter a with breve", "cap a breve", "latin capital letter a breve"
-en, default, "Ą", "latin capital letter a with ogonek", "cap a ogonek", "latin capital letter a ogonek"
-en, default, "Ć", "latin capital letter c with acute", "cap c acute", "latin capital letter c acute"
-en, default, "Ĉ", "latin capital letter c with circumflex", "cap c hat", "latin capital letter c hat"
-en, default, "Ċ", "latin capital letter c with dot above", "cap c overdot", "latin capital letter c overdot"
-en, default, "Č", "latin capital letter c with caron", "cap c caron", "latin capital letter c hacek"
-en, default, "Ď", "latin capital letter d with caron", "cap d caron", "latin capital letter d hacek"
-en, default, "Ē", "latin capital letter e with macron", "cap e overbar", "latin capital letter e overbar"
-en, default, "Ĕ", "latin capital letter e with breve", "cap e breve", "latin capital letter e breve"
-en, default, "Ė", "latin capital letter e with dot above", "cap e overdot", "latin capital letter e overdot"
-en, default, "Ę", "latin capital letter e with ogonek", "cap e ogonek", "latin capital letter e ogonek"
-en, default, "Ě", "latin capital letter e with caron", "cap e caron", "latin capital letter e hacek"
-en, default, "Ĝ", "latin capital letter g with circumflex", "cap g hat", "latin capital letter g hat"
-en, default, "Ğ", "latin capital letter g with breve", "cap g breve", "latin capital letter g breve"
-en, default, "Ġ", "latin capital letter g with dot above", "cap g overdot", "latin capital letter g overdot"
-en, default, "Ģ", "latin capital letter g with cedilla", "cap g cedilla", "latin capital letter g cedilla"
-en, default, "Ĥ", "latin capital letter h with circumflex", "cap h hat", "latin capital letter h hat"
-en, default, "Ĩ", "latin capital letter i with tilde", "cap i tilde", "latin capital letter i tilde"
-en, default, "Ī", "latin capital letter i with macron", "cap i overbar", "latin capital letter i overbar"
-en, default, "Ĭ", "latin capital letter i with breve", "cap i breve", "latin capital letter i breve"
-en, default, "Į", "latin capital letter i with ogonek", "cap i ogonek", "latin capital letter i ogonek"
-en, default, "İ", "latin capital letter i with dot above", "cap i overdot", "latin capital letter i overdot"
-en, default, "Ĵ", "latin capital letter j circumflex", "cap j hat", "latin capital letter j hat"
-en, default, "Ķ", "latin capital letter k with cedilla", "cap k cedilla", "latin capital letter k cedilla"
-en, default, "Ĺ", "latin capital letter l with acute", "cap l acute", "latin capital letter l acute"
-en, default, "Ļ", "latin capital letter l with cedilla", "cap l cedilla", "latin capital letter l cedilla"
-en, default, "Ľ", "latin capital letter l with caron", "cap l caron", "latin capital letter l hacek"
-en, default, "Ŀ", "latin capital letter l with middle dot", "cap l middle dot", "latin capital letter l middle dot"
-en, default, "Ń", "latin capital letter n with acute", "cap n acute", "latin capital letter n acute"
-en, default, "Ņ", "latin capital letter n with cedilla", "cap n cedilla", "latin capital letter n cedilla"
-en, default, "Ň", "latin capital letter n with caron", "cap n caron", "latin capital letter n hacek"
-en, default, "Ō", "latin capital letter o macron", "cap o overbar", "latin capital letter o overbar"
-en, default, "Ŏ", "latin capital letter o with breve", "cap o breve", "latin capital letter o breve"
-en, default, "Ő", "latin capital letter o with double acute", "cap o double acute", "latin capital letter o double acute"
-en, default, "Ŕ", "latin capital letter r acute", "cap r acute", "latin capital letter r acute"
-en, default, "Ŗ", "latin capital letter r with cedilla", "cap r cedilla", "latin capital letter r cedilla"
-en, default, "Ř", "latin capital letter r with caron", "cap r caron", "latin capital letter r hacek"
-en, default, "Ś", "latin capital letter s with acute", "cap s acute", "latin capital letter s acute"
-en, default, "Ŝ", "latin capital letter s with circumflex", "cap s hat", "latin capital letter s hat"
-en, default, "Ş", "latin capital letter s with cedilla", "cap s cedilla", "latin capital letter s cedilla"
-en, default, "Š", "latin capital letter s with caron", "cap s caron", "latin capital letter s hacek"
-en, default, "Ţ", "latin capital letter t with cedilla", "cap t cedilla", "latin capital letter t cedilla"
-en, default, "Ť", "latin capital letter t with caron", "cap t caron", "latin capital letter t hacek"
-en, default, "Ũ", "latin capital letter u with tilde", "cap u tilde", "latin capital letter u tilde"
-en, default, "Ū", "latin capital letter u with macron", "cap u overbar", "latin capital letter u overbar"
-en, default, "Ŭ", "latin capital letter u with breve", "cap u breve", "latin capital letter u breve"
-en, default, "Ů", "latin capital letter u with ring above", "cap u ring", "latin capital letter u ring"
-en, default, "Ű", "latin capital letter u with double acute", "cap u double acute", "latin capital letter u double acute"
-en, default, "Ų", "latin capital letter u with ogonek", "cap u ogonek", "latin capital letter u ogonek"
-en, default, "Ŵ", "latin capital letter w with circumflex", "cap w hat", "latin capital letter w hat"
-en, default, "Ŷ", "latin capital letter y with circumflex", "cap y hat", "latin capital letter y hat"
-en, default, "Ÿ", "latin capital letter y with diaeresis", "cap y double overdot", "latin capital letter y double overdot"
-en, default, "Ź", "latin capital letter z with acute", "cap z acute", "latin capital letter z acute"
-en, default, "Ż", "latin capital letter z with dot above", "cap z overdot", "latin capital letter z overdot"
-en, default, "Ž", "latin capital letter z with caron", "cap z caron", "latin capital letter z hacek"
-en, default, "Ǎ", "latin capital letter a with caron", "cap a caron", "latin capital letter a hacek"
-en, default, "Ǐ", "latin capital letter i with caron", "cap i caron", "latin capital letter i hacek"
-en, default, "Ǒ", "latin capital letter o with caron", "cap o caron", "latin capital letter o hacek"
-en, default, "Ǔ", "latin capital letter u with caron", "cap u caron", "latin capital letter u hacek"
-en, default, "Ǧ", "latin capital letter g with caron", "cap g caron", "latin capital letter g hacek"
-en, default, "Ǩ", "latin capital letter k with caron", "cap k caron", "latin capital letter k hacek"
-en, default, "Ǫ", "latin capital letter o with ogonek", "cap o ogonek", "latin capital letter o ogonek"
-en, default, "Ǵ", "latin capital letter g with acute", "cap g acute", "latin capital letter g acute"
-en, default, "Ǹ", "latin capital letter n with grave", "cap n grave", "latin capital letter n grave"
-en, default, "Ȁ", "latin capital letter a with double grave", "cap a double grave", "latin capital letter a double grave"
-en, default, "Ȃ", "latin capital letter a with inverted breve", "cap a inverted breve", "latin capital letter a inverted breve"
-en, default, "Ȅ", "latin capital letter e with double grave", "cap e double grave", "latin capital letter e double grave"
-en, default, "Ȇ", "latin capital letter e with inverted breve", "cap e inverted breve", "latin capital letter e inverted breve"
-en, default, "Ȉ", "latin capital letter i with double grave", "cap i double grave", "latin capital letter i double grave"
-en, default, "Ȋ", "latin capital letter i with inverted breve", "cap i inverted breve", "latin capital letter i inverted breve"
-en, default, "Ȍ", "latin capital letter o with double grave", "cap o double grave", "latin capital letter o double grave"
-en, default, "Ȏ", "latin capital letter o with inverted breve", "cap o inverted breve", "latin capital letter o inverted breve"
-en, default, "Ȑ", "latin capital letter r with double grave", "cap r double grave", "latin capital letter r double grave"
-en, default, "Ȓ", "latin capital letter r with inverted breve", "cap r inverted breve", "latin capital letter r inverted breve"
-en, default, "Ȕ", "latin capital letter u with double grave", "cap u double grave", "latin capital letter u double grave"
-en, default, "Ȗ", "latin capital letter u with inverted breve", "cap u inverted breve", "latin capital letter u inverted breve"
-en, default, "Ș", "latin capital letter s with comma below", "cap s comma below", "latin capital letter s comma below"
-en, default, "Ț", "latin capital letter t with comma below", "cap t comma below", "latin capital letter t comma below"
-en, default, "Ȟ", "latin capital letter h caron", "cap h caron", "cap h caron"
-en, default, "Ȧ", "latin capital letter a with dot above", "cap a overdot", "latin capital letter a overdot"
-en, default, "Ȩ", "latin capital letter e with cedilla", "cap e cedilla", "latin capital letter e cedilla"
-en, default, "Ȯ", "latin capital letter o with dot above", "cap o overdot", "latin capital letter o overdot"
-en, default, "Ȳ", "latin capital letter y with macron", "cap y overbar", "latin capital letter y overbar"
-en, default, "Ḁ", "latin capital letter a with ring below", "cap a ring below", "latin capital letter a ring below"
-en, default, "Ḃ", "latin capital letter b with dot above", "cap b overdot", "latin capital letter b overdot"
-en, default, "Ḅ", "latin capital letter b with dot below", "cap b underdot", "latin capital letter b underdot"
-en, default, "Ḇ", "latin capital letter b with line below", "cap b underbar", "latin capital letter b underbar"
-en, default, "Ḋ", "latin capital letter d with dot above", "cap d overdot", "latin capital letter d overdot"
-en, default, "Ḍ", "latin capital letter d with dot below", "cap d underdot", "latin capital letter d underdot"
-en, default, "Ḏ", "latin capital letter d with line below", "cap d underbar", "latin capital letter d underbar"
-en, default, "Ḑ", "latin capital letter d with cedilla", "cap d cedilla", "latin capital letter d cedilla"
-en, default, "Ḓ", "latin capital letter d with circumflex below", "cap d underhat", "latin capital letter d underhat"
-en, default, "Ḙ", "latin capital letter e with circumflex below", "cap e underhat", "latin capital letter e underhat"
-en, default, "Ḛ", "latin capital letter e with tilde below", "cap e tilde below", "latin capital letter e tilde below"
-en, default, "Ḟ", "latin capital letter f with dot above", "cap f overdot", "latin capital letter f overdot"
-en, default, "Ḡ", "latin capital letter g with macron", "cap g overbar", "latin capital letter g overbar"
-en, default, "Ḣ", "latin capital letter h with dot above", "cap h overdot", "latin capital letter h overdot"
-en, default, "Ḥ", "latin capital letter h with dot below", "cap h underdot", "latin capital letter h underdot"
-en, default, "Ḧ", "latin capital letter h with diaeresis", "cap h double overdot", "latin capital letter h double overdot"
-en, default, "Ḩ", "latin capital letter h with cedilla", "cap h cedilla", "latin capital letter h cedilla"
-en, default, "Ḫ", "latin capital letter h with breve below", "cap h breve below", "latin capital letter h breve below"
-en, default, "Ḭ", "latin capital letter i with tilde below", "cap i tilde below", "latin capital letter i tilde below"
-en, default, "Ḱ", "latin capital letter k with acute", "cap k acute", "latin capital letter k acute"
-en, default, "Ḳ", "latin capital letter k with dot below", "cap k underdot", "latin capital letter k underdot"
-en, default, "Ḵ", "latin capital letter k with line below", "cap k underbar", "latin capital letter k underbar"
-en, default, "Ḷ", "latin capital letter l with dot below", "cap l underdot", "latin capital letter l underdot"
-en, default, "Ḻ", "latin capital letter l with line below", "cap l underbar", "latin capital letter l underbar"
-en, default, "Ḽ", "latin capital letter l with circumflex below", "cap l underhat", "latin capital letter l underhat"
-en, default, "Ḿ", "latin capital letter m with acute", "cap m acute", "latin capital letter m acute"
-en, default, "Ṁ", "latin capital letter m with dot above", "cap m overdot", "latin capital letter m overdot"
-en, default, "Ṃ", "latin capital letter m with dot below", "cap m underdot", "latin capital letter m underdot"
-en, default, "Ṅ", "latin capital letter n with dot above", "cap n overdot", "latin capital letter n overdot"
-en, default, "Ṇ", "latin capital letter n with dot below", "cap n underdot", "latin capital letter n underdot"
-en, default, "Ṉ", "latin capital letter n with line below", "cap n underbar", "latin capital letter n underbar"
-en, default, "Ṋ", "latin capital letter n with circumflex below", "cap n underhat", "latin capital letter n underhat"
-en, default, "Ṕ", "latin capital letter p with acute", "cap p acute", "latin capital letter p acute"
-en, default, "Ṗ", "latin capital letter p with dot above", "cap p overdot", "latin capital letter p overdot"
-en, default, "Ṙ", "latin capital letter r with dot above", "cap r overdot", "latin capital letter r overdot"
-en, default, "Ṛ", "latin capital letter r with dot below", "cap r underdot", "latin capital letter r underdot"
-en, default, "Ṟ", "latin capital letter r with line below", "cap r underbar", "latin capital letter r underbar"
-en, default, "Ṡ", "latin capital letter s with dot above", "cap s overdot", "latin capital letter s overdot"
-en, default, "Ṣ", "latin capital letter s with dot below", "cap s underdot", "latin capital letter s underdot"
-en, default, "Ṫ", "latin capital letter t with dot above", "cap t overdot", "latin capital letter t overdot"
-en, default, "Ṭ", "latin capital letter t with dot below", "cap t underdot", "latin capital letter t underdot"
-en, default, "Ṯ", "latin capital letter t with line below", "cap t underbar", "latin capital letter t underbar"
-en, default, "Ṱ", "latin capital letter t with circumflex below", "cap t underhat", "latin capital letter t underhat"
-en, default, "Ṳ", "latin capital letter u with diaeresis below", "cap u double underdot", "latin capital letter u double underdot"
-en, default, "Ṵ", "latin capital letter u with tilde below", "cap u tilde below", "latin capital letter u tilde below"
-en, default, "Ṷ", "latin capital letter u with circumflex below", "cap u underhat", "latin capital letter u underhat"
-en, default, "Ṽ", "latin capital letter v with tilde", "cap v tilde", "latin capital letter v tilde"
-en, default, "Ṿ", "latin capital letter v with dot below", "cap v underdot", "latin capital letter v underdot"
-en, default, "Ẁ", "latin capital letter w with grave", "cap w grave", "latin capital letter w grave"
-en, default, "Ẃ", "latin capital letter w with acute", "cap w acute", "latin capital letter w acute"
-en, default, "Ẅ", "latin capital letter w with diaeresis", "cap w double overdot", "latin capital letter w double overdot"
-en, default, "Ẇ", "latin capital letter w with dot above", "cap w overdot", "latin capital letter w overdot"
-en, default, "Ẉ", "latin capital letter w with dot below", "cap w underdot", "latin capital letter w underdot"
-en, default, "Ẋ", "latin capital letter x with dot above", "cap x overdot", "latin capital letter x overdot"
-en, default, "Ẍ", "latin capital letter x with diaeresis", "cap x double overdot", "latin capital letter x double overdot"
-en, default, "Ẏ", "latin capital letter y with dot above", "cap y overdot", "latin capital letter y overdot"
-en, default, "Ẑ", "latin capital letter z with circumflex", "cap z circumflex", "latin capital letter z circumflex"
-en, default, "Ẓ", "latin capital letter z with dot below", "cap z underdot", "latin capital letter z underdot"
-en, default, "Ẕ", "latin capital letter z with line below", "cap z underbar", "latin capital letter z underbar"
-en, default, "Ạ", "latin capital letter with a dot below", "cap a underdot", "latin capital letter with a underdot"
-en, default, "Ả", "latin capital letter a with hook above", "cap a hook", "latin capital letter a hook"
-en, default, "Ẹ", "latin capital letter e with dot below", "cap e underdot", "latin capital letter e underdot"
-en, default, "Ẻ", "latin capital letter e with hook above", "cap e hook", "latin capital letter e hook"
-en, default, "Ẽ", "latin capital letter e with tilde", "cap e tilde", "latin capital letter e tilde"
-en, default, "Ỉ", "latin capital letter i with hook above", "cap i hook", "latin capital letter i hook"
-en, default, "Ị", "latin capital letter i with dot below", "cap i underdot", "latin capital letter i underdot"
-en, default, "Ọ", "latin capital letter o with dot below", "cap o underdot", "latin capital letter o underdot"
-en, default, "Ỏ", "latin capital letter o with hook above", "cap o hook", "latin capital letter o hook"
-en, default, "Ụ", "latin capital letter u with dot below", "cap u underdot", "latin capital letter u underdot"
-en, default, "Ủ", "latin capital letter u with hook above", "cap u hook", "latin capital letter u hook"
-en, default, "Ỳ", "latin capital letter y with grave", "cap y grave", "latin capital letter y grave"
-en, default, "Ỵ", "latin capital letter y with dot below", "cap y underdot", "latin capital letter y underdot"
-en, default, "Ỷ", "latin capital letter y with hook above", "cap y hook", "latin capital letter y hook"
-en, default, "Ỹ", "latin capital letter y with tilde", "cap y tilde", "latin capital letter y tilde"
-en, default, "𝕬", "bold fraktur capital a", "bold fraktur cap a", "bold fraktur cap a"
-en, default, "𝕭", "bold fraktur capital b", "bold fraktur cap b", "bold fraktur cap b"
-en, default, "𝕮", "bold fraktur capital c", "bold fraktur cap c", "bold fraktur cap c"
-en, default, "𝕯", "bold fraktur capital d", "bold fraktur cap d", "bold fraktur cap d"
-en, default, "𝕰", "bold fraktur capital e", "bold fraktur cap e", "bold fraktur cap e"
-en, default, "𝕱", "bold fraktur capital f", "bold fraktur cap f", "bold fraktur cap f"
-en, default, "𝕲", "bold fraktur capital g", "bold fraktur cap g", "bold fraktur cap g"
-en, default, "𝕳", "bold fraktur capital h", "bold fraktur cap h", "bold fraktur cap h"
-en, default, "𝕴", "bold fraktur capital i", "bold fraktur cap i", "bold fraktur cap i"
-en, default, "𝕵", "bold fraktur capital j", "bold fraktur cap j", "bold fraktur cap j"
-en, default, "𝕶", "bold fraktur capital k", "bold fraktur cap k", "bold fraktur cap k"
-en, default, "𝕷", "bold fraktur capital l", "bold fraktur cap l", "bold fraktur cap l"
-en, default, "𝕸", "bold fraktur capital m", "bold fraktur cap m", "bold fraktur cap m"
-en, default, "𝕹", "bold fraktur capital n", "bold fraktur cap n", "bold fraktur cap n"
-en, default, "𝕺", "bold fraktur capital o", "bold fraktur cap o", "bold fraktur cap o"
-en, default, "𝕻", "bold fraktur capital p", "bold fraktur cap p", "bold fraktur cap p"
-en, default, "𝕼", "bold fraktur capital q", "bold fraktur cap q", "bold fraktur cap q"
-en, default, "𝕽", "bold fraktur capital r", "bold fraktur cap r", "bold fraktur cap r"
-en, default, "𝕾", "bold fraktur capital s", "bold fraktur cap s", "bold fraktur cap s"
-en, default, "𝕿", "bold fraktur capital t", "bold fraktur cap t", "bold fraktur cap t"
-en, default, "𝖀", "bold fraktur capital u", "bold fraktur cap u", "bold fraktur cap u"
-en, default, "𝖁", "bold fraktur capital v", "bold fraktur cap v", "bold fraktur cap v"
-en, default, "𝖂", "bold fraktur capital w", "bold fraktur cap w", "bold fraktur cap w"
-en, default, "𝖃", "bold fraktur capital x", "bold fraktur cap x", "bold fraktur cap x"
-en, default, "𝖄", "bold fraktur capital y", "bold fraktur cap y", "bold fraktur cap y"
-en, default, "𝖅", "bold fraktur capital z", "bold fraktur cap z", "bold fraktur cap z"
-en, default, "𝖆", "bold fraktur small a", "bold fraktur a", "bold fraktur a"
-en, default, "𝖇", "bold fraktur small b", "bold fraktur b", "bold fraktur b"
-en, default, "𝖈", "bold fraktur small c", "bold fraktur c", "bold fraktur c"
-en, default, "𝖉", "bold fraktur small d", "bold fraktur d", "bold fraktur d"
-en, default, "𝖊", "bold fraktur small e", "bold fraktur e", "bold fraktur e"
-en, default, "𝖋", "bold fraktur small f", "bold fraktur f", "bold fraktur f"
-en, default, "𝖌", "bold fraktur small g", "bold fraktur g", "bold fraktur g"
-en, default, "𝖍", "bold fraktur small h", "bold fraktur h", "bold fraktur h"
-en, default, "𝖎", "bold fraktur small i", "bold fraktur i", "bold fraktur i"
-en, default, "𝖏", "bold fraktur small j", "bold fraktur j", "bold fraktur j"
-en, default, "𝖐", "bold fraktur small k", "bold fraktur k", "bold fraktur k"
-en, default, "𝖑", "bold fraktur small l", "bold fraktur l", "bold fraktur l"
-en, default, "𝖒", "bold fraktur small m", "bold fraktur m", "bold fraktur m"
-en, default, "𝖓", "bold fraktur small n", "bold fraktur n", "bold fraktur n"
-en, default, "𝖔", "bold fraktur small o", "bold fraktur o", "bold fraktur o"
-en, default, "𝖕", "bold fraktur small p", "bold fraktur p", "bold fraktur p"
-en, default, "𝖖", "bold fraktur small q", "bold fraktur q", "bold fraktur q"
-en, default, "𝖗", "bold fraktur small r", "bold fraktur r", "bold fraktur r"
-en, default, "𝖘", "bold fraktur small s", "bold fraktur s", "bold fraktur s"
-en, default, "𝖙", "bold fraktur small t", "bold fraktur t", "bold fraktur t"
-en, default, "𝖚", "bold fraktur small u", "bold fraktur u", "bold fraktur u"
-en, default, "𝖛", "bold fraktur small v", "bold fraktur v", "bold fraktur v"
-en, default, "𝖜", "bold fraktur small w", "bold fraktur w", "bold fraktur w"
-en, default, "𝖝", "bold fraktur small x", "bold fraktur x", "bold fraktur x"
-en, default, "𝖞", "bold fraktur small y", "bold fraktur y", "bold fraktur y"
-en, default, "𝖟", "bold fraktur small z", "bold fraktur z", "bold fraktur z"
-en, default, "𝐀", "bold capital a", "bold cap a", "bold cap a"
-en, default, "𝐁", "bold capital b", "bold cap b", "bold cap b"
-en, default, "𝐂", "bold capital c", "bold cap c", "bold cap c"
-en, default, "𝐃", "bold capital d", "bold cap d", "bold cap d"
-en, default, "𝐄", "bold capital e", "bold cap e", "bold cap e"
-en, default, "𝐅", "bold capital f", "bold cap f", "bold cap f"
-en, default, "𝐆", "bold capital g", "bold cap g", "bold cap g"
-en, default, "𝐇", "bold capital h", "bold cap h", "bold cap h"
-en, default, "𝐈", "bold capital i", "bold cap i", "bold cap i"
-en, default, "𝐉", "bold capital j", "bold cap j", "bold cap j"
-en, default, "𝐊", "bold capital k", "bold cap k", "bold cap k"
-en, default, "𝐋", "bold capital l", "bold cap l", "bold cap l"
-en, default, "𝐌", "bold capital m", "bold cap m", "bold cap m"
-en, default, "𝐍", "bold capital n", "bold cap n", "bold cap n"
-en, default, "𝐎", "bold capital o", "bold cap o", "bold cap o"
-en, default, "𝐏", "bold capital p", "bold cap p", "bold cap p"
-en, default, "𝐐", "bold capital q", "bold cap q", "bold cap q"
-en, default, "𝐑", "bold capital r", "bold cap r", "bold cap r"
-en, default, "𝐒", "bold capital s", "bold cap s", "bold cap s"
-en, default, "𝐓", "bold capital t", "bold cap t", "bold cap t"
-en, default, "𝐔", "bold capital u", "bold cap u", "bold cap u"
-en, default, "𝐕", "bold capital v", "bold cap v", "bold cap v"
-en, default, "𝐖", "bold capital w", "bold cap w", "bold cap w"
-en, default, "𝐗", "bold capital x", "bold cap x", "bold cap x"
-en, default, "𝐘", "bold capital y", "bold cap y", "bold cap y"
-en, default, "𝐙", "bold capital z", "bold cap z", "bold cap z"
-en, default, "𝐚", "bold small a", "bold a", "bold a"
-en, default, "𝐛", "bold small b", "bold b", "bold b"
-en, default, "𝐜", "bold small c", "bold c", "bold c"
-en, default, "𝐝", "bold small d", "bold d", "bold d"
-en, default, "𝐞", "bold small e", "bold e", "bold e"
-en, default, "𝐟", "bold small f", "bold f", "bold f"
-en, default, "𝐠", "bold small g", "bold g", "bold g"
-en, default, "𝐡", "bold small h", "bold h", "bold h"
-en, default, "𝐢", "bold small i", "bold i", "bold i"
-en, default, "𝐣", "bold small j", "bold j", "bold j"
-en, default, "𝐤", "bold small k", "bold k", "bold k"
-en, default, "𝐥", "bold small l", "bold l", "bold l"
-en, default, "𝐦", "bold small m", "bold m", "bold m"
-en, default, "𝐧", "bold small n", "bold n", "bold n"
-en, default, "𝐨", "bold small o", "bold o", "bold o"
-en, default, "𝐩", "bold small p", "bold p", "bold p"
-en, default, "𝐪", "bold small q", "bold q", "bold q"
-en, default, "𝐫", "bold small r", "bold r", "bold r"
-en, default, "𝐬", "bold small s", "bold s", "bold s"
-en, default, "𝐭", "bold small t", "bold t", "bold t"
-en, default, "𝐮", "bold small u", "bold u", "bold u"
-en, default, "𝐯", "bold small v", "bold v", "bold v"
-en, default, "𝐰", "bold small w", "bold w", "bold w"
-en, default, "𝐱", "bold small x", "bold x", "bold x"
-en, default, "𝐲", "bold small y", "bold y", "bold y"
-en, default, "𝐳", "bold small z", "bold z", "bold z"
-en, default, "𝑨", "bold italic capital a", "bold italic cap a", "bold italic cap a"
-en, default, "𝑩", "bold italic capital b", "bold italic cap b", "bold italic cap b"
-en, default, "𝑪", "bold italic capital c", "bold italic cap c", "bold italic cap c"
-en, default, "𝑫", "bold italic capital d", "bold italic cap d", "bold italic cap d"
-en, default, "𝑬", "bold italic capital e", "bold italic cap e", "bold italic cap e"
-en, default, "𝑭", "bold italic capital f", "bold italic cap f", "bold italic cap f"
-en, default, "𝑮", "bold italic capital g", "bold italic cap g", "bold italic cap g"
-en, default, "𝑯", "bold italic capital h", "bold italic cap h", "bold italic cap h"
-en, default, "𝑰", "bold italic capital i", "bold italic cap i", "bold italic cap i"
-en, default, "𝑱", "bold italic capital j", "bold italic cap j", "bold italic cap j"
-en, default, "𝑲", "bold italic capital k", "bold italic cap k", "bold italic cap k"
-en, default, "𝑳", "bold italic capital l", "bold italic cap l", "bold italic cap l"
-en, default, "𝑴", "bold italic capital m", "bold italic cap m", "bold italic cap m"
-en, default, "𝑵", "bold italic capital n", "bold italic cap n", "bold italic cap n"
-en, default, "𝑶", "bold italic capital o", "bold italic cap o", "bold italic cap o"
-en, default, "𝑷", "bold italic capital p", "bold italic cap p", "bold italic cap p"
-en, default, "𝑸", "bold italic capital q", "bold italic cap q", "bold italic cap q"
-en, default, "𝑹", "bold italic capital r", "bold italic cap r", "bold italic cap r"
-en, default, "𝑺", "bold italic capital s", "bold italic cap s", "bold italic cap s"
-en, default, "𝑻", "bold italic capital t", "bold italic cap t", "bold italic cap t"
-en, default, "𝑼", "bold italic capital u", "bold italic cap u", "bold italic cap u"
-en, default, "𝑽", "bold italic capital v", "bold italic cap v", "bold italic cap v"
-en, default, "𝑾", "bold italic capital w", "bold italic cap w", "bold italic cap w"
-en, default, "𝑿", "bold italic capital x", "bold italic cap x", "bold italic cap x"
-en, default, "𝒀", "bold italic capital y", "bold italic cap y", "bold italic cap y"
-en, default, "𝒁", "bold italic capital z", "bold italic cap z", "bold italic cap z"
-en, default, "𝒂", "bold italic small a", "bold italic a", "bold italic a"
-en, default, "𝒃", "bold italic small b", "bold italic b", "bold italic b"
-en, default, "𝒄", "bold italic small c", "bold italic c", "bold italic c"
-en, default, "𝒅", "bold italic small d", "bold italic d", "bold italic d"
-en, default, "𝒆", "bold italic small e", "bold italic e", "bold italic e"
-en, default, "𝒇", "bold italic small f", "bold italic f", "bold italic f"
-en, default, "𝒈", "bold italic small g", "bold italic g", "bold italic g"
-en, default, "𝒉", "bold italic small h", "bold italic h", "bold italic h"
-en, default, "𝒊", "bold italic small i", "bold italic i", "bold italic i"
-en, default, "𝒋", "bold italic small j", "bold italic j", "bold italic j"
-en, default, "𝒌", "bold italic small k", "bold italic k", "bold italic k"
-en, default, "𝒍", "bold italic small l", "bold italic l", "bold italic l"
-en, default, "𝒎", "bold italic small m", "bold italic m", "bold italic m"
-en, default, "𝒏", "bold italic small n", "bold italic n", "bold italic n"
-en, default, "𝒐", "bold italic small o", "bold italic o", "bold italic o"
-en, default, "𝒑", "bold italic small p", "bold italic p", "bold italic p"
-en, default, "𝒒", "bold italic small q", "bold italic q", "bold italic q"
-en, default, "𝒓", "bold italic small r", "bold italic r", "bold italic r"
-en, default, "𝒔", "bold italic small s", "bold italic s", "bold italic s"
-en, default, "𝒕", "bold italic small t", "bold italic t", "bold italic t"
-en, default, "𝒖", "bold italic small u", "bold italic u", "bold italic u"
-en, default, "𝒗", "bold italic small v", "bold italic v", "bold italic v"
-en, default, "𝒘", "bold italic small w", "bold italic w", "bold italic w"
-en, default, "𝒙", "bold italic small x", "bold italic x", "bold italic x"
-en, default, "𝒚", "bold italic small y", "bold italic y", "bold italic y"
-en, default, "𝒛", "bold italic small z", "bold italic z", "bold italic z"
-en, default, "𝓐", "bold script capital a", "bold script cap a", "bold script cap a"
-en, default, "𝓑", "bold script capital b", "bold script cap b", "bold script cap b"
-en, default, "𝓒", "bold script capital c", "bold script cap c", "bold script cap c"
-en, default, "𝓓", "bold script capital d", "bold script cap d", "bold script cap d"
-en, default, "𝓔", "bold script capital e", "bold script cap e", "bold script cap e"
-en, default, "𝓕", "bold script capital f", "bold script cap f", "bold script cap f"
-en, default, "𝓖", "bold script capital g", "bold script cap g", "bold script cap g"
-en, default, "𝓗", "bold script capital h", "bold script cap h", "bold script cap h"
-en, default, "𝓘", "bold script capital i", "bold script cap i", "bold script cap i"
-en, default, "𝓙", "bold script capital j", "bold script cap j", "bold script cap j"
-en, default, "𝓚", "bold script capital k", "bold script cap k", "bold script cap k"
-en, default, "𝓛", "bold script capital l", "bold script cap l", "bold script cap l"
-en, default, "𝓜", "bold script capital m", "bold script cap m", "bold script cap m"
-en, default, "𝓝", "bold script capital n", "bold script cap n", "bold script cap n"
-en, default, "𝓞", "bold script capital o", "bold script cap o", "bold script cap o"
-en, default, "𝓟", "bold script capital p", "bold script cap p", "bold script cap p"
-en, default, "𝓠", "bold script capital q", "bold script cap q", "bold script cap q"
-en, default, "𝓡", "bold script capital r", "bold script cap r", "bold script cap r"
-en, default, "𝓢", "bold script capital s", "bold script cap s", "bold script cap s"
-en, default, "𝓣", "bold script capital t", "bold script cap t", "bold script cap t"
-en, default, "𝓤", "bold script capital u", "bold script cap u", "bold script cap u"
-en, default, "𝓥", "bold script capital v", "bold script cap v", "bold script cap v"
-en, default, "𝓦", "bold script capital w", "bold script cap w", "bold script cap w"
-en, default, "𝓧", "bold script capital x", "bold script cap x", "bold script cap x"
-en, default, "𝓨", "bold script capital y", "bold script cap y", "bold script cap y"
-en, default, "𝓩", "bold script capital z", "bold script cap z", "bold script cap z"
-en, default, "𝓪", "bold script small a", "bold script a", "bold script a"
-en, default, "𝓫", "bold script small b", "bold script b", "bold script b"
-en, default, "𝓬", "bold script small c", "bold script c", "bold script c"
-en, default, "𝓭", "bold script small d", "bold script d", "bold script d"
-en, default, "𝓮", "bold script small e", "bold script e", "bold script e"
-en, default, "𝓯", "bold script small f", "bold script f", "bold script f"
-en, default, "𝓰", "bold script small g", "bold script g", "bold script g"
-en, default, "𝓱", "bold script small h", "bold script h", "bold script h"
-en, default, "𝓲", "bold script small i", "bold script i", "bold script i"
-en, default, "𝓳", "bold script small j", "bold script j", "bold script j"
-en, default, "𝓴", "bold script small k", "bold script k", "bold script k"
-en, default, "𝓵", "bold script small l", "bold script l", "bold script l"
-en, default, "𝓶", "bold script small m", "bold script m", "bold script m"
-en, default, "𝓷", "bold script small n", "bold script n", "bold script n"
-en, default, "𝓸", "bold script small o", "bold script o", "bold script o"
-en, default, "𝓹", "bold script small p", "bold script p", "bold script p"
-en, default, "𝓺", "bold script small q", "bold script q", "bold script q"
-en, default, "𝓻", "bold script small r", "bold script r", "bold script r"
-en, default, "𝓼", "bold script small s", "bold script s", "bold script s"
-en, default, "𝓽", "bold script small t", "bold script t", "bold script t"
-en, default, "𝓾", "bold script small u", "bold script u", "bold script u"
-en, default, "𝓿", "bold script small v", "bold script v", "bold script v"
-en, default, "𝔀", "bold script small w", "bold script w", "bold script w"
-en, default, "𝔁", "bold script small x", "bold script x", "bold script x"
-en, default, "𝔂", "bold script small y", "bold script y", "bold script y"
-en, default, "𝔃", "bold script small z", "bold script z", "bold script z"
-en, default, "𝔸", "double struck capital a", "double struck cap a", "double struck cap a"
-en, default, "𝔹", "double struck capital b", "double struck cap b", "double struck cap b"
-en, default, "ℂ", "double struck capital c", "double struck cap c", "double struck cap c"
-en, default, "𝔻", "double struck capital d", "double struck cap d", "double struck cap d"
-en, default, "𝔼", "double struck capital e", "double struck cap e", "double struck cap e"
-en, default, "𝔽", "double struck capital f", "double struck cap f", "double struck cap f"
-en, default, "𝔾", "double struck capital g", "double struck cap g", "double struck cap g"
-en, default, "ℍ", "double struck capital h", "double struck cap h", "double struck cap h"
-en, default, "𝕀", "double struck capital i", "double struck cap i", "double struck cap i"
-en, default, "𝕁", "double struck capital j", "double struck cap j", "double struck cap j"
-en, default, "𝕂", "double struck capital k", "double struck cap k", "double struck cap k"
-en, default, "𝕃", "double struck capital l", "double struck cap l", "double struck cap l"
-en, default, "𝕄", "double struck capital m", "double struck cap m", "double struck cap m"
-en, default, "ℕ", "double struck capital n", "double struck cap n", "double struck cap n"
-en, default, "𝕆", "double struck capital o", "double struck cap o", "double struck cap o"
-en, default, "ℙ", "double struck capital p", "double struck cap p", "double struck cap p"
-en, default, "ℚ", "double struck capital q", "double struck cap q", "double struck cap q"
-en, default, "ℝ", "double struck capital r", "double struck cap r", "double struck cap r"
-en, default, "𝕊", "double struck capital s", "double struck cap s", "double struck cap s"
-en, default, "𝕋", "double struck capital t", "double struck cap t", "double struck cap t"
-en, default, "𝕌", "double struck capital u", "double struck cap u", "double struck cap u"
-en, default, "𝕍", "double struck capital v", "double struck cap v", "double struck cap v"
-en, default, "𝕎", "double struck capital w", "double struck cap w", "double struck cap w"
-en, default, "𝕏", "double struck capital x", "double struck cap x", "double struck cap x"
-en, default, "𝕐", "double struck capital y", "double struck cap y", "double struck cap y"
-en, default, "ℤ", "double struck capital z", "double struck cap z", "double struck cap z"
-en, default, "𝕒", "double struck small a", "double struck a", "double struck a"
-en, default, "𝕓", "double struck small b", "double struck b", "double struck b"
-en, default, "𝕔", "double struck small c", "double struck c", "double struck c"
-en, default, "𝕕", "double struck small d", "double struck d", "double struck d"
-en, default, "𝕖", "double struck small e", "double struck e", "double struck e"
-en, default, "𝕗", "double struck small f", "double struck f", "double struck f"
-en, default, "𝕘", "double struck small g", "double struck g", "double struck g"
-en, default, "𝕙", "double struck small h", "double struck h", "double struck h"
-en, default, "𝕚", "double struck small i", "double struck i", "double struck i"
-en, default, "𝕛", "double struck small j", "double struck j", "double struck j"
-en, default, "𝕜", "double struck small k", "double struck k", "double struck k"
-en, default, "𝕝", "double struck small l", "double struck l", "double struck l"
-en, default, "𝕞", "double struck small m", "double struck m", "double struck m"
-en, default, "𝕟", "double struck small n", "double struck n", "double struck n"
-en, default, "𝕠", "double struck small o", "double struck o", "double struck o"
-en, default, "𝕡", "double struck small p", "double struck p", "double struck p"
-en, default, "𝕢", "double struck small q", "double struck q", "double struck q"
-en, default, "𝕣", "double struck small r", "double struck r", "double struck r"
-en, default, "𝕤", "double struck small s", "double struck s", "double struck s"
-en, default, "𝕥", "double struck small t", "double struck t", "double struck t"
-en, default, "𝕦", "double struck small u", "double struck u", "double struck u"
-en, default, "𝕧", "double struck small v", "double struck v", "double struck v"
-en, default, "𝕨", "double struck small w", "double struck w", "double struck w"
-en, default, "𝕩", "double struck small x", "double struck x", "double struck x"
-en, default, "𝕪", "double struck small y", "double struck y", "double struck y"
-en, default, "𝕫", "double struck small z", "double struck z", "double struck z"
-en, default, "𝔄", "fraktur capital a", "fraktur cap a", "fraktur cap a"
-en, default, "𝔅", "fraktur capital b", "fraktur cap b", "fraktur cap b"
-en, default, "ℭ", "fraktur capital c", "fraktur cap c", "fraktur cap c"
-en, default, "𝔇", "fraktur capital d", "fraktur cap d", "fraktur cap d"
-en, default, "𝔈", "fraktur capital e", "fraktur cap e", "fraktur cap e"
-en, default, "𝔉", "fraktur capital f", "fraktur cap f", "fraktur cap f"
-en, default, "𝔊", "fraktur capital g", "fraktur cap g", "fraktur cap g"
-en, default, "ℌ", "fraktur capital h", "fraktur cap h", "fraktur cap h"
-en, default, "ℑ", "fraktur capital i", "fraktur cap i", "fraktur cap i"
-en, default, "𝔍", "fraktur capital j", "fraktur cap j", "fraktur cap j"
-en, default, "𝔎", "fraktur capital k", "fraktur cap k", "fraktur cap k"
-en, default, "𝔏", "fraktur capital l", "fraktur cap l", "fraktur cap l"
-en, default, "𝔐", "fraktur capital m", "fraktur cap m", "fraktur cap m"
-en, default, "𝔑", "fraktur capital n", "fraktur cap n", "fraktur cap n"
-en, default, "𝔒", "fraktur capital o", "fraktur cap o", "fraktur cap o"
-en, default, "𝔓", "fraktur capital p", "fraktur cap p", "fraktur cap p"
-en, default, "𝔔", "fraktur capital q", "fraktur cap q", "fraktur cap q"
-en, default, "ℜ", "fraktur capital r", "fraktur cap r", "fraktur cap r"
-en, default, "𝔖", "fraktur capital s", "fraktur cap s", "fraktur cap s"
-en, default, "𝔗", "fraktur capital t", "fraktur cap t", "fraktur cap t"
-en, default, "𝔘", "fraktur capital u", "fraktur cap u", "fraktur cap u"
-en, default, "𝔙", "fraktur capital v", "fraktur cap v", "fraktur cap v"
-en, default, "𝔚", "fraktur capital w", "fraktur cap w", "fraktur cap w"
-en, default, "𝔛", "fraktur capital x", "fraktur cap x", "fraktur cap x"
-en, default, "𝔜", "fraktur capital y", "fraktur cap y", "fraktur cap y"
-en, default, "ℨ", "fraktur capital z", "fraktur cap z", "fraktur cap z"
-en, default, "𝔞", "fraktur small a", "fraktur a", "fraktur a"
-en, default, "𝔟", "fraktur small b", "fraktur b", "fraktur b"
-en, default, "𝔠", "fraktur small c", "fraktur c", "fraktur c"
-en, default, "𝔡", "fraktur small d", "fraktur d", "fraktur d"
-en, default, "𝔢", "fraktur small e", "fraktur e", "fraktur e"
-en, default, "𝔣", "fraktur small f", "fraktur f", "fraktur f"
-en, default, "𝔤", "fraktur small g", "fraktur g", "fraktur g"
-en, default, "𝔥", "fraktur small h", "fraktur h", "fraktur h"
-en, default, "𝔦", "fraktur small i", "fraktur i", "fraktur i"
-en, default, "𝔧", "fraktur small j", "fraktur j", "fraktur j"
-en, default, "𝔨", "fraktur small k", "fraktur k", "fraktur k"
-en, default, "𝔩", "fraktur small l", "fraktur l", "fraktur l"
-en, default, "𝔪", "fraktur small m", "fraktur m", "fraktur m"
-en, default, "𝔫", "fraktur small n", "fraktur n", "fraktur n"
-en, default, "𝔬", "fraktur small o", "fraktur o", "fraktur o"
-en, default, "𝔭", "fraktur small p", "fraktur p", "fraktur p"
-en, default, "𝔮", "fraktur small q", "fraktur q", "fraktur q"
-en, default, "𝔯", "fraktur small r", "fraktur r", "fraktur r"
-en, default, "𝔰", "fraktur small s", "fraktur s", "fraktur s"
-en, default, "𝔱", "fraktur small t", "fraktur t", "fraktur t"
-en, default, "𝔲", "fraktur small u", "fraktur u", "fraktur u"
-en, default, "𝔳", "fraktur small v", "fraktur v", "fraktur v"
-en, default, "𝔴", "fraktur small w", "fraktur w", "fraktur w"
-en, default, "𝔵", "fraktur small x", "fraktur x", "fraktur x"
-en, default, "𝔶", "fraktur small y", "fraktur y", "fraktur y"
-en, default, "𝔷", "fraktur small z", "fraktur z", "fraktur z"
-en, default, "𝐴", "italic capital a", "italic cap a", "italic cap a"
-en, default, "𝐵", "italic capital b", "italic cap b", "italic cap b"
-en, default, "𝐶", "italic capital c", "italic cap c", "italic cap c"
-en, default, "𝐷", "italic capital d", "italic cap d", "italic cap d"
-en, default, "𝐸", "italic capital e", "italic cap e", "italic cap e"
-en, default, "𝐹", "italic capital f", "italic cap f", "italic cap f"
-en, default, "𝐺", "italic capital g", "italic cap g", "italic cap g"
-en, default, "𝐻", "italic capital h", "italic cap h", "italic cap h"
-en, default, "𝐼", "italic capital i", "italic cap i", "italic cap i"
-en, default, "𝐽", "italic capital j", "italic cap j", "italic cap j"
-en, default, "𝐾", "italic capital k", "italic cap k", "italic cap k"
-en, default, "𝐿", "italic capital l", "italic cap l", "italic cap l"
-en, default, "𝑀", "italic capital m", "italic cap m", "italic cap m"
-en, default, "𝑁", "italic capital n", "italic cap n", "italic cap n"
-en, default, "𝑂", "italic capital o", "italic cap o", "italic cap o"
-en, default, "𝑃", "italic capital p", "italic cap p", "italic cap p"
-en, default, "𝑄", "italic capital q", "italic cap q", "italic cap q"
-en, default, "𝑅", "italic capital r", "italic cap r", "italic cap r"
-en, default, "𝑆", "italic capital s", "italic cap s", "italic cap s"
-en, default, "𝑇", "italic capital t", "italic cap t", "italic cap t"
-en, default, "𝑈", "italic capital u", "italic cap u", "italic cap u"
-en, default, "𝑉", "italic capital v", "italic cap v", "italic cap v"
-en, default, "𝑊", "italic capital w", "italic cap w", "italic cap w"
-en, default, "𝑋", "italic capital x", "italic cap x", "italic cap x"
-en, default, "𝑌", "italic capital y", "italic cap y", "italic cap y"
-en, default, "𝑍", "italic capital z", "italic cap z", "italic cap z"
-en, default, "𝑎", "italic small a", "italic a", "italic a"
-en, default, "𝑏", "italic small b", "italic b", "italic b"
-en, default, "𝑐", "italic small c", "italic c", "italic c"
-en, default, "𝑑", "italic small d", "italic d", "italic d"
-en, default, "𝑒", "italic small e", "italic e", "italic e"
-en, default, "𝑓", "italic small f", "italic f", "italic f"
-en, default, "𝑔", "italic small g", "italic g", "italic g"
-en, default, "ℎ", "italic small h", "italic h", "italic h"
-en, default, "𝑖", "italic small i", "italic i", "italic i"
-en, default, "𝑗", "italic small j", "italic j", "italic j"
-en, default, "𝑘", "italic small k", "italic k", "italic k"
-en, default, "𝑙", "italic small l", "italic l", "italic l"
-en, default, "𝑚", "italic small m", "italic m", "italic m"
-en, default, "𝑛", "italic small n", "italic n", "italic n"
-en, default, "𝑜", "italic small o", "italic o", "italic o"
-en, default, "𝑝", "italic small p", "italic p", "italic p"
-en, default, "𝑞", "italic small q", "italic q", "italic q"
-en, default, "𝑟", "italic small r", "italic r", "italic r"
-en, default, "𝑠", "italic small s", "italic s", "italic s"
-en, default, "𝑡", "italic small t", "italic t", "italic t"
-en, default, "𝑢", "italic small u", "italic u", "italic u"
-en, default, "𝑣", "italic small v", "italic v", "italic v"
-en, default, "𝑤", "italic small w", "italic w", "italic w"
-en, default, "𝑥", "italic small x", "italic x", "italic x"
-en, default, "𝑦", "italic small y", "italic y", "italic y"
-en, default, "𝑧", "italic small z", "italic z", "italic z"
-en, default, "𝙰", "monospace capital a", "monospace cap a", "monospace cap a"
-en, default, "𝙱", "monospace capital b", "monospace cap b", "monospace cap b"
-en, default, "𝙲", "monospace capital c", "monospace cap c", "monospace cap c"
-en, default, "𝙳", "monospace capital d", "monospace cap d", "monospace cap d"
-en, default, "𝙴", "monospace capital e", "monospace cap e", "monospace cap e"
-en, default, "𝙵", "monospace capital f", "monospace cap f", "monospace cap f"
-en, default, "𝙶", "monospace capital g", "monospace cap g", "monospace cap g"
-en, default, "𝙷", "monospace capital h", "monospace cap h", "monospace cap h"
-en, default, "𝙸", "monospace capital i", "monospace cap i", "monospace cap i"
-en, default, "𝙹", "monospace capital j", "monospace cap j", "monospace cap j"
-en, default, "𝙺", "monospace capital k", "monospace cap k", "monospace cap k"
-en, default, "𝙻", "monospace capital l", "monospace cap l", "monospace cap l"
-en, default, "𝙼", "monospace capital m", "monospace cap m", "monospace cap m"
-en, default, "𝙽", "monospace capital n", "monospace cap n", "monospace cap n"
-en, default, "𝙾", "monospace capital o", "monospace cap o", "monospace cap o"
-en, default, "𝙿", "monospace capital p", "monospace cap p", "monospace cap p"
-en, default, "𝚀", "monospace capital q", "monospace cap q", "monospace cap q"
-en, default, "𝚁", "monospace capital r", "monospace cap r", "monospace cap r"
-en, default, "𝚂", "monospace capital s", "monospace cap s", "monospace cap s"
-en, default, "𝚃", "monospace capital t", "monospace cap t", "monospace cap t"
-en, default, "𝚄", "monospace capital u", "monospace cap u", "monospace cap u"
-en, default, "𝚅", "monospace capital v", "monospace cap v", "monospace cap v"
-en, default, "𝚆", "monospace capital w", "monospace cap w", "monospace cap w"
-en, default, "𝚇", "monospace capital x", "monospace cap x", "monospace cap x"
-en, default, "𝚈", "monospace capital y", "monospace cap y", "monospace cap y"
-en, default, "𝚉", "monospace capital z", "monospace cap z", "monospace cap z"
-en, default, "𝚊", "monospace small a", "monospace a", "monospace a"
-en, default, "𝚋", "monospace small b", "monospace b", "monospace b"
-en, default, "𝚌", "monospace small c", "monospace c", "monospace c"
-en, default, "𝚍", "monospace small d", "monospace d", "monospace d"
-en, default, "𝚎", "monospace small e", "monospace e", "monospace e"
-en, default, "𝚏", "monospace small f", "monospace f", "monospace f"
-en, default, "𝚐", "monospace small g", "monospace g", "monospace g"
-en, default, "𝚑", "monospace small h", "monospace h", "monospace h"
-en, default, "𝚒", "monospace small i", "monospace i", "monospace i"
-en, default, "𝚓", "monospace small j", "monospace j", "monospace j"
-en, default, "𝚔", "monospace small k", "monospace k", "monospace k"
-en, default, "𝚕", "monospace small l", "monospace l", "monospace l"
-en, default, "𝚖", "monospace small m", "monospace m", "monospace m"
-en, default, "𝚗", "monospace small n", "monospace n", "monospace n"
-en, default, "𝚘", "monospace small o", "monospace o", "monospace o"
-en, default, "𝚙", "monospace small p", "monospace p", "monospace p"
-en, default, "𝚚", "monospace small q", "monospace q", "monospace q"
-en, default, "𝚛", "monospace small r", "monospace r", "monospace r"
-en, default, "𝚜", "monospace small s", "monospace s", "monospace s"
-en, default, "𝚝", "monospace small t", "monospace t", "monospace t"
-en, default, "𝚞", "monospace small u", "monospace u", "monospace u"
-en, default, "𝚟", "monospace small v", "monospace v", "monospace v"
-en, default, "𝚠", "monospace small w", "monospace w", "monospace w"
-en, default, "𝚡", "monospace small x", "monospace x", "monospace x"
-en, default, "𝚢", "monospace small y", "monospace y", "monospace y"
-en, default, "𝚣", "monospace small z", "monospace z", "monospace z"
-en, default, "𝗔", "sans serif bold capital a", "sans serif bold cap a", "sans serif bold cap a"
-en, default, "𝗕", "sans serif bold capital b", "sans serif bold cap b", "sans serif bold cap b"
-en, default, "𝗖", "sans serif bold capital c", "sans serif bold cap c", "sans serif bold cap c"
-en, default, "𝗗", "sans serif bold capital d", "sans serif bold cap d", "sans serif bold cap d"
-en, default, "𝗘", "sans serif bold capital e", "sans serif bold cap e", "sans serif bold cap e"
-en, default, "𝗙", "sans serif bold capital f", "sans serif bold cap f", "sans serif bold cap f"
-en, default, "𝗚", "sans serif bold capital g", "sans serif bold cap g", "sans serif bold cap g"
-en, default, "𝗛", "sans serif bold capital h", "sans serif bold cap h", "sans serif bold cap h"
-en, default, "𝗜", "sans serif bold capital i", "sans serif bold cap i", "sans serif bold cap i"
-en, default, "𝗝", "sans serif bold capital j", "sans serif bold cap j", "sans serif bold cap j"
-en, default, "𝗞", "sans serif bold capital k", "sans serif bold cap k", "sans serif bold cap k"
-en, default, "𝗟", "sans serif bold capital l", "sans serif bold cap l", "sans serif bold cap l"
-en, default, "𝗠", "sans serif bold capital m", "sans serif bold cap m", "sans serif bold cap m"
-en, default, "𝗡", "sans serif bold capital n", "sans serif bold cap n", "sans serif bold cap n"
-en, default, "𝗢", "sans serif bold capital o", "sans serif bold cap o", "sans serif bold cap o"
-en, default, "𝗣", "sans serif bold capital p", "sans serif bold cap p", "sans serif bold cap p"
-en, default, "𝗤", "sans serif bold capital q", "sans serif bold cap q", "sans serif bold cap q"
-en, default, "𝗥", "sans serif bold capital r", "sans serif bold cap r", "sans serif bold cap r"
-en, default, "𝗦", "sans serif bold capital s", "sans serif bold cap s", "sans serif bold cap s"
-en, default, "𝗧", "sans serif bold capital t", "sans serif bold cap t", "sans serif bold cap t"
-en, default, "𝗨", "sans serif bold capital u", "sans serif bold cap u", "sans serif bold cap u"
-en, default, "𝗩", "sans serif bold capital v", "sans serif bold cap v", "sans serif bold cap v"
-en, default, "𝗪", "sans serif bold capital w", "sans serif bold cap w", "sans serif bold cap w"
-en, default, "𝗫", "sans serif bold capital x", "sans serif bold cap x", "sans serif bold cap x"
-en, default, "𝗬", "sans serif bold capital y", "sans serif bold cap y", "sans serif bold cap y"
-en, default, "𝗭", "sans serif bold capital z", "sans serif bold cap z", "sans serif bold cap z"
-en, default, "𝗮", "sans serif bold small a", "sans serif bold a", "sans serif bold a"
-en, default, "𝗯", "sans serif bold small b", "sans serif bold b", "sans serif bold b"
-en, default, "𝗰", "sans serif bold small c", "sans serif bold c", "sans serif bold c"
-en, default, "𝗱", "sans serif bold small d", "sans serif bold d", "sans serif bold d"
-en, default, "𝗲", "sans serif bold small e", "sans serif bold e", "sans serif bold e"
-en, default, "𝗳", "sans serif bold small f", "sans serif bold f", "sans serif bold f"
-en, default, "𝗴", "sans serif bold small g", "sans serif bold g", "sans serif bold g"
-en, default, "𝗵", "sans serif bold small h", "sans serif bold h", "sans serif bold h"
-en, default, "𝗶", "sans serif bold small i", "sans serif bold i", "sans serif bold i"
-en, default, "𝗷", "sans serif bold small j", "sans serif bold j", "sans serif bold j"
-en, default, "𝗸", "sans serif bold small k", "sans serif bold k", "sans serif bold k"
-en, default, "𝗹", "sans serif bold small l", "sans serif bold l", "sans serif bold l"
-en, default, "𝗺", "sans serif bold small m", "sans serif bold m", "sans serif bold m"
-en, default, "𝗻", "sans serif bold small n", "sans serif bold n", "sans serif bold n"
-en, default, "𝗼", "sans serif bold small o", "sans serif bold o", "sans serif bold o"
-en, default, "𝗽", "sans serif bold small p", "sans serif bold p", "sans serif bold p"
-en, default, "𝗾", "sans serif bold small q", "sans serif bold q", "sans serif bold q"
-en, default, "𝗿", "sans serif bold small r", "sans serif bold r", "sans serif bold r"
-en, default, "𝘀", "sans serif bold small s", "sans serif bold s", "sans serif bold s"
-en, default, "𝘁", "sans serif bold small t", "sans serif bold t", "sans serif bold t"
-en, default, "𝘂", "sans serif bold small u", "sans serif bold u", "sans serif bold u"
-en, default, "𝘃", "sans serif bold small v", "sans serif bold v", "sans serif bold v"
-en, default, "𝘄", "sans serif bold small w", "sans serif bold w", "sans serif bold w"
-en, default, "𝘅", "sans serif bold small x", "sans serif bold x", "sans serif bold x"
-en, default, "𝘆", "sans serif bold small y", "sans serif bold y", "sans serif bold y"
-en, default, "𝘇", "sans serif bold small z", "sans serif bold z", "sans serif bold z"
-en, default, "𝘈", "sans serif italic capital a", "sans serif italic cap a", "sans serif italic cap a"
-en, default, "𝘉", "sans serif italic capital b", "sans serif italic cap b", "sans serif italic cap b"
-en, default, "𝘊", "sans serif italic capital c", "sans serif italic cap c", "sans serif italic cap c"
-en, default, "𝘋", "sans serif italic capital d", "sans serif italic cap d", "sans serif italic cap d"
-en, default, "𝘌", "sans serif italic capital e", "sans serif italic cap e", "sans serif italic cap e"
-en, default, "𝘍", "sans serif italic capital f", "sans serif italic cap f", "sans serif italic cap f"
-en, default, "𝘎", "sans serif italic capital g", "sans serif italic cap g", "sans serif italic cap g"
-en, default, "𝘏", "sans serif italic capital h", "sans serif italic cap h", "sans serif italic cap h"
-en, default, "𝘐", "sans serif italic capital i", "sans serif italic cap i", "sans serif italic cap i"
-en, default, "𝘑", "sans serif italic capital j", "sans serif italic cap j", "sans serif italic cap j"
-en, default, "𝘒", "sans serif italic capital k", "sans serif italic cap k", "sans serif italic cap k"
-en, default, "𝘓", "sans serif italic capital l", "sans serif italic cap l", "sans serif italic cap l"
-en, default, "𝘔", "sans serif italic capital m", "sans serif italic cap m", "sans serif italic cap m"
-en, default, "𝘕", "sans serif italic capital n", "sans serif italic cap n", "sans serif italic cap n"
-en, default, "𝘖", "sans serif italic capital o", "sans serif italic cap o", "sans serif italic cap o"
-en, default, "𝘗", "sans serif italic capital p", "sans serif italic cap p", "sans serif italic cap p"
-en, default, "𝘘", "sans serif italic capital q", "sans serif italic cap q", "sans serif italic cap q"
-en, default, "𝘙", "sans serif italic capital r", "sans serif italic cap r", "sans serif italic cap r"
-en, default, "𝘚", "sans serif italic capital s", "sans serif italic cap s", "sans serif italic cap s"
-en, default, "𝘛", "sans serif italic capital t", "sans serif italic cap t", "sans serif italic cap t"
-en, default, "𝘜", "sans serif italic capital u", "sans serif italic cap u", "sans serif italic cap u"
-en, default, "𝘝", "sans serif italic capital v", "sans serif italic cap v", "sans serif italic cap v"
-en, default, "𝘞", "sans serif italic capital w", "sans serif italic cap w", "sans serif italic cap w"
-en, default, "𝘟", "sans serif italic capital x", "sans serif italic cap x", "sans serif italic cap x"
-en, default, "𝘠", "sans serif italic capital y", "sans serif italic cap y", "sans serif italic cap y"
-en, default, "𝘡", "sans serif italic capital z", "sans serif italic cap z", "sans serif italic cap z"
-en, default, "𝘢", "sans serif italic small a", "sans serif italic a", "sans serif italic a"
-en, default, "𝘣", "sans serif italic small b", "sans serif italic b", "sans serif italic b"
-en, default, "𝘤", "sans serif italic small c", "sans serif italic c", "sans serif italic c"
-en, default, "𝘥", "sans serif italic small d", "sans serif italic d", "sans serif italic d"
-en, default, "𝘦", "sans serif italic small e", "sans serif italic e", "sans serif italic e"
-en, default, "𝘧", "sans serif italic small f", "sans serif italic f", "sans serif italic f"
-en, default, "𝘨", "sans serif italic small g", "sans serif italic g", "sans serif italic g"
-en, default, "𝘩", "sans serif italic small h", "sans serif italic h", "sans serif italic h"
-en, default, "𝘪", "sans serif italic small i", "sans serif italic i", "sans serif italic i"
-en, default, "𝘫", "sans serif italic small j", "sans serif italic j", "sans serif italic j"
-en, default, "𝘬", "sans serif italic small k", "sans serif italic k", "sans serif italic k"
-en, default, "𝘭", "sans serif italic small l", "sans serif italic l", "sans serif italic l"
-en, default, "𝘮", "sans serif italic small m", "sans serif italic m", "sans serif italic m"
-en, default, "𝘯", "sans serif italic small n", "sans serif italic n", "sans serif italic n"
-en, default, "𝘰", "sans serif italic small o", "sans serif italic o", "sans serif italic o"
-en, default, "𝘱", "sans serif italic small p", "sans serif italic p", "sans serif italic p"
-en, default, "𝘲", "sans serif italic small q", "sans serif italic q", "sans serif italic q"
-en, default, "𝘳", "sans serif italic small r", "sans serif italic r", "sans serif italic r"
-en, default, "𝘴", "sans serif italic small s", "sans serif italic s", "sans serif italic s"
-en, default, "𝘵", "sans serif italic small t", "sans serif italic t", "sans serif italic t"
-en, default, "𝘶", "sans serif italic small u", "sans serif italic u", "sans serif italic u"
-en, default, "𝘷", "sans serif italic small v", "sans serif italic v", "sans serif italic v"
-en, default, "𝘸", "sans serif italic small w", "sans serif italic w", "sans serif italic w"
-en, default, "𝘹", "sans serif italic small x", "sans serif italic x", "sans serif italic x"
-en, default, "𝘺", "sans serif italic small y", "sans serif italic y", "sans serif italic y"
-en, default, "𝘻", "sans serif italic small z", "sans serif italic z", "sans serif italic z"
-en, default, "𝘼", "sans serif bold italic capital a", "sans serif bold italic cap a", "sans serif bold italic cap a"
-en, default, "𝘽", "sans serif bold italic capital b", "sans serif bold italic cap b", "sans serif bold italic cap b"
-en, default, "𝘾", "sans serif bold italic capital c", "sans serif bold italic cap c", "sans serif bold italic cap c"
-en, default, "𝘿", "sans serif bold italic capital d", "sans serif bold italic cap d", "sans serif bold italic cap d"
-en, default, "𝙀", "sans serif bold italic capital e", "sans serif bold italic cap e", "sans serif bold italic cap e"
-en, default, "𝙁", "sans serif bold italic capital f", "sans serif bold italic cap f", "sans serif bold italic cap f"
-en, default, "𝙂", "sans serif bold italic capital g", "sans serif bold italic cap g", "sans serif bold italic cap g"
-en, default, "𝙃", "sans serif bold italic capital h", "sans serif bold italic cap h", "sans serif bold italic cap h"
-en, default, "𝙄", "sans serif bold italic capital i", "sans serif bold italic cap i", "sans serif bold italic cap i"
-en, default, "𝙅", "sans serif bold italic capital j", "sans serif bold italic cap j", "sans serif bold italic cap j"
-en, default, "𝙆", "sans serif bold italic capital k", "sans serif bold italic cap k", "sans serif bold italic cap k"
-en, default, "𝙇", "sans serif bold italic capital l", "sans serif bold italic cap l", "sans serif bold italic cap l"
-en, default, "𝙈", "sans serif bold italic capital m", "sans serif bold italic cap m", "sans serif bold italic cap m"
-en, default, "𝙉", "sans serif bold italic capital n", "sans serif bold italic cap n", "sans serif bold italic cap n"
-en, default, "𝙊", "sans serif bold italic capital o", "sans serif bold italic cap o", "sans serif bold italic cap o"
-en, default, "𝙋", "sans serif bold italic capital p", "sans serif bold italic cap p", "sans serif bold italic cap p"
-en, default, "𝙌", "sans serif bold italic capital q", "sans serif bold italic cap q", "sans serif bold italic cap q"
-en, default, "𝙍", "sans serif bold italic capital r", "sans serif bold italic cap r", "sans serif bold italic cap r"
-en, default, "𝙎", "sans serif bold italic capital s", "sans serif bold italic cap s", "sans serif bold italic cap s"
-en, default, "𝙏", "sans serif bold italic capital t", "sans serif bold italic cap t", "sans serif bold italic cap t"
-en, default, "𝙐", "sans serif bold italic capital u", "sans serif bold italic cap u", "sans serif bold italic cap u"
-en, default, "𝙑", "sans serif bold italic capital v", "sans serif bold italic cap v", "sans serif bold italic cap v"
-en, default, "𝙒", "sans serif bold italic capital w", "sans serif bold italic cap w", "sans serif bold italic cap w"
-en, default, "𝙓", "sans serif bold italic capital x", "sans serif bold italic cap x", "sans serif bold italic cap x"
-en, default, "𝙔", "sans serif bold italic capital y", "sans serif bold italic cap y", "sans serif bold italic cap y"
-en, default, "𝙕", "sans serif bold italic capital z", "sans serif bold italic cap z", "sans serif bold italic cap z"
-en, default, "𝙖", "sans serif bold italic small a", "sans serif bold italic a", "sans serif bold italic a"
-en, default, "𝙗", "sans serif bold italic small b", "sans serif bold italic b", "sans serif bold italic b"
-en, default, "𝙘", "sans serif bold italic small c", "sans serif bold italic c", "sans serif bold italic c"
-en, default, "𝙙", "sans serif bold italic small d", "sans serif bold italic d", "sans serif bold italic d"
-en, default, "𝙚", "sans serif bold italic small e", "sans serif bold italic e", "sans serif bold italic e"
-en, default, "𝙛", "sans serif bold italic small f", "sans serif bold italic f", "sans serif bold italic f"
-en, default, "𝙜", "sans serif bold italic small g", "sans serif bold italic g", "sans serif bold italic g"
-en, default, "𝙝", "sans serif bold italic small h", "sans serif bold italic h", "sans serif bold italic h"
-en, default, "𝙞", "sans serif bold italic small i", "sans serif bold italic i", "sans serif bold italic i"
-en, default, "𝙟", "sans serif bold italic small j", "sans serif bold italic j", "sans serif bold italic j"
-en, default, "𝙠", "sans serif bold italic small k", "sans serif bold italic k", "sans serif bold italic k"
-en, default, "𝙡", "sans serif bold italic small l", "sans serif bold italic l", "sans serif bold italic l"
-en, default, "𝙢", "sans serif bold italic small m", "sans serif bold italic m", "sans serif bold italic m"
-en, default, "𝙣", "sans serif bold italic small n", "sans serif bold italic n", "sans serif bold italic n"
-en, default, "𝙤", "sans serif bold italic small o", "sans serif bold italic o", "sans serif bold italic o"
-en, default, "𝙥", "sans serif bold italic small p", "sans serif bold italic p", "sans serif bold italic p"
-en, default, "𝙦", "sans serif bold italic small q", "sans serif bold italic q", "sans serif bold italic q"
-en, default, "𝙧", "sans serif bold italic small r", "sans serif bold italic r", "sans serif bold italic r"
-en, default, "𝙨", "sans serif bold italic small s", "sans serif bold italic s", "sans serif bold italic s"
-en, default, "𝙩", "sans serif bold italic small t", "sans serif bold italic t", "sans serif bold italic t"
-en, default, "𝙪", "sans serif bold italic small u", "sans serif bold italic u", "sans serif bold italic u"
-en, default, "𝙫", "sans serif bold italic small v", "sans serif bold italic v", "sans serif bold italic v"
-en, default, "𝙬", "sans serif bold italic small w", "sans serif bold italic w", "sans serif bold italic w"
-en, default, "𝙭", "sans serif bold italic small x", "sans serif bold italic x", "sans serif bold italic x"
-en, default, "𝙮", "sans serif bold italic small y", "sans serif bold italic y", "sans serif bold italic y"
-en, default, "𝙯", "sans serif bold italic small z", "sans serif bold italic z", "sans serif bold italic z"
-en, default, "𝖠", "sans serif capital a", "sans serif cap a", "sans serif cap a"
-en, default, "𝖡", "sans serif capital b", "sans serif cap b", "sans serif cap b"
-en, default, "𝖢", "sans serif capital c", "sans serif cap c", "sans serif cap c"
-en, default, "𝖣", "sans serif capital d", "sans serif cap d", "sans serif cap d"
-en, default, "𝖤", "sans serif capital e", "sans serif cap e", "sans serif cap e"
-en, default, "𝖥", "sans serif capital f", "sans serif cap f", "sans serif cap f"
-en, default, "𝖦", "sans serif capital g", "sans serif cap g", "sans serif cap g"
-en, default, "𝖧", "sans serif capital h", "sans serif cap h", "sans serif cap h"
-en, default, "𝖨", "sans serif capital i", "sans serif cap i", "sans serif cap i"
-en, default, "𝖩", "sans serif capital j", "sans serif cap j", "sans serif cap j"
-en, default, "𝖪", "sans serif capital k", "sans serif cap k", "sans serif cap k"
-en, default, "𝖫", "sans serif capital l", "sans serif cap l", "sans serif cap l"
-en, default, "𝖬", "sans serif capital m", "sans serif cap m", "sans serif cap m"
-en, default, "𝖭", "sans serif capital n", "sans serif cap n", "sans serif cap n"
-en, default, "𝖮", "sans serif capital o", "sans serif cap o", "sans serif cap o"
-en, default, "𝖯", "sans serif capital p", "sans serif cap p", "sans serif cap p"
-en, default, "𝖰", "sans serif capital q", "sans serif cap q", "sans serif cap q"
-en, default, "𝖱", "sans serif capital r", "sans serif cap r", "sans serif cap r"
-en, default, "𝖲", "sans serif capital s", "sans serif cap s", "sans serif cap s"
-en, default, "𝖳", "sans serif capital t", "sans serif cap t", "sans serif cap t"
-en, default, "𝖴", "sans serif capital u", "sans serif cap u", "sans serif cap u"
-en, default, "𝖵", "sans serif capital v", "sans serif cap v", "sans serif cap v"
-en, default, "𝖶", "sans serif capital w", "sans serif cap w", "sans serif cap w"
-en, default, "𝖷", "sans serif capital x", "sans serif cap x", "sans serif cap x"
-en, default, "𝖸", "sans serif capital y", "sans serif cap y", "sans serif cap y"
-en, default, "𝖹", "sans serif capital z", "sans serif cap z", "sans serif cap z"
-en, default, "𝖺", "sans serif small a", "sans serif a", "sans serif a"
-en, default, "𝖻", "sans serif small b", "sans serif b", "sans serif b"
-en, default, "𝖼", "sans serif small c", "sans serif c", "sans serif c"
-en, default, "𝖽", "sans serif small d", "sans serif d", "sans serif d"
-en, default, "𝖾", "sans serif small e", "sans serif e", "sans serif e"
-en, default, "𝖿", "sans serif small f", "sans serif f", "sans serif f"
-en, default, "𝗀", "sans serif small g", "sans serif g", "sans serif g"
-en, default, "𝗁", "sans serif small h", "sans serif h", "sans serif h"
-en, default, "𝗂", "sans serif small i", "sans serif i", "sans serif i"
-en, default, "𝗃", "sans serif small j", "sans serif j", "sans serif j"
-en, default, "𝗄", "sans serif small k", "sans serif k", "sans serif k"
-en, default, "𝗅", "sans serif small l", "sans serif l", "sans serif l"
-en, default, "𝗆", "sans serif small m", "sans serif m", "sans serif m"
-en, default, "𝗇", "sans serif small n", "sans serif n", "sans serif n"
-en, default, "𝗈", "sans serif small o", "sans serif o", "sans serif o"
-en, default, "𝗉", "sans serif small p", "sans serif p", "sans serif p"
-en, default, "𝗊", "sans serif small q", "sans serif q", "sans serif q"
-en, default, "𝗋", "sans serif small r", "sans serif r", "sans serif r"
-en, default, "𝗌", "sans serif small s", "sans serif s", "sans serif s"
-en, default, "𝗍", "sans serif small t", "sans serif t", "sans serif t"
-en, default, "𝗎", "sans serif small u", "sans serif u", "sans serif u"
-en, default, "𝗏", "sans serif small v", "sans serif v", "sans serif v"
-en, default, "𝗐", "sans serif small w", "sans serif w", "sans serif w"
-en, default, "𝗑", "sans serif small x", "sans serif x", "sans serif x"
-en, default, "𝗒", "sans serif small y", "sans serif y", "sans serif y"
-en, default, "𝗓", "sans serif small z", "sans serif z", "sans serif z"
-en, default, "𝒜", "script capital a", "script cap a", "script cap a"
-en, default, "ℬ", "script capital b", "script cap b", "script cap b"
-en, default, "𝒞", "script capital c", "script cap c", "script cap c"
-en, default, "𝒟", "script capital d", "script cap d", "script cap d"
-en, default, "ℰ", "script capital e", "script cap e", "script cap e"
-en, default, "ℱ", "script capital f", "script cap f", "script cap f"
-en, default, "𝒢", "script capital g", "script cap g", "script cap g"
-en, default, "ℋ", "script capital h", "script cap h", "script cap h"
-en, default, "ℐ", "script capital i", "script cap i", "script cap i"
-en, default, "𝒥", "script capital j", "script cap j", "script cap j"
-en, default, "𝒦", "script capital k", "script cap k", "script cap k"
-en, default, "ℒ", "script capital l", "script cap l", "script cap l"
-en, default, "ℳ", "script capital m", "script cap m", "script cap m"
-en, default, "𝒩", "script capital n", "script cap n", "script cap n"
-en, default, "𝒪", "script capital o", "script cap o", "script cap o"
-en, default, "𝒫", "script capital p", "script cap p", "script cap p"
-en, default, "𝒬", "script capital q", "script cap q", "script cap q"
-en, default, "ℛ", "script capital r", "script cap r", "script cap r"
-en, default, "𝒮", "script capital s", "script cap s", "script cap s"
-en, default, "𝒯", "script capital t", "script cap t", "script cap t"
-en, default, "𝒰", "script capital u", "script cap u", "script cap u"
-en, default, "𝒱", "script capital v", "script cap v", "script cap v"
-en, default, "𝒲", "script capital w", "script cap w", "script cap w"
-en, default, "𝒳", "script capital x", "script cap x", "script cap x"
-en, default, "𝒴", "script capital y", "script cap y", "script cap y"
-en, default, "𝒵", "script capital z", "script cap z", "script cap z"
-en, default, "𝒶", "script small a", "script a", "script a"
-en, default, "𝒷", "script small b", "script b", "script b"
-en, default, "𝒸", "script small c", "script c", "script c"
-en, default, "𝒹", "script small d", "script d", "script d"
-en, default, "ℯ", "script small e", "script e", "script e"
-en, default, "𝒻", "script small f", "script f", "script f"
-en, default, "ℊ", "script small g", "script g", "script g"
-en, default, "𝒽", "script small h", "script h", "script h"
-en, default, "𝒾", "script small i", "script i", "script i"
-en, default, "𝒿", "script small j", "script j", "script j"
-en, default, "𝓀", "script small k", "script k", "script k"
-en, default, "𝓁", "script small l", "script l", "script l"
-en, default, "𝓂", "script small m", "script m", "script m"
-en, default, "𝓃", "script small n", "script n", "script n"
-en, default, "ℴ", "script small o", "script o", "script o"
-en, default, "𝓅", "script small p", "script p", "script p"
-en, default, "𝓆", "script small q", "script q", "script q"
-en, default, "𝓇", "script small r", "script r", "script r"
-en, default, "𝓈", "script small s", "script s", "script s"
-en, default, "𝓉", "script small t", "script t", "script t"
-en, default, "𝓊", "script small u", "script u", "script u"
-en, default, "𝓋", "script small v", "script v", "script v"
-en, default, "𝓌", "script small w", "script w", "script w"
-en, default, "𝓍", "script small x", "script x", "script x"
-en, default, "𝓎", "script small y", "script y", "script y"
-en, default, "𝓏", "script small z", "script z", "script z"
-en, default, "⊾", "right angle with arc", "right angle with arc", "right angle with arc"
-en, default, "⍼", "right angle with downwards zigzag arrow", "right angle with downwards zigzag arrow", "right angle with downwards zigzag arrow"
-en, default, "⟀", "three dimensional angle", "three dimensional angle", "three dimensional angle"
-en, default, "⦛", "measured angle opening left", "measured angle opening left", "measured angle opening left"
-en, default, "⦜", "right angle variant with square", "right angle variant with square", "right angle variant with square"
-en, default, "⦝", "measured right angle with dot", "measured right angle with dot", "measured right angle with dot"
-en, default, "⦞", "angle with s inside", "angle with s inside", "angle with s inside"
-en, default, "⦟", "acute angle", "acute angle", "acute angle"
-en, default, "⦠", "spherical angle opening left", "spherical angle opening left", "spherical angle opening left"
-en, default, "⦡", "spherical angle opening up", "spherical angle opening up", "spherical angle opening up"
-en, default, "⦢", "turned angle", "turned angle", "turned angle"
-en, default, "⦣", "reversed angle", "reversed angle", "reversed angle"
-en, default, "⦤", "angle with underbar", "angle with underbar", "angle with underbar"
-en, default, "⦥", "reversed angle with underbar", "reversed angle with underbar", "reversed angle with underbar"
-en, default, "⦦", "oblique angle opening up", "oblique angle opening up", "oblique angle opening up"
-en, default, "⦧", "oblique angle opening down", "oblique angle opening down", "oblique angle opening down"
-en, default, "⦨", "measured angle with open arm ending in arrow pointing up and right", "measured angle with open arm ending in arrow pointing up and right", "measured angle with open arm ending in arrow pointing up and right"
-en, default, "⦩", "measured angle with open arm ending in arrow pointing up and left", "measured angle with open arm ending in arrow pointing up and left", "measured angle with open arm ending in arrow pointing up and left"
-en, default, "⦪", "measured angle with open arm ending in arrow pointing down and right", "measured angle with open arm ending in arrow pointing down and right", "measured angle with open arm ending in arrow pointing down and right"
-en, default, "⦫", "measured angle with open arm ending in arrow pointing down and left", "measured angle with open arm ending in arrow pointing down and left", "measured angle with open arm ending in arrow pointing down and left"
-en, default, "⦬", "measured angle with open arm ending in arrow pointing right and up", "measured angle with open arm ending in arrow pointing right and up", "measured angle with open arm ending in arrow pointing right and up"
-en, default, "⦭", "measured angle with open arm ending in arrow pointing left and up", "measured angle with open arm ending in arrow pointing left and up", "measured angle with open arm ending in arrow pointing left and up"
-en, default, "⦮", "measured angle with open arm ending in arrow pointing right and down", "measured angle with open arm ending in arrow pointing right and down", "measured angle with open arm ending in arrow pointing right and down"
-en, default, "⦯", "measured angle with open arm ending in arrow pointing left and down", "measured angle with open arm ending in arrow pointing left and down", "measured angle with open arm ending in arrow pointing left and down"
-en, default, "←", "leftwards arrow", "left arrow", "left arrow"
-en, default, "↑", "upwards arrow", "up arrow", "up arrow"
-en, default, "→", "rightwards arrow", "right arrow", "right arrow"
-en, default, "↓", "downwards arrow", "down arrow", "down arrow"
-en, default, "↔", "left right arrow", "left right arrow", "left right arrow"
-en, default, "↕", "up down arrow", "up down arrow", "up down arrow"
-en, default, "↖", "north west arrow", "up left arrow", "up left arrow"
-en, default, "↗", "north east arrow", "up right arrow", "up right arrow"
-en, default, "↘", "south east arrow", "down right arrow", "down right arrow"
-en, default, "↙", "south west arrow", "down left arrow", "down left arrow"
-en, default, "↚", "leftwards arrow with stroke", "left arrow with stroke", "left arrow with stroke"
-en, default, "↛", "rightwards arrow with stroke", "right arrow with stroke", "right arrow with stroke"
-en, default, "↜", "leftwards wave arrow", "left wave arrow", "left wave arrow"
-en, default, "↝", "rightwards wave arrow", "right wave arrow", "right wave arrow"
-en, default, "↞", "leftwards two headed arrow", "two headed left arrow", "left two headed arrow"
-en, default, "↟", "upwards two headed arrow", "two headed up arrow", "up two headed arrow"
-en, default, "↠", "rightwards two headed arrow", "two headed right arrow", "right two headed arrow"
-en, default, "↡", "downwards two headed arrow", "two headed down arrow", "down two headed arrow"
-en, default, "↢", "leftwards arrow with tail", "left arrow with tail", "left arrow with tail"
-en, default, "↣", "rightwards arrow with tail", "right arrow with tail", "right arrow with tail"
-en, default, "↤", "leftwards arrow from bar", "left arrow from bar", "left arrow from bar"
-en, default, "↥", "upwards arrow from bar", "up arrow from bar", "up arrow from bar"
-en, default, "↦", "rightwards arrow from bar", "right arrow from bar", "right arrow from bar"
-en, default, "↧", "downwards arrow from bar", "down arrow from bar", "down arrow from bar"
-en, default, "↨", "up down arrow with base", "up down arrow with base", "up down arrow with base"
-en, default, "↩", "leftwards arrow with hook", "left arrow with hook", "left arrow with hook"
-en, default, "↪", "rightwards arrow with hook", "right arrow with hook", "right arrow with hook"
-en, default, "↫", "leftwards arrow with loop", "left arrow with loop", "left arrow with loop"
-en, default, "↬", "rightwards arrow with loop", "right arrow with loop", "right arrow with loop"
-en, default, "↭", "left right wave arrow", "left right wave arrow", "left right wave arrow"
-en, default, "↮", "left right arrow with stroke", "left right arrow with stroke", "left right arrow with stroke"
-en, default, "↯", "downwards zigzag arrow", "down zigzag arrow", "down zigzag arrow"
-en, default, "↰", "upwards arrow with tip leftwards", "up arrow with tip left", "up arrow with tip left"
-en, default, "↱", "upwards arrow with tip rightwards", "up arrow with tip right", "up arrow with tip right"
-en, default, "↲", "downwards arrow with tip leftwards", "down arrow with tip left", "down arrow with tip left"
-en, default, "↳", "downwards arrow with tip rightwards", "down arrow with tip right", "down arrow with tip right"
-en, default, "↴", "rightwards arrow with corner downwards", "right arrow with corner down", "right arrow with corner down"
-en, default, "↵", "downwards arrow with corner leftwards", "down arrow with corner left", "down arrow with corner left"
-en, default, "↶", "anticlockwise top semicircle arrow", "anticlockwise top semicircle arrow", "anticlockwise top semicircle arrow"
-en, default, "↷", "clockwise top semicircle arrow", "clockwise top semicircle arrow", "clockwise top semicircle arrow"
-en, default, "↸", "north west arrow to long bar", "up left arrow to long bar", "up left arrow to long bar"
-en, default, "↹", "leftwards arrow to bar over rightwards arrow to bar", "left arrow to bar over right arrow to bar", "left arrow to bar over right arrow to bar"
-en, default, "↺", "anticlockwise open circle arrow", "anticlockwise open circle arrow", "anticlockwise open circle arrow"
-en, default, "↻", "clockwise open circle arrow", "clockwise open circle arrow", "clockwise open circle arrow"
-en, default, "⇄", "rightwards arrow over leftwards arrow", "right arrow over left arrow", "right arrow over left arrow"
-en, default, "⇅", "upwards arrow leftwards of downwards arrow", "up arrow left of down arrow", "up arrow left of down arrow"
-en, default, "⇆", "leftwards arrow over rightwards arrow", "left arrow over right arrow", "left arrow over right arrow"
-en, default, "⇇", "leftwards paired arrows", "left paired arrows", "left paired arrows"
-en, default, "⇈", "upwards paired arrows", "up paired arrows", "up paired arrows"
-en, default, "⇉", "rightwards paired arrows", "right paired arrows", "right paired arrows"
-en, default, "⇊", "downwards paired arrows", "down paired arrows", "down paired arrows"
-en, default, "⇍", "leftwards double arrow with stroke", "left double arrow with stroke", "left double arrow with stroke"
-en, default, "⇎", "left right double arrow with stroke", "left right double arrow with stroke", "left right double arrow with stroke"
-en, default, "⇏", "rightwards double arrow with stroke", "right double arrow with stroke", "right double arrow with stroke"
-en, default, "⇐", "leftwards double arrow", "left double arrow", "left double arrow"
-en, default, "⇑", "upwards double arrow", "up double arrow", "up double arrow"
-en, default, "⇒", "rightwards double arrow", "right double arrow", "right double arrow"
-en, default, "⇓", "downwards double arrow", "down double arrow", "down double arrow"
-en, default, "⇔", "left right double arrow", "left right double arrow", "left right double arrow"
-en, default, "⇕", "up down double arrow", "up down double arrow", "up down double arrow"
-en, default, "⇖", "north west double arrow", "up left double arrow", "up left double arrow"
-en, default, "⇗", "north east double arrow", "up right double arrow", "up right double arrow"
-en, default, "⇘", "south east double arrow", "down right double arrow", "down right double arrow"
-en, default, "⇙", "south west double arrow", "down left double arrow", "down left double arrow"
-en, default, "⇚", "leftwards triple arrow", "left triple arrow", "left triple arrow"
-en, default, "⇛", "rightwards triple arrow", "right triple arrow", "right triple arrow"
-en, default, "⇜", "leftwards squiggle arrow", "left squiggle arrow", "left squiggle arrow"
-en, default, "⇝", "rightwards squiggle arrow", "right squiggle arrow", "right squiggle arrow"
-en, default, "⇞", "upwards arrow with double stroke", "up arrow with double stroke", "up arrow with double stroke"
-en, default, "⇟", "downwards arrow with double stroke", "down arrow with double stroke", "down arrow with double stroke"
-en, default, "⇠", "leftwards dasheD arrow", "left dasheD arrow", "left dasheD arrow"
-en, default, "⇡", "upwards dasheD arrow", "up dasheD arrow", "up dasheD arrow"
-en, default, "⇢", "rightwards dasheD arrow", "right dasheD arrow", "right dasheD arrow"
-en, default, "⇣", "downwards dasheD arrow", "down dasheD arrow", "down dasheD arrow"
-en, default, "⇤", "leftwards arrow to bar", "left arrow to bar", "left arrow to bar"
-en, default, "⇥", "rightwards arrow to bar", "right arrow to bar", "right arrow to bar"
-en, default, "⇦", "leftwards white arrow", "white left arrow", "white left arrow"
-en, default, "⇧", "upwards white arrow", "white up arrow", "white up arrow"
-en, default, "⇨", "rightwards white arrow", "white right arrow", "white right arrow"
-en, default, "⇩", "downwards white arrow", "white down arrow", "white down arrow"
-en, default, "⇪", "upwards white arrow from bar", "white up arrow from bar", "white up arrow from bar"
-en, default, "⇫", "upwards white arrow on pedestal", "white up arrow on pedestal", "up white arrow on pedestal"
-en, default, "⇬", "upwards white arrow on pedestal with horizontal bar", "white up arrow on pedestal with horizontal bar", "up white arrow on pedestal with horizontal bar"
-en, default, "⇭", "upwards white arrow on pedestal with vertical bar", "white up arrow on pedestal with vertical bar", "up white arrow on pedestal with vertical bar"
-en, default, "⇮", "upwards white double arrow", "white double up arrow", "up white double arrow"
-en, default, "⇯", "upwards white double arrow on pedestal", "white double up arrow on pedestal", "up white double arrow on pedestal"
-en, default, "⇰", "rightwards white arrow from wall", "white right arrow from wall", "right white arrow from wall"
-en, default, "⇱", "north west arrow to corner", "north west arrow to corner", "north west arrow to corner"
-en, default, "⇲", "south east arrow to corner", "south east arrow to corner", "south east arrow to corner"
-en, default, "⇳", "up down white arrow", "up down white arrow", "up down white arrow"
-en, default, "⇴", "right arrow with small circle", "right arrow with small circle", "right arrow with small circle"
-en, default, "⇵", "down arrow leftwards of upwards arrow", "down arrow left of up arrow", "down arrow left of up arrow"
-en, default, "⇶", "three rightwards arrows", "three right arrows", "three right arrows"
-en, default, "⇷", "leftwards arrow with vertical stroke", "left arrow with vertical stroke", "left arrow with vertical stroke"
-en, default, "⇸", "rightwards arrow with vertical stroke", "right arrow with vertical stroke", "right arrow with vertical stroke"
-en, default, "⇹", "left right arrow with vertical stroke", "left right arrow with vertical stroke", "left right arrow with vertical stroke"
-en, default, "⇺", "leftwards arrow with double vertical stroke", "left arrow with double vertical stroke", "left arrow with double vertical stroke"
-en, default, "⇻", "rightwards arrow with double vertical stroke", "right arrow with double vertical stroke", "right arrow with double vertical stroke"
-en, default, "⇼", "left right arrow with double vertical stroke", "left right arrow with double vertical stroke", "left right arrow with double vertical stroke"
-en, default, "⇽", "leftwards open headed arrow", "left open headed arrow", "left open headed arrow"
-en, default, "⇾", "rightwards open headed arrow", "right open headed arrow", "right open headed arrow"
-en, default, "⇿", "left right open headed arrow", "left right open headed arrow", "left right open headed arrow"
-en, default, "⌁", "electric arrow", "electric arrow", "electric arrow"
-en, default, "⌃", "up arrowhead", "up arrowhead", "up arrowhead"
-en, default, "⌄", "down arrowhead", "down arrowhead", "down arrowhead"
-en, default, "⌤", "up arrowhead between two horizontal bars", "up arrowhead between two horizontal bars", "enter key"
-en, default, "⎋", "broken circle with northwest arrow", "broken circle with northwest arrow", "broken circle with northwest arrow"
-en, default, "➔", "heavy wide headed rightwards arrow", "heavy wide headed right arrow", "heavy wide headed right arrow"
-en, default, "➘", "heavy south east arrow", "heavy down right arrow", "heavy down right arrow"
-en, default, "➙", "heavy rightwards arrow", "heavy right arrow", "heavy right arrow"
-en, default, "➚", "heavy north east arrow", "heavy up right arrow", "heavy up right arrow"
-en, default, "➛", "drafting point rightwards arrow", "drafting point right arrow", "drafting point right arrow"
-en, default, "➜", "heavy round tipped rightwards arrow", "heavy round tipped right arrow", "heavy round tipped right arrow"
-en, default, "➝", "triangle headed rightwards arrow", "triangle headed right arrow", "triangle headed right arrow"
-en, default, "➞", "heavy triangle headed rightwards arrow", "heavy triangle headed right arrow", "heavy triangle headed right arrow"
-en, default, "➟", "dashed triangle headed rightwards arrow", "dashed triangle headed right arrow", "dashed triangle headed right arrow"
-en, default, "➠", "heavy dashed triangle headed rightwards arrow", "heavy dashed triangle headed right arrow", "heavy dashed triangle headed right arrow"
-en, default, "➡", "black rightwards arrow", "black right arrow", "black right arrow"
-en, default, "➢", "three d top lighted rightwards arrowhead", "three d top lighted right arrowhead", "three d top lighted right arrowhead"
-en, default, "➣", "three d bottom lighted rightwards arrowhead", "three d bottom lighted right arrowhead", "three d bottom lighted right arrowhead"
-en, default, "➤", "black rightwards arrowhead", "black right arrowhead", "black right arrowhead"
-en, default, "➥", "heavy black curved downwards and rightwards arrow", "heavy black curved down and right arrow", "heavy black curved down and right arrow"
-en, default, "➦", "heavy black curved upwards and rightwards arrow", "heavy black curved up and right arrow", "heavy black curved up and right arrow"
-en, default, "➧", "squat black rightwards arrow", "squat black right arrow", "squat black right arrow"
-en, default, "➨", "heavy concave pointed black rightwards arrow", "heavy concave pointed black right arrow", "heavy concave pointed black right arrow"
-en, default, "➩", "right shaded white rightwards arrow", "right shaded white right arrow", "right shaded white right arrow"
-en, default, "➪", "left shaded white rightwards arrow", "left shaded white right arrow", "left shaded white right arrow"
-en, default, "➫", "back tilted shadowed white rightwards arrow", "back tilted shadowed white right arrow", "back tilted shadowed white right arrow"
-en, default, "➬", "front tilted shadowed white rightwards arrow", "front tilted shadowed white right arrow", "front tilted shadowed white right arrow"
-en, default, "➭", "heavy lower right shadowed white rightwards arrow", "heavy lower right shadowed white right arrow", "heavy lower right shadowed white right arrow"
-en, default, "➮", "heavy upper right shadowed white rightwards arrow", "heavy upper right shadowed white right arrow", "heavy upper right shadowed white right arrow"
-en, default, "➯", "notched lower right shadowed white rightwards arrow", "notched lower right shadowed white right arrow", "notched lower right shadowed white right arrow"
-en, default, "➱", "notched upper right shadowed white rightwards arrow", "notched upper right shadowed white right arrow", "notched upper right shadowed white right arrow"
-en, default, "➲", "circled heavy white rightwards arrow", "circled heavy white right arrow", "circled heavy white right arrow"
-en, default, "➳", "white feathered rightwards arrow", "white feathered right arrow", "white feathered right arrow"
-en, default, "➴", "black feathered south east arrow", "black feathered down right arrow", "black feathered down right arrow"
-en, default, "➵", "black feathered rightwards arrow", "black feathered right arrow", "black feathered right arrow"
-en, default, "➶", "black feathered north east arrow", "black feathered up right arrow", "black feathered up right arrow"
-en, default, "➷", "heavy black feathered south east arrow", "heavy black feathered down right arrow", "heavy black feathered down right arrow"
-en, default, "➸", "heavy black feathered rightwards arrow", "heavy black feathered right arrow", "heavy black feathered right arrow"
-en, default, "➹", "heavy black feathered north east arrow", "heavy black feathered up right arrow", "heavy black feathered up right arrow"
-en, default, "➺", "teardrop barbed rightwards arrow", "teardrop barbed right arrow", "teardrop barbed right arrow"
-en, default, "➻", "heavy teardrop shanked rightwards arrow", "heavy teardrop shanked right arrow", "heavy teardrop shanked right arrow"
-en, default, "➼", "wedge tailed rightwards arrow", "wedge tailed right arrow", "wedge tailed right arrow"
-en, default, "➽", "heavy wedge tailed rightwards arrow", "heavy wedge tailed right arrow", "heavy wedge tailed right arrow"
-en, default, "➾", "open outlined rightwards arrow", "open outlined right arrow", "open outlined right arrow"
-en, default, "⟰", "upwards quadruple arrow", "up quadruple arrow", "up quadruple arrow"
-en, default, "⟱", "downwards quadruple arrow", "down quadruple arrow", "down quadruple arrow"
-en, default, "⟲", "anticlockwise gapped circle arrow", "anticlockwise gapped circle arrow", "anticlockwise gapped circle arrow"
-en, default, "⟳", "clockwise gapped circle arrow", "clockwise gapped circle arrow", "clockwise gapped circle arrow"
-en, default, "⟴", "right arrow with circled plus", "right arrow with circled plus", "right arrow with circled plus"
-en, default, "⟵", "long leftwards arrow", "long left arrow", "long left arrow"
-en, default, "⟶", "long rightwards arrow", "long right arrow", "long right arrow"
-en, default, "⟷", "long left right arrow", "long left right arrow", "long left right arrow"
-en, default, "⟸", "long leftwards double arrow", "long left double arrow", "long left double arrow"
-en, default, "⟹", "long rightwards double arrow", "long right double arrow", "long right double arrow"
-en, default, "⟺", "long left right double arrow", "long left right double arrow", "long left right double arrow"
-en, default, "⟻", "long leftwards arrow from bar", "long left arrow from bar", "long left arrow from bar"
-en, default, "⟼", "long rightwards arrow from bar", "long right arrow from bar", "long right arrow from bar"
-en, default, "⟽", "long leftwards double arrow from bar", "long left double arrow from bar", "long left double arrow from bar"
-en, default, "⟾", "long rightwards double arrow from bar", "long right double arrow from bar", "long right double arrow from bar"
-en, default, "⟿", "long rightwards squiggle arrow", "long right squiggle arrow", "long right squiggle arrow"
-en, default, "⤀", "rightwards two headed arrow with vertical stroke", "two headed right arrow with vertical stroke", "right two headed arrow with vertical stroke"
-en, default, "⤁", "rightwards two headed arrow with double vertical stroke", "two headed right arrow with double vertical stroke", "right two headed arrow with double vertical stroke"
-en, default, "⤂", "leftwards double arrow with vertical stroke", "double left arrow with vertical stroke", "left double arrow with vertical stroke"
-en, default, "⤃", "rightwards double arrow with vertical stroke", "double right arrow with vertical stroke", "right double arrow with vertical stroke"
-en, default, "⤄", "left right double arrow with vertical stroke", "double left right arrow with vertical stroke", "double left right arrow with vertical stroke"
-en, default, "⤅", "rightwards two headed arrow from bar", "two headed right arrow from bar", "right two headed arrow from bar"
-en, default, "⤆", "leftwards double arrow from bar", "double left arrow from bar", "left double arrow from bar"
-en, default, "⤇", "rightwards double arrow from bar", "double right arrow from bar", "right double arrow from bar"
-en, default, "⤈", "downwards arrow with horizontal stroke", "arrow down with horizontal stroke", "down arrow with horizontal stroke"
-en, default, "⤉", "upwards arrow with horizontal stroke", "up arrow with horizontal stroke", "up arrow with horizontal stroke"
-en, default, "⤊", "upwards triple arrow", "up triple arrow", "up triple arrow"
-en, default, "⤋", "downwards triple arrow", "down triple arrow", "down triple arrow"
-en, default, "⤌", "leftwards double dash arrow", "left double dash arrow", "left double dash arrow"
-en, default, "⤍", "rightwards double dash arrow", "right double dash arrow", "right double dash arrow"
-en, default, "⤎", "leftwards triple dash arrow", "left triple dash arrow", "left triple dash arrow"
-en, default, "⤏", "rightwards triple dash arrow", "right triple dash arrow", "right triple dash arrow"
-en, default, "⤐", "rightwards two headed triple dash arrow", "right two headed triple dash arrow", "right two headed triple dash arrow"
-en, default, "⤑", "rightwards arrow with dotted stem", "right arrow with dotted stem", "right arrow with dotted stem"
-en, default, "⤒", "upwards arrow to bar", "up arrow to bar", "up arrow to bar"
-en, default, "⤓", "downwards arrow to bar", "down arrow to bar", "down arrow to bar"
-en, default, "⤔", "rightwards arrow with tail with vertical stroke", "right arrow with tail with vertical stroke", "right arrow with tail with vertical stroke"
-en, default, "⤕", "rightwards arrow with tail with double vertical stroke", "right arrow with tail with double vertical stroke", "right arrow with tail with double vertical stroke"
-en, default, "⤖", "rightwards two headed arrow with tail", "right two headed arrow with tail", "right two headed arrow with tail"
-en, default, "⤗", "rightwards two headed arrow with tail with vertical stroke", "right two headed arrow with tail with vertical stroke", "right two headed arrow with tail with vertical stroke"
-en, default, "⤘", "rightwards two headed arrow with tail with double vertical stroke", "right two headed arrow with tail with double vertical stroke", "right two headed arrow with tail with double vertical stroke"
-en, default, "⤙", "leftwards arrow tail", "left arrow tail", "left arrow tail"
-en, default, "⤚", "rightwards arrow tail", "right arrow tail", "right arrow tail"
-en, default, "⤛", "leftwards double arrow tail", "left double arrow tail", "left double arrow tail"
-en, default, "⤜", "rightwards double arrow tail", "right double arrow tail", "right double arrow tail"
-en, default, "⤝", "leftwards arrow to black diamond", "left arrow to black diamond", "left arrow to black diamond"
-en, default, "⤞", "rightwards arrow to black diamond", "right arrow to black diamond", "right arrow to black diamond"
-en, default, "⤟", "leftwards arrow from bar to black diamond", "left arrow from bar to black diamond", "left arrow from bar to black diamond"
-en, default, "⤠", "rightwards arrow from bar to black diamond", "right arrow from bar to black diamond", "right arrow from bar to black diamond"
-en, default, "⤡", "north west and south east arrow", "north west and south east arrow", "north west and south east arrow"
-en, default, "⤢", "north east and south west arrow", "north east and south west arrow", "north east and south west arrow"
-en, default, "⤣", "north west arrow with hook", "north west arrow with hook", "north west arrow with hook"
-en, default, "⤤", "north east arrow with hook", "north east arrow with hook", "north east arrow with hook"
-en, default, "⤥", "south east arrow with hook", "south east arrow with hook", "south east arrow with hook"
-en, default, "⤦", "south west arrow with hook", "south west arrow with hook", "south west arrow with hook"
-en, default, "⤧", "north west arrow and north east arrow", "north west arrow and north east arrow", "north west arrow and north east arrow"
-en, default, "⤨", "north east arrow and south east arrow", "north east arrow and south east arrow", "north east arrow and south east arrow"
-en, default, "⤩", "south east arrow and south west arrow", "south east arrow and south west arrow", "south east arrow and south west arrow"
-en, default, "⤪", "south west arrow and north west arrow", "south west arrow and north west arrow", "south west arrow and north west arrow"
-en, default, "⤭", "south east arrow crossing north east arrow", "south east arrow crossing north east arrow", "south east arrow crossing north east arrow"
-en, default, "⤮", "north east arrow crossing south east arrow", "north east arrow crossing south east arrow", "north east arrow crossing south east arrow"
-en, default, "⤯", "falling diagonal crossing north east arrow", "falling diagonal crossing north east arrow", "falling diagonal crossing north east arrow"
-en, default, "⤰", "rising diagonal crossing south east arrow", "rising diagonal crossing south east arrow", "rising diagonal crossing south east arrow"
-en, default, "⤱", "north east arrow crossing north west arrow", "north east arrow crossing north west arrow", "north east arrow crossing north west arrow"
-en, default, "⤲", "north west arrow crossing north east arrow", "north west arrow crossing north east arrow", "north west arrow crossing north east arrow"
-en, default, "⤳", "wave arrow pointing directly right", "wave arrow pointing directly right", "wave arrow pointing directly right"
-en, default, "⤴", "arrow pointing rightwards then curving upwards", "arrow pointing right then curving up", "arrow pointing right then curving up"
-en, default, "⤵", "arrow pointing rightwards then curving downwards", "arrow pointing right then curving down", "arrow pointing right then curving down"
-en, default, "⤶", "arrow pointing downwards then curving leftwards", "arrow pointing down then curving left", "arrow pointing down then curving left"
-en, default, "⤷", "arrow pointing downwards then curving rightwards", "arrow pointing down then curving right", "arrow pointing down then curving right"
-en, default, "⤸", "right side arc clockwise arrow", "right side arc clockwise arrow", "right side arc clockwise arrow"
-en, default, "⤹", "left side arc anticlockwise arrow", "left side arc anticlockwise arrow", "left side arc anticlockwise arrow"
-en, default, "⤺", "top arc anticlockwise arrow", "top arc anticlockwise arrow", "top arc anticlockwise arrow"
-en, default, "⤻", "bottom arc anticlockwise arrow", "bottom arc anticlockwise arrow", "bottom arc anticlockwise arrow"
-en, default, "⤼", "top arc clockwise arrow with minus", "top arc clockwise arrow with minus", "top arc clockwise arrow with minus"
-en, default, "⤽", "top arc anticlockwise arrow with plus", "top arc anticlockwise arrow with plus", "top arc anticlockwise arrow with plus"
-en, default, "⤾", "lower right semicircular clockwise arrow", "down right semicircular clockwise arrow", "down right semicircular clockwise arrow"
-en, default, "⤿", "lower left semicircular anticlockwise arrow", "down left semicircular anticlockwise arrow", "down left semicircular anticlockwise arrow"
-en, default, "⥀", "anticlockwise closed circle arrow", "anticlockwise closed circle arrow", "anticlockwise closed circle arrow"
-en, default, "⥁", "clockwise closed circle arrow", "clockwise closed circle arrow", "clockwise closed circle arrow"
-en, default, "⥂", "rightwards arrow above short leftwards arrow", "right arrow above short left arrow", "right arrow above short left arrow"
-en, default, "⥃", "leftwards arrow above short rightwards arrow", "left arrow above short right arrow", "left arrow above short right arrow"
-en, default, "⥄", "short rightwards arrow above leftwards arrow", "short right arrow above left arrow", "short right arrow above left arrow"
-en, default, "⥅", "rightwards arrow with plus below", "right arrow with plus below", "right arrow with plus below"
-en, default, "⥆", "leftwards arrow with plus below", "left arrow with plus below", "left arrow with plus below"
-en, default, "⥇", "rightwards arrow through x", "right arrow through x", "right arrow through x"
-en, default, "⥈", "left right arrow through small circle", "left right arrow through small circle", "left right arrow through small circle"
-en, default, "⥉", "upwards two headed arrow from small circle", "up two headed arrow from small circle", "up two headed arrow from small circle"
-en, default, "⥰", "right double arrow with rounded head", "right double arrow with rounded head", "right double arrow with rounded head"
-en, default, "⥱", "equals sign above rightwards arrow", "equals sign above right arrow", "equals sign above right arrow"
-en, default, "⥲", "tilde operator above rightwards arrow", "tilde operator above right arrow", "tilde operator above right arrow"
-en, default, "⥳", "leftwards arrow above tilde operator", "left arrow above tilde operator", "left arrow above tilde operator"
-en, default, "⥴", "rightwards arrow above tilde operator", "right arrow above tilde operator", "right arrow above tilde operator"
-en, default, "⥵", "rightwards arrow above almost equals", "right arrow above almost equals", "right arrow above almost equals"
-en, default, "⥶", "less than above leftwards arrow", "less than above left arrow", "less than above left arrow"
-en, default, "⥷", "leftwards arrow through less than", "left arrow through less than", "left arrow through less than"
-en, default, "⥸", "greater than above rightwards arrow", "greater than above right arrow", "greater than above right arrow"
-en, default, "⥹", "subset above rightwards arrow", "subset above right arrow", "subset above right arrow"
-en, default, "⥺", "leftwards arrow through subset", "left arrow through subset", "left arrow through subset"
-en, default, "⥻", "superset above leftwards arrow", "superset above left arrow", "superset above left arrow"
-en, default, "⦳", "empty set with right arrow above", "empty set with right arrow above", "empty set with right arrow above"
-en, default, "⦴", "empty set with left arrow above", "empty set with left arrow above", "empty set with left arrow above"
-en, default, "⦽", "up arrow through circle", "up arrow through circle", "up arrow through circle"
-en, default, "⧪", "black diamond with down arrow", "black diamond with down arrow", "black diamond with down arrow"
-en, default, "⧬", "white circle with down arrow", "white circle with down arrow", "white circle with down arrow"
-en, default, "⧭", "black circle with down arrow", "black circle with down arrow", "black circle with down arrow"
-en, default, "⨗", "integral with leftwards arrow with hook", "integral with left arrow with hook", "integral with left arrow with hook"
-en, default, "⬀", "north east white arrow", "north east white arrow", "north east white arrow"
-en, default, "⬁", "north west white arrow", "north west white arrow", "north west white arrow"
-en, default, "⬂", "south east white arrow", "south east white arrow", "south east white arrow"
-en, default, "⬃", "south west white arrow", "south west white arrow", "south west white arrow"
-en, default, "⬄", "left right white arrow", "left right white arrow", "left right white arrow"
-en, default, "⬅", "leftwards black arrow", "left black arrow", "left black arrow"
-en, default, "⬆", "upwards black arrow", "up black arrow", "up black arrow"
-en, default, "⬇", "downwards black arrow", "down black arrow", "down black arrow"
-en, default, "⬈", "north east black arrow", "north east black arrow", "north east black arrow"
-en, default, "⬉", "north west black arrow", "north west black arrow", "north west black arrow"
-en, default, "⬊", "south east black arrow", "south east black arrow", "south east black arrow"
-en, default, "⬋", "south west black arrow", "south west black arrow", "south west black arrow"
-en, default, "⬌", "left right black arrow", "left right black arrow", "left right black arrow"
-en, default, "⬍", "up down black arrow", "up down black arrow", "up down black arrow"
-en, default, "⬎", "rightwards arrow with tip downwards", "right arrow with tip down", "right arrow with tip down"
-en, default, "⬏", "rightwards arrow with tip upwards", "right arrow with tip up", "right arrow with tip up"
-en, default, "⬐", "leftwards arrow with tip downwards", "left arrow with tip down", "left arrow with tip down"
-en, default, "⬑", "leftwards arrow with tip upwards", "left arrow with tip up", "left arrow with tip up"
-en, default, "⬰", "left arrow with small circle", "left arrow with small circle", "left arrow with small circle"
-en, default, "⬱", "three leftwards arrows", "three left arrows", "three left arrows"
-en, default, "⬲", "left arrow with circled plus", "left arrow with circled plus", "left arrow with circled plus"
-en, default, "⬳", "long leftwards squiggle arrow", "long left squiggle arrow", "long left squiggle arrow"
-en, default, "⬴", "leftwards two headed arrow with vertical stroke", "left two headed arrow with vertical stroke", "left two headed arrow with vertical stroke"
-en, default, "⬵", "leftwards two headed arrow with double vertical stroke", "left two headed arrow with double vertical stroke", "left two headed arrow with double vertical stroke"
-en, default, "⬶", "leftwards two headed arrow from bar", "left two headed arrow from bar", "left two headed arrow from bar"
-en, default, "⬷", "leftwards two headed triple dash arrow", "left two headed triple dash arrow", "left two headed triple dash arrow"
-en, default, "⬸", "leftwards arrow with dotted stem", "left arrow with dotted stem", "left arrow with dotted stem"
-en, default, "⬹", "leftwards arrow with tail with vertical stroke", "left arrow with tail with vertical stroke", "left arrow with tail with vertical stroke"
-en, default, "⬺", "leftwards arrow with tail with double vertical stroke", "left arrow with tail with double vertical stroke", "left arrow with tail with double vertical stroke"
-en, default, "⬻", "leftwards two headed arrow with tail", "left two headed arrow with tail", "left two headed arrow with tail"
-en, default, "⬼", "leftwards two headed arrow with tail with vertical stroke", "left two headed arrow with tail with vertical stroke", "left two headed arrow with tail with vertical stroke"
-en, default, "⬽", "leftwards two headed arrow with tail with double vertical stroke", "left two headed arrow with tail with double vertical stroke", "left two headed arrow with tail with double vertical stroke"
-en, default, "⬾", "leftwards arrow through x", "left arrow through x", "left arrow through x"
-en, default, "⬿", "wave arrow pointing directly left", "wave arrow pointing directly left", "wave arrow pointing directly left"
-en, default, "⭀", "equals sign above leftwards arrow", "equals sign above left arrow", "equals sign above left arrow"
-en, default, "⭁", "reverse tilde operator above leftwards arrow", "reverse tilde operator above left arrow", "reverse tilde operator above left arrow"
-en, default, "⭂", "leftwards arrow above reverse almost equals", "left arrow above reverse almost equals", "left arrow above reverse almost equals"
-en, default, "⭃", "rightwards arrow through greater than", "right arrow through greater than", "right arrow through greater than"
-en, default, "⭄", "rightwards arrow through superset", "right arrow through superset", "right arrow through superset"
-en, default, "⭅", "leftwards quadruple arrow", "left quadruple arrow", "left quadruple arrow"
-en, default, "⭆", "rightwards quadruple arrow", "right quadruple arrow", "right quadruple arrow"
-en, default, "⭇", "reverse tilde operator above rightwards arrow", "reverse tilde operator above right arrow", "reverse tilde operator above right arrow"
-en, default, "⭈", "rightwards arrow above reverse almost equals", "right arrow above reverse almost equals", "right arrow above reverse almost equals"
-en, default, "⭉", "tilde operator above leftwards arrow", "tilde operator above left arrow", "tilde operator above left arrow"
-en, default, "⭊", "leftwards arrow above almost equals", "left arrow above almost equals", "left arrow above almost equals"
-en, default, "⭋", "leftwards arrow above reverse tilde operator", "left arrow above reverse tilde operator", "left arrow above reverse tilde operator"
-en, default, "⭌", "rightwards arrow above reverse tilde operator", "right arrow above reverse tilde operator", "right arrow above reverse tilde operator"
-en, default, "￩", "halfwidth leftwards arrow", "halfwidth left arrow", "halfwidth left arrow"
-en, default, "￪", "halfwidth upwards arrow", "halfwidth up arrow", "halfwidth up arrow"
-en, default, "￫", "halfwidth rightwards arrow", "halfwidth right arrow", "halfwidth right arrow"
-en, default, "￬", "halfwidth downwards arrow", "halfwidth down arrow", "halfwidth down arrow"
-en, default, "ℓ", "script small l", "script l", "script l"
-en, default, "℘", "script capital p", "script cap p", "script p"
-en, default, "ℼ", "double struck small pi", "double struck pi", "double struck pi"
-en, default, "ℽ", "double struck small gamma", "double struck gamma", "double struck gamma"
-en, default, "ℾ", "double struck capital gamma", "double struck cap gamma", "double struck cap gamma"
-en, default, "ℿ", "double struck capital pi", "double struck cap pi", "double struck cap pi"
-en, default, "⅀", "double struck n ary summation", "double struck n ary summation", "double struck n ary summation"
-en, default, "ⅅ", "double struck italic capital d", "double struck italic cap d", "double struck italic cap d"
-en, default, "ⅆ", "double struck italic small d", "double struck italic d", "double struck italic d"
-en, default, "ⅇ", "double struck italic small e", "double struck italic e", "double struck italic e"
-en, default, "ⅈ", "double struck italic small i", "double struck italic i", "double struck italic i"
-en, default, "ⅉ", "double struck italic small j", "double struck italic j", "double struck italic j"
-en, default, "𝚤", "italic small dotless i", "italic dotless i", "italic dotless i"
-en, default, "𝚥", "italic small dotless j", "italic dotless j", "italic dotless j"
-en, default, "(", "left parenthesis", "left parenthesis", "opening parenthesis"
-en, default, ")", "right parenthesis", "right parenthesis", "closing parenthesis"
-en, default, "[", "left square bracket", "left square bracket", "opening square bracket"
-en, default, "]", "right square bracket", "right square bracket", "closing square bracket"
-en, default, "{", "left curly bracket", "left curly bracket", "opening curly bracket"
-en, default, "}", "right curly bracket", "right curly bracket", "closing curly bracket"
-en, default, "⁅", "left square bracket with quill", "left square bracket with quill", "left square bracket with quill"
-en, default, "⁆", "right square bracket with quill", "right square bracket with quill", "right square bracket with quill"
-en, default, "⌈", "left ceiling", "left ceiling", "left ceiling"
-en, default, "⌉", "right ceiling", "right ceiling", "right ceiling"
-en, default, "⌊", "left floor", "left floor", "left floor"
-en, default, "⌋", "right floor", "right floor", "right floor"
-en, default, "⌌", "bottom right crop", "bottom right crop", "bottom right crop"
-en, default, "⌍", "bottom left crop", "bottom left crop", "bottom left crop"
-en, default, "⌎", "top right crop", "top right crop", "top right crop"
-en, default, "⌏", "top left crop", "top left crop", "top left crop"
-en, default, "⌜", "top left corner", "top left corner", "top left corner"
-en, default, "⌝", "top right corner", "top right corner", "top right corner"
-en, default, "⌞", "bottom left corner", "bottom left corner", "bottom left corner"
-en, default, "⌟", "bottom right corner", "bottom right corner", "bottom right corner"
-en, default, "⌠", "top half integral", "top half integral", "top half integral"
-en, default, "⌡", "bottom half integral", "bottom half integral", "bottom half integral"
-en, default, "〈", "left pointing angle bracket", "left pointing angle bracket", "bra"
-en, default, "〉", "right pointing angle bracket", "right pointing angle bracket", "ket"
-en, default, "⎛", "left parenthesis upper hook", "left parenthesis upper hook", "left parenthesis upper hook"
-en, default, "⎜", "left parenthesis extension", "left parenthesis extension", "left parenthesis extension"
-en, default, "⎝", "left parenthesis lower hook", "left parenthesis lower hook", "left parenthesis lower hook"
-en, default, "⎞", "right parenthesis upper hook", "right parenthesis upper hook", "right parenthesis upper hook"
-en, default, "⎟", "right parenthesis extension", "right parenthesis extension", "right parenthesis extension"
-en, default, "⎠", "right parenthesis lower hook", "right parenthesis lower hook", "right parenthesis lower hook"
-en, default, "⎡", "left square bracket upper corner", "left square bracket upper corner", "left square bracket upper corner"
-en, default, "⎢", "left square bracket extension", "left square bracket extension", "left square bracket extension"
-en, default, "⎣", "left square bracket lower corner", "left square bracket lower corner", "left square bracket lower corner"
-en, default, "⎤", "right square bracket upper corner", "right square bracket upper corner", "right square bracket upper corner"
-en, default, "⎥", "right square bracket extension", "right square bracket extension", "right square bracket extension"
-en, default, "⎦", "right square bracket lower corner", "right square bracket lower corner", "right square bracket lower corner"
-en, default, "⎧", "left curly bracket upper hook", "left curly bracket upper hook", "left curly bracket upper hook"
-en, default, "⎨", "left curly bracket middle piece", "left curly bracket middle piece", "left curly bracket middle piece"
-en, default, "⎩", "left curly bracket lower hook", "left curly bracket lower hook", "left curly bracket lower hook"
-en, default, "⎪", "curly bracket extension", "curly bracket extension", "curly bracket extension"
-en, default, "⎫", "right curly bracket upper hook", "right curly bracket upper hook", "right curly bracket upper hook"
-en, default, "⎬", "right curly bracket middle piece", "right curly bracket middle piece", "right curly bracket middle piece"
-en, default, "⎭", "right curly bracket lower hook", "right curly bracket lower hook", "right curly bracket lower hook"
-en, default, "⎮", "integral extension", "integral extension", "integral extension"
-en, default, "⎯", "horizontal line extension", "horizontal line extension", "horizontal line extension"
-en, default, "⎰", "upper left or lower right curly bracket section", "upper left or lower right curly bracket section", "upper left or lower right curly bracket section"
-en, default, "⎱", "upper right or lower left curly bracket section", "upper right or lower left curly bracket section", "upper right or lower left curly bracket section"
-en, default, "⎲", "summation top", "summation top", "summation top"
-en, default, "⎳", "summation bottom", "summation bottom", "summation bottom"
-en, default, "⎴", "top square bracket", "top square bracket", "top square bracket"
-en, default, "⎵", "bottom square bracket", "bottom square bracket", "bottom square bracket"
-en, default, "⎶", "bottom square bracket over top square bracket", "bottom square bracket over top square bracket", "bottom square bracket over top square bracket"
-en, default, "⎷", "radical symbol bottom", "radical symbol bottom", "radical symbol bottom"
-en, default, "⎸", "left vertical box line", "left vertical box line", "left vertical box line"
-en, default, "⎹", "right vertical box line", "right vertical box line", "right vertical box line"
-en, default, "⏜", "top parenthesis", "top parenthesis", "top parenthesis"
-en, default, "⏝", "bottom parenthesis", "bottom parenthesis", "bottom parenthesis"
-en, default, "⏞", "top curly bracket", "top curly bracket", "top curly bracket"
-en, default, "⏟", "bottom curly bracket", "bottom curly bracket", "bottom curly bracket"
-en, default, "⏠", "top tortoise shell bracket", "top tortoise shell bracket", "top tortoise shell bracket"
-en, default, "⏡", "bottom tortoise shell bracket", "bottom tortoise shell bracket", "bottom tortoise shell bracket"
-en, default, "❨", "medium left parenthesis ornament", "medium left parenthesis ornament", "medium left parenthesis ornament"
-en, default, "❩", "medium right parenthesis ornament", "medium right parenthesis ornament", "medium right parenthesis ornament"
-en, default, "❪", "medium flattened left parenthesis ornament", "medium flattened left parenthesis ornament", "medium flattened left parenthesis ornament"
-en, default, "❫", "medium flattened right parenthesis ornament", "medium flattened right parenthesis ornament", "medium flattened right parenthesis ornament"
-en, default, "❬", "medium left pointing angle bracket ornament", "medium left pointing angle bracket ornament", "medium left pointing angle bracket ornament"
-en, default, "❭", "medium right pointing angle bracket ornament", "medium right pointing angle bracket ornament", "medium right pointing angle bracket ornament"
-en, default, "❮", "heavy left pointing angle quotation mark ornament", "heavy left pointing angle quotation mark ornament", "heavy left pointing angle quotation mark ornament"
-en, default, "❯", "heavy right pointing angle quotation mark ornament", "heavy right pointing angle quotation mark ornament", "heavy right pointing angle quotation mark ornament"
-en, default, "❰", "heavy left pointing angle bracket ornament", "heavy left pointing angle bracket ornament", "heavy left pointing angle bracket ornament"
-en, default, "❱", "heavy right pointing angle bracket ornament", "heavy right pointing angle bracket ornament", "heavy right pointing angle bracket ornament"
-en, default, "❲", "light left tortoise shell bracket ornament", "light left tortoise shell bracket ornament", "light left tortoise shell bracket ornament"
-en, default, "❳", "light right tortoise shell bracket ornament", "light right tortoise shell bracket ornament", "light right tortoise shell bracket ornament"
-en, default, "❴", "medium left curly bracket ornament", "medium left curly bracket ornament", "medium left curly bracket ornament"
-en, default, "❵", "medium right curly bracket ornament", "medium right curly bracket ornament", "medium right curly bracket ornament"
-en, default, "⟅", "left s shaped bag delimiter", "left s shaped bag delimiter", "left s shaped bag delimiter"
-en, default, "⟆", "right s shaped bag delimiter", "right s shaped bag delimiter", "right s shaped bag delimiter"
-en, default, "⟦", "mathematical left white square bracket", "mathematical left white square bracket", "mathematical left white square bracket"
-en, default, "⟧", "mathematical right white square bracket", "mathematical right white square bracket", "mathematical right white square bracket"
-en, default, "⟨", "mathematical left angle bracket", "mathematical left angle bracket", "mathematical left angle bracket"
-en, default, "⟩", "mathematical right angle bracket", "mathematical right angle bracket", "mathematical right angle bracket"
-en, default, "⟪", "mathematical left double angle bracket", "mathematical left double angle bracket", "mathematical left double angle bracket"
-en, default, "⟫", "mathematical right double angle bracket", "mathematical right double angle bracket", "mathematical right double angle bracket"
-en, default, "⟬", "mathematical left white tortoise shell bracket", "mathematical left white tortoise shell bracket", "mathematical left white tortoise shell bracket"
-en, default, "⟭", "mathematical right white tortoise shell bracket", "mathematical right white tortoise shell bracket", "mathematical right white tortoise shell bracket"
-en, default, "⟮", "mathematical left flattened parenthesis", "mathematical left flattened parenthesis", "mathematical left flattened parenthesis"
-en, default, "⟯", "mathematical right flattened parenthesis", "mathematical right flattened parenthesis", "mathematical right flattened parenthesis"
-en, default, "⦃", "left white curly bracket", "left white curly bracket", "left white curly bracket"
-en, default, "⦄", "right white curly bracket", "right white curly bracket", "right white curly bracket"
-en, default, "⦅", "left white parenthesis", "left white parenthesis", "left white parenthesis"
-en, default, "⦆", "right white parenthesis", "right white parenthesis", "right white parenthesis"
-en, default, "⦇", "z notation left image bracket", "z notation left image bracket", "z notation left image bracket"
-en, default, "⦈", "z notation right image bracket", "z notation right image bracket", "z notation right image bracket"
-en, default, "⦉", "z notation left binding bracket", "z notation left binding bracket", "z notation left binding bracket"
-en, default, "⦊", "z notation right binding bracket", "z notation right binding bracket", "z notation right binding bracket"
-en, default, "⦋", "left square bracket with underbar", "left square bracket with underbar", "left square bracket with underbar"
-en, default, "⦌", "right square bracket with underbar", "right square bracket with underbar", "right square bracket with underbar"
-en, default, "⦍", "left square bracket with tick in top corner", "left square bracket with tick in top corner", "left square bracket with tick in top corner"
-en, default, "⦎", "right square bracket with tick in bottom corner", "right square bracket with tick in bottom corner", "right square bracket with tick in bottom corner"
-en, default, "⦏", "left square bracket with tick in bottom corner", "left square bracket with tick in bottom corner", "left square bracket with tick in bottom corner"
-en, default, "⦐", "right square bracket with tick in top corner", "right square bracket with tick in top corner", "right square bracket with tick in top corner"
-en, default, "⦑", "left angle bracket with dot", "left angle bracket with dot", "left angle bracket with dot"
-en, default, "⦒", "right angle bracket with dot", "right angle bracket with dot", "right angle bracket with dot"
-en, default, "⦓", "left arc less than bracket", "left arc less than bracket", "left arc less than bracket"
-en, default, "⦔", "right arc greater than bracket", "right arc greater than bracket", "right arc greater than bracket"
-en, default, "⦕", "double left arc greater than bracket", "double left arc greater than bracket", "double left arc greater than bracket"
-en, default, "⦖", "double right arc less than bracket", "double right arc less than bracket", "double right arc less than bracket"
-en, default, "⦗", "left black tortoise shell bracket", "left black tortoise shell bracket", "left black tortoise shell bracket"
-en, default, "⦘", "right black tortoise shell bracket", "right black tortoise shell bracket", "right black tortoise shell bracket"
-en, default, "⧘", "left wiggly fence", "left wiggly fence", "left wiggly fence"
-en, default, "⧙", "right wiggly fence", "right wiggly fence", "right wiggly fence"
-en, default, "⧚", "left double wiggly fence", "left double wiggly fence", "left double wiggly fence"
-en, default, "⧛", "right double wiggly fence", "right double wiggly fence", "right double wiggly fence"
-en, default, "⧼", "left pointing curved angle bracket", "left pointing curved angle bracket", "left pointing curved angle bracket"
-en, default, "⧽", "right pointing curved angle bracket", "right pointing curved angle bracket", "right pointing curved angle bracket"
-en, default, "⸢", "top left half bracket", "top left half bracket", "top left half bracket"
-en, default, "⸣", "top right half bracket", "top right half bracket", "top right half bracket"
-en, default, "⸤", "bottom left half bracket", "bottom left half bracket", "bottom left half bracket"
-en, default, "⸥", "bottom right half bracket", "bottom right half bracket", "bottom right half bracket"
-en, default, "⸦", "left sideways U bracket", "left sideways U bracket", "left sideways U bracket"
-en, default, "⸧", "right sideways U bracket", "right sideways U bracket", "right sideways U bracket"
-en, default, "⸨", "left double parenthesis", "left double parenthesis", "left double parenthesis"
-en, default, "⸩", "right double parenthesis", "right double parenthesis", "right double parenthesis"
-en, default, "〈", "left angle bracket", "left angle bracket", "opening angle bracket"
-en, default, "〉", "right angle bracket", "right angle bracket", "closing angle bracket"
-en, default, "《", "left double angle bracket", "left double angle bracket", "opening double angle bracket"
-en, default, "》", "right double angle bracket", "right double angle bracket", "closing double angle bracket"
-en, default, "「", "left corner bracket", "left corner bracket", "opening corner bracket"
-en, default, "」", "right corner bracket", "right corner bracket", "closing corner bracket"
-en, default, "『", "left white corner bracket", "left white corner bracket", "opening white corner bracket"
-en, default, "』", "right white corner bracket", "right white corner bracket", "closing white corner bracket"
-en, default, "【", "left black lenticular bracket", "left black lenticular bracket", "opening black lenticular bracket"
-en, default, "】", "right black lenticular bracket", "right black lenticular bracket", "closing black lenticular bracket"
-en, default, "〔", "left tortoise shell bracket", "left tortoise shell bracket", "opening tortoise shell bracket"
-en, default, "〕", "right tortoise shell bracket", "right tortoise shell bracket", "closing tortoise shell bracket"
-en, default, "〖", "left white lenticular bracket", "left white lenticular bracket", "opening white lenticular bracket"
-en, default, "〗", "right white lenticular bracket", "right white lenticular bracket", "closing white lenticular bracket"
-en, default, "〘", "left white tortoise shell bracket", "left white tortoise shell bracket", "opening white tortoise shell bracket"
-en, default, "〙", "right white tortoise shell bracket", "right white tortoise shell bracket", "closing white tortoise shell bracket"
-en, default, "〚", "left white square bracket", "left white square bracket", "opening white square bracket"
-en, default, "〛", "right white square bracket", "right white square bracket", "closing white square bracket"
-en, default, "〝", "reversed double prime quotation mark", "reversed double prime quotation mark", "reversed double prime quotation mark"
-en, default, "〞", "double prime quotation mark", "double prime quotation mark", "double prime quotation mark"
-en, default, "〟", "low double prime quotation mark", "low double prime quotation mark", "low double prime quotation mark"
-en, default, "﴾", "ornate left parenthesis", "ornate left parenthesis", "ornate left parenthesis"
-en, default, "﴿", "ornate right parenthesis", "ornate right parenthesis", "ornate right parenthesis"
-en, default, "︗", "presentation form for vertical left white lenticular bracket", "presentation form for vertical left white lenticular bracket", "presentation form for vertical left white lenticular bracket"
-en, default, "︘", "presentation form for vertical right white lenticular brakcet", "presentation form for vertical right white lenticular brakcet", "presentation form for vertical right white lenticular brakcet"
-en, default, "︵", "presentation form for vertical left parenthesis", "presentation form for vertical left parenthesis", "glyph for vertical opening parenthesis"
-en, default, "︶", "presentation form for vertical right parenthesis", "presentation form for vertical right parenthesis", "glyph for vertical closing parenthesis"
-en, default, "︷", "presentation form for vertical left curly bracket", "presentation form for vertical left curly bracket", "glyph for vertical opening curly bracket"
-en, default, "︸", "presentation form for vertical right curly bracket", "presentation form for vertical right curly bracket", "glyph for vertical closing curly bracket"
-en, default, "︹", "presentation form for vertical left tortoise shell bracket", "presentation form for vertical left tortoise shell bracket", "glyph for vertical opening tortoise shell bracket"
-en, default, "︺", "presentation form for vertical right tortoise shell bracket", "presentation form for vertical right tortoise shell bracket", "glyph for vertical closing tortoise shell bracket"
-en, default, "︻", "presentation form for vertical left black lenticular bracket", "presentation form for vertical left black lenticular bracket", "glyph for vertical opening black lenticular bracket"
-en, default, "︼", "presentation form for vertical right black lenticular bracket", "presentation form for vertical right black lenticular bracket", "glyph for vertical closing black lenticular bracket"
-en, default, "︽", "presentation form for vertical left double angle bracket", "presentation form for vertical left double angle bracket", "glyph for vertical opening double angle bracket"
-en, default, "︾", "presentation form for vertical right double angle bracket", "presentation form for vertical right double angle bracket", "glyph for vertical closing double angle bracket"
-en, default, "︿", "presentation form for vertical left angle bracket", "presentation form for vertical left angle bracket", "glyph for vertical opening angle bracket"
-en, default, "﹀", "presentation form for vertical right angle bracket", "presentation form for vertical right angle bracket", "glyph for vertical closing angle bracket"
-en, default, "﹁", "presentation form for vertical left corner bracket", "presentation form for vertical left corner bracket", "glyph for vertical opening corner bracket"
-en, default, "﹂", "presentation form for vertical right corner bracket", "presentation form for vertical right corner bracket", "glyph for vertical closing corner bracket"
-en, default, "﹃", "presentation form for vertical left white corner bracket", "presentation form for vertical left white corner bracket", "glyph for vertical opening white corner bracket"
-en, default, "﹄", "presentation form for vertical right white corner bracket", "presentation form for vertical right white corner bracket", "glyph for vertical closing white corner bracket"
-en, default, "﹇", "presentation form for vertical left square bracket", "presentation form for vertical left square bracket", "presentation form for vertical left square bracket"
-en, default, "﹈", "presentation form for vertical right square bracket", "presentation form for vertical right square bracket", "presentation form for vertical right square bracket"
-en, default, "﹙", "small left parenthesis", "small left parenthesis", "small opening parenthesis"
-en, default, "﹚", "small right parenthesis", "small right parenthesis", "small closing parenthesis"
-en, default, "﹛", "small left curly bracket", "small left curly bracket", "small opening curly bracket"
-en, default, "﹜", "small right curly bracket", "small right curly bracket", "small closing curly bracket"
-en, default, "﹝", "small left tortoise shell bracket", "small left tortoise shell bracket", "small opening tortoise shell bracket"
-en, default, "﹞", "small right tortoise shell bracket", "small right tortoise shell bracket", "small closing tortoise shell bracket"
-en, default, "（", "fullwidth left parenthesis", "fullwidth left parenthesis", "fullwidth opening parenthesis"
-en, default, "）", "fullwidth right parenthesis", "fullwidth right parenthesis", "fullwidth closing parenthesis"
-en, default, "［", "fullwidth left square bracket", "fullwidth left square bracket", "fullwidth opening square bracket"
-en, default, "］", "fullwidth right square bracket", "fullwidth right square bracket", "fullwidth closing square bracket"
-en, default, "｛", "fullwidth left curly bracket", "fullwidth left curly bracket", "fullwidth opening curly bracket"
-en, default, "｝", "fullwidth right curly bracket", "fullwidth right curly bracket", "fullwidth closing curly bracket"
-en, default, "｟", "fullwidth white left parenthesis", "fullwidth white left parenthesis", "fullwidth white left parenthesis"
-en, default, "｠", "fullwidth white right parenthesis", "fullwidth white right parenthesis", "fullwidth white right parenthesis"
-en, default, "｢", "halfwidth left corner bracket", "halfwidth left corner bracket", "halfwidth opening corner bracket"
-en, default, "｣", "halfwidth right corner bracket", "halfwidth right corner bracket", "halfwidth closing corner bracket"
-en, default, "²", "superscript digit two", "square", "superscript two"
-en, default, "³", "superscript digit three", "cube", "superscript three"
-en, default, "¹", "superscript digit one", "super one", "superscript one"
-en, default, "¼", "vulgar fraction one quarter", "one quarter", "fraction one quarter"
-en, default, "½", "vulgar fraction one half", "one half", "fraction one half"
-en, default, "¾", "vulgar fraction three quarters", "three quarters", "fraction three quarters"
-en, default, "⁰", "superscript zero", "super zero", "super zero"
-en, default, "⁴", "superscript digit four", "super four", "superscript four"
-en, default, "⁵", "superscript digit five", "super five", "superscript five"
-en, default, "⁶", "superscript digit six", "super six", "superscript six"
-en, default, "⁷", "superscript digit seven", "super seven", "superscript seven"
-en, default, "⁸", "superscript digit eight", "super eight", "superscript eight"
-en, default, "⁹", "superscript digit nine", "super nine", "superscript nine"
-en, default, "₀", "subscript digit zero", "sub zero", "subscript zero"
-en, default, "₁", "subscript digit one", "sub one", "subscript one"
-en, default, "₂", "subscript digit two", "sub two", "subscript two"
-en, default, "₃", "subscript digit three", "sub three", "subscript three"
-en, default, "₄", "subscript digit four", "sub four", "subscript four"
-en, default, "₅", "subscript digit five", "sub five", "subscript five"
-en, default, "₆", "subscript digit six", "sub six", "subscript six"
-en, default, "₇", "subscript digit seven", "sub seven", "subscript seven"
-en, default, "₈", "subscript digit eight", "sub eight", "subscript eight"
-en, default, "₉", "subscript digit nine", "sub nine", "subscript nine"
-en, default, "⅐", "vulgar fraction one seventh", "one seventh", "one seventh"
-en, default, "⅑", "vulgar fraction one ninth", "one ninth", "one ninth"
-en, default, "⅒", "vulgar fraction one tenth", "one tenth", "one tenth"
-en, default, "⅓", "vulgar fraction one third", "one third", "fraction one third"
-en, default, "⅔", "vulgar fraction two thirds", "two thirds", "fraction two thirds"
-en, default, "⅕", "vulgar fraction one fifth", "one fifth", "fraction one fifth"
-en, default, "⅖", "vulgar fraction two fifths", "two fifths", "fraction two fifths"
-en, default, "⅗", "vulgar fraction three fifths", "three fifths", "fraction three fifths"
-en, default, "⅘", "vulgar fraction four fifths", "four fifths", "fraction four fifths"
-en, default, "⅙", "vulgar fraction one sixth", "one sixth", "fraction one sixth"
-en, default, "⅚", "vulgar fraction five sixths", "five sixths", "fraction five sixths"
-en, default, "⅛", "vulgar fraction one eighth", "one eighth", "fraction one eighth"
-en, default, "⅜", "vulgar fraction three eighths", "three eighths", "fraction three eighths"
-en, default, "⅝", "vulgar fraction five eighths", "five eighths", "fraction five eighths"
-en, default, "⅞", "vulgar fraction seven eighths", "seven eighths", "fraction seven eighths"
-en, default, "⅟", "fraction numerator one", "numerator one", "numerator one"
-en, default, "↉", "vulgar fraction zero thirds", "zero thirds", "zero thirds"
-en, default, "①", "circled digit one", "circled one", "circled one"
-en, default, "②", "circled digit two", "circled two", "circled two"
-en, default, "③", "circled digit three", "circled three", "circled three"
-en, default, "④", "circled digit four", "circled four", "circled four"
-en, default, "⑤", "circled digit five", "circled five", "circled five"
-en, default, "⑥", "circled digit six", "circled six", "circled six"
-en, default, "⑦", "circled digit seven", "circled seven", "circled seven"
-en, default, "⑧", "circled digit eight", "circled eight", "circled eight"
-en, default, "⑨", "circled digit nine", "circled nine", "circled nine"
-en, default, "⑩", "circled number ten", "circled ten", "circled ten"
-en, default, "⑪", "circled number eleven", "circled eleven", "circled eleven"
-en, default, "⑫", "circled number twelve", "circled twelve", "circled twelve"
-en, default, "⑬", "circled number thirteen", "circled thirteen", "circled thirteen"
-en, default, "⑭", "circled number fourteen", "circled fourteen", "circled fourteen"
-en, default, "⑮", "circled number fifteen", "circled fifteen", "circled fifteen"
-en, default, "⑯", "circled number sixteen", "circled sixteen", "circled sixteen"
-en, default, "⑰", "circled number seventeen", "circled seventeen", "circled seventeen"
-en, default, "⑱", "circled number eighteen", "circled eighteen", "circled eighteen"
-en, default, "⑲", "circled number nineteen", "circled nineteen", "circled nineteen"
-en, default, "⑳", "circled number twenty", "circled twenty", "circled twenty"
-en, default, "⑴", "parenthesized digit one", "parenthesized one", "parenthesized one"
-en, default, "⑵", "parenthesized digit two", "parenthesized two", "parenthesized two"
-en, default, "⑶", "parenthesized digit three", "parenthesized three", "parenthesized three"
-en, default, "⑷", "parenthesized digit four", "parenthesized four", "parenthesized four"
-en, default, "⑸", "parenthesized digit five", "parenthesized five", "parenthesized five"
-en, default, "⑹", "parenthesized digit six", "parenthesized six", "parenthesized six"
-en, default, "⑺", "parenthesized digit seven", "parenthesized seven", "parenthesized seven"
-en, default, "⑻", "parenthesized digit eight", "parenthesized eight", "parenthesized eight"
-en, default, "⑼", "parenthesized digit nine", "parenthesized nine", "parenthesized nine"
-en, default, "⑽", "parenthesized number ten", "parenthesized ten", "parenthesized ten"
-en, default, "⑾", "parenthesized number eleven", "parenthesized eleven", "parenthesized eleven"
-en, default, "⑿", "parenthesized number twelve", "parenthesized twelve", "parenthesized twelve"
-en, default, "⒀", "parenthesized number thirteen", "parenthesized thirteen", "parenthesized thirteen"
-en, default, "⒁", "parenthesized number fourteen", "parenthesized fourteen", "parenthesized fourteen"
-en, default, "⒂", "parenthesized number fifteen", "parenthesized fifteen", "parenthesized fifteen"
-en, default, "⒃", "parenthesized number sixteen", "parenthesized sixteen", "parenthesized sixteen"
-en, default, "⒄", "parenthesized number seventeen", "parenthesized seventeen", "parenthesized seventeen"
-en, default, "⒅", "parenthesized number eighteen", "parenthesized eighteen", "parenthesized eighteen"
-en, default, "⒆", "parenthesized number nineteen", "parenthesized nineteen", "parenthesized nineteen"
-en, default, "⒇", "parenthesized number twenty", "parenthesized twenty", "parenthesized twenty"
-en, default, "⒈", "digit one full stop", "one period", "digit one period"
-en, default, "⒉", "digit two full stop", "two period", "digit two period"
-en, default, "⒊", "digit three full stop", "three period", "digit three period"
-en, default, "⒋", "digit four full stop", "four period", "digit four period"
-en, default, "⒌", "digit five full stop", "five period", "digit five period"
-en, default, "⒍", "digit six full stop", "six period", "digit six period"
-en, default, "⒎", "digit seven full stop", "seven period", "digit seven period"
-en, default, "⒏", "digit eight full stop", "eight period", "digit eight period"
-en, default, "⒐", "digit nine full stop", "nine period", "digit nine period"
-en, default, "⒑", "number ten full stop", "ten period", "number ten period"
-en, default, "⒒", "number eleven full stop", "eleven period", "number eleven period"
-en, default, "⒓", "number twelve full stop", "twelve period", "number twelve period"
-en, default, "⒔", "number thirteen full stop", "thirteen period", "number thirteen period"
-en, default, "⒕", "number fourteen full stop", "fourteen period", "number fourteen period"
-en, default, "⒖", "number fifteen full stop", "fifteen period", "number fifteen period"
-en, default, "⒗", "number sixteen full stop", "sixteen period", "number sixteen period"
-en, default, "⒘", "number seventeen full stop", "seventeen period", "number seventeen period"
-en, default, "⒙", "number eighteen full stop", "eighteen period", "number eighteen period"
-en, default, "⒚", "number nineteen full stop", "nineteen period", "number nineteen period"
-en, default, "⒛", "number twenty full stop", "twenty period", "number twenty period"
-en, default, "⓪", "circled digit zero", "circled zero", "circled zero"
-en, default, "⓫", "negative circled number eleven", "negative circled eleven", "negative circled eleven"
-en, default, "⓬", "negative circled number twelve", "negative circled twelve", "negative circled twelve"
-en, default, "⓭", "negative circled number thirteen", "negative circled thirteen", "negative circled thirteen"
-en, default, "⓮", "negative circled number fourteen", "negative circled fourteen", "negative circled fourteen"
-en, default, "⓯", "negative circled number fifteen", "negative circled fifteen", "negative circled fifteen"
-en, default, "⓰", "negative circled number sixteen", "negative circled sixteen", "negative circled sixteen"
-en, default, "⓱", "negative circled number seventeen", "negative circled seventeen", "negative circled seventeen"
-en, default, "⓲", "negative circled number eighteen", "negative circled eighteen", "negative circled eighteen"
-en, default, "⓳", "negative circled number nineteen", "negative circled nineteen", "negative circled nineteen"
-en, default, "⓴", "negative circled number twenty", "negative circled twenty", "negative circled twenty"
-en, default, "⓵", "double circled digit one", "double circled one", "double circled one"
-en, default, "⓶", "double circled digit two", "double circled two", "double circled two"
-en, default, "⓷", "double circled digit three", "double circled three", "double circled three"
-en, default, "⓸", "double circled digit four", "double circled four", "double circled four"
-en, default, "⓹", "double circled digit five", "double circled five", "double circled five"
-en, default, "⓺", "double circled digit six", "double circled six", "double circled six"
-en, default, "⓻", "double circled digit seven", "double circled seven", "double circled seven"
-en, default, "⓼", "double circled digit eight", "double circled eight", "double circled eight"
-en, default, "⓽", "double circled digit nine", "double circled nine", "double circled nine"
-en, default, "⓾", "double circled number ten", "double circled ten", "double circled ten"
-en, default, "⓿", "negative circled digit zero", "negative circled zero", "negative circled zero"
-en, default, "❶", "dingbat negative circled digit one", "inverse circled one", "inverse circled digit one"
-en, default, "❷", "dingbat negative circled digit two", "inverse circled two", "inverse circled digit two"
-en, default, "❸", "dingbat negative circled digit three", "inverse circled three", "inverse circled digit three"
-en, default, "❹", "dingbat negative circled digit four", "inverse circled four", "inverse circled digit four"
-en, default, "❺", "dingbat negative circled digit five", "inverse circled five", "inverse circled digit five"
-en, default, "❻", "dingbat negative circled digit six", "inverse circled six", "inverse circled digit six"
-en, default, "❼", "dingbat negative circled digit seven", "inverse circled seven", "inverse circled digit seven"
-en, default, "❽", "dingbat negative circled digit eight", "inverse circled eight", "inverse circled digit eight"
-en, default, "❾", "dingbat negative circled digit nine", "inverse circled nine", "inverse circled digit nine"
-en, default, "❿", "dingbat negative circled number ten", "inverse circled ten", "inverse circled number ten"
-en, default, "➀", "dingbat circled sans serif digit one", "circled one", "circled sans serif digit one"
-en, default, "➁", "dingbat circled sans serif digit two", "circled two", "circled sans serif digit two"
-en, default, "➂", "dingbat circled sans serif digit three", "circled three", "circled sans serif digit three"
-en, default, "➃", "dingbat circled sans serif digit four", "circled four", "circled sans serif digit four"
-en, default, "➄", "dingbat circled sans serif digit five", "circled five", "circled sans serif digit five"
-en, default, "➅", "dingbat circled sans serif digit six", "circled six", "circled sans serif digit six"
-en, default, "➆", "dingbat circled sans serif digit seven", "circled seven", "circled sans serif digit seven"
-en, default, "➇", "dingbat circled sans serif digit eight", "circled eight", "circled sans serif digit eight"
-en, default, "➈", "dingbat circled sans serif digit nine", "circled nine", "circled sans serif digit nine"
-en, default, "➉", "dingbat circled sans serif number ten", "circled ten", "circled sans serif number ten"
-en, default, "➊", "dingbat negative circled sans serif digit one", "inverse circled one", "inverse circled sans serif digit one"
-en, default, "➋", "dingbat negative circled sans serif digit two", "inverse circled two", "inverse circled sans serif digit two"
-en, default, "➌", "dingbat negative circled sans serif digit three", "inverse circled three", "inverse circled sans serif digit three"
-en, default, "➍", "dingbat negative circled sans serif digit four", "inverse circled four", "inverse circled sans serif digit four"
-en, default, "➎", "dingbat negative circled sans serif digit five", "inverse circled five", "inverse circled sans serif digit five"
-en, default, "➏", "dingbat negative circled sans serif digit six", "inverse circled six", "inverse circled sans serif digit six"
-en, default, "➐", "dingbat negative circled sans serif digit seven", "inverse circled seven", "inverse circled sans serif digit seven"
-en, default, "➑", "dingbat negative circled sans serif digit eight", "inverse circled eight", "inverse circled sans serif digit eight"
-en, default, "➒", "dingbat negative circled sans serif digit nine", "inverse circled nine", "inverse circled sans serif digit nine"
-en, default, "➓", "dingbat negative circled sans serif number ten", "inverse circled ten", "inverse circled sans serif number ten"
-en, default, "㉈", "circled number ten on black square", "circled ten on black square", "circled ten on black square"
-en, default, "㉉", "circled number twenty on black square", "circled twenty on black square", "circled twenty on black square"
-en, default, "㉊", "circled number thirty on black square", "circled thirty on black square", "circled thirty on black square"
-en, default, "㉋", "circled number forty on black square", "circled forty on black square", "circled forty on black square"
-en, default, "㉌", "circled number fifty on black square", "circled fifty on black square", "circled fifty on black square"
-en, default, "㉍", "circled number sixty on black square", "circled sixty on black square", "circled sixty on black square"
-en, default, "㉎", "circled number seventy on black square", "circled seventy on black square", "circled seventy on black square"
-en, default, "㉏", "circled number eighty on black square", "circled eighty on black square", "circled eighty on black square"
-en, default, "㉑", "circled number twenty one", "circled twenty one", "circled twenty one"
-en, default, "㉒", "circled number twenty two", "circled twenty two", "circled twenty two"
-en, default, "㉓", "circled number twenty three", "circled twenty three", "circled twenty three"
-en, default, "㉔", "circled number twenty four", "circled twenty four", "circled twenty four"
-en, default, "㉕", "circled number twenty five", "circled twenty five", "circled twenty five"
-en, default, "㉖", "circled number twenty six", "circled twenty six", "circled twenty six"
-en, default, "㉗", "circled number twenty seven", "circled twenty seven", "circled twenty seven"
-en, default, "㉘", "circled number twenty eight", "circled twenty eight", "circled twenty eight"
-en, default, "㉙", "circled number twenty nine", "circled twenty nine", "circled twenty nine"
-en, default, "㉚", "circled number thirty", "circled thirty", "circled thirty"
-en, default, "㉛", "circled number thirty one", "circled thirty one", "circled thirty one"
-en, default, "㉜", "circled number thirty two", "circled thirty two", "circled thirty two"
-en, default, "㉝", "circled number thirty three", "circled thirty three", "circled thirty three"
-en, default, "㉞", "circled number thirty four", "circled thirty four", "circled thirty four"
-en, default, "㉟", "circled number thirty five", "circled thirty five", "circled thirty five"
-en, default, "㊱", "circled number thirty six", "circled thirty six", "circled thirty six"
-en, default, "㊲", "circled number thirty seven", "circled thirty seven", "circled thirty seven"
-en, default, "㊳", "circled number thirty eight", "circled thirty eight", "circled thirty eight"
-en, default, "㊴", "circled number thirty nine", "circled thirty nine", "circled thirty nine"
-en, default, "㊵", "circled number forty", "circled forty", "circled forty"
-en, default, "㊶", "circled number forty one", "circled forty one", "circled forty one"
-en, default, "㊷", "circled number forty two", "circled forty two", "circled forty two"
-en, default, "㊸", "circled number forty three", "circled forty three", "circled forty three"
-en, default, "㊹", "circled number forty four", "circled forty four", "circled forty four"
-en, default, "㊺", "circled number forty five", "circled forty five", "circled forty five"
-en, default, "㊻", "circled number forty six", "circled forty six", "circled forty six"
-en, default, "㊼", "circled number forty seven", "circled forty seven", "circled forty seven"
-en, default, "㊽", "circled number forty eight", "circled forty eight", "circled forty eight"
-en, default, "㊾", "circled number forty nine", "circled forty nine", "circled forty nine"
-en, default, "㊿", "circled number fifty", "circled fifty", "circled fifty"
-en, default, "０", "fullwidth digit zero", "zero", "zero"
-en, default, "１", "fullwidth digit one", "one", "one"
-en, default, "２", "fullwidth digit two", "two", "two"
-en, default, "３", "fullwidth digit three", "three", "three"
-en, default, "４", "fullwidth digit four", "four", "four"
-en, default, "５", "fullwidth digit five", "five", "five"
-en, default, "６", "fullwidth digit six", "six", "six"
-en, default, "７", "fullwidth digit seven", "seven", "seven"
-en, default, "８", "fullwidth digit eight", "eight", "eight"
-en, default, "９", "fullwidth digit nine", "nine", "nine"
-en, default, "𝟎", "mathematical bold digit zero", "bold zero", "bold digit zero"
-en, default, "𝟏", "mathematical bold digit one", "bold one", "bold digit one"
-en, default, "𝟐", "mathematical bold digit two", "bold two", "bold digit two"
-en, default, "𝟑", "mathematical bold digit three", "bold three", "bold digit three"
-en, default, "𝟒", "mathematical bold digit four", "bold four", "bold digit four"
-en, default, "𝟓", "mathematical bold digit five", "bold five", "bold digit five"
-en, default, "𝟔", "mathematical bold digit six", "bold six", "bold digit six"
-en, default, "𝟕", "mathematical bold digit seven", "bold seven", "bold digit seven"
-en, default, "𝟖", "mathematical bold digit eight", "bold eight", "bold digit eight"
-en, default, "𝟗", "mathematical bold digit nine", "bold nine", "bold digit nine"
-en, default, "𝟘", "mathematical double struck digit zero", "blackboard zero", "double struck zero"
-en, default, "𝟙", "mathematical double struck digit one", "blackboard one", "double struck one"
-en, default, "𝟚", "mathematical double struck digit two", "blackboard two", "double struck two"
-en, default, "𝟛", "mathematical double struck digit three", "blackboard three", "double struck three"
-en, default, "𝟜", "mathematical double struck digit four", "blackboard four", "double struck four"
-en, default, "𝟝", "mathematical double struck digit five", "blackboard five", "double struck five"
-en, default, "𝟞", "mathematical double struck digit six", "blackboard six", "double struck six"
-en, default, "𝟟", "mathematical double struck digit seven", "blackboard seven", "double struck seven"
-en, default, "𝟠", "mathematical double struck digit eight", "blackboard eight", "double struck eight"
-en, default, "𝟡", "mathematical double struck digit nine", "blackboard nine", "double struck nine"
-en, default, "𝟢", "mathematical sans serif digit zero", "sans serif zero", "sans serif digit zero"
-en, default, "𝟣", "mathematical sans serif digit one", "sans serif one", "sans serif digit one"
-en, default, "𝟤", "mathematical sans serif digit two", "sans serif two", "sans serif digit two"
-en, default, "𝟥", "mathematical sans serif digit three", "sans serif three", "sans serif digit three"
-en, default, "𝟦", "mathematical sans serif digit four", "sans serif four", "sans serif digit four"
-en, default, "𝟧", "mathematical sans serif digit five", "sans serif five", "sans serif digit five"
-en, default, "𝟨", "mathematical sans serif digit six", "sans serif six", "sans serif digit six"
-en, default, "𝟩", "mathematical sans serif digit seven", "sans serif seven", "sans serif digit seven"
-en, default, "𝟪", "mathematical sans serif digit eight", "sans serif eight", "sans serif digit eight"
-en, default, "𝟫", "mathematical sans serif digit nine", "sans serif nine", "sans serif digit nine"
-en, default, "𝟬", "mathematical sans serif bold digit zero", "sans serif bold zero", "sans serif bold digit zero"
-en, default, "𝟭", "mathematical sans serif bold digit one", "sans serif bold one", "sans serif bold digit one"
-en, default, "𝟮", "mathematical sans serif bold digit two", "sans serif bold two", "sans serif bold digit two"
-en, default, "𝟯", "mathematical sans serif bold digit three", "sans serif bold three", "sans serif bold digit three"
-en, default, "𝟰", "mathematical sans serif bold digit four", "sans serif bold four", "sans serif bold digit four"
-en, default, "𝟱", "mathematical sans serif bold digit five", "sans serif bold five", "sans serif bold digit five"
-en, default, "𝟲", "mathematical sans serif bold digit six", "sans serif bold six", "sans serif bold digit six"
-en, default, "𝟳", "mathematical sans serif bold digit seven", "sans serif bold seven", "sans serif bold digit seven"
-en, default, "𝟴", "mathematical sans serif bold digit eight", "sans serif bold eight", "sans serif bold digit eight"
-en, default, "𝟵", "mathematical sans serif bold digit nine", "sans serif bold nine", "sans serif bold digit nine"
-en, default, "𝟶", "mathematical monospace digit zero", "thin zero", "monospace zero"
-en, default, "𝟷", "mathematical monospace digit one", "thin one", "monospace one"
-en, default, "𝟸", "mathematical monospace digit two", "thin two", "monospace two"
-en, default, "𝟹", "mathematical monospace digit three", "thin three", "monospace three"
-en, default, "𝟺", "mathematical monospace digit four", "thin four", "monospace four"
-en, default, "𝟻", "mathematical monospace digit five", "thin five", "monospace five"
-en, default, "𝟼", "mathematical monospace digit six", "thin six", "monospace six"
-en, default, "𝟽", "mathematical monospace digit seven", "thin seven", "monospace seven"
-en, default, "𝟾", "mathematical monospace digit eight", "thin eight", "monospace eight"
-en, default, "𝟿", "mathematical monospace digit nine", "thin nine", "monospace nine"
-en, default, "🄀", "digit zero full stop", "zero period", "zero period"
-en, default, "🄁", "digit zero comma", "zero comma", "zero comma"
-en, default, "🄂", "digit one comma", "one comma", "one comma"
-en, default, "🄃", "digit two comma", "two comma", "two comma"
-en, default, "🄄", "digit three comma", "three comma", "three comma"
-en, default, "🄅", "digit four comma", "four comma", "four comma"
-en, default, "🄆", "digit five comma", "five comma", "five comma"
-en, default, "🄇", "digit six comma", "six comma", "six comma"
-en, default, "🄈", "digit seven comma", "seven comma", "seven comma"
-en, default, "🄉", "digit eight comma", "eight comma", "eight comma"
-en, default, "🄊", "digit nine comma", "nine comma", "nine comma"
-en, default, "─", "box drawings light horizontal", "box drawings light horizontal", "forms light horizontal"
-en, default, "━", "box drawings heavy horizontal", "box drawings heavy horizontal", "forms heavy horizontal"
-en, default, "│", "box drawings light vertical", "box drawings light vertical", "forms light vertical"
-en, default, "┃", "box drawings heavy vertical", "box drawings heavy vertical", "forms heavy vertical"
-en, default, "┄", "box drawings light triple dash horizontal", "box drawings light triple dash horizontal", "forms light triple dash horizontal"
-en, default, "┅", "box drawings heavy triple dash horizontal", "box drawings heavy triple dash horizontal", "forms heavy triple dash horizontal"
-en, default, "┆", "box drawings light triple dash vertical", "box drawings light triple dash vertical", "forms light triple dash vertical"
-en, default, "┇", "box drawings heavy triple dash vertical", "box drawings heavy triple dash vertical", "forms heavy triple dash vertical"
-en, default, "┈", "box drawings light quadruple dash horizontal", "box drawings light quadruple dash horizontal", "forms light quadruple dash horizontal"
-en, default, "┉", "box drawings heavy quadruple dash horizontal", "box drawings heavy quadruple dash horizontal", "forms heavy quadruple dash horizontal"
-en, default, "┊", "box drawings light quadruple dash vertical", "box drawings light quadruple dash vertical", "forms light quadruple dash vertical"
-en, default, "┋", "box drawings heavy quadruple dash vertical", "box drawings heavy quadruple dash vertical", "forms heavy quadruple dash vertical"
-en, default, "┌", "box drawings light down and right", "box drawings light down and right", "forms light down and right"
-en, default, "┍", "box drawings down light and right heavy", "box drawings down light and right heavy", "forms down light and right heavy"
-en, default, "┎", "box drawings down heavy and right light", "box drawings down heavy and right light", "forms down heavy and right light"
-en, default, "┏", "box drawings heavy down and right", "box drawings heavy down and right", "forms heavy down and right"
-en, default, "┐", "box drawings light down and left", "box drawings light down and left", "forms light down and left"
-en, default, "┑", "box drawings down light and left heavy", "box drawings down light and left heavy", "forms down light and left heavy"
-en, default, "┒", "box drawings down heavy and left light", "box drawings down heavy and left light", "forms down heavy and left light"
-en, default, "┓", "box drawings heavy down and left", "box drawings heavy down and left", "forms heavy down and left"
-en, default, "└", "box drawings light up and right", "box drawings light up and right", "forms light up and right"
-en, default, "┕", "box drawings up light and right heavy", "box drawings up light and right heavy", "forms up light and right heavy"
-en, default, "┖", "box drawings up heavy and right light", "box drawings up heavy and right light", "forms up heavy and right light"
-en, default, "┗", "box drawings heavy up and right", "box drawings heavy up and right", "forms heavy up and right"
-en, default, "┘", "box drawings light up and left", "box drawings light up and left", "forms light up and left"
-en, default, "┙", "box drawings up light and left heavy", "box drawings up light and left heavy", "forms up light and left heavy"
-en, default, "┚", "box drawings up heavy and left light", "box drawings up heavy and left light", "forms up heavy and left light"
-en, default, "┛", "box drawings heavy up and left", "box drawings heavy up and left", "forms heavy up and left"
-en, default, "├", "box drawings light vertical and right", "box drawings light vertical and right", "forms light vertical and right"
-en, default, "┝", "box drawings vertical light and right heavy", "box drawings vertical light and right heavy", "forms vertical light and right heavy"
-en, default, "┞", "box drawings up heavy and right down light", "box drawings up heavy and right down light", "forms up heavy and right down light"
-en, default, "┟", "box drawings down heavy and right up light", "box drawings down heavy and right up light", "forms down heavy and right up light"
-en, default, "┠", "box drawings vertical heavy and right light", "box drawings vertical heavy and right light", "forms vertical heavy and right light"
-en, default, "┡", "box drawings down light and right up heavy", "box drawings down light and right up heavy", "forms down light and right up heavy"
-en, default, "┢", "box drawings up light and right down heavy", "box drawings up light and right down heavy", "forms up light and right down heavy"
-en, default, "┣", "box drawings heavy vertical and right", "box drawings heavy vertical and right", "forms heavy vertical and right"
-en, default, "┤", "box drawings light vertical and left", "box drawings light vertical and left", "forms light vertical and left"
-en, default, "┥", "box drawings vertical light and left heavy", "box drawings vertical light and left heavy", "forms vertical light and left heavy"
-en, default, "┦", "box drawings up heavy and left down light", "box drawings up heavy and left down light", "forms up heavy and left down light"
-en, default, "┧", "box drawings down heavy and left up light", "box drawings down heavy and left up light", "forms down heavy and left up light"
-en, default, "┨", "box drawings vertical heavy and left light", "box drawings vertical heavy and left light", "forms vertical heavy and left light"
-en, default, "┩", "box drawings down light and left up heavy", "box drawings down light and left up heavy", "forms down light and left up heavy"
-en, default, "┪", "box drawings up light and left down heavy", "box drawings up light and left down heavy", "forms up light and left down heavy"
-en, default, "┫", "box drawings heavy vertical and left", "box drawings heavy vertical and left", "forms heavy vertical and left"
-en, default, "┬", "box drawings light down and horizontal", "box drawings light down and horizontal", "forms light down and horizontal"
-en, default, "┭", "box drawings left heavy and right down light", "box drawings left heavy and right down light", "forms left heavy and right down light"
-en, default, "┮", "box drawings right heavy and left down light", "box drawings right heavy and left down light", "forms right heavy and left down light"
-en, default, "┯", "box drawings down light and horizontal heavy", "box drawings down light and horizontal heavy", "forms down light and horizontal heavy"
-en, default, "┰", "box drawings down heavy and horizontal light", "box drawings down heavy and horizontal light", "forms down heavy and horizontal light"
-en, default, "┱", "box drawings right light and left down heavy", "box drawings right light and left down heavy", "forms right light and left down heavy"
-en, default, "┲", "box drawings left light and right down heavy", "box drawings left light and right down heavy", "forms left light and right down heavy"
-en, default, "┳", "box drawings heavy down and horizontal", "box drawings heavy down and horizontal", "forms heavy down and horizontal"
-en, default, "┴", "box drawings light up and horizontal", "box drawings light up and horizontal", "forms light up and horizontal"
-en, default, "┵", "box drawings left heavy and right up light", "box drawings left heavy and right up light", "forms left heavy and right up light"
-en, default, "┶", "box drawings right heavy and left up light", "box drawings right heavy and left up light", "forms right heavy and left up light"
-en, default, "┷", "box drawings up light and horizontal heavy", "box drawings up light and horizontal heavy", "forms up light and horizontal heavy"
-en, default, "┸", "box drawings up heavy and horizontal light", "box drawings up heavy and horizontal light", "forms up heavy and horizontal light"
-en, default, "┹", "box drawings right light and left up heavy", "box drawings right light and left up heavy", "forms right light and left up heavy"
-en, default, "┺", "box drawings left light and right up heavy", "box drawings left light and right up heavy", "forms left light and right up heavy"
-en, default, "┻", "box drawings heavy up and horizontal", "box drawings heavy up and horizontal", "forms heavy up and horizontal"
-en, default, "┼", "box drawings light vertical and horizontal", "box drawings light vertical and horizontal", "forms light vertical and horizontal"
-en, default, "┽", "box drawings left heavy and right vertical light", "box drawings left heavy and right vertical light", "forms left heavy and right vertical light"
-en, default, "┾", "box drawings right heavy and left vertical light", "box drawings right heavy and left vertical light", "forms right heavy and left vertical light"
-en, default, "┿", "box drawings vertical light and horizontal heavy", "box drawings vertical light and horizontal heavy", "forms vertical light and horizontal heavy"
-en, default, "╀", "box drawings up heavy and down horizontal light", "box drawings up heavy and down horizontal light", "forms up heavy and down horizontal light"
-en, default, "╁", "box drawings down heavy and up horizontal light", "box drawings down heavy and up horizontal light", "forms down heavy and up horizontal light"
-en, default, "╂", "box drawings vertical heavy and horizontal light", "box drawings vertical heavy and horizontal light", "forms vertical heavy and horizontal light"
-en, default, "╃", "box drawings left up heavy and right down light", "box drawings left up heavy and right down light", "forms left up heavy and right down light"
-en, default, "╄", "box drawings right up heavy and left down light", "box drawings right up heavy and left down light", "forms right up heavy and left down light"
-en, default, "╅", "box drawings left down heavy and right up light", "box drawings left down heavy and right up light", "forms left down heavy and right up light"
-en, default, "╆", "box drawings right down heavy and left up light", "box drawings right down heavy and left up light", "forms right down heavy and left up light"
-en, default, "╇", "box drawings down light and up horizontal heavy", "box drawings down light and up horizontal heavy", "forms down light and up horizontal heavy"
-en, default, "╈", "box drawings up light and down horizontal heavy", "box drawings up light and down horizontal heavy", "forms up light and down horizontal heavy"
-en, default, "╉", "box drawings right light and left vertical heavy", "box drawings right light and left vertical heavy", "forms right light and left vertical heavy"
-en, default, "╊", "box drawings left light and right vertical heavy", "box drawings left light and right vertical heavy", "forms left light and right vertical heavy"
-en, default, "╋", "box drawings heavy vertical and horizontal", "box drawings heavy vertical and horizontal", "forms heavy vertical and horizontal"
-en, default, "╌", "box drawings light double dash horizontal", "box drawings light double dash horizontal", "forms light double dash horizontal"
-en, default, "╍", "box drawings heavy double dash horizontal", "box drawings heavy double dash horizontal", "forms heavy double dash horizontal"
-en, default, "╎", "box drawings light double dash vertical", "box drawings light double dash vertical", "forms light double dash vertical"
-en, default, "╏", "box drawings heavy double dash vertical", "box drawings heavy double dash vertical", "forms heavy double dash vertical"
-en, default, "═", "box drawings double horizontal", "box drawings double horizontal", "forms double horizontal"
-en, default, "║", "box drawings double vertical", "box drawings double vertical", "forms double vertical"
-en, default, "╒", "box drawings down single and right double", "box drawings down single and right double", "forms down single and right double"
-en, default, "╓", "box drawings down double and right single", "box drawings down double and right single", "forms down double and right single"
-en, default, "╔", "box drawings double down and right", "box drawings double down and right", "forms double down and right"
-en, default, "╕", "box drawings down single and left double", "box drawings down single and left double", "forms down single and left double"
-en, default, "╖", "box drawings down double and left single", "box drawings down double and left single", "forms down double and left single"
-en, default, "╗", "box drawings double down and left", "box drawings double down and left", "forms double down and left"
-en, default, "╘", "box drawings up single and right double", "box drawings up single and right double", "forms up single and right double"
-en, default, "╙", "box drawings up double and right single", "box drawings up double and right single", "forms up double and right single"
-en, default, "╚", "box drawings double up and right", "box drawings double up and right", "forms double up and right"
-en, default, "╛", "box drawings up single and left double", "box drawings up single and left double", "forms up single and left double"
-en, default, "╜", "box drawings up double and left single", "box drawings up double and left single", "forms up double and left single"
-en, default, "╝", "box drawings double up and left", "box drawings double up and left", "forms double up and left"
-en, default, "╞", "box drawings vertical single and right double", "box drawings vertical single and right double", "forms vertical single and right double"
-en, default, "╟", "box drawings vertical double and right single", "box drawings vertical double and right single", "forms vertical double and right single"
-en, default, "╠", "box drawings double vertical and right", "box drawings double vertical and right", "forms double vertical and right"
-en, default, "╡", "box drawings vertical single and left double", "box drawings vertical single and left double", "forms vertical single and left double"
-en, default, "╢", "box drawings vertical double and left single", "box drawings vertical double and left single", "forms vertical double and left single"
-en, default, "╣", "box drawings double vertical and left", "box drawings double vertical and left", "forms double vertical and left"
-en, default, "╤", "box drawings down single and horizontal double", "box drawings down single and horizontal double", "forms down single and horizontal double"
-en, default, "╥", "box drawings down double and horizontal single", "box drawings down double and horizontal single", "forms down double and horizontal single"
-en, default, "╦", "box drawings double down and horizontal", "box drawings double down and horizontal", "forms double down and horizontal"
-en, default, "╧", "box drawings up single and horizontal double", "box drawings up single and horizontal double", "forms up single and horizontal double"
-en, default, "╨", "box drawings up double and horizontal single", "box drawings up double and horizontal single", "forms up double and horizontal single"
-en, default, "╩", "box drawings double up and horizontal", "box drawings double up and horizontal", "forms double up and horizontal"
-en, default, "╪", "box drawings vertical single and horizontal double", "box drawings vertical single and horizontal double", "forms vertical single and horizontal double"
-en, default, "╫", "box drawings vertical double and horizontal single", "box drawings vertical double and horizontal single", "forms vertical double and horizontal single"
-en, default, "╬", "box drawings double vertical and horizontal", "box drawings double vertical and horizontal", "forms double vertical and horizontal"
-en, default, "╭", "box drawings light arc down and right", "box drawings light arc down and right", "forms light arc down and right"
-en, default, "╮", "box drawings light arc down and left", "box drawings light arc down and left", "forms light arc down and left"
-en, default, "╯", "box drawings light arc up and left", "box drawings light arc up and left", "forms light arc up and left"
-en, default, "╰", "box drawings light arc up and right", "box drawings light arc up and right", "forms light arc up and right"
-en, default, "╱", "box drawings light diagonal upper right to lower left", "box drawings light diagonal upper right to lower left", "forms light diagonal upper right to lower left"
-en, default, "╲", "box drawings light diagonal upper left to lower right", "box drawings light diagonal upper left to lower right", "forms light diagonal upper left to lower right"
-en, default, "╳", "box drawings light diagonal cross", "box drawings light diagonal cross", "forms light diagonal cross"
-en, default, "╴", "box drawings light left", "box drawings light left", "forms light left"
-en, default, "╵", "box drawings light up", "box drawings light up", "forms light up"
-en, default, "╶", "box drawings light right", "box drawings light right", "forms light right"
-en, default, "╷", "box drawings light down", "box drawings light down", "forms light down"
-en, default, "╸", "box drawings heavy left", "box drawings heavy left", "forms heavy left"
-en, default, "╹", "box drawings heavy up", "box drawings heavy up", "forms heavy up"
-en, default, "╺", "box drawings heavy right", "box drawings heavy right", "forms heavy right"
-en, default, "╻", "box drawings heavy down", "box drawings heavy down", "forms heavy down"
-en, default, "╼", "box drawings light left and heavy right", "box drawings light left and heavy right", "forms light left and heavy right"
-en, default, "╽", "box drawings light up and heavy down", "box drawings light up and heavy down", "forms light up and heavy down"
-en, default, "╾", "box drawings heavy left and light right", "box drawings heavy left and light right", "forms heavy left and light right"
-en, default, "╿", "box drawings heavy up and light down", "box drawings heavy up and light down", "forms heavy up and light down"
-en, default, "▀", "upper half block", "upper half block", "upper half block"
-en, default, "▁", "lower one eighth block", "lower one eighth block", "lower one eighth block"
-en, default, "▂", "lower one quarter block", "lower one quarter block", "lower one quarter block"
-en, default, "▃", "lower three eighths block", "lower three eighths block", "lower three eighths block"
-en, default, "▄", "lower half block", "lower half block", "lower half block"
-en, default, "▅", "lower five eighths block", "lower five eighths block", "lower five eighths block"
-en, default, "▆", "lower three quarters block", "lower three quarters block", "lower three quarter block"
-en, default, "▇", "lower seven eighths block", "lower seven eighths block", "lower seven eighths block"
-en, default, "█", "full block", "full block", "full block"
-en, default, "▉", "left seven eighths block", "left seven eighths block", "left seven eighths block"
-en, default, "▊", "left three quarters block", "left three quarters block", "left three quarter block"
-en, default, "▋", "left five eighths block", "left five eighths block", "left five eighths block"
-en, default, "▌", "left half block", "left half block", "left half block"
-en, default, "▍", "left three eighths block", "left three eighths block", "left three eighths block"
-en, default, "▎", "left one quarter block", "left one quarter block", "left one quarter block"
-en, default, "▏", "left one eighth block", "left one eighth block", "left one eighth block"
-en, default, "▐", "right half block", "right half block", "right half block"
-en, default, "░", "light shade", "light shade", "light shade"
-en, default, "▒", "medium shade", "medium shade", "medium shade"
-en, default, "▓", "dark shade", "dark shade", "dark shade"
-en, default, "▔", "upper one eighth block", "upper one eighth block", "upper one eighth block"
-en, default, "▕", "right one eighth block", "right one eighth block", "right one eighth block"
-en, default, "▖", "quadrant lower left", "quadrant lower left", "quadrant lower left"
-en, default, "▗", "quadrant lower right", "quadrant lower right", "quadrant lower right"
-en, default, "▘", "quadrant upper left", "quadrant upper left", "quadrant upper left"
-en, default, "▙", "quadrant upper left and lower left and lower right", "quadrant upper left and lower left and lower right", "quadrant upper left and lower left and lower right"
-en, default, "▚", "quadrant upper left and lower right", "quadrant upper left and lower right", "quadrant upper left and lower right"
-en, default, "▛", "quadrant upper left and upper right and lower left", "quadrant upper left and upper right and lower left", "quadrant upper left and upper right and lower left"
-en, default, "▜", "quadrant upper left and upper right and lower right", "quadrant upper left and upper right and lower right", "quadrant upper left and upper right and lower right"
-en, default, "▝", "quadrant upper right", "quadrant upper right", "quadrant upper right"
-en, default, "▞", "quadrant upper right and lower left", "quadrant upper right and lower left", "quadrant upper right and lower left"
-en, default, "▟", "quadrant upper right and lower left and lower right", "quadrant upper right and lower left and lower right", "quadrant upper right and lower left and lower right"
-en, default, "■", "black square", "black square", "black square"
-en, default, "□", "white square", "white square", "white square"
-en, default, "▢", "white square with rounded corners", "white square with rounded corners", "white square with rounded corners"
-en, default, "▣", "white square containing black small square", "white square containing black small square", "white square containing black small square"
-en, default, "▤", "square with horizontal fill", "square with horizontal fill", "square with horizontal fill"
-en, default, "▥", "square with vertical fill", "square with vertical fill", "square with vertical fill"
-en, default, "▦", "square with orthogonal crosshatch fill", "square with orthogonal crosshatch fill", "square with orthogonal crosshatch fill"
-en, default, "▧", "square with upper left to lower right fill", "square with upper left to lower right fill", "square with upper left to lower right fill"
-en, default, "▨", "square with upper right to lower left fill", "square with upper right to lower left fill", "square with upper right to lower left fill"
-en, default, "▩", "square with diagonal crosshatch fill", "square with diagonal crosshatch fill", "square with diagonal crosshatch fill"
-en, default, "▪", "black small square", "black small square", "black small square"
-en, default, "▫", "white small square", "white small square", "white small square"
-en, default, "▬", "black rectangle", "black rectangle", "black rectangle"
-en, default, "▭", "white rectangle", "white rectangle", "white rectangle"
-en, default, "▮", "black vertical rectangle", "black vertical rectangle", "black vertical rectangle"
-en, default, "▯", "white vertical rectangle", "white vertical rectangle", "white vertical rectangle"
-en, default, "▰", "black parallelogram", "black parallelogram", "black parallelogram"
-en, default, "▱", "white parallelogram", "white parallelogram", "white parallelogram"
-en, default, "▲", "black up pointing triangle", "black up pointing triangle", "black up pointing triangle"
-en, default, "△", "white up pointing triangle", "white up pointing triangle", "white up pointing triangle"
-en, default, "▴", "black up pointing small triangle", "black up pointing small triangle", "black up pointing small triangle"
-en, default, "▵", "white up pointing small triangle", "white up pointing small triangle", "white up pointing small triangle"
-en, default, "▶", "black right pointing triangle", "black right pointing triangle", "black right pointing triangle"
-en, default, "▷", "white right pointing triangle", "white right pointing triangle", "white right pointing triangle"
-en, default, "▸", "black right pointing small triangle", "black right pointing small triangle", "black right pointing small triangle"
-en, default, "▹", "white right pointing small triangle", "white right pointing small triangle", "white right pointing small triangle"
-en, default, "►", "black right pointing pointer", "black right pointing pointer", "black right pointing pointer"
-en, default, "▻", "white right pointing pointer", "white right pointing pointer", "white right pointing pointer"
-en, default, "▼", "black down pointing triangle", "black down pointing triangle", "black down pointing triangle"
-en, default, "▽", "white down pointing triangle", "white down pointing triangle", "white down pointing triangle"
-en, default, "▾", "black down pointing small triangle", "black down pointing small triangle", "black down pointing small triangle"
-en, default, "▿", "white down pointing small triangle", "white down pointing small triangle", "white down pointing small triangle"
-en, default, "◀", "black left pointing triangle", "black left pointing triangle", "black left pointing triangle"
-en, default, "◁", "white left pointing triangle", "white left pointing triangle", "white left pointing triangle"
-en, default, "◂", "black left pointing small triangle", "black left pointing small triangle", "black left pointing small triangle"
-en, default, "◃", "white left pointing small triangle", "white left pointing small triangle", "white left pointing small triangle"
-en, default, "◄", "black left pointing pointer", "black left pointing pointer", "black left pointing pointer"
-en, default, "◅", "white left pointing pointer", "white left pointing pointer", "white left pointing pointer"
-en, default, "◆", "black diamond", "black diamond", "black diamond"
-en, default, "◇", "white diamond", "white diamond", "white diamond"
-en, default, "◈", "white diamond containing black small diamond", "white diamond containing black small diamond", "white diamond containing black small diamond"
-en, default, "◉", "fisheye", "fisheye", "fisheye"
-en, default, "◊", "lozenge", "lozenge", "lozenge"
-en, default, "○", "white circle", "white circle", "white circle"
-en, default, "◌", "dotted circle", "dotted circle", "dotted circle"
-en, default, "◍", "circle with vertical fill", "circle with vertical fill", "circle with vertical fill"
-en, default, "◎", "bullseye", "bullseye", "bullseye"
-en, default, "●", "black circle", "black circle", "black circle"
-en, default, "◐", "circle with left half black", "circle with left half black", "circle with left half black"
-en, default, "◑", "circle with right half black", "circle with right half black", "circle with right half black"
-en, default, "◒", "circle with lower half black", "circle with lower half black", "circle with lower half black"
-en, default, "◓", "circle with upper half black", "circle with upper half black", "circle with upper half black"
-en, default, "◔", "circle with upper right quadrant black", "circle with upper right quadrant black", "circle with upper right quadrant black"
-en, default, "◕", "circle with all but upper left quadrant black", "circle with all but upper left quadrant black", "circle with all but upper left quadrant black"
-en, default, "◖", "left half black circle", "left half black circle", "left half black circle"
-en, default, "◗", "right half black circle", "right half black circle", "right half black circle"
-en, default, "◘", "inverse bullet", "inverse bullet", "inverse bullet"
-en, default, "◙", "inverse white circle", "inverse white circle", "inverse white circle"
-en, default, "◚", "upper half inverse white circle", "upper half inverse white circle", "upper half inverse white circle"
-en, default, "◛", "lower half inverse white circle", "lower half inverse white circle", "lower half inverse white circle"
-en, default, "◜", "upper left quadrant circular arc", "upper left quadrant circular arc", "upper left quadrant circular arc"
-en, default, "◝", "upper right quadrant circular arc", "upper right quadrant circular arc", "upper right quadrant circular arc"
-en, default, "◞", "lower right quadrant circular arc", "lower right quadrant circular arc", "lower right quadrant circular arc"
-en, default, "◟", "lower left quadrant circular arc", "lower left quadrant circular arc", "lower left quadrant circular arc"
-en, default, "◠", "upper half circle", "upper half circle", "upper half circle"
-en, default, "◡", "lower half circle", "lower half circle", "lower half circle"
-en, default, "◢", "black lower right triangle", "black lower right triangle", "black lower right triangle"
-en, default, "◣", "black lower left triangle", "black lower left triangle", "black lower left triangle"
-en, default, "◤", "black upper left triangle", "black upper left triangle", "black upper left triangle"
-en, default, "◥", "black upper right triangle", "black upper right triangle", "black upper right triangle"
-en, default, "◦", "white bullet", "white bullet", "white bullet"
-en, default, "◧", "square with left half black", "square with left half black", "square with left half black"
-en, default, "◨", "square with right half black", "square with right half black", "square with right half black"
-en, default, "◩", "square with upper left diagonal half black", "square with upper left diagonal half black", "square with upper left diagonal half black"
-en, default, "◪", "square with lower right diagonal half black", "square with lower right diagonal half black", "square with lower right diagonal half black"
-en, default, "◫", "white square with vertical bisecting line", "white square with vertical bisecting line", "white square with vertical bisecting line"
-en, default, "◬", "white up pointing triangle with dot", "white up pointing triangle with dot", "white up pointing triangle with dot"
-en, default, "◭", "up pointing triangle with left half black", "up pointing triangle with left half black", "up pointing triangle with left half black"
-en, default, "◮", "up pointing triangle with right half black", "up pointing triangle with right half black", "up pointing triangle with right half black"
-en, default, "◯", "large circle", "large circle", "large circle"
-en, default, "◰", "white square with upper left quadrant", "white square with upper left quadrant", "white square with upper left quadrant"
-en, default, "◱", "white square with lower left quadrant", "white square with lower left quadrant", "white square with lower left quadrant"
-en, default, "◲", "white square with lower right quadrant", "white square with lower right quadrant", "white square with lower right quadrant"
-en, default, "◳", "white square with upper right quadrant", "white square with upper right quadrant", "white square with upper right quadrant"
-en, default, "◴", "white circle with upper left quadrant", "white circle with upper left quadrant", "white circle with upper left quadrant"
-en, default, "◵", "white circle with lower left quadrant", "white circle with lower left quadrant", "white circle with lower left quadrant"
-en, default, "◶", "white circle with lower right quadrant", "white circle with lower right quadrant", "white circle with lower right quadrant"
-en, default, "◷", "white circle with upper right quadrant", "white circle with upper right quadrant", "white circle with upper right quadrant"
-en, default, "◸", "upper left triangle", "upper left triangle", "upper left triangle"
-en, default, "◹", "upper right triangle", "upper right triangle", "upper right triangle"
-en, default, "◺", "lower left triangle", "lower left triangle", "lower left triangle"
-en, default, "◻", "white medium square", "white medium square", "white medium square"
-en, default, "◼", "black medium square", "black medium square", "black medium square"
-en, default, "◽", "white medium small square", "white medium small square", "white medium small square"
-en, default, "◾", "black medium small square", "black medium small square", "black medium small square"
-en, default, "◿", "lower right triangle", "lower right triangle", "lower right triangle"
-en, default, "⬒", "square with top half black", "square with top half black", "square with top half black"
-en, default, "⬓", "square with bottom half black", "square with bottom half black", "square with bottom half black"
-en, default, "⬔", "square with upper right diagonal half black", "square with upper right diagonal half black", "square with upper right diagonal half black"
-en, default, "⬕", "square with lower left diagonal half black", "square with lower left diagonal half black", "square with lower left diagonal half black"
-en, default, "⬖", "diamond with left half black", "diamond with left half black", "diamond with left half black"
-en, default, "⬗", "diamond with right half black", "diamond with right half black", "diamond with right half black"
-en, default, "⬘", "diamond with top half black", "diamond with top half black", "diamond with top half black"
-en, default, "⬙", "diamond with bottom half black", "diamond with bottom half black", "diamond with bottom half black"
-en, default, "⬚", "dotted square", "dotted square", "dotted square"
-en, default, "⬛", "black large square", "black large square", "black large square"
-en, default, "⬜", "white large square", "white large square", "white large square"
-en, default, "⬝", "black very small square", "black very small square", "black very small square"
-en, default, "⬞", "white very small square", "white very small square", "white very small square"
-en, default, "⬟", "black pentagon", "black pentagon", "black pentagon"
-en, default, "⬠", "white pentagon", "white pentagon", "white pentagon"
-en, default, "⬡", "white hexagon", "white hexagon", "white hexagon"
-en, default, "⬢", "black hexagon", "black hexagon", "black hexagon"
-en, default, "⬣", "horizontal black hexagon", "horizontal black hexagon", "horizontal black hexagon"
-en, default, "⬤", "black large circle", "black large circle", "black large circle"
-en, default, "⬥", "black medium diamond", "black medium diamond", "black medium diamond"
-en, default, "⬦", "white medium diamond", "white medium diamond", "white medium diamond"
-en, default, "⬧", "black medium lozenge", "black medium lozenge", "black medium lozenge"
-en, default, "⬨", "white medium lozenge", "white medium lozenge", "white medium lozenge"
-en, default, "⬩", "black small diamond", "black small diamond", "black small diamond"
-en, default, "⬪", "black small lozenge", "black small lozenge", "black small lozenge"
-en, default, "⬫", "white small lozenge", "white small lozenge", "white small lozenge"
-en, default, "⬬", "black horizontal ellipse", "black horizontal ellipse", "black horizontal ellipse"
-en, default, "⬭", "white horizontal ellipse", "white horizontal ellipse", "white horizontal ellipse"
-en, default, "⬮", "black vertical ellipse", "black vertical ellipse", "black vertical ellipse"
-en, default, "⬯", "white vertical ellipse", "white vertical ellipse", "white vertical ellipse"
-en, default, "⭐", "white medium star", "white medium star", "white medium star"
-en, default, "⭑", "black small star", "black small star", "black small star"
-en, default, "⭒", "white small star", "white small star", "white small star"
-en, default, "⭓", "black right pointing pentagon", "black right pointing pentagon", "black right pointing pentagon"
-en, default, "⭔", "white right pointing pentagon", "white right pointing pentagon", "white right pointing pentagon"
-en, default, "⭕", "heavy large circle", "heavy large circle", "heavy large circle"
-en, default, "⭖", "heavy oval with oval inside", "heavy oval with oval inside", "heavy oval with oval inside"
-en, default, "⭗", "heavy circle with circle inside", "heavy circle with circle inside", "heavy circle with circle inside"
-en, default, "⭘", "heavy circle", "heavy circle", "heavy circle"
-en, default, "⭙", "heavy circled saltire", "heavy circled saltire", "heavy circled saltire"
-en, default, "↼", "leftwards harpoon with barb upwards", "left harpoon with barb up", "left harpoon with barb up"
-en, default, "↽", "leftwards harpoon with barb downwards", "left harpoon with barb down", "left harpoon with barb down"
-en, default, "↾", "upwards harpoon with barb rightwards", "up harpoon with barb right", "up harpoon with barb right"
-en, default, "↿", "upwards harpoon with barb leftwards", "up harpoon with barb left", "up harpoon with barb left"
-en, default, "⇀", "rightwards harpoon with barb upwards", "right harpoon with barb up", "right harpoon with barb up"
-en, default, "⇁", "rightwards harpoon with barb downwards", "right harpoon with barb down", "right harpoon with barb down"
-en, default, "⇂", "downwards harpoon with barb rightwards", "down harpoon with barb right", "down harpoon with barb right"
-en, default, "⇃", "downwards harpoon with barb leftwards", "down harpoon with barb left", "down harpoon with barb left"
-en, default, "⇋", "leftwards harpoon over rightwards harpoon", "left harpoon over right harpoon", "left harpoon over right harpoon"
-en, default, "⇌", "rightwards harpoon over leftwards harpoon", "right harpoon over left harpoon", "right harpoon over left harpoon"
-en, default, "⥊", "left barb up right barb down harpoon", "left barb up right barb down harpoon", "left barb up right barb down harpoon"
-en, default, "⥋", "left barb down right barb up harpoon", "left barb down right barb up harpoon", "left barb down right barb up harpoon"
-en, default, "⥌", "up barb right down barb left harpoon", "up barb right down barb left harpoon", "up barb right down barb left harpoon"
-en, default, "⥍", "up barb left down barb right harpoon", "up barb left down barb right harpoon", "up barb left down barb right harpoon"
-en, default, "⥎", "left barb up right barb up harpoon", "left barb up right barb up harpoon", "left barb up right barb up harpoon"
-en, default, "⥏", "up barb right down barb right harpoon", "up barb right down barb right harpoon", "up barb right down barb right harpoon"
-en, default, "⥐", "left barb down right barb down harpoon", "left barb down right barb down harpoon", "left barb down right barb down harpoon"
-en, default, "⥑", "up barb left down barb left harpoon", "up barb left down barb left harpoon", "up barb left down barb left harpoon"
-en, default, "⥒", "leftwards harpoon with barb up to bar", "left harpoon with barb up to bar", "left harpoon with barb up to bar"
-en, default, "⥓", "rightwards harpoon with barb up to bar", "right harpoon with barb up to bar", "right harpoon with barb up to bar"
-en, default, "⥔", "upwards harpoon with barb right to bar", "up harpoon with barb right to bar", "up harpoon with barb right to bar"
-en, default, "⥕", "downwards harpoon with barb right to bar", "down harpoon with barb right to bar", "down harpoon with barb right to bar"
-en, default, "⥖", "leftwards harpoon with barb down to bar", "left harpoon with barb down to bar", "left harpoon with barb down to bar"
-en, default, "⥗", "rightwards harpoon with barb down to bar", "right harpoon with barb down to bar", "right harpoon with barb down to bar"
-en, default, "⥘", "upwards harpoon with barb left to bar", "up harpoon with barb left to bar", "up harpoon with barb left to bar"
-en, default, "⥙", "downwards harpoon with barb left to bar", "down harpoon with barb left to bar", "down harpoon with barb left to bar"
-en, default, "⥚", "leftwards harpoon with barb up from bar", "left harpoon with barb up from bar", "left harpoon with barb up from bar"
-en, default, "⥛", "rightwards harpoon with barb up from bar", "right harpoon with barb up from bar", "right harpoon with barb up from bar"
-en, default, "⥜", "upwards harpoon with barb right from bar", "up harpoon with barb right from bar", "up harpoon with barb right from bar"
-en, default, "⥝", "downwards harpoon with barb right from bar", "down harpoon with barb right from bar", "down harpoon with barb right from bar"
-en, default, "⥞", "leftwards harpoon with barb down from bar", "left harpoon with barb down from bar", "left harpoon with barb down from bar"
-en, default, "⥟", "rightwards harpoon with barb down from bar", "right harpoon with barb down from bar", "right harpoon with barb down from bar"
-en, default, "⥠", "upwards harpoon with barb left from bar", "up harpoon with barb left from bar", "up harpoon with barb left from bar"
-en, default, "⥡", "downwards harpoon with barb left from bar", "down harpoon with barb left from bar", "down harpoon with barb left from bar"
-en, default, "⥢", "leftwards harpoon with barb up above leftwards harpoon with barb down", "left harpoon with barb up above left harpoon with barb down", "left harpoon with barb up above left harpoon with barb down"
-en, default, "⥣", "upwards harpoon with barb left beside upwards harpoon with barb right", "up harpoon with barb left beside up harpoon with barb right", "up harpoon with barb left beside up harpoon with barb right"
-en, default, "⥤", "rightwards harpoon with barb up above rightwards harpoon with barb down", "right harpoon with barb up above right harpoon with barb down", "right harpoon with barb up above right harpoon with barb down"
-en, default, "⥥", "downwards harpoon with barb left beside downwards harpoon with barb right", "down harpoon with barb left beside down harpoon with barb right", "down harpoon with barb left beside down harpoon with barb right"
-en, default, "⥦", "leftwards harpoon with barb up above rightwards harpoon with barb up", "left harpoon with barb up above right harpoon with barb up", "left harpoon with barb up above right harpoon with barb up"
-en, default, "⥧", "leftwards harpoon with barb down above rightwards harpoon with barb down", "left harpoon with barb down above right harpoon with barb down", "left harpoon with barb down above right harpoon with barb down"
-en, default, "⥨", "rightwards harpoon with barb up above leftwards harpoon with barb up", "right harpoon with barb up above left harpoon with barb up", "right harpoon with barb up above left harpoon with barb up"
-en, default, "⥩", "rightwards harpoon with barb down above leftwards harpoon with barb down", "right harpoon with barb down above left harpoon with barb down", "right harpoon with barb down above left harpoon with barb down"
-en, default, "⥪", "leftwards harpoon with barb up above long dash", "left harpoon with barb up above long dash", "left harpoon with barb up above long dash"
-en, default, "⥫", "leftwards harpoon with barb down below long dash", "left harpoon with barb down below long dash", "left harpoon with barb down below long dash"
-en, default, "⥬", "rightwards harpoon with barb up above long dash", "right harpoon with barb up above long dash", "right harpoon with barb up above long dash"
-en, default, "⥭", "rightwards harpoon with barb down below long dash", "right harpoon with barb down below long dash", "right harpoon with barb down below long dash"
-en, default, "⥮", "upwards harpoon with barb left beside downwards harpoon with barb right", "up harpoon with barb left beside down harpoon with barb right", "up harpoon with barb left beside down harpoon with barb right"
-en, default, "⥯", "downwards harpoon with barb left beside upwards harpoon with barb right", "down harpoon with barb left beside up harpoon with barb right", "down harpoon with barb left beside up harpoon with barb right"
-en, default, "⥼", "left fish tail", "left fish tail", "left fish tail"
-en, default, "⥽", "right fish tail", "right fish tail", "right fish tail"
-en, default, "⥾", "up fish tail", "up fish tail", "up fish tail"
-en, default, "⥿", "down fish tail", "down fish tail", "down fish tail"
-en, default, "ℏ", "mathematical italic small h over two time greek letter pi", "italic h over two pi", "italic small h over two pi"
-en, default, "℔", "l b bar symbol", "l b bar", "l b bar"
-en, default, "№", "numero sign", "numero", "numero"
-en, default, "℗", "sound recording copyright", "sound recording copyright", "sound recording copyright"
-en, default, "℞", "prescription take", "prescription take", "prescription take"
-en, default, "℟", "response", "response", "response"
-en, default, "℠", "service mark", "service mark", "service mark"
-en, default, "℡", "telephone sign", "telephone sign", "t e l symbol"
-en, default, "™", "trade mark sign", "trade mark", "trademark"
-en, default, "℣", "versicle", "versicle", "versicle"
-en, default, "℥", "ounce sign", "ounce", "ounce"
-en, default, "Ω", "ohm sign", "ohm", "ohm"
-en, default, "℧", "inverted ohm sign", "inverted ohm", "mho"
-en, default, "K", "kelvin sign", "kelvin", "degrees kelvin"
-en, default, "Å", "angstrom sign", "angstrom", "angstrom unit"
-en, default, "℮", "estimated symbol", "estimated", "estimated"
-en, default, "Ⅎ", "turned capital f", "turned cap f", "turned f"
-en, default, "ℹ", "information source", "information source", "information source"
-en, default, "℺", "rotated capital q", "rotated cap q", "rotated cap q"
-en, default, "℻", "facsimile sign", "facsimile sign", "facsimile sign"
-en, default, "⅁", "turned sans serif capital g", "turned sans serif cap g", "turned sans serif cap g"
-en, default, "⅂", "turned sans serif capital l", "turned sans serif cap l", "turned sans serif cap l"
-en, default, "⅃", "reversed sans serif capital l", "reversed sans serif cap l", "reversed sans serif cap l"
-en, default, "⅄", "turned sans serif capital y", "turned sans serif cap y", "turned sans serif cap y"
-en, default, "!", "factorial operator", "factorial", "exclamation mark"
-en, default, """, "quotation mark", "quotation mark", "quotation mark"
-en, default, "#", "number sign", "number", "hash"
-en, default, "$", "dollar sign", "dollar", "dollar"
-en, default, "%", "percent sign", "percent", "percent"
-en, default, "&", "ampersand", "ampersand", "ampersand"
-en, default, "'", "apostrophe", "apostrophe", "apostrophe quote"
-en, default, "*", "asterisk", "asterisk", "asterisk"
-en, default, "+", "plus sign", "plus", "plus"
-en, default, ",", "comma", "comma", "comma"
-en, default, "-", "hyphen minus", "minus", "minus"
-en, default, ".", "full stop", "full stop", "period"
-en, default, "/", "solidus", "solidus", "slash"
-en, default, ":", "colon", "colon", "colon"
-en, default, ";", "semicolon", "semicolon", "semicolon"
-en, default, "<", "less than sign", "less than", "less than"
-en, default, "=", "equals sign", "equals", "equals"
-en, default, ">", "greater than sign", "greater than", "greater than"
-en, default, "?", "question mark", "question mark", "question mark"
-en, default, "@", "commercial at", "at", "at"
-en, default, "\", "reverse solidus", "reverse solidus", "backslash"
-en, default, "^", "circumflex accent", "hat", "spacing circumflex"
-en, default, "_", "low line", "low line", "spacing underscore"
-en, default, "`", "grave accent", "grave", "spacing grave"
-en, default, "|", "vertical line", "vertical line", "vertical bar"
-en, default, "~", "tilde", "tilde", "tilde"
-en, default, "¡", "inverted exclamation mark", "inverted exclamation mark", "inverted exclamation mark"
-en, default, "¢", "cent sign", "cent", "cent"
-en, default, "£", "pound sign", "pound", "pound"
-en, default, "¤", "currency sign", "currency", "currency"
-en, default, "¥", "yen sign", "yen", "yen"
-en, default, "¦", "broken bar", "broken bar", "broken vertical bar"
-en, default, "§", "section sign", "section", "section"
-en, default, "¨", "diaeresis", "double dot", "spacing diaeresis"
-en, default, "©", "copyright sign", "copyright", "copyright"
-en, default, "ª", "feminine ordinal indicator", "feminine ordinal indicator", "feminine ordinal indicator"
-en, default, "«", "left pointing double angle quotation mark", "left pointing double angle quotation mark", "left pointing guillemet"
-en, default, "¬", "not sign", "not", "not"
-en, default, "®", "registered sign", "registered", "registered trade mark sign"
-en, default, "¯", "macron", "macron", "spacing macron"
-en, default, "°", "degree sign", "degree", "degree"
-en, default, "±", "plus minus sign", "plus minus", "plus or minus sign"
-en, default, "´", "acute accent", "acute", "spacing acute"
-en, default, "µ", "micro sign", "micro", "micro"
-en, default, "¶", "pilcrow sign", "pilcrow", "paragraph sign"
-en, default, "·", "middle dot", "middle dot", "middle dot"
-en, default, "¸", "cedilla", "cedilla", "spacing cedilla"
-en, default, "º", "masculine ordinal indicator", "masculine ordinal indicator", "masculine ordinal indicator"
-en, default, "»", "right pointing double angle quotation mark", "right pointing double angle quotation mark", "right pointing guillemet"
-en, default, "¿", "inverted question mark", "inverted question mark", "inverted question mark"
-en, default, "×", "multiplication sign", "multiplication", "multiplication"
-en, default, "÷", "division sign", "division", "division"
-en, default, "˘", "breve", "breve", "spacing breve"
-en, default, "˙", "dot above", "dot above", "spacing dot above"
-en, default, "˚", "ring above", "ring above", "spacing ring above"
-en, default, "˛", "ogonek", "ogonek", "spacing ogonek"
-en, default, "˜", "small tilde", "small tilde", "spacing tilde"
-en, default, "˝", "double acute accent", "double acute accent", "spacing double acute"
-en, default, "‐", "hyphen", "hyphen", "hyphen"
-en, default, "‑", "non breaking hyphen", "non breaking hyphen", "non breaking hyphen"
-en, default, "‒", "figure dash", "figure dash", "figure dash"
-en, default, "–", "en dash", "en dash", "en dash"
-en, default, "—", "em dash", "em dash", "em dash"
-en, default, "―", "horizontal bar", "horizontal bar", "quotation dash"
-en, default, "‖", "double vertical line", "double vertical line", "double vertical bar"
-en, default, "‗", "double low line", "double low line", "spacing double underscore"
-en, default, "‘", "left single quotation mark", "left single quotation mark", "single turned comma quotation mark"
-en, default, "’", "right single quotation mark", "right single quotation mark", "single comma quotation mark"
-en, default, "‚", "single low 9 quotation mark", "single low 9 quotation mark", "low single comma quotation mark"
-en, default, "‛", "single high reversed 9 quotation mark", "single high reversed 9 quotation mark", "single reversed comma quotation mark"
-en, default, "“", "left double quotation mark", "left double quotation mark", "double turned comma quotation mark"
-en, default, "”", "right double quotation mark", "right double quotation mark", "double comma quotation mark"
-en, default, "„", "double low 9 quotation mark", "double low 9 quotation mark", "low double comma quotation mark"
-en, default, "‟", "double high reversed 9 quotation mark", "double high reversed 9 quotation mark", "double reversed comma quotation mark"
-en, default, "†", "dagger", "dagger", "dagger"
-en, default, "‡", "double dagger", "double dagger", "double dagger"
-en, default, "•", "bullet", "bullet", "bullet"
-en, default, "‣", "triangular bullet", "triangular bullet", "triangular bullet"
-en, default, "․", "one dot leader", "one dot leader", "one dot leader"
-en, default, "‥", "two dot leader", "two dot leader", "two dot leader"
-en, default, "…", "horizontal ellipsis", "horizontal ellipsis", "horizontal ellipsis"
-en, default, "‧", "hyphenation point", "hyphenation point", "hyphenation point"
-en, default, "‰", "per mille sign", "per mille", "per mille"
-en, default, "‱", "per ten thousand sign", "per ten thousand", "per ten thousand"
-en, default, "′", "prime", "prime", "prime"
-en, default, "″", "double prime", "double prime", "double prime"
-en, default, "‴", "triple prime", "triple prime", "triple prime"
-en, default, "‵", "reversed prime", "reversed prime", "reversed prime"
-en, default, "‶", "reversed double prime", "reversed double prime", "reversed double prime"
-en, default, "‷", "reversed triple prime", "reversed triple prime", "reversed triple prime"
-en, default, "‸", "caret", "caret", "caret"
-en, default, "‹", "single left pointing angle quotation mark", "single left pointing angle quotation mark", "left pointing single guillemet"
-en, default, "›", "single right pointing angle quotation mark", "single right pointing angle quotation mark", "right pointing single guillemet"
-en, default, "※", "reference mark", "reference mark", "reference mark"
-en, default, "‼", "double exclamation mark", "double exclamation mark", "double exclamation mark"
-en, default, "‽", "interrobang", "interrobang", "interrobang"
-en, default, "‾", "overline", "overline", "spacing overscore"
-en, default, "‿", "undertie", "undertie", "undertie"
-en, default, "⁀", "character tie", "character tie", "character tie"
-en, default, "⁁", "caret insertion point", "caret insertion point", "caret insertion point"
-en, default, "⁂", "asterism", "asterism", "asterism"
-en, default, "⁃", "hyphen bullet", "hyphen bullet", "hyphen bullet"
-en, default, "⁄", "fraction slash", "fraction slash", "fraction slash"
-en, default, "⁇", "double question mark", "double question mark", "double question mark"
-en, default, "⁈", "question exclamation mark", "question exclamation mark", "question exclamation mark"
-en, default, "⁉", "exclamation question mark", "exclamation question mark", "exclamation question mark"
-en, default, "⁋", "reversed pilcrow sign", "reversed pilcrow", "reversed pilcrow"
-en, default, "⁌", "black leftwards bullet", "black leftwards bullet", "black leftwards bullet"
-en, default, "⁍", "black rightwards bullet", "black rightwards bullet", "black rightwards bullet"
-en, default, "⁎", "low asterisk", "low asterisk", "low asterisk"
-en, default, "⁏", "reversed semicolon", "reversed semicolon", "reversed semicolon"
-en, default, "⁐", "close up", "close up", "close up"
-en, default, "⁑", "two asterisks aligned vertically", "two asterisks aligned vertically", "two asterisks aligned vertically"
-en, default, "⁒", "commercial minus sign", "commercial minus", "commercial minus"
-en, default, "⁓", "swung dash", "swung dash", "swung dash"
-en, default, "⁔", "inverted undertie", "inverted undertie", "inverted undertie"
-en, default, "⁕", "flower punctuation mark", "flower punctuation mark", "flower punctuation mark"
-en, default, "⁖", "three dot punctuation", "three dot punctuation", "three dot punctuation"
-en, default, "⁗", "quadruple prime", "quadruple prime", "quadruple prime"
-en, default, "⁘", "four dot punctuation", "four dot punctuation", "four dot punctuation"
-en, default, "⁙", "five dot punctuation", "five dot punctuation", "five dot punctuation"
-en, default, "⁚", "two dot punctuation", "two dot punctuation", "two dot punctuation"
-en, default, "⁛", "four dot mark", "four dot mark", "four dot mark"
-en, default, "⁜", "dotted cross", "dotted cross", "dotted cross"
-en, default, "⁝", "tricolon", "tricolon", "tricolon"
-en, default, "⁞", "vertical four dots", "vertical four dots", "vertical four dots"
-en, default, "⁺", "superscript plus sign", "superscript plus", "superscript plus"
-en, default, "⁻", "superscript minus", "superscript minus", "superscript hyphen minus"
-en, default, "⁼", "superscript equals sign", "superscript equals", "superscript equals"
-en, default, "⁽", "superscript left parenthesis", "superscript left parenthesis", "superscript opening parenthesis"
-en, default, "⁾", "superscript right parenthesis", "superscript right parenthesis", "superscript closing parenthesis"
-en, default, "₊", "subscript plus sign", "subscript plus", "subscript plus"
-en, default, "₋", "subscript minus", "subscript minus", "subscript hyphen minus"
-en, default, "₌", "subscript equals sign", "subscript equals", "subscript equals"
-en, default, "₍", "subscript left parenthesis", "subscript left parenthesis", "subscript opening parenthesis"
-en, default, "₎", "subscript right parenthesis", "subscript right parenthesis", "subscript closing parenthesis"
-en, default, "⅊", "property line", "property line", "property line"
-en, default, "⅋", "turned ampersand", "turned ampersand", "turned ampersand"
-en, default, "⅌", "per sign", "per", "per"
-en, default, "⅍", "aktieselskab", "aktieselskab", "aktieselskab"
-en, default, "ⅎ", "turned small f", "turned small f", "turned small f"
-en, default, "∀", "for all", "for all", "for all"
-en, default, "∁", "complement", "complement", "complement"
-en, default, "∂", "partial differential", "partial differential", "partial differential"
-en, default, "∃", "there exists", "there exists", "there exists"
-en, default, "∄", "there does not exist", "there does not exist", "there does not exist"
-en, default, "∅", "empty set", "empty set", "empty set"
-en, default, "∆", "increment", "increment", "increment"
-en, default, "∇", "nabla", "nabla", "nabla"
-en, default, "∈", "element of", "element of", "element of"
-en, default, "∉", "not an element of", "not an element of", "not an element of"
-en, default, "∊", "small element of", "small element of", "small element of"
-en, default, "∋", "contains as member", "contains as member", "contains as member"
-en, default, "∌", "does not contain as member", "does not contain as member", "does not contain as member"
-en, default, "∍", "small contains as member", "small contains as member", "small contains as member"
-en, default, "∎", "end of proof", "end of proof", "end of proof"
-en, default, "∏", "n ary product", "n ary product", "n ary product"
-en, default, "∐", "n ary coproduct", "n ary coproduct", "n ary coproduct"
-en, default, "∑", "n ary summation", "n ary summation", "n ary summation"
-en, default, "−", "minus sign", "minus", "minus"
-en, default, "∓", "minus or plus sign", "minus or plus", "minus or plus"
-en, default, "∔", "dot plus", "dot plus", "dot plus"
-en, default, "∕", "division slash", "division slash", "division slash"
-en, default, "∖", "set minus", "set minus", "set minus"
-en, default, "∗", "asterisk operator", "asterisk operator", "asterisk operator"
-en, default, "∘", "ring operator", "ring operator", "ring operator"
-en, default, "∙", "bullet operator", "bullet operator", "bullet operator"
-en, default, "√", "square root", "square root", "square root"
-en, default, "∛", "cube root", "cube root", "cube root"
-en, default, "∜", "fourth root", "fourth root", "fourth root"
-en, default, "∝", "proportional to", "proportional to", "proportional to"
-en, default, "∞", "infinity", "infinity", "infinity"
-en, default, "∟", "right angle", "right angle", "right angle"
-en, default, "∠", "angle", "angle", "angle"
-en, default, "∡", "measured angle", "measured angle", "measured angle"
-en, default, "∢", "spherical angle", "spherical angle", "spherical angle"
-en, default, "∣", "divides", "bar", "bar"
-en, default, "∤", "does not divide", "does not divide", "does not divide"
-en, default, "∥", "parallel to", "parallel to", "parallel to"
-en, default, "∦", "not parallel to", "not parallel to", "not parallel to"
-en, default, "∧", "logical and", "logical and", "logical and"
-en, default, "∨", "logical or", "logical or", "logical or"
-en, default, "∩", "intersection", "intersection", "intersection"
-en, default, "∪", "union", "union", "union"
-en, default, "∫", "integral", "integral", "integral"
-en, default, "∬", "double integral", "double integral", "double integral"
-en, default, "∭", "triple integral", "triple integral", "triple integral"
-en, default, "∮", "contour integral", "contour integral", "contour integral"
-en, default, "∯", "surface integral", "surface integral", "surface integral"
-en, default, "∰", "volume integral", "volume integral", "volume integral"
-en, default, "∱", "clockwise integral", "clockwise integral", "clockwise integral"
-en, default, "∲", "clockwise contour integral", "clockwise contour integral", "clockwise contour integral"
-en, default, "∳", "anticlockwise contour integral", "anticlockwise contour integral", "anticlockwise contour integral"
-en, default, "∴", "therefore", "therefore", "therefore"
-en, default, "∵", "because", "because", "because"
-en, default, "∶", "ratio", "ratio", "ratio"
-en, default, "∷", "proportion", "proportion", "proportion"
-en, default, "∸", "dot minus", "dot minus", "dot minus"
-en, default, "∹", "excess", "excess", "excess"
-en, default, "∺", "geometric proportion", "geometric proportion", "geometric proportion"
-en, default, "∻", "homothetic", "homothetic", "homothetic"
-en, default, "∼", "tilde operator", "tilde operator", "tilde operator"
-en, default, "∽", "reversed tilde", "reversed tilde", "reversed tilde"
-en, default, "∾", "inverted lazy s", "inverted lazy s", "inverted lazy s"
-en, default, "∿", "sine wave", "sine wave", "sine wave"
-en, default, "≀", "wreath product", "wreath product", "wreath product"
-en, default, "≁", "not tilde", "not tilde", "not tilde"
-en, default, "≂", "minus tilde", "minus tilde", "minus tilde"
-en, default, "≃", "asymptotically equals", "asymptotically equals", "asymptotically equals"
-en, default, "≄", "not asymptotically equals", "not asymptotically equals", "not asymptotically equals"
-en, default, "≅", "approximately equals", "approximately equals", "approximately equals"
-en, default, "≆", "approximately but not actually equals", "approximately but not actually equals", "approximately but not actually equals"
-en, default, "≇", "neither approximately nor actually equals", "neither approximately nor actually equals", "neither approximately nor actually equals"
-en, default, "≈", "almost equals", "almost equals", "almost equals"
-en, default, "≉", "not almost equals", "not almost equals", "not almost equals"
-en, default, "≊", "almost equal or equals", "almost equal or equals", "almost equal or equals"
-en, default, "≋", "triple tilde", "triple tilde", "triple tilde"
-en, default, "≌", "all equals", "all equals", "all equals"
-en, default, "≍", "equivalent to", "equivalent to", "equivalent to"
-en, default, "≎", "geometrically equivalent to", "geometrically equivalent to", "geometrically equivalent to"
-en, default, "≏", "difference between", "difference between", "difference between"
-en, default, "≐", "approaches the limit", "approaches the limit", "approaches the limit"
-en, default, "≑", "geometrically equals", "geometrically equals", "geometrically equals"
-en, default, "≒", "approximately equals or the image of", "approximately equals or the image of", "approximately equals or the image of"
-en, default, "≓", "image of or approximately equals", "image of or approximately equals", "image of or approximately equals"
-en, default, "≔", "colon equals", "colon equals", "colon equal"
-en, default, "≕", "equals colon", "equals colon", "equal colon"
-en, default, "≖", "ring in equals", "ring in equals", "ring in equals"
-en, default, "≗", "ring equals", "ring equals", "ring equals"
-en, default, "≘", "corresponds to", "corresponds to", "corresponds to"
-en, default, "≙", "estimates", "estimates", "estimates"
-en, default, "≚", "equiangular to", "equiangular to", "equiangular to"
-en, default, "≛", "star equals", "star equals", "star equals"
-en, default, "≜", "delta equals", "delta equals", "delta equals"
-en, default, "≝", "equals by definition", "equals by definition", "equals by definition"
-en, default, "≞", "measured by", "measured by", "measured by"
-en, default, "≟", "questioned equals", "questioned equals", "questioned equals"
-en, default, "≠", "not equals", "not equals", "not equals"
-en, default, "≡", "identical to", "identical to", "identical to"
-en, default, "≢", "not identical to", "not identical to", "not identical to"
-en, default, "≣", "strictly equivalent to", "strictly equivalent to", "strictly equivalent to"
-en, default, "≤", "less than or equals", "less than or equals", "less than or equals"
-en, default, "≥", "greater than or equals", "greater than or equals", "greater than or equals"
-en, default, "≦", "less than over equals", "less than over equals", "less than over equals"
-en, default, "≧", "greater than over equals", "greater than over equals", "greater than over equals"
-en, default, "≨", "less than but not equals", "less than but not equals", "less than but not equals"
-en, default, "≩", "greater than but not equals", "greater than but not equals", "greater than but not equals"
-en, default, "≪", "much less than", "much less than", "much less than"
-en, default, "≫", "much greater than", "much greater than", "much greater than"
-en, default, "≬", "between", "between", "between"
-en, default, "≭", "not equivalent to", "not equivalent to", "not equivalent to"
-en, default, "≮", "not less than", "not less than", "not less than"
-en, default, "≯", "not greater than", "not greater than", "not greater than"
-en, default, "≰", "neither less than nor equals", "neither less than nor equals", "neither less than nor equals"
-en, default, "≱", "neither greater than nor equals", "neither greater than nor equals", "neither greater than nor equals"
-en, default, "≲", "less than or equivalent to", "less than or equivalent to", "less than or equivalent to"
-en, default, "≳", "greater than or equivalent to", "greater than or equivalent to", "greater than or equivalent to"
-en, default, "≴", "neither less than nor equivalent to", "neither less than nor equivalent to", "neither less than nor equivalent to"
-en, default, "≵", "neither greater than nor equivalent to", "neither greater than nor equivalent to", "neither greater than nor equivalent to"
-en, default, "≶", "less than or greater than", "less than or greater than", "less than or greater than"
-en, default, "≷", "greater than or less than", "greater than or less than", "greater than or less than"
-en, default, "≸", "neither less than nor greater than", "neither less than nor greater than", "neither less than nor greater than"
-en, default, "≹", "neither greater than nor less than", "neither greater than nor less than", "neither greater than nor less than"
-en, default, "≺", "precedes", "precedes", "precedes"
-en, default, "≻", "succeeds", "succeeds", "succeeds"
-en, default, "≼", "precedes or equals", "precedes or equals", "precedes or equals"
-en, default, "≽", "succeeds or equals", "succeeds or equals", "succeeds or equals"
-en, default, "≾", "precedes or equivalent to", "precedes or equivalent to", "precedes or equivalent to"
-en, default, "≿", "succeeds or equivalent to", "succeeds or equivalent to", "succeeds or equivalent to"
-en, default, "⊀", "does not precede", "does not precede", "does not precede"
-en, default, "⊁", "does not succeed", "does not succeed", "does not succeed"
-en, default, "⊂", "subset of", "subset of", "subset of"
-en, default, "⊃", "superset of", "superset of", "superset of"
-en, default, "⊄", "not a subset of", "not a subset of", "not a subset of"
-en, default, "⊅", "not a superset of", "not a superset of", "not a superset of"
-en, default, "⊆", "subset of or equals", "subset of or equals", "subset of or equals"
-en, default, "⊇", "superset of or equals", "superset of or equals", "superset of or equals"
-en, default, "⊈", "neither a subset of nor equals", "neither a subset of nor equals", "neither a subset of nor equals"
-en, default, "⊉", "neither a superset of nor equals", "neither a superset of nor equals", "neither a superset of nor equals"
-en, default, "⊊", "subset of with not equals", "subset of or not equals", "subset of or not equals"
-en, default, "⊋", "superset of with not equals", "superset of or not equals", "superset of or not equals"
-en, default, "⊌", "multiset", "multiset", "multiset"
-en, default, "⊍", "multiset multiplication", "multiset multiplication", "multiset multiplication"
-en, default, "⊎", "multiset union", "multiset union", "multiset union"
-en, default, "⊏", "square image of", "square image of", "square image of"
-en, default, "⊐", "square original of", "square original of", "square original of"
-en, default, "⊑", "square image of or equals", "square image of or equals", "square image of or equals"
-en, default, "⊒", "square original of or equals", "square original of or equals", "square original of or equals"
-en, default, "⊓", "square cap", "square cap", "square cap"
-en, default, "⊔", "square cup", "square cup", "square cup"
-en, default, "⊕", "circled plus", "circled plus", "circled plus"
-en, default, "⊖", "circled minus", "circled minus", "circled minus"
-en, default, "⊗", "circled times", "circled times", "circled times"
-en, default, "⊘", "circled division slash", "circled division slash", "circled division slash"
-en, default, "⊙", "circled dot operator", "circled dot operator", "circled dot operator"
-en, default, "⊚", "circled ring operator", "circled ring operator", "circled ring operator"
-en, default, "⊛", "circled asterisk operator", "circled asterisk operator", "circled asterisk operator"
-en, default, "⊜", "circled equals", "circled equals", "circled equals"
-en, default, "⊝", "circled dash", "circled dash", "circled dash"
-en, default, "⊞", "squared plus", "squared plus", "squared plus"
-en, default, "⊟", "squared minus", "squared minus", "squared minus"
-en, default, "⊠", "squared times", "squared times", "squared times"
-en, default, "⊡", "squared dot operator", "squared dot operator", "squared dot operator"
-en, default, "⊢", "right tack", "right tack", "right tack"
-en, default, "⊣", "left tack", "left tack", "left tack"
-en, default, "⊤", "down tack", "down tack", "down tack"
-en, default, "⊥", "up tack", "up tack", "up tack"
-en, default, "⊦", "assertion", "assertion", "assertion"
-en, default, "⊧", "models", "models", "models"
-en, default, "⊨", "true", "true", "true"
-en, default, "⊩", "forces", "forces", "forces"
-en, default, "⊪", "triple vertical bar right turnstile", "triple vertical bar right turnstile", "triple vertical bar right turnstile"
-en, default, "⊫", "double vertical bar double right turnstile", "double vertical bar double right turnstile", "double vertical bar double right turnstile"
-en, default, "⊬", "does not prove", "does not prove", "does not prove"
-en, default, "⊭", "not true", "not true", "not true"
-en, default, "⊮", "does not force", "does not force", "does not force"
-en, default, "⊯", "negated double vertical bar double right turnstile", "negated double vertical bar double right turnstile", "negated double vertical bar double right turnstile"
-en, default, "⊰", "precedes under relation", "precedes under relation", "precedes under relation"
-en, default, "⊱", "succeeds under relation", "succeeds under relation", "succeeds under relation"
-en, default, "⊲", "normal subgroup of", "normal subgroup of", "normal subgroup of"
-en, default, "⊳", "contains as normal subgroup", "contains as normal subgroup", "contains as normal subgroup"
-en, default, "⊴", "normal subgroup of or equals", "normal subgroup of or equals", "normal subgroup of or equals"
-en, default, "⊵", "contains as normal subgroup or equals", "contains as normal subgroup or equals", "contains as normal subgroup or equals"
-en, default, "⊶", "original of", "original of", "original of"
-en, default, "⊷", "image of", "image of", "image of"
-en, default, "⊸", "multimap", "multimap", "multimap"
-en, default, "⊹", "hermitian conjugate matrix", "hermitian conjugate matrix", "hermitian conjugate matrix"
-en, default, "⊺", "intercalate", "intercalate", "intercalate"
-en, default, "⊻", "xor", "xor", "xor"
-en, default, "⊼", "nand", "nand", "nand"
-en, default, "⊽", "nor", "nor", "nor"
-en, default, "⊿", "right triangle", "right triangle", "right triangle"
-en, default, "⋀", "n ary logical and", "n ary logical and", "n ary logical and"
-en, default, "⋁", "n ary logical or", "n ary logical or", "n ary logical or"
-en, default, "⋂", "n ary intersection", "n ary intersection", "n ary intersection"
-en, default, "⋃", "n ary union", "n ary union", "n ary union"
-en, default, "⋄", "diamond operator", "diamond operator", "diamond operator"
-en, default, "⋅", "dot operator", "dot operator", "dot operator"
-en, default, "⋆", "star operator", "star operator", "star operator"
-en, default, "⋇", "division times", "division times", "division times"
-en, default, "⋈", "bowtie", "bowtie", "bowtie"
-en, default, "⋉", "left normal factor semidirect product", "left normal factor semidirect product", "left normal factor semidirect product"
-en, default, "⋊", "right normal factor semidirect product", "right normal factor semidirect product", "right normal factor semidirect product"
-en, default, "⋋", "left semidirect product", "left semidirect product", "left semidirect product"
-en, default, "⋌", "right semidirect product", "right semidirect product", "right semidirect product"
-en, default, "⋍", "reversed tilde equals", "reversed tilde equals", "reversed tilde equals"
-en, default, "⋎", "curly logical or", "curly logical or", "curly logical or"
-en, default, "⋏", "curly logical and", "curly logical and", "curly logical and"
-en, default, "⋐", "double subset", "double subset", "double subset"
-en, default, "⋑", "double superset", "double superset", "double superset"
-en, default, "⋒", "double intersection", "double intersection", "double intersection"
-en, default, "⋓", "double union", "double union", "double union"
-en, default, "⋔", "pitchfork", "pitchfork", "pitchfork"
-en, default, "⋕", "equal and parallel to", "equal and parallel to", "equal and parallel to"
-en, default, "⋖", "less than with dot", "less than dot", "less than with dot"
-en, default, "⋗", "greater than with dot", "greater than dot", "greater than with dot"
-en, default, "⋘", "very much less than", "very much less than", "very much less than"
-en, default, "⋙", "very much greater than", "very much greater than", "very much greater than"
-en, default, "⋚", "less than equals or greater than", "less than equals or greater than", "less than equals or greater than"
-en, default, "⋛", "greater than equals or less than", "greater than equals or less than", "greater than equals or less than"
-en, default, "⋜", "equals or less than", "equals or less than", "equals or less than"
-en, default, "⋝", "equals or greater than", "equals or greater than", "equals or greater than"
-en, default, "⋞", "equals or precedes", "equals or precedes", "equals or precedes"
-en, default, "⋟", "equals or succeeds", "equals or succeeds", "equals or succeeds"
-en, default, "⋠", "does not precede or equal", "does not precede or equal", "does not precede or equal"
-en, default, "⋡", "does not succeed or equal", "does not succeed or equal", "does not succeed or equal"
-en, default, "⋢", "not square image of or equals", "not square image of or equals", "not square image of or equals"
-en, default, "⋣", "not square original of or equals", "not square original of or equals", "not square original of or equals"
-en, default, "⋤", "square image of or not equals", "square image of or not equals", "square image of or not equals"
-en, default, "⋥", "square original of or not equals", "square original of or not equals", "square original of or not equals"
-en, default, "⋦", "less than but not equivalent to", "less than but not equivalent to", "less than but not equivalent to"
-en, default, "⋧", "greater than but not equivalent to", "greater than but not equivalent to", "greater than but not equivalent to"
-en, default, "⋨", "precedes but not equivalent to", "precedes but not equivalent to", "precedes but not equivalent to"
-en, default, "⋩", "succeeds but not equivalent to", "succeeds but not equivalent to", "succeeds but not equivalent to"
-en, default, "⋪", "not normal subgroup of", "not normal subgroup of", "not normal subgroup of"
-en, default, "⋫", "does not contain as normal subgroup", "does not contain as normal subgroup", "does not contain as normal subgroup"
-en, default, "⋬", "not normal subgroup of or equals", "not normal subgroup of or equals", "not normal subgroup of or equals"
-en, default, "⋭", "does not contain as normal subgroup or equal", "does not contain as normal subgroup or equal", "does not contain as normal subgroup or equal"
-en, default, "⋮", "vertical ellipsis", "vertical ellipsis", "vertical ellipsis"
-en, default, "⋯", "midline horizontal ellipsis", "midline horizontal ellipsis", "midline horizontal ellipsis"
-en, default, "⋰", "up right diagonal ellipsis", "up right diagonal ellipsis", "up right diagonal ellipsis"
-en, default, "⋱", "down right diagonal ellipsis", "down right diagonal ellipsis", "down right diagonal ellipsis"
-en, default, "⋲", "element of with long horizontal stroke", "element of with long horizontal stroke", "element of with long horizontal stroke"
-en, default, "⋳", "element of with vertical bar at end of horizontal stroke", "element of with vertical bar at end of horizontal stroke", "element of with vertical bar at end of horizontal stroke"
-en, default, "⋴", "small element of with vertical bar at end of horizontal stroke", "small element of with vertical bar at end of horizontal stroke", "small element of with vertical bar at end of horizontal stroke"
-en, default, "⋵", "element of with dot above", "element of with dot above", "element of with dot above"
-en, default, "⋶", "element of with overbar", "element of with overbar", "element of with overbar"
-en, default, "⋷", "small element of with overbar", "small element of with overbar", "small element of with overbar"
-en, default, "⋸", "element of with underbar", "element of with underbar", "element of with underbar"
-en, default, "⋹", "element of with two horizontal strokes", "element of with two horizontal strokes", "element of with two horizontal strokes"
-en, default, "⋺", "contains with long horizontal stroke", "contains with long horizontal stroke", "contains with long horizontal stroke"
-en, default, "⋻", "contains with vertical bar at end of horizontal stroke", "contains with vertical bar at end of horizontal stroke", "contains with vertical bar at end of horizontal stroke"
-en, default, "⋼", "small contains with vertical bar at end of horizontal stroke", "small contains with vertical bar at end of horizontal stroke", "small contains with vertical bar at end of horizontal stroke"
-en, default, "⋽", "contains with overbar", "contains with overbar", "contains with overbar"
-en, default, "⋾", "small contains with overbar", "small contains with overbar", "small contains with overbar"
-en, default, "⋿", "z notation bag membership", "z notation bag membership", "z notation bag membership"
-en, default, "⌀", "diameter sign", "diameter", "diameter"
-en, default, "⌂", "house", "house", "house"
-en, default, "⌅", "projective", "projective", "projective"
-en, default, "⌆", "perspective", "perspective", "perspective"
-en, default, "⌇", "wavy line", "wavy line", "wavy line"
-en, default, "⌐", "reversed not sign", "reversed not", "reversed not"
-en, default, "⌑", "square lozenge", "square lozenge", "square lozenge"
-en, default, "⌒", "arc", "arc", "arc"
-en, default, "⌓", "segment", "segment", "segment"
-en, default, "⌔", "sector", "sector", "sector"
-en, default, "➕", "heavy plus sign", "bold plus", "heavy plus"
-en, default, "➖", "heavy minus sign", "bold minus", "heavy minus"
-en, default, "➗", "heavy division sign", "bold division", "heavy division"
-en, default, "➰", "curly loop", "curly loop", "curly loop"
-en, default, "➿", "double curly loop", "double curly loop", "double curly loop"
-en, default, "⟁", "white triangle containing small white triangle", "white triangle containing small white triangle", "white triangle containing small white triangle"
-en, default, "⟂", "perpendicular", "perpendicular", "perpendicular"
-en, default, "⟃", "open subset", "open subset", "open subset"
-en, default, "⟄", "open superset", "open superset", "open superset"
-en, default, "⟇", "or with dot inside", "or with dot inside", "or with dot inside"
-en, default, "⟈", "reverse solidus preceding subset", "reverse solidus preceding subset", "reverse solidus preceding subset"
-en, default, "⟉", "superset preceding solidus", "superset preceding solidus", "superset preceding solidus"
-en, default, "⟊", "vertical bar with horizontal stroke", "vertical bar with horizontal stroke", "vertical bar with horizontal stroke"
-en, default, "⟋", "mathematical rising diagonal", "mathematical rising diagonal", "mathematical rising diagonal"
-en, default, "⟌", "long division", "long division", "long division"
-en, default, "⟍", "mathematical falling diagonal", "mathematical falling diagonal", "mathematical falling diagonal"
-en, default, "⟎", "squared logical and", "squared logical and", "squared logical and"
-en, default, "⟏", "squared logical or", "squared logical or", "squared logical or"
-en, default, "⟐", "white diamond with centered dot", "white diamond with centered dot", "white diamond with centered dot"
-en, default, "⟑", "and with dot", "and with dot", "and with dot"
-en, default, "⟒", "element of opening upwards", "element of opening upwards", "element of opening upwards"
-en, default, "⟓", "lower right corner with dot", "lower right corner with dot", "lower right corner with dot"
-en, default, "⟔", "upper left corner with dot", "upper left corner with dot", "upper left corner with dot"
-en, default, "⟕", "left outer join", "left outer join", "left outer join"
-en, default, "⟖", "right outer join", "right outer join", "right outer join"
-en, default, "⟗", "full outer join", "full outer join", "full outer join"
-en, default, "⟘", "large up tack", "large up tack", "large up tack"
-en, default, "⟙", "large down tack", "large down tack", "large down tack"
-en, default, "⟚", "left and right double turnstile", "left and right double turnstile", "left and right double turnstile"
-en, default, "⟛", "left and right tack", "left and right tack", "left and right tack"
-en, default, "⟜", "left multimap", "left multimap", "left multimap"
-en, default, "⟝", "long right tack", "long right tack", "long right tack"
-en, default, "⟞", "long left tack", "long left tack", "long left tack"
-en, default, "⟟", "up tack with circle above", "up tack with circle above", "up tack with circle above"
-en, default, "⟠", "lozenge divided by horizontal rule", "lozenge divided by horizontal rule", "lozenge divided by horizontal rule"
-en, default, "⟡", "white concave sided diamond", "white concave sided diamond", "white concave sided diamond"
-en, default, "⟢", "white concave sided diamond with leftwards tick", "white concave sided diamond with leftwards tick", "white concave sided diamond with leftwards tick"
-en, default, "⟣", "white concave sided diamond with rightwards tick", "white concave sided diamond with rightwards tick", "white concave sided diamond with rightwards tick"
-en, default, "⟤", "white square with leftwards tick", "white square with leftwards tick", "white square with leftwards tick"
-en, default, "⟥", "white square with rightwards tick", "white square with rightwards tick", "white square with rightwards tick"
-en, default, "⤫", "rising diagonal crossing falling diagonal", "rising diagonal crossing falling diagonal", "rising diagonal crossing falling diagonal"
-en, default, "⤬", "falling diagonal crossing rising diagonal", "falling diagonal crossing rising diagonal", "falling diagonal crossing rising diagonal"
-en, default, "⦀", "triple vertical bar delimiter", "triple vertical bar delimiter", "triple vertical bar delimiter"
-en, default, "⦁", "z notation spot", "z notation spot", "z notation spot"
-en, default, "⦂", "z notation type colon", "z notation type colon", "z notation type colon"
-en, default, "⦙", "dotted fence", "dotted fence", "dotted fence"
-en, default, "⦚", "vertical zigzag line", "vertical zigzag line", "vertical zigzag line"
-en, default, "⦰", "reversed empty set", "reversed empty set", "reversed empty set"
-en, default, "⦱", "empty set with overbar", "empty set with overbar", "empty set with overbar"
-en, default, "⦲", "empty set with small circle above", "empty set with small circle above", "empty set with small circle above"
-en, default, "⦵", "circle with horizontal bar", "circle with horizontal bar", "circle with horizontal bar"
-en, default, "⦶", "circled vertical bar", "circled vertical bar", "circled vertical bar"
-en, default, "⦷", "circled parallel", "circled parallel", "circled parallel"
-en, default, "⦸", "circled reverse solidus", "circled reverse solidus", "circled reverse solidus"
-en, default, "⦹", "circled perpendicular", "circled perpendicular", "circled perpendicular"
-en, default, "⦺", "circle divided by horizontal bar and top half divided by vertical bar", "circle divided by horizontal bar and top half divided by vertical bar", "circle divided by horizontal bar and top half divided by vertical bar"
-en, default, "⦻", "circle with superimposed x", "circle with superimposed x", "circle with superimposed x"
-en, default, "⦼", "circled anticlockwise rotated division sign", "circled anticlockwise rotated division", "circled anticlockwise rotated division"
-en, default, "⦾", "circled white bullet", "circled white bullet", "circled white bullet"
-en, default, "⦿", "circled bullet", "circled bullet", "circled bullet"
-en, default, "⧀", "circled less than", "circled less than", "circled less than"
-en, default, "⧁", "circled greater than", "circled greater than", "circled greater than"
-en, default, "⧂", "circle with small circle to the right", "circle with small circle to the right", "circle with small circle to the right"
-en, default, "⧃", "circle with two horizontal strokes to the right", "circle with two horizontal strokes to the right", "circle with two horizontal strokes to the right"
-en, default, "⧄", "squared rising diagonal slash", "squared rising diagonal slash", "squared rising diagonal slash"
-en, default, "⧅", "squared falling diagonal slash", "squared falling diagonal slash", "squared falling diagonal slash"
-en, default, "⧆", "squared asterisk", "squared asterisk", "squared asterisk"
-en, default, "⧇", "squared small circle", "squared small circle", "squared small circle"
-en, default, "⧈", "squared square", "squared square", "squared square"
-en, default, "⧉", "two joined squares", "two joined squares", "two joined squares"
-en, default, "⧊", "triangle with dot above", "triangle with dot above", "triangle with dot above"
-en, default, "⧋", "triangle with underbar", "triangle with underbar", "triangle with underbar"
-en, default, "⧌", "s in triangle", "s in triangle", "s in triangle"
-en, default, "⧍", "triangle with serifs at bottom", "triangle with serifs at bottom", "triangle with serifs at bottom"
-en, default, "⧎", "right triangle above left triangle", "right triangle above left triangle", "right triangle above left triangle"
-en, default, "⧏", "left triangle beside vertical bar", "left triangle beside vertical bar", "left triangle beside vertical bar"
-en, default, "⧐", "vertical bar beside right triangle", "vertical bar beside right triangle", "vertical bar beside right triangle"
-en, default, "⧑", "bowtie with left half black", "bowtie with left half black", "bowtie with left half black"
-en, default, "⧒", "bowtie with right half black", "bowtie with right half black", "bowtie with right half black"
-en, default, "⧓", "black bowtie", "black bowtie", "black bowtie"
-en, default, "⧔", "times with left half black", "times with left half black", "times with left half black"
-en, default, "⧕", "times with right half black", "times with right half black", "times with right half black"
-en, default, "⧖", "white hourglass", "white hourglass", "white hourglass"
-en, default, "⧗", "black hourglass", "black hourglass", "black hourglass"
-en, default, "⧜", "incomplete infinity", "incomplete infinity", "incomplete infinity"
-en, default, "⧝", "tie over infinity", "tie over infinity", "tie over infinity"
-en, default, "⧞", "infinity negated with vertical bar", "infinity negated with vertical bar", "infinity negated with vertical bar"
-en, default, "⧟", "double ended multimap", "double ended multimap", "double ended multimap"
-en, default, "⧠", "square with contoured outline", "square with contoured outline", "square with contoured outline"
-en, default, "⧡", "increases as", "increases as", "increases as"
-en, default, "⧢", "shuffle product", "shuffle product", "shuffle product"
-en, default, "⧣", "equals sign and slanted parallel", "equals sign and slanted parallel", "equals sign and slanted parallel"
-en, default, "⧤", "equals sign and slanted parallel with tilde above", "equals sign and slanted parallel with tilde above", "equals sign and slanted parallel with tilde above"
-en, default, "⧥", "identical to and slanted parallel", "identical to and slanted parallel", "identical to and slanted parallel"
-en, default, "⧦", "gleich stark", "gleich stark", "gleich stark"
-en, default, "⧧", "thermodynamic", "thermodynamic", "thermodynamic"
-en, default, "⧨", "down pointing triangle with left half black", "down pointing triangle with left half black", "down pointing triangle with left half black"
-en, default, "⧩", "down pointing triangle with right half black", "down pointing triangle with right half black", "down pointing triangle with right half black"
-en, default, "⧫", "black lozenge", "black lozenge", "black lozenge"
-en, default, "⧮", "error barred white square", "error barred white square", "error barred white square"
-en, default, "⧯", "error barred black square", "error barred black square", "error barred black square"
-en, default, "⧰", "error barred white diamond", "error barred white diamond", "error barred white diamond"
-en, default, "⧱", "error barred black diamond", "error barred black diamond", "error barred black diamond"
-en, default, "⧲", "error barred white circle", "error barred white circle", "error barred white circle"
-en, default, "⧳", "error barred black circle", "error barred black circle", "error barred black circle"
-en, default, "⧴", "rule delayed", "rule delayed", "rule delayed"
-en, default, "⧵", "reverse solidus operator", "reverse solidus operator", "reverse solidus operator"
-en, default, "⧶", "solidus with overbar", "solidus with overbar", "solidus with overbar"
-en, default, "⧷", "reverse solidus with horizontal stroke", "reverse solidus with horizontal stroke", "reverse solidus with horizontal stroke"
-en, default, "⧸", "big solidus", "big solidus", "big solidus"
-en, default, "⧹", "big reverse solidus", "big reverse solidus", "big reverse solidus"
-en, default, "⧺", "double plus", "double plus", "double plus"
-en, default, "⧻", "triple plus", "triple plus", "triple plus"
-en, default, "⧾", "tiny", "tiny", "tiny"
-en, default, "⧿", "miny", "miny", "miny"
-en, default, "⨀", "n ary circled dot operator", "n ary circled dot operator", "n ary circled dot operator"
-en, default, "⨁", "n ary circled plus operator", "n ary circled plus operator", "n ary circled plus operator"
-en, default, "⨂", "n ary circled times operator", "n ary circled times operator", "n ary circled times operator"
-en, default, "⨃", "n ary union operator with dot", "n ary union operator with dot", "n ary union operator with dot"
-en, default, "⨄", "n ary union operator with plus", "n ary union operator with plus", "n ary union operator with plus"
-en, default, "⨅", "n ary square intersection operator", "n ary square intersection operator", "n ary square intersection operator"
-en, default, "⨆", "n ary square union operator", "n ary square union operator", "n ary square union operator"
-en, default, "⨇", "two logical and operator", "two logical and operator", "two logical and operator"
-en, default, "⨈", "two logical or operator", "two logical or operator", "two logical or operator"
-en, default, "⨉", "n ary times operator", "n ary times operator", "n ary times operator"
-en, default, "⨊", "modulo two sum", "modulo two sum", "modulo two sum"
-en, default, "⨋", "summation with integral", "summation with integral", "summation with integral"
-en, default, "⨌", "quadruple integral operator", "quadruple integral operator", "quadruple integral operator"
-en, default, "⨍", "finite part integral", "finite part integral", "finite part integral"
-en, default, "⨎", "integral with double stroke", "integral with double stroke", "integral with double stroke"
-en, default, "⨏", "integral average with slash", "integral average with slash", "integral average with slash"
-en, default, "⨐", "circulation function", "circulation function", "circulation function"
-en, default, "⨑", "anticlockwise integration", "anticlockwise integration", "anticlockwise integration"
-en, default, "⨒", "line integration with rectangular path around pole", "line integration with rectangular path around pole", "line integration with rectangular path around pole"
-en, default, "⨓", "line integration with semicircular path around pole", "line integration with semicircular path around pole", "line integration with semicircular path around pole"
-en, default, "⨔", "line integration not including the pole", "line integration not including the pole", "line integration not including the pole"
-en, default, "⨕", "integral around a point operator", "integral around a point operator", "integral around a point operator"
-en, default, "⨖", "quaternion integral operator", "quaternion integral operator", "quaternion integral operator"
-en, default, "⨘", "integral with times sign", "integral with times", "integral with times"
-en, default, "⨙", "integral with intersection", "integral with intersection", "integral with intersection"
-en, default, "⨚", "integral with union", "integral with union", "integral with union"
-en, default, "⨛", "integral with overbar", "integral with overbar", "integral with overbar"
-en, default, "⨜", "integral with underbar", "integral with underbar", "integral with underbar"
-en, default, "⨝", "join", "join", "join"
-en, default, "⨞", "large left triangle operator", "large left triangle operator", "large left triangle operator"
-en, default, "⨟", "z notation schema composition", "z notation schema composition", "z notation schema composition"
-en, default, "⨠", "z notation schema piping", "z notation schema piping", "z notation schema piping"
-en, default, "⨡", "z notation schema projection", "z notation schema projection", "z notation schema projection"
-en, default, "⨢", "plus sign with small circle above", "plus with circle above", "plus with circle above"
-en, default, "⨣", "plus sign with circumflex accent above", "plus hat", "plus hat"
-en, default, "⨤", "plus sign with tilde above", "plus tilde", "plus tilde"
-en, default, "⨥", "plus sign with dot below", "plus underdot", "plus underdot"
-en, default, "⨦", "plus sign with tilde below", "plus sign with tilde below", "plus sign with tilde below"
-en, default, "⨧", "plus sign with subscript two", "plus sign with subscript two", "plus sign with subscript two"
-en, default, "⨨", "plus sign with black triangle", "plus sign with black triangle", "plus sign with black triangle"
-en, default, "⨩", "minus sign with comma above", "minus sign with comma above", "minus sign with comma above"
-en, default, "⨪", "minus sign with dot below", "minus sign with dot below", "minus sign with dot below"
-en, default, "⨫", "minus sign with falling dots", "minus sign with falling dots", "minus sign with falling dots"
-en, default, "⨬", "minus sign with rising dots", "minus sign with rising dots", "minus sign with rising dots"
-en, default, "⨭", "plus sign in left half circle", "plus sign in left half circle", "plus sign in left half circle"
-en, default, "⨮", "plus sign in right half circle", "plus sign in right half circle", "plus sign in right half circle"
-en, default, "⨯", "vector or cross product", "vector or cross product", "vector or cross product"
-en, default, "⨰", "multiplication sign with dot above", "multiplication sign with dot above", "multiplication sign with dot above"
-en, default, "⨱", "multiplication sign with underbar", "multiplication sign with underbar", "multiplication sign with underbar"
-en, default, "⨲", "semidirect product with bottom closed", "semidirect product with bottom closed", "semidirect product with bottom closed"
-en, default, "⨳", "smash product", "smash product", "smash product"
-en, default, "⨴", "multiplication sign in left half circle", "multiplication sign in left half circle", "multiplication sign in left half circle"
-en, default, "⨵", "multiplication sign in right half circle", "multiplication sign in right half circle", "multiplication sign in right half circle"
-en, default, "⨶", "circled multiplication sign with circumflex accent", "circled multiplication sign with circumflex accent", "circled multiplication sign with circumflex accent"
-en, default, "⨷", "multiplication sign in double circle", "multiplication sign in double circle", "multiplication sign in double circle"
-en, default, "⨸", "circled division sign", "circled division", "circled division"
-en, default, "⨹", "plus sign in triangle", "plus sign in triangle", "plus sign in triangle"
-en, default, "⨺", "minus sign in triangle", "minus sign in triangle", "minus sign in triangle"
-en, default, "⨻", "multiplication sign in triangle", "multiplication sign in triangle", "multiplication sign in triangle"
-en, default, "⨼", "interior product", "interior product", "interior product"
-en, default, "⨽", "righthand interior product", "righthand interior product", "righthand interior product"
-en, default, "⨾", "z notation relational composition", "z notation relational composition", "z notation relational composition"
-en, default, "⨿", "amalgamation or coproduct", "amalgamation or coproduct", "amalgamation or coproduct"
-en, default, "⩀", "intersection with dot", "intersection with dot", "intersection with dot"
-en, default, "⩁", "union with minus sign", "union with minus", "union with minus"
-en, default, "⩂", "union with overbar", "union with overbar", "union with overbar"
-en, default, "⩃", "intersection with overbar", "intersection with overbar", "intersection with overbar"
-en, default, "⩄", "intersection with logical and", "intersection with logical and", "intersection with logical and"
-en, default, "⩅", "union with logical or", "union with logical or", "union with logical or"
-en, default, "⩆", "union above intersection", "union above intersection", "union above intersection"
-en, default, "⩇", "intersection above union", "intersection above union", "intersection above union"
-en, default, "⩈", "union above bar above intersection", "union above bar above intersection", "union above bar above intersection"
-en, default, "⩉", "intersection above bar above union", "intersection above bar above union", "intersection above bar above union"
-en, default, "⩊", "union beside and joined with union", "union beside and joined with union", "union beside and joined with union"
-en, default, "⩋", "intersection beside and joined with intersection", "intersection beside and joined with intersection", "intersection beside and joined with intersection"
-en, default, "⩌", "closed union with serifs", "closed union with serifs", "closed union with serifs"
-en, default, "⩍", "closed intersection with serifs", "closed intersection with serifs", "closed intersection with serifs"
-en, default, "⩎", "double square intersection", "double square intersection", "double square intersection"
-en, default, "⩏", "double square union", "double square union", "double square union"
-en, default, "⩐", "closed union with serifs and smash product", "closed union with serifs and smash product", "closed union with serifs and smash product"
-en, default, "⩑", "logical and with dot above", "logical and with dot above", "logical and with dot above"
-en, default, "⩒", "logical or with dot above", "logical or with dot above", "logical or with dot above"
-en, default, "⩓", "double logical and", "double logical and", "double logical and"
-en, default, "⩔", "double logical or", "double logical or", "double logical or"
-en, default, "⩕", "two intersecting logical and", "two intersecting logical and", "two intersecting logical and"
-en, default, "⩖", "two intersecting logical or", "two intersecting logical or", "two intersecting logical or"
-en, default, "⩗", "sloping large or", "sloping large or", "sloping large or"
-en, default, "⩘", "sloping large and", "sloping large and", "sloping large and"
-en, default, "⩙", "logical or overlapping logical and", "logical or overlapping logical and", "logical or overlapping logical and"
-en, default, "⩚", "logical and with middle stem", "logical and with middle stem", "logical and with middle stem"
-en, default, "⩛", "logical or with middle stem", "logical or with middle stem", "logical or with middle stem"
-en, default, "⩜", "logical and with horizontal dash", "logical and with horizontal dash", "logical and with horizontal dash"
-en, default, "⩝", "logical or with horizontal dash", "logical or with horizontal dash", "logical or with horizontal dash"
-en, default, "⩞", "logical and with double overbar", "logical and with double overbar", "logical and with double overbar"
-en, default, "⩟", "logical and with underbar", "logical and with underbar", "logical and with underbar"
-en, default, "⩠", "logical and with double underbar", "logical and with double underbar", "logical and with double underbar"
-en, default, "⩡", "small vee with underbar", "small vee with underbar", "small vee with underbar"
-en, default, "⩢", "logical or with double overbar", "logical or with double overbar", "logical or with double overbar"
-en, default, "⩣", "logical or with double underbar", "logical or with double underbar", "logical or with double underbar"
-en, default, "⩤", "z notation domain antirestriction", "z notation domain antirestriction", "z notation domain antirestriction"
-en, default, "⩥", "z notation range antirestriction", "z notation range antirestriction", "z notation range antirestriction"
-en, default, "⩦", "equals sign with dot below", "equals sign with dot below", "equals sign with dot below"
-en, default, "⩧", "identical with dot above", "identical with dot above", "identical with dot above"
-en, default, "⩨", "triple horizontal bar with double vertical stroke", "triple horizontal bar with double vertical stroke", "triple horizontal bar with double vertical stroke"
-en, default, "⩩", "triple horizontal bar with triple vertical stroke", "triple horizontal bar with triple vertical stroke", "triple horizontal bar with triple vertical stroke"
-en, default, "⩪", "tilde operator with dot above", "tilde operator with dot above", "tilde operator with dot above"
-en, default, "⩫", "tilde operator with rising dots", "tilde operator with rising dots", "tilde operator with rising dots"
-en, default, "⩬", "similar minus similar", "similar minus similar", "similar minus similar"
-en, default, "⩭", "congruent with dot above", "congruent with dot above", "congruent with dot above"
-en, default, "⩮", "equals with asterisk", "equals with asterisk", "equals with asterisk"
-en, default, "⩯", "almost equals with circumflex accent", "almost equal hat", "almost equal hat"
-en, default, "⩰", "approximately equal or equals", "approximately equal or equals", "approximately equal or equals"
-en, default, "⩱", "equals sign above plus sign", "equals above plus", "equals above plus"
-en, default, "⩲", "plus sign above equals sign", "plus above equals", "plus above equals"
-en, default, "⩳", "equals sign above tilde operator", "equals above tilde operator", "equals above tilde operator"
-en, default, "⩴", "double colon equal", "double colon equal", "double colon equal"
-en, default, "⩵", "two consecutive equals signs", "two consecutive equals", "two consecutive equals"
-en, default, "⩶", "three consecutive equals signs", "three consecutive equals", "three consecutive equals"
-en, default, "⩷", "equals sign with two dots above and two dots below", "equals sign with two dots above and two dots below", "equals sign with two dots above and two dots below"
-en, default, "⩸", "equivalent with four dots above", "equivalent with four dots above", "equivalent with four dots above"
-en, default, "⩹", "less than with circle inside", "less than with circle inside", "less than with circle inside"
-en, default, "⩺", "greater than with circle inside", "greater than with circle inside", "greater than with circle inside"
-en, default, "⩻", "less than with question mark above", "less than with question mark above", "less than with question mark above"
-en, default, "⩼", "greater than with question mark above", "greater than with question mark above", "greater than with question mark above"
-en, default, "⩽", "less than or slanted equals", "less than or slanted equals", "less than or slanted equals"
-en, default, "⩾", "greater than or slanted equals", "greater than or slanted equals", "greater than or slanted equals"
-en, default, "⩿", "less than or slanted equals with dot inside", "less than or slanted equals with dot inside", "less than or slanted equals with dot inside"
-en, default, "⪀", "greater than or slanted equals with dot inside", "greater than or slanted equals with dot inside", "greater than or slanted equals with dot inside"
-en, default, "⪁", "less than or slanted equals with dot above", "less than or slanted equals with dot above", "less than or slanted equals with dot above"
-en, default, "⪂", "greater than or slanted equals with dot above", "greater than or slanted equals with dot above", "greater than or slanted equals with dot above"
-en, default, "⪃", "less than or slanted equals with dot above right", "less than or slanted equals with dot above right", "less than or slanted equals with dot above right"
-en, default, "⪄", "greater than or slanted equals with dot above left", "greater than or slanted equals with dot above left", "greater than or slanted equals with dot above left"
-en, default, "⪅", "less than or approximate", "less than or approximate", "less than or approximate"
-en, default, "⪆", "greater than or approximate", "greater than or approximate", "greater than or approximate"
-en, default, "⪇", "less than and single line not equals", "less than and single line not equals", "less than and single line not equals"
-en, default, "⪈", "greater than and single line not equals", "greater than and single line not equals", "greater than and single line not equals"
-en, default, "⪉", "less than and not approximate", "less than and not approximate", "less than and not approximate"
-en, default, "⪊", "greater than and not approximate", "greater than and not approximate", "greater than and not approximate"
-en, default, "⪋", "less than above double line equal above greater than", "less than above double line equal above greater than", "less than above double line equal above greater than"
-en, default, "⪌", "greater than above double line equal above less than", "greater than above double line equal above less than", "greater than above double line equal above less than"
-en, default, "⪍", "less than above similar or equal", "less than above similar or equal", "less than above similar or equal"
-en, default, "⪎", "greater than above similar or equal", "greater than above similar or equal", "greater than above similar or equal"
-en, default, "⪏", "less than above similar above greater than", "less than above similar above greater than", "less than above similar above greater than"
-en, default, "⪐", "greater than above similar above less than", "greater than above similar above less than", "greater than above similar above less than"
-en, default, "⪑", "less than above greater than above double line equal", "less than above greater than above double line equal", "less than above greater than above double line equal"
-en, default, "⪒", "greater than above less than above double line equal", "greater than above less than above double line equal", "greater than above less than above double line equal"
-en, default, "⪓", "less than above slanted equal above greater than above slanted equal", "less than above slanted equal above greater than above slanted equal", "less than above slanted equal above greater than above slanted equal"
-en, default, "⪔", "greater than above slanted equal above less than above slanted equal", "greater than above slanted equal above less than above slanted equal", "greater than above slanted equal above less than above slanted equal"
-en, default, "⪕", "slanted equals or less than", "slanted equals or less than", "slanted equals or less than"
-en, default, "⪖", "slanted equals or greater than", "slanted equals or greater than", "slanted equals or greater than"
-en, default, "⪗", "slanted equals or less than with dot inside", "slanted equals or less than with dot inside", "slanted equals or less than with dot inside"
-en, default, "⪘", "slanted equals or greater than with dot inside", "slanted equals or greater than with dot inside", "slanted equals or greater than with dot inside"
-en, default, "⪙", "double line equals or less than", "double line equals or less than", "double line equals or less than"
-en, default, "⪚", "double line equals or greater than", "double line equals or greater than", "double line equals or greater than"
-en, default, "⪛", "double line slanted equals or less than", "double line slanted equals or less than", "double line slanted equals or less than"
-en, default, "⪜", "double line slanted equals or greater than", "double line slanted equals or greater than", "double line slanted equals or greater than"
-en, default, "⪝", "similar or less than", "similar or less than", "similar or less than"
-en, default, "⪞", "similar or greater than", "similar or greater than", "similar or greater than"
-en, default, "⪟", "similar above less than above equals sign", "similar above less than above equals sign", "similar above less than above equals sign"
-en, default, "⪠", "similar above greater than above equals sign", "similar above greater than above equals sign", "similar above greater than above equals sign"
-en, default, "⪡", "double nested less than", "double nested less than", "double nested less than"
-en, default, "⪢", "double nested greater than", "double nested greater than", "double nested greater than"
-en, default, "⪣", "double nested less than with underbar", "double nested less than with underbar", "double nested less than with underbar"
-en, default, "⪤", "greater than overlapping less than", "greater than overlapping less than", "greater than overlapping less than"
-en, default, "⪥", "greater than beside less than", "greater than beside less than", "greater than beside less than"
-en, default, "⪦", "less than closed by curve", "less than closed by curve", "less than closed by curve"
-en, default, "⪧", "greater than closed by curve", "greater than closed by curve", "greater than closed by curve"
-en, default, "⪨", "less than closed by curve above slanted equal", "less than closed by curve above slanted equal", "less than closed by curve above slanted equal"
-en, default, "⪩", "greater than closed by curve above slanted equal", "greater than closed by curve above slanted equal", "greater than closed by curve above slanted equal"
-en, default, "⪪", "smaller than", "smaller than", "smaller than"
-en, default, "⪫", "larger than", "larger than", "larger than"
-en, default, "⪬", "smaller than or equals", "smaller than or equals", "smaller than or equals"
-en, default, "⪭", "larger than or equals", "larger than or equals", "larger than or equals"
-en, default, "⪮", "equals sign with bumpy above", "equals sign with bumpy above", "equals sign with bumpy above"
-en, default, "⪯", "precedes above single line equals sign", "precedes above single line equals sign", "precedes above single line equals sign"
-en, default, "⪰", "succeeds above single line equals sign", "succeeds above single line equals sign", "succeeds above single line equals sign"
-en, default, "⪱", "precedes above single line not equals", "precedes above single line not equals", "precedes above single line not equals"
-en, default, "⪲", "succeeds above single line not equals", "succeeds above single line not equals", "succeeds above single line not equals"
-en, default, "⪳", "precedes above equals sign", "precedes above equals sign", "precedes above equals sign"
-en, default, "⪴", "succeeds above equals sign", "succeeds above equals sign", "succeeds above equals sign"
-en, default, "⪵", "precedes above not equals", "precedes above not equals", "precedes above not equals"
-en, default, "⪶", "succeeds above not equals", "succeeds above not equals", "succeeds above not equals"
-en, default, "⪷", "precedes above almost equals", "precedes above almost equals", "precedes above almost equals"
-en, default, "⪸", "succeeds above almost equals", "succeeds above almost equals", "succeeds above almost equals"
-en, default, "⪹", "precedes above not almost equals", "precedes above not almost equals", "precedes above not almost equals"
-en, default, "⪺", "succeeds above not almost equals", "succeeds above not almost equals", "succeeds above not almost equals"
-en, default, "⪻", "double precedes", "double precedes", "double precedes"
-en, default, "⪼", "double succeeds", "double succeeds", "double succeeds"
-en, default, "⪽", "subset with dot", "subset with dot", "subset with dot"
-en, default, "⪾", "superset with dot", "superset with dot", "superset with dot"
-en, default, "⪿", "subset with plus sign below", "subset with plus sign below", "subset with plus sign below"
-en, default, "⫀", "superset with plus sign below", "superset with plus sign below", "superset with plus sign below"
-en, default, "⫁", "subset with multiplication sign below", "subset with multiplication sign below", "subset with multiplication sign below"
-en, default, "⫂", "superset with multiplication sign below", "superset with multiplication sign below", "superset with multiplication sign below"
-en, default, "⫃", "subset of or equals with dot above", "subset of or equals with dot above", "subset of or equals with dot above"
-en, default, "⫄", "superset of or equals with dot above", "superset of or equals with dot above", "superset of or equals with dot above"
-en, default, "⫅", "subset of above equals sign", "subset of above equals sign", "subset of above equals sign"
-en, default, "⫆", "superset of above equals sign", "superset of above equals sign", "superset of above equals sign"
-en, default, "⫇", "subset of above tilde operator", "subset of above tilde operator", "subset of above tilde operator"
-en, default, "⫈", "superset of above tilde operator", "superset of above tilde operator", "superset of above tilde operator"
-en, default, "⫉", "subset of above almost equals", "subset of above almost equals", "subset of above almost equals"
-en, default, "⫊", "superset of above almost equals", "superset of above almost equals", "superset of above almost equals"
-en, default, "⫋", "subset of above not equals", "subset of above not equals", "subset of above not equals"
-en, default, "⫌", "superset of above not equals", "superset of above not equals", "superset of above not equals"
-en, default, "⫍", "square left open box operator", "square left open box operator", "square left open box operator"
-en, default, "⫎", "square right open box operator", "square right open box operator", "square right open box operator"
-en, default, "⫏", "closed subset", "closed subset", "closed subset"
-en, default, "⫐", "closed superset", "closed superset", "closed superset"
-en, default, "⫑", "closed subset or equals", "closed subset or equals", "closed subset or equals"
-en, default, "⫒", "closed superset or equals", "closed superset or equals", "closed superset or equals"
-en, default, "⫓", "subset above superset", "subset above superset", "subset above superset"
-en, default, "⫔", "superset above subset", "superset above subset", "superset above subset"
-en, default, "⫕", "subset above subset", "subset above subset", "subset above subset"
-en, default, "⫖", "superset above superset", "superset above superset", "superset above superset"
-en, default, "⫗", "superset beside subset", "superset beside subset", "superset beside subset"
-en, default, "⫘", "superset beside and joined by dash with subset", "superset beside and joined by dash with subset", "superset beside and joined by dash with subset"
-en, default, "⫙", "element of opening downwards", "element of opening downwards", "element of opening downwards"
-en, default, "⫚", "pitchfork with tee top", "pitchfork with tee top", "pitchfork with tee top"
-en, default, "⫛", "transversal intersection", "transversal intersection", "transversal intersection"
-en, default, "⫝̸", "forking", "forking", "forking"
-en, default, "⫝", "nonforking", "nonforking", "nonforking"
-en, default, "⫞", "short left tack", "short left tack", "short left tack"
-en, default, "⫟", "short down tack", "short down tack", "short down tack"
-en, default, "⫠", "short up tack", "short up tack", "short up tack"
-en, default, "⫡", "perpendicular with s", "perpendicular with s", "perpendicular with s"
-en, default, "⫢", "vertical bar triple right turnstile", "vertical bar triple right turnstile", "vertical bar triple right turnstile"
-en, default, "⫣", "double vertical bar left turnstile", "double vertical bar left turnstile", "double vertical bar left turnstile"
-en, default, "⫤", "vertical bar double left turnstile", "vertical bar double left turnstile", "vertical bar double left turnstile"
-en, default, "⫥", "double vertical bar double left turnstile", "double vertical bar double left turnstile", "double vertical bar double left turnstile"
-en, default, "⫦", "long dash from left member of double vertical", "long dash from left member of double vertical", "long dash from left member of double vertical"
-en, default, "⫧", "short down tack with overbar", "short down tack with overbar", "short down tack with overbar"
-en, default, "⫨", "short up tack with underbar", "short up tack with underbar", "short up tack with underbar"
-en, default, "⫩", "short up tack above short down tack", "short up tack above short down tack", "short up tack above short down tack"
-en, default, "⫪", "double down tack", "double down tack", "double down tack"
-en, default, "⫫", "double up tack", "double up tack", "double up tack"
-en, default, "⫬", "double stroke not sign", "double stroke not sign", "double stroke not sign"
-en, default, "⫭", "reversed double stroke not sign", "reversed double stroke not sign", "reversed double stroke not sign"
-en, default, "⫮", "does not divide with reversed negation slash", "does not divide with reversed negation slash", "does not divide with reversed negation slash"
-en, default, "⫯", "vertical line with circle above", "vertical line with circle above", "vertical line with circle above"
-en, default, "⫰", "vertical line with circle below", "vertical line with circle below", "vertical line with circle below"
-en, default, "⫱", "down tack with circle below", "down tack with circle below", "down tack with circle below"
-en, default, "⫲", "parallel with horizontal stroke", "parallel with horizontal stroke", "parallel with horizontal stroke"
-en, default, "⫳", "parallel with tilde operator", "parallel with tilde operator", "parallel with tilde operator"
-en, default, "⫴", "triple vertical bar binary relation", "triple vertical bar binary relation", "triple vertical bar binary relation"
-en, default, "⫵", "triple vertical bar with horizontal stroke", "triple vertical bar with horizontal stroke", "triple vertical bar with horizontal stroke"
-en, default, "⫶", "triple colon operator", "triple colon operator", "triple colon operator"
-en, default, "⫷", "triple nested less than", "triple nested less than", "triple nested less than"
-en, default, "⫸", "triple nested greater than", "triple nested greater than", "triple nested greater than"
-en, default, "⫹", "double line slanted less than or equals", "double line slanted less than or equals", "double line slanted less than or equals"
-en, default, "⫺", "double line slanted greater than or equals", "double line slanted greater than or equals", "double line slanted greater than or equals"
-en, default, "⫻", "triple solidus binary relation", "triple solidus binary relation", "triple solidus binary relation"
-en, default, "⫼", "large triple vertical bar operator", "large triple vertical bar operator", "large triple vertical bar operator"
-en, default, "⫽", "double solidus operator", "double solidus operator", "double solidus operator"
-en, default, "⫾", "white vertical bar", "white vertical bar", "white vertical bar"
-en, default, "⫿", "n ary white vertical bar", "n ary white vertical bar", "n ary white vertical bar"
-en, default, "〜", "wave dash", "wave dash", "wave dash"
-en, default, "︐", "presentation form for vertical comma", "presentation form for vertical comma", "presentation form for vertical comma"
-en, default, "︓", "presentation form for vertical colon", "presentation form for vertical colon", "presentation form for vertical colon"
-en, default, "︔", "presentation form for vertical semicolon", "presentation form for vertical semicolon", "presentation form for vertical semicolon"
-en, default, "︕", "presentation form for vertical exclamation mark", "presentation form for vertical exclamation mark", "presentation form for vertical exclamation mark"
-en, default, "︖", "presentation form for vertical question mark", "presentation form for vertical question mark", "presentation form for vertical question mark"
-en, default, "︙", "presentation form for vertical horizontal ellipsis", "presentation form for vertical horizontal ellipsis", "presentation form for vertical horizontal ellipsis"
-en, default, "︰", "presentation form for vertical two dot leader", "presentation form for vertical two dot leader", "glyph for vertical two dot leader"
-en, default, "︱", "presentation form for vertical em dash", "presentation form for vertical em dash", "glyph for vertical em dash"
-en, default, "︲", "presentation form for vertical en dash", "presentation form for vertical en dash", "glyph for vertical en dash"
-en, default, "︳", "presentation form for vertical low line", "presentation form for vertical low line", "glyph for vertical spacing underscore"
-en, default, "︴", "presentation form for vertical wavy low line", "presentation form for vertical wavy low line", "glyph for vertical spacing wavy underscore"
-en, default, "﹅", "sesame dot", "sesame dot", "sesame dot"
-en, default, "﹆", "white sesame dot", "white sesame dot", "white sesame dot"
-en, default, "﹉", "dashed overline", "dashed overline", "spacing dashed overscore"
-en, default, "﹊", "centerline overline", "centerline overline", "spacing centerline overscore"
-en, default, "﹋", "wavy overline", "wavy overline", "spacing wavy overscore"
-en, default, "﹌", "double wavy overline", "double wavy overline", "spacing double wavy overscore"
-en, default, "﹍", "dashed low line", "dashed low line", "spacing dashed underscore"
-en, default, "﹎", "centerline low line", "centerline low line", "spacing centerline underscore"
-en, default, "﹏", "wavy low line", "wavy low line", "spacing wavy underscore"
-en, default, "﹐", "small comma", "small comma", "small comma"
-en, default, "﹒", "small full stop", "small full stop", "small period"
-en, default, "﹔", "small semicolon", "small semicolon", "small semicolon"
-en, default, "﹕", "small colon", "small colon", "small colon"
-en, default, "﹖", "small question mark", "small question mark", "small question mark"
-en, default, "﹗", "small exclamation mark", "small exclamation mark", "small exclamation mark"
-en, default, "﹘", "small em dash", "small em dash", "small em dash"
-en, default, "﹟", "small number sign", "small number sign", "small number sign"
-en, default, "﹠", "small ampersand", "small ampersand", "small ampersand"
-en, default, "﹡", "small asterisk", "small asterisk", "small asterisk"
-en, default, "﹢", "small plus sign", "small plus sign", "small plus sign"
-en, default, "﹣", "small hyphen minus", "small hyphen minus", "small hyphen minus"
-en, default, "﹤", "small less than sign", "small less than sign", "small less than sign"
-en, default, "﹥", "small greater than sign", "small greater than sign", "small greater than sign"
-en, default, "﹦", "small equals sign", "small equals sign", "small equals sign"
-en, default, "﹨", "small reverse solidus", "small reverse solidus", "small backslash"
-en, default, "﹩", "small dollar sign", "small dollar sign", "small dollar sign"
-en, default, "﹪", "small percent sign", "small percent sign", "small percent sign"
-en, default, "﹫", "small commercial at", "small commercial at", "small commercial at"
-en, default, "！", "fullwidth exclamation mark", "fullwidth exclamation mark", "fullwidth exclamation mark"
-en, default, "＂", "fullwidth quotation mark", "fullwidth quotation mark", "fullwidth quotation mark"
-en, default, "＃", "fullwidth number sign", "fullwidth number sign", "fullwidth number sign"
-en, default, "＄", "fullwidth dollar sign", "fullwidth dollar sign", "fullwidth dollar sign"
-en, default, "％", "fullwidth percent sign", "fullwidth percent sign", "fullwidth percent sign"
-en, default, "＆", "fullwidth ampersand", "fullwidth ampersand", "fullwidth ampersand"
-en, default, "＇", "fullwidth apostrophe", "fullwidth apostrophe", "fullwidth apostrophe"
-en, default, "＊", "fullwidth asterisk", "fullwidth asterisk", "fullwidth asterisk"
-en, default, "＋", "fullwidth plus sign", "fullwidth plus sign", "fullwidth plus sign"
-en, default, "，", "fullwidth comma", "fullwidth comma", "fullwidth comma"
-en, default, "－", "fullwidth hyphen minus", "fullwidth hyphen minus", "fullwidth hyphen minus"
-en, default, "．", "fullwidth full stop", "fullwidth full stop", "fullwidth period"
-en, default, "／", "fullwidth solidus", "fullwidth solidus", "fullwidth slash"
-en, default, "：", "fullwidth colon", "fullwidth colon", "fullwidth colon"
-en, default, "；", "fullwidth semicolon", "fullwidth semicolon", "fullwidth semicolon"
-en, default, "＜", "fullwidth less than sign", "fullwidth less than sign", "fullwidth less than sign"
-en, default, "＝", "fullwidth equals sign", "fullwidth equals sign", "fullwidth equals sign"
-en, default, "＞", "fullwidth greater than sign", "fullwidth greater than sign", "fullwidth greater than sign"
-en, default, "？", "fullwidth question mark", "fullwidth question mark", "fullwidth question mark"
-en, default, "＠", "fullwidth commercial at", "fullwidth commercial at", "fullwidth commercial at"
-en, default, "＼", "fullwidth reverse solidus", "fullwidth reverse solidus", "fullwidth backslash"
-en, default, "＾", "fullwidth circumflex accent", "fullwidth circumflex accent", "fullwidth spacing circumflex"
-en, default, "＿", "fullwidth low line", "fullwidth low line", "fullwidth spacing underscore"
-en, default, "｀", "fullwidth grave accent", "fullwidth grave accent", "fullwidth spacing grave"
-en, default, "｜", "fullwidth vertical line", "fullwidth vertical line", "fullwidth vertical bar"
-en, default, "～", "fullwidth tilde", "fullwidth tilde", "fullwidth spacing tilde"
-en, default, "￠", "fullwidth cent sign", "fullwidth cent sign", "fullwidth cent sign"
-en, default, "￡", "fullwidth pound sign", "fullwidth pound sign", "fullwidth pound sign"
-en, default, "￢", "fullwidth not sign", "fullwidth not sign", "fullwidth not sign"
-en, default, "￣", "fullwidth macron", "fullwidth macron", "fullwidth spacing macron"
-en, default, "￤", "fullwidth broken bar", "fullwidth broken bar", "fullwidth broken vertical bar"
-en, default, "￥", "fullwidth yen sign", "fullwidth yen sign", "fullwidth yen sign"
-en, default, "￦", "fullwidth won sign", "fullwidth won sign", "fullwidth won sign"
-en, default, "￨", "halfwidth forms light vertical", "halfwidth forms light vertical", "halfwidth forms light vertical"
-en, default, "￭", "halfwidth black square", "halfwidth black square", "halfwidth black square"
-en, default, "￮", "halfwidth white circle", "halfwidth white circle", "halfwidth white circle"
-en, default, " ", "", "", ""
-en, default, " ", "", "", ""
-en, default, "­", "soft hyphen", "soft hyphen", "soft hyphen"
-en, default, " ", "", "", ""
-en, default, " ", "", "", ""
-en, default, " ", "", "", ""
-en, default, " ", "", "", ""
-en, default, " ", "", "", ""
-en, default, " ", "", "", ""
-en, default, " ", "", "", ""
-en, default, " ", "", "", ""
-en, default, " ", "", "", ""
-en, default, " ", "", "", ""
-en, default, " ", "", "", ""
-en, default, "​", "zero width space", "zero width space", "zero width space"
-en, default, "‌", "zero width non joiner", "zero width non joiner", "zero width non joiner"
-en, default, "‍", "zero width joiner", "zero width joiner", "zero width joiner"
-en, default, "‎", "left to right mark", "left to right mark", "left to right mark"
-en, default, "‏", "right to left mark", "right to left mark", "right to left mark"
-en, default, " ", "", "", ""
-en, default, " ", "", "", ""
-en, default, "‪", "left to right embedding", "left to right embedding", "left to right embedding"
-en, default, "‫", "right to left embedding", "right to left embedding", "right to left embedding"
-en, default, "‬", "pop directional formatting", "pop directional formatting", "pop directional formatting"
-en, default, "‭", "left to right override", "left to right override", "left to right override"
-en, default, "‮", "right to left override", "right to left override", "right to left override"
-en, default, " ", "", "", ""
-en, default, " ", "", "", ""
-en, default, "⁠", "word joiner", "word joiner", "word joiner"
-en, default, "⁡", "function application", "of", "of"
-en, default, "⁢", "invisible times", "times", "times"
-en, default, "⁣", "invisible separator", "separator", "separator"
-en, default, "⁤", "invisible plus", "plus", "plus"
-en, default, "⁪", "inhibit symmetric swapping", "inhibit symmetric swapping", "inhibit symmetric swapping"
-en, default, "⁫", "activate symmetric swapping", "activate symmetric swapping", "activate symmetric swapping"
-en, default, "⁮", "national digit shapes", "national digit shapes", "national digit shapes"
-en, default, "⁯", "nominal digit shapes", "nominal digit shapes", "nominal digit shapes"
-en, default, "﻿", "", "", ""
-en, default, "￹", "interlinear annotation anchor", "interlinear annotation anchor", "interlinear annotation anchor"
-en, default, "￺", "interlinear annotation separator", "interlinear annotation separator", "interlinear annotation separator"
-en, default, "￻", "interlinear annotation terminator", "interlinear annotation terminator", "interlinear annotation terminator"
-en, default, "⏨", "decimal exponent symbol", "decimal exponent symbol", "decimal exponent symbol"
-en, default, "★", "black star", "black star", "black star"
-en, default, "☆", "white star", "white star", "white star"
-en, default, "⚪", "medium white circle", "white circle", "white circle"
-en, default, "⚫", "medium black circle", "black circle", "black circle"
-en, default, "✅", "white heavy check mark", "white check", "white check"
-en, default, "✓", "check mark", "check", "check"
-en, default, "✔", "heavy check mark", "heavy check", "heavy check"
-en, default, "✕", "multiplication x", "multiplication x", "multiplication x"
-en, default, "✖", "heavy multiplication x", "heavy multiplication x", "heavy multiplication x"
-en, default, "✗", "ballot x", "ballot x", "ballot x"
-en, default, "✘", "heavy ballot x", "heavy ballot x", "heavy ballot x"
-en, default, "✛", "open center cross", "open center cross", "open center cross"
-en, default, "✜", "heavy open center cross", "heavy open center cross", "heavy open center cross"
-en, default, "✠", "maltese cross", "maltese cross", "maltese cross"
-en, default, "✡", "star of david", "star of david", "star of david"
-en, default, "✢", "four teardrop spoked asterisk", "four teardrop spoked asterisk", "four teardrop spoked asterisk"
-en, default, "✣", "four balloon spoked asterisk", "four balloon spoked asterisk", "four balloon spoked asterisk"
-en, default, "✤", "heavy four balloon spoked asterisk", "heavy four balloon spoked asterisk", "heavy four balloon spoked asterisk"
-en, default, "✥", "four club spoked asterisk", "four club spoked asterisk", "four club spoked asterisk"
-en, default, "✦", "black four pointed star", "black four pointed star", "black four pointed star"
-en, default, "✧", "white four pointed star", "white four pointed star", "white four pointed star"
-en, default, "✨", "sparkles", "sparkles", "sparkles"
-en, default, "✩", "stress outlined white star", "stress outlined white star", "stress outlined white star"
-en, default, "✪", "circled white star", "circled white star", "circled white star"
-en, default, "✫", "open center black star", "open center black star", "open center black star"
-en, default, "✬", "black center white star", "black center white star", "black center white star"
-en, default, "✭", "outlined black star", "outlined black star", "outlined black star"
-en, default, "✮", "heavy outlined black star", "heavy outlined black star", "heavy outlined black star"
-en, default, "✯", "pinwheel star", "pinwheel star", "pinwheel star"
-en, default, "✰", "shadowed white star", "shadowed white star", "shadowed white star"
-en, default, "✱", "heavy asterisk", "heavy asterisk", "heavy asterisk"
-en, default, "✲", "open center asterisk", "open center asterisk", "open center asterisk"
-en, default, "✳", "eight spoked asterisk", "eight spoked asterisk", "eight spoked asterisk"
-en, default, "✴", "eight pointed black star", "eight pointed black star", "eight pointed black star"
-en, default, "✵", "eight pointed pinwheel star", "eight pointed pinwheel star", "eight pointed pinwheel star"
-en, default, "✶", "six pointed black star", "six pointed black star", "six pointed black star"
-en, default, "✹", "twelve pointed black star", "twelve pointed black star", "twelve pointed black star"
-en, default, "✺", "sixteen pointed asterisk", "sixteen pointed asterisk", "sixteen pointed asterisk"
-en, default, "✻", "teardrop spoked asterisk", "teardrop spoked asterisk", "teardrop spoked asterisk"
-en, default, "✼", "open center teardrop spoked asterisk", "open center teardrop spoked asterisk", "open center teardrop spoked asterisk"
-en, default, "✽", "heavy teardrop spoked asterisk", "heavy teardrop spoked asterisk", "heavy teardrop spoked asterisk"
-en, default, "✾", "six petalled black and white florette", "six petalled black and white florette", "six petalled black and white florette"
-en, default, "✿", "black florette", "black florette", "black florette"
-en, default, "❀", "white florette", "white florette", "white florette"
-en, default, "❁", "eight petalled outlined black florette", "eight petalled outlined black florette", "eight petalled outlined black florette"
-en, default, "❂", "circled open center eight pointed star", "circled open center eight pointed star", "circled open center eight pointed star"
-en, default, "❃", "heavy teardrop spoked pinwheel asterisk", "heavy teardrop spoked pinwheel asterisk", "heavy teardrop spoked pinwheel asterisk"
-en, default, "❄", "snowflake", "snowflake", "snowflake"
-en, default, "❅", "tight trifoliate snowflake", "tight trifoliate snowflake", "tight trifoliate snowflake"
-en, default, "❆", "heavy chevron snowflake", "heavy chevron snowflake", "heavy chevron snowflake"
-en, default, "❇", "sparkle", "sparkle", "sparkle"
-en, default, "❈", "heavy sparkle", "heavy sparkle", "heavy sparkle"
-en, default, "❉", "balloon spoked asterisk", "balloon spoked asterisk", "balloon spoked asterisk"
-en, default, "❊", "eight teardrop spoked propeller asterisk", "eight teardrop spoked propeller asterisk", "eight teardrop spoked propeller asterisk"
-en, default, "❋", "heavy eight teardrop spoked propeller asterisk", "heavy eight teardrop spoked propeller asterisk", "heavy eight teardrop spoked propeller asterisk"
-en, default, "❌", "cross mark", "cross mark", "cross mark"
-en, default, "❍", "shadowed white circle", "shadowed white circle", "shadowed white circle"
-en, default, "W:unit", "latin capital letter w colon unit", "cap w colon unit", "cap w colon unit"
-en, default, "w:unit", "latin small letter w colon unit", "w colon unit", "w colon unit"
-en, default, "kw:unit", "kw colon unit", "kw colon unit", "kw colon unit"
-en, default, "kW:unit", "kW colon unit", "kW colon unit", "kW colon unit"
-en, default, "mw:unit", "mw colon unit", "mw colon unit", "mw colon unit"
-en, default, "mW:unit", "mW colon unit", "mW colon unit", "mW colon unit"
-en, default, "kwh:unit", "kwh colon unit", "kwh colon unit", "kwh colon unit"
-en, default, "kWh:unit", "kWh colon unit", "kWh colon unit", "kWh colon unit"
-en, default, "J:unit", "latin capital letter j colon unit", "cap j colon unit", "cap j colon unit"
-en, default, "N:unit", "latin capital letter n colon unit", "cap n colon unit", "cap n colon unit"
-en, default, "A:unit", "latin capital letter a colon unit", "cap a colon unit", "cap a colon unit"
-en, default, "V:unit", "latin capital letter v colon unit", "cap v colon unit", "cap v colon unit"
-en, default, "µΩ:unit", "micro sign greek capital letter omega colon unit", "micro cap omega colon unit", "micro cap omega colon unit"
-en, default, "mΩ:unit", "latin small letter m greek capital letter omega colon unit", "m cap omega colon unit", "m cap omega colon unit"
-en, default, "Ω:unit", "greek capital letter omega colon unit", "cap omega colon unit", "cap omega colon unit"
-en, default, "Ohm:unit", "Ohm colon unit", "Ohm colon unit", "Ohm colon unit"
-en, default, "kΩ:unit", "latin small letter k greek capital letter omega colon unit", "k cap omega colon unit", "k cap omega colon unit"
-en, default, "KΩ:unit", "latin capital letter k greek capital letter omega colon unit", "cap k cap omega colon unit", "cap k cap omega colon unit"
-en, default, "MΩ:unit", "latin capital letter m greek capital letter omega colon unit", "cap m cap omega colon unit", "cap m cap omega colon unit"
-en, default, "GΩ:unit", "latin capital letter g greek capital letter omega colon unit", "cap g cap omega colon unit", "cap g cap omega colon unit"
-en, default, "mm:unit", "mm colon unit", "mm colon unit", "mm colon unit"
-en, default, "cm:unit", "cm colon unit", "cm colon unit", "cm colon unit"
-en, default, "m:unit", "latin small letter m colon unit", "m colon unit", "m colon unit"
-en, default, "km:unit", "km colon unit", "km colon unit", "km colon unit"
-en, default, "ft:unit", "ft colon unit", "ft colon unit", "ft colon unit"
-en, default, "ft.:unit", "ft full stop colon unit", "ft full stop colon unit", "ft period colon unit"
-en, default, "in:unit", "in colon unit", "in colon unit", "in colon unit"
-en, default, "in.:unit", "in full stop colon unit", "in full stop colon unit", "in period colon unit"
-en, default, "mi:unit", "mi colon unit", "mi colon unit", "mi colon unit"
-en, default, "mi.:unit", "mi full stop colon unit", "mi full stop colon unit", "mi period colon unit"
-en, default, "yd:unit", "yd colon unit", "yd colon unit", "yd colon unit"
-en, default, "yd.:unit", "yd full stop colon unit", "yd full stop colon unit", "yd period colon unit"
-en, default, "n.m.:unit", "latin small letter n full stop latin small letter m full stop colon unit", "n full stop m full stop colon unit", "n period m period colon unit"
-en, default, "b:unit", "latin small letter b colon unit", "b colon unit", "b colon unit"
-en, default, "B:unit", "latin capital letter b colon unit", "cap b colon unit", "cap b colon unit"
-en, default, "KB:unit", "KB colon unit", "KB colon unit", "KB colon unit"
-en, default, "MB:unit", "MB colon unit", "MB colon unit", "MB colon unit"
-en, default, "GB:unit", "GB colon unit", "GB colon unit", "GB colon unit"
-en, default, "TB:unit", "TB colon unit", "TB colon unit", "TB colon unit"
-en, default, "doz:unit", "doz colon unit", "doz colon unit", "doz colon unit"
-en, default, "doz.:unit", "doz full stop colon unit", "doz full stop colon unit", "doz period colon unit"
-en, default, "dz:unit", "dz colon unit", "dz colon unit", "dz colon unit"
-en, default, "dz.:unit", "dz full stop colon unit", "dz full stop colon unit", "dz period colon unit"
-en, default, "sq:unit", "sq colon unit", "sq colon unit", "sq colon unit"
-en, default, "sq.:unit", "sq full stop colon unit", "sq full stop colon unit", "sq period colon unit"
-en, default, "ha:unit", "ha colon unit", "ha colon unit", "ha colon unit"
-en, default, "kt:unit", "kt colon unit", "kt colon unit", "kt colon unit"
-en, default, "kt.:unit", "kt full stop colon unit", "kt full stop colon unit", "kt period colon unit"
-en, default, "mph:unit", "mph colon unit", "mph colon unit", "mph colon unit"
-en, default, "rpm:unit", "rpm colon unit", "rpm colon unit", "rpm colon unit"
-en, default, "kmh:unit", "kmh colon unit", "kmh colon unit", "kmh colon unit"
-en, default, "F:unit", "latin capital letter f colon unit", "cap f colon unit", "cap f colon unit"
-en, default, "F.:unit", "latin capital letter f full stop colon unit", "cap f full stop colon unit", "cap f period colon unit"
-en, default, "°F:unit", "degree sign latin capital letter f colon unit", "degree cap f colon unit", "degree cap f colon unit"
-en, default, "C:unit", "latin capital letter c colon unit", "cap c colon unit", "cap c colon unit"
-en, default, "°C:unit", "degree sign latin capital letter c colon unit", "degree cap c colon unit", "degree cap c colon unit"
-en, default, "K:unit", "latin capital letter k colon unit", "cap k colon unit", "cap k colon unit"
-en, default, "°K:unit", "degree sign latin capital letter k colon unit", "degree cap k colon unit", "degree cap k colon unit"
-en, default, "ns:unit", "ns colon unit", "ns colon unit", "ns colon unit"
-en, default, "µs:unit", "micro sign latin small letter s colon unit", "micro s colon unit", "micro s colon unit"
-en, default, "ms:unit", "ms colon unit", "ms colon unit", "ms colon unit"
-en, default, "s:unit", "latin small letter s colon unit", "s colon unit", "s colon unit"
-en, default, "min:unit", "minimum colon unit", "min colon unit", "min colon unit"
-en, default, "h:unit", "latin small letter h colon unit", "h colon unit", "h colon unit"
-en, default, "hr:unit", "hr colon unit", "hr colon unit", "hr colon unit"
-en, default, "bbl.:unit", "bbl full stop colon unit", "bbl full stop colon unit", "bbl period colon unit"
-en, default, "bbl:unit", "bbl colon unit", "bbl colon unit", "bbl colon unit"
-en, default, "cu:unit", "cu colon unit", "cu colon unit", "cu colon unit"
-en, default, "cu.:unit", "cu full stop colon unit", "cu full stop colon unit", "cu period colon unit"
-en, default, "fl. oz.:unit", "fl full stop oz full stop colon unit", "fl full stop oz full stop colon unit", "fl period oz period colon unit"
-en, default, "gal:unit", "gal colon unit", "gal colon unit", "gal colon unit"
-en, default, "gal.:unit", "gal full stop colon unit", "gal full stop colon unit", "gal period colon unit"
-en, default, "pt:unit", "pt colon unit", "pt colon unit", "pt colon unit"
-en, default, "pt.:unit", "pt full stop colon unit", "pt full stop colon unit", "pt period colon unit"
-en, default, "qt:unit", "qt colon unit", "qt colon unit", "qt colon unit"
-en, default, "qt.:unit", "qt full stop colon unit", "qt full stop colon unit", "qt period colon unit"
-en, default, "tbsp:unit", "tbsp colon unit", "tbsp colon unit", "tbsp colon unit"
-en, default, "tbsp.:unit", "tbsp full stop colon unit", "tbsp full stop colon unit", "tbsp period colon unit"
-en, default, "tsp:unit", "tsp colon unit", "tsp colon unit", "tsp colon unit"
-en, default, "tsp.:unit", "tsp full stop colon unit", "tsp full stop colon unit", "tsp period colon unit"
-en, default, "cc:unit", "cc colon unit", "cc colon unit", "cc colon unit"
-en, default, "kl:unit", "kl colon unit", "kl colon unit", "kl colon unit"
-en, default, "l:unit", "latin small letter l colon unit", "l colon unit", "l colon unit"
-en, default, "ml:unit", "ml colon unit", "ml colon unit", "ml colon unit"
-en, default, "lb:unit", "lb colon unit", "lb colon unit", "lb colon unit"
-en, default, "lb.:unit", "lb full stop colon unit", "lb full stop colon unit", "lb period colon unit"
-en, default, "LT:unit", "LT colon unit", "LT colon unit", "LT colon unit"
-en, default, "L.T.:unit", "latin capital letter l full stop latin capital letter t full stop colon unit", "cap l full stop cap t full stop colon unit", "cap l period cap t period colon unit"
-en, default, "oz:unit", "oz colon unit", "oz colon unit", "oz colon unit"
-en, default, "oz.:unit", "oz full stop colon unit", "oz full stop colon unit", "oz period colon unit"
-en, default, "g:unit", "latin small letter g colon unit", "g colon unit", "g colon unit"
-en, default, "gr:unit", "gr colon unit", "gr colon unit", "gr colon unit"
-en, default, "kg:unit", "kg colon unit", "kg colon unit", "kg colon unit"
-en, default, "mcg:unit", "mcg colon unit", "mcg colon unit", "mcg colon unit"
-en, default, "µg:unit", "micro sign latin small letter g colon unit", "micro g colon unit", "micro g colon unit"
-en, default, "mg:unit", "mg colon unit", "mg colon unit", "mg colon unit"
-en, default, "t:unit", "latin small letter t colon unit", "t colon unit", "t colon unit"
-en, default, "T:unit", "latin capital letter t colon unit", "cap t colon unit", "cap t colon unit"
+// Copyright 2019 Volker Sorge
+//
+// Licensed under the Apache License, Version 2.0 (the 'License');
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an 'AS IS' BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+/**
+ * @fileoverview Abstract class for test cases of single characters.
+ * @author Volker.Sorge@gmail.com (Volker Sorge)
+ */
+
+goog.provide('sre.DefaultCharEnglishTest');
+
+goog.require('sre.AbstractCharacterTest');
+
+
+
+/**
+ * @constructor
+ * @extends {sre.AbstractCharacterTest}
+ */
+sre.DefaultCharEnglishTest = function() {
+  sre.DefaultCharEnglishTest.base(this, 'constructor');
+
+  this.locale = 'en';
+  this.domain = 'default';
+  this.semantics = true;
+  
+  /**
+   * @type {Array.<string>}
+   */
+  this.styles = ['default', 'short', 'alternative'];
+
+  this.setActive('DefaultCharactersEnglish');
+};
+goog.inherits(sre.DefaultCharEnglishTest, sre.AbstractCharacterTest);
+
+                                            
+sre.DefaultCharEnglishTest.prototype.testChars = function() {
+  this.executeCharTest('0', ['digit zero', 'zero', 'zero']);
+  this.executeCharTest('1', ['digit one', 'one', 'one']);
+  this.executeCharTest('2', ['digit two', 'two', 'two']);
+  this.executeCharTest('3', ['digit three', 'three', 'three']);
+  this.executeCharTest('4', ['digit four', 'four', 'four']);
+  this.executeCharTest('5', ['digit five', 'five', 'five']);
+  this.executeCharTest('6', ['digit six', 'six', 'six']);
+  this.executeCharTest('7', ['digit seven', 'seven', 'seven']);
+  this.executeCharTest('8', ['digit eight', 'eight', 'eight']);
+  this.executeCharTest('9', ['digit nine', 'nine', 'nine']);
+  this.executeCharTest('Α', ['greek capital letter alpha', 'cap alpha', 'cap alpha']);
+  this.executeCharTest('Β', ['greek capital letter beta', 'cap beta', 'cap beta']);
+  this.executeCharTest('Γ', ['greek capital letter gamma', 'cap gamma', 'cap gamma']);
+  this.executeCharTest('Δ', ['greek capital letter delta', 'cap delta', 'cap delta']);
+  this.executeCharTest('Ε', ['greek capital letter epsilon', 'cap epsilon', 'cap epsilon']);
+  this.executeCharTest('Ζ', ['greek capital letter zeta', 'cap zeta', 'cap zeta']);
+  this.executeCharTest('Η', ['greek capital letter eta', 'cap eta', 'cap eta']);
+  this.executeCharTest('Θ', ['greek capital letter theta', 'cap theta', 'cap theta']);
+  this.executeCharTest('Ι', ['greek capital letter iota', 'cap iota', 'cap iota']);
+  this.executeCharTest('Κ', ['greek capital letter kappa', 'cap kappa', 'cap kappa']);
+  this.executeCharTest('Λ', ['greek capital letter lamda', 'cap lamda', 'greek capital letter lambda']);
+  this.executeCharTest('Μ', ['greek capital letter mu', 'cap mu', 'cap mu']);
+  this.executeCharTest('Ν', ['greek capital letter nu', 'cap nu', 'cap nu']);
+  this.executeCharTest('Ξ', ['greek capital letter xi', 'cap xi', 'cap xi']);
+  this.executeCharTest('Ο', ['greek capital letter omicron', 'cap omicron', 'cap omicron']);
+  this.executeCharTest('Π', ['greek capital letter pi', 'cap pi', 'cap pi']);
+  this.executeCharTest('Ρ', ['greek capital letter rho', 'cap rho', 'cap rho']);
+  this.executeCharTest('Σ', ['greek capital letter sigma', 'cap sigma', 'cap sigma']);
+  this.executeCharTest('Τ', ['greek capital letter tau', 'cap tau', 'cap tau']);
+  this.executeCharTest('Υ', ['greek capital letter upsilon', 'cap upsilon', 'cap upsilon']);
+  this.executeCharTest('Φ', ['greek capital letter phi', 'cap phi', 'cap phi']);
+  this.executeCharTest('Χ', ['greek capital letter chi', 'cap chi', 'cap chi']);
+  this.executeCharTest('Ψ', ['greek capital letter psi', 'cap psi', 'cap psi']);
+  this.executeCharTest('Ω', ['greek capital letter omega', 'cap omega', 'cap omega']);
+  this.executeCharTest('α', ['greek small letter alpha', 'alpha', 'alpha']);
+  this.executeCharTest('β', ['greek small letter beta', 'beta', 'beta']);
+  this.executeCharTest('γ', ['greek small letter gamma', 'gamma', 'gamma']);
+  this.executeCharTest('δ', ['greek small letter delta', 'delta', 'delta']);
+  this.executeCharTest('ε', ['greek small letter epsilon', 'epsilon', 'epsilon']);
+  this.executeCharTest('ζ', ['greek small letter zeta', 'zeta', 'zeta']);
+  this.executeCharTest('η', ['greek small letter eta', 'eta', 'eta']);
+  this.executeCharTest('θ', ['greek small letter theta', 'theta', 'theta']);
+  this.executeCharTest('ι', ['greek small letter iota', 'iota', 'iota']);
+  this.executeCharTest('κ', ['greek small letter kappa', 'kappa', 'kappa']);
+  this.executeCharTest('λ', ['greek small letter lamda', 'lamda', 'greek small letter lambda']);
+  this.executeCharTest('μ', ['greek small letter mu', 'mu', 'mu']);
+  this.executeCharTest('ν', ['greek small letter nu', 'nu', 'nu']);
+  this.executeCharTest('ξ', ['greek small letter xi', 'xi', 'xi']);
+  this.executeCharTest('ο', ['greek small letter omicron', 'omicron', 'omicron']);
+  this.executeCharTest('π', ['greek small letter pi', 'pi', 'pi']);
+  this.executeCharTest('ρ', ['greek small letter rho', 'rho', 'rho']);
+  this.executeCharTest('ς', ['greek small letter final sigma', 'final sigma', 'final sigma']);
+  this.executeCharTest('σ', ['greek small letter sigma', 'sigma', 'sigma']);
+  this.executeCharTest('τ', ['greek small letter tau', 'tau', 'tau']);
+  this.executeCharTest('υ', ['greek small letter upsilon', 'upsilon', 'upsilon']);
+  this.executeCharTest('φ', ['greek small letter phi', 'phi', 'phi']);
+  this.executeCharTest('χ', ['greek small letter chi', 'chi', 'chi']);
+  this.executeCharTest('ψ', ['greek small letter psi', 'psi', 'psi']);
+  this.executeCharTest('ω', ['greek small letter omega', 'omega', 'omega']);
+  this.executeCharTest('ᴦ', ['greek letter small capital gamma', 'small cap gamma', 'greek letter gamma']);
+  this.executeCharTest('ᴧ', ['greek letter small capital lamda', 'small cap lamda', 'greek letter lamda']);
+  this.executeCharTest('ᴨ', ['greek letter small capital pi', 'small cap pi', 'greek letter pi']);
+  this.executeCharTest('ᴩ', ['greek letter small capital rho', 'small cap rho', 'greek letter rho']);
+  this.executeCharTest('ᴪ', ['greek letter small capital psi', 'small cap psi', 'greek letter psi']);
+  this.executeCharTest('ᵞ', ['modifier letter small greek gamma', 'superscript gamma', 'greek letter superscript gamma']);
+  this.executeCharTest('ᵠ', ['modifier letter small greek phi', 'superscript phi', 'greek letter superscript phi']);
+  this.executeCharTest('ᵦ', ['greek subscript small letter beta', 'subscript beta', 'subscript beta']);
+  this.executeCharTest('ᵧ', ['greek subscript small letter gamma', 'subscript gamma', 'greek letter gamma']);
+  this.executeCharTest('ᵨ', ['greek subscript small letter rho', 'subscript rho', 'greek letter rho']);
+  this.executeCharTest('ᵩ', ['greek subscript small letter phi', 'subscript phi', 'greek letter phi']);
+  this.executeCharTest('ᵪ', ['greek subscript small letter chi', 'subscript chi', 'greek letter chi']);
+  this.executeCharTest('ϐ', ['greek beta symbol', 'beta', 'greek small letter curled beta']);
+  this.executeCharTest('ϑ', ['greek theta symbol', 'theta', 'greek small letter script theta']);
+  this.executeCharTest('ϕ', ['greek phi symbol', 'phi', 'greek small letter script phi']);
+  this.executeCharTest('ϖ', ['greek pi symbol', 'pi', 'greek small letter omega pi']);
+  this.executeCharTest('ϗ', ['greek kai symbol', 'kai', 'kai']);
+  this.executeCharTest('ϰ', ['greek kappa symbol', 'kappa', 'greek small letter script kappa']);
+  this.executeCharTest('ϱ', ['greek rho symbol', 'rho', 'greek small letter tailed rho']);
+  this.executeCharTest('ϵ', ['greek lunate epsilon symbol', 'epsilon', 'epsilon']);
+  this.executeCharTest('϶', ['greek reversed lunate epsilon symbol', 'reversed epsilon', 'reversed epsilon']);
+  this.executeCharTest('ϴ', ['greek capital theta symbol', 'cap theta', 'cap theta']);
+  this.executeCharTest('𝚹', ['mathematical bold capital theta symbol', 'bold cap theta', 'bold capital theta']);
+  this.executeCharTest('𝛳', ['mathematical italic capital theta symbol', 'italic cap theta', 'italic capital theta']);
+  this.executeCharTest('𝝧', ['mathematical sans serif bold capital theta symbol', 'sans serif bold cap theta', 'sans serif bold capital theta']);
+  this.executeCharTest('𝛁', ['mathematical bold nabla', 'mathematical bold nabla', 'bold nabla']);
+  this.executeCharTest('𝛛', ['mathematical bold partial differential', 'bold partial differential', 'bold partial differential']);
+  this.executeCharTest('𝛜', ['mathematical bold epsilon symbol', 'bold epsilon', 'bold epsilon']);
+  this.executeCharTest('𝛝', ['mathematical bold theta symbol', 'bold theta', 'bold theta']);
+  this.executeCharTest('𝛞', ['mathematical bold kappa symbol', 'bold kappa', 'bold kappa']);
+  this.executeCharTest('𝛟', ['mathematical bold phi symbol', 'bold phi', 'bold phi']);
+  this.executeCharTest('𝛠', ['mathematical bold rho symbol', 'bold rho', 'bold rho']);
+  this.executeCharTest('𝛡', ['mathematical bold pi symbol', 'bold pi', 'bold pi']);
+  this.executeCharTest('𝛻', ['mathematical italic nabla', 'italic nabla', 'italic nabla']);
+  this.executeCharTest('𝜕', ['mathematical italic partial differential', 'italic partial differential', 'italic partial differential']);
+  this.executeCharTest('𝜖', ['mathematical italic epsilon symbol', 'italic epsilon', 'italic epsilon']);
+  this.executeCharTest('𝜗', ['mathematical italic theta symbol', 'italic theta', 'italic theta']);
+  this.executeCharTest('𝜘', ['mathematical italic kappa symbol', 'italic kappa', 'italic kappa']);
+  this.executeCharTest('𝜙', ['mathematical italic phi symbol', 'italic phi', 'italic phi']);
+  this.executeCharTest('𝜚', ['mathematical italic rho symbol', 'italic rho', 'italic rho']);
+  this.executeCharTest('𝜛', ['mathematical italic pi symbol', 'italic pi', 'italic pi']);
+  this.executeCharTest('𝝯', ['mathematical sans serif bold nabla', 'sans serif bold nabla', 'sans serif bold nabla']);
+  this.executeCharTest('𝞉', ['mathematical sans serif bold partial differential', 'sans serif bold partial differential', 'sans serif bold partial differential']);
+  this.executeCharTest('𝞊', ['mathematical sans serif bold epsilon symbol', 'sans serif bold epsilon', 'sans serif bold epsilon']);
+  this.executeCharTest('𝞋', ['mathematical sans serif bold theta symbol', 'sans serif bold theta', 'sans serif bold theta']);
+  this.executeCharTest('𝞌', ['mathematical sans serif bold kappa symbol', 'sans serif bold kappa', 'sans serif bold kappa']);
+  this.executeCharTest('𝞍', ['mathematical sans serif bold phi symbol', 'sans serif bold phi', 'sans serif bold phi']);
+  this.executeCharTest('𝞎', ['mathematical sans serif bold rho symbol', 'sans serif bold rho', 'sans serif bold rho']);
+  this.executeCharTest('𝞏', ['mathematical sans serif bold pi symbol', 'sans serif bold pi', 'sans serif bold pi']);
+  this.executeCharTest('𝟊', ['mathematical bold capital digamma', 'bold cap digamma', 'bold capital digamma']);
+  this.executeCharTest('𝟋', ['mathematical bold small digamma', 'bold digamma', 'bold small digamma']);
+  this.executeCharTest('𝚨', ['mathematical bold capital alpha', 'bold cap alpha', 'bold capital alpha']);
+  this.executeCharTest('𝚩', ['mathematical bold capital beta', 'bold cap beta', 'bold capital beta']);
+  this.executeCharTest('𝚪', ['mathematical bold capital gamma', 'bold cap gamma', 'bold capital gamma']);
+  this.executeCharTest('𝚫', ['mathematical bold capital delta', 'bold cap delta', 'bold capital delta']);
+  this.executeCharTest('𝚬', ['mathematical bold capital epsilon', 'bold cap epsilon', 'bold capital epsilon']);
+  this.executeCharTest('𝚭', ['mathematical bold capital zeta', 'bold cap zeta', 'bold capital zeta']);
+  this.executeCharTest('𝚮', ['mathematical bold capital eta', 'bold cap eta', 'bold capital eta']);
+  this.executeCharTest('𝚯', ['mathematical bold capital theta', 'bold cap theta', 'bold capital theta']);
+  this.executeCharTest('𝚰', ['mathematical bold capital iota', 'bold cap iota', 'bold capital iota']);
+  this.executeCharTest('𝚱', ['mathematical bold capital kappa', 'bold cap kappa', 'bold capital kappa']);
+  this.executeCharTest('𝚲', ['mathematical bold capital lamda', 'bold cap lamda', 'bold capital lamda']);
+  this.executeCharTest('𝚳', ['mathematical bold capital mu', 'bold cap mu', 'bold capital mu']);
+  this.executeCharTest('𝚴', ['mathematical bold capital nu', 'bold cap nu', 'bold capital nu']);
+  this.executeCharTest('𝚵', ['mathematical bold capital xi', 'bold cap xi', 'bold capital xi']);
+  this.executeCharTest('𝚶', ['mathematical bold capital omicron', 'bold cap omicron', 'bold capital omicron']);
+  this.executeCharTest('𝚷', ['mathematical bold capital pi', 'bold cap pi', 'bold capital pi']);
+  this.executeCharTest('𝚸', ['mathematical bold capital rho', 'bold cap rho', 'bold capital rho']);
+  this.executeCharTest('𝚺', ['mathematical bold capital sigma', 'bold cap sigma', 'bold capital sigma']);
+  this.executeCharTest('𝚻', ['mathematical bold capital tau', 'bold cap tau', 'bold capital tau']);
+  this.executeCharTest('𝚼', ['mathematical bold capital upsilon', 'bold cap upsilon', 'bold capital upsilon']);
+  this.executeCharTest('𝚽', ['mathematical bold capital phi', 'bold cap phi', 'bold capital phi']);
+  this.executeCharTest('𝚾', ['mathematical bold capital chi', 'bold cap chi', 'bold capital chi']);
+  this.executeCharTest('𝚿', ['mathematical bold capital psi', 'bold cap psi', 'bold capital psi']);
+  this.executeCharTest('𝛀', ['mathematical bold capital omega', 'bold cap omega', 'bold capital omega']);
+  this.executeCharTest('𝛂', ['mathematical bold small alpha', 'bold alpha', 'bold small alpha']);
+  this.executeCharTest('𝛃', ['mathematical bold small beta', 'bold beta', 'bold small beta']);
+  this.executeCharTest('𝛄', ['mathematical bold small gamma', 'bold gamma', 'bold small gamma']);
+  this.executeCharTest('𝛅', ['mathematical bold small delta', 'bold delta', 'bold small delta']);
+  this.executeCharTest('𝛆', ['mathematical bold small epsilon', 'bold epsilon', 'bold small epsilon']);
+  this.executeCharTest('𝛇', ['mathematical bold small zeta', 'bold zeta', 'bold small zeta']);
+  this.executeCharTest('𝛈', ['mathematical bold small eta', 'bold eta', 'bold small eta']);
+  this.executeCharTest('𝛉', ['mathematical bold small theta', 'bold theta', 'bold small theta']);
+  this.executeCharTest('𝛊', ['mathematical bold small iota', 'bold iota', 'bold small iota']);
+  this.executeCharTest('𝛋', ['mathematical bold small kappa', 'bold kappa', 'bold small kappa']);
+  this.executeCharTest('𝛌', ['mathematical bold small lamda', 'bold lamda', 'bold small lamda']);
+  this.executeCharTest('𝛍', ['mathematical bold small mu', 'bold mu', 'bold small mu']);
+  this.executeCharTest('𝛎', ['mathematical bold small nu', 'bold nu', 'bold small nu']);
+  this.executeCharTest('𝛏', ['mathematical bold small xi', 'bold xi', 'bold small xi']);
+  this.executeCharTest('𝛐', ['mathematical bold small omicron', 'bold omicron', 'bold small omicron']);
+  this.executeCharTest('𝛑', ['mathematical bold small pi', 'bold pi', 'bold small pi']);
+  this.executeCharTest('𝛒', ['mathematical bold small rho', 'bold rho', 'bold small rho']);
+  this.executeCharTest('𝛓', ['mathematical bold small final sigma', 'bold final sigma', 'bold small final sigma']);
+  this.executeCharTest('𝛔', ['mathematical bold small sigma', 'bold sigma', 'bold small sigma']);
+  this.executeCharTest('𝛕', ['mathematical bold small tau', 'bold tau', 'bold small tau']);
+  this.executeCharTest('𝛖', ['mathematical bold small upsilon', 'bold upsilon', 'bold small upsilon']);
+  this.executeCharTest('𝛗', ['mathematical bold small phi', 'bold phi', 'bold small phi']);
+  this.executeCharTest('𝛘', ['mathematical bold small chi', 'bold chi', 'bold small chi']);
+  this.executeCharTest('𝛙', ['mathematical bold small psi', 'bold psi', 'bold small psi']);
+  this.executeCharTest('𝛚', ['mathematical bold small omega', 'bold omega', 'bold small omega']);
+  this.executeCharTest('𝛢', ['mathematical italic capital alpha', 'italic cap alpha', 'italic capital alpha']);
+  this.executeCharTest('𝛣', ['mathematical italic capital beta', 'italic cap beta', 'italic capital beta']);
+  this.executeCharTest('𝛤', ['mathematical italic capital gamma', 'italic cap gamma', 'italic capital gamma']);
+  this.executeCharTest('𝛥', ['mathematical italic capital delta', 'italic cap delta', 'italic capital delta']);
+  this.executeCharTest('𝛦', ['mathematical italic capital epsilon', 'italic cap epsilon', 'italic capital epsilon']);
+  this.executeCharTest('𝛧', ['mathematical italic capital zeta', 'italic cap zeta', 'italic capital zeta']);
+  this.executeCharTest('𝛨', ['mathematical italic capital eta', 'italic cap eta', 'italic capital eta']);
+  this.executeCharTest('𝛩', ['mathematical italic capital theta', 'italic cap theta', 'italic capital theta']);
+  this.executeCharTest('𝛪', ['mathematical italic capital iota', 'italic cap iota', 'italic capital iota']);
+  this.executeCharTest('𝛫', ['mathematical italic capital kappa', 'italic cap kappa', 'italic capital kappa']);
+  this.executeCharTest('𝛬', ['mathematical italic capital lamda', 'italic cap lamda', 'italic capital lamda']);
+  this.executeCharTest('𝛭', ['mathematical italic capital mu', 'italic cap mu', 'italic capital mu']);
+  this.executeCharTest('𝛮', ['mathematical italic capital nu', 'italic cap nu', 'italic capital nu']);
+  this.executeCharTest('𝛯', ['mathematical italic capital xi', 'italic cap xi', 'italic capital xi']);
+  this.executeCharTest('𝛰', ['mathematical italic capital omicron', 'italic cap omicron', 'italic capital omicron']);
+  this.executeCharTest('𝛱', ['mathematical italic capital pi', 'italic cap pi', 'italic capital pi']);
+  this.executeCharTest('𝛲', ['mathematical italic capital rho', 'italic cap rho', 'italic capital rho']);
+  this.executeCharTest('𝛴', ['mathematical italic capital sigma', 'italic cap sigma', 'italic capital sigma']);
+  this.executeCharTest('𝛵', ['mathematical italic capital tau', 'italic cap tau', 'italic capital tau']);
+  this.executeCharTest('𝛶', ['mathematical italic capital upsilon', 'italic cap upsilon', 'italic capital upsilon']);
+  this.executeCharTest('𝛷', ['mathematical italic capital phi', 'italic cap phi', 'italic capital phi']);
+  this.executeCharTest('𝛸', ['mathematical italic capital chi', 'italic cap chi', 'italic capital chi']);
+  this.executeCharTest('𝛹', ['mathematical italic capital psi', 'italic cap psi', 'italic capital psi']);
+  this.executeCharTest('𝛺', ['mathematical italic capital omega', 'italic cap omega', 'italic capital omega']);
+  this.executeCharTest('𝛼', ['mathematical italic small alpha', 'italic alpha', 'italic small alpha']);
+  this.executeCharTest('𝛽', ['mathematical italic small beta', 'italic beta', 'italic small beta']);
+  this.executeCharTest('𝛾', ['mathematical italic small gamma', 'italic gamma', 'italic small gamma']);
+  this.executeCharTest('𝛿', ['mathematical italic small delta', 'italic delta', 'italic small delta']);
+  this.executeCharTest('𝜀', ['mathematical italic small epsilon', 'italic epsilon', 'italic small epsilon']);
+  this.executeCharTest('𝜁', ['mathematical italic small zeta', 'italic zeta', 'italic small zeta']);
+  this.executeCharTest('𝜂', ['mathematical italic small eta', 'italic eta', 'italic small eta']);
+  this.executeCharTest('𝜃', ['mathematical italic small theta', 'italic theta', 'italic small theta']);
+  this.executeCharTest('𝜄', ['mathematical italic small iota', 'italic iota', 'italic small iota']);
+  this.executeCharTest('𝜅', ['mathematical italic small kappa', 'italic kappa', 'italic small kappa']);
+  this.executeCharTest('𝜆', ['mathematical italic small lamda', 'italic lamda', 'italic small lamda']);
+  this.executeCharTest('𝜇', ['mathematical italic small mu', 'italic mu', 'italic small mu']);
+  this.executeCharTest('𝜈', ['mathematical italic small nu', 'italic nu', 'italic small nu']);
+  this.executeCharTest('𝜉', ['mathematical italic small xi', 'italic xi', 'italic small xi']);
+  this.executeCharTest('𝜊', ['mathematical italic small omicron', 'italic omicron', 'italic small omicron']);
+  this.executeCharTest('𝜋', ['mathematical italic small pi', 'italic pi', 'italic small pi']);
+  this.executeCharTest('𝜌', ['mathematical italic small rho', 'italic rho', 'italic small rho']);
+  this.executeCharTest('𝜍', ['mathematical italic small final sigma', 'italic final sigma', 'italic small final sigma']);
+  this.executeCharTest('𝜎', ['mathematical italic small sigma', 'italic sigma', 'italic small sigma']);
+  this.executeCharTest('𝜏', ['mathematical italic small tau', 'italic tau', 'italic small tau']);
+  this.executeCharTest('𝜐', ['mathematical italic small upsilon', 'italic upsilon', 'italic small upsilon']);
+  this.executeCharTest('𝜑', ['mathematical italic small phi', 'italic phi', 'italic small phi']);
+  this.executeCharTest('𝜒', ['mathematical italic small chi', 'italic chi', 'italic small chi']);
+  this.executeCharTest('𝜓', ['mathematical italic small psi', 'italic psi', 'italic small psi']);
+  this.executeCharTest('𝜔', ['mathematical italic small omega', 'italic omega', 'italic small omega']);
+  this.executeCharTest('𝜜', ['mathematical bold italic capital alpha', 'bold italic cap alpha', 'bold italic capital alpha']);
+  this.executeCharTest('𝜝', ['mathematical bold italic capital beta', 'bold italic cap beta', 'bold italic capital beta']);
+  this.executeCharTest('𝜞', ['mathematical bold italic capital gamma', 'bold italic cap gamma', 'bold italic capital gamma']);
+  this.executeCharTest('𝜟', ['mathematical bold italic capital delta', 'bold italic cap delta', 'bold italic capital delta']);
+  this.executeCharTest('𝜠', ['mathematical bold italic capital epsilon', 'bold italic cap epsilon', 'bold italic capital epsilon']);
+  this.executeCharTest('𝜡', ['mathematical bold italic capital zeta', 'bold italic cap zeta', 'bold italic capital zeta']);
+  this.executeCharTest('𝜢', ['mathematical bold italic capital eta', 'bold italic cap eta', 'bold italic capital eta']);
+  this.executeCharTest('𝜣', ['mathematical bold italic capital theta', 'bold italic cap theta', 'bold italic capital theta']);
+  this.executeCharTest('𝜤', ['mathematical bold italic capital iota', 'bold italic cap iota', 'bold italic capital iota']);
+  this.executeCharTest('𝜥', ['mathematical bold italic capital kappa', 'bold italic cap kappa', 'bold italic capital kappa']);
+  this.executeCharTest('𝜦', ['mathematical bold italic capital lamda', 'bold italic cap lamda', 'bold italic capital lamda']);
+  this.executeCharTest('𝜧', ['mathematical bold italic capital mu', 'bold italic cap mu', 'bold italic capital mu']);
+  this.executeCharTest('𝜨', ['mathematical bold italic capital nu', 'bold italic cap nu', 'bold italic capital nu']);
+  this.executeCharTest('𝜩', ['mathematical bold italic capital xi', 'bold italic cap xi', 'bold italic capital xi']);
+  this.executeCharTest('𝜪', ['mathematical bold italic capital omicron', 'bold italic cap omicron', 'bold italic capital omicron']);
+  this.executeCharTest('𝜫', ['mathematical bold italic capital pi', 'bold italic cap pi', 'bold italic capital pi']);
+  this.executeCharTest('𝜬', ['mathematical bold italic capital rho', 'bold italic cap rho', 'bold italic capital rho']);
+  this.executeCharTest('𝜮', ['mathematical bold italic capital sigma', 'bold italic cap sigma', 'bold italic capital sigma']);
+  this.executeCharTest('𝜯', ['mathematical bold italic capital tau', 'bold italic cap tau', 'bold italic capital tau']);
+  this.executeCharTest('𝜰', ['mathematical bold italic capital upsilon', 'bold italic cap upsilon', 'bold italic capital upsilon']);
+  this.executeCharTest('𝜱', ['mathematical bold italic capital phi', 'bold italic cap phi', 'bold italic capital phi']);
+  this.executeCharTest('𝜲', ['mathematical bold italic capital chi', 'bold italic cap chi', 'bold italic capital chi']);
+  this.executeCharTest('𝜳', ['mathematical bold italic capital psi', 'bold italic cap psi', 'bold italic capital psi']);
+  this.executeCharTest('𝜴', ['mathematical bold italic capital omega', 'bold italic cap omega', 'bold italic capital omega']);
+  this.executeCharTest('𝜶', ['mathematical bold italic small alpha', 'bold italic alpha', 'bold italic small alpha']);
+  this.executeCharTest('𝜷', ['mathematical bold italic small beta', 'bold italic beta', 'bold italic small beta']);
+  this.executeCharTest('𝜸', ['mathematical bold italic small gamma', 'bold italic gamma', 'bold italic small gamma']);
+  this.executeCharTest('𝜹', ['mathematical bold italic small delta', 'bold italic delta', 'bold italic small delta']);
+  this.executeCharTest('𝜺', ['mathematical bold italic small epsilon', 'bold italic epsilon', 'bold italic small epsilon']);
+  this.executeCharTest('𝜻', ['mathematical bold italic small zeta', 'bold italic zeta', 'bold italic small zeta']);
+  this.executeCharTest('𝜼', ['mathematical bold italic small eta', 'bold italic eta', 'bold italic small eta']);
+  this.executeCharTest('𝜽', ['mathematical bold italic small theta', 'bold italic theta', 'bold italic small theta']);
+  this.executeCharTest('𝜾', ['mathematical bold italic small iota', 'bold italic iota', 'bold italic small iota']);
+  this.executeCharTest('𝜿', ['mathematical bold italic small kappa', 'bold italic kappa', 'bold italic small kappa']);
+  this.executeCharTest('𝝀', ['mathematical bold italic small lamda', 'bold italic lamda', 'bold italic small lamda']);
+  this.executeCharTest('𝝁', ['mathematical bold italic small mu', 'bold italic mu', 'bold italic small mu']);
+  this.executeCharTest('𝝂', ['mathematical bold italic small nu', 'bold italic nu', 'bold italic small nu']);
+  this.executeCharTest('𝝃', ['mathematical bold italic small xi', 'bold italic xi', 'bold italic small xi']);
+  this.executeCharTest('𝝄', ['mathematical bold italic small omicron', 'bold italic omicron', 'bold italic small omicron']);
+  this.executeCharTest('𝝅', ['mathematical bold italic small pi', 'bold italic pi', 'bold italic small pi']);
+  this.executeCharTest('𝝆', ['mathematical bold italic small rho', 'bold italic rho', 'bold italic small rho']);
+  this.executeCharTest('𝝇', ['mathematical bold italic small final sigma', 'bold italic final sigma', 'bold italic small final sigma']);
+  this.executeCharTest('𝝈', ['mathematical bold italic small sigma', 'bold italic sigma', 'bold italic small sigma']);
+  this.executeCharTest('𝝉', ['mathematical bold italic small tau', 'bold italic tau', 'bold italic small tau']);
+  this.executeCharTest('𝝊', ['mathematical bold italic small upsilon', 'bold italic upsilon', 'bold italic small upsilon']);
+  this.executeCharTest('𝝋', ['mathematical bold italic small phi', 'bold italic phi', 'bold italic small phi']);
+  this.executeCharTest('𝝌', ['mathematical bold italic small chi', 'bold italic chi', 'bold italic small chi']);
+  this.executeCharTest('𝝍', ['mathematical bold italic small psi', 'bold italic psi', 'bold italic small psi']);
+  this.executeCharTest('𝝎', ['mathematical bold italic small omega', 'bold italic omega', 'bold italic small omega']);
+  this.executeCharTest('𝝖', ['mathematical sans serif bold capital alpha', 'sans serif bold cap alpha', 'sans serif bold capital alpha']);
+  this.executeCharTest('𝝗', ['mathematical sans serif bold capital beta', 'sans serif bold cap beta', 'sans serif bold capital beta']);
+  this.executeCharTest('𝝘', ['mathematical sans serif bold capital gamma', 'sans serif bold cap gamma', 'sans serif bold capital gamma']);
+  this.executeCharTest('𝝙', ['mathematical sans serif bold capital delta', 'sans serif bold cap delta', 'sans serif bold capital delta']);
+  this.executeCharTest('𝝚', ['mathematical sans serif bold capital epsilon', 'sans serif bold cap epsilon', 'sans serif bold capital epsilon']);
+  this.executeCharTest('𝝛', ['mathematical sans serif bold capital zeta', 'sans serif bold cap zeta', 'sans serif bold capital zeta']);
+  this.executeCharTest('𝝜', ['mathematical sans serif bold capital eta', 'sans serif bold cap eta', 'sans serif bold capital eta']);
+  this.executeCharTest('𝝝', ['mathematical sans serif bold capital theta', 'sans serif bold cap theta', 'sans serif bold capital theta']);
+  this.executeCharTest('𝝞', ['mathematical sans serif bold capital iota', 'sans serif bold cap iota', 'sans serif bold capital iota']);
+  this.executeCharTest('𝝟', ['mathematical sans serif bold capital kappa', 'sans serif bold cap kappa', 'sans serif bold capital kappa']);
+  this.executeCharTest('𝝠', ['mathematical sans serif bold capital lamda', 'sans serif bold cap lamda', 'sans serif bold capital lamda']);
+  this.executeCharTest('𝝡', ['mathematical sans serif bold capital mu', 'sans serif bold cap mu', 'sans serif bold capital mu']);
+  this.executeCharTest('𝝢', ['mathematical sans serif bold capital nu', 'sans serif bold cap nu', 'sans serif bold capital nu']);
+  this.executeCharTest('𝝣', ['mathematical sans serif bold capital xi', 'sans serif bold cap xi', 'sans serif bold capital xi']);
+  this.executeCharTest('𝝤', ['mathematical sans serif bold capital omicron', 'sans serif bold cap omicron', 'sans serif bold capital omicron']);
+  this.executeCharTest('𝝥', ['mathematical sans serif bold capital pi', 'sans serif bold cap pi', 'sans serif bold capital pi']);
+  this.executeCharTest('𝝦', ['mathematical sans serif bold capital rho', 'sans serif bold cap rho', 'sans serif bold capital rho']);
+  this.executeCharTest('𝝨', ['mathematical sans serif bold capital sigma', 'sans serif bold cap sigma', 'sans serif bold capital sigma']);
+  this.executeCharTest('𝝩', ['mathematical sans serif bold capital tau', 'sans serif bold cap tau', 'sans serif bold capital tau']);
+  this.executeCharTest('𝝪', ['mathematical sans serif bold capital upsilon', 'sans serif bold cap upsilon', 'sans serif bold capital upsilon']);
+  this.executeCharTest('𝝫', ['mathematical sans serif bold capital phi', 'sans serif bold cap phi', 'sans serif bold capital phi']);
+  this.executeCharTest('𝝬', ['mathematical sans serif bold capital chi', 'sans serif bold cap chi', 'sans serif bold capital chi']);
+  this.executeCharTest('𝝭', ['mathematical sans serif bold capital psi', 'sans serif bold cap psi', 'sans serif bold capital psi']);
+  this.executeCharTest('𝝮', ['mathematical sans serif bold capital omega', 'sans serif bold cap omega', 'sans serif bold capital omega']);
+  this.executeCharTest('𝝰', ['mathematical sans serif bold small alpha', 'sans serif bold alpha', 'sans serif bold small alpha']);
+  this.executeCharTest('𝝱', ['mathematical sans serif bold small beta', 'sans serif bold beta', 'sans serif bold small beta']);
+  this.executeCharTest('𝝲', ['mathematical sans serif bold small gamma', 'sans serif bold gamma', 'sans serif bold small gamma']);
+  this.executeCharTest('𝝳', ['mathematical sans serif bold small delta', 'sans serif bold delta', 'sans serif bold small delta']);
+  this.executeCharTest('𝝴', ['mathematical sans serif bold small epsilon', 'sans serif bold epsilon', 'sans serif bold small epsilon']);
+  this.executeCharTest('𝝵', ['mathematical sans serif bold small zeta', 'sans serif bold zeta', 'sans serif bold small zeta']);
+  this.executeCharTest('𝝶', ['mathematical sans serif bold small eta', 'sans serif bold eta', 'sans serif bold small eta']);
+  this.executeCharTest('𝝷', ['mathematical sans serif bold small theta', 'sans serif bold theta', 'sans serif bold small theta']);
+  this.executeCharTest('𝝸', ['mathematical sans serif bold small iota', 'sans serif bold iota', 'sans serif bold small iota']);
+  this.executeCharTest('𝝹', ['mathematical sans serif bold small kappa', 'sans serif bold kappa', 'sans serif bold small kappa']);
+  this.executeCharTest('𝝺', ['mathematical sans serif bold small lamda', 'sans serif bold lamda', 'sans serif bold small lamda']);
+  this.executeCharTest('𝝻', ['mathematical sans serif bold small mu', 'sans serif bold mu', 'sans serif bold small mu']);
+  this.executeCharTest('𝝼', ['mathematical sans serif bold small nu', 'sans serif bold nu', 'sans serif bold small nu']);
+  this.executeCharTest('𝝽', ['mathematical sans serif bold small xi', 'sans serif bold xi', 'sans serif bold small xi']);
+  this.executeCharTest('𝝾', ['mathematical sans serif bold small omicron', 'sans serif bold omicron', 'sans serif bold small omicron']);
+  this.executeCharTest('𝝿', ['mathematical sans serif bold small pi', 'sans serif bold pi', 'sans serif bold small pi']);
+  this.executeCharTest('𝞀', ['mathematical sans serif bold small rho', 'sans serif bold rho', 'sans serif bold small rho']);
+  this.executeCharTest('𝞁', ['mathematical sans serif bold small final sigma', 'sans serif bold final sigma', 'sans serif bold small final sigma']);
+  this.executeCharTest('𝞂', ['mathematical sans serif bold small sigma', 'sans serif bold sigma', 'sans serif bold small sigma']);
+  this.executeCharTest('𝞃', ['mathematical sans serif bold small tau', 'sans serif bold tau', 'sans serif bold small tau']);
+  this.executeCharTest('𝞄', ['mathematical sans serif bold small upsilon', 'sans serif bold upsilon', 'sans serif bold small upsilon']);
+  this.executeCharTest('𝞅', ['mathematical sans serif bold small phi', 'sans serif bold phi', 'sans serif bold small phi']);
+  this.executeCharTest('𝞆', ['mathematical sans serif bold small chi', 'sans serif bold chi', 'sans serif bold small chi']);
+  this.executeCharTest('𝞇', ['mathematical sans serif bold small psi', 'sans serif bold psi', 'sans serif bold small psi']);
+  this.executeCharTest('𝞈', ['mathematical sans serif bold small omega', 'sans serif bold omega', 'sans serif bold small omega']);
+  this.executeCharTest('𝞐', ['mathematical sans serif bold italic capital alpha', 'sans serif bold italic cap alpha', 'sans serif bold italic capital alpha']);
+  this.executeCharTest('𝞑', ['mathematical sans serif bold italic capital beta', 'sans serif bold italic cap beta', 'sans serif bold italic capital beta']);
+  this.executeCharTest('𝞒', ['mathematical sans serif bold italic capital gamma', 'sans serif bold italic cap gamma', 'sans serif bold italic capital gamma']);
+  this.executeCharTest('𝞓', ['mathematical sans serif bold italic capital delta', 'sans serif bold italic cap delta', 'sans serif bold italic capital delta']);
+  this.executeCharTest('𝞔', ['mathematical sans serif bold italic capital epsilon', 'sans serif bold italic cap epsilon', 'sans serif bold italic capital epsilon']);
+  this.executeCharTest('𝞕', ['mathematical sans serif bold italic capital zeta', 'sans serif bold italic cap zeta', 'sans serif bold italic capital zeta']);
+  this.executeCharTest('𝞖', ['mathematical sans serif bold italic capital eta', 'sans serif bold italic cap eta', 'sans serif bold italic capital eta']);
+  this.executeCharTest('𝞗', ['mathematical sans serif bold italic capital theta', 'sans serif bold italic cap theta', 'sans serif bold italic capital theta']);
+  this.executeCharTest('𝞘', ['mathematical sans serif bold italic capital iota', 'sans serif bold italic cap iota', 'sans serif bold italic capital iota']);
+  this.executeCharTest('𝞙', ['mathematical sans serif bold italic capital kappa', 'sans serif bold italic cap kappa', 'sans serif bold italic capital kappa']);
+  this.executeCharTest('𝞚', ['mathematical sans serif bold italic capital lamda', 'sans serif bold italic cap lamda', 'sans serif bold italic capital lamda']);
+  this.executeCharTest('𝞛', ['mathematical sans serif bold italic capital mu', 'sans serif bold italic cap mu', 'sans serif bold italic capital mu']);
+  this.executeCharTest('𝞜', ['mathematical sans serif bold italic capital nu', 'sans serif bold italic cap nu', 'sans serif bold italic capital nu']);
+  this.executeCharTest('𝞝', ['mathematical sans serif bold italic capital xi', 'sans serif bold italic cap xi', 'sans serif bold italic capital xi']);
+  this.executeCharTest('𝞞', ['mathematical sans serif bold italic capital omicron', 'sans serif bold italic cap omicron', 'sans serif bold italic capital omicron']);
+  this.executeCharTest('𝞟', ['mathematical sans serif bold italic capital pi', 'sans serif bold italic cap pi', 'sans serif bold italic capital pi']);
+  this.executeCharTest('𝞠', ['mathematical sans serif bold italic capital rho', 'sans serif bold italic cap rho', 'sans serif bold italic capital rho']);
+  this.executeCharTest('𝞢', ['mathematical sans serif bold italic capital sigma', 'sans serif bold italic cap sigma', 'sans serif bold italic capital sigma']);
+  this.executeCharTest('𝞣', ['mathematical sans serif bold italic capital tau', 'sans serif bold italic cap tau', 'sans serif bold italic capital tau']);
+  this.executeCharTest('𝞤', ['mathematical sans serif bold italic capital upsilon', 'sans serif bold italic cap upsilon', 'sans serif bold italic capital upsilon']);
+  this.executeCharTest('𝞥', ['mathematical sans serif bold italic capital phi', 'sans serif bold italic cap phi', 'sans serif bold italic capital phi']);
+  this.executeCharTest('𝞦', ['mathematical sans serif bold italic capital chi', 'sans serif bold italic cap chi', 'sans serif bold italic capital chi']);
+  this.executeCharTest('𝞧', ['mathematical sans serif bold italic capital psi', 'sans serif bold italic cap psi', 'sans serif bold italic capital psi']);
+  this.executeCharTest('𝞨', ['mathematical sans serif bold italic capital omega', 'sans serif bold italic cap omega', 'sans serif bold italic capital omega']);
+  this.executeCharTest('𝞪', ['mathematical sans serif bold italic small alpha', 'sans serif bold italic alpha', 'sans serif bold italic small alpha']);
+  this.executeCharTest('𝞫', ['mathematical sans serif bold italic small beta', 'sans serif bold italic beta', 'sans serif bold italic small beta']);
+  this.executeCharTest('𝞬', ['mathematical sans serif bold italic small gamma', 'sans serif bold italic gamma', 'sans serif bold italic small gamma']);
+  this.executeCharTest('𝞭', ['mathematical sans serif bold italic small delta', 'sans serif bold italic delta', 'sans serif bold italic small delta']);
+  this.executeCharTest('𝞮', ['mathematical sans serif bold italic small epsilon', 'sans serif bold italic epsilon', 'sans serif bold italic small epsilon']);
+  this.executeCharTest('𝞯', ['mathematical sans serif bold italic small zeta', 'sans serif bold italic zeta', 'sans serif bold italic small zeta']);
+  this.executeCharTest('𝞰', ['mathematical sans serif bold italic small eta', 'sans serif bold italic eta', 'sans serif bold italic small eta']);
+  this.executeCharTest('𝞱', ['mathematical sans serif bold italic small theta', 'sans serif bold italic theta', 'sans serif bold italic small theta']);
+  this.executeCharTest('𝞲', ['mathematical sans serif bold italic small iota', 'sans serif bold italic iota', 'sans serif bold italic small iota']);
+  this.executeCharTest('𝞳', ['mathematical sans serif bold italic small kappa', 'sans serif bold italic kappa', 'sans serif bold italic small kappa']);
+  this.executeCharTest('𝞴', ['mathematical sans serif bold italic small lamda', 'sans serif bold italic lamda', 'sans serif bold italic small lamda']);
+  this.executeCharTest('𝞵', ['mathematical sans serif bold italic small mu', 'sans serif bold italic mu', 'sans serif bold italic small mu']);
+  this.executeCharTest('𝞶', ['mathematical sans serif bold italic small nu', 'sans serif bold italic nu', 'sans serif bold italic small nu']);
+  this.executeCharTest('𝞷', ['mathematical sans serif bold italic small xi', 'sans serif bold italic xi', 'sans serif bold italic small xi']);
+  this.executeCharTest('𝞸', ['mathematical sans serif bold italic small omicron', 'sans serif bold italic omicron', 'sans serif bold italic small omicron']);
+  this.executeCharTest('𝞹', ['mathematical sans serif bold italic small pi', 'sans serif bold italic pi', 'sans serif bold italic small pi']);
+  this.executeCharTest('𝞺', ['mathematical sans serif bold italic small rho', 'sans serif bold italic rho', 'sans serif bold italic small rho']);
+  this.executeCharTest('𝞻', ['mathematical sans serif bold italic small final sigma', 'sans serif bold italic final sigma', 'sans serif bold italic small final sigma']);
+  this.executeCharTest('𝞼', ['mathematical sans serif bold italic small sigma', 'sans serif bold italic sigma', 'sans serif bold italic small sigma']);
+  this.executeCharTest('𝞽', ['mathematical sans serif bold italic small tau', 'sans serif bold italic tau', 'sans serif bold italic small tau']);
+  this.executeCharTest('𝞾', ['mathematical sans serif bold italic small upsilon', 'sans serif bold italic upsilon', 'sans serif bold italic small upsilon']);
+  this.executeCharTest('𝞿', ['mathematical sans serif bold italic small phi', 'sans serif bold italic phi', 'sans serif bold italic small phi']);
+  this.executeCharTest('𝟀', ['mathematical sans serif bold italic small chi', 'sans serif bold italic chi', 'sans serif bold italic small chi']);
+  this.executeCharTest('𝟁', ['mathematical sans serif bold italic small psi', 'sans serif bold italic psi', 'sans serif bold italic small psi']);
+  this.executeCharTest('𝟂', ['mathematical sans serif bold italic small omega', 'sans serif bold italic omega', 'sans serif bold italic small omega']);
+  this.executeCharTest('ℵ', ['alef symbol', 'alef', 'first transfinite cardinal']);
+  this.executeCharTest('ℶ', ['bet symbol', 'bet', 'second transfinite cardinal']);
+  this.executeCharTest('ℷ', ['gimel symbol', 'gimel', 'third transfinite cardinal']);
+  this.executeCharTest('ℸ', ['dalet symbol', 'dalet', 'fourth transfinite cardinal']);
+  this.executeCharTest('ǖ', ['latin small letter u with diaeresis and macron', 'u double overdot overbar', 'latin small letter u double overdot overbar']);
+  this.executeCharTest('ǘ', ['latin small letter u with diaeresis and acute', 'u double overdot acute', 'latin small letter u double overdot acute']);
+  this.executeCharTest('ǚ', ['latin small letter u with diaeresis and caron', 'u double overdot caron', 'latin small letter u double overdot hacek']);
+  this.executeCharTest('ǜ', ['latin small letter u with diaeresis and grave', 'u double overdot grave', 'latin small letter u double overdot grave']);
+  this.executeCharTest('ǟ', ['latin small letter a with diaeresis and macron', 'a double overdot overbar', 'latin small letter a double overdot overbar']);
+  this.executeCharTest('ǡ', ['latin small letter a with dot above and macron', 'a overdot overbar', 'latin small letter a dot overbar']);
+  this.executeCharTest('ǭ', ['latin small letter o with ogonek and macron', 'o ogonek overbar', 'latin small letter o ogonek overbar']);
+  this.executeCharTest('ǻ', ['latin small letter a with ring above and acute', 'a ring above acute', 'latin small letter a ring above acute']);
+  this.executeCharTest('ȫ', ['latin small letter o with diaeresis and macron', 'o double overdot overbar', 'latin small letter o double overdot overbar']);
+  this.executeCharTest('ȭ', ['latin small letter o with tilde and macron', 'o tilde overbar', 'latin small letter o tilde overbar']);
+  this.executeCharTest('ȱ', ['latin small letter o with dot above and macron', 'o overdot overbar', 'latin small letter o overdot overbar']);
+  this.executeCharTest('ḉ', ['latin small letter c with cedilla and acute', 'c cedilla acute', 'latin small letter c cedilla acute']);
+  this.executeCharTest('ḕ', ['latin small letter e with macron and grave', 'e overbar grave', 'latin small letter e overbar grave']);
+  this.executeCharTest('ḗ', ['latin small letter e with macron and acute', 'e overbar acute', 'latin small letter e overbar acute']);
+  this.executeCharTest('ḝ', ['latin small letter e with cedilla and breve', 'e cedilla breve', 'latin small letter e cedilla breve']);
+  this.executeCharTest('ḯ', ['latin small letter i with diaeresis and acute', 'i double overdot acute', 'latin small letter i double overdot acute']);
+  this.executeCharTest('ḹ', ['latin small letter l with dot below and macron', 'l underdot overbar', 'latin small letter l underdot overbar']);
+  this.executeCharTest('ṍ', ['latin small letter o with tilde and acute', 'o tilde acute', 'latin small letter o tilde acute']);
+  this.executeCharTest('ṏ', ['latin small letter o with tilde and diaeresis', 'o tilde double overdot', 'latin small letter o tilde double overdot']);
+  this.executeCharTest('ṑ', ['latin small letter o with macron and grave', 'o overbar grave', 'latin small letter o overbar grave']);
+  this.executeCharTest('ṓ', ['latin small letter o with macron and acute', 'o overbar acute', 'latin small letter o overbar acute']);
+  this.executeCharTest('ṝ', ['latin small letter r with dot below and macron', 'r underdot overbar', 'latin small letter r underdot overbar']);
+  this.executeCharTest('ṥ', ['latin small letter s with acute and dot above', 's acute overdot', 'latin small letter s acute overdot']);
+  this.executeCharTest('ṧ', ['latin small letter s with caron and dot above', 's caron overdot', 'latin small letter s caron overdot']);
+  this.executeCharTest('ṩ', ['latin small letter s with dot below and dot above', 's underdot overdot', 'latin small letter s underdot overdot']);
+  this.executeCharTest('ṹ', ['latin small letter u with tilde and acute', 'u tilde acute', 'latin small letter u tilde acute']);
+  this.executeCharTest('ṻ', ['latin small letter u with macron and diaeresis', 'u overbar double overdot', 'latin small letter u overbar double overdot']);
+  this.executeCharTest('ấ', ['latin small letter a with circumflex and acute', 'a hat acute', 'latin small letter a hat acute']);
+  this.executeCharTest('ầ', ['latin small letter a with circumflex and grave', 'a hat grave', 'latin small letter a hat grave']);
+  this.executeCharTest('ẩ', ['latin small letter a with circumflex and hook above', 'a hat hook above', 'latin small letter a hat hook above']);
+  this.executeCharTest('ẫ', ['latin small letter a with circumflex and tilde', 'a hat tilde', 'latin small letter a hat tilde']);
+  this.executeCharTest('ậ', ['latin small letter a with circumflex and dot below', 'a hat underdot', 'latin small letter a hat underdot']);
+  this.executeCharTest('ắ', ['latin small letter a with breve and acute', 'a breve acute', 'latin small letter a breve acute']);
+  this.executeCharTest('ằ', ['latin small letter a with breve and grave', 'a breve grave', 'latin small letter a breve grave']);
+  this.executeCharTest('ẳ', ['latin small letter a with breve and hook above', 'a breve hook above', 'latin small letter a breve hook above']);
+  this.executeCharTest('ẵ', ['latin small letter a with breve and tilde', 'a breve tilde', 'latin small letter a breve tilde']);
+  this.executeCharTest('ặ', ['latin small letter a with breve and dot below', 'a breve underdot', 'latin small letter a breve underdot']);
+  this.executeCharTest('ế', ['latin small letter e with circumflex and acute', 'e hat acute', 'latin small letter e hat acute']);
+  this.executeCharTest('ề', ['latin small letter e with circumflex and grave', 'e hat grave', 'latin small letter e hat grave']);
+  this.executeCharTest('ể', ['latin small letter e with circumflex and hook above', 'e hat hook above', 'latin small letter e hat hook above']);
+  this.executeCharTest('ễ', ['latin small letter e with circumflex and tilde', 'e hat tilde', 'latin small letter e hat tilde']);
+  this.executeCharTest('ệ', ['latin small letter e with circumflex and dot below', 'e hat underdot', 'latin small letter e hat underdot']);
+  this.executeCharTest('ố', ['latin small letter o with circumflex and acute', 'o hat acute', 'latin small letter o hat acute']);
+  this.executeCharTest('ồ', ['latin small letter o with circumflex and grave', 'o hat grave', 'latin small letter o hat grave']);
+  this.executeCharTest('ổ', ['latin small letter o with circumflex and hook above', 'o hat hook above', 'latin small letter o hat hook above']);
+  this.executeCharTest('ỗ', ['latin small letter o with circumflex and tilde', 'o hat tilde', 'latin small letter o hat tilde']);
+  this.executeCharTest('ộ', ['latin small letter o with circumflex and dot below', 'o hat underdot', 'latin small letter o hat underdot']);
+  this.executeCharTest('ớ', ['latin small letter o with horn and acute', 'o acute prime', 'latin small letter o acute prime']);
+  this.executeCharTest('ờ', ['latin small letter o with horn and grave', 'o grave prime', 'latin small letter o grave prime']);
+  this.executeCharTest('ở', ['latin small letter o with horn and hook above', 'o hook above prime', 'latin small letter o hook above prime']);
+  this.executeCharTest('ỡ', ['latin small letter o with horn and tilde', 'o tilde prime', 'latin small letter o tilde prime']);
+  this.executeCharTest('ợ', ['latin small letter o with horn and dot below', 'o underdot prime', 'latin small letter o underdot prime']);
+  this.executeCharTest('ứ', ['latin small letter u with horn and acute', 'u acute prime', 'latin small letter u acute prime']);
+  this.executeCharTest('ừ', ['latin small letter u with horn and grave', 'u grave prime', 'latin small letter u grave prime']);
+  this.executeCharTest('ử', ['latin small letter u with horn and hook above', 'u hook above prime', 'latin small letter u hook above prime']);
+  this.executeCharTest('ữ', ['latin small letter u with horn and tilde', 'u tilde prime', 'latin small letter u tilde prime']);
+  this.executeCharTest('ự', ['latin small letter u with horn and dot below', 'u underdot prime', 'latin small letter u underdot prime']);
+  this.executeCharTest('a', ['latin small letter a', 'a', 'a']);
+  this.executeCharTest('b', ['latin small letter b', 'b', 'b']);
+  this.executeCharTest('c', ['latin small letter c', 'c', 'c']);
+  this.executeCharTest('d', ['latin small letter d', 'd', 'd']);
+  this.executeCharTest('e', ['latin small letter e', 'e', 'e']);
+  this.executeCharTest('f', ['latin small letter f', 'f', 'f']);
+  this.executeCharTest('g', ['latin small letter g', 'g', 'g']);
+  this.executeCharTest('h', ['latin small letter h', 'h', 'h']);
+  this.executeCharTest('i', ['latin small letter i', 'i', 'i']);
+  this.executeCharTest('j', ['latin small letter j', 'j', 'j']);
+  this.executeCharTest('k', ['latin small letter k', 'k', 'k']);
+  this.executeCharTest('l', ['latin small letter l', 'l', 'l']);
+  this.executeCharTest('m', ['latin small letter m', 'm', 'm']);
+  this.executeCharTest('n', ['latin small letter n', 'n', 'n']);
+  this.executeCharTest('o', ['latin small letter o', 'o', 'o']);
+  this.executeCharTest('p', ['latin small letter p', 'p', 'p']);
+  this.executeCharTest('q', ['latin small letter q', 'q', 'q']);
+  this.executeCharTest('r', ['latin small letter r', 'r', 'r']);
+  this.executeCharTest('s', ['latin small letter s', 's', 's']);
+  this.executeCharTest('t', ['latin small letter t', 't', 't']);
+  this.executeCharTest('u', ['latin small letter u', 'u', 'u']);
+  this.executeCharTest('v', ['latin small letter v', 'v', 'v']);
+  this.executeCharTest('w', ['latin small letter w', 'w', 'w']);
+  this.executeCharTest('x', ['latin small letter x', 'x', 'x']);
+  this.executeCharTest('y', ['latin small letter y', 'y', 'y']);
+  this.executeCharTest('z', ['latin small letter z', 'z', 'z']);
+  this.executeCharTest('ａ', ['fullwidth latin small letter a', 'a', 'a']);
+  this.executeCharTest('ｂ', ['fullwidth latin small letter b', 'b', 'b']);
+  this.executeCharTest('ｃ', ['fullwidth latin small letter c', 'c', 'c']);
+  this.executeCharTest('ｄ', ['fullwidth latin small letter d', 'd', 'd']);
+  this.executeCharTest('ｅ', ['fullwidth latin small letter e', 'e', 'e']);
+  this.executeCharTest('ｆ', ['fullwidth latin small letter f', 'f', 'f']);
+  this.executeCharTest('ｇ', ['fullwidth latin small letter g', 'g', 'g']);
+  this.executeCharTest('ｈ', ['fullwidth latin small letter h', 'h', 'h']);
+  this.executeCharTest('ｉ', ['fullwidth latin small letter i', 'i', 'i']);
+  this.executeCharTest('ｊ', ['fullwidth latin small letter j', 'j', 'j']);
+  this.executeCharTest('ｋ', ['fullwidth latin small letter k', 'k', 'k']);
+  this.executeCharTest('ｌ', ['fullwidth latin small letter l', 'l', 'l']);
+  this.executeCharTest('ｍ', ['fullwidth latin small letter m', 'm', 'm']);
+  this.executeCharTest('ｎ', ['fullwidth latin small letter n', 'n', 'n']);
+  this.executeCharTest('ｏ', ['fullwidth latin small letter o', 'o', 'o']);
+  this.executeCharTest('ｐ', ['fullwidth latin small letter p', 'p', 'p']);
+  this.executeCharTest('ｑ', ['fullwidth latin small letter q', 'q', 'q']);
+  this.executeCharTest('ｒ', ['fullwidth latin small letter r', 'r', 'r']);
+  this.executeCharTest('ｓ', ['fullwidth latin small letter s', 's', 's']);
+  this.executeCharTest('ｔ', ['fullwidth latin small letter t', 't', 't']);
+  this.executeCharTest('ｕ', ['fullwidth latin small letter u', 'u', 'u']);
+  this.executeCharTest('ｖ', ['fullwidth latin small letter v', 'v', 'v']);
+  this.executeCharTest('ｗ', ['fullwidth latin small letter w', 'w', 'w']);
+  this.executeCharTest('ｘ', ['fullwidth latin small letter x', 'x', 'x']);
+  this.executeCharTest('ｙ', ['fullwidth latin small letter y', 'y', 'y']);
+  this.executeCharTest('ｚ', ['fullwidth latin small letter z', 'z', 'z']);
+  this.executeCharTest('ø', ['latin small letter o with stroke', 'o with stroke', 'latin small letter o slash']);
+  this.executeCharTest('đ', ['latin small letter d with stroke', 'd with stroke', 'latin small letter d bar']);
+  this.executeCharTest('ħ', ['latin small letter h with stroke', 'h with stroke', 'latin small letter h bar']);
+  this.executeCharTest('ł', ['latin small letter l with stroke', 'l with stroke', 'latin small letter l slash']);
+  this.executeCharTest('ŧ', ['latin small letter t with stroke', 't with stroke', 'latin small letter t bar']);
+  this.executeCharTest('ƀ', ['latin small letter b with stroke', 'b with stroke', 'latin small letter b bar']);
+  this.executeCharTest('ƛ', ['latin small letter lambda with stroke', 'lambda with stroke', 'latin small letter barred lambda']);
+  this.executeCharTest('ƶ', ['latin small letter z with stroke', 'z with stroke', 'latin small letter z bar']);
+  this.executeCharTest('ƾ', ['latin letter inverted glottal stop with stroke', 'latin letter inverted glottal stop with stroke', 'latin letter inverted glottal stop bar']);
+  this.executeCharTest('ǥ', ['latin small letter g with stroke', 'g with stroke', 'latin small letter g bar']);
+  this.executeCharTest('ǿ', ['latin small letter o with stroke and acute', 'o with stroke and acute', 'o with stroke and acute']);
+  this.executeCharTest('ȼ', ['latin small letter c with stroke', 'c with stroke', 'c with stroke']);
+  this.executeCharTest('ɇ', ['latin small letter e with stroke', 'e with stroke', 'e with stroke']);
+  this.executeCharTest('ɉ', ['latin small letter j with stroke', 'j with stroke', 'j with stroke']);
+  this.executeCharTest('ɍ', ['latin small letter r with stroke', 'r with stroke', 'r with stroke']);
+  this.executeCharTest('ɏ', ['latin small letter y with stroke', 'y with stroke', 'y with stroke']);
+  this.executeCharTest('ɟ', ['latin small letter dotless j with stroke', 'dotless j with stroke', 'latin small letter dotless j bar']);
+  this.executeCharTest('ɨ', ['latin small letter i with stroke', 'i with stroke', 'latin small letter barred i']);
+  this.executeCharTest('ʄ', ['latin small letter dotless j with stroke and hook', 'dotless j with stroke and hook', 'latin small letter dotless j bar hook']);
+  this.executeCharTest('ʡ', ['latin letter glottal stop with stroke', 'latin letter glottal stop with stroke', 'latin letter glottal stop bar']);
+  this.executeCharTest('ʢ', ['latin letter reversed glottal stop with stroke', 'latin letter reversed glottal stop with stroke', 'latin letter reversed glottal stop bar']);
+  this.executeCharTest('ᴓ', ['latin small letter sideways o with stroke', 'sideways o with stroke', 'sideways o with stroke']);
+  this.executeCharTest('ᵼ', ['latin small letter iota with stroke', 'iota with stroke', 'iota with stroke']);
+  this.executeCharTest('ᵽ', ['latin small letter p with stroke', 'p with stroke', 'p with stroke']);
+  this.executeCharTest('ᵿ', ['latin small letter upsilon with stroke', 'upsilon with stroke', 'upsilon with stroke']);
+  this.executeCharTest('ẜ', ['latin small letter long s with diagonal stroke', 'long s with diagonal stroke', 'long s with diagonal stroke']);
+  this.executeCharTest('ẝ', ['latin small letter long s with high stroke', 'long s with high stroke', 'long s with high stroke']);
+  this.executeCharTest('ƍ', ['latin small letter turned delta', 'turned delta', 'turned delta']);
+  this.executeCharTest('ẛ', ['latin small letter long s with dot above', 'long s with dot above', 'long s with dot above']);
+  this.executeCharTest('ẟ', ['latin small letter delta', 'delta', 'delta']);
+  this.executeCharTest('ĸ', ['latin small letter kra', 'kra', 'kra']);
+  this.executeCharTest('ſ', ['latin small letter long s', 'long s', 'long s']);
+  this.executeCharTest('ƃ', ['latin small letter b with topbar', 'b with topbar', 'latin small letter b topbar']);
+  this.executeCharTest('ƅ', ['latin small letter tone six', 'tone six', 'tone six']);
+  this.executeCharTest('ƈ', ['latin small letter c with hook', 'c with hook', 'latin small letter c hook']);
+  this.executeCharTest('ƌ', ['latin small letter d with topbar', 'd with topbar', 'latin small letter d topbar']);
+  this.executeCharTest('ƒ', ['latin small letter f with hook', 'f with hook', 'latin small letter script f']);
+  this.executeCharTest('ƕ', ['latin small letter hv', 'hv', 'latin small letter h v']);
+  this.executeCharTest('ƙ', ['latin small letter k with hook', 'k with hook', 'latin small letter k hook']);
+  this.executeCharTest('ƚ', ['latin small letter l with bar', 'l with bar', 'latin small letter barred l']);
+  this.executeCharTest('ƞ', ['latin small letter n with long right leg', 'n with long right leg', 'n with long right leg']);
+  this.executeCharTest('ơ', ['latin small letter o with horn', 'o with horn', 'latin small letter o horn']);
+  this.executeCharTest('ƣ', ['latin small letter oi', 'oi', 'latin small letter o i']);
+  this.executeCharTest('ƥ', ['latin small letter p with hook', 'p with hook', 'latin small letter p hook']);
+  this.executeCharTest('ƨ', ['latin small letter tone two', 'tone two', 'tone two']);
+  this.executeCharTest('ƪ', ['latin letter reversed esh loop', 'latin letter reversed esh loop', 'latin letter reversed esh loop']);
+  this.executeCharTest('ƫ', ['latin small letter t with palatal hook', 't with palatal hook', 'latin small letter t palatal hook']);
+  this.executeCharTest('ƭ', ['latin small letter t with hook', 't with hook', 'latin small letter t hook']);
+  this.executeCharTest('ư', ['latin small letter u with horn', 'u with horn', 'latin small letter u horn']);
+  this.executeCharTest('ƴ', ['latin small letter y with hook', 'y with hook', 'latin small letter y hook']);
+  this.executeCharTest('ƹ', ['latin small letter ezh reversed', 'ezh reversed', 'latin small letter reversed yogh']);
+  this.executeCharTest('ƺ', ['latin small letter ezh with tail', 'ezh with tail', 'latin small letter yogh with tail']);
+  this.executeCharTest('ƽ', ['latin small letter tone five', 'tone five', 'tone five']);
+  this.executeCharTest('ƿ', ['latin letter wynn', 'latin letter wynn', 'latin letter wynn']);
+  this.executeCharTest('ǆ', ['latin small letter dz with caron', 'dz with caron', 'latin small letter d z hacek']);
+  this.executeCharTest('ǉ', ['latin small letter lj', 'lj', 'latin small letter l j']);
+  this.executeCharTest('ǌ', ['latin small letter nj', 'nj', 'latin small letter n j']);
+  this.executeCharTest('ǣ', ['latin small letter ae with macron', 'ae with macron', 'latin small letter a e macron']);
+  this.executeCharTest('ǯ', ['latin small letter ezh with caron', 'ezh with caron', 'latin small letter yogh hacek']);
+  this.executeCharTest('ǳ', ['latin small letter dz', 'dz', 'dz']);
+  this.executeCharTest('ȝ', ['latin small letter yogh', 'yogh', 'yogh']);
+  this.executeCharTest('ɮ', ['latin small letter lezh', 'lezh', 'latin small letter l yogh']);
+  this.executeCharTest('ʒ', ['latin small letter ezh', 'ezh', 'latin small letter yogh']);
+  this.executeCharTest('ʓ', ['latin small letter ezh with curl', 'ezh with curl', 'latin small letter yogh curl']);
+  this.executeCharTest('ʤ', ['latin small letter dezh digraph', 'dezh digraph', 'latin small letter d yogh']);
+  this.executeCharTest('ǝ', ['latin small letter turned e', 'turned e', 'turned e']);
+  this.executeCharTest('ǽ', ['latin small letter ae with acute', 'ae with acute', 'ae with acute']);
+  this.executeCharTest('ȡ', ['latin small letter d with curl', 'd with curl', 'd with curl']);
+  this.executeCharTest('ȣ', ['latin small letter ou', 'ou', 'ou']);
+  this.executeCharTest('ȥ', ['latin small letter z with hook', 'z with hook', 'z with hook']);
+  this.executeCharTest('ȴ', ['latin small letter l with curl', 'l with curl', 'l with curl']);
+  this.executeCharTest('ȵ', ['latin small letter n with curl', 'n with curl', 'n with curl']);
+  this.executeCharTest('ȶ', ['latin small letter t with curl', 't with curl', 't with curl']);
+  this.executeCharTest('ȸ', ['latin small letter db digraph', 'db digraph', 'db digraph']);
+  this.executeCharTest('ȹ', ['latin small letter qp digraph', 'qp digraph', 'qp digraph']);
+  this.executeCharTest('ȿ', ['latin small letter s with swash tail', 's with swash tail', 's with swash tail']);
+  this.executeCharTest('ɀ', ['latin small letter z with swash tail', 'z with swash tail', 'z with swash tail']);
+  this.executeCharTest('ɂ', ['latin small letter glottal stop', 'glottal stop', 'glottal stop']);
+  this.executeCharTest('ɋ', ['latin small letter q with hook tail', 'q with hook tail', 'q with hook tail']);
+  this.executeCharTest('ɐ', ['latin small letter turned a', 'turned a', 'turned a']);
+  this.executeCharTest('ɑ', ['latin small letter alpha', 'alpha', 'latin small letter script a']);
+  this.executeCharTest('ɒ', ['latin small letter turned alpha', 'turned alpha', 'latin small letter turned script a']);
+  this.executeCharTest('ɓ', ['latin small letter b with hook', 'b with hook', 'latin small letter b hook']);
+  this.executeCharTest('ɔ', ['latin small letter open o', 'open o', 'open o']);
+  this.executeCharTest('ɕ', ['latin small letter c with curl', 'c with curl', 'latin small letter c curl']);
+  this.executeCharTest('ɖ', ['latin small letter d with tail', 'd with tail', 'latin small letter d retroflex hook']);
+  this.executeCharTest('ɗ', ['latin small letter d with hook', 'd with hook', 'latin small letter d hook']);
+  this.executeCharTest('ɘ', ['latin small letter reversed e', 'reversed e', 'reversed e']);
+  this.executeCharTest('ə', ['latin small letter schwa', 'schwa', 'schwa']);
+  this.executeCharTest('ɚ', ['latin small letter schwa with hook', 'schwa with hook', 'latin small letter schwa hook']);
+  this.executeCharTest('ɛ', ['latin small letter open e', 'open e', 'latin small letter epsilon']);
+  this.executeCharTest('ɜ', ['latin small letter reversed open e', 'reversed open e', 'latin small letter reversed epsilon']);
+  this.executeCharTest('ɝ', ['latin small letter reversed open e with hook', 'reversed open e with hook', 'latin small letter reversed epsilon hook']);
+  this.executeCharTest('ɞ', ['latin small letter closed reversed open e', 'closed reversed open e', 'latin small letter closed reversed epsilon']);
+  this.executeCharTest('ɠ', ['latin small letter g with hook', 'g with hook', 'latin small letter g hook']);
+  this.executeCharTest('ɡ', ['latin small letter script g', 'script g', 'script g']);
+  this.executeCharTest('ɣ', ['latin small letter gamma', 'gamma', 'gamma']);
+  this.executeCharTest('ɤ', ['latin small letter rams horn', 'rams horn', 'latin small letter baby gamma']);
+  this.executeCharTest('ɥ', ['latin small letter turned h', 'turned h', 'turned h']);
+  this.executeCharTest('ɦ', ['latin small letter h with hook', 'h with hook', 'latin small letter h hook']);
+  this.executeCharTest('ɧ', ['latin small letter heng with hook', 'heng with hook', 'latin small letter heng hook']);
+  this.executeCharTest('ɩ', ['latin small letter iota', 'iota', 'iota']);
+  this.executeCharTest('ɫ', ['latin small letter l with middle tilde', 'l with middle tilde', 'l with middle tilde']);
+  this.executeCharTest('ɬ', ['latin small letter l with belt', 'l with belt', 'latin small letter l belt']);
+  this.executeCharTest('ɭ', ['latin small letter l with retroflex hook', 'l with retroflex hook', 'latin small letter l retroflex hook']);
+  this.executeCharTest('ɯ', ['latin small letter turned m', 'turned m', 'turned m']);
+  this.executeCharTest('ɰ', ['latin small letter turned m with long leg', 'turned m with long leg', 'turned m with long leg']);
+  this.executeCharTest('ɱ', ['latin small letter m with hook', 'm with hook', 'latin small letter m hook']);
+  this.executeCharTest('ɲ', ['latin small letter n with left hook', 'n with left hook', 'latin small letter n hook']);
+  this.executeCharTest('ɳ', ['latin small letter n with retroflex hook', 'n with retroflex hook', 'latin small letter n retroflex hook']);
+  this.executeCharTest('ɵ', ['latin small letter barred o', 'barred o', 'barred o']);
+  this.executeCharTest('ɷ', ['latin small letter closed omega', 'closed omega', 'closed omega']);
+  this.executeCharTest('ɸ', ['latin small letter phi', 'phi', 'phi']);
+  this.executeCharTest('ɹ', ['latin small letter turned r', 'turned r', 'turned r']);
+  this.executeCharTest('ɺ', ['latin small letter turned r with long leg', 'turned r with long leg', 'turned r with long leg']);
+  this.executeCharTest('ɻ', ['latin small letter turned r with hook', 'turned r with hook', 'latin small letter turned r hook']);
+  this.executeCharTest('ɼ', ['latin small letter r with long leg', 'r with long leg', 'r with long leg']);
+  this.executeCharTest('ɽ', ['latin small letter r with tail', 'r with tail', 'latin small letter r hook']);
+  this.executeCharTest('ɾ', ['latin small letter r with fishhook', 'r with fishhook', 'latin small letter fishhook r']);
+  this.executeCharTest('ɿ', ['latin small letter reversed r with fishhook', 'reversed r with fishhook', 'latin small letter reversed fishhook r']);
+  this.executeCharTest('ʂ', ['latin small letter s with hook', 's with hook', 'latin small letter s hook']);
+  this.executeCharTest('ʃ', ['latin small letter esh', 'esh', 'esh']);
+  this.executeCharTest('ʅ', ['latin small letter squat reversed esh', 'squat reversed esh', 'squat reversed esh']);
+  this.executeCharTest('ʆ', ['latin small letter esh with curl', 'esh with curl', 'latin small letter esh curl']);
+  this.executeCharTest('ʇ', ['latin small letter turned t', 'turned t', 'turned t']);
+  this.executeCharTest('ʈ', ['latin small letter t with retroflex hook', 't with retroflex hook', 'latin small letter t retroflex hook']);
+  this.executeCharTest('ʉ', ['latin small letter u bar', 'u bar', 'u bar']);
+  this.executeCharTest('ʊ', ['latin small letter upsilon', 'upsilon', 'upsilon']);
+  this.executeCharTest('ʋ', ['latin small letter v with hook', 'v with hook', 'latin small letter script v']);
+  this.executeCharTest('ʌ', ['latin small letter turned v', 'turned v', 'turned v']);
+  this.executeCharTest('ʍ', ['latin small letter turned w', 'turned w', 'turned w']);
+  this.executeCharTest('ʎ', ['latin small letter turned y', 'turned y', 'turned y']);
+  this.executeCharTest('ʐ', ['latin small letter z with retroflex hook', 'z with retroflex hook', 'latin small letter z retroflex hook']);
+  this.executeCharTest('ʑ', ['latin small letter z with curl', 'z with curl', 'latin small letter z curl']);
+  this.executeCharTest('ʕ', ['latin letter pharyngeal voiced fricative', 'latin letter pharyngeal voiced fricative', 'latin letter reversed glottal stop']);
+  this.executeCharTest('ʖ', ['latin letter inverted glottal stop', 'latin letter inverted glottal stop', 'latin letter inverted glottal stop']);
+  this.executeCharTest('ʗ', ['latin letter stretched c', 'latin letter stretched c', 'latin letter stretched c']);
+  this.executeCharTest('ʘ', ['latin letter bilabial click', 'latin letter bilabial click', 'latin letter bullseye']);
+  this.executeCharTest('ʚ', ['latin small letter closed open e', 'closed open e', 'latin small letter closed epsilon']);
+  this.executeCharTest('ʞ', ['latin small letter turned k', 'turned k', 'turned k']);
+  this.executeCharTest('ʠ', ['latin small letter q with hook', 'q with hook', 'latin small letter q hook']);
+  this.executeCharTest('ʣ', ['latin small letter dz digraph', 'dz digraph', 'latin small letter d z']);
+  this.executeCharTest('ʥ', ['latin small letter dz digraph with curl', 'dz digraph with curl', 'latin small letter d z curl']);
+  this.executeCharTest('ʦ', ['latin small letter ts digraph', 'ts digraph', 'latin small letter t s']);
+  this.executeCharTest('ʧ', ['latin small letter tesh digraph', 'tesh digraph', 'latin small letter t esh']);
+  this.executeCharTest('ʨ', ['latin small letter tc digraph with curl', 'tc digraph with curl', 'latin small letter t c curl']);
+  this.executeCharTest('ʩ', ['latin small letter feng digraph', 'feng digraph', 'feng digraph']);
+  this.executeCharTest('ʪ', ['latin small letter ls digraph', 'ls digraph', 'ls digraph']);
+  this.executeCharTest('ʫ', ['latin small letter lz digraph', 'lz digraph', 'lz digraph']);
+  this.executeCharTest('ʬ', ['latin letter bilabial percussive', 'latin letter bilabial percussive', 'latin letter bilabial percussive']);
+  this.executeCharTest('ʭ', ['latin letter bidental percussive', 'latin letter bidental percussive', 'latin letter bidental percussive']);
+  this.executeCharTest('ʮ', ['latin small letter turned h with fishhook', 'turned h with fishhook', 'turned h with fishhook']);
+  this.executeCharTest('ʯ', ['latin small letter turned h with fishhook and tail', 'turned h with fishhook and tail', 'turned h with fishhook and tail']);
+  this.executeCharTest('ᴂ', ['latin small letter turned ae', 'turned ae', 'turned ae']);
+  this.executeCharTest('ᴈ', ['latin small letter turned open e', 'turned open e', 'turned open e']);
+  this.executeCharTest('ᴉ', ['latin small letter turned i', 'turned i', 'turned i']);
+  this.executeCharTest('ᴑ', ['latin small letter sideways o', 'sideways o', 'sideways o']);
+  this.executeCharTest('ᴒ', ['latin small letter sideways open o', 'sideways open o', 'sideways open o']);
+  this.executeCharTest('ᴔ', ['latin small letter turned oe', 'turned oe', 'turned oe']);
+  this.executeCharTest('ᴖ', ['latin small letter top half o', 'top half o', 'top half o']);
+  this.executeCharTest('ᴗ', ['latin small letter bottom half o', 'bottom half o', 'bottom half o']);
+  this.executeCharTest('ᴝ', ['latin small letter sideways u', 'sideways u', 'sideways u']);
+  this.executeCharTest('ᴞ', ['latin small letter sideways diaeresized u', 'sideways diaeresized u', 'sideways diaeresized u']);
+  this.executeCharTest('ᴟ', ['latin small letter sideways turned m', 'sideways turned m', 'sideways turned m']);
+  this.executeCharTest('ᴤ', ['latin letter voiced laryngeal spirant', 'latin letter voiced laryngeal spirant', 'latin letter voiced laryngeal spirant']);
+  this.executeCharTest('ᴥ', ['latin letter ain', 'latin letter ain', 'latin letter ain']);
+  this.executeCharTest('ᵫ', ['latin small letter ue', 'ue', 'ue']);
+  this.executeCharTest('ᵬ', ['latin small letter b with middle tilde', 'b with middle tilde', 'b with middle tilde']);
+  this.executeCharTest('ᵭ', ['latin small letter d with middle tilde', 'd with middle tilde', 'd with middle tilde']);
+  this.executeCharTest('ᵮ', ['latin small letter f with middle tilde', 'f with middle tilde', 'f with middle tilde']);
+  this.executeCharTest('ᵯ', ['latin small letter m with middle tilde', 'm with middle tilde', 'm with middle tilde']);
+  this.executeCharTest('ᵰ', ['latin small letter n with middle tilde', 'n with middle tilde', 'n with middle tilde']);
+  this.executeCharTest('ᵱ', ['latin small letter p with middle tilde', 'p with middle tilde', 'p with middle tilde']);
+  this.executeCharTest('ᵲ', ['latin small letter r with middle tilde', 'r with middle tilde', 'r with middle tilde']);
+  this.executeCharTest('ᵳ', ['latin small letter r with fishhook and middle tilde', 'r with fishhook and middle tilde', 'r with fishhook and middle tilde']);
+  this.executeCharTest('ᵴ', ['latin small letter s with middle tilde', 's with middle tilde', 's with middle tilde']);
+  this.executeCharTest('ᵵ', ['latin small letter t with middle tilde', 't with middle tilde', 't with middle tilde']);
+  this.executeCharTest('ᵶ', ['latin small letter z with middle tilde', 'z with middle tilde', 'z with middle tilde']);
+  this.executeCharTest('ᵷ', ['latin small letter turned g', 'turned g', 'turned g']);
+  this.executeCharTest('ᵹ', ['latin small letter insular g', 'insular g', 'insular g']);
+  this.executeCharTest('ᵺ', ['latin small letter th with strikethrough', 'th with strikethrough', 'th with strikethrough']);
+  this.executeCharTest('ᶀ', ['latin small letter b with palatal hook', 'b with palatal hook', 'b with palatal hook']);
+  this.executeCharTest('ᶁ', ['latin small letter d with palatal hook', 'd with palatal hook', 'd with palatal hook']);
+  this.executeCharTest('ᶂ', ['latin small letter f with palatal hook', 'f with palatal hook', 'f with palatal hook']);
+  this.executeCharTest('ᶃ', ['latin small letter g with palatal hook', 'g with palatal hook', 'g with palatal hook']);
+  this.executeCharTest('ᶄ', ['latin small letter k with palatal hook', 'k with palatal hook', 'k with palatal hook']);
+  this.executeCharTest('ᶅ', ['latin small letter l with palatal hook', 'l with palatal hook', 'l with palatal hook']);
+  this.executeCharTest('ᶆ', ['latin small letter m with palatal hook', 'm with palatal hook', 'm with palatal hook']);
+  this.executeCharTest('ᶇ', ['latin small letter n with palatal hook', 'n with palatal hook', 'n with palatal hook']);
+  this.executeCharTest('ᶈ', ['latin small letter p with palatal hook', 'p with palatal hook', 'p with palatal hook']);
+  this.executeCharTest('ᶉ', ['latin small letter r with palatal hook', 'r with palatal hook', 'r with palatal hook']);
+  this.executeCharTest('ᶊ', ['latin small letter s with palatal hook', 's with palatal hook', 's with palatal hook']);
+  this.executeCharTest('ᶋ', ['latin small letter esh with palatal hook', 'esh with palatal hook', 'esh with palatal hook']);
+  this.executeCharTest('ᶌ', ['latin small letter v with palatal hook', 'v with palatal hook', 'v with palatal hook']);
+  this.executeCharTest('ᶍ', ['latin small letter x with palatal hook', 'x with palatal hook', 'x with palatal hook']);
+  this.executeCharTest('ᶎ', ['latin small letter z with palatal hook', 'z with palatal hook', 'z with palatal hook']);
+  this.executeCharTest('ᶏ', ['latin small letter a with retroflex hook', 'a with retroflex hook', 'a with retroflex hook']);
+  this.executeCharTest('ᶐ', ['latin small letter alpha with retroflex hook', 'alpha with retroflex hook', 'alpha with retroflex hook']);
+  this.executeCharTest('ᶑ', ['latin small letter d with hook and tail', 'd with hook and tail', 'd with hook and tail']);
+  this.executeCharTest('ᶒ', ['latin small letter e with retroflex hook', 'e with retroflex hook', 'e with retroflex hook']);
+  this.executeCharTest('ᶓ', ['latin small letter open e with retroflex hook', 'open e with retroflex hook', 'open e with retroflex hook']);
+  this.executeCharTest('ᶔ', ['latin small letter reversed open e with retroflex hook', 'reversed open e with retroflex hook', 'reversed open e with retroflex hook']);
+  this.executeCharTest('ᶕ', ['latin small letter schwa with retroflex hook', 'schwa with retroflex hook', 'schwa with retroflex hook']);
+  this.executeCharTest('ᶖ', ['latin small letter i with retroflex hook', 'i with retroflex hook', 'i with retroflex hook']);
+  this.executeCharTest('ᶗ', ['latin small letter open o with retroflex hook', 'open o with retroflex hook', 'open o with retroflex hook']);
+  this.executeCharTest('ᶘ', ['latin small letter esh with retroflex hook', 'esh with retroflex hook', 'esh with retroflex hook']);
+  this.executeCharTest('ᶙ', ['latin small letter u with retroflex hook', 'u with retroflex hook', 'u with retroflex hook']);
+  this.executeCharTest('ᶚ', ['latin small letter ezh with retroflex hook', 'ezh with retroflex hook', 'ezh with retroflex hook']);
+  this.executeCharTest('ŉ', ['latin small letter n preceded by apostrophe', 'n preceded by apostrophe', 'latin small letter apostrophe n']);
+  this.executeCharTest('ŋ', ['latin small letter eng', 'eng', 'eng']);
+  this.executeCharTest('à', ['latin small letter a with grave', 'a grave', 'latin small letter a grave']);
+  this.executeCharTest('á', ['latin small letter a with acute', 'a acute', 'latin small letter a acute']);
+  this.executeCharTest('â', ['latin small letter a with circumflex', 'a hat', 'latin small letter a hat']);
+  this.executeCharTest('ã', ['latin small letter a with tilde', 'a tilde', 'latin small letter a tilde']);
+  this.executeCharTest('ä', ['latin small letter a with diaeresis', 'a double overdot', 'latin small letter a double overdot']);
+  this.executeCharTest('å', ['latin small letter a with ring above', 'a ring', 'latin small letter a ring']);
+  this.executeCharTest('ç', ['latin small letter c with cedilla', 'c cedilla', 'latin small letter c cedilla']);
+  this.executeCharTest('è', ['latin small letter e with grave', 'e grave', 'latin small letter e grave']);
+  this.executeCharTest('é', ['latin small letter e with acute', 'e acute', 'latin small letter e acute']);
+  this.executeCharTest('ê', ['latin small letter e with circumflex', 'e hat', 'latin small letter e hat']);
+  this.executeCharTest('ë', ['latin small letter e with diaeresis', 'e double overdot', 'latin small letter e double overdot']);
+  this.executeCharTest('ì', ['latin small letter i with grave', 'i grave', 'latin small letter i grave']);
+  this.executeCharTest('í', ['latin small letter i with acute', 'i acute', 'latin small letter i acute']);
+  this.executeCharTest('î', ['latin small letter i with circumflex', 'i hat', 'latin small letter i hat']);
+  this.executeCharTest('ï', ['latin small letter i with diaeresis', 'i double overdot', 'latin small letter i double overdot']);
+  this.executeCharTest('ñ', ['latin small letter n with tilde', 'n tilde', 'latin small letter n tilde']);
+  this.executeCharTest('ò', ['latin small letter o with grave', 'o grave', 'latin small letter o grave']);
+  this.executeCharTest('ó', ['latin small letter o with acute', 'o acute', 'latin small letter o acute']);
+  this.executeCharTest('ô', ['latin small letter o with circumflex', 'o hat', 'latin small letter o hat']);
+  this.executeCharTest('õ', ['latin small letter o with tilde', 'o tilde', 'latin small letter o tilde']);
+  this.executeCharTest('ö', ['latin small letter o with diaeresis', 'o double overdot', 'latin small letter o double overdot']);
+  this.executeCharTest('ù', ['latin small letter u with grave', 'u grave', 'latin small letter u grave']);
+  this.executeCharTest('ú', ['latin small letter u with acute', 'u acute', 'latin small letter u acute']);
+  this.executeCharTest('û', ['latin small letter u with circumflex', 'u hat', 'latin small letter u hat']);
+  this.executeCharTest('ü', ['latin small letter u with diaeresis', 'u double overdot', 'latin small letter u double overdot']);
+  this.executeCharTest('ý', ['latin small letter y with acute', 'y acute', 'latin small letter y acute']);
+  this.executeCharTest('ÿ', ['latin small letter y with diaeresis', 'y double overdot', 'latin small letter y double overdot']);
+  this.executeCharTest('ā', ['latin small letter a with macron', 'a overbar', 'latin small letter a overbar']);
+  this.executeCharTest('ă', ['latin small letter a with breve', 'a breve', 'latin small letter a breve']);
+  this.executeCharTest('ą', ['latin small letter a with ogonek', 'a ogonek', 'latin small letter a ogonek']);
+  this.executeCharTest('ć', ['latin small letter c with acute', 'c acute', 'latin small letter c acute']);
+  this.executeCharTest('ĉ', ['latin small letter c with circumflex', 'c hat', 'latin small letter c hat']);
+  this.executeCharTest('ċ', ['latin small letter c with dot above', 'c overdot', 'latin small letter c dot']);
+  this.executeCharTest('č', ['latin small letter c with caron', 'c caron', 'latin small letter c hacek']);
+  this.executeCharTest('ď', ['latin small letter d with caron', 'd caron', 'latin small letter d hacek']);
+  this.executeCharTest('ē', ['latin small letter e with macron', 'e overbar', 'latin small letter e overbar']);
+  this.executeCharTest('ĕ', ['latin small letter e with breve', 'e breve', 'latin small letter e breve']);
+  this.executeCharTest('ė', ['latin small letter e with dot above', 'e overdot', 'latin small letter e dot']);
+  this.executeCharTest('ę', ['latin small letter e with ogonek', 'e ogonek', 'latin small letter e ogonek']);
+  this.executeCharTest('ě', ['latin small letter e with caron', 'e caron', 'latin small letter e hacek']);
+  this.executeCharTest('ĝ', ['latin small letter g with circumflex', 'g hat', 'latin small letter g hat']);
+  this.executeCharTest('ğ', ['latin small letter g with breve', 'g breve', 'latin small letter g breve']);
+  this.executeCharTest('ġ', ['latin small letter g with dot above', 'g overdot', 'latin small letter g dot']);
+  this.executeCharTest('ģ', ['latin small letter g with cedilla', 'g cedilla', 'latin small letter g cedilla']);
+  this.executeCharTest('ĥ', ['latin small letter h with circumflex', 'h hat', 'latin small letter h hat']);
+  this.executeCharTest('ĩ', ['latin small letter i with tilde', 'i tilde', 'latin small letter i tilde']);
+  this.executeCharTest('ī', ['latin small letter i with macron', 'i overbar', 'latin small letter i overbar']);
+  this.executeCharTest('ĭ', ['latin small letter i with breve', 'i breve', 'latin small letter i breve']);
+  this.executeCharTest('į', ['latin small letter i with ogonek', 'i ogonek', 'latin small letter i ogonek']);
+  this.executeCharTest('ı', ['latin small letter dotless i', 'dotless i', 'latin small letter dotless i']);
+  this.executeCharTest('ĵ', ['latin small letter j circumflex', 'j hat', 'latin small letter j hat']);
+  this.executeCharTest('ķ', ['latin small letter k with cedilla', 'k cedilla', 'latin small letter k cedilla']);
+  this.executeCharTest('ĺ', ['latin small letter l with acute', 'l acute', 'latin small letter l acute']);
+  this.executeCharTest('ļ', ['latin small letter l with cedilla', 'l cedilla', 'latin small letter l cedilla']);
+  this.executeCharTest('ľ', ['latin small letter l with caron', 'l caron', 'latin small letter l hacek']);
+  this.executeCharTest('ŀ', ['latin small letter l with middle dot', 'l middle dot', 'latin small letter l middle dot']);
+  this.executeCharTest('ń', ['latin small letter n with acute', 'n acute', 'latin small letter n acute']);
+  this.executeCharTest('ņ', ['latin small letter n with cedilla', 'n cedilla', 'latin small letter n cedilla']);
+  this.executeCharTest('ň', ['latin small letter n with caron', 'n caron', 'latin small letter n hacek']);
+  this.executeCharTest('ō', ['latin small letter o macron', 'o overbar', 'latin small letter o overbar']);
+  this.executeCharTest('ŏ', ['latin small letter o with breve', 'o breve', 'latin small letter o breve']);
+  this.executeCharTest('ő', ['latin small letter o with double acute', 'o double acute', 'latin small letter o double acute']);
+  this.executeCharTest('ŕ', ['latin small letter r with acute', 'r acute', 'latin small letter r acute']);
+  this.executeCharTest('ŗ', ['latin small letter r with cedilla', 'r cedilla', 'latin small letter r cedilla']);
+  this.executeCharTest('ř', ['latin small letter r with caron', 'r caron', 'latin small letter r hacek']);
+  this.executeCharTest('ś', ['latin small letter s with acute', 's acute', 'latin small letter s acute']);
+  this.executeCharTest('ŝ', ['latin small letter s with circumflex', 's hat', 'latin small letter s hat']);
+  this.executeCharTest('ş', ['latin small letter s with cedilla', 's cedilla', 'latin small letter s cedilla']);
+  this.executeCharTest('š', ['latin small letter s with caron', 's caron', 'latin small letter s hacek']);
+  this.executeCharTest('ţ', ['latin small letter t with cedilla', 't cedilla', 'latin small letter t cedilla']);
+  this.executeCharTest('ť', ['latin small letter t with caron', 't caron', 'latin small letter t hacek']);
+  this.executeCharTest('ũ', ['latin small letter u with tilde', 'u tilde', 'latin small letter u tilde']);
+  this.executeCharTest('ū', ['latin small letter u with macron', 'u overbar', 'latin small letter u overbar']);
+  this.executeCharTest('ŭ', ['latin small letter u with breve', 'u breve', 'latin small letter u breve']);
+  this.executeCharTest('ů', ['latin small letter u with ring above', 'u ring', 'latin small letter u ring']);
+  this.executeCharTest('ű', ['latin small letter u with double acute', 'u double acute', 'latin small letter u double acute']);
+  this.executeCharTest('ų', ['latin small letter u with ogonek', 'u ogonek', 'latin small letter u ogonek']);
+  this.executeCharTest('ŵ', ['latin small letter w with circumflex', 'w hat', 'latin small letter w hat']);
+  this.executeCharTest('ŷ', ['latin small letter y with circumflex', 'y hat', 'latin small letter y hat']);
+  this.executeCharTest('ź', ['latin small letter z with acute', 'z acute', 'latin small letter z acute']);
+  this.executeCharTest('ż', ['latin small letter z with dot above', 'z overdot', 'latin small letter z dot']);
+  this.executeCharTest('ž', ['latin small letter z with caron', 'z caron', 'latin small letter z hacek']);
+  this.executeCharTest('ǎ', ['latin small letter a with caron', 'a caron', 'latin small letter a hacek']);
+  this.executeCharTest('ǐ', ['latin small letter i with caron', 'i caron', 'latin small letter i hacek']);
+  this.executeCharTest('ǒ', ['latin small letter o with caron', 'o caron', 'latin small letter o hacek']);
+  this.executeCharTest('ǔ', ['latin small letter u with caron', 'u caron', 'latin small letter u hacek']);
+  this.executeCharTest('ǧ', ['latin small letter g with caron', 'g caron', 'latin small letter g hacek']);
+  this.executeCharTest('ǩ', ['latin small letter k with caron', 'k caron', 'latin small letter k hacek']);
+  this.executeCharTest('ǫ', ['latin small letter o with ogonek', 'o ogonek', 'latin small letter o ogonek']);
+  this.executeCharTest('ǰ', ['latin small letter j with caron', 'j caron', 'latin small letter j hacek']);
+  this.executeCharTest('ǵ', ['latin small letter g with acute', 'g acute', 'latin small letter g acute']);
+  this.executeCharTest('ǹ', ['latin small letter n with grave', 'n grave', 'latin small letter n grave']);
+  this.executeCharTest('ȁ', ['latin small letter a with double grave', 'a double grave', 'latin small letter a double grave']);
+  this.executeCharTest('ȃ', ['latin small letter a with inverted breve', 'a inverted breve', 'latin small letter a inverted breve']);
+  this.executeCharTest('ȅ', ['latin small letter e with double grave', 'e double grave', 'latin small letter e double grave']);
+  this.executeCharTest('ȇ', ['latin small letter e with inverted breve', 'e inverted breve', 'latin small letter e inverted breve']);
+  this.executeCharTest('ȉ', ['latin small letter i with double grave', 'i double grave', 'latin small letter i double grave']);
+  this.executeCharTest('ȋ', ['latin small letter i with inverted breve', 'i inverted breve', 'latin small letter i inverted breve']);
+  this.executeCharTest('ȍ', ['latin small letter o with double grave', 'o double grave', 'latin small letter o double grave']);
+  this.executeCharTest('ȏ', ['latin small letter o with inverted breve', 'o inverted breve', 'latin small letter o inverted breve']);
+  this.executeCharTest('ȑ', ['latin small letter r with double grave', 'r double grave', 'latin small letter r double grave']);
+  this.executeCharTest('ȓ', ['latin small letter r with inverted breve', 'r inverted breve', 'latin small letter r inverted breve']);
+  this.executeCharTest('ȕ', ['latin small letter u with double grave', 'u double grave', 'latin small letter u double grave']);
+  this.executeCharTest('ȗ', ['latin small letter u with inverted breve', 'u inverted breve', 'latin small letter u inverted breve']);
+  this.executeCharTest('ș', ['latin small letter s with comma below', 's comma below', 'latin small letter s comma below']);
+  this.executeCharTest('ț', ['latin small letter t with comma below', 't comma below', 'latin small letter t comma below']);
+  this.executeCharTest('ȟ', ['latin small letter h with caron', 'h caron', 'latin small letter h caron']);
+  this.executeCharTest('ȧ', ['latin small letter a with dot above', 'a overdot', 'latin small letter a overdot']);
+  this.executeCharTest('ȩ', ['latin small letter e with cedilla', 'e cedilla', 'latin small letter e cedilla']);
+  this.executeCharTest('ȯ', ['latin small letter o with dot above', 'o overdot', 'latin small letter o overdot']);
+  this.executeCharTest('ȳ', ['latin small letter y with macron', 'y overbar', 'latin small letter y overbar']);
+  this.executeCharTest('ȷ', ['latin small letter dotless j', 'dotless j', 'latin small letter dotless j']);
+  this.executeCharTest('ḁ', ['latin small letter a ring below', 'a ring below', 'latin small letter a ring below']);
+  this.executeCharTest('ḃ', ['latin small letter b with dot above', 'b overdot', 'latin small letter b overdot']);
+  this.executeCharTest('ḅ', ['latin small letter b with dot below', 'b underdot', 'latin small letter b underdot']);
+  this.executeCharTest('ḇ', ['latin small letter b with line below', 'b underbar', 'latin small letter b underbar']);
+  this.executeCharTest('ḋ', ['latin small letter d with dot above', 'd overdot', 'latin small letter d overdot']);
+  this.executeCharTest('ḍ', ['latin small letter d with dot below', 'd underdot', 'latin small letter d underdot']);
+  this.executeCharTest('ḏ', ['latin small letter d with line below', 'd underbar', 'latin small letter d underbar']);
+  this.executeCharTest('ḑ', ['latin small letter d with cedilla', 'd cedilla', 'latin small letter d cedilla']);
+  this.executeCharTest('ḓ', ['latin small letter d with circumflex below', 'd underhat', 'latin small letter d underhat']);
+  this.executeCharTest('ḙ', ['latin small letter e with circumflex below', 'e underhat', 'latin small letter e underhat']);
+  this.executeCharTest('ḛ', ['latin small letter e with tilde below', 'e tilde below', 'latin small letter e tilde below']);
+  this.executeCharTest('ḟ', ['latin small letter f with dot above', 'f overdot', 'latin small letter f overdot']);
+  this.executeCharTest('ḡ', ['latin small letter g with macron', 'g overbar', 'latin small letter g overbar']);
+  this.executeCharTest('ḣ', ['latin small letter h with dot above', 'h overdot', 'latin small letter h overdot']);
+  this.executeCharTest('ḥ', ['latin small letter h with dot below', 'h underdot', 'latin small letter h underdot']);
+  this.executeCharTest('ḧ', ['latin small letter h with diaeresis', 'h double overdot', 'latin small letter h double overdot']);
+  this.executeCharTest('ḩ', ['latin small letter h with cedilla', 'h cedilla', 'latin small letter h cedilla']);
+  this.executeCharTest('ḫ', ['latin small letter h with breve below', 'h breve below', 'latin small letter h breve below']);
+  this.executeCharTest('ḭ', ['latin small letter i with tilde below', 'i tilde below', 'latin small letter i tilde below']);
+  this.executeCharTest('ḱ', ['latin small letter k with acute', 'k acute', 'latin small letter k acute']);
+  this.executeCharTest('ḳ', ['latin small letter k with dot below', 'k underdot', 'latin small letter k underdot']);
+  this.executeCharTest('ḵ', ['latin small letter k with line below', 'k underbar', 'latin small letter k underbar']);
+  this.executeCharTest('ḷ', ['latin small letter l with dot below', 'l underdot', 'latin small letter l underdot']);
+  this.executeCharTest('ḻ', ['latin small letter l with line below', 'l underbar', 'latin small letter l underbar']);
+  this.executeCharTest('ḽ', ['latin small letter l with circumflex below', 'l underhat', 'latin small letter l underhat']);
+  this.executeCharTest('ḿ', ['latin small letter m with acute', 'm acute', 'latin small letter m acute']);
+  this.executeCharTest('ṁ', ['latin small letter m with dot above', 'm overdot', 'latin small letter m overdot']);
+  this.executeCharTest('ṃ', ['latin small letter m with dot below', 'm underdot', 'latin small letter m underdot']);
+  this.executeCharTest('ṅ', ['latin small letter n with dot above', 'n overdot', 'latin small letter n overdot']);
+  this.executeCharTest('ṇ', ['latin small letter n with dot below', 'n underdot', 'latin small letter n underdot']);
+  this.executeCharTest('ṉ', ['latin small letter n with line below', 'n underbar', 'latin small letter n underbar']);
+  this.executeCharTest('ṋ', ['latin small letter n with circumflex below', 'n underhat', 'latin small letter n underhat']);
+  this.executeCharTest('ṕ', ['latin small letter p with acute', 'p acute', 'latin small letter p acute']);
+  this.executeCharTest('ṗ', ['latin small letter p with dot above', 'p overdot', 'latin small letter p overdot']);
+  this.executeCharTest('ṙ', ['latin small letter r with dot above', 'r overdot', 'latin small letter r overdot']);
+  this.executeCharTest('ṛ', ['latin small letter r with dot below', 'r underdot', 'latin small letter r underdot']);
+  this.executeCharTest('ṟ', ['latin small letter r with line below', 'r underbar', 'latin small letter r underbar']);
+  this.executeCharTest('ṡ', ['latin small letter s with dot above', 's overdot', 'latin small letter s overdot']);
+  this.executeCharTest('ṣ', ['latin small letter s with dot below', 's underdot', 'latin small letter s underdot']);
+  this.executeCharTest('ṫ', ['latin small letter t with dot above', 't overdot', 'latin small letter t overdot']);
+  this.executeCharTest('ṭ', ['latin small letter t with dot below', 't underdot', 'latin small letter t underdot']);
+  this.executeCharTest('ṯ', ['latin small letter t with line below', 't underbar', 'latin small letter t underbar']);
+  this.executeCharTest('ṱ', ['latin small letter t with circumflex below', 't underhat', 'latin small letter t underhat']);
+  this.executeCharTest('ṳ', ['latin small letter u with diaeresis below', 'u double underdot', 'latin small letter u double underdot']);
+  this.executeCharTest('ṵ', ['latin small letter u with tilde below', 'u tilde below', 'latin small letter u tilde below']);
+  this.executeCharTest('ṷ', ['latin small letter u with circumflex below', 'u underhat', 'latin small letter u underhat']);
+  this.executeCharTest('ṽ', ['latin small letter v with tilde', 'v tilde', 'latin small letter v tilde']);
+  this.executeCharTest('ṿ', ['latin small letter v with dot below', 'v underdot', 'latin small letter v underdot']);
+  this.executeCharTest('ẁ', ['latin small letter w with grave', 'w grave', 'latin small letter w grave']);
+  this.executeCharTest('ẃ', ['latin small letter w with acute', 'w acute', 'latin small letter w acute']);
+  this.executeCharTest('ẅ', ['latin small letter w with diaeresis', 'w double overdot', 'latin small letter w double overdot']);
+  this.executeCharTest('ẇ', ['latin small letter w with dot above', 'w overdot', 'latin small letter w overdot']);
+  this.executeCharTest('ẉ', ['latin small letter w with dot below', 'w underdot', 'latin small letter w underdot']);
+  this.executeCharTest('ẋ', ['latin small letter x with dot above', 'x overdot', 'latin small letter x overdot']);
+  this.executeCharTest('ẍ', ['latin small letter x with diaeresis', 'x double overdot', 'latin small letter x double overdot']);
+  this.executeCharTest('ẏ', ['latin small letter y with dot above', 'y overdot', 'latin small letter y overdot']);
+  this.executeCharTest('ẑ', ['latin small letter z with circumflex', 'z hat', 'latin small letter z hat']);
+  this.executeCharTest('ẓ', ['latin small letter z with dot below', 'z underdot', 'latin small letter z underdot']);
+  this.executeCharTest('ẕ', ['latin small letter z with line below', 'z underbar', 'latin small letter z underbar']);
+  this.executeCharTest('ẖ', ['latin small letter h with line below', 'h underbar', 'latin small letter h underbar']);
+  this.executeCharTest('ẗ', ['latin small letter t with diaeresis', 't double overdot', 'latin small letter t double overdot']);
+  this.executeCharTest('ẘ', ['latin small letter w with ring above', 'w ring', 'latin small letter w ring']);
+  this.executeCharTest('ẙ', ['latin small letter y with ring above', 'y ring', 'latin small letter y ring']);
+  this.executeCharTest('ẚ', ['latin small letter a with right half ring', 'a right half ring', 'latin small letter a right half ring']);
+  this.executeCharTest('ạ', ['latin small letter a with dot below', 'a underdot', 'latin small letter a underdot']);
+  this.executeCharTest('ả', ['latin small letter a with hook above', 'a hook', 'latin small letter a hook']);
+  this.executeCharTest('ẹ', ['latin small letter e with dot below', 'e underdot', 'latin small letter e underdot']);
+  this.executeCharTest('ẻ', ['latin small letter e with hook above', 'e hook', 'latin small letter e hook']);
+  this.executeCharTest('ẽ', ['latin small letter e with tilde', 'e tilde', 'latin small letter e tilde']);
+  this.executeCharTest('ỉ', ['latin small letter i with hook above', 'i hook', 'latin small letter i hook']);
+  this.executeCharTest('ị', ['latin small letter i with dot below', 'i underdot', 'latin small letter i underdot']);
+  this.executeCharTest('ọ', ['latin small letter o with dot below', 'o underdot', 'latin small letter o underdot']);
+  this.executeCharTest('ỏ', ['latin small letter o with hook above', 'o hook', 'latin small letter o hook']);
+  this.executeCharTest('ụ', ['latin small letter u with dot below', 'u underdot', 'latin small letter u underdot']);
+  this.executeCharTest('ủ', ['latin small letter u with hook above', 'u hook', 'latin small letter u hook']);
+  this.executeCharTest('ỳ', ['latin small letter y with grave', 'y grave', 'latin small letter y grave']);
+  this.executeCharTest('ỵ', ['latin small letter y with dot below', 'y underdot', 'latin small letter y underdot']);
+  this.executeCharTest('ỷ', ['latin small letter y with hook above', 'y hook', 'latin small letter y hook']);
+  this.executeCharTest('ỹ', ['latin small letter y with tilde', 'y tilde', 'latin small letter y tilde']);
+  this.executeCharTest('ͣ', ['combining latin small letter a', 'combining a', 'combining a']);
+  this.executeCharTest('ͤ', ['combining latin small letter e', 'combining e', 'combining e']);
+  this.executeCharTest('ͥ', ['combining latin small letter i', 'combining i', 'combining i']);
+  this.executeCharTest('ͦ', ['combining latin small letter o', 'combining o', 'combining o']);
+  this.executeCharTest('ͧ', ['combining latin small letter u', 'combining u', 'combining u']);
+  this.executeCharTest('ͨ', ['combining latin small letter c', 'combining c', 'combining c']);
+  this.executeCharTest('ͩ', ['combining latin small letter d', 'combining d', 'combining d']);
+  this.executeCharTest('ͪ', ['combining latin small letter h', 'combining h', 'combining h']);
+  this.executeCharTest('ͫ', ['combining latin small letter m', 'combining m', 'combining m']);
+  this.executeCharTest('ͬ', ['combining latin small letter r', 'combining r', 'combining r']);
+  this.executeCharTest('ͭ', ['combining latin small letter t', 'combining t', 'combining t']);
+  this.executeCharTest('ͮ', ['combining latin small letter v', 'combining v', 'combining v']);
+  this.executeCharTest('ͯ', ['combining latin small letter x', 'combining x', 'combining x']);
+  this.executeCharTest('ᵢ', ['latin subscript small letter i', 'subscript i', 'subscript i']);
+  this.executeCharTest('ᵣ', ['latin subscript small letter r', 'subscript r', 'subscript r']);
+  this.executeCharTest('ᵤ', ['latin subscript small letter u', 'subscript u', 'subscript u']);
+  this.executeCharTest('ᵥ', ['latin subscript small letter v', 'subscript v', 'subscript v']);
+  this.executeCharTest('᷊', ['combining latin small letter r below', 'combining r below', 'combining r below']);
+  this.executeCharTest('ᷓ', ['combining latin small letter flattened open a above', 'combining flattened open a above', 'combining flattened open a above']);
+  this.executeCharTest('ᷔ', ['combining latin small letter ae', 'combining ae', 'combining ae']);
+  this.executeCharTest('ᷕ', ['combining latin small letter ao', 'combining ao', 'combining ao']);
+  this.executeCharTest('ᷖ', ['combining latin small letter av', 'combining av', 'combining av']);
+  this.executeCharTest('ᷗ', ['combining latin small letter c cedilla', 'combining c cedilla', 'combining c cedilla']);
+  this.executeCharTest('ᷘ', ['combining latin small letter insular d', 'combining insular d', 'combining insular d']);
+  this.executeCharTest('ᷙ', ['combining latin small letter eth', 'combining eth', 'combining eth']);
+  this.executeCharTest('ᷚ', ['combining latin small letter g', 'combining g', 'combining g']);
+  this.executeCharTest('ᷛ', ['combining latin letter small capital g', 'combining small cap g', 'combining small cap g']);
+  this.executeCharTest('ᷜ', ['combining latin small letter k', 'combining k', 'combining k']);
+  this.executeCharTest('ᷝ', ['combining latin small letter l', 'combining l', 'combining l']);
+  this.executeCharTest('ᷞ', ['combining latin letter small capital l', 'combining small cap l', 'combining small cap l']);
+  this.executeCharTest('ᷟ', ['combining latin letter small capital m', 'combining small cap m', 'combining small cap m']);
+  this.executeCharTest('ᷠ', ['combining latin small letter n', 'combining n', 'combining n']);
+  this.executeCharTest('ᷡ', ['combining latin letter small capital n', 'combining small cap n', 'combining small cap n']);
+  this.executeCharTest('ᷢ', ['combining latin letter small capital r', 'combining small cap r', 'combining small cap r']);
+  this.executeCharTest('ᷣ', ['combining latin small letter r rotunda', 'combining r rotunda', 'combining r rotunda']);
+  this.executeCharTest('ᷤ', ['combining latin small letter s', 'combining s', 'combining s']);
+  this.executeCharTest('ᷥ', ['combining latin small letter long s', 'combining long s', 'combining long s']);
+  this.executeCharTest('ᷦ', ['combining latin small letter z', 'combining z', 'combining z']);
+  this.executeCharTest('ⁱ', ['superscript latin small letter i', 'superscript i', 'superscript i']);
+  this.executeCharTest('ⁿ', ['superscript latin small letter n', 'superscript n', 'superscript n']);
+  this.executeCharTest('ₐ', ['latin subscript small letter a', 'subscript a', 'subscript a']);
+  this.executeCharTest('ₑ', ['latin subscript small letter e', 'subscript e', 'subscript e']);
+  this.executeCharTest('ₒ', ['latin subscript small letter o', 'subscript o', 'subscript o']);
+  this.executeCharTest('ₓ', ['latin subscript small letter x', 'subscript x', 'subscript x']);
+  this.executeCharTest('ₔ', ['latin subscript small letter schwa', 'subscript schwa', 'subscript schwa']);
+  this.executeCharTest('ₕ', ['latin subscript small letter h', 'subscript h', 'subscript h']);
+  this.executeCharTest('ₖ', ['latin subscript small letter k', 'subscript k', 'subscript k']);
+  this.executeCharTest('ₗ', ['latin subscript small letter l', 'subscript l', 'subscript l']);
+  this.executeCharTest('ₘ', ['latin subscript small letter m', 'subscript m', 'subscript m']);
+  this.executeCharTest('ₙ', ['latin subscript small letter n', 'subscript n', 'subscript n']);
+  this.executeCharTest('ₚ', ['latin subscript small letter p', 'subscript p', 'subscript p']);
+  this.executeCharTest('ₛ', ['latin subscript small letter s', 'subscript s', 'subscript s']);
+  this.executeCharTest('ₜ', ['latin subscript small letter t', 'subscript t', 'subscript t']);
+  this.executeCharTest('⒜', ['parenthesized latin small letter a', 'parenthesized a', 'parenthesized a']);
+  this.executeCharTest('⒝', ['parenthesized latin small letter b', 'parenthesized b', 'parenthesized b']);
+  this.executeCharTest('⒞', ['parenthesized latin small letter c', 'parenthesized c', 'parenthesized c']);
+  this.executeCharTest('⒟', ['parenthesized latin small letter d', 'parenthesized d', 'parenthesized d']);
+  this.executeCharTest('⒠', ['parenthesized latin small letter e', 'parenthesized e', 'parenthesized e']);
+  this.executeCharTest('⒡', ['parenthesized latin small letter f', 'parenthesized f', 'parenthesized f']);
+  this.executeCharTest('⒢', ['parenthesized latin small letter g', 'parenthesized g', 'parenthesized g']);
+  this.executeCharTest('⒣', ['parenthesized latin small letter h', 'parenthesized h', 'parenthesized h']);
+  this.executeCharTest('⒤', ['parenthesized latin small letter i', 'parenthesized i', 'parenthesized i']);
+  this.executeCharTest('⒥', ['parenthesized latin small letter j', 'parenthesized j', 'parenthesized j']);
+  this.executeCharTest('⒦', ['parenthesized latin small letter k', 'parenthesized k', 'parenthesized k']);
+  this.executeCharTest('⒧', ['parenthesized latin small letter l', 'parenthesized l', 'parenthesized l']);
+  this.executeCharTest('⒨', ['parenthesized latin small letter m', 'parenthesized m', 'parenthesized m']);
+  this.executeCharTest('⒩', ['parenthesized latin small letter n', 'parenthesized n', 'parenthesized n']);
+  this.executeCharTest('⒪', ['parenthesized latin small letter o', 'parenthesized o', 'parenthesized o']);
+  this.executeCharTest('⒫', ['parenthesized latin small letter p', 'parenthesized p', 'parenthesized p']);
+  this.executeCharTest('⒬', ['parenthesized latin small letter q', 'parenthesized q', 'parenthesized q']);
+  this.executeCharTest('⒭', ['parenthesized latin small letter r', 'parenthesized r', 'parenthesized r']);
+  this.executeCharTest('⒮', ['parenthesized latin small letter s', 'parenthesized s', 'parenthesized s']);
+  this.executeCharTest('⒯', ['parenthesized latin small letter t', 'parenthesized t', 'parenthesized t']);
+  this.executeCharTest('⒰', ['parenthesized latin small letter u', 'parenthesized u', 'parenthesized u']);
+  this.executeCharTest('⒱', ['parenthesized latin small letter v', 'parenthesized v', 'parenthesized v']);
+  this.executeCharTest('⒲', ['parenthesized latin small letter w', 'parenthesized w', 'parenthesized w']);
+  this.executeCharTest('⒳', ['parenthesized latin small letter x', 'parenthesized x', 'parenthesized x']);
+  this.executeCharTest('⒴', ['parenthesized latin small letter y', 'parenthesized y', 'parenthesized y']);
+  this.executeCharTest('⒵', ['parenthesized latin small letter z', 'parenthesized z', 'parenthesized z']);
+  this.executeCharTest('Ⓐ', ['circled latin capital letter a', 'circled cap a', 'circled cap a']);
+  this.executeCharTest('Ⓑ', ['circled latin capital letter b', 'circled cap b', 'circled cap b']);
+  this.executeCharTest('Ⓒ', ['circled latin capital letter c', 'circled cap c', 'circled cap c']);
+  this.executeCharTest('Ⓓ', ['circled latin capital letter d', 'circled cap d', 'circled cap d']);
+  this.executeCharTest('Ⓔ', ['circled latin capital letter e', 'circled cap e', 'circled cap e']);
+  this.executeCharTest('Ⓕ', ['circled latin capital letter f', 'circled cap f', 'circled cap f']);
+  this.executeCharTest('Ⓖ', ['circled latin capital letter g', 'circled cap g', 'circled cap g']);
+  this.executeCharTest('Ⓗ', ['circled latin capital letter h', 'circled cap h', 'circled cap h']);
+  this.executeCharTest('Ⓘ', ['circled latin capital letter i', 'circled cap i', 'circled cap i']);
+  this.executeCharTest('Ⓙ', ['circled latin capital letter j', 'circled cap j', 'circled cap j']);
+  this.executeCharTest('Ⓚ', ['circled latin capital letter k', 'circled cap k', 'circled cap k']);
+  this.executeCharTest('Ⓛ', ['circled latin capital letter l', 'circled cap l', 'circled cap l']);
+  this.executeCharTest('Ⓜ', ['circled latin capital letter m', 'circled cap m', 'circled cap m']);
+  this.executeCharTest('Ⓝ', ['circled latin capital letter n', 'circled cap n', 'circled cap n']);
+  this.executeCharTest('Ⓞ', ['circled latin capital letter o', 'circled cap o', 'circled cap o']);
+  this.executeCharTest('Ⓟ', ['circled latin capital letter p', 'circled cap p', 'circled cap p']);
+  this.executeCharTest('Ⓠ', ['circled latin capital letter q', 'circled cap q', 'circled cap q']);
+  this.executeCharTest('Ⓡ', ['circled latin capital letter r', 'circled cap r', 'circled cap r']);
+  this.executeCharTest('Ⓢ', ['circled latin capital letter s', 'circled cap s', 'circled cap s']);
+  this.executeCharTest('Ⓣ', ['circled latin capital letter t', 'circled cap t', 'circled cap t']);
+  this.executeCharTest('Ⓤ', ['circled latin capital letter u', 'circled cap u', 'circled cap u']);
+  this.executeCharTest('Ⓥ', ['circled latin capital letter v', 'circled cap v', 'circled cap v']);
+  this.executeCharTest('Ⓦ', ['circled latin capital letter w', 'circled cap w', 'circled cap w']);
+  this.executeCharTest('Ⓧ', ['circled latin capital letter x', 'circled cap x', 'circled cap x']);
+  this.executeCharTest('Ⓨ', ['circled latin capital letter y', 'circled cap y', 'circled cap y']);
+  this.executeCharTest('Ⓩ', ['circled latin capital letter z', 'circled cap z', 'circled cap z']);
+  this.executeCharTest('ⓐ', ['circled latin small letter a', 'circled a', 'circled a']);
+  this.executeCharTest('ⓑ', ['circled latin small letter b', 'circled b', 'circled b']);
+  this.executeCharTest('ⓒ', ['circled latin small letter c', 'circled c', 'circled c']);
+  this.executeCharTest('ⓓ', ['circled latin small letter d', 'circled d', 'circled d']);
+  this.executeCharTest('ⓔ', ['circled latin small letter e', 'circled e', 'circled e']);
+  this.executeCharTest('ⓕ', ['circled latin small letter f', 'circled f', 'circled f']);
+  this.executeCharTest('ⓖ', ['circled latin small letter g', 'circled g', 'circled g']);
+  this.executeCharTest('ⓗ', ['circled latin small letter h', 'circled h', 'circled h']);
+  this.executeCharTest('ⓘ', ['circled latin small letter i', 'circled i', 'circled i']);
+  this.executeCharTest('ⓙ', ['circled latin small letter j', 'circled j', 'circled j']);
+  this.executeCharTest('ⓚ', ['circled latin small letter k', 'circled k', 'circled k']);
+  this.executeCharTest('ⓛ', ['circled latin small letter l', 'circled l', 'circled l']);
+  this.executeCharTest('ⓜ', ['circled latin small letter m', 'circled m', 'circled m']);
+  this.executeCharTest('ⓝ', ['circled latin small letter n', 'circled n', 'circled n']);
+  this.executeCharTest('ⓞ', ['circled latin small letter o', 'circled o', 'circled o']);
+  this.executeCharTest('ⓟ', ['circled latin small letter p', 'circled p', 'circled p']);
+  this.executeCharTest('ⓠ', ['circled latin small letter q', 'circled q', 'circled q']);
+  this.executeCharTest('ⓡ', ['circled latin small letter r', 'circled r', 'circled r']);
+  this.executeCharTest('ⓢ', ['circled latin small letter s', 'circled s', 'circled s']);
+  this.executeCharTest('ⓣ', ['circled latin small letter t', 'circled t', 'circled t']);
+  this.executeCharTest('ⓤ', ['circled latin small letter u', 'circled u', 'circled u']);
+  this.executeCharTest('ⓥ', ['circled latin small letter v', 'circled v', 'circled v']);
+  this.executeCharTest('ⓦ', ['circled latin small letter w', 'circled w', 'circled w']);
+  this.executeCharTest('ⓧ', ['circled latin small letter x', 'circled x', 'circled x']);
+  this.executeCharTest('ⓨ', ['circled latin small letter y', 'circled y', 'circled y']);
+  this.executeCharTest('ⓩ', ['circled latin small letter z', 'circled z', 'circled z']);
+  this.executeCharTest('ⱼ', ['latin subscript small letter j', 'subscript j', 'subscript j']);
+  this.executeCharTest('🄐', ['parenthesized latin capital letter a', 'parenthesized cap a', 'parenthesized cap a']);
+  this.executeCharTest('🄑', ['parenthesized latin capital letter b', 'parenthesized cap b', 'parenthesized cap b']);
+  this.executeCharTest('🄒', ['parenthesized latin capital letter c', 'parenthesized cap c', 'parenthesized cap c']);
+  this.executeCharTest('🄓', ['parenthesized latin capital letter d', 'parenthesized cap d', 'parenthesized cap d']);
+  this.executeCharTest('🄔', ['parenthesized latin capital letter e', 'parenthesized cap e', 'parenthesized cap e']);
+  this.executeCharTest('🄕', ['parenthesized latin capital letter f', 'parenthesized cap f', 'parenthesized cap f']);
+  this.executeCharTest('🄖', ['parenthesized latin capital letter g', 'parenthesized cap g', 'parenthesized cap g']);
+  this.executeCharTest('🄗', ['parenthesized latin capital letter h', 'parenthesized cap h', 'parenthesized cap h']);
+  this.executeCharTest('🄘', ['parenthesized latin capital letter i', 'parenthesized cap i', 'parenthesized cap i']);
+  this.executeCharTest('🄙', ['parenthesized latin capital letter j', 'parenthesized cap j', 'parenthesized cap j']);
+  this.executeCharTest('🄚', ['parenthesized latin capital letter k', 'parenthesized cap k', 'parenthesized cap k']);
+  this.executeCharTest('🄛', ['parenthesized latin capital letter l', 'parenthesized cap l', 'parenthesized cap l']);
+  this.executeCharTest('🄜', ['parenthesized latin capital letter m', 'parenthesized cap m', 'parenthesized cap m']);
+  this.executeCharTest('🄝', ['parenthesized latin capital letter n', 'parenthesized cap n', 'parenthesized cap n']);
+  this.executeCharTest('🄞', ['parenthesized latin capital letter o', 'parenthesized cap o', 'parenthesized cap o']);
+  this.executeCharTest('🄟', ['parenthesized latin capital letter p', 'parenthesized cap p', 'parenthesized cap p']);
+  this.executeCharTest('🄠', ['parenthesized latin capital letter q', 'parenthesized cap q', 'parenthesized cap q']);
+  this.executeCharTest('🄡', ['parenthesized latin capital letter r', 'parenthesized cap r', 'parenthesized cap r']);
+  this.executeCharTest('🄢', ['parenthesized latin capital letter s', 'parenthesized cap s', 'parenthesized cap s']);
+  this.executeCharTest('🄣', ['parenthesized latin capital letter t', 'parenthesized cap t', 'parenthesized cap t']);
+  this.executeCharTest('🄤', ['parenthesized latin capital letter u', 'parenthesized cap u', 'parenthesized cap u']);
+  this.executeCharTest('🄥', ['parenthesized latin capital letter v', 'parenthesized cap v', 'parenthesized cap v']);
+  this.executeCharTest('🄦', ['parenthesized latin capital letter w', 'parenthesized cap w', 'parenthesized cap w']);
+  this.executeCharTest('🄧', ['parenthesized latin capital letter x', 'parenthesized cap x', 'parenthesized cap x']);
+  this.executeCharTest('🄨', ['parenthesized latin capital letter y', 'parenthesized cap y', 'parenthesized cap y']);
+  this.executeCharTest('🄩', ['parenthesized latin capital letter z', 'parenthesized cap z', 'parenthesized cap z']);
+  this.executeCharTest('🄪', ['tortoise shell bracketed latin capital letter s', 'tortoise shell bracketed cap s', 'tortoise shell bracketed cap s']);
+  this.executeCharTest('🄫', ['circled italic latin capital letter c', 'circled italic cap c', 'circled italic cap c']);
+  this.executeCharTest('🄬', ['circled italic latin capital letter r', 'circled italic cap r', 'circled italic cap r']);
+  this.executeCharTest('🄰', ['squared latin capital letter a', 'squared cap a', 'squared cap a']);
+  this.executeCharTest('🄱', ['squared latin capital letter b', 'squared cap b', 'squared cap b']);
+  this.executeCharTest('🄲', ['squared latin capital letter c', 'squared cap c', 'squared cap c']);
+  this.executeCharTest('🄳', ['squared latin capital letter d', 'squared cap d', 'squared cap d']);
+  this.executeCharTest('🄴', ['squared latin capital letter e', 'squared cap e', 'squared cap e']);
+  this.executeCharTest('🄵', ['squared latin capital letter f', 'squared cap f', 'squared cap f']);
+  this.executeCharTest('🄶', ['squared latin capital letter g', 'squared cap g', 'squared cap g']);
+  this.executeCharTest('🄷', ['squared latin capital letter h', 'squared cap h', 'squared cap h']);
+  this.executeCharTest('🄸', ['squared latin capital letter i', 'squared cap i', 'squared cap i']);
+  this.executeCharTest('🄹', ['squared latin capital letter j', 'squared cap j', 'squared cap j']);
+  this.executeCharTest('🄺', ['squared latin capital letter k', 'squared cap k', 'squared cap k']);
+  this.executeCharTest('🄻', ['squared latin capital letter l', 'squared cap l', 'squared cap l']);
+  this.executeCharTest('🄼', ['squared latin capital letter m', 'squared cap m', 'squared cap m']);
+  this.executeCharTest('🄽', ['squared latin capital letter n', 'squared cap n', 'squared cap n']);
+  this.executeCharTest('🄾', ['squared latin capital letter o', 'squared cap o', 'squared cap o']);
+  this.executeCharTest('🄿', ['squared latin capital letter p', 'squared cap p', 'squared cap p']);
+  this.executeCharTest('🅀', ['squared latin capital letter q', 'squared cap q', 'squared cap q']);
+  this.executeCharTest('🅁', ['squared latin capital letter r', 'squared cap r', 'squared cap r']);
+  this.executeCharTest('🅂', ['squared latin capital letter s', 'squared cap s', 'squared cap s']);
+  this.executeCharTest('🅃', ['squared latin capital letter t', 'squared cap t', 'squared cap t']);
+  this.executeCharTest('🅄', ['squared latin capital letter u', 'squared cap u', 'squared cap u']);
+  this.executeCharTest('🅅', ['squared latin capital letter v', 'squared cap v', 'squared cap v']);
+  this.executeCharTest('🅆', ['squared latin capital letter w', 'squared cap w', 'squared cap w']);
+  this.executeCharTest('🅇', ['squared latin capital letter x', 'squared cap x', 'squared cap x']);
+  this.executeCharTest('🅈', ['squared latin capital letter y', 'squared cap y', 'squared cap y']);
+  this.executeCharTest('🅉', ['squared latin capital letter z', 'squared cap z', 'squared cap z']);
+  this.executeCharTest('🅐', ['negative circled latin capital letter a', 'negative circled cap a', 'negative circled cap a']);
+  this.executeCharTest('🅑', ['negative circled latin capital letter b', 'negative circled cap b', 'negative circled cap b']);
+  this.executeCharTest('🅒', ['negative circled latin capital letter c', 'negative circled cap c', 'negative circled cap c']);
+  this.executeCharTest('🅓', ['negative circled latin capital letter d', 'negative circled cap d', 'negative circled cap d']);
+  this.executeCharTest('🅔', ['negative circled latin capital letter e', 'negative circled cap e', 'negative circled cap e']);
+  this.executeCharTest('🅕', ['negative circled latin capital letter f', 'negative circled cap f', 'negative circled cap f']);
+  this.executeCharTest('🅖', ['negative circled latin capital letter g', 'negative circled cap g', 'negative circled cap g']);
+  this.executeCharTest('🅗', ['negative circled latin capital letter h', 'negative circled cap h', 'negative circled cap h']);
+  this.executeCharTest('🅘', ['negative circled latin capital letter i', 'negative circled cap i', 'negative circled cap i']);
+  this.executeCharTest('🅙', ['negative circled latin capital letter j', 'negative circled cap j', 'negative circled cap j']);
+  this.executeCharTest('🅚', ['negative circled latin capital letter k', 'negative circled cap k', 'negative circled cap k']);
+  this.executeCharTest('🅛', ['negative circled latin capital letter l', 'negative circled cap l', 'negative circled cap l']);
+  this.executeCharTest('🅜', ['negative circled latin capital letter m', 'negative circled cap m', 'negative circled cap m']);
+  this.executeCharTest('🅝', ['negative circled latin capital letter n', 'negative circled cap n', 'negative circled cap n']);
+  this.executeCharTest('🅞', ['negative circled latin capital letter o', 'negative circled cap o', 'negative circled cap o']);
+  this.executeCharTest('🅟', ['negative circled latin capital letter p', 'negative circled cap p', 'negative circled cap p']);
+  this.executeCharTest('🅠', ['negative circled latin capital letter q', 'negative circled cap q', 'negative circled cap q']);
+  this.executeCharTest('🅡', ['negative circled latin capital letter r', 'negative circled cap r', 'negative circled cap r']);
+  this.executeCharTest('🅢', ['negative circled latin capital letter s', 'negative circled cap s', 'negative circled cap s']);
+  this.executeCharTest('🅣', ['negative circled latin capital letter t', 'negative circled cap t', 'negative circled cap t']);
+  this.executeCharTest('🅤', ['negative circled latin capital letter u', 'negative circled cap u', 'negative circled cap u']);
+  this.executeCharTest('🅥', ['negative circled latin capital letter v', 'negative circled cap v', 'negative circled cap v']);
+  this.executeCharTest('🅦', ['negative circled latin capital letter w', 'negative circled cap w', 'negative circled cap w']);
+  this.executeCharTest('🅧', ['negative circled latin capital letter x', 'negative circled cap x', 'negative circled cap x']);
+  this.executeCharTest('🅨', ['negative circled latin capital letter y', 'negative circled cap y', 'negative circled cap y']);
+  this.executeCharTest('🅩', ['negative circled latin capital letter z', 'negative circled cap z', 'negative circled cap z']);
+  this.executeCharTest('🅰', ['negative squared latin capital letter a', 'negative squared cap a', 'negative squared cap a']);
+  this.executeCharTest('🅱', ['negative squared latin capital letter b', 'negative squared cap b', 'negative squared cap b']);
+  this.executeCharTest('🅲', ['negative squared latin capital letter c', 'negative squared cap c', 'negative squared cap c']);
+  this.executeCharTest('🅳', ['negative squared latin capital letter d', 'negative squared cap d', 'negative squared cap d']);
+  this.executeCharTest('🅴', ['negative squared latin capital letter e', 'negative squared cap e', 'negative squared cap e']);
+  this.executeCharTest('🅵', ['negative squared latin capital letter f', 'negative squared cap f', 'negative squared cap f']);
+  this.executeCharTest('🅶', ['negative squared latin capital letter g', 'negative squared cap g', 'negative squared cap g']);
+  this.executeCharTest('🅷', ['negative squared latin capital letter h', 'negative squared cap h', 'negative squared cap h']);
+  this.executeCharTest('🅸', ['negative squared latin capital letter i', 'negative squared cap i', 'negative squared cap i']);
+  this.executeCharTest('🅹', ['negative squared latin capital letter j', 'negative squared cap j', 'negative squared cap j']);
+  this.executeCharTest('🅺', ['negative squared latin capital letter k', 'negative squared cap k', 'negative squared cap k']);
+  this.executeCharTest('🅻', ['negative squared latin capital letter l', 'negative squared cap l', 'negative squared cap l']);
+  this.executeCharTest('🅼', ['negative squared latin capital letter m', 'negative squared cap m', 'negative squared cap m']);
+  this.executeCharTest('🅽', ['negative squared latin capital letter n', 'negative squared cap n', 'negative squared cap n']);
+  this.executeCharTest('🅾', ['negative squared latin capital letter o', 'negative squared cap o', 'negative squared cap o']);
+  this.executeCharTest('🅿', ['negative squared latin capital letter p', 'negative squared cap p', 'negative squared cap p']);
+  this.executeCharTest('🆀', ['negative squared latin capital letter q', 'negative squared cap q', 'negative squared cap q']);
+  this.executeCharTest('🆁', ['negative squared latin capital letter r', 'negative squared cap r', 'negative squared cap r']);
+  this.executeCharTest('🆂', ['negative squared latin capital letter s', 'negative squared cap s', 'negative squared cap s']);
+  this.executeCharTest('🆃', ['negative squared latin capital letter t', 'negative squared cap t', 'negative squared cap t']);
+  this.executeCharTest('🆄', ['negative squared latin capital letter u', 'negative squared cap u', 'negative squared cap u']);
+  this.executeCharTest('🆅', ['negative squared latin capital letter v', 'negative squared cap v', 'negative squared cap v']);
+  this.executeCharTest('🆆', ['negative squared latin capital letter w', 'negative squared cap w', 'negative squared cap w']);
+  this.executeCharTest('🆇', ['negative squared latin capital letter x', 'negative squared cap x', 'negative squared cap x']);
+  this.executeCharTest('🆈', ['negative squared latin capital letter y', 'negative squared cap y', 'negative squared cap y']);
+  this.executeCharTest('🆉', ['negative squared latin capital letter z', 'negative squared cap z', 'negative squared cap z']);
+  this.executeCharTest('🆊', ['crossed negative squared latin capital letter p', 'crossed negative squared cap p', 'crossed negative squared cap p']);
+  this.executeCharTest('Ǖ', ['latin capital letter u with diaeresis and macron', 'cap u double overdot overbar', 'latin capital letter u double overdot overbar']);
+  this.executeCharTest('Ǘ', ['latin capital letter u with diaeresis and acute', 'cap u double overdot acute', 'latin capital letter u double overdot acute']);
+  this.executeCharTest('Ǚ', ['latin capital letter u with diaeresis and caron', 'cap u double overdot caron', 'latin capital letter u double overdot hacek']);
+  this.executeCharTest('Ǜ', ['latin capital letter u with diaeresis and grave', 'cap u double overdot grave', 'latin capital letter u double overdot grave']);
+  this.executeCharTest('Ǟ', ['latin capital letter a with diaeresis and macron', 'cap a double overdot overbar', 'latin capital letter a double overdot overbar']);
+  this.executeCharTest('Ǡ', ['latin capital letter a with dot above and macron', 'cap a overdot overbar', 'latin capital letter a dot overbar']);
+  this.executeCharTest('Ǭ', ['latin capital letter o with ogonek and macron', 'cap o ogonek overbar', 'latin capital letter o ogonek overbar']);
+  this.executeCharTest('Ǻ', ['latin capital letter a with ring above and acute', 'cap a ring acute', 'latin capital letter a ring acute']);
+  this.executeCharTest('Ȫ', ['latin capital letter o with diaeresis and macron', 'cap o double overdot overbar', 'latin capital letter o double overdot overbar']);
+  this.executeCharTest('Ȭ', ['latin capital letter o with tilde and macron', 'cap o tilde overbar', 'latin capital letter o tilde overbar']);
+  this.executeCharTest('Ȱ', ['latin capital letter o with dot above and macron', 'cap o overdot overbar', 'latin capital letter o overdot overbar']);
+  this.executeCharTest('Ḉ', ['latin capital letter c with cedilla and acute', 'cap c cedilla acute', 'latin capital letter c cedilla acute']);
+  this.executeCharTest('Ḕ', ['latin capital letter e with macron and grave', 'cap e overbar grave', 'latin capital letter e overbar grave']);
+  this.executeCharTest('Ḗ', ['latin capital letter e with macron and acute', 'cap e overbar acute', 'latin capital letter e overbar acute']);
+  this.executeCharTest('Ḝ', ['latin capital letter e with cedilla and breve', 'cap e cedilla breve', 'latin capital letter e cedilla breve']);
+  this.executeCharTest('Ḯ', ['latin capital letter i with diaeresis and acute', 'cap i double overdot acute', 'latin capital letter i double overdot acute']);
+  this.executeCharTest('Ḹ', ['latin capital letter l with dot below and macron', 'cap l underdot overbar', 'latin capital letter l underdot overbar']);
+  this.executeCharTest('Ṍ', ['latin capital letter o with tilde and acute', 'cap o tilde acute', 'latin capital letter o tilde acute']);
+  this.executeCharTest('Ṏ', ['latin capital letter o with tilde and diaeresis', 'cap o tilde double overdot', 'latin capital letter o tilde double overdot']);
+  this.executeCharTest('Ṑ', ['latin capital letter o with macron and grave', 'cap o overbar grave', 'latin capital letter o overbar grave']);
+  this.executeCharTest('Ṓ', ['latin capital letter o with macron and acute', 'cap o overbar acute', 'latin capital letter o overbar acute']);
+  this.executeCharTest('Ṝ', ['latin capital letter r with dot below and macron', 'cap r overbar underdot', 'cap r underdot and overbar']);
+  this.executeCharTest('Ṥ', ['latin capital letter s with acute dot above', 'cap s acute overdot', 'latin capital letter s acute overdot']);
+  this.executeCharTest('Ṧ', ['latin capital letter s with caron and dot above', 'cap s caron overdot', 'latin capital letter s caron overdot']);
+  this.executeCharTest('Ṩ', ['latin capital letter s with dot below and dot above', 'cap s underdot overdot', 'latin capital letter s underdot overdot']);
+  this.executeCharTest('Ṹ', ['latin capital letter u with tilde and acute', 'cap u tilde acute', 'latin capital letter u tilde acute']);
+  this.executeCharTest('Ṻ', ['latin capital letter u with macron and diaeresis', 'cap u overbar double overdot', 'latin capital letter u overbar double overdot']);
+  this.executeCharTest('Ấ', ['latin capital letter a with circumflex and acute', 'cap a hat acute', 'latin capital letter a hat acute']);
+  this.executeCharTest('Ầ', ['latin capital letter a with circumflex and grave', 'cap a hat grave', 'latin capital letter a hat grave']);
+  this.executeCharTest('Ẩ', ['latin capital letter a with circumflex and hook above', 'cap a hat hook', 'latin capital letter a hat hook']);
+  this.executeCharTest('Ẫ', ['latin capital letter a with circumflex and tilde', 'cap a hat tilde', 'latin capital letter a hat tilde']);
+  this.executeCharTest('Ậ', ['latin capital letter a with circumflex and dot below', 'cap a hat underdot', 'latin capital letter a hat underdot']);
+  this.executeCharTest('Ắ', ['latin capital letter a with breve and acute', 'cap a breve acute', 'latin capital letter a breve acute']);
+  this.executeCharTest('Ằ', ['latin capital letter a with breve and grave', 'cap a breve grave', 'latin capital letter a breve grave']);
+  this.executeCharTest('Ẳ', ['latin capital letter a with breve and hook above', 'cap a breve hook', 'latin capital letter a breve hook']);
+  this.executeCharTest('Ẵ', ['latin capital letter a with breve and tilde', 'cap a breve tilde', 'latin capital letter a breve tilde']);
+  this.executeCharTest('Ặ', ['latin capital letter a with breve and dot below', 'cap a breve underdot', 'latin capital letter a breve underdot']);
+  this.executeCharTest('Ế', ['latin capital letter e with circumflex and acute', 'cap e hat acute', 'latin capital letter e hat acute']);
+  this.executeCharTest('Ề', ['latin capital letter e with circumflex and grave', 'cap e hat grave', 'latin capital letter e hat grave']);
+  this.executeCharTest('Ể', ['latin capital letter e with circumflex and hook above', 'cap e hat hook', 'latin capital letter e hat hook']);
+  this.executeCharTest('Ễ', ['latin capital letter e with circumflex and tilde', 'cap e hat tilde', 'latin capital letter e hat tilde']);
+  this.executeCharTest('Ệ', ['latin capital letter e with circumflex and dot below', 'cap e hat underdot', 'latin capital letter e hat underdot']);
+  this.executeCharTest('Ố', ['latin capital letter o with circumflex and acute', 'cap o hat acute', 'latin capital letter o hat acute']);
+  this.executeCharTest('Ồ', ['latin capital letter o with circumflex and grave', 'cap o hat grave', 'latin capital letter o hat grave']);
+  this.executeCharTest('Ổ', ['latin capital letter o with circumflex and hook above', 'cap o hat hook', 'latin capital letter o hat hook']);
+  this.executeCharTest('Ỗ', ['latin capital letter o with circumflex and tilde', 'cap o hat tilde', 'latin capital letter o hat tilde']);
+  this.executeCharTest('Ộ', ['latin capital letter o with circumflex and dot below', 'cap o hat underdot', 'latin capital letter o hat underdot']);
+  this.executeCharTest('Ớ', ['latin capital letter o with horn and acute', 'cap o acute prime', 'latin capital letter o acute prime']);
+  this.executeCharTest('Ờ', ['latin capital letter o with horn and grave', 'cap o grave prime', 'latin capital letter o grave prime']);
+  this.executeCharTest('Ở', ['latin capital letter o with horn and hook above', 'cap o hook prime', 'latin capital letter o hook prime']);
+  this.executeCharTest('Ỡ', ['latin capital letter o with horn and tilde', 'cap o tilde prime', 'latin capital letter o tilde prime']);
+  this.executeCharTest('Ợ', ['latin capital letter o with horn and dot below', 'cap o underdot prime', 'latin capital letter o underdot prime']);
+  this.executeCharTest('Ứ', ['latin capital letter u with horn and acute', 'cap u acute prime', 'latin capital letter u acute prime']);
+  this.executeCharTest('Ừ', ['latin capital letter u with horn and grave', 'cap u grave prime', 'latin capital letter u grave prime']);
+  this.executeCharTest('Ử', ['latin capital letter u with horn and hook above', 'cap u hook prime', 'latin capital letter u hook prime']);
+  this.executeCharTest('Ữ', ['latin capital letter u with horn and tilde', 'cap u tilde prime', 'latin capital letter u tilde prime']);
+  this.executeCharTest('Ự', ['latin capital letter u with horn and dot below', 'cap u underdot prime', 'latin capital letter u underdot prime']);
+  this.executeCharTest('A', ['latin capital letter a', 'cap a', 'cap a']);
+  this.executeCharTest('B', ['latin capital letter b', 'cap b', 'cap b']);
+  this.executeCharTest('C', ['latin capital letter c', 'cap c', 'cap c']);
+  this.executeCharTest('D', ['latin capital letter d', 'cap d', 'cap d']);
+  this.executeCharTest('E', ['latin capital letter e', 'cap e', 'cap e']);
+  this.executeCharTest('F', ['latin capital letter f', 'cap f', 'cap f']);
+  this.executeCharTest('G', ['latin capital letter g', 'cap g', 'cap g']);
+  this.executeCharTest('H', ['latin capital letter h', 'cap h', 'cap h']);
+  this.executeCharTest('I', ['latin capital letter i', 'cap i', 'cap i']);
+  this.executeCharTest('J', ['latin capital letter j', 'cap j', 'cap j']);
+  this.executeCharTest('K', ['latin capital letter k', 'cap k', 'cap k']);
+  this.executeCharTest('L', ['latin capital letter l', 'cap l', 'cap l']);
+  this.executeCharTest('M', ['latin capital letter m', 'cap m', 'cap m']);
+  this.executeCharTest('N', ['latin capital letter n', 'cap n', 'cap n']);
+  this.executeCharTest('O', ['latin capital letter o', 'cap o', 'cap o']);
+  this.executeCharTest('P', ['latin capital letter p', 'cap p', 'cap p']);
+  this.executeCharTest('Q', ['latin capital letter q', 'cap q', 'cap q']);
+  this.executeCharTest('R', ['latin capital letter r', 'cap r', 'cap r']);
+  this.executeCharTest('S', ['latin capital letter s', 'cap s', 'cap s']);
+  this.executeCharTest('T', ['latin capital letter t', 'cap t', 'cap t']);
+  this.executeCharTest('U', ['latin capital letter u', 'cap u', 'cap u']);
+  this.executeCharTest('V', ['latin capital letter v', 'cap v', 'cap v']);
+  this.executeCharTest('W', ['latin capital letter w', 'cap w', 'cap w']);
+  this.executeCharTest('X', ['latin capital letter x', 'cap x', 'cap x']);
+  this.executeCharTest('Y', ['latin capital letter y', 'cap y', 'cap y']);
+  this.executeCharTest('Z', ['latin capital letter z', 'cap z', 'cap z']);
+  this.executeCharTest('Ａ', ['fullwidth latin capital letter a', 'cap a', 'fullwidth latin cap a']);
+  this.executeCharTest('Ｂ', ['fullwidth latin capital letter b', 'cap b', 'fullwidth latin cap b']);
+  this.executeCharTest('Ｃ', ['fullwidth latin capital letter c', 'cap c', 'fullwidth latin cap c']);
+  this.executeCharTest('Ｄ', ['fullwidth latin capital letter d', 'cap d', 'fullwidth latin cap d']);
+  this.executeCharTest('Ｅ', ['fullwidth latin capital letter e', 'cap e', 'fullwidth latin cap e']);
+  this.executeCharTest('Ｆ', ['fullwidth latin capital letter f', 'cap f', 'fullwidth latin cap f']);
+  this.executeCharTest('Ｇ', ['fullwidth latin capital letter g', 'cap g', 'fullwidth latin cap g']);
+  this.executeCharTest('Ｈ', ['fullwidth latin capital letter h', 'cap h', 'fullwidth latin cap h']);
+  this.executeCharTest('Ｉ', ['fullwidth latin capital letter i', 'cap i', 'fullwidth latin cap i']);
+  this.executeCharTest('Ｊ', ['fullwidth latin capital letter j', 'cap j', 'fullwidth latin cap j']);
+  this.executeCharTest('Ｋ', ['fullwidth latin capital letter k', 'cap k', 'fullwidth latin cap k']);
+  this.executeCharTest('Ｌ', ['fullwidth latin capital letter l', 'cap l', 'fullwidth latin cap l']);
+  this.executeCharTest('Ｍ', ['fullwidth latin capital letter m', 'cap m', 'fullwidth latin cap m']);
+  this.executeCharTest('Ｎ', ['fullwidth latin capital letter n', 'cap n', 'fullwidth latin cap n']);
+  this.executeCharTest('Ｏ', ['fullwidth latin capital letter o', 'cap o', 'fullwidth latin cap o']);
+  this.executeCharTest('Ｐ', ['fullwidth latin capital letter p', 'cap p', 'fullwidth latin cap p']);
+  this.executeCharTest('Ｑ', ['fullwidth latin capital letter q', 'cap q', 'fullwidth latin cap q']);
+  this.executeCharTest('Ｒ', ['fullwidth latin capital letter r', 'cap r', 'fullwidth latin cap r']);
+  this.executeCharTest('Ｓ', ['fullwidth latin capital letter s', 'cap s', 'fullwidth latin cap s']);
+  this.executeCharTest('Ｔ', ['fullwidth latin capital letter t', 'cap t', 'fullwidth latin cap t']);
+  this.executeCharTest('Ｕ', ['fullwidth latin capital letter u', 'cap u', 'fullwidth latin cap u']);
+  this.executeCharTest('Ｖ', ['fullwidth latin capital letter v', 'cap v', 'fullwidth latin cap v']);
+  this.executeCharTest('Ｗ', ['fullwidth latin capital letter w', 'cap w', 'fullwidth latin cap w']);
+  this.executeCharTest('Ｘ', ['fullwidth latin capital letter x', 'cap x', 'fullwidth latin cap x']);
+  this.executeCharTest('Ｙ', ['fullwidth latin capital letter y', 'cap y', 'fullwidth latin cap y']);
+  this.executeCharTest('Ｚ', ['fullwidth latin capital letter z', 'cap z', 'fullwidth latin cap z']);
+  this.executeCharTest('À', ['latin capital letter a with grave', 'cap a grave', 'latin capital letter a grave']);
+  this.executeCharTest('Á', ['latin capital letter a with acute', 'cap a acute', 'latin capital letter a acute']);
+  this.executeCharTest('Â', ['latin capital letter a with circumflex', 'cap a hat', 'latin capital letter a hat']);
+  this.executeCharTest('Ã', ['latin capital letter a with tilde', 'cap a tilde', 'latin capital letter a tilde']);
+  this.executeCharTest('Ä', ['latin capital letter a with diaeresis', 'cap a double overdot', 'latin capital letter a double overdot']);
+  this.executeCharTest('Å', ['latin capital letter a with ring above', 'cap a ring', 'latin capital letter a ring']);
+  this.executeCharTest('Ç', ['latin capital letter c cedilla', 'cap c cedilla', 'latin capital letter c cedilla']);
+  this.executeCharTest('È', ['latin capital letter e with grave', 'cap e grave', 'latin capital letter e grave']);
+  this.executeCharTest('É', ['latin capital letter e with acute', 'cap e acute', 'latin capital letter e acute']);
+  this.executeCharTest('Ê', ['latin capital letter e with circumflex', 'cap e hat', 'latin capital letter e hat']);
+  this.executeCharTest('Ë', ['latin capital letter e with diaeresis', 'cap e double overdot', 'latin capital letter e double overdot']);
+  this.executeCharTest('Ì', ['latin capital letter i with grave', 'cap i grave', 'latin capital letter i grave']);
+  this.executeCharTest('Í', ['latin capital letter i with acute', 'cap i acute', 'latin capital letter i acute']);
+  this.executeCharTest('Î', ['latin capital letter i with circumflex', 'cap i hat', 'latin capital letter i hat']);
+  this.executeCharTest('Ï', ['latin capital letter i with diaeresis', 'cap i double overdot', 'latin capital letter i double overdot']);
+  this.executeCharTest('Ñ', ['latin capital letter n tilde', 'cap n tilde', 'latin capital letter n tilde']);
+  this.executeCharTest('Ò', ['latin capital letter o with grave', 'cap o grave', 'latin capital letter o grave']);
+  this.executeCharTest('Ó', ['latin capital letter o with acute', 'cap o acute', 'latin capital letter o acute']);
+  this.executeCharTest('Ô', ['latin capital letter o with circumflex', 'cap o hat', 'latin capital letter o hat']);
+  this.executeCharTest('Õ', ['latin capital letter o with tilde', 'cap o tilde', 'latin capital letter o tilde']);
+  this.executeCharTest('Ö', ['latin capital letter o with diaeresis', 'cap o double overdot', 'latin capital letter o double overdot']);
+  this.executeCharTest('Ù', ['latin capital letter u with grave', 'cap u grave', 'latin capital letter u grave']);
+  this.executeCharTest('Ú', ['latin capital letter u with acute', 'cap u acute', 'latin capital letter u acute']);
+  this.executeCharTest('Û', ['latin capital letter u with circumflex', 'cap u hat', 'latin capital letter u hat']);
+  this.executeCharTest('Ü', ['latin capital letter u with diaeresis', 'cap u double overdot', 'latin capital letter u double overdot']);
+  this.executeCharTest('Ý', ['latin capital letter y with acute', 'cap y acute', 'latin capital letter y acute']);
+  this.executeCharTest('Ā', ['latin capital letter a macron', 'cap a overbar', 'latin capital letter a overbar']);
+  this.executeCharTest('Ă', ['latin capital letter a with breve', 'cap a breve', 'latin capital letter a breve']);
+  this.executeCharTest('Ą', ['latin capital letter a with ogonek', 'cap a ogonek', 'latin capital letter a ogonek']);
+  this.executeCharTest('Ć', ['latin capital letter c with acute', 'cap c acute', 'latin capital letter c acute']);
+  this.executeCharTest('Ĉ', ['latin capital letter c with circumflex', 'cap c hat', 'latin capital letter c hat']);
+  this.executeCharTest('Ċ', ['latin capital letter c with dot above', 'cap c overdot', 'latin capital letter c overdot']);
+  this.executeCharTest('Č', ['latin capital letter c with caron', 'cap c caron', 'latin capital letter c hacek']);
+  this.executeCharTest('Ď', ['latin capital letter d with caron', 'cap d caron', 'latin capital letter d hacek']);
+  this.executeCharTest('Ē', ['latin capital letter e with macron', 'cap e overbar', 'latin capital letter e overbar']);
+  this.executeCharTest('Ĕ', ['latin capital letter e with breve', 'cap e breve', 'latin capital letter e breve']);
+  this.executeCharTest('Ė', ['latin capital letter e with dot above', 'cap e overdot', 'latin capital letter e overdot']);
+  this.executeCharTest('Ę', ['latin capital letter e with ogonek', 'cap e ogonek', 'latin capital letter e ogonek']);
+  this.executeCharTest('Ě', ['latin capital letter e with caron', 'cap e caron', 'latin capital letter e hacek']);
+  this.executeCharTest('Ĝ', ['latin capital letter g with circumflex', 'cap g hat', 'latin capital letter g hat']);
+  this.executeCharTest('Ğ', ['latin capital letter g with breve', 'cap g breve', 'latin capital letter g breve']);
+  this.executeCharTest('Ġ', ['latin capital letter g with dot above', 'cap g overdot', 'latin capital letter g overdot']);
+  this.executeCharTest('Ģ', ['latin capital letter g with cedilla', 'cap g cedilla', 'latin capital letter g cedilla']);
+  this.executeCharTest('Ĥ', ['latin capital letter h with circumflex', 'cap h hat', 'latin capital letter h hat']);
+  this.executeCharTest('Ĩ', ['latin capital letter i with tilde', 'cap i tilde', 'latin capital letter i tilde']);
+  this.executeCharTest('Ī', ['latin capital letter i with macron', 'cap i overbar', 'latin capital letter i overbar']);
+  this.executeCharTest('Ĭ', ['latin capital letter i with breve', 'cap i breve', 'latin capital letter i breve']);
+  this.executeCharTest('Į', ['latin capital letter i with ogonek', 'cap i ogonek', 'latin capital letter i ogonek']);
+  this.executeCharTest('İ', ['latin capital letter i with dot above', 'cap i overdot', 'latin capital letter i overdot']);
+  this.executeCharTest('Ĵ', ['latin capital letter j circumflex', 'cap j hat', 'latin capital letter j hat']);
+  this.executeCharTest('Ķ', ['latin capital letter k with cedilla', 'cap k cedilla', 'latin capital letter k cedilla']);
+  this.executeCharTest('Ĺ', ['latin capital letter l with acute', 'cap l acute', 'latin capital letter l acute']);
+  this.executeCharTest('Ļ', ['latin capital letter l with cedilla', 'cap l cedilla', 'latin capital letter l cedilla']);
+  this.executeCharTest('Ľ', ['latin capital letter l with caron', 'cap l caron', 'latin capital letter l hacek']);
+  this.executeCharTest('Ŀ', ['latin capital letter l with middle dot', 'cap l middle dot', 'latin capital letter l middle dot']);
+  this.executeCharTest('Ń', ['latin capital letter n with acute', 'cap n acute', 'latin capital letter n acute']);
+  this.executeCharTest('Ņ', ['latin capital letter n with cedilla', 'cap n cedilla', 'latin capital letter n cedilla']);
+  this.executeCharTest('Ň', ['latin capital letter n with caron', 'cap n caron', 'latin capital letter n hacek']);
+  this.executeCharTest('Ō', ['latin capital letter o macron', 'cap o overbar', 'latin capital letter o overbar']);
+  this.executeCharTest('Ŏ', ['latin capital letter o with breve', 'cap o breve', 'latin capital letter o breve']);
+  this.executeCharTest('Ő', ['latin capital letter o with double acute', 'cap o double acute', 'latin capital letter o double acute']);
+  this.executeCharTest('Ŕ', ['latin capital letter r acute', 'cap r acute', 'latin capital letter r acute']);
+  this.executeCharTest('Ŗ', ['latin capital letter r with cedilla', 'cap r cedilla', 'latin capital letter r cedilla']);
+  this.executeCharTest('Ř', ['latin capital letter r with caron', 'cap r caron', 'latin capital letter r hacek']);
+  this.executeCharTest('Ś', ['latin capital letter s with acute', 'cap s acute', 'latin capital letter s acute']);
+  this.executeCharTest('Ŝ', ['latin capital letter s with circumflex', 'cap s hat', 'latin capital letter s hat']);
+  this.executeCharTest('Ş', ['latin capital letter s with cedilla', 'cap s cedilla', 'latin capital letter s cedilla']);
+  this.executeCharTest('Š', ['latin capital letter s with caron', 'cap s caron', 'latin capital letter s hacek']);
+  this.executeCharTest('Ţ', ['latin capital letter t with cedilla', 'cap t cedilla', 'latin capital letter t cedilla']);
+  this.executeCharTest('Ť', ['latin capital letter t with caron', 'cap t caron', 'latin capital letter t hacek']);
+  this.executeCharTest('Ũ', ['latin capital letter u with tilde', 'cap u tilde', 'latin capital letter u tilde']);
+  this.executeCharTest('Ū', ['latin capital letter u with macron', 'cap u overbar', 'latin capital letter u overbar']);
+  this.executeCharTest('Ŭ', ['latin capital letter u with breve', 'cap u breve', 'latin capital letter u breve']);
+  this.executeCharTest('Ů', ['latin capital letter u with ring above', 'cap u ring', 'latin capital letter u ring']);
+  this.executeCharTest('Ű', ['latin capital letter u with double acute', 'cap u double acute', 'latin capital letter u double acute']);
+  this.executeCharTest('Ų', ['latin capital letter u with ogonek', 'cap u ogonek', 'latin capital letter u ogonek']);
+  this.executeCharTest('Ŵ', ['latin capital letter w with circumflex', 'cap w hat', 'latin capital letter w hat']);
+  this.executeCharTest('Ŷ', ['latin capital letter y with circumflex', 'cap y hat', 'latin capital letter y hat']);
+  this.executeCharTest('Ÿ', ['latin capital letter y with diaeresis', 'cap y double overdot', 'latin capital letter y double overdot']);
+  this.executeCharTest('Ź', ['latin capital letter z with acute', 'cap z acute', 'latin capital letter z acute']);
+  this.executeCharTest('Ż', ['latin capital letter z with dot above', 'cap z overdot', 'latin capital letter z overdot']);
+  this.executeCharTest('Ž', ['latin capital letter z with caron', 'cap z caron', 'latin capital letter z hacek']);
+  this.executeCharTest('Ǎ', ['latin capital letter a with caron', 'cap a caron', 'latin capital letter a hacek']);
+  this.executeCharTest('Ǐ', ['latin capital letter i with caron', 'cap i caron', 'latin capital letter i hacek']);
+  this.executeCharTest('Ǒ', ['latin capital letter o with caron', 'cap o caron', 'latin capital letter o hacek']);
+  this.executeCharTest('Ǔ', ['latin capital letter u with caron', 'cap u caron', 'latin capital letter u hacek']);
+  this.executeCharTest('Ǧ', ['latin capital letter g with caron', 'cap g caron', 'latin capital letter g hacek']);
+  this.executeCharTest('Ǩ', ['latin capital letter k with caron', 'cap k caron', 'latin capital letter k hacek']);
+  this.executeCharTest('Ǫ', ['latin capital letter o with ogonek', 'cap o ogonek', 'latin capital letter o ogonek']);
+  this.executeCharTest('Ǵ', ['latin capital letter g with acute', 'cap g acute', 'latin capital letter g acute']);
+  this.executeCharTest('Ǹ', ['latin capital letter n with grave', 'cap n grave', 'latin capital letter n grave']);
+  this.executeCharTest('Ȁ', ['latin capital letter a with double grave', 'cap a double grave', 'latin capital letter a double grave']);
+  this.executeCharTest('Ȃ', ['latin capital letter a with inverted breve', 'cap a inverted breve', 'latin capital letter a inverted breve']);
+  this.executeCharTest('Ȅ', ['latin capital letter e with double grave', 'cap e double grave', 'latin capital letter e double grave']);
+  this.executeCharTest('Ȇ', ['latin capital letter e with inverted breve', 'cap e inverted breve', 'latin capital letter e inverted breve']);
+  this.executeCharTest('Ȉ', ['latin capital letter i with double grave', 'cap i double grave', 'latin capital letter i double grave']);
+  this.executeCharTest('Ȋ', ['latin capital letter i with inverted breve', 'cap i inverted breve', 'latin capital letter i inverted breve']);
+  this.executeCharTest('Ȍ', ['latin capital letter o with double grave', 'cap o double grave', 'latin capital letter o double grave']);
+  this.executeCharTest('Ȏ', ['latin capital letter o with inverted breve', 'cap o inverted breve', 'latin capital letter o inverted breve']);
+  this.executeCharTest('Ȑ', ['latin capital letter r with double grave', 'cap r double grave', 'latin capital letter r double grave']);
+  this.executeCharTest('Ȓ', ['latin capital letter r with inverted breve', 'cap r inverted breve', 'latin capital letter r inverted breve']);
+  this.executeCharTest('Ȕ', ['latin capital letter u with double grave', 'cap u double grave', 'latin capital letter u double grave']);
+  this.executeCharTest('Ȗ', ['latin capital letter u with inverted breve', 'cap u inverted breve', 'latin capital letter u inverted breve']);
+  this.executeCharTest('Ș', ['latin capital letter s with comma below', 'cap s comma below', 'latin capital letter s comma below']);
+  this.executeCharTest('Ț', ['latin capital letter t with comma below', 'cap t comma below', 'latin capital letter t comma below']);
+  this.executeCharTest('Ȟ', ['latin capital letter h caron', 'cap h caron', 'cap h caron']);
+  this.executeCharTest('Ȧ', ['latin capital letter a with dot above', 'cap a overdot', 'latin capital letter a overdot']);
+  this.executeCharTest('Ȩ', ['latin capital letter e with cedilla', 'cap e cedilla', 'latin capital letter e cedilla']);
+  this.executeCharTest('Ȯ', ['latin capital letter o with dot above', 'cap o overdot', 'latin capital letter o overdot']);
+  this.executeCharTest('Ȳ', ['latin capital letter y with macron', 'cap y overbar', 'latin capital letter y overbar']);
+  this.executeCharTest('Ḁ', ['latin capital letter a with ring below', 'cap a ring below', 'latin capital letter a ring below']);
+  this.executeCharTest('Ḃ', ['latin capital letter b with dot above', 'cap b overdot', 'latin capital letter b overdot']);
+  this.executeCharTest('Ḅ', ['latin capital letter b with dot below', 'cap b underdot', 'latin capital letter b underdot']);
+  this.executeCharTest('Ḇ', ['latin capital letter b with line below', 'cap b underbar', 'latin capital letter b underbar']);
+  this.executeCharTest('Ḋ', ['latin capital letter d with dot above', 'cap d overdot', 'latin capital letter d overdot']);
+  this.executeCharTest('Ḍ', ['latin capital letter d with dot below', 'cap d underdot', 'latin capital letter d underdot']);
+  this.executeCharTest('Ḏ', ['latin capital letter d with line below', 'cap d underbar', 'latin capital letter d underbar']);
+  this.executeCharTest('Ḑ', ['latin capital letter d with cedilla', 'cap d cedilla', 'latin capital letter d cedilla']);
+  this.executeCharTest('Ḓ', ['latin capital letter d with circumflex below', 'cap d underhat', 'latin capital letter d underhat']);
+  this.executeCharTest('Ḙ', ['latin capital letter e with circumflex below', 'cap e underhat', 'latin capital letter e underhat']);
+  this.executeCharTest('Ḛ', ['latin capital letter e with tilde below', 'cap e tilde below', 'latin capital letter e tilde below']);
+  this.executeCharTest('Ḟ', ['latin capital letter f with dot above', 'cap f overdot', 'latin capital letter f overdot']);
+  this.executeCharTest('Ḡ', ['latin capital letter g with macron', 'cap g overbar', 'latin capital letter g overbar']);
+  this.executeCharTest('Ḣ', ['latin capital letter h with dot above', 'cap h overdot', 'latin capital letter h overdot']);
+  this.executeCharTest('Ḥ', ['latin capital letter h with dot below', 'cap h underdot', 'latin capital letter h underdot']);
+  this.executeCharTest('Ḧ', ['latin capital letter h with diaeresis', 'cap h double overdot', 'latin capital letter h double overdot']);
+  this.executeCharTest('Ḩ', ['latin capital letter h with cedilla', 'cap h cedilla', 'latin capital letter h cedilla']);
+  this.executeCharTest('Ḫ', ['latin capital letter h with breve below', 'cap h breve below', 'latin capital letter h breve below']);
+  this.executeCharTest('Ḭ', ['latin capital letter i with tilde below', 'cap i tilde below', 'latin capital letter i tilde below']);
+  this.executeCharTest('Ḱ', ['latin capital letter k with acute', 'cap k acute', 'latin capital letter k acute']);
+  this.executeCharTest('Ḳ', ['latin capital letter k with dot below', 'cap k underdot', 'latin capital letter k underdot']);
+  this.executeCharTest('Ḵ', ['latin capital letter k with line below', 'cap k underbar', 'latin capital letter k underbar']);
+  this.executeCharTest('Ḷ', ['latin capital letter l with dot below', 'cap l underdot', 'latin capital letter l underdot']);
+  this.executeCharTest('Ḻ', ['latin capital letter l with line below', 'cap l underbar', 'latin capital letter l underbar']);
+  this.executeCharTest('Ḽ', ['latin capital letter l with circumflex below', 'cap l underhat', 'latin capital letter l underhat']);
+  this.executeCharTest('Ḿ', ['latin capital letter m with acute', 'cap m acute', 'latin capital letter m acute']);
+  this.executeCharTest('Ṁ', ['latin capital letter m with dot above', 'cap m overdot', 'latin capital letter m overdot']);
+  this.executeCharTest('Ṃ', ['latin capital letter m with dot below', 'cap m underdot', 'latin capital letter m underdot']);
+  this.executeCharTest('Ṅ', ['latin capital letter n with dot above', 'cap n overdot', 'latin capital letter n overdot']);
+  this.executeCharTest('Ṇ', ['latin capital letter n with dot below', 'cap n underdot', 'latin capital letter n underdot']);
+  this.executeCharTest('Ṉ', ['latin capital letter n with line below', 'cap n underbar', 'latin capital letter n underbar']);
+  this.executeCharTest('Ṋ', ['latin capital letter n with circumflex below', 'cap n underhat', 'latin capital letter n underhat']);
+  this.executeCharTest('Ṕ', ['latin capital letter p with acute', 'cap p acute', 'latin capital letter p acute']);
+  this.executeCharTest('Ṗ', ['latin capital letter p with dot above', 'cap p overdot', 'latin capital letter p overdot']);
+  this.executeCharTest('Ṙ', ['latin capital letter r with dot above', 'cap r overdot', 'latin capital letter r overdot']);
+  this.executeCharTest('Ṛ', ['latin capital letter r with dot below', 'cap r underdot', 'latin capital letter r underdot']);
+  this.executeCharTest('Ṟ', ['latin capital letter r with line below', 'cap r underbar', 'latin capital letter r underbar']);
+  this.executeCharTest('Ṡ', ['latin capital letter s with dot above', 'cap s overdot', 'latin capital letter s overdot']);
+  this.executeCharTest('Ṣ', ['latin capital letter s with dot below', 'cap s underdot', 'latin capital letter s underdot']);
+  this.executeCharTest('Ṫ', ['latin capital letter t with dot above', 'cap t overdot', 'latin capital letter t overdot']);
+  this.executeCharTest('Ṭ', ['latin capital letter t with dot below', 'cap t underdot', 'latin capital letter t underdot']);
+  this.executeCharTest('Ṯ', ['latin capital letter t with line below', 'cap t underbar', 'latin capital letter t underbar']);
+  this.executeCharTest('Ṱ', ['latin capital letter t with circumflex below', 'cap t underhat', 'latin capital letter t underhat']);
+  this.executeCharTest('Ṳ', ['latin capital letter u with diaeresis below', 'cap u double underdot', 'latin capital letter u double underdot']);
+  this.executeCharTest('Ṵ', ['latin capital letter u with tilde below', 'cap u tilde below', 'latin capital letter u tilde below']);
+  this.executeCharTest('Ṷ', ['latin capital letter u with circumflex below', 'cap u underhat', 'latin capital letter u underhat']);
+  this.executeCharTest('Ṽ', ['latin capital letter v with tilde', 'cap v tilde', 'latin capital letter v tilde']);
+  this.executeCharTest('Ṿ', ['latin capital letter v with dot below', 'cap v underdot', 'latin capital letter v underdot']);
+  this.executeCharTest('Ẁ', ['latin capital letter w with grave', 'cap w grave', 'latin capital letter w grave']);
+  this.executeCharTest('Ẃ', ['latin capital letter w with acute', 'cap w acute', 'latin capital letter w acute']);
+  this.executeCharTest('Ẅ', ['latin capital letter w with diaeresis', 'cap w double overdot', 'latin capital letter w double overdot']);
+  this.executeCharTest('Ẇ', ['latin capital letter w with dot above', 'cap w overdot', 'latin capital letter w overdot']);
+  this.executeCharTest('Ẉ', ['latin capital letter w with dot below', 'cap w underdot', 'latin capital letter w underdot']);
+  this.executeCharTest('Ẋ', ['latin capital letter x with dot above', 'cap x overdot', 'latin capital letter x overdot']);
+  this.executeCharTest('Ẍ', ['latin capital letter x with diaeresis', 'cap x double overdot', 'latin capital letter x double overdot']);
+  this.executeCharTest('Ẏ', ['latin capital letter y with dot above', 'cap y overdot', 'latin capital letter y overdot']);
+  this.executeCharTest('Ẑ', ['latin capital letter z with circumflex', 'cap z circumflex', 'latin capital letter z circumflex']);
+  this.executeCharTest('Ẓ', ['latin capital letter z with dot below', 'cap z underdot', 'latin capital letter z underdot']);
+  this.executeCharTest('Ẕ', ['latin capital letter z with line below', 'cap z underbar', 'latin capital letter z underbar']);
+  this.executeCharTest('Ạ', ['latin capital letter with a dot below', 'cap a underdot', 'latin capital letter with a underdot']);
+  this.executeCharTest('Ả', ['latin capital letter a with hook above', 'cap a hook', 'latin capital letter a hook']);
+  this.executeCharTest('Ẹ', ['latin capital letter e with dot below', 'cap e underdot', 'latin capital letter e underdot']);
+  this.executeCharTest('Ẻ', ['latin capital letter e with hook above', 'cap e hook', 'latin capital letter e hook']);
+  this.executeCharTest('Ẽ', ['latin capital letter e with tilde', 'cap e tilde', 'latin capital letter e tilde']);
+  this.executeCharTest('Ỉ', ['latin capital letter i with hook above', 'cap i hook', 'latin capital letter i hook']);
+  this.executeCharTest('Ị', ['latin capital letter i with dot below', 'cap i underdot', 'latin capital letter i underdot']);
+  this.executeCharTest('Ọ', ['latin capital letter o with dot below', 'cap o underdot', 'latin capital letter o underdot']);
+  this.executeCharTest('Ỏ', ['latin capital letter o with hook above', 'cap o hook', 'latin capital letter o hook']);
+  this.executeCharTest('Ụ', ['latin capital letter u with dot below', 'cap u underdot', 'latin capital letter u underdot']);
+  this.executeCharTest('Ủ', ['latin capital letter u with hook above', 'cap u hook', 'latin capital letter u hook']);
+  this.executeCharTest('Ỳ', ['latin capital letter y with grave', 'cap y grave', 'latin capital letter y grave']);
+  this.executeCharTest('Ỵ', ['latin capital letter y with dot below', 'cap y underdot', 'latin capital letter y underdot']);
+  this.executeCharTest('Ỷ', ['latin capital letter y with hook above', 'cap y hook', 'latin capital letter y hook']);
+  this.executeCharTest('Ỹ', ['latin capital letter y with tilde', 'cap y tilde', 'latin capital letter y tilde']);
+  this.executeCharTest('𝕬', ['bold fraktur capital a', 'bold fraktur cap a', 'bold fraktur cap a']);
+  this.executeCharTest('𝕭', ['bold fraktur capital b', 'bold fraktur cap b', 'bold fraktur cap b']);
+  this.executeCharTest('𝕮', ['bold fraktur capital c', 'bold fraktur cap c', 'bold fraktur cap c']);
+  this.executeCharTest('𝕯', ['bold fraktur capital d', 'bold fraktur cap d', 'bold fraktur cap d']);
+  this.executeCharTest('𝕰', ['bold fraktur capital e', 'bold fraktur cap e', 'bold fraktur cap e']);
+  this.executeCharTest('𝕱', ['bold fraktur capital f', 'bold fraktur cap f', 'bold fraktur cap f']);
+  this.executeCharTest('𝕲', ['bold fraktur capital g', 'bold fraktur cap g', 'bold fraktur cap g']);
+  this.executeCharTest('𝕳', ['bold fraktur capital h', 'bold fraktur cap h', 'bold fraktur cap h']);
+  this.executeCharTest('𝕴', ['bold fraktur capital i', 'bold fraktur cap i', 'bold fraktur cap i']);
+  this.executeCharTest('𝕵', ['bold fraktur capital j', 'bold fraktur cap j', 'bold fraktur cap j']);
+  this.executeCharTest('𝕶', ['bold fraktur capital k', 'bold fraktur cap k', 'bold fraktur cap k']);
+  this.executeCharTest('𝕷', ['bold fraktur capital l', 'bold fraktur cap l', 'bold fraktur cap l']);
+  this.executeCharTest('𝕸', ['bold fraktur capital m', 'bold fraktur cap m', 'bold fraktur cap m']);
+  this.executeCharTest('𝕹', ['bold fraktur capital n', 'bold fraktur cap n', 'bold fraktur cap n']);
+  this.executeCharTest('𝕺', ['bold fraktur capital o', 'bold fraktur cap o', 'bold fraktur cap o']);
+  this.executeCharTest('𝕻', ['bold fraktur capital p', 'bold fraktur cap p', 'bold fraktur cap p']);
+  this.executeCharTest('𝕼', ['bold fraktur capital q', 'bold fraktur cap q', 'bold fraktur cap q']);
+  this.executeCharTest('𝕽', ['bold fraktur capital r', 'bold fraktur cap r', 'bold fraktur cap r']);
+  this.executeCharTest('𝕾', ['bold fraktur capital s', 'bold fraktur cap s', 'bold fraktur cap s']);
+  this.executeCharTest('𝕿', ['bold fraktur capital t', 'bold fraktur cap t', 'bold fraktur cap t']);
+  this.executeCharTest('𝖀', ['bold fraktur capital u', 'bold fraktur cap u', 'bold fraktur cap u']);
+  this.executeCharTest('𝖁', ['bold fraktur capital v', 'bold fraktur cap v', 'bold fraktur cap v']);
+  this.executeCharTest('𝖂', ['bold fraktur capital w', 'bold fraktur cap w', 'bold fraktur cap w']);
+  this.executeCharTest('𝖃', ['bold fraktur capital x', 'bold fraktur cap x', 'bold fraktur cap x']);
+  this.executeCharTest('𝖄', ['bold fraktur capital y', 'bold fraktur cap y', 'bold fraktur cap y']);
+  this.executeCharTest('𝖅', ['bold fraktur capital z', 'bold fraktur cap z', 'bold fraktur cap z']);
+  this.executeCharTest('𝖆', ['bold fraktur small a', 'bold fraktur a', 'bold fraktur a']);
+  this.executeCharTest('𝖇', ['bold fraktur small b', 'bold fraktur b', 'bold fraktur b']);
+  this.executeCharTest('𝖈', ['bold fraktur small c', 'bold fraktur c', 'bold fraktur c']);
+  this.executeCharTest('𝖉', ['bold fraktur small d', 'bold fraktur d', 'bold fraktur d']);
+  this.executeCharTest('𝖊', ['bold fraktur small e', 'bold fraktur e', 'bold fraktur e']);
+  this.executeCharTest('𝖋', ['bold fraktur small f', 'bold fraktur f', 'bold fraktur f']);
+  this.executeCharTest('𝖌', ['bold fraktur small g', 'bold fraktur g', 'bold fraktur g']);
+  this.executeCharTest('𝖍', ['bold fraktur small h', 'bold fraktur h', 'bold fraktur h']);
+  this.executeCharTest('𝖎', ['bold fraktur small i', 'bold fraktur i', 'bold fraktur i']);
+  this.executeCharTest('𝖏', ['bold fraktur small j', 'bold fraktur j', 'bold fraktur j']);
+  this.executeCharTest('𝖐', ['bold fraktur small k', 'bold fraktur k', 'bold fraktur k']);
+  this.executeCharTest('𝖑', ['bold fraktur small l', 'bold fraktur l', 'bold fraktur l']);
+  this.executeCharTest('𝖒', ['bold fraktur small m', 'bold fraktur m', 'bold fraktur m']);
+  this.executeCharTest('𝖓', ['bold fraktur small n', 'bold fraktur n', 'bold fraktur n']);
+  this.executeCharTest('𝖔', ['bold fraktur small o', 'bold fraktur o', 'bold fraktur o']);
+  this.executeCharTest('𝖕', ['bold fraktur small p', 'bold fraktur p', 'bold fraktur p']);
+  this.executeCharTest('𝖖', ['bold fraktur small q', 'bold fraktur q', 'bold fraktur q']);
+  this.executeCharTest('𝖗', ['bold fraktur small r', 'bold fraktur r', 'bold fraktur r']);
+  this.executeCharTest('𝖘', ['bold fraktur small s', 'bold fraktur s', 'bold fraktur s']);
+  this.executeCharTest('𝖙', ['bold fraktur small t', 'bold fraktur t', 'bold fraktur t']);
+  this.executeCharTest('𝖚', ['bold fraktur small u', 'bold fraktur u', 'bold fraktur u']);
+  this.executeCharTest('𝖛', ['bold fraktur small v', 'bold fraktur v', 'bold fraktur v']);
+  this.executeCharTest('𝖜', ['bold fraktur small w', 'bold fraktur w', 'bold fraktur w']);
+  this.executeCharTest('𝖝', ['bold fraktur small x', 'bold fraktur x', 'bold fraktur x']);
+  this.executeCharTest('𝖞', ['bold fraktur small y', 'bold fraktur y', 'bold fraktur y']);
+  this.executeCharTest('𝖟', ['bold fraktur small z', 'bold fraktur z', 'bold fraktur z']);
+  this.executeCharTest('𝐀', ['bold capital a', 'bold cap a', 'bold cap a']);
+  this.executeCharTest('𝐁', ['bold capital b', 'bold cap b', 'bold cap b']);
+  this.executeCharTest('𝐂', ['bold capital c', 'bold cap c', 'bold cap c']);
+  this.executeCharTest('𝐃', ['bold capital d', 'bold cap d', 'bold cap d']);
+  this.executeCharTest('𝐄', ['bold capital e', 'bold cap e', 'bold cap e']);
+  this.executeCharTest('𝐅', ['bold capital f', 'bold cap f', 'bold cap f']);
+  this.executeCharTest('𝐆', ['bold capital g', 'bold cap g', 'bold cap g']);
+  this.executeCharTest('𝐇', ['bold capital h', 'bold cap h', 'bold cap h']);
+  this.executeCharTest('𝐈', ['bold capital i', 'bold cap i', 'bold cap i']);
+  this.executeCharTest('𝐉', ['bold capital j', 'bold cap j', 'bold cap j']);
+  this.executeCharTest('𝐊', ['bold capital k', 'bold cap k', 'bold cap k']);
+  this.executeCharTest('𝐋', ['bold capital l', 'bold cap l', 'bold cap l']);
+  this.executeCharTest('𝐌', ['bold capital m', 'bold cap m', 'bold cap m']);
+  this.executeCharTest('𝐍', ['bold capital n', 'bold cap n', 'bold cap n']);
+  this.executeCharTest('𝐎', ['bold capital o', 'bold cap o', 'bold cap o']);
+  this.executeCharTest('𝐏', ['bold capital p', 'bold cap p', 'bold cap p']);
+  this.executeCharTest('𝐐', ['bold capital q', 'bold cap q', 'bold cap q']);
+  this.executeCharTest('𝐑', ['bold capital r', 'bold cap r', 'bold cap r']);
+  this.executeCharTest('𝐒', ['bold capital s', 'bold cap s', 'bold cap s']);
+  this.executeCharTest('𝐓', ['bold capital t', 'bold cap t', 'bold cap t']);
+  this.executeCharTest('𝐔', ['bold capital u', 'bold cap u', 'bold cap u']);
+  this.executeCharTest('𝐕', ['bold capital v', 'bold cap v', 'bold cap v']);
+  this.executeCharTest('𝐖', ['bold capital w', 'bold cap w', 'bold cap w']);
+  this.executeCharTest('𝐗', ['bold capital x', 'bold cap x', 'bold cap x']);
+  this.executeCharTest('𝐘', ['bold capital y', 'bold cap y', 'bold cap y']);
+  this.executeCharTest('𝐙', ['bold capital z', 'bold cap z', 'bold cap z']);
+  this.executeCharTest('𝐚', ['bold small a', 'bold a', 'bold a']);
+  this.executeCharTest('𝐛', ['bold small b', 'bold b', 'bold b']);
+  this.executeCharTest('𝐜', ['bold small c', 'bold c', 'bold c']);
+  this.executeCharTest('𝐝', ['bold small d', 'bold d', 'bold d']);
+  this.executeCharTest('𝐞', ['bold small e', 'bold e', 'bold e']);
+  this.executeCharTest('𝐟', ['bold small f', 'bold f', 'bold f']);
+  this.executeCharTest('𝐠', ['bold small g', 'bold g', 'bold g']);
+  this.executeCharTest('𝐡', ['bold small h', 'bold h', 'bold h']);
+  this.executeCharTest('𝐢', ['bold small i', 'bold i', 'bold i']);
+  this.executeCharTest('𝐣', ['bold small j', 'bold j', 'bold j']);
+  this.executeCharTest('𝐤', ['bold small k', 'bold k', 'bold k']);
+  this.executeCharTest('𝐥', ['bold small l', 'bold l', 'bold l']);
+  this.executeCharTest('𝐦', ['bold small m', 'bold m', 'bold m']);
+  this.executeCharTest('𝐧', ['bold small n', 'bold n', 'bold n']);
+  this.executeCharTest('𝐨', ['bold small o', 'bold o', 'bold o']);
+  this.executeCharTest('𝐩', ['bold small p', 'bold p', 'bold p']);
+  this.executeCharTest('𝐪', ['bold small q', 'bold q', 'bold q']);
+  this.executeCharTest('𝐫', ['bold small r', 'bold r', 'bold r']);
+  this.executeCharTest('𝐬', ['bold small s', 'bold s', 'bold s']);
+  this.executeCharTest('𝐭', ['bold small t', 'bold t', 'bold t']);
+  this.executeCharTest('𝐮', ['bold small u', 'bold u', 'bold u']);
+  this.executeCharTest('𝐯', ['bold small v', 'bold v', 'bold v']);
+  this.executeCharTest('𝐰', ['bold small w', 'bold w', 'bold w']);
+  this.executeCharTest('𝐱', ['bold small x', 'bold x', 'bold x']);
+  this.executeCharTest('𝐲', ['bold small y', 'bold y', 'bold y']);
+  this.executeCharTest('𝐳', ['bold small z', 'bold z', 'bold z']);
+  this.executeCharTest('𝑨', ['bold italic capital a', 'bold italic cap a', 'bold italic cap a']);
+  this.executeCharTest('𝑩', ['bold italic capital b', 'bold italic cap b', 'bold italic cap b']);
+  this.executeCharTest('𝑪', ['bold italic capital c', 'bold italic cap c', 'bold italic cap c']);
+  this.executeCharTest('𝑫', ['bold italic capital d', 'bold italic cap d', 'bold italic cap d']);
+  this.executeCharTest('𝑬', ['bold italic capital e', 'bold italic cap e', 'bold italic cap e']);
+  this.executeCharTest('𝑭', ['bold italic capital f', 'bold italic cap f', 'bold italic cap f']);
+  this.executeCharTest('𝑮', ['bold italic capital g', 'bold italic cap g', 'bold italic cap g']);
+  this.executeCharTest('𝑯', ['bold italic capital h', 'bold italic cap h', 'bold italic cap h']);
+  this.executeCharTest('𝑰', ['bold italic capital i', 'bold italic cap i', 'bold italic cap i']);
+  this.executeCharTest('𝑱', ['bold italic capital j', 'bold italic cap j', 'bold italic cap j']);
+  this.executeCharTest('𝑲', ['bold italic capital k', 'bold italic cap k', 'bold italic cap k']);
+  this.executeCharTest('𝑳', ['bold italic capital l', 'bold italic cap l', 'bold italic cap l']);
+  this.executeCharTest('𝑴', ['bold italic capital m', 'bold italic cap m', 'bold italic cap m']);
+  this.executeCharTest('𝑵', ['bold italic capital n', 'bold italic cap n', 'bold italic cap n']);
+  this.executeCharTest('𝑶', ['bold italic capital o', 'bold italic cap o', 'bold italic cap o']);
+  this.executeCharTest('𝑷', ['bold italic capital p', 'bold italic cap p', 'bold italic cap p']);
+  this.executeCharTest('𝑸', ['bold italic capital q', 'bold italic cap q', 'bold italic cap q']);
+  this.executeCharTest('𝑹', ['bold italic capital r', 'bold italic cap r', 'bold italic cap r']);
+  this.executeCharTest('𝑺', ['bold italic capital s', 'bold italic cap s', 'bold italic cap s']);
+  this.executeCharTest('𝑻', ['bold italic capital t', 'bold italic cap t', 'bold italic cap t']);
+  this.executeCharTest('𝑼', ['bold italic capital u', 'bold italic cap u', 'bold italic cap u']);
+  this.executeCharTest('𝑽', ['bold italic capital v', 'bold italic cap v', 'bold italic cap v']);
+  this.executeCharTest('𝑾', ['bold italic capital w', 'bold italic cap w', 'bold italic cap w']);
+  this.executeCharTest('𝑿', ['bold italic capital x', 'bold italic cap x', 'bold italic cap x']);
+  this.executeCharTest('𝒀', ['bold italic capital y', 'bold italic cap y', 'bold italic cap y']);
+  this.executeCharTest('𝒁', ['bold italic capital z', 'bold italic cap z', 'bold italic cap z']);
+  this.executeCharTest('𝒂', ['bold italic small a', 'bold italic a', 'bold italic a']);
+  this.executeCharTest('𝒃', ['bold italic small b', 'bold italic b', 'bold italic b']);
+  this.executeCharTest('𝒄', ['bold italic small c', 'bold italic c', 'bold italic c']);
+  this.executeCharTest('𝒅', ['bold italic small d', 'bold italic d', 'bold italic d']);
+  this.executeCharTest('𝒆', ['bold italic small e', 'bold italic e', 'bold italic e']);
+  this.executeCharTest('𝒇', ['bold italic small f', 'bold italic f', 'bold italic f']);
+  this.executeCharTest('𝒈', ['bold italic small g', 'bold italic g', 'bold italic g']);
+  this.executeCharTest('𝒉', ['bold italic small h', 'bold italic h', 'bold italic h']);
+  this.executeCharTest('𝒊', ['bold italic small i', 'bold italic i', 'bold italic i']);
+  this.executeCharTest('𝒋', ['bold italic small j', 'bold italic j', 'bold italic j']);
+  this.executeCharTest('𝒌', ['bold italic small k', 'bold italic k', 'bold italic k']);
+  this.executeCharTest('𝒍', ['bold italic small l', 'bold italic l', 'bold italic l']);
+  this.executeCharTest('𝒎', ['bold italic small m', 'bold italic m', 'bold italic m']);
+  this.executeCharTest('𝒏', ['bold italic small n', 'bold italic n', 'bold italic n']);
+  this.executeCharTest('𝒐', ['bold italic small o', 'bold italic o', 'bold italic o']);
+  this.executeCharTest('𝒑', ['bold italic small p', 'bold italic p', 'bold italic p']);
+  this.executeCharTest('𝒒', ['bold italic small q', 'bold italic q', 'bold italic q']);
+  this.executeCharTest('𝒓', ['bold italic small r', 'bold italic r', 'bold italic r']);
+  this.executeCharTest('𝒔', ['bold italic small s', 'bold italic s', 'bold italic s']);
+  this.executeCharTest('𝒕', ['bold italic small t', 'bold italic t', 'bold italic t']);
+  this.executeCharTest('𝒖', ['bold italic small u', 'bold italic u', 'bold italic u']);
+  this.executeCharTest('𝒗', ['bold italic small v', 'bold italic v', 'bold italic v']);
+  this.executeCharTest('𝒘', ['bold italic small w', 'bold italic w', 'bold italic w']);
+  this.executeCharTest('𝒙', ['bold italic small x', 'bold italic x', 'bold italic x']);
+  this.executeCharTest('𝒚', ['bold italic small y', 'bold italic y', 'bold italic y']);
+  this.executeCharTest('𝒛', ['bold italic small z', 'bold italic z', 'bold italic z']);
+  this.executeCharTest('𝓐', ['bold script capital a', 'bold script cap a', 'bold script cap a']);
+  this.executeCharTest('𝓑', ['bold script capital b', 'bold script cap b', 'bold script cap b']);
+  this.executeCharTest('𝓒', ['bold script capital c', 'bold script cap c', 'bold script cap c']);
+  this.executeCharTest('𝓓', ['bold script capital d', 'bold script cap d', 'bold script cap d']);
+  this.executeCharTest('𝓔', ['bold script capital e', 'bold script cap e', 'bold script cap e']);
+  this.executeCharTest('𝓕', ['bold script capital f', 'bold script cap f', 'bold script cap f']);
+  this.executeCharTest('𝓖', ['bold script capital g', 'bold script cap g', 'bold script cap g']);
+  this.executeCharTest('𝓗', ['bold script capital h', 'bold script cap h', 'bold script cap h']);
+  this.executeCharTest('𝓘', ['bold script capital i', 'bold script cap i', 'bold script cap i']);
+  this.executeCharTest('𝓙', ['bold script capital j', 'bold script cap j', 'bold script cap j']);
+  this.executeCharTest('𝓚', ['bold script capital k', 'bold script cap k', 'bold script cap k']);
+  this.executeCharTest('𝓛', ['bold script capital l', 'bold script cap l', 'bold script cap l']);
+  this.executeCharTest('𝓜', ['bold script capital m', 'bold script cap m', 'bold script cap m']);
+  this.executeCharTest('𝓝', ['bold script capital n', 'bold script cap n', 'bold script cap n']);
+  this.executeCharTest('𝓞', ['bold script capital o', 'bold script cap o', 'bold script cap o']);
+  this.executeCharTest('𝓟', ['bold script capital p', 'bold script cap p', 'bold script cap p']);
+  this.executeCharTest('𝓠', ['bold script capital q', 'bold script cap q', 'bold script cap q']);
+  this.executeCharTest('𝓡', ['bold script capital r', 'bold script cap r', 'bold script cap r']);
+  this.executeCharTest('𝓢', ['bold script capital s', 'bold script cap s', 'bold script cap s']);
+  this.executeCharTest('𝓣', ['bold script capital t', 'bold script cap t', 'bold script cap t']);
+  this.executeCharTest('𝓤', ['bold script capital u', 'bold script cap u', 'bold script cap u']);
+  this.executeCharTest('𝓥', ['bold script capital v', 'bold script cap v', 'bold script cap v']);
+  this.executeCharTest('𝓦', ['bold script capital w', 'bold script cap w', 'bold script cap w']);
+  this.executeCharTest('𝓧', ['bold script capital x', 'bold script cap x', 'bold script cap x']);
+  this.executeCharTest('𝓨', ['bold script capital y', 'bold script cap y', 'bold script cap y']);
+  this.executeCharTest('𝓩', ['bold script capital z', 'bold script cap z', 'bold script cap z']);
+  this.executeCharTest('𝓪', ['bold script small a', 'bold script a', 'bold script a']);
+  this.executeCharTest('𝓫', ['bold script small b', 'bold script b', 'bold script b']);
+  this.executeCharTest('𝓬', ['bold script small c', 'bold script c', 'bold script c']);
+  this.executeCharTest('𝓭', ['bold script small d', 'bold script d', 'bold script d']);
+  this.executeCharTest('𝓮', ['bold script small e', 'bold script e', 'bold script e']);
+  this.executeCharTest('𝓯', ['bold script small f', 'bold script f', 'bold script f']);
+  this.executeCharTest('𝓰', ['bold script small g', 'bold script g', 'bold script g']);
+  this.executeCharTest('𝓱', ['bold script small h', 'bold script h', 'bold script h']);
+  this.executeCharTest('𝓲', ['bold script small i', 'bold script i', 'bold script i']);
+  this.executeCharTest('𝓳', ['bold script small j', 'bold script j', 'bold script j']);
+  this.executeCharTest('𝓴', ['bold script small k', 'bold script k', 'bold script k']);
+  this.executeCharTest('𝓵', ['bold script small l', 'bold script l', 'bold script l']);
+  this.executeCharTest('𝓶', ['bold script small m', 'bold script m', 'bold script m']);
+  this.executeCharTest('𝓷', ['bold script small n', 'bold script n', 'bold script n']);
+  this.executeCharTest('𝓸', ['bold script small o', 'bold script o', 'bold script o']);
+  this.executeCharTest('𝓹', ['bold script small p', 'bold script p', 'bold script p']);
+  this.executeCharTest('𝓺', ['bold script small q', 'bold script q', 'bold script q']);
+  this.executeCharTest('𝓻', ['bold script small r', 'bold script r', 'bold script r']);
+  this.executeCharTest('𝓼', ['bold script small s', 'bold script s', 'bold script s']);
+  this.executeCharTest('𝓽', ['bold script small t', 'bold script t', 'bold script t']);
+  this.executeCharTest('𝓾', ['bold script small u', 'bold script u', 'bold script u']);
+  this.executeCharTest('𝓿', ['bold script small v', 'bold script v', 'bold script v']);
+  this.executeCharTest('𝔀', ['bold script small w', 'bold script w', 'bold script w']);
+  this.executeCharTest('𝔁', ['bold script small x', 'bold script x', 'bold script x']);
+  this.executeCharTest('𝔂', ['bold script small y', 'bold script y', 'bold script y']);
+  this.executeCharTest('𝔃', ['bold script small z', 'bold script z', 'bold script z']);
+  this.executeCharTest('𝔸', ['double struck capital a', 'double struck cap a', 'double struck cap a']);
+  this.executeCharTest('𝔹', ['double struck capital b', 'double struck cap b', 'double struck cap b']);
+  this.executeCharTest('ℂ', ['double struck capital c', 'double struck cap c', 'double struck cap c']);
+  this.executeCharTest('𝔻', ['double struck capital d', 'double struck cap d', 'double struck cap d']);
+  this.executeCharTest('𝔼', ['double struck capital e', 'double struck cap e', 'double struck cap e']);
+  this.executeCharTest('𝔽', ['double struck capital f', 'double struck cap f', 'double struck cap f']);
+  this.executeCharTest('𝔾', ['double struck capital g', 'double struck cap g', 'double struck cap g']);
+  this.executeCharTest('ℍ', ['double struck capital h', 'double struck cap h', 'double struck cap h']);
+  this.executeCharTest('𝕀', ['double struck capital i', 'double struck cap i', 'double struck cap i']);
+  this.executeCharTest('𝕁', ['double struck capital j', 'double struck cap j', 'double struck cap j']);
+  this.executeCharTest('𝕂', ['double struck capital k', 'double struck cap k', 'double struck cap k']);
+  this.executeCharTest('𝕃', ['double struck capital l', 'double struck cap l', 'double struck cap l']);
+  this.executeCharTest('𝕄', ['double struck capital m', 'double struck cap m', 'double struck cap m']);
+  this.executeCharTest('ℕ', ['double struck capital n', 'double struck cap n', 'double struck cap n']);
+  this.executeCharTest('𝕆', ['double struck capital o', 'double struck cap o', 'double struck cap o']);
+  this.executeCharTest('ℙ', ['double struck capital p', 'double struck cap p', 'double struck cap p']);
+  this.executeCharTest('ℚ', ['double struck capital q', 'double struck cap q', 'double struck cap q']);
+  this.executeCharTest('ℝ', ['double struck capital r', 'double struck cap r', 'double struck cap r']);
+  this.executeCharTest('𝕊', ['double struck capital s', 'double struck cap s', 'double struck cap s']);
+  this.executeCharTest('𝕋', ['double struck capital t', 'double struck cap t', 'double struck cap t']);
+  this.executeCharTest('𝕌', ['double struck capital u', 'double struck cap u', 'double struck cap u']);
+  this.executeCharTest('𝕍', ['double struck capital v', 'double struck cap v', 'double struck cap v']);
+  this.executeCharTest('𝕎', ['double struck capital w', 'double struck cap w', 'double struck cap w']);
+  this.executeCharTest('𝕏', ['double struck capital x', 'double struck cap x', 'double struck cap x']);
+  this.executeCharTest('𝕐', ['double struck capital y', 'double struck cap y', 'double struck cap y']);
+  this.executeCharTest('ℤ', ['double struck capital z', 'double struck cap z', 'double struck cap z']);
+  this.executeCharTest('𝕒', ['double struck small a', 'double struck a', 'double struck a']);
+  this.executeCharTest('𝕓', ['double struck small b', 'double struck b', 'double struck b']);
+  this.executeCharTest('𝕔', ['double struck small c', 'double struck c', 'double struck c']);
+  this.executeCharTest('𝕕', ['double struck small d', 'double struck d', 'double struck d']);
+  this.executeCharTest('𝕖', ['double struck small e', 'double struck e', 'double struck e']);
+  this.executeCharTest('𝕗', ['double struck small f', 'double struck f', 'double struck f']);
+  this.executeCharTest('𝕘', ['double struck small g', 'double struck g', 'double struck g']);
+  this.executeCharTest('𝕙', ['double struck small h', 'double struck h', 'double struck h']);
+  this.executeCharTest('𝕚', ['double struck small i', 'double struck i', 'double struck i']);
+  this.executeCharTest('𝕛', ['double struck small j', 'double struck j', 'double struck j']);
+  this.executeCharTest('𝕜', ['double struck small k', 'double struck k', 'double struck k']);
+  this.executeCharTest('𝕝', ['double struck small l', 'double struck l', 'double struck l']);
+  this.executeCharTest('𝕞', ['double struck small m', 'double struck m', 'double struck m']);
+  this.executeCharTest('𝕟', ['double struck small n', 'double struck n', 'double struck n']);
+  this.executeCharTest('𝕠', ['double struck small o', 'double struck o', 'double struck o']);
+  this.executeCharTest('𝕡', ['double struck small p', 'double struck p', 'double struck p']);
+  this.executeCharTest('𝕢', ['double struck small q', 'double struck q', 'double struck q']);
+  this.executeCharTest('𝕣', ['double struck small r', 'double struck r', 'double struck r']);
+  this.executeCharTest('𝕤', ['double struck small s', 'double struck s', 'double struck s']);
+  this.executeCharTest('𝕥', ['double struck small t', 'double struck t', 'double struck t']);
+  this.executeCharTest('𝕦', ['double struck small u', 'double struck u', 'double struck u']);
+  this.executeCharTest('𝕧', ['double struck small v', 'double struck v', 'double struck v']);
+  this.executeCharTest('𝕨', ['double struck small w', 'double struck w', 'double struck w']);
+  this.executeCharTest('𝕩', ['double struck small x', 'double struck x', 'double struck x']);
+  this.executeCharTest('𝕪', ['double struck small y', 'double struck y', 'double struck y']);
+  this.executeCharTest('𝕫', ['double struck small z', 'double struck z', 'double struck z']);
+  this.executeCharTest('𝔄', ['fraktur capital a', 'fraktur cap a', 'fraktur cap a']);
+  this.executeCharTest('𝔅', ['fraktur capital b', 'fraktur cap b', 'fraktur cap b']);
+  this.executeCharTest('ℭ', ['fraktur capital c', 'fraktur cap c', 'fraktur cap c']);
+  this.executeCharTest('𝔇', ['fraktur capital d', 'fraktur cap d', 'fraktur cap d']);
+  this.executeCharTest('𝔈', ['fraktur capital e', 'fraktur cap e', 'fraktur cap e']);
+  this.executeCharTest('𝔉', ['fraktur capital f', 'fraktur cap f', 'fraktur cap f']);
+  this.executeCharTest('𝔊', ['fraktur capital g', 'fraktur cap g', 'fraktur cap g']);
+  this.executeCharTest('ℌ', ['fraktur capital h', 'fraktur cap h', 'fraktur cap h']);
+  this.executeCharTest('ℑ', ['fraktur capital i', 'fraktur cap i', 'fraktur cap i']);
+  this.executeCharTest('𝔍', ['fraktur capital j', 'fraktur cap j', 'fraktur cap j']);
+  this.executeCharTest('𝔎', ['fraktur capital k', 'fraktur cap k', 'fraktur cap k']);
+  this.executeCharTest('𝔏', ['fraktur capital l', 'fraktur cap l', 'fraktur cap l']);
+  this.executeCharTest('𝔐', ['fraktur capital m', 'fraktur cap m', 'fraktur cap m']);
+  this.executeCharTest('𝔑', ['fraktur capital n', 'fraktur cap n', 'fraktur cap n']);
+  this.executeCharTest('𝔒', ['fraktur capital o', 'fraktur cap o', 'fraktur cap o']);
+  this.executeCharTest('𝔓', ['fraktur capital p', 'fraktur cap p', 'fraktur cap p']);
+  this.executeCharTest('𝔔', ['fraktur capital q', 'fraktur cap q', 'fraktur cap q']);
+  this.executeCharTest('ℜ', ['fraktur capital r', 'fraktur cap r', 'fraktur cap r']);
+  this.executeCharTest('𝔖', ['fraktur capital s', 'fraktur cap s', 'fraktur cap s']);
+  this.executeCharTest('𝔗', ['fraktur capital t', 'fraktur cap t', 'fraktur cap t']);
+  this.executeCharTest('𝔘', ['fraktur capital u', 'fraktur cap u', 'fraktur cap u']);
+  this.executeCharTest('𝔙', ['fraktur capital v', 'fraktur cap v', 'fraktur cap v']);
+  this.executeCharTest('𝔚', ['fraktur capital w', 'fraktur cap w', 'fraktur cap w']);
+  this.executeCharTest('𝔛', ['fraktur capital x', 'fraktur cap x', 'fraktur cap x']);
+  this.executeCharTest('𝔜', ['fraktur capital y', 'fraktur cap y', 'fraktur cap y']);
+  this.executeCharTest('ℨ', ['fraktur capital z', 'fraktur cap z', 'fraktur cap z']);
+  this.executeCharTest('𝔞', ['fraktur small a', 'fraktur a', 'fraktur a']);
+  this.executeCharTest('𝔟', ['fraktur small b', 'fraktur b', 'fraktur b']);
+  this.executeCharTest('𝔠', ['fraktur small c', 'fraktur c', 'fraktur c']);
+  this.executeCharTest('𝔡', ['fraktur small d', 'fraktur d', 'fraktur d']);
+  this.executeCharTest('𝔢', ['fraktur small e', 'fraktur e', 'fraktur e']);
+  this.executeCharTest('𝔣', ['fraktur small f', 'fraktur f', 'fraktur f']);
+  this.executeCharTest('𝔤', ['fraktur small g', 'fraktur g', 'fraktur g']);
+  this.executeCharTest('𝔥', ['fraktur small h', 'fraktur h', 'fraktur h']);
+  this.executeCharTest('𝔦', ['fraktur small i', 'fraktur i', 'fraktur i']);
+  this.executeCharTest('𝔧', ['fraktur small j', 'fraktur j', 'fraktur j']);
+  this.executeCharTest('𝔨', ['fraktur small k', 'fraktur k', 'fraktur k']);
+  this.executeCharTest('𝔩', ['fraktur small l', 'fraktur l', 'fraktur l']);
+  this.executeCharTest('𝔪', ['fraktur small m', 'fraktur m', 'fraktur m']);
+  this.executeCharTest('𝔫', ['fraktur small n', 'fraktur n', 'fraktur n']);
+  this.executeCharTest('𝔬', ['fraktur small o', 'fraktur o', 'fraktur o']);
+  this.executeCharTest('𝔭', ['fraktur small p', 'fraktur p', 'fraktur p']);
+  this.executeCharTest('𝔮', ['fraktur small q', 'fraktur q', 'fraktur q']);
+  this.executeCharTest('𝔯', ['fraktur small r', 'fraktur r', 'fraktur r']);
+  this.executeCharTest('𝔰', ['fraktur small s', 'fraktur s', 'fraktur s']);
+  this.executeCharTest('𝔱', ['fraktur small t', 'fraktur t', 'fraktur t']);
+  this.executeCharTest('𝔲', ['fraktur small u', 'fraktur u', 'fraktur u']);
+  this.executeCharTest('𝔳', ['fraktur small v', 'fraktur v', 'fraktur v']);
+  this.executeCharTest('𝔴', ['fraktur small w', 'fraktur w', 'fraktur w']);
+  this.executeCharTest('𝔵', ['fraktur small x', 'fraktur x', 'fraktur x']);
+  this.executeCharTest('𝔶', ['fraktur small y', 'fraktur y', 'fraktur y']);
+  this.executeCharTest('𝔷', ['fraktur small z', 'fraktur z', 'fraktur z']);
+  this.executeCharTest('𝐴', ['italic capital a', 'italic cap a', 'italic cap a']);
+  this.executeCharTest('𝐵', ['italic capital b', 'italic cap b', 'italic cap b']);
+  this.executeCharTest('𝐶', ['italic capital c', 'italic cap c', 'italic cap c']);
+  this.executeCharTest('𝐷', ['italic capital d', 'italic cap d', 'italic cap d']);
+  this.executeCharTest('𝐸', ['italic capital e', 'italic cap e', 'italic cap e']);
+  this.executeCharTest('𝐹', ['italic capital f', 'italic cap f', 'italic cap f']);
+  this.executeCharTest('𝐺', ['italic capital g', 'italic cap g', 'italic cap g']);
+  this.executeCharTest('𝐻', ['italic capital h', 'italic cap h', 'italic cap h']);
+  this.executeCharTest('𝐼', ['italic capital i', 'italic cap i', 'italic cap i']);
+  this.executeCharTest('𝐽', ['italic capital j', 'italic cap j', 'italic cap j']);
+  this.executeCharTest('𝐾', ['italic capital k', 'italic cap k', 'italic cap k']);
+  this.executeCharTest('𝐿', ['italic capital l', 'italic cap l', 'italic cap l']);
+  this.executeCharTest('𝑀', ['italic capital m', 'italic cap m', 'italic cap m']);
+  this.executeCharTest('𝑁', ['italic capital n', 'italic cap n', 'italic cap n']);
+  this.executeCharTest('𝑂', ['italic capital o', 'italic cap o', 'italic cap o']);
+  this.executeCharTest('𝑃', ['italic capital p', 'italic cap p', 'italic cap p']);
+  this.executeCharTest('𝑄', ['italic capital q', 'italic cap q', 'italic cap q']);
+  this.executeCharTest('𝑅', ['italic capital r', 'italic cap r', 'italic cap r']);
+  this.executeCharTest('𝑆', ['italic capital s', 'italic cap s', 'italic cap s']);
+  this.executeCharTest('𝑇', ['italic capital t', 'italic cap t', 'italic cap t']);
+  this.executeCharTest('𝑈', ['italic capital u', 'italic cap u', 'italic cap u']);
+  this.executeCharTest('𝑉', ['italic capital v', 'italic cap v', 'italic cap v']);
+  this.executeCharTest('𝑊', ['italic capital w', 'italic cap w', 'italic cap w']);
+  this.executeCharTest('𝑋', ['italic capital x', 'italic cap x', 'italic cap x']);
+  this.executeCharTest('𝑌', ['italic capital y', 'italic cap y', 'italic cap y']);
+  this.executeCharTest('𝑍', ['italic capital z', 'italic cap z', 'italic cap z']);
+  this.executeCharTest('𝑎', ['italic small a', 'italic a', 'italic a']);
+  this.executeCharTest('𝑏', ['italic small b', 'italic b', 'italic b']);
+  this.executeCharTest('𝑐', ['italic small c', 'italic c', 'italic c']);
+  this.executeCharTest('𝑑', ['italic small d', 'italic d', 'italic d']);
+  this.executeCharTest('𝑒', ['italic small e', 'italic e', 'italic e']);
+  this.executeCharTest('𝑓', ['italic small f', 'italic f', 'italic f']);
+  this.executeCharTest('𝑔', ['italic small g', 'italic g', 'italic g']);
+  this.executeCharTest('ℎ', ['italic small h', 'italic h', 'italic h']);
+  this.executeCharTest('𝑖', ['italic small i', 'italic i', 'italic i']);
+  this.executeCharTest('𝑗', ['italic small j', 'italic j', 'italic j']);
+  this.executeCharTest('𝑘', ['italic small k', 'italic k', 'italic k']);
+  this.executeCharTest('𝑙', ['italic small l', 'italic l', 'italic l']);
+  this.executeCharTest('𝑚', ['italic small m', 'italic m', 'italic m']);
+  this.executeCharTest('𝑛', ['italic small n', 'italic n', 'italic n']);
+  this.executeCharTest('𝑜', ['italic small o', 'italic o', 'italic o']);
+  this.executeCharTest('𝑝', ['italic small p', 'italic p', 'italic p']);
+  this.executeCharTest('𝑞', ['italic small q', 'italic q', 'italic q']);
+  this.executeCharTest('𝑟', ['italic small r', 'italic r', 'italic r']);
+  this.executeCharTest('𝑠', ['italic small s', 'italic s', 'italic s']);
+  this.executeCharTest('𝑡', ['italic small t', 'italic t', 'italic t']);
+  this.executeCharTest('𝑢', ['italic small u', 'italic u', 'italic u']);
+  this.executeCharTest('𝑣', ['italic small v', 'italic v', 'italic v']);
+  this.executeCharTest('𝑤', ['italic small w', 'italic w', 'italic w']);
+  this.executeCharTest('𝑥', ['italic small x', 'italic x', 'italic x']);
+  this.executeCharTest('𝑦', ['italic small y', 'italic y', 'italic y']);
+  this.executeCharTest('𝑧', ['italic small z', 'italic z', 'italic z']);
+  this.executeCharTest('𝙰', ['monospace capital a', 'monospace cap a', 'monospace cap a']);
+  this.executeCharTest('𝙱', ['monospace capital b', 'monospace cap b', 'monospace cap b']);
+  this.executeCharTest('𝙲', ['monospace capital c', 'monospace cap c', 'monospace cap c']);
+  this.executeCharTest('𝙳', ['monospace capital d', 'monospace cap d', 'monospace cap d']);
+  this.executeCharTest('𝙴', ['monospace capital e', 'monospace cap e', 'monospace cap e']);
+  this.executeCharTest('𝙵', ['monospace capital f', 'monospace cap f', 'monospace cap f']);
+  this.executeCharTest('𝙶', ['monospace capital g', 'monospace cap g', 'monospace cap g']);
+  this.executeCharTest('𝙷', ['monospace capital h', 'monospace cap h', 'monospace cap h']);
+  this.executeCharTest('𝙸', ['monospace capital i', 'monospace cap i', 'monospace cap i']);
+  this.executeCharTest('𝙹', ['monospace capital j', 'monospace cap j', 'monospace cap j']);
+  this.executeCharTest('𝙺', ['monospace capital k', 'monospace cap k', 'monospace cap k']);
+  this.executeCharTest('𝙻', ['monospace capital l', 'monospace cap l', 'monospace cap l']);
+  this.executeCharTest('𝙼', ['monospace capital m', 'monospace cap m', 'monospace cap m']);
+  this.executeCharTest('𝙽', ['monospace capital n', 'monospace cap n', 'monospace cap n']);
+  this.executeCharTest('𝙾', ['monospace capital o', 'monospace cap o', 'monospace cap o']);
+  this.executeCharTest('𝙿', ['monospace capital p', 'monospace cap p', 'monospace cap p']);
+  this.executeCharTest('𝚀', ['monospace capital q', 'monospace cap q', 'monospace cap q']);
+  this.executeCharTest('𝚁', ['monospace capital r', 'monospace cap r', 'monospace cap r']);
+  this.executeCharTest('𝚂', ['monospace capital s', 'monospace cap s', 'monospace cap s']);
+  this.executeCharTest('𝚃', ['monospace capital t', 'monospace cap t', 'monospace cap t']);
+  this.executeCharTest('𝚄', ['monospace capital u', 'monospace cap u', 'monospace cap u']);
+  this.executeCharTest('𝚅', ['monospace capital v', 'monospace cap v', 'monospace cap v']);
+  this.executeCharTest('𝚆', ['monospace capital w', 'monospace cap w', 'monospace cap w']);
+  this.executeCharTest('𝚇', ['monospace capital x', 'monospace cap x', 'monospace cap x']);
+  this.executeCharTest('𝚈', ['monospace capital y', 'monospace cap y', 'monospace cap y']);
+  this.executeCharTest('𝚉', ['monospace capital z', 'monospace cap z', 'monospace cap z']);
+  this.executeCharTest('𝚊', ['monospace small a', 'monospace a', 'monospace a']);
+  this.executeCharTest('𝚋', ['monospace small b', 'monospace b', 'monospace b']);
+  this.executeCharTest('𝚌', ['monospace small c', 'monospace c', 'monospace c']);
+  this.executeCharTest('𝚍', ['monospace small d', 'monospace d', 'monospace d']);
+  this.executeCharTest('𝚎', ['monospace small e', 'monospace e', 'monospace e']);
+  this.executeCharTest('𝚏', ['monospace small f', 'monospace f', 'monospace f']);
+  this.executeCharTest('𝚐', ['monospace small g', 'monospace g', 'monospace g']);
+  this.executeCharTest('𝚑', ['monospace small h', 'monospace h', 'monospace h']);
+  this.executeCharTest('𝚒', ['monospace small i', 'monospace i', 'monospace i']);
+  this.executeCharTest('𝚓', ['monospace small j', 'monospace j', 'monospace j']);
+  this.executeCharTest('𝚔', ['monospace small k', 'monospace k', 'monospace k']);
+  this.executeCharTest('𝚕', ['monospace small l', 'monospace l', 'monospace l']);
+  this.executeCharTest('𝚖', ['monospace small m', 'monospace m', 'monospace m']);
+  this.executeCharTest('𝚗', ['monospace small n', 'monospace n', 'monospace n']);
+  this.executeCharTest('𝚘', ['monospace small o', 'monospace o', 'monospace o']);
+  this.executeCharTest('𝚙', ['monospace small p', 'monospace p', 'monospace p']);
+  this.executeCharTest('𝚚', ['monospace small q', 'monospace q', 'monospace q']);
+  this.executeCharTest('𝚛', ['monospace small r', 'monospace r', 'monospace r']);
+  this.executeCharTest('𝚜', ['monospace small s', 'monospace s', 'monospace s']);
+  this.executeCharTest('𝚝', ['monospace small t', 'monospace t', 'monospace t']);
+  this.executeCharTest('𝚞', ['monospace small u', 'monospace u', 'monospace u']);
+  this.executeCharTest('𝚟', ['monospace small v', 'monospace v', 'monospace v']);
+  this.executeCharTest('𝚠', ['monospace small w', 'monospace w', 'monospace w']);
+  this.executeCharTest('𝚡', ['monospace small x', 'monospace x', 'monospace x']);
+  this.executeCharTest('𝚢', ['monospace small y', 'monospace y', 'monospace y']);
+  this.executeCharTest('𝚣', ['monospace small z', 'monospace z', 'monospace z']);
+  this.executeCharTest('𝗔', ['sans serif bold capital a', 'sans serif bold cap a', 'sans serif bold cap a']);
+  this.executeCharTest('𝗕', ['sans serif bold capital b', 'sans serif bold cap b', 'sans serif bold cap b']);
+  this.executeCharTest('𝗖', ['sans serif bold capital c', 'sans serif bold cap c', 'sans serif bold cap c']);
+  this.executeCharTest('𝗗', ['sans serif bold capital d', 'sans serif bold cap d', 'sans serif bold cap d']);
+  this.executeCharTest('𝗘', ['sans serif bold capital e', 'sans serif bold cap e', 'sans serif bold cap e']);
+  this.executeCharTest('𝗙', ['sans serif bold capital f', 'sans serif bold cap f', 'sans serif bold cap f']);
+  this.executeCharTest('𝗚', ['sans serif bold capital g', 'sans serif bold cap g', 'sans serif bold cap g']);
+  this.executeCharTest('𝗛', ['sans serif bold capital h', 'sans serif bold cap h', 'sans serif bold cap h']);
+  this.executeCharTest('𝗜', ['sans serif bold capital i', 'sans serif bold cap i', 'sans serif bold cap i']);
+  this.executeCharTest('𝗝', ['sans serif bold capital j', 'sans serif bold cap j', 'sans serif bold cap j']);
+  this.executeCharTest('𝗞', ['sans serif bold capital k', 'sans serif bold cap k', 'sans serif bold cap k']);
+  this.executeCharTest('𝗟', ['sans serif bold capital l', 'sans serif bold cap l', 'sans serif bold cap l']);
+  this.executeCharTest('𝗠', ['sans serif bold capital m', 'sans serif bold cap m', 'sans serif bold cap m']);
+  this.executeCharTest('𝗡', ['sans serif bold capital n', 'sans serif bold cap n', 'sans serif bold cap n']);
+  this.executeCharTest('𝗢', ['sans serif bold capital o', 'sans serif bold cap o', 'sans serif bold cap o']);
+  this.executeCharTest('𝗣', ['sans serif bold capital p', 'sans serif bold cap p', 'sans serif bold cap p']);
+  this.executeCharTest('𝗤', ['sans serif bold capital q', 'sans serif bold cap q', 'sans serif bold cap q']);
+  this.executeCharTest('𝗥', ['sans serif bold capital r', 'sans serif bold cap r', 'sans serif bold cap r']);
+  this.executeCharTest('𝗦', ['sans serif bold capital s', 'sans serif bold cap s', 'sans serif bold cap s']);
+  this.executeCharTest('𝗧', ['sans serif bold capital t', 'sans serif bold cap t', 'sans serif bold cap t']);
+  this.executeCharTest('𝗨', ['sans serif bold capital u', 'sans serif bold cap u', 'sans serif bold cap u']);
+  this.executeCharTest('𝗩', ['sans serif bold capital v', 'sans serif bold cap v', 'sans serif bold cap v']);
+  this.executeCharTest('𝗪', ['sans serif bold capital w', 'sans serif bold cap w', 'sans serif bold cap w']);
+  this.executeCharTest('𝗫', ['sans serif bold capital x', 'sans serif bold cap x', 'sans serif bold cap x']);
+  this.executeCharTest('𝗬', ['sans serif bold capital y', 'sans serif bold cap y', 'sans serif bold cap y']);
+  this.executeCharTest('𝗭', ['sans serif bold capital z', 'sans serif bold cap z', 'sans serif bold cap z']);
+  this.executeCharTest('𝗮', ['sans serif bold small a', 'sans serif bold a', 'sans serif bold a']);
+  this.executeCharTest('𝗯', ['sans serif bold small b', 'sans serif bold b', 'sans serif bold b']);
+  this.executeCharTest('𝗰', ['sans serif bold small c', 'sans serif bold c', 'sans serif bold c']);
+  this.executeCharTest('𝗱', ['sans serif bold small d', 'sans serif bold d', 'sans serif bold d']);
+  this.executeCharTest('𝗲', ['sans serif bold small e', 'sans serif bold e', 'sans serif bold e']);
+  this.executeCharTest('𝗳', ['sans serif bold small f', 'sans serif bold f', 'sans serif bold f']);
+  this.executeCharTest('𝗴', ['sans serif bold small g', 'sans serif bold g', 'sans serif bold g']);
+  this.executeCharTest('𝗵', ['sans serif bold small h', 'sans serif bold h', 'sans serif bold h']);
+  this.executeCharTest('𝗶', ['sans serif bold small i', 'sans serif bold i', 'sans serif bold i']);
+  this.executeCharTest('𝗷', ['sans serif bold small j', 'sans serif bold j', 'sans serif bold j']);
+  this.executeCharTest('𝗸', ['sans serif bold small k', 'sans serif bold k', 'sans serif bold k']);
+  this.executeCharTest('𝗹', ['sans serif bold small l', 'sans serif bold l', 'sans serif bold l']);
+  this.executeCharTest('𝗺', ['sans serif bold small m', 'sans serif bold m', 'sans serif bold m']);
+  this.executeCharTest('𝗻', ['sans serif bold small n', 'sans serif bold n', 'sans serif bold n']);
+  this.executeCharTest('𝗼', ['sans serif bold small o', 'sans serif bold o', 'sans serif bold o']);
+  this.executeCharTest('𝗽', ['sans serif bold small p', 'sans serif bold p', 'sans serif bold p']);
+  this.executeCharTest('𝗾', ['sans serif bold small q', 'sans serif bold q', 'sans serif bold q']);
+  this.executeCharTest('𝗿', ['sans serif bold small r', 'sans serif bold r', 'sans serif bold r']);
+  this.executeCharTest('𝘀', ['sans serif bold small s', 'sans serif bold s', 'sans serif bold s']);
+  this.executeCharTest('𝘁', ['sans serif bold small t', 'sans serif bold t', 'sans serif bold t']);
+  this.executeCharTest('𝘂', ['sans serif bold small u', 'sans serif bold u', 'sans serif bold u']);
+  this.executeCharTest('𝘃', ['sans serif bold small v', 'sans serif bold v', 'sans serif bold v']);
+  this.executeCharTest('𝘄', ['sans serif bold small w', 'sans serif bold w', 'sans serif bold w']);
+  this.executeCharTest('𝘅', ['sans serif bold small x', 'sans serif bold x', 'sans serif bold x']);
+  this.executeCharTest('𝘆', ['sans serif bold small y', 'sans serif bold y', 'sans serif bold y']);
+  this.executeCharTest('𝘇', ['sans serif bold small z', 'sans serif bold z', 'sans serif bold z']);
+  this.executeCharTest('𝘈', ['sans serif italic capital a', 'sans serif italic cap a', 'sans serif italic cap a']);
+  this.executeCharTest('𝘉', ['sans serif italic capital b', 'sans serif italic cap b', 'sans serif italic cap b']);
+  this.executeCharTest('𝘊', ['sans serif italic capital c', 'sans serif italic cap c', 'sans serif italic cap c']);
+  this.executeCharTest('𝘋', ['sans serif italic capital d', 'sans serif italic cap d', 'sans serif italic cap d']);
+  this.executeCharTest('𝘌', ['sans serif italic capital e', 'sans serif italic cap e', 'sans serif italic cap e']);
+  this.executeCharTest('𝘍', ['sans serif italic capital f', 'sans serif italic cap f', 'sans serif italic cap f']);
+  this.executeCharTest('𝘎', ['sans serif italic capital g', 'sans serif italic cap g', 'sans serif italic cap g']);
+  this.executeCharTest('𝘏', ['sans serif italic capital h', 'sans serif italic cap h', 'sans serif italic cap h']);
+  this.executeCharTest('𝘐', ['sans serif italic capital i', 'sans serif italic cap i', 'sans serif italic cap i']);
+  this.executeCharTest('𝘑', ['sans serif italic capital j', 'sans serif italic cap j', 'sans serif italic cap j']);
+  this.executeCharTest('𝘒', ['sans serif italic capital k', 'sans serif italic cap k', 'sans serif italic cap k']);
+  this.executeCharTest('𝘓', ['sans serif italic capital l', 'sans serif italic cap l', 'sans serif italic cap l']);
+  this.executeCharTest('𝘔', ['sans serif italic capital m', 'sans serif italic cap m', 'sans serif italic cap m']);
+  this.executeCharTest('𝘕', ['sans serif italic capital n', 'sans serif italic cap n', 'sans serif italic cap n']);
+  this.executeCharTest('𝘖', ['sans serif italic capital o', 'sans serif italic cap o', 'sans serif italic cap o']);
+  this.executeCharTest('𝘗', ['sans serif italic capital p', 'sans serif italic cap p', 'sans serif italic cap p']);
+  this.executeCharTest('𝘘', ['sans serif italic capital q', 'sans serif italic cap q', 'sans serif italic cap q']);
+  this.executeCharTest('𝘙', ['sans serif italic capital r', 'sans serif italic cap r', 'sans serif italic cap r']);
+  this.executeCharTest('𝘚', ['sans serif italic capital s', 'sans serif italic cap s', 'sans serif italic cap s']);
+  this.executeCharTest('𝘛', ['sans serif italic capital t', 'sans serif italic cap t', 'sans serif italic cap t']);
+  this.executeCharTest('𝘜', ['sans serif italic capital u', 'sans serif italic cap u', 'sans serif italic cap u']);
+  this.executeCharTest('𝘝', ['sans serif italic capital v', 'sans serif italic cap v', 'sans serif italic cap v']);
+  this.executeCharTest('𝘞', ['sans serif italic capital w', 'sans serif italic cap w', 'sans serif italic cap w']);
+  this.executeCharTest('𝘟', ['sans serif italic capital x', 'sans serif italic cap x', 'sans serif italic cap x']);
+  this.executeCharTest('𝘠', ['sans serif italic capital y', 'sans serif italic cap y', 'sans serif italic cap y']);
+  this.executeCharTest('𝘡', ['sans serif italic capital z', 'sans serif italic cap z', 'sans serif italic cap z']);
+  this.executeCharTest('𝘢', ['sans serif italic small a', 'sans serif italic a', 'sans serif italic a']);
+  this.executeCharTest('𝘣', ['sans serif italic small b', 'sans serif italic b', 'sans serif italic b']);
+  this.executeCharTest('𝘤', ['sans serif italic small c', 'sans serif italic c', 'sans serif italic c']);
+  this.executeCharTest('𝘥', ['sans serif italic small d', 'sans serif italic d', 'sans serif italic d']);
+  this.executeCharTest('𝘦', ['sans serif italic small e', 'sans serif italic e', 'sans serif italic e']);
+  this.executeCharTest('𝘧', ['sans serif italic small f', 'sans serif italic f', 'sans serif italic f']);
+  this.executeCharTest('𝘨', ['sans serif italic small g', 'sans serif italic g', 'sans serif italic g']);
+  this.executeCharTest('𝘩', ['sans serif italic small h', 'sans serif italic h', 'sans serif italic h']);
+  this.executeCharTest('𝘪', ['sans serif italic small i', 'sans serif italic i', 'sans serif italic i']);
+  this.executeCharTest('𝘫', ['sans serif italic small j', 'sans serif italic j', 'sans serif italic j']);
+  this.executeCharTest('𝘬', ['sans serif italic small k', 'sans serif italic k', 'sans serif italic k']);
+  this.executeCharTest('𝘭', ['sans serif italic small l', 'sans serif italic l', 'sans serif italic l']);
+  this.executeCharTest('𝘮', ['sans serif italic small m', 'sans serif italic m', 'sans serif italic m']);
+  this.executeCharTest('𝘯', ['sans serif italic small n', 'sans serif italic n', 'sans serif italic n']);
+  this.executeCharTest('𝘰', ['sans serif italic small o', 'sans serif italic o', 'sans serif italic o']);
+  this.executeCharTest('𝘱', ['sans serif italic small p', 'sans serif italic p', 'sans serif italic p']);
+  this.executeCharTest('𝘲', ['sans serif italic small q', 'sans serif italic q', 'sans serif italic q']);
+  this.executeCharTest('𝘳', ['sans serif italic small r', 'sans serif italic r', 'sans serif italic r']);
+  this.executeCharTest('𝘴', ['sans serif italic small s', 'sans serif italic s', 'sans serif italic s']);
+  this.executeCharTest('𝘵', ['sans serif italic small t', 'sans serif italic t', 'sans serif italic t']);
+  this.executeCharTest('𝘶', ['sans serif italic small u', 'sans serif italic u', 'sans serif italic u']);
+  this.executeCharTest('𝘷', ['sans serif italic small v', 'sans serif italic v', 'sans serif italic v']);
+  this.executeCharTest('𝘸', ['sans serif italic small w', 'sans serif italic w', 'sans serif italic w']);
+  this.executeCharTest('𝘹', ['sans serif italic small x', 'sans serif italic x', 'sans serif italic x']);
+  this.executeCharTest('𝘺', ['sans serif italic small y', 'sans serif italic y', 'sans serif italic y']);
+  this.executeCharTest('𝘻', ['sans serif italic small z', 'sans serif italic z', 'sans serif italic z']);
+  this.executeCharTest('𝘼', ['sans serif bold italic capital a', 'sans serif bold italic cap a', 'sans serif bold italic cap a']);
+  this.executeCharTest('𝘽', ['sans serif bold italic capital b', 'sans serif bold italic cap b', 'sans serif bold italic cap b']);
+  this.executeCharTest('𝘾', ['sans serif bold italic capital c', 'sans serif bold italic cap c', 'sans serif bold italic cap c']);
+  this.executeCharTest('𝘿', ['sans serif bold italic capital d', 'sans serif bold italic cap d', 'sans serif bold italic cap d']);
+  this.executeCharTest('𝙀', ['sans serif bold italic capital e', 'sans serif bold italic cap e', 'sans serif bold italic cap e']);
+  this.executeCharTest('𝙁', ['sans serif bold italic capital f', 'sans serif bold italic cap f', 'sans serif bold italic cap f']);
+  this.executeCharTest('𝙂', ['sans serif bold italic capital g', 'sans serif bold italic cap g', 'sans serif bold italic cap g']);
+  this.executeCharTest('𝙃', ['sans serif bold italic capital h', 'sans serif bold italic cap h', 'sans serif bold italic cap h']);
+  this.executeCharTest('𝙄', ['sans serif bold italic capital i', 'sans serif bold italic cap i', 'sans serif bold italic cap i']);
+  this.executeCharTest('𝙅', ['sans serif bold italic capital j', 'sans serif bold italic cap j', 'sans serif bold italic cap j']);
+  this.executeCharTest('𝙆', ['sans serif bold italic capital k', 'sans serif bold italic cap k', 'sans serif bold italic cap k']);
+  this.executeCharTest('𝙇', ['sans serif bold italic capital l', 'sans serif bold italic cap l', 'sans serif bold italic cap l']);
+  this.executeCharTest('𝙈', ['sans serif bold italic capital m', 'sans serif bold italic cap m', 'sans serif bold italic cap m']);
+  this.executeCharTest('𝙉', ['sans serif bold italic capital n', 'sans serif bold italic cap n', 'sans serif bold italic cap n']);
+  this.executeCharTest('𝙊', ['sans serif bold italic capital o', 'sans serif bold italic cap o', 'sans serif bold italic cap o']);
+  this.executeCharTest('𝙋', ['sans serif bold italic capital p', 'sans serif bold italic cap p', 'sans serif bold italic cap p']);
+  this.executeCharTest('𝙌', ['sans serif bold italic capital q', 'sans serif bold italic cap q', 'sans serif bold italic cap q']);
+  this.executeCharTest('𝙍', ['sans serif bold italic capital r', 'sans serif bold italic cap r', 'sans serif bold italic cap r']);
+  this.executeCharTest('𝙎', ['sans serif bold italic capital s', 'sans serif bold italic cap s', 'sans serif bold italic cap s']);
+  this.executeCharTest('𝙏', ['sans serif bold italic capital t', 'sans serif bold italic cap t', 'sans serif bold italic cap t']);
+  this.executeCharTest('𝙐', ['sans serif bold italic capital u', 'sans serif bold italic cap u', 'sans serif bold italic cap u']);
+  this.executeCharTest('𝙑', ['sans serif bold italic capital v', 'sans serif bold italic cap v', 'sans serif bold italic cap v']);
+  this.executeCharTest('𝙒', ['sans serif bold italic capital w', 'sans serif bold italic cap w', 'sans serif bold italic cap w']);
+  this.executeCharTest('𝙓', ['sans serif bold italic capital x', 'sans serif bold italic cap x', 'sans serif bold italic cap x']);
+  this.executeCharTest('𝙔', ['sans serif bold italic capital y', 'sans serif bold italic cap y', 'sans serif bold italic cap y']);
+  this.executeCharTest('𝙕', ['sans serif bold italic capital z', 'sans serif bold italic cap z', 'sans serif bold italic cap z']);
+  this.executeCharTest('𝙖', ['sans serif bold italic small a', 'sans serif bold italic a', 'sans serif bold italic a']);
+  this.executeCharTest('𝙗', ['sans serif bold italic small b', 'sans serif bold italic b', 'sans serif bold italic b']);
+  this.executeCharTest('𝙘', ['sans serif bold italic small c', 'sans serif bold italic c', 'sans serif bold italic c']);
+  this.executeCharTest('𝙙', ['sans serif bold italic small d', 'sans serif bold italic d', 'sans serif bold italic d']);
+  this.executeCharTest('𝙚', ['sans serif bold italic small e', 'sans serif bold italic e', 'sans serif bold italic e']);
+  this.executeCharTest('𝙛', ['sans serif bold italic small f', 'sans serif bold italic f', 'sans serif bold italic f']);
+  this.executeCharTest('𝙜', ['sans serif bold italic small g', 'sans serif bold italic g', 'sans serif bold italic g']);
+  this.executeCharTest('𝙝', ['sans serif bold italic small h', 'sans serif bold italic h', 'sans serif bold italic h']);
+  this.executeCharTest('𝙞', ['sans serif bold italic small i', 'sans serif bold italic i', 'sans serif bold italic i']);
+  this.executeCharTest('𝙟', ['sans serif bold italic small j', 'sans serif bold italic j', 'sans serif bold italic j']);
+  this.executeCharTest('𝙠', ['sans serif bold italic small k', 'sans serif bold italic k', 'sans serif bold italic k']);
+  this.executeCharTest('𝙡', ['sans serif bold italic small l', 'sans serif bold italic l', 'sans serif bold italic l']);
+  this.executeCharTest('𝙢', ['sans serif bold italic small m', 'sans serif bold italic m', 'sans serif bold italic m']);
+  this.executeCharTest('𝙣', ['sans serif bold italic small n', 'sans serif bold italic n', 'sans serif bold italic n']);
+  this.executeCharTest('𝙤', ['sans serif bold italic small o', 'sans serif bold italic o', 'sans serif bold italic o']);
+  this.executeCharTest('𝙥', ['sans serif bold italic small p', 'sans serif bold italic p', 'sans serif bold italic p']);
+  this.executeCharTest('𝙦', ['sans serif bold italic small q', 'sans serif bold italic q', 'sans serif bold italic q']);
+  this.executeCharTest('𝙧', ['sans serif bold italic small r', 'sans serif bold italic r', 'sans serif bold italic r']);
+  this.executeCharTest('𝙨', ['sans serif bold italic small s', 'sans serif bold italic s', 'sans serif bold italic s']);
+  this.executeCharTest('𝙩', ['sans serif bold italic small t', 'sans serif bold italic t', 'sans serif bold italic t']);
+  this.executeCharTest('𝙪', ['sans serif bold italic small u', 'sans serif bold italic u', 'sans serif bold italic u']);
+  this.executeCharTest('𝙫', ['sans serif bold italic small v', 'sans serif bold italic v', 'sans serif bold italic v']);
+  this.executeCharTest('𝙬', ['sans serif bold italic small w', 'sans serif bold italic w', 'sans serif bold italic w']);
+  this.executeCharTest('𝙭', ['sans serif bold italic small x', 'sans serif bold italic x', 'sans serif bold italic x']);
+  this.executeCharTest('𝙮', ['sans serif bold italic small y', 'sans serif bold italic y', 'sans serif bold italic y']);
+  this.executeCharTest('𝙯', ['sans serif bold italic small z', 'sans serif bold italic z', 'sans serif bold italic z']);
+  this.executeCharTest('𝖠', ['sans serif capital a', 'sans serif cap a', 'sans serif cap a']);
+  this.executeCharTest('𝖡', ['sans serif capital b', 'sans serif cap b', 'sans serif cap b']);
+  this.executeCharTest('𝖢', ['sans serif capital c', 'sans serif cap c', 'sans serif cap c']);
+  this.executeCharTest('𝖣', ['sans serif capital d', 'sans serif cap d', 'sans serif cap d']);
+  this.executeCharTest('𝖤', ['sans serif capital e', 'sans serif cap e', 'sans serif cap e']);
+  this.executeCharTest('𝖥', ['sans serif capital f', 'sans serif cap f', 'sans serif cap f']);
+  this.executeCharTest('𝖦', ['sans serif capital g', 'sans serif cap g', 'sans serif cap g']);
+  this.executeCharTest('𝖧', ['sans serif capital h', 'sans serif cap h', 'sans serif cap h']);
+  this.executeCharTest('𝖨', ['sans serif capital i', 'sans serif cap i', 'sans serif cap i']);
+  this.executeCharTest('𝖩', ['sans serif capital j', 'sans serif cap j', 'sans serif cap j']);
+  this.executeCharTest('𝖪', ['sans serif capital k', 'sans serif cap k', 'sans serif cap k']);
+  this.executeCharTest('𝖫', ['sans serif capital l', 'sans serif cap l', 'sans serif cap l']);
+  this.executeCharTest('𝖬', ['sans serif capital m', 'sans serif cap m', 'sans serif cap m']);
+  this.executeCharTest('𝖭', ['sans serif capital n', 'sans serif cap n', 'sans serif cap n']);
+  this.executeCharTest('𝖮', ['sans serif capital o', 'sans serif cap o', 'sans serif cap o']);
+  this.executeCharTest('𝖯', ['sans serif capital p', 'sans serif cap p', 'sans serif cap p']);
+  this.executeCharTest('𝖰', ['sans serif capital q', 'sans serif cap q', 'sans serif cap q']);
+  this.executeCharTest('𝖱', ['sans serif capital r', 'sans serif cap r', 'sans serif cap r']);
+  this.executeCharTest('𝖲', ['sans serif capital s', 'sans serif cap s', 'sans serif cap s']);
+  this.executeCharTest('𝖳', ['sans serif capital t', 'sans serif cap t', 'sans serif cap t']);
+  this.executeCharTest('𝖴', ['sans serif capital u', 'sans serif cap u', 'sans serif cap u']);
+  this.executeCharTest('𝖵', ['sans serif capital v', 'sans serif cap v', 'sans serif cap v']);
+  this.executeCharTest('𝖶', ['sans serif capital w', 'sans serif cap w', 'sans serif cap w']);
+  this.executeCharTest('𝖷', ['sans serif capital x', 'sans serif cap x', 'sans serif cap x']);
+  this.executeCharTest('𝖸', ['sans serif capital y', 'sans serif cap y', 'sans serif cap y']);
+  this.executeCharTest('𝖹', ['sans serif capital z', 'sans serif cap z', 'sans serif cap z']);
+  this.executeCharTest('𝖺', ['sans serif small a', 'sans serif a', 'sans serif a']);
+  this.executeCharTest('𝖻', ['sans serif small b', 'sans serif b', 'sans serif b']);
+  this.executeCharTest('𝖼', ['sans serif small c', 'sans serif c', 'sans serif c']);
+  this.executeCharTest('𝖽', ['sans serif small d', 'sans serif d', 'sans serif d']);
+  this.executeCharTest('𝖾', ['sans serif small e', 'sans serif e', 'sans serif e']);
+  this.executeCharTest('𝖿', ['sans serif small f', 'sans serif f', 'sans serif f']);
+  this.executeCharTest('𝗀', ['sans serif small g', 'sans serif g', 'sans serif g']);
+  this.executeCharTest('𝗁', ['sans serif small h', 'sans serif h', 'sans serif h']);
+  this.executeCharTest('𝗂', ['sans serif small i', 'sans serif i', 'sans serif i']);
+  this.executeCharTest('𝗃', ['sans serif small j', 'sans serif j', 'sans serif j']);
+  this.executeCharTest('𝗄', ['sans serif small k', 'sans serif k', 'sans serif k']);
+  this.executeCharTest('𝗅', ['sans serif small l', 'sans serif l', 'sans serif l']);
+  this.executeCharTest('𝗆', ['sans serif small m', 'sans serif m', 'sans serif m']);
+  this.executeCharTest('𝗇', ['sans serif small n', 'sans serif n', 'sans serif n']);
+  this.executeCharTest('𝗈', ['sans serif small o', 'sans serif o', 'sans serif o']);
+  this.executeCharTest('𝗉', ['sans serif small p', 'sans serif p', 'sans serif p']);
+  this.executeCharTest('𝗊', ['sans serif small q', 'sans serif q', 'sans serif q']);
+  this.executeCharTest('𝗋', ['sans serif small r', 'sans serif r', 'sans serif r']);
+  this.executeCharTest('𝗌', ['sans serif small s', 'sans serif s', 'sans serif s']);
+  this.executeCharTest('𝗍', ['sans serif small t', 'sans serif t', 'sans serif t']);
+  this.executeCharTest('𝗎', ['sans serif small u', 'sans serif u', 'sans serif u']);
+  this.executeCharTest('𝗏', ['sans serif small v', 'sans serif v', 'sans serif v']);
+  this.executeCharTest('𝗐', ['sans serif small w', 'sans serif w', 'sans serif w']);
+  this.executeCharTest('𝗑', ['sans serif small x', 'sans serif x', 'sans serif x']);
+  this.executeCharTest('𝗒', ['sans serif small y', 'sans serif y', 'sans serif y']);
+  this.executeCharTest('𝗓', ['sans serif small z', 'sans serif z', 'sans serif z']);
+  this.executeCharTest('𝒜', ['script capital a', 'script cap a', 'script cap a']);
+  this.executeCharTest('ℬ', ['script capital b', 'script cap b', 'script cap b']);
+  this.executeCharTest('𝒞', ['script capital c', 'script cap c', 'script cap c']);
+  this.executeCharTest('𝒟', ['script capital d', 'script cap d', 'script cap d']);
+  this.executeCharTest('ℰ', ['script capital e', 'script cap e', 'script cap e']);
+  this.executeCharTest('ℱ', ['script capital f', 'script cap f', 'script cap f']);
+  this.executeCharTest('𝒢', ['script capital g', 'script cap g', 'script cap g']);
+  this.executeCharTest('ℋ', ['script capital h', 'script cap h', 'script cap h']);
+  this.executeCharTest('ℐ', ['script capital i', 'script cap i', 'script cap i']);
+  this.executeCharTest('𝒥', ['script capital j', 'script cap j', 'script cap j']);
+  this.executeCharTest('𝒦', ['script capital k', 'script cap k', 'script cap k']);
+  this.executeCharTest('ℒ', ['script capital l', 'script cap l', 'script cap l']);
+  this.executeCharTest('ℳ', ['script capital m', 'script cap m', 'script cap m']);
+  this.executeCharTest('𝒩', ['script capital n', 'script cap n', 'script cap n']);
+  this.executeCharTest('𝒪', ['script capital o', 'script cap o', 'script cap o']);
+  this.executeCharTest('𝒫', ['script capital p', 'script cap p', 'script cap p']);
+  this.executeCharTest('𝒬', ['script capital q', 'script cap q', 'script cap q']);
+  this.executeCharTest('ℛ', ['script capital r', 'script cap r', 'script cap r']);
+  this.executeCharTest('𝒮', ['script capital s', 'script cap s', 'script cap s']);
+  this.executeCharTest('𝒯', ['script capital t', 'script cap t', 'script cap t']);
+  this.executeCharTest('𝒰', ['script capital u', 'script cap u', 'script cap u']);
+  this.executeCharTest('𝒱', ['script capital v', 'script cap v', 'script cap v']);
+  this.executeCharTest('𝒲', ['script capital w', 'script cap w', 'script cap w']);
+  this.executeCharTest('𝒳', ['script capital x', 'script cap x', 'script cap x']);
+  this.executeCharTest('𝒴', ['script capital y', 'script cap y', 'script cap y']);
+  this.executeCharTest('𝒵', ['script capital z', 'script cap z', 'script cap z']);
+  this.executeCharTest('𝒶', ['script small a', 'script a', 'script a']);
+  this.executeCharTest('𝒷', ['script small b', 'script b', 'script b']);
+  this.executeCharTest('𝒸', ['script small c', 'script c', 'script c']);
+  this.executeCharTest('𝒹', ['script small d', 'script d', 'script d']);
+  this.executeCharTest('ℯ', ['script small e', 'script e', 'script e']);
+  this.executeCharTest('𝒻', ['script small f', 'script f', 'script f']);
+  this.executeCharTest('ℊ', ['script small g', 'script g', 'script g']);
+  this.executeCharTest('𝒽', ['script small h', 'script h', 'script h']);
+  this.executeCharTest('𝒾', ['script small i', 'script i', 'script i']);
+  this.executeCharTest('𝒿', ['script small j', 'script j', 'script j']);
+  this.executeCharTest('𝓀', ['script small k', 'script k', 'script k']);
+  this.executeCharTest('𝓁', ['script small l', 'script l', 'script l']);
+  this.executeCharTest('𝓂', ['script small m', 'script m', 'script m']);
+  this.executeCharTest('𝓃', ['script small n', 'script n', 'script n']);
+  this.executeCharTest('ℴ', ['script small o', 'script o', 'script o']);
+  this.executeCharTest('𝓅', ['script small p', 'script p', 'script p']);
+  this.executeCharTest('𝓆', ['script small q', 'script q', 'script q']);
+  this.executeCharTest('𝓇', ['script small r', 'script r', 'script r']);
+  this.executeCharTest('𝓈', ['script small s', 'script s', 'script s']);
+  this.executeCharTest('𝓉', ['script small t', 'script t', 'script t']);
+  this.executeCharTest('𝓊', ['script small u', 'script u', 'script u']);
+  this.executeCharTest('𝓋', ['script small v', 'script v', 'script v']);
+  this.executeCharTest('𝓌', ['script small w', 'script w', 'script w']);
+  this.executeCharTest('𝓍', ['script small x', 'script x', 'script x']);
+  this.executeCharTest('𝓎', ['script small y', 'script y', 'script y']);
+  this.executeCharTest('𝓏', ['script small z', 'script z', 'script z']);
+  this.executeCharTest('⊾', ['right angle with arc', 'right angle with arc', 'right angle with arc']);
+  this.executeCharTest('⍼', ['right angle with downwards zigzag arrow', 'right angle with downwards zigzag arrow', 'right angle with downwards zigzag arrow']);
+  this.executeCharTest('⟀', ['three dimensional angle', 'three dimensional angle', 'three dimensional angle']);
+  this.executeCharTest('⦛', ['measured angle opening left', 'measured angle opening left', 'measured angle opening left']);
+  this.executeCharTest('⦜', ['right angle variant with square', 'right angle variant with square', 'right angle variant with square']);
+  this.executeCharTest('⦝', ['measured right angle with dot', 'measured right angle with dot', 'measured right angle with dot']);
+  this.executeCharTest('⦞', ['angle with s inside', 'angle with s inside', 'angle with s inside']);
+  this.executeCharTest('⦟', ['acute angle', 'acute angle', 'acute angle']);
+  this.executeCharTest('⦠', ['spherical angle opening left', 'spherical angle opening left', 'spherical angle opening left']);
+  this.executeCharTest('⦡', ['spherical angle opening up', 'spherical angle opening up', 'spherical angle opening up']);
+  this.executeCharTest('⦢', ['turned angle', 'turned angle', 'turned angle']);
+  this.executeCharTest('⦣', ['reversed angle', 'reversed angle', 'reversed angle']);
+  this.executeCharTest('⦤', ['angle with underbar', 'angle with underbar', 'angle with underbar']);
+  this.executeCharTest('⦥', ['reversed angle with underbar', 'reversed angle with underbar', 'reversed angle with underbar']);
+  this.executeCharTest('⦦', ['oblique angle opening up', 'oblique angle opening up', 'oblique angle opening up']);
+  this.executeCharTest('⦧', ['oblique angle opening down', 'oblique angle opening down', 'oblique angle opening down']);
+  this.executeCharTest('⦨', ['measured angle with open arm ending in arrow pointing up and right', 'measured angle with open arm ending in arrow pointing up and right', 'measured angle with open arm ending in arrow pointing up and right']);
+  this.executeCharTest('⦩', ['measured angle with open arm ending in arrow pointing up and left', 'measured angle with open arm ending in arrow pointing up and left', 'measured angle with open arm ending in arrow pointing up and left']);
+  this.executeCharTest('⦪', ['measured angle with open arm ending in arrow pointing down and right', 'measured angle with open arm ending in arrow pointing down and right', 'measured angle with open arm ending in arrow pointing down and right']);
+  this.executeCharTest('⦫', ['measured angle with open arm ending in arrow pointing down and left', 'measured angle with open arm ending in arrow pointing down and left', 'measured angle with open arm ending in arrow pointing down and left']);
+  this.executeCharTest('⦬', ['measured angle with open arm ending in arrow pointing right and up', 'measured angle with open arm ending in arrow pointing right and up', 'measured angle with open arm ending in arrow pointing right and up']);
+  this.executeCharTest('⦭', ['measured angle with open arm ending in arrow pointing left and up', 'measured angle with open arm ending in arrow pointing left and up', 'measured angle with open arm ending in arrow pointing left and up']);
+  this.executeCharTest('⦮', ['measured angle with open arm ending in arrow pointing right and down', 'measured angle with open arm ending in arrow pointing right and down', 'measured angle with open arm ending in arrow pointing right and down']);
+  this.executeCharTest('⦯', ['measured angle with open arm ending in arrow pointing left and down', 'measured angle with open arm ending in arrow pointing left and down', 'measured angle with open arm ending in arrow pointing left and down']);
+  this.executeCharTest('←', ['leftwards arrow', 'left arrow', 'left arrow']);
+  this.executeCharTest('↑', ['upwards arrow', 'up arrow', 'up arrow']);
+  this.executeCharTest('→', ['rightwards arrow', 'right arrow', 'right arrow']);
+  this.executeCharTest('↓', ['downwards arrow', 'down arrow', 'down arrow']);
+  this.executeCharTest('↔', ['left right arrow', 'left right arrow', 'left right arrow']);
+  this.executeCharTest('↕', ['up down arrow', 'up down arrow', 'up down arrow']);
+  this.executeCharTest('↖', ['north west arrow', 'up left arrow', 'up left arrow']);
+  this.executeCharTest('↗', ['north east arrow', 'up right arrow', 'up right arrow']);
+  this.executeCharTest('↘', ['south east arrow', 'down right arrow', 'down right arrow']);
+  this.executeCharTest('↙', ['south west arrow', 'down left arrow', 'down left arrow']);
+  this.executeCharTest('↚', ['leftwards arrow with stroke', 'left arrow with stroke', 'left arrow with stroke']);
+  this.executeCharTest('↛', ['rightwards arrow with stroke', 'right arrow with stroke', 'right arrow with stroke']);
+  this.executeCharTest('↜', ['leftwards wave arrow', 'left wave arrow', 'left wave arrow']);
+  this.executeCharTest('↝', ['rightwards wave arrow', 'right wave arrow', 'right wave arrow']);
+  this.executeCharTest('↞', ['leftwards two headed arrow', 'two headed left arrow', 'left two headed arrow']);
+  this.executeCharTest('↟', ['upwards two headed arrow', 'two headed up arrow', 'up two headed arrow']);
+  this.executeCharTest('↠', ['rightwards two headed arrow', 'two headed right arrow', 'right two headed arrow']);
+  this.executeCharTest('↡', ['downwards two headed arrow', 'two headed down arrow', 'down two headed arrow']);
+  this.executeCharTest('↢', ['leftwards arrow with tail', 'left arrow with tail', 'left arrow with tail']);
+  this.executeCharTest('↣', ['rightwards arrow with tail', 'right arrow with tail', 'right arrow with tail']);
+  this.executeCharTest('↤', ['leftwards arrow from bar', 'left arrow from bar', 'left arrow from bar']);
+  this.executeCharTest('↥', ['upwards arrow from bar', 'up arrow from bar', 'up arrow from bar']);
+  this.executeCharTest('↦', ['rightwards arrow from bar', 'right arrow from bar', 'right arrow from bar']);
+  this.executeCharTest('↧', ['downwards arrow from bar', 'down arrow from bar', 'down arrow from bar']);
+  this.executeCharTest('↨', ['up down arrow with base', 'up down arrow with base', 'up down arrow with base']);
+  this.executeCharTest('↩', ['leftwards arrow with hook', 'left arrow with hook', 'left arrow with hook']);
+  this.executeCharTest('↪', ['rightwards arrow with hook', 'right arrow with hook', 'right arrow with hook']);
+  this.executeCharTest('↫', ['leftwards arrow with loop', 'left arrow with loop', 'left arrow with loop']);
+  this.executeCharTest('↬', ['rightwards arrow with loop', 'right arrow with loop', 'right arrow with loop']);
+  this.executeCharTest('↭', ['left right wave arrow', 'left right wave arrow', 'left right wave arrow']);
+  this.executeCharTest('↮', ['left right arrow with stroke', 'left right arrow with stroke', 'left right arrow with stroke']);
+  this.executeCharTest('↯', ['downwards zigzag arrow', 'down zigzag arrow', 'down zigzag arrow']);
+  this.executeCharTest('↰', ['upwards arrow with tip leftwards', 'up arrow with tip left', 'up arrow with tip left']);
+  this.executeCharTest('↱', ['upwards arrow with tip rightwards', 'up arrow with tip right', 'up arrow with tip right']);
+  this.executeCharTest('↲', ['downwards arrow with tip leftwards', 'down arrow with tip left', 'down arrow with tip left']);
+  this.executeCharTest('↳', ['downwards arrow with tip rightwards', 'down arrow with tip right', 'down arrow with tip right']);
+  this.executeCharTest('↴', ['rightwards arrow with corner downwards', 'right arrow with corner down', 'right arrow with corner down']);
+  this.executeCharTest('↵', ['downwards arrow with corner leftwards', 'down arrow with corner left', 'down arrow with corner left']);
+  this.executeCharTest('↶', ['anticlockwise top semicircle arrow', 'anticlockwise top semicircle arrow', 'anticlockwise top semicircle arrow']);
+  this.executeCharTest('↷', ['clockwise top semicircle arrow', 'clockwise top semicircle arrow', 'clockwise top semicircle arrow']);
+  this.executeCharTest('↸', ['north west arrow to long bar', 'up left arrow to long bar', 'up left arrow to long bar']);
+  this.executeCharTest('↹', ['leftwards arrow to bar over rightwards arrow to bar', 'left arrow to bar over right arrow to bar', 'left arrow to bar over right arrow to bar']);
+  this.executeCharTest('↺', ['anticlockwise open circle arrow', 'anticlockwise open circle arrow', 'anticlockwise open circle arrow']);
+  this.executeCharTest('↻', ['clockwise open circle arrow', 'clockwise open circle arrow', 'clockwise open circle arrow']);
+  this.executeCharTest('⇄', ['rightwards arrow over leftwards arrow', 'right arrow over left arrow', 'right arrow over left arrow']);
+  this.executeCharTest('⇅', ['upwards arrow leftwards of downwards arrow', 'up arrow left of down arrow', 'up arrow left of down arrow']);
+  this.executeCharTest('⇆', ['leftwards arrow over rightwards arrow', 'left arrow over right arrow', 'left arrow over right arrow']);
+  this.executeCharTest('⇇', ['leftwards paired arrows', 'left paired arrows', 'left paired arrows']);
+  this.executeCharTest('⇈', ['upwards paired arrows', 'up paired arrows', 'up paired arrows']);
+  this.executeCharTest('⇉', ['rightwards paired arrows', 'right paired arrows', 'right paired arrows']);
+  this.executeCharTest('⇊', ['downwards paired arrows', 'down paired arrows', 'down paired arrows']);
+  this.executeCharTest('⇍', ['leftwards double arrow with stroke', 'left double arrow with stroke', 'left double arrow with stroke']);
+  this.executeCharTest('⇎', ['left right double arrow with stroke', 'left right double arrow with stroke', 'left right double arrow with stroke']);
+  this.executeCharTest('⇏', ['rightwards double arrow with stroke', 'right double arrow with stroke', 'right double arrow with stroke']);
+  this.executeCharTest('⇐', ['leftwards double arrow', 'left double arrow', 'left double arrow']);
+  this.executeCharTest('⇑', ['upwards double arrow', 'up double arrow', 'up double arrow']);
+  this.executeCharTest('⇒', ['rightwards double arrow', 'right double arrow', 'right double arrow']);
+  this.executeCharTest('⇓', ['downwards double arrow', 'down double arrow', 'down double arrow']);
+  this.executeCharTest('⇔', ['left right double arrow', 'left right double arrow', 'left right double arrow']);
+  this.executeCharTest('⇕', ['up down double arrow', 'up down double arrow', 'up down double arrow']);
+  this.executeCharTest('⇖', ['north west double arrow', 'up left double arrow', 'up left double arrow']);
+  this.executeCharTest('⇗', ['north east double arrow', 'up right double arrow', 'up right double arrow']);
+  this.executeCharTest('⇘', ['south east double arrow', 'down right double arrow', 'down right double arrow']);
+  this.executeCharTest('⇙', ['south west double arrow', 'down left double arrow', 'down left double arrow']);
+  this.executeCharTest('⇚', ['leftwards triple arrow', 'left triple arrow', 'left triple arrow']);
+  this.executeCharTest('⇛', ['rightwards triple arrow', 'right triple arrow', 'right triple arrow']);
+  this.executeCharTest('⇜', ['leftwards squiggle arrow', 'left squiggle arrow', 'left squiggle arrow']);
+  this.executeCharTest('⇝', ['rightwards squiggle arrow', 'right squiggle arrow', 'right squiggle arrow']);
+  this.executeCharTest('⇞', ['upwards arrow with double stroke', 'up arrow with double stroke', 'up arrow with double stroke']);
+  this.executeCharTest('⇟', ['downwards arrow with double stroke', 'down arrow with double stroke', 'down arrow with double stroke']);
+  this.executeCharTest('⇠', ['leftwards dasheD arrow', 'left dasheD arrow', 'left dasheD arrow']);
+  this.executeCharTest('⇡', ['upwards dasheD arrow', 'up dasheD arrow', 'up dasheD arrow']);
+  this.executeCharTest('⇢', ['rightwards dasheD arrow', 'right dasheD arrow', 'right dasheD arrow']);
+  this.executeCharTest('⇣', ['downwards dasheD arrow', 'down dasheD arrow', 'down dasheD arrow']);
+  this.executeCharTest('⇤', ['leftwards arrow to bar', 'left arrow to bar', 'left arrow to bar']);
+  this.executeCharTest('⇥', ['rightwards arrow to bar', 'right arrow to bar', 'right arrow to bar']);
+  this.executeCharTest('⇦', ['leftwards white arrow', 'white left arrow', 'white left arrow']);
+  this.executeCharTest('⇧', ['upwards white arrow', 'white up arrow', 'white up arrow']);
+  this.executeCharTest('⇨', ['rightwards white arrow', 'white right arrow', 'white right arrow']);
+  this.executeCharTest('⇩', ['downwards white arrow', 'white down arrow', 'white down arrow']);
+  this.executeCharTest('⇪', ['upwards white arrow from bar', 'white up arrow from bar', 'white up arrow from bar']);
+  this.executeCharTest('⇫', ['upwards white arrow on pedestal', 'white up arrow on pedestal', 'up white arrow on pedestal']);
+  this.executeCharTest('⇬', ['upwards white arrow on pedestal with horizontal bar', 'white up arrow on pedestal with horizontal bar', 'up white arrow on pedestal with horizontal bar']);
+  this.executeCharTest('⇭', ['upwards white arrow on pedestal with vertical bar', 'white up arrow on pedestal with vertical bar', 'up white arrow on pedestal with vertical bar']);
+  this.executeCharTest('⇮', ['upwards white double arrow', 'white double up arrow', 'up white double arrow']);
+  this.executeCharTest('⇯', ['upwards white double arrow on pedestal', 'white double up arrow on pedestal', 'up white double arrow on pedestal']);
+  this.executeCharTest('⇰', ['rightwards white arrow from wall', 'white right arrow from wall', 'right white arrow from wall']);
+  this.executeCharTest('⇱', ['north west arrow to corner', 'north west arrow to corner', 'north west arrow to corner']);
+  this.executeCharTest('⇲', ['south east arrow to corner', 'south east arrow to corner', 'south east arrow to corner']);
+  this.executeCharTest('⇳', ['up down white arrow', 'up down white arrow', 'up down white arrow']);
+  this.executeCharTest('⇴', ['right arrow with small circle', 'right arrow with small circle', 'right arrow with small circle']);
+  this.executeCharTest('⇵', ['down arrow leftwards of upwards arrow', 'down arrow left of up arrow', 'down arrow left of up arrow']);
+  this.executeCharTest('⇶', ['three rightwards arrows', 'three right arrows', 'three right arrows']);
+  this.executeCharTest('⇷', ['leftwards arrow with vertical stroke', 'left arrow with vertical stroke', 'left arrow with vertical stroke']);
+  this.executeCharTest('⇸', ['rightwards arrow with vertical stroke', 'right arrow with vertical stroke', 'right arrow with vertical stroke']);
+  this.executeCharTest('⇹', ['left right arrow with vertical stroke', 'left right arrow with vertical stroke', 'left right arrow with vertical stroke']);
+  this.executeCharTest('⇺', ['leftwards arrow with double vertical stroke', 'left arrow with double vertical stroke', 'left arrow with double vertical stroke']);
+  this.executeCharTest('⇻', ['rightwards arrow with double vertical stroke', 'right arrow with double vertical stroke', 'right arrow with double vertical stroke']);
+  this.executeCharTest('⇼', ['left right arrow with double vertical stroke', 'left right arrow with double vertical stroke', 'left right arrow with double vertical stroke']);
+  this.executeCharTest('⇽', ['leftwards open headed arrow', 'left open headed arrow', 'left open headed arrow']);
+  this.executeCharTest('⇾', ['rightwards open headed arrow', 'right open headed arrow', 'right open headed arrow']);
+  this.executeCharTest('⇿', ['left right open headed arrow', 'left right open headed arrow', 'left right open headed arrow']);
+  this.executeCharTest('⌁', ['electric arrow', 'electric arrow', 'electric arrow']);
+  this.executeCharTest('⌃', ['up arrowhead', 'up arrowhead', 'up arrowhead']);
+  this.executeCharTest('⌄', ['down arrowhead', 'down arrowhead', 'down arrowhead']);
+  this.executeCharTest('⌤', ['up arrowhead between two horizontal bars', 'up arrowhead between two horizontal bars', 'enter key']);
+  this.executeCharTest('⎋', ['broken circle with northwest arrow', 'broken circle with northwest arrow', 'broken circle with northwest arrow']);
+  this.executeCharTest('➔', ['heavy wide headed rightwards arrow', 'heavy wide headed right arrow', 'heavy wide headed right arrow']);
+  this.executeCharTest('➘', ['heavy south east arrow', 'heavy down right arrow', 'heavy down right arrow']);
+  this.executeCharTest('➙', ['heavy rightwards arrow', 'heavy right arrow', 'heavy right arrow']);
+  this.executeCharTest('➚', ['heavy north east arrow', 'heavy up right arrow', 'heavy up right arrow']);
+  this.executeCharTest('➛', ['drafting point rightwards arrow', 'drafting point right arrow', 'drafting point right arrow']);
+  this.executeCharTest('➜', ['heavy round tipped rightwards arrow', 'heavy round tipped right arrow', 'heavy round tipped right arrow']);
+  this.executeCharTest('➝', ['triangle headed rightwards arrow', 'triangle headed right arrow', 'triangle headed right arrow']);
+  this.executeCharTest('➞', ['heavy triangle headed rightwards arrow', 'heavy triangle headed right arrow', 'heavy triangle headed right arrow']);
+  this.executeCharTest('➟', ['dashed triangle headed rightwards arrow', 'dashed triangle headed right arrow', 'dashed triangle headed right arrow']);
+  this.executeCharTest('➠', ['heavy dashed triangle headed rightwards arrow', 'heavy dashed triangle headed right arrow', 'heavy dashed triangle headed right arrow']);
+  this.executeCharTest('➡', ['black rightwards arrow', 'black right arrow', 'black right arrow']);
+  this.executeCharTest('➢', ['three d top lighted rightwards arrowhead', 'three d top lighted right arrowhead', 'three d top lighted right arrowhead']);
+  this.executeCharTest('➣', ['three d bottom lighted rightwards arrowhead', 'three d bottom lighted right arrowhead', 'three d bottom lighted right arrowhead']);
+  this.executeCharTest('➤', ['black rightwards arrowhead', 'black right arrowhead', 'black right arrowhead']);
+  this.executeCharTest('➥', ['heavy black curved downwards and rightwards arrow', 'heavy black curved down and right arrow', 'heavy black curved down and right arrow']);
+  this.executeCharTest('➦', ['heavy black curved upwards and rightwards arrow', 'heavy black curved up and right arrow', 'heavy black curved up and right arrow']);
+  this.executeCharTest('➧', ['squat black rightwards arrow', 'squat black right arrow', 'squat black right arrow']);
+  this.executeCharTest('➨', ['heavy concave pointed black rightwards arrow', 'heavy concave pointed black right arrow', 'heavy concave pointed black right arrow']);
+  this.executeCharTest('➩', ['right shaded white rightwards arrow', 'right shaded white right arrow', 'right shaded white right arrow']);
+  this.executeCharTest('➪', ['left shaded white rightwards arrow', 'left shaded white right arrow', 'left shaded white right arrow']);
+  this.executeCharTest('➫', ['back tilted shadowed white rightwards arrow', 'back tilted shadowed white right arrow', 'back tilted shadowed white right arrow']);
+  this.executeCharTest('➬', ['front tilted shadowed white rightwards arrow', 'front tilted shadowed white right arrow', 'front tilted shadowed white right arrow']);
+  this.executeCharTest('➭', ['heavy lower right shadowed white rightwards arrow', 'heavy lower right shadowed white right arrow', 'heavy lower right shadowed white right arrow']);
+  this.executeCharTest('➮', ['heavy upper right shadowed white rightwards arrow', 'heavy upper right shadowed white right arrow', 'heavy upper right shadowed white right arrow']);
+  this.executeCharTest('➯', ['notched lower right shadowed white rightwards arrow', 'notched lower right shadowed white right arrow', 'notched lower right shadowed white right arrow']);
+  this.executeCharTest('➱', ['notched upper right shadowed white rightwards arrow', 'notched upper right shadowed white right arrow', 'notched upper right shadowed white right arrow']);
+  this.executeCharTest('➲', ['circled heavy white rightwards arrow', 'circled heavy white right arrow', 'circled heavy white right arrow']);
+  this.executeCharTest('➳', ['white feathered rightwards arrow', 'white feathered right arrow', 'white feathered right arrow']);
+  this.executeCharTest('➴', ['black feathered south east arrow', 'black feathered down right arrow', 'black feathered down right arrow']);
+  this.executeCharTest('➵', ['black feathered rightwards arrow', 'black feathered right arrow', 'black feathered right arrow']);
+  this.executeCharTest('➶', ['black feathered north east arrow', 'black feathered up right arrow', 'black feathered up right arrow']);
+  this.executeCharTest('➷', ['heavy black feathered south east arrow', 'heavy black feathered down right arrow', 'heavy black feathered down right arrow']);
+  this.executeCharTest('➸', ['heavy black feathered rightwards arrow', 'heavy black feathered right arrow', 'heavy black feathered right arrow']);
+  this.executeCharTest('➹', ['heavy black feathered north east arrow', 'heavy black feathered up right arrow', 'heavy black feathered up right arrow']);
+  this.executeCharTest('➺', ['teardrop barbed rightwards arrow', 'teardrop barbed right arrow', 'teardrop barbed right arrow']);
+  this.executeCharTest('➻', ['heavy teardrop shanked rightwards arrow', 'heavy teardrop shanked right arrow', 'heavy teardrop shanked right arrow']);
+  this.executeCharTest('➼', ['wedge tailed rightwards arrow', 'wedge tailed right arrow', 'wedge tailed right arrow']);
+  this.executeCharTest('➽', ['heavy wedge tailed rightwards arrow', 'heavy wedge tailed right arrow', 'heavy wedge tailed right arrow']);
+  this.executeCharTest('➾', ['open outlined rightwards arrow', 'open outlined right arrow', 'open outlined right arrow']);
+  this.executeCharTest('⟰', ['upwards quadruple arrow', 'up quadruple arrow', 'up quadruple arrow']);
+  this.executeCharTest('⟱', ['downwards quadruple arrow', 'down quadruple arrow', 'down quadruple arrow']);
+  this.executeCharTest('⟲', ['anticlockwise gapped circle arrow', 'anticlockwise gapped circle arrow', 'anticlockwise gapped circle arrow']);
+  this.executeCharTest('⟳', ['clockwise gapped circle arrow', 'clockwise gapped circle arrow', 'clockwise gapped circle arrow']);
+  this.executeCharTest('⟴', ['right arrow with circled plus', 'right arrow with circled plus', 'right arrow with circled plus']);
+  this.executeCharTest('⟵', ['long leftwards arrow', 'long left arrow', 'long left arrow']);
+  this.executeCharTest('⟶', ['long rightwards arrow', 'long right arrow', 'long right arrow']);
+  this.executeCharTest('⟷', ['long left right arrow', 'long left right arrow', 'long left right arrow']);
+  this.executeCharTest('⟸', ['long leftwards double arrow', 'long left double arrow', 'long left double arrow']);
+  this.executeCharTest('⟹', ['long rightwards double arrow', 'long right double arrow', 'long right double arrow']);
+  this.executeCharTest('⟺', ['long left right double arrow', 'long left right double arrow', 'long left right double arrow']);
+  this.executeCharTest('⟻', ['long leftwards arrow from bar', 'long left arrow from bar', 'long left arrow from bar']);
+  this.executeCharTest('⟼', ['long rightwards arrow from bar', 'long right arrow from bar', 'long right arrow from bar']);
+  this.executeCharTest('⟽', ['long leftwards double arrow from bar', 'long left double arrow from bar', 'long left double arrow from bar']);
+  this.executeCharTest('⟾', ['long rightwards double arrow from bar', 'long right double arrow from bar', 'long right double arrow from bar']);
+  this.executeCharTest('⟿', ['long rightwards squiggle arrow', 'long right squiggle arrow', 'long right squiggle arrow']);
+  this.executeCharTest('⤀', ['rightwards two headed arrow with vertical stroke', 'two headed right arrow with vertical stroke', 'right two headed arrow with vertical stroke']);
+  this.executeCharTest('⤁', ['rightwards two headed arrow with double vertical stroke', 'two headed right arrow with double vertical stroke', 'right two headed arrow with double vertical stroke']);
+  this.executeCharTest('⤂', ['leftwards double arrow with vertical stroke', 'double left arrow with vertical stroke', 'left double arrow with vertical stroke']);
+  this.executeCharTest('⤃', ['rightwards double arrow with vertical stroke', 'double right arrow with vertical stroke', 'right double arrow with vertical stroke']);
+  this.executeCharTest('⤄', ['left right double arrow with vertical stroke', 'double left right arrow with vertical stroke', 'double left right arrow with vertical stroke']);
+  this.executeCharTest('⤅', ['rightwards two headed arrow from bar', 'two headed right arrow from bar', 'right two headed arrow from bar']);
+  this.executeCharTest('⤆', ['leftwards double arrow from bar', 'double left arrow from bar', 'left double arrow from bar']);
+  this.executeCharTest('⤇', ['rightwards double arrow from bar', 'double right arrow from bar', 'right double arrow from bar']);
+  this.executeCharTest('⤈', ['downwards arrow with horizontal stroke', 'arrow down with horizontal stroke', 'down arrow with horizontal stroke']);
+  this.executeCharTest('⤉', ['upwards arrow with horizontal stroke', 'up arrow with horizontal stroke', 'up arrow with horizontal stroke']);
+  this.executeCharTest('⤊', ['upwards triple arrow', 'up triple arrow', 'up triple arrow']);
+  this.executeCharTest('⤋', ['downwards triple arrow', 'down triple arrow', 'down triple arrow']);
+  this.executeCharTest('⤌', ['leftwards double dash arrow', 'left double dash arrow', 'left double dash arrow']);
+  this.executeCharTest('⤍', ['rightwards double dash arrow', 'right double dash arrow', 'right double dash arrow']);
+  this.executeCharTest('⤎', ['leftwards triple dash arrow', 'left triple dash arrow', 'left triple dash arrow']);
+  this.executeCharTest('⤏', ['rightwards triple dash arrow', 'right triple dash arrow', 'right triple dash arrow']);
+  this.executeCharTest('⤐', ['rightwards two headed triple dash arrow', 'right two headed triple dash arrow', 'right two headed triple dash arrow']);
+  this.executeCharTest('⤑', ['rightwards arrow with dotted stem', 'right arrow with dotted stem', 'right arrow with dotted stem']);
+  this.executeCharTest('⤒', ['upwards arrow to bar', 'up arrow to bar', 'up arrow to bar']);
+  this.executeCharTest('⤓', ['downwards arrow to bar', 'down arrow to bar', 'down arrow to bar']);
+  this.executeCharTest('⤔', ['rightwards arrow with tail with vertical stroke', 'right arrow with tail with vertical stroke', 'right arrow with tail with vertical stroke']);
+  this.executeCharTest('⤕', ['rightwards arrow with tail with double vertical stroke', 'right arrow with tail with double vertical stroke', 'right arrow with tail with double vertical stroke']);
+  this.executeCharTest('⤖', ['rightwards two headed arrow with tail', 'right two headed arrow with tail', 'right two headed arrow with tail']);
+  this.executeCharTest('⤗', ['rightwards two headed arrow with tail with vertical stroke', 'right two headed arrow with tail with vertical stroke', 'right two headed arrow with tail with vertical stroke']);
+  this.executeCharTest('⤘', ['rightwards two headed arrow with tail with double vertical stroke', 'right two headed arrow with tail with double vertical stroke', 'right two headed arrow with tail with double vertical stroke']);
+  this.executeCharTest('⤙', ['leftwards arrow tail', 'left arrow tail', 'left arrow tail']);
+  this.executeCharTest('⤚', ['rightwards arrow tail', 'right arrow tail', 'right arrow tail']);
+  this.executeCharTest('⤛', ['leftwards double arrow tail', 'left double arrow tail', 'left double arrow tail']);
+  this.executeCharTest('⤜', ['rightwards double arrow tail', 'right double arrow tail', 'right double arrow tail']);
+  this.executeCharTest('⤝', ['leftwards arrow to black diamond', 'left arrow to black diamond', 'left arrow to black diamond']);
+  this.executeCharTest('⤞', ['rightwards arrow to black diamond', 'right arrow to black diamond', 'right arrow to black diamond']);
+  this.executeCharTest('⤟', ['leftwards arrow from bar to black diamond', 'left arrow from bar to black diamond', 'left arrow from bar to black diamond']);
+  this.executeCharTest('⤠', ['rightwards arrow from bar to black diamond', 'right arrow from bar to black diamond', 'right arrow from bar to black diamond']);
+  this.executeCharTest('⤡', ['north west and south east arrow', 'north west and south east arrow', 'north west and south east arrow']);
+  this.executeCharTest('⤢', ['north east and south west arrow', 'north east and south west arrow', 'north east and south west arrow']);
+  this.executeCharTest('⤣', ['north west arrow with hook', 'north west arrow with hook', 'north west arrow with hook']);
+  this.executeCharTest('⤤', ['north east arrow with hook', 'north east arrow with hook', 'north east arrow with hook']);
+  this.executeCharTest('⤥', ['south east arrow with hook', 'south east arrow with hook', 'south east arrow with hook']);
+  this.executeCharTest('⤦', ['south west arrow with hook', 'south west arrow with hook', 'south west arrow with hook']);
+  this.executeCharTest('⤧', ['north west arrow and north east arrow', 'north west arrow and north east arrow', 'north west arrow and north east arrow']);
+  this.executeCharTest('⤨', ['north east arrow and south east arrow', 'north east arrow and south east arrow', 'north east arrow and south east arrow']);
+  this.executeCharTest('⤩', ['south east arrow and south west arrow', 'south east arrow and south west arrow', 'south east arrow and south west arrow']);
+  this.executeCharTest('⤪', ['south west arrow and north west arrow', 'south west arrow and north west arrow', 'south west arrow and north west arrow']);
+  this.executeCharTest('⤭', ['south east arrow crossing north east arrow', 'south east arrow crossing north east arrow', 'south east arrow crossing north east arrow']);
+  this.executeCharTest('⤮', ['north east arrow crossing south east arrow', 'north east arrow crossing south east arrow', 'north east arrow crossing south east arrow']);
+  this.executeCharTest('⤯', ['falling diagonal crossing north east arrow', 'falling diagonal crossing north east arrow', 'falling diagonal crossing north east arrow']);
+  this.executeCharTest('⤰', ['rising diagonal crossing south east arrow', 'rising diagonal crossing south east arrow', 'rising diagonal crossing south east arrow']);
+  this.executeCharTest('⤱', ['north east arrow crossing north west arrow', 'north east arrow crossing north west arrow', 'north east arrow crossing north west arrow']);
+  this.executeCharTest('⤲', ['north west arrow crossing north east arrow', 'north west arrow crossing north east arrow', 'north west arrow crossing north east arrow']);
+  this.executeCharTest('⤳', ['wave arrow pointing directly right', 'wave arrow pointing directly right', 'wave arrow pointing directly right']);
+  this.executeCharTest('⤴', ['arrow pointing rightwards then curving upwards', 'arrow pointing right then curving up', 'arrow pointing right then curving up']);
+  this.executeCharTest('⤵', ['arrow pointing rightwards then curving downwards', 'arrow pointing right then curving down', 'arrow pointing right then curving down']);
+  this.executeCharTest('⤶', ['arrow pointing downwards then curving leftwards', 'arrow pointing down then curving left', 'arrow pointing down then curving left']);
+  this.executeCharTest('⤷', ['arrow pointing downwards then curving rightwards', 'arrow pointing down then curving right', 'arrow pointing down then curving right']);
+  this.executeCharTest('⤸', ['right side arc clockwise arrow', 'right side arc clockwise arrow', 'right side arc clockwise arrow']);
+  this.executeCharTest('⤹', ['left side arc anticlockwise arrow', 'left side arc anticlockwise arrow', 'left side arc anticlockwise arrow']);
+  this.executeCharTest('⤺', ['top arc anticlockwise arrow', 'top arc anticlockwise arrow', 'top arc anticlockwise arrow']);
+  this.executeCharTest('⤻', ['bottom arc anticlockwise arrow', 'bottom arc anticlockwise arrow', 'bottom arc anticlockwise arrow']);
+  this.executeCharTest('⤼', ['top arc clockwise arrow with minus', 'top arc clockwise arrow with minus', 'top arc clockwise arrow with minus']);
+  this.executeCharTest('⤽', ['top arc anticlockwise arrow with plus', 'top arc anticlockwise arrow with plus', 'top arc anticlockwise arrow with plus']);
+  this.executeCharTest('⤾', ['lower right semicircular clockwise arrow', 'down right semicircular clockwise arrow', 'down right semicircular clockwise arrow']);
+  this.executeCharTest('⤿', ['lower left semicircular anticlockwise arrow', 'down left semicircular anticlockwise arrow', 'down left semicircular anticlockwise arrow']);
+  this.executeCharTest('⥀', ['anticlockwise closed circle arrow', 'anticlockwise closed circle arrow', 'anticlockwise closed circle arrow']);
+  this.executeCharTest('⥁', ['clockwise closed circle arrow', 'clockwise closed circle arrow', 'clockwise closed circle arrow']);
+  this.executeCharTest('⥂', ['rightwards arrow above short leftwards arrow', 'right arrow above short left arrow', 'right arrow above short left arrow']);
+  this.executeCharTest('⥃', ['leftwards arrow above short rightwards arrow', 'left arrow above short right arrow', 'left arrow above short right arrow']);
+  this.executeCharTest('⥄', ['short rightwards arrow above leftwards arrow', 'short right arrow above left arrow', 'short right arrow above left arrow']);
+  this.executeCharTest('⥅', ['rightwards arrow with plus below', 'right arrow with plus below', 'right arrow with plus below']);
+  this.executeCharTest('⥆', ['leftwards arrow with plus below', 'left arrow with plus below', 'left arrow with plus below']);
+  this.executeCharTest('⥇', ['rightwards arrow through x', 'right arrow through x', 'right arrow through x']);
+  this.executeCharTest('⥈', ['left right arrow through small circle', 'left right arrow through small circle', 'left right arrow through small circle']);
+  this.executeCharTest('⥉', ['upwards two headed arrow from small circle', 'up two headed arrow from small circle', 'up two headed arrow from small circle']);
+  this.executeCharTest('⥰', ['right double arrow with rounded head', 'right double arrow with rounded head', 'right double arrow with rounded head']);
+  this.executeCharTest('⥱', ['equals sign above rightwards arrow', 'equals sign above right arrow', 'equals sign above right arrow']);
+  this.executeCharTest('⥲', ['tilde operator above rightwards arrow', 'tilde operator above right arrow', 'tilde operator above right arrow']);
+  this.executeCharTest('⥳', ['leftwards arrow above tilde operator', 'left arrow above tilde operator', 'left arrow above tilde operator']);
+  this.executeCharTest('⥴', ['rightwards arrow above tilde operator', 'right arrow above tilde operator', 'right arrow above tilde operator']);
+  this.executeCharTest('⥵', ['rightwards arrow above almost equals', 'right arrow above almost equals', 'right arrow above almost equals']);
+  this.executeCharTest('⥶', ['less than above leftwards arrow', 'less than above left arrow', 'less than above left arrow']);
+  this.executeCharTest('⥷', ['leftwards arrow through less than', 'left arrow through less than', 'left arrow through less than']);
+  this.executeCharTest('⥸', ['greater than above rightwards arrow', 'greater than above right arrow', 'greater than above right arrow']);
+  this.executeCharTest('⥹', ['subset above rightwards arrow', 'subset above right arrow', 'subset above right arrow']);
+  this.executeCharTest('⥺', ['leftwards arrow through subset', 'left arrow through subset', 'left arrow through subset']);
+  this.executeCharTest('⥻', ['superset above leftwards arrow', 'superset above left arrow', 'superset above left arrow']);
+  this.executeCharTest('⦳', ['empty set with right arrow above', 'empty set with right arrow above', 'empty set with right arrow above']);
+  this.executeCharTest('⦴', ['empty set with left arrow above', 'empty set with left arrow above', 'empty set with left arrow above']);
+  this.executeCharTest('⦽', ['up arrow through circle', 'up arrow through circle', 'up arrow through circle']);
+  this.executeCharTest('⧪', ['black diamond with down arrow', 'black diamond with down arrow', 'black diamond with down arrow']);
+  this.executeCharTest('⧬', ['white circle with down arrow', 'white circle with down arrow', 'white circle with down arrow']);
+  this.executeCharTest('⧭', ['black circle with down arrow', 'black circle with down arrow', 'black circle with down arrow']);
+  this.executeCharTest('⨗', ['integral with leftwards arrow with hook', 'integral with left arrow with hook', 'integral with left arrow with hook']);
+  this.executeCharTest('⬀', ['north east white arrow', 'north east white arrow', 'north east white arrow']);
+  this.executeCharTest('⬁', ['north west white arrow', 'north west white arrow', 'north west white arrow']);
+  this.executeCharTest('⬂', ['south east white arrow', 'south east white arrow', 'south east white arrow']);
+  this.executeCharTest('⬃', ['south west white arrow', 'south west white arrow', 'south west white arrow']);
+  this.executeCharTest('⬄', ['left right white arrow', 'left right white arrow', 'left right white arrow']);
+  this.executeCharTest('⬅', ['leftwards black arrow', 'left black arrow', 'left black arrow']);
+  this.executeCharTest('⬆', ['upwards black arrow', 'up black arrow', 'up black arrow']);
+  this.executeCharTest('⬇', ['downwards black arrow', 'down black arrow', 'down black arrow']);
+  this.executeCharTest('⬈', ['north east black arrow', 'north east black arrow', 'north east black arrow']);
+  this.executeCharTest('⬉', ['north west black arrow', 'north west black arrow', 'north west black arrow']);
+  this.executeCharTest('⬊', ['south east black arrow', 'south east black arrow', 'south east black arrow']);
+  this.executeCharTest('⬋', ['south west black arrow', 'south west black arrow', 'south west black arrow']);
+  this.executeCharTest('⬌', ['left right black arrow', 'left right black arrow', 'left right black arrow']);
+  this.executeCharTest('⬍', ['up down black arrow', 'up down black arrow', 'up down black arrow']);
+  this.executeCharTest('⬎', ['rightwards arrow with tip downwards', 'right arrow with tip down', 'right arrow with tip down']);
+  this.executeCharTest('⬏', ['rightwards arrow with tip upwards', 'right arrow with tip up', 'right arrow with tip up']);
+  this.executeCharTest('⬐', ['leftwards arrow with tip downwards', 'left arrow with tip down', 'left arrow with tip down']);
+  this.executeCharTest('⬑', ['leftwards arrow with tip upwards', 'left arrow with tip up', 'left arrow with tip up']);
+  this.executeCharTest('⬰', ['left arrow with small circle', 'left arrow with small circle', 'left arrow with small circle']);
+  this.executeCharTest('⬱', ['three leftwards arrows', 'three left arrows', 'three left arrows']);
+  this.executeCharTest('⬲', ['left arrow with circled plus', 'left arrow with circled plus', 'left arrow with circled plus']);
+  this.executeCharTest('⬳', ['long leftwards squiggle arrow', 'long left squiggle arrow', 'long left squiggle arrow']);
+  this.executeCharTest('⬴', ['leftwards two headed arrow with vertical stroke', 'left two headed arrow with vertical stroke', 'left two headed arrow with vertical stroke']);
+  this.executeCharTest('⬵', ['leftwards two headed arrow with double vertical stroke', 'left two headed arrow with double vertical stroke', 'left two headed arrow with double vertical stroke']);
+  this.executeCharTest('⬶', ['leftwards two headed arrow from bar', 'left two headed arrow from bar', 'left two headed arrow from bar']);
+  this.executeCharTest('⬷', ['leftwards two headed triple dash arrow', 'left two headed triple dash arrow', 'left two headed triple dash arrow']);
+  this.executeCharTest('⬸', ['leftwards arrow with dotted stem', 'left arrow with dotted stem', 'left arrow with dotted stem']);
+  this.executeCharTest('⬹', ['leftwards arrow with tail with vertical stroke', 'left arrow with tail with vertical stroke', 'left arrow with tail with vertical stroke']);
+  this.executeCharTest('⬺', ['leftwards arrow with tail with double vertical stroke', 'left arrow with tail with double vertical stroke', 'left arrow with tail with double vertical stroke']);
+  this.executeCharTest('⬻', ['leftwards two headed arrow with tail', 'left two headed arrow with tail', 'left two headed arrow with tail']);
+  this.executeCharTest('⬼', ['leftwards two headed arrow with tail with vertical stroke', 'left two headed arrow with tail with vertical stroke', 'left two headed arrow with tail with vertical stroke']);
+  this.executeCharTest('⬽', ['leftwards two headed arrow with tail with double vertical stroke', 'left two headed arrow with tail with double vertical stroke', 'left two headed arrow with tail with double vertical stroke']);
+  this.executeCharTest('⬾', ['leftwards arrow through x', 'left arrow through x', 'left arrow through x']);
+  this.executeCharTest('⬿', ['wave arrow pointing directly left', 'wave arrow pointing directly left', 'wave arrow pointing directly left']);
+  this.executeCharTest('⭀', ['equals sign above leftwards arrow', 'equals sign above left arrow', 'equals sign above left arrow']);
+  this.executeCharTest('⭁', ['reverse tilde operator above leftwards arrow', 'reverse tilde operator above left arrow', 'reverse tilde operator above left arrow']);
+  this.executeCharTest('⭂', ['leftwards arrow above reverse almost equals', 'left arrow above reverse almost equals', 'left arrow above reverse almost equals']);
+  this.executeCharTest('⭃', ['rightwards arrow through greater than', 'right arrow through greater than', 'right arrow through greater than']);
+  this.executeCharTest('⭄', ['rightwards arrow through superset', 'right arrow through superset', 'right arrow through superset']);
+  this.executeCharTest('⭅', ['leftwards quadruple arrow', 'left quadruple arrow', 'left quadruple arrow']);
+  this.executeCharTest('⭆', ['rightwards quadruple arrow', 'right quadruple arrow', 'right quadruple arrow']);
+  this.executeCharTest('⭇', ['reverse tilde operator above rightwards arrow', 'reverse tilde operator above right arrow', 'reverse tilde operator above right arrow']);
+  this.executeCharTest('⭈', ['rightwards arrow above reverse almost equals', 'right arrow above reverse almost equals', 'right arrow above reverse almost equals']);
+  this.executeCharTest('⭉', ['tilde operator above leftwards arrow', 'tilde operator above left arrow', 'tilde operator above left arrow']);
+  this.executeCharTest('⭊', ['leftwards arrow above almost equals', 'left arrow above almost equals', 'left arrow above almost equals']);
+  this.executeCharTest('⭋', ['leftwards arrow above reverse tilde operator', 'left arrow above reverse tilde operator', 'left arrow above reverse tilde operator']);
+  this.executeCharTest('⭌', ['rightwards arrow above reverse tilde operator', 'right arrow above reverse tilde operator', 'right arrow above reverse tilde operator']);
+  this.executeCharTest('￩', ['halfwidth leftwards arrow', 'halfwidth left arrow', 'halfwidth left arrow']);
+  this.executeCharTest('￪', ['halfwidth upwards arrow', 'halfwidth up arrow', 'halfwidth up arrow']);
+  this.executeCharTest('￫', ['halfwidth rightwards arrow', 'halfwidth right arrow', 'halfwidth right arrow']);
+  this.executeCharTest('￬', ['halfwidth downwards arrow', 'halfwidth down arrow', 'halfwidth down arrow']);
+  this.executeCharTest('ℓ', ['script small l', 'script l', 'script l']);
+  this.executeCharTest('℘', ['script capital p', 'script cap p', 'script p']);
+  this.executeCharTest('ℼ', ['double struck small pi', 'double struck pi', 'double struck pi']);
+  this.executeCharTest('ℽ', ['double struck small gamma', 'double struck gamma', 'double struck gamma']);
+  this.executeCharTest('ℾ', ['double struck capital gamma', 'double struck cap gamma', 'double struck cap gamma']);
+  this.executeCharTest('ℿ', ['double struck capital pi', 'double struck cap pi', 'double struck cap pi']);
+  this.executeCharTest('⅀', ['double struck n ary summation', 'double struck n ary summation', 'double struck n ary summation']);
+  this.executeCharTest('ⅅ', ['double struck italic capital d', 'double struck italic cap d', 'double struck italic cap d']);
+  this.executeCharTest('ⅆ', ['double struck italic small d', 'double struck italic d', 'double struck italic d']);
+  this.executeCharTest('ⅇ', ['double struck italic small e', 'double struck italic e', 'double struck italic e']);
+  this.executeCharTest('ⅈ', ['double struck italic small i', 'double struck italic i', 'double struck italic i']);
+  this.executeCharTest('ⅉ', ['double struck italic small j', 'double struck italic j', 'double struck italic j']);
+  this.executeCharTest('𝚤', ['italic small dotless i', 'italic dotless i', 'italic dotless i']);
+  this.executeCharTest('𝚥', ['italic small dotless j', 'italic dotless j', 'italic dotless j']);
+  this.executeCharTest('(', ['left parenthesis', 'left parenthesis', 'opening parenthesis']);
+  this.executeCharTest(')', ['right parenthesis', 'right parenthesis', 'closing parenthesis']);
+  this.executeCharTest('[', ['left square bracket', 'left square bracket', 'opening square bracket']);
+  this.executeCharTest(']', ['right square bracket', 'right square bracket', 'closing square bracket']);
+  this.executeCharTest('{', ['left curly bracket', 'left curly bracket', 'opening curly bracket']);
+  this.executeCharTest('}', ['right curly bracket', 'right curly bracket', 'closing curly bracket']);
+  this.executeCharTest('⁅', ['left square bracket with quill', 'left square bracket with quill', 'left square bracket with quill']);
+  this.executeCharTest('⁆', ['right square bracket with quill', 'right square bracket with quill', 'right square bracket with quill']);
+  this.executeCharTest('⌈', ['left ceiling', 'left ceiling', 'left ceiling']);
+  this.executeCharTest('⌉', ['right ceiling', 'right ceiling', 'right ceiling']);
+  this.executeCharTest('⌊', ['left floor', 'left floor', 'left floor']);
+  this.executeCharTest('⌋', ['right floor', 'right floor', 'right floor']);
+  this.executeCharTest('⌌', ['bottom right crop', 'bottom right crop', 'bottom right crop']);
+  this.executeCharTest('⌍', ['bottom left crop', 'bottom left crop', 'bottom left crop']);
+  this.executeCharTest('⌎', ['top right crop', 'top right crop', 'top right crop']);
+  this.executeCharTest('⌏', ['top left crop', 'top left crop', 'top left crop']);
+  this.executeCharTest('⌜', ['top left corner', 'top left corner', 'top left corner']);
+  this.executeCharTest('⌝', ['top right corner', 'top right corner', 'top right corner']);
+  this.executeCharTest('⌞', ['bottom left corner', 'bottom left corner', 'bottom left corner']);
+  this.executeCharTest('⌟', ['bottom right corner', 'bottom right corner', 'bottom right corner']);
+  this.executeCharTest('⌠', ['top half integral', 'top half integral', 'top half integral']);
+  this.executeCharTest('⌡', ['bottom half integral', 'bottom half integral', 'bottom half integral']);
+  this.executeCharTest('〈', ['left pointing angle bracket', 'left pointing angle bracket', 'bra']);
+  this.executeCharTest('〉', ['right pointing angle bracket', 'right pointing angle bracket', 'ket']);
+  this.executeCharTest('⎛', ['left parenthesis upper hook', 'left parenthesis upper hook', 'left parenthesis upper hook']);
+  this.executeCharTest('⎜', ['left parenthesis extension', 'left parenthesis extension', 'left parenthesis extension']);
+  this.executeCharTest('⎝', ['left parenthesis lower hook', 'left parenthesis lower hook', 'left parenthesis lower hook']);
+  this.executeCharTest('⎞', ['right parenthesis upper hook', 'right parenthesis upper hook', 'right parenthesis upper hook']);
+  this.executeCharTest('⎟', ['right parenthesis extension', 'right parenthesis extension', 'right parenthesis extension']);
+  this.executeCharTest('⎠', ['right parenthesis lower hook', 'right parenthesis lower hook', 'right parenthesis lower hook']);
+  this.executeCharTest('⎡', ['left square bracket upper corner', 'left square bracket upper corner', 'left square bracket upper corner']);
+  this.executeCharTest('⎢', ['left square bracket extension', 'left square bracket extension', 'left square bracket extension']);
+  this.executeCharTest('⎣', ['left square bracket lower corner', 'left square bracket lower corner', 'left square bracket lower corner']);
+  this.executeCharTest('⎤', ['right square bracket upper corner', 'right square bracket upper corner', 'right square bracket upper corner']);
+  this.executeCharTest('⎥', ['right square bracket extension', 'right square bracket extension', 'right square bracket extension']);
+  this.executeCharTest('⎦', ['right square bracket lower corner', 'right square bracket lower corner', 'right square bracket lower corner']);
+  this.executeCharTest('⎧', ['left curly bracket upper hook', 'left curly bracket upper hook', 'left curly bracket upper hook']);
+  this.executeCharTest('⎨', ['left curly bracket middle piece', 'left curly bracket middle piece', 'left curly bracket middle piece']);
+  this.executeCharTest('⎩', ['left curly bracket lower hook', 'left curly bracket lower hook', 'left curly bracket lower hook']);
+  this.executeCharTest('⎪', ['curly bracket extension', 'curly bracket extension', 'curly bracket extension']);
+  this.executeCharTest('⎫', ['right curly bracket upper hook', 'right curly bracket upper hook', 'right curly bracket upper hook']);
+  this.executeCharTest('⎬', ['right curly bracket middle piece', 'right curly bracket middle piece', 'right curly bracket middle piece']);
+  this.executeCharTest('⎭', ['right curly bracket lower hook', 'right curly bracket lower hook', 'right curly bracket lower hook']);
+  this.executeCharTest('⎮', ['integral extension', 'integral extension', 'integral extension']);
+  this.executeCharTest('⎯', ['horizontal line extension', 'horizontal line extension', 'horizontal line extension']);
+  this.executeCharTest('⎰', ['upper left or lower right curly bracket section', 'upper left or lower right curly bracket section', 'upper left or lower right curly bracket section']);
+  this.executeCharTest('⎱', ['upper right or lower left curly bracket section', 'upper right or lower left curly bracket section', 'upper right or lower left curly bracket section']);
+  this.executeCharTest('⎲', ['summation top', 'summation top', 'summation top']);
+  this.executeCharTest('⎳', ['summation bottom', 'summation bottom', 'summation bottom']);
+  this.executeCharTest('⎴', ['top square bracket', 'top square bracket', 'top square bracket']);
+  this.executeCharTest('⎵', ['bottom square bracket', 'bottom square bracket', 'bottom square bracket']);
+  this.executeCharTest('⎶', ['bottom square bracket over top square bracket', 'bottom square bracket over top square bracket', 'bottom square bracket over top square bracket']);
+  this.executeCharTest('⎷', ['radical symbol bottom', 'radical symbol bottom', 'radical symbol bottom']);
+  this.executeCharTest('⎸', ['left vertical box line', 'left vertical box line', 'left vertical box line']);
+  this.executeCharTest('⎹', ['right vertical box line', 'right vertical box line', 'right vertical box line']);
+  this.executeCharTest('⏜', ['top parenthesis', 'top parenthesis', 'top parenthesis']);
+  this.executeCharTest('⏝', ['bottom parenthesis', 'bottom parenthesis', 'bottom parenthesis']);
+  this.executeCharTest('⏞', ['top curly bracket', 'top curly bracket', 'top curly bracket']);
+  this.executeCharTest('⏟', ['bottom curly bracket', 'bottom curly bracket', 'bottom curly bracket']);
+  this.executeCharTest('⏠', ['top tortoise shell bracket', 'top tortoise shell bracket', 'top tortoise shell bracket']);
+  this.executeCharTest('⏡', ['bottom tortoise shell bracket', 'bottom tortoise shell bracket', 'bottom tortoise shell bracket']);
+  this.executeCharTest('❨', ['medium left parenthesis ornament', 'medium left parenthesis ornament', 'medium left parenthesis ornament']);
+  this.executeCharTest('❩', ['medium right parenthesis ornament', 'medium right parenthesis ornament', 'medium right parenthesis ornament']);
+  this.executeCharTest('❪', ['medium flattened left parenthesis ornament', 'medium flattened left parenthesis ornament', 'medium flattened left parenthesis ornament']);
+  this.executeCharTest('❫', ['medium flattened right parenthesis ornament', 'medium flattened right parenthesis ornament', 'medium flattened right parenthesis ornament']);
+  this.executeCharTest('❬', ['medium left pointing angle bracket ornament', 'medium left pointing angle bracket ornament', 'medium left pointing angle bracket ornament']);
+  this.executeCharTest('❭', ['medium right pointing angle bracket ornament', 'medium right pointing angle bracket ornament', 'medium right pointing angle bracket ornament']);
+  this.executeCharTest('❮', ['heavy left pointing angle quotation mark ornament', 'heavy left pointing angle quotation mark ornament', 'heavy left pointing angle quotation mark ornament']);
+  this.executeCharTest('❯', ['heavy right pointing angle quotation mark ornament', 'heavy right pointing angle quotation mark ornament', 'heavy right pointing angle quotation mark ornament']);
+  this.executeCharTest('❰', ['heavy left pointing angle bracket ornament', 'heavy left pointing angle bracket ornament', 'heavy left pointing angle bracket ornament']);
+  this.executeCharTest('❱', ['heavy right pointing angle bracket ornament', 'heavy right pointing angle bracket ornament', 'heavy right pointing angle bracket ornament']);
+  this.executeCharTest('❲', ['light left tortoise shell bracket ornament', 'light left tortoise shell bracket ornament', 'light left tortoise shell bracket ornament']);
+  this.executeCharTest('❳', ['light right tortoise shell bracket ornament', 'light right tortoise shell bracket ornament', 'light right tortoise shell bracket ornament']);
+  this.executeCharTest('❴', ['medium left curly bracket ornament', 'medium left curly bracket ornament', 'medium left curly bracket ornament']);
+  this.executeCharTest('❵', ['medium right curly bracket ornament', 'medium right curly bracket ornament', 'medium right curly bracket ornament']);
+  this.executeCharTest('⟅', ['left s shaped bag delimiter', 'left s shaped bag delimiter', 'left s shaped bag delimiter']);
+  this.executeCharTest('⟆', ['right s shaped bag delimiter', 'right s shaped bag delimiter', 'right s shaped bag delimiter']);
+  this.executeCharTest('⟦', ['mathematical left white square bracket', 'mathematical left white square bracket', 'mathematical left white square bracket']);
+  this.executeCharTest('⟧', ['mathematical right white square bracket', 'mathematical right white square bracket', 'mathematical right white square bracket']);
+  this.executeCharTest('⟨', ['mathematical left angle bracket', 'mathematical left angle bracket', 'mathematical left angle bracket']);
+  this.executeCharTest('⟩', ['mathematical right angle bracket', 'mathematical right angle bracket', 'mathematical right angle bracket']);
+  this.executeCharTest('⟪', ['mathematical left double angle bracket', 'mathematical left double angle bracket', 'mathematical left double angle bracket']);
+  this.executeCharTest('⟫', ['mathematical right double angle bracket', 'mathematical right double angle bracket', 'mathematical right double angle bracket']);
+  this.executeCharTest('⟬', ['mathematical left white tortoise shell bracket', 'mathematical left white tortoise shell bracket', 'mathematical left white tortoise shell bracket']);
+  this.executeCharTest('⟭', ['mathematical right white tortoise shell bracket', 'mathematical right white tortoise shell bracket', 'mathematical right white tortoise shell bracket']);
+  this.executeCharTest('⟮', ['mathematical left flattened parenthesis', 'mathematical left flattened parenthesis', 'mathematical left flattened parenthesis']);
+  this.executeCharTest('⟯', ['mathematical right flattened parenthesis', 'mathematical right flattened parenthesis', 'mathematical right flattened parenthesis']);
+  this.executeCharTest('⦃', ['left white curly bracket', 'left white curly bracket', 'left white curly bracket']);
+  this.executeCharTest('⦄', ['right white curly bracket', 'right white curly bracket', 'right white curly bracket']);
+  this.executeCharTest('⦅', ['left white parenthesis', 'left white parenthesis', 'left white parenthesis']);
+  this.executeCharTest('⦆', ['right white parenthesis', 'right white parenthesis', 'right white parenthesis']);
+  this.executeCharTest('⦇', ['z notation left image bracket', 'z notation left image bracket', 'z notation left image bracket']);
+  this.executeCharTest('⦈', ['z notation right image bracket', 'z notation right image bracket', 'z notation right image bracket']);
+  this.executeCharTest('⦉', ['z notation left binding bracket', 'z notation left binding bracket', 'z notation left binding bracket']);
+  this.executeCharTest('⦊', ['z notation right binding bracket', 'z notation right binding bracket', 'z notation right binding bracket']);
+  this.executeCharTest('⦋', ['left square bracket with underbar', 'left square bracket with underbar', 'left square bracket with underbar']);
+  this.executeCharTest('⦌', ['right square bracket with underbar', 'right square bracket with underbar', 'right square bracket with underbar']);
+  this.executeCharTest('⦍', ['left square bracket with tick in top corner', 'left square bracket with tick in top corner', 'left square bracket with tick in top corner']);
+  this.executeCharTest('⦎', ['right square bracket with tick in bottom corner', 'right square bracket with tick in bottom corner', 'right square bracket with tick in bottom corner']);
+  this.executeCharTest('⦏', ['left square bracket with tick in bottom corner', 'left square bracket with tick in bottom corner', 'left square bracket with tick in bottom corner']);
+  this.executeCharTest('⦐', ['right square bracket with tick in top corner', 'right square bracket with tick in top corner', 'right square bracket with tick in top corner']);
+  this.executeCharTest('⦑', ['left angle bracket with dot', 'left angle bracket with dot', 'left angle bracket with dot']);
+  this.executeCharTest('⦒', ['right angle bracket with dot', 'right angle bracket with dot', 'right angle bracket with dot']);
+  this.executeCharTest('⦓', ['left arc less than bracket', 'left arc less than bracket', 'left arc less than bracket']);
+  this.executeCharTest('⦔', ['right arc greater than bracket', 'right arc greater than bracket', 'right arc greater than bracket']);
+  this.executeCharTest('⦕', ['double left arc greater than bracket', 'double left arc greater than bracket', 'double left arc greater than bracket']);
+  this.executeCharTest('⦖', ['double right arc less than bracket', 'double right arc less than bracket', 'double right arc less than bracket']);
+  this.executeCharTest('⦗', ['left black tortoise shell bracket', 'left black tortoise shell bracket', 'left black tortoise shell bracket']);
+  this.executeCharTest('⦘', ['right black tortoise shell bracket', 'right black tortoise shell bracket', 'right black tortoise shell bracket']);
+  this.executeCharTest('⧘', ['left wiggly fence', 'left wiggly fence', 'left wiggly fence']);
+  this.executeCharTest('⧙', ['right wiggly fence', 'right wiggly fence', 'right wiggly fence']);
+  this.executeCharTest('⧚', ['left double wiggly fence', 'left double wiggly fence', 'left double wiggly fence']);
+  this.executeCharTest('⧛', ['right double wiggly fence', 'right double wiggly fence', 'right double wiggly fence']);
+  this.executeCharTest('⧼', ['left pointing curved angle bracket', 'left pointing curved angle bracket', 'left pointing curved angle bracket']);
+  this.executeCharTest('⧽', ['right pointing curved angle bracket', 'right pointing curved angle bracket', 'right pointing curved angle bracket']);
+  this.executeCharTest('⸢', ['top left half bracket', 'top left half bracket', 'top left half bracket']);
+  this.executeCharTest('⸣', ['top right half bracket', 'top right half bracket', 'top right half bracket']);
+  this.executeCharTest('⸤', ['bottom left half bracket', 'bottom left half bracket', 'bottom left half bracket']);
+  this.executeCharTest('⸥', ['bottom right half bracket', 'bottom right half bracket', 'bottom right half bracket']);
+  this.executeCharTest('⸦', ['left sideways U bracket', 'left sideways U bracket', 'left sideways U bracket']);
+  this.executeCharTest('⸧', ['right sideways U bracket', 'right sideways U bracket', 'right sideways U bracket']);
+  this.executeCharTest('⸨', ['left double parenthesis', 'left double parenthesis', 'left double parenthesis']);
+  this.executeCharTest('⸩', ['right double parenthesis', 'right double parenthesis', 'right double parenthesis']);
+  this.executeCharTest('〈', ['left angle bracket', 'left angle bracket', 'opening angle bracket']);
+  this.executeCharTest('〉', ['right angle bracket', 'right angle bracket', 'closing angle bracket']);
+  this.executeCharTest('《', ['left double angle bracket', 'left double angle bracket', 'opening double angle bracket']);
+  this.executeCharTest('》', ['right double angle bracket', 'right double angle bracket', 'closing double angle bracket']);
+  this.executeCharTest('「', ['left corner bracket', 'left corner bracket', 'opening corner bracket']);
+  this.executeCharTest('」', ['right corner bracket', 'right corner bracket', 'closing corner bracket']);
+  this.executeCharTest('『', ['left white corner bracket', 'left white corner bracket', 'opening white corner bracket']);
+  this.executeCharTest('』', ['right white corner bracket', 'right white corner bracket', 'closing white corner bracket']);
+  this.executeCharTest('【', ['left black lenticular bracket', 'left black lenticular bracket', 'opening black lenticular bracket']);
+  this.executeCharTest('】', ['right black lenticular bracket', 'right black lenticular bracket', 'closing black lenticular bracket']);
+  this.executeCharTest('〔', ['left tortoise shell bracket', 'left tortoise shell bracket', 'opening tortoise shell bracket']);
+  this.executeCharTest('〕', ['right tortoise shell bracket', 'right tortoise shell bracket', 'closing tortoise shell bracket']);
+  this.executeCharTest('〖', ['left white lenticular bracket', 'left white lenticular bracket', 'opening white lenticular bracket']);
+  this.executeCharTest('〗', ['right white lenticular bracket', 'right white lenticular bracket', 'closing white lenticular bracket']);
+  this.executeCharTest('〘', ['left white tortoise shell bracket', 'left white tortoise shell bracket', 'opening white tortoise shell bracket']);
+  this.executeCharTest('〙', ['right white tortoise shell bracket', 'right white tortoise shell bracket', 'closing white tortoise shell bracket']);
+  this.executeCharTest('〚', ['left white square bracket', 'left white square bracket', 'opening white square bracket']);
+  this.executeCharTest('〛', ['right white square bracket', 'right white square bracket', 'closing white square bracket']);
+  this.executeCharTest('〝', ['reversed double prime quotation mark', 'reversed double prime quotation mark', 'reversed double prime quotation mark']);
+  this.executeCharTest('〞', ['double prime quotation mark', 'double prime quotation mark', 'double prime quotation mark']);
+  this.executeCharTest('〟', ['low double prime quotation mark', 'low double prime quotation mark', 'low double prime quotation mark']);
+  this.executeCharTest('﴾', ['ornate left parenthesis', 'ornate left parenthesis', 'ornate left parenthesis']);
+  this.executeCharTest('﴿', ['ornate right parenthesis', 'ornate right parenthesis', 'ornate right parenthesis']);
+  this.executeCharTest('︗', ['presentation form for vertical left white lenticular bracket', 'presentation form for vertical left white lenticular bracket', 'presentation form for vertical left white lenticular bracket']);
+  this.executeCharTest('︘', ['presentation form for vertical right white lenticular brakcet', 'presentation form for vertical right white lenticular brakcet', 'presentation form for vertical right white lenticular brakcet']);
+  this.executeCharTest('︵', ['presentation form for vertical left parenthesis', 'presentation form for vertical left parenthesis', 'glyph for vertical opening parenthesis']);
+  this.executeCharTest('︶', ['presentation form for vertical right parenthesis', 'presentation form for vertical right parenthesis', 'glyph for vertical closing parenthesis']);
+  this.executeCharTest('︷', ['presentation form for vertical left curly bracket', 'presentation form for vertical left curly bracket', 'glyph for vertical opening curly bracket']);
+  this.executeCharTest('︸', ['presentation form for vertical right curly bracket', 'presentation form for vertical right curly bracket', 'glyph for vertical closing curly bracket']);
+  this.executeCharTest('︹', ['presentation form for vertical left tortoise shell bracket', 'presentation form for vertical left tortoise shell bracket', 'glyph for vertical opening tortoise shell bracket']);
+  this.executeCharTest('︺', ['presentation form for vertical right tortoise shell bracket', 'presentation form for vertical right tortoise shell bracket', 'glyph for vertical closing tortoise shell bracket']);
+  this.executeCharTest('︻', ['presentation form for vertical left black lenticular bracket', 'presentation form for vertical left black lenticular bracket', 'glyph for vertical opening black lenticular bracket']);
+  this.executeCharTest('︼', ['presentation form for vertical right black lenticular bracket', 'presentation form for vertical right black lenticular bracket', 'glyph for vertical closing black lenticular bracket']);
+  this.executeCharTest('︽', ['presentation form for vertical left double angle bracket', 'presentation form for vertical left double angle bracket', 'glyph for vertical opening double angle bracket']);
+  this.executeCharTest('︾', ['presentation form for vertical right double angle bracket', 'presentation form for vertical right double angle bracket', 'glyph for vertical closing double angle bracket']);
+  this.executeCharTest('︿', ['presentation form for vertical left angle bracket', 'presentation form for vertical left angle bracket', 'glyph for vertical opening angle bracket']);
+  this.executeCharTest('﹀', ['presentation form for vertical right angle bracket', 'presentation form for vertical right angle bracket', 'glyph for vertical closing angle bracket']);
+  this.executeCharTest('﹁', ['presentation form for vertical left corner bracket', 'presentation form for vertical left corner bracket', 'glyph for vertical opening corner bracket']);
+  this.executeCharTest('﹂', ['presentation form for vertical right corner bracket', 'presentation form for vertical right corner bracket', 'glyph for vertical closing corner bracket']);
+  this.executeCharTest('﹃', ['presentation form for vertical left white corner bracket', 'presentation form for vertical left white corner bracket', 'glyph for vertical opening white corner bracket']);
+  this.executeCharTest('﹄', ['presentation form for vertical right white corner bracket', 'presentation form for vertical right white corner bracket', 'glyph for vertical closing white corner bracket']);
+  this.executeCharTest('﹇', ['presentation form for vertical left square bracket', 'presentation form for vertical left square bracket', 'presentation form for vertical left square bracket']);
+  this.executeCharTest('﹈', ['presentation form for vertical right square bracket', 'presentation form for vertical right square bracket', 'presentation form for vertical right square bracket']);
+  this.executeCharTest('﹙', ['small left parenthesis', 'small left parenthesis', 'small opening parenthesis']);
+  this.executeCharTest('﹚', ['small right parenthesis', 'small right parenthesis', 'small closing parenthesis']);
+  this.executeCharTest('﹛', ['small left curly bracket', 'small left curly bracket', 'small opening curly bracket']);
+  this.executeCharTest('﹜', ['small right curly bracket', 'small right curly bracket', 'small closing curly bracket']);
+  this.executeCharTest('﹝', ['small left tortoise shell bracket', 'small left tortoise shell bracket', 'small opening tortoise shell bracket']);
+  this.executeCharTest('﹞', ['small right tortoise shell bracket', 'small right tortoise shell bracket', 'small closing tortoise shell bracket']);
+  this.executeCharTest('（', ['fullwidth left parenthesis', 'fullwidth left parenthesis', 'fullwidth opening parenthesis']);
+  this.executeCharTest('）', ['fullwidth right parenthesis', 'fullwidth right parenthesis', 'fullwidth closing parenthesis']);
+  this.executeCharTest('［', ['fullwidth left square bracket', 'fullwidth left square bracket', 'fullwidth opening square bracket']);
+  this.executeCharTest('］', ['fullwidth right square bracket', 'fullwidth right square bracket', 'fullwidth closing square bracket']);
+  this.executeCharTest('｛', ['fullwidth left curly bracket', 'fullwidth left curly bracket', 'fullwidth opening curly bracket']);
+  this.executeCharTest('｝', ['fullwidth right curly bracket', 'fullwidth right curly bracket', 'fullwidth closing curly bracket']);
+  this.executeCharTest('｟', ['fullwidth white left parenthesis', 'fullwidth white left parenthesis', 'fullwidth white left parenthesis']);
+  this.executeCharTest('｠', ['fullwidth white right parenthesis', 'fullwidth white right parenthesis', 'fullwidth white right parenthesis']);
+  this.executeCharTest('｢', ['halfwidth left corner bracket', 'halfwidth left corner bracket', 'halfwidth opening corner bracket']);
+  this.executeCharTest('｣', ['halfwidth right corner bracket', 'halfwidth right corner bracket', 'halfwidth closing corner bracket']);
+  this.executeCharTest('²', ['superscript digit two', 'square', 'superscript two']);
+  this.executeCharTest('³', ['superscript digit three', 'cube', 'superscript three']);
+  this.executeCharTest('¹', ['superscript digit one', 'super one', 'superscript one']);
+  this.executeCharTest('¼', ['vulgar fraction one quarter', 'one quarter', 'fraction one quarter']);
+  this.executeCharTest('½', ['vulgar fraction one half', 'one half', 'fraction one half']);
+  this.executeCharTest('¾', ['vulgar fraction three quarters', 'three quarters', 'fraction three quarters']);
+  this.executeCharTest('⁰', ['superscript zero', 'super zero', 'super zero']);
+  this.executeCharTest('⁴', ['superscript digit four', 'super four', 'superscript four']);
+  this.executeCharTest('⁵', ['superscript digit five', 'super five', 'superscript five']);
+  this.executeCharTest('⁶', ['superscript digit six', 'super six', 'superscript six']);
+  this.executeCharTest('⁷', ['superscript digit seven', 'super seven', 'superscript seven']);
+  this.executeCharTest('⁸', ['superscript digit eight', 'super eight', 'superscript eight']);
+  this.executeCharTest('⁹', ['superscript digit nine', 'super nine', 'superscript nine']);
+  this.executeCharTest('₀', ['subscript digit zero', 'sub zero', 'subscript zero']);
+  this.executeCharTest('₁', ['subscript digit one', 'sub one', 'subscript one']);
+  this.executeCharTest('₂', ['subscript digit two', 'sub two', 'subscript two']);
+  this.executeCharTest('₃', ['subscript digit three', 'sub three', 'subscript three']);
+  this.executeCharTest('₄', ['subscript digit four', 'sub four', 'subscript four']);
+  this.executeCharTest('₅', ['subscript digit five', 'sub five', 'subscript five']);
+  this.executeCharTest('₆', ['subscript digit six', 'sub six', 'subscript six']);
+  this.executeCharTest('₇', ['subscript digit seven', 'sub seven', 'subscript seven']);
+  this.executeCharTest('₈', ['subscript digit eight', 'sub eight', 'subscript eight']);
+  this.executeCharTest('₉', ['subscript digit nine', 'sub nine', 'subscript nine']);
+  this.executeCharTest('⅐', ['vulgar fraction one seventh', 'one seventh', 'one seventh']);
+  this.executeCharTest('⅑', ['vulgar fraction one ninth', 'one ninth', 'one ninth']);
+  this.executeCharTest('⅒', ['vulgar fraction one tenth', 'one tenth', 'one tenth']);
+  this.executeCharTest('⅓', ['vulgar fraction one third', 'one third', 'fraction one third']);
+  this.executeCharTest('⅔', ['vulgar fraction two thirds', 'two thirds', 'fraction two thirds']);
+  this.executeCharTest('⅕', ['vulgar fraction one fifth', 'one fifth', 'fraction one fifth']);
+  this.executeCharTest('⅖', ['vulgar fraction two fifths', 'two fifths', 'fraction two fifths']);
+  this.executeCharTest('⅗', ['vulgar fraction three fifths', 'three fifths', 'fraction three fifths']);
+  this.executeCharTest('⅘', ['vulgar fraction four fifths', 'four fifths', 'fraction four fifths']);
+  this.executeCharTest('⅙', ['vulgar fraction one sixth', 'one sixth', 'fraction one sixth']);
+  this.executeCharTest('⅚', ['vulgar fraction five sixths', 'five sixths', 'fraction five sixths']);
+  this.executeCharTest('⅛', ['vulgar fraction one eighth', 'one eighth', 'fraction one eighth']);
+  this.executeCharTest('⅜', ['vulgar fraction three eighths', 'three eighths', 'fraction three eighths']);
+  this.executeCharTest('⅝', ['vulgar fraction five eighths', 'five eighths', 'fraction five eighths']);
+  this.executeCharTest('⅞', ['vulgar fraction seven eighths', 'seven eighths', 'fraction seven eighths']);
+  this.executeCharTest('⅟', ['fraction numerator one', 'numerator one', 'numerator one']);
+  this.executeCharTest('↉', ['vulgar fraction zero thirds', 'zero thirds', 'zero thirds']);
+  this.executeCharTest('①', ['circled digit one', 'circled one', 'circled one']);
+  this.executeCharTest('②', ['circled digit two', 'circled two', 'circled two']);
+  this.executeCharTest('③', ['circled digit three', 'circled three', 'circled three']);
+  this.executeCharTest('④', ['circled digit four', 'circled four', 'circled four']);
+  this.executeCharTest('⑤', ['circled digit five', 'circled five', 'circled five']);
+  this.executeCharTest('⑥', ['circled digit six', 'circled six', 'circled six']);
+  this.executeCharTest('⑦', ['circled digit seven', 'circled seven', 'circled seven']);
+  this.executeCharTest('⑧', ['circled digit eight', 'circled eight', 'circled eight']);
+  this.executeCharTest('⑨', ['circled digit nine', 'circled nine', 'circled nine']);
+  this.executeCharTest('⑩', ['circled number ten', 'circled ten', 'circled ten']);
+  this.executeCharTest('⑪', ['circled number eleven', 'circled eleven', 'circled eleven']);
+  this.executeCharTest('⑫', ['circled number twelve', 'circled twelve', 'circled twelve']);
+  this.executeCharTest('⑬', ['circled number thirteen', 'circled thirteen', 'circled thirteen']);
+  this.executeCharTest('⑭', ['circled number fourteen', 'circled fourteen', 'circled fourteen']);
+  this.executeCharTest('⑮', ['circled number fifteen', 'circled fifteen', 'circled fifteen']);
+  this.executeCharTest('⑯', ['circled number sixteen', 'circled sixteen', 'circled sixteen']);
+  this.executeCharTest('⑰', ['circled number seventeen', 'circled seventeen', 'circled seventeen']);
+  this.executeCharTest('⑱', ['circled number eighteen', 'circled eighteen', 'circled eighteen']);
+  this.executeCharTest('⑲', ['circled number nineteen', 'circled nineteen', 'circled nineteen']);
+  this.executeCharTest('⑳', ['circled number twenty', 'circled twenty', 'circled twenty']);
+  this.executeCharTest('⑴', ['parenthesized digit one', 'parenthesized one', 'parenthesized one']);
+  this.executeCharTest('⑵', ['parenthesized digit two', 'parenthesized two', 'parenthesized two']);
+  this.executeCharTest('⑶', ['parenthesized digit three', 'parenthesized three', 'parenthesized three']);
+  this.executeCharTest('⑷', ['parenthesized digit four', 'parenthesized four', 'parenthesized four']);
+  this.executeCharTest('⑸', ['parenthesized digit five', 'parenthesized five', 'parenthesized five']);
+  this.executeCharTest('⑹', ['parenthesized digit six', 'parenthesized six', 'parenthesized six']);
+  this.executeCharTest('⑺', ['parenthesized digit seven', 'parenthesized seven', 'parenthesized seven']);
+  this.executeCharTest('⑻', ['parenthesized digit eight', 'parenthesized eight', 'parenthesized eight']);
+  this.executeCharTest('⑼', ['parenthesized digit nine', 'parenthesized nine', 'parenthesized nine']);
+  this.executeCharTest('⑽', ['parenthesized number ten', 'parenthesized ten', 'parenthesized ten']);
+  this.executeCharTest('⑾', ['parenthesized number eleven', 'parenthesized eleven', 'parenthesized eleven']);
+  this.executeCharTest('⑿', ['parenthesized number twelve', 'parenthesized twelve', 'parenthesized twelve']);
+  this.executeCharTest('⒀', ['parenthesized number thirteen', 'parenthesized thirteen', 'parenthesized thirteen']);
+  this.executeCharTest('⒁', ['parenthesized number fourteen', 'parenthesized fourteen', 'parenthesized fourteen']);
+  this.executeCharTest('⒂', ['parenthesized number fifteen', 'parenthesized fifteen', 'parenthesized fifteen']);
+  this.executeCharTest('⒃', ['parenthesized number sixteen', 'parenthesized sixteen', 'parenthesized sixteen']);
+  this.executeCharTest('⒄', ['parenthesized number seventeen', 'parenthesized seventeen', 'parenthesized seventeen']);
+  this.executeCharTest('⒅', ['parenthesized number eighteen', 'parenthesized eighteen', 'parenthesized eighteen']);
+  this.executeCharTest('⒆', ['parenthesized number nineteen', 'parenthesized nineteen', 'parenthesized nineteen']);
+  this.executeCharTest('⒇', ['parenthesized number twenty', 'parenthesized twenty', 'parenthesized twenty']);
+  this.executeCharTest('⒈', ['digit one full stop', 'one period', 'digit one period']);
+  this.executeCharTest('⒉', ['digit two full stop', 'two period', 'digit two period']);
+  this.executeCharTest('⒊', ['digit three full stop', 'three period', 'digit three period']);
+  this.executeCharTest('⒋', ['digit four full stop', 'four period', 'digit four period']);
+  this.executeCharTest('⒌', ['digit five full stop', 'five period', 'digit five period']);
+  this.executeCharTest('⒍', ['digit six full stop', 'six period', 'digit six period']);
+  this.executeCharTest('⒎', ['digit seven full stop', 'seven period', 'digit seven period']);
+  this.executeCharTest('⒏', ['digit eight full stop', 'eight period', 'digit eight period']);
+  this.executeCharTest('⒐', ['digit nine full stop', 'nine period', 'digit nine period']);
+  this.executeCharTest('⒑', ['number ten full stop', 'ten period', 'number ten period']);
+  this.executeCharTest('⒒', ['number eleven full stop', 'eleven period', 'number eleven period']);
+  this.executeCharTest('⒓', ['number twelve full stop', 'twelve period', 'number twelve period']);
+  this.executeCharTest('⒔', ['number thirteen full stop', 'thirteen period', 'number thirteen period']);
+  this.executeCharTest('⒕', ['number fourteen full stop', 'fourteen period', 'number fourteen period']);
+  this.executeCharTest('⒖', ['number fifteen full stop', 'fifteen period', 'number fifteen period']);
+  this.executeCharTest('⒗', ['number sixteen full stop', 'sixteen period', 'number sixteen period']);
+  this.executeCharTest('⒘', ['number seventeen full stop', 'seventeen period', 'number seventeen period']);
+  this.executeCharTest('⒙', ['number eighteen full stop', 'eighteen period', 'number eighteen period']);
+  this.executeCharTest('⒚', ['number nineteen full stop', 'nineteen period', 'number nineteen period']);
+  this.executeCharTest('⒛', ['number twenty full stop', 'twenty period', 'number twenty period']);
+  this.executeCharTest('⓪', ['circled digit zero', 'circled zero', 'circled zero']);
+  this.executeCharTest('⓫', ['negative circled number eleven', 'negative circled eleven', 'negative circled eleven']);
+  this.executeCharTest('⓬', ['negative circled number twelve', 'negative circled twelve', 'negative circled twelve']);
+  this.executeCharTest('⓭', ['negative circled number thirteen', 'negative circled thirteen', 'negative circled thirteen']);
+  this.executeCharTest('⓮', ['negative circled number fourteen', 'negative circled fourteen', 'negative circled fourteen']);
+  this.executeCharTest('⓯', ['negative circled number fifteen', 'negative circled fifteen', 'negative circled fifteen']);
+  this.executeCharTest('⓰', ['negative circled number sixteen', 'negative circled sixteen', 'negative circled sixteen']);
+  this.executeCharTest('⓱', ['negative circled number seventeen', 'negative circled seventeen', 'negative circled seventeen']);
+  this.executeCharTest('⓲', ['negative circled number eighteen', 'negative circled eighteen', 'negative circled eighteen']);
+  this.executeCharTest('⓳', ['negative circled number nineteen', 'negative circled nineteen', 'negative circled nineteen']);
+  this.executeCharTest('⓴', ['negative circled number twenty', 'negative circled twenty', 'negative circled twenty']);
+  this.executeCharTest('⓵', ['double circled digit one', 'double circled one', 'double circled one']);
+  this.executeCharTest('⓶', ['double circled digit two', 'double circled two', 'double circled two']);
+  this.executeCharTest('⓷', ['double circled digit three', 'double circled three', 'double circled three']);
+  this.executeCharTest('⓸', ['double circled digit four', 'double circled four', 'double circled four']);
+  this.executeCharTest('⓹', ['double circled digit five', 'double circled five', 'double circled five']);
+  this.executeCharTest('⓺', ['double circled digit six', 'double circled six', 'double circled six']);
+  this.executeCharTest('⓻', ['double circled digit seven', 'double circled seven', 'double circled seven']);
+  this.executeCharTest('⓼', ['double circled digit eight', 'double circled eight', 'double circled eight']);
+  this.executeCharTest('⓽', ['double circled digit nine', 'double circled nine', 'double circled nine']);
+  this.executeCharTest('⓾', ['double circled number ten', 'double circled ten', 'double circled ten']);
+  this.executeCharTest('⓿', ['negative circled digit zero', 'negative circled zero', 'negative circled zero']);
+  this.executeCharTest('❶', ['dingbat negative circled digit one', 'inverse circled one', 'inverse circled digit one']);
+  this.executeCharTest('❷', ['dingbat negative circled digit two', 'inverse circled two', 'inverse circled digit two']);
+  this.executeCharTest('❸', ['dingbat negative circled digit three', 'inverse circled three', 'inverse circled digit three']);
+  this.executeCharTest('❹', ['dingbat negative circled digit four', 'inverse circled four', 'inverse circled digit four']);
+  this.executeCharTest('❺', ['dingbat negative circled digit five', 'inverse circled five', 'inverse circled digit five']);
+  this.executeCharTest('❻', ['dingbat negative circled digit six', 'inverse circled six', 'inverse circled digit six']);
+  this.executeCharTest('❼', ['dingbat negative circled digit seven', 'inverse circled seven', 'inverse circled digit seven']);
+  this.executeCharTest('❽', ['dingbat negative circled digit eight', 'inverse circled eight', 'inverse circled digit eight']);
+  this.executeCharTest('❾', ['dingbat negative circled digit nine', 'inverse circled nine', 'inverse circled digit nine']);
+  this.executeCharTest('❿', ['dingbat negative circled number ten', 'inverse circled ten', 'inverse circled number ten']);
+  this.executeCharTest('➀', ['dingbat circled sans serif digit one', 'circled one', 'circled sans serif digit one']);
+  this.executeCharTest('➁', ['dingbat circled sans serif digit two', 'circled two', 'circled sans serif digit two']);
+  this.executeCharTest('➂', ['dingbat circled sans serif digit three', 'circled three', 'circled sans serif digit three']);
+  this.executeCharTest('➃', ['dingbat circled sans serif digit four', 'circled four', 'circled sans serif digit four']);
+  this.executeCharTest('➄', ['dingbat circled sans serif digit five', 'circled five', 'circled sans serif digit five']);
+  this.executeCharTest('➅', ['dingbat circled sans serif digit six', 'circled six', 'circled sans serif digit six']);
+  this.executeCharTest('➆', ['dingbat circled sans serif digit seven', 'circled seven', 'circled sans serif digit seven']);
+  this.executeCharTest('➇', ['dingbat circled sans serif digit eight', 'circled eight', 'circled sans serif digit eight']);
+  this.executeCharTest('➈', ['dingbat circled sans serif digit nine', 'circled nine', 'circled sans serif digit nine']);
+  this.executeCharTest('➉', ['dingbat circled sans serif number ten', 'circled ten', 'circled sans serif number ten']);
+  this.executeCharTest('➊', ['dingbat negative circled sans serif digit one', 'inverse circled one', 'inverse circled sans serif digit one']);
+  this.executeCharTest('➋', ['dingbat negative circled sans serif digit two', 'inverse circled two', 'inverse circled sans serif digit two']);
+  this.executeCharTest('➌', ['dingbat negative circled sans serif digit three', 'inverse circled three', 'inverse circled sans serif digit three']);
+  this.executeCharTest('➍', ['dingbat negative circled sans serif digit four', 'inverse circled four', 'inverse circled sans serif digit four']);
+  this.executeCharTest('➎', ['dingbat negative circled sans serif digit five', 'inverse circled five', 'inverse circled sans serif digit five']);
+  this.executeCharTest('➏', ['dingbat negative circled sans serif digit six', 'inverse circled six', 'inverse circled sans serif digit six']);
+  this.executeCharTest('➐', ['dingbat negative circled sans serif digit seven', 'inverse circled seven', 'inverse circled sans serif digit seven']);
+  this.executeCharTest('➑', ['dingbat negative circled sans serif digit eight', 'inverse circled eight', 'inverse circled sans serif digit eight']);
+  this.executeCharTest('➒', ['dingbat negative circled sans serif digit nine', 'inverse circled nine', 'inverse circled sans serif digit nine']);
+  this.executeCharTest('➓', ['dingbat negative circled sans serif number ten', 'inverse circled ten', 'inverse circled sans serif number ten']);
+  this.executeCharTest('㉈', ['circled number ten on black square', 'circled ten on black square', 'circled ten on black square']);
+  this.executeCharTest('㉉', ['circled number twenty on black square', 'circled twenty on black square', 'circled twenty on black square']);
+  this.executeCharTest('㉊', ['circled number thirty on black square', 'circled thirty on black square', 'circled thirty on black square']);
+  this.executeCharTest('㉋', ['circled number forty on black square', 'circled forty on black square', 'circled forty on black square']);
+  this.executeCharTest('㉌', ['circled number fifty on black square', 'circled fifty on black square', 'circled fifty on black square']);
+  this.executeCharTest('㉍', ['circled number sixty on black square', 'circled sixty on black square', 'circled sixty on black square']);
+  this.executeCharTest('㉎', ['circled number seventy on black square', 'circled seventy on black square', 'circled seventy on black square']);
+  this.executeCharTest('㉏', ['circled number eighty on black square', 'circled eighty on black square', 'circled eighty on black square']);
+  this.executeCharTest('㉑', ['circled number twenty one', 'circled twenty one', 'circled twenty one']);
+  this.executeCharTest('㉒', ['circled number twenty two', 'circled twenty two', 'circled twenty two']);
+  this.executeCharTest('㉓', ['circled number twenty three', 'circled twenty three', 'circled twenty three']);
+  this.executeCharTest('㉔', ['circled number twenty four', 'circled twenty four', 'circled twenty four']);
+  this.executeCharTest('㉕', ['circled number twenty five', 'circled twenty five', 'circled twenty five']);
+  this.executeCharTest('㉖', ['circled number twenty six', 'circled twenty six', 'circled twenty six']);
+  this.executeCharTest('㉗', ['circled number twenty seven', 'circled twenty seven', 'circled twenty seven']);
+  this.executeCharTest('㉘', ['circled number twenty eight', 'circled twenty eight', 'circled twenty eight']);
+  this.executeCharTest('㉙', ['circled number twenty nine', 'circled twenty nine', 'circled twenty nine']);
+  this.executeCharTest('㉚', ['circled number thirty', 'circled thirty', 'circled thirty']);
+  this.executeCharTest('㉛', ['circled number thirty one', 'circled thirty one', 'circled thirty one']);
+  this.executeCharTest('㉜', ['circled number thirty two', 'circled thirty two', 'circled thirty two']);
+  this.executeCharTest('㉝', ['circled number thirty three', 'circled thirty three', 'circled thirty three']);
+  this.executeCharTest('㉞', ['circled number thirty four', 'circled thirty four', 'circled thirty four']);
+  this.executeCharTest('㉟', ['circled number thirty five', 'circled thirty five', 'circled thirty five']);
+  this.executeCharTest('㊱', ['circled number thirty six', 'circled thirty six', 'circled thirty six']);
+  this.executeCharTest('㊲', ['circled number thirty seven', 'circled thirty seven', 'circled thirty seven']);
+  this.executeCharTest('㊳', ['circled number thirty eight', 'circled thirty eight', 'circled thirty eight']);
+  this.executeCharTest('㊴', ['circled number thirty nine', 'circled thirty nine', 'circled thirty nine']);
+  this.executeCharTest('㊵', ['circled number forty', 'circled forty', 'circled forty']);
+  this.executeCharTest('㊶', ['circled number forty one', 'circled forty one', 'circled forty one']);
+  this.executeCharTest('㊷', ['circled number forty two', 'circled forty two', 'circled forty two']);
+  this.executeCharTest('㊸', ['circled number forty three', 'circled forty three', 'circled forty three']);
+  this.executeCharTest('㊹', ['circled number forty four', 'circled forty four', 'circled forty four']);
+  this.executeCharTest('㊺', ['circled number forty five', 'circled forty five', 'circled forty five']);
+  this.executeCharTest('㊻', ['circled number forty six', 'circled forty six', 'circled forty six']);
+  this.executeCharTest('㊼', ['circled number forty seven', 'circled forty seven', 'circled forty seven']);
+  this.executeCharTest('㊽', ['circled number forty eight', 'circled forty eight', 'circled forty eight']);
+  this.executeCharTest('㊾', ['circled number forty nine', 'circled forty nine', 'circled forty nine']);
+  this.executeCharTest('㊿', ['circled number fifty', 'circled fifty', 'circled fifty']);
+  this.executeCharTest('０', ['fullwidth digit zero', 'zero', 'zero']);
+  this.executeCharTest('１', ['fullwidth digit one', 'one', 'one']);
+  this.executeCharTest('２', ['fullwidth digit two', 'two', 'two']);
+  this.executeCharTest('３', ['fullwidth digit three', 'three', 'three']);
+  this.executeCharTest('４', ['fullwidth digit four', 'four', 'four']);
+  this.executeCharTest('５', ['fullwidth digit five', 'five', 'five']);
+  this.executeCharTest('６', ['fullwidth digit six', 'six', 'six']);
+  this.executeCharTest('７', ['fullwidth digit seven', 'seven', 'seven']);
+  this.executeCharTest('８', ['fullwidth digit eight', 'eight', 'eight']);
+  this.executeCharTest('９', ['fullwidth digit nine', 'nine', 'nine']);
+  this.executeCharTest('𝟎', ['mathematical bold digit zero', 'bold zero', 'bold digit zero']);
+  this.executeCharTest('𝟏', ['mathematical bold digit one', 'bold one', 'bold digit one']);
+  this.executeCharTest('𝟐', ['mathematical bold digit two', 'bold two', 'bold digit two']);
+  this.executeCharTest('𝟑', ['mathematical bold digit three', 'bold three', 'bold digit three']);
+  this.executeCharTest('𝟒', ['mathematical bold digit four', 'bold four', 'bold digit four']);
+  this.executeCharTest('𝟓', ['mathematical bold digit five', 'bold five', 'bold digit five']);
+  this.executeCharTest('𝟔', ['mathematical bold digit six', 'bold six', 'bold digit six']);
+  this.executeCharTest('𝟕', ['mathematical bold digit seven', 'bold seven', 'bold digit seven']);
+  this.executeCharTest('𝟖', ['mathematical bold digit eight', 'bold eight', 'bold digit eight']);
+  this.executeCharTest('𝟗', ['mathematical bold digit nine', 'bold nine', 'bold digit nine']);
+  this.executeCharTest('𝟘', ['mathematical double struck digit zero', 'blackboard zero', 'double struck zero']);
+  this.executeCharTest('𝟙', ['mathematical double struck digit one', 'blackboard one', 'double struck one']);
+  this.executeCharTest('𝟚', ['mathematical double struck digit two', 'blackboard two', 'double struck two']);
+  this.executeCharTest('𝟛', ['mathematical double struck digit three', 'blackboard three', 'double struck three']);
+  this.executeCharTest('𝟜', ['mathematical double struck digit four', 'blackboard four', 'double struck four']);
+  this.executeCharTest('𝟝', ['mathematical double struck digit five', 'blackboard five', 'double struck five']);
+  this.executeCharTest('𝟞', ['mathematical double struck digit six', 'blackboard six', 'double struck six']);
+  this.executeCharTest('𝟟', ['mathematical double struck digit seven', 'blackboard seven', 'double struck seven']);
+  this.executeCharTest('𝟠', ['mathematical double struck digit eight', 'blackboard eight', 'double struck eight']);
+  this.executeCharTest('𝟡', ['mathematical double struck digit nine', 'blackboard nine', 'double struck nine']);
+  this.executeCharTest('𝟢', ['mathematical sans serif digit zero', 'sans serif zero', 'sans serif digit zero']);
+  this.executeCharTest('𝟣', ['mathematical sans serif digit one', 'sans serif one', 'sans serif digit one']);
+  this.executeCharTest('𝟤', ['mathematical sans serif digit two', 'sans serif two', 'sans serif digit two']);
+  this.executeCharTest('𝟥', ['mathematical sans serif digit three', 'sans serif three', 'sans serif digit three']);
+  this.executeCharTest('𝟦', ['mathematical sans serif digit four', 'sans serif four', 'sans serif digit four']);
+  this.executeCharTest('𝟧', ['mathematical sans serif digit five', 'sans serif five', 'sans serif digit five']);
+  this.executeCharTest('𝟨', ['mathematical sans serif digit six', 'sans serif six', 'sans serif digit six']);
+  this.executeCharTest('𝟩', ['mathematical sans serif digit seven', 'sans serif seven', 'sans serif digit seven']);
+  this.executeCharTest('𝟪', ['mathematical sans serif digit eight', 'sans serif eight', 'sans serif digit eight']);
+  this.executeCharTest('𝟫', ['mathematical sans serif digit nine', 'sans serif nine', 'sans serif digit nine']);
+  this.executeCharTest('𝟬', ['mathematical sans serif bold digit zero', 'sans serif bold zero', 'sans serif bold digit zero']);
+  this.executeCharTest('𝟭', ['mathematical sans serif bold digit one', 'sans serif bold one', 'sans serif bold digit one']);
+  this.executeCharTest('𝟮', ['mathematical sans serif bold digit two', 'sans serif bold two', 'sans serif bold digit two']);
+  this.executeCharTest('𝟯', ['mathematical sans serif bold digit three', 'sans serif bold three', 'sans serif bold digit three']);
+  this.executeCharTest('𝟰', ['mathematical sans serif bold digit four', 'sans serif bold four', 'sans serif bold digit four']);
+  this.executeCharTest('𝟱', ['mathematical sans serif bold digit five', 'sans serif bold five', 'sans serif bold digit five']);
+  this.executeCharTest('𝟲', ['mathematical sans serif bold digit six', 'sans serif bold six', 'sans serif bold digit six']);
+  this.executeCharTest('𝟳', ['mathematical sans serif bold digit seven', 'sans serif bold seven', 'sans serif bold digit seven']);
+  this.executeCharTest('𝟴', ['mathematical sans serif bold digit eight', 'sans serif bold eight', 'sans serif bold digit eight']);
+  this.executeCharTest('𝟵', ['mathematical sans serif bold digit nine', 'sans serif bold nine', 'sans serif bold digit nine']);
+  this.executeCharTest('𝟶', ['mathematical monospace digit zero', 'thin zero', 'monospace zero']);
+  this.executeCharTest('𝟷', ['mathematical monospace digit one', 'thin one', 'monospace one']);
+  this.executeCharTest('𝟸', ['mathematical monospace digit two', 'thin two', 'monospace two']);
+  this.executeCharTest('𝟹', ['mathematical monospace digit three', 'thin three', 'monospace three']);
+  this.executeCharTest('𝟺', ['mathematical monospace digit four', 'thin four', 'monospace four']);
+  this.executeCharTest('𝟻', ['mathematical monospace digit five', 'thin five', 'monospace five']);
+  this.executeCharTest('𝟼', ['mathematical monospace digit six', 'thin six', 'monospace six']);
+  this.executeCharTest('𝟽', ['mathematical monospace digit seven', 'thin seven', 'monospace seven']);
+  this.executeCharTest('𝟾', ['mathematical monospace digit eight', 'thin eight', 'monospace eight']);
+  this.executeCharTest('𝟿', ['mathematical monospace digit nine', 'thin nine', 'monospace nine']);
+  this.executeCharTest('🄀', ['digit zero full stop', 'zero period', 'zero period']);
+  this.executeCharTest('🄁', ['digit zero comma', 'zero comma', 'zero comma']);
+  this.executeCharTest('🄂', ['digit one comma', 'one comma', 'one comma']);
+  this.executeCharTest('🄃', ['digit two comma', 'two comma', 'two comma']);
+  this.executeCharTest('🄄', ['digit three comma', 'three comma', 'three comma']);
+  this.executeCharTest('🄅', ['digit four comma', 'four comma', 'four comma']);
+  this.executeCharTest('🄆', ['digit five comma', 'five comma', 'five comma']);
+  this.executeCharTest('🄇', ['digit six comma', 'six comma', 'six comma']);
+  this.executeCharTest('🄈', ['digit seven comma', 'seven comma', 'seven comma']);
+  this.executeCharTest('🄉', ['digit eight comma', 'eight comma', 'eight comma']);
+  this.executeCharTest('🄊', ['digit nine comma', 'nine comma', 'nine comma']);
+  this.executeCharTest('─', ['box drawings light horizontal', 'box drawings light horizontal', 'forms light horizontal']);
+  this.executeCharTest('━', ['box drawings heavy horizontal', 'box drawings heavy horizontal', 'forms heavy horizontal']);
+  this.executeCharTest('│', ['box drawings light vertical', 'box drawings light vertical', 'forms light vertical']);
+  this.executeCharTest('┃', ['box drawings heavy vertical', 'box drawings heavy vertical', 'forms heavy vertical']);
+  this.executeCharTest('┄', ['box drawings light triple dash horizontal', 'box drawings light triple dash horizontal', 'forms light triple dash horizontal']);
+  this.executeCharTest('┅', ['box drawings heavy triple dash horizontal', 'box drawings heavy triple dash horizontal', 'forms heavy triple dash horizontal']);
+  this.executeCharTest('┆', ['box drawings light triple dash vertical', 'box drawings light triple dash vertical', 'forms light triple dash vertical']);
+  this.executeCharTest('┇', ['box drawings heavy triple dash vertical', 'box drawings heavy triple dash vertical', 'forms heavy triple dash vertical']);
+  this.executeCharTest('┈', ['box drawings light quadruple dash horizontal', 'box drawings light quadruple dash horizontal', 'forms light quadruple dash horizontal']);
+  this.executeCharTest('┉', ['box drawings heavy quadruple dash horizontal', 'box drawings heavy quadruple dash horizontal', 'forms heavy quadruple dash horizontal']);
+  this.executeCharTest('┊', ['box drawings light quadruple dash vertical', 'box drawings light quadruple dash vertical', 'forms light quadruple dash vertical']);
+  this.executeCharTest('┋', ['box drawings heavy quadruple dash vertical', 'box drawings heavy quadruple dash vertical', 'forms heavy quadruple dash vertical']);
+  this.executeCharTest('┌', ['box drawings light down and right', 'box drawings light down and right', 'forms light down and right']);
+  this.executeCharTest('┍', ['box drawings down light and right heavy', 'box drawings down light and right heavy', 'forms down light and right heavy']);
+  this.executeCharTest('┎', ['box drawings down heavy and right light', 'box drawings down heavy and right light', 'forms down heavy and right light']);
+  this.executeCharTest('┏', ['box drawings heavy down and right', 'box drawings heavy down and right', 'forms heavy down and right']);
+  this.executeCharTest('┐', ['box drawings light down and left', 'box drawings light down and left', 'forms light down and left']);
+  this.executeCharTest('┑', ['box drawings down light and left heavy', 'box drawings down light and left heavy', 'forms down light and left heavy']);
+  this.executeCharTest('┒', ['box drawings down heavy and left light', 'box drawings down heavy and left light', 'forms down heavy and left light']);
+  this.executeCharTest('┓', ['box drawings heavy down and left', 'box drawings heavy down and left', 'forms heavy down and left']);
+  this.executeCharTest('└', ['box drawings light up and right', 'box drawings light up and right', 'forms light up and right']);
+  this.executeCharTest('┕', ['box drawings up light and right heavy', 'box drawings up light and right heavy', 'forms up light and right heavy']);
+  this.executeCharTest('┖', ['box drawings up heavy and right light', 'box drawings up heavy and right light', 'forms up heavy and right light']);
+  this.executeCharTest('┗', ['box drawings heavy up and right', 'box drawings heavy up and right', 'forms heavy up and right']);
+  this.executeCharTest('┘', ['box drawings light up and left', 'box drawings light up and left', 'forms light up and left']);
+  this.executeCharTest('┙', ['box drawings up light and left heavy', 'box drawings up light and left heavy', 'forms up light and left heavy']);
+  this.executeCharTest('┚', ['box drawings up heavy and left light', 'box drawings up heavy and left light', 'forms up heavy and left light']);
+  this.executeCharTest('┛', ['box drawings heavy up and left', 'box drawings heavy up and left', 'forms heavy up and left']);
+  this.executeCharTest('├', ['box drawings light vertical and right', 'box drawings light vertical and right', 'forms light vertical and right']);
+  this.executeCharTest('┝', ['box drawings vertical light and right heavy', 'box drawings vertical light and right heavy', 'forms vertical light and right heavy']);
+  this.executeCharTest('┞', ['box drawings up heavy and right down light', 'box drawings up heavy and right down light', 'forms up heavy and right down light']);
+  this.executeCharTest('┟', ['box drawings down heavy and right up light', 'box drawings down heavy and right up light', 'forms down heavy and right up light']);
+  this.executeCharTest('┠', ['box drawings vertical heavy and right light', 'box drawings vertical heavy and right light', 'forms vertical heavy and right light']);
+  this.executeCharTest('┡', ['box drawings down light and right up heavy', 'box drawings down light and right up heavy', 'forms down light and right up heavy']);
+  this.executeCharTest('┢', ['box drawings up light and right down heavy', 'box drawings up light and right down heavy', 'forms up light and right down heavy']);
+  this.executeCharTest('┣', ['box drawings heavy vertical and right', 'box drawings heavy vertical and right', 'forms heavy vertical and right']);
+  this.executeCharTest('┤', ['box drawings light vertical and left', 'box drawings light vertical and left', 'forms light vertical and left']);
+  this.executeCharTest('┥', ['box drawings vertical light and left heavy', 'box drawings vertical light and left heavy', 'forms vertical light and left heavy']);
+  this.executeCharTest('┦', ['box drawings up heavy and left down light', 'box drawings up heavy and left down light', 'forms up heavy and left down light']);
+  this.executeCharTest('┧', ['box drawings down heavy and left up light', 'box drawings down heavy and left up light', 'forms down heavy and left up light']);
+  this.executeCharTest('┨', ['box drawings vertical heavy and left light', 'box drawings vertical heavy and left light', 'forms vertical heavy and left light']);
+  this.executeCharTest('┩', ['box drawings down light and left up heavy', 'box drawings down light and left up heavy', 'forms down light and left up heavy']);
+  this.executeCharTest('┪', ['box drawings up light and left down heavy', 'box drawings up light and left down heavy', 'forms up light and left down heavy']);
+  this.executeCharTest('┫', ['box drawings heavy vertical and left', 'box drawings heavy vertical and left', 'forms heavy vertical and left']);
+  this.executeCharTest('┬', ['box drawings light down and horizontal', 'box drawings light down and horizontal', 'forms light down and horizontal']);
+  this.executeCharTest('┭', ['box drawings left heavy and right down light', 'box drawings left heavy and right down light', 'forms left heavy and right down light']);
+  this.executeCharTest('┮', ['box drawings right heavy and left down light', 'box drawings right heavy and left down light', 'forms right heavy and left down light']);
+  this.executeCharTest('┯', ['box drawings down light and horizontal heavy', 'box drawings down light and horizontal heavy', 'forms down light and horizontal heavy']);
+  this.executeCharTest('┰', ['box drawings down heavy and horizontal light', 'box drawings down heavy and horizontal light', 'forms down heavy and horizontal light']);
+  this.executeCharTest('┱', ['box drawings right light and left down heavy', 'box drawings right light and left down heavy', 'forms right light and left down heavy']);
+  this.executeCharTest('┲', ['box drawings left light and right down heavy', 'box drawings left light and right down heavy', 'forms left light and right down heavy']);
+  this.executeCharTest('┳', ['box drawings heavy down and horizontal', 'box drawings heavy down and horizontal', 'forms heavy down and horizontal']);
+  this.executeCharTest('┴', ['box drawings light up and horizontal', 'box drawings light up and horizontal', 'forms light up and horizontal']);
+  this.executeCharTest('┵', ['box drawings left heavy and right up light', 'box drawings left heavy and right up light', 'forms left heavy and right up light']);
+  this.executeCharTest('┶', ['box drawings right heavy and left up light', 'box drawings right heavy and left up light', 'forms right heavy and left up light']);
+  this.executeCharTest('┷', ['box drawings up light and horizontal heavy', 'box drawings up light and horizontal heavy', 'forms up light and horizontal heavy']);
+  this.executeCharTest('┸', ['box drawings up heavy and horizontal light', 'box drawings up heavy and horizontal light', 'forms up heavy and horizontal light']);
+  this.executeCharTest('┹', ['box drawings right light and left up heavy', 'box drawings right light and left up heavy', 'forms right light and left up heavy']);
+  this.executeCharTest('┺', ['box drawings left light and right up heavy', 'box drawings left light and right up heavy', 'forms left light and right up heavy']);
+  this.executeCharTest('┻', ['box drawings heavy up and horizontal', 'box drawings heavy up and horizontal', 'forms heavy up and horizontal']);
+  this.executeCharTest('┼', ['box drawings light vertical and horizontal', 'box drawings light vertical and horizontal', 'forms light vertical and horizontal']);
+  this.executeCharTest('┽', ['box drawings left heavy and right vertical light', 'box drawings left heavy and right vertical light', 'forms left heavy and right vertical light']);
+  this.executeCharTest('┾', ['box drawings right heavy and left vertical light', 'box drawings right heavy and left vertical light', 'forms right heavy and left vertical light']);
+  this.executeCharTest('┿', ['box drawings vertical light and horizontal heavy', 'box drawings vertical light and horizontal heavy', 'forms vertical light and horizontal heavy']);
+  this.executeCharTest('╀', ['box drawings up heavy and down horizontal light', 'box drawings up heavy and down horizontal light', 'forms up heavy and down horizontal light']);
+  this.executeCharTest('╁', ['box drawings down heavy and up horizontal light', 'box drawings down heavy and up horizontal light', 'forms down heavy and up horizontal light']);
+  this.executeCharTest('╂', ['box drawings vertical heavy and horizontal light', 'box drawings vertical heavy and horizontal light', 'forms vertical heavy and horizontal light']);
+  this.executeCharTest('╃', ['box drawings left up heavy and right down light', 'box drawings left up heavy and right down light', 'forms left up heavy and right down light']);
+  this.executeCharTest('╄', ['box drawings right up heavy and left down light', 'box drawings right up heavy and left down light', 'forms right up heavy and left down light']);
+  this.executeCharTest('╅', ['box drawings left down heavy and right up light', 'box drawings left down heavy and right up light', 'forms left down heavy and right up light']);
+  this.executeCharTest('╆', ['box drawings right down heavy and left up light', 'box drawings right down heavy and left up light', 'forms right down heavy and left up light']);
+  this.executeCharTest('╇', ['box drawings down light and up horizontal heavy', 'box drawings down light and up horizontal heavy', 'forms down light and up horizontal heavy']);
+  this.executeCharTest('╈', ['box drawings up light and down horizontal heavy', 'box drawings up light and down horizontal heavy', 'forms up light and down horizontal heavy']);
+  this.executeCharTest('╉', ['box drawings right light and left vertical heavy', 'box drawings right light and left vertical heavy', 'forms right light and left vertical heavy']);
+  this.executeCharTest('╊', ['box drawings left light and right vertical heavy', 'box drawings left light and right vertical heavy', 'forms left light and right vertical heavy']);
+  this.executeCharTest('╋', ['box drawings heavy vertical and horizontal', 'box drawings heavy vertical and horizontal', 'forms heavy vertical and horizontal']);
+  this.executeCharTest('╌', ['box drawings light double dash horizontal', 'box drawings light double dash horizontal', 'forms light double dash horizontal']);
+  this.executeCharTest('╍', ['box drawings heavy double dash horizontal', 'box drawings heavy double dash horizontal', 'forms heavy double dash horizontal']);
+  this.executeCharTest('╎', ['box drawings light double dash vertical', 'box drawings light double dash vertical', 'forms light double dash vertical']);
+  this.executeCharTest('╏', ['box drawings heavy double dash vertical', 'box drawings heavy double dash vertical', 'forms heavy double dash vertical']);
+  this.executeCharTest('═', ['box drawings double horizontal', 'box drawings double horizontal', 'forms double horizontal']);
+  this.executeCharTest('║', ['box drawings double vertical', 'box drawings double vertical', 'forms double vertical']);
+  this.executeCharTest('╒', ['box drawings down single and right double', 'box drawings down single and right double', 'forms down single and right double']);
+  this.executeCharTest('╓', ['box drawings down double and right single', 'box drawings down double and right single', 'forms down double and right single']);
+  this.executeCharTest('╔', ['box drawings double down and right', 'box drawings double down and right', 'forms double down and right']);
+  this.executeCharTest('╕', ['box drawings down single and left double', 'box drawings down single and left double', 'forms down single and left double']);
+  this.executeCharTest('╖', ['box drawings down double and left single', 'box drawings down double and left single', 'forms down double and left single']);
+  this.executeCharTest('╗', ['box drawings double down and left', 'box drawings double down and left', 'forms double down and left']);
+  this.executeCharTest('╘', ['box drawings up single and right double', 'box drawings up single and right double', 'forms up single and right double']);
+  this.executeCharTest('╙', ['box drawings up double and right single', 'box drawings up double and right single', 'forms up double and right single']);
+  this.executeCharTest('╚', ['box drawings double up and right', 'box drawings double up and right', 'forms double up and right']);
+  this.executeCharTest('╛', ['box drawings up single and left double', 'box drawings up single and left double', 'forms up single and left double']);
+  this.executeCharTest('╜', ['box drawings up double and left single', 'box drawings up double and left single', 'forms up double and left single']);
+  this.executeCharTest('╝', ['box drawings double up and left', 'box drawings double up and left', 'forms double up and left']);
+  this.executeCharTest('╞', ['box drawings vertical single and right double', 'box drawings vertical single and right double', 'forms vertical single and right double']);
+  this.executeCharTest('╟', ['box drawings vertical double and right single', 'box drawings vertical double and right single', 'forms vertical double and right single']);
+  this.executeCharTest('╠', ['box drawings double vertical and right', 'box drawings double vertical and right', 'forms double vertical and right']);
+  this.executeCharTest('╡', ['box drawings vertical single and left double', 'box drawings vertical single and left double', 'forms vertical single and left double']);
+  this.executeCharTest('╢', ['box drawings vertical double and left single', 'box drawings vertical double and left single', 'forms vertical double and left single']);
+  this.executeCharTest('╣', ['box drawings double vertical and left', 'box drawings double vertical and left', 'forms double vertical and left']);
+  this.executeCharTest('╤', ['box drawings down single and horizontal double', 'box drawings down single and horizontal double', 'forms down single and horizontal double']);
+  this.executeCharTest('╥', ['box drawings down double and horizontal single', 'box drawings down double and horizontal single', 'forms down double and horizontal single']);
+  this.executeCharTest('╦', ['box drawings double down and horizontal', 'box drawings double down and horizontal', 'forms double down and horizontal']);
+  this.executeCharTest('╧', ['box drawings up single and horizontal double', 'box drawings up single and horizontal double', 'forms up single and horizontal double']);
+  this.executeCharTest('╨', ['box drawings up double and horizontal single', 'box drawings up double and horizontal single', 'forms up double and horizontal single']);
+  this.executeCharTest('╩', ['box drawings double up and horizontal', 'box drawings double up and horizontal', 'forms double up and horizontal']);
+  this.executeCharTest('╪', ['box drawings vertical single and horizontal double', 'box drawings vertical single and horizontal double', 'forms vertical single and horizontal double']);
+  this.executeCharTest('╫', ['box drawings vertical double and horizontal single', 'box drawings vertical double and horizontal single', 'forms vertical double and horizontal single']);
+  this.executeCharTest('╬', ['box drawings double vertical and horizontal', 'box drawings double vertical and horizontal', 'forms double vertical and horizontal']);
+  this.executeCharTest('╭', ['box drawings light arc down and right', 'box drawings light arc down and right', 'forms light arc down and right']);
+  this.executeCharTest('╮', ['box drawings light arc down and left', 'box drawings light arc down and left', 'forms light arc down and left']);
+  this.executeCharTest('╯', ['box drawings light arc up and left', 'box drawings light arc up and left', 'forms light arc up and left']);
+  this.executeCharTest('╰', ['box drawings light arc up and right', 'box drawings light arc up and right', 'forms light arc up and right']);
+  this.executeCharTest('╱', ['box drawings light diagonal upper right to lower left', 'box drawings light diagonal upper right to lower left', 'forms light diagonal upper right to lower left']);
+  this.executeCharTest('╲', ['box drawings light diagonal upper left to lower right', 'box drawings light diagonal upper left to lower right', 'forms light diagonal upper left to lower right']);
+  this.executeCharTest('╳', ['box drawings light diagonal cross', 'box drawings light diagonal cross', 'forms light diagonal cross']);
+  this.executeCharTest('╴', ['box drawings light left', 'box drawings light left', 'forms light left']);
+  this.executeCharTest('╵', ['box drawings light up', 'box drawings light up', 'forms light up']);
+  this.executeCharTest('╶', ['box drawings light right', 'box drawings light right', 'forms light right']);
+  this.executeCharTest('╷', ['box drawings light down', 'box drawings light down', 'forms light down']);
+  this.executeCharTest('╸', ['box drawings heavy left', 'box drawings heavy left', 'forms heavy left']);
+  this.executeCharTest('╹', ['box drawings heavy up', 'box drawings heavy up', 'forms heavy up']);
+  this.executeCharTest('╺', ['box drawings heavy right', 'box drawings heavy right', 'forms heavy right']);
+  this.executeCharTest('╻', ['box drawings heavy down', 'box drawings heavy down', 'forms heavy down']);
+  this.executeCharTest('╼', ['box drawings light left and heavy right', 'box drawings light left and heavy right', 'forms light left and heavy right']);
+  this.executeCharTest('╽', ['box drawings light up and heavy down', 'box drawings light up and heavy down', 'forms light up and heavy down']);
+  this.executeCharTest('╾', ['box drawings heavy left and light right', 'box drawings heavy left and light right', 'forms heavy left and light right']);
+  this.executeCharTest('╿', ['box drawings heavy up and light down', 'box drawings heavy up and light down', 'forms heavy up and light down']);
+  this.executeCharTest('▀', ['upper half block', 'upper half block', 'upper half block']);
+  this.executeCharTest('▁', ['lower one eighth block', 'lower one eighth block', 'lower one eighth block']);
+  this.executeCharTest('▂', ['lower one quarter block', 'lower one quarter block', 'lower one quarter block']);
+  this.executeCharTest('▃', ['lower three eighths block', 'lower three eighths block', 'lower three eighths block']);
+  this.executeCharTest('▄', ['lower half block', 'lower half block', 'lower half block']);
+  this.executeCharTest('▅', ['lower five eighths block', 'lower five eighths block', 'lower five eighths block']);
+  this.executeCharTest('▆', ['lower three quarters block', 'lower three quarters block', 'lower three quarter block']);
+  this.executeCharTest('▇', ['lower seven eighths block', 'lower seven eighths block', 'lower seven eighths block']);
+  this.executeCharTest('█', ['full block', 'full block', 'full block']);
+  this.executeCharTest('▉', ['left seven eighths block', 'left seven eighths block', 'left seven eighths block']);
+  this.executeCharTest('▊', ['left three quarters block', 'left three quarters block', 'left three quarter block']);
+  this.executeCharTest('▋', ['left five eighths block', 'left five eighths block', 'left five eighths block']);
+  this.executeCharTest('▌', ['left half block', 'left half block', 'left half block']);
+  this.executeCharTest('▍', ['left three eighths block', 'left three eighths block', 'left three eighths block']);
+  this.executeCharTest('▎', ['left one quarter block', 'left one quarter block', 'left one quarter block']);
+  this.executeCharTest('▏', ['left one eighth block', 'left one eighth block', 'left one eighth block']);
+  this.executeCharTest('▐', ['right half block', 'right half block', 'right half block']);
+  this.executeCharTest('░', ['light shade', 'light shade', 'light shade']);
+  this.executeCharTest('▒', ['medium shade', 'medium shade', 'medium shade']);
+  this.executeCharTest('▓', ['dark shade', 'dark shade', 'dark shade']);
+  this.executeCharTest('▔', ['upper one eighth block', 'upper one eighth block', 'upper one eighth block']);
+  this.executeCharTest('▕', ['right one eighth block', 'right one eighth block', 'right one eighth block']);
+  this.executeCharTest('▖', ['quadrant lower left', 'quadrant lower left', 'quadrant lower left']);
+  this.executeCharTest('▗', ['quadrant lower right', 'quadrant lower right', 'quadrant lower right']);
+  this.executeCharTest('▘', ['quadrant upper left', 'quadrant upper left', 'quadrant upper left']);
+  this.executeCharTest('▙', ['quadrant upper left and lower left and lower right', 'quadrant upper left and lower left and lower right', 'quadrant upper left and lower left and lower right']);
+  this.executeCharTest('▚', ['quadrant upper left and lower right', 'quadrant upper left and lower right', 'quadrant upper left and lower right']);
+  this.executeCharTest('▛', ['quadrant upper left and upper right and lower left', 'quadrant upper left and upper right and lower left', 'quadrant upper left and upper right and lower left']);
+  this.executeCharTest('▜', ['quadrant upper left and upper right and lower right', 'quadrant upper left and upper right and lower right', 'quadrant upper left and upper right and lower right']);
+  this.executeCharTest('▝', ['quadrant upper right', 'quadrant upper right', 'quadrant upper right']);
+  this.executeCharTest('▞', ['quadrant upper right and lower left', 'quadrant upper right and lower left', 'quadrant upper right and lower left']);
+  this.executeCharTest('▟', ['quadrant upper right and lower left and lower right', 'quadrant upper right and lower left and lower right', 'quadrant upper right and lower left and lower right']);
+  this.executeCharTest('■', ['black square', 'black square', 'black square']);
+  this.executeCharTest('□', ['white square', 'white square', 'white square']);
+  this.executeCharTest('▢', ['white square with rounded corners', 'white square with rounded corners', 'white square with rounded corners']);
+  this.executeCharTest('▣', ['white square containing black small square', 'white square containing black small square', 'white square containing black small square']);
+  this.executeCharTest('▤', ['square with horizontal fill', 'square with horizontal fill', 'square with horizontal fill']);
+  this.executeCharTest('▥', ['square with vertical fill', 'square with vertical fill', 'square with vertical fill']);
+  this.executeCharTest('▦', ['square with orthogonal crosshatch fill', 'square with orthogonal crosshatch fill', 'square with orthogonal crosshatch fill']);
+  this.executeCharTest('▧', ['square with upper left to lower right fill', 'square with upper left to lower right fill', 'square with upper left to lower right fill']);
+  this.executeCharTest('▨', ['square with upper right to lower left fill', 'square with upper right to lower left fill', 'square with upper right to lower left fill']);
+  this.executeCharTest('▩', ['square with diagonal crosshatch fill', 'square with diagonal crosshatch fill', 'square with diagonal crosshatch fill']);
+  this.executeCharTest('▪', ['black small square', 'black small square', 'black small square']);
+  this.executeCharTest('▫', ['white small square', 'white small square', 'white small square']);
+  this.executeCharTest('▬', ['black rectangle', 'black rectangle', 'black rectangle']);
+  this.executeCharTest('▭', ['white rectangle', 'white rectangle', 'white rectangle']);
+  this.executeCharTest('▮', ['black vertical rectangle', 'black vertical rectangle', 'black vertical rectangle']);
+  this.executeCharTest('▯', ['white vertical rectangle', 'white vertical rectangle', 'white vertical rectangle']);
+  this.executeCharTest('▰', ['black parallelogram', 'black parallelogram', 'black parallelogram']);
+  this.executeCharTest('▱', ['white parallelogram', 'white parallelogram', 'white parallelogram']);
+  this.executeCharTest('▲', ['black up pointing triangle', 'black up pointing triangle', 'black up pointing triangle']);
+  this.executeCharTest('△', ['white up pointing triangle', 'white up pointing triangle', 'white up pointing triangle']);
+  this.executeCharTest('▴', ['black up pointing small triangle', 'black up pointing small triangle', 'black up pointing small triangle']);
+  this.executeCharTest('▵', ['white up pointing small triangle', 'white up pointing small triangle', 'white up pointing small triangle']);
+  this.executeCharTest('▶', ['black right pointing triangle', 'black right pointing triangle', 'black right pointing triangle']);
+  this.executeCharTest('▷', ['white right pointing triangle', 'white right pointing triangle', 'white right pointing triangle']);
+  this.executeCharTest('▸', ['black right pointing small triangle', 'black right pointing small triangle', 'black right pointing small triangle']);
+  this.executeCharTest('▹', ['white right pointing small triangle', 'white right pointing small triangle', 'white right pointing small triangle']);
+  this.executeCharTest('►', ['black right pointing pointer', 'black right pointing pointer', 'black right pointing pointer']);
+  this.executeCharTest('▻', ['white right pointing pointer', 'white right pointing pointer', 'white right pointing pointer']);
+  this.executeCharTest('▼', ['black down pointing triangle', 'black down pointing triangle', 'black down pointing triangle']);
+  this.executeCharTest('▽', ['white down pointing triangle', 'white down pointing triangle', 'white down pointing triangle']);
+  this.executeCharTest('▾', ['black down pointing small triangle', 'black down pointing small triangle', 'black down pointing small triangle']);
+  this.executeCharTest('▿', ['white down pointing small triangle', 'white down pointing small triangle', 'white down pointing small triangle']);
+  this.executeCharTest('◀', ['black left pointing triangle', 'black left pointing triangle', 'black left pointing triangle']);
+  this.executeCharTest('◁', ['white left pointing triangle', 'white left pointing triangle', 'white left pointing triangle']);
+  this.executeCharTest('◂', ['black left pointing small triangle', 'black left pointing small triangle', 'black left pointing small triangle']);
+  this.executeCharTest('◃', ['white left pointing small triangle', 'white left pointing small triangle', 'white left pointing small triangle']);
+  this.executeCharTest('◄', ['black left pointing pointer', 'black left pointing pointer', 'black left pointing pointer']);
+  this.executeCharTest('◅', ['white left pointing pointer', 'white left pointing pointer', 'white left pointing pointer']);
+  this.executeCharTest('◆', ['black diamond', 'black diamond', 'black diamond']);
+  this.executeCharTest('◇', ['white diamond', 'white diamond', 'white diamond']);
+  this.executeCharTest('◈', ['white diamond containing black small diamond', 'white diamond containing black small diamond', 'white diamond containing black small diamond']);
+  this.executeCharTest('◉', ['fisheye', 'fisheye', 'fisheye']);
+  this.executeCharTest('◊', ['lozenge', 'lozenge', 'lozenge']);
+  this.executeCharTest('○', ['white circle', 'white circle', 'white circle']);
+  this.executeCharTest('◌', ['dotted circle', 'dotted circle', 'dotted circle']);
+  this.executeCharTest('◍', ['circle with vertical fill', 'circle with vertical fill', 'circle with vertical fill']);
+  this.executeCharTest('◎', ['bullseye', 'bullseye', 'bullseye']);
+  this.executeCharTest('●', ['black circle', 'black circle', 'black circle']);
+  this.executeCharTest('◐', ['circle with left half black', 'circle with left half black', 'circle with left half black']);
+  this.executeCharTest('◑', ['circle with right half black', 'circle with right half black', 'circle with right half black']);
+  this.executeCharTest('◒', ['circle with lower half black', 'circle with lower half black', 'circle with lower half black']);
+  this.executeCharTest('◓', ['circle with upper half black', 'circle with upper half black', 'circle with upper half black']);
+  this.executeCharTest('◔', ['circle with upper right quadrant black', 'circle with upper right quadrant black', 'circle with upper right quadrant black']);
+  this.executeCharTest('◕', ['circle with all but upper left quadrant black', 'circle with all but upper left quadrant black', 'circle with all but upper left quadrant black']);
+  this.executeCharTest('◖', ['left half black circle', 'left half black circle', 'left half black circle']);
+  this.executeCharTest('◗', ['right half black circle', 'right half black circle', 'right half black circle']);
+  this.executeCharTest('◘', ['inverse bullet', 'inverse bullet', 'inverse bullet']);
+  this.executeCharTest('◙', ['inverse white circle', 'inverse white circle', 'inverse white circle']);
+  this.executeCharTest('◚', ['upper half inverse white circle', 'upper half inverse white circle', 'upper half inverse white circle']);
+  this.executeCharTest('◛', ['lower half inverse white circle', 'lower half inverse white circle', 'lower half inverse white circle']);
+  this.executeCharTest('◜', ['upper left quadrant circular arc', 'upper left quadrant circular arc', 'upper left quadrant circular arc']);
+  this.executeCharTest('◝', ['upper right quadrant circular arc', 'upper right quadrant circular arc', 'upper right quadrant circular arc']);
+  this.executeCharTest('◞', ['lower right quadrant circular arc', 'lower right quadrant circular arc', 'lower right quadrant circular arc']);
+  this.executeCharTest('◟', ['lower left quadrant circular arc', 'lower left quadrant circular arc', 'lower left quadrant circular arc']);
+  this.executeCharTest('◠', ['upper half circle', 'upper half circle', 'upper half circle']);
+  this.executeCharTest('◡', ['lower half circle', 'lower half circle', 'lower half circle']);
+  this.executeCharTest('◢', ['black lower right triangle', 'black lower right triangle', 'black lower right triangle']);
+  this.executeCharTest('◣', ['black lower left triangle', 'black lower left triangle', 'black lower left triangle']);
+  this.executeCharTest('◤', ['black upper left triangle', 'black upper left triangle', 'black upper left triangle']);
+  this.executeCharTest('◥', ['black upper right triangle', 'black upper right triangle', 'black upper right triangle']);
+  this.executeCharTest('◦', ['white bullet', 'white bullet', 'white bullet']);
+  this.executeCharTest('◧', ['square with left half black', 'square with left half black', 'square with left half black']);
+  this.executeCharTest('◨', ['square with right half black', 'square with right half black', 'square with right half black']);
+  this.executeCharTest('◩', ['square with upper left diagonal half black', 'square with upper left diagonal half black', 'square with upper left diagonal half black']);
+  this.executeCharTest('◪', ['square with lower right diagonal half black', 'square with lower right diagonal half black', 'square with lower right diagonal half black']);
+  this.executeCharTest('◫', ['white square with vertical bisecting line', 'white square with vertical bisecting line', 'white square with vertical bisecting line']);
+  this.executeCharTest('◬', ['white up pointing triangle with dot', 'white up pointing triangle with dot', 'white up pointing triangle with dot']);
+  this.executeCharTest('◭', ['up pointing triangle with left half black', 'up pointing triangle with left half black', 'up pointing triangle with left half black']);
+  this.executeCharTest('◮', ['up pointing triangle with right half black', 'up pointing triangle with right half black', 'up pointing triangle with right half black']);
+  this.executeCharTest('◯', ['large circle', 'large circle', 'large circle']);
+  this.executeCharTest('◰', ['white square with upper left quadrant', 'white square with upper left quadrant', 'white square with upper left quadrant']);
+  this.executeCharTest('◱', ['white square with lower left quadrant', 'white square with lower left quadrant', 'white square with lower left quadrant']);
+  this.executeCharTest('◲', ['white square with lower right quadrant', 'white square with lower right quadrant', 'white square with lower right quadrant']);
+  this.executeCharTest('◳', ['white square with upper right quadrant', 'white square with upper right quadrant', 'white square with upper right quadrant']);
+  this.executeCharTest('◴', ['white circle with upper left quadrant', 'white circle with upper left quadrant', 'white circle with upper left quadrant']);
+  this.executeCharTest('◵', ['white circle with lower left quadrant', 'white circle with lower left quadrant', 'white circle with lower left quadrant']);
+  this.executeCharTest('◶', ['white circle with lower right quadrant', 'white circle with lower right quadrant', 'white circle with lower right quadrant']);
+  this.executeCharTest('◷', ['white circle with upper right quadrant', 'white circle with upper right quadrant', 'white circle with upper right quadrant']);
+  this.executeCharTest('◸', ['upper left triangle', 'upper left triangle', 'upper left triangle']);
+  this.executeCharTest('◹', ['upper right triangle', 'upper right triangle', 'upper right triangle']);
+  this.executeCharTest('◺', ['lower left triangle', 'lower left triangle', 'lower left triangle']);
+  this.executeCharTest('◻', ['white medium square', 'white medium square', 'white medium square']);
+  this.executeCharTest('◼', ['black medium square', 'black medium square', 'black medium square']);
+  this.executeCharTest('◽', ['white medium small square', 'white medium small square', 'white medium small square']);
+  this.executeCharTest('◾', ['black medium small square', 'black medium small square', 'black medium small square']);
+  this.executeCharTest('◿', ['lower right triangle', 'lower right triangle', 'lower right triangle']);
+  this.executeCharTest('⬒', ['square with top half black', 'square with top half black', 'square with top half black']);
+  this.executeCharTest('⬓', ['square with bottom half black', 'square with bottom half black', 'square with bottom half black']);
+  this.executeCharTest('⬔', ['square with upper right diagonal half black', 'square with upper right diagonal half black', 'square with upper right diagonal half black']);
+  this.executeCharTest('⬕', ['square with lower left diagonal half black', 'square with lower left diagonal half black', 'square with lower left diagonal half black']);
+  this.executeCharTest('⬖', ['diamond with left half black', 'diamond with left half black', 'diamond with left half black']);
+  this.executeCharTest('⬗', ['diamond with right half black', 'diamond with right half black', 'diamond with right half black']);
+  this.executeCharTest('⬘', ['diamond with top half black', 'diamond with top half black', 'diamond with top half black']);
+  this.executeCharTest('⬙', ['diamond with bottom half black', 'diamond with bottom half black', 'diamond with bottom half black']);
+  this.executeCharTest('⬚', ['dotted square', 'dotted square', 'dotted square']);
+  this.executeCharTest('⬛', ['black large square', 'black large square', 'black large square']);
+  this.executeCharTest('⬜', ['white large square', 'white large square', 'white large square']);
+  this.executeCharTest('⬝', ['black very small square', 'black very small square', 'black very small square']);
+  this.executeCharTest('⬞', ['white very small square', 'white very small square', 'white very small square']);
+  this.executeCharTest('⬟', ['black pentagon', 'black pentagon', 'black pentagon']);
+  this.executeCharTest('⬠', ['white pentagon', 'white pentagon', 'white pentagon']);
+  this.executeCharTest('⬡', ['white hexagon', 'white hexagon', 'white hexagon']);
+  this.executeCharTest('⬢', ['black hexagon', 'black hexagon', 'black hexagon']);
+  this.executeCharTest('⬣', ['horizontal black hexagon', 'horizontal black hexagon', 'horizontal black hexagon']);
+  this.executeCharTest('⬤', ['black large circle', 'black large circle', 'black large circle']);
+  this.executeCharTest('⬥', ['black medium diamond', 'black medium diamond', 'black medium diamond']);
+  this.executeCharTest('⬦', ['white medium diamond', 'white medium diamond', 'white medium diamond']);
+  this.executeCharTest('⬧', ['black medium lozenge', 'black medium lozenge', 'black medium lozenge']);
+  this.executeCharTest('⬨', ['white medium lozenge', 'white medium lozenge', 'white medium lozenge']);
+  this.executeCharTest('⬩', ['black small diamond', 'black small diamond', 'black small diamond']);
+  this.executeCharTest('⬪', ['black small lozenge', 'black small lozenge', 'black small lozenge']);
+  this.executeCharTest('⬫', ['white small lozenge', 'white small lozenge', 'white small lozenge']);
+  this.executeCharTest('⬬', ['black horizontal ellipse', 'black horizontal ellipse', 'black horizontal ellipse']);
+  this.executeCharTest('⬭', ['white horizontal ellipse', 'white horizontal ellipse', 'white horizontal ellipse']);
+  this.executeCharTest('⬮', ['black vertical ellipse', 'black vertical ellipse', 'black vertical ellipse']);
+  this.executeCharTest('⬯', ['white vertical ellipse', 'white vertical ellipse', 'white vertical ellipse']);
+  this.executeCharTest('⭐', ['white medium star', 'white medium star', 'white medium star']);
+  this.executeCharTest('⭑', ['black small star', 'black small star', 'black small star']);
+  this.executeCharTest('⭒', ['white small star', 'white small star', 'white small star']);
+  this.executeCharTest('⭓', ['black right pointing pentagon', 'black right pointing pentagon', 'black right pointing pentagon']);
+  this.executeCharTest('⭔', ['white right pointing pentagon', 'white right pointing pentagon', 'white right pointing pentagon']);
+  this.executeCharTest('⭕', ['heavy large circle', 'heavy large circle', 'heavy large circle']);
+  this.executeCharTest('⭖', ['heavy oval with oval inside', 'heavy oval with oval inside', 'heavy oval with oval inside']);
+  this.executeCharTest('⭗', ['heavy circle with circle inside', 'heavy circle with circle inside', 'heavy circle with circle inside']);
+  this.executeCharTest('⭘', ['heavy circle', 'heavy circle', 'heavy circle']);
+  this.executeCharTest('⭙', ['heavy circled saltire', 'heavy circled saltire', 'heavy circled saltire']);
+  this.executeCharTest('↼', ['leftwards harpoon with barb upwards', 'left harpoon with barb up', 'left harpoon with barb up']);
+  this.executeCharTest('↽', ['leftwards harpoon with barb downwards', 'left harpoon with barb down', 'left harpoon with barb down']);
+  this.executeCharTest('↾', ['upwards harpoon with barb rightwards', 'up harpoon with barb right', 'up harpoon with barb right']);
+  this.executeCharTest('↿', ['upwards harpoon with barb leftwards', 'up harpoon with barb left', 'up harpoon with barb left']);
+  this.executeCharTest('⇀', ['rightwards harpoon with barb upwards', 'right harpoon with barb up', 'right harpoon with barb up']);
+  this.executeCharTest('⇁', ['rightwards harpoon with barb downwards', 'right harpoon with barb down', 'right harpoon with barb down']);
+  this.executeCharTest('⇂', ['downwards harpoon with barb rightwards', 'down harpoon with barb right', 'down harpoon with barb right']);
+  this.executeCharTest('⇃', ['downwards harpoon with barb leftwards', 'down harpoon with barb left', 'down harpoon with barb left']);
+  this.executeCharTest('⇋', ['leftwards harpoon over rightwards harpoon', 'left harpoon over right harpoon', 'left harpoon over right harpoon']);
+  this.executeCharTest('⇌', ['rightwards harpoon over leftwards harpoon', 'right harpoon over left harpoon', 'right harpoon over left harpoon']);
+  this.executeCharTest('⥊', ['left barb up right barb down harpoon', 'left barb up right barb down harpoon', 'left barb up right barb down harpoon']);
+  this.executeCharTest('⥋', ['left barb down right barb up harpoon', 'left barb down right barb up harpoon', 'left barb down right barb up harpoon']);
+  this.executeCharTest('⥌', ['up barb right down barb left harpoon', 'up barb right down barb left harpoon', 'up barb right down barb left harpoon']);
+  this.executeCharTest('⥍', ['up barb left down barb right harpoon', 'up barb left down barb right harpoon', 'up barb left down barb right harpoon']);
+  this.executeCharTest('⥎', ['left barb up right barb up harpoon', 'left barb up right barb up harpoon', 'left barb up right barb up harpoon']);
+  this.executeCharTest('⥏', ['up barb right down barb right harpoon', 'up barb right down barb right harpoon', 'up barb right down barb right harpoon']);
+  this.executeCharTest('⥐', ['left barb down right barb down harpoon', 'left barb down right barb down harpoon', 'left barb down right barb down harpoon']);
+  this.executeCharTest('⥑', ['up barb left down barb left harpoon', 'up barb left down barb left harpoon', 'up barb left down barb left harpoon']);
+  this.executeCharTest('⥒', ['leftwards harpoon with barb up to bar', 'left harpoon with barb up to bar', 'left harpoon with barb up to bar']);
+  this.executeCharTest('⥓', ['rightwards harpoon with barb up to bar', 'right harpoon with barb up to bar', 'right harpoon with barb up to bar']);
+  this.executeCharTest('⥔', ['upwards harpoon with barb right to bar', 'up harpoon with barb right to bar', 'up harpoon with barb right to bar']);
+  this.executeCharTest('⥕', ['downwards harpoon with barb right to bar', 'down harpoon with barb right to bar', 'down harpoon with barb right to bar']);
+  this.executeCharTest('⥖', ['leftwards harpoon with barb down to bar', 'left harpoon with barb down to bar', 'left harpoon with barb down to bar']);
+  this.executeCharTest('⥗', ['rightwards harpoon with barb down to bar', 'right harpoon with barb down to bar', 'right harpoon with barb down to bar']);
+  this.executeCharTest('⥘', ['upwards harpoon with barb left to bar', 'up harpoon with barb left to bar', 'up harpoon with barb left to bar']);
+  this.executeCharTest('⥙', ['downwards harpoon with barb left to bar', 'down harpoon with barb left to bar', 'down harpoon with barb left to bar']);
+  this.executeCharTest('⥚', ['leftwards harpoon with barb up from bar', 'left harpoon with barb up from bar', 'left harpoon with barb up from bar']);
+  this.executeCharTest('⥛', ['rightwards harpoon with barb up from bar', 'right harpoon with barb up from bar', 'right harpoon with barb up from bar']);
+  this.executeCharTest('⥜', ['upwards harpoon with barb right from bar', 'up harpoon with barb right from bar', 'up harpoon with barb right from bar']);
+  this.executeCharTest('⥝', ['downwards harpoon with barb right from bar', 'down harpoon with barb right from bar', 'down harpoon with barb right from bar']);
+  this.executeCharTest('⥞', ['leftwards harpoon with barb down from bar', 'left harpoon with barb down from bar', 'left harpoon with barb down from bar']);
+  this.executeCharTest('⥟', ['rightwards harpoon with barb down from bar', 'right harpoon with barb down from bar', 'right harpoon with barb down from bar']);
+  this.executeCharTest('⥠', ['upwards harpoon with barb left from bar', 'up harpoon with barb left from bar', 'up harpoon with barb left from bar']);
+  this.executeCharTest('⥡', ['downwards harpoon with barb left from bar', 'down harpoon with barb left from bar', 'down harpoon with barb left from bar']);
+  this.executeCharTest('⥢', ['leftwards harpoon with barb up above leftwards harpoon with barb down', 'left harpoon with barb up above left harpoon with barb down', 'left harpoon with barb up above left harpoon with barb down']);
+  this.executeCharTest('⥣', ['upwards harpoon with barb left beside upwards harpoon with barb right', 'up harpoon with barb left beside up harpoon with barb right', 'up harpoon with barb left beside up harpoon with barb right']);
+  this.executeCharTest('⥤', ['rightwards harpoon with barb up above rightwards harpoon with barb down', 'right harpoon with barb up above right harpoon with barb down', 'right harpoon with barb up above right harpoon with barb down']);
+  this.executeCharTest('⥥', ['downwards harpoon with barb left beside downwards harpoon with barb right', 'down harpoon with barb left beside down harpoon with barb right', 'down harpoon with barb left beside down harpoon with barb right']);
+  this.executeCharTest('⥦', ['leftwards harpoon with barb up above rightwards harpoon with barb up', 'left harpoon with barb up above right harpoon with barb up', 'left harpoon with barb up above right harpoon with barb up']);
+  this.executeCharTest('⥧', ['leftwards harpoon with barb down above rightwards harpoon with barb down', 'left harpoon with barb down above right harpoon with barb down', 'left harpoon with barb down above right harpoon with barb down']);
+  this.executeCharTest('⥨', ['rightwards harpoon with barb up above leftwards harpoon with barb up', 'right harpoon with barb up above left harpoon with barb up', 'right harpoon with barb up above left harpoon with barb up']);
+  this.executeCharTest('⥩', ['rightwards harpoon with barb down above leftwards harpoon with barb down', 'right harpoon with barb down above left harpoon with barb down', 'right harpoon with barb down above left harpoon with barb down']);
+  this.executeCharTest('⥪', ['leftwards harpoon with barb up above long dash', 'left harpoon with barb up above long dash', 'left harpoon with barb up above long dash']);
+  this.executeCharTest('⥫', ['leftwards harpoon with barb down below long dash', 'left harpoon with barb down below long dash', 'left harpoon with barb down below long dash']);
+  this.executeCharTest('⥬', ['rightwards harpoon with barb up above long dash', 'right harpoon with barb up above long dash', 'right harpoon with barb up above long dash']);
+  this.executeCharTest('⥭', ['rightwards harpoon with barb down below long dash', 'right harpoon with barb down below long dash', 'right harpoon with barb down below long dash']);
+  this.executeCharTest('⥮', ['upwards harpoon with barb left beside downwards harpoon with barb right', 'up harpoon with barb left beside down harpoon with barb right', 'up harpoon with barb left beside down harpoon with barb right']);
+  this.executeCharTest('⥯', ['downwards harpoon with barb left beside upwards harpoon with barb right', 'down harpoon with barb left beside up harpoon with barb right', 'down harpoon with barb left beside up harpoon with barb right']);
+  this.executeCharTest('⥼', ['left fish tail', 'left fish tail', 'left fish tail']);
+  this.executeCharTest('⥽', ['right fish tail', 'right fish tail', 'right fish tail']);
+  this.executeCharTest('⥾', ['up fish tail', 'up fish tail', 'up fish tail']);
+  this.executeCharTest('⥿', ['down fish tail', 'down fish tail', 'down fish tail']);
+  this.executeCharTest('ℏ', ['mathematical italic small h over two time greek letter pi', 'italic h over two pi', 'italic small h over two pi']);
+  this.executeCharTest('℔', ['l b bar symbol', 'l b bar', 'l b bar']);
+  this.executeCharTest('№', ['numero sign', 'numero', 'numero']);
+  this.executeCharTest('℗', ['sound recording copyright', 'sound recording copyright', 'sound recording copyright']);
+  this.executeCharTest('℞', ['prescription take', 'prescription take', 'prescription take']);
+  this.executeCharTest('℟', ['response', 'response', 'response']);
+  this.executeCharTest('℠', ['service mark', 'service mark', 'service mark']);
+  this.executeCharTest('℡', ['telephone sign', 'telephone sign', 't e l symbol']);
+  this.executeCharTest('™', ['trade mark sign', 'trade mark', 'trademark']);
+  this.executeCharTest('℣', ['versicle', 'versicle', 'versicle']);
+  this.executeCharTest('℥', ['ounce sign', 'ounce', 'ounce']);
+  this.executeCharTest('Ω', ['ohm sign', 'ohm', 'ohm']);
+  this.executeCharTest('℧', ['inverted ohm sign', 'inverted ohm', 'mho']);
+  this.executeCharTest('K', ['kelvin sign', 'kelvin', 'degrees kelvin']);
+  this.executeCharTest('Å', ['angstrom sign', 'angstrom', 'angstrom unit']);
+  this.executeCharTest('℮', ['estimated symbol', 'estimated', 'estimated']);
+  this.executeCharTest('Ⅎ', ['turned capital f', 'turned cap f', 'turned f']);
+  this.executeCharTest('ℹ', ['information source', 'information source', 'information source']);
+  this.executeCharTest('℺', ['rotated capital q', 'rotated cap q', 'rotated cap q']);
+  this.executeCharTest('℻', ['facsimile sign', 'facsimile sign', 'facsimile sign']);
+  this.executeCharTest('⅁', ['turned sans serif capital g', 'turned sans serif cap g', 'turned sans serif cap g']);
+  this.executeCharTest('⅂', ['turned sans serif capital l', 'turned sans serif cap l', 'turned sans serif cap l']);
+  this.executeCharTest('⅃', ['reversed sans serif capital l', 'reversed sans serif cap l', 'reversed sans serif cap l']);
+  this.executeCharTest('⅄', ['turned sans serif capital y', 'turned sans serif cap y', 'turned sans serif cap y']);
+  this.executeCharTest('!', ['factorial operator', 'factorial', 'exclamation mark']);
+  this.executeCharTest('\'', ['quotation mark', 'quotation mark', 'quotation mark']);
+  this.executeCharTest('#', ['number sign', 'number', 'hash']);
+  this.executeCharTest('$', ['dollar sign', 'dollar', 'dollar']);
+  this.executeCharTest('%', ['percent sign', 'percent', 'percent']);
+  this.executeCharTest('&', ['ampersand', 'ampersand', 'ampersand']);
+  this.executeCharTest('\'', ['apostrophe', 'apostrophe', 'apostrophe quote']);
+  this.executeCharTest('*', ['asterisk', 'asterisk', 'asterisk']);
+  this.executeCharTest('+', ['plus sign', 'plus', 'plus']);
+  this.executeCharTest(',', ['comma', 'comma', 'comma']);
+  this.executeCharTest('-', ['hyphen minus', 'minus', 'minus']);
+  this.executeCharTest('.', ['full stop', 'full stop', 'period']);
+  this.executeCharTest('/', ['solidus', 'solidus', 'slash']);
+  this.executeCharTest(':', ['', '', '']);
+  this.executeCharTest(';', ['semicolon', 'semicolon', 'semicolon']);
+  this.executeCharTest('<', ['less than sign', 'less than', 'less than']);
+  this.executeCharTest('=', ['equals sign', 'equals', 'equals']);
+  this.executeCharTest('>', ['greater than sign', 'greater than', 'greater than']);
+  this.executeCharTest('?', ['question mark', 'question mark', 'question mark']);
+  this.executeCharTest('@', ['commercial at', 'at', 'at']);
+  this.executeCharTest('\\', ['reverse solidus', 'reverse solidus', 'backslash']);
+  this.executeCharTest('^', ['circumflex accent', 'hat', 'spacing circumflex']);
+  this.executeCharTest('_', ['low line', 'low line', 'spacing underscore']);
+  this.executeCharTest('`', ['grave accent', 'grave', 'spacing grave']);
+  this.executeCharTest('|', ['vertical line', 'vertical line', 'vertical bar']);
+  this.executeCharTest('~', ['tilde', 'tilde', 'tilde']);
+  this.executeCharTest('¡', ['inverted exclamation mark', 'inverted exclamation mark', 'inverted exclamation mark']);
+  this.executeCharTest('¢', ['cent sign', 'cent', 'cent']);
+  this.executeCharTest('£', ['pound sign', 'pound', 'pound']);
+  this.executeCharTest('¤', ['currency sign', 'currency', 'currency']);
+  this.executeCharTest('¥', ['yen sign', 'yen', 'yen']);
+  this.executeCharTest('¦', ['broken bar', 'broken bar', 'broken vertical bar']);
+  this.executeCharTest('§', ['section sign', 'section', 'section']);
+  this.executeCharTest('¨', ['diaeresis', 'double dot', 'spacing diaeresis']);
+  this.executeCharTest('©', ['copyright sign', 'copyright', 'copyright']);
+  this.executeCharTest('ª', ['feminine ordinal indicator', 'feminine ordinal indicator', 'feminine ordinal indicator']);
+  this.executeCharTest('«', ['left pointing double angle quotation mark', 'left pointing double angle quotation mark', 'left pointing guillemet']);
+  this.executeCharTest('¬', ['not sign', 'not', 'not']);
+  this.executeCharTest('®', ['registered sign', 'registered', 'registered trade mark sign']);
+  this.executeCharTest('¯', ['macron', 'macron', 'spacing macron']);
+  this.executeCharTest('°', ['degree sign', 'degree', 'degree']);
+  this.executeCharTest('±', ['plus minus sign', 'plus minus', 'plus or minus sign']);
+  this.executeCharTest('´', ['acute accent', 'acute', 'spacing acute']);
+  this.executeCharTest('µ', ['micro sign', 'micro', 'micro']);
+  this.executeCharTest('¶', ['pilcrow sign', 'pilcrow', 'paragraph sign']);
+  this.executeCharTest('·', ['middle dot', 'middle dot', 'middle dot']);
+  this.executeCharTest('¸', ['cedilla', 'cedilla', 'spacing cedilla']);
+  this.executeCharTest('º', ['masculine ordinal indicator', 'masculine ordinal indicator', 'masculine ordinal indicator']);
+  this.executeCharTest('»', ['right pointing double angle quotation mark', 'right pointing double angle quotation mark', 'right pointing guillemet']);
+  this.executeCharTest('¿', ['inverted question mark', 'inverted question mark', 'inverted question mark']);
+  this.executeCharTest('×', ['multiplication sign', 'multiplication', 'multiplication']);
+  this.executeCharTest('÷', ['division sign', 'division', 'division']);
+  this.executeCharTest('˘', ['breve', 'breve', 'spacing breve']);
+  this.executeCharTest('˙', ['dot above', 'dot above', 'spacing dot above']);
+  this.executeCharTest('˚', ['ring above', 'ring above', 'spacing ring above']);
+  this.executeCharTest('˛', ['ogonek', 'ogonek', 'spacing ogonek']);
+  this.executeCharTest('˜', ['small tilde', 'small tilde', 'spacing tilde']);
+  this.executeCharTest('˝', ['double acute accent', 'double acute accent', 'spacing double acute']);
+  this.executeCharTest('‐', ['hyphen', 'hyphen', 'hyphen']);
+  this.executeCharTest('‑', ['non breaking hyphen', 'non breaking hyphen', 'non breaking hyphen']);
+  this.executeCharTest('‒', ['figure dash', 'figure dash', 'figure dash']);
+  this.executeCharTest('–', ['en dash', 'en dash', 'en dash']);
+  this.executeCharTest('—', ['em dash', 'em dash', 'em dash']);
+  this.executeCharTest('―', ['horizontal bar', 'horizontal bar', 'quotation dash']);
+  this.executeCharTest('‖', ['double vertical line', 'double vertical line', 'double vertical bar']);
+  this.executeCharTest('‗', ['double low line', 'double low line', 'spacing double underscore']);
+  this.executeCharTest('‘', ['left single quotation mark', 'left single quotation mark', 'single turned comma quotation mark']);
+  this.executeCharTest('’', ['right single quotation mark', 'right single quotation mark', 'single comma quotation mark']);
+  this.executeCharTest('‚', ['single low 9 quotation mark', 'single low 9 quotation mark', 'low single comma quotation mark']);
+  this.executeCharTest('‛', ['single high reversed 9 quotation mark', 'single high reversed 9 quotation mark', 'single reversed comma quotation mark']);
+  this.executeCharTest('“', ['left double quotation mark', 'left double quotation mark', 'double turned comma quotation mark']);
+  this.executeCharTest('”', ['right double quotation mark', 'right double quotation mark', 'double comma quotation mark']);
+  this.executeCharTest('„', ['double low 9 quotation mark', 'double low 9 quotation mark', 'low double comma quotation mark']);
+  this.executeCharTest('‟', ['double high reversed 9 quotation mark', 'double high reversed 9 quotation mark', 'double reversed comma quotation mark']);
+  this.executeCharTest('†', ['dagger', 'dagger', 'dagger']);
+  this.executeCharTest('‡', ['double dagger', 'double dagger', 'double dagger']);
+  this.executeCharTest('•', ['bullet', 'bullet', 'bullet']);
+  this.executeCharTest('‣', ['triangular bullet', 'triangular bullet', 'triangular bullet']);
+  this.executeCharTest('․', ['one dot leader', 'one dot leader', 'one dot leader']);
+  this.executeCharTest('‥', ['two dot leader', 'two dot leader', 'two dot leader']);
+  this.executeCharTest('…', ['horizontal ellipsis', 'horizontal ellipsis', 'horizontal ellipsis']);
+  this.executeCharTest('‧', ['hyphenation point', 'hyphenation point', 'hyphenation point']);
+  this.executeCharTest('‰', ['per mille sign', 'per mille', 'per mille']);
+  this.executeCharTest('‱', ['per ten thousand sign', 'per ten thousand', 'per ten thousand']);
+  this.executeCharTest('′', ['prime', 'prime', 'prime']);
+  this.executeCharTest('″', ['double prime', 'double prime', 'double prime']);
+  this.executeCharTest('‴', ['triple prime', 'triple prime', 'triple prime']);
+  this.executeCharTest('‵', ['reversed prime', 'reversed prime', 'reversed prime']);
+  this.executeCharTest('‶', ['reversed double prime', 'reversed double prime', 'reversed double prime']);
+  this.executeCharTest('‷', ['reversed triple prime', 'reversed triple prime', 'reversed triple prime']);
+  this.executeCharTest('‸', ['caret', 'caret', 'caret']);
+  this.executeCharTest('‹', ['single left pointing angle quotation mark', 'single left pointing angle quotation mark', 'left pointing single guillemet']);
+  this.executeCharTest('›', ['single right pointing angle quotation mark', 'single right pointing angle quotation mark', 'right pointing single guillemet']);
+  this.executeCharTest('※', ['reference mark', 'reference mark', 'reference mark']);
+  this.executeCharTest('‼', ['double exclamation mark', 'double exclamation mark', 'double exclamation mark']);
+  this.executeCharTest('‽', ['interrobang', 'interrobang', 'interrobang']);
+  this.executeCharTest('‾', ['overline', 'overline', 'spacing overscore']);
+  this.executeCharTest('‿', ['undertie', 'undertie', 'undertie']);
+  this.executeCharTest('⁀', ['character tie', 'character tie', 'character tie']);
+  this.executeCharTest('⁁', ['caret insertion point', 'caret insertion point', 'caret insertion point']);
+  this.executeCharTest('⁂', ['asterism', 'asterism', 'asterism']);
+  this.executeCharTest('⁃', ['hyphen bullet', 'hyphen bullet', 'hyphen bullet']);
+  this.executeCharTest('⁄', ['fraction slash', 'fraction slash', 'fraction slash']);
+  this.executeCharTest('⁇', ['double question mark', 'double question mark', 'double question mark']);
+  this.executeCharTest('⁈', ['question exclamation mark', 'question exclamation mark', 'question exclamation mark']);
+  this.executeCharTest('⁉', ['exclamation question mark', 'exclamation question mark', 'exclamation question mark']);
+  this.executeCharTest('⁋', ['reversed pilcrow sign', 'reversed pilcrow', 'reversed pilcrow']);
+  this.executeCharTest('⁌', ['black leftwards bullet', 'black leftwards bullet', 'black leftwards bullet']);
+  this.executeCharTest('⁍', ['black rightwards bullet', 'black rightwards bullet', 'black rightwards bullet']);
+  this.executeCharTest('⁎', ['low asterisk', 'low asterisk', 'low asterisk']);
+  this.executeCharTest('⁏', ['reversed semicolon', 'reversed semicolon', 'reversed semicolon']);
+  this.executeCharTest('⁐', ['close up', 'close up', 'close up']);
+  this.executeCharTest('⁑', ['two asterisks aligned vertically', 'two asterisks aligned vertically', 'two asterisks aligned vertically']);
+  this.executeCharTest('⁒', ['commercial minus sign', 'commercial minus', 'commercial minus']);
+  this.executeCharTest('⁓', ['swung dash', 'swung dash', 'swung dash']);
+  this.executeCharTest('⁔', ['inverted undertie', 'inverted undertie', 'inverted undertie']);
+  this.executeCharTest('⁕', ['flower punctuation mark', 'flower punctuation mark', 'flower punctuation mark']);
+  this.executeCharTest('⁖', ['three dot punctuation', 'three dot punctuation', 'three dot punctuation']);
+  this.executeCharTest('⁗', ['quadruple prime', 'quadruple prime', 'quadruple prime']);
+  this.executeCharTest('⁘', ['four dot punctuation', 'four dot punctuation', 'four dot punctuation']);
+  this.executeCharTest('⁙', ['five dot punctuation', 'five dot punctuation', 'five dot punctuation']);
+  this.executeCharTest('⁚', ['two dot punctuation', 'two dot punctuation', 'two dot punctuation']);
+  this.executeCharTest('⁛', ['four dot mark', 'four dot mark', 'four dot mark']);
+  this.executeCharTest('⁜', ['dotted cross', 'dotted cross', 'dotted cross']);
+  this.executeCharTest('⁝', ['tricolon', 'tricolon', 'tricolon']);
+  this.executeCharTest('⁞', ['vertical four dots', 'vertical four dots', 'vertical four dots']);
+  this.executeCharTest('⁺', ['superscript plus sign', 'superscript plus', 'superscript plus']);
+  this.executeCharTest('⁻', ['superscript minus', 'superscript minus', 'superscript hyphen minus']);
+  this.executeCharTest('⁼', ['superscript equals sign', 'superscript equals', 'superscript equals']);
+  this.executeCharTest('⁽', ['superscript left parenthesis', 'superscript left parenthesis', 'superscript opening parenthesis']);
+  this.executeCharTest('⁾', ['superscript right parenthesis', 'superscript right parenthesis', 'superscript closing parenthesis']);
+  this.executeCharTest('₊', ['subscript plus sign', 'subscript plus', 'subscript plus']);
+  this.executeCharTest('₋', ['subscript minus', 'subscript minus', 'subscript hyphen minus']);
+  this.executeCharTest('₌', ['subscript equals sign', 'subscript equals', 'subscript equals']);
+  this.executeCharTest('₍', ['subscript left parenthesis', 'subscript left parenthesis', 'subscript opening parenthesis']);
+  this.executeCharTest('₎', ['subscript right parenthesis', 'subscript right parenthesis', 'subscript closing parenthesis']);
+  this.executeCharTest('⅊', ['property line', 'property line', 'property line']);
+  this.executeCharTest('⅋', ['turned ampersand', 'turned ampersand', 'turned ampersand']);
+  this.executeCharTest('⅌', ['per sign', 'per', 'per']);
+  this.executeCharTest('⅍', ['aktieselskab', 'aktieselskab', 'aktieselskab']);
+  this.executeCharTest('ⅎ', ['turned small f', 'turned small f', 'turned small f']);
+  this.executeCharTest('∀', ['for all', 'for all', 'for all']);
+  this.executeCharTest('∁', ['complement', 'complement', 'complement']);
+  this.executeCharTest('∂', ['partial differential', 'partial differential', 'partial differential']);
+  this.executeCharTest('∃', ['there exists', 'there exists', 'there exists']);
+  this.executeCharTest('∄', ['there does not exist', 'there does not exist', 'there does not exist']);
+  this.executeCharTest('∅', ['empty set', 'empty set', 'empty set']);
+  this.executeCharTest('∆', ['increment', 'increment', 'increment']);
+  this.executeCharTest('∇', ['nabla', 'nabla', 'nabla']);
+  this.executeCharTest('∈', ['element of', 'element of', 'element of']);
+  this.executeCharTest('∉', ['not an element of', 'not an element of', 'not an element of']);
+  this.executeCharTest('∊', ['small element of', 'small element of', 'small element of']);
+  this.executeCharTest('∋', ['contains as member', 'contains as member', 'contains as member']);
+  this.executeCharTest('∌', ['does not contain as member', 'does not contain as member', 'does not contain as member']);
+  this.executeCharTest('∍', ['small contains as member', 'small contains as member', 'small contains as member']);
+  this.executeCharTest('∎', ['end of proof', 'end of proof', 'end of proof']);
+  this.executeCharTest('∏', ['n ary product', 'n ary product', 'n ary product']);
+  this.executeCharTest('∐', ['n ary coproduct', 'n ary coproduct', 'n ary coproduct']);
+  this.executeCharTest('∑', ['n ary summation', 'n ary summation', 'n ary summation']);
+  this.executeCharTest('−', ['minus sign', 'minus', 'minus']);
+  this.executeCharTest('∓', ['minus or plus sign', 'minus or plus', 'minus or plus']);
+  this.executeCharTest('∔', ['dot plus', 'dot plus', 'dot plus']);
+  this.executeCharTest('∕', ['division slash', 'division slash', 'division slash']);
+  this.executeCharTest('∖', ['set minus', 'set minus', 'set minus']);
+  this.executeCharTest('∗', ['asterisk operator', 'asterisk operator', 'asterisk operator']);
+  this.executeCharTest('∘', ['ring operator', 'ring operator', 'ring operator']);
+  this.executeCharTest('∙', ['bullet operator', 'bullet operator', 'bullet operator']);
+  this.executeCharTest('√', ['square root', 'square root', 'square root']);
+  this.executeCharTest('∛', ['cube root', 'cube root', 'cube root']);
+  this.executeCharTest('∜', ['fourth root', 'fourth root', 'fourth root']);
+  this.executeCharTest('∝', ['proportional to', 'proportional to', 'proportional to']);
+  this.executeCharTest('∞', ['infinity', 'infinity', 'infinity']);
+  this.executeCharTest('∟', ['right angle', 'right angle', 'right angle']);
+  this.executeCharTest('∠', ['angle', 'angle', 'angle']);
+  this.executeCharTest('∡', ['measured angle', 'measured angle', 'measured angle']);
+  this.executeCharTest('∢', ['spherical angle', 'spherical angle', 'spherical angle']);
+  this.executeCharTest('∣', ['divides', 'bar', 'bar']);
+  this.executeCharTest('∤', ['does not divide', 'does not divide', 'does not divide']);
+  this.executeCharTest('∥', ['parallel to', 'parallel to', 'parallel to']);
+  this.executeCharTest('∦', ['not parallel to', 'not parallel to', 'not parallel to']);
+  this.executeCharTest('∧', ['logical and', 'logical and', 'logical and']);
+  this.executeCharTest('∨', ['logical or', 'logical or', 'logical or']);
+  this.executeCharTest('∩', ['intersection', 'intersection', 'intersection']);
+  this.executeCharTest('∪', ['union', 'union', 'union']);
+  this.executeCharTest('∫', ['integral', 'integral', 'integral']);
+  this.executeCharTest('∬', ['double integral', 'double integral', 'double integral']);
+  this.executeCharTest('∭', ['triple integral', 'triple integral', 'triple integral']);
+  this.executeCharTest('∮', ['contour integral', 'contour integral', 'contour integral']);
+  this.executeCharTest('∯', ['surface integral', 'surface integral', 'surface integral']);
+  this.executeCharTest('∰', ['volume integral', 'volume integral', 'volume integral']);
+  this.executeCharTest('∱', ['clockwise integral', 'clockwise integral', 'clockwise integral']);
+  this.executeCharTest('∲', ['clockwise contour integral', 'clockwise contour integral', 'clockwise contour integral']);
+  this.executeCharTest('∳', ['anticlockwise contour integral', 'anticlockwise contour integral', 'anticlockwise contour integral']);
+  this.executeCharTest('∴', ['therefore', 'therefore', 'therefore']);
+  this.executeCharTest('∵', ['because', 'because', 'because']);
+  this.executeCharTest('∶', ['ratio', 'ratio', 'ratio']);
+  this.executeCharTest('∷', ['proportion', 'proportion', 'proportion']);
+  this.executeCharTest('∸', ['dot minus', 'dot minus', 'dot minus']);
+  this.executeCharTest('∹', ['excess', 'excess', 'excess']);
+  this.executeCharTest('∺', ['geometric proportion', 'geometric proportion', 'geometric proportion']);
+  this.executeCharTest('∻', ['homothetic', 'homothetic', 'homothetic']);
+  this.executeCharTest('∼', ['tilde operator', 'tilde operator', 'tilde operator']);
+  this.executeCharTest('∽', ['reversed tilde', 'reversed tilde', 'reversed tilde']);
+  this.executeCharTest('∾', ['inverted lazy s', 'inverted lazy s', 'inverted lazy s']);
+  this.executeCharTest('∿', ['sine wave', 'sine wave', 'sine wave']);
+  this.executeCharTest('≀', ['wreath product', 'wreath product', 'wreath product']);
+  this.executeCharTest('≁', ['not tilde', 'not tilde', 'not tilde']);
+  this.executeCharTest('≂', ['minus tilde', 'minus tilde', 'minus tilde']);
+  this.executeCharTest('≃', ['asymptotically equals', 'asymptotically equals', 'asymptotically equals']);
+  this.executeCharTest('≄', ['not asymptotically equals', 'not asymptotically equals', 'not asymptotically equals']);
+  this.executeCharTest('≅', ['approximately equals', 'approximately equals', 'approximately equals']);
+  this.executeCharTest('≆', ['approximately but not actually equals', 'approximately but not actually equals', 'approximately but not actually equals']);
+  this.executeCharTest('≇', ['neither approximately nor actually equals', 'neither approximately nor actually equals', 'neither approximately nor actually equals']);
+  this.executeCharTest('≈', ['almost equals', 'almost equals', 'almost equals']);
+  this.executeCharTest('≉', ['not almost equals', 'not almost equals', 'not almost equals']);
+  this.executeCharTest('≊', ['almost equal or equals', 'almost equal or equals', 'almost equal or equals']);
+  this.executeCharTest('≋', ['triple tilde', 'triple tilde', 'triple tilde']);
+  this.executeCharTest('≌', ['all equals', 'all equals', 'all equals']);
+  this.executeCharTest('≍', ['equivalent to', 'equivalent to', 'equivalent to']);
+  this.executeCharTest('≎', ['geometrically equivalent to', 'geometrically equivalent to', 'geometrically equivalent to']);
+  this.executeCharTest('≏', ['difference between', 'difference between', 'difference between']);
+  this.executeCharTest('≐', ['approaches the limit', 'approaches the limit', 'approaches the limit']);
+  this.executeCharTest('≑', ['geometrically equals', 'geometrically equals', 'geometrically equals']);
+  this.executeCharTest('≒', ['approximately equals or the image of', 'approximately equals or the image of', 'approximately equals or the image of']);
+  this.executeCharTest('≓', ['image of or approximately equals', 'image of or approximately equals', 'image of or approximately equals']);
+  this.executeCharTest('≔', ['colon equals', 'colon equals', 'colon equal']);
+  this.executeCharTest('≕', ['equals colon', 'equals colon', 'equal colon']);
+  this.executeCharTest('≖', ['ring in equals', 'ring in equals', 'ring in equals']);
+  this.executeCharTest('≗', ['ring equals', 'ring equals', 'ring equals']);
+  this.executeCharTest('≘', ['corresponds to', 'corresponds to', 'corresponds to']);
+  this.executeCharTest('≙', ['estimates', 'estimates', 'estimates']);
+  this.executeCharTest('≚', ['equiangular to', 'equiangular to', 'equiangular to']);
+  this.executeCharTest('≛', ['star equals', 'star equals', 'star equals']);
+  this.executeCharTest('≜', ['delta equals', 'delta equals', 'delta equals']);
+  this.executeCharTest('≝', ['equals by definition', 'equals by definition', 'equals by definition']);
+  this.executeCharTest('≞', ['measured by', 'measured by', 'measured by']);
+  this.executeCharTest('≟', ['questioned equals', 'questioned equals', 'questioned equals']);
+  this.executeCharTest('≠', ['not equals', 'not equals', 'not equals']);
+  this.executeCharTest('≡', ['identical to', 'identical to', 'identical to']);
+  this.executeCharTest('≢', ['not identical to', 'not identical to', 'not identical to']);
+  this.executeCharTest('≣', ['strictly equivalent to', 'strictly equivalent to', 'strictly equivalent to']);
+  this.executeCharTest('≤', ['less than or equals', 'less than or equals', 'less than or equals']);
+  this.executeCharTest('≥', ['greater than or equals', 'greater than or equals', 'greater than or equals']);
+  this.executeCharTest('≦', ['less than over equals', 'less than over equals', 'less than over equals']);
+  this.executeCharTest('≧', ['greater than over equals', 'greater than over equals', 'greater than over equals']);
+  this.executeCharTest('≨', ['less than but not equals', 'less than but not equals', 'less than but not equals']);
+  this.executeCharTest('≩', ['greater than but not equals', 'greater than but not equals', 'greater than but not equals']);
+  this.executeCharTest('≪', ['much less than', 'much less than', 'much less than']);
+  this.executeCharTest('≫', ['much greater than', 'much greater than', 'much greater than']);
+  this.executeCharTest('≬', ['between', 'between', 'between']);
+  this.executeCharTest('≭', ['not equivalent to', 'not equivalent to', 'not equivalent to']);
+  this.executeCharTest('≮', ['not less than', 'not less than', 'not less than']);
+  this.executeCharTest('≯', ['not greater than', 'not greater than', 'not greater than']);
+  this.executeCharTest('≰', ['neither less than nor equals', 'neither less than nor equals', 'neither less than nor equals']);
+  this.executeCharTest('≱', ['neither greater than nor equals', 'neither greater than nor equals', 'neither greater than nor equals']);
+  this.executeCharTest('≲', ['less than or equivalent to', 'less than or equivalent to', 'less than or equivalent to']);
+  this.executeCharTest('≳', ['greater than or equivalent to', 'greater than or equivalent to', 'greater than or equivalent to']);
+  this.executeCharTest('≴', ['neither less than nor equivalent to', 'neither less than nor equivalent to', 'neither less than nor equivalent to']);
+  this.executeCharTest('≵', ['neither greater than nor equivalent to', 'neither greater than nor equivalent to', 'neither greater than nor equivalent to']);
+  this.executeCharTest('≶', ['less than or greater than', 'less than or greater than', 'less than or greater than']);
+  this.executeCharTest('≷', ['greater than or less than', 'greater than or less than', 'greater than or less than']);
+  this.executeCharTest('≸', ['neither less than nor greater than', 'neither less than nor greater than', 'neither less than nor greater than']);
+  this.executeCharTest('≹', ['neither greater than nor less than', 'neither greater than nor less than', 'neither greater than nor less than']);
+  this.executeCharTest('≺', ['precedes', 'precedes', 'precedes']);
+  this.executeCharTest('≻', ['succeeds', 'succeeds', 'succeeds']);
+  this.executeCharTest('≼', ['precedes or equals', 'precedes or equals', 'precedes or equals']);
+  this.executeCharTest('≽', ['succeeds or equals', 'succeeds or equals', 'succeeds or equals']);
+  this.executeCharTest('≾', ['precedes or equivalent to', 'precedes or equivalent to', 'precedes or equivalent to']);
+  this.executeCharTest('≿', ['succeeds or equivalent to', 'succeeds or equivalent to', 'succeeds or equivalent to']);
+  this.executeCharTest('⊀', ['does not precede', 'does not precede', 'does not precede']);
+  this.executeCharTest('⊁', ['does not succeed', 'does not succeed', 'does not succeed']);
+  this.executeCharTest('⊂', ['subset of', 'subset of', 'subset of']);
+  this.executeCharTest('⊃', ['superset of', 'superset of', 'superset of']);
+  this.executeCharTest('⊄', ['not a subset of', 'not a subset of', 'not a subset of']);
+  this.executeCharTest('⊅', ['not a superset of', 'not a superset of', 'not a superset of']);
+  this.executeCharTest('⊆', ['subset of or equals', 'subset of or equals', 'subset of or equals']);
+  this.executeCharTest('⊇', ['superset of or equals', 'superset of or equals', 'superset of or equals']);
+  this.executeCharTest('⊈', ['neither a subset of nor equals', 'neither a subset of nor equals', 'neither a subset of nor equals']);
+  this.executeCharTest('⊉', ['neither a superset of nor equals', 'neither a superset of nor equals', 'neither a superset of nor equals']);
+  this.executeCharTest('⊊', ['subset of with not equals', 'subset of or not equals', 'subset of or not equals']);
+  this.executeCharTest('⊋', ['superset of with not equals', 'superset of or not equals', 'superset of or not equals']);
+  this.executeCharTest('⊌', ['multiset', 'multiset', 'multiset']);
+  this.executeCharTest('⊍', ['multiset multiplication', 'multiset multiplication', 'multiset multiplication']);
+  this.executeCharTest('⊎', ['multiset union', 'multiset union', 'multiset union']);
+  this.executeCharTest('⊏', ['square image of', 'square image of', 'square image of']);
+  this.executeCharTest('⊐', ['square original of', 'square original of', 'square original of']);
+  this.executeCharTest('⊑', ['square image of or equals', 'square image of or equals', 'square image of or equals']);
+  this.executeCharTest('⊒', ['square original of or equals', 'square original of or equals', 'square original of or equals']);
+  this.executeCharTest('⊓', ['square cap', 'square cap', 'square cap']);
+  this.executeCharTest('⊔', ['square cup', 'square cup', 'square cup']);
+  this.executeCharTest('⊕', ['circled plus', 'circled plus', 'circled plus']);
+  this.executeCharTest('⊖', ['circled minus', 'circled minus', 'circled minus']);
+  this.executeCharTest('⊗', ['circled times', 'circled times', 'circled times']);
+  this.executeCharTest('⊘', ['circled division slash', 'circled division slash', 'circled division slash']);
+  this.executeCharTest('⊙', ['circled dot operator', 'circled dot operator', 'circled dot operator']);
+  this.executeCharTest('⊚', ['circled ring operator', 'circled ring operator', 'circled ring operator']);
+  this.executeCharTest('⊛', ['circled asterisk operator', 'circled asterisk operator', 'circled asterisk operator']);
+  this.executeCharTest('⊜', ['circled equals', 'circled equals', 'circled equals']);
+  this.executeCharTest('⊝', ['circled dash', 'circled dash', 'circled dash']);
+  this.executeCharTest('⊞', ['squared plus', 'squared plus', 'squared plus']);
+  this.executeCharTest('⊟', ['squared minus', 'squared minus', 'squared minus']);
+  this.executeCharTest('⊠', ['squared times', 'squared times', 'squared times']);
+  this.executeCharTest('⊡', ['squared dot operator', 'squared dot operator', 'squared dot operator']);
+  this.executeCharTest('⊢', ['right tack', 'right tack', 'right tack']);
+  this.executeCharTest('⊣', ['left tack', 'left tack', 'left tack']);
+  this.executeCharTest('⊤', ['down tack', 'down tack', 'down tack']);
+  this.executeCharTest('⊥', ['up tack', 'up tack', 'up tack']);
+  this.executeCharTest('⊦', ['assertion', 'assertion', 'assertion']);
+  this.executeCharTest('⊧', ['models', 'models', 'models']);
+  this.executeCharTest('⊨', ['true', 'true', 'true']);
+  this.executeCharTest('⊩', ['forces', 'forces', 'forces']);
+  this.executeCharTest('⊪', ['triple vertical bar right turnstile', 'triple vertical bar right turnstile', 'triple vertical bar right turnstile']);
+  this.executeCharTest('⊫', ['double vertical bar double right turnstile', 'double vertical bar double right turnstile', 'double vertical bar double right turnstile']);
+  this.executeCharTest('⊬', ['does not prove', 'does not prove', 'does not prove']);
+  this.executeCharTest('⊭', ['not true', 'not true', 'not true']);
+  this.executeCharTest('⊮', ['does not force', 'does not force', 'does not force']);
+  this.executeCharTest('⊯', ['negated double vertical bar double right turnstile', 'negated double vertical bar double right turnstile', 'negated double vertical bar double right turnstile']);
+  this.executeCharTest('⊰', ['precedes under relation', 'precedes under relation', 'precedes under relation']);
+  this.executeCharTest('⊱', ['succeeds under relation', 'succeeds under relation', 'succeeds under relation']);
+  this.executeCharTest('⊲', ['normal subgroup of', 'normal subgroup of', 'normal subgroup of']);
+  this.executeCharTest('⊳', ['contains as normal subgroup', 'contains as normal subgroup', 'contains as normal subgroup']);
+  this.executeCharTest('⊴', ['normal subgroup of or equals', 'normal subgroup of or equals', 'normal subgroup of or equals']);
+  this.executeCharTest('⊵', ['contains as normal subgroup or equals', 'contains as normal subgroup or equals', 'contains as normal subgroup or equals']);
+  this.executeCharTest('⊶', ['original of', 'original of', 'original of']);
+  this.executeCharTest('⊷', ['image of', 'image of', 'image of']);
+  this.executeCharTest('⊸', ['multimap', 'multimap', 'multimap']);
+  this.executeCharTest('⊹', ['hermitian conjugate matrix', 'hermitian conjugate matrix', 'hermitian conjugate matrix']);
+  this.executeCharTest('⊺', ['intercalate', 'intercalate', 'intercalate']);
+  this.executeCharTest('⊻', ['xor', 'xor', 'xor']);
+  this.executeCharTest('⊼', ['nand', 'nand', 'nand']);
+  this.executeCharTest('⊽', ['nor', 'nor', 'nor']);
+  this.executeCharTest('⊿', ['right triangle', 'right triangle', 'right triangle']);
+  this.executeCharTest('⋀', ['n ary logical and', 'n ary logical and', 'n ary logical and']);
+  this.executeCharTest('⋁', ['n ary logical or', 'n ary logical or', 'n ary logical or']);
+  this.executeCharTest('⋂', ['n ary intersection', 'n ary intersection', 'n ary intersection']);
+  this.executeCharTest('⋃', ['n ary union', 'n ary union', 'n ary union']);
+  this.executeCharTest('⋄', ['diamond operator', 'diamond operator', 'diamond operator']);
+  this.executeCharTest('⋅', ['dot operator', 'dot operator', 'dot operator']);
+  this.executeCharTest('⋆', ['star operator', 'star operator', 'star operator']);
+  this.executeCharTest('⋇', ['division times', 'division times', 'division times']);
+  this.executeCharTest('⋈', ['bowtie', 'bowtie', 'bowtie']);
+  this.executeCharTest('⋉', ['left normal factor semidirect product', 'left normal factor semidirect product', 'left normal factor semidirect product']);
+  this.executeCharTest('⋊', ['right normal factor semidirect product', 'right normal factor semidirect product', 'right normal factor semidirect product']);
+  this.executeCharTest('⋋', ['left semidirect product', 'left semidirect product', 'left semidirect product']);
+  this.executeCharTest('⋌', ['right semidirect product', 'right semidirect product', 'right semidirect product']);
+  this.executeCharTest('⋍', ['reversed tilde equals', 'reversed tilde equals', 'reversed tilde equals']);
+  this.executeCharTest('⋎', ['curly logical or', 'curly logical or', 'curly logical or']);
+  this.executeCharTest('⋏', ['curly logical and', 'curly logical and', 'curly logical and']);
+  this.executeCharTest('⋐', ['double subset', 'double subset', 'double subset']);
+  this.executeCharTest('⋑', ['double superset', 'double superset', 'double superset']);
+  this.executeCharTest('⋒', ['double intersection', 'double intersection', 'double intersection']);
+  this.executeCharTest('⋓', ['double union', 'double union', 'double union']);
+  this.executeCharTest('⋔', ['pitchfork', 'pitchfork', 'pitchfork']);
+  this.executeCharTest('⋕', ['equal and parallel to', 'equal and parallel to', 'equal and parallel to']);
+  this.executeCharTest('⋖', ['less than with dot', 'less than dot', 'less than with dot']);
+  this.executeCharTest('⋗', ['greater than with dot', 'greater than dot', 'greater than with dot']);
+  this.executeCharTest('⋘', ['very much less than', 'very much less than', 'very much less than']);
+  this.executeCharTest('⋙', ['very much greater than', 'very much greater than', 'very much greater than']);
+  this.executeCharTest('⋚', ['less than equals or greater than', 'less than equals or greater than', 'less than equals or greater than']);
+  this.executeCharTest('⋛', ['greater than equals or less than', 'greater than equals or less than', 'greater than equals or less than']);
+  this.executeCharTest('⋜', ['equals or less than', 'equals or less than', 'equals or less than']);
+  this.executeCharTest('⋝', ['equals or greater than', 'equals or greater than', 'equals or greater than']);
+  this.executeCharTest('⋞', ['equals or precedes', 'equals or precedes', 'equals or precedes']);
+  this.executeCharTest('⋟', ['equals or succeeds', 'equals or succeeds', 'equals or succeeds']);
+  this.executeCharTest('⋠', ['does not precede or equal', 'does not precede or equal', 'does not precede or equal']);
+  this.executeCharTest('⋡', ['does not succeed or equal', 'does not succeed or equal', 'does not succeed or equal']);
+  this.executeCharTest('⋢', ['not square image of or equals', 'not square image of or equals', 'not square image of or equals']);
+  this.executeCharTest('⋣', ['not square original of or equals', 'not square original of or equals', 'not square original of or equals']);
+  this.executeCharTest('⋤', ['square image of or not equals', 'square image of or not equals', 'square image of or not equals']);
+  this.executeCharTest('⋥', ['square original of or not equals', 'square original of or not equals', 'square original of or not equals']);
+  this.executeCharTest('⋦', ['less than but not equivalent to', 'less than but not equivalent to', 'less than but not equivalent to']);
+  this.executeCharTest('⋧', ['greater than but not equivalent to', 'greater than but not equivalent to', 'greater than but not equivalent to']);
+  this.executeCharTest('⋨', ['precedes but not equivalent to', 'precedes but not equivalent to', 'precedes but not equivalent to']);
+  this.executeCharTest('⋩', ['succeeds but not equivalent to', 'succeeds but not equivalent to', 'succeeds but not equivalent to']);
+  this.executeCharTest('⋪', ['not normal subgroup of', 'not normal subgroup of', 'not normal subgroup of']);
+  this.executeCharTest('⋫', ['does not contain as normal subgroup', 'does not contain as normal subgroup', 'does not contain as normal subgroup']);
+  this.executeCharTest('⋬', ['not normal subgroup of or equals', 'not normal subgroup of or equals', 'not normal subgroup of or equals']);
+  this.executeCharTest('⋭', ['does not contain as normal subgroup or equal', 'does not contain as normal subgroup or equal', 'does not contain as normal subgroup or equal']);
+  this.executeCharTest('⋮', ['vertical ellipsis', 'vertical ellipsis', 'vertical ellipsis']);
+  this.executeCharTest('⋯', ['midline horizontal ellipsis', 'midline horizontal ellipsis', 'midline horizontal ellipsis']);
+  this.executeCharTest('⋰', ['up right diagonal ellipsis', 'up right diagonal ellipsis', 'up right diagonal ellipsis']);
+  this.executeCharTest('⋱', ['down right diagonal ellipsis', 'down right diagonal ellipsis', 'down right diagonal ellipsis']);
+  this.executeCharTest('⋲', ['element of with long horizontal stroke', 'element of with long horizontal stroke', 'element of with long horizontal stroke']);
+  this.executeCharTest('⋳', ['element of with vertical bar at end of horizontal stroke', 'element of with vertical bar at end of horizontal stroke', 'element of with vertical bar at end of horizontal stroke']);
+  this.executeCharTest('⋴', ['small element of with vertical bar at end of horizontal stroke', 'small element of with vertical bar at end of horizontal stroke', 'small element of with vertical bar at end of horizontal stroke']);
+  this.executeCharTest('⋵', ['element of with dot above', 'element of with dot above', 'element of with dot above']);
+  this.executeCharTest('⋶', ['element of with overbar', 'element of with overbar', 'element of with overbar']);
+  this.executeCharTest('⋷', ['small element of with overbar', 'small element of with overbar', 'small element of with overbar']);
+  this.executeCharTest('⋸', ['element of with underbar', 'element of with underbar', 'element of with underbar']);
+  this.executeCharTest('⋹', ['element of with two horizontal strokes', 'element of with two horizontal strokes', 'element of with two horizontal strokes']);
+  this.executeCharTest('⋺', ['contains with long horizontal stroke', 'contains with long horizontal stroke', 'contains with long horizontal stroke']);
+  this.executeCharTest('⋻', ['contains with vertical bar at end of horizontal stroke', 'contains with vertical bar at end of horizontal stroke', 'contains with vertical bar at end of horizontal stroke']);
+  this.executeCharTest('⋼', ['small contains with vertical bar at end of horizontal stroke', 'small contains with vertical bar at end of horizontal stroke', 'small contains with vertical bar at end of horizontal stroke']);
+  this.executeCharTest('⋽', ['contains with overbar', 'contains with overbar', 'contains with overbar']);
+  this.executeCharTest('⋾', ['small contains with overbar', 'small contains with overbar', 'small contains with overbar']);
+  this.executeCharTest('⋿', ['z notation bag membership', 'z notation bag membership', 'z notation bag membership']);
+  this.executeCharTest('⌀', ['diameter sign', 'diameter', 'diameter']);
+  this.executeCharTest('⌂', ['house', 'house', 'house']);
+  this.executeCharTest('⌅', ['projective', 'projective', 'projective']);
+  this.executeCharTest('⌆', ['perspective', 'perspective', 'perspective']);
+  this.executeCharTest('⌇', ['wavy line', 'wavy line', 'wavy line']);
+  this.executeCharTest('⌐', ['reversed not sign', 'reversed not', 'reversed not']);
+  this.executeCharTest('⌑', ['square lozenge', 'square lozenge', 'square lozenge']);
+  this.executeCharTest('⌒', ['arc', 'arc', 'arc']);
+  this.executeCharTest('⌓', ['segment', 'segment', 'segment']);
+  this.executeCharTest('⌔', ['sector', 'sector', 'sector']);
+  this.executeCharTest('➕', ['heavy plus sign', 'bold plus', 'heavy plus']);
+  this.executeCharTest('➖', ['heavy minus sign', 'bold minus', 'heavy minus']);
+  this.executeCharTest('➗', ['heavy division sign', 'bold division', 'heavy division']);
+  this.executeCharTest('➰', ['curly loop', 'curly loop', 'curly loop']);
+  this.executeCharTest('➿', ['double curly loop', 'double curly loop', 'double curly loop']);
+  this.executeCharTest('⟁', ['white triangle containing small white triangle', 'white triangle containing small white triangle', 'white triangle containing small white triangle']);
+  this.executeCharTest('⟂', ['perpendicular', 'perpendicular', 'perpendicular']);
+  this.executeCharTest('⟃', ['open subset', 'open subset', 'open subset']);
+  this.executeCharTest('⟄', ['open superset', 'open superset', 'open superset']);
+  this.executeCharTest('⟇', ['or with dot inside', 'or with dot inside', 'or with dot inside']);
+  this.executeCharTest('⟈', ['reverse solidus preceding subset', 'reverse solidus preceding subset', 'reverse solidus preceding subset']);
+  this.executeCharTest('⟉', ['superset preceding solidus', 'superset preceding solidus', 'superset preceding solidus']);
+  this.executeCharTest('⟊', ['vertical bar with horizontal stroke', 'vertical bar with horizontal stroke', 'vertical bar with horizontal stroke']);
+  this.executeCharTest('⟋', ['mathematical rising diagonal', 'mathematical rising diagonal', 'mathematical rising diagonal']);
+  this.executeCharTest('⟌', ['long division', 'long division', 'long division']);
+  this.executeCharTest('⟍', ['mathematical falling diagonal', 'mathematical falling diagonal', 'mathematical falling diagonal']);
+  this.executeCharTest('⟎', ['squared logical and', 'squared logical and', 'squared logical and']);
+  this.executeCharTest('⟏', ['squared logical or', 'squared logical or', 'squared logical or']);
+  this.executeCharTest('⟐', ['white diamond with centered dot', 'white diamond with centered dot', 'white diamond with centered dot']);
+  this.executeCharTest('⟑', ['and with dot', 'and with dot', 'and with dot']);
+  this.executeCharTest('⟒', ['element of opening upwards', 'element of opening upwards', 'element of opening upwards']);
+  this.executeCharTest('⟓', ['lower right corner with dot', 'lower right corner with dot', 'lower right corner with dot']);
+  this.executeCharTest('⟔', ['upper left corner with dot', 'upper left corner with dot', 'upper left corner with dot']);
+  this.executeCharTest('⟕', ['left outer join', 'left outer join', 'left outer join']);
+  this.executeCharTest('⟖', ['right outer join', 'right outer join', 'right outer join']);
+  this.executeCharTest('⟗', ['full outer join', 'full outer join', 'full outer join']);
+  this.executeCharTest('⟘', ['large up tack', 'large up tack', 'large up tack']);
+  this.executeCharTest('⟙', ['large down tack', 'large down tack', 'large down tack']);
+  this.executeCharTest('⟚', ['left and right double turnstile', 'left and right double turnstile', 'left and right double turnstile']);
+  this.executeCharTest('⟛', ['left and right tack', 'left and right tack', 'left and right tack']);
+  this.executeCharTest('⟜', ['left multimap', 'left multimap', 'left multimap']);
+  this.executeCharTest('⟝', ['long right tack', 'long right tack', 'long right tack']);
+  this.executeCharTest('⟞', ['long left tack', 'long left tack', 'long left tack']);
+  this.executeCharTest('⟟', ['up tack with circle above', 'up tack with circle above', 'up tack with circle above']);
+  this.executeCharTest('⟠', ['lozenge divided by horizontal rule', 'lozenge divided by horizontal rule', 'lozenge divided by horizontal rule']);
+  this.executeCharTest('⟡', ['white concave sided diamond', 'white concave sided diamond', 'white concave sided diamond']);
+  this.executeCharTest('⟢', ['white concave sided diamond with leftwards tick', 'white concave sided diamond with leftwards tick', 'white concave sided diamond with leftwards tick']);
+  this.executeCharTest('⟣', ['white concave sided diamond with rightwards tick', 'white concave sided diamond with rightwards tick', 'white concave sided diamond with rightwards tick']);
+  this.executeCharTest('⟤', ['white square with leftwards tick', 'white square with leftwards tick', 'white square with leftwards tick']);
+  this.executeCharTest('⟥', ['white square with rightwards tick', 'white square with rightwards tick', 'white square with rightwards tick']);
+  this.executeCharTest('⤫', ['rising diagonal crossing falling diagonal', 'rising diagonal crossing falling diagonal', 'rising diagonal crossing falling diagonal']);
+  this.executeCharTest('⤬', ['falling diagonal crossing rising diagonal', 'falling diagonal crossing rising diagonal', 'falling diagonal crossing rising diagonal']);
+  this.executeCharTest('⦀', ['triple vertical bar delimiter', 'triple vertical bar delimiter', 'triple vertical bar delimiter']);
+  this.executeCharTest('⦁', ['z notation spot', 'z notation spot', 'z notation spot']);
+  this.executeCharTest('⦂', ['z notation type colon', 'z notation type colon', 'z notation type colon']);
+  this.executeCharTest('⦙', ['dotted fence', 'dotted fence', 'dotted fence']);
+  this.executeCharTest('⦚', ['vertical zigzag line', 'vertical zigzag line', 'vertical zigzag line']);
+  this.executeCharTest('⦰', ['reversed empty set', 'reversed empty set', 'reversed empty set']);
+  this.executeCharTest('⦱', ['empty set with overbar', 'empty set with overbar', 'empty set with overbar']);
+  this.executeCharTest('⦲', ['empty set with small circle above', 'empty set with small circle above', 'empty set with small circle above']);
+  this.executeCharTest('⦵', ['circle with horizontal bar', 'circle with horizontal bar', 'circle with horizontal bar']);
+  this.executeCharTest('⦶', ['circled vertical bar', 'circled vertical bar', 'circled vertical bar']);
+  this.executeCharTest('⦷', ['circled parallel', 'circled parallel', 'circled parallel']);
+  this.executeCharTest('⦸', ['circled reverse solidus', 'circled reverse solidus', 'circled reverse solidus']);
+  this.executeCharTest('⦹', ['circled perpendicular', 'circled perpendicular', 'circled perpendicular']);
+  this.executeCharTest('⦺', ['circle divided by horizontal bar and top half divided by vertical bar', 'circle divided by horizontal bar and top half divided by vertical bar', 'circle divided by horizontal bar and top half divided by vertical bar']);
+  this.executeCharTest('⦻', ['circle with superimposed x', 'circle with superimposed x', 'circle with superimposed x']);
+  this.executeCharTest('⦼', ['circled anticlockwise rotated division sign', 'circled anticlockwise rotated division', 'circled anticlockwise rotated division']);
+  this.executeCharTest('⦾', ['circled white bullet', 'circled white bullet', 'circled white bullet']);
+  this.executeCharTest('⦿', ['circled bullet', 'circled bullet', 'circled bullet']);
+  this.executeCharTest('⧀', ['circled less than', 'circled less than', 'circled less than']);
+  this.executeCharTest('⧁', ['circled greater than', 'circled greater than', 'circled greater than']);
+  this.executeCharTest('⧂', ['circle with small circle to the right', 'circle with small circle to the right', 'circle with small circle to the right']);
+  this.executeCharTest('⧃', ['circle with two horizontal strokes to the right', 'circle with two horizontal strokes to the right', 'circle with two horizontal strokes to the right']);
+  this.executeCharTest('⧄', ['squared rising diagonal slash', 'squared rising diagonal slash', 'squared rising diagonal slash']);
+  this.executeCharTest('⧅', ['squared falling diagonal slash', 'squared falling diagonal slash', 'squared falling diagonal slash']);
+  this.executeCharTest('⧆', ['squared asterisk', 'squared asterisk', 'squared asterisk']);
+  this.executeCharTest('⧇', ['squared small circle', 'squared small circle', 'squared small circle']);
+  this.executeCharTest('⧈', ['squared square', 'squared square', 'squared square']);
+  this.executeCharTest('⧉', ['two joined squares', 'two joined squares', 'two joined squares']);
+  this.executeCharTest('⧊', ['triangle with dot above', 'triangle with dot above', 'triangle with dot above']);
+  this.executeCharTest('⧋', ['triangle with underbar', 'triangle with underbar', 'triangle with underbar']);
+  this.executeCharTest('⧌', ['s in triangle', 's in triangle', 's in triangle']);
+  this.executeCharTest('⧍', ['triangle with serifs at bottom', 'triangle with serifs at bottom', 'triangle with serifs at bottom']);
+  this.executeCharTest('⧎', ['right triangle above left triangle', 'right triangle above left triangle', 'right triangle above left triangle']);
+  this.executeCharTest('⧏', ['left triangle beside vertical bar', 'left triangle beside vertical bar', 'left triangle beside vertical bar']);
+  this.executeCharTest('⧐', ['vertical bar beside right triangle', 'vertical bar beside right triangle', 'vertical bar beside right triangle']);
+  this.executeCharTest('⧑', ['bowtie with left half black', 'bowtie with left half black', 'bowtie with left half black']);
+  this.executeCharTest('⧒', ['bowtie with right half black', 'bowtie with right half black', 'bowtie with right half black']);
+  this.executeCharTest('⧓', ['black bowtie', 'black bowtie', 'black bowtie']);
+  this.executeCharTest('⧔', ['times with left half black', 'times with left half black', 'times with left half black']);
+  this.executeCharTest('⧕', ['times with right half black', 'times with right half black', 'times with right half black']);
+  this.executeCharTest('⧖', ['white hourglass', 'white hourglass', 'white hourglass']);
+  this.executeCharTest('⧗', ['black hourglass', 'black hourglass', 'black hourglass']);
+  this.executeCharTest('⧜', ['incomplete infinity', 'incomplete infinity', 'incomplete infinity']);
+  this.executeCharTest('⧝', ['tie over infinity', 'tie over infinity', 'tie over infinity']);
+  this.executeCharTest('⧞', ['infinity negated with vertical bar', 'infinity negated with vertical bar', 'infinity negated with vertical bar']);
+  this.executeCharTest('⧟', ['double ended multimap', 'double ended multimap', 'double ended multimap']);
+  this.executeCharTest('⧠', ['square with contoured outline', 'square with contoured outline', 'square with contoured outline']);
+  this.executeCharTest('⧡', ['increases as', 'increases as', 'increases as']);
+  this.executeCharTest('⧢', ['shuffle product', 'shuffle product', 'shuffle product']);
+  this.executeCharTest('⧣', ['equals sign and slanted parallel', 'equals sign and slanted parallel', 'equals sign and slanted parallel']);
+  this.executeCharTest('⧤', ['equals sign and slanted parallel with tilde above', 'equals sign and slanted parallel with tilde above', 'equals sign and slanted parallel with tilde above']);
+  this.executeCharTest('⧥', ['identical to and slanted parallel', 'identical to and slanted parallel', 'identical to and slanted parallel']);
+  this.executeCharTest('⧦', ['gleich stark', 'gleich stark', 'gleich stark']);
+  this.executeCharTest('⧧', ['thermodynamic', 'thermodynamic', 'thermodynamic']);
+  this.executeCharTest('⧨', ['down pointing triangle with left half black', 'down pointing triangle with left half black', 'down pointing triangle with left half black']);
+  this.executeCharTest('⧩', ['down pointing triangle with right half black', 'down pointing triangle with right half black', 'down pointing triangle with right half black']);
+  this.executeCharTest('⧫', ['black lozenge', 'black lozenge', 'black lozenge']);
+  this.executeCharTest('⧮', ['error barred white square', 'error barred white square', 'error barred white square']);
+  this.executeCharTest('⧯', ['error barred black square', 'error barred black square', 'error barred black square']);
+  this.executeCharTest('⧰', ['error barred white diamond', 'error barred white diamond', 'error barred white diamond']);
+  this.executeCharTest('⧱', ['error barred black diamond', 'error barred black diamond', 'error barred black diamond']);
+  this.executeCharTest('⧲', ['error barred white circle', 'error barred white circle', 'error barred white circle']);
+  this.executeCharTest('⧳', ['error barred black circle', 'error barred black circle', 'error barred black circle']);
+  this.executeCharTest('⧴', ['rule delayed', 'rule delayed', 'rule delayed']);
+  this.executeCharTest('⧵', ['reverse solidus operator', 'reverse solidus operator', 'reverse solidus operator']);
+  this.executeCharTest('⧶', ['solidus with overbar', 'solidus with overbar', 'solidus with overbar']);
+  this.executeCharTest('⧷', ['reverse solidus with horizontal stroke', 'reverse solidus with horizontal stroke', 'reverse solidus with horizontal stroke']);
+  this.executeCharTest('⧸', ['big solidus', 'big solidus', 'big solidus']);
+  this.executeCharTest('⧹', ['big reverse solidus', 'big reverse solidus', 'big reverse solidus']);
+  this.executeCharTest('⧺', ['double plus', 'double plus', 'double plus']);
+  this.executeCharTest('⧻', ['triple plus', 'triple plus', 'triple plus']);
+  this.executeCharTest('⧾', ['tiny', 'tiny', 'tiny']);
+  this.executeCharTest('⧿', ['miny', 'miny', 'miny']);
+  this.executeCharTest('⨀', ['n ary circled dot operator', 'n ary circled dot operator', 'n ary circled dot operator']);
+  this.executeCharTest('⨁', ['n ary circled plus operator', 'n ary circled plus operator', 'n ary circled plus operator']);
+  this.executeCharTest('⨂', ['n ary circled times operator', 'n ary circled times operator', 'n ary circled times operator']);
+  this.executeCharTest('⨃', ['n ary union operator with dot', 'n ary union operator with dot', 'n ary union operator with dot']);
+  this.executeCharTest('⨄', ['n ary union operator with plus', 'n ary union operator with plus', 'n ary union operator with plus']);
+  this.executeCharTest('⨅', ['n ary square intersection operator', 'n ary square intersection operator', 'n ary square intersection operator']);
+  this.executeCharTest('⨆', ['n ary square union operator', 'n ary square union operator', 'n ary square union operator']);
+  this.executeCharTest('⨇', ['two logical and operator', 'two logical and operator', 'two logical and operator']);
+  this.executeCharTest('⨈', ['two logical or operator', 'two logical or operator', 'two logical or operator']);
+  this.executeCharTest('⨉', ['n ary times operator', 'n ary times operator', 'n ary times operator']);
+  this.executeCharTest('⨊', ['modulo two sum', 'modulo two sum', 'modulo two sum']);
+  this.executeCharTest('⨋', ['summation with integral', 'summation with integral', 'summation with integral']);
+  this.executeCharTest('⨌', ['quadruple integral operator', 'quadruple integral operator', 'quadruple integral operator']);
+  this.executeCharTest('⨍', ['finite part integral', 'finite part integral', 'finite part integral']);
+  this.executeCharTest('⨎', ['integral with double stroke', 'integral with double stroke', 'integral with double stroke']);
+  this.executeCharTest('⨏', ['integral average with slash', 'integral average with slash', 'integral average with slash']);
+  this.executeCharTest('⨐', ['circulation function', 'circulation function', 'circulation function']);
+  this.executeCharTest('⨑', ['anticlockwise integration', 'anticlockwise integration', 'anticlockwise integration']);
+  this.executeCharTest('⨒', ['line integration with rectangular path around pole', 'line integration with rectangular path around pole', 'line integration with rectangular path around pole']);
+  this.executeCharTest('⨓', ['line integration with semicircular path around pole', 'line integration with semicircular path around pole', 'line integration with semicircular path around pole']);
+  this.executeCharTest('⨔', ['line integration not including the pole', 'line integration not including the pole', 'line integration not including the pole']);
+  this.executeCharTest('⨕', ['integral around a point operator', 'integral around a point operator', 'integral around a point operator']);
+  this.executeCharTest('⨖', ['quaternion integral operator', 'quaternion integral operator', 'quaternion integral operator']);
+  this.executeCharTest('⨘', ['integral with times sign', 'integral with times', 'integral with times']);
+  this.executeCharTest('⨙', ['integral with intersection', 'integral with intersection', 'integral with intersection']);
+  this.executeCharTest('⨚', ['integral with union', 'integral with union', 'integral with union']);
+  this.executeCharTest('⨛', ['integral with overbar', 'integral with overbar', 'integral with overbar']);
+  this.executeCharTest('⨜', ['integral with underbar', 'integral with underbar', 'integral with underbar']);
+  this.executeCharTest('⨝', ['join', 'join', 'join']);
+  this.executeCharTest('⨞', ['large left triangle operator', 'large left triangle operator', 'large left triangle operator']);
+  this.executeCharTest('⨟', ['z notation schema composition', 'z notation schema composition', 'z notation schema composition']);
+  this.executeCharTest('⨠', ['z notation schema piping', 'z notation schema piping', 'z notation schema piping']);
+  this.executeCharTest('⨡', ['z notation schema projection', 'z notation schema projection', 'z notation schema projection']);
+  this.executeCharTest('⨢', ['plus sign with small circle above', 'plus with circle above', 'plus with circle above']);
+  this.executeCharTest('⨣', ['plus sign with circumflex accent above', 'plus hat', 'plus hat']);
+  this.executeCharTest('⨤', ['plus sign with tilde above', 'plus tilde', 'plus tilde']);
+  this.executeCharTest('⨥', ['plus sign with dot below', 'plus underdot', 'plus underdot']);
+  this.executeCharTest('⨦', ['plus sign with tilde below', 'plus sign with tilde below', 'plus sign with tilde below']);
+  this.executeCharTest('⨧', ['plus sign with subscript two', 'plus sign with subscript two', 'plus sign with subscript two']);
+  this.executeCharTest('⨨', ['plus sign with black triangle', 'plus sign with black triangle', 'plus sign with black triangle']);
+  this.executeCharTest('⨩', ['minus sign with comma above', 'minus sign with comma above', 'minus sign with comma above']);
+  this.executeCharTest('⨪', ['minus sign with dot below', 'minus sign with dot below', 'minus sign with dot below']);
+  this.executeCharTest('⨫', ['minus sign with falling dots', 'minus sign with falling dots', 'minus sign with falling dots']);
+  this.executeCharTest('⨬', ['minus sign with rising dots', 'minus sign with rising dots', 'minus sign with rising dots']);
+  this.executeCharTest('⨭', ['plus sign in left half circle', 'plus sign in left half circle', 'plus sign in left half circle']);
+  this.executeCharTest('⨮', ['plus sign in right half circle', 'plus sign in right half circle', 'plus sign in right half circle']);
+  this.executeCharTest('⨯', ['vector or cross product', 'vector or cross product', 'vector or cross product']);
+  this.executeCharTest('⨰', ['multiplication sign with dot above', 'multiplication sign with dot above', 'multiplication sign with dot above']);
+  this.executeCharTest('⨱', ['multiplication sign with underbar', 'multiplication sign with underbar', 'multiplication sign with underbar']);
+  this.executeCharTest('⨲', ['semidirect product with bottom closed', 'semidirect product with bottom closed', 'semidirect product with bottom closed']);
+  this.executeCharTest('⨳', ['smash product', 'smash product', 'smash product']);
+  this.executeCharTest('⨴', ['multiplication sign in left half circle', 'multiplication sign in left half circle', 'multiplication sign in left half circle']);
+  this.executeCharTest('⨵', ['multiplication sign in right half circle', 'multiplication sign in right half circle', 'multiplication sign in right half circle']);
+  this.executeCharTest('⨶', ['circled multiplication sign with circumflex accent', 'circled multiplication sign with circumflex accent', 'circled multiplication sign with circumflex accent']);
+  this.executeCharTest('⨷', ['multiplication sign in double circle', 'multiplication sign in double circle', 'multiplication sign in double circle']);
+  this.executeCharTest('⨸', ['circled division sign', 'circled division', 'circled division']);
+  this.executeCharTest('⨹', ['plus sign in triangle', 'plus sign in triangle', 'plus sign in triangle']);
+  this.executeCharTest('⨺', ['minus sign in triangle', 'minus sign in triangle', 'minus sign in triangle']);
+  this.executeCharTest('⨻', ['multiplication sign in triangle', 'multiplication sign in triangle', 'multiplication sign in triangle']);
+  this.executeCharTest('⨼', ['interior product', 'interior product', 'interior product']);
+  this.executeCharTest('⨽', ['righthand interior product', 'righthand interior product', 'righthand interior product']);
+  this.executeCharTest('⨾', ['z notation relational composition', 'z notation relational composition', 'z notation relational composition']);
+  this.executeCharTest('⨿', ['amalgamation or coproduct', 'amalgamation or coproduct', 'amalgamation or coproduct']);
+  this.executeCharTest('⩀', ['intersection with dot', 'intersection with dot', 'intersection with dot']);
+  this.executeCharTest('⩁', ['union with minus sign', 'union with minus', 'union with minus']);
+  this.executeCharTest('⩂', ['union with overbar', 'union with overbar', 'union with overbar']);
+  this.executeCharTest('⩃', ['intersection with overbar', 'intersection with overbar', 'intersection with overbar']);
+  this.executeCharTest('⩄', ['intersection with logical and', 'intersection with logical and', 'intersection with logical and']);
+  this.executeCharTest('⩅', ['union with logical or', 'union with logical or', 'union with logical or']);
+  this.executeCharTest('⩆', ['union above intersection', 'union above intersection', 'union above intersection']);
+  this.executeCharTest('⩇', ['intersection above union', 'intersection above union', 'intersection above union']);
+  this.executeCharTest('⩈', ['union above bar above intersection', 'union above bar above intersection', 'union above bar above intersection']);
+  this.executeCharTest('⩉', ['intersection above bar above union', 'intersection above bar above union', 'intersection above bar above union']);
+  this.executeCharTest('⩊', ['union beside and joined with union', 'union beside and joined with union', 'union beside and joined with union']);
+  this.executeCharTest('⩋', ['intersection beside and joined with intersection', 'intersection beside and joined with intersection', 'intersection beside and joined with intersection']);
+  this.executeCharTest('⩌', ['closed union with serifs', 'closed union with serifs', 'closed union with serifs']);
+  this.executeCharTest('⩍', ['closed intersection with serifs', 'closed intersection with serifs', 'closed intersection with serifs']);
+  this.executeCharTest('⩎', ['double square intersection', 'double square intersection', 'double square intersection']);
+  this.executeCharTest('⩏', ['double square union', 'double square union', 'double square union']);
+  this.executeCharTest('⩐', ['closed union with serifs and smash product', 'closed union with serifs and smash product', 'closed union with serifs and smash product']);
+  this.executeCharTest('⩑', ['logical and with dot above', 'logical and with dot above', 'logical and with dot above']);
+  this.executeCharTest('⩒', ['logical or with dot above', 'logical or with dot above', 'logical or with dot above']);
+  this.executeCharTest('⩓', ['double logical and', 'double logical and', 'double logical and']);
+  this.executeCharTest('⩔', ['double logical or', 'double logical or', 'double logical or']);
+  this.executeCharTest('⩕', ['two intersecting logical and', 'two intersecting logical and', 'two intersecting logical and']);
+  this.executeCharTest('⩖', ['two intersecting logical or', 'two intersecting logical or', 'two intersecting logical or']);
+  this.executeCharTest('⩗', ['sloping large or', 'sloping large or', 'sloping large or']);
+  this.executeCharTest('⩘', ['sloping large and', 'sloping large and', 'sloping large and']);
+  this.executeCharTest('⩙', ['logical or overlapping logical and', 'logical or overlapping logical and', 'logical or overlapping logical and']);
+  this.executeCharTest('⩚', ['logical and with middle stem', 'logical and with middle stem', 'logical and with middle stem']);
+  this.executeCharTest('⩛', ['logical or with middle stem', 'logical or with middle stem', 'logical or with middle stem']);
+  this.executeCharTest('⩜', ['logical and with horizontal dash', 'logical and with horizontal dash', 'logical and with horizontal dash']);
+  this.executeCharTest('⩝', ['logical or with horizontal dash', 'logical or with horizontal dash', 'logical or with horizontal dash']);
+  this.executeCharTest('⩞', ['logical and with double overbar', 'logical and with double overbar', 'logical and with double overbar']);
+  this.executeCharTest('⩟', ['logical and with underbar', 'logical and with underbar', 'logical and with underbar']);
+  this.executeCharTest('⩠', ['logical and with double underbar', 'logical and with double underbar', 'logical and with double underbar']);
+  this.executeCharTest('⩡', ['small vee with underbar', 'small vee with underbar', 'small vee with underbar']);
+  this.executeCharTest('⩢', ['logical or with double overbar', 'logical or with double overbar', 'logical or with double overbar']);
+  this.executeCharTest('⩣', ['logical or with double underbar', 'logical or with double underbar', 'logical or with double underbar']);
+  this.executeCharTest('⩤', ['z notation domain antirestriction', 'z notation domain antirestriction', 'z notation domain antirestriction']);
+  this.executeCharTest('⩥', ['z notation range antirestriction', 'z notation range antirestriction', 'z notation range antirestriction']);
+  this.executeCharTest('⩦', ['equals sign with dot below', 'equals sign with dot below', 'equals sign with dot below']);
+  this.executeCharTest('⩧', ['identical with dot above', 'identical with dot above', 'identical with dot above']);
+  this.executeCharTest('⩨', ['triple horizontal bar with double vertical stroke', 'triple horizontal bar with double vertical stroke', 'triple horizontal bar with double vertical stroke']);
+  this.executeCharTest('⩩', ['triple horizontal bar with triple vertical stroke', 'triple horizontal bar with triple vertical stroke', 'triple horizontal bar with triple vertical stroke']);
+  this.executeCharTest('⩪', ['tilde operator with dot above', 'tilde operator with dot above', 'tilde operator with dot above']);
+  this.executeCharTest('⩫', ['tilde operator with rising dots', 'tilde operator with rising dots', 'tilde operator with rising dots']);
+  this.executeCharTest('⩬', ['similar minus similar', 'similar minus similar', 'similar minus similar']);
+  this.executeCharTest('⩭', ['congruent with dot above', 'congruent with dot above', 'congruent with dot above']);
+  this.executeCharTest('⩮', ['equals with asterisk', 'equals with asterisk', 'equals with asterisk']);
+  this.executeCharTest('⩯', ['almost equals with circumflex accent', 'almost equal hat', 'almost equal hat']);
+  this.executeCharTest('⩰', ['approximately equal or equals', 'approximately equal or equals', 'approximately equal or equals']);
+  this.executeCharTest('⩱', ['equals sign above plus sign', 'equals above plus', 'equals above plus']);
+  this.executeCharTest('⩲', ['plus sign above equals sign', 'plus above equals', 'plus above equals']);
+  this.executeCharTest('⩳', ['equals sign above tilde operator', 'equals above tilde operator', 'equals above tilde operator']);
+  this.executeCharTest('⩴', ['double colon equal', 'double colon equal', 'double colon equal']);
+  this.executeCharTest('⩵', ['two consecutive equals signs', 'two consecutive equals', 'two consecutive equals']);
+  this.executeCharTest('⩶', ['three consecutive equals signs', 'three consecutive equals', 'three consecutive equals']);
+  this.executeCharTest('⩷', ['equals sign with two dots above and two dots below', 'equals sign with two dots above and two dots below', 'equals sign with two dots above and two dots below']);
+  this.executeCharTest('⩸', ['equivalent with four dots above', 'equivalent with four dots above', 'equivalent with four dots above']);
+  this.executeCharTest('⩹', ['less than with circle inside', 'less than with circle inside', 'less than with circle inside']);
+  this.executeCharTest('⩺', ['greater than with circle inside', 'greater than with circle inside', 'greater than with circle inside']);
+  this.executeCharTest('⩻', ['less than with question mark above', 'less than with question mark above', 'less than with question mark above']);
+  this.executeCharTest('⩼', ['greater than with question mark above', 'greater than with question mark above', 'greater than with question mark above']);
+  this.executeCharTest('⩽', ['less than or slanted equals', 'less than or slanted equals', 'less than or slanted equals']);
+  this.executeCharTest('⩾', ['greater than or slanted equals', 'greater than or slanted equals', 'greater than or slanted equals']);
+  this.executeCharTest('⩿', ['less than or slanted equals with dot inside', 'less than or slanted equals with dot inside', 'less than or slanted equals with dot inside']);
+  this.executeCharTest('⪀', ['greater than or slanted equals with dot inside', 'greater than or slanted equals with dot inside', 'greater than or slanted equals with dot inside']);
+  this.executeCharTest('⪁', ['less than or slanted equals with dot above', 'less than or slanted equals with dot above', 'less than or slanted equals with dot above']);
+  this.executeCharTest('⪂', ['greater than or slanted equals with dot above', 'greater than or slanted equals with dot above', 'greater than or slanted equals with dot above']);
+  this.executeCharTest('⪃', ['less than or slanted equals with dot above right', 'less than or slanted equals with dot above right', 'less than or slanted equals with dot above right']);
+  this.executeCharTest('⪄', ['greater than or slanted equals with dot above left', 'greater than or slanted equals with dot above left', 'greater than or slanted equals with dot above left']);
+  this.executeCharTest('⪅', ['less than or approximate', 'less than or approximate', 'less than or approximate']);
+  this.executeCharTest('⪆', ['greater than or approximate', 'greater than or approximate', 'greater than or approximate']);
+  this.executeCharTest('⪇', ['less than and single line not equals', 'less than and single line not equals', 'less than and single line not equals']);
+  this.executeCharTest('⪈', ['greater than and single line not equals', 'greater than and single line not equals', 'greater than and single line not equals']);
+  this.executeCharTest('⪉', ['less than and not approximate', 'less than and not approximate', 'less than and not approximate']);
+  this.executeCharTest('⪊', ['greater than and not approximate', 'greater than and not approximate', 'greater than and not approximate']);
+  this.executeCharTest('⪋', ['less than above double line equal above greater than', 'less than above double line equal above greater than', 'less than above double line equal above greater than']);
+  this.executeCharTest('⪌', ['greater than above double line equal above less than', 'greater than above double line equal above less than', 'greater than above double line equal above less than']);
+  this.executeCharTest('⪍', ['less than above similar or equal', 'less than above similar or equal', 'less than above similar or equal']);
+  this.executeCharTest('⪎', ['greater than above similar or equal', 'greater than above similar or equal', 'greater than above similar or equal']);
+  this.executeCharTest('⪏', ['less than above similar above greater than', 'less than above similar above greater than', 'less than above similar above greater than']);
+  this.executeCharTest('⪐', ['greater than above similar above less than', 'greater than above similar above less than', 'greater than above similar above less than']);
+  this.executeCharTest('⪑', ['less than above greater than above double line equal', 'less than above greater than above double line equal', 'less than above greater than above double line equal']);
+  this.executeCharTest('⪒', ['greater than above less than above double line equal', 'greater than above less than above double line equal', 'greater than above less than above double line equal']);
+  this.executeCharTest('⪓', ['less than above slanted equal above greater than above slanted equal', 'less than above slanted equal above greater than above slanted equal', 'less than above slanted equal above greater than above slanted equal']);
+  this.executeCharTest('⪔', ['greater than above slanted equal above less than above slanted equal', 'greater than above slanted equal above less than above slanted equal', 'greater than above slanted equal above less than above slanted equal']);
+  this.executeCharTest('⪕', ['slanted equals or less than', 'slanted equals or less than', 'slanted equals or less than']);
+  this.executeCharTest('⪖', ['slanted equals or greater than', 'slanted equals or greater than', 'slanted equals or greater than']);
+  this.executeCharTest('⪗', ['slanted equals or less than with dot inside', 'slanted equals or less than with dot inside', 'slanted equals or less than with dot inside']);
+  this.executeCharTest('⪘', ['slanted equals or greater than with dot inside', 'slanted equals or greater than with dot inside', 'slanted equals or greater than with dot inside']);
+  this.executeCharTest('⪙', ['double line equals or less than', 'double line equals or less than', 'double line equals or less than']);
+  this.executeCharTest('⪚', ['double line equals or greater than', 'double line equals or greater than', 'double line equals or greater than']);
+  this.executeCharTest('⪛', ['double line slanted equals or less than', 'double line slanted equals or less than', 'double line slanted equals or less than']);
+  this.executeCharTest('⪜', ['double line slanted equals or greater than', 'double line slanted equals or greater than', 'double line slanted equals or greater than']);
+  this.executeCharTest('⪝', ['similar or less than', 'similar or less than', 'similar or less than']);
+  this.executeCharTest('⪞', ['similar or greater than', 'similar or greater than', 'similar or greater than']);
+  this.executeCharTest('⪟', ['similar above less than above equals sign', 'similar above less than above equals sign', 'similar above less than above equals sign']);
+  this.executeCharTest('⪠', ['similar above greater than above equals sign', 'similar above greater than above equals sign', 'similar above greater than above equals sign']);
+  this.executeCharTest('⪡', ['double nested less than', 'double nested less than', 'double nested less than']);
+  this.executeCharTest('⪢', ['double nested greater than', 'double nested greater than', 'double nested greater than']);
+  this.executeCharTest('⪣', ['double nested less than with underbar', 'double nested less than with underbar', 'double nested less than with underbar']);
+  this.executeCharTest('⪤', ['greater than overlapping less than', 'greater than overlapping less than', 'greater than overlapping less than']);
+  this.executeCharTest('⪥', ['greater than beside less than', 'greater than beside less than', 'greater than beside less than']);
+  this.executeCharTest('⪦', ['less than closed by curve', 'less than closed by curve', 'less than closed by curve']);
+  this.executeCharTest('⪧', ['greater than closed by curve', 'greater than closed by curve', 'greater than closed by curve']);
+  this.executeCharTest('⪨', ['less than closed by curve above slanted equal', 'less than closed by curve above slanted equal', 'less than closed by curve above slanted equal']);
+  this.executeCharTest('⪩', ['greater than closed by curve above slanted equal', 'greater than closed by curve above slanted equal', 'greater than closed by curve above slanted equal']);
+  this.executeCharTest('⪪', ['smaller than', 'smaller than', 'smaller than']);
+  this.executeCharTest('⪫', ['larger than', 'larger than', 'larger than']);
+  this.executeCharTest('⪬', ['smaller than or equals', 'smaller than or equals', 'smaller than or equals']);
+  this.executeCharTest('⪭', ['larger than or equals', 'larger than or equals', 'larger than or equals']);
+  this.executeCharTest('⪮', ['equals sign with bumpy above', 'equals sign with bumpy above', 'equals sign with bumpy above']);
+  this.executeCharTest('⪯', ['precedes above single line equals sign', 'precedes above single line equals sign', 'precedes above single line equals sign']);
+  this.executeCharTest('⪰', ['succeeds above single line equals sign', 'succeeds above single line equals sign', 'succeeds above single line equals sign']);
+  this.executeCharTest('⪱', ['precedes above single line not equals', 'precedes above single line not equals', 'precedes above single line not equals']);
+  this.executeCharTest('⪲', ['succeeds above single line not equals', 'succeeds above single line not equals', 'succeeds above single line not equals']);
+  this.executeCharTest('⪳', ['precedes above equals sign', 'precedes above equals sign', 'precedes above equals sign']);
+  this.executeCharTest('⪴', ['succeeds above equals sign', 'succeeds above equals sign', 'succeeds above equals sign']);
+  this.executeCharTest('⪵', ['precedes above not equals', 'precedes above not equals', 'precedes above not equals']);
+  this.executeCharTest('⪶', ['succeeds above not equals', 'succeeds above not equals', 'succeeds above not equals']);
+  this.executeCharTest('⪷', ['precedes above almost equals', 'precedes above almost equals', 'precedes above almost equals']);
+  this.executeCharTest('⪸', ['succeeds above almost equals', 'succeeds above almost equals', 'succeeds above almost equals']);
+  this.executeCharTest('⪹', ['precedes above not almost equals', 'precedes above not almost equals', 'precedes above not almost equals']);
+  this.executeCharTest('⪺', ['succeeds above not almost equals', 'succeeds above not almost equals', 'succeeds above not almost equals']);
+  this.executeCharTest('⪻', ['double precedes', 'double precedes', 'double precedes']);
+  this.executeCharTest('⪼', ['double succeeds', 'double succeeds', 'double succeeds']);
+  this.executeCharTest('⪽', ['subset with dot', 'subset with dot', 'subset with dot']);
+  this.executeCharTest('⪾', ['superset with dot', 'superset with dot', 'superset with dot']);
+  this.executeCharTest('⪿', ['subset with plus sign below', 'subset with plus sign below', 'subset with plus sign below']);
+  this.executeCharTest('⫀', ['superset with plus sign below', 'superset with plus sign below', 'superset with plus sign below']);
+  this.executeCharTest('⫁', ['subset with multiplication sign below', 'subset with multiplication sign below', 'subset with multiplication sign below']);
+  this.executeCharTest('⫂', ['superset with multiplication sign below', 'superset with multiplication sign below', 'superset with multiplication sign below']);
+  this.executeCharTest('⫃', ['subset of or equals with dot above', 'subset of or equals with dot above', 'subset of or equals with dot above']);
+  this.executeCharTest('⫄', ['superset of or equals with dot above', 'superset of or equals with dot above', 'superset of or equals with dot above']);
+  this.executeCharTest('⫅', ['subset of above equals sign', 'subset of above equals sign', 'subset of above equals sign']);
+  this.executeCharTest('⫆', ['superset of above equals sign', 'superset of above equals sign', 'superset of above equals sign']);
+  this.executeCharTest('⫇', ['subset of above tilde operator', 'subset of above tilde operator', 'subset of above tilde operator']);
+  this.executeCharTest('⫈', ['superset of above tilde operator', 'superset of above tilde operator', 'superset of above tilde operator']);
+  this.executeCharTest('⫉', ['subset of above almost equals', 'subset of above almost equals', 'subset of above almost equals']);
+  this.executeCharTest('⫊', ['superset of above almost equals', 'superset of above almost equals', 'superset of above almost equals']);
+  this.executeCharTest('⫋', ['subset of above not equals', 'subset of above not equals', 'subset of above not equals']);
+  this.executeCharTest('⫌', ['superset of above not equals', 'superset of above not equals', 'superset of above not equals']);
+  this.executeCharTest('⫍', ['square left open box operator', 'square left open box operator', 'square left open box operator']);
+  this.executeCharTest('⫎', ['square right open box operator', 'square right open box operator', 'square right open box operator']);
+  this.executeCharTest('⫏', ['closed subset', 'closed subset', 'closed subset']);
+  this.executeCharTest('⫐', ['closed superset', 'closed superset', 'closed superset']);
+  this.executeCharTest('⫑', ['closed subset or equals', 'closed subset or equals', 'closed subset or equals']);
+  this.executeCharTest('⫒', ['closed superset or equals', 'closed superset or equals', 'closed superset or equals']);
+  this.executeCharTest('⫓', ['subset above superset', 'subset above superset', 'subset above superset']);
+  this.executeCharTest('⫔', ['superset above subset', 'superset above subset', 'superset above subset']);
+  this.executeCharTest('⫕', ['subset above subset', 'subset above subset', 'subset above subset']);
+  this.executeCharTest('⫖', ['superset above superset', 'superset above superset', 'superset above superset']);
+  this.executeCharTest('⫗', ['superset beside subset', 'superset beside subset', 'superset beside subset']);
+  this.executeCharTest('⫘', ['superset beside and joined by dash with subset', 'superset beside and joined by dash with subset', 'superset beside and joined by dash with subset']);
+  this.executeCharTest('⫙', ['element of opening downwards', 'element of opening downwards', 'element of opening downwards']);
+  this.executeCharTest('⫚', ['pitchfork with tee top', 'pitchfork with tee top', 'pitchfork with tee top']);
+  this.executeCharTest('⫛', ['transversal intersection', 'transversal intersection', 'transversal intersection']);
+  this.executeCharTest('⫝̸', ['forking', 'forking', 'forking']);
+  this.executeCharTest('⫝', ['nonforking', 'nonforking', 'nonforking']);
+  this.executeCharTest('⫞', ['short left tack', 'short left tack', 'short left tack']);
+  this.executeCharTest('⫟', ['short down tack', 'short down tack', 'short down tack']);
+  this.executeCharTest('⫠', ['short up tack', 'short up tack', 'short up tack']);
+  this.executeCharTest('⫡', ['perpendicular with s', 'perpendicular with s', 'perpendicular with s']);
+  this.executeCharTest('⫢', ['vertical bar triple right turnstile', 'vertical bar triple right turnstile', 'vertical bar triple right turnstile']);
+  this.executeCharTest('⫣', ['double vertical bar left turnstile', 'double vertical bar left turnstile', 'double vertical bar left turnstile']);
+  this.executeCharTest('⫤', ['vertical bar double left turnstile', 'vertical bar double left turnstile', 'vertical bar double left turnstile']);
+  this.executeCharTest('⫥', ['double vertical bar double left turnstile', 'double vertical bar double left turnstile', 'double vertical bar double left turnstile']);
+  this.executeCharTest('⫦', ['long dash from left member of double vertical', 'long dash from left member of double vertical', 'long dash from left member of double vertical']);
+  this.executeCharTest('⫧', ['short down tack with overbar', 'short down tack with overbar', 'short down tack with overbar']);
+  this.executeCharTest('⫨', ['short up tack with underbar', 'short up tack with underbar', 'short up tack with underbar']);
+  this.executeCharTest('⫩', ['short up tack above short down tack', 'short up tack above short down tack', 'short up tack above short down tack']);
+  this.executeCharTest('⫪', ['double down tack', 'double down tack', 'double down tack']);
+  this.executeCharTest('⫫', ['double up tack', 'double up tack', 'double up tack']);
+  this.executeCharTest('⫬', ['double stroke not sign', 'double stroke not sign', 'double stroke not sign']);
+  this.executeCharTest('⫭', ['reversed double stroke not sign', 'reversed double stroke not sign', 'reversed double stroke not sign']);
+  this.executeCharTest('⫮', ['does not divide with reversed negation slash', 'does not divide with reversed negation slash', 'does not divide with reversed negation slash']);
+  this.executeCharTest('⫯', ['vertical line with circle above', 'vertical line with circle above', 'vertical line with circle above']);
+  this.executeCharTest('⫰', ['vertical line with circle below', 'vertical line with circle below', 'vertical line with circle below']);
+  this.executeCharTest('⫱', ['down tack with circle below', 'down tack with circle below', 'down tack with circle below']);
+  this.executeCharTest('⫲', ['parallel with horizontal stroke', 'parallel with horizontal stroke', 'parallel with horizontal stroke']);
+  this.executeCharTest('⫳', ['parallel with tilde operator', 'parallel with tilde operator', 'parallel with tilde operator']);
+  this.executeCharTest('⫴', ['triple vertical bar binary relation', 'triple vertical bar binary relation', 'triple vertical bar binary relation']);
+  this.executeCharTest('⫵', ['triple vertical bar with horizontal stroke', 'triple vertical bar with horizontal stroke', 'triple vertical bar with horizontal stroke']);
+  this.executeCharTest('⫶', ['triple colon operator', 'triple colon operator', 'triple colon operator']);
+  this.executeCharTest('⫷', ['triple nested less than', 'triple nested less than', 'triple nested less than']);
+  this.executeCharTest('⫸', ['triple nested greater than', 'triple nested greater than', 'triple nested greater than']);
+  this.executeCharTest('⫹', ['double line slanted less than or equals', 'double line slanted less than or equals', 'double line slanted less than or equals']);
+  this.executeCharTest('⫺', ['double line slanted greater than or equals', 'double line slanted greater than or equals', 'double line slanted greater than or equals']);
+  this.executeCharTest('⫻', ['triple solidus binary relation', 'triple solidus binary relation', 'triple solidus binary relation']);
+  this.executeCharTest('⫼', ['large triple vertical bar operator', 'large triple vertical bar operator', 'large triple vertical bar operator']);
+  this.executeCharTest('⫽', ['double solidus operator', 'double solidus operator', 'double solidus operator']);
+  this.executeCharTest('⫾', ['white vertical bar', 'white vertical bar', 'white vertical bar']);
+  this.executeCharTest('⫿', ['n ary white vertical bar', 'n ary white vertical bar', 'n ary white vertical bar']);
+  this.executeCharTest('〜', ['wave dash', 'wave dash', 'wave dash']);
+  this.executeCharTest('︐', ['presentation form for vertical comma', 'presentation form for vertical comma', 'presentation form for vertical comma']);
+  this.executeCharTest('︓', ['presentation form for vertical colon', 'presentation form for vertical colon', 'presentation form for vertical colon']);
+  this.executeCharTest('︔', ['presentation form for vertical semicolon', 'presentation form for vertical semicolon', 'presentation form for vertical semicolon']);
+  this.executeCharTest('︕', ['presentation form for vertical exclamation mark', 'presentation form for vertical exclamation mark', 'presentation form for vertical exclamation mark']);
+  this.executeCharTest('︖', ['presentation form for vertical question mark', 'presentation form for vertical question mark', 'presentation form for vertical question mark']);
+  this.executeCharTest('︙', ['presentation form for vertical horizontal ellipsis', 'presentation form for vertical horizontal ellipsis', 'presentation form for vertical horizontal ellipsis']);
+  this.executeCharTest('︰', ['presentation form for vertical two dot leader', 'presentation form for vertical two dot leader', 'glyph for vertical two dot leader']);
+  this.executeCharTest('︱', ['presentation form for vertical em dash', 'presentation form for vertical em dash', 'glyph for vertical em dash']);
+  this.executeCharTest('︲', ['presentation form for vertical en dash', 'presentation form for vertical en dash', 'glyph for vertical en dash']);
+  this.executeCharTest('︳', ['presentation form for vertical low line', 'presentation form for vertical low line', 'glyph for vertical spacing underscore']);
+  this.executeCharTest('︴', ['presentation form for vertical wavy low line', 'presentation form for vertical wavy low line', 'glyph for vertical spacing wavy underscore']);
+  this.executeCharTest('﹅', ['sesame dot', 'sesame dot', 'sesame dot']);
+  this.executeCharTest('﹆', ['white sesame dot', 'white sesame dot', 'white sesame dot']);
+  this.executeCharTest('﹉', ['dashed overline', 'dashed overline', 'spacing dashed overscore']);
+  this.executeCharTest('﹊', ['centerline overline', 'centerline overline', 'spacing centerline overscore']);
+  this.executeCharTest('﹋', ['wavy overline', 'wavy overline', 'spacing wavy overscore']);
+  this.executeCharTest('﹌', ['double wavy overline', 'double wavy overline', 'spacing double wavy overscore']);
+  this.executeCharTest('﹍', ['dashed low line', 'dashed low line', 'spacing dashed underscore']);
+  this.executeCharTest('﹎', ['centerline low line', 'centerline low line', 'spacing centerline underscore']);
+  this.executeCharTest('﹏', ['wavy low line', 'wavy low line', 'spacing wavy underscore']);
+  this.executeCharTest('﹐', ['small comma', 'small comma', 'small comma']);
+  this.executeCharTest('﹒', ['small full stop', 'small full stop', 'small period']);
+  this.executeCharTest('﹔', ['small semicolon', 'small semicolon', 'small semicolon']);
+  this.executeCharTest('﹕', ['small colon', 'small colon', 'small colon']);
+  this.executeCharTest('﹖', ['small question mark', 'small question mark', 'small question mark']);
+  this.executeCharTest('﹗', ['small exclamation mark', 'small exclamation mark', 'small exclamation mark']);
+  this.executeCharTest('﹘', ['small em dash', 'small em dash', 'small em dash']);
+  this.executeCharTest('﹟', ['small number sign', 'small number sign', 'small number sign']);
+  this.executeCharTest('﹠', ['small ampersand', 'small ampersand', 'small ampersand']);
+  this.executeCharTest('﹡', ['small asterisk', 'small asterisk', 'small asterisk']);
+  this.executeCharTest('﹢', ['small plus sign', 'small plus sign', 'small plus sign']);
+  this.executeCharTest('﹣', ['small hyphen minus', 'small hyphen minus', 'small hyphen minus']);
+  this.executeCharTest('﹤', ['small less than sign', 'small less than sign', 'small less than sign']);
+  this.executeCharTest('﹥', ['small greater than sign', 'small greater than sign', 'small greater than sign']);
+  this.executeCharTest('﹦', ['small equals sign', 'small equals sign', 'small equals sign']);
+  this.executeCharTest('﹨', ['small reverse solidus', 'small reverse solidus', 'small backslash']);
+  this.executeCharTest('﹩', ['small dollar sign', 'small dollar sign', 'small dollar sign']);
+  this.executeCharTest('﹪', ['small percent sign', 'small percent sign', 'small percent sign']);
+  this.executeCharTest('﹫', ['small commercial at', 'small commercial at', 'small commercial at']);
+  this.executeCharTest('！', ['fullwidth exclamation mark', 'fullwidth exclamation mark', 'fullwidth exclamation mark']);
+  this.executeCharTest('＂', ['fullwidth quotation mark', 'fullwidth quotation mark', 'fullwidth quotation mark']);
+  this.executeCharTest('＃', ['fullwidth number sign', 'fullwidth number sign', 'fullwidth number sign']);
+  this.executeCharTest('＄', ['fullwidth dollar sign', 'fullwidth dollar sign', 'fullwidth dollar sign']);
+  this.executeCharTest('％', ['fullwidth percent sign', 'fullwidth percent sign', 'fullwidth percent sign']);
+  this.executeCharTest('＆', ['fullwidth ampersand', 'fullwidth ampersand', 'fullwidth ampersand']);
+  this.executeCharTest('＇', ['fullwidth apostrophe', 'fullwidth apostrophe', 'fullwidth apostrophe']);
+  this.executeCharTest('＊', ['fullwidth asterisk', 'fullwidth asterisk', 'fullwidth asterisk']);
+  this.executeCharTest('＋', ['fullwidth plus sign', 'fullwidth plus sign', 'fullwidth plus sign']);
+  this.executeCharTest('，', ['fullwidth comma', 'fullwidth comma', 'fullwidth comma']);
+  this.executeCharTest('－', ['fullwidth hyphen minus', 'fullwidth hyphen minus', 'fullwidth hyphen minus']);
+  this.executeCharTest('．', ['fullwidth full stop', 'fullwidth full stop', 'fullwidth period']);
+  this.executeCharTest('／', ['fullwidth solidus', 'fullwidth solidus', 'fullwidth slash']);
+  this.executeCharTest('：', ['fullwidth colon', 'fullwidth colon', 'fullwidth colon']);
+  this.executeCharTest('；', ['fullwidth semicolon', 'fullwidth semicolon', 'fullwidth semicolon']);
+  this.executeCharTest('＜', ['fullwidth less than sign', 'fullwidth less than sign', 'fullwidth less than sign']);
+  this.executeCharTest('＝', ['fullwidth equals sign', 'fullwidth equals sign', 'fullwidth equals sign']);
+  this.executeCharTest('＞', ['fullwidth greater than sign', 'fullwidth greater than sign', 'fullwidth greater than sign']);
+  this.executeCharTest('？', ['fullwidth question mark', 'fullwidth question mark', 'fullwidth question mark']);
+  this.executeCharTest('＠', ['fullwidth commercial at', 'fullwidth commercial at', 'fullwidth commercial at']);
+  this.executeCharTest('＼', ['fullwidth reverse solidus', 'fullwidth reverse solidus', 'fullwidth backslash']);
+  this.executeCharTest('＾', ['fullwidth circumflex accent', 'fullwidth circumflex accent', 'fullwidth spacing circumflex']);
+  this.executeCharTest('＿', ['fullwidth low line', 'fullwidth low line', 'fullwidth spacing underscore']);
+  this.executeCharTest('｀', ['fullwidth grave accent', 'fullwidth grave accent', 'fullwidth spacing grave']);
+  this.executeCharTest('｜', ['fullwidth vertical line', 'fullwidth vertical line', 'fullwidth vertical bar']);
+  this.executeCharTest('～', ['fullwidth tilde', 'fullwidth tilde', 'fullwidth spacing tilde']);
+  this.executeCharTest('￠', ['fullwidth cent sign', 'fullwidth cent sign', 'fullwidth cent sign']);
+  this.executeCharTest('￡', ['fullwidth pound sign', 'fullwidth pound sign', 'fullwidth pound sign']);
+  this.executeCharTest('￢', ['fullwidth not sign', 'fullwidth not sign', 'fullwidth not sign']);
+  this.executeCharTest('￣', ['fullwidth macron', 'fullwidth macron', 'fullwidth spacing macron']);
+  this.executeCharTest('￤', ['fullwidth broken bar', 'fullwidth broken bar', 'fullwidth broken vertical bar']);
+  this.executeCharTest('￥', ['fullwidth yen sign', 'fullwidth yen sign', 'fullwidth yen sign']);
+  this.executeCharTest('￦', ['fullwidth won sign', 'fullwidth won sign', 'fullwidth won sign']);
+  this.executeCharTest('￨', ['halfwidth forms light vertical', 'halfwidth forms light vertical', 'halfwidth forms light vertical']);
+  this.executeCharTest('￭', ['halfwidth black square', 'halfwidth black square', 'halfwidth black square']);
+  this.executeCharTest('￮', ['halfwidth white circle', 'halfwidth white circle', 'halfwidth white circle']);
+  this.executeCharTest(' ', ['space', 'space', 'space']);
+  this.executeCharTest(' ', ['no break space', 'no break space', 'non breaking space']);
+  this.executeCharTest('­', ['soft hyphen', 'soft hyphen', 'soft hyphen']);
+  this.executeCharTest(' ', ['en quad', 'en quad', 'en quad']);
+  this.executeCharTest(' ', ['em quad', 'em quad', 'em quad']);
+  this.executeCharTest(' ', ['en space', 'en space', 'en space']);
+  this.executeCharTest(' ', ['em space', 'em space', 'em space']);
+  this.executeCharTest(' ', ['three per em space', 'three per em space', 'three per em space']);
+  this.executeCharTest(' ', ['four per em space', 'four per em space', 'four per em space']);
+  this.executeCharTest(' ', ['six per em space', 'six per em space', 'six per em space']);
+  this.executeCharTest(' ', ['figure space', 'figure space', 'figure space']);
+  this.executeCharTest(' ', ['punctuation space', 'punctuation space', 'punctuation space']);
+  this.executeCharTest(' ', ['thin space', 'thin space', 'thin space']);
+  this.executeCharTest(' ', ['hair space', 'hair space', 'hair space']);
+  this.executeCharTest('​', ['zero width space', 'zero width space', 'zero width space']);
+  this.executeCharTest('‌', ['zero width non joiner', 'zero width non joiner', 'zero width non joiner']);
+  this.executeCharTest('‍', ['zero width joiner', 'zero width joiner', 'zero width joiner']);
+  this.executeCharTest('‎', ['left to right mark', 'left to right mark', 'left to right mark']);
+  this.executeCharTest('‏', ['right to left mark', 'right to left mark', 'right to left mark']);
+  this.executeCharTest(' ', ['line separator', 'line separator', 'line separator']);
+  this.executeCharTest(' ', ['paragraph separator', 'paragraph separator', 'paragraph separator']);
+  this.executeCharTest('‪', ['left to right embedding', 'left to right embedding', 'left to right embedding']);
+  this.executeCharTest('‫', ['right to left embedding', 'right to left embedding', 'right to left embedding']);
+  this.executeCharTest('‬', ['pop directional formatting', 'pop directional formatting', 'pop directional formatting']);
+  this.executeCharTest('‭', ['left to right override', 'left to right override', 'left to right override']);
+  this.executeCharTest('‮', ['right to left override', 'right to left override', 'right to left override']);
+  this.executeCharTest(' ', ['narrow no break space', 'narrow no break space', 'narrow no break space']);
+  this.executeCharTest(' ', ['medium mathematical space', 'medium mathematical space', 'medium mathematical space']);
+  this.executeCharTest('⁠', ['word joiner', 'word joiner', 'word joiner']);
+  this.executeCharTest('⁡', ['function application', 'of', 'of']);
+  this.executeCharTest('⁢', ['invisible times', 'times', 'times']);
+  this.executeCharTest('⁣', ['invisible separator', 'separator', 'separator']);
+  this.executeCharTest('⁤', ['invisible plus', 'plus', 'plus']);
+  this.executeCharTest('⁪', ['inhibit symmetric swapping', 'inhibit symmetric swapping', 'inhibit symmetric swapping']);
+  this.executeCharTest('⁫', ['activate symmetric swapping', 'activate symmetric swapping', 'activate symmetric swapping']);
+  this.executeCharTest('⁮', ['national digit shapes', 'national digit shapes', 'national digit shapes']);
+  this.executeCharTest('⁯', ['nominal digit shapes', 'nominal digit shapes', 'nominal digit shapes']);
+  this.executeCharTest('﻿', ['zero width no break space', 'zero width no break space', 'byte order mark']);
+  this.executeCharTest('￹', ['interlinear annotation anchor', 'interlinear annotation anchor', 'interlinear annotation anchor']);
+  this.executeCharTest('￺', ['interlinear annotation separator', 'interlinear annotation separator', 'interlinear annotation separator']);
+  this.executeCharTest('￻', ['interlinear annotation terminator', 'interlinear annotation terminator', 'interlinear annotation terminator']);
+  this.executeCharTest('⏨', ['decimal exponent symbol', 'decimal exponent symbol', 'decimal exponent symbol']);
+  this.executeCharTest('★', ['black star', 'black star', 'black star']);
+  this.executeCharTest('☆', ['white star', 'white star', 'white star']);
+  this.executeCharTest('⚪', ['medium white circle', 'white circle', 'white circle']);
+  this.executeCharTest('⚫', ['medium black circle', 'black circle', 'black circle']);
+  this.executeCharTest('✅', ['white heavy check mark', 'white check', 'white check']);
+  this.executeCharTest('✓', ['check mark', 'check', 'check']);
+  this.executeCharTest('✔', ['heavy check mark', 'heavy check', 'heavy check']);
+  this.executeCharTest('✕', ['multiplication x', 'multiplication x', 'multiplication x']);
+  this.executeCharTest('✖', ['heavy multiplication x', 'heavy multiplication x', 'heavy multiplication x']);
+  this.executeCharTest('✗', ['ballot x', 'ballot x', 'ballot x']);
+  this.executeCharTest('✘', ['heavy ballot x', 'heavy ballot x', 'heavy ballot x']);
+  this.executeCharTest('✛', ['open center cross', 'open center cross', 'open center cross']);
+  this.executeCharTest('✜', ['heavy open center cross', 'heavy open center cross', 'heavy open center cross']);
+  this.executeCharTest('✠', ['maltese cross', 'maltese cross', 'maltese cross']);
+  this.executeCharTest('✡', ['star of david', 'star of david', 'star of david']);
+  this.executeCharTest('✢', ['four teardrop spoked asterisk', 'four teardrop spoked asterisk', 'four teardrop spoked asterisk']);
+  this.executeCharTest('✣', ['four balloon spoked asterisk', 'four balloon spoked asterisk', 'four balloon spoked asterisk']);
+  this.executeCharTest('✤', ['heavy four balloon spoked asterisk', 'heavy four balloon spoked asterisk', 'heavy four balloon spoked asterisk']);
+  this.executeCharTest('✥', ['four club spoked asterisk', 'four club spoked asterisk', 'four club spoked asterisk']);
+  this.executeCharTest('✦', ['black four pointed star', 'black four pointed star', 'black four pointed star']);
+  this.executeCharTest('✧', ['white four pointed star', 'white four pointed star', 'white four pointed star']);
+  this.executeCharTest('✨', ['sparkles', 'sparkles', 'sparkles']);
+  this.executeCharTest('✩', ['stress outlined white star', 'stress outlined white star', 'stress outlined white star']);
+  this.executeCharTest('✪', ['circled white star', 'circled white star', 'circled white star']);
+  this.executeCharTest('✫', ['open center black star', 'open center black star', 'open center black star']);
+  this.executeCharTest('✬', ['black center white star', 'black center white star', 'black center white star']);
+  this.executeCharTest('✭', ['outlined black star', 'outlined black star', 'outlined black star']);
+  this.executeCharTest('✮', ['heavy outlined black star', 'heavy outlined black star', 'heavy outlined black star']);
+  this.executeCharTest('✯', ['pinwheel star', 'pinwheel star', 'pinwheel star']);
+  this.executeCharTest('✰', ['shadowed white star', 'shadowed white star', 'shadowed white star']);
+  this.executeCharTest('✱', ['heavy asterisk', 'heavy asterisk', 'heavy asterisk']);
+  this.executeCharTest('✲', ['open center asterisk', 'open center asterisk', 'open center asterisk']);
+  this.executeCharTest('✳', ['eight spoked asterisk', 'eight spoked asterisk', 'eight spoked asterisk']);
+  this.executeCharTest('✴', ['eight pointed black star', 'eight pointed black star', 'eight pointed black star']);
+  this.executeCharTest('✵', ['eight pointed pinwheel star', 'eight pointed pinwheel star', 'eight pointed pinwheel star']);
+  this.executeCharTest('✶', ['six pointed black star', 'six pointed black star', 'six pointed black star']);
+  this.executeCharTest('✹', ['twelve pointed black star', 'twelve pointed black star', 'twelve pointed black star']);
+  this.executeCharTest('✺', ['sixteen pointed asterisk', 'sixteen pointed asterisk', 'sixteen pointed asterisk']);
+  this.executeCharTest('✻', ['teardrop spoked asterisk', 'teardrop spoked asterisk', 'teardrop spoked asterisk']);
+  this.executeCharTest('✼', ['open center teardrop spoked asterisk', 'open center teardrop spoked asterisk', 'open center teardrop spoked asterisk']);
+  this.executeCharTest('✽', ['heavy teardrop spoked asterisk', 'heavy teardrop spoked asterisk', 'heavy teardrop spoked asterisk']);
+  this.executeCharTest('✾', ['six petalled black and white florette', 'six petalled black and white florette', 'six petalled black and white florette']);
+  this.executeCharTest('✿', ['black florette', 'black florette', 'black florette']);
+  this.executeCharTest('❀', ['white florette', 'white florette', 'white florette']);
+  this.executeCharTest('❁', ['eight petalled outlined black florette', 'eight petalled outlined black florette', 'eight petalled outlined black florette']);
+  this.executeCharTest('❂', ['circled open center eight pointed star', 'circled open center eight pointed star', 'circled open center eight pointed star']);
+  this.executeCharTest('❃', ['heavy teardrop spoked pinwheel asterisk', 'heavy teardrop spoked pinwheel asterisk', 'heavy teardrop spoked pinwheel asterisk']);
+  this.executeCharTest('❄', ['snowflake', 'snowflake', 'snowflake']);
+  this.executeCharTest('❅', ['tight trifoliate snowflake', 'tight trifoliate snowflake', 'tight trifoliate snowflake']);
+  this.executeCharTest('❆', ['heavy chevron snowflake', 'heavy chevron snowflake', 'heavy chevron snowflake']);
+  this.executeCharTest('❇', ['sparkle', 'sparkle', 'sparkle']);
+  this.executeCharTest('❈', ['heavy sparkle', 'heavy sparkle', 'heavy sparkle']);
+  this.executeCharTest('❉', ['balloon spoked asterisk', 'balloon spoked asterisk', 'balloon spoked asterisk']);
+  this.executeCharTest('❊', ['eight teardrop spoked propeller asterisk', 'eight teardrop spoked propeller asterisk', 'eight teardrop spoked propeller asterisk']);
+  this.executeCharTest('❋', ['heavy eight teardrop spoked propeller asterisk', 'heavy eight teardrop spoked propeller asterisk', 'heavy eight teardrop spoked propeller asterisk']);
+  this.executeCharTest('❌', ['cross mark', 'cross mark', 'cross mark']);
+  this.executeCharTest('❍', ['shadowed white circle', 'shadowed white circle', 'shadowed white circle']);
+};
+
+
+sre.DefaultCharEnglishTest.prototype.testFunctions = function() {
+  this.executeCharTest('deg', ['degree', 'degree', 'degree']);
+  this.executeCharTest('det', ['determinant', 'det', 'det']);
+  this.executeCharTest('dim', ['dimension', 'dimension', 'dimension']);
+  this.executeCharTest('hom', ['homomorphism', 'hom', 'hom']);
+  this.executeCharTest('Hom', ['homomorphism', 'hom', 'hom']);
+  this.executeCharTest('ker', ['kernel', 'kernel', 'kernel']);
+  this.executeCharTest('Tr', ['trace', 'trace', 'trace']);
+  this.executeCharTest('tr', ['trace', 'trace', 'trace']);
+  this.executeCharTest('log', ['logarithm', 'log', 'logarithm function']);
+  this.executeCharTest('ln', ['natural logarithm', 'natural log', 'natural logarithm function']);
+  this.executeCharTest('lg', ['logarithm base 10', 'log base 10', 'log base 10']);
+  this.executeCharTest('exp', ['exponential', 'exp', 'exponential function']);
+  this.executeCharTest('expt', ['exponential', 'exp', 'exponential function']);
+  this.executeCharTest('gcd', ['greatest common divisor', 'gcd', 'gcd']);
+  this.executeCharTest('lcm', ['least common multiple', 'lcm', 'lcm']);
+  this.executeCharTest('arg', ['argument', 'arg', 'arg']);
+  this.executeCharTest('im', ['imaginary part', 'imaginary', 'imaginary']);
+  this.executeCharTest('re', ['real part', 'real', 'real']);
+  this.executeCharTest('inf', ['infimum', 'inf', 'inf']);
+  this.executeCharTest('lim', ['limit', 'lim', 'lim']);
+  this.executeCharTest('lim inf', ['infimum default', 'liminf', 'inferior limit']);
+  this.executeCharTest('liminf', ['infimum default', 'liminf', 'inferior limit']);
+  this.executeCharTest('lim sup', ['supremum limit', 'limsup', 'superior limit']);
+  this.executeCharTest('limsup', ['supremum limit', 'limsup', 'superior limit']);
+  this.executeCharTest('max', ['maximum', 'max', 'max']);
+  this.executeCharTest('min', ['minimum', 'min', 'min']);
+  this.executeCharTest('sup', ['supremum', 'sup', 'sup']);
+  this.executeCharTest('injlim', ['injective limit', 'colimit', 'direct limit']);
+  this.executeCharTest('inj lim', ['injective limit', 'colimit', 'direct limit']);
+  this.executeCharTest('projlim', ['projective limit', 'limit', 'inverse limit']);
+  this.executeCharTest('proj lim', ['projective limit', 'limit', 'inverse limit']);
+  this.executeCharTest('mod', ['modulo', 'mod', 'mod']);
+  this.executeCharTest('Pr', ['probability', 'probability', 'probability']);
+  this.executeCharTest('cosh', ['hyperbolic cosine function', 'hyperbolic cosine', 'hyperbolic cosine']);
+  this.executeCharTest('coth', ['hyperbolic cotangent function', 'hyperbolic cotangent', 'hyperbolic cotangent']);
+  this.executeCharTest('csch', ['hyperbolic cosecant function', 'hyperbolic cosecant', 'hyperbolic cosecant']);
+  this.executeCharTest('sech', ['hyperbolic secant function', 'hyperbolic secant', 'hyperbolic secant']);
+  this.executeCharTest('sinh', ['hyperbolic sine function', 'hyperbolic sine', 'hyperbolic sine']);
+  this.executeCharTest('tanh', ['hyperbolic tangent function', 'hyperbolic tangent', 'hyperbolic tangent']);
+  this.executeCharTest('arcosh', ['inverse hyperbolic cosine function', 'area hyperbolic cosine', 'area hyperbolic cosine function']);
+  this.executeCharTest('arccosh', ['inverse hyperbolic cosine function', 'area hyperbolic cosine', 'area hyperbolic cosine function']);
+  this.executeCharTest('arcoth', ['inverse hyperbolic cotangent function', 'area hyperbolic cotangent', 'area hyperbolic cotangent function']);
+  this.executeCharTest('arccoth', ['inverse hyperbolic cotangent function', 'area hyperbolic cotangent', 'area hyperbolic cotangent function']);
+  this.executeCharTest('arcsch', ['inverse hyperbolic cosecant function', 'area hyperbolic cosecant', 'area hyperbolic cosecant function']);
+  this.executeCharTest('arccsch', ['inverse hyperbolic cosecant function', 'area hyperbolic cosecant', 'area hyperbolic cosecant function']);
+  this.executeCharTest('arsech', ['inverse hyperbolic secant function', 'area hyperbolic secant', 'area hyperbolic secant function']);
+  this.executeCharTest('arcsech', ['inverse hyperbolic secant function', 'area hyperbolic secant', 'area hyperbolic secant function']);
+  this.executeCharTest('arsinh', ['inverse hyperbolic sine function', 'area hyperbolic sine', 'area hyperbolic sine function']);
+  this.executeCharTest('arcsinh', ['inverse hyperbolic sine function', 'area hyperbolic sine', 'area hyperbolic sine function']);
+  this.executeCharTest('artanh', ['inverse hyperbolic tangent function', 'area hyperbolic tangent', 'area hyperbolic tangent function']);
+  this.executeCharTest('arctanh', ['inverse hyperbolic tangent function', 'area hyperbolic tangent', 'area hyperbolic tangent function']);
+  this.executeCharTest('cos', ['cosine function', 'cosine', 'cosine']);
+  this.executeCharTest('cosine', ['cosine function', 'cosine', 'cosine']);
+  this.executeCharTest('cot', ['cotangent function', 'cotangent', 'cotangent']);
+  this.executeCharTest('csc', ['cosecant function', 'cosecant', 'cosecant']);
+  this.executeCharTest('sec', ['secant function', 'secant', 'secant']);
+  this.executeCharTest('sin', ['sine function', 'sine', 'sine function']);
+  this.executeCharTest('sine', ['sine function', 'sine', 'sine function']);
+  this.executeCharTest('tan', ['tangent function', 'tangent', 'tangent']);
+  this.executeCharTest('arccos', ['inverse cosine function', 'arc cosine', 'arc cosine function']);
+  this.executeCharTest('arccot', ['inverse cotangent function', 'arc cotangent', 'arc cotangent function']);
+  this.executeCharTest('arccsc', ['inverse cosecant function', 'arc cosecant', 'arc cosecant function']);
+  this.executeCharTest('arcsec', ['inverse secant function', 'arc secant', 'arc secant function']);
+  this.executeCharTest('arcsin', ['inverse sine function', 'arc sine', 'arc sine function']);
+  this.executeCharTest('arctan', ['inverse tangent function', 'arc tangent', 'arc tangent function']);
+};
+
+
+sre.DefaultCharEnglishTest.prototype.testUnits = function() {
+  this.executeUnitTest('W', ['watty', 'watt', 'watt']);
+  this.executeUnitTest('w', ['watt', 'watt', 'watt']);
+  this.executeUnitTest('kw', ['kilowatt', 'kilowatt', 'kilowatt']);
+  this.executeUnitTest('kW', ['kilowatt', 'kilowatt', 'kilowatt']);
+  this.executeUnitTest('mw', ['milliwatt', 'milliwatt', 'milliwatt']);
+  this.executeUnitTest('mW', ['milliwatt', 'milliwatt', 'milliwatt']);
+  this.executeUnitTest('kwh', ['kilowatt hour', 'kilowatt hour', 'kilowatt hour']);
+  this.executeUnitTest('kWh', ['kilowatt hour', 'kilowatt hour', 'kilowatt hour']);
+  this.executeUnitTest('J', ['joule', 'joule', 'joule']);
+  this.executeUnitTest('N', ['Newton', 'Newton', 'Newton']);
+  this.executeUnitTest('A', ['ampere', 'ampere', 'ampere']);
+  this.executeUnitTest('V', ['volt', 'volt', 'volt']);
+  this.executeUnitTest('µΩ', ['microohm', 'microohm', 'microohm']);
+  this.executeUnitTest('mΩ', ['milliohm', 'milliohm', 'milliohm']);
+  this.executeUnitTest('Ω', ['ohm', 'ohm', 'ohm']);
+  this.executeUnitTest('Ohm', ['ohm', 'ohm', 'ohm']);
+  this.executeUnitTest('kΩ', ['kilohm', 'kilohm', 'kilohm']);
+  this.executeUnitTest('KΩ', ['kilohm', 'kilohm', 'kilohm']);
+  this.executeUnitTest('MΩ', ['megaohm', 'megaohm', 'megaohm']);
+  this.executeUnitTest('GΩ', ['gigaohm', 'gigaohm', 'gigaohm']);
+  this.executeUnitTest('mm', ['millimeter', 'millimeter', 'millimeter']);
+  this.executeUnitTest('cm', ['centimeter', 'centimeter', 'centimeter']);
+  this.executeUnitTest('m', ['meter', 'meter', 'meter']);
+  this.executeUnitTest('km', ['kilometer', 'kilometer', 'kilometer']);
+  this.executeUnitTest('ft', ['foot', 'foot', 'foot']);
+  this.executeUnitTest('ft.', ['foot', 'foot', 'foot']);
+  this.executeUnitTest('in', ['inch', 'inch', 'inch']);
+  this.executeUnitTest('in.', ['inch', 'inch', 'inch']);
+  this.executeUnitTest('mi', ['mile', 'mile', 'mile']);
+  this.executeUnitTest('mi.', ['mile', 'mile', 'mile']);
+  this.executeUnitTest('yd', ['yard', 'yard', 'yard']);
+  this.executeUnitTest('yd.', ['yard', 'yard', 'yard']);
+  this.executeUnitTest('n.m.', ['nautical mile', 'nautical mile', 'nautical mile']);
+  this.executeUnitTest('b', ['bit', 'bit', 'bit']);
+  this.executeUnitTest('B', ['byte', 'byte', 'byte']);
+  this.executeUnitTest('KB', ['kilobyte', 'kilobyte', 'kilobyte']);
+  this.executeUnitTest('MB', ['megabyte', 'megabyte', 'megabyte']);
+  this.executeUnitTest('GB', ['gigabyte', 'gigabyte', 'gigabyte']);
+  this.executeUnitTest('TB', ['terabyte', 'terabyte', 'terabyte']);
+  this.executeUnitTest('doz', ['dozen', 'dozen', 'dozen']);
+  this.executeUnitTest('doz.', ['dozen', 'dozen', 'dozen']);
+  this.executeUnitTest('dz', ['dozen', 'dozen', 'dozen']);
+  this.executeUnitTest('dz.', ['dozen', 'dozen', 'dozen']);
+  this.executeUnitTest('sq', ['square', 'square', 'square']);
+  this.executeUnitTest('sq.', ['square', 'square', 'square']);
+  this.executeUnitTest('ha', ['hectare', 'hectare', 'hectare']);
+  this.executeUnitTest('kt', ['knot', 'knot', 'knot']);
+  this.executeUnitTest('kt.', ['knot', 'knot', 'knot']);
+  this.executeUnitTest('mph', ['miles per hour', 'miles per hour', 'miles per hour']);
+  this.executeUnitTest('rpm', ['revolutions per minute', 'revolutions per minute', 'revolutions per minute']);
+  this.executeUnitTest('kmh', ['kilometers per hour', 'kilometers per hour', 'kilometers per hour']);
+  this.executeUnitTest('F', ['Fahrenheit', 'Fahrenheit', 'Fahrenheit']);
+  this.executeUnitTest('F.', ['Fahrenheit', 'Fahrenheit', 'Fahrenheit']);
+  this.executeUnitTest('°F', ['Fahrenheit', 'Fahrenheit', 'Fahrenheit']);
+  this.executeUnitTest('C', ['Celsius', 'Celsius', 'Centigrade']);
+  this.executeUnitTest('°C', ['Celsius', 'Celsius', 'Centigrade']);
+  this.executeUnitTest('K', ['Kelvin', 'Kelvin', 'Kelvin']);
+  this.executeUnitTest('°K', ['Kelvin', 'Kelvin', 'Kelvin']);
+  this.executeUnitTest('ns', ['nanosecond', 'nanosecond', 'nanosecond']);
+  this.executeUnitTest('µs', ['microsecond', 'microsecond', 'microsecond']);
+  this.executeUnitTest('ms', ['millisecond', 'millisecond', 'millisecond']);
+  this.executeUnitTest('s', ['second', 'second', 'second']);
+  this.executeUnitTest('min', ['minute', 'minute', 'minute']);
+  this.executeUnitTest('h', ['hour', 'hour', 'hour']);
+  this.executeUnitTest('hr', ['hour', 'hour', 'hour']);
+  this.executeUnitTest('bbl.', ['barrel', 'barrel', 'barrel']);
+  this.executeUnitTest('bbl', ['barrel', 'barrel', 'barrel']);
+  this.executeUnitTest('cu', ['cubic', 'cubic', 'cubic']);
+  this.executeUnitTest('cu.', ['cubic', 'cubic', 'cubic']);
+  this.executeUnitTest('fl. oz.', ['fluid ounce', 'fluid ounce', 'fluid ounce']);
+  this.executeUnitTest('gal', ['gallon', 'gallon', 'gallon']);
+  this.executeUnitTest('gal.', ['gallon', 'gallon', 'gallon']);
+  this.executeUnitTest('pt', ['pint', 'pint', 'pint']);
+  this.executeUnitTest('pt.', ['pint', 'pint', 'pint']);
+  this.executeUnitTest('qt', ['quart', 'quart', 'quart']);
+  this.executeUnitTest('qt.', ['quart', 'quart', 'quart']);
+  this.executeUnitTest('tbsp', ['tablespoon', 'tablespoon', 'tablespoon']);
+  this.executeUnitTest('tbsp.', ['tablespoon', 'tablespoon', 'tablespoon']);
+  this.executeUnitTest('tsp', ['teaspoon', 'teaspoon', 'teaspoon']);
+  this.executeUnitTest('tsp.', ['teaspoon', 'teaspoon', 'teaspoon']);
+  this.executeUnitTest('cc', ['cubic centimeter', 'cubic centimeter', 'cubic centimeter']);
+  this.executeUnitTest('kl', ['kiloliter', 'kiloliter', 'kiloliter']);
+  this.executeUnitTest('l', ['liter', 'liter', 'liter']);
+  this.executeUnitTest('ml', ['milliliter', 'milliliter', 'milliliter']);
+  this.executeUnitTest('lb', ['pound', 'pound', 'pound']);
+  this.executeUnitTest('lb.', ['pound', 'pound', 'pound']);
+  this.executeUnitTest('LT', ['long ton', 'long ton', 'long ton']);
+  this.executeUnitTest('L.T.', ['long ton', 'long ton', 'long ton']);
+  this.executeUnitTest('oz', ['ounce', 'ounce', 'ounce']);
+  this.executeUnitTest('oz.', ['ounce', 'ounce', 'ounce']);
+  this.executeUnitTest('g', ['gram', 'gram', 'gram']);
+  this.executeUnitTest('gr', ['gram', 'gram', 'gram']);
+  this.executeUnitTest('kg', ['kilogram', 'kilogram', 'kilogram']);
+  this.executeUnitTest('mcg', ['microgram', 'microgram', 'microgram']);
+  this.executeUnitTest('µg', ['microgram', 'microgram', 'microgram']);
+  this.executeUnitTest('mg', ['milligram', 'milligram', 'milligram']);
+  this.executeUnitTest('t', ['ton', 'ton', 'ton']);
+  this.executeUnitTest('T', ['ton', 'ton', 'ton']);
+};
