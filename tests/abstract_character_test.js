@@ -77,6 +77,7 @@ sre.AbstractCharacterTest.prototype.executeRuleTest = function(text, answer, opt
   var actual = this.actual ? result : answer;
   this.appendRuleExample(text, actual, style);
   this.assert.equal(actual, result);
+  sre.Grammar.getInstance().popState();
 };
 
 

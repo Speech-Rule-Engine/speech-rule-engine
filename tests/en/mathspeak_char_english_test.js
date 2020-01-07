@@ -36,6 +36,7 @@ sre.MathspeakCharEnglishTest = function() {
    */
   this.styles = ['default', 'brief', 'sbrief'];
 
+  this.setActive('MathspeakCharactersEnglish');
 };
 goog.inherits(sre.MathspeakCharEnglishTest, sre.AbstractCharacterTest);
 
