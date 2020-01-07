@@ -20,6 +20,9 @@
 goog.provide('sre.MathspeakCharEnglishTest');
 
 goog.require('sre.AbstractCharacterTest');
+
+
+
 /**
  * @constructor
  * @extends {sre.AbstractCharacterTest}

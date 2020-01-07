@@ -55,8 +55,13 @@ sre.AbstractCharacterTest.prototype.executeCharTest = function(char, answers) {
 
 sre.AbstractCharacterTest.prototype.executeUnitTest = function(char, answers) {
   sre.Grammar.getInstance().pushState({annotation: 'unit'});
-  this.executeCharTest(char, answers);
-  sre.Grammar.getInstance().popState();
+  try {
+    this.executeCharTest(char, answers);
+  } catch (err) {
+    throw(err);
+  } finally {
+    sre.Grammar.getInstance().popState();
+  }
 };
 
 
@@ -76,8 +81,13 @@ sre.AbstractCharacterTest.prototype.executeRuleTest = function(text, answer, opt
   var result = aural.finalize(aural.markup(descrs));
   var actual = this.actual ? result : answer;
   this.appendRuleExample(text, actual, style);
-  this.assert.equal(actual, result);
-  sre.Grammar.getInstance().popState();
+  try {
+    this.assert.equal(actual, result);
+  } catch (err) {
+    throw(err);
+  } finally {
+    sre.Grammar.getInstance().popState();
+  }
 };
 
 
