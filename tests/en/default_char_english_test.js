@@ -44,7 +44,7 @@ sre.DefaultCharEnglishTest = function() {
 goog.inherits(sre.DefaultCharEnglishTest, sre.AbstractCharacterTest);
 
                                             
-sre.DefaultCharEnglishTest.prototype.testChars = function() {
+sre.DefaultCharEnglishTest.prototype.testDefaultChars = function() {
   this.executeCharTest('0', ['digit zero', 'zero', 'zero']);
   this.executeCharTest('1', ['digit one', 'one', 'one']);
   this.executeCharTest('2', ['digit two', 'two', 'two']);
@@ -3281,7 +3281,6 @@ sre.DefaultCharEnglishTest.prototype.testChars = function() {
   this.executeCharTest('⅃', ['reversed sans serif capital l', 'reversed sans serif cap l', 'reversed sans serif cap l']);
   this.executeCharTest('⅄', ['turned sans serif capital y', 'turned sans serif cap y', 'turned sans serif cap y']);
   this.executeCharTest('!', ['factorial operator', 'factorial', 'exclamation mark']);
-  this.executeCharTest('\'', ['quotation mark', 'quotation mark', 'quotation mark']);
   this.executeCharTest('#', ['number sign', 'number', 'hash']);
   this.executeCharTest('$', ['dollar sign', 'dollar', 'dollar']);
   this.executeCharTest('%', ['percent sign', 'percent', 'percent']);
@@ -3293,7 +3292,7 @@ sre.DefaultCharEnglishTest.prototype.testChars = function() {
   this.executeCharTest('-', ['hyphen minus', 'minus', 'minus']);
   this.executeCharTest('.', ['full stop', 'full stop', 'period']);
   this.executeCharTest('/', ['solidus', 'solidus', 'slash']);
-  this.executeCharTest(':', ['', '', '']);
+  this.executeCharTest(':', ['colon', 'colon', 'colon']);
   this.executeCharTest(';', ['semicolon', 'semicolon', 'semicolon']);
   this.executeCharTest('<', ['less than sign', 'less than', 'less than']);
   this.executeCharTest('=', ['equals sign', 'equals', 'equals']);
@@ -4234,7 +4233,7 @@ sre.DefaultCharEnglishTest.prototype.testChars = function() {
 };
 
 
-sre.DefaultCharEnglishTest.prototype.testFunctions = function() {
+sre.DefaultCharEnglishTest.prototype.testDefaultFunctions = function() {
   this.executeCharTest('deg', ['degree', 'degree', 'degree']);
   this.executeCharTest('det', ['determinant', 'det', 'det']);
   this.executeCharTest('dim', ['dimension', 'dimension', 'dimension']);
@@ -4303,8 +4302,8 @@ sre.DefaultCharEnglishTest.prototype.testFunctions = function() {
 };
 
 
-sre.DefaultCharEnglishTest.prototype.testUnits = function() {
-  this.executeUnitTest('W', ['watty', 'watt', 'watt']);
+sre.DefaultCharEnglishTest.prototype.testDefaultUnits = function() {
+  this.executeUnitTest('W', ['watt', 'watt', 'watt']);
   this.executeUnitTest('w', ['watt', 'watt', 'watt']);
   this.executeUnitTest('kw', ['kilowatt', 'kilowatt', 'kilowatt']);
   this.executeUnitTest('kW', ['kilowatt', 'kilowatt', 'kilowatt']);

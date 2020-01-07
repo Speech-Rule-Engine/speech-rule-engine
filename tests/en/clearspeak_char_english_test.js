@@ -1,4350 +1,4404 @@
-en, clearspeak, "0", "0"
-en, clearspeak, "1", "1"
-en, clearspeak, "2", "2"
-en, clearspeak, "3", "3"
-en, clearspeak, "4", "4"
-en, clearspeak, "5", "5"
-en, clearspeak, "6", "6"
-en, clearspeak, "7", "7"
-en, clearspeak, "8", "8"
-en, clearspeak, "9", "9"
-en, clearspeak, "deg", "degree"
-en, clearspeak, "det", "determinant"
-en, clearspeak, "dim", "dimension"
-en, clearspeak, "hom", "hom"
-en, clearspeak, "Hom", "hom"
-en, clearspeak, "ker", "kernel"
-en, clearspeak, "Tr", "trace"
-en, clearspeak, "tr", "trace"
-en, clearspeak, "log", "log"
-en, clearspeak, "ln", "l n"
-en, clearspeak, "lg", "log base 10"
-en, clearspeak, "exp", "exp"
-en, clearspeak, "expt", "exp"
-en, clearspeak, "gcd", "gcd"
-en, clearspeak, "lcm", "lcm"
-en, clearspeak, "arg", "arg"
-en, clearspeak, "im", "im"
-en, clearspeak, "re", "re"
-en, clearspeak, "inf", "inf"
-en, clearspeak, "lim", "limit"
-en, clearspeak, "lim inf", "limit inf"
-en, clearspeak, "liminf", "liminf"
-en, clearspeak, "lim sup", "limit sup"
-en, clearspeak, "limsup", "limsup"
-en, clearspeak, "max", "max"
-en, clearspeak, "min", "min"
-en, clearspeak, "sup", "sup"
-en, clearspeak, "injlim", "colimit"
-en, clearspeak, "inj lim", "inj limit"
-en, clearspeak, "projlim", "limit"
-en, clearspeak, "proj lim", "proj limit"
-en, clearspeak, "mod", "mod"
-en, clearspeak, "Pr", "probability"
-en, clearspeak, "cosh", "hyperbolic cosine"
-en, clearspeak, "coth", "hyperbolic cotangent"
-en, clearspeak, "csch", "hyperbolic cosecant"
-en, clearspeak, "sech", "hyperbolic secant"
-en, clearspeak, "sinh", "hyperbolic sine"
-en, clearspeak, "tanh", "hyperbolic tangent"
-en, clearspeak, "arcosh", "area hyperbolic cosine"
-en, clearspeak, "arccosh", "area hyperbolic cosine"
-en, clearspeak, "arcoth", "area hyperbolic cotangent"
-en, clearspeak, "arccoth", "area hyperbolic cotangent"
-en, clearspeak, "arcsch", "area hyperbolic cosecant"
-en, clearspeak, "arccsch", "area hyperbolic cosecant"
-en, clearspeak, "arsech", "area hyperbolic secant"
-en, clearspeak, "arcsech", "area hyperbolic secant"
-en, clearspeak, "arsinh", "area hyperbolic sine"
-en, clearspeak, "arcsinh", "area hyperbolic sine"
-en, clearspeak, "artanh", "area hyperbolic tangent"
-en, clearspeak, "arctanh", "area hyperbolic tangent"
-en, clearspeak, "cos", "cosine"
-en, clearspeak, "cosine", "cosine"
-en, clearspeak, "cot", "cotangent"
-en, clearspeak, "csc", "cosecant"
-en, clearspeak, "sec", "secant"
-en, clearspeak, "sin", "sine"
-en, clearspeak, "sine", "sine"
-en, clearspeak, "tan", "tangent"
-en, clearspeak, "arccos", "arc cosine"
-en, clearspeak, "arccot", "arc cotangent"
-en, clearspeak, "arccsc", "arc cosecant"
-en, clearspeak, "arcsec", "arc secant"
-en, clearspeak, "arcsin", "arc sine"
-en, clearspeak, "arctan", "arc tangent"
-en, clearspeak, "Α", "cap Alpha"
-en, clearspeak, "Β", "cap Beta"
-en, clearspeak, "Γ", "cap Gamma"
-en, clearspeak, "Δ", "triangle"
-en, clearspeak, "Ε", "cap Epsilon"
-en, clearspeak, "Ζ", "cap Zeta"
-en, clearspeak, "Η", "cap Eta"
-en, clearspeak, "Θ", "cap Theta"
-en, clearspeak, "Ι", "cap Iota"
-en, clearspeak, "Κ", "cap Kappa"
-en, clearspeak, "Λ", "cap Lamda"
-en, clearspeak, "Μ", "cap Mu"
-en, clearspeak, "Ν", "cap Nu"
-en, clearspeak, "Ξ", "cap Xi"
-en, clearspeak, "Ο", "cap Omicron"
-en, clearspeak, "Π", "cap Pi"
-en, clearspeak, "Ρ", "cap Rho"
-en, clearspeak, "Σ", "cap Sigma"
-en, clearspeak, "Τ", "cap Tau"
-en, clearspeak, "Υ", "cap Upsilon"
-en, clearspeak, "Φ", "cap Phi"
-en, clearspeak, "Χ", "cap Chi"
-en, clearspeak, "Ψ", "cap Psi"
-en, clearspeak, "Ω", "cap Omega"
-en, clearspeak, "α", "alpha"
-en, clearspeak, "β", "beta"
-en, clearspeak, "γ", "gamma"
-en, clearspeak, "δ", "delta"
-en, clearspeak, "ε", "epsilon"
-en, clearspeak, "ζ", "zeta"
-en, clearspeak, "η", "eta"
-en, clearspeak, "θ", "theta"
-en, clearspeak, "ι", "iota"
-en, clearspeak, "κ", "kappa"
-en, clearspeak, "λ", "lamda"
-en, clearspeak, "μ", "mu"
-en, clearspeak, "ν", "nu"
-en, clearspeak, "ξ", "xi"
-en, clearspeak, "ο", "omicron"
-en, clearspeak, "π", "pi"
-en, clearspeak, "ρ", "rho"
-en, clearspeak, "ς", "final sigma"
-en, clearspeak, "σ", "sigma"
-en, clearspeak, "τ", "tau"
-en, clearspeak, "υ", "upsilon"
-en, clearspeak, "φ", "phi"
-en, clearspeak, "χ", "chi"
-en, clearspeak, "ψ", "psi"
-en, clearspeak, "ω", "omega"
-en, clearspeak, "ᴦ", "small upper Gamma"
-en, clearspeak, "ᴧ", "small upper Lamda"
-en, clearspeak, "ᴨ", "small upper Pi"
-en, clearspeak, "ᴩ", "small upper Rho"
-en, clearspeak, "ᴪ", "small upper Psi"
-en, clearspeak, "ᵞ", "superscript gamma"
-en, clearspeak, "ᵠ", "superscript phi"
-en, clearspeak, "ᵦ", "subscript beta"
-en, clearspeak, "ᵧ", "subscript gamma"
-en, clearspeak, "ᵨ", "subscript rho"
-en, clearspeak, "ᵩ", "subscript phi"
-en, clearspeak, "ᵪ", "subscript chi"
-en, clearspeak, "ϐ", "beta"
-en, clearspeak, "ϑ", "theta"
-en, clearspeak, "ϕ", "phi"
-en, clearspeak, "ϖ", "pi"
-en, clearspeak, "ϗ", "kai"
-en, clearspeak, "ϰ", "kappa"
-en, clearspeak, "ϱ", "rho"
-en, clearspeak, "ϵ", "epsilon"
-en, clearspeak, "϶", "reversed epsilon"
-en, clearspeak, "ϴ", "cap Theta"
-en, clearspeak, "𝚹", "bold cap Theta"
-en, clearspeak, "𝛳", "italic cap Theta"
-en, clearspeak, "𝝧", "sans serif bold cap Theta"
-en, clearspeak, "𝛁", "mathematical bold nabla"
-en, clearspeak, "𝛛", "bold partial differential"
-en, clearspeak, "𝛜", "bold epsilon"
-en, clearspeak, "𝛝", "bold theta"
-en, clearspeak, "𝛞", "bold kappa"
-en, clearspeak, "𝛟", "bold phi"
-en, clearspeak, "𝛠", "bold rho"
-en, clearspeak, "𝛡", "bold pi"
-en, clearspeak, "𝛻", "italic nabla"
-en, clearspeak, "𝜕", "italic partial differential"
-en, clearspeak, "𝜖", "italic epsilon"
-en, clearspeak, "𝜗", "italic theta"
-en, clearspeak, "𝜘", "italic kappa"
-en, clearspeak, "𝜙", "italic phi"
-en, clearspeak, "𝜚", "italic rho"
-en, clearspeak, "𝜛", "italic pi"
-en, clearspeak, "𝝯", "sans serif bold nabla"
-en, clearspeak, "𝞉", "sans serif bold partial differential"
-en, clearspeak, "𝞊", "sans serif bold epsilon"
-en, clearspeak, "𝞋", "sans serif bold theta"
-en, clearspeak, "𝞌", "sans serif bold kappa"
-en, clearspeak, "𝞍", "sans serif bold phi"
-en, clearspeak, "𝞎", "sans serif bold rho"
-en, clearspeak, "𝞏", "sans serif bold pi"
-en, clearspeak, "𝟊", "bold cap Digamma"
-en, clearspeak, "𝟋", "bold digamma"
-en, clearspeak, "𝚨", "bold cap Alpha"
-en, clearspeak, "𝚩", "bold cap Beta"
-en, clearspeak, "𝚪", "bold cap Gamma"
-en, clearspeak, "𝚫", "bold cap Delta"
-en, clearspeak, "𝚬", "bold cap Epsilon"
-en, clearspeak, "𝚭", "bold cap Zeta"
-en, clearspeak, "𝚮", "bold cap Eta"
-en, clearspeak, "𝚯", "bold cap Theta"
-en, clearspeak, "𝚰", "bold cap Iota"
-en, clearspeak, "𝚱", "bold cap Kappa"
-en, clearspeak, "𝚲", "bold cap Lamda"
-en, clearspeak, "𝚳", "bold cap Mu"
-en, clearspeak, "𝚴", "bold cap Nu"
-en, clearspeak, "𝚵", "bold cap Xi"
-en, clearspeak, "𝚶", "bold cap Omicron"
-en, clearspeak, "𝚷", "bold cap Pi"
-en, clearspeak, "𝚸", "bold cap Rho"
-en, clearspeak, "𝚺", "bold cap Sigma"
-en, clearspeak, "𝚻", "bold cap Tau"
-en, clearspeak, "𝚼", "bold cap Upsilon"
-en, clearspeak, "𝚽", "bold cap Phi"
-en, clearspeak, "𝚾", "bold cap Chi"
-en, clearspeak, "𝚿", "bold cap Psi"
-en, clearspeak, "𝛀", "bold cap Omega"
-en, clearspeak, "𝛂", "bold alpha"
-en, clearspeak, "𝛃", "bold beta"
-en, clearspeak, "𝛄", "bold gamma"
-en, clearspeak, "𝛅", "bold delta"
-en, clearspeak, "𝛆", "bold epsilon"
-en, clearspeak, "𝛇", "bold zeta"
-en, clearspeak, "𝛈", "bold eta"
-en, clearspeak, "𝛉", "bold theta"
-en, clearspeak, "𝛊", "bold iota"
-en, clearspeak, "𝛋", "bold kappa"
-en, clearspeak, "𝛌", "bold lamda"
-en, clearspeak, "𝛍", "bold mu"
-en, clearspeak, "𝛎", "bold nu"
-en, clearspeak, "𝛏", "bold xi"
-en, clearspeak, "𝛐", "bold omicron"
-en, clearspeak, "𝛑", "bold pi"
-en, clearspeak, "𝛒", "bold rho"
-en, clearspeak, "𝛓", "bold final sigma"
-en, clearspeak, "𝛔", "bold sigma"
-en, clearspeak, "𝛕", "bold tau"
-en, clearspeak, "𝛖", "bold upsilon"
-en, clearspeak, "𝛗", "bold phi"
-en, clearspeak, "𝛘", "bold chi"
-en, clearspeak, "𝛙", "bold psi"
-en, clearspeak, "𝛚", "bold omega"
-en, clearspeak, "𝛢", "italic cap Alpha"
-en, clearspeak, "𝛣", "italic cap Beta"
-en, clearspeak, "𝛤", "italic cap Gamma"
-en, clearspeak, "𝛥", "italic cap Delta"
-en, clearspeak, "𝛦", "italic cap Epsilon"
-en, clearspeak, "𝛧", "italic cap Zeta"
-en, clearspeak, "𝛨", "italic cap Eta"
-en, clearspeak, "𝛩", "italic cap Theta"
-en, clearspeak, "𝛪", "italic cap Iota"
-en, clearspeak, "𝛫", "italic cap Kappa"
-en, clearspeak, "𝛬", "italic cap Lamda"
-en, clearspeak, "𝛭", "italic cap Mu"
-en, clearspeak, "𝛮", "italic cap Nu"
-en, clearspeak, "𝛯", "italic cap Xi"
-en, clearspeak, "𝛰", "italic cap Omicron"
-en, clearspeak, "𝛱", "italic cap Pi"
-en, clearspeak, "𝛲", "italic cap Rho"
-en, clearspeak, "𝛴", "italic cap Sigma"
-en, clearspeak, "𝛵", "italic cap Tau"
-en, clearspeak, "𝛶", "italic cap Upsilon"
-en, clearspeak, "𝛷", "italic cap Phi"
-en, clearspeak, "𝛸", "italic cap Chi"
-en, clearspeak, "𝛹", "italic cap Psi"
-en, clearspeak, "𝛺", "italic cap Omega"
-en, clearspeak, "𝛼", "italic alpha"
-en, clearspeak, "𝛽", "italic beta"
-en, clearspeak, "𝛾", "italic gamma"
-en, clearspeak, "𝛿", "italic delta"
-en, clearspeak, "𝜀", "italic epsilon"
-en, clearspeak, "𝜁", "italic zeta"
-en, clearspeak, "𝜂", "italic eta"
-en, clearspeak, "𝜃", "italic theta"
-en, clearspeak, "𝜄", "italic iota"
-en, clearspeak, "𝜅", "italic kappa"
-en, clearspeak, "𝜆", "italic lamda"
-en, clearspeak, "𝜇", "italic mu"
-en, clearspeak, "𝜈", "italic nu"
-en, clearspeak, "𝜉", "italic xi"
-en, clearspeak, "𝜊", "italic omicron"
-en, clearspeak, "𝜋", "italic pi"
-en, clearspeak, "𝜌", "italic rho"
-en, clearspeak, "𝜍", "italic final sigma"
-en, clearspeak, "𝜎", "italic sigma"
-en, clearspeak, "𝜏", "italic tau"
-en, clearspeak, "𝜐", "italic upsilon"
-en, clearspeak, "𝜑", "italic phi"
-en, clearspeak, "𝜒", "italic chi"
-en, clearspeak, "𝜓", "italic psi"
-en, clearspeak, "𝜔", "italic omega"
-en, clearspeak, "𝜜", "bold italic cap Alpha"
-en, clearspeak, "𝜝", "bold italic cap Beta"
-en, clearspeak, "𝜞", "bold italic cap Gamma"
-en, clearspeak, "𝜟", "bold italic cap Delta"
-en, clearspeak, "𝜠", "bold italic cap Epsilon"
-en, clearspeak, "𝜡", "bold italic cap Zeta"
-en, clearspeak, "𝜢", "bold italic cap Eta"
-en, clearspeak, "𝜣", "bold italic cap Theta"
-en, clearspeak, "𝜤", "bold italic cap Iota"
-en, clearspeak, "𝜥", "bold italic cap Kappa"
-en, clearspeak, "𝜦", "bold italic cap Lamda"
-en, clearspeak, "𝜧", "bold italic cap Mu"
-en, clearspeak, "𝜨", "bold italic cap Nu"
-en, clearspeak, "𝜩", "bold italic cap Xi"
-en, clearspeak, "𝜪", "bold italic cap Omicron"
-en, clearspeak, "𝜫", "bold italic cap Pi"
-en, clearspeak, "𝜬", "bold italic cap Rho"
-en, clearspeak, "𝜮", "bold italic cap Sigma"
-en, clearspeak, "𝜯", "bold italic cap Tau"
-en, clearspeak, "𝜰", "bold italic cap Upsilon"
-en, clearspeak, "𝜱", "bold italic cap Phi"
-en, clearspeak, "𝜲", "bold italic cap Chi"
-en, clearspeak, "𝜳", "bold italic cap Psi"
-en, clearspeak, "𝜴", "bold italic cap Omega"
-en, clearspeak, "𝜶", "bold italic alpha"
-en, clearspeak, "𝜷", "bold italic beta"
-en, clearspeak, "𝜸", "bold italic gamma"
-en, clearspeak, "𝜹", "bold italic delta"
-en, clearspeak, "𝜺", "bold italic epsilon"
-en, clearspeak, "𝜻", "bold italic zeta"
-en, clearspeak, "𝜼", "bold italic eta"
-en, clearspeak, "𝜽", "bold italic theta"
-en, clearspeak, "𝜾", "bold italic iota"
-en, clearspeak, "𝜿", "bold italic kappa"
-en, clearspeak, "𝝀", "bold italic lamda"
-en, clearspeak, "𝝁", "bold italic mu"
-en, clearspeak, "𝝂", "bold italic nu"
-en, clearspeak, "𝝃", "bold italic xi"
-en, clearspeak, "𝝄", "bold italic omicron"
-en, clearspeak, "𝝅", "bold italic pi"
-en, clearspeak, "𝝆", "bold italic rho"
-en, clearspeak, "𝝇", "bold italic final sigma"
-en, clearspeak, "𝝈", "bold italic sigma"
-en, clearspeak, "𝝉", "bold italic tau"
-en, clearspeak, "𝝊", "bold italic upsilon"
-en, clearspeak, "𝝋", "bold italic phi"
-en, clearspeak, "𝝌", "bold italic chi"
-en, clearspeak, "𝝍", "bold italic psi"
-en, clearspeak, "𝝎", "bold italic omega"
-en, clearspeak, "𝝖", "sans serif bold cap Alpha"
-en, clearspeak, "𝝗", "sans serif bold cap Beta"
-en, clearspeak, "𝝘", "sans serif bold cap Gamma"
-en, clearspeak, "𝝙", "sans serif bold cap Delta"
-en, clearspeak, "𝝚", "sans serif bold cap Epsilon"
-en, clearspeak, "𝝛", "sans serif bold cap Zeta"
-en, clearspeak, "𝝜", "sans serif bold cap Eta"
-en, clearspeak, "𝝝", "sans serif bold cap Theta"
-en, clearspeak, "𝝞", "sans serif bold cap Iota"
-en, clearspeak, "𝝟", "sans serif bold cap Kappa"
-en, clearspeak, "𝝠", "sans serif bold cap Lamda"
-en, clearspeak, "𝝡", "sans serif bold cap Mu"
-en, clearspeak, "𝝢", "sans serif bold cap Nu"
-en, clearspeak, "𝝣", "sans serif bold cap Xi"
-en, clearspeak, "𝝤", "sans serif bold cap Omicron"
-en, clearspeak, "𝝥", "sans serif bold cap Pi"
-en, clearspeak, "𝝦", "sans serif bold cap Rho"
-en, clearspeak, "𝝨", "sans serif bold cap Sigma"
-en, clearspeak, "𝝩", "sans serif bold cap Tau"
-en, clearspeak, "𝝪", "sans serif bold cap Upsilon"
-en, clearspeak, "𝝫", "sans serif bold cap Phi"
-en, clearspeak, "𝝬", "sans serif bold cap Chi"
-en, clearspeak, "𝝭", "sans serif bold cap Psi"
-en, clearspeak, "𝝮", "sans serif bold cap Omega"
-en, clearspeak, "𝝰", "sans serif bold alpha"
-en, clearspeak, "𝝱", "sans serif bold beta"
-en, clearspeak, "𝝲", "sans serif bold gamma"
-en, clearspeak, "𝝳", "sans serif bold delta"
-en, clearspeak, "𝝴", "sans serif bold epsilon"
-en, clearspeak, "𝝵", "sans serif bold zeta"
-en, clearspeak, "𝝶", "sans serif bold eta"
-en, clearspeak, "𝝷", "sans serif bold theta"
-en, clearspeak, "𝝸", "sans serif bold iota"
-en, clearspeak, "𝝹", "sans serif bold kappa"
-en, clearspeak, "𝝺", "sans serif bold lamda"
-en, clearspeak, "𝝻", "sans serif bold mu"
-en, clearspeak, "𝝼", "sans serif bold nu"
-en, clearspeak, "𝝽", "sans serif bold xi"
-en, clearspeak, "𝝾", "sans serif bold omicron"
-en, clearspeak, "𝝿", "sans serif bold pi"
-en, clearspeak, "𝞀", "sans serif bold rho"
-en, clearspeak, "𝞁", "sans serif bold final sigma"
-en, clearspeak, "𝞂", "sans serif bold sigma"
-en, clearspeak, "𝞃", "sans serif bold tau"
-en, clearspeak, "𝞄", "sans serif bold upsilon"
-en, clearspeak, "𝞅", "sans serif bold phi"
-en, clearspeak, "𝞆", "sans serif bold chi"
-en, clearspeak, "𝞇", "sans serif bold psi"
-en, clearspeak, "𝞈", "sans serif bold omega"
-en, clearspeak, "𝞐", "sans serif bold italic cap Alpha"
-en, clearspeak, "𝞑", "sans serif bold italic cap Beta"
-en, clearspeak, "𝞒", "sans serif bold italic cap Gamma"
-en, clearspeak, "𝞓", "sans serif bold italic cap Delta"
-en, clearspeak, "𝞔", "sans serif bold italic cap Epsilon"
-en, clearspeak, "𝞕", "sans serif bold italic cap Zeta"
-en, clearspeak, "𝞖", "sans serif bold italic cap Eta"
-en, clearspeak, "𝞗", "sans serif bold italic cap Theta"
-en, clearspeak, "𝞘", "sans serif bold italic cap Iota"
-en, clearspeak, "𝞙", "sans serif bold italic cap Kappa"
-en, clearspeak, "𝞚", "sans serif bold italic cap Lamda"
-en, clearspeak, "𝞛", "sans serif bold italic cap Mu"
-en, clearspeak, "𝞜", "sans serif bold italic cap Nu"
-en, clearspeak, "𝞝", "sans serif bold italic cap Xi"
-en, clearspeak, "𝞞", "sans serif bold italic cap Omicron"
-en, clearspeak, "𝞟", "sans serif bold italic cap Pi"
-en, clearspeak, "𝞠", "sans serif bold italic cap Rho"
-en, clearspeak, "𝞢", "sans serif bold italic cap Sigma"
-en, clearspeak, "𝞣", "sans serif bold italic cap Tau"
-en, clearspeak, "𝞤", "sans serif bold italic cap Upsilon"
-en, clearspeak, "𝞥", "sans serif bold italic cap Phi"
-en, clearspeak, "𝞦", "sans serif bold italic cap Chi"
-en, clearspeak, "𝞧", "sans serif bold italic cap Psi"
-en, clearspeak, "𝞨", "sans serif bold italic cap Omega"
-en, clearspeak, "𝞪", "sans serif bold italic alpha"
-en, clearspeak, "𝞫", "sans serif bold italic beta"
-en, clearspeak, "𝞬", "sans serif bold italic gamma"
-en, clearspeak, "𝞭", "sans serif bold italic delta"
-en, clearspeak, "𝞮", "sans serif bold italic epsilon"
-en, clearspeak, "𝞯", "sans serif bold italic zeta"
-en, clearspeak, "𝞰", "sans serif bold italic eta"
-en, clearspeak, "𝞱", "sans serif bold italic theta"
-en, clearspeak, "𝞲", "sans serif bold italic iota"
-en, clearspeak, "𝞳", "sans serif bold italic kappa"
-en, clearspeak, "𝞴", "sans serif bold italic lamda"
-en, clearspeak, "𝞵", "sans serif bold italic mu"
-en, clearspeak, "𝞶", "sans serif bold italic nu"
-en, clearspeak, "𝞷", "sans serif bold italic xi"
-en, clearspeak, "𝞸", "sans serif bold italic omicron"
-en, clearspeak, "𝞹", "sans serif bold italic pi"
-en, clearspeak, "𝞺", "sans serif bold italic rho"
-en, clearspeak, "𝞻", "sans serif bold italic final sigma"
-en, clearspeak, "𝞼", "sans serif bold italic sigma"
-en, clearspeak, "𝞽", "sans serif bold italic tau"
-en, clearspeak, "𝞾", "sans serif bold italic upsilon"
-en, clearspeak, "𝞿", "sans serif bold italic phi"
-en, clearspeak, "𝟀", "sans serif bold italic chi"
-en, clearspeak, "𝟁", "sans serif bold italic psi"
-en, clearspeak, "𝟂", "sans serif bold italic omega"
-en, clearspeak, "ℵ", "alef"
-en, clearspeak, "ℶ", "bet"
-en, clearspeak, "ℷ", "gimel"
-en, clearspeak, "ℸ", "dalet"
-en, clearspeak, "ǖ", "u double overdot overbar"
-en, clearspeak, "ǘ", "u double overdot acute"
-en, clearspeak, "ǚ", "u double overdot caron"
-en, clearspeak, "ǜ", "u double overdot grave"
-en, clearspeak, "ǟ", "a double overdot overbar"
-en, clearspeak, "ǡ", "a overdot overbar"
-en, clearspeak, "ǭ", "o ogonek overbar"
-en, clearspeak, "ǻ", "a ring above acute"
-en, clearspeak, "ȫ", "o double overdot overbar"
-en, clearspeak, "ȭ", "o tilde overbar"
-en, clearspeak, "ȱ", "o overdot overbar"
-en, clearspeak, "ḉ", "c cedilla acute"
-en, clearspeak, "ḕ", "e overbar grave"
-en, clearspeak, "ḗ", "e overbar acute"
-en, clearspeak, "ḝ", "e cedilla breve"
-en, clearspeak, "ḯ", "i double overdot acute"
-en, clearspeak, "ḹ", "l underdot overbar"
-en, clearspeak, "ṍ", "o tilde acute"
-en, clearspeak, "ṏ", "o tilde double overdot"
-en, clearspeak, "ṑ", "o overbar grave"
-en, clearspeak, "ṓ", "o overbar acute"
-en, clearspeak, "ṝ", "r underdot overbar"
-en, clearspeak, "ṥ", "s acute overdot"
-en, clearspeak, "ṧ", "s caron overdot"
-en, clearspeak, "ṩ", "s underdot overdot"
-en, clearspeak, "ṹ", "u tilde acute"
-en, clearspeak, "ṻ", "u overbar double overdot"
-en, clearspeak, "ấ", "a hat acute"
-en, clearspeak, "ầ", "a hat grave"
-en, clearspeak, "ẩ", "a hat hook above"
-en, clearspeak, "ẫ", "a hat tilde"
-en, clearspeak, "ậ", "a hat underdot"
-en, clearspeak, "ắ", "a breve acute"
-en, clearspeak, "ằ", "a breve grave"
-en, clearspeak, "ẳ", "a breve hook above"
-en, clearspeak, "ẵ", "a breve tilde"
-en, clearspeak, "ặ", "a breve underdot"
-en, clearspeak, "ế", "e hat acute"
-en, clearspeak, "ề", "e hat grave"
-en, clearspeak, "ể", "e hat hook above"
-en, clearspeak, "ễ", "e hat tilde"
-en, clearspeak, "ệ", "e hat underdot"
-en, clearspeak, "ố", "o hat acute"
-en, clearspeak, "ồ", "o hat grave"
-en, clearspeak, "ổ", "o hat hook above"
-en, clearspeak, "ỗ", "o hat tilde"
-en, clearspeak, "ộ", "o hat underdot"
-en, clearspeak, "ớ", "o acute prime"
-en, clearspeak, "ờ", "o grave prime"
-en, clearspeak, "ở", "o hook above prime"
-en, clearspeak, "ỡ", "o tilde prime"
-en, clearspeak, "ợ", "o underdot prime"
-en, clearspeak, "ứ", "u acute prime"
-en, clearspeak, "ừ", "u grave prime"
-en, clearspeak, "ử", "u hook above prime"
-en, clearspeak, "ữ", "u tilde prime"
-en, clearspeak, "ự", "u underdot prime"
-en, clearspeak, "a", "a"
-en, clearspeak, "b", "b"
-en, clearspeak, "c", "c"
-en, clearspeak, "d", "d"
-en, clearspeak, "e", "e"
-en, clearspeak, "f", "f"
-en, clearspeak, "g", "g"
-en, clearspeak, "h", "h"
-en, clearspeak, "i", "i"
-en, clearspeak, "j", "j"
-en, clearspeak, "k", "k"
-en, clearspeak, "l", "l"
-en, clearspeak, "m", "m"
-en, clearspeak, "n", "n"
-en, clearspeak, "o", "o"
-en, clearspeak, "p", "p"
-en, clearspeak, "q", "q"
-en, clearspeak, "r", "r"
-en, clearspeak, "s", "s"
-en, clearspeak, "t", "t"
-en, clearspeak, "u", "u"
-en, clearspeak, "v", "v"
-en, clearspeak, "w", "w"
-en, clearspeak, "x", "x"
-en, clearspeak, "y", "y"
-en, clearspeak, "z", "z"
-en, clearspeak, "ａ", "a"
-en, clearspeak, "ｂ", "b"
-en, clearspeak, "ｃ", "c"
-en, clearspeak, "ｄ", "d"
-en, clearspeak, "ｅ", "e"
-en, clearspeak, "ｆ", "f"
-en, clearspeak, "ｇ", "g"
-en, clearspeak, "ｈ", "h"
-en, clearspeak, "ｉ", "i"
-en, clearspeak, "ｊ", "j"
-en, clearspeak, "ｋ", "k"
-en, clearspeak, "ｌ", "l"
-en, clearspeak, "ｍ", "m"
-en, clearspeak, "ｎ", "n"
-en, clearspeak, "ｏ", "o"
-en, clearspeak, "ｐ", "p"
-en, clearspeak, "ｑ", "q"
-en, clearspeak, "ｒ", "r"
-en, clearspeak, "ｓ", "s"
-en, clearspeak, "ｔ", "t"
-en, clearspeak, "ｕ", "u"
-en, clearspeak, "ｖ", "v"
-en, clearspeak, "ｗ", "w"
-en, clearspeak, "ｘ", "x"
-en, clearspeak, "ｙ", "y"
-en, clearspeak, "ｚ", "z"
-en, clearspeak, "ø", "o with stroke"
-en, clearspeak, "đ", "d with stroke"
-en, clearspeak, "ħ", "h with stroke"
-en, clearspeak, "ł", "l with stroke"
-en, clearspeak, "ŧ", "t with stroke"
-en, clearspeak, "ƀ", "b with stroke"
-en, clearspeak, "ƛ", "lambda with stroke"
-en, clearspeak, "ƶ", "z with stroke"
-en, clearspeak, "ƾ", "latin letter inverted glottal stop with stroke"
-en, clearspeak, "ǥ", "g with stroke"
-en, clearspeak, "ǿ", "o with stroke and acute"
-en, clearspeak, "ȼ", "c with stroke"
-en, clearspeak, "ɇ", "e with stroke"
-en, clearspeak, "ɉ", "j with stroke"
-en, clearspeak, "ɍ", "r with stroke"
-en, clearspeak, "ɏ", "y with stroke"
-en, clearspeak, "ɟ", "dotless j with stroke"
-en, clearspeak, "ɨ", "i with stroke"
-en, clearspeak, "ʄ", "dotless j with stroke and hook"
-en, clearspeak, "ʡ", "latin letter glottal stop with stroke"
-en, clearspeak, "ʢ", "latin letter reversed glottal stop with stroke"
-en, clearspeak, "ᴓ", "sideways o with stroke"
-en, clearspeak, "ᵼ", "iota with stroke"
-en, clearspeak, "ᵽ", "p with stroke"
-en, clearspeak, "ᵿ", "upsilon with stroke"
-en, clearspeak, "ẜ", "long s with diagonal stroke"
-en, clearspeak, "ẝ", "long s with high stroke"
-en, clearspeak, "ƍ", "turned delta"
-en, clearspeak, "ẛ", "long s with dot above"
-en, clearspeak, "ẟ", "delta"
-en, clearspeak, "ĸ", "kra"
-en, clearspeak, "ſ", "long s"
-en, clearspeak, "ƃ", "b with topbar"
-en, clearspeak, "ƅ", "tone six"
-en, clearspeak, "ƈ", "c with hook"
-en, clearspeak, "ƌ", "d with topbar"
-en, clearspeak, "ƒ", "f with hook"
-en, clearspeak, "ƕ", "hv"
-en, clearspeak, "ƙ", "k with hook"
-en, clearspeak, "ƚ", "l with bar"
-en, clearspeak, "ƞ", "n with long right leg"
-en, clearspeak, "ơ", "o with horn"
-en, clearspeak, "ƣ", "oi"
-en, clearspeak, "ƥ", "p with hook"
-en, clearspeak, "ƨ", "tone two"
-en, clearspeak, "ƪ", "latin letter reversed esh loop"
-en, clearspeak, "ƫ", "t with palatal hook"
-en, clearspeak, "ƭ", "t with hook"
-en, clearspeak, "ư", "u with horn"
-en, clearspeak, "ƴ", "y with hook"
-en, clearspeak, "ƹ", "ezh reversed"
-en, clearspeak, "ƺ", "ezh with tail"
-en, clearspeak, "ƽ", "tone five"
-en, clearspeak, "ƿ", "latin letter wynn"
-en, clearspeak, "ǆ", "dz with caron"
-en, clearspeak, "ǉ", "lj"
-en, clearspeak, "ǌ", "nj"
-en, clearspeak, "ǣ", "ae with macron"
-en, clearspeak, "ǯ", "ezh with caron"
-en, clearspeak, "ǳ", "dz"
-en, clearspeak, "ȝ", "yogh"
-en, clearspeak, "ɮ", "lezh"
-en, clearspeak, "ʒ", "ezh"
-en, clearspeak, "ʓ", "ezh with curl"
-en, clearspeak, "ʤ", "dezh digraph"
-en, clearspeak, "ǝ", "turned e"
-en, clearspeak, "ǽ", "ae with acute"
-en, clearspeak, "ȡ", "d with curl"
-en, clearspeak, "ȣ", "ou"
-en, clearspeak, "ȥ", "z with hook"
-en, clearspeak, "ȴ", "l with curl"
-en, clearspeak, "ȵ", "n with curl"
-en, clearspeak, "ȶ", "t with curl"
-en, clearspeak, "ȸ", "db digraph"
-en, clearspeak, "ȹ", "qp digraph"
-en, clearspeak, "ȿ", "s with swash tail"
-en, clearspeak, "ɀ", "z with swash tail"
-en, clearspeak, "ɂ", "glottal stop"
-en, clearspeak, "ɋ", "q with hook tail"
-en, clearspeak, "ɐ", "turned a"
-en, clearspeak, "ɑ", "alpha"
-en, clearspeak, "ɒ", "turned alpha"
-en, clearspeak, "ɓ", "b with hook"
-en, clearspeak, "ɔ", "open o"
-en, clearspeak, "ɕ", "c with curl"
-en, clearspeak, "ɖ", "d with tail"
-en, clearspeak, "ɗ", "d with hook"
-en, clearspeak, "ɘ", "reversed e"
-en, clearspeak, "ə", "schwa"
-en, clearspeak, "ɚ", "schwa with hook"
-en, clearspeak, "ɛ", "open e"
-en, clearspeak, "ɜ", "reversed open e"
-en, clearspeak, "ɝ", "reversed open e with hook"
-en, clearspeak, "ɞ", "closed reversed open e"
-en, clearspeak, "ɠ", "g with hook"
-en, clearspeak, "ɡ", "script g"
-en, clearspeak, "ɣ", "gamma"
-en, clearspeak, "ɤ", "rams horn"
-en, clearspeak, "ɥ", "turned h"
-en, clearspeak, "ɦ", "h with hook"
-en, clearspeak, "ɧ", "heng with hook"
-en, clearspeak, "ɩ", "iota"
-en, clearspeak, "ɫ", "l with middle tilde"
-en, clearspeak, "ɬ", "l with belt"
-en, clearspeak, "ɭ", "l with retroflex hook"
-en, clearspeak, "ɯ", "turned m"
-en, clearspeak, "ɰ", "turned m with long leg"
-en, clearspeak, "ɱ", "m with hook"
-en, clearspeak, "ɲ", "n with left hook"
-en, clearspeak, "ɳ", "n with retroflex hook"
-en, clearspeak, "ɵ", "barred o"
-en, clearspeak, "ɷ", "closed omega"
-en, clearspeak, "ɸ", "phi"
-en, clearspeak, "ɹ", "turned r"
-en, clearspeak, "ɺ", "turned r with long leg"
-en, clearspeak, "ɻ", "turned r with hook"
-en, clearspeak, "ɼ", "r with long leg"
-en, clearspeak, "ɽ", "r with tail"
-en, clearspeak, "ɾ", "r with fishhook"
-en, clearspeak, "ɿ", "reversed r with fishhook"
-en, clearspeak, "ʂ", "s with hook"
-en, clearspeak, "ʃ", "esh"
-en, clearspeak, "ʅ", "squat reversed esh"
-en, clearspeak, "ʆ", "esh with curl"
-en, clearspeak, "ʇ", "turned t"
-en, clearspeak, "ʈ", "t with retroflex hook"
-en, clearspeak, "ʉ", "u bar"
-en, clearspeak, "ʊ", "upsilon"
-en, clearspeak, "ʋ", "v with hook"
-en, clearspeak, "ʌ", "turned v"
-en, clearspeak, "ʍ", "turned w"
-en, clearspeak, "ʎ", "turned y"
-en, clearspeak, "ʐ", "z with retroflex hook"
-en, clearspeak, "ʑ", "z with curl"
-en, clearspeak, "ʕ", "latin letter pharyngeal voiced fricative"
-en, clearspeak, "ʖ", "latin letter inverted glottal stop"
-en, clearspeak, "ʗ", "latin letter stretched c"
-en, clearspeak, "ʘ", "latin letter bilabial click"
-en, clearspeak, "ʚ", "closed open e"
-en, clearspeak, "ʞ", "turned k"
-en, clearspeak, "ʠ", "q with hook"
-en, clearspeak, "ʣ", "dz digraph"
-en, clearspeak, "ʥ", "dz digraph with curl"
-en, clearspeak, "ʦ", "ts digraph"
-en, clearspeak, "ʧ", "tesh digraph"
-en, clearspeak, "ʨ", "tc digraph with curl"
-en, clearspeak, "ʩ", "feng digraph"
-en, clearspeak, "ʪ", "ls digraph"
-en, clearspeak, "ʫ", "lz digraph"
-en, clearspeak, "ʬ", "latin letter bilabial percussive"
-en, clearspeak, "ʭ", "latin letter bidental percussive"
-en, clearspeak, "ʮ", "turned h with fishhook"
-en, clearspeak, "ʯ", "turned h with fishhook and tail"
-en, clearspeak, "ᴂ", "turned ae"
-en, clearspeak, "ᴈ", "turned open e"
-en, clearspeak, "ᴉ", "turned i"
-en, clearspeak, "ᴑ", "sideways o"
-en, clearspeak, "ᴒ", "sideways open o"
-en, clearspeak, "ᴔ", "turned oe"
-en, clearspeak, "ᴖ", "top half o"
-en, clearspeak, "ᴗ", "bottom half o"
-en, clearspeak, "ᴝ", "sideways u"
-en, clearspeak, "ᴞ", "sideways diaeresized u"
-en, clearspeak, "ᴟ", "sideways turned m"
-en, clearspeak, "ᴤ", "latin letter voiced laryngeal spirant"
-en, clearspeak, "ᴥ", "latin letter ain"
-en, clearspeak, "ᵫ", "ue"
-en, clearspeak, "ᵬ", "b with middle tilde"
-en, clearspeak, "ᵭ", "d with middle tilde"
-en, clearspeak, "ᵮ", "f with middle tilde"
-en, clearspeak, "ᵯ", "m with middle tilde"
-en, clearspeak, "ᵰ", "n with middle tilde"
-en, clearspeak, "ᵱ", "p with middle tilde"
-en, clearspeak, "ᵲ", "r with middle tilde"
-en, clearspeak, "ᵳ", "r with fishhook and middle tilde"
-en, clearspeak, "ᵴ", "s with middle tilde"
-en, clearspeak, "ᵵ", "t with middle tilde"
-en, clearspeak, "ᵶ", "z with middle tilde"
-en, clearspeak, "ᵷ", "turned g"
-en, clearspeak, "ᵹ", "insular g"
-en, clearspeak, "ᵺ", "th with strikethrough"
-en, clearspeak, "ᶀ", "b with palatal hook"
-en, clearspeak, "ᶁ", "d with palatal hook"
-en, clearspeak, "ᶂ", "f with palatal hook"
-en, clearspeak, "ᶃ", "g with palatal hook"
-en, clearspeak, "ᶄ", "k with palatal hook"
-en, clearspeak, "ᶅ", "l with palatal hook"
-en, clearspeak, "ᶆ", "m with palatal hook"
-en, clearspeak, "ᶇ", "n with palatal hook"
-en, clearspeak, "ᶈ", "p with palatal hook"
-en, clearspeak, "ᶉ", "r with palatal hook"
-en, clearspeak, "ᶊ", "s with palatal hook"
-en, clearspeak, "ᶋ", "esh with palatal hook"
-en, clearspeak, "ᶌ", "v with palatal hook"
-en, clearspeak, "ᶍ", "x with palatal hook"
-en, clearspeak, "ᶎ", "z with palatal hook"
-en, clearspeak, "ᶏ", "a with retroflex hook"
-en, clearspeak, "ᶐ", "alpha with retroflex hook"
-en, clearspeak, "ᶑ", "d with hook and tail"
-en, clearspeak, "ᶒ", "e with retroflex hook"
-en, clearspeak, "ᶓ", "open e with retroflex hook"
-en, clearspeak, "ᶔ", "reversed open e with retroflex hook"
-en, clearspeak, "ᶕ", "schwa with retroflex hook"
-en, clearspeak, "ᶖ", "i with retroflex hook"
-en, clearspeak, "ᶗ", "open o with retroflex hook"
-en, clearspeak, "ᶘ", "esh with retroflex hook"
-en, clearspeak, "ᶙ", "u with retroflex hook"
-en, clearspeak, "ᶚ", "ezh with retroflex hook"
-en, clearspeak, "ŉ", "n preceded by apostrophe"
-en, clearspeak, "ŋ", "eng"
-en, clearspeak, "à", "modifying above a with grave"
-en, clearspeak, "á", "modifying above a with acute"
-en, clearspeak, "â", "modifying above a with caret"
-en, clearspeak, "ã", "a overtilde"
-en, clearspeak, "ä", "modifying above a with double dot"
-en, clearspeak, "å", "modifying above a with ring"
-en, clearspeak, "ç", "modifying above c with cedilla"
-en, clearspeak, "è", "modifying above e with grave"
-en, clearspeak, "é", "modifying above e with acute"
-en, clearspeak, "ê", "modifying above e with caret"
-en, clearspeak, "ë", "modifying above e with double dot"
-en, clearspeak, "ì", "modifying above i with grave"
-en, clearspeak, "í", "modifying above i with acute"
-en, clearspeak, "î", "modifying above i with caret"
-en, clearspeak, "ï", "modifying above i with double dot"
-en, clearspeak, "ñ", "n overtilde"
-en, clearspeak, "ò", "modifying above o with grave"
-en, clearspeak, "ó", "modifying above o with acute"
-en, clearspeak, "ô", "modifying above o with caret"
-en, clearspeak, "õ", "o overtilde"
-en, clearspeak, "ö", "modifying above o with double dot"
-en, clearspeak, "ù", "modifying above u with grave"
-en, clearspeak, "ú", "modifying above u with acute"
-en, clearspeak, "û", "modifying above u with caret"
-en, clearspeak, "ü", "modifying above u with double dot"
-en, clearspeak, "ý", "modifying above y with acute"
-en, clearspeak, "ÿ", "modifying above y with double dot"
-en, clearspeak, "ā", "a overbar"
-en, clearspeak, "ă", "modifying above a with breve"
-en, clearspeak, "ą", "modifying above a with ogonek"
-en, clearspeak, "ć", "modifying above c with acute"
-en, clearspeak, "ĉ", "modifying above c with caret"
-en, clearspeak, "ċ", "modifying above c with dot"
-en, clearspeak, "č", "modifying above c with caron"
-en, clearspeak, "ď", "modifying above d with caron"
-en, clearspeak, "ē", "e overbar"
-en, clearspeak, "ĕ", "modifying above e with breve"
-en, clearspeak, "ė", "modifying above e with dot"
-en, clearspeak, "ę", "modifying above e with ogonek"
-en, clearspeak, "ě", "modifying above e with caron"
-en, clearspeak, "ĝ", "modifying above g with caret"
-en, clearspeak, "ğ", "modifying above g with breve"
-en, clearspeak, "ġ", "modifying above g with dot"
-en, clearspeak, "ģ", "modifying above g with cedilla"
-en, clearspeak, "ĥ", "modifying above h with caret"
-en, clearspeak, "ĩ", "i overtilde"
-en, clearspeak, "ī", "i overbar"
-en, clearspeak, "ĭ", "modifying above i with breve"
-en, clearspeak, "į", "modifying above i with ogonek"
-en, clearspeak, "ı", "modifying above dotless i"
-en, clearspeak, "ĵ", "modifying above j with caret"
-en, clearspeak, "ķ", "modifying above k with cedilla"
-en, clearspeak, "ĺ", "modifying above l with acute"
-en, clearspeak, "ļ", "modifying above l with cedilla"
-en, clearspeak, "ľ", "modifying above l with caron"
-en, clearspeak, "ŀ", "modifying above l with middle dot"
-en, clearspeak, "ń", "modifying above n with acute"
-en, clearspeak, "ņ", "modifying above n with cedilla"
-en, clearspeak, "ň", "modifying above n with caron"
-en, clearspeak, "ō", "o overbar"
-en, clearspeak, "ŏ", "modifying above o with breve"
-en, clearspeak, "ő", "modifying above o with double acute"
-en, clearspeak, "ŕ", "modifying above r with acute"
-en, clearspeak, "ŗ", "modifying above r with cedilla"
-en, clearspeak, "ř", "modifying above r with caron"
-en, clearspeak, "ś", "modifying above s with acute"
-en, clearspeak, "ŝ", "modifying above s with caret"
-en, clearspeak, "ş", "modifying above s with cedilla"
-en, clearspeak, "š", "modifying above s with caron"
-en, clearspeak, "ţ", "modifying above t with cedilla"
-en, clearspeak, "ť", "modifying above t with caron"
-en, clearspeak, "ũ", "u overtilde"
-en, clearspeak, "ū", "u overbar"
-en, clearspeak, "ŭ", "modifying above u with breve"
-en, clearspeak, "ů", "modifying above u with ring"
-en, clearspeak, "ű", "modifying above u with double acute"
-en, clearspeak, "ų", "modifying above u with ogonek"
-en, clearspeak, "ŵ", "modifying above w with caret"
-en, clearspeak, "ŷ", "modifying above y with caret"
-en, clearspeak, "ź", "modifying above z with acute"
-en, clearspeak, "ż", "modifying above z with dot"
-en, clearspeak, "ž", "modifying above z with caron"
-en, clearspeak, "ǎ", "modifying above a with caron"
-en, clearspeak, "ǐ", "modifying above i with caron"
-en, clearspeak, "ǒ", "modifying above o with caron"
-en, clearspeak, "ǔ", "modifying above u with caron"
-en, clearspeak, "ǧ", "modifying above g with caron"
-en, clearspeak, "ǩ", "modifying above k with caron"
-en, clearspeak, "ǫ", "modifying above o with ogonek"
-en, clearspeak, "ǰ", "modifying above j with caron"
-en, clearspeak, "ǵ", "modifying above g with acute"
-en, clearspeak, "ǹ", "modifying above n with grave"
-en, clearspeak, "ȁ", "modifying above a with double grave"
-en, clearspeak, "ȃ", "modifying above a with inverted breve"
-en, clearspeak, "ȅ", "modifying above e with double grave"
-en, clearspeak, "ȇ", "modifying above e with inverted breve"
-en, clearspeak, "ȉ", "modifying above i with double grave"
-en, clearspeak, "ȋ", "modifying above i with inverted breve"
-en, clearspeak, "ȍ", "modifying above o with double grave"
-en, clearspeak, "ȏ", "modifying above o with inverted breve"
-en, clearspeak, "ȑ", "modifying above r with double grave"
-en, clearspeak, "ȓ", "modifying above r with inverted breve"
-en, clearspeak, "ȕ", "modifying above u with double grave"
-en, clearspeak, "ȗ", "modifying above u with inverted breve"
-en, clearspeak, "ș", "modifying below s with comma below"
-en, clearspeak, "ț", "modifying below t with comma below"
-en, clearspeak, "ȟ", "modifying above h with caron"
-en, clearspeak, "ȧ", "modifying above a with dot"
-en, clearspeak, "ȩ", "modifying above e with cedilla"
-en, clearspeak, "ȯ", "modifying above o with dot"
-en, clearspeak, "ȳ", "y overbar"
-en, clearspeak, "ȷ", "modifying above dotless j"
-en, clearspeak, "ḁ", "modifying below a with ring below"
-en, clearspeak, "ḃ", "modifying above b with dot"
-en, clearspeak, "ḅ", "modifying below b with dot"
-en, clearspeak, "ḇ", "b underbar"
-en, clearspeak, "ḋ", "modifying above d with dot"
-en, clearspeak, "ḍ", "modifying below d with dot"
-en, clearspeak, "ḏ", "d underbar"
-en, clearspeak, "ḑ", "modifying above d with cedilla"
-en, clearspeak, "ḓ", "modifying below d with caret"
-en, clearspeak, "ḙ", "modifying below e with caret"
-en, clearspeak, "ḛ", "e undertilde"
-en, clearspeak, "ḟ", "modifying above f with dot"
-en, clearspeak, "ḡ", "g overbar"
-en, clearspeak, "ḣ", "modifying above h with dot"
-en, clearspeak, "ḥ", "modifying below h with dot"
-en, clearspeak, "ḧ", "modifying above h with double dot"
-en, clearspeak, "ḩ", "modifying above h with cedilla"
-en, clearspeak, "ḫ", "modifying below h with breve below"
-en, clearspeak, "ḭ", "i undertilde"
-en, clearspeak, "ḱ", "modifying above k with acute"
-en, clearspeak, "ḳ", "modifying below k with dot"
-en, clearspeak, "ḵ", "k underbar"
-en, clearspeak, "ḷ", "modifying below l with dot"
-en, clearspeak, "ḻ", "l underbar"
-en, clearspeak, "ḽ", "modifying below l with caret"
-en, clearspeak, "ḿ", "modifying above m with acute"
-en, clearspeak, "ṁ", "modifying above m with dot"
-en, clearspeak, "ṃ", "modifying below m with dot"
-en, clearspeak, "ṅ", "modifying above n with dot"
-en, clearspeak, "ṇ", "modifying below n with dot"
-en, clearspeak, "ṉ", "n underbar"
-en, clearspeak, "ṋ", "modifying below n with caret"
-en, clearspeak, "ṕ", "modifying above p with acute"
-en, clearspeak, "ṗ", "modifying above p with dot"
-en, clearspeak, "ṙ", "modifying above r with dot"
-en, clearspeak, "ṛ", "modifying below r with dot"
-en, clearspeak, "ṟ", "r underbar"
-en, clearspeak, "ṡ", "modifying above s with dot"
-en, clearspeak, "ṣ", "modifying below s with dot"
-en, clearspeak, "ṫ", "modifying above t with dot"
-en, clearspeak, "ṭ", "modifying below t with dot"
-en, clearspeak, "ṯ", "t underbar"
-en, clearspeak, "ṱ", "modifying below t with caret"
-en, clearspeak, "ṳ", "modifying below u with double dot"
-en, clearspeak, "ṵ", "u undertilde"
-en, clearspeak, "ṷ", "modifying below u with caret"
-en, clearspeak, "ṽ", "v overtilde"
-en, clearspeak, "ṿ", "modifying below v with dot"
-en, clearspeak, "ẁ", "modifying above w with grave"
-en, clearspeak, "ẃ", "modifying above w with acute"
-en, clearspeak, "ẅ", "modifying above w with double dot"
-en, clearspeak, "ẇ", "modifying above w with dot"
-en, clearspeak, "ẉ", "modifying below w with dot"
-en, clearspeak, "ẋ", "modifying above x with dot"
-en, clearspeak, "ẍ", "modifying above x with double dot"
-en, clearspeak, "ẏ", "modifying above y with dot"
-en, clearspeak, "ẑ", "modifying above z with caret"
-en, clearspeak, "ẓ", "modifying below z with dot"
-en, clearspeak, "ẕ", "z underbar"
-en, clearspeak, "ẖ", "h underbar"
-en, clearspeak, "ẗ", "modifying above t with double dot"
-en, clearspeak, "ẘ", "modifying above w with ring"
-en, clearspeak, "ẙ", "modifying above y with ring"
-en, clearspeak, "ẚ", "modifying above a with right half ring"
-en, clearspeak, "ạ", "modifying below a with dot"
-en, clearspeak, "ả", "modifying above a with hook"
-en, clearspeak, "ẹ", "modifying below e with dot"
-en, clearspeak, "ẻ", "modifying above e with hook"
-en, clearspeak, "ẽ", "e overtilde"
-en, clearspeak, "ỉ", "modifying above i with hook"
-en, clearspeak, "ị", "modifying below i with dot"
-en, clearspeak, "ọ", "modifying below o with dot"
-en, clearspeak, "ỏ", "modifying above o with hook"
-en, clearspeak, "ụ", "modifying below u with dot"
-en, clearspeak, "ủ", "modifying above u with hook"
-en, clearspeak, "ỳ", "modifying above y with grave"
-en, clearspeak, "ỵ", "modifying below y with dot"
-en, clearspeak, "ỷ", "modifying above y with hook"
-en, clearspeak, "ỹ", "y overtilde"
-en, clearspeak, "ͣ", "combining a"
-en, clearspeak, "ͤ", "combining e"
-en, clearspeak, "ͥ", "combining i"
-en, clearspeak, "ͦ", "combining o"
-en, clearspeak, "ͧ", "combining u"
-en, clearspeak, "ͨ", "combining c"
-en, clearspeak, "ͩ", "combining d"
-en, clearspeak, "ͪ", "combining h"
-en, clearspeak, "ͫ", "combining m"
-en, clearspeak, "ͬ", "combining r"
-en, clearspeak, "ͭ", "combining t"
-en, clearspeak, "ͮ", "combining v"
-en, clearspeak, "ͯ", "combining x"
-en, clearspeak, "ᵢ", "subscript i"
-en, clearspeak, "ᵣ", "subscript r"
-en, clearspeak, "ᵤ", "subscript u"
-en, clearspeak, "ᵥ", "subscript v"
-en, clearspeak, "᷊", "combining r below"
-en, clearspeak, "ᷓ", "combining flattened open a above"
-en, clearspeak, "ᷔ", "combining ae"
-en, clearspeak, "ᷕ", "combining ao"
-en, clearspeak, "ᷖ", "combining av"
-en, clearspeak, "ᷗ", "combining c cedilla"
-en, clearspeak, "ᷘ", "combining insular d"
-en, clearspeak, "ᷙ", "combining eth"
-en, clearspeak, "ᷚ", "combining g"
-en, clearspeak, "ᷛ", "combining small upper G"
-en, clearspeak, "ᷜ", "combining k"
-en, clearspeak, "ᷝ", "combining l"
-en, clearspeak, "ᷞ", "combining small upper L"
-en, clearspeak, "ᷟ", "combining small upper M"
-en, clearspeak, "ᷠ", "combining n"
-en, clearspeak, "ᷡ", "combining small upper N"
-en, clearspeak, "ᷢ", "combining small upper R"
-en, clearspeak, "ᷣ", "combining r rotunda"
-en, clearspeak, "ᷤ", "combining s"
-en, clearspeak, "ᷥ", "combining long s"
-en, clearspeak, "ᷦ", "combining z"
-en, clearspeak, "ⁱ", "superscript i"
-en, clearspeak, "ⁿ", "superscript n"
-en, clearspeak, "ₐ", "subscript a"
-en, clearspeak, "ₑ", "subscript e"
-en, clearspeak, "ₒ", "subscript o"
-en, clearspeak, "ₓ", "subscript x"
-en, clearspeak, "ₔ", "subscript schwa"
-en, clearspeak, "ₕ", "subscript h"
-en, clearspeak, "ₖ", "subscript k"
-en, clearspeak, "ₗ", "subscript l"
-en, clearspeak, "ₘ", "subscript m"
-en, clearspeak, "ₙ", "subscript n"
-en, clearspeak, "ₚ", "subscript p"
-en, clearspeak, "ₛ", "subscript s"
-en, clearspeak, "ₜ", "subscript t"
-en, clearspeak, "⒜", "parenthesized a"
-en, clearspeak, "⒝", "parenthesized b"
-en, clearspeak, "⒞", "parenthesized c"
-en, clearspeak, "⒟", "parenthesized d"
-en, clearspeak, "⒠", "parenthesized e"
-en, clearspeak, "⒡", "parenthesized f"
-en, clearspeak, "⒢", "parenthesized g"
-en, clearspeak, "⒣", "parenthesized h"
-en, clearspeak, "⒤", "parenthesized i"
-en, clearspeak, "⒥", "parenthesized j"
-en, clearspeak, "⒦", "parenthesized k"
-en, clearspeak, "⒧", "parenthesized l"
-en, clearspeak, "⒨", "parenthesized m"
-en, clearspeak, "⒩", "parenthesized n"
-en, clearspeak, "⒪", "parenthesized o"
-en, clearspeak, "⒫", "parenthesized p"
-en, clearspeak, "⒬", "parenthesized q"
-en, clearspeak, "⒭", "parenthesized r"
-en, clearspeak, "⒮", "parenthesized s"
-en, clearspeak, "⒯", "parenthesized t"
-en, clearspeak, "⒰", "parenthesized u"
-en, clearspeak, "⒱", "parenthesized v"
-en, clearspeak, "⒲", "parenthesized w"
-en, clearspeak, "⒳", "parenthesized x"
-en, clearspeak, "⒴", "parenthesized y"
-en, clearspeak, "⒵", "parenthesized z"
-en, clearspeak, "Ⓐ", "circled upper A"
-en, clearspeak, "Ⓑ", "circled upper B"
-en, clearspeak, "Ⓒ", "circled upper C"
-en, clearspeak, "Ⓓ", "circled upper D"
-en, clearspeak, "Ⓔ", "circled upper E"
-en, clearspeak, "Ⓕ", "circled upper F"
-en, clearspeak, "Ⓖ", "circled upper G"
-en, clearspeak, "Ⓗ", "circled upper H"
-en, clearspeak, "Ⓘ", "circled upper I"
-en, clearspeak, "Ⓙ", "circled upper J"
-en, clearspeak, "Ⓚ", "circled upper K"
-en, clearspeak, "Ⓛ", "circled upper L"
-en, clearspeak, "Ⓜ", "circled upper M"
-en, clearspeak, "Ⓝ", "circled upper N"
-en, clearspeak, "Ⓞ", "circled upper O"
-en, clearspeak, "Ⓟ", "circled upper P"
-en, clearspeak, "Ⓠ", "circled upper Q"
-en, clearspeak, "Ⓡ", "circled upper R"
-en, clearspeak, "Ⓢ", "circled upper S"
-en, clearspeak, "Ⓣ", "circled upper T"
-en, clearspeak, "Ⓤ", "circled upper U"
-en, clearspeak, "Ⓥ", "circled upper V"
-en, clearspeak, "Ⓦ", "circled upper W"
-en, clearspeak, "Ⓧ", "circled upper X"
-en, clearspeak, "Ⓨ", "circled upper Y"
-en, clearspeak, "Ⓩ", "circled upper Z"
-en, clearspeak, "ⓐ", "circled a"
-en, clearspeak, "ⓑ", "circled b"
-en, clearspeak, "ⓒ", "circled c"
-en, clearspeak, "ⓓ", "circled d"
-en, clearspeak, "ⓔ", "circled e"
-en, clearspeak, "ⓕ", "circled f"
-en, clearspeak, "ⓖ", "circled g"
-en, clearspeak, "ⓗ", "circled h"
-en, clearspeak, "ⓘ", "circled i"
-en, clearspeak, "ⓙ", "circled j"
-en, clearspeak, "ⓚ", "circled k"
-en, clearspeak, "ⓛ", "circled l"
-en, clearspeak, "ⓜ", "circled m"
-en, clearspeak, "ⓝ", "circled n"
-en, clearspeak, "ⓞ", "circled o"
-en, clearspeak, "ⓟ", "circled p"
-en, clearspeak, "ⓠ", "circled q"
-en, clearspeak, "ⓡ", "circled r"
-en, clearspeak, "ⓢ", "circled s"
-en, clearspeak, "ⓣ", "circled t"
-en, clearspeak, "ⓤ", "circled u"
-en, clearspeak, "ⓥ", "circled v"
-en, clearspeak, "ⓦ", "circled w"
-en, clearspeak, "ⓧ", "circled x"
-en, clearspeak, "ⓨ", "circled y"
-en, clearspeak, "ⓩ", "circled z"
-en, clearspeak, "ⱼ", "subscript j"
-en, clearspeak, "🄐", "parenthesized upper A"
-en, clearspeak, "🄑", "parenthesized upper B"
-en, clearspeak, "🄒", "parenthesized upper C"
-en, clearspeak, "🄓", "parenthesized upper D"
-en, clearspeak, "🄔", "parenthesized upper E"
-en, clearspeak, "🄕", "parenthesized upper F"
-en, clearspeak, "🄖", "parenthesized upper G"
-en, clearspeak, "🄗", "parenthesized upper H"
-en, clearspeak, "🄘", "parenthesized upper I"
-en, clearspeak, "🄙", "parenthesized upper J"
-en, clearspeak, "🄚", "parenthesized upper K"
-en, clearspeak, "🄛", "parenthesized upper L"
-en, clearspeak, "🄜", "parenthesized upper M"
-en, clearspeak, "🄝", "parenthesized upper N"
-en, clearspeak, "🄞", "parenthesized upper O"
-en, clearspeak, "🄟", "parenthesized upper P"
-en, clearspeak, "🄠", "parenthesized upper Q"
-en, clearspeak, "🄡", "parenthesized upper R"
-en, clearspeak, "🄢", "parenthesized upper S"
-en, clearspeak, "🄣", "parenthesized upper T"
-en, clearspeak, "🄤", "parenthesized upper U"
-en, clearspeak, "🄥", "parenthesized upper V"
-en, clearspeak, "🄦", "parenthesized upper W"
-en, clearspeak, "🄧", "parenthesized upper X"
-en, clearspeak, "🄨", "parenthesized upper Y"
-en, clearspeak, "🄩", "parenthesized upper Z"
-en, clearspeak, "🄪", "tortoise shell bracketed upper S"
-en, clearspeak, "🄫", "circled italic upper C"
-en, clearspeak, "🄬", "circled italic upper R"
-en, clearspeak, "🄰", "squared upper A"
-en, clearspeak, "🄱", "squared upper B"
-en, clearspeak, "🄲", "squared upper C"
-en, clearspeak, "🄳", "squared upper D"
-en, clearspeak, "🄴", "squared upper E"
-en, clearspeak, "🄵", "squared upper F"
-en, clearspeak, "🄶", "squared upper G"
-en, clearspeak, "🄷", "squared upper H"
-en, clearspeak, "🄸", "squared upper I"
-en, clearspeak, "🄹", "squared upper J"
-en, clearspeak, "🄺", "squared upper K"
-en, clearspeak, "🄻", "squared upper L"
-en, clearspeak, "🄼", "squared upper M"
-en, clearspeak, "🄽", "squared upper N"
-en, clearspeak, "🄾", "squared upper O"
-en, clearspeak, "🄿", "squared upper P"
-en, clearspeak, "🅀", "squared upper Q"
-en, clearspeak, "🅁", "squared upper R"
-en, clearspeak, "🅂", "squared upper S"
-en, clearspeak, "🅃", "squared upper T"
-en, clearspeak, "🅄", "squared upper U"
-en, clearspeak, "🅅", "squared upper V"
-en, clearspeak, "🅆", "squared upper W"
-en, clearspeak, "🅇", "squared upper X"
-en, clearspeak, "🅈", "squared upper Y"
-en, clearspeak, "🅉", "squared upper Z"
-en, clearspeak, "🅐", "negative circled upper A"
-en, clearspeak, "🅑", "negative circled upper B"
-en, clearspeak, "🅒", "negative circled upper C"
-en, clearspeak, "🅓", "negative circled upper D"
-en, clearspeak, "🅔", "negative circled upper E"
-en, clearspeak, "🅕", "negative circled upper F"
-en, clearspeak, "🅖", "negative circled upper G"
-en, clearspeak, "🅗", "negative circled upper H"
-en, clearspeak, "🅘", "negative circled upper I"
-en, clearspeak, "🅙", "negative circled upper J"
-en, clearspeak, "🅚", "negative circled upper K"
-en, clearspeak, "🅛", "negative circled upper L"
-en, clearspeak, "🅜", "negative circled upper M"
-en, clearspeak, "🅝", "negative circled upper N"
-en, clearspeak, "🅞", "negative circled upper O"
-en, clearspeak, "🅟", "negative circled upper P"
-en, clearspeak, "🅠", "negative circled upper Q"
-en, clearspeak, "🅡", "negative circled upper R"
-en, clearspeak, "🅢", "negative circled upper S"
-en, clearspeak, "🅣", "negative circled upper T"
-en, clearspeak, "🅤", "negative circled upper U"
-en, clearspeak, "🅥", "negative circled upper V"
-en, clearspeak, "🅦", "negative circled upper W"
-en, clearspeak, "🅧", "negative circled upper X"
-en, clearspeak, "🅨", "negative circled upper Y"
-en, clearspeak, "🅩", "negative circled upper Z"
-en, clearspeak, "🅰", "negative squared upper A"
-en, clearspeak, "🅱", "negative squared upper B"
-en, clearspeak, "🅲", "negative squared upper C"
-en, clearspeak, "🅳", "negative squared upper D"
-en, clearspeak, "🅴", "negative squared upper E"
-en, clearspeak, "🅵", "negative squared upper F"
-en, clearspeak, "🅶", "negative squared upper G"
-en, clearspeak, "🅷", "negative squared upper H"
-en, clearspeak, "🅸", "negative squared upper I"
-en, clearspeak, "🅹", "negative squared upper J"
-en, clearspeak, "🅺", "negative squared upper K"
-en, clearspeak, "🅻", "negative squared upper L"
-en, clearspeak, "🅼", "negative squared upper M"
-en, clearspeak, "🅽", "negative squared upper N"
-en, clearspeak, "🅾", "negative squared upper O"
-en, clearspeak, "🅿", "negative squared upper P"
-en, clearspeak, "🆀", "negative squared upper Q"
-en, clearspeak, "🆁", "negative squared upper R"
-en, clearspeak, "🆂", "negative squared upper S"
-en, clearspeak, "🆃", "negative squared upper T"
-en, clearspeak, "🆄", "negative squared upper U"
-en, clearspeak, "🆅", "negative squared upper V"
-en, clearspeak, "🆆", "negative squared upper W"
-en, clearspeak, "🆇", "negative squared upper X"
-en, clearspeak, "🆈", "negative squared upper Y"
-en, clearspeak, "🆉", "negative squared upper Z"
-en, clearspeak, "🆊", "crossed negative squared upper P"
-en, clearspeak, "Ǖ", "upper U double overdot overbar"
-en, clearspeak, "Ǘ", "upper U double overdot acute"
-en, clearspeak, "Ǚ", "upper U double overdot caron"
-en, clearspeak, "Ǜ", "upper U double overdot grave"
-en, clearspeak, "Ǟ", "upper A double overdot overbar"
-en, clearspeak, "Ǡ", "upper A overdot overbar"
-en, clearspeak, "Ǭ", "upper O ogonek overbar"
-en, clearspeak, "Ǻ", "upper A ring acute"
-en, clearspeak, "Ȫ", "upper O double overdot overbar"
-en, clearspeak, "Ȭ", "upper O tilde overbar"
-en, clearspeak, "Ȱ", "upper O overdot overbar"
-en, clearspeak, "Ḉ", "upper C cedilla acute"
-en, clearspeak, "Ḕ", "upper E overbar grave"
-en, clearspeak, "Ḗ", "upper E overbar acute"
-en, clearspeak, "Ḝ", "upper E cedilla breve"
-en, clearspeak, "Ḯ", "upper I double overdot acute"
-en, clearspeak, "Ḹ", "upper L underdot overbar"
-en, clearspeak, "Ṍ", "upper O tilde acute"
-en, clearspeak, "Ṏ", "upper O tilde double overdot"
-en, clearspeak, "Ṑ", "upper O overbar grave"
-en, clearspeak, "Ṓ", "upper O overbar acute"
-en, clearspeak, "Ṝ", "upper R overbar underdot"
-en, clearspeak, "Ṥ", "upper S acute overdot"
-en, clearspeak, "Ṧ", "upper S caron overdot"
-en, clearspeak, "Ṩ", "upper S underdot overdot"
-en, clearspeak, "Ṹ", "upper U tilde acute"
-en, clearspeak, "Ṻ", "upper U overbar double overdot"
-en, clearspeak, "Ấ", "upper A hat acute"
-en, clearspeak, "Ầ", "upper A hat grave"
-en, clearspeak, "Ẩ", "upper A hat hook"
-en, clearspeak, "Ẫ", "upper A hat tilde"
-en, clearspeak, "Ậ", "upper A hat underdot"
-en, clearspeak, "Ắ", "upper A breve acute"
-en, clearspeak, "Ằ", "upper A breve grave"
-en, clearspeak, "Ẳ", "upper A breve hook"
-en, clearspeak, "Ẵ", "upper A breve tilde"
-en, clearspeak, "Ặ", "upper A breve underdot"
-en, clearspeak, "Ế", "upper E hat acute"
-en, clearspeak, "Ề", "upper E hat grave"
-en, clearspeak, "Ể", "upper E hat hook"
-en, clearspeak, "Ễ", "upper E hat tilde"
-en, clearspeak, "Ệ", "upper E hat underdot"
-en, clearspeak, "Ố", "upper O hat acute"
-en, clearspeak, "Ồ", "upper O hat grave"
-en, clearspeak, "Ổ", "upper O hat hook"
-en, clearspeak, "Ỗ", "upper O hat tilde"
-en, clearspeak, "Ộ", "upper O hat underdot"
-en, clearspeak, "Ớ", "upper O acute prime"
-en, clearspeak, "Ờ", "upper O grave prime"
-en, clearspeak, "Ở", "upper O hook prime"
-en, clearspeak, "Ỡ", "upper O tilde prime"
-en, clearspeak, "Ợ", "upper O underdot prime"
-en, clearspeak, "Ứ", "upper U acute prime"
-en, clearspeak, "Ừ", "upper U grave prime"
-en, clearspeak, "Ử", "upper U hook prime"
-en, clearspeak, "Ữ", "upper U tilde prime"
-en, clearspeak, "Ự", "upper U underdot prime"
-en, clearspeak, "A", "cap A"
-en, clearspeak, "B", "cap B"
-en, clearspeak, "C", "cap C"
-en, clearspeak, "D", "cap D"
-en, clearspeak, "E", "cap E"
-en, clearspeak, "F", "cap F"
-en, clearspeak, "G", "cap G"
-en, clearspeak, "H", "cap H"
-en, clearspeak, "I", "cap I"
-en, clearspeak, "J", "cap J"
-en, clearspeak, "K", "cap K"
-en, clearspeak, "L", "cap L"
-en, clearspeak, "M", "cap M"
-en, clearspeak, "N", "cap N"
-en, clearspeak, "O", "cap O"
-en, clearspeak, "P", "cap P"
-en, clearspeak, "Q", "cap Q"
-en, clearspeak, "R", "cap R"
-en, clearspeak, "S", "cap S"
-en, clearspeak, "T", "cap T"
-en, clearspeak, "U", "cap U"
-en, clearspeak, "V", "cap V"
-en, clearspeak, "W", "cap W"
-en, clearspeak, "X", "cap X"
-en, clearspeak, "Y", "cap Y"
-en, clearspeak, "Z", "cap Z"
-en, clearspeak, "Ａ", "cap A"
-en, clearspeak, "Ｂ", "cap B"
-en, clearspeak, "Ｃ", "cap C"
-en, clearspeak, "Ｄ", "cap D"
-en, clearspeak, "Ｅ", "cap E"
-en, clearspeak, "Ｆ", "cap F"
-en, clearspeak, "Ｇ", "cap G"
-en, clearspeak, "Ｈ", "cap H"
-en, clearspeak, "Ｉ", "cap I"
-en, clearspeak, "Ｊ", "cap J"
-en, clearspeak, "Ｋ", "cap K"
-en, clearspeak, "Ｌ", "cap L"
-en, clearspeak, "Ｍ", "cap M"
-en, clearspeak, "Ｎ", "cap N"
-en, clearspeak, "Ｏ", "cap O"
-en, clearspeak, "Ｐ", "cap P"
-en, clearspeak, "Ｑ", "cap Q"
-en, clearspeak, "Ｒ", "cap R"
-en, clearspeak, "Ｓ", "cap S"
-en, clearspeak, "Ｔ", "cap T"
-en, clearspeak, "Ｕ", "cap U"
-en, clearspeak, "Ｖ", "cap V"
-en, clearspeak, "Ｗ", "cap W"
-en, clearspeak, "Ｘ", "cap X"
-en, clearspeak, "Ｙ", "cap Y"
-en, clearspeak, "Ｚ", "cap Z"
-en, clearspeak, "À", "modifying above upper A with grave"
-en, clearspeak, "Á", "modifying above upper A with acute"
-en, clearspeak, "Â", "modifying above upper A with caret"
-en, clearspeak, "Ã", "upper A overtilde"
-en, clearspeak, "Ä", "modifying above upper A with double dot"
-en, clearspeak, "Å", "modifying above upper A with ring"
-en, clearspeak, "Ç", "modifying above upper C with cedilla"
-en, clearspeak, "È", "modifying above upper E with grave"
-en, clearspeak, "É", "modifying above upper E with acute"
-en, clearspeak, "Ê", "modifying above upper E with caret"
-en, clearspeak, "Ë", "modifying above upper E with double dot"
-en, clearspeak, "Ì", "modifying above upper I with grave"
-en, clearspeak, "Í", "modifying above upper I with acute"
-en, clearspeak, "Î", "modifying above upper I with caret"
-en, clearspeak, "Ï", "modifying above upper I with double dot"
-en, clearspeak, "Ñ", "upper N overtilde"
-en, clearspeak, "Ò", "modifying above upper O with grave"
-en, clearspeak, "Ó", "modifying above upper O with acute"
-en, clearspeak, "Ô", "modifying above upper O with caret"
-en, clearspeak, "Õ", "upper O overtilde"
-en, clearspeak, "Ö", "modifying above upper O with double dot"
-en, clearspeak, "Ù", "modifying above upper U with grave"
-en, clearspeak, "Ú", "modifying above upper U with acute"
-en, clearspeak, "Û", "modifying above upper U with caret"
-en, clearspeak, "Ü", "modifying above upper U with double dot"
-en, clearspeak, "Ý", "modifying above upper Y with acute"
-en, clearspeak, "Ā", "upper A overbar"
-en, clearspeak, "Ă", "modifying above upper A with breve"
-en, clearspeak, "Ą", "modifying above upper A with ogonek"
-en, clearspeak, "Ć", "modifying above upper C with acute"
-en, clearspeak, "Ĉ", "modifying above upper C with caret"
-en, clearspeak, "Ċ", "modifying above upper C with dot"
-en, clearspeak, "Č", "modifying above upper C with caron"
-en, clearspeak, "Ď", "modifying above upper D with caron"
-en, clearspeak, "Ē", "upper E overbar"
-en, clearspeak, "Ĕ", "modifying above upper E with breve"
-en, clearspeak, "Ė", "modifying above upper E with dot"
-en, clearspeak, "Ę", "modifying above upper E with ogonek"
-en, clearspeak, "Ě", "modifying above upper E with caron"
-en, clearspeak, "Ĝ", "modifying above upper G with caret"
-en, clearspeak, "Ğ", "modifying above upper G with breve"
-en, clearspeak, "Ġ", "modifying above upper G with dot"
-en, clearspeak, "Ģ", "modifying above upper G with cedilla"
-en, clearspeak, "Ĥ", "modifying above upper H with caret"
-en, clearspeak, "Ĩ", "upper I overtilde"
-en, clearspeak, "Ī", "upper I overbar"
-en, clearspeak, "Ĭ", "modifying above upper I with breve"
-en, clearspeak, "Į", "modifying above upper I with ogonek"
-en, clearspeak, "İ", "modifying above upper I with dot"
-en, clearspeak, "Ĵ", "modifying above upper J with caret"
-en, clearspeak, "Ķ", "modifying above upper K with cedilla"
-en, clearspeak, "Ĺ", "modifying above upper L with acute"
-en, clearspeak, "Ļ", "modifying above upper L with cedilla"
-en, clearspeak, "Ľ", "modifying above upper L with caron"
-en, clearspeak, "Ŀ", "modifying above upper L with middle dot"
-en, clearspeak, "Ń", "modifying above upper N with acute"
-en, clearspeak, "Ņ", "modifying above upper N with cedilla"
-en, clearspeak, "Ň", "modifying above upper N with caron"
-en, clearspeak, "Ō", "upper O overbar"
-en, clearspeak, "Ŏ", "modifying above upper O with breve"
-en, clearspeak, "Ő", "modifying above upper O with double acute"
-en, clearspeak, "Ŕ", "modifying above upper R with acute"
-en, clearspeak, "Ŗ", "modifying above upper R with cedilla"
-en, clearspeak, "Ř", "modifying above upper R with caron"
-en, clearspeak, "Ś", "modifying above upper S with acute"
-en, clearspeak, "Ŝ", "modifying above upper S with caret"
-en, clearspeak, "Ş", "modifying above upper S with cedilla"
-en, clearspeak, "Š", "modifying above upper S with caron"
-en, clearspeak, "Ţ", "modifying above upper T with cedilla"
-en, clearspeak, "Ť", "modifying above upper T with caron"
-en, clearspeak, "Ũ", "upper U overtilde"
-en, clearspeak, "Ū", "upper U overbar"
-en, clearspeak, "Ŭ", "modifying above upper U with breve"
-en, clearspeak, "Ů", "modifying above upper U with ring"
-en, clearspeak, "Ű", "modifying above upper U with double acute"
-en, clearspeak, "Ų", "modifying above upper U with ogonek"
-en, clearspeak, "Ŵ", "modifying above upper W with caret"
-en, clearspeak, "Ŷ", "modifying above upper Y with caret"
-en, clearspeak, "Ÿ", "modifying above upper Y with double dot"
-en, clearspeak, "Ź", "modifying above upper Z with acute"
-en, clearspeak, "Ż", "modifying above upper Z with dot"
-en, clearspeak, "Ž", "modifying above upper Z with caron"
-en, clearspeak, "Ǎ", "modifying above upper A with caron"
-en, clearspeak, "Ǐ", "modifying above upper I with caron"
-en, clearspeak, "Ǒ", "modifying above upper O with caron"
-en, clearspeak, "Ǔ", "modifying above upper U with caron"
-en, clearspeak, "Ǧ", "modifying above upper G with caron"
-en, clearspeak, "Ǩ", "modifying above upper K with caron"
-en, clearspeak, "Ǫ", "modifying above upper O with ogonek"
-en, clearspeak, "Ǵ", "modifying above upper G with acute"
-en, clearspeak, "Ǹ", "modifying above upper N with grave"
-en, clearspeak, "Ȁ", "modifying above upper A with double grave"
-en, clearspeak, "Ȃ", "modifying above upper A with inverted breve"
-en, clearspeak, "Ȅ", "modifying above upper E with double grave"
-en, clearspeak, "Ȇ", "modifying above upper E with inverted breve"
-en, clearspeak, "Ȉ", "modifying above upper I with double grave"
-en, clearspeak, "Ȋ", "modifying above upper I with inverted breve"
-en, clearspeak, "Ȍ", "modifying above upper O with double grave"
-en, clearspeak, "Ȏ", "modifying above upper O with inverted breve"
-en, clearspeak, "Ȑ", "modifying above upper R with double grave"
-en, clearspeak, "Ȓ", "modifying above upper R with inverted breve"
-en, clearspeak, "Ȕ", "modifying above upper U with double grave"
-en, clearspeak, "Ȗ", "modifying above upper U with inverted breve"
-en, clearspeak, "Ș", "modifying below upper S with comma below"
-en, clearspeak, "Ț", "modifying below upper T with comma below"
-en, clearspeak, "Ȟ", "modifying above upper H with caron"
-en, clearspeak, "Ȧ", "modifying above upper A with dot"
-en, clearspeak, "Ȩ", "modifying above upper E with cedilla"
-en, clearspeak, "Ȯ", "modifying above upper O with dot"
-en, clearspeak, "Ȳ", "upper Y overbar"
-en, clearspeak, "Ḁ", "modifying below upper A with ring below"
-en, clearspeak, "Ḃ", "modifying above upper B with dot"
-en, clearspeak, "Ḅ", "modifying below upper B with dot"
-en, clearspeak, "Ḇ", "upper B underbar"
-en, clearspeak, "Ḋ", "modifying above upper D with dot"
-en, clearspeak, "Ḍ", "modifying below upper D with dot"
-en, clearspeak, "Ḏ", "upper D underbar"
-en, clearspeak, "Ḑ", "modifying above upper D with cedilla"
-en, clearspeak, "Ḓ", "modifying below upper D with caret"
-en, clearspeak, "Ḙ", "modifying below upper E with caret"
-en, clearspeak, "Ḛ", "upper E undertilde"
-en, clearspeak, "Ḟ", "modifying above upper F with dot"
-en, clearspeak, "Ḡ", "upper G overbar"
-en, clearspeak, "Ḣ", "modifying above upper H with dot"
-en, clearspeak, "Ḥ", "modifying below upper H with dot"
-en, clearspeak, "Ḧ", "modifying above upper H with double dot"
-en, clearspeak, "Ḩ", "modifying above upper H with cedilla"
-en, clearspeak, "Ḫ", "modifying below upper H with breve below"
-en, clearspeak, "Ḭ", "upper I undertilde"
-en, clearspeak, "Ḱ", "modifying above upper K with acute"
-en, clearspeak, "Ḳ", "modifying below upper K with dot"
-en, clearspeak, "Ḵ", "upper K underbar"
-en, clearspeak, "Ḷ", "modifying below upper L with dot"
-en, clearspeak, "Ḻ", "upper L underbar"
-en, clearspeak, "Ḽ", "modifying below upper L with caret"
-en, clearspeak, "Ḿ", "modifying above upper M with acute"
-en, clearspeak, "Ṁ", "modifying above upper M with dot"
-en, clearspeak, "Ṃ", "modifying below upper M with dot"
-en, clearspeak, "Ṅ", "modifying above upper N with dot"
-en, clearspeak, "Ṇ", "modifying below upper N with dot"
-en, clearspeak, "Ṉ", "upper N underbar"
-en, clearspeak, "Ṋ", "modifying below upper N with caret"
-en, clearspeak, "Ṕ", "modifying above upper P with acute"
-en, clearspeak, "Ṗ", "modifying above upper P with dot"
-en, clearspeak, "Ṙ", "modifying above upper R with dot"
-en, clearspeak, "Ṛ", "modifying below upper R with dot"
-en, clearspeak, "Ṟ", "upper R underbar"
-en, clearspeak, "Ṡ", "modifying above upper S with dot"
-en, clearspeak, "Ṣ", "modifying below upper S with dot"
-en, clearspeak, "Ṫ", "modifying above upper T with dot"
-en, clearspeak, "Ṭ", "modifying below upper T with dot"
-en, clearspeak, "Ṯ", "upper T underbar"
-en, clearspeak, "Ṱ", "modifying below upper T with caret"
-en, clearspeak, "Ṳ", "modifying below upper U with double dot"
-en, clearspeak, "Ṵ", "upper U undertilde"
-en, clearspeak, "Ṷ", "modifying below upper U with caret"
-en, clearspeak, "Ṽ", "upper V overtilde"
-en, clearspeak, "Ṿ", "modifying below upper V with dot"
-en, clearspeak, "Ẁ", "modifying above upper W with grave"
-en, clearspeak, "Ẃ", "modifying above upper W with acute"
-en, clearspeak, "Ẅ", "modifying above upper W with double dot"
-en, clearspeak, "Ẇ", "modifying above upper W with dot"
-en, clearspeak, "Ẉ", "modifying below upper W with dot"
-en, clearspeak, "Ẋ", "modifying above upper X with dot"
-en, clearspeak, "Ẍ", "modifying above upper X with double dot"
-en, clearspeak, "Ẏ", "modifying above upper Y with dot"
-en, clearspeak, "Ẑ", "modifying above upper Z with circumflex"
-en, clearspeak, "Ẓ", "modifying below upper Z with dot"
-en, clearspeak, "Ẕ", "upper Z underbar"
-en, clearspeak, "Ạ", "modifying below upper A with dot"
-en, clearspeak, "Ả", "modifying above upper A with hook"
-en, clearspeak, "Ẹ", "modifying below upper E with dot"
-en, clearspeak, "Ẻ", "modifying above upper E with hook"
-en, clearspeak, "Ẽ", "upper E overtilde"
-en, clearspeak, "Ỉ", "modifying above upper I with hook"
-en, clearspeak, "Ị", "modifying below upper I with dot"
-en, clearspeak, "Ọ", "modifying below upper O with dot"
-en, clearspeak, "Ỏ", "modifying above upper O with hook"
-en, clearspeak, "Ụ", "modifying below upper U with dot"
-en, clearspeak, "Ủ", "modifying above upper U with hook"
-en, clearspeak, "Ỳ", "modifying above upper Y with grave"
-en, clearspeak, "Ỵ", "modifying below upper Y with dot"
-en, clearspeak, "Ỷ", "modifying above upper Y with hook"
-en, clearspeak, "Ỹ", "upper Y overtilde"
-en, clearspeak, "𝕬", "bold fraktur cap A"
-en, clearspeak, "𝕭", "bold fraktur cap B"
-en, clearspeak, "𝕮", "bold fraktur cap C"
-en, clearspeak, "𝕯", "bold fraktur cap D"
-en, clearspeak, "𝕰", "bold fraktur cap E"
-en, clearspeak, "𝕱", "bold fraktur cap F"
-en, clearspeak, "𝕲", "bold fraktur cap G"
-en, clearspeak, "𝕳", "bold fraktur cap H"
-en, clearspeak, "𝕴", "bold fraktur cap I"
-en, clearspeak, "𝕵", "bold fraktur cap J"
-en, clearspeak, "𝕶", "bold fraktur cap K"
-en, clearspeak, "𝕷", "bold fraktur cap L"
-en, clearspeak, "𝕸", "bold fraktur cap M"
-en, clearspeak, "𝕹", "bold fraktur cap N"
-en, clearspeak, "𝕺", "bold fraktur cap O"
-en, clearspeak, "𝕻", "bold fraktur cap P"
-en, clearspeak, "𝕼", "bold fraktur cap Q"
-en, clearspeak, "𝕽", "bold fraktur cap R"
-en, clearspeak, "𝕾", "bold fraktur cap S"
-en, clearspeak, "𝕿", "bold fraktur cap T"
-en, clearspeak, "𝖀", "bold fraktur cap U"
-en, clearspeak, "𝖁", "bold fraktur cap V"
-en, clearspeak, "𝖂", "bold fraktur cap W"
-en, clearspeak, "𝖃", "bold fraktur cap X"
-en, clearspeak, "𝖄", "bold fraktur cap Y"
-en, clearspeak, "𝖅", "bold fraktur cap Z"
-en, clearspeak, "𝖆", "bold fraktur a"
-en, clearspeak, "𝖇", "bold fraktur b"
-en, clearspeak, "𝖈", "bold fraktur c"
-en, clearspeak, "𝖉", "bold fraktur d"
-en, clearspeak, "𝖊", "bold fraktur e"
-en, clearspeak, "𝖋", "bold fraktur f"
-en, clearspeak, "𝖌", "bold fraktur g"
-en, clearspeak, "𝖍", "bold fraktur h"
-en, clearspeak, "𝖎", "bold fraktur i"
-en, clearspeak, "𝖏", "bold fraktur j"
-en, clearspeak, "𝖐", "bold fraktur k"
-en, clearspeak, "𝖑", "bold fraktur l"
-en, clearspeak, "𝖒", "bold fraktur m"
-en, clearspeak, "𝖓", "bold fraktur n"
-en, clearspeak, "𝖔", "bold fraktur o"
-en, clearspeak, "𝖕", "bold fraktur p"
-en, clearspeak, "𝖖", "bold fraktur q"
-en, clearspeak, "𝖗", "bold fraktur r"
-en, clearspeak, "𝖘", "bold fraktur s"
-en, clearspeak, "𝖙", "bold fraktur t"
-en, clearspeak, "𝖚", "bold fraktur u"
-en, clearspeak, "𝖛", "bold fraktur v"
-en, clearspeak, "𝖜", "bold fraktur w"
-en, clearspeak, "𝖝", "bold fraktur x"
-en, clearspeak, "𝖞", "bold fraktur y"
-en, clearspeak, "𝖟", "bold fraktur z"
-en, clearspeak, "𝐀", "bold cap A"
-en, clearspeak, "𝐁", "bold cap B"
-en, clearspeak, "𝐂", "bold cap C"
-en, clearspeak, "𝐃", "bold cap D"
-en, clearspeak, "𝐄", "bold cap E"
-en, clearspeak, "𝐅", "bold cap F"
-en, clearspeak, "𝐆", "bold cap G"
-en, clearspeak, "𝐇", "bold cap H"
-en, clearspeak, "𝐈", "bold cap I"
-en, clearspeak, "𝐉", "bold cap J"
-en, clearspeak, "𝐊", "bold cap K"
-en, clearspeak, "𝐋", "bold cap L"
-en, clearspeak, "𝐌", "bold cap M"
-en, clearspeak, "𝐍", "bold cap N"
-en, clearspeak, "𝐎", "bold cap O"
-en, clearspeak, "𝐏", "bold cap P"
-en, clearspeak, "𝐐", "bold cap Q"
-en, clearspeak, "𝐑", "bold cap R"
-en, clearspeak, "𝐒", "bold cap S"
-en, clearspeak, "𝐓", "bold cap T"
-en, clearspeak, "𝐔", "bold cap U"
-en, clearspeak, "𝐕", "bold cap V"
-en, clearspeak, "𝐖", "bold cap W"
-en, clearspeak, "𝐗", "bold cap X"
-en, clearspeak, "𝐘", "bold cap Y"
-en, clearspeak, "𝐙", "bold cap Z"
-en, clearspeak, "𝐚", "bold a"
-en, clearspeak, "𝐛", "bold b"
-en, clearspeak, "𝐜", "bold c"
-en, clearspeak, "𝐝", "bold d"
-en, clearspeak, "𝐞", "bold e"
-en, clearspeak, "𝐟", "bold f"
-en, clearspeak, "𝐠", "bold g"
-en, clearspeak, "𝐡", "bold h"
-en, clearspeak, "𝐢", "bold i"
-en, clearspeak, "𝐣", "bold j"
-en, clearspeak, "𝐤", "bold k"
-en, clearspeak, "𝐥", "bold l"
-en, clearspeak, "𝐦", "bold m"
-en, clearspeak, "𝐧", "bold n"
-en, clearspeak, "𝐨", "bold o"
-en, clearspeak, "𝐩", "bold p"
-en, clearspeak, "𝐪", "bold q"
-en, clearspeak, "𝐫", "bold r"
-en, clearspeak, "𝐬", "bold s"
-en, clearspeak, "𝐭", "bold t"
-en, clearspeak, "𝐮", "bold u"
-en, clearspeak, "𝐯", "bold v"
-en, clearspeak, "𝐰", "bold w"
-en, clearspeak, "𝐱", "bold x"
-en, clearspeak, "𝐲", "bold y"
-en, clearspeak, "𝐳", "bold z"
-en, clearspeak, "𝑨", "bold italic cap A"
-en, clearspeak, "𝑩", "bold italic cap B"
-en, clearspeak, "𝑪", "bold italic cap C"
-en, clearspeak, "𝑫", "bold italic cap D"
-en, clearspeak, "𝑬", "bold italic cap E"
-en, clearspeak, "𝑭", "bold italic cap F"
-en, clearspeak, "𝑮", "bold italic cap G"
-en, clearspeak, "𝑯", "bold italic cap H"
-en, clearspeak, "𝑰", "bold italic cap I"
-en, clearspeak, "𝑱", "bold italic cap J"
-en, clearspeak, "𝑲", "bold italic cap K"
-en, clearspeak, "𝑳", "bold italic cap L"
-en, clearspeak, "𝑴", "bold italic cap M"
-en, clearspeak, "𝑵", "bold italic cap N"
-en, clearspeak, "𝑶", "bold italic cap O"
-en, clearspeak, "𝑷", "bold italic cap P"
-en, clearspeak, "𝑸", "bold italic cap Q"
-en, clearspeak, "𝑹", "bold italic cap R"
-en, clearspeak, "𝑺", "bold italic cap S"
-en, clearspeak, "𝑻", "bold italic cap T"
-en, clearspeak, "𝑼", "bold italic cap U"
-en, clearspeak, "𝑽", "bold italic cap V"
-en, clearspeak, "𝑾", "bold italic cap W"
-en, clearspeak, "𝑿", "bold italic cap X"
-en, clearspeak, "𝒀", "bold italic cap Y"
-en, clearspeak, "𝒁", "bold italic cap Z"
-en, clearspeak, "𝒂", "bold italic a"
-en, clearspeak, "𝒃", "bold italic b"
-en, clearspeak, "𝒄", "bold italic c"
-en, clearspeak, "𝒅", "bold italic d"
-en, clearspeak, "𝒆", "bold italic e"
-en, clearspeak, "𝒇", "bold italic f"
-en, clearspeak, "𝒈", "bold italic g"
-en, clearspeak, "𝒉", "bold italic h"
-en, clearspeak, "𝒊", "bold italic i"
-en, clearspeak, "𝒋", "bold italic j"
-en, clearspeak, "𝒌", "bold italic k"
-en, clearspeak, "𝒍", "bold italic l"
-en, clearspeak, "𝒎", "bold italic m"
-en, clearspeak, "𝒏", "bold italic n"
-en, clearspeak, "𝒐", "bold italic o"
-en, clearspeak, "𝒑", "bold italic p"
-en, clearspeak, "𝒒", "bold italic q"
-en, clearspeak, "𝒓", "bold italic r"
-en, clearspeak, "𝒔", "bold italic s"
-en, clearspeak, "𝒕", "bold italic t"
-en, clearspeak, "𝒖", "bold italic u"
-en, clearspeak, "𝒗", "bold italic v"
-en, clearspeak, "𝒘", "bold italic w"
-en, clearspeak, "𝒙", "bold italic x"
-en, clearspeak, "𝒚", "bold italic y"
-en, clearspeak, "𝒛", "bold italic z"
-en, clearspeak, "𝓐", "bold script cap A"
-en, clearspeak, "𝓑", "bold script cap B"
-en, clearspeak, "𝓒", "bold script cap C"
-en, clearspeak, "𝓓", "bold script cap D"
-en, clearspeak, "𝓔", "bold script cap E"
-en, clearspeak, "𝓕", "bold script cap F"
-en, clearspeak, "𝓖", "bold script cap G"
-en, clearspeak, "𝓗", "bold script cap H"
-en, clearspeak, "𝓘", "bold script cap I"
-en, clearspeak, "𝓙", "bold script cap J"
-en, clearspeak, "𝓚", "bold script cap K"
-en, clearspeak, "𝓛", "bold script cap L"
-en, clearspeak, "𝓜", "bold script cap M"
-en, clearspeak, "𝓝", "bold script cap N"
-en, clearspeak, "𝓞", "bold script cap O"
-en, clearspeak, "𝓟", "bold script cap P"
-en, clearspeak, "𝓠", "bold script cap Q"
-en, clearspeak, "𝓡", "bold script cap R"
-en, clearspeak, "𝓢", "bold script cap S"
-en, clearspeak, "𝓣", "bold script cap T"
-en, clearspeak, "𝓤", "bold script cap U"
-en, clearspeak, "𝓥", "bold script cap V"
-en, clearspeak, "𝓦", "bold script cap W"
-en, clearspeak, "𝓧", "bold script cap X"
-en, clearspeak, "𝓨", "bold script cap Y"
-en, clearspeak, "𝓩", "bold script cap Z"
-en, clearspeak, "𝓪", "bold script a"
-en, clearspeak, "𝓫", "bold script b"
-en, clearspeak, "𝓬", "bold script c"
-en, clearspeak, "𝓭", "bold script d"
-en, clearspeak, "𝓮", "bold script e"
-en, clearspeak, "𝓯", "bold script f"
-en, clearspeak, "𝓰", "bold script g"
-en, clearspeak, "𝓱", "bold script h"
-en, clearspeak, "𝓲", "bold script i"
-en, clearspeak, "𝓳", "bold script j"
-en, clearspeak, "𝓴", "bold script k"
-en, clearspeak, "𝓵", "bold script l"
-en, clearspeak, "𝓶", "bold script m"
-en, clearspeak, "𝓷", "bold script n"
-en, clearspeak, "𝓸", "bold script o"
-en, clearspeak, "𝓹", "bold script p"
-en, clearspeak, "𝓺", "bold script q"
-en, clearspeak, "𝓻", "bold script r"
-en, clearspeak, "𝓼", "bold script s"
-en, clearspeak, "𝓽", "bold script t"
-en, clearspeak, "𝓾", "bold script u"
-en, clearspeak, "𝓿", "bold script v"
-en, clearspeak, "𝔀", "bold script w"
-en, clearspeak, "𝔁", "bold script x"
-en, clearspeak, "𝔂", "bold script y"
-en, clearspeak, "𝔃", "bold script z"
-en, clearspeak, "𝔸", "double struck cap A"
-en, clearspeak, "𝔹", "double struck cap B"
-en, clearspeak, "ℂ", "double struck cap C"
-en, clearspeak, "𝔻", "double struck cap D"
-en, clearspeak, "𝔼", "double struck cap E"
-en, clearspeak, "𝔽", "double struck cap F"
-en, clearspeak, "𝔾", "double struck cap G"
-en, clearspeak, "ℍ", "double struck cap H"
-en, clearspeak, "𝕀", "double struck cap I"
-en, clearspeak, "𝕁", "double struck cap J"
-en, clearspeak, "𝕂", "double struck cap K"
-en, clearspeak, "𝕃", "double struck cap L"
-en, clearspeak, "𝕄", "double struck cap M"
-en, clearspeak, "ℕ", "double struck cap N"
-en, clearspeak, "𝕆", "double struck cap O"
-en, clearspeak, "ℙ", "double struck cap P"
-en, clearspeak, "ℚ", "double struck cap Q"
-en, clearspeak, "ℝ", "double struck cap R"
-en, clearspeak, "𝕊", "double struck cap S"
-en, clearspeak, "𝕋", "double struck cap T"
-en, clearspeak, "𝕌", "double struck cap U"
-en, clearspeak, "𝕍", "double struck cap V"
-en, clearspeak, "𝕎", "double struck cap W"
-en, clearspeak, "𝕏", "double struck cap X"
-en, clearspeak, "𝕐", "double struck cap Y"
-en, clearspeak, "ℤ", "double struck cap Z"
-en, clearspeak, "𝕒", "double struck a"
-en, clearspeak, "𝕓", "double struck b"
-en, clearspeak, "𝕔", "double struck c"
-en, clearspeak, "𝕕", "double struck d"
-en, clearspeak, "𝕖", "double struck e"
-en, clearspeak, "𝕗", "double struck f"
-en, clearspeak, "𝕘", "double struck g"
-en, clearspeak, "𝕙", "double struck h"
-en, clearspeak, "𝕚", "double struck i"
-en, clearspeak, "𝕛", "double struck j"
-en, clearspeak, "𝕜", "double struck k"
-en, clearspeak, "𝕝", "double struck l"
-en, clearspeak, "𝕞", "double struck m"
-en, clearspeak, "𝕟", "double struck n"
-en, clearspeak, "𝕠", "double struck o"
-en, clearspeak, "𝕡", "double struck p"
-en, clearspeak, "𝕢", "double struck q"
-en, clearspeak, "𝕣", "double struck r"
-en, clearspeak, "𝕤", "double struck s"
-en, clearspeak, "𝕥", "double struck t"
-en, clearspeak, "𝕦", "double struck u"
-en, clearspeak, "𝕧", "double struck v"
-en, clearspeak, "𝕨", "double struck w"
-en, clearspeak, "𝕩", "double struck x"
-en, clearspeak, "𝕪", "double struck y"
-en, clearspeak, "𝕫", "double struck z"
-en, clearspeak, "𝔄", "fraktur cap A"
-en, clearspeak, "𝔅", "fraktur cap B"
-en, clearspeak, "ℭ", "fraktur cap D"
-en, clearspeak, "𝔇", "fraktur cap E"
-en, clearspeak, "𝔈", "fraktur cap F"
-en, clearspeak, "𝔉", "fraktur cap G"
-en, clearspeak, "𝔊", "fraktur cap G"
-en, clearspeak, "ℌ", "fraktur cap H"
-en, clearspeak, "ℑ", "fraktur cap I"
-en, clearspeak, "𝔍", "fraktur cap J"
-en, clearspeak, "𝔎", "fraktur cap K"
-en, clearspeak, "𝔏", "fraktur cap L"
-en, clearspeak, "𝔐", "fraktur cap M"
-en, clearspeak, "𝔑", "fraktur cap N"
-en, clearspeak, "𝔒", "fraktur cap O"
-en, clearspeak, "𝔓", "fraktur cap P"
-en, clearspeak, "𝔔", "fraktur cap Q"
-en, clearspeak, "ℜ", "fraktur cap R"
-en, clearspeak, "𝔖", "fraktur cap S"
-en, clearspeak, "𝔗", "fraktur cap T"
-en, clearspeak, "𝔘", "fraktur cap U"
-en, clearspeak, "𝔙", "fraktur cap V"
-en, clearspeak, "𝔚", "fraktur cap W"
-en, clearspeak, "𝔛", "fraktur cap X"
-en, clearspeak, "𝔜", "fraktur cap Y"
-en, clearspeak, "ℨ", "fraktur cap Z"
-en, clearspeak, "𝔞", "fraktur a"
-en, clearspeak, "𝔟", "fraktur b"
-en, clearspeak, "𝔠", "fraktur c"
-en, clearspeak, "𝔡", "fraktur d"
-en, clearspeak, "𝔢", "fraktur e"
-en, clearspeak, "𝔣", "fraktur f"
-en, clearspeak, "𝔤", "fraktur g"
-en, clearspeak, "𝔥", "fraktur h"
-en, clearspeak, "𝔦", "fraktur i"
-en, clearspeak, "𝔧", "fraktur j"
-en, clearspeak, "𝔨", "fraktur k"
-en, clearspeak, "𝔩", "fraktur l"
-en, clearspeak, "𝔪", "fraktur m"
-en, clearspeak, "𝔫", "fraktur n"
-en, clearspeak, "𝔬", "fraktur o"
-en, clearspeak, "𝔭", "fraktur p"
-en, clearspeak, "𝔮", "fraktur q"
-en, clearspeak, "𝔯", "fraktur r"
-en, clearspeak, "𝔰", "fraktur s"
-en, clearspeak, "𝔱", "fraktur t"
-en, clearspeak, "𝔲", "fraktur u"
-en, clearspeak, "𝔳", "fraktur v"
-en, clearspeak, "𝔴", "fraktur w"
-en, clearspeak, "𝔵", "fraktur x"
-en, clearspeak, "𝔶", "fraktur y"
-en, clearspeak, "𝔷", "fraktur z"
-en, clearspeak, "𝐴", "italic cap A"
-en, clearspeak, "𝐵", "italic cap B"
-en, clearspeak, "𝐶", "italic cap C"
-en, clearspeak, "𝐷", "italic cap D"
-en, clearspeak, "𝐸", "italic cap E"
-en, clearspeak, "𝐹", "italic cap F"
-en, clearspeak, "𝐺", "italic cap G"
-en, clearspeak, "𝐻", "italic cap H"
-en, clearspeak, "𝐼", "italic cap I"
-en, clearspeak, "𝐽", "italic cap J"
-en, clearspeak, "𝐾", "italic cap K"
-en, clearspeak, "𝐿", "italic cap L"
-en, clearspeak, "𝑀", "italic cap M"
-en, clearspeak, "𝑁", "italic cap N"
-en, clearspeak, "𝑂", "italic cap O"
-en, clearspeak, "𝑃", "italic cap P"
-en, clearspeak, "𝑄", "italic cap Q"
-en, clearspeak, "𝑅", "italic cap R"
-en, clearspeak, "𝑆", "italic cap S"
-en, clearspeak, "𝑇", "italic cap T"
-en, clearspeak, "𝑈", "italic cap U"
-en, clearspeak, "𝑉", "italic cap V"
-en, clearspeak, "𝑊", "italic cap W"
-en, clearspeak, "𝑋", "italic cap X"
-en, clearspeak, "𝑌", "italic cap Y"
-en, clearspeak, "𝑍", "italic cap Z"
-en, clearspeak, "𝑎", "italic a"
-en, clearspeak, "𝑏", "italic b"
-en, clearspeak, "𝑐", "italic c"
-en, clearspeak, "𝑑", "italic d"
-en, clearspeak, "𝑒", "italic e"
-en, clearspeak, "𝑓", "italic f"
-en, clearspeak, "𝑔", "italic g"
-en, clearspeak, "ℎ", "italic h"
-en, clearspeak, "𝑖", "italic i"
-en, clearspeak, "𝑗", "italic j"
-en, clearspeak, "𝑘", "italic k"
-en, clearspeak, "𝑙", "italic l"
-en, clearspeak, "𝑚", "italic m"
-en, clearspeak, "𝑛", "italic n"
-en, clearspeak, "𝑜", "italic o"
-en, clearspeak, "𝑝", "italic p"
-en, clearspeak, "𝑞", "italic q"
-en, clearspeak, "𝑟", "italic r"
-en, clearspeak, "𝑠", "italic s"
-en, clearspeak, "𝑡", "italic t"
-en, clearspeak, "𝑢", "italic u"
-en, clearspeak, "𝑣", "italic v"
-en, clearspeak, "𝑤", "italic w"
-en, clearspeak, "𝑥", "italic x"
-en, clearspeak, "𝑦", "italic y"
-en, clearspeak, "𝑧", "italic z"
-en, clearspeak, "𝙰", "monospace upper A"
-en, clearspeak, "𝙱", "monospace upper B"
-en, clearspeak, "𝙲", "monospace upper C"
-en, clearspeak, "𝙳", "monospace upper D"
-en, clearspeak, "𝙴", "monospace upper E"
-en, clearspeak, "𝙵", "monospace upper F"
-en, clearspeak, "𝙶", "monospace upper G"
-en, clearspeak, "𝙷", "monospace upper H"
-en, clearspeak, "𝙸", "monospace upper I"
-en, clearspeak, "𝙹", "monospace upper J"
-en, clearspeak, "𝙺", "monospace upper K"
-en, clearspeak, "𝙻", "monospace upper L"
-en, clearspeak, "𝙼", "monospace upper M"
-en, clearspeak, "𝙽", "monospace upper N"
-en, clearspeak, "𝙾", "monospace upper O"
-en, clearspeak, "𝙿", "monospace upper P"
-en, clearspeak, "𝚀", "monospace upper Q"
-en, clearspeak, "𝚁", "monospace upper R"
-en, clearspeak, "𝚂", "monospace upper S"
-en, clearspeak, "𝚃", "monospace upper T"
-en, clearspeak, "𝚄", "monospace upper U"
-en, clearspeak, "𝚅", "monospace upper V"
-en, clearspeak, "𝚆", "monospace upper W"
-en, clearspeak, "𝚇", "monospace upper X"
-en, clearspeak, "𝚈", "monospace upper Y"
-en, clearspeak, "𝚉", "monospace upper Z"
-en, clearspeak, "𝚊", "monospace a"
-en, clearspeak, "𝚋", "monospace b"
-en, clearspeak, "𝚌", "monospace c"
-en, clearspeak, "𝚍", "monospace d"
-en, clearspeak, "𝚎", "monospace e"
-en, clearspeak, "𝚏", "monospace f"
-en, clearspeak, "𝚐", "monospace g"
-en, clearspeak, "𝚑", "monospace h"
-en, clearspeak, "𝚒", "monospace i"
-en, clearspeak, "𝚓", "monospace j"
-en, clearspeak, "𝚔", "monospace k"
-en, clearspeak, "𝚕", "monospace l"
-en, clearspeak, "𝚖", "monospace m"
-en, clearspeak, "𝚗", "monospace n"
-en, clearspeak, "𝚘", "monospace o"
-en, clearspeak, "𝚙", "monospace p"
-en, clearspeak, "𝚚", "monospace q"
-en, clearspeak, "𝚛", "monospace r"
-en, clearspeak, "𝚜", "monospace s"
-en, clearspeak, "𝚝", "monospace t"
-en, clearspeak, "𝚞", "monospace u"
-en, clearspeak, "𝚟", "monospace v"
-en, clearspeak, "𝚠", "monospace w"
-en, clearspeak, "𝚡", "monospace x"
-en, clearspeak, "𝚢", "monospace y"
-en, clearspeak, "𝚣", "monospace z"
-en, clearspeak, "𝗔", "sans serif bold cap A"
-en, clearspeak, "𝗕", "sans serif bold cap B"
-en, clearspeak, "𝗖", "sans serif bold cap C"
-en, clearspeak, "𝗗", "sans serif bold cap D"
-en, clearspeak, "𝗘", "sans serif bold cap E"
-en, clearspeak, "𝗙", "sans serif bold cap F"
-en, clearspeak, "𝗚", "sans serif bold cap G"
-en, clearspeak, "𝗛", "sans serif bold cap H"
-en, clearspeak, "𝗜", "sans serif bold cap I"
-en, clearspeak, "𝗝", "sans serif bold cap J"
-en, clearspeak, "𝗞", "sans serif bold cap K"
-en, clearspeak, "𝗟", "sans serif bold cap L"
-en, clearspeak, "𝗠", "sans serif bold cap M"
-en, clearspeak, "𝗡", "sans serif bold cap N"
-en, clearspeak, "𝗢", "sans serif bold cap O"
-en, clearspeak, "𝗣", "sans serif bold cap P"
-en, clearspeak, "𝗤", "sans serif bold cap Q"
-en, clearspeak, "𝗥", "sans serif bold cap R"
-en, clearspeak, "𝗦", "sans serif bold cap S"
-en, clearspeak, "𝗧", "sans serif bold cap T"
-en, clearspeak, "𝗨", "sans serif bold cap U"
-en, clearspeak, "𝗩", "sans serif bold cap V"
-en, clearspeak, "𝗪", "sans serif bold cap W"
-en, clearspeak, "𝗫", "sans serif bold cap X"
-en, clearspeak, "𝗬", "sans serif bold cap Y"
-en, clearspeak, "𝗭", "sans serif bold cap Z"
-en, clearspeak, "𝗮", "sans serif bold a"
-en, clearspeak, "𝗯", "sans serif bold b"
-en, clearspeak, "𝗰", "sans serif bold c"
-en, clearspeak, "𝗱", "sans serif bold d"
-en, clearspeak, "𝗲", "sans serif bold e"
-en, clearspeak, "𝗳", "sans serif bold f"
-en, clearspeak, "𝗴", "sans serif bold g"
-en, clearspeak, "𝗵", "sans serif bold h"
-en, clearspeak, "𝗶", "sans serif bold i"
-en, clearspeak, "𝗷", "sans serif bold j"
-en, clearspeak, "𝗸", "sans serif bold k"
-en, clearspeak, "𝗹", "sans serif bold l"
-en, clearspeak, "𝗺", "sans serif bold m"
-en, clearspeak, "𝗻", "sans serif bold n"
-en, clearspeak, "𝗼", "sans serif bold o"
-en, clearspeak, "𝗽", "sans serif bold p"
-en, clearspeak, "𝗾", "sans serif bold q"
-en, clearspeak, "𝗿", "sans serif bold r"
-en, clearspeak, "𝘀", "sans serif bold s"
-en, clearspeak, "𝘁", "sans serif bold t"
-en, clearspeak, "𝘂", "sans serif bold u"
-en, clearspeak, "𝘃", "sans serif bold v"
-en, clearspeak, "𝘄", "sans serif bold w"
-en, clearspeak, "𝘅", "sans serif bold x"
-en, clearspeak, "𝘆", "sans serif bold y"
-en, clearspeak, "𝘇", "sans serif bold z"
-en, clearspeak, "𝘈", "sans serif italic cap A"
-en, clearspeak, "𝘉", "sans serif italic cap B"
-en, clearspeak, "𝘊", "sans serif italic cap C"
-en, clearspeak, "𝘋", "sans serif italic cap D"
-en, clearspeak, "𝘌", "sans serif italic cap E"
-en, clearspeak, "𝘍", "sans serif italic cap F"
-en, clearspeak, "𝘎", "sans serif italic cap G"
-en, clearspeak, "𝘏", "sans serif italic cap H"
-en, clearspeak, "𝘐", "sans serif italic cap I"
-en, clearspeak, "𝘑", "sans serif italic cap J"
-en, clearspeak, "𝘒", "sans serif italic cap K"
-en, clearspeak, "𝘓", "sans serif italic cap L"
-en, clearspeak, "𝘔", "sans serif italic cap M"
-en, clearspeak, "𝘕", "sans serif italic cap N"
-en, clearspeak, "𝘖", "sans serif italic cap O"
-en, clearspeak, "𝘗", "sans serif italic cap P"
-en, clearspeak, "𝘘", "sans serif italic cap Q"
-en, clearspeak, "𝘙", "sans serif italic cap R"
-en, clearspeak, "𝘚", "sans serif italic cap S"
-en, clearspeak, "𝘛", "sans serif italic cap T"
-en, clearspeak, "𝘜", "sans serif italic cap U"
-en, clearspeak, "𝘝", "sans serif italic cap V"
-en, clearspeak, "𝘞", "sans serif italic cap W"
-en, clearspeak, "𝘟", "sans serif italic cap X"
-en, clearspeak, "𝘠", "sans serif italic cap Y"
-en, clearspeak, "𝘡", "sans serif italic cap Z"
-en, clearspeak, "𝘢", "sans serif italic a"
-en, clearspeak, "𝘣", "sans serif italic b"
-en, clearspeak, "𝘤", "sans serif italic c"
-en, clearspeak, "𝘥", "sans serif italic d"
-en, clearspeak, "𝘦", "sans serif italic e"
-en, clearspeak, "𝘧", "sans serif italic f"
-en, clearspeak, "𝘨", "sans serif italic g"
-en, clearspeak, "𝘩", "sans serif italic h"
-en, clearspeak, "𝘪", "sans serif italic i"
-en, clearspeak, "𝘫", "sans serif italic j"
-en, clearspeak, "𝘬", "sans serif italic k"
-en, clearspeak, "𝘭", "sans serif italic l"
-en, clearspeak, "𝘮", "sans serif italic m"
-en, clearspeak, "𝘯", "sans serif italic n"
-en, clearspeak, "𝘰", "sans serif italic o"
-en, clearspeak, "𝘱", "sans serif italic p"
-en, clearspeak, "𝘲", "sans serif italic q"
-en, clearspeak, "𝘳", "sans serif italic r"
-en, clearspeak, "𝘴", "sans serif italic s"
-en, clearspeak, "𝘵", "sans serif italic t"
-en, clearspeak, "𝘶", "sans serif italic u"
-en, clearspeak, "𝘷", "sans serif italic v"
-en, clearspeak, "𝘸", "sans serif italic w"
-en, clearspeak, "𝘹", "sans serif italic x"
-en, clearspeak, "𝘺", "sans serif italic y"
-en, clearspeak, "𝘻", "sans serif italic z"
-en, clearspeak, "𝘼", "sans serif bold italic cap A"
-en, clearspeak, "𝘽", "sans serif bold italic cap B"
-en, clearspeak, "𝘾", "sans serif bold italic cap C"
-en, clearspeak, "𝘿", "sans serif bold italic cap D"
-en, clearspeak, "𝙀", "sans serif bold italic cap E"
-en, clearspeak, "𝙁", "sans serif bold italic cap F"
-en, clearspeak, "𝙂", "sans serif bold italic cap G"
-en, clearspeak, "𝙃", "sans serif bold italic cap H"
-en, clearspeak, "𝙄", "sans serif bold italic cap I"
-en, clearspeak, "𝙅", "sans serif bold italic cap J"
-en, clearspeak, "𝙆", "sans serif bold italic cap K"
-en, clearspeak, "𝙇", "sans serif bold italic cap L"
-en, clearspeak, "𝙈", "sans serif bold italic cap M"
-en, clearspeak, "𝙉", "sans serif bold italic cap N"
-en, clearspeak, "𝙊", "sans serif bold italic cap O"
-en, clearspeak, "𝙋", "sans serif bold italic cap P"
-en, clearspeak, "𝙌", "sans serif bold italic cap Q"
-en, clearspeak, "𝙍", "sans serif bold italic cap R"
-en, clearspeak, "𝙎", "sans serif bold italic cap S"
-en, clearspeak, "𝙏", "sans serif bold italic cap T"
-en, clearspeak, "𝙐", "sans serif bold italic cap U"
-en, clearspeak, "𝙑", "sans serif bold italic cap V"
-en, clearspeak, "𝙒", "sans serif bold italic cap W"
-en, clearspeak, "𝙓", "sans serif bold italic cap X"
-en, clearspeak, "𝙔", "sans serif bold italic cap Y"
-en, clearspeak, "𝙕", "sans serif bold italic cap Z"
-en, clearspeak, "𝙖", "sans serif bold italic a"
-en, clearspeak, "𝙗", "sans serif bold italic b"
-en, clearspeak, "𝙘", "sans serif bold italic c"
-en, clearspeak, "𝙙", "sans serif bold italic d"
-en, clearspeak, "𝙚", "sans serif bold italic e"
-en, clearspeak, "𝙛", "sans serif bold italic f"
-en, clearspeak, "𝙜", "sans serif bold italic g"
-en, clearspeak, "𝙝", "sans serif bold italic h"
-en, clearspeak, "𝙞", "sans serif bold italic i"
-en, clearspeak, "𝙟", "sans serif bold italic j"
-en, clearspeak, "𝙠", "sans serif bold italic k"
-en, clearspeak, "𝙡", "sans serif bold italic l"
-en, clearspeak, "𝙢", "sans serif bold italic m"
-en, clearspeak, "𝙣", "sans serif bold italic n"
-en, clearspeak, "𝙤", "sans serif bold italic o"
-en, clearspeak, "𝙥", "sans serif bold italic p"
-en, clearspeak, "𝙦", "sans serif bold italic q"
-en, clearspeak, "𝙧", "sans serif bold italic r"
-en, clearspeak, "𝙨", "sans serif bold italic s"
-en, clearspeak, "𝙩", "sans serif bold italic t"
-en, clearspeak, "𝙪", "sans serif bold italic u"
-en, clearspeak, "𝙫", "sans serif bold italic v"
-en, clearspeak, "𝙬", "sans serif bold italic w"
-en, clearspeak, "𝙭", "sans serif bold italic x"
-en, clearspeak, "𝙮", "sans serif bold italic y"
-en, clearspeak, "𝙯", "sans serif bold italic z"
-en, clearspeak, "𝖠", "sans serif cap A"
-en, clearspeak, "𝖡", "sans serif cap B"
-en, clearspeak, "𝖢", "sans serif cap C"
-en, clearspeak, "𝖣", "sans serif cap D"
-en, clearspeak, "𝖤", "sans serif cap E"
-en, clearspeak, "𝖥", "sans serif cap F"
-en, clearspeak, "𝖦", "sans serif cap G"
-en, clearspeak, "𝖧", "sans serif cap H"
-en, clearspeak, "𝖨", "sans serif cap I"
-en, clearspeak, "𝖩", "sans serif cap J"
-en, clearspeak, "𝖪", "sans serif cap K"
-en, clearspeak, "𝖫", "sans serif cap L"
-en, clearspeak, "𝖬", "sans serif cap M"
-en, clearspeak, "𝖭", "sans serif cap N"
-en, clearspeak, "𝖮", "sans serif cap O"
-en, clearspeak, "𝖯", "sans serif cap P"
-en, clearspeak, "𝖰", "sans serif cap Q"
-en, clearspeak, "𝖱", "sans serif cap R"
-en, clearspeak, "𝖲", "sans serif cap S"
-en, clearspeak, "𝖳", "sans serif cap T"
-en, clearspeak, "𝖴", "sans serif cap U"
-en, clearspeak, "𝖵", "sans serif cap V"
-en, clearspeak, "𝖶", "sans serif cap W"
-en, clearspeak, "𝖷", "sans serif cap X"
-en, clearspeak, "𝖸", "sans serif cap Y"
-en, clearspeak, "𝖹", "sans serif cap Z"
-en, clearspeak, "𝖺", "sans serif a"
-en, clearspeak, "𝖻", "sans serif b"
-en, clearspeak, "𝖼", "sans serif c"
-en, clearspeak, "𝖽", "sans serif d"
-en, clearspeak, "𝖾", "sans serif e"
-en, clearspeak, "𝖿", "sans serif f"
-en, clearspeak, "𝗀", "sans serif g"
-en, clearspeak, "𝗁", "sans serif h"
-en, clearspeak, "𝗂", "sans serif i"
-en, clearspeak, "𝗃", "sans serif j"
-en, clearspeak, "𝗄", "sans serif k"
-en, clearspeak, "𝗅", "sans serif l"
-en, clearspeak, "𝗆", "sans serif m"
-en, clearspeak, "𝗇", "sans serif n"
-en, clearspeak, "𝗈", "sans serif o"
-en, clearspeak, "𝗉", "sans serif p"
-en, clearspeak, "𝗊", "sans serif q"
-en, clearspeak, "𝗋", "sans serif r"
-en, clearspeak, "𝗌", "sans serif s"
-en, clearspeak, "𝗍", "sans serif t"
-en, clearspeak, "𝗎", "sans serif u"
-en, clearspeak, "𝗏", "sans serif v"
-en, clearspeak, "𝗐", "sans serif w"
-en, clearspeak, "𝗑", "sans serif x"
-en, clearspeak, "𝗒", "sans serif y"
-en, clearspeak, "𝗓", "sans serif z"
-en, clearspeak, "𝒜", "script cap A"
-en, clearspeak, "ℬ", "script cap B"
-en, clearspeak, "𝒞", "script cap C"
-en, clearspeak, "𝒟", "script cap D"
-en, clearspeak, "ℰ", "script cap E"
-en, clearspeak, "ℱ", "script cap F"
-en, clearspeak, "𝒢", "script cap G"
-en, clearspeak, "ℋ", "script cap H"
-en, clearspeak, "ℐ", "script cap I"
-en, clearspeak, "𝒥", "script cap J"
-en, clearspeak, "𝒦", "script cap K"
-en, clearspeak, "ℒ", "script cap L"
-en, clearspeak, "ℳ", "script cap M"
-en, clearspeak, "𝒩", "script cap N"
-en, clearspeak, "𝒪", "script cap O"
-en, clearspeak, "𝒫", "script cap P"
-en, clearspeak, "𝒬", "script cap Q"
-en, clearspeak, "ℛ", "script cap R"
-en, clearspeak, "𝒮", "script cap S"
-en, clearspeak, "𝒯", "script cap T"
-en, clearspeak, "𝒰", "script cap U"
-en, clearspeak, "𝒱", "script cap V"
-en, clearspeak, "𝒲", "script cap W"
-en, clearspeak, "𝒳", "script cap X"
-en, clearspeak, "𝒴", "script cap Y"
-en, clearspeak, "𝒵", "script cap Z"
-en, clearspeak, "𝒶", "script a"
-en, clearspeak, "𝒷", "script b"
-en, clearspeak, "𝒸", "script c"
-en, clearspeak, "𝒹", "script d"
-en, clearspeak, "ℯ", "script e"
-en, clearspeak, "𝒻", "script f"
-en, clearspeak, "ℊ", "script g"
-en, clearspeak, "𝒽", "script h"
-en, clearspeak, "𝒾", "script i"
-en, clearspeak, "𝒿", "script j"
-en, clearspeak, "𝓀", "script k"
-en, clearspeak, "𝓁", "script l"
-en, clearspeak, "𝓂", "script m"
-en, clearspeak, "𝓃", "script n"
-en, clearspeak, "ℴ", "script o"
-en, clearspeak, "𝓅", "script p"
-en, clearspeak, "𝓆", "script q"
-en, clearspeak, "𝓇", "script r"
-en, clearspeak, "𝓈", "script s"
-en, clearspeak, "𝓉", "script t"
-en, clearspeak, "𝓊", "script u"
-en, clearspeak, "𝓋", "script v"
-en, clearspeak, "𝓌", "script w"
-en, clearspeak, "𝓍", "script x"
-en, clearspeak, "𝓎", "script y"
-en, clearspeak, "𝓏", "script z"
-en, clearspeak, "⊾", "right angle with arc"
-en, clearspeak, "⍼", "right angle with downwards zigzag arrow"
-en, clearspeak, "⟀", "three dimensional angle"
-en, clearspeak, "⦛", "measured angle opening left"
-en, clearspeak, "⦜", "right angle variant with square"
-en, clearspeak, "⦝", "measured right angle with dot"
-en, clearspeak, "⦞", "angle with s inside"
-en, clearspeak, "⦟", "acute angle"
-en, clearspeak, "⦠", "spherical angle opening left"
-en, clearspeak, "⦡", "spherical angle opening up"
-en, clearspeak, "⦢", "turned angle"
-en, clearspeak, "⦣", "reversed angle"
-en, clearspeak, "⦤", "angle with underbar"
-en, clearspeak, "⦥", "reversed angle with underbar"
-en, clearspeak, "⦦", "oblique angle opening up"
-en, clearspeak, "⦧", "oblique angle opening down"
-en, clearspeak, "⦨", "measured angle with open arm ending in arrow pointing up and right"
-en, clearspeak, "⦩", "measured angle with open arm ending in arrow pointing up and left"
-en, clearspeak, "⦪", "measured angle with open arm ending in arrow pointing down and right"
-en, clearspeak, "⦫", "measured angle with open arm ending in arrow pointing down and left"
-en, clearspeak, "⦬", "measured angle with open arm ending in arrow pointing right and up"
-en, clearspeak, "⦭", "measured angle with open arm ending in arrow pointing left and up"
-en, clearspeak, "⦮", "measured angle with open arm ending in arrow pointing right and down"
-en, clearspeak, "⦯", "measured angle with open arm ending in arrow pointing left and down"
-en, clearspeak, "←", "left-arrow"
-en, clearspeak, "↑", "up-arrow"
-en, clearspeak, "→", "right-arrow"
-en, clearspeak, "↓", "down-arrow"
-en, clearspeak, "↔", "left-right-arrow"
-en, clearspeak, "↕", "up down-arrow"
-en, clearspeak, "↖", "up left-arrow"
-en, clearspeak, "↗", "up right-arrow"
-en, clearspeak, "↘", "down right-arrow"
-en, clearspeak, "↙", "down left-arrow"
-en, clearspeak, "↚", "left-arrow with stroke"
-en, clearspeak, "↛", "right-arrow with stroke"
-en, clearspeak, "↜", "left wave arrow"
-en, clearspeak, "↝", "right wave arrow"
-en, clearspeak, "↞", "two headed left-arrow"
-en, clearspeak, "↟", "two headed up-arrow"
-en, clearspeak, "↠", "two headed right-arrow"
-en, clearspeak, "↡", "two headed down-arrow"
-en, clearspeak, "↢", "left-arrow with tail"
-en, clearspeak, "↣", "right-arrow with tail"
-en, clearspeak, "↤", "left-arrow from bar"
-en, clearspeak, "↥", "up-arrow from bar"
-en, clearspeak, "↦", "right-arrow from bar"
-en, clearspeak, "↧", "down-arrow from bar"
-en, clearspeak, "↨", "up down-arrow with base"
-en, clearspeak, "↩", "left-arrow with hook"
-en, clearspeak, "↪", "right-arrow with hook"
-en, clearspeak, "↫", "left-arrow with loop"
-en, clearspeak, "↬", "right-arrow with loop"
-en, clearspeak, "↭", "left right wave arrow"
-en, clearspeak, "↮", "left-right-arrow with stroke"
-en, clearspeak, "↯", "down zigzag arrow"
-en, clearspeak, "↰", "up-arrow with tip left"
-en, clearspeak, "↱", "up-arrow with tip right"
-en, clearspeak, "↲", "down-arrow with tip left"
-en, clearspeak, "↳", "down-arrow with tip right"
-en, clearspeak, "↴", "right-arrow with corner down"
-en, clearspeak, "↵", "down-arrow with corner left"
-en, clearspeak, "↶", "anticlockwise top semicircle arrow"
-en, clearspeak, "↷", "clockwise top semicircle arrow"
-en, clearspeak, "↸", "up left-arrow to long bar"
-en, clearspeak, "↹", "left-arrow to bar over right-arrow to bar"
-en, clearspeak, "↺", "anticlockwise open circle arrow"
-en, clearspeak, "↻", "clockwise open circle arrow"
-en, clearspeak, "⇄", "right-arrow over left-arrow"
-en, clearspeak, "⇅", "up-arrow left of down-arrow"
-en, clearspeak, "⇆", "left-arrow over right-arrow"
-en, clearspeak, "⇇", "left paired arrows"
-en, clearspeak, "⇈", "up paired arrows"
-en, clearspeak, "⇉", "right paired arrows"
-en, clearspeak, "⇊", "down paired arrows"
-en, clearspeak, "⇍", "left double arrow with stroke"
-en, clearspeak, "⇎", "left right double arrow with stroke"
-en, clearspeak, "⇏", "right double arrow with stroke"
-en, clearspeak, "⇐", "left double arrow"
-en, clearspeak, "⇑", "up double arrow"
-en, clearspeak, "⇒", "right double arrow"
-en, clearspeak, "⇓", "down double arrow"
-en, clearspeak, "⇔", "left right double arrow"
-en, clearspeak, "⇕", "up down double arrow"
-en, clearspeak, "⇖", "up left double arrow"
-en, clearspeak, "⇗", "up right double arrow"
-en, clearspeak, "⇘", "down right double arrow"
-en, clearspeak, "⇙", "down left double arrow"
-en, clearspeak, "⇚", "left triple arrow"
-en, clearspeak, "⇛", "right triple arrow"
-en, clearspeak, "⇜", "left squiggle arrow"
-en, clearspeak, "⇝", "right squiggle arrow"
-en, clearspeak, "⇞", "up-arrow with double stroke"
-en, clearspeak, "⇟", "down-arrow with double stroke"
-en, clearspeak, "⇠", "left dasheD arrow"
-en, clearspeak, "⇡", "up dasheD arrow"
-en, clearspeak, "⇢", "right dasheD arrow"
-en, clearspeak, "⇣", "down dasheD arrow"
-en, clearspeak, "⇤", "left-arrow to bar"
-en, clearspeak, "⇥", "right-arrow to bar"
-en, clearspeak, "⇦", "white left-arrow"
-en, clearspeak, "⇧", "white up-arrow"
-en, clearspeak, "⇨", "white right-arrow"
-en, clearspeak, "⇩", "white down-arrow"
-en, clearspeak, "⇪", "white up-arrow from bar"
-en, clearspeak, "⇫", "white up-arrow on pedestal"
-en, clearspeak, "⇬", "white up-arrow on pedestal with horizontal bar"
-en, clearspeak, "⇭", "white up-arrow on pedestal with vertical bar"
-en, clearspeak, "⇮", "white double up-arrow"
-en, clearspeak, "⇯", "white double up-arrow on pedestal"
-en, clearspeak, "⇰", "white right-arrow from wall"
-en, clearspeak, "⇱", "north west arrow to corner"
-en, clearspeak, "⇲", "south east arrow to corner"
-en, clearspeak, "⇳", "up down white arrow"
-en, clearspeak, "⇴", "right-arrow with small circle"
-en, clearspeak, "⇵", "down-arrow left of up-arrow"
-en, clearspeak, "⇶", "three right-arrows"
-en, clearspeak, "⇷", "left-arrow with vertical stroke"
-en, clearspeak, "⇸", "right-arrow with vertical stroke"
-en, clearspeak, "⇹", "left-right-arrow with vertical stroke"
-en, clearspeak, "⇺", "left-arrow with double vertical stroke"
-en, clearspeak, "⇻", "right-arrow with double vertical stroke"
-en, clearspeak, "⇼", "left-right-arrow with double vertical stroke"
-en, clearspeak, "⇽", "left open headed arrow"
-en, clearspeak, "⇾", "right open headed arrow"
-en, clearspeak, "⇿", "left right open headed arrow"
-en, clearspeak, "⌁", "electric arrow"
-en, clearspeak, "⌃", "up-arrowhead"
-en, clearspeak, "⌄", "down-arrowhead"
-en, clearspeak, "⌤", "up-arrowhead between two horizontal bars"
-en, clearspeak, "⎋", "broken circle with northwest arrow"
-en, clearspeak, "➔", "heavy wide headed right-arrow"
-en, clearspeak, "➘", "heavy down right-arrow"
-en, clearspeak, "➙", "heavy right-arrow"
-en, clearspeak, "➚", "heavy up right-arrow"
-en, clearspeak, "➛", "drafting point right-arrow"
-en, clearspeak, "➜", "heavy round tipped right-arrow"
-en, clearspeak, "➝", "triangle headed right-arrow"
-en, clearspeak, "➞", "heavy triangle headed right-arrow"
-en, clearspeak, "➟", "dashed triangle headed right-arrow"
-en, clearspeak, "➠", "heavy dashed triangle headed right-arrow"
-en, clearspeak, "➡", "black right-arrow"
-en, clearspeak, "➢", "three d top lighted right-arrowhead"
-en, clearspeak, "➣", "three d bottom lighted right-arrowhead"
-en, clearspeak, "➤", "black right-arrowhead"
-en, clearspeak, "➥", "heavy black curved down and right-arrow"
-en, clearspeak, "➦", "heavy black curved up and right-arrow"
-en, clearspeak, "➧", "squat black right-arrow"
-en, clearspeak, "➨", "heavy concave pointed black right-arrow"
-en, clearspeak, "➩", "right shaded white right-arrow"
-en, clearspeak, "➪", "left shaded white right-arrow"
-en, clearspeak, "➫", "back tilted shadowed white right-arrow"
-en, clearspeak, "➬", "front tilted shadowed white right-arrow"
-en, clearspeak, "➭", "heavy lower right shadowed white right-arrow"
-en, clearspeak, "➮", "heavy upper right shadowed white right-arrow"
-en, clearspeak, "➯", "notched lower right shadowed white right-arrow"
-en, clearspeak, "➱", "notched upper right shadowed white right-arrow"
-en, clearspeak, "➲", "circled heavy white right-arrow"
-en, clearspeak, "➳", "white feathered right-arrow"
-en, clearspeak, "➴", "black feathered down right-arrow"
-en, clearspeak, "➵", "black feathered right-arrow"
-en, clearspeak, "➶", "black feathered up right-arrow"
-en, clearspeak, "➷", "heavy black feathered down right-arrow"
-en, clearspeak, "➸", "heavy black feathered right-arrow"
-en, clearspeak, "➹", "heavy black feathered up right-arrow"
-en, clearspeak, "➺", "teardrop barbed right-arrow"
-en, clearspeak, "➻", "heavy teardrop shanked right-arrow"
-en, clearspeak, "➼", "wedge tailed right-arrow"
-en, clearspeak, "➽", "heavy wedge tailed right-arrow"
-en, clearspeak, "➾", "open outlined right-arrow"
-en, clearspeak, "⟰", "up quadruple arrow"
-en, clearspeak, "⟱", "down quadruple arrow"
-en, clearspeak, "⟲", "anticlockwise gapped circle arrow"
-en, clearspeak, "⟳", "clockwise gapped circle arrow"
-en, clearspeak, "⟴", "right-arrow with circled plus"
-en, clearspeak, "⟵", "long left-arrow"
-en, clearspeak, "⟶", "long right-arrow"
-en, clearspeak, "⟷", "long left-right-arrow"
-en, clearspeak, "⟸", "long left double arrow"
-en, clearspeak, "⟹", "long right double arrow"
-en, clearspeak, "⟺", "long left right double arrow"
-en, clearspeak, "⟻", "long left-arrow from bar"
-en, clearspeak, "⟼", "long right-arrow from bar"
-en, clearspeak, "⟽", "long left double arrow from bar"
-en, clearspeak, "⟾", "long right double arrow from bar"
-en, clearspeak, "⟿", "long right squiggle arrow"
-en, clearspeak, "⤀", "two headed right-arrow with vertical stroke"
-en, clearspeak, "⤁", "two headed right-arrow with double vertical stroke"
-en, clearspeak, "⤂", "double left-arrow with vertical stroke"
-en, clearspeak, "⤃", "double right-arrow with vertical stroke"
-en, clearspeak, "⤄", "double left-right-arrow with vertical stroke"
-en, clearspeak, "⤅", "two headed right-arrow from bar"
-en, clearspeak, "⤆", "double left-arrow from bar"
-en, clearspeak, "⤇", "double right-arrow from bar"
-en, clearspeak, "⤈", "arrow down with horizontal stroke"
-en, clearspeak, "⤉", "up-arrow with horizontal stroke"
-en, clearspeak, "⤊", "up triple arrow"
-en, clearspeak, "⤋", "down triple arrow"
-en, clearspeak, "⤌", "left double dash arrow"
-en, clearspeak, "⤍", "right double dash arrow"
-en, clearspeak, "⤎", "left triple dash arrow"
-en, clearspeak, "⤏", "right triple dash arrow"
-en, clearspeak, "⤐", "right two headed triple dash arrow"
-en, clearspeak, "⤑", "right-arrow with dotted stem"
-en, clearspeak, "⤒", "up-arrow to bar"
-en, clearspeak, "⤓", "down-arrow to bar"
-en, clearspeak, "⤔", "right-arrow with tail with vertical stroke"
-en, clearspeak, "⤕", "right-arrow with tail with double vertical stroke"
-en, clearspeak, "⤖", "right two headed arrow with tail"
-en, clearspeak, "⤗", "right two headed arrow with tail with vertical stroke"
-en, clearspeak, "⤘", "right two headed arrow with tail with double vertical stroke"
-en, clearspeak, "⤙", "left-arrow tail"
-en, clearspeak, "⤚", "right-arrow tail"
-en, clearspeak, "⤛", "left double arrow tail"
-en, clearspeak, "⤜", "right double arrow tail"
-en, clearspeak, "⤝", "left-arrow to black diamond"
-en, clearspeak, "⤞", "right-arrow to black diamond"
-en, clearspeak, "⤟", "left-arrow from bar to black diamond"
-en, clearspeak, "⤠", "right-arrow from bar to black diamond"
-en, clearspeak, "⤡", "north west and south east arrow"
-en, clearspeak, "⤢", "north east and south west arrow"
-en, clearspeak, "⤣", "north west arrow with hook"
-en, clearspeak, "⤤", "north east arrow with hook"
-en, clearspeak, "⤥", "south east arrow with hook"
-en, clearspeak, "⤦", "south west arrow with hook"
-en, clearspeak, "⤧", "north west arrow and north east arrow"
-en, clearspeak, "⤨", "north east arrow and south east arrow"
-en, clearspeak, "⤩", "south east arrow and south west arrow"
-en, clearspeak, "⤪", "south west arrow and north west arrow"
-en, clearspeak, "⤭", "south east arrow crossing north east arrow"
-en, clearspeak, "⤮", "north east arrow crossing south east arrow"
-en, clearspeak, "⤯", "falling diagonal crossing north east arrow"
-en, clearspeak, "⤰", "rising diagonal crossing south east arrow"
-en, clearspeak, "⤱", "north east arrow crossing north west arrow"
-en, clearspeak, "⤲", "north west arrow crossing north east arrow"
-en, clearspeak, "⤳", "wave arrow pointing directly right"
-en, clearspeak, "⤴", "arrow pointing right then curving up"
-en, clearspeak, "⤵", "arrow pointing right then curving down"
-en, clearspeak, "⤶", "arrow pointing down then curving left"
-en, clearspeak, "⤷", "arrow pointing down then curving right"
-en, clearspeak, "⤸", "right side arc clockwise arrow"
-en, clearspeak, "⤹", "left side arc anticlockwise arrow"
-en, clearspeak, "⤺", "top arc anticlockwise arrow"
-en, clearspeak, "⤻", "bottom arc anticlockwise arrow"
-en, clearspeak, "⤼", "top arc clockwise arrow with minus"
-en, clearspeak, "⤽", "top arc anticlockwise arrow with plus"
-en, clearspeak, "⤾", "down right semicircular clockwise arrow"
-en, clearspeak, "⤿", "down left semicircular anticlockwise arrow"
-en, clearspeak, "⥀", "anticlockwise closed circle arrow"
-en, clearspeak, "⥁", "clockwise closed circle arrow"
-en, clearspeak, "⥂", "right-arrow above short left-arrow"
-en, clearspeak, "⥃", "left-arrow above short right-arrow"
-en, clearspeak, "⥄", "short right-arrow above left-arrow"
-en, clearspeak, "⥅", "right-arrow with plus below"
-en, clearspeak, "⥆", "left-arrow with plus below"
-en, clearspeak, "⥇", "right-arrow through x"
-en, clearspeak, "⥈", "left-right-arrow through small circle"
-en, clearspeak, "⥉", "up two headed arrow from small circle"
-en, clearspeak, "⥰", "right double arrow with rounded head"
-en, clearspeak, "⥱", "equals sign above right-arrow"
-en, clearspeak, "⥲", "tilde operator above right-arrow"
-en, clearspeak, "⥳", "left-arrow above tilde operator"
-en, clearspeak, "⥴", "right-arrow above tilde operator"
-en, clearspeak, "⥵", "right-arrow above almost equals"
-en, clearspeak, "⥶", "less than above left-arrow"
-en, clearspeak, "⥷", "left-arrow through less than"
-en, clearspeak, "⥸", "greater than above right-arrow"
-en, clearspeak, "⥹", "subset above right-arrow"
-en, clearspeak, "⥺", "left-arrow through subset"
-en, clearspeak, "⥻", "superset above left-arrow"
-en, clearspeak, "⦳", "empty set with right-arrow above"
-en, clearspeak, "⦴", "empty set with left-arrow above"
-en, clearspeak, "⦽", "up-arrow through circle"
-en, clearspeak, "⧪", "black diamond with down-arrow"
-en, clearspeak, "⧬", "white circle with down-arrow"
-en, clearspeak, "⧭", "black circle with down-arrow"
-en, clearspeak, "⨗", "integral with left-arrow with hook"
-en, clearspeak, "⬀", "north east white arrow"
-en, clearspeak, "⬁", "north west white arrow"
-en, clearspeak, "⬂", "south east white arrow"
-en, clearspeak, "⬃", "south west white arrow"
-en, clearspeak, "⬄", "left right white arrow"
-en, clearspeak, "⬅", "left black arrow"
-en, clearspeak, "⬆", "up black arrow"
-en, clearspeak, "⬇", "down black arrow"
-en, clearspeak, "⬈", "north east black arrow"
-en, clearspeak, "⬉", "north west black arrow"
-en, clearspeak, "⬊", "south east black arrow"
-en, clearspeak, "⬋", "south west black arrow"
-en, clearspeak, "⬌", "left right black arrow"
-en, clearspeak, "⬍", "up down black arrow"
-en, clearspeak, "⬎", "right-arrow with tip down"
-en, clearspeak, "⬏", "right-arrow with tip up"
-en, clearspeak, "⬐", "left-arrow with tip down"
-en, clearspeak, "⬑", "left-arrow with tip up"
-en, clearspeak, "⬰", "left-arrow with small circle"
-en, clearspeak, "⬱", "three left-arrows"
-en, clearspeak, "⬲", "left-arrow with circled plus"
-en, clearspeak, "⬳", "long left squiggle arrow"
-en, clearspeak, "⬴", "left two headed arrow with vertical stroke"
-en, clearspeak, "⬵", "left two headed arrow with double vertical stroke"
-en, clearspeak, "⬶", "left two headed arrow from bar"
-en, clearspeak, "⬷", "left two headed triple dash arrow"
-en, clearspeak, "⬸", "left-arrow with dotted stem"
-en, clearspeak, "⬹", "left-arrow with tail with vertical stroke"
-en, clearspeak, "⬺", "left-arrow with tail with double vertical stroke"
-en, clearspeak, "⬻", "left two headed arrow with tail"
-en, clearspeak, "⬼", "left two headed arrow with tail with vertical stroke"
-en, clearspeak, "⬽", "left two headed arrow with tail with double vertical stroke"
-en, clearspeak, "⬾", "left-arrow through x"
-en, clearspeak, "⬿", "wave arrow pointing directly left"
-en, clearspeak, "⭀", "equals sign above left-arrow"
-en, clearspeak, "⭁", "reverse tilde operator above left-arrow"
-en, clearspeak, "⭂", "left-arrow above reverse almost equals"
-en, clearspeak, "⭃", "right-arrow through greater than"
-en, clearspeak, "⭄", "right-arrow through superset"
-en, clearspeak, "⭅", "left quadruple arrow"
-en, clearspeak, "⭆", "right quadruple arrow"
-en, clearspeak, "⭇", "reverse tilde operator above right-arrow"
-en, clearspeak, "⭈", "right-arrow above reverse almost equals"
-en, clearspeak, "⭉", "tilde operator above left-arrow"
-en, clearspeak, "⭊", "left-arrow above almost equals"
-en, clearspeak, "⭋", "left-arrow above reverse tilde operator"
-en, clearspeak, "⭌", "right-arrow above reverse tilde operator"
-en, clearspeak, "￩", "halfwidth left-arrow"
-en, clearspeak, "￪", "halfwidth up-arrow"
-en, clearspeak, "￫", "halfwidth right-arrow"
-en, clearspeak, "￬", "halfwidth down-arrow"
-en, clearspeak, "ℓ", "script l"
-en, clearspeak, "℘", "script upper P"
-en, clearspeak, "ℼ", "double struck pi"
-en, clearspeak, "ℽ", "double struck gamma"
-en, clearspeak, "ℾ", "double struck upper Gamma"
-en, clearspeak, "ℿ", "double struck upper Pi"
-en, clearspeak, "⅀", "double struck n ary summation"
-en, clearspeak, "ⅅ", "double struck italic upper D"
-en, clearspeak, "ⅆ", "double struck italic d"
-en, clearspeak, "ⅇ", "double struck italic e"
-en, clearspeak, "ⅈ", "double struck italic i"
-en, clearspeak, "ⅉ", "double struck italic j"
-en, clearspeak, "𝚤", "italic dotless i"
-en, clearspeak, "𝚥", "italic dotless j"
-en, clearspeak, "(", "open paren"
-en, clearspeak, ")", "close paren"
-en, clearspeak, "[", "open bracket"
-en, clearspeak, "]", "close bracket"
-en, clearspeak, "{", "open brace"
-en, clearspeak, "}", "close brace"
-en, clearspeak, "⁅", "left-bracket with quill"
-en, clearspeak, "⁆", "right-bracket with quill"
-en, clearspeak, "⌈", "left ceiling"
-en, clearspeak, "⌉", "right ceiling"
-en, clearspeak, "⌊", "left floor"
-en, clearspeak, "⌋", "right floor"
-en, clearspeak, "⌌", "bottom right crop"
-en, clearspeak, "⌍", "bottom left crop"
-en, clearspeak, "⌎", "top right crop"
-en, clearspeak, "⌏", "top left crop"
-en, clearspeak, "⌜", "top left corner"
-en, clearspeak, "⌝", "top right corner"
-en, clearspeak, "⌞", "bottom left corner"
-en, clearspeak, "⌟", "bottom right corner"
-en, clearspeak, "⌠", "top half integral"
-en, clearspeak, "⌡", "bottom half integral"
-en, clearspeak, "〈", "left pointing angle"
-en, clearspeak, "〉", "right pointing angle"
-en, clearspeak, "⎛", "left-parenthesis upper hook"
-en, clearspeak, "⎜", "left-parenthesis extension"
-en, clearspeak, "⎝", "left-parenthesis lower hook"
-en, clearspeak, "⎞", "right-parenthesis upper hook"
-en, clearspeak, "⎟", "right-parenthesis extension"
-en, clearspeak, "⎠", "right-parenthesis lower hook"
-en, clearspeak, "⎡", "left-bracket upper corner"
-en, clearspeak, "⎢", "left-bracket extension"
-en, clearspeak, "⎣", "left-bracket lower corner"
-en, clearspeak, "⎤", "right-bracket upper corner"
-en, clearspeak, "⎥", "right-bracket extension"
-en, clearspeak, "⎦", "right-bracket lower corner"
-en, clearspeak, "⎧", "left-brace upper hook"
-en, clearspeak, "⎨", "left-brace middle piece"
-en, clearspeak, "⎩", "left-brace lower hook"
-en, clearspeak, "⎪", "brace extension"
-en, clearspeak, "⎫", "right-brace upper hook"
-en, clearspeak, "⎬", "right-brace middle piece"
-en, clearspeak, "⎭", "right-brace lower hook"
-en, clearspeak, "⎮", "integral extension"
-en, clearspeak, "⎯", "horizontal line extension"
-en, clearspeak, "⎰", "upper left or lower right-brace section"
-en, clearspeak, "⎱", "upper right or lower left-brace section"
-en, clearspeak, "⎲", "summation top"
-en, clearspeak, "⎳", "summation bottom"
-en, clearspeak, "⎴", "top-bracket"
-en, clearspeak, "⎵", "bottom-bracket"
-en, clearspeak, "⎶", "bottom-bracket over top-bracket"
-en, clearspeak, "⎷", "radical symbol bottom"
-en, clearspeak, "⎸", "left vertical box line"
-en, clearspeak, "⎹", "right vertical box line"
-en, clearspeak, "⏜", "top-parenthesis"
-en, clearspeak, "⏝", "bottom-parenthesis"
-en, clearspeak, "⏞", "top-brace"
-en, clearspeak, "⏟", "bottom-brace"
-en, clearspeak, "⏠", "top tortoise shell bracket"
-en, clearspeak, "⏡", "bottom tortoise shell bracket"
-en, clearspeak, "❨", "medium left-parenthesis ornament"
-en, clearspeak, "❩", "medium right-parenthesis ornament"
-en, clearspeak, "❪", "medium flattened left-parenthesis ornament"
-en, clearspeak, "❫", "medium flattened right-parenthesis ornament"
-en, clearspeak, "❬", "medium left pointing angle ornament"
-en, clearspeak, "❭", "medium right pointing angle ornament"
-en, clearspeak, "❮", "heavy left pointing angle quotation mark ornament"
-en, clearspeak, "❯", "heavy right pointing angle quotation mark ornament"
-en, clearspeak, "❰", "heavy left pointing angle ornament"
-en, clearspeak, "❱", "heavy right pointing angle ornament"
-en, clearspeak, "❲", "light left tortoise shell bracket ornament"
-en, clearspeak, "❳", "light right tortoise shell bracket ornament"
-en, clearspeak, "❴", "medium left-brace ornament"
-en, clearspeak, "❵", "medium right-brace ornament"
-en, clearspeak, "⟅", "left s shaped bag delimiter"
-en, clearspeak, "⟆", "right s shaped bag delimiter"
-en, clearspeak, "⟦", "mathematical left white bracket"
-en, clearspeak, "⟧", "mathematical right white bracket"
-en, clearspeak, "⟨", "mathematical left-angle"
-en, clearspeak, "⟩", "mathematical right-angle"
-en, clearspeak, "⟪", "mathematical left double angle"
-en, clearspeak, "⟫", "mathematical right double angle"
-en, clearspeak, "⟬", "mathematical left white tortoise shell bracket"
-en, clearspeak, "⟭", "mathematical right white tortoise shell bracket"
-en, clearspeak, "⟮", "mathematical flattened left-parenthesis"
-en, clearspeak, "⟯", "mathematical flattened right-parenthesis"
-en, clearspeak, "⦃", "left white brace"
-en, clearspeak, "⦄", "right white brace"
-en, clearspeak, "⦅", "white left-parenthesis"
-en, clearspeak, "⦆", "white right-parenthesis"
-en, clearspeak, "⦇", "z notation left image bracket"
-en, clearspeak, "⦈", "z notation right image bracket"
-en, clearspeak, "⦉", "z notation left binding bracket"
-en, clearspeak, "⦊", "z notation right binding bracket"
-en, clearspeak, "⦋", "left-bracket with underbar"
-en, clearspeak, "⦌", "right-bracket with underbar"
-en, clearspeak, "⦍", "left-bracket with tick in top corner"
-en, clearspeak, "⦎", "right-bracket with tick in bottom corner"
-en, clearspeak, "⦏", "left-bracket with tick in bottom corner"
-en, clearspeak, "⦐", "right-bracket with tick in top corner"
-en, clearspeak, "⦑", "left-angle with dot"
-en, clearspeak, "⦒", "right-angle with dot"
-en, clearspeak, "⦓", "left arc less than bracket"
-en, clearspeak, "⦔", "right arc greater than bracket"
-en, clearspeak, "⦕", "double left arc greater than bracket"
-en, clearspeak, "⦖", "double right arc less than bracket"
-en, clearspeak, "⦗", "left black tortoise shell bracket"
-en, clearspeak, "⦘", "right black tortoise shell bracket"
-en, clearspeak, "⧘", "left wiggly fence"
-en, clearspeak, "⧙", "right wiggly fence"
-en, clearspeak, "⧚", "left double wiggly fence"
-en, clearspeak, "⧛", "right double wiggly fence"
-en, clearspeak, "⧼", "left pointing curved angle"
-en, clearspeak, "⧽", "right pointing curved angle"
-en, clearspeak, "⸢", "top half left-bracket"
-en, clearspeak, "⸣", "top half right-bracket"
-en, clearspeak, "⸤", "bottom half left-bracket"
-en, clearspeak, "⸥", "bottom half right-bracket"
-en, clearspeak, "⸦", "left sideways U bracket"
-en, clearspeak, "⸧", "right sideways U bracket"
-en, clearspeak, "⸨", "double left-parenthesis"
-en, clearspeak, "⸩", "double right-parenthesis"
-en, clearspeak, "〈", "left-angle"
-en, clearspeak, "〉", "right-angle"
-en, clearspeak, "《", "left double angle"
-en, clearspeak, "》", "right double angle"
-en, clearspeak, "「", "left corner bracket"
-en, clearspeak, "」", "right corner bracket"
-en, clearspeak, "『", "left white corner bracket"
-en, clearspeak, "』", "right white corner bracket"
-en, clearspeak, "【", "left black lenticular bracket"
-en, clearspeak, "】", "right black lenticular bracket"
-en, clearspeak, "〔", "left tortoise shell bracket"
-en, clearspeak, "〕", "right tortoise shell bracket"
-en, clearspeak, "〖", "left white lenticular bracket"
-en, clearspeak, "〗", "right white lenticular bracket"
-en, clearspeak, "〘", "left white tortoise shell bracket"
-en, clearspeak, "〙", "right white tortoise shell bracket"
-en, clearspeak, "〚", "left white bracket"
-en, clearspeak, "〛", "right white bracket"
-en, clearspeak, "〝", "reversed double prime quotation mark"
-en, clearspeak, "〞", "double prime quotation mark"
-en, clearspeak, "〟", "low double prime quotation mark"
-en, clearspeak, "﴾", "ornate left-parenthesis"
-en, clearspeak, "﴿", "ornate right-parenthesis"
-en, clearspeak, "︗", "presentation form for vertical left white lenticular bracket"
-en, clearspeak, "︘", "presentation form for vertical right white lenticular brakcet"
-en, clearspeak, "︵", "presentation form for vertical left-parenthesis"
-en, clearspeak, "︶", "presentation form for vertical right-parenthesis"
-en, clearspeak, "︷", "presentation form for vertical left-brace"
-en, clearspeak, "︸", "presentation form for vertical right-brace"
-en, clearspeak, "︹", "presentation form for vertical left tortoise shell bracket"
-en, clearspeak, "︺", "presentation form for vertical right tortoise shell bracket"
-en, clearspeak, "︻", "presentation form for vertical left black lenticular bracket"
-en, clearspeak, "︼", "presentation form for vertical right black lenticular bracket"
-en, clearspeak, "︽", "presentation form for vertical left double angle"
-en, clearspeak, "︾", "presentation form for vertical right double angle"
-en, clearspeak, "︿", "presentation form for vertical left-angle"
-en, clearspeak, "﹀", "presentation form for vertical right-angle"
-en, clearspeak, "﹁", "presentation form for vertical left corner bracket"
-en, clearspeak, "﹂", "presentation form for vertical right corner bracket"
-en, clearspeak, "﹃", "presentation form for vertical left white corner bracket"
-en, clearspeak, "﹄", "presentation form for vertical right white corner bracket"
-en, clearspeak, "﹇", "presentation form for vertical left-bracket"
-en, clearspeak, "﹈", "presentation form for vertical right-bracket"
-en, clearspeak, "﹙", "small left-parenthesis"
-en, clearspeak, "﹚", "small right-parenthesis"
-en, clearspeak, "﹛", "small left-brace"
-en, clearspeak, "﹜", "small right-brace"
-en, clearspeak, "﹝", "small left tortoise shell bracket"
-en, clearspeak, "﹞", "small right tortoise shell bracket"
-en, clearspeak, "（", "fullwidth left-parenthesis"
-en, clearspeak, "）", "fullwidth right-parenthesis"
-en, clearspeak, "［", "fullwidth left-bracket"
-en, clearspeak, "］", "fullwidth right-bracket"
-en, clearspeak, "｛", "fullwidth left-brace"
-en, clearspeak, "｝", "fullwidth right-brace"
-en, clearspeak, "｟", "fullwidth white left-parenthesis"
-en, clearspeak, "｠", "fullwidth white right-parenthesis"
-en, clearspeak, "｢", "halfwidth left corner bracket"
-en, clearspeak, "｣", "halfwidth right corner bracket"
-en, clearspeak, "²", "9"
-en, clearspeak, "³", "cube"
-en, clearspeak, "¹", "super one"
-en, clearspeak, "¼", "one quarter"
-en, clearspeak, "½", "one half"
-en, clearspeak, "¾", "three quarters"
-en, clearspeak, "⁰", "super zero"
-en, clearspeak, "⁴", "super four"
-en, clearspeak, "⁵", "super five"
-en, clearspeak, "⁶", "super six"
-en, clearspeak, "⁷", "super seven"
-en, clearspeak, "⁸", "super eight"
-en, clearspeak, "⁹", "super nine"
-en, clearspeak, "₀", "sub zero"
-en, clearspeak, "₁", "sub one"
-en, clearspeak, "₂", "sub two"
-en, clearspeak, "₃", "sub three"
-en, clearspeak, "₄", "sub four"
-en, clearspeak, "₅", "sub five"
-en, clearspeak, "₆", "sub six"
-en, clearspeak, "₇", "sub seven"
-en, clearspeak, "₈", "sub eight"
-en, clearspeak, "₉", "sub nine"
-en, clearspeak, "⅐", "one seventh"
-en, clearspeak, "⅑", "one ninth"
-en, clearspeak, "⅒", "one tenth"
-en, clearspeak, "⅓", "one third"
-en, clearspeak, "⅔", "two thirds"
-en, clearspeak, "⅕", "one fifth"
-en, clearspeak, "⅖", "two fifths"
-en, clearspeak, "⅗", "three fifths"
-en, clearspeak, "⅘", "four fifths"
-en, clearspeak, "⅙", "one sixth"
-en, clearspeak, "⅚", "five sixths"
-en, clearspeak, "⅛", "one eighth"
-en, clearspeak, "⅜", "three eighths"
-en, clearspeak, "⅝", "five eighths"
-en, clearspeak, "⅞", "seven eighths"
-en, clearspeak, "⅟", "numerator one"
-en, clearspeak, "↉", "zero thirds"
-en, clearspeak, "①", "circled 1"
-en, clearspeak, "②", "circled 2"
-en, clearspeak, "③", "circled 3"
-en, clearspeak, "④", "circled 4"
-en, clearspeak, "⑤", "circled 5"
-en, clearspeak, "⑥", "circled 6"
-en, clearspeak, "⑦", "circled 7"
-en, clearspeak, "⑧", "circled 8"
-en, clearspeak, "⑨", "circled 9"
-en, clearspeak, "⑩", "circled 10"
-en, clearspeak, "⑪", "circled 11"
-en, clearspeak, "⑫", "circled 12"
-en, clearspeak, "⑬", "circled 13"
-en, clearspeak, "⑭", "circled 14"
-en, clearspeak, "⑮", "circled 15"
-en, clearspeak, "⑯", "circled 16"
-en, clearspeak, "⑰", "circled 17"
-en, clearspeak, "⑱", "circled 18"
-en, clearspeak, "⑲", "circled 19"
-en, clearspeak, "⑳", "circled 20"
-en, clearspeak, "⑴", "parenthesized 1"
-en, clearspeak, "⑵", "parenthesized 2"
-en, clearspeak, "⑶", "parenthesized 3"
-en, clearspeak, "⑷", "parenthesized 4"
-en, clearspeak, "⑸", "parenthesized 5"
-en, clearspeak, "⑹", "parenthesized 6"
-en, clearspeak, "⑺", "parenthesized 7"
-en, clearspeak, "⑻", "parenthesized 8"
-en, clearspeak, "⑼", "parenthesized 9"
-en, clearspeak, "⑽", "parenthesized 10"
-en, clearspeak, "⑾", "parenthesized 11"
-en, clearspeak, "⑿", "parenthesized 12"
-en, clearspeak, "⒀", "parenthesized 13"
-en, clearspeak, "⒁", "parenthesized 14"
-en, clearspeak, "⒂", "parenthesized 15"
-en, clearspeak, "⒃", "parenthesized 16"
-en, clearspeak, "⒄", "parenthesized 17"
-en, clearspeak, "⒅", "parenthesized 18"
-en, clearspeak, "⒆", "parenthesized 19"
-en, clearspeak, "⒇", "parenthesized 20"
-en, clearspeak, "⒈", "1 period"
-en, clearspeak, "⒉", "2 period"
-en, clearspeak, "⒊", "3 period"
-en, clearspeak, "⒋", "4 period"
-en, clearspeak, "⒌", "5 period"
-en, clearspeak, "⒍", "6 period"
-en, clearspeak, "⒎", "7 period"
-en, clearspeak, "⒏", "8 period"
-en, clearspeak, "⒐", "9 period"
-en, clearspeak, "⒑", "10 period"
-en, clearspeak, "⒒", "11 period"
-en, clearspeak, "⒓", "12 period"
-en, clearspeak, "⒔", "13 period"
-en, clearspeak, "⒕", "14 period"
-en, clearspeak, "⒖", "15 period"
-en, clearspeak, "⒗", "16 period"
-en, clearspeak, "⒘", "17 period"
-en, clearspeak, "⒙", "18 period"
-en, clearspeak, "⒚", "19 period"
-en, clearspeak, "⒛", "20 period"
-en, clearspeak, "⓪", "circled 0"
-en, clearspeak, "⓫", "negative circled 11"
-en, clearspeak, "⓬", "negative circled 12"
-en, clearspeak, "⓭", "negative circled 13"
-en, clearspeak, "⓮", "negative circled 14"
-en, clearspeak, "⓯", "negative circled 15"
-en, clearspeak, "⓰", "negative circled 16"
-en, clearspeak, "⓱", "negative circled 17"
-en, clearspeak, "⓲", "negative circled 18"
-en, clearspeak, "⓳", "negative circled 19"
-en, clearspeak, "⓴", "negative circled 20"
-en, clearspeak, "⓵", "double circled 1"
-en, clearspeak, "⓶", "double circled 2"
-en, clearspeak, "⓷", "double circled 3"
-en, clearspeak, "⓸", "double circled 4"
-en, clearspeak, "⓹", "double circled 5"
-en, clearspeak, "⓺", "double circled 6"
-en, clearspeak, "⓻", "double circled 7"
-en, clearspeak, "⓼", "double circled 8"
-en, clearspeak, "⓽", "double circled 9"
-en, clearspeak, "⓾", "double circled 10"
-en, clearspeak, "⓿", "negative circled 0"
-en, clearspeak, "❶", "inverse circled 1"
-en, clearspeak, "❷", "inverse circled 2"
-en, clearspeak, "❸", "inverse circled 3"
-en, clearspeak, "❹", "inverse circled 4"
-en, clearspeak, "❺", "inverse circled 5"
-en, clearspeak, "❻", "inverse circled 6"
-en, clearspeak, "❼", "inverse circled 7"
-en, clearspeak, "❽", "inverse circled 8"
-en, clearspeak, "❾", "inverse circled 9"
-en, clearspeak, "❿", "inverse circled 10"
-en, clearspeak, "➀", "circled one"
-en, clearspeak, "➁", "circled two"
-en, clearspeak, "➂", "circled three"
-en, clearspeak, "➃", "circled four"
-en, clearspeak, "➄", "circled five"
-en, clearspeak, "➅", "circled six"
-en, clearspeak, "➆", "circled seven"
-en, clearspeak, "➇", "circled eight"
-en, clearspeak, "➈", "circled nine"
-en, clearspeak, "➉", "circled ten"
-en, clearspeak, "➊", "inverse circled 1"
-en, clearspeak, "➋", "inverse circled 2"
-en, clearspeak, "➌", "inverse circled 3"
-en, clearspeak, "➍", "inverse circled 4"
-en, clearspeak, "➎", "inverse circled 5"
-en, clearspeak, "➏", "inverse circled 6"
-en, clearspeak, "➐", "inverse circled 7"
-en, clearspeak, "➑", "inverse circled 8"
-en, clearspeak, "➒", "inverse circled 9"
-en, clearspeak, "➓", "inverse circled 10"
-en, clearspeak, "㉈", "circled ten on black square"
-en, clearspeak, "㉉", "circled twenty on black square"
-en, clearspeak, "㉊", "circled thirty on black square"
-en, clearspeak, "㉋", "circled forty on black square"
-en, clearspeak, "㉌", "circled fifty on black square"
-en, clearspeak, "㉍", "circled sixty on black square"
-en, clearspeak, "㉎", "circled seventy on black square"
-en, clearspeak, "㉏", "circled eighty on black square"
-en, clearspeak, "㉑", "circled twenty one"
-en, clearspeak, "㉒", "circled twenty two"
-en, clearspeak, "㉓", "circled twenty three"
-en, clearspeak, "㉔", "circled twenty four"
-en, clearspeak, "㉕", "circled twenty five"
-en, clearspeak, "㉖", "circled twenty six"
-en, clearspeak, "㉗", "circled twenty seven"
-en, clearspeak, "㉘", "circled twenty eight"
-en, clearspeak, "㉙", "circled twenty nine"
-en, clearspeak, "㉚", "circled thirty"
-en, clearspeak, "㉛", "circled thirty one"
-en, clearspeak, "㉜", "circled thirty two"
-en, clearspeak, "㉝", "circled thirty three"
-en, clearspeak, "㉞", "circled thirty four"
-en, clearspeak, "㉟", "circled thirty five"
-en, clearspeak, "㊱", "circled thirty six"
-en, clearspeak, "㊲", "circled thirty seven"
-en, clearspeak, "㊳", "circled thirty eight"
-en, clearspeak, "㊴", "circled thirty nine"
-en, clearspeak, "㊵", "circled forty"
-en, clearspeak, "㊶", "circled forty one"
-en, clearspeak, "㊷", "circled forty two"
-en, clearspeak, "㊸", "circled forty three"
-en, clearspeak, "㊹", "circled forty four"
-en, clearspeak, "㊺", "circled forty five"
-en, clearspeak, "㊻", "circled forty six"
-en, clearspeak, "㊼", "circled forty seven"
-en, clearspeak, "㊽", "circled forty eight"
-en, clearspeak, "㊾", "circled forty nine"
-en, clearspeak, "㊿", "circled fifty"
-en, clearspeak, "０", "0"
-en, clearspeak, "１", "1"
-en, clearspeak, "２", "2"
-en, clearspeak, "３", "3"
-en, clearspeak, "４", "4"
-en, clearspeak, "５", "5"
-en, clearspeak, "６", "6"
-en, clearspeak, "７", "7"
-en, clearspeak, "８", "8"
-en, clearspeak, "９", "9"
-en, clearspeak, "𝟎", "bold 0"
-en, clearspeak, "𝟏", "bold 1"
-en, clearspeak, "𝟐", "bold 2"
-en, clearspeak, "𝟑", "bold 3"
-en, clearspeak, "𝟒", "bold 4"
-en, clearspeak, "𝟓", "bold 5"
-en, clearspeak, "𝟔", "bold 6"
-en, clearspeak, "𝟕", "bold 7"
-en, clearspeak, "𝟖", "bold 8"
-en, clearspeak, "𝟗", "bold 9"
-en, clearspeak, "𝟘", "blackboard 0"
-en, clearspeak, "𝟙", "blackboard 1"
-en, clearspeak, "𝟚", "blackboard 2"
-en, clearspeak, "𝟛", "blackboard 3"
-en, clearspeak, "𝟜", "blackboard 4"
-en, clearspeak, "𝟝", "blackboard 5"
-en, clearspeak, "𝟞", "blackboard 6"
-en, clearspeak, "𝟟", "blackboard 7"
-en, clearspeak, "𝟠", "blackboard 8"
-en, clearspeak, "𝟡", "blackboard 9"
-en, clearspeak, "𝟢", "sans serif 0"
-en, clearspeak, "𝟣", "sans serif 1"
-en, clearspeak, "𝟤", "sans serif 2"
-en, clearspeak, "𝟥", "sans serif 3"
-en, clearspeak, "𝟦", "sans serif 4"
-en, clearspeak, "𝟧", "sans serif 5"
-en, clearspeak, "𝟨", "sans serif 6"
-en, clearspeak, "𝟩", "sans serif 7"
-en, clearspeak, "𝟪", "sans serif 8"
-en, clearspeak, "𝟫", "sans serif 9"
-en, clearspeak, "𝟬", "sans serif bold 0"
-en, clearspeak, "𝟭", "sans serif bold 1"
-en, clearspeak, "𝟮", "sans serif bold 2"
-en, clearspeak, "𝟯", "sans serif bold 3"
-en, clearspeak, "𝟰", "sans serif bold 4"
-en, clearspeak, "𝟱", "sans serif bold 5"
-en, clearspeak, "𝟲", "sans serif bold 6"
-en, clearspeak, "𝟳", "sans serif bold 7"
-en, clearspeak, "𝟴", "sans serif bold 8"
-en, clearspeak, "𝟵", "sans serif bold 9"
-en, clearspeak, "𝟶", "monospace 0"
-en, clearspeak, "𝟷", "monospace 1"
-en, clearspeak, "𝟸", "monospace 2"
-en, clearspeak, "𝟹", "monospace 3"
-en, clearspeak, "𝟺", "monospace 4"
-en, clearspeak, "𝟻", "monospace 5"
-en, clearspeak, "𝟼", "monospace 6"
-en, clearspeak, "𝟽", "monospace 7"
-en, clearspeak, "𝟾", "monospace 8"
-en, clearspeak, "𝟿", "monospace 9"
-en, clearspeak, "🄀", "0 period"
-en, clearspeak, "🄁", "0 comma"
-en, clearspeak, "🄂", "1 comma"
-en, clearspeak, "🄃", "2 comma"
-en, clearspeak, "🄄", "3 comma"
-en, clearspeak, "🄅", "4 comma"
-en, clearspeak, "🄆", "5 comma"
-en, clearspeak, "🄇", "6 comma"
-en, clearspeak, "🄈", "7 comma"
-en, clearspeak, "🄉", "8 comma"
-en, clearspeak, "🄊", "9 comma"
-en, clearspeak, "─", "box drawings light horizontal"
-en, clearspeak, "━", "box drawings heavy horizontal"
-en, clearspeak, "│", "box drawings light vertical"
-en, clearspeak, "┃", "box drawings heavy vertical"
-en, clearspeak, "┄", "box drawings light triple dash horizontal"
-en, clearspeak, "┅", "box drawings heavy triple dash horizontal"
-en, clearspeak, "┆", "box drawings light triple dash vertical"
-en, clearspeak, "┇", "box drawings heavy triple dash vertical"
-en, clearspeak, "┈", "box drawings light quadruple dash horizontal"
-en, clearspeak, "┉", "box drawings heavy quadruple dash horizontal"
-en, clearspeak, "┊", "box drawings light quadruple dash vertical"
-en, clearspeak, "┋", "box drawings heavy quadruple dash vertical"
-en, clearspeak, "┌", "box drawings light down and right"
-en, clearspeak, "┍", "box drawings down light and right heavy"
-en, clearspeak, "┎", "box drawings down heavy and right light"
-en, clearspeak, "┏", "box drawings heavy down and right"
-en, clearspeak, "┐", "box drawings light down and left"
-en, clearspeak, "┑", "box drawings down light and left heavy"
-en, clearspeak, "┒", "box drawings down heavy and left light"
-en, clearspeak, "┓", "box drawings heavy down and left"
-en, clearspeak, "└", "box drawings light up and right"
-en, clearspeak, "┕", "box drawings up light and right heavy"
-en, clearspeak, "┖", "box drawings up heavy and right light"
-en, clearspeak, "┗", "box drawings heavy up and right"
-en, clearspeak, "┘", "box drawings light up and left"
-en, clearspeak, "┙", "box drawings up light and left heavy"
-en, clearspeak, "┚", "box drawings up heavy and left light"
-en, clearspeak, "┛", "box drawings heavy up and left"
-en, clearspeak, "├", "box drawings light vertical and right"
-en, clearspeak, "┝", "box drawings vertical light and right heavy"
-en, clearspeak, "┞", "box drawings up heavy and right down light"
-en, clearspeak, "┟", "box drawings down heavy and right up light"
-en, clearspeak, "┠", "box drawings vertical heavy and right light"
-en, clearspeak, "┡", "box drawings down light and right up heavy"
-en, clearspeak, "┢", "box drawings up light and right down heavy"
-en, clearspeak, "┣", "box drawings heavy vertical and right"
-en, clearspeak, "┤", "box drawings light vertical and left"
-en, clearspeak, "┥", "box drawings vertical light and left heavy"
-en, clearspeak, "┦", "box drawings up heavy and left down light"
-en, clearspeak, "┧", "box drawings down heavy and left up light"
-en, clearspeak, "┨", "box drawings vertical heavy and left light"
-en, clearspeak, "┩", "box drawings down light and left up heavy"
-en, clearspeak, "┪", "box drawings up light and left down heavy"
-en, clearspeak, "┫", "box drawings heavy vertical and left"
-en, clearspeak, "┬", "box drawings light down and horizontal"
-en, clearspeak, "┭", "box drawings left heavy and right down light"
-en, clearspeak, "┮", "box drawings right heavy and left down light"
-en, clearspeak, "┯", "box drawings down light and horizontal heavy"
-en, clearspeak, "┰", "box drawings down heavy and horizontal light"
-en, clearspeak, "┱", "box drawings right light and left down heavy"
-en, clearspeak, "┲", "box drawings left light and right down heavy"
-en, clearspeak, "┳", "box drawings heavy down and horizontal"
-en, clearspeak, "┴", "box drawings light up and horizontal"
-en, clearspeak, "┵", "box drawings left heavy and right up light"
-en, clearspeak, "┶", "box drawings right heavy and left up light"
-en, clearspeak, "┷", "box drawings up light and horizontal heavy"
-en, clearspeak, "┸", "box drawings up heavy and horizontal light"
-en, clearspeak, "┹", "box drawings right light and left up heavy"
-en, clearspeak, "┺", "box drawings left light and right up heavy"
-en, clearspeak, "┻", "box drawings heavy up and horizontal"
-en, clearspeak, "┼", "box drawings light vertical and horizontal"
-en, clearspeak, "┽", "box drawings left heavy and right vertical light"
-en, clearspeak, "┾", "box drawings right heavy and left vertical light"
-en, clearspeak, "┿", "box drawings vertical light and horizontal heavy"
-en, clearspeak, "╀", "box drawings up heavy and down horizontal light"
-en, clearspeak, "╁", "box drawings down heavy and up horizontal light"
-en, clearspeak, "╂", "box drawings vertical heavy and horizontal light"
-en, clearspeak, "╃", "box drawings left up heavy and right down light"
-en, clearspeak, "╄", "box drawings right up heavy and left down light"
-en, clearspeak, "╅", "box drawings left down heavy and right up light"
-en, clearspeak, "╆", "box drawings right down heavy and left up light"
-en, clearspeak, "╇", "box drawings down light and up horizontal heavy"
-en, clearspeak, "╈", "box drawings up light and down horizontal heavy"
-en, clearspeak, "╉", "box drawings right light and left vertical heavy"
-en, clearspeak, "╊", "box drawings left light and right vertical heavy"
-en, clearspeak, "╋", "box drawings heavy vertical and horizontal"
-en, clearspeak, "╌", "box drawings light double dash horizontal"
-en, clearspeak, "╍", "box drawings heavy double dash horizontal"
-en, clearspeak, "╎", "box drawings light double dash vertical"
-en, clearspeak, "╏", "box drawings heavy double dash vertical"
-en, clearspeak, "═", "box drawings double horizontal"
-en, clearspeak, "║", "box drawings double vertical"
-en, clearspeak, "╒", "box drawings down single and right double"
-en, clearspeak, "╓", "box drawings down double and right single"
-en, clearspeak, "╔", "box drawings double down and right"
-en, clearspeak, "╕", "box drawings down single and left double"
-en, clearspeak, "╖", "box drawings down double and left single"
-en, clearspeak, "╗", "box drawings double down and left"
-en, clearspeak, "╘", "box drawings up single and right double"
-en, clearspeak, "╙", "box drawings up double and right single"
-en, clearspeak, "╚", "box drawings double up and right"
-en, clearspeak, "╛", "box drawings up single and left double"
-en, clearspeak, "╜", "box drawings up double and left single"
-en, clearspeak, "╝", "box drawings double up and left"
-en, clearspeak, "╞", "box drawings vertical single and right double"
-en, clearspeak, "╟", "box drawings vertical double and right single"
-en, clearspeak, "╠", "box drawings double vertical and right"
-en, clearspeak, "╡", "box drawings vertical single and left double"
-en, clearspeak, "╢", "box drawings vertical double and left single"
-en, clearspeak, "╣", "box drawings double vertical and left"
-en, clearspeak, "╤", "box drawings down single and horizontal double"
-en, clearspeak, "╥", "box drawings down double and horizontal single"
-en, clearspeak, "╦", "box drawings double down and horizontal"
-en, clearspeak, "╧", "box drawings up single and horizontal double"
-en, clearspeak, "╨", "box drawings up double and horizontal single"
-en, clearspeak, "╩", "box drawings double up and horizontal"
-en, clearspeak, "╪", "box drawings vertical single and horizontal double"
-en, clearspeak, "╫", "box drawings vertical double and horizontal single"
-en, clearspeak, "╬", "box drawings double vertical and horizontal"
-en, clearspeak, "╭", "box drawings light arc down and right"
-en, clearspeak, "╮", "box drawings light arc down and left"
-en, clearspeak, "╯", "box drawings light arc up and left"
-en, clearspeak, "╰", "box drawings light arc up and right"
-en, clearspeak, "╱", "box drawings light diagonal upper right to lower left"
-en, clearspeak, "╲", "box drawings light diagonal upper left to lower right"
-en, clearspeak, "╳", "box drawings light diagonal cross"
-en, clearspeak, "╴", "box drawings light left"
-en, clearspeak, "╵", "box drawings light up"
-en, clearspeak, "╶", "box drawings light right"
-en, clearspeak, "╷", "box drawings light down"
-en, clearspeak, "╸", "box drawings heavy left"
-en, clearspeak, "╹", "box drawings heavy up"
-en, clearspeak, "╺", "box drawings heavy right"
-en, clearspeak, "╻", "box drawings heavy down"
-en, clearspeak, "╼", "box drawings light left and heavy right"
-en, clearspeak, "╽", "box drawings light up and heavy down"
-en, clearspeak, "╾", "box drawings heavy left and light right"
-en, clearspeak, "╿", "box drawings heavy up and light down"
-en, clearspeak, "▀", "upper half block"
-en, clearspeak, "▁", "lower one eighth block"
-en, clearspeak, "▂", "lower one quarter block"
-en, clearspeak, "▃", "lower three eighths block"
-en, clearspeak, "▄", "lower half block"
-en, clearspeak, "▅", "lower five eighths block"
-en, clearspeak, "▆", "lower three quarters block"
-en, clearspeak, "▇", "lower seven eighths block"
-en, clearspeak, "█", "full block"
-en, clearspeak, "▉", "left seven eighths block"
-en, clearspeak, "▊", "left three quarters block"
-en, clearspeak, "▋", "left five eighths block"
-en, clearspeak, "▌", "left half block"
-en, clearspeak, "▍", "left three eighths block"
-en, clearspeak, "▎", "left one quarter block"
-en, clearspeak, "▏", "left one eighth block"
-en, clearspeak, "▐", "right half block"
-en, clearspeak, "░", "light shade"
-en, clearspeak, "▒", "medium shade"
-en, clearspeak, "▓", "dark shade"
-en, clearspeak, "▔", "upper one eighth block"
-en, clearspeak, "▕", "right one eighth block"
-en, clearspeak, "▖", "quadrant lower left"
-en, clearspeak, "▗", "quadrant lower right"
-en, clearspeak, "▘", "quadrant upper left"
-en, clearspeak, "▙", "quadrant upper left and lower left and lower right"
-en, clearspeak, "▚", "quadrant upper left and lower right"
-en, clearspeak, "▛", "quadrant upper left and upper right and lower left"
-en, clearspeak, "▜", "quadrant upper left and upper right and lower right"
-en, clearspeak, "▝", "quadrant upper right"
-en, clearspeak, "▞", "quadrant upper right and lower left"
-en, clearspeak, "▟", "quadrant upper right and lower left and lower right"
-en, clearspeak, "■", "black square"
-en, clearspeak, "□", "white square"
-en, clearspeak, "▢", "white square with rounded corners"
-en, clearspeak, "▣", "white square containing black small square"
-en, clearspeak, "▤", "square with horizontal fill"
-en, clearspeak, "▥", "square with vertical fill"
-en, clearspeak, "▦", "square with orthogonal crosshatch fill"
-en, clearspeak, "▧", "square with upper left to lower right fill"
-en, clearspeak, "▨", "square with upper right to lower left fill"
-en, clearspeak, "▩", "square with diagonal crosshatch fill"
-en, clearspeak, "▪", "black small square"
-en, clearspeak, "▫", "white small square"
-en, clearspeak, "▬", "black rectangle"
-en, clearspeak, "▭", "white rectangle"
-en, clearspeak, "▮", "black vertical rectangle"
-en, clearspeak, "▯", "white vertical rectangle"
-en, clearspeak, "▰", "black parallelogram"
-en, clearspeak, "▱", "white parallelogram"
-en, clearspeak, "▲", "black up pointing triangle"
-en, clearspeak, "△", "white up pointing triangle"
-en, clearspeak, "▴", "black up pointing small triangle"
-en, clearspeak, "▵", "white up pointing small triangle"
-en, clearspeak, "▶", "black right pointing triangle"
-en, clearspeak, "▷", "white right pointing triangle"
-en, clearspeak, "▸", "black right pointing small triangle"
-en, clearspeak, "▹", "white right pointing small triangle"
-en, clearspeak, "►", "black right pointing pointer"
-en, clearspeak, "▻", "white right pointing pointer"
-en, clearspeak, "▼", "black down pointing triangle"
-en, clearspeak, "▽", "white down pointing triangle"
-en, clearspeak, "▾", "black down pointing small triangle"
-en, clearspeak, "▿", "white down pointing small triangle"
-en, clearspeak, "◀", "black left pointing triangle"
-en, clearspeak, "◁", "white left pointing triangle"
-en, clearspeak, "◂", "black left pointing small triangle"
-en, clearspeak, "◃", "white left pointing small triangle"
-en, clearspeak, "◄", "black left pointing pointer"
-en, clearspeak, "◅", "white left pointing pointer"
-en, clearspeak, "◆", "black diamond"
-en, clearspeak, "◇", "white diamond"
-en, clearspeak, "◈", "white diamond containing black small diamond"
-en, clearspeak, "◉", "fisheye"
-en, clearspeak, "◊", "lozenge"
-en, clearspeak, "○", "white circle"
-en, clearspeak, "◌", "dotted circle"
-en, clearspeak, "◍", "circle with vertical fill"
-en, clearspeak, "◎", "bullseye"
-en, clearspeak, "●", "black circle"
-en, clearspeak, "◐", "circle with left half black"
-en, clearspeak, "◑", "circle with right half black"
-en, clearspeak, "◒", "circle with lower half black"
-en, clearspeak, "◓", "circle with upper half black"
-en, clearspeak, "◔", "circle with upper right quadrant black"
-en, clearspeak, "◕", "circle with all but upper left quadrant black"
-en, clearspeak, "◖", "left half black circle"
-en, clearspeak, "◗", "right half black circle"
-en, clearspeak, "◘", "inverse bullet"
-en, clearspeak, "◙", "inverse white circle"
-en, clearspeak, "◚", "upper half inverse white circle"
-en, clearspeak, "◛", "lower half inverse white circle"
-en, clearspeak, "◜", "upper left quadrant circular arc"
-en, clearspeak, "◝", "upper right quadrant circular arc"
-en, clearspeak, "◞", "lower right quadrant circular arc"
-en, clearspeak, "◟", "lower left quadrant circular arc"
-en, clearspeak, "◠", "upper half circle"
-en, clearspeak, "◡", "lower half circle"
-en, clearspeak, "◢", "black lower right triangle"
-en, clearspeak, "◣", "black lower left triangle"
-en, clearspeak, "◤", "black upper left triangle"
-en, clearspeak, "◥", "black upper right triangle"
-en, clearspeak, "◦", "white bullet"
-en, clearspeak, "◧", "square with left half black"
-en, clearspeak, "◨", "square with right half black"
-en, clearspeak, "◩", "square with upper left diagonal half black"
-en, clearspeak, "◪", "square with lower right diagonal half black"
-en, clearspeak, "◫", "white square with vertical bisecting line"
-en, clearspeak, "◬", "white up pointing triangle with dot"
-en, clearspeak, "◭", "up pointing triangle with left half black"
-en, clearspeak, "◮", "up pointing triangle with right half black"
-en, clearspeak, "◯", "large circle"
-en, clearspeak, "◰", "white square with upper left quadrant"
-en, clearspeak, "◱", "white square with lower left quadrant"
-en, clearspeak, "◲", "white square with lower right quadrant"
-en, clearspeak, "◳", "white square with upper right quadrant"
-en, clearspeak, "◴", "white circle with upper left quadrant"
-en, clearspeak, "◵", "white circle with lower left quadrant"
-en, clearspeak, "◶", "white circle with lower right quadrant"
-en, clearspeak, "◷", "white circle with upper right quadrant"
-en, clearspeak, "◸", "upper left triangle"
-en, clearspeak, "◹", "upper right triangle"
-en, clearspeak, "◺", "lower left triangle"
-en, clearspeak, "◻", "white medium square"
-en, clearspeak, "◼", "black medium square"
-en, clearspeak, "◽", "white medium small square"
-en, clearspeak, "◾", "black medium small square"
-en, clearspeak, "◿", "lower right triangle"
-en, clearspeak, "⬒", "square with top half black"
-en, clearspeak, "⬓", "square with bottom half black"
-en, clearspeak, "⬔", "square with upper right diagonal half black"
-en, clearspeak, "⬕", "square with lower left diagonal half black"
-en, clearspeak, "⬖", "diamond with left half black"
-en, clearspeak, "⬗", "diamond with right half black"
-en, clearspeak, "⬘", "diamond with top half black"
-en, clearspeak, "⬙", "diamond with bottom half black"
-en, clearspeak, "⬚", "dotted square"
-en, clearspeak, "⬛", "black large square"
-en, clearspeak, "⬜", "white large square"
-en, clearspeak, "⬝", "black very small square"
-en, clearspeak, "⬞", "white very small square"
-en, clearspeak, "⬟", "black pentagon"
-en, clearspeak, "⬠", "white pentagon"
-en, clearspeak, "⬡", "white hexagon"
-en, clearspeak, "⬢", "black hexagon"
-en, clearspeak, "⬣", "horizontal black hexagon"
-en, clearspeak, "⬤", "black large circle"
-en, clearspeak, "⬥", "black medium diamond"
-en, clearspeak, "⬦", "white medium diamond"
-en, clearspeak, "⬧", "black medium lozenge"
-en, clearspeak, "⬨", "white medium lozenge"
-en, clearspeak, "⬩", "black small diamond"
-en, clearspeak, "⬪", "black small lozenge"
-en, clearspeak, "⬫", "white small lozenge"
-en, clearspeak, "⬬", "black horizontal ellipse"
-en, clearspeak, "⬭", "white horizontal ellipse"
-en, clearspeak, "⬮", "black vertical ellipse"
-en, clearspeak, "⬯", "white vertical ellipse"
-en, clearspeak, "⭐", "white medium star"
-en, clearspeak, "⭑", "black small star"
-en, clearspeak, "⭒", "white small star"
-en, clearspeak, "⭓", "black right pointing pentagon"
-en, clearspeak, "⭔", "white right pointing pentagon"
-en, clearspeak, "⭕", "heavy large circle"
-en, clearspeak, "⭖", "heavy oval with oval inside"
-en, clearspeak, "⭗", "heavy circle with circle inside"
-en, clearspeak, "⭘", "heavy circle"
-en, clearspeak, "⭙", "heavy circled saltire"
-en, clearspeak, "↼", "left harpoon with barb up"
-en, clearspeak, "↽", "left harpoon with barb down"
-en, clearspeak, "↾", "up harpoon with barb right"
-en, clearspeak, "↿", "up harpoon with barb left"
-en, clearspeak, "⇀", "right harpoon with barb up"
-en, clearspeak, "⇁", "right harpoon with barb down"
-en, clearspeak, "⇂", "down harpoon with barb right"
-en, clearspeak, "⇃", "down harpoon with barb left"
-en, clearspeak, "⇋", "left harpoon over right harpoon"
-en, clearspeak, "⇌", "right harpoon over left harpoon"
-en, clearspeak, "⥊", "left barb up right barb down harpoon"
-en, clearspeak, "⥋", "left barb down right barb up harpoon"
-en, clearspeak, "⥌", "up barb right down barb left harpoon"
-en, clearspeak, "⥍", "up barb left down barb right harpoon"
-en, clearspeak, "⥎", "left barb up right barb up harpoon"
-en, clearspeak, "⥏", "up barb right down barb right harpoon"
-en, clearspeak, "⥐", "left barb down right barb down harpoon"
-en, clearspeak, "⥑", "up barb left down barb left harpoon"
-en, clearspeak, "⥒", "left harpoon with barb up to bar"
-en, clearspeak, "⥓", "right harpoon with barb up to bar"
-en, clearspeak, "⥔", "up harpoon with barb right to bar"
-en, clearspeak, "⥕", "down harpoon with barb right to bar"
-en, clearspeak, "⥖", "left harpoon with barb down to bar"
-en, clearspeak, "⥗", "right harpoon with barb down to bar"
-en, clearspeak, "⥘", "up harpoon with barb left to bar"
-en, clearspeak, "⥙", "down harpoon with barb left to bar"
-en, clearspeak, "⥚", "left harpoon with barb up from bar"
-en, clearspeak, "⥛", "right harpoon with barb up from bar"
-en, clearspeak, "⥜", "up harpoon with barb right from bar"
-en, clearspeak, "⥝", "down harpoon with barb right from bar"
-en, clearspeak, "⥞", "left harpoon with barb down from bar"
-en, clearspeak, "⥟", "right harpoon with barb down from bar"
-en, clearspeak, "⥠", "up harpoon with barb left from bar"
-en, clearspeak, "⥡", "down harpoon with barb left from bar"
-en, clearspeak, "⥢", "left harpoon with barb up above left harpoon with barb down"
-en, clearspeak, "⥣", "up harpoon with barb left beside up harpoon with barb right"
-en, clearspeak, "⥤", "right harpoon with barb up above right harpoon with barb down"
-en, clearspeak, "⥥", "down harpoon with barb left beside down harpoon with barb right"
-en, clearspeak, "⥦", "left harpoon with barb up above right harpoon with barb up"
-en, clearspeak, "⥧", "left harpoon with barb down above right harpoon with barb down"
-en, clearspeak, "⥨", "right harpoon with barb up above left harpoon with barb up"
-en, clearspeak, "⥩", "right harpoon with barb down above left harpoon with barb down"
-en, clearspeak, "⥪", "left harpoon with barb up above long dash"
-en, clearspeak, "⥫", "left harpoon with barb down below long dash"
-en, clearspeak, "⥬", "right harpoon with barb up above long dash"
-en, clearspeak, "⥭", "right harpoon with barb down below long dash"
-en, clearspeak, "⥮", "up harpoon with barb left beside down harpoon with barb right"
-en, clearspeak, "⥯", "down harpoon with barb left beside up harpoon with barb right"
-en, clearspeak, "⥼", "left fish tail"
-en, clearspeak, "⥽", "right fish tail"
-en, clearspeak, "⥾", "up fish tail"
-en, clearspeak, "⥿", "down fish tail"
-en, clearspeak, "ℏ", "italic h over two pi"
-en, clearspeak, "℔", "l b bar"
-en, clearspeak, "№", "numero"
-en, clearspeak, "℗", "sound recording copyright"
-en, clearspeak, "℞", "prescription take"
-en, clearspeak, "℟", "response"
-en, clearspeak, "℠", "service mark"
-en, clearspeak, "℡", "telephone sign"
-en, clearspeak, "™", "trade mark"
-en, clearspeak, "℣", "versicle"
-en, clearspeak, "℥", "ounce"
-en, clearspeak, "Ω", "ohm"
-en, clearspeak, "℧", "inverted ohm"
-en, clearspeak, "K", "kelvin"
-en, clearspeak, "Å", "angstrom"
-en, clearspeak, "℮", "estimated"
-en, clearspeak, "Ⅎ", "turned upper F"
-en, clearspeak, "ℹ", "information source"
-en, clearspeak, "℺", "rotated upper Q"
-en, clearspeak, "℻", "facsimile sign"
-en, clearspeak, "⅁", "turned sans serif upper G"
-en, clearspeak, "⅂", "turned sans serif upper L"
-en, clearspeak, "⅃", "reversed sans serif upper L"
-en, clearspeak, "⅄", "turned sans serif upper Y"
-en, clearspeak, "!", "exclamation mark"
-en, clearspeak, "\"", "quotation mark"
-en, clearspeak, "#", "number sign"
-en, clearspeak, "$", "dollar sign"
-en, clearspeak, "%", "percent sign"
-en, clearspeak, "&", "ampersand"
-en, clearspeak, "'", "prime"
-en, clearspeak, "*", "asterisk"
-en, clearspeak, "+", "plus"
-en, clearspeak, ",", "comma"
-en, clearspeak, "-", "hyphen"
-en, clearspeak, ".", "period"
-en, clearspeak, "/", "slash"
-en, clearspeak, ":", "colon"
-en, clearspeak, ";", "semicolon"
-en, clearspeak, "<", "is less than"
-en, clearspeak, "=", "equals"
-en, clearspeak, ">", "is greater than"
-en, clearspeak, "?", "question mark"
-en, clearspeak, "@", "commercial-at"
-en, clearspeak, "\", "reverse-solidus"
-en, clearspeak, "^", "caret"
-en, clearspeak, "_", "bar"
-en, clearspeak, "`", "grave"
-en, clearspeak, "|", "divides"
-en, clearspeak, "~", "tilde"
-en, clearspeak, "¡", "inverted exclamation mark"
-en, clearspeak, "¢", "cent sign"
-en, clearspeak, "£", "pound sign"
-en, clearspeak, "¤", "currency sign"
-en, clearspeak, "¥", "yen-sign"
-en, clearspeak, "¦", "broken-vertical-bar"
-en, clearspeak, "§", "section sign"
-en, clearspeak, "¨", "two-dots"
-en, clearspeak, "©", "copyright sign"
-en, clearspeak, "ª", "feminine-ordinal-indicator"
-en, clearspeak, "«", "left-pointing-guillemet"
-en, clearspeak, "¬", "not sign"
-en, clearspeak, "®", "trade mark sign"
-en, clearspeak, "¯", "bar"
-en, clearspeak, "°", "degrees"
-en, clearspeak, "±", "plus or minus"
-en, clearspeak, "´", "acute"
-en, clearspeak, "µ", "micro sign"
-en, clearspeak, "¶", "paragraph sign"
-en, clearspeak, "·", "times"
-en, clearspeak, "¸", "cedilla"
-en, clearspeak, "º", "masculine-ordinal-indicator"
-en, clearspeak, "»", "right-pointing-guillemet"
-en, clearspeak, "¿", "inverted question mark"
-en, clearspeak, "×", "times"
-en, clearspeak, "÷", "division sign"
-en, clearspeak, "˘", "breve"
-en, clearspeak, "˙", "dot"
-en, clearspeak, "˚", "ring-above"
-en, clearspeak, "˛", "ogonek"
-en, clearspeak, "˜", "tilde"
-en, clearspeak, "˝", "double-acute"
-en, clearspeak, "‐", "hyphen"
-en, clearspeak, "‑", "non-breaking-hyphen"
-en, clearspeak, "‒", "figure-dash"
-en, clearspeak, "–", "en-dash"
-en, clearspeak, "—", "em-dash"
-en, clearspeak, "―", "quotation-dash"
-en, clearspeak, "‖", "double-vertical-bar"
-en, clearspeak, "‗", "double-underscore"
-en, clearspeak, "‘", "single-turned-comma-quotation-mark"
-en, clearspeak, "’", "single-comma-quotation-mark"
-en, clearspeak, "‚", "low-single-comma-quotation-mark"
-en, clearspeak, "‛", "single-reversed-comma-quotation-mark"
-en, clearspeak, "“", "double-turned-comma-quotation-mark"
-en, clearspeak, "”", "double-comma-quotation-mark"
-en, clearspeak, "„", "low-double-comma-quotation-mark"
-en, clearspeak, "‟", "double-reversed-comma-quotation-mark"
-en, clearspeak, "†", "dagger"
-en, clearspeak, "‡", "double-dagger"
-en, clearspeak, "•", "bullet"
-en, clearspeak, "‣", "triangular-bullet"
-en, clearspeak, "․", "one-dot-leader"
-en, clearspeak, "‥", "two-dot-leader"
-en, clearspeak, "…", "dot dot dot"
-en, clearspeak, "‧", "hyphenation-point"
-en, clearspeak, "‰", "per-mille"
-en, clearspeak, "‱", "per-ten-thousand"
-en, clearspeak, "′", "prime"
-en, clearspeak, "″", "double prime"
-en, clearspeak, "‴", "triple prime"
-en, clearspeak, "‵", "reversed-prime"
-en, clearspeak, "‶", "reversed-double-prime"
-en, clearspeak, "‷", "reversed-triple-prime"
-en, clearspeak, "‸", "caret"
-en, clearspeak, "‹", "left-pointing-single-guillemet"
-en, clearspeak, "›", "right-pointing-single-guillemet"
-en, clearspeak, "※", "reference-mark"
-en, clearspeak, "‼", "double-exclamation-mark"
-en, clearspeak, "‽", "interrobang"
-en, clearspeak, "‾", "bar"
-en, clearspeak, "‿", "undertie"
-en, clearspeak, "⁀", "character-tie"
-en, clearspeak, "⁁", "caret-insertion-point"
-en, clearspeak, "⁂", "asterism"
-en, clearspeak, "⁃", "hyphen-bullet"
-en, clearspeak, "⁄", "fraction-slash"
-en, clearspeak, "⁇", "double-question-mark"
-en, clearspeak, "⁈", "question-exclamation-mark"
-en, clearspeak, "⁉", "exclamation-question-mark"
-en, clearspeak, "⁋", "reversed-pilcrow"
-en, clearspeak, "⁌", "black-leftwards-bullet"
-en, clearspeak, "⁍", "black-rightwards-bullet"
-en, clearspeak, "⁎", "low-asterisk"
-en, clearspeak, "⁏", "reversed-semicolon"
-en, clearspeak, "⁐", "close-up"
-en, clearspeak, "⁑", "two-asterisks-aligned-vertically"
-en, clearspeak, "⁒", "commercial-minus"
-en, clearspeak, "⁓", "swung-dash"
-en, clearspeak, "⁔", "inverted-undertie"
-en, clearspeak, "⁕", "flower-punctuation-mark"
-en, clearspeak, "⁖", "three-dot-punctuation"
-en, clearspeak, "⁗", "quadruple prime"
-en, clearspeak, "⁘", "four-dot-punctuation"
-en, clearspeak, "⁙", "five-dot-punctuation"
-en, clearspeak, "⁚", "two-dot-punctuation"
-en, clearspeak, "⁛", "four-dot-mark"
-en, clearspeak, "⁜", "dotted-cross"
-en, clearspeak, "⁝", "tricolon"
-en, clearspeak, "⁞", "vertical-four-dots"
-en, clearspeak, "⁺", "superscript-plus"
-en, clearspeak, "⁻", "superscript-hyphen-minus"
-en, clearspeak, "⁼", "superscript-equals"
-en, clearspeak, "⁽", "superscript-opening-parenthesis"
-en, clearspeak, "⁾", "superscript-closing-parenthesis"
-en, clearspeak, "₊", "subscript-plus"
-en, clearspeak, "₋", "subscript-hyphen-minus"
-en, clearspeak, "₌", "subscript-equals"
-en, clearspeak, "₍", "subscript-opening-parenthesis"
-en, clearspeak, "₎", "subscript-closing-parenthesis"
-en, clearspeak, "⅊", "property-line"
-en, clearspeak, "⅋", "turned-ampersand"
-en, clearspeak, "⅌", "per-sign"
-en, clearspeak, "⅍", "aktieselskab"
-en, clearspeak, "ⅎ", "turned-small-f"
-en, clearspeak, "∀", "for-all"
-en, clearspeak, "∁", "complement"
-en, clearspeak, "∂", "partial-differential"
-en, clearspeak, "∃", "there-exists"
-en, clearspeak, "∄", "there-does-not-exist"
-en, clearspeak, "∅", "empty-set"
-en, clearspeak, "∆", "increment"
-en, clearspeak, "∇", "nabla"
-en, clearspeak, "∈", "is a member of"
-en, clearspeak, "∉", "is not a member of"
-en, clearspeak, "∊", "is a member of"
-en, clearspeak, "∋", "contains-as-member"
-en, clearspeak, "∌", "does-not-contain-as-member"
-en, clearspeak, "∍", "small-contains-as-member"
-en, clearspeak, "∎", "end-of-proof"
-en, clearspeak, "∏", "product"
-en, clearspeak, "∐", "coproduct"
-en, clearspeak, "∑", "sum"
-en, clearspeak, "−", "minus"
-en, clearspeak, "∓", "minus or plus"
-en, clearspeak, "∔", "dot-plus"
-en, clearspeak, "∕", "division-slash"
-en, clearspeak, "∖", "set-minus"
-en, clearspeak, "∗", "asterisk"
-en, clearspeak, "∘", "composed with"
-en, clearspeak, "∙", "bullet"
-en, clearspeak, "√", "square-root"
-en, clearspeak, "∛", "cube-root"
-en, clearspeak, "∜", "fourth-root"
-en, clearspeak, "∝", "proportional-to"
-en, clearspeak, "∞", "infinity"
-en, clearspeak, "∟", "right-angle"
-en, clearspeak, "∠", "angle"
-en, clearspeak, "∡", "measured-angle"
-en, clearspeak, "∢", "spherical-angle"
-en, clearspeak, "∣", "bar"
-en, clearspeak, "∤", "does-not-divide"
-en, clearspeak, "∥", "parallel-to"
-en, clearspeak, "∦", "not-parallel-to"
-en, clearspeak, "∧", "logical-and"
-en, clearspeak, "∨", "logical-or"
-en, clearspeak, "∩", "intersection"
-en, clearspeak, "∪", "union"
-en, clearspeak, "∫", "integral"
-en, clearspeak, "∬", "double-integral"
-en, clearspeak, "∭", "triple-integral"
-en, clearspeak, "∮", "contour-integral"
-en, clearspeak, "∯", "surface-integral"
-en, clearspeak, "∰", "volume-integral"
-en, clearspeak, "∱", "clockwise-integral"
-en, clearspeak, "∲", "clockwise-contour-integral"
-en, clearspeak, "∳", "anticlockwise-contour-integral"
-en, clearspeak, "∴", "therefore"
-en, clearspeak, "∵", "because"
-en, clearspeak, "∶", "ratio"
-en, clearspeak, "∷", "proportion"
-en, clearspeak, "∸", "dot-minus"
-en, clearspeak, "∹", "excess"
-en, clearspeak, "∺", "geometric-proportion"
-en, clearspeak, "∻", "homothetic"
-en, clearspeak, "∼", "tilde"
-en, clearspeak, "∽", "reversed-tilde"
-en, clearspeak, "∾", "inverted-lazy-s"
-en, clearspeak, "∿", "sine-wave"
-en, clearspeak, "≀", "wreath-product"
-en, clearspeak, "≁", "not-tilde"
-en, clearspeak, "≂", "minus-tilde"
-en, clearspeak, "≃", "asymptotically-equals"
-en, clearspeak, "≄", "not-asymptotically-equals"
-en, clearspeak, "≅", "approximately-equals"
-en, clearspeak, "≆", "approximately-but-not-actually-equals"
-en, clearspeak, "≇", "neither-approximately-nor-actually-equals"
-en, clearspeak, "≈", "almost-equals"
-en, clearspeak, "≉", "not-almost-equals"
-en, clearspeak, "≊", "almost-equal-or-equal-to"
-en, clearspeak, "≋", "triple-tilde"
-en, clearspeak, "≌", "all-equals"
-en, clearspeak, "≍", "equivalent-to"
-en, clearspeak, "≎", "geometrically-equivalent-to"
-en, clearspeak, "≏", "difference-between"
-en, clearspeak, "≐", "approaches-the-limit"
-en, clearspeak, "≑", "geometrically-equals"
-en, clearspeak, "≒", "approximately-equals-or-the-image-of"
-en, clearspeak, "≓", "image-of-or-approximately-equals"
-en, clearspeak, "≔", "colon-equal"
-en, clearspeak, "≕", "equal-colon"
-en, clearspeak, "≖", "ring-in-equals"
-en, clearspeak, "≗", "ring-equals"
-en, clearspeak, "≘", "corresponds-to"
-en, clearspeak, "≙", "estimates"
-en, clearspeak, "≚", "is equiangular to"
-en, clearspeak, "≛", "star equals"
-en, clearspeak, "≜", "delta equals"
-en, clearspeak, "≝", "is defined to be"
-en, clearspeak, "≞", "is measured by"
-en, clearspeak, "≟", "questioned equals"
-en, clearspeak, "≠", "not equals"
-en, clearspeak, "≡", "is identical to"
-en, clearspeak, "≢", "is not identical to"
-en, clearspeak, "≣", "is strictly equivalent to"
-en, clearspeak, "≤", "is less than or equal to"
-en, clearspeak, "≥", "is greater than or equal to"
-en, clearspeak, "≦", "is less than over equals"
-en, clearspeak, "≧", "is greater than over equals"
-en, clearspeak, "≨", "is less than but not equals"
-en, clearspeak, "≩", "is greater than but not equals"
-en, clearspeak, "≪", "is much less than"
-en, clearspeak, "≫", "is much greater than"
-en, clearspeak, "≬", "between"
-en, clearspeak, "≭", "is not equivalent to"
-en, clearspeak, "≮", "is not less than"
-en, clearspeak, "≯", "is not greater than"
-en, clearspeak, "≰", "is neither less than nor equal to"
-en, clearspeak, "≱", "is neither greater than nor equal to"
-en, clearspeak, "≲", "is less than or equivalent to"
-en, clearspeak, "≳", "is greater than or equivalent to"
-en, clearspeak, "≴", "is neither less than nor equivalent to"
-en, clearspeak, "≵", "is neither greater than nor equivalent to"
-en, clearspeak, "≶", "is less than or greater than"
-en, clearspeak, "≷", "is greater than or less than"
-en, clearspeak, "≸", "is neither less than nor greater than"
-en, clearspeak, "≹", "is neither greater than nor less than"
-en, clearspeak, "≺", "precedes"
-en, clearspeak, "≻", "succeeds"
-en, clearspeak, "≼", "precedes-or-equal-to"
-en, clearspeak, "≽", "succeeds-or-equal-to"
-en, clearspeak, "≾", "precedes-or-equivalent-to"
-en, clearspeak, "≿", "succeeds-or-equivalent-to"
-en, clearspeak, "⊀", "does-not-precede"
-en, clearspeak, "⊁", "does-not-succeed"
-en, clearspeak, "⊂", "subset-of"
-en, clearspeak, "⊃", "superset-of"
-en, clearspeak, "⊄", "not-a-subset-of"
-en, clearspeak, "⊅", "not-a-superset-of"
-en, clearspeak, "⊆", "subset-of-or-equal-to"
-en, clearspeak, "⊇", "superset-of-or-equal-to"
-en, clearspeak, "⊈", "neither-a-subset-of-nor-equal-to"
-en, clearspeak, "⊉", "neither-a-superset-of-nor-equal-to"
-en, clearspeak, "⊊", "subset-of-or-not-equals"
-en, clearspeak, "⊋", "superset-of-or-not-equals"
-en, clearspeak, "⊌", "multiset"
-en, clearspeak, "⊍", "multiset-multiplication"
-en, clearspeak, "⊎", "multiset-union"
-en, clearspeak, "⊏", "square-image-of"
-en, clearspeak, "⊐", "square-original-of"
-en, clearspeak, "⊑", "square-image-of-or-equal-to"
-en, clearspeak, "⊒", "square-original-of-or-equal-to"
-en, clearspeak, "⊓", "square-cap"
-en, clearspeak, "⊔", "square-cup"
-en, clearspeak, "⊕", "circled-plus"
-en, clearspeak, "⊖", "circled-minus"
-en, clearspeak, "⊗", "circled-times"
-en, clearspeak, "⊘", "circled-division-slash"
-en, clearspeak, "⊙", "circled-dot"
-en, clearspeak, "⊚", "circled-ring"
-en, clearspeak, "⊛", "circled-asterisk"
-en, clearspeak, "⊜", "circled-equals"
-en, clearspeak, "⊝", "circled-dash"
-en, clearspeak, "⊞", "squared-plus"
-en, clearspeak, "⊟", "squared-minus"
-en, clearspeak, "⊠", "squared-times"
-en, clearspeak, "⊡", "squared-dot"
-en, clearspeak, "⊢", "right-tack"
-en, clearspeak, "⊣", "left-tack"
-en, clearspeak, "⊤", "down-tack"
-en, clearspeak, "⊥", "up-tack"
-en, clearspeak, "⊦", "assertion"
-en, clearspeak, "⊧", "models"
-en, clearspeak, "⊨", "true"
-en, clearspeak, "⊩", "forces"
-en, clearspeak, "⊪", "triple-vertical-bar-right-turnstile"
-en, clearspeak, "⊫", "double-vertical-bar-double-right-turnstile"
-en, clearspeak, "⊬", "does-not-prove"
-en, clearspeak, "⊭", "not-true"
-en, clearspeak, "⊮", "does-not-force"
-en, clearspeak, "⊯", "negated-double-vertical-bar-double-right-turnstile"
-en, clearspeak, "⊰", "precedes-under-relation"
-en, clearspeak, "⊱", "succeeds-under-relation"
-en, clearspeak, "⊲", "normal-subgroup-of"
-en, clearspeak, "⊳", "contains-as-normal-subgroup"
-en, clearspeak, "⊴", "normal-subgroup-of-or-equal-to"
-en, clearspeak, "⊵", "contains-as-normal-subgroup-or-equal-to"
-en, clearspeak, "⊶", "original-of"
-en, clearspeak, "⊷", "image-of"
-en, clearspeak, "⊸", "multimap"
-en, clearspeak, "⊹", "hermitian-conjugate-matrix"
-en, clearspeak, "⊺", "intercalate"
-en, clearspeak, "⊻", "xor"
-en, clearspeak, "⊼", "nand"
-en, clearspeak, "⊽", "nor"
-en, clearspeak, "⊿", "right-triangle"
-en, clearspeak, "⋀", "logical-and"
-en, clearspeak, "⋁", "logical-or"
-en, clearspeak, "⋂", "intersection"
-en, clearspeak, "⋃", "union"
-en, clearspeak, "⋄", "diamond"
-en, clearspeak, "⋅", "times"
-en, clearspeak, "⋆", "star"
-en, clearspeak, "⋇", "division-times"
-en, clearspeak, "⋈", "bowtie"
-en, clearspeak, "⋉", "left-normal-factor-semidirect-product"
-en, clearspeak, "⋊", "right-normal-factor-semidirect-product"
-en, clearspeak, "⋋", "left-semidirect-product"
-en, clearspeak, "⋌", "right-semidirect-product"
-en, clearspeak, "⋍", "reversed-tilde-equals"
-en, clearspeak, "⋎", "curly-logical-or"
-en, clearspeak, "⋏", "curly-logical-and"
-en, clearspeak, "⋐", "double-subset"
-en, clearspeak, "⋑", "double-superset"
-en, clearspeak, "⋒", "double-intersection"
-en, clearspeak, "⋓", "double-union"
-en, clearspeak, "⋔", "pitchfork"
-en, clearspeak, "⋕", "equal-and-parallel-to"
-en, clearspeak, "⋖", "less-than-dot"
-en, clearspeak, "⋗", "greater-than-dot"
-en, clearspeak, "⋘", "very-much-less-than"
-en, clearspeak, "⋙", "very-much-greater-than"
-en, clearspeak, "⋚", "less-than-equals-or-greater-than"
-en, clearspeak, "⋛", "greater-than-equals-or-less-than"
-en, clearspeak, "⋜", "equals-or-less-than"
-en, clearspeak, "⋝", "equals-or-greater-than"
-en, clearspeak, "⋞", "equals-or-precedes"
-en, clearspeak, "⋟", "equals-or-succeeds"
-en, clearspeak, "⋠", "does-not-precede-or-equal"
-en, clearspeak, "⋡", "does-not-succeed-or-equal"
-en, clearspeak, "⋢", "not-square-image-of-or-equal-to"
-en, clearspeak, "⋣", "not-square-original-of-or-equal-to"
-en, clearspeak, "⋤", "square-image-of-or-not-equals"
-en, clearspeak, "⋥", "square-original-of-or-not-equals"
-en, clearspeak, "⋦", "less-than-but-not-equivalent-to"
-en, clearspeak, "⋧", "greater-than-but-not-equivalent-to"
-en, clearspeak, "⋨", "precedes-but-not-equivalent-to"
-en, clearspeak, "⋩", "succeeds-but-not-equivalent-to"
-en, clearspeak, "⋪", "not-normal-subgroup-of"
-en, clearspeak, "⋫", "does-not-contain-as-normal-subgroup"
-en, clearspeak, "⋬", "not-normal-subgroup-of-or-equal-to"
-en, clearspeak, "⋭", "does-not-contain-as-normal-subgroup-or-equal"
-en, clearspeak, "⋮", "vertical-ellipsis"
-en, clearspeak, "⋯", "dot dot dot"
-en, clearspeak, "⋰", "up-right-diagonal-ellipsis"
-en, clearspeak, "⋱", "down-right-diagonal-ellipsis"
-en, clearspeak, "⋲", "element-of-with-long-horizontal-stroke"
-en, clearspeak, "⋳", "element-of-with-vertical-bar-at-end-of-horizontal-stroke"
-en, clearspeak, "⋴", "small-element-of-with-vertical-bar-at-end-of-horizontal-stroke"
-en, clearspeak, "⋵", "element-of-with-dot-above"
-en, clearspeak, "⋶", "element-of-with-overbar"
-en, clearspeak, "⋷", "small-element-of-with-overbar"
-en, clearspeak, "⋸", "element-of-with-underbar"
-en, clearspeak, "⋹", "element-of-with-two-horizontal-strokes"
-en, clearspeak, "⋺", "contains-with-long-horizontal-stroke"
-en, clearspeak, "⋻", "contains-with-vertical-bar-at-end-of-horizontal-stroke"
-en, clearspeak, "⋼", "small-contains-with-vertical-bar-at-end-of-horizontal-stroke"
-en, clearspeak, "⋽", "contains-with-overbar"
-en, clearspeak, "⋾", "small-contains-with-overbar"
-en, clearspeak, "⋿", "z-notation-bag-membership"
-en, clearspeak, "⌀", "diameter-sign"
-en, clearspeak, "⌂", "house"
-en, clearspeak, "⌅", "projective"
-en, clearspeak, "⌆", "perspective"
-en, clearspeak, "⌇", "wavy-line"
-en, clearspeak, "⌐", "reversed-not"
-en, clearspeak, "⌑", "square-lozenge"
-en, clearspeak, "⌒", "arc"
-en, clearspeak, "⌓", "segment"
-en, clearspeak, "⌔", "sector"
-en, clearspeak, "➕", "bold-plus"
-en, clearspeak, "➖", "bold-minus"
-en, clearspeak, "➗", "bold-division"
-en, clearspeak, "➰", "curly-loop"
-en, clearspeak, "➿", "double-curly-loop"
-en, clearspeak, "⟁", "white-triangle-containing-small-white-triangle"
-en, clearspeak, "⟂", "perpendicular"
-en, clearspeak, "⟃", "open-subset"
-en, clearspeak, "⟄", "open-superset"
-en, clearspeak, "⟇", "or-with-dot-inside"
-en, clearspeak, "⟈", "reverse-solidus-preceding-subset"
-en, clearspeak, "⟉", "superset-preceding-solidus"
-en, clearspeak, "⟊", "vertical-bar-with-horizontal-stroke"
-en, clearspeak, "⟋", "mathematical-rising-diagonal"
-en, clearspeak, "⟌", "long-division"
-en, clearspeak, "⟍", "mathematical-falling-diagonal"
-en, clearspeak, "⟎", "squared-logical-and"
-en, clearspeak, "⟏", "squared-logical-or"
-en, clearspeak, "⟐", "white-diamond-with-centered-dot"
-en, clearspeak, "⟑", "and-with-dot"
-en, clearspeak, "⟒", "element-of-opening-upwards"
-en, clearspeak, "⟓", "lower-right-corner-with-dot"
-en, clearspeak, "⟔", "upper-left-corner-with-dot"
-en, clearspeak, "⟕", "left-outer-join"
-en, clearspeak, "⟖", "right-outer-join"
-en, clearspeak, "⟗", "full-outer-join"
-en, clearspeak, "⟘", "large-up-tack"
-en, clearspeak, "⟙", "large-down-tack"
-en, clearspeak, "⟚", "left-and-right-double-turnstile"
-en, clearspeak, "⟛", "left-and-right-tack"
-en, clearspeak, "⟜", "left-multimap"
-en, clearspeak, "⟝", "long-right-tack"
-en, clearspeak, "⟞", "long-left-tack"
-en, clearspeak, "⟟", "up-tack-with-circle-above"
-en, clearspeak, "⟠", "lozenge-divided-by-horizontal-rule"
-en, clearspeak, "⟡", "white-concave-sided-diamond"
-en, clearspeak, "⟢", "white-concave-sided-diamond-with-leftwards-tick"
-en, clearspeak, "⟣", "white-concave-sided-diamond-with-rightwards-tick"
-en, clearspeak, "⟤", "white-square-with-leftwards-tick"
-en, clearspeak, "⟥", "white-square-with-rightwards-tick"
-en, clearspeak, "⤫", "rising-diagonal-crossing-falling-diagonal"
-en, clearspeak, "⤬", "falling-diagonal-crossing-rising-diagonal"
-en, clearspeak, "⦀", "triple-vertical-bar-delimiter"
-en, clearspeak, "⦁", "z-notation-spot"
-en, clearspeak, "⦂", "z-notation-type-colon"
-en, clearspeak, "⦙", "dotted-fence"
-en, clearspeak, "⦚", "vertical-zigzag-line"
-en, clearspeak, "⦰", "reversed-empty-set"
-en, clearspeak, "⦱", "empty-set-with-overbar"
-en, clearspeak, "⦲", "empty-set-with-small-circle-above"
-en, clearspeak, "⦵", "circle-with-horizontal-bar"
-en, clearspeak, "⦶", "circled-vertical-bar"
-en, clearspeak, "⦷", "circled-parallel"
-en, clearspeak, "⦸", "circled-reverse-solidus"
-en, clearspeak, "⦹", "circled-perpendicular"
-en, clearspeak, "⦺", "circle-divided-by-horizontal-bar-and-top-half-divided-by-vertical-bar"
-en, clearspeak, "⦻", "circle-with-superimposed-x"
-en, clearspeak, "⦼", "circled-anticlockwise-rotated-division"
-en, clearspeak, "⦾", "circled-white-bullet"
-en, clearspeak, "⦿", "circled-bullet"
-en, clearspeak, "⧀", "circled-less-than"
-en, clearspeak, "⧁", "circled-greater-than"
-en, clearspeak, "⧂", "circle-with-small-circle-to-the-right"
-en, clearspeak, "⧃", "circle-with-two-horizontal-strokes-to-the-right"
-en, clearspeak, "⧄", "squared-rising-diagonal-slash"
-en, clearspeak, "⧅", "squared-falling-diagonal-slash"
-en, clearspeak, "⧆", "squared-asterisk"
-en, clearspeak, "⧇", "squared-small-circle"
-en, clearspeak, "⧈", "squared-square"
-en, clearspeak, "⧉", "two-joined-squares"
-en, clearspeak, "⧊", "triangle-with-dot-above"
-en, clearspeak, "⧋", "triangle-with-underbar"
-en, clearspeak, "⧌", "s-in-triangle"
-en, clearspeak, "⧍", "triangle-with-serifs-at-bottom"
-en, clearspeak, "⧎", "right-triangle-above-left-triangle"
-en, clearspeak, "⧏", "left-triangle-beside-vertical-bar"
-en, clearspeak, "⧐", "vertical-bar-beside-right-triangle"
-en, clearspeak, "⧑", "bowtie-with-left-half-black"
-en, clearspeak, "⧒", "bowtie-with-right-half-black"
-en, clearspeak, "⧓", "black-bowtie"
-en, clearspeak, "⧔", "times-with-left-half-black"
-en, clearspeak, "⧕", "times-with-right-half-black"
-en, clearspeak, "⧖", "white-hourglass"
-en, clearspeak, "⧗", "black-hourglass"
-en, clearspeak, "⧜", "incomplete-infinity"
-en, clearspeak, "⧝", "tie-over-infinity"
-en, clearspeak, "⧞", "infinity-negated-with-vertical-bar"
-en, clearspeak, "⧟", "double-ended-multimap"
-en, clearspeak, "⧠", "square-with-contoured-outline"
-en, clearspeak, "⧡", "increases-as"
-en, clearspeak, "⧢", "shuffle-product"
-en, clearspeak, "⧣", "equals-and-slanted-parallel"
-en, clearspeak, "⧤", "equals-and-slanted-parallel-with-tilde-above"
-en, clearspeak, "⧥", "identical-to-and-slanted-parallel"
-en, clearspeak, "⧦", "gleich-stark"
-en, clearspeak, "⧧", "thermodynamic"
-en, clearspeak, "⧨", "down-pointing-triangle-with-left-half-black"
-en, clearspeak, "⧩", "down-pointing-triangle-with-right-half-black"
-en, clearspeak, "⧫", "black-lozenge"
-en, clearspeak, "⧮", "error-barred-white-square"
-en, clearspeak, "⧯", "error-barred-black-square"
-en, clearspeak, "⧰", "error-barred-white-diamond"
-en, clearspeak, "⧱", "error-barred-black-diamond"
-en, clearspeak, "⧲", "error-barred-white-circle"
-en, clearspeak, "⧳", "error-barred-black-circle"
-en, clearspeak, "⧴", "rule-delayed"
-en, clearspeak, "⧵", "reverse-solidus"
-en, clearspeak, "⧶", "solidus-with-overbar"
-en, clearspeak, "⧷", "reverse-solidus-with-horizontal-stroke"
-en, clearspeak, "⧸", "solidus"
-en, clearspeak, "⧹", "reverse-solidus"
-en, clearspeak, "⧺", "double-plus"
-en, clearspeak, "⧻", "triple-plus"
-en, clearspeak, "⧾", "tiny"
-en, clearspeak, "⧿", "miny"
-en, clearspeak, "⨀", "circled-dot"
-en, clearspeak, "⨁", "circled-plus"
-en, clearspeak, "⨂", "circled-times"
-en, clearspeak, "⨃", "union-with-dot"
-en, clearspeak, "⨄", "union-with-plus"
-en, clearspeak, "⨅", "square-intersection"
-en, clearspeak, "⨆", "square-union"
-en, clearspeak, "⨇", "two-logical-and"
-en, clearspeak, "⨈", "two-logical-or"
-en, clearspeak, "⨉", "times"
-en, clearspeak, "⨊", "modulo-two-sum"
-en, clearspeak, "⨋", "summation-with-integral"
-en, clearspeak, "⨌", "quadruple-integral"
-en, clearspeak, "⨍", "finite-part-integral"
-en, clearspeak, "⨎", "integral-with-double-stroke"
-en, clearspeak, "⨏", "integral-average-with-slash"
-en, clearspeak, "⨐", "circulation-function"
-en, clearspeak, "⨑", "anticlockwise-integration"
-en, clearspeak, "⨒", "line-integration-with-rectangular-path-around-pole"
-en, clearspeak, "⨓", "line-integration-with-semicircular-path-around-pole"
-en, clearspeak, "⨔", "line-integration-not-including-the-pole"
-en, clearspeak, "⨕", "integral-around-a-point"
-en, clearspeak, "⨖", "quaternion-integral"
-en, clearspeak, "⨘", "integral-with-times"
-en, clearspeak, "⨙", "integral-with-intersection"
-en, clearspeak, "⨚", "integral-with-union"
-en, clearspeak, "⨛", "integral-with-overbar"
-en, clearspeak, "⨜", "integral-with-underbar"
-en, clearspeak, "⨝", "join"
-en, clearspeak, "⨞", "large-left-triangle"
-en, clearspeak, "⨟", "z-notation-schema-composition"
-en, clearspeak, "⨠", "z-notation-schema-piping"
-en, clearspeak, "⨡", "z-notation-schema-projection"
-en, clearspeak, "⨢", "plus-with-circle-above"
-en, clearspeak, "⨣", "plus-hat"
-en, clearspeak, "⨤", "plus-tilde"
-en, clearspeak, "⨥", "plus-underdot"
-en, clearspeak, "⨦", "plus-sign-with-tilde-below"
-en, clearspeak, "⨧", "plus-sign-with-subscript-two"
-en, clearspeak, "⨨", "plus-sign-with-black-triangle"
-en, clearspeak, "⨩", "minus-sign-with-comma-above"
-en, clearspeak, "⨪", "minus-sign-with-dot-below"
-en, clearspeak, "⨫", "minus-sign-with-falling-dots"
-en, clearspeak, "⨬", "minus-sign-with-rising-dots"
-en, clearspeak, "⨭", "plus-sign-in-left-half-circle"
-en, clearspeak, "⨮", "plus-sign-in-right-half-circle"
-en, clearspeak, "⨯", "vector-or-cross-product"
-en, clearspeak, "⨰", "multiplication-sign-with-dot-above"
-en, clearspeak, "⨱", "multiplication-sign-with-underbar"
-en, clearspeak, "⨲", "semidirect-product-with-bottom-closed"
-en, clearspeak, "⨳", "smash-product"
-en, clearspeak, "⨴", "multiplication-sign-in-left-half-circle"
-en, clearspeak, "⨵", "multiplication-sign-in-right-half-circle"
-en, clearspeak, "⨶", "circled-multiplication-sign-with-circumflex-accent"
-en, clearspeak, "⨷", "multiplication-sign-in-double-circle"
-en, clearspeak, "⨸", "circled-division"
-en, clearspeak, "⨹", "plus-sign-in-triangle"
-en, clearspeak, "⨺", "minus-sign-in-triangle"
-en, clearspeak, "⨻", "multiplication-sign-in-triangle"
-en, clearspeak, "⨼", "interior-product"
-en, clearspeak, "⨽", "righthand-interior-product"
-en, clearspeak, "⨾", "z-notation-relational-composition"
-en, clearspeak, "⨿", "amalgamation-or-coproduct"
-en, clearspeak, "⩀", "intersection-with-dot"
-en, clearspeak, "⩁", "union-with-minus"
-en, clearspeak, "⩂", "union-with-overbar"
-en, clearspeak, "⩃", "intersection-with-overbar"
-en, clearspeak, "⩄", "intersection-with-logical-and"
-en, clearspeak, "⩅", "union-with-logical-or"
-en, clearspeak, "⩆", "union-above-intersection"
-en, clearspeak, "⩇", "intersection-above-union"
-en, clearspeak, "⩈", "union-above-bar-above-intersection"
-en, clearspeak, "⩉", "intersection-above-bar-above-union"
-en, clearspeak, "⩊", "union-beside-and-joined-with-union"
-en, clearspeak, "⩋", "intersection-beside-and-joined-with-intersection"
-en, clearspeak, "⩌", "closed-union-with-serifs"
-en, clearspeak, "⩍", "closed-intersection-with-serifs"
-en, clearspeak, "⩎", "double-square-intersection"
-en, clearspeak, "⩏", "double-square-union"
-en, clearspeak, "⩐", "closed-union-with-serifs-and-smash-product"
-en, clearspeak, "⩑", "logical-and-with-dot-above"
-en, clearspeak, "⩒", "logical-or-with-dot-above"
-en, clearspeak, "⩓", "double-logical-and"
-en, clearspeak, "⩔", "double-logical-or"
-en, clearspeak, "⩕", "two-intersecting-logical-and"
-en, clearspeak, "⩖", "two-intersecting-logical-or"
-en, clearspeak, "⩗", "sloping-large-or"
-en, clearspeak, "⩘", "sloping-large-and"
-en, clearspeak, "⩙", "logical-or-overlapping-logical-and"
-en, clearspeak, "⩚", "logical-and-with-middle-stem"
-en, clearspeak, "⩛", "logical-or-with-middle-stem"
-en, clearspeak, "⩜", "logical-and-with-horizontal-dash"
-en, clearspeak, "⩝", "logical-or-with-horizontal-dash"
-en, clearspeak, "⩞", "logical-and-with-double-overbar"
-en, clearspeak, "⩟", "logical-and-with-underbar"
-en, clearspeak, "⩠", "logical-and-with-double-underbar"
-en, clearspeak, "⩡", "small-vee-with-underbar"
-en, clearspeak, "⩢", "logical-or-with-double-overbar"
-en, clearspeak, "⩣", "logical-or-with-double-underbar"
-en, clearspeak, "⩤", "z-notation-domain-antirestriction"
-en, clearspeak, "⩥", "z-notation-range-antirestriction"
-en, clearspeak, "⩦", "equals-with-dot-below"
-en, clearspeak, "⩧", "identical-with-dot-above"
-en, clearspeak, "⩨", "triple-horizontal-bar-with-double-vertical-stroke"
-en, clearspeak, "⩩", "triple-horizontal-bar-with-triple-vertical-stroke"
-en, clearspeak, "⩪", "tilde-with-dot-above"
-en, clearspeak, "⩫", "tilde-with-rising-dots"
-en, clearspeak, "⩬", "similar-minus-similar"
-en, clearspeak, "⩭", "congruent-with-dot-above"
-en, clearspeak, "⩮", "equals-with-asterisk"
-en, clearspeak, "⩯", "almost-equal-hat"
-en, clearspeak, "⩰", "approximately-equal-or-equal-to"
-en, clearspeak, "⩱", "equals-above-plus"
-en, clearspeak, "⩲", "plus-above-equals"
-en, clearspeak, "⩳", "equals-above-tilde"
-en, clearspeak, "⩴", "double-colon-equal"
-en, clearspeak, "⩵", "two-consecutive-equals"
-en, clearspeak, "⩶", "three-consecutive-equals"
-en, clearspeak, "⩷", "equals-with-two-dots-above-and-two-dots-below"
-en, clearspeak, "⩸", "equivalent-with-four-dots-above"
-en, clearspeak, "⩹", "less-than-with-circle-inside"
-en, clearspeak, "⩺", "greater-than-with-circle-inside"
-en, clearspeak, "⩻", "less-than-with-question-mark-above"
-en, clearspeak, "⩼", "greater-than-with-question-mark-above"
-en, clearspeak, "⩽", "less-than-or-slanted-equals"
-en, clearspeak, "⩾", "greater-than-or-slanted-equals"
-en, clearspeak, "⩿", "less-than-or-slanted-equals-with-dot-inside"
-en, clearspeak, "⪀", "greater-than-or-slanted-equals-with-dot-inside"
-en, clearspeak, "⪁", "less-than-or-slanted-equals-with-dot-above"
-en, clearspeak, "⪂", "greater-than-or-slanted-equals-with-dot-above"
-en, clearspeak, "⪃", "less-than-or-slanted-equals-with-dot-above-right"
-en, clearspeak, "⪄", "greater-than-or-slanted-equals-with-dot-above-left"
-en, clearspeak, "⪅", "less-than-or-approximate"
-en, clearspeak, "⪆", "greater-than-or-approximate"
-en, clearspeak, "⪇", "less-than-and-single-line-not-equals"
-en, clearspeak, "⪈", "greater-than-and-single-line-not-equals"
-en, clearspeak, "⪉", "less-than-and-not-approximate"
-en, clearspeak, "⪊", "greater-than-and-not-approximate"
-en, clearspeak, "⪋", "less-than-above-double-line-equal-above-greater-than"
-en, clearspeak, "⪌", "greater-than-above-double-line-equal-above-less-than"
-en, clearspeak, "⪍", "less-than-above-similar-or-equal"
-en, clearspeak, "⪎", "greater-than-above-similar-or-equal"
-en, clearspeak, "⪏", "less-than-above-similar-above-greater-than"
-en, clearspeak, "⪐", "greater-than-above-similar-above-less-than"
-en, clearspeak, "⪑", "less-than-above-greater-than-above-double-line-equal"
-en, clearspeak, "⪒", "greater-than-above-less-than-above-double-line-equal"
-en, clearspeak, "⪓", "less-than-above-slanted-equal-above-greater-than-above-slanted-equal"
-en, clearspeak, "⪔", "greater-than-above-slanted-equal-above-less-than-above-slanted-equal"
-en, clearspeak, "⪕", "slanted-equals-or-less-than"
-en, clearspeak, "⪖", "slanted-equals-or-greater-than"
-en, clearspeak, "⪗", "slanted-equals-or-less-than-with-dot-inside"
-en, clearspeak, "⪘", "slanted-equals-or-greater-than-with-dot-inside"
-en, clearspeak, "⪙", "double-line-equals-or-less-than"
-en, clearspeak, "⪚", "double-line-equals-or-greater-than"
-en, clearspeak, "⪛", "double-line-slanted-equals-or-less-than"
-en, clearspeak, "⪜", "double-line-slanted-equals-or-greater-than"
-en, clearspeak, "⪝", "similar-or-less-than"
-en, clearspeak, "⪞", "similar-or-greater-than"
-en, clearspeak, "⪟", "similar-above-less-than-above-equals"
-en, clearspeak, "⪠", "similar-above-greater-than-above-equals"
-en, clearspeak, "⪡", "double-nested-less-than"
-en, clearspeak, "⪢", "double-nested-greater-than"
-en, clearspeak, "⪣", "double-nested-less-than-with-underbar"
-en, clearspeak, "⪤", "greater-than-overlapping-less-than"
-en, clearspeak, "⪥", "greater-than-beside-less-than"
-en, clearspeak, "⪦", "less-than-closed-by-curve"
-en, clearspeak, "⪧", "greater-than-closed-by-curve"
-en, clearspeak, "⪨", "less-than-closed-by-curve-above-slanted-equal"
-en, clearspeak, "⪩", "greater-than-closed-by-curve-above-slanted-equal"
-en, clearspeak, "⪪", "smaller-than"
-en, clearspeak, "⪫", "larger-than"
-en, clearspeak, "⪬", "smaller-than-or-equal-to"
-en, clearspeak, "⪭", "larger-than-or-equal-to"
-en, clearspeak, "⪮", "equals-with-bumpy-above"
-en, clearspeak, "⪯", "precedes-above-single-line-equals"
-en, clearspeak, "⪰", "succeeds-above-single-line-equals"
-en, clearspeak, "⪱", "precedes-above-single-line-not-equals"
-en, clearspeak, "⪲", "succeeds-above-single-line-not-equals"
-en, clearspeak, "⪳", "precedes-above-equals"
-en, clearspeak, "⪴", "succeeds-above-equals"
-en, clearspeak, "⪵", "precedes-above-not-equals"
-en, clearspeak, "⪶", "succeeds-above-not-equals"
-en, clearspeak, "⪷", "precedes-above-almost-equals"
-en, clearspeak, "⪸", "succeeds-above-almost-equals"
-en, clearspeak, "⪹", "precedes-above-not-almost-equals"
-en, clearspeak, "⪺", "succeeds-above-not-almost-equals"
-en, clearspeak, "⪻", "double-precedes"
-en, clearspeak, "⪼", "double-succeeds"
-en, clearspeak, "⪽", "subset-with-dot"
-en, clearspeak, "⪾", "superset-with-dot"
-en, clearspeak, "⪿", "subset-with-plus-sign-below"
-en, clearspeak, "⫀", "superset-with-plus-sign-below"
-en, clearspeak, "⫁", "subset-with-multiplication-sign-below"
-en, clearspeak, "⫂", "superset-with-multiplication-sign-below"
-en, clearspeak, "⫃", "subset-of-or-equal-to-with-dot-above"
-en, clearspeak, "⫄", "superset-of-or-equal-to-with-dot-above"
-en, clearspeak, "⫅", "subset-of-above-equals"
-en, clearspeak, "⫆", "superset-of-above-equals"
-en, clearspeak, "⫇", "subset-of-above-tilde"
-en, clearspeak, "⫈", "superset-of-above-tilde"
-en, clearspeak, "⫉", "subset-of-above-almost-equals"
-en, clearspeak, "⫊", "superset-of-above-almost-equals"
-en, clearspeak, "⫋", "subset-of-above-not-equals"
-en, clearspeak, "⫌", "superset-of-above-not-equals"
-en, clearspeak, "⫍", "square-left-open-box"
-en, clearspeak, "⫎", "square-right-open-box"
-en, clearspeak, "⫏", "closed-subset"
-en, clearspeak, "⫐", "closed-superset"
-en, clearspeak, "⫑", "closed-subset-or-equal-to"
-en, clearspeak, "⫒", "closed-superset-or-equal-to"
-en, clearspeak, "⫓", "subset-above-superset"
-en, clearspeak, "⫔", "superset-above-subset"
-en, clearspeak, "⫕", "subset-above-subset"
-en, clearspeak, "⫖", "superset-above-superset"
-en, clearspeak, "⫗", "superset-beside-subset"
-en, clearspeak, "⫘", "superset-beside-and-joined-by-dash-with-subset"
-en, clearspeak, "⫙", "element-of-opening-downwards"
-en, clearspeak, "⫚", "pitchfork-with-tee-top"
-en, clearspeak, "⫛", "transversal-intersection"
-en, clearspeak, "⫝̸", "forking"
-en, clearspeak, "⫝", "nonforking"
-en, clearspeak, "⫞", "short-left-tack"
-en, clearspeak, "⫟", "short-down-tack"
-en, clearspeak, "⫠", "short-up-tack"
-en, clearspeak, "⫡", "perpendicular-with-s"
-en, clearspeak, "⫢", "vertical-bar-triple-right-turnstile"
-en, clearspeak, "⫣", "double-vertical-bar-left-turnstile"
-en, clearspeak, "⫤", "vertical-bar-double-left-turnstile"
-en, clearspeak, "⫥", "double-vertical-bar-double-left-turnstile"
-en, clearspeak, "⫦", "long-dash-from-left-member-of-double-vertical"
-en, clearspeak, "⫧", "short-down-tack-with-overbar"
-en, clearspeak, "⫨", "short-up-tack-with-underbar"
-en, clearspeak, "⫩", "short-up-tack-above-short-down-tack"
-en, clearspeak, "⫪", "double-down-tack"
-en, clearspeak, "⫫", "double-up-tack"
-en, clearspeak, "⫬", "double-stroke-not-sign"
-en, clearspeak, "⫭", "reversed-double-stroke-not-sign"
-en, clearspeak, "⫮", "does-not-divide-with-reversed-negation-slash"
-en, clearspeak, "⫯", "vertical-line-with-circle-above"
-en, clearspeak, "⫰", "vertical-line-with-circle-below"
-en, clearspeak, "⫱", "down-tack-with-circle-below"
-en, clearspeak, "⫲", "parallel-with-horizontal-stroke"
-en, clearspeak, "⫳", "parallel-with-tilde"
-en, clearspeak, "⫴", "triple-vertical-bar-binary-relation"
-en, clearspeak, "⫵", "triple-vertical-bar-with-horizontal-stroke"
-en, clearspeak, "⫶", "triple-colon"
-en, clearspeak, "⫷", "triple-nested-less-than"
-en, clearspeak, "⫸", "triple-nested-greater-than"
-en, clearspeak, "⫹", "double-line-slanted-less-than-or-equal-to"
-en, clearspeak, "⫺", "double-line-slanted-greater-than-or-equal-to"
-en, clearspeak, "⫻", "triple-solidus-binary-relation"
-en, clearspeak, "⫼", "large-triple-vertical-bar"
-en, clearspeak, "⫽", "double-solidus"
-en, clearspeak, "⫾", "white-vertical-bar"
-en, clearspeak, "⫿", "white-vertical-bar"
-en, clearspeak, "〜", "wave-dash"
-en, clearspeak, "︐", "presentation-form-for-vertical-comma"
-en, clearspeak, "︓", "presentation-form-for-vertical-colon"
-en, clearspeak, "︔", "presentation-form-for-vertical-semicolon"
-en, clearspeak, "︕", "presentation-form-for-vertical-exclamation-mark"
-en, clearspeak, "︖", "presentation-form-for-vertical-question-mark"
-en, clearspeak, "︙", "presentation-form-for-vertical-horizontal-ellipsis"
-en, clearspeak, "︰", "glyph-for-vertical-two-dot-leader"
-en, clearspeak, "︱", "glyph-for-vertical-em-dash"
-en, clearspeak, "︲", "glyph-for-vertical-en-dash"
-en, clearspeak, "︳", "glyph-for-vertical-underscore"
-en, clearspeak, "︴", "glyph-for-vertical-wavy-underscore"
-en, clearspeak, "﹅", "sesame-dot"
-en, clearspeak, "﹆", "white-sesame-dot"
-en, clearspeak, "﹉", "dashed-overscore"
-en, clearspeak, "﹊", "centerline-overscore"
-en, clearspeak, "﹋", "wavy-overscore"
-en, clearspeak, "﹌", "double-wavy-overscore"
-en, clearspeak, "﹍", "dashed-underscore"
-en, clearspeak, "﹎", "centerline-underscore"
-en, clearspeak, "﹏", "wavy-underscore"
-en, clearspeak, "﹐", "small-comma"
-en, clearspeak, "﹒", "small-period"
-en, clearspeak, "﹔", "small-semicolon"
-en, clearspeak, "﹕", "small-colon"
-en, clearspeak, "﹖", "small-question-mark"
-en, clearspeak, "﹗", "small-exclamation-mark"
-en, clearspeak, "﹘", "small-em-dash"
-en, clearspeak, "﹟", "small-number-sign"
-en, clearspeak, "﹠", "small-ampersand"
-en, clearspeak, "﹡", "small-asterisk"
-en, clearspeak, "﹢", "small-plus-sign"
-en, clearspeak, "﹣", "small-hyphen-minus"
-en, clearspeak, "﹤", "small-less-than-sign"
-en, clearspeak, "﹥", "small-greater-than-sign"
-en, clearspeak, "﹦", "small-equals"
-en, clearspeak, "﹨", "small-backslash"
-en, clearspeak, "﹩", "small-dollar-sign"
-en, clearspeak, "﹪", "small-percent-sign"
-en, clearspeak, "﹫", "small-commercial-at"
-en, clearspeak, "！", "exclamation-mark"
-en, clearspeak, "＂", "quotation-mark"
-en, clearspeak, "＃", "number-sign"
-en, clearspeak, "＄", "dollar-sign"
-en, clearspeak, "％", "percent-sign"
-en, clearspeak, "＆", "ampersand"
-en, clearspeak, "＇", "apostrophe"
-en, clearspeak, "＊", "asterisk"
-en, clearspeak, "＋", "plus-sign"
-en, clearspeak, "，", "comma"
-en, clearspeak, "－", "hyphen-minus"
-en, clearspeak, "．", "period"
-en, clearspeak, "／", "slash"
-en, clearspeak, "：", "colon"
-en, clearspeak, "；", "semicolon"
-en, clearspeak, "＜", "less-than"
-en, clearspeak, "＝", "equals"
-en, clearspeak, "＞", "greater-than"
-en, clearspeak, "？", "question-mark"
-en, clearspeak, "＠", "commercial-at"
-en, clearspeak, "＼", "backslash"
-en, clearspeak, "＾", "caret"
-en, clearspeak, "＿", "bar"
-en, clearspeak, "｀", "grave"
-en, clearspeak, "｜", "vertical-bar"
-en, clearspeak, "～", "tilde"
-en, clearspeak, "￠", "cent-sign"
-en, clearspeak, "￡", "pound-sign"
-en, clearspeak, "￢", "not sign"
-en, clearspeak, "￣", "bar"
-en, clearspeak, "￤", "broken-vertical-bar"
-en, clearspeak, "￥", "yen sign"
-en, clearspeak, "￦", "won sign"
-en, clearspeak, "￨", "halfwidth-forms-light-vertical"
-en, clearspeak, "￭", "halfwidth-black-square"
-en, clearspeak, "￮", "halfwidth-white-circle"
-en, clearspeak, " ", ""
-en, clearspeak, " ", ""
-en, clearspeak, "­", "soft hyphen"
-en, clearspeak, " ", ""
-en, clearspeak, " ", ""
-en, clearspeak, " ", ""
-en, clearspeak, " ", ""
-en, clearspeak, " ", ""
-en, clearspeak, " ", ""
-en, clearspeak, " ", ""
-en, clearspeak, " ", ""
-en, clearspeak, " ", ""
-en, clearspeak, " ", ""
-en, clearspeak, " ", ""
-en, clearspeak, "​", "zero width space"
-en, clearspeak, "‌", "zero width non joiner"
-en, clearspeak, "‍", "zero width joiner"
-en, clearspeak, "‎", "left to right mark"
-en, clearspeak, "‏", "right to left mark"
-en, clearspeak, " ", ""
-en, clearspeak, " ", ""
-en, clearspeak, "‪", "left to right embedding"
-en, clearspeak, "‫", "right to left embedding"
-en, clearspeak, "‬", "pop directional formatting"
-en, clearspeak, "‭", "left to right override"
-en, clearspeak, "‮", "right to left override"
-en, clearspeak, " ", ""
-en, clearspeak, " ", ""
-en, clearspeak, "⁠", "word joiner"
-en, clearspeak, "⁡", "of"
-en, clearspeak, "⁢", "times"
-en, clearspeak, "⁣", "separator"
-en, clearspeak, "⁤", "plus"
-en, clearspeak, "⁪", "inhibit symmetric swapping"
-en, clearspeak, "⁫", "activate symmetric swapping"
-en, clearspeak, "⁮", "national digit shapes"
-en, clearspeak, "⁯", "nominal digit shapes"
-en, clearspeak, "﻿", ""
-en, clearspeak, "￹", "interlinear annotation anchor"
-en, clearspeak, "￺", "interlinear annotation separator"
-en, clearspeak, "￻", "interlinear annotation terminator"
-en, clearspeak, "⏨", "decimal exponent symbol"
-en, clearspeak, "★", "black star"
-en, clearspeak, "☆", "white star"
-en, clearspeak, "⚪", "white circle"
-en, clearspeak, "⚫", "black circle"
-en, clearspeak, "✅", "white check"
-en, clearspeak, "✓", "check"
-en, clearspeak, "✔", "heavy check"
-en, clearspeak, "✕", "multiplication x"
-en, clearspeak, "✖", "heavy multiplication x"
-en, clearspeak, "✗", "ballot x"
-en, clearspeak, "✘", "heavy ballot x"
-en, clearspeak, "✛", "open center cross"
-en, clearspeak, "✜", "heavy open center cross"
-en, clearspeak, "✠", "maltese cross"
-en, clearspeak, "✡", "star of david"
-en, clearspeak, "✢", "four teardrop spoked asterisk"
-en, clearspeak, "✣", "four balloon spoked asterisk"
-en, clearspeak, "✤", "heavy four balloon spoked asterisk"
-en, clearspeak, "✥", "four club spoked asterisk"
-en, clearspeak, "✦", "black four pointed star"
-en, clearspeak, "✧", "white four pointed star"
-en, clearspeak, "✨", "sparkles"
-en, clearspeak, "✩", "stress outlined white star"
-en, clearspeak, "✪", "circled white star"
-en, clearspeak, "✫", "open center black star"
-en, clearspeak, "✬", "black center white star"
-en, clearspeak, "✭", "outlined black star"
-en, clearspeak, "✮", "heavy outlined black star"
-en, clearspeak, "✯", "pinwheel star"
-en, clearspeak, "✰", "shadowed white star"
-en, clearspeak, "✱", "heavy asterisk"
-en, clearspeak, "✲", "open center asterisk"
-en, clearspeak, "✳", "eight spoked asterisk"
-en, clearspeak, "✴", "eight pointed black star"
-en, clearspeak, "✵", "eight pointed pinwheel star"
-en, clearspeak, "✶", "six pointed black star"
-en, clearspeak, "✹", "twelve pointed black star"
-en, clearspeak, "✺", "sixteen pointed asterisk"
-en, clearspeak, "✻", "teardrop spoked asterisk"
-en, clearspeak, "✼", "open center teardrop spoked asterisk"
-en, clearspeak, "✽", "heavy teardrop spoked asterisk"
-en, clearspeak, "✾", "six petalled black and white florette"
-en, clearspeak, "✿", "black florette"
-en, clearspeak, "❀", "white florette"
-en, clearspeak, "❁", "eight petalled outlined black florette"
-en, clearspeak, "❂", "circled open center eight pointed star"
-en, clearspeak, "❃", "heavy teardrop spoked pinwheel asterisk"
-en, clearspeak, "❄", "snowflake"
-en, clearspeak, "❅", "tight trifoliate snowflake"
-en, clearspeak, "❆", "heavy chevron snowflake"
-en, clearspeak, "❇", "sparkle"
-en, clearspeak, "❈", "heavy sparkle"
-en, clearspeak, "❉", "balloon spoked asterisk"
-en, clearspeak, "❊", "eight teardrop spoked propeller asterisk"
-en, clearspeak, "❋", "heavy eight teardrop spoked propeller asterisk"
-en, clearspeak, "❌", "cross mark"
-en, clearspeak, "❍", "shadowed white circle"
-en, clearspeak, "W:unit", "cap W colon unit"
-en, clearspeak, "w:unit", "w colon unit"
-en, clearspeak, "kw:unit", "kw colon unit"
-en, clearspeak, "kW:unit", "kW colon unit"
-en, clearspeak, "mw:unit", "mw colon unit"
-en, clearspeak, "mW:unit", "mW colon unit"
-en, clearspeak, "kwh:unit", "kwh colon unit"
-en, clearspeak, "kWh:unit", "kWh colon unit"
-en, clearspeak, "J:unit", "cap J colon unit"
-en, clearspeak, "N:unit", "cap N colon unit"
-en, clearspeak, "A:unit", "cap A colon unit"
-en, clearspeak, "V:unit", "cap V colon unit"
-en, clearspeak, "µΩ:unit", "micro sign cap Omega colon unit"
-en, clearspeak, "mΩ:unit", "m cap Omega colon unit"
-en, clearspeak, "Ω:unit", "cap Omega colon unit"
-en, clearspeak, "Ohm:unit", "Ohm colon unit"
-en, clearspeak, "kΩ:unit", "k cap Omega colon unit"
-en, clearspeak, "KΩ:unit", "cap K cap Omega colon unit"
-en, clearspeak, "MΩ:unit", "cap M cap Omega colon unit"
-en, clearspeak, "GΩ:unit", "cap G cap Omega colon unit"
-en, clearspeak, "mm:unit", "mm colon unit"
-en, clearspeak, "cm:unit", "cm colon unit"
-en, clearspeak, "m:unit", "m colon unit"
-en, clearspeak, "km:unit", "km colon unit"
-en, clearspeak, "ft:unit", "ft colon unit"
-en, clearspeak, "ft.:unit", "ft period colon unit"
-en, clearspeak, "in:unit", "in colon unit"
-en, clearspeak, "in.:unit", "in period colon unit"
-en, clearspeak, "mi:unit", "mi colon unit"
-en, clearspeak, "mi.:unit", "mi period colon unit"
-en, clearspeak, "yd:unit", "yd colon unit"
-en, clearspeak, "yd.:unit", "yd period colon unit"
-en, clearspeak, "n.m.:unit", "n period m period colon unit"
-en, clearspeak, "b:unit", "b colon unit"
-en, clearspeak, "B:unit", "cap B colon unit"
-en, clearspeak, "KB:unit", "KB colon unit"
-en, clearspeak, "MB:unit", "MB colon unit"
-en, clearspeak, "GB:unit", "GB colon unit"
-en, clearspeak, "TB:unit", "TB colon unit"
-en, clearspeak, "doz:unit", "doz colon unit"
-en, clearspeak, "doz.:unit", "doz period colon unit"
-en, clearspeak, "dz:unit", "dz colon unit"
-en, clearspeak, "dz.:unit", "dz period colon unit"
-en, clearspeak, "sq:unit", "sq colon unit"
-en, clearspeak, "sq.:unit", "sq period colon unit"
-en, clearspeak, "ha:unit", "ha colon unit"
-en, clearspeak, "kt:unit", "kt colon unit"
-en, clearspeak, "kt.:unit", "kt period colon unit"
-en, clearspeak, "mph:unit", "mph colon unit"
-en, clearspeak, "rpm:unit", "rpm colon unit"
-en, clearspeak, "kmh:unit", "kmh colon unit"
-en, clearspeak, "F:unit", "cap F colon unit"
-en, clearspeak, "F.:unit", "cap F period colon unit"
-en, clearspeak, "°F:unit", "degrees cap F colon unit"
-en, clearspeak, "C:unit", "cap C colon unit"
-en, clearspeak, "°C:unit", "degrees cap C colon unit"
-en, clearspeak, "K:unit", "cap K colon unit"
-en, clearspeak, "°K:unit", "degrees cap K colon unit"
-en, clearspeak, "ns:unit", "ns colon unit"
-en, clearspeak, "µs:unit", "micro sign s colon unit"
-en, clearspeak, "ms:unit", "ms colon unit"
-en, clearspeak, "s:unit", "s colon unit"
-en, clearspeak, "min:unit", "min colon unit"
-en, clearspeak, "h:unit", "h colon unit"
-en, clearspeak, "hr:unit", "hr colon unit"
-en, clearspeak, "bbl.:unit", "bbl period colon unit"
-en, clearspeak, "bbl:unit", "bbl colon unit"
-en, clearspeak, "cu:unit", "cu colon unit"
-en, clearspeak, "cu.:unit", "cu period colon unit"
-en, clearspeak, "fl. oz.:unit", "fl period oz period colon unit"
-en, clearspeak, "gal:unit", "gal colon unit"
-en, clearspeak, "gal.:unit", "gal period colon unit"
-en, clearspeak, "pt:unit", "pt colon unit"
-en, clearspeak, "pt.:unit", "pt period colon unit"
-en, clearspeak, "qt:unit", "qt colon unit"
-en, clearspeak, "qt.:unit", "qt period colon unit"
-en, clearspeak, "tbsp:unit", "tbsp colon unit"
-en, clearspeak, "tbsp.:unit", "tbsp period colon unit"
-en, clearspeak, "tsp:unit", "tsp colon unit"
-en, clearspeak, "tsp.:unit", "tsp period colon unit"
-en, clearspeak, "cc:unit", "cc colon unit"
-en, clearspeak, "kl:unit", "kl colon unit"
-en, clearspeak, "l:unit", "l colon unit"
-en, clearspeak, "ml:unit", "ml colon unit"
-en, clearspeak, "lb:unit", "lb colon unit"
-en, clearspeak, "lb.:unit", "lb period colon unit"
-en, clearspeak, "LT:unit", "LT colon unit"
-en, clearspeak, "L.T.:unit", "cap L period cap T period colon unit"
-en, clearspeak, "oz:unit", "oz colon unit"
-en, clearspeak, "oz.:unit", "oz period colon unit"
-en, clearspeak, "g:unit", "g colon unit"
-en, clearspeak, "gr:unit", "gr colon unit"
-en, clearspeak, "kg:unit", "kg colon unit"
-en, clearspeak, "mcg:unit", "mcg colon unit"
-en, clearspeak, "µg:unit", "micro sign g colon unit"
-en, clearspeak, "mg:unit", "mg colon unit"
-en, clearspeak, "t:unit", "t colon unit"
-en, clearspeak, "T:unit", "cap T colon unit"
-en, clearspeak, "sen", "sen"
+// Copyright 2019 Volker Sorge
+//
+// Licensed under the Apache License, Version 2.0 (the 'License');
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an 'AS IS' BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+/**
+ * @fileoverview Abstract class for test cases of single characters.
+ * @author Volker.Sorge@gmail.com (Volker Sorge)
+ */
+
+goog.provide('sre.ClearspeakCharEnglishTest');
+
+goog.require('sre.AbstractCharacterTest');
+
+
+
+/**
+ * @constructor
+ * @extends {sre.AbstractCharacterTest}
+ */
+sre.ClearspeakCharEnglishTest = function() {
+  sre.ClearspeakCharEnglishTest.base(this, 'constructor');
+
+  this.locale = 'en';
+  this.domain = 'clearspeak';
+  this.semantics = true;
+  
+  /**
+   * @type {Array.<string>}
+   */
+  this.styles = ['default'];
+
+  this.setActive('ClearspeakCharactersEnglish');
+};
+goog.inherits(sre.ClearspeakCharEnglishTest, sre.AbstractCharacterTest);
+
+                                            
+sre.ClearspeakCharEnglishTest.prototype.testClearspeakChars = function() {
+  this.executeCharTest('0', ['0']);
+  this.executeCharTest('1', ['1']);
+  this.executeCharTest('2', ['2']);
+  this.executeCharTest('3', ['3']);
+  this.executeCharTest('4', ['4']);
+  this.executeCharTest('5', ['5']);
+  this.executeCharTest('6', ['6']);
+  this.executeCharTest('7', ['7']);
+  this.executeCharTest('8', ['8']);
+  this.executeCharTest('9', ['9']);
+  this.executeCharTest('Α', ['cap Alpha']);
+  this.executeCharTest('Β', ['cap Beta']);
+  this.executeCharTest('Γ', ['cap Gamma']);
+  this.executeCharTest('Δ', ['triangle']);
+  this.executeCharTest('Ε', ['cap Epsilon']);
+  this.executeCharTest('Ζ', ['cap Zeta']);
+  this.executeCharTest('Η', ['cap Eta']);
+  this.executeCharTest('Θ', ['cap Theta']);
+  this.executeCharTest('Ι', ['cap Iota']);
+  this.executeCharTest('Κ', ['cap Kappa']);
+  this.executeCharTest('Λ', ['cap Lamda']);
+  this.executeCharTest('Μ', ['cap Mu']);
+  this.executeCharTest('Ν', ['cap Nu']);
+  this.executeCharTest('Ξ', ['cap Xi']);
+  this.executeCharTest('Ο', ['cap Omicron']);
+  this.executeCharTest('Π', ['cap Pi']);
+  this.executeCharTest('Ρ', ['cap Rho']);
+  this.executeCharTest('Σ', ['cap Sigma']);
+  this.executeCharTest('Τ', ['cap Tau']);
+  this.executeCharTest('Υ', ['cap Upsilon']);
+  this.executeCharTest('Φ', ['cap Phi']);
+  this.executeCharTest('Χ', ['cap Chi']);
+  this.executeCharTest('Ψ', ['cap Psi']);
+  this.executeCharTest('Ω', ['cap Omega']);
+  this.executeCharTest('α', ['alpha']);
+  this.executeCharTest('β', ['beta']);
+  this.executeCharTest('γ', ['gamma']);
+  this.executeCharTest('δ', ['delta']);
+  this.executeCharTest('ε', ['epsilon']);
+  this.executeCharTest('ζ', ['zeta']);
+  this.executeCharTest('η', ['eta']);
+  this.executeCharTest('θ', ['theta']);
+  this.executeCharTest('ι', ['iota']);
+  this.executeCharTest('κ', ['kappa']);
+  this.executeCharTest('λ', ['lamda']);
+  this.executeCharTest('μ', ['mu']);
+  this.executeCharTest('ν', ['nu']);
+  this.executeCharTest('ξ', ['xi']);
+  this.executeCharTest('ο', ['omicron']);
+  this.executeCharTest('π', ['pi']);
+  this.executeCharTest('ρ', ['rho']);
+  this.executeCharTest('ς', ['final sigma']);
+  this.executeCharTest('σ', ['sigma']);
+  this.executeCharTest('τ', ['tau']);
+  this.executeCharTest('υ', ['upsilon']);
+  this.executeCharTest('φ', ['phi']);
+  this.executeCharTest('χ', ['chi']);
+  this.executeCharTest('ψ', ['psi']);
+  this.executeCharTest('ω', ['omega']);
+  this.executeCharTest('ᴦ', ['small upper Gamma']);
+  this.executeCharTest('ᴧ', ['small upper Lamda']);
+  this.executeCharTest('ᴨ', ['small upper Pi']);
+  this.executeCharTest('ᴩ', ['small upper Rho']);
+  this.executeCharTest('ᴪ', ['small upper Psi']);
+  this.executeCharTest('ᵞ', ['superscript gamma']);
+  this.executeCharTest('ᵠ', ['superscript phi']);
+  this.executeCharTest('ᵦ', ['subscript beta']);
+  this.executeCharTest('ᵧ', ['subscript gamma']);
+  this.executeCharTest('ᵨ', ['subscript rho']);
+  this.executeCharTest('ᵩ', ['subscript phi']);
+  this.executeCharTest('ᵪ', ['subscript chi']);
+  this.executeCharTest('ϐ', ['beta']);
+  this.executeCharTest('ϑ', ['theta']);
+  this.executeCharTest('ϕ', ['phi']);
+  this.executeCharTest('ϖ', ['pi']);
+  this.executeCharTest('ϗ', ['kai']);
+  this.executeCharTest('ϰ', ['kappa']);
+  this.executeCharTest('ϱ', ['rho']);
+  this.executeCharTest('ϵ', ['epsilon']);
+  this.executeCharTest('϶', ['reversed epsilon']);
+  this.executeCharTest('ϴ', ['cap Theta']);
+  this.executeCharTest('𝚹', ['bold cap Theta']);
+  this.executeCharTest('𝛳', ['italic cap Theta']);
+  this.executeCharTest('𝝧', ['sans serif bold cap Theta']);
+  this.executeCharTest('𝛁', ['mathematical bold nabla']);
+  this.executeCharTest('𝛛', ['bold partial differential']);
+  this.executeCharTest('𝛜', ['bold epsilon']);
+  this.executeCharTest('𝛝', ['bold theta']);
+  this.executeCharTest('𝛞', ['bold kappa']);
+  this.executeCharTest('𝛟', ['bold phi']);
+  this.executeCharTest('𝛠', ['bold rho']);
+  this.executeCharTest('𝛡', ['bold pi']);
+  this.executeCharTest('𝛻', ['italic nabla']);
+  this.executeCharTest('𝜕', ['italic partial differential']);
+  this.executeCharTest('𝜖', ['italic epsilon']);
+  this.executeCharTest('𝜗', ['italic theta']);
+  this.executeCharTest('𝜘', ['italic kappa']);
+  this.executeCharTest('𝜙', ['italic phi']);
+  this.executeCharTest('𝜚', ['italic rho']);
+  this.executeCharTest('𝜛', ['italic pi']);
+  this.executeCharTest('𝝯', ['sans serif bold nabla']);
+  this.executeCharTest('𝞉', ['sans serif bold partial differential']);
+  this.executeCharTest('𝞊', ['sans serif bold epsilon']);
+  this.executeCharTest('𝞋', ['sans serif bold theta']);
+  this.executeCharTest('𝞌', ['sans serif bold kappa']);
+  this.executeCharTest('𝞍', ['sans serif bold phi']);
+  this.executeCharTest('𝞎', ['sans serif bold rho']);
+  this.executeCharTest('𝞏', ['sans serif bold pi']);
+  this.executeCharTest('𝟊', ['bold cap Digamma']);
+  this.executeCharTest('𝟋', ['bold digamma']);
+  this.executeCharTest('𝚨', ['bold cap Alpha']);
+  this.executeCharTest('𝚩', ['bold cap Beta']);
+  this.executeCharTest('𝚪', ['bold cap Gamma']);
+  this.executeCharTest('𝚫', ['bold cap Delta']);
+  this.executeCharTest('𝚬', ['bold cap Epsilon']);
+  this.executeCharTest('𝚭', ['bold cap Zeta']);
+  this.executeCharTest('𝚮', ['bold cap Eta']);
+  this.executeCharTest('𝚯', ['bold cap Theta']);
+  this.executeCharTest('𝚰', ['bold cap Iota']);
+  this.executeCharTest('𝚱', ['bold cap Kappa']);
+  this.executeCharTest('𝚲', ['bold cap Lamda']);
+  this.executeCharTest('𝚳', ['bold cap Mu']);
+  this.executeCharTest('𝚴', ['bold cap Nu']);
+  this.executeCharTest('𝚵', ['bold cap Xi']);
+  this.executeCharTest('𝚶', ['bold cap Omicron']);
+  this.executeCharTest('𝚷', ['bold cap Pi']);
+  this.executeCharTest('𝚸', ['bold cap Rho']);
+  this.executeCharTest('𝚺', ['bold cap Sigma']);
+  this.executeCharTest('𝚻', ['bold cap Tau']);
+  this.executeCharTest('𝚼', ['bold cap Upsilon']);
+  this.executeCharTest('𝚽', ['bold cap Phi']);
+  this.executeCharTest('𝚾', ['bold cap Chi']);
+  this.executeCharTest('𝚿', ['bold cap Psi']);
+  this.executeCharTest('𝛀', ['bold cap Omega']);
+  this.executeCharTest('𝛂', ['bold alpha']);
+  this.executeCharTest('𝛃', ['bold beta']);
+  this.executeCharTest('𝛄', ['bold gamma']);
+  this.executeCharTest('𝛅', ['bold delta']);
+  this.executeCharTest('𝛆', ['bold epsilon']);
+  this.executeCharTest('𝛇', ['bold zeta']);
+  this.executeCharTest('𝛈', ['bold eta']);
+  this.executeCharTest('𝛉', ['bold theta']);
+  this.executeCharTest('𝛊', ['bold iota']);
+  this.executeCharTest('𝛋', ['bold kappa']);
+  this.executeCharTest('𝛌', ['bold lamda']);
+  this.executeCharTest('𝛍', ['bold mu']);
+  this.executeCharTest('𝛎', ['bold nu']);
+  this.executeCharTest('𝛏', ['bold xi']);
+  this.executeCharTest('𝛐', ['bold omicron']);
+  this.executeCharTest('𝛑', ['bold pi']);
+  this.executeCharTest('𝛒', ['bold rho']);
+  this.executeCharTest('𝛓', ['bold final sigma']);
+  this.executeCharTest('𝛔', ['bold sigma']);
+  this.executeCharTest('𝛕', ['bold tau']);
+  this.executeCharTest('𝛖', ['bold upsilon']);
+  this.executeCharTest('𝛗', ['bold phi']);
+  this.executeCharTest('𝛘', ['bold chi']);
+  this.executeCharTest('𝛙', ['bold psi']);
+  this.executeCharTest('𝛚', ['bold omega']);
+  this.executeCharTest('𝛢', ['italic cap Alpha']);
+  this.executeCharTest('𝛣', ['italic cap Beta']);
+  this.executeCharTest('𝛤', ['italic cap Gamma']);
+  this.executeCharTest('𝛥', ['italic cap Delta']);
+  this.executeCharTest('𝛦', ['italic cap Epsilon']);
+  this.executeCharTest('𝛧', ['italic cap Zeta']);
+  this.executeCharTest('𝛨', ['italic cap Eta']);
+  this.executeCharTest('𝛩', ['italic cap Theta']);
+  this.executeCharTest('𝛪', ['italic cap Iota']);
+  this.executeCharTest('𝛫', ['italic cap Kappa']);
+  this.executeCharTest('𝛬', ['italic cap Lamda']);
+  this.executeCharTest('𝛭', ['italic cap Mu']);
+  this.executeCharTest('𝛮', ['italic cap Nu']);
+  this.executeCharTest('𝛯', ['italic cap Xi']);
+  this.executeCharTest('𝛰', ['italic cap Omicron']);
+  this.executeCharTest('𝛱', ['italic cap Pi']);
+  this.executeCharTest('𝛲', ['italic cap Rho']);
+  this.executeCharTest('𝛴', ['italic cap Sigma']);
+  this.executeCharTest('𝛵', ['italic cap Tau']);
+  this.executeCharTest('𝛶', ['italic cap Upsilon']);
+  this.executeCharTest('𝛷', ['italic cap Phi']);
+  this.executeCharTest('𝛸', ['italic cap Chi']);
+  this.executeCharTest('𝛹', ['italic cap Psi']);
+  this.executeCharTest('𝛺', ['italic cap Omega']);
+  this.executeCharTest('𝛼', ['italic alpha']);
+  this.executeCharTest('𝛽', ['italic beta']);
+  this.executeCharTest('𝛾', ['italic gamma']);
+  this.executeCharTest('𝛿', ['italic delta']);
+  this.executeCharTest('𝜀', ['italic epsilon']);
+  this.executeCharTest('𝜁', ['italic zeta']);
+  this.executeCharTest('𝜂', ['italic eta']);
+  this.executeCharTest('𝜃', ['italic theta']);
+  this.executeCharTest('𝜄', ['italic iota']);
+  this.executeCharTest('𝜅', ['italic kappa']);
+  this.executeCharTest('𝜆', ['italic lamda']);
+  this.executeCharTest('𝜇', ['italic mu']);
+  this.executeCharTest('𝜈', ['italic nu']);
+  this.executeCharTest('𝜉', ['italic xi']);
+  this.executeCharTest('𝜊', ['italic omicron']);
+  this.executeCharTest('𝜋', ['italic pi']);
+  this.executeCharTest('𝜌', ['italic rho']);
+  this.executeCharTest('𝜍', ['italic final sigma']);
+  this.executeCharTest('𝜎', ['italic sigma']);
+  this.executeCharTest('𝜏', ['italic tau']);
+  this.executeCharTest('𝜐', ['italic upsilon']);
+  this.executeCharTest('𝜑', ['italic phi']);
+  this.executeCharTest('𝜒', ['italic chi']);
+  this.executeCharTest('𝜓', ['italic psi']);
+  this.executeCharTest('𝜔', ['italic omega']);
+  this.executeCharTest('𝜜', ['bold italic cap Alpha']);
+  this.executeCharTest('𝜝', ['bold italic cap Beta']);
+  this.executeCharTest('𝜞', ['bold italic cap Gamma']);
+  this.executeCharTest('𝜟', ['bold italic cap Delta']);
+  this.executeCharTest('𝜠', ['bold italic cap Epsilon']);
+  this.executeCharTest('𝜡', ['bold italic cap Zeta']);
+  this.executeCharTest('𝜢', ['bold italic cap Eta']);
+  this.executeCharTest('𝜣', ['bold italic cap Theta']);
+  this.executeCharTest('𝜤', ['bold italic cap Iota']);
+  this.executeCharTest('𝜥', ['bold italic cap Kappa']);
+  this.executeCharTest('𝜦', ['bold italic cap Lamda']);
+  this.executeCharTest('𝜧', ['bold italic cap Mu']);
+  this.executeCharTest('𝜨', ['bold italic cap Nu']);
+  this.executeCharTest('𝜩', ['bold italic cap Xi']);
+  this.executeCharTest('𝜪', ['bold italic cap Omicron']);
+  this.executeCharTest('𝜫', ['bold italic cap Pi']);
+  this.executeCharTest('𝜬', ['bold italic cap Rho']);
+  this.executeCharTest('𝜮', ['bold italic cap Sigma']);
+  this.executeCharTest('𝜯', ['bold italic cap Tau']);
+  this.executeCharTest('𝜰', ['bold italic cap Upsilon']);
+  this.executeCharTest('𝜱', ['bold italic cap Phi']);
+  this.executeCharTest('𝜲', ['bold italic cap Chi']);
+  this.executeCharTest('𝜳', ['bold italic cap Psi']);
+  this.executeCharTest('𝜴', ['bold italic cap Omega']);
+  this.executeCharTest('𝜶', ['bold italic alpha']);
+  this.executeCharTest('𝜷', ['bold italic beta']);
+  this.executeCharTest('𝜸', ['bold italic gamma']);
+  this.executeCharTest('𝜹', ['bold italic delta']);
+  this.executeCharTest('𝜺', ['bold italic epsilon']);
+  this.executeCharTest('𝜻', ['bold italic zeta']);
+  this.executeCharTest('𝜼', ['bold italic eta']);
+  this.executeCharTest('𝜽', ['bold italic theta']);
+  this.executeCharTest('𝜾', ['bold italic iota']);
+  this.executeCharTest('𝜿', ['bold italic kappa']);
+  this.executeCharTest('𝝀', ['bold italic lamda']);
+  this.executeCharTest('𝝁', ['bold italic mu']);
+  this.executeCharTest('𝝂', ['bold italic nu']);
+  this.executeCharTest('𝝃', ['bold italic xi']);
+  this.executeCharTest('𝝄', ['bold italic omicron']);
+  this.executeCharTest('𝝅', ['bold italic pi']);
+  this.executeCharTest('𝝆', ['bold italic rho']);
+  this.executeCharTest('𝝇', ['bold italic final sigma']);
+  this.executeCharTest('𝝈', ['bold italic sigma']);
+  this.executeCharTest('𝝉', ['bold italic tau']);
+  this.executeCharTest('𝝊', ['bold italic upsilon']);
+  this.executeCharTest('𝝋', ['bold italic phi']);
+  this.executeCharTest('𝝌', ['bold italic chi']);
+  this.executeCharTest('𝝍', ['bold italic psi']);
+  this.executeCharTest('𝝎', ['bold italic omega']);
+  this.executeCharTest('𝝖', ['sans serif bold cap Alpha']);
+  this.executeCharTest('𝝗', ['sans serif bold cap Beta']);
+  this.executeCharTest('𝝘', ['sans serif bold cap Gamma']);
+  this.executeCharTest('𝝙', ['sans serif bold cap Delta']);
+  this.executeCharTest('𝝚', ['sans serif bold cap Epsilon']);
+  this.executeCharTest('𝝛', ['sans serif bold cap Zeta']);
+  this.executeCharTest('𝝜', ['sans serif bold cap Eta']);
+  this.executeCharTest('𝝝', ['sans serif bold cap Theta']);
+  this.executeCharTest('𝝞', ['sans serif bold cap Iota']);
+  this.executeCharTest('𝝟', ['sans serif bold cap Kappa']);
+  this.executeCharTest('𝝠', ['sans serif bold cap Lamda']);
+  this.executeCharTest('𝝡', ['sans serif bold cap Mu']);
+  this.executeCharTest('𝝢', ['sans serif bold cap Nu']);
+  this.executeCharTest('𝝣', ['sans serif bold cap Xi']);
+  this.executeCharTest('𝝤', ['sans serif bold cap Omicron']);
+  this.executeCharTest('𝝥', ['sans serif bold cap Pi']);
+  this.executeCharTest('𝝦', ['sans serif bold cap Rho']);
+  this.executeCharTest('𝝨', ['sans serif bold cap Sigma']);
+  this.executeCharTest('𝝩', ['sans serif bold cap Tau']);
+  this.executeCharTest('𝝪', ['sans serif bold cap Upsilon']);
+  this.executeCharTest('𝝫', ['sans serif bold cap Phi']);
+  this.executeCharTest('𝝬', ['sans serif bold cap Chi']);
+  this.executeCharTest('𝝭', ['sans serif bold cap Psi']);
+  this.executeCharTest('𝝮', ['sans serif bold cap Omega']);
+  this.executeCharTest('𝝰', ['sans serif bold alpha']);
+  this.executeCharTest('𝝱', ['sans serif bold beta']);
+  this.executeCharTest('𝝲', ['sans serif bold gamma']);
+  this.executeCharTest('𝝳', ['sans serif bold delta']);
+  this.executeCharTest('𝝴', ['sans serif bold epsilon']);
+  this.executeCharTest('𝝵', ['sans serif bold zeta']);
+  this.executeCharTest('𝝶', ['sans serif bold eta']);
+  this.executeCharTest('𝝷', ['sans serif bold theta']);
+  this.executeCharTest('𝝸', ['sans serif bold iota']);
+  this.executeCharTest('𝝹', ['sans serif bold kappa']);
+  this.executeCharTest('𝝺', ['sans serif bold lamda']);
+  this.executeCharTest('𝝻', ['sans serif bold mu']);
+  this.executeCharTest('𝝼', ['sans serif bold nu']);
+  this.executeCharTest('𝝽', ['sans serif bold xi']);
+  this.executeCharTest('𝝾', ['sans serif bold omicron']);
+  this.executeCharTest('𝝿', ['sans serif bold pi']);
+  this.executeCharTest('𝞀', ['sans serif bold rho']);
+  this.executeCharTest('𝞁', ['sans serif bold final sigma']);
+  this.executeCharTest('𝞂', ['sans serif bold sigma']);
+  this.executeCharTest('𝞃', ['sans serif bold tau']);
+  this.executeCharTest('𝞄', ['sans serif bold upsilon']);
+  this.executeCharTest('𝞅', ['sans serif bold phi']);
+  this.executeCharTest('𝞆', ['sans serif bold chi']);
+  this.executeCharTest('𝞇', ['sans serif bold psi']);
+  this.executeCharTest('𝞈', ['sans serif bold omega']);
+  this.executeCharTest('𝞐', ['sans serif bold italic cap Alpha']);
+  this.executeCharTest('𝞑', ['sans serif bold italic cap Beta']);
+  this.executeCharTest('𝞒', ['sans serif bold italic cap Gamma']);
+  this.executeCharTest('𝞓', ['sans serif bold italic cap Delta']);
+  this.executeCharTest('𝞔', ['sans serif bold italic cap Epsilon']);
+  this.executeCharTest('𝞕', ['sans serif bold italic cap Zeta']);
+  this.executeCharTest('𝞖', ['sans serif bold italic cap Eta']);
+  this.executeCharTest('𝞗', ['sans serif bold italic cap Theta']);
+  this.executeCharTest('𝞘', ['sans serif bold italic cap Iota']);
+  this.executeCharTest('𝞙', ['sans serif bold italic cap Kappa']);
+  this.executeCharTest('𝞚', ['sans serif bold italic cap Lamda']);
+  this.executeCharTest('𝞛', ['sans serif bold italic cap Mu']);
+  this.executeCharTest('𝞜', ['sans serif bold italic cap Nu']);
+  this.executeCharTest('𝞝', ['sans serif bold italic cap Xi']);
+  this.executeCharTest('𝞞', ['sans serif bold italic cap Omicron']);
+  this.executeCharTest('𝞟', ['sans serif bold italic cap Pi']);
+  this.executeCharTest('𝞠', ['sans serif bold italic cap Rho']);
+  this.executeCharTest('𝞢', ['sans serif bold italic cap Sigma']);
+  this.executeCharTest('𝞣', ['sans serif bold italic cap Tau']);
+  this.executeCharTest('𝞤', ['sans serif bold italic cap Upsilon']);
+  this.executeCharTest('𝞥', ['sans serif bold italic cap Phi']);
+  this.executeCharTest('𝞦', ['sans serif bold italic cap Chi']);
+  this.executeCharTest('𝞧', ['sans serif bold italic cap Psi']);
+  this.executeCharTest('𝞨', ['sans serif bold italic cap Omega']);
+  this.executeCharTest('𝞪', ['sans serif bold italic alpha']);
+  this.executeCharTest('𝞫', ['sans serif bold italic beta']);
+  this.executeCharTest('𝞬', ['sans serif bold italic gamma']);
+  this.executeCharTest('𝞭', ['sans serif bold italic delta']);
+  this.executeCharTest('𝞮', ['sans serif bold italic epsilon']);
+  this.executeCharTest('𝞯', ['sans serif bold italic zeta']);
+  this.executeCharTest('𝞰', ['sans serif bold italic eta']);
+  this.executeCharTest('𝞱', ['sans serif bold italic theta']);
+  this.executeCharTest('𝞲', ['sans serif bold italic iota']);
+  this.executeCharTest('𝞳', ['sans serif bold italic kappa']);
+  this.executeCharTest('𝞴', ['sans serif bold italic lamda']);
+  this.executeCharTest('𝞵', ['sans serif bold italic mu']);
+  this.executeCharTest('𝞶', ['sans serif bold italic nu']);
+  this.executeCharTest('𝞷', ['sans serif bold italic xi']);
+  this.executeCharTest('𝞸', ['sans serif bold italic omicron']);
+  this.executeCharTest('𝞹', ['sans serif bold italic pi']);
+  this.executeCharTest('𝞺', ['sans serif bold italic rho']);
+  this.executeCharTest('𝞻', ['sans serif bold italic final sigma']);
+  this.executeCharTest('𝞼', ['sans serif bold italic sigma']);
+  this.executeCharTest('𝞽', ['sans serif bold italic tau']);
+  this.executeCharTest('𝞾', ['sans serif bold italic upsilon']);
+  this.executeCharTest('𝞿', ['sans serif bold italic phi']);
+  this.executeCharTest('𝟀', ['sans serif bold italic chi']);
+  this.executeCharTest('𝟁', ['sans serif bold italic psi']);
+  this.executeCharTest('𝟂', ['sans serif bold italic omega']);
+  this.executeCharTest('ℵ', ['alef']);
+  this.executeCharTest('ℶ', ['bet']);
+  this.executeCharTest('ℷ', ['gimel']);
+  this.executeCharTest('ℸ', ['dalet']);
+  this.executeCharTest('ǖ', ['u double overdot overbar']);
+  this.executeCharTest('ǘ', ['u double overdot acute']);
+  this.executeCharTest('ǚ', ['u double overdot caron']);
+  this.executeCharTest('ǜ', ['u double overdot grave']);
+  this.executeCharTest('ǟ', ['a double overdot overbar']);
+  this.executeCharTest('ǡ', ['a overdot overbar']);
+  this.executeCharTest('ǭ', ['o ogonek overbar']);
+  this.executeCharTest('ǻ', ['a ring above acute']);
+  this.executeCharTest('ȫ', ['o double overdot overbar']);
+  this.executeCharTest('ȭ', ['o tilde overbar']);
+  this.executeCharTest('ȱ', ['o overdot overbar']);
+  this.executeCharTest('ḉ', ['c cedilla acute']);
+  this.executeCharTest('ḕ', ['e overbar grave']);
+  this.executeCharTest('ḗ', ['e overbar acute']);
+  this.executeCharTest('ḝ', ['e cedilla breve']);
+  this.executeCharTest('ḯ', ['i double overdot acute']);
+  this.executeCharTest('ḹ', ['l underdot overbar']);
+  this.executeCharTest('ṍ', ['o tilde acute']);
+  this.executeCharTest('ṏ', ['o tilde double overdot']);
+  this.executeCharTest('ṑ', ['o overbar grave']);
+  this.executeCharTest('ṓ', ['o overbar acute']);
+  this.executeCharTest('ṝ', ['r underdot overbar']);
+  this.executeCharTest('ṥ', ['s acute overdot']);
+  this.executeCharTest('ṧ', ['s caron overdot']);
+  this.executeCharTest('ṩ', ['s underdot overdot']);
+  this.executeCharTest('ṹ', ['u tilde acute']);
+  this.executeCharTest('ṻ', ['u overbar double overdot']);
+  this.executeCharTest('ấ', ['a hat acute']);
+  this.executeCharTest('ầ', ['a hat grave']);
+  this.executeCharTest('ẩ', ['a hat hook above']);
+  this.executeCharTest('ẫ', ['a hat tilde']);
+  this.executeCharTest('ậ', ['a hat underdot']);
+  this.executeCharTest('ắ', ['a breve acute']);
+  this.executeCharTest('ằ', ['a breve grave']);
+  this.executeCharTest('ẳ', ['a breve hook above']);
+  this.executeCharTest('ẵ', ['a breve tilde']);
+  this.executeCharTest('ặ', ['a breve underdot']);
+  this.executeCharTest('ế', ['e hat acute']);
+  this.executeCharTest('ề', ['e hat grave']);
+  this.executeCharTest('ể', ['e hat hook above']);
+  this.executeCharTest('ễ', ['e hat tilde']);
+  this.executeCharTest('ệ', ['e hat underdot']);
+  this.executeCharTest('ố', ['o hat acute']);
+  this.executeCharTest('ồ', ['o hat grave']);
+  this.executeCharTest('ổ', ['o hat hook above']);
+  this.executeCharTest('ỗ', ['o hat tilde']);
+  this.executeCharTest('ộ', ['o hat underdot']);
+  this.executeCharTest('ớ', ['o acute prime']);
+  this.executeCharTest('ờ', ['o grave prime']);
+  this.executeCharTest('ở', ['o hook above prime']);
+  this.executeCharTest('ỡ', ['o tilde prime']);
+  this.executeCharTest('ợ', ['o underdot prime']);
+  this.executeCharTest('ứ', ['u acute prime']);
+  this.executeCharTest('ừ', ['u grave prime']);
+  this.executeCharTest('ử', ['u hook above prime']);
+  this.executeCharTest('ữ', ['u tilde prime']);
+  this.executeCharTest('ự', ['u underdot prime']);
+  this.executeCharTest('a', ['a']);
+  this.executeCharTest('b', ['b']);
+  this.executeCharTest('c', ['c']);
+  this.executeCharTest('d', ['d']);
+  this.executeCharTest('e', ['e']);
+  this.executeCharTest('f', ['f']);
+  this.executeCharTest('g', ['g']);
+  this.executeCharTest('h', ['h']);
+  this.executeCharTest('i', ['i']);
+  this.executeCharTest('j', ['j']);
+  this.executeCharTest('k', ['k']);
+  this.executeCharTest('l', ['l']);
+  this.executeCharTest('m', ['m']);
+  this.executeCharTest('n', ['n']);
+  this.executeCharTest('o', ['o']);
+  this.executeCharTest('p', ['p']);
+  this.executeCharTest('q', ['q']);
+  this.executeCharTest('r', ['r']);
+  this.executeCharTest('s', ['s']);
+  this.executeCharTest('t', ['t']);
+  this.executeCharTest('u', ['u']);
+  this.executeCharTest('v', ['v']);
+  this.executeCharTest('w', ['w']);
+  this.executeCharTest('x', ['x']);
+  this.executeCharTest('y', ['y']);
+  this.executeCharTest('z', ['z']);
+  this.executeCharTest('ａ', ['a']);
+  this.executeCharTest('ｂ', ['b']);
+  this.executeCharTest('ｃ', ['c']);
+  this.executeCharTest('ｄ', ['d']);
+  this.executeCharTest('ｅ', ['e']);
+  this.executeCharTest('ｆ', ['f']);
+  this.executeCharTest('ｇ', ['g']);
+  this.executeCharTest('ｈ', ['h']);
+  this.executeCharTest('ｉ', ['i']);
+  this.executeCharTest('ｊ', ['j']);
+  this.executeCharTest('ｋ', ['k']);
+  this.executeCharTest('ｌ', ['l']);
+  this.executeCharTest('ｍ', ['m']);
+  this.executeCharTest('ｎ', ['n']);
+  this.executeCharTest('ｏ', ['o']);
+  this.executeCharTest('ｐ', ['p']);
+  this.executeCharTest('ｑ', ['q']);
+  this.executeCharTest('ｒ', ['r']);
+  this.executeCharTest('ｓ', ['s']);
+  this.executeCharTest('ｔ', ['t']);
+  this.executeCharTest('ｕ', ['u']);
+  this.executeCharTest('ｖ', ['v']);
+  this.executeCharTest('ｗ', ['w']);
+  this.executeCharTest('ｘ', ['x']);
+  this.executeCharTest('ｙ', ['y']);
+  this.executeCharTest('ｚ', ['z']);
+  this.executeCharTest('ø', ['o with stroke']);
+  this.executeCharTest('đ', ['d with stroke']);
+  this.executeCharTest('ħ', ['h with stroke']);
+  this.executeCharTest('ł', ['l with stroke']);
+  this.executeCharTest('ŧ', ['t with stroke']);
+  this.executeCharTest('ƀ', ['b with stroke']);
+  this.executeCharTest('ƛ', ['lambda with stroke']);
+  this.executeCharTest('ƶ', ['z with stroke']);
+  this.executeCharTest('ƾ', ['latin letter inverted glottal stop with stroke']);
+  this.executeCharTest('ǥ', ['g with stroke']);
+  this.executeCharTest('ǿ', ['o with stroke and acute']);
+  this.executeCharTest('ȼ', ['c with stroke']);
+  this.executeCharTest('ɇ', ['e with stroke']);
+  this.executeCharTest('ɉ', ['j with stroke']);
+  this.executeCharTest('ɍ', ['r with stroke']);
+  this.executeCharTest('ɏ', ['y with stroke']);
+  this.executeCharTest('ɟ', ['dotless j with stroke']);
+  this.executeCharTest('ɨ', ['i with stroke']);
+  this.executeCharTest('ʄ', ['dotless j with stroke and hook']);
+  this.executeCharTest('ʡ', ['latin letter glottal stop with stroke']);
+  this.executeCharTest('ʢ', ['latin letter reversed glottal stop with stroke']);
+  this.executeCharTest('ᴓ', ['sideways o with stroke']);
+  this.executeCharTest('ᵼ', ['iota with stroke']);
+  this.executeCharTest('ᵽ', ['p with stroke']);
+  this.executeCharTest('ᵿ', ['upsilon with stroke']);
+  this.executeCharTest('ẜ', ['long s with diagonal stroke']);
+  this.executeCharTest('ẝ', ['long s with high stroke']);
+  this.executeCharTest('ƍ', ['turned delta']);
+  this.executeCharTest('ẛ', ['long s with dot above']);
+  this.executeCharTest('ẟ', ['delta']);
+  this.executeCharTest('ĸ', ['kra']);
+  this.executeCharTest('ſ', ['long s']);
+  this.executeCharTest('ƃ', ['b with topbar']);
+  this.executeCharTest('ƅ', ['tone six']);
+  this.executeCharTest('ƈ', ['c with hook']);
+  this.executeCharTest('ƌ', ['d with topbar']);
+  this.executeCharTest('ƒ', ['f with hook']);
+  this.executeCharTest('ƕ', ['hv']);
+  this.executeCharTest('ƙ', ['k with hook']);
+  this.executeCharTest('ƚ', ['l with bar']);
+  this.executeCharTest('ƞ', ['n with long right leg']);
+  this.executeCharTest('ơ', ['o with horn']);
+  this.executeCharTest('ƣ', ['oi']);
+  this.executeCharTest('ƥ', ['p with hook']);
+  this.executeCharTest('ƨ', ['tone two']);
+  this.executeCharTest('ƪ', ['latin letter reversed esh loop']);
+  this.executeCharTest('ƫ', ['t with palatal hook']);
+  this.executeCharTest('ƭ', ['t with hook']);
+  this.executeCharTest('ư', ['u with horn']);
+  this.executeCharTest('ƴ', ['y with hook']);
+  this.executeCharTest('ƹ', ['ezh reversed']);
+  this.executeCharTest('ƺ', ['ezh with tail']);
+  this.executeCharTest('ƽ', ['tone five']);
+  this.executeCharTest('ƿ', ['latin letter wynn']);
+  this.executeCharTest('ǆ', ['dz with caron']);
+  this.executeCharTest('ǉ', ['lj']);
+  this.executeCharTest('ǌ', ['nj']);
+  this.executeCharTest('ǣ', ['ae with macron']);
+  this.executeCharTest('ǯ', ['ezh with caron']);
+  this.executeCharTest('ǳ', ['dz']);
+  this.executeCharTest('ȝ', ['yogh']);
+  this.executeCharTest('ɮ', ['lezh']);
+  this.executeCharTest('ʒ', ['ezh']);
+  this.executeCharTest('ʓ', ['ezh with curl']);
+  this.executeCharTest('ʤ', ['dezh digraph']);
+  this.executeCharTest('ǝ', ['turned e']);
+  this.executeCharTest('ǽ', ['ae with acute']);
+  this.executeCharTest('ȡ', ['d with curl']);
+  this.executeCharTest('ȣ', ['ou']);
+  this.executeCharTest('ȥ', ['z with hook']);
+  this.executeCharTest('ȴ', ['l with curl']);
+  this.executeCharTest('ȵ', ['n with curl']);
+  this.executeCharTest('ȶ', ['t with curl']);
+  this.executeCharTest('ȸ', ['db digraph']);
+  this.executeCharTest('ȹ', ['qp digraph']);
+  this.executeCharTest('ȿ', ['s with swash tail']);
+  this.executeCharTest('ɀ', ['z with swash tail']);
+  this.executeCharTest('ɂ', ['glottal stop']);
+  this.executeCharTest('ɋ', ['q with hook tail']);
+  this.executeCharTest('ɐ', ['turned a']);
+  this.executeCharTest('ɑ', ['alpha']);
+  this.executeCharTest('ɒ', ['turned alpha']);
+  this.executeCharTest('ɓ', ['b with hook']);
+  this.executeCharTest('ɔ', ['open o']);
+  this.executeCharTest('ɕ', ['c with curl']);
+  this.executeCharTest('ɖ', ['d with tail']);
+  this.executeCharTest('ɗ', ['d with hook']);
+  this.executeCharTest('ɘ', ['reversed e']);
+  this.executeCharTest('ə', ['schwa']);
+  this.executeCharTest('ɚ', ['schwa with hook']);
+  this.executeCharTest('ɛ', ['open e']);
+  this.executeCharTest('ɜ', ['reversed open e']);
+  this.executeCharTest('ɝ', ['reversed open e with hook']);
+  this.executeCharTest('ɞ', ['closed reversed open e']);
+  this.executeCharTest('ɠ', ['g with hook']);
+  this.executeCharTest('ɡ', ['script g']);
+  this.executeCharTest('ɣ', ['gamma']);
+  this.executeCharTest('ɤ', ['rams horn']);
+  this.executeCharTest('ɥ', ['turned h']);
+  this.executeCharTest('ɦ', ['h with hook']);
+  this.executeCharTest('ɧ', ['heng with hook']);
+  this.executeCharTest('ɩ', ['iota']);
+  this.executeCharTest('ɫ', ['l with middle tilde']);
+  this.executeCharTest('ɬ', ['l with belt']);
+  this.executeCharTest('ɭ', ['l with retroflex hook']);
+  this.executeCharTest('ɯ', ['turned m']);
+  this.executeCharTest('ɰ', ['turned m with long leg']);
+  this.executeCharTest('ɱ', ['m with hook']);
+  this.executeCharTest('ɲ', ['n with left hook']);
+  this.executeCharTest('ɳ', ['n with retroflex hook']);
+  this.executeCharTest('ɵ', ['barred o']);
+  this.executeCharTest('ɷ', ['closed omega']);
+  this.executeCharTest('ɸ', ['phi']);
+  this.executeCharTest('ɹ', ['turned r']);
+  this.executeCharTest('ɺ', ['turned r with long leg']);
+  this.executeCharTest('ɻ', ['turned r with hook']);
+  this.executeCharTest('ɼ', ['r with long leg']);
+  this.executeCharTest('ɽ', ['r with tail']);
+  this.executeCharTest('ɾ', ['r with fishhook']);
+  this.executeCharTest('ɿ', ['reversed r with fishhook']);
+  this.executeCharTest('ʂ', ['s with hook']);
+  this.executeCharTest('ʃ', ['esh']);
+  this.executeCharTest('ʅ', ['squat reversed esh']);
+  this.executeCharTest('ʆ', ['esh with curl']);
+  this.executeCharTest('ʇ', ['turned t']);
+  this.executeCharTest('ʈ', ['t with retroflex hook']);
+  this.executeCharTest('ʉ', ['u bar']);
+  this.executeCharTest('ʊ', ['upsilon']);
+  this.executeCharTest('ʋ', ['v with hook']);
+  this.executeCharTest('ʌ', ['turned v']);
+  this.executeCharTest('ʍ', ['turned w']);
+  this.executeCharTest('ʎ', ['turned y']);
+  this.executeCharTest('ʐ', ['z with retroflex hook']);
+  this.executeCharTest('ʑ', ['z with curl']);
+  this.executeCharTest('ʕ', ['latin letter pharyngeal voiced fricative']);
+  this.executeCharTest('ʖ', ['latin letter inverted glottal stop']);
+  this.executeCharTest('ʗ', ['latin letter stretched c']);
+  this.executeCharTest('ʘ', ['latin letter bilabial click']);
+  this.executeCharTest('ʚ', ['closed open e']);
+  this.executeCharTest('ʞ', ['turned k']);
+  this.executeCharTest('ʠ', ['q with hook']);
+  this.executeCharTest('ʣ', ['dz digraph']);
+  this.executeCharTest('ʥ', ['dz digraph with curl']);
+  this.executeCharTest('ʦ', ['ts digraph']);
+  this.executeCharTest('ʧ', ['tesh digraph']);
+  this.executeCharTest('ʨ', ['tc digraph with curl']);
+  this.executeCharTest('ʩ', ['feng digraph']);
+  this.executeCharTest('ʪ', ['ls digraph']);
+  this.executeCharTest('ʫ', ['lz digraph']);
+  this.executeCharTest('ʬ', ['latin letter bilabial percussive']);
+  this.executeCharTest('ʭ', ['latin letter bidental percussive']);
+  this.executeCharTest('ʮ', ['turned h with fishhook']);
+  this.executeCharTest('ʯ', ['turned h with fishhook and tail']);
+  this.executeCharTest('ᴂ', ['turned ae']);
+  this.executeCharTest('ᴈ', ['turned open e']);
+  this.executeCharTest('ᴉ', ['turned i']);
+  this.executeCharTest('ᴑ', ['sideways o']);
+  this.executeCharTest('ᴒ', ['sideways open o']);
+  this.executeCharTest('ᴔ', ['turned oe']);
+  this.executeCharTest('ᴖ', ['top half o']);
+  this.executeCharTest('ᴗ', ['bottom half o']);
+  this.executeCharTest('ᴝ', ['sideways u']);
+  this.executeCharTest('ᴞ', ['sideways diaeresized u']);
+  this.executeCharTest('ᴟ', ['sideways turned m']);
+  this.executeCharTest('ᴤ', ['latin letter voiced laryngeal spirant']);
+  this.executeCharTest('ᴥ', ['latin letter ain']);
+  this.executeCharTest('ᵫ', ['ue']);
+  this.executeCharTest('ᵬ', ['b with middle tilde']);
+  this.executeCharTest('ᵭ', ['d with middle tilde']);
+  this.executeCharTest('ᵮ', ['f with middle tilde']);
+  this.executeCharTest('ᵯ', ['m with middle tilde']);
+  this.executeCharTest('ᵰ', ['n with middle tilde']);
+  this.executeCharTest('ᵱ', ['p with middle tilde']);
+  this.executeCharTest('ᵲ', ['r with middle tilde']);
+  this.executeCharTest('ᵳ', ['r with fishhook and middle tilde']);
+  this.executeCharTest('ᵴ', ['s with middle tilde']);
+  this.executeCharTest('ᵵ', ['t with middle tilde']);
+  this.executeCharTest('ᵶ', ['z with middle tilde']);
+  this.executeCharTest('ᵷ', ['turned g']);
+  this.executeCharTest('ᵹ', ['insular g']);
+  this.executeCharTest('ᵺ', ['th with strikethrough']);
+  this.executeCharTest('ᶀ', ['b with palatal hook']);
+  this.executeCharTest('ᶁ', ['d with palatal hook']);
+  this.executeCharTest('ᶂ', ['f with palatal hook']);
+  this.executeCharTest('ᶃ', ['g with palatal hook']);
+  this.executeCharTest('ᶄ', ['k with palatal hook']);
+  this.executeCharTest('ᶅ', ['l with palatal hook']);
+  this.executeCharTest('ᶆ', ['m with palatal hook']);
+  this.executeCharTest('ᶇ', ['n with palatal hook']);
+  this.executeCharTest('ᶈ', ['p with palatal hook']);
+  this.executeCharTest('ᶉ', ['r with palatal hook']);
+  this.executeCharTest('ᶊ', ['s with palatal hook']);
+  this.executeCharTest('ᶋ', ['esh with palatal hook']);
+  this.executeCharTest('ᶌ', ['v with palatal hook']);
+  this.executeCharTest('ᶍ', ['x with palatal hook']);
+  this.executeCharTest('ᶎ', ['z with palatal hook']);
+  this.executeCharTest('ᶏ', ['a with retroflex hook']);
+  this.executeCharTest('ᶐ', ['alpha with retroflex hook']);
+  this.executeCharTest('ᶑ', ['d with hook and tail']);
+  this.executeCharTest('ᶒ', ['e with retroflex hook']);
+  this.executeCharTest('ᶓ', ['open e with retroflex hook']);
+  this.executeCharTest('ᶔ', ['reversed open e with retroflex hook']);
+  this.executeCharTest('ᶕ', ['schwa with retroflex hook']);
+  this.executeCharTest('ᶖ', ['i with retroflex hook']);
+  this.executeCharTest('ᶗ', ['open o with retroflex hook']);
+  this.executeCharTest('ᶘ', ['esh with retroflex hook']);
+  this.executeCharTest('ᶙ', ['u with retroflex hook']);
+  this.executeCharTest('ᶚ', ['ezh with retroflex hook']);
+  this.executeCharTest('ŉ', ['n preceded by apostrophe']);
+  this.executeCharTest('ŋ', ['eng']);
+  this.executeCharTest('à', ['modifying above a with grave']);
+  this.executeCharTest('á', ['modifying above a with acute']);
+  this.executeCharTest('â', ['modifying above a with caret']);
+  this.executeCharTest('ã', ['a overtilde']);
+  this.executeCharTest('ä', ['modifying above a with double dot']);
+  this.executeCharTest('å', ['modifying above a with ring']);
+  this.executeCharTest('ç', ['modifying above c with cedilla']);
+  this.executeCharTest('è', ['modifying above e with grave']);
+  this.executeCharTest('é', ['modifying above e with acute']);
+  this.executeCharTest('ê', ['modifying above e with caret']);
+  this.executeCharTest('ë', ['modifying above e with double dot']);
+  this.executeCharTest('ì', ['modifying above i with grave']);
+  this.executeCharTest('í', ['modifying above i with acute']);
+  this.executeCharTest('î', ['modifying above i with caret']);
+  this.executeCharTest('ï', ['modifying above i with double dot']);
+  this.executeCharTest('ñ', ['n overtilde']);
+  this.executeCharTest('ò', ['modifying above o with grave']);
+  this.executeCharTest('ó', ['modifying above o with acute']);
+  this.executeCharTest('ô', ['modifying above o with caret']);
+  this.executeCharTest('õ', ['o overtilde']);
+  this.executeCharTest('ö', ['modifying above o with double dot']);
+  this.executeCharTest('ù', ['modifying above u with grave']);
+  this.executeCharTest('ú', ['modifying above u with acute']);
+  this.executeCharTest('û', ['modifying above u with caret']);
+  this.executeCharTest('ü', ['modifying above u with double dot']);
+  this.executeCharTest('ý', ['modifying above y with acute']);
+  this.executeCharTest('ÿ', ['modifying above y with double dot']);
+  this.executeCharTest('ā', ['a overbar']);
+  this.executeCharTest('ă', ['modifying above a with breve']);
+  this.executeCharTest('ą', ['modifying above a with ogonek']);
+  this.executeCharTest('ć', ['modifying above c with acute']);
+  this.executeCharTest('ĉ', ['modifying above c with caret']);
+  this.executeCharTest('ċ', ['modifying above c with dot']);
+  this.executeCharTest('č', ['modifying above c with caron']);
+  this.executeCharTest('ď', ['modifying above d with caron']);
+  this.executeCharTest('ē', ['e overbar']);
+  this.executeCharTest('ĕ', ['modifying above e with breve']);
+  this.executeCharTest('ė', ['modifying above e with dot']);
+  this.executeCharTest('ę', ['modifying above e with ogonek']);
+  this.executeCharTest('ě', ['modifying above e with caron']);
+  this.executeCharTest('ĝ', ['modifying above g with caret']);
+  this.executeCharTest('ğ', ['modifying above g with breve']);
+  this.executeCharTest('ġ', ['modifying above g with dot']);
+  this.executeCharTest('ģ', ['modifying above g with cedilla']);
+  this.executeCharTest('ĥ', ['modifying above h with caret']);
+  this.executeCharTest('ĩ', ['i overtilde']);
+  this.executeCharTest('ī', ['i overbar']);
+  this.executeCharTest('ĭ', ['modifying above i with breve']);
+  this.executeCharTest('į', ['modifying above i with ogonek']);
+  this.executeCharTest('ı', ['modifying above dotless i']);
+  this.executeCharTest('ĵ', ['modifying above j with caret']);
+  this.executeCharTest('ķ', ['modifying above k with cedilla']);
+  this.executeCharTest('ĺ', ['modifying above l with acute']);
+  this.executeCharTest('ļ', ['modifying above l with cedilla']);
+  this.executeCharTest('ľ', ['modifying above l with caron']);
+  this.executeCharTest('ŀ', ['modifying above l with middle dot']);
+  this.executeCharTest('ń', ['modifying above n with acute']);
+  this.executeCharTest('ņ', ['modifying above n with cedilla']);
+  this.executeCharTest('ň', ['modifying above n with caron']);
+  this.executeCharTest('ō', ['o overbar']);
+  this.executeCharTest('ŏ', ['modifying above o with breve']);
+  this.executeCharTest('ő', ['modifying above o with double acute']);
+  this.executeCharTest('ŕ', ['modifying above r with acute']);
+  this.executeCharTest('ŗ', ['modifying above r with cedilla']);
+  this.executeCharTest('ř', ['modifying above r with caron']);
+  this.executeCharTest('ś', ['modifying above s with acute']);
+  this.executeCharTest('ŝ', ['modifying above s with caret']);
+  this.executeCharTest('ş', ['modifying above s with cedilla']);
+  this.executeCharTest('š', ['modifying above s with caron']);
+  this.executeCharTest('ţ', ['modifying above t with cedilla']);
+  this.executeCharTest('ť', ['modifying above t with caron']);
+  this.executeCharTest('ũ', ['u overtilde']);
+  this.executeCharTest('ū', ['u overbar']);
+  this.executeCharTest('ŭ', ['modifying above u with breve']);
+  this.executeCharTest('ů', ['modifying above u with ring']);
+  this.executeCharTest('ű', ['modifying above u with double acute']);
+  this.executeCharTest('ų', ['modifying above u with ogonek']);
+  this.executeCharTest('ŵ', ['modifying above w with caret']);
+  this.executeCharTest('ŷ', ['modifying above y with caret']);
+  this.executeCharTest('ź', ['modifying above z with acute']);
+  this.executeCharTest('ż', ['modifying above z with dot']);
+  this.executeCharTest('ž', ['modifying above z with caron']);
+  this.executeCharTest('ǎ', ['modifying above a with caron']);
+  this.executeCharTest('ǐ', ['modifying above i with caron']);
+  this.executeCharTest('ǒ', ['modifying above o with caron']);
+  this.executeCharTest('ǔ', ['modifying above u with caron']);
+  this.executeCharTest('ǧ', ['modifying above g with caron']);
+  this.executeCharTest('ǩ', ['modifying above k with caron']);
+  this.executeCharTest('ǫ', ['modifying above o with ogonek']);
+  this.executeCharTest('ǰ', ['modifying above j with caron']);
+  this.executeCharTest('ǵ', ['modifying above g with acute']);
+  this.executeCharTest('ǹ', ['modifying above n with grave']);
+  this.executeCharTest('ȁ', ['modifying above a with double grave']);
+  this.executeCharTest('ȃ', ['modifying above a with inverted breve']);
+  this.executeCharTest('ȅ', ['modifying above e with double grave']);
+  this.executeCharTest('ȇ', ['modifying above e with inverted breve']);
+  this.executeCharTest('ȉ', ['modifying above i with double grave']);
+  this.executeCharTest('ȋ', ['modifying above i with inverted breve']);
+  this.executeCharTest('ȍ', ['modifying above o with double grave']);
+  this.executeCharTest('ȏ', ['modifying above o with inverted breve']);
+  this.executeCharTest('ȑ', ['modifying above r with double grave']);
+  this.executeCharTest('ȓ', ['modifying above r with inverted breve']);
+  this.executeCharTest('ȕ', ['modifying above u with double grave']);
+  this.executeCharTest('ȗ', ['modifying above u with inverted breve']);
+  this.executeCharTest('ș', ['modifying below s with comma below']);
+  this.executeCharTest('ț', ['modifying below t with comma below']);
+  this.executeCharTest('ȟ', ['modifying above h with caron']);
+  this.executeCharTest('ȧ', ['modifying above a with dot']);
+  this.executeCharTest('ȩ', ['modifying above e with cedilla']);
+  this.executeCharTest('ȯ', ['modifying above o with dot']);
+  this.executeCharTest('ȳ', ['y overbar']);
+  this.executeCharTest('ȷ', ['modifying above dotless j']);
+  this.executeCharTest('ḁ', ['modifying below a with ring below']);
+  this.executeCharTest('ḃ', ['modifying above b with dot']);
+  this.executeCharTest('ḅ', ['modifying below b with dot']);
+  this.executeCharTest('ḇ', ['b underbar']);
+  this.executeCharTest('ḋ', ['modifying above d with dot']);
+  this.executeCharTest('ḍ', ['modifying below d with dot']);
+  this.executeCharTest('ḏ', ['d underbar']);
+  this.executeCharTest('ḑ', ['modifying above d with cedilla']);
+  this.executeCharTest('ḓ', ['modifying below d with caret']);
+  this.executeCharTest('ḙ', ['modifying below e with caret']);
+  this.executeCharTest('ḛ', ['e undertilde']);
+  this.executeCharTest('ḟ', ['modifying above f with dot']);
+  this.executeCharTest('ḡ', ['g overbar']);
+  this.executeCharTest('ḣ', ['modifying above h with dot']);
+  this.executeCharTest('ḥ', ['modifying below h with dot']);
+  this.executeCharTest('ḧ', ['modifying above h with double dot']);
+  this.executeCharTest('ḩ', ['modifying above h with cedilla']);
+  this.executeCharTest('ḫ', ['modifying below h with breve below']);
+  this.executeCharTest('ḭ', ['i undertilde']);
+  this.executeCharTest('ḱ', ['modifying above k with acute']);
+  this.executeCharTest('ḳ', ['modifying below k with dot']);
+  this.executeCharTest('ḵ', ['k underbar']);
+  this.executeCharTest('ḷ', ['modifying below l with dot']);
+  this.executeCharTest('ḻ', ['l underbar']);
+  this.executeCharTest('ḽ', ['modifying below l with caret']);
+  this.executeCharTest('ḿ', ['modifying above m with acute']);
+  this.executeCharTest('ṁ', ['modifying above m with dot']);
+  this.executeCharTest('ṃ', ['modifying below m with dot']);
+  this.executeCharTest('ṅ', ['modifying above n with dot']);
+  this.executeCharTest('ṇ', ['modifying below n with dot']);
+  this.executeCharTest('ṉ', ['n underbar']);
+  this.executeCharTest('ṋ', ['modifying below n with caret']);
+  this.executeCharTest('ṕ', ['modifying above p with acute']);
+  this.executeCharTest('ṗ', ['modifying above p with dot']);
+  this.executeCharTest('ṙ', ['modifying above r with dot']);
+  this.executeCharTest('ṛ', ['modifying below r with dot']);
+  this.executeCharTest('ṟ', ['r underbar']);
+  this.executeCharTest('ṡ', ['modifying above s with dot']);
+  this.executeCharTest('ṣ', ['modifying below s with dot']);
+  this.executeCharTest('ṫ', ['modifying above t with dot']);
+  this.executeCharTest('ṭ', ['modifying below t with dot']);
+  this.executeCharTest('ṯ', ['t underbar']);
+  this.executeCharTest('ṱ', ['modifying below t with caret']);
+  this.executeCharTest('ṳ', ['modifying below u with double dot']);
+  this.executeCharTest('ṵ', ['u undertilde']);
+  this.executeCharTest('ṷ', ['modifying below u with caret']);
+  this.executeCharTest('ṽ', ['v overtilde']);
+  this.executeCharTest('ṿ', ['modifying below v with dot']);
+  this.executeCharTest('ẁ', ['modifying above w with grave']);
+  this.executeCharTest('ẃ', ['modifying above w with acute']);
+  this.executeCharTest('ẅ', ['modifying above w with double dot']);
+  this.executeCharTest('ẇ', ['modifying above w with dot']);
+  this.executeCharTest('ẉ', ['modifying below w with dot']);
+  this.executeCharTest('ẋ', ['modifying above x with dot']);
+  this.executeCharTest('ẍ', ['modifying above x with double dot']);
+  this.executeCharTest('ẏ', ['modifying above y with dot']);
+  this.executeCharTest('ẑ', ['modifying above z with caret']);
+  this.executeCharTest('ẓ', ['modifying below z with dot']);
+  this.executeCharTest('ẕ', ['z underbar']);
+  this.executeCharTest('ẖ', ['h underbar']);
+  this.executeCharTest('ẗ', ['modifying above t with double dot']);
+  this.executeCharTest('ẘ', ['modifying above w with ring']);
+  this.executeCharTest('ẙ', ['modifying above y with ring']);
+  this.executeCharTest('ẚ', ['modifying above a with right half ring']);
+  this.executeCharTest('ạ', ['modifying below a with dot']);
+  this.executeCharTest('ả', ['modifying above a with hook']);
+  this.executeCharTest('ẹ', ['modifying below e with dot']);
+  this.executeCharTest('ẻ', ['modifying above e with hook']);
+  this.executeCharTest('ẽ', ['e overtilde']);
+  this.executeCharTest('ỉ', ['modifying above i with hook']);
+  this.executeCharTest('ị', ['modifying below i with dot']);
+  this.executeCharTest('ọ', ['modifying below o with dot']);
+  this.executeCharTest('ỏ', ['modifying above o with hook']);
+  this.executeCharTest('ụ', ['modifying below u with dot']);
+  this.executeCharTest('ủ', ['modifying above u with hook']);
+  this.executeCharTest('ỳ', ['modifying above y with grave']);
+  this.executeCharTest('ỵ', ['modifying below y with dot']);
+  this.executeCharTest('ỷ', ['modifying above y with hook']);
+  this.executeCharTest('ỹ', ['y overtilde']);
+  this.executeCharTest('ͣ', ['combining a']);
+  this.executeCharTest('ͤ', ['combining e']);
+  this.executeCharTest('ͥ', ['combining i']);
+  this.executeCharTest('ͦ', ['combining o']);
+  this.executeCharTest('ͧ', ['combining u']);
+  this.executeCharTest('ͨ', ['combining c']);
+  this.executeCharTest('ͩ', ['combining d']);
+  this.executeCharTest('ͪ', ['combining h']);
+  this.executeCharTest('ͫ', ['combining m']);
+  this.executeCharTest('ͬ', ['combining r']);
+  this.executeCharTest('ͭ', ['combining t']);
+  this.executeCharTest('ͮ', ['combining v']);
+  this.executeCharTest('ͯ', ['combining x']);
+  this.executeCharTest('ᵢ', ['subscript i']);
+  this.executeCharTest('ᵣ', ['subscript r']);
+  this.executeCharTest('ᵤ', ['subscript u']);
+  this.executeCharTest('ᵥ', ['subscript v']);
+  this.executeCharTest('᷊', ['combining r below']);
+  this.executeCharTest('ᷓ', ['combining flattened open a above']);
+  this.executeCharTest('ᷔ', ['combining ae']);
+  this.executeCharTest('ᷕ', ['combining ao']);
+  this.executeCharTest('ᷖ', ['combining av']);
+  this.executeCharTest('ᷗ', ['combining c cedilla']);
+  this.executeCharTest('ᷘ', ['combining insular d']);
+  this.executeCharTest('ᷙ', ['combining eth']);
+  this.executeCharTest('ᷚ', ['combining g']);
+  this.executeCharTest('ᷛ', ['combining small upper G']);
+  this.executeCharTest('ᷜ', ['combining k']);
+  this.executeCharTest('ᷝ', ['combining l']);
+  this.executeCharTest('ᷞ', ['combining small upper L']);
+  this.executeCharTest('ᷟ', ['combining small upper M']);
+  this.executeCharTest('ᷠ', ['combining n']);
+  this.executeCharTest('ᷡ', ['combining small upper N']);
+  this.executeCharTest('ᷢ', ['combining small upper R']);
+  this.executeCharTest('ᷣ', ['combining r rotunda']);
+  this.executeCharTest('ᷤ', ['combining s']);
+  this.executeCharTest('ᷥ', ['combining long s']);
+  this.executeCharTest('ᷦ', ['combining z']);
+  this.executeCharTest('ⁱ', ['superscript i']);
+  this.executeCharTest('ⁿ', ['superscript n']);
+  this.executeCharTest('ₐ', ['subscript a']);
+  this.executeCharTest('ₑ', ['subscript e']);
+  this.executeCharTest('ₒ', ['subscript o']);
+  this.executeCharTest('ₓ', ['subscript x']);
+  this.executeCharTest('ₔ', ['subscript schwa']);
+  this.executeCharTest('ₕ', ['subscript h']);
+  this.executeCharTest('ₖ', ['subscript k']);
+  this.executeCharTest('ₗ', ['subscript l']);
+  this.executeCharTest('ₘ', ['subscript m']);
+  this.executeCharTest('ₙ', ['subscript n']);
+  this.executeCharTest('ₚ', ['subscript p']);
+  this.executeCharTest('ₛ', ['subscript s']);
+  this.executeCharTest('ₜ', ['subscript t']);
+  this.executeCharTest('⒜', ['parenthesized a']);
+  this.executeCharTest('⒝', ['parenthesized b']);
+  this.executeCharTest('⒞', ['parenthesized c']);
+  this.executeCharTest('⒟', ['parenthesized d']);
+  this.executeCharTest('⒠', ['parenthesized e']);
+  this.executeCharTest('⒡', ['parenthesized f']);
+  this.executeCharTest('⒢', ['parenthesized g']);
+  this.executeCharTest('⒣', ['parenthesized h']);
+  this.executeCharTest('⒤', ['parenthesized i']);
+  this.executeCharTest('⒥', ['parenthesized j']);
+  this.executeCharTest('⒦', ['parenthesized k']);
+  this.executeCharTest('⒧', ['parenthesized l']);
+  this.executeCharTest('⒨', ['parenthesized m']);
+  this.executeCharTest('⒩', ['parenthesized n']);
+  this.executeCharTest('⒪', ['parenthesized o']);
+  this.executeCharTest('⒫', ['parenthesized p']);
+  this.executeCharTest('⒬', ['parenthesized q']);
+  this.executeCharTest('⒭', ['parenthesized r']);
+  this.executeCharTest('⒮', ['parenthesized s']);
+  this.executeCharTest('⒯', ['parenthesized t']);
+  this.executeCharTest('⒰', ['parenthesized u']);
+  this.executeCharTest('⒱', ['parenthesized v']);
+  this.executeCharTest('⒲', ['parenthesized w']);
+  this.executeCharTest('⒳', ['parenthesized x']);
+  this.executeCharTest('⒴', ['parenthesized y']);
+  this.executeCharTest('⒵', ['parenthesized z']);
+  this.executeCharTest('Ⓐ', ['circled upper A']);
+  this.executeCharTest('Ⓑ', ['circled upper B']);
+  this.executeCharTest('Ⓒ', ['circled upper C']);
+  this.executeCharTest('Ⓓ', ['circled upper D']);
+  this.executeCharTest('Ⓔ', ['circled upper E']);
+  this.executeCharTest('Ⓕ', ['circled upper F']);
+  this.executeCharTest('Ⓖ', ['circled upper G']);
+  this.executeCharTest('Ⓗ', ['circled upper H']);
+  this.executeCharTest('Ⓘ', ['circled upper I']);
+  this.executeCharTest('Ⓙ', ['circled upper J']);
+  this.executeCharTest('Ⓚ', ['circled upper K']);
+  this.executeCharTest('Ⓛ', ['circled upper L']);
+  this.executeCharTest('Ⓜ', ['circled upper M']);
+  this.executeCharTest('Ⓝ', ['circled upper N']);
+  this.executeCharTest('Ⓞ', ['circled upper O']);
+  this.executeCharTest('Ⓟ', ['circled upper P']);
+  this.executeCharTest('Ⓠ', ['circled upper Q']);
+  this.executeCharTest('Ⓡ', ['circled upper R']);
+  this.executeCharTest('Ⓢ', ['circled upper S']);
+  this.executeCharTest('Ⓣ', ['circled upper T']);
+  this.executeCharTest('Ⓤ', ['circled upper U']);
+  this.executeCharTest('Ⓥ', ['circled upper V']);
+  this.executeCharTest('Ⓦ', ['circled upper W']);
+  this.executeCharTest('Ⓧ', ['circled upper X']);
+  this.executeCharTest('Ⓨ', ['circled upper Y']);
+  this.executeCharTest('Ⓩ', ['circled upper Z']);
+  this.executeCharTest('ⓐ', ['circled a']);
+  this.executeCharTest('ⓑ', ['circled b']);
+  this.executeCharTest('ⓒ', ['circled c']);
+  this.executeCharTest('ⓓ', ['circled d']);
+  this.executeCharTest('ⓔ', ['circled e']);
+  this.executeCharTest('ⓕ', ['circled f']);
+  this.executeCharTest('ⓖ', ['circled g']);
+  this.executeCharTest('ⓗ', ['circled h']);
+  this.executeCharTest('ⓘ', ['circled i']);
+  this.executeCharTest('ⓙ', ['circled j']);
+  this.executeCharTest('ⓚ', ['circled k']);
+  this.executeCharTest('ⓛ', ['circled l']);
+  this.executeCharTest('ⓜ', ['circled m']);
+  this.executeCharTest('ⓝ', ['circled n']);
+  this.executeCharTest('ⓞ', ['circled o']);
+  this.executeCharTest('ⓟ', ['circled p']);
+  this.executeCharTest('ⓠ', ['circled q']);
+  this.executeCharTest('ⓡ', ['circled r']);
+  this.executeCharTest('ⓢ', ['circled s']);
+  this.executeCharTest('ⓣ', ['circled t']);
+  this.executeCharTest('ⓤ', ['circled u']);
+  this.executeCharTest('ⓥ', ['circled v']);
+  this.executeCharTest('ⓦ', ['circled w']);
+  this.executeCharTest('ⓧ', ['circled x']);
+  this.executeCharTest('ⓨ', ['circled y']);
+  this.executeCharTest('ⓩ', ['circled z']);
+  this.executeCharTest('ⱼ', ['subscript j']);
+  this.executeCharTest('🄐', ['parenthesized upper A']);
+  this.executeCharTest('🄑', ['parenthesized upper B']);
+  this.executeCharTest('🄒', ['parenthesized upper C']);
+  this.executeCharTest('🄓', ['parenthesized upper D']);
+  this.executeCharTest('🄔', ['parenthesized upper E']);
+  this.executeCharTest('🄕', ['parenthesized upper F']);
+  this.executeCharTest('🄖', ['parenthesized upper G']);
+  this.executeCharTest('🄗', ['parenthesized upper H']);
+  this.executeCharTest('🄘', ['parenthesized upper I']);
+  this.executeCharTest('🄙', ['parenthesized upper J']);
+  this.executeCharTest('🄚', ['parenthesized upper K']);
+  this.executeCharTest('🄛', ['parenthesized upper L']);
+  this.executeCharTest('🄜', ['parenthesized upper M']);
+  this.executeCharTest('🄝', ['parenthesized upper N']);
+  this.executeCharTest('🄞', ['parenthesized upper O']);
+  this.executeCharTest('🄟', ['parenthesized upper P']);
+  this.executeCharTest('🄠', ['parenthesized upper Q']);
+  this.executeCharTest('🄡', ['parenthesized upper R']);
+  this.executeCharTest('🄢', ['parenthesized upper S']);
+  this.executeCharTest('🄣', ['parenthesized upper T']);
+  this.executeCharTest('🄤', ['parenthesized upper U']);
+  this.executeCharTest('🄥', ['parenthesized upper V']);
+  this.executeCharTest('🄦', ['parenthesized upper W']);
+  this.executeCharTest('🄧', ['parenthesized upper X']);
+  this.executeCharTest('🄨', ['parenthesized upper Y']);
+  this.executeCharTest('🄩', ['parenthesized upper Z']);
+  this.executeCharTest('🄪', ['tortoise shell bracketed upper S']);
+  this.executeCharTest('🄫', ['circled italic upper C']);
+  this.executeCharTest('🄬', ['circled italic upper R']);
+  this.executeCharTest('🄰', ['squared upper A']);
+  this.executeCharTest('🄱', ['squared upper B']);
+  this.executeCharTest('🄲', ['squared upper C']);
+  this.executeCharTest('🄳', ['squared upper D']);
+  this.executeCharTest('🄴', ['squared upper E']);
+  this.executeCharTest('🄵', ['squared upper F']);
+  this.executeCharTest('🄶', ['squared upper G']);
+  this.executeCharTest('🄷', ['squared upper H']);
+  this.executeCharTest('🄸', ['squared upper I']);
+  this.executeCharTest('🄹', ['squared upper J']);
+  this.executeCharTest('🄺', ['squared upper K']);
+  this.executeCharTest('🄻', ['squared upper L']);
+  this.executeCharTest('🄼', ['squared upper M']);
+  this.executeCharTest('🄽', ['squared upper N']);
+  this.executeCharTest('🄾', ['squared upper O']);
+  this.executeCharTest('🄿', ['squared upper P']);
+  this.executeCharTest('🅀', ['squared upper Q']);
+  this.executeCharTest('🅁', ['squared upper R']);
+  this.executeCharTest('🅂', ['squared upper S']);
+  this.executeCharTest('🅃', ['squared upper T']);
+  this.executeCharTest('🅄', ['squared upper U']);
+  this.executeCharTest('🅅', ['squared upper V']);
+  this.executeCharTest('🅆', ['squared upper W']);
+  this.executeCharTest('🅇', ['squared upper X']);
+  this.executeCharTest('🅈', ['squared upper Y']);
+  this.executeCharTest('🅉', ['squared upper Z']);
+  this.executeCharTest('🅐', ['negative circled upper A']);
+  this.executeCharTest('🅑', ['negative circled upper B']);
+  this.executeCharTest('🅒', ['negative circled upper C']);
+  this.executeCharTest('🅓', ['negative circled upper D']);
+  this.executeCharTest('🅔', ['negative circled upper E']);
+  this.executeCharTest('🅕', ['negative circled upper F']);
+  this.executeCharTest('🅖', ['negative circled upper G']);
+  this.executeCharTest('🅗', ['negative circled upper H']);
+  this.executeCharTest('🅘', ['negative circled upper I']);
+  this.executeCharTest('🅙', ['negative circled upper J']);
+  this.executeCharTest('🅚', ['negative circled upper K']);
+  this.executeCharTest('🅛', ['negative circled upper L']);
+  this.executeCharTest('🅜', ['negative circled upper M']);
+  this.executeCharTest('🅝', ['negative circled upper N']);
+  this.executeCharTest('🅞', ['negative circled upper O']);
+  this.executeCharTest('🅟', ['negative circled upper P']);
+  this.executeCharTest('🅠', ['negative circled upper Q']);
+  this.executeCharTest('🅡', ['negative circled upper R']);
+  this.executeCharTest('🅢', ['negative circled upper S']);
+  this.executeCharTest('🅣', ['negative circled upper T']);
+  this.executeCharTest('🅤', ['negative circled upper U']);
+  this.executeCharTest('🅥', ['negative circled upper V']);
+  this.executeCharTest('🅦', ['negative circled upper W']);
+  this.executeCharTest('🅧', ['negative circled upper X']);
+  this.executeCharTest('🅨', ['negative circled upper Y']);
+  this.executeCharTest('🅩', ['negative circled upper Z']);
+  this.executeCharTest('🅰', ['negative squared upper A']);
+  this.executeCharTest('🅱', ['negative squared upper B']);
+  this.executeCharTest('🅲', ['negative squared upper C']);
+  this.executeCharTest('🅳', ['negative squared upper D']);
+  this.executeCharTest('🅴', ['negative squared upper E']);
+  this.executeCharTest('🅵', ['negative squared upper F']);
+  this.executeCharTest('🅶', ['negative squared upper G']);
+  this.executeCharTest('🅷', ['negative squared upper H']);
+  this.executeCharTest('🅸', ['negative squared upper I']);
+  this.executeCharTest('🅹', ['negative squared upper J']);
+  this.executeCharTest('🅺', ['negative squared upper K']);
+  this.executeCharTest('🅻', ['negative squared upper L']);
+  this.executeCharTest('🅼', ['negative squared upper M']);
+  this.executeCharTest('🅽', ['negative squared upper N']);
+  this.executeCharTest('🅾', ['negative squared upper O']);
+  this.executeCharTest('🅿', ['negative squared upper P']);
+  this.executeCharTest('🆀', ['negative squared upper Q']);
+  this.executeCharTest('🆁', ['negative squared upper R']);
+  this.executeCharTest('🆂', ['negative squared upper S']);
+  this.executeCharTest('🆃', ['negative squared upper T']);
+  this.executeCharTest('🆄', ['negative squared upper U']);
+  this.executeCharTest('🆅', ['negative squared upper V']);
+  this.executeCharTest('🆆', ['negative squared upper W']);
+  this.executeCharTest('🆇', ['negative squared upper X']);
+  this.executeCharTest('🆈', ['negative squared upper Y']);
+  this.executeCharTest('🆉', ['negative squared upper Z']);
+  this.executeCharTest('🆊', ['crossed negative squared upper P']);
+  this.executeCharTest('Ǖ', ['upper U double overdot overbar']);
+  this.executeCharTest('Ǘ', ['upper U double overdot acute']);
+  this.executeCharTest('Ǚ', ['upper U double overdot caron']);
+  this.executeCharTest('Ǜ', ['upper U double overdot grave']);
+  this.executeCharTest('Ǟ', ['upper A double overdot overbar']);
+  this.executeCharTest('Ǡ', ['upper A overdot overbar']);
+  this.executeCharTest('Ǭ', ['upper O ogonek overbar']);
+  this.executeCharTest('Ǻ', ['upper A ring acute']);
+  this.executeCharTest('Ȫ', ['upper O double overdot overbar']);
+  this.executeCharTest('Ȭ', ['upper O tilde overbar']);
+  this.executeCharTest('Ȱ', ['upper O overdot overbar']);
+  this.executeCharTest('Ḉ', ['upper C cedilla acute']);
+  this.executeCharTest('Ḕ', ['upper E overbar grave']);
+  this.executeCharTest('Ḗ', ['upper E overbar acute']);
+  this.executeCharTest('Ḝ', ['upper E cedilla breve']);
+  this.executeCharTest('Ḯ', ['upper I double overdot acute']);
+  this.executeCharTest('Ḹ', ['upper L underdot overbar']);
+  this.executeCharTest('Ṍ', ['upper O tilde acute']);
+  this.executeCharTest('Ṏ', ['upper O tilde double overdot']);
+  this.executeCharTest('Ṑ', ['upper O overbar grave']);
+  this.executeCharTest('Ṓ', ['upper O overbar acute']);
+  this.executeCharTest('Ṝ', ['upper R overbar underdot']);
+  this.executeCharTest('Ṥ', ['upper S acute overdot']);
+  this.executeCharTest('Ṧ', ['upper S caron overdot']);
+  this.executeCharTest('Ṩ', ['upper S underdot overdot']);
+  this.executeCharTest('Ṹ', ['upper U tilde acute']);
+  this.executeCharTest('Ṻ', ['upper U overbar double overdot']);
+  this.executeCharTest('Ấ', ['upper A hat acute']);
+  this.executeCharTest('Ầ', ['upper A hat grave']);
+  this.executeCharTest('Ẩ', ['upper A hat hook']);
+  this.executeCharTest('Ẫ', ['upper A hat tilde']);
+  this.executeCharTest('Ậ', ['upper A hat underdot']);
+  this.executeCharTest('Ắ', ['upper A breve acute']);
+  this.executeCharTest('Ằ', ['upper A breve grave']);
+  this.executeCharTest('Ẳ', ['upper A breve hook']);
+  this.executeCharTest('Ẵ', ['upper A breve tilde']);
+  this.executeCharTest('Ặ', ['upper A breve underdot']);
+  this.executeCharTest('Ế', ['upper E hat acute']);
+  this.executeCharTest('Ề', ['upper E hat grave']);
+  this.executeCharTest('Ể', ['upper E hat hook']);
+  this.executeCharTest('Ễ', ['upper E hat tilde']);
+  this.executeCharTest('Ệ', ['upper E hat underdot']);
+  this.executeCharTest('Ố', ['upper O hat acute']);
+  this.executeCharTest('Ồ', ['upper O hat grave']);
+  this.executeCharTest('Ổ', ['upper O hat hook']);
+  this.executeCharTest('Ỗ', ['upper O hat tilde']);
+  this.executeCharTest('Ộ', ['upper O hat underdot']);
+  this.executeCharTest('Ớ', ['upper O acute prime']);
+  this.executeCharTest('Ờ', ['upper O grave prime']);
+  this.executeCharTest('Ở', ['upper O hook prime']);
+  this.executeCharTest('Ỡ', ['upper O tilde prime']);
+  this.executeCharTest('Ợ', ['upper O underdot prime']);
+  this.executeCharTest('Ứ', ['upper U acute prime']);
+  this.executeCharTest('Ừ', ['upper U grave prime']);
+  this.executeCharTest('Ử', ['upper U hook prime']);
+  this.executeCharTest('Ữ', ['upper U tilde prime']);
+  this.executeCharTest('Ự', ['upper U underdot prime']);
+  this.executeCharTest('A', ['cap A']);
+  this.executeCharTest('B', ['cap B']);
+  this.executeCharTest('C', ['cap C']);
+  this.executeCharTest('D', ['cap D']);
+  this.executeCharTest('E', ['cap E']);
+  this.executeCharTest('F', ['cap F']);
+  this.executeCharTest('G', ['cap G']);
+  this.executeCharTest('H', ['cap H']);
+  this.executeCharTest('I', ['cap I']);
+  this.executeCharTest('J', ['cap J']);
+  this.executeCharTest('K', ['cap K']);
+  this.executeCharTest('L', ['cap L']);
+  this.executeCharTest('M', ['cap M']);
+  this.executeCharTest('N', ['cap N']);
+  this.executeCharTest('O', ['cap O']);
+  this.executeCharTest('P', ['cap P']);
+  this.executeCharTest('Q', ['cap Q']);
+  this.executeCharTest('R', ['cap R']);
+  this.executeCharTest('S', ['cap S']);
+  this.executeCharTest('T', ['cap T']);
+  this.executeCharTest('U', ['cap U']);
+  this.executeCharTest('V', ['cap V']);
+  this.executeCharTest('W', ['cap W']);
+  this.executeCharTest('X', ['cap X']);
+  this.executeCharTest('Y', ['cap Y']);
+  this.executeCharTest('Z', ['cap Z']);
+  this.executeCharTest('Ａ', ['cap A']);
+  this.executeCharTest('Ｂ', ['cap B']);
+  this.executeCharTest('Ｃ', ['cap C']);
+  this.executeCharTest('Ｄ', ['cap D']);
+  this.executeCharTest('Ｅ', ['cap E']);
+  this.executeCharTest('Ｆ', ['cap F']);
+  this.executeCharTest('Ｇ', ['cap G']);
+  this.executeCharTest('Ｈ', ['cap H']);
+  this.executeCharTest('Ｉ', ['cap I']);
+  this.executeCharTest('Ｊ', ['cap J']);
+  this.executeCharTest('Ｋ', ['cap K']);
+  this.executeCharTest('Ｌ', ['cap L']);
+  this.executeCharTest('Ｍ', ['cap M']);
+  this.executeCharTest('Ｎ', ['cap N']);
+  this.executeCharTest('Ｏ', ['cap O']);
+  this.executeCharTest('Ｐ', ['cap P']);
+  this.executeCharTest('Ｑ', ['cap Q']);
+  this.executeCharTest('Ｒ', ['cap R']);
+  this.executeCharTest('Ｓ', ['cap S']);
+  this.executeCharTest('Ｔ', ['cap T']);
+  this.executeCharTest('Ｕ', ['cap U']);
+  this.executeCharTest('Ｖ', ['cap V']);
+  this.executeCharTest('Ｗ', ['cap W']);
+  this.executeCharTest('Ｘ', ['cap X']);
+  this.executeCharTest('Ｙ', ['cap Y']);
+  this.executeCharTest('Ｚ', ['cap Z']);
+  this.executeCharTest('À', ['modifying above upper A with grave']);
+  this.executeCharTest('Á', ['modifying above upper A with acute']);
+  this.executeCharTest('Â', ['modifying above upper A with caret']);
+  this.executeCharTest('Ã', ['upper A overtilde']);
+  this.executeCharTest('Ä', ['modifying above upper A with double dot']);
+  this.executeCharTest('Å', ['modifying above upper A with ring']);
+  this.executeCharTest('Ç', ['modifying above upper C with cedilla']);
+  this.executeCharTest('È', ['modifying above upper E with grave']);
+  this.executeCharTest('É', ['modifying above upper E with acute']);
+  this.executeCharTest('Ê', ['modifying above upper E with caret']);
+  this.executeCharTest('Ë', ['modifying above upper E with double dot']);
+  this.executeCharTest('Ì', ['modifying above upper I with grave']);
+  this.executeCharTest('Í', ['modifying above upper I with acute']);
+  this.executeCharTest('Î', ['modifying above upper I with caret']);
+  this.executeCharTest('Ï', ['modifying above upper I with double dot']);
+  this.executeCharTest('Ñ', ['upper N overtilde']);
+  this.executeCharTest('Ò', ['modifying above upper O with grave']);
+  this.executeCharTest('Ó', ['modifying above upper O with acute']);
+  this.executeCharTest('Ô', ['modifying above upper O with caret']);
+  this.executeCharTest('Õ', ['upper O overtilde']);
+  this.executeCharTest('Ö', ['modifying above upper O with double dot']);
+  this.executeCharTest('Ù', ['modifying above upper U with grave']);
+  this.executeCharTest('Ú', ['modifying above upper U with acute']);
+  this.executeCharTest('Û', ['modifying above upper U with caret']);
+  this.executeCharTest('Ü', ['modifying above upper U with double dot']);
+  this.executeCharTest('Ý', ['modifying above upper Y with acute']);
+  this.executeCharTest('Ā', ['upper A overbar']);
+  this.executeCharTest('Ă', ['modifying above upper A with breve']);
+  this.executeCharTest('Ą', ['modifying above upper A with ogonek']);
+  this.executeCharTest('Ć', ['modifying above upper C with acute']);
+  this.executeCharTest('Ĉ', ['modifying above upper C with caret']);
+  this.executeCharTest('Ċ', ['modifying above upper C with dot']);
+  this.executeCharTest('Č', ['modifying above upper C with caron']);
+  this.executeCharTest('Ď', ['modifying above upper D with caron']);
+  this.executeCharTest('Ē', ['upper E overbar']);
+  this.executeCharTest('Ĕ', ['modifying above upper E with breve']);
+  this.executeCharTest('Ė', ['modifying above upper E with dot']);
+  this.executeCharTest('Ę', ['modifying above upper E with ogonek']);
+  this.executeCharTest('Ě', ['modifying above upper E with caron']);
+  this.executeCharTest('Ĝ', ['modifying above upper G with caret']);
+  this.executeCharTest('Ğ', ['modifying above upper G with breve']);
+  this.executeCharTest('Ġ', ['modifying above upper G with dot']);
+  this.executeCharTest('Ģ', ['modifying above upper G with cedilla']);
+  this.executeCharTest('Ĥ', ['modifying above upper H with caret']);
+  this.executeCharTest('Ĩ', ['upper I overtilde']);
+  this.executeCharTest('Ī', ['upper I overbar']);
+  this.executeCharTest('Ĭ', ['modifying above upper I with breve']);
+  this.executeCharTest('Į', ['modifying above upper I with ogonek']);
+  this.executeCharTest('İ', ['modifying above upper I with dot']);
+  this.executeCharTest('Ĵ', ['modifying above upper J with caret']);
+  this.executeCharTest('Ķ', ['modifying above upper K with cedilla']);
+  this.executeCharTest('Ĺ', ['modifying above upper L with acute']);
+  this.executeCharTest('Ļ', ['modifying above upper L with cedilla']);
+  this.executeCharTest('Ľ', ['modifying above upper L with caron']);
+  this.executeCharTest('Ŀ', ['modifying above upper L with middle dot']);
+  this.executeCharTest('Ń', ['modifying above upper N with acute']);
+  this.executeCharTest('Ņ', ['modifying above upper N with cedilla']);
+  this.executeCharTest('Ň', ['modifying above upper N with caron']);
+  this.executeCharTest('Ō', ['upper O overbar']);
+  this.executeCharTest('Ŏ', ['modifying above upper O with breve']);
+  this.executeCharTest('Ő', ['modifying above upper O with double acute']);
+  this.executeCharTest('Ŕ', ['modifying above upper R with acute']);
+  this.executeCharTest('Ŗ', ['modifying above upper R with cedilla']);
+  this.executeCharTest('Ř', ['modifying above upper R with caron']);
+  this.executeCharTest('Ś', ['modifying above upper S with acute']);
+  this.executeCharTest('Ŝ', ['modifying above upper S with caret']);
+  this.executeCharTest('Ş', ['modifying above upper S with cedilla']);
+  this.executeCharTest('Š', ['modifying above upper S with caron']);
+  this.executeCharTest('Ţ', ['modifying above upper T with cedilla']);
+  this.executeCharTest('Ť', ['modifying above upper T with caron']);
+  this.executeCharTest('Ũ', ['upper U overtilde']);
+  this.executeCharTest('Ū', ['upper U overbar']);
+  this.executeCharTest('Ŭ', ['modifying above upper U with breve']);
+  this.executeCharTest('Ů', ['modifying above upper U with ring']);
+  this.executeCharTest('Ű', ['modifying above upper U with double acute']);
+  this.executeCharTest('Ų', ['modifying above upper U with ogonek']);
+  this.executeCharTest('Ŵ', ['modifying above upper W with caret']);
+  this.executeCharTest('Ŷ', ['modifying above upper Y with caret']);
+  this.executeCharTest('Ÿ', ['modifying above upper Y with double dot']);
+  this.executeCharTest('Ź', ['modifying above upper Z with acute']);
+  this.executeCharTest('Ż', ['modifying above upper Z with dot']);
+  this.executeCharTest('Ž', ['modifying above upper Z with caron']);
+  this.executeCharTest('Ǎ', ['modifying above upper A with caron']);
+  this.executeCharTest('Ǐ', ['modifying above upper I with caron']);
+  this.executeCharTest('Ǒ', ['modifying above upper O with caron']);
+  this.executeCharTest('Ǔ', ['modifying above upper U with caron']);
+  this.executeCharTest('Ǧ', ['modifying above upper G with caron']);
+  this.executeCharTest('Ǩ', ['modifying above upper K with caron']);
+  this.executeCharTest('Ǫ', ['modifying above upper O with ogonek']);
+  this.executeCharTest('Ǵ', ['modifying above upper G with acute']);
+  this.executeCharTest('Ǹ', ['modifying above upper N with grave']);
+  this.executeCharTest('Ȁ', ['modifying above upper A with double grave']);
+  this.executeCharTest('Ȃ', ['modifying above upper A with inverted breve']);
+  this.executeCharTest('Ȅ', ['modifying above upper E with double grave']);
+  this.executeCharTest('Ȇ', ['modifying above upper E with inverted breve']);
+  this.executeCharTest('Ȉ', ['modifying above upper I with double grave']);
+  this.executeCharTest('Ȋ', ['modifying above upper I with inverted breve']);
+  this.executeCharTest('Ȍ', ['modifying above upper O with double grave']);
+  this.executeCharTest('Ȏ', ['modifying above upper O with inverted breve']);
+  this.executeCharTest('Ȑ', ['modifying above upper R with double grave']);
+  this.executeCharTest('Ȓ', ['modifying above upper R with inverted breve']);
+  this.executeCharTest('Ȕ', ['modifying above upper U with double grave']);
+  this.executeCharTest('Ȗ', ['modifying above upper U with inverted breve']);
+  this.executeCharTest('Ș', ['modifying below upper S with comma below']);
+  this.executeCharTest('Ț', ['modifying below upper T with comma below']);
+  this.executeCharTest('Ȟ', ['modifying above upper H with caron']);
+  this.executeCharTest('Ȧ', ['modifying above upper A with dot']);
+  this.executeCharTest('Ȩ', ['modifying above upper E with cedilla']);
+  this.executeCharTest('Ȯ', ['modifying above upper O with dot']);
+  this.executeCharTest('Ȳ', ['upper Y overbar']);
+  this.executeCharTest('Ḁ', ['modifying below upper A with ring below']);
+  this.executeCharTest('Ḃ', ['modifying above upper B with dot']);
+  this.executeCharTest('Ḅ', ['modifying below upper B with dot']);
+  this.executeCharTest('Ḇ', ['upper B underbar']);
+  this.executeCharTest('Ḋ', ['modifying above upper D with dot']);
+  this.executeCharTest('Ḍ', ['modifying below upper D with dot']);
+  this.executeCharTest('Ḏ', ['upper D underbar']);
+  this.executeCharTest('Ḑ', ['modifying above upper D with cedilla']);
+  this.executeCharTest('Ḓ', ['modifying below upper D with caret']);
+  this.executeCharTest('Ḙ', ['modifying below upper E with caret']);
+  this.executeCharTest('Ḛ', ['upper E undertilde']);
+  this.executeCharTest('Ḟ', ['modifying above upper F with dot']);
+  this.executeCharTest('Ḡ', ['upper G overbar']);
+  this.executeCharTest('Ḣ', ['modifying above upper H with dot']);
+  this.executeCharTest('Ḥ', ['modifying below upper H with dot']);
+  this.executeCharTest('Ḧ', ['modifying above upper H with double dot']);
+  this.executeCharTest('Ḩ', ['modifying above upper H with cedilla']);
+  this.executeCharTest('Ḫ', ['modifying below upper H with breve below']);
+  this.executeCharTest('Ḭ', ['upper I undertilde']);
+  this.executeCharTest('Ḱ', ['modifying above upper K with acute']);
+  this.executeCharTest('Ḳ', ['modifying below upper K with dot']);
+  this.executeCharTest('Ḵ', ['upper K underbar']);
+  this.executeCharTest('Ḷ', ['modifying below upper L with dot']);
+  this.executeCharTest('Ḻ', ['upper L underbar']);
+  this.executeCharTest('Ḽ', ['modifying below upper L with caret']);
+  this.executeCharTest('Ḿ', ['modifying above upper M with acute']);
+  this.executeCharTest('Ṁ', ['modifying above upper M with dot']);
+  this.executeCharTest('Ṃ', ['modifying below upper M with dot']);
+  this.executeCharTest('Ṅ', ['modifying above upper N with dot']);
+  this.executeCharTest('Ṇ', ['modifying below upper N with dot']);
+  this.executeCharTest('Ṉ', ['upper N underbar']);
+  this.executeCharTest('Ṋ', ['modifying below upper N with caret']);
+  this.executeCharTest('Ṕ', ['modifying above upper P with acute']);
+  this.executeCharTest('Ṗ', ['modifying above upper P with dot']);
+  this.executeCharTest('Ṙ', ['modifying above upper R with dot']);
+  this.executeCharTest('Ṛ', ['modifying below upper R with dot']);
+  this.executeCharTest('Ṟ', ['upper R underbar']);
+  this.executeCharTest('Ṡ', ['modifying above upper S with dot']);
+  this.executeCharTest('Ṣ', ['modifying below upper S with dot']);
+  this.executeCharTest('Ṫ', ['modifying above upper T with dot']);
+  this.executeCharTest('Ṭ', ['modifying below upper T with dot']);
+  this.executeCharTest('Ṯ', ['upper T underbar']);
+  this.executeCharTest('Ṱ', ['modifying below upper T with caret']);
+  this.executeCharTest('Ṳ', ['modifying below upper U with double dot']);
+  this.executeCharTest('Ṵ', ['upper U undertilde']);
+  this.executeCharTest('Ṷ', ['modifying below upper U with caret']);
+  this.executeCharTest('Ṽ', ['upper V overtilde']);
+  this.executeCharTest('Ṿ', ['modifying below upper V with dot']);
+  this.executeCharTest('Ẁ', ['modifying above upper W with grave']);
+  this.executeCharTest('Ẃ', ['modifying above upper W with acute']);
+  this.executeCharTest('Ẅ', ['modifying above upper W with double dot']);
+  this.executeCharTest('Ẇ', ['modifying above upper W with dot']);
+  this.executeCharTest('Ẉ', ['modifying below upper W with dot']);
+  this.executeCharTest('Ẋ', ['modifying above upper X with dot']);
+  this.executeCharTest('Ẍ', ['modifying above upper X with double dot']);
+  this.executeCharTest('Ẏ', ['modifying above upper Y with dot']);
+  this.executeCharTest('Ẑ', ['modifying above upper Z with circumflex']);
+  this.executeCharTest('Ẓ', ['modifying below upper Z with dot']);
+  this.executeCharTest('Ẕ', ['upper Z underbar']);
+  this.executeCharTest('Ạ', ['modifying below upper A with dot']);
+  this.executeCharTest('Ả', ['modifying above upper A with hook']);
+  this.executeCharTest('Ẹ', ['modifying below upper E with dot']);
+  this.executeCharTest('Ẻ', ['modifying above upper E with hook']);
+  this.executeCharTest('Ẽ', ['upper E overtilde']);
+  this.executeCharTest('Ỉ', ['modifying above upper I with hook']);
+  this.executeCharTest('Ị', ['modifying below upper I with dot']);
+  this.executeCharTest('Ọ', ['modifying below upper O with dot']);
+  this.executeCharTest('Ỏ', ['modifying above upper O with hook']);
+  this.executeCharTest('Ụ', ['modifying below upper U with dot']);
+  this.executeCharTest('Ủ', ['modifying above upper U with hook']);
+  this.executeCharTest('Ỳ', ['modifying above upper Y with grave']);
+  this.executeCharTest('Ỵ', ['modifying below upper Y with dot']);
+  this.executeCharTest('Ỷ', ['modifying above upper Y with hook']);
+  this.executeCharTest('Ỹ', ['upper Y overtilde']);
+  this.executeCharTest('𝕬', ['bold fraktur cap A']);
+  this.executeCharTest('𝕭', ['bold fraktur cap B']);
+  this.executeCharTest('𝕮', ['bold fraktur cap C']);
+  this.executeCharTest('𝕯', ['bold fraktur cap D']);
+  this.executeCharTest('𝕰', ['bold fraktur cap E']);
+  this.executeCharTest('𝕱', ['bold fraktur cap F']);
+  this.executeCharTest('𝕲', ['bold fraktur cap G']);
+  this.executeCharTest('𝕳', ['bold fraktur cap H']);
+  this.executeCharTest('𝕴', ['bold fraktur cap I']);
+  this.executeCharTest('𝕵', ['bold fraktur cap J']);
+  this.executeCharTest('𝕶', ['bold fraktur cap K']);
+  this.executeCharTest('𝕷', ['bold fraktur cap L']);
+  this.executeCharTest('𝕸', ['bold fraktur cap M']);
+  this.executeCharTest('𝕹', ['bold fraktur cap N']);
+  this.executeCharTest('𝕺', ['bold fraktur cap O']);
+  this.executeCharTest('𝕻', ['bold fraktur cap P']);
+  this.executeCharTest('𝕼', ['bold fraktur cap Q']);
+  this.executeCharTest('𝕽', ['bold fraktur cap R']);
+  this.executeCharTest('𝕾', ['bold fraktur cap S']);
+  this.executeCharTest('𝕿', ['bold fraktur cap T']);
+  this.executeCharTest('𝖀', ['bold fraktur cap U']);
+  this.executeCharTest('𝖁', ['bold fraktur cap V']);
+  this.executeCharTest('𝖂', ['bold fraktur cap W']);
+  this.executeCharTest('𝖃', ['bold fraktur cap X']);
+  this.executeCharTest('𝖄', ['bold fraktur cap Y']);
+  this.executeCharTest('𝖅', ['bold fraktur cap Z']);
+  this.executeCharTest('𝖆', ['bold fraktur a']);
+  this.executeCharTest('𝖇', ['bold fraktur b']);
+  this.executeCharTest('𝖈', ['bold fraktur c']);
+  this.executeCharTest('𝖉', ['bold fraktur d']);
+  this.executeCharTest('𝖊', ['bold fraktur e']);
+  this.executeCharTest('𝖋', ['bold fraktur f']);
+  this.executeCharTest('𝖌', ['bold fraktur g']);
+  this.executeCharTest('𝖍', ['bold fraktur h']);
+  this.executeCharTest('𝖎', ['bold fraktur i']);
+  this.executeCharTest('𝖏', ['bold fraktur j']);
+  this.executeCharTest('𝖐', ['bold fraktur k']);
+  this.executeCharTest('𝖑', ['bold fraktur l']);
+  this.executeCharTest('𝖒', ['bold fraktur m']);
+  this.executeCharTest('𝖓', ['bold fraktur n']);
+  this.executeCharTest('𝖔', ['bold fraktur o']);
+  this.executeCharTest('𝖕', ['bold fraktur p']);
+  this.executeCharTest('𝖖', ['bold fraktur q']);
+  this.executeCharTest('𝖗', ['bold fraktur r']);
+  this.executeCharTest('𝖘', ['bold fraktur s']);
+  this.executeCharTest('𝖙', ['bold fraktur t']);
+  this.executeCharTest('𝖚', ['bold fraktur u']);
+  this.executeCharTest('𝖛', ['bold fraktur v']);
+  this.executeCharTest('𝖜', ['bold fraktur w']);
+  this.executeCharTest('𝖝', ['bold fraktur x']);
+  this.executeCharTest('𝖞', ['bold fraktur y']);
+  this.executeCharTest('𝖟', ['bold fraktur z']);
+  this.executeCharTest('𝐀', ['bold cap A']);
+  this.executeCharTest('𝐁', ['bold cap B']);
+  this.executeCharTest('𝐂', ['bold cap C']);
+  this.executeCharTest('𝐃', ['bold cap D']);
+  this.executeCharTest('𝐄', ['bold cap E']);
+  this.executeCharTest('𝐅', ['bold cap F']);
+  this.executeCharTest('𝐆', ['bold cap G']);
+  this.executeCharTest('𝐇', ['bold cap H']);
+  this.executeCharTest('𝐈', ['bold cap I']);
+  this.executeCharTest('𝐉', ['bold cap J']);
+  this.executeCharTest('𝐊', ['bold cap K']);
+  this.executeCharTest('𝐋', ['bold cap L']);
+  this.executeCharTest('𝐌', ['bold cap M']);
+  this.executeCharTest('𝐍', ['bold cap N']);
+  this.executeCharTest('𝐎', ['bold cap O']);
+  this.executeCharTest('𝐏', ['bold cap P']);
+  this.executeCharTest('𝐐', ['bold cap Q']);
+  this.executeCharTest('𝐑', ['bold cap R']);
+  this.executeCharTest('𝐒', ['bold cap S']);
+  this.executeCharTest('𝐓', ['bold cap T']);
+  this.executeCharTest('𝐔', ['bold cap U']);
+  this.executeCharTest('𝐕', ['bold cap V']);
+  this.executeCharTest('𝐖', ['bold cap W']);
+  this.executeCharTest('𝐗', ['bold cap X']);
+  this.executeCharTest('𝐘', ['bold cap Y']);
+  this.executeCharTest('𝐙', ['bold cap Z']);
+  this.executeCharTest('𝐚', ['bold a']);
+  this.executeCharTest('𝐛', ['bold b']);
+  this.executeCharTest('𝐜', ['bold c']);
+  this.executeCharTest('𝐝', ['bold d']);
+  this.executeCharTest('𝐞', ['bold e']);
+  this.executeCharTest('𝐟', ['bold f']);
+  this.executeCharTest('𝐠', ['bold g']);
+  this.executeCharTest('𝐡', ['bold h']);
+  this.executeCharTest('𝐢', ['bold i']);
+  this.executeCharTest('𝐣', ['bold j']);
+  this.executeCharTest('𝐤', ['bold k']);
+  this.executeCharTest('𝐥', ['bold l']);
+  this.executeCharTest('𝐦', ['bold m']);
+  this.executeCharTest('𝐧', ['bold n']);
+  this.executeCharTest('𝐨', ['bold o']);
+  this.executeCharTest('𝐩', ['bold p']);
+  this.executeCharTest('𝐪', ['bold q']);
+  this.executeCharTest('𝐫', ['bold r']);
+  this.executeCharTest('𝐬', ['bold s']);
+  this.executeCharTest('𝐭', ['bold t']);
+  this.executeCharTest('𝐮', ['bold u']);
+  this.executeCharTest('𝐯', ['bold v']);
+  this.executeCharTest('𝐰', ['bold w']);
+  this.executeCharTest('𝐱', ['bold x']);
+  this.executeCharTest('𝐲', ['bold y']);
+  this.executeCharTest('𝐳', ['bold z']);
+  this.executeCharTest('𝑨', ['bold italic cap A']);
+  this.executeCharTest('𝑩', ['bold italic cap B']);
+  this.executeCharTest('𝑪', ['bold italic cap C']);
+  this.executeCharTest('𝑫', ['bold italic cap D']);
+  this.executeCharTest('𝑬', ['bold italic cap E']);
+  this.executeCharTest('𝑭', ['bold italic cap F']);
+  this.executeCharTest('𝑮', ['bold italic cap G']);
+  this.executeCharTest('𝑯', ['bold italic cap H']);
+  this.executeCharTest('𝑰', ['bold italic cap I']);
+  this.executeCharTest('𝑱', ['bold italic cap J']);
+  this.executeCharTest('𝑲', ['bold italic cap K']);
+  this.executeCharTest('𝑳', ['bold italic cap L']);
+  this.executeCharTest('𝑴', ['bold italic cap M']);
+  this.executeCharTest('𝑵', ['bold italic cap N']);
+  this.executeCharTest('𝑶', ['bold italic cap O']);
+  this.executeCharTest('𝑷', ['bold italic cap P']);
+  this.executeCharTest('𝑸', ['bold italic cap Q']);
+  this.executeCharTest('𝑹', ['bold italic cap R']);
+  this.executeCharTest('𝑺', ['bold italic cap S']);
+  this.executeCharTest('𝑻', ['bold italic cap T']);
+  this.executeCharTest('𝑼', ['bold italic cap U']);
+  this.executeCharTest('𝑽', ['bold italic cap V']);
+  this.executeCharTest('𝑾', ['bold italic cap W']);
+  this.executeCharTest('𝑿', ['bold italic cap X']);
+  this.executeCharTest('𝒀', ['bold italic cap Y']);
+  this.executeCharTest('𝒁', ['bold italic cap Z']);
+  this.executeCharTest('𝒂', ['bold italic a']);
+  this.executeCharTest('𝒃', ['bold italic b']);
+  this.executeCharTest('𝒄', ['bold italic c']);
+  this.executeCharTest('𝒅', ['bold italic d']);
+  this.executeCharTest('𝒆', ['bold italic e']);
+  this.executeCharTest('𝒇', ['bold italic f']);
+  this.executeCharTest('𝒈', ['bold italic g']);
+  this.executeCharTest('𝒉', ['bold italic h']);
+  this.executeCharTest('𝒊', ['bold italic i']);
+  this.executeCharTest('𝒋', ['bold italic j']);
+  this.executeCharTest('𝒌', ['bold italic k']);
+  this.executeCharTest('𝒍', ['bold italic l']);
+  this.executeCharTest('𝒎', ['bold italic m']);
+  this.executeCharTest('𝒏', ['bold italic n']);
+  this.executeCharTest('𝒐', ['bold italic o']);
+  this.executeCharTest('𝒑', ['bold italic p']);
+  this.executeCharTest('𝒒', ['bold italic q']);
+  this.executeCharTest('𝒓', ['bold italic r']);
+  this.executeCharTest('𝒔', ['bold italic s']);
+  this.executeCharTest('𝒕', ['bold italic t']);
+  this.executeCharTest('𝒖', ['bold italic u']);
+  this.executeCharTest('𝒗', ['bold italic v']);
+  this.executeCharTest('𝒘', ['bold italic w']);
+  this.executeCharTest('𝒙', ['bold italic x']);
+  this.executeCharTest('𝒚', ['bold italic y']);
+  this.executeCharTest('𝒛', ['bold italic z']);
+  this.executeCharTest('𝓐', ['bold script cap A']);
+  this.executeCharTest('𝓑', ['bold script cap B']);
+  this.executeCharTest('𝓒', ['bold script cap C']);
+  this.executeCharTest('𝓓', ['bold script cap D']);
+  this.executeCharTest('𝓔', ['bold script cap E']);
+  this.executeCharTest('𝓕', ['bold script cap F']);
+  this.executeCharTest('𝓖', ['bold script cap G']);
+  this.executeCharTest('𝓗', ['bold script cap H']);
+  this.executeCharTest('𝓘', ['bold script cap I']);
+  this.executeCharTest('𝓙', ['bold script cap J']);
+  this.executeCharTest('𝓚', ['bold script cap K']);
+  this.executeCharTest('𝓛', ['bold script cap L']);
+  this.executeCharTest('𝓜', ['bold script cap M']);
+  this.executeCharTest('𝓝', ['bold script cap N']);
+  this.executeCharTest('𝓞', ['bold script cap O']);
+  this.executeCharTest('𝓟', ['bold script cap P']);
+  this.executeCharTest('𝓠', ['bold script cap Q']);
+  this.executeCharTest('𝓡', ['bold script cap R']);
+  this.executeCharTest('𝓢', ['bold script cap S']);
+  this.executeCharTest('𝓣', ['bold script cap T']);
+  this.executeCharTest('𝓤', ['bold script cap U']);
+  this.executeCharTest('𝓥', ['bold script cap V']);
+  this.executeCharTest('𝓦', ['bold script cap W']);
+  this.executeCharTest('𝓧', ['bold script cap X']);
+  this.executeCharTest('𝓨', ['bold script cap Y']);
+  this.executeCharTest('𝓩', ['bold script cap Z']);
+  this.executeCharTest('𝓪', ['bold script a']);
+  this.executeCharTest('𝓫', ['bold script b']);
+  this.executeCharTest('𝓬', ['bold script c']);
+  this.executeCharTest('𝓭', ['bold script d']);
+  this.executeCharTest('𝓮', ['bold script e']);
+  this.executeCharTest('𝓯', ['bold script f']);
+  this.executeCharTest('𝓰', ['bold script g']);
+  this.executeCharTest('𝓱', ['bold script h']);
+  this.executeCharTest('𝓲', ['bold script i']);
+  this.executeCharTest('𝓳', ['bold script j']);
+  this.executeCharTest('𝓴', ['bold script k']);
+  this.executeCharTest('𝓵', ['bold script l']);
+  this.executeCharTest('𝓶', ['bold script m']);
+  this.executeCharTest('𝓷', ['bold script n']);
+  this.executeCharTest('𝓸', ['bold script o']);
+  this.executeCharTest('𝓹', ['bold script p']);
+  this.executeCharTest('𝓺', ['bold script q']);
+  this.executeCharTest('𝓻', ['bold script r']);
+  this.executeCharTest('𝓼', ['bold script s']);
+  this.executeCharTest('𝓽', ['bold script t']);
+  this.executeCharTest('𝓾', ['bold script u']);
+  this.executeCharTest('𝓿', ['bold script v']);
+  this.executeCharTest('𝔀', ['bold script w']);
+  this.executeCharTest('𝔁', ['bold script x']);
+  this.executeCharTest('𝔂', ['bold script y']);
+  this.executeCharTest('𝔃', ['bold script z']);
+  this.executeCharTest('𝔸', ['double struck cap A']);
+  this.executeCharTest('𝔹', ['double struck cap B']);
+  this.executeCharTest('ℂ', ['double struck cap C']);
+  this.executeCharTest('𝔻', ['double struck cap D']);
+  this.executeCharTest('𝔼', ['double struck cap E']);
+  this.executeCharTest('𝔽', ['double struck cap F']);
+  this.executeCharTest('𝔾', ['double struck cap G']);
+  this.executeCharTest('ℍ', ['double struck cap H']);
+  this.executeCharTest('𝕀', ['double struck cap I']);
+  this.executeCharTest('𝕁', ['double struck cap J']);
+  this.executeCharTest('𝕂', ['double struck cap K']);
+  this.executeCharTest('𝕃', ['double struck cap L']);
+  this.executeCharTest('𝕄', ['double struck cap M']);
+  this.executeCharTest('ℕ', ['double struck cap N']);
+  this.executeCharTest('𝕆', ['double struck cap O']);
+  this.executeCharTest('ℙ', ['double struck cap P']);
+  this.executeCharTest('ℚ', ['double struck cap Q']);
+  this.executeCharTest('ℝ', ['double struck cap R']);
+  this.executeCharTest('𝕊', ['double struck cap S']);
+  this.executeCharTest('𝕋', ['double struck cap T']);
+  this.executeCharTest('𝕌', ['double struck cap U']);
+  this.executeCharTest('𝕍', ['double struck cap V']);
+  this.executeCharTest('𝕎', ['double struck cap W']);
+  this.executeCharTest('𝕏', ['double struck cap X']);
+  this.executeCharTest('𝕐', ['double struck cap Y']);
+  this.executeCharTest('ℤ', ['double struck cap Z']);
+  this.executeCharTest('𝕒', ['double struck a']);
+  this.executeCharTest('𝕓', ['double struck b']);
+  this.executeCharTest('𝕔', ['double struck c']);
+  this.executeCharTest('𝕕', ['double struck d']);
+  this.executeCharTest('𝕖', ['double struck e']);
+  this.executeCharTest('𝕗', ['double struck f']);
+  this.executeCharTest('𝕘', ['double struck g']);
+  this.executeCharTest('𝕙', ['double struck h']);
+  this.executeCharTest('𝕚', ['double struck i']);
+  this.executeCharTest('𝕛', ['double struck j']);
+  this.executeCharTest('𝕜', ['double struck k']);
+  this.executeCharTest('𝕝', ['double struck l']);
+  this.executeCharTest('𝕞', ['double struck m']);
+  this.executeCharTest('𝕟', ['double struck n']);
+  this.executeCharTest('𝕠', ['double struck o']);
+  this.executeCharTest('𝕡', ['double struck p']);
+  this.executeCharTest('𝕢', ['double struck q']);
+  this.executeCharTest('𝕣', ['double struck r']);
+  this.executeCharTest('𝕤', ['double struck s']);
+  this.executeCharTest('𝕥', ['double struck t']);
+  this.executeCharTest('𝕦', ['double struck u']);
+  this.executeCharTest('𝕧', ['double struck v']);
+  this.executeCharTest('𝕨', ['double struck w']);
+  this.executeCharTest('𝕩', ['double struck x']);
+  this.executeCharTest('𝕪', ['double struck y']);
+  this.executeCharTest('𝕫', ['double struck z']);
+  this.executeCharTest('𝔄', ['fraktur cap A']);
+  this.executeCharTest('𝔅', ['fraktur cap B']);
+  this.executeCharTest('ℭ', ['fraktur cap D']);
+  this.executeCharTest('𝔇', ['fraktur cap E']);
+  this.executeCharTest('𝔈', ['fraktur cap F']);
+  this.executeCharTest('𝔉', ['fraktur cap G']);
+  this.executeCharTest('𝔊', ['fraktur cap G']);
+  this.executeCharTest('ℌ', ['fraktur cap H']);
+  this.executeCharTest('ℑ', ['fraktur cap I']);
+  this.executeCharTest('𝔍', ['fraktur cap J']);
+  this.executeCharTest('𝔎', ['fraktur cap K']);
+  this.executeCharTest('𝔏', ['fraktur cap L']);
+  this.executeCharTest('𝔐', ['fraktur cap M']);
+  this.executeCharTest('𝔑', ['fraktur cap N']);
+  this.executeCharTest('𝔒', ['fraktur cap O']);
+  this.executeCharTest('𝔓', ['fraktur cap P']);
+  this.executeCharTest('𝔔', ['fraktur cap Q']);
+  this.executeCharTest('ℜ', ['fraktur cap R']);
+  this.executeCharTest('𝔖', ['fraktur cap S']);
+  this.executeCharTest('𝔗', ['fraktur cap T']);
+  this.executeCharTest('𝔘', ['fraktur cap U']);
+  this.executeCharTest('𝔙', ['fraktur cap V']);
+  this.executeCharTest('𝔚', ['fraktur cap W']);
+  this.executeCharTest('𝔛', ['fraktur cap X']);
+  this.executeCharTest('𝔜', ['fraktur cap Y']);
+  this.executeCharTest('ℨ', ['fraktur cap Z']);
+  this.executeCharTest('𝔞', ['fraktur a']);
+  this.executeCharTest('𝔟', ['fraktur b']);
+  this.executeCharTest('𝔠', ['fraktur c']);
+  this.executeCharTest('𝔡', ['fraktur d']);
+  this.executeCharTest('𝔢', ['fraktur e']);
+  this.executeCharTest('𝔣', ['fraktur f']);
+  this.executeCharTest('𝔤', ['fraktur g']);
+  this.executeCharTest('𝔥', ['fraktur h']);
+  this.executeCharTest('𝔦', ['fraktur i']);
+  this.executeCharTest('𝔧', ['fraktur j']);
+  this.executeCharTest('𝔨', ['fraktur k']);
+  this.executeCharTest('𝔩', ['fraktur l']);
+  this.executeCharTest('𝔪', ['fraktur m']);
+  this.executeCharTest('𝔫', ['fraktur n']);
+  this.executeCharTest('𝔬', ['fraktur o']);
+  this.executeCharTest('𝔭', ['fraktur p']);
+  this.executeCharTest('𝔮', ['fraktur q']);
+  this.executeCharTest('𝔯', ['fraktur r']);
+  this.executeCharTest('𝔰', ['fraktur s']);
+  this.executeCharTest('𝔱', ['fraktur t']);
+  this.executeCharTest('𝔲', ['fraktur u']);
+  this.executeCharTest('𝔳', ['fraktur v']);
+  this.executeCharTest('𝔴', ['fraktur w']);
+  this.executeCharTest('𝔵', ['fraktur x']);
+  this.executeCharTest('𝔶', ['fraktur y']);
+  this.executeCharTest('𝔷', ['fraktur z']);
+  this.executeCharTest('𝐴', ['italic cap A']);
+  this.executeCharTest('𝐵', ['italic cap B']);
+  this.executeCharTest('𝐶', ['italic cap C']);
+  this.executeCharTest('𝐷', ['italic cap D']);
+  this.executeCharTest('𝐸', ['italic cap E']);
+  this.executeCharTest('𝐹', ['italic cap F']);
+  this.executeCharTest('𝐺', ['italic cap G']);
+  this.executeCharTest('𝐻', ['italic cap H']);
+  this.executeCharTest('𝐼', ['italic cap I']);
+  this.executeCharTest('𝐽', ['italic cap J']);
+  this.executeCharTest('𝐾', ['italic cap K']);
+  this.executeCharTest('𝐿', ['italic cap L']);
+  this.executeCharTest('𝑀', ['italic cap M']);
+  this.executeCharTest('𝑁', ['italic cap N']);
+  this.executeCharTest('𝑂', ['italic cap O']);
+  this.executeCharTest('𝑃', ['italic cap P']);
+  this.executeCharTest('𝑄', ['italic cap Q']);
+  this.executeCharTest('𝑅', ['italic cap R']);
+  this.executeCharTest('𝑆', ['italic cap S']);
+  this.executeCharTest('𝑇', ['italic cap T']);
+  this.executeCharTest('𝑈', ['italic cap U']);
+  this.executeCharTest('𝑉', ['italic cap V']);
+  this.executeCharTest('𝑊', ['italic cap W']);
+  this.executeCharTest('𝑋', ['italic cap X']);
+  this.executeCharTest('𝑌', ['italic cap Y']);
+  this.executeCharTest('𝑍', ['italic cap Z']);
+  this.executeCharTest('𝑎', ['italic a']);
+  this.executeCharTest('𝑏', ['italic b']);
+  this.executeCharTest('𝑐', ['italic c']);
+  this.executeCharTest('𝑑', ['italic d']);
+  this.executeCharTest('𝑒', ['italic e']);
+  this.executeCharTest('𝑓', ['italic f']);
+  this.executeCharTest('𝑔', ['italic g']);
+  this.executeCharTest('ℎ', ['italic h']);
+  this.executeCharTest('𝑖', ['italic i']);
+  this.executeCharTest('𝑗', ['italic j']);
+  this.executeCharTest('𝑘', ['italic k']);
+  this.executeCharTest('𝑙', ['italic l']);
+  this.executeCharTest('𝑚', ['italic m']);
+  this.executeCharTest('𝑛', ['italic n']);
+  this.executeCharTest('𝑜', ['italic o']);
+  this.executeCharTest('𝑝', ['italic p']);
+  this.executeCharTest('𝑞', ['italic q']);
+  this.executeCharTest('𝑟', ['italic r']);
+  this.executeCharTest('𝑠', ['italic s']);
+  this.executeCharTest('𝑡', ['italic t']);
+  this.executeCharTest('𝑢', ['italic u']);
+  this.executeCharTest('𝑣', ['italic v']);
+  this.executeCharTest('𝑤', ['italic w']);
+  this.executeCharTest('𝑥', ['italic x']);
+  this.executeCharTest('𝑦', ['italic y']);
+  this.executeCharTest('𝑧', ['italic z']);
+  this.executeCharTest('𝙰', ['monospace upper A']);
+  this.executeCharTest('𝙱', ['monospace upper B']);
+  this.executeCharTest('𝙲', ['monospace upper C']);
+  this.executeCharTest('𝙳', ['monospace upper D']);
+  this.executeCharTest('𝙴', ['monospace upper E']);
+  this.executeCharTest('𝙵', ['monospace upper F']);
+  this.executeCharTest('𝙶', ['monospace upper G']);
+  this.executeCharTest('𝙷', ['monospace upper H']);
+  this.executeCharTest('𝙸', ['monospace upper I']);
+  this.executeCharTest('𝙹', ['monospace upper J']);
+  this.executeCharTest('𝙺', ['monospace upper K']);
+  this.executeCharTest('𝙻', ['monospace upper L']);
+  this.executeCharTest('𝙼', ['monospace upper M']);
+  this.executeCharTest('𝙽', ['monospace upper N']);
+  this.executeCharTest('𝙾', ['monospace upper O']);
+  this.executeCharTest('𝙿', ['monospace upper P']);
+  this.executeCharTest('𝚀', ['monospace upper Q']);
+  this.executeCharTest('𝚁', ['monospace upper R']);
+  this.executeCharTest('𝚂', ['monospace upper S']);
+  this.executeCharTest('𝚃', ['monospace upper T']);
+  this.executeCharTest('𝚄', ['monospace upper U']);
+  this.executeCharTest('𝚅', ['monospace upper V']);
+  this.executeCharTest('𝚆', ['monospace upper W']);
+  this.executeCharTest('𝚇', ['monospace upper X']);
+  this.executeCharTest('𝚈', ['monospace upper Y']);
+  this.executeCharTest('𝚉', ['monospace upper Z']);
+  this.executeCharTest('𝚊', ['monospace a']);
+  this.executeCharTest('𝚋', ['monospace b']);
+  this.executeCharTest('𝚌', ['monospace c']);
+  this.executeCharTest('𝚍', ['monospace d']);
+  this.executeCharTest('𝚎', ['monospace e']);
+  this.executeCharTest('𝚏', ['monospace f']);
+  this.executeCharTest('𝚐', ['monospace g']);
+  this.executeCharTest('𝚑', ['monospace h']);
+  this.executeCharTest('𝚒', ['monospace i']);
+  this.executeCharTest('𝚓', ['monospace j']);
+  this.executeCharTest('𝚔', ['monospace k']);
+  this.executeCharTest('𝚕', ['monospace l']);
+  this.executeCharTest('𝚖', ['monospace m']);
+  this.executeCharTest('𝚗', ['monospace n']);
+  this.executeCharTest('𝚘', ['monospace o']);
+  this.executeCharTest('𝚙', ['monospace p']);
+  this.executeCharTest('𝚚', ['monospace q']);
+  this.executeCharTest('𝚛', ['monospace r']);
+  this.executeCharTest('𝚜', ['monospace s']);
+  this.executeCharTest('𝚝', ['monospace t']);
+  this.executeCharTest('𝚞', ['monospace u']);
+  this.executeCharTest('𝚟', ['monospace v']);
+  this.executeCharTest('𝚠', ['monospace w']);
+  this.executeCharTest('𝚡', ['monospace x']);
+  this.executeCharTest('𝚢', ['monospace y']);
+  this.executeCharTest('𝚣', ['monospace z']);
+  this.executeCharTest('𝗔', ['sans serif bold cap A']);
+  this.executeCharTest('𝗕', ['sans serif bold cap B']);
+  this.executeCharTest('𝗖', ['sans serif bold cap C']);
+  this.executeCharTest('𝗗', ['sans serif bold cap D']);
+  this.executeCharTest('𝗘', ['sans serif bold cap E']);
+  this.executeCharTest('𝗙', ['sans serif bold cap F']);
+  this.executeCharTest('𝗚', ['sans serif bold cap G']);
+  this.executeCharTest('𝗛', ['sans serif bold cap H']);
+  this.executeCharTest('𝗜', ['sans serif bold cap I']);
+  this.executeCharTest('𝗝', ['sans serif bold cap J']);
+  this.executeCharTest('𝗞', ['sans serif bold cap K']);
+  this.executeCharTest('𝗟', ['sans serif bold cap L']);
+  this.executeCharTest('𝗠', ['sans serif bold cap M']);
+  this.executeCharTest('𝗡', ['sans serif bold cap N']);
+  this.executeCharTest('𝗢', ['sans serif bold cap O']);
+  this.executeCharTest('𝗣', ['sans serif bold cap P']);
+  this.executeCharTest('𝗤', ['sans serif bold cap Q']);
+  this.executeCharTest('𝗥', ['sans serif bold cap R']);
+  this.executeCharTest('𝗦', ['sans serif bold cap S']);
+  this.executeCharTest('𝗧', ['sans serif bold cap T']);
+  this.executeCharTest('𝗨', ['sans serif bold cap U']);
+  this.executeCharTest('𝗩', ['sans serif bold cap V']);
+  this.executeCharTest('𝗪', ['sans serif bold cap W']);
+  this.executeCharTest('𝗫', ['sans serif bold cap X']);
+  this.executeCharTest('𝗬', ['sans serif bold cap Y']);
+  this.executeCharTest('𝗭', ['sans serif bold cap Z']);
+  this.executeCharTest('𝗮', ['sans serif bold a']);
+  this.executeCharTest('𝗯', ['sans serif bold b']);
+  this.executeCharTest('𝗰', ['sans serif bold c']);
+  this.executeCharTest('𝗱', ['sans serif bold d']);
+  this.executeCharTest('𝗲', ['sans serif bold e']);
+  this.executeCharTest('𝗳', ['sans serif bold f']);
+  this.executeCharTest('𝗴', ['sans serif bold g']);
+  this.executeCharTest('𝗵', ['sans serif bold h']);
+  this.executeCharTest('𝗶', ['sans serif bold i']);
+  this.executeCharTest('𝗷', ['sans serif bold j']);
+  this.executeCharTest('𝗸', ['sans serif bold k']);
+  this.executeCharTest('𝗹', ['sans serif bold l']);
+  this.executeCharTest('𝗺', ['sans serif bold m']);
+  this.executeCharTest('𝗻', ['sans serif bold n']);
+  this.executeCharTest('𝗼', ['sans serif bold o']);
+  this.executeCharTest('𝗽', ['sans serif bold p']);
+  this.executeCharTest('𝗾', ['sans serif bold q']);
+  this.executeCharTest('𝗿', ['sans serif bold r']);
+  this.executeCharTest('𝘀', ['sans serif bold s']);
+  this.executeCharTest('𝘁', ['sans serif bold t']);
+  this.executeCharTest('𝘂', ['sans serif bold u']);
+  this.executeCharTest('𝘃', ['sans serif bold v']);
+  this.executeCharTest('𝘄', ['sans serif bold w']);
+  this.executeCharTest('𝘅', ['sans serif bold x']);
+  this.executeCharTest('𝘆', ['sans serif bold y']);
+  this.executeCharTest('𝘇', ['sans serif bold z']);
+  this.executeCharTest('𝘈', ['sans serif italic cap A']);
+  this.executeCharTest('𝘉', ['sans serif italic cap B']);
+  this.executeCharTest('𝘊', ['sans serif italic cap C']);
+  this.executeCharTest('𝘋', ['sans serif italic cap D']);
+  this.executeCharTest('𝘌', ['sans serif italic cap E']);
+  this.executeCharTest('𝘍', ['sans serif italic cap F']);
+  this.executeCharTest('𝘎', ['sans serif italic cap G']);
+  this.executeCharTest('𝘏', ['sans serif italic cap H']);
+  this.executeCharTest('𝘐', ['sans serif italic cap I']);
+  this.executeCharTest('𝘑', ['sans serif italic cap J']);
+  this.executeCharTest('𝘒', ['sans serif italic cap K']);
+  this.executeCharTest('𝘓', ['sans serif italic cap L']);
+  this.executeCharTest('𝘔', ['sans serif italic cap M']);
+  this.executeCharTest('𝘕', ['sans serif italic cap N']);
+  this.executeCharTest('𝘖', ['sans serif italic cap O']);
+  this.executeCharTest('𝘗', ['sans serif italic cap P']);
+  this.executeCharTest('𝘘', ['sans serif italic cap Q']);
+  this.executeCharTest('𝘙', ['sans serif italic cap R']);
+  this.executeCharTest('𝘚', ['sans serif italic cap S']);
+  this.executeCharTest('𝘛', ['sans serif italic cap T']);
+  this.executeCharTest('𝘜', ['sans serif italic cap U']);
+  this.executeCharTest('𝘝', ['sans serif italic cap V']);
+  this.executeCharTest('𝘞', ['sans serif italic cap W']);
+  this.executeCharTest('𝘟', ['sans serif italic cap X']);
+  this.executeCharTest('𝘠', ['sans serif italic cap Y']);
+  this.executeCharTest('𝘡', ['sans serif italic cap Z']);
+  this.executeCharTest('𝘢', ['sans serif italic a']);
+  this.executeCharTest('𝘣', ['sans serif italic b']);
+  this.executeCharTest('𝘤', ['sans serif italic c']);
+  this.executeCharTest('𝘥', ['sans serif italic d']);
+  this.executeCharTest('𝘦', ['sans serif italic e']);
+  this.executeCharTest('𝘧', ['sans serif italic f']);
+  this.executeCharTest('𝘨', ['sans serif italic g']);
+  this.executeCharTest('𝘩', ['sans serif italic h']);
+  this.executeCharTest('𝘪', ['sans serif italic i']);
+  this.executeCharTest('𝘫', ['sans serif italic j']);
+  this.executeCharTest('𝘬', ['sans serif italic k']);
+  this.executeCharTest('𝘭', ['sans serif italic l']);
+  this.executeCharTest('𝘮', ['sans serif italic m']);
+  this.executeCharTest('𝘯', ['sans serif italic n']);
+  this.executeCharTest('𝘰', ['sans serif italic o']);
+  this.executeCharTest('𝘱', ['sans serif italic p']);
+  this.executeCharTest('𝘲', ['sans serif italic q']);
+  this.executeCharTest('𝘳', ['sans serif italic r']);
+  this.executeCharTest('𝘴', ['sans serif italic s']);
+  this.executeCharTest('𝘵', ['sans serif italic t']);
+  this.executeCharTest('𝘶', ['sans serif italic u']);
+  this.executeCharTest('𝘷', ['sans serif italic v']);
+  this.executeCharTest('𝘸', ['sans serif italic w']);
+  this.executeCharTest('𝘹', ['sans serif italic x']);
+  this.executeCharTest('𝘺', ['sans serif italic y']);
+  this.executeCharTest('𝘻', ['sans serif italic z']);
+  this.executeCharTest('𝘼', ['sans serif bold italic cap A']);
+  this.executeCharTest('𝘽', ['sans serif bold italic cap B']);
+  this.executeCharTest('𝘾', ['sans serif bold italic cap C']);
+  this.executeCharTest('𝘿', ['sans serif bold italic cap D']);
+  this.executeCharTest('𝙀', ['sans serif bold italic cap E']);
+  this.executeCharTest('𝙁', ['sans serif bold italic cap F']);
+  this.executeCharTest('𝙂', ['sans serif bold italic cap G']);
+  this.executeCharTest('𝙃', ['sans serif bold italic cap H']);
+  this.executeCharTest('𝙄', ['sans serif bold italic cap I']);
+  this.executeCharTest('𝙅', ['sans serif bold italic cap J']);
+  this.executeCharTest('𝙆', ['sans serif bold italic cap K']);
+  this.executeCharTest('𝙇', ['sans serif bold italic cap L']);
+  this.executeCharTest('𝙈', ['sans serif bold italic cap M']);
+  this.executeCharTest('𝙉', ['sans serif bold italic cap N']);
+  this.executeCharTest('𝙊', ['sans serif bold italic cap O']);
+  this.executeCharTest('𝙋', ['sans serif bold italic cap P']);
+  this.executeCharTest('𝙌', ['sans serif bold italic cap Q']);
+  this.executeCharTest('𝙍', ['sans serif bold italic cap R']);
+  this.executeCharTest('𝙎', ['sans serif bold italic cap S']);
+  this.executeCharTest('𝙏', ['sans serif bold italic cap T']);
+  this.executeCharTest('𝙐', ['sans serif bold italic cap U']);
+  this.executeCharTest('𝙑', ['sans serif bold italic cap V']);
+  this.executeCharTest('𝙒', ['sans serif bold italic cap W']);
+  this.executeCharTest('𝙓', ['sans serif bold italic cap X']);
+  this.executeCharTest('𝙔', ['sans serif bold italic cap Y']);
+  this.executeCharTest('𝙕', ['sans serif bold italic cap Z']);
+  this.executeCharTest('𝙖', ['sans serif bold italic a']);
+  this.executeCharTest('𝙗', ['sans serif bold italic b']);
+  this.executeCharTest('𝙘', ['sans serif bold italic c']);
+  this.executeCharTest('𝙙', ['sans serif bold italic d']);
+  this.executeCharTest('𝙚', ['sans serif bold italic e']);
+  this.executeCharTest('𝙛', ['sans serif bold italic f']);
+  this.executeCharTest('𝙜', ['sans serif bold italic g']);
+  this.executeCharTest('𝙝', ['sans serif bold italic h']);
+  this.executeCharTest('𝙞', ['sans serif bold italic i']);
+  this.executeCharTest('𝙟', ['sans serif bold italic j']);
+  this.executeCharTest('𝙠', ['sans serif bold italic k']);
+  this.executeCharTest('𝙡', ['sans serif bold italic l']);
+  this.executeCharTest('𝙢', ['sans serif bold italic m']);
+  this.executeCharTest('𝙣', ['sans serif bold italic n']);
+  this.executeCharTest('𝙤', ['sans serif bold italic o']);
+  this.executeCharTest('𝙥', ['sans serif bold italic p']);
+  this.executeCharTest('𝙦', ['sans serif bold italic q']);
+  this.executeCharTest('𝙧', ['sans serif bold italic r']);
+  this.executeCharTest('𝙨', ['sans serif bold italic s']);
+  this.executeCharTest('𝙩', ['sans serif bold italic t']);
+  this.executeCharTest('𝙪', ['sans serif bold italic u']);
+  this.executeCharTest('𝙫', ['sans serif bold italic v']);
+  this.executeCharTest('𝙬', ['sans serif bold italic w']);
+  this.executeCharTest('𝙭', ['sans serif bold italic x']);
+  this.executeCharTest('𝙮', ['sans serif bold italic y']);
+  this.executeCharTest('𝙯', ['sans serif bold italic z']);
+  this.executeCharTest('𝖠', ['sans serif cap A']);
+  this.executeCharTest('𝖡', ['sans serif cap B']);
+  this.executeCharTest('𝖢', ['sans serif cap C']);
+  this.executeCharTest('𝖣', ['sans serif cap D']);
+  this.executeCharTest('𝖤', ['sans serif cap E']);
+  this.executeCharTest('𝖥', ['sans serif cap F']);
+  this.executeCharTest('𝖦', ['sans serif cap G']);
+  this.executeCharTest('𝖧', ['sans serif cap H']);
+  this.executeCharTest('𝖨', ['sans serif cap I']);
+  this.executeCharTest('𝖩', ['sans serif cap J']);
+  this.executeCharTest('𝖪', ['sans serif cap K']);
+  this.executeCharTest('𝖫', ['sans serif cap L']);
+  this.executeCharTest('𝖬', ['sans serif cap M']);
+  this.executeCharTest('𝖭', ['sans serif cap N']);
+  this.executeCharTest('𝖮', ['sans serif cap O']);
+  this.executeCharTest('𝖯', ['sans serif cap P']);
+  this.executeCharTest('𝖰', ['sans serif cap Q']);
+  this.executeCharTest('𝖱', ['sans serif cap R']);
+  this.executeCharTest('𝖲', ['sans serif cap S']);
+  this.executeCharTest('𝖳', ['sans serif cap T']);
+  this.executeCharTest('𝖴', ['sans serif cap U']);
+  this.executeCharTest('𝖵', ['sans serif cap V']);
+  this.executeCharTest('𝖶', ['sans serif cap W']);
+  this.executeCharTest('𝖷', ['sans serif cap X']);
+  this.executeCharTest('𝖸', ['sans serif cap Y']);
+  this.executeCharTest('𝖹', ['sans serif cap Z']);
+  this.executeCharTest('𝖺', ['sans serif a']);
+  this.executeCharTest('𝖻', ['sans serif b']);
+  this.executeCharTest('𝖼', ['sans serif c']);
+  this.executeCharTest('𝖽', ['sans serif d']);
+  this.executeCharTest('𝖾', ['sans serif e']);
+  this.executeCharTest('𝖿', ['sans serif f']);
+  this.executeCharTest('𝗀', ['sans serif g']);
+  this.executeCharTest('𝗁', ['sans serif h']);
+  this.executeCharTest('𝗂', ['sans serif i']);
+  this.executeCharTest('𝗃', ['sans serif j']);
+  this.executeCharTest('𝗄', ['sans serif k']);
+  this.executeCharTest('𝗅', ['sans serif l']);
+  this.executeCharTest('𝗆', ['sans serif m']);
+  this.executeCharTest('𝗇', ['sans serif n']);
+  this.executeCharTest('𝗈', ['sans serif o']);
+  this.executeCharTest('𝗉', ['sans serif p']);
+  this.executeCharTest('𝗊', ['sans serif q']);
+  this.executeCharTest('𝗋', ['sans serif r']);
+  this.executeCharTest('𝗌', ['sans serif s']);
+  this.executeCharTest('𝗍', ['sans serif t']);
+  this.executeCharTest('𝗎', ['sans serif u']);
+  this.executeCharTest('𝗏', ['sans serif v']);
+  this.executeCharTest('𝗐', ['sans serif w']);
+  this.executeCharTest('𝗑', ['sans serif x']);
+  this.executeCharTest('𝗒', ['sans serif y']);
+  this.executeCharTest('𝗓', ['sans serif z']);
+  this.executeCharTest('𝒜', ['script cap A']);
+  this.executeCharTest('ℬ', ['script cap B']);
+  this.executeCharTest('𝒞', ['script cap C']);
+  this.executeCharTest('𝒟', ['script cap D']);
+  this.executeCharTest('ℰ', ['script cap E']);
+  this.executeCharTest('ℱ', ['script cap F']);
+  this.executeCharTest('𝒢', ['script cap G']);
+  this.executeCharTest('ℋ', ['script cap H']);
+  this.executeCharTest('ℐ', ['script cap I']);
+  this.executeCharTest('𝒥', ['script cap J']);
+  this.executeCharTest('𝒦', ['script cap K']);
+  this.executeCharTest('ℒ', ['script cap L']);
+  this.executeCharTest('ℳ', ['script cap M']);
+  this.executeCharTest('𝒩', ['script cap N']);
+  this.executeCharTest('𝒪', ['script cap O']);
+  this.executeCharTest('𝒫', ['script cap P']);
+  this.executeCharTest('𝒬', ['script cap Q']);
+  this.executeCharTest('ℛ', ['script cap R']);
+  this.executeCharTest('𝒮', ['script cap S']);
+  this.executeCharTest('𝒯', ['script cap T']);
+  this.executeCharTest('𝒰', ['script cap U']);
+  this.executeCharTest('𝒱', ['script cap V']);
+  this.executeCharTest('𝒲', ['script cap W']);
+  this.executeCharTest('𝒳', ['script cap X']);
+  this.executeCharTest('𝒴', ['script cap Y']);
+  this.executeCharTest('𝒵', ['script cap Z']);
+  this.executeCharTest('𝒶', ['script a']);
+  this.executeCharTest('𝒷', ['script b']);
+  this.executeCharTest('𝒸', ['script c']);
+  this.executeCharTest('𝒹', ['script d']);
+  this.executeCharTest('ℯ', ['script e']);
+  this.executeCharTest('𝒻', ['script f']);
+  this.executeCharTest('ℊ', ['script g']);
+  this.executeCharTest('𝒽', ['script h']);
+  this.executeCharTest('𝒾', ['script i']);
+  this.executeCharTest('𝒿', ['script j']);
+  this.executeCharTest('𝓀', ['script k']);
+  this.executeCharTest('𝓁', ['script l']);
+  this.executeCharTest('𝓂', ['script m']);
+  this.executeCharTest('𝓃', ['script n']);
+  this.executeCharTest('ℴ', ['script o']);
+  this.executeCharTest('𝓅', ['script p']);
+  this.executeCharTest('𝓆', ['script q']);
+  this.executeCharTest('𝓇', ['script r']);
+  this.executeCharTest('𝓈', ['script s']);
+  this.executeCharTest('𝓉', ['script t']);
+  this.executeCharTest('𝓊', ['script u']);
+  this.executeCharTest('𝓋', ['script v']);
+  this.executeCharTest('𝓌', ['script w']);
+  this.executeCharTest('𝓍', ['script x']);
+  this.executeCharTest('𝓎', ['script y']);
+  this.executeCharTest('𝓏', ['script z']);
+  this.executeCharTest('⊾', ['right angle with arc']);
+  this.executeCharTest('⍼', ['right angle with downwards zigzag arrow']);
+  this.executeCharTest('⟀', ['three dimensional angle']);
+  this.executeCharTest('⦛', ['measured angle opening left']);
+  this.executeCharTest('⦜', ['right angle variant with square']);
+  this.executeCharTest('⦝', ['measured right angle with dot']);
+  this.executeCharTest('⦞', ['angle with s inside']);
+  this.executeCharTest('⦟', ['acute angle']);
+  this.executeCharTest('⦠', ['spherical angle opening left']);
+  this.executeCharTest('⦡', ['spherical angle opening up']);
+  this.executeCharTest('⦢', ['turned angle']);
+  this.executeCharTest('⦣', ['reversed angle']);
+  this.executeCharTest('⦤', ['angle with underbar']);
+  this.executeCharTest('⦥', ['reversed angle with underbar']);
+  this.executeCharTest('⦦', ['oblique angle opening up']);
+  this.executeCharTest('⦧', ['oblique angle opening down']);
+  this.executeCharTest('⦨', ['measured angle with open arm ending in arrow pointing up and right']);
+  this.executeCharTest('⦩', ['measured angle with open arm ending in arrow pointing up and left']);
+  this.executeCharTest('⦪', ['measured angle with open arm ending in arrow pointing down and right']);
+  this.executeCharTest('⦫', ['measured angle with open arm ending in arrow pointing down and left']);
+  this.executeCharTest('⦬', ['measured angle with open arm ending in arrow pointing right and up']);
+  this.executeCharTest('⦭', ['measured angle with open arm ending in arrow pointing left and up']);
+  this.executeCharTest('⦮', ['measured angle with open arm ending in arrow pointing right and down']);
+  this.executeCharTest('⦯', ['measured angle with open arm ending in arrow pointing left and down']);
+  this.executeCharTest('←', ['left-arrow']);
+  this.executeCharTest('↑', ['up-arrow']);
+  this.executeCharTest('→', ['right-arrow']);
+  this.executeCharTest('↓', ['down-arrow']);
+  this.executeCharTest('↔', ['left-right-arrow']);
+  this.executeCharTest('↕', ['up down-arrow']);
+  this.executeCharTest('↖', ['up left-arrow']);
+  this.executeCharTest('↗', ['up right-arrow']);
+  this.executeCharTest('↘', ['down right-arrow']);
+  this.executeCharTest('↙', ['down left-arrow']);
+  this.executeCharTest('↚', ['left-arrow with stroke']);
+  this.executeCharTest('↛', ['right-arrow with stroke']);
+  this.executeCharTest('↜', ['left wave arrow']);
+  this.executeCharTest('↝', ['right wave arrow']);
+  this.executeCharTest('↞', ['two headed left-arrow']);
+  this.executeCharTest('↟', ['two headed up-arrow']);
+  this.executeCharTest('↠', ['two headed right-arrow']);
+  this.executeCharTest('↡', ['two headed down-arrow']);
+  this.executeCharTest('↢', ['left-arrow with tail']);
+  this.executeCharTest('↣', ['right-arrow with tail']);
+  this.executeCharTest('↤', ['left-arrow from bar']);
+  this.executeCharTest('↥', ['up-arrow from bar']);
+  this.executeCharTest('↦', ['right-arrow from bar']);
+  this.executeCharTest('↧', ['down-arrow from bar']);
+  this.executeCharTest('↨', ['up down-arrow with base']);
+  this.executeCharTest('↩', ['left-arrow with hook']);
+  this.executeCharTest('↪', ['right-arrow with hook']);
+  this.executeCharTest('↫', ['left-arrow with loop']);
+  this.executeCharTest('↬', ['right-arrow with loop']);
+  this.executeCharTest('↭', ['left right wave arrow']);
+  this.executeCharTest('↮', ['left-right-arrow with stroke']);
+  this.executeCharTest('↯', ['down zigzag arrow']);
+  this.executeCharTest('↰', ['up-arrow with tip left']);
+  this.executeCharTest('↱', ['up-arrow with tip right']);
+  this.executeCharTest('↲', ['down-arrow with tip left']);
+  this.executeCharTest('↳', ['down-arrow with tip right']);
+  this.executeCharTest('↴', ['right-arrow with corner down']);
+  this.executeCharTest('↵', ['down-arrow with corner left']);
+  this.executeCharTest('↶', ['anticlockwise top semicircle arrow']);
+  this.executeCharTest('↷', ['clockwise top semicircle arrow']);
+  this.executeCharTest('↸', ['up left-arrow to long bar']);
+  this.executeCharTest('↹', ['left-arrow to bar over right-arrow to bar']);
+  this.executeCharTest('↺', ['anticlockwise open circle arrow']);
+  this.executeCharTest('↻', ['clockwise open circle arrow']);
+  this.executeCharTest('⇄', ['right-arrow over left-arrow']);
+  this.executeCharTest('⇅', ['up-arrow left of down-arrow']);
+  this.executeCharTest('⇆', ['left-arrow over right-arrow']);
+  this.executeCharTest('⇇', ['left paired arrows']);
+  this.executeCharTest('⇈', ['up paired arrows']);
+  this.executeCharTest('⇉', ['right paired arrows']);
+  this.executeCharTest('⇊', ['down paired arrows']);
+  this.executeCharTest('⇍', ['left double arrow with stroke']);
+  this.executeCharTest('⇎', ['left right double arrow with stroke']);
+  this.executeCharTest('⇏', ['right double arrow with stroke']);
+  this.executeCharTest('⇐', ['left double arrow']);
+  this.executeCharTest('⇑', ['up double arrow']);
+  this.executeCharTest('⇒', ['right double arrow']);
+  this.executeCharTest('⇓', ['down double arrow']);
+  this.executeCharTest('⇔', ['left right double arrow']);
+  this.executeCharTest('⇕', ['up down double arrow']);
+  this.executeCharTest('⇖', ['up left double arrow']);
+  this.executeCharTest('⇗', ['up right double arrow']);
+  this.executeCharTest('⇘', ['down right double arrow']);
+  this.executeCharTest('⇙', ['down left double arrow']);
+  this.executeCharTest('⇚', ['left triple arrow']);
+  this.executeCharTest('⇛', ['right triple arrow']);
+  this.executeCharTest('⇜', ['left squiggle arrow']);
+  this.executeCharTest('⇝', ['right squiggle arrow']);
+  this.executeCharTest('⇞', ['up-arrow with double stroke']);
+  this.executeCharTest('⇟', ['down-arrow with double stroke']);
+  this.executeCharTest('⇠', ['left dasheD arrow']);
+  this.executeCharTest('⇡', ['up dasheD arrow']);
+  this.executeCharTest('⇢', ['right dasheD arrow']);
+  this.executeCharTest('⇣', ['down dasheD arrow']);
+  this.executeCharTest('⇤', ['left-arrow to bar']);
+  this.executeCharTest('⇥', ['right-arrow to bar']);
+  this.executeCharTest('⇦', ['white left-arrow']);
+  this.executeCharTest('⇧', ['white up-arrow']);
+  this.executeCharTest('⇨', ['white right-arrow']);
+  this.executeCharTest('⇩', ['white down-arrow']);
+  this.executeCharTest('⇪', ['white up-arrow from bar']);
+  this.executeCharTest('⇫', ['white up-arrow on pedestal']);
+  this.executeCharTest('⇬', ['white up-arrow on pedestal with horizontal bar']);
+  this.executeCharTest('⇭', ['white up-arrow on pedestal with vertical bar']);
+  this.executeCharTest('⇮', ['white double up-arrow']);
+  this.executeCharTest('⇯', ['white double up-arrow on pedestal']);
+  this.executeCharTest('⇰', ['white right-arrow from wall']);
+  this.executeCharTest('⇱', ['north west arrow to corner']);
+  this.executeCharTest('⇲', ['south east arrow to corner']);
+  this.executeCharTest('⇳', ['up down white arrow']);
+  this.executeCharTest('⇴', ['right-arrow with small circle']);
+  this.executeCharTest('⇵', ['down-arrow left of up-arrow']);
+  this.executeCharTest('⇶', ['three right-arrows']);
+  this.executeCharTest('⇷', ['left-arrow with vertical stroke']);
+  this.executeCharTest('⇸', ['right-arrow with vertical stroke']);
+  this.executeCharTest('⇹', ['left-right-arrow with vertical stroke']);
+  this.executeCharTest('⇺', ['left-arrow with double vertical stroke']);
+  this.executeCharTest('⇻', ['right-arrow with double vertical stroke']);
+  this.executeCharTest('⇼', ['left-right-arrow with double vertical stroke']);
+  this.executeCharTest('⇽', ['left open headed arrow']);
+  this.executeCharTest('⇾', ['right open headed arrow']);
+  this.executeCharTest('⇿', ['left right open headed arrow']);
+  this.executeCharTest('⌁', ['electric arrow']);
+  this.executeCharTest('⌃', ['up-arrowhead']);
+  this.executeCharTest('⌄', ['down-arrowhead']);
+  this.executeCharTest('⌤', ['up-arrowhead between two horizontal bars']);
+  this.executeCharTest('⎋', ['broken circle with northwest arrow']);
+  this.executeCharTest('➔', ['heavy wide headed right-arrow']);
+  this.executeCharTest('➘', ['heavy down right-arrow']);
+  this.executeCharTest('➙', ['heavy right-arrow']);
+  this.executeCharTest('➚', ['heavy up right-arrow']);
+  this.executeCharTest('➛', ['drafting point right-arrow']);
+  this.executeCharTest('➜', ['heavy round tipped right-arrow']);
+  this.executeCharTest('➝', ['triangle headed right-arrow']);
+  this.executeCharTest('➞', ['heavy triangle headed right-arrow']);
+  this.executeCharTest('➟', ['dashed triangle headed right-arrow']);
+  this.executeCharTest('➠', ['heavy dashed triangle headed right-arrow']);
+  this.executeCharTest('➡', ['black right-arrow']);
+  this.executeCharTest('➢', ['three d top lighted right-arrowhead']);
+  this.executeCharTest('➣', ['three d bottom lighted right-arrowhead']);
+  this.executeCharTest('➤', ['black right-arrowhead']);
+  this.executeCharTest('➥', ['heavy black curved down and right-arrow']);
+  this.executeCharTest('➦', ['heavy black curved up and right-arrow']);
+  this.executeCharTest('➧', ['squat black right-arrow']);
+  this.executeCharTest('➨', ['heavy concave pointed black right-arrow']);
+  this.executeCharTest('➩', ['right shaded white right-arrow']);
+  this.executeCharTest('➪', ['left shaded white right-arrow']);
+  this.executeCharTest('➫', ['back tilted shadowed white right-arrow']);
+  this.executeCharTest('➬', ['front tilted shadowed white right-arrow']);
+  this.executeCharTest('➭', ['heavy lower right shadowed white right-arrow']);
+  this.executeCharTest('➮', ['heavy upper right shadowed white right-arrow']);
+  this.executeCharTest('➯', ['notched lower right shadowed white right-arrow']);
+  this.executeCharTest('➱', ['notched upper right shadowed white right-arrow']);
+  this.executeCharTest('➲', ['circled heavy white right-arrow']);
+  this.executeCharTest('➳', ['white feathered right-arrow']);
+  this.executeCharTest('➴', ['black feathered down right-arrow']);
+  this.executeCharTest('➵', ['black feathered right-arrow']);
+  this.executeCharTest('➶', ['black feathered up right-arrow']);
+  this.executeCharTest('➷', ['heavy black feathered down right-arrow']);
+  this.executeCharTest('➸', ['heavy black feathered right-arrow']);
+  this.executeCharTest('➹', ['heavy black feathered up right-arrow']);
+  this.executeCharTest('➺', ['teardrop barbed right-arrow']);
+  this.executeCharTest('➻', ['heavy teardrop shanked right-arrow']);
+  this.executeCharTest('➼', ['wedge tailed right-arrow']);
+  this.executeCharTest('➽', ['heavy wedge tailed right-arrow']);
+  this.executeCharTest('➾', ['open outlined right-arrow']);
+  this.executeCharTest('⟰', ['up quadruple arrow']);
+  this.executeCharTest('⟱', ['down quadruple arrow']);
+  this.executeCharTest('⟲', ['anticlockwise gapped circle arrow']);
+  this.executeCharTest('⟳', ['clockwise gapped circle arrow']);
+  this.executeCharTest('⟴', ['right-arrow with circled plus']);
+  this.executeCharTest('⟵', ['long left-arrow']);
+  this.executeCharTest('⟶', ['long right-arrow']);
+  this.executeCharTest('⟷', ['long left-right-arrow']);
+  this.executeCharTest('⟸', ['long left double arrow']);
+  this.executeCharTest('⟹', ['long right double arrow']);
+  this.executeCharTest('⟺', ['long left right double arrow']);
+  this.executeCharTest('⟻', ['long left-arrow from bar']);
+  this.executeCharTest('⟼', ['long right-arrow from bar']);
+  this.executeCharTest('⟽', ['long left double arrow from bar']);
+  this.executeCharTest('⟾', ['long right double arrow from bar']);
+  this.executeCharTest('⟿', ['long right squiggle arrow']);
+  this.executeCharTest('⤀', ['two headed right-arrow with vertical stroke']);
+  this.executeCharTest('⤁', ['two headed right-arrow with double vertical stroke']);
+  this.executeCharTest('⤂', ['double left-arrow with vertical stroke']);
+  this.executeCharTest('⤃', ['double right-arrow with vertical stroke']);
+  this.executeCharTest('⤄', ['double left-right-arrow with vertical stroke']);
+  this.executeCharTest('⤅', ['two headed right-arrow from bar']);
+  this.executeCharTest('⤆', ['double left-arrow from bar']);
+  this.executeCharTest('⤇', ['double right-arrow from bar']);
+  this.executeCharTest('⤈', ['arrow down with horizontal stroke']);
+  this.executeCharTest('⤉', ['up-arrow with horizontal stroke']);
+  this.executeCharTest('⤊', ['up triple arrow']);
+  this.executeCharTest('⤋', ['down triple arrow']);
+  this.executeCharTest('⤌', ['left double dash arrow']);
+  this.executeCharTest('⤍', ['right double dash arrow']);
+  this.executeCharTest('⤎', ['left triple dash arrow']);
+  this.executeCharTest('⤏', ['right triple dash arrow']);
+  this.executeCharTest('⤐', ['right two headed triple dash arrow']);
+  this.executeCharTest('⤑', ['right-arrow with dotted stem']);
+  this.executeCharTest('⤒', ['up-arrow to bar']);
+  this.executeCharTest('⤓', ['down-arrow to bar']);
+  this.executeCharTest('⤔', ['right-arrow with tail with vertical stroke']);
+  this.executeCharTest('⤕', ['right-arrow with tail with double vertical stroke']);
+  this.executeCharTest('⤖', ['right two headed arrow with tail']);
+  this.executeCharTest('⤗', ['right two headed arrow with tail with vertical stroke']);
+  this.executeCharTest('⤘', ['right two headed arrow with tail with double vertical stroke']);
+  this.executeCharTest('⤙', ['left-arrow tail']);
+  this.executeCharTest('⤚', ['right-arrow tail']);
+  this.executeCharTest('⤛', ['left double arrow tail']);
+  this.executeCharTest('⤜', ['right double arrow tail']);
+  this.executeCharTest('⤝', ['left-arrow to black diamond']);
+  this.executeCharTest('⤞', ['right-arrow to black diamond']);
+  this.executeCharTest('⤟', ['left-arrow from bar to black diamond']);
+  this.executeCharTest('⤠', ['right-arrow from bar to black diamond']);
+  this.executeCharTest('⤡', ['north west and south east arrow']);
+  this.executeCharTest('⤢', ['north east and south west arrow']);
+  this.executeCharTest('⤣', ['north west arrow with hook']);
+  this.executeCharTest('⤤', ['north east arrow with hook']);
+  this.executeCharTest('⤥', ['south east arrow with hook']);
+  this.executeCharTest('⤦', ['south west arrow with hook']);
+  this.executeCharTest('⤧', ['north west arrow and north east arrow']);
+  this.executeCharTest('⤨', ['north east arrow and south east arrow']);
+  this.executeCharTest('⤩', ['south east arrow and south west arrow']);
+  this.executeCharTest('⤪', ['south west arrow and north west arrow']);
+  this.executeCharTest('⤭', ['south east arrow crossing north east arrow']);
+  this.executeCharTest('⤮', ['north east arrow crossing south east arrow']);
+  this.executeCharTest('⤯', ['falling diagonal crossing north east arrow']);
+  this.executeCharTest('⤰', ['rising diagonal crossing south east arrow']);
+  this.executeCharTest('⤱', ['north east arrow crossing north west arrow']);
+  this.executeCharTest('⤲', ['north west arrow crossing north east arrow']);
+  this.executeCharTest('⤳', ['wave arrow pointing directly right']);
+  this.executeCharTest('⤴', ['arrow pointing right then curving up']);
+  this.executeCharTest('⤵', ['arrow pointing right then curving down']);
+  this.executeCharTest('⤶', ['arrow pointing down then curving left']);
+  this.executeCharTest('⤷', ['arrow pointing down then curving right']);
+  this.executeCharTest('⤸', ['right side arc clockwise arrow']);
+  this.executeCharTest('⤹', ['left side arc anticlockwise arrow']);
+  this.executeCharTest('⤺', ['top arc anticlockwise arrow']);
+  this.executeCharTest('⤻', ['bottom arc anticlockwise arrow']);
+  this.executeCharTest('⤼', ['top arc clockwise arrow with minus']);
+  this.executeCharTest('⤽', ['top arc anticlockwise arrow with plus']);
+  this.executeCharTest('⤾', ['down right semicircular clockwise arrow']);
+  this.executeCharTest('⤿', ['down left semicircular anticlockwise arrow']);
+  this.executeCharTest('⥀', ['anticlockwise closed circle arrow']);
+  this.executeCharTest('⥁', ['clockwise closed circle arrow']);
+  this.executeCharTest('⥂', ['right-arrow above short left-arrow']);
+  this.executeCharTest('⥃', ['left-arrow above short right-arrow']);
+  this.executeCharTest('⥄', ['short right-arrow above left-arrow']);
+  this.executeCharTest('⥅', ['right-arrow with plus below']);
+  this.executeCharTest('⥆', ['left-arrow with plus below']);
+  this.executeCharTest('⥇', ['right-arrow through x']);
+  this.executeCharTest('⥈', ['left-right-arrow through small circle']);
+  this.executeCharTest('⥉', ['up two headed arrow from small circle']);
+  this.executeCharTest('⥰', ['right double arrow with rounded head']);
+  this.executeCharTest('⥱', ['equals sign above right-arrow']);
+  this.executeCharTest('⥲', ['tilde operator above right-arrow']);
+  this.executeCharTest('⥳', ['left-arrow above tilde operator']);
+  this.executeCharTest('⥴', ['right-arrow above tilde operator']);
+  this.executeCharTest('⥵', ['right-arrow above almost equals']);
+  this.executeCharTest('⥶', ['less than above left-arrow']);
+  this.executeCharTest('⥷', ['left-arrow through less than']);
+  this.executeCharTest('⥸', ['greater than above right-arrow']);
+  this.executeCharTest('⥹', ['subset above right-arrow']);
+  this.executeCharTest('⥺', ['left-arrow through subset']);
+  this.executeCharTest('⥻', ['superset above left-arrow']);
+  this.executeCharTest('⦳', ['empty set with right-arrow above']);
+  this.executeCharTest('⦴', ['empty set with left-arrow above']);
+  this.executeCharTest('⦽', ['up-arrow through circle']);
+  this.executeCharTest('⧪', ['black diamond with down-arrow']);
+  this.executeCharTest('⧬', ['white circle with down-arrow']);
+  this.executeCharTest('⧭', ['black circle with down-arrow']);
+  this.executeCharTest('⨗', ['integral with left-arrow with hook']);
+  this.executeCharTest('⬀', ['north east white arrow']);
+  this.executeCharTest('⬁', ['north west white arrow']);
+  this.executeCharTest('⬂', ['south east white arrow']);
+  this.executeCharTest('⬃', ['south west white arrow']);
+  this.executeCharTest('⬄', ['left right white arrow']);
+  this.executeCharTest('⬅', ['left black arrow']);
+  this.executeCharTest('⬆', ['up black arrow']);
+  this.executeCharTest('⬇', ['down black arrow']);
+  this.executeCharTest('⬈', ['north east black arrow']);
+  this.executeCharTest('⬉', ['north west black arrow']);
+  this.executeCharTest('⬊', ['south east black arrow']);
+  this.executeCharTest('⬋', ['south west black arrow']);
+  this.executeCharTest('⬌', ['left right black arrow']);
+  this.executeCharTest('⬍', ['up down black arrow']);
+  this.executeCharTest('⬎', ['right-arrow with tip down']);
+  this.executeCharTest('⬏', ['right-arrow with tip up']);
+  this.executeCharTest('⬐', ['left-arrow with tip down']);
+  this.executeCharTest('⬑', ['left-arrow with tip up']);
+  this.executeCharTest('⬰', ['left-arrow with small circle']);
+  this.executeCharTest('⬱', ['three left-arrows']);
+  this.executeCharTest('⬲', ['left-arrow with circled plus']);
+  this.executeCharTest('⬳', ['long left squiggle arrow']);
+  this.executeCharTest('⬴', ['left two headed arrow with vertical stroke']);
+  this.executeCharTest('⬵', ['left two headed arrow with double vertical stroke']);
+  this.executeCharTest('⬶', ['left two headed arrow from bar']);
+  this.executeCharTest('⬷', ['left two headed triple dash arrow']);
+  this.executeCharTest('⬸', ['left-arrow with dotted stem']);
+  this.executeCharTest('⬹', ['left-arrow with tail with vertical stroke']);
+  this.executeCharTest('⬺', ['left-arrow with tail with double vertical stroke']);
+  this.executeCharTest('⬻', ['left two headed arrow with tail']);
+  this.executeCharTest('⬼', ['left two headed arrow with tail with vertical stroke']);
+  this.executeCharTest('⬽', ['left two headed arrow with tail with double vertical stroke']);
+  this.executeCharTest('⬾', ['left-arrow through x']);
+  this.executeCharTest('⬿', ['wave arrow pointing directly left']);
+  this.executeCharTest('⭀', ['equals sign above left-arrow']);
+  this.executeCharTest('⭁', ['reverse tilde operator above left-arrow']);
+  this.executeCharTest('⭂', ['left-arrow above reverse almost equals']);
+  this.executeCharTest('⭃', ['right-arrow through greater than']);
+  this.executeCharTest('⭄', ['right-arrow through superset']);
+  this.executeCharTest('⭅', ['left quadruple arrow']);
+  this.executeCharTest('⭆', ['right quadruple arrow']);
+  this.executeCharTest('⭇', ['reverse tilde operator above right-arrow']);
+  this.executeCharTest('⭈', ['right-arrow above reverse almost equals']);
+  this.executeCharTest('⭉', ['tilde operator above left-arrow']);
+  this.executeCharTest('⭊', ['left-arrow above almost equals']);
+  this.executeCharTest('⭋', ['left-arrow above reverse tilde operator']);
+  this.executeCharTest('⭌', ['right-arrow above reverse tilde operator']);
+  this.executeCharTest('￩', ['halfwidth left-arrow']);
+  this.executeCharTest('￪', ['halfwidth up-arrow']);
+  this.executeCharTest('￫', ['halfwidth right-arrow']);
+  this.executeCharTest('￬', ['halfwidth down-arrow']);
+  this.executeCharTest('ℓ', ['script l']);
+  this.executeCharTest('℘', ['script upper P']);
+  this.executeCharTest('ℼ', ['double struck pi']);
+  this.executeCharTest('ℽ', ['double struck gamma']);
+  this.executeCharTest('ℾ', ['double struck upper Gamma']);
+  this.executeCharTest('ℿ', ['double struck upper Pi']);
+  this.executeCharTest('⅀', ['double struck n ary summation']);
+  this.executeCharTest('ⅅ', ['double struck italic upper D']);
+  this.executeCharTest('ⅆ', ['double struck italic d']);
+  this.executeCharTest('ⅇ', ['double struck italic e']);
+  this.executeCharTest('ⅈ', ['double struck italic i']);
+  this.executeCharTest('ⅉ', ['double struck italic j']);
+  this.executeCharTest('𝚤', ['italic dotless i']);
+  this.executeCharTest('𝚥', ['italic dotless j']);
+  this.executeCharTest('(', ['open paren']);
+  this.executeCharTest(')', ['close paren']);
+  this.executeCharTest('[', ['open bracket']);
+  this.executeCharTest(']', ['close bracket']);
+  this.executeCharTest('{', ['open brace']);
+  this.executeCharTest('}', ['close brace']);
+  this.executeCharTest('⁅', ['left-bracket with quill']);
+  this.executeCharTest('⁆', ['right-bracket with quill']);
+  this.executeCharTest('⌈', ['left ceiling']);
+  this.executeCharTest('⌉', ['right ceiling']);
+  this.executeCharTest('⌊', ['left floor']);
+  this.executeCharTest('⌋', ['right floor']);
+  this.executeCharTest('⌌', ['bottom right crop']);
+  this.executeCharTest('⌍', ['bottom left crop']);
+  this.executeCharTest('⌎', ['top right crop']);
+  this.executeCharTest('⌏', ['top left crop']);
+  this.executeCharTest('⌜', ['top left corner']);
+  this.executeCharTest('⌝', ['top right corner']);
+  this.executeCharTest('⌞', ['bottom left corner']);
+  this.executeCharTest('⌟', ['bottom right corner']);
+  this.executeCharTest('⌠', ['top half integral']);
+  this.executeCharTest('⌡', ['bottom half integral']);
+  this.executeCharTest('〈', ['left pointing angle']);
+  this.executeCharTest('〉', ['right pointing angle']);
+  this.executeCharTest('⎛', ['left-parenthesis upper hook']);
+  this.executeCharTest('⎜', ['left-parenthesis extension']);
+  this.executeCharTest('⎝', ['left-parenthesis lower hook']);
+  this.executeCharTest('⎞', ['right-parenthesis upper hook']);
+  this.executeCharTest('⎟', ['right-parenthesis extension']);
+  this.executeCharTest('⎠', ['right-parenthesis lower hook']);
+  this.executeCharTest('⎡', ['left-bracket upper corner']);
+  this.executeCharTest('⎢', ['left-bracket extension']);
+  this.executeCharTest('⎣', ['left-bracket lower corner']);
+  this.executeCharTest('⎤', ['right-bracket upper corner']);
+  this.executeCharTest('⎥', ['right-bracket extension']);
+  this.executeCharTest('⎦', ['right-bracket lower corner']);
+  this.executeCharTest('⎧', ['left-brace upper hook']);
+  this.executeCharTest('⎨', ['left-brace middle piece']);
+  this.executeCharTest('⎩', ['left-brace lower hook']);
+  this.executeCharTest('⎪', ['brace extension']);
+  this.executeCharTest('⎫', ['right-brace upper hook']);
+  this.executeCharTest('⎬', ['right-brace middle piece']);
+  this.executeCharTest('⎭', ['right-brace lower hook']);
+  this.executeCharTest('⎮', ['integral extension']);
+  this.executeCharTest('⎯', ['horizontal line extension']);
+  this.executeCharTest('⎰', ['upper left or lower right-brace section']);
+  this.executeCharTest('⎱', ['upper right or lower left-brace section']);
+  this.executeCharTest('⎲', ['summation top']);
+  this.executeCharTest('⎳', ['summation bottom']);
+  this.executeCharTest('⎴', ['top-bracket']);
+  this.executeCharTest('⎵', ['bottom-bracket']);
+  this.executeCharTest('⎶', ['bottom-bracket over top-bracket']);
+  this.executeCharTest('⎷', ['radical symbol bottom']);
+  this.executeCharTest('⎸', ['left vertical box line']);
+  this.executeCharTest('⎹', ['right vertical box line']);
+  this.executeCharTest('⏜', ['top-parenthesis']);
+  this.executeCharTest('⏝', ['bottom-parenthesis']);
+  this.executeCharTest('⏞', ['top-brace']);
+  this.executeCharTest('⏟', ['bottom-brace']);
+  this.executeCharTest('⏠', ['top tortoise shell bracket']);
+  this.executeCharTest('⏡', ['bottom tortoise shell bracket']);
+  this.executeCharTest('❨', ['medium left-parenthesis ornament']);
+  this.executeCharTest('❩', ['medium right-parenthesis ornament']);
+  this.executeCharTest('❪', ['medium flattened left-parenthesis ornament']);
+  this.executeCharTest('❫', ['medium flattened right-parenthesis ornament']);
+  this.executeCharTest('❬', ['medium left pointing angle ornament']);
+  this.executeCharTest('❭', ['medium right pointing angle ornament']);
+  this.executeCharTest('❮', ['heavy left pointing angle quotation mark ornament']);
+  this.executeCharTest('❯', ['heavy right pointing angle quotation mark ornament']);
+  this.executeCharTest('❰', ['heavy left pointing angle ornament']);
+  this.executeCharTest('❱', ['heavy right pointing angle ornament']);
+  this.executeCharTest('❲', ['light left tortoise shell bracket ornament']);
+  this.executeCharTest('❳', ['light right tortoise shell bracket ornament']);
+  this.executeCharTest('❴', ['medium left-brace ornament']);
+  this.executeCharTest('❵', ['medium right-brace ornament']);
+  this.executeCharTest('⟅', ['left s shaped bag delimiter']);
+  this.executeCharTest('⟆', ['right s shaped bag delimiter']);
+  this.executeCharTest('⟦', ['mathematical left white bracket']);
+  this.executeCharTest('⟧', ['mathematical right white bracket']);
+  this.executeCharTest('⟨', ['mathematical left-angle']);
+  this.executeCharTest('⟩', ['mathematical right-angle']);
+  this.executeCharTest('⟪', ['mathematical left double angle']);
+  this.executeCharTest('⟫', ['mathematical right double angle']);
+  this.executeCharTest('⟬', ['mathematical left white tortoise shell bracket']);
+  this.executeCharTest('⟭', ['mathematical right white tortoise shell bracket']);
+  this.executeCharTest('⟮', ['mathematical flattened left-parenthesis']);
+  this.executeCharTest('⟯', ['mathematical flattened right-parenthesis']);
+  this.executeCharTest('⦃', ['left white brace']);
+  this.executeCharTest('⦄', ['right white brace']);
+  this.executeCharTest('⦅', ['white left-parenthesis']);
+  this.executeCharTest('⦆', ['white right-parenthesis']);
+  this.executeCharTest('⦇', ['z notation left image bracket']);
+  this.executeCharTest('⦈', ['z notation right image bracket']);
+  this.executeCharTest('⦉', ['z notation left binding bracket']);
+  this.executeCharTest('⦊', ['z notation right binding bracket']);
+  this.executeCharTest('⦋', ['left-bracket with underbar']);
+  this.executeCharTest('⦌', ['right-bracket with underbar']);
+  this.executeCharTest('⦍', ['left-bracket with tick in top corner']);
+  this.executeCharTest('⦎', ['right-bracket with tick in bottom corner']);
+  this.executeCharTest('⦏', ['left-bracket with tick in bottom corner']);
+  this.executeCharTest('⦐', ['right-bracket with tick in top corner']);
+  this.executeCharTest('⦑', ['left-angle with dot']);
+  this.executeCharTest('⦒', ['right-angle with dot']);
+  this.executeCharTest('⦓', ['left arc less than bracket']);
+  this.executeCharTest('⦔', ['right arc greater than bracket']);
+  this.executeCharTest('⦕', ['double left arc greater than bracket']);
+  this.executeCharTest('⦖', ['double right arc less than bracket']);
+  this.executeCharTest('⦗', ['left black tortoise shell bracket']);
+  this.executeCharTest('⦘', ['right black tortoise shell bracket']);
+  this.executeCharTest('⧘', ['left wiggly fence']);
+  this.executeCharTest('⧙', ['right wiggly fence']);
+  this.executeCharTest('⧚', ['left double wiggly fence']);
+  this.executeCharTest('⧛', ['right double wiggly fence']);
+  this.executeCharTest('⧼', ['left pointing curved angle']);
+  this.executeCharTest('⧽', ['right pointing curved angle']);
+  this.executeCharTest('⸢', ['top half left-bracket']);
+  this.executeCharTest('⸣', ['top half right-bracket']);
+  this.executeCharTest('⸤', ['bottom half left-bracket']);
+  this.executeCharTest('⸥', ['bottom half right-bracket']);
+  this.executeCharTest('⸦', ['left sideways U bracket']);
+  this.executeCharTest('⸧', ['right sideways U bracket']);
+  this.executeCharTest('⸨', ['double left-parenthesis']);
+  this.executeCharTest('⸩', ['double right-parenthesis']);
+  this.executeCharTest('〈', ['left-angle']);
+  this.executeCharTest('〉', ['right-angle']);
+  this.executeCharTest('《', ['left double angle']);
+  this.executeCharTest('》', ['right double angle']);
+  this.executeCharTest('「', ['left corner bracket']);
+  this.executeCharTest('」', ['right corner bracket']);
+  this.executeCharTest('『', ['left white corner bracket']);
+  this.executeCharTest('』', ['right white corner bracket']);
+  this.executeCharTest('【', ['left black lenticular bracket']);
+  this.executeCharTest('】', ['right black lenticular bracket']);
+  this.executeCharTest('〔', ['left tortoise shell bracket']);
+  this.executeCharTest('〕', ['right tortoise shell bracket']);
+  this.executeCharTest('〖', ['left white lenticular bracket']);
+  this.executeCharTest('〗', ['right white lenticular bracket']);
+  this.executeCharTest('〘', ['left white tortoise shell bracket']);
+  this.executeCharTest('〙', ['right white tortoise shell bracket']);
+  this.executeCharTest('〚', ['left white bracket']);
+  this.executeCharTest('〛', ['right white bracket']);
+  this.executeCharTest('〝', ['reversed double prime quotation mark']);
+  this.executeCharTest('〞', ['double prime quotation mark']);
+  this.executeCharTest('〟', ['low double prime quotation mark']);
+  this.executeCharTest('﴾', ['ornate left-parenthesis']);
+  this.executeCharTest('﴿', ['ornate right-parenthesis']);
+  this.executeCharTest('︗', ['presentation form for vertical left white lenticular bracket']);
+  this.executeCharTest('︘', ['presentation form for vertical right white lenticular brakcet']);
+  this.executeCharTest('︵', ['presentation form for vertical left-parenthesis']);
+  this.executeCharTest('︶', ['presentation form for vertical right-parenthesis']);
+  this.executeCharTest('︷', ['presentation form for vertical left-brace']);
+  this.executeCharTest('︸', ['presentation form for vertical right-brace']);
+  this.executeCharTest('︹', ['presentation form for vertical left tortoise shell bracket']);
+  this.executeCharTest('︺', ['presentation form for vertical right tortoise shell bracket']);
+  this.executeCharTest('︻', ['presentation form for vertical left black lenticular bracket']);
+  this.executeCharTest('︼', ['presentation form for vertical right black lenticular bracket']);
+  this.executeCharTest('︽', ['presentation form for vertical left double angle']);
+  this.executeCharTest('︾', ['presentation form for vertical right double angle']);
+  this.executeCharTest('︿', ['presentation form for vertical left-angle']);
+  this.executeCharTest('﹀', ['presentation form for vertical right-angle']);
+  this.executeCharTest('﹁', ['presentation form for vertical left corner bracket']);
+  this.executeCharTest('﹂', ['presentation form for vertical right corner bracket']);
+  this.executeCharTest('﹃', ['presentation form for vertical left white corner bracket']);
+  this.executeCharTest('﹄', ['presentation form for vertical right white corner bracket']);
+  this.executeCharTest('﹇', ['presentation form for vertical left-bracket']);
+  this.executeCharTest('﹈', ['presentation form for vertical right-bracket']);
+  this.executeCharTest('﹙', ['small left-parenthesis']);
+  this.executeCharTest('﹚', ['small right-parenthesis']);
+  this.executeCharTest('﹛', ['small left-brace']);
+  this.executeCharTest('﹜', ['small right-brace']);
+  this.executeCharTest('﹝', ['small left tortoise shell bracket']);
+  this.executeCharTest('﹞', ['small right tortoise shell bracket']);
+  this.executeCharTest('（', ['fullwidth left-parenthesis']);
+  this.executeCharTest('）', ['fullwidth right-parenthesis']);
+  this.executeCharTest('［', ['fullwidth left-bracket']);
+  this.executeCharTest('］', ['fullwidth right-bracket']);
+  this.executeCharTest('｛', ['fullwidth left-brace']);
+  this.executeCharTest('｝', ['fullwidth right-brace']);
+  this.executeCharTest('｟', ['fullwidth white left-parenthesis']);
+  this.executeCharTest('｠', ['fullwidth white right-parenthesis']);
+  this.executeCharTest('｢', ['halfwidth left corner bracket']);
+  this.executeCharTest('｣', ['halfwidth right corner bracket']);
+  this.executeCharTest('²', ['9']);
+  this.executeCharTest('³', ['cube']);
+  this.executeCharTest('¹', ['super one']);
+  this.executeCharTest('¼', ['one quarter']);
+  this.executeCharTest('½', ['one half']);
+  this.executeCharTest('¾', ['three quarters']);
+  this.executeCharTest('⁰', ['super zero']);
+  this.executeCharTest('⁴', ['super four']);
+  this.executeCharTest('⁵', ['super five']);
+  this.executeCharTest('⁶', ['super six']);
+  this.executeCharTest('⁷', ['super seven']);
+  this.executeCharTest('⁸', ['super eight']);
+  this.executeCharTest('⁹', ['super nine']);
+  this.executeCharTest('₀', ['sub zero']);
+  this.executeCharTest('₁', ['sub one']);
+  this.executeCharTest('₂', ['sub two']);
+  this.executeCharTest('₃', ['sub three']);
+  this.executeCharTest('₄', ['sub four']);
+  this.executeCharTest('₅', ['sub five']);
+  this.executeCharTest('₆', ['sub six']);
+  this.executeCharTest('₇', ['sub seven']);
+  this.executeCharTest('₈', ['sub eight']);
+  this.executeCharTest('₉', ['sub nine']);
+  this.executeCharTest('⅐', ['one seventh']);
+  this.executeCharTest('⅑', ['one ninth']);
+  this.executeCharTest('⅒', ['one tenth']);
+  this.executeCharTest('⅓', ['one third']);
+  this.executeCharTest('⅔', ['two thirds']);
+  this.executeCharTest('⅕', ['one fifth']);
+  this.executeCharTest('⅖', ['two fifths']);
+  this.executeCharTest('⅗', ['three fifths']);
+  this.executeCharTest('⅘', ['four fifths']);
+  this.executeCharTest('⅙', ['one sixth']);
+  this.executeCharTest('⅚', ['five sixths']);
+  this.executeCharTest('⅛', ['one eighth']);
+  this.executeCharTest('⅜', ['three eighths']);
+  this.executeCharTest('⅝', ['five eighths']);
+  this.executeCharTest('⅞', ['seven eighths']);
+  this.executeCharTest('⅟', ['numerator one']);
+  this.executeCharTest('↉', ['zero thirds']);
+  this.executeCharTest('①', ['circled 1']);
+  this.executeCharTest('②', ['circled 2']);
+  this.executeCharTest('③', ['circled 3']);
+  this.executeCharTest('④', ['circled 4']);
+  this.executeCharTest('⑤', ['circled 5']);
+  this.executeCharTest('⑥', ['circled 6']);
+  this.executeCharTest('⑦', ['circled 7']);
+  this.executeCharTest('⑧', ['circled 8']);
+  this.executeCharTest('⑨', ['circled 9']);
+  this.executeCharTest('⑩', ['circled 10']);
+  this.executeCharTest('⑪', ['circled 11']);
+  this.executeCharTest('⑫', ['circled 12']);
+  this.executeCharTest('⑬', ['circled 13']);
+  this.executeCharTest('⑭', ['circled 14']);
+  this.executeCharTest('⑮', ['circled 15']);
+  this.executeCharTest('⑯', ['circled 16']);
+  this.executeCharTest('⑰', ['circled 17']);
+  this.executeCharTest('⑱', ['circled 18']);
+  this.executeCharTest('⑲', ['circled 19']);
+  this.executeCharTest('⑳', ['circled 20']);
+  this.executeCharTest('⑴', ['parenthesized 1']);
+  this.executeCharTest('⑵', ['parenthesized 2']);
+  this.executeCharTest('⑶', ['parenthesized 3']);
+  this.executeCharTest('⑷', ['parenthesized 4']);
+  this.executeCharTest('⑸', ['parenthesized 5']);
+  this.executeCharTest('⑹', ['parenthesized 6']);
+  this.executeCharTest('⑺', ['parenthesized 7']);
+  this.executeCharTest('⑻', ['parenthesized 8']);
+  this.executeCharTest('⑼', ['parenthesized 9']);
+  this.executeCharTest('⑽', ['parenthesized 10']);
+  this.executeCharTest('⑾', ['parenthesized 11']);
+  this.executeCharTest('⑿', ['parenthesized 12']);
+  this.executeCharTest('⒀', ['parenthesized 13']);
+  this.executeCharTest('⒁', ['parenthesized 14']);
+  this.executeCharTest('⒂', ['parenthesized 15']);
+  this.executeCharTest('⒃', ['parenthesized 16']);
+  this.executeCharTest('⒄', ['parenthesized 17']);
+  this.executeCharTest('⒅', ['parenthesized 18']);
+  this.executeCharTest('⒆', ['parenthesized 19']);
+  this.executeCharTest('⒇', ['parenthesized 20']);
+  this.executeCharTest('⒈', ['1 period']);
+  this.executeCharTest('⒉', ['2 period']);
+  this.executeCharTest('⒊', ['3 period']);
+  this.executeCharTest('⒋', ['4 period']);
+  this.executeCharTest('⒌', ['5 period']);
+  this.executeCharTest('⒍', ['6 period']);
+  this.executeCharTest('⒎', ['7 period']);
+  this.executeCharTest('⒏', ['8 period']);
+  this.executeCharTest('⒐', ['9 period']);
+  this.executeCharTest('⒑', ['10 period']);
+  this.executeCharTest('⒒', ['11 period']);
+  this.executeCharTest('⒓', ['12 period']);
+  this.executeCharTest('⒔', ['13 period']);
+  this.executeCharTest('⒕', ['14 period']);
+  this.executeCharTest('⒖', ['15 period']);
+  this.executeCharTest('⒗', ['16 period']);
+  this.executeCharTest('⒘', ['17 period']);
+  this.executeCharTest('⒙', ['18 period']);
+  this.executeCharTest('⒚', ['19 period']);
+  this.executeCharTest('⒛', ['20 period']);
+  this.executeCharTest('⓪', ['circled 0']);
+  this.executeCharTest('⓫', ['negative circled 11']);
+  this.executeCharTest('⓬', ['negative circled 12']);
+  this.executeCharTest('⓭', ['negative circled 13']);
+  this.executeCharTest('⓮', ['negative circled 14']);
+  this.executeCharTest('⓯', ['negative circled 15']);
+  this.executeCharTest('⓰', ['negative circled 16']);
+  this.executeCharTest('⓱', ['negative circled 17']);
+  this.executeCharTest('⓲', ['negative circled 18']);
+  this.executeCharTest('⓳', ['negative circled 19']);
+  this.executeCharTest('⓴', ['negative circled 20']);
+  this.executeCharTest('⓵', ['double circled 1']);
+  this.executeCharTest('⓶', ['double circled 2']);
+  this.executeCharTest('⓷', ['double circled 3']);
+  this.executeCharTest('⓸', ['double circled 4']);
+  this.executeCharTest('⓹', ['double circled 5']);
+  this.executeCharTest('⓺', ['double circled 6']);
+  this.executeCharTest('⓻', ['double circled 7']);
+  this.executeCharTest('⓼', ['double circled 8']);
+  this.executeCharTest('⓽', ['double circled 9']);
+  this.executeCharTest('⓾', ['double circled 10']);
+  this.executeCharTest('⓿', ['negative circled 0']);
+  this.executeCharTest('❶', ['inverse circled 1']);
+  this.executeCharTest('❷', ['inverse circled 2']);
+  this.executeCharTest('❸', ['inverse circled 3']);
+  this.executeCharTest('❹', ['inverse circled 4']);
+  this.executeCharTest('❺', ['inverse circled 5']);
+  this.executeCharTest('❻', ['inverse circled 6']);
+  this.executeCharTest('❼', ['inverse circled 7']);
+  this.executeCharTest('❽', ['inverse circled 8']);
+  this.executeCharTest('❾', ['inverse circled 9']);
+  this.executeCharTest('❿', ['inverse circled 10']);
+  this.executeCharTest('➀', ['circled one']);
+  this.executeCharTest('➁', ['circled two']);
+  this.executeCharTest('➂', ['circled three']);
+  this.executeCharTest('➃', ['circled four']);
+  this.executeCharTest('➄', ['circled five']);
+  this.executeCharTest('➅', ['circled six']);
+  this.executeCharTest('➆', ['circled seven']);
+  this.executeCharTest('➇', ['circled eight']);
+  this.executeCharTest('➈', ['circled nine']);
+  this.executeCharTest('➉', ['circled ten']);
+  this.executeCharTest('➊', ['inverse circled 1']);
+  this.executeCharTest('➋', ['inverse circled 2']);
+  this.executeCharTest('➌', ['inverse circled 3']);
+  this.executeCharTest('➍', ['inverse circled 4']);
+  this.executeCharTest('➎', ['inverse circled 5']);
+  this.executeCharTest('➏', ['inverse circled 6']);
+  this.executeCharTest('➐', ['inverse circled 7']);
+  this.executeCharTest('➑', ['inverse circled 8']);
+  this.executeCharTest('➒', ['inverse circled 9']);
+  this.executeCharTest('➓', ['inverse circled 10']);
+  this.executeCharTest('㉈', ['circled ten on black square']);
+  this.executeCharTest('㉉', ['circled twenty on black square']);
+  this.executeCharTest('㉊', ['circled thirty on black square']);
+  this.executeCharTest('㉋', ['circled forty on black square']);
+  this.executeCharTest('㉌', ['circled fifty on black square']);
+  this.executeCharTest('㉍', ['circled sixty on black square']);
+  this.executeCharTest('㉎', ['circled seventy on black square']);
+  this.executeCharTest('㉏', ['circled eighty on black square']);
+  this.executeCharTest('㉑', ['circled twenty one']);
+  this.executeCharTest('㉒', ['circled twenty two']);
+  this.executeCharTest('㉓', ['circled twenty three']);
+  this.executeCharTest('㉔', ['circled twenty four']);
+  this.executeCharTest('㉕', ['circled twenty five']);
+  this.executeCharTest('㉖', ['circled twenty six']);
+  this.executeCharTest('㉗', ['circled twenty seven']);
+  this.executeCharTest('㉘', ['circled twenty eight']);
+  this.executeCharTest('㉙', ['circled twenty nine']);
+  this.executeCharTest('㉚', ['circled thirty']);
+  this.executeCharTest('㉛', ['circled thirty one']);
+  this.executeCharTest('㉜', ['circled thirty two']);
+  this.executeCharTest('㉝', ['circled thirty three']);
+  this.executeCharTest('㉞', ['circled thirty four']);
+  this.executeCharTest('㉟', ['circled thirty five']);
+  this.executeCharTest('㊱', ['circled thirty six']);
+  this.executeCharTest('㊲', ['circled thirty seven']);
+  this.executeCharTest('㊳', ['circled thirty eight']);
+  this.executeCharTest('㊴', ['circled thirty nine']);
+  this.executeCharTest('㊵', ['circled forty']);
+  this.executeCharTest('㊶', ['circled forty one']);
+  this.executeCharTest('㊷', ['circled forty two']);
+  this.executeCharTest('㊸', ['circled forty three']);
+  this.executeCharTest('㊹', ['circled forty four']);
+  this.executeCharTest('㊺', ['circled forty five']);
+  this.executeCharTest('㊻', ['circled forty six']);
+  this.executeCharTest('㊼', ['circled forty seven']);
+  this.executeCharTest('㊽', ['circled forty eight']);
+  this.executeCharTest('㊾', ['circled forty nine']);
+  this.executeCharTest('㊿', ['circled fifty']);
+  this.executeCharTest('０', ['0']);
+  this.executeCharTest('１', ['1']);
+  this.executeCharTest('２', ['2']);
+  this.executeCharTest('３', ['3']);
+  this.executeCharTest('４', ['4']);
+  this.executeCharTest('５', ['5']);
+  this.executeCharTest('６', ['6']);
+  this.executeCharTest('７', ['7']);
+  this.executeCharTest('８', ['8']);
+  this.executeCharTest('９', ['9']);
+  this.executeCharTest('𝟎', ['bold 0']);
+  this.executeCharTest('𝟏', ['bold 1']);
+  this.executeCharTest('𝟐', ['bold 2']);
+  this.executeCharTest('𝟑', ['bold 3']);
+  this.executeCharTest('𝟒', ['bold 4']);
+  this.executeCharTest('𝟓', ['bold 5']);
+  this.executeCharTest('𝟔', ['bold 6']);
+  this.executeCharTest('𝟕', ['bold 7']);
+  this.executeCharTest('𝟖', ['bold 8']);
+  this.executeCharTest('𝟗', ['bold 9']);
+  this.executeCharTest('𝟘', ['blackboard 0']);
+  this.executeCharTest('𝟙', ['blackboard 1']);
+  this.executeCharTest('𝟚', ['blackboard 2']);
+  this.executeCharTest('𝟛', ['blackboard 3']);
+  this.executeCharTest('𝟜', ['blackboard 4']);
+  this.executeCharTest('𝟝', ['blackboard 5']);
+  this.executeCharTest('𝟞', ['blackboard 6']);
+  this.executeCharTest('𝟟', ['blackboard 7']);
+  this.executeCharTest('𝟠', ['blackboard 8']);
+  this.executeCharTest('𝟡', ['blackboard 9']);
+  this.executeCharTest('𝟢', ['sans serif 0']);
+  this.executeCharTest('𝟣', ['sans serif 1']);
+  this.executeCharTest('𝟤', ['sans serif 2']);
+  this.executeCharTest('𝟥', ['sans serif 3']);
+  this.executeCharTest('𝟦', ['sans serif 4']);
+  this.executeCharTest('𝟧', ['sans serif 5']);
+  this.executeCharTest('𝟨', ['sans serif 6']);
+  this.executeCharTest('𝟩', ['sans serif 7']);
+  this.executeCharTest('𝟪', ['sans serif 8']);
+  this.executeCharTest('𝟫', ['sans serif 9']);
+  this.executeCharTest('𝟬', ['sans serif bold 0']);
+  this.executeCharTest('𝟭', ['sans serif bold 1']);
+  this.executeCharTest('𝟮', ['sans serif bold 2']);
+  this.executeCharTest('𝟯', ['sans serif bold 3']);
+  this.executeCharTest('𝟰', ['sans serif bold 4']);
+  this.executeCharTest('𝟱', ['sans serif bold 5']);
+  this.executeCharTest('𝟲', ['sans serif bold 6']);
+  this.executeCharTest('𝟳', ['sans serif bold 7']);
+  this.executeCharTest('𝟴', ['sans serif bold 8']);
+  this.executeCharTest('𝟵', ['sans serif bold 9']);
+  this.executeCharTest('𝟶', ['monospace 0']);
+  this.executeCharTest('𝟷', ['monospace 1']);
+  this.executeCharTest('𝟸', ['monospace 2']);
+  this.executeCharTest('𝟹', ['monospace 3']);
+  this.executeCharTest('𝟺', ['monospace 4']);
+  this.executeCharTest('𝟻', ['monospace 5']);
+  this.executeCharTest('𝟼', ['monospace 6']);
+  this.executeCharTest('𝟽', ['monospace 7']);
+  this.executeCharTest('𝟾', ['monospace 8']);
+  this.executeCharTest('𝟿', ['monospace 9']);
+  this.executeCharTest('🄀', ['0 period']);
+  this.executeCharTest('🄁', ['0 comma']);
+  this.executeCharTest('🄂', ['1 comma']);
+  this.executeCharTest('🄃', ['2 comma']);
+  this.executeCharTest('🄄', ['3 comma']);
+  this.executeCharTest('🄅', ['4 comma']);
+  this.executeCharTest('🄆', ['5 comma']);
+  this.executeCharTest('🄇', ['6 comma']);
+  this.executeCharTest('🄈', ['7 comma']);
+  this.executeCharTest('🄉', ['8 comma']);
+  this.executeCharTest('🄊', ['9 comma']);
+  this.executeCharTest('─', ['box drawings light horizontal']);
+  this.executeCharTest('━', ['box drawings heavy horizontal']);
+  this.executeCharTest('│', ['box drawings light vertical']);
+  this.executeCharTest('┃', ['box drawings heavy vertical']);
+  this.executeCharTest('┄', ['box drawings light triple dash horizontal']);
+  this.executeCharTest('┅', ['box drawings heavy triple dash horizontal']);
+  this.executeCharTest('┆', ['box drawings light triple dash vertical']);
+  this.executeCharTest('┇', ['box drawings heavy triple dash vertical']);
+  this.executeCharTest('┈', ['box drawings light quadruple dash horizontal']);
+  this.executeCharTest('┉', ['box drawings heavy quadruple dash horizontal']);
+  this.executeCharTest('┊', ['box drawings light quadruple dash vertical']);
+  this.executeCharTest('┋', ['box drawings heavy quadruple dash vertical']);
+  this.executeCharTest('┌', ['box drawings light down and right']);
+  this.executeCharTest('┍', ['box drawings down light and right heavy']);
+  this.executeCharTest('┎', ['box drawings down heavy and right light']);
+  this.executeCharTest('┏', ['box drawings heavy down and right']);
+  this.executeCharTest('┐', ['box drawings light down and left']);
+  this.executeCharTest('┑', ['box drawings down light and left heavy']);
+  this.executeCharTest('┒', ['box drawings down heavy and left light']);
+  this.executeCharTest('┓', ['box drawings heavy down and left']);
+  this.executeCharTest('└', ['box drawings light up and right']);
+  this.executeCharTest('┕', ['box drawings up light and right heavy']);
+  this.executeCharTest('┖', ['box drawings up heavy and right light']);
+  this.executeCharTest('┗', ['box drawings heavy up and right']);
+  this.executeCharTest('┘', ['box drawings light up and left']);
+  this.executeCharTest('┙', ['box drawings up light and left heavy']);
+  this.executeCharTest('┚', ['box drawings up heavy and left light']);
+  this.executeCharTest('┛', ['box drawings heavy up and left']);
+  this.executeCharTest('├', ['box drawings light vertical and right']);
+  this.executeCharTest('┝', ['box drawings vertical light and right heavy']);
+  this.executeCharTest('┞', ['box drawings up heavy and right down light']);
+  this.executeCharTest('┟', ['box drawings down heavy and right up light']);
+  this.executeCharTest('┠', ['box drawings vertical heavy and right light']);
+  this.executeCharTest('┡', ['box drawings down light and right up heavy']);
+  this.executeCharTest('┢', ['box drawings up light and right down heavy']);
+  this.executeCharTest('┣', ['box drawings heavy vertical and right']);
+  this.executeCharTest('┤', ['box drawings light vertical and left']);
+  this.executeCharTest('┥', ['box drawings vertical light and left heavy']);
+  this.executeCharTest('┦', ['box drawings up heavy and left down light']);
+  this.executeCharTest('┧', ['box drawings down heavy and left up light']);
+  this.executeCharTest('┨', ['box drawings vertical heavy and left light']);
+  this.executeCharTest('┩', ['box drawings down light and left up heavy']);
+  this.executeCharTest('┪', ['box drawings up light and left down heavy']);
+  this.executeCharTest('┫', ['box drawings heavy vertical and left']);
+  this.executeCharTest('┬', ['box drawings light down and horizontal']);
+  this.executeCharTest('┭', ['box drawings left heavy and right down light']);
+  this.executeCharTest('┮', ['box drawings right heavy and left down light']);
+  this.executeCharTest('┯', ['box drawings down light and horizontal heavy']);
+  this.executeCharTest('┰', ['box drawings down heavy and horizontal light']);
+  this.executeCharTest('┱', ['box drawings right light and left down heavy']);
+  this.executeCharTest('┲', ['box drawings left light and right down heavy']);
+  this.executeCharTest('┳', ['box drawings heavy down and horizontal']);
+  this.executeCharTest('┴', ['box drawings light up and horizontal']);
+  this.executeCharTest('┵', ['box drawings left heavy and right up light']);
+  this.executeCharTest('┶', ['box drawings right heavy and left up light']);
+  this.executeCharTest('┷', ['box drawings up light and horizontal heavy']);
+  this.executeCharTest('┸', ['box drawings up heavy and horizontal light']);
+  this.executeCharTest('┹', ['box drawings right light and left up heavy']);
+  this.executeCharTest('┺', ['box drawings left light and right up heavy']);
+  this.executeCharTest('┻', ['box drawings heavy up and horizontal']);
+  this.executeCharTest('┼', ['box drawings light vertical and horizontal']);
+  this.executeCharTest('┽', ['box drawings left heavy and right vertical light']);
+  this.executeCharTest('┾', ['box drawings right heavy and left vertical light']);
+  this.executeCharTest('┿', ['box drawings vertical light and horizontal heavy']);
+  this.executeCharTest('╀', ['box drawings up heavy and down horizontal light']);
+  this.executeCharTest('╁', ['box drawings down heavy and up horizontal light']);
+  this.executeCharTest('╂', ['box drawings vertical heavy and horizontal light']);
+  this.executeCharTest('╃', ['box drawings left up heavy and right down light']);
+  this.executeCharTest('╄', ['box drawings right up heavy and left down light']);
+  this.executeCharTest('╅', ['box drawings left down heavy and right up light']);
+  this.executeCharTest('╆', ['box drawings right down heavy and left up light']);
+  this.executeCharTest('╇', ['box drawings down light and up horizontal heavy']);
+  this.executeCharTest('╈', ['box drawings up light and down horizontal heavy']);
+  this.executeCharTest('╉', ['box drawings right light and left vertical heavy']);
+  this.executeCharTest('╊', ['box drawings left light and right vertical heavy']);
+  this.executeCharTest('╋', ['box drawings heavy vertical and horizontal']);
+  this.executeCharTest('╌', ['box drawings light double dash horizontal']);
+  this.executeCharTest('╍', ['box drawings heavy double dash horizontal']);
+  this.executeCharTest('╎', ['box drawings light double dash vertical']);
+  this.executeCharTest('╏', ['box drawings heavy double dash vertical']);
+  this.executeCharTest('═', ['box drawings double horizontal']);
+  this.executeCharTest('║', ['box drawings double vertical']);
+  this.executeCharTest('╒', ['box drawings down single and right double']);
+  this.executeCharTest('╓', ['box drawings down double and right single']);
+  this.executeCharTest('╔', ['box drawings double down and right']);
+  this.executeCharTest('╕', ['box drawings down single and left double']);
+  this.executeCharTest('╖', ['box drawings down double and left single']);
+  this.executeCharTest('╗', ['box drawings double down and left']);
+  this.executeCharTest('╘', ['box drawings up single and right double']);
+  this.executeCharTest('╙', ['box drawings up double and right single']);
+  this.executeCharTest('╚', ['box drawings double up and right']);
+  this.executeCharTest('╛', ['box drawings up single and left double']);
+  this.executeCharTest('╜', ['box drawings up double and left single']);
+  this.executeCharTest('╝', ['box drawings double up and left']);
+  this.executeCharTest('╞', ['box drawings vertical single and right double']);
+  this.executeCharTest('╟', ['box drawings vertical double and right single']);
+  this.executeCharTest('╠', ['box drawings double vertical and right']);
+  this.executeCharTest('╡', ['box drawings vertical single and left double']);
+  this.executeCharTest('╢', ['box drawings vertical double and left single']);
+  this.executeCharTest('╣', ['box drawings double vertical and left']);
+  this.executeCharTest('╤', ['box drawings down single and horizontal double']);
+  this.executeCharTest('╥', ['box drawings down double and horizontal single']);
+  this.executeCharTest('╦', ['box drawings double down and horizontal']);
+  this.executeCharTest('╧', ['box drawings up single and horizontal double']);
+  this.executeCharTest('╨', ['box drawings up double and horizontal single']);
+  this.executeCharTest('╩', ['box drawings double up and horizontal']);
+  this.executeCharTest('╪', ['box drawings vertical single and horizontal double']);
+  this.executeCharTest('╫', ['box drawings vertical double and horizontal single']);
+  this.executeCharTest('╬', ['box drawings double vertical and horizontal']);
+  this.executeCharTest('╭', ['box drawings light arc down and right']);
+  this.executeCharTest('╮', ['box drawings light arc down and left']);
+  this.executeCharTest('╯', ['box drawings light arc up and left']);
+  this.executeCharTest('╰', ['box drawings light arc up and right']);
+  this.executeCharTest('╱', ['box drawings light diagonal upper right to lower left']);
+  this.executeCharTest('╲', ['box drawings light diagonal upper left to lower right']);
+  this.executeCharTest('╳', ['box drawings light diagonal cross']);
+  this.executeCharTest('╴', ['box drawings light left']);
+  this.executeCharTest('╵', ['box drawings light up']);
+  this.executeCharTest('╶', ['box drawings light right']);
+  this.executeCharTest('╷', ['box drawings light down']);
+  this.executeCharTest('╸', ['box drawings heavy left']);
+  this.executeCharTest('╹', ['box drawings heavy up']);
+  this.executeCharTest('╺', ['box drawings heavy right']);
+  this.executeCharTest('╻', ['box drawings heavy down']);
+  this.executeCharTest('╼', ['box drawings light left and heavy right']);
+  this.executeCharTest('╽', ['box drawings light up and heavy down']);
+  this.executeCharTest('╾', ['box drawings heavy left and light right']);
+  this.executeCharTest('╿', ['box drawings heavy up and light down']);
+  this.executeCharTest('▀', ['upper half block']);
+  this.executeCharTest('▁', ['lower one eighth block']);
+  this.executeCharTest('▂', ['lower one quarter block']);
+  this.executeCharTest('▃', ['lower three eighths block']);
+  this.executeCharTest('▄', ['lower half block']);
+  this.executeCharTest('▅', ['lower five eighths block']);
+  this.executeCharTest('▆', ['lower three quarters block']);
+  this.executeCharTest('▇', ['lower seven eighths block']);
+  this.executeCharTest('█', ['full block']);
+  this.executeCharTest('▉', ['left seven eighths block']);
+  this.executeCharTest('▊', ['left three quarters block']);
+  this.executeCharTest('▋', ['left five eighths block']);
+  this.executeCharTest('▌', ['left half block']);
+  this.executeCharTest('▍', ['left three eighths block']);
+  this.executeCharTest('▎', ['left one quarter block']);
+  this.executeCharTest('▏', ['left one eighth block']);
+  this.executeCharTest('▐', ['right half block']);
+  this.executeCharTest('░', ['light shade']);
+  this.executeCharTest('▒', ['medium shade']);
+  this.executeCharTest('▓', ['dark shade']);
+  this.executeCharTest('▔', ['upper one eighth block']);
+  this.executeCharTest('▕', ['right one eighth block']);
+  this.executeCharTest('▖', ['quadrant lower left']);
+  this.executeCharTest('▗', ['quadrant lower right']);
+  this.executeCharTest('▘', ['quadrant upper left']);
+  this.executeCharTest('▙', ['quadrant upper left and lower left and lower right']);
+  this.executeCharTest('▚', ['quadrant upper left and lower right']);
+  this.executeCharTest('▛', ['quadrant upper left and upper right and lower left']);
+  this.executeCharTest('▜', ['quadrant upper left and upper right and lower right']);
+  this.executeCharTest('▝', ['quadrant upper right']);
+  this.executeCharTest('▞', ['quadrant upper right and lower left']);
+  this.executeCharTest('▟', ['quadrant upper right and lower left and lower right']);
+  this.executeCharTest('■', ['black square']);
+  this.executeCharTest('□', ['white square']);
+  this.executeCharTest('▢', ['white square with rounded corners']);
+  this.executeCharTest('▣', ['white square containing black small square']);
+  this.executeCharTest('▤', ['square with horizontal fill']);
+  this.executeCharTest('▥', ['square with vertical fill']);
+  this.executeCharTest('▦', ['square with orthogonal crosshatch fill']);
+  this.executeCharTest('▧', ['square with upper left to lower right fill']);
+  this.executeCharTest('▨', ['square with upper right to lower left fill']);
+  this.executeCharTest('▩', ['square with diagonal crosshatch fill']);
+  this.executeCharTest('▪', ['black small square']);
+  this.executeCharTest('▫', ['white small square']);
+  this.executeCharTest('▬', ['black rectangle']);
+  this.executeCharTest('▭', ['white rectangle']);
+  this.executeCharTest('▮', ['black vertical rectangle']);
+  this.executeCharTest('▯', ['white vertical rectangle']);
+  this.executeCharTest('▰', ['black parallelogram']);
+  this.executeCharTest('▱', ['white parallelogram']);
+  this.executeCharTest('▲', ['black up pointing triangle']);
+  this.executeCharTest('△', ['white up pointing triangle']);
+  this.executeCharTest('▴', ['black up pointing small triangle']);
+  this.executeCharTest('▵', ['white up pointing small triangle']);
+  this.executeCharTest('▶', ['black right pointing triangle']);
+  this.executeCharTest('▷', ['white right pointing triangle']);
+  this.executeCharTest('▸', ['black right pointing small triangle']);
+  this.executeCharTest('▹', ['white right pointing small triangle']);
+  this.executeCharTest('►', ['black right pointing pointer']);
+  this.executeCharTest('▻', ['white right pointing pointer']);
+  this.executeCharTest('▼', ['black down pointing triangle']);
+  this.executeCharTest('▽', ['white down pointing triangle']);
+  this.executeCharTest('▾', ['black down pointing small triangle']);
+  this.executeCharTest('▿', ['white down pointing small triangle']);
+  this.executeCharTest('◀', ['black left pointing triangle']);
+  this.executeCharTest('◁', ['white left pointing triangle']);
+  this.executeCharTest('◂', ['black left pointing small triangle']);
+  this.executeCharTest('◃', ['white left pointing small triangle']);
+  this.executeCharTest('◄', ['black left pointing pointer']);
+  this.executeCharTest('◅', ['white left pointing pointer']);
+  this.executeCharTest('◆', ['black diamond']);
+  this.executeCharTest('◇', ['white diamond']);
+  this.executeCharTest('◈', ['white diamond containing black small diamond']);
+  this.executeCharTest('◉', ['fisheye']);
+  this.executeCharTest('◊', ['lozenge']);
+  this.executeCharTest('○', ['white circle']);
+  this.executeCharTest('◌', ['dotted circle']);
+  this.executeCharTest('◍', ['circle with vertical fill']);
+  this.executeCharTest('◎', ['bullseye']);
+  this.executeCharTest('●', ['black circle']);
+  this.executeCharTest('◐', ['circle with left half black']);
+  this.executeCharTest('◑', ['circle with right half black']);
+  this.executeCharTest('◒', ['circle with lower half black']);
+  this.executeCharTest('◓', ['circle with upper half black']);
+  this.executeCharTest('◔', ['circle with upper right quadrant black']);
+  this.executeCharTest('◕', ['circle with all but upper left quadrant black']);
+  this.executeCharTest('◖', ['left half black circle']);
+  this.executeCharTest('◗', ['right half black circle']);
+  this.executeCharTest('◘', ['inverse bullet']);
+  this.executeCharTest('◙', ['inverse white circle']);
+  this.executeCharTest('◚', ['upper half inverse white circle']);
+  this.executeCharTest('◛', ['lower half inverse white circle']);
+  this.executeCharTest('◜', ['upper left quadrant circular arc']);
+  this.executeCharTest('◝', ['upper right quadrant circular arc']);
+  this.executeCharTest('◞', ['lower right quadrant circular arc']);
+  this.executeCharTest('◟', ['lower left quadrant circular arc']);
+  this.executeCharTest('◠', ['upper half circle']);
+  this.executeCharTest('◡', ['lower half circle']);
+  this.executeCharTest('◢', ['black lower right triangle']);
+  this.executeCharTest('◣', ['black lower left triangle']);
+  this.executeCharTest('◤', ['black upper left triangle']);
+  this.executeCharTest('◥', ['black upper right triangle']);
+  this.executeCharTest('◦', ['white bullet']);
+  this.executeCharTest('◧', ['square with left half black']);
+  this.executeCharTest('◨', ['square with right half black']);
+  this.executeCharTest('◩', ['square with upper left diagonal half black']);
+  this.executeCharTest('◪', ['square with lower right diagonal half black']);
+  this.executeCharTest('◫', ['white square with vertical bisecting line']);
+  this.executeCharTest('◬', ['white up pointing triangle with dot']);
+  this.executeCharTest('◭', ['up pointing triangle with left half black']);
+  this.executeCharTest('◮', ['up pointing triangle with right half black']);
+  this.executeCharTest('◯', ['large circle']);
+  this.executeCharTest('◰', ['white square with upper left quadrant']);
+  this.executeCharTest('◱', ['white square with lower left quadrant']);
+  this.executeCharTest('◲', ['white square with lower right quadrant']);
+  this.executeCharTest('◳', ['white square with upper right quadrant']);
+  this.executeCharTest('◴', ['white circle with upper left quadrant']);
+  this.executeCharTest('◵', ['white circle with lower left quadrant']);
+  this.executeCharTest('◶', ['white circle with lower right quadrant']);
+  this.executeCharTest('◷', ['white circle with upper right quadrant']);
+  this.executeCharTest('◸', ['upper left triangle']);
+  this.executeCharTest('◹', ['upper right triangle']);
+  this.executeCharTest('◺', ['lower left triangle']);
+  this.executeCharTest('◻', ['white medium square']);
+  this.executeCharTest('◼', ['black medium square']);
+  this.executeCharTest('◽', ['white medium small square']);
+  this.executeCharTest('◾', ['black medium small square']);
+  this.executeCharTest('◿', ['lower right triangle']);
+  this.executeCharTest('⬒', ['square with top half black']);
+  this.executeCharTest('⬓', ['square with bottom half black']);
+  this.executeCharTest('⬔', ['square with upper right diagonal half black']);
+  this.executeCharTest('⬕', ['square with lower left diagonal half black']);
+  this.executeCharTest('⬖', ['diamond with left half black']);
+  this.executeCharTest('⬗', ['diamond with right half black']);
+  this.executeCharTest('⬘', ['diamond with top half black']);
+  this.executeCharTest('⬙', ['diamond with bottom half black']);
+  this.executeCharTest('⬚', ['dotted square']);
+  this.executeCharTest('⬛', ['black large square']);
+  this.executeCharTest('⬜', ['white large square']);
+  this.executeCharTest('⬝', ['black very small square']);
+  this.executeCharTest('⬞', ['white very small square']);
+  this.executeCharTest('⬟', ['black pentagon']);
+  this.executeCharTest('⬠', ['white pentagon']);
+  this.executeCharTest('⬡', ['white hexagon']);
+  this.executeCharTest('⬢', ['black hexagon']);
+  this.executeCharTest('⬣', ['horizontal black hexagon']);
+  this.executeCharTest('⬤', ['black large circle']);
+  this.executeCharTest('⬥', ['black medium diamond']);
+  this.executeCharTest('⬦', ['white medium diamond']);
+  this.executeCharTest('⬧', ['black medium lozenge']);
+  this.executeCharTest('⬨', ['white medium lozenge']);
+  this.executeCharTest('⬩', ['black small diamond']);
+  this.executeCharTest('⬪', ['black small lozenge']);
+  this.executeCharTest('⬫', ['white small lozenge']);
+  this.executeCharTest('⬬', ['black horizontal ellipse']);
+  this.executeCharTest('⬭', ['white horizontal ellipse']);
+  this.executeCharTest('⬮', ['black vertical ellipse']);
+  this.executeCharTest('⬯', ['white vertical ellipse']);
+  this.executeCharTest('⭐', ['white medium star']);
+  this.executeCharTest('⭑', ['black small star']);
+  this.executeCharTest('⭒', ['white small star']);
+  this.executeCharTest('⭓', ['black right pointing pentagon']);
+  this.executeCharTest('⭔', ['white right pointing pentagon']);
+  this.executeCharTest('⭕', ['heavy large circle']);
+  this.executeCharTest('⭖', ['heavy oval with oval inside']);
+  this.executeCharTest('⭗', ['heavy circle with circle inside']);
+  this.executeCharTest('⭘', ['heavy circle']);
+  this.executeCharTest('⭙', ['heavy circled saltire']);
+  this.executeCharTest('↼', ['left harpoon with barb up']);
+  this.executeCharTest('↽', ['left harpoon with barb down']);
+  this.executeCharTest('↾', ['up harpoon with barb right']);
+  this.executeCharTest('↿', ['up harpoon with barb left']);
+  this.executeCharTest('⇀', ['right harpoon with barb up']);
+  this.executeCharTest('⇁', ['right harpoon with barb down']);
+  this.executeCharTest('⇂', ['down harpoon with barb right']);
+  this.executeCharTest('⇃', ['down harpoon with barb left']);
+  this.executeCharTest('⇋', ['left harpoon over right harpoon']);
+  this.executeCharTest('⇌', ['right harpoon over left harpoon']);
+  this.executeCharTest('⥊', ['left barb up right barb down harpoon']);
+  this.executeCharTest('⥋', ['left barb down right barb up harpoon']);
+  this.executeCharTest('⥌', ['up barb right down barb left harpoon']);
+  this.executeCharTest('⥍', ['up barb left down barb right harpoon']);
+  this.executeCharTest('⥎', ['left barb up right barb up harpoon']);
+  this.executeCharTest('⥏', ['up barb right down barb right harpoon']);
+  this.executeCharTest('⥐', ['left barb down right barb down harpoon']);
+  this.executeCharTest('⥑', ['up barb left down barb left harpoon']);
+  this.executeCharTest('⥒', ['left harpoon with barb up to bar']);
+  this.executeCharTest('⥓', ['right harpoon with barb up to bar']);
+  this.executeCharTest('⥔', ['up harpoon with barb right to bar']);
+  this.executeCharTest('⥕', ['down harpoon with barb right to bar']);
+  this.executeCharTest('⥖', ['left harpoon with barb down to bar']);
+  this.executeCharTest('⥗', ['right harpoon with barb down to bar']);
+  this.executeCharTest('⥘', ['up harpoon with barb left to bar']);
+  this.executeCharTest('⥙', ['down harpoon with barb left to bar']);
+  this.executeCharTest('⥚', ['left harpoon with barb up from bar']);
+  this.executeCharTest('⥛', ['right harpoon with barb up from bar']);
+  this.executeCharTest('⥜', ['up harpoon with barb right from bar']);
+  this.executeCharTest('⥝', ['down harpoon with barb right from bar']);
+  this.executeCharTest('⥞', ['left harpoon with barb down from bar']);
+  this.executeCharTest('⥟', ['right harpoon with barb down from bar']);
+  this.executeCharTest('⥠', ['up harpoon with barb left from bar']);
+  this.executeCharTest('⥡', ['down harpoon with barb left from bar']);
+  this.executeCharTest('⥢', ['left harpoon with barb up above left harpoon with barb down']);
+  this.executeCharTest('⥣', ['up harpoon with barb left beside up harpoon with barb right']);
+  this.executeCharTest('⥤', ['right harpoon with barb up above right harpoon with barb down']);
+  this.executeCharTest('⥥', ['down harpoon with barb left beside down harpoon with barb right']);
+  this.executeCharTest('⥦', ['left harpoon with barb up above right harpoon with barb up']);
+  this.executeCharTest('⥧', ['left harpoon with barb down above right harpoon with barb down']);
+  this.executeCharTest('⥨', ['right harpoon with barb up above left harpoon with barb up']);
+  this.executeCharTest('⥩', ['right harpoon with barb down above left harpoon with barb down']);
+  this.executeCharTest('⥪', ['left harpoon with barb up above long dash']);
+  this.executeCharTest('⥫', ['left harpoon with barb down below long dash']);
+  this.executeCharTest('⥬', ['right harpoon with barb up above long dash']);
+  this.executeCharTest('⥭', ['right harpoon with barb down below long dash']);
+  this.executeCharTest('⥮', ['up harpoon with barb left beside down harpoon with barb right']);
+  this.executeCharTest('⥯', ['down harpoon with barb left beside up harpoon with barb right']);
+  this.executeCharTest('⥼', ['left fish tail']);
+  this.executeCharTest('⥽', ['right fish tail']);
+  this.executeCharTest('⥾', ['up fish tail']);
+  this.executeCharTest('⥿', ['down fish tail']);
+  this.executeCharTest('ℏ', ['italic h over two pi']);
+  this.executeCharTest('℔', ['l b bar']);
+  this.executeCharTest('№', ['numero']);
+  this.executeCharTest('℗', ['sound recording copyright']);
+  this.executeCharTest('℞', ['prescription take']);
+  this.executeCharTest('℟', ['response']);
+  this.executeCharTest('℠', ['service mark']);
+  this.executeCharTest('℡', ['telephone sign']);
+  this.executeCharTest('™', ['trade mark']);
+  this.executeCharTest('℣', ['versicle']);
+  this.executeCharTest('℥', ['ounce']);
+  this.executeCharTest('Ω', ['ohm']);
+  this.executeCharTest('℧', ['inverted ohm']);
+  this.executeCharTest('K', ['kelvin']);
+  this.executeCharTest('Å', ['angstrom']);
+  this.executeCharTest('℮', ['estimated']);
+  this.executeCharTest('Ⅎ', ['turned upper F']);
+  this.executeCharTest('ℹ', ['information source']);
+  this.executeCharTest('℺', ['rotated upper Q']);
+  this.executeCharTest('℻', ['facsimile sign']);
+  this.executeCharTest('⅁', ['turned sans serif upper G']);
+  this.executeCharTest('⅂', ['turned sans serif upper L']);
+  this.executeCharTest('⅃', ['reversed sans serif upper L']);
+  this.executeCharTest('⅄', ['turned sans serif upper Y']);
+  this.executeCharTest('!', ['exclamation mark']);
+  this.executeCharTest('#', ['number sign']);
+  this.executeCharTest('$', ['dollar sign']);
+  this.executeCharTest('%', ['percent sign']);
+  this.executeCharTest('&', ['ampersand']);
+  this.executeCharTest('\'', ['prime']);
+  this.executeCharTest('*', ['asterisk']);
+  this.executeCharTest('+', ['plus']);
+  this.executeCharTest(',', ['comma']);
+  this.executeCharTest('-', ['hyphen']);
+  this.executeCharTest('.', ['period']);
+  this.executeCharTest('/', ['slash']);
+  this.executeCharTest(':', ['colon']);
+  this.executeCharTest(';', ['semicolon']);
+  this.executeCharTest('<', ['is less than']);
+  this.executeCharTest('=', ['equals']);
+  this.executeCharTest('>', ['is greater than']);
+  this.executeCharTest('?', ['question mark']);
+  this.executeCharTest('@', ['commercial-at']);
+  this.executeCharTest('\\', ['reverse-solidus']);
+  this.executeCharTest('^', ['caret']);
+  this.executeCharTest('_', ['bar']);
+  this.executeCharTest('`', ['grave']);
+  this.executeCharTest('|', ['divides']);
+  this.executeCharTest('~', ['tilde']);
+  this.executeCharTest('¡', ['inverted exclamation mark']);
+  this.executeCharTest('¢', ['cent sign']);
+  this.executeCharTest('£', ['pound sign']);
+  this.executeCharTest('¤', ['currency sign']);
+  this.executeCharTest('¥', ['yen-sign']);
+  this.executeCharTest('¦', ['broken-vertical-bar']);
+  this.executeCharTest('§', ['section sign']);
+  this.executeCharTest('¨', ['two-dots']);
+  this.executeCharTest('©', ['copyright sign']);
+  this.executeCharTest('ª', ['feminine-ordinal-indicator']);
+  this.executeCharTest('«', ['left-pointing-guillemet']);
+  this.executeCharTest('¬', ['not sign']);
+  this.executeCharTest('®', ['trade mark sign']);
+  this.executeCharTest('¯', ['bar']);
+  this.executeCharTest('°', ['degrees']);
+  this.executeCharTest('±', ['plus or minus']);
+  this.executeCharTest('´', ['acute']);
+  this.executeCharTest('µ', ['micro sign']);
+  this.executeCharTest('¶', ['paragraph sign']);
+  this.executeCharTest('·', ['times']);
+  this.executeCharTest('¸', ['cedilla']);
+  this.executeCharTest('º', ['masculine-ordinal-indicator']);
+  this.executeCharTest('»', ['right-pointing-guillemet']);
+  this.executeCharTest('¿', ['inverted question mark']);
+  this.executeCharTest('×', ['times']);
+  this.executeCharTest('÷', ['division sign']);
+  this.executeCharTest('˘', ['breve']);
+  this.executeCharTest('˙', ['dot']);
+  this.executeCharTest('˚', ['ring-above']);
+  this.executeCharTest('˛', ['ogonek']);
+  this.executeCharTest('˜', ['tilde']);
+  this.executeCharTest('˝', ['double-acute']);
+  this.executeCharTest('‐', ['hyphen']);
+  this.executeCharTest('‑', ['non-breaking-hyphen']);
+  this.executeCharTest('‒', ['figure-dash']);
+  this.executeCharTest('–', ['en-dash']);
+  this.executeCharTest('—', ['em-dash']);
+  this.executeCharTest('―', ['quotation-dash']);
+  this.executeCharTest('‖', ['double-vertical-bar']);
+  this.executeCharTest('‗', ['double-underscore']);
+  this.executeCharTest('‘', ['single-turned-comma-quotation-mark']);
+  this.executeCharTest('’', ['single-comma-quotation-mark']);
+  this.executeCharTest('‚', ['low-single-comma-quotation-mark']);
+  this.executeCharTest('‛', ['single-reversed-comma-quotation-mark']);
+  this.executeCharTest('“', ['double-turned-comma-quotation-mark']);
+  this.executeCharTest('”', ['double-comma-quotation-mark']);
+  this.executeCharTest('„', ['low-double-comma-quotation-mark']);
+  this.executeCharTest('‟', ['double-reversed-comma-quotation-mark']);
+  this.executeCharTest('†', ['dagger']);
+  this.executeCharTest('‡', ['double-dagger']);
+  this.executeCharTest('•', ['bullet']);
+  this.executeCharTest('‣', ['triangular-bullet']);
+  this.executeCharTest('․', ['one-dot-leader']);
+  this.executeCharTest('‥', ['two-dot-leader']);
+  this.executeCharTest('…', ['dot dot dot']);
+  this.executeCharTest('‧', ['hyphenation-point']);
+  this.executeCharTest('‰', ['per-mille']);
+  this.executeCharTest('‱', ['per-ten-thousand']);
+  this.executeCharTest('′', ['prime']);
+  this.executeCharTest('″', ['double prime']);
+  this.executeCharTest('‴', ['triple prime']);
+  this.executeCharTest('‵', ['reversed-prime']);
+  this.executeCharTest('‶', ['reversed-double-prime']);
+  this.executeCharTest('‷', ['reversed-triple-prime']);
+  this.executeCharTest('‸', ['caret']);
+  this.executeCharTest('‹', ['left-pointing-single-guillemet']);
+  this.executeCharTest('›', ['right-pointing-single-guillemet']);
+  this.executeCharTest('※', ['reference-mark']);
+  this.executeCharTest('‼', ['double-exclamation-mark']);
+  this.executeCharTest('‽', ['interrobang']);
+  this.executeCharTest('‾', ['bar']);
+  this.executeCharTest('‿', ['undertie']);
+  this.executeCharTest('⁀', ['character-tie']);
+  this.executeCharTest('⁁', ['caret-insertion-point']);
+  this.executeCharTest('⁂', ['asterism']);
+  this.executeCharTest('⁃', ['hyphen-bullet']);
+  this.executeCharTest('⁄', ['fraction-slash']);
+  this.executeCharTest('⁇', ['double-question-mark']);
+  this.executeCharTest('⁈', ['question-exclamation-mark']);
+  this.executeCharTest('⁉', ['exclamation-question-mark']);
+  this.executeCharTest('⁋', ['reversed-pilcrow']);
+  this.executeCharTest('⁌', ['black-leftwards-bullet']);
+  this.executeCharTest('⁍', ['black-rightwards-bullet']);
+  this.executeCharTest('⁎', ['low-asterisk']);
+  this.executeCharTest('⁏', ['reversed-semicolon']);
+  this.executeCharTest('⁐', ['close-up']);
+  this.executeCharTest('⁑', ['two-asterisks-aligned-vertically']);
+  this.executeCharTest('⁒', ['commercial-minus']);
+  this.executeCharTest('⁓', ['swung-dash']);
+  this.executeCharTest('⁔', ['inverted-undertie']);
+  this.executeCharTest('⁕', ['flower-punctuation-mark']);
+  this.executeCharTest('⁖', ['three-dot-punctuation']);
+  this.executeCharTest('⁗', ['quadruple prime']);
+  this.executeCharTest('⁘', ['four-dot-punctuation']);
+  this.executeCharTest('⁙', ['five-dot-punctuation']);
+  this.executeCharTest('⁚', ['two-dot-punctuation']);
+  this.executeCharTest('⁛', ['four-dot-mark']);
+  this.executeCharTest('⁜', ['dotted-cross']);
+  this.executeCharTest('⁝', ['tricolon']);
+  this.executeCharTest('⁞', ['vertical-four-dots']);
+  this.executeCharTest('⁺', ['superscript-plus']);
+  this.executeCharTest('⁻', ['superscript-hyphen-minus']);
+  this.executeCharTest('⁼', ['superscript-equals']);
+  this.executeCharTest('⁽', ['superscript-opening-parenthesis']);
+  this.executeCharTest('⁾', ['superscript-closing-parenthesis']);
+  this.executeCharTest('₊', ['subscript-plus']);
+  this.executeCharTest('₋', ['subscript-hyphen-minus']);
+  this.executeCharTest('₌', ['subscript-equals']);
+  this.executeCharTest('₍', ['subscript-opening-parenthesis']);
+  this.executeCharTest('₎', ['subscript-closing-parenthesis']);
+  this.executeCharTest('⅊', ['property-line']);
+  this.executeCharTest('⅋', ['turned-ampersand']);
+  this.executeCharTest('⅌', ['per-sign']);
+  this.executeCharTest('⅍', ['aktieselskab']);
+  this.executeCharTest('ⅎ', ['turned-small-f']);
+  this.executeCharTest('∀', ['for-all']);
+  this.executeCharTest('∁', ['complement']);
+  this.executeCharTest('∂', ['partial-differential']);
+  this.executeCharTest('∃', ['there-exists']);
+  this.executeCharTest('∄', ['there-does-not-exist']);
+  this.executeCharTest('∅', ['empty-set']);
+  this.executeCharTest('∆', ['increment']);
+  this.executeCharTest('∇', ['nabla']);
+  this.executeCharTest('∈', ['is a member of']);
+  this.executeCharTest('∉', ['is not a member of']);
+  this.executeCharTest('∊', ['is a member of']);
+  this.executeCharTest('∋', ['contains-as-member']);
+  this.executeCharTest('∌', ['does-not-contain-as-member']);
+  this.executeCharTest('∍', ['small-contains-as-member']);
+  this.executeCharTest('∎', ['end-of-proof']);
+  this.executeCharTest('∏', ['product']);
+  this.executeCharTest('∐', ['coproduct']);
+  this.executeCharTest('∑', ['sum']);
+  this.executeCharTest('−', ['minus']);
+  this.executeCharTest('∓', ['minus or plus']);
+  this.executeCharTest('∔', ['dot-plus']);
+  this.executeCharTest('∕', ['division-slash']);
+  this.executeCharTest('∖', ['set-minus']);
+  this.executeCharTest('∗', ['asterisk']);
+  this.executeCharTest('∘', ['composed with']);
+  this.executeCharTest('∙', ['bullet']);
+  this.executeCharTest('√', ['square-root']);
+  this.executeCharTest('∛', ['cube-root']);
+  this.executeCharTest('∜', ['fourth-root']);
+  this.executeCharTest('∝', ['proportional-to']);
+  this.executeCharTest('∞', ['infinity']);
+  this.executeCharTest('∟', ['right-angle']);
+  this.executeCharTest('∠', ['angle']);
+  this.executeCharTest('∡', ['measured-angle']);
+  this.executeCharTest('∢', ['spherical-angle']);
+  this.executeCharTest('∣', ['bar']);
+  this.executeCharTest('∤', ['does-not-divide']);
+  this.executeCharTest('∥', ['parallel-to']);
+  this.executeCharTest('∦', ['not-parallel-to']);
+  this.executeCharTest('∧', ['logical-and']);
+  this.executeCharTest('∨', ['logical-or']);
+  this.executeCharTest('∩', ['intersection']);
+  this.executeCharTest('∪', ['union']);
+  this.executeCharTest('∫', ['integral']);
+  this.executeCharTest('∬', ['double-integral']);
+  this.executeCharTest('∭', ['triple-integral']);
+  this.executeCharTest('∮', ['contour-integral']);
+  this.executeCharTest('∯', ['surface-integral']);
+  this.executeCharTest('∰', ['volume-integral']);
+  this.executeCharTest('∱', ['clockwise-integral']);
+  this.executeCharTest('∲', ['clockwise-contour-integral']);
+  this.executeCharTest('∳', ['anticlockwise-contour-integral']);
+  this.executeCharTest('∴', ['therefore']);
+  this.executeCharTest('∵', ['because']);
+  this.executeCharTest('∶', ['ratio']);
+  this.executeCharTest('∷', ['proportion']);
+  this.executeCharTest('∸', ['dot-minus']);
+  this.executeCharTest('∹', ['excess']);
+  this.executeCharTest('∺', ['geometric-proportion']);
+  this.executeCharTest('∻', ['homothetic']);
+  this.executeCharTest('∼', ['tilde']);
+  this.executeCharTest('∽', ['reversed-tilde']);
+  this.executeCharTest('∾', ['inverted-lazy-s']);
+  this.executeCharTest('∿', ['sine-wave']);
+  this.executeCharTest('≀', ['wreath-product']);
+  this.executeCharTest('≁', ['not-tilde']);
+  this.executeCharTest('≂', ['minus-tilde']);
+  this.executeCharTest('≃', ['asymptotically-equals']);
+  this.executeCharTest('≄', ['not-asymptotically-equals']);
+  this.executeCharTest('≅', ['approximately-equals']);
+  this.executeCharTest('≆', ['approximately-but-not-actually-equals']);
+  this.executeCharTest('≇', ['neither-approximately-nor-actually-equals']);
+  this.executeCharTest('≈', ['almost-equals']);
+  this.executeCharTest('≉', ['not-almost-equals']);
+  this.executeCharTest('≊', ['almost-equal-or-equal-to']);
+  this.executeCharTest('≋', ['triple-tilde']);
+  this.executeCharTest('≌', ['all-equals']);
+  this.executeCharTest('≍', ['equivalent-to']);
+  this.executeCharTest('≎', ['geometrically-equivalent-to']);
+  this.executeCharTest('≏', ['difference-between']);
+  this.executeCharTest('≐', ['approaches-the-limit']);
+  this.executeCharTest('≑', ['geometrically-equals']);
+  this.executeCharTest('≒', ['approximately-equals-or-the-image-of']);
+  this.executeCharTest('≓', ['image-of-or-approximately-equals']);
+  this.executeCharTest('≔', ['colon-equal']);
+  this.executeCharTest('≕', ['equal-colon']);
+  this.executeCharTest('≖', ['ring-in-equals']);
+  this.executeCharTest('≗', ['ring-equals']);
+  this.executeCharTest('≘', ['corresponds-to']);
+  this.executeCharTest('≙', ['estimates']);
+  this.executeCharTest('≚', ['is equiangular to']);
+  this.executeCharTest('≛', ['star equals']);
+  this.executeCharTest('≜', ['delta equals']);
+  this.executeCharTest('≝', ['is defined to be']);
+  this.executeCharTest('≞', ['is measured by']);
+  this.executeCharTest('≟', ['questioned equals']);
+  this.executeCharTest('≠', ['not equals']);
+  this.executeCharTest('≡', ['is identical to']);
+  this.executeCharTest('≢', ['is not identical to']);
+  this.executeCharTest('≣', ['is strictly equivalent to']);
+  this.executeCharTest('≤', ['is less than or equal to']);
+  this.executeCharTest('≥', ['is greater than or equal to']);
+  this.executeCharTest('≦', ['is less than over equals']);
+  this.executeCharTest('≧', ['is greater than over equals']);
+  this.executeCharTest('≨', ['is less than but not equals']);
+  this.executeCharTest('≩', ['is greater than but not equals']);
+  this.executeCharTest('≪', ['is much less than']);
+  this.executeCharTest('≫', ['is much greater than']);
+  this.executeCharTest('≬', ['between']);
+  this.executeCharTest('≭', ['is not equivalent to']);
+  this.executeCharTest('≮', ['is not less than']);
+  this.executeCharTest('≯', ['is not greater than']);
+  this.executeCharTest('≰', ['is neither less than nor equal to']);
+  this.executeCharTest('≱', ['is neither greater than nor equal to']);
+  this.executeCharTest('≲', ['is less than or equivalent to']);
+  this.executeCharTest('≳', ['is greater than or equivalent to']);
+  this.executeCharTest('≴', ['is neither less than nor equivalent to']);
+  this.executeCharTest('≵', ['is neither greater than nor equivalent to']);
+  this.executeCharTest('≶', ['is less than or greater than']);
+  this.executeCharTest('≷', ['is greater than or less than']);
+  this.executeCharTest('≸', ['is neither less than nor greater than']);
+  this.executeCharTest('≹', ['is neither greater than nor less than']);
+  this.executeCharTest('≺', ['precedes']);
+  this.executeCharTest('≻', ['succeeds']);
+  this.executeCharTest('≼', ['precedes-or-equal-to']);
+  this.executeCharTest('≽', ['succeeds-or-equal-to']);
+  this.executeCharTest('≾', ['precedes-or-equivalent-to']);
+  this.executeCharTest('≿', ['succeeds-or-equivalent-to']);
+  this.executeCharTest('⊀', ['does-not-precede']);
+  this.executeCharTest('⊁', ['does-not-succeed']);
+  this.executeCharTest('⊂', ['subset-of']);
+  this.executeCharTest('⊃', ['superset-of']);
+  this.executeCharTest('⊄', ['not-a-subset-of']);
+  this.executeCharTest('⊅', ['not-a-superset-of']);
+  this.executeCharTest('⊆', ['subset-of-or-equal-to']);
+  this.executeCharTest('⊇', ['superset-of-or-equal-to']);
+  this.executeCharTest('⊈', ['neither-a-subset-of-nor-equal-to']);
+  this.executeCharTest('⊉', ['neither-a-superset-of-nor-equal-to']);
+  this.executeCharTest('⊊', ['subset-of-or-not-equals']);
+  this.executeCharTest('⊋', ['superset-of-or-not-equals']);
+  this.executeCharTest('⊌', ['multiset']);
+  this.executeCharTest('⊍', ['multiset-multiplication']);
+  this.executeCharTest('⊎', ['multiset-union']);
+  this.executeCharTest('⊏', ['square-image-of']);
+  this.executeCharTest('⊐', ['square-original-of']);
+  this.executeCharTest('⊑', ['square-image-of-or-equal-to']);
+  this.executeCharTest('⊒', ['square-original-of-or-equal-to']);
+  this.executeCharTest('⊓', ['square-cap']);
+  this.executeCharTest('⊔', ['square-cup']);
+  this.executeCharTest('⊕', ['circled-plus']);
+  this.executeCharTest('⊖', ['circled-minus']);
+  this.executeCharTest('⊗', ['circled-times']);
+  this.executeCharTest('⊘', ['circled-division-slash']);
+  this.executeCharTest('⊙', ['circled-dot']);
+  this.executeCharTest('⊚', ['circled-ring']);
+  this.executeCharTest('⊛', ['circled-asterisk']);
+  this.executeCharTest('⊜', ['circled-equals']);
+  this.executeCharTest('⊝', ['circled-dash']);
+  this.executeCharTest('⊞', ['squared-plus']);
+  this.executeCharTest('⊟', ['squared-minus']);
+  this.executeCharTest('⊠', ['squared-times']);
+  this.executeCharTest('⊡', ['squared-dot']);
+  this.executeCharTest('⊢', ['right-tack']);
+  this.executeCharTest('⊣', ['left-tack']);
+  this.executeCharTest('⊤', ['down-tack']);
+  this.executeCharTest('⊥', ['up-tack']);
+  this.executeCharTest('⊦', ['assertion']);
+  this.executeCharTest('⊧', ['models']);
+  this.executeCharTest('⊨', ['true']);
+  this.executeCharTest('⊩', ['forces']);
+  this.executeCharTest('⊪', ['triple-vertical-bar-right-turnstile']);
+  this.executeCharTest('⊫', ['double-vertical-bar-double-right-turnstile']);
+  this.executeCharTest('⊬', ['does-not-prove']);
+  this.executeCharTest('⊭', ['not-true']);
+  this.executeCharTest('⊮', ['does-not-force']);
+  this.executeCharTest('⊯', ['negated-double-vertical-bar-double-right-turnstile']);
+  this.executeCharTest('⊰', ['precedes-under-relation']);
+  this.executeCharTest('⊱', ['succeeds-under-relation']);
+  this.executeCharTest('⊲', ['normal-subgroup-of']);
+  this.executeCharTest('⊳', ['contains-as-normal-subgroup']);
+  this.executeCharTest('⊴', ['normal-subgroup-of-or-equal-to']);
+  this.executeCharTest('⊵', ['contains-as-normal-subgroup-or-equal-to']);
+  this.executeCharTest('⊶', ['original-of']);
+  this.executeCharTest('⊷', ['image-of']);
+  this.executeCharTest('⊸', ['multimap']);
+  this.executeCharTest('⊹', ['hermitian-conjugate-matrix']);
+  this.executeCharTest('⊺', ['intercalate']);
+  this.executeCharTest('⊻', ['xor']);
+  this.executeCharTest('⊼', ['nand']);
+  this.executeCharTest('⊽', ['nor']);
+  this.executeCharTest('⊿', ['right-triangle']);
+  this.executeCharTest('⋀', ['logical-and']);
+  this.executeCharTest('⋁', ['logical-or']);
+  this.executeCharTest('⋂', ['intersection']);
+  this.executeCharTest('⋃', ['union']);
+  this.executeCharTest('⋄', ['diamond']);
+  this.executeCharTest('⋅', ['times']);
+  this.executeCharTest('⋆', ['star']);
+  this.executeCharTest('⋇', ['division-times']);
+  this.executeCharTest('⋈', ['bowtie']);
+  this.executeCharTest('⋉', ['left-normal-factor-semidirect-product']);
+  this.executeCharTest('⋊', ['right-normal-factor-semidirect-product']);
+  this.executeCharTest('⋋', ['left-semidirect-product']);
+  this.executeCharTest('⋌', ['right-semidirect-product']);
+  this.executeCharTest('⋍', ['reversed-tilde-equals']);
+  this.executeCharTest('⋎', ['curly-logical-or']);
+  this.executeCharTest('⋏', ['curly-logical-and']);
+  this.executeCharTest('⋐', ['double-subset']);
+  this.executeCharTest('⋑', ['double-superset']);
+  this.executeCharTest('⋒', ['double-intersection']);
+  this.executeCharTest('⋓', ['double-union']);
+  this.executeCharTest('⋔', ['pitchfork']);
+  this.executeCharTest('⋕', ['equal-and-parallel-to']);
+  this.executeCharTest('⋖', ['less-than-dot']);
+  this.executeCharTest('⋗', ['greater-than-dot']);
+  this.executeCharTest('⋘', ['very-much-less-than']);
+  this.executeCharTest('⋙', ['very-much-greater-than']);
+  this.executeCharTest('⋚', ['less-than-equals-or-greater-than']);
+  this.executeCharTest('⋛', ['greater-than-equals-or-less-than']);
+  this.executeCharTest('⋜', ['equals-or-less-than']);
+  this.executeCharTest('⋝', ['equals-or-greater-than']);
+  this.executeCharTest('⋞', ['equals-or-precedes']);
+  this.executeCharTest('⋟', ['equals-or-succeeds']);
+  this.executeCharTest('⋠', ['does-not-precede-or-equal']);
+  this.executeCharTest('⋡', ['does-not-succeed-or-equal']);
+  this.executeCharTest('⋢', ['not-square-image-of-or-equal-to']);
+  this.executeCharTest('⋣', ['not-square-original-of-or-equal-to']);
+  this.executeCharTest('⋤', ['square-image-of-or-not-equals']);
+  this.executeCharTest('⋥', ['square-original-of-or-not-equals']);
+  this.executeCharTest('⋦', ['less-than-but-not-equivalent-to']);
+  this.executeCharTest('⋧', ['greater-than-but-not-equivalent-to']);
+  this.executeCharTest('⋨', ['precedes-but-not-equivalent-to']);
+  this.executeCharTest('⋩', ['succeeds-but-not-equivalent-to']);
+  this.executeCharTest('⋪', ['not-normal-subgroup-of']);
+  this.executeCharTest('⋫', ['does-not-contain-as-normal-subgroup']);
+  this.executeCharTest('⋬', ['not-normal-subgroup-of-or-equal-to']);
+  this.executeCharTest('⋭', ['does-not-contain-as-normal-subgroup-or-equal']);
+  this.executeCharTest('⋮', ['vertical-ellipsis']);
+  this.executeCharTest('⋯', ['dot dot dot']);
+  this.executeCharTest('⋰', ['up-right-diagonal-ellipsis']);
+  this.executeCharTest('⋱', ['down-right-diagonal-ellipsis']);
+  this.executeCharTest('⋲', ['element-of-with-long-horizontal-stroke']);
+  this.executeCharTest('⋳', ['element-of-with-vertical-bar-at-end-of-horizontal-stroke']);
+  this.executeCharTest('⋴', ['small-element-of-with-vertical-bar-at-end-of-horizontal-stroke']);
+  this.executeCharTest('⋵', ['element-of-with-dot-above']);
+  this.executeCharTest('⋶', ['element-of-with-overbar']);
+  this.executeCharTest('⋷', ['small-element-of-with-overbar']);
+  this.executeCharTest('⋸', ['element-of-with-underbar']);
+  this.executeCharTest('⋹', ['element-of-with-two-horizontal-strokes']);
+  this.executeCharTest('⋺', ['contains-with-long-horizontal-stroke']);
+  this.executeCharTest('⋻', ['contains-with-vertical-bar-at-end-of-horizontal-stroke']);
+  this.executeCharTest('⋼', ['small-contains-with-vertical-bar-at-end-of-horizontal-stroke']);
+  this.executeCharTest('⋽', ['contains-with-overbar']);
+  this.executeCharTest('⋾', ['small-contains-with-overbar']);
+  this.executeCharTest('⋿', ['z-notation-bag-membership']);
+  this.executeCharTest('⌀', ['diameter-sign']);
+  this.executeCharTest('⌂', ['house']);
+  this.executeCharTest('⌅', ['projective']);
+  this.executeCharTest('⌆', ['perspective']);
+  this.executeCharTest('⌇', ['wavy-line']);
+  this.executeCharTest('⌐', ['reversed-not']);
+  this.executeCharTest('⌑', ['square-lozenge']);
+  this.executeCharTest('⌒', ['arc']);
+  this.executeCharTest('⌓', ['segment']);
+  this.executeCharTest('⌔', ['sector']);
+  this.executeCharTest('➕', ['bold-plus']);
+  this.executeCharTest('➖', ['bold-minus']);
+  this.executeCharTest('➗', ['bold-division']);
+  this.executeCharTest('➰', ['curly-loop']);
+  this.executeCharTest('➿', ['double-curly-loop']);
+  this.executeCharTest('⟁', ['white-triangle-containing-small-white-triangle']);
+  this.executeCharTest('⟂', ['perpendicular']);
+  this.executeCharTest('⟃', ['open-subset']);
+  this.executeCharTest('⟄', ['open-superset']);
+  this.executeCharTest('⟇', ['or-with-dot-inside']);
+  this.executeCharTest('⟈', ['reverse-solidus-preceding-subset']);
+  this.executeCharTest('⟉', ['superset-preceding-solidus']);
+  this.executeCharTest('⟊', ['vertical-bar-with-horizontal-stroke']);
+  this.executeCharTest('⟋', ['mathematical-rising-diagonal']);
+  this.executeCharTest('⟌', ['long-division']);
+  this.executeCharTest('⟍', ['mathematical-falling-diagonal']);
+  this.executeCharTest('⟎', ['squared-logical-and']);
+  this.executeCharTest('⟏', ['squared-logical-or']);
+  this.executeCharTest('⟐', ['white-diamond-with-centered-dot']);
+  this.executeCharTest('⟑', ['and-with-dot']);
+  this.executeCharTest('⟒', ['element-of-opening-upwards']);
+  this.executeCharTest('⟓', ['lower-right-corner-with-dot']);
+  this.executeCharTest('⟔', ['upper-left-corner-with-dot']);
+  this.executeCharTest('⟕', ['left-outer-join']);
+  this.executeCharTest('⟖', ['right-outer-join']);
+  this.executeCharTest('⟗', ['full-outer-join']);
+  this.executeCharTest('⟘', ['large-up-tack']);
+  this.executeCharTest('⟙', ['large-down-tack']);
+  this.executeCharTest('⟚', ['left-and-right-double-turnstile']);
+  this.executeCharTest('⟛', ['left-and-right-tack']);
+  this.executeCharTest('⟜', ['left-multimap']);
+  this.executeCharTest('⟝', ['long-right-tack']);
+  this.executeCharTest('⟞', ['long-left-tack']);
+  this.executeCharTest('⟟', ['up-tack-with-circle-above']);
+  this.executeCharTest('⟠', ['lozenge-divided-by-horizontal-rule']);
+  this.executeCharTest('⟡', ['white-concave-sided-diamond']);
+  this.executeCharTest('⟢', ['white-concave-sided-diamond-with-leftwards-tick']);
+  this.executeCharTest('⟣', ['white-concave-sided-diamond-with-rightwards-tick']);
+  this.executeCharTest('⟤', ['white-square-with-leftwards-tick']);
+  this.executeCharTest('⟥', ['white-square-with-rightwards-tick']);
+  this.executeCharTest('⤫', ['rising-diagonal-crossing-falling-diagonal']);
+  this.executeCharTest('⤬', ['falling-diagonal-crossing-rising-diagonal']);
+  this.executeCharTest('⦀', ['triple-vertical-bar-delimiter']);
+  this.executeCharTest('⦁', ['z-notation-spot']);
+  this.executeCharTest('⦂', ['z-notation-type-colon']);
+  this.executeCharTest('⦙', ['dotted-fence']);
+  this.executeCharTest('⦚', ['vertical-zigzag-line']);
+  this.executeCharTest('⦰', ['reversed-empty-set']);
+  this.executeCharTest('⦱', ['empty-set-with-overbar']);
+  this.executeCharTest('⦲', ['empty-set-with-small-circle-above']);
+  this.executeCharTest('⦵', ['circle-with-horizontal-bar']);
+  this.executeCharTest('⦶', ['circled-vertical-bar']);
+  this.executeCharTest('⦷', ['circled-parallel']);
+  this.executeCharTest('⦸', ['circled-reverse-solidus']);
+  this.executeCharTest('⦹', ['circled-perpendicular']);
+  this.executeCharTest('⦺', ['circle-divided-by-horizontal-bar-and-top-half-divided-by-vertical-bar']);
+  this.executeCharTest('⦻', ['circle-with-superimposed-x']);
+  this.executeCharTest('⦼', ['circled-anticlockwise-rotated-division']);
+  this.executeCharTest('⦾', ['circled-white-bullet']);
+  this.executeCharTest('⦿', ['circled-bullet']);
+  this.executeCharTest('⧀', ['circled-less-than']);
+  this.executeCharTest('⧁', ['circled-greater-than']);
+  this.executeCharTest('⧂', ['circle-with-small-circle-to-the-right']);
+  this.executeCharTest('⧃', ['circle-with-two-horizontal-strokes-to-the-right']);
+  this.executeCharTest('⧄', ['squared-rising-diagonal-slash']);
+  this.executeCharTest('⧅', ['squared-falling-diagonal-slash']);
+  this.executeCharTest('⧆', ['squared-asterisk']);
+  this.executeCharTest('⧇', ['squared-small-circle']);
+  this.executeCharTest('⧈', ['squared-square']);
+  this.executeCharTest('⧉', ['two-joined-squares']);
+  this.executeCharTest('⧊', ['triangle-with-dot-above']);
+  this.executeCharTest('⧋', ['triangle-with-underbar']);
+  this.executeCharTest('⧌', ['s-in-triangle']);
+  this.executeCharTest('⧍', ['triangle-with-serifs-at-bottom']);
+  this.executeCharTest('⧎', ['right-triangle-above-left-triangle']);
+  this.executeCharTest('⧏', ['left-triangle-beside-vertical-bar']);
+  this.executeCharTest('⧐', ['vertical-bar-beside-right-triangle']);
+  this.executeCharTest('⧑', ['bowtie-with-left-half-black']);
+  this.executeCharTest('⧒', ['bowtie-with-right-half-black']);
+  this.executeCharTest('⧓', ['black-bowtie']);
+  this.executeCharTest('⧔', ['times-with-left-half-black']);
+  this.executeCharTest('⧕', ['times-with-right-half-black']);
+  this.executeCharTest('⧖', ['white-hourglass']);
+  this.executeCharTest('⧗', ['black-hourglass']);
+  this.executeCharTest('⧜', ['incomplete-infinity']);
+  this.executeCharTest('⧝', ['tie-over-infinity']);
+  this.executeCharTest('⧞', ['infinity-negated-with-vertical-bar']);
+  this.executeCharTest('⧟', ['double-ended-multimap']);
+  this.executeCharTest('⧠', ['square-with-contoured-outline']);
+  this.executeCharTest('⧡', ['increases-as']);
+  this.executeCharTest('⧢', ['shuffle-product']);
+  this.executeCharTest('⧣', ['equals-and-slanted-parallel']);
+  this.executeCharTest('⧤', ['equals-and-slanted-parallel-with-tilde-above']);
+  this.executeCharTest('⧥', ['identical-to-and-slanted-parallel']);
+  this.executeCharTest('⧦', ['gleich-stark']);
+  this.executeCharTest('⧧', ['thermodynamic']);
+  this.executeCharTest('⧨', ['down-pointing-triangle-with-left-half-black']);
+  this.executeCharTest('⧩', ['down-pointing-triangle-with-right-half-black']);
+  this.executeCharTest('⧫', ['black-lozenge']);
+  this.executeCharTest('⧮', ['error-barred-white-square']);
+  this.executeCharTest('⧯', ['error-barred-black-square']);
+  this.executeCharTest('⧰', ['error-barred-white-diamond']);
+  this.executeCharTest('⧱', ['error-barred-black-diamond']);
+  this.executeCharTest('⧲', ['error-barred-white-circle']);
+  this.executeCharTest('⧳', ['error-barred-black-circle']);
+  this.executeCharTest('⧴', ['rule-delayed']);
+  this.executeCharTest('⧵', ['reverse-solidus']);
+  this.executeCharTest('⧶', ['solidus-with-overbar']);
+  this.executeCharTest('⧷', ['reverse-solidus-with-horizontal-stroke']);
+  this.executeCharTest('⧸', ['solidus']);
+  this.executeCharTest('⧹', ['reverse-solidus']);
+  this.executeCharTest('⧺', ['double-plus']);
+  this.executeCharTest('⧻', ['triple-plus']);
+  this.executeCharTest('⧾', ['tiny']);
+  this.executeCharTest('⧿', ['miny']);
+  this.executeCharTest('⨀', ['circled-dot']);
+  this.executeCharTest('⨁', ['circled-plus']);
+  this.executeCharTest('⨂', ['circled-times']);
+  this.executeCharTest('⨃', ['union-with-dot']);
+  this.executeCharTest('⨄', ['union-with-plus']);
+  this.executeCharTest('⨅', ['square-intersection']);
+  this.executeCharTest('⨆', ['square-union']);
+  this.executeCharTest('⨇', ['two-logical-and']);
+  this.executeCharTest('⨈', ['two-logical-or']);
+  this.executeCharTest('⨉', ['times']);
+  this.executeCharTest('⨊', ['modulo-two-sum']);
+  this.executeCharTest('⨋', ['summation-with-integral']);
+  this.executeCharTest('⨌', ['quadruple-integral']);
+  this.executeCharTest('⨍', ['finite-part-integral']);
+  this.executeCharTest('⨎', ['integral-with-double-stroke']);
+  this.executeCharTest('⨏', ['integral-average-with-slash']);
+  this.executeCharTest('⨐', ['circulation-function']);
+  this.executeCharTest('⨑', ['anticlockwise-integration']);
+  this.executeCharTest('⨒', ['line-integration-with-rectangular-path-around-pole']);
+  this.executeCharTest('⨓', ['line-integration-with-semicircular-path-around-pole']);
+  this.executeCharTest('⨔', ['line-integration-not-including-the-pole']);
+  this.executeCharTest('⨕', ['integral-around-a-point']);
+  this.executeCharTest('⨖', ['quaternion-integral']);
+  this.executeCharTest('⨘', ['integral-with-times']);
+  this.executeCharTest('⨙', ['integral-with-intersection']);
+  this.executeCharTest('⨚', ['integral-with-union']);
+  this.executeCharTest('⨛', ['integral-with-overbar']);
+  this.executeCharTest('⨜', ['integral-with-underbar']);
+  this.executeCharTest('⨝', ['join']);
+  this.executeCharTest('⨞', ['large-left-triangle']);
+  this.executeCharTest('⨟', ['z-notation-schema-composition']);
+  this.executeCharTest('⨠', ['z-notation-schema-piping']);
+  this.executeCharTest('⨡', ['z-notation-schema-projection']);
+  this.executeCharTest('⨢', ['plus-with-circle-above']);
+  this.executeCharTest('⨣', ['plus-hat']);
+  this.executeCharTest('⨤', ['plus-tilde']);
+  this.executeCharTest('⨥', ['plus-underdot']);
+  this.executeCharTest('⨦', ['plus-sign-with-tilde-below']);
+  this.executeCharTest('⨧', ['plus-sign-with-subscript-two']);
+  this.executeCharTest('⨨', ['plus-sign-with-black-triangle']);
+  this.executeCharTest('⨩', ['minus-sign-with-comma-above']);
+  this.executeCharTest('⨪', ['minus-sign-with-dot-below']);
+  this.executeCharTest('⨫', ['minus-sign-with-falling-dots']);
+  this.executeCharTest('⨬', ['minus-sign-with-rising-dots']);
+  this.executeCharTest('⨭', ['plus-sign-in-left-half-circle']);
+  this.executeCharTest('⨮', ['plus-sign-in-right-half-circle']);
+  this.executeCharTest('⨯', ['vector-or-cross-product']);
+  this.executeCharTest('⨰', ['multiplication-sign-with-dot-above']);
+  this.executeCharTest('⨱', ['multiplication-sign-with-underbar']);
+  this.executeCharTest('⨲', ['semidirect-product-with-bottom-closed']);
+  this.executeCharTest('⨳', ['smash-product']);
+  this.executeCharTest('⨴', ['multiplication-sign-in-left-half-circle']);
+  this.executeCharTest('⨵', ['multiplication-sign-in-right-half-circle']);
+  this.executeCharTest('⨶', ['circled-multiplication-sign-with-circumflex-accent']);
+  this.executeCharTest('⨷', ['multiplication-sign-in-double-circle']);
+  this.executeCharTest('⨸', ['circled-division']);
+  this.executeCharTest('⨹', ['plus-sign-in-triangle']);
+  this.executeCharTest('⨺', ['minus-sign-in-triangle']);
+  this.executeCharTest('⨻', ['multiplication-sign-in-triangle']);
+  this.executeCharTest('⨼', ['interior-product']);
+  this.executeCharTest('⨽', ['righthand-interior-product']);
+  this.executeCharTest('⨾', ['z-notation-relational-composition']);
+  this.executeCharTest('⨿', ['amalgamation-or-coproduct']);
+  this.executeCharTest('⩀', ['intersection-with-dot']);
+  this.executeCharTest('⩁', ['union-with-minus']);
+  this.executeCharTest('⩂', ['union-with-overbar']);
+  this.executeCharTest('⩃', ['intersection-with-overbar']);
+  this.executeCharTest('⩄', ['intersection-with-logical-and']);
+  this.executeCharTest('⩅', ['union-with-logical-or']);
+  this.executeCharTest('⩆', ['union-above-intersection']);
+  this.executeCharTest('⩇', ['intersection-above-union']);
+  this.executeCharTest('⩈', ['union-above-bar-above-intersection']);
+  this.executeCharTest('⩉', ['intersection-above-bar-above-union']);
+  this.executeCharTest('⩊', ['union-beside-and-joined-with-union']);
+  this.executeCharTest('⩋', ['intersection-beside-and-joined-with-intersection']);
+  this.executeCharTest('⩌', ['closed-union-with-serifs']);
+  this.executeCharTest('⩍', ['closed-intersection-with-serifs']);
+  this.executeCharTest('⩎', ['double-square-intersection']);
+  this.executeCharTest('⩏', ['double-square-union']);
+  this.executeCharTest('⩐', ['closed-union-with-serifs-and-smash-product']);
+  this.executeCharTest('⩑', ['logical-and-with-dot-above']);
+  this.executeCharTest('⩒', ['logical-or-with-dot-above']);
+  this.executeCharTest('⩓', ['double-logical-and']);
+  this.executeCharTest('⩔', ['double-logical-or']);
+  this.executeCharTest('⩕', ['two-intersecting-logical-and']);
+  this.executeCharTest('⩖', ['two-intersecting-logical-or']);
+  this.executeCharTest('⩗', ['sloping-large-or']);
+  this.executeCharTest('⩘', ['sloping-large-and']);
+  this.executeCharTest('⩙', ['logical-or-overlapping-logical-and']);
+  this.executeCharTest('⩚', ['logical-and-with-middle-stem']);
+  this.executeCharTest('⩛', ['logical-or-with-middle-stem']);
+  this.executeCharTest('⩜', ['logical-and-with-horizontal-dash']);
+  this.executeCharTest('⩝', ['logical-or-with-horizontal-dash']);
+  this.executeCharTest('⩞', ['logical-and-with-double-overbar']);
+  this.executeCharTest('⩟', ['logical-and-with-underbar']);
+  this.executeCharTest('⩠', ['logical-and-with-double-underbar']);
+  this.executeCharTest('⩡', ['small-vee-with-underbar']);
+  this.executeCharTest('⩢', ['logical-or-with-double-overbar']);
+  this.executeCharTest('⩣', ['logical-or-with-double-underbar']);
+  this.executeCharTest('⩤', ['z-notation-domain-antirestriction']);
+  this.executeCharTest('⩥', ['z-notation-range-antirestriction']);
+  this.executeCharTest('⩦', ['equals-with-dot-below']);
+  this.executeCharTest('⩧', ['identical-with-dot-above']);
+  this.executeCharTest('⩨', ['triple-horizontal-bar-with-double-vertical-stroke']);
+  this.executeCharTest('⩩', ['triple-horizontal-bar-with-triple-vertical-stroke']);
+  this.executeCharTest('⩪', ['tilde-with-dot-above']);
+  this.executeCharTest('⩫', ['tilde-with-rising-dots']);
+  this.executeCharTest('⩬', ['similar-minus-similar']);
+  this.executeCharTest('⩭', ['congruent-with-dot-above']);
+  this.executeCharTest('⩮', ['equals-with-asterisk']);
+  this.executeCharTest('⩯', ['almost-equal-hat']);
+  this.executeCharTest('⩰', ['approximately-equal-or-equal-to']);
+  this.executeCharTest('⩱', ['equals-above-plus']);
+  this.executeCharTest('⩲', ['plus-above-equals']);
+  this.executeCharTest('⩳', ['equals-above-tilde']);
+  this.executeCharTest('⩴', ['double-colon-equal']);
+  this.executeCharTest('⩵', ['two-consecutive-equals']);
+  this.executeCharTest('⩶', ['three-consecutive-equals']);
+  this.executeCharTest('⩷', ['equals-with-two-dots-above-and-two-dots-below']);
+  this.executeCharTest('⩸', ['equivalent-with-four-dots-above']);
+  this.executeCharTest('⩹', ['less-than-with-circle-inside']);
+  this.executeCharTest('⩺', ['greater-than-with-circle-inside']);
+  this.executeCharTest('⩻', ['less-than-with-question-mark-above']);
+  this.executeCharTest('⩼', ['greater-than-with-question-mark-above']);
+  this.executeCharTest('⩽', ['less-than-or-slanted-equals']);
+  this.executeCharTest('⩾', ['greater-than-or-slanted-equals']);
+  this.executeCharTest('⩿', ['less-than-or-slanted-equals-with-dot-inside']);
+  this.executeCharTest('⪀', ['greater-than-or-slanted-equals-with-dot-inside']);
+  this.executeCharTest('⪁', ['less-than-or-slanted-equals-with-dot-above']);
+  this.executeCharTest('⪂', ['greater-than-or-slanted-equals-with-dot-above']);
+  this.executeCharTest('⪃', ['less-than-or-slanted-equals-with-dot-above-right']);
+  this.executeCharTest('⪄', ['greater-than-or-slanted-equals-with-dot-above-left']);
+  this.executeCharTest('⪅', ['less-than-or-approximate']);
+  this.executeCharTest('⪆', ['greater-than-or-approximate']);
+  this.executeCharTest('⪇', ['less-than-and-single-line-not-equals']);
+  this.executeCharTest('⪈', ['greater-than-and-single-line-not-equals']);
+  this.executeCharTest('⪉', ['less-than-and-not-approximate']);
+  this.executeCharTest('⪊', ['greater-than-and-not-approximate']);
+  this.executeCharTest('⪋', ['less-than-above-double-line-equal-above-greater-than']);
+  this.executeCharTest('⪌', ['greater-than-above-double-line-equal-above-less-than']);
+  this.executeCharTest('⪍', ['less-than-above-similar-or-equal']);
+  this.executeCharTest('⪎', ['greater-than-above-similar-or-equal']);
+  this.executeCharTest('⪏', ['less-than-above-similar-above-greater-than']);
+  this.executeCharTest('⪐', ['greater-than-above-similar-above-less-than']);
+  this.executeCharTest('⪑', ['less-than-above-greater-than-above-double-line-equal']);
+  this.executeCharTest('⪒', ['greater-than-above-less-than-above-double-line-equal']);
+  this.executeCharTest('⪓', ['less-than-above-slanted-equal-above-greater-than-above-slanted-equal']);
+  this.executeCharTest('⪔', ['greater-than-above-slanted-equal-above-less-than-above-slanted-equal']);
+  this.executeCharTest('⪕', ['slanted-equals-or-less-than']);
+  this.executeCharTest('⪖', ['slanted-equals-or-greater-than']);
+  this.executeCharTest('⪗', ['slanted-equals-or-less-than-with-dot-inside']);
+  this.executeCharTest('⪘', ['slanted-equals-or-greater-than-with-dot-inside']);
+  this.executeCharTest('⪙', ['double-line-equals-or-less-than']);
+  this.executeCharTest('⪚', ['double-line-equals-or-greater-than']);
+  this.executeCharTest('⪛', ['double-line-slanted-equals-or-less-than']);
+  this.executeCharTest('⪜', ['double-line-slanted-equals-or-greater-than']);
+  this.executeCharTest('⪝', ['similar-or-less-than']);
+  this.executeCharTest('⪞', ['similar-or-greater-than']);
+  this.executeCharTest('⪟', ['similar-above-less-than-above-equals']);
+  this.executeCharTest('⪠', ['similar-above-greater-than-above-equals']);
+  this.executeCharTest('⪡', ['double-nested-less-than']);
+  this.executeCharTest('⪢', ['double-nested-greater-than']);
+  this.executeCharTest('⪣', ['double-nested-less-than-with-underbar']);
+  this.executeCharTest('⪤', ['greater-than-overlapping-less-than']);
+  this.executeCharTest('⪥', ['greater-than-beside-less-than']);
+  this.executeCharTest('⪦', ['less-than-closed-by-curve']);
+  this.executeCharTest('⪧', ['greater-than-closed-by-curve']);
+  this.executeCharTest('⪨', ['less-than-closed-by-curve-above-slanted-equal']);
+  this.executeCharTest('⪩', ['greater-than-closed-by-curve-above-slanted-equal']);
+  this.executeCharTest('⪪', ['smaller-than']);
+  this.executeCharTest('⪫', ['larger-than']);
+  this.executeCharTest('⪬', ['smaller-than-or-equal-to']);
+  this.executeCharTest('⪭', ['larger-than-or-equal-to']);
+  this.executeCharTest('⪮', ['equals-with-bumpy-above']);
+  this.executeCharTest('⪯', ['precedes-above-single-line-equals']);
+  this.executeCharTest('⪰', ['succeeds-above-single-line-equals']);
+  this.executeCharTest('⪱', ['precedes-above-single-line-not-equals']);
+  this.executeCharTest('⪲', ['succeeds-above-single-line-not-equals']);
+  this.executeCharTest('⪳', ['precedes-above-equals']);
+  this.executeCharTest('⪴', ['succeeds-above-equals']);
+  this.executeCharTest('⪵', ['precedes-above-not-equals']);
+  this.executeCharTest('⪶', ['succeeds-above-not-equals']);
+  this.executeCharTest('⪷', ['precedes-above-almost-equals']);
+  this.executeCharTest('⪸', ['succeeds-above-almost-equals']);
+  this.executeCharTest('⪹', ['precedes-above-not-almost-equals']);
+  this.executeCharTest('⪺', ['succeeds-above-not-almost-equals']);
+  this.executeCharTest('⪻', ['double-precedes']);
+  this.executeCharTest('⪼', ['double-succeeds']);
+  this.executeCharTest('⪽', ['subset-with-dot']);
+  this.executeCharTest('⪾', ['superset-with-dot']);
+  this.executeCharTest('⪿', ['subset-with-plus-sign-below']);
+  this.executeCharTest('⫀', ['superset-with-plus-sign-below']);
+  this.executeCharTest('⫁', ['subset-with-multiplication-sign-below']);
+  this.executeCharTest('⫂', ['superset-with-multiplication-sign-below']);
+  this.executeCharTest('⫃', ['subset-of-or-equal-to-with-dot-above']);
+  this.executeCharTest('⫄', ['superset-of-or-equal-to-with-dot-above']);
+  this.executeCharTest('⫅', ['subset-of-above-equals']);
+  this.executeCharTest('⫆', ['superset-of-above-equals']);
+  this.executeCharTest('⫇', ['subset-of-above-tilde']);
+  this.executeCharTest('⫈', ['superset-of-above-tilde']);
+  this.executeCharTest('⫉', ['subset-of-above-almost-equals']);
+  this.executeCharTest('⫊', ['superset-of-above-almost-equals']);
+  this.executeCharTest('⫋', ['subset-of-above-not-equals']);
+  this.executeCharTest('⫌', ['superset-of-above-not-equals']);
+  this.executeCharTest('⫍', ['square-left-open-box']);
+  this.executeCharTest('⫎', ['square-right-open-box']);
+  this.executeCharTest('⫏', ['closed-subset']);
+  this.executeCharTest('⫐', ['closed-superset']);
+  this.executeCharTest('⫑', ['closed-subset-or-equal-to']);
+  this.executeCharTest('⫒', ['closed-superset-or-equal-to']);
+  this.executeCharTest('⫓', ['subset-above-superset']);
+  this.executeCharTest('⫔', ['superset-above-subset']);
+  this.executeCharTest('⫕', ['subset-above-subset']);
+  this.executeCharTest('⫖', ['superset-above-superset']);
+  this.executeCharTest('⫗', ['superset-beside-subset']);
+  this.executeCharTest('⫘', ['superset-beside-and-joined-by-dash-with-subset']);
+  this.executeCharTest('⫙', ['element-of-opening-downwards']);
+  this.executeCharTest('⫚', ['pitchfork-with-tee-top']);
+  this.executeCharTest('⫛', ['transversal-intersection']);
+  this.executeCharTest('⫝̸', ['forking']);
+  this.executeCharTest('⫝', ['nonforking']);
+  this.executeCharTest('⫞', ['short-left-tack']);
+  this.executeCharTest('⫟', ['short-down-tack']);
+  this.executeCharTest('⫠', ['short-up-tack']);
+  this.executeCharTest('⫡', ['perpendicular-with-s']);
+  this.executeCharTest('⫢', ['vertical-bar-triple-right-turnstile']);
+  this.executeCharTest('⫣', ['double-vertical-bar-left-turnstile']);
+  this.executeCharTest('⫤', ['vertical-bar-double-left-turnstile']);
+  this.executeCharTest('⫥', ['double-vertical-bar-double-left-turnstile']);
+  this.executeCharTest('⫦', ['long-dash-from-left-member-of-double-vertical']);
+  this.executeCharTest('⫧', ['short-down-tack-with-overbar']);
+  this.executeCharTest('⫨', ['short-up-tack-with-underbar']);
+  this.executeCharTest('⫩', ['short-up-tack-above-short-down-tack']);
+  this.executeCharTest('⫪', ['double-down-tack']);
+  this.executeCharTest('⫫', ['double-up-tack']);
+  this.executeCharTest('⫬', ['double-stroke-not-sign']);
+  this.executeCharTest('⫭', ['reversed-double-stroke-not-sign']);
+  this.executeCharTest('⫮', ['does-not-divide-with-reversed-negation-slash']);
+  this.executeCharTest('⫯', ['vertical-line-with-circle-above']);
+  this.executeCharTest('⫰', ['vertical-line-with-circle-below']);
+  this.executeCharTest('⫱', ['down-tack-with-circle-below']);
+  this.executeCharTest('⫲', ['parallel-with-horizontal-stroke']);
+  this.executeCharTest('⫳', ['parallel-with-tilde']);
+  this.executeCharTest('⫴', ['triple-vertical-bar-binary-relation']);
+  this.executeCharTest('⫵', ['triple-vertical-bar-with-horizontal-stroke']);
+  this.executeCharTest('⫶', ['triple-colon']);
+  this.executeCharTest('⫷', ['triple-nested-less-than']);
+  this.executeCharTest('⫸', ['triple-nested-greater-than']);
+  this.executeCharTest('⫹', ['double-line-slanted-less-than-or-equal-to']);
+  this.executeCharTest('⫺', ['double-line-slanted-greater-than-or-equal-to']);
+  this.executeCharTest('⫻', ['triple-solidus-binary-relation']);
+  this.executeCharTest('⫼', ['large-triple-vertical-bar']);
+  this.executeCharTest('⫽', ['double-solidus']);
+  this.executeCharTest('⫾', ['white-vertical-bar']);
+  this.executeCharTest('⫿', ['white-vertical-bar']);
+  this.executeCharTest('〜', ['wave-dash']);
+  this.executeCharTest('︐', ['presentation-form-for-vertical-comma']);
+  this.executeCharTest('︓', ['presentation-form-for-vertical-colon']);
+  this.executeCharTest('︔', ['presentation-form-for-vertical-semicolon']);
+  this.executeCharTest('︕', ['presentation-form-for-vertical-exclamation-mark']);
+  this.executeCharTest('︖', ['presentation-form-for-vertical-question-mark']);
+  this.executeCharTest('︙', ['presentation-form-for-vertical-horizontal-ellipsis']);
+  this.executeCharTest('︰', ['glyph-for-vertical-two-dot-leader']);
+  this.executeCharTest('︱', ['glyph-for-vertical-em-dash']);
+  this.executeCharTest('︲', ['glyph-for-vertical-en-dash']);
+  this.executeCharTest('︳', ['glyph-for-vertical-underscore']);
+  this.executeCharTest('︴', ['glyph-for-vertical-wavy-underscore']);
+  this.executeCharTest('﹅', ['sesame-dot']);
+  this.executeCharTest('﹆', ['white-sesame-dot']);
+  this.executeCharTest('﹉', ['dashed-overscore']);
+  this.executeCharTest('﹊', ['centerline-overscore']);
+  this.executeCharTest('﹋', ['wavy-overscore']);
+  this.executeCharTest('﹌', ['double-wavy-overscore']);
+  this.executeCharTest('﹍', ['dashed-underscore']);
+  this.executeCharTest('﹎', ['centerline-underscore']);
+  this.executeCharTest('﹏', ['wavy-underscore']);
+  this.executeCharTest('﹐', ['small-comma']);
+  this.executeCharTest('﹒', ['small-period']);
+  this.executeCharTest('﹔', ['small-semicolon']);
+  this.executeCharTest('﹕', ['small-colon']);
+  this.executeCharTest('﹖', ['small-question-mark']);
+  this.executeCharTest('﹗', ['small-exclamation-mark']);
+  this.executeCharTest('﹘', ['small-em-dash']);
+  this.executeCharTest('﹟', ['small-number-sign']);
+  this.executeCharTest('﹠', ['small-ampersand']);
+  this.executeCharTest('﹡', ['small-asterisk']);
+  this.executeCharTest('﹢', ['small-plus-sign']);
+  this.executeCharTest('﹣', ['small-hyphen-minus']);
+  this.executeCharTest('﹤', ['small-less-than-sign']);
+  this.executeCharTest('﹥', ['small-greater-than-sign']);
+  this.executeCharTest('﹦', ['small-equals']);
+  this.executeCharTest('﹨', ['small-backslash']);
+  this.executeCharTest('﹩', ['small-dollar-sign']);
+  this.executeCharTest('﹪', ['small-percent-sign']);
+  this.executeCharTest('﹫', ['small-commercial-at']);
+  this.executeCharTest('！', ['exclamation-mark']);
+  this.executeCharTest('＂', ['quotation-mark']);
+  this.executeCharTest('＃', ['number-sign']);
+  this.executeCharTest('＄', ['dollar-sign']);
+  this.executeCharTest('％', ['percent-sign']);
+  this.executeCharTest('＆', ['ampersand']);
+  this.executeCharTest('＇', ['apostrophe']);
+  this.executeCharTest('＊', ['asterisk']);
+  this.executeCharTest('＋', ['plus-sign']);
+  this.executeCharTest('，', ['comma']);
+  this.executeCharTest('－', ['hyphen-minus']);
+  this.executeCharTest('．', ['period']);
+  this.executeCharTest('／', ['slash']);
+  this.executeCharTest('：', ['colon']);
+  this.executeCharTest('；', ['semicolon']);
+  this.executeCharTest('＜', ['less-than']);
+  this.executeCharTest('＝', ['equals']);
+  this.executeCharTest('＞', ['greater-than']);
+  this.executeCharTest('？', ['question-mark']);
+  this.executeCharTest('＠', ['commercial-at']);
+  this.executeCharTest('＼', ['backslash']);
+  this.executeCharTest('＾', ['caret']);
+  this.executeCharTest('＿', ['bar']);
+  this.executeCharTest('｀', ['grave']);
+  this.executeCharTest('｜', ['vertical-bar']);
+  this.executeCharTest('～', ['tilde']);
+  this.executeCharTest('￠', ['cent-sign']);
+  this.executeCharTest('￡', ['pound-sign']);
+  this.executeCharTest('￢', ['not sign']);
+  this.executeCharTest('￣', ['bar']);
+  this.executeCharTest('￤', ['broken-vertical-bar']);
+  this.executeCharTest('￥', ['yen sign']);
+  this.executeCharTest('￦', ['won sign']);
+  this.executeCharTest('￨', ['halfwidth-forms-light-vertical']);
+  this.executeCharTest('￭', ['halfwidth-black-square']);
+  this.executeCharTest('￮', ['halfwidth-white-circle']);
+  this.executeCharTest(' ', ['space']);
+  this.executeCharTest(' ', ['no break space']);
+  this.executeCharTest('­', ['soft hyphen']);
+  this.executeCharTest(' ', ['en quad']);
+  this.executeCharTest(' ', ['em quad']);
+  this.executeCharTest(' ', ['en space']);
+  this.executeCharTest(' ', ['em space']);
+  this.executeCharTest(' ', ['three per em space']);
+  this.executeCharTest(' ', ['four per em space']);
+  this.executeCharTest(' ', ['six per em space']);
+  this.executeCharTest(' ', ['figure space']);
+  this.executeCharTest(' ', ['punctuation space']);
+  this.executeCharTest(' ', ['thin space']);
+  this.executeCharTest(' ', ['hair space']);
+  this.executeCharTest('​', ['zero width space']);
+  this.executeCharTest('‌', ['zero width non joiner']);
+  this.executeCharTest('‍', ['zero width joiner']);
+  this.executeCharTest('‎', ['left to right mark']);
+  this.executeCharTest('‏', ['right to left mark']);
+  this.executeCharTest(' ', ['line separator']);
+  this.executeCharTest(' ', ['paragraph separator']);
+  this.executeCharTest('‪', ['left to right embedding']);
+  this.executeCharTest('‫', ['right to left embedding']);
+  this.executeCharTest('‬', ['pop directional formatting']);
+  this.executeCharTest('‭', ['left to right override']);
+  this.executeCharTest('‮', ['right to left override']);
+  this.executeCharTest(' ', ['narrow no break space']);
+  this.executeCharTest(' ', ['medium mathematical space']);
+  this.executeCharTest('⁠', ['word joiner']);
+  this.executeCharTest('⁡', ['of']);
+  this.executeCharTest('⁢', ['times']);
+  this.executeCharTest('⁣', ['separator']);
+  this.executeCharTest('⁤', ['plus']);
+  this.executeCharTest('⁪', ['inhibit symmetric swapping']);
+  this.executeCharTest('⁫', ['activate symmetric swapping']);
+  this.executeCharTest('⁮', ['national digit shapes']);
+  this.executeCharTest('⁯', ['nominal digit shapes']);
+  this.executeCharTest('﻿', ['zero width no break space']);
+  this.executeCharTest('￹', ['interlinear annotation anchor']);
+  this.executeCharTest('￺', ['interlinear annotation separator']);
+  this.executeCharTest('￻', ['interlinear annotation terminator']);
+  this.executeCharTest('⏨', ['decimal exponent symbol']);
+  this.executeCharTest('★', ['black star']);
+  this.executeCharTest('☆', ['white star']);
+  this.executeCharTest('⚪', ['white circle']);
+  this.executeCharTest('⚫', ['black circle']);
+  this.executeCharTest('✅', ['white check']);
+  this.executeCharTest('✓', ['check']);
+  this.executeCharTest('✔', ['heavy check']);
+  this.executeCharTest('✕', ['multiplication x']);
+  this.executeCharTest('✖', ['heavy multiplication x']);
+  this.executeCharTest('✗', ['ballot x']);
+  this.executeCharTest('✘', ['heavy ballot x']);
+  this.executeCharTest('✛', ['open center cross']);
+  this.executeCharTest('✜', ['heavy open center cross']);
+  this.executeCharTest('✠', ['maltese cross']);
+  this.executeCharTest('✡', ['star of david']);
+  this.executeCharTest('✢', ['four teardrop spoked asterisk']);
+  this.executeCharTest('✣', ['four balloon spoked asterisk']);
+  this.executeCharTest('✤', ['heavy four balloon spoked asterisk']);
+  this.executeCharTest('✥', ['four club spoked asterisk']);
+  this.executeCharTest('✦', ['black four pointed star']);
+  this.executeCharTest('✧', ['white four pointed star']);
+  this.executeCharTest('✨', ['sparkles']);
+  this.executeCharTest('✩', ['stress outlined white star']);
+  this.executeCharTest('✪', ['circled white star']);
+  this.executeCharTest('✫', ['open center black star']);
+  this.executeCharTest('✬', ['black center white star']);
+  this.executeCharTest('✭', ['outlined black star']);
+  this.executeCharTest('✮', ['heavy outlined black star']);
+  this.executeCharTest('✯', ['pinwheel star']);
+  this.executeCharTest('✰', ['shadowed white star']);
+  this.executeCharTest('✱', ['heavy asterisk']);
+  this.executeCharTest('✲', ['open center asterisk']);
+  this.executeCharTest('✳', ['eight spoked asterisk']);
+  this.executeCharTest('✴', ['eight pointed black star']);
+  this.executeCharTest('✵', ['eight pointed pinwheel star']);
+  this.executeCharTest('✶', ['six pointed black star']);
+  this.executeCharTest('✹', ['twelve pointed black star']);
+  this.executeCharTest('✺', ['sixteen pointed asterisk']);
+  this.executeCharTest('✻', ['teardrop spoked asterisk']);
+  this.executeCharTest('✼', ['open center teardrop spoked asterisk']);
+  this.executeCharTest('✽', ['heavy teardrop spoked asterisk']);
+  this.executeCharTest('✾', ['six petalled black and white florette']);
+  this.executeCharTest('✿', ['black florette']);
+  this.executeCharTest('❀', ['white florette']);
+  this.executeCharTest('❁', ['eight petalled outlined black florette']);
+  this.executeCharTest('❂', ['circled open center eight pointed star']);
+  this.executeCharTest('❃', ['heavy teardrop spoked pinwheel asterisk']);
+  this.executeCharTest('❄', ['snowflake']);
+  this.executeCharTest('❅', ['tight trifoliate snowflake']);
+  this.executeCharTest('❆', ['heavy chevron snowflake']);
+  this.executeCharTest('❇', ['sparkle']);
+  this.executeCharTest('❈', ['heavy sparkle']);
+  this.executeCharTest('❉', ['balloon spoked asterisk']);
+  this.executeCharTest('❊', ['eight teardrop spoked propeller asterisk']);
+  this.executeCharTest('❋', ['heavy eight teardrop spoked propeller asterisk']);
+  this.executeCharTest('❌', ['cross mark']);
+  this.executeCharTest('❍', ['shadowed white circle']);
+};
+
+
+sre.ClearspeakCharEnglishTest.prototype.testClearspeakFunctions = function() {
+  this.executeCharTest('deg', ['degree']);
+  this.executeCharTest('det', ['determinant']);
+  this.executeCharTest('dim', ['dimension']);
+  this.executeCharTest('hom', ['hom']);
+  this.executeCharTest('Hom', ['hom']);
+  this.executeCharTest('ker', ['kernel']);
+  this.executeCharTest('Tr', ['trace']);
+  this.executeCharTest('tr', ['trace']);
+  this.executeCharTest('log', ['log']);
+  this.executeCharTest('ln', ['l n']);
+  this.executeCharTest('lg', ['log base 10']);
+  this.executeCharTest('exp', ['exp']);
+  this.executeCharTest('expt', ['exp']);
+  this.executeCharTest('gcd', ['gcd']);
+  this.executeCharTest('lcm', ['lcm']);
+  this.executeCharTest('arg', ['arg']);
+  this.executeCharTest('im', ['im']);
+  this.executeCharTest('re', ['re']);
+  this.executeCharTest('inf', ['inf']);
+  this.executeCharTest('lim', ['limit']);
+  this.executeCharTest('lim inf', ['liminf']);
+  this.executeCharTest('liminf', ['liminf']);
+  this.executeCharTest('lim sup', ['limsup']);
+  this.executeCharTest('limsup', ['limsup']);
+  this.executeCharTest('max', ['max']);
+  this.executeCharTest('min', ['min']);
+  this.executeCharTest('sup', ['sup']);
+  this.executeCharTest('injlim', ['colimit']);
+  this.executeCharTest('inj lim', ['colimit']);
+  this.executeCharTest('projlim', ['limit']);
+  this.executeCharTest('proj lim', ['limit']);
+  this.executeCharTest('mod', ['mod']);
+  this.executeCharTest('Pr', ['probability']);
+  this.executeCharTest('cosh', ['hyperbolic cosine']);
+  this.executeCharTest('coth', ['hyperbolic cotangent']);
+  this.executeCharTest('csch', ['hyperbolic cosecant']);
+  this.executeCharTest('sech', ['hyperbolic secant']);
+  this.executeCharTest('sinh', ['hyperbolic sine']);
+  this.executeCharTest('tanh', ['hyperbolic tangent']);
+  this.executeCharTest('arcosh', ['area hyperbolic cosine']);
+  this.executeCharTest('arccosh', ['area hyperbolic cosine']);
+  this.executeCharTest('arcoth', ['area hyperbolic cotangent']);
+  this.executeCharTest('arccoth', ['area hyperbolic cotangent']);
+  this.executeCharTest('arcsch', ['area hyperbolic cosecant']);
+  this.executeCharTest('arccsch', ['area hyperbolic cosecant']);
+  this.executeCharTest('arsech', ['area hyperbolic secant']);
+  this.executeCharTest('arcsech', ['area hyperbolic secant']);
+  this.executeCharTest('arsinh', ['area hyperbolic sine']);
+  this.executeCharTest('arcsinh', ['area hyperbolic sine']);
+  this.executeCharTest('artanh', ['area hyperbolic tangent']);
+  this.executeCharTest('arctanh', ['area hyperbolic tangent']);
+  this.executeCharTest('cos', ['cosine']);
+  this.executeCharTest('cosine', ['cosine']);
+  this.executeCharTest('cot', ['cotangent']);
+  this.executeCharTest('csc', ['cosecant']);
+  this.executeCharTest('sec', ['secant']);
+  this.executeCharTest('sin', ['sine']);
+  this.executeCharTest('sine', ['sine']);
+  this.executeCharTest('tan', ['tangent']);
+  this.executeCharTest('arccos', ['arc cosine']);
+  this.executeCharTest('arccot', ['arc cotangent']);
+  this.executeCharTest('arccsc', ['arc cosecant']);
+  this.executeCharTest('arcsec', ['arc secant']);
+  this.executeCharTest('arcsin', ['arc sine']);
+  this.executeCharTest('arctan', ['arc tangent']);
+};
+
+
+sre.ClearspeakCharEnglishTest.prototype.testClearspeakUnits = function() {
+  this.executeUnitTest('W', ['watt']);
+  this.executeUnitTest('w', ['watt']);
+  this.executeUnitTest('kw', ['kilowatt']);
+  this.executeUnitTest('kW', ['kilowatt']);
+  this.executeUnitTest('mw', ['milliwatt']);
+  this.executeUnitTest('mW', ['milliwatt']);
+  this.executeUnitTest('kwh', ['kilowatt hour']);
+  this.executeUnitTest('kWh', ['kilowatt hour']);
+  this.executeUnitTest('J', ['joule']);
+  this.executeUnitTest('N', ['Newton']);
+  this.executeUnitTest('A', ['ampere']);
+  this.executeUnitTest('V', ['volt']);
+  this.executeUnitTest('µΩ', ['microohm']);
+  this.executeUnitTest('mΩ', ['milliohm']);
+  this.executeUnitTest('Ω', ['ohm']);
+  this.executeUnitTest('Ohm', ['ohm']);
+  this.executeUnitTest('kΩ', ['kilohm']);
+  this.executeUnitTest('KΩ', ['kilohm']);
+  this.executeUnitTest('MΩ', ['megaohm']);
+  this.executeUnitTest('GΩ', ['gigaohm']);
+  this.executeUnitTest('mm', ['millimeter']);
+  this.executeUnitTest('cm', ['centimeter']);
+  this.executeUnitTest('m', ['meter']);
+  this.executeUnitTest('km', ['kilometer']);
+  this.executeUnitTest('ft', ['foot']);
+  this.executeUnitTest('ft.', ['foot']);
+  this.executeUnitTest('in', ['inch']);
+  this.executeUnitTest('in.', ['inch']);
+  this.executeUnitTest('mi', ['mile']);
+  this.executeUnitTest('mi.', ['mile']);
+  this.executeUnitTest('yd', ['yard']);
+  this.executeUnitTest('yd.', ['yard']);
+  this.executeUnitTest('n.m.', ['nautical mile']);
+  this.executeUnitTest('b', ['bit']);
+  this.executeUnitTest('B', ['byte']);
+  this.executeUnitTest('KB', ['kilobyte']);
+  this.executeUnitTest('MB', ['megabyte']);
+  this.executeUnitTest('GB', ['gigabyte']);
+  this.executeUnitTest('TB', ['terabyte']);
+  this.executeUnitTest('doz', ['dozen']);
+  this.executeUnitTest('doz.', ['dozen']);
+  this.executeUnitTest('dz', ['dozen']);
+  this.executeUnitTest('dz.', ['dozen']);
+  this.executeUnitTest('sq', ['square']);
+  this.executeUnitTest('sq.', ['square']);
+  this.executeUnitTest('ha', ['hectare']);
+  this.executeUnitTest('kt', ['knot']);
+  this.executeUnitTest('kt.', ['knot']);
+  this.executeUnitTest('mph', ['miles per hour']);
+  this.executeUnitTest('rpm', ['revolutions per minute']);
+  this.executeUnitTest('kmh', ['kilometers per hour']);
+  this.executeUnitTest('F', ['Fahrenheit']);
+  this.executeUnitTest('F.', ['Fahrenheit']);
+  this.executeUnitTest('°F', ['Fahrenheit']);
+  this.executeUnitTest('C', ['Celsius']);
+  this.executeUnitTest('°C', ['Celsius']);
+  this.executeUnitTest('K', ['Kelvin']);
+  this.executeUnitTest('°K', ['Kelvin']);
+  this.executeUnitTest('ns', ['nanosecond']);
+  this.executeUnitTest('µs', ['microsecond']);
+  this.executeUnitTest('ms', ['millisecond']);
+  this.executeUnitTest('s', ['second']);
+  this.executeUnitTest('min', ['minute']);
+  this.executeUnitTest('h', ['hour']);
+  this.executeUnitTest('hr', ['hour']);
+  this.executeUnitTest('bbl.', ['barrel']);
+  this.executeUnitTest('bbl', ['barrel']);
+  this.executeUnitTest('cu', ['cubic']);
+  this.executeUnitTest('cu.', ['cubic']);
+  this.executeUnitTest('fl. oz.', ['fluid ounce']);
+  this.executeUnitTest('gal', ['gallon']);
+  this.executeUnitTest('gal.', ['gallon']);
+  this.executeUnitTest('pt', ['pint']);
+  this.executeUnitTest('pt.', ['pint']);
+  this.executeUnitTest('qt', ['quart']);
+  this.executeUnitTest('qt.', ['quart']);
+  this.executeUnitTest('tbsp', ['tablespoon']);
+  this.executeUnitTest('tbsp.', ['tablespoon']);
+  this.executeUnitTest('tsp', ['teaspoon']);
+  this.executeUnitTest('tsp.', ['teaspoon']);
+  this.executeUnitTest('cc', ['cubic centimeter']);
+  this.executeUnitTest('kl', ['kiloliter']);
+  this.executeUnitTest('l', ['liter']);
+  this.executeUnitTest('ml', ['milliliter']);
+  this.executeUnitTest('lb', ['pound']);
+  this.executeUnitTest('lb.', ['pound']);
+  this.executeUnitTest('LT', ['long ton']);
+  this.executeUnitTest('L.T.', ['long ton']);
+  this.executeUnitTest('oz', ['ounce']);
+  this.executeUnitTest('oz.', ['ounce']);
+  this.executeUnitTest('g', ['gram']);
+  this.executeUnitTest('gr', ['gram']);
+  this.executeUnitTest('kg', ['kilogram']);
+  this.executeUnitTest('mcg', ['microgram']);
+  this.executeUnitTest('µg', ['microgram']);
+  this.executeUnitTest('mg', ['milligram']);
+  this.executeUnitTest('t', ['ton']);
+  this.executeUnitTest('T', ['ton']);
+};

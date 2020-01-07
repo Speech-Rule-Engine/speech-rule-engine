@@ -44,7 +44,7 @@ sre.MathspeakCharEnglishTest = function() {
 goog.inherits(sre.MathspeakCharEnglishTest, sre.AbstractCharacterTest);
 
                                             
-sre.MathspeakCharEnglishTest.prototype.testChars = function() {
+sre.MathspeakCharEnglishTest.prototype.testMathspeakChars = function() {
   this.executeCharTest('0', ['0', '0', '0']);
   this.executeCharTest('1', ['1', '1', '1']);
   this.executeCharTest('2', ['2', '2', '2']);
@@ -4234,7 +4234,7 @@ sre.MathspeakCharEnglishTest.prototype.testChars = function() {
 };
 
 
-sre.MathspeakCharEnglishTest.prototype.testFunctions = function() {
+sre.MathspeakCharEnglishTest.prototype.testMathspeakFunctions = function() {
   this.executeCharTest('deg', ['degree', 'degree', 'degree']);
   this.executeCharTest('det', ['det', 'det', 'det']);
   this.executeCharTest('dim', ['dimension', 'dimension', 'dimension']);
@@ -4303,7 +4303,7 @@ sre.MathspeakCharEnglishTest.prototype.testFunctions = function() {
 };
 
 
-sre.MathspeakCharEnglishTest.prototype.testUnits = function() {
+sre.MathspeakCharEnglishTest.prototype.testMathspeakUnits = function() {
   this.executeUnitTest('W', ['watt', 'watt', 'watt']);
   this.executeUnitTest('w', ['watt', 'watt', 'watt']);
   this.executeUnitTest('kw', ['kilowatt', 'kilowatt', 'kilowatt']);
