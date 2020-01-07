@@ -47,9 +47,94 @@ goog.inherits(sre.AbstractCharacterTest, sre.AbstractRuleTest);
  *     available style.
  */
 sre.AbstractCharacterTest.prototype.executeCharTest = function(char, answers) {
-  var mtext = '<mtext>' + char + '</mtext>';  // Using mtext as it is irrelevant!
   for (var i = 0; i < answers.length; i++) {
-    this.executeRuleTest(mtext, answers[i], this.styles[i]);
+    this.executeRuleTest(char, answers[i], this.styles[i]);
+  }
+};
+
+
+sre.AbstractCharacterTest.prototype.executeUnitTest = function(char, answers) {
+  sre.Grammar.getInstance().pushState({annotation: 'unit'});
+  this.executeCharTest(char, answers);
+  sre.Grammar.getInstance().popState();
+};
+
+
+/**
+ * @override
+ */
+sre.AbstractCharacterTest.prototype.executeRuleTest = function(text, answer, opt_style) {
+  var style = opt_style || this.style;
+  sre.Grammar.getInstance().pushState({translate: true});
+  sre.SpeechRuleEngine.getInstance().clearCache();
+  sre.System.getInstance().setupEngine(
+      {semantics: this.semantics, domain: this.domain, style: style,
+       modality: this.modality, rules: this.rules, locale: this.locale});
+  var aural = sre.AuralRendering.getInstance();
+  var descrs = [
+    sre.AuditoryDescription.create({text: text}, {adjust: true})];
+  var result = aural.finalize(aural.markup(descrs));
+  var actual = this.actual ? result : answer;
+  this.appendRuleExample(text, actual, style);
+  this.assert.equal(actual, result);
+};
+
+
+/**
+ * Output all the character speech strings.
+ * (Temporary Auxiliary Method.)
+ */
+sre.AbstractCharacterTest.testOutput = function() {
+  
+  var constraints = {
+    en: {
+      default: ['default', 'short', 'alternative'],
+      mathspeak: ['default', 'brief', 'sbrief'],
+      clearspeak: ['default']
+    },
+    es: {
+      default: ['default'],
+      mathspeak: ['default', 'brief', 'sbrief']
+    },
+    fr: {
+      default: ['default'],
+      mathspeak: ['default', 'brief', 'sbrief'],
+      clearspeak: ['default']
+    },
+    nemeth: {
+      default: ['default']
+    }
+  };
+  var stores = sre.MathMap.getInstance().store['subStores_'];
+  var allRules = {};
+  sre.Variables.LOCALES.forEach(function(loc) {
+    allRules[loc] = [];
+  });
+  var keys = Object.keys(stores);
+  for (var loc of Object.keys(constraints)) {
+    var modality = loc === 'nemeth' ? 'braille' : 'speech';
+    for (var dom of Object.keys(constraints[loc])) {
+      for (var key of keys) {
+        var aural = sre.AuralRendering.getInstance();
+        var result = [loc, modality, dom, key];
+        for (var style of constraints[loc][dom]) {
+          sre.System.getInstance().setupEngine({
+            domain: dom, modality: modality, locale: loc, style: style});
+          var comps = key.split(':');
+          var grammar = {translate: true};
+          if (comps[1] && comps[1] === 'unit') {
+            grammar.annotation = 'unit';
+          }
+          sre.Grammar.getInstance().pushState(grammar);
+          var descrs = [
+              sre.AuditoryDescription.create({text: comps[0]}, {adjust: true})];
+          result.push(aural.finalize(aural.markup(descrs)));
+          allRules[loc].push(result);
+          sre.Grammar.getInstance().popState();
+        }
+        console.log(`${result[0]}, ${result[2]}, "${result.slice(3).join('", "')}"`);
+      }
+    }
   }
 };
 
