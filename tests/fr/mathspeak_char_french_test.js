@@ -1,4350 +1,4404 @@
-fr, mathspeak, "0", "0", "0", "0"
-fr, mathspeak, "1", "1", "1", "1"
-fr, mathspeak, "2", "2", "2", "2"
-fr, mathspeak, "3", "3", "3", "3"
-fr, mathspeak, "4", "4", "4", "4"
-fr, mathspeak, "5", "5", "5", "5"
-fr, mathspeak, "6", "6", "6", "6"
-fr, mathspeak, "7", "7", "7", "7"
-fr, mathspeak, "8", "8", "8", "8"
-fr, mathspeak, "9", "9", "9", "9"
-fr, mathspeak, "deg", "degree", "degree", "degree"
-fr, mathspeak, "det", "déterminant", "déterminant", "déterminant"
-fr, mathspeak, "dim", "dimension", "dimension", "dimension"
-fr, mathspeak, "hom", "hom", "hom", "hom"
-fr, mathspeak, "Hom", "hom", "hom", "hom"
-fr, mathspeak, "ker", "kernel", "kernel", "kernel"
-fr, mathspeak, "Tr", "trace", "trace", "trace"
-fr, mathspeak, "tr", "trace", "trace", "trace"
-fr, mathspeak, "log", "log", "log", "log"
-fr, mathspeak, "ln", "logarithme népérien", "logarithme népérien", "logarithme népérien"
-fr, mathspeak, "lg", "log base 10", "log base 10", "log base 10"
-fr, mathspeak, "exp", "exp", "exp", "exp"
-fr, mathspeak, "expt", "exp", "exp", "exp"
-fr, mathspeak, "gcd", "gcd", "gcd", "gcd"
-fr, mathspeak, "lcm", "lcm", "lcm", "lcm"
-fr, mathspeak, "arg", "arg", "arg", "arg"
-fr, mathspeak, "im", "im", "im", "im"
-fr, mathspeak, "re", "re", "re", "re"
-fr, mathspeak, "inf", "inf", "inf", "inf"
-fr, mathspeak, "lim", "limite", "limite", "limite"
-fr, mathspeak, "lim inf", "limite inf", "limite inf", "limite inf"
-fr, mathspeak, "liminf", "liminf", "liminf", "liminf"
-fr, mathspeak, "lim sup", "limite sup", "limite sup", "limite sup"
-fr, mathspeak, "limsup", "limsup", "limsup", "limsup"
-fr, mathspeak, "max", "max", "max", "max"
-fr, mathspeak, "min", "min", "min", "min"
-fr, mathspeak, "sup", "sup", "sup", "sup"
-fr, mathspeak, "injlim", "colimit", "colimit", "colimit"
-fr, mathspeak, "inj lim", "inj limite", "inj limite", "inj limite"
-fr, mathspeak, "projlim", "limit", "limit", "limit"
-fr, mathspeak, "proj lim", "proj limite", "proj limite", "proj limite"
-fr, mathspeak, "mod", "mod", "mod", "mod"
-fr, mathspeak, "Pr", "probability", "probability", "probability"
-fr, mathspeak, "cosh", "cosinus hyperbolique", "cosinus hyperbolique", "cosinus hyperbolique"
-fr, mathspeak, "coth", "cotangente hyperbolique", "cotangente hyperbolique", "cotangente hyperbolique"
-fr, mathspeak, "csch", "cosécante hyperbolique", "cosécante hyperbolique", "cosécante hyperbolique"
-fr, mathspeak, "sech", "sécante hyperbolique", "sécante hyperbolique", "sécante hyperbolique"
-fr, mathspeak, "sinh", "sinus hyperbolique", "sinus hyperbolique", "sinus hyperbolique"
-fr, mathspeak, "tanh", "tangente hyperbolique", "tangente hyperbolique", "tangente hyperbolique"
-fr, mathspeak, "arcosh", "area hyperbolic cosine", "area hyperbolic cosine", "area hyperbolic cosine"
-fr, mathspeak, "arccosh", "area hyperbolic cosine", "area hyperbolic cosine", "area hyperbolic cosine"
-fr, mathspeak, "arcoth", "area hyperbolic cotangent", "area hyperbolic cotangent", "area hyperbolic cotangent"
-fr, mathspeak, "arccoth", "area hyperbolic cotangent", "area hyperbolic cotangent", "area hyperbolic cotangent"
-fr, mathspeak, "arcsch", "area hyperbolic cosecant", "area hyperbolic cosecant", "area hyperbolic cosecant"
-fr, mathspeak, "arccsch", "area hyperbolic cosecant", "area hyperbolic cosecant", "area hyperbolic cosecant"
-fr, mathspeak, "arsech", "area hyperbolic secant", "area hyperbolic secant", "area hyperbolic secant"
-fr, mathspeak, "arcsech", "area hyperbolic secant", "area hyperbolic secant", "area hyperbolic secant"
-fr, mathspeak, "arsinh", "area hyperbolic sine", "area hyperbolic sine", "area hyperbolic sine"
-fr, mathspeak, "arcsinh", "area hyperbolic sine", "area hyperbolic sine", "area hyperbolic sine"
-fr, mathspeak, "artanh", "area hyperbolic tangent", "area hyperbolic tangent", "area hyperbolic tangent"
-fr, mathspeak, "arctanh", "area hyperbolic tangent", "area hyperbolic tangent", "area hyperbolic tangent"
-fr, mathspeak, "cos", "cosinus", "cosinus", "cosinus"
-fr, mathspeak, "cosine", "cosinus", "cosinus", "cosinus"
-fr, mathspeak, "cot", "cotangente", "cotangente", "cotangente"
-fr, mathspeak, "csc", "cosécante", "cosécante", "cosécante"
-fr, mathspeak, "sec", "sécante", "sécante", "sécante"
-fr, mathspeak, "sin", "sinus", "sinus", "sinus"
-fr, mathspeak, "sine", "sinus", "sinus", "sinus"
-fr, mathspeak, "tan", "tangente", "tangente", "tangente"
-fr, mathspeak, "arccos", "arc cosine", "arc cosine", "arc cosine"
-fr, mathspeak, "arccot", "arc cotangent", "arc cotangent", "arc cotangent"
-fr, mathspeak, "arccsc", "arc cosecant", "arc cosecant", "arc cosecant"
-fr, mathspeak, "arcsec", "arc secant", "arc secant", "arc secant"
-fr, mathspeak, "arcsin", "arc sine", "arc sine", "arc sine"
-fr, mathspeak, "arctan", "arc tangent", "arc tangent", "arc tangent"
-fr, mathspeak, "Α", "Alpha majuscule", "Alpha majuscule", "Alpha majuscule"
-fr, mathspeak, "Β", "Bêta majuscule", "Bêta majuscule", "Bêta majuscule"
-fr, mathspeak, "Γ", "Gamma majuscule", "Gamma majuscule", "Gamma majuscule"
-fr, mathspeak, "Δ", "Delta majuscule", "Delta majuscule", "Delta majuscule"
-fr, mathspeak, "Ε", "Epsilon majuscule", "Epsilon majuscule", "Epsilon majuscule"
-fr, mathspeak, "Ζ", "Zêta majuscule", "Zêta majuscule", "Zêta majuscule"
-fr, mathspeak, "Η", "Êta majuscule", "Êta majuscule", "Êta majuscule"
-fr, mathspeak, "Θ", "Thêta majuscule", "Thêta majuscule", "Thêta majuscule"
-fr, mathspeak, "Ι", "Iota majuscule", "Iota majuscule", "Iota majuscule"
-fr, mathspeak, "Κ", "Kappa majuscule", "Kappa majuscule", "Kappa majuscule"
-fr, mathspeak, "Λ", "Lambda majuscule", "Lambda majuscule", "Lambda majuscule"
-fr, mathspeak, "Μ", "Mû majuscule", "Mû majuscule", "Mû majuscule"
-fr, mathspeak, "Ν", "Nû majuscule", "Nû majuscule", "Nû majuscule"
-fr, mathspeak, "Ξ", "Xi majuscule", "Xi majuscule", "Xi majuscule"
-fr, mathspeak, "Ο", "Omicron majuscule", "Omicron majuscule", "Omicron majuscule"
-fr, mathspeak, "Π", "Pi majuscule", "Pi majuscule", "Pi majuscule"
-fr, mathspeak, "Ρ", "Rho majuscule", "Rho majuscule", "Rho majuscule"
-fr, mathspeak, "Σ", "Sigma majuscule", "Sigma majuscule", "Sigma majuscule"
-fr, mathspeak, "Τ", "Tau majuscule", "Tau majuscule", "Tau majuscule"
-fr, mathspeak, "Υ", "Upsilon majuscule", "Upsilon majuscule", "Upsilon majuscule"
-fr, mathspeak, "Φ", "Phi majuscule", "Phi majuscule", "Phi majuscule"
-fr, mathspeak, "Χ", "Chi majuscule", "Chi majuscule", "Chi majuscule"
-fr, mathspeak, "Ψ", "Psi majuscule", "Psi majuscule", "Psi majuscule"
-fr, mathspeak, "Ω", "Oméga majuscule", "Oméga majuscule", "Oméga majuscule"
-fr, mathspeak, "α", "alpha", "alpha", "alpha"
-fr, mathspeak, "β", "bêta", "bêta", "bêta"
-fr, mathspeak, "γ", "gamma", "gamma", "gamma"
-fr, mathspeak, "δ", "delta", "delta", "delta"
-fr, mathspeak, "ε", "epsilon", "epsilon", "epsilon"
-fr, mathspeak, "ζ", "zêta", "zêta", "zêta"
-fr, mathspeak, "η", "êta", "êta", "êta"
-fr, mathspeak, "θ", "thêta", "thêta", "thêta"
-fr, mathspeak, "ι", "iota", "iota", "iota"
-fr, mathspeak, "κ", "kappa", "kappa", "kappa"
-fr, mathspeak, "λ", "lambda", "lambda", "lambda"
-fr, mathspeak, "μ", "mû", "mû", "mû"
-fr, mathspeak, "ν", "nû", "nû", "nû"
-fr, mathspeak, "ξ", "xi", "xi", "xi"
-fr, mathspeak, "ο", "omicron", "omicron", "omicron"
-fr, mathspeak, "π", "pi", "pi", "pi"
-fr, mathspeak, "ρ", "rho", "rho", "rho"
-fr, mathspeak, "ς", "sigma final", "sigma final", "sigma final"
-fr, mathspeak, "σ", "sigma", "sigma", "sigma"
-fr, mathspeak, "τ", "tau", "tau", "tau"
-fr, mathspeak, "υ", "upsilon", "upsilon", "upsilon"
-fr, mathspeak, "φ", "phi", "phi", "phi"
-fr, mathspeak, "χ", "chi", "chi", "chi"
-fr, mathspeak, "ψ", "psi", "psi", "psi"
-fr, mathspeak, "ω", "oméga", "oméga", "oméga"
-fr, mathspeak, "ᴦ", "small upper Gamma", "small upper Gamma", "small upper Gamma"
-fr, mathspeak, "ᴧ", "small upper Lamda", "small upper Lamda", "small upper Lamda"
-fr, mathspeak, "ᴨ", "small upper Pi", "small upper Pi", "small upper Pi"
-fr, mathspeak, "ᴩ", "small upper Rho", "small upper Rho", "small upper Rho"
-fr, mathspeak, "ᴪ", "small upper Psi", "small upper Psi", "small upper Psi"
-fr, mathspeak, "ᵞ", "superscript gamma", "superscript gamma", "superscript gamma"
-fr, mathspeak, "ᵠ", "superscript phi", "superscript phi", "superscript phi"
-fr, mathspeak, "ᵦ", "subscript beta", "subscript beta", "subscript beta"
-fr, mathspeak, "ᵧ", "subscript gamma", "subscript gamma", "subscript gamma"
-fr, mathspeak, "ᵨ", "subscript rho", "subscript rho", "subscript rho"
-fr, mathspeak, "ᵩ", "subscript phi", "subscript phi", "subscript phi"
-fr, mathspeak, "ᵪ", "subscript chi", "subscript chi", "subscript chi"
-fr, mathspeak, "ϐ", "bêta grec", "bêta grec", "bêta grec"
-fr, mathspeak, "ϑ", "thêta cursif", "thêta cursif", "thêta cursif"
-fr, mathspeak, "ϕ", "phi droit", "phi droit", "phi droit"
-fr, mathspeak, "ϖ", "pi cursif", "pi cursif", "pi cursif"
-fr, mathspeak, "ϗ", "ligature kai", "ligature kai", "ligature kai"
-fr, mathspeak, "ϰ", "kappa cursif", "kappa cursif", "kappa cursif"
-fr, mathspeak, "ϱ", "rho à queue", "rho à queue", "rho à queue"
-fr, mathspeak, "ϵ", "epsilon", "epsilon", "epsilon"
-fr, mathspeak, "϶", "epsilon lunaire réfléchi", "epsilon lunaire réfléchi", "epsilon lunaire réfléchi"
-fr, mathspeak, "ϴ", "Thêta majuscule", "Thêta majuscule", "Thêta majuscule"
-fr, mathspeak, "𝚹", "Thêta majuscule en grasse", "Thêta majuscule en grasse", "Thêta majuscule en grasse"
-fr, mathspeak, "𝛳", "Thêta majuscule en italique", "Thêta majuscule en italique", "Thêta majuscule en italique"
-fr, mathspeak, "𝝧", "Thêta majuscule en sans empattement grasse", "Thêta majuscule en sans empattement grasse", "Thêta majuscule en sans empattement grasse"
-fr, mathspeak, "𝛁", "symbole mathématique gras nabla", "symbole mathématique gras nabla", "symbole mathématique gras nabla"
-fr, mathspeak, "𝛛", "symbole mathématique gras dérivée partielle", "symbole mathématique gras dérivée partielle", "symbole mathématique gras dérivée partielle"
-fr, mathspeak, "𝛜", "symbole mathématique gras epsilon", "symbole mathématique gras epsilon", "symbole mathématique gras epsilon"
-fr, mathspeak, "𝛝", "symbole mathématique gras thêta", "symbole mathématique gras thêta", "symbole mathématique gras thêta"
-fr, mathspeak, "𝛞", "symbole mathématique gras kappa", "symbole mathématique gras kappa", "symbole mathématique gras kappa"
-fr, mathspeak, "𝛟", "symbole mathématique gras phi", "symbole mathématique gras phi", "symbole mathématique gras phi"
-fr, mathspeak, "𝛠", "symbole mathématique gras rhô", "symbole mathématique gras rhô", "symbole mathématique gras rhô"
-fr, mathspeak, "𝛡", "symbole mathématique gras pi", "symbole mathématique gras pi", "symbole mathématique gras pi"
-fr, mathspeak, "𝛻", "symbole mathématique italique nabla", "symbole mathématique italique nabla", "symbole mathématique italique nabla"
-fr, mathspeak, "𝜕", "symbole mathématique italique dérivée partielle", "symbole mathématique italique dérivée partielle", "symbole mathématique italique dérivée partielle"
-fr, mathspeak, "𝜖", "symbole mathématique italique epsilon", "symbole mathématique italique epsilon", "symbole mathématique italique epsilon"
-fr, mathspeak, "𝜗", "symbole mathématique italique thêta", "symbole mathématique italique thêta", "symbole mathématique italique thêta"
-fr, mathspeak, "𝜘", "symbole mathématique italique kappa", "symbole mathématique italique kappa", "symbole mathématique italique kappa"
-fr, mathspeak, "𝜙", "symbole mathématique italique phi", "symbole mathématique italique phi", "symbole mathématique italique phi"
-fr, mathspeak, "𝜚", "symbole mathématique italique rhô", "symbole mathématique italique rhô", "symbole mathématique italique rhô"
-fr, mathspeak, "𝜛", "symbole mathématique italique pi", "symbole mathématique italique pi", "symbole mathématique italique pi"
-fr, mathspeak, "𝝯", "symbole mathématique gras sans empattement nabla", "symbole mathématique gras sans empattement nabla", "symbole mathématique gras sans empattement nabla"
-fr, mathspeak, "𝞉", "symbole mathématique gras sans empattement dérivée partielle", "symbole mathématique gras sans empattement dérivée partielle", "symbole mathématique gras sans empattement dérivée partielle"
-fr, mathspeak, "𝞊", "symbole mathématique gras sans empattement epsilon", "symbole mathématique gras sans empattement epsilon", "symbole mathématique gras sans empattement epsilon"
-fr, mathspeak, "𝞋", "symbole mathématique gras sans empattement thêta", "symbole mathématique gras sans empattement thêta", "symbole mathématique gras sans empattement thêta"
-fr, mathspeak, "𝞌", "symbole mathématique gras sans empattement kappa", "symbole mathématique gras sans empattement kappa", "symbole mathématique gras sans empattement kappa"
-fr, mathspeak, "𝞍", "symbole mathématique gras sans empattement phi", "symbole mathématique gras sans empattement phi", "symbole mathématique gras sans empattement phi"
-fr, mathspeak, "𝞎", "symbole mathématique gras sans empattement rhô", "symbole mathématique gras sans empattement rhô", "symbole mathématique gras sans empattement rhô"
-fr, mathspeak, "𝞏", "symbole mathématique gras sans empattement pi", "symbole mathématique gras sans empattement pi", "symbole mathématique gras sans empattement pi"
-fr, mathspeak, "𝟊", "bold upper Digamma", "bold upper Digamma", "bold upper Digamma"
-fr, mathspeak, "𝟋", "bold digamma", "bold digamma", "bold digamma"
-fr, mathspeak, "𝚨", "Alpha majuscule en gras", "Alpha majuscule en gras", "Alpha majuscule en gras"
-fr, mathspeak, "𝚩", "Bêta majuscule en gras", "Bêta majuscule en gras", "Bêta majuscule en gras"
-fr, mathspeak, "𝚪", "Gamma majuscule en gras", "Gamma majuscule en gras", "Gamma majuscule en gras"
-fr, mathspeak, "𝚫", "Delta majuscule en gras", "Delta majuscule en gras", "Delta majuscule en gras"
-fr, mathspeak, "𝚬", "Epsilon majuscule en gras", "Epsilon majuscule en gras", "Epsilon majuscule en gras"
-fr, mathspeak, "𝚭", "Dzêta majuscule en gras", "Dzêta majuscule en gras", "Dzêta majuscule en gras"
-fr, mathspeak, "𝚮", "Êta majuscule en gras", "Êta majuscule en gras", "Êta majuscule en gras"
-fr, mathspeak, "𝚯", "Thêta majuscule en gras", "Thêta majuscule en gras", "Thêta majuscule en gras"
-fr, mathspeak, "𝚰", "Iota majuscule en gras", "Iota majuscule en gras", "Iota majuscule en gras"
-fr, mathspeak, "𝚱", "Kappa majuscule en gras", "Kappa majuscule en gras", "Kappa majuscule en gras"
-fr, mathspeak, "𝚲", "Lambda majuscule en gras", "Lambda majuscule en gras", "Lambda majuscule en gras"
-fr, mathspeak, "𝚳", "Mu majuscule en gras", "Mu majuscule en gras", "Mu majuscule en gras"
-fr, mathspeak, "𝚴", "Nu majuscule en gras", "Nu majuscule en gras", "Nu majuscule en gras"
-fr, mathspeak, "𝚵", "Xi majuscule en gras", "Xi majuscule en gras", "Xi majuscule en gras"
-fr, mathspeak, "𝚶", "Omicron majuscule en gras", "Omicron majuscule en gras", "Omicron majuscule en gras"
-fr, mathspeak, "𝚷", "Pi majuscule en gras", "Pi majuscule en gras", "Pi majuscule en gras"
-fr, mathspeak, "𝚸", "Rhô majuscule en gras", "Rhô majuscule en gras", "Rhô majuscule en gras"
-fr, mathspeak, "𝚺", "Sigma majuscule en gras", "Sigma majuscule en gras", "Sigma majuscule en gras"
-fr, mathspeak, "𝚻", "Tau majuscule en gras", "Tau majuscule en gras", "Tau majuscule en gras"
-fr, mathspeak, "𝚼", "Upsilon majuscule en gras", "Upsilon majuscule en gras", "Upsilon majuscule en gras"
-fr, mathspeak, "𝚽", "Phi majuscule en gras", "Phi majuscule en gras", "Phi majuscule en gras"
-fr, mathspeak, "𝚾", "Chi majuscule en gras", "Chi majuscule en gras", "Chi majuscule en gras"
-fr, mathspeak, "𝚿", "Psi majuscule en gras", "Psi majuscule en gras", "Psi majuscule en gras"
-fr, mathspeak, "𝛀", "Oméga majuscule en gras", "Oméga majuscule en gras", "Oméga majuscule en gras"
-fr, mathspeak, "𝛂", "alpha en gras", "alpha en gras", "alpha en gras"
-fr, mathspeak, "𝛃", "bêta en gras", "bêta en gras", "bêta en gras"
-fr, mathspeak, "𝛄", "gamma en gras", "gamma en gras", "gamma en gras"
-fr, mathspeak, "𝛅", "delta en gras", "delta en gras", "delta en gras"
-fr, mathspeak, "𝛆", "epsilon en gras", "epsilon en gras", "epsilon en gras"
-fr, mathspeak, "𝛇", "dzêta en gras", "dzêta en gras", "dzêta en gras"
-fr, mathspeak, "𝛈", "êta en gras", "êta en gras", "êta en gras"
-fr, mathspeak, "𝛉", "thêta en gras", "thêta en gras", "thêta en gras"
-fr, mathspeak, "𝛊", "iota en gras", "iota en gras", "iota en gras"
-fr, mathspeak, "𝛋", "kappa en gras", "kappa en gras", "kappa en gras"
-fr, mathspeak, "𝛌", "lambda en gras", "lambda en gras", "lambda en gras"
-fr, mathspeak, "𝛍", "mu en gras", "mu en gras", "mu en gras"
-fr, mathspeak, "𝛎", "nu en gras", "nu en gras", "nu en gras"
-fr, mathspeak, "𝛏", "xi en gras", "xi en gras", "xi en gras"
-fr, mathspeak, "𝛐", "omicron en gras", "omicron en gras", "omicron en gras"
-fr, mathspeak, "𝛑", "pi en gras", "pi en gras", "pi en gras"
-fr, mathspeak, "𝛒", "rhô en gras", "rhô en gras", "rhô en gras"
-fr, mathspeak, "𝛓", "mathématique grasse sigma final", "mathématique grasse sigma final", "mathématique grasse sigma final"
-fr, mathspeak, "𝛔", "sigma en gras", "sigma en gras", "sigma en gras"
-fr, mathspeak, "𝛕", "tau en gras", "tau en gras", "tau en gras"
-fr, mathspeak, "𝛖", "upsilon en gras", "upsilon en gras", "upsilon en gras"
-fr, mathspeak, "𝛗", "phi en gras", "phi en gras", "phi en gras"
-fr, mathspeak, "𝛘", "chi en gras", "chi en gras", "chi en gras"
-fr, mathspeak, "𝛙", "psi en gras", "psi en gras", "psi en gras"
-fr, mathspeak, "𝛚", "oméga en gras", "oméga en gras", "oméga en gras"
-fr, mathspeak, "𝛢", "Alpha majuscule en italique", "Alpha majuscule en italique", "Alpha majuscule en italique"
-fr, mathspeak, "𝛣", "Bêta majuscule en italique", "Bêta majuscule en italique", "Bêta majuscule en italique"
-fr, mathspeak, "𝛤", "Gamma majuscule en italique", "Gamma majuscule en italique", "Gamma majuscule en italique"
-fr, mathspeak, "𝛥", "Delta majuscule en italique", "Delta majuscule en italique", "Delta majuscule en italique"
-fr, mathspeak, "𝛦", "Epsilon majuscule en italique", "Epsilon majuscule en italique", "Epsilon majuscule en italique"
-fr, mathspeak, "𝛧", "Dzêta majuscule en italique", "Dzêta majuscule en italique", "Dzêta majuscule en italique"
-fr, mathspeak, "𝛨", "Êta majuscule en italique", "Êta majuscule en italique", "Êta majuscule en italique"
-fr, mathspeak, "𝛩", "Thêta majuscule en italique", "Thêta majuscule en italique", "Thêta majuscule en italique"
-fr, mathspeak, "𝛪", "Iota majuscule en italique", "Iota majuscule en italique", "Iota majuscule en italique"
-fr, mathspeak, "𝛫", "Kappa majuscule en italique", "Kappa majuscule en italique", "Kappa majuscule en italique"
-fr, mathspeak, "𝛬", "Lambda majuscule en italique", "Lambda majuscule en italique", "Lambda majuscule en italique"
-fr, mathspeak, "𝛭", "Mu majuscule en italique", "Mu majuscule en italique", "Mu majuscule en italique"
-fr, mathspeak, "𝛮", "Nu majuscule en italique", "Nu majuscule en italique", "Nu majuscule en italique"
-fr, mathspeak, "𝛯", "Xi majuscule en italique", "Xi majuscule en italique", "Xi majuscule en italique"
-fr, mathspeak, "𝛰", "Omicron majuscule en italique", "Omicron majuscule en italique", "Omicron majuscule en italique"
-fr, mathspeak, "𝛱", "Pi majuscule en italique", "Pi majuscule en italique", "Pi majuscule en italique"
-fr, mathspeak, "𝛲", "Rhô majuscule en italique", "Rhô majuscule en italique", "Rhô majuscule en italique"
-fr, mathspeak, "𝛴", "Sigma majuscule en italique", "Sigma majuscule en italique", "Sigma majuscule en italique"
-fr, mathspeak, "𝛵", "Tau majuscule en italique", "Tau majuscule en italique", "Tau majuscule en italique"
-fr, mathspeak, "𝛶", "Upsilon majuscule en italique", "Upsilon majuscule en italique", "Upsilon majuscule en italique"
-fr, mathspeak, "𝛷", "Phi majuscule en italique", "Phi majuscule en italique", "Phi majuscule en italique"
-fr, mathspeak, "𝛸", "Chi majuscule en italique", "Chi majuscule en italique", "Chi majuscule en italique"
-fr, mathspeak, "𝛹", "Psi majuscule en italique", "Psi majuscule en italique", "Psi majuscule en italique"
-fr, mathspeak, "𝛺", "Oméga majuscule en italique", "Oméga majuscule en italique", "Oméga majuscule en italique"
-fr, mathspeak, "𝛼", "alpha en italique", "alpha en italique", "alpha en italique"
-fr, mathspeak, "𝛽", "bêta en italique", "bêta en italique", "bêta en italique"
-fr, mathspeak, "𝛾", "gamma en italique", "gamma en italique", "gamma en italique"
-fr, mathspeak, "𝛿", "delta en italique", "delta en italique", "delta en italique"
-fr, mathspeak, "𝜀", "epsilon en italique", "epsilon en italique", "epsilon en italique"
-fr, mathspeak, "𝜁", "dzêta en italique", "dzêta en italique", "dzêta en italique"
-fr, mathspeak, "𝜂", "êta en italique", "êta en italique", "êta en italique"
-fr, mathspeak, "𝜃", "thêta en italique", "thêta en italique", "thêta en italique"
-fr, mathspeak, "𝜄", "iota en italique", "iota en italique", "iota en italique"
-fr, mathspeak, "𝜅", "kappa en italique", "kappa en italique", "kappa en italique"
-fr, mathspeak, "𝜆", "lambda en italique", "lambda en italique", "lambda en italique"
-fr, mathspeak, "𝜇", "mu en italique", "mu en italique", "mu en italique"
-fr, mathspeak, "𝜈", "nu en italique", "nu en italique", "nu en italique"
-fr, mathspeak, "𝜉", "xi en italique", "xi en italique", "xi en italique"
-fr, mathspeak, "𝜊", "omicron en italique", "omicron en italique", "omicron en italique"
-fr, mathspeak, "𝜋", "pi en italique", "pi en italique", "pi en italique"
-fr, mathspeak, "𝜌", "rhô en italique", "rhô en italique", "rhô en italique"
-fr, mathspeak, "𝜍", "mathématique italique sigma final", "mathématique italique sigma final", "mathématique italique sigma final"
-fr, mathspeak, "𝜎", "sigma en italique", "sigma en italique", "sigma en italique"
-fr, mathspeak, "𝜏", "tau en italique", "tau en italique", "tau en italique"
-fr, mathspeak, "𝜐", "upsilon en italique", "upsilon en italique", "upsilon en italique"
-fr, mathspeak, "𝜑", "phi en italique", "phi en italique", "phi en italique"
-fr, mathspeak, "𝜒", "chi en italique", "chi en italique", "chi en italique"
-fr, mathspeak, "𝜓", "psi en italique", "psi en italique", "psi en italique"
-fr, mathspeak, "𝜔", "oméga en italique", "oméga en italique", "oméga en italique"
-fr, mathspeak, "𝜜", "Alpha majuscule en italique gras", "Alpha majuscule en italique gras", "Alpha majuscule en italique gras"
-fr, mathspeak, "𝜝", "Bêta majuscule en italique gras", "Bêta majuscule en italique gras", "Bêta majuscule en italique gras"
-fr, mathspeak, "𝜞", "Gamma majuscule en italique gras", "Gamma majuscule en italique gras", "Gamma majuscule en italique gras"
-fr, mathspeak, "𝜟", "Delta majuscule en italique gras", "Delta majuscule en italique gras", "Delta majuscule en italique gras"
-fr, mathspeak, "𝜠", "Epsilon majuscule en italique gras", "Epsilon majuscule en italique gras", "Epsilon majuscule en italique gras"
-fr, mathspeak, "𝜡", "Dzêta majuscule en italique gras", "Dzêta majuscule en italique gras", "Dzêta majuscule en italique gras"
-fr, mathspeak, "𝜢", "Êta majuscule en italique gras", "Êta majuscule en italique gras", "Êta majuscule en italique gras"
-fr, mathspeak, "𝜣", "Thêta majuscule en italique gras", "Thêta majuscule en italique gras", "Thêta majuscule en italique gras"
-fr, mathspeak, "𝜤", "Iota majuscule en italique gras", "Iota majuscule en italique gras", "Iota majuscule en italique gras"
-fr, mathspeak, "𝜥", "Kappa majuscule en italique gras", "Kappa majuscule en italique gras", "Kappa majuscule en italique gras"
-fr, mathspeak, "𝜦", "Lambda majuscule en italique gras", "Lambda majuscule en italique gras", "Lambda majuscule en italique gras"
-fr, mathspeak, "𝜧", "Mu majuscule en italique gras", "Mu majuscule en italique gras", "Mu majuscule en italique gras"
-fr, mathspeak, "𝜨", "Nu majuscule en italique gras", "Nu majuscule en italique gras", "Nu majuscule en italique gras"
-fr, mathspeak, "𝜩", "Xi majuscule en italique gras", "Xi majuscule en italique gras", "Xi majuscule en italique gras"
-fr, mathspeak, "𝜪", "Omicron majuscule en italique gras", "Omicron majuscule en italique gras", "Omicron majuscule en italique gras"
-fr, mathspeak, "𝜫", "Pi majuscule en italique gras", "Pi majuscule en italique gras", "Pi majuscule en italique gras"
-fr, mathspeak, "𝜬", "Rhô majuscule en italique gras", "Rhô majuscule en italique gras", "Rhô majuscule en italique gras"
-fr, mathspeak, "𝜮", "Sigma majuscule en italique gras", "Sigma majuscule en italique gras", "Sigma majuscule en italique gras"
-fr, mathspeak, "𝜯", "Tau majuscule en italique gras", "Tau majuscule en italique gras", "Tau majuscule en italique gras"
-fr, mathspeak, "𝜰", "Upsilon majuscule en italique gras", "Upsilon majuscule en italique gras", "Upsilon majuscule en italique gras"
-fr, mathspeak, "𝜱", "Phi majuscule en italique gras", "Phi majuscule en italique gras", "Phi majuscule en italique gras"
-fr, mathspeak, "𝜲", "Chi majuscule en italique gras", "Chi majuscule en italique gras", "Chi majuscule en italique gras"
-fr, mathspeak, "𝜳", "Psi majuscule en italique gras", "Psi majuscule en italique gras", "Psi majuscule en italique gras"
-fr, mathspeak, "𝜴", "Oméga majuscule en italique gras", "Oméga majuscule en italique gras", "Oméga majuscule en italique gras"
-fr, mathspeak, "𝜶", "alpha en italique gras", "alpha en italique gras", "alpha en italique gras"
-fr, mathspeak, "𝜷", "bêta en italique gras", "bêta en italique gras", "bêta en italique gras"
-fr, mathspeak, "𝜸", "gamma en italique gras", "gamma en italique gras", "gamma en italique gras"
-fr, mathspeak, "𝜹", "delta en italique gras", "delta en italique gras", "delta en italique gras"
-fr, mathspeak, "𝜺", "epsilon en italique gras", "epsilon en italique gras", "epsilon en italique gras"
-fr, mathspeak, "𝜻", "dzêta en italique gras", "dzêta en italique gras", "dzêta en italique gras"
-fr, mathspeak, "𝜼", "êta en italique gras", "êta en italique gras", "êta en italique gras"
-fr, mathspeak, "𝜽", "thêta en italique gras", "thêta en italique gras", "thêta en italique gras"
-fr, mathspeak, "𝜾", "iota en italique gras", "iota en italique gras", "iota en italique gras"
-fr, mathspeak, "𝜿", "kappa en italique gras", "kappa en italique gras", "kappa en italique gras"
-fr, mathspeak, "𝝀", "lambda en italique gras", "lambda en italique gras", "lambda en italique gras"
-fr, mathspeak, "𝝁", "mu en italique gras", "mu en italique gras", "mu en italique gras"
-fr, mathspeak, "𝝂", "nu en italique gras", "nu en italique gras", "nu en italique gras"
-fr, mathspeak, "𝝃", "xi en italique gras", "xi en italique gras", "xi en italique gras"
-fr, mathspeak, "𝝄", "omicron en italique gras", "omicron en italique gras", "omicron en italique gras"
-fr, mathspeak, "𝝅", "pi en italique gras", "pi en italique gras", "pi en italique gras"
-fr, mathspeak, "𝝆", "rhô en italique gras", "rhô en italique gras", "rhô en italique gras"
-fr, mathspeak, "𝝇", "mathématique italique grasse sigma final", "mathématique italique grasse sigma final", "mathématique italique grasse sigma final"
-fr, mathspeak, "𝝈", "sigma en italique gras", "sigma en italique gras", "sigma en italique gras"
-fr, mathspeak, "𝝉", "tau en italique gras", "tau en italique gras", "tau en italique gras"
-fr, mathspeak, "𝝊", "upsilon en italique gras", "upsilon en italique gras", "upsilon en italique gras"
-fr, mathspeak, "𝝋", "phi en italique gras", "phi en italique gras", "phi en italique gras"
-fr, mathspeak, "𝝌", "chi en italique gras", "chi en italique gras", "chi en italique gras"
-fr, mathspeak, "𝝍", "psi en italique gras", "psi en italique gras", "psi en italique gras"
-fr, mathspeak, "𝝎", "oméga en italique gras", "oméga en italique gras", "oméga en italique gras"
-fr, mathspeak, "𝝖", "Alpha majuscule en sans empattement gras", "Alpha majuscule en sans empattement gras", "Alpha majuscule en sans empattement gras"
-fr, mathspeak, "𝝗", "Bêta majuscule en sans empattement gras", "Bêta majuscule en sans empattement gras", "Bêta majuscule en sans empattement gras"
-fr, mathspeak, "𝝘", "Gamma majuscule en sans empattement gras", "Gamma majuscule en sans empattement gras", "Gamma majuscule en sans empattement gras"
-fr, mathspeak, "𝝙", "Delta majuscule en sans empattement gras", "Delta majuscule en sans empattement gras", "Delta majuscule en sans empattement gras"
-fr, mathspeak, "𝝚", "Epsilon majuscule en sans empattement gras", "Epsilon majuscule en sans empattement gras", "Epsilon majuscule en sans empattement gras"
-fr, mathspeak, "𝝛", "Dzêta majuscule en sans empattement gras", "Dzêta majuscule en sans empattement gras", "Dzêta majuscule en sans empattement gras"
-fr, mathspeak, "𝝜", "Êta majuscule en sans empattement gras", "Êta majuscule en sans empattement gras", "Êta majuscule en sans empattement gras"
-fr, mathspeak, "𝝝", "Thêta majuscule en sans empattement gras", "Thêta majuscule en sans empattement gras", "Thêta majuscule en sans empattement gras"
-fr, mathspeak, "𝝞", "Iota majuscule en sans empattement gras", "Iota majuscule en sans empattement gras", "Iota majuscule en sans empattement gras"
-fr, mathspeak, "𝝟", "Kappa majuscule en sans empattement gras", "Kappa majuscule en sans empattement gras", "Kappa majuscule en sans empattement gras"
-fr, mathspeak, "𝝠", "Lambda majuscule en sans empattement gras", "Lambda majuscule en sans empattement gras", "Lambda majuscule en sans empattement gras"
-fr, mathspeak, "𝝡", "Mu majuscule en sans empattement gras", "Mu majuscule en sans empattement gras", "Mu majuscule en sans empattement gras"
-fr, mathspeak, "𝝢", "Nu majuscule en sans empattement gras", "Nu majuscule en sans empattement gras", "Nu majuscule en sans empattement gras"
-fr, mathspeak, "𝝣", "Xi majuscule en sans empattement gras", "Xi majuscule en sans empattement gras", "Xi majuscule en sans empattement gras"
-fr, mathspeak, "𝝤", "Omicron majuscule en sans empattement gras", "Omicron majuscule en sans empattement gras", "Omicron majuscule en sans empattement gras"
-fr, mathspeak, "𝝥", "Pi majuscule en sans empattement gras", "Pi majuscule en sans empattement gras", "Pi majuscule en sans empattement gras"
-fr, mathspeak, "𝝦", "Rhô majuscule en sans empattement gras", "Rhô majuscule en sans empattement gras", "Rhô majuscule en sans empattement gras"
-fr, mathspeak, "𝝨", "Sigma majuscule en sans empattement gras", "Sigma majuscule en sans empattement gras", "Sigma majuscule en sans empattement gras"
-fr, mathspeak, "𝝩", "Tau majuscule en sans empattement gras", "Tau majuscule en sans empattement gras", "Tau majuscule en sans empattement gras"
-fr, mathspeak, "𝝪", "Upsilon majuscule en sans empattement gras", "Upsilon majuscule en sans empattement gras", "Upsilon majuscule en sans empattement gras"
-fr, mathspeak, "𝝫", "Phi majuscule en sans empattement gras", "Phi majuscule en sans empattement gras", "Phi majuscule en sans empattement gras"
-fr, mathspeak, "𝝬", "Chi majuscule en sans empattement gras", "Chi majuscule en sans empattement gras", "Chi majuscule en sans empattement gras"
-fr, mathspeak, "𝝭", "Psi majuscule en sans empattement gras", "Psi majuscule en sans empattement gras", "Psi majuscule en sans empattement gras"
-fr, mathspeak, "𝝮", "Oméga majuscule en sans empattement gras", "Oméga majuscule en sans empattement gras", "Oméga majuscule en sans empattement gras"
-fr, mathspeak, "𝝰", "alpha en sans empattement gras", "alpha en sans empattement gras", "alpha en sans empattement gras"
-fr, mathspeak, "𝝱", "bêta en sans empattement gras", "bêta en sans empattement gras", "bêta en sans empattement gras"
-fr, mathspeak, "𝝲", "gamma en sans empattement gras", "gamma en sans empattement gras", "gamma en sans empattement gras"
-fr, mathspeak, "𝝳", "delta en sans empattement gras", "delta en sans empattement gras", "delta en sans empattement gras"
-fr, mathspeak, "𝝴", "epsilon en sans empattement gras", "epsilon en sans empattement gras", "epsilon en sans empattement gras"
-fr, mathspeak, "𝝵", "dzêta en sans empattement gras", "dzêta en sans empattement gras", "dzêta en sans empattement gras"
-fr, mathspeak, "𝝶", "êta en sans empattement gras", "êta en sans empattement gras", "êta en sans empattement gras"
-fr, mathspeak, "𝝷", "thêta en sans empattement gras", "thêta en sans empattement gras", "thêta en sans empattement gras"
-fr, mathspeak, "𝝸", "iota en sans empattement gras", "iota en sans empattement gras", "iota en sans empattement gras"
-fr, mathspeak, "𝝹", "kappa en sans empattement gras", "kappa en sans empattement gras", "kappa en sans empattement gras"
-fr, mathspeak, "𝝺", "lambda en sans empattement gras", "lambda en sans empattement gras", "lambda en sans empattement gras"
-fr, mathspeak, "𝝻", "mu en sans empattement gras", "mu en sans empattement gras", "mu en sans empattement gras"
-fr, mathspeak, "𝝼", "nu en sans empattement gras", "nu en sans empattement gras", "nu en sans empattement gras"
-fr, mathspeak, "𝝽", "xi en sans empattement gras", "xi en sans empattement gras", "xi en sans empattement gras"
-fr, mathspeak, "𝝾", "omicron en sans empattement gras", "omicron en sans empattement gras", "omicron en sans empattement gras"
-fr, mathspeak, "𝝿", "pi en sans empattement gras", "pi en sans empattement gras", "pi en sans empattement gras"
-fr, mathspeak, "𝞀", "rhô en sans empattement gras", "rhô en sans empattement gras", "rhô en sans empattement gras"
-fr, mathspeak, "𝞁", "mathématique grasse sans empattement sigma final", "mathématique grasse sans empattement sigma final", "mathématique grasse sans empattement sigma final"
-fr, mathspeak, "𝞂", "sigma en sans empattement gras", "sigma en sans empattement gras", "sigma en sans empattement gras"
-fr, mathspeak, "𝞃", "tau en sans empattement gras", "tau en sans empattement gras", "tau en sans empattement gras"
-fr, mathspeak, "𝞄", "upsilon en sans empattement gras", "upsilon en sans empattement gras", "upsilon en sans empattement gras"
-fr, mathspeak, "𝞅", "phi en sans empattement gras", "phi en sans empattement gras", "phi en sans empattement gras"
-fr, mathspeak, "𝞆", "chi en sans empattement gras", "chi en sans empattement gras", "chi en sans empattement gras"
-fr, mathspeak, "𝞇", "psi en sans empattement gras", "psi en sans empattement gras", "psi en sans empattement gras"
-fr, mathspeak, "𝞈", "oméga en sans empattement gras", "oméga en sans empattement gras", "oméga en sans empattement gras"
-fr, mathspeak, "𝞐", "Alpha majuscule en sans empattement italique gras", "Alpha majuscule en sans empattement italique gras", "Alpha majuscule en sans empattement italique gras"
-fr, mathspeak, "𝞑", "Bêta majuscule en sans empattement italique gras", "Bêta majuscule en sans empattement italique gras", "Bêta majuscule en sans empattement italique gras"
-fr, mathspeak, "𝞒", "Gamma majuscule en sans empattement italique gras", "Gamma majuscule en sans empattement italique gras", "Gamma majuscule en sans empattement italique gras"
-fr, mathspeak, "𝞓", "Delta majuscule en sans empattement italique gras", "Delta majuscule en sans empattement italique gras", "Delta majuscule en sans empattement italique gras"
-fr, mathspeak, "𝞔", "Epsilon majuscule en sans empattement italique gras", "Epsilon majuscule en sans empattement italique gras", "Epsilon majuscule en sans empattement italique gras"
-fr, mathspeak, "𝞕", "Dzêta majuscule en sans empattement italique gras", "Dzêta majuscule en sans empattement italique gras", "Dzêta majuscule en sans empattement italique gras"
-fr, mathspeak, "𝞖", "Êta majuscule en sans empattement italique gras", "Êta majuscule en sans empattement italique gras", "Êta majuscule en sans empattement italique gras"
-fr, mathspeak, "𝞗", "Thêta majuscule en sans empattement italique gras", "Thêta majuscule en sans empattement italique gras", "Thêta majuscule en sans empattement italique gras"
-fr, mathspeak, "𝞘", "Iota majuscule en sans empattement italique gras", "Iota majuscule en sans empattement italique gras", "Iota majuscule en sans empattement italique gras"
-fr, mathspeak, "𝞙", "Kappa majuscule en sans empattement italique gras", "Kappa majuscule en sans empattement italique gras", "Kappa majuscule en sans empattement italique gras"
-fr, mathspeak, "𝞚", "Lambda majuscule en sans empattement italique gras", "Lambda majuscule en sans empattement italique gras", "Lambda majuscule en sans empattement italique gras"
-fr, mathspeak, "𝞛", "Mu majuscule en sans empattement italique gras", "Mu majuscule en sans empattement italique gras", "Mu majuscule en sans empattement italique gras"
-fr, mathspeak, "𝞜", "Nu majuscule en sans empattement italique gras", "Nu majuscule en sans empattement italique gras", "Nu majuscule en sans empattement italique gras"
-fr, mathspeak, "𝞝", "Xi majuscule en sans empattement italique gras", "Xi majuscule en sans empattement italique gras", "Xi majuscule en sans empattement italique gras"
-fr, mathspeak, "𝞞", "Omicron majuscule en sans empattement italique gras", "Omicron majuscule en sans empattement italique gras", "Omicron majuscule en sans empattement italique gras"
-fr, mathspeak, "𝞟", "Pi majuscule en sans empattement italique gras", "Pi majuscule en sans empattement italique gras", "Pi majuscule en sans empattement italique gras"
-fr, mathspeak, "𝞠", "Rhô majuscule en sans empattement italique gras", "Rhô majuscule en sans empattement italique gras", "Rhô majuscule en sans empattement italique gras"
-fr, mathspeak, "𝞢", "Sigma majuscule en sans empattement italique gras", "Sigma majuscule en sans empattement italique gras", "Sigma majuscule en sans empattement italique gras"
-fr, mathspeak, "𝞣", "Tau majuscule en sans empattement italique gras", "Tau majuscule en sans empattement italique gras", "Tau majuscule en sans empattement italique gras"
-fr, mathspeak, "𝞤", "Upsilon majuscule en sans empattement italique gras", "Upsilon majuscule en sans empattement italique gras", "Upsilon majuscule en sans empattement italique gras"
-fr, mathspeak, "𝞥", "Phi majuscule en sans empattement italique gras", "Phi majuscule en sans empattement italique gras", "Phi majuscule en sans empattement italique gras"
-fr, mathspeak, "𝞦", "Chi majuscule en sans empattement italique gras", "Chi majuscule en sans empattement italique gras", "Chi majuscule en sans empattement italique gras"
-fr, mathspeak, "𝞧", "Psi majuscule en sans empattement italique gras", "Psi majuscule en sans empattement italique gras", "Psi majuscule en sans empattement italique gras"
-fr, mathspeak, "𝞨", "Oméga majuscule en sans empattement italique gras", "Oméga majuscule en sans empattement italique gras", "Oméga majuscule en sans empattement italique gras"
-fr, mathspeak, "𝞪", "alpha en sans empattement italique gras", "alpha en sans empattement italique gras", "alpha en sans empattement italique gras"
-fr, mathspeak, "𝞫", "bêta en sans empattement italique gras", "bêta en sans empattement italique gras", "bêta en sans empattement italique gras"
-fr, mathspeak, "𝞬", "gamma en sans empattement italique gras", "gamma en sans empattement italique gras", "gamma en sans empattement italique gras"
-fr, mathspeak, "𝞭", "delta en sans empattement italique gras", "delta en sans empattement italique gras", "delta en sans empattement italique gras"
-fr, mathspeak, "𝞮", "epsilon en sans empattement italique gras", "epsilon en sans empattement italique gras", "epsilon en sans empattement italique gras"
-fr, mathspeak, "𝞯", "dzêta en sans empattement italique gras", "dzêta en sans empattement italique gras", "dzêta en sans empattement italique gras"
-fr, mathspeak, "𝞰", "êta en sans empattement italique gras", "êta en sans empattement italique gras", "êta en sans empattement italique gras"
-fr, mathspeak, "𝞱", "thêta en sans empattement italique gras", "thêta en sans empattement italique gras", "thêta en sans empattement italique gras"
-fr, mathspeak, "𝞲", "iota en sans empattement italique gras", "iota en sans empattement italique gras", "iota en sans empattement italique gras"
-fr, mathspeak, "𝞳", "kappa en sans empattement italique gras", "kappa en sans empattement italique gras", "kappa en sans empattement italique gras"
-fr, mathspeak, "𝞴", "lambda en sans empattement italique gras", "lambda en sans empattement italique gras", "lambda en sans empattement italique gras"
-fr, mathspeak, "𝞵", "mu en sans empattement italique gras", "mu en sans empattement italique gras", "mu en sans empattement italique gras"
-fr, mathspeak, "𝞶", "nu en sans empattement italique gras", "nu en sans empattement italique gras", "nu en sans empattement italique gras"
-fr, mathspeak, "𝞷", "xi en sans empattement italique gras", "xi en sans empattement italique gras", "xi en sans empattement italique gras"
-fr, mathspeak, "𝞸", "omicron en sans empattement italique gras", "omicron en sans empattement italique gras", "omicron en sans empattement italique gras"
-fr, mathspeak, "𝞹", "pi en sans empattement italique gras", "pi en sans empattement italique gras", "pi en sans empattement italique gras"
-fr, mathspeak, "𝞺", "rhô en sans empattement italique gras", "rhô en sans empattement italique gras", "rhô en sans empattement italique gras"
-fr, mathspeak, "𝞻", "mathématique italique grasse sans empattement sigma final", "mathématique italique grasse sans empattement sigma final", "mathématique italique grasse sans empattement sigma final"
-fr, mathspeak, "𝞼", "sigma en sans empattement italique gras", "sigma en sans empattement italique gras", "sigma en sans empattement italique gras"
-fr, mathspeak, "𝞽", "tau en sans empattement italique gras", "tau en sans empattement italique gras", "tau en sans empattement italique gras"
-fr, mathspeak, "𝞾", "upsilon en sans empattement italique gras", "upsilon en sans empattement italique gras", "upsilon en sans empattement italique gras"
-fr, mathspeak, "𝞿", "phi en sans empattement italique gras", "phi en sans empattement italique gras", "phi en sans empattement italique gras"
-fr, mathspeak, "𝟀", "chi en sans empattement italique gras", "chi en sans empattement italique gras", "chi en sans empattement italique gras"
-fr, mathspeak, "𝟁", "psi en sans empattement italique gras", "psi en sans empattement italique gras", "psi en sans empattement italique gras"
-fr, mathspeak, "𝟂", "oméga en sans empattement italique gras", "oméga en sans empattement italique gras", "oméga en sans empattement italique gras"
-fr, mathspeak, "ℵ", "alef", "alef", "alef"
-fr, mathspeak, "ℶ", "bèt", "bèt", "bèt"
-fr, mathspeak, "ℷ", "guimel", "guimel", "guimel"
-fr, mathspeak, "ℸ", "dalèt", "dalèt", "dalèt"
-fr, mathspeak, "ǖ", "u double overdot overbar", "u double overdot overbar", "u double overdot overbar"
-fr, mathspeak, "ǘ", "u double overdot acute", "u double overdot acute", "u double overdot acute"
-fr, mathspeak, "ǚ", "u double overdot caron", "u double overdot caron", "u double overdot caron"
-fr, mathspeak, "ǜ", "u double overdot grave", "u double overdot grave", "u double overdot grave"
-fr, mathspeak, "ǟ", "a double overdot overbar", "a double overdot overbar", "a double overdot overbar"
-fr, mathspeak, "ǡ", "a overdot overbar", "a overdot overbar", "a overdot overbar"
-fr, mathspeak, "ǭ", "o ogonek overbar", "o ogonek overbar", "o ogonek overbar"
-fr, mathspeak, "ǻ", "a ring above acute", "a ring above acute", "a ring above acute"
-fr, mathspeak, "ȫ", "o double overdot overbar", "o double overdot overbar", "o double overdot overbar"
-fr, mathspeak, "ȭ", "o tilde overbar", "o tilde overbar", "o tilde overbar"
-fr, mathspeak, "ȱ", "o overdot overbar", "o overdot overbar", "o overdot overbar"
-fr, mathspeak, "ḉ", "c cédille et accent aigu", "c cédille et accent aigu", "c cédille et accent aigu"
-fr, mathspeak, "ḕ", "e macron et accent grave", "e macron et accent grave", "e macron et accent grave"
-fr, mathspeak, "ḗ", "e macron et accent aigu", "e macron et accent aigu", "e macron et accent aigu"
-fr, mathspeak, "ḝ", "e cédille et brève", "e cédille et brève", "e cédille et brève"
-fr, mathspeak, "ḯ", "i tréma et accent aigu", "i tréma et accent aigu", "i tréma et accent aigu"
-fr, mathspeak, "ḹ", "l point souscrit et macron", "l point souscrit et macron", "l point souscrit et macron"
-fr, mathspeak, "ṍ", "o tilde et accent aigu", "o tilde et accent aigu", "o tilde et accent aigu"
-fr, mathspeak, "ṏ", "o tilde et tréma", "o tilde et tréma", "o tilde et tréma"
-fr, mathspeak, "ṑ", "o macron et accent grave", "o macron et accent grave", "o macron et accent grave"
-fr, mathspeak, "ṓ", "o macron et accent aigu", "o macron et accent aigu", "o macron et accent aigu"
-fr, mathspeak, "ṝ", "r point souscrit et macron", "r point souscrit et macron", "r point souscrit et macron"
-fr, mathspeak, "ṥ", "s accent aigu et point en chef", "s accent aigu et point en chef", "s accent aigu et point en chef"
-fr, mathspeak, "ṧ", "s caron et point en chef", "s caron et point en chef", "s caron et point en chef"
-fr, mathspeak, "ṩ", "s point souscrit et point en chef", "s point souscrit et point en chef", "s point souscrit et point en chef"
-fr, mathspeak, "ṹ", "u tilde et accent aigu", "u tilde et accent aigu", "u tilde et accent aigu"
-fr, mathspeak, "ṻ", "u macron et tréma", "u macron et tréma", "u macron et tréma"
-fr, mathspeak, "ấ", "a accent circonflexe et accent aigu", "a accent circonflexe et accent aigu", "a accent circonflexe et accent aigu"
-fr, mathspeak, "ầ", "a accent circonflexe et accent grave", "a accent circonflexe et accent grave", "a accent circonflexe et accent grave"
-fr, mathspeak, "ẩ", "a accent circonflexe et crochet en chef", "a accent circonflexe et crochet en chef", "a accent circonflexe et crochet en chef"
-fr, mathspeak, "ẫ", "a accent circonflexe et tilde", "a accent circonflexe et tilde", "a accent circonflexe et tilde"
-fr, mathspeak, "ậ", "a accent circonflexe et point souscrit", "a accent circonflexe et point souscrit", "a accent circonflexe et point souscrit"
-fr, mathspeak, "ắ", "a brève et accent aigu", "a brève et accent aigu", "a brève et accent aigu"
-fr, mathspeak, "ằ", "a brève et accent grave", "a brève et accent grave", "a brève et accent grave"
-fr, mathspeak, "ẳ", "a brève et crochet en chef", "a brève et crochet en chef", "a brève et crochet en chef"
-fr, mathspeak, "ẵ", "a brève et tilde", "a brève et tilde", "a brève et tilde"
-fr, mathspeak, "ặ", "a brève et point souscrit", "a brève et point souscrit", "a brève et point souscrit"
-fr, mathspeak, "ế", "e accent circonflexe et accent aigu", "e accent circonflexe et accent aigu", "e accent circonflexe et accent aigu"
-fr, mathspeak, "ề", "e accent circonflexe et accent grave", "e accent circonflexe et accent grave", "e accent circonflexe et accent grave"
-fr, mathspeak, "ể", "e accent circonflexe et crochet en chef", "e accent circonflexe et crochet en chef", "e accent circonflexe et crochet en chef"
-fr, mathspeak, "ễ", "e accent circonflexe et tilde", "e accent circonflexe et tilde", "e accent circonflexe et tilde"
-fr, mathspeak, "ệ", "e accent circonflexe et point souscrit", "e accent circonflexe et point souscrit", "e accent circonflexe et point souscrit"
-fr, mathspeak, "ố", "o accent circonflexe et accent aigu", "o accent circonflexe et accent aigu", "o accent circonflexe et accent aigu"
-fr, mathspeak, "ồ", "o accent circonflexe et accent grave", "o accent circonflexe et accent grave", "o accent circonflexe et accent grave"
-fr, mathspeak, "ổ", "o accent circonflexe et crochet en chef", "o accent circonflexe et crochet en chef", "o accent circonflexe et crochet en chef"
-fr, mathspeak, "ỗ", "o accent circonflexe et tilde", "o accent circonflexe et tilde", "o accent circonflexe et tilde"
-fr, mathspeak, "ộ", "o accent circonflexe et point souscrit", "o accent circonflexe et point souscrit", "o accent circonflexe et point souscrit"
-fr, mathspeak, "ớ", "o cornu accent aigu", "o cornu accent aigu", "o cornu accent aigu"
-fr, mathspeak, "ờ", "o cornu accent grave", "o cornu accent grave", "o cornu accent grave"
-fr, mathspeak, "ở", "o cornu crochet en chef", "o cornu crochet en chef", "o cornu crochet en chef"
-fr, mathspeak, "ỡ", "o cornu tilde", "o cornu tilde", "o cornu tilde"
-fr, mathspeak, "ợ", "o cornu point souscrit", "o cornu point souscrit", "o cornu point souscrit"
-fr, mathspeak, "ứ", "u cornu accent aigu", "u cornu accent aigu", "u cornu accent aigu"
-fr, mathspeak, "ừ", "u cornu accent grave", "u cornu accent grave", "u cornu accent grave"
-fr, mathspeak, "ử", "u cornu crochet en chef", "u cornu crochet en chef", "u cornu crochet en chef"
-fr, mathspeak, "ữ", "u cornu tilde", "u cornu tilde", "u cornu tilde"
-fr, mathspeak, "ự", "u cornu point souscrit", "u cornu point souscrit", "u cornu point souscrit"
-fr, mathspeak, "a", "a", "a", "a"
-fr, mathspeak, "b", "b", "b", "b"
-fr, mathspeak, "c", "c", "c", "c"
-fr, mathspeak, "d", "d", "d", "d"
-fr, mathspeak, "e", "e", "e", "e"
-fr, mathspeak, "f", "f", "f", "f"
-fr, mathspeak, "g", "g", "g", "g"
-fr, mathspeak, "h", "h", "h", "h"
-fr, mathspeak, "i", "i", "i", "i"
-fr, mathspeak, "j", "j", "j", "j"
-fr, mathspeak, "k", "k", "k", "k"
-fr, mathspeak, "l", "l", "l", "l"
-fr, mathspeak, "m", "m", "m", "m"
-fr, mathspeak, "n", "n", "n", "n"
-fr, mathspeak, "o", "o", "o", "o"
-fr, mathspeak, "p", "p", "p", "p"
-fr, mathspeak, "q", "q", "q", "q"
-fr, mathspeak, "r", "r", "r", "r"
-fr, mathspeak, "s", "s", "s", "s"
-fr, mathspeak, "t", "t", "t", "t"
-fr, mathspeak, "u", "u", "u", "u"
-fr, mathspeak, "v", "v", "v", "v"
-fr, mathspeak, "w", "w", "w", "w"
-fr, mathspeak, "x", "x", "x", "x"
-fr, mathspeak, "y", "y", "y", "y"
-fr, mathspeak, "z", "z", "z", "z"
-fr, mathspeak, "ａ", "a", "a", "a"
-fr, mathspeak, "ｂ", "b", "b", "b"
-fr, mathspeak, "ｃ", "c", "c", "c"
-fr, mathspeak, "ｄ", "d", "d", "d"
-fr, mathspeak, "ｅ", "e", "e", "e"
-fr, mathspeak, "ｆ", "f", "f", "f"
-fr, mathspeak, "ｇ", "g", "g", "g"
-fr, mathspeak, "ｈ", "h", "h", "h"
-fr, mathspeak, "ｉ", "i", "i", "i"
-fr, mathspeak, "ｊ", "j", "j", "j"
-fr, mathspeak, "ｋ", "k", "k", "k"
-fr, mathspeak, "ｌ", "l", "l", "l"
-fr, mathspeak, "ｍ", "m", "m", "m"
-fr, mathspeak, "ｎ", "n", "n", "n"
-fr, mathspeak, "ｏ", "o", "o", "o"
-fr, mathspeak, "ｐ", "p", "p", "p"
-fr, mathspeak, "ｑ", "q", "q", "q"
-fr, mathspeak, "ｒ", "r", "r", "r"
-fr, mathspeak, "ｓ", "s", "s", "s"
-fr, mathspeak, "ｔ", "t", "t", "t"
-fr, mathspeak, "ｕ", "u", "u", "u"
-fr, mathspeak, "ｖ", "v", "v", "v"
-fr, mathspeak, "ｗ", "w", "w", "w"
-fr, mathspeak, "ｘ", "x", "x", "x"
-fr, mathspeak, "ｙ", "y", "y", "y"
-fr, mathspeak, "ｚ", "z", "z", "z"
-fr, mathspeak, "ø", "o barré", "o barré", "o barré"
-fr, mathspeak, "đ", "d barré", "d barré", "d barré"
-fr, mathspeak, "ħ", "h barré", "h barré", "h barré"
-fr, mathspeak, "ł", "l barré", "l barré", "l barré"
-fr, mathspeak, "ŧ", "t barré", "t barré", "t barré"
-fr, mathspeak, "ƀ", "b with stroke", "b with stroke", "b with stroke"
-fr, mathspeak, "ƛ", "lambda barré", "lambda barré", "lambda barré"
-fr, mathspeak, "ƶ", "z with stroke", "z with stroke", "z with stroke"
-fr, mathspeak, "ƾ", "latin letter inverted glottal stop with stroke", "latin letter inverted glottal stop with stroke", "latin letter inverted glottal stop with stroke"
-fr, mathspeak, "ǥ", "g with stroke", "g with stroke", "g with stroke"
-fr, mathspeak, "ǿ", "o with stroke and acute", "o with stroke and acute", "o with stroke and acute"
-fr, mathspeak, "ȼ", "c with stroke", "c with stroke", "c with stroke"
-fr, mathspeak, "ɇ", "e with stroke", "e with stroke", "e with stroke"
-fr, mathspeak, "ɉ", "j with stroke", "j with stroke", "j with stroke"
-fr, mathspeak, "ɍ", "r with stroke", "r with stroke", "r with stroke"
-fr, mathspeak, "ɏ", "y with stroke", "y with stroke", "y with stroke"
-fr, mathspeak, "ɟ", "dotless j with stroke", "dotless j with stroke", "dotless j with stroke"
-fr, mathspeak, "ɨ", "i with stroke", "i with stroke", "i with stroke"
-fr, mathspeak, "ʄ", "dotless j with stroke and hook", "dotless j with stroke and hook", "dotless j with stroke and hook"
-fr, mathspeak, "ʡ", "latin letter glottal stop with stroke", "latin letter glottal stop with stroke", "latin letter glottal stop with stroke"
-fr, mathspeak, "ʢ", "latin letter reversed glottal stop with stroke", "latin letter reversed glottal stop with stroke", "latin letter reversed glottal stop with stroke"
-fr, mathspeak, "ᴓ", "sideways o with stroke", "sideways o with stroke", "sideways o with stroke"
-fr, mathspeak, "ᵼ", "iota with stroke", "iota with stroke", "iota with stroke"
-fr, mathspeak, "ᵽ", "p with stroke", "p with stroke", "p with stroke"
-fr, mathspeak, "ᵿ", "upsilon with stroke", "upsilon with stroke", "upsilon with stroke"
-fr, mathspeak, "ẜ", "long s with diagonal stroke", "long s with diagonal stroke", "long s with diagonal stroke"
-fr, mathspeak, "ẝ", "long s with high stroke", "long s with high stroke", "long s with high stroke"
-fr, mathspeak, "ƍ", "turned delta", "turned delta", "turned delta"
-fr, mathspeak, "ẛ", "s long point en chef", "s long point en chef", "s long point en chef"
-fr, mathspeak, "ẟ", "delta", "delta", "delta"
-fr, mathspeak, "ĸ", "kra", "kra", "kra"
-fr, mathspeak, "ſ", "long s", "long s", "long s"
-fr, mathspeak, "ƃ", "b with topbar", "b with topbar", "b with topbar"
-fr, mathspeak, "ƅ", "tone six", "tone six", "tone six"
-fr, mathspeak, "ƈ", "c with hook", "c with hook", "c with hook"
-fr, mathspeak, "ƌ", "d with topbar", "d with topbar", "d with topbar"
-fr, mathspeak, "ƒ", "f cursif", "f cursif", "f cursif"
-fr, mathspeak, "ƕ", "hv", "hv", "hv"
-fr, mathspeak, "ƙ", "k with hook", "k with hook", "k with hook"
-fr, mathspeak, "ƚ", "l rayé", "l rayé", "l rayé"
-fr, mathspeak, "ƞ", "n with long right leg", "n with long right leg", "n with long right leg"
-fr, mathspeak, "ơ", "o with horn", "o with horn", "o with horn"
-fr, mathspeak, "ƣ", "oi", "oi", "oi"
-fr, mathspeak, "ƥ", "p with hook", "p with hook", "p with hook"
-fr, mathspeak, "ƨ", "tone two", "tone two", "tone two"
-fr, mathspeak, "ƪ", "latin letter reversed esh loop", "latin letter reversed esh loop", "latin letter reversed esh loop"
-fr, mathspeak, "ƫ", "t with palatal hook", "t with palatal hook", "t with palatal hook"
-fr, mathspeak, "ƭ", "t with hook", "t with hook", "t with hook"
-fr, mathspeak, "ư", "u with horn", "u with horn", "u with horn"
-fr, mathspeak, "ƴ", "y with hook", "y with hook", "y with hook"
-fr, mathspeak, "ƹ", "ezh reversed", "ezh reversed", "ezh reversed"
-fr, mathspeak, "ƺ", "ezh with tail", "ezh with tail", "ezh with tail"
-fr, mathspeak, "ƽ", "tone five", "tone five", "tone five"
-fr, mathspeak, "ƿ", "latin letter wynn", "latin letter wynn", "latin letter wynn"
-fr, mathspeak, "ǆ", "dz with caron", "dz with caron", "dz with caron"
-fr, mathspeak, "ǉ", "lj", "lj", "lj"
-fr, mathspeak, "ǌ", "nj", "nj", "nj"
-fr, mathspeak, "ǣ", "ae with macron", "ae with macron", "ae with macron"
-fr, mathspeak, "ǯ", "ezh with caron", "ezh with caron", "ezh with caron"
-fr, mathspeak, "ǳ", "dz", "dz", "dz"
-fr, mathspeak, "ȝ", "yogh", "yogh", "yogh"
-fr, mathspeak, "ɮ", "lezh", "lezh", "lezh"
-fr, mathspeak, "ʒ", "ezh", "ezh", "ezh"
-fr, mathspeak, "ʓ", "ezh with curl", "ezh with curl", "ezh with curl"
-fr, mathspeak, "ʤ", "dezh digraph", "dezh digraph", "dezh digraph"
-fr, mathspeak, "ǝ", "turned e", "turned e", "turned e"
-fr, mathspeak, "ǽ", "ae with acute", "ae with acute", "ae with acute"
-fr, mathspeak, "ȡ", "d with curl", "d with curl", "d with curl"
-fr, mathspeak, "ȣ", "ou", "ou", "ou"
-fr, mathspeak, "ȥ", "z with hook", "z with hook", "z with hook"
-fr, mathspeak, "ȴ", "l with curl", "l with curl", "l with curl"
-fr, mathspeak, "ȵ", "n with curl", "n with curl", "n with curl"
-fr, mathspeak, "ȶ", "t with curl", "t with curl", "t with curl"
-fr, mathspeak, "ȸ", "db digraph", "db digraph", "db digraph"
-fr, mathspeak, "ȹ", "qp digraph", "qp digraph", "qp digraph"
-fr, mathspeak, "ȿ", "s with swash tail", "s with swash tail", "s with swash tail"
-fr, mathspeak, "ɀ", "z with swash tail", "z with swash tail", "z with swash tail"
-fr, mathspeak, "ɂ", "glottal stop", "glottal stop", "glottal stop"
-fr, mathspeak, "ɋ", "q with hook tail", "q with hook tail", "q with hook tail"
-fr, mathspeak, "ɐ", "turned a", "turned a", "turned a"
-fr, mathspeak, "ɑ", "alpha", "alpha", "alpha"
-fr, mathspeak, "ɒ", "turned alpha", "turned alpha", "turned alpha"
-fr, mathspeak, "ɓ", "b with hook", "b with hook", "b with hook"
-fr, mathspeak, "ɔ", "open o", "open o", "open o"
-fr, mathspeak, "ɕ", "c with curl", "c with curl", "c with curl"
-fr, mathspeak, "ɖ", "d with tail", "d with tail", "d with tail"
-fr, mathspeak, "ɗ", "d with hook", "d with hook", "d with hook"
-fr, mathspeak, "ɘ", "reversed e", "reversed e", "reversed e"
-fr, mathspeak, "ə", "schwa", "schwa", "schwa"
-fr, mathspeak, "ɚ", "schwa with hook", "schwa with hook", "schwa with hook"
-fr, mathspeak, "ɛ", "e ouvert", "e ouvert", "e ouvert"
-fr, mathspeak, "ɜ", "reversed open e", "reversed open e", "reversed open e"
-fr, mathspeak, "ɝ", "reversed open e with hook", "reversed open e with hook", "reversed open e with hook"
-fr, mathspeak, "ɞ", "closed reversed open e", "closed reversed open e", "closed reversed open e"
-fr, mathspeak, "ɠ", "g with hook", "g with hook", "g with hook"
-fr, mathspeak, "ɡ", "script g", "script g", "script g"
-fr, mathspeak, "ɣ", "gamma", "gamma", "gamma"
-fr, mathspeak, "ɤ", "rams horn", "rams horn", "rams horn"
-fr, mathspeak, "ɥ", "turned h", "turned h", "turned h"
-fr, mathspeak, "ɦ", "h with hook", "h with hook", "h with hook"
-fr, mathspeak, "ɧ", "heng with hook", "heng with hook", "heng with hook"
-fr, mathspeak, "ɩ", "iota", "iota", "iota"
-fr, mathspeak, "ɫ", "l with middle tilde", "l with middle tilde", "l with middle tilde"
-fr, mathspeak, "ɬ", "l with belt", "l with belt", "l with belt"
-fr, mathspeak, "ɭ", "l with retroflex hook", "l with retroflex hook", "l with retroflex hook"
-fr, mathspeak, "ɯ", "turned m", "turned m", "turned m"
-fr, mathspeak, "ɰ", "turned m with long leg", "turned m with long leg", "turned m with long leg"
-fr, mathspeak, "ɱ", "m with hook", "m with hook", "m with hook"
-fr, mathspeak, "ɲ", "n with left hook", "n with left hook", "n with left hook"
-fr, mathspeak, "ɳ", "n with retroflex hook", "n with retroflex hook", "n with retroflex hook"
-fr, mathspeak, "ɵ", "barred o", "barred o", "barred o"
-fr, mathspeak, "ɷ", "closed omega", "closed omega", "closed omega"
-fr, mathspeak, "ɸ", "phi", "phi", "phi"
-fr, mathspeak, "ɹ", "turned r", "turned r", "turned r"
-fr, mathspeak, "ɺ", "turned r with long leg", "turned r with long leg", "turned r with long leg"
-fr, mathspeak, "ɻ", "turned r with hook", "turned r with hook", "turned r with hook"
-fr, mathspeak, "ɼ", "r with long leg", "r with long leg", "r with long leg"
-fr, mathspeak, "ɽ", "r with tail", "r with tail", "r with tail"
-fr, mathspeak, "ɾ", "r with fishhook", "r with fishhook", "r with fishhook"
-fr, mathspeak, "ɿ", "reversed r with fishhook", "reversed r with fishhook", "reversed r with fishhook"
-fr, mathspeak, "ʂ", "s with hook", "s with hook", "s with hook"
-fr, mathspeak, "ʃ", "esh", "esh", "esh"
-fr, mathspeak, "ʅ", "squat reversed esh", "squat reversed esh", "squat reversed esh"
-fr, mathspeak, "ʆ", "esh with curl", "esh with curl", "esh with curl"
-fr, mathspeak, "ʇ", "turned t", "turned t", "turned t"
-fr, mathspeak, "ʈ", "t with retroflex hook", "t with retroflex hook", "t with retroflex hook"
-fr, mathspeak, "ʉ", "u bar", "u bar", "u bar"
-fr, mathspeak, "ʊ", "upsilon", "upsilon", "upsilon"
-fr, mathspeak, "ʋ", "v with hook", "v with hook", "v with hook"
-fr, mathspeak, "ʌ", "turned v", "turned v", "turned v"
-fr, mathspeak, "ʍ", "turned w", "turned w", "turned w"
-fr, mathspeak, "ʎ", "turned y", "turned y", "turned y"
-fr, mathspeak, "ʐ", "z with retroflex hook", "z with retroflex hook", "z with retroflex hook"
-fr, mathspeak, "ʑ", "z with curl", "z with curl", "z with curl"
-fr, mathspeak, "ʕ", "latin letter pharyngeal voiced fricative", "latin letter pharyngeal voiced fricative", "latin letter pharyngeal voiced fricative"
-fr, mathspeak, "ʖ", "latin letter inverted glottal stop", "latin letter inverted glottal stop", "latin letter inverted glottal stop"
-fr, mathspeak, "ʗ", "latin letter stretched c", "latin letter stretched c", "latin letter stretched c"
-fr, mathspeak, "ʘ", "latin letter bilabial click", "latin letter bilabial click", "latin letter bilabial click"
-fr, mathspeak, "ʚ", "closed open e", "closed open e", "closed open e"
-fr, mathspeak, "ʞ", "turned k", "turned k", "turned k"
-fr, mathspeak, "ʠ", "q with hook", "q with hook", "q with hook"
-fr, mathspeak, "ʣ", "dz digraph", "dz digraph", "dz digraph"
-fr, mathspeak, "ʥ", "dz digraph with curl", "dz digraph with curl", "dz digraph with curl"
-fr, mathspeak, "ʦ", "ts digraph", "ts digraph", "ts digraph"
-fr, mathspeak, "ʧ", "tesh digraph", "tesh digraph", "tesh digraph"
-fr, mathspeak, "ʨ", "tc digraph with curl", "tc digraph with curl", "tc digraph with curl"
-fr, mathspeak, "ʩ", "feng digraph", "feng digraph", "feng digraph"
-fr, mathspeak, "ʪ", "ls digraph", "ls digraph", "ls digraph"
-fr, mathspeak, "ʫ", "lz digraph", "lz digraph", "lz digraph"
-fr, mathspeak, "ʬ", "latin letter bilabial percussive", "latin letter bilabial percussive", "latin letter bilabial percussive"
-fr, mathspeak, "ʭ", "latin letter bidental percussive", "latin letter bidental percussive", "latin letter bidental percussive"
-fr, mathspeak, "ʮ", "turned h with fishhook", "turned h with fishhook", "turned h with fishhook"
-fr, mathspeak, "ʯ", "turned h with fishhook and tail", "turned h with fishhook and tail", "turned h with fishhook and tail"
-fr, mathspeak, "ᴂ", "turned ae", "turned ae", "turned ae"
-fr, mathspeak, "ᴈ", "turned open e", "turned open e", "turned open e"
-fr, mathspeak, "ᴉ", "turned i", "turned i", "turned i"
-fr, mathspeak, "ᴑ", "sideways o", "sideways o", "sideways o"
-fr, mathspeak, "ᴒ", "sideways open o", "sideways open o", "sideways open o"
-fr, mathspeak, "ᴔ", "turned oe", "turned oe", "turned oe"
-fr, mathspeak, "ᴖ", "top half o", "top half o", "top half o"
-fr, mathspeak, "ᴗ", "bottom half o", "bottom half o", "bottom half o"
-fr, mathspeak, "ᴝ", "sideways u", "sideways u", "sideways u"
-fr, mathspeak, "ᴞ", "sideways diaeresized u", "sideways diaeresized u", "sideways diaeresized u"
-fr, mathspeak, "ᴟ", "sideways turned m", "sideways turned m", "sideways turned m"
-fr, mathspeak, "ᴤ", "latin letter voiced laryngeal spirant", "latin letter voiced laryngeal spirant", "latin letter voiced laryngeal spirant"
-fr, mathspeak, "ᴥ", "latin letter ain", "latin letter ain", "latin letter ain"
-fr, mathspeak, "ᵫ", "ue", "ue", "ue"
-fr, mathspeak, "ᵬ", "b with middle tilde", "b with middle tilde", "b with middle tilde"
-fr, mathspeak, "ᵭ", "d with middle tilde", "d with middle tilde", "d with middle tilde"
-fr, mathspeak, "ᵮ", "f with middle tilde", "f with middle tilde", "f with middle tilde"
-fr, mathspeak, "ᵯ", "m with middle tilde", "m with middle tilde", "m with middle tilde"
-fr, mathspeak, "ᵰ", "n with middle tilde", "n with middle tilde", "n with middle tilde"
-fr, mathspeak, "ᵱ", "p with middle tilde", "p with middle tilde", "p with middle tilde"
-fr, mathspeak, "ᵲ", "r with middle tilde", "r with middle tilde", "r with middle tilde"
-fr, mathspeak, "ᵳ", "r with fishhook and middle tilde", "r with fishhook and middle tilde", "r with fishhook and middle tilde"
-fr, mathspeak, "ᵴ", "s with middle tilde", "s with middle tilde", "s with middle tilde"
-fr, mathspeak, "ᵵ", "t with middle tilde", "t with middle tilde", "t with middle tilde"
-fr, mathspeak, "ᵶ", "z with middle tilde", "z with middle tilde", "z with middle tilde"
-fr, mathspeak, "ᵷ", "turned g", "turned g", "turned g"
-fr, mathspeak, "ᵹ", "insular g", "insular g", "insular g"
-fr, mathspeak, "ᵺ", "th with strikethrough", "th with strikethrough", "th with strikethrough"
-fr, mathspeak, "ᶀ", "b with palatal hook", "b with palatal hook", "b with palatal hook"
-fr, mathspeak, "ᶁ", "d with palatal hook", "d with palatal hook", "d with palatal hook"
-fr, mathspeak, "ᶂ", "f with palatal hook", "f with palatal hook", "f with palatal hook"
-fr, mathspeak, "ᶃ", "g with palatal hook", "g with palatal hook", "g with palatal hook"
-fr, mathspeak, "ᶄ", "k with palatal hook", "k with palatal hook", "k with palatal hook"
-fr, mathspeak, "ᶅ", "l with palatal hook", "l with palatal hook", "l with palatal hook"
-fr, mathspeak, "ᶆ", "m with palatal hook", "m with palatal hook", "m with palatal hook"
-fr, mathspeak, "ᶇ", "n with palatal hook", "n with palatal hook", "n with palatal hook"
-fr, mathspeak, "ᶈ", "p with palatal hook", "p with palatal hook", "p with palatal hook"
-fr, mathspeak, "ᶉ", "r with palatal hook", "r with palatal hook", "r with palatal hook"
-fr, mathspeak, "ᶊ", "s with palatal hook", "s with palatal hook", "s with palatal hook"
-fr, mathspeak, "ᶋ", "esh with palatal hook", "esh with palatal hook", "esh with palatal hook"
-fr, mathspeak, "ᶌ", "v with palatal hook", "v with palatal hook", "v with palatal hook"
-fr, mathspeak, "ᶍ", "x with palatal hook", "x with palatal hook", "x with palatal hook"
-fr, mathspeak, "ᶎ", "z with palatal hook", "z with palatal hook", "z with palatal hook"
-fr, mathspeak, "ᶏ", "a with retroflex hook", "a with retroflex hook", "a with retroflex hook"
-fr, mathspeak, "ᶐ", "alpha with retroflex hook", "alpha with retroflex hook", "alpha with retroflex hook"
-fr, mathspeak, "ᶑ", "d with hook and tail", "d with hook and tail", "d with hook and tail"
-fr, mathspeak, "ᶒ", "e with retroflex hook", "e with retroflex hook", "e with retroflex hook"
-fr, mathspeak, "ᶓ", "open e with retroflex hook", "open e with retroflex hook", "open e with retroflex hook"
-fr, mathspeak, "ᶔ", "reversed open e with retroflex hook", "reversed open e with retroflex hook", "reversed open e with retroflex hook"
-fr, mathspeak, "ᶕ", "schwa with retroflex hook", "schwa with retroflex hook", "schwa with retroflex hook"
-fr, mathspeak, "ᶖ", "i with retroflex hook", "i with retroflex hook", "i with retroflex hook"
-fr, mathspeak, "ᶗ", "open o with retroflex hook", "open o with retroflex hook", "open o with retroflex hook"
-fr, mathspeak, "ᶘ", "esh with retroflex hook", "esh with retroflex hook", "esh with retroflex hook"
-fr, mathspeak, "ᶙ", "u with retroflex hook", "u with retroflex hook", "u with retroflex hook"
-fr, mathspeak, "ᶚ", "ezh with retroflex hook", "ezh with retroflex hook", "ezh with retroflex hook"
-fr, mathspeak, "ŉ", "n précédée d'une apostrophe", "n précédée d'une apostrophe", "n précédée d'une apostrophe"
-fr, mathspeak, "ŋ", "eng", "eng", "eng"
-fr, mathspeak, "à", "a accent grave", "a accent grave", "a accent grave"
-fr, mathspeak, "á", "a accent aigu", "a accent aigu", "a accent aigu"
-fr, mathspeak, "â", "a accent circonflexe", "a accent circonflexe", "a accent circonflexe"
-fr, mathspeak, "ã", "a tilde", "a tilde", "a tilde"
-fr, mathspeak, "ä", "a tréma", "a tréma", "a tréma"
-fr, mathspeak, "å", "a rond en chef", "a rond en chef", "a rond en chef"
-fr, mathspeak, "ç", "c cédille", "c cédille", "c cédille"
-fr, mathspeak, "è", "e accent grave", "e accent grave", "e accent grave"
-fr, mathspeak, "é", "e accent aigu", "e accent aigu", "e accent aigu"
-fr, mathspeak, "ê", "e accent circonflexe", "e accent circonflexe", "e accent circonflexe"
-fr, mathspeak, "ë", "e tréma", "e tréma", "e tréma"
-fr, mathspeak, "ì", "i accent grave", "i accent grave", "i accent grave"
-fr, mathspeak, "í", "i accent aigu", "i accent aigu", "i accent aigu"
-fr, mathspeak, "î", "i accent circonflexe", "i accent circonflexe", "i accent circonflexe"
-fr, mathspeak, "ï", "i tréma", "i tréma", "i tréma"
-fr, mathspeak, "ñ", "n tilde", "n tilde", "n tilde"
-fr, mathspeak, "ò", "o accent grave", "o accent grave", "o accent grave"
-fr, mathspeak, "ó", "o accent aigu", "o accent aigu", "o accent aigu"
-fr, mathspeak, "ô", "o accent circonflexe", "o accent circonflexe", "o accent circonflexe"
-fr, mathspeak, "õ", "o tilde", "o tilde", "o tilde"
-fr, mathspeak, "ö", "o tréma", "o tréma", "o tréma"
-fr, mathspeak, "ù", "u accent grave", "u accent grave", "u accent grave"
-fr, mathspeak, "ú", "u accent aigu", "u accent aigu", "u accent aigu"
-fr, mathspeak, "û", "u accent circonflexe", "u accent circonflexe", "u accent circonflexe"
-fr, mathspeak, "ü", "u tréma", "u tréma", "u tréma"
-fr, mathspeak, "ý", "y accent aigu", "y accent aigu", "y accent aigu"
-fr, mathspeak, "ÿ", "y tréma", "y tréma", "y tréma"
-fr, mathspeak, "ā", "a macron", "a macron", "a macron"
-fr, mathspeak, "ă", "a brève", "a brève", "a brève"
-fr, mathspeak, "ą", "a ogonek", "a ogonek", "a ogonek"
-fr, mathspeak, "ć", "c accent aigu", "c accent aigu", "c accent aigu"
-fr, mathspeak, "ĉ", "c accent circonflexe", "c accent circonflexe", "c accent circonflexe"
-fr, mathspeak, "ċ", "c point en chef", "c point en chef", "c point en chef"
-fr, mathspeak, "č", "c caron", "c caron", "c caron"
-fr, mathspeak, "ď", "d caron", "d caron", "d caron"
-fr, mathspeak, "ē", "e macron", "e macron", "e macron"
-fr, mathspeak, "ĕ", "modifying above e with breve", "mod above e with breve", "mod above e with breve"
-fr, mathspeak, "ė", "e point en chef", "e point en chef", "e point en chef"
-fr, mathspeak, "ę", "e ogonek", "e ogonek", "e ogonek"
-fr, mathspeak, "ě", "e caron", "e caron", "e caron"
-fr, mathspeak, "ĝ", "g accent circonflexe", "g accent circonflexe", "g accent circonflexe"
-fr, mathspeak, "ğ", "g brève", "g brève", "g brève"
-fr, mathspeak, "ġ", "g point en chef", "g point en chef", "g point en chef"
-fr, mathspeak, "ģ", "modifying above g with cedilla", "mod above g with cedilla", "mod above g with cedilla"
-fr, mathspeak, "ĥ", "h accent circonflexe", "h accent circonflexe", "h accent circonflexe"
-fr, mathspeak, "ĩ", "i tilde", "i tilde", "i tilde"
-fr, mathspeak, "ī", "i macron", "i macron", "i macron"
-fr, mathspeak, "ĭ", "modifying above i with breve", "mod above i with breve", "mod above i with breve"
-fr, mathspeak, "į", "i ogonek", "i ogonek", "i ogonek"
-fr, mathspeak, "ı", "i sans point", "i sans point", "i sans point"
-fr, mathspeak, "ĵ", "j accent circonflexe", "j accent circonflexe", "j accent circonflexe"
-fr, mathspeak, "ķ", "k cédille", "k cédille", "k cédille"
-fr, mathspeak, "ĺ", "l accent aigu", "l accent aigu", "l accent aigu"
-fr, mathspeak, "ļ", "l cédille", "l cédille", "l cédille"
-fr, mathspeak, "ľ", "l caron", "l caron", "l caron"
-fr, mathspeak, "ŀ", "l point médian", "l point médian", "l point médian"
-fr, mathspeak, "ń", "n accent aigu", "n accent aigu", "n accent aigu"
-fr, mathspeak, "ņ", "n cédille", "n cédille", "n cédille"
-fr, mathspeak, "ň", "n caron", "n caron", "n caron"
-fr, mathspeak, "ō", "o macron", "o macron", "o macron"
-fr, mathspeak, "ŏ", "modifying above o with breve", "mod above o with breve", "mod above o with breve"
-fr, mathspeak, "ő", "o avec double accent aigu", "o avec double accent aigu", "o avec double accent aigu"
-fr, mathspeak, "ŕ", "r accent aigu", "r accent aigu", "r accent aigu"
-fr, mathspeak, "ŗ", "r cédille", "r cédille", "r cédille"
-fr, mathspeak, "ř", "r caron", "r caron", "r caron"
-fr, mathspeak, "ś", "s accent aigu", "s accent aigu", "s accent aigu"
-fr, mathspeak, "ŝ", "s accent circonflexe", "s accent circonflexe", "s accent circonflexe"
-fr, mathspeak, "ş", "s cédille", "s cédille", "s cédille"
-fr, mathspeak, "š", "s caron", "s caron", "s caron"
-fr, mathspeak, "ţ", "t cédille", "t cédille", "t cédille"
-fr, mathspeak, "ť", "t caron", "t caron", "t caron"
-fr, mathspeak, "ũ", "u tilde", "u tilde", "u tilde"
-fr, mathspeak, "ū", "u macron", "u macron", "u macron"
-fr, mathspeak, "ŭ", "u brève", "u brève", "u brève"
-fr, mathspeak, "ů", "u rond en chef", "u rond en chef", "u rond en chef"
-fr, mathspeak, "ű", "u avec double accent aigu", "u avec double accent aigu", "u avec double accent aigu"
-fr, mathspeak, "ų", "u ogonek", "u ogonek", "u ogonek"
-fr, mathspeak, "ŵ", "w accent circonflexe", "w accent circonflexe", "w accent circonflexe"
-fr, mathspeak, "ŷ", "y accent circonflexe", "y accent circonflexe", "y accent circonflexe"
-fr, mathspeak, "ź", "z accent aigu", "z accent aigu", "z accent aigu"
-fr, mathspeak, "ż", "z point en chef", "z point en chef", "z point en chef"
-fr, mathspeak, "ž", "z caron", "z caron", "z caron"
-fr, mathspeak, "ǎ", "modifying above a with caron", "mod above a with caron", "mod above a with caron"
-fr, mathspeak, "ǐ", "modifying above i with caron", "mod above i with caron", "mod above i with caron"
-fr, mathspeak, "ǒ", "modifying above o with caron", "mod above o with caron", "mod above o with caron"
-fr, mathspeak, "ǔ", "modifying above u with caron", "mod above u with caron", "mod above u with caron"
-fr, mathspeak, "ǧ", "modifying above g with caron", "mod above g with caron", "mod above g with caron"
-fr, mathspeak, "ǩ", "modifying above k with caron", "mod above k with caron", "mod above k with caron"
-fr, mathspeak, "ǫ", "modifying above o with ogonek", "mod above o with ogonek", "mod above o with ogonek"
-fr, mathspeak, "ǰ", "modifying above j with caron", "mod above j with caron", "mod above j with caron"
-fr, mathspeak, "ǵ", "g accent aigu", "g accent aigu", "g accent aigu"
-fr, mathspeak, "ǹ", "modifying above n with grave", "mod above n with grave", "mod above n with grave"
-fr, mathspeak, "ȁ", "modifying above a with double grave", "mod above a with double grave", "mod above a with double grave"
-fr, mathspeak, "ȃ", "modifying above a with inverted breve", "mod above a with inverted breve", "mod above a with inverted breve"
-fr, mathspeak, "ȅ", "modifying above e with double grave", "mod above e with double grave", "mod above e with double grave"
-fr, mathspeak, "ȇ", "modifying above e with inverted breve", "mod above e with inverted breve", "mod above e with inverted breve"
-fr, mathspeak, "ȉ", "modifying above i with double grave", "mod above i with double grave", "mod above i with double grave"
-fr, mathspeak, "ȋ", "modifying above i with inverted breve", "mod above i with inverted breve", "mod above i with inverted breve"
-fr, mathspeak, "ȍ", "modifying above o with double grave", "mod above o with double grave", "mod above o with double grave"
-fr, mathspeak, "ȏ", "modifying above o with inverted breve", "mod above o with inverted breve", "mod above o with inverted breve"
-fr, mathspeak, "ȑ", "modifying above r with double grave", "mod above r with double grave", "mod above r with double grave"
-fr, mathspeak, "ȓ", "modifying above r with inverted breve", "mod above r with inverted breve", "mod above r with inverted breve"
-fr, mathspeak, "ȕ", "modifying above u with double grave", "mod above u with double grave", "mod above u with double grave"
-fr, mathspeak, "ȗ", "modifying above u with inverted breve", "mod above u with inverted breve", "mod above u with inverted breve"
-fr, mathspeak, "ș", "modifying below s with comma below", "mod below s with comma below", "mod below s with comma below"
-fr, mathspeak, "ț", "modifying below t with comma below", "mod below t with comma below", "mod below t with comma below"
-fr, mathspeak, "ȟ", "modifying above h with caron", "mod above h with caron", "mod above h with caron"
-fr, mathspeak, "ȧ", "modifying above a with dot", "mod above a with dot", "mod above a with dot"
-fr, mathspeak, "ȩ", "modifying above e with cedilla", "mod above e with cedilla", "mod above e with cedilla"
-fr, mathspeak, "ȯ", "modifying above o with dot", "mod above o with dot", "mod above o with dot"
-fr, mathspeak, "ȳ", "y overbar", "y overbar", "y overbar"
-fr, mathspeak, "ȷ", "modifying above dotless j", "mod above dotless j", "mod above dotless j"
-fr, mathspeak, "ḁ", "a à rond souscrit", "a à rond souscrit", "a à rond souscrit"
-fr, mathspeak, "ḃ", "b point en chef", "b point en chef", "b point en chef"
-fr, mathspeak, "ḅ", "b point souscrit", "b point souscrit", "b point souscrit"
-fr, mathspeak, "ḇ", "b ligne souscrite", "b ligne souscrite", "b ligne souscrite"
-fr, mathspeak, "ḋ", "d point en chef", "d point en chef", "d point en chef"
-fr, mathspeak, "ḍ", "d point souscrit", "d point souscrit", "d point souscrit"
-fr, mathspeak, "ḏ", "d ligne souscrite", "d ligne souscrite", "d ligne souscrite"
-fr, mathspeak, "ḑ", "d cédille", "d cédille", "d cédille"
-fr, mathspeak, "ḓ", "d accent circonflexe souscrit", "d accent circonflexe souscrit", "d accent circonflexe souscrit"
-fr, mathspeak, "ḙ", "e accent circonflexe souscrit", "e accent circonflexe souscrit", "e accent circonflexe souscrit"
-fr, mathspeak, "ḛ", "e tilde souscrit", "e tilde souscrit", "e tilde souscrit"
-fr, mathspeak, "ḟ", "f point en chef", "f point en chef", "f point en chef"
-fr, mathspeak, "ḡ", "g macron", "g macron", "g macron"
-fr, mathspeak, "ḣ", "h point en chef", "h point en chef", "h point en chef"
-fr, mathspeak, "ḥ", "h point souscrit", "h point souscrit", "h point souscrit"
-fr, mathspeak, "ḧ", "h tréma", "h tréma", "h tréma"
-fr, mathspeak, "ḩ", "h cédille", "h cédille", "h cédille"
-fr, mathspeak, "ḫ", "h brève souscrit", "h brève souscrit", "h brève souscrit"
-fr, mathspeak, "ḭ", "i tilde souscrit", "i tilde souscrit", "i tilde souscrit"
-fr, mathspeak, "ḱ", "k accent aigu", "k accent aigu", "k accent aigu"
-fr, mathspeak, "ḳ", "k point souscrit", "k point souscrit", "k point souscrit"
-fr, mathspeak, "ḵ", "k ligne souscrite", "k ligne souscrite", "k ligne souscrite"
-fr, mathspeak, "ḷ", "l point souscrit", "l point souscrit", "l point souscrit"
-fr, mathspeak, "ḻ", "l ligne souscrite", "l ligne souscrite", "l ligne souscrite"
-fr, mathspeak, "ḽ", "l accent circonflexe souscrit", "l accent circonflexe souscrit", "l accent circonflexe souscrit"
-fr, mathspeak, "ḿ", "m accent aigu", "m accent aigu", "m accent aigu"
-fr, mathspeak, "ṁ", "m point en chef", "m point en chef", "m point en chef"
-fr, mathspeak, "ṃ", "m point souscrit", "m point souscrit", "m point souscrit"
-fr, mathspeak, "ṅ", "n point en chef", "n point en chef", "n point en chef"
-fr, mathspeak, "ṇ", "n point souscrit", "n point souscrit", "n point souscrit"
-fr, mathspeak, "ṉ", "n ligne souscrite", "n ligne souscrite", "n ligne souscrite"
-fr, mathspeak, "ṋ", "n accent circonflexe souscrit", "n accent circonflexe souscrit", "n accent circonflexe souscrit"
-fr, mathspeak, "ṕ", "p accent aigu", "p accent aigu", "p accent aigu"
-fr, mathspeak, "ṗ", "p point en chef", "p point en chef", "p point en chef"
-fr, mathspeak, "ṙ", "r point en chef", "r point en chef", "r point en chef"
-fr, mathspeak, "ṛ", "r point souscrit", "r point souscrit", "r point souscrit"
-fr, mathspeak, "ṟ", "r ligne souscrite", "r ligne souscrite", "r ligne souscrite"
-fr, mathspeak, "ṡ", "s point en chef", "s point en chef", "s point en chef"
-fr, mathspeak, "ṣ", "s point souscrit", "s point souscrit", "s point souscrit"
-fr, mathspeak, "ṫ", "t point en chef", "t point en chef", "t point en chef"
-fr, mathspeak, "ṭ", "t point souscrit", "t point souscrit", "t point souscrit"
-fr, mathspeak, "ṯ", "t ligne souscrite", "t ligne souscrite", "t ligne souscrite"
-fr, mathspeak, "ṱ", "t accent circonflexe souscrit", "t accent circonflexe souscrit", "t accent circonflexe souscrit"
-fr, mathspeak, "ṳ", "u tréma souscrit", "u tréma souscrit", "u tréma souscrit"
-fr, mathspeak, "ṵ", "u tilde souscrit", "u tilde souscrit", "u tilde souscrit"
-fr, mathspeak, "ṷ", "u accent circonflexe souscrit", "u accent circonflexe souscrit", "u accent circonflexe souscrit"
-fr, mathspeak, "ṽ", "v tilde", "v tilde", "v tilde"
-fr, mathspeak, "ṿ", "v point souscrit", "v point souscrit", "v point souscrit"
-fr, mathspeak, "ẁ", "w accent grave", "w accent grave", "w accent grave"
-fr, mathspeak, "ẃ", "w accent aigu", "w accent aigu", "w accent aigu"
-fr, mathspeak, "ẅ", "w tréma", "w tréma", "w tréma"
-fr, mathspeak, "ẇ", "w point en chef", "w point en chef", "w point en chef"
-fr, mathspeak, "ẉ", "w point souscrit", "w point souscrit", "w point souscrit"
-fr, mathspeak, "ẋ", "x point en chef", "x point en chef", "x point en chef"
-fr, mathspeak, "ẍ", "x tréma", "x tréma", "x tréma"
-fr, mathspeak, "ẏ", "y point en chef", "y point en chef", "y point en chef"
-fr, mathspeak, "ẑ", "z accent circonflexe", "z accent circonflexe", "z accent circonflexe"
-fr, mathspeak, "ẓ", "z point souscrit", "z point souscrit", "z point souscrit"
-fr, mathspeak, "ẕ", "z ligne souscrite", "z ligne souscrite", "z ligne souscrite"
-fr, mathspeak, "ẖ", "h ligne souscrite", "h ligne souscrite", "h ligne souscrite"
-fr, mathspeak, "ẗ", "t tréma", "t tréma", "t tréma"
-fr, mathspeak, "ẘ", "w rond en chef", "w rond en chef", "w rond en chef"
-fr, mathspeak, "ẙ", "y rond en chef", "y rond en chef", "y rond en chef"
-fr, mathspeak, "ẚ", "a demi-rond à droite", "a demi-rond à droite", "a demi-rond à droite"
-fr, mathspeak, "ạ", "a point souscrit", "a point souscrit", "a point souscrit"
-fr, mathspeak, "ả", "a crochet en chef", "a crochet en chef", "a crochet en chef"
-fr, mathspeak, "ẹ", "e point souscrit", "e point souscrit", "e point souscrit"
-fr, mathspeak, "ẻ", "e crochet en chef", "e crochet en chef", "e crochet en chef"
-fr, mathspeak, "ẽ", "e tilde", "e tilde", "e tilde"
-fr, mathspeak, "ỉ", "i crochet en chef", "i crochet en chef", "i crochet en chef"
-fr, mathspeak, "ị", "i point souscrit", "i point souscrit", "i point souscrit"
-fr, mathspeak, "ọ", "o point souscrit", "o point souscrit", "o point souscrit"
-fr, mathspeak, "ỏ", "o crochet en chef", "o crochet en chef", "o crochet en chef"
-fr, mathspeak, "ụ", "u point souscrit", "u point souscrit", "u point souscrit"
-fr, mathspeak, "ủ", "u crochet en chef", "u crochet en chef", "u crochet en chef"
-fr, mathspeak, "ỳ", "y accent grave", "y accent grave", "y accent grave"
-fr, mathspeak, "ỵ", "y point souscrit", "y point souscrit", "y point souscrit"
-fr, mathspeak, "ỷ", "y crochet en chef", "y crochet en chef", "y crochet en chef"
-fr, mathspeak, "ỹ", "y tilde", "y tilde", "y tilde"
-fr, mathspeak, "ͣ", "combining a", "combining a", "combining a"
-fr, mathspeak, "ͤ", "combining e", "combining e", "combining e"
-fr, mathspeak, "ͥ", "combining i", "combining i", "combining i"
-fr, mathspeak, "ͦ", "combining o", "combining o", "combining o"
-fr, mathspeak, "ͧ", "combining u", "combining u", "combining u"
-fr, mathspeak, "ͨ", "combining c", "combining c", "combining c"
-fr, mathspeak, "ͩ", "combining d", "combining d", "combining d"
-fr, mathspeak, "ͪ", "combining h", "combining h", "combining h"
-fr, mathspeak, "ͫ", "combining m", "combining m", "combining m"
-fr, mathspeak, "ͬ", "combining r", "combining r", "combining r"
-fr, mathspeak, "ͭ", "combining t", "combining t", "combining t"
-fr, mathspeak, "ͮ", "combining v", "combining v", "combining v"
-fr, mathspeak, "ͯ", "combining x", "combining x", "combining x"
-fr, mathspeak, "ᵢ", "subscript i", "subscript i", "subscript i"
-fr, mathspeak, "ᵣ", "subscript r", "subscript r", "subscript r"
-fr, mathspeak, "ᵤ", "subscript u", "subscript u", "subscript u"
-fr, mathspeak, "ᵥ", "subscript v", "subscript v", "subscript v"
-fr, mathspeak, "᷊", "combining r below", "combining r below", "combining r below"
-fr, mathspeak, "ᷓ", "combining flattened open a above", "combining flattened open a above", "combining flattened open a above"
-fr, mathspeak, "ᷔ", "combining ae", "combining ae", "combining ae"
-fr, mathspeak, "ᷕ", "combining ao", "combining ao", "combining ao"
-fr, mathspeak, "ᷖ", "combining av", "combining av", "combining av"
-fr, mathspeak, "ᷗ", "combining c cedilla", "combining c cedilla", "combining c cedilla"
-fr, mathspeak, "ᷘ", "combining insular d", "combining insular d", "combining insular d"
-fr, mathspeak, "ᷙ", "combining eth", "combining eth", "combining eth"
-fr, mathspeak, "ᷚ", "combining g", "combining g", "combining g"
-fr, mathspeak, "ᷛ", "combining small upper G", "combining small upper G", "combining small upper G"
-fr, mathspeak, "ᷜ", "combining k", "combining k", "combining k"
-fr, mathspeak, "ᷝ", "combining l", "combining l", "combining l"
-fr, mathspeak, "ᷞ", "combining small upper L", "combining small upper L", "combining small upper L"
-fr, mathspeak, "ᷟ", "combining small upper M", "combining small upper M", "combining small upper M"
-fr, mathspeak, "ᷠ", "combining n", "combining n", "combining n"
-fr, mathspeak, "ᷡ", "combining small upper N", "combining small upper N", "combining small upper N"
-fr, mathspeak, "ᷢ", "combining small upper R", "combining small upper R", "combining small upper R"
-fr, mathspeak, "ᷣ", "combining r rotunda", "combining r rotunda", "combining r rotunda"
-fr, mathspeak, "ᷤ", "combining s", "combining s", "combining s"
-fr, mathspeak, "ᷥ", "combining long s", "combining long s", "combining long s"
-fr, mathspeak, "ᷦ", "combining z", "combining z", "combining z"
-fr, mathspeak, "ⁱ", "superscript i", "superscript i", "superscript i"
-fr, mathspeak, "ⁿ", "superscript n", "superscript n", "superscript n"
-fr, mathspeak, "ₐ", "subscript a", "subscript a", "subscript a"
-fr, mathspeak, "ₑ", "subscript e", "subscript e", "subscript e"
-fr, mathspeak, "ₒ", "subscript o", "subscript o", "subscript o"
-fr, mathspeak, "ₓ", "subscript x", "subscript x", "subscript x"
-fr, mathspeak, "ₔ", "subscript schwa", "subscript schwa", "subscript schwa"
-fr, mathspeak, "ₕ", "subscript h", "subscript h", "subscript h"
-fr, mathspeak, "ₖ", "subscript k", "subscript k", "subscript k"
-fr, mathspeak, "ₗ", "subscript l", "subscript l", "subscript l"
-fr, mathspeak, "ₘ", "subscript m", "subscript m", "subscript m"
-fr, mathspeak, "ₙ", "subscript n", "subscript n", "subscript n"
-fr, mathspeak, "ₚ", "subscript p", "subscript p", "subscript p"
-fr, mathspeak, "ₛ", "subscript s", "subscript s", "subscript s"
-fr, mathspeak, "ₜ", "subscript t", "subscript t", "subscript t"
-fr, mathspeak, "⒜", "parenthesized a", "parenthesized a", "parenthesized a"
-fr, mathspeak, "⒝", "parenthesized b", "parenthesized b", "parenthesized b"
-fr, mathspeak, "⒞", "parenthesized c", "parenthesized c", "parenthesized c"
-fr, mathspeak, "⒟", "parenthesized d", "parenthesized d", "parenthesized d"
-fr, mathspeak, "⒠", "parenthesized e", "parenthesized e", "parenthesized e"
-fr, mathspeak, "⒡", "parenthesized f", "parenthesized f", "parenthesized f"
-fr, mathspeak, "⒢", "parenthesized g", "parenthesized g", "parenthesized g"
-fr, mathspeak, "⒣", "parenthesized h", "parenthesized h", "parenthesized h"
-fr, mathspeak, "⒤", "parenthesized i", "parenthesized i", "parenthesized i"
-fr, mathspeak, "⒥", "parenthesized j", "parenthesized j", "parenthesized j"
-fr, mathspeak, "⒦", "parenthesized k", "parenthesized k", "parenthesized k"
-fr, mathspeak, "⒧", "parenthesized l", "parenthesized l", "parenthesized l"
-fr, mathspeak, "⒨", "parenthesized m", "parenthesized m", "parenthesized m"
-fr, mathspeak, "⒩", "parenthesized n", "parenthesized n", "parenthesized n"
-fr, mathspeak, "⒪", "parenthesized o", "parenthesized o", "parenthesized o"
-fr, mathspeak, "⒫", "parenthesized p", "parenthesized p", "parenthesized p"
-fr, mathspeak, "⒬", "parenthesized q", "parenthesized q", "parenthesized q"
-fr, mathspeak, "⒭", "parenthesized r", "parenthesized r", "parenthesized r"
-fr, mathspeak, "⒮", "parenthesized s", "parenthesized s", "parenthesized s"
-fr, mathspeak, "⒯", "parenthesized t", "parenthesized t", "parenthesized t"
-fr, mathspeak, "⒰", "parenthesized u", "parenthesized u", "parenthesized u"
-fr, mathspeak, "⒱", "parenthesized v", "parenthesized v", "parenthesized v"
-fr, mathspeak, "⒲", "parenthesized w", "parenthesized w", "parenthesized w"
-fr, mathspeak, "⒳", "parenthesized x", "parenthesized x", "parenthesized x"
-fr, mathspeak, "⒴", "parenthesized y", "parenthesized y", "parenthesized y"
-fr, mathspeak, "⒵", "parenthesized z", "parenthesized z", "parenthesized z"
-fr, mathspeak, "Ⓐ", "circled upper A", "circled upper A", "circled upper A"
-fr, mathspeak, "Ⓑ", "circled upper B", "circled upper B", "circled upper B"
-fr, mathspeak, "Ⓒ", "circled upper C", "circled upper C", "circled upper C"
-fr, mathspeak, "Ⓓ", "circled upper D", "circled upper D", "circled upper D"
-fr, mathspeak, "Ⓔ", "circled upper E", "circled upper E", "circled upper E"
-fr, mathspeak, "Ⓕ", "circled upper F", "circled upper F", "circled upper F"
-fr, mathspeak, "Ⓖ", "circled upper G", "circled upper G", "circled upper G"
-fr, mathspeak, "Ⓗ", "circled upper H", "circled upper H", "circled upper H"
-fr, mathspeak, "Ⓘ", "circled upper I", "circled upper I", "circled upper I"
-fr, mathspeak, "Ⓙ", "circled upper J", "circled upper J", "circled upper J"
-fr, mathspeak, "Ⓚ", "circled upper K", "circled upper K", "circled upper K"
-fr, mathspeak, "Ⓛ", "circled upper L", "circled upper L", "circled upper L"
-fr, mathspeak, "Ⓜ", "circled upper M", "circled upper M", "circled upper M"
-fr, mathspeak, "Ⓝ", "circled upper N", "circled upper N", "circled upper N"
-fr, mathspeak, "Ⓞ", "circled upper O", "circled upper O", "circled upper O"
-fr, mathspeak, "Ⓟ", "circled upper P", "circled upper P", "circled upper P"
-fr, mathspeak, "Ⓠ", "circled upper Q", "circled upper Q", "circled upper Q"
-fr, mathspeak, "Ⓡ", "circled upper R", "circled upper R", "circled upper R"
-fr, mathspeak, "Ⓢ", "S majuscule cerclée", "S majuscule cerclée", "S majuscule cerclée"
-fr, mathspeak, "Ⓣ", "circled upper T", "circled upper T", "circled upper T"
-fr, mathspeak, "Ⓤ", "circled upper U", "circled upper U", "circled upper U"
-fr, mathspeak, "Ⓥ", "circled upper V", "circled upper V", "circled upper V"
-fr, mathspeak, "Ⓦ", "circled upper W", "circled upper W", "circled upper W"
-fr, mathspeak, "Ⓧ", "circled upper X", "circled upper X", "circled upper X"
-fr, mathspeak, "Ⓨ", "circled upper Y", "circled upper Y", "circled upper Y"
-fr, mathspeak, "Ⓩ", "circled upper Z", "circled upper Z", "circled upper Z"
-fr, mathspeak, "ⓐ", "circled a", "circled a", "circled a"
-fr, mathspeak, "ⓑ", "circled b", "circled b", "circled b"
-fr, mathspeak, "ⓒ", "circled c", "circled c", "circled c"
-fr, mathspeak, "ⓓ", "circled d", "circled d", "circled d"
-fr, mathspeak, "ⓔ", "circled e", "circled e", "circled e"
-fr, mathspeak, "ⓕ", "circled f", "circled f", "circled f"
-fr, mathspeak, "ⓖ", "circled g", "circled g", "circled g"
-fr, mathspeak, "ⓗ", "circled h", "circled h", "circled h"
-fr, mathspeak, "ⓘ", "circled i", "circled i", "circled i"
-fr, mathspeak, "ⓙ", "circled j", "circled j", "circled j"
-fr, mathspeak, "ⓚ", "circled k", "circled k", "circled k"
-fr, mathspeak, "ⓛ", "circled l", "circled l", "circled l"
-fr, mathspeak, "ⓜ", "circled m", "circled m", "circled m"
-fr, mathspeak, "ⓝ", "circled n", "circled n", "circled n"
-fr, mathspeak, "ⓞ", "circled o", "circled o", "circled o"
-fr, mathspeak, "ⓟ", "circled p", "circled p", "circled p"
-fr, mathspeak, "ⓠ", "circled q", "circled q", "circled q"
-fr, mathspeak, "ⓡ", "circled r", "circled r", "circled r"
-fr, mathspeak, "ⓢ", "circled s", "circled s", "circled s"
-fr, mathspeak, "ⓣ", "circled t", "circled t", "circled t"
-fr, mathspeak, "ⓤ", "circled u", "circled u", "circled u"
-fr, mathspeak, "ⓥ", "circled v", "circled v", "circled v"
-fr, mathspeak, "ⓦ", "circled w", "circled w", "circled w"
-fr, mathspeak, "ⓧ", "circled x", "circled x", "circled x"
-fr, mathspeak, "ⓨ", "circled y", "circled y", "circled y"
-fr, mathspeak, "ⓩ", "circled z", "circled z", "circled z"
-fr, mathspeak, "ⱼ", "subscript j", "subscript j", "subscript j"
-fr, mathspeak, "🄐", "parenthesized upper A", "parenthesized upper A", "parenthesized upper A"
-fr, mathspeak, "🄑", "parenthesized upper B", "parenthesized upper B", "parenthesized upper B"
-fr, mathspeak, "🄒", "parenthesized upper C", "parenthesized upper C", "parenthesized upper C"
-fr, mathspeak, "🄓", "parenthesized upper D", "parenthesized upper D", "parenthesized upper D"
-fr, mathspeak, "🄔", "parenthesized upper E", "parenthesized upper E", "parenthesized upper E"
-fr, mathspeak, "🄕", "parenthesized upper F", "parenthesized upper F", "parenthesized upper F"
-fr, mathspeak, "🄖", "parenthesized upper G", "parenthesized upper G", "parenthesized upper G"
-fr, mathspeak, "🄗", "parenthesized upper H", "parenthesized upper H", "parenthesized upper H"
-fr, mathspeak, "🄘", "parenthesized upper I", "parenthesized upper I", "parenthesized upper I"
-fr, mathspeak, "🄙", "parenthesized upper J", "parenthesized upper J", "parenthesized upper J"
-fr, mathspeak, "🄚", "parenthesized upper K", "parenthesized upper K", "parenthesized upper K"
-fr, mathspeak, "🄛", "parenthesized upper L", "parenthesized upper L", "parenthesized upper L"
-fr, mathspeak, "🄜", "parenthesized upper M", "parenthesized upper M", "parenthesized upper M"
-fr, mathspeak, "🄝", "parenthesized upper N", "parenthesized upper N", "parenthesized upper N"
-fr, mathspeak, "🄞", "parenthesized upper O", "parenthesized upper O", "parenthesized upper O"
-fr, mathspeak, "🄟", "parenthesized upper P", "parenthesized upper P", "parenthesized upper P"
-fr, mathspeak, "🄠", "parenthesized upper Q", "parenthesized upper Q", "parenthesized upper Q"
-fr, mathspeak, "🄡", "parenthesized upper R", "parenthesized upper R", "parenthesized upper R"
-fr, mathspeak, "🄢", "parenthesized upper S", "parenthesized upper S", "parenthesized upper S"
-fr, mathspeak, "🄣", "parenthesized upper T", "parenthesized upper T", "parenthesized upper T"
-fr, mathspeak, "🄤", "parenthesized upper U", "parenthesized upper U", "parenthesized upper U"
-fr, mathspeak, "🄥", "parenthesized upper V", "parenthesized upper V", "parenthesized upper V"
-fr, mathspeak, "🄦", "parenthesized upper W", "parenthesized upper W", "parenthesized upper W"
-fr, mathspeak, "🄧", "parenthesized upper X", "parenthesized upper X", "parenthesized upper X"
-fr, mathspeak, "🄨", "parenthesized upper Y", "parenthesized upper Y", "parenthesized upper Y"
-fr, mathspeak, "🄩", "parenthesized upper Z", "parenthesized upper Z", "parenthesized upper Z"
-fr, mathspeak, "🄪", "tortoise shell bracketed upper S", "tortoise shell bracketed upper S", "tortoise shell bracketed upper S"
-fr, mathspeak, "🄫", "circled italic upper C", "circled italic upper C", "circled italic upper C"
-fr, mathspeak, "🄬", "circled italic upper R", "circled italic upper R", "circled italic upper R"
-fr, mathspeak, "🄰", "squared upper A", "squared upper A", "squared upper A"
-fr, mathspeak, "🄱", "squared upper B", "squared upper B", "squared upper B"
-fr, mathspeak, "🄲", "squared upper C", "squared upper C", "squared upper C"
-fr, mathspeak, "🄳", "squared upper D", "squared upper D", "squared upper D"
-fr, mathspeak, "🄴", "squared upper E", "squared upper E", "squared upper E"
-fr, mathspeak, "🄵", "squared upper F", "squared upper F", "squared upper F"
-fr, mathspeak, "🄶", "squared upper G", "squared upper G", "squared upper G"
-fr, mathspeak, "🄷", "squared upper H", "squared upper H", "squared upper H"
-fr, mathspeak, "🄸", "squared upper I", "squared upper I", "squared upper I"
-fr, mathspeak, "🄹", "squared upper J", "squared upper J", "squared upper J"
-fr, mathspeak, "🄺", "squared upper K", "squared upper K", "squared upper K"
-fr, mathspeak, "🄻", "squared upper L", "squared upper L", "squared upper L"
-fr, mathspeak, "🄼", "squared upper M", "squared upper M", "squared upper M"
-fr, mathspeak, "🄽", "squared upper N", "squared upper N", "squared upper N"
-fr, mathspeak, "🄾", "squared upper O", "squared upper O", "squared upper O"
-fr, mathspeak, "🄿", "squared upper P", "squared upper P", "squared upper P"
-fr, mathspeak, "🅀", "squared upper Q", "squared upper Q", "squared upper Q"
-fr, mathspeak, "🅁", "squared upper R", "squared upper R", "squared upper R"
-fr, mathspeak, "🅂", "squared upper S", "squared upper S", "squared upper S"
-fr, mathspeak, "🅃", "squared upper T", "squared upper T", "squared upper T"
-fr, mathspeak, "🅄", "squared upper U", "squared upper U", "squared upper U"
-fr, mathspeak, "🅅", "squared upper V", "squared upper V", "squared upper V"
-fr, mathspeak, "🅆", "squared upper W", "squared upper W", "squared upper W"
-fr, mathspeak, "🅇", "squared upper X", "squared upper X", "squared upper X"
-fr, mathspeak, "🅈", "squared upper Y", "squared upper Y", "squared upper Y"
-fr, mathspeak, "🅉", "squared upper Z", "squared upper Z", "squared upper Z"
-fr, mathspeak, "🅐", "negative circled upper A", "negative circled upper A", "negative circled upper A"
-fr, mathspeak, "🅑", "negative circled upper B", "negative circled upper B", "negative circled upper B"
-fr, mathspeak, "🅒", "negative circled upper C", "negative circled upper C", "negative circled upper C"
-fr, mathspeak, "🅓", "negative circled upper D", "negative circled upper D", "negative circled upper D"
-fr, mathspeak, "🅔", "negative circled upper E", "negative circled upper E", "negative circled upper E"
-fr, mathspeak, "🅕", "negative circled upper F", "negative circled upper F", "negative circled upper F"
-fr, mathspeak, "🅖", "negative circled upper G", "negative circled upper G", "negative circled upper G"
-fr, mathspeak, "🅗", "negative circled upper H", "negative circled upper H", "negative circled upper H"
-fr, mathspeak, "🅘", "negative circled upper I", "negative circled upper I", "negative circled upper I"
-fr, mathspeak, "🅙", "negative circled upper J", "negative circled upper J", "negative circled upper J"
-fr, mathspeak, "🅚", "negative circled upper K", "negative circled upper K", "negative circled upper K"
-fr, mathspeak, "🅛", "negative circled upper L", "negative circled upper L", "negative circled upper L"
-fr, mathspeak, "🅜", "negative circled upper M", "negative circled upper M", "negative circled upper M"
-fr, mathspeak, "🅝", "negative circled upper N", "negative circled upper N", "negative circled upper N"
-fr, mathspeak, "🅞", "negative circled upper O", "negative circled upper O", "negative circled upper O"
-fr, mathspeak, "🅟", "negative circled upper P", "negative circled upper P", "negative circled upper P"
-fr, mathspeak, "🅠", "negative circled upper Q", "negative circled upper Q", "negative circled upper Q"
-fr, mathspeak, "🅡", "negative circled upper R", "negative circled upper R", "negative circled upper R"
-fr, mathspeak, "🅢", "negative circled upper S", "negative circled upper S", "negative circled upper S"
-fr, mathspeak, "🅣", "negative circled upper T", "negative circled upper T", "negative circled upper T"
-fr, mathspeak, "🅤", "negative circled upper U", "negative circled upper U", "negative circled upper U"
-fr, mathspeak, "🅥", "negative circled upper V", "negative circled upper V", "negative circled upper V"
-fr, mathspeak, "🅦", "negative circled upper W", "negative circled upper W", "negative circled upper W"
-fr, mathspeak, "🅧", "negative circled upper X", "negative circled upper X", "negative circled upper X"
-fr, mathspeak, "🅨", "negative circled upper Y", "negative circled upper Y", "negative circled upper Y"
-fr, mathspeak, "🅩", "negative circled upper Z", "negative circled upper Z", "negative circled upper Z"
-fr, mathspeak, "🅰", "negative squared upper A", "negative squared upper A", "negative squared upper A"
-fr, mathspeak, "🅱", "negative squared upper B", "negative squared upper B", "negative squared upper B"
-fr, mathspeak, "🅲", "negative squared upper C", "negative squared upper C", "negative squared upper C"
-fr, mathspeak, "🅳", "negative squared upper D", "negative squared upper D", "negative squared upper D"
-fr, mathspeak, "🅴", "negative squared upper E", "negative squared upper E", "negative squared upper E"
-fr, mathspeak, "🅵", "negative squared upper F", "negative squared upper F", "negative squared upper F"
-fr, mathspeak, "🅶", "negative squared upper G", "negative squared upper G", "negative squared upper G"
-fr, mathspeak, "🅷", "negative squared upper H", "negative squared upper H", "negative squared upper H"
-fr, mathspeak, "🅸", "negative squared upper I", "negative squared upper I", "negative squared upper I"
-fr, mathspeak, "🅹", "negative squared upper J", "negative squared upper J", "negative squared upper J"
-fr, mathspeak, "🅺", "negative squared upper K", "negative squared upper K", "negative squared upper K"
-fr, mathspeak, "🅻", "negative squared upper L", "negative squared upper L", "negative squared upper L"
-fr, mathspeak, "🅼", "negative squared upper M", "negative squared upper M", "negative squared upper M"
-fr, mathspeak, "🅽", "negative squared upper N", "negative squared upper N", "negative squared upper N"
-fr, mathspeak, "🅾", "negative squared upper O", "negative squared upper O", "negative squared upper O"
-fr, mathspeak, "🅿", "negative squared upper P", "negative squared upper P", "negative squared upper P"
-fr, mathspeak, "🆀", "negative squared upper Q", "negative squared upper Q", "negative squared upper Q"
-fr, mathspeak, "🆁", "negative squared upper R", "negative squared upper R", "negative squared upper R"
-fr, mathspeak, "🆂", "negative squared upper S", "negative squared upper S", "negative squared upper S"
-fr, mathspeak, "🆃", "negative squared upper T", "negative squared upper T", "negative squared upper T"
-fr, mathspeak, "🆄", "negative squared upper U", "negative squared upper U", "negative squared upper U"
-fr, mathspeak, "🆅", "negative squared upper V", "negative squared upper V", "negative squared upper V"
-fr, mathspeak, "🆆", "negative squared upper W", "negative squared upper W", "negative squared upper W"
-fr, mathspeak, "🆇", "negative squared upper X", "negative squared upper X", "negative squared upper X"
-fr, mathspeak, "🆈", "negative squared upper Y", "negative squared upper Y", "negative squared upper Y"
-fr, mathspeak, "🆉", "negative squared upper Z", "negative squared upper Z", "negative squared upper Z"
-fr, mathspeak, "🆊", "crossed negative squared upper P", "crossed negative squared upper P", "crossed negative squared upper P"
-fr, mathspeak, "Ǖ", "upper U double overdot overbar", "upper U double overdot overbar", "upper U double overdot overbar"
-fr, mathspeak, "Ǘ", "upper U double overdot acute", "upper U double overdot acute", "upper U double overdot acute"
-fr, mathspeak, "Ǚ", "upper U double overdot caron", "upper U double overdot caron", "upper U double overdot caron"
-fr, mathspeak, "Ǜ", "upper U double overdot grave", "upper U double overdot grave", "upper U double overdot grave"
-fr, mathspeak, "Ǟ", "upper A double overdot overbar", "upper A double overdot overbar", "upper A double overdot overbar"
-fr, mathspeak, "Ǡ", "upper A overdot overbar", "upper A overdot overbar", "upper A overdot overbar"
-fr, mathspeak, "Ǭ", "upper O ogonek overbar", "upper O ogonek overbar", "upper O ogonek overbar"
-fr, mathspeak, "Ǻ", "upper A ring acute", "upper A ring acute", "upper A ring acute"
-fr, mathspeak, "Ȫ", "upper O double overdot overbar", "upper O double overdot overbar", "upper O double overdot overbar"
-fr, mathspeak, "Ȭ", "upper O tilde overbar", "upper O tilde overbar", "upper O tilde overbar"
-fr, mathspeak, "Ȱ", "upper O overdot overbar", "upper O overdot overbar", "upper O overdot overbar"
-fr, mathspeak, "Ḉ", "C cédille et accent aigu majuscule", "C cédille et accent aigu majuscule", "C cédille et accent aigu majuscule"
-fr, mathspeak, "Ḕ", "E macron et accent grave majuscule", "E macron et accent grave majuscule", "E macron et accent grave majuscule"
-fr, mathspeak, "Ḗ", "E macron et accent aigu majuscule", "E macron et accent aigu majuscule", "E macron et accent aigu majuscule"
-fr, mathspeak, "Ḝ", "E cédille et brève majuscule", "E cédille et brève majuscule", "E cédille et brève majuscule"
-fr, mathspeak, "Ḯ", "I tréma et accent aigu majuscule", "I tréma et accent aigu majuscule", "I tréma et accent aigu majuscule"
-fr, mathspeak, "Ḹ", "L point souscrit et macron majuscule", "L point souscrit et macron majuscule", "L point souscrit et macron majuscule"
-fr, mathspeak, "Ṍ", "O tilde et accent aigu majuscule", "O tilde et accent aigu majuscule", "O tilde et accent aigu majuscule"
-fr, mathspeak, "Ṏ", "O tilde et tréma majuscule", "O tilde et tréma majuscule", "O tilde et tréma majuscule"
-fr, mathspeak, "Ṑ", "O macron et accent grave majuscule", "O macron et accent grave majuscule", "O macron et accent grave majuscule"
-fr, mathspeak, "Ṓ", "O macron et accent aigu majuscule", "O macron et accent aigu majuscule", "O macron et accent aigu majuscule"
-fr, mathspeak, "Ṝ", "R point souscrit et macron majuscule", "R point souscrit et macron majuscule", "R point souscrit et macron majuscule"
-fr, mathspeak, "Ṥ", "S accent aigu et point en chef majuscule", "S accent aigu et point en chef majuscule", "S accent aigu et point en chef majuscule"
-fr, mathspeak, "Ṧ", "S caron et point en chef majuscule", "S caron et point en chef majuscule", "S caron et point en chef majuscule"
-fr, mathspeak, "Ṩ", "S point souscrit et point en chef majuscule", "S point souscrit et point en chef majuscule", "S point souscrit et point en chef majuscule"
-fr, mathspeak, "Ṹ", "U tilde et accent aigu majuscule", "U tilde et accent aigu majuscule", "U tilde et accent aigu majuscule"
-fr, mathspeak, "Ṻ", "U macron et tréma majuscule", "U macron et tréma majuscule", "U macron et tréma majuscule"
-fr, mathspeak, "Ấ", "A accent circonflexe et accent aigu majuscule", "A accent circonflexe et accent aigu majuscule", "A accent circonflexe et accent aigu majuscule"
-fr, mathspeak, "Ầ", "A accent circonflexe et accent grave majuscule", "A accent circonflexe et accent grave majuscule", "A accent circonflexe et accent grave majuscule"
-fr, mathspeak, "Ẩ", "A accent circonflexe et crochet en chef majuscule", "A accent circonflexe et crochet en chef majuscule", "A accent circonflexe et crochet en chef majuscule"
-fr, mathspeak, "Ẫ", "A accent circonflexe et tilde majuscule", "A accent circonflexe et tilde majuscule", "A accent circonflexe et tilde majuscule"
-fr, mathspeak, "Ậ", "A accent circonflexe et point souscrit majuscule", "A accent circonflexe et point souscrit majuscule", "A accent circonflexe et point souscrit majuscule"
-fr, mathspeak, "Ắ", "A brève et accent aigu majuscule", "A brève et accent aigu majuscule", "A brève et accent aigu majuscule"
-fr, mathspeak, "Ằ", "A brève et accent grave majuscule", "A brève et accent grave majuscule", "A brève et accent grave majuscule"
-fr, mathspeak, "Ẳ", "A brève et crochet en chef majuscule", "A brève et crochet en chef majuscule", "A brève et crochet en chef majuscule"
-fr, mathspeak, "Ẵ", "A brève et tilde majuscule", "A brève et tilde majuscule", "A brève et tilde majuscule"
-fr, mathspeak, "Ặ", "A brève et point souscrit majuscule", "A brève et point souscrit majuscule", "A brève et point souscrit majuscule"
-fr, mathspeak, "Ế", "E accent circonflexe et accent aigu majuscule", "E accent circonflexe et accent aigu majuscule", "E accent circonflexe et accent aigu majuscule"
-fr, mathspeak, "Ề", "E accent circonflexe et accent grave majuscule", "E accent circonflexe et accent grave majuscule", "E accent circonflexe et accent grave majuscule"
-fr, mathspeak, "Ể", "E accent circonflexe et crochet en chef majuscule", "E accent circonflexe et crochet en chef majuscule", "E accent circonflexe et crochet en chef majuscule"
-fr, mathspeak, "Ễ", "E accent circonflexe et tilde majuscule", "E accent circonflexe et tilde majuscule", "E accent circonflexe et tilde majuscule"
-fr, mathspeak, "Ệ", "E accent circonflexe et point souscrit majuscule", "E accent circonflexe et point souscrit majuscule", "E accent circonflexe et point souscrit majuscule"
-fr, mathspeak, "Ố", "O accent circonflexe et accent aigu majuscule", "O accent circonflexe et accent aigu majuscule", "O accent circonflexe et accent aigu majuscule"
-fr, mathspeak, "Ồ", "O accent circonflexe et accent grave majuscule", "O accent circonflexe et accent grave majuscule", "O accent circonflexe et accent grave majuscule"
-fr, mathspeak, "Ổ", "O accent circonflexe et crochet en chef majuscule", "O accent circonflexe et crochet en chef majuscule", "O accent circonflexe et crochet en chef majuscule"
-fr, mathspeak, "Ỗ", "O accent circonflexe et tilde majuscule", "O accent circonflexe et tilde majuscule", "O accent circonflexe et tilde majuscule"
-fr, mathspeak, "Ộ", "O accent circonflexe et point souscrit majuscule", "O accent circonflexe et point souscrit majuscule", "O accent circonflexe et point souscrit majuscule"
-fr, mathspeak, "Ớ", "O cornu accent aigu majuscule", "O cornu accent aigu majuscule", "O cornu accent aigu majuscule"
-fr, mathspeak, "Ờ", "O cornu accent grave majuscule", "O cornu accent grave majuscule", "O cornu accent grave majuscule"
-fr, mathspeak, "Ở", "O cornu crochet en chef majuscule", "O cornu crochet en chef majuscule", "O cornu crochet en chef majuscule"
-fr, mathspeak, "Ỡ", "O cornu tilde majuscule", "O cornu tilde majuscule", "O cornu tilde majuscule"
-fr, mathspeak, "Ợ", "O cornu point souscrit majuscule", "O cornu point souscrit majuscule", "O cornu point souscrit majuscule"
-fr, mathspeak, "Ứ", "U cornu accent aigu majuscule", "U cornu accent aigu majuscule", "U cornu accent aigu majuscule"
-fr, mathspeak, "Ừ", "U cornu accent grave majuscule", "U cornu accent grave majuscule", "U cornu accent grave majuscule"
-fr, mathspeak, "Ử", "U cornu crochet en chef majuscule", "U cornu crochet en chef majuscule", "U cornu crochet en chef majuscule"
-fr, mathspeak, "Ữ", "U cornu tilde majuscule", "U cornu tilde majuscule", "U cornu tilde majuscule"
-fr, mathspeak, "Ự", "U cornu point souscrit majuscule", "U cornu point souscrit majuscule", "U cornu point souscrit majuscule"
-fr, mathspeak, "A", "A majuscule", "A majuscule", "A majuscule"
-fr, mathspeak, "B", "B majuscule", "B majuscule", "B majuscule"
-fr, mathspeak, "C", "C majuscule", "C majuscule", "C majuscule"
-fr, mathspeak, "D", "D majuscule", "D majuscule", "D majuscule"
-fr, mathspeak, "E", "E majuscule", "E majuscule", "E majuscule"
-fr, mathspeak, "F", "F majuscule", "F majuscule", "F majuscule"
-fr, mathspeak, "G", "G majuscule", "G majuscule", "G majuscule"
-fr, mathspeak, "H", "H majuscule", "H majuscule", "H majuscule"
-fr, mathspeak, "I", "I majuscule", "I majuscule", "I majuscule"
-fr, mathspeak, "J", "J majuscule", "J majuscule", "J majuscule"
-fr, mathspeak, "K", "K majuscule", "K majuscule", "K majuscule"
-fr, mathspeak, "L", "L majuscule", "L majuscule", "L majuscule"
-fr, mathspeak, "M", "M majuscule", "M majuscule", "M majuscule"
-fr, mathspeak, "N", "N majuscule", "N majuscule", "N majuscule"
-fr, mathspeak, "O", "O majuscule", "O majuscule", "O majuscule"
-fr, mathspeak, "P", "P majuscule", "P majuscule", "P majuscule"
-fr, mathspeak, "Q", "Q majuscule", "Q majuscule", "Q majuscule"
-fr, mathspeak, "R", "R majuscule", "R majuscule", "R majuscule"
-fr, mathspeak, "S", "S majuscule", "S majuscule", "S majuscule"
-fr, mathspeak, "T", "T majuscule", "T majuscule", "T majuscule"
-fr, mathspeak, "U", "U majuscule", "U majuscule", "U majuscule"
-fr, mathspeak, "V", "V majuscule", "V majuscule", "V majuscule"
-fr, mathspeak, "W", "W majuscule", "W majuscule", "W majuscule"
-fr, mathspeak, "X", "X majuscule", "X majuscule", "X majuscule"
-fr, mathspeak, "Y", "Y majuscule", "Y majuscule", "Y majuscule"
-fr, mathspeak, "Z", "Z majuscule", "Z majuscule", "Z majuscule"
-fr, mathspeak, "Ａ", "upper A", "upper A", "upper A"
-fr, mathspeak, "Ｂ", "upper B", "upper B", "upper B"
-fr, mathspeak, "Ｃ", "upper C", "upper C", "upper C"
-fr, mathspeak, "Ｄ", "upper D", "upper D", "upper D"
-fr, mathspeak, "Ｅ", "upper E", "upper E", "upper E"
-fr, mathspeak, "Ｆ", "upper F", "upper F", "upper F"
-fr, mathspeak, "Ｇ", "upper G", "upper G", "upper G"
-fr, mathspeak, "Ｈ", "upper H", "upper H", "upper H"
-fr, mathspeak, "Ｉ", "upper I", "upper I", "upper I"
-fr, mathspeak, "Ｊ", "upper J", "upper J", "upper J"
-fr, mathspeak, "Ｋ", "upper K", "upper K", "upper K"
-fr, mathspeak, "Ｌ", "upper L", "upper L", "upper L"
-fr, mathspeak, "Ｍ", "upper M", "upper M", "upper M"
-fr, mathspeak, "Ｎ", "upper N", "upper N", "upper N"
-fr, mathspeak, "Ｏ", "upper O", "upper O", "upper O"
-fr, mathspeak, "Ｐ", "upper P", "upper P", "upper P"
-fr, mathspeak, "Ｑ", "upper Q", "upper Q", "upper Q"
-fr, mathspeak, "Ｒ", "upper R", "upper R", "upper R"
-fr, mathspeak, "Ｓ", "upper S", "upper S", "upper S"
-fr, mathspeak, "Ｔ", "upper T", "upper T", "upper T"
-fr, mathspeak, "Ｕ", "upper U", "upper U", "upper U"
-fr, mathspeak, "Ｖ", "upper V", "upper V", "upper V"
-fr, mathspeak, "Ｗ", "upper W", "upper W", "upper W"
-fr, mathspeak, "Ｘ", "upper X", "upper X", "upper X"
-fr, mathspeak, "Ｙ", "upper Y", "upper Y", "upper Y"
-fr, mathspeak, "Ｚ", "upper Z", "upper Z", "upper Z"
-fr, mathspeak, "À", "A accent grave majuscule", "A accent grave majuscule", "A accent grave majuscule"
-fr, mathspeak, "Á", "A accent aigu majuscule", "A accent aigu majuscule", "A accent aigu majuscule"
-fr, mathspeak, "Â", "A accent circonflexe majuscule", "A accent circonflexe majuscule", "A accent circonflexe majuscule"
-fr, mathspeak, "Ã", "A tilde majuscule", "A tilde majuscule", "A tilde majuscule"
-fr, mathspeak, "Ä", "A tréma majuscule", "A tréma majuscule", "A tréma majuscule"
-fr, mathspeak, "Å", "angstrom", "angstrom", "angstrom"
-fr, mathspeak, "Ç", "C cédille majuscule", "C cédille majuscule", "C cédille majuscule"
-fr, mathspeak, "È", "E accent grave majuscule", "E accent grave majuscule", "E accent grave majuscule"
-fr, mathspeak, "É", "E accent aigu majuscule", "E accent aigu majuscule", "E accent aigu majuscule"
-fr, mathspeak, "Ê", "E accent circonflexe majuscule", "E accent circonflexe majuscule", "E accent circonflexe majuscule"
-fr, mathspeak, "Ë", "E tréma majuscule", "E tréma majuscule", "E tréma majuscule"
-fr, mathspeak, "Ì", "I accent grave majuscule", "I accent grave majuscule", "I accent grave majuscule"
-fr, mathspeak, "Í", "I accent aigu majuscule", "I accent aigu majuscule", "I accent aigu majuscule"
-fr, mathspeak, "Î", "I accent circonflexe majuscule", "I accent circonflexe majuscule", "I accent circonflexe majuscule"
-fr, mathspeak, "Ï", "I tréma majuscule", "I tréma majuscule", "I tréma majuscule"
-fr, mathspeak, "Ñ", "N tilde majuscule", "N tilde majuscule", "N tilde majuscule"
-fr, mathspeak, "Ò", "O accent grave majuscule", "O accent grave majuscule", "O accent grave majuscule"
-fr, mathspeak, "Ó", "O accent aigu majuscule", "O accent aigu majuscule", "O accent aigu majuscule"
-fr, mathspeak, "Ô", "O accent circonflexe majuscule", "O accent circonflexe majuscule", "O accent circonflexe majuscule"
-fr, mathspeak, "Õ", "O tilde majuscule", "O tilde majuscule", "O tilde majuscule"
-fr, mathspeak, "Ö", "O tréma majuscule", "O tréma majuscule", "O tréma majuscule"
-fr, mathspeak, "Ù", "U accent grave majuscule", "U accent grave majuscule", "U accent grave majuscule"
-fr, mathspeak, "Ú", "U accent aigu majuscule", "U accent aigu majuscule", "U accent aigu majuscule"
-fr, mathspeak, "Û", "U accent circonflexe majuscule", "U accent circonflexe majuscule", "U accent circonflexe majuscule"
-fr, mathspeak, "Ü", "U tréma majuscule", "U tréma majuscule", "U tréma majuscule"
-fr, mathspeak, "Ý", "Y accent aigu majuscule", "Y accent aigu majuscule", "Y accent aigu majuscule"
-fr, mathspeak, "Ā", "A macron majuscule", "A macron majuscule", "A macron majuscule"
-fr, mathspeak, "Ă", "A brève majuscule", "A brève majuscule", "A brève majuscule"
-fr, mathspeak, "Ą", "A ogonek majuscule", "A ogonek majuscule", "A ogonek majuscule"
-fr, mathspeak, "Ć", "C accent aigu majuscule", "C accent aigu majuscule", "C accent aigu majuscule"
-fr, mathspeak, "Ĉ", "C accent circonflexe majuscule", "C accent circonflexe majuscule", "C accent circonflexe majuscule"
-fr, mathspeak, "Ċ", "C point en chef majuscule", "C point en chef majuscule", "C point en chef majuscule"
-fr, mathspeak, "Č", "C caron majuscule", "C caron majuscule", "C caron majuscule"
-fr, mathspeak, "Ď", "D caron majuscule", "D caron majuscule", "D caron majuscule"
-fr, mathspeak, "Ē", "E macron majuscule", "E macron majuscule", "E macron majuscule"
-fr, mathspeak, "Ĕ", "modifying above upper E with breve", "mod above upper E with breve", "mod above upper E with breve"
-fr, mathspeak, "Ė", "E point en chef majuscule", "E point en chef majuscule", "E point en chef majuscule"
-fr, mathspeak, "Ę", "E ogonek majuscule", "E ogonek majuscule", "E ogonek majuscule"
-fr, mathspeak, "Ě", "E caron majuscule", "E caron majuscule", "E caron majuscule"
-fr, mathspeak, "Ĝ", "G accent circonflexe majuscule", "G accent circonflexe majuscule", "G accent circonflexe majuscule"
-fr, mathspeak, "Ğ", "G brève majuscule", "G brève majuscule", "G brève majuscule"
-fr, mathspeak, "Ġ", "G point en chef majuscule", "G point en chef majuscule", "G point en chef majuscule"
-fr, mathspeak, "Ģ", "G cédille majuscule", "G cédille majuscule", "G cédille majuscule"
-fr, mathspeak, "Ĥ", "H accent circonflexe majuscule", "H accent circonflexe majuscule", "H accent circonflexe majuscule"
-fr, mathspeak, "Ĩ", "I tilde majuscule", "I tilde majuscule", "I tilde majuscule"
-fr, mathspeak, "Ī", "I macron majuscule", "I macron majuscule", "I macron majuscule"
-fr, mathspeak, "Ĭ", "modifying above upper I with breve", "mod above upper I with breve", "mod above upper I with breve"
-fr, mathspeak, "Į", "I ogonek majuscule", "I ogonek majuscule", "I ogonek majuscule"
-fr, mathspeak, "İ", "I point en chef majuscule", "I point en chef majuscule", "I point en chef majuscule"
-fr, mathspeak, "Ĵ", "J accent circonflexe majuscule", "J accent circonflexe majuscule", "J accent circonflexe majuscule"
-fr, mathspeak, "Ķ", "K cédille majuscule", "K cédille majuscule", "K cédille majuscule"
-fr, mathspeak, "Ĺ", "L accent aigu majuscule", "L accent aigu majuscule", "L accent aigu majuscule"
-fr, mathspeak, "Ļ", "L cédille majuscule", "L cédille majuscule", "L cédille majuscule"
-fr, mathspeak, "Ľ", "L caron majuscule", "L caron majuscule", "L caron majuscule"
-fr, mathspeak, "Ŀ", "L point médian majuscule", "L point médian majuscule", "L point médian majuscule"
-fr, mathspeak, "Ń", "N accent aigu majuscule", "N accent aigu majuscule", "N accent aigu majuscule"
-fr, mathspeak, "Ņ", "N cédille majuscule", "N cédille majuscule", "N cédille majuscule"
-fr, mathspeak, "Ň", "N caron majuscule", "N caron majuscule", "N caron majuscule"
-fr, mathspeak, "Ō", "O macron majuscule", "O macron majuscule", "O macron majuscule"
-fr, mathspeak, "Ŏ", "modifying above upper O with breve", "mod above upper O with breve", "mod above upper O with breve"
-fr, mathspeak, "Ő", "O avec double accent aigu majuscule", "O avec double accent aigu majuscule", "O avec double accent aigu majuscule"
-fr, mathspeak, "Ŕ", "R accent aigu majuscule", "R accent aigu majuscule", "R accent aigu majuscule"
-fr, mathspeak, "Ŗ", "R cédille majuscule", "R cédille majuscule", "R cédille majuscule"
-fr, mathspeak, "Ř", "R caron majuscule", "R caron majuscule", "R caron majuscule"
-fr, mathspeak, "Ś", "S accent aigu majuscule", "S accent aigu majuscule", "S accent aigu majuscule"
-fr, mathspeak, "Ŝ", "S accent circonflexe majuscule", "S accent circonflexe majuscule", "S accent circonflexe majuscule"
-fr, mathspeak, "Ş", "S cédille majuscule", "S cédille majuscule", "S cédille majuscule"
-fr, mathspeak, "Š", "S caron majuscule", "S caron majuscule", "S caron majuscule"
-fr, mathspeak, "Ţ", "T cédille majuscule", "T cédille majuscule", "T cédille majuscule"
-fr, mathspeak, "Ť", "T caron majuscule", "T caron majuscule", "T caron majuscule"
-fr, mathspeak, "Ũ", "U tilde majuscule", "U tilde majuscule", "U tilde majuscule"
-fr, mathspeak, "Ū", "U macron majuscule", "U macron majuscule", "U macron majuscule"
-fr, mathspeak, "Ŭ", "U brève majuscule", "U brève majuscule", "U brève majuscule"
-fr, mathspeak, "Ů", "U rond en chef majuscule", "U rond en chef majuscule", "U rond en chef majuscule"
-fr, mathspeak, "Ű", "U avec double accent aigu majuscule", "U avec double accent aigu majuscule", "U avec double accent aigu majuscule"
-fr, mathspeak, "Ų", "U ogonek majuscule", "U ogonek majuscule", "U ogonek majuscule"
-fr, mathspeak, "Ŵ", "W accent circonflexe majuscule", "W accent circonflexe majuscule", "W accent circonflexe majuscule"
-fr, mathspeak, "Ŷ", "Y accent circonflexe majuscule", "Y accent circonflexe majuscule", "Y accent circonflexe majuscule"
-fr, mathspeak, "Ÿ", "Y tréma majuscule", "Y tréma majuscule", "Y tréma majuscule"
-fr, mathspeak, "Ź", "Z accent aigu majuscule", "Z accent aigu majuscule", "Z accent aigu majuscule"
-fr, mathspeak, "Ż", "Z point en chef majuscule", "Z point en chef majuscule", "Z point en chef majuscule"
-fr, mathspeak, "Ž", "Z caron majuscule", "Z caron majuscule", "Z caron majuscule"
-fr, mathspeak, "Ǎ", "modifying above upper A with caron", "mod above upper A with caron", "mod above upper A with caron"
-fr, mathspeak, "Ǐ", "modifying above upper I with caron", "mod above upper I with caron", "mod above upper I with caron"
-fr, mathspeak, "Ǒ", "modifying above upper O with caron", "mod above upper O with caron", "mod above upper O with caron"
-fr, mathspeak, "Ǔ", "modifying above upper U with caron", "mod above upper U with caron", "mod above upper U with caron"
-fr, mathspeak, "Ǧ", "modifying above upper G with caron", "mod above upper G with caron", "mod above upper G with caron"
-fr, mathspeak, "Ǩ", "modifying above upper K with caron", "mod above upper K with caron", "mod above upper K with caron"
-fr, mathspeak, "Ǫ", "modifying above upper O with ogonek", "mod above upper O with ogonek", "mod above upper O with ogonek"
-fr, mathspeak, "Ǵ", "modifying above upper G with acute", "mod above upper G with acute", "mod above upper G with acute"
-fr, mathspeak, "Ǹ", "modifying above upper N with grave", "mod above upper N with grave", "mod above upper N with grave"
-fr, mathspeak, "Ȁ", "modifying above upper A with double grave", "mod above upper A with double grave", "mod above upper A with double grave"
-fr, mathspeak, "Ȃ", "modifying above upper A with inverted breve", "mod above upper A with inverted breve", "mod above upper A with inverted breve"
-fr, mathspeak, "Ȅ", "modifying above upper E with double grave", "mod above upper E with double grave", "mod above upper E with double grave"
-fr, mathspeak, "Ȇ", "modifying above upper E with inverted breve", "mod above upper E with inverted breve", "mod above upper E with inverted breve"
-fr, mathspeak, "Ȉ", "modifying above upper I with double grave", "mod above upper I with double grave", "mod above upper I with double grave"
-fr, mathspeak, "Ȋ", "modifying above upper I with inverted breve", "mod above upper I with inverted breve", "mod above upper I with inverted breve"
-fr, mathspeak, "Ȍ", "modifying above upper O with double grave", "mod above upper O with double grave", "mod above upper O with double grave"
-fr, mathspeak, "Ȏ", "modifying above upper O with inverted breve", "mod above upper O with inverted breve", "mod above upper O with inverted breve"
-fr, mathspeak, "Ȑ", "modifying above upper R with double grave", "mod above upper R with double grave", "mod above upper R with double grave"
-fr, mathspeak, "Ȓ", "modifying above upper R with inverted breve", "mod above upper R with inverted breve", "mod above upper R with inverted breve"
-fr, mathspeak, "Ȕ", "modifying above upper U with double grave", "mod above upper U with double grave", "mod above upper U with double grave"
-fr, mathspeak, "Ȗ", "modifying above upper U with inverted breve", "mod above upper U with inverted breve", "mod above upper U with inverted breve"
-fr, mathspeak, "Ș", "modifying below upper S with comma below", "mod below upper S with comma below", "mod below upper S with comma below"
-fr, mathspeak, "Ț", "modifying below upper T with comma below", "mod below upper T with comma below", "mod below upper T with comma below"
-fr, mathspeak, "Ȟ", "modifying above upper H with caron", "mod above upper H with caron", "mod above upper H with caron"
-fr, mathspeak, "Ȧ", "modifying above upper A with dot", "mod above upper A with dot", "mod above upper A with dot"
-fr, mathspeak, "Ȩ", "modifying above upper E with cedilla", "mod above upper E with cedilla", "mod above upper E with cedilla"
-fr, mathspeak, "Ȯ", "modifying above upper O with dot", "mod above upper O with dot", "mod above upper O with dot"
-fr, mathspeak, "Ȳ", "upper Y overbar", "upper Y overbar", "upper Y overbar"
-fr, mathspeak, "Ḁ", "A à rond souscrit majuscule", "A à rond souscrit majuscule", "A à rond souscrit majuscule"
-fr, mathspeak, "Ḃ", "B point en chef majuscule", "B point en chef majuscule", "B point en chef majuscule"
-fr, mathspeak, "Ḅ", "B point souscrit majuscule", "B point souscrit majuscule", "B point souscrit majuscule"
-fr, mathspeak, "Ḇ", "B ligne souscrite majuscule", "B ligne souscrite majuscule", "B ligne souscrite majuscule"
-fr, mathspeak, "Ḋ", "D point en chef majuscule", "D point en chef majuscule", "D point en chef majuscule"
-fr, mathspeak, "Ḍ", "D point souscrit majuscule", "D point souscrit majuscule", "D point souscrit majuscule"
-fr, mathspeak, "Ḏ", "D ligne souscrite majuscule", "D ligne souscrite majuscule", "D ligne souscrite majuscule"
-fr, mathspeak, "Ḑ", "D cédille majuscule", "D cédille majuscule", "D cédille majuscule"
-fr, mathspeak, "Ḓ", "D accent circonflexe souscrit majuscule", "D accent circonflexe souscrit majuscule", "D accent circonflexe souscrit majuscule"
-fr, mathspeak, "Ḙ", "E accent circonflexe souscrit majuscule", "E accent circonflexe souscrit majuscule", "E accent circonflexe souscrit majuscule"
-fr, mathspeak, "Ḛ", "E tilde souscrit majuscule", "E tilde souscrit majuscule", "E tilde souscrit majuscule"
-fr, mathspeak, "Ḟ", "F point en chef majuscule", "F point en chef majuscule", "F point en chef majuscule"
-fr, mathspeak, "Ḡ", "G macron majuscule", "G macron majuscule", "G macron majuscule"
-fr, mathspeak, "Ḣ", "H point en chef majuscule", "H point en chef majuscule", "H point en chef majuscule"
-fr, mathspeak, "Ḥ", "H point souscrit majuscule", "H point souscrit majuscule", "H point souscrit majuscule"
-fr, mathspeak, "Ḧ", "H tréma majuscule", "H tréma majuscule", "H tréma majuscule"
-fr, mathspeak, "Ḩ", "H cédille majuscule", "H cédille majuscule", "H cédille majuscule"
-fr, mathspeak, "Ḫ", "H brève souscrit majuscule", "H brève souscrit majuscule", "H brève souscrit majuscule"
-fr, mathspeak, "Ḭ", "I tilde souscrit majuscule", "I tilde souscrit majuscule", "I tilde souscrit majuscule"
-fr, mathspeak, "Ḱ", "K accent aigu majuscule", "K accent aigu majuscule", "K accent aigu majuscule"
-fr, mathspeak, "Ḳ", "K point souscrit majuscule", "K point souscrit majuscule", "K point souscrit majuscule"
-fr, mathspeak, "Ḵ", "K ligne souscrite majuscule", "K ligne souscrite majuscule", "K ligne souscrite majuscule"
-fr, mathspeak, "Ḷ", "L point souscrit majuscule", "L point souscrit majuscule", "L point souscrit majuscule"
-fr, mathspeak, "Ḻ", "L ligne souscrite majuscule", "L ligne souscrite majuscule", "L ligne souscrite majuscule"
-fr, mathspeak, "Ḽ", "L accent circonflexe souscrit majuscule", "L accent circonflexe souscrit majuscule", "L accent circonflexe souscrit majuscule"
-fr, mathspeak, "Ḿ", "M accent aigu majuscule", "M accent aigu majuscule", "M accent aigu majuscule"
-fr, mathspeak, "Ṁ", "M point en chef majuscule", "M point en chef majuscule", "M point en chef majuscule"
-fr, mathspeak, "Ṃ", "M point souscrit majuscule", "M point souscrit majuscule", "M point souscrit majuscule"
-fr, mathspeak, "Ṅ", "N point en chef majuscule", "N point en chef majuscule", "N point en chef majuscule"
-fr, mathspeak, "Ṇ", "N point souscrit majuscule", "N point souscrit majuscule", "N point souscrit majuscule"
-fr, mathspeak, "Ṉ", "N ligne souscrite majuscule", "N ligne souscrite majuscule", "N ligne souscrite majuscule"
-fr, mathspeak, "Ṋ", "N accent circonflexe souscrit majuscule", "N accent circonflexe souscrit majuscule", "N accent circonflexe souscrit majuscule"
-fr, mathspeak, "Ṕ", "P accent aigu majuscule", "P accent aigu majuscule", "P accent aigu majuscule"
-fr, mathspeak, "Ṗ", "P point en chef majuscule", "P point en chef majuscule", "P point en chef majuscule"
-fr, mathspeak, "Ṙ", "R point en chef majuscule", "R point en chef majuscule", "R point en chef majuscule"
-fr, mathspeak, "Ṛ", "R point souscrit majuscule", "R point souscrit majuscule", "R point souscrit majuscule"
-fr, mathspeak, "Ṟ", "R ligne souscrite majuscule", "R ligne souscrite majuscule", "R ligne souscrite majuscule"
-fr, mathspeak, "Ṡ", "S point en chef majuscule", "S point en chef majuscule", "S point en chef majuscule"
-fr, mathspeak, "Ṣ", "S point souscrit majuscule", "S point souscrit majuscule", "S point souscrit majuscule"
-fr, mathspeak, "Ṫ", "T point en chef majuscule", "T point en chef majuscule", "T point en chef majuscule"
-fr, mathspeak, "Ṭ", "T point souscrit majuscule", "T point souscrit majuscule", "T point souscrit majuscule"
-fr, mathspeak, "Ṯ", "T ligne souscrite majuscule", "T ligne souscrite majuscule", "T ligne souscrite majuscule"
-fr, mathspeak, "Ṱ", "T accent circonflexe souscrit majuscule", "T accent circonflexe souscrit majuscule", "T accent circonflexe souscrit majuscule"
-fr, mathspeak, "Ṳ", "U tréma souscrit majuscule", "U tréma souscrit majuscule", "U tréma souscrit majuscule"
-fr, mathspeak, "Ṵ", "U tilde souscrit majuscule", "U tilde souscrit majuscule", "U tilde souscrit majuscule"
-fr, mathspeak, "Ṷ", "U accent circonflexe souscrit majuscule", "U accent circonflexe souscrit majuscule", "U accent circonflexe souscrit majuscule"
-fr, mathspeak, "Ṽ", "V tilde majuscule", "V tilde majuscule", "V tilde majuscule"
-fr, mathspeak, "Ṿ", "V point souscrit majuscule", "V point souscrit majuscule", "V point souscrit majuscule"
-fr, mathspeak, "Ẁ", "W accent grave majuscule", "W accent grave majuscule", "W accent grave majuscule"
-fr, mathspeak, "Ẃ", "W accent aigu majuscule", "W accent aigu majuscule", "W accent aigu majuscule"
-fr, mathspeak, "Ẅ", "W tréma majuscule", "W tréma majuscule", "W tréma majuscule"
-fr, mathspeak, "Ẇ", "W point en chef majuscule", "W point en chef majuscule", "W point en chef majuscule"
-fr, mathspeak, "Ẉ", "W point souscrit majuscule", "W point souscrit majuscule", "W point souscrit majuscule"
-fr, mathspeak, "Ẋ", "X point en chef majuscule", "X point en chef majuscule", "X point en chef majuscule"
-fr, mathspeak, "Ẍ", "X tréma majuscule", "X tréma majuscule", "X tréma majuscule"
-fr, mathspeak, "Ẏ", "Y point en chef majuscule", "Y point en chef majuscule", "Y point en chef majuscule"
-fr, mathspeak, "Ẑ", "Z accent circonflexe majuscule", "Z accent circonflexe majuscule", "Z accent circonflexe majuscule"
-fr, mathspeak, "Ẓ", "Z point souscrit majuscule", "Z point souscrit majuscule", "Z point souscrit majuscule"
-fr, mathspeak, "Ẕ", "Z ligne souscrite majuscule", "Z ligne souscrite majuscule", "Z ligne souscrite majuscule"
-fr, mathspeak, "Ạ", "A point souscrit majuscule", "A point souscrit majuscule", "A point souscrit majuscule"
-fr, mathspeak, "Ả", "A crochet en chef majuscule", "A crochet en chef majuscule", "A crochet en chef majuscule"
-fr, mathspeak, "Ẹ", "E point souscrit majuscule", "E point souscrit majuscule", "E point souscrit majuscule"
-fr, mathspeak, "Ẻ", "E crochet en chef majuscule", "E crochet en chef majuscule", "E crochet en chef majuscule"
-fr, mathspeak, "Ẽ", "E tilde majuscule", "E tilde majuscule", "E tilde majuscule"
-fr, mathspeak, "Ỉ", "I crochet en chef majuscule", "I crochet en chef majuscule", "I crochet en chef majuscule"
-fr, mathspeak, "Ị", "I point souscrit majuscule", "I point souscrit majuscule", "I point souscrit majuscule"
-fr, mathspeak, "Ọ", "O point souscrit majuscule", "O point souscrit majuscule", "O point souscrit majuscule"
-fr, mathspeak, "Ỏ", "O crochet en chef majuscule", "O crochet en chef majuscule", "O crochet en chef majuscule"
-fr, mathspeak, "Ụ", "U point souscrit majuscule", "U point souscrit majuscule", "U point souscrit majuscule"
-fr, mathspeak, "Ủ", "U crochet en chef majuscule", "U crochet en chef majuscule", "U crochet en chef majuscule"
-fr, mathspeak, "Ỳ", "Y accent grave majuscule", "Y accent grave majuscule", "Y accent grave majuscule"
-fr, mathspeak, "Ỵ", "Y point souscrit majuscule", "Y point souscrit majuscule", "Y point souscrit majuscule"
-fr, mathspeak, "Ỷ", "Y crochet en chef majuscule", "Y crochet en chef majuscule", "Y crochet en chef majuscule"
-fr, mathspeak, "Ỹ", "Y tilde majuscule", "Y tilde majuscule", "Y tilde majuscule"
-fr, mathspeak, "𝕬", "A majuscule en gothique gras", "A majuscule en gothique gras", "A majuscule en gothique gras"
-fr, mathspeak, "𝕭", "B majuscule en gothique gras", "B majuscule en gothique gras", "B majuscule en gothique gras"
-fr, mathspeak, "𝕮", "C majuscule en gothique gras", "C majuscule en gothique gras", "C majuscule en gothique gras"
-fr, mathspeak, "𝕯", "D majuscule en gothique gras", "D majuscule en gothique gras", "D majuscule en gothique gras"
-fr, mathspeak, "𝕰", "E majuscule en gothique gras", "E majuscule en gothique gras", "E majuscule en gothique gras"
-fr, mathspeak, "𝕱", "F majuscule en gothique gras", "F majuscule en gothique gras", "F majuscule en gothique gras"
-fr, mathspeak, "𝕲", "G majuscule en gothique gras", "G majuscule en gothique gras", "G majuscule en gothique gras"
-fr, mathspeak, "𝕳", "H majuscule en gothique gras", "H majuscule en gothique gras", "H majuscule en gothique gras"
-fr, mathspeak, "𝕴", "I majuscule en gothique gras", "I majuscule en gothique gras", "I majuscule en gothique gras"
-fr, mathspeak, "𝕵", "J majuscule en gothique gras", "J majuscule en gothique gras", "J majuscule en gothique gras"
-fr, mathspeak, "𝕶", "K majuscule en gothique gras", "K majuscule en gothique gras", "K majuscule en gothique gras"
-fr, mathspeak, "𝕷", "L majuscule en gothique gras", "L majuscule en gothique gras", "L majuscule en gothique gras"
-fr, mathspeak, "𝕸", "M majuscule en gothique gras", "M majuscule en gothique gras", "M majuscule en gothique gras"
-fr, mathspeak, "𝕹", "N majuscule en gothique gras", "N majuscule en gothique gras", "N majuscule en gothique gras"
-fr, mathspeak, "𝕺", "O majuscule en gothique gras", "O majuscule en gothique gras", "O majuscule en gothique gras"
-fr, mathspeak, "𝕻", "P majuscule en gothique gras", "P majuscule en gothique gras", "P majuscule en gothique gras"
-fr, mathspeak, "𝕼", "Q majuscule en gothique gras", "Q majuscule en gothique gras", "Q majuscule en gothique gras"
-fr, mathspeak, "𝕽", "R majuscule en gothique gras", "R majuscule en gothique gras", "R majuscule en gothique gras"
-fr, mathspeak, "𝕾", "S majuscule en gothique gras", "S majuscule en gothique gras", "S majuscule en gothique gras"
-fr, mathspeak, "𝕿", "T majuscule en gothique gras", "T majuscule en gothique gras", "T majuscule en gothique gras"
-fr, mathspeak, "𝖀", "U majuscule en gothique gras", "U majuscule en gothique gras", "U majuscule en gothique gras"
-fr, mathspeak, "𝖁", "V majuscule en gothique gras", "V majuscule en gothique gras", "V majuscule en gothique gras"
-fr, mathspeak, "𝖂", "W majuscule en gothique gras", "W majuscule en gothique gras", "W majuscule en gothique gras"
-fr, mathspeak, "𝖃", "X majuscule en gothique gras", "X majuscule en gothique gras", "X majuscule en gothique gras"
-fr, mathspeak, "𝖄", "Y majuscule en gothique gras", "Y majuscule en gothique gras", "Y majuscule en gothique gras"
-fr, mathspeak, "𝖅", "Z majuscule en gothique gras", "Z majuscule en gothique gras", "Z majuscule en gothique gras"
-fr, mathspeak, "𝖆", "a en gothique gras", "a en gothique gras", "a en gothique gras"
-fr, mathspeak, "𝖇", "b en gothique gras", "b en gothique gras", "b en gothique gras"
-fr, mathspeak, "𝖈", "c en gothique gras", "c en gothique gras", "c en gothique gras"
-fr, mathspeak, "𝖉", "d en gothique gras", "d en gothique gras", "d en gothique gras"
-fr, mathspeak, "𝖊", "e en gothique gras", "e en gothique gras", "e en gothique gras"
-fr, mathspeak, "𝖋", "f en gothique gras", "f en gothique gras", "f en gothique gras"
-fr, mathspeak, "𝖌", "g en gothique gras", "g en gothique gras", "g en gothique gras"
-fr, mathspeak, "𝖍", "h en gothique gras", "h en gothique gras", "h en gothique gras"
-fr, mathspeak, "𝖎", "i en gothique gras", "i en gothique gras", "i en gothique gras"
-fr, mathspeak, "𝖏", "j en gothique gras", "j en gothique gras", "j en gothique gras"
-fr, mathspeak, "𝖐", "k en gothique gras", "k en gothique gras", "k en gothique gras"
-fr, mathspeak, "𝖑", "l en gothique gras", "l en gothique gras", "l en gothique gras"
-fr, mathspeak, "𝖒", "m en gothique gras", "m en gothique gras", "m en gothique gras"
-fr, mathspeak, "𝖓", "n en gothique gras", "n en gothique gras", "n en gothique gras"
-fr, mathspeak, "𝖔", "o en gothique gras", "o en gothique gras", "o en gothique gras"
-fr, mathspeak, "𝖕", "p en gothique gras", "p en gothique gras", "p en gothique gras"
-fr, mathspeak, "𝖖", "q en gothique gras", "q en gothique gras", "q en gothique gras"
-fr, mathspeak, "𝖗", "r en gothique gras", "r en gothique gras", "r en gothique gras"
-fr, mathspeak, "𝖘", "s en gothique gras", "s en gothique gras", "s en gothique gras"
-fr, mathspeak, "𝖙", "t en gothique gras", "t en gothique gras", "t en gothique gras"
-fr, mathspeak, "𝖚", "u en gothique gras", "u en gothique gras", "u en gothique gras"
-fr, mathspeak, "𝖛", "v en gothique gras", "v en gothique gras", "v en gothique gras"
-fr, mathspeak, "𝖜", "w en gothique gras", "w en gothique gras", "w en gothique gras"
-fr, mathspeak, "𝖝", "x en gothique gras", "x en gothique gras", "x en gothique gras"
-fr, mathspeak, "𝖞", "y en gothique gras", "y en gothique gras", "y en gothique gras"
-fr, mathspeak, "𝖟", "z en gothique gras", "z en gothique gras", "z en gothique gras"
-fr, mathspeak, "𝐀", "A majuscule en gras", "A majuscule en gras", "A majuscule en gras"
-fr, mathspeak, "𝐁", "B majuscule en gras", "B majuscule en gras", "B majuscule en gras"
-fr, mathspeak, "𝐂", "C majuscule en gras", "C majuscule en gras", "C majuscule en gras"
-fr, mathspeak, "𝐃", "D majuscule en gras", "D majuscule en gras", "D majuscule en gras"
-fr, mathspeak, "𝐄", "E majuscule en gras", "E majuscule en gras", "E majuscule en gras"
-fr, mathspeak, "𝐅", "F majuscule en gras", "F majuscule en gras", "F majuscule en gras"
-fr, mathspeak, "𝐆", "G majuscule en gras", "G majuscule en gras", "G majuscule en gras"
-fr, mathspeak, "𝐇", "H majuscule en gras", "H majuscule en gras", "H majuscule en gras"
-fr, mathspeak, "𝐈", "I majuscule en gras", "I majuscule en gras", "I majuscule en gras"
-fr, mathspeak, "𝐉", "J majuscule en gras", "J majuscule en gras", "J majuscule en gras"
-fr, mathspeak, "𝐊", "K majuscule en gras", "K majuscule en gras", "K majuscule en gras"
-fr, mathspeak, "𝐋", "L majuscule en gras", "L majuscule en gras", "L majuscule en gras"
-fr, mathspeak, "𝐌", "M majuscule en gras", "M majuscule en gras", "M majuscule en gras"
-fr, mathspeak, "𝐍", "N majuscule en gras", "N majuscule en gras", "N majuscule en gras"
-fr, mathspeak, "𝐎", "O majuscule en gras", "O majuscule en gras", "O majuscule en gras"
-fr, mathspeak, "𝐏", "P majuscule en gras", "P majuscule en gras", "P majuscule en gras"
-fr, mathspeak, "𝐐", "Q majuscule en gras", "Q majuscule en gras", "Q majuscule en gras"
-fr, mathspeak, "𝐑", "R majuscule en gras", "R majuscule en gras", "R majuscule en gras"
-fr, mathspeak, "𝐒", "S majuscule en gras", "S majuscule en gras", "S majuscule en gras"
-fr, mathspeak, "𝐓", "T majuscule en gras", "T majuscule en gras", "T majuscule en gras"
-fr, mathspeak, "𝐔", "U majuscule en gras", "U majuscule en gras", "U majuscule en gras"
-fr, mathspeak, "𝐕", "V majuscule en gras", "V majuscule en gras", "V majuscule en gras"
-fr, mathspeak, "𝐖", "W majuscule en gras", "W majuscule en gras", "W majuscule en gras"
-fr, mathspeak, "𝐗", "X majuscule en gras", "X majuscule en gras", "X majuscule en gras"
-fr, mathspeak, "𝐘", "Y majuscule en gras", "Y majuscule en gras", "Y majuscule en gras"
-fr, mathspeak, "𝐙", "Z majuscule en gras", "Z majuscule en gras", "Z majuscule en gras"
-fr, mathspeak, "𝐚", "a en gras", "a en gras", "a en gras"
-fr, mathspeak, "𝐛", "b en gras", "b en gras", "b en gras"
-fr, mathspeak, "𝐜", "c en gras", "c en gras", "c en gras"
-fr, mathspeak, "𝐝", "c en gras", "c en gras", "c en gras"
-fr, mathspeak, "𝐞", "e en gras", "e en gras", "e en gras"
-fr, mathspeak, "𝐟", "f en gras", "f en gras", "f en gras"
-fr, mathspeak, "𝐠", "g en gras", "g en gras", "g en gras"
-fr, mathspeak, "𝐡", "h en gras", "h en gras", "h en gras"
-fr, mathspeak, "𝐢", "i en gras", "i en gras", "i en gras"
-fr, mathspeak, "𝐣", "j en gras", "j en gras", "j en gras"
-fr, mathspeak, "𝐤", "k en gras", "k en gras", "k en gras"
-fr, mathspeak, "𝐥", "l en gras", "l en gras", "l en gras"
-fr, mathspeak, "𝐦", "m en gras", "m en gras", "m en gras"
-fr, mathspeak, "𝐧", "n en gras", "n en gras", "n en gras"
-fr, mathspeak, "𝐨", "o en gras", "o en gras", "o en gras"
-fr, mathspeak, "𝐩", "p en gras", "p en gras", "p en gras"
-fr, mathspeak, "𝐪", "q en gras", "q en gras", "q en gras"
-fr, mathspeak, "𝐫", "r en gras", "r en gras", "r en gras"
-fr, mathspeak, "𝐬", "s en gras", "s en gras", "s en gras"
-fr, mathspeak, "𝐭", "t en gras", "t en gras", "t en gras"
-fr, mathspeak, "𝐮", "u en gras", "u en gras", "u en gras"
-fr, mathspeak, "𝐯", "v en gras", "v en gras", "v en gras"
-fr, mathspeak, "𝐰", "w en gras", "w en gras", "w en gras"
-fr, mathspeak, "𝐱", "x en gras", "x en gras", "x en gras"
-fr, mathspeak, "𝐲", "y en gras", "y en gras", "y en gras"
-fr, mathspeak, "𝐳", "z en gras", "z en gras", "z en gras"
-fr, mathspeak, "𝑨", "A majuscule en italique gras", "A majuscule en italique gras", "A majuscule en italique gras"
-fr, mathspeak, "𝑩", "B majuscule en italique gras", "B majuscule en italique gras", "B majuscule en italique gras"
-fr, mathspeak, "𝑪", "C majuscule en italique gras", "C majuscule en italique gras", "C majuscule en italique gras"
-fr, mathspeak, "𝑫", "D majuscule en italique gras", "D majuscule en italique gras", "D majuscule en italique gras"
-fr, mathspeak, "𝑬", "E majuscule en italique gras", "E majuscule en italique gras", "E majuscule en italique gras"
-fr, mathspeak, "𝑭", "F majuscule en italique gras", "F majuscule en italique gras", "F majuscule en italique gras"
-fr, mathspeak, "𝑮", "G majuscule en italique gras", "G majuscule en italique gras", "G majuscule en italique gras"
-fr, mathspeak, "𝑯", "H majuscule en italique gras", "H majuscule en italique gras", "H majuscule en italique gras"
-fr, mathspeak, "𝑰", "I majuscule en italique gras", "I majuscule en italique gras", "I majuscule en italique gras"
-fr, mathspeak, "𝑱", "J majuscule en italique gras", "J majuscule en italique gras", "J majuscule en italique gras"
-fr, mathspeak, "𝑲", "K majuscule en italique gras", "K majuscule en italique gras", "K majuscule en italique gras"
-fr, mathspeak, "𝑳", "L majuscule en italique gras", "L majuscule en italique gras", "L majuscule en italique gras"
-fr, mathspeak, "𝑴", "M majuscule en italique gras", "M majuscule en italique gras", "M majuscule en italique gras"
-fr, mathspeak, "𝑵", "N majuscule en italique gras", "N majuscule en italique gras", "N majuscule en italique gras"
-fr, mathspeak, "𝑶", "O majuscule en italique gras", "O majuscule en italique gras", "O majuscule en italique gras"
-fr, mathspeak, "𝑷", "P majuscule en italique gras", "P majuscule en italique gras", "P majuscule en italique gras"
-fr, mathspeak, "𝑸", "Q majuscule en italique gras", "Q majuscule en italique gras", "Q majuscule en italique gras"
-fr, mathspeak, "𝑹", "R majuscule en italique gras", "R majuscule en italique gras", "R majuscule en italique gras"
-fr, mathspeak, "𝑺", "S majuscule en italique gras", "S majuscule en italique gras", "S majuscule en italique gras"
-fr, mathspeak, "𝑻", "T majuscule en italique gras", "T majuscule en italique gras", "T majuscule en italique gras"
-fr, mathspeak, "𝑼", "U majuscule en italique gras", "U majuscule en italique gras", "U majuscule en italique gras"
-fr, mathspeak, "𝑽", "V majuscule en italique gras", "V majuscule en italique gras", "V majuscule en italique gras"
-fr, mathspeak, "𝑾", "W majuscule en italique gras", "W majuscule en italique gras", "W majuscule en italique gras"
-fr, mathspeak, "𝑿", "X majuscule en italique gras", "X majuscule en italique gras", "X majuscule en italique gras"
-fr, mathspeak, "𝒀", "Y majuscule en italique gras", "Y majuscule en italique gras", "Y majuscule en italique gras"
-fr, mathspeak, "𝒁", "Z majuscule en italique gras", "Z majuscule en italique gras", "Z majuscule en italique gras"
-fr, mathspeak, "𝒂", "a en italique gras", "a en italique gras", "a en italique gras"
-fr, mathspeak, "𝒃", "b en italique gras", "b en italique gras", "b en italique gras"
-fr, mathspeak, "𝒄", "c en italique gras", "c en italique gras", "c en italique gras"
-fr, mathspeak, "𝒅", "d en italique gras", "d en italique gras", "d en italique gras"
-fr, mathspeak, "𝒆", "e en italique gras", "e en italique gras", "e en italique gras"
-fr, mathspeak, "𝒇", "f en italique gras", "f en italique gras", "f en italique gras"
-fr, mathspeak, "𝒈", "g en italique gras", "g en italique gras", "g en italique gras"
-fr, mathspeak, "𝒉", "h en italique gras", "h en italique gras", "h en italique gras"
-fr, mathspeak, "𝒊", "i en italique gras", "i en italique gras", "i en italique gras"
-fr, mathspeak, "𝒋", "j en italique gras", "j en italique gras", "j en italique gras"
-fr, mathspeak, "𝒌", "k en italique gras", "k en italique gras", "k en italique gras"
-fr, mathspeak, "𝒍", "l en italique gras", "l en italique gras", "l en italique gras"
-fr, mathspeak, "𝒎", "m en italique gras", "m en italique gras", "m en italique gras"
-fr, mathspeak, "𝒏", "n en italique gras", "n en italique gras", "n en italique gras"
-fr, mathspeak, "𝒐", "o en italique gras", "o en italique gras", "o en italique gras"
-fr, mathspeak, "𝒑", "p en italique gras", "p en italique gras", "p en italique gras"
-fr, mathspeak, "𝒒", "q en italique gras", "q en italique gras", "q en italique gras"
-fr, mathspeak, "𝒓", "r en italique gras", "r en italique gras", "r en italique gras"
-fr, mathspeak, "𝒔", "s en italique gras", "s en italique gras", "s en italique gras"
-fr, mathspeak, "𝒕", "t en italique gras", "t en italique gras", "t en italique gras"
-fr, mathspeak, "𝒖", "u en italique gras", "u en italique gras", "u en italique gras"
-fr, mathspeak, "𝒗", "v en italique gras", "v en italique gras", "v en italique gras"
-fr, mathspeak, "𝒘", "w en italique gras", "w en italique gras", "w en italique gras"
-fr, mathspeak, "𝒙", "x en italique gras", "x en italique gras", "x en italique gras"
-fr, mathspeak, "𝒚", "y en italique gras", "y en italique gras", "y en italique gras"
-fr, mathspeak, "𝒛", "z en italique gras", "z en italique gras", "z en italique gras"
-fr, mathspeak, "𝓐", "A majuscule en script gras", "A majuscule en script gras", "A majuscule en script gras"
-fr, mathspeak, "𝓑", "B majuscule en script gras", "B majuscule en script gras", "B majuscule en script gras"
-fr, mathspeak, "𝓒", "C majuscule en script gras", "C majuscule en script gras", "C majuscule en script gras"
-fr, mathspeak, "𝓓", "D majuscule en script gras", "D majuscule en script gras", "D majuscule en script gras"
-fr, mathspeak, "𝓔", "E majuscule en script gras", "E majuscule en script gras", "E majuscule en script gras"
-fr, mathspeak, "𝓕", "F majuscule en script gras", "F majuscule en script gras", "F majuscule en script gras"
-fr, mathspeak, "𝓖", "G majuscule en script gras", "G majuscule en script gras", "G majuscule en script gras"
-fr, mathspeak, "𝓗", "H majuscule en script gras", "H majuscule en script gras", "H majuscule en script gras"
-fr, mathspeak, "𝓘", "I majuscule en script gras", "I majuscule en script gras", "I majuscule en script gras"
-fr, mathspeak, "𝓙", "J majuscule en script gras", "J majuscule en script gras", "J majuscule en script gras"
-fr, mathspeak, "𝓚", "K majuscule en script gras", "K majuscule en script gras", "K majuscule en script gras"
-fr, mathspeak, "𝓛", "L majuscule en script gras", "L majuscule en script gras", "L majuscule en script gras"
-fr, mathspeak, "𝓜", "M majuscule en script gras", "M majuscule en script gras", "M majuscule en script gras"
-fr, mathspeak, "𝓝", "N majuscule en script gras", "N majuscule en script gras", "N majuscule en script gras"
-fr, mathspeak, "𝓞", "O majuscule en script gras", "O majuscule en script gras", "O majuscule en script gras"
-fr, mathspeak, "𝓟", "P majuscule en script gras", "P majuscule en script gras", "P majuscule en script gras"
-fr, mathspeak, "𝓠", "Q majuscule en script gras", "Q majuscule en script gras", "Q majuscule en script gras"
-fr, mathspeak, "𝓡", "R majuscule en script gras", "R majuscule en script gras", "R majuscule en script gras"
-fr, mathspeak, "𝓢", "S majuscule en script gras", "S majuscule en script gras", "S majuscule en script gras"
-fr, mathspeak, "𝓣", "T majuscule en script gras", "T majuscule en script gras", "T majuscule en script gras"
-fr, mathspeak, "𝓤", "U majuscule en script gras", "U majuscule en script gras", "U majuscule en script gras"
-fr, mathspeak, "𝓥", "V majuscule en script gras", "V majuscule en script gras", "V majuscule en script gras"
-fr, mathspeak, "𝓦", "W majuscule en script gras", "W majuscule en script gras", "W majuscule en script gras"
-fr, mathspeak, "𝓧", "X majuscule en script gras", "X majuscule en script gras", "X majuscule en script gras"
-fr, mathspeak, "𝓨", "Y majuscule en script gras", "Y majuscule en script gras", "Y majuscule en script gras"
-fr, mathspeak, "𝓩", "Z majuscule en script gras", "Z majuscule en script gras", "Z majuscule en script gras"
-fr, mathspeak, "𝓪", "a en script gras", "a en script gras", "a en script gras"
-fr, mathspeak, "𝓫", "b en script gras", "b en script gras", "b en script gras"
-fr, mathspeak, "𝓬", "c en script gras", "c en script gras", "c en script gras"
-fr, mathspeak, "𝓭", "d en script gras", "d en script gras", "d en script gras"
-fr, mathspeak, "𝓮", "e en script gras", "e en script gras", "e en script gras"
-fr, mathspeak, "𝓯", "f en script gras", "f en script gras", "f en script gras"
-fr, mathspeak, "𝓰", "g en script gras", "g en script gras", "g en script gras"
-fr, mathspeak, "𝓱", "h en script gras", "h en script gras", "h en script gras"
-fr, mathspeak, "𝓲", "i en script gras", "i en script gras", "i en script gras"
-fr, mathspeak, "𝓳", "j en script gras", "j en script gras", "j en script gras"
-fr, mathspeak, "𝓴", "k en script gras", "k en script gras", "k en script gras"
-fr, mathspeak, "𝓵", "l en script gras", "l en script gras", "l en script gras"
-fr, mathspeak, "𝓶", "m en script gras", "m en script gras", "m en script gras"
-fr, mathspeak, "𝓷", "n en script gras", "n en script gras", "n en script gras"
-fr, mathspeak, "𝓸", "o en script gras", "o en script gras", "o en script gras"
-fr, mathspeak, "𝓹", "p en script gras", "p en script gras", "p en script gras"
-fr, mathspeak, "𝓺", "q en script gras", "q en script gras", "q en script gras"
-fr, mathspeak, "𝓻", "r en script gras", "r en script gras", "r en script gras"
-fr, mathspeak, "𝓼", "s en script gras", "s en script gras", "s en script gras"
-fr, mathspeak, "𝓽", "t en script gras", "t en script gras", "t en script gras"
-fr, mathspeak, "𝓾", "u en script gras", "u en script gras", "u en script gras"
-fr, mathspeak, "𝓿", "v en script gras", "v en script gras", "v en script gras"
-fr, mathspeak, "𝔀", "w en script gras", "w en script gras", "w en script gras"
-fr, mathspeak, "𝔁", "x en script gras", "x en script gras", "x en script gras"
-fr, mathspeak, "𝔂", "y en script gras", "y en script gras", "y en script gras"
-fr, mathspeak, "𝔃", "z en script gras", "z en script gras", "z en script gras"
-fr, mathspeak, "𝔸", "A majuscule ajouré", "A majuscule ajouré", "A majuscule ajouré"
-fr, mathspeak, "𝔹", "B majuscule ajouré", "B majuscule ajouré", "B majuscule ajouré"
-fr, mathspeak, "ℂ", "C majuscule ajouré", "C majuscule ajouré", "C majuscule ajouré"
-fr, mathspeak, "𝔻", "D majuscule ajouré", "D majuscule ajouré", "D majuscule ajouré"
-fr, mathspeak, "𝔼", "E majuscule ajouré", "E majuscule ajouré", "E majuscule ajouré"
-fr, mathspeak, "𝔽", "F majuscule ajouré", "F majuscule ajouré", "F majuscule ajouré"
-fr, mathspeak, "𝔾", "G majuscule ajouré", "G majuscule ajouré", "G majuscule ajouré"
-fr, mathspeak, "ℍ", "H majuscule ajouré", "H majuscule ajouré", "H majuscule ajouré"
-fr, mathspeak, "𝕀", "I majuscule ajouré", "I majuscule ajouré", "I majuscule ajouré"
-fr, mathspeak, "𝕁", "J majuscule ajouré", "J majuscule ajouré", "J majuscule ajouré"
-fr, mathspeak, "𝕂", "K majuscule ajouré", "K majuscule ajouré", "K majuscule ajouré"
-fr, mathspeak, "𝕃", "L majuscule ajouré", "L majuscule ajouré", "L majuscule ajouré"
-fr, mathspeak, "𝕄", "M majuscule ajouré", "M majuscule ajouré", "M majuscule ajouré"
-fr, mathspeak, "ℕ", "N majuscule ajouré", "N majuscule ajouré", "N majuscule ajouré"
-fr, mathspeak, "𝕆", "O majuscule ajouré", "O majuscule ajouré", "O majuscule ajouré"
-fr, mathspeak, "ℙ", "P majuscule ajouré", "P majuscule ajouré", "P majuscule ajouré"
-fr, mathspeak, "ℚ", "Q majuscule ajouré", "Q majuscule ajouré", "Q majuscule ajouré"
-fr, mathspeak, "ℝ", "R majuscule ajouré", "R majuscule ajouré", "R majuscule ajouré"
-fr, mathspeak, "𝕊", "S majuscule ajouré", "S majuscule ajouré", "S majuscule ajouré"
-fr, mathspeak, "𝕋", "T majuscule ajouré", "T majuscule ajouré", "T majuscule ajouré"
-fr, mathspeak, "𝕌", "U majuscule ajouré", "U majuscule ajouré", "U majuscule ajouré"
-fr, mathspeak, "𝕍", "V majuscule ajouré", "V majuscule ajouré", "V majuscule ajouré"
-fr, mathspeak, "𝕎", "W majuscule ajouré", "W majuscule ajouré", "W majuscule ajouré"
-fr, mathspeak, "𝕏", "X majuscule ajouré", "X majuscule ajouré", "X majuscule ajouré"
-fr, mathspeak, "𝕐", "Y majuscule ajouré", "Y majuscule ajouré", "Y majuscule ajouré"
-fr, mathspeak, "ℤ", "Z majuscule ajouré", "Z majuscule ajouré", "Z majuscule ajouré"
-fr, mathspeak, "𝕒", "a ajouré", "a ajouré", "a ajouré"
-fr, mathspeak, "𝕓", "b ajouré", "b ajouré", "b ajouré"
-fr, mathspeak, "𝕔", "c ajouré", "c ajouré", "c ajouré"
-fr, mathspeak, "𝕕", "d ajouré", "d ajouré", "d ajouré"
-fr, mathspeak, "𝕖", "e ajouré", "e ajouré", "e ajouré"
-fr, mathspeak, "𝕗", "f ajouré", "f ajouré", "f ajouré"
-fr, mathspeak, "𝕘", "g ajouré", "g ajouré", "g ajouré"
-fr, mathspeak, "𝕙", "h ajouré", "h ajouré", "h ajouré"
-fr, mathspeak, "𝕚", "i ajouré", "i ajouré", "i ajouré"
-fr, mathspeak, "𝕛", "j ajouré", "j ajouré", "j ajouré"
-fr, mathspeak, "𝕜", "k ajouré", "k ajouré", "k ajouré"
-fr, mathspeak, "𝕝", "l ajouré", "l ajouré", "l ajouré"
-fr, mathspeak, "𝕞", "m ajouré", "m ajouré", "m ajouré"
-fr, mathspeak, "𝕟", "n ajouré", "n ajouré", "n ajouré"
-fr, mathspeak, "𝕠", "o ajouré", "o ajouré", "o ajouré"
-fr, mathspeak, "𝕡", "p ajouré", "p ajouré", "p ajouré"
-fr, mathspeak, "𝕢", "q ajouré", "q ajouré", "q ajouré"
-fr, mathspeak, "𝕣", "r ajouré", "r ajouré", "r ajouré"
-fr, mathspeak, "𝕤", "s ajouré", "s ajouré", "s ajouré"
-fr, mathspeak, "𝕥", "t ajouré", "t ajouré", "t ajouré"
-fr, mathspeak, "𝕦", "u ajouré", "u ajouré", "u ajouré"
-fr, mathspeak, "𝕧", "v ajouré", "v ajouré", "v ajouré"
-fr, mathspeak, "𝕨", "w ajouré", "w ajouré", "w ajouré"
-fr, mathspeak, "𝕩", "x ajouré", "x ajouré", "x ajouré"
-fr, mathspeak, "𝕪", "y ajouré", "y ajouré", "y ajouré"
-fr, mathspeak, "𝕫", "z ajouré", "z ajouré", "z ajouré"
-fr, mathspeak, "𝔄", "A majuscule en gothique", "A majuscule en gothique", "A majuscule en gothique"
-fr, mathspeak, "𝔅", "B majuscule en gothique", "B majuscule en gothique", "B majuscule en gothique"
-fr, mathspeak, "ℭ", "C majuscule en gothique", "C majuscule en gothique", "C majuscule en gothique"
-fr, mathspeak, "𝔇", "D majuscule en gothique", "D majuscule en gothique", "D majuscule en gothique"
-fr, mathspeak, "𝔈", "E majuscule en gothique", "E majuscule en gothique", "E majuscule en gothique"
-fr, mathspeak, "𝔉", "F majuscule en gothique", "F majuscule en gothique", "F majuscule en gothique"
-fr, mathspeak, "𝔊", "G majuscule en gothique", "G majuscule en gothique", "G majuscule en gothique"
-fr, mathspeak, "ℌ", "H majuscule en gothique", "H majuscule en gothique", "H majuscule en gothique"
-fr, mathspeak, "ℑ", "I majuscule en gothique", "I majuscule en gothique", "I majuscule en gothique"
-fr, mathspeak, "𝔍", "J majuscule en gothique", "J majuscule en gothique", "J majuscule en gothique"
-fr, mathspeak, "𝔎", "K majuscule en gothique", "K majuscule en gothique", "K majuscule en gothique"
-fr, mathspeak, "𝔏", "L majuscule en gothique", "L majuscule en gothique", "L majuscule en gothique"
-fr, mathspeak, "𝔐", "M majuscule en gothique", "M majuscule en gothique", "M majuscule en gothique"
-fr, mathspeak, "𝔑", "N majuscule en gothique", "N majuscule en gothique", "N majuscule en gothique"
-fr, mathspeak, "𝔒", "O majuscule en gothique", "O majuscule en gothique", "O majuscule en gothique"
-fr, mathspeak, "𝔓", "P majuscule en gothique", "P majuscule en gothique", "P majuscule en gothique"
-fr, mathspeak, "𝔔", "Q majuscule en gothique", "Q majuscule en gothique", "Q majuscule en gothique"
-fr, mathspeak, "ℜ", "R majuscule en gothique", "R majuscule en gothique", "R majuscule en gothique"
-fr, mathspeak, "𝔖", "S majuscule en gothique", "S majuscule en gothique", "S majuscule en gothique"
-fr, mathspeak, "𝔗", "T majuscule en gothique", "T majuscule en gothique", "T majuscule en gothique"
-fr, mathspeak, "𝔘", "U majuscule en gothique", "U majuscule en gothique", "U majuscule en gothique"
-fr, mathspeak, "𝔙", "V majuscule en gothique", "V majuscule en gothique", "V majuscule en gothique"
-fr, mathspeak, "𝔚", "W majuscule en gothique", "W majuscule en gothique", "W majuscule en gothique"
-fr, mathspeak, "𝔛", "X majuscule en gothique", "X majuscule en gothique", "X majuscule en gothique"
-fr, mathspeak, "𝔜", "Y majuscule en gothique", "Y majuscule en gothique", "Y majuscule en gothique"
-fr, mathspeak, "ℨ", "Z majuscule en gothique", "Z majuscule en gothique", "Z majuscule en gothique"
-fr, mathspeak, "𝔞", "a en gothique", "a en gothique", "a en gothique"
-fr, mathspeak, "𝔟", "b en gothique", "b en gothique", "b en gothique"
-fr, mathspeak, "𝔠", "c en gothique", "c en gothique", "c en gothique"
-fr, mathspeak, "𝔡", "d en gothique", "d en gothique", "d en gothique"
-fr, mathspeak, "𝔢", "e en gothique", "e en gothique", "e en gothique"
-fr, mathspeak, "𝔣", "f en gothique", "f en gothique", "f en gothique"
-fr, mathspeak, "𝔤", "g en gothique", "g en gothique", "g en gothique"
-fr, mathspeak, "𝔥", "h en gothique", "h en gothique", "h en gothique"
-fr, mathspeak, "𝔦", "i en gothique", "i en gothique", "i en gothique"
-fr, mathspeak, "𝔧", "j en gothique", "j en gothique", "j en gothique"
-fr, mathspeak, "𝔨", "k en gothique", "k en gothique", "k en gothique"
-fr, mathspeak, "𝔩", "l en gothique", "l en gothique", "l en gothique"
-fr, mathspeak, "𝔪", "m en gothique", "m en gothique", "m en gothique"
-fr, mathspeak, "𝔫", "n en gothique", "n en gothique", "n en gothique"
-fr, mathspeak, "𝔬", "o en gothique", "o en gothique", "o en gothique"
-fr, mathspeak, "𝔭", "p en gothique", "p en gothique", "p en gothique"
-fr, mathspeak, "𝔮", "q en gothique", "q en gothique", "q en gothique"
-fr, mathspeak, "𝔯", "r en gothique", "r en gothique", "r en gothique"
-fr, mathspeak, "𝔰", "s en gothique", "s en gothique", "s en gothique"
-fr, mathspeak, "𝔱", "t en gothique", "t en gothique", "t en gothique"
-fr, mathspeak, "𝔲", "u en gothique", "u en gothique", "u en gothique"
-fr, mathspeak, "𝔳", "v en gothique", "v en gothique", "v en gothique"
-fr, mathspeak, "𝔴", "w en gothique", "w en gothique", "w en gothique"
-fr, mathspeak, "𝔵", "x en gothique", "x en gothique", "x en gothique"
-fr, mathspeak, "𝔶", "y en gothique", "y en gothique", "y en gothique"
-fr, mathspeak, "𝔷", "z en gothique", "z en gothique", "z en gothique"
-fr, mathspeak, "𝐴", "A majuscule en italique", "A majuscule en italique", "A majuscule en italique"
-fr, mathspeak, "𝐵", "B majuscule en italique", "B majuscule en italique", "B majuscule en italique"
-fr, mathspeak, "𝐶", "C majuscule en italique", "C majuscule en italique", "C majuscule en italique"
-fr, mathspeak, "𝐷", "D majuscule en italique", "D majuscule en italique", "D majuscule en italique"
-fr, mathspeak, "𝐸", "E majuscule en italique", "E majuscule en italique", "E majuscule en italique"
-fr, mathspeak, "𝐹", "F majuscule en italique", "F majuscule en italique", "F majuscule en italique"
-fr, mathspeak, "𝐺", "G majuscule en italique", "G majuscule en italique", "G majuscule en italique"
-fr, mathspeak, "𝐻", "H majuscule en italique", "H majuscule en italique", "H majuscule en italique"
-fr, mathspeak, "𝐼", "I majuscule en italique", "I majuscule en italique", "I majuscule en italique"
-fr, mathspeak, "𝐽", "J majuscule en italique", "J majuscule en italique", "J majuscule en italique"
-fr, mathspeak, "𝐾", "K majuscule en italique", "K majuscule en italique", "K majuscule en italique"
-fr, mathspeak, "𝐿", "L majuscule en italique", "L majuscule en italique", "L majuscule en italique"
-fr, mathspeak, "𝑀", "M majuscule en italique", "M majuscule en italique", "M majuscule en italique"
-fr, mathspeak, "𝑁", "N majuscule en italique", "N majuscule en italique", "N majuscule en italique"
-fr, mathspeak, "𝑂", "O majuscule en italique", "O majuscule en italique", "O majuscule en italique"
-fr, mathspeak, "𝑃", "P majuscule en italique", "P majuscule en italique", "P majuscule en italique"
-fr, mathspeak, "𝑄", "Q majuscule en italique", "Q majuscule en italique", "Q majuscule en italique"
-fr, mathspeak, "𝑅", "R majuscule en italique", "R majuscule en italique", "R majuscule en italique"
-fr, mathspeak, "𝑆", "S majuscule en italique", "S majuscule en italique", "S majuscule en italique"
-fr, mathspeak, "𝑇", "T majuscule en italique", "T majuscule en italique", "T majuscule en italique"
-fr, mathspeak, "𝑈", "U majuscule en italique", "U majuscule en italique", "U majuscule en italique"
-fr, mathspeak, "𝑉", "V majuscule en italique", "V majuscule en italique", "V majuscule en italique"
-fr, mathspeak, "𝑊", "W majuscule en italique", "W majuscule en italique", "W majuscule en italique"
-fr, mathspeak, "𝑋", "X majuscule en italique", "X majuscule en italique", "X majuscule en italique"
-fr, mathspeak, "𝑌", "Y majuscule en italique", "Y majuscule en italique", "Y majuscule en italique"
-fr, mathspeak, "𝑍", "Z majuscule en italique", "Z majuscule en italique", "Z majuscule en italique"
-fr, mathspeak, "𝑎", "a en italique", "a en italique", "a en italique"
-fr, mathspeak, "𝑏", "b en italique", "b en italique", "b en italique"
-fr, mathspeak, "𝑐", "c en italique", "c en italique", "c en italique"
-fr, mathspeak, "𝑑", "d en italique", "d en italique", "d en italique"
-fr, mathspeak, "𝑒", "e en italique", "e en italique", "e en italique"
-fr, mathspeak, "𝑓", "f en italique", "f en italique", "f en italique"
-fr, mathspeak, "𝑔", "g en italique", "g en italique", "g en italique"
-fr, mathspeak, "ℎ", "constante de planck", "constante de planck", "constante de planck"
-fr, mathspeak, "𝑖", "i en italique", "i en italique", "i en italique"
-fr, mathspeak, "𝑗", "j en italique", "j en italique", "j en italique"
-fr, mathspeak, "𝑘", "k en italique", "k en italique", "k en italique"
-fr, mathspeak, "𝑙", "l en italique", "l en italique", "l en italique"
-fr, mathspeak, "𝑚", "m en italique", "m en italique", "m en italique"
-fr, mathspeak, "𝑛", "n en italique", "n en italique", "n en italique"
-fr, mathspeak, "𝑜", "o en italique", "o en italique", "o en italique"
-fr, mathspeak, "𝑝", "p en italique", "p en italique", "p en italique"
-fr, mathspeak, "𝑞", "q en italique", "q en italique", "q en italique"
-fr, mathspeak, "𝑟", "r en italique", "r en italique", "r en italique"
-fr, mathspeak, "𝑠", "s en italique", "s en italique", "s en italique"
-fr, mathspeak, "𝑡", "t en italique", "t en italique", "t en italique"
-fr, mathspeak, "𝑢", "u en italique", "u en italique", "u en italique"
-fr, mathspeak, "𝑣", "v en italique", "v en italique", "v en italique"
-fr, mathspeak, "𝑤", "w en italique", "w en italique", "w en italique"
-fr, mathspeak, "𝑥", "x en italique", "x en italique", "x en italique"
-fr, mathspeak, "𝑦", "y en italique", "y en italique", "y en italique"
-fr, mathspeak, "𝑧", "z en italique", "z en italique", "z en italique"
-fr, mathspeak, "𝙰", "A majuscule en chasse fixe", "A majuscule en chasse fixe", "A majuscule en chasse fixe"
-fr, mathspeak, "𝙱", "B majuscule en chasse fixe", "B majuscule en chasse fixe", "B majuscule en chasse fixe"
-fr, mathspeak, "𝙲", "C majuscule en chasse fixe", "C majuscule en chasse fixe", "C majuscule en chasse fixe"
-fr, mathspeak, "𝙳", "D majuscule en chasse fixe", "D majuscule en chasse fixe", "D majuscule en chasse fixe"
-fr, mathspeak, "𝙴", "E majuscule en chasse fixe", "E majuscule en chasse fixe", "E majuscule en chasse fixe"
-fr, mathspeak, "𝙵", "F majuscule en chasse fixe", "F majuscule en chasse fixe", "F majuscule en chasse fixe"
-fr, mathspeak, "𝙶", "G majuscule en chasse fixe", "G majuscule en chasse fixe", "G majuscule en chasse fixe"
-fr, mathspeak, "𝙷", "H majuscule en chasse fixe", "H majuscule en chasse fixe", "H majuscule en chasse fixe"
-fr, mathspeak, "𝙸", "I majuscule en chasse fixe", "I majuscule en chasse fixe", "I majuscule en chasse fixe"
-fr, mathspeak, "𝙹", "J majuscule en chasse fixe", "J majuscule en chasse fixe", "J majuscule en chasse fixe"
-fr, mathspeak, "𝙺", "K majuscule en chasse fixe", "K majuscule en chasse fixe", "K majuscule en chasse fixe"
-fr, mathspeak, "𝙻", "L majuscule en chasse fixe", "L majuscule en chasse fixe", "L majuscule en chasse fixe"
-fr, mathspeak, "𝙼", "M majuscule en chasse fixe", "M majuscule en chasse fixe", "M majuscule en chasse fixe"
-fr, mathspeak, "𝙽", "N majuscule en chasse fixe", "N majuscule en chasse fixe", "N majuscule en chasse fixe"
-fr, mathspeak, "𝙾", "O majuscule en chasse fixe", "O majuscule en chasse fixe", "O majuscule en chasse fixe"
-fr, mathspeak, "𝙿", "P majuscule en chasse fixe", "P majuscule en chasse fixe", "P majuscule en chasse fixe"
-fr, mathspeak, "𝚀", "Q majuscule en chasse fixe", "Q majuscule en chasse fixe", "Q majuscule en chasse fixe"
-fr, mathspeak, "𝚁", "R majuscule en chasse fixe", "R majuscule en chasse fixe", "R majuscule en chasse fixe"
-fr, mathspeak, "𝚂", "S majuscule en chasse fixe", "S majuscule en chasse fixe", "S majuscule en chasse fixe"
-fr, mathspeak, "𝚃", "T majuscule en chasse fixe", "T majuscule en chasse fixe", "T majuscule en chasse fixe"
-fr, mathspeak, "𝚄", "U majuscule en chasse fixe", "U majuscule en chasse fixe", "U majuscule en chasse fixe"
-fr, mathspeak, "𝚅", "V majuscule en chasse fixe", "V majuscule en chasse fixe", "V majuscule en chasse fixe"
-fr, mathspeak, "𝚆", "W majuscule en chasse fixe", "W majuscule en chasse fixe", "W majuscule en chasse fixe"
-fr, mathspeak, "𝚇", "X majuscule en chasse fixe", "X majuscule en chasse fixe", "X majuscule en chasse fixe"
-fr, mathspeak, "𝚈", "Y majuscule en chasse fixe", "Y majuscule en chasse fixe", "Y majuscule en chasse fixe"
-fr, mathspeak, "𝚉", "Z majuscule en chasse fixe", "Z majuscule en chasse fixe", "Z majuscule en chasse fixe"
-fr, mathspeak, "𝚊", "a en chasse fixe", "a en chasse fixe", "a en chasse fixe"
-fr, mathspeak, "𝚋", "b en chasse fixe", "b en chasse fixe", "b en chasse fixe"
-fr, mathspeak, "𝚌", "c en chasse fixe", "c en chasse fixe", "c en chasse fixe"
-fr, mathspeak, "𝚍", "d en chasse fixe", "d en chasse fixe", "d en chasse fixe"
-fr, mathspeak, "𝚎", "e en chasse fixe", "e en chasse fixe", "e en chasse fixe"
-fr, mathspeak, "𝚏", "f en chasse fixe", "f en chasse fixe", "f en chasse fixe"
-fr, mathspeak, "𝚐", "g en chasse fixe", "g en chasse fixe", "g en chasse fixe"
-fr, mathspeak, "𝚑", "h en chasse fixe", "h en chasse fixe", "h en chasse fixe"
-fr, mathspeak, "𝚒", "i en chasse fixe", "i en chasse fixe", "i en chasse fixe"
-fr, mathspeak, "𝚓", "j en chasse fixe", "j en chasse fixe", "j en chasse fixe"
-fr, mathspeak, "𝚔", "k en chasse fixe", "k en chasse fixe", "k en chasse fixe"
-fr, mathspeak, "𝚕", "l en chasse fixe", "l en chasse fixe", "l en chasse fixe"
-fr, mathspeak, "𝚖", "m en chasse fixe", "m en chasse fixe", "m en chasse fixe"
-fr, mathspeak, "𝚗", "n en chasse fixe", "n en chasse fixe", "n en chasse fixe"
-fr, mathspeak, "𝚘", "o en chasse fixe", "o en chasse fixe", "o en chasse fixe"
-fr, mathspeak, "𝚙", "p en chasse fixe", "p en chasse fixe", "p en chasse fixe"
-fr, mathspeak, "𝚚", "q en chasse fixe", "q en chasse fixe", "q en chasse fixe"
-fr, mathspeak, "𝚛", "r en chasse fixe", "r en chasse fixe", "r en chasse fixe"
-fr, mathspeak, "𝚜", "s en chasse fixe", "s en chasse fixe", "s en chasse fixe"
-fr, mathspeak, "𝚝", "t en chasse fixe", "t en chasse fixe", "t en chasse fixe"
-fr, mathspeak, "𝚞", "u en chasse fixe", "u en chasse fixe", "u en chasse fixe"
-fr, mathspeak, "𝚟", "v en chasse fixe", "v en chasse fixe", "v en chasse fixe"
-fr, mathspeak, "𝚠", "w en chasse fixe", "w en chasse fixe", "w en chasse fixe"
-fr, mathspeak, "𝚡", "x en chasse fixe", "x en chasse fixe", "x en chasse fixe"
-fr, mathspeak, "𝚢", "y en chasse fixe", "y en chasse fixe", "y en chasse fixe"
-fr, mathspeak, "𝚣", "z en chasse fixe", "z en chasse fixe", "z en chasse fixe"
-fr, mathspeak, "𝗔", "A majuscule en sans empattement gras", "A majuscule en sans empattement gras", "A majuscule en sans empattement gras"
-fr, mathspeak, "𝗕", "B majuscule en sans empattement gras", "B majuscule en sans empattement gras", "B majuscule en sans empattement gras"
-fr, mathspeak, "𝗖", "C majuscule en sans empattement gras", "C majuscule en sans empattement gras", "C majuscule en sans empattement gras"
-fr, mathspeak, "𝗗", "D majuscule en sans empattement gras", "D majuscule en sans empattement gras", "D majuscule en sans empattement gras"
-fr, mathspeak, "𝗘", "E majuscule en sans empattement gras", "E majuscule en sans empattement gras", "E majuscule en sans empattement gras"
-fr, mathspeak, "𝗙", "F majuscule en sans empattement gras", "F majuscule en sans empattement gras", "F majuscule en sans empattement gras"
-fr, mathspeak, "𝗚", "G majuscule en sans empattement gras", "G majuscule en sans empattement gras", "G majuscule en sans empattement gras"
-fr, mathspeak, "𝗛", "H majuscule en sans empattement gras", "H majuscule en sans empattement gras", "H majuscule en sans empattement gras"
-fr, mathspeak, "𝗜", "I majuscule en sans empattement gras", "I majuscule en sans empattement gras", "I majuscule en sans empattement gras"
-fr, mathspeak, "𝗝", "J majuscule en sans empattement gras", "J majuscule en sans empattement gras", "J majuscule en sans empattement gras"
-fr, mathspeak, "𝗞", "K majuscule en sans empattement gras", "K majuscule en sans empattement gras", "K majuscule en sans empattement gras"
-fr, mathspeak, "𝗟", "L majuscule en sans empattement gras", "L majuscule en sans empattement gras", "L majuscule en sans empattement gras"
-fr, mathspeak, "𝗠", "M majuscule en sans empattement gras", "M majuscule en sans empattement gras", "M majuscule en sans empattement gras"
-fr, mathspeak, "𝗡", "N majuscule en sans empattement gras", "N majuscule en sans empattement gras", "N majuscule en sans empattement gras"
-fr, mathspeak, "𝗢", "O majuscule en sans empattement gras", "O majuscule en sans empattement gras", "O majuscule en sans empattement gras"
-fr, mathspeak, "𝗣", "P majuscule en sans empattement gras", "P majuscule en sans empattement gras", "P majuscule en sans empattement gras"
-fr, mathspeak, "𝗤", "Q majuscule en sans empattement gras", "Q majuscule en sans empattement gras", "Q majuscule en sans empattement gras"
-fr, mathspeak, "𝗥", "R majuscule en sans empattement gras", "R majuscule en sans empattement gras", "R majuscule en sans empattement gras"
-fr, mathspeak, "𝗦", "S majuscule en sans empattement gras", "S majuscule en sans empattement gras", "S majuscule en sans empattement gras"
-fr, mathspeak, "𝗧", "T majuscule en sans empattement gras", "T majuscule en sans empattement gras", "T majuscule en sans empattement gras"
-fr, mathspeak, "𝗨", "U majuscule en sans empattement gras", "U majuscule en sans empattement gras", "U majuscule en sans empattement gras"
-fr, mathspeak, "𝗩", "V majuscule en sans empattement gras", "V majuscule en sans empattement gras", "V majuscule en sans empattement gras"
-fr, mathspeak, "𝗪", "W majuscule en sans empattement gras", "W majuscule en sans empattement gras", "W majuscule en sans empattement gras"
-fr, mathspeak, "𝗫", "X majuscule en sans empattement gras", "X majuscule en sans empattement gras", "X majuscule en sans empattement gras"
-fr, mathspeak, "𝗬", "Y majuscule en sans empattement gras", "Y majuscule en sans empattement gras", "Y majuscule en sans empattement gras"
-fr, mathspeak, "𝗭", "Z majuscule en sans empattement gras", "Z majuscule en sans empattement gras", "Z majuscule en sans empattement gras"
-fr, mathspeak, "𝗮", "a en sans empattement gras", "a en sans empattement gras", "a en sans empattement gras"
-fr, mathspeak, "𝗯", "b en sans empattement gras", "b en sans empattement gras", "b en sans empattement gras"
-fr, mathspeak, "𝗰", "c en sans empattement gras", "c en sans empattement gras", "c en sans empattement gras"
-fr, mathspeak, "𝗱", "d en sans empattement gras", "d en sans empattement gras", "d en sans empattement gras"
-fr, mathspeak, "𝗲", "e en sans empattement gras", "e en sans empattement gras", "e en sans empattement gras"
-fr, mathspeak, "𝗳", "f en sans empattement gras", "f en sans empattement gras", "f en sans empattement gras"
-fr, mathspeak, "𝗴", "g en sans empattement gras", "g en sans empattement gras", "g en sans empattement gras"
-fr, mathspeak, "𝗵", "h en sans empattement gras", "h en sans empattement gras", "h en sans empattement gras"
-fr, mathspeak, "𝗶", "i en sans empattement gras", "i en sans empattement gras", "i en sans empattement gras"
-fr, mathspeak, "𝗷", "j en sans empattement gras", "j en sans empattement gras", "j en sans empattement gras"
-fr, mathspeak, "𝗸", "k en sans empattement gras", "k en sans empattement gras", "k en sans empattement gras"
-fr, mathspeak, "𝗹", "l en sans empattement gras", "l en sans empattement gras", "l en sans empattement gras"
-fr, mathspeak, "𝗺", "m en sans empattement gras", "m en sans empattement gras", "m en sans empattement gras"
-fr, mathspeak, "𝗻", "n en sans empattement gras", "n en sans empattement gras", "n en sans empattement gras"
-fr, mathspeak, "𝗼", "o en sans empattement gras", "o en sans empattement gras", "o en sans empattement gras"
-fr, mathspeak, "𝗽", "p en sans empattement gras", "p en sans empattement gras", "p en sans empattement gras"
-fr, mathspeak, "𝗾", "q en sans empattement gras", "q en sans empattement gras", "q en sans empattement gras"
-fr, mathspeak, "𝗿", "r en sans empattement gras", "r en sans empattement gras", "r en sans empattement gras"
-fr, mathspeak, "𝘀", "s en sans empattement gras", "s en sans empattement gras", "s en sans empattement gras"
-fr, mathspeak, "𝘁", "t en sans empattement gras", "t en sans empattement gras", "t en sans empattement gras"
-fr, mathspeak, "𝘂", "u en sans empattement gras", "u en sans empattement gras", "u en sans empattement gras"
-fr, mathspeak, "𝘃", "v en sans empattement gras", "v en sans empattement gras", "v en sans empattement gras"
-fr, mathspeak, "𝘄", "w en sans empattement gras", "w en sans empattement gras", "w en sans empattement gras"
-fr, mathspeak, "𝘅", "x en sans empattement gras", "x en sans empattement gras", "x en sans empattement gras"
-fr, mathspeak, "𝘆", "y en sans empattement gras", "y en sans empattement gras", "y en sans empattement gras"
-fr, mathspeak, "𝘇", "z en sans empattement gras", "z en sans empattement gras", "z en sans empattement gras"
-fr, mathspeak, "𝘈", "A majuscule en sans empattement italique", "A majuscule en sans empattement italique", "A majuscule en sans empattement italique"
-fr, mathspeak, "𝘉", "B majuscule en sans empattement italique", "B majuscule en sans empattement italique", "B majuscule en sans empattement italique"
-fr, mathspeak, "𝘊", "C majuscule en sans empattement italique", "C majuscule en sans empattement italique", "C majuscule en sans empattement italique"
-fr, mathspeak, "𝘋", "D majuscule en sans empattement italique", "D majuscule en sans empattement italique", "D majuscule en sans empattement italique"
-fr, mathspeak, "𝘌", "E majuscule en sans empattement italique", "E majuscule en sans empattement italique", "E majuscule en sans empattement italique"
-fr, mathspeak, "𝘍", "F majuscule en sans empattement italique", "F majuscule en sans empattement italique", "F majuscule en sans empattement italique"
-fr, mathspeak, "𝘎", "G majuscule en sans empattement italique", "G majuscule en sans empattement italique", "G majuscule en sans empattement italique"
-fr, mathspeak, "𝘏", "H majuscule en sans empattement italique", "H majuscule en sans empattement italique", "H majuscule en sans empattement italique"
-fr, mathspeak, "𝘐", "I majuscule en sans empattement italique", "I majuscule en sans empattement italique", "I majuscule en sans empattement italique"
-fr, mathspeak, "𝘑", "J majuscule en sans empattement italique", "J majuscule en sans empattement italique", "J majuscule en sans empattement italique"
-fr, mathspeak, "𝘒", "K majuscule en sans empattement italique", "K majuscule en sans empattement italique", "K majuscule en sans empattement italique"
-fr, mathspeak, "𝘓", "L majuscule en sans empattement italique", "L majuscule en sans empattement italique", "L majuscule en sans empattement italique"
-fr, mathspeak, "𝘔", "M majuscule en sans empattement italique", "M majuscule en sans empattement italique", "M majuscule en sans empattement italique"
-fr, mathspeak, "𝘕", "N majuscule en sans empattement italique", "N majuscule en sans empattement italique", "N majuscule en sans empattement italique"
-fr, mathspeak, "𝘖", "O majuscule en sans empattement italique", "O majuscule en sans empattement italique", "O majuscule en sans empattement italique"
-fr, mathspeak, "𝘗", "P majuscule en sans empattement italique", "P majuscule en sans empattement italique", "P majuscule en sans empattement italique"
-fr, mathspeak, "𝘘", "Q majuscule en sans empattement italique", "Q majuscule en sans empattement italique", "Q majuscule en sans empattement italique"
-fr, mathspeak, "𝘙", "R majuscule en sans empattement italique", "R majuscule en sans empattement italique", "R majuscule en sans empattement italique"
-fr, mathspeak, "𝘚", "S majuscule en sans empattement italique", "S majuscule en sans empattement italique", "S majuscule en sans empattement italique"
-fr, mathspeak, "𝘛", "T majuscule en sans empattement italique", "T majuscule en sans empattement italique", "T majuscule en sans empattement italique"
-fr, mathspeak, "𝘜", "U majuscule en sans empattement italique", "U majuscule en sans empattement italique", "U majuscule en sans empattement italique"
-fr, mathspeak, "𝘝", "V majuscule en sans empattement italique", "V majuscule en sans empattement italique", "V majuscule en sans empattement italique"
-fr, mathspeak, "𝘞", "W majuscule en sans empattement italique", "W majuscule en sans empattement italique", "W majuscule en sans empattement italique"
-fr, mathspeak, "𝘟", "X majuscule en sans empattement italique", "X majuscule en sans empattement italique", "X majuscule en sans empattement italique"
-fr, mathspeak, "𝘠", "Y majuscule en sans empattement italique", "Y majuscule en sans empattement italique", "Y majuscule en sans empattement italique"
-fr, mathspeak, "𝘡", "Z majuscule en sans empattement italique", "Z majuscule en sans empattement italique", "Z majuscule en sans empattement italique"
-fr, mathspeak, "𝘢", "a en sans empattement italique", "a en sans empattement italique", "a en sans empattement italique"
-fr, mathspeak, "𝘣", "b en sans empattement italique", "b en sans empattement italique", "b en sans empattement italique"
-fr, mathspeak, "𝘤", "c en sans empattement italique", "c en sans empattement italique", "c en sans empattement italique"
-fr, mathspeak, "𝘥", "d en sans empattement italique", "d en sans empattement italique", "d en sans empattement italique"
-fr, mathspeak, "𝘦", "e en sans empattement italique", "e en sans empattement italique", "e en sans empattement italique"
-fr, mathspeak, "𝘧", "f en sans empattement italique", "f en sans empattement italique", "f en sans empattement italique"
-fr, mathspeak, "𝘨", "g en sans empattement italique", "g en sans empattement italique", "g en sans empattement italique"
-fr, mathspeak, "𝘩", "h en sans empattement italique", "h en sans empattement italique", "h en sans empattement italique"
-fr, mathspeak, "𝘪", "i en sans empattement italique", "i en sans empattement italique", "i en sans empattement italique"
-fr, mathspeak, "𝘫", "j en sans empattement italique", "j en sans empattement italique", "j en sans empattement italique"
-fr, mathspeak, "𝘬", "k en sans empattement italique", "k en sans empattement italique", "k en sans empattement italique"
-fr, mathspeak, "𝘭", "l en sans empattement italique", "l en sans empattement italique", "l en sans empattement italique"
-fr, mathspeak, "𝘮", "m en sans empattement italique", "m en sans empattement italique", "m en sans empattement italique"
-fr, mathspeak, "𝘯", "n en sans empattement italique", "n en sans empattement italique", "n en sans empattement italique"
-fr, mathspeak, "𝘰", "o en sans empattement italique", "o en sans empattement italique", "o en sans empattement italique"
-fr, mathspeak, "𝘱", "p en sans empattement italique", "p en sans empattement italique", "p en sans empattement italique"
-fr, mathspeak, "𝘲", "q en sans empattement italique", "q en sans empattement italique", "q en sans empattement italique"
-fr, mathspeak, "𝘳", "r en sans empattement italique", "r en sans empattement italique", "r en sans empattement italique"
-fr, mathspeak, "𝘴", "s en sans empattement italique", "s en sans empattement italique", "s en sans empattement italique"
-fr, mathspeak, "𝘵", "t en sans empattement italique", "t en sans empattement italique", "t en sans empattement italique"
-fr, mathspeak, "𝘶", "u en sans empattement italique", "u en sans empattement italique", "u en sans empattement italique"
-fr, mathspeak, "𝘷", "v en sans empattement italique", "v en sans empattement italique", "v en sans empattement italique"
-fr, mathspeak, "𝘸", "w en sans empattement italique", "w en sans empattement italique", "w en sans empattement italique"
-fr, mathspeak, "𝘹", "x en sans empattement italique", "x en sans empattement italique", "x en sans empattement italique"
-fr, mathspeak, "𝘺", "y en sans empattement italique", "y en sans empattement italique", "y en sans empattement italique"
-fr, mathspeak, "𝘻", "z en sans empattement italique", "z en sans empattement italique", "z en sans empattement italique"
-fr, mathspeak, "𝘼", "A majuscule en sans empattement italique gras", "A majuscule en sans empattement italique gras", "A majuscule en sans empattement italique gras"
-fr, mathspeak, "𝘽", "B majuscule en sans empattement italique gras", "B majuscule en sans empattement italique gras", "B majuscule en sans empattement italique gras"
-fr, mathspeak, "𝘾", "C majuscule en sans empattement italique gras", "C majuscule en sans empattement italique gras", "C majuscule en sans empattement italique gras"
-fr, mathspeak, "𝘿", "D majuscule en sans empattement italique gras", "D majuscule en sans empattement italique gras", "D majuscule en sans empattement italique gras"
-fr, mathspeak, "𝙀", "E majuscule en sans empattement italique gras", "E majuscule en sans empattement italique gras", "E majuscule en sans empattement italique gras"
-fr, mathspeak, "𝙁", "F majuscule en sans empattement italique gras", "F majuscule en sans empattement italique gras", "F majuscule en sans empattement italique gras"
-fr, mathspeak, "𝙂", "G majuscule en sans empattement italique gras", "G majuscule en sans empattement italique gras", "G majuscule en sans empattement italique gras"
-fr, mathspeak, "𝙃", "H majuscule en sans empattement italique gras", "H majuscule en sans empattement italique gras", "H majuscule en sans empattement italique gras"
-fr, mathspeak, "𝙄", "I majuscule en sans empattement italique gras", "I majuscule en sans empattement italique gras", "I majuscule en sans empattement italique gras"
-fr, mathspeak, "𝙅", "J majuscule en sans empattement italique gras", "J majuscule en sans empattement italique gras", "J majuscule en sans empattement italique gras"
-fr, mathspeak, "𝙆", "K majuscule en sans empattement italique gras", "K majuscule en sans empattement italique gras", "K majuscule en sans empattement italique gras"
-fr, mathspeak, "𝙇", "L majuscule en sans empattement italique gras", "L majuscule en sans empattement italique gras", "L majuscule en sans empattement italique gras"
-fr, mathspeak, "𝙈", "M majuscule en sans empattement italique gras", "M majuscule en sans empattement italique gras", "M majuscule en sans empattement italique gras"
-fr, mathspeak, "𝙉", "N majuscule en sans empattement italique gras", "N majuscule en sans empattement italique gras", "N majuscule en sans empattement italique gras"
-fr, mathspeak, "𝙊", "O majuscule en sans empattement italique gras", "O majuscule en sans empattement italique gras", "O majuscule en sans empattement italique gras"
-fr, mathspeak, "𝙋", "P majuscule en sans empattement italique gras", "P majuscule en sans empattement italique gras", "P majuscule en sans empattement italique gras"
-fr, mathspeak, "𝙌", "Q majuscule en sans empattement italique gras", "Q majuscule en sans empattement italique gras", "Q majuscule en sans empattement italique gras"
-fr, mathspeak, "𝙍", "R majuscule en sans empattement italique gras", "R majuscule en sans empattement italique gras", "R majuscule en sans empattement italique gras"
-fr, mathspeak, "𝙎", "S majuscule en sans empattement italique gras", "S majuscule en sans empattement italique gras", "S majuscule en sans empattement italique gras"
-fr, mathspeak, "𝙏", "T majuscule en sans empattement italique gras", "T majuscule en sans empattement italique gras", "T majuscule en sans empattement italique gras"
-fr, mathspeak, "𝙐", "U majuscule en sans empattement italique gras", "U majuscule en sans empattement italique gras", "U majuscule en sans empattement italique gras"
-fr, mathspeak, "𝙑", "V majuscule en sans empattement italique gras", "V majuscule en sans empattement italique gras", "V majuscule en sans empattement italique gras"
-fr, mathspeak, "𝙒", "W majuscule en sans empattement italique gras", "W majuscule en sans empattement italique gras", "W majuscule en sans empattement italique gras"
-fr, mathspeak, "𝙓", "X majuscule en sans empattement italique gras", "X majuscule en sans empattement italique gras", "X majuscule en sans empattement italique gras"
-fr, mathspeak, "𝙔", "Y majuscule en sans empattement italique gras", "Y majuscule en sans empattement italique gras", "Y majuscule en sans empattement italique gras"
-fr, mathspeak, "𝙕", "Z majuscule en sans empattement italique gras", "Z majuscule en sans empattement italique gras", "Z majuscule en sans empattement italique gras"
-fr, mathspeak, "𝙖", "a en sans empattement italique gras", "a en sans empattement italique gras", "a en sans empattement italique gras"
-fr, mathspeak, "𝙗", "b en sans empattement italique gras", "b en sans empattement italique gras", "b en sans empattement italique gras"
-fr, mathspeak, "𝙘", "c en sans empattement italique gras", "c en sans empattement italique gras", "c en sans empattement italique gras"
-fr, mathspeak, "𝙙", "d en sans empattement italique gras", "d en sans empattement italique gras", "d en sans empattement italique gras"
-fr, mathspeak, "𝙚", "e en sans empattement italique gras", "e en sans empattement italique gras", "e en sans empattement italique gras"
-fr, mathspeak, "𝙛", "f en sans empattement italique gras", "f en sans empattement italique gras", "f en sans empattement italique gras"
-fr, mathspeak, "𝙜", "g en sans empattement italique gras", "g en sans empattement italique gras", "g en sans empattement italique gras"
-fr, mathspeak, "𝙝", "h en sans empattement italique gras", "h en sans empattement italique gras", "h en sans empattement italique gras"
-fr, mathspeak, "𝙞", "i en sans empattement italique gras", "i en sans empattement italique gras", "i en sans empattement italique gras"
-fr, mathspeak, "𝙟", "j en sans empattement italique gras", "j en sans empattement italique gras", "j en sans empattement italique gras"
-fr, mathspeak, "𝙠", "k en sans empattement italique gras", "k en sans empattement italique gras", "k en sans empattement italique gras"
-fr, mathspeak, "𝙡", "l en sans empattement italique gras", "l en sans empattement italique gras", "l en sans empattement italique gras"
-fr, mathspeak, "𝙢", "m en sans empattement italique gras", "m en sans empattement italique gras", "m en sans empattement italique gras"
-fr, mathspeak, "𝙣", "n en sans empattement italique gras", "n en sans empattement italique gras", "n en sans empattement italique gras"
-fr, mathspeak, "𝙤", "o en sans empattement italique gras", "o en sans empattement italique gras", "o en sans empattement italique gras"
-fr, mathspeak, "𝙥", "p en sans empattement italique gras", "p en sans empattement italique gras", "p en sans empattement italique gras"
-fr, mathspeak, "𝙦", "q en sans empattement italique gras", "q en sans empattement italique gras", "q en sans empattement italique gras"
-fr, mathspeak, "𝙧", "r en sans empattement italique gras", "r en sans empattement italique gras", "r en sans empattement italique gras"
-fr, mathspeak, "𝙨", "s en sans empattement italique gras", "s en sans empattement italique gras", "s en sans empattement italique gras"
-fr, mathspeak, "𝙩", "t en sans empattement italique gras", "t en sans empattement italique gras", "t en sans empattement italique gras"
-fr, mathspeak, "𝙪", "u en sans empattement italique gras", "u en sans empattement italique gras", "u en sans empattement italique gras"
-fr, mathspeak, "𝙫", "v en sans empattement italique gras", "v en sans empattement italique gras", "v en sans empattement italique gras"
-fr, mathspeak, "𝙬", "w en sans empattement italique gras", "w en sans empattement italique gras", "w en sans empattement italique gras"
-fr, mathspeak, "𝙭", "x en sans empattement italique gras", "x en sans empattement italique gras", "x en sans empattement italique gras"
-fr, mathspeak, "𝙮", "y en sans empattement italique gras", "y en sans empattement italique gras", "y en sans empattement italique gras"
-fr, mathspeak, "𝙯", "z en sans empattement italique gras", "z en sans empattement italique gras", "z en sans empattement italique gras"
-fr, mathspeak, "𝖠", "A majuscule en sans empattement", "A majuscule en sans empattement", "A majuscule en sans empattement"
-fr, mathspeak, "𝖡", "B majuscule en sans empattement", "B majuscule en sans empattement", "B majuscule en sans empattement"
-fr, mathspeak, "𝖢", "C majuscule en sans empattement", "C majuscule en sans empattement", "C majuscule en sans empattement"
-fr, mathspeak, "𝖣", "D majuscule en sans empattement", "D majuscule en sans empattement", "D majuscule en sans empattement"
-fr, mathspeak, "𝖤", "E majuscule en sans empattement", "E majuscule en sans empattement", "E majuscule en sans empattement"
-fr, mathspeak, "𝖥", "F majuscule en sans empattement", "F majuscule en sans empattement", "F majuscule en sans empattement"
-fr, mathspeak, "𝖦", "G majuscule en sans empattement", "G majuscule en sans empattement", "G majuscule en sans empattement"
-fr, mathspeak, "𝖧", "H majuscule en sans empattement", "H majuscule en sans empattement", "H majuscule en sans empattement"
-fr, mathspeak, "𝖨", "I majuscule en sans empattement", "I majuscule en sans empattement", "I majuscule en sans empattement"
-fr, mathspeak, "𝖩", "J majuscule en sans empattement", "J majuscule en sans empattement", "J majuscule en sans empattement"
-fr, mathspeak, "𝖪", "K majuscule en sans empattement", "K majuscule en sans empattement", "K majuscule en sans empattement"
-fr, mathspeak, "𝖫", "L majuscule en sans empattement", "L majuscule en sans empattement", "L majuscule en sans empattement"
-fr, mathspeak, "𝖬", "M majuscule en sans empattement", "M majuscule en sans empattement", "M majuscule en sans empattement"
-fr, mathspeak, "𝖭", "N majuscule en sans empattement", "N majuscule en sans empattement", "N majuscule en sans empattement"
-fr, mathspeak, "𝖮", "O majuscule en sans empattement", "O majuscule en sans empattement", "O majuscule en sans empattement"
-fr, mathspeak, "𝖯", "P majuscule en sans empattement", "P majuscule en sans empattement", "P majuscule en sans empattement"
-fr, mathspeak, "𝖰", "Q majuscule en sans empattement", "Q majuscule en sans empattement", "Q majuscule en sans empattement"
-fr, mathspeak, "𝖱", "R majuscule en sans empattement", "R majuscule en sans empattement", "R majuscule en sans empattement"
-fr, mathspeak, "𝖲", "S majuscule en sans empattement", "S majuscule en sans empattement", "S majuscule en sans empattement"
-fr, mathspeak, "𝖳", "T majuscule en sans empattement", "T majuscule en sans empattement", "T majuscule en sans empattement"
-fr, mathspeak, "𝖴", "U majuscule en sans empattement", "U majuscule en sans empattement", "U majuscule en sans empattement"
-fr, mathspeak, "𝖵", "V majuscule en sans empattement", "V majuscule en sans empattement", "V majuscule en sans empattement"
-fr, mathspeak, "𝖶", "W majuscule en sans empattement", "W majuscule en sans empattement", "W majuscule en sans empattement"
-fr, mathspeak, "𝖷", "X majuscule en sans empattement", "X majuscule en sans empattement", "X majuscule en sans empattement"
-fr, mathspeak, "𝖸", "Y majuscule en sans empattement", "Y majuscule en sans empattement", "Y majuscule en sans empattement"
-fr, mathspeak, "𝖹", "Z majuscule en sans empattement", "Z majuscule en sans empattement", "Z majuscule en sans empattement"
-fr, mathspeak, "𝖺", "a en sans empattement", "a en sans empattement", "a en sans empattement"
-fr, mathspeak, "𝖻", "b en sans empattement", "b en sans empattement", "b en sans empattement"
-fr, mathspeak, "𝖼", "c en sans empattement", "c en sans empattement", "c en sans empattement"
-fr, mathspeak, "𝖽", "d en sans empattement", "d en sans empattement", "d en sans empattement"
-fr, mathspeak, "𝖾", "e en sans empattement", "e en sans empattement", "e en sans empattement"
-fr, mathspeak, "𝖿", "f en sans empattement", "f en sans empattement", "f en sans empattement"
-fr, mathspeak, "𝗀", "g en sans empattement", "g en sans empattement", "g en sans empattement"
-fr, mathspeak, "𝗁", "h en sans empattement", "h en sans empattement", "h en sans empattement"
-fr, mathspeak, "𝗂", "i en sans empattement", "i en sans empattement", "i en sans empattement"
-fr, mathspeak, "𝗃", "j en sans empattement", "j en sans empattement", "j en sans empattement"
-fr, mathspeak, "𝗄", "k en sans empattement", "k en sans empattement", "k en sans empattement"
-fr, mathspeak, "𝗅", "l en sans empattement", "l en sans empattement", "l en sans empattement"
-fr, mathspeak, "𝗆", "m en sans empattement", "m en sans empattement", "m en sans empattement"
-fr, mathspeak, "𝗇", "n en sans empattement", "n en sans empattement", "n en sans empattement"
-fr, mathspeak, "𝗈", "o en sans empattement", "o en sans empattement", "o en sans empattement"
-fr, mathspeak, "𝗉", "p en sans empattement", "p en sans empattement", "p en sans empattement"
-fr, mathspeak, "𝗊", "q en sans empattement", "q en sans empattement", "q en sans empattement"
-fr, mathspeak, "𝗋", "r en sans empattement", "r en sans empattement", "r en sans empattement"
-fr, mathspeak, "𝗌", "s en sans empattement", "s en sans empattement", "s en sans empattement"
-fr, mathspeak, "𝗍", "t en sans empattement", "t en sans empattement", "t en sans empattement"
-fr, mathspeak, "𝗎", "u en sans empattement", "u en sans empattement", "u en sans empattement"
-fr, mathspeak, "𝗏", "v en sans empattement", "v en sans empattement", "v en sans empattement"
-fr, mathspeak, "𝗐", "w en sans empattement", "w en sans empattement", "w en sans empattement"
-fr, mathspeak, "𝗑", "x en sans empattement", "x en sans empattement", "x en sans empattement"
-fr, mathspeak, "𝗒", "y en sans empattement", "y en sans empattement", "y en sans empattement"
-fr, mathspeak, "𝗓", "z en sans empattement", "z en sans empattement", "z en sans empattement"
-fr, mathspeak, "𝒜", "A majuscule en script", "A majuscule en script", "A majuscule en script"
-fr, mathspeak, "ℬ", "B ronde majuscule", "B ronde majuscule", "B ronde majuscule"
-fr, mathspeak, "𝒞", "C majuscule en script", "C majuscule en script", "C majuscule en script"
-fr, mathspeak, "𝒟", "D majuscule en script", "D majuscule en script", "D majuscule en script"
-fr, mathspeak, "ℰ", "E ronde majuscule", "E ronde majuscule", "E ronde majuscule"
-fr, mathspeak, "ℱ", "F ronde majuscule", "F ronde majuscule", "F ronde majuscule"
-fr, mathspeak, "𝒢", "G majuscule en script", "G majuscule en script", "G majuscule en script"
-fr, mathspeak, "ℋ", "H ronde majuscule", "H ronde majuscule", "H ronde majuscule"
-fr, mathspeak, "ℐ", "I ronde majuscule", "I ronde majuscule", "I ronde majuscule"
-fr, mathspeak, "𝒥", "J majuscule en script", "J majuscule en script", "J majuscule en script"
-fr, mathspeak, "𝒦", "K majuscule en script", "K majuscule en script", "K majuscule en script"
-fr, mathspeak, "ℒ", "L ronde majuscule", "L ronde majuscule", "L ronde majuscule"
-fr, mathspeak, "ℳ", "M ronde majuscule", "M ronde majuscule", "M ronde majuscule"
-fr, mathspeak, "𝒩", "N majuscule en script", "N majuscule en script", "N majuscule en script"
-fr, mathspeak, "𝒪", "O majuscule en script", "O majuscule en script", "O majuscule en script"
-fr, mathspeak, "𝒫", "P majuscule en script", "P majuscule en script", "P majuscule en script"
-fr, mathspeak, "𝒬", "Q majuscule en script", "Q majuscule en script", "Q majuscule en script"
-fr, mathspeak, "ℛ", "R ronde majuscule", "R ronde majuscule", "R ronde majuscule"
-fr, mathspeak, "𝒮", "S majuscule en script", "S majuscule en script", "S majuscule en script"
-fr, mathspeak, "𝒯", "T majuscule en script", "T majuscule en script", "T majuscule en script"
-fr, mathspeak, "𝒰", "U majuscule en script", "U majuscule en script", "U majuscule en script"
-fr, mathspeak, "𝒱", "V majuscule en script", "V majuscule en script", "V majuscule en script"
-fr, mathspeak, "𝒲", "W majuscule en script", "W majuscule en script", "W majuscule en script"
-fr, mathspeak, "𝒳", "X majuscule en script", "X majuscule en script", "X majuscule en script"
-fr, mathspeak, "𝒴", "Y majuscule en script", "Y majuscule en script", "Y majuscule en script"
-fr, mathspeak, "𝒵", "Z majuscule en script", "Z majuscule en script", "Z majuscule en script"
-fr, mathspeak, "𝒶", "a en script", "a en script", "a en script"
-fr, mathspeak, "𝒷", "b en script", "b en script", "b en script"
-fr, mathspeak, "𝒸", "c en script", "c en script", "c en script"
-fr, mathspeak, "𝒹", "d en script", "d en script", "d en script"
-fr, mathspeak, "ℯ", "e ronde minuscule", "e ronde minuscule", "e ronde minuscule"
-fr, mathspeak, "𝒻", "f en script", "f en script", "f en script"
-fr, mathspeak, "ℊ", "g ronde minuscule", "g ronde minuscule", "g ronde minuscule"
-fr, mathspeak, "𝒽", "h en script", "h en script", "h en script"
-fr, mathspeak, "𝒾", "i en script", "i en script", "i en script"
-fr, mathspeak, "𝒿", "j en script", "j en script", "j en script"
-fr, mathspeak, "𝓀", "k en script", "k en script", "k en script"
-fr, mathspeak, "𝓁", "script l", "script l", "script l"
-fr, mathspeak, "𝓂", "m en script", "m en script", "m en script"
-fr, mathspeak, "𝓃", "n en script", "n en script", "n en script"
-fr, mathspeak, "ℴ", "o ronde minuscule", "o ronde minuscule", "o ronde minuscule"
-fr, mathspeak, "𝓅", "p en script", "p en script", "p en script"
-fr, mathspeak, "𝓆", "q en script", "q en script", "q en script"
-fr, mathspeak, "𝓇", "r en script", "r en script", "r en script"
-fr, mathspeak, "𝓈", "s en script", "s en script", "s en script"
-fr, mathspeak, "𝓉", "t en script", "t en script", "t en script"
-fr, mathspeak, "𝓊", "u en script", "u en script", "u en script"
-fr, mathspeak, "𝓋", "v en script", "v en script", "v en script"
-fr, mathspeak, "𝓌", "w en script", "w en script", "w en script"
-fr, mathspeak, "𝓍", "x en script", "x en script", "x en script"
-fr, mathspeak, "𝓎", "y en script", "y en script", "y en script"
-fr, mathspeak, "𝓏", "z en script", "z en script", "z en script"
-fr, mathspeak, "⊾", "angle droit avec arc", "angle droit avec arc", "angle droit avec arc"
-fr, mathspeak, "⍼", "angle droit avec flèche en zigzag vers le bas", "angle droit avec flèche en zigzag vers le bas", "angle droit avec flèche en zigzag vers le bas"
-fr, mathspeak, "⟀", "angle tridimensionnel", "angle tridimensionnel", "angle tridimensionnel"
-fr, mathspeak, "⦛", "measured angle opening left", "measured angle opening left", "measured angle opening left"
-fr, mathspeak, "⦜", "right angle variant with square", "right angle variant with square", "right angle variant with square"
-fr, mathspeak, "⦝", "angle droit mesuré pointé", "angle droit mesuré pointé", "angle droit mesuré pointé"
-fr, mathspeak, "⦞", "angle with s inside", "angle with s inside", "angle with s inside"
-fr, mathspeak, "⦟", "acute angle", "acute angle", "acute angle"
-fr, mathspeak, "⦠", "spherical angle opening left", "spherical angle opening left", "spherical angle opening left"
-fr, mathspeak, "⦡", "spherical angle opening up", "spherical angle opening up", "spherical angle opening up"
-fr, mathspeak, "⦢", "turned angle", "turned angle", "turned angle"
-fr, mathspeak, "⦣", "reversed angle", "reversed angle", "reversed angle"
-fr, mathspeak, "⦤", "angle à barre souscrite", "angle à barre souscrite", "angle à barre souscrite"
-fr, mathspeak, "⦥", "angle à barre souscrite réfléchie", "angle à barre souscrite réfléchie", "angle à barre souscrite réfléchie"
-fr, mathspeak, "⦦", "angle oblique s'ouvrant vers le haut", "angle oblique s'ouvrant vers le haut", "angle oblique s'ouvrant vers le haut"
-fr, mathspeak, "⦧", "angle oblique s'ouvrant vers le bas", "angle oblique s'ouvrant vers le bas", "angle oblique s'ouvrant vers le bas"
-fr, mathspeak, "⦨", "angle calculé à bras vers l'est et bras fléché vers le nord-est", "angle calculé à bras vers l'est et bras fléché vers le nord-est", "angle calculé à bras vers l'est et bras fléché vers le nord-est"
-fr, mathspeak, "⦩", "angle calculé à bras vers l'ouest et bras fléché vers le nord-ouest", "angle calculé à bras vers l'ouest et bras fléché vers le nord-ouest", "angle calculé à bras vers l'ouest et bras fléché vers le nord-ouest"
-fr, mathspeak, "⦪", "angle calculé à bras vers l'est et bras fléché vers le sud-est", "angle calculé à bras vers l'est et bras fléché vers le sud-est", "angle calculé à bras vers l'est et bras fléché vers le sud-est"
-fr, mathspeak, "⦫", "angle calculé à bras vers l'ouest et bras fléché vers le sud-ouest", "angle calculé à bras vers l'ouest et bras fléché vers le sud-ouest", "angle calculé à bras vers l'ouest et bras fléché vers le sud-ouest"
-fr, mathspeak, "⦬", "angle calculé à bras vers le nord et bras fléché vers le nord-est", "angle calculé à bras vers le nord et bras fléché vers le nord-est", "angle calculé à bras vers le nord et bras fléché vers le nord-est"
-fr, mathspeak, "⦭", "angle calculé à bras vers le nord et bras fléché vers le nord-ouest", "angle calculé à bras vers le nord et bras fléché vers le nord-ouest", "angle calculé à bras vers le nord et bras fléché vers le nord-ouest"
-fr, mathspeak, "⦮", "angle calculé à bras vers le sud et bras fléché vers le sud-est", "angle calculé à bras vers le sud et bras fléché vers le sud-est", "angle calculé à bras vers le sud et bras fléché vers le sud-est"
-fr, mathspeak, "⦯", "angle calculé à bras vers le sud et bras fléché vers le sud-ouest", "angle calculé à bras vers le sud et bras fléché vers le sud-ouest", "angle calculé à bras vers le sud et bras fléché vers le sud-ouest"
-fr, mathspeak, "←", "flèche gauche", "flèche gauche", "flèche gauche"
-fr, mathspeak, "↑", "flèche vers le haut", "flèche vers le haut", "flèche vers le haut"
-fr, mathspeak, "→", "flèche droite", "flèche droite", "flèche droite"
-fr, mathspeak, "↓", "flèche vers le bas", "flèche vers le bas", "flèche vers le bas"
-fr, mathspeak, "↔", "flèche bilatérale", "flèche bilatérale", "flèche bilatérale"
-fr, mathspeak, "↕", "flèche haut et bas", "flèche haut et bas", "flèche haut et bas"
-fr, mathspeak, "↖", "flèche nord-ouest", "flèche nord-ouest", "flèche nord-ouest"
-fr, mathspeak, "↗", "flèche nord-est", "flèche nord-est", "flèche nord-est"
-fr, mathspeak, "↘", "flèche sud-est", "flèche sud-est", "flèche sud-est"
-fr, mathspeak, "↙", "flèche sud-ouest", "flèche sud-ouest", "flèche sud-ouest"
-fr, mathspeak, "↚", "flèche barrée gauche", "flèche barrée gauche", "flèche barrée gauche"
-fr, mathspeak, "↛", "flèche barrée droite", "flèche barrée droite", "flèche barrée droite"
-fr, mathspeak, "↜", "flèche ondulée gauche", "flèche ondulée gauche", "flèche ondulée gauche"
-fr, mathspeak, "↝", "flèche ondulée droite", "flèche ondulée droite", "flèche ondulée droite"
-fr, mathspeak, "↞", "flèche à deux pointes gauche", "flèche à deux pointes gauche", "flèche à deux pointes gauche"
-fr, mathspeak, "↟", "flèche à deux pointes vers le haut", "flèche à deux pointes vers le haut", "flèche à deux pointes vers le haut"
-fr, mathspeak, "↠", "flèche à deux pointes droite", "flèche à deux pointes droite", "flèche à deux pointes droite"
-fr, mathspeak, "↡", "flèche à deux pointes vers le bas", "flèche à deux pointes vers le bas", "flèche à deux pointes vers le bas"
-fr, mathspeak, "↢", "flèche empennée gauche", "flèche empennée gauche", "flèche empennée gauche"
-fr, mathspeak, "↣", "flèche empennée droite", "flèche empennée droite", "flèche empennée droite"
-fr, mathspeak, "↤", "flèche d'un taquet gauche", "flèche d'un taquet gauche", "flèche d'un taquet gauche"
-fr, mathspeak, "↥", "flèche d'un taquet vers le haut", "flèche d'un taquet vers le haut", "flèche d'un taquet vers le haut"
-fr, mathspeak, "↦", "flèche d'un taquet droite", "flèche d'un taquet droite", "flèche d'un taquet droite"
-fr, mathspeak, "↧", "flèche d'un taquet vers le bas", "flèche d'un taquet vers le bas", "flèche d'un taquet vers le bas"
-fr, mathspeak, "↨", "flèche haut-bas sur base", "flèche haut-bas sur base", "flèche haut-bas sur base"
-fr, mathspeak, "↩", "flèche avec crochet gauche", "flèche avec crochet gauche", "flèche avec crochet gauche"
-fr, mathspeak, "↪", "flèche avec crochet droite", "flèche avec crochet droite", "flèche avec crochet droite"
-fr, mathspeak, "↫", "flèche avec boucle gauche", "flèche avec boucle gauche", "flèche avec boucle gauche"
-fr, mathspeak, "↬", "flèche avec boucle droite", "flèche avec boucle droite", "flèche avec boucle droite"
-fr, mathspeak, "↭", "flèche ondulée bilatérale", "flèche ondulée bilatérale", "flèche ondulée bilatérale"
-fr, mathspeak, "↮", "flèche barrée bilatérale", "flèche barrée bilatérale", "flèche barrée bilatérale"
-fr, mathspeak, "↯", "flèche vers le bas en zigzag", "flèche vers le bas en zigzag", "flèche vers le bas en zigzag"
-fr, mathspeak, "↰", "flèche vers le haut avec pointe gauche", "flèche vers le haut avec pointe gauche", "flèche vers le haut avec pointe gauche"
-fr, mathspeak, "↱", "flèche vers le haut avec pointe droite", "flèche vers le haut avec pointe droite", "flèche vers le haut avec pointe droite"
-fr, mathspeak, "↲", "flèche vers le bas avec pointe gauche", "flèche vers le bas avec pointe gauche", "flèche vers le bas avec pointe gauche"
-fr, mathspeak, "↳", "flèche vers le bas avec pointe droite", "flèche vers le bas avec pointe droite", "flèche vers le bas avec pointe droite"
-fr, mathspeak, "↴", "flèche vers le bas avec coin droit", "flèche vers le bas avec coin droit", "flèche vers le bas avec coin droit"
-fr, mathspeak, "↵", "flèche vers le bas avec coin gauche", "flèche vers le bas avec coin gauche", "flèche vers le bas avec coin gauche"
-fr, mathspeak, "↶", "flèche semi-circulaire en sens positif", "flèche semi-circulaire en sens positif", "flèche semi-circulaire en sens positif"
-fr, mathspeak, "↷", "flèche semi-circulaire en sens négatif", "flèche semi-circulaire en sens négatif", "flèche semi-circulaire en sens négatif"
-fr, mathspeak, "↸", "flèche nord-ouest vers une barre horizontale longue", "flèche nord-ouest vers une barre horizontale longue", "flèche nord-ouest vers une barre horizontale longue"
-fr, mathspeak, "↹", "flèche gauche vers un taquet sur flèche droite vers un taquet", "flèche gauche vers un taquet sur flèche droite vers un taquet", "flèche gauche vers un taquet sur flèche droite vers un taquet"
-fr, mathspeak, "↺", "flèche en sens positif à cercle ouvert", "flèche en sens positif à cercle ouvert", "flèche en sens positif à cercle ouvert"
-fr, mathspeak, "↻", "flèche en sens négatif à cercle ouvert", "flèche en sens négatif à cercle ouvert", "flèche en sens négatif à cercle ouvert"
-fr, mathspeak, "⇄", "flèche vers le haut par-dessus flèche gauche", "flèche vers le haut par-dessus flèche gauche", "flèche vers le haut par-dessus flèche gauche"
-fr, mathspeak, "⇅", "flèche vers le haut à gauche d'une flèche vers le bas", "flèche vers le haut à gauche d'une flèche vers le bas", "flèche vers le haut à gauche d'une flèche vers le bas"
-fr, mathspeak, "⇆", "flèche gauche par-dessus flèche droite", "flèche gauche par-dessus flèche droite", "flèche gauche par-dessus flèche droite"
-fr, mathspeak, "⇇", "paire de flèches gauche", "paire de flèches gauche", "paire de flèches gauche"
-fr, mathspeak, "⇈", "paire de flèches vers le haut", "paire de flèches vers le haut", "paire de flèches vers le haut"
-fr, mathspeak, "⇉", "paire de flèches droite", "paire de flèches droite", "paire de flèches droite"
-fr, mathspeak, "⇊", "paire de flèches vers le bas", "paire de flèches vers le bas", "paire de flèches vers le bas"
-fr, mathspeak, "⇍", "double flèche barrée gauche", "double flèche barrée gauche", "double flèche barrée gauche"
-fr, mathspeak, "⇎", "double flèche barrée bilatérale", "double flèche barrée bilatérale", "double flèche barrée bilatérale"
-fr, mathspeak, "⇏", "double flèche barrée droite", "double flèche barrée droite", "double flèche barrée droite"
-fr, mathspeak, "⇐", "double flèche gauche", "double flèche gauche", "double flèche gauche"
-fr, mathspeak, "⇑", "double flèche vers le haut", "double flèche vers le haut", "double flèche vers le haut"
-fr, mathspeak, "⇒", "double flèche droite", "double flèche droite", "double flèche droite"
-fr, mathspeak, "⇓", "double flèche vers le bas", "double flèche vers le bas", "double flèche vers le bas"
-fr, mathspeak, "⇔", "double flèche bilatérale", "double flèche bilatérale", "double flèche bilatérale"
-fr, mathspeak, "⇕", "double flèche haut-bas", "double flèche haut-bas", "double flèche haut-bas"
-fr, mathspeak, "⇖", "double flèche nord-ouest", "double flèche nord-ouest", "double flèche nord-ouest"
-fr, mathspeak, "⇗", "double flèche nord-est", "double flèche nord-est", "double flèche nord-est"
-fr, mathspeak, "⇘", "double flèche sud-est", "double flèche sud-est", "double flèche sud-est"
-fr, mathspeak, "⇙", "double flèche sud-ouest", "double flèche sud-ouest", "double flèche sud-ouest"
-fr, mathspeak, "⇚", "triple flèche gauche", "triple flèche gauche", "triple flèche gauche"
-fr, mathspeak, "⇛", "triple flèche droite", "triple flèche droite", "triple flèche droite"
-fr, mathspeak, "⇜", "flèche en tire-bouchon gauche", "flèche en tire-bouchon gauche", "flèche en tire-bouchon gauche"
-fr, mathspeak, "⇝", "flèche en tire-bouchon droite", "flèche en tire-bouchon droite", "flèche en tire-bouchon droite"
-fr, mathspeak, "⇞", "flèche vers le haut avec double barre", "flèche vers le haut avec double barre", "flèche vers le haut avec double barre"
-fr, mathspeak, "⇟", "flèche vers le bas avec double barre", "flèche vers le bas avec double barre", "flèche vers le bas avec double barre"
-fr, mathspeak, "⇠", "flèche pointillée gauche", "flèche pointillée gauche", "flèche pointillée gauche"
-fr, mathspeak, "⇡", "flèche pointillée vers le haut", "flèche pointillée vers le haut", "flèche pointillée vers le haut"
-fr, mathspeak, "⇢", "flèche pointillée droite", "flèche pointillée droite", "flèche pointillée droite"
-fr, mathspeak, "⇣", "flèche pointillée vers le bas", "flèche pointillée vers le bas", "flèche pointillée vers le bas"
-fr, mathspeak, "⇤", "flèche gauche vers un taquet", "flèche gauche vers un taquet", "flèche gauche vers un taquet"
-fr, mathspeak, "⇥", "flèche droite vers un taquet", "flèche droite vers un taquet", "flèche droite vers un taquet"
-fr, mathspeak, "⇦", "flèche blanche gauche", "flèche blanche gauche", "flèche blanche gauche"
-fr, mathspeak, "⇧", "flèche blanche vers le haut", "flèche blanche vers le haut", "flèche blanche vers le haut"
-fr, mathspeak, "⇨", "flèche blanche droite", "flèche blanche droite", "flèche blanche droite"
-fr, mathspeak, "⇩", "flèche blanche vers le bas", "flèche blanche vers le bas", "flèche blanche vers le bas"
-fr, mathspeak, "⇪", "flèche blanche vers le haut à partir d'un taquet", "flèche blanche vers le haut à partir d'un taquet", "flèche blanche vers le haut à partir d'un taquet"
-fr, mathspeak, "⇫", "white up-arrow on pedestal", "white up-arrow on pedestal", "white U arrow on pedestal"
-fr, mathspeak, "⇬", "white up-arrow on pedestal with horizontal bar", "white up-arrow on pedestal with horizontal bar", "white U arrow on pedestal with horizontal bar"
-fr, mathspeak, "⇭", "white up-arrow on pedestal with vertical bar", "white up-arrow on pedestal with vertical bar", "white U arrow on pedestal with vertical bar"
-fr, mathspeak, "⇮", "white double up-arrow", "white double up-arrow", "white double U arrow"
-fr, mathspeak, "⇯", "white double up-arrow on pedestal", "white double up-arrow on pedestal", "white double U arrow on pedestal"
-fr, mathspeak, "⇰", "white right-arrow from wall", "white right-arrow from wall", "white R arrow from wall"
-fr, mathspeak, "⇱", "north west arrow to corner", "north west arrow to corner", "north west arrow to corner"
-fr, mathspeak, "⇲", "south east arrow to corner", "south east arrow to corner", "south east arrow to corner"
-fr, mathspeak, "⇳", "up down white arrow", "up down white arrow", "U d white arrow"
-fr, mathspeak, "⇴", "right-arrow with small circle", "right-arrow with small circle", "R arrow with small circle"
-fr, mathspeak, "⇵", "flèche descendante à gauche d'une flèche montante", "flèche descendante à gauche d'une flèche montante", "flèche descendante à gauche d'une flèche montante"
-fr, mathspeak, "⇶", "three right-arrows", "three right-arrows", "three R arrows"
-fr, mathspeak, "⇷", "left-arrow with vertical stroke", "left-arrow with vertical stroke", "L arrow with vertical stroke"
-fr, mathspeak, "⇸", "right-arrow with vertical stroke", "right-arrow with vertical stroke", "R arrow with vertical stroke"
-fr, mathspeak, "⇹", "left-right-arrow with vertical stroke", "left-right-arrow with vertical stroke", "L R arrow with vertical stroke"
-fr, mathspeak, "⇺", "left-arrow with double vertical stroke", "left-arrow with double vertical stroke", "L arrow with double vertical stroke"
-fr, mathspeak, "⇻", "right-arrow with double vertical stroke", "right-arrow with double vertical stroke", "R arrow with double vertical stroke"
-fr, mathspeak, "⇼", "left-right-arrow with double vertical stroke", "left-right-arrow with double vertical stroke", "L R arrow with double vertical stroke"
-fr, mathspeak, "⇽", "flèche à tête creuse gauche", "flèche à tête creuse gauche", "flèche à tête creuse gauche"
-fr, mathspeak, "⇾", "flèche à tête creuse droite", "flèche à tête creuse droite", "flèche à tête creuse droite"
-fr, mathspeak, "⇿", "flèche à tête creuse bilatérale", "flèche à tête creuse bilatérale", "flèche à tête creuse bilatérale"
-fr, mathspeak, "⌁", "electric arrow", "electric arrow", "electric arrow"
-fr, mathspeak, "⌃", "up-arrowhead", "up-arrowhead", "U arrowhead"
-fr, mathspeak, "⌄", "down-arrowhead", "down-arrowhead", "D arrowhead"
-fr, mathspeak, "⌤", "up-arrowhead between two horizontal bars", "up-arrowhead between two horizontal bars", "U arrowhead between two horizontal bars"
-fr, mathspeak, "⎋", "broken circle with northwest arrow", "broken circle with northwest arrow", "broken circle with northwest arrow"
-fr, mathspeak, "➔", "heavy wide headed right-arrow", "heavy wide headed right-arrow", "heavy wide headed R arrow"
-fr, mathspeak, "➘", "heavy down right-arrow", "heavy down right-arrow", "heavy d R arrow"
-fr, mathspeak, "➙", "heavy right-arrow", "heavy right-arrow", "heavy R arrow"
-fr, mathspeak, "➚", "heavy up right-arrow", "heavy up right-arrow", "heavy U R arrow"
-fr, mathspeak, "➛", "drafting point right-arrow", "drafting point right-arrow", "drafting point R arrow"
-fr, mathspeak, "➜", "heavy round tipped right-arrow", "heavy round tipped right-arrow", "heavy round tipped R arrow"
-fr, mathspeak, "➝", "triangle headed right-arrow", "triangle headed right-arrow", "triangle headed R arrow"
-fr, mathspeak, "➞", "heavy triangle headed right-arrow", "heavy triangle headed right-arrow", "heavy triangle headed R arrow"
-fr, mathspeak, "➟", "dashed triangle headed right-arrow", "dashed triangle headed right-arrow", "dashed triangle headed R arrow"
-fr, mathspeak, "➠", "heavy dashed triangle headed right-arrow", "heavy dashed triangle headed right-arrow", "heavy dashed triangle headed R arrow"
-fr, mathspeak, "➡", "black right-arrow", "black right-arrow", "black R arrow"
-fr, mathspeak, "➢", "three d top lighted right-arrowhead", "three d top lighted right-arrowhead", "three d top lighted R arrowhead"
-fr, mathspeak, "➣", "three d bottom lighted right-arrowhead", "three d bottom lighted right-arrowhead", "three d bottom lighted R arrowhead"
-fr, mathspeak, "➤", "black right-arrowhead", "black right-arrowhead", "black R arrowhead"
-fr, mathspeak, "➥", "heavy black curved down and right-arrow", "heavy black curved down and right-arrow", "heavy black curved d and R arrow"
-fr, mathspeak, "➦", "heavy black curved up and right-arrow", "heavy black curved up and right-arrow", "heavy black curved U and R arrow"
-fr, mathspeak, "➧", "squat black right-arrow", "squat black right-arrow", "squat black R arrow"
-fr, mathspeak, "➨", "heavy concave pointed black right-arrow", "heavy concave pointed black right-arrow", "heavy concave pointed black R arrow"
-fr, mathspeak, "➩", "right shaded white right-arrow", "right shaded white right-arrow", "right shaded white R arrow"
-fr, mathspeak, "➪", "left shaded white right-arrow", "left shaded white right-arrow", "left shaded white R arrow"
-fr, mathspeak, "➫", "back tilted shadowed white right-arrow", "back tilted shadowed white right-arrow", "back tilted shadowed white R arrow"
-fr, mathspeak, "➬", "front tilted shadowed white right-arrow", "front tilted shadowed white right-arrow", "front tilted shadowed white R arrow"
-fr, mathspeak, "➭", "heavy lower right shadowed white right-arrow", "heavy lower right shadowed white right-arrow", "heavy lower right shadowed white R arrow"
-fr, mathspeak, "➮", "heavy upper right shadowed white right-arrow", "heavy upper right shadowed white right-arrow", "heavy upper right shadowed white R arrow"
-fr, mathspeak, "➯", "notched lower right shadowed white right-arrow", "notched lower right shadowed white right-arrow", "notched lower right shadowed white R arrow"
-fr, mathspeak, "➱", "notched upper right shadowed white right-arrow", "notched upper right shadowed white right-arrow", "notched upper right shadowed white R arrow"
-fr, mathspeak, "➲", "circled heavy white right-arrow", "circled heavy white right-arrow", "circled heavy white R arrow"
-fr, mathspeak, "➳", "white feathered right-arrow", "white feathered right-arrow", "white feathered R arrow"
-fr, mathspeak, "➴", "black feathered down right-arrow", "black feathered down right-arrow", "black feathered d R arrow"
-fr, mathspeak, "➵", "black feathered right-arrow", "black feathered right-arrow", "black feathered R arrow"
-fr, mathspeak, "➶", "black feathered up right-arrow", "black feathered up right-arrow", "black feathered U R arrow"
-fr, mathspeak, "➷", "heavy black feathered down right-arrow", "heavy black feathered down right-arrow", "heavy black feathered d R arrow"
-fr, mathspeak, "➸", "heavy black feathered right-arrow", "heavy black feathered right-arrow", "heavy black feathered R arrow"
-fr, mathspeak, "➹", "heavy black feathered up right-arrow", "heavy black feathered up right-arrow", "heavy black feathered U R arrow"
-fr, mathspeak, "➺", "teardrop barbed right-arrow", "teardrop barbed right-arrow", "teardrop barbed R arrow"
-fr, mathspeak, "➻", "heavy teardrop shanked right-arrow", "heavy teardrop shanked right-arrow", "heavy teardrop shanked R arrow"
-fr, mathspeak, "➼", "wedge tailed right-arrow", "wedge tailed right-arrow", "wedge tailed R arrow"
-fr, mathspeak, "➽", "heavy wedge tailed right-arrow", "heavy wedge tailed right-arrow", "heavy wedge tailed R arrow"
-fr, mathspeak, "➾", "open outlined right-arrow", "open outlined right-arrow", "open outlined R arrow"
-fr, mathspeak, "⟰", "up quadruple arrow", "up quadruple arrow", "U quadruple arrow"
-fr, mathspeak, "⟱", "down quadruple arrow", "down quadruple arrow", "d quadrule arrow"
-fr, mathspeak, "⟲", "anticlockwise gapped circle arrow", "anticlockwise gapped circle arrow", "anticlockwise gapped circle arrow"
-fr, mathspeak, "⟳", "clockwise gapped circle arrow", "clockwise gapped circle arrow", "clockwise gapped circle arrow"
-fr, mathspeak, "⟴", "right-arrow with circled plus", "right-arrow with circled plus", "R arrow with circled plus"
-fr, mathspeak, "⟵", "longue flèche gauche", "longue flèche gauche", "longue flèche gauche"
-fr, mathspeak, "⟶", "longue flèche droite", "longue flèche droite", "longue flèche droite"
-fr, mathspeak, "⟷", "longue flèche bilatérale", "longue flèche bilatérale", "longue flèche bilatérale"
-fr, mathspeak, "⟸", "longue double flèche gauche", "longue double flèche gauche", "longue double flèche gauche"
-fr, mathspeak, "⟹", "longue double flèche droite", "longue double flèche droite", "longue double flèche droite"
-fr, mathspeak, "⟺", "longue double flèche bilatérale", "longue double flèche bilatérale", "longue double flèche bilatérale"
-fr, mathspeak, "⟻", "long left-arrow from bar", "long left-arrow from bar", "long L arrow from bar"
-fr, mathspeak, "⟼", "longue flèche d'un taquet droite", "longue flèche d'un taquet droite", "longue flèche d'un taquet droite"
-fr, mathspeak, "⟽", "long left double arrow from bar", "long left double arrow from bar", "long l double arrow from bar"
-fr, mathspeak, "⟾", "long right double arrow from bar", "long right double arrow from bar", "long R double arrow from bar"
-fr, mathspeak, "⟿", "longue flèche en tire-bouchon droite", "longue flèche en tire-bouchon droite", "longue flèche en tire-bouchon droite"
-fr, mathspeak, "⤀", "two headed right-arrow with vertical stroke", "two headed right-arrow with vertical stroke", "two headed R arrow with vertical stroke"
-fr, mathspeak, "⤁", "two headed right-arrow with double vertical stroke", "two headed right-arrow with double vertical stroke", "two headed R arrow with double vertical stroke"
-fr, mathspeak, "⤂", "double left-arrow with vertical stroke", "double left-arrow with vertical stroke", "double L arrow with vertical stroke"
-fr, mathspeak, "⤃", "double right-arrow with vertical stroke", "double right-arrow with vertical stroke", "double R arrow with vertical stroke"
-fr, mathspeak, "⤄", "double left-right-arrow with vertical stroke", "double left-right-arrow with vertical stroke", "double L R arrow with vertical stroke"
-fr, mathspeak, "⤅", "flèche à deux têtes d'un taquet droite", "flèche à deux têtes d'un taquet droite", "flèche à deux têtes d'un taquet droite"
-fr, mathspeak, "⤆", "double left-arrow from bar", "double left-arrow from bar", "double L arrow from bar"
-fr, mathspeak, "⤇", "double right-arrow from bar", "double right-arrow from bar", "double R arrow from bar"
-fr, mathspeak, "⤈", "arrow down with horizontal stroke", "arrow down with horizontal stroke", "arrow down with horizontal stroke"
-fr, mathspeak, "⤉", "up-arrow with horizontal stroke", "up-arrow with horizontal stroke", "U arrow with horizontal stroke"
-fr, mathspeak, "⤊", "up triple arrow", "up triple arrow", "U triple arrow"
-fr, mathspeak, "⤋", "down triple arrow", "down triple arrow", "d triple arrow"
-fr, mathspeak, "⤌", "flèche à deux traits gauche", "flèche à deux traits gauche", "flèche à deux traits gauche"
-fr, mathspeak, "⤍", "flèche à deux traits droite", "flèche à deux traits droite", "flèche à deux traits droite"
-fr, mathspeak, "⤎", "flèche à trois traits gauche", "flèche à trois traits gauche", "flèche à trois traits gauche"
-fr, mathspeak, "⤏", "flèche à trois traits droite", "flèche à trois traits droite", "flèche à trois traits droite"
-fr, mathspeak, "⤐", "flèche à trois traits et à deux têtes droite", "flèche à trois traits et à deux têtes droite", "flèche à trois traits et à deux têtes droite"
-fr, mathspeak, "⤑", "flèche à fût pointillé droite", "flèche à fût pointillé droite", "flèche à fût pointillé droite"
-fr, mathspeak, "⤒", "flèche jusqu'à taquet vers le haut", "flèche jusqu'à taquet vers le haut", "flèche jusqu'à taquet vers le haut"
-fr, mathspeak, "⤓", "flèche jusqu'à taquet vers le bas", "flèche jusqu'à taquet vers le bas", "flèche jusqu'à taquet vers le bas"
-fr, mathspeak, "⤔", "right-arrow with tail with vertical stroke", "right-arrow with tail with vertical stroke", "R arrow with tail with vertical stroke"
-fr, mathspeak, "⤕", "right-arrow with tail with double vertical stroke", "right-arrow with tail with double vertical stroke", "R arrow with tail with double vertical stroke"
-fr, mathspeak, "⤖", "flèche empennée à deux têtes droite", "flèche empennée à deux têtes droite", "flèche empennée à deux têtes droite"
-fr, mathspeak, "⤗", "right two headed arrow with tail with vertical stroke", "right two headed arrow with tail with vertical stroke", "r two headed arrow with tail with vertical stroke"
-fr, mathspeak, "⤘", "right two headed arrow with tail with double vertical stroke", "right two headed arrow with tail with double vertical stroke", "r two headed arrow with tail with double vertical stroke"
-fr, mathspeak, "⤙", "empenne gauche", "empenne gauche", "empenne gauche"
-fr, mathspeak, "⤚", "right-arrow tail", "right-arrow tail", "R arrow tail"
-fr, mathspeak, "⤛", "double empenne gauche", "double empenne gauche", "double empenne gauche"
-fr, mathspeak, "⤜", "double empenne droite", "double empenne droite", "double empenne droite"
-fr, mathspeak, "⤝", "flèche vers un losange noir à gauche", "flèche vers un losange noir à gauche", "flèche vers un losange noir à gauche"
-fr, mathspeak, "⤞", "flèche vers un losange noir à droite", "flèche vers un losange noir à droite", "flèche vers un losange noir à droite"
-fr, mathspeak, "⤟", "flèche d'un taquet vers un losange noir à gauche", "flèche d'un taquet vers un losange noir à gauche", "flèche d'un taquet vers un losange noir à gauche"
-fr, mathspeak, "⤠", "flèche d'un taquet vers un losange noir à droite", "flèche d'un taquet vers un losange noir à droite", "flèche d'un taquet vers un losange noir à droite"
-fr, mathspeak, "⤡", "north west and south east arrow", "north west and south east arrow", "north west and south east arrow"
-fr, mathspeak, "⤢", "north east and south west arrow", "north east and south west arrow", "north east and south west arrow"
-fr, mathspeak, "⤣", "flèche nord-ouest à crochet", "flèche nord-ouest à crochet", "flèche nord-ouest à crochet"
-fr, mathspeak, "⤤", "flèche nord-est à crochet", "flèche nord-est à crochet", "flèche nord-est à crochet"
-fr, mathspeak, "⤥", "flèche sud-est à crochet", "flèche sud-est à crochet", "flèche sud-est à crochet"
-fr, mathspeak, "⤦", "flèche sud-ouest à crochet", "flèche sud-ouest à crochet", "flèche sud-ouest à crochet"
-fr, mathspeak, "⤧", "flèches nord-ouest et nord-est", "flèches nord-ouest et nord-est", "flèches nord-ouest et nord-est"
-fr, mathspeak, "⤨", "flèches nord-est et sud-est", "flèches nord-est et sud-est", "flèches nord-est et sud-est"
-fr, mathspeak, "⤩", "flèches sud-est et sud-ouest", "flèches sud-est et sud-ouest", "flèches sud-est et sud-ouest"
-fr, mathspeak, "⤪", "flèches sud-ouest et nord-ouest", "flèches sud-ouest et nord-ouest", "flèches sud-ouest et nord-ouest"
-fr, mathspeak, "⤭", "south east arrow crossing north east arrow", "south east arrow crossing north east arrow", "south east arrow crossing north east arrow"
-fr, mathspeak, "⤮", "north east arrow crossing south east arrow", "north east arrow crossing south east arrow", "north east arrow crossing south east arrow"
-fr, mathspeak, "⤯", "falling diagonal crossing north east arrow", "falling diagonal crossing north east arrow", "falling diagonal crossing north east arrow"
-fr, mathspeak, "⤰", "rising diagonal crossing south east arrow", "rising diagonal crossing south east arrow", "rising diagonal crossing south east arrow"
-fr, mathspeak, "⤱", "north east arrow crossing north west arrow", "north east arrow crossing north west arrow", "north east arrow crossing north west arrow"
-fr, mathspeak, "⤲", "north west arrow crossing north east arrow", "north west arrow crossing north east arrow", "north west arrow crossing north east arrow"
-fr, mathspeak, "⤳", "flèche bossue droite", "flèche bossue droite", "flèche bossue droite"
-fr, mathspeak, "⤴", "arrow pointing right then curving up", "arrow pointing right then curving up", "arrow pointing right then curving up"
-fr, mathspeak, "⤵", "flèche courbe vers la droite puis le bas", "flèche courbe vers la droite puis le bas", "flèche courbe vers la droite puis le bas"
-fr, mathspeak, "⤶", "flèche courbe vers le bas puis la gauche", "flèche courbe vers le bas puis la gauche", "flèche courbe vers le bas puis la gauche"
-fr, mathspeak, "⤷", "flèche courbe vers le bas puis la droite", "flèche courbe vers le bas puis la droite", "flèche courbe vers le bas puis la droite"
-fr, mathspeak, "⤸", "côté droit d'arc fléché sens horaire", "côté droit d'arc fléché sens horaire", "côté droit d'arc fléché sens horaire"
-fr, mathspeak, "⤹", "côté gauche d'arc fléché sens antihoraire", "côté gauche d'arc fléché sens antihoraire", "côté gauche d'arc fléché sens antihoraire"
-fr, mathspeak, "⤺", "top arc anticlockwise arrow", "top arc anticlockwise arrow", "top arc anticlockwise arrow"
-fr, mathspeak, "⤻", "bottom arc anticlockwise arrow", "bottom arc anticlockwise arrow", "bottom arc anticlockwise arrow"
-fr, mathspeak, "⤼", "arc fléché sens horaire et signe moins souscrit", "arc fléché sens horaire et signe moins souscrit", "arc fléché sens horaire et signe moins souscrit"
-fr, mathspeak, "⤽", "arc fléché sens antihoraire et signe plus souscrit", "arc fléché sens antihoraire et signe plus souscrit", "arc fléché sens antihoraire et signe plus souscrit"
-fr, mathspeak, "⤾", "down right semicircular clockwise arrow", "down right semicircular clockwise arrow", "d r semicircular clockwise arrow"
-fr, mathspeak, "⤿", "down left semicircular anticlockwise arrow", "down left semicircular anticlockwise arrow", "d l semicircular anticlockwise arrow"
-fr, mathspeak, "⥀", "anticlockwise closed circle arrow", "anticlockwise closed circle arrow", "anticlockwise closed circle arrow"
-fr, mathspeak, "⥁", "clockwise closed circle arrow", "clockwise closed circle arrow", "clockwise closed circle arrow"
-fr, mathspeak, "⥂", "right-arrow above short left-arrow", "right-arrow above short left-arrow", "R arrow above short L arrow"
-fr, mathspeak, "⥃", "left-arrow above short right-arrow", "left-arrow above short right-arrow", "L arrow above short R arrow"
-fr, mathspeak, "⥄", "short right-arrow above left-arrow", "short right-arrow above left-arrow", "short R arrow above L arrow"
-fr, mathspeak, "⥅", "flèche droite surmontant signe moins", "flèche droite surmontant signe moins", "flèche droite surmontant signe moins"
-fr, mathspeak, "⥆", "left-arrow with plus below", "left-arrow with plus below", "L arrow with plus below"
-fr, mathspeak, "⥇", "right-arrow through x", "right-arrow through x", "R arrow through x"
-fr, mathspeak, "⥈", "petit cercle traversé d'une flèche bilatérale", "petit cercle traversé d'une flèche bilatérale", "petit cercle traversé d'une flèche bilatérale"
-fr, mathspeak, "⥉", "petit cercle surmonté d'une flèche montante à deux têtes", "petit cercle surmonté d'une flèche montante à deux têtes", "petit cercle surmonté d'une flèche montante à deux têtes"
-fr, mathspeak, "⥰", "flèche en épingle à cheveu droite", "flèche en épingle à cheveu droite", "flèche en épingle à cheveu droite"
-fr, mathspeak, "⥱", "flèche droite surmontée d'un égal", "flèche droite surmontée d'un égal", "flèche droite surmontée d'un égal"
-fr, mathspeak, "⥲", "flèche droite surmontée d'un tilde", "flèche droite surmontée d'un tilde", "flèche droite surmontée d'un tilde"
-fr, mathspeak, "⥳", "tilde surmonté d'une flèche gauche", "tilde surmonté d'une flèche gauche", "tilde surmonté d'une flèche gauche"
-fr, mathspeak, "⥴", "tilde surmonté d'une flèche droite", "tilde surmonté d'une flèche droite", "tilde surmonté d'une flèche droite"
-fr, mathspeak, "⥵", "presque égal à surmonté d'une flèche droite", "presque égal à surmonté d'une flèche droite", "presque égal à surmonté d'une flèche droite"
-fr, mathspeak, "⥶", "inférieur à surmonté d'une flèche gauche", "inférieur à surmonté d'une flèche gauche", "inférieur à surmonté d'une flèche gauche"
-fr, mathspeak, "⥷", "left-arrow through less than", "left-arrow through less than", "L arrow through less than"
-fr, mathspeak, "⥸", "flèche droite surmontée d'un supérieur à", "flèche droite surmontée d'un supérieur à", "flèche droite surmontée d'un supérieur à"
-fr, mathspeak, "⥹", "flèche droite surmontée d'un sous-ensemble de", "flèche droite surmontée d'un sous-ensemble de", "flèche droite surmontée d'un sous-ensemble de"
-fr, mathspeak, "⥺", "left-arrow through subset", "left-arrow through subset", "L arrow through subset"
-fr, mathspeak, "⥻", "flèche gauche surmontée d'un sur-ensemble de", "flèche gauche surmontée d'un sur-ensemble de", "flèche gauche surmontée d'un sur-ensemble de"
-fr, mathspeak, "⦳", "ensemble vide flèche droite en chef", "ensemble vide flèche droite en chef", "ensemble vide flèche droite en chef"
-fr, mathspeak, "⦴", "ensemble vide flèche gauche en chef", "ensemble vide flèche gauche en chef", "ensemble vide flèche gauche en chef"
-fr, mathspeak, "⦽", "up-arrow through circle", "up-arrow through circle", "U arrow through circle"
-fr, mathspeak, "⧪", "black diamond with down-arrow", "black diamond with down-arrow", "black diamond with D arrow"
-fr, mathspeak, "⧬", "white circle with down-arrow", "white circle with down-arrow", "white circle with D arrow"
-fr, mathspeak, "⧭", "black circle with down-arrow", "black circle with down-arrow", "black circle with D arrow"
-fr, mathspeak, "⨗", "intégrale à crosse fléchée gauche", "intégrale à crosse fléchée gauche", "intégrale à crosse fléchée gauche"
-fr, mathspeak, "⬀", "north east white arrow", "north east white arrow", "north east white arrow"
-fr, mathspeak, "⬁", "north west white arrow", "north west white arrow", "north west white arrow"
-fr, mathspeak, "⬂", "south east white arrow", "south east white arrow", "south east white arrow"
-fr, mathspeak, "⬃", "south west white arrow", "south west white arrow", "south west white arrow"
-fr, mathspeak, "⬄", "left right white arrow", "left right white arrow", "L R white arrow"
-fr, mathspeak, "⬅", "left black arrow", "left black arrow", "L black arrow"
-fr, mathspeak, "⬆", "up black arrow", "up black arrow", "U black arrow"
-fr, mathspeak, "⬇", "down black arrow", "down black arrow", "D black arrow"
-fr, mathspeak, "⬈", "north east black arrow", "north east black arrow", "north east black arrow"
-fr, mathspeak, "⬉", "north west black arrow", "north west black arrow", "north west black arrow"
-fr, mathspeak, "⬊", "south east black arrow", "south east black arrow", "south east black arrow"
-fr, mathspeak, "⬋", "south west black arrow", "south west black arrow", "south west black arrow"
-fr, mathspeak, "⬌", "left right black arrow", "left right black arrow", "L R black arrow"
-fr, mathspeak, "⬍", "up down black arrow", "up down black arrow", "U D black arrow"
-fr, mathspeak, "⬎", "right-arrow with tip down", "right-arrow with tip down", "R arrow with tip down"
-fr, mathspeak, "⬏", "right-arrow with tip up", "right-arrow with tip up", "R arrow with tip up"
-fr, mathspeak, "⬐", "left-arrow with tip down", "left-arrow with tip down", "L arrow with tip down"
-fr, mathspeak, "⬑", "left-arrow with tip up", "left-arrow with tip up", "L arrow with tip up"
-fr, mathspeak, "⬰", "left-arrow with small circle", "left-arrow with small circle", "L arrow with small circle"
-fr, mathspeak, "⬱", "three left-arrows", "three left-arrows", "three L arrows"
-fr, mathspeak, "⬲", "left-arrow with circled plus", "left-arrow with circled plus", "L arrow with circled plus"
-fr, mathspeak, "⬳", "long left squiggle arrow", "long left squiggle arrow", "long l squiggle arrow"
-fr, mathspeak, "⬴", "left two headed arrow with vertical stroke", "left two headed arrow with vertical stroke", "l two headed arrow with vertical stroke"
-fr, mathspeak, "⬵", "left two headed arrow with double vertical stroke", "left two headed arrow with double vertical stroke", "l two headed arrow with double vertical stroke"
-fr, mathspeak, "⬶", "left two headed arrow from bar", "left two headed arrow from bar", "l two headed arrow from bar"
-fr, mathspeak, "⬷", "left two headed triple dash arrow", "left two headed triple dash arrow", "l two headed triple dash arrow"
-fr, mathspeak, "⬸", "left-arrow with dotted stem", "left-arrow with dotted stem", "L arrow with dotted stem"
-fr, mathspeak, "⬹", "left-arrow with tail with vertical stroke", "left-arrow with tail with vertical stroke", "L arrow with tail with vertical stroke"
-fr, mathspeak, "⬺", "left-arrow with tail with double vertical stroke", "left-arrow with tail with double vertical stroke", "L arrow with tail with double vertical stroke"
-fr, mathspeak, "⬻", "left two headed arrow with tail", "left two headed arrow with tail", "l two headed arrow with tail"
-fr, mathspeak, "⬼", "left two headed arrow with tail with vertical stroke", "left two headed arrow with tail with vertical stroke", "l two headed arrow with tail with vertical stroke"
-fr, mathspeak, "⬽", "left two headed arrow with tail with double vertical stroke", "left two headed arrow with tail with double vertical stroke", "l two headed arrow with tail with double vertical stroke"
-fr, mathspeak, "⬾", "left-arrow through x", "left-arrow through x", "L arrow through x"
-fr, mathspeak, "⬿", "wave arrow pointing directly left", "wave arrow pointing directly left", "wave arrow pointing directly left"
-fr, mathspeak, "⭀", "equals sign above left-arrow", "equals sign above left-arrow", "equals sign above L arrow"
-fr, mathspeak, "⭁", "reverse tilde operator above left-arrow", "reverse tilde operator above left-arrow", "reverse tilde operator above L arrow"
-fr, mathspeak, "⭂", "left-arrow above reverse almost equals", "left-arrow above reverse almost equals", "L arrow above reverse almost equals"
-fr, mathspeak, "⭃", "right-arrow through greater than", "right-arrow through greater than", "R arrow through greater than"
-fr, mathspeak, "⭄", "right-arrow through superset", "right-arrow through superset", "R arrow through superset"
-fr, mathspeak, "⭅", "left quadruple arrow", "left quadruple arrow", "l quadrule arrow"
-fr, mathspeak, "⭆", "right quadruple arrow", "right quadruple arrow", "r quadrule arrow"
-fr, mathspeak, "⭇", "reverse tilde operator above right-arrow", "reverse tilde operator above right-arrow", "reverse tilde operator above R arrow"
-fr, mathspeak, "⭈", "right-arrow above reverse almost equals", "right-arrow above reverse almost equals", "R arrow above reverse almost equals"
-fr, mathspeak, "⭉", "tilde operator above left-arrow", "tilde operator above left-arrow", "tilde operator above L arrow"
-fr, mathspeak, "⭊", "left-arrow above almost equals", "left-arrow above almost equals", "L arrow above almost equals"
-fr, mathspeak, "⭋", "left-arrow above reverse tilde operator", "left-arrow above reverse tilde operator", "L arrow above reverse tilde operator"
-fr, mathspeak, "⭌", "right-arrow above reverse tilde operator", "right-arrow above reverse tilde operator", "R arrow above reverse tilde operator"
-fr, mathspeak, "￩", "halfwidth left-arrow", "halfwidth left-arrow", "halfwidth L arrow"
-fr, mathspeak, "￪", "halfwidth up-arrow", "halfwidth up-arrow", "halfwidth U arrow"
-fr, mathspeak, "￫", "halfwidth right-arrow", "halfwidth right-arrow", "halfwidth R arrow"
-fr, mathspeak, "￬", "halfwidth down-arrow", "halfwidth down-arrow", "halfwidth D arrow"
-fr, mathspeak, "ℓ", "l minuscule en script", "l minuscule en script", "l minuscule en script"
-fr, mathspeak, "℘", "fonction elliptique de weierstrass", "fonction elliptique de weierstrass", "fonction elliptique de weierstrass"
-fr, mathspeak, "ℼ", "double struck pi", "double struck pi", "double struck pi"
-fr, mathspeak, "ℽ", "double struck gamma", "double struck gamma", "double struck gamma"
-fr, mathspeak, "ℾ", "double struck upper Gamma", "double struck upper Gamma", "double struck upper Gamma"
-fr, mathspeak, "ℿ", "double struck upper Pi", "double struck upper Pi", "double struck upper Pi"
-fr, mathspeak, "⅀", "double struck n ary summation", "double struck n ary summation", "double struck n ary summation"
-fr, mathspeak, "ⅅ", "D majuscule", "D majuscule", "D majuscule"
-fr, mathspeak, "ⅆ", "d minuscule ajouré en italique", "d minuscule ajouré en italique", "d minuscule ajouré en italique"
-fr, mathspeak, "ⅇ", "e minuscule ajouré en italique", "e minuscule ajouré en italique", "e minuscule ajouré en italique"
-fr, mathspeak, "ⅈ", "i minuscule ajouré en italique", "i minuscule ajouré en italique", "i minuscule ajouré en italique"
-fr, mathspeak, "ⅉ", "double struck italic j", "double struck italic j", "double struck italic j"
-fr, mathspeak, "𝚤", "dotless i", "dotless i", "dotless i"
-fr, mathspeak, "𝚥", "dotless j", "dotless j", "dotless j"
-fr, mathspeak, "(", "parenthèse gauche", "parenthèse gauche", "parenthèse gauche"
-fr, mathspeak, ")", "parenthèse droite", "parenthèse droite", "parenthèse droite"
-fr, mathspeak, "[", "crochet gauche", "crochet gauche", "crochet gauche"
-fr, mathspeak, "]", "crochet droit", "crochet droit", "crochet droit"
-fr, mathspeak, "{", "accolade gauche", "accolade gauche", "accolade gauche"
-fr, mathspeak, "}", "accolade droite", "accolade droite", "accolade droite"
-fr, mathspeak, "⁅", "left-bracket with quill", "left-brack with quill", "L brack with quill"
-fr, mathspeak, "⁆", "right-bracket with quill", "right-brack with quill", "R brack with quill"
-fr, mathspeak, "⌈", "plafond à gauche", "plafond à gauche", "plafond à gauche"
-fr, mathspeak, "⌉", "plafond à droite", "plafond à droite", "plafond à droite"
-fr, mathspeak, "⌊", "plancher à gauche", "plancher à gauche", "plancher à gauche"
-fr, mathspeak, "⌋", "plancher à droite", "plancher à droite", "plancher à droite"
-fr, mathspeak, "⌌", "repère sud-est", "repère sud-est", "repère sud-est"
-fr, mathspeak, "⌍", "repère sud-ouest", "repère sud-ouest", "repère sud-ouest"
-fr, mathspeak, "⌎", "repère nord-est", "repère nord-est", "repère nord-est"
-fr, mathspeak, "⌏", "repère nord-ouest", "repère nord-ouest", "repère nord-ouest"
-fr, mathspeak, "⌜", "coin nord-ouest", "coin nord-ouest", "coin nord-ouest"
-fr, mathspeak, "⌝", "coin nord-est", "coin nord-est", "coin nord-est"
-fr, mathspeak, "⌞", "coin sud-ouest", "coin sud-ouest", "coin sud-ouest"
-fr, mathspeak, "⌟", "coin sud-est", "coin sud-est", "coin sud-est"
-fr, mathspeak, "⌠", "moitié supérieure d'intégrale", "moitié supérieure d'intégrale", "moitié supérieure d'intégrale"
-fr, mathspeak, "⌡", "moitié inférieure d'intégrale", "moitié inférieure d'intégrale", "moitié inférieure d'intégrale"
-fr, mathspeak, "〈", "chevron gauche", "chevron gauche", "chevron gauche"
-fr, mathspeak, "〉", "chevron droite", "chevron droite", "chevron droite"
-fr, mathspeak, "⎛", "left-parenthesis upper hook", "left-p'ren upper hook", "L p'ren upper hook"
-fr, mathspeak, "⎜", "left-parenthesis extension", "left-p'ren extension", "L p'ren extension"
-fr, mathspeak, "⎝", "left-parenthesis lower hook", "left-p'ren lower hook", "L p'ren lower hook"
-fr, mathspeak, "⎞", "right-parenthesis upper hook", "right-p'ren upper hook", "R p'ren upper hook"
-fr, mathspeak, "⎟", "right-parenthesis extension", "right-p'ren extension", "R p'ren extension"
-fr, mathspeak, "⎠", "right-parenthesis lower hook", "right-p'ren lower hook", "R p'ren lower hook"
-fr, mathspeak, "⎡", "left-bracket upper corner", "left-brack upper corner", "L brack upper corner"
-fr, mathspeak, "⎢", "left-bracket extension", "left-brack extension", "L brack extension"
-fr, mathspeak, "⎣", "left-bracket lower corner", "left-brack lower corner", "L brack lower corner"
-fr, mathspeak, "⎤", "right-bracket upper corner", "right-brack upper corner", "R brack upper corner"
-fr, mathspeak, "⎥", "right-bracket extension", "right-brack extension", "R brack extension"
-fr, mathspeak, "⎦", "right-bracket lower corner", "right-brack lower corner", "R brack lower corner"
-fr, mathspeak, "⎧", "left-brace upper hook", "left-brace upper hook", "L brace upper hook"
-fr, mathspeak, "⎨", "left-brace middle piece", "left-brace middle piece", "L brace middle piece"
-fr, mathspeak, "⎩", "left-brace lower hook", "left-brace lower hook", "L brace lower hook"
-fr, mathspeak, "⎪", "brace extension", "brace extension", "brace extension"
-fr, mathspeak, "⎫", "right-brace upper hook", "right-brace upper hook", "R brace upper hook"
-fr, mathspeak, "⎬", "right-brace middle piece", "right-brace middle piece", "R brace middle piece"
-fr, mathspeak, "⎭", "right-brace lower hook", "right-brace lower hook", "R brace lower hook"
-fr, mathspeak, "⎮", "integral extension", "integral extension", "integral extension"
-fr, mathspeak, "⎯", "horizontal line extension", "horizontal line extension", "horizontal line extension"
-fr, mathspeak, "⎰", "moitié supérieure gauche ou inférieure droite d'accolade", "moitié supérieure gauche ou inférieure droite d'accolade", "moitié supérieure gauche ou inférieure droite d'accolade"
-fr, mathspeak, "⎱", "moitié supérieure droite ou inférieure gauche d'accolade", "moitié supérieure droite ou inférieure gauche d'accolade", "moitié supérieure droite ou inférieure gauche d'accolade"
-fr, mathspeak, "⎲", "summation top", "summation top", "summation top"
-fr, mathspeak, "⎳", "summation bottom", "summation bottom", "summation bottom"
-fr, mathspeak, "⎴", "crochet vertical supérieur", "crochet vertical supérieur", "crochet vertical supérieur"
-fr, mathspeak, "⎵", "crochet vertical inférieur", "crochet vertical inférieur", "crochet vertical inférieur"
-fr, mathspeak, "⎶", "bottom-bracket over top-bracket", "bottom-brack over top-brack", "B brack over T brack"
-fr, mathspeak, "⎷", "radical symbol bottom", "radical symbol bottom", "radical symbol bottom"
-fr, mathspeak, "⎸", "left vertical box line", "left vertical box line", "left vertical box line"
-fr, mathspeak, "⎹", "right vertical box line", "right vertical box line", "right vertical box line"
-fr, mathspeak, "⏜", "parenthèse supérieure", "parenthèse supérieure", "parenthèse supérieure"
-fr, mathspeak, "⏝", "parenthèse inférieure", "parenthèse inférieure", "parenthèse inférieure"
-fr, mathspeak, "⏞", "accolade supérieure", "accolade supérieure", "accolade supérieure"
-fr, mathspeak, "⏟", "accolade inférieure", "accolade inférieure", "accolade inférieure"
-fr, mathspeak, "⏠", "crochet en écaille supérieur", "crochet en écaille supérieur", "crochet en écaille supérieur"
-fr, mathspeak, "⏡", "crochet en écaille inférieur", "crochet en écaille inférieur", "crochet en écaille inférieur"
-fr, mathspeak, "❨", "medium left-parenthesis ornament", "medium left-p'ren ornament", "medium L p'ren ornament"
-fr, mathspeak, "❩", "medium right-parenthesis ornament", "medium right-p'ren ornament", "medium R p'ren ornament"
-fr, mathspeak, "❪", "medium flattened left-parenthesis ornament", "medium flattened left-p'ren ornament", "medium flattened L p'ren ornament"
-fr, mathspeak, "❫", "medium flattened right-parenthesis ornament", "medium flattened right-p'ren ornament", "medium flattened R p'ren ornament"
-fr, mathspeak, "❬", "medium left pointing angle ornament", "medium left pointing angle ornament", "medium left pointing angle ornament"
-fr, mathspeak, "❭", "medium right pointing angle ornament", "medium right pointing angle ornament", "medium right pointing angle ornament"
-fr, mathspeak, "❮", "heavy left pointing angle quotation mark ornament", "heavy left pointing angle quotation mark ornament", "heavy left pointing angle quotation mark ornament"
-fr, mathspeak, "❯", "heavy right pointing angle quotation mark ornament", "heavy right pointing angle quotation mark ornament", "heavy right pointing angle quotation mark ornament"
-fr, mathspeak, "❰", "heavy left pointing angle ornament", "heavy left pointing angle ornament", "heavy left pointing angle ornament"
-fr, mathspeak, "❱", "heavy right pointing angle ornament", "heavy right pointing angle ornament", "heavy right pointing angle ornament"
-fr, mathspeak, "❲", "light left tortoise shell bracket ornament", "light left tortoise shell bracket ornament", "light left tortoise shell bracket ornament"
-fr, mathspeak, "❳", "light right tortoise shell bracket ornament", "light right tortoise shell bracket ornament", "light right tortoise shell bracket ornament"
-fr, mathspeak, "❴", "medium left-brace ornament", "medium left-brace ornament", "medium L brace ornament"
-fr, mathspeak, "❵", "medium right-brace ornament", "medium right-brace ornament", "medium R brace ornament"
-fr, mathspeak, "⟅", "délimiteur de sac en s gauche", "délimiteur de sac en s gauche", "délimiteur de sac en s gauche"
-fr, mathspeak, "⟆", "délimiteur de sac en s droite", "délimiteur de sac en s droite", "délimiteur de sac en s droite"
-fr, mathspeak, "⟦", "crochet blanc gauche", "crochet blanc gauche", "crochet blanc gauche"
-fr, mathspeak, "⟧", "crochet blanc droit", "crochet blanc droit", "crochet blanc droit"
-fr, mathspeak, "⟨", "chevron mathématique gauche", "chevron mathématique gauche", "chevron mathématique gauche"
-fr, mathspeak, "⟩", "chevron droit", "chevron droit", "chevron droit"
-fr, mathspeak, "⟪", "double chevron gauche", "double chevron gauche", "double chevron gauche"
-fr, mathspeak, "⟫", "double chevron droit", "double chevron droit", "double chevron droit"
-fr, mathspeak, "⟬", "crochet gauche en écaille blanche", "crochet gauche en écaille blanche", "crochet gauche en écaille blanche"
-fr, mathspeak, "⟭", "crochet droit en écaille blanche", "crochet droit en écaille blanche", "crochet droit en écaille blanche"
-fr, mathspeak, "⟮", "parenthèse gauche aplatie", "parenthèse gauche aplatie", "parenthèse gauche aplatie"
-fr, mathspeak, "⟯", "parenthèse droite aplatie", "parenthèse droite aplatie", "parenthèse droite aplatie"
-fr, mathspeak, "⦃", "left white brace", "left white brace", "left white brace"
-fr, mathspeak, "⦄", "right white brace", "right white brace", "right white brace"
-fr, mathspeak, "⦅", "parenthèse gauche ajourée", "parenthèse gauche ajourée", "parenthèse gauche ajourée"
-fr, mathspeak, "⦆", "parenthèse droite ajourée", "parenthèse droite ajourée", "parenthèse droite ajourée"
-fr, mathspeak, "⦇", "z notation left image bracket", "z notation left image bracket", "z notation left image bracket"
-fr, mathspeak, "⦈", "z notation right image bracket", "z notation right image bracket", "z notation right image bracket"
-fr, mathspeak, "⦉", "z notation left binding bracket", "z notation left binding bracket", "z notation left binding bracket"
-fr, mathspeak, "⦊", "z notation right binding bracket", "z notation right binding bracket", "z notation right binding bracket"
-fr, mathspeak, "⦋", "crochet gauche avec barre souscrite", "crochet gauche avec barre souscrite", "crochet gauche avec barre souscrite"
-fr, mathspeak, "⦌", "crochet droit avec barre souscrite", "crochet droit avec barre souscrite", "crochet droit avec barre souscrite"
-fr, mathspeak, "⦍", "crochet gauche avec trait dans le coin supérieur", "crochet gauche avec trait dans le coin supérieur", "crochet gauche avec trait dans le coin supérieur"
-fr, mathspeak, "⦎", "crochet droit avec trait dans le coin inférieur", "crochet droit avec trait dans le coin inférieur", "crochet droit avec trait dans le coin inférieur"
-fr, mathspeak, "⦏", "crochet gauche avec trait dans le coin inférieur", "crochet gauche avec trait dans le coin inférieur", "crochet gauche avec trait dans le coin inférieur"
-fr, mathspeak, "⦐", "crochet droit avec trait dans le coin supérieur", "crochet droit avec trait dans le coin supérieur", "crochet droit avec trait dans le coin supérieur"
-fr, mathspeak, "⦑", "chevron gauche pointé", "chevron gauche pointé", "chevron gauche pointé"
-fr, mathspeak, "⦒", "chevron droit pointé", "chevron droit pointé", "chevron droit pointé"
-fr, mathspeak, "⦓", "parenthèse arc gauche et inférieur à", "parenthèse arc gauche et inférieur à", "parenthèse arc gauche et inférieur à"
-fr, mathspeak, "⦔", "parenthèse arc droite et supérieur à", "parenthèse arc droite et supérieur à", "parenthèse arc droite et supérieur à"
-fr, mathspeak, "⦕", "parenthèse double arc droite et supérieur à", "parenthèse double arc droite et supérieur à", "parenthèse double arc droite et supérieur à"
-fr, mathspeak, "⦖", "parenthèse double arc gauche et inférieur à", "parenthèse double arc gauche et inférieur à", "parenthèse double arc gauche et inférieur à"
-fr, mathspeak, "⦗", "left black tortoise shell bracket", "left black tortoise shell bracket", "left black tortoise shell bracket"
-fr, mathspeak, "⦘", "right black tortoise shell bracket", "right black tortoise shell bracket", "right black tortoise shell bracket"
-fr, mathspeak, "⧘", "left wiggly fence", "left wiggly fence", "left wiggly fence"
-fr, mathspeak, "⧙", "right wiggly fence", "right wiggly fence", "right wiggly fence"
-fr, mathspeak, "⧚", "double clôture dentelée gauche", "double clôture dentelée gauche", "double clôture dentelée gauche"
-fr, mathspeak, "⧛", "right double wiggly fence", "right double wiggly fence", "right double wiggly fence"
-fr, mathspeak, "⧼", "left pointing curved angle", "left pointing curved angle", "left pointing curved angle"
-fr, mathspeak, "⧽", "right pointing curved angle", "right pointing curved angle", "right pointing curved angle"
-fr, mathspeak, "⸢", "top half left-bracket", "top half left-brack", "top half L brack"
-fr, mathspeak, "⸣", "top half right-bracket", "top half right-brack", "top half R brack"
-fr, mathspeak, "⸤", "bottom half left-bracket", "bottom half left-brack", "bottom half L brack"
-fr, mathspeak, "⸥", "bottom half right-bracket", "bottom half right-brack", "bottom half R brack"
-fr, mathspeak, "⸦", "left sideways U bracket", "left sideways U bracket", "left sideways U bracket"
-fr, mathspeak, "⸧", "right sideways U bracket", "right sideways U bracket", "right sideways U bracket"
-fr, mathspeak, "⸨", "double left-parenthesis", "double left-p'ren", "double L p'ren"
-fr, mathspeak, "⸩", "double right-parenthesis", "double right-p'ren", "double R p'ren"
-fr, mathspeak, "〈", "left-angle", "left-angle", "l angle"
-fr, mathspeak, "〉", "right-angle", "right-angle", "r angle"
-fr, mathspeak, "《", "double chevron gauche", "double chevron gauche", "double chevron gauche"
-fr, mathspeak, "》", "double chevron droit", "double chevron droit", "double chevron droit"
-fr, mathspeak, "「", "left corner bracket", "left corner bracket", "left corner bracket"
-fr, mathspeak, "」", "right corner bracket", "right corner bracket", "right corner bracket"
-fr, mathspeak, "『", "left white corner bracket", "left white corner bracket", "left white corner bracket"
-fr, mathspeak, "』", "right white corner bracket", "right white corner bracket", "right white corner bracket"
-fr, mathspeak, "【", "left black lenticular bracket", "left black lenticular bracket", "left black lenticular bracket"
-fr, mathspeak, "】", "right black lenticular bracket", "right black lenticular bracket", "right black lenticular bracket"
-fr, mathspeak, "〔", "crochet gauche en écaille", "crochet gauche en écaille", "crochet gauche en écaille"
-fr, mathspeak, "〕", "crochet droit en écaille", "crochet droit en écaille", "crochet droit en écaille"
-fr, mathspeak, "〖", "left white lenticular bracket", "left white lenticular bracket", "left white lenticular bracket"
-fr, mathspeak, "〗", "right white lenticular bracket", "right white lenticular bracket", "right white lenticular bracket"
-fr, mathspeak, "〘", "left white tortoise shell bracket", "left white tortoise shell bracket", "left white tortoise shell bracket"
-fr, mathspeak, "〙", "right white tortoise shell bracket", "right white tortoise shell bracket", "right white tortoise shell bracket"
-fr, mathspeak, "〚", "crochet blanc gauche", "crochet blanc gauche", "crochet blanc gauche"
-fr, mathspeak, "〛", "crochet blanc droit", "crochet blanc droit", "crochet blanc droit"
-fr, mathspeak, "〝", "reversed double prime quotation mark", "reversed double prime quotation mark", "reversed double prime quotation mark"
-fr, mathspeak, "〞", "guillemet double prime", "guillemet double prime", "guillemet double prime"
-fr, mathspeak, "〟", "low double prime quotation mark", "low double prime quotation mark", "low double prime quotation mark"
-fr, mathspeak, "﴾", "ornate left-parenthesis", "ornate left-p'ren", "ornate L p'ren"
-fr, mathspeak, "﴿", "ornate right-parenthesis", "ornate right-p'ren", "ornate R p'ren"
-fr, mathspeak, "︗", "presentation form for vertical left white lenticular bracket", "presentation form for vertical left white lenticular bracket", "presentation form for vertical left white lenticular bracket"
-fr, mathspeak, "︘", "presentation form for vertical right white lenticular brakcet", "presentation form for vertical right white lenticular brakcet", "presentation form for vertical right white lenticular brakcet"
-fr, mathspeak, "︵", "forme de présentation de parenthèse gauche verticale", "forme de présentation de parenthèse gauche verticale", "forme de présentation de parenthèse gauche verticale"
-fr, mathspeak, "︶", "forme de présentation de parenthèse droite verticale", "forme de présentation de parenthèse droite verticale", "forme de présentation de parenthèse droite verticale"
-fr, mathspeak, "︷", "forme de présentation d'accolade gauche verticale", "forme de présentation d'accolade gauche verticale", "forme de présentation d'accolade gauche verticale"
-fr, mathspeak, "︸", "forme de présentation d'accolade droite verticale", "forme de présentation d'accolade droite verticale", "forme de présentation d'accolade droite verticale"
-fr, mathspeak, "︹", "presentation form for vertical left tortoise shell bracket", "presentation form for vertical left tortoise shell bracket", "presentation form for vertical left tortoise shell bracket"
-fr, mathspeak, "︺", "presentation form for vertical right tortoise shell bracket", "presentation form for vertical right tortoise shell bracket", "presentation form for vertical right tortoise shell bracket"
-fr, mathspeak, "︻", "presentation form for vertical left black lenticular bracket", "presentation form for vertical left black lenticular bracket", "presentation form for vertical left black lenticular bracket"
-fr, mathspeak, "︼", "presentation form for vertical right black lenticular bracket", "presentation form for vertical right black lenticular bracket", "presentation form for vertical right black lenticular bracket"
-fr, mathspeak, "︽", "presentation form for vertical left double angle", "presentation form for vertical left double angle", "presentation form for vertical left double angle"
-fr, mathspeak, "︾", "presentation form for vertical right double angle", "presentation form for vertical right double angle", "presentation form for vertical right double angle"
-fr, mathspeak, "︿", "over angle bracket", "over angle bracket", "over angle bracket"
-fr, mathspeak, "﹀", "under angle bracket", "under angle bracket", "under angle bracket"
-fr, mathspeak, "﹁", "presentation form for vertical left corner bracket", "presentation form for vertical left corner bracket", "presentation form for vertical left corner bracket"
-fr, mathspeak, "﹂", "presentation form for vertical right corner bracket", "presentation form for vertical right corner bracket", "presentation form for vertical right corner bracket"
-fr, mathspeak, "﹃", "presentation form for vertical left white corner bracket", "presentation form for vertical left white corner bracket", "presentation form for vertical left white corner bracket"
-fr, mathspeak, "﹄", "presentation form for vertical right white corner bracket", "presentation form for vertical right white corner bracket", "presentation form for vertical right white corner bracket"
-fr, mathspeak, "﹇", "presentation form for vertical left-bracket", "presentation form for vertical left-brack", "presentation form for vertical L brack"
-fr, mathspeak, "﹈", "presentation form for vertical right-bracket", "presentation form for vertical right-brack", "presentation form for vertical r brack"
-fr, mathspeak, "﹙", "small left-parenthesis", "small left-p'ren", "small L p'ren"
-fr, mathspeak, "﹚", "small right-parenthesis", "small right-p'ren", "small R p'ren"
-fr, mathspeak, "﹛", "small left-brace", "small left-brace", "small L brace"
-fr, mathspeak, "﹜", "small right-brace", "small right-brace", "small r brace"
-fr, mathspeak, "﹝", "small left tortoise shell bracket", "small left tortoise shell bracket", "small left tortoise shell bracket"
-fr, mathspeak, "﹞", "small right tortoise shell bracket", "small right tortoise shell bracket", "small right tortoise shell bracket"
-fr, mathspeak, "（", "fullwidth left-parenthesis", "fullwidth left-p'ren", "fullwidth L p'ren"
-fr, mathspeak, "）", "fullwidth right-parenthesis", "fullwidth right-p'ren", "fullwidth R p'ren"
-fr, mathspeak, "［", "fullwidth left-bracket", "fullwidth left-brack", "fullwidth L brack"
-fr, mathspeak, "］", "fullwidth right-bracket", "fullwidth right-brack", "fullwidth r brack"
-fr, mathspeak, "｛", "fullwidth left-brace", "fullwidth left-brace", "fullwidth L brace"
-fr, mathspeak, "｝", "fullwidth right-brace", "fullwidth right-brace", "fullwidth r brace"
-fr, mathspeak, "｟", "fullwidth white left-parenthesis", "fullwidth white left-p'ren", "fullwidth white L p'ren"
-fr, mathspeak, "｠", "fullwidth white right-parenthesis", "fullwidth white right-p'ren", "fullwidth white R p'ren"
-fr, mathspeak, "｢", "halfwidth left corner bracket", "halfwidth left corner bracket", "halfwidth left corner bracket"
-fr, mathspeak, "｣", "halfwidth right corner bracket", "halfwidth right corner bracket", "halfwidth right corner bracket"
-fr, mathspeak, "²", "exposant deux", "exposant deux", "exposant deux"
-fr, mathspeak, "³", "exposant trois", "exposant trois", "exposant trois"
-fr, mathspeak, "¹", "exposant un", "exposant un", "exposant un"
-fr, mathspeak, "¼", "un quart", "un quart", "un quart"
-fr, mathspeak, "½", "un demi", "un demi", "un demi"
-fr, mathspeak, "¾", "trois quarts", "trois quarts", "trois quarts"
-fr, mathspeak, "⁰", "super zero", "super zero", "super zero"
-fr, mathspeak, "⁴", "super four", "super four", "super four"
-fr, mathspeak, "⁵", "super five", "super five", "super five"
-fr, mathspeak, "⁶", "super six", "super six", "super six"
-fr, mathspeak, "⁷", "super seven", "super seven", "super seven"
-fr, mathspeak, "⁸", "super eight", "super eight", "super eight"
-fr, mathspeak, "⁹", "super nine", "super nine", "super nine"
-fr, mathspeak, "₀", "sub zero", "sub zero", "sub zero"
-fr, mathspeak, "₁", "sub one", "sub one", "sub one"
-fr, mathspeak, "₂", "sub two", "sub two", "sub two"
-fr, mathspeak, "₃", "sub three", "sub three", "sub three"
-fr, mathspeak, "₄", "sub four", "sub four", "sub four"
-fr, mathspeak, "₅", "sub five", "sub five", "sub five"
-fr, mathspeak, "₆", "sub six", "sub six", "sub six"
-fr, mathspeak, "₇", "sub seven", "sub seven", "sub seven"
-fr, mathspeak, "₈", "sub eight", "sub eight", "sub eight"
-fr, mathspeak, "₉", "sub nine", "sub nine", "sub nine"
-fr, mathspeak, "⅐", "one seventh", "one seventh", "one seventh"
-fr, mathspeak, "⅑", "one ninth", "one ninth", "one ninth"
-fr, mathspeak, "⅒", "one tenth", "one tenth", "one tenth"
-fr, mathspeak, "⅓", "un tiers", "un tiers", "un tiers"
-fr, mathspeak, "⅔", "deux tiers", "deux tiers", "deux tiers"
-fr, mathspeak, "⅕", "un cinquième", "un cinquième", "un cinquième"
-fr, mathspeak, "⅖", "deux cinquièmes", "deux cinquièmes", "deux cinquièmes"
-fr, mathspeak, "⅗", "trois cinquièmes", "trois cinquièmes", "trois cinquièmes"
-fr, mathspeak, "⅘", "quatre cinquièmes", "quatre cinquièmes", "quatre cinquièmes"
-fr, mathspeak, "⅙", "un sixième", "un sixième", "un sixième"
-fr, mathspeak, "⅚", "cinq sixièmes", "cinq sixièmes", "cinq sixièmes"
-fr, mathspeak, "⅛", "un huitième", "un huitième", "un huitième"
-fr, mathspeak, "⅜", "trois huitièmes", "trois huitièmes", "trois huitièmes"
-fr, mathspeak, "⅝", "cinq huitièmes", "cinq huitièmes", "cinq huitièmes"
-fr, mathspeak, "⅞", "sept huitièmes", "sept huitièmes", "sept huitièmes"
-fr, mathspeak, "⅟", "numerator one", "numerator one", "numerator one"
-fr, mathspeak, "↉", "zero thirds", "zero thirds", "zero thirds"
-fr, mathspeak, "①", "circled 1", "circled 1", "circled 1"
-fr, mathspeak, "②", "circled 2", "circled 2", "circled 2"
-fr, mathspeak, "③", "circled 3", "circled 3", "circled 3"
-fr, mathspeak, "④", "circled 4", "circled 4", "circled 4"
-fr, mathspeak, "⑤", "circled 5", "circled 5", "circled 5"
-fr, mathspeak, "⑥", "circled 6", "circled 6", "circled 6"
-fr, mathspeak, "⑦", "circled 7", "circled 7", "circled 7"
-fr, mathspeak, "⑧", "circled 8", "circled 8", "circled 8"
-fr, mathspeak, "⑨", "circled 9", "circled 9", "circled 9"
-fr, mathspeak, "⑩", "circled 10", "circled 10", "circled 10"
-fr, mathspeak, "⑪", "circled 11", "circled 11", "circled 11"
-fr, mathspeak, "⑫", "circled 12", "circled 12", "circled 12"
-fr, mathspeak, "⑬", "circled 13", "circled 13", "circled 13"
-fr, mathspeak, "⑭", "circled 14", "circled 14", "circled 14"
-fr, mathspeak, "⑮", "circled 15", "circled 15", "circled 15"
-fr, mathspeak, "⑯", "circled 16", "circled 16", "circled 16"
-fr, mathspeak, "⑰", "circled 17", "circled 17", "circled 17"
-fr, mathspeak, "⑱", "circled 18", "circled 18", "circled 18"
-fr, mathspeak, "⑲", "circled 19", "circled 19", "circled 19"
-fr, mathspeak, "⑳", "circled 20", "circled 20", "circled 20"
-fr, mathspeak, "⑴", "parenthesized 1", "parenthesized 1", "parenthesized 1"
-fr, mathspeak, "⑵", "parenthesized 2", "parenthesized 2", "parenthesized 2"
-fr, mathspeak, "⑶", "parenthesized 3", "parenthesized 3", "parenthesized 3"
-fr, mathspeak, "⑷", "parenthesized 4", "parenthesized 4", "parenthesized 4"
-fr, mathspeak, "⑸", "parenthesized 5", "parenthesized 5", "parenthesized 5"
-fr, mathspeak, "⑹", "parenthesized 6", "parenthesized 6", "parenthesized 6"
-fr, mathspeak, "⑺", "parenthesized 7", "parenthesized 7", "parenthesized 7"
-fr, mathspeak, "⑻", "parenthesized 8", "parenthesized 8", "parenthesized 8"
-fr, mathspeak, "⑼", "parenthesized 9", "parenthesized 9", "parenthesized 9"
-fr, mathspeak, "⑽", "parenthesized 10", "parenthesized 10", "parenthesized 10"
-fr, mathspeak, "⑾", "parenthesized 11", "parenthesized 11", "parenthesized 11"
-fr, mathspeak, "⑿", "parenthesized 12", "parenthesized 12", "parenthesized 12"
-fr, mathspeak, "⒀", "parenthesized 13", "parenthesized 13", "parenthesized 13"
-fr, mathspeak, "⒁", "parenthesized 14", "parenthesized 14", "parenthesized 14"
-fr, mathspeak, "⒂", "parenthesized 15", "parenthesized 15", "parenthesized 15"
-fr, mathspeak, "⒃", "parenthesized 16", "parenthesized 16", "parenthesized 16"
-fr, mathspeak, "⒄", "parenthesized 17", "parenthesized 17", "parenthesized 17"
-fr, mathspeak, "⒅", "parenthesized 18", "parenthesized 18", "parenthesized 18"
-fr, mathspeak, "⒆", "parenthesized 19", "parenthesized 19", "parenthesized 19"
-fr, mathspeak, "⒇", "parenthesized 20", "parenthesized 20", "parenthesized 20"
-fr, mathspeak, "⒈", "1 period", "1 period", "1 period"
-fr, mathspeak, "⒉", "2 period", "2 period", "2 period"
-fr, mathspeak, "⒊", "3 period", "3 period", "3 period"
-fr, mathspeak, "⒋", "4 period", "4 period", "4 period"
-fr, mathspeak, "⒌", "5 period", "5 period", "5 period"
-fr, mathspeak, "⒍", "6 period", "6 period", "6 period"
-fr, mathspeak, "⒎", "7 period", "7 period", "7 period"
-fr, mathspeak, "⒏", "8 period", "8 period", "8 period"
-fr, mathspeak, "⒐", "9 period", "9 period", "9 period"
-fr, mathspeak, "⒑", "10 period", "10 period", "10 period"
-fr, mathspeak, "⒒", "11 period", "11 period", "11 period"
-fr, mathspeak, "⒓", "12 period", "12 period", "12 period"
-fr, mathspeak, "⒔", "13 period", "13 period", "13 period"
-fr, mathspeak, "⒕", "14 period", "14 period", "14 period"
-fr, mathspeak, "⒖", "15 period", "15 period", "15 period"
-fr, mathspeak, "⒗", "16 period", "16 period", "16 period"
-fr, mathspeak, "⒘", "17 period", "17 period", "17 period"
-fr, mathspeak, "⒙", "18 period", "18 period", "18 period"
-fr, mathspeak, "⒚", "19 period", "19 period", "19 period"
-fr, mathspeak, "⒛", "20 period", "20 period", "20 period"
-fr, mathspeak, "⓪", "circled 0", "circled 0", "circled 0"
-fr, mathspeak, "⓫", "negative circled 11", "negative circled 11", "negative circled 11"
-fr, mathspeak, "⓬", "negative circled 12", "negative circled 12", "negative circled 12"
-fr, mathspeak, "⓭", "negative circled 13", "negative circled 13", "negative circled 13"
-fr, mathspeak, "⓮", "negative circled 14", "negative circled 14", "negative circled 14"
-fr, mathspeak, "⓯", "negative circled 15", "negative circled 15", "negative circled 15"
-fr, mathspeak, "⓰", "negative circled 16", "negative circled 16", "negative circled 16"
-fr, mathspeak, "⓱", "negative circled 17", "negative circled 17", "negative circled 17"
-fr, mathspeak, "⓲", "negative circled 18", "negative circled 18", "negative circled 18"
-fr, mathspeak, "⓳", "negative circled 19", "negative circled 19", "negative circled 19"
-fr, mathspeak, "⓴", "negative circled 20", "negative circled 20", "negative circled 20"
-fr, mathspeak, "⓵", "double circled 1", "double circled 1", "double circled 1"
-fr, mathspeak, "⓶", "double circled 2", "double circled 2", "double circled 2"
-fr, mathspeak, "⓷", "double circled 3", "double circled 3", "double circled 3"
-fr, mathspeak, "⓸", "double circled 4", "double circled 4", "double circled 4"
-fr, mathspeak, "⓹", "double circled 5", "double circled 5", "double circled 5"
-fr, mathspeak, "⓺", "double circled 6", "double circled 6", "double circled 6"
-fr, mathspeak, "⓻", "double circled 7", "double circled 7", "double circled 7"
-fr, mathspeak, "⓼", "double circled 8", "double circled 8", "double circled 8"
-fr, mathspeak, "⓽", "double circled 9", "double circled 9", "double circled 9"
-fr, mathspeak, "⓾", "double circled 10", "double circled 10", "double circled 10"
-fr, mathspeak, "⓿", "negative circled 0", "negative circled 0", "negative circled 0"
-fr, mathspeak, "❶", "inverse circled 1", "inverse circled 1", "inverse circled 1"
-fr, mathspeak, "❷", "inverse circled 2", "inverse circled 2", "inverse circled 2"
-fr, mathspeak, "❸", "inverse circled 3", "inverse circled 3", "inverse circled 3"
-fr, mathspeak, "❹", "inverse circled 4", "inverse circled 4", "inverse circled 4"
-fr, mathspeak, "❺", "inverse circled 5", "inverse circled 5", "inverse circled 5"
-fr, mathspeak, "❻", "inverse circled 6", "inverse circled 6", "inverse circled 6"
-fr, mathspeak, "❼", "inverse circled 7", "inverse circled 7", "inverse circled 7"
-fr, mathspeak, "❽", "inverse circled 8", "inverse circled 8", "inverse circled 8"
-fr, mathspeak, "❾", "inverse circled 9", "inverse circled 9", "inverse circled 9"
-fr, mathspeak, "❿", "inverse circled 10", "inverse circled 10", "inverse circled 10"
-fr, mathspeak, "➀", "circled one", "circled one", "circled one"
-fr, mathspeak, "➁", "circled two", "circled two", "circled two"
-fr, mathspeak, "➂", "circled three", "circled three", "circled three"
-fr, mathspeak, "➃", "circled four", "circled four", "circled four"
-fr, mathspeak, "➄", "circled five", "circled five", "circled five"
-fr, mathspeak, "➅", "circled six", "circled six", "circled six"
-fr, mathspeak, "➆", "circled seven", "circled seven", "circled seven"
-fr, mathspeak, "➇", "circled eight", "circled eight", "circled eight"
-fr, mathspeak, "➈", "circled nine", "circled nine", "circled nine"
-fr, mathspeak, "➉", "circled ten", "circled ten", "circled ten"
-fr, mathspeak, "➊", "inverse circled 1", "inverse circled 1", "inverse circled 1"
-fr, mathspeak, "➋", "inverse circled 2", "inverse circled 2", "inverse circled 2"
-fr, mathspeak, "➌", "inverse circled 3", "inverse circled 3", "inverse circled 3"
-fr, mathspeak, "➍", "inverse circled 4", "inverse circled 4", "inverse circled 4"
-fr, mathspeak, "➎", "inverse circled 5", "inverse circled 5", "inverse circled 5"
-fr, mathspeak, "➏", "inverse circled 6", "inverse circled 6", "inverse circled 6"
-fr, mathspeak, "➐", "inverse circled 7", "inverse circled 7", "inverse circled 7"
-fr, mathspeak, "➑", "inverse circled 8", "inverse circled 8", "inverse circled 8"
-fr, mathspeak, "➒", "inverse circled 9", "inverse circled 9", "inverse circled 9"
-fr, mathspeak, "➓", "inverse circled 10", "inverse circled 10", "inverse circled 10"
-fr, mathspeak, "㉈", "circled ten on black square", "circled ten on black square", "circled ten on black square"
-fr, mathspeak, "㉉", "circled twenty on black square", "circled twenty on black square", "circled twenty on black square"
-fr, mathspeak, "㉊", "circled thirty on black square", "circled thirty on black square", "circled thirty on black square"
-fr, mathspeak, "㉋", "circled forty on black square", "circled forty on black square", "circled forty on black square"
-fr, mathspeak, "㉌", "circled fifty on black square", "circled fifty on black square", "circled fifty on black square"
-fr, mathspeak, "㉍", "circled sixty on black square", "circled sixty on black square", "circled sixty on black square"
-fr, mathspeak, "㉎", "circled seventy on black square", "circled seventy on black square", "circled seventy on black square"
-fr, mathspeak, "㉏", "circled eighty on black square", "circled eighty on black square", "circled eighty on black square"
-fr, mathspeak, "㉑", "circled twenty one", "circled twenty one", "circled twenty one"
-fr, mathspeak, "㉒", "circled twenty two", "circled twenty two", "circled twenty two"
-fr, mathspeak, "㉓", "circled twenty three", "circled twenty three", "circled twenty three"
-fr, mathspeak, "㉔", "circled twenty four", "circled twenty four", "circled twenty four"
-fr, mathspeak, "㉕", "circled twenty five", "circled twenty five", "circled twenty five"
-fr, mathspeak, "㉖", "circled twenty six", "circled twenty six", "circled twenty six"
-fr, mathspeak, "㉗", "circled twenty seven", "circled twenty seven", "circled twenty seven"
-fr, mathspeak, "㉘", "circled twenty eight", "circled twenty eight", "circled twenty eight"
-fr, mathspeak, "㉙", "circled twenty nine", "circled twenty nine", "circled twenty nine"
-fr, mathspeak, "㉚", "circled thirty", "circled thirty", "circled thirty"
-fr, mathspeak, "㉛", "circled thirty one", "circled thirty one", "circled thirty one"
-fr, mathspeak, "㉜", "circled thirty two", "circled thirty two", "circled thirty two"
-fr, mathspeak, "㉝", "circled thirty three", "circled thirty three", "circled thirty three"
-fr, mathspeak, "㉞", "circled thirty four", "circled thirty four", "circled thirty four"
-fr, mathspeak, "㉟", "circled thirty five", "circled thirty five", "circled thirty five"
-fr, mathspeak, "㊱", "circled thirty six", "circled thirty six", "circled thirty six"
-fr, mathspeak, "㊲", "circled thirty seven", "circled thirty seven", "circled thirty seven"
-fr, mathspeak, "㊳", "circled thirty eight", "circled thirty eight", "circled thirty eight"
-fr, mathspeak, "㊴", "circled thirty nine", "circled thirty nine", "circled thirty nine"
-fr, mathspeak, "㊵", "circled forty", "circled forty", "circled forty"
-fr, mathspeak, "㊶", "circled forty one", "circled forty one", "circled forty one"
-fr, mathspeak, "㊷", "circled forty two", "circled forty two", "circled forty two"
-fr, mathspeak, "㊸", "circled forty three", "circled forty three", "circled forty three"
-fr, mathspeak, "㊹", "circled forty four", "circled forty four", "circled forty four"
-fr, mathspeak, "㊺", "circled forty five", "circled forty five", "circled forty five"
-fr, mathspeak, "㊻", "circled forty six", "circled forty six", "circled forty six"
-fr, mathspeak, "㊼", "circled forty seven", "circled forty seven", "circled forty seven"
-fr, mathspeak, "㊽", "circled forty eight", "circled forty eight", "circled forty eight"
-fr, mathspeak, "㊾", "circled forty nine", "circled forty nine", "circled forty nine"
-fr, mathspeak, "㊿", "circled fifty", "circled fifty", "circled fifty"
-fr, mathspeak, "０", "0", "0", "0"
-fr, mathspeak, "１", "1", "1", "1"
-fr, mathspeak, "２", "2", "2", "2"
-fr, mathspeak, "３", "3", "3", "3"
-fr, mathspeak, "４", "4", "4", "4"
-fr, mathspeak, "５", "5", "5", "5"
-fr, mathspeak, "６", "6", "6", "6"
-fr, mathspeak, "７", "7", "7", "7"
-fr, mathspeak, "８", "8", "8", "8"
-fr, mathspeak, "９", "9", "9", "9"
-fr, mathspeak, "𝟎", "chiffre mathématique gras 0", "chiffre mathématique gras 0", "chiffre mathématique gras 0"
-fr, mathspeak, "𝟏", "chiffre mathématique gras 1", "chiffre mathématique gras 1", "chiffre mathématique gras 1"
-fr, mathspeak, "𝟐", "chiffre mathématique gras 2", "chiffre mathématique gras 2", "chiffre mathématique gras 2"
-fr, mathspeak, "𝟑", "chiffre mathématique gras 3", "chiffre mathématique gras 3", "chiffre mathématique gras 3"
-fr, mathspeak, "𝟒", "chiffre mathématique gras 4", "chiffre mathématique gras 4", "chiffre mathématique gras 4"
-fr, mathspeak, "𝟓", "chiffre mathématique gras 5", "chiffre mathématique gras 5", "chiffre mathématique gras 5"
-fr, mathspeak, "𝟔", "chiffre mathématique gras 6", "chiffre mathématique gras 6", "chiffre mathématique gras 6"
-fr, mathspeak, "𝟕", "chiffre mathématique gras 7", "chiffre mathématique gras 7", "chiffre mathématique gras 7"
-fr, mathspeak, "𝟖", "chiffre mathématique gras 8", "chiffre mathématique gras 8", "chiffre mathématique gras 8"
-fr, mathspeak, "𝟗", "chiffre mathématique gras 9", "chiffre mathématique gras 9", "chiffre mathématique gras 9"
-fr, mathspeak, "𝟘", "chiffre mathématique ajouré 0", "chiffre mathématique ajouré 0", "chiffre mathématique ajouré 0"
-fr, mathspeak, "𝟙", "chiffre mathématique ajouré 1", "chiffre mathématique ajouré 1", "chiffre mathématique ajouré 1"
-fr, mathspeak, "𝟚", "chiffre mathématique ajouré 2", "chiffre mathématique ajouré 2", "chiffre mathématique ajouré 2"
-fr, mathspeak, "𝟛", "chiffre mathématique ajouré 3", "chiffre mathématique ajouré 3", "chiffre mathématique ajouré 3"
-fr, mathspeak, "𝟜", "chiffre mathématique ajouré 4", "chiffre mathématique ajouré 4", "chiffre mathématique ajouré 4"
-fr, mathspeak, "𝟝", "chiffre mathématique ajouré 5", "chiffre mathématique ajouré 5", "chiffre mathématique ajouré 5"
-fr, mathspeak, "𝟞", "chiffre mathématique ajouré 6", "chiffre mathématique ajouré 6", "chiffre mathématique ajouré 6"
-fr, mathspeak, "𝟟", "chiffre mathématique ajouré 7", "chiffre mathématique ajouré 7", "chiffre mathématique ajouré 7"
-fr, mathspeak, "𝟠", "chiffre mathématique ajouré 8", "chiffre mathématique ajouré 8", "chiffre mathématique ajouré 8"
-fr, mathspeak, "𝟡", "chiffre mathématique ajouré 9", "chiffre mathématique ajouré 9", "chiffre mathématique ajouré 9"
-fr, mathspeak, "𝟢", "chiffre mathématique sans empattement 0", "chiffre mathématique sans empattement 0", "chiffre mathématique sans empattement 0"
-fr, mathspeak, "𝟣", "chiffre mathématique sans empattement 1", "chiffre mathématique sans empattement 1", "chiffre mathématique sans empattement 1"
-fr, mathspeak, "𝟤", "chiffre mathématique sans empattement 2", "chiffre mathématique sans empattement 2", "chiffre mathématique sans empattement 2"
-fr, mathspeak, "𝟥", "chiffre mathématique sans empattement 3", "chiffre mathématique sans empattement 3", "chiffre mathématique sans empattement 3"
-fr, mathspeak, "𝟦", "chiffre mathématique sans empattement 4", "chiffre mathématique sans empattement 4", "chiffre mathématique sans empattement 4"
-fr, mathspeak, "𝟧", "chiffre mathématique sans empattement 5", "chiffre mathématique sans empattement 5", "chiffre mathématique sans empattement 5"
-fr, mathspeak, "𝟨", "chiffre mathématique sans empattement 6", "chiffre mathématique sans empattement 6", "chiffre mathématique sans empattement 6"
-fr, mathspeak, "𝟩", "chiffre mathématique sans empattement 7", "chiffre mathématique sans empattement 7", "chiffre mathématique sans empattement 7"
-fr, mathspeak, "𝟪", "chiffre mathématique sans empattement 8", "chiffre mathématique sans empattement 8", "chiffre mathématique sans empattement 8"
-fr, mathspeak, "𝟫", "chiffre mathématique sans empattement 9", "chiffre mathématique sans empattement 9", "chiffre mathématique sans empattement 9"
-fr, mathspeak, "𝟬", "chiffre mathématique gras sans empattement 0", "chiffre mathématique gras sans empattement 0", "chiffre mathématique gras sans empattement 0"
-fr, mathspeak, "𝟭", "chiffre mathématique gras sans empattement 1", "chiffre mathématique gras sans empattement 1", "chiffre mathématique gras sans empattement 1"
-fr, mathspeak, "𝟮", "chiffre mathématique gras sans empattement 2", "chiffre mathématique gras sans empattement 2", "chiffre mathématique gras sans empattement 2"
-fr, mathspeak, "𝟯", "chiffre mathématique gras sans empattement 3", "chiffre mathématique gras sans empattement 3", "chiffre mathématique gras sans empattement 3"
-fr, mathspeak, "𝟰", "chiffre mathématique gras sans empattement 4", "chiffre mathématique gras sans empattement 4", "chiffre mathématique gras sans empattement 4"
-fr, mathspeak, "𝟱", "chiffre mathématique gras sans empattement 5", "chiffre mathématique gras sans empattement 5", "chiffre mathématique gras sans empattement 5"
-fr, mathspeak, "𝟲", "chiffre mathématique gras sans empattement 6", "chiffre mathématique gras sans empattement 6", "chiffre mathématique gras sans empattement 6"
-fr, mathspeak, "𝟳", "chiffre mathématique gras sans empattement 7", "chiffre mathématique gras sans empattement 7", "chiffre mathématique gras sans empattement 7"
-fr, mathspeak, "𝟴", "chiffre mathématique gras sans empattement 8", "chiffre mathématique gras sans empattement 8", "chiffre mathématique gras sans empattement 8"
-fr, mathspeak, "𝟵", "chiffre mathématique gras sans empattement 9", "chiffre mathématique gras sans empattement 9", "chiffre mathématique gras sans empattement 9"
-fr, mathspeak, "𝟶", "chiffre mathématique à chasse fixe 0", "chiffre mathématique à chasse fixe 0", "chiffre mathématique à chasse fixe 0"
-fr, mathspeak, "𝟷", "chiffre mathématique à chasse fixe 1", "chiffre mathématique à chasse fixe 1", "chiffre mathématique à chasse fixe 1"
-fr, mathspeak, "𝟸", "chiffre mathématique à chasse fixe 2", "chiffre mathématique à chasse fixe 2", "chiffre mathématique à chasse fixe 2"
-fr, mathspeak, "𝟹", "chiffre mathématique à chasse fixe 3", "chiffre mathématique à chasse fixe 3", "chiffre mathématique à chasse fixe 3"
-fr, mathspeak, "𝟺", "chiffre mathématique à chasse fixe 4", "chiffre mathématique à chasse fixe 4", "chiffre mathématique à chasse fixe 4"
-fr, mathspeak, "𝟻", "chiffre mathématique à chasse fixe 5", "chiffre mathématique à chasse fixe 5", "chiffre mathématique à chasse fixe 5"
-fr, mathspeak, "𝟼", "chiffre mathématique à chasse fixe 6", "chiffre mathématique à chasse fixe 6", "chiffre mathématique à chasse fixe 6"
-fr, mathspeak, "𝟽", "chiffre mathématique à chasse fixe 7", "chiffre mathématique à chasse fixe 7", "chiffre mathématique à chasse fixe 7"
-fr, mathspeak, "𝟾", "chiffre mathématique à chasse fixe 8", "chiffre mathématique à chasse fixe 8", "chiffre mathématique à chasse fixe 8"
-fr, mathspeak, "𝟿", "chiffre mathématique à chasse fixe 9", "chiffre mathématique à chasse fixe 9", "chiffre mathématique à chasse fixe 9"
-fr, mathspeak, "🄀", "0 period", "0 period", "0 period"
-fr, mathspeak, "🄁", "0 comma", "0 comma", "0 comma"
-fr, mathspeak, "🄂", "1 comma", "1 comma", "1 comma"
-fr, mathspeak, "🄃", "2 comma", "2 comma", "2 comma"
-fr, mathspeak, "🄄", "3 comma", "3 comma", "3 comma"
-fr, mathspeak, "🄅", "4 comma", "4 comma", "4 comma"
-fr, mathspeak, "🄆", "5 comma", "5 comma", "5 comma"
-fr, mathspeak, "🄇", "6 comma", "6 comma", "6 comma"
-fr, mathspeak, "🄈", "7 comma", "7 comma", "7 comma"
-fr, mathspeak, "🄉", "8 comma", "8 comma", "8 comma"
-fr, mathspeak, "🄊", "9 comma", "9 comma", "9 comma"
-fr, mathspeak, "─", "filet horizontal fin", "filet horizontal fin", "filet horizontal fin"
-fr, mathspeak, "━", "box drawings heavy horizontal", "box drawings heavy horizontal", "box drawings heavy horizontal"
-fr, mathspeak, "│", "filet vertical fin", "filet vertical fin", "filet vertical fin"
-fr, mathspeak, "┃", "box drawings heavy vertical", "box drawings heavy vertical", "box drawings heavy vertical"
-fr, mathspeak, "┄", "box drawings light triple dash horizontal", "box drawings light triple dash horizontal", "box drawings light triple dash horizontal"
-fr, mathspeak, "┅", "box drawings heavy triple dash horizontal", "box drawings heavy triple dash horizontal", "box drawings heavy triple dash horizontal"
-fr, mathspeak, "┆", "box drawings light triple dash vertical", "box drawings light triple dash vertical", "box drawings light triple dash vertical"
-fr, mathspeak, "┇", "box drawings heavy triple dash vertical", "box drawings heavy triple dash vertical", "box drawings heavy triple dash vertical"
-fr, mathspeak, "┈", "box drawings light quadruple dash horizontal", "box drawings light quadruple dash horizontal", "box drawings light quadruple dash horizontal"
-fr, mathspeak, "┉", "box drawings heavy quadruple dash horizontal", "box drawings heavy quadruple dash horizontal", "box drawings heavy quadruple dash horizontal"
-fr, mathspeak, "┊", "box drawings light quadruple dash vertical", "box drawings light quadruple dash vertical", "box drawings light quadruple dash vertical"
-fr, mathspeak, "┋", "box drawings heavy quadruple dash vertical", "box drawings heavy quadruple dash vertical", "box drawings heavy quadruple dash vertical"
-fr, mathspeak, "┌", "filet fin vers le bas et vers la droite", "filet fin vers le bas et vers la droite", "filet fin vers le bas et vers la droite"
-fr, mathspeak, "┍", "box drawings down light and right heavy", "box drawings down light and right heavy", "box drawings down light and right heavy"
-fr, mathspeak, "┎", "box drawings down heavy and right light", "box drawings down heavy and right light", "box drawings down heavy and right light"
-fr, mathspeak, "┏", "box drawings heavy down and right", "box drawings heavy down and right", "box drawings heavy down and right"
-fr, mathspeak, "┐", "filet fin vers le bas et vers la gauche", "filet fin vers le bas et vers la gauche", "filet fin vers le bas et vers la gauche"
-fr, mathspeak, "┑", "box drawings down light and left heavy", "box drawings down light and left heavy", "box drawings down light and left heavy"
-fr, mathspeak, "┒", "box drawings down heavy and left light", "box drawings down heavy and left light", "box drawings down heavy and left light"
-fr, mathspeak, "┓", "box drawings heavy down and left", "box drawings heavy down and left", "box drawings heavy down and left"
-fr, mathspeak, "└", "filet fin vers le haut et vers la droite", "filet fin vers le haut et vers la droite", "filet fin vers le haut et vers la droite"
-fr, mathspeak, "┕", "box drawings up light and right heavy", "box drawings up light and right heavy", "box drawings up light and right heavy"
-fr, mathspeak, "┖", "box drawings up heavy and right light", "box drawings up heavy and right light", "box drawings up heavy and right light"
-fr, mathspeak, "┗", "box drawings heavy up and right", "box drawings heavy up and right", "box drawings heavy up and right"
-fr, mathspeak, "┘", "filet fin vers le haut et vers la gauche", "filet fin vers le haut et vers la gauche", "filet fin vers le haut et vers la gauche"
-fr, mathspeak, "┙", "box drawings up light and left heavy", "box drawings up light and left heavy", "box drawings up light and left heavy"
-fr, mathspeak, "┚", "box drawings up heavy and left light", "box drawings up heavy and left light", "box drawings up heavy and left light"
-fr, mathspeak, "┛", "box drawings heavy up and left", "box drawings heavy up and left", "box drawings heavy up and left"
-fr, mathspeak, "├", "filet fin vertical et vers la droite", "filet fin vertical et vers la droite", "filet fin vertical et vers la droite"
-fr, mathspeak, "┝", "box drawings vertical light and right heavy", "box drawings vertical light and right heavy", "box drawings vertical light and right heavy"
-fr, mathspeak, "┞", "box drawings up heavy and right down light", "box drawings up heavy and right down light", "box drawings up heavy and right down light"
-fr, mathspeak, "┟", "box drawings down heavy and right up light", "box drawings down heavy and right up light", "box drawings down heavy and right up light"
-fr, mathspeak, "┠", "box drawings vertical heavy and right light", "box drawings vertical heavy and right light", "box drawings vertical heavy and right light"
-fr, mathspeak, "┡", "box drawings down light and right up heavy", "box drawings down light and right up heavy", "box drawings down light and right up heavy"
-fr, mathspeak, "┢", "box drawings up light and right down heavy", "box drawings up light and right down heavy", "box drawings up light and right down heavy"
-fr, mathspeak, "┣", "box drawings heavy vertical and right", "box drawings heavy vertical and right", "box drawings heavy vertical and right"
-fr, mathspeak, "┤", "filet fin vertical et vers la gauche", "filet fin vertical et vers la gauche", "filet fin vertical et vers la gauche"
-fr, mathspeak, "┥", "box drawings vertical light and left heavy", "box drawings vertical light and left heavy", "box drawings vertical light and left heavy"
-fr, mathspeak, "┦", "box drawings up heavy and left down light", "box drawings up heavy and left down light", "box drawings up heavy and left down light"
-fr, mathspeak, "┧", "box drawings down heavy and left up light", "box drawings down heavy and left up light", "box drawings down heavy and left up light"
-fr, mathspeak, "┨", "box drawings vertical heavy and left light", "box drawings vertical heavy and left light", "box drawings vertical heavy and left light"
-fr, mathspeak, "┩", "box drawings down light and left up heavy", "box drawings down light and left up heavy", "box drawings down light and left up heavy"
-fr, mathspeak, "┪", "box drawings up light and left down heavy", "box drawings up light and left down heavy", "box drawings up light and left down heavy"
-fr, mathspeak, "┫", "box drawings heavy vertical and left", "box drawings heavy vertical and left", "box drawings heavy vertical and left"
-fr, mathspeak, "┬", "filet fin vers le bas et horizontal", "filet fin vers le bas et horizontal", "filet fin vers le bas et horizontal"
-fr, mathspeak, "┭", "box drawings left heavy and right down light", "box drawings left heavy and right down light", "box drawings left heavy and right down light"
-fr, mathspeak, "┮", "box drawings right heavy and left down light", "box drawings right heavy and left down light", "box drawings right heavy and left down light"
-fr, mathspeak, "┯", "box drawings down light and horizontal heavy", "box drawings down light and horizontal heavy", "box drawings down light and horizontal heavy"
-fr, mathspeak, "┰", "box drawings down heavy and horizontal light", "box drawings down heavy and horizontal light", "box drawings down heavy and horizontal light"
-fr, mathspeak, "┱", "box drawings right light and left down heavy", "box drawings right light and left down heavy", "box drawings right light and left down heavy"
-fr, mathspeak, "┲", "box drawings left light and right down heavy", "box drawings left light and right down heavy", "box drawings left light and right down heavy"
-fr, mathspeak, "┳", "box drawings heavy down and horizontal", "box drawings heavy down and horizontal", "box drawings heavy down and horizontal"
-fr, mathspeak, "┴", "filet fin vers le haut et horizontal", "filet fin vers le haut et horizontal", "filet fin vers le haut et horizontal"
-fr, mathspeak, "┵", "box drawings left heavy and right up light", "box drawings left heavy and right up light", "box drawings left heavy and right up light"
-fr, mathspeak, "┶", "box drawings right heavy and left up light", "box drawings right heavy and left up light", "box drawings right heavy and left up light"
-fr, mathspeak, "┷", "box drawings up light and horizontal heavy", "box drawings up light and horizontal heavy", "box drawings up light and horizontal heavy"
-fr, mathspeak, "┸", "box drawings up heavy and horizontal light", "box drawings up heavy and horizontal light", "box drawings up heavy and horizontal light"
-fr, mathspeak, "┹", "box drawings right light and left up heavy", "box drawings right light and left up heavy", "box drawings right light and left up heavy"
-fr, mathspeak, "┺", "box drawings left light and right up heavy", "box drawings left light and right up heavy", "box drawings left light and right up heavy"
-fr, mathspeak, "┻", "box drawings heavy up and horizontal", "box drawings heavy up and horizontal", "box drawings heavy up and horizontal"
-fr, mathspeak, "┼", "filet fin vertical et horizontal", "filet fin vertical et horizontal", "filet fin vertical et horizontal"
-fr, mathspeak, "┽", "box drawings left heavy and right vertical light", "box drawings left heavy and right vertical light", "box drawings left heavy and right vertical light"
-fr, mathspeak, "┾", "box drawings right heavy and left vertical light", "box drawings right heavy and left vertical light", "box drawings right heavy and left vertical light"
-fr, mathspeak, "┿", "box drawings vertical light and horizontal heavy", "box drawings vertical light and horizontal heavy", "box drawings vertical light and horizontal heavy"
-fr, mathspeak, "╀", "box drawings up heavy and down horizontal light", "box drawings up heavy and down horizontal light", "box drawings up heavy and down horizontal light"
-fr, mathspeak, "╁", "box drawings down heavy and up horizontal light", "box drawings down heavy and up horizontal light", "box drawings down heavy and up horizontal light"
-fr, mathspeak, "╂", "box drawings vertical heavy and horizontal light", "box drawings vertical heavy and horizontal light", "box drawings vertical heavy and horizontal light"
-fr, mathspeak, "╃", "box drawings left up heavy and right down light", "box drawings left up heavy and right down light", "box drawings left up heavy and right down light"
-fr, mathspeak, "╄", "box drawings right up heavy and left down light", "box drawings right up heavy and left down light", "box drawings right up heavy and left down light"
-fr, mathspeak, "╅", "box drawings left down heavy and right up light", "box drawings left down heavy and right up light", "box drawings left down heavy and right up light"
-fr, mathspeak, "╆", "box drawings right down heavy and left up light", "box drawings right down heavy and left up light", "box drawings right down heavy and left up light"
-fr, mathspeak, "╇", "box drawings down light and up horizontal heavy", "box drawings down light and up horizontal heavy", "box drawings down light and up horizontal heavy"
-fr, mathspeak, "╈", "box drawings up light and down horizontal heavy", "box drawings up light and down horizontal heavy", "box drawings up light and down horizontal heavy"
-fr, mathspeak, "╉", "box drawings right light and left vertical heavy", "box drawings right light and left vertical heavy", "box drawings right light and left vertical heavy"
-fr, mathspeak, "╊", "box drawings left light and right vertical heavy", "box drawings left light and right vertical heavy", "box drawings left light and right vertical heavy"
-fr, mathspeak, "╋", "box drawings heavy vertical and horizontal", "box drawings heavy vertical and horizontal", "box drawings heavy vertical and horizontal"
-fr, mathspeak, "╌", "box drawings light double dash horizontal", "box drawings light double dash horizontal", "box drawings light double dash horizontal"
-fr, mathspeak, "╍", "box drawings heavy double dash horizontal", "box drawings heavy double dash horizontal", "box drawings heavy double dash horizontal"
-fr, mathspeak, "╎", "box drawings light double dash vertical", "box drawings light double dash vertical", "box drawings light double dash vertical"
-fr, mathspeak, "╏", "box drawings heavy double dash vertical", "box drawings heavy double dash vertical", "box drawings heavy double dash vertical"
-fr, mathspeak, "═", "filet double horizontal", "filet double horizontal", "filet double horizontal"
-fr, mathspeak, "║", "filet double vertical", "filet double vertical", "filet double vertical"
-fr, mathspeak, "╒", "filet simple le bas et double vers la droite", "filet simple le bas et double vers la droite", "filet simple le bas et double vers la droite"
-fr, mathspeak, "╓", "filet double vers le bas et simple vers la droite", "filet double vers le bas et simple vers la droite", "filet double vers le bas et simple vers la droite"
-fr, mathspeak, "╔", "filet double vers le bas et vers la droite", "filet double vers le bas et vers la droite", "filet double vers le bas et vers la droite"
-fr, mathspeak, "╕", "filet simple vers le bas et double vers la gauche", "filet simple vers le bas et double vers la gauche", "filet simple vers le bas et double vers la gauche"
-fr, mathspeak, "╖", "filet double vers le bas et simple vers la gauche", "filet double vers le bas et simple vers la gauche", "filet double vers le bas et simple vers la gauche"
-fr, mathspeak, "╗", "filet double vers le bas et vers la gauche", "filet double vers le bas et vers la gauche", "filet double vers le bas et vers la gauche"
-fr, mathspeak, "╘", "filet simple vers le haut et double vers la droite", "filet simple vers le haut et double vers la droite", "filet simple vers le haut et double vers la droite"
-fr, mathspeak, "╙", "filet double vers le haut et simple vers la droite", "filet double vers le haut et simple vers la droite", "filet double vers le haut et simple vers la droite"
-fr, mathspeak, "╚", "filet double vers le haut et vers la droite", "filet double vers le haut et vers la droite", "filet double vers le haut et vers la droite"
-fr, mathspeak, "╛", "filet simple vers le haut et double vers la gauche", "filet simple vers le haut et double vers la gauche", "filet simple vers le haut et double vers la gauche"
-fr, mathspeak, "╜", "filet double vers le haut et simple vers la gauche", "filet double vers le haut et simple vers la gauche", "filet double vers le haut et simple vers la gauche"
-fr, mathspeak, "╝", "filet double vers le haut et vers la gauche", "filet double vers le haut et vers la gauche", "filet double vers le haut et vers la gauche"
-fr, mathspeak, "╞", "filet vertical simple et droit double", "filet vertical simple et droit double", "filet vertical simple et droit double"
-fr, mathspeak, "╟", "filet vertical double et droit simple", "filet vertical double et droit simple", "filet vertical double et droit simple"
-fr, mathspeak, "╠", "filet double vertical et vers la droite", "filet double vertical et vers la droite", "filet double vertical et vers la droite"
-fr, mathspeak, "╡", "filet vertical simple et gauche double", "filet vertical simple et gauche double", "filet vertical simple et gauche double"
-fr, mathspeak, "╢", "filet vertical double et gauche simple", "filet vertical double et gauche simple", "filet vertical double et gauche simple"
-fr, mathspeak, "╣", "filet double vertical et vers la gauche", "filet double vertical et vers la gauche", "filet double vertical et vers la gauche"
-fr, mathspeak, "╤", "filet vers le bas simple et horizontal double", "filet vers le bas simple et horizontal double", "filet vers le bas simple et horizontal double"
-fr, mathspeak, "╥", "filet vers le bas double et horizontal simple", "filet vers le bas double et horizontal simple", "filet vers le bas double et horizontal simple"
-fr, mathspeak, "╦", "filet double vers le bas et horizontal", "filet double vers le bas et horizontal", "filet double vers le bas et horizontal"
-fr, mathspeak, "╧", "filet vers le haut simple et horizontal double", "filet vers le haut simple et horizontal double", "filet vers le haut simple et horizontal double"
-fr, mathspeak, "╨", "filet vers le haut double et horizontal simple", "filet vers le haut double et horizontal simple", "filet vers le haut double et horizontal simple"
-fr, mathspeak, "╩", "filet double vers le haut et horizontal", "filet double vers le haut et horizontal", "filet double vers le haut et horizontal"
-fr, mathspeak, "╪", "filet vertical simple et horizontal double", "filet vertical simple et horizontal double", "filet vertical simple et horizontal double"
-fr, mathspeak, "╫", "filet vertical double et horizontal simple", "filet vertical double et horizontal simple", "filet vertical double et horizontal simple"
-fr, mathspeak, "╬", "filet double vertical et horizontall", "filet double vertical et horizontall", "filet double vertical et horizontall"
-fr, mathspeak, "╭", "box drawings light arc down and right", "box drawings light arc down and right", "box drawings light arc down and right"
-fr, mathspeak, "╮", "box drawings light arc down and left", "box drawings light arc down and left", "box drawings light arc down and left"
-fr, mathspeak, "╯", "box drawings light arc up and left", "box drawings light arc up and left", "box drawings light arc up and left"
-fr, mathspeak, "╰", "box drawings light arc up and right", "box drawings light arc up and right", "box drawings light arc up and right"
-fr, mathspeak, "╱", "box drawings light diagonal upper right to lower left", "box drawings light diagonal upper right to lower left", "box drawings light diagonal upper right to lower left"
-fr, mathspeak, "╲", "box drawings light diagonal upper left to lower right", "box drawings light diagonal upper left to lower right", "box drawings light diagonal upper left to lower right"
-fr, mathspeak, "╳", "box drawings light diagonal cross", "box drawings light diagonal cross", "box drawings light diagonal cross"
-fr, mathspeak, "╴", "box drawings light left", "box drawings light left", "box drawings light left"
-fr, mathspeak, "╵", "box drawings light up", "box drawings light up", "box drawings light up"
-fr, mathspeak, "╶", "box drawings light right", "box drawings light right", "box drawings light right"
-fr, mathspeak, "╷", "box drawings light down", "box drawings light down", "box drawings light down"
-fr, mathspeak, "╸", "box drawings heavy left", "box drawings heavy left", "box drawings heavy left"
-fr, mathspeak, "╹", "box drawings heavy up", "box drawings heavy up", "box drawings heavy up"
-fr, mathspeak, "╺", "box drawings heavy right", "box drawings heavy right", "box drawings heavy right"
-fr, mathspeak, "╻", "box drawings heavy down", "box drawings heavy down", "box drawings heavy down"
-fr, mathspeak, "╼", "box drawings light left and heavy right", "box drawings light left and heavy right", "box drawings light left and heavy right"
-fr, mathspeak, "╽", "box drawings light up and heavy down", "box drawings light up and heavy down", "box drawings light up and heavy down"
-fr, mathspeak, "╾", "box drawings heavy left and light right", "box drawings heavy left and light right", "box drawings heavy left and light right"
-fr, mathspeak, "╿", "box drawings heavy up and light down", "box drawings heavy up and light down", "box drawings heavy up and light down"
-fr, mathspeak, "▀", "moitié supérieure de pavé", "moitié supérieure de pavé", "moitié supérieure de pavé"
-fr, mathspeak, "▁", "lower one eighth block", "lower one eighth block", "lower one eighth block"
-fr, mathspeak, "▂", "lower one quarter block", "lower one quarter block", "lower one quarter block"
-fr, mathspeak, "▃", "lower three eighths block", "lower three eighths block", "lower three eighths block"
-fr, mathspeak, "▄", "moitié inférieure de pavé", "moitié inférieure de pavé", "moitié inférieure de pavé"
-fr, mathspeak, "▅", "lower five eighths block", "lower five eighths block", "lower five eighths block"
-fr, mathspeak, "▆", "lower three quarters block", "lower three quarters block", "lower three quarters block"
-fr, mathspeak, "▇", "lower seven eighths block", "lower seven eighths block", "lower seven eighths block"
-fr, mathspeak, "█", "pavé plein", "pavé plein", "pavé plein"
-fr, mathspeak, "▉", "left seven eighths block", "left seven eighths block", "left seven eighths block"
-fr, mathspeak, "▊", "left three quarters block", "left three quarters block", "left three quarters block"
-fr, mathspeak, "▋", "left five eighths block", "left five eighths block", "left five eighths block"
-fr, mathspeak, "▌", "left half block", "left half block", "left half block"
-fr, mathspeak, "▍", "left three eighths block", "left three eighths block", "left three eighths block"
-fr, mathspeak, "▎", "left one quarter block", "left one quarter block", "left one quarter block"
-fr, mathspeak, "▏", "left one eighth block", "left one eighth block", "left one eighth block"
-fr, mathspeak, "▐", "right half block", "right half block", "right half block"
-fr, mathspeak, "░", "ombre légère", "ombre légère", "ombre légère"
-fr, mathspeak, "▒", "ombre moyenne", "ombre moyenne", "ombre moyenne"
-fr, mathspeak, "▓", "ombre foncée", "ombre foncée", "ombre foncée"
-fr, mathspeak, "▔", "upper one eighth block", "upper one eighth block", "upper one eighth block"
-fr, mathspeak, "▕", "right one eighth block", "right one eighth block", "right one eighth block"
-fr, mathspeak, "▖", "quadrant lower left", "quadrant lower left", "quadrant lower left"
-fr, mathspeak, "▗", "quadrant lower right", "quadrant lower right", "quadrant lower right"
-fr, mathspeak, "▘", "quadrant upper left", "quadrant upper left", "quadrant upper left"
-fr, mathspeak, "▙", "quadrant upper left and lower left and lower right", "quadrant upper left and lower left and lower right", "quadrant upper left and lower left and lower right"
-fr, mathspeak, "▚", "quadrant upper left and lower right", "quadrant upper left and lower right", "quadrant upper left and lower right"
-fr, mathspeak, "▛", "quadrant upper left and upper right and lower left", "quadrant upper left and upper right and lower left", "quadrant upper left and upper right and lower left"
-fr, mathspeak, "▜", "quadrant upper left and upper right and lower right", "quadrant upper left and upper right and lower right", "quadrant upper left and upper right and lower right"
-fr, mathspeak, "▝", "quadrant upper right", "quadrant upper right", "quadrant upper right"
-fr, mathspeak, "▞", "quadrant upper right and lower left", "quadrant upper right and lower left", "quadrant upper right and lower left"
-fr, mathspeak, "▟", "quadrant upper right and lower left and lower right", "quadrant upper right and lower left and lower right", "quadrant upper right and lower left and lower right"
-fr, mathspeak, "■", "petit carré noir", "petit carré noir", "petit carré noir"
-fr, mathspeak, "□", "carré blanc", "carré blanc", "carré blanc"
-fr, mathspeak, "▢", "white square with rounded corners", "white square with rounded corners", "white square with rounded corners"
-fr, mathspeak, "▣", "white square containing black small square", "white square containing black small square", "white square containing black small square"
-fr, mathspeak, "▤", "square with horizontal fill", "square with horizontal fill", "square with horizontal fill"
-fr, mathspeak, "▥", "square with vertical fill", "square with vertical fill", "square with vertical fill"
-fr, mathspeak, "▦", "square with orthogonal crosshatch fill", "square with orthogonal crosshatch fill", "square with orthogonal crosshatch fill"
-fr, mathspeak, "▧", "square with upper left to lower right fill", "square with upper left to lower right fill", "square with upper left to lower right fill"
-fr, mathspeak, "▨", "square with upper right to lower left fill", "square with upper right to lower left fill", "square with upper right to lower left fill"
-fr, mathspeak, "▩", "square with diagonal crosshatch fill", "square with diagonal crosshatch fill", "square with diagonal crosshatch fill"
-fr, mathspeak, "▪", "petit carré noir", "petit carré noir", "petit carré noir"
-fr, mathspeak, "▫", "petit carré blanc", "petit carré blanc", "petit carré blanc"
-fr, mathspeak, "▬", "black rectangle", "black rectangle", "black rectangle"
-fr, mathspeak, "▭", "rectangle blanc", "rectangle blanc", "rectangle blanc"
-fr, mathspeak, "▮", "rectangle vertical noir", "rectangle vertical noir", "rectangle vertical noir"
-fr, mathspeak, "▯", "white vertical rectangle", "white vertical rectangle", "white vertical rectangle"
-fr, mathspeak, "▰", "black parallelogram", "black parallelogram", "black parallelogram"
-fr, mathspeak, "▱", "parallélogramme blanc", "parallélogramme blanc", "parallélogramme blanc"
-fr, mathspeak, "▲", "petit triangle noir pointant vers le haut", "petit triangle noir pointant vers le haut", "petit triangle noir pointant vers le haut"
-fr, mathspeak, "△", "triangle blanc pointant vers le haut", "triangle blanc pointant vers le haut", "triangle blanc pointant vers le haut"
-fr, mathspeak, "▴", "petit triangle noir pointant vers le haut", "petit triangle noir pointant vers le haut", "petit triangle noir pointant vers le haut"
-fr, mathspeak, "▵", "petit triangle blanc pointant vers le haut", "petit triangle blanc pointant vers le haut", "petit triangle blanc pointant vers le haut"
-fr, mathspeak, "▶", "petit triangle noir pointant vers la droite", "petit triangle noir pointant vers la droite", "petit triangle noir pointant vers la droite"
-fr, mathspeak, "▷", "triangle blanc pointant vers la droite", "triangle blanc pointant vers la droite", "triangle blanc pointant vers la droite"
-fr, mathspeak, "▸", "petit triangle noir pointant vers la droite", "petit triangle noir pointant vers la droite", "petit triangle noir pointant vers la droite"
-fr, mathspeak, "▹", "petit triangle blanc pointant vers la droite", "petit triangle blanc pointant vers la droite", "petit triangle blanc pointant vers la droite"
-fr, mathspeak, "►", "black right pointing pointer", "black right pointing pointer", "black right pointing pointer"
-fr, mathspeak, "▻", "white right pointing pointer", "white right pointing pointer", "white right pointing pointer"
-fr, mathspeak, "▼", "petit triangle noir pointant vers le bas", "petit triangle noir pointant vers le bas", "petit triangle noir pointant vers le bas"
-fr, mathspeak, "▽", "triangle blanc pointant vers le bas", "triangle blanc pointant vers le bas", "triangle blanc pointant vers le bas"
-fr, mathspeak, "▾", "petit triangle noir pointant vers le bas", "petit triangle noir pointant vers le bas", "petit triangle noir pointant vers le bas"
-fr, mathspeak, "▿", "petit triangle blanc pointant vers le bas", "petit triangle blanc pointant vers le bas", "petit triangle blanc pointant vers le bas"
-fr, mathspeak, "◀", "petit triangle noir pointant vers la gauche", "petit triangle noir pointant vers la gauche", "petit triangle noir pointant vers la gauche"
-fr, mathspeak, "◁", "petit triangle blanc pointant vers la gauche", "petit triangle blanc pointant vers la gauche", "petit triangle blanc pointant vers la gauche"
-fr, mathspeak, "◂", "petit triangle noir pointant vers la gauche", "petit triangle noir pointant vers la gauche", "petit triangle noir pointant vers la gauche"
-fr, mathspeak, "◃", "petit triangle blanc pointant vers la gauche", "petit triangle blanc pointant vers la gauche", "petit triangle blanc pointant vers la gauche"
-fr, mathspeak, "◄", "pointeur noir vers la gauche", "pointeur noir vers la gauche", "pointeur noir vers la gauche"
-fr, mathspeak, "◅", "pointeur blanc vers la gauche", "pointeur blanc vers la gauche", "pointeur blanc vers la gauche"
-fr, mathspeak, "◆", "losange noir", "losange noir", "losange noir"
-fr, mathspeak, "◇", "losange blanc", "losange blanc", "losange blanc"
-fr, mathspeak, "◈", "losange blanc évidé", "losange blanc évidé", "losange blanc évidé"
-fr, mathspeak, "◉", "cercle blanc évidé", "cercle blanc évidé", "cercle blanc évidé"
-fr, mathspeak, "◊", "losange", "losange", "losange"
-fr, mathspeak, "○", "cercle blanc", "cercle blanc", "cercle blanc"
-fr, mathspeak, "◌", "cercle en pointillés", "cercle en pointillés", "cercle en pointillés"
-fr, mathspeak, "◍", "cercle hachuré verticalement", "cercle hachuré verticalement", "cercle hachuré verticalement"
-fr, mathspeak, "◎", "deux cercles concentriques", "deux cercles concentriques", "deux cercles concentriques"
-fr, mathspeak, "●", "cercle noir", "cercle noir", "cercle noir"
-fr, mathspeak, "◐", "cercle avec moitié gauche noire", "cercle avec moitié gauche noire", "cercle avec moitié gauche noire"
-fr, mathspeak, "◑", "cercle avec moitié droite noire", "cercle avec moitié droite noire", "cercle avec moitié droite noire"
-fr, mathspeak, "◒", "cercle avec moitié inférieure", "cercle avec moitié inférieure", "cercle avec moitié inférieure"
-fr, mathspeak, "◓", "cercle avec moitié supérieure", "cercle avec moitié supérieure", "cercle avec moitié supérieure"
-fr, mathspeak, "◔", "cercle avec quadrant supérieur droit noir", "cercle avec quadrant supérieur droit noir", "cercle avec quadrant supérieur droit noir"
-fr, mathspeak, "◕", "disque avec quadrant supérieur gauche blanc", "disque avec quadrant supérieur gauche blanc", "disque avec quadrant supérieur gauche blanc"
-fr, mathspeak, "◖", "demi-disque gauche noir", "demi-disque gauche noir", "demi-disque gauche noir"
-fr, mathspeak, "◗", "demi-disque droite noir", "demi-disque droite noir", "demi-disque droite noir"
-fr, mathspeak, "◘", "point noir-au-blanc", "point noir-au-blanc", "point noir-au-blanc"
-fr, mathspeak, "◙", "cercle noir-au-blanc", "cercle noir-au-blanc", "cercle noir-au-blanc"
-fr, mathspeak, "◚", "demi-cercle supérieur noir-au- blanc", "demi-cercle supérieur noir-au- blanc", "demi-cercle supérieur noir-au- blanc"
-fr, mathspeak, "◛", "demi-cercle inférieur noir-au- blanc", "demi-cercle inférieur noir-au- blanc", "demi-cercle inférieur noir-au- blanc"
-fr, mathspeak, "◜", "arc de cercle dans le quadrant supérieur gauchearc de cercle dans le quadrant supérieur gauche", "arc de cercle dans le quadrant supérieur gauchearc de cercle dans le quadrant supérieur gauche", "arc de cercle dans le quadrant supérieur gauchearc de cercle dans le quadrant supérieur gauche"
-fr, mathspeak, "◝", "arc de cercle dans le quadrant supérieur droit", "arc de cercle dans le quadrant supérieur droit", "arc de cercle dans le quadrant supérieur droit"
-fr, mathspeak, "◞", "arc de cercle dans le quadrant inférieur droit", "arc de cercle dans le quadrant inférieur droit", "arc de cercle dans le quadrant inférieur droit"
-fr, mathspeak, "◟", "arc de cercle dans le quadrant inférieur gauche", "arc de cercle dans le quadrant inférieur gauche", "arc de cercle dans le quadrant inférieur gauche"
-fr, mathspeak, "◠", "demi-cercle supérieur", "demi-cercle supérieur", "demi-cercle supérieur"
-fr, mathspeak, "◡", "demi-cercle inférieur", "demi-cercle inférieur", "demi-cercle inférieur"
-fr, mathspeak, "◢", "coin triangulaire noir inférieur droit", "coin triangulaire noir inférieur droit", "coin triangulaire noir inférieur droit"
-fr, mathspeak, "◣", "coin triangulaire noir inférieur gauche", "coin triangulaire noir inférieur gauche", "coin triangulaire noir inférieur gauche"
-fr, mathspeak, "◤", "coin triangulaire noir supérieur gauche", "coin triangulaire noir supérieur gauche", "coin triangulaire noir supérieur gauche"
-fr, mathspeak, "◥", "coin triangulaire noir supérieur droit", "coin triangulaire noir supérieur droit", "coin triangulaire noir supérieur droit"
-fr, mathspeak, "◦", "opérateur rond", "opérateur rond", "opérateur rond"
-fr, mathspeak, "◧", "carré à moitié gauche noire", "carré à moitié gauche noire", "carré à moitié gauche noire"
-fr, mathspeak, "◨", "carré à moitié droite noire", "carré à moitié droite noire", "carré à moitié droite noire"
-fr, mathspeak, "◩", "carré à moitié supérieure gauche noire", "carré à moitié supérieure gauche noire", "carré à moitié supérieure gauche noire"
-fr, mathspeak, "◪", "carré à moitié inférieure droite noire", "carré à moitié inférieure droite noire", "carré à moitié inférieure droite noire"
-fr, mathspeak, "◫", "carré blanc à ligne bissectrice verticale", "carré blanc à ligne bissectrice verticale", "carré blanc à ligne bissectrice verticale"
-fr, mathspeak, "◬", "triangle blanc pointant vers le haut pointé", "triangle blanc pointant vers le haut pointé", "triangle blanc pointant vers le haut pointé"
-fr, mathspeak, "◭", "triangle pointe vers le haut À moitié gauche noire", "triangle pointe vers le haut À moitié gauche noire", "triangle pointe vers le haut À moitié gauche noire"
-fr, mathspeak, "◮", "triangle pointe vers le haut À moitié droite noire", "triangle pointe vers le haut À moitié droite noire", "triangle pointe vers le haut À moitié droite noire"
-fr, mathspeak, "◯", "grand cercle", "grand cercle", "grand cercle"
-fr, mathspeak, "◰", "white square with upper left quadrant", "white square with upper left quadrant", "white square with upper left quadrant"
-fr, mathspeak, "◱", "white square with lower left quadrant", "white square with lower left quadrant", "white square with lower left quadrant"
-fr, mathspeak, "◲", "white square with lower right quadrant", "white square with lower right quadrant", "white square with lower right quadrant"
-fr, mathspeak, "◳", "white square with upper right quadrant", "white square with upper right quadrant", "white square with upper right quadrant"
-fr, mathspeak, "◴", "white circle with upper left quadrant", "white circle with upper left quadrant", "white circle with upper left quadrant"
-fr, mathspeak, "◵", "white circle with lower left quadrant", "white circle with lower left quadrant", "white circle with lower left quadrant"
-fr, mathspeak, "◶", "white circle with lower right quadrant", "white circle with lower right quadrant", "white circle with lower right quadrant"
-fr, mathspeak, "◷", "white circle with upper right quadrant", "white circle with upper right quadrant", "white circle with upper right quadrant"
-fr, mathspeak, "◸", "triangle rectangle supérieur gauche", "triangle rectangle supérieur gauche", "triangle rectangle supérieur gauche"
-fr, mathspeak, "◹", "triangle rectangle supérieur droit", "triangle rectangle supérieur droit", "triangle rectangle supérieur droit"
-fr, mathspeak, "◺", "triangle rectangle inférieur gauche", "triangle rectangle inférieur gauche", "triangle rectangle inférieur gauche"
-fr, mathspeak, "◻", "carré moyen blanc", "carré moyen blanc", "carré moyen blanc"
-fr, mathspeak, "◼", "carré moyen noir", "carré moyen noir", "carré moyen noir"
-fr, mathspeak, "◽", "carré moyen blanc", "carré moyen blanc", "carré moyen blanc"
-fr, mathspeak, "◾", "carré moyen noir", "carré moyen noir", "carré moyen noir"
-fr, mathspeak, "◿", "triangle rectangle inférieur droit", "triangle rectangle inférieur droit", "triangle rectangle inférieur droit"
-fr, mathspeak, "⬒", "square with top half black", "square with top half black", "square with top half black"
-fr, mathspeak, "⬓", "square with bottom half black", "square with bottom half black", "square with bottom half black"
-fr, mathspeak, "⬔", "square with upper right diagonal half black", "square with upper right diagonal half black", "square with upper right diagonal half black"
-fr, mathspeak, "⬕", "square with lower left diagonal half black", "square with lower left diagonal half black", "square with lower left diagonal half black"
-fr, mathspeak, "⬖", "diamond with left half black", "diamond with left half black", "diamond with left half black"
-fr, mathspeak, "⬗", "diamond with right half black", "diamond with right half black", "diamond with right half black"
-fr, mathspeak, "⬘", "diamond with top half black", "diamond with top half black", "diamond with top half black"
-fr, mathspeak, "⬙", "diamond with bottom half black", "diamond with bottom half black", "diamond with bottom half black"
-fr, mathspeak, "⬚", "dotted square", "dotted square", "dotted square"
-fr, mathspeak, "⬛", "black large square", "black large square", "black large square"
-fr, mathspeak, "⬜", "white large square", "white large square", "white large square"
-fr, mathspeak, "⬝", "black very small square", "black very small square", "black very small square"
-fr, mathspeak, "⬞", "white very small square", "white very small square", "white very small square"
-fr, mathspeak, "⬟", "black pentagon", "black pentagon", "black pentagon"
-fr, mathspeak, "⬠", "white pentagon", "white pentagon", "white pentagon"
-fr, mathspeak, "⬡", "white hexagon", "white hexagon", "white hexagon"
-fr, mathspeak, "⬢", "black hexagon", "black hexagon", "black hexagon"
-fr, mathspeak, "⬣", "horizontal black hexagon", "horizontal black hexagon", "horizontal black hexagon"
-fr, mathspeak, "⬤", "black large circle", "black large circle", "black large circle"
-fr, mathspeak, "⬥", "black medium diamond", "black medium diamond", "black medium diamond"
-fr, mathspeak, "⬦", "white medium diamond", "white medium diamond", "white medium diamond"
-fr, mathspeak, "⬧", "black medium lozenge", "black medium lozenge", "black medium lozenge"
-fr, mathspeak, "⬨", "white medium lozenge", "white medium lozenge", "white medium lozenge"
-fr, mathspeak, "⬩", "black small diamond", "black small diamond", "black small diamond"
-fr, mathspeak, "⬪", "black small lozenge", "black small lozenge", "black small lozenge"
-fr, mathspeak, "⬫", "white small lozenge", "white small lozenge", "white small lozenge"
-fr, mathspeak, "⬬", "black horizontal ellipse", "black horizontal ellipse", "black horizontal ellipse"
-fr, mathspeak, "⬭", "white horizontal ellipse", "white horizontal ellipse", "white horizontal ellipse"
-fr, mathspeak, "⬮", "black vertical ellipse", "black vertical ellipse", "black vertical ellipse"
-fr, mathspeak, "⬯", "white vertical ellipse", "white vertical ellipse", "white vertical ellipse"
-fr, mathspeak, "⭐", "étoile blanche moyenne", "étoile blanche moyenne", "étoile blanche moyenne"
-fr, mathspeak, "⭑", "petite étoile noire", "petite étoile noire", "petite étoile noire"
-fr, mathspeak, "⭒", "petite étoile blanche", "petite étoile blanche", "petite étoile blanche"
-fr, mathspeak, "⭓", "black right pointing pentagon", "black right pointing pentagon", "black right pointing pentagon"
-fr, mathspeak, "⭔", "white right pointing pentagon", "white right pointing pentagon", "white right pointing pentagon"
-fr, mathspeak, "⭕", "heavy large circle", "heavy large circle", "heavy large circle"
-fr, mathspeak, "⭖", "heavy oval with oval inside", "heavy oval with oval inside", "heavy oval with oval inside"
-fr, mathspeak, "⭗", "heavy circle with circle inside", "heavy circle with circle inside", "heavy circle with circle inside"
-fr, mathspeak, "⭘", "heavy circle", "heavy circle", "heavy circle"
-fr, mathspeak, "⭙", "heavy circled saltire", "heavy circled saltire", "heavy circled saltire"
-fr, mathspeak, "↼", "harpon gauche avec dent dressée", "harpon gauche avec dent dressée", "harpon gauche avec dent dressée"
-fr, mathspeak, "↽", "harpon gauche avec dent baissée", "harpon gauche avec dent baissée", "harpon gauche avec dent baissée"
-fr, mathspeak, "↾", "harpon vers le haut avec dent droite", "harpon vers le haut avec dent droite", "harpon vers le haut avec dent droite"
-fr, mathspeak, "↿", "harpon vers le haut avec dent gauche", "harpon vers le haut avec dent gauche", "harpon vers le haut avec dent gauche"
-fr, mathspeak, "⇀", "harpon droit avec dent dressée", "harpon droit avec dent dressée", "harpon droit avec dent dressée"
-fr, mathspeak, "⇁", "harpon droit avec dent baissée", "harpon droit avec dent baissée", "harpon droit avec dent baissée"
-fr, mathspeak, "⇂", "harpon vers le bas avec dent droite", "harpon vers le bas avec dent droite", "harpon vers le bas avec dent droite"
-fr, mathspeak, "⇃", "harpon vers le bas avec dent gauche", "harpon vers le bas avec dent gauche", "harpon vers le bas avec dent gauche"
-fr, mathspeak, "⇋", "harpon gauche par-dessus harpon droit", "harpon gauche par-dessus harpon droit", "harpon gauche par-dessus harpon droit"
-fr, mathspeak, "⇌", "harpon droit par-dessus harpon gauche", "harpon droit par-dessus harpon gauche", "harpon droit par-dessus harpon gauche"
-fr, mathspeak, "⥊", "javelot à dents gauche dressée et droite baissée", "javelot à dents gauche dressée et droite baissée", "javelot à dents gauche dressée et droite baissée"
-fr, mathspeak, "⥋", "javelot à dents gauche baissée et droite dressée", "javelot à dents gauche baissée et droite dressée", "javelot à dents gauche baissée et droite dressée"
-fr, mathspeak, "⥌", "up barb right down barb left harpoon", "up barb right down barb left harpoon", "up barb right down barb left harpoon"
-fr, mathspeak, "⥍", "up barb left down barb right harpoon", "up barb left down barb right harpoon", "up barb left down barb right harpoon"
-fr, mathspeak, "⥎", "javelot à dents droite et gauche dressées", "javelot à dents droite et gauche dressées", "javelot à dents droite et gauche dressées"
-fr, mathspeak, "⥏", "javelot à dents supérieure et inférieure droites", "javelot à dents supérieure et inférieure droites", "javelot à dents supérieure et inférieure droites"
-fr, mathspeak, "⥐", "javelot à dents droite et gauche baissées", "javelot à dents droite et gauche baissées", "javelot à dents droite et gauche baissées"
-fr, mathspeak, "⥑", "javelot à dents supérieure et inférieure gauches", "javelot à dents supérieure et inférieure gauches", "javelot à dents supérieure et inférieure gauches"
-fr, mathspeak, "⥒", "harpon gauche à dent dressée contre taquet", "harpon gauche à dent dressée contre taquet", "harpon gauche à dent dressée contre taquet"
-fr, mathspeak, "⥓", "harpon droit à dent dressée contre taquet", "harpon droit à dent dressée contre taquet", "harpon droit à dent dressée contre taquet"
-fr, mathspeak, "⥔", "harpon vers le haut à dent droite contre taquet", "harpon vers le haut à dent droite contre taquet", "harpon vers le haut à dent droite contre taquet"
-fr, mathspeak, "⥕", "harpon vers le bas à dent droite contre taquet", "harpon vers le bas à dent droite contre taquet", "harpon vers le bas à dent droite contre taquet"
-fr, mathspeak, "⥖", "harpon gauche à dent baissée contre taquet", "harpon gauche à dent baissée contre taquet", "harpon gauche à dent baissée contre taquet"
-fr, mathspeak, "⥗", "harpon droit à dent baissée contre taquet", "harpon droit à dent baissée contre taquet", "harpon droit à dent baissée contre taquet"
-fr, mathspeak, "⥘", "harpon vers le haut à dent gauche contre taquet", "harpon vers le haut à dent gauche contre taquet", "harpon vers le haut à dent gauche contre taquet"
-fr, mathspeak, "⥙", "harpon vers le bas à dent gauche contre taquet", "harpon vers le bas à dent gauche contre taquet", "harpon vers le bas à dent gauche contre taquet"
-fr, mathspeak, "⥚", "harpon gauche à dent dressée depuis taquet", "harpon gauche à dent dressée depuis taquet", "harpon gauche à dent dressée depuis taquet"
-fr, mathspeak, "⥛", "harpon droit à dent dressée depuis taquet", "harpon droit à dent dressée depuis taquet", "harpon droit à dent dressée depuis taquet"
-fr, mathspeak, "⥜", "harpon vers le haut à dent droite depuis taquet", "harpon vers le haut à dent droite depuis taquet", "harpon vers le haut à dent droite depuis taquet"
-fr, mathspeak, "⥝", "harpon vers le bas à dent droite depuis taquet", "harpon vers le bas à dent droite depuis taquet", "harpon vers le bas à dent droite depuis taquet"
-fr, mathspeak, "⥞", "harpon gauche à dent baissée depuis taquet", "harpon gauche à dent baissée depuis taquet", "harpon gauche à dent baissée depuis taquet"
-fr, mathspeak, "⥟", "harpon droit à dent baissée depuis taquet", "harpon droit à dent baissée depuis taquet", "harpon droit à dent baissée depuis taquet"
-fr, mathspeak, "⥠", "harpon vers le haut à dent gauche depuis taquet", "harpon vers le haut à dent gauche depuis taquet", "harpon vers le haut à dent gauche depuis taquet"
-fr, mathspeak, "⥡", "harpon vers le bas à dent gauche depuis taquet", "harpon vers le bas à dent gauche depuis taquet", "harpon vers le bas à dent gauche depuis taquet"
-fr, mathspeak, "⥢", "harpon gauche à dent dressée sur harpon gauche à dent baissée", "harpon gauche à dent dressée sur harpon gauche à dent baissée", "harpon gauche à dent dressée sur harpon gauche à dent baissée"
-fr, mathspeak, "⥣", "harpon vers le haut à dent gauche à côté de harpon vers le haut à dent droite", "harpon vers le haut à dent gauche à côté de harpon vers le haut à dent droite", "harpon vers le haut à dent gauche à côté de harpon vers le haut à dent droite"
-fr, mathspeak, "⥤", "harpon droit à dent dressée par-dessus harpon droit à dent baissée", "harpon droit à dent dressée par-dessus harpon droit à dent baissée", "harpon droit à dent dressée par-dessus harpon droit à dent baissée"
-fr, mathspeak, "⥥", "harpon vers le bas à dent gauche à côté de harpon vers le bas à dent droite", "harpon vers le bas à dent gauche à côté de harpon vers le bas à dent droite", "harpon vers le bas à dent gauche à côté de harpon vers le bas à dent droite"
-fr, mathspeak, "⥦", "harpon à dent gauche dressée par-dessus harpon à dent droite dressée", "harpon à dent gauche dressée par-dessus harpon à dent droite dressée", "harpon à dent gauche dressée par-dessus harpon à dent droite dressée"
-fr, mathspeak, "⥧", "harpon à dent gauche baissée par-dessus harpon à dent droite baissée", "harpon à dent gauche baissée par-dessus harpon à dent droite baissée", "harpon à dent gauche baissée par-dessus harpon à dent droite baissée"
-fr, mathspeak, "⥨", "harpon à dent droite dressée par-dessus harpon à dent gauche dressée", "harpon à dent droite dressée par-dessus harpon à dent gauche dressée", "harpon à dent droite dressée par-dessus harpon à dent gauche dressée"
-fr, mathspeak, "⥩", "harpon à dent droite baissée par-dessus harpon à dent gauche baissée", "harpon à dent droite baissée par-dessus harpon à dent gauche baissée", "harpon à dent droite baissée par-dessus harpon à dent gauche baissée"
-fr, mathspeak, "⥪", "harpon à dent gauche dressée par-dessus long trait", "harpon à dent gauche dressée par-dessus long trait", "harpon à dent gauche dressée par-dessus long trait"
-fr, mathspeak, "⥫", "long trait par-dessus harpon à dent gauche baissée", "long trait par-dessus harpon à dent gauche baissée", "long trait par-dessus harpon à dent gauche baissée"
-fr, mathspeak, "⥬", "harpon à dent droite dressée par-dessus long trait", "harpon à dent droite dressée par-dessus long trait", "harpon à dent droite dressée par-dessus long trait"
-fr, mathspeak, "⥭", "long trait par-dessus harpon à dent droite baissée", "long trait par-dessus harpon à dent droite baissée", "long trait par-dessus harpon à dent droite baissée"
-fr, mathspeak, "⥮", "harpon vers le haut à dent gauche à côté de harpon vers le bas à dent droite", "harpon vers le haut à dent gauche à côté de harpon vers le bas à dent droite", "harpon vers le haut à dent gauche à côté de harpon vers le bas à dent droite"
-fr, mathspeak, "⥯", "harpon vers le bas à dent gauche à côté de harpon vers le haut à dent droite", "harpon vers le bas à dent gauche à côté de harpon vers le haut à dent droite", "harpon vers le bas à dent gauche à côté de harpon vers le haut à dent droite"
-fr, mathspeak, "⥼", "ancre gauche", "ancre gauche", "ancre gauche"
-fr, mathspeak, "⥽", "ancre droite", "ancre droite", "ancre droite"
-fr, mathspeak, "⥾", "ancre vers le haut", "ancre vers le haut", "ancre vers le haut"
-fr, mathspeak, "⥿", "ancre vers le bas", "ancre vers le bas", "ancre vers le bas"
-fr, mathspeak, "ℏ", "constante de planck sur deux pi", "constante de planck sur deux pi", "constante de planck sur deux pi"
-fr, mathspeak, "℔", "l b bar", "l b bar", "l b bar"
-fr, mathspeak, "№", "symbole numéro", "symbole numéro", "symbole numéro"
-fr, mathspeak, "℗", "copyright de programme sonore", "copyright de programme sonore", "copyright de programme sonore"
-fr, mathspeak, "℞", "ordonnances", "ordonnances", "ordonnances"
-fr, mathspeak, "℟", "response", "response", "response"
-fr, mathspeak, "℠", "service mark", "service mark", "service mark"
-fr, mathspeak, "℡", "telephone sign", "telephone sign", "telephone sign"
-fr, mathspeak, "™", "symbole anglais marque de commerce", "symbole anglais marque de commerce", "symbole anglais marque de commerce"
-fr, mathspeak, "℣", "versicle", "versicle", "versicle"
-fr, mathspeak, "℥", "symbole once", "symbole once", "symbole once"
-fr, mathspeak, "Ω", "ohm", "ohm", "ohm"
-fr, mathspeak, "℧", "ohm culbuté", "ohm culbuté", "ohm culbuté"
-fr, mathspeak, "K", "degré kelvin", "degré kelvin", "degré kelvin"
-fr, mathspeak, "Å", "angstroms", "angstroms", "angstroms"
-fr, mathspeak, "℮", "estimated", "estimated", "estimated"
-fr, mathspeak, "Ⅎ", "f culbuté majuscule", "f culbuté majuscule", "f culbuté majuscule"
-fr, mathspeak, "ℹ", "information source", "information source", "information source"
-fr, mathspeak, "℺", "rotated upper Q", "rotated upper Q", "rotated upper Q"
-fr, mathspeak, "℻", "facsimile sign", "facsimile sign", "facsimile sign"
-fr, mathspeak, "⅁", "turned sans serif upper G", "turned sans serif upper G", "turned sans serif upper G"
-fr, mathspeak, "⅂", "turned sans serif upper L", "turned sans serif upper L", "turned sans serif upper L"
-fr, mathspeak, "⅃", "reversed sans serif upper L", "reversed sans serif upper L", "reversed sans serif upper L"
-fr, mathspeak, "⅄", "turned sans serif upper Y", "turned sans serif upper Y", "turned sans serif upper Y"
-fr, mathspeak, "!", "factorielle", "factorielle", "factorielle"
-fr, mathspeak, """, "petit guillemet", "petit guillemet", "petit guillemet"
-fr, mathspeak, "#", "dièse", "dièse", "dièse"
-fr, mathspeak, "$", "dollars", "dollars", "dollars"
-fr, mathspeak, "%", "pourcent", "pourcent", "pourcent"
-fr, mathspeak, "&", "esperluette", "esperluette", "esperluette"
-fr, mathspeak, "'", "prime", "prime", "prime"
-fr, mathspeak, "*", "astérisque", "astérisque", "astérisque"
-fr, mathspeak, "+", "plus", "plus", "plus"
-fr, mathspeak, ",", "virgule", "virgule", "virgule"
-fr, mathspeak, "-", "moins", "moins", "moins"
-fr, mathspeak, ".", "point", "point", "point"
-fr, mathspeak, "/", "barre oblique", "barre oblique", "barre oblique"
-fr, mathspeak, ":", "deux points", "deux points", "deux points"
-fr, mathspeak, ";", "point virgule", "point virgule", "point virgule"
-fr, mathspeak, "<", "inférieur à", "inférieur à", "inférieur à"
-fr, mathspeak, "=", "égale", "égale", "égale"
-fr, mathspeak, ">", "supérieur à", "supérieur à", "supérieur à"
-fr, mathspeak, "?", "point d'interrogation", "point d'interrogation", "point d'interrogation"
-fr, mathspeak, "@", "arobase", "arobase", "arobase"
-fr, mathspeak, "\", "barre oblique inversée", "barre oblique inversée", "barre oblique inversée"
-fr, mathspeak, "^", "circonflexe", "circonflexe", "circonflexe"
-fr, mathspeak, "_", "tiret bas", "tiret bas", "tiret bas"
-fr, mathspeak, "`", "accent grave", "accent grave", "accent grave"
-fr, mathspeak, "|", "barre verticale", "barre verticale", "barre verticale"
-fr, mathspeak, "~", "tilde", "tilde", "tilde"
-fr, mathspeak, "¡", "point d'exclamation renversé", "point d'exclamation renversé", "point d'exclamation renversé"
-fr, mathspeak, "¢", "centimes", "centimes", "centimes"
-fr, mathspeak, "£", "livres", "livres", "livres"
-fr, mathspeak, "¤", "symbole monétaire", "symbole monétaire", "symbole monétaire"
-fr, mathspeak, "¥", "yen", "yen", "yen"
-fr, mathspeak, "¦", "barre déjointe", "barre déjointe", "barre déjointe"
-fr, mathspeak, "§", "paragraphe", "paragraphe", "paragraphe"
-fr, mathspeak, "¨", "tréma", "tréma", "tréma"
-fr, mathspeak, "©", "copyright", "copyright", "copyright"
-fr, mathspeak, "ª", "indicateur ordinal féminin", "indicateur ordinal féminin", "indicateur ordinal féminin"
-fr, mathspeak, "«", "guillemet chevron pointant gauche", "guillemet chevron pointant gauche", "guillemet chevron pointant gauche"
-fr, mathspeak, "¬", "négation", "négation", "négation"
-fr, mathspeak, "®", "symbole marque déposée", "symbole marque déposée", "symbole marque déposée"
-fr, mathspeak, "¯", "macron", "macron", "macron"
-fr, mathspeak, "°", "degrés", "degrés", "degrés"
-fr, mathspeak, "±", "plus ou moins", "plus ou moins", "plus ou moins"
-fr, mathspeak, "´", "accent aigu", "accent aigu", "accent aigu"
-fr, mathspeak, "µ", "symbole micro", "symbole micro", "symbole micro"
-fr, mathspeak, "¶", "fin de paragraphe", "fin de paragraphe", "fin de paragraphe"
-fr, mathspeak, "·", "point médian", "point médian", "point médian"
-fr, mathspeak, "¸", "cédille", "cédille", "cédille"
-fr, mathspeak, "º", "indicateur ordinal masculin", "indicateur ordinal masculin", "indicateur ordinal masculin"
-fr, mathspeak, "»", "guillemet chevron pointant droite", "guillemet chevron pointant droite", "guillemet chevron pointant droite"
-fr, mathspeak, "¿", "point d'interrogation renversé", "point d'interrogation renversé", "point d'interrogation renversé"
-fr, mathspeak, "×", "multiplié par", "multiplié par", "multiplié par"
-fr, mathspeak, "÷", "divisé par", "divisé par", "divisé par"
-fr, mathspeak, "˘", "brève", "brève", "brève"
-fr, mathspeak, "˙", "point en chef", "point en chef", "point en chef"
-fr, mathspeak, "˚", "rond en chef", "rond en chef", "rond en chef"
-fr, mathspeak, "˛", "ogonek", "ogonek", "ogonek"
-fr, mathspeak, "˜", "tilde", "tilde", "tilde"
-fr, mathspeak, "˝", "double accent aigu", "double accent aigu", "double accent aigu"
-fr, mathspeak, "‐", "trait d'union", "trait d'union", "trait d'union"
-fr, mathspeak, "‑", "non-breaking-hyphen", "non-breaking-hyphen", "non-breaking-hyphen"
-fr, mathspeak, "‒", "figure-dash", "figure-dash", "figure-dash"
-fr, mathspeak, "–", "trait d'union insécable", "trait d'union insécable", "trait d'union insécable"
-fr, mathspeak, "—", "tiret numérique", "tiret numérique", "tiret numérique"
-fr, mathspeak, "―", "barre horizontalle", "barre horizontalle", "barre horizontalle"
-fr, mathspeak, "‖", "double ligne verticale", "double ligne verticale", "double ligne verticale"
-fr, mathspeak, "‗", "double-underscore", "double-underscore", "double-underscore"
-fr, mathspeak, "‘", "guillemet-apostrophe culbuté", "guillemet-apostrophe culbuté", "guillemet-apostrophe culbuté"
-fr, mathspeak, "’", "guillemet-apostrophe", "guillemet-apostrophe", "guillemet-apostrophe"
-fr, mathspeak, "‚", "guillemet-virgule inférieur", "guillemet-virgule inférieur", "guillemet-virgule inférieur"
-fr, mathspeak, "‛", "single-reversed-comma-quotation-mark", "single-reversed-comma-quotation-mark", "single-reversed-comma-quotation-mark"
-fr, mathspeak, "“", "guillemet-apostrophe double culbuté", "guillemet-apostrophe double culbuté", "guillemet-apostrophe double culbuté"
-fr, mathspeak, "”", "guillemet-apostrophe double", "guillemet-apostrophe double", "guillemet-apostrophe double"
-fr, mathspeak, "„", "guillemet double prime", "guillemet double prime", "guillemet double prime"
-fr, mathspeak, "‟", "double-reversed-comma-quotation-mark", "double-reversed-comma-quotation-mark", "double-reversed-comma-quotation-mark"
-fr, mathspeak, "†", "obèle", "obèle", "obèle"
-fr, mathspeak, "‡", "double obèle", "double obèle", "double obèle"
-fr, mathspeak, "•", "puce", "puce", "puce"
-fr, mathspeak, "‣", "triangular-bullet", "triangular-bullet", "triangular-bullet"
-fr, mathspeak, "․", "one-dot-leader", "one-dot-leader", "one-dot-leader"
-fr, mathspeak, "‥", "point de conduite double", "point de conduite double", "point de conduite double"
-fr, mathspeak, "…", "points de suspension", "points de suspension", "points de suspension"
-fr, mathspeak, "‧", "hyphenation-point", "hyphenation-point", "hyphenation-point"
-fr, mathspeak, "‰", "symbole pour mille", "symbole pour mille", "symbole pour mille"
-fr, mathspeak, "‱", "symbole pour dix mille", "symbole pour dix mille", "symbole pour dix mille"
-fr, mathspeak, "′", "prime", "prime", "prime"
-fr, mathspeak, "″", "double prime", "double prime", "double prime"
-fr, mathspeak, "‴", "triple prime", "triple prime", "triple prime"
-fr, mathspeak, "‵", "prime réfléchi", "prime réfléchi", "prime réfléchi"
-fr, mathspeak, "‶", "double prime réfléchi", "double prime réfléchi", "double prime réfléchi"
-fr, mathspeak, "‷", "reversed-triple-prime", "reversed-triple-prime", "reversed-triple-prime"
-fr, mathspeak, "‸", "caret", "caret", "caret"
-fr, mathspeak, "‹", "guillemet simple gauche", "guillemet simple gauche", "guillemet simple gauche"
-fr, mathspeak, "›", "guillemet simple droite", "guillemet simple droite", "guillemet simple droite"
-fr, mathspeak, "※", "reference-mark", "reference-mark", "reference-mark"
-fr, mathspeak, "‼", "double-exclamation-mark", "double-exclamation-mark", "double-exclamation-mark"
-fr, mathspeak, "‽", "interrobang", "interrobang", "interrobang"
-fr, mathspeak, "‾", "tiret en chef", "tiret en chef", "tiret en chef"
-fr, mathspeak, "‿", "undertie", "undertie", "undertie"
-fr, mathspeak, "⁀", "tirant en chef", "tirant en chef", "tirant en chef"
-fr, mathspeak, "⁁", "lambda d'insertion", "lambda d'insertion", "lambda d'insertion"
-fr, mathspeak, "⁂", "asterism", "asterism", "asterism"
-fr, mathspeak, "⁃", "puce trait d'union", "puce trait d'union", "puce trait d'union"
-fr, mathspeak, "⁄", "barre de fraction", "barre de fraction", "barre de fraction"
-fr, mathspeak, "⁇", "double-question-mark", "double-question-mark", "double-question-mark"
-fr, mathspeak, "⁈", "question-exclamation-mark", "question-exclamation-mark", "question-exclamation-mark"
-fr, mathspeak, "⁉", "exclamation-question-mark", "exclamation-question-mark", "exclamation-question-mark"
-fr, mathspeak, "⁋", "reversed-pilcrow", "reversed-pilcrow", "reversed-pilcrow"
-fr, mathspeak, "⁌", "black-leftwards-bullet", "black-leftwards-bullet", "black-leftwards-bullet"
-fr, mathspeak, "⁍", "black-rightwards-bullet", "black-rightwards-bullet", "black-rightwards-bullet"
-fr, mathspeak, "⁎", "low-asterisk", "low-asterisk", "low-asterisk"
-fr, mathspeak, "⁏", "point-virgule réfléchi", "point-virgule réfléchi", "point-virgule réfléchi"
-fr, mathspeak, "⁐", "resserrer", "resserrer", "resserrer"
-fr, mathspeak, "⁑", "two-asterisks-aligned-vertically", "two-asterisks-aligned-vertically", "two-asterisks-aligned-vertically"
-fr, mathspeak, "⁒", "commercial-minus", "commercial-minus", "commercial-minus"
-fr, mathspeak, "⁓", "swung-dash", "swung-dash", "swung-dash"
-fr, mathspeak, "⁔", "inverted-undertie", "inverted-undertie", "inverted-undertie"
-fr, mathspeak, "⁕", "flower-punctuation-mark", "flower-punctuation-mark", "flower-punctuation-mark"
-fr, mathspeak, "⁖", "three-dot-punctuation", "three-dot-punctuation", "three-dot-punctuation"
-fr, mathspeak, "⁗", "quadruple prime", "quadruple prime", "quadruple prime"
-fr, mathspeak, "⁘", "four-dot-punctuation", "four-dot-punctuation", "four-dot-punctuation"
-fr, mathspeak, "⁙", "five-dot-punctuation", "five-dot-punctuation", "five-dot-punctuation"
-fr, mathspeak, "⁚", "two-dot-punctuation", "two-dot-punctuation", "two-dot-punctuation"
-fr, mathspeak, "⁛", "four-dot-mark", "four-dot-mark", "four-dot-mark"
-fr, mathspeak, "⁜", "dotted-cross", "dotted-cross", "dotted-cross"
-fr, mathspeak, "⁝", "tricolon", "tricolon", "tricolon"
-fr, mathspeak, "⁞", "vertical-four-dots", "vertical-four-dots", "vertical-four-dots"
-fr, mathspeak, "⁺", "superscript-plus", "superscript-plus", "superscript-plus"
-fr, mathspeak, "⁻", "superscript-hyphen-minus", "superscript-hyphen-minus", "superscript-hyphen-minus"
-fr, mathspeak, "⁼", "superscript-equals", "superscript-equals", "superscript-equals"
-fr, mathspeak, "⁽", "superscript-opening-parenthesis", "superscript-opening-parenthesis", "superscript-opening-parenthesis"
-fr, mathspeak, "⁾", "superscript-closing-parenthesis", "superscript-closing-parenthesis", "superscript-closing-parenthesis"
-fr, mathspeak, "₊", "subscript-plus", "subscript-plus", "subscript-plus"
-fr, mathspeak, "₋", "subscript-hyphen-minus", "subscript-hyphen-minus", "subscript-hyphen-minus"
-fr, mathspeak, "₌", "subscript-equals", "subscript-equals", "subscript-equals"
-fr, mathspeak, "₍", "subscript-opening-parenthesis", "subscript-opening-parenthesis", "subscript-opening-parenthesis"
-fr, mathspeak, "₎", "subscript-closing-parenthesis", "subscript-closing-parenthesis", "subscript-closing-parenthesis"
-fr, mathspeak, "⅊", "property-line", "property-line", "property-line"
-fr, mathspeak, "⅋", "turned-ampersand", "turned-ampersand", "turned-ampersand"
-fr, mathspeak, "⅌", "per-sign", "per-sign", "per-sign"
-fr, mathspeak, "⅍", "aktieselskab", "aktieselskab", "aktieselskab"
-fr, mathspeak, "ⅎ", "turned-small-f", "turned-small-f", "turned-small-f"
-fr, mathspeak, "∀", "pour tous", "pour tous", "pour tous"
-fr, mathspeak, "∁", "complément", "complément", "complément"
-fr, mathspeak, "∂", "dérivée partielle", "dérivée partielle", "dérivée partielle"
-fr, mathspeak, "∃", "il existe", "il existe", "il existe"
-fr, mathspeak, "∄", "il n'existe pas", "il n'existe pas", "il n'existe pas"
-fr, mathspeak, "∅", "ensemble vide", "ensemble vide", "ensemble vide"
-fr, mathspeak, "∆", "incrément", "incrément", "incrément"
-fr, mathspeak, "∇", "nabla", "nabla", "nabla"
-fr, mathspeak, "∈", "appartient à", "appartient à", "appartient à"
-fr, mathspeak, "∉", "n'appartient pas à", "n'appartient pas à", "n'appartient pas à"
-fr, mathspeak, "∊", "appartient à", "appartient à", "appartient à"
-fr, mathspeak, "∋", "contient comme élément", "contient comme élément", "contient comme élément"
-fr, mathspeak, "∌", "ne contient pas comme élément", "ne contient pas comme élément", "ne contient pas comme élément"
-fr, mathspeak, "∍", "contient comme élément", "contient comme élément", "contient comme élément"
-fr, mathspeak, "∎", "ce qu'il fallait démontrer", "ce qu'il fallait démontrer", "ce qu'il fallait démontrer"
-fr, mathspeak, "∏", "produit", "produit", "produit"
-fr, mathspeak, "∐", "coproduit", "coproduit", "coproduit"
-fr, mathspeak, "∑", "sommation", "sommation", "sommation"
-fr, mathspeak, "−", "moins", "moins", "moins"
-fr, mathspeak, "∓", "moins-ou-plus", "moins-ou-plus", "moins-ou-plus"
-fr, mathspeak, "∔", "plus pointé", "plus pointé", "plus pointé"
-fr, mathspeak, "∕", "division", "division", "division"
-fr, mathspeak, "∖", "différence d'ensembles", "différence d'ensembles", "différence d'ensembles"
-fr, mathspeak, "∗", "opérateur astérisque", "opérateur astérisque", "opérateur astérisque"
-fr, mathspeak, "∘", "opérateur rond", "opérateur rond", "opérateur rond"
-fr, mathspeak, "∙", "point médian", "point médian", "point médian"
-fr, mathspeak, "√", "racine carrée", "racine carrée", "racine carrée"
-fr, mathspeak, "∛", "racine cubique", "racine cubique", "racine cubique"
-fr, mathspeak, "∜", "racine quatrième", "racine quatrième", "racine quatrième"
-fr, mathspeak, "∝", "proportionnel à", "proportionnel à", "proportionnel à"
-fr, mathspeak, "∞", "infini", "infini", "infini"
-fr, mathspeak, "∟", "angle droit", "angle droit", "angle droit"
-fr, mathspeak, "∠", "angle", "angle", "angle"
-fr, mathspeak, "∡", "angle mesuré", "angle mesuré", "angle mesuré"
-fr, mathspeak, "∢", "angle sphérique", "angle sphérique", "angle sphérique"
-fr, mathspeak, "∣", "est un diviseur de", "est un diviseur de", "est un diviseur de"
-fr, mathspeak, "∤", "n'est pas un diviseur de", "n'est pas un diviseur de", "n'est pas un diviseur de"
-fr, mathspeak, "∥", "parallèle à", "parallèle à", "parallèle à"
-fr, mathspeak, "∦", "non parallèle à", "non parallèle à", "non parallèle à"
-fr, mathspeak, "∧", "et logique", "et logique", "et logique"
-fr, mathspeak, "∨", "ou logique", "ou logique", "ou logique"
-fr, mathspeak, "∩", "intersection", "intersection", "intersection"
-fr, mathspeak, "∪", "union", "union", "union"
-fr, mathspeak, "∫", "intégrale", "intégrale", "intégrale"
-fr, mathspeak, "∬", "intégrale double", "intégrale double", "intégrale double"
-fr, mathspeak, "∭", "intégrale triple", "intégrale triple", "intégrale triple"
-fr, mathspeak, "∮", "intégrale de contour", "intégrale de contour", "intégrale de contour"
-fr, mathspeak, "∯", "intégrale de surface", "intégrale de surface", "intégrale de surface"
-fr, mathspeak, "∰", "intégrale de volume", "intégrale de volume", "intégrale de volume"
-fr, mathspeak, "∱", "intégrale en sens négatif", "intégrale en sens négatif", "intégrale en sens négatif"
-fr, mathspeak, "∲", "intégrale de contour en sens négatif", "intégrale de contour en sens négatif", "intégrale de contour en sens négatif"
-fr, mathspeak, "∳", "intégrale de contour en sens positif", "intégrale de contour en sens positif", "intégrale de contour en sens positif"
-fr, mathspeak, "∴", "par conséquent", "par conséquent", "par conséquent"
-fr, mathspeak, "∵", "parce que", "parce que", "parce que"
-fr, mathspeak, "∶", "rapport", "rapport", "rapport"
-fr, mathspeak, "∷", "proportion", "proportion", "proportion"
-fr, mathspeak, "∸", "moins pointé", "moins pointé", "moins pointé"
-fr, mathspeak, "∹", "excès", "excès", "excès"
-fr, mathspeak, "∺", "proportion géométrique", "proportion géométrique", "proportion géométrique"
-fr, mathspeak, "∻", "homothétique", "homothétique", "homothétique"
-fr, mathspeak, "∼", "opérateur tilde", "opérateur tilde", "opérateur tilde"
-fr, mathspeak, "∽", "opérateur tilde renversé", "opérateur tilde renversé", "opérateur tilde renversé"
-fr, mathspeak, "∾", "s couché renversé", "s couché renversé", "s couché renversé"
-fr, mathspeak, "∿", "sinusoïde", "sinusoïde", "sinusoïde"
-fr, mathspeak, "≀", "produit couronne", "produit couronne", "produit couronne"
-fr, mathspeak, "≁", "non tilde", "non tilde", "non tilde"
-fr, mathspeak, "≂", "moins tilde", "moins tilde", "moins tilde"
-fr, mathspeak, "≃", "asymptotiquement égal à", "asymptotiquement égal à", "asymptotiquement égal à"
-fr, mathspeak, "≄", "non asymptotiquement égal à", "non asymptotiquement égal à", "non asymptotiquement égal à"
-fr, mathspeak, "≅", "approximativement égal à", "approximativement égal à", "approximativement égal à"
-fr, mathspeak, "≆", "approximativement mais non strictement égal à", "approximativement mais non strictement égal à", "approximativement mais non strictement égal à"
-fr, mathspeak, "≇", "ni approximativement ni strictement égal à", "ni approximativement ni strictement égal à", "ni approximativement ni strictement égal à"
-fr, mathspeak, "≈", "presque égal à", "presque égal à", "presque égal à"
-fr, mathspeak, "≉", "non presque égal à", "non presque égal à", "non presque égal à"
-fr, mathspeak, "≊", "presque égal ou égal à", "presque égal ou égal à", "presque égal ou égal à"
-fr, mathspeak, "≋", "triple tilde", "triple tilde", "triple tilde"
-fr, mathspeak, "≌", "entièrement égal à", "entièrement égal à", "entièrement égal à"
-fr, mathspeak, "≍", "équivalent à", "équivalent à", "équivalent à"
-fr, mathspeak, "≎", "géométriquement équivalent à", "géométriquement équivalent à", "géométriquement équivalent à"
-fr, mathspeak, "≏", "différence entre", "différence entre", "différence entre"
-fr, mathspeak, "≐", "tend vers la limite", "tend vers la limite", "tend vers la limite"
-fr, mathspeak, "≑", "géométriquement égal à", "géométriquement égal à", "géométriquement égal à"
-fr, mathspeak, "≒", "approximativement égal à ou image de", "approximativement égal à ou image de", "approximativement égal à ou image de"
-fr, mathspeak, "≓", "image de ou approximativement égal à", "image de ou approximativement égal à", "image de ou approximativement égal à"
-fr, mathspeak, "≔", "deux-points égal", "deux-points égal", "deux-points égal"
-fr, mathspeak, "≕", "égal deux-points", "égal deux-points", "égal deux-points"
-fr, mathspeak, "≖", "rond dans égal", "rond dans égal", "rond dans égal"
-fr, mathspeak, "≗", "égal avec rond en chef", "égal avec rond en chef", "égal avec rond en chef"
-fr, mathspeak, "≘", "correspond à", "correspond à", "correspond à"
-fr, mathspeak, "≙", "estime", "estime", "estime"
-fr, mathspeak, "≚", "équiangulaire à", "équiangulaire à", "équiangulaire à"
-fr, mathspeak, "≛", "égal avec étoile en chef", "égal avec étoile en chef", "égal avec étoile en chef"
-fr, mathspeak, "≜", "égal delta", "égal delta", "égal delta"
-fr, mathspeak, "≝", "égal par définition à", "égal par définition à", "égal par définition à"
-fr, mathspeak, "≞", "mesuré par", "mesuré par", "mesuré par"
-fr, mathspeak, "≟", "égalité en doute", "égalité en doute", "égalité en doute"
-fr, mathspeak, "≠", "pas égal à", "pas égal à", "pas égal à"
-fr, mathspeak, "≡", "identique à", "identique à", "identique à"
-fr, mathspeak, "≢", "non identique à", "non identique à", "non identique à"
-fr, mathspeak, "≣", "strictement équivalent à", "strictement équivalent à", "strictement équivalent à"
-fr, mathspeak, "≤", "plus petit ou égal à", "plus petit ou égal à", "plus petit ou égal à"
-fr, mathspeak, "≥", "plus grand ou égal à", "plus grand ou égal à", "plus grand ou égal à"
-fr, mathspeak, "≦", "plus petit que par-dessus égal à", "plus petit que par-dessus égal à", "plus petit que par-dessus égal à"
-fr, mathspeak, "≧", "plus grand que par-dessus égal à", "plus grand que par-dessus égal à", "plus grand que par-dessus égal à"
-fr, mathspeak, "≨", "plus petit mais pas égal à", "plus petit mais pas égal à", "plus petit mais pas égal à"
-fr, mathspeak, "≩", "plus grand mais pas égal à", "plus grand mais pas égal à", "plus grand mais pas égal à"
-fr, mathspeak, "≪", "beaucoup plus petit que", "beaucoup plus petit que", "beaucoup plus petit que"
-fr, mathspeak, "≫", "beaucoup plus grand que", "beaucoup plus grand que", "beaucoup plus grand que"
-fr, mathspeak, "≬", "entre", "entre", "entre"
-fr, mathspeak, "≭", "non équivalent à", "non équivalent à", "non équivalent à"
-fr, mathspeak, "≮", "pas plus petit que", "pas plus petit que", "pas plus petit que"
-fr, mathspeak, "≯", "pas plus grand que", "pas plus grand que", "pas plus grand que"
-fr, mathspeak, "≰", "ni plus petit ni égal à", "ni plus petit ni égal à", "ni plus petit ni égal à"
-fr, mathspeak, "≱", "ni plus grand ni égal à", "ni plus grand ni égal à", "ni plus grand ni égal à"
-fr, mathspeak, "≲", "plus petit ou équivalent à", "plus petit ou équivalent à", "plus petit ou équivalent à"
-fr, mathspeak, "≳", "plus grand ou équivalent à", "plus grand ou équivalent à", "plus grand ou équivalent à"
-fr, mathspeak, "≴", "ni plus petit ni équivalent à", "ni plus petit ni équivalent à", "ni plus petit ni équivalent à"
-fr, mathspeak, "≵", "ni plus grand ni équivalent à", "ni plus grand ni équivalent à", "ni plus grand ni équivalent à"
-fr, mathspeak, "≶", "plus petit ou plus grand que", "plus petit ou plus grand que", "plus petit ou plus grand que"
-fr, mathspeak, "≷", "plus grand ou plus petit que", "plus grand ou plus petit que", "plus grand ou plus petit que"
-fr, mathspeak, "≸", "ni plus petit ni plus grand que", "ni plus petit ni plus grand que", "ni plus petit ni plus grand que"
-fr, mathspeak, "≹", "ni plus grand ni plus petit que", "ni plus grand ni plus petit que", "ni plus grand ni plus petit que"
-fr, mathspeak, "≺", "précède", "précède", "précède"
-fr, mathspeak, "≻", "suit", "suit", "suit"
-fr, mathspeak, "≼", "précède ou est égal à", "précède ou est égal à", "précède ou est égal à"
-fr, mathspeak, "≽", "suit ou est égal à", "suit ou est égal à", "suit ou est égal à"
-fr, mathspeak, "≾", "précède ou est équivalent à", "précède ou est équivalent à", "précède ou est équivalent à"
-fr, mathspeak, "≿", "suit ou est équivalent à", "suit ou est équivalent à", "suit ou est équivalent à"
-fr, mathspeak, "⊀", "ne précède pas", "ne précède pas", "ne précède pas"
-fr, mathspeak, "⊁", "ne suit pas", "ne suit pas", "ne suit pas"
-fr, mathspeak, "⊂", "sous-ensemble de", "sous-ensemble de", "sous-ensemble de"
-fr, mathspeak, "⊃", "sur-ensemble de", "sur-ensemble de", "sur-ensemble de"
-fr, mathspeak, "⊄", "pas un sous-ensemble de", "pas un sous-ensemble de", "pas un sous-ensemble de"
-fr, mathspeak, "⊅", "pas un sur-ensemble de", "pas un sur-ensemble de", "pas un sur-ensemble de"
-fr, mathspeak, "⊆", "sous-ensemble ou égal à", "sous-ensemble ou égal à", "sous-ensemble ou égal à"
-fr, mathspeak, "⊇", "sur-ensemble ou égal à", "sur-ensemble ou égal à", "sur-ensemble ou égal à"
-fr, mathspeak, "⊈", "ni un sous-ensemble ni égal à", "ni un sous-ensemble ni égal à", "ni un sous-ensemble ni égal à"
-fr, mathspeak, "⊉", "ni un sur-ensemble ni égal à", "ni un sur-ensemble ni égal à", "ni un sur-ensemble ni égal à"
-fr, mathspeak, "⊊", "sous-ensemble mais pas égal à", "sous-ensemble mais pas égal à", "sous-ensemble mais pas égal à"
-fr, mathspeak, "⊋", "sur-ensemble mais pas égal à", "sur-ensemble mais pas égal à", "sur-ensemble mais pas égal à"
-fr, mathspeak, "⊌", "multiensemble", "multiensemble", "multiensemble"
-fr, mathspeak, "⊍", "multiplication de multiensemble", "multiplication de multiensemble", "multiplication de multiensemble"
-fr, mathspeak, "⊎", "union de multiensemble", "union de multiensemble", "union de multiensemble"
-fr, mathspeak, "⊏", "image carrée de", "image carrée de", "image carrée de"
-fr, mathspeak, "⊐", "original carré de", "original carré de", "original carré de"
-fr, mathspeak, "⊑", "image carrée ou égal à", "image carrée ou égal à", "image carrée ou égal à"
-fr, mathspeak, "⊒", "original carré ou égal à", "original carré ou égal à", "original carré ou égal à"
-fr, mathspeak, "⊓", "chapeau carré", "chapeau carré", "chapeau carré"
-fr, mathspeak, "⊔", "coupe carrée", "coupe carrée", "coupe carrée"
-fr, mathspeak, "⊕", "plus cerclé", "plus cerclé", "plus cerclé"
-fr, mathspeak, "⊖", "moins cerclé", "moins cerclé", "moins cerclé"
-fr, mathspeak, "⊗", "multiplié par cerclé", "multiplié par cerclé", "multiplié par cerclé"
-fr, mathspeak, "⊘", "barre oblique de division cerclée", "barre oblique de division cerclée", "barre oblique de division cerclée"
-fr, mathspeak, "⊙", "opérateur point cerclé", "opérateur point cerclé", "opérateur point cerclé"
-fr, mathspeak, "⊚", "opérateur rond cerclé", "opérateur rond cerclé", "opérateur rond cerclé"
-fr, mathspeak, "⊛", "opérateur astérisque cerclé", "opérateur astérisque cerclé", "opérateur astérisque cerclé"
-fr, mathspeak, "⊜", "égal cerclé", "égal cerclé", "égal cerclé"
-fr, mathspeak, "⊝", "tiret cerclé", "tiret cerclé", "tiret cerclé"
-fr, mathspeak, "⊞", "plus encadré", "plus encadré", "plus encadré"
-fr, mathspeak, "⊟", "moins encadré", "moins encadré", "moins encadré"
-fr, mathspeak, "⊠", "multiplié par encadré", "multiplié par encadré", "multiplié par encadré"
-fr, mathspeak, "⊡", "opérateur point encadré", "opérateur point encadré", "opérateur point encadré"
-fr, mathspeak, "⊢", "taquet droit", "taquet droit", "taquet droit"
-fr, mathspeak, "⊣", "taquet gauche", "taquet gauche", "taquet gauche"
-fr, mathspeak, "⊤", "taquet vers le bas", "taquet vers le bas", "taquet vers le bas"
-fr, mathspeak, "⊥", "taquet vers le haut", "taquet vers le haut", "taquet vers le haut"
-fr, mathspeak, "⊦", "assertion", "assertion", "assertion"
-fr, mathspeak, "⊧", "modélise", "modélise", "modélise"
-fr, mathspeak, "⊨", "vrai", "vrai", "vrai"
-fr, mathspeak, "⊩", "oblige", "oblige", "oblige"
-fr, mathspeak, "⊪", "barre verticale triple avec tourniquet à droite", "barre verticale triple avec tourniquet à droite", "barre verticale triple avec tourniquet à droite"
-fr, mathspeak, "⊫", "barre verticale double avec tourniquet à droite double", "barre verticale double avec tourniquet à droite double", "barre verticale double avec tourniquet à droite double"
-fr, mathspeak, "⊬", "ne prouve pas", "ne prouve pas", "ne prouve pas"
-fr, mathspeak, "⊭", "pas vrai", "pas vrai", "pas vrai"
-fr, mathspeak, "⊮", "n'oblige pas", "n'oblige pas", "n'oblige pas"
-fr, mathspeak, "⊯", "non-barre verticale double avec tourniquet à droite double", "non-barre verticale double avec tourniquet à droite double", "non-barre verticale double avec tourniquet à droite double"
-fr, mathspeak, "⊰", "précède sous relation", "précède sous relation", "précède sous relation"
-fr, mathspeak, "⊱", "suit sous relation", "suit sous relation", "suit sous relation"
-fr, mathspeak, "⊲", "sous-groupe normal de", "sous-groupe normal de", "sous-groupe normal de"
-fr, mathspeak, "⊳", "contient comme sous-groupe normal", "contient comme sous-groupe normal", "contient comme sous-groupe normal"
-fr, mathspeak, "⊴", "sous-groupe normal ou égal à", "sous-groupe normal ou égal à", "sous-groupe normal ou égal à"
-fr, mathspeak, "⊵", "contient comme sous-groupe normal ou égal à", "contient comme sous-groupe normal ou égal à", "contient comme sous-groupe normal ou égal à"
-fr, mathspeak, "⊶", "original de", "original de", "original de"
-fr, mathspeak, "⊷", "image de", "image de", "image de"
-fr, mathspeak, "⊸", "multijection", "multijection", "multijection"
-fr, mathspeak, "⊹", "matrice hermitienne conjuguée", "matrice hermitienne conjuguée", "matrice hermitienne conjuguée"
-fr, mathspeak, "⊺", "intercale", "intercale", "intercale"
-fr, mathspeak, "⊻", "ou exclusif", "ou exclusif", "ou exclusif"
-fr, mathspeak, "⊼", "non et", "non et", "non et"
-fr, mathspeak, "⊽", "non ou", "non ou", "non ou"
-fr, mathspeak, "⊿", "triangle rectangle", "triangle rectangle", "triangle rectangle"
-fr, mathspeak, "⋀", "et logique de la famille", "et logique de la famille", "et logique de la famille"
-fr, mathspeak, "⋁", "ou logique de la famille", "ou logique de la famille", "ou logique de la famille"
-fr, mathspeak, "⋂", "intersection de la famille", "intersection de la famille", "intersection de la famille"
-fr, mathspeak, "⋃", "réunion de la famille", "réunion de la famille", "réunion de la famille"
-fr, mathspeak, "⋄", "opérateur losange", "opérateur losange", "opérateur losange"
-fr, mathspeak, "⋅", "opérateur point", "opérateur point", "opérateur point"
-fr, mathspeak, "⋆", "opérateur étoile", "opérateur étoile", "opérateur étoile"
-fr, mathspeak, "⋇", "divisé multiplié", "divisé multiplié", "divisé multiplié"
-fr, mathspeak, "⋈", "nœud papillon", "nœud papillon", "nœud papillon"
-fr, mathspeak, "⋉", "produit semi-direct à gauche de facteur normal", "produit semi-direct à gauche de facteur normal", "produit semi-direct à gauche de facteur normal"
-fr, mathspeak, "⋊", "produit semi-direct à droite de facteur normal", "produit semi-direct à droite de facteur normal", "produit semi-direct à droite de facteur normal"
-fr, mathspeak, "⋋", "produit semi-direct à gauche", "produit semi-direct à gauche", "produit semi-direct à gauche"
-fr, mathspeak, "⋌", "produit semi-direct à droite", "produit semi-direct à droite", "produit semi-direct à droite"
-fr, mathspeak, "⋍", "moins tilde renversé", "moins tilde renversé", "moins tilde renversé"
-fr, mathspeak, "⋎", "ou logique recourbé", "ou logique recourbé", "ou logique recourbé"
-fr, mathspeak, "⋏", "et logique recourbé", "et logique recourbé", "et logique recourbé"
-fr, mathspeak, "⋐", "sous-ensemble double", "sous-ensemble double", "sous-ensemble double"
-fr, mathspeak, "⋑", "sur-ensemble double", "sur-ensemble double", "sur-ensemble double"
-fr, mathspeak, "⋒", "intersection double", "intersection double", "intersection double"
-fr, mathspeak, "⋓", "union double", "union double", "union double"
-fr, mathspeak, "⋔", "fourche", "fourche", "fourche"
-fr, mathspeak, "⋕", "égal et parallèle à", "égal et parallèle à", "égal et parallèle à"
-fr, mathspeak, "⋖", "plus petit que pointé", "plus petit que pointé", "plus petit que pointé"
-fr, mathspeak, "⋗", "plus grand que pointé", "plus grand que pointé", "plus grand que pointé"
-fr, mathspeak, "⋘", "considérablement plus petit que", "considérablement plus petit que", "considérablement plus petit que"
-fr, mathspeak, "⋙", "considérablement plus grand que", "considérablement plus grand que", "considérablement plus grand que"
-fr, mathspeak, "⋚", "plus petit ou égal ou plus grand que", "plus petit ou égal ou plus grand que", "plus petit ou égal ou plus grand que"
-fr, mathspeak, "⋛", "plus grand ou égal ou plus petit que", "plus grand ou égal ou plus petit que", "plus grand ou égal ou plus petit que"
-fr, mathspeak, "⋜", "égal ou plus petit que", "égal ou plus petit que", "égal ou plus petit que"
-fr, mathspeak, "⋝", "égal à deux lignes ou supérieur à", "égal à deux lignes ou supérieur à", "égal à deux lignes ou supérieur à"
-fr, mathspeak, "⋞", "égal ou précède", "égal ou précède", "égal ou précède"
-fr, mathspeak, "⋟", "égal ou suit", "égal ou suit", "égal ou suit"
-fr, mathspeak, "⋠", "ni précédant ni égal à", "ni précédant ni égal à", "ni précédant ni égal à"
-fr, mathspeak, "⋡", "ni suivant ni égal à", "ni suivant ni égal à", "ni suivant ni égal à"
-fr, mathspeak, "⋢", "ni image carrée ni égal à", "ni image carrée ni égal à", "ni image carrée ni égal à"
-fr, mathspeak, "⋣", "ni original carré ni égal à", "ni original carré ni égal à", "ni original carré ni égal à"
-fr, mathspeak, "⋤", "image carré ou différent de", "image carré ou différent de", "image carré ou différent de"
-fr, mathspeak, "⋥", "original carré ou différent de", "original carré ou différent de", "original carré ou différent de"
-fr, mathspeak, "⋦", "plus petit mais non équivalent à", "plus petit mais non équivalent à", "plus petit mais non équivalent à"
-fr, mathspeak, "⋧", "plus grand mais non équivalent à", "plus grand mais non équivalent à", "plus grand mais non équivalent à"
-fr, mathspeak, "⋨", "précédant mais non équivalent à", "précédant mais non équivalent à", "précédant mais non équivalent à"
-fr, mathspeak, "⋩", "suivant mais non équivalent à", "suivant mais non équivalent à", "suivant mais non équivalent à"
-fr, mathspeak, "⋪", "pas un sous-groupe normal de", "pas un sous-groupe normal de", "pas un sous-groupe normal de"
-fr, mathspeak, "⋫", "ne contient pas comme sous-groupe normal", "ne contient pas comme sous-groupe normal", "ne contient pas comme sous-groupe normal"
-fr, mathspeak, "⋬", "ni sous-groupe normal ni égal à", "ni sous-groupe normal ni égal à", "ni sous-groupe normal ni égal à"
-fr, mathspeak, "⋭", "ni égal ni contenant comme sous- groupe normal", "ni égal ni contenant comme sous- groupe normal", "ni égal ni contenant comme sous- groupe normal"
-fr, mathspeak, "⋮", "trois points suspendus", "trois points suspendus", "trois points suspendus"
-fr, mathspeak, "⋯", "trois points médians", "trois points médians", "trois points médians"
-fr, mathspeak, "⋰", "trois points diagonaux vers le coin haut à droite", "trois points diagonaux vers le coin haut à droite", "trois points diagonaux vers le coin haut à droite"
-fr, mathspeak, "⋱", "trois points diagonaux vers le coin bas à droite", "trois points diagonaux vers le coin bas à droite", "trois points diagonaux vers le coin bas à droite"
-fr, mathspeak, "⋲", "appartient à avec long trait horizontal", "appartient à avec long trait horizontal", "appartient à avec long trait horizontal"
-fr, mathspeak, "⋳", "appartient à avec barre verticale au bout du trait horizontal", "appartient à avec barre verticale au bout du trait horizontal", "appartient à avec barre verticale au bout du trait horizontal"
-fr, mathspeak, "⋴", "petit appartient à avec barre verticale au bout du trait horizontal", "petit appartient à avec barre verticale au bout du trait horizontal", "petit appartient à avec barre verticale au bout du trait horizontal"
-fr, mathspeak, "⋵", "appartient à avec point en chef", "appartient à avec point en chef", "appartient à avec point en chef"
-fr, mathspeak, "⋶", "appartient à avec trait en chef", "appartient à avec trait en chef", "appartient à avec trait en chef"
-fr, mathspeak, "⋷", "petit appartient à avec trait en chef", "petit appartient à avec trait en chef", "petit appartient à avec trait en chef"
-fr, mathspeak, "⋸", "appartient à avec trait souscrit", "appartient à avec trait souscrit", "appartient à avec trait souscrit"
-fr, mathspeak, "⋹", "appartient à avec deux traits horizontaux", "appartient à avec deux traits horizontaux", "appartient à avec deux traits horizontaux"
-fr, mathspeak, "⋺", "contient avec long trait horizontal", "contient avec long trait horizontal", "contient avec long trait horizontal"
-fr, mathspeak, "⋻", "contient avec barre verticale au bout du trait horizontal", "contient avec barre verticale au bout du trait horizontal", "contient avec barre verticale au bout du trait horizontal"
-fr, mathspeak, "⋼", "petit contient avec barre verticale au bout du trait horizontal", "petit contient avec barre verticale au bout du trait horizontal", "petit contient avec barre verticale au bout du trait horizontal"
-fr, mathspeak, "⋽", "contient avec trait en chef", "contient avec trait en chef", "contient avec trait en chef"
-fr, mathspeak, "⋾", "petit contient avec trait en chef", "petit contient avec trait en chef", "petit contient avec trait en chef"
-fr, mathspeak, "⋿", "appartient à un sac en notation z", "appartient à un sac en notation z", "appartient à un sac en notation z"
-fr, mathspeak, "⌀", "diamètre", "diamètre", "diamètre"
-fr, mathspeak, "⌂", "maison", "maison", "maison"
-fr, mathspeak, "⌅", "projective", "projective", "projective"
-fr, mathspeak, "⌆", "perspective", "perspective", "perspective"
-fr, mathspeak, "⌇", "wavy-line", "wavy-line", "wavy-line"
-fr, mathspeak, "⌐", "signe négation réfléchi", "signe négation réfléchi", "signe négation réfléchi"
-fr, mathspeak, "⌑", "square-lozenge", "square-lozenge", "square-lozenge"
-fr, mathspeak, "⌒", "arc", "arc", "arc"
-fr, mathspeak, "⌓", "segment", "segment", "segment"
-fr, mathspeak, "⌔", "sector", "sector", "sector"
-fr, mathspeak, "➕", "bold-plus", "bold-plus", "bold-plus"
-fr, mathspeak, "➖", "bold-minus", "bold-minus", "bold-minus"
-fr, mathspeak, "➗", "bold-division", "bold-division", "bold-division"
-fr, mathspeak, "➰", "curly-loop", "curly-loop", "curly-loop"
-fr, mathspeak, "➿", "double-curly-loop", "double-curly-loop", "double-curly-loop"
-fr, mathspeak, "⟁", "petit triangle blanc inscrit dans triangle blanc", "petit triangle blanc inscrit dans triangle blanc", "petit triangle blanc inscrit dans triangle blanc"
-fr, mathspeak, "⟂", "perpendiculaire à", "perpendiculaire à", "perpendiculaire à"
-fr, mathspeak, "⟃", "sous-ensemble ouvert", "sous-ensemble ouvert", "sous-ensemble ouvert"
-fr, mathspeak, "⟄", "sur-ensemble ouvert", "sur-ensemble ouvert", "sur-ensemble ouvert"
-fr, mathspeak, "⟇", "ou avec point inscrit", "ou avec point inscrit", "ou avec point inscrit"
-fr, mathspeak, "⟈", "sous-ensemble précédé d'une barre oblique inversée", "sous-ensemble précédé d'une barre oblique inversée", "sous-ensemble précédé d'une barre oblique inversée"
-fr, mathspeak, "⟉", "sur-ensemble suivi d'une barre oblique", "sur-ensemble suivi d'une barre oblique", "sur-ensemble suivi d'une barre oblique"
-fr, mathspeak, "⟊", "barre verticale À une traverse", "barre verticale À une traverse", "barre verticale À une traverse"
-fr, mathspeak, "⟋", "mathematical-rising-diagonal", "mathematical-rising-diagonal", "mathematical-rising-diagonal"
-fr, mathspeak, "⟌", "grande division", "grande division", "grande division"
-fr, mathspeak, "⟍", "mathematical-falling-diagonal", "mathematical-falling-diagonal", "mathematical-falling-diagonal"
-fr, mathspeak, "⟎", "squared-logical-and", "squared-logical-and", "squared-logical-and"
-fr, mathspeak, "⟏", "squared-logical-or", "squared-logical-or", "squared-logical-or"
-fr, mathspeak, "⟐", "white-diamond-with-centered-dot", "white-diamond-with-centered-dot", "white-diamond-with-centered-dot"
-fr, mathspeak, "⟑", "et pointé", "et pointé", "et pointé"
-fr, mathspeak, "⟒", "appartient À ouvert vers le haut", "appartient À ouvert vers le haut", "appartient À ouvert vers le haut"
-fr, mathspeak, "⟓", "coin inférieur droit pointé", "coin inférieur droit pointé", "coin inférieur droit pointé"
-fr, mathspeak, "⟔", "coin supérieur gauche pointé", "coin supérieur gauche pointé", "coin supérieur gauche pointé"
-fr, mathspeak, "⟕", "jointure externe gauche", "jointure externe gauche", "jointure externe gauche"
-fr, mathspeak, "⟖", "jointure externe droite", "jointure externe droite", "jointure externe droite"
-fr, mathspeak, "⟗", "jointure externe complète", "jointure externe complète", "jointure externe complète"
-fr, mathspeak, "⟘", "grand taquet vers le haut", "grand taquet vers le haut", "grand taquet vers le haut"
-fr, mathspeak, "⟙", "grand taquet vers le bas", "grand taquet vers le bas", "grand taquet vers le bas"
-fr, mathspeak, "⟚", "double tourniquet bilatéral", "double tourniquet bilatéral", "double tourniquet bilatéral"
-fr, mathspeak, "⟛", "tourniquet bilatéral", "tourniquet bilatéral", "tourniquet bilatéral"
-fr, mathspeak, "⟜", "multijection gauche", "multijection gauche", "multijection gauche"
-fr, mathspeak, "⟝", "long taquet droit", "long taquet droit", "long taquet droit"
-fr, mathspeak, "⟞", "long taquet gauche", "long taquet gauche", "long taquet gauche"
-fr, mathspeak, "⟟", "taquet vers le haut surmonté d'un cercle", "taquet vers le haut surmonté d'un cercle", "taquet vers le haut surmonté d'un cercle"
-fr, mathspeak, "⟠", "losange coupé", "losange coupé", "losange coupé"
-fr, mathspeak, "⟡", "losange concave blanc", "losange concave blanc", "losange concave blanc"
-fr, mathspeak, "⟢", "losange concave blanc avec trait à gauche", "losange concave blanc avec trait à gauche", "losange concave blanc avec trait à gauche"
-fr, mathspeak, "⟣", "losange concave blanc avec trait à droite", "losange concave blanc avec trait à droite", "losange concave blanc avec trait à droite"
-fr, mathspeak, "⟤", "carré blanc avec trait à gauche", "carré blanc avec trait à gauche", "carré blanc avec trait à gauche"
-fr, mathspeak, "⟥", "carré blanc avec trait à droite", "carré blanc avec trait à droite", "carré blanc avec trait à droite"
-fr, mathspeak, "⤫", "rising-diagonal-crossing-falling-diagonal", "rising-diagonal-crossing-falling-diagonal", "rising-diagonal-crossing-falling-diagonal"
-fr, mathspeak, "⤬", "falling-diagonal-crossing-rising-diagonal", "falling-diagonal-crossing-rising-diagonal", "falling-diagonal-crossing-rising-diagonal"
-fr, mathspeak, "⦀", "triple-vertical-bar-delimiter", "triple-vertical-bar-delimiter", "triple-vertical-bar-delimiter"
-fr, mathspeak, "⦁", "z-notation-spot", "z-notation-spot", "z-notation-spot"
-fr, mathspeak, "⦂", "z-notation-type-colon", "z-notation-type-colon", "z-notation-type-colon"
-fr, mathspeak, "⦙", "dotted-fence", "dotted-fence", "dotted-fence"
-fr, mathspeak, "⦚", "ligne verticale en zigzag", "ligne verticale en zigzag", "ligne verticale en zigzag"
-fr, mathspeak, "⦰", "ensemble vide réfléchi", "ensemble vide réfléchi", "ensemble vide réfléchi"
-fr, mathspeak, "⦱", "ensemble vide barre en chef", "ensemble vide barre en chef", "ensemble vide barre en chef"
-fr, mathspeak, "⦲", "ensemble vide petit cercle en chef", "ensemble vide petit cercle en chef", "ensemble vide petit cercle en chef"
-fr, mathspeak, "⦵", "cercle à barre horizontale", "cercle à barre horizontale", "cercle à barre horizontale"
-fr, mathspeak, "⦶", "barre verticale cerclée", "barre verticale cerclée", "barre verticale cerclée"
-fr, mathspeak, "⦷", "parallèles cerclées", "parallèles cerclées", "parallèles cerclées"
-fr, mathspeak, "⦸", "circled-reverse-solidus", "circled-reverse-solidus", "circled-reverse-solidus"
-fr, mathspeak, "⦹", "perpendiculaire cerclé", "perpendiculaire cerclé", "perpendiculaire cerclé"
-fr, mathspeak, "⦺", "circle-divided-by-horizontal-bar-and-top-half-divided-by-vertical-bar", "circle-divided-by-horizontal-bar-and-top-half-divided-by-vertical-bar", "circle-divided-by-horizontal-bar-and-top-half-divided-by-vertical-bar"
-fr, mathspeak, "⦻", "cercle superposé d'un x", "cercle superposé d'un x", "cercle superposé d'un x"
-fr, mathspeak, "⦼", "signe division pivoté en sens antihoraire cerclé", "signe division pivoté en sens antihoraire cerclé", "signe division pivoté en sens antihoraire cerclé"
-fr, mathspeak, "⦾", "puce blanche cerclée", "puce blanche cerclée", "puce blanche cerclée"
-fr, mathspeak, "⦿", "puce cerclée", "puce cerclée", "puce cerclée"
-fr, mathspeak, "⧀", "inférieur à cerclé", "inférieur à cerclé", "inférieur à cerclé"
-fr, mathspeak, "⧁", "supérieur à cerclé", "supérieur à cerclé", "supérieur à cerclé"
-fr, mathspeak, "⧂", "cercle avec petit cercle à droite", "cercle avec petit cercle à droite", "cercle avec petit cercle à droite"
-fr, mathspeak, "⧃", "cercle avec deux petits traits horizontaux à droite", "cercle avec deux petits traits horizontaux à droite", "cercle avec deux petits traits horizontaux à droite"
-fr, mathspeak, "⧄", "oblique encadrée", "oblique encadrée", "oblique encadrée"
-fr, mathspeak, "⧅", "oblique inversée encadrée", "oblique inversée encadrée", "oblique inversée encadrée"
-fr, mathspeak, "⧆", "squared-asterisk", "squared-asterisk", "squared-asterisk"
-fr, mathspeak, "⧇", "squared-small-circle", "squared-small-circle", "squared-small-circle"
-fr, mathspeak, "⧈", "squared-square", "squared-square", "squared-square"
-fr, mathspeak, "⧉", "carrés se chevauchant", "carrés se chevauchant", "carrés se chevauchant"
-fr, mathspeak, "⧊", "triangle-with-dot-above", "triangle-with-dot-above", "triangle-with-dot-above"
-fr, mathspeak, "⧋", "triangle-with-underbar", "triangle-with-underbar", "triangle-with-underbar"
-fr, mathspeak, "⧌", "s-in-triangle", "s-in-triangle", "s-in-triangle"
-fr, mathspeak, "⧍", "triangle à empattements inférieurs", "triangle à empattements inférieurs", "triangle à empattements inférieurs"
-fr, mathspeak, "⧎", "triangle droit par-dessus triangle gauche", "triangle droit par-dessus triangle gauche", "triangle droit par-dessus triangle gauche"
-fr, mathspeak, "⧏", "triangle gauche à gauche d'une barre verticale", "triangle gauche à gauche d'une barre verticale", "triangle gauche à gauche d'une barre verticale"
-fr, mathspeak, "⧐", "triangle droit à droite d'une barre verticale", "triangle droit à droite d'une barre verticale", "triangle droit à droite d'une barre verticale"
-fr, mathspeak, "⧑", "bowtie-with-left-half-black", "bowtie-with-left-half-black", "bowtie-with-left-half-black"
-fr, mathspeak, "⧒", "bowtie-with-right-half-black", "bowtie-with-right-half-black", "bowtie-with-right-half-black"
-fr, mathspeak, "⧓", "black-bowtie", "black-bowtie", "black-bowtie"
-fr, mathspeak, "⧔", "times-with-left-half-black", "times-with-left-half-black", "times-with-left-half-black"
-fr, mathspeak, "⧕", "times-with-right-half-black", "times-with-right-half-black", "times-with-right-half-black"
-fr, mathspeak, "⧖", "white-hourglass", "white-hourglass", "white-hourglass"
-fr, mathspeak, "⧗", "black-hourglass", "black-hourglass", "black-hourglass"
-fr, mathspeak, "⧜", "infini incomplet", "infini incomplet", "infini incomplet"
-fr, mathspeak, "⧝", "tie-over-infinity", "tie-over-infinity", "tie-over-infinity"
-fr, mathspeak, "⧞", "infini nié par une barre verticale", "infini nié par une barre verticale", "infini nié par une barre verticale"
-fr, mathspeak, "⧟", "double-ended-multimap", "double-ended-multimap", "double-ended-multimap"
-fr, mathspeak, "⧠", "square-with-contoured-outline", "square-with-contoured-outline", "square-with-contoured-outline"
-fr, mathspeak, "⧡", "increases-as", "increases-as", "increases-as"
-fr, mathspeak, "⧢", "shuffle-product", "shuffle-product", "shuffle-product"
-fr, mathspeak, "⧣", "égale à et parallèle à incliné", "égale à et parallèle à incliné", "égale à et parallèle à incliné"
-fr, mathspeak, "⧤", "égale à et parallèle à incliné surmontés d'un tilde", "égale à et parallèle à incliné surmontés d'un tilde", "égale à et parallèle à incliné surmontés d'un tilde"
-fr, mathspeak, "⧥", "identique à et parallèle à incliné", "identique à et parallèle à incliné", "identique à et parallèle à incliné"
-fr, mathspeak, "⧦", "gleich-stark", "gleich-stark", "gleich-stark"
-fr, mathspeak, "⧧", "thermodynamic", "thermodynamic", "thermodynamic"
-fr, mathspeak, "⧨", "down-pointing-triangle-with-left-half-black", "down-pointing-triangle-with-left-half-black", "down-pointing-triangle-with-left-half-black"
-fr, mathspeak, "⧩", "down-pointing-triangle-with-right-half-black", "down-pointing-triangle-with-right-half-black", "down-pointing-triangle-with-right-half-black"
-fr, mathspeak, "⧫", "losange fuselé noir", "losange fuselé noir", "losange fuselé noir"
-fr, mathspeak, "⧮", "error-barred-white-square", "error-barred-white-square", "error-barred-white-square"
-fr, mathspeak, "⧯", "error-barred-black-square", "error-barred-black-square", "error-barred-black-square"
-fr, mathspeak, "⧰", "error-barred-white-diamond", "error-barred-white-diamond", "error-barred-white-diamond"
-fr, mathspeak, "⧱", "error-barred-black-diamond", "error-barred-black-diamond", "error-barred-black-diamond"
-fr, mathspeak, "⧲", "error-barred-white-circle", "error-barred-white-circle", "error-barred-white-circle"
-fr, mathspeak, "⧳", "error-barred-black-circle", "error-barred-black-circle", "error-barred-black-circle"
-fr, mathspeak, "⧴", "règle différée", "règle différée", "règle différée"
-fr, mathspeak, "⧵", "reverse-solidus", "reverse-solidus", "reverse-solidus"
-fr, mathspeak, "⧶", "barre oblique avec barre en chef", "barre oblique avec barre en chef", "barre oblique avec barre en chef"
-fr, mathspeak, "⧷", "reverse-solidus-with-horizontal-stroke", "reverse-solidus-with-horizontal-stroke", "reverse-solidus-with-horizontal-stroke"
-fr, mathspeak, "⧸", "solidus", "solidus", "solidus"
-fr, mathspeak, "⧹", "reverse-solidus", "reverse-solidus", "reverse-solidus"
-fr, mathspeak, "⧺", "double-plus", "double-plus", "double-plus"
-fr, mathspeak, "⧻", "triple-plus", "triple-plus", "triple-plus"
-fr, mathspeak, "⧾", "tiny", "tiny", "tiny"
-fr, mathspeak, "⧿", "miny", "miny", "miny"
-fr, mathspeak, "⨀", "circled-dot", "circled-dot", "circled-dot"
-fr, mathspeak, "⨁", "circled-plus", "circled-plus", "circled-plus"
-fr, mathspeak, "⨂", "circled-times", "circled-times", "circled-times"
-fr, mathspeak, "⨃", "union-with-dot", "union-with-dot", "union-with-dot"
-fr, mathspeak, "⨄", "union-with-plus", "union-with-plus", "union-with-plus"
-fr, mathspeak, "⨅", "square-intersection", "square-intersection", "square-intersection"
-fr, mathspeak, "⨆", "square-union", "square-union", "square-union"
-fr, mathspeak, "⨇", "two-logical-and", "two-logical-and", "two-logical-and"
-fr, mathspeak, "⨈", "two-logical-or", "two-logical-or", "two-logical-or"
-fr, mathspeak, "⨉", "times", "times", "times"
-fr, mathspeak, "⨊", "modulo-two-sum", "modulo-two-sum", "modulo-two-sum"
-fr, mathspeak, "⨋", "summation-with-integral", "summation-with-integral", "summation-with-integral"
-fr, mathspeak, "⨌", "intégrale quadruple", "intégrale quadruple", "intégrale quadruple"
-fr, mathspeak, "⨍", "intégrale à partie finie", "intégrale à partie finie", "intégrale à partie finie"
-fr, mathspeak, "⨎", "integral-with-double-stroke", "integral-with-double-stroke", "integral-with-double-stroke"
-fr, mathspeak, "⨏", "integral-average-with-slash", "integral-average-with-slash", "integral-average-with-slash"
-fr, mathspeak, "⨐", "fonction de circulation", "fonction de circulation", "fonction de circulation"
-fr, mathspeak, "⨑", "intégrale en sens positif", "intégrale en sens positif", "intégrale en sens positif"
-fr, mathspeak, "⨒", "intégrale de ligne à chemin rectangulaire autour du pôle", "intégrale de ligne à chemin rectangulaire autour du pôle", "intégrale de ligne à chemin rectangulaire autour du pôle"
-fr, mathspeak, "⨓", "intégrale de ligne à chemin semi-circulaire autour du pôle", "intégrale de ligne à chemin semi-circulaire autour du pôle", "intégrale de ligne à chemin semi-circulaire autour du pôle"
-fr, mathspeak, "⨔", "intégrale de ligne évitant le pôle", "intégrale de ligne évitant le pôle", "intégrale de ligne évitant le pôle"
-fr, mathspeak, "⨕", "intégrale autour d'un opérateur point", "intégrale autour d'un opérateur point", "intégrale autour d'un opérateur point"
-fr, mathspeak, "⨖", "intégrale quaternion", "intégrale quaternion", "intégrale quaternion"
-fr, mathspeak, "⨘", "integral-with-times", "integral-with-times", "integral-with-times"
-fr, mathspeak, "⨙", "integral-with-intersection", "integral-with-intersection", "integral-with-intersection"
-fr, mathspeak, "⨚", "integral-with-union", "integral-with-union", "integral-with-union"
-fr, mathspeak, "⨛", "integral-with-overbar", "integral-with-overbar", "integral-with-overbar"
-fr, mathspeak, "⨜", "integral-with-underbar", "integral-with-underbar", "integral-with-underbar"
-fr, mathspeak, "⨝", "join", "join", "join"
-fr, mathspeak, "⨞", "large-left-triangle", "large-left-triangle", "large-left-triangle"
-fr, mathspeak, "⨟", "z-notation-schema-composition", "z-notation-schema-composition", "z-notation-schema-composition"
-fr, mathspeak, "⨠", "z-notation-schema-piping", "z-notation-schema-piping", "z-notation-schema-piping"
-fr, mathspeak, "⨡", "z-notation-schema-projection", "z-notation-schema-projection", "z-notation-schema-projection"
-fr, mathspeak, "⨢", "plus surmonté d'un petit cercle", "plus surmonté d'un petit cercle", "plus surmonté d'un petit cercle"
-fr, mathspeak, "⨣", "plus surmonté d'un circonflexe", "plus surmonté d'un circonflexe", "plus surmonté d'un circonflexe"
-fr, mathspeak, "⨤", "plus surmonté d'un tilde", "plus surmonté d'un tilde", "plus surmonté d'un tilde"
-fr, mathspeak, "⨥", "plus à point souscrit", "plus à point souscrit", "plus à point souscrit"
-fr, mathspeak, "⨦", "plus à tilde souscrit", "plus à tilde souscrit", "plus à tilde souscrit"
-fr, mathspeak, "⨧", "plus à chiffre deux souscrit", "plus à chiffre deux souscrit", "plus à chiffre deux souscrit"
-fr, mathspeak, "⨨", "plus-sign-with-black-triangle", "plus-sign-with-black-triangle", "plus-sign-with-black-triangle"
-fr, mathspeak, "⨩", "moins surmonté d'une virgule", "moins surmonté d'une virgule", "moins surmonté d'une virgule"
-fr, mathspeak, "⨪", "moins à point souscrit", "moins à point souscrit", "moins à point souscrit"
-fr, mathspeak, "⨫", "minus-sign-with-falling-dots", "minus-sign-with-falling-dots", "minus-sign-with-falling-dots"
-fr, mathspeak, "⨬", "minus-sign-with-rising-dots", "minus-sign-with-rising-dots", "minus-sign-with-rising-dots"
-fr, mathspeak, "⨭", "plus dans demi-cercle gauche", "plus dans demi-cercle gauche", "plus dans demi-cercle gauche"
-fr, mathspeak, "⨮", "plus dans demi-cercle droit", "plus dans demi-cercle droit", "plus dans demi-cercle droit"
-fr, mathspeak, "⨯", "produit vectoriel", "produit vectoriel", "produit vectoriel"
-fr, mathspeak, "⨰", "signe multiplication à point en chef", "signe multiplication à point en chef", "signe multiplication à point en chef"
-fr, mathspeak, "⨱", "signe multiplication à barre souscrite", "signe multiplication à barre souscrite", "signe multiplication à barre souscrite"
-fr, mathspeak, "⨲", "semidirect-product-with-bottom-closed", "semidirect-product-with-bottom-closed", "semidirect-product-with-bottom-closed"
-fr, mathspeak, "⨳", "produit fusionné", "produit fusionné", "produit fusionné"
-fr, mathspeak, "⨴", "signe multiplication dans demi-cercle gauche", "signe multiplication dans demi-cercle gauche", "signe multiplication dans demi-cercle gauche"
-fr, mathspeak, "⨵", "signe multiplication dans demi-cercle droit", "signe multiplication dans demi-cercle droit", "signe multiplication dans demi-cercle droit"
-fr, mathspeak, "⨶", "signe multiplication cerclé circonflexe", "signe multiplication cerclé circonflexe", "signe multiplication cerclé circonflexe"
-fr, mathspeak, "⨷", "signe multiplication doublement cerclé", "signe multiplication doublement cerclé", "signe multiplication doublement cerclé"
-fr, mathspeak, "⨸", "signe division cerclé", "signe division cerclé", "signe division cerclé"
-fr, mathspeak, "⨹", "plus dans triangle", "plus dans triangle", "plus dans triangle"
-fr, mathspeak, "⨺", "moins dans triangle", "moins dans triangle", "moins dans triangle"
-fr, mathspeak, "⨻", "signe multiplication dans triangle", "signe multiplication dans triangle", "signe multiplication dans triangle"
-fr, mathspeak, "⨼", "produit interieur", "produit interieur", "produit interieur"
-fr, mathspeak, "⨽", "righthand-interior-product", "righthand-interior-product", "righthand-interior-product"
-fr, mathspeak, "⨾", "z-notation-relational-composition", "z-notation-relational-composition", "z-notation-relational-composition"
-fr, mathspeak, "⨿", "amalgamation ou coproduit", "amalgamation ou coproduit", "amalgamation ou coproduit"
-fr, mathspeak, "⩀", "intersection pointée", "intersection pointée", "intersection pointée"
-fr, mathspeak, "⩁", "union-with-minus", "union-with-minus", "union-with-minus"
-fr, mathspeak, "⩂", "union à barre en chef", "union à barre en chef", "union à barre en chef"
-fr, mathspeak, "⩃", "intersection à barre en chef", "intersection à barre en chef", "intersection à barre en chef"
-fr, mathspeak, "⩄", "intersection avec et logique", "intersection avec et logique", "intersection avec et logique"
-fr, mathspeak, "⩅", "union avec ou logique", "union avec ou logique", "union avec ou logique"
-fr, mathspeak, "⩆", "union par-dessus intersection", "union par-dessus intersection", "union par-dessus intersection"
-fr, mathspeak, "⩇", "intersection par-dessus union", "intersection par-dessus union", "intersection par-dessus union"
-fr, mathspeak, "⩈", "union par-dessus bar par-dessus intersection", "union par-dessus bar par-dessus intersection", "union par-dessus bar par-dessus intersection"
-fr, mathspeak, "⩉", "intersection par-dessus trait par-dessus union", "intersection par-dessus trait par-dessus union", "intersection par-dessus trait par-dessus union"
-fr, mathspeak, "⩊", "deux unions soudées côte à côte", "deux unions soudées côte à côte", "deux unions soudées côte à côte"
-fr, mathspeak, "⩋", "deux intersections soudées côte à côte", "deux intersections soudées côte à côte", "deux intersections soudées côte à côte"
-fr, mathspeak, "⩌", "union fermée à empattements", "union fermée à empattements", "union fermée à empattements"
-fr, mathspeak, "⩍", "intersection fermée à empattements", "intersection fermée à empattements", "intersection fermée à empattements"
-fr, mathspeak, "⩎", "double-square-intersection", "double-square-intersection", "double-square-intersection"
-fr, mathspeak, "⩏", "double-square-union", "double-square-union", "double-square-union"
-fr, mathspeak, "⩐", "union fermée à empattements et produit fusionné", "union fermée à empattements et produit fusionné", "union fermée à empattements et produit fusionné"
-fr, mathspeak, "⩑", "logical-and-with-dot-above", "logical-and-with-dot-above", "logical-and-with-dot-above"
-fr, mathspeak, "⩒", "logical-or-with-dot-above", "logical-or-with-dot-above", "logical-or-with-dot-above"
-fr, mathspeak, "⩓", "double et logique", "double et logique", "double et logique"
-fr, mathspeak, "⩔", "double ou logique", "double ou logique", "double ou logique"
-fr, mathspeak, "⩕", "deux et logiques entrecroisés", "deux et logiques entrecroisés", "deux et logiques entrecroisés"
-fr, mathspeak, "⩖", "deux ou logiques entrecroisés", "deux ou logiques entrecroisés", "deux ou logiques entrecroisés"
-fr, mathspeak, "⩗", "grand ou pentu", "grand ou pentu", "grand ou pentu"
-fr, mathspeak, "⩘", "grand et pentu", "grand et pentu", "grand et pentu"
-fr, mathspeak, "⩙", "logical-or-overlapping-logical-and", "logical-or-overlapping-logical-and", "logical-or-overlapping-logical-and"
-fr, mathspeak, "⩚", "et logique à hampe médiane", "et logique à hampe médiane", "et logique à hampe médiane"
-fr, mathspeak, "⩛", "ou logique à hampe médiane", "ou logique à hampe médiane", "ou logique à hampe médiane"
-fr, mathspeak, "⩜", "et logique à tiret horizontal", "et logique à tiret horizontal", "et logique à tiret horizontal"
-fr, mathspeak, "⩝", "ou logique à tiret horizontal", "ou logique à tiret horizontal", "ou logique à tiret horizontal"
-fr, mathspeak, "⩞", "logical-and-with-double-overbar", "logical-and-with-double-overbar", "logical-and-with-double-overbar"
-fr, mathspeak, "⩟", "et logique à barre souscrite", "et logique à barre souscrite", "et logique à barre souscrite"
-fr, mathspeak, "⩠", "logical-and-with-double-underbar", "logical-and-with-double-underbar", "logical-and-with-double-underbar"
-fr, mathspeak, "⩡", "small-vee-with-underbar", "small-vee-with-underbar", "small-vee-with-underbar"
-fr, mathspeak, "⩢", "logical-or-with-double-overbar", "logical-or-with-double-overbar", "logical-or-with-double-overbar"
-fr, mathspeak, "⩣", "logical-or-with-double-underbar", "logical-or-with-double-underbar", "logical-or-with-double-underbar"
-fr, mathspeak, "⩤", "z-notation-domain-antirestriction", "z-notation-domain-antirestriction", "z-notation-domain-antirestriction"
-fr, mathspeak, "⩥", "z-notation-range-antirestriction", "z-notation-range-antirestriction", "z-notation-range-antirestriction"
-fr, mathspeak, "⩦", "signe égal point souscrit", "signe égal point souscrit", "signe égal point souscrit"
-fr, mathspeak, "⩧", "identical-with-dot-above", "identical-with-dot-above", "identical-with-dot-above"
-fr, mathspeak, "⩨", "triple-horizontal-bar-with-double-vertical-stroke", "triple-horizontal-bar-with-double-vertical-stroke", "triple-horizontal-bar-with-double-vertical-stroke"
-fr, mathspeak, "⩩", "triple-horizontal-bar-with-triple-vertical-stroke", "triple-horizontal-bar-with-triple-vertical-stroke", "triple-horizontal-bar-with-triple-vertical-stroke"
-fr, mathspeak, "⩪", "opérateur tilde point en chef", "opérateur tilde point en chef", "opérateur tilde point en chef"
-fr, mathspeak, "⩫", "tilde-with-rising-dots", "tilde-with-rising-dots", "tilde-with-rising-dots"
-fr, mathspeak, "⩬", "similar-minus-similar", "similar-minus-similar", "similar-minus-similar"
-fr, mathspeak, "⩭", "congruent point en chef", "congruent point en chef", "congruent point en chef"
-fr, mathspeak, "⩮", "equals-with-asterisk", "equals-with-asterisk", "equals-with-asterisk"
-fr, mathspeak, "⩯", "presque égal à circonflexe", "presque égal à circonflexe", "presque égal à circonflexe"
-fr, mathspeak, "⩰", "approximately-equal-or-equal-to", "approximately-equal-or-equal-to", "approximately-equal-or-equal-to"
-fr, mathspeak, "⩱", "plus signe égal en chef", "plus signe égal en chef", "plus signe égal en chef"
-fr, mathspeak, "⩲", "égal à signe plus en chef", "égal à signe plus en chef", "égal à signe plus en chef"
-fr, mathspeak, "⩳", "tilde signe égal en chef", "tilde signe égal en chef", "tilde signe égal en chef"
-fr, mathspeak, "⩴", "double deux-points égal à", "double deux-points égal à", "double deux-points égal à"
-fr, mathspeak, "⩵", "deux signes égal à consécutifs", "deux signes égal à consécutifs", "deux signes égal à consécutifs"
-fr, mathspeak, "⩶", "three-consecutive-equals", "three-consecutive-equals", "three-consecutive-equals"
-fr, mathspeak, "⩷", "égal à deux points en chef deux points souscrits", "égal à deux points en chef deux points souscrits", "égal à deux points en chef deux points souscrits"
-fr, mathspeak, "⩸", "équivalent quatre points en chef", "équivalent quatre points en chef", "équivalent quatre points en chef"
-fr, mathspeak, "⩹", "inférieur à avec cercle inscrit", "inférieur à avec cercle inscrit", "inférieur à avec cercle inscrit"
-fr, mathspeak, "⩺", "supérieur à avec cercle inscrit", "supérieur à avec cercle inscrit", "supérieur à avec cercle inscrit"
-fr, mathspeak, "⩻", "inférieur à point d'interrogation en chef", "inférieur à point d'interrogation en chef", "inférieur à point d'interrogation en chef"
-fr, mathspeak, "⩼", "supérieur à point d'interrogation en chef", "supérieur à point d'interrogation en chef", "supérieur à point d'interrogation en chef"
-fr, mathspeak, "⩽", "plus petit ou égal à pentu", "plus petit ou égal à pentu", "plus petit ou égal à pentu"
-fr, mathspeak, "⩾", "supérieur à ou égal à pentu", "supérieur à ou égal à pentu", "supérieur à ou égal à pentu"
-fr, mathspeak, "⩿", "inférieur à ou égal à pentu point inscrit", "inférieur à ou égal à pentu point inscrit", "inférieur à ou égal à pentu point inscrit"
-fr, mathspeak, "⪀", "supérieur à ou égal à pentu point inscrit", "supérieur à ou égal à pentu point inscrit", "supérieur à ou égal à pentu point inscrit"
-fr, mathspeak, "⪁", "inférieur à ou égal à pentu point en chef", "inférieur à ou égal à pentu point en chef", "inférieur à ou égal à pentu point en chef"
-fr, mathspeak, "⪂", "supérieur à ou égal à pentu point en chef", "supérieur à ou égal à pentu point en chef", "supérieur à ou égal à pentu point en chef"
-fr, mathspeak, "⪃", "inférieur à ou égal à pentu point en chef droit", "inférieur à ou égal à pentu point en chef droit", "inférieur à ou égal à pentu point en chef droit"
-fr, mathspeak, "⪄", "supérieur à ou égal à pentu point en chef gauche", "supérieur à ou égal à pentu point en chef gauche", "supérieur à ou égal à pentu point en chef gauche"
-fr, mathspeak, "⪅", "less-than-or-approximate", "less-than-or-approximate", "less-than-or-approximate"
-fr, mathspeak, "⪆", "greater-than-or-approximate", "greater-than-or-approximate", "greater-than-or-approximate"
-fr, mathspeak, "⪇", "less-than-and-single-line-not-equals", "less-than-and-single-line-not-equals", "less-than-and-single-line-not-equals"
-fr, mathspeak, "⪈", "greater-than-and-single-line-not-equals", "greater-than-and-single-line-not-equals", "greater-than-and-single-line-not-equals"
-fr, mathspeak, "⪉", "inférieur à et non approximatif", "inférieur à et non approximatif", "inférieur à et non approximatif"
-fr, mathspeak, "⪊", "supérieur à et non approximatif", "supérieur à et non approximatif", "supérieur à et non approximatif"
-fr, mathspeak, "⪋", "less-than-above-double-line-equal-above-greater-than", "less-than-above-double-line-equal-above-greater-than", "less-than-above-double-line-equal-above-greater-than"
-fr, mathspeak, "⪌", "greater-than-above-double-line-equal-above-less-than", "greater-than-above-double-line-equal-above-less-than", "greater-than-above-double-line-equal-above-less-than"
-fr, mathspeak, "⪍", "inférieur à par-dessus similaire à ou égal à", "inférieur à par-dessus similaire à ou égal à", "inférieur à par-dessus similaire à ou égal à"
-fr, mathspeak, "⪎", "supérieur à par-dessus similaire à ou égal à", "supérieur à par-dessus similaire à ou égal à", "supérieur à par-dessus similaire à ou égal à"
-fr, mathspeak, "⪏", "inférieur à par-dessus similaire à par-dessus supérieur à", "inférieur à par-dessus similaire à par-dessus supérieur à", "inférieur à par-dessus similaire à par-dessus supérieur à"
-fr, mathspeak, "⪐", "supérieur à par-dessus similaire à par-dessus inférieur à", "supérieur à par-dessus similaire à par-dessus inférieur à", "supérieur à par-dessus similaire à par-dessus inférieur à"
-fr, mathspeak, "⪑", "inférieur à par-dessus supérieur à par-dessus égal à deux lignes", "inférieur à par-dessus supérieur à par-dessus égal à deux lignes", "inférieur à par-dessus supérieur à par-dessus égal à deux lignes"
-fr, mathspeak, "⪒", "supérieur à par-dessus inférieur à par-dessus égal à deux lignes", "supérieur à par-dessus inférieur à par-dessus égal à deux lignes", "supérieur à par-dessus inférieur à par-dessus égal à deux lignes"
-fr, mathspeak, "⪓", "inférieur à par-dessus égal à pentu par-dessus supérieur à par-dessus égal à pentu", "inférieur à par-dessus égal à pentu par-dessus supérieur à par-dessus égal à pentu", "inférieur à par-dessus égal à pentu par-dessus supérieur à par-dessus égal à pentu"
-fr, mathspeak, "⪔", "supérieur à par-dessus égal à pentu par-dessus inférieur à par-dessus égal à pentu", "supérieur à par-dessus égal à pentu par-dessus inférieur à par-dessus égal à pentu", "supérieur à par-dessus égal à pentu par-dessus inférieur à par-dessus égal à pentu"
-fr, mathspeak, "⪕", "slanted-equals-or-less-than", "slanted-equals-or-less-than", "slanted-equals-or-less-than"
-fr, mathspeak, "⪖", "slanted-equals-or-greater-than", "slanted-equals-or-greater-than", "slanted-equals-or-greater-than"
-fr, mathspeak, "⪗", "égal à pentu ou inférieur à point inscrit", "égal à pentu ou inférieur à point inscrit", "égal à pentu ou inférieur à point inscrit"
-fr, mathspeak, "⪘", "égal à pentu ou supérieur à point inscrit", "égal à pentu ou supérieur à point inscrit", "égal à pentu ou supérieur à point inscrit"
-fr, mathspeak, "⪙", "égal à deux lignes ou inférieur à", "égal à deux lignes ou inférieur à", "égal à deux lignes ou inférieur à"
-fr, mathspeak, "⪚", "égal à deux lignes ou supérieur à", "égal à deux lignes ou supérieur à", "égal à deux lignes ou supérieur à"
-fr, mathspeak, "⪛", "double-line-slanted-equals-or-less-than", "double-line-slanted-equals-or-less-than", "double-line-slanted-equals-or-less-than"
-fr, mathspeak, "⪜", "double-line-slanted-equals-or-greater-than", "double-line-slanted-equals-or-greater-than", "double-line-slanted-equals-or-greater-than"
-fr, mathspeak, "⪝", "similaire à ou inférieur à", "similaire à ou inférieur à", "similaire à ou inférieur à"
-fr, mathspeak, "⪞", "similaire à ou supérieur à", "similaire à ou supérieur à", "similaire à ou supérieur à"
-fr, mathspeak, "⪟", "similaire à par-dessus inférieur à par-dessus signe égal", "similaire à par-dessus inférieur à par-dessus signe égal", "similaire à par-dessus inférieur à par-dessus signe égal"
-fr, mathspeak, "⪠", "similaire à par-dessus supérieur à par-dessus signe égal", "similaire à par-dessus supérieur à par-dessus signe égal", "similaire à par-dessus supérieur à par-dessus signe égal"
-fr, mathspeak, "⪡", "deux inférieur à emboîtés", "deux inférieur à emboîtés", "deux inférieur à emboîtés"
-fr, mathspeak, "⪢", "deux supérieur à emboîtés", "deux supérieur à emboîtés", "deux supérieur à emboîtés"
-fr, mathspeak, "⪣", "double-nested-less-than-with-underbar", "double-nested-less-than-with-underbar", "double-nested-less-than-with-underbar"
-fr, mathspeak, "⪤", "deux supérieur à entrecroisés", "deux supérieur à entrecroisés", "deux supérieur à entrecroisés"
-fr, mathspeak, "⪥", "supérieur à à côté de inférieur à", "supérieur à à côté de inférieur à", "supérieur à à côté de inférieur à"
-fr, mathspeak, "⪦", "inférieur à fermé d'un arc", "inférieur à fermé d'un arc", "inférieur à fermé d'un arc"
-fr, mathspeak, "⪧", "supérieur à fermé d'un arc", "supérieur à fermé d'un arc", "supérieur à fermé d'un arc"
-fr, mathspeak, "⪨", "inférieur à fermé d'un arc par-dessus égal à pentu", "inférieur à fermé d'un arc par-dessus égal à pentu", "inférieur à fermé d'un arc par-dessus égal à pentu"
-fr, mathspeak, "⪩", "supérieur à fermé d'un arc par-dessus égal à pentu", "supérieur à fermé d'un arc par-dessus égal à pentu", "supérieur à fermé d'un arc par-dessus égal à pentu"
-fr, mathspeak, "⪪", "plus petit que en fourche", "plus petit que en fourche", "plus petit que en fourche"
-fr, mathspeak, "⪫", "plus grand que en fourche", "plus grand que en fourche", "plus grand que en fourche"
-fr, mathspeak, "⪬", "plus petit ou égal que en fourche", "plus petit ou égal que en fourche", "plus petit ou égal que en fourche"
-fr, mathspeak, "⪭", "plus grand ou égal que en fourche", "plus grand ou égal que en fourche", "plus grand ou égal que en fourche"
-fr, mathspeak, "⪮", "signe égal et dos-d'âne", "signe égal et dos-d'âne", "signe égal et dos-d'âne"
-fr, mathspeak, "⪯", "précède par-dessus signe égal à une ligne", "précède par-dessus signe égal à une ligne", "précède par-dessus signe égal à une ligne"
-fr, mathspeak, "⪰", "succeeds-above-single-line-equals", "succeeds-above-single-line-equals", "succeeds-above-single-line-equals"
-fr, mathspeak, "⪱", "precedes-above-single-line-not-equals", "precedes-above-single-line-not-equals", "precedes-above-single-line-not-equals"
-fr, mathspeak, "⪲", "succeeds-above-single-line-not-equals", "succeeds-above-single-line-not-equals", "succeeds-above-single-line-not-equals"
-fr, mathspeak, "⪳", "precedes-above-equals", "precedes-above-equals", "precedes-above-equals"
-fr, mathspeak, "⪴", "succeeds-above-equals", "succeeds-above-equals", "succeeds-above-equals"
-fr, mathspeak, "⪵", "précède par-dessus pas égal à", "précède par-dessus pas égal à", "précède par-dessus pas égal à"
-fr, mathspeak, "⪶", "suit par-dessus pas égal à", "suit par-dessus pas égal à", "suit par-dessus pas égal à"
-fr, mathspeak, "⪷", "precedes-above-almost-equals", "precedes-above-almost-equals", "precedes-above-almost-equals"
-fr, mathspeak, "⪸", "succeeds-above-almost-equals", "succeeds-above-almost-equals", "succeeds-above-almost-equals"
-fr, mathspeak, "⪹", "precedes-above-not-almost-equals", "precedes-above-not-almost-equals", "precedes-above-not-almost-equals"
-fr, mathspeak, "⪺", "succeeds-above-not-almost-equals", "succeeds-above-not-almost-equals", "succeeds-above-not-almost-equals"
-fr, mathspeak, "⪻", "double précède", "double précède", "double précède"
-fr, mathspeak, "⪼", "double suit", "double suit", "double suit"
-fr, mathspeak, "⪽", "sous-ensemble pointé", "sous-ensemble pointé", "sous-ensemble pointé"
-fr, mathspeak, "⪾", "sur-ensemble pointé", "sur-ensemble pointé", "sur-ensemble pointé"
-fr, mathspeak, "⪿", "sous-ensemble plus souscrit", "sous-ensemble plus souscrit", "sous-ensemble plus souscrit"
-fr, mathspeak, "⫀", "sur-ensemble plus souscrit", "sur-ensemble plus souscrit", "sur-ensemble plus souscrit"
-fr, mathspeak, "⫁", "sous-ensemble à signe de multiplication souscrit", "sous-ensemble à signe de multiplication souscrit", "sous-ensemble à signe de multiplication souscrit"
-fr, mathspeak, "⫂", "sur-ensemble à signe de multiplication souscrit", "sur-ensemble à signe de multiplication souscrit", "sur-ensemble à signe de multiplication souscrit"
-fr, mathspeak, "⫃", "sous-ensemble de ou égal à point en chef", "sous-ensemble de ou égal à point en chef", "sous-ensemble de ou égal à point en chef"
-fr, mathspeak, "⫄", "sur-ensemble de ou égal à point en chef", "sur-ensemble de ou égal à point en chef", "sur-ensemble de ou égal à point en chef"
-fr, mathspeak, "⫅", "subset-of-above-equals", "subset-of-above-equals", "subset-of-above-equals"
-fr, mathspeak, "⫆", "superset-of-above-equals", "superset-of-above-equals", "superset-of-above-equals"
-fr, mathspeak, "⫇", "sous-ensemble de par-dessus opérateur tilde", "sous-ensemble de par-dessus opérateur tilde", "sous-ensemble de par-dessus opérateur tilde"
-fr, mathspeak, "⫈", "sur-ensemble de par-dessus opérateur tilde", "sur-ensemble de par-dessus opérateur tilde", "sur-ensemble de par-dessus opérateur tilde"
-fr, mathspeak, "⫉", "subset-of-above-almost-equals", "subset-of-above-almost-equals", "subset-of-above-almost-equals"
-fr, mathspeak, "⫊", "superset-of-above-almost-equals", "superset-of-above-almost-equals", "superset-of-above-almost-equals"
-fr, mathspeak, "⫋", "subset-of-above-not-equals", "subset-of-above-not-equals", "subset-of-above-not-equals"
-fr, mathspeak, "⫌", "superset-of-above-not-equals", "superset-of-above-not-equals", "superset-of-above-not-equals"
-fr, mathspeak, "⫍", "square-left-open-box", "square-left-open-box", "square-left-open-box"
-fr, mathspeak, "⫎", "square-right-open-box", "square-right-open-box", "square-right-open-box"
-fr, mathspeak, "⫏", "sous-ensemble clos", "sous-ensemble clos", "sous-ensemble clos"
-fr, mathspeak, "⫐", "sur-ensemble clos", "sur-ensemble clos", "sur-ensemble clos"
-fr, mathspeak, "⫑", "sous-ensemble clos ou égal à", "sous-ensemble clos ou égal à", "sous-ensemble clos ou égal à"
-fr, mathspeak, "⫒", "sur-ensemble clos ou égal à", "sur-ensemble clos ou égal à", "sur-ensemble clos ou égal à"
-fr, mathspeak, "⫓", "sous-ensemble par-dessus sur-ensemble", "sous-ensemble par-dessus sur-ensemble", "sous-ensemble par-dessus sur-ensemble"
-fr, mathspeak, "⫔", "sur-ensemble par-dessus sous-ensemble", "sur-ensemble par-dessus sous-ensemble", "sur-ensemble par-dessus sous-ensemble"
-fr, mathspeak, "⫕", "sous-ensemble par-dessus sous-ensemble", "sous-ensemble par-dessus sous-ensemble", "sous-ensemble par-dessus sous-ensemble"
-fr, mathspeak, "⫖", "sur-ensemble par-dessus sur-ensemble", "sur-ensemble par-dessus sur-ensemble", "sur-ensemble par-dessus sur-ensemble"
-fr, mathspeak, "⫗", "sur-ensemble à côté de sous-ensemble", "sur-ensemble à côté de sous-ensemble", "sur-ensemble à côté de sous-ensemble"
-fr, mathspeak, "⫘", "sur-ensemble chaîné à sous-ensemble", "sur-ensemble chaîné à sous-ensemble", "sur-ensemble chaîné à sous-ensemble"
-fr, mathspeak, "⫙", "appartient à ouvert vers le bas", "appartient à ouvert vers le bas", "appartient à ouvert vers le bas"
-fr, mathspeak, "⫚", "fourche surmontée d'un t", "fourche surmontée d'un t", "fourche surmontée d'un t"
-fr, mathspeak, "⫛", "intersection transversale", "intersection transversale", "intersection transversale"
-fr, mathspeak, "⫝̸", "forking", "forking", "forking"
-fr, mathspeak, "⫝", "nonforking", "nonforking", "nonforking"
-fr, mathspeak, "⫞", "short-left-tack", "short-left-tack", "short-left-tack"
-fr, mathspeak, "⫟", "short-down-tack", "short-down-tack", "short-down-tack"
-fr, mathspeak, "⫠", "short-up-tack", "short-up-tack", "short-up-tack"
-fr, mathspeak, "⫡", "perpendicular-with-s", "perpendicular-with-s", "perpendicular-with-s"
-fr, mathspeak, "⫢", "vertical-bar-triple-right-turnstile", "vertical-bar-triple-right-turnstile", "vertical-bar-triple-right-turnstile"
-fr, mathspeak, "⫣", "double-vertical-bar-left-turnstile", "double-vertical-bar-left-turnstile", "double-vertical-bar-left-turnstile"
-fr, mathspeak, "⫤", "double tourniquet gauche à barre verticale", "double tourniquet gauche à barre verticale", "double tourniquet gauche à barre verticale"
-fr, mathspeak, "⫥", "double-vertical-bar-double-left-turnstile", "double-vertical-bar-double-left-turnstile", "double-vertical-bar-double-left-turnstile"
-fr, mathspeak, "⫦", "double barre verticale gauche à traverse", "double barre verticale gauche à traverse", "double barre verticale gauche à traverse"
-fr, mathspeak, "⫧", "taquet court vers le bas avec barre en chef", "taquet court vers le bas avec barre en chef", "taquet court vers le bas avec barre en chef"
-fr, mathspeak, "⫨", "taquet court vers le haut avec barre souscrite", "taquet court vers le haut avec barre souscrite", "taquet court vers le haut avec barre souscrite"
-fr, mathspeak, "⫩", "taquet court vers le haut par-dessus taquet court vers le bas", "taquet court vers le haut par-dessus taquet court vers le bas", "taquet court vers le haut par-dessus taquet court vers le bas"
-fr, mathspeak, "⫪", "double-down-tack", "double-down-tack", "double-down-tack"
-fr, mathspeak, "⫫", "double taquet vers le haut", "double taquet vers le haut", "double taquet vers le haut"
-fr, mathspeak, "⫬", "signe négation à deux traits", "signe négation à deux traits", "signe négation à deux traits"
-fr, mathspeak, "⫭", "signe négation à deux traits réfléchi", "signe négation à deux traits réfléchi", "signe négation à deux traits réfléchi"
-fr, mathspeak, "⫮", "n'est pas un diviseur de à barre de négation réfléchie", "n'est pas un diviseur de à barre de négation réfléchie", "n'est pas un diviseur de à barre de négation réfléchie"
-fr, mathspeak, "⫯", "ligne verticale cercle en chef", "ligne verticale cercle en chef", "ligne verticale cercle en chef"
-fr, mathspeak, "⫰", "ligne verticale cercle souscrit", "ligne verticale cercle souscrit", "ligne verticale cercle souscrit"
-fr, mathspeak, "⫱", "taquet vers le bas surmontant un cercle", "taquet vers le bas surmontant un cercle", "taquet vers le bas surmontant un cercle"
-fr, mathspeak, "⫲", "parallèlle à vertical à une traverse", "parallèlle à vertical à une traverse", "parallèlle à vertical à une traverse"
-fr, mathspeak, "⫳", "parallèle à avec opérateur tilde", "parallèle à avec opérateur tilde", "parallèle à avec opérateur tilde"
-fr, mathspeak, "⫴", "triple-vertical-bar-binary-relation", "triple-vertical-bar-binary-relation", "triple-vertical-bar-binary-relation"
-fr, mathspeak, "⫵", "triple-vertical-bar-with-horizontal-stroke", "triple-vertical-bar-with-horizontal-stroke", "triple-vertical-bar-with-horizontal-stroke"
-fr, mathspeak, "⫶", "triple-colon", "triple-colon", "triple-colon"
-fr, mathspeak, "⫷", "triple-nested-less-than", "triple-nested-less-than", "triple-nested-less-than"
-fr, mathspeak, "⫸", "triple-nested-greater-than", "triple-nested-greater-than", "triple-nested-greater-than"
-fr, mathspeak, "⫹", "double-line-slanted-less-than-or-equal-to", "double-line-slanted-less-than-or-equal-to", "double-line-slanted-less-than-or-equal-to"
-fr, mathspeak, "⫺", "double-line-slanted-greater-than-or-equal-to", "double-line-slanted-greater-than-or-equal-to", "double-line-slanted-greater-than-or-equal-to"
-fr, mathspeak, "⫻", "triple-solidus-binary-relation", "triple-solidus-binary-relation", "triple-solidus-binary-relation"
-fr, mathspeak, "⫼", "large-triple-vertical-bar", "large-triple-vertical-bar", "large-triple-vertical-bar"
-fr, mathspeak, "⫽", "double-solidus", "double-solidus", "double-solidus"
-fr, mathspeak, "⫾", "white-vertical-bar", "white-vertical-bar", "white-vertical-bar"
-fr, mathspeak, "⫿", "white-vertical-bar", "white-vertical-bar", "white-vertical-bar"
-fr, mathspeak, "〜", "wave-dash", "wave-dash", "wave-dash"
-fr, mathspeak, "︐", "presentation-form-for-vertical-comma", "presentation-form-for-vertical-comma", "presentation-form-for-vertical-comma"
-fr, mathspeak, "︓", "presentation-form-for-vertical-colon", "presentation-form-for-vertical-colon", "presentation-form-for-vertical-colon"
-fr, mathspeak, "︔", "presentation-form-for-vertical-semicolon", "presentation-form-for-vertical-semicolon", "presentation-form-for-vertical-semicolon"
-fr, mathspeak, "︕", "presentation-form-for-vertical-exclamation-mark", "presentation-form-for-vertical-exclamation-mark", "presentation-form-for-vertical-exclamation-mark"
-fr, mathspeak, "︖", "presentation-form-for-vertical-question-mark", "presentation-form-for-vertical-question-mark", "presentation-form-for-vertical-question-mark"
-fr, mathspeak, "︙", "presentation-form-for-vertical-horizontal-ellipsis", "presentation-form-for-vertical-horizontal-ellipsis", "presentation-form-for-vertical-horizontal-ellipsis"
-fr, mathspeak, "︰", "glyph-for-vertical-two-dot-leader", "glyph-for-vertical-two-dot-leader", "glyph-for-vertical-two-dot-leader"
-fr, mathspeak, "︱", "glyph-for-vertical-em-dash", "glyph-for-vertical-em-dash", "glyph-for-vertical-em-dash"
-fr, mathspeak, "︲", "glyph-for-vertical-en-dash", "glyph-for-vertical-en-dash", "glyph-for-vertical-en-dash"
-fr, mathspeak, "︳", "glyph-for-vertical-underscore", "glyph-for-vertical-underscore", "glyph-for-vertical-underscore"
-fr, mathspeak, "︴", "glyph-for-vertical-wavy-underscore", "glyph-for-vertical-wavy-underscore", "glyph-for-vertical-wavy-underscore"
-fr, mathspeak, "﹅", "sesame-dot", "sesame-dot", "sesame-dot"
-fr, mathspeak, "﹆", "white-sesame-dot", "white-sesame-dot", "white-sesame-dot"
-fr, mathspeak, "﹉", "dashed-overscore", "dashed-overscore", "dashed-overscore"
-fr, mathspeak, "﹊", "centerline-overscore", "centerline-overscore", "centerline-overscore"
-fr, mathspeak, "﹋", "wavy-overscore", "wavy-overscore", "wavy-overscore"
-fr, mathspeak, "﹌", "double-wavy-overscore", "double-wavy-overscore", "double-wavy-overscore"
-fr, mathspeak, "﹍", "dashed-underscore", "dashed-underscore", "dashed-underscore"
-fr, mathspeak, "﹎", "centerline-underscore", "centerline-underscore", "centerline-underscore"
-fr, mathspeak, "﹏", "wavy-underscore", "wavy-underscore", "wavy-underscore"
-fr, mathspeak, "﹐", "small-comma", "small-comma", "small-comma"
-fr, mathspeak, "﹒", "small-period", "small-period", "small-period"
-fr, mathspeak, "﹔", "small-semicolon", "small-semicolon", "small-semicolon"
-fr, mathspeak, "﹕", "small-colon", "small-colon", "small-colon"
-fr, mathspeak, "﹖", "small-question-mark", "small-question-mark", "small-question-mark"
-fr, mathspeak, "﹗", "small-exclamation-mark", "small-exclamation-mark", "small-exclamation-mark"
-fr, mathspeak, "﹘", "small-em-dash", "small-em-dash", "small-em-dash"
-fr, mathspeak, "﹟", "small-number-sign", "small-number-sign", "small-number-sign"
-fr, mathspeak, "﹠", "small-ampersand", "small-ampersand", "small-ampersand"
-fr, mathspeak, "﹡", "small-asterisk", "small-asterisk", "small-asterisk"
-fr, mathspeak, "﹢", "small-plus-sign", "small-plus-sign", "small-plus-sign"
-fr, mathspeak, "﹣", "small-hyphen-minus", "small-hyphen-minus", "small-hyphen-minus"
-fr, mathspeak, "﹤", "small-less-than-sign", "small-less-than-sign", "small-less-than-sign"
-fr, mathspeak, "﹥", "small-greater-than-sign", "small-greater-than-sign", "small-greater-than-sign"
-fr, mathspeak, "﹦", "small-equals", "small-equals", "small-equals"
-fr, mathspeak, "﹨", "integer divide", "integer divide", "integer divide"
-fr, mathspeak, "﹩", "small-dollar-sign", "small-dollar-sign", "small-dollar-sign"
-fr, mathspeak, "﹪", "small-percent-sign", "small-percent-sign", "small-percent-sign"
-fr, mathspeak, "﹫", "small-commercial-at", "small-commercial-at", "small-commercial-at"
-fr, mathspeak, "！", "exclamation-mark", "exclamation-mark", "exclamation-mark"
-fr, mathspeak, "＂", "quotation-mark", "quotation-mark", "quotation-mark"
-fr, mathspeak, "＃", "number-sign", "number-sign", "number-sign"
-fr, mathspeak, "＄", "dollar-sign", "dollar-sign", "dollar-sign"
-fr, mathspeak, "％", "percent-sign", "percent-sign", "percent-sign"
-fr, mathspeak, "＆", "ampersand", "ampersand", "ampersand"
-fr, mathspeak, "＇", "apostrophe", "apostrophe", "apostrophe"
-fr, mathspeak, "＊", "asterisk", "asterisk", "asterisk"
-fr, mathspeak, "＋", "plus-sign", "plus-sign", "plus-sign"
-fr, mathspeak, "，", "comma", "comma", "comma"
-fr, mathspeak, "－", "hyphen-minus", "hyphen-minus", "hyphen-minus"
-fr, mathspeak, "．", "period", "period", "period"
-fr, mathspeak, "／", "slash", "slash", "slash"
-fr, mathspeak, "：", "colon", "colon", "colon"
-fr, mathspeak, "；", "semicolon", "semicolon", "semicolon"
-fr, mathspeak, "＜", "less-than", "less-than", "less-than"
-fr, mathspeak, "＝", "equals", "equals", "equals"
-fr, mathspeak, "＞", "greater-than", "greater-than", "greater-than"
-fr, mathspeak, "？", "question-mark", "question-mark", "question-mark"
-fr, mathspeak, "＠", "commercial-at", "commercial-at", "commercial-at"
-fr, mathspeak, "＼", "backslash", "backslash", "backslash"
-fr, mathspeak, "＾", "caret", "caret", "caret"
-fr, mathspeak, "＿", "bar", "bar", "bar"
-fr, mathspeak, "｀", "grave", "grave", "grave"
-fr, mathspeak, "｜", "vertical-bar", "vertical-bar", "vertical-bar"
-fr, mathspeak, "～", "tilde", "tilde", "tilde"
-fr, mathspeak, "￠", "cent-sign", "cent-sign", "cent-sign"
-fr, mathspeak, "￡", "pound-sign", "pound-sign", "pound-sign"
-fr, mathspeak, "￢", "not-sign", "not-sign", "not-sign"
-fr, mathspeak, "￣", "bar", "bar", "bar"
-fr, mathspeak, "￤", "broken-vertical-bar", "broken-vertical-bar", "broken-vertical-bar"
-fr, mathspeak, "￥", "yen-sign", "yen-sign", "yen-sign"
-fr, mathspeak, "￦", "won-sign", "won-sign", "won-sign"
-fr, mathspeak, "￨", "halfwidth-forms-light-vertical", "halfwidth-forms-light-vertical", "halfwidth-forms-light-vertical"
-fr, mathspeak, "￭", "halfwidth-black-square", "halfwidth-black-square", "halfwidth-black-square"
-fr, mathspeak, "￮", "halfwidth-white-circle", "halfwidth-white-circle", "halfwidth-white-circle"
-fr, mathspeak, " ", "", "", ""
-fr, mathspeak, " ", "", "", ""
-fr, mathspeak, "­", "trait d'union conditionnel", "trait d'union conditionnel", "trait d'union conditionnel"
-fr, mathspeak, " ", "", "", ""
-fr, mathspeak, " ", "", "", ""
-fr, mathspeak, " ", "", "", ""
-fr, mathspeak, " ", "", "", ""
-fr, mathspeak, " ", "", "", ""
-fr, mathspeak, " ", "", "", ""
-fr, mathspeak, " ", "", "", ""
-fr, mathspeak, " ", "", "", ""
-fr, mathspeak, " ", "", "", ""
-fr, mathspeak, " ", "", "", ""
-fr, mathspeak, " ", "", "", ""
-fr, mathspeak, "​", "​", "​", "​"
-fr, mathspeak, "‌", "antiliant sans chasse", "antiliant sans chasse", "antiliant sans chasse"
-fr, mathspeak, "‍", "liant sans chasse", "liant sans chasse", "liant sans chasse"
-fr, mathspeak, "‎", "marque gauche-à-droite", "marque gauche-à-droite", "marque gauche-à-droite"
-fr, mathspeak, "‏", "marque droite-à-gauche", "marque droite-à-gauche", "marque droite-à-gauche"
-fr, mathspeak, " ", "", "", ""
-fr, mathspeak, " ", "", "", ""
-fr, mathspeak, "‪", "left to right embedding", "left to right embedding", "left to right embedding"
-fr, mathspeak, "‫", "right to left embedding", "right to left embedding", "right to left embedding"
-fr, mathspeak, "‬", "pop directional formatting", "pop directional formatting", "pop directional formatting"
-fr, mathspeak, "‭", "left to right override", "left to right override", "left to right override"
-fr, mathspeak, "‮", "right to left override", "right to left override", "right to left override"
-fr, mathspeak, " ", "", "", ""
-fr, mathspeak, " ", "", "", ""
-fr, mathspeak, "⁠", "⁠", "⁠", "⁠"
-fr, mathspeak, "⁡", "de", "de", "de"
-fr, mathspeak, "⁢", " ", " ", " "
-fr, mathspeak, "⁣", "⁣", "⁣", "⁣"
-fr, mathspeak, "⁤", "plus", "plus", "plus"
-fr, mathspeak, "⁪", "inhibit symmetric swapping", "inhibit symmetric swapping", "inhibit symmetric swapping"
-fr, mathspeak, "⁫", "activate symmetric swapping", "activate symmetric swapping", "activate symmetric swapping"
-fr, mathspeak, "⁮", "national digit shapes", "national digit shapes", "national digit shapes"
-fr, mathspeak, "⁯", "nominal digit shapes", "nominal digit shapes", "nominal digit shapes"
-fr, mathspeak, "﻿", "", "", ""
-fr, mathspeak, "￹", "interlinear annotation anchor", "interlinear annotation anchor", "interlinear annotation anchor"
-fr, mathspeak, "￺", "interlinear annotation separator", "interlinear annotation separator", "interlinear annotation separator"
-fr, mathspeak, "￻", "interlinear annotation terminator", "interlinear annotation terminator", "interlinear annotation terminator"
-fr, mathspeak, "⏨", "decimal exponent symbol", "decimal exponent symbol", "decimal exponent symbol"
-fr, mathspeak, "★", "étoile noire", "étoile noire", "étoile noire"
-fr, mathspeak, "☆", "étoile blanche", "étoile blanche", "étoile blanche"
-fr, mathspeak, "⚪", "white circle", "white circle", "white circle"
-fr, mathspeak, "⚫", "black circle", "black circle", "black circle"
-fr, mathspeak, "✅", "white check", "white check", "white check"
-fr, mathspeak, "✓", "signe de vérification", "signe de vérification", "signe de vérification"
-fr, mathspeak, "✔", "heavy check", "heavy check", "heavy check"
-fr, mathspeak, "✕", "multiplication x", "multiplication x", "multiplication x"
-fr, mathspeak, "✖", "heavy multiplication x", "heavy multiplication x", "heavy multiplication x"
-fr, mathspeak, "✗", "x de bulletin de vote", "x de bulletin de vote", "x de bulletin de vote"
-fr, mathspeak, "✘", "heavy ballot x", "heavy ballot x", "heavy ballot x"
-fr, mathspeak, "✛", "open center cross", "open center cross", "open center cross"
-fr, mathspeak, "✜", "heavy open center cross", "heavy open center cross", "heavy open center cross"
-fr, mathspeak, "✠", "croix de malte", "croix de malte", "croix de malte"
-fr, mathspeak, "✡", "star of david", "star of david", "star of david"
-fr, mathspeak, "✢", "four teardrop spoked asterisk", "four teardrop spoked asterisk", "four teardrop spoked asterisk"
-fr, mathspeak, "✣", "four balloon spoked asterisk", "four balloon spoked asterisk", "four balloon spoked asterisk"
-fr, mathspeak, "✤", "heavy four balloon spoked asterisk", "heavy four balloon spoked asterisk", "heavy four balloon spoked asterisk"
-fr, mathspeak, "✥", "four club spoked asterisk", "four club spoked asterisk", "four club spoked asterisk"
-fr, mathspeak, "✦", "black four pointed star", "black four pointed star", "black four pointed star"
-fr, mathspeak, "✧", "white four pointed star", "white four pointed star", "white four pointed star"
-fr, mathspeak, "✨", "sparkles", "sparkles", "sparkles"
-fr, mathspeak, "✩", "stress outlined white star", "stress outlined white star", "stress outlined white star"
-fr, mathspeak, "✪", "circled white star", "circled white star", "circled white star"
-fr, mathspeak, "✫", "open center black star", "open center black star", "open center black star"
-fr, mathspeak, "✬", "black center white star", "black center white star", "black center white star"
-fr, mathspeak, "✭", "outlined black star", "outlined black star", "outlined black star"
-fr, mathspeak, "✮", "heavy outlined black star", "heavy outlined black star", "heavy outlined black star"
-fr, mathspeak, "✯", "pinwheel star", "pinwheel star", "pinwheel star"
-fr, mathspeak, "✰", "shadowed white star", "shadowed white star", "shadowed white star"
-fr, mathspeak, "✱", "heavy asterisk", "heavy asterisk", "heavy asterisk"
-fr, mathspeak, "✲", "open center asterisk", "open center asterisk", "open center asterisk"
-fr, mathspeak, "✳", "eight spoked asterisk", "eight spoked asterisk", "eight spoked asterisk"
-fr, mathspeak, "✴", "eight pointed black star", "eight pointed black star", "eight pointed black star"
-fr, mathspeak, "✵", "eight pointed pinwheel star", "eight pointed pinwheel star", "eight pointed pinwheel star"
-fr, mathspeak, "✶", "étoile noire à six branches", "étoile noire à six branches", "étoile noire à six branches"
-fr, mathspeak, "✹", "twelve pointed black star", "twelve pointed black star", "twelve pointed black star"
-fr, mathspeak, "✺", "sixteen pointed asterisk", "sixteen pointed asterisk", "sixteen pointed asterisk"
-fr, mathspeak, "✻", "teardrop spoked asterisk", "teardrop spoked asterisk", "teardrop spoked asterisk"
-fr, mathspeak, "✼", "open center teardrop spoked asterisk", "open center teardrop spoked asterisk", "open center teardrop spoked asterisk"
-fr, mathspeak, "✽", "gros astérisque larmé", "gros astérisque larmé", "gros astérisque larmé"
-fr, mathspeak, "✾", "six petalled black and white florette", "six petalled black and white florette", "six petalled black and white florette"
-fr, mathspeak, "✿", "black florette", "black florette", "black florette"
-fr, mathspeak, "❀", "white florette", "white florette", "white florette"
-fr, mathspeak, "❁", "eight petalled outlined black florette", "eight petalled outlined black florette", "eight petalled outlined black florette"
-fr, mathspeak, "❂", "circled open center eight pointed star", "circled open center eight pointed star", "circled open center eight pointed star"
-fr, mathspeak, "❃", "heavy teardrop spoked pinwheel asterisk", "heavy teardrop spoked pinwheel asterisk", "heavy teardrop spoked pinwheel asterisk"
-fr, mathspeak, "❄", "snowflake", "snowflake", "snowflake"
-fr, mathspeak, "❅", "tight trifoliate snowflake", "tight trifoliate snowflake", "tight trifoliate snowflake"
-fr, mathspeak, "❆", "heavy chevron snowflake", "heavy chevron snowflake", "heavy chevron snowflake"
-fr, mathspeak, "❇", "sparkle", "sparkle", "sparkle"
-fr, mathspeak, "❈", "heavy sparkle", "heavy sparkle", "heavy sparkle"
-fr, mathspeak, "❉", "balloon spoked asterisk", "balloon spoked asterisk", "balloon spoked asterisk"
-fr, mathspeak, "❊", "eight teardrop spoked propeller asterisk", "eight teardrop spoked propeller asterisk", "eight teardrop spoked propeller asterisk"
-fr, mathspeak, "❋", "heavy eight teardrop spoked propeller asterisk", "heavy eight teardrop spoked propeller asterisk", "heavy eight teardrop spoked propeller asterisk"
-fr, mathspeak, "❌", "cross mark", "cross mark", "cross mark"
-fr, mathspeak, "❍", "shadowed white circle", "shadowed white circle", "shadowed white circle"
-fr, mathspeak, "W:unit", "W majuscule deux points unit", "W majuscule deux points unit", "W majuscule deux points unit"
-fr, mathspeak, "w:unit", "w deux points unit", "w deux points unit", "w deux points unit"
-fr, mathspeak, "kw:unit", "kw deux points unit", "kw deux points unit", "kw deux points unit"
-fr, mathspeak, "kW:unit", "kW deux points unit", "kW deux points unit", "kW deux points unit"
-fr, mathspeak, "mw:unit", "mw deux points unit", "mw deux points unit", "mw deux points unit"
-fr, mathspeak, "mW:unit", "mW deux points unit", "mW deux points unit", "mW deux points unit"
-fr, mathspeak, "kwh:unit", "kwh deux points unit", "kwh deux points unit", "kwh deux points unit"
-fr, mathspeak, "kWh:unit", "kWh deux points unit", "kWh deux points unit", "kWh deux points unit"
-fr, mathspeak, "J:unit", "J majuscule deux points unit", "J majuscule deux points unit", "J majuscule deux points unit"
-fr, mathspeak, "N:unit", "N majuscule deux points unit", "N majuscule deux points unit", "N majuscule deux points unit"
-fr, mathspeak, "A:unit", "A majuscule deux points unit", "A majuscule deux points unit", "A majuscule deux points unit"
-fr, mathspeak, "V:unit", "V majuscule deux points unit", "V majuscule deux points unit", "V majuscule deux points unit"
-fr, mathspeak, "µΩ:unit", "symbole micro Oméga majuscule deux points unit", "symbole micro Oméga majuscule deux points unit", "symbole micro Oméga majuscule deux points unit"
-fr, mathspeak, "mΩ:unit", "m Oméga majuscule deux points unit", "m Oméga majuscule deux points unit", "m Oméga majuscule deux points unit"
-fr, mathspeak, "Ω:unit", "Oméga majuscule deux points unit", "Oméga majuscule deux points unit", "Oméga majuscule deux points unit"
-fr, mathspeak, "Ohm:unit", "Ohm deux points unit", "Ohm deux points unit", "Ohm deux points unit"
-fr, mathspeak, "kΩ:unit", "k Oméga majuscule deux points unit", "k Oméga majuscule deux points unit", "k Oméga majuscule deux points unit"
-fr, mathspeak, "KΩ:unit", "K majuscule Oméga majuscule deux points unit", "K majuscule Oméga majuscule deux points unit", "K majuscule Oméga majuscule deux points unit"
-fr, mathspeak, "MΩ:unit", "M majuscule Oméga majuscule deux points unit", "M majuscule Oméga majuscule deux points unit", "M majuscule Oméga majuscule deux points unit"
-fr, mathspeak, "GΩ:unit", "G majuscule Oméga majuscule deux points unit", "G majuscule Oméga majuscule deux points unit", "G majuscule Oméga majuscule deux points unit"
-fr, mathspeak, "mm:unit", "mm deux points unit", "mm deux points unit", "mm deux points unit"
-fr, mathspeak, "cm:unit", "cm deux points unit", "cm deux points unit", "cm deux points unit"
-fr, mathspeak, "m:unit", "m deux points unit", "m deux points unit", "m deux points unit"
-fr, mathspeak, "km:unit", "km deux points unit", "km deux points unit", "km deux points unit"
-fr, mathspeak, "ft:unit", "ft deux points unit", "ft deux points unit", "ft deux points unit"
-fr, mathspeak, "ft.:unit", "ft point deux points unit", "ft point deux points unit", "ft point deux points unit"
-fr, mathspeak, "in:unit", "in deux points unit", "in deux points unit", "in deux points unit"
-fr, mathspeak, "in.:unit", "in point deux points unit", "in point deux points unit", "in point deux points unit"
-fr, mathspeak, "mi:unit", "mi deux points unit", "mi deux points unit", "mi deux points unit"
-fr, mathspeak, "mi.:unit", "mi point deux points unit", "mi point deux points unit", "mi point deux points unit"
-fr, mathspeak, "yd:unit", "yd deux points unit", "yd deux points unit", "yd deux points unit"
-fr, mathspeak, "yd.:unit", "yd point deux points unit", "yd point deux points unit", "yd point deux points unit"
-fr, mathspeak, "n.m.:unit", "n point m point deux points unit", "n point m point deux points unit", "n point m point deux points unit"
-fr, mathspeak, "b:unit", "b deux points unit", "b deux points unit", "b deux points unit"
-fr, mathspeak, "B:unit", "B majuscule deux points unit", "B majuscule deux points unit", "B majuscule deux points unit"
-fr, mathspeak, "KB:unit", "KB deux points unit", "KB deux points unit", "KB deux points unit"
-fr, mathspeak, "MB:unit", "MB deux points unit", "MB deux points unit", "MB deux points unit"
-fr, mathspeak, "GB:unit", "GB deux points unit", "GB deux points unit", "GB deux points unit"
-fr, mathspeak, "TB:unit", "TB deux points unit", "TB deux points unit", "TB deux points unit"
-fr, mathspeak, "doz:unit", "doz deux points unit", "doz deux points unit", "doz deux points unit"
-fr, mathspeak, "doz.:unit", "doz point deux points unit", "doz point deux points unit", "doz point deux points unit"
-fr, mathspeak, "dz:unit", "dz deux points unit", "dz deux points unit", "dz deux points unit"
-fr, mathspeak, "dz.:unit", "dz point deux points unit", "dz point deux points unit", "dz point deux points unit"
-fr, mathspeak, "sq:unit", "sq deux points unit", "sq deux points unit", "sq deux points unit"
-fr, mathspeak, "sq.:unit", "sq point deux points unit", "sq point deux points unit", "sq point deux points unit"
-fr, mathspeak, "ha:unit", "ha deux points unit", "ha deux points unit", "ha deux points unit"
-fr, mathspeak, "kt:unit", "kt deux points unit", "kt deux points unit", "kt deux points unit"
-fr, mathspeak, "kt.:unit", "kt point deux points unit", "kt point deux points unit", "kt point deux points unit"
-fr, mathspeak, "mph:unit", "mph deux points unit", "mph deux points unit", "mph deux points unit"
-fr, mathspeak, "rpm:unit", "rpm deux points unit", "rpm deux points unit", "rpm deux points unit"
-fr, mathspeak, "kmh:unit", "kmh deux points unit", "kmh deux points unit", "kmh deux points unit"
-fr, mathspeak, "F:unit", "F majuscule deux points unit", "F majuscule deux points unit", "F majuscule deux points unit"
-fr, mathspeak, "F.:unit", "F majuscule point deux points unit", "F majuscule point deux points unit", "F majuscule point deux points unit"
-fr, mathspeak, "°F:unit", "degrés F majuscule deux points unit", "degrés F majuscule deux points unit", "degrés F majuscule deux points unit"
-fr, mathspeak, "C:unit", "C majuscule deux points unit", "C majuscule deux points unit", "C majuscule deux points unit"
-fr, mathspeak, "°C:unit", "degrés C majuscule deux points unit", "degrés C majuscule deux points unit", "degrés C majuscule deux points unit"
-fr, mathspeak, "K:unit", "K majuscule deux points unit", "K majuscule deux points unit", "K majuscule deux points unit"
-fr, mathspeak, "°K:unit", "degrés K majuscule deux points unit", "degrés K majuscule deux points unit", "degrés K majuscule deux points unit"
-fr, mathspeak, "ns:unit", "ns deux points unit", "ns deux points unit", "ns deux points unit"
-fr, mathspeak, "µs:unit", "symbole micro s deux points unit", "symbole micro s deux points unit", "symbole micro s deux points unit"
-fr, mathspeak, "ms:unit", "ms deux points unit", "ms deux points unit", "ms deux points unit"
-fr, mathspeak, "s:unit", "s deux points unit", "s deux points unit", "s deux points unit"
-fr, mathspeak, "min:unit", "min deux points unit", "min deux points unit", "min deux points unit"
-fr, mathspeak, "h:unit", "h deux points unit", "h deux points unit", "h deux points unit"
-fr, mathspeak, "hr:unit", "hr deux points unit", "hr deux points unit", "hr deux points unit"
-fr, mathspeak, "bbl.:unit", "bbl point deux points unit", "bbl point deux points unit", "bbl point deux points unit"
-fr, mathspeak, "bbl:unit", "bbl deux points unit", "bbl deux points unit", "bbl deux points unit"
-fr, mathspeak, "cu:unit", "cu deux points unit", "cu deux points unit", "cu deux points unit"
-fr, mathspeak, "cu.:unit", "cu point deux points unit", "cu point deux points unit", "cu point deux points unit"
-fr, mathspeak, "fl. oz.:unit", "fl point oz point deux points unit", "fl point oz point deux points unit", "fl point oz point deux points unit"
-fr, mathspeak, "gal:unit", "gal deux points unit", "gal deux points unit", "gal deux points unit"
-fr, mathspeak, "gal.:unit", "gal point deux points unit", "gal point deux points unit", "gal point deux points unit"
-fr, mathspeak, "pt:unit", "pt deux points unit", "pt deux points unit", "pt deux points unit"
-fr, mathspeak, "pt.:unit", "pt point deux points unit", "pt point deux points unit", "pt point deux points unit"
-fr, mathspeak, "qt:unit", "qt deux points unit", "qt deux points unit", "qt deux points unit"
-fr, mathspeak, "qt.:unit", "qt point deux points unit", "qt point deux points unit", "qt point deux points unit"
-fr, mathspeak, "tbsp:unit", "tbsp deux points unit", "tbsp deux points unit", "tbsp deux points unit"
-fr, mathspeak, "tbsp.:unit", "tbsp point deux points unit", "tbsp point deux points unit", "tbsp point deux points unit"
-fr, mathspeak, "tsp:unit", "tsp deux points unit", "tsp deux points unit", "tsp deux points unit"
-fr, mathspeak, "tsp.:unit", "tsp point deux points unit", "tsp point deux points unit", "tsp point deux points unit"
-fr, mathspeak, "cc:unit", "cc deux points unit", "cc deux points unit", "cc deux points unit"
-fr, mathspeak, "kl:unit", "kl deux points unit", "kl deux points unit", "kl deux points unit"
-fr, mathspeak, "l:unit", "l deux points unit", "l deux points unit", "l deux points unit"
-fr, mathspeak, "ml:unit", "ml deux points unit", "ml deux points unit", "ml deux points unit"
-fr, mathspeak, "lb:unit", "lb deux points unit", "lb deux points unit", "lb deux points unit"
-fr, mathspeak, "lb.:unit", "lb point deux points unit", "lb point deux points unit", "lb point deux points unit"
-fr, mathspeak, "LT:unit", "LT deux points unit", "LT deux points unit", "LT deux points unit"
-fr, mathspeak, "L.T.:unit", "L majuscule point T majuscule point deux points unit", "L majuscule point T majuscule point deux points unit", "L majuscule point T majuscule point deux points unit"
-fr, mathspeak, "oz:unit", "oz deux points unit", "oz deux points unit", "oz deux points unit"
-fr, mathspeak, "oz.:unit", "oz point deux points unit", "oz point deux points unit", "oz point deux points unit"
-fr, mathspeak, "g:unit", "g deux points unit", "g deux points unit", "g deux points unit"
-fr, mathspeak, "gr:unit", "gr deux points unit", "gr deux points unit", "gr deux points unit"
-fr, mathspeak, "kg:unit", "kg deux points unit", "kg deux points unit", "kg deux points unit"
-fr, mathspeak, "mcg:unit", "mcg deux points unit", "mcg deux points unit", "mcg deux points unit"
-fr, mathspeak, "µg:unit", "symbole micro g deux points unit", "symbole micro g deux points unit", "symbole micro g deux points unit"
-fr, mathspeak, "mg:unit", "mg deux points unit", "mg deux points unit", "mg deux points unit"
-fr, mathspeak, "t:unit", "t deux points unit", "t deux points unit", "t deux points unit"
-fr, mathspeak, "T:unit", "T majuscule deux points unit", "T majuscule deux points unit", "T majuscule deux points unit"
-fr, mathspeak, "sen", "sen", "sen", "sen"
+// Copyright 2019 Volker Sorge
+//
+// Licensed under the Apache License, Version 2.0 (the 'License');
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an 'AS IS' BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+/**
+ * @fileoverview Abstract class for test cases of single characters.
+ * @author Volker.Sorge@gmail.com (Volker Sorge)
+ */
+
+goog.provide('sre.MathspeakCharFrenchTest');
+
+goog.require('sre.AbstractCharacterTest');
+
+
+
+/**
+ * @constructor
+ * @extends {sre.AbstractCharacterTest}
+ */
+sre.MathspeakCharFrenchTest = function() {
+  sre.MathspeakCharFrenchTest.base(this, 'constructor');
+
+  this.locale = 'fr';
+  this.domain = 'mathspeak';
+  this.semantics = true;
+  
+  /**
+   * @type {Array.<string>}
+   */
+  this.styles = ['default', 'brief', 'sbrief'];
+
+  this.setActive('MathspeakCharactersFrench');
+};
+goog.inherits(sre.MathspeakCharFrenchTest, sre.AbstractCharacterTest);
+
+
+sre.MathspeakCharFrenchTest.prototype.testMathspeakChars = function() {
+  this.executeCharTest('0', ['0', '0', '0']);
+  this.executeCharTest('1', ['1', '1', '1']);
+  this.executeCharTest('2', ['2', '2', '2']);
+  this.executeCharTest('3', ['3', '3', '3']);
+  this.executeCharTest('4', ['4', '4', '4']);
+  this.executeCharTest('5', ['5', '5', '5']);
+  this.executeCharTest('6', ['6', '6', '6']);
+  this.executeCharTest('7', ['7', '7', '7']);
+  this.executeCharTest('8', ['8', '8', '8']);
+  this.executeCharTest('9', ['9', '9', '9']);
+  this.executeCharTest('Α', ['Alpha majuscule', 'Alpha majuscule', 'Alpha majuscule']);
+  this.executeCharTest('Β', ['Bêta majuscule', 'Bêta majuscule', 'Bêta majuscule']);
+  this.executeCharTest('Γ', ['Gamma majuscule', 'Gamma majuscule', 'Gamma majuscule']);
+  this.executeCharTest('Δ', ['Delta majuscule', 'Delta majuscule', 'Delta majuscule']);
+  this.executeCharTest('Ε', ['Epsilon majuscule', 'Epsilon majuscule', 'Epsilon majuscule']);
+  this.executeCharTest('Ζ', ['Zêta majuscule', 'Zêta majuscule', 'Zêta majuscule']);
+  this.executeCharTest('Η', ['Êta majuscule', 'Êta majuscule', 'Êta majuscule']);
+  this.executeCharTest('Θ', ['Thêta majuscule', 'Thêta majuscule', 'Thêta majuscule']);
+  this.executeCharTest('Ι', ['Iota majuscule', 'Iota majuscule', 'Iota majuscule']);
+  this.executeCharTest('Κ', ['Kappa majuscule', 'Kappa majuscule', 'Kappa majuscule']);
+  this.executeCharTest('Λ', ['Lambda majuscule', 'Lambda majuscule', 'Lambda majuscule']);
+  this.executeCharTest('Μ', ['Mû majuscule', 'Mû majuscule', 'Mû majuscule']);
+  this.executeCharTest('Ν', ['Nû majuscule', 'Nû majuscule', 'Nû majuscule']);
+  this.executeCharTest('Ξ', ['Xi majuscule', 'Xi majuscule', 'Xi majuscule']);
+  this.executeCharTest('Ο', ['Omicron majuscule', 'Omicron majuscule', 'Omicron majuscule']);
+  this.executeCharTest('Π', ['Pi majuscule', 'Pi majuscule', 'Pi majuscule']);
+  this.executeCharTest('Ρ', ['Rho majuscule', 'Rho majuscule', 'Rho majuscule']);
+  this.executeCharTest('Σ', ['Sigma majuscule', 'Sigma majuscule', 'Sigma majuscule']);
+  this.executeCharTest('Τ', ['Tau majuscule', 'Tau majuscule', 'Tau majuscule']);
+  this.executeCharTest('Υ', ['Upsilon majuscule', 'Upsilon majuscule', 'Upsilon majuscule']);
+  this.executeCharTest('Φ', ['Phi majuscule', 'Phi majuscule', 'Phi majuscule']);
+  this.executeCharTest('Χ', ['Chi majuscule', 'Chi majuscule', 'Chi majuscule']);
+  this.executeCharTest('Ψ', ['Psi majuscule', 'Psi majuscule', 'Psi majuscule']);
+  this.executeCharTest('Ω', ['Oméga majuscule', 'Oméga majuscule', 'Oméga majuscule']);
+  this.executeCharTest('α', ['alpha', 'alpha', 'alpha']);
+  this.executeCharTest('β', ['bêta', 'bêta', 'bêta']);
+  this.executeCharTest('γ', ['gamma', 'gamma', 'gamma']);
+  this.executeCharTest('δ', ['delta', 'delta', 'delta']);
+  this.executeCharTest('ε', ['epsilon', 'epsilon', 'epsilon']);
+  this.executeCharTest('ζ', ['zêta', 'zêta', 'zêta']);
+  this.executeCharTest('η', ['êta', 'êta', 'êta']);
+  this.executeCharTest('θ', ['thêta', 'thêta', 'thêta']);
+  this.executeCharTest('ι', ['iota', 'iota', 'iota']);
+  this.executeCharTest('κ', ['kappa', 'kappa', 'kappa']);
+  this.executeCharTest('λ', ['lambda', 'lambda', 'lambda']);
+  this.executeCharTest('μ', ['mû', 'mû', 'mû']);
+  this.executeCharTest('ν', ['nû', 'nû', 'nû']);
+  this.executeCharTest('ξ', ['xi', 'xi', 'xi']);
+  this.executeCharTest('ο', ['omicron', 'omicron', 'omicron']);
+  this.executeCharTest('π', ['pi', 'pi', 'pi']);
+  this.executeCharTest('ρ', ['rho', 'rho', 'rho']);
+  this.executeCharTest('ς', ['sigma final', 'sigma final', 'sigma final']);
+  this.executeCharTest('σ', ['sigma', 'sigma', 'sigma']);
+  this.executeCharTest('τ', ['tau', 'tau', 'tau']);
+  this.executeCharTest('υ', ['upsilon', 'upsilon', 'upsilon']);
+  this.executeCharTest('φ', ['phi', 'phi', 'phi']);
+  this.executeCharTest('χ', ['chi', 'chi', 'chi']);
+  this.executeCharTest('ψ', ['psi', 'psi', 'psi']);
+  this.executeCharTest('ω', ['oméga', 'oméga', 'oméga']);
+  this.executeCharTest('ᴦ', ['small upper Gamma', 'small upper Gamma', 'small upper Gamma']);
+  this.executeCharTest('ᴧ', ['small upper Lamda', 'small upper Lamda', 'small upper Lamda']);
+  this.executeCharTest('ᴨ', ['small upper Pi', 'small upper Pi', 'small upper Pi']);
+  this.executeCharTest('ᴩ', ['small upper Rho', 'small upper Rho', 'small upper Rho']);
+  this.executeCharTest('ᴪ', ['small upper Psi', 'small upper Psi', 'small upper Psi']);
+  this.executeCharTest('ᵞ', ['superscript gamma', 'superscript gamma', 'superscript gamma']);
+  this.executeCharTest('ᵠ', ['superscript phi', 'superscript phi', 'superscript phi']);
+  this.executeCharTest('ᵦ', ['subscript beta', 'subscript beta', 'subscript beta']);
+  this.executeCharTest('ᵧ', ['subscript gamma', 'subscript gamma', 'subscript gamma']);
+  this.executeCharTest('ᵨ', ['subscript rho', 'subscript rho', 'subscript rho']);
+  this.executeCharTest('ᵩ', ['subscript phi', 'subscript phi', 'subscript phi']);
+  this.executeCharTest('ᵪ', ['subscript chi', 'subscript chi', 'subscript chi']);
+  this.executeCharTest('ϐ', ['bêta grec', 'bêta grec', 'bêta grec']);
+  this.executeCharTest('ϑ', ['thêta cursif', 'thêta cursif', 'thêta cursif']);
+  this.executeCharTest('ϕ', ['phi droit', 'phi droit', 'phi droit']);
+  this.executeCharTest('ϖ', ['pi cursif', 'pi cursif', 'pi cursif']);
+  this.executeCharTest('ϗ', ['ligature kai', 'ligature kai', 'ligature kai']);
+  this.executeCharTest('ϰ', ['kappa cursif', 'kappa cursif', 'kappa cursif']);
+  this.executeCharTest('ϱ', ['rho à queue', 'rho à queue', 'rho à queue']);
+  this.executeCharTest('ϵ', ['epsilon', 'epsilon', 'epsilon']);
+  this.executeCharTest('϶', ['epsilon lunaire réfléchi', 'epsilon lunaire réfléchi', 'epsilon lunaire réfléchi']);
+  this.executeCharTest('ϴ', ['Thêta majuscule', 'Thêta majuscule', 'Thêta majuscule']);
+  this.executeCharTest('𝚹', ['Thêta majuscule en grasse', 'Thêta majuscule en grasse', 'Thêta majuscule en grasse']);
+  this.executeCharTest('𝛳', ['Thêta majuscule en italique', 'Thêta majuscule en italique', 'Thêta majuscule en italique']);
+  this.executeCharTest('𝝧', ['Thêta majuscule en sans empattement grasse', 'Thêta majuscule en sans empattement grasse', 'Thêta majuscule en sans empattement grasse']);
+  this.executeCharTest('𝛁', ['symbole mathématique gras nabla', 'symbole mathématique gras nabla', 'symbole mathématique gras nabla']);
+  this.executeCharTest('𝛛', ['symbole mathématique gras dérivée partielle', 'symbole mathématique gras dérivée partielle', 'symbole mathématique gras dérivée partielle']);
+  this.executeCharTest('𝛜', ['symbole mathématique gras epsilon', 'symbole mathématique gras epsilon', 'symbole mathématique gras epsilon']);
+  this.executeCharTest('𝛝', ['symbole mathématique gras thêta', 'symbole mathématique gras thêta', 'symbole mathématique gras thêta']);
+  this.executeCharTest('𝛞', ['symbole mathématique gras kappa', 'symbole mathématique gras kappa', 'symbole mathématique gras kappa']);
+  this.executeCharTest('𝛟', ['symbole mathématique gras phi', 'symbole mathématique gras phi', 'symbole mathématique gras phi']);
+  this.executeCharTest('𝛠', ['symbole mathématique gras rhô', 'symbole mathématique gras rhô', 'symbole mathématique gras rhô']);
+  this.executeCharTest('𝛡', ['symbole mathématique gras pi', 'symbole mathématique gras pi', 'symbole mathématique gras pi']);
+  this.executeCharTest('𝛻', ['symbole mathématique italique nabla', 'symbole mathématique italique nabla', 'symbole mathématique italique nabla']);
+  this.executeCharTest('𝜕', ['symbole mathématique italique dérivée partielle', 'symbole mathématique italique dérivée partielle', 'symbole mathématique italique dérivée partielle']);
+  this.executeCharTest('𝜖', ['symbole mathématique italique epsilon', 'symbole mathématique italique epsilon', 'symbole mathématique italique epsilon']);
+  this.executeCharTest('𝜗', ['symbole mathématique italique thêta', 'symbole mathématique italique thêta', 'symbole mathématique italique thêta']);
+  this.executeCharTest('𝜘', ['symbole mathématique italique kappa', 'symbole mathématique italique kappa', 'symbole mathématique italique kappa']);
+  this.executeCharTest('𝜙', ['symbole mathématique italique phi', 'symbole mathématique italique phi', 'symbole mathématique italique phi']);
+  this.executeCharTest('𝜚', ['symbole mathématique italique rhô', 'symbole mathématique italique rhô', 'symbole mathématique italique rhô']);
+  this.executeCharTest('𝜛', ['symbole mathématique italique pi', 'symbole mathématique italique pi', 'symbole mathématique italique pi']);
+  this.executeCharTest('𝝯', ['symbole mathématique gras sans empattement nabla', 'symbole mathématique gras sans empattement nabla', 'symbole mathématique gras sans empattement nabla']);
+  this.executeCharTest('𝞉', ['symbole mathématique gras sans empattement dérivée partielle', 'symbole mathématique gras sans empattement dérivée partielle', 'symbole mathématique gras sans empattement dérivée partielle']);
+  this.executeCharTest('𝞊', ['symbole mathématique gras sans empattement epsilon', 'symbole mathématique gras sans empattement epsilon', 'symbole mathématique gras sans empattement epsilon']);
+  this.executeCharTest('𝞋', ['symbole mathématique gras sans empattement thêta', 'symbole mathématique gras sans empattement thêta', 'symbole mathématique gras sans empattement thêta']);
+  this.executeCharTest('𝞌', ['symbole mathématique gras sans empattement kappa', 'symbole mathématique gras sans empattement kappa', 'symbole mathématique gras sans empattement kappa']);
+  this.executeCharTest('𝞍', ['symbole mathématique gras sans empattement phi', 'symbole mathématique gras sans empattement phi', 'symbole mathématique gras sans empattement phi']);
+  this.executeCharTest('𝞎', ['symbole mathématique gras sans empattement rhô', 'symbole mathématique gras sans empattement rhô', 'symbole mathématique gras sans empattement rhô']);
+  this.executeCharTest('𝞏', ['symbole mathématique gras sans empattement pi', 'symbole mathématique gras sans empattement pi', 'symbole mathématique gras sans empattement pi']);
+  this.executeCharTest('𝟊', ['bold upper Digamma', 'bold upper Digamma', 'bold upper Digamma']);
+  this.executeCharTest('𝟋', ['bold digamma', 'bold digamma', 'bold digamma']);
+  this.executeCharTest('𝚨', ['Alpha majuscule en gras', 'Alpha majuscule en gras', 'Alpha majuscule en gras']);
+  this.executeCharTest('𝚩', ['Bêta majuscule en gras', 'Bêta majuscule en gras', 'Bêta majuscule en gras']);
+  this.executeCharTest('𝚪', ['Gamma majuscule en gras', 'Gamma majuscule en gras', 'Gamma majuscule en gras']);
+  this.executeCharTest('𝚫', ['Delta majuscule en gras', 'Delta majuscule en gras', 'Delta majuscule en gras']);
+  this.executeCharTest('𝚬', ['Epsilon majuscule en gras', 'Epsilon majuscule en gras', 'Epsilon majuscule en gras']);
+  this.executeCharTest('𝚭', ['Dzêta majuscule en gras', 'Dzêta majuscule en gras', 'Dzêta majuscule en gras']);
+  this.executeCharTest('𝚮', ['Êta majuscule en gras', 'Êta majuscule en gras', 'Êta majuscule en gras']);
+  this.executeCharTest('𝚯', ['Thêta majuscule en gras', 'Thêta majuscule en gras', 'Thêta majuscule en gras']);
+  this.executeCharTest('𝚰', ['Iota majuscule en gras', 'Iota majuscule en gras', 'Iota majuscule en gras']);
+  this.executeCharTest('𝚱', ['Kappa majuscule en gras', 'Kappa majuscule en gras', 'Kappa majuscule en gras']);
+  this.executeCharTest('𝚲', ['Lambda majuscule en gras', 'Lambda majuscule en gras', 'Lambda majuscule en gras']);
+  this.executeCharTest('𝚳', ['Mu majuscule en gras', 'Mu majuscule en gras', 'Mu majuscule en gras']);
+  this.executeCharTest('𝚴', ['Nu majuscule en gras', 'Nu majuscule en gras', 'Nu majuscule en gras']);
+  this.executeCharTest('𝚵', ['Xi majuscule en gras', 'Xi majuscule en gras', 'Xi majuscule en gras']);
+  this.executeCharTest('𝚶', ['Omicron majuscule en gras', 'Omicron majuscule en gras', 'Omicron majuscule en gras']);
+  this.executeCharTest('𝚷', ['Pi majuscule en gras', 'Pi majuscule en gras', 'Pi majuscule en gras']);
+  this.executeCharTest('𝚸', ['Rhô majuscule en gras', 'Rhô majuscule en gras', 'Rhô majuscule en gras']);
+  this.executeCharTest('𝚺', ['Sigma majuscule en gras', 'Sigma majuscule en gras', 'Sigma majuscule en gras']);
+  this.executeCharTest('𝚻', ['Tau majuscule en gras', 'Tau majuscule en gras', 'Tau majuscule en gras']);
+  this.executeCharTest('𝚼', ['Upsilon majuscule en gras', 'Upsilon majuscule en gras', 'Upsilon majuscule en gras']);
+  this.executeCharTest('𝚽', ['Phi majuscule en gras', 'Phi majuscule en gras', 'Phi majuscule en gras']);
+  this.executeCharTest('𝚾', ['Chi majuscule en gras', 'Chi majuscule en gras', 'Chi majuscule en gras']);
+  this.executeCharTest('𝚿', ['Psi majuscule en gras', 'Psi majuscule en gras', 'Psi majuscule en gras']);
+  this.executeCharTest('𝛀', ['Oméga majuscule en gras', 'Oméga majuscule en gras', 'Oméga majuscule en gras']);
+  this.executeCharTest('𝛂', ['alpha en gras', 'alpha en gras', 'alpha en gras']);
+  this.executeCharTest('𝛃', ['bêta en gras', 'bêta en gras', 'bêta en gras']);
+  this.executeCharTest('𝛄', ['gamma en gras', 'gamma en gras', 'gamma en gras']);
+  this.executeCharTest('𝛅', ['delta en gras', 'delta en gras', 'delta en gras']);
+  this.executeCharTest('𝛆', ['epsilon en gras', 'epsilon en gras', 'epsilon en gras']);
+  this.executeCharTest('𝛇', ['dzêta en gras', 'dzêta en gras', 'dzêta en gras']);
+  this.executeCharTest('𝛈', ['êta en gras', 'êta en gras', 'êta en gras']);
+  this.executeCharTest('𝛉', ['thêta en gras', 'thêta en gras', 'thêta en gras']);
+  this.executeCharTest('𝛊', ['iota en gras', 'iota en gras', 'iota en gras']);
+  this.executeCharTest('𝛋', ['kappa en gras', 'kappa en gras', 'kappa en gras']);
+  this.executeCharTest('𝛌', ['lambda en gras', 'lambda en gras', 'lambda en gras']);
+  this.executeCharTest('𝛍', ['mu en gras', 'mu en gras', 'mu en gras']);
+  this.executeCharTest('𝛎', ['nu en gras', 'nu en gras', 'nu en gras']);
+  this.executeCharTest('𝛏', ['xi en gras', 'xi en gras', 'xi en gras']);
+  this.executeCharTest('𝛐', ['omicron en gras', 'omicron en gras', 'omicron en gras']);
+  this.executeCharTest('𝛑', ['pi en gras', 'pi en gras', 'pi en gras']);
+  this.executeCharTest('𝛒', ['rhô en gras', 'rhô en gras', 'rhô en gras']);
+  this.executeCharTest('𝛓', ['mathématique grasse sigma final', 'mathématique grasse sigma final', 'mathématique grasse sigma final']);
+  this.executeCharTest('𝛔', ['sigma en gras', 'sigma en gras', 'sigma en gras']);
+  this.executeCharTest('𝛕', ['tau en gras', 'tau en gras', 'tau en gras']);
+  this.executeCharTest('𝛖', ['upsilon en gras', 'upsilon en gras', 'upsilon en gras']);
+  this.executeCharTest('𝛗', ['phi en gras', 'phi en gras', 'phi en gras']);
+  this.executeCharTest('𝛘', ['chi en gras', 'chi en gras', 'chi en gras']);
+  this.executeCharTest('𝛙', ['psi en gras', 'psi en gras', 'psi en gras']);
+  this.executeCharTest('𝛚', ['oméga en gras', 'oméga en gras', 'oméga en gras']);
+  this.executeCharTest('𝛢', ['Alpha majuscule en italique', 'Alpha majuscule en italique', 'Alpha majuscule en italique']);
+  this.executeCharTest('𝛣', ['Bêta majuscule en italique', 'Bêta majuscule en italique', 'Bêta majuscule en italique']);
+  this.executeCharTest('𝛤', ['Gamma majuscule en italique', 'Gamma majuscule en italique', 'Gamma majuscule en italique']);
+  this.executeCharTest('𝛥', ['Delta majuscule en italique', 'Delta majuscule en italique', 'Delta majuscule en italique']);
+  this.executeCharTest('𝛦', ['Epsilon majuscule en italique', 'Epsilon majuscule en italique', 'Epsilon majuscule en italique']);
+  this.executeCharTest('𝛧', ['Dzêta majuscule en italique', 'Dzêta majuscule en italique', 'Dzêta majuscule en italique']);
+  this.executeCharTest('𝛨', ['Êta majuscule en italique', 'Êta majuscule en italique', 'Êta majuscule en italique']);
+  this.executeCharTest('𝛩', ['Thêta majuscule en italique', 'Thêta majuscule en italique', 'Thêta majuscule en italique']);
+  this.executeCharTest('𝛪', ['Iota majuscule en italique', 'Iota majuscule en italique', 'Iota majuscule en italique']);
+  this.executeCharTest('𝛫', ['Kappa majuscule en italique', 'Kappa majuscule en italique', 'Kappa majuscule en italique']);
+  this.executeCharTest('𝛬', ['Lambda majuscule en italique', 'Lambda majuscule en italique', 'Lambda majuscule en italique']);
+  this.executeCharTest('𝛭', ['Mu majuscule en italique', 'Mu majuscule en italique', 'Mu majuscule en italique']);
+  this.executeCharTest('𝛮', ['Nu majuscule en italique', 'Nu majuscule en italique', 'Nu majuscule en italique']);
+  this.executeCharTest('𝛯', ['Xi majuscule en italique', 'Xi majuscule en italique', 'Xi majuscule en italique']);
+  this.executeCharTest('𝛰', ['Omicron majuscule en italique', 'Omicron majuscule en italique', 'Omicron majuscule en italique']);
+  this.executeCharTest('𝛱', ['Pi majuscule en italique', 'Pi majuscule en italique', 'Pi majuscule en italique']);
+  this.executeCharTest('𝛲', ['Rhô majuscule en italique', 'Rhô majuscule en italique', 'Rhô majuscule en italique']);
+  this.executeCharTest('𝛴', ['Sigma majuscule en italique', 'Sigma majuscule en italique', 'Sigma majuscule en italique']);
+  this.executeCharTest('𝛵', ['Tau majuscule en italique', 'Tau majuscule en italique', 'Tau majuscule en italique']);
+  this.executeCharTest('𝛶', ['Upsilon majuscule en italique', 'Upsilon majuscule en italique', 'Upsilon majuscule en italique']);
+  this.executeCharTest('𝛷', ['Phi majuscule en italique', 'Phi majuscule en italique', 'Phi majuscule en italique']);
+  this.executeCharTest('𝛸', ['Chi majuscule en italique', 'Chi majuscule en italique', 'Chi majuscule en italique']);
+  this.executeCharTest('𝛹', ['Psi majuscule en italique', 'Psi majuscule en italique', 'Psi majuscule en italique']);
+  this.executeCharTest('𝛺', ['Oméga majuscule en italique', 'Oméga majuscule en italique', 'Oméga majuscule en italique']);
+  this.executeCharTest('𝛼', ['alpha en italique', 'alpha en italique', 'alpha en italique']);
+  this.executeCharTest('𝛽', ['bêta en italique', 'bêta en italique', 'bêta en italique']);
+  this.executeCharTest('𝛾', ['gamma en italique', 'gamma en italique', 'gamma en italique']);
+  this.executeCharTest('𝛿', ['delta en italique', 'delta en italique', 'delta en italique']);
+  this.executeCharTest('𝜀', ['epsilon en italique', 'epsilon en italique', 'epsilon en italique']);
+  this.executeCharTest('𝜁', ['dzêta en italique', 'dzêta en italique', 'dzêta en italique']);
+  this.executeCharTest('𝜂', ['êta en italique', 'êta en italique', 'êta en italique']);
+  this.executeCharTest('𝜃', ['thêta en italique', 'thêta en italique', 'thêta en italique']);
+  this.executeCharTest('𝜄', ['iota en italique', 'iota en italique', 'iota en italique']);
+  this.executeCharTest('𝜅', ['kappa en italique', 'kappa en italique', 'kappa en italique']);
+  this.executeCharTest('𝜆', ['lambda en italique', 'lambda en italique', 'lambda en italique']);
+  this.executeCharTest('𝜇', ['mu en italique', 'mu en italique', 'mu en italique']);
+  this.executeCharTest('𝜈', ['nu en italique', 'nu en italique', 'nu en italique']);
+  this.executeCharTest('𝜉', ['xi en italique', 'xi en italique', 'xi en italique']);
+  this.executeCharTest('𝜊', ['omicron en italique', 'omicron en italique', 'omicron en italique']);
+  this.executeCharTest('𝜋', ['pi en italique', 'pi en italique', 'pi en italique']);
+  this.executeCharTest('𝜌', ['rhô en italique', 'rhô en italique', 'rhô en italique']);
+  this.executeCharTest('𝜍', ['mathématique italique sigma final', 'mathématique italique sigma final', 'mathématique italique sigma final']);
+  this.executeCharTest('𝜎', ['sigma en italique', 'sigma en italique', 'sigma en italique']);
+  this.executeCharTest('𝜏', ['tau en italique', 'tau en italique', 'tau en italique']);
+  this.executeCharTest('𝜐', ['upsilon en italique', 'upsilon en italique', 'upsilon en italique']);
+  this.executeCharTest('𝜑', ['phi en italique', 'phi en italique', 'phi en italique']);
+  this.executeCharTest('𝜒', ['chi en italique', 'chi en italique', 'chi en italique']);
+  this.executeCharTest('𝜓', ['psi en italique', 'psi en italique', 'psi en italique']);
+  this.executeCharTest('𝜔', ['oméga en italique', 'oméga en italique', 'oméga en italique']);
+  this.executeCharTest('𝜜', ['Alpha majuscule en italique gras', 'Alpha majuscule en italique gras', 'Alpha majuscule en italique gras']);
+  this.executeCharTest('𝜝', ['Bêta majuscule en italique gras', 'Bêta majuscule en italique gras', 'Bêta majuscule en italique gras']);
+  this.executeCharTest('𝜞', ['Gamma majuscule en italique gras', 'Gamma majuscule en italique gras', 'Gamma majuscule en italique gras']);
+  this.executeCharTest('𝜟', ['Delta majuscule en italique gras', 'Delta majuscule en italique gras', 'Delta majuscule en italique gras']);
+  this.executeCharTest('𝜠', ['Epsilon majuscule en italique gras', 'Epsilon majuscule en italique gras', 'Epsilon majuscule en italique gras']);
+  this.executeCharTest('𝜡', ['Dzêta majuscule en italique gras', 'Dzêta majuscule en italique gras', 'Dzêta majuscule en italique gras']);
+  this.executeCharTest('𝜢', ['Êta majuscule en italique gras', 'Êta majuscule en italique gras', 'Êta majuscule en italique gras']);
+  this.executeCharTest('𝜣', ['Thêta majuscule en italique gras', 'Thêta majuscule en italique gras', 'Thêta majuscule en italique gras']);
+  this.executeCharTest('𝜤', ['Iota majuscule en italique gras', 'Iota majuscule en italique gras', 'Iota majuscule en italique gras']);
+  this.executeCharTest('𝜥', ['Kappa majuscule en italique gras', 'Kappa majuscule en italique gras', 'Kappa majuscule en italique gras']);
+  this.executeCharTest('𝜦', ['Lambda majuscule en italique gras', 'Lambda majuscule en italique gras', 'Lambda majuscule en italique gras']);
+  this.executeCharTest('𝜧', ['Mu majuscule en italique gras', 'Mu majuscule en italique gras', 'Mu majuscule en italique gras']);
+  this.executeCharTest('𝜨', ['Nu majuscule en italique gras', 'Nu majuscule en italique gras', 'Nu majuscule en italique gras']);
+  this.executeCharTest('𝜩', ['Xi majuscule en italique gras', 'Xi majuscule en italique gras', 'Xi majuscule en italique gras']);
+  this.executeCharTest('𝜪', ['Omicron majuscule en italique gras', 'Omicron majuscule en italique gras', 'Omicron majuscule en italique gras']);
+  this.executeCharTest('𝜫', ['Pi majuscule en italique gras', 'Pi majuscule en italique gras', 'Pi majuscule en italique gras']);
+  this.executeCharTest('𝜬', ['Rhô majuscule en italique gras', 'Rhô majuscule en italique gras', 'Rhô majuscule en italique gras']);
+  this.executeCharTest('𝜮', ['Sigma majuscule en italique gras', 'Sigma majuscule en italique gras', 'Sigma majuscule en italique gras']);
+  this.executeCharTest('𝜯', ['Tau majuscule en italique gras', 'Tau majuscule en italique gras', 'Tau majuscule en italique gras']);
+  this.executeCharTest('𝜰', ['Upsilon majuscule en italique gras', 'Upsilon majuscule en italique gras', 'Upsilon majuscule en italique gras']);
+  this.executeCharTest('𝜱', ['Phi majuscule en italique gras', 'Phi majuscule en italique gras', 'Phi majuscule en italique gras']);
+  this.executeCharTest('𝜲', ['Chi majuscule en italique gras', 'Chi majuscule en italique gras', 'Chi majuscule en italique gras']);
+  this.executeCharTest('𝜳', ['Psi majuscule en italique gras', 'Psi majuscule en italique gras', 'Psi majuscule en italique gras']);
+  this.executeCharTest('𝜴', ['Oméga majuscule en italique gras', 'Oméga majuscule en italique gras', 'Oméga majuscule en italique gras']);
+  this.executeCharTest('𝜶', ['alpha en italique gras', 'alpha en italique gras', 'alpha en italique gras']);
+  this.executeCharTest('𝜷', ['bêta en italique gras', 'bêta en italique gras', 'bêta en italique gras']);
+  this.executeCharTest('𝜸', ['gamma en italique gras', 'gamma en italique gras', 'gamma en italique gras']);
+  this.executeCharTest('𝜹', ['delta en italique gras', 'delta en italique gras', 'delta en italique gras']);
+  this.executeCharTest('𝜺', ['epsilon en italique gras', 'epsilon en italique gras', 'epsilon en italique gras']);
+  this.executeCharTest('𝜻', ['dzêta en italique gras', 'dzêta en italique gras', 'dzêta en italique gras']);
+  this.executeCharTest('𝜼', ['êta en italique gras', 'êta en italique gras', 'êta en italique gras']);
+  this.executeCharTest('𝜽', ['thêta en italique gras', 'thêta en italique gras', 'thêta en italique gras']);
+  this.executeCharTest('𝜾', ['iota en italique gras', 'iota en italique gras', 'iota en italique gras']);
+  this.executeCharTest('𝜿', ['kappa en italique gras', 'kappa en italique gras', 'kappa en italique gras']);
+  this.executeCharTest('𝝀', ['lambda en italique gras', 'lambda en italique gras', 'lambda en italique gras']);
+  this.executeCharTest('𝝁', ['mu en italique gras', 'mu en italique gras', 'mu en italique gras']);
+  this.executeCharTest('𝝂', ['nu en italique gras', 'nu en italique gras', 'nu en italique gras']);
+  this.executeCharTest('𝝃', ['xi en italique gras', 'xi en italique gras', 'xi en italique gras']);
+  this.executeCharTest('𝝄', ['omicron en italique gras', 'omicron en italique gras', 'omicron en italique gras']);
+  this.executeCharTest('𝝅', ['pi en italique gras', 'pi en italique gras', 'pi en italique gras']);
+  this.executeCharTest('𝝆', ['rhô en italique gras', 'rhô en italique gras', 'rhô en italique gras']);
+  this.executeCharTest('𝝇', ['mathématique italique grasse sigma final', 'mathématique italique grasse sigma final', 'mathématique italique grasse sigma final']);
+  this.executeCharTest('𝝈', ['sigma en italique gras', 'sigma en italique gras', 'sigma en italique gras']);
+  this.executeCharTest('𝝉', ['tau en italique gras', 'tau en italique gras', 'tau en italique gras']);
+  this.executeCharTest('𝝊', ['upsilon en italique gras', 'upsilon en italique gras', 'upsilon en italique gras']);
+  this.executeCharTest('𝝋', ['phi en italique gras', 'phi en italique gras', 'phi en italique gras']);
+  this.executeCharTest('𝝌', ['chi en italique gras', 'chi en italique gras', 'chi en italique gras']);
+  this.executeCharTest('𝝍', ['psi en italique gras', 'psi en italique gras', 'psi en italique gras']);
+  this.executeCharTest('𝝎', ['oméga en italique gras', 'oméga en italique gras', 'oméga en italique gras']);
+  this.executeCharTest('𝝖', ['Alpha majuscule en sans empattement gras', 'Alpha majuscule en sans empattement gras', 'Alpha majuscule en sans empattement gras']);
+  this.executeCharTest('𝝗', ['Bêta majuscule en sans empattement gras', 'Bêta majuscule en sans empattement gras', 'Bêta majuscule en sans empattement gras']);
+  this.executeCharTest('𝝘', ['Gamma majuscule en sans empattement gras', 'Gamma majuscule en sans empattement gras', 'Gamma majuscule en sans empattement gras']);
+  this.executeCharTest('𝝙', ['Delta majuscule en sans empattement gras', 'Delta majuscule en sans empattement gras', 'Delta majuscule en sans empattement gras']);
+  this.executeCharTest('𝝚', ['Epsilon majuscule en sans empattement gras', 'Epsilon majuscule en sans empattement gras', 'Epsilon majuscule en sans empattement gras']);
+  this.executeCharTest('𝝛', ['Dzêta majuscule en sans empattement gras', 'Dzêta majuscule en sans empattement gras', 'Dzêta majuscule en sans empattement gras']);
+  this.executeCharTest('𝝜', ['Êta majuscule en sans empattement gras', 'Êta majuscule en sans empattement gras', 'Êta majuscule en sans empattement gras']);
+  this.executeCharTest('𝝝', ['Thêta majuscule en sans empattement gras', 'Thêta majuscule en sans empattement gras', 'Thêta majuscule en sans empattement gras']);
+  this.executeCharTest('𝝞', ['Iota majuscule en sans empattement gras', 'Iota majuscule en sans empattement gras', 'Iota majuscule en sans empattement gras']);
+  this.executeCharTest('𝝟', ['Kappa majuscule en sans empattement gras', 'Kappa majuscule en sans empattement gras', 'Kappa majuscule en sans empattement gras']);
+  this.executeCharTest('𝝠', ['Lambda majuscule en sans empattement gras', 'Lambda majuscule en sans empattement gras', 'Lambda majuscule en sans empattement gras']);
+  this.executeCharTest('𝝡', ['Mu majuscule en sans empattement gras', 'Mu majuscule en sans empattement gras', 'Mu majuscule en sans empattement gras']);
+  this.executeCharTest('𝝢', ['Nu majuscule en sans empattement gras', 'Nu majuscule en sans empattement gras', 'Nu majuscule en sans empattement gras']);
+  this.executeCharTest('𝝣', ['Xi majuscule en sans empattement gras', 'Xi majuscule en sans empattement gras', 'Xi majuscule en sans empattement gras']);
+  this.executeCharTest('𝝤', ['Omicron majuscule en sans empattement gras', 'Omicron majuscule en sans empattement gras', 'Omicron majuscule en sans empattement gras']);
+  this.executeCharTest('𝝥', ['Pi majuscule en sans empattement gras', 'Pi majuscule en sans empattement gras', 'Pi majuscule en sans empattement gras']);
+  this.executeCharTest('𝝦', ['Rhô majuscule en sans empattement gras', 'Rhô majuscule en sans empattement gras', 'Rhô majuscule en sans empattement gras']);
+  this.executeCharTest('𝝨', ['Sigma majuscule en sans empattement gras', 'Sigma majuscule en sans empattement gras', 'Sigma majuscule en sans empattement gras']);
+  this.executeCharTest('𝝩', ['Tau majuscule en sans empattement gras', 'Tau majuscule en sans empattement gras', 'Tau majuscule en sans empattement gras']);
+  this.executeCharTest('𝝪', ['Upsilon majuscule en sans empattement gras', 'Upsilon majuscule en sans empattement gras', 'Upsilon majuscule en sans empattement gras']);
+  this.executeCharTest('𝝫', ['Phi majuscule en sans empattement gras', 'Phi majuscule en sans empattement gras', 'Phi majuscule en sans empattement gras']);
+  this.executeCharTest('𝝬', ['Chi majuscule en sans empattement gras', 'Chi majuscule en sans empattement gras', 'Chi majuscule en sans empattement gras']);
+  this.executeCharTest('𝝭', ['Psi majuscule en sans empattement gras', 'Psi majuscule en sans empattement gras', 'Psi majuscule en sans empattement gras']);
+  this.executeCharTest('𝝮', ['Oméga majuscule en sans empattement gras', 'Oméga majuscule en sans empattement gras', 'Oméga majuscule en sans empattement gras']);
+  this.executeCharTest('𝝰', ['alpha en sans empattement gras', 'alpha en sans empattement gras', 'alpha en sans empattement gras']);
+  this.executeCharTest('𝝱', ['bêta en sans empattement gras', 'bêta en sans empattement gras', 'bêta en sans empattement gras']);
+  this.executeCharTest('𝝲', ['gamma en sans empattement gras', 'gamma en sans empattement gras', 'gamma en sans empattement gras']);
+  this.executeCharTest('𝝳', ['delta en sans empattement gras', 'delta en sans empattement gras', 'delta en sans empattement gras']);
+  this.executeCharTest('𝝴', ['epsilon en sans empattement gras', 'epsilon en sans empattement gras', 'epsilon en sans empattement gras']);
+  this.executeCharTest('𝝵', ['dzêta en sans empattement gras', 'dzêta en sans empattement gras', 'dzêta en sans empattement gras']);
+  this.executeCharTest('𝝶', ['êta en sans empattement gras', 'êta en sans empattement gras', 'êta en sans empattement gras']);
+  this.executeCharTest('𝝷', ['thêta en sans empattement gras', 'thêta en sans empattement gras', 'thêta en sans empattement gras']);
+  this.executeCharTest('𝝸', ['iota en sans empattement gras', 'iota en sans empattement gras', 'iota en sans empattement gras']);
+  this.executeCharTest('𝝹', ['kappa en sans empattement gras', 'kappa en sans empattement gras', 'kappa en sans empattement gras']);
+  this.executeCharTest('𝝺', ['lambda en sans empattement gras', 'lambda en sans empattement gras', 'lambda en sans empattement gras']);
+  this.executeCharTest('𝝻', ['mu en sans empattement gras', 'mu en sans empattement gras', 'mu en sans empattement gras']);
+  this.executeCharTest('𝝼', ['nu en sans empattement gras', 'nu en sans empattement gras', 'nu en sans empattement gras']);
+  this.executeCharTest('𝝽', ['xi en sans empattement gras', 'xi en sans empattement gras', 'xi en sans empattement gras']);
+  this.executeCharTest('𝝾', ['omicron en sans empattement gras', 'omicron en sans empattement gras', 'omicron en sans empattement gras']);
+  this.executeCharTest('𝝿', ['pi en sans empattement gras', 'pi en sans empattement gras', 'pi en sans empattement gras']);
+  this.executeCharTest('𝞀', ['rhô en sans empattement gras', 'rhô en sans empattement gras', 'rhô en sans empattement gras']);
+  this.executeCharTest('𝞁', ['mathématique grasse sans empattement sigma final', 'mathématique grasse sans empattement sigma final', 'mathématique grasse sans empattement sigma final']);
+  this.executeCharTest('𝞂', ['sigma en sans empattement gras', 'sigma en sans empattement gras', 'sigma en sans empattement gras']);
+  this.executeCharTest('𝞃', ['tau en sans empattement gras', 'tau en sans empattement gras', 'tau en sans empattement gras']);
+  this.executeCharTest('𝞄', ['upsilon en sans empattement gras', 'upsilon en sans empattement gras', 'upsilon en sans empattement gras']);
+  this.executeCharTest('𝞅', ['phi en sans empattement gras', 'phi en sans empattement gras', 'phi en sans empattement gras']);
+  this.executeCharTest('𝞆', ['chi en sans empattement gras', 'chi en sans empattement gras', 'chi en sans empattement gras']);
+  this.executeCharTest('𝞇', ['psi en sans empattement gras', 'psi en sans empattement gras', 'psi en sans empattement gras']);
+  this.executeCharTest('𝞈', ['oméga en sans empattement gras', 'oméga en sans empattement gras', 'oméga en sans empattement gras']);
+  this.executeCharTest('𝞐', ['Alpha majuscule en sans empattement italique gras', 'Alpha majuscule en sans empattement italique gras', 'Alpha majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞑', ['Bêta majuscule en sans empattement italique gras', 'Bêta majuscule en sans empattement italique gras', 'Bêta majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞒', ['Gamma majuscule en sans empattement italique gras', 'Gamma majuscule en sans empattement italique gras', 'Gamma majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞓', ['Delta majuscule en sans empattement italique gras', 'Delta majuscule en sans empattement italique gras', 'Delta majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞔', ['Epsilon majuscule en sans empattement italique gras', 'Epsilon majuscule en sans empattement italique gras', 'Epsilon majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞕', ['Dzêta majuscule en sans empattement italique gras', 'Dzêta majuscule en sans empattement italique gras', 'Dzêta majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞖', ['Êta majuscule en sans empattement italique gras', 'Êta majuscule en sans empattement italique gras', 'Êta majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞗', ['Thêta majuscule en sans empattement italique gras', 'Thêta majuscule en sans empattement italique gras', 'Thêta majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞘', ['Iota majuscule en sans empattement italique gras', 'Iota majuscule en sans empattement italique gras', 'Iota majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞙', ['Kappa majuscule en sans empattement italique gras', 'Kappa majuscule en sans empattement italique gras', 'Kappa majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞚', ['Lambda majuscule en sans empattement italique gras', 'Lambda majuscule en sans empattement italique gras', 'Lambda majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞛', ['Mu majuscule en sans empattement italique gras', 'Mu majuscule en sans empattement italique gras', 'Mu majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞜', ['Nu majuscule en sans empattement italique gras', 'Nu majuscule en sans empattement italique gras', 'Nu majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞝', ['Xi majuscule en sans empattement italique gras', 'Xi majuscule en sans empattement italique gras', 'Xi majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞞', ['Omicron majuscule en sans empattement italique gras', 'Omicron majuscule en sans empattement italique gras', 'Omicron majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞟', ['Pi majuscule en sans empattement italique gras', 'Pi majuscule en sans empattement italique gras', 'Pi majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞠', ['Rhô majuscule en sans empattement italique gras', 'Rhô majuscule en sans empattement italique gras', 'Rhô majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞢', ['Sigma majuscule en sans empattement italique gras', 'Sigma majuscule en sans empattement italique gras', 'Sigma majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞣', ['Tau majuscule en sans empattement italique gras', 'Tau majuscule en sans empattement italique gras', 'Tau majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞤', ['Upsilon majuscule en sans empattement italique gras', 'Upsilon majuscule en sans empattement italique gras', 'Upsilon majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞥', ['Phi majuscule en sans empattement italique gras', 'Phi majuscule en sans empattement italique gras', 'Phi majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞦', ['Chi majuscule en sans empattement italique gras', 'Chi majuscule en sans empattement italique gras', 'Chi majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞧', ['Psi majuscule en sans empattement italique gras', 'Psi majuscule en sans empattement italique gras', 'Psi majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞨', ['Oméga majuscule en sans empattement italique gras', 'Oméga majuscule en sans empattement italique gras', 'Oméga majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞪', ['alpha en sans empattement italique gras', 'alpha en sans empattement italique gras', 'alpha en sans empattement italique gras']);
+  this.executeCharTest('𝞫', ['bêta en sans empattement italique gras', 'bêta en sans empattement italique gras', 'bêta en sans empattement italique gras']);
+  this.executeCharTest('𝞬', ['gamma en sans empattement italique gras', 'gamma en sans empattement italique gras', 'gamma en sans empattement italique gras']);
+  this.executeCharTest('𝞭', ['delta en sans empattement italique gras', 'delta en sans empattement italique gras', 'delta en sans empattement italique gras']);
+  this.executeCharTest('𝞮', ['epsilon en sans empattement italique gras', 'epsilon en sans empattement italique gras', 'epsilon en sans empattement italique gras']);
+  this.executeCharTest('𝞯', ['dzêta en sans empattement italique gras', 'dzêta en sans empattement italique gras', 'dzêta en sans empattement italique gras']);
+  this.executeCharTest('𝞰', ['êta en sans empattement italique gras', 'êta en sans empattement italique gras', 'êta en sans empattement italique gras']);
+  this.executeCharTest('𝞱', ['thêta en sans empattement italique gras', 'thêta en sans empattement italique gras', 'thêta en sans empattement italique gras']);
+  this.executeCharTest('𝞲', ['iota en sans empattement italique gras', 'iota en sans empattement italique gras', 'iota en sans empattement italique gras']);
+  this.executeCharTest('𝞳', ['kappa en sans empattement italique gras', 'kappa en sans empattement italique gras', 'kappa en sans empattement italique gras']);
+  this.executeCharTest('𝞴', ['lambda en sans empattement italique gras', 'lambda en sans empattement italique gras', 'lambda en sans empattement italique gras']);
+  this.executeCharTest('𝞵', ['mu en sans empattement italique gras', 'mu en sans empattement italique gras', 'mu en sans empattement italique gras']);
+  this.executeCharTest('𝞶', ['nu en sans empattement italique gras', 'nu en sans empattement italique gras', 'nu en sans empattement italique gras']);
+  this.executeCharTest('𝞷', ['xi en sans empattement italique gras', 'xi en sans empattement italique gras', 'xi en sans empattement italique gras']);
+  this.executeCharTest('𝞸', ['omicron en sans empattement italique gras', 'omicron en sans empattement italique gras', 'omicron en sans empattement italique gras']);
+  this.executeCharTest('𝞹', ['pi en sans empattement italique gras', 'pi en sans empattement italique gras', 'pi en sans empattement italique gras']);
+  this.executeCharTest('𝞺', ['rhô en sans empattement italique gras', 'rhô en sans empattement italique gras', 'rhô en sans empattement italique gras']);
+  this.executeCharTest('𝞻', ['mathématique italique grasse sans empattement sigma final', 'mathématique italique grasse sans empattement sigma final', 'mathématique italique grasse sans empattement sigma final']);
+  this.executeCharTest('𝞼', ['sigma en sans empattement italique gras', 'sigma en sans empattement italique gras', 'sigma en sans empattement italique gras']);
+  this.executeCharTest('𝞽', ['tau en sans empattement italique gras', 'tau en sans empattement italique gras', 'tau en sans empattement italique gras']);
+  this.executeCharTest('𝞾', ['upsilon en sans empattement italique gras', 'upsilon en sans empattement italique gras', 'upsilon en sans empattement italique gras']);
+  this.executeCharTest('𝞿', ['phi en sans empattement italique gras', 'phi en sans empattement italique gras', 'phi en sans empattement italique gras']);
+  this.executeCharTest('𝟀', ['chi en sans empattement italique gras', 'chi en sans empattement italique gras', 'chi en sans empattement italique gras']);
+  this.executeCharTest('𝟁', ['psi en sans empattement italique gras', 'psi en sans empattement italique gras', 'psi en sans empattement italique gras']);
+  this.executeCharTest('𝟂', ['oméga en sans empattement italique gras', 'oméga en sans empattement italique gras', 'oméga en sans empattement italique gras']);
+  this.executeCharTest('ℵ', ['alef', 'alef', 'alef']);
+  this.executeCharTest('ℶ', ['bèt', 'bèt', 'bèt']);
+  this.executeCharTest('ℷ', ['guimel', 'guimel', 'guimel']);
+  this.executeCharTest('ℸ', ['dalèt', 'dalèt', 'dalèt']);
+  this.executeCharTest('ǖ', ['u double overdot overbar', 'u double overdot overbar', 'u double overdot overbar']);
+  this.executeCharTest('ǘ', ['u double overdot acute', 'u double overdot acute', 'u double overdot acute']);
+  this.executeCharTest('ǚ', ['u double overdot caron', 'u double overdot caron', 'u double overdot caron']);
+  this.executeCharTest('ǜ', ['u double overdot grave', 'u double overdot grave', 'u double overdot grave']);
+  this.executeCharTest('ǟ', ['a double overdot overbar', 'a double overdot overbar', 'a double overdot overbar']);
+  this.executeCharTest('ǡ', ['a overdot overbar', 'a overdot overbar', 'a overdot overbar']);
+  this.executeCharTest('ǭ', ['o ogonek overbar', 'o ogonek overbar', 'o ogonek overbar']);
+  this.executeCharTest('ǻ', ['a ring above acute', 'a ring above acute', 'a ring above acute']);
+  this.executeCharTest('ȫ', ['o double overdot overbar', 'o double overdot overbar', 'o double overdot overbar']);
+  this.executeCharTest('ȭ', ['o tilde overbar', 'o tilde overbar', 'o tilde overbar']);
+  this.executeCharTest('ȱ', ['o overdot overbar', 'o overdot overbar', 'o overdot overbar']);
+  this.executeCharTest('ḉ', ['c cédille et accent aigu', 'c cédille et accent aigu', 'c cédille et accent aigu']);
+  this.executeCharTest('ḕ', ['e macron et accent grave', 'e macron et accent grave', 'e macron et accent grave']);
+  this.executeCharTest('ḗ', ['e macron et accent aigu', 'e macron et accent aigu', 'e macron et accent aigu']);
+  this.executeCharTest('ḝ', ['e cédille et brève', 'e cédille et brève', 'e cédille et brève']);
+  this.executeCharTest('ḯ', ['i tréma et accent aigu', 'i tréma et accent aigu', 'i tréma et accent aigu']);
+  this.executeCharTest('ḹ', ['l point souscrit et macron', 'l point souscrit et macron', 'l point souscrit et macron']);
+  this.executeCharTest('ṍ', ['o tilde et accent aigu', 'o tilde et accent aigu', 'o tilde et accent aigu']);
+  this.executeCharTest('ṏ', ['o tilde et tréma', 'o tilde et tréma', 'o tilde et tréma']);
+  this.executeCharTest('ṑ', ['o macron et accent grave', 'o macron et accent grave', 'o macron et accent grave']);
+  this.executeCharTest('ṓ', ['o macron et accent aigu', 'o macron et accent aigu', 'o macron et accent aigu']);
+  this.executeCharTest('ṝ', ['r point souscrit et macron', 'r point souscrit et macron', 'r point souscrit et macron']);
+  this.executeCharTest('ṥ', ['s accent aigu et point en chef', 's accent aigu et point en chef', 's accent aigu et point en chef']);
+  this.executeCharTest('ṧ', ['s caron et point en chef', 's caron et point en chef', 's caron et point en chef']);
+  this.executeCharTest('ṩ', ['s point souscrit et point en chef', 's point souscrit et point en chef', 's point souscrit et point en chef']);
+  this.executeCharTest('ṹ', ['u tilde et accent aigu', 'u tilde et accent aigu', 'u tilde et accent aigu']);
+  this.executeCharTest('ṻ', ['u macron et tréma', 'u macron et tréma', 'u macron et tréma']);
+  this.executeCharTest('ấ', ['a accent circonflexe et accent aigu', 'a accent circonflexe et accent aigu', 'a accent circonflexe et accent aigu']);
+  this.executeCharTest('ầ', ['a accent circonflexe et accent grave', 'a accent circonflexe et accent grave', 'a accent circonflexe et accent grave']);
+  this.executeCharTest('ẩ', ['a accent circonflexe et crochet en chef', 'a accent circonflexe et crochet en chef', 'a accent circonflexe et crochet en chef']);
+  this.executeCharTest('ẫ', ['a accent circonflexe et tilde', 'a accent circonflexe et tilde', 'a accent circonflexe et tilde']);
+  this.executeCharTest('ậ', ['a accent circonflexe et point souscrit', 'a accent circonflexe et point souscrit', 'a accent circonflexe et point souscrit']);
+  this.executeCharTest('ắ', ['a brève et accent aigu', 'a brève et accent aigu', 'a brève et accent aigu']);
+  this.executeCharTest('ằ', ['a brève et accent grave', 'a brève et accent grave', 'a brève et accent grave']);
+  this.executeCharTest('ẳ', ['a brève et crochet en chef', 'a brève et crochet en chef', 'a brève et crochet en chef']);
+  this.executeCharTest('ẵ', ['a brève et tilde', 'a brève et tilde', 'a brève et tilde']);
+  this.executeCharTest('ặ', ['a brève et point souscrit', 'a brève et point souscrit', 'a brève et point souscrit']);
+  this.executeCharTest('ế', ['e accent circonflexe et accent aigu', 'e accent circonflexe et accent aigu', 'e accent circonflexe et accent aigu']);
+  this.executeCharTest('ề', ['e accent circonflexe et accent grave', 'e accent circonflexe et accent grave', 'e accent circonflexe et accent grave']);
+  this.executeCharTest('ể', ['e accent circonflexe et crochet en chef', 'e accent circonflexe et crochet en chef', 'e accent circonflexe et crochet en chef']);
+  this.executeCharTest('ễ', ['e accent circonflexe et tilde', 'e accent circonflexe et tilde', 'e accent circonflexe et tilde']);
+  this.executeCharTest('ệ', ['e accent circonflexe et point souscrit', 'e accent circonflexe et point souscrit', 'e accent circonflexe et point souscrit']);
+  this.executeCharTest('ố', ['o accent circonflexe et accent aigu', 'o accent circonflexe et accent aigu', 'o accent circonflexe et accent aigu']);
+  this.executeCharTest('ồ', ['o accent circonflexe et accent grave', 'o accent circonflexe et accent grave', 'o accent circonflexe et accent grave']);
+  this.executeCharTest('ổ', ['o accent circonflexe et crochet en chef', 'o accent circonflexe et crochet en chef', 'o accent circonflexe et crochet en chef']);
+  this.executeCharTest('ỗ', ['o accent circonflexe et tilde', 'o accent circonflexe et tilde', 'o accent circonflexe et tilde']);
+  this.executeCharTest('ộ', ['o accent circonflexe et point souscrit', 'o accent circonflexe et point souscrit', 'o accent circonflexe et point souscrit']);
+  this.executeCharTest('ớ', ['o cornu accent aigu', 'o cornu accent aigu', 'o cornu accent aigu']);
+  this.executeCharTest('ờ', ['o cornu accent grave', 'o cornu accent grave', 'o cornu accent grave']);
+  this.executeCharTest('ở', ['o cornu crochet en chef', 'o cornu crochet en chef', 'o cornu crochet en chef']);
+  this.executeCharTest('ỡ', ['o cornu tilde', 'o cornu tilde', 'o cornu tilde']);
+  this.executeCharTest('ợ', ['o cornu point souscrit', 'o cornu point souscrit', 'o cornu point souscrit']);
+  this.executeCharTest('ứ', ['u cornu accent aigu', 'u cornu accent aigu', 'u cornu accent aigu']);
+  this.executeCharTest('ừ', ['u cornu accent grave', 'u cornu accent grave', 'u cornu accent grave']);
+  this.executeCharTest('ử', ['u cornu crochet en chef', 'u cornu crochet en chef', 'u cornu crochet en chef']);
+  this.executeCharTest('ữ', ['u cornu tilde', 'u cornu tilde', 'u cornu tilde']);
+  this.executeCharTest('ự', ['u cornu point souscrit', 'u cornu point souscrit', 'u cornu point souscrit']);
+  this.executeCharTest('a', ['a', 'a', 'a']);
+  this.executeCharTest('b', ['b', 'b', 'b']);
+  this.executeCharTest('c', ['c', 'c', 'c']);
+  this.executeCharTest('d', ['d', 'd', 'd']);
+  this.executeCharTest('e', ['e', 'e', 'e']);
+  this.executeCharTest('f', ['f', 'f', 'f']);
+  this.executeCharTest('g', ['g', 'g', 'g']);
+  this.executeCharTest('h', ['h', 'h', 'h']);
+  this.executeCharTest('i', ['i', 'i', 'i']);
+  this.executeCharTest('j', ['j', 'j', 'j']);
+  this.executeCharTest('k', ['k', 'k', 'k']);
+  this.executeCharTest('l', ['l', 'l', 'l']);
+  this.executeCharTest('m', ['m', 'm', 'm']);
+  this.executeCharTest('n', ['n', 'n', 'n']);
+  this.executeCharTest('o', ['o', 'o', 'o']);
+  this.executeCharTest('p', ['p', 'p', 'p']);
+  this.executeCharTest('q', ['q', 'q', 'q']);
+  this.executeCharTest('r', ['r', 'r', 'r']);
+  this.executeCharTest('s', ['s', 's', 's']);
+  this.executeCharTest('t', ['t', 't', 't']);
+  this.executeCharTest('u', ['u', 'u', 'u']);
+  this.executeCharTest('v', ['v', 'v', 'v']);
+  this.executeCharTest('w', ['w', 'w', 'w']);
+  this.executeCharTest('x', ['x', 'x', 'x']);
+  this.executeCharTest('y', ['y', 'y', 'y']);
+  this.executeCharTest('z', ['z', 'z', 'z']);
+  this.executeCharTest('ａ', ['a', 'a', 'a']);
+  this.executeCharTest('ｂ', ['b', 'b', 'b']);
+  this.executeCharTest('ｃ', ['c', 'c', 'c']);
+  this.executeCharTest('ｄ', ['d', 'd', 'd']);
+  this.executeCharTest('ｅ', ['e', 'e', 'e']);
+  this.executeCharTest('ｆ', ['f', 'f', 'f']);
+  this.executeCharTest('ｇ', ['g', 'g', 'g']);
+  this.executeCharTest('ｈ', ['h', 'h', 'h']);
+  this.executeCharTest('ｉ', ['i', 'i', 'i']);
+  this.executeCharTest('ｊ', ['j', 'j', 'j']);
+  this.executeCharTest('ｋ', ['k', 'k', 'k']);
+  this.executeCharTest('ｌ', ['l', 'l', 'l']);
+  this.executeCharTest('ｍ', ['m', 'm', 'm']);
+  this.executeCharTest('ｎ', ['n', 'n', 'n']);
+  this.executeCharTest('ｏ', ['o', 'o', 'o']);
+  this.executeCharTest('ｐ', ['p', 'p', 'p']);
+  this.executeCharTest('ｑ', ['q', 'q', 'q']);
+  this.executeCharTest('ｒ', ['r', 'r', 'r']);
+  this.executeCharTest('ｓ', ['s', 's', 's']);
+  this.executeCharTest('ｔ', ['t', 't', 't']);
+  this.executeCharTest('ｕ', ['u', 'u', 'u']);
+  this.executeCharTest('ｖ', ['v', 'v', 'v']);
+  this.executeCharTest('ｗ', ['w', 'w', 'w']);
+  this.executeCharTest('ｘ', ['x', 'x', 'x']);
+  this.executeCharTest('ｙ', ['y', 'y', 'y']);
+  this.executeCharTest('ｚ', ['z', 'z', 'z']);
+  this.executeCharTest('ø', ['o barré', 'o barré', 'o barré']);
+  this.executeCharTest('đ', ['d barré', 'd barré', 'd barré']);
+  this.executeCharTest('ħ', ['h barré', 'h barré', 'h barré']);
+  this.executeCharTest('ł', ['l barré', 'l barré', 'l barré']);
+  this.executeCharTest('ŧ', ['t barré', 't barré', 't barré']);
+  this.executeCharTest('ƀ', ['b with stroke', 'b with stroke', 'b with stroke']);
+  this.executeCharTest('ƛ', ['lambda barré', 'lambda barré', 'lambda barré']);
+  this.executeCharTest('ƶ', ['z with stroke', 'z with stroke', 'z with stroke']);
+  this.executeCharTest('ƾ', ['latin letter inverted glottal stop with stroke', 'latin letter inverted glottal stop with stroke', 'latin letter inverted glottal stop with stroke']);
+  this.executeCharTest('ǥ', ['g with stroke', 'g with stroke', 'g with stroke']);
+  this.executeCharTest('ǿ', ['o with stroke and acute', 'o with stroke and acute', 'o with stroke and acute']);
+  this.executeCharTest('ȼ', ['c with stroke', 'c with stroke', 'c with stroke']);
+  this.executeCharTest('ɇ', ['e with stroke', 'e with stroke', 'e with stroke']);
+  this.executeCharTest('ɉ', ['j with stroke', 'j with stroke', 'j with stroke']);
+  this.executeCharTest('ɍ', ['r with stroke', 'r with stroke', 'r with stroke']);
+  this.executeCharTest('ɏ', ['y with stroke', 'y with stroke', 'y with stroke']);
+  this.executeCharTest('ɟ', ['dotless j with stroke', 'dotless j with stroke', 'dotless j with stroke']);
+  this.executeCharTest('ɨ', ['i with stroke', 'i with stroke', 'i with stroke']);
+  this.executeCharTest('ʄ', ['dotless j with stroke and hook', 'dotless j with stroke and hook', 'dotless j with stroke and hook']);
+  this.executeCharTest('ʡ', ['latin letter glottal stop with stroke', 'latin letter glottal stop with stroke', 'latin letter glottal stop with stroke']);
+  this.executeCharTest('ʢ', ['latin letter reversed glottal stop with stroke', 'latin letter reversed glottal stop with stroke', 'latin letter reversed glottal stop with stroke']);
+  this.executeCharTest('ᴓ', ['sideways o with stroke', 'sideways o with stroke', 'sideways o with stroke']);
+  this.executeCharTest('ᵼ', ['iota with stroke', 'iota with stroke', 'iota with stroke']);
+  this.executeCharTest('ᵽ', ['p with stroke', 'p with stroke', 'p with stroke']);
+  this.executeCharTest('ᵿ', ['upsilon with stroke', 'upsilon with stroke', 'upsilon with stroke']);
+  this.executeCharTest('ẜ', ['long s with diagonal stroke', 'long s with diagonal stroke', 'long s with diagonal stroke']);
+  this.executeCharTest('ẝ', ['long s with high stroke', 'long s with high stroke', 'long s with high stroke']);
+  this.executeCharTest('ƍ', ['turned delta', 'turned delta', 'turned delta']);
+  this.executeCharTest('ẛ', ['s long point en chef', 's long point en chef', 's long point en chef']);
+  this.executeCharTest('ẟ', ['delta', 'delta', 'delta']);
+  this.executeCharTest('ĸ', ['kra', 'kra', 'kra']);
+  this.executeCharTest('ſ', ['long s', 'long s', 'long s']);
+  this.executeCharTest('ƃ', ['b with topbar', 'b with topbar', 'b with topbar']);
+  this.executeCharTest('ƅ', ['tone six', 'tone six', 'tone six']);
+  this.executeCharTest('ƈ', ['c with hook', 'c with hook', 'c with hook']);
+  this.executeCharTest('ƌ', ['d with topbar', 'd with topbar', 'd with topbar']);
+  this.executeCharTest('ƒ', ['f cursif', 'f cursif', 'f cursif']);
+  this.executeCharTest('ƕ', ['hv', 'hv', 'hv']);
+  this.executeCharTest('ƙ', ['k with hook', 'k with hook', 'k with hook']);
+  this.executeCharTest('ƚ', ['l rayé', 'l rayé', 'l rayé']);
+  this.executeCharTest('ƞ', ['n with long right leg', 'n with long right leg', 'n with long right leg']);
+  this.executeCharTest('ơ', ['o with horn', 'o with horn', 'o with horn']);
+  this.executeCharTest('ƣ', ['oi', 'oi', 'oi']);
+  this.executeCharTest('ƥ', ['p with hook', 'p with hook', 'p with hook']);
+  this.executeCharTest('ƨ', ['tone two', 'tone two', 'tone two']);
+  this.executeCharTest('ƪ', ['latin letter reversed esh loop', 'latin letter reversed esh loop', 'latin letter reversed esh loop']);
+  this.executeCharTest('ƫ', ['t with palatal hook', 't with palatal hook', 't with palatal hook']);
+  this.executeCharTest('ƭ', ['t with hook', 't with hook', 't with hook']);
+  this.executeCharTest('ư', ['u with horn', 'u with horn', 'u with horn']);
+  this.executeCharTest('ƴ', ['y with hook', 'y with hook', 'y with hook']);
+  this.executeCharTest('ƹ', ['ezh reversed', 'ezh reversed', 'ezh reversed']);
+  this.executeCharTest('ƺ', ['ezh with tail', 'ezh with tail', 'ezh with tail']);
+  this.executeCharTest('ƽ', ['tone five', 'tone five', 'tone five']);
+  this.executeCharTest('ƿ', ['latin letter wynn', 'latin letter wynn', 'latin letter wynn']);
+  this.executeCharTest('ǆ', ['dz with caron', 'dz with caron', 'dz with caron']);
+  this.executeCharTest('ǉ', ['lj', 'lj', 'lj']);
+  this.executeCharTest('ǌ', ['nj', 'nj', 'nj']);
+  this.executeCharTest('ǣ', ['ae with macron', 'ae with macron', 'ae with macron']);
+  this.executeCharTest('ǯ', ['ezh with caron', 'ezh with caron', 'ezh with caron']);
+  this.executeCharTest('ǳ', ['dz', 'dz', 'dz']);
+  this.executeCharTest('ȝ', ['yogh', 'yogh', 'yogh']);
+  this.executeCharTest('ɮ', ['lezh', 'lezh', 'lezh']);
+  this.executeCharTest('ʒ', ['ezh', 'ezh', 'ezh']);
+  this.executeCharTest('ʓ', ['ezh with curl', 'ezh with curl', 'ezh with curl']);
+  this.executeCharTest('ʤ', ['dezh digraph', 'dezh digraph', 'dezh digraph']);
+  this.executeCharTest('ǝ', ['turned e', 'turned e', 'turned e']);
+  this.executeCharTest('ǽ', ['ae with acute', 'ae with acute', 'ae with acute']);
+  this.executeCharTest('ȡ', ['d with curl', 'd with curl', 'd with curl']);
+  this.executeCharTest('ȣ', ['ou', 'ou', 'ou']);
+  this.executeCharTest('ȥ', ['z with hook', 'z with hook', 'z with hook']);
+  this.executeCharTest('ȴ', ['l with curl', 'l with curl', 'l with curl']);
+  this.executeCharTest('ȵ', ['n with curl', 'n with curl', 'n with curl']);
+  this.executeCharTest('ȶ', ['t with curl', 't with curl', 't with curl']);
+  this.executeCharTest('ȸ', ['db digraph', 'db digraph', 'db digraph']);
+  this.executeCharTest('ȹ', ['qp digraph', 'qp digraph', 'qp digraph']);
+  this.executeCharTest('ȿ', ['s with swash tail', 's with swash tail', 's with swash tail']);
+  this.executeCharTest('ɀ', ['z with swash tail', 'z with swash tail', 'z with swash tail']);
+  this.executeCharTest('ɂ', ['glottal stop', 'glottal stop', 'glottal stop']);
+  this.executeCharTest('ɋ', ['q with hook tail', 'q with hook tail', 'q with hook tail']);
+  this.executeCharTest('ɐ', ['turned a', 'turned a', 'turned a']);
+  this.executeCharTest('ɑ', ['alpha', 'alpha', 'alpha']);
+  this.executeCharTest('ɒ', ['turned alpha', 'turned alpha', 'turned alpha']);
+  this.executeCharTest('ɓ', ['b with hook', 'b with hook', 'b with hook']);
+  this.executeCharTest('ɔ', ['open o', 'open o', 'open o']);
+  this.executeCharTest('ɕ', ['c with curl', 'c with curl', 'c with curl']);
+  this.executeCharTest('ɖ', ['d with tail', 'd with tail', 'd with tail']);
+  this.executeCharTest('ɗ', ['d with hook', 'd with hook', 'd with hook']);
+  this.executeCharTest('ɘ', ['reversed e', 'reversed e', 'reversed e']);
+  this.executeCharTest('ə', ['schwa', 'schwa', 'schwa']);
+  this.executeCharTest('ɚ', ['schwa with hook', 'schwa with hook', 'schwa with hook']);
+  this.executeCharTest('ɛ', ['e ouvert', 'e ouvert', 'e ouvert']);
+  this.executeCharTest('ɜ', ['reversed open e', 'reversed open e', 'reversed open e']);
+  this.executeCharTest('ɝ', ['reversed open e with hook', 'reversed open e with hook', 'reversed open e with hook']);
+  this.executeCharTest('ɞ', ['closed reversed open e', 'closed reversed open e', 'closed reversed open e']);
+  this.executeCharTest('ɠ', ['g with hook', 'g with hook', 'g with hook']);
+  this.executeCharTest('ɡ', ['script g', 'script g', 'script g']);
+  this.executeCharTest('ɣ', ['gamma', 'gamma', 'gamma']);
+  this.executeCharTest('ɤ', ['rams horn', 'rams horn', 'rams horn']);
+  this.executeCharTest('ɥ', ['turned h', 'turned h', 'turned h']);
+  this.executeCharTest('ɦ', ['h with hook', 'h with hook', 'h with hook']);
+  this.executeCharTest('ɧ', ['heng with hook', 'heng with hook', 'heng with hook']);
+  this.executeCharTest('ɩ', ['iota', 'iota', 'iota']);
+  this.executeCharTest('ɫ', ['l with middle tilde', 'l with middle tilde', 'l with middle tilde']);
+  this.executeCharTest('ɬ', ['l with belt', 'l with belt', 'l with belt']);
+  this.executeCharTest('ɭ', ['l with retroflex hook', 'l with retroflex hook', 'l with retroflex hook']);
+  this.executeCharTest('ɯ', ['turned m', 'turned m', 'turned m']);
+  this.executeCharTest('ɰ', ['turned m with long leg', 'turned m with long leg', 'turned m with long leg']);
+  this.executeCharTest('ɱ', ['m with hook', 'm with hook', 'm with hook']);
+  this.executeCharTest('ɲ', ['n with left hook', 'n with left hook', 'n with left hook']);
+  this.executeCharTest('ɳ', ['n with retroflex hook', 'n with retroflex hook', 'n with retroflex hook']);
+  this.executeCharTest('ɵ', ['barred o', 'barred o', 'barred o']);
+  this.executeCharTest('ɷ', ['closed omega', 'closed omega', 'closed omega']);
+  this.executeCharTest('ɸ', ['phi', 'phi', 'phi']);
+  this.executeCharTest('ɹ', ['turned r', 'turned r', 'turned r']);
+  this.executeCharTest('ɺ', ['turned r with long leg', 'turned r with long leg', 'turned r with long leg']);
+  this.executeCharTest('ɻ', ['turned r with hook', 'turned r with hook', 'turned r with hook']);
+  this.executeCharTest('ɼ', ['r with long leg', 'r with long leg', 'r with long leg']);
+  this.executeCharTest('ɽ', ['r with tail', 'r with tail', 'r with tail']);
+  this.executeCharTest('ɾ', ['r with fishhook', 'r with fishhook', 'r with fishhook']);
+  this.executeCharTest('ɿ', ['reversed r with fishhook', 'reversed r with fishhook', 'reversed r with fishhook']);
+  this.executeCharTest('ʂ', ['s with hook', 's with hook', 's with hook']);
+  this.executeCharTest('ʃ', ['esh', 'esh', 'esh']);
+  this.executeCharTest('ʅ', ['squat reversed esh', 'squat reversed esh', 'squat reversed esh']);
+  this.executeCharTest('ʆ', ['esh with curl', 'esh with curl', 'esh with curl']);
+  this.executeCharTest('ʇ', ['turned t', 'turned t', 'turned t']);
+  this.executeCharTest('ʈ', ['t with retroflex hook', 't with retroflex hook', 't with retroflex hook']);
+  this.executeCharTest('ʉ', ['u bar', 'u bar', 'u bar']);
+  this.executeCharTest('ʊ', ['upsilon', 'upsilon', 'upsilon']);
+  this.executeCharTest('ʋ', ['v with hook', 'v with hook', 'v with hook']);
+  this.executeCharTest('ʌ', ['turned v', 'turned v', 'turned v']);
+  this.executeCharTest('ʍ', ['turned w', 'turned w', 'turned w']);
+  this.executeCharTest('ʎ', ['turned y', 'turned y', 'turned y']);
+  this.executeCharTest('ʐ', ['z with retroflex hook', 'z with retroflex hook', 'z with retroflex hook']);
+  this.executeCharTest('ʑ', ['z with curl', 'z with curl', 'z with curl']);
+  this.executeCharTest('ʕ', ['latin letter pharyngeal voiced fricative', 'latin letter pharyngeal voiced fricative', 'latin letter pharyngeal voiced fricative']);
+  this.executeCharTest('ʖ', ['latin letter inverted glottal stop', 'latin letter inverted glottal stop', 'latin letter inverted glottal stop']);
+  this.executeCharTest('ʗ', ['latin letter stretched c', 'latin letter stretched c', 'latin letter stretched c']);
+  this.executeCharTest('ʘ', ['latin letter bilabial click', 'latin letter bilabial click', 'latin letter bilabial click']);
+  this.executeCharTest('ʚ', ['closed open e', 'closed open e', 'closed open e']);
+  this.executeCharTest('ʞ', ['turned k', 'turned k', 'turned k']);
+  this.executeCharTest('ʠ', ['q with hook', 'q with hook', 'q with hook']);
+  this.executeCharTest('ʣ', ['dz digraph', 'dz digraph', 'dz digraph']);
+  this.executeCharTest('ʥ', ['dz digraph with curl', 'dz digraph with curl', 'dz digraph with curl']);
+  this.executeCharTest('ʦ', ['ts digraph', 'ts digraph', 'ts digraph']);
+  this.executeCharTest('ʧ', ['tesh digraph', 'tesh digraph', 'tesh digraph']);
+  this.executeCharTest('ʨ', ['tc digraph with curl', 'tc digraph with curl', 'tc digraph with curl']);
+  this.executeCharTest('ʩ', ['feng digraph', 'feng digraph', 'feng digraph']);
+  this.executeCharTest('ʪ', ['ls digraph', 'ls digraph', 'ls digraph']);
+  this.executeCharTest('ʫ', ['lz digraph', 'lz digraph', 'lz digraph']);
+  this.executeCharTest('ʬ', ['latin letter bilabial percussive', 'latin letter bilabial percussive', 'latin letter bilabial percussive']);
+  this.executeCharTest('ʭ', ['latin letter bidental percussive', 'latin letter bidental percussive', 'latin letter bidental percussive']);
+  this.executeCharTest('ʮ', ['turned h with fishhook', 'turned h with fishhook', 'turned h with fishhook']);
+  this.executeCharTest('ʯ', ['turned h with fishhook and tail', 'turned h with fishhook and tail', 'turned h with fishhook and tail']);
+  this.executeCharTest('ᴂ', ['turned ae', 'turned ae', 'turned ae']);
+  this.executeCharTest('ᴈ', ['turned open e', 'turned open e', 'turned open e']);
+  this.executeCharTest('ᴉ', ['turned i', 'turned i', 'turned i']);
+  this.executeCharTest('ᴑ', ['sideways o', 'sideways o', 'sideways o']);
+  this.executeCharTest('ᴒ', ['sideways open o', 'sideways open o', 'sideways open o']);
+  this.executeCharTest('ᴔ', ['turned oe', 'turned oe', 'turned oe']);
+  this.executeCharTest('ᴖ', ['top half o', 'top half o', 'top half o']);
+  this.executeCharTest('ᴗ', ['bottom half o', 'bottom half o', 'bottom half o']);
+  this.executeCharTest('ᴝ', ['sideways u', 'sideways u', 'sideways u']);
+  this.executeCharTest('ᴞ', ['sideways diaeresized u', 'sideways diaeresized u', 'sideways diaeresized u']);
+  this.executeCharTest('ᴟ', ['sideways turned m', 'sideways turned m', 'sideways turned m']);
+  this.executeCharTest('ᴤ', ['latin letter voiced laryngeal spirant', 'latin letter voiced laryngeal spirant', 'latin letter voiced laryngeal spirant']);
+  this.executeCharTest('ᴥ', ['latin letter ain', 'latin letter ain', 'latin letter ain']);
+  this.executeCharTest('ᵫ', ['ue', 'ue', 'ue']);
+  this.executeCharTest('ᵬ', ['b with middle tilde', 'b with middle tilde', 'b with middle tilde']);
+  this.executeCharTest('ᵭ', ['d with middle tilde', 'd with middle tilde', 'd with middle tilde']);
+  this.executeCharTest('ᵮ', ['f with middle tilde', 'f with middle tilde', 'f with middle tilde']);
+  this.executeCharTest('ᵯ', ['m with middle tilde', 'm with middle tilde', 'm with middle tilde']);
+  this.executeCharTest('ᵰ', ['n with middle tilde', 'n with middle tilde', 'n with middle tilde']);
+  this.executeCharTest('ᵱ', ['p with middle tilde', 'p with middle tilde', 'p with middle tilde']);
+  this.executeCharTest('ᵲ', ['r with middle tilde', 'r with middle tilde', 'r with middle tilde']);
+  this.executeCharTest('ᵳ', ['r with fishhook and middle tilde', 'r with fishhook and middle tilde', 'r with fishhook and middle tilde']);
+  this.executeCharTest('ᵴ', ['s with middle tilde', 's with middle tilde', 's with middle tilde']);
+  this.executeCharTest('ᵵ', ['t with middle tilde', 't with middle tilde', 't with middle tilde']);
+  this.executeCharTest('ᵶ', ['z with middle tilde', 'z with middle tilde', 'z with middle tilde']);
+  this.executeCharTest('ᵷ', ['turned g', 'turned g', 'turned g']);
+  this.executeCharTest('ᵹ', ['insular g', 'insular g', 'insular g']);
+  this.executeCharTest('ᵺ', ['th with strikethrough', 'th with strikethrough', 'th with strikethrough']);
+  this.executeCharTest('ᶀ', ['b with palatal hook', 'b with palatal hook', 'b with palatal hook']);
+  this.executeCharTest('ᶁ', ['d with palatal hook', 'd with palatal hook', 'd with palatal hook']);
+  this.executeCharTest('ᶂ', ['f with palatal hook', 'f with palatal hook', 'f with palatal hook']);
+  this.executeCharTest('ᶃ', ['g with palatal hook', 'g with palatal hook', 'g with palatal hook']);
+  this.executeCharTest('ᶄ', ['k with palatal hook', 'k with palatal hook', 'k with palatal hook']);
+  this.executeCharTest('ᶅ', ['l with palatal hook', 'l with palatal hook', 'l with palatal hook']);
+  this.executeCharTest('ᶆ', ['m with palatal hook', 'm with palatal hook', 'm with palatal hook']);
+  this.executeCharTest('ᶇ', ['n with palatal hook', 'n with palatal hook', 'n with palatal hook']);
+  this.executeCharTest('ᶈ', ['p with palatal hook', 'p with palatal hook', 'p with palatal hook']);
+  this.executeCharTest('ᶉ', ['r with palatal hook', 'r with palatal hook', 'r with palatal hook']);
+  this.executeCharTest('ᶊ', ['s with palatal hook', 's with palatal hook', 's with palatal hook']);
+  this.executeCharTest('ᶋ', ['esh with palatal hook', 'esh with palatal hook', 'esh with palatal hook']);
+  this.executeCharTest('ᶌ', ['v with palatal hook', 'v with palatal hook', 'v with palatal hook']);
+  this.executeCharTest('ᶍ', ['x with palatal hook', 'x with palatal hook', 'x with palatal hook']);
+  this.executeCharTest('ᶎ', ['z with palatal hook', 'z with palatal hook', 'z with palatal hook']);
+  this.executeCharTest('ᶏ', ['a with retroflex hook', 'a with retroflex hook', 'a with retroflex hook']);
+  this.executeCharTest('ᶐ', ['alpha with retroflex hook', 'alpha with retroflex hook', 'alpha with retroflex hook']);
+  this.executeCharTest('ᶑ', ['d with hook and tail', 'd with hook and tail', 'd with hook and tail']);
+  this.executeCharTest('ᶒ', ['e with retroflex hook', 'e with retroflex hook', 'e with retroflex hook']);
+  this.executeCharTest('ᶓ', ['open e with retroflex hook', 'open e with retroflex hook', 'open e with retroflex hook']);
+  this.executeCharTest('ᶔ', ['reversed open e with retroflex hook', 'reversed open e with retroflex hook', 'reversed open e with retroflex hook']);
+  this.executeCharTest('ᶕ', ['schwa with retroflex hook', 'schwa with retroflex hook', 'schwa with retroflex hook']);
+  this.executeCharTest('ᶖ', ['i with retroflex hook', 'i with retroflex hook', 'i with retroflex hook']);
+  this.executeCharTest('ᶗ', ['open o with retroflex hook', 'open o with retroflex hook', 'open o with retroflex hook']);
+  this.executeCharTest('ᶘ', ['esh with retroflex hook', 'esh with retroflex hook', 'esh with retroflex hook']);
+  this.executeCharTest('ᶙ', ['u with retroflex hook', 'u with retroflex hook', 'u with retroflex hook']);
+  this.executeCharTest('ᶚ', ['ezh with retroflex hook', 'ezh with retroflex hook', 'ezh with retroflex hook']);
+  this.executeCharTest('ŉ', ['n précédée d\'une apostrophe', 'n précédée d\'une apostrophe', 'n précédée d\'une apostrophe']);
+  this.executeCharTest('ŋ', ['eng', 'eng', 'eng']);
+  this.executeCharTest('à', ['a accent grave', 'a accent grave', 'a accent grave']);
+  this.executeCharTest('á', ['a accent aigu', 'a accent aigu', 'a accent aigu']);
+  this.executeCharTest('â', ['a accent circonflexe', 'a accent circonflexe', 'a accent circonflexe']);
+  this.executeCharTest('ã', ['a tilde', 'a tilde', 'a tilde']);
+  this.executeCharTest('ä', ['a tréma', 'a tréma', 'a tréma']);
+  this.executeCharTest('å', ['a rond en chef', 'a rond en chef', 'a rond en chef']);
+  this.executeCharTest('ç', ['c cédille', 'c cédille', 'c cédille']);
+  this.executeCharTest('è', ['e accent grave', 'e accent grave', 'e accent grave']);
+  this.executeCharTest('é', ['e accent aigu', 'e accent aigu', 'e accent aigu']);
+  this.executeCharTest('ê', ['e accent circonflexe', 'e accent circonflexe', 'e accent circonflexe']);
+  this.executeCharTest('ë', ['e tréma', 'e tréma', 'e tréma']);
+  this.executeCharTest('ì', ['i accent grave', 'i accent grave', 'i accent grave']);
+  this.executeCharTest('í', ['i accent aigu', 'i accent aigu', 'i accent aigu']);
+  this.executeCharTest('î', ['i accent circonflexe', 'i accent circonflexe', 'i accent circonflexe']);
+  this.executeCharTest('ï', ['i tréma', 'i tréma', 'i tréma']);
+  this.executeCharTest('ñ', ['n tilde', 'n tilde', 'n tilde']);
+  this.executeCharTest('ò', ['o accent grave', 'o accent grave', 'o accent grave']);
+  this.executeCharTest('ó', ['o accent aigu', 'o accent aigu', 'o accent aigu']);
+  this.executeCharTest('ô', ['o accent circonflexe', 'o accent circonflexe', 'o accent circonflexe']);
+  this.executeCharTest('õ', ['o tilde', 'o tilde', 'o tilde']);
+  this.executeCharTest('ö', ['o tréma', 'o tréma', 'o tréma']);
+  this.executeCharTest('ù', ['u accent grave', 'u accent grave', 'u accent grave']);
+  this.executeCharTest('ú', ['u accent aigu', 'u accent aigu', 'u accent aigu']);
+  this.executeCharTest('û', ['u accent circonflexe', 'u accent circonflexe', 'u accent circonflexe']);
+  this.executeCharTest('ü', ['u tréma', 'u tréma', 'u tréma']);
+  this.executeCharTest('ý', ['y accent aigu', 'y accent aigu', 'y accent aigu']);
+  this.executeCharTest('ÿ', ['y tréma', 'y tréma', 'y tréma']);
+  this.executeCharTest('ā', ['a macron', 'a macron', 'a macron']);
+  this.executeCharTest('ă', ['a brève', 'a brève', 'a brève']);
+  this.executeCharTest('ą', ['a ogonek', 'a ogonek', 'a ogonek']);
+  this.executeCharTest('ć', ['c accent aigu', 'c accent aigu', 'c accent aigu']);
+  this.executeCharTest('ĉ', ['c accent circonflexe', 'c accent circonflexe', 'c accent circonflexe']);
+  this.executeCharTest('ċ', ['c point en chef', 'c point en chef', 'c point en chef']);
+  this.executeCharTest('č', ['c caron', 'c caron', 'c caron']);
+  this.executeCharTest('ď', ['d caron', 'd caron', 'd caron']);
+  this.executeCharTest('ē', ['e macron', 'e macron', 'e macron']);
+  this.executeCharTest('ĕ', ['modifying above e with breve', 'mod above e with breve', 'mod above e with breve']);
+  this.executeCharTest('ė', ['e point en chef', 'e point en chef', 'e point en chef']);
+  this.executeCharTest('ę', ['e ogonek', 'e ogonek', 'e ogonek']);
+  this.executeCharTest('ě', ['e caron', 'e caron', 'e caron']);
+  this.executeCharTest('ĝ', ['g accent circonflexe', 'g accent circonflexe', 'g accent circonflexe']);
+  this.executeCharTest('ğ', ['g brève', 'g brève', 'g brève']);
+  this.executeCharTest('ġ', ['g point en chef', 'g point en chef', 'g point en chef']);
+  this.executeCharTest('ģ', ['modifying above g with cedilla', 'mod above g with cedilla', 'mod above g with cedilla']);
+  this.executeCharTest('ĥ', ['h accent circonflexe', 'h accent circonflexe', 'h accent circonflexe']);
+  this.executeCharTest('ĩ', ['i tilde', 'i tilde', 'i tilde']);
+  this.executeCharTest('ī', ['i macron', 'i macron', 'i macron']);
+  this.executeCharTest('ĭ', ['modifying above i with breve', 'mod above i with breve', 'mod above i with breve']);
+  this.executeCharTest('į', ['i ogonek', 'i ogonek', 'i ogonek']);
+  this.executeCharTest('ı', ['i sans point', 'i sans point', 'i sans point']);
+  this.executeCharTest('ĵ', ['j accent circonflexe', 'j accent circonflexe', 'j accent circonflexe']);
+  this.executeCharTest('ķ', ['k cédille', 'k cédille', 'k cédille']);
+  this.executeCharTest('ĺ', ['l accent aigu', 'l accent aigu', 'l accent aigu']);
+  this.executeCharTest('ļ', ['l cédille', 'l cédille', 'l cédille']);
+  this.executeCharTest('ľ', ['l caron', 'l caron', 'l caron']);
+  this.executeCharTest('ŀ', ['l point médian', 'l point médian', 'l point médian']);
+  this.executeCharTest('ń', ['n accent aigu', 'n accent aigu', 'n accent aigu']);
+  this.executeCharTest('ņ', ['n cédille', 'n cédille', 'n cédille']);
+  this.executeCharTest('ň', ['n caron', 'n caron', 'n caron']);
+  this.executeCharTest('ō', ['o macron', 'o macron', 'o macron']);
+  this.executeCharTest('ŏ', ['modifying above o with breve', 'mod above o with breve', 'mod above o with breve']);
+  this.executeCharTest('ő', ['o avec double accent aigu', 'o avec double accent aigu', 'o avec double accent aigu']);
+  this.executeCharTest('ŕ', ['r accent aigu', 'r accent aigu', 'r accent aigu']);
+  this.executeCharTest('ŗ', ['r cédille', 'r cédille', 'r cédille']);
+  this.executeCharTest('ř', ['r caron', 'r caron', 'r caron']);
+  this.executeCharTest('ś', ['s accent aigu', 's accent aigu', 's accent aigu']);
+  this.executeCharTest('ŝ', ['s accent circonflexe', 's accent circonflexe', 's accent circonflexe']);
+  this.executeCharTest('ş', ['s cédille', 's cédille', 's cédille']);
+  this.executeCharTest('š', ['s caron', 's caron', 's caron']);
+  this.executeCharTest('ţ', ['t cédille', 't cédille', 't cédille']);
+  this.executeCharTest('ť', ['t caron', 't caron', 't caron']);
+  this.executeCharTest('ũ', ['u tilde', 'u tilde', 'u tilde']);
+  this.executeCharTest('ū', ['u macron', 'u macron', 'u macron']);
+  this.executeCharTest('ŭ', ['u brève', 'u brève', 'u brève']);
+  this.executeCharTest('ů', ['u rond en chef', 'u rond en chef', 'u rond en chef']);
+  this.executeCharTest('ű', ['u avec double accent aigu', 'u avec double accent aigu', 'u avec double accent aigu']);
+  this.executeCharTest('ų', ['u ogonek', 'u ogonek', 'u ogonek']);
+  this.executeCharTest('ŵ', ['w accent circonflexe', 'w accent circonflexe', 'w accent circonflexe']);
+  this.executeCharTest('ŷ', ['y accent circonflexe', 'y accent circonflexe', 'y accent circonflexe']);
+  this.executeCharTest('ź', ['z accent aigu', 'z accent aigu', 'z accent aigu']);
+  this.executeCharTest('ż', ['z point en chef', 'z point en chef', 'z point en chef']);
+  this.executeCharTest('ž', ['z caron', 'z caron', 'z caron']);
+  this.executeCharTest('ǎ', ['modifying above a with caron', 'mod above a with caron', 'mod above a with caron']);
+  this.executeCharTest('ǐ', ['modifying above i with caron', 'mod above i with caron', 'mod above i with caron']);
+  this.executeCharTest('ǒ', ['modifying above o with caron', 'mod above o with caron', 'mod above o with caron']);
+  this.executeCharTest('ǔ', ['modifying above u with caron', 'mod above u with caron', 'mod above u with caron']);
+  this.executeCharTest('ǧ', ['modifying above g with caron', 'mod above g with caron', 'mod above g with caron']);
+  this.executeCharTest('ǩ', ['modifying above k with caron', 'mod above k with caron', 'mod above k with caron']);
+  this.executeCharTest('ǫ', ['modifying above o with ogonek', 'mod above o with ogonek', 'mod above o with ogonek']);
+  this.executeCharTest('ǰ', ['modifying above j with caron', 'mod above j with caron', 'mod above j with caron']);
+  this.executeCharTest('ǵ', ['g accent aigu', 'g accent aigu', 'g accent aigu']);
+  this.executeCharTest('ǹ', ['modifying above n with grave', 'mod above n with grave', 'mod above n with grave']);
+  this.executeCharTest('ȁ', ['modifying above a with double grave', 'mod above a with double grave', 'mod above a with double grave']);
+  this.executeCharTest('ȃ', ['modifying above a with inverted breve', 'mod above a with inverted breve', 'mod above a with inverted breve']);
+  this.executeCharTest('ȅ', ['modifying above e with double grave', 'mod above e with double grave', 'mod above e with double grave']);
+  this.executeCharTest('ȇ', ['modifying above e with inverted breve', 'mod above e with inverted breve', 'mod above e with inverted breve']);
+  this.executeCharTest('ȉ', ['modifying above i with double grave', 'mod above i with double grave', 'mod above i with double grave']);
+  this.executeCharTest('ȋ', ['modifying above i with inverted breve', 'mod above i with inverted breve', 'mod above i with inverted breve']);
+  this.executeCharTest('ȍ', ['modifying above o with double grave', 'mod above o with double grave', 'mod above o with double grave']);
+  this.executeCharTest('ȏ', ['modifying above o with inverted breve', 'mod above o with inverted breve', 'mod above o with inverted breve']);
+  this.executeCharTest('ȑ', ['modifying above r with double grave', 'mod above r with double grave', 'mod above r with double grave']);
+  this.executeCharTest('ȓ', ['modifying above r with inverted breve', 'mod above r with inverted breve', 'mod above r with inverted breve']);
+  this.executeCharTest('ȕ', ['modifying above u with double grave', 'mod above u with double grave', 'mod above u with double grave']);
+  this.executeCharTest('ȗ', ['modifying above u with inverted breve', 'mod above u with inverted breve', 'mod above u with inverted breve']);
+  this.executeCharTest('ș', ['modifying below s with comma below', 'mod below s with comma below', 'mod below s with comma below']);
+  this.executeCharTest('ț', ['modifying below t with comma below', 'mod below t with comma below', 'mod below t with comma below']);
+  this.executeCharTest('ȟ', ['modifying above h with caron', 'mod above h with caron', 'mod above h with caron']);
+  this.executeCharTest('ȧ', ['modifying above a with dot', 'mod above a with dot', 'mod above a with dot']);
+  this.executeCharTest('ȩ', ['modifying above e with cedilla', 'mod above e with cedilla', 'mod above e with cedilla']);
+  this.executeCharTest('ȯ', ['modifying above o with dot', 'mod above o with dot', 'mod above o with dot']);
+  this.executeCharTest('ȳ', ['y overbar', 'y overbar', 'y overbar']);
+  this.executeCharTest('ȷ', ['modifying above dotless j', 'mod above dotless j', 'mod above dotless j']);
+  this.executeCharTest('ḁ', ['a à rond souscrit', 'a à rond souscrit', 'a à rond souscrit']);
+  this.executeCharTest('ḃ', ['b point en chef', 'b point en chef', 'b point en chef']);
+  this.executeCharTest('ḅ', ['b point souscrit', 'b point souscrit', 'b point souscrit']);
+  this.executeCharTest('ḇ', ['b ligne souscrite', 'b ligne souscrite', 'b ligne souscrite']);
+  this.executeCharTest('ḋ', ['d point en chef', 'd point en chef', 'd point en chef']);
+  this.executeCharTest('ḍ', ['d point souscrit', 'd point souscrit', 'd point souscrit']);
+  this.executeCharTest('ḏ', ['d ligne souscrite', 'd ligne souscrite', 'd ligne souscrite']);
+  this.executeCharTest('ḑ', ['d cédille', 'd cédille', 'd cédille']);
+  this.executeCharTest('ḓ', ['d accent circonflexe souscrit', 'd accent circonflexe souscrit', 'd accent circonflexe souscrit']);
+  this.executeCharTest('ḙ', ['e accent circonflexe souscrit', 'e accent circonflexe souscrit', 'e accent circonflexe souscrit']);
+  this.executeCharTest('ḛ', ['e tilde souscrit', 'e tilde souscrit', 'e tilde souscrit']);
+  this.executeCharTest('ḟ', ['f point en chef', 'f point en chef', 'f point en chef']);
+  this.executeCharTest('ḡ', ['g macron', 'g macron', 'g macron']);
+  this.executeCharTest('ḣ', ['h point en chef', 'h point en chef', 'h point en chef']);
+  this.executeCharTest('ḥ', ['h point souscrit', 'h point souscrit', 'h point souscrit']);
+  this.executeCharTest('ḧ', ['h tréma', 'h tréma', 'h tréma']);
+  this.executeCharTest('ḩ', ['h cédille', 'h cédille', 'h cédille']);
+  this.executeCharTest('ḫ', ['h brève souscrit', 'h brève souscrit', 'h brève souscrit']);
+  this.executeCharTest('ḭ', ['i tilde souscrit', 'i tilde souscrit', 'i tilde souscrit']);
+  this.executeCharTest('ḱ', ['k accent aigu', 'k accent aigu', 'k accent aigu']);
+  this.executeCharTest('ḳ', ['k point souscrit', 'k point souscrit', 'k point souscrit']);
+  this.executeCharTest('ḵ', ['k ligne souscrite', 'k ligne souscrite', 'k ligne souscrite']);
+  this.executeCharTest('ḷ', ['l point souscrit', 'l point souscrit', 'l point souscrit']);
+  this.executeCharTest('ḻ', ['l ligne souscrite', 'l ligne souscrite', 'l ligne souscrite']);
+  this.executeCharTest('ḽ', ['l accent circonflexe souscrit', 'l accent circonflexe souscrit', 'l accent circonflexe souscrit']);
+  this.executeCharTest('ḿ', ['m accent aigu', 'm accent aigu', 'm accent aigu']);
+  this.executeCharTest('ṁ', ['m point en chef', 'm point en chef', 'm point en chef']);
+  this.executeCharTest('ṃ', ['m point souscrit', 'm point souscrit', 'm point souscrit']);
+  this.executeCharTest('ṅ', ['n point en chef', 'n point en chef', 'n point en chef']);
+  this.executeCharTest('ṇ', ['n point souscrit', 'n point souscrit', 'n point souscrit']);
+  this.executeCharTest('ṉ', ['n ligne souscrite', 'n ligne souscrite', 'n ligne souscrite']);
+  this.executeCharTest('ṋ', ['n accent circonflexe souscrit', 'n accent circonflexe souscrit', 'n accent circonflexe souscrit']);
+  this.executeCharTest('ṕ', ['p accent aigu', 'p accent aigu', 'p accent aigu']);
+  this.executeCharTest('ṗ', ['p point en chef', 'p point en chef', 'p point en chef']);
+  this.executeCharTest('ṙ', ['r point en chef', 'r point en chef', 'r point en chef']);
+  this.executeCharTest('ṛ', ['r point souscrit', 'r point souscrit', 'r point souscrit']);
+  this.executeCharTest('ṟ', ['r ligne souscrite', 'r ligne souscrite', 'r ligne souscrite']);
+  this.executeCharTest('ṡ', ['s point en chef', 's point en chef', 's point en chef']);
+  this.executeCharTest('ṣ', ['s point souscrit', 's point souscrit', 's point souscrit']);
+  this.executeCharTest('ṫ', ['t point en chef', 't point en chef', 't point en chef']);
+  this.executeCharTest('ṭ', ['t point souscrit', 't point souscrit', 't point souscrit']);
+  this.executeCharTest('ṯ', ['t ligne souscrite', 't ligne souscrite', 't ligne souscrite']);
+  this.executeCharTest('ṱ', ['t accent circonflexe souscrit', 't accent circonflexe souscrit', 't accent circonflexe souscrit']);
+  this.executeCharTest('ṳ', ['u tréma souscrit', 'u tréma souscrit', 'u tréma souscrit']);
+  this.executeCharTest('ṵ', ['u tilde souscrit', 'u tilde souscrit', 'u tilde souscrit']);
+  this.executeCharTest('ṷ', ['u accent circonflexe souscrit', 'u accent circonflexe souscrit', 'u accent circonflexe souscrit']);
+  this.executeCharTest('ṽ', ['v tilde', 'v tilde', 'v tilde']);
+  this.executeCharTest('ṿ', ['v point souscrit', 'v point souscrit', 'v point souscrit']);
+  this.executeCharTest('ẁ', ['w accent grave', 'w accent grave', 'w accent grave']);
+  this.executeCharTest('ẃ', ['w accent aigu', 'w accent aigu', 'w accent aigu']);
+  this.executeCharTest('ẅ', ['w tréma', 'w tréma', 'w tréma']);
+  this.executeCharTest('ẇ', ['w point en chef', 'w point en chef', 'w point en chef']);
+  this.executeCharTest('ẉ', ['w point souscrit', 'w point souscrit', 'w point souscrit']);
+  this.executeCharTest('ẋ', ['x point en chef', 'x point en chef', 'x point en chef']);
+  this.executeCharTest('ẍ', ['x tréma', 'x tréma', 'x tréma']);
+  this.executeCharTest('ẏ', ['y point en chef', 'y point en chef', 'y point en chef']);
+  this.executeCharTest('ẑ', ['z accent circonflexe', 'z accent circonflexe', 'z accent circonflexe']);
+  this.executeCharTest('ẓ', ['z point souscrit', 'z point souscrit', 'z point souscrit']);
+  this.executeCharTest('ẕ', ['z ligne souscrite', 'z ligne souscrite', 'z ligne souscrite']);
+  this.executeCharTest('ẖ', ['h ligne souscrite', 'h ligne souscrite', 'h ligne souscrite']);
+  this.executeCharTest('ẗ', ['t tréma', 't tréma', 't tréma']);
+  this.executeCharTest('ẘ', ['w rond en chef', 'w rond en chef', 'w rond en chef']);
+  this.executeCharTest('ẙ', ['y rond en chef', 'y rond en chef', 'y rond en chef']);
+  this.executeCharTest('ẚ', ['a demi-rond à droite', 'a demi-rond à droite', 'a demi-rond à droite']);
+  this.executeCharTest('ạ', ['a point souscrit', 'a point souscrit', 'a point souscrit']);
+  this.executeCharTest('ả', ['a crochet en chef', 'a crochet en chef', 'a crochet en chef']);
+  this.executeCharTest('ẹ', ['e point souscrit', 'e point souscrit', 'e point souscrit']);
+  this.executeCharTest('ẻ', ['e crochet en chef', 'e crochet en chef', 'e crochet en chef']);
+  this.executeCharTest('ẽ', ['e tilde', 'e tilde', 'e tilde']);
+  this.executeCharTest('ỉ', ['i crochet en chef', 'i crochet en chef', 'i crochet en chef']);
+  this.executeCharTest('ị', ['i point souscrit', 'i point souscrit', 'i point souscrit']);
+  this.executeCharTest('ọ', ['o point souscrit', 'o point souscrit', 'o point souscrit']);
+  this.executeCharTest('ỏ', ['o crochet en chef', 'o crochet en chef', 'o crochet en chef']);
+  this.executeCharTest('ụ', ['u point souscrit', 'u point souscrit', 'u point souscrit']);
+  this.executeCharTest('ủ', ['u crochet en chef', 'u crochet en chef', 'u crochet en chef']);
+  this.executeCharTest('ỳ', ['y accent grave', 'y accent grave', 'y accent grave']);
+  this.executeCharTest('ỵ', ['y point souscrit', 'y point souscrit', 'y point souscrit']);
+  this.executeCharTest('ỷ', ['y crochet en chef', 'y crochet en chef', 'y crochet en chef']);
+  this.executeCharTest('ỹ', ['y tilde', 'y tilde', 'y tilde']);
+  this.executeCharTest('ͣ', ['combining a', 'combining a', 'combining a']);
+  this.executeCharTest('ͤ', ['combining e', 'combining e', 'combining e']);
+  this.executeCharTest('ͥ', ['combining i', 'combining i', 'combining i']);
+  this.executeCharTest('ͦ', ['combining o', 'combining o', 'combining o']);
+  this.executeCharTest('ͧ', ['combining u', 'combining u', 'combining u']);
+  this.executeCharTest('ͨ', ['combining c', 'combining c', 'combining c']);
+  this.executeCharTest('ͩ', ['combining d', 'combining d', 'combining d']);
+  this.executeCharTest('ͪ', ['combining h', 'combining h', 'combining h']);
+  this.executeCharTest('ͫ', ['combining m', 'combining m', 'combining m']);
+  this.executeCharTest('ͬ', ['combining r', 'combining r', 'combining r']);
+  this.executeCharTest('ͭ', ['combining t', 'combining t', 'combining t']);
+  this.executeCharTest('ͮ', ['combining v', 'combining v', 'combining v']);
+  this.executeCharTest('ͯ', ['combining x', 'combining x', 'combining x']);
+  this.executeCharTest('ᵢ', ['subscript i', 'subscript i', 'subscript i']);
+  this.executeCharTest('ᵣ', ['subscript r', 'subscript r', 'subscript r']);
+  this.executeCharTest('ᵤ', ['subscript u', 'subscript u', 'subscript u']);
+  this.executeCharTest('ᵥ', ['subscript v', 'subscript v', 'subscript v']);
+  this.executeCharTest('᷊', ['combining r below', 'combining r below', 'combining r below']);
+  this.executeCharTest('ᷓ', ['combining flattened open a above', 'combining flattened open a above', 'combining flattened open a above']);
+  this.executeCharTest('ᷔ', ['combining ae', 'combining ae', 'combining ae']);
+  this.executeCharTest('ᷕ', ['combining ao', 'combining ao', 'combining ao']);
+  this.executeCharTest('ᷖ', ['combining av', 'combining av', 'combining av']);
+  this.executeCharTest('ᷗ', ['combining c cedilla', 'combining c cedilla', 'combining c cedilla']);
+  this.executeCharTest('ᷘ', ['combining insular d', 'combining insular d', 'combining insular d']);
+  this.executeCharTest('ᷙ', ['combining eth', 'combining eth', 'combining eth']);
+  this.executeCharTest('ᷚ', ['combining g', 'combining g', 'combining g']);
+  this.executeCharTest('ᷛ', ['combining small upper G', 'combining small upper G', 'combining small upper G']);
+  this.executeCharTest('ᷜ', ['combining k', 'combining k', 'combining k']);
+  this.executeCharTest('ᷝ', ['combining l', 'combining l', 'combining l']);
+  this.executeCharTest('ᷞ', ['combining small upper L', 'combining small upper L', 'combining small upper L']);
+  this.executeCharTest('ᷟ', ['combining small upper M', 'combining small upper M', 'combining small upper M']);
+  this.executeCharTest('ᷠ', ['combining n', 'combining n', 'combining n']);
+  this.executeCharTest('ᷡ', ['combining small upper N', 'combining small upper N', 'combining small upper N']);
+  this.executeCharTest('ᷢ', ['combining small upper R', 'combining small upper R', 'combining small upper R']);
+  this.executeCharTest('ᷣ', ['combining r rotunda', 'combining r rotunda', 'combining r rotunda']);
+  this.executeCharTest('ᷤ', ['combining s', 'combining s', 'combining s']);
+  this.executeCharTest('ᷥ', ['combining long s', 'combining long s', 'combining long s']);
+  this.executeCharTest('ᷦ', ['combining z', 'combining z', 'combining z']);
+  this.executeCharTest('ⁱ', ['superscript i', 'superscript i', 'superscript i']);
+  this.executeCharTest('ⁿ', ['superscript n', 'superscript n', 'superscript n']);
+  this.executeCharTest('ₐ', ['subscript a', 'subscript a', 'subscript a']);
+  this.executeCharTest('ₑ', ['subscript e', 'subscript e', 'subscript e']);
+  this.executeCharTest('ₒ', ['subscript o', 'subscript o', 'subscript o']);
+  this.executeCharTest('ₓ', ['subscript x', 'subscript x', 'subscript x']);
+  this.executeCharTest('ₔ', ['subscript schwa', 'subscript schwa', 'subscript schwa']);
+  this.executeCharTest('ₕ', ['subscript h', 'subscript h', 'subscript h']);
+  this.executeCharTest('ₖ', ['subscript k', 'subscript k', 'subscript k']);
+  this.executeCharTest('ₗ', ['subscript l', 'subscript l', 'subscript l']);
+  this.executeCharTest('ₘ', ['subscript m', 'subscript m', 'subscript m']);
+  this.executeCharTest('ₙ', ['subscript n', 'subscript n', 'subscript n']);
+  this.executeCharTest('ₚ', ['subscript p', 'subscript p', 'subscript p']);
+  this.executeCharTest('ₛ', ['subscript s', 'subscript s', 'subscript s']);
+  this.executeCharTest('ₜ', ['subscript t', 'subscript t', 'subscript t']);
+  this.executeCharTest('⒜', ['parenthesized a', 'parenthesized a', 'parenthesized a']);
+  this.executeCharTest('⒝', ['parenthesized b', 'parenthesized b', 'parenthesized b']);
+  this.executeCharTest('⒞', ['parenthesized c', 'parenthesized c', 'parenthesized c']);
+  this.executeCharTest('⒟', ['parenthesized d', 'parenthesized d', 'parenthesized d']);
+  this.executeCharTest('⒠', ['parenthesized e', 'parenthesized e', 'parenthesized e']);
+  this.executeCharTest('⒡', ['parenthesized f', 'parenthesized f', 'parenthesized f']);
+  this.executeCharTest('⒢', ['parenthesized g', 'parenthesized g', 'parenthesized g']);
+  this.executeCharTest('⒣', ['parenthesized h', 'parenthesized h', 'parenthesized h']);
+  this.executeCharTest('⒤', ['parenthesized i', 'parenthesized i', 'parenthesized i']);
+  this.executeCharTest('⒥', ['parenthesized j', 'parenthesized j', 'parenthesized j']);
+  this.executeCharTest('⒦', ['parenthesized k', 'parenthesized k', 'parenthesized k']);
+  this.executeCharTest('⒧', ['parenthesized l', 'parenthesized l', 'parenthesized l']);
+  this.executeCharTest('⒨', ['parenthesized m', 'parenthesized m', 'parenthesized m']);
+  this.executeCharTest('⒩', ['parenthesized n', 'parenthesized n', 'parenthesized n']);
+  this.executeCharTest('⒪', ['parenthesized o', 'parenthesized o', 'parenthesized o']);
+  this.executeCharTest('⒫', ['parenthesized p', 'parenthesized p', 'parenthesized p']);
+  this.executeCharTest('⒬', ['parenthesized q', 'parenthesized q', 'parenthesized q']);
+  this.executeCharTest('⒭', ['parenthesized r', 'parenthesized r', 'parenthesized r']);
+  this.executeCharTest('⒮', ['parenthesized s', 'parenthesized s', 'parenthesized s']);
+  this.executeCharTest('⒯', ['parenthesized t', 'parenthesized t', 'parenthesized t']);
+  this.executeCharTest('⒰', ['parenthesized u', 'parenthesized u', 'parenthesized u']);
+  this.executeCharTest('⒱', ['parenthesized v', 'parenthesized v', 'parenthesized v']);
+  this.executeCharTest('⒲', ['parenthesized w', 'parenthesized w', 'parenthesized w']);
+  this.executeCharTest('⒳', ['parenthesized x', 'parenthesized x', 'parenthesized x']);
+  this.executeCharTest('⒴', ['parenthesized y', 'parenthesized y', 'parenthesized y']);
+  this.executeCharTest('⒵', ['parenthesized z', 'parenthesized z', 'parenthesized z']);
+  this.executeCharTest('Ⓐ', ['circled upper A', 'circled upper A', 'circled upper A']);
+  this.executeCharTest('Ⓑ', ['circled upper B', 'circled upper B', 'circled upper B']);
+  this.executeCharTest('Ⓒ', ['circled upper C', 'circled upper C', 'circled upper C']);
+  this.executeCharTest('Ⓓ', ['circled upper D', 'circled upper D', 'circled upper D']);
+  this.executeCharTest('Ⓔ', ['circled upper E', 'circled upper E', 'circled upper E']);
+  this.executeCharTest('Ⓕ', ['circled upper F', 'circled upper F', 'circled upper F']);
+  this.executeCharTest('Ⓖ', ['circled upper G', 'circled upper G', 'circled upper G']);
+  this.executeCharTest('Ⓗ', ['circled upper H', 'circled upper H', 'circled upper H']);
+  this.executeCharTest('Ⓘ', ['circled upper I', 'circled upper I', 'circled upper I']);
+  this.executeCharTest('Ⓙ', ['circled upper J', 'circled upper J', 'circled upper J']);
+  this.executeCharTest('Ⓚ', ['circled upper K', 'circled upper K', 'circled upper K']);
+  this.executeCharTest('Ⓛ', ['circled upper L', 'circled upper L', 'circled upper L']);
+  this.executeCharTest('Ⓜ', ['circled upper M', 'circled upper M', 'circled upper M']);
+  this.executeCharTest('Ⓝ', ['circled upper N', 'circled upper N', 'circled upper N']);
+  this.executeCharTest('Ⓞ', ['circled upper O', 'circled upper O', 'circled upper O']);
+  this.executeCharTest('Ⓟ', ['circled upper P', 'circled upper P', 'circled upper P']);
+  this.executeCharTest('Ⓠ', ['circled upper Q', 'circled upper Q', 'circled upper Q']);
+  this.executeCharTest('Ⓡ', ['circled upper R', 'circled upper R', 'circled upper R']);
+  this.executeCharTest('Ⓢ', ['S majuscule cerclée', 'S majuscule cerclée', 'S majuscule cerclée']);
+  this.executeCharTest('Ⓣ', ['circled upper T', 'circled upper T', 'circled upper T']);
+  this.executeCharTest('Ⓤ', ['circled upper U', 'circled upper U', 'circled upper U']);
+  this.executeCharTest('Ⓥ', ['circled upper V', 'circled upper V', 'circled upper V']);
+  this.executeCharTest('Ⓦ', ['circled upper W', 'circled upper W', 'circled upper W']);
+  this.executeCharTest('Ⓧ', ['circled upper X', 'circled upper X', 'circled upper X']);
+  this.executeCharTest('Ⓨ', ['circled upper Y', 'circled upper Y', 'circled upper Y']);
+  this.executeCharTest('Ⓩ', ['circled upper Z', 'circled upper Z', 'circled upper Z']);
+  this.executeCharTest('ⓐ', ['circled a', 'circled a', 'circled a']);
+  this.executeCharTest('ⓑ', ['circled b', 'circled b', 'circled b']);
+  this.executeCharTest('ⓒ', ['circled c', 'circled c', 'circled c']);
+  this.executeCharTest('ⓓ', ['circled d', 'circled d', 'circled d']);
+  this.executeCharTest('ⓔ', ['circled e', 'circled e', 'circled e']);
+  this.executeCharTest('ⓕ', ['circled f', 'circled f', 'circled f']);
+  this.executeCharTest('ⓖ', ['circled g', 'circled g', 'circled g']);
+  this.executeCharTest('ⓗ', ['circled h', 'circled h', 'circled h']);
+  this.executeCharTest('ⓘ', ['circled i', 'circled i', 'circled i']);
+  this.executeCharTest('ⓙ', ['circled j', 'circled j', 'circled j']);
+  this.executeCharTest('ⓚ', ['circled k', 'circled k', 'circled k']);
+  this.executeCharTest('ⓛ', ['circled l', 'circled l', 'circled l']);
+  this.executeCharTest('ⓜ', ['circled m', 'circled m', 'circled m']);
+  this.executeCharTest('ⓝ', ['circled n', 'circled n', 'circled n']);
+  this.executeCharTest('ⓞ', ['circled o', 'circled o', 'circled o']);
+  this.executeCharTest('ⓟ', ['circled p', 'circled p', 'circled p']);
+  this.executeCharTest('ⓠ', ['circled q', 'circled q', 'circled q']);
+  this.executeCharTest('ⓡ', ['circled r', 'circled r', 'circled r']);
+  this.executeCharTest('ⓢ', ['circled s', 'circled s', 'circled s']);
+  this.executeCharTest('ⓣ', ['circled t', 'circled t', 'circled t']);
+  this.executeCharTest('ⓤ', ['circled u', 'circled u', 'circled u']);
+  this.executeCharTest('ⓥ', ['circled v', 'circled v', 'circled v']);
+  this.executeCharTest('ⓦ', ['circled w', 'circled w', 'circled w']);
+  this.executeCharTest('ⓧ', ['circled x', 'circled x', 'circled x']);
+  this.executeCharTest('ⓨ', ['circled y', 'circled y', 'circled y']);
+  this.executeCharTest('ⓩ', ['circled z', 'circled z', 'circled z']);
+  this.executeCharTest('ⱼ', ['subscript j', 'subscript j', 'subscript j']);
+  this.executeCharTest('🄐', ['parenthesized upper A', 'parenthesized upper A', 'parenthesized upper A']);
+  this.executeCharTest('🄑', ['parenthesized upper B', 'parenthesized upper B', 'parenthesized upper B']);
+  this.executeCharTest('🄒', ['parenthesized upper C', 'parenthesized upper C', 'parenthesized upper C']);
+  this.executeCharTest('🄓', ['parenthesized upper D', 'parenthesized upper D', 'parenthesized upper D']);
+  this.executeCharTest('🄔', ['parenthesized upper E', 'parenthesized upper E', 'parenthesized upper E']);
+  this.executeCharTest('🄕', ['parenthesized upper F', 'parenthesized upper F', 'parenthesized upper F']);
+  this.executeCharTest('🄖', ['parenthesized upper G', 'parenthesized upper G', 'parenthesized upper G']);
+  this.executeCharTest('🄗', ['parenthesized upper H', 'parenthesized upper H', 'parenthesized upper H']);
+  this.executeCharTest('🄘', ['parenthesized upper I', 'parenthesized upper I', 'parenthesized upper I']);
+  this.executeCharTest('🄙', ['parenthesized upper J', 'parenthesized upper J', 'parenthesized upper J']);
+  this.executeCharTest('🄚', ['parenthesized upper K', 'parenthesized upper K', 'parenthesized upper K']);
+  this.executeCharTest('🄛', ['parenthesized upper L', 'parenthesized upper L', 'parenthesized upper L']);
+  this.executeCharTest('🄜', ['parenthesized upper M', 'parenthesized upper M', 'parenthesized upper M']);
+  this.executeCharTest('🄝', ['parenthesized upper N', 'parenthesized upper N', 'parenthesized upper N']);
+  this.executeCharTest('🄞', ['parenthesized upper O', 'parenthesized upper O', 'parenthesized upper O']);
+  this.executeCharTest('🄟', ['parenthesized upper P', 'parenthesized upper P', 'parenthesized upper P']);
+  this.executeCharTest('🄠', ['parenthesized upper Q', 'parenthesized upper Q', 'parenthesized upper Q']);
+  this.executeCharTest('🄡', ['parenthesized upper R', 'parenthesized upper R', 'parenthesized upper R']);
+  this.executeCharTest('🄢', ['parenthesized upper S', 'parenthesized upper S', 'parenthesized upper S']);
+  this.executeCharTest('🄣', ['parenthesized upper T', 'parenthesized upper T', 'parenthesized upper T']);
+  this.executeCharTest('🄤', ['parenthesized upper U', 'parenthesized upper U', 'parenthesized upper U']);
+  this.executeCharTest('🄥', ['parenthesized upper V', 'parenthesized upper V', 'parenthesized upper V']);
+  this.executeCharTest('🄦', ['parenthesized upper W', 'parenthesized upper W', 'parenthesized upper W']);
+  this.executeCharTest('🄧', ['parenthesized upper X', 'parenthesized upper X', 'parenthesized upper X']);
+  this.executeCharTest('🄨', ['parenthesized upper Y', 'parenthesized upper Y', 'parenthesized upper Y']);
+  this.executeCharTest('🄩', ['parenthesized upper Z', 'parenthesized upper Z', 'parenthesized upper Z']);
+  this.executeCharTest('🄪', ['tortoise shell bracketed upper S', 'tortoise shell bracketed upper S', 'tortoise shell bracketed upper S']);
+  this.executeCharTest('🄫', ['circled italic upper C', 'circled italic upper C', 'circled italic upper C']);
+  this.executeCharTest('🄬', ['circled italic upper R', 'circled italic upper R', 'circled italic upper R']);
+  this.executeCharTest('🄰', ['squared upper A', 'squared upper A', 'squared upper A']);
+  this.executeCharTest('🄱', ['squared upper B', 'squared upper B', 'squared upper B']);
+  this.executeCharTest('🄲', ['squared upper C', 'squared upper C', 'squared upper C']);
+  this.executeCharTest('🄳', ['squared upper D', 'squared upper D', 'squared upper D']);
+  this.executeCharTest('🄴', ['squared upper E', 'squared upper E', 'squared upper E']);
+  this.executeCharTest('🄵', ['squared upper F', 'squared upper F', 'squared upper F']);
+  this.executeCharTest('🄶', ['squared upper G', 'squared upper G', 'squared upper G']);
+  this.executeCharTest('🄷', ['squared upper H', 'squared upper H', 'squared upper H']);
+  this.executeCharTest('🄸', ['squared upper I', 'squared upper I', 'squared upper I']);
+  this.executeCharTest('🄹', ['squared upper J', 'squared upper J', 'squared upper J']);
+  this.executeCharTest('🄺', ['squared upper K', 'squared upper K', 'squared upper K']);
+  this.executeCharTest('🄻', ['squared upper L', 'squared upper L', 'squared upper L']);
+  this.executeCharTest('🄼', ['squared upper M', 'squared upper M', 'squared upper M']);
+  this.executeCharTest('🄽', ['squared upper N', 'squared upper N', 'squared upper N']);
+  this.executeCharTest('🄾', ['squared upper O', 'squared upper O', 'squared upper O']);
+  this.executeCharTest('🄿', ['squared upper P', 'squared upper P', 'squared upper P']);
+  this.executeCharTest('🅀', ['squared upper Q', 'squared upper Q', 'squared upper Q']);
+  this.executeCharTest('🅁', ['squared upper R', 'squared upper R', 'squared upper R']);
+  this.executeCharTest('🅂', ['squared upper S', 'squared upper S', 'squared upper S']);
+  this.executeCharTest('🅃', ['squared upper T', 'squared upper T', 'squared upper T']);
+  this.executeCharTest('🅄', ['squared upper U', 'squared upper U', 'squared upper U']);
+  this.executeCharTest('🅅', ['squared upper V', 'squared upper V', 'squared upper V']);
+  this.executeCharTest('🅆', ['squared upper W', 'squared upper W', 'squared upper W']);
+  this.executeCharTest('🅇', ['squared upper X', 'squared upper X', 'squared upper X']);
+  this.executeCharTest('🅈', ['squared upper Y', 'squared upper Y', 'squared upper Y']);
+  this.executeCharTest('🅉', ['squared upper Z', 'squared upper Z', 'squared upper Z']);
+  this.executeCharTest('🅐', ['negative circled upper A', 'negative circled upper A', 'negative circled upper A']);
+  this.executeCharTest('🅑', ['negative circled upper B', 'negative circled upper B', 'negative circled upper B']);
+  this.executeCharTest('🅒', ['negative circled upper C', 'negative circled upper C', 'negative circled upper C']);
+  this.executeCharTest('🅓', ['negative circled upper D', 'negative circled upper D', 'negative circled upper D']);
+  this.executeCharTest('🅔', ['negative circled upper E', 'negative circled upper E', 'negative circled upper E']);
+  this.executeCharTest('🅕', ['negative circled upper F', 'negative circled upper F', 'negative circled upper F']);
+  this.executeCharTest('🅖', ['negative circled upper G', 'negative circled upper G', 'negative circled upper G']);
+  this.executeCharTest('🅗', ['negative circled upper H', 'negative circled upper H', 'negative circled upper H']);
+  this.executeCharTest('🅘', ['negative circled upper I', 'negative circled upper I', 'negative circled upper I']);
+  this.executeCharTest('🅙', ['negative circled upper J', 'negative circled upper J', 'negative circled upper J']);
+  this.executeCharTest('🅚', ['negative circled upper K', 'negative circled upper K', 'negative circled upper K']);
+  this.executeCharTest('🅛', ['negative circled upper L', 'negative circled upper L', 'negative circled upper L']);
+  this.executeCharTest('🅜', ['negative circled upper M', 'negative circled upper M', 'negative circled upper M']);
+  this.executeCharTest('🅝', ['negative circled upper N', 'negative circled upper N', 'negative circled upper N']);
+  this.executeCharTest('🅞', ['negative circled upper O', 'negative circled upper O', 'negative circled upper O']);
+  this.executeCharTest('🅟', ['negative circled upper P', 'negative circled upper P', 'negative circled upper P']);
+  this.executeCharTest('🅠', ['negative circled upper Q', 'negative circled upper Q', 'negative circled upper Q']);
+  this.executeCharTest('🅡', ['negative circled upper R', 'negative circled upper R', 'negative circled upper R']);
+  this.executeCharTest('🅢', ['negative circled upper S', 'negative circled upper S', 'negative circled upper S']);
+  this.executeCharTest('🅣', ['negative circled upper T', 'negative circled upper T', 'negative circled upper T']);
+  this.executeCharTest('🅤', ['negative circled upper U', 'negative circled upper U', 'negative circled upper U']);
+  this.executeCharTest('🅥', ['negative circled upper V', 'negative circled upper V', 'negative circled upper V']);
+  this.executeCharTest('🅦', ['negative circled upper W', 'negative circled upper W', 'negative circled upper W']);
+  this.executeCharTest('🅧', ['negative circled upper X', 'negative circled upper X', 'negative circled upper X']);
+  this.executeCharTest('🅨', ['negative circled upper Y', 'negative circled upper Y', 'negative circled upper Y']);
+  this.executeCharTest('🅩', ['negative circled upper Z', 'negative circled upper Z', 'negative circled upper Z']);
+  this.executeCharTest('🅰', ['negative squared upper A', 'negative squared upper A', 'negative squared upper A']);
+  this.executeCharTest('🅱', ['negative squared upper B', 'negative squared upper B', 'negative squared upper B']);
+  this.executeCharTest('🅲', ['negative squared upper C', 'negative squared upper C', 'negative squared upper C']);
+  this.executeCharTest('🅳', ['negative squared upper D', 'negative squared upper D', 'negative squared upper D']);
+  this.executeCharTest('🅴', ['negative squared upper E', 'negative squared upper E', 'negative squared upper E']);
+  this.executeCharTest('🅵', ['negative squared upper F', 'negative squared upper F', 'negative squared upper F']);
+  this.executeCharTest('🅶', ['negative squared upper G', 'negative squared upper G', 'negative squared upper G']);
+  this.executeCharTest('🅷', ['negative squared upper H', 'negative squared upper H', 'negative squared upper H']);
+  this.executeCharTest('🅸', ['negative squared upper I', 'negative squared upper I', 'negative squared upper I']);
+  this.executeCharTest('🅹', ['negative squared upper J', 'negative squared upper J', 'negative squared upper J']);
+  this.executeCharTest('🅺', ['negative squared upper K', 'negative squared upper K', 'negative squared upper K']);
+  this.executeCharTest('🅻', ['negative squared upper L', 'negative squared upper L', 'negative squared upper L']);
+  this.executeCharTest('🅼', ['negative squared upper M', 'negative squared upper M', 'negative squared upper M']);
+  this.executeCharTest('🅽', ['negative squared upper N', 'negative squared upper N', 'negative squared upper N']);
+  this.executeCharTest('🅾', ['negative squared upper O', 'negative squared upper O', 'negative squared upper O']);
+  this.executeCharTest('🅿', ['negative squared upper P', 'negative squared upper P', 'negative squared upper P']);
+  this.executeCharTest('🆀', ['negative squared upper Q', 'negative squared upper Q', 'negative squared upper Q']);
+  this.executeCharTest('🆁', ['negative squared upper R', 'negative squared upper R', 'negative squared upper R']);
+  this.executeCharTest('🆂', ['negative squared upper S', 'negative squared upper S', 'negative squared upper S']);
+  this.executeCharTest('🆃', ['negative squared upper T', 'negative squared upper T', 'negative squared upper T']);
+  this.executeCharTest('🆄', ['negative squared upper U', 'negative squared upper U', 'negative squared upper U']);
+  this.executeCharTest('🆅', ['negative squared upper V', 'negative squared upper V', 'negative squared upper V']);
+  this.executeCharTest('🆆', ['negative squared upper W', 'negative squared upper W', 'negative squared upper W']);
+  this.executeCharTest('🆇', ['negative squared upper X', 'negative squared upper X', 'negative squared upper X']);
+  this.executeCharTest('🆈', ['negative squared upper Y', 'negative squared upper Y', 'negative squared upper Y']);
+  this.executeCharTest('🆉', ['negative squared upper Z', 'negative squared upper Z', 'negative squared upper Z']);
+  this.executeCharTest('🆊', ['crossed negative squared upper P', 'crossed negative squared upper P', 'crossed negative squared upper P']);
+  this.executeCharTest('Ǖ', ['upper U double overdot overbar', 'upper U double overdot overbar', 'upper U double overdot overbar']);
+  this.executeCharTest('Ǘ', ['upper U double overdot acute', 'upper U double overdot acute', 'upper U double overdot acute']);
+  this.executeCharTest('Ǚ', ['upper U double overdot caron', 'upper U double overdot caron', 'upper U double overdot caron']);
+  this.executeCharTest('Ǜ', ['upper U double overdot grave', 'upper U double overdot grave', 'upper U double overdot grave']);
+  this.executeCharTest('Ǟ', ['upper A double overdot overbar', 'upper A double overdot overbar', 'upper A double overdot overbar']);
+  this.executeCharTest('Ǡ', ['upper A overdot overbar', 'upper A overdot overbar', 'upper A overdot overbar']);
+  this.executeCharTest('Ǭ', ['upper O ogonek overbar', 'upper O ogonek overbar', 'upper O ogonek overbar']);
+  this.executeCharTest('Ǻ', ['upper A ring acute', 'upper A ring acute', 'upper A ring acute']);
+  this.executeCharTest('Ȫ', ['upper O double overdot overbar', 'upper O double overdot overbar', 'upper O double overdot overbar']);
+  this.executeCharTest('Ȭ', ['upper O tilde overbar', 'upper O tilde overbar', 'upper O tilde overbar']);
+  this.executeCharTest('Ȱ', ['upper O overdot overbar', 'upper O overdot overbar', 'upper O overdot overbar']);
+  this.executeCharTest('Ḉ', ['C cédille et accent aigu majuscule', 'C cédille et accent aigu majuscule', 'C cédille et accent aigu majuscule']);
+  this.executeCharTest('Ḕ', ['E macron et accent grave majuscule', 'E macron et accent grave majuscule', 'E macron et accent grave majuscule']);
+  this.executeCharTest('Ḗ', ['E macron et accent aigu majuscule', 'E macron et accent aigu majuscule', 'E macron et accent aigu majuscule']);
+  this.executeCharTest('Ḝ', ['E cédille et brève majuscule', 'E cédille et brève majuscule', 'E cédille et brève majuscule']);
+  this.executeCharTest('Ḯ', ['I tréma et accent aigu majuscule', 'I tréma et accent aigu majuscule', 'I tréma et accent aigu majuscule']);
+  this.executeCharTest('Ḹ', ['L point souscrit et macron majuscule', 'L point souscrit et macron majuscule', 'L point souscrit et macron majuscule']);
+  this.executeCharTest('Ṍ', ['O tilde et accent aigu majuscule', 'O tilde et accent aigu majuscule', 'O tilde et accent aigu majuscule']);
+  this.executeCharTest('Ṏ', ['O tilde et tréma majuscule', 'O tilde et tréma majuscule', 'O tilde et tréma majuscule']);
+  this.executeCharTest('Ṑ', ['O macron et accent grave majuscule', 'O macron et accent grave majuscule', 'O macron et accent grave majuscule']);
+  this.executeCharTest('Ṓ', ['O macron et accent aigu majuscule', 'O macron et accent aigu majuscule', 'O macron et accent aigu majuscule']);
+  this.executeCharTest('Ṝ', ['R point souscrit et macron majuscule', 'R point souscrit et macron majuscule', 'R point souscrit et macron majuscule']);
+  this.executeCharTest('Ṥ', ['S accent aigu et point en chef majuscule', 'S accent aigu et point en chef majuscule', 'S accent aigu et point en chef majuscule']);
+  this.executeCharTest('Ṧ', ['S caron et point en chef majuscule', 'S caron et point en chef majuscule', 'S caron et point en chef majuscule']);
+  this.executeCharTest('Ṩ', ['S point souscrit et point en chef majuscule', 'S point souscrit et point en chef majuscule', 'S point souscrit et point en chef majuscule']);
+  this.executeCharTest('Ṹ', ['U tilde et accent aigu majuscule', 'U tilde et accent aigu majuscule', 'U tilde et accent aigu majuscule']);
+  this.executeCharTest('Ṻ', ['U macron et tréma majuscule', 'U macron et tréma majuscule', 'U macron et tréma majuscule']);
+  this.executeCharTest('Ấ', ['A accent circonflexe et accent aigu majuscule', 'A accent circonflexe et accent aigu majuscule', 'A accent circonflexe et accent aigu majuscule']);
+  this.executeCharTest('Ầ', ['A accent circonflexe et accent grave majuscule', 'A accent circonflexe et accent grave majuscule', 'A accent circonflexe et accent grave majuscule']);
+  this.executeCharTest('Ẩ', ['A accent circonflexe et crochet en chef majuscule', 'A accent circonflexe et crochet en chef majuscule', 'A accent circonflexe et crochet en chef majuscule']);
+  this.executeCharTest('Ẫ', ['A accent circonflexe et tilde majuscule', 'A accent circonflexe et tilde majuscule', 'A accent circonflexe et tilde majuscule']);
+  this.executeCharTest('Ậ', ['A accent circonflexe et point souscrit majuscule', 'A accent circonflexe et point souscrit majuscule', 'A accent circonflexe et point souscrit majuscule']);
+  this.executeCharTest('Ắ', ['A brève et accent aigu majuscule', 'A brève et accent aigu majuscule', 'A brève et accent aigu majuscule']);
+  this.executeCharTest('Ằ', ['A brève et accent grave majuscule', 'A brève et accent grave majuscule', 'A brève et accent grave majuscule']);
+  this.executeCharTest('Ẳ', ['A brève et crochet en chef majuscule', 'A brève et crochet en chef majuscule', 'A brève et crochet en chef majuscule']);
+  this.executeCharTest('Ẵ', ['A brève et tilde majuscule', 'A brève et tilde majuscule', 'A brève et tilde majuscule']);
+  this.executeCharTest('Ặ', ['A brève et point souscrit majuscule', 'A brève et point souscrit majuscule', 'A brève et point souscrit majuscule']);
+  this.executeCharTest('Ế', ['E accent circonflexe et accent aigu majuscule', 'E accent circonflexe et accent aigu majuscule', 'E accent circonflexe et accent aigu majuscule']);
+  this.executeCharTest('Ề', ['E accent circonflexe et accent grave majuscule', 'E accent circonflexe et accent grave majuscule', 'E accent circonflexe et accent grave majuscule']);
+  this.executeCharTest('Ể', ['E accent circonflexe et crochet en chef majuscule', 'E accent circonflexe et crochet en chef majuscule', 'E accent circonflexe et crochet en chef majuscule']);
+  this.executeCharTest('Ễ', ['E accent circonflexe et tilde majuscule', 'E accent circonflexe et tilde majuscule', 'E accent circonflexe et tilde majuscule']);
+  this.executeCharTest('Ệ', ['E accent circonflexe et point souscrit majuscule', 'E accent circonflexe et point souscrit majuscule', 'E accent circonflexe et point souscrit majuscule']);
+  this.executeCharTest('Ố', ['O accent circonflexe et accent aigu majuscule', 'O accent circonflexe et accent aigu majuscule', 'O accent circonflexe et accent aigu majuscule']);
+  this.executeCharTest('Ồ', ['O accent circonflexe et accent grave majuscule', 'O accent circonflexe et accent grave majuscule', 'O accent circonflexe et accent grave majuscule']);
+  this.executeCharTest('Ổ', ['O accent circonflexe et crochet en chef majuscule', 'O accent circonflexe et crochet en chef majuscule', 'O accent circonflexe et crochet en chef majuscule']);
+  this.executeCharTest('Ỗ', ['O accent circonflexe et tilde majuscule', 'O accent circonflexe et tilde majuscule', 'O accent circonflexe et tilde majuscule']);
+  this.executeCharTest('Ộ', ['O accent circonflexe et point souscrit majuscule', 'O accent circonflexe et point souscrit majuscule', 'O accent circonflexe et point souscrit majuscule']);
+  this.executeCharTest('Ớ', ['O cornu accent aigu majuscule', 'O cornu accent aigu majuscule', 'O cornu accent aigu majuscule']);
+  this.executeCharTest('Ờ', ['O cornu accent grave majuscule', 'O cornu accent grave majuscule', 'O cornu accent grave majuscule']);
+  this.executeCharTest('Ở', ['O cornu crochet en chef majuscule', 'O cornu crochet en chef majuscule', 'O cornu crochet en chef majuscule']);
+  this.executeCharTest('Ỡ', ['O cornu tilde majuscule', 'O cornu tilde majuscule', 'O cornu tilde majuscule']);
+  this.executeCharTest('Ợ', ['O cornu point souscrit majuscule', 'O cornu point souscrit majuscule', 'O cornu point souscrit majuscule']);
+  this.executeCharTest('Ứ', ['U cornu accent aigu majuscule', 'U cornu accent aigu majuscule', 'U cornu accent aigu majuscule']);
+  this.executeCharTest('Ừ', ['U cornu accent grave majuscule', 'U cornu accent grave majuscule', 'U cornu accent grave majuscule']);
+  this.executeCharTest('Ử', ['U cornu crochet en chef majuscule', 'U cornu crochet en chef majuscule', 'U cornu crochet en chef majuscule']);
+  this.executeCharTest('Ữ', ['U cornu tilde majuscule', 'U cornu tilde majuscule', 'U cornu tilde majuscule']);
+  this.executeCharTest('Ự', ['U cornu point souscrit majuscule', 'U cornu point souscrit majuscule', 'U cornu point souscrit majuscule']);
+  this.executeCharTest('A', ['A majuscule', 'A majuscule', 'A majuscule']);
+  this.executeCharTest('B', ['B majuscule', 'B majuscule', 'B majuscule']);
+  this.executeCharTest('C', ['C majuscule', 'C majuscule', 'C majuscule']);
+  this.executeCharTest('D', ['D majuscule', 'D majuscule', 'D majuscule']);
+  this.executeCharTest('E', ['E majuscule', 'E majuscule', 'E majuscule']);
+  this.executeCharTest('F', ['F majuscule', 'F majuscule', 'F majuscule']);
+  this.executeCharTest('G', ['G majuscule', 'G majuscule', 'G majuscule']);
+  this.executeCharTest('H', ['H majuscule', 'H majuscule', 'H majuscule']);
+  this.executeCharTest('I', ['I majuscule', 'I majuscule', 'I majuscule']);
+  this.executeCharTest('J', ['J majuscule', 'J majuscule', 'J majuscule']);
+  this.executeCharTest('K', ['K majuscule', 'K majuscule', 'K majuscule']);
+  this.executeCharTest('L', ['L majuscule', 'L majuscule', 'L majuscule']);
+  this.executeCharTest('M', ['M majuscule', 'M majuscule', 'M majuscule']);
+  this.executeCharTest('N', ['N majuscule', 'N majuscule', 'N majuscule']);
+  this.executeCharTest('O', ['O majuscule', 'O majuscule', 'O majuscule']);
+  this.executeCharTest('P', ['P majuscule', 'P majuscule', 'P majuscule']);
+  this.executeCharTest('Q', ['Q majuscule', 'Q majuscule', 'Q majuscule']);
+  this.executeCharTest('R', ['R majuscule', 'R majuscule', 'R majuscule']);
+  this.executeCharTest('S', ['S majuscule', 'S majuscule', 'S majuscule']);
+  this.executeCharTest('T', ['T majuscule', 'T majuscule', 'T majuscule']);
+  this.executeCharTest('U', ['U majuscule', 'U majuscule', 'U majuscule']);
+  this.executeCharTest('V', ['V majuscule', 'V majuscule', 'V majuscule']);
+  this.executeCharTest('W', ['W majuscule', 'W majuscule', 'W majuscule']);
+  this.executeCharTest('X', ['X majuscule', 'X majuscule', 'X majuscule']);
+  this.executeCharTest('Y', ['Y majuscule', 'Y majuscule', 'Y majuscule']);
+  this.executeCharTest('Z', ['Z majuscule', 'Z majuscule', 'Z majuscule']);
+  this.executeCharTest('Ａ', ['upper A', 'upper A', 'upper A']);
+  this.executeCharTest('Ｂ', ['upper B', 'upper B', 'upper B']);
+  this.executeCharTest('Ｃ', ['upper C', 'upper C', 'upper C']);
+  this.executeCharTest('Ｄ', ['upper D', 'upper D', 'upper D']);
+  this.executeCharTest('Ｅ', ['upper E', 'upper E', 'upper E']);
+  this.executeCharTest('Ｆ', ['upper F', 'upper F', 'upper F']);
+  this.executeCharTest('Ｇ', ['upper G', 'upper G', 'upper G']);
+  this.executeCharTest('Ｈ', ['upper H', 'upper H', 'upper H']);
+  this.executeCharTest('Ｉ', ['upper I', 'upper I', 'upper I']);
+  this.executeCharTest('Ｊ', ['upper J', 'upper J', 'upper J']);
+  this.executeCharTest('Ｋ', ['upper K', 'upper K', 'upper K']);
+  this.executeCharTest('Ｌ', ['upper L', 'upper L', 'upper L']);
+  this.executeCharTest('Ｍ', ['upper M', 'upper M', 'upper M']);
+  this.executeCharTest('Ｎ', ['upper N', 'upper N', 'upper N']);
+  this.executeCharTest('Ｏ', ['upper O', 'upper O', 'upper O']);
+  this.executeCharTest('Ｐ', ['upper P', 'upper P', 'upper P']);
+  this.executeCharTest('Ｑ', ['upper Q', 'upper Q', 'upper Q']);
+  this.executeCharTest('Ｒ', ['upper R', 'upper R', 'upper R']);
+  this.executeCharTest('Ｓ', ['upper S', 'upper S', 'upper S']);
+  this.executeCharTest('Ｔ', ['upper T', 'upper T', 'upper T']);
+  this.executeCharTest('Ｕ', ['upper U', 'upper U', 'upper U']);
+  this.executeCharTest('Ｖ', ['upper V', 'upper V', 'upper V']);
+  this.executeCharTest('Ｗ', ['upper W', 'upper W', 'upper W']);
+  this.executeCharTest('Ｘ', ['upper X', 'upper X', 'upper X']);
+  this.executeCharTest('Ｙ', ['upper Y', 'upper Y', 'upper Y']);
+  this.executeCharTest('Ｚ', ['upper Z', 'upper Z', 'upper Z']);
+  this.executeCharTest('À', ['A accent grave majuscule', 'A accent grave majuscule', 'A accent grave majuscule']);
+  this.executeCharTest('Á', ['A accent aigu majuscule', 'A accent aigu majuscule', 'A accent aigu majuscule']);
+  this.executeCharTest('Â', ['A accent circonflexe majuscule', 'A accent circonflexe majuscule', 'A accent circonflexe majuscule']);
+  this.executeCharTest('Ã', ['A tilde majuscule', 'A tilde majuscule', 'A tilde majuscule']);
+  this.executeCharTest('Ä', ['A tréma majuscule', 'A tréma majuscule', 'A tréma majuscule']);
+  this.executeCharTest('Å', ['angstrom', 'angstrom', 'angstrom']);
+  this.executeCharTest('Ç', ['C cédille majuscule', 'C cédille majuscule', 'C cédille majuscule']);
+  this.executeCharTest('È', ['E accent grave majuscule', 'E accent grave majuscule', 'E accent grave majuscule']);
+  this.executeCharTest('É', ['E accent aigu majuscule', 'E accent aigu majuscule', 'E accent aigu majuscule']);
+  this.executeCharTest('Ê', ['E accent circonflexe majuscule', 'E accent circonflexe majuscule', 'E accent circonflexe majuscule']);
+  this.executeCharTest('Ë', ['E tréma majuscule', 'E tréma majuscule', 'E tréma majuscule']);
+  this.executeCharTest('Ì', ['I accent grave majuscule', 'I accent grave majuscule', 'I accent grave majuscule']);
+  this.executeCharTest('Í', ['I accent aigu majuscule', 'I accent aigu majuscule', 'I accent aigu majuscule']);
+  this.executeCharTest('Î', ['I accent circonflexe majuscule', 'I accent circonflexe majuscule', 'I accent circonflexe majuscule']);
+  this.executeCharTest('Ï', ['I tréma majuscule', 'I tréma majuscule', 'I tréma majuscule']);
+  this.executeCharTest('Ñ', ['N tilde majuscule', 'N tilde majuscule', 'N tilde majuscule']);
+  this.executeCharTest('Ò', ['O accent grave majuscule', 'O accent grave majuscule', 'O accent grave majuscule']);
+  this.executeCharTest('Ó', ['O accent aigu majuscule', 'O accent aigu majuscule', 'O accent aigu majuscule']);
+  this.executeCharTest('Ô', ['O accent circonflexe majuscule', 'O accent circonflexe majuscule', 'O accent circonflexe majuscule']);
+  this.executeCharTest('Õ', ['O tilde majuscule', 'O tilde majuscule', 'O tilde majuscule']);
+  this.executeCharTest('Ö', ['O tréma majuscule', 'O tréma majuscule', 'O tréma majuscule']);
+  this.executeCharTest('Ù', ['U accent grave majuscule', 'U accent grave majuscule', 'U accent grave majuscule']);
+  this.executeCharTest('Ú', ['U accent aigu majuscule', 'U accent aigu majuscule', 'U accent aigu majuscule']);
+  this.executeCharTest('Û', ['U accent circonflexe majuscule', 'U accent circonflexe majuscule', 'U accent circonflexe majuscule']);
+  this.executeCharTest('Ü', ['U tréma majuscule', 'U tréma majuscule', 'U tréma majuscule']);
+  this.executeCharTest('Ý', ['Y accent aigu majuscule', 'Y accent aigu majuscule', 'Y accent aigu majuscule']);
+  this.executeCharTest('Ā', ['A macron majuscule', 'A macron majuscule', 'A macron majuscule']);
+  this.executeCharTest('Ă', ['A brève majuscule', 'A brève majuscule', 'A brève majuscule']);
+  this.executeCharTest('Ą', ['A ogonek majuscule', 'A ogonek majuscule', 'A ogonek majuscule']);
+  this.executeCharTest('Ć', ['C accent aigu majuscule', 'C accent aigu majuscule', 'C accent aigu majuscule']);
+  this.executeCharTest('Ĉ', ['C accent circonflexe majuscule', 'C accent circonflexe majuscule', 'C accent circonflexe majuscule']);
+  this.executeCharTest('Ċ', ['C point en chef majuscule', 'C point en chef majuscule', 'C point en chef majuscule']);
+  this.executeCharTest('Č', ['C caron majuscule', 'C caron majuscule', 'C caron majuscule']);
+  this.executeCharTest('Ď', ['D caron majuscule', 'D caron majuscule', 'D caron majuscule']);
+  this.executeCharTest('Ē', ['E macron majuscule', 'E macron majuscule', 'E macron majuscule']);
+  this.executeCharTest('Ĕ', ['modifying above upper E with breve', 'mod above upper E with breve', 'mod above upper E with breve']);
+  this.executeCharTest('Ė', ['E point en chef majuscule', 'E point en chef majuscule', 'E point en chef majuscule']);
+  this.executeCharTest('Ę', ['E ogonek majuscule', 'E ogonek majuscule', 'E ogonek majuscule']);
+  this.executeCharTest('Ě', ['E caron majuscule', 'E caron majuscule', 'E caron majuscule']);
+  this.executeCharTest('Ĝ', ['G accent circonflexe majuscule', 'G accent circonflexe majuscule', 'G accent circonflexe majuscule']);
+  this.executeCharTest('Ğ', ['G brève majuscule', 'G brève majuscule', 'G brève majuscule']);
+  this.executeCharTest('Ġ', ['G point en chef majuscule', 'G point en chef majuscule', 'G point en chef majuscule']);
+  this.executeCharTest('Ģ', ['G cédille majuscule', 'G cédille majuscule', 'G cédille majuscule']);
+  this.executeCharTest('Ĥ', ['H accent circonflexe majuscule', 'H accent circonflexe majuscule', 'H accent circonflexe majuscule']);
+  this.executeCharTest('Ĩ', ['I tilde majuscule', 'I tilde majuscule', 'I tilde majuscule']);
+  this.executeCharTest('Ī', ['I macron majuscule', 'I macron majuscule', 'I macron majuscule']);
+  this.executeCharTest('Ĭ', ['modifying above upper I with breve', 'mod above upper I with breve', 'mod above upper I with breve']);
+  this.executeCharTest('Į', ['I ogonek majuscule', 'I ogonek majuscule', 'I ogonek majuscule']);
+  this.executeCharTest('İ', ['I point en chef majuscule', 'I point en chef majuscule', 'I point en chef majuscule']);
+  this.executeCharTest('Ĵ', ['J accent circonflexe majuscule', 'J accent circonflexe majuscule', 'J accent circonflexe majuscule']);
+  this.executeCharTest('Ķ', ['K cédille majuscule', 'K cédille majuscule', 'K cédille majuscule']);
+  this.executeCharTest('Ĺ', ['L accent aigu majuscule', 'L accent aigu majuscule', 'L accent aigu majuscule']);
+  this.executeCharTest('Ļ', ['L cédille majuscule', 'L cédille majuscule', 'L cédille majuscule']);
+  this.executeCharTest('Ľ', ['L caron majuscule', 'L caron majuscule', 'L caron majuscule']);
+  this.executeCharTest('Ŀ', ['L point médian majuscule', 'L point médian majuscule', 'L point médian majuscule']);
+  this.executeCharTest('Ń', ['N accent aigu majuscule', 'N accent aigu majuscule', 'N accent aigu majuscule']);
+  this.executeCharTest('Ņ', ['N cédille majuscule', 'N cédille majuscule', 'N cédille majuscule']);
+  this.executeCharTest('Ň', ['N caron majuscule', 'N caron majuscule', 'N caron majuscule']);
+  this.executeCharTest('Ō', ['O macron majuscule', 'O macron majuscule', 'O macron majuscule']);
+  this.executeCharTest('Ŏ', ['modifying above upper O with breve', 'mod above upper O with breve', 'mod above upper O with breve']);
+  this.executeCharTest('Ő', ['O avec double accent aigu majuscule', 'O avec double accent aigu majuscule', 'O avec double accent aigu majuscule']);
+  this.executeCharTest('Ŕ', ['R accent aigu majuscule', 'R accent aigu majuscule', 'R accent aigu majuscule']);
+  this.executeCharTest('Ŗ', ['R cédille majuscule', 'R cédille majuscule', 'R cédille majuscule']);
+  this.executeCharTest('Ř', ['R caron majuscule', 'R caron majuscule', 'R caron majuscule']);
+  this.executeCharTest('Ś', ['S accent aigu majuscule', 'S accent aigu majuscule', 'S accent aigu majuscule']);
+  this.executeCharTest('Ŝ', ['S accent circonflexe majuscule', 'S accent circonflexe majuscule', 'S accent circonflexe majuscule']);
+  this.executeCharTest('Ş', ['S cédille majuscule', 'S cédille majuscule', 'S cédille majuscule']);
+  this.executeCharTest('Š', ['S caron majuscule', 'S caron majuscule', 'S caron majuscule']);
+  this.executeCharTest('Ţ', ['T cédille majuscule', 'T cédille majuscule', 'T cédille majuscule']);
+  this.executeCharTest('Ť', ['T caron majuscule', 'T caron majuscule', 'T caron majuscule']);
+  this.executeCharTest('Ũ', ['U tilde majuscule', 'U tilde majuscule', 'U tilde majuscule']);
+  this.executeCharTest('Ū', ['U macron majuscule', 'U macron majuscule', 'U macron majuscule']);
+  this.executeCharTest('Ŭ', ['U brève majuscule', 'U brève majuscule', 'U brève majuscule']);
+  this.executeCharTest('Ů', ['U rond en chef majuscule', 'U rond en chef majuscule', 'U rond en chef majuscule']);
+  this.executeCharTest('Ű', ['U avec double accent aigu majuscule', 'U avec double accent aigu majuscule', 'U avec double accent aigu majuscule']);
+  this.executeCharTest('Ų', ['U ogonek majuscule', 'U ogonek majuscule', 'U ogonek majuscule']);
+  this.executeCharTest('Ŵ', ['W accent circonflexe majuscule', 'W accent circonflexe majuscule', 'W accent circonflexe majuscule']);
+  this.executeCharTest('Ŷ', ['Y accent circonflexe majuscule', 'Y accent circonflexe majuscule', 'Y accent circonflexe majuscule']);
+  this.executeCharTest('Ÿ', ['Y tréma majuscule', 'Y tréma majuscule', 'Y tréma majuscule']);
+  this.executeCharTest('Ź', ['Z accent aigu majuscule', 'Z accent aigu majuscule', 'Z accent aigu majuscule']);
+  this.executeCharTest('Ż', ['Z point en chef majuscule', 'Z point en chef majuscule', 'Z point en chef majuscule']);
+  this.executeCharTest('Ž', ['Z caron majuscule', 'Z caron majuscule', 'Z caron majuscule']);
+  this.executeCharTest('Ǎ', ['modifying above upper A with caron', 'mod above upper A with caron', 'mod above upper A with caron']);
+  this.executeCharTest('Ǐ', ['modifying above upper I with caron', 'mod above upper I with caron', 'mod above upper I with caron']);
+  this.executeCharTest('Ǒ', ['modifying above upper O with caron', 'mod above upper O with caron', 'mod above upper O with caron']);
+  this.executeCharTest('Ǔ', ['modifying above upper U with caron', 'mod above upper U with caron', 'mod above upper U with caron']);
+  this.executeCharTest('Ǧ', ['modifying above upper G with caron', 'mod above upper G with caron', 'mod above upper G with caron']);
+  this.executeCharTest('Ǩ', ['modifying above upper K with caron', 'mod above upper K with caron', 'mod above upper K with caron']);
+  this.executeCharTest('Ǫ', ['modifying above upper O with ogonek', 'mod above upper O with ogonek', 'mod above upper O with ogonek']);
+  this.executeCharTest('Ǵ', ['modifying above upper G with acute', 'mod above upper G with acute', 'mod above upper G with acute']);
+  this.executeCharTest('Ǹ', ['modifying above upper N with grave', 'mod above upper N with grave', 'mod above upper N with grave']);
+  this.executeCharTest('Ȁ', ['modifying above upper A with double grave', 'mod above upper A with double grave', 'mod above upper A with double grave']);
+  this.executeCharTest('Ȃ', ['modifying above upper A with inverted breve', 'mod above upper A with inverted breve', 'mod above upper A with inverted breve']);
+  this.executeCharTest('Ȅ', ['modifying above upper E with double grave', 'mod above upper E with double grave', 'mod above upper E with double grave']);
+  this.executeCharTest('Ȇ', ['modifying above upper E with inverted breve', 'mod above upper E with inverted breve', 'mod above upper E with inverted breve']);
+  this.executeCharTest('Ȉ', ['modifying above upper I with double grave', 'mod above upper I with double grave', 'mod above upper I with double grave']);
+  this.executeCharTest('Ȋ', ['modifying above upper I with inverted breve', 'mod above upper I with inverted breve', 'mod above upper I with inverted breve']);
+  this.executeCharTest('Ȍ', ['modifying above upper O with double grave', 'mod above upper O with double grave', 'mod above upper O with double grave']);
+  this.executeCharTest('Ȏ', ['modifying above upper O with inverted breve', 'mod above upper O with inverted breve', 'mod above upper O with inverted breve']);
+  this.executeCharTest('Ȑ', ['modifying above upper R with double grave', 'mod above upper R with double grave', 'mod above upper R with double grave']);
+  this.executeCharTest('Ȓ', ['modifying above upper R with inverted breve', 'mod above upper R with inverted breve', 'mod above upper R with inverted breve']);
+  this.executeCharTest('Ȕ', ['modifying above upper U with double grave', 'mod above upper U with double grave', 'mod above upper U with double grave']);
+  this.executeCharTest('Ȗ', ['modifying above upper U with inverted breve', 'mod above upper U with inverted breve', 'mod above upper U with inverted breve']);
+  this.executeCharTest('Ș', ['modifying below upper S with comma below', 'mod below upper S with comma below', 'mod below upper S with comma below']);
+  this.executeCharTest('Ț', ['modifying below upper T with comma below', 'mod below upper T with comma below', 'mod below upper T with comma below']);
+  this.executeCharTest('Ȟ', ['modifying above upper H with caron', 'mod above upper H with caron', 'mod above upper H with caron']);
+  this.executeCharTest('Ȧ', ['modifying above upper A with dot', 'mod above upper A with dot', 'mod above upper A with dot']);
+  this.executeCharTest('Ȩ', ['modifying above upper E with cedilla', 'mod above upper E with cedilla', 'mod above upper E with cedilla']);
+  this.executeCharTest('Ȯ', ['modifying above upper O with dot', 'mod above upper O with dot', 'mod above upper O with dot']);
+  this.executeCharTest('Ȳ', ['upper Y overbar', 'upper Y overbar', 'upper Y overbar']);
+  this.executeCharTest('Ḁ', ['A à rond souscrit majuscule', 'A à rond souscrit majuscule', 'A à rond souscrit majuscule']);
+  this.executeCharTest('Ḃ', ['B point en chef majuscule', 'B point en chef majuscule', 'B point en chef majuscule']);
+  this.executeCharTest('Ḅ', ['B point souscrit majuscule', 'B point souscrit majuscule', 'B point souscrit majuscule']);
+  this.executeCharTest('Ḇ', ['B ligne souscrite majuscule', 'B ligne souscrite majuscule', 'B ligne souscrite majuscule']);
+  this.executeCharTest('Ḋ', ['D point en chef majuscule', 'D point en chef majuscule', 'D point en chef majuscule']);
+  this.executeCharTest('Ḍ', ['D point souscrit majuscule', 'D point souscrit majuscule', 'D point souscrit majuscule']);
+  this.executeCharTest('Ḏ', ['D ligne souscrite majuscule', 'D ligne souscrite majuscule', 'D ligne souscrite majuscule']);
+  this.executeCharTest('Ḑ', ['D cédille majuscule', 'D cédille majuscule', 'D cédille majuscule']);
+  this.executeCharTest('Ḓ', ['D accent circonflexe souscrit majuscule', 'D accent circonflexe souscrit majuscule', 'D accent circonflexe souscrit majuscule']);
+  this.executeCharTest('Ḙ', ['E accent circonflexe souscrit majuscule', 'E accent circonflexe souscrit majuscule', 'E accent circonflexe souscrit majuscule']);
+  this.executeCharTest('Ḛ', ['E tilde souscrit majuscule', 'E tilde souscrit majuscule', 'E tilde souscrit majuscule']);
+  this.executeCharTest('Ḟ', ['F point en chef majuscule', 'F point en chef majuscule', 'F point en chef majuscule']);
+  this.executeCharTest('Ḡ', ['G macron majuscule', 'G macron majuscule', 'G macron majuscule']);
+  this.executeCharTest('Ḣ', ['H point en chef majuscule', 'H point en chef majuscule', 'H point en chef majuscule']);
+  this.executeCharTest('Ḥ', ['H point souscrit majuscule', 'H point souscrit majuscule', 'H point souscrit majuscule']);
+  this.executeCharTest('Ḧ', ['H tréma majuscule', 'H tréma majuscule', 'H tréma majuscule']);
+  this.executeCharTest('Ḩ', ['H cédille majuscule', 'H cédille majuscule', 'H cédille majuscule']);
+  this.executeCharTest('Ḫ', ['H brève souscrit majuscule', 'H brève souscrit majuscule', 'H brève souscrit majuscule']);
+  this.executeCharTest('Ḭ', ['I tilde souscrit majuscule', 'I tilde souscrit majuscule', 'I tilde souscrit majuscule']);
+  this.executeCharTest('Ḱ', ['K accent aigu majuscule', 'K accent aigu majuscule', 'K accent aigu majuscule']);
+  this.executeCharTest('Ḳ', ['K point souscrit majuscule', 'K point souscrit majuscule', 'K point souscrit majuscule']);
+  this.executeCharTest('Ḵ', ['K ligne souscrite majuscule', 'K ligne souscrite majuscule', 'K ligne souscrite majuscule']);
+  this.executeCharTest('Ḷ', ['L point souscrit majuscule', 'L point souscrit majuscule', 'L point souscrit majuscule']);
+  this.executeCharTest('Ḻ', ['L ligne souscrite majuscule', 'L ligne souscrite majuscule', 'L ligne souscrite majuscule']);
+  this.executeCharTest('Ḽ', ['L accent circonflexe souscrit majuscule', 'L accent circonflexe souscrit majuscule', 'L accent circonflexe souscrit majuscule']);
+  this.executeCharTest('Ḿ', ['M accent aigu majuscule', 'M accent aigu majuscule', 'M accent aigu majuscule']);
+  this.executeCharTest('Ṁ', ['M point en chef majuscule', 'M point en chef majuscule', 'M point en chef majuscule']);
+  this.executeCharTest('Ṃ', ['M point souscrit majuscule', 'M point souscrit majuscule', 'M point souscrit majuscule']);
+  this.executeCharTest('Ṅ', ['N point en chef majuscule', 'N point en chef majuscule', 'N point en chef majuscule']);
+  this.executeCharTest('Ṇ', ['N point souscrit majuscule', 'N point souscrit majuscule', 'N point souscrit majuscule']);
+  this.executeCharTest('Ṉ', ['N ligne souscrite majuscule', 'N ligne souscrite majuscule', 'N ligne souscrite majuscule']);
+  this.executeCharTest('Ṋ', ['N accent circonflexe souscrit majuscule', 'N accent circonflexe souscrit majuscule', 'N accent circonflexe souscrit majuscule']);
+  this.executeCharTest('Ṕ', ['P accent aigu majuscule', 'P accent aigu majuscule', 'P accent aigu majuscule']);
+  this.executeCharTest('Ṗ', ['P point en chef majuscule', 'P point en chef majuscule', 'P point en chef majuscule']);
+  this.executeCharTest('Ṙ', ['R point en chef majuscule', 'R point en chef majuscule', 'R point en chef majuscule']);
+  this.executeCharTest('Ṛ', ['R point souscrit majuscule', 'R point souscrit majuscule', 'R point souscrit majuscule']);
+  this.executeCharTest('Ṟ', ['R ligne souscrite majuscule', 'R ligne souscrite majuscule', 'R ligne souscrite majuscule']);
+  this.executeCharTest('Ṡ', ['S point en chef majuscule', 'S point en chef majuscule', 'S point en chef majuscule']);
+  this.executeCharTest('Ṣ', ['S point souscrit majuscule', 'S point souscrit majuscule', 'S point souscrit majuscule']);
+  this.executeCharTest('Ṫ', ['T point en chef majuscule', 'T point en chef majuscule', 'T point en chef majuscule']);
+  this.executeCharTest('Ṭ', ['T point souscrit majuscule', 'T point souscrit majuscule', 'T point souscrit majuscule']);
+  this.executeCharTest('Ṯ', ['T ligne souscrite majuscule', 'T ligne souscrite majuscule', 'T ligne souscrite majuscule']);
+  this.executeCharTest('Ṱ', ['T accent circonflexe souscrit majuscule', 'T accent circonflexe souscrit majuscule', 'T accent circonflexe souscrit majuscule']);
+  this.executeCharTest('Ṳ', ['U tréma souscrit majuscule', 'U tréma souscrit majuscule', 'U tréma souscrit majuscule']);
+  this.executeCharTest('Ṵ', ['U tilde souscrit majuscule', 'U tilde souscrit majuscule', 'U tilde souscrit majuscule']);
+  this.executeCharTest('Ṷ', ['U accent circonflexe souscrit majuscule', 'U accent circonflexe souscrit majuscule', 'U accent circonflexe souscrit majuscule']);
+  this.executeCharTest('Ṽ', ['V tilde majuscule', 'V tilde majuscule', 'V tilde majuscule']);
+  this.executeCharTest('Ṿ', ['V point souscrit majuscule', 'V point souscrit majuscule', 'V point souscrit majuscule']);
+  this.executeCharTest('Ẁ', ['W accent grave majuscule', 'W accent grave majuscule', 'W accent grave majuscule']);
+  this.executeCharTest('Ẃ', ['W accent aigu majuscule', 'W accent aigu majuscule', 'W accent aigu majuscule']);
+  this.executeCharTest('Ẅ', ['W tréma majuscule', 'W tréma majuscule', 'W tréma majuscule']);
+  this.executeCharTest('Ẇ', ['W point en chef majuscule', 'W point en chef majuscule', 'W point en chef majuscule']);
+  this.executeCharTest('Ẉ', ['W point souscrit majuscule', 'W point souscrit majuscule', 'W point souscrit majuscule']);
+  this.executeCharTest('Ẋ', ['X point en chef majuscule', 'X point en chef majuscule', 'X point en chef majuscule']);
+  this.executeCharTest('Ẍ', ['X tréma majuscule', 'X tréma majuscule', 'X tréma majuscule']);
+  this.executeCharTest('Ẏ', ['Y point en chef majuscule', 'Y point en chef majuscule', 'Y point en chef majuscule']);
+  this.executeCharTest('Ẑ', ['Z accent circonflexe majuscule', 'Z accent circonflexe majuscule', 'Z accent circonflexe majuscule']);
+  this.executeCharTest('Ẓ', ['Z point souscrit majuscule', 'Z point souscrit majuscule', 'Z point souscrit majuscule']);
+  this.executeCharTest('Ẕ', ['Z ligne souscrite majuscule', 'Z ligne souscrite majuscule', 'Z ligne souscrite majuscule']);
+  this.executeCharTest('Ạ', ['A point souscrit majuscule', 'A point souscrit majuscule', 'A point souscrit majuscule']);
+  this.executeCharTest('Ả', ['A crochet en chef majuscule', 'A crochet en chef majuscule', 'A crochet en chef majuscule']);
+  this.executeCharTest('Ẹ', ['E point souscrit majuscule', 'E point souscrit majuscule', 'E point souscrit majuscule']);
+  this.executeCharTest('Ẻ', ['E crochet en chef majuscule', 'E crochet en chef majuscule', 'E crochet en chef majuscule']);
+  this.executeCharTest('Ẽ', ['E tilde majuscule', 'E tilde majuscule', 'E tilde majuscule']);
+  this.executeCharTest('Ỉ', ['I crochet en chef majuscule', 'I crochet en chef majuscule', 'I crochet en chef majuscule']);
+  this.executeCharTest('Ị', ['I point souscrit majuscule', 'I point souscrit majuscule', 'I point souscrit majuscule']);
+  this.executeCharTest('Ọ', ['O point souscrit majuscule', 'O point souscrit majuscule', 'O point souscrit majuscule']);
+  this.executeCharTest('Ỏ', ['O crochet en chef majuscule', 'O crochet en chef majuscule', 'O crochet en chef majuscule']);
+  this.executeCharTest('Ụ', ['U point souscrit majuscule', 'U point souscrit majuscule', 'U point souscrit majuscule']);
+  this.executeCharTest('Ủ', ['U crochet en chef majuscule', 'U crochet en chef majuscule', 'U crochet en chef majuscule']);
+  this.executeCharTest('Ỳ', ['Y accent grave majuscule', 'Y accent grave majuscule', 'Y accent grave majuscule']);
+  this.executeCharTest('Ỵ', ['Y point souscrit majuscule', 'Y point souscrit majuscule', 'Y point souscrit majuscule']);
+  this.executeCharTest('Ỷ', ['Y crochet en chef majuscule', 'Y crochet en chef majuscule', 'Y crochet en chef majuscule']);
+  this.executeCharTest('Ỹ', ['Y tilde majuscule', 'Y tilde majuscule', 'Y tilde majuscule']);
+  this.executeCharTest('𝕬', ['A majuscule en gothique gras', 'A majuscule en gothique gras', 'A majuscule en gothique gras']);
+  this.executeCharTest('𝕭', ['B majuscule en gothique gras', 'B majuscule en gothique gras', 'B majuscule en gothique gras']);
+  this.executeCharTest('𝕮', ['C majuscule en gothique gras', 'C majuscule en gothique gras', 'C majuscule en gothique gras']);
+  this.executeCharTest('𝕯', ['D majuscule en gothique gras', 'D majuscule en gothique gras', 'D majuscule en gothique gras']);
+  this.executeCharTest('𝕰', ['E majuscule en gothique gras', 'E majuscule en gothique gras', 'E majuscule en gothique gras']);
+  this.executeCharTest('𝕱', ['F majuscule en gothique gras', 'F majuscule en gothique gras', 'F majuscule en gothique gras']);
+  this.executeCharTest('𝕲', ['G majuscule en gothique gras', 'G majuscule en gothique gras', 'G majuscule en gothique gras']);
+  this.executeCharTest('𝕳', ['H majuscule en gothique gras', 'H majuscule en gothique gras', 'H majuscule en gothique gras']);
+  this.executeCharTest('𝕴', ['I majuscule en gothique gras', 'I majuscule en gothique gras', 'I majuscule en gothique gras']);
+  this.executeCharTest('𝕵', ['J majuscule en gothique gras', 'J majuscule en gothique gras', 'J majuscule en gothique gras']);
+  this.executeCharTest('𝕶', ['K majuscule en gothique gras', 'K majuscule en gothique gras', 'K majuscule en gothique gras']);
+  this.executeCharTest('𝕷', ['L majuscule en gothique gras', 'L majuscule en gothique gras', 'L majuscule en gothique gras']);
+  this.executeCharTest('𝕸', ['M majuscule en gothique gras', 'M majuscule en gothique gras', 'M majuscule en gothique gras']);
+  this.executeCharTest('𝕹', ['N majuscule en gothique gras', 'N majuscule en gothique gras', 'N majuscule en gothique gras']);
+  this.executeCharTest('𝕺', ['O majuscule en gothique gras', 'O majuscule en gothique gras', 'O majuscule en gothique gras']);
+  this.executeCharTest('𝕻', ['P majuscule en gothique gras', 'P majuscule en gothique gras', 'P majuscule en gothique gras']);
+  this.executeCharTest('𝕼', ['Q majuscule en gothique gras', 'Q majuscule en gothique gras', 'Q majuscule en gothique gras']);
+  this.executeCharTest('𝕽', ['R majuscule en gothique gras', 'R majuscule en gothique gras', 'R majuscule en gothique gras']);
+  this.executeCharTest('𝕾', ['S majuscule en gothique gras', 'S majuscule en gothique gras', 'S majuscule en gothique gras']);
+  this.executeCharTest('𝕿', ['T majuscule en gothique gras', 'T majuscule en gothique gras', 'T majuscule en gothique gras']);
+  this.executeCharTest('𝖀', ['U majuscule en gothique gras', 'U majuscule en gothique gras', 'U majuscule en gothique gras']);
+  this.executeCharTest('𝖁', ['V majuscule en gothique gras', 'V majuscule en gothique gras', 'V majuscule en gothique gras']);
+  this.executeCharTest('𝖂', ['W majuscule en gothique gras', 'W majuscule en gothique gras', 'W majuscule en gothique gras']);
+  this.executeCharTest('𝖃', ['X majuscule en gothique gras', 'X majuscule en gothique gras', 'X majuscule en gothique gras']);
+  this.executeCharTest('𝖄', ['Y majuscule en gothique gras', 'Y majuscule en gothique gras', 'Y majuscule en gothique gras']);
+  this.executeCharTest('𝖅', ['Z majuscule en gothique gras', 'Z majuscule en gothique gras', 'Z majuscule en gothique gras']);
+  this.executeCharTest('𝖆', ['a en gothique gras', 'a en gothique gras', 'a en gothique gras']);
+  this.executeCharTest('𝖇', ['b en gothique gras', 'b en gothique gras', 'b en gothique gras']);
+  this.executeCharTest('𝖈', ['c en gothique gras', 'c en gothique gras', 'c en gothique gras']);
+  this.executeCharTest('𝖉', ['d en gothique gras', 'd en gothique gras', 'd en gothique gras']);
+  this.executeCharTest('𝖊', ['e en gothique gras', 'e en gothique gras', 'e en gothique gras']);
+  this.executeCharTest('𝖋', ['f en gothique gras', 'f en gothique gras', 'f en gothique gras']);
+  this.executeCharTest('𝖌', ['g en gothique gras', 'g en gothique gras', 'g en gothique gras']);
+  this.executeCharTest('𝖍', ['h en gothique gras', 'h en gothique gras', 'h en gothique gras']);
+  this.executeCharTest('𝖎', ['i en gothique gras', 'i en gothique gras', 'i en gothique gras']);
+  this.executeCharTest('𝖏', ['j en gothique gras', 'j en gothique gras', 'j en gothique gras']);
+  this.executeCharTest('𝖐', ['k en gothique gras', 'k en gothique gras', 'k en gothique gras']);
+  this.executeCharTest('𝖑', ['l en gothique gras', 'l en gothique gras', 'l en gothique gras']);
+  this.executeCharTest('𝖒', ['m en gothique gras', 'm en gothique gras', 'm en gothique gras']);
+  this.executeCharTest('𝖓', ['n en gothique gras', 'n en gothique gras', 'n en gothique gras']);
+  this.executeCharTest('𝖔', ['o en gothique gras', 'o en gothique gras', 'o en gothique gras']);
+  this.executeCharTest('𝖕', ['p en gothique gras', 'p en gothique gras', 'p en gothique gras']);
+  this.executeCharTest('𝖖', ['q en gothique gras', 'q en gothique gras', 'q en gothique gras']);
+  this.executeCharTest('𝖗', ['r en gothique gras', 'r en gothique gras', 'r en gothique gras']);
+  this.executeCharTest('𝖘', ['s en gothique gras', 's en gothique gras', 's en gothique gras']);
+  this.executeCharTest('𝖙', ['t en gothique gras', 't en gothique gras', 't en gothique gras']);
+  this.executeCharTest('𝖚', ['u en gothique gras', 'u en gothique gras', 'u en gothique gras']);
+  this.executeCharTest('𝖛', ['v en gothique gras', 'v en gothique gras', 'v en gothique gras']);
+  this.executeCharTest('𝖜', ['w en gothique gras', 'w en gothique gras', 'w en gothique gras']);
+  this.executeCharTest('𝖝', ['x en gothique gras', 'x en gothique gras', 'x en gothique gras']);
+  this.executeCharTest('𝖞', ['y en gothique gras', 'y en gothique gras', 'y en gothique gras']);
+  this.executeCharTest('𝖟', ['z en gothique gras', 'z en gothique gras', 'z en gothique gras']);
+  this.executeCharTest('𝐀', ['A majuscule en gras', 'A majuscule en gras', 'A majuscule en gras']);
+  this.executeCharTest('𝐁', ['B majuscule en gras', 'B majuscule en gras', 'B majuscule en gras']);
+  this.executeCharTest('𝐂', ['C majuscule en gras', 'C majuscule en gras', 'C majuscule en gras']);
+  this.executeCharTest('𝐃', ['D majuscule en gras', 'D majuscule en gras', 'D majuscule en gras']);
+  this.executeCharTest('𝐄', ['E majuscule en gras', 'E majuscule en gras', 'E majuscule en gras']);
+  this.executeCharTest('𝐅', ['F majuscule en gras', 'F majuscule en gras', 'F majuscule en gras']);
+  this.executeCharTest('𝐆', ['G majuscule en gras', 'G majuscule en gras', 'G majuscule en gras']);
+  this.executeCharTest('𝐇', ['H majuscule en gras', 'H majuscule en gras', 'H majuscule en gras']);
+  this.executeCharTest('𝐈', ['I majuscule en gras', 'I majuscule en gras', 'I majuscule en gras']);
+  this.executeCharTest('𝐉', ['J majuscule en gras', 'J majuscule en gras', 'J majuscule en gras']);
+  this.executeCharTest('𝐊', ['K majuscule en gras', 'K majuscule en gras', 'K majuscule en gras']);
+  this.executeCharTest('𝐋', ['L majuscule en gras', 'L majuscule en gras', 'L majuscule en gras']);
+  this.executeCharTest('𝐌', ['M majuscule en gras', 'M majuscule en gras', 'M majuscule en gras']);
+  this.executeCharTest('𝐍', ['N majuscule en gras', 'N majuscule en gras', 'N majuscule en gras']);
+  this.executeCharTest('𝐎', ['O majuscule en gras', 'O majuscule en gras', 'O majuscule en gras']);
+  this.executeCharTest('𝐏', ['P majuscule en gras', 'P majuscule en gras', 'P majuscule en gras']);
+  this.executeCharTest('𝐐', ['Q majuscule en gras', 'Q majuscule en gras', 'Q majuscule en gras']);
+  this.executeCharTest('𝐑', ['R majuscule en gras', 'R majuscule en gras', 'R majuscule en gras']);
+  this.executeCharTest('𝐒', ['S majuscule en gras', 'S majuscule en gras', 'S majuscule en gras']);
+  this.executeCharTest('𝐓', ['T majuscule en gras', 'T majuscule en gras', 'T majuscule en gras']);
+  this.executeCharTest('𝐔', ['U majuscule en gras', 'U majuscule en gras', 'U majuscule en gras']);
+  this.executeCharTest('𝐕', ['V majuscule en gras', 'V majuscule en gras', 'V majuscule en gras']);
+  this.executeCharTest('𝐖', ['W majuscule en gras', 'W majuscule en gras', 'W majuscule en gras']);
+  this.executeCharTest('𝐗', ['X majuscule en gras', 'X majuscule en gras', 'X majuscule en gras']);
+  this.executeCharTest('𝐘', ['Y majuscule en gras', 'Y majuscule en gras', 'Y majuscule en gras']);
+  this.executeCharTest('𝐙', ['Z majuscule en gras', 'Z majuscule en gras', 'Z majuscule en gras']);
+  this.executeCharTest('𝐚', ['a en gras', 'a en gras', 'a en gras']);
+  this.executeCharTest('𝐛', ['b en gras', 'b en gras', 'b en gras']);
+  this.executeCharTest('𝐜', ['c en gras', 'c en gras', 'c en gras']);
+  this.executeCharTest('𝐝', ['c en gras', 'c en gras', 'c en gras']);
+  this.executeCharTest('𝐞', ['e en gras', 'e en gras', 'e en gras']);
+  this.executeCharTest('𝐟', ['f en gras', 'f en gras', 'f en gras']);
+  this.executeCharTest('𝐠', ['g en gras', 'g en gras', 'g en gras']);
+  this.executeCharTest('𝐡', ['h en gras', 'h en gras', 'h en gras']);
+  this.executeCharTest('𝐢', ['i en gras', 'i en gras', 'i en gras']);
+  this.executeCharTest('𝐣', ['j en gras', 'j en gras', 'j en gras']);
+  this.executeCharTest('𝐤', ['k en gras', 'k en gras', 'k en gras']);
+  this.executeCharTest('𝐥', ['l en gras', 'l en gras', 'l en gras']);
+  this.executeCharTest('𝐦', ['m en gras', 'm en gras', 'm en gras']);
+  this.executeCharTest('𝐧', ['n en gras', 'n en gras', 'n en gras']);
+  this.executeCharTest('𝐨', ['o en gras', 'o en gras', 'o en gras']);
+  this.executeCharTest('𝐩', ['p en gras', 'p en gras', 'p en gras']);
+  this.executeCharTest('𝐪', ['q en gras', 'q en gras', 'q en gras']);
+  this.executeCharTest('𝐫', ['r en gras', 'r en gras', 'r en gras']);
+  this.executeCharTest('𝐬', ['s en gras', 's en gras', 's en gras']);
+  this.executeCharTest('𝐭', ['t en gras', 't en gras', 't en gras']);
+  this.executeCharTest('𝐮', ['u en gras', 'u en gras', 'u en gras']);
+  this.executeCharTest('𝐯', ['v en gras', 'v en gras', 'v en gras']);
+  this.executeCharTest('𝐰', ['w en gras', 'w en gras', 'w en gras']);
+  this.executeCharTest('𝐱', ['x en gras', 'x en gras', 'x en gras']);
+  this.executeCharTest('𝐲', ['y en gras', 'y en gras', 'y en gras']);
+  this.executeCharTest('𝐳', ['z en gras', 'z en gras', 'z en gras']);
+  this.executeCharTest('𝑨', ['A majuscule en italique gras', 'A majuscule en italique gras', 'A majuscule en italique gras']);
+  this.executeCharTest('𝑩', ['B majuscule en italique gras', 'B majuscule en italique gras', 'B majuscule en italique gras']);
+  this.executeCharTest('𝑪', ['C majuscule en italique gras', 'C majuscule en italique gras', 'C majuscule en italique gras']);
+  this.executeCharTest('𝑫', ['D majuscule en italique gras', 'D majuscule en italique gras', 'D majuscule en italique gras']);
+  this.executeCharTest('𝑬', ['E majuscule en italique gras', 'E majuscule en italique gras', 'E majuscule en italique gras']);
+  this.executeCharTest('𝑭', ['F majuscule en italique gras', 'F majuscule en italique gras', 'F majuscule en italique gras']);
+  this.executeCharTest('𝑮', ['G majuscule en italique gras', 'G majuscule en italique gras', 'G majuscule en italique gras']);
+  this.executeCharTest('𝑯', ['H majuscule en italique gras', 'H majuscule en italique gras', 'H majuscule en italique gras']);
+  this.executeCharTest('𝑰', ['I majuscule en italique gras', 'I majuscule en italique gras', 'I majuscule en italique gras']);
+  this.executeCharTest('𝑱', ['J majuscule en italique gras', 'J majuscule en italique gras', 'J majuscule en italique gras']);
+  this.executeCharTest('𝑲', ['K majuscule en italique gras', 'K majuscule en italique gras', 'K majuscule en italique gras']);
+  this.executeCharTest('𝑳', ['L majuscule en italique gras', 'L majuscule en italique gras', 'L majuscule en italique gras']);
+  this.executeCharTest('𝑴', ['M majuscule en italique gras', 'M majuscule en italique gras', 'M majuscule en italique gras']);
+  this.executeCharTest('𝑵', ['N majuscule en italique gras', 'N majuscule en italique gras', 'N majuscule en italique gras']);
+  this.executeCharTest('𝑶', ['O majuscule en italique gras', 'O majuscule en italique gras', 'O majuscule en italique gras']);
+  this.executeCharTest('𝑷', ['P majuscule en italique gras', 'P majuscule en italique gras', 'P majuscule en italique gras']);
+  this.executeCharTest('𝑸', ['Q majuscule en italique gras', 'Q majuscule en italique gras', 'Q majuscule en italique gras']);
+  this.executeCharTest('𝑹', ['R majuscule en italique gras', 'R majuscule en italique gras', 'R majuscule en italique gras']);
+  this.executeCharTest('𝑺', ['S majuscule en italique gras', 'S majuscule en italique gras', 'S majuscule en italique gras']);
+  this.executeCharTest('𝑻', ['T majuscule en italique gras', 'T majuscule en italique gras', 'T majuscule en italique gras']);
+  this.executeCharTest('𝑼', ['U majuscule en italique gras', 'U majuscule en italique gras', 'U majuscule en italique gras']);
+  this.executeCharTest('𝑽', ['V majuscule en italique gras', 'V majuscule en italique gras', 'V majuscule en italique gras']);
+  this.executeCharTest('𝑾', ['W majuscule en italique gras', 'W majuscule en italique gras', 'W majuscule en italique gras']);
+  this.executeCharTest('𝑿', ['X majuscule en italique gras', 'X majuscule en italique gras', 'X majuscule en italique gras']);
+  this.executeCharTest('𝒀', ['Y majuscule en italique gras', 'Y majuscule en italique gras', 'Y majuscule en italique gras']);
+  this.executeCharTest('𝒁', ['Z majuscule en italique gras', 'Z majuscule en italique gras', 'Z majuscule en italique gras']);
+  this.executeCharTest('𝒂', ['a en italique gras', 'a en italique gras', 'a en italique gras']);
+  this.executeCharTest('𝒃', ['b en italique gras', 'b en italique gras', 'b en italique gras']);
+  this.executeCharTest('𝒄', ['c en italique gras', 'c en italique gras', 'c en italique gras']);
+  this.executeCharTest('𝒅', ['d en italique gras', 'd en italique gras', 'd en italique gras']);
+  this.executeCharTest('𝒆', ['e en italique gras', 'e en italique gras', 'e en italique gras']);
+  this.executeCharTest('𝒇', ['f en italique gras', 'f en italique gras', 'f en italique gras']);
+  this.executeCharTest('𝒈', ['g en italique gras', 'g en italique gras', 'g en italique gras']);
+  this.executeCharTest('𝒉', ['h en italique gras', 'h en italique gras', 'h en italique gras']);
+  this.executeCharTest('𝒊', ['i en italique gras', 'i en italique gras', 'i en italique gras']);
+  this.executeCharTest('𝒋', ['j en italique gras', 'j en italique gras', 'j en italique gras']);
+  this.executeCharTest('𝒌', ['k en italique gras', 'k en italique gras', 'k en italique gras']);
+  this.executeCharTest('𝒍', ['l en italique gras', 'l en italique gras', 'l en italique gras']);
+  this.executeCharTest('𝒎', ['m en italique gras', 'm en italique gras', 'm en italique gras']);
+  this.executeCharTest('𝒏', ['n en italique gras', 'n en italique gras', 'n en italique gras']);
+  this.executeCharTest('𝒐', ['o en italique gras', 'o en italique gras', 'o en italique gras']);
+  this.executeCharTest('𝒑', ['p en italique gras', 'p en italique gras', 'p en italique gras']);
+  this.executeCharTest('𝒒', ['q en italique gras', 'q en italique gras', 'q en italique gras']);
+  this.executeCharTest('𝒓', ['r en italique gras', 'r en italique gras', 'r en italique gras']);
+  this.executeCharTest('𝒔', ['s en italique gras', 's en italique gras', 's en italique gras']);
+  this.executeCharTest('𝒕', ['t en italique gras', 't en italique gras', 't en italique gras']);
+  this.executeCharTest('𝒖', ['u en italique gras', 'u en italique gras', 'u en italique gras']);
+  this.executeCharTest('𝒗', ['v en italique gras', 'v en italique gras', 'v en italique gras']);
+  this.executeCharTest('𝒘', ['w en italique gras', 'w en italique gras', 'w en italique gras']);
+  this.executeCharTest('𝒙', ['x en italique gras', 'x en italique gras', 'x en italique gras']);
+  this.executeCharTest('𝒚', ['y en italique gras', 'y en italique gras', 'y en italique gras']);
+  this.executeCharTest('𝒛', ['z en italique gras', 'z en italique gras', 'z en italique gras']);
+  this.executeCharTest('𝓐', ['A majuscule en script gras', 'A majuscule en script gras', 'A majuscule en script gras']);
+  this.executeCharTest('𝓑', ['B majuscule en script gras', 'B majuscule en script gras', 'B majuscule en script gras']);
+  this.executeCharTest('𝓒', ['C majuscule en script gras', 'C majuscule en script gras', 'C majuscule en script gras']);
+  this.executeCharTest('𝓓', ['D majuscule en script gras', 'D majuscule en script gras', 'D majuscule en script gras']);
+  this.executeCharTest('𝓔', ['E majuscule en script gras', 'E majuscule en script gras', 'E majuscule en script gras']);
+  this.executeCharTest('𝓕', ['F majuscule en script gras', 'F majuscule en script gras', 'F majuscule en script gras']);
+  this.executeCharTest('𝓖', ['G majuscule en script gras', 'G majuscule en script gras', 'G majuscule en script gras']);
+  this.executeCharTest('𝓗', ['H majuscule en script gras', 'H majuscule en script gras', 'H majuscule en script gras']);
+  this.executeCharTest('𝓘', ['I majuscule en script gras', 'I majuscule en script gras', 'I majuscule en script gras']);
+  this.executeCharTest('𝓙', ['J majuscule en script gras', 'J majuscule en script gras', 'J majuscule en script gras']);
+  this.executeCharTest('𝓚', ['K majuscule en script gras', 'K majuscule en script gras', 'K majuscule en script gras']);
+  this.executeCharTest('𝓛', ['L majuscule en script gras', 'L majuscule en script gras', 'L majuscule en script gras']);
+  this.executeCharTest('𝓜', ['M majuscule en script gras', 'M majuscule en script gras', 'M majuscule en script gras']);
+  this.executeCharTest('𝓝', ['N majuscule en script gras', 'N majuscule en script gras', 'N majuscule en script gras']);
+  this.executeCharTest('𝓞', ['O majuscule en script gras', 'O majuscule en script gras', 'O majuscule en script gras']);
+  this.executeCharTest('𝓟', ['P majuscule en script gras', 'P majuscule en script gras', 'P majuscule en script gras']);
+  this.executeCharTest('𝓠', ['Q majuscule en script gras', 'Q majuscule en script gras', 'Q majuscule en script gras']);
+  this.executeCharTest('𝓡', ['R majuscule en script gras', 'R majuscule en script gras', 'R majuscule en script gras']);
+  this.executeCharTest('𝓢', ['S majuscule en script gras', 'S majuscule en script gras', 'S majuscule en script gras']);
+  this.executeCharTest('𝓣', ['T majuscule en script gras', 'T majuscule en script gras', 'T majuscule en script gras']);
+  this.executeCharTest('𝓤', ['U majuscule en script gras', 'U majuscule en script gras', 'U majuscule en script gras']);
+  this.executeCharTest('𝓥', ['V majuscule en script gras', 'V majuscule en script gras', 'V majuscule en script gras']);
+  this.executeCharTest('𝓦', ['W majuscule en script gras', 'W majuscule en script gras', 'W majuscule en script gras']);
+  this.executeCharTest('𝓧', ['X majuscule en script gras', 'X majuscule en script gras', 'X majuscule en script gras']);
+  this.executeCharTest('𝓨', ['Y majuscule en script gras', 'Y majuscule en script gras', 'Y majuscule en script gras']);
+  this.executeCharTest('𝓩', ['Z majuscule en script gras', 'Z majuscule en script gras', 'Z majuscule en script gras']);
+  this.executeCharTest('𝓪', ['a en script gras', 'a en script gras', 'a en script gras']);
+  this.executeCharTest('𝓫', ['b en script gras', 'b en script gras', 'b en script gras']);
+  this.executeCharTest('𝓬', ['c en script gras', 'c en script gras', 'c en script gras']);
+  this.executeCharTest('𝓭', ['d en script gras', 'd en script gras', 'd en script gras']);
+  this.executeCharTest('𝓮', ['e en script gras', 'e en script gras', 'e en script gras']);
+  this.executeCharTest('𝓯', ['f en script gras', 'f en script gras', 'f en script gras']);
+  this.executeCharTest('𝓰', ['g en script gras', 'g en script gras', 'g en script gras']);
+  this.executeCharTest('𝓱', ['h en script gras', 'h en script gras', 'h en script gras']);
+  this.executeCharTest('𝓲', ['i en script gras', 'i en script gras', 'i en script gras']);
+  this.executeCharTest('𝓳', ['j en script gras', 'j en script gras', 'j en script gras']);
+  this.executeCharTest('𝓴', ['k en script gras', 'k en script gras', 'k en script gras']);
+  this.executeCharTest('𝓵', ['l en script gras', 'l en script gras', 'l en script gras']);
+  this.executeCharTest('𝓶', ['m en script gras', 'm en script gras', 'm en script gras']);
+  this.executeCharTest('𝓷', ['n en script gras', 'n en script gras', 'n en script gras']);
+  this.executeCharTest('𝓸', ['o en script gras', 'o en script gras', 'o en script gras']);
+  this.executeCharTest('𝓹', ['p en script gras', 'p en script gras', 'p en script gras']);
+  this.executeCharTest('𝓺', ['q en script gras', 'q en script gras', 'q en script gras']);
+  this.executeCharTest('𝓻', ['r en script gras', 'r en script gras', 'r en script gras']);
+  this.executeCharTest('𝓼', ['s en script gras', 's en script gras', 's en script gras']);
+  this.executeCharTest('𝓽', ['t en script gras', 't en script gras', 't en script gras']);
+  this.executeCharTest('𝓾', ['u en script gras', 'u en script gras', 'u en script gras']);
+  this.executeCharTest('𝓿', ['v en script gras', 'v en script gras', 'v en script gras']);
+  this.executeCharTest('𝔀', ['w en script gras', 'w en script gras', 'w en script gras']);
+  this.executeCharTest('𝔁', ['x en script gras', 'x en script gras', 'x en script gras']);
+  this.executeCharTest('𝔂', ['y en script gras', 'y en script gras', 'y en script gras']);
+  this.executeCharTest('𝔃', ['z en script gras', 'z en script gras', 'z en script gras']);
+  this.executeCharTest('𝔸', ['A majuscule ajouré', 'A majuscule ajouré', 'A majuscule ajouré']);
+  this.executeCharTest('𝔹', ['B majuscule ajouré', 'B majuscule ajouré', 'B majuscule ajouré']);
+  this.executeCharTest('ℂ', ['C majuscule ajouré', 'C majuscule ajouré', 'C majuscule ajouré']);
+  this.executeCharTest('𝔻', ['D majuscule ajouré', 'D majuscule ajouré', 'D majuscule ajouré']);
+  this.executeCharTest('𝔼', ['E majuscule ajouré', 'E majuscule ajouré', 'E majuscule ajouré']);
+  this.executeCharTest('𝔽', ['F majuscule ajouré', 'F majuscule ajouré', 'F majuscule ajouré']);
+  this.executeCharTest('𝔾', ['G majuscule ajouré', 'G majuscule ajouré', 'G majuscule ajouré']);
+  this.executeCharTest('ℍ', ['H majuscule ajouré', 'H majuscule ajouré', 'H majuscule ajouré']);
+  this.executeCharTest('𝕀', ['I majuscule ajouré', 'I majuscule ajouré', 'I majuscule ajouré']);
+  this.executeCharTest('𝕁', ['J majuscule ajouré', 'J majuscule ajouré', 'J majuscule ajouré']);
+  this.executeCharTest('𝕂', ['K majuscule ajouré', 'K majuscule ajouré', 'K majuscule ajouré']);
+  this.executeCharTest('𝕃', ['L majuscule ajouré', 'L majuscule ajouré', 'L majuscule ajouré']);
+  this.executeCharTest('𝕄', ['M majuscule ajouré', 'M majuscule ajouré', 'M majuscule ajouré']);
+  this.executeCharTest('ℕ', ['N majuscule ajouré', 'N majuscule ajouré', 'N majuscule ajouré']);
+  this.executeCharTest('𝕆', ['O majuscule ajouré', 'O majuscule ajouré', 'O majuscule ajouré']);
+  this.executeCharTest('ℙ', ['P majuscule ajouré', 'P majuscule ajouré', 'P majuscule ajouré']);
+  this.executeCharTest('ℚ', ['Q majuscule ajouré', 'Q majuscule ajouré', 'Q majuscule ajouré']);
+  this.executeCharTest('ℝ', ['R majuscule ajouré', 'R majuscule ajouré', 'R majuscule ajouré']);
+  this.executeCharTest('𝕊', ['S majuscule ajouré', 'S majuscule ajouré', 'S majuscule ajouré']);
+  this.executeCharTest('𝕋', ['T majuscule ajouré', 'T majuscule ajouré', 'T majuscule ajouré']);
+  this.executeCharTest('𝕌', ['U majuscule ajouré', 'U majuscule ajouré', 'U majuscule ajouré']);
+  this.executeCharTest('𝕍', ['V majuscule ajouré', 'V majuscule ajouré', 'V majuscule ajouré']);
+  this.executeCharTest('𝕎', ['W majuscule ajouré', 'W majuscule ajouré', 'W majuscule ajouré']);
+  this.executeCharTest('𝕏', ['X majuscule ajouré', 'X majuscule ajouré', 'X majuscule ajouré']);
+  this.executeCharTest('𝕐', ['Y majuscule ajouré', 'Y majuscule ajouré', 'Y majuscule ajouré']);
+  this.executeCharTest('ℤ', ['Z majuscule ajouré', 'Z majuscule ajouré', 'Z majuscule ajouré']);
+  this.executeCharTest('𝕒', ['a ajouré', 'a ajouré', 'a ajouré']);
+  this.executeCharTest('𝕓', ['b ajouré', 'b ajouré', 'b ajouré']);
+  this.executeCharTest('𝕔', ['c ajouré', 'c ajouré', 'c ajouré']);
+  this.executeCharTest('𝕕', ['d ajouré', 'd ajouré', 'd ajouré']);
+  this.executeCharTest('𝕖', ['e ajouré', 'e ajouré', 'e ajouré']);
+  this.executeCharTest('𝕗', ['f ajouré', 'f ajouré', 'f ajouré']);
+  this.executeCharTest('𝕘', ['g ajouré', 'g ajouré', 'g ajouré']);
+  this.executeCharTest('𝕙', ['h ajouré', 'h ajouré', 'h ajouré']);
+  this.executeCharTest('𝕚', ['i ajouré', 'i ajouré', 'i ajouré']);
+  this.executeCharTest('𝕛', ['j ajouré', 'j ajouré', 'j ajouré']);
+  this.executeCharTest('𝕜', ['k ajouré', 'k ajouré', 'k ajouré']);
+  this.executeCharTest('𝕝', ['l ajouré', 'l ajouré', 'l ajouré']);
+  this.executeCharTest('𝕞', ['m ajouré', 'm ajouré', 'm ajouré']);
+  this.executeCharTest('𝕟', ['n ajouré', 'n ajouré', 'n ajouré']);
+  this.executeCharTest('𝕠', ['o ajouré', 'o ajouré', 'o ajouré']);
+  this.executeCharTest('𝕡', ['p ajouré', 'p ajouré', 'p ajouré']);
+  this.executeCharTest('𝕢', ['q ajouré', 'q ajouré', 'q ajouré']);
+  this.executeCharTest('𝕣', ['r ajouré', 'r ajouré', 'r ajouré']);
+  this.executeCharTest('𝕤', ['s ajouré', 's ajouré', 's ajouré']);
+  this.executeCharTest('𝕥', ['t ajouré', 't ajouré', 't ajouré']);
+  this.executeCharTest('𝕦', ['u ajouré', 'u ajouré', 'u ajouré']);
+  this.executeCharTest('𝕧', ['v ajouré', 'v ajouré', 'v ajouré']);
+  this.executeCharTest('𝕨', ['w ajouré', 'w ajouré', 'w ajouré']);
+  this.executeCharTest('𝕩', ['x ajouré', 'x ajouré', 'x ajouré']);
+  this.executeCharTest('𝕪', ['y ajouré', 'y ajouré', 'y ajouré']);
+  this.executeCharTest('𝕫', ['z ajouré', 'z ajouré', 'z ajouré']);
+  this.executeCharTest('𝔄', ['A majuscule en gothique', 'A majuscule en gothique', 'A majuscule en gothique']);
+  this.executeCharTest('𝔅', ['B majuscule en gothique', 'B majuscule en gothique', 'B majuscule en gothique']);
+  this.executeCharTest('ℭ', ['C majuscule en gothique', 'C majuscule en gothique', 'C majuscule en gothique']);
+  this.executeCharTest('𝔇', ['D majuscule en gothique', 'D majuscule en gothique', 'D majuscule en gothique']);
+  this.executeCharTest('𝔈', ['E majuscule en gothique', 'E majuscule en gothique', 'E majuscule en gothique']);
+  this.executeCharTest('𝔉', ['F majuscule en gothique', 'F majuscule en gothique', 'F majuscule en gothique']);
+  this.executeCharTest('𝔊', ['G majuscule en gothique', 'G majuscule en gothique', 'G majuscule en gothique']);
+  this.executeCharTest('ℌ', ['H majuscule en gothique', 'H majuscule en gothique', 'H majuscule en gothique']);
+  this.executeCharTest('ℑ', ['I majuscule en gothique', 'I majuscule en gothique', 'I majuscule en gothique']);
+  this.executeCharTest('𝔍', ['J majuscule en gothique', 'J majuscule en gothique', 'J majuscule en gothique']);
+  this.executeCharTest('𝔎', ['K majuscule en gothique', 'K majuscule en gothique', 'K majuscule en gothique']);
+  this.executeCharTest('𝔏', ['L majuscule en gothique', 'L majuscule en gothique', 'L majuscule en gothique']);
+  this.executeCharTest('𝔐', ['M majuscule en gothique', 'M majuscule en gothique', 'M majuscule en gothique']);
+  this.executeCharTest('𝔑', ['N majuscule en gothique', 'N majuscule en gothique', 'N majuscule en gothique']);
+  this.executeCharTest('𝔒', ['O majuscule en gothique', 'O majuscule en gothique', 'O majuscule en gothique']);
+  this.executeCharTest('𝔓', ['P majuscule en gothique', 'P majuscule en gothique', 'P majuscule en gothique']);
+  this.executeCharTest('𝔔', ['Q majuscule en gothique', 'Q majuscule en gothique', 'Q majuscule en gothique']);
+  this.executeCharTest('ℜ', ['R majuscule en gothique', 'R majuscule en gothique', 'R majuscule en gothique']);
+  this.executeCharTest('𝔖', ['S majuscule en gothique', 'S majuscule en gothique', 'S majuscule en gothique']);
+  this.executeCharTest('𝔗', ['T majuscule en gothique', 'T majuscule en gothique', 'T majuscule en gothique']);
+  this.executeCharTest('𝔘', ['U majuscule en gothique', 'U majuscule en gothique', 'U majuscule en gothique']);
+  this.executeCharTest('𝔙', ['V majuscule en gothique', 'V majuscule en gothique', 'V majuscule en gothique']);
+  this.executeCharTest('𝔚', ['W majuscule en gothique', 'W majuscule en gothique', 'W majuscule en gothique']);
+  this.executeCharTest('𝔛', ['X majuscule en gothique', 'X majuscule en gothique', 'X majuscule en gothique']);
+  this.executeCharTest('𝔜', ['Y majuscule en gothique', 'Y majuscule en gothique', 'Y majuscule en gothique']);
+  this.executeCharTest('ℨ', ['Z majuscule en gothique', 'Z majuscule en gothique', 'Z majuscule en gothique']);
+  this.executeCharTest('𝔞', ['a en gothique', 'a en gothique', 'a en gothique']);
+  this.executeCharTest('𝔟', ['b en gothique', 'b en gothique', 'b en gothique']);
+  this.executeCharTest('𝔠', ['c en gothique', 'c en gothique', 'c en gothique']);
+  this.executeCharTest('𝔡', ['d en gothique', 'd en gothique', 'd en gothique']);
+  this.executeCharTest('𝔢', ['e en gothique', 'e en gothique', 'e en gothique']);
+  this.executeCharTest('𝔣', ['f en gothique', 'f en gothique', 'f en gothique']);
+  this.executeCharTest('𝔤', ['g en gothique', 'g en gothique', 'g en gothique']);
+  this.executeCharTest('𝔥', ['h en gothique', 'h en gothique', 'h en gothique']);
+  this.executeCharTest('𝔦', ['i en gothique', 'i en gothique', 'i en gothique']);
+  this.executeCharTest('𝔧', ['j en gothique', 'j en gothique', 'j en gothique']);
+  this.executeCharTest('𝔨', ['k en gothique', 'k en gothique', 'k en gothique']);
+  this.executeCharTest('𝔩', ['l en gothique', 'l en gothique', 'l en gothique']);
+  this.executeCharTest('𝔪', ['m en gothique', 'm en gothique', 'm en gothique']);
+  this.executeCharTest('𝔫', ['n en gothique', 'n en gothique', 'n en gothique']);
+  this.executeCharTest('𝔬', ['o en gothique', 'o en gothique', 'o en gothique']);
+  this.executeCharTest('𝔭', ['p en gothique', 'p en gothique', 'p en gothique']);
+  this.executeCharTest('𝔮', ['q en gothique', 'q en gothique', 'q en gothique']);
+  this.executeCharTest('𝔯', ['r en gothique', 'r en gothique', 'r en gothique']);
+  this.executeCharTest('𝔰', ['s en gothique', 's en gothique', 's en gothique']);
+  this.executeCharTest('𝔱', ['t en gothique', 't en gothique', 't en gothique']);
+  this.executeCharTest('𝔲', ['u en gothique', 'u en gothique', 'u en gothique']);
+  this.executeCharTest('𝔳', ['v en gothique', 'v en gothique', 'v en gothique']);
+  this.executeCharTest('𝔴', ['w en gothique', 'w en gothique', 'w en gothique']);
+  this.executeCharTest('𝔵', ['x en gothique', 'x en gothique', 'x en gothique']);
+  this.executeCharTest('𝔶', ['y en gothique', 'y en gothique', 'y en gothique']);
+  this.executeCharTest('𝔷', ['z en gothique', 'z en gothique', 'z en gothique']);
+  this.executeCharTest('𝐴', ['A majuscule en italique', 'A majuscule en italique', 'A majuscule en italique']);
+  this.executeCharTest('𝐵', ['B majuscule en italique', 'B majuscule en italique', 'B majuscule en italique']);
+  this.executeCharTest('𝐶', ['C majuscule en italique', 'C majuscule en italique', 'C majuscule en italique']);
+  this.executeCharTest('𝐷', ['D majuscule en italique', 'D majuscule en italique', 'D majuscule en italique']);
+  this.executeCharTest('𝐸', ['E majuscule en italique', 'E majuscule en italique', 'E majuscule en italique']);
+  this.executeCharTest('𝐹', ['F majuscule en italique', 'F majuscule en italique', 'F majuscule en italique']);
+  this.executeCharTest('𝐺', ['G majuscule en italique', 'G majuscule en italique', 'G majuscule en italique']);
+  this.executeCharTest('𝐻', ['H majuscule en italique', 'H majuscule en italique', 'H majuscule en italique']);
+  this.executeCharTest('𝐼', ['I majuscule en italique', 'I majuscule en italique', 'I majuscule en italique']);
+  this.executeCharTest('𝐽', ['J majuscule en italique', 'J majuscule en italique', 'J majuscule en italique']);
+  this.executeCharTest('𝐾', ['K majuscule en italique', 'K majuscule en italique', 'K majuscule en italique']);
+  this.executeCharTest('𝐿', ['L majuscule en italique', 'L majuscule en italique', 'L majuscule en italique']);
+  this.executeCharTest('𝑀', ['M majuscule en italique', 'M majuscule en italique', 'M majuscule en italique']);
+  this.executeCharTest('𝑁', ['N majuscule en italique', 'N majuscule en italique', 'N majuscule en italique']);
+  this.executeCharTest('𝑂', ['O majuscule en italique', 'O majuscule en italique', 'O majuscule en italique']);
+  this.executeCharTest('𝑃', ['P majuscule en italique', 'P majuscule en italique', 'P majuscule en italique']);
+  this.executeCharTest('𝑄', ['Q majuscule en italique', 'Q majuscule en italique', 'Q majuscule en italique']);
+  this.executeCharTest('𝑅', ['R majuscule en italique', 'R majuscule en italique', 'R majuscule en italique']);
+  this.executeCharTest('𝑆', ['S majuscule en italique', 'S majuscule en italique', 'S majuscule en italique']);
+  this.executeCharTest('𝑇', ['T majuscule en italique', 'T majuscule en italique', 'T majuscule en italique']);
+  this.executeCharTest('𝑈', ['U majuscule en italique', 'U majuscule en italique', 'U majuscule en italique']);
+  this.executeCharTest('𝑉', ['V majuscule en italique', 'V majuscule en italique', 'V majuscule en italique']);
+  this.executeCharTest('𝑊', ['W majuscule en italique', 'W majuscule en italique', 'W majuscule en italique']);
+  this.executeCharTest('𝑋', ['X majuscule en italique', 'X majuscule en italique', 'X majuscule en italique']);
+  this.executeCharTest('𝑌', ['Y majuscule en italique', 'Y majuscule en italique', 'Y majuscule en italique']);
+  this.executeCharTest('𝑍', ['Z majuscule en italique', 'Z majuscule en italique', 'Z majuscule en italique']);
+  this.executeCharTest('𝑎', ['a en italique', 'a en italique', 'a en italique']);
+  this.executeCharTest('𝑏', ['b en italique', 'b en italique', 'b en italique']);
+  this.executeCharTest('𝑐', ['c en italique', 'c en italique', 'c en italique']);
+  this.executeCharTest('𝑑', ['d en italique', 'd en italique', 'd en italique']);
+  this.executeCharTest('𝑒', ['e en italique', 'e en italique', 'e en italique']);
+  this.executeCharTest('𝑓', ['f en italique', 'f en italique', 'f en italique']);
+  this.executeCharTest('𝑔', ['g en italique', 'g en italique', 'g en italique']);
+  this.executeCharTest('ℎ', ['constante de planck', 'constante de planck', 'constante de planck']);
+  this.executeCharTest('𝑖', ['i en italique', 'i en italique', 'i en italique']);
+  this.executeCharTest('𝑗', ['j en italique', 'j en italique', 'j en italique']);
+  this.executeCharTest('𝑘', ['k en italique', 'k en italique', 'k en italique']);
+  this.executeCharTest('𝑙', ['l en italique', 'l en italique', 'l en italique']);
+  this.executeCharTest('𝑚', ['m en italique', 'm en italique', 'm en italique']);
+  this.executeCharTest('𝑛', ['n en italique', 'n en italique', 'n en italique']);
+  this.executeCharTest('𝑜', ['o en italique', 'o en italique', 'o en italique']);
+  this.executeCharTest('𝑝', ['p en italique', 'p en italique', 'p en italique']);
+  this.executeCharTest('𝑞', ['q en italique', 'q en italique', 'q en italique']);
+  this.executeCharTest('𝑟', ['r en italique', 'r en italique', 'r en italique']);
+  this.executeCharTest('𝑠', ['s en italique', 's en italique', 's en italique']);
+  this.executeCharTest('𝑡', ['t en italique', 't en italique', 't en italique']);
+  this.executeCharTest('𝑢', ['u en italique', 'u en italique', 'u en italique']);
+  this.executeCharTest('𝑣', ['v en italique', 'v en italique', 'v en italique']);
+  this.executeCharTest('𝑤', ['w en italique', 'w en italique', 'w en italique']);
+  this.executeCharTest('𝑥', ['x en italique', 'x en italique', 'x en italique']);
+  this.executeCharTest('𝑦', ['y en italique', 'y en italique', 'y en italique']);
+  this.executeCharTest('𝑧', ['z en italique', 'z en italique', 'z en italique']);
+  this.executeCharTest('𝙰', ['A majuscule en chasse fixe', 'A majuscule en chasse fixe', 'A majuscule en chasse fixe']);
+  this.executeCharTest('𝙱', ['B majuscule en chasse fixe', 'B majuscule en chasse fixe', 'B majuscule en chasse fixe']);
+  this.executeCharTest('𝙲', ['C majuscule en chasse fixe', 'C majuscule en chasse fixe', 'C majuscule en chasse fixe']);
+  this.executeCharTest('𝙳', ['D majuscule en chasse fixe', 'D majuscule en chasse fixe', 'D majuscule en chasse fixe']);
+  this.executeCharTest('𝙴', ['E majuscule en chasse fixe', 'E majuscule en chasse fixe', 'E majuscule en chasse fixe']);
+  this.executeCharTest('𝙵', ['F majuscule en chasse fixe', 'F majuscule en chasse fixe', 'F majuscule en chasse fixe']);
+  this.executeCharTest('𝙶', ['G majuscule en chasse fixe', 'G majuscule en chasse fixe', 'G majuscule en chasse fixe']);
+  this.executeCharTest('𝙷', ['H majuscule en chasse fixe', 'H majuscule en chasse fixe', 'H majuscule en chasse fixe']);
+  this.executeCharTest('𝙸', ['I majuscule en chasse fixe', 'I majuscule en chasse fixe', 'I majuscule en chasse fixe']);
+  this.executeCharTest('𝙹', ['J majuscule en chasse fixe', 'J majuscule en chasse fixe', 'J majuscule en chasse fixe']);
+  this.executeCharTest('𝙺', ['K majuscule en chasse fixe', 'K majuscule en chasse fixe', 'K majuscule en chasse fixe']);
+  this.executeCharTest('𝙻', ['L majuscule en chasse fixe', 'L majuscule en chasse fixe', 'L majuscule en chasse fixe']);
+  this.executeCharTest('𝙼', ['M majuscule en chasse fixe', 'M majuscule en chasse fixe', 'M majuscule en chasse fixe']);
+  this.executeCharTest('𝙽', ['N majuscule en chasse fixe', 'N majuscule en chasse fixe', 'N majuscule en chasse fixe']);
+  this.executeCharTest('𝙾', ['O majuscule en chasse fixe', 'O majuscule en chasse fixe', 'O majuscule en chasse fixe']);
+  this.executeCharTest('𝙿', ['P majuscule en chasse fixe', 'P majuscule en chasse fixe', 'P majuscule en chasse fixe']);
+  this.executeCharTest('𝚀', ['Q majuscule en chasse fixe', 'Q majuscule en chasse fixe', 'Q majuscule en chasse fixe']);
+  this.executeCharTest('𝚁', ['R majuscule en chasse fixe', 'R majuscule en chasse fixe', 'R majuscule en chasse fixe']);
+  this.executeCharTest('𝚂', ['S majuscule en chasse fixe', 'S majuscule en chasse fixe', 'S majuscule en chasse fixe']);
+  this.executeCharTest('𝚃', ['T majuscule en chasse fixe', 'T majuscule en chasse fixe', 'T majuscule en chasse fixe']);
+  this.executeCharTest('𝚄', ['U majuscule en chasse fixe', 'U majuscule en chasse fixe', 'U majuscule en chasse fixe']);
+  this.executeCharTest('𝚅', ['V majuscule en chasse fixe', 'V majuscule en chasse fixe', 'V majuscule en chasse fixe']);
+  this.executeCharTest('𝚆', ['W majuscule en chasse fixe', 'W majuscule en chasse fixe', 'W majuscule en chasse fixe']);
+  this.executeCharTest('𝚇', ['X majuscule en chasse fixe', 'X majuscule en chasse fixe', 'X majuscule en chasse fixe']);
+  this.executeCharTest('𝚈', ['Y majuscule en chasse fixe', 'Y majuscule en chasse fixe', 'Y majuscule en chasse fixe']);
+  this.executeCharTest('𝚉', ['Z majuscule en chasse fixe', 'Z majuscule en chasse fixe', 'Z majuscule en chasse fixe']);
+  this.executeCharTest('𝚊', ['a en chasse fixe', 'a en chasse fixe', 'a en chasse fixe']);
+  this.executeCharTest('𝚋', ['b en chasse fixe', 'b en chasse fixe', 'b en chasse fixe']);
+  this.executeCharTest('𝚌', ['c en chasse fixe', 'c en chasse fixe', 'c en chasse fixe']);
+  this.executeCharTest('𝚍', ['d en chasse fixe', 'd en chasse fixe', 'd en chasse fixe']);
+  this.executeCharTest('𝚎', ['e en chasse fixe', 'e en chasse fixe', 'e en chasse fixe']);
+  this.executeCharTest('𝚏', ['f en chasse fixe', 'f en chasse fixe', 'f en chasse fixe']);
+  this.executeCharTest('𝚐', ['g en chasse fixe', 'g en chasse fixe', 'g en chasse fixe']);
+  this.executeCharTest('𝚑', ['h en chasse fixe', 'h en chasse fixe', 'h en chasse fixe']);
+  this.executeCharTest('𝚒', ['i en chasse fixe', 'i en chasse fixe', 'i en chasse fixe']);
+  this.executeCharTest('𝚓', ['j en chasse fixe', 'j en chasse fixe', 'j en chasse fixe']);
+  this.executeCharTest('𝚔', ['k en chasse fixe', 'k en chasse fixe', 'k en chasse fixe']);
+  this.executeCharTest('𝚕', ['l en chasse fixe', 'l en chasse fixe', 'l en chasse fixe']);
+  this.executeCharTest('𝚖', ['m en chasse fixe', 'm en chasse fixe', 'm en chasse fixe']);
+  this.executeCharTest('𝚗', ['n en chasse fixe', 'n en chasse fixe', 'n en chasse fixe']);
+  this.executeCharTest('𝚘', ['o en chasse fixe', 'o en chasse fixe', 'o en chasse fixe']);
+  this.executeCharTest('𝚙', ['p en chasse fixe', 'p en chasse fixe', 'p en chasse fixe']);
+  this.executeCharTest('𝚚', ['q en chasse fixe', 'q en chasse fixe', 'q en chasse fixe']);
+  this.executeCharTest('𝚛', ['r en chasse fixe', 'r en chasse fixe', 'r en chasse fixe']);
+  this.executeCharTest('𝚜', ['s en chasse fixe', 's en chasse fixe', 's en chasse fixe']);
+  this.executeCharTest('𝚝', ['t en chasse fixe', 't en chasse fixe', 't en chasse fixe']);
+  this.executeCharTest('𝚞', ['u en chasse fixe', 'u en chasse fixe', 'u en chasse fixe']);
+  this.executeCharTest('𝚟', ['v en chasse fixe', 'v en chasse fixe', 'v en chasse fixe']);
+  this.executeCharTest('𝚠', ['w en chasse fixe', 'w en chasse fixe', 'w en chasse fixe']);
+  this.executeCharTest('𝚡', ['x en chasse fixe', 'x en chasse fixe', 'x en chasse fixe']);
+  this.executeCharTest('𝚢', ['y en chasse fixe', 'y en chasse fixe', 'y en chasse fixe']);
+  this.executeCharTest('𝚣', ['z en chasse fixe', 'z en chasse fixe', 'z en chasse fixe']);
+  this.executeCharTest('𝗔', ['A majuscule en sans empattement gras', 'A majuscule en sans empattement gras', 'A majuscule en sans empattement gras']);
+  this.executeCharTest('𝗕', ['B majuscule en sans empattement gras', 'B majuscule en sans empattement gras', 'B majuscule en sans empattement gras']);
+  this.executeCharTest('𝗖', ['C majuscule en sans empattement gras', 'C majuscule en sans empattement gras', 'C majuscule en sans empattement gras']);
+  this.executeCharTest('𝗗', ['D majuscule en sans empattement gras', 'D majuscule en sans empattement gras', 'D majuscule en sans empattement gras']);
+  this.executeCharTest('𝗘', ['E majuscule en sans empattement gras', 'E majuscule en sans empattement gras', 'E majuscule en sans empattement gras']);
+  this.executeCharTest('𝗙', ['F majuscule en sans empattement gras', 'F majuscule en sans empattement gras', 'F majuscule en sans empattement gras']);
+  this.executeCharTest('𝗚', ['G majuscule en sans empattement gras', 'G majuscule en sans empattement gras', 'G majuscule en sans empattement gras']);
+  this.executeCharTest('𝗛', ['H majuscule en sans empattement gras', 'H majuscule en sans empattement gras', 'H majuscule en sans empattement gras']);
+  this.executeCharTest('𝗜', ['I majuscule en sans empattement gras', 'I majuscule en sans empattement gras', 'I majuscule en sans empattement gras']);
+  this.executeCharTest('𝗝', ['J majuscule en sans empattement gras', 'J majuscule en sans empattement gras', 'J majuscule en sans empattement gras']);
+  this.executeCharTest('𝗞', ['K majuscule en sans empattement gras', 'K majuscule en sans empattement gras', 'K majuscule en sans empattement gras']);
+  this.executeCharTest('𝗟', ['L majuscule en sans empattement gras', 'L majuscule en sans empattement gras', 'L majuscule en sans empattement gras']);
+  this.executeCharTest('𝗠', ['M majuscule en sans empattement gras', 'M majuscule en sans empattement gras', 'M majuscule en sans empattement gras']);
+  this.executeCharTest('𝗡', ['N majuscule en sans empattement gras', 'N majuscule en sans empattement gras', 'N majuscule en sans empattement gras']);
+  this.executeCharTest('𝗢', ['O majuscule en sans empattement gras', 'O majuscule en sans empattement gras', 'O majuscule en sans empattement gras']);
+  this.executeCharTest('𝗣', ['P majuscule en sans empattement gras', 'P majuscule en sans empattement gras', 'P majuscule en sans empattement gras']);
+  this.executeCharTest('𝗤', ['Q majuscule en sans empattement gras', 'Q majuscule en sans empattement gras', 'Q majuscule en sans empattement gras']);
+  this.executeCharTest('𝗥', ['R majuscule en sans empattement gras', 'R majuscule en sans empattement gras', 'R majuscule en sans empattement gras']);
+  this.executeCharTest('𝗦', ['S majuscule en sans empattement gras', 'S majuscule en sans empattement gras', 'S majuscule en sans empattement gras']);
+  this.executeCharTest('𝗧', ['T majuscule en sans empattement gras', 'T majuscule en sans empattement gras', 'T majuscule en sans empattement gras']);
+  this.executeCharTest('𝗨', ['U majuscule en sans empattement gras', 'U majuscule en sans empattement gras', 'U majuscule en sans empattement gras']);
+  this.executeCharTest('𝗩', ['V majuscule en sans empattement gras', 'V majuscule en sans empattement gras', 'V majuscule en sans empattement gras']);
+  this.executeCharTest('𝗪', ['W majuscule en sans empattement gras', 'W majuscule en sans empattement gras', 'W majuscule en sans empattement gras']);
+  this.executeCharTest('𝗫', ['X majuscule en sans empattement gras', 'X majuscule en sans empattement gras', 'X majuscule en sans empattement gras']);
+  this.executeCharTest('𝗬', ['Y majuscule en sans empattement gras', 'Y majuscule en sans empattement gras', 'Y majuscule en sans empattement gras']);
+  this.executeCharTest('𝗭', ['Z majuscule en sans empattement gras', 'Z majuscule en sans empattement gras', 'Z majuscule en sans empattement gras']);
+  this.executeCharTest('𝗮', ['a en sans empattement gras', 'a en sans empattement gras', 'a en sans empattement gras']);
+  this.executeCharTest('𝗯', ['b en sans empattement gras', 'b en sans empattement gras', 'b en sans empattement gras']);
+  this.executeCharTest('𝗰', ['c en sans empattement gras', 'c en sans empattement gras', 'c en sans empattement gras']);
+  this.executeCharTest('𝗱', ['d en sans empattement gras', 'd en sans empattement gras', 'd en sans empattement gras']);
+  this.executeCharTest('𝗲', ['e en sans empattement gras', 'e en sans empattement gras', 'e en sans empattement gras']);
+  this.executeCharTest('𝗳', ['f en sans empattement gras', 'f en sans empattement gras', 'f en sans empattement gras']);
+  this.executeCharTest('𝗴', ['g en sans empattement gras', 'g en sans empattement gras', 'g en sans empattement gras']);
+  this.executeCharTest('𝗵', ['h en sans empattement gras', 'h en sans empattement gras', 'h en sans empattement gras']);
+  this.executeCharTest('𝗶', ['i en sans empattement gras', 'i en sans empattement gras', 'i en sans empattement gras']);
+  this.executeCharTest('𝗷', ['j en sans empattement gras', 'j en sans empattement gras', 'j en sans empattement gras']);
+  this.executeCharTest('𝗸', ['k en sans empattement gras', 'k en sans empattement gras', 'k en sans empattement gras']);
+  this.executeCharTest('𝗹', ['l en sans empattement gras', 'l en sans empattement gras', 'l en sans empattement gras']);
+  this.executeCharTest('𝗺', ['m en sans empattement gras', 'm en sans empattement gras', 'm en sans empattement gras']);
+  this.executeCharTest('𝗻', ['n en sans empattement gras', 'n en sans empattement gras', 'n en sans empattement gras']);
+  this.executeCharTest('𝗼', ['o en sans empattement gras', 'o en sans empattement gras', 'o en sans empattement gras']);
+  this.executeCharTest('𝗽', ['p en sans empattement gras', 'p en sans empattement gras', 'p en sans empattement gras']);
+  this.executeCharTest('𝗾', ['q en sans empattement gras', 'q en sans empattement gras', 'q en sans empattement gras']);
+  this.executeCharTest('𝗿', ['r en sans empattement gras', 'r en sans empattement gras', 'r en sans empattement gras']);
+  this.executeCharTest('𝘀', ['s en sans empattement gras', 's en sans empattement gras', 's en sans empattement gras']);
+  this.executeCharTest('𝘁', ['t en sans empattement gras', 't en sans empattement gras', 't en sans empattement gras']);
+  this.executeCharTest('𝘂', ['u en sans empattement gras', 'u en sans empattement gras', 'u en sans empattement gras']);
+  this.executeCharTest('𝘃', ['v en sans empattement gras', 'v en sans empattement gras', 'v en sans empattement gras']);
+  this.executeCharTest('𝘄', ['w en sans empattement gras', 'w en sans empattement gras', 'w en sans empattement gras']);
+  this.executeCharTest('𝘅', ['x en sans empattement gras', 'x en sans empattement gras', 'x en sans empattement gras']);
+  this.executeCharTest('𝘆', ['y en sans empattement gras', 'y en sans empattement gras', 'y en sans empattement gras']);
+  this.executeCharTest('𝘇', ['z en sans empattement gras', 'z en sans empattement gras', 'z en sans empattement gras']);
+  this.executeCharTest('𝘈', ['A majuscule en sans empattement italique', 'A majuscule en sans empattement italique', 'A majuscule en sans empattement italique']);
+  this.executeCharTest('𝘉', ['B majuscule en sans empattement italique', 'B majuscule en sans empattement italique', 'B majuscule en sans empattement italique']);
+  this.executeCharTest('𝘊', ['C majuscule en sans empattement italique', 'C majuscule en sans empattement italique', 'C majuscule en sans empattement italique']);
+  this.executeCharTest('𝘋', ['D majuscule en sans empattement italique', 'D majuscule en sans empattement italique', 'D majuscule en sans empattement italique']);
+  this.executeCharTest('𝘌', ['E majuscule en sans empattement italique', 'E majuscule en sans empattement italique', 'E majuscule en sans empattement italique']);
+  this.executeCharTest('𝘍', ['F majuscule en sans empattement italique', 'F majuscule en sans empattement italique', 'F majuscule en sans empattement italique']);
+  this.executeCharTest('𝘎', ['G majuscule en sans empattement italique', 'G majuscule en sans empattement italique', 'G majuscule en sans empattement italique']);
+  this.executeCharTest('𝘏', ['H majuscule en sans empattement italique', 'H majuscule en sans empattement italique', 'H majuscule en sans empattement italique']);
+  this.executeCharTest('𝘐', ['I majuscule en sans empattement italique', 'I majuscule en sans empattement italique', 'I majuscule en sans empattement italique']);
+  this.executeCharTest('𝘑', ['J majuscule en sans empattement italique', 'J majuscule en sans empattement italique', 'J majuscule en sans empattement italique']);
+  this.executeCharTest('𝘒', ['K majuscule en sans empattement italique', 'K majuscule en sans empattement italique', 'K majuscule en sans empattement italique']);
+  this.executeCharTest('𝘓', ['L majuscule en sans empattement italique', 'L majuscule en sans empattement italique', 'L majuscule en sans empattement italique']);
+  this.executeCharTest('𝘔', ['M majuscule en sans empattement italique', 'M majuscule en sans empattement italique', 'M majuscule en sans empattement italique']);
+  this.executeCharTest('𝘕', ['N majuscule en sans empattement italique', 'N majuscule en sans empattement italique', 'N majuscule en sans empattement italique']);
+  this.executeCharTest('𝘖', ['O majuscule en sans empattement italique', 'O majuscule en sans empattement italique', 'O majuscule en sans empattement italique']);
+  this.executeCharTest('𝘗', ['P majuscule en sans empattement italique', 'P majuscule en sans empattement italique', 'P majuscule en sans empattement italique']);
+  this.executeCharTest('𝘘', ['Q majuscule en sans empattement italique', 'Q majuscule en sans empattement italique', 'Q majuscule en sans empattement italique']);
+  this.executeCharTest('𝘙', ['R majuscule en sans empattement italique', 'R majuscule en sans empattement italique', 'R majuscule en sans empattement italique']);
+  this.executeCharTest('𝘚', ['S majuscule en sans empattement italique', 'S majuscule en sans empattement italique', 'S majuscule en sans empattement italique']);
+  this.executeCharTest('𝘛', ['T majuscule en sans empattement italique', 'T majuscule en sans empattement italique', 'T majuscule en sans empattement italique']);
+  this.executeCharTest('𝘜', ['U majuscule en sans empattement italique', 'U majuscule en sans empattement italique', 'U majuscule en sans empattement italique']);
+  this.executeCharTest('𝘝', ['V majuscule en sans empattement italique', 'V majuscule en sans empattement italique', 'V majuscule en sans empattement italique']);
+  this.executeCharTest('𝘞', ['W majuscule en sans empattement italique', 'W majuscule en sans empattement italique', 'W majuscule en sans empattement italique']);
+  this.executeCharTest('𝘟', ['X majuscule en sans empattement italique', 'X majuscule en sans empattement italique', 'X majuscule en sans empattement italique']);
+  this.executeCharTest('𝘠', ['Y majuscule en sans empattement italique', 'Y majuscule en sans empattement italique', 'Y majuscule en sans empattement italique']);
+  this.executeCharTest('𝘡', ['Z majuscule en sans empattement italique', 'Z majuscule en sans empattement italique', 'Z majuscule en sans empattement italique']);
+  this.executeCharTest('𝘢', ['a en sans empattement italique', 'a en sans empattement italique', 'a en sans empattement italique']);
+  this.executeCharTest('𝘣', ['b en sans empattement italique', 'b en sans empattement italique', 'b en sans empattement italique']);
+  this.executeCharTest('𝘤', ['c en sans empattement italique', 'c en sans empattement italique', 'c en sans empattement italique']);
+  this.executeCharTest('𝘥', ['d en sans empattement italique', 'd en sans empattement italique', 'd en sans empattement italique']);
+  this.executeCharTest('𝘦', ['e en sans empattement italique', 'e en sans empattement italique', 'e en sans empattement italique']);
+  this.executeCharTest('𝘧', ['f en sans empattement italique', 'f en sans empattement italique', 'f en sans empattement italique']);
+  this.executeCharTest('𝘨', ['g en sans empattement italique', 'g en sans empattement italique', 'g en sans empattement italique']);
+  this.executeCharTest('𝘩', ['h en sans empattement italique', 'h en sans empattement italique', 'h en sans empattement italique']);
+  this.executeCharTest('𝘪', ['i en sans empattement italique', 'i en sans empattement italique', 'i en sans empattement italique']);
+  this.executeCharTest('𝘫', ['j en sans empattement italique', 'j en sans empattement italique', 'j en sans empattement italique']);
+  this.executeCharTest('𝘬', ['k en sans empattement italique', 'k en sans empattement italique', 'k en sans empattement italique']);
+  this.executeCharTest('𝘭', ['l en sans empattement italique', 'l en sans empattement italique', 'l en sans empattement italique']);
+  this.executeCharTest('𝘮', ['m en sans empattement italique', 'm en sans empattement italique', 'm en sans empattement italique']);
+  this.executeCharTest('𝘯', ['n en sans empattement italique', 'n en sans empattement italique', 'n en sans empattement italique']);
+  this.executeCharTest('𝘰', ['o en sans empattement italique', 'o en sans empattement italique', 'o en sans empattement italique']);
+  this.executeCharTest('𝘱', ['p en sans empattement italique', 'p en sans empattement italique', 'p en sans empattement italique']);
+  this.executeCharTest('𝘲', ['q en sans empattement italique', 'q en sans empattement italique', 'q en sans empattement italique']);
+  this.executeCharTest('𝘳', ['r en sans empattement italique', 'r en sans empattement italique', 'r en sans empattement italique']);
+  this.executeCharTest('𝘴', ['s en sans empattement italique', 's en sans empattement italique', 's en sans empattement italique']);
+  this.executeCharTest('𝘵', ['t en sans empattement italique', 't en sans empattement italique', 't en sans empattement italique']);
+  this.executeCharTest('𝘶', ['u en sans empattement italique', 'u en sans empattement italique', 'u en sans empattement italique']);
+  this.executeCharTest('𝘷', ['v en sans empattement italique', 'v en sans empattement italique', 'v en sans empattement italique']);
+  this.executeCharTest('𝘸', ['w en sans empattement italique', 'w en sans empattement italique', 'w en sans empattement italique']);
+  this.executeCharTest('𝘹', ['x en sans empattement italique', 'x en sans empattement italique', 'x en sans empattement italique']);
+  this.executeCharTest('𝘺', ['y en sans empattement italique', 'y en sans empattement italique', 'y en sans empattement italique']);
+  this.executeCharTest('𝘻', ['z en sans empattement italique', 'z en sans empattement italique', 'z en sans empattement italique']);
+  this.executeCharTest('𝘼', ['A majuscule en sans empattement italique gras', 'A majuscule en sans empattement italique gras', 'A majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝘽', ['B majuscule en sans empattement italique gras', 'B majuscule en sans empattement italique gras', 'B majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝘾', ['C majuscule en sans empattement italique gras', 'C majuscule en sans empattement italique gras', 'C majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝘿', ['D majuscule en sans empattement italique gras', 'D majuscule en sans empattement italique gras', 'D majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙀', ['E majuscule en sans empattement italique gras', 'E majuscule en sans empattement italique gras', 'E majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙁', ['F majuscule en sans empattement italique gras', 'F majuscule en sans empattement italique gras', 'F majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙂', ['G majuscule en sans empattement italique gras', 'G majuscule en sans empattement italique gras', 'G majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙃', ['H majuscule en sans empattement italique gras', 'H majuscule en sans empattement italique gras', 'H majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙄', ['I majuscule en sans empattement italique gras', 'I majuscule en sans empattement italique gras', 'I majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙅', ['J majuscule en sans empattement italique gras', 'J majuscule en sans empattement italique gras', 'J majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙆', ['K majuscule en sans empattement italique gras', 'K majuscule en sans empattement italique gras', 'K majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙇', ['L majuscule en sans empattement italique gras', 'L majuscule en sans empattement italique gras', 'L majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙈', ['M majuscule en sans empattement italique gras', 'M majuscule en sans empattement italique gras', 'M majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙉', ['N majuscule en sans empattement italique gras', 'N majuscule en sans empattement italique gras', 'N majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙊', ['O majuscule en sans empattement italique gras', 'O majuscule en sans empattement italique gras', 'O majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙋', ['P majuscule en sans empattement italique gras', 'P majuscule en sans empattement italique gras', 'P majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙌', ['Q majuscule en sans empattement italique gras', 'Q majuscule en sans empattement italique gras', 'Q majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙍', ['R majuscule en sans empattement italique gras', 'R majuscule en sans empattement italique gras', 'R majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙎', ['S majuscule en sans empattement italique gras', 'S majuscule en sans empattement italique gras', 'S majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙏', ['T majuscule en sans empattement italique gras', 'T majuscule en sans empattement italique gras', 'T majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙐', ['U majuscule en sans empattement italique gras', 'U majuscule en sans empattement italique gras', 'U majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙑', ['V majuscule en sans empattement italique gras', 'V majuscule en sans empattement italique gras', 'V majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙒', ['W majuscule en sans empattement italique gras', 'W majuscule en sans empattement italique gras', 'W majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙓', ['X majuscule en sans empattement italique gras', 'X majuscule en sans empattement italique gras', 'X majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙔', ['Y majuscule en sans empattement italique gras', 'Y majuscule en sans empattement italique gras', 'Y majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙕', ['Z majuscule en sans empattement italique gras', 'Z majuscule en sans empattement italique gras', 'Z majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙖', ['a en sans empattement italique gras', 'a en sans empattement italique gras', 'a en sans empattement italique gras']);
+  this.executeCharTest('𝙗', ['b en sans empattement italique gras', 'b en sans empattement italique gras', 'b en sans empattement italique gras']);
+  this.executeCharTest('𝙘', ['c en sans empattement italique gras', 'c en sans empattement italique gras', 'c en sans empattement italique gras']);
+  this.executeCharTest('𝙙', ['d en sans empattement italique gras', 'd en sans empattement italique gras', 'd en sans empattement italique gras']);
+  this.executeCharTest('𝙚', ['e en sans empattement italique gras', 'e en sans empattement italique gras', 'e en sans empattement italique gras']);
+  this.executeCharTest('𝙛', ['f en sans empattement italique gras', 'f en sans empattement italique gras', 'f en sans empattement italique gras']);
+  this.executeCharTest('𝙜', ['g en sans empattement italique gras', 'g en sans empattement italique gras', 'g en sans empattement italique gras']);
+  this.executeCharTest('𝙝', ['h en sans empattement italique gras', 'h en sans empattement italique gras', 'h en sans empattement italique gras']);
+  this.executeCharTest('𝙞', ['i en sans empattement italique gras', 'i en sans empattement italique gras', 'i en sans empattement italique gras']);
+  this.executeCharTest('𝙟', ['j en sans empattement italique gras', 'j en sans empattement italique gras', 'j en sans empattement italique gras']);
+  this.executeCharTest('𝙠', ['k en sans empattement italique gras', 'k en sans empattement italique gras', 'k en sans empattement italique gras']);
+  this.executeCharTest('𝙡', ['l en sans empattement italique gras', 'l en sans empattement italique gras', 'l en sans empattement italique gras']);
+  this.executeCharTest('𝙢', ['m en sans empattement italique gras', 'm en sans empattement italique gras', 'm en sans empattement italique gras']);
+  this.executeCharTest('𝙣', ['n en sans empattement italique gras', 'n en sans empattement italique gras', 'n en sans empattement italique gras']);
+  this.executeCharTest('𝙤', ['o en sans empattement italique gras', 'o en sans empattement italique gras', 'o en sans empattement italique gras']);
+  this.executeCharTest('𝙥', ['p en sans empattement italique gras', 'p en sans empattement italique gras', 'p en sans empattement italique gras']);
+  this.executeCharTest('𝙦', ['q en sans empattement italique gras', 'q en sans empattement italique gras', 'q en sans empattement italique gras']);
+  this.executeCharTest('𝙧', ['r en sans empattement italique gras', 'r en sans empattement italique gras', 'r en sans empattement italique gras']);
+  this.executeCharTest('𝙨', ['s en sans empattement italique gras', 's en sans empattement italique gras', 's en sans empattement italique gras']);
+  this.executeCharTest('𝙩', ['t en sans empattement italique gras', 't en sans empattement italique gras', 't en sans empattement italique gras']);
+  this.executeCharTest('𝙪', ['u en sans empattement italique gras', 'u en sans empattement italique gras', 'u en sans empattement italique gras']);
+  this.executeCharTest('𝙫', ['v en sans empattement italique gras', 'v en sans empattement italique gras', 'v en sans empattement italique gras']);
+  this.executeCharTest('𝙬', ['w en sans empattement italique gras', 'w en sans empattement italique gras', 'w en sans empattement italique gras']);
+  this.executeCharTest('𝙭', ['x en sans empattement italique gras', 'x en sans empattement italique gras', 'x en sans empattement italique gras']);
+  this.executeCharTest('𝙮', ['y en sans empattement italique gras', 'y en sans empattement italique gras', 'y en sans empattement italique gras']);
+  this.executeCharTest('𝙯', ['z en sans empattement italique gras', 'z en sans empattement italique gras', 'z en sans empattement italique gras']);
+  this.executeCharTest('𝖠', ['A majuscule en sans empattement', 'A majuscule en sans empattement', 'A majuscule en sans empattement']);
+  this.executeCharTest('𝖡', ['B majuscule en sans empattement', 'B majuscule en sans empattement', 'B majuscule en sans empattement']);
+  this.executeCharTest('𝖢', ['C majuscule en sans empattement', 'C majuscule en sans empattement', 'C majuscule en sans empattement']);
+  this.executeCharTest('𝖣', ['D majuscule en sans empattement', 'D majuscule en sans empattement', 'D majuscule en sans empattement']);
+  this.executeCharTest('𝖤', ['E majuscule en sans empattement', 'E majuscule en sans empattement', 'E majuscule en sans empattement']);
+  this.executeCharTest('𝖥', ['F majuscule en sans empattement', 'F majuscule en sans empattement', 'F majuscule en sans empattement']);
+  this.executeCharTest('𝖦', ['G majuscule en sans empattement', 'G majuscule en sans empattement', 'G majuscule en sans empattement']);
+  this.executeCharTest('𝖧', ['H majuscule en sans empattement', 'H majuscule en sans empattement', 'H majuscule en sans empattement']);
+  this.executeCharTest('𝖨', ['I majuscule en sans empattement', 'I majuscule en sans empattement', 'I majuscule en sans empattement']);
+  this.executeCharTest('𝖩', ['J majuscule en sans empattement', 'J majuscule en sans empattement', 'J majuscule en sans empattement']);
+  this.executeCharTest('𝖪', ['K majuscule en sans empattement', 'K majuscule en sans empattement', 'K majuscule en sans empattement']);
+  this.executeCharTest('𝖫', ['L majuscule en sans empattement', 'L majuscule en sans empattement', 'L majuscule en sans empattement']);
+  this.executeCharTest('𝖬', ['M majuscule en sans empattement', 'M majuscule en sans empattement', 'M majuscule en sans empattement']);
+  this.executeCharTest('𝖭', ['N majuscule en sans empattement', 'N majuscule en sans empattement', 'N majuscule en sans empattement']);
+  this.executeCharTest('𝖮', ['O majuscule en sans empattement', 'O majuscule en sans empattement', 'O majuscule en sans empattement']);
+  this.executeCharTest('𝖯', ['P majuscule en sans empattement', 'P majuscule en sans empattement', 'P majuscule en sans empattement']);
+  this.executeCharTest('𝖰', ['Q majuscule en sans empattement', 'Q majuscule en sans empattement', 'Q majuscule en sans empattement']);
+  this.executeCharTest('𝖱', ['R majuscule en sans empattement', 'R majuscule en sans empattement', 'R majuscule en sans empattement']);
+  this.executeCharTest('𝖲', ['S majuscule en sans empattement', 'S majuscule en sans empattement', 'S majuscule en sans empattement']);
+  this.executeCharTest('𝖳', ['T majuscule en sans empattement', 'T majuscule en sans empattement', 'T majuscule en sans empattement']);
+  this.executeCharTest('𝖴', ['U majuscule en sans empattement', 'U majuscule en sans empattement', 'U majuscule en sans empattement']);
+  this.executeCharTest('𝖵', ['V majuscule en sans empattement', 'V majuscule en sans empattement', 'V majuscule en sans empattement']);
+  this.executeCharTest('𝖶', ['W majuscule en sans empattement', 'W majuscule en sans empattement', 'W majuscule en sans empattement']);
+  this.executeCharTest('𝖷', ['X majuscule en sans empattement', 'X majuscule en sans empattement', 'X majuscule en sans empattement']);
+  this.executeCharTest('𝖸', ['Y majuscule en sans empattement', 'Y majuscule en sans empattement', 'Y majuscule en sans empattement']);
+  this.executeCharTest('𝖹', ['Z majuscule en sans empattement', 'Z majuscule en sans empattement', 'Z majuscule en sans empattement']);
+  this.executeCharTest('𝖺', ['a en sans empattement', 'a en sans empattement', 'a en sans empattement']);
+  this.executeCharTest('𝖻', ['b en sans empattement', 'b en sans empattement', 'b en sans empattement']);
+  this.executeCharTest('𝖼', ['c en sans empattement', 'c en sans empattement', 'c en sans empattement']);
+  this.executeCharTest('𝖽', ['d en sans empattement', 'd en sans empattement', 'd en sans empattement']);
+  this.executeCharTest('𝖾', ['e en sans empattement', 'e en sans empattement', 'e en sans empattement']);
+  this.executeCharTest('𝖿', ['f en sans empattement', 'f en sans empattement', 'f en sans empattement']);
+  this.executeCharTest('𝗀', ['g en sans empattement', 'g en sans empattement', 'g en sans empattement']);
+  this.executeCharTest('𝗁', ['h en sans empattement', 'h en sans empattement', 'h en sans empattement']);
+  this.executeCharTest('𝗂', ['i en sans empattement', 'i en sans empattement', 'i en sans empattement']);
+  this.executeCharTest('𝗃', ['j en sans empattement', 'j en sans empattement', 'j en sans empattement']);
+  this.executeCharTest('𝗄', ['k en sans empattement', 'k en sans empattement', 'k en sans empattement']);
+  this.executeCharTest('𝗅', ['l en sans empattement', 'l en sans empattement', 'l en sans empattement']);
+  this.executeCharTest('𝗆', ['m en sans empattement', 'm en sans empattement', 'm en sans empattement']);
+  this.executeCharTest('𝗇', ['n en sans empattement', 'n en sans empattement', 'n en sans empattement']);
+  this.executeCharTest('𝗈', ['o en sans empattement', 'o en sans empattement', 'o en sans empattement']);
+  this.executeCharTest('𝗉', ['p en sans empattement', 'p en sans empattement', 'p en sans empattement']);
+  this.executeCharTest('𝗊', ['q en sans empattement', 'q en sans empattement', 'q en sans empattement']);
+  this.executeCharTest('𝗋', ['r en sans empattement', 'r en sans empattement', 'r en sans empattement']);
+  this.executeCharTest('𝗌', ['s en sans empattement', 's en sans empattement', 's en sans empattement']);
+  this.executeCharTest('𝗍', ['t en sans empattement', 't en sans empattement', 't en sans empattement']);
+  this.executeCharTest('𝗎', ['u en sans empattement', 'u en sans empattement', 'u en sans empattement']);
+  this.executeCharTest('𝗏', ['v en sans empattement', 'v en sans empattement', 'v en sans empattement']);
+  this.executeCharTest('𝗐', ['w en sans empattement', 'w en sans empattement', 'w en sans empattement']);
+  this.executeCharTest('𝗑', ['x en sans empattement', 'x en sans empattement', 'x en sans empattement']);
+  this.executeCharTest('𝗒', ['y en sans empattement', 'y en sans empattement', 'y en sans empattement']);
+  this.executeCharTest('𝗓', ['z en sans empattement', 'z en sans empattement', 'z en sans empattement']);
+  this.executeCharTest('𝒜', ['A majuscule en script', 'A majuscule en script', 'A majuscule en script']);
+  this.executeCharTest('ℬ', ['B ronde majuscule', 'B ronde majuscule', 'B ronde majuscule']);
+  this.executeCharTest('𝒞', ['C majuscule en script', 'C majuscule en script', 'C majuscule en script']);
+  this.executeCharTest('𝒟', ['D majuscule en script', 'D majuscule en script', 'D majuscule en script']);
+  this.executeCharTest('ℰ', ['E ronde majuscule', 'E ronde majuscule', 'E ronde majuscule']);
+  this.executeCharTest('ℱ', ['F ronde majuscule', 'F ronde majuscule', 'F ronde majuscule']);
+  this.executeCharTest('𝒢', ['G majuscule en script', 'G majuscule en script', 'G majuscule en script']);
+  this.executeCharTest('ℋ', ['H ronde majuscule', 'H ronde majuscule', 'H ronde majuscule']);
+  this.executeCharTest('ℐ', ['I ronde majuscule', 'I ronde majuscule', 'I ronde majuscule']);
+  this.executeCharTest('𝒥', ['J majuscule en script', 'J majuscule en script', 'J majuscule en script']);
+  this.executeCharTest('𝒦', ['K majuscule en script', 'K majuscule en script', 'K majuscule en script']);
+  this.executeCharTest('ℒ', ['L ronde majuscule', 'L ronde majuscule', 'L ronde majuscule']);
+  this.executeCharTest('ℳ', ['M ronde majuscule', 'M ronde majuscule', 'M ronde majuscule']);
+  this.executeCharTest('𝒩', ['N majuscule en script', 'N majuscule en script', 'N majuscule en script']);
+  this.executeCharTest('𝒪', ['O majuscule en script', 'O majuscule en script', 'O majuscule en script']);
+  this.executeCharTest('𝒫', ['P majuscule en script', 'P majuscule en script', 'P majuscule en script']);
+  this.executeCharTest('𝒬', ['Q majuscule en script', 'Q majuscule en script', 'Q majuscule en script']);
+  this.executeCharTest('ℛ', ['R ronde majuscule', 'R ronde majuscule', 'R ronde majuscule']);
+  this.executeCharTest('𝒮', ['S majuscule en script', 'S majuscule en script', 'S majuscule en script']);
+  this.executeCharTest('𝒯', ['T majuscule en script', 'T majuscule en script', 'T majuscule en script']);
+  this.executeCharTest('𝒰', ['U majuscule en script', 'U majuscule en script', 'U majuscule en script']);
+  this.executeCharTest('𝒱', ['V majuscule en script', 'V majuscule en script', 'V majuscule en script']);
+  this.executeCharTest('𝒲', ['W majuscule en script', 'W majuscule en script', 'W majuscule en script']);
+  this.executeCharTest('𝒳', ['X majuscule en script', 'X majuscule en script', 'X majuscule en script']);
+  this.executeCharTest('𝒴', ['Y majuscule en script', 'Y majuscule en script', 'Y majuscule en script']);
+  this.executeCharTest('𝒵', ['Z majuscule en script', 'Z majuscule en script', 'Z majuscule en script']);
+  this.executeCharTest('𝒶', ['a en script', 'a en script', 'a en script']);
+  this.executeCharTest('𝒷', ['b en script', 'b en script', 'b en script']);
+  this.executeCharTest('𝒸', ['c en script', 'c en script', 'c en script']);
+  this.executeCharTest('𝒹', ['d en script', 'd en script', 'd en script']);
+  this.executeCharTest('ℯ', ['e ronde minuscule', 'e ronde minuscule', 'e ronde minuscule']);
+  this.executeCharTest('𝒻', ['f en script', 'f en script', 'f en script']);
+  this.executeCharTest('ℊ', ['g ronde minuscule', 'g ronde minuscule', 'g ronde minuscule']);
+  this.executeCharTest('𝒽', ['h en script', 'h en script', 'h en script']);
+  this.executeCharTest('𝒾', ['i en script', 'i en script', 'i en script']);
+  this.executeCharTest('𝒿', ['j en script', 'j en script', 'j en script']);
+  this.executeCharTest('𝓀', ['k en script', 'k en script', 'k en script']);
+  this.executeCharTest('𝓁', ['script l', 'script l', 'script l']);
+  this.executeCharTest('𝓂', ['m en script', 'm en script', 'm en script']);
+  this.executeCharTest('𝓃', ['n en script', 'n en script', 'n en script']);
+  this.executeCharTest('ℴ', ['o ronde minuscule', 'o ronde minuscule', 'o ronde minuscule']);
+  this.executeCharTest('𝓅', ['p en script', 'p en script', 'p en script']);
+  this.executeCharTest('𝓆', ['q en script', 'q en script', 'q en script']);
+  this.executeCharTest('𝓇', ['r en script', 'r en script', 'r en script']);
+  this.executeCharTest('𝓈', ['s en script', 's en script', 's en script']);
+  this.executeCharTest('𝓉', ['t en script', 't en script', 't en script']);
+  this.executeCharTest('𝓊', ['u en script', 'u en script', 'u en script']);
+  this.executeCharTest('𝓋', ['v en script', 'v en script', 'v en script']);
+  this.executeCharTest('𝓌', ['w en script', 'w en script', 'w en script']);
+  this.executeCharTest('𝓍', ['x en script', 'x en script', 'x en script']);
+  this.executeCharTest('𝓎', ['y en script', 'y en script', 'y en script']);
+  this.executeCharTest('𝓏', ['z en script', 'z en script', 'z en script']);
+  this.executeCharTest('⊾', ['angle droit avec arc', 'angle droit avec arc', 'angle droit avec arc']);
+  this.executeCharTest('⍼', ['angle droit avec flèche en zigzag vers le bas', 'angle droit avec flèche en zigzag vers le bas', 'angle droit avec flèche en zigzag vers le bas']);
+  this.executeCharTest('⟀', ['angle tridimensionnel', 'angle tridimensionnel', 'angle tridimensionnel']);
+  this.executeCharTest('⦛', ['measured angle opening left', 'measured angle opening left', 'measured angle opening left']);
+  this.executeCharTest('⦜', ['right angle variant with square', 'right angle variant with square', 'right angle variant with square']);
+  this.executeCharTest('⦝', ['angle droit mesuré pointé', 'angle droit mesuré pointé', 'angle droit mesuré pointé']);
+  this.executeCharTest('⦞', ['angle with s inside', 'angle with s inside', 'angle with s inside']);
+  this.executeCharTest('⦟', ['acute angle', 'acute angle', 'acute angle']);
+  this.executeCharTest('⦠', ['spherical angle opening left', 'spherical angle opening left', 'spherical angle opening left']);
+  this.executeCharTest('⦡', ['spherical angle opening up', 'spherical angle opening up', 'spherical angle opening up']);
+  this.executeCharTest('⦢', ['turned angle', 'turned angle', 'turned angle']);
+  this.executeCharTest('⦣', ['reversed angle', 'reversed angle', 'reversed angle']);
+  this.executeCharTest('⦤', ['angle à barre souscrite', 'angle à barre souscrite', 'angle à barre souscrite']);
+  this.executeCharTest('⦥', ['angle à barre souscrite réfléchie', 'angle à barre souscrite réfléchie', 'angle à barre souscrite réfléchie']);
+  this.executeCharTest('⦦', ['angle oblique s\'ouvrant vers le haut', 'angle oblique s\'ouvrant vers le haut', 'angle oblique s\'ouvrant vers le haut']);
+  this.executeCharTest('⦧', ['angle oblique s\'ouvrant vers le bas', 'angle oblique s\'ouvrant vers le bas', 'angle oblique s\'ouvrant vers le bas']);
+  this.executeCharTest('⦨', ['angle calculé à bras vers l\'est et bras fléché vers le nord-est', 'angle calculé à bras vers l\'est et bras fléché vers le nord-est', 'angle calculé à bras vers l\'est et bras fléché vers le nord-est']);
+  this.executeCharTest('⦩', ['angle calculé à bras vers l\'ouest et bras fléché vers le nord-ouest', 'angle calculé à bras vers l\'ouest et bras fléché vers le nord-ouest', 'angle calculé à bras vers l\'ouest et bras fléché vers le nord-ouest']);
+  this.executeCharTest('⦪', ['angle calculé à bras vers l\'est et bras fléché vers le sud-est', 'angle calculé à bras vers l\'est et bras fléché vers le sud-est', 'angle calculé à bras vers l\'est et bras fléché vers le sud-est']);
+  this.executeCharTest('⦫', ['angle calculé à bras vers l\'ouest et bras fléché vers le sud-ouest', 'angle calculé à bras vers l\'ouest et bras fléché vers le sud-ouest', 'angle calculé à bras vers l\'ouest et bras fléché vers le sud-ouest']);
+  this.executeCharTest('⦬', ['angle calculé à bras vers le nord et bras fléché vers le nord-est', 'angle calculé à bras vers le nord et bras fléché vers le nord-est', 'angle calculé à bras vers le nord et bras fléché vers le nord-est']);
+  this.executeCharTest('⦭', ['angle calculé à bras vers le nord et bras fléché vers le nord-ouest', 'angle calculé à bras vers le nord et bras fléché vers le nord-ouest', 'angle calculé à bras vers le nord et bras fléché vers le nord-ouest']);
+  this.executeCharTest('⦮', ['angle calculé à bras vers le sud et bras fléché vers le sud-est', 'angle calculé à bras vers le sud et bras fléché vers le sud-est', 'angle calculé à bras vers le sud et bras fléché vers le sud-est']);
+  this.executeCharTest('⦯', ['angle calculé à bras vers le sud et bras fléché vers le sud-ouest', 'angle calculé à bras vers le sud et bras fléché vers le sud-ouest', 'angle calculé à bras vers le sud et bras fléché vers le sud-ouest']);
+  this.executeCharTest('←', ['flèche gauche', 'flèche gauche', 'flèche gauche']);
+  this.executeCharTest('↑', ['flèche vers le haut', 'flèche vers le haut', 'flèche vers le haut']);
+  this.executeCharTest('→', ['flèche droite', 'flèche droite', 'flèche droite']);
+  this.executeCharTest('↓', ['flèche vers le bas', 'flèche vers le bas', 'flèche vers le bas']);
+  this.executeCharTest('↔', ['flèche bilatérale', 'flèche bilatérale', 'flèche bilatérale']);
+  this.executeCharTest('↕', ['flèche haut et bas', 'flèche haut et bas', 'flèche haut et bas']);
+  this.executeCharTest('↖', ['flèche nord-ouest', 'flèche nord-ouest', 'flèche nord-ouest']);
+  this.executeCharTest('↗', ['flèche nord-est', 'flèche nord-est', 'flèche nord-est']);
+  this.executeCharTest('↘', ['flèche sud-est', 'flèche sud-est', 'flèche sud-est']);
+  this.executeCharTest('↙', ['flèche sud-ouest', 'flèche sud-ouest', 'flèche sud-ouest']);
+  this.executeCharTest('↚', ['flèche barrée gauche', 'flèche barrée gauche', 'flèche barrée gauche']);
+  this.executeCharTest('↛', ['flèche barrée droite', 'flèche barrée droite', 'flèche barrée droite']);
+  this.executeCharTest('↜', ['flèche ondulée gauche', 'flèche ondulée gauche', 'flèche ondulée gauche']);
+  this.executeCharTest('↝', ['flèche ondulée droite', 'flèche ondulée droite', 'flèche ondulée droite']);
+  this.executeCharTest('↞', ['flèche à deux pointes gauche', 'flèche à deux pointes gauche', 'flèche à deux pointes gauche']);
+  this.executeCharTest('↟', ['flèche à deux pointes vers le haut', 'flèche à deux pointes vers le haut', 'flèche à deux pointes vers le haut']);
+  this.executeCharTest('↠', ['flèche à deux pointes droite', 'flèche à deux pointes droite', 'flèche à deux pointes droite']);
+  this.executeCharTest('↡', ['flèche à deux pointes vers le bas', 'flèche à deux pointes vers le bas', 'flèche à deux pointes vers le bas']);
+  this.executeCharTest('↢', ['flèche empennée gauche', 'flèche empennée gauche', 'flèche empennée gauche']);
+  this.executeCharTest('↣', ['flèche empennée droite', 'flèche empennée droite', 'flèche empennée droite']);
+  this.executeCharTest('↤', ['flèche d\'un taquet gauche', 'flèche d\'un taquet gauche', 'flèche d\'un taquet gauche']);
+  this.executeCharTest('↥', ['flèche d\'un taquet vers le haut', 'flèche d\'un taquet vers le haut', 'flèche d\'un taquet vers le haut']);
+  this.executeCharTest('↦', ['flèche d\'un taquet droite', 'flèche d\'un taquet droite', 'flèche d\'un taquet droite']);
+  this.executeCharTest('↧', ['flèche d\'un taquet vers le bas', 'flèche d\'un taquet vers le bas', 'flèche d\'un taquet vers le bas']);
+  this.executeCharTest('↨', ['flèche haut-bas sur base', 'flèche haut-bas sur base', 'flèche haut-bas sur base']);
+  this.executeCharTest('↩', ['flèche avec crochet gauche', 'flèche avec crochet gauche', 'flèche avec crochet gauche']);
+  this.executeCharTest('↪', ['flèche avec crochet droite', 'flèche avec crochet droite', 'flèche avec crochet droite']);
+  this.executeCharTest('↫', ['flèche avec boucle gauche', 'flèche avec boucle gauche', 'flèche avec boucle gauche']);
+  this.executeCharTest('↬', ['flèche avec boucle droite', 'flèche avec boucle droite', 'flèche avec boucle droite']);
+  this.executeCharTest('↭', ['flèche ondulée bilatérale', 'flèche ondulée bilatérale', 'flèche ondulée bilatérale']);
+  this.executeCharTest('↮', ['flèche barrée bilatérale', 'flèche barrée bilatérale', 'flèche barrée bilatérale']);
+  this.executeCharTest('↯', ['flèche vers le bas en zigzag', 'flèche vers le bas en zigzag', 'flèche vers le bas en zigzag']);
+  this.executeCharTest('↰', ['flèche vers le haut avec pointe gauche', 'flèche vers le haut avec pointe gauche', 'flèche vers le haut avec pointe gauche']);
+  this.executeCharTest('↱', ['flèche vers le haut avec pointe droite', 'flèche vers le haut avec pointe droite', 'flèche vers le haut avec pointe droite']);
+  this.executeCharTest('↲', ['flèche vers le bas avec pointe gauche', 'flèche vers le bas avec pointe gauche', 'flèche vers le bas avec pointe gauche']);
+  this.executeCharTest('↳', ['flèche vers le bas avec pointe droite', 'flèche vers le bas avec pointe droite', 'flèche vers le bas avec pointe droite']);
+  this.executeCharTest('↴', ['flèche vers le bas avec coin droit', 'flèche vers le bas avec coin droit', 'flèche vers le bas avec coin droit']);
+  this.executeCharTest('↵', ['flèche vers le bas avec coin gauche', 'flèche vers le bas avec coin gauche', 'flèche vers le bas avec coin gauche']);
+  this.executeCharTest('↶', ['flèche semi-circulaire en sens positif', 'flèche semi-circulaire en sens positif', 'flèche semi-circulaire en sens positif']);
+  this.executeCharTest('↷', ['flèche semi-circulaire en sens négatif', 'flèche semi-circulaire en sens négatif', 'flèche semi-circulaire en sens négatif']);
+  this.executeCharTest('↸', ['flèche nord-ouest vers une barre horizontale longue', 'flèche nord-ouest vers une barre horizontale longue', 'flèche nord-ouest vers une barre horizontale longue']);
+  this.executeCharTest('↹', ['flèche gauche vers un taquet sur flèche droite vers un taquet', 'flèche gauche vers un taquet sur flèche droite vers un taquet', 'flèche gauche vers un taquet sur flèche droite vers un taquet']);
+  this.executeCharTest('↺', ['flèche en sens positif à cercle ouvert', 'flèche en sens positif à cercle ouvert', 'flèche en sens positif à cercle ouvert']);
+  this.executeCharTest('↻', ['flèche en sens négatif à cercle ouvert', 'flèche en sens négatif à cercle ouvert', 'flèche en sens négatif à cercle ouvert']);
+  this.executeCharTest('⇄', ['flèche vers le haut par-dessus flèche gauche', 'flèche vers le haut par-dessus flèche gauche', 'flèche vers le haut par-dessus flèche gauche']);
+  this.executeCharTest('⇅', ['flèche vers le haut à gauche d\'une flèche vers le bas', 'flèche vers le haut à gauche d\'une flèche vers le bas', 'flèche vers le haut à gauche d\'une flèche vers le bas']);
+  this.executeCharTest('⇆', ['flèche gauche par-dessus flèche droite', 'flèche gauche par-dessus flèche droite', 'flèche gauche par-dessus flèche droite']);
+  this.executeCharTest('⇇', ['paire de flèches gauche', 'paire de flèches gauche', 'paire de flèches gauche']);
+  this.executeCharTest('⇈', ['paire de flèches vers le haut', 'paire de flèches vers le haut', 'paire de flèches vers le haut']);
+  this.executeCharTest('⇉', ['paire de flèches droite', 'paire de flèches droite', 'paire de flèches droite']);
+  this.executeCharTest('⇊', ['paire de flèches vers le bas', 'paire de flèches vers le bas', 'paire de flèches vers le bas']);
+  this.executeCharTest('⇍', ['double flèche barrée gauche', 'double flèche barrée gauche', 'double flèche barrée gauche']);
+  this.executeCharTest('⇎', ['double flèche barrée bilatérale', 'double flèche barrée bilatérale', 'double flèche barrée bilatérale']);
+  this.executeCharTest('⇏', ['double flèche barrée droite', 'double flèche barrée droite', 'double flèche barrée droite']);
+  this.executeCharTest('⇐', ['double flèche gauche', 'double flèche gauche', 'double flèche gauche']);
+  this.executeCharTest('⇑', ['double flèche vers le haut', 'double flèche vers le haut', 'double flèche vers le haut']);
+  this.executeCharTest('⇒', ['double flèche droite', 'double flèche droite', 'double flèche droite']);
+  this.executeCharTest('⇓', ['double flèche vers le bas', 'double flèche vers le bas', 'double flèche vers le bas']);
+  this.executeCharTest('⇔', ['double flèche bilatérale', 'double flèche bilatérale', 'double flèche bilatérale']);
+  this.executeCharTest('⇕', ['double flèche haut-bas', 'double flèche haut-bas', 'double flèche haut-bas']);
+  this.executeCharTest('⇖', ['double flèche nord-ouest', 'double flèche nord-ouest', 'double flèche nord-ouest']);
+  this.executeCharTest('⇗', ['double flèche nord-est', 'double flèche nord-est', 'double flèche nord-est']);
+  this.executeCharTest('⇘', ['double flèche sud-est', 'double flèche sud-est', 'double flèche sud-est']);
+  this.executeCharTest('⇙', ['double flèche sud-ouest', 'double flèche sud-ouest', 'double flèche sud-ouest']);
+  this.executeCharTest('⇚', ['triple flèche gauche', 'triple flèche gauche', 'triple flèche gauche']);
+  this.executeCharTest('⇛', ['triple flèche droite', 'triple flèche droite', 'triple flèche droite']);
+  this.executeCharTest('⇜', ['flèche en tire-bouchon gauche', 'flèche en tire-bouchon gauche', 'flèche en tire-bouchon gauche']);
+  this.executeCharTest('⇝', ['flèche en tire-bouchon droite', 'flèche en tire-bouchon droite', 'flèche en tire-bouchon droite']);
+  this.executeCharTest('⇞', ['flèche vers le haut avec double barre', 'flèche vers le haut avec double barre', 'flèche vers le haut avec double barre']);
+  this.executeCharTest('⇟', ['flèche vers le bas avec double barre', 'flèche vers le bas avec double barre', 'flèche vers le bas avec double barre']);
+  this.executeCharTest('⇠', ['flèche pointillée gauche', 'flèche pointillée gauche', 'flèche pointillée gauche']);
+  this.executeCharTest('⇡', ['flèche pointillée vers le haut', 'flèche pointillée vers le haut', 'flèche pointillée vers le haut']);
+  this.executeCharTest('⇢', ['flèche pointillée droite', 'flèche pointillée droite', 'flèche pointillée droite']);
+  this.executeCharTest('⇣', ['flèche pointillée vers le bas', 'flèche pointillée vers le bas', 'flèche pointillée vers le bas']);
+  this.executeCharTest('⇤', ['flèche gauche vers un taquet', 'flèche gauche vers un taquet', 'flèche gauche vers un taquet']);
+  this.executeCharTest('⇥', ['flèche droite vers un taquet', 'flèche droite vers un taquet', 'flèche droite vers un taquet']);
+  this.executeCharTest('⇦', ['flèche blanche gauche', 'flèche blanche gauche', 'flèche blanche gauche']);
+  this.executeCharTest('⇧', ['flèche blanche vers le haut', 'flèche blanche vers le haut', 'flèche blanche vers le haut']);
+  this.executeCharTest('⇨', ['flèche blanche droite', 'flèche blanche droite', 'flèche blanche droite']);
+  this.executeCharTest('⇩', ['flèche blanche vers le bas', 'flèche blanche vers le bas', 'flèche blanche vers le bas']);
+  this.executeCharTest('⇪', ['flèche blanche vers le haut à partir d\'un taquet', 'flèche blanche vers le haut à partir d\'un taquet', 'flèche blanche vers le haut à partir d\'un taquet']);
+  this.executeCharTest('⇫', ['white up-arrow on pedestal', 'white up-arrow on pedestal', 'white U arrow on pedestal']);
+  this.executeCharTest('⇬', ['white up-arrow on pedestal with horizontal bar', 'white up-arrow on pedestal with horizontal bar', 'white U arrow on pedestal with horizontal bar']);
+  this.executeCharTest('⇭', ['white up-arrow on pedestal with vertical bar', 'white up-arrow on pedestal with vertical bar', 'white U arrow on pedestal with vertical bar']);
+  this.executeCharTest('⇮', ['white double up-arrow', 'white double up-arrow', 'white double U arrow']);
+  this.executeCharTest('⇯', ['white double up-arrow on pedestal', 'white double up-arrow on pedestal', 'white double U arrow on pedestal']);
+  this.executeCharTest('⇰', ['white right-arrow from wall', 'white right-arrow from wall', 'white R arrow from wall']);
+  this.executeCharTest('⇱', ['north west arrow to corner', 'north west arrow to corner', 'north west arrow to corner']);
+  this.executeCharTest('⇲', ['south east arrow to corner', 'south east arrow to corner', 'south east arrow to corner']);
+  this.executeCharTest('⇳', ['up down white arrow', 'up down white arrow', 'U d white arrow']);
+  this.executeCharTest('⇴', ['right-arrow with small circle', 'right-arrow with small circle', 'R arrow with small circle']);
+  this.executeCharTest('⇵', ['flèche descendante à gauche d\'une flèche montante', 'flèche descendante à gauche d\'une flèche montante', 'flèche descendante à gauche d\'une flèche montante']);
+  this.executeCharTest('⇶', ['three right-arrows', 'three right-arrows', 'three R arrows']);
+  this.executeCharTest('⇷', ['left-arrow with vertical stroke', 'left-arrow with vertical stroke', 'L arrow with vertical stroke']);
+  this.executeCharTest('⇸', ['right-arrow with vertical stroke', 'right-arrow with vertical stroke', 'R arrow with vertical stroke']);
+  this.executeCharTest('⇹', ['left-right-arrow with vertical stroke', 'left-right-arrow with vertical stroke', 'L R arrow with vertical stroke']);
+  this.executeCharTest('⇺', ['left-arrow with double vertical stroke', 'left-arrow with double vertical stroke', 'L arrow with double vertical stroke']);
+  this.executeCharTest('⇻', ['right-arrow with double vertical stroke', 'right-arrow with double vertical stroke', 'R arrow with double vertical stroke']);
+  this.executeCharTest('⇼', ['left-right-arrow with double vertical stroke', 'left-right-arrow with double vertical stroke', 'L R arrow with double vertical stroke']);
+  this.executeCharTest('⇽', ['flèche à tête creuse gauche', 'flèche à tête creuse gauche', 'flèche à tête creuse gauche']);
+  this.executeCharTest('⇾', ['flèche à tête creuse droite', 'flèche à tête creuse droite', 'flèche à tête creuse droite']);
+  this.executeCharTest('⇿', ['flèche à tête creuse bilatérale', 'flèche à tête creuse bilatérale', 'flèche à tête creuse bilatérale']);
+  this.executeCharTest('⌁', ['electric arrow', 'electric arrow', 'electric arrow']);
+  this.executeCharTest('⌃', ['up-arrowhead', 'up-arrowhead', 'U arrowhead']);
+  this.executeCharTest('⌄', ['down-arrowhead', 'down-arrowhead', 'D arrowhead']);
+  this.executeCharTest('⌤', ['up-arrowhead between two horizontal bars', 'up-arrowhead between two horizontal bars', 'U arrowhead between two horizontal bars']);
+  this.executeCharTest('⎋', ['broken circle with northwest arrow', 'broken circle with northwest arrow', 'broken circle with northwest arrow']);
+  this.executeCharTest('➔', ['heavy wide headed right-arrow', 'heavy wide headed right-arrow', 'heavy wide headed R arrow']);
+  this.executeCharTest('➘', ['heavy down right-arrow', 'heavy down right-arrow', 'heavy d R arrow']);
+  this.executeCharTest('➙', ['heavy right-arrow', 'heavy right-arrow', 'heavy R arrow']);
+  this.executeCharTest('➚', ['heavy up right-arrow', 'heavy up right-arrow', 'heavy U R arrow']);
+  this.executeCharTest('➛', ['drafting point right-arrow', 'drafting point right-arrow', 'drafting point R arrow']);
+  this.executeCharTest('➜', ['heavy round tipped right-arrow', 'heavy round tipped right-arrow', 'heavy round tipped R arrow']);
+  this.executeCharTest('➝', ['triangle headed right-arrow', 'triangle headed right-arrow', 'triangle headed R arrow']);
+  this.executeCharTest('➞', ['heavy triangle headed right-arrow', 'heavy triangle headed right-arrow', 'heavy triangle headed R arrow']);
+  this.executeCharTest('➟', ['dashed triangle headed right-arrow', 'dashed triangle headed right-arrow', 'dashed triangle headed R arrow']);
+  this.executeCharTest('➠', ['heavy dashed triangle headed right-arrow', 'heavy dashed triangle headed right-arrow', 'heavy dashed triangle headed R arrow']);
+  this.executeCharTest('➡', ['black right-arrow', 'black right-arrow', 'black R arrow']);
+  this.executeCharTest('➢', ['three d top lighted right-arrowhead', 'three d top lighted right-arrowhead', 'three d top lighted R arrowhead']);
+  this.executeCharTest('➣', ['three d bottom lighted right-arrowhead', 'three d bottom lighted right-arrowhead', 'three d bottom lighted R arrowhead']);
+  this.executeCharTest('➤', ['black right-arrowhead', 'black right-arrowhead', 'black R arrowhead']);
+  this.executeCharTest('➥', ['heavy black curved down and right-arrow', 'heavy black curved down and right-arrow', 'heavy black curved d and R arrow']);
+  this.executeCharTest('➦', ['heavy black curved up and right-arrow', 'heavy black curved up and right-arrow', 'heavy black curved U and R arrow']);
+  this.executeCharTest('➧', ['squat black right-arrow', 'squat black right-arrow', 'squat black R arrow']);
+  this.executeCharTest('➨', ['heavy concave pointed black right-arrow', 'heavy concave pointed black right-arrow', 'heavy concave pointed black R arrow']);
+  this.executeCharTest('➩', ['right shaded white right-arrow', 'right shaded white right-arrow', 'right shaded white R arrow']);
+  this.executeCharTest('➪', ['left shaded white right-arrow', 'left shaded white right-arrow', 'left shaded white R arrow']);
+  this.executeCharTest('➫', ['back tilted shadowed white right-arrow', 'back tilted shadowed white right-arrow', 'back tilted shadowed white R arrow']);
+  this.executeCharTest('➬', ['front tilted shadowed white right-arrow', 'front tilted shadowed white right-arrow', 'front tilted shadowed white R arrow']);
+  this.executeCharTest('➭', ['heavy lower right shadowed white right-arrow', 'heavy lower right shadowed white right-arrow', 'heavy lower right shadowed white R arrow']);
+  this.executeCharTest('➮', ['heavy upper right shadowed white right-arrow', 'heavy upper right shadowed white right-arrow', 'heavy upper right shadowed white R arrow']);
+  this.executeCharTest('➯', ['notched lower right shadowed white right-arrow', 'notched lower right shadowed white right-arrow', 'notched lower right shadowed white R arrow']);
+  this.executeCharTest('➱', ['notched upper right shadowed white right-arrow', 'notched upper right shadowed white right-arrow', 'notched upper right shadowed white R arrow']);
+  this.executeCharTest('➲', ['circled heavy white right-arrow', 'circled heavy white right-arrow', 'circled heavy white R arrow']);
+  this.executeCharTest('➳', ['white feathered right-arrow', 'white feathered right-arrow', 'white feathered R arrow']);
+  this.executeCharTest('➴', ['black feathered down right-arrow', 'black feathered down right-arrow', 'black feathered d R arrow']);
+  this.executeCharTest('➵', ['black feathered right-arrow', 'black feathered right-arrow', 'black feathered R arrow']);
+  this.executeCharTest('➶', ['black feathered up right-arrow', 'black feathered up right-arrow', 'black feathered U R arrow']);
+  this.executeCharTest('➷', ['heavy black feathered down right-arrow', 'heavy black feathered down right-arrow', 'heavy black feathered d R arrow']);
+  this.executeCharTest('➸', ['heavy black feathered right-arrow', 'heavy black feathered right-arrow', 'heavy black feathered R arrow']);
+  this.executeCharTest('➹', ['heavy black feathered up right-arrow', 'heavy black feathered up right-arrow', 'heavy black feathered U R arrow']);
+  this.executeCharTest('➺', ['teardrop barbed right-arrow', 'teardrop barbed right-arrow', 'teardrop barbed R arrow']);
+  this.executeCharTest('➻', ['heavy teardrop shanked right-arrow', 'heavy teardrop shanked right-arrow', 'heavy teardrop shanked R arrow']);
+  this.executeCharTest('➼', ['wedge tailed right-arrow', 'wedge tailed right-arrow', 'wedge tailed R arrow']);
+  this.executeCharTest('➽', ['heavy wedge tailed right-arrow', 'heavy wedge tailed right-arrow', 'heavy wedge tailed R arrow']);
+  this.executeCharTest('➾', ['open outlined right-arrow', 'open outlined right-arrow', 'open outlined R arrow']);
+  this.executeCharTest('⟰', ['up quadruple arrow', 'up quadruple arrow', 'U quadruple arrow']);
+  this.executeCharTest('⟱', ['down quadruple arrow', 'down quadruple arrow', 'd quadrule arrow']);
+  this.executeCharTest('⟲', ['anticlockwise gapped circle arrow', 'anticlockwise gapped circle arrow', 'anticlockwise gapped circle arrow']);
+  this.executeCharTest('⟳', ['clockwise gapped circle arrow', 'clockwise gapped circle arrow', 'clockwise gapped circle arrow']);
+  this.executeCharTest('⟴', ['right-arrow with circled plus', 'right-arrow with circled plus', 'R arrow with circled plus']);
+  this.executeCharTest('⟵', ['longue flèche gauche', 'longue flèche gauche', 'longue flèche gauche']);
+  this.executeCharTest('⟶', ['longue flèche droite', 'longue flèche droite', 'longue flèche droite']);
+  this.executeCharTest('⟷', ['longue flèche bilatérale', 'longue flèche bilatérale', 'longue flèche bilatérale']);
+  this.executeCharTest('⟸', ['longue double flèche gauche', 'longue double flèche gauche', 'longue double flèche gauche']);
+  this.executeCharTest('⟹', ['longue double flèche droite', 'longue double flèche droite', 'longue double flèche droite']);
+  this.executeCharTest('⟺', ['longue double flèche bilatérale', 'longue double flèche bilatérale', 'longue double flèche bilatérale']);
+  this.executeCharTest('⟻', ['long left-arrow from bar', 'long left-arrow from bar', 'long L arrow from bar']);
+  this.executeCharTest('⟼', ['longue flèche d\'un taquet droite', 'longue flèche d\'un taquet droite', 'longue flèche d\'un taquet droite']);
+  this.executeCharTest('⟽', ['long left double arrow from bar', 'long left double arrow from bar', 'long l double arrow from bar']);
+  this.executeCharTest('⟾', ['long right double arrow from bar', 'long right double arrow from bar', 'long R double arrow from bar']);
+  this.executeCharTest('⟿', ['longue flèche en tire-bouchon droite', 'longue flèche en tire-bouchon droite', 'longue flèche en tire-bouchon droite']);
+  this.executeCharTest('⤀', ['two headed right-arrow with vertical stroke', 'two headed right-arrow with vertical stroke', 'two headed R arrow with vertical stroke']);
+  this.executeCharTest('⤁', ['two headed right-arrow with double vertical stroke', 'two headed right-arrow with double vertical stroke', 'two headed R arrow with double vertical stroke']);
+  this.executeCharTest('⤂', ['double left-arrow with vertical stroke', 'double left-arrow with vertical stroke', 'double L arrow with vertical stroke']);
+  this.executeCharTest('⤃', ['double right-arrow with vertical stroke', 'double right-arrow with vertical stroke', 'double R arrow with vertical stroke']);
+  this.executeCharTest('⤄', ['double left-right-arrow with vertical stroke', 'double left-right-arrow with vertical stroke', 'double L R arrow with vertical stroke']);
+  this.executeCharTest('⤅', ['flèche à deux têtes d\'un taquet droite', 'flèche à deux têtes d\'un taquet droite', 'flèche à deux têtes d\'un taquet droite']);
+  this.executeCharTest('⤆', ['double left-arrow from bar', 'double left-arrow from bar', 'double L arrow from bar']);
+  this.executeCharTest('⤇', ['double right-arrow from bar', 'double right-arrow from bar', 'double R arrow from bar']);
+  this.executeCharTest('⤈', ['arrow down with horizontal stroke', 'arrow down with horizontal stroke', 'arrow down with horizontal stroke']);
+  this.executeCharTest('⤉', ['up-arrow with horizontal stroke', 'up-arrow with horizontal stroke', 'U arrow with horizontal stroke']);
+  this.executeCharTest('⤊', ['up triple arrow', 'up triple arrow', 'U triple arrow']);
+  this.executeCharTest('⤋', ['down triple arrow', 'down triple arrow', 'd triple arrow']);
+  this.executeCharTest('⤌', ['flèche à deux traits gauche', 'flèche à deux traits gauche', 'flèche à deux traits gauche']);
+  this.executeCharTest('⤍', ['flèche à deux traits droite', 'flèche à deux traits droite', 'flèche à deux traits droite']);
+  this.executeCharTest('⤎', ['flèche à trois traits gauche', 'flèche à trois traits gauche', 'flèche à trois traits gauche']);
+  this.executeCharTest('⤏', ['flèche à trois traits droite', 'flèche à trois traits droite', 'flèche à trois traits droite']);
+  this.executeCharTest('⤐', ['flèche à trois traits et à deux têtes droite', 'flèche à trois traits et à deux têtes droite', 'flèche à trois traits et à deux têtes droite']);
+  this.executeCharTest('⤑', ['flèche à fût pointillé droite', 'flèche à fût pointillé droite', 'flèche à fût pointillé droite']);
+  this.executeCharTest('⤒', ['flèche jusqu\'à taquet vers le haut', 'flèche jusqu\'à taquet vers le haut', 'flèche jusqu\'à taquet vers le haut']);
+  this.executeCharTest('⤓', ['flèche jusqu\'à taquet vers le bas', 'flèche jusqu\'à taquet vers le bas', 'flèche jusqu\'à taquet vers le bas']);
+  this.executeCharTest('⤔', ['right-arrow with tail with vertical stroke', 'right-arrow with tail with vertical stroke', 'R arrow with tail with vertical stroke']);
+  this.executeCharTest('⤕', ['right-arrow with tail with double vertical stroke', 'right-arrow with tail with double vertical stroke', 'R arrow with tail with double vertical stroke']);
+  this.executeCharTest('⤖', ['flèche empennée à deux têtes droite', 'flèche empennée à deux têtes droite', 'flèche empennée à deux têtes droite']);
+  this.executeCharTest('⤗', ['right two headed arrow with tail with vertical stroke', 'right two headed arrow with tail with vertical stroke', 'r two headed arrow with tail with vertical stroke']);
+  this.executeCharTest('⤘', ['right two headed arrow with tail with double vertical stroke', 'right two headed arrow with tail with double vertical stroke', 'r two headed arrow with tail with double vertical stroke']);
+  this.executeCharTest('⤙', ['empenne gauche', 'empenne gauche', 'empenne gauche']);
+  this.executeCharTest('⤚', ['right-arrow tail', 'right-arrow tail', 'R arrow tail']);
+  this.executeCharTest('⤛', ['double empenne gauche', 'double empenne gauche', 'double empenne gauche']);
+  this.executeCharTest('⤜', ['double empenne droite', 'double empenne droite', 'double empenne droite']);
+  this.executeCharTest('⤝', ['flèche vers un losange noir à gauche', 'flèche vers un losange noir à gauche', 'flèche vers un losange noir à gauche']);
+  this.executeCharTest('⤞', ['flèche vers un losange noir à droite', 'flèche vers un losange noir à droite', 'flèche vers un losange noir à droite']);
+  this.executeCharTest('⤟', ['flèche d\'un taquet vers un losange noir à gauche', 'flèche d\'un taquet vers un losange noir à gauche', 'flèche d\'un taquet vers un losange noir à gauche']);
+  this.executeCharTest('⤠', ['flèche d\'un taquet vers un losange noir à droite', 'flèche d\'un taquet vers un losange noir à droite', 'flèche d\'un taquet vers un losange noir à droite']);
+  this.executeCharTest('⤡', ['north west and south east arrow', 'north west and south east arrow', 'north west and south east arrow']);
+  this.executeCharTest('⤢', ['north east and south west arrow', 'north east and south west arrow', 'north east and south west arrow']);
+  this.executeCharTest('⤣', ['flèche nord-ouest à crochet', 'flèche nord-ouest à crochet', 'flèche nord-ouest à crochet']);
+  this.executeCharTest('⤤', ['flèche nord-est à crochet', 'flèche nord-est à crochet', 'flèche nord-est à crochet']);
+  this.executeCharTest('⤥', ['flèche sud-est à crochet', 'flèche sud-est à crochet', 'flèche sud-est à crochet']);
+  this.executeCharTest('⤦', ['flèche sud-ouest à crochet', 'flèche sud-ouest à crochet', 'flèche sud-ouest à crochet']);
+  this.executeCharTest('⤧', ['flèches nord-ouest et nord-est', 'flèches nord-ouest et nord-est', 'flèches nord-ouest et nord-est']);
+  this.executeCharTest('⤨', ['flèches nord-est et sud-est', 'flèches nord-est et sud-est', 'flèches nord-est et sud-est']);
+  this.executeCharTest('⤩', ['flèches sud-est et sud-ouest', 'flèches sud-est et sud-ouest', 'flèches sud-est et sud-ouest']);
+  this.executeCharTest('⤪', ['flèches sud-ouest et nord-ouest', 'flèches sud-ouest et nord-ouest', 'flèches sud-ouest et nord-ouest']);
+  this.executeCharTest('⤭', ['south east arrow crossing north east arrow', 'south east arrow crossing north east arrow', 'south east arrow crossing north east arrow']);
+  this.executeCharTest('⤮', ['north east arrow crossing south east arrow', 'north east arrow crossing south east arrow', 'north east arrow crossing south east arrow']);
+  this.executeCharTest('⤯', ['falling diagonal crossing north east arrow', 'falling diagonal crossing north east arrow', 'falling diagonal crossing north east arrow']);
+  this.executeCharTest('⤰', ['rising diagonal crossing south east arrow', 'rising diagonal crossing south east arrow', 'rising diagonal crossing south east arrow']);
+  this.executeCharTest('⤱', ['north east arrow crossing north west arrow', 'north east arrow crossing north west arrow', 'north east arrow crossing north west arrow']);
+  this.executeCharTest('⤲', ['north west arrow crossing north east arrow', 'north west arrow crossing north east arrow', 'north west arrow crossing north east arrow']);
+  this.executeCharTest('⤳', ['flèche bossue droite', 'flèche bossue droite', 'flèche bossue droite']);
+  this.executeCharTest('⤴', ['arrow pointing right then curving up', 'arrow pointing right then curving up', 'arrow pointing right then curving up']);
+  this.executeCharTest('⤵', ['flèche courbe vers la droite puis le bas', 'flèche courbe vers la droite puis le bas', 'flèche courbe vers la droite puis le bas']);
+  this.executeCharTest('⤶', ['flèche courbe vers le bas puis la gauche', 'flèche courbe vers le bas puis la gauche', 'flèche courbe vers le bas puis la gauche']);
+  this.executeCharTest('⤷', ['flèche courbe vers le bas puis la droite', 'flèche courbe vers le bas puis la droite', 'flèche courbe vers le bas puis la droite']);
+  this.executeCharTest('⤸', ['côté droit d\'arc fléché sens horaire', 'côté droit d\'arc fléché sens horaire', 'côté droit d\'arc fléché sens horaire']);
+  this.executeCharTest('⤹', ['côté gauche d\'arc fléché sens antihoraire', 'côté gauche d\'arc fléché sens antihoraire', 'côté gauche d\'arc fléché sens antihoraire']);
+  this.executeCharTest('⤺', ['top arc anticlockwise arrow', 'top arc anticlockwise arrow', 'top arc anticlockwise arrow']);
+  this.executeCharTest('⤻', ['bottom arc anticlockwise arrow', 'bottom arc anticlockwise arrow', 'bottom arc anticlockwise arrow']);
+  this.executeCharTest('⤼', ['arc fléché sens horaire et signe moins souscrit', 'arc fléché sens horaire et signe moins souscrit', 'arc fléché sens horaire et signe moins souscrit']);
+  this.executeCharTest('⤽', ['arc fléché sens antihoraire et signe plus souscrit', 'arc fléché sens antihoraire et signe plus souscrit', 'arc fléché sens antihoraire et signe plus souscrit']);
+  this.executeCharTest('⤾', ['down right semicircular clockwise arrow', 'down right semicircular clockwise arrow', 'd r semicircular clockwise arrow']);
+  this.executeCharTest('⤿', ['down left semicircular anticlockwise arrow', 'down left semicircular anticlockwise arrow', 'd l semicircular anticlockwise arrow']);
+  this.executeCharTest('⥀', ['anticlockwise closed circle arrow', 'anticlockwise closed circle arrow', 'anticlockwise closed circle arrow']);
+  this.executeCharTest('⥁', ['clockwise closed circle arrow', 'clockwise closed circle arrow', 'clockwise closed circle arrow']);
+  this.executeCharTest('⥂', ['right-arrow above short left-arrow', 'right-arrow above short left-arrow', 'R arrow above short L arrow']);
+  this.executeCharTest('⥃', ['left-arrow above short right-arrow', 'left-arrow above short right-arrow', 'L arrow above short R arrow']);
+  this.executeCharTest('⥄', ['short right-arrow above left-arrow', 'short right-arrow above left-arrow', 'short R arrow above L arrow']);
+  this.executeCharTest('⥅', ['flèche droite surmontant signe moins', 'flèche droite surmontant signe moins', 'flèche droite surmontant signe moins']);
+  this.executeCharTest('⥆', ['left-arrow with plus below', 'left-arrow with plus below', 'L arrow with plus below']);
+  this.executeCharTest('⥇', ['right-arrow through x', 'right-arrow through x', 'R arrow through x']);
+  this.executeCharTest('⥈', ['petit cercle traversé d\'une flèche bilatérale', 'petit cercle traversé d\'une flèche bilatérale', 'petit cercle traversé d\'une flèche bilatérale']);
+  this.executeCharTest('⥉', ['petit cercle surmonté d\'une flèche montante à deux têtes', 'petit cercle surmonté d\'une flèche montante à deux têtes', 'petit cercle surmonté d\'une flèche montante à deux têtes']);
+  this.executeCharTest('⥰', ['flèche en épingle à cheveu droite', 'flèche en épingle à cheveu droite', 'flèche en épingle à cheveu droite']);
+  this.executeCharTest('⥱', ['flèche droite surmontée d\'un égal', 'flèche droite surmontée d\'un égal', 'flèche droite surmontée d\'un égal']);
+  this.executeCharTest('⥲', ['flèche droite surmontée d\'un tilde', 'flèche droite surmontée d\'un tilde', 'flèche droite surmontée d\'un tilde']);
+  this.executeCharTest('⥳', ['tilde surmonté d\'une flèche gauche', 'tilde surmonté d\'une flèche gauche', 'tilde surmonté d\'une flèche gauche']);
+  this.executeCharTest('⥴', ['tilde surmonté d\'une flèche droite', 'tilde surmonté d\'une flèche droite', 'tilde surmonté d\'une flèche droite']);
+  this.executeCharTest('⥵', ['presque égal à surmonté d\'une flèche droite', 'presque égal à surmonté d\'une flèche droite', 'presque égal à surmonté d\'une flèche droite']);
+  this.executeCharTest('⥶', ['inférieur à surmonté d\'une flèche gauche', 'inférieur à surmonté d\'une flèche gauche', 'inférieur à surmonté d\'une flèche gauche']);
+  this.executeCharTest('⥷', ['left-arrow through less than', 'left-arrow through less than', 'L arrow through less than']);
+  this.executeCharTest('⥸', ['flèche droite surmontée d\'un supérieur à', 'flèche droite surmontée d\'un supérieur à', 'flèche droite surmontée d\'un supérieur à']);
+  this.executeCharTest('⥹', ['flèche droite surmontée d\'un sous-ensemble de', 'flèche droite surmontée d\'un sous-ensemble de', 'flèche droite surmontée d\'un sous-ensemble de']);
+  this.executeCharTest('⥺', ['left-arrow through subset', 'left-arrow through subset', 'L arrow through subset']);
+  this.executeCharTest('⥻', ['flèche gauche surmontée d\'un sur-ensemble de', 'flèche gauche surmontée d\'un sur-ensemble de', 'flèche gauche surmontée d\'un sur-ensemble de']);
+  this.executeCharTest('⦳', ['ensemble vide flèche droite en chef', 'ensemble vide flèche droite en chef', 'ensemble vide flèche droite en chef']);
+  this.executeCharTest('⦴', ['ensemble vide flèche gauche en chef', 'ensemble vide flèche gauche en chef', 'ensemble vide flèche gauche en chef']);
+  this.executeCharTest('⦽', ['up-arrow through circle', 'up-arrow through circle', 'U arrow through circle']);
+  this.executeCharTest('⧪', ['black diamond with down-arrow', 'black diamond with down-arrow', 'black diamond with D arrow']);
+  this.executeCharTest('⧬', ['white circle with down-arrow', 'white circle with down-arrow', 'white circle with D arrow']);
+  this.executeCharTest('⧭', ['black circle with down-arrow', 'black circle with down-arrow', 'black circle with D arrow']);
+  this.executeCharTest('⨗', ['intégrale à crosse fléchée gauche', 'intégrale à crosse fléchée gauche', 'intégrale à crosse fléchée gauche']);
+  this.executeCharTest('⬀', ['north east white arrow', 'north east white arrow', 'north east white arrow']);
+  this.executeCharTest('⬁', ['north west white arrow', 'north west white arrow', 'north west white arrow']);
+  this.executeCharTest('⬂', ['south east white arrow', 'south east white arrow', 'south east white arrow']);
+  this.executeCharTest('⬃', ['south west white arrow', 'south west white arrow', 'south west white arrow']);
+  this.executeCharTest('⬄', ['left right white arrow', 'left right white arrow', 'L R white arrow']);
+  this.executeCharTest('⬅', ['left black arrow', 'left black arrow', 'L black arrow']);
+  this.executeCharTest('⬆', ['up black arrow', 'up black arrow', 'U black arrow']);
+  this.executeCharTest('⬇', ['down black arrow', 'down black arrow', 'D black arrow']);
+  this.executeCharTest('⬈', ['north east black arrow', 'north east black arrow', 'north east black arrow']);
+  this.executeCharTest('⬉', ['north west black arrow', 'north west black arrow', 'north west black arrow']);
+  this.executeCharTest('⬊', ['south east black arrow', 'south east black arrow', 'south east black arrow']);
+  this.executeCharTest('⬋', ['south west black arrow', 'south west black arrow', 'south west black arrow']);
+  this.executeCharTest('⬌', ['left right black arrow', 'left right black arrow', 'L R black arrow']);
+  this.executeCharTest('⬍', ['up down black arrow', 'up down black arrow', 'U D black arrow']);
+  this.executeCharTest('⬎', ['right-arrow with tip down', 'right-arrow with tip down', 'R arrow with tip down']);
+  this.executeCharTest('⬏', ['right-arrow with tip up', 'right-arrow with tip up', 'R arrow with tip up']);
+  this.executeCharTest('⬐', ['left-arrow with tip down', 'left-arrow with tip down', 'L arrow with tip down']);
+  this.executeCharTest('⬑', ['left-arrow with tip up', 'left-arrow with tip up', 'L arrow with tip up']);
+  this.executeCharTest('⬰', ['left-arrow with small circle', 'left-arrow with small circle', 'L arrow with small circle']);
+  this.executeCharTest('⬱', ['three left-arrows', 'three left-arrows', 'three L arrows']);
+  this.executeCharTest('⬲', ['left-arrow with circled plus', 'left-arrow with circled plus', 'L arrow with circled plus']);
+  this.executeCharTest('⬳', ['long left squiggle arrow', 'long left squiggle arrow', 'long l squiggle arrow']);
+  this.executeCharTest('⬴', ['left two headed arrow with vertical stroke', 'left two headed arrow with vertical stroke', 'l two headed arrow with vertical stroke']);
+  this.executeCharTest('⬵', ['left two headed arrow with double vertical stroke', 'left two headed arrow with double vertical stroke', 'l two headed arrow with double vertical stroke']);
+  this.executeCharTest('⬶', ['left two headed arrow from bar', 'left two headed arrow from bar', 'l two headed arrow from bar']);
+  this.executeCharTest('⬷', ['left two headed triple dash arrow', 'left two headed triple dash arrow', 'l two headed triple dash arrow']);
+  this.executeCharTest('⬸', ['left-arrow with dotted stem', 'left-arrow with dotted stem', 'L arrow with dotted stem']);
+  this.executeCharTest('⬹', ['left-arrow with tail with vertical stroke', 'left-arrow with tail with vertical stroke', 'L arrow with tail with vertical stroke']);
+  this.executeCharTest('⬺', ['left-arrow with tail with double vertical stroke', 'left-arrow with tail with double vertical stroke', 'L arrow with tail with double vertical stroke']);
+  this.executeCharTest('⬻', ['left two headed arrow with tail', 'left two headed arrow with tail', 'l two headed arrow with tail']);
+  this.executeCharTest('⬼', ['left two headed arrow with tail with vertical stroke', 'left two headed arrow with tail with vertical stroke', 'l two headed arrow with tail with vertical stroke']);
+  this.executeCharTest('⬽', ['left two headed arrow with tail with double vertical stroke', 'left two headed arrow with tail with double vertical stroke', 'l two headed arrow with tail with double vertical stroke']);
+  this.executeCharTest('⬾', ['left-arrow through x', 'left-arrow through x', 'L arrow through x']);
+  this.executeCharTest('⬿', ['wave arrow pointing directly left', 'wave arrow pointing directly left', 'wave arrow pointing directly left']);
+  this.executeCharTest('⭀', ['equals sign above left-arrow', 'equals sign above left-arrow', 'equals sign above L arrow']);
+  this.executeCharTest('⭁', ['reverse tilde operator above left-arrow', 'reverse tilde operator above left-arrow', 'reverse tilde operator above L arrow']);
+  this.executeCharTest('⭂', ['left-arrow above reverse almost equals', 'left-arrow above reverse almost equals', 'L arrow above reverse almost equals']);
+  this.executeCharTest('⭃', ['right-arrow through greater than', 'right-arrow through greater than', 'R arrow through greater than']);
+  this.executeCharTest('⭄', ['right-arrow through superset', 'right-arrow through superset', 'R arrow through superset']);
+  this.executeCharTest('⭅', ['left quadruple arrow', 'left quadruple arrow', 'l quadrule arrow']);
+  this.executeCharTest('⭆', ['right quadruple arrow', 'right quadruple arrow', 'r quadrule arrow']);
+  this.executeCharTest('⭇', ['reverse tilde operator above right-arrow', 'reverse tilde operator above right-arrow', 'reverse tilde operator above R arrow']);
+  this.executeCharTest('⭈', ['right-arrow above reverse almost equals', 'right-arrow above reverse almost equals', 'R arrow above reverse almost equals']);
+  this.executeCharTest('⭉', ['tilde operator above left-arrow', 'tilde operator above left-arrow', 'tilde operator above L arrow']);
+  this.executeCharTest('⭊', ['left-arrow above almost equals', 'left-arrow above almost equals', 'L arrow above almost equals']);
+  this.executeCharTest('⭋', ['left-arrow above reverse tilde operator', 'left-arrow above reverse tilde operator', 'L arrow above reverse tilde operator']);
+  this.executeCharTest('⭌', ['right-arrow above reverse tilde operator', 'right-arrow above reverse tilde operator', 'R arrow above reverse tilde operator']);
+  this.executeCharTest('￩', ['halfwidth left-arrow', 'halfwidth left-arrow', 'halfwidth L arrow']);
+  this.executeCharTest('￪', ['halfwidth up-arrow', 'halfwidth up-arrow', 'halfwidth U arrow']);
+  this.executeCharTest('￫', ['halfwidth right-arrow', 'halfwidth right-arrow', 'halfwidth R arrow']);
+  this.executeCharTest('￬', ['halfwidth down-arrow', 'halfwidth down-arrow', 'halfwidth D arrow']);
+  this.executeCharTest('ℓ', ['l minuscule en script', 'l minuscule en script', 'l minuscule en script']);
+  this.executeCharTest('℘', ['fonction elliptique de weierstrass', 'fonction elliptique de weierstrass', 'fonction elliptique de weierstrass']);
+  this.executeCharTest('ℼ', ['double struck pi', 'double struck pi', 'double struck pi']);
+  this.executeCharTest('ℽ', ['double struck gamma', 'double struck gamma', 'double struck gamma']);
+  this.executeCharTest('ℾ', ['double struck upper Gamma', 'double struck upper Gamma', 'double struck upper Gamma']);
+  this.executeCharTest('ℿ', ['double struck upper Pi', 'double struck upper Pi', 'double struck upper Pi']);
+  this.executeCharTest('⅀', ['double struck n ary summation', 'double struck n ary summation', 'double struck n ary summation']);
+  this.executeCharTest('ⅅ', ['D majuscule', 'D majuscule', 'D majuscule']);
+  this.executeCharTest('ⅆ', ['d minuscule ajouré en italique', 'd minuscule ajouré en italique', 'd minuscule ajouré en italique']);
+  this.executeCharTest('ⅇ', ['e minuscule ajouré en italique', 'e minuscule ajouré en italique', 'e minuscule ajouré en italique']);
+  this.executeCharTest('ⅈ', ['i minuscule ajouré en italique', 'i minuscule ajouré en italique', 'i minuscule ajouré en italique']);
+  this.executeCharTest('ⅉ', ['double struck italic j', 'double struck italic j', 'double struck italic j']);
+  this.executeCharTest('𝚤', ['dotless i', 'dotless i', 'dotless i']);
+  this.executeCharTest('𝚥', ['dotless j', 'dotless j', 'dotless j']);
+  this.executeCharTest('(', ['parenthèse gauche', 'parenthèse gauche', 'parenthèse gauche']);
+  this.executeCharTest(')', ['parenthèse droite', 'parenthèse droite', 'parenthèse droite']);
+  this.executeCharTest('[', ['crochet gauche', 'crochet gauche', 'crochet gauche']);
+  this.executeCharTest(']', ['crochet droit', 'crochet droit', 'crochet droit']);
+  this.executeCharTest('{', ['accolade gauche', 'accolade gauche', 'accolade gauche']);
+  this.executeCharTest('}', ['accolade droite', 'accolade droite', 'accolade droite']);
+  this.executeCharTest('⁅', ['left-bracket with quill', 'left-brack with quill', 'L brack with quill']);
+  this.executeCharTest('⁆', ['right-bracket with quill', 'right-brack with quill', 'R brack with quill']);
+  this.executeCharTest('⌈', ['plafond à gauche', 'plafond à gauche', 'plafond à gauche']);
+  this.executeCharTest('⌉', ['plafond à droite', 'plafond à droite', 'plafond à droite']);
+  this.executeCharTest('⌊', ['plancher à gauche', 'plancher à gauche', 'plancher à gauche']);
+  this.executeCharTest('⌋', ['plancher à droite', 'plancher à droite', 'plancher à droite']);
+  this.executeCharTest('⌌', ['repère sud-est', 'repère sud-est', 'repère sud-est']);
+  this.executeCharTest('⌍', ['repère sud-ouest', 'repère sud-ouest', 'repère sud-ouest']);
+  this.executeCharTest('⌎', ['repère nord-est', 'repère nord-est', 'repère nord-est']);
+  this.executeCharTest('⌏', ['repère nord-ouest', 'repère nord-ouest', 'repère nord-ouest']);
+  this.executeCharTest('⌜', ['coin nord-ouest', 'coin nord-ouest', 'coin nord-ouest']);
+  this.executeCharTest('⌝', ['coin nord-est', 'coin nord-est', 'coin nord-est']);
+  this.executeCharTest('⌞', ['coin sud-ouest', 'coin sud-ouest', 'coin sud-ouest']);
+  this.executeCharTest('⌟', ['coin sud-est', 'coin sud-est', 'coin sud-est']);
+  this.executeCharTest('⌠', ['moitié supérieure d\'intégrale', 'moitié supérieure d\'intégrale', 'moitié supérieure d\'intégrale']);
+  this.executeCharTest('⌡', ['moitié inférieure d\'intégrale', 'moitié inférieure d\'intégrale', 'moitié inférieure d\'intégrale']);
+  this.executeCharTest('〈', ['chevron gauche', 'chevron gauche', 'chevron gauche']);
+  this.executeCharTest('〉', ['chevron droite', 'chevron droite', 'chevron droite']);
+  this.executeCharTest('⎛', ['left-parenthesis upper hook', 'left-p\'ren upper hook', 'L p\'ren upper hook']);
+  this.executeCharTest('⎜', ['left-parenthesis extension', 'left-p\'ren extension', 'L p\'ren extension']);
+  this.executeCharTest('⎝', ['left-parenthesis lower hook', 'left-p\'ren lower hook', 'L p\'ren lower hook']);
+  this.executeCharTest('⎞', ['right-parenthesis upper hook', 'right-p\'ren upper hook', 'R p\'ren upper hook']);
+  this.executeCharTest('⎟', ['right-parenthesis extension', 'right-p\'ren extension', 'R p\'ren extension']);
+  this.executeCharTest('⎠', ['right-parenthesis lower hook', 'right-p\'ren lower hook', 'R p\'ren lower hook']);
+  this.executeCharTest('⎡', ['left-bracket upper corner', 'left-brack upper corner', 'L brack upper corner']);
+  this.executeCharTest('⎢', ['left-bracket extension', 'left-brack extension', 'L brack extension']);
+  this.executeCharTest('⎣', ['left-bracket lower corner', 'left-brack lower corner', 'L brack lower corner']);
+  this.executeCharTest('⎤', ['right-bracket upper corner', 'right-brack upper corner', 'R brack upper corner']);
+  this.executeCharTest('⎥', ['right-bracket extension', 'right-brack extension', 'R brack extension']);
+  this.executeCharTest('⎦', ['right-bracket lower corner', 'right-brack lower corner', 'R brack lower corner']);
+  this.executeCharTest('⎧', ['left-brace upper hook', 'left-brace upper hook', 'L brace upper hook']);
+  this.executeCharTest('⎨', ['left-brace middle piece', 'left-brace middle piece', 'L brace middle piece']);
+  this.executeCharTest('⎩', ['left-brace lower hook', 'left-brace lower hook', 'L brace lower hook']);
+  this.executeCharTest('⎪', ['brace extension', 'brace extension', 'brace extension']);
+  this.executeCharTest('⎫', ['right-brace upper hook', 'right-brace upper hook', 'R brace upper hook']);
+  this.executeCharTest('⎬', ['right-brace middle piece', 'right-brace middle piece', 'R brace middle piece']);
+  this.executeCharTest('⎭', ['right-brace lower hook', 'right-brace lower hook', 'R brace lower hook']);
+  this.executeCharTest('⎮', ['integral extension', 'integral extension', 'integral extension']);
+  this.executeCharTest('⎯', ['horizontal line extension', 'horizontal line extension', 'horizontal line extension']);
+  this.executeCharTest('⎰', ['moitié supérieure gauche ou inférieure droite d\'accolade', 'moitié supérieure gauche ou inférieure droite d\'accolade', 'moitié supérieure gauche ou inférieure droite d\'accolade']);
+  this.executeCharTest('⎱', ['moitié supérieure droite ou inférieure gauche d\'accolade', 'moitié supérieure droite ou inférieure gauche d\'accolade', 'moitié supérieure droite ou inférieure gauche d\'accolade']);
+  this.executeCharTest('⎲', ['summation top', 'summation top', 'summation top']);
+  this.executeCharTest('⎳', ['summation bottom', 'summation bottom', 'summation bottom']);
+  this.executeCharTest('⎴', ['crochet vertical supérieur', 'crochet vertical supérieur', 'crochet vertical supérieur']);
+  this.executeCharTest('⎵', ['crochet vertical inférieur', 'crochet vertical inférieur', 'crochet vertical inférieur']);
+  this.executeCharTest('⎶', ['bottom-bracket over top-bracket', 'bottom-brack over top-brack', 'B brack over T brack']);
+  this.executeCharTest('⎷', ['radical symbol bottom', 'radical symbol bottom', 'radical symbol bottom']);
+  this.executeCharTest('⎸', ['left vertical box line', 'left vertical box line', 'left vertical box line']);
+  this.executeCharTest('⎹', ['right vertical box line', 'right vertical box line', 'right vertical box line']);
+  this.executeCharTest('⏜', ['parenthèse supérieure', 'parenthèse supérieure', 'parenthèse supérieure']);
+  this.executeCharTest('⏝', ['parenthèse inférieure', 'parenthèse inférieure', 'parenthèse inférieure']);
+  this.executeCharTest('⏞', ['accolade supérieure', 'accolade supérieure', 'accolade supérieure']);
+  this.executeCharTest('⏟', ['accolade inférieure', 'accolade inférieure', 'accolade inférieure']);
+  this.executeCharTest('⏠', ['crochet en écaille supérieur', 'crochet en écaille supérieur', 'crochet en écaille supérieur']);
+  this.executeCharTest('⏡', ['crochet en écaille inférieur', 'crochet en écaille inférieur', 'crochet en écaille inférieur']);
+  this.executeCharTest('❨', ['medium left-parenthesis ornament', 'medium left-p\'ren ornament', 'medium L p\'ren ornament']);
+  this.executeCharTest('❩', ['medium right-parenthesis ornament', 'medium right-p\'ren ornament', 'medium R p\'ren ornament']);
+  this.executeCharTest('❪', ['medium flattened left-parenthesis ornament', 'medium flattened left-p\'ren ornament', 'medium flattened L p\'ren ornament']);
+  this.executeCharTest('❫', ['medium flattened right-parenthesis ornament', 'medium flattened right-p\'ren ornament', 'medium flattened R p\'ren ornament']);
+  this.executeCharTest('❬', ['medium left pointing angle ornament', 'medium left pointing angle ornament', 'medium left pointing angle ornament']);
+  this.executeCharTest('❭', ['medium right pointing angle ornament', 'medium right pointing angle ornament', 'medium right pointing angle ornament']);
+  this.executeCharTest('❮', ['heavy left pointing angle quotation mark ornament', 'heavy left pointing angle quotation mark ornament', 'heavy left pointing angle quotation mark ornament']);
+  this.executeCharTest('❯', ['heavy right pointing angle quotation mark ornament', 'heavy right pointing angle quotation mark ornament', 'heavy right pointing angle quotation mark ornament']);
+  this.executeCharTest('❰', ['heavy left pointing angle ornament', 'heavy left pointing angle ornament', 'heavy left pointing angle ornament']);
+  this.executeCharTest('❱', ['heavy right pointing angle ornament', 'heavy right pointing angle ornament', 'heavy right pointing angle ornament']);
+  this.executeCharTest('❲', ['light left tortoise shell bracket ornament', 'light left tortoise shell bracket ornament', 'light left tortoise shell bracket ornament']);
+  this.executeCharTest('❳', ['light right tortoise shell bracket ornament', 'light right tortoise shell bracket ornament', 'light right tortoise shell bracket ornament']);
+  this.executeCharTest('❴', ['medium left-brace ornament', 'medium left-brace ornament', 'medium L brace ornament']);
+  this.executeCharTest('❵', ['medium right-brace ornament', 'medium right-brace ornament', 'medium R brace ornament']);
+  this.executeCharTest('⟅', ['délimiteur de sac en s gauche', 'délimiteur de sac en s gauche', 'délimiteur de sac en s gauche']);
+  this.executeCharTest('⟆', ['délimiteur de sac en s droite', 'délimiteur de sac en s droite', 'délimiteur de sac en s droite']);
+  this.executeCharTest('⟦', ['crochet blanc gauche', 'crochet blanc gauche', 'crochet blanc gauche']);
+  this.executeCharTest('⟧', ['crochet blanc droit', 'crochet blanc droit', 'crochet blanc droit']);
+  this.executeCharTest('⟨', ['chevron mathématique gauche', 'chevron mathématique gauche', 'chevron mathématique gauche']);
+  this.executeCharTest('⟩', ['chevron droit', 'chevron droit', 'chevron droit']);
+  this.executeCharTest('⟪', ['double chevron gauche', 'double chevron gauche', 'double chevron gauche']);
+  this.executeCharTest('⟫', ['double chevron droit', 'double chevron droit', 'double chevron droit']);
+  this.executeCharTest('⟬', ['crochet gauche en écaille blanche', 'crochet gauche en écaille blanche', 'crochet gauche en écaille blanche']);
+  this.executeCharTest('⟭', ['crochet droit en écaille blanche', 'crochet droit en écaille blanche', 'crochet droit en écaille blanche']);
+  this.executeCharTest('⟮', ['parenthèse gauche aplatie', 'parenthèse gauche aplatie', 'parenthèse gauche aplatie']);
+  this.executeCharTest('⟯', ['parenthèse droite aplatie', 'parenthèse droite aplatie', 'parenthèse droite aplatie']);
+  this.executeCharTest('⦃', ['left white brace', 'left white brace', 'left white brace']);
+  this.executeCharTest('⦄', ['right white brace', 'right white brace', 'right white brace']);
+  this.executeCharTest('⦅', ['parenthèse gauche ajourée', 'parenthèse gauche ajourée', 'parenthèse gauche ajourée']);
+  this.executeCharTest('⦆', ['parenthèse droite ajourée', 'parenthèse droite ajourée', 'parenthèse droite ajourée']);
+  this.executeCharTest('⦇', ['z notation left image bracket', 'z notation left image bracket', 'z notation left image bracket']);
+  this.executeCharTest('⦈', ['z notation right image bracket', 'z notation right image bracket', 'z notation right image bracket']);
+  this.executeCharTest('⦉', ['z notation left binding bracket', 'z notation left binding bracket', 'z notation left binding bracket']);
+  this.executeCharTest('⦊', ['z notation right binding bracket', 'z notation right binding bracket', 'z notation right binding bracket']);
+  this.executeCharTest('⦋', ['crochet gauche avec barre souscrite', 'crochet gauche avec barre souscrite', 'crochet gauche avec barre souscrite']);
+  this.executeCharTest('⦌', ['crochet droit avec barre souscrite', 'crochet droit avec barre souscrite', 'crochet droit avec barre souscrite']);
+  this.executeCharTest('⦍', ['crochet gauche avec trait dans le coin supérieur', 'crochet gauche avec trait dans le coin supérieur', 'crochet gauche avec trait dans le coin supérieur']);
+  this.executeCharTest('⦎', ['crochet droit avec trait dans le coin inférieur', 'crochet droit avec trait dans le coin inférieur', 'crochet droit avec trait dans le coin inférieur']);
+  this.executeCharTest('⦏', ['crochet gauche avec trait dans le coin inférieur', 'crochet gauche avec trait dans le coin inférieur', 'crochet gauche avec trait dans le coin inférieur']);
+  this.executeCharTest('⦐', ['crochet droit avec trait dans le coin supérieur', 'crochet droit avec trait dans le coin supérieur', 'crochet droit avec trait dans le coin supérieur']);
+  this.executeCharTest('⦑', ['chevron gauche pointé', 'chevron gauche pointé', 'chevron gauche pointé']);
+  this.executeCharTest('⦒', ['chevron droit pointé', 'chevron droit pointé', 'chevron droit pointé']);
+  this.executeCharTest('⦓', ['parenthèse arc gauche et inférieur à', 'parenthèse arc gauche et inférieur à', 'parenthèse arc gauche et inférieur à']);
+  this.executeCharTest('⦔', ['parenthèse arc droite et supérieur à', 'parenthèse arc droite et supérieur à', 'parenthèse arc droite et supérieur à']);
+  this.executeCharTest('⦕', ['parenthèse double arc droite et supérieur à', 'parenthèse double arc droite et supérieur à', 'parenthèse double arc droite et supérieur à']);
+  this.executeCharTest('⦖', ['parenthèse double arc gauche et inférieur à', 'parenthèse double arc gauche et inférieur à', 'parenthèse double arc gauche et inférieur à']);
+  this.executeCharTest('⦗', ['left black tortoise shell bracket', 'left black tortoise shell bracket', 'left black tortoise shell bracket']);
+  this.executeCharTest('⦘', ['right black tortoise shell bracket', 'right black tortoise shell bracket', 'right black tortoise shell bracket']);
+  this.executeCharTest('⧘', ['left wiggly fence', 'left wiggly fence', 'left wiggly fence']);
+  this.executeCharTest('⧙', ['right wiggly fence', 'right wiggly fence', 'right wiggly fence']);
+  this.executeCharTest('⧚', ['double clôture dentelée gauche', 'double clôture dentelée gauche', 'double clôture dentelée gauche']);
+  this.executeCharTest('⧛', ['right double wiggly fence', 'right double wiggly fence', 'right double wiggly fence']);
+  this.executeCharTest('⧼', ['left pointing curved angle', 'left pointing curved angle', 'left pointing curved angle']);
+  this.executeCharTest('⧽', ['right pointing curved angle', 'right pointing curved angle', 'right pointing curved angle']);
+  this.executeCharTest('⸢', ['top half left-bracket', 'top half left-brack', 'top half L brack']);
+  this.executeCharTest('⸣', ['top half right-bracket', 'top half right-brack', 'top half R brack']);
+  this.executeCharTest('⸤', ['bottom half left-bracket', 'bottom half left-brack', 'bottom half L brack']);
+  this.executeCharTest('⸥', ['bottom half right-bracket', 'bottom half right-brack', 'bottom half R brack']);
+  this.executeCharTest('⸦', ['left sideways U bracket', 'left sideways U bracket', 'left sideways U bracket']);
+  this.executeCharTest('⸧', ['right sideways U bracket', 'right sideways U bracket', 'right sideways U bracket']);
+  this.executeCharTest('⸨', ['double left-parenthesis', 'double left-p\'ren', 'double L p\'ren']);
+  this.executeCharTest('⸩', ['double right-parenthesis', 'double right-p\'ren', 'double R p\'ren']);
+  this.executeCharTest('〈', ['left-angle', 'left-angle', 'l angle']);
+  this.executeCharTest('〉', ['right-angle', 'right-angle', 'r angle']);
+  this.executeCharTest('《', ['double chevron gauche', 'double chevron gauche', 'double chevron gauche']);
+  this.executeCharTest('》', ['double chevron droit', 'double chevron droit', 'double chevron droit']);
+  this.executeCharTest('「', ['left corner bracket', 'left corner bracket', 'left corner bracket']);
+  this.executeCharTest('」', ['right corner bracket', 'right corner bracket', 'right corner bracket']);
+  this.executeCharTest('『', ['left white corner bracket', 'left white corner bracket', 'left white corner bracket']);
+  this.executeCharTest('』', ['right white corner bracket', 'right white corner bracket', 'right white corner bracket']);
+  this.executeCharTest('【', ['left black lenticular bracket', 'left black lenticular bracket', 'left black lenticular bracket']);
+  this.executeCharTest('】', ['right black lenticular bracket', 'right black lenticular bracket', 'right black lenticular bracket']);
+  this.executeCharTest('〔', ['crochet gauche en écaille', 'crochet gauche en écaille', 'crochet gauche en écaille']);
+  this.executeCharTest('〕', ['crochet droit en écaille', 'crochet droit en écaille', 'crochet droit en écaille']);
+  this.executeCharTest('〖', ['left white lenticular bracket', 'left white lenticular bracket', 'left white lenticular bracket']);
+  this.executeCharTest('〗', ['right white lenticular bracket', 'right white lenticular bracket', 'right white lenticular bracket']);
+  this.executeCharTest('〘', ['left white tortoise shell bracket', 'left white tortoise shell bracket', 'left white tortoise shell bracket']);
+  this.executeCharTest('〙', ['right white tortoise shell bracket', 'right white tortoise shell bracket', 'right white tortoise shell bracket']);
+  this.executeCharTest('〚', ['crochet blanc gauche', 'crochet blanc gauche', 'crochet blanc gauche']);
+  this.executeCharTest('〛', ['crochet blanc droit', 'crochet blanc droit', 'crochet blanc droit']);
+  this.executeCharTest('〝', ['reversed double prime quotation mark', 'reversed double prime quotation mark', 'reversed double prime quotation mark']);
+  this.executeCharTest('〞', ['guillemet double prime', 'guillemet double prime', 'guillemet double prime']);
+  this.executeCharTest('〟', ['low double prime quotation mark', 'low double prime quotation mark', 'low double prime quotation mark']);
+  this.executeCharTest('﴾', ['ornate left-parenthesis', 'ornate left-p\'ren', 'ornate L p\'ren']);
+  this.executeCharTest('﴿', ['ornate right-parenthesis', 'ornate right-p\'ren', 'ornate R p\'ren']);
+  this.executeCharTest('︗', ['presentation form for vertical left white lenticular bracket', 'presentation form for vertical left white lenticular bracket', 'presentation form for vertical left white lenticular bracket']);
+  this.executeCharTest('︘', ['presentation form for vertical right white lenticular brakcet', 'presentation form for vertical right white lenticular brakcet', 'presentation form for vertical right white lenticular brakcet']);
+  this.executeCharTest('︵', ['forme de présentation de parenthèse gauche verticale', 'forme de présentation de parenthèse gauche verticale', 'forme de présentation de parenthèse gauche verticale']);
+  this.executeCharTest('︶', ['forme de présentation de parenthèse droite verticale', 'forme de présentation de parenthèse droite verticale', 'forme de présentation de parenthèse droite verticale']);
+  this.executeCharTest('︷', ['forme de présentation d\'accolade gauche verticale', 'forme de présentation d\'accolade gauche verticale', 'forme de présentation d\'accolade gauche verticale']);
+  this.executeCharTest('︸', ['forme de présentation d\'accolade droite verticale', 'forme de présentation d\'accolade droite verticale', 'forme de présentation d\'accolade droite verticale']);
+  this.executeCharTest('︹', ['presentation form for vertical left tortoise shell bracket', 'presentation form for vertical left tortoise shell bracket', 'presentation form for vertical left tortoise shell bracket']);
+  this.executeCharTest('︺', ['presentation form for vertical right tortoise shell bracket', 'presentation form for vertical right tortoise shell bracket', 'presentation form for vertical right tortoise shell bracket']);
+  this.executeCharTest('︻', ['presentation form for vertical left black lenticular bracket', 'presentation form for vertical left black lenticular bracket', 'presentation form for vertical left black lenticular bracket']);
+  this.executeCharTest('︼', ['presentation form for vertical right black lenticular bracket', 'presentation form for vertical right black lenticular bracket', 'presentation form for vertical right black lenticular bracket']);
+  this.executeCharTest('︽', ['presentation form for vertical left double angle', 'presentation form for vertical left double angle', 'presentation form for vertical left double angle']);
+  this.executeCharTest('︾', ['presentation form for vertical right double angle', 'presentation form for vertical right double angle', 'presentation form for vertical right double angle']);
+  this.executeCharTest('︿', ['over angle bracket', 'over angle bracket', 'over angle bracket']);
+  this.executeCharTest('﹀', ['under angle bracket', 'under angle bracket', 'under angle bracket']);
+  this.executeCharTest('﹁', ['presentation form for vertical left corner bracket', 'presentation form for vertical left corner bracket', 'presentation form for vertical left corner bracket']);
+  this.executeCharTest('﹂', ['presentation form for vertical right corner bracket', 'presentation form for vertical right corner bracket', 'presentation form for vertical right corner bracket']);
+  this.executeCharTest('﹃', ['presentation form for vertical left white corner bracket', 'presentation form for vertical left white corner bracket', 'presentation form for vertical left white corner bracket']);
+  this.executeCharTest('﹄', ['presentation form for vertical right white corner bracket', 'presentation form for vertical right white corner bracket', 'presentation form for vertical right white corner bracket']);
+  this.executeCharTest('﹇', ['presentation form for vertical left-bracket', 'presentation form for vertical left-brack', 'presentation form for vertical L brack']);
+  this.executeCharTest('﹈', ['presentation form for vertical right-bracket', 'presentation form for vertical right-brack', 'presentation form for vertical r brack']);
+  this.executeCharTest('﹙', ['small left-parenthesis', 'small left-p\'ren', 'small L p\'ren']);
+  this.executeCharTest('﹚', ['small right-parenthesis', 'small right-p\'ren', 'small R p\'ren']);
+  this.executeCharTest('﹛', ['small left-brace', 'small left-brace', 'small L brace']);
+  this.executeCharTest('﹜', ['small right-brace', 'small right-brace', 'small r brace']);
+  this.executeCharTest('﹝', ['small left tortoise shell bracket', 'small left tortoise shell bracket', 'small left tortoise shell bracket']);
+  this.executeCharTest('﹞', ['small right tortoise shell bracket', 'small right tortoise shell bracket', 'small right tortoise shell bracket']);
+  this.executeCharTest('（', ['fullwidth left-parenthesis', 'fullwidth left-p\'ren', 'fullwidth L p\'ren']);
+  this.executeCharTest('）', ['fullwidth right-parenthesis', 'fullwidth right-p\'ren', 'fullwidth R p\'ren']);
+  this.executeCharTest('［', ['fullwidth left-bracket', 'fullwidth left-brack', 'fullwidth L brack']);
+  this.executeCharTest('］', ['fullwidth right-bracket', 'fullwidth right-brack', 'fullwidth r brack']);
+  this.executeCharTest('｛', ['fullwidth left-brace', 'fullwidth left-brace', 'fullwidth L brace']);
+  this.executeCharTest('｝', ['fullwidth right-brace', 'fullwidth right-brace', 'fullwidth r brace']);
+  this.executeCharTest('｟', ['fullwidth white left-parenthesis', 'fullwidth white left-p\'ren', 'fullwidth white L p\'ren']);
+  this.executeCharTest('｠', ['fullwidth white right-parenthesis', 'fullwidth white right-p\'ren', 'fullwidth white R p\'ren']);
+  this.executeCharTest('｢', ['halfwidth left corner bracket', 'halfwidth left corner bracket', 'halfwidth left corner bracket']);
+  this.executeCharTest('｣', ['halfwidth right corner bracket', 'halfwidth right corner bracket', 'halfwidth right corner bracket']);
+  this.executeCharTest('²', ['exposant deux', 'exposant deux', 'exposant deux']);
+  this.executeCharTest('³', ['exposant trois', 'exposant trois', 'exposant trois']);
+  this.executeCharTest('¹', ['exposant un', 'exposant un', 'exposant un']);
+  this.executeCharTest('¼', ['un quart', 'un quart', 'un quart']);
+  this.executeCharTest('½', ['un demi', 'un demi', 'un demi']);
+  this.executeCharTest('¾', ['trois quarts', 'trois quarts', 'trois quarts']);
+  this.executeCharTest('⁰', ['super zero', 'super zero', 'super zero']);
+  this.executeCharTest('⁴', ['super four', 'super four', 'super four']);
+  this.executeCharTest('⁵', ['super five', 'super five', 'super five']);
+  this.executeCharTest('⁶', ['super six', 'super six', 'super six']);
+  this.executeCharTest('⁷', ['super seven', 'super seven', 'super seven']);
+  this.executeCharTest('⁸', ['super eight', 'super eight', 'super eight']);
+  this.executeCharTest('⁹', ['super nine', 'super nine', 'super nine']);
+  this.executeCharTest('₀', ['sub zero', 'sub zero', 'sub zero']);
+  this.executeCharTest('₁', ['sub one', 'sub one', 'sub one']);
+  this.executeCharTest('₂', ['sub two', 'sub two', 'sub two']);
+  this.executeCharTest('₃', ['sub three', 'sub three', 'sub three']);
+  this.executeCharTest('₄', ['sub four', 'sub four', 'sub four']);
+  this.executeCharTest('₅', ['sub five', 'sub five', 'sub five']);
+  this.executeCharTest('₆', ['sub six', 'sub six', 'sub six']);
+  this.executeCharTest('₇', ['sub seven', 'sub seven', 'sub seven']);
+  this.executeCharTest('₈', ['sub eight', 'sub eight', 'sub eight']);
+  this.executeCharTest('₉', ['sub nine', 'sub nine', 'sub nine']);
+  this.executeCharTest('⅐', ['one seventh', 'one seventh', 'one seventh']);
+  this.executeCharTest('⅑', ['one ninth', 'one ninth', 'one ninth']);
+  this.executeCharTest('⅒', ['one tenth', 'one tenth', 'one tenth']);
+  this.executeCharTest('⅓', ['un tiers', 'un tiers', 'un tiers']);
+  this.executeCharTest('⅔', ['deux tiers', 'deux tiers', 'deux tiers']);
+  this.executeCharTest('⅕', ['un cinquième', 'un cinquième', 'un cinquième']);
+  this.executeCharTest('⅖', ['deux cinquièmes', 'deux cinquièmes', 'deux cinquièmes']);
+  this.executeCharTest('⅗', ['trois cinquièmes', 'trois cinquièmes', 'trois cinquièmes']);
+  this.executeCharTest('⅘', ['quatre cinquièmes', 'quatre cinquièmes', 'quatre cinquièmes']);
+  this.executeCharTest('⅙', ['un sixième', 'un sixième', 'un sixième']);
+  this.executeCharTest('⅚', ['cinq sixièmes', 'cinq sixièmes', 'cinq sixièmes']);
+  this.executeCharTest('⅛', ['un huitième', 'un huitième', 'un huitième']);
+  this.executeCharTest('⅜', ['trois huitièmes', 'trois huitièmes', 'trois huitièmes']);
+  this.executeCharTest('⅝', ['cinq huitièmes', 'cinq huitièmes', 'cinq huitièmes']);
+  this.executeCharTest('⅞', ['sept huitièmes', 'sept huitièmes', 'sept huitièmes']);
+  this.executeCharTest('⅟', ['numerator one', 'numerator one', 'numerator one']);
+  this.executeCharTest('↉', ['zero thirds', 'zero thirds', 'zero thirds']);
+  this.executeCharTest('①', ['circled 1', 'circled 1', 'circled 1']);
+  this.executeCharTest('②', ['circled 2', 'circled 2', 'circled 2']);
+  this.executeCharTest('③', ['circled 3', 'circled 3', 'circled 3']);
+  this.executeCharTest('④', ['circled 4', 'circled 4', 'circled 4']);
+  this.executeCharTest('⑤', ['circled 5', 'circled 5', 'circled 5']);
+  this.executeCharTest('⑥', ['circled 6', 'circled 6', 'circled 6']);
+  this.executeCharTest('⑦', ['circled 7', 'circled 7', 'circled 7']);
+  this.executeCharTest('⑧', ['circled 8', 'circled 8', 'circled 8']);
+  this.executeCharTest('⑨', ['circled 9', 'circled 9', 'circled 9']);
+  this.executeCharTest('⑩', ['circled 10', 'circled 10', 'circled 10']);
+  this.executeCharTest('⑪', ['circled 11', 'circled 11', 'circled 11']);
+  this.executeCharTest('⑫', ['circled 12', 'circled 12', 'circled 12']);
+  this.executeCharTest('⑬', ['circled 13', 'circled 13', 'circled 13']);
+  this.executeCharTest('⑭', ['circled 14', 'circled 14', 'circled 14']);
+  this.executeCharTest('⑮', ['circled 15', 'circled 15', 'circled 15']);
+  this.executeCharTest('⑯', ['circled 16', 'circled 16', 'circled 16']);
+  this.executeCharTest('⑰', ['circled 17', 'circled 17', 'circled 17']);
+  this.executeCharTest('⑱', ['circled 18', 'circled 18', 'circled 18']);
+  this.executeCharTest('⑲', ['circled 19', 'circled 19', 'circled 19']);
+  this.executeCharTest('⑳', ['circled 20', 'circled 20', 'circled 20']);
+  this.executeCharTest('⑴', ['parenthesized 1', 'parenthesized 1', 'parenthesized 1']);
+  this.executeCharTest('⑵', ['parenthesized 2', 'parenthesized 2', 'parenthesized 2']);
+  this.executeCharTest('⑶', ['parenthesized 3', 'parenthesized 3', 'parenthesized 3']);
+  this.executeCharTest('⑷', ['parenthesized 4', 'parenthesized 4', 'parenthesized 4']);
+  this.executeCharTest('⑸', ['parenthesized 5', 'parenthesized 5', 'parenthesized 5']);
+  this.executeCharTest('⑹', ['parenthesized 6', 'parenthesized 6', 'parenthesized 6']);
+  this.executeCharTest('⑺', ['parenthesized 7', 'parenthesized 7', 'parenthesized 7']);
+  this.executeCharTest('⑻', ['parenthesized 8', 'parenthesized 8', 'parenthesized 8']);
+  this.executeCharTest('⑼', ['parenthesized 9', 'parenthesized 9', 'parenthesized 9']);
+  this.executeCharTest('⑽', ['parenthesized 10', 'parenthesized 10', 'parenthesized 10']);
+  this.executeCharTest('⑾', ['parenthesized 11', 'parenthesized 11', 'parenthesized 11']);
+  this.executeCharTest('⑿', ['parenthesized 12', 'parenthesized 12', 'parenthesized 12']);
+  this.executeCharTest('⒀', ['parenthesized 13', 'parenthesized 13', 'parenthesized 13']);
+  this.executeCharTest('⒁', ['parenthesized 14', 'parenthesized 14', 'parenthesized 14']);
+  this.executeCharTest('⒂', ['parenthesized 15', 'parenthesized 15', 'parenthesized 15']);
+  this.executeCharTest('⒃', ['parenthesized 16', 'parenthesized 16', 'parenthesized 16']);
+  this.executeCharTest('⒄', ['parenthesized 17', 'parenthesized 17', 'parenthesized 17']);
+  this.executeCharTest('⒅', ['parenthesized 18', 'parenthesized 18', 'parenthesized 18']);
+  this.executeCharTest('⒆', ['parenthesized 19', 'parenthesized 19', 'parenthesized 19']);
+  this.executeCharTest('⒇', ['parenthesized 20', 'parenthesized 20', 'parenthesized 20']);
+  this.executeCharTest('⒈', ['1 period', '1 period', '1 period']);
+  this.executeCharTest('⒉', ['2 period', '2 period', '2 period']);
+  this.executeCharTest('⒊', ['3 period', '3 period', '3 period']);
+  this.executeCharTest('⒋', ['4 period', '4 period', '4 period']);
+  this.executeCharTest('⒌', ['5 period', '5 period', '5 period']);
+  this.executeCharTest('⒍', ['6 period', '6 period', '6 period']);
+  this.executeCharTest('⒎', ['7 period', '7 period', '7 period']);
+  this.executeCharTest('⒏', ['8 period', '8 period', '8 period']);
+  this.executeCharTest('⒐', ['9 period', '9 period', '9 period']);
+  this.executeCharTest('⒑', ['10 period', '10 period', '10 period']);
+  this.executeCharTest('⒒', ['11 period', '11 period', '11 period']);
+  this.executeCharTest('⒓', ['12 period', '12 period', '12 period']);
+  this.executeCharTest('⒔', ['13 period', '13 period', '13 period']);
+  this.executeCharTest('⒕', ['14 period', '14 period', '14 period']);
+  this.executeCharTest('⒖', ['15 period', '15 period', '15 period']);
+  this.executeCharTest('⒗', ['16 period', '16 period', '16 period']);
+  this.executeCharTest('⒘', ['17 period', '17 period', '17 period']);
+  this.executeCharTest('⒙', ['18 period', '18 period', '18 period']);
+  this.executeCharTest('⒚', ['19 period', '19 period', '19 period']);
+  this.executeCharTest('⒛', ['20 period', '20 period', '20 period']);
+  this.executeCharTest('⓪', ['circled 0', 'circled 0', 'circled 0']);
+  this.executeCharTest('⓫', ['negative circled 11', 'negative circled 11', 'negative circled 11']);
+  this.executeCharTest('⓬', ['negative circled 12', 'negative circled 12', 'negative circled 12']);
+  this.executeCharTest('⓭', ['negative circled 13', 'negative circled 13', 'negative circled 13']);
+  this.executeCharTest('⓮', ['negative circled 14', 'negative circled 14', 'negative circled 14']);
+  this.executeCharTest('⓯', ['negative circled 15', 'negative circled 15', 'negative circled 15']);
+  this.executeCharTest('⓰', ['negative circled 16', 'negative circled 16', 'negative circled 16']);
+  this.executeCharTest('⓱', ['negative circled 17', 'negative circled 17', 'negative circled 17']);
+  this.executeCharTest('⓲', ['negative circled 18', 'negative circled 18', 'negative circled 18']);
+  this.executeCharTest('⓳', ['negative circled 19', 'negative circled 19', 'negative circled 19']);
+  this.executeCharTest('⓴', ['negative circled 20', 'negative circled 20', 'negative circled 20']);
+  this.executeCharTest('⓵', ['double circled 1', 'double circled 1', 'double circled 1']);
+  this.executeCharTest('⓶', ['double circled 2', 'double circled 2', 'double circled 2']);
+  this.executeCharTest('⓷', ['double circled 3', 'double circled 3', 'double circled 3']);
+  this.executeCharTest('⓸', ['double circled 4', 'double circled 4', 'double circled 4']);
+  this.executeCharTest('⓹', ['double circled 5', 'double circled 5', 'double circled 5']);
+  this.executeCharTest('⓺', ['double circled 6', 'double circled 6', 'double circled 6']);
+  this.executeCharTest('⓻', ['double circled 7', 'double circled 7', 'double circled 7']);
+  this.executeCharTest('⓼', ['double circled 8', 'double circled 8', 'double circled 8']);
+  this.executeCharTest('⓽', ['double circled 9', 'double circled 9', 'double circled 9']);
+  this.executeCharTest('⓾', ['double circled 10', 'double circled 10', 'double circled 10']);
+  this.executeCharTest('⓿', ['negative circled 0', 'negative circled 0', 'negative circled 0']);
+  this.executeCharTest('❶', ['inverse circled 1', 'inverse circled 1', 'inverse circled 1']);
+  this.executeCharTest('❷', ['inverse circled 2', 'inverse circled 2', 'inverse circled 2']);
+  this.executeCharTest('❸', ['inverse circled 3', 'inverse circled 3', 'inverse circled 3']);
+  this.executeCharTest('❹', ['inverse circled 4', 'inverse circled 4', 'inverse circled 4']);
+  this.executeCharTest('❺', ['inverse circled 5', 'inverse circled 5', 'inverse circled 5']);
+  this.executeCharTest('❻', ['inverse circled 6', 'inverse circled 6', 'inverse circled 6']);
+  this.executeCharTest('❼', ['inverse circled 7', 'inverse circled 7', 'inverse circled 7']);
+  this.executeCharTest('❽', ['inverse circled 8', 'inverse circled 8', 'inverse circled 8']);
+  this.executeCharTest('❾', ['inverse circled 9', 'inverse circled 9', 'inverse circled 9']);
+  this.executeCharTest('❿', ['inverse circled 10', 'inverse circled 10', 'inverse circled 10']);
+  this.executeCharTest('➀', ['circled one', 'circled one', 'circled one']);
+  this.executeCharTest('➁', ['circled two', 'circled two', 'circled two']);
+  this.executeCharTest('➂', ['circled three', 'circled three', 'circled three']);
+  this.executeCharTest('➃', ['circled four', 'circled four', 'circled four']);
+  this.executeCharTest('➄', ['circled five', 'circled five', 'circled five']);
+  this.executeCharTest('➅', ['circled six', 'circled six', 'circled six']);
+  this.executeCharTest('➆', ['circled seven', 'circled seven', 'circled seven']);
+  this.executeCharTest('➇', ['circled eight', 'circled eight', 'circled eight']);
+  this.executeCharTest('➈', ['circled nine', 'circled nine', 'circled nine']);
+  this.executeCharTest('➉', ['circled ten', 'circled ten', 'circled ten']);
+  this.executeCharTest('➊', ['inverse circled 1', 'inverse circled 1', 'inverse circled 1']);
+  this.executeCharTest('➋', ['inverse circled 2', 'inverse circled 2', 'inverse circled 2']);
+  this.executeCharTest('➌', ['inverse circled 3', 'inverse circled 3', 'inverse circled 3']);
+  this.executeCharTest('➍', ['inverse circled 4', 'inverse circled 4', 'inverse circled 4']);
+  this.executeCharTest('➎', ['inverse circled 5', 'inverse circled 5', 'inverse circled 5']);
+  this.executeCharTest('➏', ['inverse circled 6', 'inverse circled 6', 'inverse circled 6']);
+  this.executeCharTest('➐', ['inverse circled 7', 'inverse circled 7', 'inverse circled 7']);
+  this.executeCharTest('➑', ['inverse circled 8', 'inverse circled 8', 'inverse circled 8']);
+  this.executeCharTest('➒', ['inverse circled 9', 'inverse circled 9', 'inverse circled 9']);
+  this.executeCharTest('➓', ['inverse circled 10', 'inverse circled 10', 'inverse circled 10']);
+  this.executeCharTest('㉈', ['circled ten on black square', 'circled ten on black square', 'circled ten on black square']);
+  this.executeCharTest('㉉', ['circled twenty on black square', 'circled twenty on black square', 'circled twenty on black square']);
+  this.executeCharTest('㉊', ['circled thirty on black square', 'circled thirty on black square', 'circled thirty on black square']);
+  this.executeCharTest('㉋', ['circled forty on black square', 'circled forty on black square', 'circled forty on black square']);
+  this.executeCharTest('㉌', ['circled fifty on black square', 'circled fifty on black square', 'circled fifty on black square']);
+  this.executeCharTest('㉍', ['circled sixty on black square', 'circled sixty on black square', 'circled sixty on black square']);
+  this.executeCharTest('㉎', ['circled seventy on black square', 'circled seventy on black square', 'circled seventy on black square']);
+  this.executeCharTest('㉏', ['circled eighty on black square', 'circled eighty on black square', 'circled eighty on black square']);
+  this.executeCharTest('㉑', ['circled twenty one', 'circled twenty one', 'circled twenty one']);
+  this.executeCharTest('㉒', ['circled twenty two', 'circled twenty two', 'circled twenty two']);
+  this.executeCharTest('㉓', ['circled twenty three', 'circled twenty three', 'circled twenty three']);
+  this.executeCharTest('㉔', ['circled twenty four', 'circled twenty four', 'circled twenty four']);
+  this.executeCharTest('㉕', ['circled twenty five', 'circled twenty five', 'circled twenty five']);
+  this.executeCharTest('㉖', ['circled twenty six', 'circled twenty six', 'circled twenty six']);
+  this.executeCharTest('㉗', ['circled twenty seven', 'circled twenty seven', 'circled twenty seven']);
+  this.executeCharTest('㉘', ['circled twenty eight', 'circled twenty eight', 'circled twenty eight']);
+  this.executeCharTest('㉙', ['circled twenty nine', 'circled twenty nine', 'circled twenty nine']);
+  this.executeCharTest('㉚', ['circled thirty', 'circled thirty', 'circled thirty']);
+  this.executeCharTest('㉛', ['circled thirty one', 'circled thirty one', 'circled thirty one']);
+  this.executeCharTest('㉜', ['circled thirty two', 'circled thirty two', 'circled thirty two']);
+  this.executeCharTest('㉝', ['circled thirty three', 'circled thirty three', 'circled thirty three']);
+  this.executeCharTest('㉞', ['circled thirty four', 'circled thirty four', 'circled thirty four']);
+  this.executeCharTest('㉟', ['circled thirty five', 'circled thirty five', 'circled thirty five']);
+  this.executeCharTest('㊱', ['circled thirty six', 'circled thirty six', 'circled thirty six']);
+  this.executeCharTest('㊲', ['circled thirty seven', 'circled thirty seven', 'circled thirty seven']);
+  this.executeCharTest('㊳', ['circled thirty eight', 'circled thirty eight', 'circled thirty eight']);
+  this.executeCharTest('㊴', ['circled thirty nine', 'circled thirty nine', 'circled thirty nine']);
+  this.executeCharTest('㊵', ['circled forty', 'circled forty', 'circled forty']);
+  this.executeCharTest('㊶', ['circled forty one', 'circled forty one', 'circled forty one']);
+  this.executeCharTest('㊷', ['circled forty two', 'circled forty two', 'circled forty two']);
+  this.executeCharTest('㊸', ['circled forty three', 'circled forty three', 'circled forty three']);
+  this.executeCharTest('㊹', ['circled forty four', 'circled forty four', 'circled forty four']);
+  this.executeCharTest('㊺', ['circled forty five', 'circled forty five', 'circled forty five']);
+  this.executeCharTest('㊻', ['circled forty six', 'circled forty six', 'circled forty six']);
+  this.executeCharTest('㊼', ['circled forty seven', 'circled forty seven', 'circled forty seven']);
+  this.executeCharTest('㊽', ['circled forty eight', 'circled forty eight', 'circled forty eight']);
+  this.executeCharTest('㊾', ['circled forty nine', 'circled forty nine', 'circled forty nine']);
+  this.executeCharTest('㊿', ['circled fifty', 'circled fifty', 'circled fifty']);
+  this.executeCharTest('０', ['0', '0', '0']);
+  this.executeCharTest('１', ['1', '1', '1']);
+  this.executeCharTest('２', ['2', '2', '2']);
+  this.executeCharTest('３', ['3', '3', '3']);
+  this.executeCharTest('４', ['4', '4', '4']);
+  this.executeCharTest('５', ['5', '5', '5']);
+  this.executeCharTest('６', ['6', '6', '6']);
+  this.executeCharTest('７', ['7', '7', '7']);
+  this.executeCharTest('８', ['8', '8', '8']);
+  this.executeCharTest('９', ['9', '9', '9']);
+  this.executeCharTest('𝟎', ['chiffre mathématique gras 0', 'chiffre mathématique gras 0', 'chiffre mathématique gras 0']);
+  this.executeCharTest('𝟏', ['chiffre mathématique gras 1', 'chiffre mathématique gras 1', 'chiffre mathématique gras 1']);
+  this.executeCharTest('𝟐', ['chiffre mathématique gras 2', 'chiffre mathématique gras 2', 'chiffre mathématique gras 2']);
+  this.executeCharTest('𝟑', ['chiffre mathématique gras 3', 'chiffre mathématique gras 3', 'chiffre mathématique gras 3']);
+  this.executeCharTest('𝟒', ['chiffre mathématique gras 4', 'chiffre mathématique gras 4', 'chiffre mathématique gras 4']);
+  this.executeCharTest('𝟓', ['chiffre mathématique gras 5', 'chiffre mathématique gras 5', 'chiffre mathématique gras 5']);
+  this.executeCharTest('𝟔', ['chiffre mathématique gras 6', 'chiffre mathématique gras 6', 'chiffre mathématique gras 6']);
+  this.executeCharTest('𝟕', ['chiffre mathématique gras 7', 'chiffre mathématique gras 7', 'chiffre mathématique gras 7']);
+  this.executeCharTest('𝟖', ['chiffre mathématique gras 8', 'chiffre mathématique gras 8', 'chiffre mathématique gras 8']);
+  this.executeCharTest('𝟗', ['chiffre mathématique gras 9', 'chiffre mathématique gras 9', 'chiffre mathématique gras 9']);
+  this.executeCharTest('𝟘', ['chiffre mathématique ajouré 0', 'chiffre mathématique ajouré 0', 'chiffre mathématique ajouré 0']);
+  this.executeCharTest('𝟙', ['chiffre mathématique ajouré 1', 'chiffre mathématique ajouré 1', 'chiffre mathématique ajouré 1']);
+  this.executeCharTest('𝟚', ['chiffre mathématique ajouré 2', 'chiffre mathématique ajouré 2', 'chiffre mathématique ajouré 2']);
+  this.executeCharTest('𝟛', ['chiffre mathématique ajouré 3', 'chiffre mathématique ajouré 3', 'chiffre mathématique ajouré 3']);
+  this.executeCharTest('𝟜', ['chiffre mathématique ajouré 4', 'chiffre mathématique ajouré 4', 'chiffre mathématique ajouré 4']);
+  this.executeCharTest('𝟝', ['chiffre mathématique ajouré 5', 'chiffre mathématique ajouré 5', 'chiffre mathématique ajouré 5']);
+  this.executeCharTest('𝟞', ['chiffre mathématique ajouré 6', 'chiffre mathématique ajouré 6', 'chiffre mathématique ajouré 6']);
+  this.executeCharTest('𝟟', ['chiffre mathématique ajouré 7', 'chiffre mathématique ajouré 7', 'chiffre mathématique ajouré 7']);
+  this.executeCharTest('𝟠', ['chiffre mathématique ajouré 8', 'chiffre mathématique ajouré 8', 'chiffre mathématique ajouré 8']);
+  this.executeCharTest('𝟡', ['chiffre mathématique ajouré 9', 'chiffre mathématique ajouré 9', 'chiffre mathématique ajouré 9']);
+  this.executeCharTest('𝟢', ['chiffre mathématique sans empattement 0', 'chiffre mathématique sans empattement 0', 'chiffre mathématique sans empattement 0']);
+  this.executeCharTest('𝟣', ['chiffre mathématique sans empattement 1', 'chiffre mathématique sans empattement 1', 'chiffre mathématique sans empattement 1']);
+  this.executeCharTest('𝟤', ['chiffre mathématique sans empattement 2', 'chiffre mathématique sans empattement 2', 'chiffre mathématique sans empattement 2']);
+  this.executeCharTest('𝟥', ['chiffre mathématique sans empattement 3', 'chiffre mathématique sans empattement 3', 'chiffre mathématique sans empattement 3']);
+  this.executeCharTest('𝟦', ['chiffre mathématique sans empattement 4', 'chiffre mathématique sans empattement 4', 'chiffre mathématique sans empattement 4']);
+  this.executeCharTest('𝟧', ['chiffre mathématique sans empattement 5', 'chiffre mathématique sans empattement 5', 'chiffre mathématique sans empattement 5']);
+  this.executeCharTest('𝟨', ['chiffre mathématique sans empattement 6', 'chiffre mathématique sans empattement 6', 'chiffre mathématique sans empattement 6']);
+  this.executeCharTest('𝟩', ['chiffre mathématique sans empattement 7', 'chiffre mathématique sans empattement 7', 'chiffre mathématique sans empattement 7']);
+  this.executeCharTest('𝟪', ['chiffre mathématique sans empattement 8', 'chiffre mathématique sans empattement 8', 'chiffre mathématique sans empattement 8']);
+  this.executeCharTest('𝟫', ['chiffre mathématique sans empattement 9', 'chiffre mathématique sans empattement 9', 'chiffre mathématique sans empattement 9']);
+  this.executeCharTest('𝟬', ['chiffre mathématique gras sans empattement 0', 'chiffre mathématique gras sans empattement 0', 'chiffre mathématique gras sans empattement 0']);
+  this.executeCharTest('𝟭', ['chiffre mathématique gras sans empattement 1', 'chiffre mathématique gras sans empattement 1', 'chiffre mathématique gras sans empattement 1']);
+  this.executeCharTest('𝟮', ['chiffre mathématique gras sans empattement 2', 'chiffre mathématique gras sans empattement 2', 'chiffre mathématique gras sans empattement 2']);
+  this.executeCharTest('𝟯', ['chiffre mathématique gras sans empattement 3', 'chiffre mathématique gras sans empattement 3', 'chiffre mathématique gras sans empattement 3']);
+  this.executeCharTest('𝟰', ['chiffre mathématique gras sans empattement 4', 'chiffre mathématique gras sans empattement 4', 'chiffre mathématique gras sans empattement 4']);
+  this.executeCharTest('𝟱', ['chiffre mathématique gras sans empattement 5', 'chiffre mathématique gras sans empattement 5', 'chiffre mathématique gras sans empattement 5']);
+  this.executeCharTest('𝟲', ['chiffre mathématique gras sans empattement 6', 'chiffre mathématique gras sans empattement 6', 'chiffre mathématique gras sans empattement 6']);
+  this.executeCharTest('𝟳', ['chiffre mathématique gras sans empattement 7', 'chiffre mathématique gras sans empattement 7', 'chiffre mathématique gras sans empattement 7']);
+  this.executeCharTest('𝟴', ['chiffre mathématique gras sans empattement 8', 'chiffre mathématique gras sans empattement 8', 'chiffre mathématique gras sans empattement 8']);
+  this.executeCharTest('𝟵', ['chiffre mathématique gras sans empattement 9', 'chiffre mathématique gras sans empattement 9', 'chiffre mathématique gras sans empattement 9']);
+  this.executeCharTest('𝟶', ['chiffre mathématique à chasse fixe 0', 'chiffre mathématique à chasse fixe 0', 'chiffre mathématique à chasse fixe 0']);
+  this.executeCharTest('𝟷', ['chiffre mathématique à chasse fixe 1', 'chiffre mathématique à chasse fixe 1', 'chiffre mathématique à chasse fixe 1']);
+  this.executeCharTest('𝟸', ['chiffre mathématique à chasse fixe 2', 'chiffre mathématique à chasse fixe 2', 'chiffre mathématique à chasse fixe 2']);
+  this.executeCharTest('𝟹', ['chiffre mathématique à chasse fixe 3', 'chiffre mathématique à chasse fixe 3', 'chiffre mathématique à chasse fixe 3']);
+  this.executeCharTest('𝟺', ['chiffre mathématique à chasse fixe 4', 'chiffre mathématique à chasse fixe 4', 'chiffre mathématique à chasse fixe 4']);
+  this.executeCharTest('𝟻', ['chiffre mathématique à chasse fixe 5', 'chiffre mathématique à chasse fixe 5', 'chiffre mathématique à chasse fixe 5']);
+  this.executeCharTest('𝟼', ['chiffre mathématique à chasse fixe 6', 'chiffre mathématique à chasse fixe 6', 'chiffre mathématique à chasse fixe 6']);
+  this.executeCharTest('𝟽', ['chiffre mathématique à chasse fixe 7', 'chiffre mathématique à chasse fixe 7', 'chiffre mathématique à chasse fixe 7']);
+  this.executeCharTest('𝟾', ['chiffre mathématique à chasse fixe 8', 'chiffre mathématique à chasse fixe 8', 'chiffre mathématique à chasse fixe 8']);
+  this.executeCharTest('𝟿', ['chiffre mathématique à chasse fixe 9', 'chiffre mathématique à chasse fixe 9', 'chiffre mathématique à chasse fixe 9']);
+  this.executeCharTest('🄀', ['0 period', '0 period', '0 period']);
+  this.executeCharTest('🄁', ['0 comma', '0 comma', '0 comma']);
+  this.executeCharTest('🄂', ['1 comma', '1 comma', '1 comma']);
+  this.executeCharTest('🄃', ['2 comma', '2 comma', '2 comma']);
+  this.executeCharTest('🄄', ['3 comma', '3 comma', '3 comma']);
+  this.executeCharTest('🄅', ['4 comma', '4 comma', '4 comma']);
+  this.executeCharTest('🄆', ['5 comma', '5 comma', '5 comma']);
+  this.executeCharTest('🄇', ['6 comma', '6 comma', '6 comma']);
+  this.executeCharTest('🄈', ['7 comma', '7 comma', '7 comma']);
+  this.executeCharTest('🄉', ['8 comma', '8 comma', '8 comma']);
+  this.executeCharTest('🄊', ['9 comma', '9 comma', '9 comma']);
+  this.executeCharTest('─', ['filet horizontal fin', 'filet horizontal fin', 'filet horizontal fin']);
+  this.executeCharTest('━', ['box drawings heavy horizontal', 'box drawings heavy horizontal', 'box drawings heavy horizontal']);
+  this.executeCharTest('│', ['filet vertical fin', 'filet vertical fin', 'filet vertical fin']);
+  this.executeCharTest('┃', ['box drawings heavy vertical', 'box drawings heavy vertical', 'box drawings heavy vertical']);
+  this.executeCharTest('┄', ['box drawings light triple dash horizontal', 'box drawings light triple dash horizontal', 'box drawings light triple dash horizontal']);
+  this.executeCharTest('┅', ['box drawings heavy triple dash horizontal', 'box drawings heavy triple dash horizontal', 'box drawings heavy triple dash horizontal']);
+  this.executeCharTest('┆', ['box drawings light triple dash vertical', 'box drawings light triple dash vertical', 'box drawings light triple dash vertical']);
+  this.executeCharTest('┇', ['box drawings heavy triple dash vertical', 'box drawings heavy triple dash vertical', 'box drawings heavy triple dash vertical']);
+  this.executeCharTest('┈', ['box drawings light quadruple dash horizontal', 'box drawings light quadruple dash horizontal', 'box drawings light quadruple dash horizontal']);
+  this.executeCharTest('┉', ['box drawings heavy quadruple dash horizontal', 'box drawings heavy quadruple dash horizontal', 'box drawings heavy quadruple dash horizontal']);
+  this.executeCharTest('┊', ['box drawings light quadruple dash vertical', 'box drawings light quadruple dash vertical', 'box drawings light quadruple dash vertical']);
+  this.executeCharTest('┋', ['box drawings heavy quadruple dash vertical', 'box drawings heavy quadruple dash vertical', 'box drawings heavy quadruple dash vertical']);
+  this.executeCharTest('┌', ['filet fin vers le bas et vers la droite', 'filet fin vers le bas et vers la droite', 'filet fin vers le bas et vers la droite']);
+  this.executeCharTest('┍', ['box drawings down light and right heavy', 'box drawings down light and right heavy', 'box drawings down light and right heavy']);
+  this.executeCharTest('┎', ['box drawings down heavy and right light', 'box drawings down heavy and right light', 'box drawings down heavy and right light']);
+  this.executeCharTest('┏', ['box drawings heavy down and right', 'box drawings heavy down and right', 'box drawings heavy down and right']);
+  this.executeCharTest('┐', ['filet fin vers le bas et vers la gauche', 'filet fin vers le bas et vers la gauche', 'filet fin vers le bas et vers la gauche']);
+  this.executeCharTest('┑', ['box drawings down light and left heavy', 'box drawings down light and left heavy', 'box drawings down light and left heavy']);
+  this.executeCharTest('┒', ['box drawings down heavy and left light', 'box drawings down heavy and left light', 'box drawings down heavy and left light']);
+  this.executeCharTest('┓', ['box drawings heavy down and left', 'box drawings heavy down and left', 'box drawings heavy down and left']);
+  this.executeCharTest('└', ['filet fin vers le haut et vers la droite', 'filet fin vers le haut et vers la droite', 'filet fin vers le haut et vers la droite']);
+  this.executeCharTest('┕', ['box drawings up light and right heavy', 'box drawings up light and right heavy', 'box drawings up light and right heavy']);
+  this.executeCharTest('┖', ['box drawings up heavy and right light', 'box drawings up heavy and right light', 'box drawings up heavy and right light']);
+  this.executeCharTest('┗', ['box drawings heavy up and right', 'box drawings heavy up and right', 'box drawings heavy up and right']);
+  this.executeCharTest('┘', ['filet fin vers le haut et vers la gauche', 'filet fin vers le haut et vers la gauche', 'filet fin vers le haut et vers la gauche']);
+  this.executeCharTest('┙', ['box drawings up light and left heavy', 'box drawings up light and left heavy', 'box drawings up light and left heavy']);
+  this.executeCharTest('┚', ['box drawings up heavy and left light', 'box drawings up heavy and left light', 'box drawings up heavy and left light']);
+  this.executeCharTest('┛', ['box drawings heavy up and left', 'box drawings heavy up and left', 'box drawings heavy up and left']);
+  this.executeCharTest('├', ['filet fin vertical et vers la droite', 'filet fin vertical et vers la droite', 'filet fin vertical et vers la droite']);
+  this.executeCharTest('┝', ['box drawings vertical light and right heavy', 'box drawings vertical light and right heavy', 'box drawings vertical light and right heavy']);
+  this.executeCharTest('┞', ['box drawings up heavy and right down light', 'box drawings up heavy and right down light', 'box drawings up heavy and right down light']);
+  this.executeCharTest('┟', ['box drawings down heavy and right up light', 'box drawings down heavy and right up light', 'box drawings down heavy and right up light']);
+  this.executeCharTest('┠', ['box drawings vertical heavy and right light', 'box drawings vertical heavy and right light', 'box drawings vertical heavy and right light']);
+  this.executeCharTest('┡', ['box drawings down light and right up heavy', 'box drawings down light and right up heavy', 'box drawings down light and right up heavy']);
+  this.executeCharTest('┢', ['box drawings up light and right down heavy', 'box drawings up light and right down heavy', 'box drawings up light and right down heavy']);
+  this.executeCharTest('┣', ['box drawings heavy vertical and right', 'box drawings heavy vertical and right', 'box drawings heavy vertical and right']);
+  this.executeCharTest('┤', ['filet fin vertical et vers la gauche', 'filet fin vertical et vers la gauche', 'filet fin vertical et vers la gauche']);
+  this.executeCharTest('┥', ['box drawings vertical light and left heavy', 'box drawings vertical light and left heavy', 'box drawings vertical light and left heavy']);
+  this.executeCharTest('┦', ['box drawings up heavy and left down light', 'box drawings up heavy and left down light', 'box drawings up heavy and left down light']);
+  this.executeCharTest('┧', ['box drawings down heavy and left up light', 'box drawings down heavy and left up light', 'box drawings down heavy and left up light']);
+  this.executeCharTest('┨', ['box drawings vertical heavy and left light', 'box drawings vertical heavy and left light', 'box drawings vertical heavy and left light']);
+  this.executeCharTest('┩', ['box drawings down light and left up heavy', 'box drawings down light and left up heavy', 'box drawings down light and left up heavy']);
+  this.executeCharTest('┪', ['box drawings up light and left down heavy', 'box drawings up light and left down heavy', 'box drawings up light and left down heavy']);
+  this.executeCharTest('┫', ['box drawings heavy vertical and left', 'box drawings heavy vertical and left', 'box drawings heavy vertical and left']);
+  this.executeCharTest('┬', ['filet fin vers le bas et horizontal', 'filet fin vers le bas et horizontal', 'filet fin vers le bas et horizontal']);
+  this.executeCharTest('┭', ['box drawings left heavy and right down light', 'box drawings left heavy and right down light', 'box drawings left heavy and right down light']);
+  this.executeCharTest('┮', ['box drawings right heavy and left down light', 'box drawings right heavy and left down light', 'box drawings right heavy and left down light']);
+  this.executeCharTest('┯', ['box drawings down light and horizontal heavy', 'box drawings down light and horizontal heavy', 'box drawings down light and horizontal heavy']);
+  this.executeCharTest('┰', ['box drawings down heavy and horizontal light', 'box drawings down heavy and horizontal light', 'box drawings down heavy and horizontal light']);
+  this.executeCharTest('┱', ['box drawings right light and left down heavy', 'box drawings right light and left down heavy', 'box drawings right light and left down heavy']);
+  this.executeCharTest('┲', ['box drawings left light and right down heavy', 'box drawings left light and right down heavy', 'box drawings left light and right down heavy']);
+  this.executeCharTest('┳', ['box drawings heavy down and horizontal', 'box drawings heavy down and horizontal', 'box drawings heavy down and horizontal']);
+  this.executeCharTest('┴', ['filet fin vers le haut et horizontal', 'filet fin vers le haut et horizontal', 'filet fin vers le haut et horizontal']);
+  this.executeCharTest('┵', ['box drawings left heavy and right up light', 'box drawings left heavy and right up light', 'box drawings left heavy and right up light']);
+  this.executeCharTest('┶', ['box drawings right heavy and left up light', 'box drawings right heavy and left up light', 'box drawings right heavy and left up light']);
+  this.executeCharTest('┷', ['box drawings up light and horizontal heavy', 'box drawings up light and horizontal heavy', 'box drawings up light and horizontal heavy']);
+  this.executeCharTest('┸', ['box drawings up heavy and horizontal light', 'box drawings up heavy and horizontal light', 'box drawings up heavy and horizontal light']);
+  this.executeCharTest('┹', ['box drawings right light and left up heavy', 'box drawings right light and left up heavy', 'box drawings right light and left up heavy']);
+  this.executeCharTest('┺', ['box drawings left light and right up heavy', 'box drawings left light and right up heavy', 'box drawings left light and right up heavy']);
+  this.executeCharTest('┻', ['box drawings heavy up and horizontal', 'box drawings heavy up and horizontal', 'box drawings heavy up and horizontal']);
+  this.executeCharTest('┼', ['filet fin vertical et horizontal', 'filet fin vertical et horizontal', 'filet fin vertical et horizontal']);
+  this.executeCharTest('┽', ['box drawings left heavy and right vertical light', 'box drawings left heavy and right vertical light', 'box drawings left heavy and right vertical light']);
+  this.executeCharTest('┾', ['box drawings right heavy and left vertical light', 'box drawings right heavy and left vertical light', 'box drawings right heavy and left vertical light']);
+  this.executeCharTest('┿', ['box drawings vertical light and horizontal heavy', 'box drawings vertical light and horizontal heavy', 'box drawings vertical light and horizontal heavy']);
+  this.executeCharTest('╀', ['box drawings up heavy and down horizontal light', 'box drawings up heavy and down horizontal light', 'box drawings up heavy and down horizontal light']);
+  this.executeCharTest('╁', ['box drawings down heavy and up horizontal light', 'box drawings down heavy and up horizontal light', 'box drawings down heavy and up horizontal light']);
+  this.executeCharTest('╂', ['box drawings vertical heavy and horizontal light', 'box drawings vertical heavy and horizontal light', 'box drawings vertical heavy and horizontal light']);
+  this.executeCharTest('╃', ['box drawings left up heavy and right down light', 'box drawings left up heavy and right down light', 'box drawings left up heavy and right down light']);
+  this.executeCharTest('╄', ['box drawings right up heavy and left down light', 'box drawings right up heavy and left down light', 'box drawings right up heavy and left down light']);
+  this.executeCharTest('╅', ['box drawings left down heavy and right up light', 'box drawings left down heavy and right up light', 'box drawings left down heavy and right up light']);
+  this.executeCharTest('╆', ['box drawings right down heavy and left up light', 'box drawings right down heavy and left up light', 'box drawings right down heavy and left up light']);
+  this.executeCharTest('╇', ['box drawings down light and up horizontal heavy', 'box drawings down light and up horizontal heavy', 'box drawings down light and up horizontal heavy']);
+  this.executeCharTest('╈', ['box drawings up light and down horizontal heavy', 'box drawings up light and down horizontal heavy', 'box drawings up light and down horizontal heavy']);
+  this.executeCharTest('╉', ['box drawings right light and left vertical heavy', 'box drawings right light and left vertical heavy', 'box drawings right light and left vertical heavy']);
+  this.executeCharTest('╊', ['box drawings left light and right vertical heavy', 'box drawings left light and right vertical heavy', 'box drawings left light and right vertical heavy']);
+  this.executeCharTest('╋', ['box drawings heavy vertical and horizontal', 'box drawings heavy vertical and horizontal', 'box drawings heavy vertical and horizontal']);
+  this.executeCharTest('╌', ['box drawings light double dash horizontal', 'box drawings light double dash horizontal', 'box drawings light double dash horizontal']);
+  this.executeCharTest('╍', ['box drawings heavy double dash horizontal', 'box drawings heavy double dash horizontal', 'box drawings heavy double dash horizontal']);
+  this.executeCharTest('╎', ['box drawings light double dash vertical', 'box drawings light double dash vertical', 'box drawings light double dash vertical']);
+  this.executeCharTest('╏', ['box drawings heavy double dash vertical', 'box drawings heavy double dash vertical', 'box drawings heavy double dash vertical']);
+  this.executeCharTest('═', ['filet double horizontal', 'filet double horizontal', 'filet double horizontal']);
+  this.executeCharTest('║', ['filet double vertical', 'filet double vertical', 'filet double vertical']);
+  this.executeCharTest('╒', ['filet simple le bas et double vers la droite', 'filet simple le bas et double vers la droite', 'filet simple le bas et double vers la droite']);
+  this.executeCharTest('╓', ['filet double vers le bas et simple vers la droite', 'filet double vers le bas et simple vers la droite', 'filet double vers le bas et simple vers la droite']);
+  this.executeCharTest('╔', ['filet double vers le bas et vers la droite', 'filet double vers le bas et vers la droite', 'filet double vers le bas et vers la droite']);
+  this.executeCharTest('╕', ['filet simple vers le bas et double vers la gauche', 'filet simple vers le bas et double vers la gauche', 'filet simple vers le bas et double vers la gauche']);
+  this.executeCharTest('╖', ['filet double vers le bas et simple vers la gauche', 'filet double vers le bas et simple vers la gauche', 'filet double vers le bas et simple vers la gauche']);
+  this.executeCharTest('╗', ['filet double vers le bas et vers la gauche', 'filet double vers le bas et vers la gauche', 'filet double vers le bas et vers la gauche']);
+  this.executeCharTest('╘', ['filet simple vers le haut et double vers la droite', 'filet simple vers le haut et double vers la droite', 'filet simple vers le haut et double vers la droite']);
+  this.executeCharTest('╙', ['filet double vers le haut et simple vers la droite', 'filet double vers le haut et simple vers la droite', 'filet double vers le haut et simple vers la droite']);
+  this.executeCharTest('╚', ['filet double vers le haut et vers la droite', 'filet double vers le haut et vers la droite', 'filet double vers le haut et vers la droite']);
+  this.executeCharTest('╛', ['filet simple vers le haut et double vers la gauche', 'filet simple vers le haut et double vers la gauche', 'filet simple vers le haut et double vers la gauche']);
+  this.executeCharTest('╜', ['filet double vers le haut et simple vers la gauche', 'filet double vers le haut et simple vers la gauche', 'filet double vers le haut et simple vers la gauche']);
+  this.executeCharTest('╝', ['filet double vers le haut et vers la gauche', 'filet double vers le haut et vers la gauche', 'filet double vers le haut et vers la gauche']);
+  this.executeCharTest('╞', ['filet vertical simple et droit double', 'filet vertical simple et droit double', 'filet vertical simple et droit double']);
+  this.executeCharTest('╟', ['filet vertical double et droit simple', 'filet vertical double et droit simple', 'filet vertical double et droit simple']);
+  this.executeCharTest('╠', ['filet double vertical et vers la droite', 'filet double vertical et vers la droite', 'filet double vertical et vers la droite']);
+  this.executeCharTest('╡', ['filet vertical simple et gauche double', 'filet vertical simple et gauche double', 'filet vertical simple et gauche double']);
+  this.executeCharTest('╢', ['filet vertical double et gauche simple', 'filet vertical double et gauche simple', 'filet vertical double et gauche simple']);
+  this.executeCharTest('╣', ['filet double vertical et vers la gauche', 'filet double vertical et vers la gauche', 'filet double vertical et vers la gauche']);
+  this.executeCharTest('╤', ['filet vers le bas simple et horizontal double', 'filet vers le bas simple et horizontal double', 'filet vers le bas simple et horizontal double']);
+  this.executeCharTest('╥', ['filet vers le bas double et horizontal simple', 'filet vers le bas double et horizontal simple', 'filet vers le bas double et horizontal simple']);
+  this.executeCharTest('╦', ['filet double vers le bas et horizontal', 'filet double vers le bas et horizontal', 'filet double vers le bas et horizontal']);
+  this.executeCharTest('╧', ['filet vers le haut simple et horizontal double', 'filet vers le haut simple et horizontal double', 'filet vers le haut simple et horizontal double']);
+  this.executeCharTest('╨', ['filet vers le haut double et horizontal simple', 'filet vers le haut double et horizontal simple', 'filet vers le haut double et horizontal simple']);
+  this.executeCharTest('╩', ['filet double vers le haut et horizontal', 'filet double vers le haut et horizontal', 'filet double vers le haut et horizontal']);
+  this.executeCharTest('╪', ['filet vertical simple et horizontal double', 'filet vertical simple et horizontal double', 'filet vertical simple et horizontal double']);
+  this.executeCharTest('╫', ['filet vertical double et horizontal simple', 'filet vertical double et horizontal simple', 'filet vertical double et horizontal simple']);
+  this.executeCharTest('╬', ['filet double vertical et horizontall', 'filet double vertical et horizontall', 'filet double vertical et horizontall']);
+  this.executeCharTest('╭', ['box drawings light arc down and right', 'box drawings light arc down and right', 'box drawings light arc down and right']);
+  this.executeCharTest('╮', ['box drawings light arc down and left', 'box drawings light arc down and left', 'box drawings light arc down and left']);
+  this.executeCharTest('╯', ['box drawings light arc up and left', 'box drawings light arc up and left', 'box drawings light arc up and left']);
+  this.executeCharTest('╰', ['box drawings light arc up and right', 'box drawings light arc up and right', 'box drawings light arc up and right']);
+  this.executeCharTest('╱', ['box drawings light diagonal upper right to lower left', 'box drawings light diagonal upper right to lower left', 'box drawings light diagonal upper right to lower left']);
+  this.executeCharTest('╲', ['box drawings light diagonal upper left to lower right', 'box drawings light diagonal upper left to lower right', 'box drawings light diagonal upper left to lower right']);
+  this.executeCharTest('╳', ['box drawings light diagonal cross', 'box drawings light diagonal cross', 'box drawings light diagonal cross']);
+  this.executeCharTest('╴', ['box drawings light left', 'box drawings light left', 'box drawings light left']);
+  this.executeCharTest('╵', ['box drawings light up', 'box drawings light up', 'box drawings light up']);
+  this.executeCharTest('╶', ['box drawings light right', 'box drawings light right', 'box drawings light right']);
+  this.executeCharTest('╷', ['box drawings light down', 'box drawings light down', 'box drawings light down']);
+  this.executeCharTest('╸', ['box drawings heavy left', 'box drawings heavy left', 'box drawings heavy left']);
+  this.executeCharTest('╹', ['box drawings heavy up', 'box drawings heavy up', 'box drawings heavy up']);
+  this.executeCharTest('╺', ['box drawings heavy right', 'box drawings heavy right', 'box drawings heavy right']);
+  this.executeCharTest('╻', ['box drawings heavy down', 'box drawings heavy down', 'box drawings heavy down']);
+  this.executeCharTest('╼', ['box drawings light left and heavy right', 'box drawings light left and heavy right', 'box drawings light left and heavy right']);
+  this.executeCharTest('╽', ['box drawings light up and heavy down', 'box drawings light up and heavy down', 'box drawings light up and heavy down']);
+  this.executeCharTest('╾', ['box drawings heavy left and light right', 'box drawings heavy left and light right', 'box drawings heavy left and light right']);
+  this.executeCharTest('╿', ['box drawings heavy up and light down', 'box drawings heavy up and light down', 'box drawings heavy up and light down']);
+  this.executeCharTest('▀', ['moitié supérieure de pavé', 'moitié supérieure de pavé', 'moitié supérieure de pavé']);
+  this.executeCharTest('▁', ['lower one eighth block', 'lower one eighth block', 'lower one eighth block']);
+  this.executeCharTest('▂', ['lower one quarter block', 'lower one quarter block', 'lower one quarter block']);
+  this.executeCharTest('▃', ['lower three eighths block', 'lower three eighths block', 'lower three eighths block']);
+  this.executeCharTest('▄', ['moitié inférieure de pavé', 'moitié inférieure de pavé', 'moitié inférieure de pavé']);
+  this.executeCharTest('▅', ['lower five eighths block', 'lower five eighths block', 'lower five eighths block']);
+  this.executeCharTest('▆', ['lower three quarters block', 'lower three quarters block', 'lower three quarters block']);
+  this.executeCharTest('▇', ['lower seven eighths block', 'lower seven eighths block', 'lower seven eighths block']);
+  this.executeCharTest('█', ['pavé plein', 'pavé plein', 'pavé plein']);
+  this.executeCharTest('▉', ['left seven eighths block', 'left seven eighths block', 'left seven eighths block']);
+  this.executeCharTest('▊', ['left three quarters block', 'left three quarters block', 'left three quarters block']);
+  this.executeCharTest('▋', ['left five eighths block', 'left five eighths block', 'left five eighths block']);
+  this.executeCharTest('▌', ['left half block', 'left half block', 'left half block']);
+  this.executeCharTest('▍', ['left three eighths block', 'left three eighths block', 'left three eighths block']);
+  this.executeCharTest('▎', ['left one quarter block', 'left one quarter block', 'left one quarter block']);
+  this.executeCharTest('▏', ['left one eighth block', 'left one eighth block', 'left one eighth block']);
+  this.executeCharTest('▐', ['right half block', 'right half block', 'right half block']);
+  this.executeCharTest('░', ['ombre légère', 'ombre légère', 'ombre légère']);
+  this.executeCharTest('▒', ['ombre moyenne', 'ombre moyenne', 'ombre moyenne']);
+  this.executeCharTest('▓', ['ombre foncée', 'ombre foncée', 'ombre foncée']);
+  this.executeCharTest('▔', ['upper one eighth block', 'upper one eighth block', 'upper one eighth block']);
+  this.executeCharTest('▕', ['right one eighth block', 'right one eighth block', 'right one eighth block']);
+  this.executeCharTest('▖', ['quadrant lower left', 'quadrant lower left', 'quadrant lower left']);
+  this.executeCharTest('▗', ['quadrant lower right', 'quadrant lower right', 'quadrant lower right']);
+  this.executeCharTest('▘', ['quadrant upper left', 'quadrant upper left', 'quadrant upper left']);
+  this.executeCharTest('▙', ['quadrant upper left and lower left and lower right', 'quadrant upper left and lower left and lower right', 'quadrant upper left and lower left and lower right']);
+  this.executeCharTest('▚', ['quadrant upper left and lower right', 'quadrant upper left and lower right', 'quadrant upper left and lower right']);
+  this.executeCharTest('▛', ['quadrant upper left and upper right and lower left', 'quadrant upper left and upper right and lower left', 'quadrant upper left and upper right and lower left']);
+  this.executeCharTest('▜', ['quadrant upper left and upper right and lower right', 'quadrant upper left and upper right and lower right', 'quadrant upper left and upper right and lower right']);
+  this.executeCharTest('▝', ['quadrant upper right', 'quadrant upper right', 'quadrant upper right']);
+  this.executeCharTest('▞', ['quadrant upper right and lower left', 'quadrant upper right and lower left', 'quadrant upper right and lower left']);
+  this.executeCharTest('▟', ['quadrant upper right and lower left and lower right', 'quadrant upper right and lower left and lower right', 'quadrant upper right and lower left and lower right']);
+  this.executeCharTest('■', ['petit carré noir', 'petit carré noir', 'petit carré noir']);
+  this.executeCharTest('□', ['carré blanc', 'carré blanc', 'carré blanc']);
+  this.executeCharTest('▢', ['white square with rounded corners', 'white square with rounded corners', 'white square with rounded corners']);
+  this.executeCharTest('▣', ['white square containing black small square', 'white square containing black small square', 'white square containing black small square']);
+  this.executeCharTest('▤', ['square with horizontal fill', 'square with horizontal fill', 'square with horizontal fill']);
+  this.executeCharTest('▥', ['square with vertical fill', 'square with vertical fill', 'square with vertical fill']);
+  this.executeCharTest('▦', ['square with orthogonal crosshatch fill', 'square with orthogonal crosshatch fill', 'square with orthogonal crosshatch fill']);
+  this.executeCharTest('▧', ['square with upper left to lower right fill', 'square with upper left to lower right fill', 'square with upper left to lower right fill']);
+  this.executeCharTest('▨', ['square with upper right to lower left fill', 'square with upper right to lower left fill', 'square with upper right to lower left fill']);
+  this.executeCharTest('▩', ['square with diagonal crosshatch fill', 'square with diagonal crosshatch fill', 'square with diagonal crosshatch fill']);
+  this.executeCharTest('▪', ['petit carré noir', 'petit carré noir', 'petit carré noir']);
+  this.executeCharTest('▫', ['petit carré blanc', 'petit carré blanc', 'petit carré blanc']);
+  this.executeCharTest('▬', ['black rectangle', 'black rectangle', 'black rectangle']);
+  this.executeCharTest('▭', ['rectangle blanc', 'rectangle blanc', 'rectangle blanc']);
+  this.executeCharTest('▮', ['rectangle vertical noir', 'rectangle vertical noir', 'rectangle vertical noir']);
+  this.executeCharTest('▯', ['white vertical rectangle', 'white vertical rectangle', 'white vertical rectangle']);
+  this.executeCharTest('▰', ['black parallelogram', 'black parallelogram', 'black parallelogram']);
+  this.executeCharTest('▱', ['parallélogramme blanc', 'parallélogramme blanc', 'parallélogramme blanc']);
+  this.executeCharTest('▲', ['petit triangle noir pointant vers le haut', 'petit triangle noir pointant vers le haut', 'petit triangle noir pointant vers le haut']);
+  this.executeCharTest('△', ['triangle blanc pointant vers le haut', 'triangle blanc pointant vers le haut', 'triangle blanc pointant vers le haut']);
+  this.executeCharTest('▴', ['petit triangle noir pointant vers le haut', 'petit triangle noir pointant vers le haut', 'petit triangle noir pointant vers le haut']);
+  this.executeCharTest('▵', ['petit triangle blanc pointant vers le haut', 'petit triangle blanc pointant vers le haut', 'petit triangle blanc pointant vers le haut']);
+  this.executeCharTest('▶', ['petit triangle noir pointant vers la droite', 'petit triangle noir pointant vers la droite', 'petit triangle noir pointant vers la droite']);
+  this.executeCharTest('▷', ['triangle blanc pointant vers la droite', 'triangle blanc pointant vers la droite', 'triangle blanc pointant vers la droite']);
+  this.executeCharTest('▸', ['petit triangle noir pointant vers la droite', 'petit triangle noir pointant vers la droite', 'petit triangle noir pointant vers la droite']);
+  this.executeCharTest('▹', ['petit triangle blanc pointant vers la droite', 'petit triangle blanc pointant vers la droite', 'petit triangle blanc pointant vers la droite']);
+  this.executeCharTest('►', ['black right pointing pointer', 'black right pointing pointer', 'black right pointing pointer']);
+  this.executeCharTest('▻', ['white right pointing pointer', 'white right pointing pointer', 'white right pointing pointer']);
+  this.executeCharTest('▼', ['petit triangle noir pointant vers le bas', 'petit triangle noir pointant vers le bas', 'petit triangle noir pointant vers le bas']);
+  this.executeCharTest('▽', ['triangle blanc pointant vers le bas', 'triangle blanc pointant vers le bas', 'triangle blanc pointant vers le bas']);
+  this.executeCharTest('▾', ['petit triangle noir pointant vers le bas', 'petit triangle noir pointant vers le bas', 'petit triangle noir pointant vers le bas']);
+  this.executeCharTest('▿', ['petit triangle blanc pointant vers le bas', 'petit triangle blanc pointant vers le bas', 'petit triangle blanc pointant vers le bas']);
+  this.executeCharTest('◀', ['petit triangle noir pointant vers la gauche', 'petit triangle noir pointant vers la gauche', 'petit triangle noir pointant vers la gauche']);
+  this.executeCharTest('◁', ['petit triangle blanc pointant vers la gauche', 'petit triangle blanc pointant vers la gauche', 'petit triangle blanc pointant vers la gauche']);
+  this.executeCharTest('◂', ['petit triangle noir pointant vers la gauche', 'petit triangle noir pointant vers la gauche', 'petit triangle noir pointant vers la gauche']);
+  this.executeCharTest('◃', ['petit triangle blanc pointant vers la gauche', 'petit triangle blanc pointant vers la gauche', 'petit triangle blanc pointant vers la gauche']);
+  this.executeCharTest('◄', ['pointeur noir vers la gauche', 'pointeur noir vers la gauche', 'pointeur noir vers la gauche']);
+  this.executeCharTest('◅', ['pointeur blanc vers la gauche', 'pointeur blanc vers la gauche', 'pointeur blanc vers la gauche']);
+  this.executeCharTest('◆', ['losange noir', 'losange noir', 'losange noir']);
+  this.executeCharTest('◇', ['losange blanc', 'losange blanc', 'losange blanc']);
+  this.executeCharTest('◈', ['losange blanc évidé', 'losange blanc évidé', 'losange blanc évidé']);
+  this.executeCharTest('◉', ['cercle blanc évidé', 'cercle blanc évidé', 'cercle blanc évidé']);
+  this.executeCharTest('◊', ['losange', 'losange', 'losange']);
+  this.executeCharTest('○', ['cercle blanc', 'cercle blanc', 'cercle blanc']);
+  this.executeCharTest('◌', ['cercle en pointillés', 'cercle en pointillés', 'cercle en pointillés']);
+  this.executeCharTest('◍', ['cercle hachuré verticalement', 'cercle hachuré verticalement', 'cercle hachuré verticalement']);
+  this.executeCharTest('◎', ['deux cercles concentriques', 'deux cercles concentriques', 'deux cercles concentriques']);
+  this.executeCharTest('●', ['cercle noir', 'cercle noir', 'cercle noir']);
+  this.executeCharTest('◐', ['cercle avec moitié gauche noire', 'cercle avec moitié gauche noire', 'cercle avec moitié gauche noire']);
+  this.executeCharTest('◑', ['cercle avec moitié droite noire', 'cercle avec moitié droite noire', 'cercle avec moitié droite noire']);
+  this.executeCharTest('◒', ['cercle avec moitié inférieure', 'cercle avec moitié inférieure', 'cercle avec moitié inférieure']);
+  this.executeCharTest('◓', ['cercle avec moitié supérieure', 'cercle avec moitié supérieure', 'cercle avec moitié supérieure']);
+  this.executeCharTest('◔', ['cercle avec quadrant supérieur droit noir', 'cercle avec quadrant supérieur droit noir', 'cercle avec quadrant supérieur droit noir']);
+  this.executeCharTest('◕', ['disque avec quadrant supérieur gauche blanc', 'disque avec quadrant supérieur gauche blanc', 'disque avec quadrant supérieur gauche blanc']);
+  this.executeCharTest('◖', ['demi-disque gauche noir', 'demi-disque gauche noir', 'demi-disque gauche noir']);
+  this.executeCharTest('◗', ['demi-disque droite noir', 'demi-disque droite noir', 'demi-disque droite noir']);
+  this.executeCharTest('◘', ['point noir-au-blanc', 'point noir-au-blanc', 'point noir-au-blanc']);
+  this.executeCharTest('◙', ['cercle noir-au-blanc', 'cercle noir-au-blanc', 'cercle noir-au-blanc']);
+  this.executeCharTest('◚', ['demi-cercle supérieur noir-au- blanc', 'demi-cercle supérieur noir-au- blanc', 'demi-cercle supérieur noir-au- blanc']);
+  this.executeCharTest('◛', ['demi-cercle inférieur noir-au- blanc', 'demi-cercle inférieur noir-au- blanc', 'demi-cercle inférieur noir-au- blanc']);
+  this.executeCharTest('◜', ['arc de cercle dans le quadrant supérieur gauchearc de cercle dans le quadrant supérieur gauche', 'arc de cercle dans le quadrant supérieur gauchearc de cercle dans le quadrant supérieur gauche', 'arc de cercle dans le quadrant supérieur gauchearc de cercle dans le quadrant supérieur gauche']);
+  this.executeCharTest('◝', ['arc de cercle dans le quadrant supérieur droit', 'arc de cercle dans le quadrant supérieur droit', 'arc de cercle dans le quadrant supérieur droit']);
+  this.executeCharTest('◞', ['arc de cercle dans le quadrant inférieur droit', 'arc de cercle dans le quadrant inférieur droit', 'arc de cercle dans le quadrant inférieur droit']);
+  this.executeCharTest('◟', ['arc de cercle dans le quadrant inférieur gauche', 'arc de cercle dans le quadrant inférieur gauche', 'arc de cercle dans le quadrant inférieur gauche']);
+  this.executeCharTest('◠', ['demi-cercle supérieur', 'demi-cercle supérieur', 'demi-cercle supérieur']);
+  this.executeCharTest('◡', ['demi-cercle inférieur', 'demi-cercle inférieur', 'demi-cercle inférieur']);
+  this.executeCharTest('◢', ['coin triangulaire noir inférieur droit', 'coin triangulaire noir inférieur droit', 'coin triangulaire noir inférieur droit']);
+  this.executeCharTest('◣', ['coin triangulaire noir inférieur gauche', 'coin triangulaire noir inférieur gauche', 'coin triangulaire noir inférieur gauche']);
+  this.executeCharTest('◤', ['coin triangulaire noir supérieur gauche', 'coin triangulaire noir supérieur gauche', 'coin triangulaire noir supérieur gauche']);
+  this.executeCharTest('◥', ['coin triangulaire noir supérieur droit', 'coin triangulaire noir supérieur droit', 'coin triangulaire noir supérieur droit']);
+  this.executeCharTest('◦', ['opérateur rond', 'opérateur rond', 'opérateur rond']);
+  this.executeCharTest('◧', ['carré à moitié gauche noire', 'carré à moitié gauche noire', 'carré à moitié gauche noire']);
+  this.executeCharTest('◨', ['carré à moitié droite noire', 'carré à moitié droite noire', 'carré à moitié droite noire']);
+  this.executeCharTest('◩', ['carré à moitié supérieure gauche noire', 'carré à moitié supérieure gauche noire', 'carré à moitié supérieure gauche noire']);
+  this.executeCharTest('◪', ['carré à moitié inférieure droite noire', 'carré à moitié inférieure droite noire', 'carré à moitié inférieure droite noire']);
+  this.executeCharTest('◫', ['carré blanc à ligne bissectrice verticale', 'carré blanc à ligne bissectrice verticale', 'carré blanc à ligne bissectrice verticale']);
+  this.executeCharTest('◬', ['triangle blanc pointant vers le haut pointé', 'triangle blanc pointant vers le haut pointé', 'triangle blanc pointant vers le haut pointé']);
+  this.executeCharTest('◭', ['triangle pointe vers le haut À moitié gauche noire', 'triangle pointe vers le haut À moitié gauche noire', 'triangle pointe vers le haut À moitié gauche noire']);
+  this.executeCharTest('◮', ['triangle pointe vers le haut À moitié droite noire', 'triangle pointe vers le haut À moitié droite noire', 'triangle pointe vers le haut À moitié droite noire']);
+  this.executeCharTest('◯', ['grand cercle', 'grand cercle', 'grand cercle']);
+  this.executeCharTest('◰', ['white square with upper left quadrant', 'white square with upper left quadrant', 'white square with upper left quadrant']);
+  this.executeCharTest('◱', ['white square with lower left quadrant', 'white square with lower left quadrant', 'white square with lower left quadrant']);
+  this.executeCharTest('◲', ['white square with lower right quadrant', 'white square with lower right quadrant', 'white square with lower right quadrant']);
+  this.executeCharTest('◳', ['white square with upper right quadrant', 'white square with upper right quadrant', 'white square with upper right quadrant']);
+  this.executeCharTest('◴', ['white circle with upper left quadrant', 'white circle with upper left quadrant', 'white circle with upper left quadrant']);
+  this.executeCharTest('◵', ['white circle with lower left quadrant', 'white circle with lower left quadrant', 'white circle with lower left quadrant']);
+  this.executeCharTest('◶', ['white circle with lower right quadrant', 'white circle with lower right quadrant', 'white circle with lower right quadrant']);
+  this.executeCharTest('◷', ['white circle with upper right quadrant', 'white circle with upper right quadrant', 'white circle with upper right quadrant']);
+  this.executeCharTest('◸', ['triangle rectangle supérieur gauche', 'triangle rectangle supérieur gauche', 'triangle rectangle supérieur gauche']);
+  this.executeCharTest('◹', ['triangle rectangle supérieur droit', 'triangle rectangle supérieur droit', 'triangle rectangle supérieur droit']);
+  this.executeCharTest('◺', ['triangle rectangle inférieur gauche', 'triangle rectangle inférieur gauche', 'triangle rectangle inférieur gauche']);
+  this.executeCharTest('◻', ['carré moyen blanc', 'carré moyen blanc', 'carré moyen blanc']);
+  this.executeCharTest('◼', ['carré moyen noir', 'carré moyen noir', 'carré moyen noir']);
+  this.executeCharTest('◽', ['carré moyen blanc', 'carré moyen blanc', 'carré moyen blanc']);
+  this.executeCharTest('◾', ['carré moyen noir', 'carré moyen noir', 'carré moyen noir']);
+  this.executeCharTest('◿', ['triangle rectangle inférieur droit', 'triangle rectangle inférieur droit', 'triangle rectangle inférieur droit']);
+  this.executeCharTest('⬒', ['square with top half black', 'square with top half black', 'square with top half black']);
+  this.executeCharTest('⬓', ['square with bottom half black', 'square with bottom half black', 'square with bottom half black']);
+  this.executeCharTest('⬔', ['square with upper right diagonal half black', 'square with upper right diagonal half black', 'square with upper right diagonal half black']);
+  this.executeCharTest('⬕', ['square with lower left diagonal half black', 'square with lower left diagonal half black', 'square with lower left diagonal half black']);
+  this.executeCharTest('⬖', ['diamond with left half black', 'diamond with left half black', 'diamond with left half black']);
+  this.executeCharTest('⬗', ['diamond with right half black', 'diamond with right half black', 'diamond with right half black']);
+  this.executeCharTest('⬘', ['diamond with top half black', 'diamond with top half black', 'diamond with top half black']);
+  this.executeCharTest('⬙', ['diamond with bottom half black', 'diamond with bottom half black', 'diamond with bottom half black']);
+  this.executeCharTest('⬚', ['dotted square', 'dotted square', 'dotted square']);
+  this.executeCharTest('⬛', ['black large square', 'black large square', 'black large square']);
+  this.executeCharTest('⬜', ['white large square', 'white large square', 'white large square']);
+  this.executeCharTest('⬝', ['black very small square', 'black very small square', 'black very small square']);
+  this.executeCharTest('⬞', ['white very small square', 'white very small square', 'white very small square']);
+  this.executeCharTest('⬟', ['black pentagon', 'black pentagon', 'black pentagon']);
+  this.executeCharTest('⬠', ['white pentagon', 'white pentagon', 'white pentagon']);
+  this.executeCharTest('⬡', ['white hexagon', 'white hexagon', 'white hexagon']);
+  this.executeCharTest('⬢', ['black hexagon', 'black hexagon', 'black hexagon']);
+  this.executeCharTest('⬣', ['horizontal black hexagon', 'horizontal black hexagon', 'horizontal black hexagon']);
+  this.executeCharTest('⬤', ['black large circle', 'black large circle', 'black large circle']);
+  this.executeCharTest('⬥', ['black medium diamond', 'black medium diamond', 'black medium diamond']);
+  this.executeCharTest('⬦', ['white medium diamond', 'white medium diamond', 'white medium diamond']);
+  this.executeCharTest('⬧', ['black medium lozenge', 'black medium lozenge', 'black medium lozenge']);
+  this.executeCharTest('⬨', ['white medium lozenge', 'white medium lozenge', 'white medium lozenge']);
+  this.executeCharTest('⬩', ['black small diamond', 'black small diamond', 'black small diamond']);
+  this.executeCharTest('⬪', ['black small lozenge', 'black small lozenge', 'black small lozenge']);
+  this.executeCharTest('⬫', ['white small lozenge', 'white small lozenge', 'white small lozenge']);
+  this.executeCharTest('⬬', ['black horizontal ellipse', 'black horizontal ellipse', 'black horizontal ellipse']);
+  this.executeCharTest('⬭', ['white horizontal ellipse', 'white horizontal ellipse', 'white horizontal ellipse']);
+  this.executeCharTest('⬮', ['black vertical ellipse', 'black vertical ellipse', 'black vertical ellipse']);
+  this.executeCharTest('⬯', ['white vertical ellipse', 'white vertical ellipse', 'white vertical ellipse']);
+  this.executeCharTest('⭐', ['étoile blanche moyenne', 'étoile blanche moyenne', 'étoile blanche moyenne']);
+  this.executeCharTest('⭑', ['petite étoile noire', 'petite étoile noire', 'petite étoile noire']);
+  this.executeCharTest('⭒', ['petite étoile blanche', 'petite étoile blanche', 'petite étoile blanche']);
+  this.executeCharTest('⭓', ['black right pointing pentagon', 'black right pointing pentagon', 'black right pointing pentagon']);
+  this.executeCharTest('⭔', ['white right pointing pentagon', 'white right pointing pentagon', 'white right pointing pentagon']);
+  this.executeCharTest('⭕', ['heavy large circle', 'heavy large circle', 'heavy large circle']);
+  this.executeCharTest('⭖', ['heavy oval with oval inside', 'heavy oval with oval inside', 'heavy oval with oval inside']);
+  this.executeCharTest('⭗', ['heavy circle with circle inside', 'heavy circle with circle inside', 'heavy circle with circle inside']);
+  this.executeCharTest('⭘', ['heavy circle', 'heavy circle', 'heavy circle']);
+  this.executeCharTest('⭙', ['heavy circled saltire', 'heavy circled saltire', 'heavy circled saltire']);
+  this.executeCharTest('↼', ['harpon gauche avec dent dressée', 'harpon gauche avec dent dressée', 'harpon gauche avec dent dressée']);
+  this.executeCharTest('↽', ['harpon gauche avec dent baissée', 'harpon gauche avec dent baissée', 'harpon gauche avec dent baissée']);
+  this.executeCharTest('↾', ['harpon vers le haut avec dent droite', 'harpon vers le haut avec dent droite', 'harpon vers le haut avec dent droite']);
+  this.executeCharTest('↿', ['harpon vers le haut avec dent gauche', 'harpon vers le haut avec dent gauche', 'harpon vers le haut avec dent gauche']);
+  this.executeCharTest('⇀', ['harpon droit avec dent dressée', 'harpon droit avec dent dressée', 'harpon droit avec dent dressée']);
+  this.executeCharTest('⇁', ['harpon droit avec dent baissée', 'harpon droit avec dent baissée', 'harpon droit avec dent baissée']);
+  this.executeCharTest('⇂', ['harpon vers le bas avec dent droite', 'harpon vers le bas avec dent droite', 'harpon vers le bas avec dent droite']);
+  this.executeCharTest('⇃', ['harpon vers le bas avec dent gauche', 'harpon vers le bas avec dent gauche', 'harpon vers le bas avec dent gauche']);
+  this.executeCharTest('⇋', ['harpon gauche par-dessus harpon droit', 'harpon gauche par-dessus harpon droit', 'harpon gauche par-dessus harpon droit']);
+  this.executeCharTest('⇌', ['harpon droit par-dessus harpon gauche', 'harpon droit par-dessus harpon gauche', 'harpon droit par-dessus harpon gauche']);
+  this.executeCharTest('⥊', ['javelot à dents gauche dressée et droite baissée', 'javelot à dents gauche dressée et droite baissée', 'javelot à dents gauche dressée et droite baissée']);
+  this.executeCharTest('⥋', ['javelot à dents gauche baissée et droite dressée', 'javelot à dents gauche baissée et droite dressée', 'javelot à dents gauche baissée et droite dressée']);
+  this.executeCharTest('⥌', ['up barb right down barb left harpoon', 'up barb right down barb left harpoon', 'up barb right down barb left harpoon']);
+  this.executeCharTest('⥍', ['up barb left down barb right harpoon', 'up barb left down barb right harpoon', 'up barb left down barb right harpoon']);
+  this.executeCharTest('⥎', ['javelot à dents droite et gauche dressées', 'javelot à dents droite et gauche dressées', 'javelot à dents droite et gauche dressées']);
+  this.executeCharTest('⥏', ['javelot à dents supérieure et inférieure droites', 'javelot à dents supérieure et inférieure droites', 'javelot à dents supérieure et inférieure droites']);
+  this.executeCharTest('⥐', ['javelot à dents droite et gauche baissées', 'javelot à dents droite et gauche baissées', 'javelot à dents droite et gauche baissées']);
+  this.executeCharTest('⥑', ['javelot à dents supérieure et inférieure gauches', 'javelot à dents supérieure et inférieure gauches', 'javelot à dents supérieure et inférieure gauches']);
+  this.executeCharTest('⥒', ['harpon gauche à dent dressée contre taquet', 'harpon gauche à dent dressée contre taquet', 'harpon gauche à dent dressée contre taquet']);
+  this.executeCharTest('⥓', ['harpon droit à dent dressée contre taquet', 'harpon droit à dent dressée contre taquet', 'harpon droit à dent dressée contre taquet']);
+  this.executeCharTest('⥔', ['harpon vers le haut à dent droite contre taquet', 'harpon vers le haut à dent droite contre taquet', 'harpon vers le haut à dent droite contre taquet']);
+  this.executeCharTest('⥕', ['harpon vers le bas à dent droite contre taquet', 'harpon vers le bas à dent droite contre taquet', 'harpon vers le bas à dent droite contre taquet']);
+  this.executeCharTest('⥖', ['harpon gauche à dent baissée contre taquet', 'harpon gauche à dent baissée contre taquet', 'harpon gauche à dent baissée contre taquet']);
+  this.executeCharTest('⥗', ['harpon droit à dent baissée contre taquet', 'harpon droit à dent baissée contre taquet', 'harpon droit à dent baissée contre taquet']);
+  this.executeCharTest('⥘', ['harpon vers le haut à dent gauche contre taquet', 'harpon vers le haut à dent gauche contre taquet', 'harpon vers le haut à dent gauche contre taquet']);
+  this.executeCharTest('⥙', ['harpon vers le bas à dent gauche contre taquet', 'harpon vers le bas à dent gauche contre taquet', 'harpon vers le bas à dent gauche contre taquet']);
+  this.executeCharTest('⥚', ['harpon gauche à dent dressée depuis taquet', 'harpon gauche à dent dressée depuis taquet', 'harpon gauche à dent dressée depuis taquet']);
+  this.executeCharTest('⥛', ['harpon droit à dent dressée depuis taquet', 'harpon droit à dent dressée depuis taquet', 'harpon droit à dent dressée depuis taquet']);
+  this.executeCharTest('⥜', ['harpon vers le haut à dent droite depuis taquet', 'harpon vers le haut à dent droite depuis taquet', 'harpon vers le haut à dent droite depuis taquet']);
+  this.executeCharTest('⥝', ['harpon vers le bas à dent droite depuis taquet', 'harpon vers le bas à dent droite depuis taquet', 'harpon vers le bas à dent droite depuis taquet']);
+  this.executeCharTest('⥞', ['harpon gauche à dent baissée depuis taquet', 'harpon gauche à dent baissée depuis taquet', 'harpon gauche à dent baissée depuis taquet']);
+  this.executeCharTest('⥟', ['harpon droit à dent baissée depuis taquet', 'harpon droit à dent baissée depuis taquet', 'harpon droit à dent baissée depuis taquet']);
+  this.executeCharTest('⥠', ['harpon vers le haut à dent gauche depuis taquet', 'harpon vers le haut à dent gauche depuis taquet', 'harpon vers le haut à dent gauche depuis taquet']);
+  this.executeCharTest('⥡', ['harpon vers le bas à dent gauche depuis taquet', 'harpon vers le bas à dent gauche depuis taquet', 'harpon vers le bas à dent gauche depuis taquet']);
+  this.executeCharTest('⥢', ['harpon gauche à dent dressée sur harpon gauche à dent baissée', 'harpon gauche à dent dressée sur harpon gauche à dent baissée', 'harpon gauche à dent dressée sur harpon gauche à dent baissée']);
+  this.executeCharTest('⥣', ['harpon vers le haut à dent gauche à côté de harpon vers le haut à dent droite', 'harpon vers le haut à dent gauche à côté de harpon vers le haut à dent droite', 'harpon vers le haut à dent gauche à côté de harpon vers le haut à dent droite']);
+  this.executeCharTest('⥤', ['harpon droit à dent dressée par-dessus harpon droit à dent baissée', 'harpon droit à dent dressée par-dessus harpon droit à dent baissée', 'harpon droit à dent dressée par-dessus harpon droit à dent baissée']);
+  this.executeCharTest('⥥', ['harpon vers le bas à dent gauche à côté de harpon vers le bas à dent droite', 'harpon vers le bas à dent gauche à côté de harpon vers le bas à dent droite', 'harpon vers le bas à dent gauche à côté de harpon vers le bas à dent droite']);
+  this.executeCharTest('⥦', ['harpon à dent gauche dressée par-dessus harpon à dent droite dressée', 'harpon à dent gauche dressée par-dessus harpon à dent droite dressée', 'harpon à dent gauche dressée par-dessus harpon à dent droite dressée']);
+  this.executeCharTest('⥧', ['harpon à dent gauche baissée par-dessus harpon à dent droite baissée', 'harpon à dent gauche baissée par-dessus harpon à dent droite baissée', 'harpon à dent gauche baissée par-dessus harpon à dent droite baissée']);
+  this.executeCharTest('⥨', ['harpon à dent droite dressée par-dessus harpon à dent gauche dressée', 'harpon à dent droite dressée par-dessus harpon à dent gauche dressée', 'harpon à dent droite dressée par-dessus harpon à dent gauche dressée']);
+  this.executeCharTest('⥩', ['harpon à dent droite baissée par-dessus harpon à dent gauche baissée', 'harpon à dent droite baissée par-dessus harpon à dent gauche baissée', 'harpon à dent droite baissée par-dessus harpon à dent gauche baissée']);
+  this.executeCharTest('⥪', ['harpon à dent gauche dressée par-dessus long trait', 'harpon à dent gauche dressée par-dessus long trait', 'harpon à dent gauche dressée par-dessus long trait']);
+  this.executeCharTest('⥫', ['long trait par-dessus harpon à dent gauche baissée', 'long trait par-dessus harpon à dent gauche baissée', 'long trait par-dessus harpon à dent gauche baissée']);
+  this.executeCharTest('⥬', ['harpon à dent droite dressée par-dessus long trait', 'harpon à dent droite dressée par-dessus long trait', 'harpon à dent droite dressée par-dessus long trait']);
+  this.executeCharTest('⥭', ['long trait par-dessus harpon à dent droite baissée', 'long trait par-dessus harpon à dent droite baissée', 'long trait par-dessus harpon à dent droite baissée']);
+  this.executeCharTest('⥮', ['harpon vers le haut à dent gauche à côté de harpon vers le bas à dent droite', 'harpon vers le haut à dent gauche à côté de harpon vers le bas à dent droite', 'harpon vers le haut à dent gauche à côté de harpon vers le bas à dent droite']);
+  this.executeCharTest('⥯', ['harpon vers le bas à dent gauche à côté de harpon vers le haut à dent droite', 'harpon vers le bas à dent gauche à côté de harpon vers le haut à dent droite', 'harpon vers le bas à dent gauche à côté de harpon vers le haut à dent droite']);
+  this.executeCharTest('⥼', ['ancre gauche', 'ancre gauche', 'ancre gauche']);
+  this.executeCharTest('⥽', ['ancre droite', 'ancre droite', 'ancre droite']);
+  this.executeCharTest('⥾', ['ancre vers le haut', 'ancre vers le haut', 'ancre vers le haut']);
+  this.executeCharTest('⥿', ['ancre vers le bas', 'ancre vers le bas', 'ancre vers le bas']);
+  this.executeCharTest('ℏ', ['constante de planck sur deux pi', 'constante de planck sur deux pi', 'constante de planck sur deux pi']);
+  this.executeCharTest('℔', ['l b bar', 'l b bar', 'l b bar']);
+  this.executeCharTest('№', ['symbole numéro', 'symbole numéro', 'symbole numéro']);
+  this.executeCharTest('℗', ['copyright de programme sonore', 'copyright de programme sonore', 'copyright de programme sonore']);
+  this.executeCharTest('℞', ['ordonnances', 'ordonnances', 'ordonnances']);
+  this.executeCharTest('℟', ['response', 'response', 'response']);
+  this.executeCharTest('℠', ['service mark', 'service mark', 'service mark']);
+  this.executeCharTest('℡', ['telephone sign', 'telephone sign', 'telephone sign']);
+  this.executeCharTest('™', ['symbole anglais marque de commerce', 'symbole anglais marque de commerce', 'symbole anglais marque de commerce']);
+  this.executeCharTest('℣', ['versicle', 'versicle', 'versicle']);
+  this.executeCharTest('℥', ['symbole once', 'symbole once', 'symbole once']);
+  this.executeCharTest('Ω', ['ohm', 'ohm', 'ohm']);
+  this.executeCharTest('℧', ['ohm culbuté', 'ohm culbuté', 'ohm culbuté']);
+  this.executeCharTest('K', ['degré kelvin', 'degré kelvin', 'degré kelvin']);
+  this.executeCharTest('Å', ['angstroms', 'angstroms', 'angstroms']);
+  this.executeCharTest('℮', ['estimated', 'estimated', 'estimated']);
+  this.executeCharTest('Ⅎ', ['f culbuté majuscule', 'f culbuté majuscule', 'f culbuté majuscule']);
+  this.executeCharTest('ℹ', ['information source', 'information source', 'information source']);
+  this.executeCharTest('℺', ['rotated upper Q', 'rotated upper Q', 'rotated upper Q']);
+  this.executeCharTest('℻', ['facsimile sign', 'facsimile sign', 'facsimile sign']);
+  this.executeCharTest('⅁', ['turned sans serif upper G', 'turned sans serif upper G', 'turned sans serif upper G']);
+  this.executeCharTest('⅂', ['turned sans serif upper L', 'turned sans serif upper L', 'turned sans serif upper L']);
+  this.executeCharTest('⅃', ['reversed sans serif upper L', 'reversed sans serif upper L', 'reversed sans serif upper L']);
+  this.executeCharTest('⅄', ['turned sans serif upper Y', 'turned sans serif upper Y', 'turned sans serif upper Y']);
+  this.executeCharTest('!', ['factorielle', 'factorielle', 'factorielle']);
+  this.executeCharTest('#', ['dièse', 'dièse', 'dièse']);
+  this.executeCharTest('$', ['dollars', 'dollars', 'dollars']);
+  this.executeCharTest('%', ['pourcent', 'pourcent', 'pourcent']);
+  this.executeCharTest('&', ['esperluette', 'esperluette', 'esperluette']);
+  this.executeCharTest('\'', ['prime', 'prime', 'prime']);
+  this.executeCharTest('*', ['astérisque', 'astérisque', 'astérisque']);
+  this.executeCharTest('+', ['plus', 'plus', 'plus']);
+  this.executeCharTest(',', ['virgule', 'virgule', 'virgule']);
+  this.executeCharTest('-', ['moins', 'moins', 'moins']);
+  this.executeCharTest('.', ['point', 'point', 'point']);
+  this.executeCharTest('/', ['barre oblique', 'barre oblique', 'barre oblique']);
+  this.executeCharTest(':', ['deux points', 'deux points', 'deux points']);
+  this.executeCharTest(';', ['point virgule', 'point virgule', 'point virgule']);
+  this.executeCharTest('<', ['inférieur à', 'inférieur à', 'inférieur à']);
+  this.executeCharTest('=', ['égale', 'égale', 'égale']);
+  this.executeCharTest('>', ['supérieur à', 'supérieur à', 'supérieur à']);
+  this.executeCharTest('?', ['point d\'interrogation', 'point d\'interrogation', 'point d\'interrogation']);
+  this.executeCharTest('@', ['arobase', 'arobase', 'arobase']);
+  this.executeCharTest('\\', ['barre oblique inversée', 'barre oblique inversée', 'barre oblique inversée']);
+  this.executeCharTest('^', ['circonflexe', 'circonflexe', 'circonflexe']);
+  this.executeCharTest('_', ['tiret bas', 'tiret bas', 'tiret bas']);
+  this.executeCharTest('`', ['accent grave', 'accent grave', 'accent grave']);
+  this.executeCharTest('|', ['barre verticale', 'barre verticale', 'barre verticale']);
+  this.executeCharTest('~', ['tilde', 'tilde', 'tilde']);
+  this.executeCharTest('¡', ['point d\'exclamation renversé', 'point d\'exclamation renversé', 'point d\'exclamation renversé']);
+  this.executeCharTest('¢', ['centimes', 'centimes', 'centimes']);
+  this.executeCharTest('£', ['livres', 'livres', 'livres']);
+  this.executeCharTest('¤', ['symbole monétaire', 'symbole monétaire', 'symbole monétaire']);
+  this.executeCharTest('¥', ['yen', 'yen', 'yen']);
+  this.executeCharTest('¦', ['barre déjointe', 'barre déjointe', 'barre déjointe']);
+  this.executeCharTest('§', ['paragraphe', 'paragraphe', 'paragraphe']);
+  this.executeCharTest('¨', ['tréma', 'tréma', 'tréma']);
+  this.executeCharTest('©', ['copyright', 'copyright', 'copyright']);
+  this.executeCharTest('ª', ['indicateur ordinal féminin', 'indicateur ordinal féminin', 'indicateur ordinal féminin']);
+  this.executeCharTest('«', ['guillemet chevron pointant gauche', 'guillemet chevron pointant gauche', 'guillemet chevron pointant gauche']);
+  this.executeCharTest('¬', ['négation', 'négation', 'négation']);
+  this.executeCharTest('®', ['symbole marque déposée', 'symbole marque déposée', 'symbole marque déposée']);
+  this.executeCharTest('¯', ['macron', 'macron', 'macron']);
+  this.executeCharTest('°', ['degrés', 'degrés', 'degrés']);
+  this.executeCharTest('±', ['plus ou moins', 'plus ou moins', 'plus ou moins']);
+  this.executeCharTest('´', ['accent aigu', 'accent aigu', 'accent aigu']);
+  this.executeCharTest('µ', ['symbole micro', 'symbole micro', 'symbole micro']);
+  this.executeCharTest('¶', ['fin de paragraphe', 'fin de paragraphe', 'fin de paragraphe']);
+  this.executeCharTest('·', ['point médian', 'point médian', 'point médian']);
+  this.executeCharTest('¸', ['cédille', 'cédille', 'cédille']);
+  this.executeCharTest('º', ['indicateur ordinal masculin', 'indicateur ordinal masculin', 'indicateur ordinal masculin']);
+  this.executeCharTest('»', ['guillemet chevron pointant droite', 'guillemet chevron pointant droite', 'guillemet chevron pointant droite']);
+  this.executeCharTest('¿', ['point d\'interrogation renversé', 'point d\'interrogation renversé', 'point d\'interrogation renversé']);
+  this.executeCharTest('×', ['multiplié par', 'multiplié par', 'multiplié par']);
+  this.executeCharTest('÷', ['divisé par', 'divisé par', 'divisé par']);
+  this.executeCharTest('˘', ['brève', 'brève', 'brève']);
+  this.executeCharTest('˙', ['point en chef', 'point en chef', 'point en chef']);
+  this.executeCharTest('˚', ['rond en chef', 'rond en chef', 'rond en chef']);
+  this.executeCharTest('˛', ['ogonek', 'ogonek', 'ogonek']);
+  this.executeCharTest('˜', ['tilde', 'tilde', 'tilde']);
+  this.executeCharTest('˝', ['double accent aigu', 'double accent aigu', 'double accent aigu']);
+  this.executeCharTest('‐', ['trait d\'union', 'trait d\'union', 'trait d\'union']);
+  this.executeCharTest('‑', ['non-breaking-hyphen', 'non-breaking-hyphen', 'non-breaking-hyphen']);
+  this.executeCharTest('‒', ['figure-dash', 'figure-dash', 'figure-dash']);
+  this.executeCharTest('–', ['trait d\'union insécable', 'trait d\'union insécable', 'trait d\'union insécable']);
+  this.executeCharTest('—', ['tiret numérique', 'tiret numérique', 'tiret numérique']);
+  this.executeCharTest('―', ['barre horizontalle', 'barre horizontalle', 'barre horizontalle']);
+  this.executeCharTest('‖', ['double ligne verticale', 'double ligne verticale', 'double ligne verticale']);
+  this.executeCharTest('‗', ['double-underscore', 'double-underscore', 'double-underscore']);
+  this.executeCharTest('‘', ['guillemet-apostrophe culbuté', 'guillemet-apostrophe culbuté', 'guillemet-apostrophe culbuté']);
+  this.executeCharTest('’', ['guillemet-apostrophe', 'guillemet-apostrophe', 'guillemet-apostrophe']);
+  this.executeCharTest('‚', ['guillemet-virgule inférieur', 'guillemet-virgule inférieur', 'guillemet-virgule inférieur']);
+  this.executeCharTest('‛', ['single-reversed-comma-quotation-mark', 'single-reversed-comma-quotation-mark', 'single-reversed-comma-quotation-mark']);
+  this.executeCharTest('“', ['guillemet-apostrophe double culbuté', 'guillemet-apostrophe double culbuté', 'guillemet-apostrophe double culbuté']);
+  this.executeCharTest('”', ['guillemet-apostrophe double', 'guillemet-apostrophe double', 'guillemet-apostrophe double']);
+  this.executeCharTest('„', ['guillemet double prime', 'guillemet double prime', 'guillemet double prime']);
+  this.executeCharTest('‟', ['double-reversed-comma-quotation-mark', 'double-reversed-comma-quotation-mark', 'double-reversed-comma-quotation-mark']);
+  this.executeCharTest('†', ['obèle', 'obèle', 'obèle']);
+  this.executeCharTest('‡', ['double obèle', 'double obèle', 'double obèle']);
+  this.executeCharTest('•', ['puce', 'puce', 'puce']);
+  this.executeCharTest('‣', ['triangular-bullet', 'triangular-bullet', 'triangular-bullet']);
+  this.executeCharTest('․', ['one-dot-leader', 'one-dot-leader', 'one-dot-leader']);
+  this.executeCharTest('‥', ['point de conduite double', 'point de conduite double', 'point de conduite double']);
+  this.executeCharTest('…', ['points de suspension', 'points de suspension', 'points de suspension']);
+  this.executeCharTest('‧', ['hyphenation-point', 'hyphenation-point', 'hyphenation-point']);
+  this.executeCharTest('‰', ['symbole pour mille', 'symbole pour mille', 'symbole pour mille']);
+  this.executeCharTest('‱', ['symbole pour dix mille', 'symbole pour dix mille', 'symbole pour dix mille']);
+  this.executeCharTest('′', ['prime', 'prime', 'prime']);
+  this.executeCharTest('″', ['double prime', 'double prime', 'double prime']);
+  this.executeCharTest('‴', ['triple prime', 'triple prime', 'triple prime']);
+  this.executeCharTest('‵', ['prime réfléchi', 'prime réfléchi', 'prime réfléchi']);
+  this.executeCharTest('‶', ['double prime réfléchi', 'double prime réfléchi', 'double prime réfléchi']);
+  this.executeCharTest('‷', ['reversed-triple-prime', 'reversed-triple-prime', 'reversed-triple-prime']);
+  this.executeCharTest('‸', ['caret', 'caret', 'caret']);
+  this.executeCharTest('‹', ['guillemet simple gauche', 'guillemet simple gauche', 'guillemet simple gauche']);
+  this.executeCharTest('›', ['guillemet simple droite', 'guillemet simple droite', 'guillemet simple droite']);
+  this.executeCharTest('※', ['reference-mark', 'reference-mark', 'reference-mark']);
+  this.executeCharTest('‼', ['double-exclamation-mark', 'double-exclamation-mark', 'double-exclamation-mark']);
+  this.executeCharTest('‽', ['interrobang', 'interrobang', 'interrobang']);
+  this.executeCharTest('‾', ['tiret en chef', 'tiret en chef', 'tiret en chef']);
+  this.executeCharTest('‿', ['undertie', 'undertie', 'undertie']);
+  this.executeCharTest('⁀', ['tirant en chef', 'tirant en chef', 'tirant en chef']);
+  this.executeCharTest('⁁', ['lambda d\'insertion', 'lambda d\'insertion', 'lambda d\'insertion']);
+  this.executeCharTest('⁂', ['asterism', 'asterism', 'asterism']);
+  this.executeCharTest('⁃', ['puce trait d\'union', 'puce trait d\'union', 'puce trait d\'union']);
+  this.executeCharTest('⁄', ['barre de fraction', 'barre de fraction', 'barre de fraction']);
+  this.executeCharTest('⁇', ['double-question-mark', 'double-question-mark', 'double-question-mark']);
+  this.executeCharTest('⁈', ['question-exclamation-mark', 'question-exclamation-mark', 'question-exclamation-mark']);
+  this.executeCharTest('⁉', ['exclamation-question-mark', 'exclamation-question-mark', 'exclamation-question-mark']);
+  this.executeCharTest('⁋', ['reversed-pilcrow', 'reversed-pilcrow', 'reversed-pilcrow']);
+  this.executeCharTest('⁌', ['black-leftwards-bullet', 'black-leftwards-bullet', 'black-leftwards-bullet']);
+  this.executeCharTest('⁍', ['black-rightwards-bullet', 'black-rightwards-bullet', 'black-rightwards-bullet']);
+  this.executeCharTest('⁎', ['low-asterisk', 'low-asterisk', 'low-asterisk']);
+  this.executeCharTest('⁏', ['point-virgule réfléchi', 'point-virgule réfléchi', 'point-virgule réfléchi']);
+  this.executeCharTest('⁐', ['resserrer', 'resserrer', 'resserrer']);
+  this.executeCharTest('⁑', ['two-asterisks-aligned-vertically', 'two-asterisks-aligned-vertically', 'two-asterisks-aligned-vertically']);
+  this.executeCharTest('⁒', ['commercial-minus', 'commercial-minus', 'commercial-minus']);
+  this.executeCharTest('⁓', ['swung-dash', 'swung-dash', 'swung-dash']);
+  this.executeCharTest('⁔', ['inverted-undertie', 'inverted-undertie', 'inverted-undertie']);
+  this.executeCharTest('⁕', ['flower-punctuation-mark', 'flower-punctuation-mark', 'flower-punctuation-mark']);
+  this.executeCharTest('⁖', ['three-dot-punctuation', 'three-dot-punctuation', 'three-dot-punctuation']);
+  this.executeCharTest('⁗', ['quadruple prime', 'quadruple prime', 'quadruple prime']);
+  this.executeCharTest('⁘', ['four-dot-punctuation', 'four-dot-punctuation', 'four-dot-punctuation']);
+  this.executeCharTest('⁙', ['five-dot-punctuation', 'five-dot-punctuation', 'five-dot-punctuation']);
+  this.executeCharTest('⁚', ['two-dot-punctuation', 'two-dot-punctuation', 'two-dot-punctuation']);
+  this.executeCharTest('⁛', ['four-dot-mark', 'four-dot-mark', 'four-dot-mark']);
+  this.executeCharTest('⁜', ['dotted-cross', 'dotted-cross', 'dotted-cross']);
+  this.executeCharTest('⁝', ['tricolon', 'tricolon', 'tricolon']);
+  this.executeCharTest('⁞', ['vertical-four-dots', 'vertical-four-dots', 'vertical-four-dots']);
+  this.executeCharTest('⁺', ['superscript-plus', 'superscript-plus', 'superscript-plus']);
+  this.executeCharTest('⁻', ['superscript-hyphen-minus', 'superscript-hyphen-minus', 'superscript-hyphen-minus']);
+  this.executeCharTest('⁼', ['superscript-equals', 'superscript-equals', 'superscript-equals']);
+  this.executeCharTest('⁽', ['superscript-opening-parenthesis', 'superscript-opening-parenthesis', 'superscript-opening-parenthesis']);
+  this.executeCharTest('⁾', ['superscript-closing-parenthesis', 'superscript-closing-parenthesis', 'superscript-closing-parenthesis']);
+  this.executeCharTest('₊', ['subscript-plus', 'subscript-plus', 'subscript-plus']);
+  this.executeCharTest('₋', ['subscript-hyphen-minus', 'subscript-hyphen-minus', 'subscript-hyphen-minus']);
+  this.executeCharTest('₌', ['subscript-equals', 'subscript-equals', 'subscript-equals']);
+  this.executeCharTest('₍', ['subscript-opening-parenthesis', 'subscript-opening-parenthesis', 'subscript-opening-parenthesis']);
+  this.executeCharTest('₎', ['subscript-closing-parenthesis', 'subscript-closing-parenthesis', 'subscript-closing-parenthesis']);
+  this.executeCharTest('⅊', ['property-line', 'property-line', 'property-line']);
+  this.executeCharTest('⅋', ['turned-ampersand', 'turned-ampersand', 'turned-ampersand']);
+  this.executeCharTest('⅌', ['per-sign', 'per-sign', 'per-sign']);
+  this.executeCharTest('⅍', ['aktieselskab', 'aktieselskab', 'aktieselskab']);
+  this.executeCharTest('ⅎ', ['turned-small-f', 'turned-small-f', 'turned-small-f']);
+  this.executeCharTest('∀', ['pour tous', 'pour tous', 'pour tous']);
+  this.executeCharTest('∁', ['complément', 'complément', 'complément']);
+  this.executeCharTest('∂', ['dérivée partielle', 'dérivée partielle', 'dérivée partielle']);
+  this.executeCharTest('∃', ['il existe', 'il existe', 'il existe']);
+  this.executeCharTest('∄', ['il n\'existe pas', 'il n\'existe pas', 'il n\'existe pas']);
+  this.executeCharTest('∅', ['ensemble vide', 'ensemble vide', 'ensemble vide']);
+  this.executeCharTest('∆', ['incrément', 'incrément', 'incrément']);
+  this.executeCharTest('∇', ['nabla', 'nabla', 'nabla']);
+  this.executeCharTest('∈', ['appartient à', 'appartient à', 'appartient à']);
+  this.executeCharTest('∉', ['n\'appartient pas à', 'n\'appartient pas à', 'n\'appartient pas à']);
+  this.executeCharTest('∊', ['appartient à', 'appartient à', 'appartient à']);
+  this.executeCharTest('∋', ['contient comme élément', 'contient comme élément', 'contient comme élément']);
+  this.executeCharTest('∌', ['ne contient pas comme élément', 'ne contient pas comme élément', 'ne contient pas comme élément']);
+  this.executeCharTest('∍', ['contient comme élément', 'contient comme élément', 'contient comme élément']);
+  this.executeCharTest('∎', ['ce qu\'il fallait démontrer', 'ce qu\'il fallait démontrer', 'ce qu\'il fallait démontrer']);
+  this.executeCharTest('∏', ['produit', 'produit', 'produit']);
+  this.executeCharTest('∐', ['coproduit', 'coproduit', 'coproduit']);
+  this.executeCharTest('∑', ['sommation', 'sommation', 'sommation']);
+  this.executeCharTest('−', ['moins', 'moins', 'moins']);
+  this.executeCharTest('∓', ['moins-ou-plus', 'moins-ou-plus', 'moins-ou-plus']);
+  this.executeCharTest('∔', ['plus pointé', 'plus pointé', 'plus pointé']);
+  this.executeCharTest('∕', ['division', 'division', 'division']);
+  this.executeCharTest('∖', ['différence d\'ensembles', 'différence d\'ensembles', 'différence d\'ensembles']);
+  this.executeCharTest('∗', ['opérateur astérisque', 'opérateur astérisque', 'opérateur astérisque']);
+  this.executeCharTest('∘', ['opérateur rond', 'opérateur rond', 'opérateur rond']);
+  this.executeCharTest('∙', ['point médian', 'point médian', 'point médian']);
+  this.executeCharTest('√', ['racine carrée', 'racine carrée', 'racine carrée']);
+  this.executeCharTest('∛', ['racine cubique', 'racine cubique', 'racine cubique']);
+  this.executeCharTest('∜', ['racine quatrième', 'racine quatrième', 'racine quatrième']);
+  this.executeCharTest('∝', ['proportionnel à', 'proportionnel à', 'proportionnel à']);
+  this.executeCharTest('∞', ['infini', 'infini', 'infini']);
+  this.executeCharTest('∟', ['angle droit', 'angle droit', 'angle droit']);
+  this.executeCharTest('∠', ['angle', 'angle', 'angle']);
+  this.executeCharTest('∡', ['angle mesuré', 'angle mesuré', 'angle mesuré']);
+  this.executeCharTest('∢', ['angle sphérique', 'angle sphérique', 'angle sphérique']);
+  this.executeCharTest('∣', ['est un diviseur de', 'est un diviseur de', 'est un diviseur de']);
+  this.executeCharTest('∤', ['n\'est pas un diviseur de', 'n\'est pas un diviseur de', 'n\'est pas un diviseur de']);
+  this.executeCharTest('∥', ['parallèle à', 'parallèle à', 'parallèle à']);
+  this.executeCharTest('∦', ['non parallèle à', 'non parallèle à', 'non parallèle à']);
+  this.executeCharTest('∧', ['et logique', 'et logique', 'et logique']);
+  this.executeCharTest('∨', ['ou logique', 'ou logique', 'ou logique']);
+  this.executeCharTest('∩', ['intersection', 'intersection', 'intersection']);
+  this.executeCharTest('∪', ['union', 'union', 'union']);
+  this.executeCharTest('∫', ['intégrale', 'intégrale', 'intégrale']);
+  this.executeCharTest('∬', ['intégrale double', 'intégrale double', 'intégrale double']);
+  this.executeCharTest('∭', ['intégrale triple', 'intégrale triple', 'intégrale triple']);
+  this.executeCharTest('∮', ['intégrale de contour', 'intégrale de contour', 'intégrale de contour']);
+  this.executeCharTest('∯', ['intégrale de surface', 'intégrale de surface', 'intégrale de surface']);
+  this.executeCharTest('∰', ['intégrale de volume', 'intégrale de volume', 'intégrale de volume']);
+  this.executeCharTest('∱', ['intégrale en sens négatif', 'intégrale en sens négatif', 'intégrale en sens négatif']);
+  this.executeCharTest('∲', ['intégrale de contour en sens négatif', 'intégrale de contour en sens négatif', 'intégrale de contour en sens négatif']);
+  this.executeCharTest('∳', ['intégrale de contour en sens positif', 'intégrale de contour en sens positif', 'intégrale de contour en sens positif']);
+  this.executeCharTest('∴', ['par conséquent', 'par conséquent', 'par conséquent']);
+  this.executeCharTest('∵', ['parce que', 'parce que', 'parce que']);
+  this.executeCharTest('∶', ['rapport', 'rapport', 'rapport']);
+  this.executeCharTest('∷', ['proportion', 'proportion', 'proportion']);
+  this.executeCharTest('∸', ['moins pointé', 'moins pointé', 'moins pointé']);
+  this.executeCharTest('∹', ['excès', 'excès', 'excès']);
+  this.executeCharTest('∺', ['proportion géométrique', 'proportion géométrique', 'proportion géométrique']);
+  this.executeCharTest('∻', ['homothétique', 'homothétique', 'homothétique']);
+  this.executeCharTest('∼', ['opérateur tilde', 'opérateur tilde', 'opérateur tilde']);
+  this.executeCharTest('∽', ['opérateur tilde renversé', 'opérateur tilde renversé', 'opérateur tilde renversé']);
+  this.executeCharTest('∾', ['s couché renversé', 's couché renversé', 's couché renversé']);
+  this.executeCharTest('∿', ['sinusoïde', 'sinusoïde', 'sinusoïde']);
+  this.executeCharTest('≀', ['produit couronne', 'produit couronne', 'produit couronne']);
+  this.executeCharTest('≁', ['non tilde', 'non tilde', 'non tilde']);
+  this.executeCharTest('≂', ['moins tilde', 'moins tilde', 'moins tilde']);
+  this.executeCharTest('≃', ['asymptotiquement égal à', 'asymptotiquement égal à', 'asymptotiquement égal à']);
+  this.executeCharTest('≄', ['non asymptotiquement égal à', 'non asymptotiquement égal à', 'non asymptotiquement égal à']);
+  this.executeCharTest('≅', ['approximativement égal à', 'approximativement égal à', 'approximativement égal à']);
+  this.executeCharTest('≆', ['approximativement mais non strictement égal à', 'approximativement mais non strictement égal à', 'approximativement mais non strictement égal à']);
+  this.executeCharTest('≇', ['ni approximativement ni strictement égal à', 'ni approximativement ni strictement égal à', 'ni approximativement ni strictement égal à']);
+  this.executeCharTest('≈', ['presque égal à', 'presque égal à', 'presque égal à']);
+  this.executeCharTest('≉', ['non presque égal à', 'non presque égal à', 'non presque égal à']);
+  this.executeCharTest('≊', ['presque égal ou égal à', 'presque égal ou égal à', 'presque égal ou égal à']);
+  this.executeCharTest('≋', ['triple tilde', 'triple tilde', 'triple tilde']);
+  this.executeCharTest('≌', ['entièrement égal à', 'entièrement égal à', 'entièrement égal à']);
+  this.executeCharTest('≍', ['équivalent à', 'équivalent à', 'équivalent à']);
+  this.executeCharTest('≎', ['géométriquement équivalent à', 'géométriquement équivalent à', 'géométriquement équivalent à']);
+  this.executeCharTest('≏', ['différence entre', 'différence entre', 'différence entre']);
+  this.executeCharTest('≐', ['tend vers la limite', 'tend vers la limite', 'tend vers la limite']);
+  this.executeCharTest('≑', ['géométriquement égal à', 'géométriquement égal à', 'géométriquement égal à']);
+  this.executeCharTest('≒', ['approximativement égal à ou image de', 'approximativement égal à ou image de', 'approximativement égal à ou image de']);
+  this.executeCharTest('≓', ['image de ou approximativement égal à', 'image de ou approximativement égal à', 'image de ou approximativement égal à']);
+  this.executeCharTest('≔', ['deux-points égal', 'deux-points égal', 'deux-points égal']);
+  this.executeCharTest('≕', ['égal deux-points', 'égal deux-points', 'égal deux-points']);
+  this.executeCharTest('≖', ['rond dans égal', 'rond dans égal', 'rond dans égal']);
+  this.executeCharTest('≗', ['égal avec rond en chef', 'égal avec rond en chef', 'égal avec rond en chef']);
+  this.executeCharTest('≘', ['correspond à', 'correspond à', 'correspond à']);
+  this.executeCharTest('≙', ['estime', 'estime', 'estime']);
+  this.executeCharTest('≚', ['équiangulaire à', 'équiangulaire à', 'équiangulaire à']);
+  this.executeCharTest('≛', ['égal avec étoile en chef', 'égal avec étoile en chef', 'égal avec étoile en chef']);
+  this.executeCharTest('≜', ['égal delta', 'égal delta', 'égal delta']);
+  this.executeCharTest('≝', ['égal par définition à', 'égal par définition à', 'égal par définition à']);
+  this.executeCharTest('≞', ['mesuré par', 'mesuré par', 'mesuré par']);
+  this.executeCharTest('≟', ['égalité en doute', 'égalité en doute', 'égalité en doute']);
+  this.executeCharTest('≠', ['pas égal à', 'pas égal à', 'pas égal à']);
+  this.executeCharTest('≡', ['identique à', 'identique à', 'identique à']);
+  this.executeCharTest('≢', ['non identique à', 'non identique à', 'non identique à']);
+  this.executeCharTest('≣', ['strictement équivalent à', 'strictement équivalent à', 'strictement équivalent à']);
+  this.executeCharTest('≤', ['plus petit ou égal à', 'plus petit ou égal à', 'plus petit ou égal à']);
+  this.executeCharTest('≥', ['plus grand ou égal à', 'plus grand ou égal à', 'plus grand ou égal à']);
+  this.executeCharTest('≦', ['plus petit que par-dessus égal à', 'plus petit que par-dessus égal à', 'plus petit que par-dessus égal à']);
+  this.executeCharTest('≧', ['plus grand que par-dessus égal à', 'plus grand que par-dessus égal à', 'plus grand que par-dessus égal à']);
+  this.executeCharTest('≨', ['plus petit mais pas égal à', 'plus petit mais pas égal à', 'plus petit mais pas égal à']);
+  this.executeCharTest('≩', ['plus grand mais pas égal à', 'plus grand mais pas égal à', 'plus grand mais pas égal à']);
+  this.executeCharTest('≪', ['beaucoup plus petit que', 'beaucoup plus petit que', 'beaucoup plus petit que']);
+  this.executeCharTest('≫', ['beaucoup plus grand que', 'beaucoup plus grand que', 'beaucoup plus grand que']);
+  this.executeCharTest('≬', ['entre', 'entre', 'entre']);
+  this.executeCharTest('≭', ['non équivalent à', 'non équivalent à', 'non équivalent à']);
+  this.executeCharTest('≮', ['pas plus petit que', 'pas plus petit que', 'pas plus petit que']);
+  this.executeCharTest('≯', ['pas plus grand que', 'pas plus grand que', 'pas plus grand que']);
+  this.executeCharTest('≰', ['ni plus petit ni égal à', 'ni plus petit ni égal à', 'ni plus petit ni égal à']);
+  this.executeCharTest('≱', ['ni plus grand ni égal à', 'ni plus grand ni égal à', 'ni plus grand ni égal à']);
+  this.executeCharTest('≲', ['plus petit ou équivalent à', 'plus petit ou équivalent à', 'plus petit ou équivalent à']);
+  this.executeCharTest('≳', ['plus grand ou équivalent à', 'plus grand ou équivalent à', 'plus grand ou équivalent à']);
+  this.executeCharTest('≴', ['ni plus petit ni équivalent à', 'ni plus petit ni équivalent à', 'ni plus petit ni équivalent à']);
+  this.executeCharTest('≵', ['ni plus grand ni équivalent à', 'ni plus grand ni équivalent à', 'ni plus grand ni équivalent à']);
+  this.executeCharTest('≶', ['plus petit ou plus grand que', 'plus petit ou plus grand que', 'plus petit ou plus grand que']);
+  this.executeCharTest('≷', ['plus grand ou plus petit que', 'plus grand ou plus petit que', 'plus grand ou plus petit que']);
+  this.executeCharTest('≸', ['ni plus petit ni plus grand que', 'ni plus petit ni plus grand que', 'ni plus petit ni plus grand que']);
+  this.executeCharTest('≹', ['ni plus grand ni plus petit que', 'ni plus grand ni plus petit que', 'ni plus grand ni plus petit que']);
+  this.executeCharTest('≺', ['précède', 'précède', 'précède']);
+  this.executeCharTest('≻', ['suit', 'suit', 'suit']);
+  this.executeCharTest('≼', ['précède ou est égal à', 'précède ou est égal à', 'précède ou est égal à']);
+  this.executeCharTest('≽', ['suit ou est égal à', 'suit ou est égal à', 'suit ou est égal à']);
+  this.executeCharTest('≾', ['précède ou est équivalent à', 'précède ou est équivalent à', 'précède ou est équivalent à']);
+  this.executeCharTest('≿', ['suit ou est équivalent à', 'suit ou est équivalent à', 'suit ou est équivalent à']);
+  this.executeCharTest('⊀', ['ne précède pas', 'ne précède pas', 'ne précède pas']);
+  this.executeCharTest('⊁', ['ne suit pas', 'ne suit pas', 'ne suit pas']);
+  this.executeCharTest('⊂', ['sous-ensemble de', 'sous-ensemble de', 'sous-ensemble de']);
+  this.executeCharTest('⊃', ['sur-ensemble de', 'sur-ensemble de', 'sur-ensemble de']);
+  this.executeCharTest('⊄', ['pas un sous-ensemble de', 'pas un sous-ensemble de', 'pas un sous-ensemble de']);
+  this.executeCharTest('⊅', ['pas un sur-ensemble de', 'pas un sur-ensemble de', 'pas un sur-ensemble de']);
+  this.executeCharTest('⊆', ['sous-ensemble ou égal à', 'sous-ensemble ou égal à', 'sous-ensemble ou égal à']);
+  this.executeCharTest('⊇', ['sur-ensemble ou égal à', 'sur-ensemble ou égal à', 'sur-ensemble ou égal à']);
+  this.executeCharTest('⊈', ['ni un sous-ensemble ni égal à', 'ni un sous-ensemble ni égal à', 'ni un sous-ensemble ni égal à']);
+  this.executeCharTest('⊉', ['ni un sur-ensemble ni égal à', 'ni un sur-ensemble ni égal à', 'ni un sur-ensemble ni égal à']);
+  this.executeCharTest('⊊', ['sous-ensemble mais pas égal à', 'sous-ensemble mais pas égal à', 'sous-ensemble mais pas égal à']);
+  this.executeCharTest('⊋', ['sur-ensemble mais pas égal à', 'sur-ensemble mais pas égal à', 'sur-ensemble mais pas égal à']);
+  this.executeCharTest('⊌', ['multiensemble', 'multiensemble', 'multiensemble']);
+  this.executeCharTest('⊍', ['multiplication de multiensemble', 'multiplication de multiensemble', 'multiplication de multiensemble']);
+  this.executeCharTest('⊎', ['union de multiensemble', 'union de multiensemble', 'union de multiensemble']);
+  this.executeCharTest('⊏', ['image carrée de', 'image carrée de', 'image carrée de']);
+  this.executeCharTest('⊐', ['original carré de', 'original carré de', 'original carré de']);
+  this.executeCharTest('⊑', ['image carrée ou égal à', 'image carrée ou égal à', 'image carrée ou égal à']);
+  this.executeCharTest('⊒', ['original carré ou égal à', 'original carré ou égal à', 'original carré ou égal à']);
+  this.executeCharTest('⊓', ['chapeau carré', 'chapeau carré', 'chapeau carré']);
+  this.executeCharTest('⊔', ['coupe carrée', 'coupe carrée', 'coupe carrée']);
+  this.executeCharTest('⊕', ['plus cerclé', 'plus cerclé', 'plus cerclé']);
+  this.executeCharTest('⊖', ['moins cerclé', 'moins cerclé', 'moins cerclé']);
+  this.executeCharTest('⊗', ['multiplié par cerclé', 'multiplié par cerclé', 'multiplié par cerclé']);
+  this.executeCharTest('⊘', ['barre oblique de division cerclée', 'barre oblique de division cerclée', 'barre oblique de division cerclée']);
+  this.executeCharTest('⊙', ['opérateur point cerclé', 'opérateur point cerclé', 'opérateur point cerclé']);
+  this.executeCharTest('⊚', ['opérateur rond cerclé', 'opérateur rond cerclé', 'opérateur rond cerclé']);
+  this.executeCharTest('⊛', ['opérateur astérisque cerclé', 'opérateur astérisque cerclé', 'opérateur astérisque cerclé']);
+  this.executeCharTest('⊜', ['égal cerclé', 'égal cerclé', 'égal cerclé']);
+  this.executeCharTest('⊝', ['tiret cerclé', 'tiret cerclé', 'tiret cerclé']);
+  this.executeCharTest('⊞', ['plus encadré', 'plus encadré', 'plus encadré']);
+  this.executeCharTest('⊟', ['moins encadré', 'moins encadré', 'moins encadré']);
+  this.executeCharTest('⊠', ['multiplié par encadré', 'multiplié par encadré', 'multiplié par encadré']);
+  this.executeCharTest('⊡', ['opérateur point encadré', 'opérateur point encadré', 'opérateur point encadré']);
+  this.executeCharTest('⊢', ['taquet droit', 'taquet droit', 'taquet droit']);
+  this.executeCharTest('⊣', ['taquet gauche', 'taquet gauche', 'taquet gauche']);
+  this.executeCharTest('⊤', ['taquet vers le bas', 'taquet vers le bas', 'taquet vers le bas']);
+  this.executeCharTest('⊥', ['taquet vers le haut', 'taquet vers le haut', 'taquet vers le haut']);
+  this.executeCharTest('⊦', ['assertion', 'assertion', 'assertion']);
+  this.executeCharTest('⊧', ['modélise', 'modélise', 'modélise']);
+  this.executeCharTest('⊨', ['vrai', 'vrai', 'vrai']);
+  this.executeCharTest('⊩', ['oblige', 'oblige', 'oblige']);
+  this.executeCharTest('⊪', ['barre verticale triple avec tourniquet à droite', 'barre verticale triple avec tourniquet à droite', 'barre verticale triple avec tourniquet à droite']);
+  this.executeCharTest('⊫', ['barre verticale double avec tourniquet à droite double', 'barre verticale double avec tourniquet à droite double', 'barre verticale double avec tourniquet à droite double']);
+  this.executeCharTest('⊬', ['ne prouve pas', 'ne prouve pas', 'ne prouve pas']);
+  this.executeCharTest('⊭', ['pas vrai', 'pas vrai', 'pas vrai']);
+  this.executeCharTest('⊮', ['n\'oblige pas', 'n\'oblige pas', 'n\'oblige pas']);
+  this.executeCharTest('⊯', ['non-barre verticale double avec tourniquet à droite double', 'non-barre verticale double avec tourniquet à droite double', 'non-barre verticale double avec tourniquet à droite double']);
+  this.executeCharTest('⊰', ['précède sous relation', 'précède sous relation', 'précède sous relation']);
+  this.executeCharTest('⊱', ['suit sous relation', 'suit sous relation', 'suit sous relation']);
+  this.executeCharTest('⊲', ['sous-groupe normal de', 'sous-groupe normal de', 'sous-groupe normal de']);
+  this.executeCharTest('⊳', ['contient comme sous-groupe normal', 'contient comme sous-groupe normal', 'contient comme sous-groupe normal']);
+  this.executeCharTest('⊴', ['sous-groupe normal ou égal à', 'sous-groupe normal ou égal à', 'sous-groupe normal ou égal à']);
+  this.executeCharTest('⊵', ['contient comme sous-groupe normal ou égal à', 'contient comme sous-groupe normal ou égal à', 'contient comme sous-groupe normal ou égal à']);
+  this.executeCharTest('⊶', ['original de', 'original de', 'original de']);
+  this.executeCharTest('⊷', ['image de', 'image de', 'image de']);
+  this.executeCharTest('⊸', ['multijection', 'multijection', 'multijection']);
+  this.executeCharTest('⊹', ['matrice hermitienne conjuguée', 'matrice hermitienne conjuguée', 'matrice hermitienne conjuguée']);
+  this.executeCharTest('⊺', ['intercale', 'intercale', 'intercale']);
+  this.executeCharTest('⊻', ['ou exclusif', 'ou exclusif', 'ou exclusif']);
+  this.executeCharTest('⊼', ['non et', 'non et', 'non et']);
+  this.executeCharTest('⊽', ['non ou', 'non ou', 'non ou']);
+  this.executeCharTest('⊿', ['triangle rectangle', 'triangle rectangle', 'triangle rectangle']);
+  this.executeCharTest('⋀', ['et logique de la famille', 'et logique de la famille', 'et logique de la famille']);
+  this.executeCharTest('⋁', ['ou logique de la famille', 'ou logique de la famille', 'ou logique de la famille']);
+  this.executeCharTest('⋂', ['intersection de la famille', 'intersection de la famille', 'intersection de la famille']);
+  this.executeCharTest('⋃', ['réunion de la famille', 'réunion de la famille', 'réunion de la famille']);
+  this.executeCharTest('⋄', ['opérateur losange', 'opérateur losange', 'opérateur losange']);
+  this.executeCharTest('⋅', ['opérateur point', 'opérateur point', 'opérateur point']);
+  this.executeCharTest('⋆', ['opérateur étoile', 'opérateur étoile', 'opérateur étoile']);
+  this.executeCharTest('⋇', ['divisé multiplié', 'divisé multiplié', 'divisé multiplié']);
+  this.executeCharTest('⋈', ['nœud papillon', 'nœud papillon', 'nœud papillon']);
+  this.executeCharTest('⋉', ['produit semi-direct à gauche de facteur normal', 'produit semi-direct à gauche de facteur normal', 'produit semi-direct à gauche de facteur normal']);
+  this.executeCharTest('⋊', ['produit semi-direct à droite de facteur normal', 'produit semi-direct à droite de facteur normal', 'produit semi-direct à droite de facteur normal']);
+  this.executeCharTest('⋋', ['produit semi-direct à gauche', 'produit semi-direct à gauche', 'produit semi-direct à gauche']);
+  this.executeCharTest('⋌', ['produit semi-direct à droite', 'produit semi-direct à droite', 'produit semi-direct à droite']);
+  this.executeCharTest('⋍', ['moins tilde renversé', 'moins tilde renversé', 'moins tilde renversé']);
+  this.executeCharTest('⋎', ['ou logique recourbé', 'ou logique recourbé', 'ou logique recourbé']);
+  this.executeCharTest('⋏', ['et logique recourbé', 'et logique recourbé', 'et logique recourbé']);
+  this.executeCharTest('⋐', ['sous-ensemble double', 'sous-ensemble double', 'sous-ensemble double']);
+  this.executeCharTest('⋑', ['sur-ensemble double', 'sur-ensemble double', 'sur-ensemble double']);
+  this.executeCharTest('⋒', ['intersection double', 'intersection double', 'intersection double']);
+  this.executeCharTest('⋓', ['union double', 'union double', 'union double']);
+  this.executeCharTest('⋔', ['fourche', 'fourche', 'fourche']);
+  this.executeCharTest('⋕', ['égal et parallèle à', 'égal et parallèle à', 'égal et parallèle à']);
+  this.executeCharTest('⋖', ['plus petit que pointé', 'plus petit que pointé', 'plus petit que pointé']);
+  this.executeCharTest('⋗', ['plus grand que pointé', 'plus grand que pointé', 'plus grand que pointé']);
+  this.executeCharTest('⋘', ['considérablement plus petit que', 'considérablement plus petit que', 'considérablement plus petit que']);
+  this.executeCharTest('⋙', ['considérablement plus grand que', 'considérablement plus grand que', 'considérablement plus grand que']);
+  this.executeCharTest('⋚', ['plus petit ou égal ou plus grand que', 'plus petit ou égal ou plus grand que', 'plus petit ou égal ou plus grand que']);
+  this.executeCharTest('⋛', ['plus grand ou égal ou plus petit que', 'plus grand ou égal ou plus petit que', 'plus grand ou égal ou plus petit que']);
+  this.executeCharTest('⋜', ['égal ou plus petit que', 'égal ou plus petit que', 'égal ou plus petit que']);
+  this.executeCharTest('⋝', ['égal à deux lignes ou supérieur à', 'égal à deux lignes ou supérieur à', 'égal à deux lignes ou supérieur à']);
+  this.executeCharTest('⋞', ['égal ou précède', 'égal ou précède', 'égal ou précède']);
+  this.executeCharTest('⋟', ['égal ou suit', 'égal ou suit', 'égal ou suit']);
+  this.executeCharTest('⋠', ['ni précédant ni égal à', 'ni précédant ni égal à', 'ni précédant ni égal à']);
+  this.executeCharTest('⋡', ['ni suivant ni égal à', 'ni suivant ni égal à', 'ni suivant ni égal à']);
+  this.executeCharTest('⋢', ['ni image carrée ni égal à', 'ni image carrée ni égal à', 'ni image carrée ni égal à']);
+  this.executeCharTest('⋣', ['ni original carré ni égal à', 'ni original carré ni égal à', 'ni original carré ni égal à']);
+  this.executeCharTest('⋤', ['image carré ou différent de', 'image carré ou différent de', 'image carré ou différent de']);
+  this.executeCharTest('⋥', ['original carré ou différent de', 'original carré ou différent de', 'original carré ou différent de']);
+  this.executeCharTest('⋦', ['plus petit mais non équivalent à', 'plus petit mais non équivalent à', 'plus petit mais non équivalent à']);
+  this.executeCharTest('⋧', ['plus grand mais non équivalent à', 'plus grand mais non équivalent à', 'plus grand mais non équivalent à']);
+  this.executeCharTest('⋨', ['précédant mais non équivalent à', 'précédant mais non équivalent à', 'précédant mais non équivalent à']);
+  this.executeCharTest('⋩', ['suivant mais non équivalent à', 'suivant mais non équivalent à', 'suivant mais non équivalent à']);
+  this.executeCharTest('⋪', ['pas un sous-groupe normal de', 'pas un sous-groupe normal de', 'pas un sous-groupe normal de']);
+  this.executeCharTest('⋫', ['ne contient pas comme sous-groupe normal', 'ne contient pas comme sous-groupe normal', 'ne contient pas comme sous-groupe normal']);
+  this.executeCharTest('⋬', ['ni sous-groupe normal ni égal à', 'ni sous-groupe normal ni égal à', 'ni sous-groupe normal ni égal à']);
+  this.executeCharTest('⋭', ['ni égal ni contenant comme sous- groupe normal', 'ni égal ni contenant comme sous- groupe normal', 'ni égal ni contenant comme sous- groupe normal']);
+  this.executeCharTest('⋮', ['trois points suspendus', 'trois points suspendus', 'trois points suspendus']);
+  this.executeCharTest('⋯', ['trois points médians', 'trois points médians', 'trois points médians']);
+  this.executeCharTest('⋰', ['trois points diagonaux vers le coin haut à droite', 'trois points diagonaux vers le coin haut à droite', 'trois points diagonaux vers le coin haut à droite']);
+  this.executeCharTest('⋱', ['trois points diagonaux vers le coin bas à droite', 'trois points diagonaux vers le coin bas à droite', 'trois points diagonaux vers le coin bas à droite']);
+  this.executeCharTest('⋲', ['appartient à avec long trait horizontal', 'appartient à avec long trait horizontal', 'appartient à avec long trait horizontal']);
+  this.executeCharTest('⋳', ['appartient à avec barre verticale au bout du trait horizontal', 'appartient à avec barre verticale au bout du trait horizontal', 'appartient à avec barre verticale au bout du trait horizontal']);
+  this.executeCharTest('⋴', ['petit appartient à avec barre verticale au bout du trait horizontal', 'petit appartient à avec barre verticale au bout du trait horizontal', 'petit appartient à avec barre verticale au bout du trait horizontal']);
+  this.executeCharTest('⋵', ['appartient à avec point en chef', 'appartient à avec point en chef', 'appartient à avec point en chef']);
+  this.executeCharTest('⋶', ['appartient à avec trait en chef', 'appartient à avec trait en chef', 'appartient à avec trait en chef']);
+  this.executeCharTest('⋷', ['petit appartient à avec trait en chef', 'petit appartient à avec trait en chef', 'petit appartient à avec trait en chef']);
+  this.executeCharTest('⋸', ['appartient à avec trait souscrit', 'appartient à avec trait souscrit', 'appartient à avec trait souscrit']);
+  this.executeCharTest('⋹', ['appartient à avec deux traits horizontaux', 'appartient à avec deux traits horizontaux', 'appartient à avec deux traits horizontaux']);
+  this.executeCharTest('⋺', ['contient avec long trait horizontal', 'contient avec long trait horizontal', 'contient avec long trait horizontal']);
+  this.executeCharTest('⋻', ['contient avec barre verticale au bout du trait horizontal', 'contient avec barre verticale au bout du trait horizontal', 'contient avec barre verticale au bout du trait horizontal']);
+  this.executeCharTest('⋼', ['petit contient avec barre verticale au bout du trait horizontal', 'petit contient avec barre verticale au bout du trait horizontal', 'petit contient avec barre verticale au bout du trait horizontal']);
+  this.executeCharTest('⋽', ['contient avec trait en chef', 'contient avec trait en chef', 'contient avec trait en chef']);
+  this.executeCharTest('⋾', ['petit contient avec trait en chef', 'petit contient avec trait en chef', 'petit contient avec trait en chef']);
+  this.executeCharTest('⋿', ['appartient à un sac en notation z', 'appartient à un sac en notation z', 'appartient à un sac en notation z']);
+  this.executeCharTest('⌀', ['diamètre', 'diamètre', 'diamètre']);
+  this.executeCharTest('⌂', ['maison', 'maison', 'maison']);
+  this.executeCharTest('⌅', ['projective', 'projective', 'projective']);
+  this.executeCharTest('⌆', ['perspective', 'perspective', 'perspective']);
+  this.executeCharTest('⌇', ['wavy-line', 'wavy-line', 'wavy-line']);
+  this.executeCharTest('⌐', ['signe négation réfléchi', 'signe négation réfléchi', 'signe négation réfléchi']);
+  this.executeCharTest('⌑', ['square-lozenge', 'square-lozenge', 'square-lozenge']);
+  this.executeCharTest('⌒', ['arc', 'arc', 'arc']);
+  this.executeCharTest('⌓', ['segment', 'segment', 'segment']);
+  this.executeCharTest('⌔', ['sector', 'sector', 'sector']);
+  this.executeCharTest('➕', ['bold-plus', 'bold-plus', 'bold-plus']);
+  this.executeCharTest('➖', ['bold-minus', 'bold-minus', 'bold-minus']);
+  this.executeCharTest('➗', ['bold-division', 'bold-division', 'bold-division']);
+  this.executeCharTest('➰', ['curly-loop', 'curly-loop', 'curly-loop']);
+  this.executeCharTest('➿', ['double-curly-loop', 'double-curly-loop', 'double-curly-loop']);
+  this.executeCharTest('⟁', ['petit triangle blanc inscrit dans triangle blanc', 'petit triangle blanc inscrit dans triangle blanc', 'petit triangle blanc inscrit dans triangle blanc']);
+  this.executeCharTest('⟂', ['perpendiculaire à', 'perpendiculaire à', 'perpendiculaire à']);
+  this.executeCharTest('⟃', ['sous-ensemble ouvert', 'sous-ensemble ouvert', 'sous-ensemble ouvert']);
+  this.executeCharTest('⟄', ['sur-ensemble ouvert', 'sur-ensemble ouvert', 'sur-ensemble ouvert']);
+  this.executeCharTest('⟇', ['ou avec point inscrit', 'ou avec point inscrit', 'ou avec point inscrit']);
+  this.executeCharTest('⟈', ['sous-ensemble précédé d\'une barre oblique inversée', 'sous-ensemble précédé d\'une barre oblique inversée', 'sous-ensemble précédé d\'une barre oblique inversée']);
+  this.executeCharTest('⟉', ['sur-ensemble suivi d\'une barre oblique', 'sur-ensemble suivi d\'une barre oblique', 'sur-ensemble suivi d\'une barre oblique']);
+  this.executeCharTest('⟊', ['barre verticale À une traverse', 'barre verticale À une traverse', 'barre verticale À une traverse']);
+  this.executeCharTest('⟋', ['mathematical-rising-diagonal', 'mathematical-rising-diagonal', 'mathematical-rising-diagonal']);
+  this.executeCharTest('⟌', ['grande division', 'grande division', 'grande division']);
+  this.executeCharTest('⟍', ['mathematical-falling-diagonal', 'mathematical-falling-diagonal', 'mathematical-falling-diagonal']);
+  this.executeCharTest('⟎', ['squared-logical-and', 'squared-logical-and', 'squared-logical-and']);
+  this.executeCharTest('⟏', ['squared-logical-or', 'squared-logical-or', 'squared-logical-or']);
+  this.executeCharTest('⟐', ['white-diamond-with-centered-dot', 'white-diamond-with-centered-dot', 'white-diamond-with-centered-dot']);
+  this.executeCharTest('⟑', ['et pointé', 'et pointé', 'et pointé']);
+  this.executeCharTest('⟒', ['appartient À ouvert vers le haut', 'appartient À ouvert vers le haut', 'appartient À ouvert vers le haut']);
+  this.executeCharTest('⟓', ['coin inférieur droit pointé', 'coin inférieur droit pointé', 'coin inférieur droit pointé']);
+  this.executeCharTest('⟔', ['coin supérieur gauche pointé', 'coin supérieur gauche pointé', 'coin supérieur gauche pointé']);
+  this.executeCharTest('⟕', ['jointure externe gauche', 'jointure externe gauche', 'jointure externe gauche']);
+  this.executeCharTest('⟖', ['jointure externe droite', 'jointure externe droite', 'jointure externe droite']);
+  this.executeCharTest('⟗', ['jointure externe complète', 'jointure externe complète', 'jointure externe complète']);
+  this.executeCharTest('⟘', ['grand taquet vers le haut', 'grand taquet vers le haut', 'grand taquet vers le haut']);
+  this.executeCharTest('⟙', ['grand taquet vers le bas', 'grand taquet vers le bas', 'grand taquet vers le bas']);
+  this.executeCharTest('⟚', ['double tourniquet bilatéral', 'double tourniquet bilatéral', 'double tourniquet bilatéral']);
+  this.executeCharTest('⟛', ['tourniquet bilatéral', 'tourniquet bilatéral', 'tourniquet bilatéral']);
+  this.executeCharTest('⟜', ['multijection gauche', 'multijection gauche', 'multijection gauche']);
+  this.executeCharTest('⟝', ['long taquet droit', 'long taquet droit', 'long taquet droit']);
+  this.executeCharTest('⟞', ['long taquet gauche', 'long taquet gauche', 'long taquet gauche']);
+  this.executeCharTest('⟟', ['taquet vers le haut surmonté d\'un cercle', 'taquet vers le haut surmonté d\'un cercle', 'taquet vers le haut surmonté d\'un cercle']);
+  this.executeCharTest('⟠', ['losange coupé', 'losange coupé', 'losange coupé']);
+  this.executeCharTest('⟡', ['losange concave blanc', 'losange concave blanc', 'losange concave blanc']);
+  this.executeCharTest('⟢', ['losange concave blanc avec trait à gauche', 'losange concave blanc avec trait à gauche', 'losange concave blanc avec trait à gauche']);
+  this.executeCharTest('⟣', ['losange concave blanc avec trait à droite', 'losange concave blanc avec trait à droite', 'losange concave blanc avec trait à droite']);
+  this.executeCharTest('⟤', ['carré blanc avec trait à gauche', 'carré blanc avec trait à gauche', 'carré blanc avec trait à gauche']);
+  this.executeCharTest('⟥', ['carré blanc avec trait à droite', 'carré blanc avec trait à droite', 'carré blanc avec trait à droite']);
+  this.executeCharTest('⤫', ['rising-diagonal-crossing-falling-diagonal', 'rising-diagonal-crossing-falling-diagonal', 'rising-diagonal-crossing-falling-diagonal']);
+  this.executeCharTest('⤬', ['falling-diagonal-crossing-rising-diagonal', 'falling-diagonal-crossing-rising-diagonal', 'falling-diagonal-crossing-rising-diagonal']);
+  this.executeCharTest('⦀', ['triple-vertical-bar-delimiter', 'triple-vertical-bar-delimiter', 'triple-vertical-bar-delimiter']);
+  this.executeCharTest('⦁', ['z-notation-spot', 'z-notation-spot', 'z-notation-spot']);
+  this.executeCharTest('⦂', ['z-notation-type-colon', 'z-notation-type-colon', 'z-notation-type-colon']);
+  this.executeCharTest('⦙', ['dotted-fence', 'dotted-fence', 'dotted-fence']);
+  this.executeCharTest('⦚', ['ligne verticale en zigzag', 'ligne verticale en zigzag', 'ligne verticale en zigzag']);
+  this.executeCharTest('⦰', ['ensemble vide réfléchi', 'ensemble vide réfléchi', 'ensemble vide réfléchi']);
+  this.executeCharTest('⦱', ['ensemble vide barre en chef', 'ensemble vide barre en chef', 'ensemble vide barre en chef']);
+  this.executeCharTest('⦲', ['ensemble vide petit cercle en chef', 'ensemble vide petit cercle en chef', 'ensemble vide petit cercle en chef']);
+  this.executeCharTest('⦵', ['cercle à barre horizontale', 'cercle à barre horizontale', 'cercle à barre horizontale']);
+  this.executeCharTest('⦶', ['barre verticale cerclée', 'barre verticale cerclée', 'barre verticale cerclée']);
+  this.executeCharTest('⦷', ['parallèles cerclées', 'parallèles cerclées', 'parallèles cerclées']);
+  this.executeCharTest('⦸', ['circled-reverse-solidus', 'circled-reverse-solidus', 'circled-reverse-solidus']);
+  this.executeCharTest('⦹', ['perpendiculaire cerclé', 'perpendiculaire cerclé', 'perpendiculaire cerclé']);
+  this.executeCharTest('⦺', ['circle-divided-by-horizontal-bar-and-top-half-divided-by-vertical-bar', 'circle-divided-by-horizontal-bar-and-top-half-divided-by-vertical-bar', 'circle-divided-by-horizontal-bar-and-top-half-divided-by-vertical-bar']);
+  this.executeCharTest('⦻', ['cercle superposé d\'un x', 'cercle superposé d\'un x', 'cercle superposé d\'un x']);
+  this.executeCharTest('⦼', ['signe division pivoté en sens antihoraire cerclé', 'signe division pivoté en sens antihoraire cerclé', 'signe division pivoté en sens antihoraire cerclé']);
+  this.executeCharTest('⦾', ['puce blanche cerclée', 'puce blanche cerclée', 'puce blanche cerclée']);
+  this.executeCharTest('⦿', ['puce cerclée', 'puce cerclée', 'puce cerclée']);
+  this.executeCharTest('⧀', ['inférieur à cerclé', 'inférieur à cerclé', 'inférieur à cerclé']);
+  this.executeCharTest('⧁', ['supérieur à cerclé', 'supérieur à cerclé', 'supérieur à cerclé']);
+  this.executeCharTest('⧂', ['cercle avec petit cercle à droite', 'cercle avec petit cercle à droite', 'cercle avec petit cercle à droite']);
+  this.executeCharTest('⧃', ['cercle avec deux petits traits horizontaux à droite', 'cercle avec deux petits traits horizontaux à droite', 'cercle avec deux petits traits horizontaux à droite']);
+  this.executeCharTest('⧄', ['oblique encadrée', 'oblique encadrée', 'oblique encadrée']);
+  this.executeCharTest('⧅', ['oblique inversée encadrée', 'oblique inversée encadrée', 'oblique inversée encadrée']);
+  this.executeCharTest('⧆', ['squared-asterisk', 'squared-asterisk', 'squared-asterisk']);
+  this.executeCharTest('⧇', ['squared-small-circle', 'squared-small-circle', 'squared-small-circle']);
+  this.executeCharTest('⧈', ['squared-square', 'squared-square', 'squared-square']);
+  this.executeCharTest('⧉', ['carrés se chevauchant', 'carrés se chevauchant', 'carrés se chevauchant']);
+  this.executeCharTest('⧊', ['triangle-with-dot-above', 'triangle-with-dot-above', 'triangle-with-dot-above']);
+  this.executeCharTest('⧋', ['triangle-with-underbar', 'triangle-with-underbar', 'triangle-with-underbar']);
+  this.executeCharTest('⧌', ['s-in-triangle', 's-in-triangle', 's-in-triangle']);
+  this.executeCharTest('⧍', ['triangle à empattements inférieurs', 'triangle à empattements inférieurs', 'triangle à empattements inférieurs']);
+  this.executeCharTest('⧎', ['triangle droit par-dessus triangle gauche', 'triangle droit par-dessus triangle gauche', 'triangle droit par-dessus triangle gauche']);
+  this.executeCharTest('⧏', ['triangle gauche à gauche d\'une barre verticale', 'triangle gauche à gauche d\'une barre verticale', 'triangle gauche à gauche d\'une barre verticale']);
+  this.executeCharTest('⧐', ['triangle droit à droite d\'une barre verticale', 'triangle droit à droite d\'une barre verticale', 'triangle droit à droite d\'une barre verticale']);
+  this.executeCharTest('⧑', ['bowtie-with-left-half-black', 'bowtie-with-left-half-black', 'bowtie-with-left-half-black']);
+  this.executeCharTest('⧒', ['bowtie-with-right-half-black', 'bowtie-with-right-half-black', 'bowtie-with-right-half-black']);
+  this.executeCharTest('⧓', ['black-bowtie', 'black-bowtie', 'black-bowtie']);
+  this.executeCharTest('⧔', ['times-with-left-half-black', 'times-with-left-half-black', 'times-with-left-half-black']);
+  this.executeCharTest('⧕', ['times-with-right-half-black', 'times-with-right-half-black', 'times-with-right-half-black']);
+  this.executeCharTest('⧖', ['white-hourglass', 'white-hourglass', 'white-hourglass']);
+  this.executeCharTest('⧗', ['black-hourglass', 'black-hourglass', 'black-hourglass']);
+  this.executeCharTest('⧜', ['infini incomplet', 'infini incomplet', 'infini incomplet']);
+  this.executeCharTest('⧝', ['tie-over-infinity', 'tie-over-infinity', 'tie-over-infinity']);
+  this.executeCharTest('⧞', ['infini nié par une barre verticale', 'infini nié par une barre verticale', 'infini nié par une barre verticale']);
+  this.executeCharTest('⧟', ['double-ended-multimap', 'double-ended-multimap', 'double-ended-multimap']);
+  this.executeCharTest('⧠', ['square-with-contoured-outline', 'square-with-contoured-outline', 'square-with-contoured-outline']);
+  this.executeCharTest('⧡', ['increases-as', 'increases-as', 'increases-as']);
+  this.executeCharTest('⧢', ['shuffle-product', 'shuffle-product', 'shuffle-product']);
+  this.executeCharTest('⧣', ['égale à et parallèle à incliné', 'égale à et parallèle à incliné', 'égale à et parallèle à incliné']);
+  this.executeCharTest('⧤', ['égale à et parallèle à incliné surmontés d\'un tilde', 'égale à et parallèle à incliné surmontés d\'un tilde', 'égale à et parallèle à incliné surmontés d\'un tilde']);
+  this.executeCharTest('⧥', ['identique à et parallèle à incliné', 'identique à et parallèle à incliné', 'identique à et parallèle à incliné']);
+  this.executeCharTest('⧦', ['gleich-stark', 'gleich-stark', 'gleich-stark']);
+  this.executeCharTest('⧧', ['thermodynamic', 'thermodynamic', 'thermodynamic']);
+  this.executeCharTest('⧨', ['down-pointing-triangle-with-left-half-black', 'down-pointing-triangle-with-left-half-black', 'down-pointing-triangle-with-left-half-black']);
+  this.executeCharTest('⧩', ['down-pointing-triangle-with-right-half-black', 'down-pointing-triangle-with-right-half-black', 'down-pointing-triangle-with-right-half-black']);
+  this.executeCharTest('⧫', ['losange fuselé noir', 'losange fuselé noir', 'losange fuselé noir']);
+  this.executeCharTest('⧮', ['error-barred-white-square', 'error-barred-white-square', 'error-barred-white-square']);
+  this.executeCharTest('⧯', ['error-barred-black-square', 'error-barred-black-square', 'error-barred-black-square']);
+  this.executeCharTest('⧰', ['error-barred-white-diamond', 'error-barred-white-diamond', 'error-barred-white-diamond']);
+  this.executeCharTest('⧱', ['error-barred-black-diamond', 'error-barred-black-diamond', 'error-barred-black-diamond']);
+  this.executeCharTest('⧲', ['error-barred-white-circle', 'error-barred-white-circle', 'error-barred-white-circle']);
+  this.executeCharTest('⧳', ['error-barred-black-circle', 'error-barred-black-circle', 'error-barred-black-circle']);
+  this.executeCharTest('⧴', ['règle différée', 'règle différée', 'règle différée']);
+  this.executeCharTest('⧵', ['reverse-solidus', 'reverse-solidus', 'reverse-solidus']);
+  this.executeCharTest('⧶', ['barre oblique avec barre en chef', 'barre oblique avec barre en chef', 'barre oblique avec barre en chef']);
+  this.executeCharTest('⧷', ['reverse-solidus-with-horizontal-stroke', 'reverse-solidus-with-horizontal-stroke', 'reverse-solidus-with-horizontal-stroke']);
+  this.executeCharTest('⧸', ['solidus', 'solidus', 'solidus']);
+  this.executeCharTest('⧹', ['reverse-solidus', 'reverse-solidus', 'reverse-solidus']);
+  this.executeCharTest('⧺', ['double-plus', 'double-plus', 'double-plus']);
+  this.executeCharTest('⧻', ['triple-plus', 'triple-plus', 'triple-plus']);
+  this.executeCharTest('⧾', ['tiny', 'tiny', 'tiny']);
+  this.executeCharTest('⧿', ['miny', 'miny', 'miny']);
+  this.executeCharTest('⨀', ['circled-dot', 'circled-dot', 'circled-dot']);
+  this.executeCharTest('⨁', ['circled-plus', 'circled-plus', 'circled-plus']);
+  this.executeCharTest('⨂', ['circled-times', 'circled-times', 'circled-times']);
+  this.executeCharTest('⨃', ['union-with-dot', 'union-with-dot', 'union-with-dot']);
+  this.executeCharTest('⨄', ['union-with-plus', 'union-with-plus', 'union-with-plus']);
+  this.executeCharTest('⨅', ['square-intersection', 'square-intersection', 'square-intersection']);
+  this.executeCharTest('⨆', ['square-union', 'square-union', 'square-union']);
+  this.executeCharTest('⨇', ['two-logical-and', 'two-logical-and', 'two-logical-and']);
+  this.executeCharTest('⨈', ['two-logical-or', 'two-logical-or', 'two-logical-or']);
+  this.executeCharTest('⨉', ['times', 'times', 'times']);
+  this.executeCharTest('⨊', ['modulo-two-sum', 'modulo-two-sum', 'modulo-two-sum']);
+  this.executeCharTest('⨋', ['summation-with-integral', 'summation-with-integral', 'summation-with-integral']);
+  this.executeCharTest('⨌', ['intégrale quadruple', 'intégrale quadruple', 'intégrale quadruple']);
+  this.executeCharTest('⨍', ['intégrale à partie finie', 'intégrale à partie finie', 'intégrale à partie finie']);
+  this.executeCharTest('⨎', ['integral-with-double-stroke', 'integral-with-double-stroke', 'integral-with-double-stroke']);
+  this.executeCharTest('⨏', ['integral-average-with-slash', 'integral-average-with-slash', 'integral-average-with-slash']);
+  this.executeCharTest('⨐', ['fonction de circulation', 'fonction de circulation', 'fonction de circulation']);
+  this.executeCharTest('⨑', ['intégrale en sens positif', 'intégrale en sens positif', 'intégrale en sens positif']);
+  this.executeCharTest('⨒', ['intégrale de ligne à chemin rectangulaire autour du pôle', 'intégrale de ligne à chemin rectangulaire autour du pôle', 'intégrale de ligne à chemin rectangulaire autour du pôle']);
+  this.executeCharTest('⨓', ['intégrale de ligne à chemin semi-circulaire autour du pôle', 'intégrale de ligne à chemin semi-circulaire autour du pôle', 'intégrale de ligne à chemin semi-circulaire autour du pôle']);
+  this.executeCharTest('⨔', ['intégrale de ligne évitant le pôle', 'intégrale de ligne évitant le pôle', 'intégrale de ligne évitant le pôle']);
+  this.executeCharTest('⨕', ['intégrale autour d\'un opérateur point', 'intégrale autour d\'un opérateur point', 'intégrale autour d\'un opérateur point']);
+  this.executeCharTest('⨖', ['intégrale quaternion', 'intégrale quaternion', 'intégrale quaternion']);
+  this.executeCharTest('⨘', ['integral-with-times', 'integral-with-times', 'integral-with-times']);
+  this.executeCharTest('⨙', ['integral-with-intersection', 'integral-with-intersection', 'integral-with-intersection']);
+  this.executeCharTest('⨚', ['integral-with-union', 'integral-with-union', 'integral-with-union']);
+  this.executeCharTest('⨛', ['integral-with-overbar', 'integral-with-overbar', 'integral-with-overbar']);
+  this.executeCharTest('⨜', ['integral-with-underbar', 'integral-with-underbar', 'integral-with-underbar']);
+  this.executeCharTest('⨝', ['join', 'join', 'join']);
+  this.executeCharTest('⨞', ['large-left-triangle', 'large-left-triangle', 'large-left-triangle']);
+  this.executeCharTest('⨟', ['z-notation-schema-composition', 'z-notation-schema-composition', 'z-notation-schema-composition']);
+  this.executeCharTest('⨠', ['z-notation-schema-piping', 'z-notation-schema-piping', 'z-notation-schema-piping']);
+  this.executeCharTest('⨡', ['z-notation-schema-projection', 'z-notation-schema-projection', 'z-notation-schema-projection']);
+  this.executeCharTest('⨢', ['plus surmonté d\'un petit cercle', 'plus surmonté d\'un petit cercle', 'plus surmonté d\'un petit cercle']);
+  this.executeCharTest('⨣', ['plus surmonté d\'un circonflexe', 'plus surmonté d\'un circonflexe', 'plus surmonté d\'un circonflexe']);
+  this.executeCharTest('⨤', ['plus surmonté d\'un tilde', 'plus surmonté d\'un tilde', 'plus surmonté d\'un tilde']);
+  this.executeCharTest('⨥', ['plus à point souscrit', 'plus à point souscrit', 'plus à point souscrit']);
+  this.executeCharTest('⨦', ['plus à tilde souscrit', 'plus à tilde souscrit', 'plus à tilde souscrit']);
+  this.executeCharTest('⨧', ['plus à chiffre deux souscrit', 'plus à chiffre deux souscrit', 'plus à chiffre deux souscrit']);
+  this.executeCharTest('⨨', ['plus-sign-with-black-triangle', 'plus-sign-with-black-triangle', 'plus-sign-with-black-triangle']);
+  this.executeCharTest('⨩', ['moins surmonté d\'une virgule', 'moins surmonté d\'une virgule', 'moins surmonté d\'une virgule']);
+  this.executeCharTest('⨪', ['moins à point souscrit', 'moins à point souscrit', 'moins à point souscrit']);
+  this.executeCharTest('⨫', ['minus-sign-with-falling-dots', 'minus-sign-with-falling-dots', 'minus-sign-with-falling-dots']);
+  this.executeCharTest('⨬', ['minus-sign-with-rising-dots', 'minus-sign-with-rising-dots', 'minus-sign-with-rising-dots']);
+  this.executeCharTest('⨭', ['plus dans demi-cercle gauche', 'plus dans demi-cercle gauche', 'plus dans demi-cercle gauche']);
+  this.executeCharTest('⨮', ['plus dans demi-cercle droit', 'plus dans demi-cercle droit', 'plus dans demi-cercle droit']);
+  this.executeCharTest('⨯', ['produit vectoriel', 'produit vectoriel', 'produit vectoriel']);
+  this.executeCharTest('⨰', ['signe multiplication à point en chef', 'signe multiplication à point en chef', 'signe multiplication à point en chef']);
+  this.executeCharTest('⨱', ['signe multiplication à barre souscrite', 'signe multiplication à barre souscrite', 'signe multiplication à barre souscrite']);
+  this.executeCharTest('⨲', ['semidirect-product-with-bottom-closed', 'semidirect-product-with-bottom-closed', 'semidirect-product-with-bottom-closed']);
+  this.executeCharTest('⨳', ['produit fusionné', 'produit fusionné', 'produit fusionné']);
+  this.executeCharTest('⨴', ['signe multiplication dans demi-cercle gauche', 'signe multiplication dans demi-cercle gauche', 'signe multiplication dans demi-cercle gauche']);
+  this.executeCharTest('⨵', ['signe multiplication dans demi-cercle droit', 'signe multiplication dans demi-cercle droit', 'signe multiplication dans demi-cercle droit']);
+  this.executeCharTest('⨶', ['signe multiplication cerclé circonflexe', 'signe multiplication cerclé circonflexe', 'signe multiplication cerclé circonflexe']);
+  this.executeCharTest('⨷', ['signe multiplication doublement cerclé', 'signe multiplication doublement cerclé', 'signe multiplication doublement cerclé']);
+  this.executeCharTest('⨸', ['signe division cerclé', 'signe division cerclé', 'signe division cerclé']);
+  this.executeCharTest('⨹', ['plus dans triangle', 'plus dans triangle', 'plus dans triangle']);
+  this.executeCharTest('⨺', ['moins dans triangle', 'moins dans triangle', 'moins dans triangle']);
+  this.executeCharTest('⨻', ['signe multiplication dans triangle', 'signe multiplication dans triangle', 'signe multiplication dans triangle']);
+  this.executeCharTest('⨼', ['produit interieur', 'produit interieur', 'produit interieur']);
+  this.executeCharTest('⨽', ['righthand-interior-product', 'righthand-interior-product', 'righthand-interior-product']);
+  this.executeCharTest('⨾', ['z-notation-relational-composition', 'z-notation-relational-composition', 'z-notation-relational-composition']);
+  this.executeCharTest('⨿', ['amalgamation ou coproduit', 'amalgamation ou coproduit', 'amalgamation ou coproduit']);
+  this.executeCharTest('⩀', ['intersection pointée', 'intersection pointée', 'intersection pointée']);
+  this.executeCharTest('⩁', ['union-with-minus', 'union-with-minus', 'union-with-minus']);
+  this.executeCharTest('⩂', ['union à barre en chef', 'union à barre en chef', 'union à barre en chef']);
+  this.executeCharTest('⩃', ['intersection à barre en chef', 'intersection à barre en chef', 'intersection à barre en chef']);
+  this.executeCharTest('⩄', ['intersection avec et logique', 'intersection avec et logique', 'intersection avec et logique']);
+  this.executeCharTest('⩅', ['union avec ou logique', 'union avec ou logique', 'union avec ou logique']);
+  this.executeCharTest('⩆', ['union par-dessus intersection', 'union par-dessus intersection', 'union par-dessus intersection']);
+  this.executeCharTest('⩇', ['intersection par-dessus union', 'intersection par-dessus union', 'intersection par-dessus union']);
+  this.executeCharTest('⩈', ['union par-dessus bar par-dessus intersection', 'union par-dessus bar par-dessus intersection', 'union par-dessus bar par-dessus intersection']);
+  this.executeCharTest('⩉', ['intersection par-dessus trait par-dessus union', 'intersection par-dessus trait par-dessus union', 'intersection par-dessus trait par-dessus union']);
+  this.executeCharTest('⩊', ['deux unions soudées côte à côte', 'deux unions soudées côte à côte', 'deux unions soudées côte à côte']);
+  this.executeCharTest('⩋', ['deux intersections soudées côte à côte', 'deux intersections soudées côte à côte', 'deux intersections soudées côte à côte']);
+  this.executeCharTest('⩌', ['union fermée à empattements', 'union fermée à empattements', 'union fermée à empattements']);
+  this.executeCharTest('⩍', ['intersection fermée à empattements', 'intersection fermée à empattements', 'intersection fermée à empattements']);
+  this.executeCharTest('⩎', ['double-square-intersection', 'double-square-intersection', 'double-square-intersection']);
+  this.executeCharTest('⩏', ['double-square-union', 'double-square-union', 'double-square-union']);
+  this.executeCharTest('⩐', ['union fermée à empattements et produit fusionné', 'union fermée à empattements et produit fusionné', 'union fermée à empattements et produit fusionné']);
+  this.executeCharTest('⩑', ['logical-and-with-dot-above', 'logical-and-with-dot-above', 'logical-and-with-dot-above']);
+  this.executeCharTest('⩒', ['logical-or-with-dot-above', 'logical-or-with-dot-above', 'logical-or-with-dot-above']);
+  this.executeCharTest('⩓', ['double et logique', 'double et logique', 'double et logique']);
+  this.executeCharTest('⩔', ['double ou logique', 'double ou logique', 'double ou logique']);
+  this.executeCharTest('⩕', ['deux et logiques entrecroisés', 'deux et logiques entrecroisés', 'deux et logiques entrecroisés']);
+  this.executeCharTest('⩖', ['deux ou logiques entrecroisés', 'deux ou logiques entrecroisés', 'deux ou logiques entrecroisés']);
+  this.executeCharTest('⩗', ['grand ou pentu', 'grand ou pentu', 'grand ou pentu']);
+  this.executeCharTest('⩘', ['grand et pentu', 'grand et pentu', 'grand et pentu']);
+  this.executeCharTest('⩙', ['logical-or-overlapping-logical-and', 'logical-or-overlapping-logical-and', 'logical-or-overlapping-logical-and']);
+  this.executeCharTest('⩚', ['et logique à hampe médiane', 'et logique à hampe médiane', 'et logique à hampe médiane']);
+  this.executeCharTest('⩛', ['ou logique à hampe médiane', 'ou logique à hampe médiane', 'ou logique à hampe médiane']);
+  this.executeCharTest('⩜', ['et logique à tiret horizontal', 'et logique à tiret horizontal', 'et logique à tiret horizontal']);
+  this.executeCharTest('⩝', ['ou logique à tiret horizontal', 'ou logique à tiret horizontal', 'ou logique à tiret horizontal']);
+  this.executeCharTest('⩞', ['logical-and-with-double-overbar', 'logical-and-with-double-overbar', 'logical-and-with-double-overbar']);
+  this.executeCharTest('⩟', ['et logique à barre souscrite', 'et logique à barre souscrite', 'et logique à barre souscrite']);
+  this.executeCharTest('⩠', ['logical-and-with-double-underbar', 'logical-and-with-double-underbar', 'logical-and-with-double-underbar']);
+  this.executeCharTest('⩡', ['small-vee-with-underbar', 'small-vee-with-underbar', 'small-vee-with-underbar']);
+  this.executeCharTest('⩢', ['logical-or-with-double-overbar', 'logical-or-with-double-overbar', 'logical-or-with-double-overbar']);
+  this.executeCharTest('⩣', ['logical-or-with-double-underbar', 'logical-or-with-double-underbar', 'logical-or-with-double-underbar']);
+  this.executeCharTest('⩤', ['z-notation-domain-antirestriction', 'z-notation-domain-antirestriction', 'z-notation-domain-antirestriction']);
+  this.executeCharTest('⩥', ['z-notation-range-antirestriction', 'z-notation-range-antirestriction', 'z-notation-range-antirestriction']);
+  this.executeCharTest('⩦', ['signe égal point souscrit', 'signe égal point souscrit', 'signe égal point souscrit']);
+  this.executeCharTest('⩧', ['identical-with-dot-above', 'identical-with-dot-above', 'identical-with-dot-above']);
+  this.executeCharTest('⩨', ['triple-horizontal-bar-with-double-vertical-stroke', 'triple-horizontal-bar-with-double-vertical-stroke', 'triple-horizontal-bar-with-double-vertical-stroke']);
+  this.executeCharTest('⩩', ['triple-horizontal-bar-with-triple-vertical-stroke', 'triple-horizontal-bar-with-triple-vertical-stroke', 'triple-horizontal-bar-with-triple-vertical-stroke']);
+  this.executeCharTest('⩪', ['opérateur tilde point en chef', 'opérateur tilde point en chef', 'opérateur tilde point en chef']);
+  this.executeCharTest('⩫', ['tilde-with-rising-dots', 'tilde-with-rising-dots', 'tilde-with-rising-dots']);
+  this.executeCharTest('⩬', ['similar-minus-similar', 'similar-minus-similar', 'similar-minus-similar']);
+  this.executeCharTest('⩭', ['congruent point en chef', 'congruent point en chef', 'congruent point en chef']);
+  this.executeCharTest('⩮', ['equals-with-asterisk', 'equals-with-asterisk', 'equals-with-asterisk']);
+  this.executeCharTest('⩯', ['presque égal à circonflexe', 'presque égal à circonflexe', 'presque égal à circonflexe']);
+  this.executeCharTest('⩰', ['approximately-equal-or-equal-to', 'approximately-equal-or-equal-to', 'approximately-equal-or-equal-to']);
+  this.executeCharTest('⩱', ['plus signe égal en chef', 'plus signe égal en chef', 'plus signe égal en chef']);
+  this.executeCharTest('⩲', ['égal à signe plus en chef', 'égal à signe plus en chef', 'égal à signe plus en chef']);
+  this.executeCharTest('⩳', ['tilde signe égal en chef', 'tilde signe égal en chef', 'tilde signe égal en chef']);
+  this.executeCharTest('⩴', ['double deux-points égal à', 'double deux-points égal à', 'double deux-points égal à']);
+  this.executeCharTest('⩵', ['deux signes égal à consécutifs', 'deux signes égal à consécutifs', 'deux signes égal à consécutifs']);
+  this.executeCharTest('⩶', ['three-consecutive-equals', 'three-consecutive-equals', 'three-consecutive-equals']);
+  this.executeCharTest('⩷', ['égal à deux points en chef deux points souscrits', 'égal à deux points en chef deux points souscrits', 'égal à deux points en chef deux points souscrits']);
+  this.executeCharTest('⩸', ['équivalent quatre points en chef', 'équivalent quatre points en chef', 'équivalent quatre points en chef']);
+  this.executeCharTest('⩹', ['inférieur à avec cercle inscrit', 'inférieur à avec cercle inscrit', 'inférieur à avec cercle inscrit']);
+  this.executeCharTest('⩺', ['supérieur à avec cercle inscrit', 'supérieur à avec cercle inscrit', 'supérieur à avec cercle inscrit']);
+  this.executeCharTest('⩻', ['inférieur à point d\'interrogation en chef', 'inférieur à point d\'interrogation en chef', 'inférieur à point d\'interrogation en chef']);
+  this.executeCharTest('⩼', ['supérieur à point d\'interrogation en chef', 'supérieur à point d\'interrogation en chef', 'supérieur à point d\'interrogation en chef']);
+  this.executeCharTest('⩽', ['plus petit ou égal à pentu', 'plus petit ou égal à pentu', 'plus petit ou égal à pentu']);
+  this.executeCharTest('⩾', ['supérieur à ou égal à pentu', 'supérieur à ou égal à pentu', 'supérieur à ou égal à pentu']);
+  this.executeCharTest('⩿', ['inférieur à ou égal à pentu point inscrit', 'inférieur à ou égal à pentu point inscrit', 'inférieur à ou égal à pentu point inscrit']);
+  this.executeCharTest('⪀', ['supérieur à ou égal à pentu point inscrit', 'supérieur à ou égal à pentu point inscrit', 'supérieur à ou égal à pentu point inscrit']);
+  this.executeCharTest('⪁', ['inférieur à ou égal à pentu point en chef', 'inférieur à ou égal à pentu point en chef', 'inférieur à ou égal à pentu point en chef']);
+  this.executeCharTest('⪂', ['supérieur à ou égal à pentu point en chef', 'supérieur à ou égal à pentu point en chef', 'supérieur à ou égal à pentu point en chef']);
+  this.executeCharTest('⪃', ['inférieur à ou égal à pentu point en chef droit', 'inférieur à ou égal à pentu point en chef droit', 'inférieur à ou égal à pentu point en chef droit']);
+  this.executeCharTest('⪄', ['supérieur à ou égal à pentu point en chef gauche', 'supérieur à ou égal à pentu point en chef gauche', 'supérieur à ou égal à pentu point en chef gauche']);
+  this.executeCharTest('⪅', ['less-than-or-approximate', 'less-than-or-approximate', 'less-than-or-approximate']);
+  this.executeCharTest('⪆', ['greater-than-or-approximate', 'greater-than-or-approximate', 'greater-than-or-approximate']);
+  this.executeCharTest('⪇', ['less-than-and-single-line-not-equals', 'less-than-and-single-line-not-equals', 'less-than-and-single-line-not-equals']);
+  this.executeCharTest('⪈', ['greater-than-and-single-line-not-equals', 'greater-than-and-single-line-not-equals', 'greater-than-and-single-line-not-equals']);
+  this.executeCharTest('⪉', ['inférieur à et non approximatif', 'inférieur à et non approximatif', 'inférieur à et non approximatif']);
+  this.executeCharTest('⪊', ['supérieur à et non approximatif', 'supérieur à et non approximatif', 'supérieur à et non approximatif']);
+  this.executeCharTest('⪋', ['less-than-above-double-line-equal-above-greater-than', 'less-than-above-double-line-equal-above-greater-than', 'less-than-above-double-line-equal-above-greater-than']);
+  this.executeCharTest('⪌', ['greater-than-above-double-line-equal-above-less-than', 'greater-than-above-double-line-equal-above-less-than', 'greater-than-above-double-line-equal-above-less-than']);
+  this.executeCharTest('⪍', ['inférieur à par-dessus similaire à ou égal à', 'inférieur à par-dessus similaire à ou égal à', 'inférieur à par-dessus similaire à ou égal à']);
+  this.executeCharTest('⪎', ['supérieur à par-dessus similaire à ou égal à', 'supérieur à par-dessus similaire à ou égal à', 'supérieur à par-dessus similaire à ou égal à']);
+  this.executeCharTest('⪏', ['inférieur à par-dessus similaire à par-dessus supérieur à', 'inférieur à par-dessus similaire à par-dessus supérieur à', 'inférieur à par-dessus similaire à par-dessus supérieur à']);
+  this.executeCharTest('⪐', ['supérieur à par-dessus similaire à par-dessus inférieur à', 'supérieur à par-dessus similaire à par-dessus inférieur à', 'supérieur à par-dessus similaire à par-dessus inférieur à']);
+  this.executeCharTest('⪑', ['inférieur à par-dessus supérieur à par-dessus égal à deux lignes', 'inférieur à par-dessus supérieur à par-dessus égal à deux lignes', 'inférieur à par-dessus supérieur à par-dessus égal à deux lignes']);
+  this.executeCharTest('⪒', ['supérieur à par-dessus inférieur à par-dessus égal à deux lignes', 'supérieur à par-dessus inférieur à par-dessus égal à deux lignes', 'supérieur à par-dessus inférieur à par-dessus égal à deux lignes']);
+  this.executeCharTest('⪓', ['inférieur à par-dessus égal à pentu par-dessus supérieur à par-dessus égal à pentu', 'inférieur à par-dessus égal à pentu par-dessus supérieur à par-dessus égal à pentu', 'inférieur à par-dessus égal à pentu par-dessus supérieur à par-dessus égal à pentu']);
+  this.executeCharTest('⪔', ['supérieur à par-dessus égal à pentu par-dessus inférieur à par-dessus égal à pentu', 'supérieur à par-dessus égal à pentu par-dessus inférieur à par-dessus égal à pentu', 'supérieur à par-dessus égal à pentu par-dessus inférieur à par-dessus égal à pentu']);
+  this.executeCharTest('⪕', ['slanted-equals-or-less-than', 'slanted-equals-or-less-than', 'slanted-equals-or-less-than']);
+  this.executeCharTest('⪖', ['slanted-equals-or-greater-than', 'slanted-equals-or-greater-than', 'slanted-equals-or-greater-than']);
+  this.executeCharTest('⪗', ['égal à pentu ou inférieur à point inscrit', 'égal à pentu ou inférieur à point inscrit', 'égal à pentu ou inférieur à point inscrit']);
+  this.executeCharTest('⪘', ['égal à pentu ou supérieur à point inscrit', 'égal à pentu ou supérieur à point inscrit', 'égal à pentu ou supérieur à point inscrit']);
+  this.executeCharTest('⪙', ['égal à deux lignes ou inférieur à', 'égal à deux lignes ou inférieur à', 'égal à deux lignes ou inférieur à']);
+  this.executeCharTest('⪚', ['égal à deux lignes ou supérieur à', 'égal à deux lignes ou supérieur à', 'égal à deux lignes ou supérieur à']);
+  this.executeCharTest('⪛', ['double-line-slanted-equals-or-less-than', 'double-line-slanted-equals-or-less-than', 'double-line-slanted-equals-or-less-than']);
+  this.executeCharTest('⪜', ['double-line-slanted-equals-or-greater-than', 'double-line-slanted-equals-or-greater-than', 'double-line-slanted-equals-or-greater-than']);
+  this.executeCharTest('⪝', ['similaire à ou inférieur à', 'similaire à ou inférieur à', 'similaire à ou inférieur à']);
+  this.executeCharTest('⪞', ['similaire à ou supérieur à', 'similaire à ou supérieur à', 'similaire à ou supérieur à']);
+  this.executeCharTest('⪟', ['similaire à par-dessus inférieur à par-dessus signe égal', 'similaire à par-dessus inférieur à par-dessus signe égal', 'similaire à par-dessus inférieur à par-dessus signe égal']);
+  this.executeCharTest('⪠', ['similaire à par-dessus supérieur à par-dessus signe égal', 'similaire à par-dessus supérieur à par-dessus signe égal', 'similaire à par-dessus supérieur à par-dessus signe égal']);
+  this.executeCharTest('⪡', ['deux inférieur à emboîtés', 'deux inférieur à emboîtés', 'deux inférieur à emboîtés']);
+  this.executeCharTest('⪢', ['deux supérieur à emboîtés', 'deux supérieur à emboîtés', 'deux supérieur à emboîtés']);
+  this.executeCharTest('⪣', ['double-nested-less-than-with-underbar', 'double-nested-less-than-with-underbar', 'double-nested-less-than-with-underbar']);
+  this.executeCharTest('⪤', ['deux supérieur à entrecroisés', 'deux supérieur à entrecroisés', 'deux supérieur à entrecroisés']);
+  this.executeCharTest('⪥', ['supérieur à à côté de inférieur à', 'supérieur à à côté de inférieur à', 'supérieur à à côté de inférieur à']);
+  this.executeCharTest('⪦', ['inférieur à fermé d\'un arc', 'inférieur à fermé d\'un arc', 'inférieur à fermé d\'un arc']);
+  this.executeCharTest('⪧', ['supérieur à fermé d\'un arc', 'supérieur à fermé d\'un arc', 'supérieur à fermé d\'un arc']);
+  this.executeCharTest('⪨', ['inférieur à fermé d\'un arc par-dessus égal à pentu', 'inférieur à fermé d\'un arc par-dessus égal à pentu', 'inférieur à fermé d\'un arc par-dessus égal à pentu']);
+  this.executeCharTest('⪩', ['supérieur à fermé d\'un arc par-dessus égal à pentu', 'supérieur à fermé d\'un arc par-dessus égal à pentu', 'supérieur à fermé d\'un arc par-dessus égal à pentu']);
+  this.executeCharTest('⪪', ['plus petit que en fourche', 'plus petit que en fourche', 'plus petit que en fourche']);
+  this.executeCharTest('⪫', ['plus grand que en fourche', 'plus grand que en fourche', 'plus grand que en fourche']);
+  this.executeCharTest('⪬', ['plus petit ou égal que en fourche', 'plus petit ou égal que en fourche', 'plus petit ou égal que en fourche']);
+  this.executeCharTest('⪭', ['plus grand ou égal que en fourche', 'plus grand ou égal que en fourche', 'plus grand ou égal que en fourche']);
+  this.executeCharTest('⪮', ['signe égal et dos-d\'âne', 'signe égal et dos-d\'âne', 'signe égal et dos-d\'âne']);
+  this.executeCharTest('⪯', ['précède par-dessus signe égal à une ligne', 'précède par-dessus signe égal à une ligne', 'précède par-dessus signe égal à une ligne']);
+  this.executeCharTest('⪰', ['succeeds-above-single-line-equals', 'succeeds-above-single-line-equals', 'succeeds-above-single-line-equals']);
+  this.executeCharTest('⪱', ['precedes-above-single-line-not-equals', 'precedes-above-single-line-not-equals', 'precedes-above-single-line-not-equals']);
+  this.executeCharTest('⪲', ['succeeds-above-single-line-not-equals', 'succeeds-above-single-line-not-equals', 'succeeds-above-single-line-not-equals']);
+  this.executeCharTest('⪳', ['precedes-above-equals', 'precedes-above-equals', 'precedes-above-equals']);
+  this.executeCharTest('⪴', ['succeeds-above-equals', 'succeeds-above-equals', 'succeeds-above-equals']);
+  this.executeCharTest('⪵', ['précède par-dessus pas égal à', 'précède par-dessus pas égal à', 'précède par-dessus pas égal à']);
+  this.executeCharTest('⪶', ['suit par-dessus pas égal à', 'suit par-dessus pas égal à', 'suit par-dessus pas égal à']);
+  this.executeCharTest('⪷', ['precedes-above-almost-equals', 'precedes-above-almost-equals', 'precedes-above-almost-equals']);
+  this.executeCharTest('⪸', ['succeeds-above-almost-equals', 'succeeds-above-almost-equals', 'succeeds-above-almost-equals']);
+  this.executeCharTest('⪹', ['precedes-above-not-almost-equals', 'precedes-above-not-almost-equals', 'precedes-above-not-almost-equals']);
+  this.executeCharTest('⪺', ['succeeds-above-not-almost-equals', 'succeeds-above-not-almost-equals', 'succeeds-above-not-almost-equals']);
+  this.executeCharTest('⪻', ['double précède', 'double précède', 'double précède']);
+  this.executeCharTest('⪼', ['double suit', 'double suit', 'double suit']);
+  this.executeCharTest('⪽', ['sous-ensemble pointé', 'sous-ensemble pointé', 'sous-ensemble pointé']);
+  this.executeCharTest('⪾', ['sur-ensemble pointé', 'sur-ensemble pointé', 'sur-ensemble pointé']);
+  this.executeCharTest('⪿', ['sous-ensemble plus souscrit', 'sous-ensemble plus souscrit', 'sous-ensemble plus souscrit']);
+  this.executeCharTest('⫀', ['sur-ensemble plus souscrit', 'sur-ensemble plus souscrit', 'sur-ensemble plus souscrit']);
+  this.executeCharTest('⫁', ['sous-ensemble à signe de multiplication souscrit', 'sous-ensemble à signe de multiplication souscrit', 'sous-ensemble à signe de multiplication souscrit']);
+  this.executeCharTest('⫂', ['sur-ensemble à signe de multiplication souscrit', 'sur-ensemble à signe de multiplication souscrit', 'sur-ensemble à signe de multiplication souscrit']);
+  this.executeCharTest('⫃', ['sous-ensemble de ou égal à point en chef', 'sous-ensemble de ou égal à point en chef', 'sous-ensemble de ou égal à point en chef']);
+  this.executeCharTest('⫄', ['sur-ensemble de ou égal à point en chef', 'sur-ensemble de ou égal à point en chef', 'sur-ensemble de ou égal à point en chef']);
+  this.executeCharTest('⫅', ['subset-of-above-equals', 'subset-of-above-equals', 'subset-of-above-equals']);
+  this.executeCharTest('⫆', ['superset-of-above-equals', 'superset-of-above-equals', 'superset-of-above-equals']);
+  this.executeCharTest('⫇', ['sous-ensemble de par-dessus opérateur tilde', 'sous-ensemble de par-dessus opérateur tilde', 'sous-ensemble de par-dessus opérateur tilde']);
+  this.executeCharTest('⫈', ['sur-ensemble de par-dessus opérateur tilde', 'sur-ensemble de par-dessus opérateur tilde', 'sur-ensemble de par-dessus opérateur tilde']);
+  this.executeCharTest('⫉', ['subset-of-above-almost-equals', 'subset-of-above-almost-equals', 'subset-of-above-almost-equals']);
+  this.executeCharTest('⫊', ['superset-of-above-almost-equals', 'superset-of-above-almost-equals', 'superset-of-above-almost-equals']);
+  this.executeCharTest('⫋', ['subset-of-above-not-equals', 'subset-of-above-not-equals', 'subset-of-above-not-equals']);
+  this.executeCharTest('⫌', ['superset-of-above-not-equals', 'superset-of-above-not-equals', 'superset-of-above-not-equals']);
+  this.executeCharTest('⫍', ['square-left-open-box', 'square-left-open-box', 'square-left-open-box']);
+  this.executeCharTest('⫎', ['square-right-open-box', 'square-right-open-box', 'square-right-open-box']);
+  this.executeCharTest('⫏', ['sous-ensemble clos', 'sous-ensemble clos', 'sous-ensemble clos']);
+  this.executeCharTest('⫐', ['sur-ensemble clos', 'sur-ensemble clos', 'sur-ensemble clos']);
+  this.executeCharTest('⫑', ['sous-ensemble clos ou égal à', 'sous-ensemble clos ou égal à', 'sous-ensemble clos ou égal à']);
+  this.executeCharTest('⫒', ['sur-ensemble clos ou égal à', 'sur-ensemble clos ou égal à', 'sur-ensemble clos ou égal à']);
+  this.executeCharTest('⫓', ['sous-ensemble par-dessus sur-ensemble', 'sous-ensemble par-dessus sur-ensemble', 'sous-ensemble par-dessus sur-ensemble']);
+  this.executeCharTest('⫔', ['sur-ensemble par-dessus sous-ensemble', 'sur-ensemble par-dessus sous-ensemble', 'sur-ensemble par-dessus sous-ensemble']);
+  this.executeCharTest('⫕', ['sous-ensemble par-dessus sous-ensemble', 'sous-ensemble par-dessus sous-ensemble', 'sous-ensemble par-dessus sous-ensemble']);
+  this.executeCharTest('⫖', ['sur-ensemble par-dessus sur-ensemble', 'sur-ensemble par-dessus sur-ensemble', 'sur-ensemble par-dessus sur-ensemble']);
+  this.executeCharTest('⫗', ['sur-ensemble à côté de sous-ensemble', 'sur-ensemble à côté de sous-ensemble', 'sur-ensemble à côté de sous-ensemble']);
+  this.executeCharTest('⫘', ['sur-ensemble chaîné à sous-ensemble', 'sur-ensemble chaîné à sous-ensemble', 'sur-ensemble chaîné à sous-ensemble']);
+  this.executeCharTest('⫙', ['appartient à ouvert vers le bas', 'appartient à ouvert vers le bas', 'appartient à ouvert vers le bas']);
+  this.executeCharTest('⫚', ['fourche surmontée d\'un t', 'fourche surmontée d\'un t', 'fourche surmontée d\'un t']);
+  this.executeCharTest('⫛', ['intersection transversale', 'intersection transversale', 'intersection transversale']);
+  this.executeCharTest('⫝̸', ['forking', 'forking', 'forking']);
+  this.executeCharTest('⫝', ['nonforking', 'nonforking', 'nonforking']);
+  this.executeCharTest('⫞', ['short-left-tack', 'short-left-tack', 'short-left-tack']);
+  this.executeCharTest('⫟', ['short-down-tack', 'short-down-tack', 'short-down-tack']);
+  this.executeCharTest('⫠', ['short-up-tack', 'short-up-tack', 'short-up-tack']);
+  this.executeCharTest('⫡', ['perpendicular-with-s', 'perpendicular-with-s', 'perpendicular-with-s']);
+  this.executeCharTest('⫢', ['vertical-bar-triple-right-turnstile', 'vertical-bar-triple-right-turnstile', 'vertical-bar-triple-right-turnstile']);
+  this.executeCharTest('⫣', ['double-vertical-bar-left-turnstile', 'double-vertical-bar-left-turnstile', 'double-vertical-bar-left-turnstile']);
+  this.executeCharTest('⫤', ['double tourniquet gauche à barre verticale', 'double tourniquet gauche à barre verticale', 'double tourniquet gauche à barre verticale']);
+  this.executeCharTest('⫥', ['double-vertical-bar-double-left-turnstile', 'double-vertical-bar-double-left-turnstile', 'double-vertical-bar-double-left-turnstile']);
+  this.executeCharTest('⫦', ['double barre verticale gauche à traverse', 'double barre verticale gauche à traverse', 'double barre verticale gauche à traverse']);
+  this.executeCharTest('⫧', ['taquet court vers le bas avec barre en chef', 'taquet court vers le bas avec barre en chef', 'taquet court vers le bas avec barre en chef']);
+  this.executeCharTest('⫨', ['taquet court vers le haut avec barre souscrite', 'taquet court vers le haut avec barre souscrite', 'taquet court vers le haut avec barre souscrite']);
+  this.executeCharTest('⫩', ['taquet court vers le haut par-dessus taquet court vers le bas', 'taquet court vers le haut par-dessus taquet court vers le bas', 'taquet court vers le haut par-dessus taquet court vers le bas']);
+  this.executeCharTest('⫪', ['double-down-tack', 'double-down-tack', 'double-down-tack']);
+  this.executeCharTest('⫫', ['double taquet vers le haut', 'double taquet vers le haut', 'double taquet vers le haut']);
+  this.executeCharTest('⫬', ['signe négation à deux traits', 'signe négation à deux traits', 'signe négation à deux traits']);
+  this.executeCharTest('⫭', ['signe négation à deux traits réfléchi', 'signe négation à deux traits réfléchi', 'signe négation à deux traits réfléchi']);
+  this.executeCharTest('⫮', ['n\'est pas un diviseur de à barre de négation réfléchie', 'n\'est pas un diviseur de à barre de négation réfléchie', 'n\'est pas un diviseur de à barre de négation réfléchie']);
+  this.executeCharTest('⫯', ['ligne verticale cercle en chef', 'ligne verticale cercle en chef', 'ligne verticale cercle en chef']);
+  this.executeCharTest('⫰', ['ligne verticale cercle souscrit', 'ligne verticale cercle souscrit', 'ligne verticale cercle souscrit']);
+  this.executeCharTest('⫱', ['taquet vers le bas surmontant un cercle', 'taquet vers le bas surmontant un cercle', 'taquet vers le bas surmontant un cercle']);
+  this.executeCharTest('⫲', ['parallèlle à vertical à une traverse', 'parallèlle à vertical à une traverse', 'parallèlle à vertical à une traverse']);
+  this.executeCharTest('⫳', ['parallèle à avec opérateur tilde', 'parallèle à avec opérateur tilde', 'parallèle à avec opérateur tilde']);
+  this.executeCharTest('⫴', ['triple-vertical-bar-binary-relation', 'triple-vertical-bar-binary-relation', 'triple-vertical-bar-binary-relation']);
+  this.executeCharTest('⫵', ['triple-vertical-bar-with-horizontal-stroke', 'triple-vertical-bar-with-horizontal-stroke', 'triple-vertical-bar-with-horizontal-stroke']);
+  this.executeCharTest('⫶', ['triple-colon', 'triple-colon', 'triple-colon']);
+  this.executeCharTest('⫷', ['triple-nested-less-than', 'triple-nested-less-than', 'triple-nested-less-than']);
+  this.executeCharTest('⫸', ['triple-nested-greater-than', 'triple-nested-greater-than', 'triple-nested-greater-than']);
+  this.executeCharTest('⫹', ['double-line-slanted-less-than-or-equal-to', 'double-line-slanted-less-than-or-equal-to', 'double-line-slanted-less-than-or-equal-to']);
+  this.executeCharTest('⫺', ['double-line-slanted-greater-than-or-equal-to', 'double-line-slanted-greater-than-or-equal-to', 'double-line-slanted-greater-than-or-equal-to']);
+  this.executeCharTest('⫻', ['triple-solidus-binary-relation', 'triple-solidus-binary-relation', 'triple-solidus-binary-relation']);
+  this.executeCharTest('⫼', ['large-triple-vertical-bar', 'large-triple-vertical-bar', 'large-triple-vertical-bar']);
+  this.executeCharTest('⫽', ['double-solidus', 'double-solidus', 'double-solidus']);
+  this.executeCharTest('⫾', ['white-vertical-bar', 'white-vertical-bar', 'white-vertical-bar']);
+  this.executeCharTest('⫿', ['white-vertical-bar', 'white-vertical-bar', 'white-vertical-bar']);
+  this.executeCharTest('〜', ['wave-dash', 'wave-dash', 'wave-dash']);
+  this.executeCharTest('︐', ['presentation-form-for-vertical-comma', 'presentation-form-for-vertical-comma', 'presentation-form-for-vertical-comma']);
+  this.executeCharTest('︓', ['presentation-form-for-vertical-colon', 'presentation-form-for-vertical-colon', 'presentation-form-for-vertical-colon']);
+  this.executeCharTest('︔', ['presentation-form-for-vertical-semicolon', 'presentation-form-for-vertical-semicolon', 'presentation-form-for-vertical-semicolon']);
+  this.executeCharTest('︕', ['presentation-form-for-vertical-exclamation-mark', 'presentation-form-for-vertical-exclamation-mark', 'presentation-form-for-vertical-exclamation-mark']);
+  this.executeCharTest('︖', ['presentation-form-for-vertical-question-mark', 'presentation-form-for-vertical-question-mark', 'presentation-form-for-vertical-question-mark']);
+  this.executeCharTest('︙', ['presentation-form-for-vertical-horizontal-ellipsis', 'presentation-form-for-vertical-horizontal-ellipsis', 'presentation-form-for-vertical-horizontal-ellipsis']);
+  this.executeCharTest('︰', ['glyph-for-vertical-two-dot-leader', 'glyph-for-vertical-two-dot-leader', 'glyph-for-vertical-two-dot-leader']);
+  this.executeCharTest('︱', ['glyph-for-vertical-em-dash', 'glyph-for-vertical-em-dash', 'glyph-for-vertical-em-dash']);
+  this.executeCharTest('︲', ['glyph-for-vertical-en-dash', 'glyph-for-vertical-en-dash', 'glyph-for-vertical-en-dash']);
+  this.executeCharTest('︳', ['glyph-for-vertical-underscore', 'glyph-for-vertical-underscore', 'glyph-for-vertical-underscore']);
+  this.executeCharTest('︴', ['glyph-for-vertical-wavy-underscore', 'glyph-for-vertical-wavy-underscore', 'glyph-for-vertical-wavy-underscore']);
+  this.executeCharTest('﹅', ['sesame-dot', 'sesame-dot', 'sesame-dot']);
+  this.executeCharTest('﹆', ['white-sesame-dot', 'white-sesame-dot', 'white-sesame-dot']);
+  this.executeCharTest('﹉', ['dashed-overscore', 'dashed-overscore', 'dashed-overscore']);
+  this.executeCharTest('﹊', ['centerline-overscore', 'centerline-overscore', 'centerline-overscore']);
+  this.executeCharTest('﹋', ['wavy-overscore', 'wavy-overscore', 'wavy-overscore']);
+  this.executeCharTest('﹌', ['double-wavy-overscore', 'double-wavy-overscore', 'double-wavy-overscore']);
+  this.executeCharTest('﹍', ['dashed-underscore', 'dashed-underscore', 'dashed-underscore']);
+  this.executeCharTest('﹎', ['centerline-underscore', 'centerline-underscore', 'centerline-underscore']);
+  this.executeCharTest('﹏', ['wavy-underscore', 'wavy-underscore', 'wavy-underscore']);
+  this.executeCharTest('﹐', ['small-comma', 'small-comma', 'small-comma']);
+  this.executeCharTest('﹒', ['small-period', 'small-period', 'small-period']);
+  this.executeCharTest('﹔', ['small-semicolon', 'small-semicolon', 'small-semicolon']);
+  this.executeCharTest('﹕', ['small-colon', 'small-colon', 'small-colon']);
+  this.executeCharTest('﹖', ['small-question-mark', 'small-question-mark', 'small-question-mark']);
+  this.executeCharTest('﹗', ['small-exclamation-mark', 'small-exclamation-mark', 'small-exclamation-mark']);
+  this.executeCharTest('﹘', ['small-em-dash', 'small-em-dash', 'small-em-dash']);
+  this.executeCharTest('﹟', ['small-number-sign', 'small-number-sign', 'small-number-sign']);
+  this.executeCharTest('﹠', ['small-ampersand', 'small-ampersand', 'small-ampersand']);
+  this.executeCharTest('﹡', ['small-asterisk', 'small-asterisk', 'small-asterisk']);
+  this.executeCharTest('﹢', ['small-plus-sign', 'small-plus-sign', 'small-plus-sign']);
+  this.executeCharTest('﹣', ['small-hyphen-minus', 'small-hyphen-minus', 'small-hyphen-minus']);
+  this.executeCharTest('﹤', ['small-less-than-sign', 'small-less-than-sign', 'small-less-than-sign']);
+  this.executeCharTest('﹥', ['small-greater-than-sign', 'small-greater-than-sign', 'small-greater-than-sign']);
+  this.executeCharTest('﹦', ['small-equals', 'small-equals', 'small-equals']);
+  this.executeCharTest('﹨', ['integer divide', 'integer divide', 'integer divide']);
+  this.executeCharTest('﹩', ['small-dollar-sign', 'small-dollar-sign', 'small-dollar-sign']);
+  this.executeCharTest('﹪', ['small-percent-sign', 'small-percent-sign', 'small-percent-sign']);
+  this.executeCharTest('﹫', ['small-commercial-at', 'small-commercial-at', 'small-commercial-at']);
+  this.executeCharTest('！', ['exclamation-mark', 'exclamation-mark', 'exclamation-mark']);
+  this.executeCharTest('＂', ['quotation-mark', 'quotation-mark', 'quotation-mark']);
+  this.executeCharTest('＃', ['number-sign', 'number-sign', 'number-sign']);
+  this.executeCharTest('＄', ['dollar-sign', 'dollar-sign', 'dollar-sign']);
+  this.executeCharTest('％', ['percent-sign', 'percent-sign', 'percent-sign']);
+  this.executeCharTest('＆', ['ampersand', 'ampersand', 'ampersand']);
+  this.executeCharTest('＇', ['apostrophe', 'apostrophe', 'apostrophe']);
+  this.executeCharTest('＊', ['asterisk', 'asterisk', 'asterisk']);
+  this.executeCharTest('＋', ['plus-sign', 'plus-sign', 'plus-sign']);
+  this.executeCharTest('，', ['comma', 'comma', 'comma']);
+  this.executeCharTest('－', ['hyphen-minus', 'hyphen-minus', 'hyphen-minus']);
+  this.executeCharTest('．', ['period', 'period', 'period']);
+  this.executeCharTest('／', ['slash', 'slash', 'slash']);
+  this.executeCharTest('：', ['colon', 'colon', 'colon']);
+  this.executeCharTest('；', ['semicolon', 'semicolon', 'semicolon']);
+  this.executeCharTest('＜', ['less-than', 'less-than', 'less-than']);
+  this.executeCharTest('＝', ['equals', 'equals', 'equals']);
+  this.executeCharTest('＞', ['greater-than', 'greater-than', 'greater-than']);
+  this.executeCharTest('？', ['question-mark', 'question-mark', 'question-mark']);
+  this.executeCharTest('＠', ['commercial-at', 'commercial-at', 'commercial-at']);
+  this.executeCharTest('＼', ['backslash', 'backslash', 'backslash']);
+  this.executeCharTest('＾', ['caret', 'caret', 'caret']);
+  this.executeCharTest('＿', ['bar', 'bar', 'bar']);
+  this.executeCharTest('｀', ['grave', 'grave', 'grave']);
+  this.executeCharTest('｜', ['vertical-bar', 'vertical-bar', 'vertical-bar']);
+  this.executeCharTest('～', ['tilde', 'tilde', 'tilde']);
+  this.executeCharTest('￠', ['cent-sign', 'cent-sign', 'cent-sign']);
+  this.executeCharTest('￡', ['pound-sign', 'pound-sign', 'pound-sign']);
+  this.executeCharTest('￢', ['not-sign', 'not-sign', 'not-sign']);
+  this.executeCharTest('￣', ['bar', 'bar', 'bar']);
+  this.executeCharTest('￤', ['broken-vertical-bar', 'broken-vertical-bar', 'broken-vertical-bar']);
+  this.executeCharTest('￥', ['yen-sign', 'yen-sign', 'yen-sign']);
+  this.executeCharTest('￦', ['won-sign', 'won-sign', 'won-sign']);
+  this.executeCharTest('￨', ['halfwidth-forms-light-vertical', 'halfwidth-forms-light-vertical', 'halfwidth-forms-light-vertical']);
+  this.executeCharTest('￭', ['halfwidth-black-square', 'halfwidth-black-square', 'halfwidth-black-square']);
+  this.executeCharTest('￮', ['halfwidth-white-circle', 'halfwidth-white-circle', 'halfwidth-white-circle']);
+  this.executeCharTest(' ', ['space', 'space', 'space']);
+  this.executeCharTest(' ', [' ', ' ', ' ']);
+  this.executeCharTest('­', ['trait d\'union conditionnel', 'trait d\'union conditionnel', 'trait d\'union conditionnel']);
+  this.executeCharTest(' ', ['en quad', 'en quad', 'en quad']);
+  this.executeCharTest(' ', ['em quad', 'em quad', 'em quad']);
+  this.executeCharTest(' ', [' ', ' ', ' ']);
+  this.executeCharTest(' ', [' ', ' ', ' ']);
+  this.executeCharTest(' ', [' ', ' ', ' ']);
+  this.executeCharTest(' ', [' ', ' ', ' ']);
+  this.executeCharTest(' ', ['six per em space', 'six per em space', 'six per em space']);
+  this.executeCharTest(' ', [' ', ' ', ' ']);
+  this.executeCharTest(' ', [' ', ' ', ' ']);
+  this.executeCharTest(' ', [' ', ' ', ' ']);
+  this.executeCharTest(' ', [' ', ' ', ' ']);
+  this.executeCharTest('​', ['​', '​', '​']);
+  this.executeCharTest('‌', ['antiliant sans chasse', 'antiliant sans chasse', 'antiliant sans chasse']);
+  this.executeCharTest('‍', ['liant sans chasse', 'liant sans chasse', 'liant sans chasse']);
+  this.executeCharTest('‎', ['marque gauche-à-droite', 'marque gauche-à-droite', 'marque gauche-à-droite']);
+  this.executeCharTest('‏', ['marque droite-à-gauche', 'marque droite-à-gauche', 'marque droite-à-gauche']);
+  this.executeCharTest(' ', ['line separator', 'line separator', 'line separator']);
+  this.executeCharTest(' ', ['paragraph separator', 'paragraph separator', 'paragraph separator']);
+  this.executeCharTest('‪', ['left to right embedding', 'left to right embedding', 'left to right embedding']);
+  this.executeCharTest('‫', ['right to left embedding', 'right to left embedding', 'right to left embedding']);
+  this.executeCharTest('‬', ['pop directional formatting', 'pop directional formatting', 'pop directional formatting']);
+  this.executeCharTest('‭', ['left to right override', 'left to right override', 'left to right override']);
+  this.executeCharTest('‮', ['right to left override', 'right to left override', 'right to left override']);
+  this.executeCharTest(' ', ['narrow no break space', 'narrow no break space', 'narrow no break space']);
+  this.executeCharTest(' ', ['espace moyenne mathématique', 'espace moyenne mathématique', 'espace moyenne mathématique']);
+  this.executeCharTest('⁠', ['⁠', '⁠', '⁠']);
+  this.executeCharTest('⁡', ['de', 'de', 'de']);
+  this.executeCharTest('⁢', [' ', ' ', ' ']);
+  this.executeCharTest('⁣', ['⁣', '⁣', '⁣']);
+  this.executeCharTest('⁤', ['plus', 'plus', 'plus']);
+  this.executeCharTest('⁪', ['inhibit symmetric swapping', 'inhibit symmetric swapping', 'inhibit symmetric swapping']);
+  this.executeCharTest('⁫', ['activate symmetric swapping', 'activate symmetric swapping', 'activate symmetric swapping']);
+  this.executeCharTest('⁮', ['national digit shapes', 'national digit shapes', 'national digit shapes']);
+  this.executeCharTest('⁯', ['nominal digit shapes', 'nominal digit shapes', 'nominal digit shapes']);
+  this.executeCharTest('﻿', ['espace ultrafine', 'espace ultrafine', 'espace ultrafine']);
+  this.executeCharTest('￹', ['interlinear annotation anchor', 'interlinear annotation anchor', 'interlinear annotation anchor']);
+  this.executeCharTest('￺', ['interlinear annotation separator', 'interlinear annotation separator', 'interlinear annotation separator']);
+  this.executeCharTest('￻', ['interlinear annotation terminator', 'interlinear annotation terminator', 'interlinear annotation terminator']);
+  this.executeCharTest('⏨', ['decimal exponent symbol', 'decimal exponent symbol', 'decimal exponent symbol']);
+  this.executeCharTest('★', ['étoile noire', 'étoile noire', 'étoile noire']);
+  this.executeCharTest('☆', ['étoile blanche', 'étoile blanche', 'étoile blanche']);
+  this.executeCharTest('⚪', ['white circle', 'white circle', 'white circle']);
+  this.executeCharTest('⚫', ['black circle', 'black circle', 'black circle']);
+  this.executeCharTest('✅', ['white check', 'white check', 'white check']);
+  this.executeCharTest('✓', ['signe de vérification', 'signe de vérification', 'signe de vérification']);
+  this.executeCharTest('✔', ['heavy check', 'heavy check', 'heavy check']);
+  this.executeCharTest('✕', ['multiplication x', 'multiplication x', 'multiplication x']);
+  this.executeCharTest('✖', ['heavy multiplication x', 'heavy multiplication x', 'heavy multiplication x']);
+  this.executeCharTest('✗', ['x de bulletin de vote', 'x de bulletin de vote', 'x de bulletin de vote']);
+  this.executeCharTest('✘', ['heavy ballot x', 'heavy ballot x', 'heavy ballot x']);
+  this.executeCharTest('✛', ['open center cross', 'open center cross', 'open center cross']);
+  this.executeCharTest('✜', ['heavy open center cross', 'heavy open center cross', 'heavy open center cross']);
+  this.executeCharTest('✠', ['croix de malte', 'croix de malte', 'croix de malte']);
+  this.executeCharTest('✡', ['star of david', 'star of david', 'star of david']);
+  this.executeCharTest('✢', ['four teardrop spoked asterisk', 'four teardrop spoked asterisk', 'four teardrop spoked asterisk']);
+  this.executeCharTest('✣', ['four balloon spoked asterisk', 'four balloon spoked asterisk', 'four balloon spoked asterisk']);
+  this.executeCharTest('✤', ['heavy four balloon spoked asterisk', 'heavy four balloon spoked asterisk', 'heavy four balloon spoked asterisk']);
+  this.executeCharTest('✥', ['four club spoked asterisk', 'four club spoked asterisk', 'four club spoked asterisk']);
+  this.executeCharTest('✦', ['black four pointed star', 'black four pointed star', 'black four pointed star']);
+  this.executeCharTest('✧', ['white four pointed star', 'white four pointed star', 'white four pointed star']);
+  this.executeCharTest('✨', ['sparkles', 'sparkles', 'sparkles']);
+  this.executeCharTest('✩', ['stress outlined white star', 'stress outlined white star', 'stress outlined white star']);
+  this.executeCharTest('✪', ['circled white star', 'circled white star', 'circled white star']);
+  this.executeCharTest('✫', ['open center black star', 'open center black star', 'open center black star']);
+  this.executeCharTest('✬', ['black center white star', 'black center white star', 'black center white star']);
+  this.executeCharTest('✭', ['outlined black star', 'outlined black star', 'outlined black star']);
+  this.executeCharTest('✮', ['heavy outlined black star', 'heavy outlined black star', 'heavy outlined black star']);
+  this.executeCharTest('✯', ['pinwheel star', 'pinwheel star', 'pinwheel star']);
+  this.executeCharTest('✰', ['shadowed white star', 'shadowed white star', 'shadowed white star']);
+  this.executeCharTest('✱', ['heavy asterisk', 'heavy asterisk', 'heavy asterisk']);
+  this.executeCharTest('✲', ['open center asterisk', 'open center asterisk', 'open center asterisk']);
+  this.executeCharTest('✳', ['eight spoked asterisk', 'eight spoked asterisk', 'eight spoked asterisk']);
+  this.executeCharTest('✴', ['eight pointed black star', 'eight pointed black star', 'eight pointed black star']);
+  this.executeCharTest('✵', ['eight pointed pinwheel star', 'eight pointed pinwheel star', 'eight pointed pinwheel star']);
+  this.executeCharTest('✶', ['étoile noire à six branches', 'étoile noire à six branches', 'étoile noire à six branches']);
+  this.executeCharTest('✹', ['twelve pointed black star', 'twelve pointed black star', 'twelve pointed black star']);
+  this.executeCharTest('✺', ['sixteen pointed asterisk', 'sixteen pointed asterisk', 'sixteen pointed asterisk']);
+  this.executeCharTest('✻', ['teardrop spoked asterisk', 'teardrop spoked asterisk', 'teardrop spoked asterisk']);
+  this.executeCharTest('✼', ['open center teardrop spoked asterisk', 'open center teardrop spoked asterisk', 'open center teardrop spoked asterisk']);
+  this.executeCharTest('✽', ['gros astérisque larmé', 'gros astérisque larmé', 'gros astérisque larmé']);
+  this.executeCharTest('✾', ['six petalled black and white florette', 'six petalled black and white florette', 'six petalled black and white florette']);
+  this.executeCharTest('✿', ['black florette', 'black florette', 'black florette']);
+  this.executeCharTest('❀', ['white florette', 'white florette', 'white florette']);
+  this.executeCharTest('❁', ['eight petalled outlined black florette', 'eight petalled outlined black florette', 'eight petalled outlined black florette']);
+  this.executeCharTest('❂', ['circled open center eight pointed star', 'circled open center eight pointed star', 'circled open center eight pointed star']);
+  this.executeCharTest('❃', ['heavy teardrop spoked pinwheel asterisk', 'heavy teardrop spoked pinwheel asterisk', 'heavy teardrop spoked pinwheel asterisk']);
+  this.executeCharTest('❄', ['snowflake', 'snowflake', 'snowflake']);
+  this.executeCharTest('❅', ['tight trifoliate snowflake', 'tight trifoliate snowflake', 'tight trifoliate snowflake']);
+  this.executeCharTest('❆', ['heavy chevron snowflake', 'heavy chevron snowflake', 'heavy chevron snowflake']);
+  this.executeCharTest('❇', ['sparkle', 'sparkle', 'sparkle']);
+  this.executeCharTest('❈', ['heavy sparkle', 'heavy sparkle', 'heavy sparkle']);
+  this.executeCharTest('❉', ['balloon spoked asterisk', 'balloon spoked asterisk', 'balloon spoked asterisk']);
+  this.executeCharTest('❊', ['eight teardrop spoked propeller asterisk', 'eight teardrop spoked propeller asterisk', 'eight teardrop spoked propeller asterisk']);
+  this.executeCharTest('❋', ['heavy eight teardrop spoked propeller asterisk', 'heavy eight teardrop spoked propeller asterisk', 'heavy eight teardrop spoked propeller asterisk']);
+  this.executeCharTest('❌', ['cross mark', 'cross mark', 'cross mark']);
+  this.executeCharTest('❍', ['shadowed white circle', 'shadowed white circle', 'shadowed white circle']);
+};
+
+
+sre.MathspeakCharFrenchTest.prototype.testMathspeakFunctions = function() {
+  this.executeCharTest('deg', ['degree', 'degree', 'degree']);
+  this.executeCharTest('det', ['déterminant', 'déterminant', 'déterminant']);
+  this.executeCharTest('dim', ['dimension', 'dimension', 'dimension']);
+  this.executeCharTest('hom', ['hom', 'hom', 'hom']);
+  this.executeCharTest('Hom', ['hom', 'hom', 'hom']);
+  this.executeCharTest('ker', ['kernel', 'kernel', 'kernel']);
+  this.executeCharTest('Tr', ['trace', 'trace', 'trace']);
+  this.executeCharTest('tr', ['trace', 'trace', 'trace']);
+  this.executeCharTest('log', ['log', 'log', 'log']);
+  this.executeCharTest('ln', ['logarithme népérien', 'logarithme népérien', 'logarithme népérien']);
+  this.executeCharTest('lg', ['log base 10', 'log base 10', 'log base 10']);
+  this.executeCharTest('exp', ['exp', 'exp', 'exp']);
+  this.executeCharTest('expt', ['exp', 'exp', 'exp']);
+  this.executeCharTest('gcd', ['gcd', 'gcd', 'gcd']);
+  this.executeCharTest('lcm', ['lcm', 'lcm', 'lcm']);
+  this.executeCharTest('arg', ['arg', 'arg', 'arg']);
+  this.executeCharTest('im', ['im', 'im', 'im']);
+  this.executeCharTest('re', ['re', 're', 're']);
+  this.executeCharTest('inf', ['inf', 'inf', 'inf']);
+  this.executeCharTest('lim', ['limite', 'limite', 'limite']);
+  this.executeCharTest('lim inf', ['liminf', 'liminf', 'liminf']);
+  this.executeCharTest('liminf', ['liminf', 'liminf', 'liminf']);
+  this.executeCharTest('lim sup', ['limsup', 'limsup', 'limsup']);
+  this.executeCharTest('limsup', ['limsup', 'limsup', 'limsup']);
+  this.executeCharTest('max', ['max', 'max', 'max']);
+  this.executeCharTest('min', ['min', 'min', 'min']);
+  this.executeCharTest('sup', ['sup', 'sup', 'sup']);
+  this.executeCharTest('injlim', ['colimit', 'colimit', 'colimit']);
+  this.executeCharTest('inj lim', ['colimit', 'colimit', 'colimit']);
+  this.executeCharTest('projlim', ['limit', 'limit', 'limit']);
+  this.executeCharTest('proj lim', ['limit', 'limit', 'limit']);
+  this.executeCharTest('mod', ['mod', 'mod', 'mod']);
+  this.executeCharTest('Pr', ['probability', 'probability', 'probability']);
+  this.executeCharTest('cosh', ['cosinus hyperbolique', 'cosinus hyperbolique', 'cosinus hyperbolique']);
+  this.executeCharTest('coth', ['cotangente hyperbolique', 'cotangente hyperbolique', 'cotangente hyperbolique']);
+  this.executeCharTest('csch', ['cosécante hyperbolique', 'cosécante hyperbolique', 'cosécante hyperbolique']);
+  this.executeCharTest('sech', ['sécante hyperbolique', 'sécante hyperbolique', 'sécante hyperbolique']);
+  this.executeCharTest('sinh', ['sinus hyperbolique', 'sinus hyperbolique', 'sinus hyperbolique']);
+  this.executeCharTest('tanh', ['tangente hyperbolique', 'tangente hyperbolique', 'tangente hyperbolique']);
+  this.executeCharTest('arcosh', ['area hyperbolic cosine', 'area hyperbolic cosine', 'area hyperbolic cosine']);
+  this.executeCharTest('arccosh', ['area hyperbolic cosine', 'area hyperbolic cosine', 'area hyperbolic cosine']);
+  this.executeCharTest('arcoth', ['area hyperbolic cotangent', 'area hyperbolic cotangent', 'area hyperbolic cotangent']);
+  this.executeCharTest('arccoth', ['area hyperbolic cotangent', 'area hyperbolic cotangent', 'area hyperbolic cotangent']);
+  this.executeCharTest('arcsch', ['area hyperbolic cosecant', 'area hyperbolic cosecant', 'area hyperbolic cosecant']);
+  this.executeCharTest('arccsch', ['area hyperbolic cosecant', 'area hyperbolic cosecant', 'area hyperbolic cosecant']);
+  this.executeCharTest('arsech', ['area hyperbolic secant', 'area hyperbolic secant', 'area hyperbolic secant']);
+  this.executeCharTest('arcsech', ['area hyperbolic secant', 'area hyperbolic secant', 'area hyperbolic secant']);
+  this.executeCharTest('arsinh', ['area hyperbolic sine', 'area hyperbolic sine', 'area hyperbolic sine']);
+  this.executeCharTest('arcsinh', ['area hyperbolic sine', 'area hyperbolic sine', 'area hyperbolic sine']);
+  this.executeCharTest('artanh', ['area hyperbolic tangent', 'area hyperbolic tangent', 'area hyperbolic tangent']);
+  this.executeCharTest('arctanh', ['area hyperbolic tangent', 'area hyperbolic tangent', 'area hyperbolic tangent']);
+  this.executeCharTest('cos', ['cosinus', 'cosinus', 'cosinus']);
+  this.executeCharTest('cosine', ['cosinus', 'cosinus', 'cosinus']);
+  this.executeCharTest('cot', ['cotangente', 'cotangente', 'cotangente']);
+  this.executeCharTest('csc', ['cosécante', 'cosécante', 'cosécante']);
+  this.executeCharTest('sec', ['sécante', 'sécante', 'sécante']);
+  this.executeCharTest('sin', ['sinus', 'sinus', 'sinus']);
+  this.executeCharTest('sine', ['sinus', 'sinus', 'sinus']);
+  this.executeCharTest('tan', ['tangente', 'tangente', 'tangente']);
+  this.executeCharTest('arccos', ['arc cosine', 'arc cosine', 'arc cosine']);
+  this.executeCharTest('arccot', ['arc cotangent', 'arc cotangent', 'arc cotangent']);
+  this.executeCharTest('arccsc', ['arc cosecant', 'arc cosecant', 'arc cosecant']);
+  this.executeCharTest('arcsec', ['arc secant', 'arc secant', 'arc secant']);
+  this.executeCharTest('arcsin', ['arc sine', 'arc sine', 'arc sine']);
+  this.executeCharTest('arctan', ['arc tangent', 'arc tangent', 'arc tangent']);
+};
+
+
+sre.MathspeakCharFrenchTest.prototype.testMathspeakUnits = function() {
+  this.executeUnitTest('W', ['watts', 'watts', 'watts']);
+  this.executeUnitTest('w', ['watts', 'watts', 'watts']);
+  this.executeUnitTest('kw', ['kilowatt', 'kilowatt', 'kilowatt']);
+  this.executeUnitTest('kW', ['kilowatt', 'kilowatt', 'kilowatt']);
+  this.executeUnitTest('mw', ['milliwatt', 'milliwatt', 'milliwatt']);
+  this.executeUnitTest('mW', ['milliwatt', 'milliwatt', 'milliwatt']);
+  this.executeUnitTest('kwh', ['kilowatt hour', 'kilowatt hour', 'kilowatt hour']);
+  this.executeUnitTest('kWh', ['kilowatt hour', 'kilowatt hour', 'kilowatt hour']);
+  this.executeUnitTest('J', ['joules', 'joules', 'joules']);
+  this.executeUnitTest('N', ['newtons', 'newtons', 'newtons']);
+  this.executeUnitTest('A', ['ampères', 'ampères', 'ampères']);
+  this.executeUnitTest('V', ['volts', 'volts', 'volts']);
+  this.executeUnitTest('µΩ', ['microohm', 'microohm', 'microohm']);
+  this.executeUnitTest('mΩ', ['milliohm', 'milliohm', 'milliohm']);
+  this.executeUnitTest('Ω', ['ohms', 'ohms', 'ohms']);
+  this.executeUnitTest('Ohm', ['ohms', 'ohms', 'ohms']);
+  this.executeUnitTest('kΩ', ['kilohm', 'kilohm', 'kilohm']);
+  this.executeUnitTest('KΩ', ['kilohm', 'kilohm', 'kilohm']);
+  this.executeUnitTest('MΩ', ['megaohm', 'megaohm', 'megaohm']);
+  this.executeUnitTest('GΩ', ['gigaohm', 'gigaohm', 'gigaohm']);
+  this.executeUnitTest('mm', ['millimeter', 'millimeter', 'millimeter']);
+  this.executeUnitTest('cm', ['centimeter', 'centimeter', 'centimeter']);
+  this.executeUnitTest('m', ['mètres', 'mètres', 'mètres']);
+  this.executeUnitTest('km', ['kilometer', 'kilometer', 'kilometer']);
+  this.executeUnitTest('ft', ['pieds', 'pieds', 'pieds']);
+  this.executeUnitTest('ft.', ['pieds', 'pieds', 'pieds']);
+  this.executeUnitTest('in', ['pouces', 'pouces', 'pouces']);
+  this.executeUnitTest('in.', ['pouces', 'pouces', 'pouces']);
+  this.executeUnitTest('mi', ['miles', 'miles', 'miles']);
+  this.executeUnitTest('mi.', ['miles', 'miles', 'miles']);
+  this.executeUnitTest('yd', ['yards', 'yards', 'yards']);
+  this.executeUnitTest('yd.', ['yards', 'yards', 'yards']);
+  this.executeUnitTest('n.m.', ['nautical mile', 'nautical mile', 'nautical mile']);
+  this.executeUnitTest('b', ['bit', 'bit', 'bit']);
+  this.executeUnitTest('B', ['byte', 'byte', 'byte']);
+  this.executeUnitTest('KB', ['kilobyte', 'kilobyte', 'kilobyte']);
+  this.executeUnitTest('MB', ['megabyte', 'megabyte', 'megabyte']);
+  this.executeUnitTest('GB', ['gigabyte', 'gigabyte', 'gigabyte']);
+  this.executeUnitTest('TB', ['terabyte', 'terabyte', 'terabyte']);
+  this.executeUnitTest('doz', ['dozen', 'dozen', 'dozen']);
+  this.executeUnitTest('doz.', ['dozen', 'dozen', 'dozen']);
+  this.executeUnitTest('dz', ['dozen', 'dozen', 'dozen']);
+  this.executeUnitTest('dz.', ['dozen', 'dozen', 'dozen']);
+  this.executeUnitTest('sq', ['square', 'square', 'square']);
+  this.executeUnitTest('sq.', ['square', 'square', 'square']);
+  this.executeUnitTest('ha', ['hectare', 'hectare', 'hectare']);
+  this.executeUnitTest('kt', ['knot', 'knot', 'knot']);
+  this.executeUnitTest('kt.', ['knot', 'knot', 'knot']);
+  this.executeUnitTest('mph', ['miles par heure', 'miles par heure', 'miles par heure']);
+  this.executeUnitTest('rpm', ['revolutions per minute', 'revolutions per minute', 'revolutions per minute']);
+  this.executeUnitTest('kmh', ['kilometers per hour', 'kilometers per hour', 'kilometers per hour']);
+  this.executeUnitTest('F', ['farads', 'farads', 'farads']);
+  this.executeUnitTest('F.', ['farads', 'farads', 'farads']);
+  this.executeUnitTest('°F', ['farads', 'farads', 'farads']);
+  this.executeUnitTest('C', ['coulombs', 'coulombs', 'coulombs']);
+  this.executeUnitTest('°C', ['coulombs', 'coulombs', 'coulombs']);
+  this.executeUnitTest('K', ['kelvins', 'kelvins', 'kelvins']);
+  this.executeUnitTest('°K', ['kelvins', 'kelvins', 'kelvins']);
+  this.executeUnitTest('ns', ['nanosecond', 'nanosecond', 'nanosecond']);
+  this.executeUnitTest('µs', ['microsecond', 'microsecond', 'microsecond']);
+  this.executeUnitTest('ms', ['millisecond', 'millisecond', 'millisecond']);
+  this.executeUnitTest('s', ['secondes', 'secondes', 'secondes']);
+  this.executeUnitTest('min', ['minute', 'minute', 'minute']);
+  this.executeUnitTest('h', ['hour', 'hour', 'hour']);
+  this.executeUnitTest('hr', ['hour', 'hour', 'hour']);
+  this.executeUnitTest('bbl.', ['barils', 'barils', 'barils']);
+  this.executeUnitTest('bbl', ['barils', 'barils', 'barils']);
+  this.executeUnitTest('cu', ['cubic', 'cubic', 'cubic']);
+  this.executeUnitTest('cu.', ['cubic', 'cubic', 'cubic']);
+  this.executeUnitTest('fl. oz.', ['fluid ounce', 'fluid ounce', 'fluid ounce']);
+  this.executeUnitTest('gal', ['gallons', 'gallons', 'gallons']);
+  this.executeUnitTest('gal.', ['gallons', 'gallons', 'gallons']);
+  this.executeUnitTest('pt', ['pintes', 'pintes', 'pintes']);
+  this.executeUnitTest('pt.', ['pintes', 'pintes', 'pintes']);
+  this.executeUnitTest('qt', ['quarts', 'quarts', 'quarts']);
+  this.executeUnitTest('qt.', ['quarts', 'quarts', 'quarts']);
+  this.executeUnitTest('tbsp', ['cuillères de table', 'cuillères de table', 'cuillères de table']);
+  this.executeUnitTest('tbsp.', ['cuillères de table', 'cuillères de table', 'cuillères de table']);
+  this.executeUnitTest('tsp', ['cuillèes à thé', 'cuillèes à thé', 'cuillèes à thé']);
+  this.executeUnitTest('tsp.', ['cuillèes à thé', 'cuillèes à thé', 'cuillèes à thé']);
+  this.executeUnitTest('cc', ['cubic centimeter', 'cubic centimeter', 'cubic centimeter']);
+  this.executeUnitTest('kl', ['kiloliter', 'kiloliter', 'kiloliter']);
+  this.executeUnitTest('l', ['litres', 'litres', 'litres']);
+  this.executeUnitTest('ml', ['milliliter', 'milliliter', 'milliliter']);
+  this.executeUnitTest('lb', ['livres', 'livres', 'livres']);
+  this.executeUnitTest('lb.', ['livres', 'livres', 'livres']);
+  this.executeUnitTest('LT', ['long ton', 'long ton', 'long ton']);
+  this.executeUnitTest('L.T.', ['long ton', 'long ton', 'long ton']);
+  this.executeUnitTest('oz', ['onces', 'onces', 'onces']);
+  this.executeUnitTest('oz.', ['onces', 'onces', 'onces']);
+  this.executeUnitTest('g', ['grains', 'grains', 'grains']);
+  this.executeUnitTest('gr', ['grains', 'grains', 'grains']);
+  this.executeUnitTest('kg', ['kilogram', 'kilogram', 'kilogram']);
+  this.executeUnitTest('mcg', ['microgram', 'microgram', 'microgram']);
+  this.executeUnitTest('µg', ['microgram', 'microgram', 'microgram']);
+  this.executeUnitTest('mg', ['milligram', 'milligram', 'milligram']);
+  this.executeUnitTest('t', ['tonnes', 'tonnes', 'tonnes']);
+  this.executeUnitTest('T', ['tonnes', 'tonnes', 'tonnes']);
+};

@@ -16,6 +16,7 @@
 goog.provide('sre.BrailleNemethTest');
 
 goog.require('sre.AataTest');
+goog.require('sre.DefaultCharNemethTest');
 goog.require('sre.NemethBaseTest');
 
 
@@ -25,5 +26,6 @@ goog.require('sre.NemethBaseTest');
  */
 sre.BrailleNemethTest.testList = [
   sre.AataTest,
+  sre.DefaultCharNemethTest,
   sre.NemethBaseTest
 ];

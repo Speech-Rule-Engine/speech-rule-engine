@@ -1,4350 +1,4405 @@
-nemeth, default, "0", "⠴"
-nemeth, default, "1", "⠂"
-nemeth, default, "2", "⠆"
-nemeth, default, "3", "⠒"
-nemeth, default, "4", "⠲"
-nemeth, default, "5", "⠢"
-nemeth, default, "6", "⠖"
-nemeth, default, "7", "⠶"
-nemeth, default, "8", "⠦"
-nemeth, default, "9", "⠔"
-nemeth, default, "deg", "⠙⠑⠛"
-nemeth, default, "det", "⠙⠑⠞"
-nemeth, default, "dim", "⠙⠊⠍"
-nemeth, default, "hom", "⠓⠕⠍"
-nemeth, default, "Hom", "⠠⠓⠕⠍"
-nemeth, default, "ker", "⠅⠑⠗"
-nemeth, default, "Tr", "⠠⠞⠗"
-nemeth, default, "tr", "⠞⠗"
-nemeth, default, "log", "⠇⠕⠛"
-nemeth, default, "ln", "⠇⠝"
-nemeth, default, "lg", "⠇⠛"
-nemeth, default, "exp", "⠑⠭⠏"
-nemeth, default, "expt", "⠑⠭⠏⠞"
-nemeth, default, "gcd", "⠛⠉⠙"
-nemeth, default, "lcm", "⠇⠉⠍"
-nemeth, default, "arg", "⠁⠗⠛"
-nemeth, default, "im", "⠊⠍"
-nemeth, default, "re", "⠗⠑"
-nemeth, default, "inf", "⠊⠝⠋"
-nemeth, default, "lim", "⠇⠊⠍"
-nemeth, default, "lim inf", "⠇⠊⠍⠀⠊⠝⠋"
-nemeth, default, "liminf", "⠇⠊⠍⠊⠝⠋"
-nemeth, default, "lim sup", "⠇⠊⠍⠀⠎⠥⠏"
-nemeth, default, "limsup", "⠇⠊⠍⠎⠥⠏"
-nemeth, default, "max", "⠍⠁⠭"
-nemeth, default, "min", "⠍⠊⠝"
-nemeth, default, "sup", "⠎⠥⠏"
-nemeth, default, "injlim", "⠊⠝⠚⠇⠊⠍"
-nemeth, default, "inj lim", "⠊⠝⠚⠀⠇⠊⠍"
-nemeth, default, "projlim", "⠏⠗⠕⠚⠇⠊⠍"
-nemeth, default, "proj lim", "⠏⠗⠕⠚⠀⠇⠊⠍"
-nemeth, default, "mod", "⠍⠕⠙"
-nemeth, default, "Pr", "⠠⠏⠗"
-nemeth, default, "cosh", "⠉⠕⠎⠓"
-nemeth, default, "coth", "⠉⠕⠞⠓"
-nemeth, default, "csch", "⠉⠎⠉⠓"
-nemeth, default, "sech", "⠎⠑⠉⠓"
-nemeth, default, "sinh", "⠎⠊⠝⠓"
-nemeth, default, "tanh", "⠞⠁⠝⠓"
-nemeth, default, "arcosh", "⠁⠗⠉⠕⠎⠓"
-nemeth, default, "arccosh", "⠁⠗⠉⠉⠕⠎⠓"
-nemeth, default, "arcoth", "⠁⠗⠉⠕⠞⠓"
-nemeth, default, "arccoth", "⠁⠗⠉⠉⠕⠞⠓"
-nemeth, default, "arcsch", "⠁⠗⠉⠎⠉⠓"
-nemeth, default, "arccsch", "⠁⠗⠉⠉⠎⠉⠓"
-nemeth, default, "arsech", "⠁⠗⠎⠑⠉⠓"
-nemeth, default, "arcsech", "⠁⠗⠉⠎⠑⠉⠓"
-nemeth, default, "arsinh", "⠁⠗⠎⠊⠝⠓"
-nemeth, default, "arcsinh", "⠁⠗⠉⠎⠊⠝⠓"
-nemeth, default, "artanh", "⠁⠗⠞⠁⠝⠓"
-nemeth, default, "arctanh", "⠁⠗⠉⠞⠁⠝⠓"
-nemeth, default, "cos", "⠉⠕⠎"
-nemeth, default, "cosine", "⠉⠕⠎⠊⠝⠑"
-nemeth, default, "cot", "⠉⠕⠞"
-nemeth, default, "csc", "⠉⠎⠉"
-nemeth, default, "sec", "⠎⠑⠉"
-nemeth, default, "sin", "⠎⠊⠝"
-nemeth, default, "sine", "⠎⠊⠝⠑"
-nemeth, default, "tan", "⠞⠁⠝"
-nemeth, default, "arccos", "⠁⠗⠉⠉⠕⠎"
-nemeth, default, "arccot", "⠁⠗⠉⠉⠕⠞"
-nemeth, default, "arccsc", "⠁⠗⠉⠉⠎⠉"
-nemeth, default, "arcsec", "⠁⠗⠉⠎⠑⠉"
-nemeth, default, "arcsin", "⠁⠗⠉⠎⠊⠝"
-nemeth, default, "arctan", "⠁⠗⠉⠞⠁⠝"
-nemeth, default, "Α", "⠨⠠⠁"
-nemeth, default, "Β", "⠨⠠⠃"
-nemeth, default, "Γ", "⠨⠠⠛"
-nemeth, default, "Δ", "⠨⠠⠙"
-nemeth, default, "Ε", "⠨⠠⠑"
-nemeth, default, "Ζ", "⠨⠠⠱"
-nemeth, default, "Η", "⠨⠠⠣"
-nemeth, default, "Θ", "⠨⠠⠹"
-nemeth, default, "Ι", "⠨⠠⠊"
-nemeth, default, "Κ", "⠨⠠⠅"
-nemeth, default, "Λ", "⠨⠠⠇"
-nemeth, default, "Μ", "⠨⠠⠍"
-nemeth, default, "Ν", "⠨⠠⠝"
-nemeth, default, "Ξ", "⠨⠠⠭"
-nemeth, default, "Ο", "⠨⠠⠕"
-nemeth, default, "Π", "⠨⠠⠏"
-nemeth, default, "Ρ", "⠨⠠⠗"
-nemeth, default, "Σ", "⠨⠠⠎"
-nemeth, default, "Τ", "⠨⠠⠥"
-nemeth, default, "Υ", "⠨⠠⠥"
-nemeth, default, "Φ", "⠨⠠⠋"
-nemeth, default, "Χ", "⠨⠠⠯"
-nemeth, default, "Ψ", "⠨⠠⠫"
-nemeth, default, "Ω", "⠨⠠⠺"
-nemeth, default, "α", "⠨⠁"
-nemeth, default, "β", "⠨⠃"
-nemeth, default, "γ", "⠨⠛"
-nemeth, default, "δ", "⠨⠙"
-nemeth, default, "ε", "⠨⠑"
-nemeth, default, "ζ", "⠨⠱"
-nemeth, default, "η", "⠨⠦"
-nemeth, default, "θ", "⠨⠹"
-nemeth, default, "ι", "⠨⠊"
-nemeth, default, "κ", "⠨⠅"
-nemeth, default, "λ", "⠨⠇"
-nemeth, default, "μ", "⠨⠍"
-nemeth, default, "ν", "⠨⠝"
-nemeth, default, "ξ", "⠨⠭"
-nemeth, default, "ο", "⠨⠕"
-nemeth, default, "π", "⠨⠏"
-nemeth, default, "ρ", "⠨⠗"
-nemeth, default, "ς", "⠨⠒"
-nemeth, default, "σ", "⠨⠎"
-nemeth, default, "τ", "⠨⠞"
-nemeth, default, "υ", "⠨⠥"
-nemeth, default, "φ", "⠨⠋"
-nemeth, default, "χ", "⠨⠯"
-nemeth, default, "ψ", "⠨⠓"
-nemeth, default, "ω", "⠨⠕"
-nemeth, default, "ᴦ", "⠄⡳⠭⠂⠙⠆⠖⠄"
-nemeth, default, "ᴧ", "⠄⡳⠭⠂⠙⠆⠶⠄"
-nemeth, default, "ᴨ", "⠄⡳⠭⠂⠙⠆⠦⠄"
-nemeth, default, "ᴩ", "⠄⡳⠭⠂⠙⠆⠔⠄"
-nemeth, default, "ᴪ", "⠄⡳⠭⠂⠙⠆⠁⠄"
-nemeth, default, "ᵞ", "⠄⡳⠭⠂⠙⠢⠑⠄"
-nemeth, default, "ᵠ", "⠄⡳⠭⠂⠙⠖⠴⠄"
-nemeth, default, "ᵦ", "⠄⡳⠭⠂⠙⠖⠖⠄"
-nemeth, default, "ᵧ", "⠄⡳⠭⠂⠙⠖⠶⠄"
-nemeth, default, "ᵨ", "⠄⡳⠭⠂⠙⠖⠦⠄"
-nemeth, default, "ᵩ", "⠄⡳⠭⠂⠙⠖⠔⠄"
-nemeth, default, "ᵪ", "⠄⡳⠭⠂⠙⠖⠁⠄"
-nemeth, default, "ϐ", "⠄⡳⠭⠴⠒⠙⠴⠄"
-nemeth, default, "ϑ", "⠄⡳⠭⠴⠒⠙⠂⠄"
-nemeth, default, "ϕ", "⠨⠋"
-nemeth, default, "ϖ", "⠄⡳⠭⠴⠒⠙⠖⠄"
-nemeth, default, "ϗ", "⠄⡳⠭⠴⠒⠙⠶⠄"
-nemeth, default, "ϰ", "⠄⡳⠭⠴⠒⠋⠴⠄"
-nemeth, default, "ϱ", "⠄⡳⠭⠴⠒⠋⠂⠄"
-nemeth, default, "ϵ", "⠄⡳⠭⠴⠒⠋⠢⠄"
-nemeth, default, "϶", "⠄⡳⠭⠴⠒⠋⠖⠄"
-nemeth, default, "ϴ", "⠄⡳⠭⠴⠒⠋⠲⠄"
-nemeth, default, "𝚹", "bold cap theta"
-nemeth, default, "𝛳", "italic cap theta"
-nemeth, default, "𝝧", "sans serif bold cap theta"
-nemeth, default, "𝛁", "⠄⡳⠽⠂⠙⠖⠉⠂⠄"
-nemeth, default, "𝛛", "⠄⡳⠽⠂⠙⠖⠙⠃⠄"
-nemeth, default, "𝛜", "⠄⡳⠽⠂⠙⠖⠙⠉⠄"
-nemeth, default, "𝛝", "⠄⡳⠽⠂⠙⠖⠙⠙⠄"
-nemeth, default, "𝛞", "⠄⡳⠽⠂⠙⠖⠙⠑⠄"
-nemeth, default, "𝛟", "⠄⡳⠽⠂⠙⠖⠙⠋⠄"
-nemeth, default, "𝛠", "⠄⡳⠽⠂⠙⠖⠑⠴⠄"
-nemeth, default, "𝛡", "⠄⡳⠽⠂⠙⠖⠑⠂⠄"
-nemeth, default, "𝛻", "⠄⡳⠽⠂⠙⠖⠋⠃⠄"
-nemeth, default, "𝜕", "⠄⡳⠽⠂⠙⠶⠂⠢⠄"
-nemeth, default, "𝜖", "⠄⡳⠽⠂⠙⠶⠂⠖⠄"
-nemeth, default, "𝜗", "⠄⡳⠽⠂⠙⠶⠂⠶⠄"
-nemeth, default, "𝜘", "⠄⡳⠽⠂⠙⠶⠂⠦⠄"
-nemeth, default, "𝜙", "⠄⡳⠽⠂⠙⠶⠂⠔⠄"
-nemeth, default, "𝜚", "⠄⡳⠽⠂⠙⠶⠂⠁⠄"
-nemeth, default, "𝜛", "⠄⡳⠽⠂⠙⠶⠂⠃⠄"
-nemeth, default, "𝝯", "⠄⡳⠽⠂⠙⠶⠖⠋⠄"
-nemeth, default, "𝞉", "⠄⡳⠽⠂⠙⠶⠦⠔⠄"
-nemeth, default, "𝞊", "⠄⡳⠽⠂⠙⠶⠦⠁⠄"
-nemeth, default, "𝞋", "⠄⡳⠽⠂⠙⠶⠦⠃⠄"
-nemeth, default, "𝞌", "⠄⡳⠽⠂⠙⠶⠦⠉⠄"
-nemeth, default, "𝞍", "⠄⡳⠽⠂⠙⠶⠦⠙⠄"
-nemeth, default, "𝞎", "⠄⡳⠽⠂⠙⠶⠦⠑⠄"
-nemeth, default, "𝞏", "⠄⡳⠽⠂⠙⠶⠦⠋⠄"
-nemeth, default, "𝟊", "⠄⡳⠽⠂⠙⠶⠉⠁⠄"
-nemeth, default, "𝟋", "⠄⡳⠽⠂⠙⠶⠉⠃⠄"
-nemeth, default, "𝚨", "⠸⠨⠠⠁"
-nemeth, default, "𝚩", "⠸⠨⠠⠃"
-nemeth, default, "𝚪", "⠸⠨⠠⠛"
-nemeth, default, "𝚫", "⠸⠨⠠⠙"
-nemeth, default, "𝚬", "⠸⠨⠠⠑"
-nemeth, default, "𝚭", "⠸⠨⠠⠱"
-nemeth, default, "𝚮", "⠸⠨⠠⠣"
-nemeth, default, "𝚯", "⠸⠨⠠⠹"
-nemeth, default, "𝚰", "⠸⠨⠠⠊"
-nemeth, default, "𝚱", "⠸⠨⠠⠅"
-nemeth, default, "𝚲", "⠸⠨⠠⠇"
-nemeth, default, "𝚳", "⠸⠨⠠⠍"
-nemeth, default, "𝚴", "⠸⠨⠠⠝"
-nemeth, default, "𝚵", "⠸⠨⠠⠭"
-nemeth, default, "𝚶", "⠸⠨⠠⠕"
-nemeth, default, "𝚷", "⠸⠨⠠⠏"
-nemeth, default, "𝚸", "⠸⠨⠠⠗"
-nemeth, default, "𝚺", "⠸⠨⠠⠎"
-nemeth, default, "𝚻", "⠸⠨⠠⠥"
-nemeth, default, "𝚼", "⠸⠨⠠⠥"
-nemeth, default, "𝚽", "⠸⠨⠠⠋"
-nemeth, default, "𝚾", "⠸⠨⠠⠯"
-nemeth, default, "𝚿", "⠸⠨⠠⠫"
-nemeth, default, "𝛀", "⠸⠨⠠⠺"
-nemeth, default, "𝛂", "⠸⠨⠁"
-nemeth, default, "𝛃", "⠸⠨⠃"
-nemeth, default, "𝛄", "⠸⠨⠛"
-nemeth, default, "𝛅", "⠸⠨⠙"
-nemeth, default, "𝛆", "⠸⠨⠑"
-nemeth, default, "𝛇", "⠸⠨⠱"
-nemeth, default, "𝛈", "⠸⠨⠦"
-nemeth, default, "𝛉", "⠸⠨⠹"
-nemeth, default, "𝛊", "⠸⠨⠊"
-nemeth, default, "𝛋", "⠸⠨⠅"
-nemeth, default, "𝛌", "⠸⠨⠇"
-nemeth, default, "𝛍", "⠸⠨⠍"
-nemeth, default, "𝛎", "⠸⠨⠝"
-nemeth, default, "𝛏", "⠸⠨⠭"
-nemeth, default, "𝛐", "⠸⠨⠕"
-nemeth, default, "𝛑", "⠸⠨⠏"
-nemeth, default, "𝛒", "⠸⠨⠗"
-nemeth, default, "𝛓", "⠸⠨⠒"
-nemeth, default, "𝛔", "⠸⠨⠎"
-nemeth, default, "𝛕", "⠸⠨⠞"
-nemeth, default, "𝛖", "⠸⠨⠥"
-nemeth, default, "𝛗", "⠸⠨⠋"
-nemeth, default, "𝛘", "⠸⠨⠯"
-nemeth, default, "𝛙", "⠸⠨⠓"
-nemeth, default, "𝛚", "⠸⠨⠕"
-nemeth, default, "𝛢", "⠨⠨⠠⠁"
-nemeth, default, "𝛣", "⠨⠨⠠⠃"
-nemeth, default, "𝛤", "⠨⠨⠠⠛"
-nemeth, default, "𝛥", "⠨⠨⠠⠙"
-nemeth, default, "𝛦", "⠨⠨⠠⠑"
-nemeth, default, "𝛧", "⠨⠨⠠⠱"
-nemeth, default, "𝛨", "⠨⠨⠠⠣"
-nemeth, default, "𝛩", "⠨⠨⠠⠹"
-nemeth, default, "𝛪", "⠨⠨⠠⠊"
-nemeth, default, "𝛫", "⠨⠨⠠⠅"
-nemeth, default, "𝛬", "⠨⠨⠠⠇"
-nemeth, default, "𝛭", "⠨⠨⠠⠍"
-nemeth, default, "𝛮", "⠨⠨⠠⠝"
-nemeth, default, "𝛯", "⠨⠨⠠⠭"
-nemeth, default, "𝛰", "⠨⠨⠠⠕"
-nemeth, default, "𝛱", "⠨⠨⠠⠏"
-nemeth, default, "𝛲", "⠨⠨⠠⠗"
-nemeth, default, "𝛴", "⠨⠨⠠⠎"
-nemeth, default, "𝛵", "⠨⠨⠠⠥"
-nemeth, default, "𝛶", "⠨⠨⠠⠥"
-nemeth, default, "𝛷", "⠨⠨⠠⠋"
-nemeth, default, "𝛸", "⠨⠨⠠⠯"
-nemeth, default, "𝛹", "⠨⠨⠠⠫"
-nemeth, default, "𝛺", "⠨⠨⠠⠺"
-nemeth, default, "𝛼", "⠨⠨⠁"
-nemeth, default, "𝛽", "⠨⠨⠃"
-nemeth, default, "𝛾", "⠨⠨⠛"
-nemeth, default, "𝛿", "⠨⠨⠙"
-nemeth, default, "𝜀", "⠨⠨⠑"
-nemeth, default, "𝜁", "⠨⠨⠱"
-nemeth, default, "𝜂", "⠨⠨⠦"
-nemeth, default, "𝜃", "⠨⠨⠹"
-nemeth, default, "𝜄", "⠨⠨⠊"
-nemeth, default, "𝜅", "⠨⠨⠅"
-nemeth, default, "𝜆", "⠨⠨⠇"
-nemeth, default, "𝜇", "⠨⠨⠍"
-nemeth, default, "𝜈", "⠨⠨⠝"
-nemeth, default, "𝜉", "⠨⠨⠭"
-nemeth, default, "𝜊", "⠨⠨⠕"
-nemeth, default, "𝜋", "⠨⠨⠏"
-nemeth, default, "𝜌", "⠨⠨⠗"
-nemeth, default, "𝜍", "⠨⠨⠒"
-nemeth, default, "𝜎", "⠨⠨⠎"
-nemeth, default, "𝜏", "⠨⠨⠞"
-nemeth, default, "𝜐", "⠨⠨⠥"
-nemeth, default, "𝜑", "⠨⠨⠋"
-nemeth, default, "𝜒", "⠨⠨⠯"
-nemeth, default, "𝜓", "⠨⠨⠓"
-nemeth, default, "𝜔", "⠨⠨⠕"
-nemeth, default, "𝜜", "⠸⠨⠨⠠⠁"
-nemeth, default, "𝜝", "⠸⠨⠨⠠⠃"
-nemeth, default, "𝜞", "⠸⠨⠨⠠⠛"
-nemeth, default, "𝜟", "⠸⠨⠨⠠⠙"
-nemeth, default, "𝜠", "⠸⠨⠨⠠⠑"
-nemeth, default, "𝜡", "⠸⠨⠨⠠⠱"
-nemeth, default, "𝜢", "⠸⠨⠨⠠⠣"
-nemeth, default, "𝜣", "⠸⠨⠨⠠⠹"
-nemeth, default, "𝜤", "⠸⠨⠨⠠⠊"
-nemeth, default, "𝜥", "⠸⠨⠨⠠⠅"
-nemeth, default, "𝜦", "⠸⠨⠨⠠⠇"
-nemeth, default, "𝜧", "⠸⠨⠨⠠⠍"
-nemeth, default, "𝜨", "⠸⠨⠨⠠⠝"
-nemeth, default, "𝜩", "⠸⠨⠨⠠⠭"
-nemeth, default, "𝜪", "⠸⠨⠨⠠⠕"
-nemeth, default, "𝜫", "⠸⠨⠨⠠⠏"
-nemeth, default, "𝜬", "⠸⠨⠨⠠⠗"
-nemeth, default, "𝜮", "⠸⠨⠨⠠⠎"
-nemeth, default, "𝜯", "⠸⠨⠨⠠⠥"
-nemeth, default, "𝜰", "⠸⠨⠨⠠⠥"
-nemeth, default, "𝜱", "⠸⠨⠨⠠⠋"
-nemeth, default, "𝜲", "⠸⠨⠨⠠⠯"
-nemeth, default, "𝜳", "⠸⠨⠨⠠⠫"
-nemeth, default, "𝜴", "⠸⠨⠨⠠⠺"
-nemeth, default, "𝜶", "⠸⠨⠨⠁"
-nemeth, default, "𝜷", "⠸⠨⠨⠃"
-nemeth, default, "𝜸", "⠸⠨⠨⠛"
-nemeth, default, "𝜹", "⠸⠨⠨⠙"
-nemeth, default, "𝜺", "⠸⠨⠨⠑"
-nemeth, default, "𝜻", "⠸⠨⠨⠱"
-nemeth, default, "𝜼", "⠸⠨⠨⠦"
-nemeth, default, "𝜽", "⠸⠨⠨⠹"
-nemeth, default, "𝜾", "⠸⠨⠨⠊"
-nemeth, default, "𝜿", "⠸⠨⠨⠅"
-nemeth, default, "𝝀", "⠸⠨⠨⠇"
-nemeth, default, "𝝁", "⠸⠨⠨⠍"
-nemeth, default, "𝝂", "⠸⠨⠨⠝"
-nemeth, default, "𝝃", "⠸⠨⠨⠭"
-nemeth, default, "𝝄", "⠸⠨⠨⠕"
-nemeth, default, "𝝅", "⠸⠨⠨⠏"
-nemeth, default, "𝝆", "⠸⠨⠨⠗"
-nemeth, default, "𝝇", "⠸⠨⠨⠒"
-nemeth, default, "𝝈", "⠸⠨⠨⠎"
-nemeth, default, "𝝉", "⠸⠨⠨⠞"
-nemeth, default, "𝝊", "⠸⠨⠨⠥"
-nemeth, default, "𝝋", "⠸⠨⠨⠋"
-nemeth, default, "𝝌", "⠸⠨⠨⠯"
-nemeth, default, "𝝍", "⠸⠨⠨⠓"
-nemeth, default, "𝝎", "⠸⠨⠨⠕"
-nemeth, default, "𝝖", "⠠⠨⠸⠨⠠⠁"
-nemeth, default, "𝝗", "⠠⠨⠸⠨⠠⠃"
-nemeth, default, "𝝘", "⠠⠨⠸⠨⠠⠛"
-nemeth, default, "𝝙", "⠠⠨⠸⠨⠠⠙"
-nemeth, default, "𝝚", "⠠⠨⠸⠨⠠⠑"
-nemeth, default, "𝝛", "⠠⠨⠸⠨⠠⠱"
-nemeth, default, "𝝜", "⠠⠨⠸⠨⠠⠣"
-nemeth, default, "𝝝", "⠠⠨⠸⠨⠠⠹"
-nemeth, default, "𝝞", "⠠⠨⠸⠨⠠⠊"
-nemeth, default, "𝝟", "⠠⠨⠸⠨⠠⠅"
-nemeth, default, "𝝠", "⠠⠨⠸⠨⠠⠇"
-nemeth, default, "𝝡", "⠠⠨⠸⠨⠠⠍"
-nemeth, default, "𝝢", "⠠⠨⠸⠨⠠⠝"
-nemeth, default, "𝝣", "⠠⠨⠸⠨⠠⠭"
-nemeth, default, "𝝤", "⠠⠨⠸⠨⠠⠕"
-nemeth, default, "𝝥", "⠠⠨⠸⠨⠠⠏"
-nemeth, default, "𝝦", "⠠⠨⠸⠨⠠⠗"
-nemeth, default, "𝝨", "⠠⠨⠸⠨⠠⠎"
-nemeth, default, "𝝩", "⠠⠨⠸⠨⠠⠥"
-nemeth, default, "𝝪", "⠠⠨⠸⠨⠠⠥"
-nemeth, default, "𝝫", "⠠⠨⠸⠨⠠⠋"
-nemeth, default, "𝝬", "⠠⠨⠸⠨⠠⠯"
-nemeth, default, "𝝭", "⠠⠨⠸⠨⠠⠫"
-nemeth, default, "𝝮", "⠠⠨⠸⠨⠠⠺"
-nemeth, default, "𝝰", "⠠⠨⠸⠨⠁"
-nemeth, default, "𝝱", "⠠⠨⠸⠨⠃"
-nemeth, default, "𝝲", "⠠⠨⠸⠨⠛"
-nemeth, default, "𝝳", "⠠⠨⠸⠨⠙"
-nemeth, default, "𝝴", "⠠⠨⠸⠨⠑"
-nemeth, default, "𝝵", "⠠⠨⠸⠨⠱"
-nemeth, default, "𝝶", "⠠⠨⠸⠨⠦"
-nemeth, default, "𝝷", "⠠⠨⠸⠨⠹"
-nemeth, default, "𝝸", "⠠⠨⠸⠨⠊"
-nemeth, default, "𝝹", "⠠⠨⠸⠨⠅"
-nemeth, default, "𝝺", "⠠⠨⠸⠨⠇"
-nemeth, default, "𝝻", "⠠⠨⠸⠨⠍"
-nemeth, default, "𝝼", "⠠⠨⠸⠨⠝"
-nemeth, default, "𝝽", "⠠⠨⠸⠨⠭"
-nemeth, default, "𝝾", "⠠⠨⠸⠨⠕"
-nemeth, default, "𝝿", "⠠⠨⠸⠨⠏"
-nemeth, default, "𝞀", "⠠⠨⠸⠨⠗"
-nemeth, default, "𝞁", "⠠⠨⠸⠨⠒"
-nemeth, default, "𝞂", "⠠⠨⠸⠨⠎"
-nemeth, default, "𝞃", "⠠⠨⠸⠨⠞"
-nemeth, default, "𝞄", "⠠⠨⠸⠨⠥"
-nemeth, default, "𝞅", "⠠⠨⠸⠨⠋"
-nemeth, default, "𝞆", "⠠⠨⠸⠨⠯"
-nemeth, default, "𝞇", "⠠⠨⠸⠨⠓"
-nemeth, default, "𝞈", "⠠⠨⠸⠨⠕"
-nemeth, default, "𝞐", "⠠⠨⠸⠨⠨⠠⠁"
-nemeth, default, "𝞑", "⠠⠨⠸⠨⠨⠠⠃"
-nemeth, default, "𝞒", "⠠⠨⠸⠨⠨⠠⠛"
-nemeth, default, "𝞓", "⠠⠨⠸⠨⠨⠠⠙"
-nemeth, default, "𝞔", "⠠⠨⠸⠨⠨⠠⠑"
-nemeth, default, "𝞕", "⠠⠨⠸⠨⠨⠠⠱"
-nemeth, default, "𝞖", "⠠⠨⠸⠨⠨⠠⠣"
-nemeth, default, "𝞗", "⠠⠨⠸⠨⠨⠠⠹"
-nemeth, default, "𝞘", "⠠⠨⠸⠨⠨⠠⠊"
-nemeth, default, "𝞙", "⠠⠨⠸⠨⠨⠠⠅"
-nemeth, default, "𝞚", "⠠⠨⠸⠨⠨⠠⠇"
-nemeth, default, "𝞛", "⠠⠨⠸⠨⠨⠠⠍"
-nemeth, default, "𝞜", "⠠⠨⠸⠨⠨⠠⠝"
-nemeth, default, "𝞝", "⠠⠨⠸⠨⠨⠠⠭"
-nemeth, default, "𝞞", "⠠⠨⠸⠨⠨⠠⠕"
-nemeth, default, "𝞟", "⠠⠨⠸⠨⠨⠠⠏"
-nemeth, default, "𝞠", "⠠⠨⠸⠨⠨⠠⠗"
-nemeth, default, "𝞢", "⠠⠨⠸⠨⠨⠠⠎"
-nemeth, default, "𝞣", "⠠⠨⠸⠨⠨⠠⠥"
-nemeth, default, "𝞤", "⠠⠨⠸⠨⠨⠠⠥"
-nemeth, default, "𝞥", "⠠⠨⠸⠨⠨⠠⠋"
-nemeth, default, "𝞦", "⠠⠨⠸⠨⠨⠠⠯"
-nemeth, default, "𝞧", "⠠⠨⠸⠨⠨⠠⠫"
-nemeth, default, "𝞨", "⠠⠨⠸⠨⠨⠠⠺"
-nemeth, default, "𝞪", "⠠⠨⠸⠨⠨⠁"
-nemeth, default, "𝞫", "⠠⠨⠸⠨⠨⠃"
-nemeth, default, "𝞬", "⠠⠨⠸⠨⠨⠛"
-nemeth, default, "𝞭", "⠠⠨⠸⠨⠨⠙"
-nemeth, default, "𝞮", "⠠⠨⠸⠨⠨⠑"
-nemeth, default, "𝞯", "⠠⠨⠸⠨⠨⠱"
-nemeth, default, "𝞰", "⠠⠨⠸⠨⠨⠦"
-nemeth, default, "𝞱", "⠠⠨⠸⠨⠨⠹"
-nemeth, default, "𝞲", "⠠⠨⠸⠨⠨⠊"
-nemeth, default, "𝞳", "⠠⠨⠸⠨⠨⠅"
-nemeth, default, "𝞴", "⠠⠨⠸⠨⠨⠇"
-nemeth, default, "𝞵", "⠠⠨⠸⠨⠨⠍"
-nemeth, default, "𝞶", "⠠⠨⠸⠨⠨⠝"
-nemeth, default, "𝞷", "⠠⠨⠸⠨⠨⠭"
-nemeth, default, "𝞸", "⠠⠨⠸⠨⠨⠕"
-nemeth, default, "𝞹", "⠠⠨⠸⠨⠨⠏"
-nemeth, default, "𝞺", "⠠⠨⠸⠨⠨⠗"
-nemeth, default, "𝞻", "⠠⠨⠸⠨⠨⠒"
-nemeth, default, "𝞼", "⠠⠨⠸⠨⠨⠎"
-nemeth, default, "𝞽", "⠠⠨⠸⠨⠨⠞"
-nemeth, default, "𝞾", "⠠⠨⠸⠨⠨⠥"
-nemeth, default, "𝞿", "⠠⠨⠸⠨⠨⠋"
-nemeth, default, "𝟀", "⠠⠨⠸⠨⠨⠯"
-nemeth, default, "𝟁", "⠠⠨⠸⠨⠨⠓"
-nemeth, default, "𝟂", "⠠⠨⠸⠨⠨⠕"
-nemeth, default, "ℵ", "⠄⡳⠭⠆⠂⠒⠢⠄"
-nemeth, default, "ℶ", "⠄⡳⠭⠆⠂⠒⠖⠄"
-nemeth, default, "ℷ", "⠄⡳⠭⠆⠂⠒⠶⠄"
-nemeth, default, "ℸ", "⠄⡳⠭⠆⠂⠒⠦⠄"
-nemeth, default, "ǖ", "⠄⡳⠭⠴⠂⠙⠖⠄"
-nemeth, default, "ǘ", "⠄⡳⠭⠴⠂⠙⠦⠄"
-nemeth, default, "ǚ", "⠄⡳⠭⠴⠂⠙⠁⠄"
-nemeth, default, "ǜ", "⠄⡳⠭⠴⠂⠙⠉⠄"
-nemeth, default, "ǟ", "⠄⡳⠭⠴⠂⠙⠋⠄"
-nemeth, default, "ǡ", "⠄⡳⠭⠴⠂⠑⠂⠄"
-nemeth, default, "ǭ", "⠄⡳⠭⠴⠂⠑⠙⠄"
-nemeth, default, "ǻ", "⠄⡳⠭⠴⠂⠋⠃⠄"
-nemeth, default, "ȫ", "⠄⡳⠭⠴⠆⠆⠃⠄"
-nemeth, default, "ȭ", "⠄⡳⠭⠴⠆⠆⠙⠄"
-nemeth, default, "ȱ", "⠄⡳⠭⠴⠆⠒⠂⠄"
-nemeth, default, "ḉ", "⠄⡳⠭⠂⠑⠴⠔⠄"
-nemeth, default, "ḕ", "⠄⡳⠭⠂⠑⠂⠢⠄"
-nemeth, default, "ḗ", "⠄⡳⠭⠂⠑⠂⠶⠄"
-nemeth, default, "ḝ", "⠄⡳⠭⠂⠑⠂⠙⠄"
-nemeth, default, "ḯ", "⠄⡳⠭⠂⠑⠆⠋⠄"
-nemeth, default, "ḹ", "⠄⡳⠭⠂⠑⠒⠔⠄"
-nemeth, default, "ṍ", "⠄⡳⠭⠂⠑⠲⠙⠄"
-nemeth, default, "ṏ", "⠄⡳⠭⠂⠑⠲⠋⠄"
-nemeth, default, "ṑ", "⠄⡳⠭⠂⠑⠢⠂⠄"
-nemeth, default, "ṓ", "⠄⡳⠭⠂⠑⠢⠒⠄"
-nemeth, default, "ṝ", "⠄⡳⠭⠂⠑⠢⠙⠄"
-nemeth, default, "ṥ", "⠄⡳⠭⠂⠑⠖⠢⠄"
-nemeth, default, "ṧ", "⠄⡳⠭⠂⠑⠖⠶⠄"
-nemeth, default, "ṩ", "⠄⡳⠭⠂⠑⠖⠔⠄"
-nemeth, default, "ṹ", "⠄⡳⠭⠂⠑⠶⠔⠄"
-nemeth, default, "ṻ", "⠄⡳⠭⠂⠑⠶⠃⠄"
-nemeth, default, "ấ", "⠄⡳⠭⠂⠑⠁⠢⠄"
-nemeth, default, "ầ", "⠄⡳⠭⠂⠑⠁⠶⠄"
-nemeth, default, "ẩ", "⠄⡳⠭⠂⠑⠁⠔⠄"
-nemeth, default, "ẫ", "⠄⡳⠭⠂⠑⠁⠃⠄"
-nemeth, default, "ậ", "⠄⡳⠭⠂⠑⠁⠙⠄"
-nemeth, default, "ắ", "⠄⡳⠭⠂⠑⠁⠋⠄"
-nemeth, default, "ằ", "⠄⡳⠭⠂⠑⠃⠂⠄"
-nemeth, default, "ẳ", "⠄⡳⠭⠂⠑⠃⠒⠄"
-nemeth, default, "ẵ", "⠄⡳⠭⠂⠑⠃⠢⠄"
-nemeth, default, "ặ", "⠄⡳⠭⠂⠑⠃⠶⠄"
-nemeth, default, "ế", "⠄⡳⠭⠂⠑⠃⠋⠄"
-nemeth, default, "ề", "⠄⡳⠭⠂⠑⠉⠂⠄"
-nemeth, default, "ể", "⠄⡳⠭⠂⠑⠉⠒⠄"
-nemeth, default, "ễ", "⠄⡳⠭⠂⠑⠉⠢⠄"
-nemeth, default, "ệ", "⠄⡳⠭⠂⠑⠉⠶⠄"
-nemeth, default, "ố", "⠄⡳⠭⠂⠑⠙⠂⠄"
-nemeth, default, "ồ", "⠄⡳⠭⠂⠑⠙⠒⠄"
-nemeth, default, "ổ", "⠄⡳⠭⠂⠑⠙⠢⠄"
-nemeth, default, "ỗ", "⠄⡳⠭⠂⠑⠙⠶⠄"
-nemeth, default, "ộ", "⠄⡳⠭⠂⠑⠙⠔⠄"
-nemeth, default, "ớ", "⠄⡳⠭⠂⠑⠙⠃⠄"
-nemeth, default, "ờ", "⠄⡳⠭⠂⠑⠙⠙⠄"
-nemeth, default, "ở", "⠄⡳⠭⠂⠑⠙⠋⠄"
-nemeth, default, "ỡ", "⠄⡳⠭⠂⠑⠑⠂⠄"
-nemeth, default, "ợ", "⠄⡳⠭⠂⠑⠑⠒⠄"
-nemeth, default, "ứ", "⠄⡳⠭⠂⠑⠑⠔⠄"
-nemeth, default, "ừ", "⠄⡳⠭⠂⠑⠑⠃⠄"
-nemeth, default, "ử", "⠄⡳⠭⠂⠑⠑⠙⠄"
-nemeth, default, "ữ", "⠄⡳⠭⠂⠑⠑⠋⠄"
-nemeth, default, "ự", "⠄⡳⠭⠂⠑⠋⠂⠄"
-nemeth, default, "a", "⠁"
-nemeth, default, "b", "⠃"
-nemeth, default, "c", "⠉"
-nemeth, default, "d", "⠙"
-nemeth, default, "e", "⠑"
-nemeth, default, "f", "⠋"
-nemeth, default, "g", "⠛"
-nemeth, default, "h", "⠓"
-nemeth, default, "i", "⠊"
-nemeth, default, "j", "⠚"
-nemeth, default, "k", "⠅"
-nemeth, default, "l", "⠇"
-nemeth, default, "m", "⠍"
-nemeth, default, "n", "⠝"
-nemeth, default, "o", "⠕"
-nemeth, default, "p", "⠏"
-nemeth, default, "q", "⠟"
-nemeth, default, "r", "⠗"
-nemeth, default, "s", "⠎"
-nemeth, default, "t", "⠞"
-nemeth, default, "u", "⠥"
-nemeth, default, "v", "⠧"
-nemeth, default, "w", "⠺"
-nemeth, default, "x", "⠭"
-nemeth, default, "y", "⠽"
-nemeth, default, "z", "⠵"
-nemeth, default, "ａ", "⠁"
-nemeth, default, "ｂ", "⠃"
-nemeth, default, "ｃ", "⠉"
-nemeth, default, "ｄ", "⠙"
-nemeth, default, "ｅ", "⠑"
-nemeth, default, "ｆ", "⠋"
-nemeth, default, "ｇ", "⠛"
-nemeth, default, "ｈ", "⠓"
-nemeth, default, "ｉ", "⠊"
-nemeth, default, "ｊ", "⠚"
-nemeth, default, "ｋ", "⠅"
-nemeth, default, "ｌ", "⠇"
-nemeth, default, "ｍ", "⠍"
-nemeth, default, "ｎ", "⠝"
-nemeth, default, "ｏ", "⠕"
-nemeth, default, "ｐ", "⠏"
-nemeth, default, "ｑ", "⠟"
-nemeth, default, "ｒ", "⠗"
-nemeth, default, "ｓ", "⠎"
-nemeth, default, "ｔ", "⠞"
-nemeth, default, "ｕ", "⠥"
-nemeth, default, "ｖ", "⠧"
-nemeth, default, "ｗ", "⠺"
-nemeth, default, "ｘ", "⠭"
-nemeth, default, "ｙ", "⠽"
-nemeth, default, "ｚ", "⠵"
-nemeth, default, "ø", "⠈⠕"
-nemeth, default, "đ", "⠄⡳⠭⠴⠂⠂⠂⠄"
-nemeth, default, "ħ", "⠄⡳⠭⠴⠂⠆⠶⠄"
-nemeth, default, "ł", "⠄⡳⠭⠴⠂⠲⠆⠄"
-nemeth, default, "ŧ", "⠄⡳⠭⠴⠂⠖⠶⠄"
-nemeth, default, "ƀ", "⠄⡳⠭⠴⠂⠦⠴⠄"
-nemeth, default, "ƛ", "⠄⡳⠭⠴⠂⠔⠃⠄"
-nemeth, default, "ƶ", "⠄⡳⠭⠴⠂⠃⠖⠄"
-nemeth, default, "ƾ", "⠄⡳⠭⠴⠂⠃⠑⠄"
-nemeth, default, "ǥ", "⠄⡳⠭⠴⠂⠑⠢⠄"
-nemeth, default, "ǿ", "⠄⡳⠭⠴⠂⠋⠋⠄"
-nemeth, default, "ȼ", "⠄⡳⠭⠴⠆⠒⠉⠄"
-nemeth, default, "ɇ", "⠄⡳⠭⠴⠆⠲⠶⠄"
-nemeth, default, "ɉ", "⠄⡳⠭⠴⠆⠲⠔⠄"
-nemeth, default, "ɍ", "⠄⡳⠭⠴⠆⠲⠙⠄"
-nemeth, default, "ɏ", "⠄⡳⠭⠴⠆⠲⠋⠄"
-nemeth, default, "ɟ", "⠄⡳⠭⠴⠆⠢⠋⠄"
-nemeth, default, "ɨ", "⠄⡳⠭⠴⠆⠖⠦⠄"
-nemeth, default, "ʄ", "⠄⡳⠭⠴⠆⠦⠲⠄"
-nemeth, default, "ʡ", "⠄⡳⠭⠴⠆⠁⠂⠄"
-nemeth, default, "ʢ", "⠄⡳⠭⠴⠆⠁⠆⠄"
-nemeth, default, "ᴓ", "⠄⡳⠭⠂⠙⠂⠒⠄"
-nemeth, default, "ᵼ", "⠄⡳⠭⠂⠙⠶⠉⠄"
-nemeth, default, "ᵽ", "⠄⡳⠭⠂⠙⠶⠙⠄"
-nemeth, default, "ᵿ", "⠄⡳⠭⠂⠙⠶⠋⠄"
-nemeth, default, "ẜ", "⠄⡳⠭⠂⠑⠔⠉⠄"
-nemeth, default, "ẝ", "⠄⡳⠭⠂⠑⠔⠙⠄"
-nemeth, default, "ƍ", "⠄⡳⠭⠴⠂⠦⠙⠄"
-nemeth, default, "ẛ", "⠄⡳⠭⠂⠑⠔⠃⠄"
-nemeth, default, "ẟ", "⠄⡳⠭⠂⠑⠔⠋⠄"
-nemeth, default, "ĸ", "⠄⡳⠭⠴⠂⠒⠦⠄"
-nemeth, default, "ſ", "⠄⡳⠭⠴⠂⠶⠋⠄"
-nemeth, default, "ƃ", "⠄⡳⠭⠴⠂⠦⠒⠄"
-nemeth, default, "ƅ", "⠄⡳⠭⠴⠂⠦⠢⠄"
-nemeth, default, "ƈ", "⠄⡳⠭⠴⠂⠦⠦⠄"
-nemeth, default, "ƌ", "⠄⡳⠭⠴⠂⠦⠉⠄"
-nemeth, default, "ƒ", "⠄⡳⠭⠴⠂⠔⠆⠄"
-nemeth, default, "ƕ", "⠄⡳⠭⠴⠂⠔⠢⠄"
-nemeth, default, "ƙ", "⠄⡳⠭⠴⠂⠔⠔⠄"
-nemeth, default, "ƚ", "⠄⡳⠭⠴⠂⠔⠁⠄"
-nemeth, default, "ƞ", "⠄⡳⠭⠴⠂⠔⠑⠄"
-nemeth, default, "ơ", "⠄⡳⠭⠴⠂⠁⠂⠄"
-nemeth, default, "ƣ", "⠄⡳⠭⠴⠂⠁⠒⠄"
-nemeth, default, "ƥ", "⠄⡳⠭⠴⠂⠁⠢⠄"
-nemeth, default, "ƨ", "⠄⡳⠭⠴⠂⠁⠦⠄"
-nemeth, default, "ƪ", "⠄⡳⠭⠴⠂⠁⠁⠄"
-nemeth, default, "ƫ", "⠄⡳⠭⠴⠂⠁⠃⠄"
-nemeth, default, "ƭ", "⠄⡳⠭⠴⠂⠁⠙⠄"
-nemeth, default, "ư", "⠄⡳⠭⠴⠂⠃⠴⠄"
-nemeth, default, "ƴ", "⠄⡳⠭⠴⠂⠃⠲⠄"
-nemeth, default, "ƹ", "⠄⡳⠭⠴⠂⠃⠔⠄"
-nemeth, default, "ƺ", "⠄⡳⠭⠴⠂⠃⠁⠄"
-nemeth, default, "ƽ", "⠄⡳⠭⠴⠂⠃⠙⠄"
-nemeth, default, "ƿ", "⠄⡳⠭⠴⠂⠃⠋⠄"
-nemeth, default, "ǆ", "⠄⡳⠭⠴⠂⠉⠖⠄"
-nemeth, default, "ǉ", "⠄⡳⠭⠴⠂⠉⠔⠄"
-nemeth, default, "ǌ", "⠄⡳⠭⠴⠂⠉⠉⠄"
-nemeth, default, "ǣ", "⠄⡳⠭⠴⠂⠑⠒⠄"
-nemeth, default, "ǯ", "⠄⡳⠭⠴⠂⠑⠋⠄"
-nemeth, default, "ǳ", "⠄⡳⠭⠴⠂⠋⠒⠄"
-nemeth, default, "ȝ", "⠄⡳⠭⠴⠆⠂⠙⠄"
-nemeth, default, "ɮ", "⠄⡳⠭⠴⠆⠖⠑⠄"
-nemeth, default, "ʒ", "⠄⡳⠭⠴⠆⠔⠆⠄"
-nemeth, default, "ʓ", "⠄⡳⠭⠴⠆⠔⠒⠄"
-nemeth, default, "ʤ", "⠄⡳⠭⠴⠆⠁⠲⠄"
-nemeth, default, "ǝ", "⠄⡳⠭⠴⠂⠙⠙⠄"
-nemeth, default, "ǽ", "⠄⡳⠭⠴⠂⠋⠙⠄"
-nemeth, default, "ȡ", "⠄⡳⠭⠴⠆⠆⠂⠄"
-nemeth, default, "ȣ", "⠄⡳⠭⠴⠆⠆⠒⠄"
-nemeth, default, "ȥ", "⠄⡳⠭⠴⠆⠆⠢⠄"
-nemeth, default, "ȴ", "⠄⡳⠭⠴⠆⠒⠲⠄"
-nemeth, default, "ȵ", "⠄⡳⠭⠴⠆⠒⠢⠄"
-nemeth, default, "ȶ", "⠄⡳⠭⠴⠆⠒⠖⠄"
-nemeth, default, "ȸ", "⠄⡳⠭⠴⠆⠒⠦⠄"
-nemeth, default, "ȹ", "⠄⡳⠭⠴⠆⠒⠔⠄"
-nemeth, default, "ȿ", "⠄⡳⠭⠴⠆⠒⠋⠄"
-nemeth, default, "ɀ", "⠄⡳⠭⠴⠆⠲⠴⠄"
-nemeth, default, "ɂ", "⠄⡳⠭⠴⠆⠲⠆⠄"
-nemeth, default, "ɋ", "⠄⡳⠭⠴⠆⠲⠃⠄"
-nemeth, default, "ɐ", "⠄⡳⠭⠴⠆⠢⠴⠄"
-nemeth, default, "ɑ", "⠄⡳⠭⠴⠆⠢⠂⠄"
-nemeth, default, "ɒ", "⠄⡳⠭⠴⠆⠢⠆⠄"
-nemeth, default, "ɓ", "⠄⡳⠭⠴⠆⠢⠒⠄"
-nemeth, default, "ɔ", "⠄⡳⠭⠴⠆⠢⠲⠄"
-nemeth, default, "ɕ", "⠄⡳⠭⠴⠆⠢⠢⠄"
-nemeth, default, "ɖ", "⠄⡳⠭⠴⠆⠢⠖⠄"
-nemeth, default, "ɗ", "⠄⡳⠭⠴⠆⠢⠶⠄"
-nemeth, default, "ɘ", "⠄⡳⠭⠴⠆⠢⠦⠄"
-nemeth, default, "ə", "⠄⡳⠭⠴⠆⠢⠔⠄"
-nemeth, default, "ɚ", "⠄⡳⠭⠴⠆⠢⠁⠄"
-nemeth, default, "ɛ", "⠄⡳⠭⠴⠆⠢⠃⠄"
-nemeth, default, "ɜ", "⠄⡳⠭⠴⠆⠢⠉⠄"
-nemeth, default, "ɝ", "⠄⡳⠭⠴⠆⠢⠙⠄"
-nemeth, default, "ɞ", "⠄⡳⠭⠴⠆⠢⠑⠄"
-nemeth, default, "ɠ", "⠄⡳⠭⠴⠆⠖⠴⠄"
-nemeth, default, "ɡ", "⠄⡳⠭⠴⠆⠖⠂⠄"
-nemeth, default, "ɣ", "⠄⡳⠭⠴⠆⠖⠒⠄"
-nemeth, default, "ɤ", "⠄⡳⠭⠴⠆⠖⠲⠄"
-nemeth, default, "ɥ", "⠄⡳⠭⠴⠆⠖⠢⠄"
-nemeth, default, "ɦ", "⠄⡳⠭⠴⠆⠖⠖⠄"
-nemeth, default, "ɧ", "⠄⡳⠭⠴⠆⠖⠶⠄"
-nemeth, default, "ɩ", "⠄⡳⠭⠴⠆⠖⠔⠄"
-nemeth, default, "ɫ", "⠄⡳⠭⠴⠆⠖⠃⠄"
-nemeth, default, "ɬ", "⠄⡳⠭⠴⠆⠖⠉⠄"
-nemeth, default, "ɭ", "⠄⡳⠭⠴⠆⠖⠙⠄"
-nemeth, default, "ɯ", "⠄⡳⠭⠴⠆⠖⠋⠄"
-nemeth, default, "ɰ", "⠄⡳⠭⠴⠆⠶⠴⠄"
-nemeth, default, "ɱ", "⠄⡳⠭⠴⠆⠶⠂⠄"
-nemeth, default, "ɲ", "⠄⡳⠭⠴⠆⠶⠆⠄"
-nemeth, default, "ɳ", "⠄⡳⠭⠴⠆⠶⠒⠄"
-nemeth, default, "ɵ", "⠄⡳⠭⠴⠆⠶⠢⠄"
-nemeth, default, "ɷ", "⠄⡳⠭⠴⠆⠶⠶⠄"
-nemeth, default, "ɸ", "⠄⡳⠭⠴⠆⠶⠦⠄"
-nemeth, default, "ɹ", "⠄⡳⠭⠴⠆⠶⠔⠄"
-nemeth, default, "ɺ", "⠄⡳⠭⠴⠆⠶⠁⠄"
-nemeth, default, "ɻ", "⠄⡳⠭⠴⠆⠶⠃⠄"
-nemeth, default, "ɼ", "⠄⡳⠭⠴⠆⠶⠉⠄"
-nemeth, default, "ɽ", "⠄⡳⠭⠴⠆⠶⠙⠄"
-nemeth, default, "ɾ", "⠄⡳⠭⠴⠆⠶⠑⠄"
-nemeth, default, "ɿ", "⠄⡳⠭⠴⠆⠶⠋⠄"
-nemeth, default, "ʂ", "⠄⡳⠭⠴⠆⠦⠆⠄"
-nemeth, default, "ʃ", "⠄⡳⠭⠴⠆⠦⠒⠄"
-nemeth, default, "ʅ", "⠄⡳⠭⠴⠆⠦⠢⠄"
-nemeth, default, "ʆ", "⠄⡳⠭⠴⠆⠦⠖⠄"
-nemeth, default, "ʇ", "⠄⡳⠭⠴⠆⠦⠶⠄"
-nemeth, default, "ʈ", "⠄⡳⠭⠴⠆⠦⠦⠄"
-nemeth, default, "ʉ", "⠄⡳⠭⠴⠆⠦⠔⠄"
-nemeth, default, "ʊ", "⠄⡳⠭⠴⠆⠦⠁⠄"
-nemeth, default, "ʋ", "⠄⡳⠭⠴⠆⠦⠃⠄"
-nemeth, default, "ʌ", "⠄⡳⠭⠴⠆⠦⠉⠄"
-nemeth, default, "ʍ", "⠄⡳⠭⠴⠆⠦⠙⠄"
-nemeth, default, "ʎ", "⠄⡳⠭⠴⠆⠦⠑⠄"
-nemeth, default, "ʐ", "⠄⡳⠭⠴⠆⠔⠴⠄"
-nemeth, default, "ʑ", "⠄⡳⠭⠴⠆⠔⠂⠄"
-nemeth, default, "ʕ", "⠄⡳⠭⠴⠆⠔⠢⠄"
-nemeth, default, "ʖ", "⠄⡳⠭⠴⠆⠔⠖⠄"
-nemeth, default, "ʗ", "⠄⡳⠭⠴⠆⠔⠶⠄"
-nemeth, default, "ʘ", "⠄⡳⠭⠴⠆⠔⠦⠄"
-nemeth, default, "ʚ", "⠄⡳⠭⠴⠆⠔⠁⠄"
-nemeth, default, "ʞ", "⠄⡳⠭⠴⠆⠔⠑⠄"
-nemeth, default, "ʠ", "⠄⡳⠭⠴⠆⠁⠴⠄"
-nemeth, default, "ʣ", "⠄⡳⠭⠴⠆⠁⠒⠄"
-nemeth, default, "ʥ", "⠄⡳⠭⠴⠆⠁⠢⠄"
-nemeth, default, "ʦ", "⠄⡳⠭⠴⠆⠁⠖⠄"
-nemeth, default, "ʧ", "⠄⡳⠭⠴⠆⠁⠶⠄"
-nemeth, default, "ʨ", "⠄⡳⠭⠴⠆⠁⠦⠄"
-nemeth, default, "ʩ", "⠄⡳⠭⠴⠆⠁⠔⠄"
-nemeth, default, "ʪ", "⠄⡳⠭⠴⠆⠁⠁⠄"
-nemeth, default, "ʫ", "⠄⡳⠭⠴⠆⠁⠃⠄"
-nemeth, default, "ʬ", "⠄⡳⠭⠴⠆⠁⠉⠄"
-nemeth, default, "ʭ", "⠄⡳⠭⠴⠆⠁⠙⠄"
-nemeth, default, "ʮ", "⠄⡳⠭⠴⠆⠁⠑⠄"
-nemeth, default, "ʯ", "⠄⡳⠭⠴⠆⠁⠋⠄"
-nemeth, default, "ᴂ", "⠄⡳⠭⠂⠙⠴⠆⠄"
-nemeth, default, "ᴈ", "⠄⡳⠭⠂⠙⠴⠦⠄"
-nemeth, default, "ᴉ", "⠄⡳⠭⠂⠙⠴⠔⠄"
-nemeth, default, "ᴑ", "⠄⡳⠭⠂⠙⠂⠂⠄"
-nemeth, default, "ᴒ", "⠄⡳⠭⠂⠙⠂⠆⠄"
-nemeth, default, "ᴔ", "⠄⡳⠭⠂⠙⠂⠲⠄"
-nemeth, default, "ᴖ", "⠄⡳⠭⠂⠙⠂⠖⠄"
-nemeth, default, "ᴗ", "⠄⡳⠭⠂⠙⠂⠶⠄"
-nemeth, default, "ᴝ", "⠄⡳⠭⠂⠙⠂⠙⠄"
-nemeth, default, "ᴞ", "⠄⡳⠭⠂⠙⠂⠑⠄"
-nemeth, default, "ᴟ", "⠄⡳⠭⠂⠙⠂⠋⠄"
-nemeth, default, "ᴤ", "⠄⡳⠭⠂⠙⠆⠲⠄"
-nemeth, default, "ᴥ", "⠄⡳⠭⠂⠙⠆⠢⠄"
-nemeth, default, "ᵫ", "⠄⡳⠭⠂⠙⠖⠃⠄"
-nemeth, default, "ᵬ", "⠄⡳⠭⠂⠙⠖⠉⠄"
-nemeth, default, "ᵭ", "⠄⡳⠭⠂⠙⠖⠙⠄"
-nemeth, default, "ᵮ", "⠄⡳⠭⠂⠙⠖⠑⠄"
-nemeth, default, "ᵯ", "⠄⡳⠭⠂⠙⠖⠋⠄"
-nemeth, default, "ᵰ", "⠄⡳⠭⠂⠙⠶⠴⠄"
-nemeth, default, "ᵱ", "⠄⡳⠭⠂⠙⠶⠂⠄"
-nemeth, default, "ᵲ", "⠄⡳⠭⠂⠙⠶⠆⠄"
-nemeth, default, "ᵳ", "⠄⡳⠭⠂⠙⠶⠒⠄"
-nemeth, default, "ᵴ", "⠄⡳⠭⠂⠙⠶⠲⠄"
-nemeth, default, "ᵵ", "⠄⡳⠭⠂⠙⠶⠢⠄"
-nemeth, default, "ᵶ", "⠄⡳⠭⠂⠙⠶⠖⠄"
-nemeth, default, "ᵷ", "⠄⡳⠭⠂⠙⠶⠶⠄"
-nemeth, default, "ᵹ", "⠄⡳⠭⠂⠙⠶⠔⠄"
-nemeth, default, "ᵺ", "⠄⡳⠭⠂⠙⠶⠁⠄"
-nemeth, default, "ᶀ", "⠄⡳⠭⠂⠙⠦⠴⠄"
-nemeth, default, "ᶁ", "⠄⡳⠭⠂⠙⠦⠂⠄"
-nemeth, default, "ᶂ", "⠄⡳⠭⠂⠙⠦⠆⠄"
-nemeth, default, "ᶃ", "⠄⡳⠭⠂⠙⠦⠒⠄"
-nemeth, default, "ᶄ", "⠄⡳⠭⠂⠙⠦⠲⠄"
-nemeth, default, "ᶅ", "⠄⡳⠭⠂⠙⠦⠢⠄"
-nemeth, default, "ᶆ", "⠄⡳⠭⠂⠙⠦⠖⠄"
-nemeth, default, "ᶇ", "⠄⡳⠭⠂⠙⠦⠶⠄"
-nemeth, default, "ᶈ", "⠄⡳⠭⠂⠙⠦⠦⠄"
-nemeth, default, "ᶉ", "⠄⡳⠭⠂⠙⠦⠔⠄"
-nemeth, default, "ᶊ", "⠄⡳⠭⠂⠙⠦⠁⠄"
-nemeth, default, "ᶋ", "⠄⡳⠭⠂⠙⠦⠃⠄"
-nemeth, default, "ᶌ", "⠄⡳⠭⠂⠙⠦⠉⠄"
-nemeth, default, "ᶍ", "⠄⡳⠭⠂⠙⠦⠙⠄"
-nemeth, default, "ᶎ", "⠄⡳⠭⠂⠙⠦⠑⠄"
-nemeth, default, "ᶏ", "⠄⡳⠭⠂⠙⠦⠋⠄"
-nemeth, default, "ᶐ", "⠄⡳⠭⠂⠙⠔⠴⠄"
-nemeth, default, "ᶑ", "⠄⡳⠭⠂⠙⠔⠂⠄"
-nemeth, default, "ᶒ", "⠄⡳⠭⠂⠙⠔⠆⠄"
-nemeth, default, "ᶓ", "⠄⡳⠭⠂⠙⠔⠒⠄"
-nemeth, default, "ᶔ", "⠄⡳⠭⠂⠙⠔⠲⠄"
-nemeth, default, "ᶕ", "⠄⡳⠭⠂⠙⠔⠢⠄"
-nemeth, default, "ᶖ", "⠄⡳⠭⠂⠙⠔⠖⠄"
-nemeth, default, "ᶗ", "⠄⡳⠭⠂⠙⠔⠶⠄"
-nemeth, default, "ᶘ", "⠄⡳⠭⠂⠙⠔⠦⠄"
-nemeth, default, "ᶙ", "⠄⡳⠭⠂⠙⠔⠔⠄"
-nemeth, default, "ᶚ", "⠄⡳⠭⠂⠙⠔⠁⠄"
-nemeth, default, "ŉ", "⠄⡳⠭⠴⠂⠲⠔⠄"
-nemeth, default, "ŋ", "⠄⡳⠭⠴⠂⠲⠃⠄"
-nemeth, default, "à", "⠈⠁"
-nemeth, default, "á", "⠈⠁"
-nemeth, default, "â", "⠈⠁"
-nemeth, default, "ã", "⠈⠁"
-nemeth, default, "ä", "⠈⠁"
-nemeth, default, "å", "⠈⠁"
-nemeth, default, "ç", "⠈⠉"
-nemeth, default, "è", "⠈⠑"
-nemeth, default, "é", "⠈⠑"
-nemeth, default, "ê", "⠈⠑"
-nemeth, default, "ë", "⠈⠑"
-nemeth, default, "ì", "⠈⠊"
-nemeth, default, "í", "⠈⠊"
-nemeth, default, "î", "⠈⠊"
-nemeth, default, "ï", "⠈⠊"
-nemeth, default, "ñ", "⠈⠝"
-nemeth, default, "ò", "⠈⠕"
-nemeth, default, "ó", "⠈⠕"
-nemeth, default, "ô", "⠈⠕"
-nemeth, default, "õ", "⠈⠕"
-nemeth, default, "ö", "⠈⠕"
-nemeth, default, "ù", "⠈⠥"
-nemeth, default, "ú", "⠈⠥"
-nemeth, default, "û", "⠈⠥"
-nemeth, default, "ü", "⠈⠥"
-nemeth, default, "ý", "⠈⠽"
-nemeth, default, "ÿ", "⠈⠽"
-nemeth, default, "ā", "⠄⡳⠭⠴⠂⠴⠂⠄"
-nemeth, default, "ă", "⠄⡳⠭⠴⠂⠴⠒⠄"
-nemeth, default, "ą", "⠄⡳⠭⠴⠂⠴⠢⠄"
-nemeth, default, "ć", "⠄⡳⠭⠴⠂⠴⠶⠄"
-nemeth, default, "ĉ", "⠄⡳⠭⠴⠂⠴⠔⠄"
-nemeth, default, "ċ", "⠄⡳⠭⠴⠂⠴⠃⠄"
-nemeth, default, "č", "⠄⡳⠭⠴⠂⠴⠙⠄"
-nemeth, default, "ď", "⠄⡳⠭⠴⠂⠴⠋⠄"
-nemeth, default, "ē", "⠄⡳⠭⠴⠂⠂⠒⠄"
-nemeth, default, "ĕ", "⠄⡳⠭⠴⠂⠂⠢⠄"
-nemeth, default, "ė", "⠄⡳⠭⠴⠂⠂⠶⠄"
-nemeth, default, "ę", "⠄⡳⠭⠴⠂⠂⠔⠄"
-nemeth, default, "ě", "⠄⡳⠭⠴⠂⠂⠃⠄"
-nemeth, default, "ĝ", "⠄⡳⠭⠴⠂⠂⠙⠄"
-nemeth, default, "ğ", "⠄⡳⠭⠴⠂⠂⠋⠄"
-nemeth, default, "ġ", "⠄⡳⠭⠴⠂⠆⠂⠄"
-nemeth, default, "ģ", "⠄⡳⠭⠴⠂⠆⠒⠄"
-nemeth, default, "ĥ", "⠄⡳⠭⠴⠂⠆⠢⠄"
-nemeth, default, "ĩ", "⠄⡳⠭⠴⠂⠆⠔⠄"
-nemeth, default, "ī", "⠄⡳⠭⠴⠂⠆⠃⠄"
-nemeth, default, "ĭ", "⠄⡳⠭⠴⠂⠆⠙⠄"
-nemeth, default, "į", "⠄⡳⠭⠴⠂⠆⠋⠄"
-nemeth, default, "ı", "⠄⡳⠭⠴⠂⠒⠂⠄"
-nemeth, default, "ĵ", "⠄⡳⠭⠴⠂⠒⠢⠄"
-nemeth, default, "ķ", "⠄⡳⠭⠴⠂⠒⠶⠄"
-nemeth, default, "ĺ", "⠄⡳⠭⠴⠂⠒⠁⠄"
-nemeth, default, "ļ", "⠄⡳⠭⠴⠂⠒⠉⠄"
-nemeth, default, "ľ", "⠄⡳⠭⠴⠂⠒⠑⠄"
-nemeth, default, "ŀ", "⠄⡳⠭⠴⠂⠲⠴⠄"
-nemeth, default, "ń", "⠄⡳⠭⠴⠂⠲⠲⠄"
-nemeth, default, "ņ", "⠄⡳⠭⠴⠂⠲⠖⠄"
-nemeth, default, "ň", "⠄⡳⠭⠴⠂⠲⠦⠄"
-nemeth, default, "ō", "⠄⡳⠭⠴⠂⠲⠙⠄"
-nemeth, default, "ŏ", "⠄⡳⠭⠴⠂⠲⠋⠄"
-nemeth, default, "ő", "⠄⡳⠭⠴⠂⠢⠂⠄"
-nemeth, default, "ŕ", "⠄⡳⠭⠴⠂⠢⠢⠄"
-nemeth, default, "ŗ", "⠄⡳⠭⠴⠂⠢⠶⠄"
-nemeth, default, "ř", "⠄⡳⠭⠴⠂⠢⠔⠄"
-nemeth, default, "ś", "⠄⡳⠭⠴⠂⠢⠃⠄"
-nemeth, default, "ŝ", "⠄⡳⠭⠴⠂⠢⠙⠄"
-nemeth, default, "ş", "⠄⡳⠭⠴⠂⠢⠋⠄"
-nemeth, default, "š", "⠄⡳⠭⠴⠂⠖⠂⠄"
-nemeth, default, "ţ", "⠄⡳⠭⠴⠂⠖⠒⠄"
-nemeth, default, "ť", "⠄⡳⠭⠴⠂⠖⠢⠄"
-nemeth, default, "ũ", "⠄⡳⠭⠴⠂⠖⠔⠄"
-nemeth, default, "ū", "⠄⡳⠭⠴⠂⠖⠃⠄"
-nemeth, default, "ŭ", "⠄⡳⠭⠴⠂⠖⠙⠄"
-nemeth, default, "ů", "⠄⡳⠭⠴⠂⠖⠋⠄"
-nemeth, default, "ű", "⠄⡳⠭⠴⠂⠶⠂⠄"
-nemeth, default, "ų", "⠄⡳⠭⠴⠂⠶⠒⠄"
-nemeth, default, "ŵ", "⠄⡳⠭⠴⠂⠶⠢⠄"
-nemeth, default, "ŷ", "⠄⡳⠭⠴⠂⠶⠶⠄"
-nemeth, default, "ź", "⠄⡳⠭⠴⠂⠶⠁⠄"
-nemeth, default, "ż", "⠄⡳⠭⠴⠂⠶⠉⠄"
-nemeth, default, "ž", "⠄⡳⠭⠴⠂⠶⠑⠄"
-nemeth, default, "ǎ", "⠄⡳⠭⠴⠂⠉⠑⠄"
-nemeth, default, "ǐ", "⠄⡳⠭⠴⠂⠙⠴⠄"
-nemeth, default, "ǒ", "⠄⡳⠭⠴⠂⠙⠆⠄"
-nemeth, default, "ǔ", "⠄⡳⠭⠴⠂⠙⠲⠄"
-nemeth, default, "ǧ", "⠄⡳⠭⠴⠂⠑⠶⠄"
-nemeth, default, "ǩ", "⠄⡳⠭⠴⠂⠑⠔⠄"
-nemeth, default, "ǫ", "⠄⡳⠭⠴⠂⠑⠃⠄"
-nemeth, default, "ǰ", "⠄⡳⠭⠴⠂⠋⠴⠄"
-nemeth, default, "ǵ", "⠄⡳⠭⠴⠂⠋⠢⠄"
-nemeth, default, "ǹ", "⠄⡳⠭⠴⠂⠋⠔⠄"
-nemeth, default, "ȁ", "⠄⡳⠭⠴⠆⠴⠂⠄"
-nemeth, default, "ȃ", "⠄⡳⠭⠴⠆⠴⠒⠄"
-nemeth, default, "ȅ", "⠄⡳⠭⠴⠆⠴⠢⠄"
-nemeth, default, "ȇ", "⠄⡳⠭⠴⠆⠴⠶⠄"
-nemeth, default, "ȉ", "⠄⡳⠭⠴⠆⠴⠔⠄"
-nemeth, default, "ȋ", "⠄⡳⠭⠴⠆⠴⠃⠄"
-nemeth, default, "ȍ", "⠄⡳⠭⠴⠆⠴⠙⠄"
-nemeth, default, "ȏ", "⠄⡳⠭⠴⠆⠴⠋⠄"
-nemeth, default, "ȑ", "⠄⡳⠭⠴⠆⠂⠂⠄"
-nemeth, default, "ȓ", "⠄⡳⠭⠴⠆⠂⠒⠄"
-nemeth, default, "ȕ", "⠄⡳⠭⠴⠆⠂⠢⠄"
-nemeth, default, "ȗ", "⠄⡳⠭⠴⠆⠂⠶⠄"
-nemeth, default, "ș", "⠄⡳⠭⠴⠆⠂⠔⠄"
-nemeth, default, "ț", "⠄⡳⠭⠴⠆⠂⠃⠄"
-nemeth, default, "ȟ", "⠄⡳⠭⠴⠆⠂⠋⠄"
-nemeth, default, "ȧ", "⠄⡳⠭⠴⠆⠆⠶⠄"
-nemeth, default, "ȩ", "⠄⡳⠭⠴⠆⠆⠔⠄"
-nemeth, default, "ȯ", "⠄⡳⠭⠴⠆⠆⠋⠄"
-nemeth, default, "ȳ", "⠄⡳⠭⠴⠆⠒⠒⠄"
-nemeth, default, "ȷ", "⠄⡳⠭⠴⠆⠒⠶⠄"
-nemeth, default, "ḁ", "⠄⡳⠭⠂⠑⠴⠂⠄"
-nemeth, default, "ḃ", "⠄⡳⠭⠂⠑⠴⠒⠄"
-nemeth, default, "ḅ", "⠄⡳⠭⠂⠑⠴⠢⠄"
-nemeth, default, "ḇ", "⠄⡳⠭⠂⠑⠴⠶⠄"
-nemeth, default, "ḋ", "⠄⡳⠭⠂⠑⠴⠃⠄"
-nemeth, default, "ḍ", "⠄⡳⠭⠂⠑⠴⠙⠄"
-nemeth, default, "ḏ", "⠄⡳⠭⠂⠑⠴⠋⠄"
-nemeth, default, "ḑ", "⠄⡳⠭⠂⠑⠂⠂⠄"
-nemeth, default, "ḓ", "⠄⡳⠭⠂⠑⠂⠒⠄"
-nemeth, default, "ḙ", "⠄⡳⠭⠂⠑⠂⠔⠄"
-nemeth, default, "ḛ", "⠄⡳⠭⠂⠑⠂⠃⠄"
-nemeth, default, "ḟ", "⠄⡳⠭⠂⠑⠂⠋⠄"
-nemeth, default, "ḡ", "⠄⡳⠭⠂⠑⠆⠂⠄"
-nemeth, default, "ḣ", "⠄⡳⠭⠂⠑⠆⠒⠄"
-nemeth, default, "ḥ", "⠄⡳⠭⠂⠑⠆⠢⠄"
-nemeth, default, "ḧ", "⠄⡳⠭⠂⠑⠆⠶⠄"
-nemeth, default, "ḩ", "⠄⡳⠭⠂⠑⠆⠔⠄"
-nemeth, default, "ḫ", "⠄⡳⠭⠂⠑⠆⠃⠄"
-nemeth, default, "ḭ", "⠄⡳⠭⠂⠑⠆⠙⠄"
-nemeth, default, "ḱ", "⠄⡳⠭⠂⠑⠒⠂⠄"
-nemeth, default, "ḳ", "⠄⡳⠭⠂⠑⠒⠒⠄"
-nemeth, default, "ḵ", "⠄⡳⠭⠂⠑⠒⠢⠄"
-nemeth, default, "ḷ", "⠄⡳⠭⠂⠑⠒⠶⠄"
-nemeth, default, "ḻ", "⠄⡳⠭⠂⠑⠒⠃⠄"
-nemeth, default, "ḽ", "⠄⡳⠭⠂⠑⠒⠙⠄"
-nemeth, default, "ḿ", "⠄⡳⠭⠂⠑⠒⠋⠄"
-nemeth, default, "ṁ", "⠄⡳⠭⠂⠑⠲⠂⠄"
-nemeth, default, "ṃ", "⠄⡳⠭⠂⠑⠲⠒⠄"
-nemeth, default, "ṅ", "⠄⡳⠭⠂⠑⠲⠢⠄"
-nemeth, default, "ṇ", "⠄⡳⠭⠂⠑⠲⠶⠄"
-nemeth, default, "ṉ", "⠄⡳⠭⠂⠑⠲⠔⠄"
-nemeth, default, "ṋ", "⠄⡳⠭⠂⠑⠲⠃⠄"
-nemeth, default, "ṕ", "⠄⡳⠭⠂⠑⠢⠢⠄"
-nemeth, default, "ṗ", "⠄⡳⠭⠂⠑⠢⠶⠄"
-nemeth, default, "ṙ", "⠄⡳⠭⠂⠑⠢⠔⠄"
-nemeth, default, "ṛ", "⠄⡳⠭⠂⠑⠢⠃⠄"
-nemeth, default, "ṟ", "⠄⡳⠭⠂⠑⠢⠋⠄"
-nemeth, default, "ṡ", "⠄⡳⠭⠂⠑⠖⠂⠄"
-nemeth, default, "ṣ", "⠄⡳⠭⠂⠑⠖⠒⠄"
-nemeth, default, "ṫ", "⠄⡳⠭⠂⠑⠖⠃⠄"
-nemeth, default, "ṭ", "⠄⡳⠭⠂⠑⠖⠙⠄"
-nemeth, default, "ṯ", "⠄⡳⠭⠂⠑⠖⠋⠄"
-nemeth, default, "ṱ", "⠄⡳⠭⠂⠑⠶⠂⠄"
-nemeth, default, "ṳ", "⠄⡳⠭⠂⠑⠶⠒⠄"
-nemeth, default, "ṵ", "⠄⡳⠭⠂⠑⠶⠢⠄"
-nemeth, default, "ṷ", "⠄⡳⠭⠂⠑⠶⠶⠄"
-nemeth, default, "ṽ", "⠄⡳⠭⠂⠑⠶⠙⠄"
-nemeth, default, "ṿ", "⠄⡳⠭⠂⠑⠶⠋⠄"
-nemeth, default, "ẁ", "⠄⡳⠭⠂⠑⠦⠂⠄"
-nemeth, default, "ẃ", "⠄⡳⠭⠂⠑⠦⠒⠄"
-nemeth, default, "ẅ", "⠄⡳⠭⠂⠑⠦⠢⠄"
-nemeth, default, "ẇ", "⠄⡳⠭⠂⠑⠦⠶⠄"
-nemeth, default, "ẉ", "⠄⡳⠭⠂⠑⠦⠔⠄"
-nemeth, default, "ẋ", "⠄⡳⠭⠂⠑⠦⠃⠄"
-nemeth, default, "ẍ", "⠄⡳⠭⠂⠑⠦⠙⠄"
-nemeth, default, "ẏ", "⠄⡳⠭⠂⠑⠦⠋⠄"
-nemeth, default, "ẑ", "⠄⡳⠭⠂⠑⠔⠂⠄"
-nemeth, default, "ẓ", "⠄⡳⠭⠂⠑⠔⠒⠄"
-nemeth, default, "ẕ", "⠄⡳⠭⠂⠑⠔⠢⠄"
-nemeth, default, "ẖ", "⠄⡳⠭⠂⠑⠔⠖⠄"
-nemeth, default, "ẗ", "⠄⡳⠭⠂⠑⠔⠶⠄"
-nemeth, default, "ẘ", "⠄⡳⠭⠂⠑⠔⠦⠄"
-nemeth, default, "ẙ", "⠄⡳⠭⠂⠑⠔⠔⠄"
-nemeth, default, "ẚ", "⠄⡳⠭⠂⠑⠔⠁⠄"
-nemeth, default, "ạ", "⠄⡳⠭⠂⠑⠁⠂⠄"
-nemeth, default, "ả", "⠄⡳⠭⠂⠑⠁⠒⠄"
-nemeth, default, "ẹ", "⠄⡳⠭⠂⠑⠃⠔⠄"
-nemeth, default, "ẻ", "⠄⡳⠭⠂⠑⠃⠃⠄"
-nemeth, default, "ẽ", "⠄⡳⠭⠂⠑⠃⠙⠄"
-nemeth, default, "ỉ", "⠄⡳⠭⠂⠑⠉⠔⠄"
-nemeth, default, "ị", "⠄⡳⠭⠂⠑⠉⠃⠄"
-nemeth, default, "ọ", "⠄⡳⠭⠂⠑⠉⠙⠄"
-nemeth, default, "ỏ", "⠄⡳⠭⠂⠑⠉⠋⠄"
-nemeth, default, "ụ", "⠄⡳⠭⠂⠑⠑⠢⠄"
-nemeth, default, "ủ", "⠄⡳⠭⠂⠑⠑⠶⠄"
-nemeth, default, "ỳ", "⠄⡳⠭⠂⠑⠋⠒⠄"
-nemeth, default, "ỵ", "⠄⡳⠭⠂⠑⠋⠢⠄"
-nemeth, default, "ỷ", "⠄⡳⠭⠂⠑⠋⠶⠄"
-nemeth, default, "ỹ", "⠄⡳⠭⠂⠑⠋⠔⠄"
-nemeth, default, "ͣ", "⠄⡳⠭⠴⠒⠖⠒⠄"
-nemeth, default, "ͤ", "⠄⡳⠭⠴⠒⠖⠲⠄"
-nemeth, default, "ͥ", "⠄⡳⠭⠴⠒⠖⠢⠄"
-nemeth, default, "ͦ", "⠄⡳⠭⠴⠒⠖⠖⠄"
-nemeth, default, "ͧ", "⠄⡳⠭⠴⠒⠖⠶⠄"
-nemeth, default, "ͨ", "⠄⡳⠭⠴⠒⠖⠦⠄"
-nemeth, default, "ͩ", "⠄⡳⠭⠴⠒⠖⠔⠄"
-nemeth, default, "ͪ", "⠄⡳⠭⠴⠒⠖⠁⠄"
-nemeth, default, "ͫ", "⠄⡳⠭⠴⠒⠖⠃⠄"
-nemeth, default, "ͬ", "⠄⡳⠭⠴⠒⠖⠉⠄"
-nemeth, default, "ͭ", "⠄⡳⠭⠴⠒⠖⠙⠄"
-nemeth, default, "ͮ", "⠄⡳⠭⠴⠒⠖⠑⠄"
-nemeth, default, "ͯ", "⠄⡳⠭⠴⠒⠖⠋⠄"
-nemeth, default, "ᵢ", "⠄⡳⠭⠂⠙⠖⠆⠄"
-nemeth, default, "ᵣ", "⠄⡳⠭⠂⠙⠖⠒⠄"
-nemeth, default, "ᵤ", "⠄⡳⠭⠂⠙⠖⠲⠄"
-nemeth, default, "ᵥ", "⠄⡳⠭⠂⠙⠖⠢⠄"
-nemeth, default, "᷊", "⠄⡳⠭⠂⠙⠉⠁⠄"
-nemeth, default, "ᷓ", "⠄⡳⠭⠂⠙⠙⠒⠄"
-nemeth, default, "ᷔ", "⠄⡳⠭⠂⠙⠙⠲⠄"
-nemeth, default, "ᷕ", "⠄⡳⠭⠂⠙⠙⠢⠄"
-nemeth, default, "ᷖ", "⠄⡳⠭⠂⠙⠙⠖⠄"
-nemeth, default, "ᷗ", "⠄⡳⠭⠂⠙⠙⠶⠄"
-nemeth, default, "ᷘ", "⠄⡳⠭⠂⠙⠙⠦⠄"
-nemeth, default, "ᷙ", "⠄⡳⠭⠂⠙⠙⠔⠄"
-nemeth, default, "ᷚ", "⠄⡳⠭⠂⠙⠙⠁⠄"
-nemeth, default, "ᷛ", "⠄⡳⠭⠂⠙⠙⠃⠄"
-nemeth, default, "ᷜ", "⠄⡳⠭⠂⠙⠙⠉⠄"
-nemeth, default, "ᷝ", "⠄⡳⠭⠂⠙⠙⠙⠄"
-nemeth, default, "ᷞ", "⠄⡳⠭⠂⠙⠙⠑⠄"
-nemeth, default, "ᷟ", "⠄⡳⠭⠂⠙⠙⠋⠄"
-nemeth, default, "ᷠ", "⠄⡳⠭⠂⠙⠑⠴⠄"
-nemeth, default, "ᷡ", "⠄⡳⠭⠂⠙⠑⠂⠄"
-nemeth, default, "ᷢ", "⠄⡳⠭⠂⠙⠑⠆⠄"
-nemeth, default, "ᷣ", "⠄⡳⠭⠂⠙⠑⠒⠄"
-nemeth, default, "ᷤ", "⠄⡳⠭⠂⠙⠑⠲⠄"
-nemeth, default, "ᷥ", "⠄⡳⠭⠂⠙⠑⠢⠄"
-nemeth, default, "ᷦ", "⠄⡳⠭⠂⠙⠑⠖⠄"
-nemeth, default, "ⁱ", "⠄⡳⠭⠆⠴⠶⠂⠄"
-nemeth, default, "ⁿ", "⠄⡳⠭⠆⠴⠶⠋⠄"
-nemeth, default, "ₐ", "⠄⡳⠭⠆⠴⠔⠴⠄"
-nemeth, default, "ₑ", "⠄⡳⠭⠆⠴⠔⠂⠄"
-nemeth, default, "ₒ", "⠄⡳⠭⠆⠴⠔⠆⠄"
-nemeth, default, "ₓ", "⠄⡳⠭⠆⠴⠔⠒⠄"
-nemeth, default, "ₔ", "⠄⡳⠭⠆⠴⠔⠲⠄"
-nemeth, default, "ₕ", "⠄⡳⠭⠆⠴⠔⠢⠄"
-nemeth, default, "ₖ", "⠄⡳⠭⠆⠴⠔⠖⠄"
-nemeth, default, "ₗ", "⠄⡳⠭⠆⠴⠔⠶⠄"
-nemeth, default, "ₘ", "⠄⡳⠭⠆⠴⠔⠦⠄"
-nemeth, default, "ₙ", "⠄⡳⠭⠆⠴⠔⠔⠄"
-nemeth, default, "ₚ", "⠄⡳⠭⠆⠴⠔⠁⠄"
-nemeth, default, "ₛ", "⠄⡳⠭⠆⠴⠔⠃⠄"
-nemeth, default, "ₜ", "⠄⡳⠭⠆⠴⠔⠉⠄"
-nemeth, default, "⒜", "⠄⡳⠭⠆⠲⠔⠉⠄"
-nemeth, default, "⒝", "⠄⡳⠭⠆⠲⠔⠙⠄"
-nemeth, default, "⒞", "⠄⡳⠭⠆⠲⠔⠑⠄"
-nemeth, default, "⒟", "⠄⡳⠭⠆⠲⠔⠋⠄"
-nemeth, default, "⒠", "⠄⡳⠭⠆⠲⠁⠴⠄"
-nemeth, default, "⒡", "⠄⡳⠭⠆⠲⠁⠂⠄"
-nemeth, default, "⒢", "⠄⡳⠭⠆⠲⠁⠆⠄"
-nemeth, default, "⒣", "⠄⡳⠭⠆⠲⠁⠒⠄"
-nemeth, default, "⒤", "⠄⡳⠭⠆⠲⠁⠲⠄"
-nemeth, default, "⒥", "⠄⡳⠭⠆⠲⠁⠢⠄"
-nemeth, default, "⒦", "⠄⡳⠭⠆⠲⠁⠖⠄"
-nemeth, default, "⒧", "⠄⡳⠭⠆⠲⠁⠶⠄"
-nemeth, default, "⒨", "⠄⡳⠭⠆⠲⠁⠦⠄"
-nemeth, default, "⒩", "⠄⡳⠭⠆⠲⠁⠔⠄"
-nemeth, default, "⒪", "⠄⡳⠭⠆⠲⠁⠁⠄"
-nemeth, default, "⒫", "⠄⡳⠭⠆⠲⠁⠃⠄"
-nemeth, default, "⒬", "⠄⡳⠭⠆⠲⠁⠉⠄"
-nemeth, default, "⒭", "⠄⡳⠭⠆⠲⠁⠙⠄"
-nemeth, default, "⒮", "⠄⡳⠭⠆⠲⠁⠑⠄"
-nemeth, default, "⒯", "⠄⡳⠭⠆⠲⠁⠋⠄"
-nemeth, default, "⒰", "⠄⡳⠭⠆⠲⠃⠴⠄"
-nemeth, default, "⒱", "⠄⡳⠭⠆⠲⠃⠂⠄"
-nemeth, default, "⒲", "⠄⡳⠭⠆⠲⠃⠆⠄"
-nemeth, default, "⒳", "⠄⡳⠭⠆⠲⠃⠒⠄"
-nemeth, default, "⒴", "⠄⡳⠭⠆⠲⠃⠲⠄"
-nemeth, default, "⒵", "⠄⡳⠭⠆⠲⠃⠢⠄"
-nemeth, default, "Ⓐ", "⠄⡳⠭⠆⠲⠃⠖⠄"
-nemeth, default, "Ⓑ", "⠄⡳⠭⠆⠲⠃⠶⠄"
-nemeth, default, "Ⓒ", "⠄⡳⠭⠆⠲⠃⠦⠄"
-nemeth, default, "Ⓓ", "⠄⡳⠭⠆⠲⠃⠔⠄"
-nemeth, default, "Ⓔ", "⠄⡳⠭⠆⠲⠃⠁⠄"
-nemeth, default, "Ⓕ", "⠄⡳⠭⠆⠲⠃⠃⠄"
-nemeth, default, "Ⓖ", "⠄⡳⠭⠆⠲⠃⠉⠄"
-nemeth, default, "Ⓗ", "⠄⡳⠭⠆⠲⠃⠙⠄"
-nemeth, default, "Ⓘ", "⠄⡳⠭⠆⠲⠃⠑⠄"
-nemeth, default, "Ⓙ", "⠄⡳⠭⠆⠲⠃⠋⠄"
-nemeth, default, "Ⓚ", "⠄⡳⠭⠆⠲⠉⠴⠄"
-nemeth, default, "Ⓛ", "⠄⡳⠭⠆⠲⠉⠂⠄"
-nemeth, default, "Ⓜ", "⠄⡳⠭⠆⠲⠉⠆⠄"
-nemeth, default, "Ⓝ", "⠄⡳⠭⠆⠲⠉⠒⠄"
-nemeth, default, "Ⓞ", "⠄⡳⠭⠆⠲⠉⠲⠄"
-nemeth, default, "Ⓟ", "⠄⡳⠭⠆⠲⠉⠢⠄"
-nemeth, default, "Ⓠ", "⠄⡳⠭⠆⠲⠉⠖⠄"
-nemeth, default, "Ⓡ", "⠄⡳⠭⠆⠲⠉⠶⠄"
-nemeth, default, "Ⓢ", "⠄⡳⠭⠆⠲⠉⠦⠄"
-nemeth, default, "Ⓣ", "⠄⡳⠭⠆⠲⠉⠔⠄"
-nemeth, default, "Ⓤ", "⠄⡳⠭⠆⠲⠉⠁⠄"
-nemeth, default, "Ⓥ", "⠄⡳⠭⠆⠲⠉⠃⠄"
-nemeth, default, "Ⓦ", "⠄⡳⠭⠆⠲⠉⠉⠄"
-nemeth, default, "Ⓧ", "⠄⡳⠭⠆⠲⠉⠙⠄"
-nemeth, default, "Ⓨ", "⠄⡳⠭⠆⠲⠉⠑⠄"
-nemeth, default, "Ⓩ", "⠄⡳⠭⠆⠲⠉⠋⠄"
-nemeth, default, "ⓐ", "⠄⡳⠭⠆⠲⠙⠴⠄"
-nemeth, default, "ⓑ", "⠄⡳⠭⠆⠲⠙⠂⠄"
-nemeth, default, "ⓒ", "⠄⡳⠭⠆⠲⠙⠆⠄"
-nemeth, default, "ⓓ", "⠄⡳⠭⠆⠲⠙⠒⠄"
-nemeth, default, "ⓔ", "⠄⡳⠭⠆⠲⠙⠲⠄"
-nemeth, default, "ⓕ", "⠄⡳⠭⠆⠲⠙⠢⠄"
-nemeth, default, "ⓖ", "⠄⡳⠭⠆⠲⠙⠖⠄"
-nemeth, default, "ⓗ", "⠄⡳⠭⠆⠲⠙⠶⠄"
-nemeth, default, "ⓘ", "⠄⡳⠭⠆⠲⠙⠦⠄"
-nemeth, default, "ⓙ", "⠄⡳⠭⠆⠲⠙⠔⠄"
-nemeth, default, "ⓚ", "⠄⡳⠭⠆⠲⠙⠁⠄"
-nemeth, default, "ⓛ", "⠄⡳⠭⠆⠲⠙⠃⠄"
-nemeth, default, "ⓜ", "⠄⡳⠭⠆⠲⠙⠉⠄"
-nemeth, default, "ⓝ", "⠄⡳⠭⠆⠲⠙⠙⠄"
-nemeth, default, "ⓞ", "⠄⡳⠭⠆⠲⠙⠑⠄"
-nemeth, default, "ⓟ", "⠄⡳⠭⠆⠲⠙⠋⠄"
-nemeth, default, "ⓠ", "⠄⡳⠭⠆⠲⠑⠴⠄"
-nemeth, default, "ⓡ", "⠄⡳⠭⠆⠲⠑⠂⠄"
-nemeth, default, "ⓢ", "⠄⡳⠭⠆⠲⠑⠆⠄"
-nemeth, default, "ⓣ", "⠄⡳⠭⠆⠲⠑⠒⠄"
-nemeth, default, "ⓤ", "⠄⡳⠭⠆⠲⠑⠲⠄"
-nemeth, default, "ⓥ", "⠄⡳⠭⠆⠲⠑⠢⠄"
-nemeth, default, "ⓦ", "⠄⡳⠭⠆⠲⠑⠖⠄"
-nemeth, default, "ⓧ", "⠄⡳⠭⠆⠲⠑⠶⠄"
-nemeth, default, "ⓨ", "⠄⡳⠭⠆⠲⠑⠦⠄"
-nemeth, default, "ⓩ", "⠄⡳⠭⠆⠲⠑⠔⠄"
-nemeth, default, "ⱼ", "⠄⡳⠭⠆⠉⠶⠉⠄"
-nemeth, default, "🄐", "⠄⡳⠽⠂⠋⠂⠂⠴⠄"
-nemeth, default, "🄑", "⠄⡳⠽⠂⠋⠂⠂⠂⠄"
-nemeth, default, "🄒", "⠄⡳⠽⠂⠋⠂⠂⠆⠄"
-nemeth, default, "🄓", "⠄⡳⠽⠂⠋⠂⠂⠒⠄"
-nemeth, default, "🄔", "⠄⡳⠽⠂⠋⠂⠂⠲⠄"
-nemeth, default, "🄕", "⠄⡳⠽⠂⠋⠂⠂⠢⠄"
-nemeth, default, "🄖", "⠄⡳⠽⠂⠋⠂⠂⠖⠄"
-nemeth, default, "🄗", "⠄⡳⠽⠂⠋⠂⠂⠶⠄"
-nemeth, default, "🄘", "⠄⡳⠽⠂⠋⠂⠂⠦⠄"
-nemeth, default, "🄙", "⠄⡳⠽⠂⠋⠂⠂⠔⠄"
-nemeth, default, "🄚", "⠄⡳⠽⠂⠋⠂⠂⠁⠄"
-nemeth, default, "🄛", "⠄⡳⠽⠂⠋⠂⠂⠃⠄"
-nemeth, default, "🄜", "⠄⡳⠽⠂⠋⠂⠂⠉⠄"
-nemeth, default, "🄝", "⠄⡳⠽⠂⠋⠂⠂⠙⠄"
-nemeth, default, "🄞", "⠄⡳⠽⠂⠋⠂⠂⠑⠄"
-nemeth, default, "🄟", "⠄⡳⠽⠂⠋⠂⠂⠋⠄"
-nemeth, default, "🄠", "⠄⡳⠽⠂⠋⠂⠆⠴⠄"
-nemeth, default, "🄡", "⠄⡳⠽⠂⠋⠂⠆⠂⠄"
-nemeth, default, "🄢", "⠄⡳⠽⠂⠋⠂⠆⠆⠄"
-nemeth, default, "🄣", "⠄⡳⠽⠂⠋⠂⠆⠒⠄"
-nemeth, default, "🄤", "⠄⡳⠽⠂⠋⠂⠆⠲⠄"
-nemeth, default, "🄥", "⠄⡳⠽⠂⠋⠂⠆⠢⠄"
-nemeth, default, "🄦", "⠄⡳⠽⠂⠋⠂⠆⠖⠄"
-nemeth, default, "🄧", "⠄⡳⠽⠂⠋⠂⠆⠶⠄"
-nemeth, default, "🄨", "⠄⡳⠽⠂⠋⠂⠆⠦⠄"
-nemeth, default, "🄩", "⠄⡳⠽⠂⠋⠂⠆⠔⠄"
-nemeth, default, "🄪", "⠄⡳⠽⠂⠋⠂⠆⠁⠄"
-nemeth, default, "🄫", "⠄⡳⠽⠂⠋⠂⠆⠃⠄"
-nemeth, default, "🄬", "⠄⡳⠽⠂⠋⠂⠆⠉⠄"
-nemeth, default, "🄰", "⠄⡳⠽⠂⠋⠂⠒⠴⠄"
-nemeth, default, "🄱", "⠄⡳⠽⠂⠋⠂⠒⠂⠄"
-nemeth, default, "🄲", "⠄⡳⠽⠂⠋⠂⠒⠆⠄"
-nemeth, default, "🄳", "⠄⡳⠽⠂⠋⠂⠒⠒⠄"
-nemeth, default, "🄴", "⠄⡳⠽⠂⠋⠂⠒⠲⠄"
-nemeth, default, "🄵", "⠄⡳⠽⠂⠋⠂⠒⠢⠄"
-nemeth, default, "🄶", "⠄⡳⠽⠂⠋⠂⠒⠖⠄"
-nemeth, default, "🄷", "⠄⡳⠽⠂⠋⠂⠒⠶⠄"
-nemeth, default, "🄸", "⠄⡳⠽⠂⠋⠂⠒⠦⠄"
-nemeth, default, "🄹", "⠄⡳⠽⠂⠋⠂⠒⠔⠄"
-nemeth, default, "🄺", "⠄⡳⠽⠂⠋⠂⠒⠁⠄"
-nemeth, default, "🄻", "⠄⡳⠽⠂⠋⠂⠒⠃⠄"
-nemeth, default, "🄼", "⠄⡳⠽⠂⠋⠂⠒⠉⠄"
-nemeth, default, "🄽", "⠄⡳⠽⠂⠋⠂⠒⠙⠄"
-nemeth, default, "🄾", "⠄⡳⠽⠂⠋⠂⠒⠑⠄"
-nemeth, default, "🄿", "⠄⡳⠽⠂⠋⠂⠒⠋⠄"
-nemeth, default, "🅀", "⠄⡳⠽⠂⠋⠂⠲⠴⠄"
-nemeth, default, "🅁", "⠄⡳⠽⠂⠋⠂⠲⠂⠄"
-nemeth, default, "🅂", "⠄⡳⠽⠂⠋⠂⠲⠆⠄"
-nemeth, default, "🅃", "⠄⡳⠽⠂⠋⠂⠲⠒⠄"
-nemeth, default, "🅄", "⠄⡳⠽⠂⠋⠂⠲⠲⠄"
-nemeth, default, "🅅", "⠄⡳⠽⠂⠋⠂⠲⠢⠄"
-nemeth, default, "🅆", "⠄⡳⠽⠂⠋⠂⠲⠖⠄"
-nemeth, default, "🅇", "⠄⡳⠽⠂⠋⠂⠲⠶⠄"
-nemeth, default, "🅈", "⠄⡳⠽⠂⠋⠂⠲⠦⠄"
-nemeth, default, "🅉", "⠄⡳⠽⠂⠋⠂⠲⠔⠄"
-nemeth, default, "🅐", "⠄⡳⠽⠂⠋⠂⠢⠴⠄"
-nemeth, default, "🅑", "⠄⡳⠽⠂⠋⠂⠢⠂⠄"
-nemeth, default, "🅒", "⠄⡳⠽⠂⠋⠂⠢⠆⠄"
-nemeth, default, "🅓", "⠄⡳⠽⠂⠋⠂⠢⠒⠄"
-nemeth, default, "🅔", "⠄⡳⠽⠂⠋⠂⠢⠲⠄"
-nemeth, default, "🅕", "⠄⡳⠽⠂⠋⠂⠢⠢⠄"
-nemeth, default, "🅖", "⠄⡳⠽⠂⠋⠂⠢⠖⠄"
-nemeth, default, "🅗", "⠄⡳⠽⠂⠋⠂⠢⠶⠄"
-nemeth, default, "🅘", "⠄⡳⠽⠂⠋⠂⠢⠦⠄"
-nemeth, default, "🅙", "⠄⡳⠽⠂⠋⠂⠢⠔⠄"
-nemeth, default, "🅚", "⠄⡳⠽⠂⠋⠂⠢⠁⠄"
-nemeth, default, "🅛", "⠄⡳⠽⠂⠋⠂⠢⠃⠄"
-nemeth, default, "🅜", "⠄⡳⠽⠂⠋⠂⠢⠉⠄"
-nemeth, default, "🅝", "⠄⡳⠽⠂⠋⠂⠢⠙⠄"
-nemeth, default, "🅞", "⠄⡳⠽⠂⠋⠂⠢⠑⠄"
-nemeth, default, "🅟", "⠄⡳⠽⠂⠋⠂⠢⠋⠄"
-nemeth, default, "🅠", "⠄⡳⠽⠂⠋⠂⠖⠴⠄"
-nemeth, default, "🅡", "⠄⡳⠽⠂⠋⠂⠖⠂⠄"
-nemeth, default, "🅢", "⠄⡳⠽⠂⠋⠂⠖⠆⠄"
-nemeth, default, "🅣", "⠄⡳⠽⠂⠋⠂⠖⠒⠄"
-nemeth, default, "🅤", "⠄⡳⠽⠂⠋⠂⠖⠲⠄"
-nemeth, default, "🅥", "⠄⡳⠽⠂⠋⠂⠖⠢⠄"
-nemeth, default, "🅦", "⠄⡳⠽⠂⠋⠂⠖⠖⠄"
-nemeth, default, "🅧", "⠄⡳⠽⠂⠋⠂⠖⠶⠄"
-nemeth, default, "🅨", "⠄⡳⠽⠂⠋⠂⠖⠦⠄"
-nemeth, default, "🅩", "⠄⡳⠽⠂⠋⠂⠖⠔⠄"
-nemeth, default, "🅰", "⠄⡳⠽⠂⠋⠂⠶⠴⠄"
-nemeth, default, "🅱", "⠄⡳⠽⠂⠋⠂⠶⠂⠄"
-nemeth, default, "🅲", "⠄⡳⠽⠂⠋⠂⠶⠆⠄"
-nemeth, default, "🅳", "⠄⡳⠽⠂⠋⠂⠶⠒⠄"
-nemeth, default, "🅴", "⠄⡳⠽⠂⠋⠂⠶⠲⠄"
-nemeth, default, "🅵", "⠄⡳⠽⠂⠋⠂⠶⠢⠄"
-nemeth, default, "🅶", "⠄⡳⠽⠂⠋⠂⠶⠖⠄"
-nemeth, default, "🅷", "⠄⡳⠽⠂⠋⠂⠶⠶⠄"
-nemeth, default, "🅸", "⠄⡳⠽⠂⠋⠂⠶⠦⠄"
-nemeth, default, "🅹", "⠄⡳⠽⠂⠋⠂⠶⠔⠄"
-nemeth, default, "🅺", "⠄⡳⠽⠂⠋⠂⠶⠁⠄"
-nemeth, default, "🅻", "⠄⡳⠽⠂⠋⠂⠶⠃⠄"
-nemeth, default, "🅼", "⠄⡳⠽⠂⠋⠂⠶⠉⠄"
-nemeth, default, "🅽", "⠄⡳⠽⠂⠋⠂⠶⠙⠄"
-nemeth, default, "🅾", "⠄⡳⠽⠂⠋⠂⠶⠑⠄"
-nemeth, default, "🅿", "⠄⡳⠽⠂⠋⠂⠶⠋⠄"
-nemeth, default, "🆀", "⠄⡳⠽⠂⠋⠂⠦⠴⠄"
-nemeth, default, "🆁", "⠄⡳⠽⠂⠋⠂⠦⠂⠄"
-nemeth, default, "🆂", "⠄⡳⠽⠂⠋⠂⠦⠆⠄"
-nemeth, default, "🆃", "⠄⡳⠽⠂⠋⠂⠦⠒⠄"
-nemeth, default, "🆄", "⠄⡳⠽⠂⠋⠂⠦⠲⠄"
-nemeth, default, "🆅", "⠄⡳⠽⠂⠋⠂⠦⠢⠄"
-nemeth, default, "🆆", "⠄⡳⠽⠂⠋⠂⠦⠖⠄"
-nemeth, default, "🆇", "⠄⡳⠽⠂⠋⠂⠦⠶⠄"
-nemeth, default, "🆈", "⠄⡳⠽⠂⠋⠂⠦⠦⠄"
-nemeth, default, "🆉", "⠄⡳⠽⠂⠋⠂⠦⠔⠄"
-nemeth, default, "🆊", "⠄⡳⠽⠂⠋⠂⠦⠁⠄"
-nemeth, default, "Ǖ", "⠄⡳⠭⠴⠂⠙⠢⠄"
-nemeth, default, "Ǘ", "⠄⡳⠭⠴⠂⠙⠶⠄"
-nemeth, default, "Ǚ", "⠄⡳⠭⠴⠂⠙⠔⠄"
-nemeth, default, "Ǜ", "⠄⡳⠭⠴⠂⠙⠃⠄"
-nemeth, default, "Ǟ", "⠄⡳⠭⠴⠂⠙⠑⠄"
-nemeth, default, "Ǡ", "⠄⡳⠭⠴⠂⠑⠴⠄"
-nemeth, default, "Ǭ", "⠄⡳⠭⠴⠂⠑⠉⠄"
-nemeth, default, "Ǻ", "⠄⡳⠭⠴⠂⠋⠁⠄"
-nemeth, default, "Ȫ", "⠄⡳⠭⠴⠆⠆⠁⠄"
-nemeth, default, "Ȭ", "⠄⡳⠭⠴⠆⠆⠉⠄"
-nemeth, default, "Ȱ", "⠄⡳⠭⠴⠆⠒⠴⠄"
-nemeth, default, "Ḉ", "⠄⡳⠭⠂⠑⠴⠦⠄"
-nemeth, default, "Ḕ", "⠄⡳⠭⠂⠑⠂⠲⠄"
-nemeth, default, "Ḗ", "⠄⡳⠭⠂⠑⠂⠖⠄"
-nemeth, default, "Ḝ", "⠄⡳⠭⠂⠑⠂⠉⠄"
-nemeth, default, "Ḯ", "⠄⡳⠭⠂⠑⠆⠑⠄"
-nemeth, default, "Ḹ", "⠄⡳⠭⠂⠑⠒⠦⠄"
-nemeth, default, "Ṍ", "⠄⡳⠭⠂⠑⠲⠉⠄"
-nemeth, default, "Ṏ", "⠄⡳⠭⠂⠑⠲⠑⠄"
-nemeth, default, "Ṑ", "⠄⡳⠭⠂⠑⠢⠴⠄"
-nemeth, default, "Ṓ", "⠄⡳⠭⠂⠑⠢⠆⠄"
-nemeth, default, "Ṝ", "⠄⡳⠭⠂⠑⠢⠉⠄"
-nemeth, default, "Ṥ", "⠄⡳⠭⠂⠑⠖⠲⠄"
-nemeth, default, "Ṧ", "⠄⡳⠭⠂⠑⠖⠖⠄"
-nemeth, default, "Ṩ", "⠄⡳⠭⠂⠑⠖⠦⠄"
-nemeth, default, "Ṹ", "⠄⡳⠭⠂⠑⠶⠦⠄"
-nemeth, default, "Ṻ", "⠄⡳⠭⠂⠑⠶⠁⠄"
-nemeth, default, "Ấ", "⠄⡳⠭⠂⠑⠁⠲⠄"
-nemeth, default, "Ầ", "⠄⡳⠭⠂⠑⠁⠖⠄"
-nemeth, default, "Ẩ", "⠄⡳⠭⠂⠑⠁⠦⠄"
-nemeth, default, "Ẫ", "⠄⡳⠭⠂⠑⠁⠁⠄"
-nemeth, default, "Ậ", "⠄⡳⠭⠂⠑⠁⠉⠄"
-nemeth, default, "Ắ", "⠄⡳⠭⠂⠑⠁⠑⠄"
-nemeth, default, "Ằ", "⠄⡳⠭⠂⠑⠃⠴⠄"
-nemeth, default, "Ẳ", "⠄⡳⠭⠂⠑⠃⠆⠄"
-nemeth, default, "Ẵ", "⠄⡳⠭⠂⠑⠃⠲⠄"
-nemeth, default, "Ặ", "⠄⡳⠭⠂⠑⠃⠖⠄"
-nemeth, default, "Ế", "⠄⡳⠭⠂⠑⠃⠑⠄"
-nemeth, default, "Ề", "⠄⡳⠭⠂⠑⠉⠴⠄"
-nemeth, default, "Ể", "⠄⡳⠭⠂⠑⠉⠆⠄"
-nemeth, default, "Ễ", "⠄⡳⠭⠂⠑⠉⠲⠄"
-nemeth, default, "Ệ", "⠄⡳⠭⠂⠑⠉⠖⠄"
-nemeth, default, "Ố", "⠄⡳⠭⠂⠑⠙⠴⠄"
-nemeth, default, "Ồ", "⠄⡳⠭⠂⠑⠙⠆⠄"
-nemeth, default, "Ổ", "⠄⡳⠭⠂⠑⠙⠲⠄"
-nemeth, default, "Ỗ", "⠄⡳⠭⠂⠑⠙⠖⠄"
-nemeth, default, "Ộ", "⠄⡳⠭⠂⠑⠙⠦⠄"
-nemeth, default, "Ớ", "⠄⡳⠭⠂⠑⠙⠁⠄"
-nemeth, default, "Ờ", "⠄⡳⠭⠂⠑⠙⠉⠄"
-nemeth, default, "Ở", "⠄⡳⠭⠂⠑⠙⠑⠄"
-nemeth, default, "Ỡ", "⠄⡳⠭⠂⠑⠑⠴⠄"
-nemeth, default, "Ợ", "⠄⡳⠭⠂⠑⠑⠆⠄"
-nemeth, default, "Ứ", "⠄⡳⠭⠂⠑⠑⠦⠄"
-nemeth, default, "Ừ", "⠄⡳⠭⠂⠑⠑⠁⠄"
-nemeth, default, "Ử", "⠄⡳⠭⠂⠑⠑⠉⠄"
-nemeth, default, "Ữ", "⠄⡳⠭⠂⠑⠑⠑⠄"
-nemeth, default, "Ự", "⠄⡳⠭⠂⠑⠋⠴⠄"
-nemeth, default, "A", "⠠⠁"
-nemeth, default, "B", "⠠⠃"
-nemeth, default, "C", "⠠⠉"
-nemeth, default, "D", "⠠⠙"
-nemeth, default, "E", "⠠⠑"
-nemeth, default, "F", "⠠⠋"
-nemeth, default, "G", "⠠⠛"
-nemeth, default, "H", "⠠⠓"
-nemeth, default, "I", "⠠⠊"
-nemeth, default, "J", "⠠⠚"
-nemeth, default, "K", "⠠⠅"
-nemeth, default, "L", "⠠⠇"
-nemeth, default, "M", "⠠⠍"
-nemeth, default, "N", "⠠⠝"
-nemeth, default, "O", "⠠⠕"
-nemeth, default, "P", "⠠⠏"
-nemeth, default, "Q", "⠠⠟"
-nemeth, default, "R", "⠠⠗"
-nemeth, default, "S", "⠠⠎"
-nemeth, default, "T", "⠠⠞"
-nemeth, default, "U", "⠠⠥"
-nemeth, default, "V", "⠠⠧"
-nemeth, default, "W", "⠠⠺"
-nemeth, default, "X", "⠠⠭"
-nemeth, default, "Y", "⠠⠽"
-nemeth, default, "Z", "⠠⠵"
-nemeth, default, "Ａ", "⠠⠁"
-nemeth, default, "Ｂ", "⠠⠃"
-nemeth, default, "Ｃ", "⠠⠉"
-nemeth, default, "Ｄ", "⠠⠙"
-nemeth, default, "Ｅ", "⠠⠑"
-nemeth, default, "Ｆ", "⠠⠋"
-nemeth, default, "Ｇ", "⠠⠛"
-nemeth, default, "Ｈ", "⠠⠓"
-nemeth, default, "Ｉ", "⠠⠊"
-nemeth, default, "Ｊ", "⠠⠚"
-nemeth, default, "Ｋ", "⠠⠅"
-nemeth, default, "Ｌ", "⠠⠇"
-nemeth, default, "Ｍ", "⠠⠍"
-nemeth, default, "Ｎ", "⠠⠝"
-nemeth, default, "Ｏ", "⠠⠕"
-nemeth, default, "Ｐ", "⠠⠏"
-nemeth, default, "Ｑ", "⠠⠟"
-nemeth, default, "Ｒ", "⠠⠗"
-nemeth, default, "Ｓ", "⠠⠎"
-nemeth, default, "Ｔ", "⠠⠞"
-nemeth, default, "Ｕ", "⠠⠥"
-nemeth, default, "Ｖ", "⠠⠧"
-nemeth, default, "Ｗ", "⠠⠺"
-nemeth, default, "Ｘ", "⠠⠭"
-nemeth, default, "Ｙ", "⠠⠽"
-nemeth, default, "Ｚ", "⠠⠵"
-nemeth, default, "À", "⠠⠈⠁"
-nemeth, default, "Á", "⠠⠈⠁"
-nemeth, default, "Â", "⠠⠈⠁"
-nemeth, default, "Ã", "⠠⠈⠁"
-nemeth, default, "Ä", "⠠⠈⠁"
-nemeth, default, "Å", "⠠⠈⠁"
-nemeth, default, "Ç", "⠠⠈⠉"
-nemeth, default, "È", "⠠⠈⠑"
-nemeth, default, "É", "⠠⠈⠑"
-nemeth, default, "Ê", "⠠⠈⠑"
-nemeth, default, "Ë", "⠠⠈⠑"
-nemeth, default, "Ì", "⠠⠈⠊"
-nemeth, default, "Í", "⠠⠈⠊"
-nemeth, default, "Î", "⠠⠈⠊"
-nemeth, default, "Ï", "⠠⠈⠊"
-nemeth, default, "Ñ", "⠠⠈⠝"
-nemeth, default, "Ò", "⠠⠈⠕"
-nemeth, default, "Ó", "⠠⠈⠕"
-nemeth, default, "Ô", "⠠⠈⠕"
-nemeth, default, "Õ", "⠄⡳⠭⠴⠴⠙⠢⠄"
-nemeth, default, "Ö", "⠠⠈⠕"
-nemeth, default, "Ù", "⠠⠈⠥"
-nemeth, default, "Ú", "⠠⠈⠥"
-nemeth, default, "Û", "⠠⠈⠥"
-nemeth, default, "Ü", "⠠⠈⠥"
-nemeth, default, "Ý", "⠠⠈⠽"
-nemeth, default, "Ā", "⠄⡳⠭⠴⠂⠴⠴⠄"
-nemeth, default, "Ă", "⠄⡳⠭⠴⠂⠴⠆⠄"
-nemeth, default, "Ą", "⠄⡳⠭⠴⠂⠴⠲⠄"
-nemeth, default, "Ć", "⠄⡳⠭⠴⠂⠴⠖⠄"
-nemeth, default, "Ĉ", "⠄⡳⠭⠴⠂⠴⠦⠄"
-nemeth, default, "Ċ", "⠄⡳⠭⠴⠂⠴⠁⠄"
-nemeth, default, "Č", "⠄⡳⠭⠴⠂⠴⠉⠄"
-nemeth, default, "Ď", "⠄⡳⠭⠴⠂⠴⠑⠄"
-nemeth, default, "Ē", "⠄⡳⠭⠴⠂⠂⠆⠄"
-nemeth, default, "Ĕ", "⠄⡳⠭⠴⠂⠂⠲⠄"
-nemeth, default, "Ė", "⠄⡳⠭⠴⠂⠂⠖⠄"
-nemeth, default, "Ę", "⠄⡳⠭⠴⠂⠂⠦⠄"
-nemeth, default, "Ě", "⠄⡳⠭⠴⠂⠂⠁⠄"
-nemeth, default, "Ĝ", "⠄⡳⠭⠴⠂⠂⠉⠄"
-nemeth, default, "Ğ", "⠄⡳⠭⠴⠂⠂⠑⠄"
-nemeth, default, "Ġ", "⠄⡳⠭⠴⠂⠆⠴⠄"
-nemeth, default, "Ģ", "⠄⡳⠭⠴⠂⠆⠆⠄"
-nemeth, default, "Ĥ", "⠄⡳⠭⠴⠂⠆⠲⠄"
-nemeth, default, "Ĩ", "⠄⡳⠭⠴⠂⠆⠦⠄"
-nemeth, default, "Ī", "⠄⡳⠭⠴⠂⠆⠁⠄"
-nemeth, default, "Ĭ", "⠄⡳⠭⠴⠂⠆⠉⠄"
-nemeth, default, "Į", "⠄⡳⠭⠴⠂⠆⠑⠄"
-nemeth, default, "İ", "⠄⡳⠭⠴⠂⠒⠴⠄"
-nemeth, default, "Ĵ", "⠄⡳⠭⠴⠂⠒⠲⠄"
-nemeth, default, "Ķ", "⠄⡳⠭⠴⠂⠒⠖⠄"
-nemeth, default, "Ĺ", "⠄⡳⠭⠴⠂⠒⠔⠄"
-nemeth, default, "Ļ", "⠄⡳⠭⠴⠂⠒⠃⠄"
-nemeth, default, "Ľ", "⠄⡳⠭⠴⠂⠒⠙⠄"
-nemeth, default, "Ŀ", "⠄⡳⠭⠴⠂⠒⠋⠄"
-nemeth, default, "Ń", "⠄⡳⠭⠴⠂⠲⠒⠄"
-nemeth, default, "Ņ", "⠄⡳⠭⠴⠂⠲⠢⠄"
-nemeth, default, "Ň", "⠄⡳⠭⠴⠂⠲⠶⠄"
-nemeth, default, "Ō", "⠄⡳⠭⠴⠂⠲⠉⠄"
-nemeth, default, "Ŏ", "⠄⡳⠭⠴⠂⠲⠑⠄"
-nemeth, default, "Ő", "⠄⡳⠭⠴⠂⠢⠴⠄"
-nemeth, default, "Ŕ", "⠄⡳⠭⠴⠂⠢⠲⠄"
-nemeth, default, "Ŗ", "⠄⡳⠭⠴⠂⠢⠖⠄"
-nemeth, default, "Ř", "⠄⡳⠭⠴⠂⠢⠦⠄"
-nemeth, default, "Ś", "⠄⡳⠭⠴⠂⠢⠁⠄"
-nemeth, default, "Ŝ", "⠄⡳⠭⠴⠂⠢⠉⠄"
-nemeth, default, "Ş", "⠄⡳⠭⠴⠂⠢⠑⠄"
-nemeth, default, "Š", "⠄⡳⠭⠴⠂⠖⠴⠄"
-nemeth, default, "Ţ", "⠄⡳⠭⠴⠂⠖⠆⠄"
-nemeth, default, "Ť", "⠄⡳⠭⠴⠂⠖⠲⠄"
-nemeth, default, "Ũ", "⠄⡳⠭⠴⠂⠖⠦⠄"
-nemeth, default, "Ū", "⠄⡳⠭⠴⠂⠖⠁⠄"
-nemeth, default, "Ŭ", "⠄⡳⠭⠴⠂⠖⠉⠄"
-nemeth, default, "Ů", "⠄⡳⠭⠴⠂⠖⠑⠄"
-nemeth, default, "Ű", "⠄⡳⠭⠴⠂⠶⠴⠄"
-nemeth, default, "Ų", "⠄⡳⠭⠴⠂⠶⠆⠄"
-nemeth, default, "Ŵ", "⠄⡳⠭⠴⠂⠶⠲⠄"
-nemeth, default, "Ŷ", "⠄⡳⠭⠴⠂⠶⠖⠄"
-nemeth, default, "Ÿ", "⠄⡳⠭⠴⠂⠶⠦⠄"
-nemeth, default, "Ź", "⠄⡳⠭⠴⠂⠶⠔⠄"
-nemeth, default, "Ż", "⠄⡳⠭⠴⠂⠶⠃⠄"
-nemeth, default, "Ž", "⠄⡳⠭⠴⠂⠶⠙⠄"
-nemeth, default, "Ǎ", "⠄⡳⠭⠴⠂⠉⠙⠄"
-nemeth, default, "Ǐ", "⠄⡳⠭⠴⠂⠉⠋⠄"
-nemeth, default, "Ǒ", "⠄⡳⠭⠴⠂⠙⠂⠄"
-nemeth, default, "Ǔ", "⠄⡳⠭⠴⠂⠙⠒⠄"
-nemeth, default, "Ǧ", "⠄⡳⠭⠴⠂⠑⠖⠄"
-nemeth, default, "Ǩ", "⠄⡳⠭⠴⠂⠑⠦⠄"
-nemeth, default, "Ǫ", "⠄⡳⠭⠴⠂⠑⠁⠄"
-nemeth, default, "Ǵ", "⠄⡳⠭⠴⠂⠋⠲⠄"
-nemeth, default, "Ǹ", "⠄⡳⠭⠴⠂⠋⠦⠄"
-nemeth, default, "Ȁ", "⠄⡳⠭⠴⠆⠴⠴⠄"
-nemeth, default, "Ȃ", "⠄⡳⠭⠴⠆⠴⠆⠄"
-nemeth, default, "Ȅ", "⠄⡳⠭⠴⠆⠴⠲⠄"
-nemeth, default, "Ȇ", "⠄⡳⠭⠴⠆⠴⠖⠄"
-nemeth, default, "Ȉ", "⠄⡳⠭⠴⠆⠴⠦⠄"
-nemeth, default, "Ȋ", "⠄⡳⠭⠴⠆⠴⠁⠄"
-nemeth, default, "Ȍ", "⠄⡳⠭⠴⠆⠴⠉⠄"
-nemeth, default, "Ȏ", "⠄⡳⠭⠴⠆⠴⠑⠄"
-nemeth, default, "Ȑ", "⠄⡳⠭⠴⠆⠂⠴⠄"
-nemeth, default, "Ȓ", "⠄⡳⠭⠴⠆⠂⠆⠄"
-nemeth, default, "Ȕ", "⠄⡳⠭⠴⠆⠂⠲⠄"
-nemeth, default, "Ȗ", "⠄⡳⠭⠴⠆⠂⠖⠄"
-nemeth, default, "Ș", "⠄⡳⠭⠴⠆⠂⠦⠄"
-nemeth, default, "Ț", "⠄⡳⠭⠴⠆⠂⠁⠄"
-nemeth, default, "Ȟ", "⠄⡳⠭⠴⠆⠂⠑⠄"
-nemeth, default, "Ȧ", "⠄⡳⠭⠴⠆⠆⠖⠄"
-nemeth, default, "Ȩ", "⠄⡳⠭⠴⠆⠆⠦⠄"
-nemeth, default, "Ȯ", "⠄⡳⠭⠴⠆⠆⠑⠄"
-nemeth, default, "Ȳ", "⠄⡳⠭⠴⠆⠒⠆⠄"
-nemeth, default, "Ḁ", "⠄⡳⠭⠂⠑⠴⠴⠄"
-nemeth, default, "Ḃ", "⠄⡳⠭⠂⠑⠴⠆⠄"
-nemeth, default, "Ḅ", "⠄⡳⠭⠂⠑⠴⠲⠄"
-nemeth, default, "Ḇ", "⠄⡳⠭⠂⠑⠴⠖⠄"
-nemeth, default, "Ḋ", "⠄⡳⠭⠂⠑⠴⠁⠄"
-nemeth, default, "Ḍ", "⠄⡳⠭⠂⠑⠴⠉⠄"
-nemeth, default, "Ḏ", "⠄⡳⠭⠂⠑⠴⠑⠄"
-nemeth, default, "Ḑ", "⠄⡳⠭⠂⠑⠂⠴⠄"
-nemeth, default, "Ḓ", "⠄⡳⠭⠂⠑⠂⠆⠄"
-nemeth, default, "Ḙ", "⠄⡳⠭⠂⠑⠂⠦⠄"
-nemeth, default, "Ḛ", "⠄⡳⠭⠂⠑⠂⠁⠄"
-nemeth, default, "Ḟ", "⠄⡳⠭⠂⠑⠂⠑⠄"
-nemeth, default, "Ḡ", "⠄⡳⠭⠂⠑⠆⠴⠄"
-nemeth, default, "Ḣ", "⠄⡳⠭⠂⠑⠆⠆⠄"
-nemeth, default, "Ḥ", "⠄⡳⠭⠂⠑⠆⠲⠄"
-nemeth, default, "Ḧ", "⠄⡳⠭⠂⠑⠆⠖⠄"
-nemeth, default, "Ḩ", "⠄⡳⠭⠂⠑⠆⠦⠄"
-nemeth, default, "Ḫ", "⠄⡳⠭⠂⠑⠆⠁⠄"
-nemeth, default, "Ḭ", "⠄⡳⠭⠂⠑⠆⠉⠄"
-nemeth, default, "Ḱ", "⠄⡳⠭⠂⠑⠒⠴⠄"
-nemeth, default, "Ḳ", "⠄⡳⠭⠂⠑⠒⠆⠄"
-nemeth, default, "Ḵ", "⠄⡳⠭⠂⠑⠒⠲⠄"
-nemeth, default, "Ḷ", "⠄⡳⠭⠂⠑⠒⠖⠄"
-nemeth, default, "Ḻ", "⠄⡳⠭⠂⠑⠒⠁⠄"
-nemeth, default, "Ḽ", "⠄⡳⠭⠂⠑⠒⠉⠄"
-nemeth, default, "Ḿ", "⠄⡳⠭⠂⠑⠒⠑⠄"
-nemeth, default, "Ṁ", "⠄⡳⠭⠂⠑⠲⠴⠄"
-nemeth, default, "Ṃ", "⠄⡳⠭⠂⠑⠲⠆⠄"
-nemeth, default, "Ṅ", "⠄⡳⠭⠂⠑⠲⠲⠄"
-nemeth, default, "Ṇ", "⠄⡳⠭⠂⠑⠲⠖⠄"
-nemeth, default, "Ṉ", "⠄⡳⠭⠂⠑⠲⠦⠄"
-nemeth, default, "Ṋ", "⠄⡳⠭⠂⠑⠲⠁⠄"
-nemeth, default, "Ṕ", "⠄⡳⠭⠂⠑⠢⠲⠄"
-nemeth, default, "Ṗ", "⠄⡳⠭⠂⠑⠢⠖⠄"
-nemeth, default, "Ṙ", "⠄⡳⠭⠂⠑⠢⠦⠄"
-nemeth, default, "Ṛ", "⠄⡳⠭⠂⠑⠢⠁⠄"
-nemeth, default, "Ṟ", "⠄⡳⠭⠂⠑⠢⠑⠄"
-nemeth, default, "Ṡ", "⠄⡳⠭⠂⠑⠖⠴⠄"
-nemeth, default, "Ṣ", "⠄⡳⠭⠂⠑⠖⠆⠄"
-nemeth, default, "Ṫ", "⠄⡳⠭⠂⠑⠖⠁⠄"
-nemeth, default, "Ṭ", "⠄⡳⠭⠂⠑⠖⠉⠄"
-nemeth, default, "Ṯ", "⠄⡳⠭⠂⠑⠖⠑⠄"
-nemeth, default, "Ṱ", "⠄⡳⠭⠂⠑⠶⠴⠄"
-nemeth, default, "Ṳ", "⠄⡳⠭⠂⠑⠶⠆⠄"
-nemeth, default, "Ṵ", "⠄⡳⠭⠂⠑⠶⠲⠄"
-nemeth, default, "Ṷ", "⠄⡳⠭⠂⠑⠶⠖⠄"
-nemeth, default, "Ṽ", "⠄⡳⠭⠂⠑⠶⠉⠄"
-nemeth, default, "Ṿ", "⠄⡳⠭⠂⠑⠶⠑⠄"
-nemeth, default, "Ẁ", "⠄⡳⠭⠂⠑⠦⠴⠄"
-nemeth, default, "Ẃ", "⠄⡳⠭⠂⠑⠦⠆⠄"
-nemeth, default, "Ẅ", "⠄⡳⠭⠂⠑⠦⠲⠄"
-nemeth, default, "Ẇ", "⠄⡳⠭⠂⠑⠦⠖⠄"
-nemeth, default, "Ẉ", "⠄⡳⠭⠂⠑⠦⠦⠄"
-nemeth, default, "Ẋ", "⠄⡳⠭⠂⠑⠦⠁⠄"
-nemeth, default, "Ẍ", "⠄⡳⠭⠂⠑⠦⠉⠄"
-nemeth, default, "Ẏ", "⠄⡳⠭⠂⠑⠦⠑⠄"
-nemeth, default, "Ẑ", "⠄⡳⠭⠂⠑⠔⠴⠄"
-nemeth, default, "Ẓ", "⠄⡳⠭⠂⠑⠔⠆⠄"
-nemeth, default, "Ẕ", "⠄⡳⠭⠂⠑⠔⠲⠄"
-nemeth, default, "Ạ", "⠄⡳⠭⠂⠑⠁⠴⠄"
-nemeth, default, "Ả", "⠄⡳⠭⠂⠑⠁⠆⠄"
-nemeth, default, "Ẹ", "⠄⡳⠭⠂⠑⠃⠦⠄"
-nemeth, default, "Ẻ", "⠄⡳⠭⠂⠑⠃⠁⠄"
-nemeth, default, "Ẽ", "⠄⡳⠭⠂⠑⠃⠉⠄"
-nemeth, default, "Ỉ", "⠄⡳⠭⠂⠑⠉⠦⠄"
-nemeth, default, "Ị", "⠄⡳⠭⠂⠑⠉⠁⠄"
-nemeth, default, "Ọ", "⠄⡳⠭⠂⠑⠉⠉⠄"
-nemeth, default, "Ỏ", "⠄⡳⠭⠂⠑⠉⠑⠄"
-nemeth, default, "Ụ", "⠄⡳⠭⠂⠑⠑⠲⠄"
-nemeth, default, "Ủ", "⠄⡳⠭⠂⠑⠑⠖⠄"
-nemeth, default, "Ỳ", "⠄⡳⠭⠂⠑⠋⠆⠄"
-nemeth, default, "Ỵ", "⠄⡳⠭⠂⠑⠋⠲⠄"
-nemeth, default, "Ỷ", "⠄⡳⠭⠂⠑⠋⠖⠄"
-nemeth, default, "Ỹ", "⠄⡳⠭⠂⠑⠋⠦⠄"
-nemeth, default, "𝕬", "⠸⠀⠸⠠⠁"
-nemeth, default, "𝕭", "⠸⠀⠸⠠⠃"
-nemeth, default, "𝕮", "⠸⠀⠸⠠⠉"
-nemeth, default, "𝕯", "⠸⠀⠸⠠⠙"
-nemeth, default, "𝕰", "⠸⠀⠸⠠⠑"
-nemeth, default, "𝕱", "⠸⠀⠸⠠⠋"
-nemeth, default, "𝕲", "⠸⠀⠸⠠⠛"
-nemeth, default, "𝕳", "⠸⠀⠸⠠⠓"
-nemeth, default, "𝕴", "⠸⠀⠸⠠⠊"
-nemeth, default, "𝕵", "⠸⠀⠸⠠⠚"
-nemeth, default, "𝕶", "⠸⠀⠸⠠⠅"
-nemeth, default, "𝕷", "⠸⠀⠸⠠⠇"
-nemeth, default, "𝕸", "⠸⠀⠸⠠⠍"
-nemeth, default, "𝕹", "⠸⠀⠸⠠⠝"
-nemeth, default, "𝕺", "⠸⠀⠸⠠⠕"
-nemeth, default, "𝕻", "⠸⠀⠸⠠⠏"
-nemeth, default, "𝕼", "⠸⠀⠸⠠⠟"
-nemeth, default, "𝕽", "⠸⠀⠸⠠⠗"
-nemeth, default, "𝕾", "⠸⠀⠸⠠⠎"
-nemeth, default, "𝕿", "⠸⠀⠸⠠⠞"
-nemeth, default, "𝖀", "⠸⠀⠸⠠⠥"
-nemeth, default, "𝖁", "⠸⠀⠸⠠⠧"
-nemeth, default, "𝖂", "⠸⠀⠸⠠⠺"
-nemeth, default, "𝖃", "⠸⠀⠸⠠⠭"
-nemeth, default, "𝖄", "⠸⠀⠸⠠⠽"
-nemeth, default, "𝖅", "⠸⠀⠸⠠⠵"
-nemeth, default, "𝖆", "⠸⠀⠸⠁"
-nemeth, default, "𝖇", "⠸⠀⠸⠃"
-nemeth, default, "𝖈", "⠸⠀⠸⠉"
-nemeth, default, "𝖉", "⠸⠀⠸⠙"
-nemeth, default, "𝖊", "⠸⠀⠸⠑"
-nemeth, default, "𝖋", "⠸⠀⠸⠋"
-nemeth, default, "𝖌", "⠸⠀⠸⠛"
-nemeth, default, "𝖍", "⠸⠀⠸⠓"
-nemeth, default, "𝖎", "⠸⠀⠸⠊"
-nemeth, default, "𝖏", "⠸⠀⠸⠚"
-nemeth, default, "𝖐", "⠸⠀⠸⠅"
-nemeth, default, "𝖑", "⠸⠀⠸⠇"
-nemeth, default, "𝖒", "⠸⠀⠸⠍"
-nemeth, default, "𝖓", "⠸⠀⠸⠝"
-nemeth, default, "𝖔", "⠸⠀⠸⠕"
-nemeth, default, "𝖕", "⠸⠀⠸⠏"
-nemeth, default, "𝖖", "⠸⠀⠸⠟"
-nemeth, default, "𝖗", "⠸⠀⠸⠗"
-nemeth, default, "𝖘", "⠸⠀⠸⠎"
-nemeth, default, "𝖙", "⠸⠀⠸⠞"
-nemeth, default, "𝖚", "⠸⠀⠸⠥"
-nemeth, default, "𝖛", "⠸⠀⠸⠧"
-nemeth, default, "𝖜", "⠸⠀⠸⠺"
-nemeth, default, "𝖝", "⠸⠀⠸⠭"
-nemeth, default, "𝖞", "⠸⠀⠸⠽"
-nemeth, default, "𝖟", "⠸⠀⠸⠵"
-nemeth, default, "𝐀", "⠸⠠⠁"
-nemeth, default, "𝐁", "⠸⠠⠃"
-nemeth, default, "𝐂", "⠸⠠⠉"
-nemeth, default, "𝐃", "⠸⠠⠙"
-nemeth, default, "𝐄", "⠸⠠⠑"
-nemeth, default, "𝐅", "⠸⠠⠋"
-nemeth, default, "𝐆", "⠸⠠⠛"
-nemeth, default, "𝐇", "⠸⠠⠓"
-nemeth, default, "𝐈", "⠸⠠⠊"
-nemeth, default, "𝐉", "⠸⠠⠚"
-nemeth, default, "𝐊", "⠸⠠⠅"
-nemeth, default, "𝐋", "⠸⠠⠇"
-nemeth, default, "𝐌", "⠸⠠⠍"
-nemeth, default, "𝐍", "⠸⠠⠝"
-nemeth, default, "𝐎", "⠸⠠⠕"
-nemeth, default, "𝐏", "⠸⠠⠏"
-nemeth, default, "𝐐", "⠸⠠⠟"
-nemeth, default, "𝐑", "⠸⠠⠗"
-nemeth, default, "𝐒", "⠸⠠⠎"
-nemeth, default, "𝐓", "⠸⠠⠞"
-nemeth, default, "𝐔", "⠸⠠⠥"
-nemeth, default, "𝐕", "⠸⠠⠧"
-nemeth, default, "𝐖", "⠸⠠⠺"
-nemeth, default, "𝐗", "⠸⠠⠭"
-nemeth, default, "𝐘", "⠸⠠⠽"
-nemeth, default, "𝐙", "⠸⠠⠵"
-nemeth, default, "𝐚", "⠸⠁"
-nemeth, default, "𝐛", "⠸⠃"
-nemeth, default, "𝐜", "⠸⠉"
-nemeth, default, "𝐝", "⠸⠙"
-nemeth, default, "𝐞", "⠸⠑"
-nemeth, default, "𝐟", "⠸⠋"
-nemeth, default, "𝐠", "⠸⠛"
-nemeth, default, "𝐡", "⠸⠓"
-nemeth, default, "𝐢", "⠸⠊"
-nemeth, default, "𝐣", "⠸⠚"
-nemeth, default, "𝐤", "⠸⠅"
-nemeth, default, "𝐥", "⠸⠇"
-nemeth, default, "𝐦", "⠸⠍"
-nemeth, default, "𝐧", "⠸⠝"
-nemeth, default, "𝐨", "⠸⠕"
-nemeth, default, "𝐩", "⠸⠏"
-nemeth, default, "𝐪", "⠸⠟"
-nemeth, default, "𝐫", "⠸⠗"
-nemeth, default, "𝐬", "⠸⠎"
-nemeth, default, "𝐭", "⠸⠞"
-nemeth, default, "𝐮", "⠸⠥"
-nemeth, default, "𝐯", "⠸⠧"
-nemeth, default, "𝐰", "⠸⠺"
-nemeth, default, "𝐱", "⠸⠭"
-nemeth, default, "𝐲", "⠸⠽"
-nemeth, default, "𝐳", "⠸⠵"
-nemeth, default, "𝑨", "⠸⠨⠠⠁"
-nemeth, default, "𝑩", "⠸⠨⠠⠃"
-nemeth, default, "𝑪", "⠸⠨⠠⠉"
-nemeth, default, "𝑫", "⠸⠨⠠⠙"
-nemeth, default, "𝑬", "⠸⠨⠠⠑"
-nemeth, default, "𝑭", "⠸⠨⠠⠋"
-nemeth, default, "𝑮", "⠸⠨⠠⠛"
-nemeth, default, "𝑯", "⠸⠨⠠⠓"
-nemeth, default, "𝑰", "⠸⠨⠠⠊"
-nemeth, default, "𝑱", "⠸⠨⠠⠚"
-nemeth, default, "𝑲", "⠸⠨⠠⠅"
-nemeth, default, "𝑳", "⠸⠨⠠⠇"
-nemeth, default, "𝑴", "⠸⠨⠠⠍"
-nemeth, default, "𝑵", "⠸⠨⠠⠝"
-nemeth, default, "𝑶", "⠸⠨⠠⠕"
-nemeth, default, "𝑷", "⠸⠨⠠⠏"
-nemeth, default, "𝑸", "⠸⠨⠠⠟"
-nemeth, default, "𝑹", "⠸⠨⠠⠗"
-nemeth, default, "𝑺", "⠸⠨⠠⠎"
-nemeth, default, "𝑻", "⠸⠨⠠⠞"
-nemeth, default, "𝑼", "⠸⠨⠠⠥"
-nemeth, default, "𝑽", "⠸⠨⠠⠧"
-nemeth, default, "𝑾", "⠸⠨⠠⠺"
-nemeth, default, "𝑿", "⠸⠨⠠⠭"
-nemeth, default, "𝒀", "⠸⠨⠠⠽"
-nemeth, default, "𝒁", "⠸⠨⠠⠵"
-nemeth, default, "𝒂", "⠸⠨⠁"
-nemeth, default, "𝒃", "⠸⠨⠃"
-nemeth, default, "𝒄", "⠸⠨⠉"
-nemeth, default, "𝒅", "⠸⠨⠙"
-nemeth, default, "𝒆", "⠸⠨⠑"
-nemeth, default, "𝒇", "⠸⠨⠋"
-nemeth, default, "𝒈", "⠸⠨⠛"
-nemeth, default, "𝒉", "⠸⠨⠓"
-nemeth, default, "𝒊", "⠸⠨⠊"
-nemeth, default, "𝒋", "⠸⠨⠚"
-nemeth, default, "𝒌", "⠸⠨⠅"
-nemeth, default, "𝒍", "⠸⠨⠇"
-nemeth, default, "𝒎", "⠸⠨⠍"
-nemeth, default, "𝒏", "⠸⠨⠝"
-nemeth, default, "𝒐", "⠸⠨⠕"
-nemeth, default, "𝒑", "⠸⠨⠏"
-nemeth, default, "𝒒", "⠸⠨⠟"
-nemeth, default, "𝒓", "⠸⠨⠗"
-nemeth, default, "𝒔", "⠸⠨⠎"
-nemeth, default, "𝒕", "⠸⠨⠞"
-nemeth, default, "𝒖", "⠸⠨⠥"
-nemeth, default, "𝒗", "⠸⠨⠧"
-nemeth, default, "𝒘", "⠸⠨⠺"
-nemeth, default, "𝒙", "⠸⠨⠭"
-nemeth, default, "𝒚", "⠸⠨⠽"
-nemeth, default, "𝒛", "⠸⠨⠵"
-nemeth, default, "𝓐", "⠸⠈⠠⠁"
-nemeth, default, "𝓑", "⠸⠈⠠⠃"
-nemeth, default, "𝓒", "⠸⠈⠠⠉"
-nemeth, default, "𝓓", "⠸⠈⠠⠙"
-nemeth, default, "𝓔", "⠸⠈⠠⠑"
-nemeth, default, "𝓕", "⠸⠈⠠⠋"
-nemeth, default, "𝓖", "⠸⠈⠠⠛"
-nemeth, default, "𝓗", "⠸⠈⠠⠓"
-nemeth, default, "𝓘", "⠸⠈⠠⠊"
-nemeth, default, "𝓙", "⠸⠈⠠⠚"
-nemeth, default, "𝓚", "⠸⠈⠠⠅"
-nemeth, default, "𝓛", "⠸⠈⠠⠇"
-nemeth, default, "𝓜", "⠸⠈⠠⠍"
-nemeth, default, "𝓝", "⠸⠈⠠⠝"
-nemeth, default, "𝓞", "⠸⠈⠠⠕"
-nemeth, default, "𝓟", "⠸⠈⠠⠏"
-nemeth, default, "𝓠", "⠸⠈⠠⠟"
-nemeth, default, "𝓡", "⠸⠈⠠⠗"
-nemeth, default, "𝓢", "⠸⠈⠠⠎"
-nemeth, default, "𝓣", "⠸⠈⠠⠞"
-nemeth, default, "𝓤", "⠸⠈⠠⠥"
-nemeth, default, "𝓥", "⠸⠈⠠⠧"
-nemeth, default, "𝓦", "⠸⠈⠠⠺"
-nemeth, default, "𝓧", "⠸⠈⠠⠭"
-nemeth, default, "𝓨", "⠸⠈⠠⠽"
-nemeth, default, "𝓩", "⠸⠈⠠⠵"
-nemeth, default, "𝓪", "⠸⠈⠁"
-nemeth, default, "𝓫", "⠸⠈⠃"
-nemeth, default, "𝓬", "⠸⠈⠉"
-nemeth, default, "𝓭", "⠸⠈⠙"
-nemeth, default, "𝓮", "⠸⠈⠑"
-nemeth, default, "𝓯", "⠸⠈⠋"
-nemeth, default, "𝓰", "⠸⠈⠛"
-nemeth, default, "𝓱", "⠸⠈⠓"
-nemeth, default, "𝓲", "⠸⠈⠊"
-nemeth, default, "𝓳", "⠸⠈⠚"
-nemeth, default, "𝓴", "⠸⠈⠅"
-nemeth, default, "𝓵", "⠸⠈⠇"
-nemeth, default, "𝓶", "⠸⠈⠍"
-nemeth, default, "𝓷", "⠸⠈⠝"
-nemeth, default, "𝓸", "⠸⠈⠕"
-nemeth, default, "𝓹", "⠸⠈⠏"
-nemeth, default, "𝓺", "⠸⠈⠟"
-nemeth, default, "𝓻", "⠸⠈⠗"
-nemeth, default, "𝓼", "⠸⠈⠎"
-nemeth, default, "𝓽", "⠸⠈⠞"
-nemeth, default, "𝓾", "⠸⠈⠥"
-nemeth, default, "𝓿", "⠸⠈⠧"
-nemeth, default, "𝔀", "⠸⠈⠺"
-nemeth, default, "𝔁", "⠸⠈⠭"
-nemeth, default, "𝔂", "⠸⠈⠽"
-nemeth, default, "𝔃", "⠸⠈⠵"
-nemeth, default, "𝔸", "⠈⠠⠁"
-nemeth, default, "𝔹", "⠈⠠⠃"
-nemeth, default, "ℂ", "⠈⠠⠉"
-nemeth, default, "𝔻", "⠈⠠⠙"
-nemeth, default, "𝔼", "⠈⠠⠑"
-nemeth, default, "𝔽", "⠈⠠⠋"
-nemeth, default, "𝔾", "⠈⠠⠛"
-nemeth, default, "ℍ", "⠈⠠⠓"
-nemeth, default, "𝕀", "⠈⠠⠊"
-nemeth, default, "𝕁", "⠈⠠⠚"
-nemeth, default, "𝕂", "⠈⠠⠅"
-nemeth, default, "𝕃", "⠈⠠⠇"
-nemeth, default, "𝕄", "⠈⠠⠍"
-nemeth, default, "ℕ", "⠈⠠⠝"
-nemeth, default, "𝕆", "⠈⠠⠕"
-nemeth, default, "ℙ", "⠈⠠⠏"
-nemeth, default, "ℚ", "⠈⠠⠟"
-nemeth, default, "ℝ", "⠈⠠⠗"
-nemeth, default, "𝕊", "⠈⠠⠎"
-nemeth, default, "𝕋", "⠈⠠⠞"
-nemeth, default, "𝕌", "⠈⠠⠥"
-nemeth, default, "𝕍", "⠈⠠⠧"
-nemeth, default, "𝕎", "⠈⠠⠺"
-nemeth, default, "𝕏", "⠈⠠⠭"
-nemeth, default, "𝕐", "⠈⠠⠽"
-nemeth, default, "ℤ", "⠈⠠⠵"
-nemeth, default, "𝕒", "⠈⠁"
-nemeth, default, "𝕓", "⠈⠃"
-nemeth, default, "𝕔", "⠈⠉"
-nemeth, default, "𝕕", "⠈⠙"
-nemeth, default, "𝕖", "⠈⠑"
-nemeth, default, "𝕗", "⠈⠋"
-nemeth, default, "𝕘", "⠈⠛"
-nemeth, default, "𝕙", "⠈⠓"
-nemeth, default, "𝕚", "⠈⠊"
-nemeth, default, "𝕛", "⠈⠚"
-nemeth, default, "𝕜", "⠈⠅"
-nemeth, default, "𝕝", "⠈⠇"
-nemeth, default, "𝕞", "⠈⠍"
-nemeth, default, "𝕟", "⠈⠝"
-nemeth, default, "𝕠", "⠈⠕"
-nemeth, default, "𝕡", "⠈⠏"
-nemeth, default, "𝕢", "⠈⠟"
-nemeth, default, "𝕣", "⠈⠗"
-nemeth, default, "𝕤", "⠈⠎"
-nemeth, default, "𝕥", "⠈⠞"
-nemeth, default, "𝕦", "⠈⠥"
-nemeth, default, "𝕧", "⠈⠧"
-nemeth, default, "𝕨", "⠈⠺"
-nemeth, default, "𝕩", "⠈⠭"
-nemeth, default, "𝕪", "⠈⠽"
-nemeth, default, "𝕫", "⠈⠵"
-nemeth, default, "𝔄", "⠸⠠⠁"
-nemeth, default, "𝔅", "⠸⠠⠃"
-nemeth, default, "ℭ", "⠸⠠⠉"
-nemeth, default, "𝔇", "⠸⠠⠙"
-nemeth, default, "𝔈", "⠸⠠⠑"
-nemeth, default, "𝔉", "⠸⠠⠋"
-nemeth, default, "𝔊", "⠸⠠⠛"
-nemeth, default, "ℌ", "⠸⠠⠓"
-nemeth, default, "ℑ", "⠸⠠⠊"
-nemeth, default, "𝔍", "⠸⠠⠚"
-nemeth, default, "𝔎", "⠸⠠⠅"
-nemeth, default, "𝔏", "⠸⠠⠇"
-nemeth, default, "𝔐", "⠸⠠⠍"
-nemeth, default, "𝔑", "⠸⠠⠝"
-nemeth, default, "𝔒", "⠸⠠⠕"
-nemeth, default, "𝔓", "⠸⠠⠏"
-nemeth, default, "𝔔", "⠸⠠⠟"
-nemeth, default, "ℜ", "⠸⠠⠗"
-nemeth, default, "𝔖", "⠸⠠⠎"
-nemeth, default, "𝔗", "⠸⠠⠞"
-nemeth, default, "𝔘", "⠸⠠⠥"
-nemeth, default, "𝔙", "⠸⠠⠧"
-nemeth, default, "𝔚", "⠸⠠⠺"
-nemeth, default, "𝔛", "⠸⠠⠭"
-nemeth, default, "𝔜", "⠸⠠⠽"
-nemeth, default, "ℨ", "⠸⠠⠵"
-nemeth, default, "𝔞", "⠸⠁"
-nemeth, default, "𝔟", "⠸⠃"
-nemeth, default, "𝔠", "⠸⠉"
-nemeth, default, "𝔡", "⠸⠙"
-nemeth, default, "𝔢", "⠸⠑"
-nemeth, default, "𝔣", "⠸⠋"
-nemeth, default, "𝔤", "⠸⠛"
-nemeth, default, "𝔥", "⠸⠓"
-nemeth, default, "𝔦", "⠸⠊"
-nemeth, default, "𝔧", "⠸⠚"
-nemeth, default, "𝔨", "⠸⠅"
-nemeth, default, "𝔩", "⠸⠇"
-nemeth, default, "𝔪", "⠸⠍"
-nemeth, default, "𝔫", "⠸⠝"
-nemeth, default, "𝔬", "⠸⠕"
-nemeth, default, "𝔭", "⠸⠏"
-nemeth, default, "𝔮", "⠸⠟"
-nemeth, default, "𝔯", "⠸⠗"
-nemeth, default, "𝔰", "⠸⠎"
-nemeth, default, "𝔱", "⠸⠞"
-nemeth, default, "𝔲", "⠸⠥"
-nemeth, default, "𝔳", "⠸⠧"
-nemeth, default, "𝔴", "⠸⠺"
-nemeth, default, "𝔵", "⠸⠭"
-nemeth, default, "𝔶", "⠸⠽"
-nemeth, default, "𝔷", "⠸⠵"
-nemeth, default, "𝐴", "⠨⠠⠁"
-nemeth, default, "𝐵", "⠨⠠⠃"
-nemeth, default, "𝐶", "⠨⠠⠉"
-nemeth, default, "𝐷", "⠨⠠⠙"
-nemeth, default, "𝐸", "⠨⠠⠑"
-nemeth, default, "𝐹", "⠨⠠⠋"
-nemeth, default, "𝐺", "⠨⠠⠛"
-nemeth, default, "𝐻", "⠨⠠⠓"
-nemeth, default, "𝐼", "⠨⠠⠊"
-nemeth, default, "𝐽", "⠨⠠⠚"
-nemeth, default, "𝐾", "⠨⠠⠅"
-nemeth, default, "𝐿", "⠨⠠⠇"
-nemeth, default, "𝑀", "⠨⠠⠍"
-nemeth, default, "𝑁", "⠨⠠⠝"
-nemeth, default, "𝑂", "⠨⠠⠕"
-nemeth, default, "𝑃", "⠨⠠⠏"
-nemeth, default, "𝑄", "⠨⠠⠟"
-nemeth, default, "𝑅", "⠨⠠⠗"
-nemeth, default, "𝑆", "⠨⠠⠎"
-nemeth, default, "𝑇", "⠨⠠⠞"
-nemeth, default, "𝑈", "⠨⠠⠥"
-nemeth, default, "𝑉", "⠨⠠⠧"
-nemeth, default, "𝑊", "⠨⠠⠺"
-nemeth, default, "𝑋", "⠨⠠⠭"
-nemeth, default, "𝑌", "⠨⠠⠽"
-nemeth, default, "𝑍", "⠨⠠⠵"
-nemeth, default, "𝑎", "⠨⠁"
-nemeth, default, "𝑏", "⠨⠃"
-nemeth, default, "𝑐", "⠨⠉"
-nemeth, default, "𝑑", "⠨⠙"
-nemeth, default, "𝑒", "⠨⠑"
-nemeth, default, "𝑓", "⠨⠋"
-nemeth, default, "𝑔", "⠨⠛"
-nemeth, default, "ℎ", "⠨⠓"
-nemeth, default, "𝑖", "⠨⠊"
-nemeth, default, "𝑗", "⠨⠚"
-nemeth, default, "𝑘", "⠨⠅"
-nemeth, default, "𝑙", "⠨⠇"
-nemeth, default, "𝑚", "⠨⠍"
-nemeth, default, "𝑛", "⠨⠝"
-nemeth, default, "𝑜", "⠨⠕"
-nemeth, default, "𝑝", "⠨⠏"
-nemeth, default, "𝑞", "⠨⠟"
-nemeth, default, "𝑟", "⠨⠗"
-nemeth, default, "𝑠", "⠨⠎"
-nemeth, default, "𝑡", "⠨⠞"
-nemeth, default, "𝑢", "⠨⠥"
-nemeth, default, "𝑣", "⠨⠧"
-nemeth, default, "𝑤", "⠨⠺"
-nemeth, default, "𝑥", "⠨⠭"
-nemeth, default, "𝑦", "⠨⠽"
-nemeth, default, "𝑧", "⠨⠵"
-nemeth, default, "𝙰", "⠠⠁"
-nemeth, default, "𝙱", "⠠⠃"
-nemeth, default, "𝙲", "⠠⠉"
-nemeth, default, "𝙳", "⠠⠙"
-nemeth, default, "𝙴", "⠠⠑"
-nemeth, default, "𝙵", "⠠⠋"
-nemeth, default, "𝙶", "⠠⠛"
-nemeth, default, "𝙷", "⠠⠓"
-nemeth, default, "𝙸", "⠠⠊"
-nemeth, default, "𝙹", "⠠⠚"
-nemeth, default, "𝙺", "⠠⠅"
-nemeth, default, "𝙻", "⠠⠇"
-nemeth, default, "𝙼", "⠠⠍"
-nemeth, default, "𝙽", "⠠⠝"
-nemeth, default, "𝙾", "⠠⠕"
-nemeth, default, "𝙿", "⠠⠏"
-nemeth, default, "𝚀", "⠠⠟"
-nemeth, default, "𝚁", "⠠⠗"
-nemeth, default, "𝚂", "⠠⠎"
-nemeth, default, "𝚃", "⠠⠞"
-nemeth, default, "𝚄", "⠠⠥"
-nemeth, default, "𝚅", "⠠⠧"
-nemeth, default, "𝚆", "⠠⠺"
-nemeth, default, "𝚇", "⠠⠭"
-nemeth, default, "𝚈", "⠠⠽"
-nemeth, default, "𝚉", "⠠⠵"
-nemeth, default, "𝚊", "⠁"
-nemeth, default, "𝚋", "⠃"
-nemeth, default, "𝚌", "⠉"
-nemeth, default, "𝚍", "⠙"
-nemeth, default, "𝚎", "⠑"
-nemeth, default, "𝚏", "⠋"
-nemeth, default, "𝚐", "⠛"
-nemeth, default, "𝚑", "⠓"
-nemeth, default, "𝚒", "⠊"
-nemeth, default, "𝚓", "⠚"
-nemeth, default, "𝚔", "⠅"
-nemeth, default, "𝚕", "⠇"
-nemeth, default, "𝚖", "⠍"
-nemeth, default, "𝚗", "⠝"
-nemeth, default, "𝚘", "⠕"
-nemeth, default, "𝚙", "⠏"
-nemeth, default, "𝚚", "⠟"
-nemeth, default, "𝚛", "⠗"
-nemeth, default, "𝚜", "⠎"
-nemeth, default, "𝚝", "⠞"
-nemeth, default, "𝚞", "⠥"
-nemeth, default, "𝚟", "⠧"
-nemeth, default, "𝚠", "⠺"
-nemeth, default, "𝚡", "⠭"
-nemeth, default, "𝚢", "⠽"
-nemeth, default, "𝚣", "⠵"
-nemeth, default, "𝗔", "⠠⠨⠸⠠⠁"
-nemeth, default, "𝗕", "⠠⠨⠸⠠⠃"
-nemeth, default, "𝗖", "⠠⠨⠸⠠⠉"
-nemeth, default, "𝗗", "⠠⠨⠸⠠⠙"
-nemeth, default, "𝗘", "⠠⠨⠸⠠⠑"
-nemeth, default, "𝗙", "⠠⠨⠸⠠⠋"
-nemeth, default, "𝗚", "⠠⠨⠸⠠⠛"
-nemeth, default, "𝗛", "⠠⠨⠸⠠⠓"
-nemeth, default, "𝗜", "⠠⠨⠸⠠⠊"
-nemeth, default, "𝗝", "⠠⠨⠸⠠⠚"
-nemeth, default, "𝗞", "⠠⠨⠸⠠⠅"
-nemeth, default, "𝗟", "⠠⠨⠸⠠⠇"
-nemeth, default, "𝗠", "⠠⠨⠸⠠⠍"
-nemeth, default, "𝗡", "⠠⠨⠸⠠⠝"
-nemeth, default, "𝗢", "⠠⠨⠸⠠⠕"
-nemeth, default, "𝗣", "⠠⠨⠸⠠⠏"
-nemeth, default, "𝗤", "⠠⠨⠸⠠⠟"
-nemeth, default, "𝗥", "⠠⠨⠸⠠⠗"
-nemeth, default, "𝗦", "⠠⠨⠸⠠⠎"
-nemeth, default, "𝗧", "⠠⠨⠸⠠⠞"
-nemeth, default, "𝗨", "⠠⠨⠸⠠⠥"
-nemeth, default, "𝗩", "⠠⠨⠸⠠⠧"
-nemeth, default, "𝗪", "⠠⠨⠸⠠⠺"
-nemeth, default, "𝗫", "⠠⠨⠸⠠⠭"
-nemeth, default, "𝗬", "⠠⠨⠸⠠⠽"
-nemeth, default, "𝗭", "⠠⠨⠸⠠⠵"
-nemeth, default, "𝗮", "⠠⠨⠸⠁"
-nemeth, default, "𝗯", "⠠⠨⠸⠃"
-nemeth, default, "𝗰", "⠠⠨⠸⠉"
-nemeth, default, "𝗱", "⠠⠨⠸⠙"
-nemeth, default, "𝗲", "⠠⠨⠸⠑"
-nemeth, default, "𝗳", "⠠⠨⠸⠋"
-nemeth, default, "𝗴", "⠠⠨⠸⠛"
-nemeth, default, "𝗵", "⠠⠨⠸⠓"
-nemeth, default, "𝗶", "⠠⠨⠸⠊"
-nemeth, default, "𝗷", "⠠⠨⠸⠚"
-nemeth, default, "𝗸", "⠠⠨⠸⠅"
-nemeth, default, "𝗹", "⠠⠨⠸⠇"
-nemeth, default, "𝗺", "⠠⠨⠸⠍"
-nemeth, default, "𝗻", "⠠⠨⠸⠝"
-nemeth, default, "𝗼", "⠠⠨⠸⠕"
-nemeth, default, "𝗽", "⠠⠨⠸⠏"
-nemeth, default, "𝗾", "⠠⠨⠸⠟"
-nemeth, default, "𝗿", "⠠⠨⠸⠗"
-nemeth, default, "𝘀", "⠠⠨⠸⠎"
-nemeth, default, "𝘁", "⠠⠨⠸⠞"
-nemeth, default, "𝘂", "⠠⠨⠸⠥"
-nemeth, default, "𝘃", "⠠⠨⠸⠧"
-nemeth, default, "𝘄", "⠠⠨⠸⠺"
-nemeth, default, "𝘅", "⠠⠨⠸⠭"
-nemeth, default, "𝘆", "⠠⠨⠸⠽"
-nemeth, default, "𝘇", "⠠⠨⠸⠵"
-nemeth, default, "𝘈", "⠠⠨⠨⠠⠁"
-nemeth, default, "𝘉", "⠠⠨⠨⠠⠃"
-nemeth, default, "𝘊", "⠠⠨⠨⠠⠉"
-nemeth, default, "𝘋", "⠠⠨⠨⠠⠙"
-nemeth, default, "𝘌", "⠠⠨⠨⠠⠑"
-nemeth, default, "𝘍", "⠠⠨⠨⠠⠋"
-nemeth, default, "𝘎", "⠠⠨⠨⠠⠛"
-nemeth, default, "𝘏", "⠠⠨⠨⠠⠓"
-nemeth, default, "𝘐", "⠠⠨⠨⠠⠊"
-nemeth, default, "𝘑", "⠠⠨⠨⠠⠚"
-nemeth, default, "𝘒", "⠠⠨⠨⠠⠅"
-nemeth, default, "𝘓", "⠠⠨⠨⠠⠇"
-nemeth, default, "𝘔", "⠠⠨⠨⠠⠍"
-nemeth, default, "𝘕", "⠠⠨⠨⠠⠝"
-nemeth, default, "𝘖", "⠠⠨⠨⠠⠕"
-nemeth, default, "𝘗", "⠠⠨⠨⠠⠏"
-nemeth, default, "𝘘", "⠠⠨⠨⠠⠟"
-nemeth, default, "𝘙", "⠠⠨⠨⠠⠗"
-nemeth, default, "𝘚", "⠠⠨⠨⠠⠎"
-nemeth, default, "𝘛", "⠠⠨⠨⠠⠞"
-nemeth, default, "𝘜", "⠠⠨⠨⠠⠥"
-nemeth, default, "𝘝", "⠠⠨⠨⠠⠧"
-nemeth, default, "𝘞", "⠠⠨⠨⠠⠺"
-nemeth, default, "𝘟", "⠠⠨⠨⠠⠭"
-nemeth, default, "𝘠", "⠠⠨⠨⠠⠽"
-nemeth, default, "𝘡", "⠠⠨⠨⠠⠵"
-nemeth, default, "𝘢", "⠠⠨⠨⠁"
-nemeth, default, "𝘣", "⠠⠨⠨⠃"
-nemeth, default, "𝘤", "⠠⠨⠨⠉"
-nemeth, default, "𝘥", "⠠⠨⠨⠙"
-nemeth, default, "𝘦", "⠠⠨⠨⠑"
-nemeth, default, "𝘧", "⠠⠨⠨⠋"
-nemeth, default, "𝘨", "⠠⠨⠨⠛"
-nemeth, default, "𝘩", "⠠⠨⠨⠓"
-nemeth, default, "𝘪", "⠠⠨⠨⠊"
-nemeth, default, "𝘫", "⠠⠨⠨⠚"
-nemeth, default, "𝘬", "⠠⠨⠨⠅"
-nemeth, default, "𝘭", "⠠⠨⠨⠇"
-nemeth, default, "𝘮", "⠠⠨⠨⠍"
-nemeth, default, "𝘯", "⠠⠨⠨⠝"
-nemeth, default, "𝘰", "⠠⠨⠨⠕"
-nemeth, default, "𝘱", "⠠⠨⠨⠏"
-nemeth, default, "𝘲", "⠠⠨⠨⠟"
-nemeth, default, "𝘳", "⠠⠨⠨⠗"
-nemeth, default, "𝘴", "⠠⠨⠨⠎"
-nemeth, default, "𝘵", "⠠⠨⠨⠞"
-nemeth, default, "𝘶", "⠠⠨⠨⠥"
-nemeth, default, "𝘷", "⠠⠨⠨⠧"
-nemeth, default, "𝘸", "⠠⠨⠨⠺"
-nemeth, default, "𝘹", "⠠⠨⠨⠭"
-nemeth, default, "𝘺", "⠠⠨⠨⠽"
-nemeth, default, "𝘻", "⠠⠨⠨⠵"
-nemeth, default, "𝘼", "⠠⠨⠸⠨⠠⠁"
-nemeth, default, "𝘽", "⠠⠨⠸⠨⠠⠃"
-nemeth, default, "𝘾", "⠠⠨⠸⠨⠠⠉"
-nemeth, default, "𝘿", "⠠⠨⠸⠨⠠⠙"
-nemeth, default, "𝙀", "⠠⠨⠸⠨⠠⠑"
-nemeth, default, "𝙁", "⠠⠨⠸⠨⠠⠋"
-nemeth, default, "𝙂", "⠠⠨⠸⠨⠠⠛"
-nemeth, default, "𝙃", "⠠⠨⠸⠨⠠⠓"
-nemeth, default, "𝙄", "⠠⠨⠸⠨⠠⠊"
-nemeth, default, "𝙅", "⠠⠨⠸⠨⠠⠚"
-nemeth, default, "𝙆", "⠠⠨⠸⠨⠠⠅"
-nemeth, default, "𝙇", "⠠⠨⠸⠨⠠⠇"
-nemeth, default, "𝙈", "⠠⠨⠸⠨⠠⠍"
-nemeth, default, "𝙉", "⠠⠨⠸⠨⠠⠝"
-nemeth, default, "𝙊", "⠠⠨⠸⠨⠠⠕"
-nemeth, default, "𝙋", "⠠⠨⠸⠨⠠⠏"
-nemeth, default, "𝙌", "⠠⠨⠸⠨⠠⠟"
-nemeth, default, "𝙍", "⠠⠨⠸⠨⠠⠗"
-nemeth, default, "𝙎", "⠠⠨⠸⠨⠠⠎"
-nemeth, default, "𝙏", "⠠⠨⠸⠨⠠⠞"
-nemeth, default, "𝙐", "⠠⠨⠸⠨⠠⠥"
-nemeth, default, "𝙑", "⠠⠨⠸⠨⠠⠧"
-nemeth, default, "𝙒", "⠠⠨⠸⠨⠠⠺"
-nemeth, default, "𝙓", "⠠⠨⠸⠨⠠⠭"
-nemeth, default, "𝙔", "⠠⠨⠸⠨⠠⠽"
-nemeth, default, "𝙕", "⠠⠨⠸⠨⠠⠵"
-nemeth, default, "𝙖", "⠠⠨⠸⠨⠁"
-nemeth, default, "𝙗", "⠠⠨⠸⠨⠃"
-nemeth, default, "𝙘", "⠠⠨⠸⠨⠉"
-nemeth, default, "𝙙", "⠠⠨⠸⠨⠙"
-nemeth, default, "𝙚", "⠠⠨⠸⠨⠑"
-nemeth, default, "𝙛", "⠠⠨⠸⠨⠋"
-nemeth, default, "𝙜", "⠠⠨⠸⠨⠛"
-nemeth, default, "𝙝", "⠠⠨⠸⠨⠓"
-nemeth, default, "𝙞", "⠠⠨⠸⠨⠊"
-nemeth, default, "𝙟", "⠠⠨⠸⠨⠚"
-nemeth, default, "𝙠", "⠠⠨⠸⠨⠅"
-nemeth, default, "𝙡", "⠠⠨⠸⠨⠇"
-nemeth, default, "𝙢", "⠠⠨⠸⠨⠍"
-nemeth, default, "𝙣", "⠠⠨⠸⠨⠝"
-nemeth, default, "𝙤", "⠠⠨⠸⠨⠕"
-nemeth, default, "𝙥", "⠠⠨⠸⠨⠏"
-nemeth, default, "𝙦", "⠠⠨⠸⠨⠟"
-nemeth, default, "𝙧", "⠠⠨⠸⠨⠗"
-nemeth, default, "𝙨", "⠠⠨⠸⠨⠎"
-nemeth, default, "𝙩", "⠠⠨⠸⠨⠞"
-nemeth, default, "𝙪", "⠠⠨⠸⠨⠥"
-nemeth, default, "𝙫", "⠠⠨⠸⠨⠧"
-nemeth, default, "𝙬", "⠠⠨⠸⠨⠺"
-nemeth, default, "𝙭", "⠠⠨⠸⠨⠭"
-nemeth, default, "𝙮", "⠠⠨⠸⠨⠽"
-nemeth, default, "𝙯", "⠠⠨⠸⠨⠵"
-nemeth, default, "𝖠", "⠠⠨⠠⠁"
-nemeth, default, "𝖡", "⠠⠨⠠⠃"
-nemeth, default, "𝖢", "⠠⠨⠠⠉"
-nemeth, default, "𝖣", "⠠⠨⠠⠙"
-nemeth, default, "𝖤", "⠠⠨⠠⠑"
-nemeth, default, "𝖥", "⠠⠨⠠⠋"
-nemeth, default, "𝖦", "⠠⠨⠠⠛"
-nemeth, default, "𝖧", "⠠⠨⠠⠓"
-nemeth, default, "𝖨", "⠠⠨⠠⠊"
-nemeth, default, "𝖩", "⠠⠨⠠⠚"
-nemeth, default, "𝖪", "⠠⠨⠠⠅"
-nemeth, default, "𝖫", "⠠⠨⠠⠇"
-nemeth, default, "𝖬", "⠠⠨⠠⠍"
-nemeth, default, "𝖭", "⠠⠨⠠⠝"
-nemeth, default, "𝖮", "⠠⠨⠠⠕"
-nemeth, default, "𝖯", "⠠⠨⠠⠏"
-nemeth, default, "𝖰", "⠠⠨⠠⠟"
-nemeth, default, "𝖱", "⠠⠨⠠⠗"
-nemeth, default, "𝖲", "⠠⠨⠠⠎"
-nemeth, default, "𝖳", "⠠⠨⠠⠞"
-nemeth, default, "𝖴", "⠠⠨⠠⠥"
-nemeth, default, "𝖵", "⠠⠨⠠⠧"
-nemeth, default, "𝖶", "⠠⠨⠠⠺"
-nemeth, default, "𝖷", "⠠⠨⠠⠭"
-nemeth, default, "𝖸", "⠠⠨⠠⠽"
-nemeth, default, "𝖹", "⠠⠨⠠⠵"
-nemeth, default, "𝖺", "⠠⠨⠁"
-nemeth, default, "𝖻", "⠠⠨⠃"
-nemeth, default, "𝖼", "⠠⠨⠉"
-nemeth, default, "𝖽", "⠠⠨⠙"
-nemeth, default, "𝖾", "⠠⠨⠑"
-nemeth, default, "𝖿", "⠠⠨⠋"
-nemeth, default, "𝗀", "⠠⠨⠛"
-nemeth, default, "𝗁", "⠠⠨⠓"
-nemeth, default, "𝗂", "⠠⠨⠊"
-nemeth, default, "𝗃", "⠠⠨⠚"
-nemeth, default, "𝗄", "⠠⠨⠅"
-nemeth, default, "𝗅", "⠠⠨⠇"
-nemeth, default, "𝗆", "⠠⠨⠍"
-nemeth, default, "𝗇", "⠠⠨⠝"
-nemeth, default, "𝗈", "⠠⠨⠕"
-nemeth, default, "𝗉", "⠠⠨⠏"
-nemeth, default, "𝗊", "⠠⠨⠟"
-nemeth, default, "𝗋", "⠠⠨⠗"
-nemeth, default, "𝗌", "⠠⠨⠎"
-nemeth, default, "𝗍", "⠠⠨⠞"
-nemeth, default, "𝗎", "⠠⠨⠥"
-nemeth, default, "𝗏", "⠠⠨⠧"
-nemeth, default, "𝗐", "⠠⠨⠺"
-nemeth, default, "𝗑", "⠠⠨⠭"
-nemeth, default, "𝗒", "⠠⠨⠽"
-nemeth, default, "𝗓", "⠠⠨⠵"
-nemeth, default, "𝒜", "⠈⠠⠁"
-nemeth, default, "ℬ", "⠈⠠⠃"
-nemeth, default, "𝒞", "⠈⠠⠉"
-nemeth, default, "𝒟", "⠈⠠⠙"
-nemeth, default, "ℰ", "⠈⠠⠑"
-nemeth, default, "ℱ", "⠈⠠⠋"
-nemeth, default, "𝒢", "⠈⠠⠛"
-nemeth, default, "ℋ", "⠈⠠⠓"
-nemeth, default, "ℐ", "⠈⠠⠊"
-nemeth, default, "𝒥", "⠈⠠⠚"
-nemeth, default, "𝒦", "⠈⠠⠅"
-nemeth, default, "ℒ", "⠈⠠⠇"
-nemeth, default, "ℳ", "⠈⠠⠍"
-nemeth, default, "𝒩", "⠈⠠⠝"
-nemeth, default, "𝒪", "⠈⠠⠕"
-nemeth, default, "𝒫", "⠈⠠⠏"
-nemeth, default, "𝒬", "⠈⠠⠟"
-nemeth, default, "ℛ", "⠈⠠⠗"
-nemeth, default, "𝒮", "⠈⠠⠎"
-nemeth, default, "𝒯", "⠈⠠⠞"
-nemeth, default, "𝒰", "⠈⠠⠥"
-nemeth, default, "𝒱", "⠈⠠⠧"
-nemeth, default, "𝒲", "⠈⠠⠺"
-nemeth, default, "𝒳", "⠈⠠⠭"
-nemeth, default, "𝒴", "⠈⠠⠽"
-nemeth, default, "𝒵", "⠈⠠⠵"
-nemeth, default, "𝒶", "⠈⠁"
-nemeth, default, "𝒷", "⠈⠃"
-nemeth, default, "𝒸", "⠈⠉"
-nemeth, default, "𝒹", "⠈⠙"
-nemeth, default, "ℯ", "⠈⠑"
-nemeth, default, "𝒻", "⠈⠋"
-nemeth, default, "ℊ", "⠈⠛"
-nemeth, default, "𝒽", "⠈⠓"
-nemeth, default, "𝒾", "⠈⠊"
-nemeth, default, "𝒿", "⠈⠚"
-nemeth, default, "𝓀", "⠈⠅"
-nemeth, default, "𝓁", "⠈⠇"
-nemeth, default, "𝓂", "⠈⠍"
-nemeth, default, "𝓃", "⠈⠝"
-nemeth, default, "ℴ", "⠈⠕"
-nemeth, default, "𝓅", "⠈⠏"
-nemeth, default, "𝓆", "⠈⠟"
-nemeth, default, "𝓇", "⠈⠗"
-nemeth, default, "𝓈", "⠈⠎"
-nemeth, default, "𝓉", "⠈⠞"
-nemeth, default, "𝓊", "⠈⠥"
-nemeth, default, "𝓋", "⠈⠧"
-nemeth, default, "𝓌", "⠈⠺"
-nemeth, default, "𝓍", "⠈⠭"
-nemeth, default, "𝓎", "⠈⠽"
-nemeth, default, "𝓏", "⠈⠵"
-nemeth, default, "⊾", "⠄⡳⠭⠆⠆⠃⠑⠄"
-nemeth, default, "⍼", "⠄⡳⠭⠆⠒⠶⠉⠄"
-nemeth, default, "⟀", "⠄⡳⠭⠆⠶⠉⠴⠄"
-nemeth, default, "⦛", "⠄⡳⠭⠆⠔⠔⠃⠄"
-nemeth, default, "⦜", "⠄⡳⠭⠆⠔⠔⠉⠄"
-nemeth, default, "⦝", "⠄⡳⠭⠆⠔⠔⠙⠄"
-nemeth, default, "⦞", "⠄⡳⠭⠆⠔⠔⠑⠄"
-nemeth, default, "⦟", "⠄⡳⠭⠆⠔⠔⠋⠄"
-nemeth, default, "⦠", "⠄⡳⠭⠆⠔⠁⠴⠄"
-nemeth, default, "⦡", "⠄⡳⠭⠆⠔⠁⠂⠄"
-nemeth, default, "⦢", "⠄⡳⠭⠆⠔⠁⠆⠄"
-nemeth, default, "⦣", "⠄⡳⠭⠆⠔⠁⠒⠄"
-nemeth, default, "⦤", "⠄⡳⠭⠆⠔⠁⠲⠄"
-nemeth, default, "⦥", "⠄⡳⠭⠆⠔⠁⠢⠄"
-nemeth, default, "⦦", "⠄⡳⠭⠆⠔⠁⠖⠄"
-nemeth, default, "⦧", "⠄⡳⠭⠆⠔⠁⠶⠄"
-nemeth, default, "⦨", "⠄⡳⠭⠆⠔⠁⠦⠄"
-nemeth, default, "⦩", "⠄⡳⠭⠆⠔⠁⠔⠄"
-nemeth, default, "⦪", "⠄⡳⠭⠆⠔⠁⠁⠄"
-nemeth, default, "⦫", "⠄⡳⠭⠆⠔⠁⠃⠄"
-nemeth, default, "⦬", "⠄⡳⠭⠆⠔⠁⠉⠄"
-nemeth, default, "⦭", "⠄⡳⠭⠆⠔⠁⠙⠄"
-nemeth, default, "⦮", "⠄⡳⠭⠆⠔⠁⠑⠄"
-nemeth, default, "⦯", "⠄⡳⠭⠆⠔⠁⠋⠄"
-nemeth, default, "←", "⠀⠫⠪⠒⠒⠀"
-nemeth, default, "↑", "⠀⠫⠣⠒⠒⠕⠀"
-nemeth, default, "→", "⠀⠫⠕⠀"
-nemeth, default, "↓", "⠀⠫⠩⠒⠒⠕⠀"
-nemeth, default, "↔", "⠀⠫⠪⠒⠒⠕⠀"
-nemeth, default, "↕", "⠀⠫⠣⠩⠪⠒⠒⠕⠀"
-nemeth, default, "↖", "⠀⠫⠘⠪⠒⠒⠀"
-nemeth, default, "↗", "⠀⠫⠘⠒⠒⠕⠀"
-nemeth, default, "↘", "⠀⠫⠰⠒⠒⠕⠀"
-nemeth, default, "↙", "⠀⠫⠰⠪⠒⠒⠀"
-nemeth, default, "↚", "⠀⠳⠈⠫⠪⠒⠒⠻⠀"
-nemeth, default, "↛", "⠀⠳⠈⠫⠒⠒⠕⠻⠀"
-nemeth, default, "↜", "⠀⠫⠪⠔⠒⠢⠀"
-nemeth, default, "↝", "⠀⠫⠔⠒⠢⠕⠀"
-nemeth, default, "↞", "⠀⠫⠪⠪⠒⠒⠀"
-nemeth, default, "↟", "⠀⠫⠣⠒⠒⠕⠕⠀"
-nemeth, default, "↠", "⠀⠫⠒⠒⠕⠕⠀"
-nemeth, default, "↡", "⠀⠫⠩⠒⠒⠕⠕⠀"
-nemeth, default, "↢", "⠀⠫⠪⠒⠒⠠⠽⠀"
-nemeth, default, "↣", "⠀⠫⠠⠯⠒⠒⠕⠀"
-nemeth, default, "↤", "⠀⠫⠪⠒⠒⠳⠀"
-nemeth, default, "↥", "⠀⠫⠣⠳⠒⠒⠕⠀"
-nemeth, default, "↦", "⠀⠫⠳⠒⠒⠕⠀"
-nemeth, default, "↧", "⠀⠫⠩⠳⠒⠒⠕⠀"
-nemeth, default, "↨", "⠀⠫⠪⠒⠳⠒⠕⠀"
-nemeth, default, "↩", "⠀⠫⠪⠒⠒⠠⠕⠀"
-nemeth, default, "↪", "⠀⠫⠠⠪⠒⠒⠕⠀"
-nemeth, default, "↫", "⠀⠫⠪⠒⠒⠨⠡⠀"
-nemeth, default, "↬", "⠀⠫⠨⠡⠒⠒⠕⠀"
-nemeth, default, "↭", "⠀⠫⠪⠔⠒⠢⠕⠀"
-nemeth, default, "↮", "⠀⠳⠈⠫⠪⠒⠒⠕⠀"
-nemeth, default, "↯", "⠀⠫⠩⠔⠢⠔⠀"
-nemeth, default, "↰", "⠄⡳⠭⠆⠂⠃⠴⠄"
-nemeth, default, "↱", "⠄⡳⠭⠆⠂⠃⠂⠄"
-nemeth, default, "↲", "⠄⡳⠭⠆⠂⠃⠆⠄"
-nemeth, default, "↳", "⠄⡳⠭⠆⠂⠃⠒⠄"
-nemeth, default, "↴", "⠀⠫⠠⠳⠒⠒⠕⠀"
-nemeth, default, "↵", "⠀⠫⠩⠠⠳⠒⠒⠕⠀"
-nemeth, default, "↶", "⠀⠫⠢⠔⠀⠕⠀"
-nemeth, default, "↷", "⠀⠫⠪⠢⠀⠔⠀"
-nemeth, default, "↸", "⠄⡳⠭⠆⠂⠃⠦⠄"
-nemeth, default, "↹", "⠄⡳⠭⠆⠂⠃⠔⠄"
-nemeth, default, "↺", "⠀⠫⠢⠔⠕⠀"
-nemeth, default, "↻", "⠀⠫⠪⠢⠔⠀"
-nemeth, default, "⇄", "⠀⠫⠒⠒⠕⠫⠪⠒⠒⠀"
-nemeth, default, "⇅", "⠀⠫⠣⠒⠒⠕⠐⠫⠩⠒⠒⠕⠀"
-nemeth, default, "⇆", "⠀⠫⠪⠒⠒⠫⠒⠒⠕⠀"
-nemeth, default, "⇇", "⠀⠫⠚⠒⠒⠫⠚⠒⠒⠀"
-nemeth, default, "⇈", "⠀⠫⠣⠒⠒⠕⠐⠫⠣⠒⠒⠕⠀"
-nemeth, default, "⇉", "⠀⠫⠒⠒⠕⠫⠒⠒⠕⠀"
-nemeth, default, "⇊", "⠀⠫⠩⠒⠒⠕⠐⠫⠩⠒⠒⠕⠀"
-nemeth, default, "⇍", "⠀⠳⠈⠫⠪⠪⠒⠒⠀"
-nemeth, default, "⇎", "⠀⠳⠈⠫⠪⠪⠒⠒⠕⠕⠀"
-nemeth, default, "⇏", "⠀⠳⠈⠫⠒⠒⠕⠕⠀"
-nemeth, default, "⇐", "⠀⠫⠪⠪⠒⠒⠀"
-nemeth, default, "⇑", "⠀⠫⠣⠒⠒⠕⠕⠀"
-nemeth, default, "⇒", "⠀⠫⠒⠒⠕⠕⠀"
-nemeth, default, "⇓", "⠀⠫⠣⠒⠒⠕⠕⠀"
-nemeth, default, "⇔", "⠀⠫⠪⠪⠒⠒⠕⠕⠀"
-nemeth, default, "⇕", "⠀⠫⠣⠪⠪⠒⠒⠕⠕⠀"
-nemeth, default, "⇖", "⠀⠫⠘⠪⠪⠒⠒⠀"
-nemeth, default, "⇗", "⠀⠫⠘⠒⠒⠕⠕⠀"
-nemeth, default, "⇘", "⠀⠫⠰⠒⠒⠕⠕⠀"
-nemeth, default, "⇙", "⠀⠫⠰⠪⠪⠒⠒⠀"
-nemeth, default, "⇚", "⠀⠫⠪⠪⠪⠒⠒⠀"
-nemeth, default, "⇛", "⠀⠫⠒⠒⠕⠕⠕⠀"
-nemeth, default, "⇜", "⠀⠫⠪⠢⠤⠔⠒⠢⠀"
-nemeth, default, "⇝", "⠀⠫⠢⠤⠔⠒⠢⠕⠀"
-nemeth, default, "⇞", "⠀⠳⠳⠈⠫⠣⠒⠒⠕⠻⠀"
-nemeth, default, "⇟", "⠀⠳⠳⠈⠫⠩⠒⠒⠕⠻⠀"
-nemeth, default, "⇠", "⠀⠫⠪⠒⠀⠒⠀"
-nemeth, default, "⇡", "⠀⠫⠣⠒⠀⠒⠕⠀"
-nemeth, default, "⇢", "⠀⠫⠒⠀⠒⠕⠀"
-nemeth, default, "⇣", "⠀⠫⠩⠒⠀⠒⠕⠀"
-nemeth, default, "⇤", "⠀⠫⠳⠪⠒⠒⠀"
-nemeth, default, "⇥", "⠀⠫⠒⠒⠕⠳⠀"
-nemeth, default, "⇦", "⠀⠫⠸⠪⠒⠒⠀"
-nemeth, default, "⇧", "⠀⠫⠣⠸⠒⠒⠕⠀"
-nemeth, default, "⇨", "⠀⠫⠸⠒⠒⠕⠀"
-nemeth, default, "⇩", "⠀⠫⠩⠸⠒⠒⠕⠀"
-nemeth, default, "⇪", "⠄⡳⠭⠆⠂⠑⠁⠄"
-nemeth, default, "⇫", "⠄⡳⠭⠆⠂⠑⠃⠄"
-nemeth, default, "⇬", "⠄⡳⠭⠆⠂⠑⠉⠄"
-nemeth, default, "⇭", "⠄⡳⠭⠆⠂⠑⠙⠄"
-nemeth, default, "⇮", "⠄⡳⠭⠆⠂⠑⠑⠄"
-nemeth, default, "⇯", "⠄⡳⠭⠆⠂⠑⠋⠄"
-nemeth, default, "⇰", "⠄⡳⠭⠆⠂⠋⠴⠄"
-nemeth, default, "⇱", "⠄⡳⠭⠆⠂⠋⠂⠄"
-nemeth, default, "⇲", "⠄⡳⠭⠆⠂⠋⠆⠄"
-nemeth, default, "⇳", "⠀⠫⠣⠸⠪⠒⠒⠕⠀"
-nemeth, default, "⇴", "⠀⠫⠒⠒⠕⠨⠡⠀"
-nemeth, default, "⇵", "⠀⠫⠩⠒⠒⠕⠐⠫⠣⠒⠒⠕⠀"
-nemeth, default, "⇶", "⠀⠫⠒⠒⠕⠫⠒⠒⠕⠫⠒⠒⠕⠀"
-nemeth, default, "⇷", "⠀⠳⠈⠫⠪⠒⠒⠻⠀"
-nemeth, default, "⇸", "⠀⠳⠈⠫⠒⠒⠕⠻⠀"
-nemeth, default, "⇹", "⠀⠳⠈⠫⠪⠒⠒⠕⠀"
-nemeth, default, "⇺", "⠀⠳⠳⠈⠫⠪⠒⠒⠻⠀"
-nemeth, default, "⇻", "⠀⠳⠳⠈⠫⠒⠒⠕⠻⠀"
-nemeth, default, "⇼", "⠀⠳⠳⠈⠫⠪⠒⠒⠕⠀"
-nemeth, default, "⇽", "⠀⠫⠳⠒⠒⠀"
-nemeth, default, "⇾", "⠀⠫⠒⠒⠳⠀"
-nemeth, default, "⇿", "⠀⠫⠳⠒⠒⠳⠀"
-nemeth, default, "⌁", "⠄⡳⠭⠆⠒⠴⠂⠄"
-nemeth, default, "⌃", "⠄⡳⠭⠆⠒⠴⠒⠄"
-nemeth, default, "⌄", "⠄⡳⠭⠆⠒⠴⠲⠄"
-nemeth, default, "⌤", "⠄⡳⠭⠆⠒⠆⠲⠄"
-nemeth, default, "⎋", "⠄⡳⠭⠆⠒⠦⠃⠄"
-nemeth, default, "➔", "⠄⡳⠭⠆⠶⠔⠲⠄"
-nemeth, default, "➘", "⠄⡳⠭⠆⠶⠔⠦⠄"
-nemeth, default, "➙", "⠄⡳⠭⠆⠶⠔⠔⠄"
-nemeth, default, "➚", "⠄⡳⠭⠆⠶⠔⠁⠄"
-nemeth, default, "➛", "⠄⡳⠭⠆⠶⠔⠃⠄"
-nemeth, default, "➜", "⠄⡳⠭⠆⠶⠔⠉⠄"
-nemeth, default, "➝", "⠄⡳⠭⠆⠶⠔⠙⠄"
-nemeth, default, "➞", "⠄⡳⠭⠆⠶⠔⠑⠄"
-nemeth, default, "➟", "⠄⡳⠭⠆⠶⠔⠋⠄"
-nemeth, default, "➠", "⠄⡳⠭⠆⠶⠁⠴⠄"
-nemeth, default, "➡", "⠄⡳⠭⠆⠶⠁⠂⠄"
-nemeth, default, "➢", "⠄⡳⠭⠆⠶⠁⠆⠄"
-nemeth, default, "➣", "⠄⡳⠭⠆⠶⠁⠒⠄"
-nemeth, default, "➤", "⠄⡳⠭⠆⠶⠁⠲⠄"
-nemeth, default, "➥", "⠄⡳⠭⠆⠶⠁⠢⠄"
-nemeth, default, "➦", "⠄⡳⠭⠆⠶⠁⠖⠄"
-nemeth, default, "➧", "⠄⡳⠭⠆⠶⠁⠶⠄"
-nemeth, default, "➨", "⠄⡳⠭⠆⠶⠁⠦⠄"
-nemeth, default, "➩", "⠄⡳⠭⠆⠶⠁⠔⠄"
-nemeth, default, "➪", "⠄⡳⠭⠆⠶⠁⠁⠄"
-nemeth, default, "➫", "⠄⡳⠭⠆⠶⠁⠃⠄"
-nemeth, default, "➬", "⠄⡳⠭⠆⠶⠁⠉⠄"
-nemeth, default, "➭", "⠄⡳⠭⠆⠶⠁⠙⠄"
-nemeth, default, "➮", "⠄⡳⠭⠆⠶⠁⠑⠄"
-nemeth, default, "➯", "⠄⡳⠭⠆⠶⠁⠋⠄"
-nemeth, default, "➱", "⠄⡳⠭⠆⠶⠃⠂⠄"
-nemeth, default, "➲", "⠄⡳⠭⠆⠶⠃⠆⠄"
-nemeth, default, "➳", "⠄⡳⠭⠆⠶⠃⠒⠄"
-nemeth, default, "➴", "⠄⡳⠭⠆⠶⠃⠲⠄"
-nemeth, default, "➵", "⠄⡳⠭⠆⠶⠃⠢⠄"
-nemeth, default, "➶", "⠄⡳⠭⠆⠶⠃⠖⠄"
-nemeth, default, "➷", "⠄⡳⠭⠆⠶⠃⠶⠄"
-nemeth, default, "➸", "⠄⡳⠭⠆⠶⠃⠦⠄"
-nemeth, default, "➹", "⠄⡳⠭⠆⠶⠃⠔⠄"
-nemeth, default, "➺", "⠄⡳⠭⠆⠶⠃⠁⠄"
-nemeth, default, "➻", "⠄⡳⠭⠆⠶⠃⠃⠄"
-nemeth, default, "➼", "⠄⡳⠭⠆⠶⠃⠉⠄"
-nemeth, default, "➽", "⠄⡳⠭⠆⠶⠃⠙⠄"
-nemeth, default, "➾", "⠄⡳⠭⠆⠶⠃⠑⠄"
-nemeth, default, "⟰", "⠄⡳⠭⠆⠶⠋⠴⠄"
-nemeth, default, "⟱", "⠄⡳⠭⠆⠶⠋⠂⠄"
-nemeth, default, "⟲", "⠄⡳⠭⠆⠶⠋⠆⠄"
-nemeth, default, "⟳", "⠄⡳⠭⠆⠶⠋⠒⠄"
-nemeth, default, "⟴", "⠄⡳⠭⠆⠶⠋⠲⠄"
-nemeth, default, "⟵", "⠄⡳⠭⠆⠶⠋⠢⠄"
-nemeth, default, "⟶", "⠄⡳⠭⠆⠶⠋⠖⠄"
-nemeth, default, "⟷", "⠄⡳⠭⠆⠶⠋⠶⠄"
-nemeth, default, "⟸", "⠄⡳⠭⠆⠶⠋⠦⠄"
-nemeth, default, "⟹", "⠄⡳⠭⠆⠶⠋⠔⠄"
-nemeth, default, "⟺", "⠄⡳⠭⠆⠶⠋⠁⠄"
-nemeth, default, "⟻", "⠄⡳⠭⠆⠶⠋⠃⠄"
-nemeth, default, "⟼", "⠄⡳⠭⠆⠶⠋⠉⠄"
-nemeth, default, "⟽", "⠄⡳⠭⠆⠶⠋⠙⠄"
-nemeth, default, "⟾", "⠄⡳⠭⠆⠶⠋⠑⠄"
-nemeth, default, "⟿", "⠄⡳⠭⠆⠶⠋⠋⠄"
-nemeth, default, "⤀", "⠄⡳⠭⠆⠔⠴⠴⠄"
-nemeth, default, "⤁", "⠄⡳⠭⠆⠔⠴⠂⠄"
-nemeth, default, "⤂", "⠄⡳⠭⠆⠔⠴⠆⠄"
-nemeth, default, "⤃", "⠄⡳⠭⠆⠔⠴⠒⠄"
-nemeth, default, "⤄", "⠄⡳⠭⠆⠔⠴⠲⠄"
-nemeth, default, "⤅", "⠄⡳⠭⠆⠔⠴⠢⠄"
-nemeth, default, "⤆", "⠄⡳⠭⠆⠔⠴⠖⠄"
-nemeth, default, "⤇", "⠄⡳⠭⠆⠔⠴⠶⠄"
-nemeth, default, "⤈", "⠄⡳⠭⠆⠔⠴⠦⠄"
-nemeth, default, "⤉", "⠄⡳⠭⠆⠔⠴⠔⠄"
-nemeth, default, "⤊", "⠄⡳⠭⠆⠔⠴⠁⠄"
-nemeth, default, "⤋", "⠄⡳⠭⠆⠔⠴⠃⠄"
-nemeth, default, "⤌", "⠄⡳⠭⠆⠔⠴⠉⠄"
-nemeth, default, "⤍", "⠄⡳⠭⠆⠔⠴⠙⠄"
-nemeth, default, "⤎", "⠄⡳⠭⠆⠔⠴⠑⠄"
-nemeth, default, "⤏", "⠄⡳⠭⠆⠔⠴⠋⠄"
-nemeth, default, "⤐", "⠄⡳⠭⠆⠔⠂⠴⠄"
-nemeth, default, "⤑", "⠄⡳⠭⠆⠔⠂⠂⠄"
-nemeth, default, "⤒", "⠄⡳⠭⠆⠔⠂⠆⠄"
-nemeth, default, "⤓", "⠄⡳⠭⠆⠔⠂⠒⠄"
-nemeth, default, "⤔", "⠄⡳⠭⠆⠔⠂⠲⠄"
-nemeth, default, "⤕", "⠄⡳⠭⠆⠔⠂⠢⠄"
-nemeth, default, "⤖", "⠄⡳⠭⠆⠔⠂⠖⠄"
-nemeth, default, "⤗", "⠄⡳⠭⠆⠔⠂⠶⠄"
-nemeth, default, "⤘", "⠄⡳⠭⠆⠔⠂⠦⠄"
-nemeth, default, "⤙", "⠄⡳⠭⠆⠔⠂⠔⠄"
-nemeth, default, "⤚", "⠄⡳⠭⠆⠔⠂⠁⠄"
-nemeth, default, "⤛", "⠄⡳⠭⠆⠔⠂⠃⠄"
-nemeth, default, "⤜", "⠄⡳⠭⠆⠔⠂⠉⠄"
-nemeth, default, "⤝", "⠄⡳⠭⠆⠔⠂⠙⠄"
-nemeth, default, "⤞", "⠄⡳⠭⠆⠔⠂⠑⠄"
-nemeth, default, "⤟", "⠄⡳⠭⠆⠔⠂⠋⠄"
-nemeth, default, "⤠", "⠄⡳⠭⠆⠔⠆⠴⠄"
-nemeth, default, "⤡", "⠄⡳⠭⠆⠔⠆⠂⠄"
-nemeth, default, "⤢", "⠄⡳⠭⠆⠔⠆⠆⠄"
-nemeth, default, "⤣", "⠄⡳⠭⠆⠔⠆⠒⠄"
-nemeth, default, "⤤", "⠄⡳⠭⠆⠔⠆⠲⠄"
-nemeth, default, "⤥", "⠄⡳⠭⠆⠔⠆⠢⠄"
-nemeth, default, "⤦", "⠄⡳⠭⠆⠔⠆⠖⠄"
-nemeth, default, "⤧", "⠄⡳⠭⠆⠔⠆⠶⠄"
-nemeth, default, "⤨", "⠄⡳⠭⠆⠔⠆⠦⠄"
-nemeth, default, "⤩", "⠄⡳⠭⠆⠔⠆⠔⠄"
-nemeth, default, "⤪", "⠄⡳⠭⠆⠔⠆⠁⠄"
-nemeth, default, "⤭", "⠄⡳⠭⠆⠔⠆⠙⠄"
-nemeth, default, "⤮", "⠄⡳⠭⠆⠔⠆⠑⠄"
-nemeth, default, "⤯", "⠄⡳⠭⠆⠔⠆⠋⠄"
-nemeth, default, "⤰", "⠄⡳⠭⠆⠔⠒⠴⠄"
-nemeth, default, "⤱", "⠄⡳⠭⠆⠔⠒⠂⠄"
-nemeth, default, "⤲", "⠄⡳⠭⠆⠔⠒⠆⠄"
-nemeth, default, "⤳", "⠄⡳⠭⠆⠔⠒⠒⠄"
-nemeth, default, "⤴", "⠄⡳⠭⠆⠔⠒⠲⠄"
-nemeth, default, "⤵", "⠄⡳⠭⠆⠔⠒⠢⠄"
-nemeth, default, "⤶", "⠄⡳⠭⠆⠔⠒⠖⠄"
-nemeth, default, "⤷", "⠄⡳⠭⠆⠔⠒⠶⠄"
-nemeth, default, "⤸", "⠄⡳⠭⠆⠔⠒⠦⠄"
-nemeth, default, "⤹", "⠄⡳⠭⠆⠔⠒⠔⠄"
-nemeth, default, "⤺", "⠄⡳⠭⠆⠔⠒⠁⠄"
-nemeth, default, "⤻", "⠄⡳⠭⠆⠔⠒⠃⠄"
-nemeth, default, "⤼", "⠄⡳⠭⠆⠔⠒⠉⠄"
-nemeth, default, "⤽", "⠄⡳⠭⠆⠔⠒⠙⠄"
-nemeth, default, "⤾", "⠄⡳⠭⠆⠔⠒⠑⠄"
-nemeth, default, "⤿", "⠄⡳⠭⠆⠔⠒⠋⠄"
-nemeth, default, "⥀", "⠄⡳⠭⠆⠔⠲⠴⠄"
-nemeth, default, "⥁", "⠄⡳⠭⠆⠔⠲⠂⠄"
-nemeth, default, "⥂", "⠄⡳⠭⠆⠔⠲⠆⠄"
-nemeth, default, "⥃", "⠄⡳⠭⠆⠔⠲⠒⠄"
-nemeth, default, "⥄", "⠄⡳⠭⠆⠔⠲⠲⠄"
-nemeth, default, "⥅", "⠄⡳⠭⠆⠔⠲⠢⠄"
-nemeth, default, "⥆", "⠄⡳⠭⠆⠔⠲⠖⠄"
-nemeth, default, "⥇", "⠄⡳⠭⠆⠔⠲⠶⠄"
-nemeth, default, "⥈", "⠄⡳⠭⠆⠔⠲⠦⠄"
-nemeth, default, "⥉", "⠄⡳⠭⠆⠔⠲⠔⠄"
-nemeth, default, "⥰", "⠄⡳⠭⠆⠔⠶⠴⠄"
-nemeth, default, "⥱", "⠄⡳⠭⠆⠔⠶⠂⠄"
-nemeth, default, "⥲", "⠄⡳⠭⠆⠔⠶⠆⠄"
-nemeth, default, "⥳", "⠄⡳⠭⠆⠔⠶⠒⠄"
-nemeth, default, "⥴", "⠄⡳⠭⠆⠔⠶⠲⠄"
-nemeth, default, "⥵", "⠄⡳⠭⠆⠔⠶⠢⠄"
-nemeth, default, "⥶", "⠄⡳⠭⠆⠔⠶⠖⠄"
-nemeth, default, "⥷", "⠄⡳⠭⠆⠔⠶⠶⠄"
-nemeth, default, "⥸", "⠄⡳⠭⠆⠔⠶⠦⠄"
-nemeth, default, "⥹", "⠄⡳⠭⠆⠔⠶⠔⠄"
-nemeth, default, "⥺", "⠄⡳⠭⠆⠔⠶⠁⠄"
-nemeth, default, "⥻", "⠄⡳⠭⠆⠔⠶⠃⠄"
-nemeth, default, "⦳", "⠄⡳⠭⠆⠔⠃⠒⠄"
-nemeth, default, "⦴", "⠄⡳⠭⠆⠔⠃⠲⠄"
-nemeth, default, "⦽", "⠄⡳⠭⠆⠔⠃⠙⠄"
-nemeth, default, "⧪", "⠄⡳⠭⠆⠔⠑⠁⠄"
-nemeth, default, "⧬", "⠄⡳⠭⠆⠔⠑⠉⠄"
-nemeth, default, "⧭", "⠄⡳⠭⠆⠔⠑⠙⠄"
-nemeth, default, "⨗", "⠄⡳⠭⠆⠁⠂⠶⠄"
-nemeth, default, "⬀", "⠄⡳⠭⠆⠃⠴⠴⠄"
-nemeth, default, "⬁", "⠄⡳⠭⠆⠃⠴⠂⠄"
-nemeth, default, "⬂", "⠄⡳⠭⠆⠃⠴⠆⠄"
-nemeth, default, "⬃", "⠄⡳⠭⠆⠃⠴⠒⠄"
-nemeth, default, "⬄", "⠄⡳⠭⠆⠃⠴⠲⠄"
-nemeth, default, "⬅", "⠄⡳⠭⠆⠃⠴⠢⠄"
-nemeth, default, "⬆", "⠄⡳⠭⠆⠃⠴⠖⠄"
-nemeth, default, "⬇", "⠄⡳⠭⠆⠃⠴⠶⠄"
-nemeth, default, "⬈", "⠄⡳⠭⠆⠃⠴⠦⠄"
-nemeth, default, "⬉", "⠄⡳⠭⠆⠃⠴⠔⠄"
-nemeth, default, "⬊", "⠄⡳⠭⠆⠃⠴⠁⠄"
-nemeth, default, "⬋", "⠄⡳⠭⠆⠃⠴⠃⠄"
-nemeth, default, "⬌", "⠄⡳⠭⠆⠃⠴⠉⠄"
-nemeth, default, "⬍", "⠄⡳⠭⠆⠃⠴⠙⠄"
-nemeth, default, "⬎", "⠄⡳⠭⠆⠃⠴⠑⠄"
-nemeth, default, "⬏", "⠄⡳⠭⠆⠃⠴⠋⠄"
-nemeth, default, "⬐", "⠄⡳⠭⠆⠃⠂⠴⠄"
-nemeth, default, "⬑", "⠄⡳⠭⠆⠃⠂⠂⠄"
-nemeth, default, "⬰", "⠄⡳⠭⠆⠃⠒⠴⠄"
-nemeth, default, "⬱", "⠄⡳⠭⠆⠃⠒⠂⠄"
-nemeth, default, "⬲", "⠄⡳⠭⠆⠃⠒⠆⠄"
-nemeth, default, "⬳", "⠄⡳⠭⠆⠃⠒⠒⠄"
-nemeth, default, "⬴", "⠄⡳⠭⠆⠃⠒⠲⠄"
-nemeth, default, "⬵", "⠄⡳⠭⠆⠃⠒⠢⠄"
-nemeth, default, "⬶", "⠄⡳⠭⠆⠃⠒⠖⠄"
-nemeth, default, "⬷", "⠄⡳⠭⠆⠃⠒⠶⠄"
-nemeth, default, "⬸", "⠄⡳⠭⠆⠃⠒⠦⠄"
-nemeth, default, "⬹", "⠄⡳⠭⠆⠃⠒⠔⠄"
-nemeth, default, "⬺", "⠄⡳⠭⠆⠃⠒⠁⠄"
-nemeth, default, "⬻", "⠄⡳⠭⠆⠃⠒⠃⠄"
-nemeth, default, "⬼", "⠄⡳⠭⠆⠃⠒⠉⠄"
-nemeth, default, "⬽", "⠄⡳⠭⠆⠃⠒⠙⠄"
-nemeth, default, "⬾", "⠄⡳⠭⠆⠃⠒⠑⠄"
-nemeth, default, "⬿", "⠄⡳⠭⠆⠃⠒⠋⠄"
-nemeth, default, "⭀", "⠄⡳⠭⠆⠃⠲⠴⠄"
-nemeth, default, "⭁", "⠄⡳⠭⠆⠃⠲⠂⠄"
-nemeth, default, "⭂", "⠄⡳⠭⠆⠃⠲⠆⠄"
-nemeth, default, "⭃", "⠄⡳⠭⠆⠃⠲⠒⠄"
-nemeth, default, "⭄", "⠄⡳⠭⠆⠃⠲⠲⠄"
-nemeth, default, "⭅", "⠄⡳⠭⠆⠃⠲⠢⠄"
-nemeth, default, "⭆", "⠄⡳⠭⠆⠃⠲⠖⠄"
-nemeth, default, "⭇", "⠄⡳⠭⠆⠃⠲⠶⠄"
-nemeth, default, "⭈", "⠄⡳⠭⠆⠃⠲⠦⠄"
-nemeth, default, "⭉", "⠄⡳⠭⠆⠃⠲⠔⠄"
-nemeth, default, "⭊", "⠄⡳⠭⠆⠃⠲⠁⠄"
-nemeth, default, "⭋", "⠄⡳⠭⠆⠃⠲⠃⠄"
-nemeth, default, "⭌", "⠄⡳⠭⠆⠃⠲⠉⠄"
-nemeth, default, "￩", "⠄⡳⠭⠋⠋⠑⠔⠄"
-nemeth, default, "￪", "⠄⡳⠭⠋⠋⠑⠁⠄"
-nemeth, default, "￫", "⠄⡳⠭⠋⠋⠑⠃⠄"
-nemeth, default, "￬", "⠄⡳⠭⠋⠋⠑⠉⠄"
-nemeth, default, "ℓ", "⠈⠇"
-nemeth, default, "℘", "⠄⡳⠭⠆⠂⠂⠦⠄"
-nemeth, default, "ℼ", "⠄⡳⠭⠆⠂⠒⠉⠄"
-nemeth, default, "ℽ", "⠄⡳⠭⠆⠂⠒⠙⠄"
-nemeth, default, "ℾ", "⠄⡳⠭⠆⠂⠒⠑⠄"
-nemeth, default, "ℿ", "⠄⡳⠭⠆⠂⠒⠋⠄"
-nemeth, default, "⅀", "⠄⡳⠭⠆⠂⠲⠴⠄"
-nemeth, default, "ⅅ", "⠄⡳⠭⠆⠂⠲⠢⠄"
-nemeth, default, "ⅆ", "⠙"
-nemeth, default, "ⅇ", "⠑"
-nemeth, default, "ⅈ", "⠄⡳⠭⠆⠂⠲⠦⠄"
-nemeth, default, "ⅉ", "⠄⡳⠭⠆⠂⠲⠔⠄"
-nemeth, default, "𝚤", "⠄⡳⠽⠂⠙⠖⠁⠲⠄"
-nemeth, default, "𝚥", "⠄⡳⠽⠂⠙⠖⠁⠢⠄"
-nemeth, default, "(", "⠷"
-nemeth, default, ")", "⠾"
-nemeth, default, "[", "⠈⠷"
-nemeth, default, "]", "⠈⠾"
-nemeth, default, "{", "⠨⠷"
-nemeth, default, "}", "⠨⠾"
-nemeth, default, "⁅", "⠄⡳⠭⠆⠴⠲⠢⠄"
-nemeth, default, "⁆", "⠄⡳⠭⠆⠴⠲⠖⠄"
-nemeth, default, "⌈", "⠈⠘⠷"
-nemeth, default, "⌉", "⠈⠘⠾"
-nemeth, default, "⌊", "⠈⠰⠷"
-nemeth, default, "⌋", "⠈⠰⠾"
-nemeth, default, "⌌", "⠄⡳⠭⠆⠒⠴⠉⠄"
-nemeth, default, "⌍", "⠄⡳⠭⠆⠒⠴⠙⠄"
-nemeth, default, "⌎", "⠄⡳⠭⠆⠒⠴⠑⠄"
-nemeth, default, "⌏", "⠄⡳⠭⠆⠒⠴⠋⠄"
-nemeth, default, "⌜", "⠈⠘⠷"
-nemeth, default, "⌝", "⠈⠘⠾"
-nemeth, default, "⌞", "⠈⠰⠷"
-nemeth, default, "⌟", "⠈⠰⠾"
-nemeth, default, "⌠", "⠄⡳⠭⠆⠒⠆⠴⠄"
-nemeth, default, "⌡", "⠄⡳⠭⠆⠒⠆⠂⠄"
-nemeth, default, "〈", "⠨⠨⠷"
-nemeth, default, "〉", "⠨⠨⠾"
-nemeth, default, "⎛", "⠄⡳⠭⠆⠒⠔⠃⠄"
-nemeth, default, "⎜", "⠄⡳⠭⠆⠒⠔⠉⠄"
-nemeth, default, "⎝", "⠄⡳⠭⠆⠒⠔⠙⠄"
-nemeth, default, "⎞", "⠄⡳⠭⠆⠒⠔⠑⠄"
-nemeth, default, "⎟", "⠄⡳⠭⠆⠒⠔⠋⠄"
-nemeth, default, "⎠", "⠄⡳⠭⠆⠒⠁⠴⠄"
-nemeth, default, "⎡", "⠄⡳⠭⠆⠒⠁⠂⠄"
-nemeth, default, "⎢", "⠄⡳⠭⠆⠒⠁⠆⠄"
-nemeth, default, "⎣", "⠄⡳⠭⠆⠒⠁⠒⠄"
-nemeth, default, "⎤", "⠄⡳⠭⠆⠒⠁⠲⠄"
-nemeth, default, "⎥", "⠄⡳⠭⠆⠒⠁⠢⠄"
-nemeth, default, "⎦", "⠄⡳⠭⠆⠒⠁⠖⠄"
-nemeth, default, "⎧", "⠄⡳⠭⠆⠒⠁⠶⠄"
-nemeth, default, "⎨", "⠄⡳⠭⠆⠒⠁⠦⠄"
-nemeth, default, "⎩", "⠄⡳⠭⠆⠒⠁⠔⠄"
-nemeth, default, "⎪", "⠄⡳⠭⠆⠒⠁⠁⠄"
-nemeth, default, "⎫", "⠄⡳⠭⠆⠒⠁⠃⠄"
-nemeth, default, "⎬", "⠄⡳⠭⠆⠒⠁⠉⠄"
-nemeth, default, "⎭", "⠄⡳⠭⠆⠒⠁⠙⠄"
-nemeth, default, "⎮", "⠄⡳⠭⠆⠒⠁⠑⠄"
-nemeth, default, "⎯", "⠄⡳⠭⠆⠒⠁⠋⠄"
-nemeth, default, "⎰", "⠄⡳⠭⠆⠒⠃⠴⠄"
-nemeth, default, "⎱", "⠄⡳⠭⠆⠒⠃⠂⠄"
-nemeth, default, "⎲", "⠄⡳⠭⠆⠒⠃⠆⠄"
-nemeth, default, "⎳", "⠄⡳⠭⠆⠒⠃⠒⠄"
-nemeth, default, "⎴", "⠄⡳⠭⠆⠒⠃⠲⠄"
-nemeth, default, "⎵", "⠄⡳⠭⠆⠒⠃⠢⠄"
-nemeth, default, "⎶", "⠄⡳⠭⠆⠒⠃⠖⠄"
-nemeth, default, "⎷", "⠄⡳⠭⠆⠒⠃⠶⠄"
-nemeth, default, "⎸", "⠄⡳⠭⠆⠒⠃⠦⠄"
-nemeth, default, "⎹", "⠄⡳⠭⠆⠒⠃⠔⠄"
-nemeth, default, "⏜", "⠄⡳⠭⠆⠒⠙⠉⠄"
-nemeth, default, "⏝", "⠄⡳⠭⠆⠒⠙⠙⠄"
-nemeth, default, "⏞", "⠄⡳⠭⠆⠒⠙⠑⠄"
-nemeth, default, "⏟", "⠄⡳⠭⠆⠒⠙⠋⠄"
-nemeth, default, "⏠", "⠄⡳⠭⠆⠒⠑⠴⠄"
-nemeth, default, "⏡", "⠄⡳⠭⠆⠒⠑⠂⠄"
-nemeth, default, "❨", "⠄⡳⠭⠆⠶⠖⠦⠄"
-nemeth, default, "❩", "⠄⡳⠭⠆⠶⠖⠔⠄"
-nemeth, default, "❪", "⠄⡳⠭⠆⠶⠖⠁⠄"
-nemeth, default, "❫", "⠄⡳⠭⠆⠶⠖⠃⠄"
-nemeth, default, "❬", "⠄⡳⠭⠆⠶⠖⠉⠄"
-nemeth, default, "❭", "⠄⡳⠭⠆⠶⠖⠙⠄"
-nemeth, default, "❮", "⠄⡳⠭⠆⠶⠖⠑⠄"
-nemeth, default, "❯", "⠄⡳⠭⠆⠶⠖⠋⠄"
-nemeth, default, "❰", "⠄⡳⠭⠆⠶⠶⠴⠄"
-nemeth, default, "❱", "⠄⡳⠭⠆⠶⠶⠂⠄"
-nemeth, default, "❲", "⠄⡳⠭⠆⠶⠶⠆⠄"
-nemeth, default, "❳", "⠄⡳⠭⠆⠶⠶⠒⠄"
-nemeth, default, "❴", "⠄⡳⠭⠆⠶⠶⠲⠄"
-nemeth, default, "❵", "⠄⡳⠭⠆⠶⠶⠢⠄"
-nemeth, default, "⟅", "⠄⡳⠭⠆⠶⠉⠢⠄"
-nemeth, default, "⟆", "⠄⡳⠭⠆⠶⠉⠖⠄"
-nemeth, default, "⟦", "⠈⠸⠷"
-nemeth, default, "⟧", "⠈⠸⠾"
-nemeth, default, "⟨", "⠨⠨⠷"
-nemeth, default, "⟩", "⠨⠨⠾"
-nemeth, default, "⟪", "⠨⠨⠨⠷"
-nemeth, default, "⟫", "⠨⠨⠨⠾"
-nemeth, default, "⟬", "⠄⡳⠭⠆⠶⠑⠉⠄"
-nemeth, default, "⟭", "⠄⡳⠭⠆⠶⠑⠙⠄"
-nemeth, default, "⟮", "⠄⡳⠭⠆⠶⠑⠑⠄"
-nemeth, default, "⟯", "⠄⡳⠭⠆⠶⠑⠋⠄"
-nemeth, default, "⦃", "⠨⠸⠷"
-nemeth, default, "⦄", "⠨⠸⠾"
-nemeth, default, "⦅", "⠄⡳⠭⠆⠔⠦⠢⠄"
-nemeth, default, "⦆", "⠄⡳⠭⠆⠔⠦⠖⠄"
-nemeth, default, "⦇", "⠄⡳⠭⠆⠔⠦⠶⠄"
-nemeth, default, "⦈", "⠄⡳⠭⠆⠔⠦⠦⠄"
-nemeth, default, "⦉", "⠄⡳⠭⠆⠔⠦⠔⠄"
-nemeth, default, "⦊", "⠄⡳⠭⠆⠔⠦⠁⠄"
-nemeth, default, "⦋", "⠄⡳⠭⠆⠔⠦⠃⠄"
-nemeth, default, "⦌", "⠄⡳⠭⠆⠔⠦⠉⠄"
-nemeth, default, "⦍", "⠄⡳⠭⠆⠔⠦⠙⠄"
-nemeth, default, "⦎", "⠄⡳⠭⠆⠔⠦⠑⠄"
-nemeth, default, "⦏", "⠄⡳⠭⠆⠔⠦⠋⠄"
-nemeth, default, "⦐", "⠄⡳⠭⠆⠔⠔⠴⠄"
-nemeth, default, "⦑", "⠄⡳⠭⠆⠔⠔⠂⠄"
-nemeth, default, "⦒", "⠄⡳⠭⠆⠔⠔⠆⠄"
-nemeth, default, "⦓", "⠄⡳⠭⠆⠔⠔⠒⠄"
-nemeth, default, "⦔", "⠄⡳⠭⠆⠔⠔⠲⠄"
-nemeth, default, "⦕", "⠄⡳⠭⠆⠔⠔⠢⠄"
-nemeth, default, "⦖", "⠄⡳⠭⠆⠔⠔⠖⠄"
-nemeth, default, "⦗", "⠄⡳⠭⠆⠔⠔⠶⠄"
-nemeth, default, "⦘", "⠄⡳⠭⠆⠔⠔⠦⠄"
-nemeth, default, "⧘", "⠄⡳⠭⠆⠔⠙⠦⠄"
-nemeth, default, "⧙", "⠄⡳⠭⠆⠔⠙⠔⠄"
-nemeth, default, "⧚", "⠄⡳⠭⠆⠔⠙⠁⠄"
-nemeth, default, "⧛", "⠄⡳⠭⠆⠔⠙⠃⠄"
-nemeth, default, "⧼", "⠄⡳⠭⠆⠔⠋⠉⠄"
-nemeth, default, "⧽", "⠄⡳⠭⠆⠔⠋⠙⠄"
-nemeth, default, "⸢", "⠄⡳⠭⠆⠑⠆⠆⠄"
-nemeth, default, "⸣", "⠄⡳⠭⠆⠑⠆⠒⠄"
-nemeth, default, "⸤", "⠄⡳⠭⠆⠑⠆⠲⠄"
-nemeth, default, "⸥", "⠄⡳⠭⠆⠑⠆⠢⠄"
-nemeth, default, "⸦", "⠄⡳⠭⠆⠑⠆⠖⠄"
-nemeth, default, "⸧", "⠄⡳⠭⠆⠑⠆⠶⠄"
-nemeth, default, "⸨", "⠄⡳⠭⠆⠑⠆⠦⠄"
-nemeth, default, "⸩", "⠄⡳⠭⠆⠑⠆⠔⠄"
-nemeth, default, "〈", "⠨⠨⠷"
-nemeth, default, "〉", "⠨⠨⠾"
-nemeth, default, "《", "⠨⠨⠨⠷"
-nemeth, default, "》", "⠨⠨⠨⠾"
-nemeth, default, "「", "⠈⠘⠷"
-nemeth, default, "」", "⠈⠘⠾"
-nemeth, default, "『", "⠄⡳⠭⠒⠴⠴⠑⠄"
-nemeth, default, "』", "⠄⡳⠭⠒⠴⠴⠋⠄"
-nemeth, default, "【", "⠄⡳⠭⠒⠴⠂⠴⠄"
-nemeth, default, "】", "⠄⡳⠭⠒⠴⠂⠂⠄"
-nemeth, default, "〔", "⠄⡳⠭⠒⠴⠂⠲⠄"
-nemeth, default, "〕", "⠄⡳⠭⠒⠴⠂⠢⠄"
-nemeth, default, "〖", "⠄⡳⠭⠒⠴⠂⠖⠄"
-nemeth, default, "〗", "⠄⡳⠭⠒⠴⠂⠶⠄"
-nemeth, default, "〘", "⠄⡳⠭⠒⠴⠂⠦⠄"
-nemeth, default, "〙", "⠄⡳⠭⠒⠴⠂⠔⠄"
-nemeth, default, "〚", "⠄⡳⠭⠒⠴⠂⠁⠄"
-nemeth, default, "〛", "⠄⡳⠭⠒⠴⠂⠃⠄"
-nemeth, default, "〝", "⠄⡳⠭⠒⠴⠂⠙⠄"
-nemeth, default, "〞", "⠄⡳⠭⠒⠴⠂⠑⠄"
-nemeth, default, "〟", "⠄⡳⠭⠒⠴⠂⠋⠄"
-nemeth, default, "﴾", "⠄⡳⠭⠋⠙⠒⠑⠄"
-nemeth, default, "﴿", "⠄⡳⠭⠋⠙⠒⠋⠄"
-nemeth, default, "︗", "⠄⡳⠭⠋⠑⠂⠶⠄"
-nemeth, default, "︘", "⠄⡳⠭⠋⠑⠂⠦⠄"
-nemeth, default, "︵", "⠄⡳⠭⠋⠑⠒⠢⠄"
-nemeth, default, "︶", "⠄⡳⠭⠋⠑⠒⠖⠄"
-nemeth, default, "︷", "⠄⡳⠭⠋⠑⠒⠶⠄"
-nemeth, default, "︸", "⠄⡳⠭⠋⠑⠒⠦⠄"
-nemeth, default, "︹", "⠄⡳⠭⠋⠑⠒⠔⠄"
-nemeth, default, "︺", "⠄⡳⠭⠋⠑⠒⠁⠄"
-nemeth, default, "︻", "⠄⡳⠭⠋⠑⠒⠃⠄"
-nemeth, default, "︼", "⠄⡳⠭⠋⠑⠒⠉⠄"
-nemeth, default, "︽", "⠄⡳⠭⠋⠑⠒⠙⠄"
-nemeth, default, "︾", "⠄⡳⠭⠋⠑⠒⠑⠄"
-nemeth, default, "︿", "⠄⡳⠭⠋⠑⠒⠋⠄"
-nemeth, default, "﹀", "⠄⡳⠭⠋⠑⠲⠴⠄"
-nemeth, default, "﹁", "⠄⡳⠭⠋⠑⠲⠂⠄"
-nemeth, default, "﹂", "⠄⡳⠭⠋⠑⠲⠆⠄"
-nemeth, default, "﹃", "⠄⡳⠭⠋⠑⠲⠒⠄"
-nemeth, default, "﹄", "⠄⡳⠭⠋⠑⠲⠲⠄"
-nemeth, default, "﹇", "⠄⡳⠭⠋⠑⠲⠶⠄"
-nemeth, default, "﹈", "⠄⡳⠭⠋⠑⠲⠦⠄"
-nemeth, default, "﹙", "⠄⡳⠭⠋⠑⠢⠔⠄"
-nemeth, default, "﹚", "⠄⡳⠭⠋⠑⠢⠁⠄"
-nemeth, default, "﹛", "⠄⡳⠭⠋⠑⠢⠃⠄"
-nemeth, default, "﹜", "⠄⡳⠭⠋⠑⠢⠉⠄"
-nemeth, default, "﹝", "⠄⡳⠭⠋⠑⠢⠙⠄"
-nemeth, default, "﹞", "⠄⡳⠭⠋⠑⠢⠑⠄"
-nemeth, default, "（", "⠄⡳⠭⠋⠋⠴⠦⠄"
-nemeth, default, "）", "⠄⡳⠭⠋⠋⠴⠔⠄"
-nemeth, default, "［", "⠄⡳⠭⠋⠋⠒⠃⠄"
-nemeth, default, "］", "⠄⡳⠭⠋⠋⠒⠙⠄"
-nemeth, default, "｛", "⠄⡳⠭⠋⠋⠢⠃⠄"
-nemeth, default, "｝", "⠄⡳⠭⠋⠋⠢⠙⠄"
-nemeth, default, "｟", "⠄⡳⠭⠋⠋⠢⠋⠄"
-nemeth, default, "｠", "⠄⡳⠭⠋⠋⠖⠴⠄"
-nemeth, default, "｢", "⠄⡳⠭⠋⠋⠖⠆⠄"
-nemeth, default, "｣", "⠄⡳⠭⠋⠋⠖⠒⠄"
-nemeth, default, "²", "⠄⡳⠭⠴⠴⠃⠆⠄"
-nemeth, default, "³", "⠄⡳⠭⠴⠴⠃⠒⠄"
-nemeth, default, "¹", "⠄⡳⠭⠴⠴⠃⠔⠄"
-nemeth, default, "¼", "⠹⠂⠌⠲⠼"
-nemeth, default, "½", "⠹⠂⠌⠆⠼"
-nemeth, default, "¾", "⠹⠒⠌⠆⠼"
-nemeth, default, "⁰", "⠄⡳⠭⠆⠴⠶⠴⠄"
-nemeth, default, "⁴", "⠄⡳⠭⠆⠴⠶⠲⠄"
-nemeth, default, "⁵", "⠄⡳⠭⠆⠴⠶⠢⠄"
-nemeth, default, "⁶", "⠄⡳⠭⠆⠴⠶⠖⠄"
-nemeth, default, "⁷", "⠄⡳⠭⠆⠴⠶⠶⠄"
-nemeth, default, "⁸", "⠄⡳⠭⠆⠴⠶⠦⠄"
-nemeth, default, "⁹", "⠄⡳⠭⠆⠴⠶⠔⠄"
-nemeth, default, "₀", "⠄⡳⠭⠆⠴⠦⠴⠄"
-nemeth, default, "₁", "⠄⡳⠭⠆⠴⠦⠂⠄"
-nemeth, default, "₂", "⠄⡳⠭⠆⠴⠦⠆⠄"
-nemeth, default, "₃", "⠄⡳⠭⠆⠴⠦⠒⠄"
-nemeth, default, "₄", "⠄⡳⠭⠆⠴⠦⠲⠄"
-nemeth, default, "₅", "⠄⡳⠭⠆⠴⠦⠢⠄"
-nemeth, default, "₆", "⠄⡳⠭⠆⠴⠦⠖⠄"
-nemeth, default, "₇", "⠄⡳⠭⠆⠴⠦⠶⠄"
-nemeth, default, "₈", "⠄⡳⠭⠆⠴⠦⠦⠄"
-nemeth, default, "₉", "⠄⡳⠭⠆⠴⠦⠔⠄"
-nemeth, default, "⅐", "⠄⡳⠭⠆⠂⠢⠴⠄"
-nemeth, default, "⅑", "⠄⡳⠭⠆⠂⠢⠂⠄"
-nemeth, default, "⅒", "⠄⡳⠭⠆⠂⠢⠆⠄"
-nemeth, default, "⅓", "⠄⡳⠭⠆⠂⠢⠒⠄"
-nemeth, default, "⅔", "⠄⡳⠭⠆⠂⠢⠲⠄"
-nemeth, default, "⅕", "⠄⡳⠭⠆⠂⠢⠢⠄"
-nemeth, default, "⅖", "⠄⡳⠭⠆⠂⠢⠖⠄"
-nemeth, default, "⅗", "⠄⡳⠭⠆⠂⠢⠶⠄"
-nemeth, default, "⅘", "⠄⡳⠭⠆⠂⠢⠦⠄"
-nemeth, default, "⅙", "⠄⡳⠭⠆⠂⠢⠔⠄"
-nemeth, default, "⅚", "⠄⡳⠭⠆⠂⠢⠁⠄"
-nemeth, default, "⅛", "⠄⡳⠭⠆⠂⠢⠃⠄"
-nemeth, default, "⅜", "⠄⡳⠭⠆⠂⠢⠉⠄"
-nemeth, default, "⅝", "⠄⡳⠭⠆⠂⠢⠙⠄"
-nemeth, default, "⅞", "⠄⡳⠭⠆⠂⠢⠑⠄"
-nemeth, default, "⅟", "⠄⡳⠭⠆⠂⠢⠋⠄"
-nemeth, default, "↉", "⠄⡳⠭⠆⠂⠦⠔⠄"
-nemeth, default, "①", "⠄⡳⠭⠆⠲⠖⠴⠄"
-nemeth, default, "②", "⠄⡳⠭⠆⠲⠖⠂⠄"
-nemeth, default, "③", "⠄⡳⠭⠆⠲⠖⠆⠄"
-nemeth, default, "④", "⠄⡳⠭⠆⠲⠖⠒⠄"
-nemeth, default, "⑤", "⠄⡳⠭⠆⠲⠖⠲⠄"
-nemeth, default, "⑥", "⠄⡳⠭⠆⠲⠖⠢⠄"
-nemeth, default, "⑦", "⠄⡳⠭⠆⠲⠖⠖⠄"
-nemeth, default, "⑧", "⠄⡳⠭⠆⠲⠖⠶⠄"
-nemeth, default, "⑨", "⠄⡳⠭⠆⠲⠖⠦⠄"
-nemeth, default, "⑩", "⠄⡳⠭⠆⠲⠖⠔⠄"
-nemeth, default, "⑪", "⠄⡳⠭⠆⠲⠖⠁⠄"
-nemeth, default, "⑫", "⠄⡳⠭⠆⠲⠖⠃⠄"
-nemeth, default, "⑬", "⠄⡳⠭⠆⠲⠖⠉⠄"
-nemeth, default, "⑭", "⠄⡳⠭⠆⠲⠖⠙⠄"
-nemeth, default, "⑮", "⠄⡳⠭⠆⠲⠖⠑⠄"
-nemeth, default, "⑯", "⠄⡳⠭⠆⠲⠖⠋⠄"
-nemeth, default, "⑰", "⠄⡳⠭⠆⠲⠶⠴⠄"
-nemeth, default, "⑱", "⠄⡳⠭⠆⠲⠶⠂⠄"
-nemeth, default, "⑲", "⠄⡳⠭⠆⠲⠶⠆⠄"
-nemeth, default, "⑳", "⠄⡳⠭⠆⠲⠶⠒⠄"
-nemeth, default, "⑴", "⠄⡳⠭⠆⠲⠶⠲⠄"
-nemeth, default, "⑵", "⠄⡳⠭⠆⠲⠶⠢⠄"
-nemeth, default, "⑶", "⠄⡳⠭⠆⠲⠶⠖⠄"
-nemeth, default, "⑷", "⠄⡳⠭⠆⠲⠶⠶⠄"
-nemeth, default, "⑸", "⠄⡳⠭⠆⠲⠶⠦⠄"
-nemeth, default, "⑹", "⠄⡳⠭⠆⠲⠶⠔⠄"
-nemeth, default, "⑺", "⠄⡳⠭⠆⠲⠶⠁⠄"
-nemeth, default, "⑻", "⠄⡳⠭⠆⠲⠶⠃⠄"
-nemeth, default, "⑼", "⠄⡳⠭⠆⠲⠶⠉⠄"
-nemeth, default, "⑽", "⠄⡳⠭⠆⠲⠶⠙⠄"
-nemeth, default, "⑾", "⠄⡳⠭⠆⠲⠶⠑⠄"
-nemeth, default, "⑿", "⠄⡳⠭⠆⠲⠶⠋⠄"
-nemeth, default, "⒀", "⠄⡳⠭⠆⠲⠦⠴⠄"
-nemeth, default, "⒁", "⠄⡳⠭⠆⠲⠦⠂⠄"
-nemeth, default, "⒂", "⠄⡳⠭⠆⠲⠦⠆⠄"
-nemeth, default, "⒃", "⠄⡳⠭⠆⠲⠦⠒⠄"
-nemeth, default, "⒄", "⠄⡳⠭⠆⠲⠦⠲⠄"
-nemeth, default, "⒅", "⠄⡳⠭⠆⠲⠦⠢⠄"
-nemeth, default, "⒆", "⠄⡳⠭⠆⠲⠦⠖⠄"
-nemeth, default, "⒇", "⠄⡳⠭⠆⠲⠦⠶⠄"
-nemeth, default, "⒈", "⠄⡳⠭⠆⠲⠦⠦⠄"
-nemeth, default, "⒉", "⠄⡳⠭⠆⠲⠦⠔⠄"
-nemeth, default, "⒊", "⠄⡳⠭⠆⠲⠦⠁⠄"
-nemeth, default, "⒋", "⠄⡳⠭⠆⠲⠦⠃⠄"
-nemeth, default, "⒌", "⠄⡳⠭⠆⠲⠦⠉⠄"
-nemeth, default, "⒍", "⠄⡳⠭⠆⠲⠦⠙⠄"
-nemeth, default, "⒎", "⠄⡳⠭⠆⠲⠦⠑⠄"
-nemeth, default, "⒏", "⠄⡳⠭⠆⠲⠦⠋⠄"
-nemeth, default, "⒐", "⠄⡳⠭⠆⠲⠔⠴⠄"
-nemeth, default, "⒑", "⠄⡳⠭⠆⠲⠔⠂⠄"
-nemeth, default, "⒒", "⠄⡳⠭⠆⠲⠔⠆⠄"
-nemeth, default, "⒓", "⠄⡳⠭⠆⠲⠔⠒⠄"
-nemeth, default, "⒔", "⠄⡳⠭⠆⠲⠔⠲⠄"
-nemeth, default, "⒕", "⠄⡳⠭⠆⠲⠔⠢⠄"
-nemeth, default, "⒖", "⠄⡳⠭⠆⠲⠔⠖⠄"
-nemeth, default, "⒗", "⠄⡳⠭⠆⠲⠔⠶⠄"
-nemeth, default, "⒘", "⠄⡳⠭⠆⠲⠔⠦⠄"
-nemeth, default, "⒙", "⠄⡳⠭⠆⠲⠔⠔⠄"
-nemeth, default, "⒚", "⠄⡳⠭⠆⠲⠔⠁⠄"
-nemeth, default, "⒛", "⠄⡳⠭⠆⠲⠔⠃⠄"
-nemeth, default, "⓪", "⠄⡳⠭⠆⠲⠑⠁⠄"
-nemeth, default, "⓫", "⠄⡳⠭⠆⠲⠑⠃⠄"
-nemeth, default, "⓬", "⠄⡳⠭⠆⠲⠑⠉⠄"
-nemeth, default, "⓭", "⠄⡳⠭⠆⠲⠑⠙⠄"
-nemeth, default, "⓮", "⠄⡳⠭⠆⠲⠑⠑⠄"
-nemeth, default, "⓯", "⠄⡳⠭⠆⠲⠑⠋⠄"
-nemeth, default, "⓰", "⠄⡳⠭⠆⠲⠋⠴⠄"
-nemeth, default, "⓱", "⠄⡳⠭⠆⠲⠋⠂⠄"
-nemeth, default, "⓲", "⠄⡳⠭⠆⠲⠋⠆⠄"
-nemeth, default, "⓳", "⠄⡳⠭⠆⠲⠋⠒⠄"
-nemeth, default, "⓴", "⠄⡳⠭⠆⠲⠋⠲⠄"
-nemeth, default, "⓵", "⠄⡳⠭⠆⠲⠋⠢⠄"
-nemeth, default, "⓶", "⠄⡳⠭⠆⠲⠋⠖⠄"
-nemeth, default, "⓷", "⠄⡳⠭⠆⠲⠋⠶⠄"
-nemeth, default, "⓸", "⠄⡳⠭⠆⠲⠋⠦⠄"
-nemeth, default, "⓹", "⠄⡳⠭⠆⠲⠋⠔⠄"
-nemeth, default, "⓺", "⠄⡳⠭⠆⠲⠋⠁⠄"
-nemeth, default, "⓻", "⠄⡳⠭⠆⠲⠋⠃⠄"
-nemeth, default, "⓼", "⠄⡳⠭⠆⠲⠋⠉⠄"
-nemeth, default, "⓽", "⠄⡳⠭⠆⠲⠋⠙⠄"
-nemeth, default, "⓾", "⠄⡳⠭⠆⠲⠋⠑⠄"
-nemeth, default, "⓿", "⠄⡳⠭⠆⠲⠋⠋⠄"
-nemeth, default, "❶", "⠄⡳⠭⠆⠶⠶⠖⠄"
-nemeth, default, "❷", "⠄⡳⠭⠆⠶⠶⠶⠄"
-nemeth, default, "❸", "⠄⡳⠭⠆⠶⠶⠦⠄"
-nemeth, default, "❹", "⠄⡳⠭⠆⠶⠶⠔⠄"
-nemeth, default, "❺", "⠄⡳⠭⠆⠶⠶⠁⠄"
-nemeth, default, "❻", "⠄⡳⠭⠆⠶⠶⠃⠄"
-nemeth, default, "❼", "⠄⡳⠭⠆⠶⠶⠉⠄"
-nemeth, default, "❽", "⠄⡳⠭⠆⠶⠶⠙⠄"
-nemeth, default, "❾", "⠄⡳⠭⠆⠶⠶⠑⠄"
-nemeth, default, "❿", "⠄⡳⠭⠆⠶⠶⠋⠄"
-nemeth, default, "➀", "⠄⡳⠭⠆⠶⠦⠴⠄"
-nemeth, default, "➁", "⠄⡳⠭⠆⠶⠦⠂⠄"
-nemeth, default, "➂", "⠄⡳⠭⠆⠶⠦⠆⠄"
-nemeth, default, "➃", "⠄⡳⠭⠆⠶⠦⠒⠄"
-nemeth, default, "➄", "⠄⡳⠭⠆⠶⠦⠲⠄"
-nemeth, default, "➅", "⠄⡳⠭⠆⠶⠦⠢⠄"
-nemeth, default, "➆", "⠄⡳⠭⠆⠶⠦⠖⠄"
-nemeth, default, "➇", "⠄⡳⠭⠆⠶⠦⠶⠄"
-nemeth, default, "➈", "⠄⡳⠭⠆⠶⠦⠦⠄"
-nemeth, default, "➉", "⠄⡳⠭⠆⠶⠦⠔⠄"
-nemeth, default, "➊", "⠄⡳⠭⠆⠶⠦⠁⠄"
-nemeth, default, "➋", "⠄⡳⠭⠆⠶⠦⠃⠄"
-nemeth, default, "➌", "⠄⡳⠭⠆⠶⠦⠉⠄"
-nemeth, default, "➍", "⠄⡳⠭⠆⠶⠦⠙⠄"
-nemeth, default, "➎", "⠄⡳⠭⠆⠶⠦⠑⠄"
-nemeth, default, "➏", "⠄⡳⠭⠆⠶⠦⠋⠄"
-nemeth, default, "➐", "⠄⡳⠭⠆⠶⠔⠴⠄"
-nemeth, default, "➑", "⠄⡳⠭⠆⠶⠔⠂⠄"
-nemeth, default, "➒", "⠄⡳⠭⠆⠶⠔⠆⠄"
-nemeth, default, "➓", "⠄⡳⠭⠆⠶⠔⠒⠄"
-nemeth, default, "㉈", "⠄⡳⠭⠒⠆⠲⠦⠄"
-nemeth, default, "㉉", "⠄⡳⠭⠒⠆⠲⠔⠄"
-nemeth, default, "㉊", "⠄⡳⠭⠒⠆⠲⠁⠄"
-nemeth, default, "㉋", "⠄⡳⠭⠒⠆⠲⠃⠄"
-nemeth, default, "㉌", "⠄⡳⠭⠒⠆⠲⠉⠄"
-nemeth, default, "㉍", "⠄⡳⠭⠒⠆⠲⠙⠄"
-nemeth, default, "㉎", "⠄⡳⠭⠒⠆⠲⠑⠄"
-nemeth, default, "㉏", "⠄⡳⠭⠒⠆⠲⠋⠄"
-nemeth, default, "㉑", "⠄⡳⠭⠒⠆⠢⠂⠄"
-nemeth, default, "㉒", "⠄⡳⠭⠒⠆⠢⠆⠄"
-nemeth, default, "㉓", "⠄⡳⠭⠒⠆⠢⠒⠄"
-nemeth, default, "㉔", "⠄⡳⠭⠒⠆⠢⠲⠄"
-nemeth, default, "㉕", "⠄⡳⠭⠒⠆⠢⠢⠄"
-nemeth, default, "㉖", "⠄⡳⠭⠒⠆⠢⠖⠄"
-nemeth, default, "㉗", "⠄⡳⠭⠒⠆⠢⠶⠄"
-nemeth, default, "㉘", "⠄⡳⠭⠒⠆⠢⠦⠄"
-nemeth, default, "㉙", "⠄⡳⠭⠒⠆⠢⠔⠄"
-nemeth, default, "㉚", "⠄⡳⠭⠒⠆⠢⠁⠄"
-nemeth, default, "㉛", "⠄⡳⠭⠒⠆⠢⠃⠄"
-nemeth, default, "㉜", "⠄⡳⠭⠒⠆⠢⠉⠄"
-nemeth, default, "㉝", "⠄⡳⠭⠒⠆⠢⠙⠄"
-nemeth, default, "㉞", "⠄⡳⠭⠒⠆⠢⠑⠄"
-nemeth, default, "㉟", "⠄⡳⠭⠒⠆⠢⠋⠄"
-nemeth, default, "㊱", "⠄⡳⠭⠒⠆⠃⠂⠄"
-nemeth, default, "㊲", "⠄⡳⠭⠒⠆⠃⠆⠄"
-nemeth, default, "㊳", "⠄⡳⠭⠒⠆⠃⠒⠄"
-nemeth, default, "㊴", "⠄⡳⠭⠒⠆⠃⠲⠄"
-nemeth, default, "㊵", "⠄⡳⠭⠒⠆⠃⠢⠄"
-nemeth, default, "㊶", "⠄⡳⠭⠒⠆⠃⠖⠄"
-nemeth, default, "㊷", "⠄⡳⠭⠒⠆⠃⠶⠄"
-nemeth, default, "㊸", "⠄⡳⠭⠒⠆⠃⠦⠄"
-nemeth, default, "㊹", "⠄⡳⠭⠒⠆⠃⠔⠄"
-nemeth, default, "㊺", "⠄⡳⠭⠒⠆⠃⠁⠄"
-nemeth, default, "㊻", "⠄⡳⠭⠒⠆⠃⠃⠄"
-nemeth, default, "㊼", "⠄⡳⠭⠒⠆⠃⠉⠄"
-nemeth, default, "㊽", "⠄⡳⠭⠒⠆⠃⠙⠄"
-nemeth, default, "㊾", "⠄⡳⠭⠒⠆⠃⠑⠄"
-nemeth, default, "㊿", "⠄⡳⠭⠒⠆⠃⠋⠄"
-nemeth, default, "０", "⠄⡳⠭⠋⠋⠂⠴⠄"
-nemeth, default, "１", "⠄⡳⠭⠋⠋⠂⠂⠄"
-nemeth, default, "２", "⠄⡳⠭⠋⠋⠂⠆⠄"
-nemeth, default, "３", "⠄⡳⠭⠋⠋⠂⠒⠄"
-nemeth, default, "４", "⠄⡳⠭⠋⠋⠂⠲⠄"
-nemeth, default, "５", "⠄⡳⠭⠋⠋⠂⠢⠄"
-nemeth, default, "６", "⠄⡳⠭⠋⠋⠂⠖⠄"
-nemeth, default, "７", "⠄⡳⠭⠋⠋⠂⠶⠄"
-nemeth, default, "８", "⠄⡳⠭⠋⠋⠂⠦⠄"
-nemeth, default, "９", "⠄⡳⠭⠋⠋⠂⠔⠄"
-nemeth, default, "𝟎", "⠄⡳⠽⠂⠙⠶⠉⠑⠄"
-nemeth, default, "𝟏", "⠄⡳⠽⠂⠙⠶⠉⠋⠄"
-nemeth, default, "𝟐", "⠄⡳⠽⠂⠙⠶⠙⠴⠄"
-nemeth, default, "𝟑", "⠄⡳⠽⠂⠙⠶⠙⠂⠄"
-nemeth, default, "𝟒", "⠄⡳⠽⠂⠙⠶⠙⠆⠄"
-nemeth, default, "𝟓", "⠄⡳⠽⠂⠙⠶⠙⠒⠄"
-nemeth, default, "𝟔", "⠄⡳⠽⠂⠙⠶⠙⠲⠄"
-nemeth, default, "𝟕", "⠄⡳⠽⠂⠙⠶⠙⠢⠄"
-nemeth, default, "𝟖", "⠄⡳⠽⠂⠙⠶⠙⠖⠄"
-nemeth, default, "𝟗", "⠄⡳⠽⠂⠙⠶⠙⠶⠄"
-nemeth, default, "𝟘", "⠄⡳⠽⠂⠙⠶⠙⠦⠄"
-nemeth, default, "𝟙", "⠄⡳⠽⠂⠙⠶⠙⠔⠄"
-nemeth, default, "𝟚", "⠄⡳⠽⠂⠙⠶⠙⠁⠄"
-nemeth, default, "𝟛", "⠄⡳⠽⠂⠙⠶⠙⠃⠄"
-nemeth, default, "𝟜", "⠄⡳⠽⠂⠙⠶⠙⠉⠄"
-nemeth, default, "𝟝", "⠄⡳⠽⠂⠙⠶⠙⠙⠄"
-nemeth, default, "𝟞", "⠄⡳⠽⠂⠙⠶⠙⠑⠄"
-nemeth, default, "𝟟", "⠄⡳⠽⠂⠙⠶⠙⠋⠄"
-nemeth, default, "𝟠", "⠄⡳⠽⠂⠙⠶⠑⠴⠄"
-nemeth, default, "𝟡", "⠄⡳⠽⠂⠙⠶⠑⠂⠄"
-nemeth, default, "𝟢", "⠄⡳⠽⠂⠙⠶⠑⠆⠄"
-nemeth, default, "𝟣", "⠄⡳⠽⠂⠙⠶⠑⠒⠄"
-nemeth, default, "𝟤", "⠄⡳⠽⠂⠙⠶⠑⠲⠄"
-nemeth, default, "𝟥", "⠄⡳⠽⠂⠙⠶⠑⠢⠄"
-nemeth, default, "𝟦", "⠄⡳⠽⠂⠙⠶⠑⠖⠄"
-nemeth, default, "𝟧", "⠄⡳⠽⠂⠙⠶⠑⠶⠄"
-nemeth, default, "𝟨", "⠄⡳⠽⠂⠙⠶⠑⠦⠄"
-nemeth, default, "𝟩", "⠄⡳⠽⠂⠙⠶⠑⠔⠄"
-nemeth, default, "𝟪", "⠄⡳⠽⠂⠙⠶⠑⠁⠄"
-nemeth, default, "𝟫", "⠄⡳⠽⠂⠙⠶⠑⠃⠄"
-nemeth, default, "𝟬", "⠄⡳⠽⠂⠙⠶⠑⠉⠄"
-nemeth, default, "𝟭", "⠄⡳⠽⠂⠙⠶⠑⠙⠄"
-nemeth, default, "𝟮", "⠄⡳⠽⠂⠙⠶⠑⠑⠄"
-nemeth, default, "𝟯", "⠄⡳⠽⠂⠙⠶⠑⠋⠄"
-nemeth, default, "𝟰", "⠄⡳⠽⠂⠙⠶⠋⠴⠄"
-nemeth, default, "𝟱", "⠄⡳⠽⠂⠙⠶⠋⠂⠄"
-nemeth, default, "𝟲", "⠄⡳⠽⠂⠙⠶⠋⠆⠄"
-nemeth, default, "𝟳", "⠄⡳⠽⠂⠙⠶⠋⠒⠄"
-nemeth, default, "𝟴", "⠄⡳⠽⠂⠙⠶⠋⠲⠄"
-nemeth, default, "𝟵", "⠄⡳⠽⠂⠙⠶⠋⠢⠄"
-nemeth, default, "𝟶", "⠄⡳⠽⠂⠙⠶⠋⠖⠄"
-nemeth, default, "𝟷", "⠄⡳⠽⠂⠙⠶⠋⠶⠄"
-nemeth, default, "𝟸", "⠄⡳⠽⠂⠙⠶⠋⠦⠄"
-nemeth, default, "𝟹", "⠄⡳⠽⠂⠙⠶⠋⠔⠄"
-nemeth, default, "𝟺", "⠄⡳⠽⠂⠙⠶⠋⠁⠄"
-nemeth, default, "𝟻", "⠄⡳⠽⠂⠙⠶⠋⠃⠄"
-nemeth, default, "𝟼", "⠄⡳⠽⠂⠙⠶⠋⠉⠄"
-nemeth, default, "𝟽", "⠄⡳⠽⠂⠙⠶⠋⠙⠄"
-nemeth, default, "𝟾", "⠄⡳⠽⠂⠙⠶⠋⠑⠄"
-nemeth, default, "𝟿", "⠄⡳⠽⠂⠙⠶⠋⠋⠄"
-nemeth, default, "🄀", "⠄⡳⠽⠂⠋⠂⠴⠴⠄"
-nemeth, default, "🄁", "⠄⡳⠽⠂⠋⠂⠴⠂⠄"
-nemeth, default, "🄂", "⠄⡳⠽⠂⠋⠂⠴⠆⠄"
-nemeth, default, "🄃", "⠄⡳⠽⠂⠋⠂⠴⠒⠄"
-nemeth, default, "🄄", "⠄⡳⠽⠂⠋⠂⠴⠲⠄"
-nemeth, default, "🄅", "⠄⡳⠽⠂⠋⠂⠴⠢⠄"
-nemeth, default, "🄆", "⠄⡳⠽⠂⠋⠂⠴⠖⠄"
-nemeth, default, "🄇", "⠄⡳⠽⠂⠋⠂⠴⠶⠄"
-nemeth, default, "🄈", "⠄⡳⠽⠂⠋⠂⠴⠦⠄"
-nemeth, default, "🄉", "⠄⡳⠽⠂⠋⠂⠴⠔⠄"
-nemeth, default, "🄊", "⠄⡳⠽⠂⠋⠂⠴⠁⠄"
-nemeth, default, "─", "⠄⡳⠭⠆⠢⠴⠴⠄"
-nemeth, default, "━", "⠄⡳⠭⠆⠢⠴⠂⠄"
-nemeth, default, "│", "⠄⡳⠭⠆⠢⠴⠆⠄"
-nemeth, default, "┃", "⠄⡳⠭⠆⠢⠴⠒⠄"
-nemeth, default, "┄", "⠄⡳⠭⠆⠢⠴⠲⠄"
-nemeth, default, "┅", "⠄⡳⠭⠆⠢⠴⠢⠄"
-nemeth, default, "┆", "⠄⡳⠭⠆⠢⠴⠖⠄"
-nemeth, default, "┇", "⠄⡳⠭⠆⠢⠴⠶⠄"
-nemeth, default, "┈", "⠄⡳⠭⠆⠢⠴⠦⠄"
-nemeth, default, "┉", "⠄⡳⠭⠆⠢⠴⠔⠄"
-nemeth, default, "┊", "⠄⡳⠭⠆⠢⠴⠁⠄"
-nemeth, default, "┋", "⠄⡳⠭⠆⠢⠴⠃⠄"
-nemeth, default, "┌", "⠄⡳⠭⠆⠢⠴⠉⠄"
-nemeth, default, "┍", "⠄⡳⠭⠆⠢⠴⠙⠄"
-nemeth, default, "┎", "⠄⡳⠭⠆⠢⠴⠑⠄"
-nemeth, default, "┏", "⠄⡳⠭⠆⠢⠴⠋⠄"
-nemeth, default, "┐", "⠄⡳⠭⠆⠢⠂⠴⠄"
-nemeth, default, "┑", "⠄⡳⠭⠆⠢⠂⠂⠄"
-nemeth, default, "┒", "⠄⡳⠭⠆⠢⠂⠆⠄"
-nemeth, default, "┓", "⠄⡳⠭⠆⠢⠂⠒⠄"
-nemeth, default, "└", "⠄⡳⠭⠆⠢⠂⠲⠄"
-nemeth, default, "┕", "⠄⡳⠭⠆⠢⠂⠢⠄"
-nemeth, default, "┖", "⠄⡳⠭⠆⠢⠂⠖⠄"
-nemeth, default, "┗", "⠄⡳⠭⠆⠢⠂⠶⠄"
-nemeth, default, "┘", "⠄⡳⠭⠆⠢⠂⠦⠄"
-nemeth, default, "┙", "⠄⡳⠭⠆⠢⠂⠔⠄"
-nemeth, default, "┚", "⠄⡳⠭⠆⠢⠂⠁⠄"
-nemeth, default, "┛", "⠄⡳⠭⠆⠢⠂⠃⠄"
-nemeth, default, "├", "⠄⡳⠭⠆⠢⠂⠉⠄"
-nemeth, default, "┝", "⠄⡳⠭⠆⠢⠂⠙⠄"
-nemeth, default, "┞", "⠄⡳⠭⠆⠢⠂⠑⠄"
-nemeth, default, "┟", "⠄⡳⠭⠆⠢⠂⠋⠄"
-nemeth, default, "┠", "⠄⡳⠭⠆⠢⠆⠴⠄"
-nemeth, default, "┡", "⠄⡳⠭⠆⠢⠆⠂⠄"
-nemeth, default, "┢", "⠄⡳⠭⠆⠢⠆⠆⠄"
-nemeth, default, "┣", "⠄⡳⠭⠆⠢⠆⠒⠄"
-nemeth, default, "┤", "⠄⡳⠭⠆⠢⠆⠲⠄"
-nemeth, default, "┥", "⠄⡳⠭⠆⠢⠆⠢⠄"
-nemeth, default, "┦", "⠄⡳⠭⠆⠢⠆⠖⠄"
-nemeth, default, "┧", "⠄⡳⠭⠆⠢⠆⠶⠄"
-nemeth, default, "┨", "⠄⡳⠭⠆⠢⠆⠦⠄"
-nemeth, default, "┩", "⠄⡳⠭⠆⠢⠆⠔⠄"
-nemeth, default, "┪", "⠄⡳⠭⠆⠢⠆⠁⠄"
-nemeth, default, "┫", "⠄⡳⠭⠆⠢⠆⠃⠄"
-nemeth, default, "┬", "⠄⡳⠭⠆⠢⠆⠉⠄"
-nemeth, default, "┭", "⠄⡳⠭⠆⠢⠆⠙⠄"
-nemeth, default, "┮", "⠄⡳⠭⠆⠢⠆⠑⠄"
-nemeth, default, "┯", "⠄⡳⠭⠆⠢⠆⠋⠄"
-nemeth, default, "┰", "⠄⡳⠭⠆⠢⠒⠴⠄"
-nemeth, default, "┱", "⠄⡳⠭⠆⠢⠒⠂⠄"
-nemeth, default, "┲", "⠄⡳⠭⠆⠢⠒⠆⠄"
-nemeth, default, "┳", "⠄⡳⠭⠆⠢⠒⠒⠄"
-nemeth, default, "┴", "⠄⡳⠭⠆⠢⠒⠲⠄"
-nemeth, default, "┵", "⠄⡳⠭⠆⠢⠒⠢⠄"
-nemeth, default, "┶", "⠄⡳⠭⠆⠢⠒⠖⠄"
-nemeth, default, "┷", "⠄⡳⠭⠆⠢⠒⠶⠄"
-nemeth, default, "┸", "⠄⡳⠭⠆⠢⠒⠦⠄"
-nemeth, default, "┹", "⠄⡳⠭⠆⠢⠒⠔⠄"
-nemeth, default, "┺", "⠄⡳⠭⠆⠢⠒⠁⠄"
-nemeth, default, "┻", "⠄⡳⠭⠆⠢⠒⠃⠄"
-nemeth, default, "┼", "⠄⡳⠭⠆⠢⠒⠉⠄"
-nemeth, default, "┽", "⠄⡳⠭⠆⠢⠒⠙⠄"
-nemeth, default, "┾", "⠄⡳⠭⠆⠢⠒⠑⠄"
-nemeth, default, "┿", "⠄⡳⠭⠆⠢⠒⠋⠄"
-nemeth, default, "╀", "⠄⡳⠭⠆⠢⠲⠴⠄"
-nemeth, default, "╁", "⠄⡳⠭⠆⠢⠲⠂⠄"
-nemeth, default, "╂", "⠄⡳⠭⠆⠢⠲⠆⠄"
-nemeth, default, "╃", "⠄⡳⠭⠆⠢⠲⠒⠄"
-nemeth, default, "╄", "⠄⡳⠭⠆⠢⠲⠲⠄"
-nemeth, default, "╅", "⠄⡳⠭⠆⠢⠲⠢⠄"
-nemeth, default, "╆", "⠄⡳⠭⠆⠢⠲⠖⠄"
-nemeth, default, "╇", "⠄⡳⠭⠆⠢⠲⠶⠄"
-nemeth, default, "╈", "⠄⡳⠭⠆⠢⠲⠦⠄"
-nemeth, default, "╉", "⠄⡳⠭⠆⠢⠲⠔⠄"
-nemeth, default, "╊", "⠄⡳⠭⠆⠢⠲⠁⠄"
-nemeth, default, "╋", "⠄⡳⠭⠆⠢⠲⠃⠄"
-nemeth, default, "╌", "⠄⡳⠭⠆⠢⠲⠉⠄"
-nemeth, default, "╍", "⠄⡳⠭⠆⠢⠲⠙⠄"
-nemeth, default, "╎", "⠄⡳⠭⠆⠢⠲⠑⠄"
-nemeth, default, "╏", "⠄⡳⠭⠆⠢⠲⠋⠄"
-nemeth, default, "═", "⠄⡳⠭⠆⠢⠢⠴⠄"
-nemeth, default, "║", "⠄⡳⠭⠆⠢⠢⠂⠄"
-nemeth, default, "╒", "⠄⡳⠭⠆⠢⠢⠆⠄"
-nemeth, default, "╓", "⠄⡳⠭⠆⠢⠢⠒⠄"
-nemeth, default, "╔", "⠄⡳⠭⠆⠢⠢⠲⠄"
-nemeth, default, "╕", "⠄⡳⠭⠆⠢⠢⠢⠄"
-nemeth, default, "╖", "⠄⡳⠭⠆⠢⠢⠖⠄"
-nemeth, default, "╗", "⠄⡳⠭⠆⠢⠢⠶⠄"
-nemeth, default, "╘", "⠄⡳⠭⠆⠢⠢⠦⠄"
-nemeth, default, "╙", "⠄⡳⠭⠆⠢⠢⠔⠄"
-nemeth, default, "╚", "⠄⡳⠭⠆⠢⠢⠁⠄"
-nemeth, default, "╛", "⠄⡳⠭⠆⠢⠢⠃⠄"
-nemeth, default, "╜", "⠄⡳⠭⠆⠢⠢⠉⠄"
-nemeth, default, "╝", "⠄⡳⠭⠆⠢⠢⠙⠄"
-nemeth, default, "╞", "⠄⡳⠭⠆⠢⠢⠑⠄"
-nemeth, default, "╟", "⠄⡳⠭⠆⠢⠢⠋⠄"
-nemeth, default, "╠", "⠄⡳⠭⠆⠢⠖⠴⠄"
-nemeth, default, "╡", "⠄⡳⠭⠆⠢⠖⠂⠄"
-nemeth, default, "╢", "⠄⡳⠭⠆⠢⠖⠆⠄"
-nemeth, default, "╣", "⠄⡳⠭⠆⠢⠖⠒⠄"
-nemeth, default, "╤", "⠄⡳⠭⠆⠢⠖⠲⠄"
-nemeth, default, "╥", "⠄⡳⠭⠆⠢⠖⠢⠄"
-nemeth, default, "╦", "⠄⡳⠭⠆⠢⠖⠖⠄"
-nemeth, default, "╧", "⠄⡳⠭⠆⠢⠖⠶⠄"
-nemeth, default, "╨", "⠄⡳⠭⠆⠢⠖⠦⠄"
-nemeth, default, "╩", "⠄⡳⠭⠆⠢⠖⠔⠄"
-nemeth, default, "╪", "⠄⡳⠭⠆⠢⠖⠁⠄"
-nemeth, default, "╫", "⠄⡳⠭⠆⠢⠖⠃⠄"
-nemeth, default, "╬", "⠄⡳⠭⠆⠢⠖⠉⠄"
-nemeth, default, "╭", "⠄⡳⠭⠆⠢⠖⠙⠄"
-nemeth, default, "╮", "⠄⡳⠭⠆⠢⠖⠑⠄"
-nemeth, default, "╯", "⠄⡳⠭⠆⠢⠖⠋⠄"
-nemeth, default, "╰", "⠄⡳⠭⠆⠢⠶⠴⠄"
-nemeth, default, "╱", "⠄⡳⠭⠆⠢⠶⠂⠄"
-nemeth, default, "╲", "⠄⡳⠭⠆⠢⠶⠆⠄"
-nemeth, default, "╳", "⠄⡳⠭⠆⠢⠶⠒⠄"
-nemeth, default, "╴", "⠄⡳⠭⠆⠢⠶⠲⠄"
-nemeth, default, "╵", "⠄⡳⠭⠆⠢⠶⠢⠄"
-nemeth, default, "╶", "⠄⡳⠭⠆⠢⠶⠖⠄"
-nemeth, default, "╷", "⠄⡳⠭⠆⠢⠶⠶⠄"
-nemeth, default, "╸", "⠄⡳⠭⠆⠢⠶⠦⠄"
-nemeth, default, "╹", "⠄⡳⠭⠆⠢⠶⠔⠄"
-nemeth, default, "╺", "⠄⡳⠭⠆⠢⠶⠁⠄"
-nemeth, default, "╻", "⠄⡳⠭⠆⠢⠶⠃⠄"
-nemeth, default, "╼", "⠄⡳⠭⠆⠢⠶⠉⠄"
-nemeth, default, "╽", "⠄⡳⠭⠆⠢⠶⠙⠄"
-nemeth, default, "╾", "⠄⡳⠭⠆⠢⠶⠑⠄"
-nemeth, default, "╿", "⠄⡳⠭⠆⠢⠶⠋⠄"
-nemeth, default, "▀", "⠄⡳⠭⠆⠢⠦⠴⠄"
-nemeth, default, "▁", "⠄⡳⠭⠆⠢⠦⠂⠄"
-nemeth, default, "▂", "⠄⡳⠭⠆⠢⠦⠆⠄"
-nemeth, default, "▃", "⠄⡳⠭⠆⠢⠦⠒⠄"
-nemeth, default, "▄", "⠄⡳⠭⠆⠢⠦⠲⠄"
-nemeth, default, "▅", "⠄⡳⠭⠆⠢⠦⠢⠄"
-nemeth, default, "▆", "⠄⡳⠭⠆⠢⠦⠖⠄"
-nemeth, default, "▇", "⠄⡳⠭⠆⠢⠦⠶⠄"
-nemeth, default, "█", "⠄⡳⠭⠆⠢⠦⠦⠄"
-nemeth, default, "▉", "⠄⡳⠭⠆⠢⠦⠔⠄"
-nemeth, default, "▊", "⠄⡳⠭⠆⠢⠦⠁⠄"
-nemeth, default, "▋", "⠄⡳⠭⠆⠢⠦⠃⠄"
-nemeth, default, "▌", "⠄⡳⠭⠆⠢⠦⠉⠄"
-nemeth, default, "▍", "⠄⡳⠭⠆⠢⠦⠙⠄"
-nemeth, default, "▎", "⠄⡳⠭⠆⠢⠦⠑⠄"
-nemeth, default, "▏", "⠄⡳⠭⠆⠢⠦⠋⠄"
-nemeth, default, "▐", "⠄⡳⠭⠆⠢⠔⠴⠄"
-nemeth, default, "░", "⠄⡳⠭⠆⠢⠔⠂⠄"
-nemeth, default, "▒", "⠄⡳⠭⠆⠢⠔⠆⠄"
-nemeth, default, "▓", "⠄⡳⠭⠆⠢⠔⠒⠄"
-nemeth, default, "▔", "⠄⡳⠭⠆⠢⠔⠲⠄"
-nemeth, default, "▕", "⠄⡳⠭⠆⠢⠔⠢⠄"
-nemeth, default, "▖", "⠄⡳⠭⠆⠢⠔⠖⠄"
-nemeth, default, "▗", "⠄⡳⠭⠆⠢⠔⠶⠄"
-nemeth, default, "▘", "⠄⡳⠭⠆⠢⠔⠦⠄"
-nemeth, default, "▙", "⠄⡳⠭⠆⠢⠔⠔⠄"
-nemeth, default, "▚", "⠄⡳⠭⠆⠢⠔⠁⠄"
-nemeth, default, "▛", "⠄⡳⠭⠆⠢⠔⠃⠄"
-nemeth, default, "▜", "⠄⡳⠭⠆⠢⠔⠉⠄"
-nemeth, default, "▝", "⠄⡳⠭⠆⠢⠔⠙⠄"
-nemeth, default, "▞", "⠄⡳⠭⠆⠢⠔⠑⠄"
-nemeth, default, "▟", "⠄⡳⠭⠆⠢⠔⠋⠄"
-nemeth, default, "■", "⠫⠸⠲"
-nemeth, default, "□", "⠫⠲"
-nemeth, default, "▢", "⠄⡳⠭⠆⠢⠁⠆⠄"
-nemeth, default, "▣", "⠄⡳⠭⠆⠢⠁⠒⠄"
-nemeth, default, "▤", "⠄⡳⠭⠆⠢⠁⠲⠄"
-nemeth, default, "▥", "⠄⡳⠭⠆⠢⠁⠢⠄"
-nemeth, default, "▦", "⠄⡳⠭⠆⠢⠁⠖⠄"
-nemeth, default, "▧", "⠄⡳⠭⠆⠢⠁⠶⠄"
-nemeth, default, "▨", "⠄⡳⠭⠆⠢⠁⠦⠄"
-nemeth, default, "▩", "⠄⡳⠭⠆⠢⠁⠔⠄"
-nemeth, default, "▪", "⠄⡳⠭⠆⠢⠁⠁⠄"
-nemeth, default, "▫", "⠫⠸⠗"
-nemeth, default, "▬", "⠫⠗"
-nemeth, default, "▭", "⠄⡳⠭⠆⠢⠁⠙⠄"
-nemeth, default, "▮", "⠄⡳⠭⠆⠢⠁⠑⠄"
-nemeth, default, "▯", "⠄⡳⠭⠆⠢⠁⠋⠄"
-nemeth, default, "▰", "⠫⠸⠛"
-nemeth, default, "▱", "⠫⠛"
-nemeth, default, "▲", "⠫⠸⠞"
-nemeth, default, "△", "⠫⠞"
-nemeth, default, "▴", "⠄⡳⠭⠆⠢⠃⠲⠄"
-nemeth, default, "▵", "⠄⡳⠭⠆⠢⠃⠢⠄"
-nemeth, default, "▶", "⠄⡳⠭⠆⠢⠃⠖⠄"
-nemeth, default, "▷", "⠄⡳⠭⠆⠢⠃⠶⠄"
-nemeth, default, "▸", "⠄⡳⠭⠆⠢⠃⠦⠄"
-nemeth, default, "▹", "⠄⡳⠭⠆⠢⠃⠔⠄"
-nemeth, default, "►", "⠄⡳⠭⠆⠢⠃⠁⠄"
-nemeth, default, "▻", "⠄⡳⠭⠆⠢⠃⠃⠄"
-nemeth, default, "▼", "⠸⠨⠫"
-nemeth, default, "▽", "⠨⠫"
-nemeth, default, "▾", "⠄⡳⠭⠆⠢⠃⠑⠄"
-nemeth, default, "▿", "⠄⡳⠭⠆⠢⠃⠋⠄"
-nemeth, default, "◀", "⠄⡳⠭⠆⠢⠉⠴⠄"
-nemeth, default, "◁", "⠄⡳⠭⠆⠢⠉⠂⠄"
-nemeth, default, "◂", "⠄⡳⠭⠆⠢⠉⠆⠄"
-nemeth, default, "◃", "⠄⡳⠭⠆⠢⠉⠒⠄"
-nemeth, default, "◄", "⠄⡳⠭⠆⠢⠉⠲⠄"
-nemeth, default, "◅", "⠄⡳⠭⠆⠢⠉⠢⠄"
-nemeth, default, "◆", "⠄⡳⠭⠆⠢⠉⠖⠄"
-nemeth, default, "◇", "⠄⡳⠭⠆⠢⠉⠶⠄"
-nemeth, default, "◈", "⠄⡳⠭⠆⠢⠉⠦⠄"
-nemeth, default, "◉", "⠄⡳⠭⠆⠢⠉⠔⠄"
-nemeth, default, "◊", "⠫⠸⠉"
-nemeth, default, "○", "⠫⠉"
-nemeth, default, "◌", "⠄⡳⠭⠆⠢⠉⠉⠄"
-nemeth, default, "◍", "⠄⡳⠭⠆⠢⠉⠙⠄"
-nemeth, default, "◎", "⠄⡳⠭⠆⠢⠉⠑⠄"
-nemeth, default, "●", "⠄⡳⠭⠆⠢⠉⠋⠄"
-nemeth, default, "◐", "⠄⡳⠭⠆⠢⠙⠴⠄"
-nemeth, default, "◑", "⠄⡳⠭⠆⠢⠙⠂⠄"
-nemeth, default, "◒", "⠄⡳⠭⠆⠢⠙⠆⠄"
-nemeth, default, "◓", "⠄⡳⠭⠆⠢⠙⠒⠄"
-nemeth, default, "◔", "⠄⡳⠭⠆⠢⠙⠲⠄"
-nemeth, default, "◕", "⠄⡳⠭⠆⠢⠙⠢⠄"
-nemeth, default, "◖", "⠄⡳⠭⠆⠢⠙⠖⠄"
-nemeth, default, "◗", "⠄⡳⠭⠆⠢⠙⠶⠄"
-nemeth, default, "◘", "⠄⡳⠭⠆⠢⠙⠦⠄"
-nemeth, default, "◙", "⠄⡳⠭⠆⠢⠙⠔⠄"
-nemeth, default, "◚", "⠄⡳⠭⠆⠢⠙⠁⠄"
-nemeth, default, "◛", "⠄⡳⠭⠆⠢⠙⠃⠄"
-nemeth, default, "◜", "⠄⡳⠭⠆⠢⠙⠉⠄"
-nemeth, default, "◝", "⠄⡳⠭⠆⠢⠙⠙⠄"
-nemeth, default, "◞", "⠄⡳⠭⠆⠢⠙⠑⠄"
-nemeth, default, "◟", "⠄⡳⠭⠆⠢⠙⠋⠄"
-nemeth, default, "◠", "⠄⡳⠭⠆⠢⠑⠴⠄"
-nemeth, default, "◡", "⠄⡳⠭⠆⠢⠑⠂⠄"
-nemeth, default, "◢", "⠄⡳⠭⠆⠢⠑⠆⠄"
-nemeth, default, "◣", "⠄⡳⠭⠆⠢⠑⠒⠄"
-nemeth, default, "◤", "⠄⡳⠭⠆⠢⠑⠲⠄"
-nemeth, default, "◥", "⠄⡳⠭⠆⠢⠑⠢⠄"
-nemeth, default, "◦", "⠄⡳⠭⠆⠢⠑⠖⠄"
-nemeth, default, "◧", "⠄⡳⠭⠆⠢⠑⠶⠄"
-nemeth, default, "◨", "⠄⡳⠭⠆⠢⠑⠦⠄"
-nemeth, default, "◩", "⠄⡳⠭⠆⠢⠑⠔⠄"
-nemeth, default, "◪", "⠄⡳⠭⠆⠢⠑⠁⠄"
-nemeth, default, "◫", "⠄⡳⠭⠆⠢⠑⠃⠄"
-nemeth, default, "◬", "⠄⡳⠭⠆⠢⠑⠉⠄"
-nemeth, default, "◭", "⠄⡳⠭⠆⠢⠑⠙⠄"
-nemeth, default, "◮", "⠄⡳⠭⠆⠢⠑⠑⠄"
-nemeth, default, "◯", "⠄⡳⠭⠆⠢⠑⠋⠄"
-nemeth, default, "◰", "⠄⡳⠭⠆⠢⠋⠴⠄"
-nemeth, default, "◱", "⠄⡳⠭⠆⠢⠋⠂⠄"
-nemeth, default, "◲", "⠄⡳⠭⠆⠢⠋⠆⠄"
-nemeth, default, "◳", "⠄⡳⠭⠆⠢⠋⠒⠄"
-nemeth, default, "◴", "⠄⡳⠭⠆⠢⠋⠲⠄"
-nemeth, default, "◵", "⠄⡳⠭⠆⠢⠋⠢⠄"
-nemeth, default, "◶", "⠄⡳⠭⠆⠢⠋⠖⠄"
-nemeth, default, "◷", "⠄⡳⠭⠆⠢⠋⠶⠄"
-nemeth, default, "◸", "⠄⡳⠭⠆⠢⠋⠦⠄"
-nemeth, default, "◹", "⠄⡳⠭⠆⠢⠋⠔⠄"
-nemeth, default, "◺", "⠄⡳⠭⠆⠢⠋⠁⠄"
-nemeth, default, "◻", "⠄⡳⠭⠆⠢⠋⠃⠄"
-nemeth, default, "◼", "⠄⡳⠭⠆⠢⠋⠉⠄"
-nemeth, default, "◽", "⠄⡳⠭⠆⠢⠋⠙⠄"
-nemeth, default, "◾", "⠄⡳⠭⠆⠢⠋⠑⠄"
-nemeth, default, "◿", "⠄⡳⠭⠆⠢⠋⠋⠄"
-nemeth, default, "⬒", "⠄⡳⠭⠆⠃⠂⠆⠄"
-nemeth, default, "⬓", "⠄⡳⠭⠆⠃⠂⠒⠄"
-nemeth, default, "⬔", "⠄⡳⠭⠆⠃⠂⠲⠄"
-nemeth, default, "⬕", "⠄⡳⠭⠆⠃⠂⠢⠄"
-nemeth, default, "⬖", "⠄⡳⠭⠆⠃⠂⠖⠄"
-nemeth, default, "⬗", "⠄⡳⠭⠆⠃⠂⠶⠄"
-nemeth, default, "⬘", "⠄⡳⠭⠆⠃⠂⠦⠄"
-nemeth, default, "⬙", "⠄⡳⠭⠆⠃⠂⠔⠄"
-nemeth, default, "⬚", "⠄⡳⠭⠆⠃⠂⠁⠄"
-nemeth, default, "⬛", "⠄⡳⠭⠆⠃⠂⠃⠄"
-nemeth, default, "⬜", "⠄⡳⠭⠆⠃⠂⠉⠄"
-nemeth, default, "⬝", "⠄⡳⠭⠆⠃⠂⠙⠄"
-nemeth, default, "⬞", "⠄⡳⠭⠆⠃⠂⠑⠄"
-nemeth, default, "⬟", "⠄⡳⠭⠆⠃⠂⠋⠄"
-nemeth, default, "⬠", "⠄⡳⠭⠆⠃⠆⠴⠄"
-nemeth, default, "⬡", "⠄⡳⠭⠆⠃⠆⠂⠄"
-nemeth, default, "⬢", "⠄⡳⠭⠆⠃⠆⠆⠄"
-nemeth, default, "⬣", "⠄⡳⠭⠆⠃⠆⠒⠄"
-nemeth, default, "⬤", "⠄⡳⠭⠆⠃⠆⠲⠄"
-nemeth, default, "⬥", "⠄⡳⠭⠆⠃⠆⠢⠄"
-nemeth, default, "⬦", "⠄⡳⠭⠆⠃⠆⠖⠄"
-nemeth, default, "⬧", "⠄⡳⠭⠆⠃⠆⠶⠄"
-nemeth, default, "⬨", "⠄⡳⠭⠆⠃⠆⠦⠄"
-nemeth, default, "⬩", "⠄⡳⠭⠆⠃⠆⠔⠄"
-nemeth, default, "⬪", "⠄⡳⠭⠆⠃⠆⠁⠄"
-nemeth, default, "⬫", "⠄⡳⠭⠆⠃⠆⠃⠄"
-nemeth, default, "⬬", "⠄⡳⠭⠆⠃⠆⠉⠄"
-nemeth, default, "⬭", "⠄⡳⠭⠆⠃⠆⠙⠄"
-nemeth, default, "⬮", "⠄⡳⠭⠆⠃⠆⠑⠄"
-nemeth, default, "⬯", "⠄⡳⠭⠆⠃⠆⠋⠄"
-nemeth, default, "⭐", "⠄⡳⠭⠆⠃⠢⠴⠄"
-nemeth, default, "⭑", "⠄⡳⠭⠆⠃⠢⠂⠄"
-nemeth, default, "⭒", "⠄⡳⠭⠆⠃⠢⠆⠄"
-nemeth, default, "⭓", "⠄⡳⠭⠆⠃⠢⠒⠄"
-nemeth, default, "⭔", "⠄⡳⠭⠆⠃⠢⠲⠄"
-nemeth, default, "⭕", "⠄⡳⠭⠆⠃⠢⠢⠄"
-nemeth, default, "⭖", "⠄⡳⠭⠆⠃⠢⠖⠄"
-nemeth, default, "⭗", "⠄⡳⠭⠆⠃⠢⠶⠄"
-nemeth, default, "⭘", "⠄⡳⠭⠆⠃⠢⠦⠄"
-nemeth, default, "⭙", "⠄⡳⠭⠆⠃⠢⠔⠄"
-nemeth, default, "↼", "⠀⠫⠈⠪⠒⠒⠀"
-nemeth, default, "↽", "⠀⠫⠠⠪⠒⠒⠀"
-nemeth, default, "↾", "⠀⠫⠣⠒⠒⠠⠕⠀"
-nemeth, default, "↿", "⠀⠫⠣⠒⠒⠈⠕⠀"
-nemeth, default, "⇀", "⠀⠫⠒⠒⠈⠕⠀"
-nemeth, default, "⇁", "⠀⠫⠒⠒⠠⠕⠀"
-nemeth, default, "⇂", "⠀⠫⠪⠒⠒⠈⠕⠀"
-nemeth, default, "⇃", "⠀⠫⠩⠒⠒⠠⠕⠀"
-nemeth, default, "⇋", "⠀⠫⠈⠪⠒⠒⠫⠒⠒⠈⠕⠀"
-nemeth, default, "⇌", "⠀⠫⠒⠒⠈⠕⠫⠈⠪⠒⠒⠀"
-nemeth, default, "⥊", "⠄⡳⠭⠆⠔⠲⠁⠄"
-nemeth, default, "⥋", "⠄⡳⠭⠆⠔⠲⠃⠄"
-nemeth, default, "⥌", "⠄⡳⠭⠆⠔⠲⠉⠄"
-nemeth, default, "⥍", "⠄⡳⠭⠆⠔⠲⠙⠄"
-nemeth, default, "⥎", "⠄⡳⠭⠆⠔⠲⠑⠄"
-nemeth, default, "⥏", "⠄⡳⠭⠆⠔⠲⠋⠄"
-nemeth, default, "⥐", "⠄⡳⠭⠆⠔⠢⠴⠄"
-nemeth, default, "⥑", "⠄⡳⠭⠆⠔⠢⠂⠄"
-nemeth, default, "⥒", "⠄⡳⠭⠆⠔⠢⠆⠄"
-nemeth, default, "⥓", "⠄⡳⠭⠆⠔⠢⠒⠄"
-nemeth, default, "⥔", "⠄⡳⠭⠆⠔⠢⠲⠄"
-nemeth, default, "⥕", "⠄⡳⠭⠆⠔⠢⠢⠄"
-nemeth, default, "⥖", "⠄⡳⠭⠆⠔⠢⠖⠄"
-nemeth, default, "⥗", "⠄⡳⠭⠆⠔⠢⠶⠄"
-nemeth, default, "⥘", "⠄⡳⠭⠆⠔⠢⠦⠄"
-nemeth, default, "⥙", "⠄⡳⠭⠆⠔⠢⠔⠄"
-nemeth, default, "⥚", "⠄⡳⠭⠆⠔⠢⠁⠄"
-nemeth, default, "⥛", "⠄⡳⠭⠆⠔⠢⠃⠄"
-nemeth, default, "⥜", "⠄⡳⠭⠆⠔⠢⠉⠄"
-nemeth, default, "⥝", "⠄⡳⠭⠆⠔⠢⠙⠄"
-nemeth, default, "⥞", "⠄⡳⠭⠆⠔⠢⠑⠄"
-nemeth, default, "⥟", "⠄⡳⠭⠆⠔⠢⠋⠄"
-nemeth, default, "⥠", "⠄⡳⠭⠆⠔⠖⠴⠄"
-nemeth, default, "⥡", "⠄⡳⠭⠆⠔⠖⠂⠄"
-nemeth, default, "⥢", "⠄⡳⠭⠆⠔⠖⠆⠄"
-nemeth, default, "⥣", "⠄⡳⠭⠆⠔⠖⠒⠄"
-nemeth, default, "⥤", "⠄⡳⠭⠆⠔⠖⠲⠄"
-nemeth, default, "⥥", "⠄⡳⠭⠆⠔⠖⠢⠄"
-nemeth, default, "⥦", "⠄⡳⠭⠆⠔⠖⠖⠄"
-nemeth, default, "⥧", "⠄⡳⠭⠆⠔⠖⠶⠄"
-nemeth, default, "⥨", "⠄⡳⠭⠆⠔⠖⠦⠄"
-nemeth, default, "⥩", "⠄⡳⠭⠆⠔⠖⠔⠄"
-nemeth, default, "⥪", "⠄⡳⠭⠆⠔⠖⠁⠄"
-nemeth, default, "⥫", "⠄⡳⠭⠆⠔⠖⠃⠄"
-nemeth, default, "⥬", "⠄⡳⠭⠆⠔⠖⠉⠄"
-nemeth, default, "⥭", "⠄⡳⠭⠆⠔⠖⠙⠄"
-nemeth, default, "⥮", "⠄⡳⠭⠆⠔⠖⠑⠄"
-nemeth, default, "⥯", "⠄⡳⠭⠆⠔⠖⠋⠄"
-nemeth, default, "⥼", "⠄⡳⠭⠆⠔⠶⠉⠄"
-nemeth, default, "⥽", "⠄⡳⠭⠆⠔⠶⠙⠄"
-nemeth, default, "⥾", "⠄⡳⠭⠆⠔⠶⠑⠄"
-nemeth, default, "⥿", "⠄⡳⠭⠆⠔⠶⠋⠄"
-nemeth, default, "ℏ", "⠄⡳⠭⠆⠂⠴⠋⠄"
-nemeth, default, "℔", "⠳"
-nemeth, default, "№", "⠄⡳⠭⠆⠂⠂⠖⠄"
-nemeth, default, "℗", "⠄⡳⠭⠆⠂⠂⠶⠄"
-nemeth, default, "℞", "⠄⡳⠭⠆⠂⠂⠑⠄"
-nemeth, default, "℟", "⠄⡳⠭⠆⠂⠂⠋⠄"
-nemeth, default, "℠", "⠄⡳⠭⠆⠂⠆⠴⠄"
-nemeth, default, "℡", "⠄⡳⠭⠆⠂⠆⠂⠄"
-nemeth, default, "™", "⠘⠞"
-nemeth, default, "℣", "⠄⡳⠭⠆⠂⠆⠒⠄"
-nemeth, default, "℥", "⠄⡳⠭⠆⠂⠆⠢⠄"
-nemeth, default, "Ω", "⠄⡳⠭⠆⠂⠆⠖⠄"
-nemeth, default, "℧", "⠄⡳⠭⠆⠂⠆⠶⠄"
-nemeth, default, "K", "⠄⡳⠭⠆⠂⠆⠁⠄"
-nemeth, default, "Å", "⠀⠈⠠⠁"
-nemeth, default, "℮", "⠄⡳⠭⠆⠂⠆⠑⠄"
-nemeth, default, "Ⅎ", "⠄⡳⠭⠆⠂⠒⠆⠄"
-nemeth, default, "ℹ", "⠄⡳⠭⠆⠂⠒⠔⠄"
-nemeth, default, "℺", "⠄⡳⠭⠆⠂⠒⠁⠄"
-nemeth, default, "℻", "⠄⡳⠭⠆⠂⠒⠃⠄"
-nemeth, default, "⅁", "⠄⡳⠭⠆⠂⠲⠂⠄"
-nemeth, default, "⅂", "⠄⡳⠭⠆⠂⠲⠆⠄"
-nemeth, default, "⅃", "⠄⡳⠭⠆⠂⠲⠒⠄"
-nemeth, default, "⅄", "⠄⡳⠭⠆⠂⠲⠲⠄"
-nemeth, default, "!", "⠖"
-nemeth, default, """, "⠹"
-nemeth, default, "#", "⠨⠼"
-nemeth, default, "$", "⠈⠎"
-nemeth, default, "%", "⠈⠴"
-nemeth, default, "&", "⠸⠯"
-nemeth, default, "'", "⠄"
-nemeth, default, "*", "⠈⠼"
-nemeth, default, "+", "⠬"
-nemeth, default, ",", "⠠"
-nemeth, default, "-", "⠤"
-nemeth, default, ".", "⠲"
-nemeth, default, "/", "⠸⠌"
-nemeth, default, ":", "⠒"
-nemeth, default, ";", "⠆"
-nemeth, default, "<", "⠀⠐⠅⠀"
-nemeth, default, "=", "⠀⠨⠅⠀"
-nemeth, default, ">", "⠀⠨⠂⠀"
-nemeth, default, "?", "⠸⠦"
-nemeth, default, "@", "⠈⠁"
-nemeth, default, "\", "⠸⠡"
-nemeth, default, "^", "⡘"
-nemeth, default, "_", "⠸"
-nemeth, default, "`", "⠈"
-nemeth, default, "|", "⠳"
-nemeth, default, "~", "⠈⠱"
-nemeth, default, "¡", "⠖"
-nemeth, default, "¢", "⠈⠉"
-nemeth, default, "£", "⠼"
-nemeth, default, "¤", "⠫"
-nemeth, default, "¥", "⠄⡳⠭⠴⠴⠁⠢⠄"
-nemeth, default, "¦", "⠸⠳"
-nemeth, default, "§", "⠈⠠⠎"
-nemeth, default, "¨", "⠄⡳⠭⠴⠴⠁⠦⠄"
-nemeth, default, "©", "⠘⠉"
-nemeth, default, "ª", "⠄⡳⠭⠴⠴⠁⠁⠄"
-nemeth, default, "«", "⠄⡳⠭⠴⠴⠁⠃⠄"
-nemeth, default, "¬", "⠄⡳⠭⠴⠴⠁⠉⠄"
-nemeth, default, "®", "⠘⠗"
-nemeth, default, "¯", "⠱"
-nemeth, default, "°", "⠘⠨⠡"
-nemeth, default, "±", "⠬⠤"
-nemeth, default, "´", "acute"
-nemeth, default, "µ", "⠨⠍"
-nemeth, default, "¶", "⠄⡳⠭⠴⠴⠃⠖⠄"
-nemeth, default, "·", "⠡"
-nemeth, default, "¸", "⠄⡳⠭⠴⠴⠃⠦⠄"
-nemeth, default, "º", "⠄⡳⠭⠴⠴⠃⠁⠄"
-nemeth, default, "»", "⠄⡳⠭⠴⠴⠃⠃⠄"
-nemeth, default, "¿", "⠦"
-nemeth, default, "×", "⠈⠡"
-nemeth, default, "÷", "⠈⠌"
-nemeth, default, "˘", "⠄⡳⠭⠴⠆⠙⠦⠄"
-nemeth, default, "˙", "⠄⡳⠭⠴⠆⠙⠔⠄"
-nemeth, default, "˚", "⠄⡳⠭⠴⠆⠙⠁⠄"
-nemeth, default, "˛", "⠄⡳⠭⠴⠆⠙⠃⠄"
-nemeth, default, "˜", "⠈⠱"
-nemeth, default, "˝", "⠄⡳⠭⠴⠆⠙⠙⠄"
-nemeth, default, "‐", "⠤"
-nemeth, default, "‑", "⠤"
-nemeth, default, "‒", "⠤⠤"
-nemeth, default, "–", "⠤⠤"
-nemeth, default, "—", "⠤⠤"
-nemeth, default, "―", "⠤⠤"
-nemeth, default, "‖", "⠳⠳"
-nemeth, default, "‗", "⠄⡳⠭⠆⠴⠂⠶⠄"
-nemeth, default, "‘", "⠠⠦"
-nemeth, default, "’", "⠄"
-nemeth, default, "‚", "⠄⡳⠭⠆⠴⠂⠁⠄"
-nemeth, default, "‛", "⠄⡳⠭⠆⠴⠂⠃⠄"
-nemeth, default, "“", "⠦"
-nemeth, default, "”", "⠴"
-nemeth, default, "„", "⠄⡳⠭⠆⠴⠂⠑⠄"
-nemeth, default, "‟", "⠄⡳⠭⠆⠴⠂⠋⠄"
-nemeth, default, "†", "⠸⠻"
-nemeth, default, "‡", "⠸⠸⠻"
-nemeth, default, "•", "⠔⠔"
-nemeth, default, "‣", "⠄⡳⠭⠆⠴⠆⠒⠄"
-nemeth, default, "․", "⠄"
-nemeth, default, "‥", "⠄⠄"
-nemeth, default, "…", "⠄⠄⠄"
-nemeth, default, "‧", "⠄⡳⠭⠆⠴⠆⠶⠄"
-nemeth, default, "‰", "⠄⡳⠭⠆⠴⠒⠴⠄"
-nemeth, default, "‱", "⠄⡳⠭⠆⠴⠒⠂⠄"
-nemeth, default, "′", "⠄"
-nemeth, default, "″", "⠄⠄"
-nemeth, default, "‴", "⠄⠄⠄"
-nemeth, default, "‵", "⠄⡳⠭⠆⠴⠒⠢⠄"
-nemeth, default, "‶", "⠄⡳⠭⠆⠴⠒⠖⠄"
-nemeth, default, "‷", "⠄⡳⠭⠆⠴⠒⠶⠄"
-nemeth, default, "‸", "⠄⡳⠭⠆⠴⠒⠦⠄"
-nemeth, default, "‹", "⠄⡳⠭⠆⠴⠒⠔⠄"
-nemeth, default, "›", "⠄⡳⠭⠆⠴⠒⠁⠄"
-nemeth, default, "※", "⠄⡳⠭⠆⠴⠒⠃⠄"
-nemeth, default, "‼", "⠖⠖"
-nemeth, default, "‽", "⠄⡳⠭⠆⠴⠒⠙⠄"
-nemeth, default, "‾", "⠱"
-nemeth, default, "‿", "⠄⡳⠭⠆⠴⠒⠋⠄"
-nemeth, default, "⁀", "⠄⡳⠭⠆⠴⠲⠴⠄"
-nemeth, default, "⁁", "⠄⡳⠭⠆⠴⠲⠂⠄"
-nemeth, default, "⁂", "⠄⡳⠭⠆⠴⠲⠆⠄"
-nemeth, default, "⁃", "⠄⡳⠭⠆⠴⠲⠒⠄"
-nemeth, default, "⁄", "⠄⡳⠭⠆⠴⠲⠲⠄"
-nemeth, default, "⁇", "⠹⠹"
-nemeth, default, "⁈", "⠹⠖"
-nemeth, default, "⁉", "⠖⠹"
-nemeth, default, "⁋", "⠄⡳⠭⠆⠴⠲⠃⠄"
-nemeth, default, "⁌", "⠄⡳⠭⠆⠴⠲⠉⠄"
-nemeth, default, "⁍", "⠄⡳⠭⠆⠴⠲⠙⠄"
-nemeth, default, "⁎", "⠄⡳⠭⠆⠴⠲⠑⠄"
-nemeth, default, "⁏", "⠄⡳⠭⠆⠴⠲⠋⠄"
-nemeth, default, "⁐", "⠄⡳⠭⠆⠴⠢⠴⠄"
-nemeth, default, "⁑", "⠄⡳⠭⠆⠴⠢⠂⠄"
-nemeth, default, "⁒", "⠄⡳⠭⠆⠴⠢⠆⠄"
-nemeth, default, "⁓", "⠄⡳⠭⠆⠴⠢⠒⠄"
-nemeth, default, "⁔", "⠄⡳⠭⠆⠴⠢⠲⠄"
-nemeth, default, "⁕", "⠄⡳⠭⠆⠴⠢⠢⠄"
-nemeth, default, "⁖", "⠄⡳⠭⠆⠴⠢⠖⠄"
-nemeth, default, "⁗", "⠄⡳⠭⠆⠴⠢⠶⠄"
-nemeth, default, "⁘", "⠄⡳⠭⠆⠴⠢⠦⠄"
-nemeth, default, "⁙", "⠄⡳⠭⠆⠴⠢⠔⠄"
-nemeth, default, "⁚", "⠄⡳⠭⠆⠴⠢⠁⠄"
-nemeth, default, "⁛", "⠄⡳⠭⠆⠴⠢⠃⠄"
-nemeth, default, "⁜", "⠄⡳⠭⠆⠴⠢⠉⠄"
-nemeth, default, "⁝", "⠄⡳⠭⠆⠴⠢⠙⠄"
-nemeth, default, "⁞", "⠄⡳⠭⠆⠴⠢⠑⠄"
-nemeth, default, "⁺", "⠄⡳⠭⠆⠴⠶⠁⠄"
-nemeth, default, "⁻", "⠄⡳⠭⠆⠴⠶⠃⠄"
-nemeth, default, "⁼", "⠄⡳⠭⠆⠴⠶⠉⠄"
-nemeth, default, "⁽", "⠄⡳⠭⠆⠴⠶⠙⠄"
-nemeth, default, "⁾", "⠄⡳⠭⠆⠴⠶⠑⠄"
-nemeth, default, "₊", "⠄⡳⠭⠆⠴⠦⠁⠄"
-nemeth, default, "₋", "⠄⡳⠭⠆⠴⠦⠃⠄"
-nemeth, default, "₌", "⠄⡳⠭⠆⠴⠦⠉⠄"
-nemeth, default, "₍", "⠄⡳⠭⠆⠴⠦⠙⠄"
-nemeth, default, "₎", "⠄⡳⠭⠆⠴⠦⠑⠄"
-nemeth, default, "⅊", "⠄⡳⠭⠆⠂⠲⠁⠄"
-nemeth, default, "⅋", "⠄⡳⠭⠆⠂⠲⠃⠄"
-nemeth, default, "⅌", "⠄⡳⠭⠆⠂⠲⠉⠄"
-nemeth, default, "⅍", "⠄⡳⠭⠆⠂⠲⠙⠄"
-nemeth, default, "ⅎ", "⠄⡳⠭⠆⠂⠲⠑⠄"
-nemeth, default, "∀", "⠈⠯"
-nemeth, default, "∁", "⠄⡳⠭⠆⠆⠴⠂⠄"
-nemeth, default, "∂", "⠈⠙"
-nemeth, default, "∃", "⠈⠿"
-nemeth, default, "∄", "⠌⠈⠿"
-nemeth, default, "∅", "⠸⠴"
-nemeth, default, "∆", "⠄⡳⠭⠆⠆⠴⠖⠄"
-nemeth, default, "∇", "⠨⠫"
-nemeth, default, "∈", "⠀⠈⠑⠀"
-nemeth, default, "∉", "⠀⠌⠈⠑⠀"
-nemeth, default, "∊", "⠀⠈⠑⠀"
-nemeth, default, "∋", "⠀⠸⠨⠁⠀"
-nemeth, default, "∌", "⠀⠌⠸⠨⠁⠀"
-nemeth, default, "∍", "⠀⠈⠢⠀"
-nemeth, default, "∎", "⠀⠸⠳⠀"
-nemeth, default, "∏", "⠄⡳⠭⠆⠆⠴⠋⠄"
-nemeth, default, "∐", "⠄⡳⠭⠆⠆⠂⠴⠄"
-nemeth, default, "∑", "⠨⠠⠎"
-nemeth, default, "−", "⠤"
-nemeth, default, "∓", "⠤⠬"
-nemeth, default, "∔", "⠄⡳⠭⠆⠆⠂⠲⠄"
-nemeth, default, "∕", "⠸⠌"
-nemeth, default, "∖", "⠄⡳⠭⠆⠆⠂⠖⠄"
-nemeth, default, "∗", "⠈⠼"
-nemeth, default, "∘", "⠘⠨⠡"
-nemeth, default, "∙", "⠄⡳⠭⠆⠆⠂⠔⠄"
-nemeth, default, "√", "⠄⡳⠭⠆⠆⠂⠁⠄"
-nemeth, default, "∛", "⠄⡳⠭⠆⠆⠂⠃⠄"
-nemeth, default, "∜", "⠄⡳⠭⠆⠆⠂⠉⠄"
-nemeth, default, "∝", "⠀⠰⠆⠀"
-nemeth, default, "∞", "⠠⠿"
-nemeth, default, "∟", "⠫⠪⠨⠗⠻"
-nemeth, default, "∠", "⠫⠪"
-nemeth, default, "∡", "⠫⠪⠸⠫⠫⠁⠻"
-nemeth, default, "∢", "⠫⠪⠸⠫⠫⠁⠻"
-nemeth, default, "∣", "⠳"
-nemeth, default, "∤", "⠌⠳"
-nemeth, default, "∥", "⠀⠫⠇⠀"
-nemeth, default, "∦", "⠀⠌⠫⠇⠀"
-nemeth, default, "∧", "⠈⠩"
-nemeth, default, "∨", "⠈⠬"
-nemeth, default, "∩", "⠨⠩"
-nemeth, default, "∪", "⠨⠬"
-nemeth, default, "∫", "⠮"
-nemeth, default, "∬", "⠮⠮"
-nemeth, default, "∭", "⠮⠮⠮"
-nemeth, default, "∮", "⠮⠈⠫⠉⠻"
-nemeth, default, "∯", "⠄⡳⠭⠆⠆⠆⠋⠄"
-nemeth, default, "∰", "⠄⡳⠭⠆⠆⠒⠴⠄"
-nemeth, default, "∱", "⠄⡳⠭⠆⠆⠒⠂⠄"
-nemeth, default, "∲", "⠮⠈⠫⠪⠢⠔⠻"
-nemeth, default, "∳", "⠮⠈⠫⠢⠔⠕⠻"
-nemeth, default, "∴", "⠀⠠⠡⠀"
-nemeth, default, "∵", "⠀⠈⠌⠀"
-nemeth, default, "∶", "⠀⠐⠂⠀"
-nemeth, default, "∷", "⠄⡳⠭⠆⠆⠒⠶⠄"
-nemeth, default, "∸", "⠄⡳⠭⠆⠆⠒⠦⠄"
-nemeth, default, "∹", "⠄⡳⠭⠆⠆⠒⠔⠄"
-nemeth, default, "∺", "⠄⡳⠭⠆⠆⠒⠁⠄"
-nemeth, default, "∻", "⠄⡳⠭⠆⠆⠒⠃⠄"
-nemeth, default, "∼", "⠈⠱"
-nemeth, default, "∽", "⠄⡳⠭⠆⠆⠒⠙⠄"
-nemeth, default, "∾", "⠄⡳⠭⠆⠆⠒⠑⠄"
-nemeth, default, "∿", "⠄⡳⠭⠆⠆⠒⠋⠄"
-nemeth, default, "≀", "⠄⡳⠭⠆⠆⠲⠴⠄"
-nemeth, default, "≁", "⠄⡳⠭⠆⠆⠲⠂⠄"
-nemeth, default, "≂", "⠄⡳⠭⠆⠆⠲⠆⠄"
-nemeth, default, "≃", "⠄⡳⠭⠆⠆⠲⠒⠄"
-nemeth, default, "≄", "⠄⡳⠭⠆⠆⠲⠲⠄"
-nemeth, default, "≅", "⠀⠈⠱⠈⠱⠀"
-nemeth, default, "≆", "⠄⡳⠭⠆⠆⠲⠖⠄"
-nemeth, default, "≇", "⠄⡳⠭⠆⠆⠲⠶⠄"
-nemeth, default, "≈", "⠄⡳⠭⠆⠆⠲⠦⠄"
-nemeth, default, "≉", "⠄⡳⠭⠆⠆⠲⠔⠄"
-nemeth, default, "≊", "⠄⡳⠭⠆⠆⠲⠁⠄"
-nemeth, default, "≋", "⠄⡳⠭⠆⠆⠲⠃⠄"
-nemeth, default, "≌", "⠄⡳⠭⠆⠆⠲⠉⠄"
-nemeth, default, "≍", "⠀⠈⠣⠠⠣⠀"
-nemeth, default, "≎", "⠄⡳⠭⠆⠆⠲⠑⠄"
-nemeth, default, "≏", "⠄⡳⠭⠆⠆⠲⠋⠄"
-nemeth, default, "≐", "⠄⡳⠭⠆⠆⠢⠴⠄"
-nemeth, default, "≑", "⠄⡳⠭⠆⠆⠢⠂⠄"
-nemeth, default, "≒", "⠄⡳⠭⠆⠆⠢⠆⠄"
-nemeth, default, "≓", "⠄⡳⠭⠆⠆⠢⠒⠄"
-nemeth, default, "≔", "⠄⡳⠭⠆⠆⠢⠲⠄"
-nemeth, default, "≕", "⠄⡳⠭⠆⠆⠢⠢⠄"
-nemeth, default, "≖", "⠄⡳⠭⠆⠆⠢⠖⠄"
-nemeth, default, "≗", "⠄⡳⠭⠆⠆⠢⠶⠄"
-nemeth, default, "≘", "⠄⡳⠭⠆⠆⠢⠦⠄"
-nemeth, default, "≙", "⠄⡳⠭⠆⠆⠢⠔⠄"
-nemeth, default, "≚", "⠄⡳⠭⠆⠆⠢⠁⠄"
-nemeth, default, "≛", "⠄⡳⠭⠆⠆⠢⠃⠄"
-nemeth, default, "≜", "⠄⡳⠭⠆⠆⠢⠉⠄"
-nemeth, default, "≝", "⠄⡳⠭⠆⠆⠢⠙⠄"
-nemeth, default, "≞", "⠄⡳⠭⠆⠆⠢⠑⠄"
-nemeth, default, "≟", "⠄⡳⠭⠆⠆⠢⠋⠄"
-nemeth, default, "≠", "⠀⠌⠨⠅⠀"
-nemeth, default, "≡", "⠀⠸⠇⠀"
-nemeth, default, "≢", "⠀⠌⠸⠇⠀"
-nemeth, default, "≣", "⠄⡳⠭⠆⠆⠖⠒⠄"
-nemeth, default, "≤", "⠀⠐⠅⠱⠀"
-nemeth, default, "≥", "⠀⠨⠂⠱⠀"
-nemeth, default, "≦", "⠀⠐⠅⠨⠅⠀"
-nemeth, default, "≧", "⠀⠨⠂⠨⠅⠀"
-nemeth, default, "≨", "⠀⠐⠅⠌⠨⠅⠀"
-nemeth, default, "≩", "⠀⠨⠂⠌⠨⠅⠀"
-nemeth, default, "≪", "⠀⠐⠅⠈⠐⠅⠻⠀"
-nemeth, default, "≫", "⠀⠨⠂⠈⠨⠂⠻⠀"
-nemeth, default, "≬", "⠄⡳⠭⠆⠆⠖⠉⠄"
-nemeth, default, "≭", "⠀⠌⠈⠣⠠⠣⠀"
-nemeth, default, "≮", "⠀⠌⠐⠅⠀"
-nemeth, default, "≯", "⠀⠌⠨⠂⠀"
-nemeth, default, "≰", "⠀⠌⠐⠅⠱⠀"
-nemeth, default, "≱", "⠀⠌⠨⠂⠱⠀"
-nemeth, default, "≲", "⠀⠐⠅⠈⠱⠀"
-nemeth, default, "≳", "⠀⠨⠂⠈⠱⠀"
-nemeth, default, "≴", "⠀⠌⠐⠅⠈⠱⠀"
-nemeth, default, "≵", "⠀⠌⠨⠂⠈⠱⠀"
-nemeth, default, "≶", "⠀⠐⠅⠨⠂⠀"
-nemeth, default, "≷", "⠀⠨⠂⠐⠅⠀"
-nemeth, default, "≸", "⠀⠌⠐⠅⠨⠂⠀"
-nemeth, default, "≹", "⠀⠌⠨⠂⠐⠅⠀"
-nemeth, default, "≺", "⠀⠨⠐⠅⠀"
-nemeth, default, "≻", "⠀⠨⠨⠐⠀"
-nemeth, default, "≼", "⠀⠨⠐⠅⠱⠀"
-nemeth, default, "≽", "⠀⠨⠨⠐⠱⠀"
-nemeth, default, "≾", "⠀⠨⠐⠅⠈⠱⠀"
-nemeth, default, "≿", "⠀⠨⠨⠐⠈⠱⠀"
-nemeth, default, "⊀", "⠀⠌⠨⠐⠅⠀"
-nemeth, default, "⊁", "⠀⠌⠨⠐⠅⠀"
-nemeth, default, "⊂", "⠀⠸⠐⠅⠀"
-nemeth, default, "⊃", "⠀⠸⠨⠂⠀"
-nemeth, default, "⊄", "⠀⠌⠸⠐⠅⠀"
-nemeth, default, "⊅", "⠀⠌⠸⠨⠂⠀"
-nemeth, default, "⊆", "⠸⠀⠅⠱"
-nemeth, default, "⊇", "⠀⠨⠂⠱⠀"
-nemeth, default, "⊈", "⠀⠌⠀⠅⠱⠀"
-nemeth, default, "⊉", "⠀⠌⠨⠂⠱⠀"
-nemeth, default, "⊊", "⠀⠸⠐⠅⠌⠨⠅⠀"
-nemeth, default, "⊋", "⠀⠸⠨⠂⠌⠨⠅⠀"
-nemeth, default, "⊌", "⠄⡳⠭⠆⠆⠦⠉⠄"
-nemeth, default, "⊍", "⠄⡳⠭⠆⠆⠦⠙⠄"
-nemeth, default, "⊎", "⠄⡳⠭⠆⠆⠦⠑⠄"
-nemeth, default, "⊏", "⠄⡳⠭⠆⠆⠦⠋⠄"
-nemeth, default, "⊐", "⠄⡳⠭⠆⠆⠔⠴⠄"
-nemeth, default, "⊑", "⠄⡳⠭⠆⠆⠔⠂⠄"
-nemeth, default, "⊒", "⠄⡳⠭⠆⠆⠔⠆⠄"
-nemeth, default, "⊓", "⠄⡳⠭⠆⠆⠔⠒⠄"
-nemeth, default, "⊔", "⠄⡳⠭⠆⠆⠔⠲⠄"
-nemeth, default, "⊕", "⠫⠉⠸⠫⠬⠻"
-nemeth, default, "⊖", "⠫⠉⠸⠫⠤⠻"
-nemeth, default, "⊗", "⠫⠉⠸⠫⠈⠡⠻"
-nemeth, default, "⊘", "⠫⠉⠸⠫⠸⠌⠻"
-nemeth, default, "⊙", "⠫⠉⠸⠫⠡⠻"
-nemeth, default, "⊚", "⠫⠉⠸⠫⠘⠨⠡⠻"
-nemeth, default, "⊛", "⠫⠉⠸⠫⠈⠼⠻"
-nemeth, default, "⊜", "⠫⠉⠸⠫⠨⠅⠻"
-nemeth, default, "⊝", "⠫⠉⠸⠫⠤⠤⠻"
-nemeth, default, "⊞", "⠫⠲⠸⠫⠬⠻"
-nemeth, default, "⊟", "⠫⠲⠸⠫⠤⠻"
-nemeth, default, "⊠", "⠫⠲⠸⠫⠈⠡⠻"
-nemeth, default, "⊡", "⠫⠲⠸⠫⠡⠻"
-nemeth, default, "⊢", "⠄⡳⠭⠆⠆⠁⠆⠄"
-nemeth, default, "⊣", "⠄⡳⠭⠆⠆⠁⠒⠄"
-nemeth, default, "⊤", "⠄⡳⠭⠆⠆⠁⠲⠄"
-nemeth, default, "⊥", "⠀⠫⠏⠀"
-nemeth, default, "⊦", "⠄⡳⠭⠆⠆⠁⠖⠄"
-nemeth, default, "⊧", "⠄⡳⠭⠆⠆⠁⠶⠄"
-nemeth, default, "⊨", "⠄⡳⠭⠆⠆⠁⠦⠄"
-nemeth, default, "⊩", "⠄⡳⠭⠆⠆⠁⠔⠄"
-nemeth, default, "⊪", "⠄⡳⠭⠆⠆⠁⠁⠄"
-nemeth, default, "⊫", "⠄⡳⠭⠆⠆⠁⠃⠄"
-nemeth, default, "⊬", "⠄⡳⠭⠆⠆⠁⠉⠄"
-nemeth, default, "⊭", "⠄⡳⠭⠆⠆⠁⠙⠄"
-nemeth, default, "⊮", "⠄⡳⠭⠆⠆⠁⠑⠄"
-nemeth, default, "⊯", "⠄⡳⠭⠆⠆⠁⠋⠄"
-nemeth, default, "⊰", "⠄⡳⠭⠆⠆⠃⠴⠄"
-nemeth, default, "⊱", "⠄⡳⠭⠆⠆⠃⠂⠄"
-nemeth, default, "⊲", "⠄⡳⠭⠆⠆⠃⠆⠄"
-nemeth, default, "⊳", "⠄⡳⠭⠆⠆⠃⠒⠄"
-nemeth, default, "⊴", "⠄⡳⠭⠆⠆⠃⠲⠄"
-nemeth, default, "⊵", "⠄⡳⠭⠆⠆⠃⠢⠄"
-nemeth, default, "⊶", "⠄⡳⠭⠆⠆⠃⠖⠄"
-nemeth, default, "⊷", "⠄⡳⠭⠆⠆⠃⠶⠄"
-nemeth, default, "⊸", "⠄⡳⠭⠆⠆⠃⠦⠄"
-nemeth, default, "⊹", "⠄⡳⠭⠆⠆⠃⠔⠄"
-nemeth, default, "⊺", "⠄⡳⠭⠆⠆⠃⠁⠄"
-nemeth, default, "⊻", "⠄⡳⠭⠆⠆⠃⠃⠄"
-nemeth, default, "⊼", "⠄⡳⠭⠆⠆⠃⠉⠄"
-nemeth, default, "⊽", "⠄⡳⠭⠆⠆⠃⠙⠄"
-nemeth, default, "⊿", "⠄⡳⠭⠆⠆⠃⠋⠄"
-nemeth, default, "⋀", "⠈⠩"
-nemeth, default, "⋁", "⠈⠬"
-nemeth, default, "⋂", "⠨⠩"
-nemeth, default, "⋃", "⠨⠬"
-nemeth, default, "⋄", "⠄⡳⠭⠆⠆⠉⠲⠄"
-nemeth, default, "⋅", "⠡"
-nemeth, default, "⋆", "⠄⡳⠭⠆⠆⠉⠖⠄"
-nemeth, default, "⋇", "⠄⡳⠭⠆⠆⠉⠶⠄"
-nemeth, default, "⋈", "⠄⡳⠭⠆⠆⠉⠦⠄"
-nemeth, default, "⋉", "⠄⡳⠭⠆⠆⠉⠔⠄"
-nemeth, default, "⋊", "⠄⡳⠭⠆⠆⠉⠁⠄"
-nemeth, default, "⋋", "⠄⡳⠭⠆⠆⠉⠃⠄"
-nemeth, default, "⋌", "⠄⡳⠭⠆⠆⠉⠉⠄"
-nemeth, default, "⋍", "⠄⡳⠭⠆⠆⠉⠙⠄"
-nemeth, default, "⋎", "⠄⡳⠭⠆⠆⠉⠑⠄"
-nemeth, default, "⋏", "⠄⡳⠭⠆⠆⠉⠋⠄"
-nemeth, default, "⋐", "⠄⡳⠭⠆⠆⠙⠴⠄"
-nemeth, default, "⋑", "⠄⡳⠭⠆⠆⠙⠂⠄"
-nemeth, default, "⋒", "⠄⡳⠭⠆⠆⠙⠆⠄"
-nemeth, default, "⋓", "⠄⡳⠭⠆⠆⠙⠒⠄"
-nemeth, default, "⋔", "⠄⡳⠭⠆⠆⠙⠲⠄"
-nemeth, default, "⋕", "⠄⡳⠭⠆⠆⠙⠢⠄"
-nemeth, default, "⋖", "⠄⡳⠭⠆⠆⠙⠖⠄"
-nemeth, default, "⋗", "⠄⡳⠭⠆⠆⠙⠶⠄"
-nemeth, default, "⋘", "⠄⡳⠭⠆⠆⠙⠦⠄"
-nemeth, default, "⋙", "⠄⡳⠭⠆⠆⠙⠔⠄"
-nemeth, default, "⋚", "⠄⡳⠭⠆⠆⠙⠁⠄"
-nemeth, default, "⋛", "⠄⡳⠭⠆⠆⠙⠃⠄"
-nemeth, default, "⋜", "⠀⠱⠐⠅⠀"
-nemeth, default, "⋝", "⠀⠱⠨⠂⠀"
-nemeth, default, "⋞", "⠄⡳⠭⠆⠆⠙⠑⠄"
-nemeth, default, "⋟", "⠄⡳⠭⠆⠆⠙⠋⠄"
-nemeth, default, "⋠", "⠄⡳⠭⠆⠆⠑⠴⠄"
-nemeth, default, "⋡", "⠄⡳⠭⠆⠆⠑⠂⠄"
-nemeth, default, "⋢", "⠄⡳⠭⠆⠆⠑⠆⠄"
-nemeth, default, "⋣", "⠄⡳⠭⠆⠆⠑⠒⠄"
-nemeth, default, "⋤", "⠄⡳⠭⠆⠆⠑⠲⠄"
-nemeth, default, "⋥", "⠄⡳⠭⠆⠆⠑⠢⠄"
-nemeth, default, "⋦", "⠄⡳⠭⠆⠆⠑⠖⠄"
-nemeth, default, "⋧", "⠄⡳⠭⠆⠆⠑⠶⠄"
-nemeth, default, "⋨", "⠄⡳⠭⠆⠆⠑⠦⠄"
-nemeth, default, "⋩", "⠄⡳⠭⠆⠆⠑⠔⠄"
-nemeth, default, "⋪", "⠄⡳⠭⠆⠆⠑⠁⠄"
-nemeth, default, "⋫", "⠄⡳⠭⠆⠆⠑⠃⠄"
-nemeth, default, "⋬", "⠄⡳⠭⠆⠆⠑⠉⠄"
-nemeth, default, "⋭", "⠄⡳⠭⠆⠆⠑⠙⠄"
-nemeth, default, "⋮", "⠣⠄⠄⠄"
-nemeth, default, "⋯", "⠄⠄⠄"
-nemeth, default, "⋰", "⠘⠄⠄⠄"
-nemeth, default, "⋱", "⠰⠄⠄⠄"
-nemeth, default, "⋲", "⠄⡳⠭⠆⠆⠋⠆⠄"
-nemeth, default, "⋳", "⠄⡳⠭⠆⠆⠋⠒⠄"
-nemeth, default, "⋴", "⠄⡳⠭⠆⠆⠋⠲⠄"
-nemeth, default, "⋵", "⠄⡳⠭⠆⠆⠋⠢⠄"
-nemeth, default, "⋶", "⠄⡳⠭⠆⠆⠋⠖⠄"
-nemeth, default, "⋷", "⠄⡳⠭⠆⠆⠋⠶⠄"
-nemeth, default, "⋸", "⠄⡳⠭⠆⠆⠋⠦⠄"
-nemeth, default, "⋹", "⠄⡳⠭⠆⠆⠋⠔⠄"
-nemeth, default, "⋺", "⠄⡳⠭⠆⠆⠋⠁⠄"
-nemeth, default, "⋻", "⠄⡳⠭⠆⠆⠋⠃⠄"
-nemeth, default, "⋼", "⠄⡳⠭⠆⠆⠋⠉⠄"
-nemeth, default, "⋽", "⠄⡳⠭⠆⠆⠋⠙⠄"
-nemeth, default, "⋾", "⠄⡳⠭⠆⠆⠋⠑⠄"
-nemeth, default, "⋿", "⠄⡳⠭⠆⠆⠋⠋⠄"
-nemeth, default, "⌀", "⠄⡳⠭⠆⠒⠴⠴⠄"
-nemeth, default, "⌂", "⠄⡳⠭⠆⠒⠴⠆⠄"
-nemeth, default, "⌅", "⠄⡳⠭⠆⠒⠴⠢⠄"
-nemeth, default, "⌆", "⠄⡳⠭⠆⠒⠴⠖⠄"
-nemeth, default, "⌇", "⠄⡳⠭⠆⠒⠴⠶⠄"
-nemeth, default, "⌐", "⠄⡳⠭⠆⠒⠂⠴⠄"
-nemeth, default, "⌑", "⠄⡳⠭⠆⠒⠂⠂⠄"
-nemeth, default, "⌒", "⠄⡳⠭⠆⠒⠂⠆⠄"
-nemeth, default, "⌓", "⠄⡳⠭⠆⠒⠂⠒⠄"
-nemeth, default, "⌔", "⠄⡳⠭⠆⠒⠂⠲⠄"
-nemeth, default, "➕", "⠄⡳⠭⠆⠶⠔⠢⠄"
-nemeth, default, "➖", "⠄⡳⠭⠆⠶⠔⠖⠄"
-nemeth, default, "➗", "⠄⡳⠭⠆⠶⠔⠶⠄"
-nemeth, default, "➰", "⠄⡳⠭⠆⠶⠃⠴⠄"
-nemeth, default, "➿", "⠄⡳⠭⠆⠶⠃⠋⠄"
-nemeth, default, "⟁", "⠄⡳⠭⠆⠶⠉⠂⠄"
-nemeth, default, "⟂", "⠫⠏"
-nemeth, default, "⟃", "⠄⡳⠭⠆⠶⠉⠒⠄"
-nemeth, default, "⟄", "⠄⡳⠭⠆⠶⠉⠲⠄"
-nemeth, default, "⟇", "⠄⡳⠭⠆⠶⠉⠶⠄"
-nemeth, default, "⟈", "⠄⡳⠭⠆⠶⠉⠦⠄"
-nemeth, default, "⟉", "⠄⡳⠭⠆⠶⠉⠔⠄"
-nemeth, default, "⟊", "⠄⡳⠭⠆⠶⠉⠁⠄"
-nemeth, default, "⟋", "⠄⡳⠭⠆⠶⠉⠃⠄"
-nemeth, default, "⟌", "⠄⡳⠭⠆⠶⠉⠉⠄"
-nemeth, default, "⟍", "⠄⡳⠭⠆⠶⠉⠙⠄"
-nemeth, default, "⟎", "⠄⡳⠭⠆⠶⠉⠑⠄"
-nemeth, default, "⟏", "⠄⡳⠭⠆⠶⠉⠋⠄"
-nemeth, default, "⟐", "⠄⡳⠭⠆⠶⠙⠴⠄"
-nemeth, default, "⟑", "⠄⡳⠭⠆⠶⠙⠂⠄"
-nemeth, default, "⟒", "⠄⡳⠭⠆⠶⠙⠆⠄"
-nemeth, default, "⟓", "⠄⡳⠭⠆⠶⠙⠒⠄"
-nemeth, default, "⟔", "⠄⡳⠭⠆⠶⠙⠲⠄"
-nemeth, default, "⟕", "⠄⡳⠭⠆⠶⠙⠢⠄"
-nemeth, default, "⟖", "⠄⡳⠭⠆⠶⠙⠖⠄"
-nemeth, default, "⟗", "⠄⡳⠭⠆⠶⠙⠶⠄"
-nemeth, default, "⟘", "⠄⡳⠭⠆⠶⠙⠦⠄"
-nemeth, default, "⟙", "⠄⡳⠭⠆⠶⠙⠔⠄"
-nemeth, default, "⟚", "⠄⡳⠭⠆⠶⠙⠁⠄"
-nemeth, default, "⟛", "⠄⡳⠭⠆⠶⠙⠃⠄"
-nemeth, default, "⟜", "⠄⡳⠭⠆⠶⠙⠉⠄"
-nemeth, default, "⟝", "⠄⡳⠭⠆⠶⠙⠙⠄"
-nemeth, default, "⟞", "⠄⡳⠭⠆⠶⠙⠑⠄"
-nemeth, default, "⟟", "⠄⡳⠭⠆⠶⠙⠋⠄"
-nemeth, default, "⟠", "⠄⡳⠭⠆⠶⠑⠴⠄"
-nemeth, default, "⟡", "⠄⡳⠭⠆⠶⠑⠂⠄"
-nemeth, default, "⟢", "⠄⡳⠭⠆⠶⠑⠆⠄"
-nemeth, default, "⟣", "⠄⡳⠭⠆⠶⠑⠒⠄"
-nemeth, default, "⟤", "⠄⡳⠭⠆⠶⠑⠲⠄"
-nemeth, default, "⟥", "⠄⡳⠭⠆⠶⠑⠢⠄"
-nemeth, default, "⤫", "⠄⡳⠭⠆⠔⠆⠃⠄"
-nemeth, default, "⤬", "⠄⡳⠭⠆⠔⠆⠉⠄"
-nemeth, default, "⦀", "⠳⠳⠳"
-nemeth, default, "⦁", "⠄⡳⠭⠆⠔⠦⠂⠄"
-nemeth, default, "⦂", "⠄⡳⠭⠆⠔⠦⠆⠄"
-nemeth, default, "⦙", "⠄⡳⠭⠆⠔⠔⠔⠄"
-nemeth, default, "⦚", "⠄⡳⠭⠆⠔⠔⠁⠄"
-nemeth, default, "⦰", "⠄⡳⠭⠆⠔⠃⠴⠄"
-nemeth, default, "⦱", "⠄⡳⠭⠆⠔⠃⠂⠄"
-nemeth, default, "⦲", "⠄⡳⠭⠆⠔⠃⠆⠄"
-nemeth, default, "⦵", "⠄⡳⠭⠆⠔⠃⠢⠄"
-nemeth, default, "⦶", "⠫⠉⠸⠫⠳⠻"
-nemeth, default, "⦷", "⠫⠉⠸⠫⠫⠇⠻"
-nemeth, default, "⦸", "⠫⠉⠸⠫⠸⠡⠻"
-nemeth, default, "⦹", "⠫⠉⠸⠫⠫⠏⠻"
-nemeth, default, "⦺", "⠄⡳⠭⠆⠔⠃⠁⠄"
-nemeth, default, "⦻", "⠄⡳⠭⠆⠔⠃⠃⠄"
-nemeth, default, "⦼", "⠄⡳⠭⠆⠔⠃⠉⠄"
-nemeth, default, "⦾", "⠄⡳⠭⠆⠔⠃⠑⠄"
-nemeth, default, "⦿", "⠫⠉⠸⠫⠔⠔⠻"
-nemeth, default, "⧀", "⠫⠉⠸⠫⠐⠅⠻"
-nemeth, default, "⧁", "⠫⠉⠸⠫⠨⠂⠻"
-nemeth, default, "⧂", "⠄⡳⠭⠆⠔⠉⠆⠄"
-nemeth, default, "⧃", "⠄⡳⠭⠆⠔⠉⠒⠄"
-nemeth, default, "⧄", "⠄⡳⠭⠆⠔⠉⠲⠄"
-nemeth, default, "⧅", "⠄⡳⠭⠆⠔⠉⠢⠄"
-nemeth, default, "⧆", "⠄⡳⠭⠆⠔⠉⠖⠄"
-nemeth, default, "⧇", "⠄⡳⠭⠆⠔⠉⠶⠄"
-nemeth, default, "⧈", "⠄⡳⠭⠆⠔⠉⠦⠄"
-nemeth, default, "⧉", "⠄⡳⠭⠆⠔⠉⠔⠄"
-nemeth, default, "⧊", "⠄⡳⠭⠆⠔⠉⠁⠄"
-nemeth, default, "⧋", "⠄⡳⠭⠆⠔⠉⠃⠄"
-nemeth, default, "⧌", "⠄⡳⠭⠆⠔⠉⠉⠄"
-nemeth, default, "⧍", "⠄⡳⠭⠆⠔⠉⠙⠄"
-nemeth, default, "⧎", "⠄⡳⠭⠆⠔⠉⠑⠄"
-nemeth, default, "⧏", "⠄⡳⠭⠆⠔⠉⠋⠄"
-nemeth, default, "⧐", "⠄⡳⠭⠆⠔⠙⠴⠄"
-nemeth, default, "⧑", "⠄⡳⠭⠆⠔⠙⠂⠄"
-nemeth, default, "⧒", "⠄⡳⠭⠆⠔⠙⠆⠄"
-nemeth, default, "⧓", "⠄⡳⠭⠆⠔⠙⠒⠄"
-nemeth, default, "⧔", "⠄⡳⠭⠆⠔⠙⠲⠄"
-nemeth, default, "⧕", "⠄⡳⠭⠆⠔⠙⠢⠄"
-nemeth, default, "⧖", "⠄⡳⠭⠆⠔⠙⠖⠄"
-nemeth, default, "⧗", "⠄⡳⠭⠆⠔⠙⠶⠄"
-nemeth, default, "⧜", "⠄⡳⠭⠆⠔⠙⠉⠄"
-nemeth, default, "⧝", "⠄⡳⠭⠆⠔⠙⠙⠄"
-nemeth, default, "⧞", "⠄⡳⠭⠆⠔⠙⠑⠄"
-nemeth, default, "⧟", "⠄⡳⠭⠆⠔⠙⠋⠄"
-nemeth, default, "⧠", "⠄⡳⠭⠆⠔⠑⠴⠄"
-nemeth, default, "⧡", "⠄⡳⠭⠆⠔⠑⠂⠄"
-nemeth, default, "⧢", "⠄⡳⠭⠆⠔⠑⠆⠄"
-nemeth, default, "⧣", "⠄⡳⠭⠆⠔⠑⠒⠄"
-nemeth, default, "⧤", "⠄⡳⠭⠆⠔⠑⠲⠄"
-nemeth, default, "⧥", "⠄⡳⠭⠆⠔⠑⠢⠄"
-nemeth, default, "⧦", "⠄⡳⠭⠆⠔⠑⠖⠄"
-nemeth, default, "⧧", "⠄⡳⠭⠆⠔⠑⠶⠄"
-nemeth, default, "⧨", "⠄⡳⠭⠆⠔⠑⠦⠄"
-nemeth, default, "⧩", "⠄⡳⠭⠆⠔⠑⠔⠄"
-nemeth, default, "⧫", "⠄⡳⠭⠆⠔⠑⠃⠄"
-nemeth, default, "⧮", "⠄⡳⠭⠆⠔⠑⠑⠄"
-nemeth, default, "⧯", "⠄⡳⠭⠆⠔⠑⠋⠄"
-nemeth, default, "⧰", "⠄⡳⠭⠆⠔⠋⠴⠄"
-nemeth, default, "⧱", "⠄⡳⠭⠆⠔⠋⠂⠄"
-nemeth, default, "⧲", "⠄⡳⠭⠆⠔⠋⠆⠄"
-nemeth, default, "⧳", "⠄⡳⠭⠆⠔⠋⠒⠄"
-nemeth, default, "⧴", "⠄⡳⠭⠆⠔⠋⠲⠄"
-nemeth, default, "⧵", "⠄⡳⠭⠆⠔⠋⠢⠄"
-nemeth, default, "⧶", "⠄⡳⠭⠆⠔⠋⠖⠄"
-nemeth, default, "⧷", "⠄⡳⠭⠆⠔⠋⠶⠄"
-nemeth, default, "⧸", "⠄⡳⠭⠆⠔⠋⠦⠄"
-nemeth, default, "⧹", "⠄⡳⠭⠆⠔⠋⠔⠄"
-nemeth, default, "⧺", "⠄⡳⠭⠆⠔⠋⠁⠄"
-nemeth, default, "⧻", "⠄⡳⠭⠆⠔⠋⠃⠄"
-nemeth, default, "⧾", "⠄⡳⠭⠆⠔⠋⠑⠄"
-nemeth, default, "⧿", "⠄⡳⠭⠆⠔⠋⠋⠄"
-nemeth, default, "⨀", "⠫⠉⠸⠫⠡⠻"
-nemeth, default, "⨁", "⠫⠉⠸⠫⠬⠻"
-nemeth, default, "⨂", "⠫⠉⠸⠫⠈⠡⠻"
-nemeth, default, "⨃", "⠄⡳⠭⠆⠁⠴⠒⠄"
-nemeth, default, "⨄", "⠄⡳⠭⠆⠁⠴⠲⠄"
-nemeth, default, "⨅", "⠄⡳⠭⠆⠁⠴⠢⠄"
-nemeth, default, "⨆", "⠄⡳⠭⠆⠁⠴⠖⠄"
-nemeth, default, "⨇", "⠄⡳⠭⠆⠁⠴⠶⠄"
-nemeth, default, "⨈", "⠄⡳⠭⠆⠁⠴⠦⠄"
-nemeth, default, "⨉", "⠄⡳⠭⠆⠁⠴⠔⠄"
-nemeth, default, "⨊", "⠄⡳⠭⠆⠁⠴⠁⠄"
-nemeth, default, "⨋", "⠄⡳⠭⠆⠁⠴⠃⠄"
-nemeth, default, "⨌", "⠄⡳⠭⠆⠁⠴⠉⠄"
-nemeth, default, "⨍", "⠄⡳⠭⠆⠁⠴⠙⠄"
-nemeth, default, "⨎", "⠄⡳⠭⠆⠁⠴⠑⠄"
-nemeth, default, "⨏", "⠄⡳⠭⠆⠁⠴⠋⠄"
-nemeth, default, "⨐", "⠄⡳⠭⠆⠁⠂⠴⠄"
-nemeth, default, "⨑", "⠄⡳⠭⠆⠁⠂⠂⠄"
-nemeth, default, "⨒", "⠄⡳⠭⠆⠁⠂⠆⠄"
-nemeth, default, "⨓", "⠄⡳⠭⠆⠁⠂⠒⠄"
-nemeth, default, "⨔", "⠄⡳⠭⠆⠁⠂⠲⠄"
-nemeth, default, "⨕", "⠄⡳⠭⠆⠁⠂⠢⠄"
-nemeth, default, "⨖", "⠄⡳⠭⠆⠁⠂⠖⠄"
-nemeth, default, "⨘", "⠄⡳⠭⠆⠁⠂⠦⠄"
-nemeth, default, "⨙", "⠄⡳⠭⠆⠁⠂⠔⠄"
-nemeth, default, "⨚", "⠄⡳⠭⠆⠁⠂⠁⠄"
-nemeth, default, "⨛", "⠄⡳⠭⠆⠁⠂⠃⠄"
-nemeth, default, "⨜", "⠄⡳⠭⠆⠁⠂⠉⠄"
-nemeth, default, "⨝", "⠄⡳⠭⠆⠁⠂⠙⠄"
-nemeth, default, "⨞", "⠄⡳⠭⠆⠁⠂⠑⠄"
-nemeth, default, "⨟", "⠄⡳⠭⠆⠁⠂⠋⠄"
-nemeth, default, "⨠", "⠄⡳⠭⠆⠁⠆⠴⠄"
-nemeth, default, "⨡", "⠄⡳⠭⠆⠁⠆⠂⠄"
-nemeth, default, "⨢", "⠄⡳⠭⠆⠁⠆⠆⠄"
-nemeth, default, "⨣", "⠄⡳⠭⠆⠁⠆⠒⠄"
-nemeth, default, "⨤", "⠄⡳⠭⠆⠁⠆⠲⠄"
-nemeth, default, "⨥", "⠄⡳⠭⠆⠁⠆⠢⠄"
-nemeth, default, "⨦", "⠄⡳⠭⠆⠁⠆⠖⠄"
-nemeth, default, "⨧", "⠄⡳⠭⠆⠁⠆⠶⠄"
-nemeth, default, "⨨", "⠄⡳⠭⠆⠁⠆⠦⠄"
-nemeth, default, "⨩", "⠄⡳⠭⠆⠁⠆⠔⠄"
-nemeth, default, "⨪", "⠄⡳⠭⠆⠁⠆⠁⠄"
-nemeth, default, "⨫", "⠄⡳⠭⠆⠁⠆⠃⠄"
-nemeth, default, "⨬", "⠄⡳⠭⠆⠁⠆⠉⠄"
-nemeth, default, "⨭", "⠄⡳⠭⠆⠁⠆⠙⠄"
-nemeth, default, "⨮", "⠄⡳⠭⠆⠁⠆⠑⠄"
-nemeth, default, "⨯", "⠄⡳⠭⠆⠁⠆⠋⠄"
-nemeth, default, "⨰", "⠄⡳⠭⠆⠁⠒⠴⠄"
-nemeth, default, "⨱", "⠄⡳⠭⠆⠁⠒⠂⠄"
-nemeth, default, "⨲", "⠄⡳⠭⠆⠁⠒⠆⠄"
-nemeth, default, "⨳", "⠄⡳⠭⠆⠁⠒⠒⠄"
-nemeth, default, "⨴", "⠄⡳⠭⠆⠁⠒⠲⠄"
-nemeth, default, "⨵", "⠄⡳⠭⠆⠁⠒⠢⠄"
-nemeth, default, "⨶", "⠄⡳⠭⠆⠁⠒⠖⠄"
-nemeth, default, "⨷", "⠄⡳⠭⠆⠁⠒⠶⠄"
-nemeth, default, "⨸", "⠫⠉⠸⠫⠈⠌⠻"
-nemeth, default, "⨹", "⠄⡳⠭⠆⠁⠒⠔⠄"
-nemeth, default, "⨺", "⠄⡳⠭⠆⠁⠒⠁⠄"
-nemeth, default, "⨻", "⠄⡳⠭⠆⠁⠒⠃⠄"
-nemeth, default, "⨼", "⠄⡳⠭⠆⠁⠒⠉⠄"
-nemeth, default, "⨽", "⠄⡳⠭⠆⠁⠒⠙⠄"
-nemeth, default, "⨾", "⠄⡳⠭⠆⠁⠒⠑⠄"
-nemeth, default, "⨿", "⠄⡳⠭⠆⠁⠒⠋⠄"
-nemeth, default, "⩀", "⠄⡳⠭⠆⠁⠲⠴⠄"
-nemeth, default, "⩁", "⠄⡳⠭⠆⠁⠲⠂⠄"
-nemeth, default, "⩂", "⠄⡳⠭⠆⠁⠲⠆⠄"
-nemeth, default, "⩃", "⠄⡳⠭⠆⠁⠲⠒⠄"
-nemeth, default, "⩄", "⠄⡳⠭⠆⠁⠲⠲⠄"
-nemeth, default, "⩅", "⠄⡳⠭⠆⠁⠲⠢⠄"
-nemeth, default, "⩆", "⠄⡳⠭⠆⠁⠲⠖⠄"
-nemeth, default, "⩇", "⠄⡳⠭⠆⠁⠲⠶⠄"
-nemeth, default, "⩈", "⠄⡳⠭⠆⠁⠲⠦⠄"
-nemeth, default, "⩉", "⠄⡳⠭⠆⠁⠲⠔⠄"
-nemeth, default, "⩊", "⠄⡳⠭⠆⠁⠲⠁⠄"
-nemeth, default, "⩋", "⠄⡳⠭⠆⠁⠲⠃⠄"
-nemeth, default, "⩌", "⠄⡳⠭⠆⠁⠲⠉⠄"
-nemeth, default, "⩍", "⠄⡳⠭⠆⠁⠲⠙⠄"
-nemeth, default, "⩎", "⠄⡳⠭⠆⠁⠲⠑⠄"
-nemeth, default, "⩏", "⠄⡳⠭⠆⠁⠲⠋⠄"
-nemeth, default, "⩐", "⠄⡳⠭⠆⠁⠢⠴⠄"
-nemeth, default, "⩑", "⠄⡳⠭⠆⠁⠢⠂⠄"
-nemeth, default, "⩒", "⠄⡳⠭⠆⠁⠢⠆⠄"
-nemeth, default, "⩓", "⠄⡳⠭⠆⠁⠢⠒⠄"
-nemeth, default, "⩔", "⠄⡳⠭⠆⠁⠢⠲⠄"
-nemeth, default, "⩕", "⠄⡳⠭⠆⠁⠢⠢⠄"
-nemeth, default, "⩖", "⠄⡳⠭⠆⠁⠢⠖⠄"
-nemeth, default, "⩗", "⠄⡳⠭⠆⠁⠢⠶⠄"
-nemeth, default, "⩘", "⠄⡳⠭⠆⠁⠢⠦⠄"
-nemeth, default, "⩙", "⠄⡳⠭⠆⠁⠢⠔⠄"
-nemeth, default, "⩚", "⠄⡳⠭⠆⠁⠢⠁⠄"
-nemeth, default, "⩛", "⠄⡳⠭⠆⠁⠢⠃⠄"
-nemeth, default, "⩜", "⠄⡳⠭⠆⠁⠢⠉⠄"
-nemeth, default, "⩝", "⠄⡳⠭⠆⠁⠢⠙⠄"
-nemeth, default, "⩞", "⠄⡳⠭⠆⠁⠢⠑⠄"
-nemeth, default, "⩟", "⠄⡳⠭⠆⠁⠢⠋⠄"
-nemeth, default, "⩠", "⠄⡳⠭⠆⠁⠖⠴⠄"
-nemeth, default, "⩡", "⠄⡳⠭⠆⠁⠖⠂⠄"
-nemeth, default, "⩢", "⠄⡳⠭⠆⠁⠖⠆⠄"
-nemeth, default, "⩣", "⠄⡳⠭⠆⠁⠖⠒⠄"
-nemeth, default, "⩤", "⠄⡳⠭⠆⠁⠖⠲⠄"
-nemeth, default, "⩥", "⠄⡳⠭⠆⠁⠖⠢⠄"
-nemeth, default, "⩦", "⠄⡳⠭⠆⠁⠖⠖⠄"
-nemeth, default, "⩧", "⠄⡳⠭⠆⠁⠖⠶⠄"
-nemeth, default, "⩨", "⠄⡳⠭⠆⠁⠖⠦⠄"
-nemeth, default, "⩩", "⠄⡳⠭⠆⠁⠖⠔⠄"
-nemeth, default, "⩪", "⠄⡳⠭⠆⠁⠖⠁⠄"
-nemeth, default, "⩫", "⠄⡳⠭⠆⠁⠖⠃⠄"
-nemeth, default, "⩬", "⠄⡳⠭⠆⠁⠖⠉⠄"
-nemeth, default, "⩭", "⠄⡳⠭⠆⠁⠖⠙⠄"
-nemeth, default, "⩮", "⠄⡳⠭⠆⠁⠖⠑⠄"
-nemeth, default, "⩯", "⠄⡳⠭⠆⠁⠖⠋⠄"
-nemeth, default, "⩰", "⠄⡳⠭⠆⠁⠶⠴⠄"
-nemeth, default, "⩱", "⠄⡳⠭⠆⠁⠶⠂⠄"
-nemeth, default, "⩲", "⠄⡳⠭⠆⠁⠶⠆⠄"
-nemeth, default, "⩳", "⠄⡳⠭⠆⠁⠶⠒⠄"
-nemeth, default, "⩴", "⠄⡳⠭⠆⠁⠶⠲⠄"
-nemeth, default, "⩵", "⠄⡳⠭⠆⠁⠶⠢⠄"
-nemeth, default, "⩶", "⠄⡳⠭⠆⠁⠶⠖⠄"
-nemeth, default, "⩷", "⠄⡳⠭⠆⠁⠶⠶⠄"
-nemeth, default, "⩸", "⠄⡳⠭⠆⠁⠶⠦⠄"
-nemeth, default, "⩹", "⠄⡳⠭⠆⠁⠶⠔⠄"
-nemeth, default, "⩺", "⠄⡳⠭⠆⠁⠶⠁⠄"
-nemeth, default, "⩻", "⠄⡳⠭⠆⠁⠶⠃⠄"
-nemeth, default, "⩼", "⠄⡳⠭⠆⠁⠶⠉⠄"
-nemeth, default, "⩽", "⠄⡳⠭⠆⠁⠶⠙⠄"
-nemeth, default, "⩾", "⠄⡳⠭⠆⠁⠶⠑⠄"
-nemeth, default, "⩿", "⠄⡳⠭⠆⠁⠶⠋⠄"
-nemeth, default, "⪀", "⠄⡳⠭⠆⠁⠦⠴⠄"
-nemeth, default, "⪁", "⠄⡳⠭⠆⠁⠦⠂⠄"
-nemeth, default, "⪂", "⠄⡳⠭⠆⠁⠦⠆⠄"
-nemeth, default, "⪃", "⠄⡳⠭⠆⠁⠦⠒⠄"
-nemeth, default, "⪄", "⠄⡳⠭⠆⠁⠦⠲⠄"
-nemeth, default, "⪅", "⠄⡳⠭⠆⠁⠦⠢⠄"
-nemeth, default, "⪆", "⠄⡳⠭⠆⠁⠦⠖⠄"
-nemeth, default, "⪇", "⠄⡳⠭⠆⠁⠦⠶⠄"
-nemeth, default, "⪈", "⠄⡳⠭⠆⠁⠦⠦⠄"
-nemeth, default, "⪉", "⠄⡳⠭⠆⠁⠦⠔⠄"
-nemeth, default, "⪊", "⠄⡳⠭⠆⠁⠦⠁⠄"
-nemeth, default, "⪋", "⠄⡳⠭⠆⠁⠦⠃⠄"
-nemeth, default, "⪌", "⠄⡳⠭⠆⠁⠦⠉⠄"
-nemeth, default, "⪍", "⠄⡳⠭⠆⠁⠦⠙⠄"
-nemeth, default, "⪎", "⠄⡳⠭⠆⠁⠦⠑⠄"
-nemeth, default, "⪏", "⠄⡳⠭⠆⠁⠦⠋⠄"
-nemeth, default, "⪐", "⠄⡳⠭⠆⠁⠔⠴⠄"
-nemeth, default, "⪑", "⠄⡳⠭⠆⠁⠔⠂⠄"
-nemeth, default, "⪒", "⠄⡳⠭⠆⠁⠔⠆⠄"
-nemeth, default, "⪓", "⠄⡳⠭⠆⠁⠔⠒⠄"
-nemeth, default, "⪔", "⠄⡳⠭⠆⠁⠔⠲⠄"
-nemeth, default, "⪕", "⠄⡳⠭⠆⠁⠔⠢⠄"
-nemeth, default, "⪖", "⠄⡳⠭⠆⠁⠔⠖⠄"
-nemeth, default, "⪗", "⠄⡳⠭⠆⠁⠔⠶⠄"
-nemeth, default, "⪘", "⠄⡳⠭⠆⠁⠔⠦⠄"
-nemeth, default, "⪙", "⠄⡳⠭⠆⠁⠔⠔⠄"
-nemeth, default, "⪚", "⠄⡳⠭⠆⠁⠔⠁⠄"
-nemeth, default, "⪛", "⠄⡳⠭⠆⠁⠔⠃⠄"
-nemeth, default, "⪜", "⠄⡳⠭⠆⠁⠔⠉⠄"
-nemeth, default, "⪝", "⠄⡳⠭⠆⠁⠔⠙⠄"
-nemeth, default, "⪞", "⠄⡳⠭⠆⠁⠔⠑⠄"
-nemeth, default, "⪟", "⠄⡳⠭⠆⠁⠔⠋⠄"
-nemeth, default, "⪠", "⠄⡳⠭⠆⠁⠁⠴⠄"
-nemeth, default, "⪡", "⠄⡳⠭⠆⠁⠁⠂⠄"
-nemeth, default, "⪢", "⠄⡳⠭⠆⠁⠁⠆⠄"
-nemeth, default, "⪣", "⠄⡳⠭⠆⠁⠁⠒⠄"
-nemeth, default, "⪤", "⠄⡳⠭⠆⠁⠁⠲⠄"
-nemeth, default, "⪥", "⠄⡳⠭⠆⠁⠁⠢⠄"
-nemeth, default, "⪦", "⠄⡳⠭⠆⠁⠁⠖⠄"
-nemeth, default, "⪧", "⠄⡳⠭⠆⠁⠁⠶⠄"
-nemeth, default, "⪨", "⠄⡳⠭⠆⠁⠁⠦⠄"
-nemeth, default, "⪩", "⠄⡳⠭⠆⠁⠁⠔⠄"
-nemeth, default, "⪪", "⠄⡳⠭⠆⠁⠁⠁⠄"
-nemeth, default, "⪫", "⠄⡳⠭⠆⠁⠁⠃⠄"
-nemeth, default, "⪬", "⠄⡳⠭⠆⠁⠁⠉⠄"
-nemeth, default, "⪭", "⠄⡳⠭⠆⠁⠁⠙⠄"
-nemeth, default, "⪮", "⠄⡳⠭⠆⠁⠁⠑⠄"
-nemeth, default, "⪯", "⠀⠨⠐⠅⠱⠀"
-nemeth, default, "⪰", "⠀⠨⠨⠐⠱⠀"
-nemeth, default, "⪱", "⠀⠨⠐⠅⠌⠱⠀"
-nemeth, default, "⪲", "⠀⠨⠨⠐⠌⠱⠀"
-nemeth, default, "⪳", "⠀⠨⠐⠅⠨⠅⠀"
-nemeth, default, "⪴", "⠀⠨⠨⠐⠨⠅⠀"
-nemeth, default, "⪵", "⠀⠨⠐⠅⠌⠨⠅⠀"
-nemeth, default, "⪶", "⠀⠨⠨⠐⠌⠨⠅⠀"
-nemeth, default, "⪷", "⠀⠨⠐⠅⠈⠱⠈⠱⠀"
-nemeth, default, "⪸", "⠀⠨⠨⠐⠈⠱⠈⠱⠀"
-nemeth, default, "⪹", "⠀⠨⠐⠅⠌⠈⠱⠈⠱⠀"
-nemeth, default, "⪺", "⠀⠨⠨⠐⠌⠈⠱⠈⠱⠀"
-nemeth, default, "⪻", "⠀⠨⠐⠅⠈⠨⠐⠅⠻⠀"
-nemeth, default, "⪼", "⠀⠨⠨⠐⠈⠨⠨⠐⠻⠀"
-nemeth, default, "⪽", "⠄⡳⠭⠆⠁⠃⠙⠄"
-nemeth, default, "⪾", "⠄⡳⠭⠆⠁⠃⠑⠄"
-nemeth, default, "⪿", "⠄⡳⠭⠆⠁⠃⠋⠄"
-nemeth, default, "⫀", "⠄⡳⠭⠆⠁⠉⠴⠄"
-nemeth, default, "⫁", "⠄⡳⠭⠆⠁⠉⠂⠄"
-nemeth, default, "⫂", "⠄⡳⠭⠆⠁⠉⠆⠄"
-nemeth, default, "⫃", "⠄⡳⠭⠆⠁⠉⠒⠄"
-nemeth, default, "⫄", "⠄⡳⠭⠆⠁⠉⠲⠄"
-nemeth, default, "⫅", "⠄⡳⠭⠆⠁⠉⠢⠄"
-nemeth, default, "⫆", "⠄⡳⠭⠆⠁⠉⠖⠄"
-nemeth, default, "⫇", "⠄⡳⠭⠆⠁⠉⠶⠄"
-nemeth, default, "⫈", "⠄⡳⠭⠆⠁⠉⠦⠄"
-nemeth, default, "⫉", "⠄⡳⠭⠆⠁⠉⠔⠄"
-nemeth, default, "⫊", "⠄⡳⠭⠆⠁⠉⠁⠄"
-nemeth, default, "⫋", "⠄⡳⠭⠆⠁⠉⠃⠄"
-nemeth, default, "⫌", "⠄⡳⠭⠆⠁⠉⠉⠄"
-nemeth, default, "⫍", "⠄⡳⠭⠆⠁⠉⠙⠄"
-nemeth, default, "⫎", "⠄⡳⠭⠆⠁⠉⠑⠄"
-nemeth, default, "⫏", "⠄⡳⠭⠆⠁⠉⠋⠄"
-nemeth, default, "⫐", "⠄⡳⠭⠆⠁⠙⠴⠄"
-nemeth, default, "⫑", "⠄⡳⠭⠆⠁⠙⠂⠄"
-nemeth, default, "⫒", "⠄⡳⠭⠆⠁⠙⠆⠄"
-nemeth, default, "⫓", "⠄⡳⠭⠆⠁⠙⠒⠄"
-nemeth, default, "⫔", "⠄⡳⠭⠆⠁⠙⠲⠄"
-nemeth, default, "⫕", "⠄⡳⠭⠆⠁⠙⠢⠄"
-nemeth, default, "⫖", "⠄⡳⠭⠆⠁⠙⠖⠄"
-nemeth, default, "⫗", "⠄⡳⠭⠆⠁⠙⠶⠄"
-nemeth, default, "⫘", "⠄⡳⠭⠆⠁⠙⠦⠄"
-nemeth, default, "⫙", "⠄⡳⠭⠆⠁⠙⠔⠄"
-nemeth, default, "⫚", "⠄⡳⠭⠆⠁⠙⠁⠄"
-nemeth, default, "⫛", "⠄⡳⠭⠆⠁⠙⠃⠄"
-nemeth, default, "⫝̸", "⠄⡳⠭⠆⠁⠙⠉⠄"
-nemeth, default, "⫝", "⠄⡳⠭⠆⠁⠙⠙⠄"
-nemeth, default, "⫞", "⠄⡳⠭⠆⠁⠙⠑⠄"
-nemeth, default, "⫟", "⠄⡳⠭⠆⠁⠙⠋⠄"
-nemeth, default, "⫠", "⠄⡳⠭⠆⠁⠑⠴⠄"
-nemeth, default, "⫡", "⠄⡳⠭⠆⠁⠑⠂⠄"
-nemeth, default, "⫢", "⠄⡳⠭⠆⠁⠑⠆⠄"
-nemeth, default, "⫣", "⠄⡳⠭⠆⠁⠑⠒⠄"
-nemeth, default, "⫤", "⠄⡳⠭⠆⠁⠑⠲⠄"
-nemeth, default, "⫥", "⠄⡳⠭⠆⠁⠑⠢⠄"
-nemeth, default, "⫦", "⠄⡳⠭⠆⠁⠑⠖⠄"
-nemeth, default, "⫧", "⠄⡳⠭⠆⠁⠑⠶⠄"
-nemeth, default, "⫨", "⠄⡳⠭⠆⠁⠑⠦⠄"
-nemeth, default, "⫩", "⠄⡳⠭⠆⠁⠑⠔⠄"
-nemeth, default, "⫪", "⠄⡳⠭⠆⠁⠑⠁⠄"
-nemeth, default, "⫫", "⠄⡳⠭⠆⠁⠑⠃⠄"
-nemeth, default, "⫬", "⠄⡳⠭⠆⠁⠑⠉⠄"
-nemeth, default, "⫭", "⠄⡳⠭⠆⠁⠑⠙⠄"
-nemeth, default, "⫮", "⠄⡳⠭⠆⠁⠑⠑⠄"
-nemeth, default, "⫯", "⠄⡳⠭⠆⠁⠑⠋⠄"
-nemeth, default, "⫰", "⠄⡳⠭⠆⠁⠋⠴⠄"
-nemeth, default, "⫱", "⠄⡳⠭⠆⠁⠋⠂⠄"
-nemeth, default, "⫲", "⠄⡳⠭⠆⠁⠋⠆⠄"
-nemeth, default, "⫳", "⠄⡳⠭⠆⠁⠋⠒⠄"
-nemeth, default, "⫴", "⠄⡳⠭⠆⠁⠋⠲⠄"
-nemeth, default, "⫵", "⠄⡳⠭⠆⠁⠋⠢⠄"
-nemeth, default, "⫶", "⠄⡳⠭⠆⠁⠋⠖⠄"
-nemeth, default, "⫷", "⠄⡳⠭⠆⠁⠋⠶⠄"
-nemeth, default, "⫸", "⠄⡳⠭⠆⠁⠋⠦⠄"
-nemeth, default, "⫹", "⠄⡳⠭⠆⠁⠋⠔⠄"
-nemeth, default, "⫺", "⠄⡳⠭⠆⠁⠋⠁⠄"
-nemeth, default, "⫻", "⠄⡳⠭⠆⠁⠋⠃⠄"
-nemeth, default, "⫼", "⠄⡳⠭⠆⠁⠋⠉⠄"
-nemeth, default, "⫽", "⠄⡳⠭⠆⠁⠋⠙⠄"
-nemeth, default, "⫾", "⠄⡳⠭⠆⠁⠋⠑⠄"
-nemeth, default, "⫿", "⠄⡳⠭⠆⠁⠋⠋⠄"
-nemeth, default, "〜", "⠄⡳⠭⠒⠴⠂⠉⠄"
-nemeth, default, "︐", "⠄⡳⠭⠋⠑⠂⠴⠄"
-nemeth, default, "︓", "⠄⡳⠭⠋⠑⠂⠒⠄"
-nemeth, default, "︔", "⠄⡳⠭⠋⠑⠂⠲⠄"
-nemeth, default, "︕", "⠄⡳⠭⠋⠑⠂⠢⠄"
-nemeth, default, "︖", "⠄⡳⠭⠋⠑⠂⠖⠄"
-nemeth, default, "︙", "⠄⡳⠭⠋⠑⠂⠔⠄"
-nemeth, default, "︰", "⠄⡳⠭⠋⠑⠒⠴⠄"
-nemeth, default, "︱", "⠄⡳⠭⠋⠑⠒⠂⠄"
-nemeth, default, "︲", "⠄⡳⠭⠋⠑⠒⠆⠄"
-nemeth, default, "︳", "⠄⡳⠭⠋⠑⠒⠒⠄"
-nemeth, default, "︴", "⠄⡳⠭⠋⠑⠒⠲⠄"
-nemeth, default, "﹅", "⠄⡳⠭⠋⠑⠲⠢⠄"
-nemeth, default, "﹆", "⠄⡳⠭⠋⠑⠲⠖⠄"
-nemeth, default, "﹉", "⠄⡳⠭⠋⠑⠲⠔⠄"
-nemeth, default, "﹊", "⠄⡳⠭⠋⠑⠲⠁⠄"
-nemeth, default, "﹋", "⠄⡳⠭⠋⠑⠲⠃⠄"
-nemeth, default, "﹌", "⠄⡳⠭⠋⠑⠲⠉⠄"
-nemeth, default, "﹍", "⠄⡳⠭⠋⠑⠲⠙⠄"
-nemeth, default, "﹎", "⠄⡳⠭⠋⠑⠲⠑⠄"
-nemeth, default, "﹏", "⠄⡳⠭⠋⠑⠲⠋⠄"
-nemeth, default, "﹐", "⠄⡳⠭⠋⠑⠢⠴⠄"
-nemeth, default, "﹒", "⠄⡳⠭⠋⠑⠢⠆⠄"
-nemeth, default, "﹔", "⠄⡳⠭⠋⠑⠢⠲⠄"
-nemeth, default, "﹕", "⠄⡳⠭⠋⠑⠢⠢⠄"
-nemeth, default, "﹖", "⠄⡳⠭⠋⠑⠢⠖⠄"
-nemeth, default, "﹗", "⠄⡳⠭⠋⠑⠢⠶⠄"
-nemeth, default, "﹘", "⠄⡳⠭⠋⠑⠢⠦⠄"
-nemeth, default, "﹟", "⠄⡳⠭⠋⠑⠢⠋⠄"
-nemeth, default, "﹠", "⠄⡳⠭⠋⠑⠖⠴⠄"
-nemeth, default, "﹡", "⠄⡳⠭⠋⠑⠖⠂⠄"
-nemeth, default, "﹢", "⠄⡳⠭⠋⠑⠖⠆⠄"
-nemeth, default, "﹣", "⠄⡳⠭⠋⠑⠖⠒⠄"
-nemeth, default, "﹤", "⠄⡳⠭⠋⠑⠖⠲⠄"
-nemeth, default, "﹥", "⠄⡳⠭⠋⠑⠖⠢⠄"
-nemeth, default, "﹦", "⠄⡳⠭⠋⠑⠖⠖⠄"
-nemeth, default, "﹨", "⠄⡳⠭⠋⠑⠖⠦⠄"
-nemeth, default, "﹩", "⠄⡳⠭⠋⠑⠖⠔⠄"
-nemeth, default, "﹪", "⠄⡳⠭⠋⠑⠖⠁⠄"
-nemeth, default, "﹫", "⠄⡳⠭⠋⠑⠖⠃⠄"
-nemeth, default, "！", "⠄⡳⠭⠋⠋⠴⠂⠄"
-nemeth, default, "＂", "⠄⡳⠭⠋⠋⠴⠆⠄"
-nemeth, default, "＃", "⠄⡳⠭⠋⠋⠴⠒⠄"
-nemeth, default, "＄", "⠄⡳⠭⠋⠋⠴⠲⠄"
-nemeth, default, "％", "⠄⡳⠭⠋⠋⠴⠢⠄"
-nemeth, default, "＆", "⠄⡳⠭⠋⠋⠴⠖⠄"
-nemeth, default, "＇", "⠄⡳⠭⠋⠋⠴⠶⠄"
-nemeth, default, "＊", "⠄⡳⠭⠋⠋⠴⠁⠄"
-nemeth, default, "＋", "⠄⡳⠭⠋⠋⠴⠃⠄"
-nemeth, default, "，", "⠄⡳⠭⠋⠋⠴⠉⠄"
-nemeth, default, "－", "⠄⡳⠭⠋⠋⠴⠙⠄"
-nemeth, default, "．", "⠄⡳⠭⠋⠋⠴⠑⠄"
-nemeth, default, "／", "⠄⡳⠭⠋⠋⠴⠋⠄"
-nemeth, default, "：", "⠄⡳⠭⠋⠋⠂⠁⠄"
-nemeth, default, "；", "⠄⡳⠭⠋⠋⠂⠃⠄"
-nemeth, default, "＜", "⠄⡳⠭⠋⠋⠂⠉⠄"
-nemeth, default, "＝", "⠄⡳⠭⠋⠋⠂⠙⠄"
-nemeth, default, "＞", "⠄⡳⠭⠋⠋⠂⠑⠄"
-nemeth, default, "？", "⠄⡳⠭⠋⠋⠂⠋⠄"
-nemeth, default, "＠", "⠄⡳⠭⠋⠋⠆⠴⠄"
-nemeth, default, "＼", "⠄⡳⠭⠋⠋⠒⠉⠄"
-nemeth, default, "＾", "⠄⡳⠭⠋⠋⠒⠑⠄"
-nemeth, default, "＿", "⠱"
-nemeth, default, "｀", "⠄⡳⠭⠋⠋⠲⠴⠄"
-nemeth, default, "｜", "⠄⡳⠭⠋⠋⠢⠉⠄"
-nemeth, default, "～", "⠈⠱"
-nemeth, default, "￠", "⠄⡳⠭⠋⠋⠑⠴⠄"
-nemeth, default, "￡", "⠄⡳⠭⠋⠋⠑⠂⠄"
-nemeth, default, "￢", "⠄⡳⠭⠋⠋⠑⠆⠄"
-nemeth, default, "￣", "⠱"
-nemeth, default, "￤", "⠄⡳⠭⠋⠋⠑⠲⠄"
-nemeth, default, "￥", "⠄⡳⠭⠋⠋⠑⠢⠄"
-nemeth, default, "￦", "⠄⡳⠭⠋⠋⠑⠖⠄"
-nemeth, default, "￨", "⠄⡳⠭⠋⠋⠑⠦⠄"
-nemeth, default, "￭", "⠄⡳⠭⠋⠋⠑⠙⠄"
-nemeth, default, "￮", "⠄⡳⠭⠋⠋⠑⠑⠄"
-nemeth, default, " ", ""
-nemeth, default, " ", ""
-nemeth, default, "­", "⠤"
-nemeth, default, " ", ""
-nemeth, default, " ", ""
-nemeth, default, " ", ""
-nemeth, default, " ", ""
-nemeth, default, " ", ""
-nemeth, default, " ", ""
-nemeth, default, " ", ""
-nemeth, default, " ", ""
-nemeth, default, " ", ""
-nemeth, default, " ", ""
-nemeth, default, " ", ""
-nemeth, default, "​", "⠀"
-nemeth, default, "‌", "⠄⡳⠭⠆⠴⠴⠉⠄"
-nemeth, default, "‍", "⠄⡳⠭⠆⠴⠴⠙⠄"
-nemeth, default, "‎", "⠄⡳⠭⠆⠴⠴⠑⠄"
-nemeth, default, "‏", "⠄⡳⠭⠆⠴⠴⠋⠄"
-nemeth, default, " ", ""
-nemeth, default, " ", ""
-nemeth, default, "‪", "⠄⡳⠭⠆⠴⠆⠁⠄"
-nemeth, default, "‫", "⠄⡳⠭⠆⠴⠆⠃⠄"
-nemeth, default, "‬", "⠄⡳⠭⠆⠴⠆⠉⠄"
-nemeth, default, "‭", "⠄⡳⠭⠆⠴⠆⠙⠄"
-nemeth, default, "‮", "⠄⡳⠭⠆⠴⠆⠑⠄"
-nemeth, default, " ", ""
-nemeth, default, " ", ""
-nemeth, default, "⁠", "⠄⡳⠭⠆⠴⠖⠴⠄"
-nemeth, default, "⁡", "⠀"
-nemeth, default, "⁢", "⠈⠡"
-nemeth, default, "⁣", "⠠"
-nemeth, default, "⁤", "⠬"
-nemeth, default, "⁪", "⠄⡳⠭⠆⠴⠖⠁⠄"
-nemeth, default, "⁫", "⠄⡳⠭⠆⠴⠖⠃⠄"
-nemeth, default, "⁮", "⠄⡳⠭⠆⠴⠖⠑⠄"
-nemeth, default, "⁯", "⠄⡳⠭⠆⠴⠖⠋⠄"
-nemeth, default, "﻿", ""
-nemeth, default, "￹", "⠄⡳⠭⠋⠋⠋⠔⠄"
-nemeth, default, "￺", "⠄⡳⠭⠋⠋⠋⠁⠄"
-nemeth, default, "￻", "⠄⡳⠭⠋⠋⠋⠃⠄"
-nemeth, default, "⏨", "⠄⡳⠭⠆⠒⠑⠦⠄"
-nemeth, default, "★", "⠄⡳⠭⠆⠖⠴⠢⠄"
-nemeth, default, "☆", "⠫⠎"
-nemeth, default, "⚪", "⠄⡳⠭⠆⠖⠁⠁⠄"
-nemeth, default, "⚫", "⠄⡳⠭⠆⠖⠁⠃⠄"
-nemeth, default, "✅", "⠄⡳⠭⠆⠶⠴⠢⠄"
-nemeth, default, "✓", "⠄⡳⠭⠆⠶⠂⠒⠄"
-nemeth, default, "✔", "⠄⡳⠭⠆⠶⠂⠲⠄"
-nemeth, default, "✕", "⠈⠡"
-nemeth, default, "✖", "⠄⡳⠭⠆⠶⠂⠖⠄"
-nemeth, default, "✗", "⠄⡳⠭⠆⠶⠂⠶⠄"
-nemeth, default, "✘", "⠄⡳⠭⠆⠶⠂⠦⠄"
-nemeth, default, "✛", "⠄⡳⠭⠆⠶⠂⠃⠄"
-nemeth, default, "✜", "⠄⡳⠭⠆⠶⠂⠉⠄"
-nemeth, default, "✠", "⠄⡳⠭⠆⠶⠆⠴⠄"
-nemeth, default, "✡", "⠄⡳⠭⠆⠶⠆⠂⠄"
-nemeth, default, "✢", "⠄⡳⠭⠆⠶⠆⠆⠄"
-nemeth, default, "✣", "⠄⡳⠭⠆⠶⠆⠒⠄"
-nemeth, default, "✤", "⠄⡳⠭⠆⠶⠆⠲⠄"
-nemeth, default, "✥", "⠄⡳⠭⠆⠶⠆⠢⠄"
-nemeth, default, "✦", "⠄⡳⠭⠆⠶⠆⠖⠄"
-nemeth, default, "✧", "⠄⡳⠭⠆⠶⠆⠶⠄"
-nemeth, default, "✨", "⠄⡳⠭⠆⠶⠆⠦⠄"
-nemeth, default, "✩", "⠄⡳⠭⠆⠶⠆⠔⠄"
-nemeth, default, "✪", "⠄⡳⠭⠆⠶⠆⠁⠄"
-nemeth, default, "✫", "⠄⡳⠭⠆⠶⠆⠃⠄"
-nemeth, default, "✬", "⠄⡳⠭⠆⠶⠆⠉⠄"
-nemeth, default, "✭", "⠄⡳⠭⠆⠶⠆⠙⠄"
-nemeth, default, "✮", "⠄⡳⠭⠆⠶⠆⠑⠄"
-nemeth, default, "✯", "⠄⡳⠭⠆⠶⠆⠋⠄"
-nemeth, default, "✰", "⠄⡳⠭⠆⠶⠒⠴⠄"
-nemeth, default, "✱", "⠄⡳⠭⠆⠶⠒⠂⠄"
-nemeth, default, "✲", "⠄⡳⠭⠆⠶⠒⠆⠄"
-nemeth, default, "✳", "⠄⡳⠭⠆⠶⠒⠒⠄"
-nemeth, default, "✴", "⠄⡳⠭⠆⠶⠒⠲⠄"
-nemeth, default, "✵", "⠄⡳⠭⠆⠶⠒⠢⠄"
-nemeth, default, "✶", "⠄⡳⠭⠆⠶⠒⠖⠄"
-nemeth, default, "✹", "⠄⡳⠭⠆⠶⠒⠔⠄"
-nemeth, default, "✺", "⠄⡳⠭⠆⠶⠒⠁⠄"
-nemeth, default, "✻", "⠄⡳⠭⠆⠶⠒⠃⠄"
-nemeth, default, "✼", "⠄⡳⠭⠆⠶⠒⠉⠄"
-nemeth, default, "✽", "⠄⡳⠭⠆⠶⠒⠙⠄"
-nemeth, default, "✾", "⠄⡳⠭⠆⠶⠒⠑⠄"
-nemeth, default, "✿", "⠄⡳⠭⠆⠶⠒⠋⠄"
-nemeth, default, "❀", "⠄⡳⠭⠆⠶⠲⠴⠄"
-nemeth, default, "❁", "⠄⡳⠭⠆⠶⠲⠂⠄"
-nemeth, default, "❂", "⠄⡳⠭⠆⠶⠲⠆⠄"
-nemeth, default, "❃", "⠄⡳⠭⠆⠶⠲⠒⠄"
-nemeth, default, "❄", "⠄⡳⠭⠆⠶⠲⠲⠄"
-nemeth, default, "❅", "⠄⡳⠭⠆⠶⠲⠢⠄"
-nemeth, default, "❆", "⠄⡳⠭⠆⠶⠲⠖⠄"
-nemeth, default, "❇", "⠄⡳⠭⠆⠶⠲⠶⠄"
-nemeth, default, "❈", "⠄⡳⠭⠆⠶⠲⠦⠄"
-nemeth, default, "❉", "⠄⡳⠭⠆⠶⠲⠔⠄"
-nemeth, default, "❊", "⠄⡳⠭⠆⠶⠲⠁⠄"
-nemeth, default, "❋", "⠄⡳⠭⠆⠶⠲⠃⠄"
-nemeth, default, "❌", "⠄⡳⠭⠆⠶⠲⠉⠄"
-nemeth, default, "❍", "⠄⡳⠭⠆⠶⠲⠙⠄"
-nemeth, default, "W:unit", "⠠⠺⠒⠥⠝⠊⠞"
-nemeth, default, "w:unit", "⠺⠒⠥⠝⠊⠞"
-nemeth, default, "kw:unit", "⠅⠺⠒⠥⠝⠊⠞"
-nemeth, default, "kW:unit", "⠅⠠⠺⠒⠥⠝⠊⠞"
-nemeth, default, "mw:unit", "⠍⠺⠒⠥⠝⠊⠞"
-nemeth, default, "mW:unit", "⠍⠠⠺⠒⠥⠝⠊⠞"
-nemeth, default, "kwh:unit", "⠅⠺⠓⠒⠥⠝⠊⠞"
-nemeth, default, "kWh:unit", "⠅⠠⠺⠓⠒⠥⠝⠊⠞"
-nemeth, default, "J:unit", "⠠⠚⠒⠥⠝⠊⠞"
-nemeth, default, "N:unit", "⠠⠝⠒⠥⠝⠊⠞"
-nemeth, default, "A:unit", "⠠⠁⠒⠥⠝⠊⠞"
-nemeth, default, "V:unit", "⠠⠧⠒⠥⠝⠊⠞"
-nemeth, default, "µΩ:unit", "⠨⠍⠨⠠⠺⠒⠥⠝⠊⠞"
-nemeth, default, "mΩ:unit", "⠍⠨⠠⠺⠒⠥⠝⠊⠞"
-nemeth, default, "Ω:unit", "⠨⠠⠺⠒⠥⠝⠊⠞"
-nemeth, default, "Ohm:unit", "⠠⠕⠓⠍⠒⠥⠝⠊⠞"
-nemeth, default, "kΩ:unit", "⠅⠨⠠⠺⠒⠥⠝⠊⠞"
-nemeth, default, "KΩ:unit", "⠠⠅⠨⠠⠺⠒⠥⠝⠊⠞"
-nemeth, default, "MΩ:unit", "⠠⠍⠨⠠⠺⠒⠥⠝⠊⠞"
-nemeth, default, "GΩ:unit", "⠠⠛⠨⠠⠺⠒⠥⠝⠊⠞"
-nemeth, default, "mm:unit", "⠍⠍⠒⠥⠝⠊⠞"
-nemeth, default, "cm:unit", "⠉⠍⠒⠥⠝⠊⠞"
-nemeth, default, "m:unit", "⠍⠒⠥⠝⠊⠞"
-nemeth, default, "km:unit", "⠅⠍⠒⠥⠝⠊⠞"
-nemeth, default, "ft:unit", "⠋⠞⠒⠥⠝⠊⠞"
-nemeth, default, "ft.:unit", "⠋⠞⠲⠒⠥⠝⠊⠞"
-nemeth, default, "in:unit", "⠊⠝⠒⠥⠝⠊⠞"
-nemeth, default, "in.:unit", "⠊⠝⠲⠒⠥⠝⠊⠞"
-nemeth, default, "mi:unit", "⠍⠊⠒⠥⠝⠊⠞"
-nemeth, default, "mi.:unit", "⠍⠊⠲⠒⠥⠝⠊⠞"
-nemeth, default, "yd:unit", "⠽⠙⠒⠥⠝⠊⠞"
-nemeth, default, "yd.:unit", "⠽⠙⠲⠒⠥⠝⠊⠞"
-nemeth, default, "n.m.:unit", "⠝⠲⠍⠲⠒⠥⠝⠊⠞"
-nemeth, default, "b:unit", "⠃⠒⠥⠝⠊⠞"
-nemeth, default, "B:unit", "⠠⠃⠒⠥⠝⠊⠞"
-nemeth, default, "KB:unit", "⠠⠅⠠⠃⠒⠥⠝⠊⠞"
-nemeth, default, "MB:unit", "⠠⠍⠠⠃⠒⠥⠝⠊⠞"
-nemeth, default, "GB:unit", "⠠⠛⠠⠃⠒⠥⠝⠊⠞"
-nemeth, default, "TB:unit", "⠠⠞⠠⠃⠒⠥⠝⠊⠞"
-nemeth, default, "doz:unit", "⠙⠕⠵⠒⠥⠝⠊⠞"
-nemeth, default, "doz.:unit", "⠙⠕⠵⠲⠒⠥⠝⠊⠞"
-nemeth, default, "dz:unit", "⠙⠵⠒⠥⠝⠊⠞"
-nemeth, default, "dz.:unit", "⠙⠵⠲⠒⠥⠝⠊⠞"
-nemeth, default, "sq:unit", "⠎⠟⠒⠥⠝⠊⠞"
-nemeth, default, "sq.:unit", "⠎⠟⠲⠒⠥⠝⠊⠞"
-nemeth, default, "ha:unit", "⠓⠁⠒⠥⠝⠊⠞"
-nemeth, default, "kt:unit", "⠅⠞⠒⠥⠝⠊⠞"
-nemeth, default, "kt.:unit", "⠅⠞⠲⠒⠥⠝⠊⠞"
-nemeth, default, "mph:unit", "⠍⠏⠓⠒⠥⠝⠊⠞"
-nemeth, default, "rpm:unit", "⠗⠏⠍⠒⠥⠝⠊⠞"
-nemeth, default, "kmh:unit", "⠅⠍⠓⠒⠥⠝⠊⠞"
-nemeth, default, "F:unit", "⠠⠋⠒⠥⠝⠊⠞"
-nemeth, default, "F.:unit", "⠠⠋⠲⠒⠥⠝⠊⠞"
-nemeth, default, "°F:unit", "⠘⠨⠡⠠⠋⠒⠥⠝⠊⠞"
-nemeth, default, "C:unit", "⠠⠉⠒⠥⠝⠊⠞"
-nemeth, default, "°C:unit", "⠘⠨⠡⠠⠉⠒⠥⠝⠊⠞"
-nemeth, default, "K:unit", "⠠⠅⠒⠥⠝⠊⠞"
-nemeth, default, "°K:unit", "⠘⠨⠡⠠⠅⠒⠥⠝⠊⠞"
-nemeth, default, "ns:unit", "⠝⠎⠒⠥⠝⠊⠞"
-nemeth, default, "µs:unit", "⠨⠍⠎⠒⠥⠝⠊⠞"
-nemeth, default, "ms:unit", "⠍⠎⠒⠥⠝⠊⠞"
-nemeth, default, "s:unit", "⠎⠒⠥⠝⠊⠞"
-nemeth, default, "min:unit", "⠍⠊⠝⠒⠥⠝⠊⠞"
-nemeth, default, "h:unit", "⠓⠒⠥⠝⠊⠞"
-nemeth, default, "hr:unit", "⠓⠗⠒⠥⠝⠊⠞"
-nemeth, default, "bbl.:unit", "⠃⠃⠇⠲⠒⠥⠝⠊⠞"
-nemeth, default, "bbl:unit", "⠃⠃⠇⠒⠥⠝⠊⠞"
-nemeth, default, "cu:unit", "⠉⠥⠒⠥⠝⠊⠞"
-nemeth, default, "cu.:unit", "⠉⠥⠲⠒⠥⠝⠊⠞"
-nemeth, default, "fl. oz.:unit", "⠋⠇⠲⠀⠕⠵⠲⠒⠥⠝⠊⠞"
-nemeth, default, "gal:unit", "⠛⠁⠇⠒⠥⠝⠊⠞"
-nemeth, default, "gal.:unit", "⠛⠁⠇⠲⠒⠥⠝⠊⠞"
-nemeth, default, "pt:unit", "⠏⠞⠒⠥⠝⠊⠞"
-nemeth, default, "pt.:unit", "⠏⠞⠲⠒⠥⠝⠊⠞"
-nemeth, default, "qt:unit", "⠟⠞⠒⠥⠝⠊⠞"
-nemeth, default, "qt.:unit", "⠟⠞⠲⠒⠥⠝⠊⠞"
-nemeth, default, "tbsp:unit", "⠞⠃⠎⠏⠒⠥⠝⠊⠞"
-nemeth, default, "tbsp.:unit", "⠞⠃⠎⠏⠲⠒⠥⠝⠊⠞"
-nemeth, default, "tsp:unit", "⠞⠎⠏⠒⠥⠝⠊⠞"
-nemeth, default, "tsp.:unit", "⠞⠎⠏⠲⠒⠥⠝⠊⠞"
-nemeth, default, "cc:unit", "⠉⠉⠒⠥⠝⠊⠞"
-nemeth, default, "kl:unit", "⠅⠇⠒⠥⠝⠊⠞"
-nemeth, default, "l:unit", "⠇⠒⠥⠝⠊⠞"
-nemeth, default, "ml:unit", "⠍⠇⠒⠥⠝⠊⠞"
-nemeth, default, "lb:unit", "⠇⠃⠒⠥⠝⠊⠞"
-nemeth, default, "lb.:unit", "⠇⠃⠲⠒⠥⠝⠊⠞"
-nemeth, default, "LT:unit", "⠠⠇⠠⠞⠒⠥⠝⠊⠞"
-nemeth, default, "L.T.:unit", "⠠⠇⠲⠠⠞⠲⠒⠥⠝⠊⠞"
-nemeth, default, "oz:unit", "⠕⠵⠒⠥⠝⠊⠞"
-nemeth, default, "oz.:unit", "⠕⠵⠲⠒⠥⠝⠊⠞"
-nemeth, default, "g:unit", "⠛⠒⠥⠝⠊⠞"
-nemeth, default, "gr:unit", "⠛⠗⠒⠥⠝⠊⠞"
-nemeth, default, "kg:unit", "⠅⠛⠒⠥⠝⠊⠞"
-nemeth, default, "mcg:unit", "⠍⠉⠛⠒⠥⠝⠊⠞"
-nemeth, default, "µg:unit", "⠨⠍⠛⠒⠥⠝⠊⠞"
-nemeth, default, "mg:unit", "⠍⠛⠒⠥⠝⠊⠞"
-nemeth, default, "t:unit", "⠞⠒⠥⠝⠊⠞"
-nemeth, default, "T:unit", "⠠⠞⠒⠥⠝⠊⠞"
-nemeth, default, "sen", "⠎⠑⠝"
+// Copyright 2019 Volker Sorge
+//
+// Licensed under the Apache License, Version 2.0 (the 'License');
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an 'AS IS' BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+/**
+ * @fileoverview Abstract class for test cases of single characters.
+ * @author Volker.Sorge@gmail.com (Volker Sorge)
+ */
+
+goog.provide('sre.DefaultCharNemethTest');
+
+goog.require('sre.AbstractCharacterTest');
+
+
+
+/**
+ * @constructor
+ * @extends {sre.AbstractCharacterTest}
+ */
+sre.DefaultCharNemethTest = function() {
+  sre.DefaultCharNemethTest.base(this, 'constructor');
+
+  this.locale = 'nemeth';
+  this.domain = 'default';
+  this.semantics = true;
+  this.modality = 'braille';
+  
+  /**
+   * @type {Array.<string>}
+   */
+  this.styles = ['default'];
+
+  this.setActive('DefaultCharactersNemeth');
+};
+goog.inherits(sre.DefaultCharNemethTest, sre.AbstractCharacterTest);
+
+
+sre.DefaultCharNemethTest.prototype.testDefaultChars = function() {
+  this.executeCharTest('0', ['⠴']);
+  this.executeCharTest('1', ['⠂']);
+  this.executeCharTest('2', ['⠆']);
+  this.executeCharTest('3', ['⠒']);
+  this.executeCharTest('4', ['⠲']);
+  this.executeCharTest('5', ['⠢']);
+  this.executeCharTest('6', ['⠖']);
+  this.executeCharTest('7', ['⠶']);
+  this.executeCharTest('8', ['⠦']);
+  this.executeCharTest('9', ['⠔']);
+  this.executeCharTest('Α', ['⠨⠠⠁']);
+  this.executeCharTest('Β', ['⠨⠠⠃']);
+  this.executeCharTest('Γ', ['⠨⠠⠛']);
+  this.executeCharTest('Δ', ['⠨⠠⠙']);
+  this.executeCharTest('Ε', ['⠨⠠⠑']);
+  this.executeCharTest('Ζ', ['⠨⠠⠱']);
+  this.executeCharTest('Η', ['⠨⠠⠣']);
+  this.executeCharTest('Θ', ['⠨⠠⠹']);
+  this.executeCharTest('Ι', ['⠨⠠⠊']);
+  this.executeCharTest('Κ', ['⠨⠠⠅']);
+  this.executeCharTest('Λ', ['⠨⠠⠇']);
+  this.executeCharTest('Μ', ['⠨⠠⠍']);
+  this.executeCharTest('Ν', ['⠨⠠⠝']);
+  this.executeCharTest('Ξ', ['⠨⠠⠭']);
+  this.executeCharTest('Ο', ['⠨⠠⠕']);
+  this.executeCharTest('Π', ['⠨⠠⠏']);
+  this.executeCharTest('Ρ', ['⠨⠠⠗']);
+  this.executeCharTest('Σ', ['⠨⠠⠎']);
+  this.executeCharTest('Τ', ['⠨⠠⠥']);
+  this.executeCharTest('Υ', ['⠨⠠⠥']);
+  this.executeCharTest('Φ', ['⠨⠠⠋']);
+  this.executeCharTest('Χ', ['⠨⠠⠯']);
+  this.executeCharTest('Ψ', ['⠨⠠⠫']);
+  this.executeCharTest('Ω', ['⠨⠠⠺']);
+  this.executeCharTest('α', ['⠨⠁']);
+  this.executeCharTest('β', ['⠨⠃']);
+  this.executeCharTest('γ', ['⠨⠛']);
+  this.executeCharTest('δ', ['⠨⠙']);
+  this.executeCharTest('ε', ['⠨⠑']);
+  this.executeCharTest('ζ', ['⠨⠱']);
+  this.executeCharTest('η', ['⠨⠦']);
+  this.executeCharTest('θ', ['⠨⠹']);
+  this.executeCharTest('ι', ['⠨⠊']);
+  this.executeCharTest('κ', ['⠨⠅']);
+  this.executeCharTest('λ', ['⠨⠇']);
+  this.executeCharTest('μ', ['⠨⠍']);
+  this.executeCharTest('ν', ['⠨⠝']);
+  this.executeCharTest('ξ', ['⠨⠭']);
+  this.executeCharTest('ο', ['⠨⠕']);
+  this.executeCharTest('π', ['⠨⠏']);
+  this.executeCharTest('ρ', ['⠨⠗']);
+  this.executeCharTest('ς', ['⠨⠒']);
+  this.executeCharTest('σ', ['⠨⠎']);
+  this.executeCharTest('τ', ['⠨⠞']);
+  this.executeCharTest('υ', ['⠨⠥']);
+  this.executeCharTest('φ', ['⠨⠋']);
+  this.executeCharTest('χ', ['⠨⠯']);
+  this.executeCharTest('ψ', ['⠨⠓']);
+  this.executeCharTest('ω', ['⠨⠕']);
+  this.executeCharTest('ᴦ', ['⠄⡳⠭⠂⠙⠆⠖⠄']);
+  this.executeCharTest('ᴧ', ['⠄⡳⠭⠂⠙⠆⠶⠄']);
+  this.executeCharTest('ᴨ', ['⠄⡳⠭⠂⠙⠆⠦⠄']);
+  this.executeCharTest('ᴩ', ['⠄⡳⠭⠂⠙⠆⠔⠄']);
+  this.executeCharTest('ᴪ', ['⠄⡳⠭⠂⠙⠆⠁⠄']);
+  this.executeCharTest('ᵞ', ['⠄⡳⠭⠂⠙⠢⠑⠄']);
+  this.executeCharTest('ᵠ', ['⠄⡳⠭⠂⠙⠖⠴⠄']);
+  this.executeCharTest('ᵦ', ['⠄⡳⠭⠂⠙⠖⠖⠄']);
+  this.executeCharTest('ᵧ', ['⠄⡳⠭⠂⠙⠖⠶⠄']);
+  this.executeCharTest('ᵨ', ['⠄⡳⠭⠂⠙⠖⠦⠄']);
+  this.executeCharTest('ᵩ', ['⠄⡳⠭⠂⠙⠖⠔⠄']);
+  this.executeCharTest('ᵪ', ['⠄⡳⠭⠂⠙⠖⠁⠄']);
+  this.executeCharTest('ϐ', ['⠄⡳⠭⠴⠒⠙⠴⠄']);
+  this.executeCharTest('ϑ', ['⠄⡳⠭⠴⠒⠙⠂⠄']);
+  this.executeCharTest('ϕ', ['⠨⠋']);
+  this.executeCharTest('ϖ', ['⠄⡳⠭⠴⠒⠙⠖⠄']);
+  this.executeCharTest('ϗ', ['⠄⡳⠭⠴⠒⠙⠶⠄']);
+  this.executeCharTest('ϰ', ['⠄⡳⠭⠴⠒⠋⠴⠄']);
+  this.executeCharTest('ϱ', ['⠄⡳⠭⠴⠒⠋⠂⠄']);
+  this.executeCharTest('ϵ', ['⠄⡳⠭⠴⠒⠋⠢⠄']);
+  this.executeCharTest('϶', ['⠄⡳⠭⠴⠒⠋⠖⠄']);
+  this.executeCharTest('ϴ', ['⠄⡳⠭⠴⠒⠋⠲⠄']);
+  this.executeCharTest('𝚹', ['bold cap theta']);
+  this.executeCharTest('𝛳', ['italic cap theta']);
+  this.executeCharTest('𝝧', ['sans serif bold cap theta']);
+  this.executeCharTest('𝛁', ['⠄⡳⠽⠂⠙⠖⠉⠂⠄']);
+  this.executeCharTest('𝛛', ['⠄⡳⠽⠂⠙⠖⠙⠃⠄']);
+  this.executeCharTest('𝛜', ['⠄⡳⠽⠂⠙⠖⠙⠉⠄']);
+  this.executeCharTest('𝛝', ['⠄⡳⠽⠂⠙⠖⠙⠙⠄']);
+  this.executeCharTest('𝛞', ['⠄⡳⠽⠂⠙⠖⠙⠑⠄']);
+  this.executeCharTest('𝛟', ['⠄⡳⠽⠂⠙⠖⠙⠋⠄']);
+  this.executeCharTest('𝛠', ['⠄⡳⠽⠂⠙⠖⠑⠴⠄']);
+  this.executeCharTest('𝛡', ['⠄⡳⠽⠂⠙⠖⠑⠂⠄']);
+  this.executeCharTest('𝛻', ['⠄⡳⠽⠂⠙⠖⠋⠃⠄']);
+  this.executeCharTest('𝜕', ['⠄⡳⠽⠂⠙⠶⠂⠢⠄']);
+  this.executeCharTest('𝜖', ['⠄⡳⠽⠂⠙⠶⠂⠖⠄']);
+  this.executeCharTest('𝜗', ['⠄⡳⠽⠂⠙⠶⠂⠶⠄']);
+  this.executeCharTest('𝜘', ['⠄⡳⠽⠂⠙⠶⠂⠦⠄']);
+  this.executeCharTest('𝜙', ['⠄⡳⠽⠂⠙⠶⠂⠔⠄']);
+  this.executeCharTest('𝜚', ['⠄⡳⠽⠂⠙⠶⠂⠁⠄']);
+  this.executeCharTest('𝜛', ['⠄⡳⠽⠂⠙⠶⠂⠃⠄']);
+  this.executeCharTest('𝝯', ['⠄⡳⠽⠂⠙⠶⠖⠋⠄']);
+  this.executeCharTest('𝞉', ['⠄⡳⠽⠂⠙⠶⠦⠔⠄']);
+  this.executeCharTest('𝞊', ['⠄⡳⠽⠂⠙⠶⠦⠁⠄']);
+  this.executeCharTest('𝞋', ['⠄⡳⠽⠂⠙⠶⠦⠃⠄']);
+  this.executeCharTest('𝞌', ['⠄⡳⠽⠂⠙⠶⠦⠉⠄']);
+  this.executeCharTest('𝞍', ['⠄⡳⠽⠂⠙⠶⠦⠙⠄']);
+  this.executeCharTest('𝞎', ['⠄⡳⠽⠂⠙⠶⠦⠑⠄']);
+  this.executeCharTest('𝞏', ['⠄⡳⠽⠂⠙⠶⠦⠋⠄']);
+  this.executeCharTest('𝟊', ['⠄⡳⠽⠂⠙⠶⠉⠁⠄']);
+  this.executeCharTest('𝟋', ['⠄⡳⠽⠂⠙⠶⠉⠃⠄']);
+  this.executeCharTest('𝚨', ['⠸⠨⠠⠁']);
+  this.executeCharTest('𝚩', ['⠸⠨⠠⠃']);
+  this.executeCharTest('𝚪', ['⠸⠨⠠⠛']);
+  this.executeCharTest('𝚫', ['⠸⠨⠠⠙']);
+  this.executeCharTest('𝚬', ['⠸⠨⠠⠑']);
+  this.executeCharTest('𝚭', ['⠸⠨⠠⠱']);
+  this.executeCharTest('𝚮', ['⠸⠨⠠⠣']);
+  this.executeCharTest('𝚯', ['⠸⠨⠠⠹']);
+  this.executeCharTest('𝚰', ['⠸⠨⠠⠊']);
+  this.executeCharTest('𝚱', ['⠸⠨⠠⠅']);
+  this.executeCharTest('𝚲', ['⠸⠨⠠⠇']);
+  this.executeCharTest('𝚳', ['⠸⠨⠠⠍']);
+  this.executeCharTest('𝚴', ['⠸⠨⠠⠝']);
+  this.executeCharTest('𝚵', ['⠸⠨⠠⠭']);
+  this.executeCharTest('𝚶', ['⠸⠨⠠⠕']);
+  this.executeCharTest('𝚷', ['⠸⠨⠠⠏']);
+  this.executeCharTest('𝚸', ['⠸⠨⠠⠗']);
+  this.executeCharTest('𝚺', ['⠸⠨⠠⠎']);
+  this.executeCharTest('𝚻', ['⠸⠨⠠⠥']);
+  this.executeCharTest('𝚼', ['⠸⠨⠠⠥']);
+  this.executeCharTest('𝚽', ['⠸⠨⠠⠋']);
+  this.executeCharTest('𝚾', ['⠸⠨⠠⠯']);
+  this.executeCharTest('𝚿', ['⠸⠨⠠⠫']);
+  this.executeCharTest('𝛀', ['⠸⠨⠠⠺']);
+  this.executeCharTest('𝛂', ['⠸⠨⠁']);
+  this.executeCharTest('𝛃', ['⠸⠨⠃']);
+  this.executeCharTest('𝛄', ['⠸⠨⠛']);
+  this.executeCharTest('𝛅', ['⠸⠨⠙']);
+  this.executeCharTest('𝛆', ['⠸⠨⠑']);
+  this.executeCharTest('𝛇', ['⠸⠨⠱']);
+  this.executeCharTest('𝛈', ['⠸⠨⠦']);
+  this.executeCharTest('𝛉', ['⠸⠨⠹']);
+  this.executeCharTest('𝛊', ['⠸⠨⠊']);
+  this.executeCharTest('𝛋', ['⠸⠨⠅']);
+  this.executeCharTest('𝛌', ['⠸⠨⠇']);
+  this.executeCharTest('𝛍', ['⠸⠨⠍']);
+  this.executeCharTest('𝛎', ['⠸⠨⠝']);
+  this.executeCharTest('𝛏', ['⠸⠨⠭']);
+  this.executeCharTest('𝛐', ['⠸⠨⠕']);
+  this.executeCharTest('𝛑', ['⠸⠨⠏']);
+  this.executeCharTest('𝛒', ['⠸⠨⠗']);
+  this.executeCharTest('𝛓', ['⠸⠨⠒']);
+  this.executeCharTest('𝛔', ['⠸⠨⠎']);
+  this.executeCharTest('𝛕', ['⠸⠨⠞']);
+  this.executeCharTest('𝛖', ['⠸⠨⠥']);
+  this.executeCharTest('𝛗', ['⠸⠨⠋']);
+  this.executeCharTest('𝛘', ['⠸⠨⠯']);
+  this.executeCharTest('𝛙', ['⠸⠨⠓']);
+  this.executeCharTest('𝛚', ['⠸⠨⠕']);
+  this.executeCharTest('𝛢', ['⠨⠨⠠⠁']);
+  this.executeCharTest('𝛣', ['⠨⠨⠠⠃']);
+  this.executeCharTest('𝛤', ['⠨⠨⠠⠛']);
+  this.executeCharTest('𝛥', ['⠨⠨⠠⠙']);
+  this.executeCharTest('𝛦', ['⠨⠨⠠⠑']);
+  this.executeCharTest('𝛧', ['⠨⠨⠠⠱']);
+  this.executeCharTest('𝛨', ['⠨⠨⠠⠣']);
+  this.executeCharTest('𝛩', ['⠨⠨⠠⠹']);
+  this.executeCharTest('𝛪', ['⠨⠨⠠⠊']);
+  this.executeCharTest('𝛫', ['⠨⠨⠠⠅']);
+  this.executeCharTest('𝛬', ['⠨⠨⠠⠇']);
+  this.executeCharTest('𝛭', ['⠨⠨⠠⠍']);
+  this.executeCharTest('𝛮', ['⠨⠨⠠⠝']);
+  this.executeCharTest('𝛯', ['⠨⠨⠠⠭']);
+  this.executeCharTest('𝛰', ['⠨⠨⠠⠕']);
+  this.executeCharTest('𝛱', ['⠨⠨⠠⠏']);
+  this.executeCharTest('𝛲', ['⠨⠨⠠⠗']);
+  this.executeCharTest('𝛴', ['⠨⠨⠠⠎']);
+  this.executeCharTest('𝛵', ['⠨⠨⠠⠥']);
+  this.executeCharTest('𝛶', ['⠨⠨⠠⠥']);
+  this.executeCharTest('𝛷', ['⠨⠨⠠⠋']);
+  this.executeCharTest('𝛸', ['⠨⠨⠠⠯']);
+  this.executeCharTest('𝛹', ['⠨⠨⠠⠫']);
+  this.executeCharTest('𝛺', ['⠨⠨⠠⠺']);
+  this.executeCharTest('𝛼', ['⠨⠨⠁']);
+  this.executeCharTest('𝛽', ['⠨⠨⠃']);
+  this.executeCharTest('𝛾', ['⠨⠨⠛']);
+  this.executeCharTest('𝛿', ['⠨⠨⠙']);
+  this.executeCharTest('𝜀', ['⠨⠨⠑']);
+  this.executeCharTest('𝜁', ['⠨⠨⠱']);
+  this.executeCharTest('𝜂', ['⠨⠨⠦']);
+  this.executeCharTest('𝜃', ['⠨⠨⠹']);
+  this.executeCharTest('𝜄', ['⠨⠨⠊']);
+  this.executeCharTest('𝜅', ['⠨⠨⠅']);
+  this.executeCharTest('𝜆', ['⠨⠨⠇']);
+  this.executeCharTest('𝜇', ['⠨⠨⠍']);
+  this.executeCharTest('𝜈', ['⠨⠨⠝']);
+  this.executeCharTest('𝜉', ['⠨⠨⠭']);
+  this.executeCharTest('𝜊', ['⠨⠨⠕']);
+  this.executeCharTest('𝜋', ['⠨⠨⠏']);
+  this.executeCharTest('𝜌', ['⠨⠨⠗']);
+  this.executeCharTest('𝜍', ['⠨⠨⠒']);
+  this.executeCharTest('𝜎', ['⠨⠨⠎']);
+  this.executeCharTest('𝜏', ['⠨⠨⠞']);
+  this.executeCharTest('𝜐', ['⠨⠨⠥']);
+  this.executeCharTest('𝜑', ['⠨⠨⠋']);
+  this.executeCharTest('𝜒', ['⠨⠨⠯']);
+  this.executeCharTest('𝜓', ['⠨⠨⠓']);
+  this.executeCharTest('𝜔', ['⠨⠨⠕']);
+  this.executeCharTest('𝜜', ['⠸⠨⠨⠠⠁']);
+  this.executeCharTest('𝜝', ['⠸⠨⠨⠠⠃']);
+  this.executeCharTest('𝜞', ['⠸⠨⠨⠠⠛']);
+  this.executeCharTest('𝜟', ['⠸⠨⠨⠠⠙']);
+  this.executeCharTest('𝜠', ['⠸⠨⠨⠠⠑']);
+  this.executeCharTest('𝜡', ['⠸⠨⠨⠠⠱']);
+  this.executeCharTest('𝜢', ['⠸⠨⠨⠠⠣']);
+  this.executeCharTest('𝜣', ['⠸⠨⠨⠠⠹']);
+  this.executeCharTest('𝜤', ['⠸⠨⠨⠠⠊']);
+  this.executeCharTest('𝜥', ['⠸⠨⠨⠠⠅']);
+  this.executeCharTest('𝜦', ['⠸⠨⠨⠠⠇']);
+  this.executeCharTest('𝜧', ['⠸⠨⠨⠠⠍']);
+  this.executeCharTest('𝜨', ['⠸⠨⠨⠠⠝']);
+  this.executeCharTest('𝜩', ['⠸⠨⠨⠠⠭']);
+  this.executeCharTest('𝜪', ['⠸⠨⠨⠠⠕']);
+  this.executeCharTest('𝜫', ['⠸⠨⠨⠠⠏']);
+  this.executeCharTest('𝜬', ['⠸⠨⠨⠠⠗']);
+  this.executeCharTest('𝜮', ['⠸⠨⠨⠠⠎']);
+  this.executeCharTest('𝜯', ['⠸⠨⠨⠠⠥']);
+  this.executeCharTest('𝜰', ['⠸⠨⠨⠠⠥']);
+  this.executeCharTest('𝜱', ['⠸⠨⠨⠠⠋']);
+  this.executeCharTest('𝜲', ['⠸⠨⠨⠠⠯']);
+  this.executeCharTest('𝜳', ['⠸⠨⠨⠠⠫']);
+  this.executeCharTest('𝜴', ['⠸⠨⠨⠠⠺']);
+  this.executeCharTest('𝜶', ['⠸⠨⠨⠁']);
+  this.executeCharTest('𝜷', ['⠸⠨⠨⠃']);
+  this.executeCharTest('𝜸', ['⠸⠨⠨⠛']);
+  this.executeCharTest('𝜹', ['⠸⠨⠨⠙']);
+  this.executeCharTest('𝜺', ['⠸⠨⠨⠑']);
+  this.executeCharTest('𝜻', ['⠸⠨⠨⠱']);
+  this.executeCharTest('𝜼', ['⠸⠨⠨⠦']);
+  this.executeCharTest('𝜽', ['⠸⠨⠨⠹']);
+  this.executeCharTest('𝜾', ['⠸⠨⠨⠊']);
+  this.executeCharTest('𝜿', ['⠸⠨⠨⠅']);
+  this.executeCharTest('𝝀', ['⠸⠨⠨⠇']);
+  this.executeCharTest('𝝁', ['⠸⠨⠨⠍']);
+  this.executeCharTest('𝝂', ['⠸⠨⠨⠝']);
+  this.executeCharTest('𝝃', ['⠸⠨⠨⠭']);
+  this.executeCharTest('𝝄', ['⠸⠨⠨⠕']);
+  this.executeCharTest('𝝅', ['⠸⠨⠨⠏']);
+  this.executeCharTest('𝝆', ['⠸⠨⠨⠗']);
+  this.executeCharTest('𝝇', ['⠸⠨⠨⠒']);
+  this.executeCharTest('𝝈', ['⠸⠨⠨⠎']);
+  this.executeCharTest('𝝉', ['⠸⠨⠨⠞']);
+  this.executeCharTest('𝝊', ['⠸⠨⠨⠥']);
+  this.executeCharTest('𝝋', ['⠸⠨⠨⠋']);
+  this.executeCharTest('𝝌', ['⠸⠨⠨⠯']);
+  this.executeCharTest('𝝍', ['⠸⠨⠨⠓']);
+  this.executeCharTest('𝝎', ['⠸⠨⠨⠕']);
+  this.executeCharTest('𝝖', ['⠠⠨⠸⠨⠠⠁']);
+  this.executeCharTest('𝝗', ['⠠⠨⠸⠨⠠⠃']);
+  this.executeCharTest('𝝘', ['⠠⠨⠸⠨⠠⠛']);
+  this.executeCharTest('𝝙', ['⠠⠨⠸⠨⠠⠙']);
+  this.executeCharTest('𝝚', ['⠠⠨⠸⠨⠠⠑']);
+  this.executeCharTest('𝝛', ['⠠⠨⠸⠨⠠⠱']);
+  this.executeCharTest('𝝜', ['⠠⠨⠸⠨⠠⠣']);
+  this.executeCharTest('𝝝', ['⠠⠨⠸⠨⠠⠹']);
+  this.executeCharTest('𝝞', ['⠠⠨⠸⠨⠠⠊']);
+  this.executeCharTest('𝝟', ['⠠⠨⠸⠨⠠⠅']);
+  this.executeCharTest('𝝠', ['⠠⠨⠸⠨⠠⠇']);
+  this.executeCharTest('𝝡', ['⠠⠨⠸⠨⠠⠍']);
+  this.executeCharTest('𝝢', ['⠠⠨⠸⠨⠠⠝']);
+  this.executeCharTest('𝝣', ['⠠⠨⠸⠨⠠⠭']);
+  this.executeCharTest('𝝤', ['⠠⠨⠸⠨⠠⠕']);
+  this.executeCharTest('𝝥', ['⠠⠨⠸⠨⠠⠏']);
+  this.executeCharTest('𝝦', ['⠠⠨⠸⠨⠠⠗']);
+  this.executeCharTest('𝝨', ['⠠⠨⠸⠨⠠⠎']);
+  this.executeCharTest('𝝩', ['⠠⠨⠸⠨⠠⠥']);
+  this.executeCharTest('𝝪', ['⠠⠨⠸⠨⠠⠥']);
+  this.executeCharTest('𝝫', ['⠠⠨⠸⠨⠠⠋']);
+  this.executeCharTest('𝝬', ['⠠⠨⠸⠨⠠⠯']);
+  this.executeCharTest('𝝭', ['⠠⠨⠸⠨⠠⠫']);
+  this.executeCharTest('𝝮', ['⠠⠨⠸⠨⠠⠺']);
+  this.executeCharTest('𝝰', ['⠠⠨⠸⠨⠁']);
+  this.executeCharTest('𝝱', ['⠠⠨⠸⠨⠃']);
+  this.executeCharTest('𝝲', ['⠠⠨⠸⠨⠛']);
+  this.executeCharTest('𝝳', ['⠠⠨⠸⠨⠙']);
+  this.executeCharTest('𝝴', ['⠠⠨⠸⠨⠑']);
+  this.executeCharTest('𝝵', ['⠠⠨⠸⠨⠱']);
+  this.executeCharTest('𝝶', ['⠠⠨⠸⠨⠦']);
+  this.executeCharTest('𝝷', ['⠠⠨⠸⠨⠹']);
+  this.executeCharTest('𝝸', ['⠠⠨⠸⠨⠊']);
+  this.executeCharTest('𝝹', ['⠠⠨⠸⠨⠅']);
+  this.executeCharTest('𝝺', ['⠠⠨⠸⠨⠇']);
+  this.executeCharTest('𝝻', ['⠠⠨⠸⠨⠍']);
+  this.executeCharTest('𝝼', ['⠠⠨⠸⠨⠝']);
+  this.executeCharTest('𝝽', ['⠠⠨⠸⠨⠭']);
+  this.executeCharTest('𝝾', ['⠠⠨⠸⠨⠕']);
+  this.executeCharTest('𝝿', ['⠠⠨⠸⠨⠏']);
+  this.executeCharTest('𝞀', ['⠠⠨⠸⠨⠗']);
+  this.executeCharTest('𝞁', ['⠠⠨⠸⠨⠒']);
+  this.executeCharTest('𝞂', ['⠠⠨⠸⠨⠎']);
+  this.executeCharTest('𝞃', ['⠠⠨⠸⠨⠞']);
+  this.executeCharTest('𝞄', ['⠠⠨⠸⠨⠥']);
+  this.executeCharTest('𝞅', ['⠠⠨⠸⠨⠋']);
+  this.executeCharTest('𝞆', ['⠠⠨⠸⠨⠯']);
+  this.executeCharTest('𝞇', ['⠠⠨⠸⠨⠓']);
+  this.executeCharTest('𝞈', ['⠠⠨⠸⠨⠕']);
+  this.executeCharTest('𝞐', ['⠠⠨⠸⠨⠨⠠⠁']);
+  this.executeCharTest('𝞑', ['⠠⠨⠸⠨⠨⠠⠃']);
+  this.executeCharTest('𝞒', ['⠠⠨⠸⠨⠨⠠⠛']);
+  this.executeCharTest('𝞓', ['⠠⠨⠸⠨⠨⠠⠙']);
+  this.executeCharTest('𝞔', ['⠠⠨⠸⠨⠨⠠⠑']);
+  this.executeCharTest('𝞕', ['⠠⠨⠸⠨⠨⠠⠱']);
+  this.executeCharTest('𝞖', ['⠠⠨⠸⠨⠨⠠⠣']);
+  this.executeCharTest('𝞗', ['⠠⠨⠸⠨⠨⠠⠹']);
+  this.executeCharTest('𝞘', ['⠠⠨⠸⠨⠨⠠⠊']);
+  this.executeCharTest('𝞙', ['⠠⠨⠸⠨⠨⠠⠅']);
+  this.executeCharTest('𝞚', ['⠠⠨⠸⠨⠨⠠⠇']);
+  this.executeCharTest('𝞛', ['⠠⠨⠸⠨⠨⠠⠍']);
+  this.executeCharTest('𝞜', ['⠠⠨⠸⠨⠨⠠⠝']);
+  this.executeCharTest('𝞝', ['⠠⠨⠸⠨⠨⠠⠭']);
+  this.executeCharTest('𝞞', ['⠠⠨⠸⠨⠨⠠⠕']);
+  this.executeCharTest('𝞟', ['⠠⠨⠸⠨⠨⠠⠏']);
+  this.executeCharTest('𝞠', ['⠠⠨⠸⠨⠨⠠⠗']);
+  this.executeCharTest('𝞢', ['⠠⠨⠸⠨⠨⠠⠎']);
+  this.executeCharTest('𝞣', ['⠠⠨⠸⠨⠨⠠⠥']);
+  this.executeCharTest('𝞤', ['⠠⠨⠸⠨⠨⠠⠥']);
+  this.executeCharTest('𝞥', ['⠠⠨⠸⠨⠨⠠⠋']);
+  this.executeCharTest('𝞦', ['⠠⠨⠸⠨⠨⠠⠯']);
+  this.executeCharTest('𝞧', ['⠠⠨⠸⠨⠨⠠⠫']);
+  this.executeCharTest('𝞨', ['⠠⠨⠸⠨⠨⠠⠺']);
+  this.executeCharTest('𝞪', ['⠠⠨⠸⠨⠨⠁']);
+  this.executeCharTest('𝞫', ['⠠⠨⠸⠨⠨⠃']);
+  this.executeCharTest('𝞬', ['⠠⠨⠸⠨⠨⠛']);
+  this.executeCharTest('𝞭', ['⠠⠨⠸⠨⠨⠙']);
+  this.executeCharTest('𝞮', ['⠠⠨⠸⠨⠨⠑']);
+  this.executeCharTest('𝞯', ['⠠⠨⠸⠨⠨⠱']);
+  this.executeCharTest('𝞰', ['⠠⠨⠸⠨⠨⠦']);
+  this.executeCharTest('𝞱', ['⠠⠨⠸⠨⠨⠹']);
+  this.executeCharTest('𝞲', ['⠠⠨⠸⠨⠨⠊']);
+  this.executeCharTest('𝞳', ['⠠⠨⠸⠨⠨⠅']);
+  this.executeCharTest('𝞴', ['⠠⠨⠸⠨⠨⠇']);
+  this.executeCharTest('𝞵', ['⠠⠨⠸⠨⠨⠍']);
+  this.executeCharTest('𝞶', ['⠠⠨⠸⠨⠨⠝']);
+  this.executeCharTest('𝞷', ['⠠⠨⠸⠨⠨⠭']);
+  this.executeCharTest('𝞸', ['⠠⠨⠸⠨⠨⠕']);
+  this.executeCharTest('𝞹', ['⠠⠨⠸⠨⠨⠏']);
+  this.executeCharTest('𝞺', ['⠠⠨⠸⠨⠨⠗']);
+  this.executeCharTest('𝞻', ['⠠⠨⠸⠨⠨⠒']);
+  this.executeCharTest('𝞼', ['⠠⠨⠸⠨⠨⠎']);
+  this.executeCharTest('𝞽', ['⠠⠨⠸⠨⠨⠞']);
+  this.executeCharTest('𝞾', ['⠠⠨⠸⠨⠨⠥']);
+  this.executeCharTest('𝞿', ['⠠⠨⠸⠨⠨⠋']);
+  this.executeCharTest('𝟀', ['⠠⠨⠸⠨⠨⠯']);
+  this.executeCharTest('𝟁', ['⠠⠨⠸⠨⠨⠓']);
+  this.executeCharTest('𝟂', ['⠠⠨⠸⠨⠨⠕']);
+  this.executeCharTest('ℵ', ['⠄⡳⠭⠆⠂⠒⠢⠄']);
+  this.executeCharTest('ℶ', ['⠄⡳⠭⠆⠂⠒⠖⠄']);
+  this.executeCharTest('ℷ', ['⠄⡳⠭⠆⠂⠒⠶⠄']);
+  this.executeCharTest('ℸ', ['⠄⡳⠭⠆⠂⠒⠦⠄']);
+  this.executeCharTest('ǖ', ['⠄⡳⠭⠴⠂⠙⠖⠄']);
+  this.executeCharTest('ǘ', ['⠄⡳⠭⠴⠂⠙⠦⠄']);
+  this.executeCharTest('ǚ', ['⠄⡳⠭⠴⠂⠙⠁⠄']);
+  this.executeCharTest('ǜ', ['⠄⡳⠭⠴⠂⠙⠉⠄']);
+  this.executeCharTest('ǟ', ['⠄⡳⠭⠴⠂⠙⠋⠄']);
+  this.executeCharTest('ǡ', ['⠄⡳⠭⠴⠂⠑⠂⠄']);
+  this.executeCharTest('ǭ', ['⠄⡳⠭⠴⠂⠑⠙⠄']);
+  this.executeCharTest('ǻ', ['⠄⡳⠭⠴⠂⠋⠃⠄']);
+  this.executeCharTest('ȫ', ['⠄⡳⠭⠴⠆⠆⠃⠄']);
+  this.executeCharTest('ȭ', ['⠄⡳⠭⠴⠆⠆⠙⠄']);
+  this.executeCharTest('ȱ', ['⠄⡳⠭⠴⠆⠒⠂⠄']);
+  this.executeCharTest('ḉ', ['⠄⡳⠭⠂⠑⠴⠔⠄']);
+  this.executeCharTest('ḕ', ['⠄⡳⠭⠂⠑⠂⠢⠄']);
+  this.executeCharTest('ḗ', ['⠄⡳⠭⠂⠑⠂⠶⠄']);
+  this.executeCharTest('ḝ', ['⠄⡳⠭⠂⠑⠂⠙⠄']);
+  this.executeCharTest('ḯ', ['⠄⡳⠭⠂⠑⠆⠋⠄']);
+  this.executeCharTest('ḹ', ['⠄⡳⠭⠂⠑⠒⠔⠄']);
+  this.executeCharTest('ṍ', ['⠄⡳⠭⠂⠑⠲⠙⠄']);
+  this.executeCharTest('ṏ', ['⠄⡳⠭⠂⠑⠲⠋⠄']);
+  this.executeCharTest('ṑ', ['⠄⡳⠭⠂⠑⠢⠂⠄']);
+  this.executeCharTest('ṓ', ['⠄⡳⠭⠂⠑⠢⠒⠄']);
+  this.executeCharTest('ṝ', ['⠄⡳⠭⠂⠑⠢⠙⠄']);
+  this.executeCharTest('ṥ', ['⠄⡳⠭⠂⠑⠖⠢⠄']);
+  this.executeCharTest('ṧ', ['⠄⡳⠭⠂⠑⠖⠶⠄']);
+  this.executeCharTest('ṩ', ['⠄⡳⠭⠂⠑⠖⠔⠄']);
+  this.executeCharTest('ṹ', ['⠄⡳⠭⠂⠑⠶⠔⠄']);
+  this.executeCharTest('ṻ', ['⠄⡳⠭⠂⠑⠶⠃⠄']);
+  this.executeCharTest('ấ', ['⠄⡳⠭⠂⠑⠁⠢⠄']);
+  this.executeCharTest('ầ', ['⠄⡳⠭⠂⠑⠁⠶⠄']);
+  this.executeCharTest('ẩ', ['⠄⡳⠭⠂⠑⠁⠔⠄']);
+  this.executeCharTest('ẫ', ['⠄⡳⠭⠂⠑⠁⠃⠄']);
+  this.executeCharTest('ậ', ['⠄⡳⠭⠂⠑⠁⠙⠄']);
+  this.executeCharTest('ắ', ['⠄⡳⠭⠂⠑⠁⠋⠄']);
+  this.executeCharTest('ằ', ['⠄⡳⠭⠂⠑⠃⠂⠄']);
+  this.executeCharTest('ẳ', ['⠄⡳⠭⠂⠑⠃⠒⠄']);
+  this.executeCharTest('ẵ', ['⠄⡳⠭⠂⠑⠃⠢⠄']);
+  this.executeCharTest('ặ', ['⠄⡳⠭⠂⠑⠃⠶⠄']);
+  this.executeCharTest('ế', ['⠄⡳⠭⠂⠑⠃⠋⠄']);
+  this.executeCharTest('ề', ['⠄⡳⠭⠂⠑⠉⠂⠄']);
+  this.executeCharTest('ể', ['⠄⡳⠭⠂⠑⠉⠒⠄']);
+  this.executeCharTest('ễ', ['⠄⡳⠭⠂⠑⠉⠢⠄']);
+  this.executeCharTest('ệ', ['⠄⡳⠭⠂⠑⠉⠶⠄']);
+  this.executeCharTest('ố', ['⠄⡳⠭⠂⠑⠙⠂⠄']);
+  this.executeCharTest('ồ', ['⠄⡳⠭⠂⠑⠙⠒⠄']);
+  this.executeCharTest('ổ', ['⠄⡳⠭⠂⠑⠙⠢⠄']);
+  this.executeCharTest('ỗ', ['⠄⡳⠭⠂⠑⠙⠶⠄']);
+  this.executeCharTest('ộ', ['⠄⡳⠭⠂⠑⠙⠔⠄']);
+  this.executeCharTest('ớ', ['⠄⡳⠭⠂⠑⠙⠃⠄']);
+  this.executeCharTest('ờ', ['⠄⡳⠭⠂⠑⠙⠙⠄']);
+  this.executeCharTest('ở', ['⠄⡳⠭⠂⠑⠙⠋⠄']);
+  this.executeCharTest('ỡ', ['⠄⡳⠭⠂⠑⠑⠂⠄']);
+  this.executeCharTest('ợ', ['⠄⡳⠭⠂⠑⠑⠒⠄']);
+  this.executeCharTest('ứ', ['⠄⡳⠭⠂⠑⠑⠔⠄']);
+  this.executeCharTest('ừ', ['⠄⡳⠭⠂⠑⠑⠃⠄']);
+  this.executeCharTest('ử', ['⠄⡳⠭⠂⠑⠑⠙⠄']);
+  this.executeCharTest('ữ', ['⠄⡳⠭⠂⠑⠑⠋⠄']);
+  this.executeCharTest('ự', ['⠄⡳⠭⠂⠑⠋⠂⠄']);
+  this.executeCharTest('a', ['⠁']);
+  this.executeCharTest('b', ['⠃']);
+  this.executeCharTest('c', ['⠉']);
+  this.executeCharTest('d', ['⠙']);
+  this.executeCharTest('e', ['⠑']);
+  this.executeCharTest('f', ['⠋']);
+  this.executeCharTest('g', ['⠛']);
+  this.executeCharTest('h', ['⠓']);
+  this.executeCharTest('i', ['⠊']);
+  this.executeCharTest('j', ['⠚']);
+  this.executeCharTest('k', ['⠅']);
+  this.executeCharTest('l', ['⠇']);
+  this.executeCharTest('m', ['⠍']);
+  this.executeCharTest('n', ['⠝']);
+  this.executeCharTest('o', ['⠕']);
+  this.executeCharTest('p', ['⠏']);
+  this.executeCharTest('q', ['⠟']);
+  this.executeCharTest('r', ['⠗']);
+  this.executeCharTest('s', ['⠎']);
+  this.executeCharTest('t', ['⠞']);
+  this.executeCharTest('u', ['⠥']);
+  this.executeCharTest('v', ['⠧']);
+  this.executeCharTest('w', ['⠺']);
+  this.executeCharTest('x', ['⠭']);
+  this.executeCharTest('y', ['⠽']);
+  this.executeCharTest('z', ['⠵']);
+  this.executeCharTest('ａ', ['⠁']);
+  this.executeCharTest('ｂ', ['⠃']);
+  this.executeCharTest('ｃ', ['⠉']);
+  this.executeCharTest('ｄ', ['⠙']);
+  this.executeCharTest('ｅ', ['⠑']);
+  this.executeCharTest('ｆ', ['⠋']);
+  this.executeCharTest('ｇ', ['⠛']);
+  this.executeCharTest('ｈ', ['⠓']);
+  this.executeCharTest('ｉ', ['⠊']);
+  this.executeCharTest('ｊ', ['⠚']);
+  this.executeCharTest('ｋ', ['⠅']);
+  this.executeCharTest('ｌ', ['⠇']);
+  this.executeCharTest('ｍ', ['⠍']);
+  this.executeCharTest('ｎ', ['⠝']);
+  this.executeCharTest('ｏ', ['⠕']);
+  this.executeCharTest('ｐ', ['⠏']);
+  this.executeCharTest('ｑ', ['⠟']);
+  this.executeCharTest('ｒ', ['⠗']);
+  this.executeCharTest('ｓ', ['⠎']);
+  this.executeCharTest('ｔ', ['⠞']);
+  this.executeCharTest('ｕ', ['⠥']);
+  this.executeCharTest('ｖ', ['⠧']);
+  this.executeCharTest('ｗ', ['⠺']);
+  this.executeCharTest('ｘ', ['⠭']);
+  this.executeCharTest('ｙ', ['⠽']);
+  this.executeCharTest('ｚ', ['⠵']);
+  this.executeCharTest('ø', ['⠈⠕']);
+  this.executeCharTest('đ', ['⠄⡳⠭⠴⠂⠂⠂⠄']);
+  this.executeCharTest('ħ', ['⠄⡳⠭⠴⠂⠆⠶⠄']);
+  this.executeCharTest('ł', ['⠄⡳⠭⠴⠂⠲⠆⠄']);
+  this.executeCharTest('ŧ', ['⠄⡳⠭⠴⠂⠖⠶⠄']);
+  this.executeCharTest('ƀ', ['⠄⡳⠭⠴⠂⠦⠴⠄']);
+  this.executeCharTest('ƛ', ['⠄⡳⠭⠴⠂⠔⠃⠄']);
+  this.executeCharTest('ƶ', ['⠄⡳⠭⠴⠂⠃⠖⠄']);
+  this.executeCharTest('ƾ', ['⠄⡳⠭⠴⠂⠃⠑⠄']);
+  this.executeCharTest('ǥ', ['⠄⡳⠭⠴⠂⠑⠢⠄']);
+  this.executeCharTest('ǿ', ['⠄⡳⠭⠴⠂⠋⠋⠄']);
+  this.executeCharTest('ȼ', ['⠄⡳⠭⠴⠆⠒⠉⠄']);
+  this.executeCharTest('ɇ', ['⠄⡳⠭⠴⠆⠲⠶⠄']);
+  this.executeCharTest('ɉ', ['⠄⡳⠭⠴⠆⠲⠔⠄']);
+  this.executeCharTest('ɍ', ['⠄⡳⠭⠴⠆⠲⠙⠄']);
+  this.executeCharTest('ɏ', ['⠄⡳⠭⠴⠆⠲⠋⠄']);
+  this.executeCharTest('ɟ', ['⠄⡳⠭⠴⠆⠢⠋⠄']);
+  this.executeCharTest('ɨ', ['⠄⡳⠭⠴⠆⠖⠦⠄']);
+  this.executeCharTest('ʄ', ['⠄⡳⠭⠴⠆⠦⠲⠄']);
+  this.executeCharTest('ʡ', ['⠄⡳⠭⠴⠆⠁⠂⠄']);
+  this.executeCharTest('ʢ', ['⠄⡳⠭⠴⠆⠁⠆⠄']);
+  this.executeCharTest('ᴓ', ['⠄⡳⠭⠂⠙⠂⠒⠄']);
+  this.executeCharTest('ᵼ', ['⠄⡳⠭⠂⠙⠶⠉⠄']);
+  this.executeCharTest('ᵽ', ['⠄⡳⠭⠂⠙⠶⠙⠄']);
+  this.executeCharTest('ᵿ', ['⠄⡳⠭⠂⠙⠶⠋⠄']);
+  this.executeCharTest('ẜ', ['⠄⡳⠭⠂⠑⠔⠉⠄']);
+  this.executeCharTest('ẝ', ['⠄⡳⠭⠂⠑⠔⠙⠄']);
+  this.executeCharTest('ƍ', ['⠄⡳⠭⠴⠂⠦⠙⠄']);
+  this.executeCharTest('ẛ', ['⠄⡳⠭⠂⠑⠔⠃⠄']);
+  this.executeCharTest('ẟ', ['⠄⡳⠭⠂⠑⠔⠋⠄']);
+  this.executeCharTest('ĸ', ['⠄⡳⠭⠴⠂⠒⠦⠄']);
+  this.executeCharTest('ſ', ['⠄⡳⠭⠴⠂⠶⠋⠄']);
+  this.executeCharTest('ƃ', ['⠄⡳⠭⠴⠂⠦⠒⠄']);
+  this.executeCharTest('ƅ', ['⠄⡳⠭⠴⠂⠦⠢⠄']);
+  this.executeCharTest('ƈ', ['⠄⡳⠭⠴⠂⠦⠦⠄']);
+  this.executeCharTest('ƌ', ['⠄⡳⠭⠴⠂⠦⠉⠄']);
+  this.executeCharTest('ƒ', ['⠄⡳⠭⠴⠂⠔⠆⠄']);
+  this.executeCharTest('ƕ', ['⠄⡳⠭⠴⠂⠔⠢⠄']);
+  this.executeCharTest('ƙ', ['⠄⡳⠭⠴⠂⠔⠔⠄']);
+  this.executeCharTest('ƚ', ['⠄⡳⠭⠴⠂⠔⠁⠄']);
+  this.executeCharTest('ƞ', ['⠄⡳⠭⠴⠂⠔⠑⠄']);
+  this.executeCharTest('ơ', ['⠄⡳⠭⠴⠂⠁⠂⠄']);
+  this.executeCharTest('ƣ', ['⠄⡳⠭⠴⠂⠁⠒⠄']);
+  this.executeCharTest('ƥ', ['⠄⡳⠭⠴⠂⠁⠢⠄']);
+  this.executeCharTest('ƨ', ['⠄⡳⠭⠴⠂⠁⠦⠄']);
+  this.executeCharTest('ƪ', ['⠄⡳⠭⠴⠂⠁⠁⠄']);
+  this.executeCharTest('ƫ', ['⠄⡳⠭⠴⠂⠁⠃⠄']);
+  this.executeCharTest('ƭ', ['⠄⡳⠭⠴⠂⠁⠙⠄']);
+  this.executeCharTest('ư', ['⠄⡳⠭⠴⠂⠃⠴⠄']);
+  this.executeCharTest('ƴ', ['⠄⡳⠭⠴⠂⠃⠲⠄']);
+  this.executeCharTest('ƹ', ['⠄⡳⠭⠴⠂⠃⠔⠄']);
+  this.executeCharTest('ƺ', ['⠄⡳⠭⠴⠂⠃⠁⠄']);
+  this.executeCharTest('ƽ', ['⠄⡳⠭⠴⠂⠃⠙⠄']);
+  this.executeCharTest('ƿ', ['⠄⡳⠭⠴⠂⠃⠋⠄']);
+  this.executeCharTest('ǆ', ['⠄⡳⠭⠴⠂⠉⠖⠄']);
+  this.executeCharTest('ǉ', ['⠄⡳⠭⠴⠂⠉⠔⠄']);
+  this.executeCharTest('ǌ', ['⠄⡳⠭⠴⠂⠉⠉⠄']);
+  this.executeCharTest('ǣ', ['⠄⡳⠭⠴⠂⠑⠒⠄']);
+  this.executeCharTest('ǯ', ['⠄⡳⠭⠴⠂⠑⠋⠄']);
+  this.executeCharTest('ǳ', ['⠄⡳⠭⠴⠂⠋⠒⠄']);
+  this.executeCharTest('ȝ', ['⠄⡳⠭⠴⠆⠂⠙⠄']);
+  this.executeCharTest('ɮ', ['⠄⡳⠭⠴⠆⠖⠑⠄']);
+  this.executeCharTest('ʒ', ['⠄⡳⠭⠴⠆⠔⠆⠄']);
+  this.executeCharTest('ʓ', ['⠄⡳⠭⠴⠆⠔⠒⠄']);
+  this.executeCharTest('ʤ', ['⠄⡳⠭⠴⠆⠁⠲⠄']);
+  this.executeCharTest('ǝ', ['⠄⡳⠭⠴⠂⠙⠙⠄']);
+  this.executeCharTest('ǽ', ['⠄⡳⠭⠴⠂⠋⠙⠄']);
+  this.executeCharTest('ȡ', ['⠄⡳⠭⠴⠆⠆⠂⠄']);
+  this.executeCharTest('ȣ', ['⠄⡳⠭⠴⠆⠆⠒⠄']);
+  this.executeCharTest('ȥ', ['⠄⡳⠭⠴⠆⠆⠢⠄']);
+  this.executeCharTest('ȴ', ['⠄⡳⠭⠴⠆⠒⠲⠄']);
+  this.executeCharTest('ȵ', ['⠄⡳⠭⠴⠆⠒⠢⠄']);
+  this.executeCharTest('ȶ', ['⠄⡳⠭⠴⠆⠒⠖⠄']);
+  this.executeCharTest('ȸ', ['⠄⡳⠭⠴⠆⠒⠦⠄']);
+  this.executeCharTest('ȹ', ['⠄⡳⠭⠴⠆⠒⠔⠄']);
+  this.executeCharTest('ȿ', ['⠄⡳⠭⠴⠆⠒⠋⠄']);
+  this.executeCharTest('ɀ', ['⠄⡳⠭⠴⠆⠲⠴⠄']);
+  this.executeCharTest('ɂ', ['⠄⡳⠭⠴⠆⠲⠆⠄']);
+  this.executeCharTest('ɋ', ['⠄⡳⠭⠴⠆⠲⠃⠄']);
+  this.executeCharTest('ɐ', ['⠄⡳⠭⠴⠆⠢⠴⠄']);
+  this.executeCharTest('ɑ', ['⠄⡳⠭⠴⠆⠢⠂⠄']);
+  this.executeCharTest('ɒ', ['⠄⡳⠭⠴⠆⠢⠆⠄']);
+  this.executeCharTest('ɓ', ['⠄⡳⠭⠴⠆⠢⠒⠄']);
+  this.executeCharTest('ɔ', ['⠄⡳⠭⠴⠆⠢⠲⠄']);
+  this.executeCharTest('ɕ', ['⠄⡳⠭⠴⠆⠢⠢⠄']);
+  this.executeCharTest('ɖ', ['⠄⡳⠭⠴⠆⠢⠖⠄']);
+  this.executeCharTest('ɗ', ['⠄⡳⠭⠴⠆⠢⠶⠄']);
+  this.executeCharTest('ɘ', ['⠄⡳⠭⠴⠆⠢⠦⠄']);
+  this.executeCharTest('ə', ['⠄⡳⠭⠴⠆⠢⠔⠄']);
+  this.executeCharTest('ɚ', ['⠄⡳⠭⠴⠆⠢⠁⠄']);
+  this.executeCharTest('ɛ', ['⠄⡳⠭⠴⠆⠢⠃⠄']);
+  this.executeCharTest('ɜ', ['⠄⡳⠭⠴⠆⠢⠉⠄']);
+  this.executeCharTest('ɝ', ['⠄⡳⠭⠴⠆⠢⠙⠄']);
+  this.executeCharTest('ɞ', ['⠄⡳⠭⠴⠆⠢⠑⠄']);
+  this.executeCharTest('ɠ', ['⠄⡳⠭⠴⠆⠖⠴⠄']);
+  this.executeCharTest('ɡ', ['⠄⡳⠭⠴⠆⠖⠂⠄']);
+  this.executeCharTest('ɣ', ['⠄⡳⠭⠴⠆⠖⠒⠄']);
+  this.executeCharTest('ɤ', ['⠄⡳⠭⠴⠆⠖⠲⠄']);
+  this.executeCharTest('ɥ', ['⠄⡳⠭⠴⠆⠖⠢⠄']);
+  this.executeCharTest('ɦ', ['⠄⡳⠭⠴⠆⠖⠖⠄']);
+  this.executeCharTest('ɧ', ['⠄⡳⠭⠴⠆⠖⠶⠄']);
+  this.executeCharTest('ɩ', ['⠄⡳⠭⠴⠆⠖⠔⠄']);
+  this.executeCharTest('ɫ', ['⠄⡳⠭⠴⠆⠖⠃⠄']);
+  this.executeCharTest('ɬ', ['⠄⡳⠭⠴⠆⠖⠉⠄']);
+  this.executeCharTest('ɭ', ['⠄⡳⠭⠴⠆⠖⠙⠄']);
+  this.executeCharTest('ɯ', ['⠄⡳⠭⠴⠆⠖⠋⠄']);
+  this.executeCharTest('ɰ', ['⠄⡳⠭⠴⠆⠶⠴⠄']);
+  this.executeCharTest('ɱ', ['⠄⡳⠭⠴⠆⠶⠂⠄']);
+  this.executeCharTest('ɲ', ['⠄⡳⠭⠴⠆⠶⠆⠄']);
+  this.executeCharTest('ɳ', ['⠄⡳⠭⠴⠆⠶⠒⠄']);
+  this.executeCharTest('ɵ', ['⠄⡳⠭⠴⠆⠶⠢⠄']);
+  this.executeCharTest('ɷ', ['⠄⡳⠭⠴⠆⠶⠶⠄']);
+  this.executeCharTest('ɸ', ['⠄⡳⠭⠴⠆⠶⠦⠄']);
+  this.executeCharTest('ɹ', ['⠄⡳⠭⠴⠆⠶⠔⠄']);
+  this.executeCharTest('ɺ', ['⠄⡳⠭⠴⠆⠶⠁⠄']);
+  this.executeCharTest('ɻ', ['⠄⡳⠭⠴⠆⠶⠃⠄']);
+  this.executeCharTest('ɼ', ['⠄⡳⠭⠴⠆⠶⠉⠄']);
+  this.executeCharTest('ɽ', ['⠄⡳⠭⠴⠆⠶⠙⠄']);
+  this.executeCharTest('ɾ', ['⠄⡳⠭⠴⠆⠶⠑⠄']);
+  this.executeCharTest('ɿ', ['⠄⡳⠭⠴⠆⠶⠋⠄']);
+  this.executeCharTest('ʂ', ['⠄⡳⠭⠴⠆⠦⠆⠄']);
+  this.executeCharTest('ʃ', ['⠄⡳⠭⠴⠆⠦⠒⠄']);
+  this.executeCharTest('ʅ', ['⠄⡳⠭⠴⠆⠦⠢⠄']);
+  this.executeCharTest('ʆ', ['⠄⡳⠭⠴⠆⠦⠖⠄']);
+  this.executeCharTest('ʇ', ['⠄⡳⠭⠴⠆⠦⠶⠄']);
+  this.executeCharTest('ʈ', ['⠄⡳⠭⠴⠆⠦⠦⠄']);
+  this.executeCharTest('ʉ', ['⠄⡳⠭⠴⠆⠦⠔⠄']);
+  this.executeCharTest('ʊ', ['⠄⡳⠭⠴⠆⠦⠁⠄']);
+  this.executeCharTest('ʋ', ['⠄⡳⠭⠴⠆⠦⠃⠄']);
+  this.executeCharTest('ʌ', ['⠄⡳⠭⠴⠆⠦⠉⠄']);
+  this.executeCharTest('ʍ', ['⠄⡳⠭⠴⠆⠦⠙⠄']);
+  this.executeCharTest('ʎ', ['⠄⡳⠭⠴⠆⠦⠑⠄']);
+  this.executeCharTest('ʐ', ['⠄⡳⠭⠴⠆⠔⠴⠄']);
+  this.executeCharTest('ʑ', ['⠄⡳⠭⠴⠆⠔⠂⠄']);
+  this.executeCharTest('ʕ', ['⠄⡳⠭⠴⠆⠔⠢⠄']);
+  this.executeCharTest('ʖ', ['⠄⡳⠭⠴⠆⠔⠖⠄']);
+  this.executeCharTest('ʗ', ['⠄⡳⠭⠴⠆⠔⠶⠄']);
+  this.executeCharTest('ʘ', ['⠄⡳⠭⠴⠆⠔⠦⠄']);
+  this.executeCharTest('ʚ', ['⠄⡳⠭⠴⠆⠔⠁⠄']);
+  this.executeCharTest('ʞ', ['⠄⡳⠭⠴⠆⠔⠑⠄']);
+  this.executeCharTest('ʠ', ['⠄⡳⠭⠴⠆⠁⠴⠄']);
+  this.executeCharTest('ʣ', ['⠄⡳⠭⠴⠆⠁⠒⠄']);
+  this.executeCharTest('ʥ', ['⠄⡳⠭⠴⠆⠁⠢⠄']);
+  this.executeCharTest('ʦ', ['⠄⡳⠭⠴⠆⠁⠖⠄']);
+  this.executeCharTest('ʧ', ['⠄⡳⠭⠴⠆⠁⠶⠄']);
+  this.executeCharTest('ʨ', ['⠄⡳⠭⠴⠆⠁⠦⠄']);
+  this.executeCharTest('ʩ', ['⠄⡳⠭⠴⠆⠁⠔⠄']);
+  this.executeCharTest('ʪ', ['⠄⡳⠭⠴⠆⠁⠁⠄']);
+  this.executeCharTest('ʫ', ['⠄⡳⠭⠴⠆⠁⠃⠄']);
+  this.executeCharTest('ʬ', ['⠄⡳⠭⠴⠆⠁⠉⠄']);
+  this.executeCharTest('ʭ', ['⠄⡳⠭⠴⠆⠁⠙⠄']);
+  this.executeCharTest('ʮ', ['⠄⡳⠭⠴⠆⠁⠑⠄']);
+  this.executeCharTest('ʯ', ['⠄⡳⠭⠴⠆⠁⠋⠄']);
+  this.executeCharTest('ᴂ', ['⠄⡳⠭⠂⠙⠴⠆⠄']);
+  this.executeCharTest('ᴈ', ['⠄⡳⠭⠂⠙⠴⠦⠄']);
+  this.executeCharTest('ᴉ', ['⠄⡳⠭⠂⠙⠴⠔⠄']);
+  this.executeCharTest('ᴑ', ['⠄⡳⠭⠂⠙⠂⠂⠄']);
+  this.executeCharTest('ᴒ', ['⠄⡳⠭⠂⠙⠂⠆⠄']);
+  this.executeCharTest('ᴔ', ['⠄⡳⠭⠂⠙⠂⠲⠄']);
+  this.executeCharTest('ᴖ', ['⠄⡳⠭⠂⠙⠂⠖⠄']);
+  this.executeCharTest('ᴗ', ['⠄⡳⠭⠂⠙⠂⠶⠄']);
+  this.executeCharTest('ᴝ', ['⠄⡳⠭⠂⠙⠂⠙⠄']);
+  this.executeCharTest('ᴞ', ['⠄⡳⠭⠂⠙⠂⠑⠄']);
+  this.executeCharTest('ᴟ', ['⠄⡳⠭⠂⠙⠂⠋⠄']);
+  this.executeCharTest('ᴤ', ['⠄⡳⠭⠂⠙⠆⠲⠄']);
+  this.executeCharTest('ᴥ', ['⠄⡳⠭⠂⠙⠆⠢⠄']);
+  this.executeCharTest('ᵫ', ['⠄⡳⠭⠂⠙⠖⠃⠄']);
+  this.executeCharTest('ᵬ', ['⠄⡳⠭⠂⠙⠖⠉⠄']);
+  this.executeCharTest('ᵭ', ['⠄⡳⠭⠂⠙⠖⠙⠄']);
+  this.executeCharTest('ᵮ', ['⠄⡳⠭⠂⠙⠖⠑⠄']);
+  this.executeCharTest('ᵯ', ['⠄⡳⠭⠂⠙⠖⠋⠄']);
+  this.executeCharTest('ᵰ', ['⠄⡳⠭⠂⠙⠶⠴⠄']);
+  this.executeCharTest('ᵱ', ['⠄⡳⠭⠂⠙⠶⠂⠄']);
+  this.executeCharTest('ᵲ', ['⠄⡳⠭⠂⠙⠶⠆⠄']);
+  this.executeCharTest('ᵳ', ['⠄⡳⠭⠂⠙⠶⠒⠄']);
+  this.executeCharTest('ᵴ', ['⠄⡳⠭⠂⠙⠶⠲⠄']);
+  this.executeCharTest('ᵵ', ['⠄⡳⠭⠂⠙⠶⠢⠄']);
+  this.executeCharTest('ᵶ', ['⠄⡳⠭⠂⠙⠶⠖⠄']);
+  this.executeCharTest('ᵷ', ['⠄⡳⠭⠂⠙⠶⠶⠄']);
+  this.executeCharTest('ᵹ', ['⠄⡳⠭⠂⠙⠶⠔⠄']);
+  this.executeCharTest('ᵺ', ['⠄⡳⠭⠂⠙⠶⠁⠄']);
+  this.executeCharTest('ᶀ', ['⠄⡳⠭⠂⠙⠦⠴⠄']);
+  this.executeCharTest('ᶁ', ['⠄⡳⠭⠂⠙⠦⠂⠄']);
+  this.executeCharTest('ᶂ', ['⠄⡳⠭⠂⠙⠦⠆⠄']);
+  this.executeCharTest('ᶃ', ['⠄⡳⠭⠂⠙⠦⠒⠄']);
+  this.executeCharTest('ᶄ', ['⠄⡳⠭⠂⠙⠦⠲⠄']);
+  this.executeCharTest('ᶅ', ['⠄⡳⠭⠂⠙⠦⠢⠄']);
+  this.executeCharTest('ᶆ', ['⠄⡳⠭⠂⠙⠦⠖⠄']);
+  this.executeCharTest('ᶇ', ['⠄⡳⠭⠂⠙⠦⠶⠄']);
+  this.executeCharTest('ᶈ', ['⠄⡳⠭⠂⠙⠦⠦⠄']);
+  this.executeCharTest('ᶉ', ['⠄⡳⠭⠂⠙⠦⠔⠄']);
+  this.executeCharTest('ᶊ', ['⠄⡳⠭⠂⠙⠦⠁⠄']);
+  this.executeCharTest('ᶋ', ['⠄⡳⠭⠂⠙⠦⠃⠄']);
+  this.executeCharTest('ᶌ', ['⠄⡳⠭⠂⠙⠦⠉⠄']);
+  this.executeCharTest('ᶍ', ['⠄⡳⠭⠂⠙⠦⠙⠄']);
+  this.executeCharTest('ᶎ', ['⠄⡳⠭⠂⠙⠦⠑⠄']);
+  this.executeCharTest('ᶏ', ['⠄⡳⠭⠂⠙⠦⠋⠄']);
+  this.executeCharTest('ᶐ', ['⠄⡳⠭⠂⠙⠔⠴⠄']);
+  this.executeCharTest('ᶑ', ['⠄⡳⠭⠂⠙⠔⠂⠄']);
+  this.executeCharTest('ᶒ', ['⠄⡳⠭⠂⠙⠔⠆⠄']);
+  this.executeCharTest('ᶓ', ['⠄⡳⠭⠂⠙⠔⠒⠄']);
+  this.executeCharTest('ᶔ', ['⠄⡳⠭⠂⠙⠔⠲⠄']);
+  this.executeCharTest('ᶕ', ['⠄⡳⠭⠂⠙⠔⠢⠄']);
+  this.executeCharTest('ᶖ', ['⠄⡳⠭⠂⠙⠔⠖⠄']);
+  this.executeCharTest('ᶗ', ['⠄⡳⠭⠂⠙⠔⠶⠄']);
+  this.executeCharTest('ᶘ', ['⠄⡳⠭⠂⠙⠔⠦⠄']);
+  this.executeCharTest('ᶙ', ['⠄⡳⠭⠂⠙⠔⠔⠄']);
+  this.executeCharTest('ᶚ', ['⠄⡳⠭⠂⠙⠔⠁⠄']);
+  this.executeCharTest('ŉ', ['⠄⡳⠭⠴⠂⠲⠔⠄']);
+  this.executeCharTest('ŋ', ['⠄⡳⠭⠴⠂⠲⠃⠄']);
+  this.executeCharTest('à', ['⠈⠁']);
+  this.executeCharTest('á', ['⠈⠁']);
+  this.executeCharTest('â', ['⠈⠁']);
+  this.executeCharTest('ã', ['⠈⠁']);
+  this.executeCharTest('ä', ['⠈⠁']);
+  this.executeCharTest('å', ['⠈⠁']);
+  this.executeCharTest('ç', ['⠈⠉']);
+  this.executeCharTest('è', ['⠈⠑']);
+  this.executeCharTest('é', ['⠈⠑']);
+  this.executeCharTest('ê', ['⠈⠑']);
+  this.executeCharTest('ë', ['⠈⠑']);
+  this.executeCharTest('ì', ['⠈⠊']);
+  this.executeCharTest('í', ['⠈⠊']);
+  this.executeCharTest('î', ['⠈⠊']);
+  this.executeCharTest('ï', ['⠈⠊']);
+  this.executeCharTest('ñ', ['⠈⠝']);
+  this.executeCharTest('ò', ['⠈⠕']);
+  this.executeCharTest('ó', ['⠈⠕']);
+  this.executeCharTest('ô', ['⠈⠕']);
+  this.executeCharTest('õ', ['⠈⠕']);
+  this.executeCharTest('ö', ['⠈⠕']);
+  this.executeCharTest('ù', ['⠈⠥']);
+  this.executeCharTest('ú', ['⠈⠥']);
+  this.executeCharTest('û', ['⠈⠥']);
+  this.executeCharTest('ü', ['⠈⠥']);
+  this.executeCharTest('ý', ['⠈⠽']);
+  this.executeCharTest('ÿ', ['⠈⠽']);
+  this.executeCharTest('ā', ['⠄⡳⠭⠴⠂⠴⠂⠄']);
+  this.executeCharTest('ă', ['⠄⡳⠭⠴⠂⠴⠒⠄']);
+  this.executeCharTest('ą', ['⠄⡳⠭⠴⠂⠴⠢⠄']);
+  this.executeCharTest('ć', ['⠄⡳⠭⠴⠂⠴⠶⠄']);
+  this.executeCharTest('ĉ', ['⠄⡳⠭⠴⠂⠴⠔⠄']);
+  this.executeCharTest('ċ', ['⠄⡳⠭⠴⠂⠴⠃⠄']);
+  this.executeCharTest('č', ['⠄⡳⠭⠴⠂⠴⠙⠄']);
+  this.executeCharTest('ď', ['⠄⡳⠭⠴⠂⠴⠋⠄']);
+  this.executeCharTest('ē', ['⠄⡳⠭⠴⠂⠂⠒⠄']);
+  this.executeCharTest('ĕ', ['⠄⡳⠭⠴⠂⠂⠢⠄']);
+  this.executeCharTest('ė', ['⠄⡳⠭⠴⠂⠂⠶⠄']);
+  this.executeCharTest('ę', ['⠄⡳⠭⠴⠂⠂⠔⠄']);
+  this.executeCharTest('ě', ['⠄⡳⠭⠴⠂⠂⠃⠄']);
+  this.executeCharTest('ĝ', ['⠄⡳⠭⠴⠂⠂⠙⠄']);
+  this.executeCharTest('ğ', ['⠄⡳⠭⠴⠂⠂⠋⠄']);
+  this.executeCharTest('ġ', ['⠄⡳⠭⠴⠂⠆⠂⠄']);
+  this.executeCharTest('ģ', ['⠄⡳⠭⠴⠂⠆⠒⠄']);
+  this.executeCharTest('ĥ', ['⠄⡳⠭⠴⠂⠆⠢⠄']);
+  this.executeCharTest('ĩ', ['⠄⡳⠭⠴⠂⠆⠔⠄']);
+  this.executeCharTest('ī', ['⠄⡳⠭⠴⠂⠆⠃⠄']);
+  this.executeCharTest('ĭ', ['⠄⡳⠭⠴⠂⠆⠙⠄']);
+  this.executeCharTest('į', ['⠄⡳⠭⠴⠂⠆⠋⠄']);
+  this.executeCharTest('ı', ['⠄⡳⠭⠴⠂⠒⠂⠄']);
+  this.executeCharTest('ĵ', ['⠄⡳⠭⠴⠂⠒⠢⠄']);
+  this.executeCharTest('ķ', ['⠄⡳⠭⠴⠂⠒⠶⠄']);
+  this.executeCharTest('ĺ', ['⠄⡳⠭⠴⠂⠒⠁⠄']);
+  this.executeCharTest('ļ', ['⠄⡳⠭⠴⠂⠒⠉⠄']);
+  this.executeCharTest('ľ', ['⠄⡳⠭⠴⠂⠒⠑⠄']);
+  this.executeCharTest('ŀ', ['⠄⡳⠭⠴⠂⠲⠴⠄']);
+  this.executeCharTest('ń', ['⠄⡳⠭⠴⠂⠲⠲⠄']);
+  this.executeCharTest('ņ', ['⠄⡳⠭⠴⠂⠲⠖⠄']);
+  this.executeCharTest('ň', ['⠄⡳⠭⠴⠂⠲⠦⠄']);
+  this.executeCharTest('ō', ['⠄⡳⠭⠴⠂⠲⠙⠄']);
+  this.executeCharTest('ŏ', ['⠄⡳⠭⠴⠂⠲⠋⠄']);
+  this.executeCharTest('ő', ['⠄⡳⠭⠴⠂⠢⠂⠄']);
+  this.executeCharTest('ŕ', ['⠄⡳⠭⠴⠂⠢⠢⠄']);
+  this.executeCharTest('ŗ', ['⠄⡳⠭⠴⠂⠢⠶⠄']);
+  this.executeCharTest('ř', ['⠄⡳⠭⠴⠂⠢⠔⠄']);
+  this.executeCharTest('ś', ['⠄⡳⠭⠴⠂⠢⠃⠄']);
+  this.executeCharTest('ŝ', ['⠄⡳⠭⠴⠂⠢⠙⠄']);
+  this.executeCharTest('ş', ['⠄⡳⠭⠴⠂⠢⠋⠄']);
+  this.executeCharTest('š', ['⠄⡳⠭⠴⠂⠖⠂⠄']);
+  this.executeCharTest('ţ', ['⠄⡳⠭⠴⠂⠖⠒⠄']);
+  this.executeCharTest('ť', ['⠄⡳⠭⠴⠂⠖⠢⠄']);
+  this.executeCharTest('ũ', ['⠄⡳⠭⠴⠂⠖⠔⠄']);
+  this.executeCharTest('ū', ['⠄⡳⠭⠴⠂⠖⠃⠄']);
+  this.executeCharTest('ŭ', ['⠄⡳⠭⠴⠂⠖⠙⠄']);
+  this.executeCharTest('ů', ['⠄⡳⠭⠴⠂⠖⠋⠄']);
+  this.executeCharTest('ű', ['⠄⡳⠭⠴⠂⠶⠂⠄']);
+  this.executeCharTest('ų', ['⠄⡳⠭⠴⠂⠶⠒⠄']);
+  this.executeCharTest('ŵ', ['⠄⡳⠭⠴⠂⠶⠢⠄']);
+  this.executeCharTest('ŷ', ['⠄⡳⠭⠴⠂⠶⠶⠄']);
+  this.executeCharTest('ź', ['⠄⡳⠭⠴⠂⠶⠁⠄']);
+  this.executeCharTest('ż', ['⠄⡳⠭⠴⠂⠶⠉⠄']);
+  this.executeCharTest('ž', ['⠄⡳⠭⠴⠂⠶⠑⠄']);
+  this.executeCharTest('ǎ', ['⠄⡳⠭⠴⠂⠉⠑⠄']);
+  this.executeCharTest('ǐ', ['⠄⡳⠭⠴⠂⠙⠴⠄']);
+  this.executeCharTest('ǒ', ['⠄⡳⠭⠴⠂⠙⠆⠄']);
+  this.executeCharTest('ǔ', ['⠄⡳⠭⠴⠂⠙⠲⠄']);
+  this.executeCharTest('ǧ', ['⠄⡳⠭⠴⠂⠑⠶⠄']);
+  this.executeCharTest('ǩ', ['⠄⡳⠭⠴⠂⠑⠔⠄']);
+  this.executeCharTest('ǫ', ['⠄⡳⠭⠴⠂⠑⠃⠄']);
+  this.executeCharTest('ǰ', ['⠄⡳⠭⠴⠂⠋⠴⠄']);
+  this.executeCharTest('ǵ', ['⠄⡳⠭⠴⠂⠋⠢⠄']);
+  this.executeCharTest('ǹ', ['⠄⡳⠭⠴⠂⠋⠔⠄']);
+  this.executeCharTest('ȁ', ['⠄⡳⠭⠴⠆⠴⠂⠄']);
+  this.executeCharTest('ȃ', ['⠄⡳⠭⠴⠆⠴⠒⠄']);
+  this.executeCharTest('ȅ', ['⠄⡳⠭⠴⠆⠴⠢⠄']);
+  this.executeCharTest('ȇ', ['⠄⡳⠭⠴⠆⠴⠶⠄']);
+  this.executeCharTest('ȉ', ['⠄⡳⠭⠴⠆⠴⠔⠄']);
+  this.executeCharTest('ȋ', ['⠄⡳⠭⠴⠆⠴⠃⠄']);
+  this.executeCharTest('ȍ', ['⠄⡳⠭⠴⠆⠴⠙⠄']);
+  this.executeCharTest('ȏ', ['⠄⡳⠭⠴⠆⠴⠋⠄']);
+  this.executeCharTest('ȑ', ['⠄⡳⠭⠴⠆⠂⠂⠄']);
+  this.executeCharTest('ȓ', ['⠄⡳⠭⠴⠆⠂⠒⠄']);
+  this.executeCharTest('ȕ', ['⠄⡳⠭⠴⠆⠂⠢⠄']);
+  this.executeCharTest('ȗ', ['⠄⡳⠭⠴⠆⠂⠶⠄']);
+  this.executeCharTest('ș', ['⠄⡳⠭⠴⠆⠂⠔⠄']);
+  this.executeCharTest('ț', ['⠄⡳⠭⠴⠆⠂⠃⠄']);
+  this.executeCharTest('ȟ', ['⠄⡳⠭⠴⠆⠂⠋⠄']);
+  this.executeCharTest('ȧ', ['⠄⡳⠭⠴⠆⠆⠶⠄']);
+  this.executeCharTest('ȩ', ['⠄⡳⠭⠴⠆⠆⠔⠄']);
+  this.executeCharTest('ȯ', ['⠄⡳⠭⠴⠆⠆⠋⠄']);
+  this.executeCharTest('ȳ', ['⠄⡳⠭⠴⠆⠒⠒⠄']);
+  this.executeCharTest('ȷ', ['⠄⡳⠭⠴⠆⠒⠶⠄']);
+  this.executeCharTest('ḁ', ['⠄⡳⠭⠂⠑⠴⠂⠄']);
+  this.executeCharTest('ḃ', ['⠄⡳⠭⠂⠑⠴⠒⠄']);
+  this.executeCharTest('ḅ', ['⠄⡳⠭⠂⠑⠴⠢⠄']);
+  this.executeCharTest('ḇ', ['⠄⡳⠭⠂⠑⠴⠶⠄']);
+  this.executeCharTest('ḋ', ['⠄⡳⠭⠂⠑⠴⠃⠄']);
+  this.executeCharTest('ḍ', ['⠄⡳⠭⠂⠑⠴⠙⠄']);
+  this.executeCharTest('ḏ', ['⠄⡳⠭⠂⠑⠴⠋⠄']);
+  this.executeCharTest('ḑ', ['⠄⡳⠭⠂⠑⠂⠂⠄']);
+  this.executeCharTest('ḓ', ['⠄⡳⠭⠂⠑⠂⠒⠄']);
+  this.executeCharTest('ḙ', ['⠄⡳⠭⠂⠑⠂⠔⠄']);
+  this.executeCharTest('ḛ', ['⠄⡳⠭⠂⠑⠂⠃⠄']);
+  this.executeCharTest('ḟ', ['⠄⡳⠭⠂⠑⠂⠋⠄']);
+  this.executeCharTest('ḡ', ['⠄⡳⠭⠂⠑⠆⠂⠄']);
+  this.executeCharTest('ḣ', ['⠄⡳⠭⠂⠑⠆⠒⠄']);
+  this.executeCharTest('ḥ', ['⠄⡳⠭⠂⠑⠆⠢⠄']);
+  this.executeCharTest('ḧ', ['⠄⡳⠭⠂⠑⠆⠶⠄']);
+  this.executeCharTest('ḩ', ['⠄⡳⠭⠂⠑⠆⠔⠄']);
+  this.executeCharTest('ḫ', ['⠄⡳⠭⠂⠑⠆⠃⠄']);
+  this.executeCharTest('ḭ', ['⠄⡳⠭⠂⠑⠆⠙⠄']);
+  this.executeCharTest('ḱ', ['⠄⡳⠭⠂⠑⠒⠂⠄']);
+  this.executeCharTest('ḳ', ['⠄⡳⠭⠂⠑⠒⠒⠄']);
+  this.executeCharTest('ḵ', ['⠄⡳⠭⠂⠑⠒⠢⠄']);
+  this.executeCharTest('ḷ', ['⠄⡳⠭⠂⠑⠒⠶⠄']);
+  this.executeCharTest('ḻ', ['⠄⡳⠭⠂⠑⠒⠃⠄']);
+  this.executeCharTest('ḽ', ['⠄⡳⠭⠂⠑⠒⠙⠄']);
+  this.executeCharTest('ḿ', ['⠄⡳⠭⠂⠑⠒⠋⠄']);
+  this.executeCharTest('ṁ', ['⠄⡳⠭⠂⠑⠲⠂⠄']);
+  this.executeCharTest('ṃ', ['⠄⡳⠭⠂⠑⠲⠒⠄']);
+  this.executeCharTest('ṅ', ['⠄⡳⠭⠂⠑⠲⠢⠄']);
+  this.executeCharTest('ṇ', ['⠄⡳⠭⠂⠑⠲⠶⠄']);
+  this.executeCharTest('ṉ', ['⠄⡳⠭⠂⠑⠲⠔⠄']);
+  this.executeCharTest('ṋ', ['⠄⡳⠭⠂⠑⠲⠃⠄']);
+  this.executeCharTest('ṕ', ['⠄⡳⠭⠂⠑⠢⠢⠄']);
+  this.executeCharTest('ṗ', ['⠄⡳⠭⠂⠑⠢⠶⠄']);
+  this.executeCharTest('ṙ', ['⠄⡳⠭⠂⠑⠢⠔⠄']);
+  this.executeCharTest('ṛ', ['⠄⡳⠭⠂⠑⠢⠃⠄']);
+  this.executeCharTest('ṟ', ['⠄⡳⠭⠂⠑⠢⠋⠄']);
+  this.executeCharTest('ṡ', ['⠄⡳⠭⠂⠑⠖⠂⠄']);
+  this.executeCharTest('ṣ', ['⠄⡳⠭⠂⠑⠖⠒⠄']);
+  this.executeCharTest('ṫ', ['⠄⡳⠭⠂⠑⠖⠃⠄']);
+  this.executeCharTest('ṭ', ['⠄⡳⠭⠂⠑⠖⠙⠄']);
+  this.executeCharTest('ṯ', ['⠄⡳⠭⠂⠑⠖⠋⠄']);
+  this.executeCharTest('ṱ', ['⠄⡳⠭⠂⠑⠶⠂⠄']);
+  this.executeCharTest('ṳ', ['⠄⡳⠭⠂⠑⠶⠒⠄']);
+  this.executeCharTest('ṵ', ['⠄⡳⠭⠂⠑⠶⠢⠄']);
+  this.executeCharTest('ṷ', ['⠄⡳⠭⠂⠑⠶⠶⠄']);
+  this.executeCharTest('ṽ', ['⠄⡳⠭⠂⠑⠶⠙⠄']);
+  this.executeCharTest('ṿ', ['⠄⡳⠭⠂⠑⠶⠋⠄']);
+  this.executeCharTest('ẁ', ['⠄⡳⠭⠂⠑⠦⠂⠄']);
+  this.executeCharTest('ẃ', ['⠄⡳⠭⠂⠑⠦⠒⠄']);
+  this.executeCharTest('ẅ', ['⠄⡳⠭⠂⠑⠦⠢⠄']);
+  this.executeCharTest('ẇ', ['⠄⡳⠭⠂⠑⠦⠶⠄']);
+  this.executeCharTest('ẉ', ['⠄⡳⠭⠂⠑⠦⠔⠄']);
+  this.executeCharTest('ẋ', ['⠄⡳⠭⠂⠑⠦⠃⠄']);
+  this.executeCharTest('ẍ', ['⠄⡳⠭⠂⠑⠦⠙⠄']);
+  this.executeCharTest('ẏ', ['⠄⡳⠭⠂⠑⠦⠋⠄']);
+  this.executeCharTest('ẑ', ['⠄⡳⠭⠂⠑⠔⠂⠄']);
+  this.executeCharTest('ẓ', ['⠄⡳⠭⠂⠑⠔⠒⠄']);
+  this.executeCharTest('ẕ', ['⠄⡳⠭⠂⠑⠔⠢⠄']);
+  this.executeCharTest('ẖ', ['⠄⡳⠭⠂⠑⠔⠖⠄']);
+  this.executeCharTest('ẗ', ['⠄⡳⠭⠂⠑⠔⠶⠄']);
+  this.executeCharTest('ẘ', ['⠄⡳⠭⠂⠑⠔⠦⠄']);
+  this.executeCharTest('ẙ', ['⠄⡳⠭⠂⠑⠔⠔⠄']);
+  this.executeCharTest('ẚ', ['⠄⡳⠭⠂⠑⠔⠁⠄']);
+  this.executeCharTest('ạ', ['⠄⡳⠭⠂⠑⠁⠂⠄']);
+  this.executeCharTest('ả', ['⠄⡳⠭⠂⠑⠁⠒⠄']);
+  this.executeCharTest('ẹ', ['⠄⡳⠭⠂⠑⠃⠔⠄']);
+  this.executeCharTest('ẻ', ['⠄⡳⠭⠂⠑⠃⠃⠄']);
+  this.executeCharTest('ẽ', ['⠄⡳⠭⠂⠑⠃⠙⠄']);
+  this.executeCharTest('ỉ', ['⠄⡳⠭⠂⠑⠉⠔⠄']);
+  this.executeCharTest('ị', ['⠄⡳⠭⠂⠑⠉⠃⠄']);
+  this.executeCharTest('ọ', ['⠄⡳⠭⠂⠑⠉⠙⠄']);
+  this.executeCharTest('ỏ', ['⠄⡳⠭⠂⠑⠉⠋⠄']);
+  this.executeCharTest('ụ', ['⠄⡳⠭⠂⠑⠑⠢⠄']);
+  this.executeCharTest('ủ', ['⠄⡳⠭⠂⠑⠑⠶⠄']);
+  this.executeCharTest('ỳ', ['⠄⡳⠭⠂⠑⠋⠒⠄']);
+  this.executeCharTest('ỵ', ['⠄⡳⠭⠂⠑⠋⠢⠄']);
+  this.executeCharTest('ỷ', ['⠄⡳⠭⠂⠑⠋⠶⠄']);
+  this.executeCharTest('ỹ', ['⠄⡳⠭⠂⠑⠋⠔⠄']);
+  this.executeCharTest('ͣ', ['⠄⡳⠭⠴⠒⠖⠒⠄']);
+  this.executeCharTest('ͤ', ['⠄⡳⠭⠴⠒⠖⠲⠄']);
+  this.executeCharTest('ͥ', ['⠄⡳⠭⠴⠒⠖⠢⠄']);
+  this.executeCharTest('ͦ', ['⠄⡳⠭⠴⠒⠖⠖⠄']);
+  this.executeCharTest('ͧ', ['⠄⡳⠭⠴⠒⠖⠶⠄']);
+  this.executeCharTest('ͨ', ['⠄⡳⠭⠴⠒⠖⠦⠄']);
+  this.executeCharTest('ͩ', ['⠄⡳⠭⠴⠒⠖⠔⠄']);
+  this.executeCharTest('ͪ', ['⠄⡳⠭⠴⠒⠖⠁⠄']);
+  this.executeCharTest('ͫ', ['⠄⡳⠭⠴⠒⠖⠃⠄']);
+  this.executeCharTest('ͬ', ['⠄⡳⠭⠴⠒⠖⠉⠄']);
+  this.executeCharTest('ͭ', ['⠄⡳⠭⠴⠒⠖⠙⠄']);
+  this.executeCharTest('ͮ', ['⠄⡳⠭⠴⠒⠖⠑⠄']);
+  this.executeCharTest('ͯ', ['⠄⡳⠭⠴⠒⠖⠋⠄']);
+  this.executeCharTest('ᵢ', ['⠄⡳⠭⠂⠙⠖⠆⠄']);
+  this.executeCharTest('ᵣ', ['⠄⡳⠭⠂⠙⠖⠒⠄']);
+  this.executeCharTest('ᵤ', ['⠄⡳⠭⠂⠙⠖⠲⠄']);
+  this.executeCharTest('ᵥ', ['⠄⡳⠭⠂⠙⠖⠢⠄']);
+  this.executeCharTest('᷊', ['⠄⡳⠭⠂⠙⠉⠁⠄']);
+  this.executeCharTest('ᷓ', ['⠄⡳⠭⠂⠙⠙⠒⠄']);
+  this.executeCharTest('ᷔ', ['⠄⡳⠭⠂⠙⠙⠲⠄']);
+  this.executeCharTest('ᷕ', ['⠄⡳⠭⠂⠙⠙⠢⠄']);
+  this.executeCharTest('ᷖ', ['⠄⡳⠭⠂⠙⠙⠖⠄']);
+  this.executeCharTest('ᷗ', ['⠄⡳⠭⠂⠙⠙⠶⠄']);
+  this.executeCharTest('ᷘ', ['⠄⡳⠭⠂⠙⠙⠦⠄']);
+  this.executeCharTest('ᷙ', ['⠄⡳⠭⠂⠙⠙⠔⠄']);
+  this.executeCharTest('ᷚ', ['⠄⡳⠭⠂⠙⠙⠁⠄']);
+  this.executeCharTest('ᷛ', ['⠄⡳⠭⠂⠙⠙⠃⠄']);
+  this.executeCharTest('ᷜ', ['⠄⡳⠭⠂⠙⠙⠉⠄']);
+  this.executeCharTest('ᷝ', ['⠄⡳⠭⠂⠙⠙⠙⠄']);
+  this.executeCharTest('ᷞ', ['⠄⡳⠭⠂⠙⠙⠑⠄']);
+  this.executeCharTest('ᷟ', ['⠄⡳⠭⠂⠙⠙⠋⠄']);
+  this.executeCharTest('ᷠ', ['⠄⡳⠭⠂⠙⠑⠴⠄']);
+  this.executeCharTest('ᷡ', ['⠄⡳⠭⠂⠙⠑⠂⠄']);
+  this.executeCharTest('ᷢ', ['⠄⡳⠭⠂⠙⠑⠆⠄']);
+  this.executeCharTest('ᷣ', ['⠄⡳⠭⠂⠙⠑⠒⠄']);
+  this.executeCharTest('ᷤ', ['⠄⡳⠭⠂⠙⠑⠲⠄']);
+  this.executeCharTest('ᷥ', ['⠄⡳⠭⠂⠙⠑⠢⠄']);
+  this.executeCharTest('ᷦ', ['⠄⡳⠭⠂⠙⠑⠖⠄']);
+  this.executeCharTest('ⁱ', ['⠄⡳⠭⠆⠴⠶⠂⠄']);
+  this.executeCharTest('ⁿ', ['⠄⡳⠭⠆⠴⠶⠋⠄']);
+  this.executeCharTest('ₐ', ['⠄⡳⠭⠆⠴⠔⠴⠄']);
+  this.executeCharTest('ₑ', ['⠄⡳⠭⠆⠴⠔⠂⠄']);
+  this.executeCharTest('ₒ', ['⠄⡳⠭⠆⠴⠔⠆⠄']);
+  this.executeCharTest('ₓ', ['⠄⡳⠭⠆⠴⠔⠒⠄']);
+  this.executeCharTest('ₔ', ['⠄⡳⠭⠆⠴⠔⠲⠄']);
+  this.executeCharTest('ₕ', ['⠄⡳⠭⠆⠴⠔⠢⠄']);
+  this.executeCharTest('ₖ', ['⠄⡳⠭⠆⠴⠔⠖⠄']);
+  this.executeCharTest('ₗ', ['⠄⡳⠭⠆⠴⠔⠶⠄']);
+  this.executeCharTest('ₘ', ['⠄⡳⠭⠆⠴⠔⠦⠄']);
+  this.executeCharTest('ₙ', ['⠄⡳⠭⠆⠴⠔⠔⠄']);
+  this.executeCharTest('ₚ', ['⠄⡳⠭⠆⠴⠔⠁⠄']);
+  this.executeCharTest('ₛ', ['⠄⡳⠭⠆⠴⠔⠃⠄']);
+  this.executeCharTest('ₜ', ['⠄⡳⠭⠆⠴⠔⠉⠄']);
+  this.executeCharTest('⒜', ['⠄⡳⠭⠆⠲⠔⠉⠄']);
+  this.executeCharTest('⒝', ['⠄⡳⠭⠆⠲⠔⠙⠄']);
+  this.executeCharTest('⒞', ['⠄⡳⠭⠆⠲⠔⠑⠄']);
+  this.executeCharTest('⒟', ['⠄⡳⠭⠆⠲⠔⠋⠄']);
+  this.executeCharTest('⒠', ['⠄⡳⠭⠆⠲⠁⠴⠄']);
+  this.executeCharTest('⒡', ['⠄⡳⠭⠆⠲⠁⠂⠄']);
+  this.executeCharTest('⒢', ['⠄⡳⠭⠆⠲⠁⠆⠄']);
+  this.executeCharTest('⒣', ['⠄⡳⠭⠆⠲⠁⠒⠄']);
+  this.executeCharTest('⒤', ['⠄⡳⠭⠆⠲⠁⠲⠄']);
+  this.executeCharTest('⒥', ['⠄⡳⠭⠆⠲⠁⠢⠄']);
+  this.executeCharTest('⒦', ['⠄⡳⠭⠆⠲⠁⠖⠄']);
+  this.executeCharTest('⒧', ['⠄⡳⠭⠆⠲⠁⠶⠄']);
+  this.executeCharTest('⒨', ['⠄⡳⠭⠆⠲⠁⠦⠄']);
+  this.executeCharTest('⒩', ['⠄⡳⠭⠆⠲⠁⠔⠄']);
+  this.executeCharTest('⒪', ['⠄⡳⠭⠆⠲⠁⠁⠄']);
+  this.executeCharTest('⒫', ['⠄⡳⠭⠆⠲⠁⠃⠄']);
+  this.executeCharTest('⒬', ['⠄⡳⠭⠆⠲⠁⠉⠄']);
+  this.executeCharTest('⒭', ['⠄⡳⠭⠆⠲⠁⠙⠄']);
+  this.executeCharTest('⒮', ['⠄⡳⠭⠆⠲⠁⠑⠄']);
+  this.executeCharTest('⒯', ['⠄⡳⠭⠆⠲⠁⠋⠄']);
+  this.executeCharTest('⒰', ['⠄⡳⠭⠆⠲⠃⠴⠄']);
+  this.executeCharTest('⒱', ['⠄⡳⠭⠆⠲⠃⠂⠄']);
+  this.executeCharTest('⒲', ['⠄⡳⠭⠆⠲⠃⠆⠄']);
+  this.executeCharTest('⒳', ['⠄⡳⠭⠆⠲⠃⠒⠄']);
+  this.executeCharTest('⒴', ['⠄⡳⠭⠆⠲⠃⠲⠄']);
+  this.executeCharTest('⒵', ['⠄⡳⠭⠆⠲⠃⠢⠄']);
+  this.executeCharTest('Ⓐ', ['⠄⡳⠭⠆⠲⠃⠖⠄']);
+  this.executeCharTest('Ⓑ', ['⠄⡳⠭⠆⠲⠃⠶⠄']);
+  this.executeCharTest('Ⓒ', ['⠄⡳⠭⠆⠲⠃⠦⠄']);
+  this.executeCharTest('Ⓓ', ['⠄⡳⠭⠆⠲⠃⠔⠄']);
+  this.executeCharTest('Ⓔ', ['⠄⡳⠭⠆⠲⠃⠁⠄']);
+  this.executeCharTest('Ⓕ', ['⠄⡳⠭⠆⠲⠃⠃⠄']);
+  this.executeCharTest('Ⓖ', ['⠄⡳⠭⠆⠲⠃⠉⠄']);
+  this.executeCharTest('Ⓗ', ['⠄⡳⠭⠆⠲⠃⠙⠄']);
+  this.executeCharTest('Ⓘ', ['⠄⡳⠭⠆⠲⠃⠑⠄']);
+  this.executeCharTest('Ⓙ', ['⠄⡳⠭⠆⠲⠃⠋⠄']);
+  this.executeCharTest('Ⓚ', ['⠄⡳⠭⠆⠲⠉⠴⠄']);
+  this.executeCharTest('Ⓛ', ['⠄⡳⠭⠆⠲⠉⠂⠄']);
+  this.executeCharTest('Ⓜ', ['⠄⡳⠭⠆⠲⠉⠆⠄']);
+  this.executeCharTest('Ⓝ', ['⠄⡳⠭⠆⠲⠉⠒⠄']);
+  this.executeCharTest('Ⓞ', ['⠄⡳⠭⠆⠲⠉⠲⠄']);
+  this.executeCharTest('Ⓟ', ['⠄⡳⠭⠆⠲⠉⠢⠄']);
+  this.executeCharTest('Ⓠ', ['⠄⡳⠭⠆⠲⠉⠖⠄']);
+  this.executeCharTest('Ⓡ', ['⠄⡳⠭⠆⠲⠉⠶⠄']);
+  this.executeCharTest('Ⓢ', ['⠄⡳⠭⠆⠲⠉⠦⠄']);
+  this.executeCharTest('Ⓣ', ['⠄⡳⠭⠆⠲⠉⠔⠄']);
+  this.executeCharTest('Ⓤ', ['⠄⡳⠭⠆⠲⠉⠁⠄']);
+  this.executeCharTest('Ⓥ', ['⠄⡳⠭⠆⠲⠉⠃⠄']);
+  this.executeCharTest('Ⓦ', ['⠄⡳⠭⠆⠲⠉⠉⠄']);
+  this.executeCharTest('Ⓧ', ['⠄⡳⠭⠆⠲⠉⠙⠄']);
+  this.executeCharTest('Ⓨ', ['⠄⡳⠭⠆⠲⠉⠑⠄']);
+  this.executeCharTest('Ⓩ', ['⠄⡳⠭⠆⠲⠉⠋⠄']);
+  this.executeCharTest('ⓐ', ['⠄⡳⠭⠆⠲⠙⠴⠄']);
+  this.executeCharTest('ⓑ', ['⠄⡳⠭⠆⠲⠙⠂⠄']);
+  this.executeCharTest('ⓒ', ['⠄⡳⠭⠆⠲⠙⠆⠄']);
+  this.executeCharTest('ⓓ', ['⠄⡳⠭⠆⠲⠙⠒⠄']);
+  this.executeCharTest('ⓔ', ['⠄⡳⠭⠆⠲⠙⠲⠄']);
+  this.executeCharTest('ⓕ', ['⠄⡳⠭⠆⠲⠙⠢⠄']);
+  this.executeCharTest('ⓖ', ['⠄⡳⠭⠆⠲⠙⠖⠄']);
+  this.executeCharTest('ⓗ', ['⠄⡳⠭⠆⠲⠙⠶⠄']);
+  this.executeCharTest('ⓘ', ['⠄⡳⠭⠆⠲⠙⠦⠄']);
+  this.executeCharTest('ⓙ', ['⠄⡳⠭⠆⠲⠙⠔⠄']);
+  this.executeCharTest('ⓚ', ['⠄⡳⠭⠆⠲⠙⠁⠄']);
+  this.executeCharTest('ⓛ', ['⠄⡳⠭⠆⠲⠙⠃⠄']);
+  this.executeCharTest('ⓜ', ['⠄⡳⠭⠆⠲⠙⠉⠄']);
+  this.executeCharTest('ⓝ', ['⠄⡳⠭⠆⠲⠙⠙⠄']);
+  this.executeCharTest('ⓞ', ['⠄⡳⠭⠆⠲⠙⠑⠄']);
+  this.executeCharTest('ⓟ', ['⠄⡳⠭⠆⠲⠙⠋⠄']);
+  this.executeCharTest('ⓠ', ['⠄⡳⠭⠆⠲⠑⠴⠄']);
+  this.executeCharTest('ⓡ', ['⠄⡳⠭⠆⠲⠑⠂⠄']);
+  this.executeCharTest('ⓢ', ['⠄⡳⠭⠆⠲⠑⠆⠄']);
+  this.executeCharTest('ⓣ', ['⠄⡳⠭⠆⠲⠑⠒⠄']);
+  this.executeCharTest('ⓤ', ['⠄⡳⠭⠆⠲⠑⠲⠄']);
+  this.executeCharTest('ⓥ', ['⠄⡳⠭⠆⠲⠑⠢⠄']);
+  this.executeCharTest('ⓦ', ['⠄⡳⠭⠆⠲⠑⠖⠄']);
+  this.executeCharTest('ⓧ', ['⠄⡳⠭⠆⠲⠑⠶⠄']);
+  this.executeCharTest('ⓨ', ['⠄⡳⠭⠆⠲⠑⠦⠄']);
+  this.executeCharTest('ⓩ', ['⠄⡳⠭⠆⠲⠑⠔⠄']);
+  this.executeCharTest('ⱼ', ['⠄⡳⠭⠆⠉⠶⠉⠄']);
+  this.executeCharTest('🄐', ['⠄⡳⠽⠂⠋⠂⠂⠴⠄']);
+  this.executeCharTest('🄑', ['⠄⡳⠽⠂⠋⠂⠂⠂⠄']);
+  this.executeCharTest('🄒', ['⠄⡳⠽⠂⠋⠂⠂⠆⠄']);
+  this.executeCharTest('🄓', ['⠄⡳⠽⠂⠋⠂⠂⠒⠄']);
+  this.executeCharTest('🄔', ['⠄⡳⠽⠂⠋⠂⠂⠲⠄']);
+  this.executeCharTest('🄕', ['⠄⡳⠽⠂⠋⠂⠂⠢⠄']);
+  this.executeCharTest('🄖', ['⠄⡳⠽⠂⠋⠂⠂⠖⠄']);
+  this.executeCharTest('🄗', ['⠄⡳⠽⠂⠋⠂⠂⠶⠄']);
+  this.executeCharTest('🄘', ['⠄⡳⠽⠂⠋⠂⠂⠦⠄']);
+  this.executeCharTest('🄙', ['⠄⡳⠽⠂⠋⠂⠂⠔⠄']);
+  this.executeCharTest('🄚', ['⠄⡳⠽⠂⠋⠂⠂⠁⠄']);
+  this.executeCharTest('🄛', ['⠄⡳⠽⠂⠋⠂⠂⠃⠄']);
+  this.executeCharTest('🄜', ['⠄⡳⠽⠂⠋⠂⠂⠉⠄']);
+  this.executeCharTest('🄝', ['⠄⡳⠽⠂⠋⠂⠂⠙⠄']);
+  this.executeCharTest('🄞', ['⠄⡳⠽⠂⠋⠂⠂⠑⠄']);
+  this.executeCharTest('🄟', ['⠄⡳⠽⠂⠋⠂⠂⠋⠄']);
+  this.executeCharTest('🄠', ['⠄⡳⠽⠂⠋⠂⠆⠴⠄']);
+  this.executeCharTest('🄡', ['⠄⡳⠽⠂⠋⠂⠆⠂⠄']);
+  this.executeCharTest('🄢', ['⠄⡳⠽⠂⠋⠂⠆⠆⠄']);
+  this.executeCharTest('🄣', ['⠄⡳⠽⠂⠋⠂⠆⠒⠄']);
+  this.executeCharTest('🄤', ['⠄⡳⠽⠂⠋⠂⠆⠲⠄']);
+  this.executeCharTest('🄥', ['⠄⡳⠽⠂⠋⠂⠆⠢⠄']);
+  this.executeCharTest('🄦', ['⠄⡳⠽⠂⠋⠂⠆⠖⠄']);
+  this.executeCharTest('🄧', ['⠄⡳⠽⠂⠋⠂⠆⠶⠄']);
+  this.executeCharTest('🄨', ['⠄⡳⠽⠂⠋⠂⠆⠦⠄']);
+  this.executeCharTest('🄩', ['⠄⡳⠽⠂⠋⠂⠆⠔⠄']);
+  this.executeCharTest('🄪', ['⠄⡳⠽⠂⠋⠂⠆⠁⠄']);
+  this.executeCharTest('🄫', ['⠄⡳⠽⠂⠋⠂⠆⠃⠄']);
+  this.executeCharTest('🄬', ['⠄⡳⠽⠂⠋⠂⠆⠉⠄']);
+  this.executeCharTest('🄰', ['⠄⡳⠽⠂⠋⠂⠒⠴⠄']);
+  this.executeCharTest('🄱', ['⠄⡳⠽⠂⠋⠂⠒⠂⠄']);
+  this.executeCharTest('🄲', ['⠄⡳⠽⠂⠋⠂⠒⠆⠄']);
+  this.executeCharTest('🄳', ['⠄⡳⠽⠂⠋⠂⠒⠒⠄']);
+  this.executeCharTest('🄴', ['⠄⡳⠽⠂⠋⠂⠒⠲⠄']);
+  this.executeCharTest('🄵', ['⠄⡳⠽⠂⠋⠂⠒⠢⠄']);
+  this.executeCharTest('🄶', ['⠄⡳⠽⠂⠋⠂⠒⠖⠄']);
+  this.executeCharTest('🄷', ['⠄⡳⠽⠂⠋⠂⠒⠶⠄']);
+  this.executeCharTest('🄸', ['⠄⡳⠽⠂⠋⠂⠒⠦⠄']);
+  this.executeCharTest('🄹', ['⠄⡳⠽⠂⠋⠂⠒⠔⠄']);
+  this.executeCharTest('🄺', ['⠄⡳⠽⠂⠋⠂⠒⠁⠄']);
+  this.executeCharTest('🄻', ['⠄⡳⠽⠂⠋⠂⠒⠃⠄']);
+  this.executeCharTest('🄼', ['⠄⡳⠽⠂⠋⠂⠒⠉⠄']);
+  this.executeCharTest('🄽', ['⠄⡳⠽⠂⠋⠂⠒⠙⠄']);
+  this.executeCharTest('🄾', ['⠄⡳⠽⠂⠋⠂⠒⠑⠄']);
+  this.executeCharTest('🄿', ['⠄⡳⠽⠂⠋⠂⠒⠋⠄']);
+  this.executeCharTest('🅀', ['⠄⡳⠽⠂⠋⠂⠲⠴⠄']);
+  this.executeCharTest('🅁', ['⠄⡳⠽⠂⠋⠂⠲⠂⠄']);
+  this.executeCharTest('🅂', ['⠄⡳⠽⠂⠋⠂⠲⠆⠄']);
+  this.executeCharTest('🅃', ['⠄⡳⠽⠂⠋⠂⠲⠒⠄']);
+  this.executeCharTest('🅄', ['⠄⡳⠽⠂⠋⠂⠲⠲⠄']);
+  this.executeCharTest('🅅', ['⠄⡳⠽⠂⠋⠂⠲⠢⠄']);
+  this.executeCharTest('🅆', ['⠄⡳⠽⠂⠋⠂⠲⠖⠄']);
+  this.executeCharTest('🅇', ['⠄⡳⠽⠂⠋⠂⠲⠶⠄']);
+  this.executeCharTest('🅈', ['⠄⡳⠽⠂⠋⠂⠲⠦⠄']);
+  this.executeCharTest('🅉', ['⠄⡳⠽⠂⠋⠂⠲⠔⠄']);
+  this.executeCharTest('🅐', ['⠄⡳⠽⠂⠋⠂⠢⠴⠄']);
+  this.executeCharTest('🅑', ['⠄⡳⠽⠂⠋⠂⠢⠂⠄']);
+  this.executeCharTest('🅒', ['⠄⡳⠽⠂⠋⠂⠢⠆⠄']);
+  this.executeCharTest('🅓', ['⠄⡳⠽⠂⠋⠂⠢⠒⠄']);
+  this.executeCharTest('🅔', ['⠄⡳⠽⠂⠋⠂⠢⠲⠄']);
+  this.executeCharTest('🅕', ['⠄⡳⠽⠂⠋⠂⠢⠢⠄']);
+  this.executeCharTest('🅖', ['⠄⡳⠽⠂⠋⠂⠢⠖⠄']);
+  this.executeCharTest('🅗', ['⠄⡳⠽⠂⠋⠂⠢⠶⠄']);
+  this.executeCharTest('🅘', ['⠄⡳⠽⠂⠋⠂⠢⠦⠄']);
+  this.executeCharTest('🅙', ['⠄⡳⠽⠂⠋⠂⠢⠔⠄']);
+  this.executeCharTest('🅚', ['⠄⡳⠽⠂⠋⠂⠢⠁⠄']);
+  this.executeCharTest('🅛', ['⠄⡳⠽⠂⠋⠂⠢⠃⠄']);
+  this.executeCharTest('🅜', ['⠄⡳⠽⠂⠋⠂⠢⠉⠄']);
+  this.executeCharTest('🅝', ['⠄⡳⠽⠂⠋⠂⠢⠙⠄']);
+  this.executeCharTest('🅞', ['⠄⡳⠽⠂⠋⠂⠢⠑⠄']);
+  this.executeCharTest('🅟', ['⠄⡳⠽⠂⠋⠂⠢⠋⠄']);
+  this.executeCharTest('🅠', ['⠄⡳⠽⠂⠋⠂⠖⠴⠄']);
+  this.executeCharTest('🅡', ['⠄⡳⠽⠂⠋⠂⠖⠂⠄']);
+  this.executeCharTest('🅢', ['⠄⡳⠽⠂⠋⠂⠖⠆⠄']);
+  this.executeCharTest('🅣', ['⠄⡳⠽⠂⠋⠂⠖⠒⠄']);
+  this.executeCharTest('🅤', ['⠄⡳⠽⠂⠋⠂⠖⠲⠄']);
+  this.executeCharTest('🅥', ['⠄⡳⠽⠂⠋⠂⠖⠢⠄']);
+  this.executeCharTest('🅦', ['⠄⡳⠽⠂⠋⠂⠖⠖⠄']);
+  this.executeCharTest('🅧', ['⠄⡳⠽⠂⠋⠂⠖⠶⠄']);
+  this.executeCharTest('🅨', ['⠄⡳⠽⠂⠋⠂⠖⠦⠄']);
+  this.executeCharTest('🅩', ['⠄⡳⠽⠂⠋⠂⠖⠔⠄']);
+  this.executeCharTest('🅰', ['⠄⡳⠽⠂⠋⠂⠶⠴⠄']);
+  this.executeCharTest('🅱', ['⠄⡳⠽⠂⠋⠂⠶⠂⠄']);
+  this.executeCharTest('🅲', ['⠄⡳⠽⠂⠋⠂⠶⠆⠄']);
+  this.executeCharTest('🅳', ['⠄⡳⠽⠂⠋⠂⠶⠒⠄']);
+  this.executeCharTest('🅴', ['⠄⡳⠽⠂⠋⠂⠶⠲⠄']);
+  this.executeCharTest('🅵', ['⠄⡳⠽⠂⠋⠂⠶⠢⠄']);
+  this.executeCharTest('🅶', ['⠄⡳⠽⠂⠋⠂⠶⠖⠄']);
+  this.executeCharTest('🅷', ['⠄⡳⠽⠂⠋⠂⠶⠶⠄']);
+  this.executeCharTest('🅸', ['⠄⡳⠽⠂⠋⠂⠶⠦⠄']);
+  this.executeCharTest('🅹', ['⠄⡳⠽⠂⠋⠂⠶⠔⠄']);
+  this.executeCharTest('🅺', ['⠄⡳⠽⠂⠋⠂⠶⠁⠄']);
+  this.executeCharTest('🅻', ['⠄⡳⠽⠂⠋⠂⠶⠃⠄']);
+  this.executeCharTest('🅼', ['⠄⡳⠽⠂⠋⠂⠶⠉⠄']);
+  this.executeCharTest('🅽', ['⠄⡳⠽⠂⠋⠂⠶⠙⠄']);
+  this.executeCharTest('🅾', ['⠄⡳⠽⠂⠋⠂⠶⠑⠄']);
+  this.executeCharTest('🅿', ['⠄⡳⠽⠂⠋⠂⠶⠋⠄']);
+  this.executeCharTest('🆀', ['⠄⡳⠽⠂⠋⠂⠦⠴⠄']);
+  this.executeCharTest('🆁', ['⠄⡳⠽⠂⠋⠂⠦⠂⠄']);
+  this.executeCharTest('🆂', ['⠄⡳⠽⠂⠋⠂⠦⠆⠄']);
+  this.executeCharTest('🆃', ['⠄⡳⠽⠂⠋⠂⠦⠒⠄']);
+  this.executeCharTest('🆄', ['⠄⡳⠽⠂⠋⠂⠦⠲⠄']);
+  this.executeCharTest('🆅', ['⠄⡳⠽⠂⠋⠂⠦⠢⠄']);
+  this.executeCharTest('🆆', ['⠄⡳⠽⠂⠋⠂⠦⠖⠄']);
+  this.executeCharTest('🆇', ['⠄⡳⠽⠂⠋⠂⠦⠶⠄']);
+  this.executeCharTest('🆈', ['⠄⡳⠽⠂⠋⠂⠦⠦⠄']);
+  this.executeCharTest('🆉', ['⠄⡳⠽⠂⠋⠂⠦⠔⠄']);
+  this.executeCharTest('🆊', ['⠄⡳⠽⠂⠋⠂⠦⠁⠄']);
+  this.executeCharTest('Ǖ', ['⠄⡳⠭⠴⠂⠙⠢⠄']);
+  this.executeCharTest('Ǘ', ['⠄⡳⠭⠴⠂⠙⠶⠄']);
+  this.executeCharTest('Ǚ', ['⠄⡳⠭⠴⠂⠙⠔⠄']);
+  this.executeCharTest('Ǜ', ['⠄⡳⠭⠴⠂⠙⠃⠄']);
+  this.executeCharTest('Ǟ', ['⠄⡳⠭⠴⠂⠙⠑⠄']);
+  this.executeCharTest('Ǡ', ['⠄⡳⠭⠴⠂⠑⠴⠄']);
+  this.executeCharTest('Ǭ', ['⠄⡳⠭⠴⠂⠑⠉⠄']);
+  this.executeCharTest('Ǻ', ['⠄⡳⠭⠴⠂⠋⠁⠄']);
+  this.executeCharTest('Ȫ', ['⠄⡳⠭⠴⠆⠆⠁⠄']);
+  this.executeCharTest('Ȭ', ['⠄⡳⠭⠴⠆⠆⠉⠄']);
+  this.executeCharTest('Ȱ', ['⠄⡳⠭⠴⠆⠒⠴⠄']);
+  this.executeCharTest('Ḉ', ['⠄⡳⠭⠂⠑⠴⠦⠄']);
+  this.executeCharTest('Ḕ', ['⠄⡳⠭⠂⠑⠂⠲⠄']);
+  this.executeCharTest('Ḗ', ['⠄⡳⠭⠂⠑⠂⠖⠄']);
+  this.executeCharTest('Ḝ', ['⠄⡳⠭⠂⠑⠂⠉⠄']);
+  this.executeCharTest('Ḯ', ['⠄⡳⠭⠂⠑⠆⠑⠄']);
+  this.executeCharTest('Ḹ', ['⠄⡳⠭⠂⠑⠒⠦⠄']);
+  this.executeCharTest('Ṍ', ['⠄⡳⠭⠂⠑⠲⠉⠄']);
+  this.executeCharTest('Ṏ', ['⠄⡳⠭⠂⠑⠲⠑⠄']);
+  this.executeCharTest('Ṑ', ['⠄⡳⠭⠂⠑⠢⠴⠄']);
+  this.executeCharTest('Ṓ', ['⠄⡳⠭⠂⠑⠢⠆⠄']);
+  this.executeCharTest('Ṝ', ['⠄⡳⠭⠂⠑⠢⠉⠄']);
+  this.executeCharTest('Ṥ', ['⠄⡳⠭⠂⠑⠖⠲⠄']);
+  this.executeCharTest('Ṧ', ['⠄⡳⠭⠂⠑⠖⠖⠄']);
+  this.executeCharTest('Ṩ', ['⠄⡳⠭⠂⠑⠖⠦⠄']);
+  this.executeCharTest('Ṹ', ['⠄⡳⠭⠂⠑⠶⠦⠄']);
+  this.executeCharTest('Ṻ', ['⠄⡳⠭⠂⠑⠶⠁⠄']);
+  this.executeCharTest('Ấ', ['⠄⡳⠭⠂⠑⠁⠲⠄']);
+  this.executeCharTest('Ầ', ['⠄⡳⠭⠂⠑⠁⠖⠄']);
+  this.executeCharTest('Ẩ', ['⠄⡳⠭⠂⠑⠁⠦⠄']);
+  this.executeCharTest('Ẫ', ['⠄⡳⠭⠂⠑⠁⠁⠄']);
+  this.executeCharTest('Ậ', ['⠄⡳⠭⠂⠑⠁⠉⠄']);
+  this.executeCharTest('Ắ', ['⠄⡳⠭⠂⠑⠁⠑⠄']);
+  this.executeCharTest('Ằ', ['⠄⡳⠭⠂⠑⠃⠴⠄']);
+  this.executeCharTest('Ẳ', ['⠄⡳⠭⠂⠑⠃⠆⠄']);
+  this.executeCharTest('Ẵ', ['⠄⡳⠭⠂⠑⠃⠲⠄']);
+  this.executeCharTest('Ặ', ['⠄⡳⠭⠂⠑⠃⠖⠄']);
+  this.executeCharTest('Ế', ['⠄⡳⠭⠂⠑⠃⠑⠄']);
+  this.executeCharTest('Ề', ['⠄⡳⠭⠂⠑⠉⠴⠄']);
+  this.executeCharTest('Ể', ['⠄⡳⠭⠂⠑⠉⠆⠄']);
+  this.executeCharTest('Ễ', ['⠄⡳⠭⠂⠑⠉⠲⠄']);
+  this.executeCharTest('Ệ', ['⠄⡳⠭⠂⠑⠉⠖⠄']);
+  this.executeCharTest('Ố', ['⠄⡳⠭⠂⠑⠙⠴⠄']);
+  this.executeCharTest('Ồ', ['⠄⡳⠭⠂⠑⠙⠆⠄']);
+  this.executeCharTest('Ổ', ['⠄⡳⠭⠂⠑⠙⠲⠄']);
+  this.executeCharTest('Ỗ', ['⠄⡳⠭⠂⠑⠙⠖⠄']);
+  this.executeCharTest('Ộ', ['⠄⡳⠭⠂⠑⠙⠦⠄']);
+  this.executeCharTest('Ớ', ['⠄⡳⠭⠂⠑⠙⠁⠄']);
+  this.executeCharTest('Ờ', ['⠄⡳⠭⠂⠑⠙⠉⠄']);
+  this.executeCharTest('Ở', ['⠄⡳⠭⠂⠑⠙⠑⠄']);
+  this.executeCharTest('Ỡ', ['⠄⡳⠭⠂⠑⠑⠴⠄']);
+  this.executeCharTest('Ợ', ['⠄⡳⠭⠂⠑⠑⠆⠄']);
+  this.executeCharTest('Ứ', ['⠄⡳⠭⠂⠑⠑⠦⠄']);
+  this.executeCharTest('Ừ', ['⠄⡳⠭⠂⠑⠑⠁⠄']);
+  this.executeCharTest('Ử', ['⠄⡳⠭⠂⠑⠑⠉⠄']);
+  this.executeCharTest('Ữ', ['⠄⡳⠭⠂⠑⠑⠑⠄']);
+  this.executeCharTest('Ự', ['⠄⡳⠭⠂⠑⠋⠴⠄']);
+  this.executeCharTest('A', ['⠠⠁']);
+  this.executeCharTest('B', ['⠠⠃']);
+  this.executeCharTest('C', ['⠠⠉']);
+  this.executeCharTest('D', ['⠠⠙']);
+  this.executeCharTest('E', ['⠠⠑']);
+  this.executeCharTest('F', ['⠠⠋']);
+  this.executeCharTest('G', ['⠠⠛']);
+  this.executeCharTest('H', ['⠠⠓']);
+  this.executeCharTest('I', ['⠠⠊']);
+  this.executeCharTest('J', ['⠠⠚']);
+  this.executeCharTest('K', ['⠠⠅']);
+  this.executeCharTest('L', ['⠠⠇']);
+  this.executeCharTest('M', ['⠠⠍']);
+  this.executeCharTest('N', ['⠠⠝']);
+  this.executeCharTest('O', ['⠠⠕']);
+  this.executeCharTest('P', ['⠠⠏']);
+  this.executeCharTest('Q', ['⠠⠟']);
+  this.executeCharTest('R', ['⠠⠗']);
+  this.executeCharTest('S', ['⠠⠎']);
+  this.executeCharTest('T', ['⠠⠞']);
+  this.executeCharTest('U', ['⠠⠥']);
+  this.executeCharTest('V', ['⠠⠧']);
+  this.executeCharTest('W', ['⠠⠺']);
+  this.executeCharTest('X', ['⠠⠭']);
+  this.executeCharTest('Y', ['⠠⠽']);
+  this.executeCharTest('Z', ['⠠⠵']);
+  this.executeCharTest('Ａ', ['⠠⠁']);
+  this.executeCharTest('Ｂ', ['⠠⠃']);
+  this.executeCharTest('Ｃ', ['⠠⠉']);
+  this.executeCharTest('Ｄ', ['⠠⠙']);
+  this.executeCharTest('Ｅ', ['⠠⠑']);
+  this.executeCharTest('Ｆ', ['⠠⠋']);
+  this.executeCharTest('Ｇ', ['⠠⠛']);
+  this.executeCharTest('Ｈ', ['⠠⠓']);
+  this.executeCharTest('Ｉ', ['⠠⠊']);
+  this.executeCharTest('Ｊ', ['⠠⠚']);
+  this.executeCharTest('Ｋ', ['⠠⠅']);
+  this.executeCharTest('Ｌ', ['⠠⠇']);
+  this.executeCharTest('Ｍ', ['⠠⠍']);
+  this.executeCharTest('Ｎ', ['⠠⠝']);
+  this.executeCharTest('Ｏ', ['⠠⠕']);
+  this.executeCharTest('Ｐ', ['⠠⠏']);
+  this.executeCharTest('Ｑ', ['⠠⠟']);
+  this.executeCharTest('Ｒ', ['⠠⠗']);
+  this.executeCharTest('Ｓ', ['⠠⠎']);
+  this.executeCharTest('Ｔ', ['⠠⠞']);
+  this.executeCharTest('Ｕ', ['⠠⠥']);
+  this.executeCharTest('Ｖ', ['⠠⠧']);
+  this.executeCharTest('Ｗ', ['⠠⠺']);
+  this.executeCharTest('Ｘ', ['⠠⠭']);
+  this.executeCharTest('Ｙ', ['⠠⠽']);
+  this.executeCharTest('Ｚ', ['⠠⠵']);
+  this.executeCharTest('À', ['⠠⠈⠁']);
+  this.executeCharTest('Á', ['⠠⠈⠁']);
+  this.executeCharTest('Â', ['⠠⠈⠁']);
+  this.executeCharTest('Ã', ['⠠⠈⠁']);
+  this.executeCharTest('Ä', ['⠠⠈⠁']);
+  this.executeCharTest('Å', ['⠠⠈⠁']);
+  this.executeCharTest('Ç', ['⠠⠈⠉']);
+  this.executeCharTest('È', ['⠠⠈⠑']);
+  this.executeCharTest('É', ['⠠⠈⠑']);
+  this.executeCharTest('Ê', ['⠠⠈⠑']);
+  this.executeCharTest('Ë', ['⠠⠈⠑']);
+  this.executeCharTest('Ì', ['⠠⠈⠊']);
+  this.executeCharTest('Í', ['⠠⠈⠊']);
+  this.executeCharTest('Î', ['⠠⠈⠊']);
+  this.executeCharTest('Ï', ['⠠⠈⠊']);
+  this.executeCharTest('Ñ', ['⠠⠈⠝']);
+  this.executeCharTest('Ò', ['⠠⠈⠕']);
+  this.executeCharTest('Ó', ['⠠⠈⠕']);
+  this.executeCharTest('Ô', ['⠠⠈⠕']);
+  this.executeCharTest('Õ', ['⠄⡳⠭⠴⠴⠙⠢⠄']);
+  this.executeCharTest('Ö', ['⠠⠈⠕']);
+  this.executeCharTest('Ù', ['⠠⠈⠥']);
+  this.executeCharTest('Ú', ['⠠⠈⠥']);
+  this.executeCharTest('Û', ['⠠⠈⠥']);
+  this.executeCharTest('Ü', ['⠠⠈⠥']);
+  this.executeCharTest('Ý', ['⠠⠈⠽']);
+  this.executeCharTest('Ā', ['⠄⡳⠭⠴⠂⠴⠴⠄']);
+  this.executeCharTest('Ă', ['⠄⡳⠭⠴⠂⠴⠆⠄']);
+  this.executeCharTest('Ą', ['⠄⡳⠭⠴⠂⠴⠲⠄']);
+  this.executeCharTest('Ć', ['⠄⡳⠭⠴⠂⠴⠖⠄']);
+  this.executeCharTest('Ĉ', ['⠄⡳⠭⠴⠂⠴⠦⠄']);
+  this.executeCharTest('Ċ', ['⠄⡳⠭⠴⠂⠴⠁⠄']);
+  this.executeCharTest('Č', ['⠄⡳⠭⠴⠂⠴⠉⠄']);
+  this.executeCharTest('Ď', ['⠄⡳⠭⠴⠂⠴⠑⠄']);
+  this.executeCharTest('Ē', ['⠄⡳⠭⠴⠂⠂⠆⠄']);
+  this.executeCharTest('Ĕ', ['⠄⡳⠭⠴⠂⠂⠲⠄']);
+  this.executeCharTest('Ė', ['⠄⡳⠭⠴⠂⠂⠖⠄']);
+  this.executeCharTest('Ę', ['⠄⡳⠭⠴⠂⠂⠦⠄']);
+  this.executeCharTest('Ě', ['⠄⡳⠭⠴⠂⠂⠁⠄']);
+  this.executeCharTest('Ĝ', ['⠄⡳⠭⠴⠂⠂⠉⠄']);
+  this.executeCharTest('Ğ', ['⠄⡳⠭⠴⠂⠂⠑⠄']);
+  this.executeCharTest('Ġ', ['⠄⡳⠭⠴⠂⠆⠴⠄']);
+  this.executeCharTest('Ģ', ['⠄⡳⠭⠴⠂⠆⠆⠄']);
+  this.executeCharTest('Ĥ', ['⠄⡳⠭⠴⠂⠆⠲⠄']);
+  this.executeCharTest('Ĩ', ['⠄⡳⠭⠴⠂⠆⠦⠄']);
+  this.executeCharTest('Ī', ['⠄⡳⠭⠴⠂⠆⠁⠄']);
+  this.executeCharTest('Ĭ', ['⠄⡳⠭⠴⠂⠆⠉⠄']);
+  this.executeCharTest('Į', ['⠄⡳⠭⠴⠂⠆⠑⠄']);
+  this.executeCharTest('İ', ['⠄⡳⠭⠴⠂⠒⠴⠄']);
+  this.executeCharTest('Ĵ', ['⠄⡳⠭⠴⠂⠒⠲⠄']);
+  this.executeCharTest('Ķ', ['⠄⡳⠭⠴⠂⠒⠖⠄']);
+  this.executeCharTest('Ĺ', ['⠄⡳⠭⠴⠂⠒⠔⠄']);
+  this.executeCharTest('Ļ', ['⠄⡳⠭⠴⠂⠒⠃⠄']);
+  this.executeCharTest('Ľ', ['⠄⡳⠭⠴⠂⠒⠙⠄']);
+  this.executeCharTest('Ŀ', ['⠄⡳⠭⠴⠂⠒⠋⠄']);
+  this.executeCharTest('Ń', ['⠄⡳⠭⠴⠂⠲⠒⠄']);
+  this.executeCharTest('Ņ', ['⠄⡳⠭⠴⠂⠲⠢⠄']);
+  this.executeCharTest('Ň', ['⠄⡳⠭⠴⠂⠲⠶⠄']);
+  this.executeCharTest('Ō', ['⠄⡳⠭⠴⠂⠲⠉⠄']);
+  this.executeCharTest('Ŏ', ['⠄⡳⠭⠴⠂⠲⠑⠄']);
+  this.executeCharTest('Ő', ['⠄⡳⠭⠴⠂⠢⠴⠄']);
+  this.executeCharTest('Ŕ', ['⠄⡳⠭⠴⠂⠢⠲⠄']);
+  this.executeCharTest('Ŗ', ['⠄⡳⠭⠴⠂⠢⠖⠄']);
+  this.executeCharTest('Ř', ['⠄⡳⠭⠴⠂⠢⠦⠄']);
+  this.executeCharTest('Ś', ['⠄⡳⠭⠴⠂⠢⠁⠄']);
+  this.executeCharTest('Ŝ', ['⠄⡳⠭⠴⠂⠢⠉⠄']);
+  this.executeCharTest('Ş', ['⠄⡳⠭⠴⠂⠢⠑⠄']);
+  this.executeCharTest('Š', ['⠄⡳⠭⠴⠂⠖⠴⠄']);
+  this.executeCharTest('Ţ', ['⠄⡳⠭⠴⠂⠖⠆⠄']);
+  this.executeCharTest('Ť', ['⠄⡳⠭⠴⠂⠖⠲⠄']);
+  this.executeCharTest('Ũ', ['⠄⡳⠭⠴⠂⠖⠦⠄']);
+  this.executeCharTest('Ū', ['⠄⡳⠭⠴⠂⠖⠁⠄']);
+  this.executeCharTest('Ŭ', ['⠄⡳⠭⠴⠂⠖⠉⠄']);
+  this.executeCharTest('Ů', ['⠄⡳⠭⠴⠂⠖⠑⠄']);
+  this.executeCharTest('Ű', ['⠄⡳⠭⠴⠂⠶⠴⠄']);
+  this.executeCharTest('Ų', ['⠄⡳⠭⠴⠂⠶⠆⠄']);
+  this.executeCharTest('Ŵ', ['⠄⡳⠭⠴⠂⠶⠲⠄']);
+  this.executeCharTest('Ŷ', ['⠄⡳⠭⠴⠂⠶⠖⠄']);
+  this.executeCharTest('Ÿ', ['⠄⡳⠭⠴⠂⠶⠦⠄']);
+  this.executeCharTest('Ź', ['⠄⡳⠭⠴⠂⠶⠔⠄']);
+  this.executeCharTest('Ż', ['⠄⡳⠭⠴⠂⠶⠃⠄']);
+  this.executeCharTest('Ž', ['⠄⡳⠭⠴⠂⠶⠙⠄']);
+  this.executeCharTest('Ǎ', ['⠄⡳⠭⠴⠂⠉⠙⠄']);
+  this.executeCharTest('Ǐ', ['⠄⡳⠭⠴⠂⠉⠋⠄']);
+  this.executeCharTest('Ǒ', ['⠄⡳⠭⠴⠂⠙⠂⠄']);
+  this.executeCharTest('Ǔ', ['⠄⡳⠭⠴⠂⠙⠒⠄']);
+  this.executeCharTest('Ǧ', ['⠄⡳⠭⠴⠂⠑⠖⠄']);
+  this.executeCharTest('Ǩ', ['⠄⡳⠭⠴⠂⠑⠦⠄']);
+  this.executeCharTest('Ǫ', ['⠄⡳⠭⠴⠂⠑⠁⠄']);
+  this.executeCharTest('Ǵ', ['⠄⡳⠭⠴⠂⠋⠲⠄']);
+  this.executeCharTest('Ǹ', ['⠄⡳⠭⠴⠂⠋⠦⠄']);
+  this.executeCharTest('Ȁ', ['⠄⡳⠭⠴⠆⠴⠴⠄']);
+  this.executeCharTest('Ȃ', ['⠄⡳⠭⠴⠆⠴⠆⠄']);
+  this.executeCharTest('Ȅ', ['⠄⡳⠭⠴⠆⠴⠲⠄']);
+  this.executeCharTest('Ȇ', ['⠄⡳⠭⠴⠆⠴⠖⠄']);
+  this.executeCharTest('Ȉ', ['⠄⡳⠭⠴⠆⠴⠦⠄']);
+  this.executeCharTest('Ȋ', ['⠄⡳⠭⠴⠆⠴⠁⠄']);
+  this.executeCharTest('Ȍ', ['⠄⡳⠭⠴⠆⠴⠉⠄']);
+  this.executeCharTest('Ȏ', ['⠄⡳⠭⠴⠆⠴⠑⠄']);
+  this.executeCharTest('Ȑ', ['⠄⡳⠭⠴⠆⠂⠴⠄']);
+  this.executeCharTest('Ȓ', ['⠄⡳⠭⠴⠆⠂⠆⠄']);
+  this.executeCharTest('Ȕ', ['⠄⡳⠭⠴⠆⠂⠲⠄']);
+  this.executeCharTest('Ȗ', ['⠄⡳⠭⠴⠆⠂⠖⠄']);
+  this.executeCharTest('Ș', ['⠄⡳⠭⠴⠆⠂⠦⠄']);
+  this.executeCharTest('Ț', ['⠄⡳⠭⠴⠆⠂⠁⠄']);
+  this.executeCharTest('Ȟ', ['⠄⡳⠭⠴⠆⠂⠑⠄']);
+  this.executeCharTest('Ȧ', ['⠄⡳⠭⠴⠆⠆⠖⠄']);
+  this.executeCharTest('Ȩ', ['⠄⡳⠭⠴⠆⠆⠦⠄']);
+  this.executeCharTest('Ȯ', ['⠄⡳⠭⠴⠆⠆⠑⠄']);
+  this.executeCharTest('Ȳ', ['⠄⡳⠭⠴⠆⠒⠆⠄']);
+  this.executeCharTest('Ḁ', ['⠄⡳⠭⠂⠑⠴⠴⠄']);
+  this.executeCharTest('Ḃ', ['⠄⡳⠭⠂⠑⠴⠆⠄']);
+  this.executeCharTest('Ḅ', ['⠄⡳⠭⠂⠑⠴⠲⠄']);
+  this.executeCharTest('Ḇ', ['⠄⡳⠭⠂⠑⠴⠖⠄']);
+  this.executeCharTest('Ḋ', ['⠄⡳⠭⠂⠑⠴⠁⠄']);
+  this.executeCharTest('Ḍ', ['⠄⡳⠭⠂⠑⠴⠉⠄']);
+  this.executeCharTest('Ḏ', ['⠄⡳⠭⠂⠑⠴⠑⠄']);
+  this.executeCharTest('Ḑ', ['⠄⡳⠭⠂⠑⠂⠴⠄']);
+  this.executeCharTest('Ḓ', ['⠄⡳⠭⠂⠑⠂⠆⠄']);
+  this.executeCharTest('Ḙ', ['⠄⡳⠭⠂⠑⠂⠦⠄']);
+  this.executeCharTest('Ḛ', ['⠄⡳⠭⠂⠑⠂⠁⠄']);
+  this.executeCharTest('Ḟ', ['⠄⡳⠭⠂⠑⠂⠑⠄']);
+  this.executeCharTest('Ḡ', ['⠄⡳⠭⠂⠑⠆⠴⠄']);
+  this.executeCharTest('Ḣ', ['⠄⡳⠭⠂⠑⠆⠆⠄']);
+  this.executeCharTest('Ḥ', ['⠄⡳⠭⠂⠑⠆⠲⠄']);
+  this.executeCharTest('Ḧ', ['⠄⡳⠭⠂⠑⠆⠖⠄']);
+  this.executeCharTest('Ḩ', ['⠄⡳⠭⠂⠑⠆⠦⠄']);
+  this.executeCharTest('Ḫ', ['⠄⡳⠭⠂⠑⠆⠁⠄']);
+  this.executeCharTest('Ḭ', ['⠄⡳⠭⠂⠑⠆⠉⠄']);
+  this.executeCharTest('Ḱ', ['⠄⡳⠭⠂⠑⠒⠴⠄']);
+  this.executeCharTest('Ḳ', ['⠄⡳⠭⠂⠑⠒⠆⠄']);
+  this.executeCharTest('Ḵ', ['⠄⡳⠭⠂⠑⠒⠲⠄']);
+  this.executeCharTest('Ḷ', ['⠄⡳⠭⠂⠑⠒⠖⠄']);
+  this.executeCharTest('Ḻ', ['⠄⡳⠭⠂⠑⠒⠁⠄']);
+  this.executeCharTest('Ḽ', ['⠄⡳⠭⠂⠑⠒⠉⠄']);
+  this.executeCharTest('Ḿ', ['⠄⡳⠭⠂⠑⠒⠑⠄']);
+  this.executeCharTest('Ṁ', ['⠄⡳⠭⠂⠑⠲⠴⠄']);
+  this.executeCharTest('Ṃ', ['⠄⡳⠭⠂⠑⠲⠆⠄']);
+  this.executeCharTest('Ṅ', ['⠄⡳⠭⠂⠑⠲⠲⠄']);
+  this.executeCharTest('Ṇ', ['⠄⡳⠭⠂⠑⠲⠖⠄']);
+  this.executeCharTest('Ṉ', ['⠄⡳⠭⠂⠑⠲⠦⠄']);
+  this.executeCharTest('Ṋ', ['⠄⡳⠭⠂⠑⠲⠁⠄']);
+  this.executeCharTest('Ṕ', ['⠄⡳⠭⠂⠑⠢⠲⠄']);
+  this.executeCharTest('Ṗ', ['⠄⡳⠭⠂⠑⠢⠖⠄']);
+  this.executeCharTest('Ṙ', ['⠄⡳⠭⠂⠑⠢⠦⠄']);
+  this.executeCharTest('Ṛ', ['⠄⡳⠭⠂⠑⠢⠁⠄']);
+  this.executeCharTest('Ṟ', ['⠄⡳⠭⠂⠑⠢⠑⠄']);
+  this.executeCharTest('Ṡ', ['⠄⡳⠭⠂⠑⠖⠴⠄']);
+  this.executeCharTest('Ṣ', ['⠄⡳⠭⠂⠑⠖⠆⠄']);
+  this.executeCharTest('Ṫ', ['⠄⡳⠭⠂⠑⠖⠁⠄']);
+  this.executeCharTest('Ṭ', ['⠄⡳⠭⠂⠑⠖⠉⠄']);
+  this.executeCharTest('Ṯ', ['⠄⡳⠭⠂⠑⠖⠑⠄']);
+  this.executeCharTest('Ṱ', ['⠄⡳⠭⠂⠑⠶⠴⠄']);
+  this.executeCharTest('Ṳ', ['⠄⡳⠭⠂⠑⠶⠆⠄']);
+  this.executeCharTest('Ṵ', ['⠄⡳⠭⠂⠑⠶⠲⠄']);
+  this.executeCharTest('Ṷ', ['⠄⡳⠭⠂⠑⠶⠖⠄']);
+  this.executeCharTest('Ṽ', ['⠄⡳⠭⠂⠑⠶⠉⠄']);
+  this.executeCharTest('Ṿ', ['⠄⡳⠭⠂⠑⠶⠑⠄']);
+  this.executeCharTest('Ẁ', ['⠄⡳⠭⠂⠑⠦⠴⠄']);
+  this.executeCharTest('Ẃ', ['⠄⡳⠭⠂⠑⠦⠆⠄']);
+  this.executeCharTest('Ẅ', ['⠄⡳⠭⠂⠑⠦⠲⠄']);
+  this.executeCharTest('Ẇ', ['⠄⡳⠭⠂⠑⠦⠖⠄']);
+  this.executeCharTest('Ẉ', ['⠄⡳⠭⠂⠑⠦⠦⠄']);
+  this.executeCharTest('Ẋ', ['⠄⡳⠭⠂⠑⠦⠁⠄']);
+  this.executeCharTest('Ẍ', ['⠄⡳⠭⠂⠑⠦⠉⠄']);
+  this.executeCharTest('Ẏ', ['⠄⡳⠭⠂⠑⠦⠑⠄']);
+  this.executeCharTest('Ẑ', ['⠄⡳⠭⠂⠑⠔⠴⠄']);
+  this.executeCharTest('Ẓ', ['⠄⡳⠭⠂⠑⠔⠆⠄']);
+  this.executeCharTest('Ẕ', ['⠄⡳⠭⠂⠑⠔⠲⠄']);
+  this.executeCharTest('Ạ', ['⠄⡳⠭⠂⠑⠁⠴⠄']);
+  this.executeCharTest('Ả', ['⠄⡳⠭⠂⠑⠁⠆⠄']);
+  this.executeCharTest('Ẹ', ['⠄⡳⠭⠂⠑⠃⠦⠄']);
+  this.executeCharTest('Ẻ', ['⠄⡳⠭⠂⠑⠃⠁⠄']);
+  this.executeCharTest('Ẽ', ['⠄⡳⠭⠂⠑⠃⠉⠄']);
+  this.executeCharTest('Ỉ', ['⠄⡳⠭⠂⠑⠉⠦⠄']);
+  this.executeCharTest('Ị', ['⠄⡳⠭⠂⠑⠉⠁⠄']);
+  this.executeCharTest('Ọ', ['⠄⡳⠭⠂⠑⠉⠉⠄']);
+  this.executeCharTest('Ỏ', ['⠄⡳⠭⠂⠑⠉⠑⠄']);
+  this.executeCharTest('Ụ', ['⠄⡳⠭⠂⠑⠑⠲⠄']);
+  this.executeCharTest('Ủ', ['⠄⡳⠭⠂⠑⠑⠖⠄']);
+  this.executeCharTest('Ỳ', ['⠄⡳⠭⠂⠑⠋⠆⠄']);
+  this.executeCharTest('Ỵ', ['⠄⡳⠭⠂⠑⠋⠲⠄']);
+  this.executeCharTest('Ỷ', ['⠄⡳⠭⠂⠑⠋⠖⠄']);
+  this.executeCharTest('Ỹ', ['⠄⡳⠭⠂⠑⠋⠦⠄']);
+  this.executeCharTest('𝕬', ['⠸⠀⠸⠠⠁']);
+  this.executeCharTest('𝕭', ['⠸⠀⠸⠠⠃']);
+  this.executeCharTest('𝕮', ['⠸⠀⠸⠠⠉']);
+  this.executeCharTest('𝕯', ['⠸⠀⠸⠠⠙']);
+  this.executeCharTest('𝕰', ['⠸⠀⠸⠠⠑']);
+  this.executeCharTest('𝕱', ['⠸⠀⠸⠠⠋']);
+  this.executeCharTest('𝕲', ['⠸⠀⠸⠠⠛']);
+  this.executeCharTest('𝕳', ['⠸⠀⠸⠠⠓']);
+  this.executeCharTest('𝕴', ['⠸⠀⠸⠠⠊']);
+  this.executeCharTest('𝕵', ['⠸⠀⠸⠠⠚']);
+  this.executeCharTest('𝕶', ['⠸⠀⠸⠠⠅']);
+  this.executeCharTest('𝕷', ['⠸⠀⠸⠠⠇']);
+  this.executeCharTest('𝕸', ['⠸⠀⠸⠠⠍']);
+  this.executeCharTest('𝕹', ['⠸⠀⠸⠠⠝']);
+  this.executeCharTest('𝕺', ['⠸⠀⠸⠠⠕']);
+  this.executeCharTest('𝕻', ['⠸⠀⠸⠠⠏']);
+  this.executeCharTest('𝕼', ['⠸⠀⠸⠠⠟']);
+  this.executeCharTest('𝕽', ['⠸⠀⠸⠠⠗']);
+  this.executeCharTest('𝕾', ['⠸⠀⠸⠠⠎']);
+  this.executeCharTest('𝕿', ['⠸⠀⠸⠠⠞']);
+  this.executeCharTest('𝖀', ['⠸⠀⠸⠠⠥']);
+  this.executeCharTest('𝖁', ['⠸⠀⠸⠠⠧']);
+  this.executeCharTest('𝖂', ['⠸⠀⠸⠠⠺']);
+  this.executeCharTest('𝖃', ['⠸⠀⠸⠠⠭']);
+  this.executeCharTest('𝖄', ['⠸⠀⠸⠠⠽']);
+  this.executeCharTest('𝖅', ['⠸⠀⠸⠠⠵']);
+  this.executeCharTest('𝖆', ['⠸⠀⠸⠁']);
+  this.executeCharTest('𝖇', ['⠸⠀⠸⠃']);
+  this.executeCharTest('𝖈', ['⠸⠀⠸⠉']);
+  this.executeCharTest('𝖉', ['⠸⠀⠸⠙']);
+  this.executeCharTest('𝖊', ['⠸⠀⠸⠑']);
+  this.executeCharTest('𝖋', ['⠸⠀⠸⠋']);
+  this.executeCharTest('𝖌', ['⠸⠀⠸⠛']);
+  this.executeCharTest('𝖍', ['⠸⠀⠸⠓']);
+  this.executeCharTest('𝖎', ['⠸⠀⠸⠊']);
+  this.executeCharTest('𝖏', ['⠸⠀⠸⠚']);
+  this.executeCharTest('𝖐', ['⠸⠀⠸⠅']);
+  this.executeCharTest('𝖑', ['⠸⠀⠸⠇']);
+  this.executeCharTest('𝖒', ['⠸⠀⠸⠍']);
+  this.executeCharTest('𝖓', ['⠸⠀⠸⠝']);
+  this.executeCharTest('𝖔', ['⠸⠀⠸⠕']);
+  this.executeCharTest('𝖕', ['⠸⠀⠸⠏']);
+  this.executeCharTest('𝖖', ['⠸⠀⠸⠟']);
+  this.executeCharTest('𝖗', ['⠸⠀⠸⠗']);
+  this.executeCharTest('𝖘', ['⠸⠀⠸⠎']);
+  this.executeCharTest('𝖙', ['⠸⠀⠸⠞']);
+  this.executeCharTest('𝖚', ['⠸⠀⠸⠥']);
+  this.executeCharTest('𝖛', ['⠸⠀⠸⠧']);
+  this.executeCharTest('𝖜', ['⠸⠀⠸⠺']);
+  this.executeCharTest('𝖝', ['⠸⠀⠸⠭']);
+  this.executeCharTest('𝖞', ['⠸⠀⠸⠽']);
+  this.executeCharTest('𝖟', ['⠸⠀⠸⠵']);
+  this.executeCharTest('𝐀', ['⠸⠠⠁']);
+  this.executeCharTest('𝐁', ['⠸⠠⠃']);
+  this.executeCharTest('𝐂', ['⠸⠠⠉']);
+  this.executeCharTest('𝐃', ['⠸⠠⠙']);
+  this.executeCharTest('𝐄', ['⠸⠠⠑']);
+  this.executeCharTest('𝐅', ['⠸⠠⠋']);
+  this.executeCharTest('𝐆', ['⠸⠠⠛']);
+  this.executeCharTest('𝐇', ['⠸⠠⠓']);
+  this.executeCharTest('𝐈', ['⠸⠠⠊']);
+  this.executeCharTest('𝐉', ['⠸⠠⠚']);
+  this.executeCharTest('𝐊', ['⠸⠠⠅']);
+  this.executeCharTest('𝐋', ['⠸⠠⠇']);
+  this.executeCharTest('𝐌', ['⠸⠠⠍']);
+  this.executeCharTest('𝐍', ['⠸⠠⠝']);
+  this.executeCharTest('𝐎', ['⠸⠠⠕']);
+  this.executeCharTest('𝐏', ['⠸⠠⠏']);
+  this.executeCharTest('𝐐', ['⠸⠠⠟']);
+  this.executeCharTest('𝐑', ['⠸⠠⠗']);
+  this.executeCharTest('𝐒', ['⠸⠠⠎']);
+  this.executeCharTest('𝐓', ['⠸⠠⠞']);
+  this.executeCharTest('𝐔', ['⠸⠠⠥']);
+  this.executeCharTest('𝐕', ['⠸⠠⠧']);
+  this.executeCharTest('𝐖', ['⠸⠠⠺']);
+  this.executeCharTest('𝐗', ['⠸⠠⠭']);
+  this.executeCharTest('𝐘', ['⠸⠠⠽']);
+  this.executeCharTest('𝐙', ['⠸⠠⠵']);
+  this.executeCharTest('𝐚', ['⠸⠁']);
+  this.executeCharTest('𝐛', ['⠸⠃']);
+  this.executeCharTest('𝐜', ['⠸⠉']);
+  this.executeCharTest('𝐝', ['⠸⠙']);
+  this.executeCharTest('𝐞', ['⠸⠑']);
+  this.executeCharTest('𝐟', ['⠸⠋']);
+  this.executeCharTest('𝐠', ['⠸⠛']);
+  this.executeCharTest('𝐡', ['⠸⠓']);
+  this.executeCharTest('𝐢', ['⠸⠊']);
+  this.executeCharTest('𝐣', ['⠸⠚']);
+  this.executeCharTest('𝐤', ['⠸⠅']);
+  this.executeCharTest('𝐥', ['⠸⠇']);
+  this.executeCharTest('𝐦', ['⠸⠍']);
+  this.executeCharTest('𝐧', ['⠸⠝']);
+  this.executeCharTest('𝐨', ['⠸⠕']);
+  this.executeCharTest('𝐩', ['⠸⠏']);
+  this.executeCharTest('𝐪', ['⠸⠟']);
+  this.executeCharTest('𝐫', ['⠸⠗']);
+  this.executeCharTest('𝐬', ['⠸⠎']);
+  this.executeCharTest('𝐭', ['⠸⠞']);
+  this.executeCharTest('𝐮', ['⠸⠥']);
+  this.executeCharTest('𝐯', ['⠸⠧']);
+  this.executeCharTest('𝐰', ['⠸⠺']);
+  this.executeCharTest('𝐱', ['⠸⠭']);
+  this.executeCharTest('𝐲', ['⠸⠽']);
+  this.executeCharTest('𝐳', ['⠸⠵']);
+  this.executeCharTest('𝑨', ['⠸⠨⠠⠁']);
+  this.executeCharTest('𝑩', ['⠸⠨⠠⠃']);
+  this.executeCharTest('𝑪', ['⠸⠨⠠⠉']);
+  this.executeCharTest('𝑫', ['⠸⠨⠠⠙']);
+  this.executeCharTest('𝑬', ['⠸⠨⠠⠑']);
+  this.executeCharTest('𝑭', ['⠸⠨⠠⠋']);
+  this.executeCharTest('𝑮', ['⠸⠨⠠⠛']);
+  this.executeCharTest('𝑯', ['⠸⠨⠠⠓']);
+  this.executeCharTest('𝑰', ['⠸⠨⠠⠊']);
+  this.executeCharTest('𝑱', ['⠸⠨⠠⠚']);
+  this.executeCharTest('𝑲', ['⠸⠨⠠⠅']);
+  this.executeCharTest('𝑳', ['⠸⠨⠠⠇']);
+  this.executeCharTest('𝑴', ['⠸⠨⠠⠍']);
+  this.executeCharTest('𝑵', ['⠸⠨⠠⠝']);
+  this.executeCharTest('𝑶', ['⠸⠨⠠⠕']);
+  this.executeCharTest('𝑷', ['⠸⠨⠠⠏']);
+  this.executeCharTest('𝑸', ['⠸⠨⠠⠟']);
+  this.executeCharTest('𝑹', ['⠸⠨⠠⠗']);
+  this.executeCharTest('𝑺', ['⠸⠨⠠⠎']);
+  this.executeCharTest('𝑻', ['⠸⠨⠠⠞']);
+  this.executeCharTest('𝑼', ['⠸⠨⠠⠥']);
+  this.executeCharTest('𝑽', ['⠸⠨⠠⠧']);
+  this.executeCharTest('𝑾', ['⠸⠨⠠⠺']);
+  this.executeCharTest('𝑿', ['⠸⠨⠠⠭']);
+  this.executeCharTest('𝒀', ['⠸⠨⠠⠽']);
+  this.executeCharTest('𝒁', ['⠸⠨⠠⠵']);
+  this.executeCharTest('𝒂', ['⠸⠨⠁']);
+  this.executeCharTest('𝒃', ['⠸⠨⠃']);
+  this.executeCharTest('𝒄', ['⠸⠨⠉']);
+  this.executeCharTest('𝒅', ['⠸⠨⠙']);
+  this.executeCharTest('𝒆', ['⠸⠨⠑']);
+  this.executeCharTest('𝒇', ['⠸⠨⠋']);
+  this.executeCharTest('𝒈', ['⠸⠨⠛']);
+  this.executeCharTest('𝒉', ['⠸⠨⠓']);
+  this.executeCharTest('𝒊', ['⠸⠨⠊']);
+  this.executeCharTest('𝒋', ['⠸⠨⠚']);
+  this.executeCharTest('𝒌', ['⠸⠨⠅']);
+  this.executeCharTest('𝒍', ['⠸⠨⠇']);
+  this.executeCharTest('𝒎', ['⠸⠨⠍']);
+  this.executeCharTest('𝒏', ['⠸⠨⠝']);
+  this.executeCharTest('𝒐', ['⠸⠨⠕']);
+  this.executeCharTest('𝒑', ['⠸⠨⠏']);
+  this.executeCharTest('𝒒', ['⠸⠨⠟']);
+  this.executeCharTest('𝒓', ['⠸⠨⠗']);
+  this.executeCharTest('𝒔', ['⠸⠨⠎']);
+  this.executeCharTest('𝒕', ['⠸⠨⠞']);
+  this.executeCharTest('𝒖', ['⠸⠨⠥']);
+  this.executeCharTest('𝒗', ['⠸⠨⠧']);
+  this.executeCharTest('𝒘', ['⠸⠨⠺']);
+  this.executeCharTest('𝒙', ['⠸⠨⠭']);
+  this.executeCharTest('𝒚', ['⠸⠨⠽']);
+  this.executeCharTest('𝒛', ['⠸⠨⠵']);
+  this.executeCharTest('𝓐', ['⠸⠈⠠⠁']);
+  this.executeCharTest('𝓑', ['⠸⠈⠠⠃']);
+  this.executeCharTest('𝓒', ['⠸⠈⠠⠉']);
+  this.executeCharTest('𝓓', ['⠸⠈⠠⠙']);
+  this.executeCharTest('𝓔', ['⠸⠈⠠⠑']);
+  this.executeCharTest('𝓕', ['⠸⠈⠠⠋']);
+  this.executeCharTest('𝓖', ['⠸⠈⠠⠛']);
+  this.executeCharTest('𝓗', ['⠸⠈⠠⠓']);
+  this.executeCharTest('𝓘', ['⠸⠈⠠⠊']);
+  this.executeCharTest('𝓙', ['⠸⠈⠠⠚']);
+  this.executeCharTest('𝓚', ['⠸⠈⠠⠅']);
+  this.executeCharTest('𝓛', ['⠸⠈⠠⠇']);
+  this.executeCharTest('𝓜', ['⠸⠈⠠⠍']);
+  this.executeCharTest('𝓝', ['⠸⠈⠠⠝']);
+  this.executeCharTest('𝓞', ['⠸⠈⠠⠕']);
+  this.executeCharTest('𝓟', ['⠸⠈⠠⠏']);
+  this.executeCharTest('𝓠', ['⠸⠈⠠⠟']);
+  this.executeCharTest('𝓡', ['⠸⠈⠠⠗']);
+  this.executeCharTest('𝓢', ['⠸⠈⠠⠎']);
+  this.executeCharTest('𝓣', ['⠸⠈⠠⠞']);
+  this.executeCharTest('𝓤', ['⠸⠈⠠⠥']);
+  this.executeCharTest('𝓥', ['⠸⠈⠠⠧']);
+  this.executeCharTest('𝓦', ['⠸⠈⠠⠺']);
+  this.executeCharTest('𝓧', ['⠸⠈⠠⠭']);
+  this.executeCharTest('𝓨', ['⠸⠈⠠⠽']);
+  this.executeCharTest('𝓩', ['⠸⠈⠠⠵']);
+  this.executeCharTest('𝓪', ['⠸⠈⠁']);
+  this.executeCharTest('𝓫', ['⠸⠈⠃']);
+  this.executeCharTest('𝓬', ['⠸⠈⠉']);
+  this.executeCharTest('𝓭', ['⠸⠈⠙']);
+  this.executeCharTest('𝓮', ['⠸⠈⠑']);
+  this.executeCharTest('𝓯', ['⠸⠈⠋']);
+  this.executeCharTest('𝓰', ['⠸⠈⠛']);
+  this.executeCharTest('𝓱', ['⠸⠈⠓']);
+  this.executeCharTest('𝓲', ['⠸⠈⠊']);
+  this.executeCharTest('𝓳', ['⠸⠈⠚']);
+  this.executeCharTest('𝓴', ['⠸⠈⠅']);
+  this.executeCharTest('𝓵', ['⠸⠈⠇']);
+  this.executeCharTest('𝓶', ['⠸⠈⠍']);
+  this.executeCharTest('𝓷', ['⠸⠈⠝']);
+  this.executeCharTest('𝓸', ['⠸⠈⠕']);
+  this.executeCharTest('𝓹', ['⠸⠈⠏']);
+  this.executeCharTest('𝓺', ['⠸⠈⠟']);
+  this.executeCharTest('𝓻', ['⠸⠈⠗']);
+  this.executeCharTest('𝓼', ['⠸⠈⠎']);
+  this.executeCharTest('𝓽', ['⠸⠈⠞']);
+  this.executeCharTest('𝓾', ['⠸⠈⠥']);
+  this.executeCharTest('𝓿', ['⠸⠈⠧']);
+  this.executeCharTest('𝔀', ['⠸⠈⠺']);
+  this.executeCharTest('𝔁', ['⠸⠈⠭']);
+  this.executeCharTest('𝔂', ['⠸⠈⠽']);
+  this.executeCharTest('𝔃', ['⠸⠈⠵']);
+  this.executeCharTest('𝔸', ['⠈⠠⠁']);
+  this.executeCharTest('𝔹', ['⠈⠠⠃']);
+  this.executeCharTest('ℂ', ['⠈⠠⠉']);
+  this.executeCharTest('𝔻', ['⠈⠠⠙']);
+  this.executeCharTest('𝔼', ['⠈⠠⠑']);
+  this.executeCharTest('𝔽', ['⠈⠠⠋']);
+  this.executeCharTest('𝔾', ['⠈⠠⠛']);
+  this.executeCharTest('ℍ', ['⠈⠠⠓']);
+  this.executeCharTest('𝕀', ['⠈⠠⠊']);
+  this.executeCharTest('𝕁', ['⠈⠠⠚']);
+  this.executeCharTest('𝕂', ['⠈⠠⠅']);
+  this.executeCharTest('𝕃', ['⠈⠠⠇']);
+  this.executeCharTest('𝕄', ['⠈⠠⠍']);
+  this.executeCharTest('ℕ', ['⠈⠠⠝']);
+  this.executeCharTest('𝕆', ['⠈⠠⠕']);
+  this.executeCharTest('ℙ', ['⠈⠠⠏']);
+  this.executeCharTest('ℚ', ['⠈⠠⠟']);
+  this.executeCharTest('ℝ', ['⠈⠠⠗']);
+  this.executeCharTest('𝕊', ['⠈⠠⠎']);
+  this.executeCharTest('𝕋', ['⠈⠠⠞']);
+  this.executeCharTest('𝕌', ['⠈⠠⠥']);
+  this.executeCharTest('𝕍', ['⠈⠠⠧']);
+  this.executeCharTest('𝕎', ['⠈⠠⠺']);
+  this.executeCharTest('𝕏', ['⠈⠠⠭']);
+  this.executeCharTest('𝕐', ['⠈⠠⠽']);
+  this.executeCharTest('ℤ', ['⠈⠠⠵']);
+  this.executeCharTest('𝕒', ['⠈⠁']);
+  this.executeCharTest('𝕓', ['⠈⠃']);
+  this.executeCharTest('𝕔', ['⠈⠉']);
+  this.executeCharTest('𝕕', ['⠈⠙']);
+  this.executeCharTest('𝕖', ['⠈⠑']);
+  this.executeCharTest('𝕗', ['⠈⠋']);
+  this.executeCharTest('𝕘', ['⠈⠛']);
+  this.executeCharTest('𝕙', ['⠈⠓']);
+  this.executeCharTest('𝕚', ['⠈⠊']);
+  this.executeCharTest('𝕛', ['⠈⠚']);
+  this.executeCharTest('𝕜', ['⠈⠅']);
+  this.executeCharTest('𝕝', ['⠈⠇']);
+  this.executeCharTest('𝕞', ['⠈⠍']);
+  this.executeCharTest('𝕟', ['⠈⠝']);
+  this.executeCharTest('𝕠', ['⠈⠕']);
+  this.executeCharTest('𝕡', ['⠈⠏']);
+  this.executeCharTest('𝕢', ['⠈⠟']);
+  this.executeCharTest('𝕣', ['⠈⠗']);
+  this.executeCharTest('𝕤', ['⠈⠎']);
+  this.executeCharTest('𝕥', ['⠈⠞']);
+  this.executeCharTest('𝕦', ['⠈⠥']);
+  this.executeCharTest('𝕧', ['⠈⠧']);
+  this.executeCharTest('𝕨', ['⠈⠺']);
+  this.executeCharTest('𝕩', ['⠈⠭']);
+  this.executeCharTest('𝕪', ['⠈⠽']);
+  this.executeCharTest('𝕫', ['⠈⠵']);
+  this.executeCharTest('𝔄', ['⠸⠠⠁']);
+  this.executeCharTest('𝔅', ['⠸⠠⠃']);
+  this.executeCharTest('ℭ', ['⠸⠠⠉']);
+  this.executeCharTest('𝔇', ['⠸⠠⠙']);
+  this.executeCharTest('𝔈', ['⠸⠠⠑']);
+  this.executeCharTest('𝔉', ['⠸⠠⠋']);
+  this.executeCharTest('𝔊', ['⠸⠠⠛']);
+  this.executeCharTest('ℌ', ['⠸⠠⠓']);
+  this.executeCharTest('ℑ', ['⠸⠠⠊']);
+  this.executeCharTest('𝔍', ['⠸⠠⠚']);
+  this.executeCharTest('𝔎', ['⠸⠠⠅']);
+  this.executeCharTest('𝔏', ['⠸⠠⠇']);
+  this.executeCharTest('𝔐', ['⠸⠠⠍']);
+  this.executeCharTest('𝔑', ['⠸⠠⠝']);
+  this.executeCharTest('𝔒', ['⠸⠠⠕']);
+  this.executeCharTest('𝔓', ['⠸⠠⠏']);
+  this.executeCharTest('𝔔', ['⠸⠠⠟']);
+  this.executeCharTest('ℜ', ['⠸⠠⠗']);
+  this.executeCharTest('𝔖', ['⠸⠠⠎']);
+  this.executeCharTest('𝔗', ['⠸⠠⠞']);
+  this.executeCharTest('𝔘', ['⠸⠠⠥']);
+  this.executeCharTest('𝔙', ['⠸⠠⠧']);
+  this.executeCharTest('𝔚', ['⠸⠠⠺']);
+  this.executeCharTest('𝔛', ['⠸⠠⠭']);
+  this.executeCharTest('𝔜', ['⠸⠠⠽']);
+  this.executeCharTest('ℨ', ['⠸⠠⠵']);
+  this.executeCharTest('𝔞', ['⠸⠁']);
+  this.executeCharTest('𝔟', ['⠸⠃']);
+  this.executeCharTest('𝔠', ['⠸⠉']);
+  this.executeCharTest('𝔡', ['⠸⠙']);
+  this.executeCharTest('𝔢', ['⠸⠑']);
+  this.executeCharTest('𝔣', ['⠸⠋']);
+  this.executeCharTest('𝔤', ['⠸⠛']);
+  this.executeCharTest('𝔥', ['⠸⠓']);
+  this.executeCharTest('𝔦', ['⠸⠊']);
+  this.executeCharTest('𝔧', ['⠸⠚']);
+  this.executeCharTest('𝔨', ['⠸⠅']);
+  this.executeCharTest('𝔩', ['⠸⠇']);
+  this.executeCharTest('𝔪', ['⠸⠍']);
+  this.executeCharTest('𝔫', ['⠸⠝']);
+  this.executeCharTest('𝔬', ['⠸⠕']);
+  this.executeCharTest('𝔭', ['⠸⠏']);
+  this.executeCharTest('𝔮', ['⠸⠟']);
+  this.executeCharTest('𝔯', ['⠸⠗']);
+  this.executeCharTest('𝔰', ['⠸⠎']);
+  this.executeCharTest('𝔱', ['⠸⠞']);
+  this.executeCharTest('𝔲', ['⠸⠥']);
+  this.executeCharTest('𝔳', ['⠸⠧']);
+  this.executeCharTest('𝔴', ['⠸⠺']);
+  this.executeCharTest('𝔵', ['⠸⠭']);
+  this.executeCharTest('𝔶', ['⠸⠽']);
+  this.executeCharTest('𝔷', ['⠸⠵']);
+  this.executeCharTest('𝐴', ['⠨⠠⠁']);
+  this.executeCharTest('𝐵', ['⠨⠠⠃']);
+  this.executeCharTest('𝐶', ['⠨⠠⠉']);
+  this.executeCharTest('𝐷', ['⠨⠠⠙']);
+  this.executeCharTest('𝐸', ['⠨⠠⠑']);
+  this.executeCharTest('𝐹', ['⠨⠠⠋']);
+  this.executeCharTest('𝐺', ['⠨⠠⠛']);
+  this.executeCharTest('𝐻', ['⠨⠠⠓']);
+  this.executeCharTest('𝐼', ['⠨⠠⠊']);
+  this.executeCharTest('𝐽', ['⠨⠠⠚']);
+  this.executeCharTest('𝐾', ['⠨⠠⠅']);
+  this.executeCharTest('𝐿', ['⠨⠠⠇']);
+  this.executeCharTest('𝑀', ['⠨⠠⠍']);
+  this.executeCharTest('𝑁', ['⠨⠠⠝']);
+  this.executeCharTest('𝑂', ['⠨⠠⠕']);
+  this.executeCharTest('𝑃', ['⠨⠠⠏']);
+  this.executeCharTest('𝑄', ['⠨⠠⠟']);
+  this.executeCharTest('𝑅', ['⠨⠠⠗']);
+  this.executeCharTest('𝑆', ['⠨⠠⠎']);
+  this.executeCharTest('𝑇', ['⠨⠠⠞']);
+  this.executeCharTest('𝑈', ['⠨⠠⠥']);
+  this.executeCharTest('𝑉', ['⠨⠠⠧']);
+  this.executeCharTest('𝑊', ['⠨⠠⠺']);
+  this.executeCharTest('𝑋', ['⠨⠠⠭']);
+  this.executeCharTest('𝑌', ['⠨⠠⠽']);
+  this.executeCharTest('𝑍', ['⠨⠠⠵']);
+  this.executeCharTest('𝑎', ['⠨⠁']);
+  this.executeCharTest('𝑏', ['⠨⠃']);
+  this.executeCharTest('𝑐', ['⠨⠉']);
+  this.executeCharTest('𝑑', ['⠨⠙']);
+  this.executeCharTest('𝑒', ['⠨⠑']);
+  this.executeCharTest('𝑓', ['⠨⠋']);
+  this.executeCharTest('𝑔', ['⠨⠛']);
+  this.executeCharTest('ℎ', ['⠨⠓']);
+  this.executeCharTest('𝑖', ['⠨⠊']);
+  this.executeCharTest('𝑗', ['⠨⠚']);
+  this.executeCharTest('𝑘', ['⠨⠅']);
+  this.executeCharTest('𝑙', ['⠨⠇']);
+  this.executeCharTest('𝑚', ['⠨⠍']);
+  this.executeCharTest('𝑛', ['⠨⠝']);
+  this.executeCharTest('𝑜', ['⠨⠕']);
+  this.executeCharTest('𝑝', ['⠨⠏']);
+  this.executeCharTest('𝑞', ['⠨⠟']);
+  this.executeCharTest('𝑟', ['⠨⠗']);
+  this.executeCharTest('𝑠', ['⠨⠎']);
+  this.executeCharTest('𝑡', ['⠨⠞']);
+  this.executeCharTest('𝑢', ['⠨⠥']);
+  this.executeCharTest('𝑣', ['⠨⠧']);
+  this.executeCharTest('𝑤', ['⠨⠺']);
+  this.executeCharTest('𝑥', ['⠨⠭']);
+  this.executeCharTest('𝑦', ['⠨⠽']);
+  this.executeCharTest('𝑧', ['⠨⠵']);
+  this.executeCharTest('𝙰', ['⠠⠁']);
+  this.executeCharTest('𝙱', ['⠠⠃']);
+  this.executeCharTest('𝙲', ['⠠⠉']);
+  this.executeCharTest('𝙳', ['⠠⠙']);
+  this.executeCharTest('𝙴', ['⠠⠑']);
+  this.executeCharTest('𝙵', ['⠠⠋']);
+  this.executeCharTest('𝙶', ['⠠⠛']);
+  this.executeCharTest('𝙷', ['⠠⠓']);
+  this.executeCharTest('𝙸', ['⠠⠊']);
+  this.executeCharTest('𝙹', ['⠠⠚']);
+  this.executeCharTest('𝙺', ['⠠⠅']);
+  this.executeCharTest('𝙻', ['⠠⠇']);
+  this.executeCharTest('𝙼', ['⠠⠍']);
+  this.executeCharTest('𝙽', ['⠠⠝']);
+  this.executeCharTest('𝙾', ['⠠⠕']);
+  this.executeCharTest('𝙿', ['⠠⠏']);
+  this.executeCharTest('𝚀', ['⠠⠟']);
+  this.executeCharTest('𝚁', ['⠠⠗']);
+  this.executeCharTest('𝚂', ['⠠⠎']);
+  this.executeCharTest('𝚃', ['⠠⠞']);
+  this.executeCharTest('𝚄', ['⠠⠥']);
+  this.executeCharTest('𝚅', ['⠠⠧']);
+  this.executeCharTest('𝚆', ['⠠⠺']);
+  this.executeCharTest('𝚇', ['⠠⠭']);
+  this.executeCharTest('𝚈', ['⠠⠽']);
+  this.executeCharTest('𝚉', ['⠠⠵']);
+  this.executeCharTest('𝚊', ['⠁']);
+  this.executeCharTest('𝚋', ['⠃']);
+  this.executeCharTest('𝚌', ['⠉']);
+  this.executeCharTest('𝚍', ['⠙']);
+  this.executeCharTest('𝚎', ['⠑']);
+  this.executeCharTest('𝚏', ['⠋']);
+  this.executeCharTest('𝚐', ['⠛']);
+  this.executeCharTest('𝚑', ['⠓']);
+  this.executeCharTest('𝚒', ['⠊']);
+  this.executeCharTest('𝚓', ['⠚']);
+  this.executeCharTest('𝚔', ['⠅']);
+  this.executeCharTest('𝚕', ['⠇']);
+  this.executeCharTest('𝚖', ['⠍']);
+  this.executeCharTest('𝚗', ['⠝']);
+  this.executeCharTest('𝚘', ['⠕']);
+  this.executeCharTest('𝚙', ['⠏']);
+  this.executeCharTest('𝚚', ['⠟']);
+  this.executeCharTest('𝚛', ['⠗']);
+  this.executeCharTest('𝚜', ['⠎']);
+  this.executeCharTest('𝚝', ['⠞']);
+  this.executeCharTest('𝚞', ['⠥']);
+  this.executeCharTest('𝚟', ['⠧']);
+  this.executeCharTest('𝚠', ['⠺']);
+  this.executeCharTest('𝚡', ['⠭']);
+  this.executeCharTest('𝚢', ['⠽']);
+  this.executeCharTest('𝚣', ['⠵']);
+  this.executeCharTest('𝗔', ['⠠⠨⠸⠠⠁']);
+  this.executeCharTest('𝗕', ['⠠⠨⠸⠠⠃']);
+  this.executeCharTest('𝗖', ['⠠⠨⠸⠠⠉']);
+  this.executeCharTest('𝗗', ['⠠⠨⠸⠠⠙']);
+  this.executeCharTest('𝗘', ['⠠⠨⠸⠠⠑']);
+  this.executeCharTest('𝗙', ['⠠⠨⠸⠠⠋']);
+  this.executeCharTest('𝗚', ['⠠⠨⠸⠠⠛']);
+  this.executeCharTest('𝗛', ['⠠⠨⠸⠠⠓']);
+  this.executeCharTest('𝗜', ['⠠⠨⠸⠠⠊']);
+  this.executeCharTest('𝗝', ['⠠⠨⠸⠠⠚']);
+  this.executeCharTest('𝗞', ['⠠⠨⠸⠠⠅']);
+  this.executeCharTest('𝗟', ['⠠⠨⠸⠠⠇']);
+  this.executeCharTest('𝗠', ['⠠⠨⠸⠠⠍']);
+  this.executeCharTest('𝗡', ['⠠⠨⠸⠠⠝']);
+  this.executeCharTest('𝗢', ['⠠⠨⠸⠠⠕']);
+  this.executeCharTest('𝗣', ['⠠⠨⠸⠠⠏']);
+  this.executeCharTest('𝗤', ['⠠⠨⠸⠠⠟']);
+  this.executeCharTest('𝗥', ['⠠⠨⠸⠠⠗']);
+  this.executeCharTest('𝗦', ['⠠⠨⠸⠠⠎']);
+  this.executeCharTest('𝗧', ['⠠⠨⠸⠠⠞']);
+  this.executeCharTest('𝗨', ['⠠⠨⠸⠠⠥']);
+  this.executeCharTest('𝗩', ['⠠⠨⠸⠠⠧']);
+  this.executeCharTest('𝗪', ['⠠⠨⠸⠠⠺']);
+  this.executeCharTest('𝗫', ['⠠⠨⠸⠠⠭']);
+  this.executeCharTest('𝗬', ['⠠⠨⠸⠠⠽']);
+  this.executeCharTest('𝗭', ['⠠⠨⠸⠠⠵']);
+  this.executeCharTest('𝗮', ['⠠⠨⠸⠁']);
+  this.executeCharTest('𝗯', ['⠠⠨⠸⠃']);
+  this.executeCharTest('𝗰', ['⠠⠨⠸⠉']);
+  this.executeCharTest('𝗱', ['⠠⠨⠸⠙']);
+  this.executeCharTest('𝗲', ['⠠⠨⠸⠑']);
+  this.executeCharTest('𝗳', ['⠠⠨⠸⠋']);
+  this.executeCharTest('𝗴', ['⠠⠨⠸⠛']);
+  this.executeCharTest('𝗵', ['⠠⠨⠸⠓']);
+  this.executeCharTest('𝗶', ['⠠⠨⠸⠊']);
+  this.executeCharTest('𝗷', ['⠠⠨⠸⠚']);
+  this.executeCharTest('𝗸', ['⠠⠨⠸⠅']);
+  this.executeCharTest('𝗹', ['⠠⠨⠸⠇']);
+  this.executeCharTest('𝗺', ['⠠⠨⠸⠍']);
+  this.executeCharTest('𝗻', ['⠠⠨⠸⠝']);
+  this.executeCharTest('𝗼', ['⠠⠨⠸⠕']);
+  this.executeCharTest('𝗽', ['⠠⠨⠸⠏']);
+  this.executeCharTest('𝗾', ['⠠⠨⠸⠟']);
+  this.executeCharTest('𝗿', ['⠠⠨⠸⠗']);
+  this.executeCharTest('𝘀', ['⠠⠨⠸⠎']);
+  this.executeCharTest('𝘁', ['⠠⠨⠸⠞']);
+  this.executeCharTest('𝘂', ['⠠⠨⠸⠥']);
+  this.executeCharTest('𝘃', ['⠠⠨⠸⠧']);
+  this.executeCharTest('𝘄', ['⠠⠨⠸⠺']);
+  this.executeCharTest('𝘅', ['⠠⠨⠸⠭']);
+  this.executeCharTest('𝘆', ['⠠⠨⠸⠽']);
+  this.executeCharTest('𝘇', ['⠠⠨⠸⠵']);
+  this.executeCharTest('𝘈', ['⠠⠨⠨⠠⠁']);
+  this.executeCharTest('𝘉', ['⠠⠨⠨⠠⠃']);
+  this.executeCharTest('𝘊', ['⠠⠨⠨⠠⠉']);
+  this.executeCharTest('𝘋', ['⠠⠨⠨⠠⠙']);
+  this.executeCharTest('𝘌', ['⠠⠨⠨⠠⠑']);
+  this.executeCharTest('𝘍', ['⠠⠨⠨⠠⠋']);
+  this.executeCharTest('𝘎', ['⠠⠨⠨⠠⠛']);
+  this.executeCharTest('𝘏', ['⠠⠨⠨⠠⠓']);
+  this.executeCharTest('𝘐', ['⠠⠨⠨⠠⠊']);
+  this.executeCharTest('𝘑', ['⠠⠨⠨⠠⠚']);
+  this.executeCharTest('𝘒', ['⠠⠨⠨⠠⠅']);
+  this.executeCharTest('𝘓', ['⠠⠨⠨⠠⠇']);
+  this.executeCharTest('𝘔', ['⠠⠨⠨⠠⠍']);
+  this.executeCharTest('𝘕', ['⠠⠨⠨⠠⠝']);
+  this.executeCharTest('𝘖', ['⠠⠨⠨⠠⠕']);
+  this.executeCharTest('𝘗', ['⠠⠨⠨⠠⠏']);
+  this.executeCharTest('𝘘', ['⠠⠨⠨⠠⠟']);
+  this.executeCharTest('𝘙', ['⠠⠨⠨⠠⠗']);
+  this.executeCharTest('𝘚', ['⠠⠨⠨⠠⠎']);
+  this.executeCharTest('𝘛', ['⠠⠨⠨⠠⠞']);
+  this.executeCharTest('𝘜', ['⠠⠨⠨⠠⠥']);
+  this.executeCharTest('𝘝', ['⠠⠨⠨⠠⠧']);
+  this.executeCharTest('𝘞', ['⠠⠨⠨⠠⠺']);
+  this.executeCharTest('𝘟', ['⠠⠨⠨⠠⠭']);
+  this.executeCharTest('𝘠', ['⠠⠨⠨⠠⠽']);
+  this.executeCharTest('𝘡', ['⠠⠨⠨⠠⠵']);
+  this.executeCharTest('𝘢', ['⠠⠨⠨⠁']);
+  this.executeCharTest('𝘣', ['⠠⠨⠨⠃']);
+  this.executeCharTest('𝘤', ['⠠⠨⠨⠉']);
+  this.executeCharTest('𝘥', ['⠠⠨⠨⠙']);
+  this.executeCharTest('𝘦', ['⠠⠨⠨⠑']);
+  this.executeCharTest('𝘧', ['⠠⠨⠨⠋']);
+  this.executeCharTest('𝘨', ['⠠⠨⠨⠛']);
+  this.executeCharTest('𝘩', ['⠠⠨⠨⠓']);
+  this.executeCharTest('𝘪', ['⠠⠨⠨⠊']);
+  this.executeCharTest('𝘫', ['⠠⠨⠨⠚']);
+  this.executeCharTest('𝘬', ['⠠⠨⠨⠅']);
+  this.executeCharTest('𝘭', ['⠠⠨⠨⠇']);
+  this.executeCharTest('𝘮', ['⠠⠨⠨⠍']);
+  this.executeCharTest('𝘯', ['⠠⠨⠨⠝']);
+  this.executeCharTest('𝘰', ['⠠⠨⠨⠕']);
+  this.executeCharTest('𝘱', ['⠠⠨⠨⠏']);
+  this.executeCharTest('𝘲', ['⠠⠨⠨⠟']);
+  this.executeCharTest('𝘳', ['⠠⠨⠨⠗']);
+  this.executeCharTest('𝘴', ['⠠⠨⠨⠎']);
+  this.executeCharTest('𝘵', ['⠠⠨⠨⠞']);
+  this.executeCharTest('𝘶', ['⠠⠨⠨⠥']);
+  this.executeCharTest('𝘷', ['⠠⠨⠨⠧']);
+  this.executeCharTest('𝘸', ['⠠⠨⠨⠺']);
+  this.executeCharTest('𝘹', ['⠠⠨⠨⠭']);
+  this.executeCharTest('𝘺', ['⠠⠨⠨⠽']);
+  this.executeCharTest('𝘻', ['⠠⠨⠨⠵']);
+  this.executeCharTest('𝘼', ['⠠⠨⠸⠨⠠⠁']);
+  this.executeCharTest('𝘽', ['⠠⠨⠸⠨⠠⠃']);
+  this.executeCharTest('𝘾', ['⠠⠨⠸⠨⠠⠉']);
+  this.executeCharTest('𝘿', ['⠠⠨⠸⠨⠠⠙']);
+  this.executeCharTest('𝙀', ['⠠⠨⠸⠨⠠⠑']);
+  this.executeCharTest('𝙁', ['⠠⠨⠸⠨⠠⠋']);
+  this.executeCharTest('𝙂', ['⠠⠨⠸⠨⠠⠛']);
+  this.executeCharTest('𝙃', ['⠠⠨⠸⠨⠠⠓']);
+  this.executeCharTest('𝙄', ['⠠⠨⠸⠨⠠⠊']);
+  this.executeCharTest('𝙅', ['⠠⠨⠸⠨⠠⠚']);
+  this.executeCharTest('𝙆', ['⠠⠨⠸⠨⠠⠅']);
+  this.executeCharTest('𝙇', ['⠠⠨⠸⠨⠠⠇']);
+  this.executeCharTest('𝙈', ['⠠⠨⠸⠨⠠⠍']);
+  this.executeCharTest('𝙉', ['⠠⠨⠸⠨⠠⠝']);
+  this.executeCharTest('𝙊', ['⠠⠨⠸⠨⠠⠕']);
+  this.executeCharTest('𝙋', ['⠠⠨⠸⠨⠠⠏']);
+  this.executeCharTest('𝙌', ['⠠⠨⠸⠨⠠⠟']);
+  this.executeCharTest('𝙍', ['⠠⠨⠸⠨⠠⠗']);
+  this.executeCharTest('𝙎', ['⠠⠨⠸⠨⠠⠎']);
+  this.executeCharTest('𝙏', ['⠠⠨⠸⠨⠠⠞']);
+  this.executeCharTest('𝙐', ['⠠⠨⠸⠨⠠⠥']);
+  this.executeCharTest('𝙑', ['⠠⠨⠸⠨⠠⠧']);
+  this.executeCharTest('𝙒', ['⠠⠨⠸⠨⠠⠺']);
+  this.executeCharTest('𝙓', ['⠠⠨⠸⠨⠠⠭']);
+  this.executeCharTest('𝙔', ['⠠⠨⠸⠨⠠⠽']);
+  this.executeCharTest('𝙕', ['⠠⠨⠸⠨⠠⠵']);
+  this.executeCharTest('𝙖', ['⠠⠨⠸⠨⠁']);
+  this.executeCharTest('𝙗', ['⠠⠨⠸⠨⠃']);
+  this.executeCharTest('𝙘', ['⠠⠨⠸⠨⠉']);
+  this.executeCharTest('𝙙', ['⠠⠨⠸⠨⠙']);
+  this.executeCharTest('𝙚', ['⠠⠨⠸⠨⠑']);
+  this.executeCharTest('𝙛', ['⠠⠨⠸⠨⠋']);
+  this.executeCharTest('𝙜', ['⠠⠨⠸⠨⠛']);
+  this.executeCharTest('𝙝', ['⠠⠨⠸⠨⠓']);
+  this.executeCharTest('𝙞', ['⠠⠨⠸⠨⠊']);
+  this.executeCharTest('𝙟', ['⠠⠨⠸⠨⠚']);
+  this.executeCharTest('𝙠', ['⠠⠨⠸⠨⠅']);
+  this.executeCharTest('𝙡', ['⠠⠨⠸⠨⠇']);
+  this.executeCharTest('𝙢', ['⠠⠨⠸⠨⠍']);
+  this.executeCharTest('𝙣', ['⠠⠨⠸⠨⠝']);
+  this.executeCharTest('𝙤', ['⠠⠨⠸⠨⠕']);
+  this.executeCharTest('𝙥', ['⠠⠨⠸⠨⠏']);
+  this.executeCharTest('𝙦', ['⠠⠨⠸⠨⠟']);
+  this.executeCharTest('𝙧', ['⠠⠨⠸⠨⠗']);
+  this.executeCharTest('𝙨', ['⠠⠨⠸⠨⠎']);
+  this.executeCharTest('𝙩', ['⠠⠨⠸⠨⠞']);
+  this.executeCharTest('𝙪', ['⠠⠨⠸⠨⠥']);
+  this.executeCharTest('𝙫', ['⠠⠨⠸⠨⠧']);
+  this.executeCharTest('𝙬', ['⠠⠨⠸⠨⠺']);
+  this.executeCharTest('𝙭', ['⠠⠨⠸⠨⠭']);
+  this.executeCharTest('𝙮', ['⠠⠨⠸⠨⠽']);
+  this.executeCharTest('𝙯', ['⠠⠨⠸⠨⠵']);
+  this.executeCharTest('𝖠', ['⠠⠨⠠⠁']);
+  this.executeCharTest('𝖡', ['⠠⠨⠠⠃']);
+  this.executeCharTest('𝖢', ['⠠⠨⠠⠉']);
+  this.executeCharTest('𝖣', ['⠠⠨⠠⠙']);
+  this.executeCharTest('𝖤', ['⠠⠨⠠⠑']);
+  this.executeCharTest('𝖥', ['⠠⠨⠠⠋']);
+  this.executeCharTest('𝖦', ['⠠⠨⠠⠛']);
+  this.executeCharTest('𝖧', ['⠠⠨⠠⠓']);
+  this.executeCharTest('𝖨', ['⠠⠨⠠⠊']);
+  this.executeCharTest('𝖩', ['⠠⠨⠠⠚']);
+  this.executeCharTest('𝖪', ['⠠⠨⠠⠅']);
+  this.executeCharTest('𝖫', ['⠠⠨⠠⠇']);
+  this.executeCharTest('𝖬', ['⠠⠨⠠⠍']);
+  this.executeCharTest('𝖭', ['⠠⠨⠠⠝']);
+  this.executeCharTest('𝖮', ['⠠⠨⠠⠕']);
+  this.executeCharTest('𝖯', ['⠠⠨⠠⠏']);
+  this.executeCharTest('𝖰', ['⠠⠨⠠⠟']);
+  this.executeCharTest('𝖱', ['⠠⠨⠠⠗']);
+  this.executeCharTest('𝖲', ['⠠⠨⠠⠎']);
+  this.executeCharTest('𝖳', ['⠠⠨⠠⠞']);
+  this.executeCharTest('𝖴', ['⠠⠨⠠⠥']);
+  this.executeCharTest('𝖵', ['⠠⠨⠠⠧']);
+  this.executeCharTest('𝖶', ['⠠⠨⠠⠺']);
+  this.executeCharTest('𝖷', ['⠠⠨⠠⠭']);
+  this.executeCharTest('𝖸', ['⠠⠨⠠⠽']);
+  this.executeCharTest('𝖹', ['⠠⠨⠠⠵']);
+  this.executeCharTest('𝖺', ['⠠⠨⠁']);
+  this.executeCharTest('𝖻', ['⠠⠨⠃']);
+  this.executeCharTest('𝖼', ['⠠⠨⠉']);
+  this.executeCharTest('𝖽', ['⠠⠨⠙']);
+  this.executeCharTest('𝖾', ['⠠⠨⠑']);
+  this.executeCharTest('𝖿', ['⠠⠨⠋']);
+  this.executeCharTest('𝗀', ['⠠⠨⠛']);
+  this.executeCharTest('𝗁', ['⠠⠨⠓']);
+  this.executeCharTest('𝗂', ['⠠⠨⠊']);
+  this.executeCharTest('𝗃', ['⠠⠨⠚']);
+  this.executeCharTest('𝗄', ['⠠⠨⠅']);
+  this.executeCharTest('𝗅', ['⠠⠨⠇']);
+  this.executeCharTest('𝗆', ['⠠⠨⠍']);
+  this.executeCharTest('𝗇', ['⠠⠨⠝']);
+  this.executeCharTest('𝗈', ['⠠⠨⠕']);
+  this.executeCharTest('𝗉', ['⠠⠨⠏']);
+  this.executeCharTest('𝗊', ['⠠⠨⠟']);
+  this.executeCharTest('𝗋', ['⠠⠨⠗']);
+  this.executeCharTest('𝗌', ['⠠⠨⠎']);
+  this.executeCharTest('𝗍', ['⠠⠨⠞']);
+  this.executeCharTest('𝗎', ['⠠⠨⠥']);
+  this.executeCharTest('𝗏', ['⠠⠨⠧']);
+  this.executeCharTest('𝗐', ['⠠⠨⠺']);
+  this.executeCharTest('𝗑', ['⠠⠨⠭']);
+  this.executeCharTest('𝗒', ['⠠⠨⠽']);
+  this.executeCharTest('𝗓', ['⠠⠨⠵']);
+  this.executeCharTest('𝒜', ['⠈⠠⠁']);
+  this.executeCharTest('ℬ', ['⠈⠠⠃']);
+  this.executeCharTest('𝒞', ['⠈⠠⠉']);
+  this.executeCharTest('𝒟', ['⠈⠠⠙']);
+  this.executeCharTest('ℰ', ['⠈⠠⠑']);
+  this.executeCharTest('ℱ', ['⠈⠠⠋']);
+  this.executeCharTest('𝒢', ['⠈⠠⠛']);
+  this.executeCharTest('ℋ', ['⠈⠠⠓']);
+  this.executeCharTest('ℐ', ['⠈⠠⠊']);
+  this.executeCharTest('𝒥', ['⠈⠠⠚']);
+  this.executeCharTest('𝒦', ['⠈⠠⠅']);
+  this.executeCharTest('ℒ', ['⠈⠠⠇']);
+  this.executeCharTest('ℳ', ['⠈⠠⠍']);
+  this.executeCharTest('𝒩', ['⠈⠠⠝']);
+  this.executeCharTest('𝒪', ['⠈⠠⠕']);
+  this.executeCharTest('𝒫', ['⠈⠠⠏']);
+  this.executeCharTest('𝒬', ['⠈⠠⠟']);
+  this.executeCharTest('ℛ', ['⠈⠠⠗']);
+  this.executeCharTest('𝒮', ['⠈⠠⠎']);
+  this.executeCharTest('𝒯', ['⠈⠠⠞']);
+  this.executeCharTest('𝒰', ['⠈⠠⠥']);
+  this.executeCharTest('𝒱', ['⠈⠠⠧']);
+  this.executeCharTest('𝒲', ['⠈⠠⠺']);
+  this.executeCharTest('𝒳', ['⠈⠠⠭']);
+  this.executeCharTest('𝒴', ['⠈⠠⠽']);
+  this.executeCharTest('𝒵', ['⠈⠠⠵']);
+  this.executeCharTest('𝒶', ['⠈⠁']);
+  this.executeCharTest('𝒷', ['⠈⠃']);
+  this.executeCharTest('𝒸', ['⠈⠉']);
+  this.executeCharTest('𝒹', ['⠈⠙']);
+  this.executeCharTest('ℯ', ['⠈⠑']);
+  this.executeCharTest('𝒻', ['⠈⠋']);
+  this.executeCharTest('ℊ', ['⠈⠛']);
+  this.executeCharTest('𝒽', ['⠈⠓']);
+  this.executeCharTest('𝒾', ['⠈⠊']);
+  this.executeCharTest('𝒿', ['⠈⠚']);
+  this.executeCharTest('𝓀', ['⠈⠅']);
+  this.executeCharTest('𝓁', ['⠈⠇']);
+  this.executeCharTest('𝓂', ['⠈⠍']);
+  this.executeCharTest('𝓃', ['⠈⠝']);
+  this.executeCharTest('ℴ', ['⠈⠕']);
+  this.executeCharTest('𝓅', ['⠈⠏']);
+  this.executeCharTest('𝓆', ['⠈⠟']);
+  this.executeCharTest('𝓇', ['⠈⠗']);
+  this.executeCharTest('𝓈', ['⠈⠎']);
+  this.executeCharTest('𝓉', ['⠈⠞']);
+  this.executeCharTest('𝓊', ['⠈⠥']);
+  this.executeCharTest('𝓋', ['⠈⠧']);
+  this.executeCharTest('𝓌', ['⠈⠺']);
+  this.executeCharTest('𝓍', ['⠈⠭']);
+  this.executeCharTest('𝓎', ['⠈⠽']);
+  this.executeCharTest('𝓏', ['⠈⠵']);
+  this.executeCharTest('⊾', ['⠄⡳⠭⠆⠆⠃⠑⠄']);
+  this.executeCharTest('⍼', ['⠄⡳⠭⠆⠒⠶⠉⠄']);
+  this.executeCharTest('⟀', ['⠄⡳⠭⠆⠶⠉⠴⠄']);
+  this.executeCharTest('⦛', ['⠄⡳⠭⠆⠔⠔⠃⠄']);
+  this.executeCharTest('⦜', ['⠄⡳⠭⠆⠔⠔⠉⠄']);
+  this.executeCharTest('⦝', ['⠄⡳⠭⠆⠔⠔⠙⠄']);
+  this.executeCharTest('⦞', ['⠄⡳⠭⠆⠔⠔⠑⠄']);
+  this.executeCharTest('⦟', ['⠄⡳⠭⠆⠔⠔⠋⠄']);
+  this.executeCharTest('⦠', ['⠄⡳⠭⠆⠔⠁⠴⠄']);
+  this.executeCharTest('⦡', ['⠄⡳⠭⠆⠔⠁⠂⠄']);
+  this.executeCharTest('⦢', ['⠄⡳⠭⠆⠔⠁⠆⠄']);
+  this.executeCharTest('⦣', ['⠄⡳⠭⠆⠔⠁⠒⠄']);
+  this.executeCharTest('⦤', ['⠄⡳⠭⠆⠔⠁⠲⠄']);
+  this.executeCharTest('⦥', ['⠄⡳⠭⠆⠔⠁⠢⠄']);
+  this.executeCharTest('⦦', ['⠄⡳⠭⠆⠔⠁⠖⠄']);
+  this.executeCharTest('⦧', ['⠄⡳⠭⠆⠔⠁⠶⠄']);
+  this.executeCharTest('⦨', ['⠄⡳⠭⠆⠔⠁⠦⠄']);
+  this.executeCharTest('⦩', ['⠄⡳⠭⠆⠔⠁⠔⠄']);
+  this.executeCharTest('⦪', ['⠄⡳⠭⠆⠔⠁⠁⠄']);
+  this.executeCharTest('⦫', ['⠄⡳⠭⠆⠔⠁⠃⠄']);
+  this.executeCharTest('⦬', ['⠄⡳⠭⠆⠔⠁⠉⠄']);
+  this.executeCharTest('⦭', ['⠄⡳⠭⠆⠔⠁⠙⠄']);
+  this.executeCharTest('⦮', ['⠄⡳⠭⠆⠔⠁⠑⠄']);
+  this.executeCharTest('⦯', ['⠄⡳⠭⠆⠔⠁⠋⠄']);
+  this.executeCharTest('←', ['⠀⠫⠪⠒⠒⠀']);
+  this.executeCharTest('↑', ['⠀⠫⠣⠒⠒⠕⠀']);
+  this.executeCharTest('→', ['⠀⠫⠕⠀']);
+  this.executeCharTest('↓', ['⠀⠫⠩⠒⠒⠕⠀']);
+  this.executeCharTest('↔', ['⠀⠫⠪⠒⠒⠕⠀']);
+  this.executeCharTest('↕', ['⠀⠫⠣⠩⠪⠒⠒⠕⠀']);
+  this.executeCharTest('↖', ['⠀⠫⠘⠪⠒⠒⠀']);
+  this.executeCharTest('↗', ['⠀⠫⠘⠒⠒⠕⠀']);
+  this.executeCharTest('↘', ['⠀⠫⠰⠒⠒⠕⠀']);
+  this.executeCharTest('↙', ['⠀⠫⠰⠪⠒⠒⠀']);
+  this.executeCharTest('↚', ['⠀⠳⠈⠫⠪⠒⠒⠻⠀']);
+  this.executeCharTest('↛', ['⠀⠳⠈⠫⠒⠒⠕⠻⠀']);
+  this.executeCharTest('↜', ['⠀⠫⠪⠔⠒⠢⠀']);
+  this.executeCharTest('↝', ['⠀⠫⠔⠒⠢⠕⠀']);
+  this.executeCharTest('↞', ['⠀⠫⠪⠪⠒⠒⠀']);
+  this.executeCharTest('↟', ['⠀⠫⠣⠒⠒⠕⠕⠀']);
+  this.executeCharTest('↠', ['⠀⠫⠒⠒⠕⠕⠀']);
+  this.executeCharTest('↡', ['⠀⠫⠩⠒⠒⠕⠕⠀']);
+  this.executeCharTest('↢', ['⠀⠫⠪⠒⠒⠠⠽⠀']);
+  this.executeCharTest('↣', ['⠀⠫⠠⠯⠒⠒⠕⠀']);
+  this.executeCharTest('↤', ['⠀⠫⠪⠒⠒⠳⠀']);
+  this.executeCharTest('↥', ['⠀⠫⠣⠳⠒⠒⠕⠀']);
+  this.executeCharTest('↦', ['⠀⠫⠳⠒⠒⠕⠀']);
+  this.executeCharTest('↧', ['⠀⠫⠩⠳⠒⠒⠕⠀']);
+  this.executeCharTest('↨', ['⠀⠫⠪⠒⠳⠒⠕⠀']);
+  this.executeCharTest('↩', ['⠀⠫⠪⠒⠒⠠⠕⠀']);
+  this.executeCharTest('↪', ['⠀⠫⠠⠪⠒⠒⠕⠀']);
+  this.executeCharTest('↫', ['⠀⠫⠪⠒⠒⠨⠡⠀']);
+  this.executeCharTest('↬', ['⠀⠫⠨⠡⠒⠒⠕⠀']);
+  this.executeCharTest('↭', ['⠀⠫⠪⠔⠒⠢⠕⠀']);
+  this.executeCharTest('↮', ['⠀⠳⠈⠫⠪⠒⠒⠕⠀']);
+  this.executeCharTest('↯', ['⠀⠫⠩⠔⠢⠔⠀']);
+  this.executeCharTest('↰', ['⠄⡳⠭⠆⠂⠃⠴⠄']);
+  this.executeCharTest('↱', ['⠄⡳⠭⠆⠂⠃⠂⠄']);
+  this.executeCharTest('↲', ['⠄⡳⠭⠆⠂⠃⠆⠄']);
+  this.executeCharTest('↳', ['⠄⡳⠭⠆⠂⠃⠒⠄']);
+  this.executeCharTest('↴', ['⠀⠫⠠⠳⠒⠒⠕⠀']);
+  this.executeCharTest('↵', ['⠀⠫⠩⠠⠳⠒⠒⠕⠀']);
+  this.executeCharTest('↶', ['⠀⠫⠢⠔⠀⠕⠀']);
+  this.executeCharTest('↷', ['⠀⠫⠪⠢⠀⠔⠀']);
+  this.executeCharTest('↸', ['⠄⡳⠭⠆⠂⠃⠦⠄']);
+  this.executeCharTest('↹', ['⠄⡳⠭⠆⠂⠃⠔⠄']);
+  this.executeCharTest('↺', ['⠀⠫⠢⠔⠕⠀']);
+  this.executeCharTest('↻', ['⠀⠫⠪⠢⠔⠀']);
+  this.executeCharTest('⇄', ['⠀⠫⠒⠒⠕⠫⠪⠒⠒⠀']);
+  this.executeCharTest('⇅', ['⠀⠫⠣⠒⠒⠕⠐⠫⠩⠒⠒⠕⠀']);
+  this.executeCharTest('⇆', ['⠀⠫⠪⠒⠒⠫⠒⠒⠕⠀']);
+  this.executeCharTest('⇇', ['⠀⠫⠚⠒⠒⠫⠚⠒⠒⠀']);
+  this.executeCharTest('⇈', ['⠀⠫⠣⠒⠒⠕⠐⠫⠣⠒⠒⠕⠀']);
+  this.executeCharTest('⇉', ['⠀⠫⠒⠒⠕⠫⠒⠒⠕⠀']);
+  this.executeCharTest('⇊', ['⠀⠫⠩⠒⠒⠕⠐⠫⠩⠒⠒⠕⠀']);
+  this.executeCharTest('⇍', ['⠀⠳⠈⠫⠪⠪⠒⠒⠀']);
+  this.executeCharTest('⇎', ['⠀⠳⠈⠫⠪⠪⠒⠒⠕⠕⠀']);
+  this.executeCharTest('⇏', ['⠀⠳⠈⠫⠒⠒⠕⠕⠀']);
+  this.executeCharTest('⇐', ['⠀⠫⠪⠪⠒⠒⠀']);
+  this.executeCharTest('⇑', ['⠀⠫⠣⠒⠒⠕⠕⠀']);
+  this.executeCharTest('⇒', ['⠀⠫⠒⠒⠕⠕⠀']);
+  this.executeCharTest('⇓', ['⠀⠫⠣⠒⠒⠕⠕⠀']);
+  this.executeCharTest('⇔', ['⠀⠫⠪⠪⠒⠒⠕⠕⠀']);
+  this.executeCharTest('⇕', ['⠀⠫⠣⠪⠪⠒⠒⠕⠕⠀']);
+  this.executeCharTest('⇖', ['⠀⠫⠘⠪⠪⠒⠒⠀']);
+  this.executeCharTest('⇗', ['⠀⠫⠘⠒⠒⠕⠕⠀']);
+  this.executeCharTest('⇘', ['⠀⠫⠰⠒⠒⠕⠕⠀']);
+  this.executeCharTest('⇙', ['⠀⠫⠰⠪⠪⠒⠒⠀']);
+  this.executeCharTest('⇚', ['⠀⠫⠪⠪⠪⠒⠒⠀']);
+  this.executeCharTest('⇛', ['⠀⠫⠒⠒⠕⠕⠕⠀']);
+  this.executeCharTest('⇜', ['⠀⠫⠪⠢⠤⠔⠒⠢⠀']);
+  this.executeCharTest('⇝', ['⠀⠫⠢⠤⠔⠒⠢⠕⠀']);
+  this.executeCharTest('⇞', ['⠀⠳⠳⠈⠫⠣⠒⠒⠕⠻⠀']);
+  this.executeCharTest('⇟', ['⠀⠳⠳⠈⠫⠩⠒⠒⠕⠻⠀']);
+  this.executeCharTest('⇠', ['⠀⠫⠪⠒⠀⠒⠀']);
+  this.executeCharTest('⇡', ['⠀⠫⠣⠒⠀⠒⠕⠀']);
+  this.executeCharTest('⇢', ['⠀⠫⠒⠀⠒⠕⠀']);
+  this.executeCharTest('⇣', ['⠀⠫⠩⠒⠀⠒⠕⠀']);
+  this.executeCharTest('⇤', ['⠀⠫⠳⠪⠒⠒⠀']);
+  this.executeCharTest('⇥', ['⠀⠫⠒⠒⠕⠳⠀']);
+  this.executeCharTest('⇦', ['⠀⠫⠸⠪⠒⠒⠀']);
+  this.executeCharTest('⇧', ['⠀⠫⠣⠸⠒⠒⠕⠀']);
+  this.executeCharTest('⇨', ['⠀⠫⠸⠒⠒⠕⠀']);
+  this.executeCharTest('⇩', ['⠀⠫⠩⠸⠒⠒⠕⠀']);
+  this.executeCharTest('⇪', ['⠄⡳⠭⠆⠂⠑⠁⠄']);
+  this.executeCharTest('⇫', ['⠄⡳⠭⠆⠂⠑⠃⠄']);
+  this.executeCharTest('⇬', ['⠄⡳⠭⠆⠂⠑⠉⠄']);
+  this.executeCharTest('⇭', ['⠄⡳⠭⠆⠂⠑⠙⠄']);
+  this.executeCharTest('⇮', ['⠄⡳⠭⠆⠂⠑⠑⠄']);
+  this.executeCharTest('⇯', ['⠄⡳⠭⠆⠂⠑⠋⠄']);
+  this.executeCharTest('⇰', ['⠄⡳⠭⠆⠂⠋⠴⠄']);
+  this.executeCharTest('⇱', ['⠄⡳⠭⠆⠂⠋⠂⠄']);
+  this.executeCharTest('⇲', ['⠄⡳⠭⠆⠂⠋⠆⠄']);
+  this.executeCharTest('⇳', ['⠀⠫⠣⠸⠪⠒⠒⠕⠀']);
+  this.executeCharTest('⇴', ['⠀⠫⠒⠒⠕⠨⠡⠀']);
+  this.executeCharTest('⇵', ['⠀⠫⠩⠒⠒⠕⠐⠫⠣⠒⠒⠕⠀']);
+  this.executeCharTest('⇶', ['⠀⠫⠒⠒⠕⠫⠒⠒⠕⠫⠒⠒⠕⠀']);
+  this.executeCharTest('⇷', ['⠀⠳⠈⠫⠪⠒⠒⠻⠀']);
+  this.executeCharTest('⇸', ['⠀⠳⠈⠫⠒⠒⠕⠻⠀']);
+  this.executeCharTest('⇹', ['⠀⠳⠈⠫⠪⠒⠒⠕⠀']);
+  this.executeCharTest('⇺', ['⠀⠳⠳⠈⠫⠪⠒⠒⠻⠀']);
+  this.executeCharTest('⇻', ['⠀⠳⠳⠈⠫⠒⠒⠕⠻⠀']);
+  this.executeCharTest('⇼', ['⠀⠳⠳⠈⠫⠪⠒⠒⠕⠀']);
+  this.executeCharTest('⇽', ['⠀⠫⠳⠒⠒⠀']);
+  this.executeCharTest('⇾', ['⠀⠫⠒⠒⠳⠀']);
+  this.executeCharTest('⇿', ['⠀⠫⠳⠒⠒⠳⠀']);
+  this.executeCharTest('⌁', ['⠄⡳⠭⠆⠒⠴⠂⠄']);
+  this.executeCharTest('⌃', ['⠄⡳⠭⠆⠒⠴⠒⠄']);
+  this.executeCharTest('⌄', ['⠄⡳⠭⠆⠒⠴⠲⠄']);
+  this.executeCharTest('⌤', ['⠄⡳⠭⠆⠒⠆⠲⠄']);
+  this.executeCharTest('⎋', ['⠄⡳⠭⠆⠒⠦⠃⠄']);
+  this.executeCharTest('➔', ['⠄⡳⠭⠆⠶⠔⠲⠄']);
+  this.executeCharTest('➘', ['⠄⡳⠭⠆⠶⠔⠦⠄']);
+  this.executeCharTest('➙', ['⠄⡳⠭⠆⠶⠔⠔⠄']);
+  this.executeCharTest('➚', ['⠄⡳⠭⠆⠶⠔⠁⠄']);
+  this.executeCharTest('➛', ['⠄⡳⠭⠆⠶⠔⠃⠄']);
+  this.executeCharTest('➜', ['⠄⡳⠭⠆⠶⠔⠉⠄']);
+  this.executeCharTest('➝', ['⠄⡳⠭⠆⠶⠔⠙⠄']);
+  this.executeCharTest('➞', ['⠄⡳⠭⠆⠶⠔⠑⠄']);
+  this.executeCharTest('➟', ['⠄⡳⠭⠆⠶⠔⠋⠄']);
+  this.executeCharTest('➠', ['⠄⡳⠭⠆⠶⠁⠴⠄']);
+  this.executeCharTest('➡', ['⠄⡳⠭⠆⠶⠁⠂⠄']);
+  this.executeCharTest('➢', ['⠄⡳⠭⠆⠶⠁⠆⠄']);
+  this.executeCharTest('➣', ['⠄⡳⠭⠆⠶⠁⠒⠄']);
+  this.executeCharTest('➤', ['⠄⡳⠭⠆⠶⠁⠲⠄']);
+  this.executeCharTest('➥', ['⠄⡳⠭⠆⠶⠁⠢⠄']);
+  this.executeCharTest('➦', ['⠄⡳⠭⠆⠶⠁⠖⠄']);
+  this.executeCharTest('➧', ['⠄⡳⠭⠆⠶⠁⠶⠄']);
+  this.executeCharTest('➨', ['⠄⡳⠭⠆⠶⠁⠦⠄']);
+  this.executeCharTest('➩', ['⠄⡳⠭⠆⠶⠁⠔⠄']);
+  this.executeCharTest('➪', ['⠄⡳⠭⠆⠶⠁⠁⠄']);
+  this.executeCharTest('➫', ['⠄⡳⠭⠆⠶⠁⠃⠄']);
+  this.executeCharTest('➬', ['⠄⡳⠭⠆⠶⠁⠉⠄']);
+  this.executeCharTest('➭', ['⠄⡳⠭⠆⠶⠁⠙⠄']);
+  this.executeCharTest('➮', ['⠄⡳⠭⠆⠶⠁⠑⠄']);
+  this.executeCharTest('➯', ['⠄⡳⠭⠆⠶⠁⠋⠄']);
+  this.executeCharTest('➱', ['⠄⡳⠭⠆⠶⠃⠂⠄']);
+  this.executeCharTest('➲', ['⠄⡳⠭⠆⠶⠃⠆⠄']);
+  this.executeCharTest('➳', ['⠄⡳⠭⠆⠶⠃⠒⠄']);
+  this.executeCharTest('➴', ['⠄⡳⠭⠆⠶⠃⠲⠄']);
+  this.executeCharTest('➵', ['⠄⡳⠭⠆⠶⠃⠢⠄']);
+  this.executeCharTest('➶', ['⠄⡳⠭⠆⠶⠃⠖⠄']);
+  this.executeCharTest('➷', ['⠄⡳⠭⠆⠶⠃⠶⠄']);
+  this.executeCharTest('➸', ['⠄⡳⠭⠆⠶⠃⠦⠄']);
+  this.executeCharTest('➹', ['⠄⡳⠭⠆⠶⠃⠔⠄']);
+  this.executeCharTest('➺', ['⠄⡳⠭⠆⠶⠃⠁⠄']);
+  this.executeCharTest('➻', ['⠄⡳⠭⠆⠶⠃⠃⠄']);
+  this.executeCharTest('➼', ['⠄⡳⠭⠆⠶⠃⠉⠄']);
+  this.executeCharTest('➽', ['⠄⡳⠭⠆⠶⠃⠙⠄']);
+  this.executeCharTest('➾', ['⠄⡳⠭⠆⠶⠃⠑⠄']);
+  this.executeCharTest('⟰', ['⠄⡳⠭⠆⠶⠋⠴⠄']);
+  this.executeCharTest('⟱', ['⠄⡳⠭⠆⠶⠋⠂⠄']);
+  this.executeCharTest('⟲', ['⠄⡳⠭⠆⠶⠋⠆⠄']);
+  this.executeCharTest('⟳', ['⠄⡳⠭⠆⠶⠋⠒⠄']);
+  this.executeCharTest('⟴', ['⠄⡳⠭⠆⠶⠋⠲⠄']);
+  this.executeCharTest('⟵', ['⠄⡳⠭⠆⠶⠋⠢⠄']);
+  this.executeCharTest('⟶', ['⠄⡳⠭⠆⠶⠋⠖⠄']);
+  this.executeCharTest('⟷', ['⠄⡳⠭⠆⠶⠋⠶⠄']);
+  this.executeCharTest('⟸', ['⠄⡳⠭⠆⠶⠋⠦⠄']);
+  this.executeCharTest('⟹', ['⠄⡳⠭⠆⠶⠋⠔⠄']);
+  this.executeCharTest('⟺', ['⠄⡳⠭⠆⠶⠋⠁⠄']);
+  this.executeCharTest('⟻', ['⠄⡳⠭⠆⠶⠋⠃⠄']);
+  this.executeCharTest('⟼', ['⠄⡳⠭⠆⠶⠋⠉⠄']);
+  this.executeCharTest('⟽', ['⠄⡳⠭⠆⠶⠋⠙⠄']);
+  this.executeCharTest('⟾', ['⠄⡳⠭⠆⠶⠋⠑⠄']);
+  this.executeCharTest('⟿', ['⠄⡳⠭⠆⠶⠋⠋⠄']);
+  this.executeCharTest('⤀', ['⠄⡳⠭⠆⠔⠴⠴⠄']);
+  this.executeCharTest('⤁', ['⠄⡳⠭⠆⠔⠴⠂⠄']);
+  this.executeCharTest('⤂', ['⠄⡳⠭⠆⠔⠴⠆⠄']);
+  this.executeCharTest('⤃', ['⠄⡳⠭⠆⠔⠴⠒⠄']);
+  this.executeCharTest('⤄', ['⠄⡳⠭⠆⠔⠴⠲⠄']);
+  this.executeCharTest('⤅', ['⠄⡳⠭⠆⠔⠴⠢⠄']);
+  this.executeCharTest('⤆', ['⠄⡳⠭⠆⠔⠴⠖⠄']);
+  this.executeCharTest('⤇', ['⠄⡳⠭⠆⠔⠴⠶⠄']);
+  this.executeCharTest('⤈', ['⠄⡳⠭⠆⠔⠴⠦⠄']);
+  this.executeCharTest('⤉', ['⠄⡳⠭⠆⠔⠴⠔⠄']);
+  this.executeCharTest('⤊', ['⠄⡳⠭⠆⠔⠴⠁⠄']);
+  this.executeCharTest('⤋', ['⠄⡳⠭⠆⠔⠴⠃⠄']);
+  this.executeCharTest('⤌', ['⠄⡳⠭⠆⠔⠴⠉⠄']);
+  this.executeCharTest('⤍', ['⠄⡳⠭⠆⠔⠴⠙⠄']);
+  this.executeCharTest('⤎', ['⠄⡳⠭⠆⠔⠴⠑⠄']);
+  this.executeCharTest('⤏', ['⠄⡳⠭⠆⠔⠴⠋⠄']);
+  this.executeCharTest('⤐', ['⠄⡳⠭⠆⠔⠂⠴⠄']);
+  this.executeCharTest('⤑', ['⠄⡳⠭⠆⠔⠂⠂⠄']);
+  this.executeCharTest('⤒', ['⠄⡳⠭⠆⠔⠂⠆⠄']);
+  this.executeCharTest('⤓', ['⠄⡳⠭⠆⠔⠂⠒⠄']);
+  this.executeCharTest('⤔', ['⠄⡳⠭⠆⠔⠂⠲⠄']);
+  this.executeCharTest('⤕', ['⠄⡳⠭⠆⠔⠂⠢⠄']);
+  this.executeCharTest('⤖', ['⠄⡳⠭⠆⠔⠂⠖⠄']);
+  this.executeCharTest('⤗', ['⠄⡳⠭⠆⠔⠂⠶⠄']);
+  this.executeCharTest('⤘', ['⠄⡳⠭⠆⠔⠂⠦⠄']);
+  this.executeCharTest('⤙', ['⠄⡳⠭⠆⠔⠂⠔⠄']);
+  this.executeCharTest('⤚', ['⠄⡳⠭⠆⠔⠂⠁⠄']);
+  this.executeCharTest('⤛', ['⠄⡳⠭⠆⠔⠂⠃⠄']);
+  this.executeCharTest('⤜', ['⠄⡳⠭⠆⠔⠂⠉⠄']);
+  this.executeCharTest('⤝', ['⠄⡳⠭⠆⠔⠂⠙⠄']);
+  this.executeCharTest('⤞', ['⠄⡳⠭⠆⠔⠂⠑⠄']);
+  this.executeCharTest('⤟', ['⠄⡳⠭⠆⠔⠂⠋⠄']);
+  this.executeCharTest('⤠', ['⠄⡳⠭⠆⠔⠆⠴⠄']);
+  this.executeCharTest('⤡', ['⠄⡳⠭⠆⠔⠆⠂⠄']);
+  this.executeCharTest('⤢', ['⠄⡳⠭⠆⠔⠆⠆⠄']);
+  this.executeCharTest('⤣', ['⠄⡳⠭⠆⠔⠆⠒⠄']);
+  this.executeCharTest('⤤', ['⠄⡳⠭⠆⠔⠆⠲⠄']);
+  this.executeCharTest('⤥', ['⠄⡳⠭⠆⠔⠆⠢⠄']);
+  this.executeCharTest('⤦', ['⠄⡳⠭⠆⠔⠆⠖⠄']);
+  this.executeCharTest('⤧', ['⠄⡳⠭⠆⠔⠆⠶⠄']);
+  this.executeCharTest('⤨', ['⠄⡳⠭⠆⠔⠆⠦⠄']);
+  this.executeCharTest('⤩', ['⠄⡳⠭⠆⠔⠆⠔⠄']);
+  this.executeCharTest('⤪', ['⠄⡳⠭⠆⠔⠆⠁⠄']);
+  this.executeCharTest('⤭', ['⠄⡳⠭⠆⠔⠆⠙⠄']);
+  this.executeCharTest('⤮', ['⠄⡳⠭⠆⠔⠆⠑⠄']);
+  this.executeCharTest('⤯', ['⠄⡳⠭⠆⠔⠆⠋⠄']);
+  this.executeCharTest('⤰', ['⠄⡳⠭⠆⠔⠒⠴⠄']);
+  this.executeCharTest('⤱', ['⠄⡳⠭⠆⠔⠒⠂⠄']);
+  this.executeCharTest('⤲', ['⠄⡳⠭⠆⠔⠒⠆⠄']);
+  this.executeCharTest('⤳', ['⠄⡳⠭⠆⠔⠒⠒⠄']);
+  this.executeCharTest('⤴', ['⠄⡳⠭⠆⠔⠒⠲⠄']);
+  this.executeCharTest('⤵', ['⠄⡳⠭⠆⠔⠒⠢⠄']);
+  this.executeCharTest('⤶', ['⠄⡳⠭⠆⠔⠒⠖⠄']);
+  this.executeCharTest('⤷', ['⠄⡳⠭⠆⠔⠒⠶⠄']);
+  this.executeCharTest('⤸', ['⠄⡳⠭⠆⠔⠒⠦⠄']);
+  this.executeCharTest('⤹', ['⠄⡳⠭⠆⠔⠒⠔⠄']);
+  this.executeCharTest('⤺', ['⠄⡳⠭⠆⠔⠒⠁⠄']);
+  this.executeCharTest('⤻', ['⠄⡳⠭⠆⠔⠒⠃⠄']);
+  this.executeCharTest('⤼', ['⠄⡳⠭⠆⠔⠒⠉⠄']);
+  this.executeCharTest('⤽', ['⠄⡳⠭⠆⠔⠒⠙⠄']);
+  this.executeCharTest('⤾', ['⠄⡳⠭⠆⠔⠒⠑⠄']);
+  this.executeCharTest('⤿', ['⠄⡳⠭⠆⠔⠒⠋⠄']);
+  this.executeCharTest('⥀', ['⠄⡳⠭⠆⠔⠲⠴⠄']);
+  this.executeCharTest('⥁', ['⠄⡳⠭⠆⠔⠲⠂⠄']);
+  this.executeCharTest('⥂', ['⠄⡳⠭⠆⠔⠲⠆⠄']);
+  this.executeCharTest('⥃', ['⠄⡳⠭⠆⠔⠲⠒⠄']);
+  this.executeCharTest('⥄', ['⠄⡳⠭⠆⠔⠲⠲⠄']);
+  this.executeCharTest('⥅', ['⠄⡳⠭⠆⠔⠲⠢⠄']);
+  this.executeCharTest('⥆', ['⠄⡳⠭⠆⠔⠲⠖⠄']);
+  this.executeCharTest('⥇', ['⠄⡳⠭⠆⠔⠲⠶⠄']);
+  this.executeCharTest('⥈', ['⠄⡳⠭⠆⠔⠲⠦⠄']);
+  this.executeCharTest('⥉', ['⠄⡳⠭⠆⠔⠲⠔⠄']);
+  this.executeCharTest('⥰', ['⠄⡳⠭⠆⠔⠶⠴⠄']);
+  this.executeCharTest('⥱', ['⠄⡳⠭⠆⠔⠶⠂⠄']);
+  this.executeCharTest('⥲', ['⠄⡳⠭⠆⠔⠶⠆⠄']);
+  this.executeCharTest('⥳', ['⠄⡳⠭⠆⠔⠶⠒⠄']);
+  this.executeCharTest('⥴', ['⠄⡳⠭⠆⠔⠶⠲⠄']);
+  this.executeCharTest('⥵', ['⠄⡳⠭⠆⠔⠶⠢⠄']);
+  this.executeCharTest('⥶', ['⠄⡳⠭⠆⠔⠶⠖⠄']);
+  this.executeCharTest('⥷', ['⠄⡳⠭⠆⠔⠶⠶⠄']);
+  this.executeCharTest('⥸', ['⠄⡳⠭⠆⠔⠶⠦⠄']);
+  this.executeCharTest('⥹', ['⠄⡳⠭⠆⠔⠶⠔⠄']);
+  this.executeCharTest('⥺', ['⠄⡳⠭⠆⠔⠶⠁⠄']);
+  this.executeCharTest('⥻', ['⠄⡳⠭⠆⠔⠶⠃⠄']);
+  this.executeCharTest('⦳', ['⠄⡳⠭⠆⠔⠃⠒⠄']);
+  this.executeCharTest('⦴', ['⠄⡳⠭⠆⠔⠃⠲⠄']);
+  this.executeCharTest('⦽', ['⠄⡳⠭⠆⠔⠃⠙⠄']);
+  this.executeCharTest('⧪', ['⠄⡳⠭⠆⠔⠑⠁⠄']);
+  this.executeCharTest('⧬', ['⠄⡳⠭⠆⠔⠑⠉⠄']);
+  this.executeCharTest('⧭', ['⠄⡳⠭⠆⠔⠑⠙⠄']);
+  this.executeCharTest('⨗', ['⠄⡳⠭⠆⠁⠂⠶⠄']);
+  this.executeCharTest('⬀', ['⠄⡳⠭⠆⠃⠴⠴⠄']);
+  this.executeCharTest('⬁', ['⠄⡳⠭⠆⠃⠴⠂⠄']);
+  this.executeCharTest('⬂', ['⠄⡳⠭⠆⠃⠴⠆⠄']);
+  this.executeCharTest('⬃', ['⠄⡳⠭⠆⠃⠴⠒⠄']);
+  this.executeCharTest('⬄', ['⠄⡳⠭⠆⠃⠴⠲⠄']);
+  this.executeCharTest('⬅', ['⠄⡳⠭⠆⠃⠴⠢⠄']);
+  this.executeCharTest('⬆', ['⠄⡳⠭⠆⠃⠴⠖⠄']);
+  this.executeCharTest('⬇', ['⠄⡳⠭⠆⠃⠴⠶⠄']);
+  this.executeCharTest('⬈', ['⠄⡳⠭⠆⠃⠴⠦⠄']);
+  this.executeCharTest('⬉', ['⠄⡳⠭⠆⠃⠴⠔⠄']);
+  this.executeCharTest('⬊', ['⠄⡳⠭⠆⠃⠴⠁⠄']);
+  this.executeCharTest('⬋', ['⠄⡳⠭⠆⠃⠴⠃⠄']);
+  this.executeCharTest('⬌', ['⠄⡳⠭⠆⠃⠴⠉⠄']);
+  this.executeCharTest('⬍', ['⠄⡳⠭⠆⠃⠴⠙⠄']);
+  this.executeCharTest('⬎', ['⠄⡳⠭⠆⠃⠴⠑⠄']);
+  this.executeCharTest('⬏', ['⠄⡳⠭⠆⠃⠴⠋⠄']);
+  this.executeCharTest('⬐', ['⠄⡳⠭⠆⠃⠂⠴⠄']);
+  this.executeCharTest('⬑', ['⠄⡳⠭⠆⠃⠂⠂⠄']);
+  this.executeCharTest('⬰', ['⠄⡳⠭⠆⠃⠒⠴⠄']);
+  this.executeCharTest('⬱', ['⠄⡳⠭⠆⠃⠒⠂⠄']);
+  this.executeCharTest('⬲', ['⠄⡳⠭⠆⠃⠒⠆⠄']);
+  this.executeCharTest('⬳', ['⠄⡳⠭⠆⠃⠒⠒⠄']);
+  this.executeCharTest('⬴', ['⠄⡳⠭⠆⠃⠒⠲⠄']);
+  this.executeCharTest('⬵', ['⠄⡳⠭⠆⠃⠒⠢⠄']);
+  this.executeCharTest('⬶', ['⠄⡳⠭⠆⠃⠒⠖⠄']);
+  this.executeCharTest('⬷', ['⠄⡳⠭⠆⠃⠒⠶⠄']);
+  this.executeCharTest('⬸', ['⠄⡳⠭⠆⠃⠒⠦⠄']);
+  this.executeCharTest('⬹', ['⠄⡳⠭⠆⠃⠒⠔⠄']);
+  this.executeCharTest('⬺', ['⠄⡳⠭⠆⠃⠒⠁⠄']);
+  this.executeCharTest('⬻', ['⠄⡳⠭⠆⠃⠒⠃⠄']);
+  this.executeCharTest('⬼', ['⠄⡳⠭⠆⠃⠒⠉⠄']);
+  this.executeCharTest('⬽', ['⠄⡳⠭⠆⠃⠒⠙⠄']);
+  this.executeCharTest('⬾', ['⠄⡳⠭⠆⠃⠒⠑⠄']);
+  this.executeCharTest('⬿', ['⠄⡳⠭⠆⠃⠒⠋⠄']);
+  this.executeCharTest('⭀', ['⠄⡳⠭⠆⠃⠲⠴⠄']);
+  this.executeCharTest('⭁', ['⠄⡳⠭⠆⠃⠲⠂⠄']);
+  this.executeCharTest('⭂', ['⠄⡳⠭⠆⠃⠲⠆⠄']);
+  this.executeCharTest('⭃', ['⠄⡳⠭⠆⠃⠲⠒⠄']);
+  this.executeCharTest('⭄', ['⠄⡳⠭⠆⠃⠲⠲⠄']);
+  this.executeCharTest('⭅', ['⠄⡳⠭⠆⠃⠲⠢⠄']);
+  this.executeCharTest('⭆', ['⠄⡳⠭⠆⠃⠲⠖⠄']);
+  this.executeCharTest('⭇', ['⠄⡳⠭⠆⠃⠲⠶⠄']);
+  this.executeCharTest('⭈', ['⠄⡳⠭⠆⠃⠲⠦⠄']);
+  this.executeCharTest('⭉', ['⠄⡳⠭⠆⠃⠲⠔⠄']);
+  this.executeCharTest('⭊', ['⠄⡳⠭⠆⠃⠲⠁⠄']);
+  this.executeCharTest('⭋', ['⠄⡳⠭⠆⠃⠲⠃⠄']);
+  this.executeCharTest('⭌', ['⠄⡳⠭⠆⠃⠲⠉⠄']);
+  this.executeCharTest('￩', ['⠄⡳⠭⠋⠋⠑⠔⠄']);
+  this.executeCharTest('￪', ['⠄⡳⠭⠋⠋⠑⠁⠄']);
+  this.executeCharTest('￫', ['⠄⡳⠭⠋⠋⠑⠃⠄']);
+  this.executeCharTest('￬', ['⠄⡳⠭⠋⠋⠑⠉⠄']);
+  this.executeCharTest('ℓ', ['⠈⠇']);
+  this.executeCharTest('℘', ['⠄⡳⠭⠆⠂⠂⠦⠄']);
+  this.executeCharTest('ℼ', ['⠄⡳⠭⠆⠂⠒⠉⠄']);
+  this.executeCharTest('ℽ', ['⠄⡳⠭⠆⠂⠒⠙⠄']);
+  this.executeCharTest('ℾ', ['⠄⡳⠭⠆⠂⠒⠑⠄']);
+  this.executeCharTest('ℿ', ['⠄⡳⠭⠆⠂⠒⠋⠄']);
+  this.executeCharTest('⅀', ['⠄⡳⠭⠆⠂⠲⠴⠄']);
+  this.executeCharTest('ⅅ', ['⠄⡳⠭⠆⠂⠲⠢⠄']);
+  this.executeCharTest('ⅆ', ['⠙']);
+  this.executeCharTest('ⅇ', ['⠑']);
+  this.executeCharTest('ⅈ', ['⠄⡳⠭⠆⠂⠲⠦⠄']);
+  this.executeCharTest('ⅉ', ['⠄⡳⠭⠆⠂⠲⠔⠄']);
+  this.executeCharTest('𝚤', ['⠄⡳⠽⠂⠙⠖⠁⠲⠄']);
+  this.executeCharTest('𝚥', ['⠄⡳⠽⠂⠙⠖⠁⠢⠄']);
+  this.executeCharTest('(', ['⠷']);
+  this.executeCharTest(')', ['⠾']);
+  this.executeCharTest('[', ['⠈⠷']);
+  this.executeCharTest(']', ['⠈⠾']);
+  this.executeCharTest('{', ['⠨⠷']);
+  this.executeCharTest('}', ['⠨⠾']);
+  this.executeCharTest('⁅', ['⠄⡳⠭⠆⠴⠲⠢⠄']);
+  this.executeCharTest('⁆', ['⠄⡳⠭⠆⠴⠲⠖⠄']);
+  this.executeCharTest('⌈', ['⠈⠘⠷']);
+  this.executeCharTest('⌉', ['⠈⠘⠾']);
+  this.executeCharTest('⌊', ['⠈⠰⠷']);
+  this.executeCharTest('⌋', ['⠈⠰⠾']);
+  this.executeCharTest('⌌', ['⠄⡳⠭⠆⠒⠴⠉⠄']);
+  this.executeCharTest('⌍', ['⠄⡳⠭⠆⠒⠴⠙⠄']);
+  this.executeCharTest('⌎', ['⠄⡳⠭⠆⠒⠴⠑⠄']);
+  this.executeCharTest('⌏', ['⠄⡳⠭⠆⠒⠴⠋⠄']);
+  this.executeCharTest('⌜', ['⠈⠘⠷']);
+  this.executeCharTest('⌝', ['⠈⠘⠾']);
+  this.executeCharTest('⌞', ['⠈⠰⠷']);
+  this.executeCharTest('⌟', ['⠈⠰⠾']);
+  this.executeCharTest('⌠', ['⠄⡳⠭⠆⠒⠆⠴⠄']);
+  this.executeCharTest('⌡', ['⠄⡳⠭⠆⠒⠆⠂⠄']);
+  this.executeCharTest('〈', ['⠨⠨⠷']);
+  this.executeCharTest('〉', ['⠨⠨⠾']);
+  this.executeCharTest('⎛', ['⠄⡳⠭⠆⠒⠔⠃⠄']);
+  this.executeCharTest('⎜', ['⠄⡳⠭⠆⠒⠔⠉⠄']);
+  this.executeCharTest('⎝', ['⠄⡳⠭⠆⠒⠔⠙⠄']);
+  this.executeCharTest('⎞', ['⠄⡳⠭⠆⠒⠔⠑⠄']);
+  this.executeCharTest('⎟', ['⠄⡳⠭⠆⠒⠔⠋⠄']);
+  this.executeCharTest('⎠', ['⠄⡳⠭⠆⠒⠁⠴⠄']);
+  this.executeCharTest('⎡', ['⠄⡳⠭⠆⠒⠁⠂⠄']);
+  this.executeCharTest('⎢', ['⠄⡳⠭⠆⠒⠁⠆⠄']);
+  this.executeCharTest('⎣', ['⠄⡳⠭⠆⠒⠁⠒⠄']);
+  this.executeCharTest('⎤', ['⠄⡳⠭⠆⠒⠁⠲⠄']);
+  this.executeCharTest('⎥', ['⠄⡳⠭⠆⠒⠁⠢⠄']);
+  this.executeCharTest('⎦', ['⠄⡳⠭⠆⠒⠁⠖⠄']);
+  this.executeCharTest('⎧', ['⠄⡳⠭⠆⠒⠁⠶⠄']);
+  this.executeCharTest('⎨', ['⠄⡳⠭⠆⠒⠁⠦⠄']);
+  this.executeCharTest('⎩', ['⠄⡳⠭⠆⠒⠁⠔⠄']);
+  this.executeCharTest('⎪', ['⠄⡳⠭⠆⠒⠁⠁⠄']);
+  this.executeCharTest('⎫', ['⠄⡳⠭⠆⠒⠁⠃⠄']);
+  this.executeCharTest('⎬', ['⠄⡳⠭⠆⠒⠁⠉⠄']);
+  this.executeCharTest('⎭', ['⠄⡳⠭⠆⠒⠁⠙⠄']);
+  this.executeCharTest('⎮', ['⠄⡳⠭⠆⠒⠁⠑⠄']);
+  this.executeCharTest('⎯', ['⠄⡳⠭⠆⠒⠁⠋⠄']);
+  this.executeCharTest('⎰', ['⠄⡳⠭⠆⠒⠃⠴⠄']);
+  this.executeCharTest('⎱', ['⠄⡳⠭⠆⠒⠃⠂⠄']);
+  this.executeCharTest('⎲', ['⠄⡳⠭⠆⠒⠃⠆⠄']);
+  this.executeCharTest('⎳', ['⠄⡳⠭⠆⠒⠃⠒⠄']);
+  this.executeCharTest('⎴', ['⠄⡳⠭⠆⠒⠃⠲⠄']);
+  this.executeCharTest('⎵', ['⠄⡳⠭⠆⠒⠃⠢⠄']);
+  this.executeCharTest('⎶', ['⠄⡳⠭⠆⠒⠃⠖⠄']);
+  this.executeCharTest('⎷', ['⠄⡳⠭⠆⠒⠃⠶⠄']);
+  this.executeCharTest('⎸', ['⠄⡳⠭⠆⠒⠃⠦⠄']);
+  this.executeCharTest('⎹', ['⠄⡳⠭⠆⠒⠃⠔⠄']);
+  this.executeCharTest('⏜', ['⠄⡳⠭⠆⠒⠙⠉⠄']);
+  this.executeCharTest('⏝', ['⠄⡳⠭⠆⠒⠙⠙⠄']);
+  this.executeCharTest('⏞', ['⠄⡳⠭⠆⠒⠙⠑⠄']);
+  this.executeCharTest('⏟', ['⠄⡳⠭⠆⠒⠙⠋⠄']);
+  this.executeCharTest('⏠', ['⠄⡳⠭⠆⠒⠑⠴⠄']);
+  this.executeCharTest('⏡', ['⠄⡳⠭⠆⠒⠑⠂⠄']);
+  this.executeCharTest('❨', ['⠄⡳⠭⠆⠶⠖⠦⠄']);
+  this.executeCharTest('❩', ['⠄⡳⠭⠆⠶⠖⠔⠄']);
+  this.executeCharTest('❪', ['⠄⡳⠭⠆⠶⠖⠁⠄']);
+  this.executeCharTest('❫', ['⠄⡳⠭⠆⠶⠖⠃⠄']);
+  this.executeCharTest('❬', ['⠄⡳⠭⠆⠶⠖⠉⠄']);
+  this.executeCharTest('❭', ['⠄⡳⠭⠆⠶⠖⠙⠄']);
+  this.executeCharTest('❮', ['⠄⡳⠭⠆⠶⠖⠑⠄']);
+  this.executeCharTest('❯', ['⠄⡳⠭⠆⠶⠖⠋⠄']);
+  this.executeCharTest('❰', ['⠄⡳⠭⠆⠶⠶⠴⠄']);
+  this.executeCharTest('❱', ['⠄⡳⠭⠆⠶⠶⠂⠄']);
+  this.executeCharTest('❲', ['⠄⡳⠭⠆⠶⠶⠆⠄']);
+  this.executeCharTest('❳', ['⠄⡳⠭⠆⠶⠶⠒⠄']);
+  this.executeCharTest('❴', ['⠄⡳⠭⠆⠶⠶⠲⠄']);
+  this.executeCharTest('❵', ['⠄⡳⠭⠆⠶⠶⠢⠄']);
+  this.executeCharTest('⟅', ['⠄⡳⠭⠆⠶⠉⠢⠄']);
+  this.executeCharTest('⟆', ['⠄⡳⠭⠆⠶⠉⠖⠄']);
+  this.executeCharTest('⟦', ['⠈⠸⠷']);
+  this.executeCharTest('⟧', ['⠈⠸⠾']);
+  this.executeCharTest('⟨', ['⠨⠨⠷']);
+  this.executeCharTest('⟩', ['⠨⠨⠾']);
+  this.executeCharTest('⟪', ['⠨⠨⠨⠷']);
+  this.executeCharTest('⟫', ['⠨⠨⠨⠾']);
+  this.executeCharTest('⟬', ['⠄⡳⠭⠆⠶⠑⠉⠄']);
+  this.executeCharTest('⟭', ['⠄⡳⠭⠆⠶⠑⠙⠄']);
+  this.executeCharTest('⟮', ['⠄⡳⠭⠆⠶⠑⠑⠄']);
+  this.executeCharTest('⟯', ['⠄⡳⠭⠆⠶⠑⠋⠄']);
+  this.executeCharTest('⦃', ['⠨⠸⠷']);
+  this.executeCharTest('⦄', ['⠨⠸⠾']);
+  this.executeCharTest('⦅', ['⠄⡳⠭⠆⠔⠦⠢⠄']);
+  this.executeCharTest('⦆', ['⠄⡳⠭⠆⠔⠦⠖⠄']);
+  this.executeCharTest('⦇', ['⠄⡳⠭⠆⠔⠦⠶⠄']);
+  this.executeCharTest('⦈', ['⠄⡳⠭⠆⠔⠦⠦⠄']);
+  this.executeCharTest('⦉', ['⠄⡳⠭⠆⠔⠦⠔⠄']);
+  this.executeCharTest('⦊', ['⠄⡳⠭⠆⠔⠦⠁⠄']);
+  this.executeCharTest('⦋', ['⠄⡳⠭⠆⠔⠦⠃⠄']);
+  this.executeCharTest('⦌', ['⠄⡳⠭⠆⠔⠦⠉⠄']);
+  this.executeCharTest('⦍', ['⠄⡳⠭⠆⠔⠦⠙⠄']);
+  this.executeCharTest('⦎', ['⠄⡳⠭⠆⠔⠦⠑⠄']);
+  this.executeCharTest('⦏', ['⠄⡳⠭⠆⠔⠦⠋⠄']);
+  this.executeCharTest('⦐', ['⠄⡳⠭⠆⠔⠔⠴⠄']);
+  this.executeCharTest('⦑', ['⠄⡳⠭⠆⠔⠔⠂⠄']);
+  this.executeCharTest('⦒', ['⠄⡳⠭⠆⠔⠔⠆⠄']);
+  this.executeCharTest('⦓', ['⠄⡳⠭⠆⠔⠔⠒⠄']);
+  this.executeCharTest('⦔', ['⠄⡳⠭⠆⠔⠔⠲⠄']);
+  this.executeCharTest('⦕', ['⠄⡳⠭⠆⠔⠔⠢⠄']);
+  this.executeCharTest('⦖', ['⠄⡳⠭⠆⠔⠔⠖⠄']);
+  this.executeCharTest('⦗', ['⠄⡳⠭⠆⠔⠔⠶⠄']);
+  this.executeCharTest('⦘', ['⠄⡳⠭⠆⠔⠔⠦⠄']);
+  this.executeCharTest('⧘', ['⠄⡳⠭⠆⠔⠙⠦⠄']);
+  this.executeCharTest('⧙', ['⠄⡳⠭⠆⠔⠙⠔⠄']);
+  this.executeCharTest('⧚', ['⠄⡳⠭⠆⠔⠙⠁⠄']);
+  this.executeCharTest('⧛', ['⠄⡳⠭⠆⠔⠙⠃⠄']);
+  this.executeCharTest('⧼', ['⠄⡳⠭⠆⠔⠋⠉⠄']);
+  this.executeCharTest('⧽', ['⠄⡳⠭⠆⠔⠋⠙⠄']);
+  this.executeCharTest('⸢', ['⠄⡳⠭⠆⠑⠆⠆⠄']);
+  this.executeCharTest('⸣', ['⠄⡳⠭⠆⠑⠆⠒⠄']);
+  this.executeCharTest('⸤', ['⠄⡳⠭⠆⠑⠆⠲⠄']);
+  this.executeCharTest('⸥', ['⠄⡳⠭⠆⠑⠆⠢⠄']);
+  this.executeCharTest('⸦', ['⠄⡳⠭⠆⠑⠆⠖⠄']);
+  this.executeCharTest('⸧', ['⠄⡳⠭⠆⠑⠆⠶⠄']);
+  this.executeCharTest('⸨', ['⠄⡳⠭⠆⠑⠆⠦⠄']);
+  this.executeCharTest('⸩', ['⠄⡳⠭⠆⠑⠆⠔⠄']);
+  this.executeCharTest('〈', ['⠨⠨⠷']);
+  this.executeCharTest('〉', ['⠨⠨⠾']);
+  this.executeCharTest('《', ['⠨⠨⠨⠷']);
+  this.executeCharTest('》', ['⠨⠨⠨⠾']);
+  this.executeCharTest('「', ['⠈⠘⠷']);
+  this.executeCharTest('」', ['⠈⠘⠾']);
+  this.executeCharTest('『', ['⠄⡳⠭⠒⠴⠴⠑⠄']);
+  this.executeCharTest('』', ['⠄⡳⠭⠒⠴⠴⠋⠄']);
+  this.executeCharTest('【', ['⠄⡳⠭⠒⠴⠂⠴⠄']);
+  this.executeCharTest('】', ['⠄⡳⠭⠒⠴⠂⠂⠄']);
+  this.executeCharTest('〔', ['⠄⡳⠭⠒⠴⠂⠲⠄']);
+  this.executeCharTest('〕', ['⠄⡳⠭⠒⠴⠂⠢⠄']);
+  this.executeCharTest('〖', ['⠄⡳⠭⠒⠴⠂⠖⠄']);
+  this.executeCharTest('〗', ['⠄⡳⠭⠒⠴⠂⠶⠄']);
+  this.executeCharTest('〘', ['⠄⡳⠭⠒⠴⠂⠦⠄']);
+  this.executeCharTest('〙', ['⠄⡳⠭⠒⠴⠂⠔⠄']);
+  this.executeCharTest('〚', ['⠄⡳⠭⠒⠴⠂⠁⠄']);
+  this.executeCharTest('〛', ['⠄⡳⠭⠒⠴⠂⠃⠄']);
+  this.executeCharTest('〝', ['⠄⡳⠭⠒⠴⠂⠙⠄']);
+  this.executeCharTest('〞', ['⠄⡳⠭⠒⠴⠂⠑⠄']);
+  this.executeCharTest('〟', ['⠄⡳⠭⠒⠴⠂⠋⠄']);
+  this.executeCharTest('﴾', ['⠄⡳⠭⠋⠙⠒⠑⠄']);
+  this.executeCharTest('﴿', ['⠄⡳⠭⠋⠙⠒⠋⠄']);
+  this.executeCharTest('︗', ['⠄⡳⠭⠋⠑⠂⠶⠄']);
+  this.executeCharTest('︘', ['⠄⡳⠭⠋⠑⠂⠦⠄']);
+  this.executeCharTest('︵', ['⠄⡳⠭⠋⠑⠒⠢⠄']);
+  this.executeCharTest('︶', ['⠄⡳⠭⠋⠑⠒⠖⠄']);
+  this.executeCharTest('︷', ['⠄⡳⠭⠋⠑⠒⠶⠄']);
+  this.executeCharTest('︸', ['⠄⡳⠭⠋⠑⠒⠦⠄']);
+  this.executeCharTest('︹', ['⠄⡳⠭⠋⠑⠒⠔⠄']);
+  this.executeCharTest('︺', ['⠄⡳⠭⠋⠑⠒⠁⠄']);
+  this.executeCharTest('︻', ['⠄⡳⠭⠋⠑⠒⠃⠄']);
+  this.executeCharTest('︼', ['⠄⡳⠭⠋⠑⠒⠉⠄']);
+  this.executeCharTest('︽', ['⠄⡳⠭⠋⠑⠒⠙⠄']);
+  this.executeCharTest('︾', ['⠄⡳⠭⠋⠑⠒⠑⠄']);
+  this.executeCharTest('︿', ['⠄⡳⠭⠋⠑⠒⠋⠄']);
+  this.executeCharTest('﹀', ['⠄⡳⠭⠋⠑⠲⠴⠄']);
+  this.executeCharTest('﹁', ['⠄⡳⠭⠋⠑⠲⠂⠄']);
+  this.executeCharTest('﹂', ['⠄⡳⠭⠋⠑⠲⠆⠄']);
+  this.executeCharTest('﹃', ['⠄⡳⠭⠋⠑⠲⠒⠄']);
+  this.executeCharTest('﹄', ['⠄⡳⠭⠋⠑⠲⠲⠄']);
+  this.executeCharTest('﹇', ['⠄⡳⠭⠋⠑⠲⠶⠄']);
+  this.executeCharTest('﹈', ['⠄⡳⠭⠋⠑⠲⠦⠄']);
+  this.executeCharTest('﹙', ['⠄⡳⠭⠋⠑⠢⠔⠄']);
+  this.executeCharTest('﹚', ['⠄⡳⠭⠋⠑⠢⠁⠄']);
+  this.executeCharTest('﹛', ['⠄⡳⠭⠋⠑⠢⠃⠄']);
+  this.executeCharTest('﹜', ['⠄⡳⠭⠋⠑⠢⠉⠄']);
+  this.executeCharTest('﹝', ['⠄⡳⠭⠋⠑⠢⠙⠄']);
+  this.executeCharTest('﹞', ['⠄⡳⠭⠋⠑⠢⠑⠄']);
+  this.executeCharTest('（', ['⠄⡳⠭⠋⠋⠴⠦⠄']);
+  this.executeCharTest('）', ['⠄⡳⠭⠋⠋⠴⠔⠄']);
+  this.executeCharTest('［', ['⠄⡳⠭⠋⠋⠒⠃⠄']);
+  this.executeCharTest('］', ['⠄⡳⠭⠋⠋⠒⠙⠄']);
+  this.executeCharTest('｛', ['⠄⡳⠭⠋⠋⠢⠃⠄']);
+  this.executeCharTest('｝', ['⠄⡳⠭⠋⠋⠢⠙⠄']);
+  this.executeCharTest('｟', ['⠄⡳⠭⠋⠋⠢⠋⠄']);
+  this.executeCharTest('｠', ['⠄⡳⠭⠋⠋⠖⠴⠄']);
+  this.executeCharTest('｢', ['⠄⡳⠭⠋⠋⠖⠆⠄']);
+  this.executeCharTest('｣', ['⠄⡳⠭⠋⠋⠖⠒⠄']);
+  this.executeCharTest('²', ['⠄⡳⠭⠴⠴⠃⠆⠄']);
+  this.executeCharTest('³', ['⠄⡳⠭⠴⠴⠃⠒⠄']);
+  this.executeCharTest('¹', ['⠄⡳⠭⠴⠴⠃⠔⠄']);
+  this.executeCharTest('¼', ['⠹⠂⠌⠲⠼']);
+  this.executeCharTest('½', ['⠹⠂⠌⠆⠼']);
+  this.executeCharTest('¾', ['⠹⠒⠌⠆⠼']);
+  this.executeCharTest('⁰', ['⠄⡳⠭⠆⠴⠶⠴⠄']);
+  this.executeCharTest('⁴', ['⠄⡳⠭⠆⠴⠶⠲⠄']);
+  this.executeCharTest('⁵', ['⠄⡳⠭⠆⠴⠶⠢⠄']);
+  this.executeCharTest('⁶', ['⠄⡳⠭⠆⠴⠶⠖⠄']);
+  this.executeCharTest('⁷', ['⠄⡳⠭⠆⠴⠶⠶⠄']);
+  this.executeCharTest('⁸', ['⠄⡳⠭⠆⠴⠶⠦⠄']);
+  this.executeCharTest('⁹', ['⠄⡳⠭⠆⠴⠶⠔⠄']);
+  this.executeCharTest('₀', ['⠄⡳⠭⠆⠴⠦⠴⠄']);
+  this.executeCharTest('₁', ['⠄⡳⠭⠆⠴⠦⠂⠄']);
+  this.executeCharTest('₂', ['⠄⡳⠭⠆⠴⠦⠆⠄']);
+  this.executeCharTest('₃', ['⠄⡳⠭⠆⠴⠦⠒⠄']);
+  this.executeCharTest('₄', ['⠄⡳⠭⠆⠴⠦⠲⠄']);
+  this.executeCharTest('₅', ['⠄⡳⠭⠆⠴⠦⠢⠄']);
+  this.executeCharTest('₆', ['⠄⡳⠭⠆⠴⠦⠖⠄']);
+  this.executeCharTest('₇', ['⠄⡳⠭⠆⠴⠦⠶⠄']);
+  this.executeCharTest('₈', ['⠄⡳⠭⠆⠴⠦⠦⠄']);
+  this.executeCharTest('₉', ['⠄⡳⠭⠆⠴⠦⠔⠄']);
+  this.executeCharTest('⅐', ['⠄⡳⠭⠆⠂⠢⠴⠄']);
+  this.executeCharTest('⅑', ['⠄⡳⠭⠆⠂⠢⠂⠄']);
+  this.executeCharTest('⅒', ['⠄⡳⠭⠆⠂⠢⠆⠄']);
+  this.executeCharTest('⅓', ['⠄⡳⠭⠆⠂⠢⠒⠄']);
+  this.executeCharTest('⅔', ['⠄⡳⠭⠆⠂⠢⠲⠄']);
+  this.executeCharTest('⅕', ['⠄⡳⠭⠆⠂⠢⠢⠄']);
+  this.executeCharTest('⅖', ['⠄⡳⠭⠆⠂⠢⠖⠄']);
+  this.executeCharTest('⅗', ['⠄⡳⠭⠆⠂⠢⠶⠄']);
+  this.executeCharTest('⅘', ['⠄⡳⠭⠆⠂⠢⠦⠄']);
+  this.executeCharTest('⅙', ['⠄⡳⠭⠆⠂⠢⠔⠄']);
+  this.executeCharTest('⅚', ['⠄⡳⠭⠆⠂⠢⠁⠄']);
+  this.executeCharTest('⅛', ['⠄⡳⠭⠆⠂⠢⠃⠄']);
+  this.executeCharTest('⅜', ['⠄⡳⠭⠆⠂⠢⠉⠄']);
+  this.executeCharTest('⅝', ['⠄⡳⠭⠆⠂⠢⠙⠄']);
+  this.executeCharTest('⅞', ['⠄⡳⠭⠆⠂⠢⠑⠄']);
+  this.executeCharTest('⅟', ['⠄⡳⠭⠆⠂⠢⠋⠄']);
+  this.executeCharTest('↉', ['⠄⡳⠭⠆⠂⠦⠔⠄']);
+  this.executeCharTest('①', ['⠄⡳⠭⠆⠲⠖⠴⠄']);
+  this.executeCharTest('②', ['⠄⡳⠭⠆⠲⠖⠂⠄']);
+  this.executeCharTest('③', ['⠄⡳⠭⠆⠲⠖⠆⠄']);
+  this.executeCharTest('④', ['⠄⡳⠭⠆⠲⠖⠒⠄']);
+  this.executeCharTest('⑤', ['⠄⡳⠭⠆⠲⠖⠲⠄']);
+  this.executeCharTest('⑥', ['⠄⡳⠭⠆⠲⠖⠢⠄']);
+  this.executeCharTest('⑦', ['⠄⡳⠭⠆⠲⠖⠖⠄']);
+  this.executeCharTest('⑧', ['⠄⡳⠭⠆⠲⠖⠶⠄']);
+  this.executeCharTest('⑨', ['⠄⡳⠭⠆⠲⠖⠦⠄']);
+  this.executeCharTest('⑩', ['⠄⡳⠭⠆⠲⠖⠔⠄']);
+  this.executeCharTest('⑪', ['⠄⡳⠭⠆⠲⠖⠁⠄']);
+  this.executeCharTest('⑫', ['⠄⡳⠭⠆⠲⠖⠃⠄']);
+  this.executeCharTest('⑬', ['⠄⡳⠭⠆⠲⠖⠉⠄']);
+  this.executeCharTest('⑭', ['⠄⡳⠭⠆⠲⠖⠙⠄']);
+  this.executeCharTest('⑮', ['⠄⡳⠭⠆⠲⠖⠑⠄']);
+  this.executeCharTest('⑯', ['⠄⡳⠭⠆⠲⠖⠋⠄']);
+  this.executeCharTest('⑰', ['⠄⡳⠭⠆⠲⠶⠴⠄']);
+  this.executeCharTest('⑱', ['⠄⡳⠭⠆⠲⠶⠂⠄']);
+  this.executeCharTest('⑲', ['⠄⡳⠭⠆⠲⠶⠆⠄']);
+  this.executeCharTest('⑳', ['⠄⡳⠭⠆⠲⠶⠒⠄']);
+  this.executeCharTest('⑴', ['⠄⡳⠭⠆⠲⠶⠲⠄']);
+  this.executeCharTest('⑵', ['⠄⡳⠭⠆⠲⠶⠢⠄']);
+  this.executeCharTest('⑶', ['⠄⡳⠭⠆⠲⠶⠖⠄']);
+  this.executeCharTest('⑷', ['⠄⡳⠭⠆⠲⠶⠶⠄']);
+  this.executeCharTest('⑸', ['⠄⡳⠭⠆⠲⠶⠦⠄']);
+  this.executeCharTest('⑹', ['⠄⡳⠭⠆⠲⠶⠔⠄']);
+  this.executeCharTest('⑺', ['⠄⡳⠭⠆⠲⠶⠁⠄']);
+  this.executeCharTest('⑻', ['⠄⡳⠭⠆⠲⠶⠃⠄']);
+  this.executeCharTest('⑼', ['⠄⡳⠭⠆⠲⠶⠉⠄']);
+  this.executeCharTest('⑽', ['⠄⡳⠭⠆⠲⠶⠙⠄']);
+  this.executeCharTest('⑾', ['⠄⡳⠭⠆⠲⠶⠑⠄']);
+  this.executeCharTest('⑿', ['⠄⡳⠭⠆⠲⠶⠋⠄']);
+  this.executeCharTest('⒀', ['⠄⡳⠭⠆⠲⠦⠴⠄']);
+  this.executeCharTest('⒁', ['⠄⡳⠭⠆⠲⠦⠂⠄']);
+  this.executeCharTest('⒂', ['⠄⡳⠭⠆⠲⠦⠆⠄']);
+  this.executeCharTest('⒃', ['⠄⡳⠭⠆⠲⠦⠒⠄']);
+  this.executeCharTest('⒄', ['⠄⡳⠭⠆⠲⠦⠲⠄']);
+  this.executeCharTest('⒅', ['⠄⡳⠭⠆⠲⠦⠢⠄']);
+  this.executeCharTest('⒆', ['⠄⡳⠭⠆⠲⠦⠖⠄']);
+  this.executeCharTest('⒇', ['⠄⡳⠭⠆⠲⠦⠶⠄']);
+  this.executeCharTest('⒈', ['⠄⡳⠭⠆⠲⠦⠦⠄']);
+  this.executeCharTest('⒉', ['⠄⡳⠭⠆⠲⠦⠔⠄']);
+  this.executeCharTest('⒊', ['⠄⡳⠭⠆⠲⠦⠁⠄']);
+  this.executeCharTest('⒋', ['⠄⡳⠭⠆⠲⠦⠃⠄']);
+  this.executeCharTest('⒌', ['⠄⡳⠭⠆⠲⠦⠉⠄']);
+  this.executeCharTest('⒍', ['⠄⡳⠭⠆⠲⠦⠙⠄']);
+  this.executeCharTest('⒎', ['⠄⡳⠭⠆⠲⠦⠑⠄']);
+  this.executeCharTest('⒏', ['⠄⡳⠭⠆⠲⠦⠋⠄']);
+  this.executeCharTest('⒐', ['⠄⡳⠭⠆⠲⠔⠴⠄']);
+  this.executeCharTest('⒑', ['⠄⡳⠭⠆⠲⠔⠂⠄']);
+  this.executeCharTest('⒒', ['⠄⡳⠭⠆⠲⠔⠆⠄']);
+  this.executeCharTest('⒓', ['⠄⡳⠭⠆⠲⠔⠒⠄']);
+  this.executeCharTest('⒔', ['⠄⡳⠭⠆⠲⠔⠲⠄']);
+  this.executeCharTest('⒕', ['⠄⡳⠭⠆⠲⠔⠢⠄']);
+  this.executeCharTest('⒖', ['⠄⡳⠭⠆⠲⠔⠖⠄']);
+  this.executeCharTest('⒗', ['⠄⡳⠭⠆⠲⠔⠶⠄']);
+  this.executeCharTest('⒘', ['⠄⡳⠭⠆⠲⠔⠦⠄']);
+  this.executeCharTest('⒙', ['⠄⡳⠭⠆⠲⠔⠔⠄']);
+  this.executeCharTest('⒚', ['⠄⡳⠭⠆⠲⠔⠁⠄']);
+  this.executeCharTest('⒛', ['⠄⡳⠭⠆⠲⠔⠃⠄']);
+  this.executeCharTest('⓪', ['⠄⡳⠭⠆⠲⠑⠁⠄']);
+  this.executeCharTest('⓫', ['⠄⡳⠭⠆⠲⠑⠃⠄']);
+  this.executeCharTest('⓬', ['⠄⡳⠭⠆⠲⠑⠉⠄']);
+  this.executeCharTest('⓭', ['⠄⡳⠭⠆⠲⠑⠙⠄']);
+  this.executeCharTest('⓮', ['⠄⡳⠭⠆⠲⠑⠑⠄']);
+  this.executeCharTest('⓯', ['⠄⡳⠭⠆⠲⠑⠋⠄']);
+  this.executeCharTest('⓰', ['⠄⡳⠭⠆⠲⠋⠴⠄']);
+  this.executeCharTest('⓱', ['⠄⡳⠭⠆⠲⠋⠂⠄']);
+  this.executeCharTest('⓲', ['⠄⡳⠭⠆⠲⠋⠆⠄']);
+  this.executeCharTest('⓳', ['⠄⡳⠭⠆⠲⠋⠒⠄']);
+  this.executeCharTest('⓴', ['⠄⡳⠭⠆⠲⠋⠲⠄']);
+  this.executeCharTest('⓵', ['⠄⡳⠭⠆⠲⠋⠢⠄']);
+  this.executeCharTest('⓶', ['⠄⡳⠭⠆⠲⠋⠖⠄']);
+  this.executeCharTest('⓷', ['⠄⡳⠭⠆⠲⠋⠶⠄']);
+  this.executeCharTest('⓸', ['⠄⡳⠭⠆⠲⠋⠦⠄']);
+  this.executeCharTest('⓹', ['⠄⡳⠭⠆⠲⠋⠔⠄']);
+  this.executeCharTest('⓺', ['⠄⡳⠭⠆⠲⠋⠁⠄']);
+  this.executeCharTest('⓻', ['⠄⡳⠭⠆⠲⠋⠃⠄']);
+  this.executeCharTest('⓼', ['⠄⡳⠭⠆⠲⠋⠉⠄']);
+  this.executeCharTest('⓽', ['⠄⡳⠭⠆⠲⠋⠙⠄']);
+  this.executeCharTest('⓾', ['⠄⡳⠭⠆⠲⠋⠑⠄']);
+  this.executeCharTest('⓿', ['⠄⡳⠭⠆⠲⠋⠋⠄']);
+  this.executeCharTest('❶', ['⠄⡳⠭⠆⠶⠶⠖⠄']);
+  this.executeCharTest('❷', ['⠄⡳⠭⠆⠶⠶⠶⠄']);
+  this.executeCharTest('❸', ['⠄⡳⠭⠆⠶⠶⠦⠄']);
+  this.executeCharTest('❹', ['⠄⡳⠭⠆⠶⠶⠔⠄']);
+  this.executeCharTest('❺', ['⠄⡳⠭⠆⠶⠶⠁⠄']);
+  this.executeCharTest('❻', ['⠄⡳⠭⠆⠶⠶⠃⠄']);
+  this.executeCharTest('❼', ['⠄⡳⠭⠆⠶⠶⠉⠄']);
+  this.executeCharTest('❽', ['⠄⡳⠭⠆⠶⠶⠙⠄']);
+  this.executeCharTest('❾', ['⠄⡳⠭⠆⠶⠶⠑⠄']);
+  this.executeCharTest('❿', ['⠄⡳⠭⠆⠶⠶⠋⠄']);
+  this.executeCharTest('➀', ['⠄⡳⠭⠆⠶⠦⠴⠄']);
+  this.executeCharTest('➁', ['⠄⡳⠭⠆⠶⠦⠂⠄']);
+  this.executeCharTest('➂', ['⠄⡳⠭⠆⠶⠦⠆⠄']);
+  this.executeCharTest('➃', ['⠄⡳⠭⠆⠶⠦⠒⠄']);
+  this.executeCharTest('➄', ['⠄⡳⠭⠆⠶⠦⠲⠄']);
+  this.executeCharTest('➅', ['⠄⡳⠭⠆⠶⠦⠢⠄']);
+  this.executeCharTest('➆', ['⠄⡳⠭⠆⠶⠦⠖⠄']);
+  this.executeCharTest('➇', ['⠄⡳⠭⠆⠶⠦⠶⠄']);
+  this.executeCharTest('➈', ['⠄⡳⠭⠆⠶⠦⠦⠄']);
+  this.executeCharTest('➉', ['⠄⡳⠭⠆⠶⠦⠔⠄']);
+  this.executeCharTest('➊', ['⠄⡳⠭⠆⠶⠦⠁⠄']);
+  this.executeCharTest('➋', ['⠄⡳⠭⠆⠶⠦⠃⠄']);
+  this.executeCharTest('➌', ['⠄⡳⠭⠆⠶⠦⠉⠄']);
+  this.executeCharTest('➍', ['⠄⡳⠭⠆⠶⠦⠙⠄']);
+  this.executeCharTest('➎', ['⠄⡳⠭⠆⠶⠦⠑⠄']);
+  this.executeCharTest('➏', ['⠄⡳⠭⠆⠶⠦⠋⠄']);
+  this.executeCharTest('➐', ['⠄⡳⠭⠆⠶⠔⠴⠄']);
+  this.executeCharTest('➑', ['⠄⡳⠭⠆⠶⠔⠂⠄']);
+  this.executeCharTest('➒', ['⠄⡳⠭⠆⠶⠔⠆⠄']);
+  this.executeCharTest('➓', ['⠄⡳⠭⠆⠶⠔⠒⠄']);
+  this.executeCharTest('㉈', ['⠄⡳⠭⠒⠆⠲⠦⠄']);
+  this.executeCharTest('㉉', ['⠄⡳⠭⠒⠆⠲⠔⠄']);
+  this.executeCharTest('㉊', ['⠄⡳⠭⠒⠆⠲⠁⠄']);
+  this.executeCharTest('㉋', ['⠄⡳⠭⠒⠆⠲⠃⠄']);
+  this.executeCharTest('㉌', ['⠄⡳⠭⠒⠆⠲⠉⠄']);
+  this.executeCharTest('㉍', ['⠄⡳⠭⠒⠆⠲⠙⠄']);
+  this.executeCharTest('㉎', ['⠄⡳⠭⠒⠆⠲⠑⠄']);
+  this.executeCharTest('㉏', ['⠄⡳⠭⠒⠆⠲⠋⠄']);
+  this.executeCharTest('㉑', ['⠄⡳⠭⠒⠆⠢⠂⠄']);
+  this.executeCharTest('㉒', ['⠄⡳⠭⠒⠆⠢⠆⠄']);
+  this.executeCharTest('㉓', ['⠄⡳⠭⠒⠆⠢⠒⠄']);
+  this.executeCharTest('㉔', ['⠄⡳⠭⠒⠆⠢⠲⠄']);
+  this.executeCharTest('㉕', ['⠄⡳⠭⠒⠆⠢⠢⠄']);
+  this.executeCharTest('㉖', ['⠄⡳⠭⠒⠆⠢⠖⠄']);
+  this.executeCharTest('㉗', ['⠄⡳⠭⠒⠆⠢⠶⠄']);
+  this.executeCharTest('㉘', ['⠄⡳⠭⠒⠆⠢⠦⠄']);
+  this.executeCharTest('㉙', ['⠄⡳⠭⠒⠆⠢⠔⠄']);
+  this.executeCharTest('㉚', ['⠄⡳⠭⠒⠆⠢⠁⠄']);
+  this.executeCharTest('㉛', ['⠄⡳⠭⠒⠆⠢⠃⠄']);
+  this.executeCharTest('㉜', ['⠄⡳⠭⠒⠆⠢⠉⠄']);
+  this.executeCharTest('㉝', ['⠄⡳⠭⠒⠆⠢⠙⠄']);
+  this.executeCharTest('㉞', ['⠄⡳⠭⠒⠆⠢⠑⠄']);
+  this.executeCharTest('㉟', ['⠄⡳⠭⠒⠆⠢⠋⠄']);
+  this.executeCharTest('㊱', ['⠄⡳⠭⠒⠆⠃⠂⠄']);
+  this.executeCharTest('㊲', ['⠄⡳⠭⠒⠆⠃⠆⠄']);
+  this.executeCharTest('㊳', ['⠄⡳⠭⠒⠆⠃⠒⠄']);
+  this.executeCharTest('㊴', ['⠄⡳⠭⠒⠆⠃⠲⠄']);
+  this.executeCharTest('㊵', ['⠄⡳⠭⠒⠆⠃⠢⠄']);
+  this.executeCharTest('㊶', ['⠄⡳⠭⠒⠆⠃⠖⠄']);
+  this.executeCharTest('㊷', ['⠄⡳⠭⠒⠆⠃⠶⠄']);
+  this.executeCharTest('㊸', ['⠄⡳⠭⠒⠆⠃⠦⠄']);
+  this.executeCharTest('㊹', ['⠄⡳⠭⠒⠆⠃⠔⠄']);
+  this.executeCharTest('㊺', ['⠄⡳⠭⠒⠆⠃⠁⠄']);
+  this.executeCharTest('㊻', ['⠄⡳⠭⠒⠆⠃⠃⠄']);
+  this.executeCharTest('㊼', ['⠄⡳⠭⠒⠆⠃⠉⠄']);
+  this.executeCharTest('㊽', ['⠄⡳⠭⠒⠆⠃⠙⠄']);
+  this.executeCharTest('㊾', ['⠄⡳⠭⠒⠆⠃⠑⠄']);
+  this.executeCharTest('㊿', ['⠄⡳⠭⠒⠆⠃⠋⠄']);
+  this.executeCharTest('０', ['⠄⡳⠭⠋⠋⠂⠴⠄']);
+  this.executeCharTest('１', ['⠄⡳⠭⠋⠋⠂⠂⠄']);
+  this.executeCharTest('２', ['⠄⡳⠭⠋⠋⠂⠆⠄']);
+  this.executeCharTest('３', ['⠄⡳⠭⠋⠋⠂⠒⠄']);
+  this.executeCharTest('４', ['⠄⡳⠭⠋⠋⠂⠲⠄']);
+  this.executeCharTest('５', ['⠄⡳⠭⠋⠋⠂⠢⠄']);
+  this.executeCharTest('６', ['⠄⡳⠭⠋⠋⠂⠖⠄']);
+  this.executeCharTest('７', ['⠄⡳⠭⠋⠋⠂⠶⠄']);
+  this.executeCharTest('８', ['⠄⡳⠭⠋⠋⠂⠦⠄']);
+  this.executeCharTest('９', ['⠄⡳⠭⠋⠋⠂⠔⠄']);
+  this.executeCharTest('𝟎', ['⠄⡳⠽⠂⠙⠶⠉⠑⠄']);
+  this.executeCharTest('𝟏', ['⠄⡳⠽⠂⠙⠶⠉⠋⠄']);
+  this.executeCharTest('𝟐', ['⠄⡳⠽⠂⠙⠶⠙⠴⠄']);
+  this.executeCharTest('𝟑', ['⠄⡳⠽⠂⠙⠶⠙⠂⠄']);
+  this.executeCharTest('𝟒', ['⠄⡳⠽⠂⠙⠶⠙⠆⠄']);
+  this.executeCharTest('𝟓', ['⠄⡳⠽⠂⠙⠶⠙⠒⠄']);
+  this.executeCharTest('𝟔', ['⠄⡳⠽⠂⠙⠶⠙⠲⠄']);
+  this.executeCharTest('𝟕', ['⠄⡳⠽⠂⠙⠶⠙⠢⠄']);
+  this.executeCharTest('𝟖', ['⠄⡳⠽⠂⠙⠶⠙⠖⠄']);
+  this.executeCharTest('𝟗', ['⠄⡳⠽⠂⠙⠶⠙⠶⠄']);
+  this.executeCharTest('𝟘', ['⠄⡳⠽⠂⠙⠶⠙⠦⠄']);
+  this.executeCharTest('𝟙', ['⠄⡳⠽⠂⠙⠶⠙⠔⠄']);
+  this.executeCharTest('𝟚', ['⠄⡳⠽⠂⠙⠶⠙⠁⠄']);
+  this.executeCharTest('𝟛', ['⠄⡳⠽⠂⠙⠶⠙⠃⠄']);
+  this.executeCharTest('𝟜', ['⠄⡳⠽⠂⠙⠶⠙⠉⠄']);
+  this.executeCharTest('𝟝', ['⠄⡳⠽⠂⠙⠶⠙⠙⠄']);
+  this.executeCharTest('𝟞', ['⠄⡳⠽⠂⠙⠶⠙⠑⠄']);
+  this.executeCharTest('𝟟', ['⠄⡳⠽⠂⠙⠶⠙⠋⠄']);
+  this.executeCharTest('𝟠', ['⠄⡳⠽⠂⠙⠶⠑⠴⠄']);
+  this.executeCharTest('𝟡', ['⠄⡳⠽⠂⠙⠶⠑⠂⠄']);
+  this.executeCharTest('𝟢', ['⠄⡳⠽⠂⠙⠶⠑⠆⠄']);
+  this.executeCharTest('𝟣', ['⠄⡳⠽⠂⠙⠶⠑⠒⠄']);
+  this.executeCharTest('𝟤', ['⠄⡳⠽⠂⠙⠶⠑⠲⠄']);
+  this.executeCharTest('𝟥', ['⠄⡳⠽⠂⠙⠶⠑⠢⠄']);
+  this.executeCharTest('𝟦', ['⠄⡳⠽⠂⠙⠶⠑⠖⠄']);
+  this.executeCharTest('𝟧', ['⠄⡳⠽⠂⠙⠶⠑⠶⠄']);
+  this.executeCharTest('𝟨', ['⠄⡳⠽⠂⠙⠶⠑⠦⠄']);
+  this.executeCharTest('𝟩', ['⠄⡳⠽⠂⠙⠶⠑⠔⠄']);
+  this.executeCharTest('𝟪', ['⠄⡳⠽⠂⠙⠶⠑⠁⠄']);
+  this.executeCharTest('𝟫', ['⠄⡳⠽⠂⠙⠶⠑⠃⠄']);
+  this.executeCharTest('𝟬', ['⠄⡳⠽⠂⠙⠶⠑⠉⠄']);
+  this.executeCharTest('𝟭', ['⠄⡳⠽⠂⠙⠶⠑⠙⠄']);
+  this.executeCharTest('𝟮', ['⠄⡳⠽⠂⠙⠶⠑⠑⠄']);
+  this.executeCharTest('𝟯', ['⠄⡳⠽⠂⠙⠶⠑⠋⠄']);
+  this.executeCharTest('𝟰', ['⠄⡳⠽⠂⠙⠶⠋⠴⠄']);
+  this.executeCharTest('𝟱', ['⠄⡳⠽⠂⠙⠶⠋⠂⠄']);
+  this.executeCharTest('𝟲', ['⠄⡳⠽⠂⠙⠶⠋⠆⠄']);
+  this.executeCharTest('𝟳', ['⠄⡳⠽⠂⠙⠶⠋⠒⠄']);
+  this.executeCharTest('𝟴', ['⠄⡳⠽⠂⠙⠶⠋⠲⠄']);
+  this.executeCharTest('𝟵', ['⠄⡳⠽⠂⠙⠶⠋⠢⠄']);
+  this.executeCharTest('𝟶', ['⠄⡳⠽⠂⠙⠶⠋⠖⠄']);
+  this.executeCharTest('𝟷', ['⠄⡳⠽⠂⠙⠶⠋⠶⠄']);
+  this.executeCharTest('𝟸', ['⠄⡳⠽⠂⠙⠶⠋⠦⠄']);
+  this.executeCharTest('𝟹', ['⠄⡳⠽⠂⠙⠶⠋⠔⠄']);
+  this.executeCharTest('𝟺', ['⠄⡳⠽⠂⠙⠶⠋⠁⠄']);
+  this.executeCharTest('𝟻', ['⠄⡳⠽⠂⠙⠶⠋⠃⠄']);
+  this.executeCharTest('𝟼', ['⠄⡳⠽⠂⠙⠶⠋⠉⠄']);
+  this.executeCharTest('𝟽', ['⠄⡳⠽⠂⠙⠶⠋⠙⠄']);
+  this.executeCharTest('𝟾', ['⠄⡳⠽⠂⠙⠶⠋⠑⠄']);
+  this.executeCharTest('𝟿', ['⠄⡳⠽⠂⠙⠶⠋⠋⠄']);
+  this.executeCharTest('🄀', ['⠄⡳⠽⠂⠋⠂⠴⠴⠄']);
+  this.executeCharTest('🄁', ['⠄⡳⠽⠂⠋⠂⠴⠂⠄']);
+  this.executeCharTest('🄂', ['⠄⡳⠽⠂⠋⠂⠴⠆⠄']);
+  this.executeCharTest('🄃', ['⠄⡳⠽⠂⠋⠂⠴⠒⠄']);
+  this.executeCharTest('🄄', ['⠄⡳⠽⠂⠋⠂⠴⠲⠄']);
+  this.executeCharTest('🄅', ['⠄⡳⠽⠂⠋⠂⠴⠢⠄']);
+  this.executeCharTest('🄆', ['⠄⡳⠽⠂⠋⠂⠴⠖⠄']);
+  this.executeCharTest('🄇', ['⠄⡳⠽⠂⠋⠂⠴⠶⠄']);
+  this.executeCharTest('🄈', ['⠄⡳⠽⠂⠋⠂⠴⠦⠄']);
+  this.executeCharTest('🄉', ['⠄⡳⠽⠂⠋⠂⠴⠔⠄']);
+  this.executeCharTest('🄊', ['⠄⡳⠽⠂⠋⠂⠴⠁⠄']);
+  this.executeCharTest('─', ['⠄⡳⠭⠆⠢⠴⠴⠄']);
+  this.executeCharTest('━', ['⠄⡳⠭⠆⠢⠴⠂⠄']);
+  this.executeCharTest('│', ['⠄⡳⠭⠆⠢⠴⠆⠄']);
+  this.executeCharTest('┃', ['⠄⡳⠭⠆⠢⠴⠒⠄']);
+  this.executeCharTest('┄', ['⠄⡳⠭⠆⠢⠴⠲⠄']);
+  this.executeCharTest('┅', ['⠄⡳⠭⠆⠢⠴⠢⠄']);
+  this.executeCharTest('┆', ['⠄⡳⠭⠆⠢⠴⠖⠄']);
+  this.executeCharTest('┇', ['⠄⡳⠭⠆⠢⠴⠶⠄']);
+  this.executeCharTest('┈', ['⠄⡳⠭⠆⠢⠴⠦⠄']);
+  this.executeCharTest('┉', ['⠄⡳⠭⠆⠢⠴⠔⠄']);
+  this.executeCharTest('┊', ['⠄⡳⠭⠆⠢⠴⠁⠄']);
+  this.executeCharTest('┋', ['⠄⡳⠭⠆⠢⠴⠃⠄']);
+  this.executeCharTest('┌', ['⠄⡳⠭⠆⠢⠴⠉⠄']);
+  this.executeCharTest('┍', ['⠄⡳⠭⠆⠢⠴⠙⠄']);
+  this.executeCharTest('┎', ['⠄⡳⠭⠆⠢⠴⠑⠄']);
+  this.executeCharTest('┏', ['⠄⡳⠭⠆⠢⠴⠋⠄']);
+  this.executeCharTest('┐', ['⠄⡳⠭⠆⠢⠂⠴⠄']);
+  this.executeCharTest('┑', ['⠄⡳⠭⠆⠢⠂⠂⠄']);
+  this.executeCharTest('┒', ['⠄⡳⠭⠆⠢⠂⠆⠄']);
+  this.executeCharTest('┓', ['⠄⡳⠭⠆⠢⠂⠒⠄']);
+  this.executeCharTest('└', ['⠄⡳⠭⠆⠢⠂⠲⠄']);
+  this.executeCharTest('┕', ['⠄⡳⠭⠆⠢⠂⠢⠄']);
+  this.executeCharTest('┖', ['⠄⡳⠭⠆⠢⠂⠖⠄']);
+  this.executeCharTest('┗', ['⠄⡳⠭⠆⠢⠂⠶⠄']);
+  this.executeCharTest('┘', ['⠄⡳⠭⠆⠢⠂⠦⠄']);
+  this.executeCharTest('┙', ['⠄⡳⠭⠆⠢⠂⠔⠄']);
+  this.executeCharTest('┚', ['⠄⡳⠭⠆⠢⠂⠁⠄']);
+  this.executeCharTest('┛', ['⠄⡳⠭⠆⠢⠂⠃⠄']);
+  this.executeCharTest('├', ['⠄⡳⠭⠆⠢⠂⠉⠄']);
+  this.executeCharTest('┝', ['⠄⡳⠭⠆⠢⠂⠙⠄']);
+  this.executeCharTest('┞', ['⠄⡳⠭⠆⠢⠂⠑⠄']);
+  this.executeCharTest('┟', ['⠄⡳⠭⠆⠢⠂⠋⠄']);
+  this.executeCharTest('┠', ['⠄⡳⠭⠆⠢⠆⠴⠄']);
+  this.executeCharTest('┡', ['⠄⡳⠭⠆⠢⠆⠂⠄']);
+  this.executeCharTest('┢', ['⠄⡳⠭⠆⠢⠆⠆⠄']);
+  this.executeCharTest('┣', ['⠄⡳⠭⠆⠢⠆⠒⠄']);
+  this.executeCharTest('┤', ['⠄⡳⠭⠆⠢⠆⠲⠄']);
+  this.executeCharTest('┥', ['⠄⡳⠭⠆⠢⠆⠢⠄']);
+  this.executeCharTest('┦', ['⠄⡳⠭⠆⠢⠆⠖⠄']);
+  this.executeCharTest('┧', ['⠄⡳⠭⠆⠢⠆⠶⠄']);
+  this.executeCharTest('┨', ['⠄⡳⠭⠆⠢⠆⠦⠄']);
+  this.executeCharTest('┩', ['⠄⡳⠭⠆⠢⠆⠔⠄']);
+  this.executeCharTest('┪', ['⠄⡳⠭⠆⠢⠆⠁⠄']);
+  this.executeCharTest('┫', ['⠄⡳⠭⠆⠢⠆⠃⠄']);
+  this.executeCharTest('┬', ['⠄⡳⠭⠆⠢⠆⠉⠄']);
+  this.executeCharTest('┭', ['⠄⡳⠭⠆⠢⠆⠙⠄']);
+  this.executeCharTest('┮', ['⠄⡳⠭⠆⠢⠆⠑⠄']);
+  this.executeCharTest('┯', ['⠄⡳⠭⠆⠢⠆⠋⠄']);
+  this.executeCharTest('┰', ['⠄⡳⠭⠆⠢⠒⠴⠄']);
+  this.executeCharTest('┱', ['⠄⡳⠭⠆⠢⠒⠂⠄']);
+  this.executeCharTest('┲', ['⠄⡳⠭⠆⠢⠒⠆⠄']);
+  this.executeCharTest('┳', ['⠄⡳⠭⠆⠢⠒⠒⠄']);
+  this.executeCharTest('┴', ['⠄⡳⠭⠆⠢⠒⠲⠄']);
+  this.executeCharTest('┵', ['⠄⡳⠭⠆⠢⠒⠢⠄']);
+  this.executeCharTest('┶', ['⠄⡳⠭⠆⠢⠒⠖⠄']);
+  this.executeCharTest('┷', ['⠄⡳⠭⠆⠢⠒⠶⠄']);
+  this.executeCharTest('┸', ['⠄⡳⠭⠆⠢⠒⠦⠄']);
+  this.executeCharTest('┹', ['⠄⡳⠭⠆⠢⠒⠔⠄']);
+  this.executeCharTest('┺', ['⠄⡳⠭⠆⠢⠒⠁⠄']);
+  this.executeCharTest('┻', ['⠄⡳⠭⠆⠢⠒⠃⠄']);
+  this.executeCharTest('┼', ['⠄⡳⠭⠆⠢⠒⠉⠄']);
+  this.executeCharTest('┽', ['⠄⡳⠭⠆⠢⠒⠙⠄']);
+  this.executeCharTest('┾', ['⠄⡳⠭⠆⠢⠒⠑⠄']);
+  this.executeCharTest('┿', ['⠄⡳⠭⠆⠢⠒⠋⠄']);
+  this.executeCharTest('╀', ['⠄⡳⠭⠆⠢⠲⠴⠄']);
+  this.executeCharTest('╁', ['⠄⡳⠭⠆⠢⠲⠂⠄']);
+  this.executeCharTest('╂', ['⠄⡳⠭⠆⠢⠲⠆⠄']);
+  this.executeCharTest('╃', ['⠄⡳⠭⠆⠢⠲⠒⠄']);
+  this.executeCharTest('╄', ['⠄⡳⠭⠆⠢⠲⠲⠄']);
+  this.executeCharTest('╅', ['⠄⡳⠭⠆⠢⠲⠢⠄']);
+  this.executeCharTest('╆', ['⠄⡳⠭⠆⠢⠲⠖⠄']);
+  this.executeCharTest('╇', ['⠄⡳⠭⠆⠢⠲⠶⠄']);
+  this.executeCharTest('╈', ['⠄⡳⠭⠆⠢⠲⠦⠄']);
+  this.executeCharTest('╉', ['⠄⡳⠭⠆⠢⠲⠔⠄']);
+  this.executeCharTest('╊', ['⠄⡳⠭⠆⠢⠲⠁⠄']);
+  this.executeCharTest('╋', ['⠄⡳⠭⠆⠢⠲⠃⠄']);
+  this.executeCharTest('╌', ['⠄⡳⠭⠆⠢⠲⠉⠄']);
+  this.executeCharTest('╍', ['⠄⡳⠭⠆⠢⠲⠙⠄']);
+  this.executeCharTest('╎', ['⠄⡳⠭⠆⠢⠲⠑⠄']);
+  this.executeCharTest('╏', ['⠄⡳⠭⠆⠢⠲⠋⠄']);
+  this.executeCharTest('═', ['⠄⡳⠭⠆⠢⠢⠴⠄']);
+  this.executeCharTest('║', ['⠄⡳⠭⠆⠢⠢⠂⠄']);
+  this.executeCharTest('╒', ['⠄⡳⠭⠆⠢⠢⠆⠄']);
+  this.executeCharTest('╓', ['⠄⡳⠭⠆⠢⠢⠒⠄']);
+  this.executeCharTest('╔', ['⠄⡳⠭⠆⠢⠢⠲⠄']);
+  this.executeCharTest('╕', ['⠄⡳⠭⠆⠢⠢⠢⠄']);
+  this.executeCharTest('╖', ['⠄⡳⠭⠆⠢⠢⠖⠄']);
+  this.executeCharTest('╗', ['⠄⡳⠭⠆⠢⠢⠶⠄']);
+  this.executeCharTest('╘', ['⠄⡳⠭⠆⠢⠢⠦⠄']);
+  this.executeCharTest('╙', ['⠄⡳⠭⠆⠢⠢⠔⠄']);
+  this.executeCharTest('╚', ['⠄⡳⠭⠆⠢⠢⠁⠄']);
+  this.executeCharTest('╛', ['⠄⡳⠭⠆⠢⠢⠃⠄']);
+  this.executeCharTest('╜', ['⠄⡳⠭⠆⠢⠢⠉⠄']);
+  this.executeCharTest('╝', ['⠄⡳⠭⠆⠢⠢⠙⠄']);
+  this.executeCharTest('╞', ['⠄⡳⠭⠆⠢⠢⠑⠄']);
+  this.executeCharTest('╟', ['⠄⡳⠭⠆⠢⠢⠋⠄']);
+  this.executeCharTest('╠', ['⠄⡳⠭⠆⠢⠖⠴⠄']);
+  this.executeCharTest('╡', ['⠄⡳⠭⠆⠢⠖⠂⠄']);
+  this.executeCharTest('╢', ['⠄⡳⠭⠆⠢⠖⠆⠄']);
+  this.executeCharTest('╣', ['⠄⡳⠭⠆⠢⠖⠒⠄']);
+  this.executeCharTest('╤', ['⠄⡳⠭⠆⠢⠖⠲⠄']);
+  this.executeCharTest('╥', ['⠄⡳⠭⠆⠢⠖⠢⠄']);
+  this.executeCharTest('╦', ['⠄⡳⠭⠆⠢⠖⠖⠄']);
+  this.executeCharTest('╧', ['⠄⡳⠭⠆⠢⠖⠶⠄']);
+  this.executeCharTest('╨', ['⠄⡳⠭⠆⠢⠖⠦⠄']);
+  this.executeCharTest('╩', ['⠄⡳⠭⠆⠢⠖⠔⠄']);
+  this.executeCharTest('╪', ['⠄⡳⠭⠆⠢⠖⠁⠄']);
+  this.executeCharTest('╫', ['⠄⡳⠭⠆⠢⠖⠃⠄']);
+  this.executeCharTest('╬', ['⠄⡳⠭⠆⠢⠖⠉⠄']);
+  this.executeCharTest('╭', ['⠄⡳⠭⠆⠢⠖⠙⠄']);
+  this.executeCharTest('╮', ['⠄⡳⠭⠆⠢⠖⠑⠄']);
+  this.executeCharTest('╯', ['⠄⡳⠭⠆⠢⠖⠋⠄']);
+  this.executeCharTest('╰', ['⠄⡳⠭⠆⠢⠶⠴⠄']);
+  this.executeCharTest('╱', ['⠄⡳⠭⠆⠢⠶⠂⠄']);
+  this.executeCharTest('╲', ['⠄⡳⠭⠆⠢⠶⠆⠄']);
+  this.executeCharTest('╳', ['⠄⡳⠭⠆⠢⠶⠒⠄']);
+  this.executeCharTest('╴', ['⠄⡳⠭⠆⠢⠶⠲⠄']);
+  this.executeCharTest('╵', ['⠄⡳⠭⠆⠢⠶⠢⠄']);
+  this.executeCharTest('╶', ['⠄⡳⠭⠆⠢⠶⠖⠄']);
+  this.executeCharTest('╷', ['⠄⡳⠭⠆⠢⠶⠶⠄']);
+  this.executeCharTest('╸', ['⠄⡳⠭⠆⠢⠶⠦⠄']);
+  this.executeCharTest('╹', ['⠄⡳⠭⠆⠢⠶⠔⠄']);
+  this.executeCharTest('╺', ['⠄⡳⠭⠆⠢⠶⠁⠄']);
+  this.executeCharTest('╻', ['⠄⡳⠭⠆⠢⠶⠃⠄']);
+  this.executeCharTest('╼', ['⠄⡳⠭⠆⠢⠶⠉⠄']);
+  this.executeCharTest('╽', ['⠄⡳⠭⠆⠢⠶⠙⠄']);
+  this.executeCharTest('╾', ['⠄⡳⠭⠆⠢⠶⠑⠄']);
+  this.executeCharTest('╿', ['⠄⡳⠭⠆⠢⠶⠋⠄']);
+  this.executeCharTest('▀', ['⠄⡳⠭⠆⠢⠦⠴⠄']);
+  this.executeCharTest('▁', ['⠄⡳⠭⠆⠢⠦⠂⠄']);
+  this.executeCharTest('▂', ['⠄⡳⠭⠆⠢⠦⠆⠄']);
+  this.executeCharTest('▃', ['⠄⡳⠭⠆⠢⠦⠒⠄']);
+  this.executeCharTest('▄', ['⠄⡳⠭⠆⠢⠦⠲⠄']);
+  this.executeCharTest('▅', ['⠄⡳⠭⠆⠢⠦⠢⠄']);
+  this.executeCharTest('▆', ['⠄⡳⠭⠆⠢⠦⠖⠄']);
+  this.executeCharTest('▇', ['⠄⡳⠭⠆⠢⠦⠶⠄']);
+  this.executeCharTest('█', ['⠄⡳⠭⠆⠢⠦⠦⠄']);
+  this.executeCharTest('▉', ['⠄⡳⠭⠆⠢⠦⠔⠄']);
+  this.executeCharTest('▊', ['⠄⡳⠭⠆⠢⠦⠁⠄']);
+  this.executeCharTest('▋', ['⠄⡳⠭⠆⠢⠦⠃⠄']);
+  this.executeCharTest('▌', ['⠄⡳⠭⠆⠢⠦⠉⠄']);
+  this.executeCharTest('▍', ['⠄⡳⠭⠆⠢⠦⠙⠄']);
+  this.executeCharTest('▎', ['⠄⡳⠭⠆⠢⠦⠑⠄']);
+  this.executeCharTest('▏', ['⠄⡳⠭⠆⠢⠦⠋⠄']);
+  this.executeCharTest('▐', ['⠄⡳⠭⠆⠢⠔⠴⠄']);
+  this.executeCharTest('░', ['⠄⡳⠭⠆⠢⠔⠂⠄']);
+  this.executeCharTest('▒', ['⠄⡳⠭⠆⠢⠔⠆⠄']);
+  this.executeCharTest('▓', ['⠄⡳⠭⠆⠢⠔⠒⠄']);
+  this.executeCharTest('▔', ['⠄⡳⠭⠆⠢⠔⠲⠄']);
+  this.executeCharTest('▕', ['⠄⡳⠭⠆⠢⠔⠢⠄']);
+  this.executeCharTest('▖', ['⠄⡳⠭⠆⠢⠔⠖⠄']);
+  this.executeCharTest('▗', ['⠄⡳⠭⠆⠢⠔⠶⠄']);
+  this.executeCharTest('▘', ['⠄⡳⠭⠆⠢⠔⠦⠄']);
+  this.executeCharTest('▙', ['⠄⡳⠭⠆⠢⠔⠔⠄']);
+  this.executeCharTest('▚', ['⠄⡳⠭⠆⠢⠔⠁⠄']);
+  this.executeCharTest('▛', ['⠄⡳⠭⠆⠢⠔⠃⠄']);
+  this.executeCharTest('▜', ['⠄⡳⠭⠆⠢⠔⠉⠄']);
+  this.executeCharTest('▝', ['⠄⡳⠭⠆⠢⠔⠙⠄']);
+  this.executeCharTest('▞', ['⠄⡳⠭⠆⠢⠔⠑⠄']);
+  this.executeCharTest('▟', ['⠄⡳⠭⠆⠢⠔⠋⠄']);
+  this.executeCharTest('■', ['⠫⠸⠲']);
+  this.executeCharTest('□', ['⠫⠲']);
+  this.executeCharTest('▢', ['⠄⡳⠭⠆⠢⠁⠆⠄']);
+  this.executeCharTest('▣', ['⠄⡳⠭⠆⠢⠁⠒⠄']);
+  this.executeCharTest('▤', ['⠄⡳⠭⠆⠢⠁⠲⠄']);
+  this.executeCharTest('▥', ['⠄⡳⠭⠆⠢⠁⠢⠄']);
+  this.executeCharTest('▦', ['⠄⡳⠭⠆⠢⠁⠖⠄']);
+  this.executeCharTest('▧', ['⠄⡳⠭⠆⠢⠁⠶⠄']);
+  this.executeCharTest('▨', ['⠄⡳⠭⠆⠢⠁⠦⠄']);
+  this.executeCharTest('▩', ['⠄⡳⠭⠆⠢⠁⠔⠄']);
+  this.executeCharTest('▪', ['⠄⡳⠭⠆⠢⠁⠁⠄']);
+  this.executeCharTest('▫', ['⠫⠸⠗']);
+  this.executeCharTest('▬', ['⠫⠗']);
+  this.executeCharTest('▭', ['⠄⡳⠭⠆⠢⠁⠙⠄']);
+  this.executeCharTest('▮', ['⠄⡳⠭⠆⠢⠁⠑⠄']);
+  this.executeCharTest('▯', ['⠄⡳⠭⠆⠢⠁⠋⠄']);
+  this.executeCharTest('▰', ['⠫⠸⠛']);
+  this.executeCharTest('▱', ['⠫⠛']);
+  this.executeCharTest('▲', ['⠫⠸⠞']);
+  this.executeCharTest('△', ['⠫⠞']);
+  this.executeCharTest('▴', ['⠄⡳⠭⠆⠢⠃⠲⠄']);
+  this.executeCharTest('▵', ['⠄⡳⠭⠆⠢⠃⠢⠄']);
+  this.executeCharTest('▶', ['⠄⡳⠭⠆⠢⠃⠖⠄']);
+  this.executeCharTest('▷', ['⠄⡳⠭⠆⠢⠃⠶⠄']);
+  this.executeCharTest('▸', ['⠄⡳⠭⠆⠢⠃⠦⠄']);
+  this.executeCharTest('▹', ['⠄⡳⠭⠆⠢⠃⠔⠄']);
+  this.executeCharTest('►', ['⠄⡳⠭⠆⠢⠃⠁⠄']);
+  this.executeCharTest('▻', ['⠄⡳⠭⠆⠢⠃⠃⠄']);
+  this.executeCharTest('▼', ['⠸⠨⠫']);
+  this.executeCharTest('▽', ['⠨⠫']);
+  this.executeCharTest('▾', ['⠄⡳⠭⠆⠢⠃⠑⠄']);
+  this.executeCharTest('▿', ['⠄⡳⠭⠆⠢⠃⠋⠄']);
+  this.executeCharTest('◀', ['⠄⡳⠭⠆⠢⠉⠴⠄']);
+  this.executeCharTest('◁', ['⠄⡳⠭⠆⠢⠉⠂⠄']);
+  this.executeCharTest('◂', ['⠄⡳⠭⠆⠢⠉⠆⠄']);
+  this.executeCharTest('◃', ['⠄⡳⠭⠆⠢⠉⠒⠄']);
+  this.executeCharTest('◄', ['⠄⡳⠭⠆⠢⠉⠲⠄']);
+  this.executeCharTest('◅', ['⠄⡳⠭⠆⠢⠉⠢⠄']);
+  this.executeCharTest('◆', ['⠄⡳⠭⠆⠢⠉⠖⠄']);
+  this.executeCharTest('◇', ['⠄⡳⠭⠆⠢⠉⠶⠄']);
+  this.executeCharTest('◈', ['⠄⡳⠭⠆⠢⠉⠦⠄']);
+  this.executeCharTest('◉', ['⠄⡳⠭⠆⠢⠉⠔⠄']);
+  this.executeCharTest('◊', ['⠫⠸⠉']);
+  this.executeCharTest('○', ['⠫⠉']);
+  this.executeCharTest('◌', ['⠄⡳⠭⠆⠢⠉⠉⠄']);
+  this.executeCharTest('◍', ['⠄⡳⠭⠆⠢⠉⠙⠄']);
+  this.executeCharTest('◎', ['⠄⡳⠭⠆⠢⠉⠑⠄']);
+  this.executeCharTest('●', ['⠄⡳⠭⠆⠢⠉⠋⠄']);
+  this.executeCharTest('◐', ['⠄⡳⠭⠆⠢⠙⠴⠄']);
+  this.executeCharTest('◑', ['⠄⡳⠭⠆⠢⠙⠂⠄']);
+  this.executeCharTest('◒', ['⠄⡳⠭⠆⠢⠙⠆⠄']);
+  this.executeCharTest('◓', ['⠄⡳⠭⠆⠢⠙⠒⠄']);
+  this.executeCharTest('◔', ['⠄⡳⠭⠆⠢⠙⠲⠄']);
+  this.executeCharTest('◕', ['⠄⡳⠭⠆⠢⠙⠢⠄']);
+  this.executeCharTest('◖', ['⠄⡳⠭⠆⠢⠙⠖⠄']);
+  this.executeCharTest('◗', ['⠄⡳⠭⠆⠢⠙⠶⠄']);
+  this.executeCharTest('◘', ['⠄⡳⠭⠆⠢⠙⠦⠄']);
+  this.executeCharTest('◙', ['⠄⡳⠭⠆⠢⠙⠔⠄']);
+  this.executeCharTest('◚', ['⠄⡳⠭⠆⠢⠙⠁⠄']);
+  this.executeCharTest('◛', ['⠄⡳⠭⠆⠢⠙⠃⠄']);
+  this.executeCharTest('◜', ['⠄⡳⠭⠆⠢⠙⠉⠄']);
+  this.executeCharTest('◝', ['⠄⡳⠭⠆⠢⠙⠙⠄']);
+  this.executeCharTest('◞', ['⠄⡳⠭⠆⠢⠙⠑⠄']);
+  this.executeCharTest('◟', ['⠄⡳⠭⠆⠢⠙⠋⠄']);
+  this.executeCharTest('◠', ['⠄⡳⠭⠆⠢⠑⠴⠄']);
+  this.executeCharTest('◡', ['⠄⡳⠭⠆⠢⠑⠂⠄']);
+  this.executeCharTest('◢', ['⠄⡳⠭⠆⠢⠑⠆⠄']);
+  this.executeCharTest('◣', ['⠄⡳⠭⠆⠢⠑⠒⠄']);
+  this.executeCharTest('◤', ['⠄⡳⠭⠆⠢⠑⠲⠄']);
+  this.executeCharTest('◥', ['⠄⡳⠭⠆⠢⠑⠢⠄']);
+  this.executeCharTest('◦', ['⠄⡳⠭⠆⠢⠑⠖⠄']);
+  this.executeCharTest('◧', ['⠄⡳⠭⠆⠢⠑⠶⠄']);
+  this.executeCharTest('◨', ['⠄⡳⠭⠆⠢⠑⠦⠄']);
+  this.executeCharTest('◩', ['⠄⡳⠭⠆⠢⠑⠔⠄']);
+  this.executeCharTest('◪', ['⠄⡳⠭⠆⠢⠑⠁⠄']);
+  this.executeCharTest('◫', ['⠄⡳⠭⠆⠢⠑⠃⠄']);
+  this.executeCharTest('◬', ['⠄⡳⠭⠆⠢⠑⠉⠄']);
+  this.executeCharTest('◭', ['⠄⡳⠭⠆⠢⠑⠙⠄']);
+  this.executeCharTest('◮', ['⠄⡳⠭⠆⠢⠑⠑⠄']);
+  this.executeCharTest('◯', ['⠄⡳⠭⠆⠢⠑⠋⠄']);
+  this.executeCharTest('◰', ['⠄⡳⠭⠆⠢⠋⠴⠄']);
+  this.executeCharTest('◱', ['⠄⡳⠭⠆⠢⠋⠂⠄']);
+  this.executeCharTest('◲', ['⠄⡳⠭⠆⠢⠋⠆⠄']);
+  this.executeCharTest('◳', ['⠄⡳⠭⠆⠢⠋⠒⠄']);
+  this.executeCharTest('◴', ['⠄⡳⠭⠆⠢⠋⠲⠄']);
+  this.executeCharTest('◵', ['⠄⡳⠭⠆⠢⠋⠢⠄']);
+  this.executeCharTest('◶', ['⠄⡳⠭⠆⠢⠋⠖⠄']);
+  this.executeCharTest('◷', ['⠄⡳⠭⠆⠢⠋⠶⠄']);
+  this.executeCharTest('◸', ['⠄⡳⠭⠆⠢⠋⠦⠄']);
+  this.executeCharTest('◹', ['⠄⡳⠭⠆⠢⠋⠔⠄']);
+  this.executeCharTest('◺', ['⠄⡳⠭⠆⠢⠋⠁⠄']);
+  this.executeCharTest('◻', ['⠄⡳⠭⠆⠢⠋⠃⠄']);
+  this.executeCharTest('◼', ['⠄⡳⠭⠆⠢⠋⠉⠄']);
+  this.executeCharTest('◽', ['⠄⡳⠭⠆⠢⠋⠙⠄']);
+  this.executeCharTest('◾', ['⠄⡳⠭⠆⠢⠋⠑⠄']);
+  this.executeCharTest('◿', ['⠄⡳⠭⠆⠢⠋⠋⠄']);
+  this.executeCharTest('⬒', ['⠄⡳⠭⠆⠃⠂⠆⠄']);
+  this.executeCharTest('⬓', ['⠄⡳⠭⠆⠃⠂⠒⠄']);
+  this.executeCharTest('⬔', ['⠄⡳⠭⠆⠃⠂⠲⠄']);
+  this.executeCharTest('⬕', ['⠄⡳⠭⠆⠃⠂⠢⠄']);
+  this.executeCharTest('⬖', ['⠄⡳⠭⠆⠃⠂⠖⠄']);
+  this.executeCharTest('⬗', ['⠄⡳⠭⠆⠃⠂⠶⠄']);
+  this.executeCharTest('⬘', ['⠄⡳⠭⠆⠃⠂⠦⠄']);
+  this.executeCharTest('⬙', ['⠄⡳⠭⠆⠃⠂⠔⠄']);
+  this.executeCharTest('⬚', ['⠄⡳⠭⠆⠃⠂⠁⠄']);
+  this.executeCharTest('⬛', ['⠄⡳⠭⠆⠃⠂⠃⠄']);
+  this.executeCharTest('⬜', ['⠄⡳⠭⠆⠃⠂⠉⠄']);
+  this.executeCharTest('⬝', ['⠄⡳⠭⠆⠃⠂⠙⠄']);
+  this.executeCharTest('⬞', ['⠄⡳⠭⠆⠃⠂⠑⠄']);
+  this.executeCharTest('⬟', ['⠄⡳⠭⠆⠃⠂⠋⠄']);
+  this.executeCharTest('⬠', ['⠄⡳⠭⠆⠃⠆⠴⠄']);
+  this.executeCharTest('⬡', ['⠄⡳⠭⠆⠃⠆⠂⠄']);
+  this.executeCharTest('⬢', ['⠄⡳⠭⠆⠃⠆⠆⠄']);
+  this.executeCharTest('⬣', ['⠄⡳⠭⠆⠃⠆⠒⠄']);
+  this.executeCharTest('⬤', ['⠄⡳⠭⠆⠃⠆⠲⠄']);
+  this.executeCharTest('⬥', ['⠄⡳⠭⠆⠃⠆⠢⠄']);
+  this.executeCharTest('⬦', ['⠄⡳⠭⠆⠃⠆⠖⠄']);
+  this.executeCharTest('⬧', ['⠄⡳⠭⠆⠃⠆⠶⠄']);
+  this.executeCharTest('⬨', ['⠄⡳⠭⠆⠃⠆⠦⠄']);
+  this.executeCharTest('⬩', ['⠄⡳⠭⠆⠃⠆⠔⠄']);
+  this.executeCharTest('⬪', ['⠄⡳⠭⠆⠃⠆⠁⠄']);
+  this.executeCharTest('⬫', ['⠄⡳⠭⠆⠃⠆⠃⠄']);
+  this.executeCharTest('⬬', ['⠄⡳⠭⠆⠃⠆⠉⠄']);
+  this.executeCharTest('⬭', ['⠄⡳⠭⠆⠃⠆⠙⠄']);
+  this.executeCharTest('⬮', ['⠄⡳⠭⠆⠃⠆⠑⠄']);
+  this.executeCharTest('⬯', ['⠄⡳⠭⠆⠃⠆⠋⠄']);
+  this.executeCharTest('⭐', ['⠄⡳⠭⠆⠃⠢⠴⠄']);
+  this.executeCharTest('⭑', ['⠄⡳⠭⠆⠃⠢⠂⠄']);
+  this.executeCharTest('⭒', ['⠄⡳⠭⠆⠃⠢⠆⠄']);
+  this.executeCharTest('⭓', ['⠄⡳⠭⠆⠃⠢⠒⠄']);
+  this.executeCharTest('⭔', ['⠄⡳⠭⠆⠃⠢⠲⠄']);
+  this.executeCharTest('⭕', ['⠄⡳⠭⠆⠃⠢⠢⠄']);
+  this.executeCharTest('⭖', ['⠄⡳⠭⠆⠃⠢⠖⠄']);
+  this.executeCharTest('⭗', ['⠄⡳⠭⠆⠃⠢⠶⠄']);
+  this.executeCharTest('⭘', ['⠄⡳⠭⠆⠃⠢⠦⠄']);
+  this.executeCharTest('⭙', ['⠄⡳⠭⠆⠃⠢⠔⠄']);
+  this.executeCharTest('↼', ['⠀⠫⠈⠪⠒⠒⠀']);
+  this.executeCharTest('↽', ['⠀⠫⠠⠪⠒⠒⠀']);
+  this.executeCharTest('↾', ['⠀⠫⠣⠒⠒⠠⠕⠀']);
+  this.executeCharTest('↿', ['⠀⠫⠣⠒⠒⠈⠕⠀']);
+  this.executeCharTest('⇀', ['⠀⠫⠒⠒⠈⠕⠀']);
+  this.executeCharTest('⇁', ['⠀⠫⠒⠒⠠⠕⠀']);
+  this.executeCharTest('⇂', ['⠀⠫⠪⠒⠒⠈⠕⠀']);
+  this.executeCharTest('⇃', ['⠀⠫⠩⠒⠒⠠⠕⠀']);
+  this.executeCharTest('⇋', ['⠀⠫⠈⠪⠒⠒⠫⠒⠒⠈⠕⠀']);
+  this.executeCharTest('⇌', ['⠀⠫⠒⠒⠈⠕⠫⠈⠪⠒⠒⠀']);
+  this.executeCharTest('⥊', ['⠄⡳⠭⠆⠔⠲⠁⠄']);
+  this.executeCharTest('⥋', ['⠄⡳⠭⠆⠔⠲⠃⠄']);
+  this.executeCharTest('⥌', ['⠄⡳⠭⠆⠔⠲⠉⠄']);
+  this.executeCharTest('⥍', ['⠄⡳⠭⠆⠔⠲⠙⠄']);
+  this.executeCharTest('⥎', ['⠄⡳⠭⠆⠔⠲⠑⠄']);
+  this.executeCharTest('⥏', ['⠄⡳⠭⠆⠔⠲⠋⠄']);
+  this.executeCharTest('⥐', ['⠄⡳⠭⠆⠔⠢⠴⠄']);
+  this.executeCharTest('⥑', ['⠄⡳⠭⠆⠔⠢⠂⠄']);
+  this.executeCharTest('⥒', ['⠄⡳⠭⠆⠔⠢⠆⠄']);
+  this.executeCharTest('⥓', ['⠄⡳⠭⠆⠔⠢⠒⠄']);
+  this.executeCharTest('⥔', ['⠄⡳⠭⠆⠔⠢⠲⠄']);
+  this.executeCharTest('⥕', ['⠄⡳⠭⠆⠔⠢⠢⠄']);
+  this.executeCharTest('⥖', ['⠄⡳⠭⠆⠔⠢⠖⠄']);
+  this.executeCharTest('⥗', ['⠄⡳⠭⠆⠔⠢⠶⠄']);
+  this.executeCharTest('⥘', ['⠄⡳⠭⠆⠔⠢⠦⠄']);
+  this.executeCharTest('⥙', ['⠄⡳⠭⠆⠔⠢⠔⠄']);
+  this.executeCharTest('⥚', ['⠄⡳⠭⠆⠔⠢⠁⠄']);
+  this.executeCharTest('⥛', ['⠄⡳⠭⠆⠔⠢⠃⠄']);
+  this.executeCharTest('⥜', ['⠄⡳⠭⠆⠔⠢⠉⠄']);
+  this.executeCharTest('⥝', ['⠄⡳⠭⠆⠔⠢⠙⠄']);
+  this.executeCharTest('⥞', ['⠄⡳⠭⠆⠔⠢⠑⠄']);
+  this.executeCharTest('⥟', ['⠄⡳⠭⠆⠔⠢⠋⠄']);
+  this.executeCharTest('⥠', ['⠄⡳⠭⠆⠔⠖⠴⠄']);
+  this.executeCharTest('⥡', ['⠄⡳⠭⠆⠔⠖⠂⠄']);
+  this.executeCharTest('⥢', ['⠄⡳⠭⠆⠔⠖⠆⠄']);
+  this.executeCharTest('⥣', ['⠄⡳⠭⠆⠔⠖⠒⠄']);
+  this.executeCharTest('⥤', ['⠄⡳⠭⠆⠔⠖⠲⠄']);
+  this.executeCharTest('⥥', ['⠄⡳⠭⠆⠔⠖⠢⠄']);
+  this.executeCharTest('⥦', ['⠄⡳⠭⠆⠔⠖⠖⠄']);
+  this.executeCharTest('⥧', ['⠄⡳⠭⠆⠔⠖⠶⠄']);
+  this.executeCharTest('⥨', ['⠄⡳⠭⠆⠔⠖⠦⠄']);
+  this.executeCharTest('⥩', ['⠄⡳⠭⠆⠔⠖⠔⠄']);
+  this.executeCharTest('⥪', ['⠄⡳⠭⠆⠔⠖⠁⠄']);
+  this.executeCharTest('⥫', ['⠄⡳⠭⠆⠔⠖⠃⠄']);
+  this.executeCharTest('⥬', ['⠄⡳⠭⠆⠔⠖⠉⠄']);
+  this.executeCharTest('⥭', ['⠄⡳⠭⠆⠔⠖⠙⠄']);
+  this.executeCharTest('⥮', ['⠄⡳⠭⠆⠔⠖⠑⠄']);
+  this.executeCharTest('⥯', ['⠄⡳⠭⠆⠔⠖⠋⠄']);
+  this.executeCharTest('⥼', ['⠄⡳⠭⠆⠔⠶⠉⠄']);
+  this.executeCharTest('⥽', ['⠄⡳⠭⠆⠔⠶⠙⠄']);
+  this.executeCharTest('⥾', ['⠄⡳⠭⠆⠔⠶⠑⠄']);
+  this.executeCharTest('⥿', ['⠄⡳⠭⠆⠔⠶⠋⠄']);
+  this.executeCharTest('ℏ', ['⠄⡳⠭⠆⠂⠴⠋⠄']);
+  this.executeCharTest('℔', ['⠳']);
+  this.executeCharTest('№', ['⠄⡳⠭⠆⠂⠂⠖⠄']);
+  this.executeCharTest('℗', ['⠄⡳⠭⠆⠂⠂⠶⠄']);
+  this.executeCharTest('℞', ['⠄⡳⠭⠆⠂⠂⠑⠄']);
+  this.executeCharTest('℟', ['⠄⡳⠭⠆⠂⠂⠋⠄']);
+  this.executeCharTest('℠', ['⠄⡳⠭⠆⠂⠆⠴⠄']);
+  this.executeCharTest('℡', ['⠄⡳⠭⠆⠂⠆⠂⠄']);
+  this.executeCharTest('™', ['⠘⠞']);
+  this.executeCharTest('℣', ['⠄⡳⠭⠆⠂⠆⠒⠄']);
+  this.executeCharTest('℥', ['⠄⡳⠭⠆⠂⠆⠢⠄']);
+  this.executeCharTest('Ω', ['⠄⡳⠭⠆⠂⠆⠖⠄']);
+  this.executeCharTest('℧', ['⠄⡳⠭⠆⠂⠆⠶⠄']);
+  this.executeCharTest('K', ['⠄⡳⠭⠆⠂⠆⠁⠄']);
+  this.executeCharTest('Å', ['⠀⠈⠠⠁']);
+  this.executeCharTest('℮', ['⠄⡳⠭⠆⠂⠆⠑⠄']);
+  this.executeCharTest('Ⅎ', ['⠄⡳⠭⠆⠂⠒⠆⠄']);
+  this.executeCharTest('ℹ', ['⠄⡳⠭⠆⠂⠒⠔⠄']);
+  this.executeCharTest('℺', ['⠄⡳⠭⠆⠂⠒⠁⠄']);
+  this.executeCharTest('℻', ['⠄⡳⠭⠆⠂⠒⠃⠄']);
+  this.executeCharTest('⅁', ['⠄⡳⠭⠆⠂⠲⠂⠄']);
+  this.executeCharTest('⅂', ['⠄⡳⠭⠆⠂⠲⠆⠄']);
+  this.executeCharTest('⅃', ['⠄⡳⠭⠆⠂⠲⠒⠄']);
+  this.executeCharTest('⅄', ['⠄⡳⠭⠆⠂⠲⠲⠄']);
+  this.executeCharTest('!', ['⠖']);
+  this.executeCharTest('#', ['⠨⠼']);
+  this.executeCharTest('$', ['⠈⠎']);
+  this.executeCharTest('%', ['⠈⠴']);
+  this.executeCharTest('&', ['⠸⠯']);
+  this.executeCharTest('\'', ['⠄']);
+  this.executeCharTest('*', ['⠈⠼']);
+  this.executeCharTest('+', ['⠬']);
+  this.executeCharTest(',', ['⠠']);
+  this.executeCharTest('-', ['⠤']);
+  this.executeCharTest('.', ['⠲']);
+  this.executeCharTest('/', ['⠸⠌']);
+  this.executeCharTest(':', ['⠒']);
+  this.executeCharTest(';', ['⠆']);
+  this.executeCharTest('<', ['⠀⠐⠅⠀']);
+  this.executeCharTest('=', ['⠀⠨⠅⠀']);
+  this.executeCharTest('>', ['⠀⠨⠂⠀']);
+  this.executeCharTest('?', ['⠸⠦']);
+  this.executeCharTest('@', ['⠈⠁']);
+  this.executeCharTest('\\', ['⠸⠡']);
+  this.executeCharTest('^', ['⡘']);
+  this.executeCharTest('_', ['⠸']);
+  this.executeCharTest('`', ['⠈']);
+  this.executeCharTest('|', ['⠳']);
+  this.executeCharTest('~', ['⠈⠱']);
+  this.executeCharTest('¡', ['⠖']);
+  this.executeCharTest('¢', ['⠈⠉']);
+  this.executeCharTest('£', ['⠼']);
+  this.executeCharTest('¤', ['⠫']);
+  this.executeCharTest('¥', ['⠄⡳⠭⠴⠴⠁⠢⠄']);
+  this.executeCharTest('¦', ['⠸⠳']);
+  this.executeCharTest('§', ['⠈⠠⠎']);
+  this.executeCharTest('¨', ['⠄⡳⠭⠴⠴⠁⠦⠄']);
+  this.executeCharTest('©', ['⠘⠉']);
+  this.executeCharTest('ª', ['⠄⡳⠭⠴⠴⠁⠁⠄']);
+  this.executeCharTest('«', ['⠄⡳⠭⠴⠴⠁⠃⠄']);
+  this.executeCharTest('¬', ['⠄⡳⠭⠴⠴⠁⠉⠄']);
+  this.executeCharTest('®', ['⠘⠗']);
+  this.executeCharTest('¯', ['⠱']);
+  this.executeCharTest('°', ['⠘⠨⠡']);
+  this.executeCharTest('±', ['⠬⠤']);
+  this.executeCharTest('´', ['acute']);
+  this.executeCharTest('µ', ['⠨⠍']);
+  this.executeCharTest('¶', ['⠄⡳⠭⠴⠴⠃⠖⠄']);
+  this.executeCharTest('·', ['⠡']);
+  this.executeCharTest('¸', ['⠄⡳⠭⠴⠴⠃⠦⠄']);
+  this.executeCharTest('º', ['⠄⡳⠭⠴⠴⠃⠁⠄']);
+  this.executeCharTest('»', ['⠄⡳⠭⠴⠴⠃⠃⠄']);
+  this.executeCharTest('¿', ['⠦']);
+  this.executeCharTest('×', ['⠈⠡']);
+  this.executeCharTest('÷', ['⠈⠌']);
+  this.executeCharTest('˘', ['⠄⡳⠭⠴⠆⠙⠦⠄']);
+  this.executeCharTest('˙', ['⠄⡳⠭⠴⠆⠙⠔⠄']);
+  this.executeCharTest('˚', ['⠄⡳⠭⠴⠆⠙⠁⠄']);
+  this.executeCharTest('˛', ['⠄⡳⠭⠴⠆⠙⠃⠄']);
+  this.executeCharTest('˜', ['⠈⠱']);
+  this.executeCharTest('˝', ['⠄⡳⠭⠴⠆⠙⠙⠄']);
+  this.executeCharTest('‐', ['⠤']);
+  this.executeCharTest('‑', ['⠤']);
+  this.executeCharTest('‒', ['⠤⠤']);
+  this.executeCharTest('–', ['⠤⠤']);
+  this.executeCharTest('—', ['⠤⠤']);
+  this.executeCharTest('―', ['⠤⠤']);
+  this.executeCharTest('‖', ['⠳⠳']);
+  this.executeCharTest('‗', ['⠄⡳⠭⠆⠴⠂⠶⠄']);
+  this.executeCharTest('‘', ['⠠⠦']);
+  this.executeCharTest('’', ['⠄']);
+  this.executeCharTest('‚', ['⠄⡳⠭⠆⠴⠂⠁⠄']);
+  this.executeCharTest('‛', ['⠄⡳⠭⠆⠴⠂⠃⠄']);
+  this.executeCharTest('“', ['⠦']);
+  this.executeCharTest('”', ['⠴']);
+  this.executeCharTest('„', ['⠄⡳⠭⠆⠴⠂⠑⠄']);
+  this.executeCharTest('‟', ['⠄⡳⠭⠆⠴⠂⠋⠄']);
+  this.executeCharTest('†', ['⠸⠻']);
+  this.executeCharTest('‡', ['⠸⠸⠻']);
+  this.executeCharTest('•', ['⠔⠔']);
+  this.executeCharTest('‣', ['⠄⡳⠭⠆⠴⠆⠒⠄']);
+  this.executeCharTest('․', ['⠄']);
+  this.executeCharTest('‥', ['⠄⠄']);
+  this.executeCharTest('…', ['⠄⠄⠄']);
+  this.executeCharTest('‧', ['⠄⡳⠭⠆⠴⠆⠶⠄']);
+  this.executeCharTest('‰', ['⠄⡳⠭⠆⠴⠒⠴⠄']);
+  this.executeCharTest('‱', ['⠄⡳⠭⠆⠴⠒⠂⠄']);
+  this.executeCharTest('′', ['⠄']);
+  this.executeCharTest('″', ['⠄⠄']);
+  this.executeCharTest('‴', ['⠄⠄⠄']);
+  this.executeCharTest('‵', ['⠄⡳⠭⠆⠴⠒⠢⠄']);
+  this.executeCharTest('‶', ['⠄⡳⠭⠆⠴⠒⠖⠄']);
+  this.executeCharTest('‷', ['⠄⡳⠭⠆⠴⠒⠶⠄']);
+  this.executeCharTest('‸', ['⠄⡳⠭⠆⠴⠒⠦⠄']);
+  this.executeCharTest('‹', ['⠄⡳⠭⠆⠴⠒⠔⠄']);
+  this.executeCharTest('›', ['⠄⡳⠭⠆⠴⠒⠁⠄']);
+  this.executeCharTest('※', ['⠄⡳⠭⠆⠴⠒⠃⠄']);
+  this.executeCharTest('‼', ['⠖⠖']);
+  this.executeCharTest('‽', ['⠄⡳⠭⠆⠴⠒⠙⠄']);
+  this.executeCharTest('‾', ['⠱']);
+  this.executeCharTest('‿', ['⠄⡳⠭⠆⠴⠒⠋⠄']);
+  this.executeCharTest('⁀', ['⠄⡳⠭⠆⠴⠲⠴⠄']);
+  this.executeCharTest('⁁', ['⠄⡳⠭⠆⠴⠲⠂⠄']);
+  this.executeCharTest('⁂', ['⠄⡳⠭⠆⠴⠲⠆⠄']);
+  this.executeCharTest('⁃', ['⠄⡳⠭⠆⠴⠲⠒⠄']);
+  this.executeCharTest('⁄', ['⠄⡳⠭⠆⠴⠲⠲⠄']);
+  this.executeCharTest('⁇', ['⠹⠹']);
+  this.executeCharTest('⁈', ['⠹⠖']);
+  this.executeCharTest('⁉', ['⠖⠹']);
+  this.executeCharTest('⁋', ['⠄⡳⠭⠆⠴⠲⠃⠄']);
+  this.executeCharTest('⁌', ['⠄⡳⠭⠆⠴⠲⠉⠄']);
+  this.executeCharTest('⁍', ['⠄⡳⠭⠆⠴⠲⠙⠄']);
+  this.executeCharTest('⁎', ['⠄⡳⠭⠆⠴⠲⠑⠄']);
+  this.executeCharTest('⁏', ['⠄⡳⠭⠆⠴⠲⠋⠄']);
+  this.executeCharTest('⁐', ['⠄⡳⠭⠆⠴⠢⠴⠄']);
+  this.executeCharTest('⁑', ['⠄⡳⠭⠆⠴⠢⠂⠄']);
+  this.executeCharTest('⁒', ['⠄⡳⠭⠆⠴⠢⠆⠄']);
+  this.executeCharTest('⁓', ['⠄⡳⠭⠆⠴⠢⠒⠄']);
+  this.executeCharTest('⁔', ['⠄⡳⠭⠆⠴⠢⠲⠄']);
+  this.executeCharTest('⁕', ['⠄⡳⠭⠆⠴⠢⠢⠄']);
+  this.executeCharTest('⁖', ['⠄⡳⠭⠆⠴⠢⠖⠄']);
+  this.executeCharTest('⁗', ['⠄⡳⠭⠆⠴⠢⠶⠄']);
+  this.executeCharTest('⁘', ['⠄⡳⠭⠆⠴⠢⠦⠄']);
+  this.executeCharTest('⁙', ['⠄⡳⠭⠆⠴⠢⠔⠄']);
+  this.executeCharTest('⁚', ['⠄⡳⠭⠆⠴⠢⠁⠄']);
+  this.executeCharTest('⁛', ['⠄⡳⠭⠆⠴⠢⠃⠄']);
+  this.executeCharTest('⁜', ['⠄⡳⠭⠆⠴⠢⠉⠄']);
+  this.executeCharTest('⁝', ['⠄⡳⠭⠆⠴⠢⠙⠄']);
+  this.executeCharTest('⁞', ['⠄⡳⠭⠆⠴⠢⠑⠄']);
+  this.executeCharTest('⁺', ['⠄⡳⠭⠆⠴⠶⠁⠄']);
+  this.executeCharTest('⁻', ['⠄⡳⠭⠆⠴⠶⠃⠄']);
+  this.executeCharTest('⁼', ['⠄⡳⠭⠆⠴⠶⠉⠄']);
+  this.executeCharTest('⁽', ['⠄⡳⠭⠆⠴⠶⠙⠄']);
+  this.executeCharTest('⁾', ['⠄⡳⠭⠆⠴⠶⠑⠄']);
+  this.executeCharTest('₊', ['⠄⡳⠭⠆⠴⠦⠁⠄']);
+  this.executeCharTest('₋', ['⠄⡳⠭⠆⠴⠦⠃⠄']);
+  this.executeCharTest('₌', ['⠄⡳⠭⠆⠴⠦⠉⠄']);
+  this.executeCharTest('₍', ['⠄⡳⠭⠆⠴⠦⠙⠄']);
+  this.executeCharTest('₎', ['⠄⡳⠭⠆⠴⠦⠑⠄']);
+  this.executeCharTest('⅊', ['⠄⡳⠭⠆⠂⠲⠁⠄']);
+  this.executeCharTest('⅋', ['⠄⡳⠭⠆⠂⠲⠃⠄']);
+  this.executeCharTest('⅌', ['⠄⡳⠭⠆⠂⠲⠉⠄']);
+  this.executeCharTest('⅍', ['⠄⡳⠭⠆⠂⠲⠙⠄']);
+  this.executeCharTest('ⅎ', ['⠄⡳⠭⠆⠂⠲⠑⠄']);
+  this.executeCharTest('∀', ['⠈⠯']);
+  this.executeCharTest('∁', ['⠄⡳⠭⠆⠆⠴⠂⠄']);
+  this.executeCharTest('∂', ['⠈⠙']);
+  this.executeCharTest('∃', ['⠈⠿']);
+  this.executeCharTest('∄', ['⠌⠈⠿']);
+  this.executeCharTest('∅', ['⠸⠴']);
+  this.executeCharTest('∆', ['⠄⡳⠭⠆⠆⠴⠖⠄']);
+  this.executeCharTest('∇', ['⠨⠫']);
+  this.executeCharTest('∈', ['⠀⠈⠑⠀']);
+  this.executeCharTest('∉', ['⠀⠌⠈⠑⠀']);
+  this.executeCharTest('∊', ['⠀⠈⠑⠀']);
+  this.executeCharTest('∋', ['⠀⠸⠨⠁⠀']);
+  this.executeCharTest('∌', ['⠀⠌⠸⠨⠁⠀']);
+  this.executeCharTest('∍', ['⠀⠈⠢⠀']);
+  this.executeCharTest('∎', ['⠀⠸⠳⠀']);
+  this.executeCharTest('∏', ['⠄⡳⠭⠆⠆⠴⠋⠄']);
+  this.executeCharTest('∐', ['⠄⡳⠭⠆⠆⠂⠴⠄']);
+  this.executeCharTest('∑', ['⠨⠠⠎']);
+  this.executeCharTest('−', ['⠤']);
+  this.executeCharTest('∓', ['⠤⠬']);
+  this.executeCharTest('∔', ['⠄⡳⠭⠆⠆⠂⠲⠄']);
+  this.executeCharTest('∕', ['⠸⠌']);
+  this.executeCharTest('∖', ['⠄⡳⠭⠆⠆⠂⠖⠄']);
+  this.executeCharTest('∗', ['⠈⠼']);
+  this.executeCharTest('∘', ['⠘⠨⠡']);
+  this.executeCharTest('∙', ['⠄⡳⠭⠆⠆⠂⠔⠄']);
+  this.executeCharTest('√', ['⠄⡳⠭⠆⠆⠂⠁⠄']);
+  this.executeCharTest('∛', ['⠄⡳⠭⠆⠆⠂⠃⠄']);
+  this.executeCharTest('∜', ['⠄⡳⠭⠆⠆⠂⠉⠄']);
+  this.executeCharTest('∝', ['⠀⠰⠆⠀']);
+  this.executeCharTest('∞', ['⠠⠿']);
+  this.executeCharTest('∟', ['⠫⠪⠨⠗⠻']);
+  this.executeCharTest('∠', ['⠫⠪']);
+  this.executeCharTest('∡', ['⠫⠪⠸⠫⠫⠁⠻']);
+  this.executeCharTest('∢', ['⠫⠪⠸⠫⠫⠁⠻']);
+  this.executeCharTest('∣', ['⠳']);
+  this.executeCharTest('∤', ['⠌⠳']);
+  this.executeCharTest('∥', ['⠀⠫⠇⠀']);
+  this.executeCharTest('∦', ['⠀⠌⠫⠇⠀']);
+  this.executeCharTest('∧', ['⠈⠩']);
+  this.executeCharTest('∨', ['⠈⠬']);
+  this.executeCharTest('∩', ['⠨⠩']);
+  this.executeCharTest('∪', ['⠨⠬']);
+  this.executeCharTest('∫', ['⠮']);
+  this.executeCharTest('∬', ['⠮⠮']);
+  this.executeCharTest('∭', ['⠮⠮⠮']);
+  this.executeCharTest('∮', ['⠮⠈⠫⠉⠻']);
+  this.executeCharTest('∯', ['⠄⡳⠭⠆⠆⠆⠋⠄']);
+  this.executeCharTest('∰', ['⠄⡳⠭⠆⠆⠒⠴⠄']);
+  this.executeCharTest('∱', ['⠄⡳⠭⠆⠆⠒⠂⠄']);
+  this.executeCharTest('∲', ['⠮⠈⠫⠪⠢⠔⠻']);
+  this.executeCharTest('∳', ['⠮⠈⠫⠢⠔⠕⠻']);
+  this.executeCharTest('∴', ['⠀⠠⠡⠀']);
+  this.executeCharTest('∵', ['⠀⠈⠌⠀']);
+  this.executeCharTest('∶', ['⠀⠐⠂⠀']);
+  this.executeCharTest('∷', ['⠄⡳⠭⠆⠆⠒⠶⠄']);
+  this.executeCharTest('∸', ['⠄⡳⠭⠆⠆⠒⠦⠄']);
+  this.executeCharTest('∹', ['⠄⡳⠭⠆⠆⠒⠔⠄']);
+  this.executeCharTest('∺', ['⠄⡳⠭⠆⠆⠒⠁⠄']);
+  this.executeCharTest('∻', ['⠄⡳⠭⠆⠆⠒⠃⠄']);
+  this.executeCharTest('∼', ['⠈⠱']);
+  this.executeCharTest('∽', ['⠄⡳⠭⠆⠆⠒⠙⠄']);
+  this.executeCharTest('∾', ['⠄⡳⠭⠆⠆⠒⠑⠄']);
+  this.executeCharTest('∿', ['⠄⡳⠭⠆⠆⠒⠋⠄']);
+  this.executeCharTest('≀', ['⠄⡳⠭⠆⠆⠲⠴⠄']);
+  this.executeCharTest('≁', ['⠄⡳⠭⠆⠆⠲⠂⠄']);
+  this.executeCharTest('≂', ['⠄⡳⠭⠆⠆⠲⠆⠄']);
+  this.executeCharTest('≃', ['⠄⡳⠭⠆⠆⠲⠒⠄']);
+  this.executeCharTest('≄', ['⠄⡳⠭⠆⠆⠲⠲⠄']);
+  this.executeCharTest('≅', ['⠀⠈⠱⠈⠱⠀']);
+  this.executeCharTest('≆', ['⠄⡳⠭⠆⠆⠲⠖⠄']);
+  this.executeCharTest('≇', ['⠄⡳⠭⠆⠆⠲⠶⠄']);
+  this.executeCharTest('≈', ['⠄⡳⠭⠆⠆⠲⠦⠄']);
+  this.executeCharTest('≉', ['⠄⡳⠭⠆⠆⠲⠔⠄']);
+  this.executeCharTest('≊', ['⠄⡳⠭⠆⠆⠲⠁⠄']);
+  this.executeCharTest('≋', ['⠄⡳⠭⠆⠆⠲⠃⠄']);
+  this.executeCharTest('≌', ['⠄⡳⠭⠆⠆⠲⠉⠄']);
+  this.executeCharTest('≍', ['⠀⠈⠣⠠⠣⠀']);
+  this.executeCharTest('≎', ['⠄⡳⠭⠆⠆⠲⠑⠄']);
+  this.executeCharTest('≏', ['⠄⡳⠭⠆⠆⠲⠋⠄']);
+  this.executeCharTest('≐', ['⠄⡳⠭⠆⠆⠢⠴⠄']);
+  this.executeCharTest('≑', ['⠄⡳⠭⠆⠆⠢⠂⠄']);
+  this.executeCharTest('≒', ['⠄⡳⠭⠆⠆⠢⠆⠄']);
+  this.executeCharTest('≓', ['⠄⡳⠭⠆⠆⠢⠒⠄']);
+  this.executeCharTest('≔', ['⠄⡳⠭⠆⠆⠢⠲⠄']);
+  this.executeCharTest('≕', ['⠄⡳⠭⠆⠆⠢⠢⠄']);
+  this.executeCharTest('≖', ['⠄⡳⠭⠆⠆⠢⠖⠄']);
+  this.executeCharTest('≗', ['⠄⡳⠭⠆⠆⠢⠶⠄']);
+  this.executeCharTest('≘', ['⠄⡳⠭⠆⠆⠢⠦⠄']);
+  this.executeCharTest('≙', ['⠄⡳⠭⠆⠆⠢⠔⠄']);
+  this.executeCharTest('≚', ['⠄⡳⠭⠆⠆⠢⠁⠄']);
+  this.executeCharTest('≛', ['⠄⡳⠭⠆⠆⠢⠃⠄']);
+  this.executeCharTest('≜', ['⠄⡳⠭⠆⠆⠢⠉⠄']);
+  this.executeCharTest('≝', ['⠄⡳⠭⠆⠆⠢⠙⠄']);
+  this.executeCharTest('≞', ['⠄⡳⠭⠆⠆⠢⠑⠄']);
+  this.executeCharTest('≟', ['⠄⡳⠭⠆⠆⠢⠋⠄']);
+  this.executeCharTest('≠', ['⠀⠌⠨⠅⠀']);
+  this.executeCharTest('≡', ['⠀⠸⠇⠀']);
+  this.executeCharTest('≢', ['⠀⠌⠸⠇⠀']);
+  this.executeCharTest('≣', ['⠄⡳⠭⠆⠆⠖⠒⠄']);
+  this.executeCharTest('≤', ['⠀⠐⠅⠱⠀']);
+  this.executeCharTest('≥', ['⠀⠨⠂⠱⠀']);
+  this.executeCharTest('≦', ['⠀⠐⠅⠨⠅⠀']);
+  this.executeCharTest('≧', ['⠀⠨⠂⠨⠅⠀']);
+  this.executeCharTest('≨', ['⠀⠐⠅⠌⠨⠅⠀']);
+  this.executeCharTest('≩', ['⠀⠨⠂⠌⠨⠅⠀']);
+  this.executeCharTest('≪', ['⠀⠐⠅⠈⠐⠅⠻⠀']);
+  this.executeCharTest('≫', ['⠀⠨⠂⠈⠨⠂⠻⠀']);
+  this.executeCharTest('≬', ['⠄⡳⠭⠆⠆⠖⠉⠄']);
+  this.executeCharTest('≭', ['⠀⠌⠈⠣⠠⠣⠀']);
+  this.executeCharTest('≮', ['⠀⠌⠐⠅⠀']);
+  this.executeCharTest('≯', ['⠀⠌⠨⠂⠀']);
+  this.executeCharTest('≰', ['⠀⠌⠐⠅⠱⠀']);
+  this.executeCharTest('≱', ['⠀⠌⠨⠂⠱⠀']);
+  this.executeCharTest('≲', ['⠀⠐⠅⠈⠱⠀']);
+  this.executeCharTest('≳', ['⠀⠨⠂⠈⠱⠀']);
+  this.executeCharTest('≴', ['⠀⠌⠐⠅⠈⠱⠀']);
+  this.executeCharTest('≵', ['⠀⠌⠨⠂⠈⠱⠀']);
+  this.executeCharTest('≶', ['⠀⠐⠅⠨⠂⠀']);
+  this.executeCharTest('≷', ['⠀⠨⠂⠐⠅⠀']);
+  this.executeCharTest('≸', ['⠀⠌⠐⠅⠨⠂⠀']);
+  this.executeCharTest('≹', ['⠀⠌⠨⠂⠐⠅⠀']);
+  this.executeCharTest('≺', ['⠀⠨⠐⠅⠀']);
+  this.executeCharTest('≻', ['⠀⠨⠨⠐⠀']);
+  this.executeCharTest('≼', ['⠀⠨⠐⠅⠱⠀']);
+  this.executeCharTest('≽', ['⠀⠨⠨⠐⠱⠀']);
+  this.executeCharTest('≾', ['⠀⠨⠐⠅⠈⠱⠀']);
+  this.executeCharTest('≿', ['⠀⠨⠨⠐⠈⠱⠀']);
+  this.executeCharTest('⊀', ['⠀⠌⠨⠐⠅⠀']);
+  this.executeCharTest('⊁', ['⠀⠌⠨⠐⠅⠀']);
+  this.executeCharTest('⊂', ['⠀⠸⠐⠅⠀']);
+  this.executeCharTest('⊃', ['⠀⠸⠨⠂⠀']);
+  this.executeCharTest('⊄', ['⠀⠌⠸⠐⠅⠀']);
+  this.executeCharTest('⊅', ['⠀⠌⠸⠨⠂⠀']);
+  this.executeCharTest('⊆', ['⠸⠀⠅⠱']);
+  this.executeCharTest('⊇', ['⠀⠨⠂⠱⠀']);
+  this.executeCharTest('⊈', ['⠀⠌⠀⠅⠱⠀']);
+  this.executeCharTest('⊉', ['⠀⠌⠨⠂⠱⠀']);
+  this.executeCharTest('⊊', ['⠀⠸⠐⠅⠌⠨⠅⠀']);
+  this.executeCharTest('⊋', ['⠀⠸⠨⠂⠌⠨⠅⠀']);
+  this.executeCharTest('⊌', ['⠄⡳⠭⠆⠆⠦⠉⠄']);
+  this.executeCharTest('⊍', ['⠄⡳⠭⠆⠆⠦⠙⠄']);
+  this.executeCharTest('⊎', ['⠄⡳⠭⠆⠆⠦⠑⠄']);
+  this.executeCharTest('⊏', ['⠄⡳⠭⠆⠆⠦⠋⠄']);
+  this.executeCharTest('⊐', ['⠄⡳⠭⠆⠆⠔⠴⠄']);
+  this.executeCharTest('⊑', ['⠄⡳⠭⠆⠆⠔⠂⠄']);
+  this.executeCharTest('⊒', ['⠄⡳⠭⠆⠆⠔⠆⠄']);
+  this.executeCharTest('⊓', ['⠄⡳⠭⠆⠆⠔⠒⠄']);
+  this.executeCharTest('⊔', ['⠄⡳⠭⠆⠆⠔⠲⠄']);
+  this.executeCharTest('⊕', ['⠫⠉⠸⠫⠬⠻']);
+  this.executeCharTest('⊖', ['⠫⠉⠸⠫⠤⠻']);
+  this.executeCharTest('⊗', ['⠫⠉⠸⠫⠈⠡⠻']);
+  this.executeCharTest('⊘', ['⠫⠉⠸⠫⠸⠌⠻']);
+  this.executeCharTest('⊙', ['⠫⠉⠸⠫⠡⠻']);
+  this.executeCharTest('⊚', ['⠫⠉⠸⠫⠘⠨⠡⠻']);
+  this.executeCharTest('⊛', ['⠫⠉⠸⠫⠈⠼⠻']);
+  this.executeCharTest('⊜', ['⠫⠉⠸⠫⠨⠅⠻']);
+  this.executeCharTest('⊝', ['⠫⠉⠸⠫⠤⠤⠻']);
+  this.executeCharTest('⊞', ['⠫⠲⠸⠫⠬⠻']);
+  this.executeCharTest('⊟', ['⠫⠲⠸⠫⠤⠻']);
+  this.executeCharTest('⊠', ['⠫⠲⠸⠫⠈⠡⠻']);
+  this.executeCharTest('⊡', ['⠫⠲⠸⠫⠡⠻']);
+  this.executeCharTest('⊢', ['⠄⡳⠭⠆⠆⠁⠆⠄']);
+  this.executeCharTest('⊣', ['⠄⡳⠭⠆⠆⠁⠒⠄']);
+  this.executeCharTest('⊤', ['⠄⡳⠭⠆⠆⠁⠲⠄']);
+  this.executeCharTest('⊥', ['⠀⠫⠏⠀']);
+  this.executeCharTest('⊦', ['⠄⡳⠭⠆⠆⠁⠖⠄']);
+  this.executeCharTest('⊧', ['⠄⡳⠭⠆⠆⠁⠶⠄']);
+  this.executeCharTest('⊨', ['⠄⡳⠭⠆⠆⠁⠦⠄']);
+  this.executeCharTest('⊩', ['⠄⡳⠭⠆⠆⠁⠔⠄']);
+  this.executeCharTest('⊪', ['⠄⡳⠭⠆⠆⠁⠁⠄']);
+  this.executeCharTest('⊫', ['⠄⡳⠭⠆⠆⠁⠃⠄']);
+  this.executeCharTest('⊬', ['⠄⡳⠭⠆⠆⠁⠉⠄']);
+  this.executeCharTest('⊭', ['⠄⡳⠭⠆⠆⠁⠙⠄']);
+  this.executeCharTest('⊮', ['⠄⡳⠭⠆⠆⠁⠑⠄']);
+  this.executeCharTest('⊯', ['⠄⡳⠭⠆⠆⠁⠋⠄']);
+  this.executeCharTest('⊰', ['⠄⡳⠭⠆⠆⠃⠴⠄']);
+  this.executeCharTest('⊱', ['⠄⡳⠭⠆⠆⠃⠂⠄']);
+  this.executeCharTest('⊲', ['⠄⡳⠭⠆⠆⠃⠆⠄']);
+  this.executeCharTest('⊳', ['⠄⡳⠭⠆⠆⠃⠒⠄']);
+  this.executeCharTest('⊴', ['⠄⡳⠭⠆⠆⠃⠲⠄']);
+  this.executeCharTest('⊵', ['⠄⡳⠭⠆⠆⠃⠢⠄']);
+  this.executeCharTest('⊶', ['⠄⡳⠭⠆⠆⠃⠖⠄']);
+  this.executeCharTest('⊷', ['⠄⡳⠭⠆⠆⠃⠶⠄']);
+  this.executeCharTest('⊸', ['⠄⡳⠭⠆⠆⠃⠦⠄']);
+  this.executeCharTest('⊹', ['⠄⡳⠭⠆⠆⠃⠔⠄']);
+  this.executeCharTest('⊺', ['⠄⡳⠭⠆⠆⠃⠁⠄']);
+  this.executeCharTest('⊻', ['⠄⡳⠭⠆⠆⠃⠃⠄']);
+  this.executeCharTest('⊼', ['⠄⡳⠭⠆⠆⠃⠉⠄']);
+  this.executeCharTest('⊽', ['⠄⡳⠭⠆⠆⠃⠙⠄']);
+  this.executeCharTest('⊿', ['⠄⡳⠭⠆⠆⠃⠋⠄']);
+  this.executeCharTest('⋀', ['⠈⠩']);
+  this.executeCharTest('⋁', ['⠈⠬']);
+  this.executeCharTest('⋂', ['⠨⠩']);
+  this.executeCharTest('⋃', ['⠨⠬']);
+  this.executeCharTest('⋄', ['⠄⡳⠭⠆⠆⠉⠲⠄']);
+  this.executeCharTest('⋅', ['⠡']);
+  this.executeCharTest('⋆', ['⠄⡳⠭⠆⠆⠉⠖⠄']);
+  this.executeCharTest('⋇', ['⠄⡳⠭⠆⠆⠉⠶⠄']);
+  this.executeCharTest('⋈', ['⠄⡳⠭⠆⠆⠉⠦⠄']);
+  this.executeCharTest('⋉', ['⠄⡳⠭⠆⠆⠉⠔⠄']);
+  this.executeCharTest('⋊', ['⠄⡳⠭⠆⠆⠉⠁⠄']);
+  this.executeCharTest('⋋', ['⠄⡳⠭⠆⠆⠉⠃⠄']);
+  this.executeCharTest('⋌', ['⠄⡳⠭⠆⠆⠉⠉⠄']);
+  this.executeCharTest('⋍', ['⠄⡳⠭⠆⠆⠉⠙⠄']);
+  this.executeCharTest('⋎', ['⠄⡳⠭⠆⠆⠉⠑⠄']);
+  this.executeCharTest('⋏', ['⠄⡳⠭⠆⠆⠉⠋⠄']);
+  this.executeCharTest('⋐', ['⠄⡳⠭⠆⠆⠙⠴⠄']);
+  this.executeCharTest('⋑', ['⠄⡳⠭⠆⠆⠙⠂⠄']);
+  this.executeCharTest('⋒', ['⠄⡳⠭⠆⠆⠙⠆⠄']);
+  this.executeCharTest('⋓', ['⠄⡳⠭⠆⠆⠙⠒⠄']);
+  this.executeCharTest('⋔', ['⠄⡳⠭⠆⠆⠙⠲⠄']);
+  this.executeCharTest('⋕', ['⠄⡳⠭⠆⠆⠙⠢⠄']);
+  this.executeCharTest('⋖', ['⠄⡳⠭⠆⠆⠙⠖⠄']);
+  this.executeCharTest('⋗', ['⠄⡳⠭⠆⠆⠙⠶⠄']);
+  this.executeCharTest('⋘', ['⠄⡳⠭⠆⠆⠙⠦⠄']);
+  this.executeCharTest('⋙', ['⠄⡳⠭⠆⠆⠙⠔⠄']);
+  this.executeCharTest('⋚', ['⠄⡳⠭⠆⠆⠙⠁⠄']);
+  this.executeCharTest('⋛', ['⠄⡳⠭⠆⠆⠙⠃⠄']);
+  this.executeCharTest('⋜', ['⠀⠱⠐⠅⠀']);
+  this.executeCharTest('⋝', ['⠀⠱⠨⠂⠀']);
+  this.executeCharTest('⋞', ['⠄⡳⠭⠆⠆⠙⠑⠄']);
+  this.executeCharTest('⋟', ['⠄⡳⠭⠆⠆⠙⠋⠄']);
+  this.executeCharTest('⋠', ['⠄⡳⠭⠆⠆⠑⠴⠄']);
+  this.executeCharTest('⋡', ['⠄⡳⠭⠆⠆⠑⠂⠄']);
+  this.executeCharTest('⋢', ['⠄⡳⠭⠆⠆⠑⠆⠄']);
+  this.executeCharTest('⋣', ['⠄⡳⠭⠆⠆⠑⠒⠄']);
+  this.executeCharTest('⋤', ['⠄⡳⠭⠆⠆⠑⠲⠄']);
+  this.executeCharTest('⋥', ['⠄⡳⠭⠆⠆⠑⠢⠄']);
+  this.executeCharTest('⋦', ['⠄⡳⠭⠆⠆⠑⠖⠄']);
+  this.executeCharTest('⋧', ['⠄⡳⠭⠆⠆⠑⠶⠄']);
+  this.executeCharTest('⋨', ['⠄⡳⠭⠆⠆⠑⠦⠄']);
+  this.executeCharTest('⋩', ['⠄⡳⠭⠆⠆⠑⠔⠄']);
+  this.executeCharTest('⋪', ['⠄⡳⠭⠆⠆⠑⠁⠄']);
+  this.executeCharTest('⋫', ['⠄⡳⠭⠆⠆⠑⠃⠄']);
+  this.executeCharTest('⋬', ['⠄⡳⠭⠆⠆⠑⠉⠄']);
+  this.executeCharTest('⋭', ['⠄⡳⠭⠆⠆⠑⠙⠄']);
+  this.executeCharTest('⋮', ['⠣⠄⠄⠄']);
+  this.executeCharTest('⋯', ['⠄⠄⠄']);
+  this.executeCharTest('⋰', ['⠘⠄⠄⠄']);
+  this.executeCharTest('⋱', ['⠰⠄⠄⠄']);
+  this.executeCharTest('⋲', ['⠄⡳⠭⠆⠆⠋⠆⠄']);
+  this.executeCharTest('⋳', ['⠄⡳⠭⠆⠆⠋⠒⠄']);
+  this.executeCharTest('⋴', ['⠄⡳⠭⠆⠆⠋⠲⠄']);
+  this.executeCharTest('⋵', ['⠄⡳⠭⠆⠆⠋⠢⠄']);
+  this.executeCharTest('⋶', ['⠄⡳⠭⠆⠆⠋⠖⠄']);
+  this.executeCharTest('⋷', ['⠄⡳⠭⠆⠆⠋⠶⠄']);
+  this.executeCharTest('⋸', ['⠄⡳⠭⠆⠆⠋⠦⠄']);
+  this.executeCharTest('⋹', ['⠄⡳⠭⠆⠆⠋⠔⠄']);
+  this.executeCharTest('⋺', ['⠄⡳⠭⠆⠆⠋⠁⠄']);
+  this.executeCharTest('⋻', ['⠄⡳⠭⠆⠆⠋⠃⠄']);
+  this.executeCharTest('⋼', ['⠄⡳⠭⠆⠆⠋⠉⠄']);
+  this.executeCharTest('⋽', ['⠄⡳⠭⠆⠆⠋⠙⠄']);
+  this.executeCharTest('⋾', ['⠄⡳⠭⠆⠆⠋⠑⠄']);
+  this.executeCharTest('⋿', ['⠄⡳⠭⠆⠆⠋⠋⠄']);
+  this.executeCharTest('⌀', ['⠄⡳⠭⠆⠒⠴⠴⠄']);
+  this.executeCharTest('⌂', ['⠄⡳⠭⠆⠒⠴⠆⠄']);
+  this.executeCharTest('⌅', ['⠄⡳⠭⠆⠒⠴⠢⠄']);
+  this.executeCharTest('⌆', ['⠄⡳⠭⠆⠒⠴⠖⠄']);
+  this.executeCharTest('⌇', ['⠄⡳⠭⠆⠒⠴⠶⠄']);
+  this.executeCharTest('⌐', ['⠄⡳⠭⠆⠒⠂⠴⠄']);
+  this.executeCharTest('⌑', ['⠄⡳⠭⠆⠒⠂⠂⠄']);
+  this.executeCharTest('⌒', ['⠄⡳⠭⠆⠒⠂⠆⠄']);
+  this.executeCharTest('⌓', ['⠄⡳⠭⠆⠒⠂⠒⠄']);
+  this.executeCharTest('⌔', ['⠄⡳⠭⠆⠒⠂⠲⠄']);
+  this.executeCharTest('➕', ['⠄⡳⠭⠆⠶⠔⠢⠄']);
+  this.executeCharTest('➖', ['⠄⡳⠭⠆⠶⠔⠖⠄']);
+  this.executeCharTest('➗', ['⠄⡳⠭⠆⠶⠔⠶⠄']);
+  this.executeCharTest('➰', ['⠄⡳⠭⠆⠶⠃⠴⠄']);
+  this.executeCharTest('➿', ['⠄⡳⠭⠆⠶⠃⠋⠄']);
+  this.executeCharTest('⟁', ['⠄⡳⠭⠆⠶⠉⠂⠄']);
+  this.executeCharTest('⟂', ['⠫⠏']);
+  this.executeCharTest('⟃', ['⠄⡳⠭⠆⠶⠉⠒⠄']);
+  this.executeCharTest('⟄', ['⠄⡳⠭⠆⠶⠉⠲⠄']);
+  this.executeCharTest('⟇', ['⠄⡳⠭⠆⠶⠉⠶⠄']);
+  this.executeCharTest('⟈', ['⠄⡳⠭⠆⠶⠉⠦⠄']);
+  this.executeCharTest('⟉', ['⠄⡳⠭⠆⠶⠉⠔⠄']);
+  this.executeCharTest('⟊', ['⠄⡳⠭⠆⠶⠉⠁⠄']);
+  this.executeCharTest('⟋', ['⠄⡳⠭⠆⠶⠉⠃⠄']);
+  this.executeCharTest('⟌', ['⠄⡳⠭⠆⠶⠉⠉⠄']);
+  this.executeCharTest('⟍', ['⠄⡳⠭⠆⠶⠉⠙⠄']);
+  this.executeCharTest('⟎', ['⠄⡳⠭⠆⠶⠉⠑⠄']);
+  this.executeCharTest('⟏', ['⠄⡳⠭⠆⠶⠉⠋⠄']);
+  this.executeCharTest('⟐', ['⠄⡳⠭⠆⠶⠙⠴⠄']);
+  this.executeCharTest('⟑', ['⠄⡳⠭⠆⠶⠙⠂⠄']);
+  this.executeCharTest('⟒', ['⠄⡳⠭⠆⠶⠙⠆⠄']);
+  this.executeCharTest('⟓', ['⠄⡳⠭⠆⠶⠙⠒⠄']);
+  this.executeCharTest('⟔', ['⠄⡳⠭⠆⠶⠙⠲⠄']);
+  this.executeCharTest('⟕', ['⠄⡳⠭⠆⠶⠙⠢⠄']);
+  this.executeCharTest('⟖', ['⠄⡳⠭⠆⠶⠙⠖⠄']);
+  this.executeCharTest('⟗', ['⠄⡳⠭⠆⠶⠙⠶⠄']);
+  this.executeCharTest('⟘', ['⠄⡳⠭⠆⠶⠙⠦⠄']);
+  this.executeCharTest('⟙', ['⠄⡳⠭⠆⠶⠙⠔⠄']);
+  this.executeCharTest('⟚', ['⠄⡳⠭⠆⠶⠙⠁⠄']);
+  this.executeCharTest('⟛', ['⠄⡳⠭⠆⠶⠙⠃⠄']);
+  this.executeCharTest('⟜', ['⠄⡳⠭⠆⠶⠙⠉⠄']);
+  this.executeCharTest('⟝', ['⠄⡳⠭⠆⠶⠙⠙⠄']);
+  this.executeCharTest('⟞', ['⠄⡳⠭⠆⠶⠙⠑⠄']);
+  this.executeCharTest('⟟', ['⠄⡳⠭⠆⠶⠙⠋⠄']);
+  this.executeCharTest('⟠', ['⠄⡳⠭⠆⠶⠑⠴⠄']);
+  this.executeCharTest('⟡', ['⠄⡳⠭⠆⠶⠑⠂⠄']);
+  this.executeCharTest('⟢', ['⠄⡳⠭⠆⠶⠑⠆⠄']);
+  this.executeCharTest('⟣', ['⠄⡳⠭⠆⠶⠑⠒⠄']);
+  this.executeCharTest('⟤', ['⠄⡳⠭⠆⠶⠑⠲⠄']);
+  this.executeCharTest('⟥', ['⠄⡳⠭⠆⠶⠑⠢⠄']);
+  this.executeCharTest('⤫', ['⠄⡳⠭⠆⠔⠆⠃⠄']);
+  this.executeCharTest('⤬', ['⠄⡳⠭⠆⠔⠆⠉⠄']);
+  this.executeCharTest('⦀', ['⠳⠳⠳']);
+  this.executeCharTest('⦁', ['⠄⡳⠭⠆⠔⠦⠂⠄']);
+  this.executeCharTest('⦂', ['⠄⡳⠭⠆⠔⠦⠆⠄']);
+  this.executeCharTest('⦙', ['⠄⡳⠭⠆⠔⠔⠔⠄']);
+  this.executeCharTest('⦚', ['⠄⡳⠭⠆⠔⠔⠁⠄']);
+  this.executeCharTest('⦰', ['⠄⡳⠭⠆⠔⠃⠴⠄']);
+  this.executeCharTest('⦱', ['⠄⡳⠭⠆⠔⠃⠂⠄']);
+  this.executeCharTest('⦲', ['⠄⡳⠭⠆⠔⠃⠆⠄']);
+  this.executeCharTest('⦵', ['⠄⡳⠭⠆⠔⠃⠢⠄']);
+  this.executeCharTest('⦶', ['⠫⠉⠸⠫⠳⠻']);
+  this.executeCharTest('⦷', ['⠫⠉⠸⠫⠫⠇⠻']);
+  this.executeCharTest('⦸', ['⠫⠉⠸⠫⠸⠡⠻']);
+  this.executeCharTest('⦹', ['⠫⠉⠸⠫⠫⠏⠻']);
+  this.executeCharTest('⦺', ['⠄⡳⠭⠆⠔⠃⠁⠄']);
+  this.executeCharTest('⦻', ['⠄⡳⠭⠆⠔⠃⠃⠄']);
+  this.executeCharTest('⦼', ['⠄⡳⠭⠆⠔⠃⠉⠄']);
+  this.executeCharTest('⦾', ['⠄⡳⠭⠆⠔⠃⠑⠄']);
+  this.executeCharTest('⦿', ['⠫⠉⠸⠫⠔⠔⠻']);
+  this.executeCharTest('⧀', ['⠫⠉⠸⠫⠐⠅⠻']);
+  this.executeCharTest('⧁', ['⠫⠉⠸⠫⠨⠂⠻']);
+  this.executeCharTest('⧂', ['⠄⡳⠭⠆⠔⠉⠆⠄']);
+  this.executeCharTest('⧃', ['⠄⡳⠭⠆⠔⠉⠒⠄']);
+  this.executeCharTest('⧄', ['⠄⡳⠭⠆⠔⠉⠲⠄']);
+  this.executeCharTest('⧅', ['⠄⡳⠭⠆⠔⠉⠢⠄']);
+  this.executeCharTest('⧆', ['⠄⡳⠭⠆⠔⠉⠖⠄']);
+  this.executeCharTest('⧇', ['⠄⡳⠭⠆⠔⠉⠶⠄']);
+  this.executeCharTest('⧈', ['⠄⡳⠭⠆⠔⠉⠦⠄']);
+  this.executeCharTest('⧉', ['⠄⡳⠭⠆⠔⠉⠔⠄']);
+  this.executeCharTest('⧊', ['⠄⡳⠭⠆⠔⠉⠁⠄']);
+  this.executeCharTest('⧋', ['⠄⡳⠭⠆⠔⠉⠃⠄']);
+  this.executeCharTest('⧌', ['⠄⡳⠭⠆⠔⠉⠉⠄']);
+  this.executeCharTest('⧍', ['⠄⡳⠭⠆⠔⠉⠙⠄']);
+  this.executeCharTest('⧎', ['⠄⡳⠭⠆⠔⠉⠑⠄']);
+  this.executeCharTest('⧏', ['⠄⡳⠭⠆⠔⠉⠋⠄']);
+  this.executeCharTest('⧐', ['⠄⡳⠭⠆⠔⠙⠴⠄']);
+  this.executeCharTest('⧑', ['⠄⡳⠭⠆⠔⠙⠂⠄']);
+  this.executeCharTest('⧒', ['⠄⡳⠭⠆⠔⠙⠆⠄']);
+  this.executeCharTest('⧓', ['⠄⡳⠭⠆⠔⠙⠒⠄']);
+  this.executeCharTest('⧔', ['⠄⡳⠭⠆⠔⠙⠲⠄']);
+  this.executeCharTest('⧕', ['⠄⡳⠭⠆⠔⠙⠢⠄']);
+  this.executeCharTest('⧖', ['⠄⡳⠭⠆⠔⠙⠖⠄']);
+  this.executeCharTest('⧗', ['⠄⡳⠭⠆⠔⠙⠶⠄']);
+  this.executeCharTest('⧜', ['⠄⡳⠭⠆⠔⠙⠉⠄']);
+  this.executeCharTest('⧝', ['⠄⡳⠭⠆⠔⠙⠙⠄']);
+  this.executeCharTest('⧞', ['⠄⡳⠭⠆⠔⠙⠑⠄']);
+  this.executeCharTest('⧟', ['⠄⡳⠭⠆⠔⠙⠋⠄']);
+  this.executeCharTest('⧠', ['⠄⡳⠭⠆⠔⠑⠴⠄']);
+  this.executeCharTest('⧡', ['⠄⡳⠭⠆⠔⠑⠂⠄']);
+  this.executeCharTest('⧢', ['⠄⡳⠭⠆⠔⠑⠆⠄']);
+  this.executeCharTest('⧣', ['⠄⡳⠭⠆⠔⠑⠒⠄']);
+  this.executeCharTest('⧤', ['⠄⡳⠭⠆⠔⠑⠲⠄']);
+  this.executeCharTest('⧥', ['⠄⡳⠭⠆⠔⠑⠢⠄']);
+  this.executeCharTest('⧦', ['⠄⡳⠭⠆⠔⠑⠖⠄']);
+  this.executeCharTest('⧧', ['⠄⡳⠭⠆⠔⠑⠶⠄']);
+  this.executeCharTest('⧨', ['⠄⡳⠭⠆⠔⠑⠦⠄']);
+  this.executeCharTest('⧩', ['⠄⡳⠭⠆⠔⠑⠔⠄']);
+  this.executeCharTest('⧫', ['⠄⡳⠭⠆⠔⠑⠃⠄']);
+  this.executeCharTest('⧮', ['⠄⡳⠭⠆⠔⠑⠑⠄']);
+  this.executeCharTest('⧯', ['⠄⡳⠭⠆⠔⠑⠋⠄']);
+  this.executeCharTest('⧰', ['⠄⡳⠭⠆⠔⠋⠴⠄']);
+  this.executeCharTest('⧱', ['⠄⡳⠭⠆⠔⠋⠂⠄']);
+  this.executeCharTest('⧲', ['⠄⡳⠭⠆⠔⠋⠆⠄']);
+  this.executeCharTest('⧳', ['⠄⡳⠭⠆⠔⠋⠒⠄']);
+  this.executeCharTest('⧴', ['⠄⡳⠭⠆⠔⠋⠲⠄']);
+  this.executeCharTest('⧵', ['⠄⡳⠭⠆⠔⠋⠢⠄']);
+  this.executeCharTest('⧶', ['⠄⡳⠭⠆⠔⠋⠖⠄']);
+  this.executeCharTest('⧷', ['⠄⡳⠭⠆⠔⠋⠶⠄']);
+  this.executeCharTest('⧸', ['⠄⡳⠭⠆⠔⠋⠦⠄']);
+  this.executeCharTest('⧹', ['⠄⡳⠭⠆⠔⠋⠔⠄']);
+  this.executeCharTest('⧺', ['⠄⡳⠭⠆⠔⠋⠁⠄']);
+  this.executeCharTest('⧻', ['⠄⡳⠭⠆⠔⠋⠃⠄']);
+  this.executeCharTest('⧾', ['⠄⡳⠭⠆⠔⠋⠑⠄']);
+  this.executeCharTest('⧿', ['⠄⡳⠭⠆⠔⠋⠋⠄']);
+  this.executeCharTest('⨀', ['⠫⠉⠸⠫⠡⠻']);
+  this.executeCharTest('⨁', ['⠫⠉⠸⠫⠬⠻']);
+  this.executeCharTest('⨂', ['⠫⠉⠸⠫⠈⠡⠻']);
+  this.executeCharTest('⨃', ['⠄⡳⠭⠆⠁⠴⠒⠄']);
+  this.executeCharTest('⨄', ['⠄⡳⠭⠆⠁⠴⠲⠄']);
+  this.executeCharTest('⨅', ['⠄⡳⠭⠆⠁⠴⠢⠄']);
+  this.executeCharTest('⨆', ['⠄⡳⠭⠆⠁⠴⠖⠄']);
+  this.executeCharTest('⨇', ['⠄⡳⠭⠆⠁⠴⠶⠄']);
+  this.executeCharTest('⨈', ['⠄⡳⠭⠆⠁⠴⠦⠄']);
+  this.executeCharTest('⨉', ['⠄⡳⠭⠆⠁⠴⠔⠄']);
+  this.executeCharTest('⨊', ['⠄⡳⠭⠆⠁⠴⠁⠄']);
+  this.executeCharTest('⨋', ['⠄⡳⠭⠆⠁⠴⠃⠄']);
+  this.executeCharTest('⨌', ['⠄⡳⠭⠆⠁⠴⠉⠄']);
+  this.executeCharTest('⨍', ['⠄⡳⠭⠆⠁⠴⠙⠄']);
+  this.executeCharTest('⨎', ['⠄⡳⠭⠆⠁⠴⠑⠄']);
+  this.executeCharTest('⨏', ['⠄⡳⠭⠆⠁⠴⠋⠄']);
+  this.executeCharTest('⨐', ['⠄⡳⠭⠆⠁⠂⠴⠄']);
+  this.executeCharTest('⨑', ['⠄⡳⠭⠆⠁⠂⠂⠄']);
+  this.executeCharTest('⨒', ['⠄⡳⠭⠆⠁⠂⠆⠄']);
+  this.executeCharTest('⨓', ['⠄⡳⠭⠆⠁⠂⠒⠄']);
+  this.executeCharTest('⨔', ['⠄⡳⠭⠆⠁⠂⠲⠄']);
+  this.executeCharTest('⨕', ['⠄⡳⠭⠆⠁⠂⠢⠄']);
+  this.executeCharTest('⨖', ['⠄⡳⠭⠆⠁⠂⠖⠄']);
+  this.executeCharTest('⨘', ['⠄⡳⠭⠆⠁⠂⠦⠄']);
+  this.executeCharTest('⨙', ['⠄⡳⠭⠆⠁⠂⠔⠄']);
+  this.executeCharTest('⨚', ['⠄⡳⠭⠆⠁⠂⠁⠄']);
+  this.executeCharTest('⨛', ['⠄⡳⠭⠆⠁⠂⠃⠄']);
+  this.executeCharTest('⨜', ['⠄⡳⠭⠆⠁⠂⠉⠄']);
+  this.executeCharTest('⨝', ['⠄⡳⠭⠆⠁⠂⠙⠄']);
+  this.executeCharTest('⨞', ['⠄⡳⠭⠆⠁⠂⠑⠄']);
+  this.executeCharTest('⨟', ['⠄⡳⠭⠆⠁⠂⠋⠄']);
+  this.executeCharTest('⨠', ['⠄⡳⠭⠆⠁⠆⠴⠄']);
+  this.executeCharTest('⨡', ['⠄⡳⠭⠆⠁⠆⠂⠄']);
+  this.executeCharTest('⨢', ['⠄⡳⠭⠆⠁⠆⠆⠄']);
+  this.executeCharTest('⨣', ['⠄⡳⠭⠆⠁⠆⠒⠄']);
+  this.executeCharTest('⨤', ['⠄⡳⠭⠆⠁⠆⠲⠄']);
+  this.executeCharTest('⨥', ['⠄⡳⠭⠆⠁⠆⠢⠄']);
+  this.executeCharTest('⨦', ['⠄⡳⠭⠆⠁⠆⠖⠄']);
+  this.executeCharTest('⨧', ['⠄⡳⠭⠆⠁⠆⠶⠄']);
+  this.executeCharTest('⨨', ['⠄⡳⠭⠆⠁⠆⠦⠄']);
+  this.executeCharTest('⨩', ['⠄⡳⠭⠆⠁⠆⠔⠄']);
+  this.executeCharTest('⨪', ['⠄⡳⠭⠆⠁⠆⠁⠄']);
+  this.executeCharTest('⨫', ['⠄⡳⠭⠆⠁⠆⠃⠄']);
+  this.executeCharTest('⨬', ['⠄⡳⠭⠆⠁⠆⠉⠄']);
+  this.executeCharTest('⨭', ['⠄⡳⠭⠆⠁⠆⠙⠄']);
+  this.executeCharTest('⨮', ['⠄⡳⠭⠆⠁⠆⠑⠄']);
+  this.executeCharTest('⨯', ['⠄⡳⠭⠆⠁⠆⠋⠄']);
+  this.executeCharTest('⨰', ['⠄⡳⠭⠆⠁⠒⠴⠄']);
+  this.executeCharTest('⨱', ['⠄⡳⠭⠆⠁⠒⠂⠄']);
+  this.executeCharTest('⨲', ['⠄⡳⠭⠆⠁⠒⠆⠄']);
+  this.executeCharTest('⨳', ['⠄⡳⠭⠆⠁⠒⠒⠄']);
+  this.executeCharTest('⨴', ['⠄⡳⠭⠆⠁⠒⠲⠄']);
+  this.executeCharTest('⨵', ['⠄⡳⠭⠆⠁⠒⠢⠄']);
+  this.executeCharTest('⨶', ['⠄⡳⠭⠆⠁⠒⠖⠄']);
+  this.executeCharTest('⨷', ['⠄⡳⠭⠆⠁⠒⠶⠄']);
+  this.executeCharTest('⨸', ['⠫⠉⠸⠫⠈⠌⠻']);
+  this.executeCharTest('⨹', ['⠄⡳⠭⠆⠁⠒⠔⠄']);
+  this.executeCharTest('⨺', ['⠄⡳⠭⠆⠁⠒⠁⠄']);
+  this.executeCharTest('⨻', ['⠄⡳⠭⠆⠁⠒⠃⠄']);
+  this.executeCharTest('⨼', ['⠄⡳⠭⠆⠁⠒⠉⠄']);
+  this.executeCharTest('⨽', ['⠄⡳⠭⠆⠁⠒⠙⠄']);
+  this.executeCharTest('⨾', ['⠄⡳⠭⠆⠁⠒⠑⠄']);
+  this.executeCharTest('⨿', ['⠄⡳⠭⠆⠁⠒⠋⠄']);
+  this.executeCharTest('⩀', ['⠄⡳⠭⠆⠁⠲⠴⠄']);
+  this.executeCharTest('⩁', ['⠄⡳⠭⠆⠁⠲⠂⠄']);
+  this.executeCharTest('⩂', ['⠄⡳⠭⠆⠁⠲⠆⠄']);
+  this.executeCharTest('⩃', ['⠄⡳⠭⠆⠁⠲⠒⠄']);
+  this.executeCharTest('⩄', ['⠄⡳⠭⠆⠁⠲⠲⠄']);
+  this.executeCharTest('⩅', ['⠄⡳⠭⠆⠁⠲⠢⠄']);
+  this.executeCharTest('⩆', ['⠄⡳⠭⠆⠁⠲⠖⠄']);
+  this.executeCharTest('⩇', ['⠄⡳⠭⠆⠁⠲⠶⠄']);
+  this.executeCharTest('⩈', ['⠄⡳⠭⠆⠁⠲⠦⠄']);
+  this.executeCharTest('⩉', ['⠄⡳⠭⠆⠁⠲⠔⠄']);
+  this.executeCharTest('⩊', ['⠄⡳⠭⠆⠁⠲⠁⠄']);
+  this.executeCharTest('⩋', ['⠄⡳⠭⠆⠁⠲⠃⠄']);
+  this.executeCharTest('⩌', ['⠄⡳⠭⠆⠁⠲⠉⠄']);
+  this.executeCharTest('⩍', ['⠄⡳⠭⠆⠁⠲⠙⠄']);
+  this.executeCharTest('⩎', ['⠄⡳⠭⠆⠁⠲⠑⠄']);
+  this.executeCharTest('⩏', ['⠄⡳⠭⠆⠁⠲⠋⠄']);
+  this.executeCharTest('⩐', ['⠄⡳⠭⠆⠁⠢⠴⠄']);
+  this.executeCharTest('⩑', ['⠄⡳⠭⠆⠁⠢⠂⠄']);
+  this.executeCharTest('⩒', ['⠄⡳⠭⠆⠁⠢⠆⠄']);
+  this.executeCharTest('⩓', ['⠄⡳⠭⠆⠁⠢⠒⠄']);
+  this.executeCharTest('⩔', ['⠄⡳⠭⠆⠁⠢⠲⠄']);
+  this.executeCharTest('⩕', ['⠄⡳⠭⠆⠁⠢⠢⠄']);
+  this.executeCharTest('⩖', ['⠄⡳⠭⠆⠁⠢⠖⠄']);
+  this.executeCharTest('⩗', ['⠄⡳⠭⠆⠁⠢⠶⠄']);
+  this.executeCharTest('⩘', ['⠄⡳⠭⠆⠁⠢⠦⠄']);
+  this.executeCharTest('⩙', ['⠄⡳⠭⠆⠁⠢⠔⠄']);
+  this.executeCharTest('⩚', ['⠄⡳⠭⠆⠁⠢⠁⠄']);
+  this.executeCharTest('⩛', ['⠄⡳⠭⠆⠁⠢⠃⠄']);
+  this.executeCharTest('⩜', ['⠄⡳⠭⠆⠁⠢⠉⠄']);
+  this.executeCharTest('⩝', ['⠄⡳⠭⠆⠁⠢⠙⠄']);
+  this.executeCharTest('⩞', ['⠄⡳⠭⠆⠁⠢⠑⠄']);
+  this.executeCharTest('⩟', ['⠄⡳⠭⠆⠁⠢⠋⠄']);
+  this.executeCharTest('⩠', ['⠄⡳⠭⠆⠁⠖⠴⠄']);
+  this.executeCharTest('⩡', ['⠄⡳⠭⠆⠁⠖⠂⠄']);
+  this.executeCharTest('⩢', ['⠄⡳⠭⠆⠁⠖⠆⠄']);
+  this.executeCharTest('⩣', ['⠄⡳⠭⠆⠁⠖⠒⠄']);
+  this.executeCharTest('⩤', ['⠄⡳⠭⠆⠁⠖⠲⠄']);
+  this.executeCharTest('⩥', ['⠄⡳⠭⠆⠁⠖⠢⠄']);
+  this.executeCharTest('⩦', ['⠄⡳⠭⠆⠁⠖⠖⠄']);
+  this.executeCharTest('⩧', ['⠄⡳⠭⠆⠁⠖⠶⠄']);
+  this.executeCharTest('⩨', ['⠄⡳⠭⠆⠁⠖⠦⠄']);
+  this.executeCharTest('⩩', ['⠄⡳⠭⠆⠁⠖⠔⠄']);
+  this.executeCharTest('⩪', ['⠄⡳⠭⠆⠁⠖⠁⠄']);
+  this.executeCharTest('⩫', ['⠄⡳⠭⠆⠁⠖⠃⠄']);
+  this.executeCharTest('⩬', ['⠄⡳⠭⠆⠁⠖⠉⠄']);
+  this.executeCharTest('⩭', ['⠄⡳⠭⠆⠁⠖⠙⠄']);
+  this.executeCharTest('⩮', ['⠄⡳⠭⠆⠁⠖⠑⠄']);
+  this.executeCharTest('⩯', ['⠄⡳⠭⠆⠁⠖⠋⠄']);
+  this.executeCharTest('⩰', ['⠄⡳⠭⠆⠁⠶⠴⠄']);
+  this.executeCharTest('⩱', ['⠄⡳⠭⠆⠁⠶⠂⠄']);
+  this.executeCharTest('⩲', ['⠄⡳⠭⠆⠁⠶⠆⠄']);
+  this.executeCharTest('⩳', ['⠄⡳⠭⠆⠁⠶⠒⠄']);
+  this.executeCharTest('⩴', ['⠄⡳⠭⠆⠁⠶⠲⠄']);
+  this.executeCharTest('⩵', ['⠄⡳⠭⠆⠁⠶⠢⠄']);
+  this.executeCharTest('⩶', ['⠄⡳⠭⠆⠁⠶⠖⠄']);
+  this.executeCharTest('⩷', ['⠄⡳⠭⠆⠁⠶⠶⠄']);
+  this.executeCharTest('⩸', ['⠄⡳⠭⠆⠁⠶⠦⠄']);
+  this.executeCharTest('⩹', ['⠄⡳⠭⠆⠁⠶⠔⠄']);
+  this.executeCharTest('⩺', ['⠄⡳⠭⠆⠁⠶⠁⠄']);
+  this.executeCharTest('⩻', ['⠄⡳⠭⠆⠁⠶⠃⠄']);
+  this.executeCharTest('⩼', ['⠄⡳⠭⠆⠁⠶⠉⠄']);
+  this.executeCharTest('⩽', ['⠄⡳⠭⠆⠁⠶⠙⠄']);
+  this.executeCharTest('⩾', ['⠄⡳⠭⠆⠁⠶⠑⠄']);
+  this.executeCharTest('⩿', ['⠄⡳⠭⠆⠁⠶⠋⠄']);
+  this.executeCharTest('⪀', ['⠄⡳⠭⠆⠁⠦⠴⠄']);
+  this.executeCharTest('⪁', ['⠄⡳⠭⠆⠁⠦⠂⠄']);
+  this.executeCharTest('⪂', ['⠄⡳⠭⠆⠁⠦⠆⠄']);
+  this.executeCharTest('⪃', ['⠄⡳⠭⠆⠁⠦⠒⠄']);
+  this.executeCharTest('⪄', ['⠄⡳⠭⠆⠁⠦⠲⠄']);
+  this.executeCharTest('⪅', ['⠄⡳⠭⠆⠁⠦⠢⠄']);
+  this.executeCharTest('⪆', ['⠄⡳⠭⠆⠁⠦⠖⠄']);
+  this.executeCharTest('⪇', ['⠄⡳⠭⠆⠁⠦⠶⠄']);
+  this.executeCharTest('⪈', ['⠄⡳⠭⠆⠁⠦⠦⠄']);
+  this.executeCharTest('⪉', ['⠄⡳⠭⠆⠁⠦⠔⠄']);
+  this.executeCharTest('⪊', ['⠄⡳⠭⠆⠁⠦⠁⠄']);
+  this.executeCharTest('⪋', ['⠄⡳⠭⠆⠁⠦⠃⠄']);
+  this.executeCharTest('⪌', ['⠄⡳⠭⠆⠁⠦⠉⠄']);
+  this.executeCharTest('⪍', ['⠄⡳⠭⠆⠁⠦⠙⠄']);
+  this.executeCharTest('⪎', ['⠄⡳⠭⠆⠁⠦⠑⠄']);
+  this.executeCharTest('⪏', ['⠄⡳⠭⠆⠁⠦⠋⠄']);
+  this.executeCharTest('⪐', ['⠄⡳⠭⠆⠁⠔⠴⠄']);
+  this.executeCharTest('⪑', ['⠄⡳⠭⠆⠁⠔⠂⠄']);
+  this.executeCharTest('⪒', ['⠄⡳⠭⠆⠁⠔⠆⠄']);
+  this.executeCharTest('⪓', ['⠄⡳⠭⠆⠁⠔⠒⠄']);
+  this.executeCharTest('⪔', ['⠄⡳⠭⠆⠁⠔⠲⠄']);
+  this.executeCharTest('⪕', ['⠄⡳⠭⠆⠁⠔⠢⠄']);
+  this.executeCharTest('⪖', ['⠄⡳⠭⠆⠁⠔⠖⠄']);
+  this.executeCharTest('⪗', ['⠄⡳⠭⠆⠁⠔⠶⠄']);
+  this.executeCharTest('⪘', ['⠄⡳⠭⠆⠁⠔⠦⠄']);
+  this.executeCharTest('⪙', ['⠄⡳⠭⠆⠁⠔⠔⠄']);
+  this.executeCharTest('⪚', ['⠄⡳⠭⠆⠁⠔⠁⠄']);
+  this.executeCharTest('⪛', ['⠄⡳⠭⠆⠁⠔⠃⠄']);
+  this.executeCharTest('⪜', ['⠄⡳⠭⠆⠁⠔⠉⠄']);
+  this.executeCharTest('⪝', ['⠄⡳⠭⠆⠁⠔⠙⠄']);
+  this.executeCharTest('⪞', ['⠄⡳⠭⠆⠁⠔⠑⠄']);
+  this.executeCharTest('⪟', ['⠄⡳⠭⠆⠁⠔⠋⠄']);
+  this.executeCharTest('⪠', ['⠄⡳⠭⠆⠁⠁⠴⠄']);
+  this.executeCharTest('⪡', ['⠄⡳⠭⠆⠁⠁⠂⠄']);
+  this.executeCharTest('⪢', ['⠄⡳⠭⠆⠁⠁⠆⠄']);
+  this.executeCharTest('⪣', ['⠄⡳⠭⠆⠁⠁⠒⠄']);
+  this.executeCharTest('⪤', ['⠄⡳⠭⠆⠁⠁⠲⠄']);
+  this.executeCharTest('⪥', ['⠄⡳⠭⠆⠁⠁⠢⠄']);
+  this.executeCharTest('⪦', ['⠄⡳⠭⠆⠁⠁⠖⠄']);
+  this.executeCharTest('⪧', ['⠄⡳⠭⠆⠁⠁⠶⠄']);
+  this.executeCharTest('⪨', ['⠄⡳⠭⠆⠁⠁⠦⠄']);
+  this.executeCharTest('⪩', ['⠄⡳⠭⠆⠁⠁⠔⠄']);
+  this.executeCharTest('⪪', ['⠄⡳⠭⠆⠁⠁⠁⠄']);
+  this.executeCharTest('⪫', ['⠄⡳⠭⠆⠁⠁⠃⠄']);
+  this.executeCharTest('⪬', ['⠄⡳⠭⠆⠁⠁⠉⠄']);
+  this.executeCharTest('⪭', ['⠄⡳⠭⠆⠁⠁⠙⠄']);
+  this.executeCharTest('⪮', ['⠄⡳⠭⠆⠁⠁⠑⠄']);
+  this.executeCharTest('⪯', ['⠀⠨⠐⠅⠱⠀']);
+  this.executeCharTest('⪰', ['⠀⠨⠨⠐⠱⠀']);
+  this.executeCharTest('⪱', ['⠀⠨⠐⠅⠌⠱⠀']);
+  this.executeCharTest('⪲', ['⠀⠨⠨⠐⠌⠱⠀']);
+  this.executeCharTest('⪳', ['⠀⠨⠐⠅⠨⠅⠀']);
+  this.executeCharTest('⪴', ['⠀⠨⠨⠐⠨⠅⠀']);
+  this.executeCharTest('⪵', ['⠀⠨⠐⠅⠌⠨⠅⠀']);
+  this.executeCharTest('⪶', ['⠀⠨⠨⠐⠌⠨⠅⠀']);
+  this.executeCharTest('⪷', ['⠀⠨⠐⠅⠈⠱⠈⠱⠀']);
+  this.executeCharTest('⪸', ['⠀⠨⠨⠐⠈⠱⠈⠱⠀']);
+  this.executeCharTest('⪹', ['⠀⠨⠐⠅⠌⠈⠱⠈⠱⠀']);
+  this.executeCharTest('⪺', ['⠀⠨⠨⠐⠌⠈⠱⠈⠱⠀']);
+  this.executeCharTest('⪻', ['⠀⠨⠐⠅⠈⠨⠐⠅⠻⠀']);
+  this.executeCharTest('⪼', ['⠀⠨⠨⠐⠈⠨⠨⠐⠻⠀']);
+  this.executeCharTest('⪽', ['⠄⡳⠭⠆⠁⠃⠙⠄']);
+  this.executeCharTest('⪾', ['⠄⡳⠭⠆⠁⠃⠑⠄']);
+  this.executeCharTest('⪿', ['⠄⡳⠭⠆⠁⠃⠋⠄']);
+  this.executeCharTest('⫀', ['⠄⡳⠭⠆⠁⠉⠴⠄']);
+  this.executeCharTest('⫁', ['⠄⡳⠭⠆⠁⠉⠂⠄']);
+  this.executeCharTest('⫂', ['⠄⡳⠭⠆⠁⠉⠆⠄']);
+  this.executeCharTest('⫃', ['⠄⡳⠭⠆⠁⠉⠒⠄']);
+  this.executeCharTest('⫄', ['⠄⡳⠭⠆⠁⠉⠲⠄']);
+  this.executeCharTest('⫅', ['⠄⡳⠭⠆⠁⠉⠢⠄']);
+  this.executeCharTest('⫆', ['⠄⡳⠭⠆⠁⠉⠖⠄']);
+  this.executeCharTest('⫇', ['⠄⡳⠭⠆⠁⠉⠶⠄']);
+  this.executeCharTest('⫈', ['⠄⡳⠭⠆⠁⠉⠦⠄']);
+  this.executeCharTest('⫉', ['⠄⡳⠭⠆⠁⠉⠔⠄']);
+  this.executeCharTest('⫊', ['⠄⡳⠭⠆⠁⠉⠁⠄']);
+  this.executeCharTest('⫋', ['⠄⡳⠭⠆⠁⠉⠃⠄']);
+  this.executeCharTest('⫌', ['⠄⡳⠭⠆⠁⠉⠉⠄']);
+  this.executeCharTest('⫍', ['⠄⡳⠭⠆⠁⠉⠙⠄']);
+  this.executeCharTest('⫎', ['⠄⡳⠭⠆⠁⠉⠑⠄']);
+  this.executeCharTest('⫏', ['⠄⡳⠭⠆⠁⠉⠋⠄']);
+  this.executeCharTest('⫐', ['⠄⡳⠭⠆⠁⠙⠴⠄']);
+  this.executeCharTest('⫑', ['⠄⡳⠭⠆⠁⠙⠂⠄']);
+  this.executeCharTest('⫒', ['⠄⡳⠭⠆⠁⠙⠆⠄']);
+  this.executeCharTest('⫓', ['⠄⡳⠭⠆⠁⠙⠒⠄']);
+  this.executeCharTest('⫔', ['⠄⡳⠭⠆⠁⠙⠲⠄']);
+  this.executeCharTest('⫕', ['⠄⡳⠭⠆⠁⠙⠢⠄']);
+  this.executeCharTest('⫖', ['⠄⡳⠭⠆⠁⠙⠖⠄']);
+  this.executeCharTest('⫗', ['⠄⡳⠭⠆⠁⠙⠶⠄']);
+  this.executeCharTest('⫘', ['⠄⡳⠭⠆⠁⠙⠦⠄']);
+  this.executeCharTest('⫙', ['⠄⡳⠭⠆⠁⠙⠔⠄']);
+  this.executeCharTest('⫚', ['⠄⡳⠭⠆⠁⠙⠁⠄']);
+  this.executeCharTest('⫛', ['⠄⡳⠭⠆⠁⠙⠃⠄']);
+  this.executeCharTest('⫝̸', ['⠄⡳⠭⠆⠁⠙⠉⠄']);
+  this.executeCharTest('⫝', ['⠄⡳⠭⠆⠁⠙⠙⠄']);
+  this.executeCharTest('⫞', ['⠄⡳⠭⠆⠁⠙⠑⠄']);
+  this.executeCharTest('⫟', ['⠄⡳⠭⠆⠁⠙⠋⠄']);
+  this.executeCharTest('⫠', ['⠄⡳⠭⠆⠁⠑⠴⠄']);
+  this.executeCharTest('⫡', ['⠄⡳⠭⠆⠁⠑⠂⠄']);
+  this.executeCharTest('⫢', ['⠄⡳⠭⠆⠁⠑⠆⠄']);
+  this.executeCharTest('⫣', ['⠄⡳⠭⠆⠁⠑⠒⠄']);
+  this.executeCharTest('⫤', ['⠄⡳⠭⠆⠁⠑⠲⠄']);
+  this.executeCharTest('⫥', ['⠄⡳⠭⠆⠁⠑⠢⠄']);
+  this.executeCharTest('⫦', ['⠄⡳⠭⠆⠁⠑⠖⠄']);
+  this.executeCharTest('⫧', ['⠄⡳⠭⠆⠁⠑⠶⠄']);
+  this.executeCharTest('⫨', ['⠄⡳⠭⠆⠁⠑⠦⠄']);
+  this.executeCharTest('⫩', ['⠄⡳⠭⠆⠁⠑⠔⠄']);
+  this.executeCharTest('⫪', ['⠄⡳⠭⠆⠁⠑⠁⠄']);
+  this.executeCharTest('⫫', ['⠄⡳⠭⠆⠁⠑⠃⠄']);
+  this.executeCharTest('⫬', ['⠄⡳⠭⠆⠁⠑⠉⠄']);
+  this.executeCharTest('⫭', ['⠄⡳⠭⠆⠁⠑⠙⠄']);
+  this.executeCharTest('⫮', ['⠄⡳⠭⠆⠁⠑⠑⠄']);
+  this.executeCharTest('⫯', ['⠄⡳⠭⠆⠁⠑⠋⠄']);
+  this.executeCharTest('⫰', ['⠄⡳⠭⠆⠁⠋⠴⠄']);
+  this.executeCharTest('⫱', ['⠄⡳⠭⠆⠁⠋⠂⠄']);
+  this.executeCharTest('⫲', ['⠄⡳⠭⠆⠁⠋⠆⠄']);
+  this.executeCharTest('⫳', ['⠄⡳⠭⠆⠁⠋⠒⠄']);
+  this.executeCharTest('⫴', ['⠄⡳⠭⠆⠁⠋⠲⠄']);
+  this.executeCharTest('⫵', ['⠄⡳⠭⠆⠁⠋⠢⠄']);
+  this.executeCharTest('⫶', ['⠄⡳⠭⠆⠁⠋⠖⠄']);
+  this.executeCharTest('⫷', ['⠄⡳⠭⠆⠁⠋⠶⠄']);
+  this.executeCharTest('⫸', ['⠄⡳⠭⠆⠁⠋⠦⠄']);
+  this.executeCharTest('⫹', ['⠄⡳⠭⠆⠁⠋⠔⠄']);
+  this.executeCharTest('⫺', ['⠄⡳⠭⠆⠁⠋⠁⠄']);
+  this.executeCharTest('⫻', ['⠄⡳⠭⠆⠁⠋⠃⠄']);
+  this.executeCharTest('⫼', ['⠄⡳⠭⠆⠁⠋⠉⠄']);
+  this.executeCharTest('⫽', ['⠄⡳⠭⠆⠁⠋⠙⠄']);
+  this.executeCharTest('⫾', ['⠄⡳⠭⠆⠁⠋⠑⠄']);
+  this.executeCharTest('⫿', ['⠄⡳⠭⠆⠁⠋⠋⠄']);
+  this.executeCharTest('〜', ['⠄⡳⠭⠒⠴⠂⠉⠄']);
+  this.executeCharTest('︐', ['⠄⡳⠭⠋⠑⠂⠴⠄']);
+  this.executeCharTest('︓', ['⠄⡳⠭⠋⠑⠂⠒⠄']);
+  this.executeCharTest('︔', ['⠄⡳⠭⠋⠑⠂⠲⠄']);
+  this.executeCharTest('︕', ['⠄⡳⠭⠋⠑⠂⠢⠄']);
+  this.executeCharTest('︖', ['⠄⡳⠭⠋⠑⠂⠖⠄']);
+  this.executeCharTest('︙', ['⠄⡳⠭⠋⠑⠂⠔⠄']);
+  this.executeCharTest('︰', ['⠄⡳⠭⠋⠑⠒⠴⠄']);
+  this.executeCharTest('︱', ['⠄⡳⠭⠋⠑⠒⠂⠄']);
+  this.executeCharTest('︲', ['⠄⡳⠭⠋⠑⠒⠆⠄']);
+  this.executeCharTest('︳', ['⠄⡳⠭⠋⠑⠒⠒⠄']);
+  this.executeCharTest('︴', ['⠄⡳⠭⠋⠑⠒⠲⠄']);
+  this.executeCharTest('﹅', ['⠄⡳⠭⠋⠑⠲⠢⠄']);
+  this.executeCharTest('﹆', ['⠄⡳⠭⠋⠑⠲⠖⠄']);
+  this.executeCharTest('﹉', ['⠄⡳⠭⠋⠑⠲⠔⠄']);
+  this.executeCharTest('﹊', ['⠄⡳⠭⠋⠑⠲⠁⠄']);
+  this.executeCharTest('﹋', ['⠄⡳⠭⠋⠑⠲⠃⠄']);
+  this.executeCharTest('﹌', ['⠄⡳⠭⠋⠑⠲⠉⠄']);
+  this.executeCharTest('﹍', ['⠄⡳⠭⠋⠑⠲⠙⠄']);
+  this.executeCharTest('﹎', ['⠄⡳⠭⠋⠑⠲⠑⠄']);
+  this.executeCharTest('﹏', ['⠄⡳⠭⠋⠑⠲⠋⠄']);
+  this.executeCharTest('﹐', ['⠄⡳⠭⠋⠑⠢⠴⠄']);
+  this.executeCharTest('﹒', ['⠄⡳⠭⠋⠑⠢⠆⠄']);
+  this.executeCharTest('﹔', ['⠄⡳⠭⠋⠑⠢⠲⠄']);
+  this.executeCharTest('﹕', ['⠄⡳⠭⠋⠑⠢⠢⠄']);
+  this.executeCharTest('﹖', ['⠄⡳⠭⠋⠑⠢⠖⠄']);
+  this.executeCharTest('﹗', ['⠄⡳⠭⠋⠑⠢⠶⠄']);
+  this.executeCharTest('﹘', ['⠄⡳⠭⠋⠑⠢⠦⠄']);
+  this.executeCharTest('﹟', ['⠄⡳⠭⠋⠑⠢⠋⠄']);
+  this.executeCharTest('﹠', ['⠄⡳⠭⠋⠑⠖⠴⠄']);
+  this.executeCharTest('﹡', ['⠄⡳⠭⠋⠑⠖⠂⠄']);
+  this.executeCharTest('﹢', ['⠄⡳⠭⠋⠑⠖⠆⠄']);
+  this.executeCharTest('﹣', ['⠄⡳⠭⠋⠑⠖⠒⠄']);
+  this.executeCharTest('﹤', ['⠄⡳⠭⠋⠑⠖⠲⠄']);
+  this.executeCharTest('﹥', ['⠄⡳⠭⠋⠑⠖⠢⠄']);
+  this.executeCharTest('﹦', ['⠄⡳⠭⠋⠑⠖⠖⠄']);
+  this.executeCharTest('﹨', ['⠄⡳⠭⠋⠑⠖⠦⠄']);
+  this.executeCharTest('﹩', ['⠄⡳⠭⠋⠑⠖⠔⠄']);
+  this.executeCharTest('﹪', ['⠄⡳⠭⠋⠑⠖⠁⠄']);
+  this.executeCharTest('﹫', ['⠄⡳⠭⠋⠑⠖⠃⠄']);
+  this.executeCharTest('！', ['⠄⡳⠭⠋⠋⠴⠂⠄']);
+  this.executeCharTest('＂', ['⠄⡳⠭⠋⠋⠴⠆⠄']);
+  this.executeCharTest('＃', ['⠄⡳⠭⠋⠋⠴⠒⠄']);
+  this.executeCharTest('＄', ['⠄⡳⠭⠋⠋⠴⠲⠄']);
+  this.executeCharTest('％', ['⠄⡳⠭⠋⠋⠴⠢⠄']);
+  this.executeCharTest('＆', ['⠄⡳⠭⠋⠋⠴⠖⠄']);
+  this.executeCharTest('＇', ['⠄⡳⠭⠋⠋⠴⠶⠄']);
+  this.executeCharTest('＊', ['⠄⡳⠭⠋⠋⠴⠁⠄']);
+  this.executeCharTest('＋', ['⠄⡳⠭⠋⠋⠴⠃⠄']);
+  this.executeCharTest('，', ['⠄⡳⠭⠋⠋⠴⠉⠄']);
+  this.executeCharTest('－', ['⠄⡳⠭⠋⠋⠴⠙⠄']);
+  this.executeCharTest('．', ['⠄⡳⠭⠋⠋⠴⠑⠄']);
+  this.executeCharTest('／', ['⠄⡳⠭⠋⠋⠴⠋⠄']);
+  this.executeCharTest('：', ['⠄⡳⠭⠋⠋⠂⠁⠄']);
+  this.executeCharTest('；', ['⠄⡳⠭⠋⠋⠂⠃⠄']);
+  this.executeCharTest('＜', ['⠄⡳⠭⠋⠋⠂⠉⠄']);
+  this.executeCharTest('＝', ['⠄⡳⠭⠋⠋⠂⠙⠄']);
+  this.executeCharTest('＞', ['⠄⡳⠭⠋⠋⠂⠑⠄']);
+  this.executeCharTest('？', ['⠄⡳⠭⠋⠋⠂⠋⠄']);
+  this.executeCharTest('＠', ['⠄⡳⠭⠋⠋⠆⠴⠄']);
+  this.executeCharTest('＼', ['⠄⡳⠭⠋⠋⠒⠉⠄']);
+  this.executeCharTest('＾', ['⠄⡳⠭⠋⠋⠒⠑⠄']);
+  this.executeCharTest('＿', ['⠱']);
+  this.executeCharTest('｀', ['⠄⡳⠭⠋⠋⠲⠴⠄']);
+  this.executeCharTest('｜', ['⠄⡳⠭⠋⠋⠢⠉⠄']);
+  this.executeCharTest('～', ['⠈⠱']);
+  this.executeCharTest('￠', ['⠄⡳⠭⠋⠋⠑⠴⠄']);
+  this.executeCharTest('￡', ['⠄⡳⠭⠋⠋⠑⠂⠄']);
+  this.executeCharTest('￢', ['⠄⡳⠭⠋⠋⠑⠆⠄']);
+  this.executeCharTest('￣', ['⠱']);
+  this.executeCharTest('￤', ['⠄⡳⠭⠋⠋⠑⠲⠄']);
+  this.executeCharTest('￥', ['⠄⡳⠭⠋⠋⠑⠢⠄']);
+  this.executeCharTest('￦', ['⠄⡳⠭⠋⠋⠑⠖⠄']);
+  this.executeCharTest('￨', ['⠄⡳⠭⠋⠋⠑⠦⠄']);
+  this.executeCharTest('￭', ['⠄⡳⠭⠋⠋⠑⠙⠄']);
+  this.executeCharTest('￮', ['⠄⡳⠭⠋⠋⠑⠑⠄']);
+  this.executeCharTest(' ', ['⠀']);
+  this.executeCharTest(' ', ['⠀']);
+  this.executeCharTest('­', ['⠤']);
+  this.executeCharTest(' ', ['⠄⡳⠭⠆⠴⠴⠴⠄']);
+  this.executeCharTest(' ', ['⠄⡳⠭⠆⠴⠴⠂⠄']);
+  this.executeCharTest(' ', ['⠄⡳⠭⠆⠴⠴⠆⠄']);
+  this.executeCharTest(' ', ['⠄⡳⠭⠆⠴⠴⠒⠄']);
+  this.executeCharTest(' ', ['⠄⡳⠭⠆⠴⠴⠲⠄']);
+  this.executeCharTest(' ', ['⠄⡳⠭⠆⠴⠴⠢⠄']);
+  this.executeCharTest(' ', ['⠄⡳⠭⠆⠴⠴⠖⠄']);
+  this.executeCharTest(' ', ['⠀']);
+  this.executeCharTest(' ', ['⠀']);
+  this.executeCharTest(' ', ['⠀']);
+  this.executeCharTest(' ', ['⠀']);
+  this.executeCharTest('​', ['⠀']);
+  this.executeCharTest('‌', ['⠄⡳⠭⠆⠴⠴⠉⠄']);
+  this.executeCharTest('‍', ['⠄⡳⠭⠆⠴⠴⠙⠄']);
+  this.executeCharTest('‎', ['⠄⡳⠭⠆⠴⠴⠑⠄']);
+  this.executeCharTest('‏', ['⠄⡳⠭⠆⠴⠴⠋⠄']);
+  this.executeCharTest(' ', ['⠄⡳⠭⠆⠴⠆⠦⠄']);
+  this.executeCharTest(' ', ['⠄⡳⠭⠆⠴⠆⠔⠄']);
+  this.executeCharTest('‪', ['⠄⡳⠭⠆⠴⠆⠁⠄']);
+  this.executeCharTest('‫', ['⠄⡳⠭⠆⠴⠆⠃⠄']);
+  this.executeCharTest('‬', ['⠄⡳⠭⠆⠴⠆⠉⠄']);
+  this.executeCharTest('‭', ['⠄⡳⠭⠆⠴⠆⠙⠄']);
+  this.executeCharTest('‮', ['⠄⡳⠭⠆⠴⠆⠑⠄']);
+  this.executeCharTest(' ', ['⠄⡳⠭⠆⠴⠆⠋⠄']);
+  this.executeCharTest(' ', ['⠀']);
+  this.executeCharTest('⁠', ['⠄⡳⠭⠆⠴⠖⠴⠄']);
+  this.executeCharTest('⁡', ['⠀']);
+  this.executeCharTest('⁢', ['⠈⠡']);
+  this.executeCharTest('⁣', ['⠠']);
+  this.executeCharTest('⁤', ['⠬']);
+  this.executeCharTest('⁪', ['⠄⡳⠭⠆⠴⠖⠁⠄']);
+  this.executeCharTest('⁫', ['⠄⡳⠭⠆⠴⠖⠃⠄']);
+  this.executeCharTest('⁮', ['⠄⡳⠭⠆⠴⠖⠑⠄']);
+  this.executeCharTest('⁯', ['⠄⡳⠭⠆⠴⠖⠋⠄']);
+  this.executeCharTest('﻿', ['⠄⡳⠭⠋⠑⠋⠋⠄']);
+  this.executeCharTest('￹', ['⠄⡳⠭⠋⠋⠋⠔⠄']);
+  this.executeCharTest('￺', ['⠄⡳⠭⠋⠋⠋⠁⠄']);
+  this.executeCharTest('￻', ['⠄⡳⠭⠋⠋⠋⠃⠄']);
+  this.executeCharTest('⏨', ['⠄⡳⠭⠆⠒⠑⠦⠄']);
+  this.executeCharTest('★', ['⠄⡳⠭⠆⠖⠴⠢⠄']);
+  this.executeCharTest('☆', ['⠫⠎']);
+  this.executeCharTest('⚪', ['⠄⡳⠭⠆⠖⠁⠁⠄']);
+  this.executeCharTest('⚫', ['⠄⡳⠭⠆⠖⠁⠃⠄']);
+  this.executeCharTest('✅', ['⠄⡳⠭⠆⠶⠴⠢⠄']);
+  this.executeCharTest('✓', ['⠄⡳⠭⠆⠶⠂⠒⠄']);
+  this.executeCharTest('✔', ['⠄⡳⠭⠆⠶⠂⠲⠄']);
+  this.executeCharTest('✕', ['⠈⠡']);
+  this.executeCharTest('✖', ['⠄⡳⠭⠆⠶⠂⠖⠄']);
+  this.executeCharTest('✗', ['⠄⡳⠭⠆⠶⠂⠶⠄']);
+  this.executeCharTest('✘', ['⠄⡳⠭⠆⠶⠂⠦⠄']);
+  this.executeCharTest('✛', ['⠄⡳⠭⠆⠶⠂⠃⠄']);
+  this.executeCharTest('✜', ['⠄⡳⠭⠆⠶⠂⠉⠄']);
+  this.executeCharTest('✠', ['⠄⡳⠭⠆⠶⠆⠴⠄']);
+  this.executeCharTest('✡', ['⠄⡳⠭⠆⠶⠆⠂⠄']);
+  this.executeCharTest('✢', ['⠄⡳⠭⠆⠶⠆⠆⠄']);
+  this.executeCharTest('✣', ['⠄⡳⠭⠆⠶⠆⠒⠄']);
+  this.executeCharTest('✤', ['⠄⡳⠭⠆⠶⠆⠲⠄']);
+  this.executeCharTest('✥', ['⠄⡳⠭⠆⠶⠆⠢⠄']);
+  this.executeCharTest('✦', ['⠄⡳⠭⠆⠶⠆⠖⠄']);
+  this.executeCharTest('✧', ['⠄⡳⠭⠆⠶⠆⠶⠄']);
+  this.executeCharTest('✨', ['⠄⡳⠭⠆⠶⠆⠦⠄']);
+  this.executeCharTest('✩', ['⠄⡳⠭⠆⠶⠆⠔⠄']);
+  this.executeCharTest('✪', ['⠄⡳⠭⠆⠶⠆⠁⠄']);
+  this.executeCharTest('✫', ['⠄⡳⠭⠆⠶⠆⠃⠄']);
+  this.executeCharTest('✬', ['⠄⡳⠭⠆⠶⠆⠉⠄']);
+  this.executeCharTest('✭', ['⠄⡳⠭⠆⠶⠆⠙⠄']);
+  this.executeCharTest('✮', ['⠄⡳⠭⠆⠶⠆⠑⠄']);
+  this.executeCharTest('✯', ['⠄⡳⠭⠆⠶⠆⠋⠄']);
+  this.executeCharTest('✰', ['⠄⡳⠭⠆⠶⠒⠴⠄']);
+  this.executeCharTest('✱', ['⠄⡳⠭⠆⠶⠒⠂⠄']);
+  this.executeCharTest('✲', ['⠄⡳⠭⠆⠶⠒⠆⠄']);
+  this.executeCharTest('✳', ['⠄⡳⠭⠆⠶⠒⠒⠄']);
+  this.executeCharTest('✴', ['⠄⡳⠭⠆⠶⠒⠲⠄']);
+  this.executeCharTest('✵', ['⠄⡳⠭⠆⠶⠒⠢⠄']);
+  this.executeCharTest('✶', ['⠄⡳⠭⠆⠶⠒⠖⠄']);
+  this.executeCharTest('✹', ['⠄⡳⠭⠆⠶⠒⠔⠄']);
+  this.executeCharTest('✺', ['⠄⡳⠭⠆⠶⠒⠁⠄']);
+  this.executeCharTest('✻', ['⠄⡳⠭⠆⠶⠒⠃⠄']);
+  this.executeCharTest('✼', ['⠄⡳⠭⠆⠶⠒⠉⠄']);
+  this.executeCharTest('✽', ['⠄⡳⠭⠆⠶⠒⠙⠄']);
+  this.executeCharTest('✾', ['⠄⡳⠭⠆⠶⠒⠑⠄']);
+  this.executeCharTest('✿', ['⠄⡳⠭⠆⠶⠒⠋⠄']);
+  this.executeCharTest('❀', ['⠄⡳⠭⠆⠶⠲⠴⠄']);
+  this.executeCharTest('❁', ['⠄⡳⠭⠆⠶⠲⠂⠄']);
+  this.executeCharTest('❂', ['⠄⡳⠭⠆⠶⠲⠆⠄']);
+  this.executeCharTest('❃', ['⠄⡳⠭⠆⠶⠲⠒⠄']);
+  this.executeCharTest('❄', ['⠄⡳⠭⠆⠶⠲⠲⠄']);
+  this.executeCharTest('❅', ['⠄⡳⠭⠆⠶⠲⠢⠄']);
+  this.executeCharTest('❆', ['⠄⡳⠭⠆⠶⠲⠖⠄']);
+  this.executeCharTest('❇', ['⠄⡳⠭⠆⠶⠲⠶⠄']);
+  this.executeCharTest('❈', ['⠄⡳⠭⠆⠶⠲⠦⠄']);
+  this.executeCharTest('❉', ['⠄⡳⠭⠆⠶⠲⠔⠄']);
+  this.executeCharTest('❊', ['⠄⡳⠭⠆⠶⠲⠁⠄']);
+  this.executeCharTest('❋', ['⠄⡳⠭⠆⠶⠲⠃⠄']);
+  this.executeCharTest('❌', ['⠄⡳⠭⠆⠶⠲⠉⠄']);
+  this.executeCharTest('❍', ['⠄⡳⠭⠆⠶⠲⠙⠄']);
+};
+
+
+sre.DefaultCharNemethTest.prototype.testDefaultFunctions = function() {
+  this.executeCharTest('deg', ['⠙⠑⠛']);
+  this.executeCharTest('det', ['⠙⠑⠞']);
+  this.executeCharTest('dim', ['⠙⠊⠍']);
+  this.executeCharTest('hom', ['⠓⠕⠍']);
+  this.executeCharTest('Hom', ['⠓⠕⠍']);
+  this.executeCharTest('ker', ['⠅⠑⠗']);
+  this.executeCharTest('Tr', ['⠠⠞⠗']);
+  this.executeCharTest('tr', ['⠠⠞⠗']);
+  this.executeCharTest('log', ['⠇⠕⠏⠀']);
+  this.executeCharTest('ln', ['⠇⠝⠀']);
+  this.executeCharTest('lg', ['⠇⠛']);
+  this.executeCharTest('exp', ['⠑⠭⠏']);
+  this.executeCharTest('expt', ['⠑⠭⠏']);
+  this.executeCharTest('gcd', ['⠛⠉⠙']);
+  this.executeCharTest('lcm', ['⠇⠉⠍']);
+  this.executeCharTest('arg', ['⠁⠗⠛⠀']);
+  this.executeCharTest('im', ['⠊⠍']);
+  this.executeCharTest('re', ['⠗⠑']);
+  this.executeCharTest('inf', ['⠊⠝⠋⠀']);
+  this.executeCharTest('lim', ['⠇⠊⠍']);
+  this.executeCharTest('lim inf', ['⠇⠊⠍⠊⠝⠀⠋']);
+  this.executeCharTest('liminf', ['⠇⠊⠍⠊⠝⠀⠋']);
+  this.executeCharTest('lim sup', ['⠇⠊⠍⠎⠥⠏']);
+  this.executeCharTest('limsup', ['⠇⠊⠍⠎⠥⠏']);
+  this.executeCharTest('max', ['⠍⠁⠭⠀']);
+  this.executeCharTest('min', ['⠍⠊⠝⠀']);
+  this.executeCharTest('sup', ['⠎⠥⠏']);
+  this.executeCharTest('injlim', ['⠊⠝⠚⠇⠊⠍']);
+  this.executeCharTest('inj lim', ['⠊⠝⠚⠇⠊⠍']);
+  this.executeCharTest('projlim', ['⠏⠗⠕⠚⠇⠊⠍']);
+  this.executeCharTest('proj lim', ['⠏⠗⠕⠚⠇⠊⠍']);
+  this.executeCharTest('mod', ['⠍⠕⠙']);
+  this.executeCharTest('Pr', ['⠠⠏⠗']);
+  this.executeCharTest('cosh', ['⠉⠕⠎⠓⠀']);
+  this.executeCharTest('coth', ['⠉⠕⠞⠓⠀']);
+  this.executeCharTest('csch', ['⠉⠎⠉⠓⠀']);
+  this.executeCharTest('sech', ['⠎⠑⠉⠓⠀']);
+  this.executeCharTest('sinh', ['⠎⠊⠝⠓⠀']);
+  this.executeCharTest('tanh', ['⠞⠁⠕⠓⠀']);
+  this.executeCharTest('arcosh', ['⠁⠗⠉⠀⠕⠎⠓']);
+  this.executeCharTest('arccosh', ['⠁⠗⠉⠀⠕⠎⠓']);
+  this.executeCharTest('arcoth', ['⠁⠗⠉⠀⠕⠞⠓']);
+  this.executeCharTest('arccoth', ['⠁⠗⠉⠀⠕⠞⠓']);
+  this.executeCharTest('arcsch', ['⠁⠗⠉⠀⠎⠉⠓']);
+  this.executeCharTest('arccsch', ['⠁⠗⠉⠀⠎⠉⠓']);
+  this.executeCharTest('arsech', ['⠁⠗⠎⠑⠉⠓⠀']);
+  this.executeCharTest('arcsech', ['⠁⠗⠎⠑⠉⠓⠀']);
+  this.executeCharTest('arsinh', ['⠁⠗⠎⠊⠝⠓⠀']);
+  this.executeCharTest('arcsinh', ['⠁⠗⠎⠊⠝⠓⠀']);
+  this.executeCharTest('artanh', ['⠁⠗⠞⠁⠕⠓⠀']);
+  this.executeCharTest('arctanh', ['⠁⠗⠞⠁⠕⠓⠀']);
+  this.executeCharTest('cos', ['⠉⠕⠎⠀']);
+  this.executeCharTest('cosine', ['⠉⠕⠎⠀']);
+  this.executeCharTest('cot', ['⠉⠕⠞⠀']);
+  this.executeCharTest('csc', ['⠉⠎⠉⠀']);
+  this.executeCharTest('sec', ['⠎⠑⠉⠀']);
+  this.executeCharTest('sin', ['⠎⠊⠝⠀']);
+  this.executeCharTest('sine', ['⠎⠊⠝⠀']);
+  this.executeCharTest('tan', ['⠞⠁⠝⠀']);
+  this.executeCharTest('arccos', ['⠁⠗⠉⠉⠕⠎⠀']);
+  this.executeCharTest('arccot', ['⠁⠗⠉⠀⠉⠕⠞⠀']);
+  this.executeCharTest('arccsc', ['⠁⠗⠉⠀⠉⠎⠉⠀']);
+  this.executeCharTest('arcsec', ['⠁⠗⠉⠀⠎⠑⠉⠀']);
+  this.executeCharTest('arcsin', ['⠁⠗⠉⠀⠎⠊⠝⠀']);
+  this.executeCharTest('arctan', ['⠁⠗⠉⠀⠞⠁⠝⠀']);
+};
+
+
+sre.DefaultCharNemethTest.prototype.testDefaultUnits = function() {
+  this.executeUnitTest('W', ['⠠⠺']);
+  this.executeUnitTest('w', ['⠠⠺']);
+  this.executeUnitTest('kw', ['⠅⠠⠺']);
+  this.executeUnitTest('kW', ['⠅⠠⠺']);
+  this.executeUnitTest('mw', ['⠍⠠⠺']);
+  this.executeUnitTest('mW', ['⠍⠠⠺']);
+  this.executeUnitTest('kwh', ['⠅⠺⠓']);
+  this.executeUnitTest('kWh', ['⠅⠺⠓']);
+  this.executeUnitTest('J', ['⠠⠚']);
+  this.executeUnitTest('N', ['⠠⠝']);
+  this.executeUnitTest('A', ['⠠⠁']);
+  this.executeUnitTest('V', ['⠠⠧']);
+  this.executeUnitTest('µΩ', ['⠨⠍⠨⠠⠺']);
+  this.executeUnitTest('mΩ', ['⠍⠨⠠⠺']);
+  this.executeUnitTest('Ω', ['⠨⠠⠺']);
+  this.executeUnitTest('Ohm', ['⠨⠠⠺']);
+  this.executeUnitTest('kΩ', ['⠅⠨⠠⠺']);
+  this.executeUnitTest('KΩ', ['⠅⠨⠠⠺']);
+  this.executeUnitTest('MΩ', ['⠍⠨⠠⠺']);
+  this.executeUnitTest('GΩ', ['⠛⠨⠠⠺']);
+  this.executeUnitTest('mm', ['⠍⠍']);
+  this.executeUnitTest('cm', ['⠉⠍']);
+  this.executeUnitTest('m', ['⠍']);
+  this.executeUnitTest('km', ['⠅⠍']);
+  this.executeUnitTest('ft', ['⠋⠞']);
+  this.executeUnitTest('ft.', ['⠋⠞']);
+  this.executeUnitTest('in', ['⠊⠝']);
+  this.executeUnitTest('in.', ['⠊⠝']);
+  this.executeUnitTest('mi', ['⠍⠊']);
+  this.executeUnitTest('mi.', ['⠍⠊']);
+  this.executeUnitTest('yd', ['⠽⠙']);
+  this.executeUnitTest('yd.', ['⠽⠙']);
+  this.executeUnitTest('n.m.', ['⠝⠲⠍⠸⠲']);
+  this.executeUnitTest('b', ['⠃']);
+  this.executeUnitTest('B', ['⠠⠃']);
+  this.executeUnitTest('KB', ['⠅⠃']);
+  this.executeUnitTest('MB', ['⠍⠃']);
+  this.executeUnitTest('GB', ['⠛⠃']);
+  this.executeUnitTest('TB', ['⠞⠃']);
+  this.executeUnitTest('doz', ['⠙⠕⠵']);
+  this.executeUnitTest('doz.', ['⠙⠕⠵']);
+  this.executeUnitTest('dz', ['⠙⠕⠵']);
+  this.executeUnitTest('dz.', ['⠙⠕⠵']);
+  this.executeUnitTest('sq', ['⠎⠟']);
+  this.executeUnitTest('sq.', ['⠎⠟']);
+  this.executeUnitTest('ha', ['⠓⠁']);
+  this.executeUnitTest('kt', ['⠅⠞']);
+  this.executeUnitTest('kt.', ['⠅⠞']);
+  this.executeUnitTest('mph', ['⠍⠏⠓']);
+  this.executeUnitTest('rpm', ['⠗⠏⠍']);
+  this.executeUnitTest('kmh', ['⠅⠍⠓']);
+  this.executeUnitTest('F', ['⠠⠋']);
+  this.executeUnitTest('F.', ['⠠⠋']);
+  this.executeUnitTest('°F', ['⠠⠋']);
+  this.executeUnitTest('C', ['⠠⠉']);
+  this.executeUnitTest('°C', ['⠠⠉']);
+  this.executeUnitTest('K', ['⠠⠅']);
+  this.executeUnitTest('°K', ['⠠⠅']);
+  this.executeUnitTest('ns', ['⠝⠎']);
+  this.executeUnitTest('µs', ['⠨⠍⠎']);
+  this.executeUnitTest('ms', ['⠍⠎']);
+  this.executeUnitTest('s', ['⠎']);
+  this.executeUnitTest('min', ['⠍⠊⠝⠀']);
+  this.executeUnitTest('h', ['⠓']);
+  this.executeUnitTest('hr', ['⠓']);
+  this.executeUnitTest('bbl.', ['⠃⠃⠇']);
+  this.executeUnitTest('bbl', ['⠃⠃⠇']);
+  this.executeUnitTest('cu', ['⠉⠥']);
+  this.executeUnitTest('cu.', ['⠉⠥']);
+  this.executeUnitTest('fl. oz.', ['⠋⠇⠸⠲⠀⠕⠵⠸⠲']);
+  this.executeUnitTest('gal', ['⠛⠁⠇']);
+  this.executeUnitTest('gal.', ['⠛⠁⠇']);
+  this.executeUnitTest('pt', ['⠏⠞']);
+  this.executeUnitTest('pt.', ['⠏⠞']);
+  this.executeUnitTest('qt', ['⠟⠞']);
+  this.executeUnitTest('qt.', ['⠟⠞']);
+  this.executeUnitTest('tbsp', ['⠞⠃⠎⠏']);
+  this.executeUnitTest('tbsp.', ['⠞⠃⠎⠏']);
+  this.executeUnitTest('tsp', ['⠞⠎⠏']);
+  this.executeUnitTest('tsp.', ['⠞⠎⠏']);
+  this.executeUnitTest('cc', ['⠉⠉']);
+  this.executeUnitTest('kl', ['⠅⠇']);
+  this.executeUnitTest('l', ['⠇']);
+  this.executeUnitTest('ml', ['⠍⠇']);
+  this.executeUnitTest('lb', ['⠇⠃']);
+  this.executeUnitTest('lb.', ['⠇⠃']);
+  this.executeUnitTest('LT', ['⠇⠞']);
+  this.executeUnitTest('L.T.', ['⠇⠞']);
+  this.executeUnitTest('oz', ['⠕⠵']);
+  this.executeUnitTest('oz.', ['⠕⠵']);
+  this.executeUnitTest('g', ['⠛⠗']);
+  this.executeUnitTest('gr', ['⠛⠗']);
+  this.executeUnitTest('kg', ['⠅⠛']);
+  this.executeUnitTest('mcg', ['⠨⠍⠛']);
+  this.executeUnitTest('µg', ['⠍⠉⠛']);
+  this.executeUnitTest('mg', ['⠍⠛']);
+  this.executeUnitTest('t', ['⠞']);
+  this.executeUnitTest('T', ['⠞']);
+};

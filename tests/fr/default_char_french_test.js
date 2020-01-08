@@ -1,4350 +1,4404 @@
-fr, default, "0", "zero"
-fr, default, "1", "one"
-fr, default, "2", "two"
-fr, default, "3", "three"
-fr, default, "4", "four"
-fr, default, "5", "five"
-fr, default, "6", "six"
-fr, default, "7", "seven"
-fr, default, "8", "eight"
-fr, default, "9", "nine"
-fr, default, "deg", "degree"
-fr, default, "det", "déterminant"
-fr, default, "dim", "dimension"
-fr, default, "hom", "hom"
-fr, default, "Hom", "hom"
-fr, default, "ker", "kernel"
-fr, default, "Tr", "trace"
-fr, default, "tr", "trace"
-fr, default, "log", "log"
-fr, default, "ln", "logarithme népérien"
-fr, default, "lg", "log base 10"
-fr, default, "exp", "exp"
-fr, default, "expt", "exp"
-fr, default, "gcd", "gcd"
-fr, default, "lcm", "lcm"
-fr, default, "arg", "arg"
-fr, default, "im", "imaginary"
-fr, default, "re", "real"
-fr, default, "inf", "inf"
-fr, default, "lim", "limite"
-fr, default, "lim inf", "limite inf"
-fr, default, "liminf", "liminf"
-fr, default, "lim sup", "limite sup"
-fr, default, "limsup", "limsup"
-fr, default, "max", "max"
-fr, default, "min", "min"
-fr, default, "sup", "sup"
-fr, default, "injlim", "colimit"
-fr, default, "inj lim", "inj limite"
-fr, default, "projlim", "limit"
-fr, default, "proj lim", "proj limite"
-fr, default, "mod", "mod"
-fr, default, "Pr", "probability"
-fr, default, "cosh", "cosinus hyperbolique"
-fr, default, "coth", "cotangente hyperbolique"
-fr, default, "csch", "cosécante hyperbolique"
-fr, default, "sech", "sécante hyperbolique"
-fr, default, "sinh", "sinus hyperbolique"
-fr, default, "tanh", "tangente hyperbolique"
-fr, default, "arcosh", "area hyperbolic cosine"
-fr, default, "arccosh", "area hyperbolic cosine"
-fr, default, "arcoth", "area hyperbolic cotangent"
-fr, default, "arccoth", "area hyperbolic cotangent"
-fr, default, "arcsch", "area hyperbolic cosecant"
-fr, default, "arccsch", "area hyperbolic cosecant"
-fr, default, "arsech", "area hyperbolic secant"
-fr, default, "arcsech", "area hyperbolic secant"
-fr, default, "arsinh", "area hyperbolic sine"
-fr, default, "arcsinh", "area hyperbolic sine"
-fr, default, "artanh", "area hyperbolic tangent"
-fr, default, "arctanh", "area hyperbolic tangent"
-fr, default, "cos", "cosinus"
-fr, default, "cosine", "cosinus"
-fr, default, "cot", "cotangente"
-fr, default, "csc", "cosécante"
-fr, default, "sec", "sécante"
-fr, default, "sin", "sinus"
-fr, default, "sine", "sinus"
-fr, default, "tan", "tangente"
-fr, default, "arccos", "arc cosine"
-fr, default, "arccot", "arc cotangent"
-fr, default, "arccsc", "arc cosecant"
-fr, default, "arcsec", "arc secant"
-fr, default, "arcsin", "arc sine"
-fr, default, "arctan", "arc tangent"
-fr, default, "Α", "Alpha majuscule"
-fr, default, "Β", "Bêta majuscule"
-fr, default, "Γ", "Gamma majuscule"
-fr, default, "Δ", "Delta majuscule"
-fr, default, "Ε", "Epsilon majuscule"
-fr, default, "Ζ", "Zêta majuscule"
-fr, default, "Η", "Êta majuscule"
-fr, default, "Θ", "Thêta majuscule"
-fr, default, "Ι", "Iota majuscule"
-fr, default, "Κ", "Kappa majuscule"
-fr, default, "Λ", "Lambda majuscule"
-fr, default, "Μ", "Mû majuscule"
-fr, default, "Ν", "Nû majuscule"
-fr, default, "Ξ", "Xi majuscule"
-fr, default, "Ο", "Omicron majuscule"
-fr, default, "Π", "Pi majuscule"
-fr, default, "Ρ", "Rho majuscule"
-fr, default, "Σ", "Sigma majuscule"
-fr, default, "Τ", "Tau majuscule"
-fr, default, "Υ", "Upsilon majuscule"
-fr, default, "Φ", "Phi majuscule"
-fr, default, "Χ", "Chi majuscule"
-fr, default, "Ψ", "Psi majuscule"
-fr, default, "Ω", "Oméga majuscule"
-fr, default, "α", "alpha"
-fr, default, "β", "bêta"
-fr, default, "γ", "gamma"
-fr, default, "δ", "delta"
-fr, default, "ε", "epsilon"
-fr, default, "ζ", "zêta"
-fr, default, "η", "êta"
-fr, default, "θ", "thêta"
-fr, default, "ι", "iota"
-fr, default, "κ", "kappa"
-fr, default, "λ", "lambda"
-fr, default, "μ", "mû"
-fr, default, "ν", "nû"
-fr, default, "ξ", "xi"
-fr, default, "ο", "omicron"
-fr, default, "π", "pi"
-fr, default, "ρ", "rho"
-fr, default, "ς", "sigma final"
-fr, default, "σ", "sigma"
-fr, default, "τ", "tau"
-fr, default, "υ", "upsilon"
-fr, default, "φ", "phi"
-fr, default, "χ", "chi"
-fr, default, "ψ", "psi"
-fr, default, "ω", "oméga"
-fr, default, "ᴦ", "small cap gamma"
-fr, default, "ᴧ", "small cap lamda"
-fr, default, "ᴨ", "small cap pi"
-fr, default, "ᴩ", "small cap rho"
-fr, default, "ᴪ", "small cap psi"
-fr, default, "ᵞ", "superscript gamma"
-fr, default, "ᵠ", "superscript phi"
-fr, default, "ᵦ", "subscript beta"
-fr, default, "ᵧ", "subscript gamma"
-fr, default, "ᵨ", "subscript rho"
-fr, default, "ᵩ", "subscript phi"
-fr, default, "ᵪ", "subscript chi"
-fr, default, "ϐ", "bêta grec"
-fr, default, "ϑ", "thêta cursif"
-fr, default, "ϕ", "phi droit"
-fr, default, "ϖ", "pi cursif"
-fr, default, "ϗ", "ligature kai"
-fr, default, "ϰ", "kappa cursif"
-fr, default, "ϱ", "rho à queue"
-fr, default, "ϵ", "epsilon"
-fr, default, "϶", "epsilon lunaire réfléchi"
-fr, default, "ϴ", "Thêta majuscule"
-fr, default, "𝚹", "Thêta majuscule en grasse"
-fr, default, "𝛳", "Thêta majuscule en italique"
-fr, default, "𝝧", "Thêta majuscule en sans empattement grasse"
-fr, default, "𝛁", "symbole mathématique gras nabla"
-fr, default, "𝛛", "symbole mathématique gras dérivée partielle"
-fr, default, "𝛜", "symbole mathématique gras epsilon"
-fr, default, "𝛝", "symbole mathématique gras thêta"
-fr, default, "𝛞", "symbole mathématique gras kappa"
-fr, default, "𝛟", "symbole mathématique gras phi"
-fr, default, "𝛠", "symbole mathématique gras rhô"
-fr, default, "𝛡", "symbole mathématique gras pi"
-fr, default, "𝛻", "symbole mathématique italique nabla"
-fr, default, "𝜕", "symbole mathématique italique dérivée partielle"
-fr, default, "𝜖", "symbole mathématique italique epsilon"
-fr, default, "𝜗", "symbole mathématique italique thêta"
-fr, default, "𝜘", "symbole mathématique italique kappa"
-fr, default, "𝜙", "symbole mathématique italique phi"
-fr, default, "𝜚", "symbole mathématique italique rhô"
-fr, default, "𝜛", "symbole mathématique italique pi"
-fr, default, "𝝯", "symbole mathématique gras sans empattement nabla"
-fr, default, "𝞉", "symbole mathématique gras sans empattement dérivée partielle"
-fr, default, "𝞊", "symbole mathématique gras sans empattement epsilon"
-fr, default, "𝞋", "symbole mathématique gras sans empattement thêta"
-fr, default, "𝞌", "symbole mathématique gras sans empattement kappa"
-fr, default, "𝞍", "symbole mathématique gras sans empattement phi"
-fr, default, "𝞎", "symbole mathématique gras sans empattement rhô"
-fr, default, "𝞏", "symbole mathématique gras sans empattement pi"
-fr, default, "𝟊", "bold cap digamma"
-fr, default, "𝟋", "bold digamma"
-fr, default, "𝚨", "Alpha majuscule en gras"
-fr, default, "𝚩", "Bêta majuscule en gras"
-fr, default, "𝚪", "Gamma majuscule en gras"
-fr, default, "𝚫", "Delta majuscule en gras"
-fr, default, "𝚬", "Epsilon majuscule en gras"
-fr, default, "𝚭", "Dzêta majuscule en gras"
-fr, default, "𝚮", "Êta majuscule en gras"
-fr, default, "𝚯", "Thêta majuscule en gras"
-fr, default, "𝚰", "Iota majuscule en gras"
-fr, default, "𝚱", "Kappa majuscule en gras"
-fr, default, "𝚲", "Lambda majuscule en gras"
-fr, default, "𝚳", "Mu majuscule en gras"
-fr, default, "𝚴", "Nu majuscule en gras"
-fr, default, "𝚵", "Xi majuscule en gras"
-fr, default, "𝚶", "Omicron majuscule en gras"
-fr, default, "𝚷", "Pi majuscule en gras"
-fr, default, "𝚸", "Rhô majuscule en gras"
-fr, default, "𝚺", "Sigma majuscule en gras"
-fr, default, "𝚻", "Tau majuscule en gras"
-fr, default, "𝚼", "Upsilon majuscule en gras"
-fr, default, "𝚽", "Phi majuscule en gras"
-fr, default, "𝚾", "Chi majuscule en gras"
-fr, default, "𝚿", "Psi majuscule en gras"
-fr, default, "𝛀", "Oméga majuscule en gras"
-fr, default, "𝛂", "alpha en gras"
-fr, default, "𝛃", "bêta en gras"
-fr, default, "𝛄", "gamma en gras"
-fr, default, "𝛅", "delta en gras"
-fr, default, "𝛆", "epsilon en gras"
-fr, default, "𝛇", "dzêta en gras"
-fr, default, "𝛈", "êta en gras"
-fr, default, "𝛉", "thêta en gras"
-fr, default, "𝛊", "iota en gras"
-fr, default, "𝛋", "kappa en gras"
-fr, default, "𝛌", "lambda en gras"
-fr, default, "𝛍", "mu en gras"
-fr, default, "𝛎", "nu en gras"
-fr, default, "𝛏", "xi en gras"
-fr, default, "𝛐", "omicron en gras"
-fr, default, "𝛑", "pi en gras"
-fr, default, "𝛒", "rhô en gras"
-fr, default, "𝛓", "mathématique grasse sigma final"
-fr, default, "𝛔", "sigma en gras"
-fr, default, "𝛕", "tau en gras"
-fr, default, "𝛖", "upsilon en gras"
-fr, default, "𝛗", "phi en gras"
-fr, default, "𝛘", "chi en gras"
-fr, default, "𝛙", "psi en gras"
-fr, default, "𝛚", "oméga en gras"
-fr, default, "𝛢", "Alpha majuscule en italique"
-fr, default, "𝛣", "Bêta majuscule en italique"
-fr, default, "𝛤", "Gamma majuscule en italique"
-fr, default, "𝛥", "Delta majuscule en italique"
-fr, default, "𝛦", "Epsilon majuscule en italique"
-fr, default, "𝛧", "Dzêta majuscule en italique"
-fr, default, "𝛨", "Êta majuscule en italique"
-fr, default, "𝛩", "Thêta majuscule en italique"
-fr, default, "𝛪", "Iota majuscule en italique"
-fr, default, "𝛫", "Kappa majuscule en italique"
-fr, default, "𝛬", "Lambda majuscule en italique"
-fr, default, "𝛭", "Mu majuscule en italique"
-fr, default, "𝛮", "Nu majuscule en italique"
-fr, default, "𝛯", "Xi majuscule en italique"
-fr, default, "𝛰", "Omicron majuscule en italique"
-fr, default, "𝛱", "Pi majuscule en italique"
-fr, default, "𝛲", "Rhô majuscule en italique"
-fr, default, "𝛴", "Sigma majuscule en italique"
-fr, default, "𝛵", "Tau majuscule en italique"
-fr, default, "𝛶", "Upsilon majuscule en italique"
-fr, default, "𝛷", "Phi majuscule en italique"
-fr, default, "𝛸", "Chi majuscule en italique"
-fr, default, "𝛹", "Psi majuscule en italique"
-fr, default, "𝛺", "Oméga majuscule en italique"
-fr, default, "𝛼", "alpha en italique"
-fr, default, "𝛽", "bêta en italique"
-fr, default, "𝛾", "gamma en italique"
-fr, default, "𝛿", "delta en italique"
-fr, default, "𝜀", "epsilon en italique"
-fr, default, "𝜁", "dzêta en italique"
-fr, default, "𝜂", "êta en italique"
-fr, default, "𝜃", "thêta en italique"
-fr, default, "𝜄", "iota en italique"
-fr, default, "𝜅", "kappa en italique"
-fr, default, "𝜆", "lambda en italique"
-fr, default, "𝜇", "mu en italique"
-fr, default, "𝜈", "nu en italique"
-fr, default, "𝜉", "xi en italique"
-fr, default, "𝜊", "omicron en italique"
-fr, default, "𝜋", "pi en italique"
-fr, default, "𝜌", "rhô en italique"
-fr, default, "𝜍", "mathématique italique sigma final"
-fr, default, "𝜎", "sigma en italique"
-fr, default, "𝜏", "tau en italique"
-fr, default, "𝜐", "upsilon en italique"
-fr, default, "𝜑", "phi en italique"
-fr, default, "𝜒", "chi en italique"
-fr, default, "𝜓", "psi en italique"
-fr, default, "𝜔", "oméga en italique"
-fr, default, "𝜜", "Alpha majuscule en italique gras"
-fr, default, "𝜝", "Bêta majuscule en italique gras"
-fr, default, "𝜞", "Gamma majuscule en italique gras"
-fr, default, "𝜟", "Delta majuscule en italique gras"
-fr, default, "𝜠", "Epsilon majuscule en italique gras"
-fr, default, "𝜡", "Dzêta majuscule en italique gras"
-fr, default, "𝜢", "Êta majuscule en italique gras"
-fr, default, "𝜣", "Thêta majuscule en italique gras"
-fr, default, "𝜤", "Iota majuscule en italique gras"
-fr, default, "𝜥", "Kappa majuscule en italique gras"
-fr, default, "𝜦", "Lambda majuscule en italique gras"
-fr, default, "𝜧", "Mu majuscule en italique gras"
-fr, default, "𝜨", "Nu majuscule en italique gras"
-fr, default, "𝜩", "Xi majuscule en italique gras"
-fr, default, "𝜪", "Omicron majuscule en italique gras"
-fr, default, "𝜫", "Pi majuscule en italique gras"
-fr, default, "𝜬", "Rhô majuscule en italique gras"
-fr, default, "𝜮", "Sigma majuscule en italique gras"
-fr, default, "𝜯", "Tau majuscule en italique gras"
-fr, default, "𝜰", "Upsilon majuscule en italique gras"
-fr, default, "𝜱", "Phi majuscule en italique gras"
-fr, default, "𝜲", "Chi majuscule en italique gras"
-fr, default, "𝜳", "Psi majuscule en italique gras"
-fr, default, "𝜴", "Oméga majuscule en italique gras"
-fr, default, "𝜶", "alpha en italique gras"
-fr, default, "𝜷", "bêta en italique gras"
-fr, default, "𝜸", "gamma en italique gras"
-fr, default, "𝜹", "delta en italique gras"
-fr, default, "𝜺", "epsilon en italique gras"
-fr, default, "𝜻", "dzêta en italique gras"
-fr, default, "𝜼", "êta en italique gras"
-fr, default, "𝜽", "thêta en italique gras"
-fr, default, "𝜾", "iota en italique gras"
-fr, default, "𝜿", "kappa en italique gras"
-fr, default, "𝝀", "lambda en italique gras"
-fr, default, "𝝁", "mu en italique gras"
-fr, default, "𝝂", "nu en italique gras"
-fr, default, "𝝃", "xi en italique gras"
-fr, default, "𝝄", "omicron en italique gras"
-fr, default, "𝝅", "pi en italique gras"
-fr, default, "𝝆", "rhô en italique gras"
-fr, default, "𝝇", "mathématique italique grasse sigma final"
-fr, default, "𝝈", "sigma en italique gras"
-fr, default, "𝝉", "tau en italique gras"
-fr, default, "𝝊", "upsilon en italique gras"
-fr, default, "𝝋", "phi en italique gras"
-fr, default, "𝝌", "chi en italique gras"
-fr, default, "𝝍", "psi en italique gras"
-fr, default, "𝝎", "oméga en italique gras"
-fr, default, "𝝖", "Alpha majuscule en sans empattement gras"
-fr, default, "𝝗", "Bêta majuscule en sans empattement gras"
-fr, default, "𝝘", "Gamma majuscule en sans empattement gras"
-fr, default, "𝝙", "Delta majuscule en sans empattement gras"
-fr, default, "𝝚", "Epsilon majuscule en sans empattement gras"
-fr, default, "𝝛", "Dzêta majuscule en sans empattement gras"
-fr, default, "𝝜", "Êta majuscule en sans empattement gras"
-fr, default, "𝝝", "Thêta majuscule en sans empattement gras"
-fr, default, "𝝞", "Iota majuscule en sans empattement gras"
-fr, default, "𝝟", "Kappa majuscule en sans empattement gras"
-fr, default, "𝝠", "Lambda majuscule en sans empattement gras"
-fr, default, "𝝡", "Mu majuscule en sans empattement gras"
-fr, default, "𝝢", "Nu majuscule en sans empattement gras"
-fr, default, "𝝣", "Xi majuscule en sans empattement gras"
-fr, default, "𝝤", "Omicron majuscule en sans empattement gras"
-fr, default, "𝝥", "Pi majuscule en sans empattement gras"
-fr, default, "𝝦", "Rhô majuscule en sans empattement gras"
-fr, default, "𝝨", "Sigma majuscule en sans empattement gras"
-fr, default, "𝝩", "Tau majuscule en sans empattement gras"
-fr, default, "𝝪", "Upsilon majuscule en sans empattement gras"
-fr, default, "𝝫", "Phi majuscule en sans empattement gras"
-fr, default, "𝝬", "Chi majuscule en sans empattement gras"
-fr, default, "𝝭", "Psi majuscule en sans empattement gras"
-fr, default, "𝝮", "Oméga majuscule en sans empattement gras"
-fr, default, "𝝰", "alpha en sans empattement gras"
-fr, default, "𝝱", "bêta en sans empattement gras"
-fr, default, "𝝲", "gamma en sans empattement gras"
-fr, default, "𝝳", "delta en sans empattement gras"
-fr, default, "𝝴", "epsilon en sans empattement gras"
-fr, default, "𝝵", "dzêta en sans empattement gras"
-fr, default, "𝝶", "êta en sans empattement gras"
-fr, default, "𝝷", "thêta en sans empattement gras"
-fr, default, "𝝸", "iota en sans empattement gras"
-fr, default, "𝝹", "kappa en sans empattement gras"
-fr, default, "𝝺", "lambda en sans empattement gras"
-fr, default, "𝝻", "mu en sans empattement gras"
-fr, default, "𝝼", "nu en sans empattement gras"
-fr, default, "𝝽", "xi en sans empattement gras"
-fr, default, "𝝾", "omicron en sans empattement gras"
-fr, default, "𝝿", "pi en sans empattement gras"
-fr, default, "𝞀", "rhô en sans empattement gras"
-fr, default, "𝞁", "mathématique grasse sans empattement sigma final"
-fr, default, "𝞂", "sigma en sans empattement gras"
-fr, default, "𝞃", "tau en sans empattement gras"
-fr, default, "𝞄", "upsilon en sans empattement gras"
-fr, default, "𝞅", "phi en sans empattement gras"
-fr, default, "𝞆", "chi en sans empattement gras"
-fr, default, "𝞇", "psi en sans empattement gras"
-fr, default, "𝞈", "oméga en sans empattement gras"
-fr, default, "𝞐", "Alpha majuscule en sans empattement italique gras"
-fr, default, "𝞑", "Bêta majuscule en sans empattement italique gras"
-fr, default, "𝞒", "Gamma majuscule en sans empattement italique gras"
-fr, default, "𝞓", "Delta majuscule en sans empattement italique gras"
-fr, default, "𝞔", "Epsilon majuscule en sans empattement italique gras"
-fr, default, "𝞕", "Dzêta majuscule en sans empattement italique gras"
-fr, default, "𝞖", "Êta majuscule en sans empattement italique gras"
-fr, default, "𝞗", "Thêta majuscule en sans empattement italique gras"
-fr, default, "𝞘", "Iota majuscule en sans empattement italique gras"
-fr, default, "𝞙", "Kappa majuscule en sans empattement italique gras"
-fr, default, "𝞚", "Lambda majuscule en sans empattement italique gras"
-fr, default, "𝞛", "Mu majuscule en sans empattement italique gras"
-fr, default, "𝞜", "Nu majuscule en sans empattement italique gras"
-fr, default, "𝞝", "Xi majuscule en sans empattement italique gras"
-fr, default, "𝞞", "Omicron majuscule en sans empattement italique gras"
-fr, default, "𝞟", "Pi majuscule en sans empattement italique gras"
-fr, default, "𝞠", "Rhô majuscule en sans empattement italique gras"
-fr, default, "𝞢", "Sigma majuscule en sans empattement italique gras"
-fr, default, "𝞣", "Tau majuscule en sans empattement italique gras"
-fr, default, "𝞤", "Upsilon majuscule en sans empattement italique gras"
-fr, default, "𝞥", "Phi majuscule en sans empattement italique gras"
-fr, default, "𝞦", "Chi majuscule en sans empattement italique gras"
-fr, default, "𝞧", "Psi majuscule en sans empattement italique gras"
-fr, default, "𝞨", "Oméga majuscule en sans empattement italique gras"
-fr, default, "𝞪", "alpha en sans empattement italique gras"
-fr, default, "𝞫", "bêta en sans empattement italique gras"
-fr, default, "𝞬", "gamma en sans empattement italique gras"
-fr, default, "𝞭", "delta en sans empattement italique gras"
-fr, default, "𝞮", "epsilon en sans empattement italique gras"
-fr, default, "𝞯", "dzêta en sans empattement italique gras"
-fr, default, "𝞰", "êta en sans empattement italique gras"
-fr, default, "𝞱", "thêta en sans empattement italique gras"
-fr, default, "𝞲", "iota en sans empattement italique gras"
-fr, default, "𝞳", "kappa en sans empattement italique gras"
-fr, default, "𝞴", "lambda en sans empattement italique gras"
-fr, default, "𝞵", "mu en sans empattement italique gras"
-fr, default, "𝞶", "nu en sans empattement italique gras"
-fr, default, "𝞷", "xi en sans empattement italique gras"
-fr, default, "𝞸", "omicron en sans empattement italique gras"
-fr, default, "𝞹", "pi en sans empattement italique gras"
-fr, default, "𝞺", "rhô en sans empattement italique gras"
-fr, default, "𝞻", "mathématique italique grasse sans empattement sigma final"
-fr, default, "𝞼", "sigma en sans empattement italique gras"
-fr, default, "𝞽", "tau en sans empattement italique gras"
-fr, default, "𝞾", "upsilon en sans empattement italique gras"
-fr, default, "𝞿", "phi en sans empattement italique gras"
-fr, default, "𝟀", "chi en sans empattement italique gras"
-fr, default, "𝟁", "psi en sans empattement italique gras"
-fr, default, "𝟂", "oméga en sans empattement italique gras"
-fr, default, "ℵ", "alef"
-fr, default, "ℶ", "bèt"
-fr, default, "ℷ", "guimel"
-fr, default, "ℸ", "dalèt"
-fr, default, "ǖ", "u double overdot overbar"
-fr, default, "ǘ", "u double overdot acute"
-fr, default, "ǚ", "u double overdot caron"
-fr, default, "ǜ", "u double overdot grave"
-fr, default, "ǟ", "a double overdot overbar"
-fr, default, "ǡ", "a overdot overbar"
-fr, default, "ǭ", "o ogonek overbar"
-fr, default, "ǻ", "a ring above acute"
-fr, default, "ȫ", "o double overdot overbar"
-fr, default, "ȭ", "o tilde overbar"
-fr, default, "ȱ", "o overdot overbar"
-fr, default, "ḉ", "c cédille et accent aigu"
-fr, default, "ḕ", "e macron et accent grave"
-fr, default, "ḗ", "e macron et accent aigu"
-fr, default, "ḝ", "e cédille et brève"
-fr, default, "ḯ", "i tréma et accent aigu"
-fr, default, "ḹ", "l point souscrit et macron"
-fr, default, "ṍ", "o tilde et accent aigu"
-fr, default, "ṏ", "o tilde et tréma"
-fr, default, "ṑ", "o macron et accent grave"
-fr, default, "ṓ", "o macron et accent aigu"
-fr, default, "ṝ", "r point souscrit et macron"
-fr, default, "ṥ", "s accent aigu et point en chef"
-fr, default, "ṧ", "s caron et point en chef"
-fr, default, "ṩ", "s point souscrit et point en chef"
-fr, default, "ṹ", "u tilde et accent aigu"
-fr, default, "ṻ", "u macron et tréma"
-fr, default, "ấ", "a accent circonflexe et accent aigu"
-fr, default, "ầ", "a accent circonflexe et accent grave"
-fr, default, "ẩ", "a accent circonflexe et crochet en chef"
-fr, default, "ẫ", "a accent circonflexe et tilde"
-fr, default, "ậ", "a accent circonflexe et point souscrit"
-fr, default, "ắ", "a brève et accent aigu"
-fr, default, "ằ", "a brève et accent grave"
-fr, default, "ẳ", "a brève et crochet en chef"
-fr, default, "ẵ", "a brève et tilde"
-fr, default, "ặ", "a brève et point souscrit"
-fr, default, "ế", "e accent circonflexe et accent aigu"
-fr, default, "ề", "e accent circonflexe et accent grave"
-fr, default, "ể", "e accent circonflexe et crochet en chef"
-fr, default, "ễ", "e accent circonflexe et tilde"
-fr, default, "ệ", "e accent circonflexe et point souscrit"
-fr, default, "ố", "o accent circonflexe et accent aigu"
-fr, default, "ồ", "o accent circonflexe et accent grave"
-fr, default, "ổ", "o accent circonflexe et crochet en chef"
-fr, default, "ỗ", "o accent circonflexe et tilde"
-fr, default, "ộ", "o accent circonflexe et point souscrit"
-fr, default, "ớ", "o cornu accent aigu"
-fr, default, "ờ", "o cornu accent grave"
-fr, default, "ở", "o cornu crochet en chef"
-fr, default, "ỡ", "o cornu tilde"
-fr, default, "ợ", "o cornu point souscrit"
-fr, default, "ứ", "u cornu accent aigu"
-fr, default, "ừ", "u cornu accent grave"
-fr, default, "ử", "u cornu crochet en chef"
-fr, default, "ữ", "u cornu tilde"
-fr, default, "ự", "u cornu point souscrit"
-fr, default, "a", "a"
-fr, default, "b", "b"
-fr, default, "c", "c"
-fr, default, "d", "d"
-fr, default, "e", "e"
-fr, default, "f", "f"
-fr, default, "g", "g"
-fr, default, "h", "h"
-fr, default, "i", "i"
-fr, default, "j", "j"
-fr, default, "k", "k"
-fr, default, "l", "l"
-fr, default, "m", "m"
-fr, default, "n", "n"
-fr, default, "o", "o"
-fr, default, "p", "p"
-fr, default, "q", "q"
-fr, default, "r", "r"
-fr, default, "s", "s"
-fr, default, "t", "t"
-fr, default, "u", "u"
-fr, default, "v", "v"
-fr, default, "w", "w"
-fr, default, "x", "x"
-fr, default, "y", "y"
-fr, default, "z", "z"
-fr, default, "ａ", "a"
-fr, default, "ｂ", "b"
-fr, default, "ｃ", "c"
-fr, default, "ｄ", "d"
-fr, default, "ｅ", "e"
-fr, default, "ｆ", "f"
-fr, default, "ｇ", "g"
-fr, default, "ｈ", "h"
-fr, default, "ｉ", "i"
-fr, default, "ｊ", "j"
-fr, default, "ｋ", "k"
-fr, default, "ｌ", "l"
-fr, default, "ｍ", "m"
-fr, default, "ｎ", "n"
-fr, default, "ｏ", "o"
-fr, default, "ｐ", "p"
-fr, default, "ｑ", "q"
-fr, default, "ｒ", "r"
-fr, default, "ｓ", "s"
-fr, default, "ｔ", "t"
-fr, default, "ｕ", "u"
-fr, default, "ｖ", "v"
-fr, default, "ｗ", "w"
-fr, default, "ｘ", "x"
-fr, default, "ｙ", "y"
-fr, default, "ｚ", "z"
-fr, default, "ø", "o barré"
-fr, default, "đ", "d barré"
-fr, default, "ħ", "h barré"
-fr, default, "ł", "l barré"
-fr, default, "ŧ", "t barré"
-fr, default, "ƀ", "b with stroke"
-fr, default, "ƛ", "lambda barré"
-fr, default, "ƶ", "z with stroke"
-fr, default, "ƾ", "latin letter inverted glottal stop with stroke"
-fr, default, "ǥ", "g with stroke"
-fr, default, "ǿ", "o with stroke and acute"
-fr, default, "ȼ", "c with stroke"
-fr, default, "ɇ", "e with stroke"
-fr, default, "ɉ", "j with stroke"
-fr, default, "ɍ", "r with stroke"
-fr, default, "ɏ", "y with stroke"
-fr, default, "ɟ", "dotless j with stroke"
-fr, default, "ɨ", "i with stroke"
-fr, default, "ʄ", "dotless j with stroke and hook"
-fr, default, "ʡ", "latin letter glottal stop with stroke"
-fr, default, "ʢ", "latin letter reversed glottal stop with stroke"
-fr, default, "ᴓ", "sideways o with stroke"
-fr, default, "ᵼ", "iota with stroke"
-fr, default, "ᵽ", "p with stroke"
-fr, default, "ᵿ", "upsilon with stroke"
-fr, default, "ẜ", "long s with diagonal stroke"
-fr, default, "ẝ", "long s with high stroke"
-fr, default, "ƍ", "turned delta"
-fr, default, "ẛ", "s long point en chef"
-fr, default, "ẟ", "delta"
-fr, default, "ĸ", "kra"
-fr, default, "ſ", "long s"
-fr, default, "ƃ", "b with topbar"
-fr, default, "ƅ", "tone six"
-fr, default, "ƈ", "c with hook"
-fr, default, "ƌ", "d with topbar"
-fr, default, "ƒ", "f cursif"
-fr, default, "ƕ", "hv"
-fr, default, "ƙ", "k with hook"
-fr, default, "ƚ", "l rayé"
-fr, default, "ƞ", "n with long right leg"
-fr, default, "ơ", "o with horn"
-fr, default, "ƣ", "oi"
-fr, default, "ƥ", "p with hook"
-fr, default, "ƨ", "tone two"
-fr, default, "ƪ", "latin letter reversed esh loop"
-fr, default, "ƫ", "t with palatal hook"
-fr, default, "ƭ", "t with hook"
-fr, default, "ư", "u with horn"
-fr, default, "ƴ", "y with hook"
-fr, default, "ƹ", "ezh reversed"
-fr, default, "ƺ", "ezh with tail"
-fr, default, "ƽ", "tone five"
-fr, default, "ƿ", "latin letter wynn"
-fr, default, "ǆ", "dz with caron"
-fr, default, "ǉ", "lj"
-fr, default, "ǌ", "nj"
-fr, default, "ǣ", "ae with macron"
-fr, default, "ǯ", "ezh with caron"
-fr, default, "ǳ", "dz"
-fr, default, "ȝ", "yogh"
-fr, default, "ɮ", "lezh"
-fr, default, "ʒ", "ezh"
-fr, default, "ʓ", "ezh with curl"
-fr, default, "ʤ", "dezh digraph"
-fr, default, "ǝ", "turned e"
-fr, default, "ǽ", "ae with acute"
-fr, default, "ȡ", "d with curl"
-fr, default, "ȣ", "ou"
-fr, default, "ȥ", "z with hook"
-fr, default, "ȴ", "l with curl"
-fr, default, "ȵ", "n with curl"
-fr, default, "ȶ", "t with curl"
-fr, default, "ȸ", "db digraph"
-fr, default, "ȹ", "qp digraph"
-fr, default, "ȿ", "s with swash tail"
-fr, default, "ɀ", "z with swash tail"
-fr, default, "ɂ", "glottal stop"
-fr, default, "ɋ", "q with hook tail"
-fr, default, "ɐ", "turned a"
-fr, default, "ɑ", "alpha"
-fr, default, "ɒ", "turned alpha"
-fr, default, "ɓ", "b with hook"
-fr, default, "ɔ", "open o"
-fr, default, "ɕ", "c with curl"
-fr, default, "ɖ", "d with tail"
-fr, default, "ɗ", "d with hook"
-fr, default, "ɘ", "reversed e"
-fr, default, "ə", "schwa"
-fr, default, "ɚ", "schwa with hook"
-fr, default, "ɛ", "e ouvert"
-fr, default, "ɜ", "reversed open e"
-fr, default, "ɝ", "reversed open e with hook"
-fr, default, "ɞ", "closed reversed open e"
-fr, default, "ɠ", "g with hook"
-fr, default, "ɡ", "script g"
-fr, default, "ɣ", "gamma"
-fr, default, "ɤ", "rams horn"
-fr, default, "ɥ", "turned h"
-fr, default, "ɦ", "h with hook"
-fr, default, "ɧ", "heng with hook"
-fr, default, "ɩ", "iota"
-fr, default, "ɫ", "l with middle tilde"
-fr, default, "ɬ", "l with belt"
-fr, default, "ɭ", "l with retroflex hook"
-fr, default, "ɯ", "turned m"
-fr, default, "ɰ", "turned m with long leg"
-fr, default, "ɱ", "m with hook"
-fr, default, "ɲ", "n with left hook"
-fr, default, "ɳ", "n with retroflex hook"
-fr, default, "ɵ", "barred o"
-fr, default, "ɷ", "closed omega"
-fr, default, "ɸ", "phi"
-fr, default, "ɹ", "turned r"
-fr, default, "ɺ", "turned r with long leg"
-fr, default, "ɻ", "turned r with hook"
-fr, default, "ɼ", "r with long leg"
-fr, default, "ɽ", "r with tail"
-fr, default, "ɾ", "r with fishhook"
-fr, default, "ɿ", "reversed r with fishhook"
-fr, default, "ʂ", "s with hook"
-fr, default, "ʃ", "esh"
-fr, default, "ʅ", "squat reversed esh"
-fr, default, "ʆ", "esh with curl"
-fr, default, "ʇ", "turned t"
-fr, default, "ʈ", "t with retroflex hook"
-fr, default, "ʉ", "u bar"
-fr, default, "ʊ", "upsilon"
-fr, default, "ʋ", "v with hook"
-fr, default, "ʌ", "turned v"
-fr, default, "ʍ", "turned w"
-fr, default, "ʎ", "turned y"
-fr, default, "ʐ", "z with retroflex hook"
-fr, default, "ʑ", "z with curl"
-fr, default, "ʕ", "latin letter pharyngeal voiced fricative"
-fr, default, "ʖ", "latin letter inverted glottal stop"
-fr, default, "ʗ", "latin letter stretched c"
-fr, default, "ʘ", "latin letter bilabial click"
-fr, default, "ʚ", "closed open e"
-fr, default, "ʞ", "turned k"
-fr, default, "ʠ", "q with hook"
-fr, default, "ʣ", "dz digraph"
-fr, default, "ʥ", "dz digraph with curl"
-fr, default, "ʦ", "ts digraph"
-fr, default, "ʧ", "tesh digraph"
-fr, default, "ʨ", "tc digraph with curl"
-fr, default, "ʩ", "feng digraph"
-fr, default, "ʪ", "ls digraph"
-fr, default, "ʫ", "lz digraph"
-fr, default, "ʬ", "latin letter bilabial percussive"
-fr, default, "ʭ", "latin letter bidental percussive"
-fr, default, "ʮ", "turned h with fishhook"
-fr, default, "ʯ", "turned h with fishhook and tail"
-fr, default, "ᴂ", "turned ae"
-fr, default, "ᴈ", "turned open e"
-fr, default, "ᴉ", "turned i"
-fr, default, "ᴑ", "sideways o"
-fr, default, "ᴒ", "sideways open o"
-fr, default, "ᴔ", "turned oe"
-fr, default, "ᴖ", "top half o"
-fr, default, "ᴗ", "bottom half o"
-fr, default, "ᴝ", "sideways u"
-fr, default, "ᴞ", "sideways diaeresized u"
-fr, default, "ᴟ", "sideways turned m"
-fr, default, "ᴤ", "latin letter voiced laryngeal spirant"
-fr, default, "ᴥ", "latin letter ain"
-fr, default, "ᵫ", "ue"
-fr, default, "ᵬ", "b with middle tilde"
-fr, default, "ᵭ", "d with middle tilde"
-fr, default, "ᵮ", "f with middle tilde"
-fr, default, "ᵯ", "m with middle tilde"
-fr, default, "ᵰ", "n with middle tilde"
-fr, default, "ᵱ", "p with middle tilde"
-fr, default, "ᵲ", "r with middle tilde"
-fr, default, "ᵳ", "r with fishhook and middle tilde"
-fr, default, "ᵴ", "s with middle tilde"
-fr, default, "ᵵ", "t with middle tilde"
-fr, default, "ᵶ", "z with middle tilde"
-fr, default, "ᵷ", "turned g"
-fr, default, "ᵹ", "insular g"
-fr, default, "ᵺ", "th with strikethrough"
-fr, default, "ᶀ", "b with palatal hook"
-fr, default, "ᶁ", "d with palatal hook"
-fr, default, "ᶂ", "f with palatal hook"
-fr, default, "ᶃ", "g with palatal hook"
-fr, default, "ᶄ", "k with palatal hook"
-fr, default, "ᶅ", "l with palatal hook"
-fr, default, "ᶆ", "m with palatal hook"
-fr, default, "ᶇ", "n with palatal hook"
-fr, default, "ᶈ", "p with palatal hook"
-fr, default, "ᶉ", "r with palatal hook"
-fr, default, "ᶊ", "s with palatal hook"
-fr, default, "ᶋ", "esh with palatal hook"
-fr, default, "ᶌ", "v with palatal hook"
-fr, default, "ᶍ", "x with palatal hook"
-fr, default, "ᶎ", "z with palatal hook"
-fr, default, "ᶏ", "a with retroflex hook"
-fr, default, "ᶐ", "alpha with retroflex hook"
-fr, default, "ᶑ", "d with hook and tail"
-fr, default, "ᶒ", "e with retroflex hook"
-fr, default, "ᶓ", "open e with retroflex hook"
-fr, default, "ᶔ", "reversed open e with retroflex hook"
-fr, default, "ᶕ", "schwa with retroflex hook"
-fr, default, "ᶖ", "i with retroflex hook"
-fr, default, "ᶗ", "open o with retroflex hook"
-fr, default, "ᶘ", "esh with retroflex hook"
-fr, default, "ᶙ", "u with retroflex hook"
-fr, default, "ᶚ", "ezh with retroflex hook"
-fr, default, "ŉ", "n précédée d'une apostrophe"
-fr, default, "ŋ", "eng"
-fr, default, "à", "a accent grave"
-fr, default, "á", "a accent aigu"
-fr, default, "â", "a accent circonflexe"
-fr, default, "ã", "a tilde"
-fr, default, "ä", "a tréma"
-fr, default, "å", "a rond en chef"
-fr, default, "ç", "c cédille"
-fr, default, "è", "e accent grave"
-fr, default, "é", "e accent aigu"
-fr, default, "ê", "e accent circonflexe"
-fr, default, "ë", "e tréma"
-fr, default, "ì", "i accent grave"
-fr, default, "í", "i accent aigu"
-fr, default, "î", "i accent circonflexe"
-fr, default, "ï", "i tréma"
-fr, default, "ñ", "n tilde"
-fr, default, "ò", "o accent grave"
-fr, default, "ó", "o accent aigu"
-fr, default, "ô", "o accent circonflexe"
-fr, default, "õ", "o tilde"
-fr, default, "ö", "o tréma"
-fr, default, "ù", "u accent grave"
-fr, default, "ú", "u accent aigu"
-fr, default, "û", "u accent circonflexe"
-fr, default, "ü", "u tréma"
-fr, default, "ý", "y accent aigu"
-fr, default, "ÿ", "y tréma"
-fr, default, "ā", "a macron"
-fr, default, "ă", "a brève"
-fr, default, "ą", "a ogonek"
-fr, default, "ć", "c accent aigu"
-fr, default, "ĉ", "c accent circonflexe"
-fr, default, "ċ", "c point en chef"
-fr, default, "č", "c caron"
-fr, default, "ď", "d caron"
-fr, default, "ē", "e macron"
-fr, default, "ĕ", "e breve"
-fr, default, "ė", "e point en chef"
-fr, default, "ę", "e ogonek"
-fr, default, "ě", "e caron"
-fr, default, "ĝ", "g accent circonflexe"
-fr, default, "ğ", "g brève"
-fr, default, "ġ", "g point en chef"
-fr, default, "ģ", "g cedilla"
-fr, default, "ĥ", "h accent circonflexe"
-fr, default, "ĩ", "i tilde"
-fr, default, "ī", "i macron"
-fr, default, "ĭ", "i breve"
-fr, default, "į", "i ogonek"
-fr, default, "ı", "i sans point"
-fr, default, "ĵ", "j accent circonflexe"
-fr, default, "ķ", "k cédille"
-fr, default, "ĺ", "l accent aigu"
-fr, default, "ļ", "l cédille"
-fr, default, "ľ", "l caron"
-fr, default, "ŀ", "l point médian"
-fr, default, "ń", "n accent aigu"
-fr, default, "ņ", "n cédille"
-fr, default, "ň", "n caron"
-fr, default, "ō", "o macron"
-fr, default, "ŏ", "o breve"
-fr, default, "ő", "o avec double accent aigu"
-fr, default, "ŕ", "r accent aigu"
-fr, default, "ŗ", "r cédille"
-fr, default, "ř", "r caron"
-fr, default, "ś", "s accent aigu"
-fr, default, "ŝ", "s accent circonflexe"
-fr, default, "ş", "s cédille"
-fr, default, "š", "s caron"
-fr, default, "ţ", "t cédille"
-fr, default, "ť", "t caron"
-fr, default, "ũ", "u tilde"
-fr, default, "ū", "u macron"
-fr, default, "ŭ", "u brève"
-fr, default, "ů", "u rond en chef"
-fr, default, "ű", "u avec double accent aigu"
-fr, default, "ų", "u ogonek"
-fr, default, "ŵ", "w accent circonflexe"
-fr, default, "ŷ", "y accent circonflexe"
-fr, default, "ź", "z accent aigu"
-fr, default, "ż", "z point en chef"
-fr, default, "ž", "z caron"
-fr, default, "ǎ", "a caron"
-fr, default, "ǐ", "i caron"
-fr, default, "ǒ", "o caron"
-fr, default, "ǔ", "u caron"
-fr, default, "ǧ", "g caron"
-fr, default, "ǩ", "k caron"
-fr, default, "ǫ", "o ogonek"
-fr, default, "ǰ", "j caron"
-fr, default, "ǵ", "g accent aigu"
-fr, default, "ǹ", "n grave"
-fr, default, "ȁ", "a double grave"
-fr, default, "ȃ", "a inverted breve"
-fr, default, "ȅ", "e double grave"
-fr, default, "ȇ", "e inverted breve"
-fr, default, "ȉ", "i double grave"
-fr, default, "ȋ", "i inverted breve"
-fr, default, "ȍ", "o double grave"
-fr, default, "ȏ", "o inverted breve"
-fr, default, "ȑ", "r double grave"
-fr, default, "ȓ", "r inverted breve"
-fr, default, "ȕ", "u double grave"
-fr, default, "ȗ", "u inverted breve"
-fr, default, "ș", "s comma below"
-fr, default, "ț", "t comma below"
-fr, default, "ȟ", "h caron"
-fr, default, "ȧ", "a overdot"
-fr, default, "ȩ", "e cedilla"
-fr, default, "ȯ", "o overdot"
-fr, default, "ȳ", "y overbar"
-fr, default, "ȷ", "dotless j"
-fr, default, "ḁ", "a à rond souscrit"
-fr, default, "ḃ", "b point en chef"
-fr, default, "ḅ", "b point souscrit"
-fr, default, "ḇ", "b ligne souscrite"
-fr, default, "ḋ", "d point en chef"
-fr, default, "ḍ", "d point souscrit"
-fr, default, "ḏ", "d ligne souscrite"
-fr, default, "ḑ", "d cédille"
-fr, default, "ḓ", "d accent circonflexe souscrit"
-fr, default, "ḙ", "e accent circonflexe souscrit"
-fr, default, "ḛ", "e tilde souscrit"
-fr, default, "ḟ", "f point en chef"
-fr, default, "ḡ", "g macron"
-fr, default, "ḣ", "h point en chef"
-fr, default, "ḥ", "h point souscrit"
-fr, default, "ḧ", "h tréma"
-fr, default, "ḩ", "h cédille"
-fr, default, "ḫ", "h brève souscrit"
-fr, default, "ḭ", "i tilde souscrit"
-fr, default, "ḱ", "k accent aigu"
-fr, default, "ḳ", "k point souscrit"
-fr, default, "ḵ", "k ligne souscrite"
-fr, default, "ḷ", "l point souscrit"
-fr, default, "ḻ", "l ligne souscrite"
-fr, default, "ḽ", "l accent circonflexe souscrit"
-fr, default, "ḿ", "m accent aigu"
-fr, default, "ṁ", "m point en chef"
-fr, default, "ṃ", "m point souscrit"
-fr, default, "ṅ", "n point en chef"
-fr, default, "ṇ", "n point souscrit"
-fr, default, "ṉ", "n ligne souscrite"
-fr, default, "ṋ", "n accent circonflexe souscrit"
-fr, default, "ṕ", "p accent aigu"
-fr, default, "ṗ", "p point en chef"
-fr, default, "ṙ", "r point en chef"
-fr, default, "ṛ", "r point souscrit"
-fr, default, "ṟ", "r ligne souscrite"
-fr, default, "ṡ", "s point en chef"
-fr, default, "ṣ", "s point souscrit"
-fr, default, "ṫ", "t point en chef"
-fr, default, "ṭ", "t point souscrit"
-fr, default, "ṯ", "t ligne souscrite"
-fr, default, "ṱ", "t accent circonflexe souscrit"
-fr, default, "ṳ", "u tréma souscrit"
-fr, default, "ṵ", "u tilde souscrit"
-fr, default, "ṷ", "u accent circonflexe souscrit"
-fr, default, "ṽ", "v tilde"
-fr, default, "ṿ", "v point souscrit"
-fr, default, "ẁ", "w accent grave"
-fr, default, "ẃ", "w accent aigu"
-fr, default, "ẅ", "w tréma"
-fr, default, "ẇ", "w point en chef"
-fr, default, "ẉ", "w point souscrit"
-fr, default, "ẋ", "x point en chef"
-fr, default, "ẍ", "x tréma"
-fr, default, "ẏ", "y point en chef"
-fr, default, "ẑ", "z accent circonflexe"
-fr, default, "ẓ", "z point souscrit"
-fr, default, "ẕ", "z ligne souscrite"
-fr, default, "ẖ", "h ligne souscrite"
-fr, default, "ẗ", "t tréma"
-fr, default, "ẘ", "w rond en chef"
-fr, default, "ẙ", "y rond en chef"
-fr, default, "ẚ", "a demi-rond à droite"
-fr, default, "ạ", "a point souscrit"
-fr, default, "ả", "a crochet en chef"
-fr, default, "ẹ", "e point souscrit"
-fr, default, "ẻ", "e crochet en chef"
-fr, default, "ẽ", "e tilde"
-fr, default, "ỉ", "i crochet en chef"
-fr, default, "ị", "i point souscrit"
-fr, default, "ọ", "o point souscrit"
-fr, default, "ỏ", "o crochet en chef"
-fr, default, "ụ", "u point souscrit"
-fr, default, "ủ", "u crochet en chef"
-fr, default, "ỳ", "y accent grave"
-fr, default, "ỵ", "y point souscrit"
-fr, default, "ỷ", "y crochet en chef"
-fr, default, "ỹ", "y tilde"
-fr, default, "ͣ", "combining a"
-fr, default, "ͤ", "combining e"
-fr, default, "ͥ", "combining i"
-fr, default, "ͦ", "combining o"
-fr, default, "ͧ", "combining u"
-fr, default, "ͨ", "combining c"
-fr, default, "ͩ", "combining d"
-fr, default, "ͪ", "combining h"
-fr, default, "ͫ", "combining m"
-fr, default, "ͬ", "combining r"
-fr, default, "ͭ", "combining t"
-fr, default, "ͮ", "combining v"
-fr, default, "ͯ", "combining x"
-fr, default, "ᵢ", "subscript i"
-fr, default, "ᵣ", "subscript r"
-fr, default, "ᵤ", "subscript u"
-fr, default, "ᵥ", "subscript v"
-fr, default, "᷊", "combining r below"
-fr, default, "ᷓ", "combining flattened open a above"
-fr, default, "ᷔ", "combining ae"
-fr, default, "ᷕ", "combining ao"
-fr, default, "ᷖ", "combining av"
-fr, default, "ᷗ", "combining c cedilla"
-fr, default, "ᷘ", "combining insular d"
-fr, default, "ᷙ", "combining eth"
-fr, default, "ᷚ", "combining g"
-fr, default, "ᷛ", "combining small cap g"
-fr, default, "ᷜ", "combining k"
-fr, default, "ᷝ", "combining l"
-fr, default, "ᷞ", "combining small cap l"
-fr, default, "ᷟ", "combining small cap m"
-fr, default, "ᷠ", "combining n"
-fr, default, "ᷡ", "combining small cap n"
-fr, default, "ᷢ", "combining small cap r"
-fr, default, "ᷣ", "combining r rotunda"
-fr, default, "ᷤ", "combining s"
-fr, default, "ᷥ", "combining long s"
-fr, default, "ᷦ", "combining z"
-fr, default, "ⁱ", "superscript i"
-fr, default, "ⁿ", "superscript n"
-fr, default, "ₐ", "subscript a"
-fr, default, "ₑ", "subscript e"
-fr, default, "ₒ", "subscript o"
-fr, default, "ₓ", "subscript x"
-fr, default, "ₔ", "subscript schwa"
-fr, default, "ₕ", "subscript h"
-fr, default, "ₖ", "subscript k"
-fr, default, "ₗ", "subscript l"
-fr, default, "ₘ", "subscript m"
-fr, default, "ₙ", "subscript n"
-fr, default, "ₚ", "subscript p"
-fr, default, "ₛ", "subscript s"
-fr, default, "ₜ", "subscript t"
-fr, default, "⒜", "parenthesized a"
-fr, default, "⒝", "parenthesized b"
-fr, default, "⒞", "parenthesized c"
-fr, default, "⒟", "parenthesized d"
-fr, default, "⒠", "parenthesized e"
-fr, default, "⒡", "parenthesized f"
-fr, default, "⒢", "parenthesized g"
-fr, default, "⒣", "parenthesized h"
-fr, default, "⒤", "parenthesized i"
-fr, default, "⒥", "parenthesized j"
-fr, default, "⒦", "parenthesized k"
-fr, default, "⒧", "parenthesized l"
-fr, default, "⒨", "parenthesized m"
-fr, default, "⒩", "parenthesized n"
-fr, default, "⒪", "parenthesized o"
-fr, default, "⒫", "parenthesized p"
-fr, default, "⒬", "parenthesized q"
-fr, default, "⒭", "parenthesized r"
-fr, default, "⒮", "parenthesized s"
-fr, default, "⒯", "parenthesized t"
-fr, default, "⒰", "parenthesized u"
-fr, default, "⒱", "parenthesized v"
-fr, default, "⒲", "parenthesized w"
-fr, default, "⒳", "parenthesized x"
-fr, default, "⒴", "parenthesized y"
-fr, default, "⒵", "parenthesized z"
-fr, default, "Ⓐ", "circled cap a"
-fr, default, "Ⓑ", "circled cap b"
-fr, default, "Ⓒ", "circled cap c"
-fr, default, "Ⓓ", "circled cap d"
-fr, default, "Ⓔ", "circled cap e"
-fr, default, "Ⓕ", "circled cap f"
-fr, default, "Ⓖ", "circled cap g"
-fr, default, "Ⓗ", "circled cap h"
-fr, default, "Ⓘ", "circled cap i"
-fr, default, "Ⓙ", "circled cap j"
-fr, default, "Ⓚ", "circled cap k"
-fr, default, "Ⓛ", "circled cap l"
-fr, default, "Ⓜ", "circled cap m"
-fr, default, "Ⓝ", "circled cap n"
-fr, default, "Ⓞ", "circled cap o"
-fr, default, "Ⓟ", "circled cap p"
-fr, default, "Ⓠ", "circled cap q"
-fr, default, "Ⓡ", "circled cap r"
-fr, default, "Ⓢ", "S majuscule cerclée"
-fr, default, "Ⓣ", "circled cap t"
-fr, default, "Ⓤ", "circled cap u"
-fr, default, "Ⓥ", "circled cap v"
-fr, default, "Ⓦ", "circled cap w"
-fr, default, "Ⓧ", "circled cap x"
-fr, default, "Ⓨ", "circled cap y"
-fr, default, "Ⓩ", "circled cap z"
-fr, default, "ⓐ", "circled a"
-fr, default, "ⓑ", "circled b"
-fr, default, "ⓒ", "circled c"
-fr, default, "ⓓ", "circled d"
-fr, default, "ⓔ", "circled e"
-fr, default, "ⓕ", "circled f"
-fr, default, "ⓖ", "circled g"
-fr, default, "ⓗ", "circled h"
-fr, default, "ⓘ", "circled i"
-fr, default, "ⓙ", "circled j"
-fr, default, "ⓚ", "circled k"
-fr, default, "ⓛ", "circled l"
-fr, default, "ⓜ", "circled m"
-fr, default, "ⓝ", "circled n"
-fr, default, "ⓞ", "circled o"
-fr, default, "ⓟ", "circled p"
-fr, default, "ⓠ", "circled q"
-fr, default, "ⓡ", "circled r"
-fr, default, "ⓢ", "circled s"
-fr, default, "ⓣ", "circled t"
-fr, default, "ⓤ", "circled u"
-fr, default, "ⓥ", "circled v"
-fr, default, "ⓦ", "circled w"
-fr, default, "ⓧ", "circled x"
-fr, default, "ⓨ", "circled y"
-fr, default, "ⓩ", "circled z"
-fr, default, "ⱼ", "subscript j"
-fr, default, "🄐", "parenthesized cap a"
-fr, default, "🄑", "parenthesized cap b"
-fr, default, "🄒", "parenthesized cap c"
-fr, default, "🄓", "parenthesized cap d"
-fr, default, "🄔", "parenthesized cap e"
-fr, default, "🄕", "parenthesized cap f"
-fr, default, "🄖", "parenthesized cap g"
-fr, default, "🄗", "parenthesized cap h"
-fr, default, "🄘", "parenthesized cap i"
-fr, default, "🄙", "parenthesized cap j"
-fr, default, "🄚", "parenthesized cap k"
-fr, default, "🄛", "parenthesized cap l"
-fr, default, "🄜", "parenthesized cap m"
-fr, default, "🄝", "parenthesized cap n"
-fr, default, "🄞", "parenthesized cap o"
-fr, default, "🄟", "parenthesized cap p"
-fr, default, "🄠", "parenthesized cap q"
-fr, default, "🄡", "parenthesized cap r"
-fr, default, "🄢", "parenthesized cap s"
-fr, default, "🄣", "parenthesized cap t"
-fr, default, "🄤", "parenthesized cap u"
-fr, default, "🄥", "parenthesized cap v"
-fr, default, "🄦", "parenthesized cap w"
-fr, default, "🄧", "parenthesized cap x"
-fr, default, "🄨", "parenthesized cap y"
-fr, default, "🄩", "parenthesized cap z"
-fr, default, "🄪", "tortoise shell bracketed cap s"
-fr, default, "🄫", "circled italic cap c"
-fr, default, "🄬", "circled italic cap r"
-fr, default, "🄰", "squared cap a"
-fr, default, "🄱", "squared cap b"
-fr, default, "🄲", "squared cap c"
-fr, default, "🄳", "squared cap d"
-fr, default, "🄴", "squared cap e"
-fr, default, "🄵", "squared cap f"
-fr, default, "🄶", "squared cap g"
-fr, default, "🄷", "squared cap h"
-fr, default, "🄸", "squared cap i"
-fr, default, "🄹", "squared cap j"
-fr, default, "🄺", "squared cap k"
-fr, default, "🄻", "squared cap l"
-fr, default, "🄼", "squared cap m"
-fr, default, "🄽", "squared cap n"
-fr, default, "🄾", "squared cap o"
-fr, default, "🄿", "squared cap p"
-fr, default, "🅀", "squared cap q"
-fr, default, "🅁", "squared cap r"
-fr, default, "🅂", "squared cap s"
-fr, default, "🅃", "squared cap t"
-fr, default, "🅄", "squared cap u"
-fr, default, "🅅", "squared cap v"
-fr, default, "🅆", "squared cap w"
-fr, default, "🅇", "squared cap x"
-fr, default, "🅈", "squared cap y"
-fr, default, "🅉", "squared cap z"
-fr, default, "🅐", "negative circled cap a"
-fr, default, "🅑", "negative circled cap b"
-fr, default, "🅒", "negative circled cap c"
-fr, default, "🅓", "negative circled cap d"
-fr, default, "🅔", "negative circled cap e"
-fr, default, "🅕", "negative circled cap f"
-fr, default, "🅖", "negative circled cap g"
-fr, default, "🅗", "negative circled cap h"
-fr, default, "🅘", "negative circled cap i"
-fr, default, "🅙", "negative circled cap j"
-fr, default, "🅚", "negative circled cap k"
-fr, default, "🅛", "negative circled cap l"
-fr, default, "🅜", "negative circled cap m"
-fr, default, "🅝", "negative circled cap n"
-fr, default, "🅞", "negative circled cap o"
-fr, default, "🅟", "negative circled cap p"
-fr, default, "🅠", "negative circled cap q"
-fr, default, "🅡", "negative circled cap r"
-fr, default, "🅢", "negative circled cap s"
-fr, default, "🅣", "negative circled cap t"
-fr, default, "🅤", "negative circled cap u"
-fr, default, "🅥", "negative circled cap v"
-fr, default, "🅦", "negative circled cap w"
-fr, default, "🅧", "negative circled cap x"
-fr, default, "🅨", "negative circled cap y"
-fr, default, "🅩", "negative circled cap z"
-fr, default, "🅰", "negative squared cap a"
-fr, default, "🅱", "negative squared cap b"
-fr, default, "🅲", "negative squared cap c"
-fr, default, "🅳", "negative squared cap d"
-fr, default, "🅴", "negative squared cap e"
-fr, default, "🅵", "negative squared cap f"
-fr, default, "🅶", "negative squared cap g"
-fr, default, "🅷", "negative squared cap h"
-fr, default, "🅸", "negative squared cap i"
-fr, default, "🅹", "negative squared cap j"
-fr, default, "🅺", "negative squared cap k"
-fr, default, "🅻", "negative squared cap l"
-fr, default, "🅼", "negative squared cap m"
-fr, default, "🅽", "negative squared cap n"
-fr, default, "🅾", "negative squared cap o"
-fr, default, "🅿", "negative squared cap p"
-fr, default, "🆀", "negative squared cap q"
-fr, default, "🆁", "negative squared cap r"
-fr, default, "🆂", "negative squared cap s"
-fr, default, "🆃", "negative squared cap t"
-fr, default, "🆄", "negative squared cap u"
-fr, default, "🆅", "negative squared cap v"
-fr, default, "🆆", "negative squared cap w"
-fr, default, "🆇", "negative squared cap x"
-fr, default, "🆈", "negative squared cap y"
-fr, default, "🆉", "negative squared cap z"
-fr, default, "🆊", "crossed negative squared cap p"
-fr, default, "Ǖ", "cap u double overdot overbar"
-fr, default, "Ǘ", "cap u double overdot acute"
-fr, default, "Ǚ", "cap u double overdot caron"
-fr, default, "Ǜ", "cap u double overdot grave"
-fr, default, "Ǟ", "cap a double overdot overbar"
-fr, default, "Ǡ", "cap a overdot overbar"
-fr, default, "Ǭ", "cap o ogonek overbar"
-fr, default, "Ǻ", "cap a ring acute"
-fr, default, "Ȫ", "cap o double overdot overbar"
-fr, default, "Ȭ", "cap o tilde overbar"
-fr, default, "Ȱ", "cap o overdot overbar"
-fr, default, "Ḉ", "C cédille et accent aigu majuscule"
-fr, default, "Ḕ", "E macron et accent grave majuscule"
-fr, default, "Ḗ", "E macron et accent aigu majuscule"
-fr, default, "Ḝ", "E cédille et brève majuscule"
-fr, default, "Ḯ", "I tréma et accent aigu majuscule"
-fr, default, "Ḹ", "L point souscrit et macron majuscule"
-fr, default, "Ṍ", "O tilde et accent aigu majuscule"
-fr, default, "Ṏ", "O tilde et tréma majuscule"
-fr, default, "Ṑ", "O macron et accent grave majuscule"
-fr, default, "Ṓ", "O macron et accent aigu majuscule"
-fr, default, "Ṝ", "R point souscrit et macron majuscule"
-fr, default, "Ṥ", "S accent aigu et point en chef majuscule"
-fr, default, "Ṧ", "S caron et point en chef majuscule"
-fr, default, "Ṩ", "S point souscrit et point en chef majuscule"
-fr, default, "Ṹ", "U tilde et accent aigu majuscule"
-fr, default, "Ṻ", "U macron et tréma majuscule"
-fr, default, "Ấ", "A accent circonflexe et accent aigu majuscule"
-fr, default, "Ầ", "A accent circonflexe et accent grave majuscule"
-fr, default, "Ẩ", "A accent circonflexe et crochet en chef majuscule"
-fr, default, "Ẫ", "A accent circonflexe et tilde majuscule"
-fr, default, "Ậ", "A accent circonflexe et point souscrit majuscule"
-fr, default, "Ắ", "A brève et accent aigu majuscule"
-fr, default, "Ằ", "A brève et accent grave majuscule"
-fr, default, "Ẳ", "A brève et crochet en chef majuscule"
-fr, default, "Ẵ", "A brève et tilde majuscule"
-fr, default, "Ặ", "A brève et point souscrit majuscule"
-fr, default, "Ế", "E accent circonflexe et accent aigu majuscule"
-fr, default, "Ề", "E accent circonflexe et accent grave majuscule"
-fr, default, "Ể", "E accent circonflexe et crochet en chef majuscule"
-fr, default, "Ễ", "E accent circonflexe et tilde majuscule"
-fr, default, "Ệ", "E accent circonflexe et point souscrit majuscule"
-fr, default, "Ố", "O accent circonflexe et accent aigu majuscule"
-fr, default, "Ồ", "O accent circonflexe et accent grave majuscule"
-fr, default, "Ổ", "O accent circonflexe et crochet en chef majuscule"
-fr, default, "Ỗ", "O accent circonflexe et tilde majuscule"
-fr, default, "Ộ", "O accent circonflexe et point souscrit majuscule"
-fr, default, "Ớ", "O cornu accent aigu majuscule"
-fr, default, "Ờ", "O cornu accent grave majuscule"
-fr, default, "Ở", "O cornu crochet en chef majuscule"
-fr, default, "Ỡ", "O cornu tilde majuscule"
-fr, default, "Ợ", "O cornu point souscrit majuscule"
-fr, default, "Ứ", "U cornu accent aigu majuscule"
-fr, default, "Ừ", "U cornu accent grave majuscule"
-fr, default, "Ử", "U cornu crochet en chef majuscule"
-fr, default, "Ữ", "U cornu tilde majuscule"
-fr, default, "Ự", "U cornu point souscrit majuscule"
-fr, default, "A", "A majuscule"
-fr, default, "B", "B majuscule"
-fr, default, "C", "C majuscule"
-fr, default, "D", "D majuscule"
-fr, default, "E", "E majuscule"
-fr, default, "F", "F majuscule"
-fr, default, "G", "G majuscule"
-fr, default, "H", "H majuscule"
-fr, default, "I", "I majuscule"
-fr, default, "J", "J majuscule"
-fr, default, "K", "K majuscule"
-fr, default, "L", "L majuscule"
-fr, default, "M", "M majuscule"
-fr, default, "N", "N majuscule"
-fr, default, "O", "O majuscule"
-fr, default, "P", "P majuscule"
-fr, default, "Q", "Q majuscule"
-fr, default, "R", "R majuscule"
-fr, default, "S", "S majuscule"
-fr, default, "T", "T majuscule"
-fr, default, "U", "U majuscule"
-fr, default, "V", "V majuscule"
-fr, default, "W", "W majuscule"
-fr, default, "X", "X majuscule"
-fr, default, "Y", "Y majuscule"
-fr, default, "Z", "Z majuscule"
-fr, default, "Ａ", "cap a"
-fr, default, "Ｂ", "cap b"
-fr, default, "Ｃ", "cap c"
-fr, default, "Ｄ", "cap d"
-fr, default, "Ｅ", "cap e"
-fr, default, "Ｆ", "cap f"
-fr, default, "Ｇ", "cap g"
-fr, default, "Ｈ", "cap h"
-fr, default, "Ｉ", "cap i"
-fr, default, "Ｊ", "cap j"
-fr, default, "Ｋ", "cap k"
-fr, default, "Ｌ", "cap l"
-fr, default, "Ｍ", "cap m"
-fr, default, "Ｎ", "cap n"
-fr, default, "Ｏ", "cap o"
-fr, default, "Ｐ", "cap p"
-fr, default, "Ｑ", "cap q"
-fr, default, "Ｒ", "cap r"
-fr, default, "Ｓ", "cap s"
-fr, default, "Ｔ", "cap t"
-fr, default, "Ｕ", "cap u"
-fr, default, "Ｖ", "cap v"
-fr, default, "Ｗ", "cap w"
-fr, default, "Ｘ", "cap x"
-fr, default, "Ｙ", "cap y"
-fr, default, "Ｚ", "cap z"
-fr, default, "À", "A accent grave majuscule"
-fr, default, "Á", "A accent aigu majuscule"
-fr, default, "Â", "A accent circonflexe majuscule"
-fr, default, "Ã", "A tilde majuscule"
-fr, default, "Ä", "A tréma majuscule"
-fr, default, "Å", "angstrom"
-fr, default, "Ç", "C cédille majuscule"
-fr, default, "È", "E accent grave majuscule"
-fr, default, "É", "E accent aigu majuscule"
-fr, default, "Ê", "E accent circonflexe majuscule"
-fr, default, "Ë", "E tréma majuscule"
-fr, default, "Ì", "I accent grave majuscule"
-fr, default, "Í", "I accent aigu majuscule"
-fr, default, "Î", "I accent circonflexe majuscule"
-fr, default, "Ï", "I tréma majuscule"
-fr, default, "Ñ", "N tilde majuscule"
-fr, default, "Ò", "O accent grave majuscule"
-fr, default, "Ó", "O accent aigu majuscule"
-fr, default, "Ô", "O accent circonflexe majuscule"
-fr, default, "Õ", "O tilde majuscule"
-fr, default, "Ö", "O tréma majuscule"
-fr, default, "Ù", "U accent grave majuscule"
-fr, default, "Ú", "U accent aigu majuscule"
-fr, default, "Û", "U accent circonflexe majuscule"
-fr, default, "Ü", "U tréma majuscule"
-fr, default, "Ý", "Y accent aigu majuscule"
-fr, default, "Ā", "A macron majuscule"
-fr, default, "Ă", "A brève majuscule"
-fr, default, "Ą", "A ogonek majuscule"
-fr, default, "Ć", "C accent aigu majuscule"
-fr, default, "Ĉ", "C accent circonflexe majuscule"
-fr, default, "Ċ", "C point en chef majuscule"
-fr, default, "Č", "C caron majuscule"
-fr, default, "Ď", "D caron majuscule"
-fr, default, "Ē", "E macron majuscule"
-fr, default, "Ĕ", "cap e breve"
-fr, default, "Ė", "E point en chef majuscule"
-fr, default, "Ę", "E ogonek majuscule"
-fr, default, "Ě", "E caron majuscule"
-fr, default, "Ĝ", "G accent circonflexe majuscule"
-fr, default, "Ğ", "G brève majuscule"
-fr, default, "Ġ", "G point en chef majuscule"
-fr, default, "Ģ", "G cédille majuscule"
-fr, default, "Ĥ", "H accent circonflexe majuscule"
-fr, default, "Ĩ", "I tilde majuscule"
-fr, default, "Ī", "I macron majuscule"
-fr, default, "Ĭ", "cap i breve"
-fr, default, "Į", "I ogonek majuscule"
-fr, default, "İ", "I point en chef majuscule"
-fr, default, "Ĵ", "J accent circonflexe majuscule"
-fr, default, "Ķ", "K cédille majuscule"
-fr, default, "Ĺ", "L accent aigu majuscule"
-fr, default, "Ļ", "L cédille majuscule"
-fr, default, "Ľ", "L caron majuscule"
-fr, default, "Ŀ", "L point médian majuscule"
-fr, default, "Ń", "N accent aigu majuscule"
-fr, default, "Ņ", "N cédille majuscule"
-fr, default, "Ň", "N caron majuscule"
-fr, default, "Ō", "O macron majuscule"
-fr, default, "Ŏ", "cap o breve"
-fr, default, "Ő", "O avec double accent aigu majuscule"
-fr, default, "Ŕ", "R accent aigu majuscule"
-fr, default, "Ŗ", "R cédille majuscule"
-fr, default, "Ř", "R caron majuscule"
-fr, default, "Ś", "S accent aigu majuscule"
-fr, default, "Ŝ", "S accent circonflexe majuscule"
-fr, default, "Ş", "S cédille majuscule"
-fr, default, "Š", "S caron majuscule"
-fr, default, "Ţ", "T cédille majuscule"
-fr, default, "Ť", "T caron majuscule"
-fr, default, "Ũ", "U tilde majuscule"
-fr, default, "Ū", "U macron majuscule"
-fr, default, "Ŭ", "U brève majuscule"
-fr, default, "Ů", "U rond en chef majuscule"
-fr, default, "Ű", "U avec double accent aigu majuscule"
-fr, default, "Ų", "U ogonek majuscule"
-fr, default, "Ŵ", "W accent circonflexe majuscule"
-fr, default, "Ŷ", "Y accent circonflexe majuscule"
-fr, default, "Ÿ", "Y tréma majuscule"
-fr, default, "Ź", "Z accent aigu majuscule"
-fr, default, "Ż", "Z point en chef majuscule"
-fr, default, "Ž", "Z caron majuscule"
-fr, default, "Ǎ", "cap a caron"
-fr, default, "Ǐ", "cap i caron"
-fr, default, "Ǒ", "cap o caron"
-fr, default, "Ǔ", "cap u caron"
-fr, default, "Ǧ", "cap g caron"
-fr, default, "Ǩ", "cap k caron"
-fr, default, "Ǫ", "cap o ogonek"
-fr, default, "Ǵ", "cap g acute"
-fr, default, "Ǹ", "cap n grave"
-fr, default, "Ȁ", "cap a double grave"
-fr, default, "Ȃ", "cap a inverted breve"
-fr, default, "Ȅ", "cap e double grave"
-fr, default, "Ȇ", "cap e inverted breve"
-fr, default, "Ȉ", "cap i double grave"
-fr, default, "Ȋ", "cap i inverted breve"
-fr, default, "Ȍ", "cap o double grave"
-fr, default, "Ȏ", "cap o inverted breve"
-fr, default, "Ȑ", "cap r double grave"
-fr, default, "Ȓ", "cap r inverted breve"
-fr, default, "Ȕ", "cap u double grave"
-fr, default, "Ȗ", "cap u inverted breve"
-fr, default, "Ș", "cap s comma below"
-fr, default, "Ț", "cap t comma below"
-fr, default, "Ȟ", "cap h caron"
-fr, default, "Ȧ", "cap a overdot"
-fr, default, "Ȩ", "cap e cedilla"
-fr, default, "Ȯ", "cap o overdot"
-fr, default, "Ȳ", "cap y overbar"
-fr, default, "Ḁ", "A à rond souscrit majuscule"
-fr, default, "Ḃ", "B point en chef majuscule"
-fr, default, "Ḅ", "B point souscrit majuscule"
-fr, default, "Ḇ", "B ligne souscrite majuscule"
-fr, default, "Ḋ", "D point en chef majuscule"
-fr, default, "Ḍ", "D point souscrit majuscule"
-fr, default, "Ḏ", "D ligne souscrite majuscule"
-fr, default, "Ḑ", "D cédille majuscule"
-fr, default, "Ḓ", "D accent circonflexe souscrit majuscule"
-fr, default, "Ḙ", "E accent circonflexe souscrit majuscule"
-fr, default, "Ḛ", "E tilde souscrit majuscule"
-fr, default, "Ḟ", "F point en chef majuscule"
-fr, default, "Ḡ", "G macron majuscule"
-fr, default, "Ḣ", "H point en chef majuscule"
-fr, default, "Ḥ", "H point souscrit majuscule"
-fr, default, "Ḧ", "H tréma majuscule"
-fr, default, "Ḩ", "H cédille majuscule"
-fr, default, "Ḫ", "H brève souscrit majuscule"
-fr, default, "Ḭ", "I tilde souscrit majuscule"
-fr, default, "Ḱ", "K accent aigu majuscule"
-fr, default, "Ḳ", "K point souscrit majuscule"
-fr, default, "Ḵ", "K ligne souscrite majuscule"
-fr, default, "Ḷ", "L point souscrit majuscule"
-fr, default, "Ḻ", "L ligne souscrite majuscule"
-fr, default, "Ḽ", "L accent circonflexe souscrit majuscule"
-fr, default, "Ḿ", "M accent aigu majuscule"
-fr, default, "Ṁ", "M point en chef majuscule"
-fr, default, "Ṃ", "M point souscrit majuscule"
-fr, default, "Ṅ", "N point en chef majuscule"
-fr, default, "Ṇ", "N point souscrit majuscule"
-fr, default, "Ṉ", "N ligne souscrite majuscule"
-fr, default, "Ṋ", "N accent circonflexe souscrit majuscule"
-fr, default, "Ṕ", "P accent aigu majuscule"
-fr, default, "Ṗ", "P point en chef majuscule"
-fr, default, "Ṙ", "R point en chef majuscule"
-fr, default, "Ṛ", "R point souscrit majuscule"
-fr, default, "Ṟ", "R ligne souscrite majuscule"
-fr, default, "Ṡ", "S point en chef majuscule"
-fr, default, "Ṣ", "S point souscrit majuscule"
-fr, default, "Ṫ", "T point en chef majuscule"
-fr, default, "Ṭ", "T point souscrit majuscule"
-fr, default, "Ṯ", "T ligne souscrite majuscule"
-fr, default, "Ṱ", "T accent circonflexe souscrit majuscule"
-fr, default, "Ṳ", "U tréma souscrit majuscule"
-fr, default, "Ṵ", "U tilde souscrit majuscule"
-fr, default, "Ṷ", "U accent circonflexe souscrit majuscule"
-fr, default, "Ṽ", "V tilde majuscule"
-fr, default, "Ṿ", "V point souscrit majuscule"
-fr, default, "Ẁ", "W accent grave majuscule"
-fr, default, "Ẃ", "W accent aigu majuscule"
-fr, default, "Ẅ", "W tréma majuscule"
-fr, default, "Ẇ", "W point en chef majuscule"
-fr, default, "Ẉ", "W point souscrit majuscule"
-fr, default, "Ẋ", "X point en chef majuscule"
-fr, default, "Ẍ", "X tréma majuscule"
-fr, default, "Ẏ", "Y point en chef majuscule"
-fr, default, "Ẑ", "Z accent circonflexe majuscule"
-fr, default, "Ẓ", "Z point souscrit majuscule"
-fr, default, "Ẕ", "Z ligne souscrite majuscule"
-fr, default, "Ạ", "A point souscrit majuscule"
-fr, default, "Ả", "A crochet en chef majuscule"
-fr, default, "Ẹ", "E point souscrit majuscule"
-fr, default, "Ẻ", "E crochet en chef majuscule"
-fr, default, "Ẽ", "E tilde majuscule"
-fr, default, "Ỉ", "I crochet en chef majuscule"
-fr, default, "Ị", "I point souscrit majuscule"
-fr, default, "Ọ", "O point souscrit majuscule"
-fr, default, "Ỏ", "O crochet en chef majuscule"
-fr, default, "Ụ", "U point souscrit majuscule"
-fr, default, "Ủ", "U crochet en chef majuscule"
-fr, default, "Ỳ", "Y accent grave majuscule"
-fr, default, "Ỵ", "Y point souscrit majuscule"
-fr, default, "Ỷ", "Y crochet en chef majuscule"
-fr, default, "Ỹ", "Y tilde majuscule"
-fr, default, "𝕬", "A majuscule en gothique gras"
-fr, default, "𝕭", "B majuscule en gothique gras"
-fr, default, "𝕮", "C majuscule en gothique gras"
-fr, default, "𝕯", "D majuscule en gothique gras"
-fr, default, "𝕰", "E majuscule en gothique gras"
-fr, default, "𝕱", "F majuscule en gothique gras"
-fr, default, "𝕲", "G majuscule en gothique gras"
-fr, default, "𝕳", "H majuscule en gothique gras"
-fr, default, "𝕴", "I majuscule en gothique gras"
-fr, default, "𝕵", "J majuscule en gothique gras"
-fr, default, "𝕶", "K majuscule en gothique gras"
-fr, default, "𝕷", "L majuscule en gothique gras"
-fr, default, "𝕸", "M majuscule en gothique gras"
-fr, default, "𝕹", "N majuscule en gothique gras"
-fr, default, "𝕺", "O majuscule en gothique gras"
-fr, default, "𝕻", "P majuscule en gothique gras"
-fr, default, "𝕼", "Q majuscule en gothique gras"
-fr, default, "𝕽", "R majuscule en gothique gras"
-fr, default, "𝕾", "S majuscule en gothique gras"
-fr, default, "𝕿", "T majuscule en gothique gras"
-fr, default, "𝖀", "U majuscule en gothique gras"
-fr, default, "𝖁", "V majuscule en gothique gras"
-fr, default, "𝖂", "W majuscule en gothique gras"
-fr, default, "𝖃", "X majuscule en gothique gras"
-fr, default, "𝖄", "Y majuscule en gothique gras"
-fr, default, "𝖅", "Z majuscule en gothique gras"
-fr, default, "𝖆", "a en gothique gras"
-fr, default, "𝖇", "b en gothique gras"
-fr, default, "𝖈", "c en gothique gras"
-fr, default, "𝖉", "d en gothique gras"
-fr, default, "𝖊", "e en gothique gras"
-fr, default, "𝖋", "f en gothique gras"
-fr, default, "𝖌", "g en gothique gras"
-fr, default, "𝖍", "h en gothique gras"
-fr, default, "𝖎", "i en gothique gras"
-fr, default, "𝖏", "j en gothique gras"
-fr, default, "𝖐", "k en gothique gras"
-fr, default, "𝖑", "l en gothique gras"
-fr, default, "𝖒", "m en gothique gras"
-fr, default, "𝖓", "n en gothique gras"
-fr, default, "𝖔", "o en gothique gras"
-fr, default, "𝖕", "p en gothique gras"
-fr, default, "𝖖", "q en gothique gras"
-fr, default, "𝖗", "r en gothique gras"
-fr, default, "𝖘", "s en gothique gras"
-fr, default, "𝖙", "t en gothique gras"
-fr, default, "𝖚", "u en gothique gras"
-fr, default, "𝖛", "v en gothique gras"
-fr, default, "𝖜", "w en gothique gras"
-fr, default, "𝖝", "x en gothique gras"
-fr, default, "𝖞", "y en gothique gras"
-fr, default, "𝖟", "z en gothique gras"
-fr, default, "𝐀", "A majuscule en gras"
-fr, default, "𝐁", "B majuscule en gras"
-fr, default, "𝐂", "C majuscule en gras"
-fr, default, "𝐃", "D majuscule en gras"
-fr, default, "𝐄", "E majuscule en gras"
-fr, default, "𝐅", "F majuscule en gras"
-fr, default, "𝐆", "G majuscule en gras"
-fr, default, "𝐇", "H majuscule en gras"
-fr, default, "𝐈", "I majuscule en gras"
-fr, default, "𝐉", "J majuscule en gras"
-fr, default, "𝐊", "K majuscule en gras"
-fr, default, "𝐋", "L majuscule en gras"
-fr, default, "𝐌", "M majuscule en gras"
-fr, default, "𝐍", "N majuscule en gras"
-fr, default, "𝐎", "O majuscule en gras"
-fr, default, "𝐏", "P majuscule en gras"
-fr, default, "𝐐", "Q majuscule en gras"
-fr, default, "𝐑", "R majuscule en gras"
-fr, default, "𝐒", "S majuscule en gras"
-fr, default, "𝐓", "T majuscule en gras"
-fr, default, "𝐔", "U majuscule en gras"
-fr, default, "𝐕", "V majuscule en gras"
-fr, default, "𝐖", "W majuscule en gras"
-fr, default, "𝐗", "X majuscule en gras"
-fr, default, "𝐘", "Y majuscule en gras"
-fr, default, "𝐙", "Z majuscule en gras"
-fr, default, "𝐚", "a en gras"
-fr, default, "𝐛", "b en gras"
-fr, default, "𝐜", "c en gras"
-fr, default, "𝐝", "c en gras"
-fr, default, "𝐞", "e en gras"
-fr, default, "𝐟", "f en gras"
-fr, default, "𝐠", "g en gras"
-fr, default, "𝐡", "h en gras"
-fr, default, "𝐢", "i en gras"
-fr, default, "𝐣", "j en gras"
-fr, default, "𝐤", "k en gras"
-fr, default, "𝐥", "l en gras"
-fr, default, "𝐦", "m en gras"
-fr, default, "𝐧", "n en gras"
-fr, default, "𝐨", "o en gras"
-fr, default, "𝐩", "p en gras"
-fr, default, "𝐪", "q en gras"
-fr, default, "𝐫", "r en gras"
-fr, default, "𝐬", "s en gras"
-fr, default, "𝐭", "t en gras"
-fr, default, "𝐮", "u en gras"
-fr, default, "𝐯", "v en gras"
-fr, default, "𝐰", "w en gras"
-fr, default, "𝐱", "x en gras"
-fr, default, "𝐲", "y en gras"
-fr, default, "𝐳", "z en gras"
-fr, default, "𝑨", "A majuscule en italique gras"
-fr, default, "𝑩", "B majuscule en italique gras"
-fr, default, "𝑪", "C majuscule en italique gras"
-fr, default, "𝑫", "D majuscule en italique gras"
-fr, default, "𝑬", "E majuscule en italique gras"
-fr, default, "𝑭", "F majuscule en italique gras"
-fr, default, "𝑮", "G majuscule en italique gras"
-fr, default, "𝑯", "H majuscule en italique gras"
-fr, default, "𝑰", "I majuscule en italique gras"
-fr, default, "𝑱", "J majuscule en italique gras"
-fr, default, "𝑲", "K majuscule en italique gras"
-fr, default, "𝑳", "L majuscule en italique gras"
-fr, default, "𝑴", "M majuscule en italique gras"
-fr, default, "𝑵", "N majuscule en italique gras"
-fr, default, "𝑶", "O majuscule en italique gras"
-fr, default, "𝑷", "P majuscule en italique gras"
-fr, default, "𝑸", "Q majuscule en italique gras"
-fr, default, "𝑹", "R majuscule en italique gras"
-fr, default, "𝑺", "S majuscule en italique gras"
-fr, default, "𝑻", "T majuscule en italique gras"
-fr, default, "𝑼", "U majuscule en italique gras"
-fr, default, "𝑽", "V majuscule en italique gras"
-fr, default, "𝑾", "W majuscule en italique gras"
-fr, default, "𝑿", "X majuscule en italique gras"
-fr, default, "𝒀", "Y majuscule en italique gras"
-fr, default, "𝒁", "Z majuscule en italique gras"
-fr, default, "𝒂", "a en italique gras"
-fr, default, "𝒃", "b en italique gras"
-fr, default, "𝒄", "c en italique gras"
-fr, default, "𝒅", "d en italique gras"
-fr, default, "𝒆", "e en italique gras"
-fr, default, "𝒇", "f en italique gras"
-fr, default, "𝒈", "g en italique gras"
-fr, default, "𝒉", "h en italique gras"
-fr, default, "𝒊", "i en italique gras"
-fr, default, "𝒋", "j en italique gras"
-fr, default, "𝒌", "k en italique gras"
-fr, default, "𝒍", "l en italique gras"
-fr, default, "𝒎", "m en italique gras"
-fr, default, "𝒏", "n en italique gras"
-fr, default, "𝒐", "o en italique gras"
-fr, default, "𝒑", "p en italique gras"
-fr, default, "𝒒", "q en italique gras"
-fr, default, "𝒓", "r en italique gras"
-fr, default, "𝒔", "s en italique gras"
-fr, default, "𝒕", "t en italique gras"
-fr, default, "𝒖", "u en italique gras"
-fr, default, "𝒗", "v en italique gras"
-fr, default, "𝒘", "w en italique gras"
-fr, default, "𝒙", "x en italique gras"
-fr, default, "𝒚", "y en italique gras"
-fr, default, "𝒛", "z en italique gras"
-fr, default, "𝓐", "A majuscule en script gras"
-fr, default, "𝓑", "B majuscule en script gras"
-fr, default, "𝓒", "C majuscule en script gras"
-fr, default, "𝓓", "D majuscule en script gras"
-fr, default, "𝓔", "E majuscule en script gras"
-fr, default, "𝓕", "F majuscule en script gras"
-fr, default, "𝓖", "G majuscule en script gras"
-fr, default, "𝓗", "H majuscule en script gras"
-fr, default, "𝓘", "I majuscule en script gras"
-fr, default, "𝓙", "J majuscule en script gras"
-fr, default, "𝓚", "K majuscule en script gras"
-fr, default, "𝓛", "L majuscule en script gras"
-fr, default, "𝓜", "M majuscule en script gras"
-fr, default, "𝓝", "N majuscule en script gras"
-fr, default, "𝓞", "O majuscule en script gras"
-fr, default, "𝓟", "P majuscule en script gras"
-fr, default, "𝓠", "Q majuscule en script gras"
-fr, default, "𝓡", "R majuscule en script gras"
-fr, default, "𝓢", "S majuscule en script gras"
-fr, default, "𝓣", "T majuscule en script gras"
-fr, default, "𝓤", "U majuscule en script gras"
-fr, default, "𝓥", "V majuscule en script gras"
-fr, default, "𝓦", "W majuscule en script gras"
-fr, default, "𝓧", "X majuscule en script gras"
-fr, default, "𝓨", "Y majuscule en script gras"
-fr, default, "𝓩", "Z majuscule en script gras"
-fr, default, "𝓪", "a en script gras"
-fr, default, "𝓫", "b en script gras"
-fr, default, "𝓬", "c en script gras"
-fr, default, "𝓭", "d en script gras"
-fr, default, "𝓮", "e en script gras"
-fr, default, "𝓯", "f en script gras"
-fr, default, "𝓰", "g en script gras"
-fr, default, "𝓱", "h en script gras"
-fr, default, "𝓲", "i en script gras"
-fr, default, "𝓳", "j en script gras"
-fr, default, "𝓴", "k en script gras"
-fr, default, "𝓵", "l en script gras"
-fr, default, "𝓶", "m en script gras"
-fr, default, "𝓷", "n en script gras"
-fr, default, "𝓸", "o en script gras"
-fr, default, "𝓹", "p en script gras"
-fr, default, "𝓺", "q en script gras"
-fr, default, "𝓻", "r en script gras"
-fr, default, "𝓼", "s en script gras"
-fr, default, "𝓽", "t en script gras"
-fr, default, "𝓾", "u en script gras"
-fr, default, "𝓿", "v en script gras"
-fr, default, "𝔀", "w en script gras"
-fr, default, "𝔁", "x en script gras"
-fr, default, "𝔂", "y en script gras"
-fr, default, "𝔃", "z en script gras"
-fr, default, "𝔸", "A majuscule ajouré"
-fr, default, "𝔹", "B majuscule ajouré"
-fr, default, "ℂ", "C majuscule ajouré"
-fr, default, "𝔻", "D majuscule ajouré"
-fr, default, "𝔼", "E majuscule ajouré"
-fr, default, "𝔽", "F majuscule ajouré"
-fr, default, "𝔾", "G majuscule ajouré"
-fr, default, "ℍ", "H majuscule ajouré"
-fr, default, "𝕀", "I majuscule ajouré"
-fr, default, "𝕁", "J majuscule ajouré"
-fr, default, "𝕂", "K majuscule ajouré"
-fr, default, "𝕃", "L majuscule ajouré"
-fr, default, "𝕄", "M majuscule ajouré"
-fr, default, "ℕ", "N majuscule ajouré"
-fr, default, "𝕆", "O majuscule ajouré"
-fr, default, "ℙ", "P majuscule ajouré"
-fr, default, "ℚ", "Q majuscule ajouré"
-fr, default, "ℝ", "R majuscule ajouré"
-fr, default, "𝕊", "S majuscule ajouré"
-fr, default, "𝕋", "T majuscule ajouré"
-fr, default, "𝕌", "U majuscule ajouré"
-fr, default, "𝕍", "V majuscule ajouré"
-fr, default, "𝕎", "W majuscule ajouré"
-fr, default, "𝕏", "X majuscule ajouré"
-fr, default, "𝕐", "Y majuscule ajouré"
-fr, default, "ℤ", "Z majuscule ajouré"
-fr, default, "𝕒", "a ajouré"
-fr, default, "𝕓", "b ajouré"
-fr, default, "𝕔", "c ajouré"
-fr, default, "𝕕", "d ajouré"
-fr, default, "𝕖", "e ajouré"
-fr, default, "𝕗", "f ajouré"
-fr, default, "𝕘", "g ajouré"
-fr, default, "𝕙", "h ajouré"
-fr, default, "𝕚", "i ajouré"
-fr, default, "𝕛", "j ajouré"
-fr, default, "𝕜", "k ajouré"
-fr, default, "𝕝", "l ajouré"
-fr, default, "𝕞", "m ajouré"
-fr, default, "𝕟", "n ajouré"
-fr, default, "𝕠", "o ajouré"
-fr, default, "𝕡", "p ajouré"
-fr, default, "𝕢", "q ajouré"
-fr, default, "𝕣", "r ajouré"
-fr, default, "𝕤", "s ajouré"
-fr, default, "𝕥", "t ajouré"
-fr, default, "𝕦", "u ajouré"
-fr, default, "𝕧", "v ajouré"
-fr, default, "𝕨", "w ajouré"
-fr, default, "𝕩", "x ajouré"
-fr, default, "𝕪", "y ajouré"
-fr, default, "𝕫", "z ajouré"
-fr, default, "𝔄", "A majuscule en gothique"
-fr, default, "𝔅", "B majuscule en gothique"
-fr, default, "ℭ", "C majuscule en gothique"
-fr, default, "𝔇", "D majuscule en gothique"
-fr, default, "𝔈", "E majuscule en gothique"
-fr, default, "𝔉", "F majuscule en gothique"
-fr, default, "𝔊", "G majuscule en gothique"
-fr, default, "ℌ", "H majuscule en gothique"
-fr, default, "ℑ", "I majuscule en gothique"
-fr, default, "𝔍", "J majuscule en gothique"
-fr, default, "𝔎", "K majuscule en gothique"
-fr, default, "𝔏", "L majuscule en gothique"
-fr, default, "𝔐", "M majuscule en gothique"
-fr, default, "𝔑", "N majuscule en gothique"
-fr, default, "𝔒", "O majuscule en gothique"
-fr, default, "𝔓", "P majuscule en gothique"
-fr, default, "𝔔", "Q majuscule en gothique"
-fr, default, "ℜ", "R majuscule en gothique"
-fr, default, "𝔖", "S majuscule en gothique"
-fr, default, "𝔗", "T majuscule en gothique"
-fr, default, "𝔘", "U majuscule en gothique"
-fr, default, "𝔙", "V majuscule en gothique"
-fr, default, "𝔚", "W majuscule en gothique"
-fr, default, "𝔛", "X majuscule en gothique"
-fr, default, "𝔜", "Y majuscule en gothique"
-fr, default, "ℨ", "Z majuscule en gothique"
-fr, default, "𝔞", "a en gothique"
-fr, default, "𝔟", "b en gothique"
-fr, default, "𝔠", "c en gothique"
-fr, default, "𝔡", "d en gothique"
-fr, default, "𝔢", "e en gothique"
-fr, default, "𝔣", "f en gothique"
-fr, default, "𝔤", "g en gothique"
-fr, default, "𝔥", "h en gothique"
-fr, default, "𝔦", "i en gothique"
-fr, default, "𝔧", "j en gothique"
-fr, default, "𝔨", "k en gothique"
-fr, default, "𝔩", "l en gothique"
-fr, default, "𝔪", "m en gothique"
-fr, default, "𝔫", "n en gothique"
-fr, default, "𝔬", "o en gothique"
-fr, default, "𝔭", "p en gothique"
-fr, default, "𝔮", "q en gothique"
-fr, default, "𝔯", "r en gothique"
-fr, default, "𝔰", "s en gothique"
-fr, default, "𝔱", "t en gothique"
-fr, default, "𝔲", "u en gothique"
-fr, default, "𝔳", "v en gothique"
-fr, default, "𝔴", "w en gothique"
-fr, default, "𝔵", "x en gothique"
-fr, default, "𝔶", "y en gothique"
-fr, default, "𝔷", "z en gothique"
-fr, default, "𝐴", "A majuscule en italique"
-fr, default, "𝐵", "B majuscule en italique"
-fr, default, "𝐶", "C majuscule en italique"
-fr, default, "𝐷", "D majuscule en italique"
-fr, default, "𝐸", "E majuscule en italique"
-fr, default, "𝐹", "F majuscule en italique"
-fr, default, "𝐺", "G majuscule en italique"
-fr, default, "𝐻", "H majuscule en italique"
-fr, default, "𝐼", "I majuscule en italique"
-fr, default, "𝐽", "J majuscule en italique"
-fr, default, "𝐾", "K majuscule en italique"
-fr, default, "𝐿", "L majuscule en italique"
-fr, default, "𝑀", "M majuscule en italique"
-fr, default, "𝑁", "N majuscule en italique"
-fr, default, "𝑂", "O majuscule en italique"
-fr, default, "𝑃", "P majuscule en italique"
-fr, default, "𝑄", "Q majuscule en italique"
-fr, default, "𝑅", "R majuscule en italique"
-fr, default, "𝑆", "S majuscule en italique"
-fr, default, "𝑇", "T majuscule en italique"
-fr, default, "𝑈", "U majuscule en italique"
-fr, default, "𝑉", "V majuscule en italique"
-fr, default, "𝑊", "W majuscule en italique"
-fr, default, "𝑋", "X majuscule en italique"
-fr, default, "𝑌", "Y majuscule en italique"
-fr, default, "𝑍", "Z majuscule en italique"
-fr, default, "𝑎", "a en italique"
-fr, default, "𝑏", "b en italique"
-fr, default, "𝑐", "c en italique"
-fr, default, "𝑑", "d en italique"
-fr, default, "𝑒", "e en italique"
-fr, default, "𝑓", "f en italique"
-fr, default, "𝑔", "g en italique"
-fr, default, "ℎ", "constante de planck"
-fr, default, "𝑖", "i en italique"
-fr, default, "𝑗", "j en italique"
-fr, default, "𝑘", "k en italique"
-fr, default, "𝑙", "l en italique"
-fr, default, "𝑚", "m en italique"
-fr, default, "𝑛", "n en italique"
-fr, default, "𝑜", "o en italique"
-fr, default, "𝑝", "p en italique"
-fr, default, "𝑞", "q en italique"
-fr, default, "𝑟", "r en italique"
-fr, default, "𝑠", "s en italique"
-fr, default, "𝑡", "t en italique"
-fr, default, "𝑢", "u en italique"
-fr, default, "𝑣", "v en italique"
-fr, default, "𝑤", "w en italique"
-fr, default, "𝑥", "x en italique"
-fr, default, "𝑦", "y en italique"
-fr, default, "𝑧", "z en italique"
-fr, default, "𝙰", "A majuscule en chasse fixe"
-fr, default, "𝙱", "B majuscule en chasse fixe"
-fr, default, "𝙲", "C majuscule en chasse fixe"
-fr, default, "𝙳", "D majuscule en chasse fixe"
-fr, default, "𝙴", "E majuscule en chasse fixe"
-fr, default, "𝙵", "F majuscule en chasse fixe"
-fr, default, "𝙶", "G majuscule en chasse fixe"
-fr, default, "𝙷", "H majuscule en chasse fixe"
-fr, default, "𝙸", "I majuscule en chasse fixe"
-fr, default, "𝙹", "J majuscule en chasse fixe"
-fr, default, "𝙺", "K majuscule en chasse fixe"
-fr, default, "𝙻", "L majuscule en chasse fixe"
-fr, default, "𝙼", "M majuscule en chasse fixe"
-fr, default, "𝙽", "N majuscule en chasse fixe"
-fr, default, "𝙾", "O majuscule en chasse fixe"
-fr, default, "𝙿", "P majuscule en chasse fixe"
-fr, default, "𝚀", "Q majuscule en chasse fixe"
-fr, default, "𝚁", "R majuscule en chasse fixe"
-fr, default, "𝚂", "S majuscule en chasse fixe"
-fr, default, "𝚃", "T majuscule en chasse fixe"
-fr, default, "𝚄", "U majuscule en chasse fixe"
-fr, default, "𝚅", "V majuscule en chasse fixe"
-fr, default, "𝚆", "W majuscule en chasse fixe"
-fr, default, "𝚇", "X majuscule en chasse fixe"
-fr, default, "𝚈", "Y majuscule en chasse fixe"
-fr, default, "𝚉", "Z majuscule en chasse fixe"
-fr, default, "𝚊", "a en chasse fixe"
-fr, default, "𝚋", "b en chasse fixe"
-fr, default, "𝚌", "c en chasse fixe"
-fr, default, "𝚍", "d en chasse fixe"
-fr, default, "𝚎", "e en chasse fixe"
-fr, default, "𝚏", "f en chasse fixe"
-fr, default, "𝚐", "g en chasse fixe"
-fr, default, "𝚑", "h en chasse fixe"
-fr, default, "𝚒", "i en chasse fixe"
-fr, default, "𝚓", "j en chasse fixe"
-fr, default, "𝚔", "k en chasse fixe"
-fr, default, "𝚕", "l en chasse fixe"
-fr, default, "𝚖", "m en chasse fixe"
-fr, default, "𝚗", "n en chasse fixe"
-fr, default, "𝚘", "o en chasse fixe"
-fr, default, "𝚙", "p en chasse fixe"
-fr, default, "𝚚", "q en chasse fixe"
-fr, default, "𝚛", "r en chasse fixe"
-fr, default, "𝚜", "s en chasse fixe"
-fr, default, "𝚝", "t en chasse fixe"
-fr, default, "𝚞", "u en chasse fixe"
-fr, default, "𝚟", "v en chasse fixe"
-fr, default, "𝚠", "w en chasse fixe"
-fr, default, "𝚡", "x en chasse fixe"
-fr, default, "𝚢", "y en chasse fixe"
-fr, default, "𝚣", "z en chasse fixe"
-fr, default, "𝗔", "A majuscule en sans empattement gras"
-fr, default, "𝗕", "B majuscule en sans empattement gras"
-fr, default, "𝗖", "C majuscule en sans empattement gras"
-fr, default, "𝗗", "D majuscule en sans empattement gras"
-fr, default, "𝗘", "E majuscule en sans empattement gras"
-fr, default, "𝗙", "F majuscule en sans empattement gras"
-fr, default, "𝗚", "G majuscule en sans empattement gras"
-fr, default, "𝗛", "H majuscule en sans empattement gras"
-fr, default, "𝗜", "I majuscule en sans empattement gras"
-fr, default, "𝗝", "J majuscule en sans empattement gras"
-fr, default, "𝗞", "K majuscule en sans empattement gras"
-fr, default, "𝗟", "L majuscule en sans empattement gras"
-fr, default, "𝗠", "M majuscule en sans empattement gras"
-fr, default, "𝗡", "N majuscule en sans empattement gras"
-fr, default, "𝗢", "O majuscule en sans empattement gras"
-fr, default, "𝗣", "P majuscule en sans empattement gras"
-fr, default, "𝗤", "Q majuscule en sans empattement gras"
-fr, default, "𝗥", "R majuscule en sans empattement gras"
-fr, default, "𝗦", "S majuscule en sans empattement gras"
-fr, default, "𝗧", "T majuscule en sans empattement gras"
-fr, default, "𝗨", "U majuscule en sans empattement gras"
-fr, default, "𝗩", "V majuscule en sans empattement gras"
-fr, default, "𝗪", "W majuscule en sans empattement gras"
-fr, default, "𝗫", "X majuscule en sans empattement gras"
-fr, default, "𝗬", "Y majuscule en sans empattement gras"
-fr, default, "𝗭", "Z majuscule en sans empattement gras"
-fr, default, "𝗮", "a en sans empattement gras"
-fr, default, "𝗯", "b en sans empattement gras"
-fr, default, "𝗰", "c en sans empattement gras"
-fr, default, "𝗱", "d en sans empattement gras"
-fr, default, "𝗲", "e en sans empattement gras"
-fr, default, "𝗳", "f en sans empattement gras"
-fr, default, "𝗴", "g en sans empattement gras"
-fr, default, "𝗵", "h en sans empattement gras"
-fr, default, "𝗶", "i en sans empattement gras"
-fr, default, "𝗷", "j en sans empattement gras"
-fr, default, "𝗸", "k en sans empattement gras"
-fr, default, "𝗹", "l en sans empattement gras"
-fr, default, "𝗺", "m en sans empattement gras"
-fr, default, "𝗻", "n en sans empattement gras"
-fr, default, "𝗼", "o en sans empattement gras"
-fr, default, "𝗽", "p en sans empattement gras"
-fr, default, "𝗾", "q en sans empattement gras"
-fr, default, "𝗿", "r en sans empattement gras"
-fr, default, "𝘀", "s en sans empattement gras"
-fr, default, "𝘁", "t en sans empattement gras"
-fr, default, "𝘂", "u en sans empattement gras"
-fr, default, "𝘃", "v en sans empattement gras"
-fr, default, "𝘄", "w en sans empattement gras"
-fr, default, "𝘅", "x en sans empattement gras"
-fr, default, "𝘆", "y en sans empattement gras"
-fr, default, "𝘇", "z en sans empattement gras"
-fr, default, "𝘈", "A majuscule en sans empattement italique"
-fr, default, "𝘉", "B majuscule en sans empattement italique"
-fr, default, "𝘊", "C majuscule en sans empattement italique"
-fr, default, "𝘋", "D majuscule en sans empattement italique"
-fr, default, "𝘌", "E majuscule en sans empattement italique"
-fr, default, "𝘍", "F majuscule en sans empattement italique"
-fr, default, "𝘎", "G majuscule en sans empattement italique"
-fr, default, "𝘏", "H majuscule en sans empattement italique"
-fr, default, "𝘐", "I majuscule en sans empattement italique"
-fr, default, "𝘑", "J majuscule en sans empattement italique"
-fr, default, "𝘒", "K majuscule en sans empattement italique"
-fr, default, "𝘓", "L majuscule en sans empattement italique"
-fr, default, "𝘔", "M majuscule en sans empattement italique"
-fr, default, "𝘕", "N majuscule en sans empattement italique"
-fr, default, "𝘖", "O majuscule en sans empattement italique"
-fr, default, "𝘗", "P majuscule en sans empattement italique"
-fr, default, "𝘘", "Q majuscule en sans empattement italique"
-fr, default, "𝘙", "R majuscule en sans empattement italique"
-fr, default, "𝘚", "S majuscule en sans empattement italique"
-fr, default, "𝘛", "T majuscule en sans empattement italique"
-fr, default, "𝘜", "U majuscule en sans empattement italique"
-fr, default, "𝘝", "V majuscule en sans empattement italique"
-fr, default, "𝘞", "W majuscule en sans empattement italique"
-fr, default, "𝘟", "X majuscule en sans empattement italique"
-fr, default, "𝘠", "Y majuscule en sans empattement italique"
-fr, default, "𝘡", "Z majuscule en sans empattement italique"
-fr, default, "𝘢", "a en sans empattement italique"
-fr, default, "𝘣", "b en sans empattement italique"
-fr, default, "𝘤", "c en sans empattement italique"
-fr, default, "𝘥", "d en sans empattement italique"
-fr, default, "𝘦", "e en sans empattement italique"
-fr, default, "𝘧", "f en sans empattement italique"
-fr, default, "𝘨", "g en sans empattement italique"
-fr, default, "𝘩", "h en sans empattement italique"
-fr, default, "𝘪", "i en sans empattement italique"
-fr, default, "𝘫", "j en sans empattement italique"
-fr, default, "𝘬", "k en sans empattement italique"
-fr, default, "𝘭", "l en sans empattement italique"
-fr, default, "𝘮", "m en sans empattement italique"
-fr, default, "𝘯", "n en sans empattement italique"
-fr, default, "𝘰", "o en sans empattement italique"
-fr, default, "𝘱", "p en sans empattement italique"
-fr, default, "𝘲", "q en sans empattement italique"
-fr, default, "𝘳", "r en sans empattement italique"
-fr, default, "𝘴", "s en sans empattement italique"
-fr, default, "𝘵", "t en sans empattement italique"
-fr, default, "𝘶", "u en sans empattement italique"
-fr, default, "𝘷", "v en sans empattement italique"
-fr, default, "𝘸", "w en sans empattement italique"
-fr, default, "𝘹", "x en sans empattement italique"
-fr, default, "𝘺", "y en sans empattement italique"
-fr, default, "𝘻", "z en sans empattement italique"
-fr, default, "𝘼", "A majuscule en sans empattement italique gras"
-fr, default, "𝘽", "B majuscule en sans empattement italique gras"
-fr, default, "𝘾", "C majuscule en sans empattement italique gras"
-fr, default, "𝘿", "D majuscule en sans empattement italique gras"
-fr, default, "𝙀", "E majuscule en sans empattement italique gras"
-fr, default, "𝙁", "F majuscule en sans empattement italique gras"
-fr, default, "𝙂", "G majuscule en sans empattement italique gras"
-fr, default, "𝙃", "H majuscule en sans empattement italique gras"
-fr, default, "𝙄", "I majuscule en sans empattement italique gras"
-fr, default, "𝙅", "J majuscule en sans empattement italique gras"
-fr, default, "𝙆", "K majuscule en sans empattement italique gras"
-fr, default, "𝙇", "L majuscule en sans empattement italique gras"
-fr, default, "𝙈", "M majuscule en sans empattement italique gras"
-fr, default, "𝙉", "N majuscule en sans empattement italique gras"
-fr, default, "𝙊", "O majuscule en sans empattement italique gras"
-fr, default, "𝙋", "P majuscule en sans empattement italique gras"
-fr, default, "𝙌", "Q majuscule en sans empattement italique gras"
-fr, default, "𝙍", "R majuscule en sans empattement italique gras"
-fr, default, "𝙎", "S majuscule en sans empattement italique gras"
-fr, default, "𝙏", "T majuscule en sans empattement italique gras"
-fr, default, "𝙐", "U majuscule en sans empattement italique gras"
-fr, default, "𝙑", "V majuscule en sans empattement italique gras"
-fr, default, "𝙒", "W majuscule en sans empattement italique gras"
-fr, default, "𝙓", "X majuscule en sans empattement italique gras"
-fr, default, "𝙔", "Y majuscule en sans empattement italique gras"
-fr, default, "𝙕", "Z majuscule en sans empattement italique gras"
-fr, default, "𝙖", "a en sans empattement italique gras"
-fr, default, "𝙗", "b en sans empattement italique gras"
-fr, default, "𝙘", "c en sans empattement italique gras"
-fr, default, "𝙙", "d en sans empattement italique gras"
-fr, default, "𝙚", "e en sans empattement italique gras"
-fr, default, "𝙛", "f en sans empattement italique gras"
-fr, default, "𝙜", "g en sans empattement italique gras"
-fr, default, "𝙝", "h en sans empattement italique gras"
-fr, default, "𝙞", "i en sans empattement italique gras"
-fr, default, "𝙟", "j en sans empattement italique gras"
-fr, default, "𝙠", "k en sans empattement italique gras"
-fr, default, "𝙡", "l en sans empattement italique gras"
-fr, default, "𝙢", "m en sans empattement italique gras"
-fr, default, "𝙣", "n en sans empattement italique gras"
-fr, default, "𝙤", "o en sans empattement italique gras"
-fr, default, "𝙥", "p en sans empattement italique gras"
-fr, default, "𝙦", "q en sans empattement italique gras"
-fr, default, "𝙧", "r en sans empattement italique gras"
-fr, default, "𝙨", "s en sans empattement italique gras"
-fr, default, "𝙩", "t en sans empattement italique gras"
-fr, default, "𝙪", "u en sans empattement italique gras"
-fr, default, "𝙫", "v en sans empattement italique gras"
-fr, default, "𝙬", "w en sans empattement italique gras"
-fr, default, "𝙭", "x en sans empattement italique gras"
-fr, default, "𝙮", "y en sans empattement italique gras"
-fr, default, "𝙯", "z en sans empattement italique gras"
-fr, default, "𝖠", "A majuscule en sans empattement"
-fr, default, "𝖡", "B majuscule en sans empattement"
-fr, default, "𝖢", "C majuscule en sans empattement"
-fr, default, "𝖣", "D majuscule en sans empattement"
-fr, default, "𝖤", "E majuscule en sans empattement"
-fr, default, "𝖥", "F majuscule en sans empattement"
-fr, default, "𝖦", "G majuscule en sans empattement"
-fr, default, "𝖧", "H majuscule en sans empattement"
-fr, default, "𝖨", "I majuscule en sans empattement"
-fr, default, "𝖩", "J majuscule en sans empattement"
-fr, default, "𝖪", "K majuscule en sans empattement"
-fr, default, "𝖫", "L majuscule en sans empattement"
-fr, default, "𝖬", "M majuscule en sans empattement"
-fr, default, "𝖭", "N majuscule en sans empattement"
-fr, default, "𝖮", "O majuscule en sans empattement"
-fr, default, "𝖯", "P majuscule en sans empattement"
-fr, default, "𝖰", "Q majuscule en sans empattement"
-fr, default, "𝖱", "R majuscule en sans empattement"
-fr, default, "𝖲", "S majuscule en sans empattement"
-fr, default, "𝖳", "T majuscule en sans empattement"
-fr, default, "𝖴", "U majuscule en sans empattement"
-fr, default, "𝖵", "V majuscule en sans empattement"
-fr, default, "𝖶", "W majuscule en sans empattement"
-fr, default, "𝖷", "X majuscule en sans empattement"
-fr, default, "𝖸", "Y majuscule en sans empattement"
-fr, default, "𝖹", "Z majuscule en sans empattement"
-fr, default, "𝖺", "a en sans empattement"
-fr, default, "𝖻", "b en sans empattement"
-fr, default, "𝖼", "c en sans empattement"
-fr, default, "𝖽", "d en sans empattement"
-fr, default, "𝖾", "e en sans empattement"
-fr, default, "𝖿", "f en sans empattement"
-fr, default, "𝗀", "g en sans empattement"
-fr, default, "𝗁", "h en sans empattement"
-fr, default, "𝗂", "i en sans empattement"
-fr, default, "𝗃", "j en sans empattement"
-fr, default, "𝗄", "k en sans empattement"
-fr, default, "𝗅", "l en sans empattement"
-fr, default, "𝗆", "m en sans empattement"
-fr, default, "𝗇", "n en sans empattement"
-fr, default, "𝗈", "o en sans empattement"
-fr, default, "𝗉", "p en sans empattement"
-fr, default, "𝗊", "q en sans empattement"
-fr, default, "𝗋", "r en sans empattement"
-fr, default, "𝗌", "s en sans empattement"
-fr, default, "𝗍", "t en sans empattement"
-fr, default, "𝗎", "u en sans empattement"
-fr, default, "𝗏", "v en sans empattement"
-fr, default, "𝗐", "w en sans empattement"
-fr, default, "𝗑", "x en sans empattement"
-fr, default, "𝗒", "y en sans empattement"
-fr, default, "𝗓", "z en sans empattement"
-fr, default, "𝒜", "A majuscule en script"
-fr, default, "ℬ", "B ronde majuscule"
-fr, default, "𝒞", "C majuscule en script"
-fr, default, "𝒟", "D majuscule en script"
-fr, default, "ℰ", "E ronde majuscule"
-fr, default, "ℱ", "F ronde majuscule"
-fr, default, "𝒢", "G majuscule en script"
-fr, default, "ℋ", "H ronde majuscule"
-fr, default, "ℐ", "I ronde majuscule"
-fr, default, "𝒥", "J majuscule en script"
-fr, default, "𝒦", "K majuscule en script"
-fr, default, "ℒ", "L ronde majuscule"
-fr, default, "ℳ", "M ronde majuscule"
-fr, default, "𝒩", "N majuscule en script"
-fr, default, "𝒪", "O majuscule en script"
-fr, default, "𝒫", "P majuscule en script"
-fr, default, "𝒬", "Q majuscule en script"
-fr, default, "ℛ", "R ronde majuscule"
-fr, default, "𝒮", "S majuscule en script"
-fr, default, "𝒯", "T majuscule en script"
-fr, default, "𝒰", "U majuscule en script"
-fr, default, "𝒱", "V majuscule en script"
-fr, default, "𝒲", "W majuscule en script"
-fr, default, "𝒳", "X majuscule en script"
-fr, default, "𝒴", "Y majuscule en script"
-fr, default, "𝒵", "Z majuscule en script"
-fr, default, "𝒶", "a en script"
-fr, default, "𝒷", "b en script"
-fr, default, "𝒸", "c en script"
-fr, default, "𝒹", "d en script"
-fr, default, "ℯ", "e ronde minuscule"
-fr, default, "𝒻", "f en script"
-fr, default, "ℊ", "g ronde minuscule"
-fr, default, "𝒽", "h en script"
-fr, default, "𝒾", "i en script"
-fr, default, "𝒿", "j en script"
-fr, default, "𝓀", "k en script"
-fr, default, "𝓁", "script l"
-fr, default, "𝓂", "m en script"
-fr, default, "𝓃", "n en script"
-fr, default, "ℴ", "o ronde minuscule"
-fr, default, "𝓅", "p en script"
-fr, default, "𝓆", "q en script"
-fr, default, "𝓇", "r en script"
-fr, default, "𝓈", "s en script"
-fr, default, "𝓉", "t en script"
-fr, default, "𝓊", "u en script"
-fr, default, "𝓋", "v en script"
-fr, default, "𝓌", "w en script"
-fr, default, "𝓍", "x en script"
-fr, default, "𝓎", "y en script"
-fr, default, "𝓏", "z en script"
-fr, default, "⊾", "angle droit avec arc"
-fr, default, "⍼", "angle droit avec flèche en zigzag vers le bas"
-fr, default, "⟀", "angle tridimensionnel"
-fr, default, "⦛", "measured angle opening left"
-fr, default, "⦜", "right angle variant with square"
-fr, default, "⦝", "angle droit mesuré pointé"
-fr, default, "⦞", "angle with s inside"
-fr, default, "⦟", "acute angle"
-fr, default, "⦠", "spherical angle opening left"
-fr, default, "⦡", "spherical angle opening up"
-fr, default, "⦢", "turned angle"
-fr, default, "⦣", "reversed angle"
-fr, default, "⦤", "angle à barre souscrite"
-fr, default, "⦥", "angle à barre souscrite réfléchie"
-fr, default, "⦦", "angle oblique s'ouvrant vers le haut"
-fr, default, "⦧", "angle oblique s'ouvrant vers le bas"
-fr, default, "⦨", "angle calculé à bras vers l'est et bras fléché vers le nord-est"
-fr, default, "⦩", "angle calculé à bras vers l'ouest et bras fléché vers le nord-ouest"
-fr, default, "⦪", "angle calculé à bras vers l'est et bras fléché vers le sud-est"
-fr, default, "⦫", "angle calculé à bras vers l'ouest et bras fléché vers le sud-ouest"
-fr, default, "⦬", "angle calculé à bras vers le nord et bras fléché vers le nord-est"
-fr, default, "⦭", "angle calculé à bras vers le nord et bras fléché vers le nord-ouest"
-fr, default, "⦮", "angle calculé à bras vers le sud et bras fléché vers le sud-est"
-fr, default, "⦯", "angle calculé à bras vers le sud et bras fléché vers le sud-ouest"
-fr, default, "←", "flèche gauche"
-fr, default, "↑", "flèche vers le haut"
-fr, default, "→", "flèche droite"
-fr, default, "↓", "flèche vers le bas"
-fr, default, "↔", "flèche bilatérale"
-fr, default, "↕", "flèche haut et bas"
-fr, default, "↖", "flèche nord-ouest"
-fr, default, "↗", "flèche nord-est"
-fr, default, "↘", "flèche sud-est"
-fr, default, "↙", "flèche sud-ouest"
-fr, default, "↚", "flèche barrée gauche"
-fr, default, "↛", "flèche barrée droite"
-fr, default, "↜", "flèche ondulée gauche"
-fr, default, "↝", "flèche ondulée droite"
-fr, default, "↞", "flèche à deux pointes gauche"
-fr, default, "↟", "flèche à deux pointes vers le haut"
-fr, default, "↠", "flèche à deux pointes droite"
-fr, default, "↡", "flèche à deux pointes vers le bas"
-fr, default, "↢", "flèche empennée gauche"
-fr, default, "↣", "flèche empennée droite"
-fr, default, "↤", "flèche d'un taquet gauche"
-fr, default, "↥", "flèche d'un taquet vers le haut"
-fr, default, "↦", "flèche d'un taquet droite"
-fr, default, "↧", "flèche d'un taquet vers le bas"
-fr, default, "↨", "flèche haut-bas sur base"
-fr, default, "↩", "flèche avec crochet gauche"
-fr, default, "↪", "flèche avec crochet droite"
-fr, default, "↫", "flèche avec boucle gauche"
-fr, default, "↬", "flèche avec boucle droite"
-fr, default, "↭", "flèche ondulée bilatérale"
-fr, default, "↮", "flèche barrée bilatérale"
-fr, default, "↯", "flèche vers le bas en zigzag"
-fr, default, "↰", "flèche vers le haut avec pointe gauche"
-fr, default, "↱", "flèche vers le haut avec pointe droite"
-fr, default, "↲", "flèche vers le bas avec pointe gauche"
-fr, default, "↳", "flèche vers le bas avec pointe droite"
-fr, default, "↴", "flèche vers le bas avec coin droit"
-fr, default, "↵", "flèche vers le bas avec coin gauche"
-fr, default, "↶", "flèche semi-circulaire en sens positif"
-fr, default, "↷", "flèche semi-circulaire en sens négatif"
-fr, default, "↸", "flèche nord-ouest vers une barre horizontale longue"
-fr, default, "↹", "flèche gauche vers un taquet sur flèche droite vers un taquet"
-fr, default, "↺", "flèche en sens positif à cercle ouvert"
-fr, default, "↻", "flèche en sens négatif à cercle ouvert"
-fr, default, "⇄", "flèche vers le haut par-dessus flèche gauche"
-fr, default, "⇅", "flèche vers le haut à gauche d'une flèche vers le bas"
-fr, default, "⇆", "flèche gauche par-dessus flèche droite"
-fr, default, "⇇", "paire de flèches gauche"
-fr, default, "⇈", "paire de flèches vers le haut"
-fr, default, "⇉", "paire de flèches droite"
-fr, default, "⇊", "paire de flèches vers le bas"
-fr, default, "⇍", "double flèche barrée gauche"
-fr, default, "⇎", "double flèche barrée bilatérale"
-fr, default, "⇏", "double flèche barrée droite"
-fr, default, "⇐", "double flèche gauche"
-fr, default, "⇑", "double flèche vers le haut"
-fr, default, "⇒", "double flèche droite"
-fr, default, "⇓", "double flèche vers le bas"
-fr, default, "⇔", "double flèche bilatérale"
-fr, default, "⇕", "double flèche haut-bas"
-fr, default, "⇖", "double flèche nord-ouest"
-fr, default, "⇗", "double flèche nord-est"
-fr, default, "⇘", "double flèche sud-est"
-fr, default, "⇙", "double flèche sud-ouest"
-fr, default, "⇚", "triple flèche gauche"
-fr, default, "⇛", "triple flèche droite"
-fr, default, "⇜", "flèche en tire-bouchon gauche"
-fr, default, "⇝", "flèche en tire-bouchon droite"
-fr, default, "⇞", "flèche vers le haut avec double barre"
-fr, default, "⇟", "flèche vers le bas avec double barre"
-fr, default, "⇠", "flèche pointillée gauche"
-fr, default, "⇡", "flèche pointillée vers le haut"
-fr, default, "⇢", "flèche pointillée droite"
-fr, default, "⇣", "flèche pointillée vers le bas"
-fr, default, "⇤", "flèche gauche vers un taquet"
-fr, default, "⇥", "flèche droite vers un taquet"
-fr, default, "⇦", "flèche blanche gauche"
-fr, default, "⇧", "flèche blanche vers le haut"
-fr, default, "⇨", "flèche blanche droite"
-fr, default, "⇩", "flèche blanche vers le bas"
-fr, default, "⇪", "flèche blanche vers le haut à partir d'un taquet"
-fr, default, "⇫", "white up arrow on pedestal"
-fr, default, "⇬", "white up arrow on pedestal with horizontal bar"
-fr, default, "⇭", "white up arrow on pedestal with vertical bar"
-fr, default, "⇮", "white double up arrow"
-fr, default, "⇯", "white double up arrow on pedestal"
-fr, default, "⇰", "white right arrow from wall"
-fr, default, "⇱", "north west arrow to corner"
-fr, default, "⇲", "south east arrow to corner"
-fr, default, "⇳", "up down white arrow"
-fr, default, "⇴", "right arrow with small circle"
-fr, default, "⇵", "flèche descendante à gauche d'une flèche montante"
-fr, default, "⇶", "three right arrows"
-fr, default, "⇷", "left arrow with vertical stroke"
-fr, default, "⇸", "right arrow with vertical stroke"
-fr, default, "⇹", "left right arrow with vertical stroke"
-fr, default, "⇺", "left arrow with double vertical stroke"
-fr, default, "⇻", "right arrow with double vertical stroke"
-fr, default, "⇼", "left right arrow with double vertical stroke"
-fr, default, "⇽", "flèche à tête creuse gauche"
-fr, default, "⇾", "flèche à tête creuse droite"
-fr, default, "⇿", "flèche à tête creuse bilatérale"
-fr, default, "⌁", "electric arrow"
-fr, default, "⌃", "up arrowhead"
-fr, default, "⌄", "down arrowhead"
-fr, default, "⌤", "up arrowhead between two horizontal bars"
-fr, default, "⎋", "broken circle with northwest arrow"
-fr, default, "➔", "heavy wide headed right arrow"
-fr, default, "➘", "heavy down right arrow"
-fr, default, "➙", "heavy right arrow"
-fr, default, "➚", "heavy up right arrow"
-fr, default, "➛", "drafting point right arrow"
-fr, default, "➜", "heavy round tipped right arrow"
-fr, default, "➝", "triangle headed right arrow"
-fr, default, "➞", "heavy triangle headed right arrow"
-fr, default, "➟", "dashed triangle headed right arrow"
-fr, default, "➠", "heavy dashed triangle headed right arrow"
-fr, default, "➡", "black right arrow"
-fr, default, "➢", "three d top lighted right arrowhead"
-fr, default, "➣", "three d bottom lighted right arrowhead"
-fr, default, "➤", "black right arrowhead"
-fr, default, "➥", "heavy black curved down and right arrow"
-fr, default, "➦", "heavy black curved up and right arrow"
-fr, default, "➧", "squat black right arrow"
-fr, default, "➨", "heavy concave pointed black right arrow"
-fr, default, "➩", "right shaded white right arrow"
-fr, default, "➪", "left shaded white right arrow"
-fr, default, "➫", "back tilted shadowed white right arrow"
-fr, default, "➬", "front tilted shadowed white right arrow"
-fr, default, "➭", "heavy lower right shadowed white right arrow"
-fr, default, "➮", "heavy upper right shadowed white right arrow"
-fr, default, "➯", "notched lower right shadowed white right arrow"
-fr, default, "➱", "notched upper right shadowed white right arrow"
-fr, default, "➲", "circled heavy white right arrow"
-fr, default, "➳", "white feathered right arrow"
-fr, default, "➴", "black feathered down right arrow"
-fr, default, "➵", "black feathered right arrow"
-fr, default, "➶", "black feathered up right arrow"
-fr, default, "➷", "heavy black feathered down right arrow"
-fr, default, "➸", "heavy black feathered right arrow"
-fr, default, "➹", "heavy black feathered up right arrow"
-fr, default, "➺", "teardrop barbed right arrow"
-fr, default, "➻", "heavy teardrop shanked right arrow"
-fr, default, "➼", "wedge tailed right arrow"
-fr, default, "➽", "heavy wedge tailed right arrow"
-fr, default, "➾", "open outlined right arrow"
-fr, default, "⟰", "up quadruple arrow"
-fr, default, "⟱", "down quadruple arrow"
-fr, default, "⟲", "anticlockwise gapped circle arrow"
-fr, default, "⟳", "clockwise gapped circle arrow"
-fr, default, "⟴", "right arrow with circled plus"
-fr, default, "⟵", "longue flèche gauche"
-fr, default, "⟶", "longue flèche droite"
-fr, default, "⟷", "longue flèche bilatérale"
-fr, default, "⟸", "longue double flèche gauche"
-fr, default, "⟹", "longue double flèche droite"
-fr, default, "⟺", "longue double flèche bilatérale"
-fr, default, "⟻", "long left arrow from bar"
-fr, default, "⟼", "longue flèche d'un taquet droite"
-fr, default, "⟽", "long left double arrow from bar"
-fr, default, "⟾", "long right double arrow from bar"
-fr, default, "⟿", "longue flèche en tire-bouchon droite"
-fr, default, "⤀", "two headed right arrow with vertical stroke"
-fr, default, "⤁", "two headed right arrow with double vertical stroke"
-fr, default, "⤂", "double left arrow with vertical stroke"
-fr, default, "⤃", "double right arrow with vertical stroke"
-fr, default, "⤄", "double left right arrow with vertical stroke"
-fr, default, "⤅", "flèche à deux têtes d'un taquet droite"
-fr, default, "⤆", "double left arrow from bar"
-fr, default, "⤇", "double right arrow from bar"
-fr, default, "⤈", "arrow down with horizontal stroke"
-fr, default, "⤉", "up arrow with horizontal stroke"
-fr, default, "⤊", "up triple arrow"
-fr, default, "⤋", "down triple arrow"
-fr, default, "⤌", "flèche à deux traits gauche"
-fr, default, "⤍", "flèche à deux traits droite"
-fr, default, "⤎", "flèche à trois traits gauche"
-fr, default, "⤏", "flèche à trois traits droite"
-fr, default, "⤐", "flèche à trois traits et à deux têtes droite"
-fr, default, "⤑", "flèche à fût pointillé droite"
-fr, default, "⤒", "flèche jusqu'à taquet vers le haut"
-fr, default, "⤓", "flèche jusqu'à taquet vers le bas"
-fr, default, "⤔", "right arrow with tail with vertical stroke"
-fr, default, "⤕", "right arrow with tail with double vertical stroke"
-fr, default, "⤖", "flèche empennée à deux têtes droite"
-fr, default, "⤗", "right two headed arrow with tail with vertical stroke"
-fr, default, "⤘", "right two headed arrow with tail with double vertical stroke"
-fr, default, "⤙", "empenne gauche"
-fr, default, "⤚", "right arrow tail"
-fr, default, "⤛", "double empenne gauche"
-fr, default, "⤜", "double empenne droite"
-fr, default, "⤝", "flèche vers un losange noir à gauche"
-fr, default, "⤞", "flèche vers un losange noir à droite"
-fr, default, "⤟", "flèche d'un taquet vers un losange noir à gauche"
-fr, default, "⤠", "flèche d'un taquet vers un losange noir à droite"
-fr, default, "⤡", "north west and south east arrow"
-fr, default, "⤢", "north east and south west arrow"
-fr, default, "⤣", "flèche nord-ouest à crochet"
-fr, default, "⤤", "flèche nord-est à crochet"
-fr, default, "⤥", "flèche sud-est à crochet"
-fr, default, "⤦", "flèche sud-ouest à crochet"
-fr, default, "⤧", "flèches nord-ouest et nord-est"
-fr, default, "⤨", "flèches nord-est et sud-est"
-fr, default, "⤩", "flèches sud-est et sud-ouest"
-fr, default, "⤪", "flèches sud-ouest et nord-ouest"
-fr, default, "⤭", "south east arrow crossing north east arrow"
-fr, default, "⤮", "north east arrow crossing south east arrow"
-fr, default, "⤯", "falling diagonal crossing north east arrow"
-fr, default, "⤰", "rising diagonal crossing south east arrow"
-fr, default, "⤱", "north east arrow crossing north west arrow"
-fr, default, "⤲", "north west arrow crossing north east arrow"
-fr, default, "⤳", "flèche bossue droite"
-fr, default, "⤴", "arrow pointing right then curving up"
-fr, default, "⤵", "flèche courbe vers la droite puis le bas"
-fr, default, "⤶", "flèche courbe vers le bas puis la gauche"
-fr, default, "⤷", "flèche courbe vers le bas puis la droite"
-fr, default, "⤸", "côté droit d'arc fléché sens horaire"
-fr, default, "⤹", "côté gauche d'arc fléché sens antihoraire"
-fr, default, "⤺", "top arc anticlockwise arrow"
-fr, default, "⤻", "bottom arc anticlockwise arrow"
-fr, default, "⤼", "arc fléché sens horaire et signe moins souscrit"
-fr, default, "⤽", "arc fléché sens antihoraire et signe plus souscrit"
-fr, default, "⤾", "down right semicircular clockwise arrow"
-fr, default, "⤿", "down left semicircular anticlockwise arrow"
-fr, default, "⥀", "anticlockwise closed circle arrow"
-fr, default, "⥁", "clockwise closed circle arrow"
-fr, default, "⥂", "right arrow above short left arrow"
-fr, default, "⥃", "left arrow above short right arrow"
-fr, default, "⥄", "short right arrow above left arrow"
-fr, default, "⥅", "flèche droite surmontant signe moins"
-fr, default, "⥆", "left arrow with plus below"
-fr, default, "⥇", "right arrow through x"
-fr, default, "⥈", "petit cercle traversé d'une flèche bilatérale"
-fr, default, "⥉", "petit cercle surmonté d'une flèche montante à deux têtes"
-fr, default, "⥰", "flèche en épingle à cheveu droite"
-fr, default, "⥱", "flèche droite surmontée d'un égal"
-fr, default, "⥲", "flèche droite surmontée d'un tilde"
-fr, default, "⥳", "tilde surmonté d'une flèche gauche"
-fr, default, "⥴", "tilde surmonté d'une flèche droite"
-fr, default, "⥵", "presque égal à surmonté d'une flèche droite"
-fr, default, "⥶", "inférieur à surmonté d'une flèche gauche"
-fr, default, "⥷", "left arrow through less than"
-fr, default, "⥸", "flèche droite surmontée d'un supérieur à"
-fr, default, "⥹", "flèche droite surmontée d'un sous-ensemble de"
-fr, default, "⥺", "left arrow through subset"
-fr, default, "⥻", "flèche gauche surmontée d'un sur-ensemble de"
-fr, default, "⦳", "ensemble vide flèche droite en chef"
-fr, default, "⦴", "ensemble vide flèche gauche en chef"
-fr, default, "⦽", "up arrow through circle"
-fr, default, "⧪", "black diamond with down arrow"
-fr, default, "⧬", "white circle with down arrow"
-fr, default, "⧭", "black circle with down arrow"
-fr, default, "⨗", "intégrale à crosse fléchée gauche"
-fr, default, "⬀", "north east white arrow"
-fr, default, "⬁", "north west white arrow"
-fr, default, "⬂", "south east white arrow"
-fr, default, "⬃", "south west white arrow"
-fr, default, "⬄", "left right white arrow"
-fr, default, "⬅", "left black arrow"
-fr, default, "⬆", "up black arrow"
-fr, default, "⬇", "down black arrow"
-fr, default, "⬈", "north east black arrow"
-fr, default, "⬉", "north west black arrow"
-fr, default, "⬊", "south east black arrow"
-fr, default, "⬋", "south west black arrow"
-fr, default, "⬌", "left right black arrow"
-fr, default, "⬍", "up down black arrow"
-fr, default, "⬎", "right arrow with tip down"
-fr, default, "⬏", "right arrow with tip up"
-fr, default, "⬐", "left arrow with tip down"
-fr, default, "⬑", "left arrow with tip up"
-fr, default, "⬰", "left arrow with small circle"
-fr, default, "⬱", "three left arrows"
-fr, default, "⬲", "left arrow with circled plus"
-fr, default, "⬳", "long left squiggle arrow"
-fr, default, "⬴", "left two headed arrow with vertical stroke"
-fr, default, "⬵", "left two headed arrow with double vertical stroke"
-fr, default, "⬶", "left two headed arrow from bar"
-fr, default, "⬷", "left two headed triple dash arrow"
-fr, default, "⬸", "left arrow with dotted stem"
-fr, default, "⬹", "left arrow with tail with vertical stroke"
-fr, default, "⬺", "left arrow with tail with double vertical stroke"
-fr, default, "⬻", "left two headed arrow with tail"
-fr, default, "⬼", "left two headed arrow with tail with vertical stroke"
-fr, default, "⬽", "left two headed arrow with tail with double vertical stroke"
-fr, default, "⬾", "left arrow through x"
-fr, default, "⬿", "wave arrow pointing directly left"
-fr, default, "⭀", "equals sign above left arrow"
-fr, default, "⭁", "reverse tilde operator above left arrow"
-fr, default, "⭂", "left arrow above reverse almost equals"
-fr, default, "⭃", "right arrow through greater than"
-fr, default, "⭄", "right arrow through superset"
-fr, default, "⭅", "left quadruple arrow"
-fr, default, "⭆", "right quadruple arrow"
-fr, default, "⭇", "reverse tilde operator above right arrow"
-fr, default, "⭈", "right arrow above reverse almost equals"
-fr, default, "⭉", "tilde operator above left arrow"
-fr, default, "⭊", "left arrow above almost equals"
-fr, default, "⭋", "left arrow above reverse tilde operator"
-fr, default, "⭌", "right arrow above reverse tilde operator"
-fr, default, "￩", "halfwidth left arrow"
-fr, default, "￪", "halfwidth up arrow"
-fr, default, "￫", "halfwidth right arrow"
-fr, default, "￬", "halfwidth down arrow"
-fr, default, "ℓ", "l minuscule en script"
-fr, default, "℘", "fonction elliptique de weierstrass"
-fr, default, "ℼ", "double struck pi"
-fr, default, "ℽ", "double struck gamma"
-fr, default, "ℾ", "double struck cap gamma"
-fr, default, "ℿ", "double struck cap pi"
-fr, default, "⅀", "double struck n ary summation"
-fr, default, "ⅅ", "D majuscule"
-fr, default, "ⅆ", "d minuscule ajouré en italique"
-fr, default, "ⅇ", "e minuscule ajouré en italique"
-fr, default, "ⅈ", "i minuscule ajouré en italique"
-fr, default, "ⅉ", "double struck italic j"
-fr, default, "𝚤", "dotless i"
-fr, default, "𝚥", "dotless j"
-fr, default, "(", "parenthèse gauche"
-fr, default, ")", "parenthèse droite"
-fr, default, "[", "crochet gauche"
-fr, default, "]", "crochet droit"
-fr, default, "{", "accolade gauche"
-fr, default, "}", "accolade droite"
-fr, default, "⁅", "left square bracket with quill"
-fr, default, "⁆", "right square bracket with quill"
-fr, default, "⌈", "plafond à gauche"
-fr, default, "⌉", "plafond à droite"
-fr, default, "⌊", "plancher à gauche"
-fr, default, "⌋", "plancher à droite"
-fr, default, "⌌", "repère sud-est"
-fr, default, "⌍", "repère sud-ouest"
-fr, default, "⌎", "repère nord-est"
-fr, default, "⌏", "repère nord-ouest"
-fr, default, "⌜", "coin nord-ouest"
-fr, default, "⌝", "coin nord-est"
-fr, default, "⌞", "coin sud-ouest"
-fr, default, "⌟", "coin sud-est"
-fr, default, "⌠", "moitié supérieure d'intégrale"
-fr, default, "⌡", "moitié inférieure d'intégrale"
-fr, default, "〈", "chevron gauche"
-fr, default, "〉", "chevron droite"
-fr, default, "⎛", "left parenthesis upper hook"
-fr, default, "⎜", "left parenthesis extension"
-fr, default, "⎝", "left parenthesis lower hook"
-fr, default, "⎞", "right parenthesis upper hook"
-fr, default, "⎟", "right parenthesis extension"
-fr, default, "⎠", "right parenthesis lower hook"
-fr, default, "⎡", "left square bracket upper corner"
-fr, default, "⎢", "left square bracket extension"
-fr, default, "⎣", "left square bracket lower corner"
-fr, default, "⎤", "right square bracket upper corner"
-fr, default, "⎥", "right square bracket extension"
-fr, default, "⎦", "right square bracket lower corner"
-fr, default, "⎧", "left curly bracket upper hook"
-fr, default, "⎨", "left curly bracket middle piece"
-fr, default, "⎩", "left curly bracket lower hook"
-fr, default, "⎪", "curly bracket extension"
-fr, default, "⎫", "right curly bracket upper hook"
-fr, default, "⎬", "right curly bracket middle piece"
-fr, default, "⎭", "right curly bracket lower hook"
-fr, default, "⎮", "integral extension"
-fr, default, "⎯", "horizontal line extension"
-fr, default, "⎰", "moitié supérieure gauche ou inférieure droite d'accolade"
-fr, default, "⎱", "moitié supérieure droite ou inférieure gauche d'accolade"
-fr, default, "⎲", "summation top"
-fr, default, "⎳", "summation bottom"
-fr, default, "⎴", "crochet vertical supérieur"
-fr, default, "⎵", "crochet vertical inférieur"
-fr, default, "⎶", "bottom square bracket over top square bracket"
-fr, default, "⎷", "radical symbol bottom"
-fr, default, "⎸", "left vertical box line"
-fr, default, "⎹", "right vertical box line"
-fr, default, "⏜", "parenthèse supérieure"
-fr, default, "⏝", "parenthèse inférieure"
-fr, default, "⏞", "accolade supérieure"
-fr, default, "⏟", "accolade inférieure"
-fr, default, "⏠", "crochet en écaille supérieur"
-fr, default, "⏡", "crochet en écaille inférieur"
-fr, default, "❨", "medium left parenthesis ornament"
-fr, default, "❩", "medium right parenthesis ornament"
-fr, default, "❪", "medium flattened left parenthesis ornament"
-fr, default, "❫", "medium flattened right parenthesis ornament"
-fr, default, "❬", "medium left pointing angle bracket ornament"
-fr, default, "❭", "medium right pointing angle bracket ornament"
-fr, default, "❮", "heavy left pointing angle quotation mark ornament"
-fr, default, "❯", "heavy right pointing angle quotation mark ornament"
-fr, default, "❰", "heavy left pointing angle bracket ornament"
-fr, default, "❱", "heavy right pointing angle bracket ornament"
-fr, default, "❲", "light left tortoise shell bracket ornament"
-fr, default, "❳", "light right tortoise shell bracket ornament"
-fr, default, "❴", "medium left curly bracket ornament"
-fr, default, "❵", "medium right curly bracket ornament"
-fr, default, "⟅", "délimiteur de sac en s gauche"
-fr, default, "⟆", "délimiteur de sac en s droite"
-fr, default, "⟦", "crochet blanc gauche"
-fr, default, "⟧", "crochet blanc droit"
-fr, default, "⟨", "chevron mathématique gauche"
-fr, default, "⟩", "chevron droit"
-fr, default, "⟪", "double chevron gauche"
-fr, default, "⟫", "double chevron droit"
-fr, default, "⟬", "crochet gauche en écaille blanche"
-fr, default, "⟭", "crochet droit en écaille blanche"
-fr, default, "⟮", "parenthèse gauche aplatie"
-fr, default, "⟯", "parenthèse droite aplatie"
-fr, default, "⦃", "left white curly bracket"
-fr, default, "⦄", "right white curly bracket"
-fr, default, "⦅", "parenthèse gauche ajourée"
-fr, default, "⦆", "parenthèse droite ajourée"
-fr, default, "⦇", "z notation left image bracket"
-fr, default, "⦈", "z notation right image bracket"
-fr, default, "⦉", "z notation left binding bracket"
-fr, default, "⦊", "z notation right binding bracket"
-fr, default, "⦋", "crochet gauche avec barre souscrite"
-fr, default, "⦌", "crochet droit avec barre souscrite"
-fr, default, "⦍", "crochet gauche avec trait dans le coin supérieur"
-fr, default, "⦎", "crochet droit avec trait dans le coin inférieur"
-fr, default, "⦏", "crochet gauche avec trait dans le coin inférieur"
-fr, default, "⦐", "crochet droit avec trait dans le coin supérieur"
-fr, default, "⦑", "chevron gauche pointé"
-fr, default, "⦒", "chevron droit pointé"
-fr, default, "⦓", "parenthèse arc gauche et inférieur à"
-fr, default, "⦔", "parenthèse arc droite et supérieur à"
-fr, default, "⦕", "parenthèse double arc droite et supérieur à"
-fr, default, "⦖", "parenthèse double arc gauche et inférieur à"
-fr, default, "⦗", "left black tortoise shell bracket"
-fr, default, "⦘", "right black tortoise shell bracket"
-fr, default, "⧘", "left wiggly fence"
-fr, default, "⧙", "right wiggly fence"
-fr, default, "⧚", "double clôture dentelée gauche"
-fr, default, "⧛", "right double wiggly fence"
-fr, default, "⧼", "left pointing curved angle bracket"
-fr, default, "⧽", "right pointing curved angle bracket"
-fr, default, "⸢", "top left half bracket"
-fr, default, "⸣", "top right half bracket"
-fr, default, "⸤", "bottom left half bracket"
-fr, default, "⸥", "bottom right half bracket"
-fr, default, "⸦", "left sideways U bracket"
-fr, default, "⸧", "right sideways U bracket"
-fr, default, "⸨", "left double parenthesis"
-fr, default, "⸩", "right double parenthesis"
-fr, default, "〈", "left angle bracket"
-fr, default, "〉", "right angle bracket"
-fr, default, "《", "double chevron gauche"
-fr, default, "》", "double chevron droit"
-fr, default, "「", "left corner bracket"
-fr, default, "」", "right corner bracket"
-fr, default, "『", "left white corner bracket"
-fr, default, "』", "right white corner bracket"
-fr, default, "【", "left black lenticular bracket"
-fr, default, "】", "right black lenticular bracket"
-fr, default, "〔", "crochet gauche en écaille"
-fr, default, "〕", "crochet droit en écaille"
-fr, default, "〖", "left white lenticular bracket"
-fr, default, "〗", "right white lenticular bracket"
-fr, default, "〘", "left white tortoise shell bracket"
-fr, default, "〙", "right white tortoise shell bracket"
-fr, default, "〚", "crochet blanc gauche"
-fr, default, "〛", "crochet blanc droit"
-fr, default, "〝", "reversed double prime quotation mark"
-fr, default, "〞", "guillemet double prime"
-fr, default, "〟", "low double prime quotation mark"
-fr, default, "﴾", "ornate left parenthesis"
-fr, default, "﴿", "ornate right parenthesis"
-fr, default, "︗", "presentation form for vertical left white lenticular bracket"
-fr, default, "︘", "presentation form for vertical right white lenticular brakcet"
-fr, default, "︵", "forme de présentation de parenthèse gauche verticale"
-fr, default, "︶", "forme de présentation de parenthèse droite verticale"
-fr, default, "︷", "forme de présentation d'accolade gauche verticale"
-fr, default, "︸", "forme de présentation d'accolade droite verticale"
-fr, default, "︹", "presentation form for vertical left tortoise shell bracket"
-fr, default, "︺", "presentation form for vertical right tortoise shell bracket"
-fr, default, "︻", "presentation form for vertical left black lenticular bracket"
-fr, default, "︼", "presentation form for vertical right black lenticular bracket"
-fr, default, "︽", "presentation form for vertical left double angle bracket"
-fr, default, "︾", "presentation form for vertical right double angle bracket"
-fr, default, "︿", "over angle bracket"
-fr, default, "﹀", "under angle bracket"
-fr, default, "﹁", "presentation form for vertical left corner bracket"
-fr, default, "﹂", "presentation form for vertical right corner bracket"
-fr, default, "﹃", "presentation form for vertical left white corner bracket"
-fr, default, "﹄", "presentation form for vertical right white corner bracket"
-fr, default, "﹇", "presentation form for vertical left square bracket"
-fr, default, "﹈", "presentation form for vertical right square bracket"
-fr, default, "﹙", "small left parenthesis"
-fr, default, "﹚", "small right parenthesis"
-fr, default, "﹛", "small left curly bracket"
-fr, default, "﹜", "small right curly bracket"
-fr, default, "﹝", "small left tortoise shell bracket"
-fr, default, "﹞", "small right tortoise shell bracket"
-fr, default, "（", "fullwidth left parenthesis"
-fr, default, "）", "fullwidth right parenthesis"
-fr, default, "［", "fullwidth left square bracket"
-fr, default, "］", "fullwidth right square bracket"
-fr, default, "｛", "fullwidth left curly bracket"
-fr, default, "｝", "fullwidth right curly bracket"
-fr, default, "｟", "fullwidth white left parenthesis"
-fr, default, "｠", "fullwidth white right parenthesis"
-fr, default, "｢", "halfwidth left corner bracket"
-fr, default, "｣", "halfwidth right corner bracket"
-fr, default, "²", "exposant deux"
-fr, default, "³", "exposant trois"
-fr, default, "¹", "exposant un"
-fr, default, "¼", "un quart"
-fr, default, "½", "un demi"
-fr, default, "¾", "trois quarts"
-fr, default, "⁰", "super zero"
-fr, default, "⁴", "super four"
-fr, default, "⁵", "super five"
-fr, default, "⁶", "super six"
-fr, default, "⁷", "super seven"
-fr, default, "⁸", "super eight"
-fr, default, "⁹", "super nine"
-fr, default, "₀", "sub zero"
-fr, default, "₁", "sub one"
-fr, default, "₂", "sub two"
-fr, default, "₃", "sub three"
-fr, default, "₄", "sub four"
-fr, default, "₅", "sub five"
-fr, default, "₆", "sub six"
-fr, default, "₇", "sub seven"
-fr, default, "₈", "sub eight"
-fr, default, "₉", "sub nine"
-fr, default, "⅐", "one seventh"
-fr, default, "⅑", "one ninth"
-fr, default, "⅒", "one tenth"
-fr, default, "⅓", "un tiers"
-fr, default, "⅔", "deux tiers"
-fr, default, "⅕", "un cinquième"
-fr, default, "⅖", "deux cinquièmes"
-fr, default, "⅗", "trois cinquièmes"
-fr, default, "⅘", "quatre cinquièmes"
-fr, default, "⅙", "un sixième"
-fr, default, "⅚", "cinq sixièmes"
-fr, default, "⅛", "un huitième"
-fr, default, "⅜", "trois huitièmes"
-fr, default, "⅝", "cinq huitièmes"
-fr, default, "⅞", "sept huitièmes"
-fr, default, "⅟", "numerator one"
-fr, default, "↉", "zero thirds"
-fr, default, "①", "circled one"
-fr, default, "②", "circled two"
-fr, default, "③", "circled three"
-fr, default, "④", "circled four"
-fr, default, "⑤", "circled five"
-fr, default, "⑥", "circled six"
-fr, default, "⑦", "circled seven"
-fr, default, "⑧", "circled eight"
-fr, default, "⑨", "circled nine"
-fr, default, "⑩", "circled ten"
-fr, default, "⑪", "circled eleven"
-fr, default, "⑫", "circled twelve"
-fr, default, "⑬", "circled thirteen"
-fr, default, "⑭", "circled fourteen"
-fr, default, "⑮", "circled fifteen"
-fr, default, "⑯", "circled sixteen"
-fr, default, "⑰", "circled seventeen"
-fr, default, "⑱", "circled eighteen"
-fr, default, "⑲", "circled nineteen"
-fr, default, "⑳", "circled twenty"
-fr, default, "⑴", "parenthesized one"
-fr, default, "⑵", "parenthesized two"
-fr, default, "⑶", "parenthesized three"
-fr, default, "⑷", "parenthesized four"
-fr, default, "⑸", "parenthesized five"
-fr, default, "⑹", "parenthesized six"
-fr, default, "⑺", "parenthesized seven"
-fr, default, "⑻", "parenthesized eight"
-fr, default, "⑼", "parenthesized nine"
-fr, default, "⑽", "parenthesized ten"
-fr, default, "⑾", "parenthesized eleven"
-fr, default, "⑿", "parenthesized twelve"
-fr, default, "⒀", "parenthesized thirteen"
-fr, default, "⒁", "parenthesized fourteen"
-fr, default, "⒂", "parenthesized fifteen"
-fr, default, "⒃", "parenthesized sixteen"
-fr, default, "⒄", "parenthesized seventeen"
-fr, default, "⒅", "parenthesized eighteen"
-fr, default, "⒆", "parenthesized nineteen"
-fr, default, "⒇", "parenthesized twenty"
-fr, default, "⒈", "one period"
-fr, default, "⒉", "two period"
-fr, default, "⒊", "three period"
-fr, default, "⒋", "four period"
-fr, default, "⒌", "five period"
-fr, default, "⒍", "six period"
-fr, default, "⒎", "seven period"
-fr, default, "⒏", "eight period"
-fr, default, "⒐", "nine period"
-fr, default, "⒑", "ten period"
-fr, default, "⒒", "eleven period"
-fr, default, "⒓", "twelve period"
-fr, default, "⒔", "thirteen period"
-fr, default, "⒕", "fourteen period"
-fr, default, "⒖", "fifteen period"
-fr, default, "⒗", "sixteen period"
-fr, default, "⒘", "seventeen period"
-fr, default, "⒙", "eighteen period"
-fr, default, "⒚", "nineteen period"
-fr, default, "⒛", "twenty period"
-fr, default, "⓪", "circled zero"
-fr, default, "⓫", "negative circled eleven"
-fr, default, "⓬", "negative circled twelve"
-fr, default, "⓭", "negative circled thirteen"
-fr, default, "⓮", "negative circled fourteen"
-fr, default, "⓯", "negative circled fifteen"
-fr, default, "⓰", "negative circled sixteen"
-fr, default, "⓱", "negative circled seventeen"
-fr, default, "⓲", "negative circled eighteen"
-fr, default, "⓳", "negative circled nineteen"
-fr, default, "⓴", "negative circled twenty"
-fr, default, "⓵", "double circled one"
-fr, default, "⓶", "double circled two"
-fr, default, "⓷", "double circled three"
-fr, default, "⓸", "double circled four"
-fr, default, "⓹", "double circled five"
-fr, default, "⓺", "double circled six"
-fr, default, "⓻", "double circled seven"
-fr, default, "⓼", "double circled eight"
-fr, default, "⓽", "double circled nine"
-fr, default, "⓾", "double circled ten"
-fr, default, "⓿", "negative circled zero"
-fr, default, "❶", "inverse circled one"
-fr, default, "❷", "inverse circled two"
-fr, default, "❸", "inverse circled three"
-fr, default, "❹", "inverse circled four"
-fr, default, "❺", "inverse circled five"
-fr, default, "❻", "inverse circled six"
-fr, default, "❼", "inverse circled seven"
-fr, default, "❽", "inverse circled eight"
-fr, default, "❾", "inverse circled nine"
-fr, default, "❿", "inverse circled ten"
-fr, default, "➀", "circled one"
-fr, default, "➁", "circled two"
-fr, default, "➂", "circled three"
-fr, default, "➃", "circled four"
-fr, default, "➄", "circled five"
-fr, default, "➅", "circled six"
-fr, default, "➆", "circled seven"
-fr, default, "➇", "circled eight"
-fr, default, "➈", "circled nine"
-fr, default, "➉", "circled ten"
-fr, default, "➊", "inverse circled one"
-fr, default, "➋", "inverse circled two"
-fr, default, "➌", "inverse circled three"
-fr, default, "➍", "inverse circled four"
-fr, default, "➎", "inverse circled five"
-fr, default, "➏", "inverse circled six"
-fr, default, "➐", "inverse circled seven"
-fr, default, "➑", "inverse circled eight"
-fr, default, "➒", "inverse circled nine"
-fr, default, "➓", "inverse circled ten"
-fr, default, "㉈", "circled ten on black square"
-fr, default, "㉉", "circled twenty on black square"
-fr, default, "㉊", "circled thirty on black square"
-fr, default, "㉋", "circled forty on black square"
-fr, default, "㉌", "circled fifty on black square"
-fr, default, "㉍", "circled sixty on black square"
-fr, default, "㉎", "circled seventy on black square"
-fr, default, "㉏", "circled eighty on black square"
-fr, default, "㉑", "circled twenty one"
-fr, default, "㉒", "circled twenty two"
-fr, default, "㉓", "circled twenty three"
-fr, default, "㉔", "circled twenty four"
-fr, default, "㉕", "circled twenty five"
-fr, default, "㉖", "circled twenty six"
-fr, default, "㉗", "circled twenty seven"
-fr, default, "㉘", "circled twenty eight"
-fr, default, "㉙", "circled twenty nine"
-fr, default, "㉚", "circled thirty"
-fr, default, "㉛", "circled thirty one"
-fr, default, "㉜", "circled thirty two"
-fr, default, "㉝", "circled thirty three"
-fr, default, "㉞", "circled thirty four"
-fr, default, "㉟", "circled thirty five"
-fr, default, "㊱", "circled thirty six"
-fr, default, "㊲", "circled thirty seven"
-fr, default, "㊳", "circled thirty eight"
-fr, default, "㊴", "circled thirty nine"
-fr, default, "㊵", "circled forty"
-fr, default, "㊶", "circled forty one"
-fr, default, "㊷", "circled forty two"
-fr, default, "㊸", "circled forty three"
-fr, default, "㊹", "circled forty four"
-fr, default, "㊺", "circled forty five"
-fr, default, "㊻", "circled forty six"
-fr, default, "㊼", "circled forty seven"
-fr, default, "㊽", "circled forty eight"
-fr, default, "㊾", "circled forty nine"
-fr, default, "㊿", "circled fifty"
-fr, default, "０", "zero"
-fr, default, "１", "one"
-fr, default, "２", "two"
-fr, default, "３", "three"
-fr, default, "４", "four"
-fr, default, "５", "five"
-fr, default, "６", "six"
-fr, default, "７", "seven"
-fr, default, "８", "eight"
-fr, default, "９", "nine"
-fr, default, "𝟎", "chiffre mathématique gras 0"
-fr, default, "𝟏", "chiffre mathématique gras 1"
-fr, default, "𝟐", "chiffre mathématique gras 2"
-fr, default, "𝟑", "chiffre mathématique gras 3"
-fr, default, "𝟒", "chiffre mathématique gras 4"
-fr, default, "𝟓", "chiffre mathématique gras 5"
-fr, default, "𝟔", "chiffre mathématique gras 6"
-fr, default, "𝟕", "chiffre mathématique gras 7"
-fr, default, "𝟖", "chiffre mathématique gras 8"
-fr, default, "𝟗", "chiffre mathématique gras 9"
-fr, default, "𝟘", "chiffre mathématique ajouré 0"
-fr, default, "𝟙", "chiffre mathématique ajouré 1"
-fr, default, "𝟚", "chiffre mathématique ajouré 2"
-fr, default, "𝟛", "chiffre mathématique ajouré 3"
-fr, default, "𝟜", "chiffre mathématique ajouré 4"
-fr, default, "𝟝", "chiffre mathématique ajouré 5"
-fr, default, "𝟞", "chiffre mathématique ajouré 6"
-fr, default, "𝟟", "chiffre mathématique ajouré 7"
-fr, default, "𝟠", "chiffre mathématique ajouré 8"
-fr, default, "𝟡", "chiffre mathématique ajouré 9"
-fr, default, "𝟢", "chiffre mathématique sans empattement 0"
-fr, default, "𝟣", "chiffre mathématique sans empattement 1"
-fr, default, "𝟤", "chiffre mathématique sans empattement 2"
-fr, default, "𝟥", "chiffre mathématique sans empattement 3"
-fr, default, "𝟦", "chiffre mathématique sans empattement 4"
-fr, default, "𝟧", "chiffre mathématique sans empattement 5"
-fr, default, "𝟨", "chiffre mathématique sans empattement 6"
-fr, default, "𝟩", "chiffre mathématique sans empattement 7"
-fr, default, "𝟪", "chiffre mathématique sans empattement 8"
-fr, default, "𝟫", "chiffre mathématique sans empattement 9"
-fr, default, "𝟬", "chiffre mathématique gras sans empattement 0"
-fr, default, "𝟭", "chiffre mathématique gras sans empattement 1"
-fr, default, "𝟮", "chiffre mathématique gras sans empattement 2"
-fr, default, "𝟯", "chiffre mathématique gras sans empattement 3"
-fr, default, "𝟰", "chiffre mathématique gras sans empattement 4"
-fr, default, "𝟱", "chiffre mathématique gras sans empattement 5"
-fr, default, "𝟲", "chiffre mathématique gras sans empattement 6"
-fr, default, "𝟳", "chiffre mathématique gras sans empattement 7"
-fr, default, "𝟴", "chiffre mathématique gras sans empattement 8"
-fr, default, "𝟵", "chiffre mathématique gras sans empattement 9"
-fr, default, "𝟶", "chiffre mathématique à chasse fixe 0"
-fr, default, "𝟷", "chiffre mathématique à chasse fixe 1"
-fr, default, "𝟸", "chiffre mathématique à chasse fixe 2"
-fr, default, "𝟹", "chiffre mathématique à chasse fixe 3"
-fr, default, "𝟺", "chiffre mathématique à chasse fixe 4"
-fr, default, "𝟻", "chiffre mathématique à chasse fixe 5"
-fr, default, "𝟼", "chiffre mathématique à chasse fixe 6"
-fr, default, "𝟽", "chiffre mathématique à chasse fixe 7"
-fr, default, "𝟾", "chiffre mathématique à chasse fixe 8"
-fr, default, "𝟿", "chiffre mathématique à chasse fixe 9"
-fr, default, "🄀", "zero period"
-fr, default, "🄁", "zero comma"
-fr, default, "🄂", "one comma"
-fr, default, "🄃", "two comma"
-fr, default, "🄄", "three comma"
-fr, default, "🄅", "four comma"
-fr, default, "🄆", "five comma"
-fr, default, "🄇", "six comma"
-fr, default, "🄈", "seven comma"
-fr, default, "🄉", "eight comma"
-fr, default, "🄊", "nine comma"
-fr, default, "─", "filet horizontal fin"
-fr, default, "━", "box drawings heavy horizontal"
-fr, default, "│", "filet vertical fin"
-fr, default, "┃", "box drawings heavy vertical"
-fr, default, "┄", "box drawings light triple dash horizontal"
-fr, default, "┅", "box drawings heavy triple dash horizontal"
-fr, default, "┆", "box drawings light triple dash vertical"
-fr, default, "┇", "box drawings heavy triple dash vertical"
-fr, default, "┈", "box drawings light quadruple dash horizontal"
-fr, default, "┉", "box drawings heavy quadruple dash horizontal"
-fr, default, "┊", "box drawings light quadruple dash vertical"
-fr, default, "┋", "box drawings heavy quadruple dash vertical"
-fr, default, "┌", "filet fin vers le bas et vers la droite"
-fr, default, "┍", "box drawings down light and right heavy"
-fr, default, "┎", "box drawings down heavy and right light"
-fr, default, "┏", "box drawings heavy down and right"
-fr, default, "┐", "filet fin vers le bas et vers la gauche"
-fr, default, "┑", "box drawings down light and left heavy"
-fr, default, "┒", "box drawings down heavy and left light"
-fr, default, "┓", "box drawings heavy down and left"
-fr, default, "└", "filet fin vers le haut et vers la droite"
-fr, default, "┕", "box drawings up light and right heavy"
-fr, default, "┖", "box drawings up heavy and right light"
-fr, default, "┗", "box drawings heavy up and right"
-fr, default, "┘", "filet fin vers le haut et vers la gauche"
-fr, default, "┙", "box drawings up light and left heavy"
-fr, default, "┚", "box drawings up heavy and left light"
-fr, default, "┛", "box drawings heavy up and left"
-fr, default, "├", "filet fin vertical et vers la droite"
-fr, default, "┝", "box drawings vertical light and right heavy"
-fr, default, "┞", "box drawings up heavy and right down light"
-fr, default, "┟", "box drawings down heavy and right up light"
-fr, default, "┠", "box drawings vertical heavy and right light"
-fr, default, "┡", "box drawings down light and right up heavy"
-fr, default, "┢", "box drawings up light and right down heavy"
-fr, default, "┣", "box drawings heavy vertical and right"
-fr, default, "┤", "filet fin vertical et vers la gauche"
-fr, default, "┥", "box drawings vertical light and left heavy"
-fr, default, "┦", "box drawings up heavy and left down light"
-fr, default, "┧", "box drawings down heavy and left up light"
-fr, default, "┨", "box drawings vertical heavy and left light"
-fr, default, "┩", "box drawings down light and left up heavy"
-fr, default, "┪", "box drawings up light and left down heavy"
-fr, default, "┫", "box drawings heavy vertical and left"
-fr, default, "┬", "filet fin vers le bas et horizontal"
-fr, default, "┭", "box drawings left heavy and right down light"
-fr, default, "┮", "box drawings right heavy and left down light"
-fr, default, "┯", "box drawings down light and horizontal heavy"
-fr, default, "┰", "box drawings down heavy and horizontal light"
-fr, default, "┱", "box drawings right light and left down heavy"
-fr, default, "┲", "box drawings left light and right down heavy"
-fr, default, "┳", "box drawings heavy down and horizontal"
-fr, default, "┴", "filet fin vers le haut et horizontal"
-fr, default, "┵", "box drawings left heavy and right up light"
-fr, default, "┶", "box drawings right heavy and left up light"
-fr, default, "┷", "box drawings up light and horizontal heavy"
-fr, default, "┸", "box drawings up heavy and horizontal light"
-fr, default, "┹", "box drawings right light and left up heavy"
-fr, default, "┺", "box drawings left light and right up heavy"
-fr, default, "┻", "box drawings heavy up and horizontal"
-fr, default, "┼", "filet fin vertical et horizontal"
-fr, default, "┽", "box drawings left heavy and right vertical light"
-fr, default, "┾", "box drawings right heavy and left vertical light"
-fr, default, "┿", "box drawings vertical light and horizontal heavy"
-fr, default, "╀", "box drawings up heavy and down horizontal light"
-fr, default, "╁", "box drawings down heavy and up horizontal light"
-fr, default, "╂", "box drawings vertical heavy and horizontal light"
-fr, default, "╃", "box drawings left up heavy and right down light"
-fr, default, "╄", "box drawings right up heavy and left down light"
-fr, default, "╅", "box drawings left down heavy and right up light"
-fr, default, "╆", "box drawings right down heavy and left up light"
-fr, default, "╇", "box drawings down light and up horizontal heavy"
-fr, default, "╈", "box drawings up light and down horizontal heavy"
-fr, default, "╉", "box drawings right light and left vertical heavy"
-fr, default, "╊", "box drawings left light and right vertical heavy"
-fr, default, "╋", "box drawings heavy vertical and horizontal"
-fr, default, "╌", "box drawings light double dash horizontal"
-fr, default, "╍", "box drawings heavy double dash horizontal"
-fr, default, "╎", "box drawings light double dash vertical"
-fr, default, "╏", "box drawings heavy double dash vertical"
-fr, default, "═", "filet double horizontal"
-fr, default, "║", "filet double vertical"
-fr, default, "╒", "filet simple le bas et double vers la droite"
-fr, default, "╓", "filet double vers le bas et simple vers la droite"
-fr, default, "╔", "filet double vers le bas et vers la droite"
-fr, default, "╕", "filet simple vers le bas et double vers la gauche"
-fr, default, "╖", "filet double vers le bas et simple vers la gauche"
-fr, default, "╗", "filet double vers le bas et vers la gauche"
-fr, default, "╘", "filet simple vers le haut et double vers la droite"
-fr, default, "╙", "filet double vers le haut et simple vers la droite"
-fr, default, "╚", "filet double vers le haut et vers la droite"
-fr, default, "╛", "filet simple vers le haut et double vers la gauche"
-fr, default, "╜", "filet double vers le haut et simple vers la gauche"
-fr, default, "╝", "filet double vers le haut et vers la gauche"
-fr, default, "╞", "filet vertical simple et droit double"
-fr, default, "╟", "filet vertical double et droit simple"
-fr, default, "╠", "filet double vertical et vers la droite"
-fr, default, "╡", "filet vertical simple et gauche double"
-fr, default, "╢", "filet vertical double et gauche simple"
-fr, default, "╣", "filet double vertical et vers la gauche"
-fr, default, "╤", "filet vers le bas simple et horizontal double"
-fr, default, "╥", "filet vers le bas double et horizontal simple"
-fr, default, "╦", "filet double vers le bas et horizontal"
-fr, default, "╧", "filet vers le haut simple et horizontal double"
-fr, default, "╨", "filet vers le haut double et horizontal simple"
-fr, default, "╩", "filet double vers le haut et horizontal"
-fr, default, "╪", "filet vertical simple et horizontal double"
-fr, default, "╫", "filet vertical double et horizontal simple"
-fr, default, "╬", "filet double vertical et horizontall"
-fr, default, "╭", "box drawings light arc down and right"
-fr, default, "╮", "box drawings light arc down and left"
-fr, default, "╯", "box drawings light arc up and left"
-fr, default, "╰", "box drawings light arc up and right"
-fr, default, "╱", "box drawings light diagonal upper right to lower left"
-fr, default, "╲", "box drawings light diagonal upper left to lower right"
-fr, default, "╳", "box drawings light diagonal cross"
-fr, default, "╴", "box drawings light left"
-fr, default, "╵", "box drawings light up"
-fr, default, "╶", "box drawings light right"
-fr, default, "╷", "box drawings light down"
-fr, default, "╸", "box drawings heavy left"
-fr, default, "╹", "box drawings heavy up"
-fr, default, "╺", "box drawings heavy right"
-fr, default, "╻", "box drawings heavy down"
-fr, default, "╼", "box drawings light left and heavy right"
-fr, default, "╽", "box drawings light up and heavy down"
-fr, default, "╾", "box drawings heavy left and light right"
-fr, default, "╿", "box drawings heavy up and light down"
-fr, default, "▀", "moitié supérieure de pavé"
-fr, default, "▁", "lower one eighth block"
-fr, default, "▂", "lower one quarter block"
-fr, default, "▃", "lower three eighths block"
-fr, default, "▄", "moitié inférieure de pavé"
-fr, default, "▅", "lower five eighths block"
-fr, default, "▆", "lower three quarters block"
-fr, default, "▇", "lower seven eighths block"
-fr, default, "█", "pavé plein"
-fr, default, "▉", "left seven eighths block"
-fr, default, "▊", "left three quarters block"
-fr, default, "▋", "left five eighths block"
-fr, default, "▌", "left half block"
-fr, default, "▍", "left three eighths block"
-fr, default, "▎", "left one quarter block"
-fr, default, "▏", "left one eighth block"
-fr, default, "▐", "right half block"
-fr, default, "░", "ombre légère"
-fr, default, "▒", "ombre moyenne"
-fr, default, "▓", "ombre foncée"
-fr, default, "▔", "upper one eighth block"
-fr, default, "▕", "right one eighth block"
-fr, default, "▖", "quadrant lower left"
-fr, default, "▗", "quadrant lower right"
-fr, default, "▘", "quadrant upper left"
-fr, default, "▙", "quadrant upper left and lower left and lower right"
-fr, default, "▚", "quadrant upper left and lower right"
-fr, default, "▛", "quadrant upper left and upper right and lower left"
-fr, default, "▜", "quadrant upper left and upper right and lower right"
-fr, default, "▝", "quadrant upper right"
-fr, default, "▞", "quadrant upper right and lower left"
-fr, default, "▟", "quadrant upper right and lower left and lower right"
-fr, default, "■", "petit carré noir"
-fr, default, "□", "carré blanc"
-fr, default, "▢", "white square with rounded corners"
-fr, default, "▣", "white square containing black small square"
-fr, default, "▤", "square with horizontal fill"
-fr, default, "▥", "square with vertical fill"
-fr, default, "▦", "square with orthogonal crosshatch fill"
-fr, default, "▧", "square with upper left to lower right fill"
-fr, default, "▨", "square with upper right to lower left fill"
-fr, default, "▩", "square with diagonal crosshatch fill"
-fr, default, "▪", "petit carré noir"
-fr, default, "▫", "petit carré blanc"
-fr, default, "▬", "black rectangle"
-fr, default, "▭", "rectangle blanc"
-fr, default, "▮", "rectangle vertical noir"
-fr, default, "▯", "white vertical rectangle"
-fr, default, "▰", "black parallelogram"
-fr, default, "▱", "parallélogramme blanc"
-fr, default, "▲", "petit triangle noir pointant vers le haut"
-fr, default, "△", "triangle blanc pointant vers le haut"
-fr, default, "▴", "petit triangle noir pointant vers le haut"
-fr, default, "▵", "petit triangle blanc pointant vers le haut"
-fr, default, "▶", "petit triangle noir pointant vers la droite"
-fr, default, "▷", "triangle blanc pointant vers la droite"
-fr, default, "▸", "petit triangle noir pointant vers la droite"
-fr, default, "▹", "petit triangle blanc pointant vers la droite"
-fr, default, "►", "black right pointing pointer"
-fr, default, "▻", "white right pointing pointer"
-fr, default, "▼", "petit triangle noir pointant vers le bas"
-fr, default, "▽", "triangle blanc pointant vers le bas"
-fr, default, "▾", "petit triangle noir pointant vers le bas"
-fr, default, "▿", "petit triangle blanc pointant vers le bas"
-fr, default, "◀", "petit triangle noir pointant vers la gauche"
-fr, default, "◁", "petit triangle blanc pointant vers la gauche"
-fr, default, "◂", "petit triangle noir pointant vers la gauche"
-fr, default, "◃", "petit triangle blanc pointant vers la gauche"
-fr, default, "◄", "pointeur noir vers la gauche"
-fr, default, "◅", "pointeur blanc vers la gauche"
-fr, default, "◆", "losange noir"
-fr, default, "◇", "losange blanc"
-fr, default, "◈", "losange blanc évidé"
-fr, default, "◉", "cercle blanc évidé"
-fr, default, "◊", "losange"
-fr, default, "○", "cercle blanc"
-fr, default, "◌", "cercle en pointillés"
-fr, default, "◍", "cercle hachuré verticalement"
-fr, default, "◎", "deux cercles concentriques"
-fr, default, "●", "cercle noir"
-fr, default, "◐", "cercle avec moitié gauche noire"
-fr, default, "◑", "cercle avec moitié droite noire"
-fr, default, "◒", "cercle avec moitié inférieure"
-fr, default, "◓", "cercle avec moitié supérieure"
-fr, default, "◔", "cercle avec quadrant supérieur droit noir"
-fr, default, "◕", "disque avec quadrant supérieur gauche blanc"
-fr, default, "◖", "demi-disque gauche noir"
-fr, default, "◗", "demi-disque droite noir"
-fr, default, "◘", "point noir-au-blanc"
-fr, default, "◙", "cercle noir-au-blanc"
-fr, default, "◚", "demi-cercle supérieur noir-au- blanc"
-fr, default, "◛", "demi-cercle inférieur noir-au- blanc"
-fr, default, "◜", "arc de cercle dans le quadrant supérieur gauchearc de cercle dans le quadrant supérieur gauche"
-fr, default, "◝", "arc de cercle dans le quadrant supérieur droit"
-fr, default, "◞", "arc de cercle dans le quadrant inférieur droit"
-fr, default, "◟", "arc de cercle dans le quadrant inférieur gauche"
-fr, default, "◠", "demi-cercle supérieur"
-fr, default, "◡", "demi-cercle inférieur"
-fr, default, "◢", "coin triangulaire noir inférieur droit"
-fr, default, "◣", "coin triangulaire noir inférieur gauche"
-fr, default, "◤", "coin triangulaire noir supérieur gauche"
-fr, default, "◥", "coin triangulaire noir supérieur droit"
-fr, default, "◦", "opérateur rond"
-fr, default, "◧", "carré à moitié gauche noire"
-fr, default, "◨", "carré à moitié droite noire"
-fr, default, "◩", "carré à moitié supérieure gauche noire"
-fr, default, "◪", "carré à moitié inférieure droite noire"
-fr, default, "◫", "carré blanc à ligne bissectrice verticale"
-fr, default, "◬", "triangle blanc pointant vers le haut pointé"
-fr, default, "◭", "triangle pointe vers le haut À moitié gauche noire"
-fr, default, "◮", "triangle pointe vers le haut À moitié droite noire"
-fr, default, "◯", "grand cercle"
-fr, default, "◰", "white square with upper left quadrant"
-fr, default, "◱", "white square with lower left quadrant"
-fr, default, "◲", "white square with lower right quadrant"
-fr, default, "◳", "white square with upper right quadrant"
-fr, default, "◴", "white circle with upper left quadrant"
-fr, default, "◵", "white circle with lower left quadrant"
-fr, default, "◶", "white circle with lower right quadrant"
-fr, default, "◷", "white circle with upper right quadrant"
-fr, default, "◸", "triangle rectangle supérieur gauche"
-fr, default, "◹", "triangle rectangle supérieur droit"
-fr, default, "◺", "triangle rectangle inférieur gauche"
-fr, default, "◻", "carré moyen blanc"
-fr, default, "◼", "carré moyen noir"
-fr, default, "◽", "carré moyen blanc"
-fr, default, "◾", "carré moyen noir"
-fr, default, "◿", "triangle rectangle inférieur droit"
-fr, default, "⬒", "square with top half black"
-fr, default, "⬓", "square with bottom half black"
-fr, default, "⬔", "square with upper right diagonal half black"
-fr, default, "⬕", "square with lower left diagonal half black"
-fr, default, "⬖", "diamond with left half black"
-fr, default, "⬗", "diamond with right half black"
-fr, default, "⬘", "diamond with top half black"
-fr, default, "⬙", "diamond with bottom half black"
-fr, default, "⬚", "dotted square"
-fr, default, "⬛", "black large square"
-fr, default, "⬜", "white large square"
-fr, default, "⬝", "black very small square"
-fr, default, "⬞", "white very small square"
-fr, default, "⬟", "black pentagon"
-fr, default, "⬠", "white pentagon"
-fr, default, "⬡", "white hexagon"
-fr, default, "⬢", "black hexagon"
-fr, default, "⬣", "horizontal black hexagon"
-fr, default, "⬤", "black large circle"
-fr, default, "⬥", "black medium diamond"
-fr, default, "⬦", "white medium diamond"
-fr, default, "⬧", "black medium lozenge"
-fr, default, "⬨", "white medium lozenge"
-fr, default, "⬩", "black small diamond"
-fr, default, "⬪", "black small lozenge"
-fr, default, "⬫", "white small lozenge"
-fr, default, "⬬", "black horizontal ellipse"
-fr, default, "⬭", "white horizontal ellipse"
-fr, default, "⬮", "black vertical ellipse"
-fr, default, "⬯", "white vertical ellipse"
-fr, default, "⭐", "étoile blanche moyenne"
-fr, default, "⭑", "petite étoile noire"
-fr, default, "⭒", "petite étoile blanche"
-fr, default, "⭓", "black right pointing pentagon"
-fr, default, "⭔", "white right pointing pentagon"
-fr, default, "⭕", "heavy large circle"
-fr, default, "⭖", "heavy oval with oval inside"
-fr, default, "⭗", "heavy circle with circle inside"
-fr, default, "⭘", "heavy circle"
-fr, default, "⭙", "heavy circled saltire"
-fr, default, "↼", "harpon gauche avec dent dressée"
-fr, default, "↽", "harpon gauche avec dent baissée"
-fr, default, "↾", "harpon vers le haut avec dent droite"
-fr, default, "↿", "harpon vers le haut avec dent gauche"
-fr, default, "⇀", "harpon droit avec dent dressée"
-fr, default, "⇁", "harpon droit avec dent baissée"
-fr, default, "⇂", "harpon vers le bas avec dent droite"
-fr, default, "⇃", "harpon vers le bas avec dent gauche"
-fr, default, "⇋", "harpon gauche par-dessus harpon droit"
-fr, default, "⇌", "harpon droit par-dessus harpon gauche"
-fr, default, "⥊", "javelot à dents gauche dressée et droite baissée"
-fr, default, "⥋", "javelot à dents gauche baissée et droite dressée"
-fr, default, "⥌", "up barb right down barb left harpoon"
-fr, default, "⥍", "up barb left down barb right harpoon"
-fr, default, "⥎", "javelot à dents droite et gauche dressées"
-fr, default, "⥏", "javelot à dents supérieure et inférieure droites"
-fr, default, "⥐", "javelot à dents droite et gauche baissées"
-fr, default, "⥑", "javelot à dents supérieure et inférieure gauches"
-fr, default, "⥒", "harpon gauche à dent dressée contre taquet"
-fr, default, "⥓", "harpon droit à dent dressée contre taquet"
-fr, default, "⥔", "harpon vers le haut à dent droite contre taquet"
-fr, default, "⥕", "harpon vers le bas à dent droite contre taquet"
-fr, default, "⥖", "harpon gauche à dent baissée contre taquet"
-fr, default, "⥗", "harpon droit à dent baissée contre taquet"
-fr, default, "⥘", "harpon vers le haut à dent gauche contre taquet"
-fr, default, "⥙", "harpon vers le bas à dent gauche contre taquet"
-fr, default, "⥚", "harpon gauche à dent dressée depuis taquet"
-fr, default, "⥛", "harpon droit à dent dressée depuis taquet"
-fr, default, "⥜", "harpon vers le haut à dent droite depuis taquet"
-fr, default, "⥝", "harpon vers le bas à dent droite depuis taquet"
-fr, default, "⥞", "harpon gauche à dent baissée depuis taquet"
-fr, default, "⥟", "harpon droit à dent baissée depuis taquet"
-fr, default, "⥠", "harpon vers le haut à dent gauche depuis taquet"
-fr, default, "⥡", "harpon vers le bas à dent gauche depuis taquet"
-fr, default, "⥢", "harpon gauche à dent dressée sur harpon gauche à dent baissée"
-fr, default, "⥣", "harpon vers le haut à dent gauche à côté de harpon vers le haut à dent droite"
-fr, default, "⥤", "harpon droit à dent dressée par-dessus harpon droit à dent baissée"
-fr, default, "⥥", "harpon vers le bas à dent gauche à côté de harpon vers le bas à dent droite"
-fr, default, "⥦", "harpon à dent gauche dressée par-dessus harpon à dent droite dressée"
-fr, default, "⥧", "harpon à dent gauche baissée par-dessus harpon à dent droite baissée"
-fr, default, "⥨", "harpon à dent droite dressée par-dessus harpon à dent gauche dressée"
-fr, default, "⥩", "harpon à dent droite baissée par-dessus harpon à dent gauche baissée"
-fr, default, "⥪", "harpon à dent gauche dressée par-dessus long trait"
-fr, default, "⥫", "long trait par-dessus harpon à dent gauche baissée"
-fr, default, "⥬", "harpon à dent droite dressée par-dessus long trait"
-fr, default, "⥭", "long trait par-dessus harpon à dent droite baissée"
-fr, default, "⥮", "harpon vers le haut à dent gauche à côté de harpon vers le bas à dent droite"
-fr, default, "⥯", "harpon vers le bas à dent gauche à côté de harpon vers le haut à dent droite"
-fr, default, "⥼", "ancre gauche"
-fr, default, "⥽", "ancre droite"
-fr, default, "⥾", "ancre vers le haut"
-fr, default, "⥿", "ancre vers le bas"
-fr, default, "ℏ", "constante de planck sur deux pi"
-fr, default, "℔", "l b bar"
-fr, default, "№", "symbole numéro"
-fr, default, "℗", "copyright de programme sonore"
-fr, default, "℞", "ordonnances"
-fr, default, "℟", "response"
-fr, default, "℠", "service mark"
-fr, default, "℡", "telephone sign"
-fr, default, "™", "symbole anglais marque de commerce"
-fr, default, "℣", "versicle"
-fr, default, "℥", "symbole once"
-fr, default, "Ω", "ohm"
-fr, default, "℧", "ohm culbuté"
-fr, default, "K", "degré kelvin"
-fr, default, "Å", "angstroms"
-fr, default, "℮", "estimated"
-fr, default, "Ⅎ", "f culbuté majuscule"
-fr, default, "ℹ", "information source"
-fr, default, "℺", "rotated cap q"
-fr, default, "℻", "facsimile sign"
-fr, default, "⅁", "turned sans serif cap g"
-fr, default, "⅂", "turned sans serif cap l"
-fr, default, "⅃", "reversed sans serif cap l"
-fr, default, "⅄", "turned sans serif cap y"
-fr, default, "!", "factorielle"
-fr, default, """, "petit guillemet"
-fr, default, "#", "dièse"
-fr, default, "$", "dollars"
-fr, default, "%", "pourcent"
-fr, default, "&", "esperluette"
-fr, default, "'", "prime"
-fr, default, "*", "astérisque"
-fr, default, "+", "plus"
-fr, default, ",", "virgule"
-fr, default, "-", "moins"
-fr, default, ".", "point"
-fr, default, "/", "barre oblique"
-fr, default, ":", "deux points"
-fr, default, ";", "point virgule"
-fr, default, "<", "inférieur à"
-fr, default, "=", "égale"
-fr, default, ">", "supérieur à"
-fr, default, "?", "point d'interrogation"
-fr, default, "@", "arobase"
-fr, default, "\", "barre oblique inversée"
-fr, default, "^", "circonflexe"
-fr, default, "_", "tiret bas"
-fr, default, "`", "accent grave"
-fr, default, "|", "barre verticale"
-fr, default, "~", "tilde"
-fr, default, "¡", "point d'exclamation renversé"
-fr, default, "¢", "centimes"
-fr, default, "£", "livres"
-fr, default, "¤", "symbole monétaire"
-fr, default, "¥", "yen"
-fr, default, "¦", "barre déjointe"
-fr, default, "§", "paragraphe"
-fr, default, "¨", "tréma"
-fr, default, "©", "copyright"
-fr, default, "ª", "indicateur ordinal féminin"
-fr, default, "«", "guillemet chevron pointant gauche"
-fr, default, "¬", "négation"
-fr, default, "®", "symbole marque déposée"
-fr, default, "¯", "macron"
-fr, default, "°", "degrés"
-fr, default, "±", "plus ou moins"
-fr, default, "´", "accent aigu"
-fr, default, "µ", "symbole micro"
-fr, default, "¶", "fin de paragraphe"
-fr, default, "·", "point médian"
-fr, default, "¸", "cédille"
-fr, default, "º", "indicateur ordinal masculin"
-fr, default, "»", "guillemet chevron pointant droite"
-fr, default, "¿", "point d'interrogation renversé"
-fr, default, "×", "multiplié par"
-fr, default, "÷", "divisé par"
-fr, default, "˘", "brève"
-fr, default, "˙", "point en chef"
-fr, default, "˚", "rond en chef"
-fr, default, "˛", "ogonek"
-fr, default, "˜", "tilde"
-fr, default, "˝", "double accent aigu"
-fr, default, "‐", "trait d'union"
-fr, default, "‑", "non breaking hyphen"
-fr, default, "‒", "figure dash"
-fr, default, "–", "trait d'union insécable"
-fr, default, "—", "tiret numérique"
-fr, default, "―", "barre horizontalle"
-fr, default, "‖", "double ligne verticale"
-fr, default, "‗", "double low line"
-fr, default, "‘", "guillemet-apostrophe culbuté"
-fr, default, "’", "guillemet-apostrophe"
-fr, default, "‚", "guillemet-virgule inférieur"
-fr, default, "‛", "single high reversed 9 quotation mark"
-fr, default, "“", "guillemet-apostrophe double culbuté"
-fr, default, "”", "guillemet-apostrophe double"
-fr, default, "„", "guillemet double prime"
-fr, default, "‟", "double high reversed 9 quotation mark"
-fr, default, "†", "obèle"
-fr, default, "‡", "double obèle"
-fr, default, "•", "puce"
-fr, default, "‣", "triangular bullet"
-fr, default, "․", "one dot leader"
-fr, default, "‥", "point de conduite double"
-fr, default, "…", "points de suspension"
-fr, default, "‧", "hyphenation point"
-fr, default, "‰", "symbole pour mille"
-fr, default, "‱", "symbole pour dix mille"
-fr, default, "′", "prime"
-fr, default, "″", "double prime"
-fr, default, "‴", "triple prime"
-fr, default, "‵", "prime réfléchi"
-fr, default, "‶", "double prime réfléchi"
-fr, default, "‷", "reversed triple prime"
-fr, default, "‸", "caret"
-fr, default, "‹", "guillemet simple gauche"
-fr, default, "›", "guillemet simple droite"
-fr, default, "※", "reference mark"
-fr, default, "‼", "double exclamation mark"
-fr, default, "‽", "interrobang"
-fr, default, "‾", "tiret en chef"
-fr, default, "‿", "undertie"
-fr, default, "⁀", "tirant en chef"
-fr, default, "⁁", "lambda d'insertion"
-fr, default, "⁂", "asterism"
-fr, default, "⁃", "puce trait d'union"
-fr, default, "⁄", "barre de fraction"
-fr, default, "⁇", "double question mark"
-fr, default, "⁈", "question exclamation mark"
-fr, default, "⁉", "exclamation question mark"
-fr, default, "⁋", "reversed pilcrow"
-fr, default, "⁌", "black leftwards bullet"
-fr, default, "⁍", "black rightwards bullet"
-fr, default, "⁎", "low asterisk"
-fr, default, "⁏", "point-virgule réfléchi"
-fr, default, "⁐", "resserrer"
-fr, default, "⁑", "two asterisks aligned vertically"
-fr, default, "⁒", "commercial minus"
-fr, default, "⁓", "swung dash"
-fr, default, "⁔", "inverted undertie"
-fr, default, "⁕", "flower punctuation mark"
-fr, default, "⁖", "three dot punctuation"
-fr, default, "⁗", "quadruple prime"
-fr, default, "⁘", "four dot punctuation"
-fr, default, "⁙", "five dot punctuation"
-fr, default, "⁚", "two dot punctuation"
-fr, default, "⁛", "four dot mark"
-fr, default, "⁜", "dotted cross"
-fr, default, "⁝", "tricolon"
-fr, default, "⁞", "vertical four dots"
-fr, default, "⁺", "superscript plus"
-fr, default, "⁻", "superscript minus"
-fr, default, "⁼", "superscript equals"
-fr, default, "⁽", "superscript left parenthesis"
-fr, default, "⁾", "superscript right parenthesis"
-fr, default, "₊", "subscript plus"
-fr, default, "₋", "subscript minus"
-fr, default, "₌", "subscript equals"
-fr, default, "₍", "subscript left parenthesis"
-fr, default, "₎", "subscript right parenthesis"
-fr, default, "⅊", "property line"
-fr, default, "⅋", "turned ampersand"
-fr, default, "⅌", "per"
-fr, default, "⅍", "aktieselskab"
-fr, default, "ⅎ", "turned small f"
-fr, default, "∀", "pour tous"
-fr, default, "∁", "complément"
-fr, default, "∂", "dérivée partielle"
-fr, default, "∃", "il existe"
-fr, default, "∄", "il n'existe pas"
-fr, default, "∅", "ensemble vide"
-fr, default, "∆", "incrément"
-fr, default, "∇", "nabla"
-fr, default, "∈", "appartient à"
-fr, default, "∉", "n'appartient pas à"
-fr, default, "∊", "appartient à"
-fr, default, "∋", "contient comme élément"
-fr, default, "∌", "ne contient pas comme élément"
-fr, default, "∍", "contient comme élément"
-fr, default, "∎", "ce qu'il fallait démontrer"
-fr, default, "∏", "produit"
-fr, default, "∐", "coproduit"
-fr, default, "∑", "sommation"
-fr, default, "−", "moins"
-fr, default, "∓", "moins-ou-plus"
-fr, default, "∔", "plus pointé"
-fr, default, "∕", "division"
-fr, default, "∖", "différence d'ensembles"
-fr, default, "∗", "opérateur astérisque"
-fr, default, "∘", "opérateur rond"
-fr, default, "∙", "point médian"
-fr, default, "√", "racine carrée"
-fr, default, "∛", "racine cubique"
-fr, default, "∜", "racine quatrième"
-fr, default, "∝", "proportionnel à"
-fr, default, "∞", "infini"
-fr, default, "∟", "angle droit"
-fr, default, "∠", "angle"
-fr, default, "∡", "angle mesuré"
-fr, default, "∢", "angle sphérique"
-fr, default, "∣", "est un diviseur de"
-fr, default, "∤", "n'est pas un diviseur de"
-fr, default, "∥", "parallèle à"
-fr, default, "∦", "non parallèle à"
-fr, default, "∧", "et logique"
-fr, default, "∨", "ou logique"
-fr, default, "∩", "intersection"
-fr, default, "∪", "union"
-fr, default, "∫", "intégrale"
-fr, default, "∬", "intégrale double"
-fr, default, "∭", "intégrale triple"
-fr, default, "∮", "intégrale de contour"
-fr, default, "∯", "intégrale de surface"
-fr, default, "∰", "intégrale de volume"
-fr, default, "∱", "intégrale en sens négatif"
-fr, default, "∲", "intégrale de contour en sens négatif"
-fr, default, "∳", "intégrale de contour en sens positif"
-fr, default, "∴", "par conséquent"
-fr, default, "∵", "parce que"
-fr, default, "∶", "rapport"
-fr, default, "∷", "proportion"
-fr, default, "∸", "moins pointé"
-fr, default, "∹", "excès"
-fr, default, "∺", "proportion géométrique"
-fr, default, "∻", "homothétique"
-fr, default, "∼", "opérateur tilde"
-fr, default, "∽", "opérateur tilde renversé"
-fr, default, "∾", "s couché renversé"
-fr, default, "∿", "sinusoïde"
-fr, default, "≀", "produit couronne"
-fr, default, "≁", "non tilde"
-fr, default, "≂", "moins tilde"
-fr, default, "≃", "asymptotiquement égal à"
-fr, default, "≄", "non asymptotiquement égal à"
-fr, default, "≅", "approximativement égal à"
-fr, default, "≆", "approximativement mais non strictement égal à"
-fr, default, "≇", "ni approximativement ni strictement égal à"
-fr, default, "≈", "presque égal à"
-fr, default, "≉", "non presque égal à"
-fr, default, "≊", "presque égal ou égal à"
-fr, default, "≋", "triple tilde"
-fr, default, "≌", "entièrement égal à"
-fr, default, "≍", "équivalent à"
-fr, default, "≎", "géométriquement équivalent à"
-fr, default, "≏", "différence entre"
-fr, default, "≐", "tend vers la limite"
-fr, default, "≑", "géométriquement égal à"
-fr, default, "≒", "approximativement égal à ou image de"
-fr, default, "≓", "image de ou approximativement égal à"
-fr, default, "≔", "deux-points égal"
-fr, default, "≕", "égal deux-points"
-fr, default, "≖", "rond dans égal"
-fr, default, "≗", "égal avec rond en chef"
-fr, default, "≘", "correspond à"
-fr, default, "≙", "estime"
-fr, default, "≚", "équiangulaire à"
-fr, default, "≛", "égal avec étoile en chef"
-fr, default, "≜", "égal delta"
-fr, default, "≝", "égal par définition à"
-fr, default, "≞", "mesuré par"
-fr, default, "≟", "égalité en doute"
-fr, default, "≠", "pas égal à"
-fr, default, "≡", "identique à"
-fr, default, "≢", "non identique à"
-fr, default, "≣", "strictement équivalent à"
-fr, default, "≤", "plus petit ou égal à"
-fr, default, "≥", "plus grand ou égal à"
-fr, default, "≦", "plus petit que par-dessus égal à"
-fr, default, "≧", "plus grand que par-dessus égal à"
-fr, default, "≨", "plus petit mais pas égal à"
-fr, default, "≩", "plus grand mais pas égal à"
-fr, default, "≪", "beaucoup plus petit que"
-fr, default, "≫", "beaucoup plus grand que"
-fr, default, "≬", "entre"
-fr, default, "≭", "non équivalent à"
-fr, default, "≮", "pas plus petit que"
-fr, default, "≯", "pas plus grand que"
-fr, default, "≰", "ni plus petit ni égal à"
-fr, default, "≱", "ni plus grand ni égal à"
-fr, default, "≲", "plus petit ou équivalent à"
-fr, default, "≳", "plus grand ou équivalent à"
-fr, default, "≴", "ni plus petit ni équivalent à"
-fr, default, "≵", "ni plus grand ni équivalent à"
-fr, default, "≶", "plus petit ou plus grand que"
-fr, default, "≷", "plus grand ou plus petit que"
-fr, default, "≸", "ni plus petit ni plus grand que"
-fr, default, "≹", "ni plus grand ni plus petit que"
-fr, default, "≺", "précède"
-fr, default, "≻", "suit"
-fr, default, "≼", "précède ou est égal à"
-fr, default, "≽", "suit ou est égal à"
-fr, default, "≾", "précède ou est équivalent à"
-fr, default, "≿", "suit ou est équivalent à"
-fr, default, "⊀", "ne précède pas"
-fr, default, "⊁", "ne suit pas"
-fr, default, "⊂", "sous-ensemble de"
-fr, default, "⊃", "sur-ensemble de"
-fr, default, "⊄", "pas un sous-ensemble de"
-fr, default, "⊅", "pas un sur-ensemble de"
-fr, default, "⊆", "sous-ensemble ou égal à"
-fr, default, "⊇", "sur-ensemble ou égal à"
-fr, default, "⊈", "ni un sous-ensemble ni égal à"
-fr, default, "⊉", "ni un sur-ensemble ni égal à"
-fr, default, "⊊", "sous-ensemble mais pas égal à"
-fr, default, "⊋", "sur-ensemble mais pas égal à"
-fr, default, "⊌", "multiensemble"
-fr, default, "⊍", "multiplication de multiensemble"
-fr, default, "⊎", "union de multiensemble"
-fr, default, "⊏", "image carrée de"
-fr, default, "⊐", "original carré de"
-fr, default, "⊑", "image carrée ou égal à"
-fr, default, "⊒", "original carré ou égal à"
-fr, default, "⊓", "chapeau carré"
-fr, default, "⊔", "coupe carrée"
-fr, default, "⊕", "plus cerclé"
-fr, default, "⊖", "moins cerclé"
-fr, default, "⊗", "multiplié par cerclé"
-fr, default, "⊘", "barre oblique de division cerclée"
-fr, default, "⊙", "opérateur point cerclé"
-fr, default, "⊚", "opérateur rond cerclé"
-fr, default, "⊛", "opérateur astérisque cerclé"
-fr, default, "⊜", "égal cerclé"
-fr, default, "⊝", "tiret cerclé"
-fr, default, "⊞", "plus encadré"
-fr, default, "⊟", "moins encadré"
-fr, default, "⊠", "multiplié par encadré"
-fr, default, "⊡", "opérateur point encadré"
-fr, default, "⊢", "taquet droit"
-fr, default, "⊣", "taquet gauche"
-fr, default, "⊤", "taquet vers le bas"
-fr, default, "⊥", "taquet vers le haut"
-fr, default, "⊦", "assertion"
-fr, default, "⊧", "modélise"
-fr, default, "⊨", "vrai"
-fr, default, "⊩", "oblige"
-fr, default, "⊪", "barre verticale triple avec tourniquet à droite"
-fr, default, "⊫", "barre verticale double avec tourniquet à droite double"
-fr, default, "⊬", "ne prouve pas"
-fr, default, "⊭", "pas vrai"
-fr, default, "⊮", "n'oblige pas"
-fr, default, "⊯", "non-barre verticale double avec tourniquet à droite double"
-fr, default, "⊰", "précède sous relation"
-fr, default, "⊱", "suit sous relation"
-fr, default, "⊲", "sous-groupe normal de"
-fr, default, "⊳", "contient comme sous-groupe normal"
-fr, default, "⊴", "sous-groupe normal ou égal à"
-fr, default, "⊵", "contient comme sous-groupe normal ou égal à"
-fr, default, "⊶", "original de"
-fr, default, "⊷", "image de"
-fr, default, "⊸", "multijection"
-fr, default, "⊹", "matrice hermitienne conjuguée"
-fr, default, "⊺", "intercale"
-fr, default, "⊻", "ou exclusif"
-fr, default, "⊼", "non et"
-fr, default, "⊽", "non ou"
-fr, default, "⊿", "triangle rectangle"
-fr, default, "⋀", "et logique de la famille"
-fr, default, "⋁", "ou logique de la famille"
-fr, default, "⋂", "intersection de la famille"
-fr, default, "⋃", "réunion de la famille"
-fr, default, "⋄", "opérateur losange"
-fr, default, "⋅", "opérateur point"
-fr, default, "⋆", "opérateur étoile"
-fr, default, "⋇", "divisé multiplié"
-fr, default, "⋈", "nœud papillon"
-fr, default, "⋉", "produit semi-direct à gauche de facteur normal"
-fr, default, "⋊", "produit semi-direct à droite de facteur normal"
-fr, default, "⋋", "produit semi-direct à gauche"
-fr, default, "⋌", "produit semi-direct à droite"
-fr, default, "⋍", "moins tilde renversé"
-fr, default, "⋎", "ou logique recourbé"
-fr, default, "⋏", "et logique recourbé"
-fr, default, "⋐", "sous-ensemble double"
-fr, default, "⋑", "sur-ensemble double"
-fr, default, "⋒", "intersection double"
-fr, default, "⋓", "union double"
-fr, default, "⋔", "fourche"
-fr, default, "⋕", "égal et parallèle à"
-fr, default, "⋖", "plus petit que pointé"
-fr, default, "⋗", "plus grand que pointé"
-fr, default, "⋘", "considérablement plus petit que"
-fr, default, "⋙", "considérablement plus grand que"
-fr, default, "⋚", "plus petit ou égal ou plus grand que"
-fr, default, "⋛", "plus grand ou égal ou plus petit que"
-fr, default, "⋜", "égal ou plus petit que"
-fr, default, "⋝", "égal à deux lignes ou supérieur à"
-fr, default, "⋞", "égal ou précède"
-fr, default, "⋟", "égal ou suit"
-fr, default, "⋠", "ni précédant ni égal à"
-fr, default, "⋡", "ni suivant ni égal à"
-fr, default, "⋢", "ni image carrée ni égal à"
-fr, default, "⋣", "ni original carré ni égal à"
-fr, default, "⋤", "image carré ou différent de"
-fr, default, "⋥", "original carré ou différent de"
-fr, default, "⋦", "plus petit mais non équivalent à"
-fr, default, "⋧", "plus grand mais non équivalent à"
-fr, default, "⋨", "précédant mais non équivalent à"
-fr, default, "⋩", "suivant mais non équivalent à"
-fr, default, "⋪", "pas un sous-groupe normal de"
-fr, default, "⋫", "ne contient pas comme sous-groupe normal"
-fr, default, "⋬", "ni sous-groupe normal ni égal à"
-fr, default, "⋭", "ni égal ni contenant comme sous- groupe normal"
-fr, default, "⋮", "trois points suspendus"
-fr, default, "⋯", "trois points médians"
-fr, default, "⋰", "trois points diagonaux vers le coin haut à droite"
-fr, default, "⋱", "trois points diagonaux vers le coin bas à droite"
-fr, default, "⋲", "appartient à avec long trait horizontal"
-fr, default, "⋳", "appartient à avec barre verticale au bout du trait horizontal"
-fr, default, "⋴", "petit appartient à avec barre verticale au bout du trait horizontal"
-fr, default, "⋵", "appartient à avec point en chef"
-fr, default, "⋶", "appartient à avec trait en chef"
-fr, default, "⋷", "petit appartient à avec trait en chef"
-fr, default, "⋸", "appartient à avec trait souscrit"
-fr, default, "⋹", "appartient à avec deux traits horizontaux"
-fr, default, "⋺", "contient avec long trait horizontal"
-fr, default, "⋻", "contient avec barre verticale au bout du trait horizontal"
-fr, default, "⋼", "petit contient avec barre verticale au bout du trait horizontal"
-fr, default, "⋽", "contient avec trait en chef"
-fr, default, "⋾", "petit contient avec trait en chef"
-fr, default, "⋿", "appartient à un sac en notation z"
-fr, default, "⌀", "diamètre"
-fr, default, "⌂", "maison"
-fr, default, "⌅", "projective"
-fr, default, "⌆", "perspective"
-fr, default, "⌇", "wavy line"
-fr, default, "⌐", "signe négation réfléchi"
-fr, default, "⌑", "square lozenge"
-fr, default, "⌒", "arc"
-fr, default, "⌓", "segment"
-fr, default, "⌔", "sector"
-fr, default, "➕", "bold plus"
-fr, default, "➖", "bold minus"
-fr, default, "➗", "bold division"
-fr, default, "➰", "curly loop"
-fr, default, "➿", "double curly loop"
-fr, default, "⟁", "petit triangle blanc inscrit dans triangle blanc"
-fr, default, "⟂", "perpendiculaire à"
-fr, default, "⟃", "sous-ensemble ouvert"
-fr, default, "⟄", "sur-ensemble ouvert"
-fr, default, "⟇", "ou avec point inscrit"
-fr, default, "⟈", "sous-ensemble précédé d'une barre oblique inversée"
-fr, default, "⟉", "sur-ensemble suivi d'une barre oblique"
-fr, default, "⟊", "barre verticale À une traverse"
-fr, default, "⟋", "mathematical rising diagonal"
-fr, default, "⟌", "grande division"
-fr, default, "⟍", "mathematical falling diagonal"
-fr, default, "⟎", "squared logical and"
-fr, default, "⟏", "squared logical or"
-fr, default, "⟐", "white diamond with centered dot"
-fr, default, "⟑", "et pointé"
-fr, default, "⟒", "appartient À ouvert vers le haut"
-fr, default, "⟓", "coin inférieur droit pointé"
-fr, default, "⟔", "coin supérieur gauche pointé"
-fr, default, "⟕", "jointure externe gauche"
-fr, default, "⟖", "jointure externe droite"
-fr, default, "⟗", "jointure externe complète"
-fr, default, "⟘", "grand taquet vers le haut"
-fr, default, "⟙", "grand taquet vers le bas"
-fr, default, "⟚", "double tourniquet bilatéral"
-fr, default, "⟛", "tourniquet bilatéral"
-fr, default, "⟜", "multijection gauche"
-fr, default, "⟝", "long taquet droit"
-fr, default, "⟞", "long taquet gauche"
-fr, default, "⟟", "taquet vers le haut surmonté d'un cercle"
-fr, default, "⟠", "losange coupé"
-fr, default, "⟡", "losange concave blanc"
-fr, default, "⟢", "losange concave blanc avec trait à gauche"
-fr, default, "⟣", "losange concave blanc avec trait à droite"
-fr, default, "⟤", "carré blanc avec trait à gauche"
-fr, default, "⟥", "carré blanc avec trait à droite"
-fr, default, "⤫", "rising diagonal crossing falling diagonal"
-fr, default, "⤬", "falling diagonal crossing rising diagonal"
-fr, default, "⦀", "triple vertical bar delimiter"
-fr, default, "⦁", "z notation spot"
-fr, default, "⦂", "z notation type colon"
-fr, default, "⦙", "dotted fence"
-fr, default, "⦚", "ligne verticale en zigzag"
-fr, default, "⦰", "ensemble vide réfléchi"
-fr, default, "⦱", "ensemble vide barre en chef"
-fr, default, "⦲", "ensemble vide petit cercle en chef"
-fr, default, "⦵", "cercle à barre horizontale"
-fr, default, "⦶", "barre verticale cerclée"
-fr, default, "⦷", "parallèles cerclées"
-fr, default, "⦸", "circled reverse solidus"
-fr, default, "⦹", "perpendiculaire cerclé"
-fr, default, "⦺", "circle divided by horizontal bar and top half divided by vertical bar"
-fr, default, "⦻", "cercle superposé d'un x"
-fr, default, "⦼", "signe division pivoté en sens antihoraire cerclé"
-fr, default, "⦾", "puce blanche cerclée"
-fr, default, "⦿", "puce cerclée"
-fr, default, "⧀", "inférieur à cerclé"
-fr, default, "⧁", "supérieur à cerclé"
-fr, default, "⧂", "cercle avec petit cercle à droite"
-fr, default, "⧃", "cercle avec deux petits traits horizontaux à droite"
-fr, default, "⧄", "oblique encadrée"
-fr, default, "⧅", "oblique inversée encadrée"
-fr, default, "⧆", "squared asterisk"
-fr, default, "⧇", "squared small circle"
-fr, default, "⧈", "squared square"
-fr, default, "⧉", "carrés se chevauchant"
-fr, default, "⧊", "triangle with dot above"
-fr, default, "⧋", "triangle with underbar"
-fr, default, "⧌", "s in triangle"
-fr, default, "⧍", "triangle à empattements inférieurs"
-fr, default, "⧎", "triangle droit par-dessus triangle gauche"
-fr, default, "⧏", "triangle gauche à gauche d'une barre verticale"
-fr, default, "⧐", "triangle droit à droite d'une barre verticale"
-fr, default, "⧑", "bowtie with left half black"
-fr, default, "⧒", "bowtie with right half black"
-fr, default, "⧓", "black bowtie"
-fr, default, "⧔", "times with left half black"
-fr, default, "⧕", "times with right half black"
-fr, default, "⧖", "white hourglass"
-fr, default, "⧗", "black hourglass"
-fr, default, "⧜", "infini incomplet"
-fr, default, "⧝", "tie over infinity"
-fr, default, "⧞", "infini nié par une barre verticale"
-fr, default, "⧟", "double ended multimap"
-fr, default, "⧠", "square with contoured outline"
-fr, default, "⧡", "increases as"
-fr, default, "⧢", "shuffle product"
-fr, default, "⧣", "égale à et parallèle à incliné"
-fr, default, "⧤", "égale à et parallèle à incliné surmontés d'un tilde"
-fr, default, "⧥", "identique à et parallèle à incliné"
-fr, default, "⧦", "gleich stark"
-fr, default, "⧧", "thermodynamic"
-fr, default, "⧨", "down pointing triangle with left half black"
-fr, default, "⧩", "down pointing triangle with right half black"
-fr, default, "⧫", "losange fuselé noir"
-fr, default, "⧮", "error barred white square"
-fr, default, "⧯", "error barred black square"
-fr, default, "⧰", "error barred white diamond"
-fr, default, "⧱", "error barred black diamond"
-fr, default, "⧲", "error barred white circle"
-fr, default, "⧳", "error barred black circle"
-fr, default, "⧴", "règle différée"
-fr, default, "⧵", "reverse solidus operator"
-fr, default, "⧶", "barre oblique avec barre en chef"
-fr, default, "⧷", "reverse solidus with horizontal stroke"
-fr, default, "⧸", "big solidus"
-fr, default, "⧹", "big reverse solidus"
-fr, default, "⧺", "double plus"
-fr, default, "⧻", "triple plus"
-fr, default, "⧾", "tiny"
-fr, default, "⧿", "miny"
-fr, default, "⨀", "n ary circled dot operator"
-fr, default, "⨁", "n ary circled plus operator"
-fr, default, "⨂", "n ary circled times operator"
-fr, default, "⨃", "n ary union operator with dot"
-fr, default, "⨄", "n ary union operator with plus"
-fr, default, "⨅", "n ary square intersection operator"
-fr, default, "⨆", "n ary square union operator"
-fr, default, "⨇", "two logical and operator"
-fr, default, "⨈", "two logical or operator"
-fr, default, "⨉", "n ary times operator"
-fr, default, "⨊", "modulo two sum"
-fr, default, "⨋", "summation with integral"
-fr, default, "⨌", "intégrale quadruple"
-fr, default, "⨍", "intégrale à partie finie"
-fr, default, "⨎", "integral with double stroke"
-fr, default, "⨏", "integral average with slash"
-fr, default, "⨐", "fonction de circulation"
-fr, default, "⨑", "intégrale en sens positif"
-fr, default, "⨒", "intégrale de ligne à chemin rectangulaire autour du pôle"
-fr, default, "⨓", "intégrale de ligne à chemin semi-circulaire autour du pôle"
-fr, default, "⨔", "intégrale de ligne évitant le pôle"
-fr, default, "⨕", "intégrale autour d'un opérateur point"
-fr, default, "⨖", "intégrale quaternion"
-fr, default, "⨘", "integral with times"
-fr, default, "⨙", "integral with intersection"
-fr, default, "⨚", "integral with union"
-fr, default, "⨛", "integral with overbar"
-fr, default, "⨜", "integral with underbar"
-fr, default, "⨝", "join"
-fr, default, "⨞", "large left triangle operator"
-fr, default, "⨟", "z notation schema composition"
-fr, default, "⨠", "z notation schema piping"
-fr, default, "⨡", "z notation schema projection"
-fr, default, "⨢", "plus surmonté d'un petit cercle"
-fr, default, "⨣", "plus surmonté d'un circonflexe"
-fr, default, "⨤", "plus surmonté d'un tilde"
-fr, default, "⨥", "plus à point souscrit"
-fr, default, "⨦", "plus à tilde souscrit"
-fr, default, "⨧", "plus à chiffre deux souscrit"
-fr, default, "⨨", "plus sign with black triangle"
-fr, default, "⨩", "moins surmonté d'une virgule"
-fr, default, "⨪", "moins à point souscrit"
-fr, default, "⨫", "minus sign with falling dots"
-fr, default, "⨬", "minus sign with rising dots"
-fr, default, "⨭", "plus dans demi-cercle gauche"
-fr, default, "⨮", "plus dans demi-cercle droit"
-fr, default, "⨯", "produit vectoriel"
-fr, default, "⨰", "signe multiplication à point en chef"
-fr, default, "⨱", "signe multiplication à barre souscrite"
-fr, default, "⨲", "semidirect product with bottom closed"
-fr, default, "⨳", "produit fusionné"
-fr, default, "⨴", "signe multiplication dans demi-cercle gauche"
-fr, default, "⨵", "signe multiplication dans demi-cercle droit"
-fr, default, "⨶", "signe multiplication cerclé circonflexe"
-fr, default, "⨷", "signe multiplication doublement cerclé"
-fr, default, "⨸", "signe division cerclé"
-fr, default, "⨹", "plus dans triangle"
-fr, default, "⨺", "moins dans triangle"
-fr, default, "⨻", "signe multiplication dans triangle"
-fr, default, "⨼", "produit interieur"
-fr, default, "⨽", "righthand interior product"
-fr, default, "⨾", "z notation relational composition"
-fr, default, "⨿", "amalgamation ou coproduit"
-fr, default, "⩀", "intersection pointée"
-fr, default, "⩁", "union with minus"
-fr, default, "⩂", "union à barre en chef"
-fr, default, "⩃", "intersection à barre en chef"
-fr, default, "⩄", "intersection avec et logique"
-fr, default, "⩅", "union avec ou logique"
-fr, default, "⩆", "union par-dessus intersection"
-fr, default, "⩇", "intersection par-dessus union"
-fr, default, "⩈", "union par-dessus bar par-dessus intersection"
-fr, default, "⩉", "intersection par-dessus trait par-dessus union"
-fr, default, "⩊", "deux unions soudées côte à côte"
-fr, default, "⩋", "deux intersections soudées côte à côte"
-fr, default, "⩌", "union fermée à empattements"
-fr, default, "⩍", "intersection fermée à empattements"
-fr, default, "⩎", "double square intersection"
-fr, default, "⩏", "double square union"
-fr, default, "⩐", "union fermée à empattements et produit fusionné"
-fr, default, "⩑", "logical and with dot above"
-fr, default, "⩒", "logical or with dot above"
-fr, default, "⩓", "double et logique"
-fr, default, "⩔", "double ou logique"
-fr, default, "⩕", "deux et logiques entrecroisés"
-fr, default, "⩖", "deux ou logiques entrecroisés"
-fr, default, "⩗", "grand ou pentu"
-fr, default, "⩘", "grand et pentu"
-fr, default, "⩙", "logical or overlapping logical and"
-fr, default, "⩚", "et logique à hampe médiane"
-fr, default, "⩛", "ou logique à hampe médiane"
-fr, default, "⩜", "et logique à tiret horizontal"
-fr, default, "⩝", "ou logique à tiret horizontal"
-fr, default, "⩞", "logical and with double overbar"
-fr, default, "⩟", "et logique à barre souscrite"
-fr, default, "⩠", "logical and with double underbar"
-fr, default, "⩡", "small vee with underbar"
-fr, default, "⩢", "logical or with double overbar"
-fr, default, "⩣", "logical or with double underbar"
-fr, default, "⩤", "z notation domain antirestriction"
-fr, default, "⩥", "z notation range antirestriction"
-fr, default, "⩦", "signe égal point souscrit"
-fr, default, "⩧", "identical with dot above"
-fr, default, "⩨", "triple horizontal bar with double vertical stroke"
-fr, default, "⩩", "triple horizontal bar with triple vertical stroke"
-fr, default, "⩪", "opérateur tilde point en chef"
-fr, default, "⩫", "tilde operator with rising dots"
-fr, default, "⩬", "similar minus similar"
-fr, default, "⩭", "congruent point en chef"
-fr, default, "⩮", "equals with asterisk"
-fr, default, "⩯", "presque égal à circonflexe"
-fr, default, "⩰", "approximately equal or equals"
-fr, default, "⩱", "plus signe égal en chef"
-fr, default, "⩲", "égal à signe plus en chef"
-fr, default, "⩳", "tilde signe égal en chef"
-fr, default, "⩴", "double deux-points égal à"
-fr, default, "⩵", "deux signes égal à consécutifs"
-fr, default, "⩶", "three consecutive equals"
-fr, default, "⩷", "égal à deux points en chef deux points souscrits"
-fr, default, "⩸", "équivalent quatre points en chef"
-fr, default, "⩹", "inférieur à avec cercle inscrit"
-fr, default, "⩺", "supérieur à avec cercle inscrit"
-fr, default, "⩻", "inférieur à point d'interrogation en chef"
-fr, default, "⩼", "supérieur à point d'interrogation en chef"
-fr, default, "⩽", "plus petit ou égal à pentu"
-fr, default, "⩾", "supérieur à ou égal à pentu"
-fr, default, "⩿", "inférieur à ou égal à pentu point inscrit"
-fr, default, "⪀", "supérieur à ou égal à pentu point inscrit"
-fr, default, "⪁", "inférieur à ou égal à pentu point en chef"
-fr, default, "⪂", "supérieur à ou égal à pentu point en chef"
-fr, default, "⪃", "inférieur à ou égal à pentu point en chef droit"
-fr, default, "⪄", "supérieur à ou égal à pentu point en chef gauche"
-fr, default, "⪅", "less than or approximate"
-fr, default, "⪆", "greater than or approximate"
-fr, default, "⪇", "less than and single line not equals"
-fr, default, "⪈", "greater than and single line not equals"
-fr, default, "⪉", "inférieur à et non approximatif"
-fr, default, "⪊", "supérieur à et non approximatif"
-fr, default, "⪋", "less than above double line equal above greater than"
-fr, default, "⪌", "greater than above double line equal above less than"
-fr, default, "⪍", "inférieur à par-dessus similaire à ou égal à"
-fr, default, "⪎", "supérieur à par-dessus similaire à ou égal à"
-fr, default, "⪏", "inférieur à par-dessus similaire à par-dessus supérieur à"
-fr, default, "⪐", "supérieur à par-dessus similaire à par-dessus inférieur à"
-fr, default, "⪑", "inférieur à par-dessus supérieur à par-dessus égal à deux lignes"
-fr, default, "⪒", "supérieur à par-dessus inférieur à par-dessus égal à deux lignes"
-fr, default, "⪓", "inférieur à par-dessus égal à pentu par-dessus supérieur à par-dessus égal à pentu"
-fr, default, "⪔", "supérieur à par-dessus égal à pentu par-dessus inférieur à par-dessus égal à pentu"
-fr, default, "⪕", "slanted equals or less than"
-fr, default, "⪖", "slanted equals or greater than"
-fr, default, "⪗", "égal à pentu ou inférieur à point inscrit"
-fr, default, "⪘", "égal à pentu ou supérieur à point inscrit"
-fr, default, "⪙", "égal à deux lignes ou inférieur à"
-fr, default, "⪚", "égal à deux lignes ou supérieur à"
-fr, default, "⪛", "double line slanted equals or less than"
-fr, default, "⪜", "double line slanted equals or greater than"
-fr, default, "⪝", "similaire à ou inférieur à"
-fr, default, "⪞", "similaire à ou supérieur à"
-fr, default, "⪟", "similaire à par-dessus inférieur à par-dessus signe égal"
-fr, default, "⪠", "similaire à par-dessus supérieur à par-dessus signe égal"
-fr, default, "⪡", "deux inférieur à emboîtés"
-fr, default, "⪢", "deux supérieur à emboîtés"
-fr, default, "⪣", "double nested less than with underbar"
-fr, default, "⪤", "deux supérieur à entrecroisés"
-fr, default, "⪥", "supérieur à à côté de inférieur à"
-fr, default, "⪦", "inférieur à fermé d'un arc"
-fr, default, "⪧", "supérieur à fermé d'un arc"
-fr, default, "⪨", "inférieur à fermé d'un arc par-dessus égal à pentu"
-fr, default, "⪩", "supérieur à fermé d'un arc par-dessus égal à pentu"
-fr, default, "⪪", "plus petit que en fourche"
-fr, default, "⪫", "plus grand que en fourche"
-fr, default, "⪬", "plus petit ou égal que en fourche"
-fr, default, "⪭", "plus grand ou égal que en fourche"
-fr, default, "⪮", "signe égal et dos-d'âne"
-fr, default, "⪯", "précède par-dessus signe égal à une ligne"
-fr, default, "⪰", "succeeds above single line equals sign"
-fr, default, "⪱", "precedes above single line not equals"
-fr, default, "⪲", "succeeds above single line not equals"
-fr, default, "⪳", "precedes above equals sign"
-fr, default, "⪴", "succeeds above equals sign"
-fr, default, "⪵", "précède par-dessus pas égal à"
-fr, default, "⪶", "suit par-dessus pas égal à"
-fr, default, "⪷", "precedes above almost equals"
-fr, default, "⪸", "succeeds above almost equals"
-fr, default, "⪹", "precedes above not almost equals"
-fr, default, "⪺", "succeeds above not almost equals"
-fr, default, "⪻", "double précède"
-fr, default, "⪼", "double suit"
-fr, default, "⪽", "sous-ensemble pointé"
-fr, default, "⪾", "sur-ensemble pointé"
-fr, default, "⪿", "sous-ensemble plus souscrit"
-fr, default, "⫀", "sur-ensemble plus souscrit"
-fr, default, "⫁", "sous-ensemble à signe de multiplication souscrit"
-fr, default, "⫂", "sur-ensemble à signe de multiplication souscrit"
-fr, default, "⫃", "sous-ensemble de ou égal à point en chef"
-fr, default, "⫄", "sur-ensemble de ou égal à point en chef"
-fr, default, "⫅", "subset of above equals sign"
-fr, default, "⫆", "superset of above equals sign"
-fr, default, "⫇", "sous-ensemble de par-dessus opérateur tilde"
-fr, default, "⫈", "sur-ensemble de par-dessus opérateur tilde"
-fr, default, "⫉", "subset of above almost equals"
-fr, default, "⫊", "superset of above almost equals"
-fr, default, "⫋", "subset of above not equals"
-fr, default, "⫌", "superset of above not equals"
-fr, default, "⫍", "square left open box operator"
-fr, default, "⫎", "square right open box operator"
-fr, default, "⫏", "sous-ensemble clos"
-fr, default, "⫐", "sur-ensemble clos"
-fr, default, "⫑", "sous-ensemble clos ou égal à"
-fr, default, "⫒", "sur-ensemble clos ou égal à"
-fr, default, "⫓", "sous-ensemble par-dessus sur-ensemble"
-fr, default, "⫔", "sur-ensemble par-dessus sous-ensemble"
-fr, default, "⫕", "sous-ensemble par-dessus sous-ensemble"
-fr, default, "⫖", "sur-ensemble par-dessus sur-ensemble"
-fr, default, "⫗", "sur-ensemble à côté de sous-ensemble"
-fr, default, "⫘", "sur-ensemble chaîné à sous-ensemble"
-fr, default, "⫙", "appartient à ouvert vers le bas"
-fr, default, "⫚", "fourche surmontée d'un t"
-fr, default, "⫛", "intersection transversale"
-fr, default, "⫝̸", "forking"
-fr, default, "⫝", "nonforking"
-fr, default, "⫞", "short left tack"
-fr, default, "⫟", "short down tack"
-fr, default, "⫠", "short up tack"
-fr, default, "⫡", "perpendicular with s"
-fr, default, "⫢", "vertical bar triple right turnstile"
-fr, default, "⫣", "double vertical bar left turnstile"
-fr, default, "⫤", "double tourniquet gauche à barre verticale"
-fr, default, "⫥", "double vertical bar double left turnstile"
-fr, default, "⫦", "double barre verticale gauche à traverse"
-fr, default, "⫧", "taquet court vers le bas avec barre en chef"
-fr, default, "⫨", "taquet court vers le haut avec barre souscrite"
-fr, default, "⫩", "taquet court vers le haut par-dessus taquet court vers le bas"
-fr, default, "⫪", "double down tack"
-fr, default, "⫫", "double taquet vers le haut"
-fr, default, "⫬", "signe négation à deux traits"
-fr, default, "⫭", "signe négation à deux traits réfléchi"
-fr, default, "⫮", "n'est pas un diviseur de à barre de négation réfléchie"
-fr, default, "⫯", "ligne verticale cercle en chef"
-fr, default, "⫰", "ligne verticale cercle souscrit"
-fr, default, "⫱", "taquet vers le bas surmontant un cercle"
-fr, default, "⫲", "parallèlle à vertical à une traverse"
-fr, default, "⫳", "parallèle à avec opérateur tilde"
-fr, default, "⫴", "triple vertical bar binary relation"
-fr, default, "⫵", "triple vertical bar with horizontal stroke"
-fr, default, "⫶", "triple colon operator"
-fr, default, "⫷", "triple nested less than"
-fr, default, "⫸", "triple nested greater than"
-fr, default, "⫹", "double line slanted less than or equals"
-fr, default, "⫺", "double line slanted greater than or equals"
-fr, default, "⫻", "triple solidus binary relation"
-fr, default, "⫼", "large triple vertical bar operator"
-fr, default, "⫽", "double solidus operator"
-fr, default, "⫾", "white vertical bar"
-fr, default, "⫿", "n ary white vertical bar"
-fr, default, "〜", "wave dash"
-fr, default, "︐", "presentation form for vertical comma"
-fr, default, "︓", "presentation form for vertical colon"
-fr, default, "︔", "presentation form for vertical semicolon"
-fr, default, "︕", "presentation form for vertical exclamation mark"
-fr, default, "︖", "presentation form for vertical question mark"
-fr, default, "︙", "presentation form for vertical horizontal ellipsis"
-fr, default, "︰", "presentation form for vertical two dot leader"
-fr, default, "︱", "presentation form for vertical em dash"
-fr, default, "︲", "presentation form for vertical en dash"
-fr, default, "︳", "presentation form for vertical low line"
-fr, default, "︴", "presentation form for vertical wavy low line"
-fr, default, "﹅", "sesame dot"
-fr, default, "﹆", "white sesame dot"
-fr, default, "﹉", "dashed overline"
-fr, default, "﹊", "centerline overline"
-fr, default, "﹋", "wavy overline"
-fr, default, "﹌", "double wavy overline"
-fr, default, "﹍", "dashed low line"
-fr, default, "﹎", "centerline low line"
-fr, default, "﹏", "wavy low line"
-fr, default, "﹐", "small comma"
-fr, default, "﹒", "small full stop"
-fr, default, "﹔", "small semicolon"
-fr, default, "﹕", "small colon"
-fr, default, "﹖", "small question mark"
-fr, default, "﹗", "small exclamation mark"
-fr, default, "﹘", "small em dash"
-fr, default, "﹟", "small number sign"
-fr, default, "﹠", "small ampersand"
-fr, default, "﹡", "small asterisk"
-fr, default, "﹢", "small plus sign"
-fr, default, "﹣", "small hyphen minus"
-fr, default, "﹤", "small less than sign"
-fr, default, "﹥", "small greater than sign"
-fr, default, "﹦", "small equals sign"
-fr, default, "﹨", "integer divide"
-fr, default, "﹩", "small dollar sign"
-fr, default, "﹪", "small percent sign"
-fr, default, "﹫", "small commercial at"
-fr, default, "！", "fullwidth exclamation mark"
-fr, default, "＂", "fullwidth quotation mark"
-fr, default, "＃", "fullwidth number sign"
-fr, default, "＄", "fullwidth dollar sign"
-fr, default, "％", "fullwidth percent sign"
-fr, default, "＆", "fullwidth ampersand"
-fr, default, "＇", "fullwidth apostrophe"
-fr, default, "＊", "fullwidth asterisk"
-fr, default, "＋", "fullwidth plus sign"
-fr, default, "，", "fullwidth comma"
-fr, default, "－", "fullwidth hyphen minus"
-fr, default, "．", "fullwidth full stop"
-fr, default, "／", "fullwidth solidus"
-fr, default, "：", "fullwidth colon"
-fr, default, "；", "fullwidth semicolon"
-fr, default, "＜", "fullwidth less than sign"
-fr, default, "＝", "fullwidth equals sign"
-fr, default, "＞", "fullwidth greater than sign"
-fr, default, "？", "fullwidth question mark"
-fr, default, "＠", "fullwidth commercial at"
-fr, default, "＼", "fullwidth reverse solidus"
-fr, default, "＾", "fullwidth circumflex accent"
-fr, default, "＿", "fullwidth low line"
-fr, default, "｀", "fullwidth grave accent"
-fr, default, "｜", "fullwidth vertical line"
-fr, default, "～", "fullwidth tilde"
-fr, default, "￠", "fullwidth cent sign"
-fr, default, "￡", "fullwidth pound sign"
-fr, default, "￢", "fullwidth not sign"
-fr, default, "￣", "fullwidth macron"
-fr, default, "￤", "fullwidth broken bar"
-fr, default, "￥", "fullwidth yen sign"
-fr, default, "￦", "fullwidth won sign"
-fr, default, "￨", "halfwidth forms light vertical"
-fr, default, "￭", "halfwidth black square"
-fr, default, "￮", "halfwidth white circle"
-fr, default, " ", ""
-fr, default, " ", ""
-fr, default, "­", "trait d'union conditionnel"
-fr, default, " ", ""
-fr, default, " ", ""
-fr, default, " ", ""
-fr, default, " ", ""
-fr, default, " ", ""
-fr, default, " ", ""
-fr, default, " ", ""
-fr, default, " ", ""
-fr, default, " ", ""
-fr, default, " ", ""
-fr, default, " ", ""
-fr, default, "​", "​"
-fr, default, "‌", "antiliant sans chasse"
-fr, default, "‍", "liant sans chasse"
-fr, default, "‎", "marque gauche-à-droite"
-fr, default, "‏", "marque droite-à-gauche"
-fr, default, " ", ""
-fr, default, " ", ""
-fr, default, "‪", "left to right embedding"
-fr, default, "‫", "right to left embedding"
-fr, default, "‬", "pop directional formatting"
-fr, default, "‭", "left to right override"
-fr, default, "‮", "right to left override"
-fr, default, " ", ""
-fr, default, " ", ""
-fr, default, "⁠", "⁠"
-fr, default, "⁡", "de"
-fr, default, "⁢", " "
-fr, default, "⁣", "⁣"
-fr, default, "⁤", "plus"
-fr, default, "⁪", "inhibit symmetric swapping"
-fr, default, "⁫", "activate symmetric swapping"
-fr, default, "⁮", "national digit shapes"
-fr, default, "⁯", "nominal digit shapes"
-fr, default, "﻿", ""
-fr, default, "￹", "interlinear annotation anchor"
-fr, default, "￺", "interlinear annotation separator"
-fr, default, "￻", "interlinear annotation terminator"
-fr, default, "⏨", "decimal exponent symbol"
-fr, default, "★", "étoile noire"
-fr, default, "☆", "étoile blanche"
-fr, default, "⚪", "white circle"
-fr, default, "⚫", "black circle"
-fr, default, "✅", "white check"
-fr, default, "✓", "signe de vérification"
-fr, default, "✔", "heavy check"
-fr, default, "✕", "multiplication x"
-fr, default, "✖", "heavy multiplication x"
-fr, default, "✗", "x de bulletin de vote"
-fr, default, "✘", "heavy ballot x"
-fr, default, "✛", "open center cross"
-fr, default, "✜", "heavy open center cross"
-fr, default, "✠", "croix de malte"
-fr, default, "✡", "star of david"
-fr, default, "✢", "four teardrop spoked asterisk"
-fr, default, "✣", "four balloon spoked asterisk"
-fr, default, "✤", "heavy four balloon spoked asterisk"
-fr, default, "✥", "four club spoked asterisk"
-fr, default, "✦", "black four pointed star"
-fr, default, "✧", "white four pointed star"
-fr, default, "✨", "sparkles"
-fr, default, "✩", "stress outlined white star"
-fr, default, "✪", "circled white star"
-fr, default, "✫", "open center black star"
-fr, default, "✬", "black center white star"
-fr, default, "✭", "outlined black star"
-fr, default, "✮", "heavy outlined black star"
-fr, default, "✯", "pinwheel star"
-fr, default, "✰", "shadowed white star"
-fr, default, "✱", "heavy asterisk"
-fr, default, "✲", "open center asterisk"
-fr, default, "✳", "eight spoked asterisk"
-fr, default, "✴", "eight pointed black star"
-fr, default, "✵", "eight pointed pinwheel star"
-fr, default, "✶", "étoile noire à six branches"
-fr, default, "✹", "twelve pointed black star"
-fr, default, "✺", "sixteen pointed asterisk"
-fr, default, "✻", "teardrop spoked asterisk"
-fr, default, "✼", "open center teardrop spoked asterisk"
-fr, default, "✽", "gros astérisque larmé"
-fr, default, "✾", "six petalled black and white florette"
-fr, default, "✿", "black florette"
-fr, default, "❀", "white florette"
-fr, default, "❁", "eight petalled outlined black florette"
-fr, default, "❂", "circled open center eight pointed star"
-fr, default, "❃", "heavy teardrop spoked pinwheel asterisk"
-fr, default, "❄", "snowflake"
-fr, default, "❅", "tight trifoliate snowflake"
-fr, default, "❆", "heavy chevron snowflake"
-fr, default, "❇", "sparkle"
-fr, default, "❈", "heavy sparkle"
-fr, default, "❉", "balloon spoked asterisk"
-fr, default, "❊", "eight teardrop spoked propeller asterisk"
-fr, default, "❋", "heavy eight teardrop spoked propeller asterisk"
-fr, default, "❌", "cross mark"
-fr, default, "❍", "shadowed white circle"
-fr, default, "W:unit", "W majuscule deux points unit"
-fr, default, "w:unit", "w deux points unit"
-fr, default, "kw:unit", "kw deux points unit"
-fr, default, "kW:unit", "kW deux points unit"
-fr, default, "mw:unit", "mw deux points unit"
-fr, default, "mW:unit", "mW deux points unit"
-fr, default, "kwh:unit", "kwh deux points unit"
-fr, default, "kWh:unit", "kWh deux points unit"
-fr, default, "J:unit", "J majuscule deux points unit"
-fr, default, "N:unit", "N majuscule deux points unit"
-fr, default, "A:unit", "A majuscule deux points unit"
-fr, default, "V:unit", "V majuscule deux points unit"
-fr, default, "µΩ:unit", "symbole micro Oméga majuscule deux points unit"
-fr, default, "mΩ:unit", "m Oméga majuscule deux points unit"
-fr, default, "Ω:unit", "Oméga majuscule deux points unit"
-fr, default, "Ohm:unit", "Ohm deux points unit"
-fr, default, "kΩ:unit", "k Oméga majuscule deux points unit"
-fr, default, "KΩ:unit", "K majuscule Oméga majuscule deux points unit"
-fr, default, "MΩ:unit", "M majuscule Oméga majuscule deux points unit"
-fr, default, "GΩ:unit", "G majuscule Oméga majuscule deux points unit"
-fr, default, "mm:unit", "mm deux points unit"
-fr, default, "cm:unit", "cm deux points unit"
-fr, default, "m:unit", "m deux points unit"
-fr, default, "km:unit", "km deux points unit"
-fr, default, "ft:unit", "ft deux points unit"
-fr, default, "ft.:unit", "ft point deux points unit"
-fr, default, "in:unit", "in deux points unit"
-fr, default, "in.:unit", "in point deux points unit"
-fr, default, "mi:unit", "mi deux points unit"
-fr, default, "mi.:unit", "mi point deux points unit"
-fr, default, "yd:unit", "yd deux points unit"
-fr, default, "yd.:unit", "yd point deux points unit"
-fr, default, "n.m.:unit", "n point m point deux points unit"
-fr, default, "b:unit", "b deux points unit"
-fr, default, "B:unit", "B majuscule deux points unit"
-fr, default, "KB:unit", "KB deux points unit"
-fr, default, "MB:unit", "MB deux points unit"
-fr, default, "GB:unit", "GB deux points unit"
-fr, default, "TB:unit", "TB deux points unit"
-fr, default, "doz:unit", "doz deux points unit"
-fr, default, "doz.:unit", "doz point deux points unit"
-fr, default, "dz:unit", "dz deux points unit"
-fr, default, "dz.:unit", "dz point deux points unit"
-fr, default, "sq:unit", "sq deux points unit"
-fr, default, "sq.:unit", "sq point deux points unit"
-fr, default, "ha:unit", "ha deux points unit"
-fr, default, "kt:unit", "kt deux points unit"
-fr, default, "kt.:unit", "kt point deux points unit"
-fr, default, "mph:unit", "mph deux points unit"
-fr, default, "rpm:unit", "rpm deux points unit"
-fr, default, "kmh:unit", "kmh deux points unit"
-fr, default, "F:unit", "F majuscule deux points unit"
-fr, default, "F.:unit", "F majuscule point deux points unit"
-fr, default, "°F:unit", "degrés F majuscule deux points unit"
-fr, default, "C:unit", "C majuscule deux points unit"
-fr, default, "°C:unit", "degrés C majuscule deux points unit"
-fr, default, "K:unit", "K majuscule deux points unit"
-fr, default, "°K:unit", "degrés K majuscule deux points unit"
-fr, default, "ns:unit", "ns deux points unit"
-fr, default, "µs:unit", "symbole micro s deux points unit"
-fr, default, "ms:unit", "ms deux points unit"
-fr, default, "s:unit", "s deux points unit"
-fr, default, "min:unit", "min deux points unit"
-fr, default, "h:unit", "h deux points unit"
-fr, default, "hr:unit", "hr deux points unit"
-fr, default, "bbl.:unit", "bbl point deux points unit"
-fr, default, "bbl:unit", "bbl deux points unit"
-fr, default, "cu:unit", "cu deux points unit"
-fr, default, "cu.:unit", "cu point deux points unit"
-fr, default, "fl. oz.:unit", "fl point oz point deux points unit"
-fr, default, "gal:unit", "gal deux points unit"
-fr, default, "gal.:unit", "gal point deux points unit"
-fr, default, "pt:unit", "pt deux points unit"
-fr, default, "pt.:unit", "pt point deux points unit"
-fr, default, "qt:unit", "qt deux points unit"
-fr, default, "qt.:unit", "qt point deux points unit"
-fr, default, "tbsp:unit", "tbsp deux points unit"
-fr, default, "tbsp.:unit", "tbsp point deux points unit"
-fr, default, "tsp:unit", "tsp deux points unit"
-fr, default, "tsp.:unit", "tsp point deux points unit"
-fr, default, "cc:unit", "cc deux points unit"
-fr, default, "kl:unit", "kl deux points unit"
-fr, default, "l:unit", "l deux points unit"
-fr, default, "ml:unit", "ml deux points unit"
-fr, default, "lb:unit", "lb deux points unit"
-fr, default, "lb.:unit", "lb point deux points unit"
-fr, default, "LT:unit", "LT deux points unit"
-fr, default, "L.T.:unit", "L majuscule point T majuscule point deux points unit"
-fr, default, "oz:unit", "oz deux points unit"
-fr, default, "oz.:unit", "oz point deux points unit"
-fr, default, "g:unit", "g deux points unit"
-fr, default, "gr:unit", "gr deux points unit"
-fr, default, "kg:unit", "kg deux points unit"
-fr, default, "mcg:unit", "mcg deux points unit"
-fr, default, "µg:unit", "symbole micro g deux points unit"
-fr, default, "mg:unit", "mg deux points unit"
-fr, default, "t:unit", "t deux points unit"
-fr, default, "T:unit", "T majuscule deux points unit"
-fr, default, "sen", "sen"
+// Copyright 2019 Volker Sorge
+//
+// Licensed under the Apache License, Version 2.0 (the 'License');
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an 'AS IS' BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+/**
+ * @fileoverview Abstract class for test cases of single characters.
+ * @author Volker.Sorge@gmail.com (Volker Sorge)
+ */
+
+goog.provide('sre.DefaultCharFrenchTest');
+
+goog.require('sre.AbstractCharacterTest');
+
+
+
+/**
+ * @constructor
+ * @extends {sre.AbstractCharacterTest}
+ */
+sre.DefaultCharFrenchTest = function() {
+  sre.DefaultCharFrenchTest.base(this, 'constructor');
+
+  this.locale = 'fr';
+  this.domain = 'default';
+  this.semantics = true;
+  
+  /**
+   * @type {Array.<string>}
+   */
+  this.styles = ['default', 'short', 'alternative'];
+
+  this.setActive('DefaultCharactersFrench');
+};
+goog.inherits(sre.DefaultCharFrenchTest, sre.AbstractCharacterTest);
+
+
+sre.DefaultCharFrenchTest.prototype.testDefaultChars = function() {
+  this.executeCharTest('0', ['zero']);
+  this.executeCharTest('1', ['one']);
+  this.executeCharTest('2', ['two']);
+  this.executeCharTest('3', ['three']);
+  this.executeCharTest('4', ['four']);
+  this.executeCharTest('5', ['five']);
+  this.executeCharTest('6', ['six']);
+  this.executeCharTest('7', ['seven']);
+  this.executeCharTest('8', ['eight']);
+  this.executeCharTest('9', ['nine']);
+  this.executeCharTest('Α', ['Alpha majuscule']);
+  this.executeCharTest('Β', ['Bêta majuscule']);
+  this.executeCharTest('Γ', ['Gamma majuscule']);
+  this.executeCharTest('Δ', ['Delta majuscule']);
+  this.executeCharTest('Ε', ['Epsilon majuscule']);
+  this.executeCharTest('Ζ', ['Zêta majuscule']);
+  this.executeCharTest('Η', ['Êta majuscule']);
+  this.executeCharTest('Θ', ['Thêta majuscule']);
+  this.executeCharTest('Ι', ['Iota majuscule']);
+  this.executeCharTest('Κ', ['Kappa majuscule']);
+  this.executeCharTest('Λ', ['Lambda majuscule']);
+  this.executeCharTest('Μ', ['Mû majuscule']);
+  this.executeCharTest('Ν', ['Nû majuscule']);
+  this.executeCharTest('Ξ', ['Xi majuscule']);
+  this.executeCharTest('Ο', ['Omicron majuscule']);
+  this.executeCharTest('Π', ['Pi majuscule']);
+  this.executeCharTest('Ρ', ['Rho majuscule']);
+  this.executeCharTest('Σ', ['Sigma majuscule']);
+  this.executeCharTest('Τ', ['Tau majuscule']);
+  this.executeCharTest('Υ', ['Upsilon majuscule']);
+  this.executeCharTest('Φ', ['Phi majuscule']);
+  this.executeCharTest('Χ', ['Chi majuscule']);
+  this.executeCharTest('Ψ', ['Psi majuscule']);
+  this.executeCharTest('Ω', ['Oméga majuscule']);
+  this.executeCharTest('α', ['alpha']);
+  this.executeCharTest('β', ['bêta']);
+  this.executeCharTest('γ', ['gamma']);
+  this.executeCharTest('δ', ['delta']);
+  this.executeCharTest('ε', ['epsilon']);
+  this.executeCharTest('ζ', ['zêta']);
+  this.executeCharTest('η', ['êta']);
+  this.executeCharTest('θ', ['thêta']);
+  this.executeCharTest('ι', ['iota']);
+  this.executeCharTest('κ', ['kappa']);
+  this.executeCharTest('λ', ['lambda']);
+  this.executeCharTest('μ', ['mû']);
+  this.executeCharTest('ν', ['nû']);
+  this.executeCharTest('ξ', ['xi']);
+  this.executeCharTest('ο', ['omicron']);
+  this.executeCharTest('π', ['pi']);
+  this.executeCharTest('ρ', ['rho']);
+  this.executeCharTest('ς', ['sigma final']);
+  this.executeCharTest('σ', ['sigma']);
+  this.executeCharTest('τ', ['tau']);
+  this.executeCharTest('υ', ['upsilon']);
+  this.executeCharTest('φ', ['phi']);
+  this.executeCharTest('χ', ['chi']);
+  this.executeCharTest('ψ', ['psi']);
+  this.executeCharTest('ω', ['oméga']);
+  this.executeCharTest('ᴦ', ['small cap gamma']);
+  this.executeCharTest('ᴧ', ['small cap lamda']);
+  this.executeCharTest('ᴨ', ['small cap pi']);
+  this.executeCharTest('ᴩ', ['small cap rho']);
+  this.executeCharTest('ᴪ', ['small cap psi']);
+  this.executeCharTest('ᵞ', ['superscript gamma']);
+  this.executeCharTest('ᵠ', ['superscript phi']);
+  this.executeCharTest('ᵦ', ['subscript beta']);
+  this.executeCharTest('ᵧ', ['subscript gamma']);
+  this.executeCharTest('ᵨ', ['subscript rho']);
+  this.executeCharTest('ᵩ', ['subscript phi']);
+  this.executeCharTest('ᵪ', ['subscript chi']);
+  this.executeCharTest('ϐ', ['bêta grec']);
+  this.executeCharTest('ϑ', ['thêta cursif']);
+  this.executeCharTest('ϕ', ['phi droit']);
+  this.executeCharTest('ϖ', ['pi cursif']);
+  this.executeCharTest('ϗ', ['ligature kai']);
+  this.executeCharTest('ϰ', ['kappa cursif']);
+  this.executeCharTest('ϱ', ['rho à queue']);
+  this.executeCharTest('ϵ', ['epsilon']);
+  this.executeCharTest('϶', ['epsilon lunaire réfléchi']);
+  this.executeCharTest('ϴ', ['Thêta majuscule']);
+  this.executeCharTest('𝚹', ['Thêta majuscule en grasse']);
+  this.executeCharTest('𝛳', ['Thêta majuscule en italique']);
+  this.executeCharTest('𝝧', ['Thêta majuscule en sans empattement grasse']);
+  this.executeCharTest('𝛁', ['symbole mathématique gras nabla']);
+  this.executeCharTest('𝛛', ['symbole mathématique gras dérivée partielle']);
+  this.executeCharTest('𝛜', ['symbole mathématique gras epsilon']);
+  this.executeCharTest('𝛝', ['symbole mathématique gras thêta']);
+  this.executeCharTest('𝛞', ['symbole mathématique gras kappa']);
+  this.executeCharTest('𝛟', ['symbole mathématique gras phi']);
+  this.executeCharTest('𝛠', ['symbole mathématique gras rhô']);
+  this.executeCharTest('𝛡', ['symbole mathématique gras pi']);
+  this.executeCharTest('𝛻', ['symbole mathématique italique nabla']);
+  this.executeCharTest('𝜕', ['symbole mathématique italique dérivée partielle']);
+  this.executeCharTest('𝜖', ['symbole mathématique italique epsilon']);
+  this.executeCharTest('𝜗', ['symbole mathématique italique thêta']);
+  this.executeCharTest('𝜘', ['symbole mathématique italique kappa']);
+  this.executeCharTest('𝜙', ['symbole mathématique italique phi']);
+  this.executeCharTest('𝜚', ['symbole mathématique italique rhô']);
+  this.executeCharTest('𝜛', ['symbole mathématique italique pi']);
+  this.executeCharTest('𝝯', ['symbole mathématique gras sans empattement nabla']);
+  this.executeCharTest('𝞉', ['symbole mathématique gras sans empattement dérivée partielle']);
+  this.executeCharTest('𝞊', ['symbole mathématique gras sans empattement epsilon']);
+  this.executeCharTest('𝞋', ['symbole mathématique gras sans empattement thêta']);
+  this.executeCharTest('𝞌', ['symbole mathématique gras sans empattement kappa']);
+  this.executeCharTest('𝞍', ['symbole mathématique gras sans empattement phi']);
+  this.executeCharTest('𝞎', ['symbole mathématique gras sans empattement rhô']);
+  this.executeCharTest('𝞏', ['symbole mathématique gras sans empattement pi']);
+  this.executeCharTest('𝟊', ['bold cap digamma']);
+  this.executeCharTest('𝟋', ['bold digamma']);
+  this.executeCharTest('𝚨', ['Alpha majuscule en gras']);
+  this.executeCharTest('𝚩', ['Bêta majuscule en gras']);
+  this.executeCharTest('𝚪', ['Gamma majuscule en gras']);
+  this.executeCharTest('𝚫', ['Delta majuscule en gras']);
+  this.executeCharTest('𝚬', ['Epsilon majuscule en gras']);
+  this.executeCharTest('𝚭', ['Dzêta majuscule en gras']);
+  this.executeCharTest('𝚮', ['Êta majuscule en gras']);
+  this.executeCharTest('𝚯', ['Thêta majuscule en gras']);
+  this.executeCharTest('𝚰', ['Iota majuscule en gras']);
+  this.executeCharTest('𝚱', ['Kappa majuscule en gras']);
+  this.executeCharTest('𝚲', ['Lambda majuscule en gras']);
+  this.executeCharTest('𝚳', ['Mu majuscule en gras']);
+  this.executeCharTest('𝚴', ['Nu majuscule en gras']);
+  this.executeCharTest('𝚵', ['Xi majuscule en gras']);
+  this.executeCharTest('𝚶', ['Omicron majuscule en gras']);
+  this.executeCharTest('𝚷', ['Pi majuscule en gras']);
+  this.executeCharTest('𝚸', ['Rhô majuscule en gras']);
+  this.executeCharTest('𝚺', ['Sigma majuscule en gras']);
+  this.executeCharTest('𝚻', ['Tau majuscule en gras']);
+  this.executeCharTest('𝚼', ['Upsilon majuscule en gras']);
+  this.executeCharTest('𝚽', ['Phi majuscule en gras']);
+  this.executeCharTest('𝚾', ['Chi majuscule en gras']);
+  this.executeCharTest('𝚿', ['Psi majuscule en gras']);
+  this.executeCharTest('𝛀', ['Oméga majuscule en gras']);
+  this.executeCharTest('𝛂', ['alpha en gras']);
+  this.executeCharTest('𝛃', ['bêta en gras']);
+  this.executeCharTest('𝛄', ['gamma en gras']);
+  this.executeCharTest('𝛅', ['delta en gras']);
+  this.executeCharTest('𝛆', ['epsilon en gras']);
+  this.executeCharTest('𝛇', ['dzêta en gras']);
+  this.executeCharTest('𝛈', ['êta en gras']);
+  this.executeCharTest('𝛉', ['thêta en gras']);
+  this.executeCharTest('𝛊', ['iota en gras']);
+  this.executeCharTest('𝛋', ['kappa en gras']);
+  this.executeCharTest('𝛌', ['lambda en gras']);
+  this.executeCharTest('𝛍', ['mu en gras']);
+  this.executeCharTest('𝛎', ['nu en gras']);
+  this.executeCharTest('𝛏', ['xi en gras']);
+  this.executeCharTest('𝛐', ['omicron en gras']);
+  this.executeCharTest('𝛑', ['pi en gras']);
+  this.executeCharTest('𝛒', ['rhô en gras']);
+  this.executeCharTest('𝛓', ['mathématique grasse sigma final']);
+  this.executeCharTest('𝛔', ['sigma en gras']);
+  this.executeCharTest('𝛕', ['tau en gras']);
+  this.executeCharTest('𝛖', ['upsilon en gras']);
+  this.executeCharTest('𝛗', ['phi en gras']);
+  this.executeCharTest('𝛘', ['chi en gras']);
+  this.executeCharTest('𝛙', ['psi en gras']);
+  this.executeCharTest('𝛚', ['oméga en gras']);
+  this.executeCharTest('𝛢', ['Alpha majuscule en italique']);
+  this.executeCharTest('𝛣', ['Bêta majuscule en italique']);
+  this.executeCharTest('𝛤', ['Gamma majuscule en italique']);
+  this.executeCharTest('𝛥', ['Delta majuscule en italique']);
+  this.executeCharTest('𝛦', ['Epsilon majuscule en italique']);
+  this.executeCharTest('𝛧', ['Dzêta majuscule en italique']);
+  this.executeCharTest('𝛨', ['Êta majuscule en italique']);
+  this.executeCharTest('𝛩', ['Thêta majuscule en italique']);
+  this.executeCharTest('𝛪', ['Iota majuscule en italique']);
+  this.executeCharTest('𝛫', ['Kappa majuscule en italique']);
+  this.executeCharTest('𝛬', ['Lambda majuscule en italique']);
+  this.executeCharTest('𝛭', ['Mu majuscule en italique']);
+  this.executeCharTest('𝛮', ['Nu majuscule en italique']);
+  this.executeCharTest('𝛯', ['Xi majuscule en italique']);
+  this.executeCharTest('𝛰', ['Omicron majuscule en italique']);
+  this.executeCharTest('𝛱', ['Pi majuscule en italique']);
+  this.executeCharTest('𝛲', ['Rhô majuscule en italique']);
+  this.executeCharTest('𝛴', ['Sigma majuscule en italique']);
+  this.executeCharTest('𝛵', ['Tau majuscule en italique']);
+  this.executeCharTest('𝛶', ['Upsilon majuscule en italique']);
+  this.executeCharTest('𝛷', ['Phi majuscule en italique']);
+  this.executeCharTest('𝛸', ['Chi majuscule en italique']);
+  this.executeCharTest('𝛹', ['Psi majuscule en italique']);
+  this.executeCharTest('𝛺', ['Oméga majuscule en italique']);
+  this.executeCharTest('𝛼', ['alpha en italique']);
+  this.executeCharTest('𝛽', ['bêta en italique']);
+  this.executeCharTest('𝛾', ['gamma en italique']);
+  this.executeCharTest('𝛿', ['delta en italique']);
+  this.executeCharTest('𝜀', ['epsilon en italique']);
+  this.executeCharTest('𝜁', ['dzêta en italique']);
+  this.executeCharTest('𝜂', ['êta en italique']);
+  this.executeCharTest('𝜃', ['thêta en italique']);
+  this.executeCharTest('𝜄', ['iota en italique']);
+  this.executeCharTest('𝜅', ['kappa en italique']);
+  this.executeCharTest('𝜆', ['lambda en italique']);
+  this.executeCharTest('𝜇', ['mu en italique']);
+  this.executeCharTest('𝜈', ['nu en italique']);
+  this.executeCharTest('𝜉', ['xi en italique']);
+  this.executeCharTest('𝜊', ['omicron en italique']);
+  this.executeCharTest('𝜋', ['pi en italique']);
+  this.executeCharTest('𝜌', ['rhô en italique']);
+  this.executeCharTest('𝜍', ['mathématique italique sigma final']);
+  this.executeCharTest('𝜎', ['sigma en italique']);
+  this.executeCharTest('𝜏', ['tau en italique']);
+  this.executeCharTest('𝜐', ['upsilon en italique']);
+  this.executeCharTest('𝜑', ['phi en italique']);
+  this.executeCharTest('𝜒', ['chi en italique']);
+  this.executeCharTest('𝜓', ['psi en italique']);
+  this.executeCharTest('𝜔', ['oméga en italique']);
+  this.executeCharTest('𝜜', ['Alpha majuscule en italique gras']);
+  this.executeCharTest('𝜝', ['Bêta majuscule en italique gras']);
+  this.executeCharTest('𝜞', ['Gamma majuscule en italique gras']);
+  this.executeCharTest('𝜟', ['Delta majuscule en italique gras']);
+  this.executeCharTest('𝜠', ['Epsilon majuscule en italique gras']);
+  this.executeCharTest('𝜡', ['Dzêta majuscule en italique gras']);
+  this.executeCharTest('𝜢', ['Êta majuscule en italique gras']);
+  this.executeCharTest('𝜣', ['Thêta majuscule en italique gras']);
+  this.executeCharTest('𝜤', ['Iota majuscule en italique gras']);
+  this.executeCharTest('𝜥', ['Kappa majuscule en italique gras']);
+  this.executeCharTest('𝜦', ['Lambda majuscule en italique gras']);
+  this.executeCharTest('𝜧', ['Mu majuscule en italique gras']);
+  this.executeCharTest('𝜨', ['Nu majuscule en italique gras']);
+  this.executeCharTest('𝜩', ['Xi majuscule en italique gras']);
+  this.executeCharTest('𝜪', ['Omicron majuscule en italique gras']);
+  this.executeCharTest('𝜫', ['Pi majuscule en italique gras']);
+  this.executeCharTest('𝜬', ['Rhô majuscule en italique gras']);
+  this.executeCharTest('𝜮', ['Sigma majuscule en italique gras']);
+  this.executeCharTest('𝜯', ['Tau majuscule en italique gras']);
+  this.executeCharTest('𝜰', ['Upsilon majuscule en italique gras']);
+  this.executeCharTest('𝜱', ['Phi majuscule en italique gras']);
+  this.executeCharTest('𝜲', ['Chi majuscule en italique gras']);
+  this.executeCharTest('𝜳', ['Psi majuscule en italique gras']);
+  this.executeCharTest('𝜴', ['Oméga majuscule en italique gras']);
+  this.executeCharTest('𝜶', ['alpha en italique gras']);
+  this.executeCharTest('𝜷', ['bêta en italique gras']);
+  this.executeCharTest('𝜸', ['gamma en italique gras']);
+  this.executeCharTest('𝜹', ['delta en italique gras']);
+  this.executeCharTest('𝜺', ['epsilon en italique gras']);
+  this.executeCharTest('𝜻', ['dzêta en italique gras']);
+  this.executeCharTest('𝜼', ['êta en italique gras']);
+  this.executeCharTest('𝜽', ['thêta en italique gras']);
+  this.executeCharTest('𝜾', ['iota en italique gras']);
+  this.executeCharTest('𝜿', ['kappa en italique gras']);
+  this.executeCharTest('𝝀', ['lambda en italique gras']);
+  this.executeCharTest('𝝁', ['mu en italique gras']);
+  this.executeCharTest('𝝂', ['nu en italique gras']);
+  this.executeCharTest('𝝃', ['xi en italique gras']);
+  this.executeCharTest('𝝄', ['omicron en italique gras']);
+  this.executeCharTest('𝝅', ['pi en italique gras']);
+  this.executeCharTest('𝝆', ['rhô en italique gras']);
+  this.executeCharTest('𝝇', ['mathématique italique grasse sigma final']);
+  this.executeCharTest('𝝈', ['sigma en italique gras']);
+  this.executeCharTest('𝝉', ['tau en italique gras']);
+  this.executeCharTest('𝝊', ['upsilon en italique gras']);
+  this.executeCharTest('𝝋', ['phi en italique gras']);
+  this.executeCharTest('𝝌', ['chi en italique gras']);
+  this.executeCharTest('𝝍', ['psi en italique gras']);
+  this.executeCharTest('𝝎', ['oméga en italique gras']);
+  this.executeCharTest('𝝖', ['Alpha majuscule en sans empattement gras']);
+  this.executeCharTest('𝝗', ['Bêta majuscule en sans empattement gras']);
+  this.executeCharTest('𝝘', ['Gamma majuscule en sans empattement gras']);
+  this.executeCharTest('𝝙', ['Delta majuscule en sans empattement gras']);
+  this.executeCharTest('𝝚', ['Epsilon majuscule en sans empattement gras']);
+  this.executeCharTest('𝝛', ['Dzêta majuscule en sans empattement gras']);
+  this.executeCharTest('𝝜', ['Êta majuscule en sans empattement gras']);
+  this.executeCharTest('𝝝', ['Thêta majuscule en sans empattement gras']);
+  this.executeCharTest('𝝞', ['Iota majuscule en sans empattement gras']);
+  this.executeCharTest('𝝟', ['Kappa majuscule en sans empattement gras']);
+  this.executeCharTest('𝝠', ['Lambda majuscule en sans empattement gras']);
+  this.executeCharTest('𝝡', ['Mu majuscule en sans empattement gras']);
+  this.executeCharTest('𝝢', ['Nu majuscule en sans empattement gras']);
+  this.executeCharTest('𝝣', ['Xi majuscule en sans empattement gras']);
+  this.executeCharTest('𝝤', ['Omicron majuscule en sans empattement gras']);
+  this.executeCharTest('𝝥', ['Pi majuscule en sans empattement gras']);
+  this.executeCharTest('𝝦', ['Rhô majuscule en sans empattement gras']);
+  this.executeCharTest('𝝨', ['Sigma majuscule en sans empattement gras']);
+  this.executeCharTest('𝝩', ['Tau majuscule en sans empattement gras']);
+  this.executeCharTest('𝝪', ['Upsilon majuscule en sans empattement gras']);
+  this.executeCharTest('𝝫', ['Phi majuscule en sans empattement gras']);
+  this.executeCharTest('𝝬', ['Chi majuscule en sans empattement gras']);
+  this.executeCharTest('𝝭', ['Psi majuscule en sans empattement gras']);
+  this.executeCharTest('𝝮', ['Oméga majuscule en sans empattement gras']);
+  this.executeCharTest('𝝰', ['alpha en sans empattement gras']);
+  this.executeCharTest('𝝱', ['bêta en sans empattement gras']);
+  this.executeCharTest('𝝲', ['gamma en sans empattement gras']);
+  this.executeCharTest('𝝳', ['delta en sans empattement gras']);
+  this.executeCharTest('𝝴', ['epsilon en sans empattement gras']);
+  this.executeCharTest('𝝵', ['dzêta en sans empattement gras']);
+  this.executeCharTest('𝝶', ['êta en sans empattement gras']);
+  this.executeCharTest('𝝷', ['thêta en sans empattement gras']);
+  this.executeCharTest('𝝸', ['iota en sans empattement gras']);
+  this.executeCharTest('𝝹', ['kappa en sans empattement gras']);
+  this.executeCharTest('𝝺', ['lambda en sans empattement gras']);
+  this.executeCharTest('𝝻', ['mu en sans empattement gras']);
+  this.executeCharTest('𝝼', ['nu en sans empattement gras']);
+  this.executeCharTest('𝝽', ['xi en sans empattement gras']);
+  this.executeCharTest('𝝾', ['omicron en sans empattement gras']);
+  this.executeCharTest('𝝿', ['pi en sans empattement gras']);
+  this.executeCharTest('𝞀', ['rhô en sans empattement gras']);
+  this.executeCharTest('𝞁', ['mathématique grasse sans empattement sigma final']);
+  this.executeCharTest('𝞂', ['sigma en sans empattement gras']);
+  this.executeCharTest('𝞃', ['tau en sans empattement gras']);
+  this.executeCharTest('𝞄', ['upsilon en sans empattement gras']);
+  this.executeCharTest('𝞅', ['phi en sans empattement gras']);
+  this.executeCharTest('𝞆', ['chi en sans empattement gras']);
+  this.executeCharTest('𝞇', ['psi en sans empattement gras']);
+  this.executeCharTest('𝞈', ['oméga en sans empattement gras']);
+  this.executeCharTest('𝞐', ['Alpha majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞑', ['Bêta majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞒', ['Gamma majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞓', ['Delta majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞔', ['Epsilon majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞕', ['Dzêta majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞖', ['Êta majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞗', ['Thêta majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞘', ['Iota majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞙', ['Kappa majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞚', ['Lambda majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞛', ['Mu majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞜', ['Nu majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞝', ['Xi majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞞', ['Omicron majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞟', ['Pi majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞠', ['Rhô majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞢', ['Sigma majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞣', ['Tau majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞤', ['Upsilon majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞥', ['Phi majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞦', ['Chi majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞧', ['Psi majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞨', ['Oméga majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝞪', ['alpha en sans empattement italique gras']);
+  this.executeCharTest('𝞫', ['bêta en sans empattement italique gras']);
+  this.executeCharTest('𝞬', ['gamma en sans empattement italique gras']);
+  this.executeCharTest('𝞭', ['delta en sans empattement italique gras']);
+  this.executeCharTest('𝞮', ['epsilon en sans empattement italique gras']);
+  this.executeCharTest('𝞯', ['dzêta en sans empattement italique gras']);
+  this.executeCharTest('𝞰', ['êta en sans empattement italique gras']);
+  this.executeCharTest('𝞱', ['thêta en sans empattement italique gras']);
+  this.executeCharTest('𝞲', ['iota en sans empattement italique gras']);
+  this.executeCharTest('𝞳', ['kappa en sans empattement italique gras']);
+  this.executeCharTest('𝞴', ['lambda en sans empattement italique gras']);
+  this.executeCharTest('𝞵', ['mu en sans empattement italique gras']);
+  this.executeCharTest('𝞶', ['nu en sans empattement italique gras']);
+  this.executeCharTest('𝞷', ['xi en sans empattement italique gras']);
+  this.executeCharTest('𝞸', ['omicron en sans empattement italique gras']);
+  this.executeCharTest('𝞹', ['pi en sans empattement italique gras']);
+  this.executeCharTest('𝞺', ['rhô en sans empattement italique gras']);
+  this.executeCharTest('𝞻', ['mathématique italique grasse sans empattement sigma final']);
+  this.executeCharTest('𝞼', ['sigma en sans empattement italique gras']);
+  this.executeCharTest('𝞽', ['tau en sans empattement italique gras']);
+  this.executeCharTest('𝞾', ['upsilon en sans empattement italique gras']);
+  this.executeCharTest('𝞿', ['phi en sans empattement italique gras']);
+  this.executeCharTest('𝟀', ['chi en sans empattement italique gras']);
+  this.executeCharTest('𝟁', ['psi en sans empattement italique gras']);
+  this.executeCharTest('𝟂', ['oméga en sans empattement italique gras']);
+  this.executeCharTest('ℵ', ['alef']);
+  this.executeCharTest('ℶ', ['bèt']);
+  this.executeCharTest('ℷ', ['guimel']);
+  this.executeCharTest('ℸ', ['dalèt']);
+  this.executeCharTest('ǖ', ['u double overdot overbar']);
+  this.executeCharTest('ǘ', ['u double overdot acute']);
+  this.executeCharTest('ǚ', ['u double overdot caron']);
+  this.executeCharTest('ǜ', ['u double overdot grave']);
+  this.executeCharTest('ǟ', ['a double overdot overbar']);
+  this.executeCharTest('ǡ', ['a overdot overbar']);
+  this.executeCharTest('ǭ', ['o ogonek overbar']);
+  this.executeCharTest('ǻ', ['a ring above acute']);
+  this.executeCharTest('ȫ', ['o double overdot overbar']);
+  this.executeCharTest('ȭ', ['o tilde overbar']);
+  this.executeCharTest('ȱ', ['o overdot overbar']);
+  this.executeCharTest('ḉ', ['c cédille et accent aigu']);
+  this.executeCharTest('ḕ', ['e macron et accent grave']);
+  this.executeCharTest('ḗ', ['e macron et accent aigu']);
+  this.executeCharTest('ḝ', ['e cédille et brève']);
+  this.executeCharTest('ḯ', ['i tréma et accent aigu']);
+  this.executeCharTest('ḹ', ['l point souscrit et macron']);
+  this.executeCharTest('ṍ', ['o tilde et accent aigu']);
+  this.executeCharTest('ṏ', ['o tilde et tréma']);
+  this.executeCharTest('ṑ', ['o macron et accent grave']);
+  this.executeCharTest('ṓ', ['o macron et accent aigu']);
+  this.executeCharTest('ṝ', ['r point souscrit et macron']);
+  this.executeCharTest('ṥ', ['s accent aigu et point en chef']);
+  this.executeCharTest('ṧ', ['s caron et point en chef']);
+  this.executeCharTest('ṩ', ['s point souscrit et point en chef']);
+  this.executeCharTest('ṹ', ['u tilde et accent aigu']);
+  this.executeCharTest('ṻ', ['u macron et tréma']);
+  this.executeCharTest('ấ', ['a accent circonflexe et accent aigu']);
+  this.executeCharTest('ầ', ['a accent circonflexe et accent grave']);
+  this.executeCharTest('ẩ', ['a accent circonflexe et crochet en chef']);
+  this.executeCharTest('ẫ', ['a accent circonflexe et tilde']);
+  this.executeCharTest('ậ', ['a accent circonflexe et point souscrit']);
+  this.executeCharTest('ắ', ['a brève et accent aigu']);
+  this.executeCharTest('ằ', ['a brève et accent grave']);
+  this.executeCharTest('ẳ', ['a brève et crochet en chef']);
+  this.executeCharTest('ẵ', ['a brève et tilde']);
+  this.executeCharTest('ặ', ['a brève et point souscrit']);
+  this.executeCharTest('ế', ['e accent circonflexe et accent aigu']);
+  this.executeCharTest('ề', ['e accent circonflexe et accent grave']);
+  this.executeCharTest('ể', ['e accent circonflexe et crochet en chef']);
+  this.executeCharTest('ễ', ['e accent circonflexe et tilde']);
+  this.executeCharTest('ệ', ['e accent circonflexe et point souscrit']);
+  this.executeCharTest('ố', ['o accent circonflexe et accent aigu']);
+  this.executeCharTest('ồ', ['o accent circonflexe et accent grave']);
+  this.executeCharTest('ổ', ['o accent circonflexe et crochet en chef']);
+  this.executeCharTest('ỗ', ['o accent circonflexe et tilde']);
+  this.executeCharTest('ộ', ['o accent circonflexe et point souscrit']);
+  this.executeCharTest('ớ', ['o cornu accent aigu']);
+  this.executeCharTest('ờ', ['o cornu accent grave']);
+  this.executeCharTest('ở', ['o cornu crochet en chef']);
+  this.executeCharTest('ỡ', ['o cornu tilde']);
+  this.executeCharTest('ợ', ['o cornu point souscrit']);
+  this.executeCharTest('ứ', ['u cornu accent aigu']);
+  this.executeCharTest('ừ', ['u cornu accent grave']);
+  this.executeCharTest('ử', ['u cornu crochet en chef']);
+  this.executeCharTest('ữ', ['u cornu tilde']);
+  this.executeCharTest('ự', ['u cornu point souscrit']);
+  this.executeCharTest('a', ['a']);
+  this.executeCharTest('b', ['b']);
+  this.executeCharTest('c', ['c']);
+  this.executeCharTest('d', ['d']);
+  this.executeCharTest('e', ['e']);
+  this.executeCharTest('f', ['f']);
+  this.executeCharTest('g', ['g']);
+  this.executeCharTest('h', ['h']);
+  this.executeCharTest('i', ['i']);
+  this.executeCharTest('j', ['j']);
+  this.executeCharTest('k', ['k']);
+  this.executeCharTest('l', ['l']);
+  this.executeCharTest('m', ['m']);
+  this.executeCharTest('n', ['n']);
+  this.executeCharTest('o', ['o']);
+  this.executeCharTest('p', ['p']);
+  this.executeCharTest('q', ['q']);
+  this.executeCharTest('r', ['r']);
+  this.executeCharTest('s', ['s']);
+  this.executeCharTest('t', ['t']);
+  this.executeCharTest('u', ['u']);
+  this.executeCharTest('v', ['v']);
+  this.executeCharTest('w', ['w']);
+  this.executeCharTest('x', ['x']);
+  this.executeCharTest('y', ['y']);
+  this.executeCharTest('z', ['z']);
+  this.executeCharTest('ａ', ['a']);
+  this.executeCharTest('ｂ', ['b']);
+  this.executeCharTest('ｃ', ['c']);
+  this.executeCharTest('ｄ', ['d']);
+  this.executeCharTest('ｅ', ['e']);
+  this.executeCharTest('ｆ', ['f']);
+  this.executeCharTest('ｇ', ['g']);
+  this.executeCharTest('ｈ', ['h']);
+  this.executeCharTest('ｉ', ['i']);
+  this.executeCharTest('ｊ', ['j']);
+  this.executeCharTest('ｋ', ['k']);
+  this.executeCharTest('ｌ', ['l']);
+  this.executeCharTest('ｍ', ['m']);
+  this.executeCharTest('ｎ', ['n']);
+  this.executeCharTest('ｏ', ['o']);
+  this.executeCharTest('ｐ', ['p']);
+  this.executeCharTest('ｑ', ['q']);
+  this.executeCharTest('ｒ', ['r']);
+  this.executeCharTest('ｓ', ['s']);
+  this.executeCharTest('ｔ', ['t']);
+  this.executeCharTest('ｕ', ['u']);
+  this.executeCharTest('ｖ', ['v']);
+  this.executeCharTest('ｗ', ['w']);
+  this.executeCharTest('ｘ', ['x']);
+  this.executeCharTest('ｙ', ['y']);
+  this.executeCharTest('ｚ', ['z']);
+  this.executeCharTest('ø', ['o barré']);
+  this.executeCharTest('đ', ['d barré']);
+  this.executeCharTest('ħ', ['h barré']);
+  this.executeCharTest('ł', ['l barré']);
+  this.executeCharTest('ŧ', ['t barré']);
+  this.executeCharTest('ƀ', ['b with stroke']);
+  this.executeCharTest('ƛ', ['lambda barré']);
+  this.executeCharTest('ƶ', ['z with stroke']);
+  this.executeCharTest('ƾ', ['latin letter inverted glottal stop with stroke']);
+  this.executeCharTest('ǥ', ['g with stroke']);
+  this.executeCharTest('ǿ', ['o with stroke and acute']);
+  this.executeCharTest('ȼ', ['c with stroke']);
+  this.executeCharTest('ɇ', ['e with stroke']);
+  this.executeCharTest('ɉ', ['j with stroke']);
+  this.executeCharTest('ɍ', ['r with stroke']);
+  this.executeCharTest('ɏ', ['y with stroke']);
+  this.executeCharTest('ɟ', ['dotless j with stroke']);
+  this.executeCharTest('ɨ', ['i with stroke']);
+  this.executeCharTest('ʄ', ['dotless j with stroke and hook']);
+  this.executeCharTest('ʡ', ['latin letter glottal stop with stroke']);
+  this.executeCharTest('ʢ', ['latin letter reversed glottal stop with stroke']);
+  this.executeCharTest('ᴓ', ['sideways o with stroke']);
+  this.executeCharTest('ᵼ', ['iota with stroke']);
+  this.executeCharTest('ᵽ', ['p with stroke']);
+  this.executeCharTest('ᵿ', ['upsilon with stroke']);
+  this.executeCharTest('ẜ', ['long s with diagonal stroke']);
+  this.executeCharTest('ẝ', ['long s with high stroke']);
+  this.executeCharTest('ƍ', ['turned delta']);
+  this.executeCharTest('ẛ', ['s long point en chef']);
+  this.executeCharTest('ẟ', ['delta']);
+  this.executeCharTest('ĸ', ['kra']);
+  this.executeCharTest('ſ', ['long s']);
+  this.executeCharTest('ƃ', ['b with topbar']);
+  this.executeCharTest('ƅ', ['tone six']);
+  this.executeCharTest('ƈ', ['c with hook']);
+  this.executeCharTest('ƌ', ['d with topbar']);
+  this.executeCharTest('ƒ', ['f cursif']);
+  this.executeCharTest('ƕ', ['hv']);
+  this.executeCharTest('ƙ', ['k with hook']);
+  this.executeCharTest('ƚ', ['l rayé']);
+  this.executeCharTest('ƞ', ['n with long right leg']);
+  this.executeCharTest('ơ', ['o with horn']);
+  this.executeCharTest('ƣ', ['oi']);
+  this.executeCharTest('ƥ', ['p with hook']);
+  this.executeCharTest('ƨ', ['tone two']);
+  this.executeCharTest('ƪ', ['latin letter reversed esh loop']);
+  this.executeCharTest('ƫ', ['t with palatal hook']);
+  this.executeCharTest('ƭ', ['t with hook']);
+  this.executeCharTest('ư', ['u with horn']);
+  this.executeCharTest('ƴ', ['y with hook']);
+  this.executeCharTest('ƹ', ['ezh reversed']);
+  this.executeCharTest('ƺ', ['ezh with tail']);
+  this.executeCharTest('ƽ', ['tone five']);
+  this.executeCharTest('ƿ', ['latin letter wynn']);
+  this.executeCharTest('ǆ', ['dz with caron']);
+  this.executeCharTest('ǉ', ['lj']);
+  this.executeCharTest('ǌ', ['nj']);
+  this.executeCharTest('ǣ', ['ae with macron']);
+  this.executeCharTest('ǯ', ['ezh with caron']);
+  this.executeCharTest('ǳ', ['dz']);
+  this.executeCharTest('ȝ', ['yogh']);
+  this.executeCharTest('ɮ', ['lezh']);
+  this.executeCharTest('ʒ', ['ezh']);
+  this.executeCharTest('ʓ', ['ezh with curl']);
+  this.executeCharTest('ʤ', ['dezh digraph']);
+  this.executeCharTest('ǝ', ['turned e']);
+  this.executeCharTest('ǽ', ['ae with acute']);
+  this.executeCharTest('ȡ', ['d with curl']);
+  this.executeCharTest('ȣ', ['ou']);
+  this.executeCharTest('ȥ', ['z with hook']);
+  this.executeCharTest('ȴ', ['l with curl']);
+  this.executeCharTest('ȵ', ['n with curl']);
+  this.executeCharTest('ȶ', ['t with curl']);
+  this.executeCharTest('ȸ', ['db digraph']);
+  this.executeCharTest('ȹ', ['qp digraph']);
+  this.executeCharTest('ȿ', ['s with swash tail']);
+  this.executeCharTest('ɀ', ['z with swash tail']);
+  this.executeCharTest('ɂ', ['glottal stop']);
+  this.executeCharTest('ɋ', ['q with hook tail']);
+  this.executeCharTest('ɐ', ['turned a']);
+  this.executeCharTest('ɑ', ['alpha']);
+  this.executeCharTest('ɒ', ['turned alpha']);
+  this.executeCharTest('ɓ', ['b with hook']);
+  this.executeCharTest('ɔ', ['open o']);
+  this.executeCharTest('ɕ', ['c with curl']);
+  this.executeCharTest('ɖ', ['d with tail']);
+  this.executeCharTest('ɗ', ['d with hook']);
+  this.executeCharTest('ɘ', ['reversed e']);
+  this.executeCharTest('ə', ['schwa']);
+  this.executeCharTest('ɚ', ['schwa with hook']);
+  this.executeCharTest('ɛ', ['e ouvert']);
+  this.executeCharTest('ɜ', ['reversed open e']);
+  this.executeCharTest('ɝ', ['reversed open e with hook']);
+  this.executeCharTest('ɞ', ['closed reversed open e']);
+  this.executeCharTest('ɠ', ['g with hook']);
+  this.executeCharTest('ɡ', ['script g']);
+  this.executeCharTest('ɣ', ['gamma']);
+  this.executeCharTest('ɤ', ['rams horn']);
+  this.executeCharTest('ɥ', ['turned h']);
+  this.executeCharTest('ɦ', ['h with hook']);
+  this.executeCharTest('ɧ', ['heng with hook']);
+  this.executeCharTest('ɩ', ['iota']);
+  this.executeCharTest('ɫ', ['l with middle tilde']);
+  this.executeCharTest('ɬ', ['l with belt']);
+  this.executeCharTest('ɭ', ['l with retroflex hook']);
+  this.executeCharTest('ɯ', ['turned m']);
+  this.executeCharTest('ɰ', ['turned m with long leg']);
+  this.executeCharTest('ɱ', ['m with hook']);
+  this.executeCharTest('ɲ', ['n with left hook']);
+  this.executeCharTest('ɳ', ['n with retroflex hook']);
+  this.executeCharTest('ɵ', ['barred o']);
+  this.executeCharTest('ɷ', ['closed omega']);
+  this.executeCharTest('ɸ', ['phi']);
+  this.executeCharTest('ɹ', ['turned r']);
+  this.executeCharTest('ɺ', ['turned r with long leg']);
+  this.executeCharTest('ɻ', ['turned r with hook']);
+  this.executeCharTest('ɼ', ['r with long leg']);
+  this.executeCharTest('ɽ', ['r with tail']);
+  this.executeCharTest('ɾ', ['r with fishhook']);
+  this.executeCharTest('ɿ', ['reversed r with fishhook']);
+  this.executeCharTest('ʂ', ['s with hook']);
+  this.executeCharTest('ʃ', ['esh']);
+  this.executeCharTest('ʅ', ['squat reversed esh']);
+  this.executeCharTest('ʆ', ['esh with curl']);
+  this.executeCharTest('ʇ', ['turned t']);
+  this.executeCharTest('ʈ', ['t with retroflex hook']);
+  this.executeCharTest('ʉ', ['u bar']);
+  this.executeCharTest('ʊ', ['upsilon']);
+  this.executeCharTest('ʋ', ['v with hook']);
+  this.executeCharTest('ʌ', ['turned v']);
+  this.executeCharTest('ʍ', ['turned w']);
+  this.executeCharTest('ʎ', ['turned y']);
+  this.executeCharTest('ʐ', ['z with retroflex hook']);
+  this.executeCharTest('ʑ', ['z with curl']);
+  this.executeCharTest('ʕ', ['latin letter pharyngeal voiced fricative']);
+  this.executeCharTest('ʖ', ['latin letter inverted glottal stop']);
+  this.executeCharTest('ʗ', ['latin letter stretched c']);
+  this.executeCharTest('ʘ', ['latin letter bilabial click']);
+  this.executeCharTest('ʚ', ['closed open e']);
+  this.executeCharTest('ʞ', ['turned k']);
+  this.executeCharTest('ʠ', ['q with hook']);
+  this.executeCharTest('ʣ', ['dz digraph']);
+  this.executeCharTest('ʥ', ['dz digraph with curl']);
+  this.executeCharTest('ʦ', ['ts digraph']);
+  this.executeCharTest('ʧ', ['tesh digraph']);
+  this.executeCharTest('ʨ', ['tc digraph with curl']);
+  this.executeCharTest('ʩ', ['feng digraph']);
+  this.executeCharTest('ʪ', ['ls digraph']);
+  this.executeCharTest('ʫ', ['lz digraph']);
+  this.executeCharTest('ʬ', ['latin letter bilabial percussive']);
+  this.executeCharTest('ʭ', ['latin letter bidental percussive']);
+  this.executeCharTest('ʮ', ['turned h with fishhook']);
+  this.executeCharTest('ʯ', ['turned h with fishhook and tail']);
+  this.executeCharTest('ᴂ', ['turned ae']);
+  this.executeCharTest('ᴈ', ['turned open e']);
+  this.executeCharTest('ᴉ', ['turned i']);
+  this.executeCharTest('ᴑ', ['sideways o']);
+  this.executeCharTest('ᴒ', ['sideways open o']);
+  this.executeCharTest('ᴔ', ['turned oe']);
+  this.executeCharTest('ᴖ', ['top half o']);
+  this.executeCharTest('ᴗ', ['bottom half o']);
+  this.executeCharTest('ᴝ', ['sideways u']);
+  this.executeCharTest('ᴞ', ['sideways diaeresized u']);
+  this.executeCharTest('ᴟ', ['sideways turned m']);
+  this.executeCharTest('ᴤ', ['latin letter voiced laryngeal spirant']);
+  this.executeCharTest('ᴥ', ['latin letter ain']);
+  this.executeCharTest('ᵫ', ['ue']);
+  this.executeCharTest('ᵬ', ['b with middle tilde']);
+  this.executeCharTest('ᵭ', ['d with middle tilde']);
+  this.executeCharTest('ᵮ', ['f with middle tilde']);
+  this.executeCharTest('ᵯ', ['m with middle tilde']);
+  this.executeCharTest('ᵰ', ['n with middle tilde']);
+  this.executeCharTest('ᵱ', ['p with middle tilde']);
+  this.executeCharTest('ᵲ', ['r with middle tilde']);
+  this.executeCharTest('ᵳ', ['r with fishhook and middle tilde']);
+  this.executeCharTest('ᵴ', ['s with middle tilde']);
+  this.executeCharTest('ᵵ', ['t with middle tilde']);
+  this.executeCharTest('ᵶ', ['z with middle tilde']);
+  this.executeCharTest('ᵷ', ['turned g']);
+  this.executeCharTest('ᵹ', ['insular g']);
+  this.executeCharTest('ᵺ', ['th with strikethrough']);
+  this.executeCharTest('ᶀ', ['b with palatal hook']);
+  this.executeCharTest('ᶁ', ['d with palatal hook']);
+  this.executeCharTest('ᶂ', ['f with palatal hook']);
+  this.executeCharTest('ᶃ', ['g with palatal hook']);
+  this.executeCharTest('ᶄ', ['k with palatal hook']);
+  this.executeCharTest('ᶅ', ['l with palatal hook']);
+  this.executeCharTest('ᶆ', ['m with palatal hook']);
+  this.executeCharTest('ᶇ', ['n with palatal hook']);
+  this.executeCharTest('ᶈ', ['p with palatal hook']);
+  this.executeCharTest('ᶉ', ['r with palatal hook']);
+  this.executeCharTest('ᶊ', ['s with palatal hook']);
+  this.executeCharTest('ᶋ', ['esh with palatal hook']);
+  this.executeCharTest('ᶌ', ['v with palatal hook']);
+  this.executeCharTest('ᶍ', ['x with palatal hook']);
+  this.executeCharTest('ᶎ', ['z with palatal hook']);
+  this.executeCharTest('ᶏ', ['a with retroflex hook']);
+  this.executeCharTest('ᶐ', ['alpha with retroflex hook']);
+  this.executeCharTest('ᶑ', ['d with hook and tail']);
+  this.executeCharTest('ᶒ', ['e with retroflex hook']);
+  this.executeCharTest('ᶓ', ['open e with retroflex hook']);
+  this.executeCharTest('ᶔ', ['reversed open e with retroflex hook']);
+  this.executeCharTest('ᶕ', ['schwa with retroflex hook']);
+  this.executeCharTest('ᶖ', ['i with retroflex hook']);
+  this.executeCharTest('ᶗ', ['open o with retroflex hook']);
+  this.executeCharTest('ᶘ', ['esh with retroflex hook']);
+  this.executeCharTest('ᶙ', ['u with retroflex hook']);
+  this.executeCharTest('ᶚ', ['ezh with retroflex hook']);
+  this.executeCharTest('ŉ', ['n précédée d\'une apostrophe']);
+  this.executeCharTest('ŋ', ['eng']);
+  this.executeCharTest('à', ['a accent grave']);
+  this.executeCharTest('á', ['a accent aigu']);
+  this.executeCharTest('â', ['a accent circonflexe']);
+  this.executeCharTest('ã', ['a tilde']);
+  this.executeCharTest('ä', ['a tréma']);
+  this.executeCharTest('å', ['a rond en chef']);
+  this.executeCharTest('ç', ['c cédille']);
+  this.executeCharTest('è', ['e accent grave']);
+  this.executeCharTest('é', ['e accent aigu']);
+  this.executeCharTest('ê', ['e accent circonflexe']);
+  this.executeCharTest('ë', ['e tréma']);
+  this.executeCharTest('ì', ['i accent grave']);
+  this.executeCharTest('í', ['i accent aigu']);
+  this.executeCharTest('î', ['i accent circonflexe']);
+  this.executeCharTest('ï', ['i tréma']);
+  this.executeCharTest('ñ', ['n tilde']);
+  this.executeCharTest('ò', ['o accent grave']);
+  this.executeCharTest('ó', ['o accent aigu']);
+  this.executeCharTest('ô', ['o accent circonflexe']);
+  this.executeCharTest('õ', ['o tilde']);
+  this.executeCharTest('ö', ['o tréma']);
+  this.executeCharTest('ù', ['u accent grave']);
+  this.executeCharTest('ú', ['u accent aigu']);
+  this.executeCharTest('û', ['u accent circonflexe']);
+  this.executeCharTest('ü', ['u tréma']);
+  this.executeCharTest('ý', ['y accent aigu']);
+  this.executeCharTest('ÿ', ['y tréma']);
+  this.executeCharTest('ā', ['a macron']);
+  this.executeCharTest('ă', ['a brève']);
+  this.executeCharTest('ą', ['a ogonek']);
+  this.executeCharTest('ć', ['c accent aigu']);
+  this.executeCharTest('ĉ', ['c accent circonflexe']);
+  this.executeCharTest('ċ', ['c point en chef']);
+  this.executeCharTest('č', ['c caron']);
+  this.executeCharTest('ď', ['d caron']);
+  this.executeCharTest('ē', ['e macron']);
+  this.executeCharTest('ĕ', ['e breve']);
+  this.executeCharTest('ė', ['e point en chef']);
+  this.executeCharTest('ę', ['e ogonek']);
+  this.executeCharTest('ě', ['e caron']);
+  this.executeCharTest('ĝ', ['g accent circonflexe']);
+  this.executeCharTest('ğ', ['g brève']);
+  this.executeCharTest('ġ', ['g point en chef']);
+  this.executeCharTest('ģ', ['g cedilla']);
+  this.executeCharTest('ĥ', ['h accent circonflexe']);
+  this.executeCharTest('ĩ', ['i tilde']);
+  this.executeCharTest('ī', ['i macron']);
+  this.executeCharTest('ĭ', ['i breve']);
+  this.executeCharTest('į', ['i ogonek']);
+  this.executeCharTest('ı', ['i sans point']);
+  this.executeCharTest('ĵ', ['j accent circonflexe']);
+  this.executeCharTest('ķ', ['k cédille']);
+  this.executeCharTest('ĺ', ['l accent aigu']);
+  this.executeCharTest('ļ', ['l cédille']);
+  this.executeCharTest('ľ', ['l caron']);
+  this.executeCharTest('ŀ', ['l point médian']);
+  this.executeCharTest('ń', ['n accent aigu']);
+  this.executeCharTest('ņ', ['n cédille']);
+  this.executeCharTest('ň', ['n caron']);
+  this.executeCharTest('ō', ['o macron']);
+  this.executeCharTest('ŏ', ['o breve']);
+  this.executeCharTest('ő', ['o avec double accent aigu']);
+  this.executeCharTest('ŕ', ['r accent aigu']);
+  this.executeCharTest('ŗ', ['r cédille']);
+  this.executeCharTest('ř', ['r caron']);
+  this.executeCharTest('ś', ['s accent aigu']);
+  this.executeCharTest('ŝ', ['s accent circonflexe']);
+  this.executeCharTest('ş', ['s cédille']);
+  this.executeCharTest('š', ['s caron']);
+  this.executeCharTest('ţ', ['t cédille']);
+  this.executeCharTest('ť', ['t caron']);
+  this.executeCharTest('ũ', ['u tilde']);
+  this.executeCharTest('ū', ['u macron']);
+  this.executeCharTest('ŭ', ['u brève']);
+  this.executeCharTest('ů', ['u rond en chef']);
+  this.executeCharTest('ű', ['u avec double accent aigu']);
+  this.executeCharTest('ų', ['u ogonek']);
+  this.executeCharTest('ŵ', ['w accent circonflexe']);
+  this.executeCharTest('ŷ', ['y accent circonflexe']);
+  this.executeCharTest('ź', ['z accent aigu']);
+  this.executeCharTest('ż', ['z point en chef']);
+  this.executeCharTest('ž', ['z caron']);
+  this.executeCharTest('ǎ', ['a caron']);
+  this.executeCharTest('ǐ', ['i caron']);
+  this.executeCharTest('ǒ', ['o caron']);
+  this.executeCharTest('ǔ', ['u caron']);
+  this.executeCharTest('ǧ', ['g caron']);
+  this.executeCharTest('ǩ', ['k caron']);
+  this.executeCharTest('ǫ', ['o ogonek']);
+  this.executeCharTest('ǰ', ['j caron']);
+  this.executeCharTest('ǵ', ['g accent aigu']);
+  this.executeCharTest('ǹ', ['n grave']);
+  this.executeCharTest('ȁ', ['a double grave']);
+  this.executeCharTest('ȃ', ['a inverted breve']);
+  this.executeCharTest('ȅ', ['e double grave']);
+  this.executeCharTest('ȇ', ['e inverted breve']);
+  this.executeCharTest('ȉ', ['i double grave']);
+  this.executeCharTest('ȋ', ['i inverted breve']);
+  this.executeCharTest('ȍ', ['o double grave']);
+  this.executeCharTest('ȏ', ['o inverted breve']);
+  this.executeCharTest('ȑ', ['r double grave']);
+  this.executeCharTest('ȓ', ['r inverted breve']);
+  this.executeCharTest('ȕ', ['u double grave']);
+  this.executeCharTest('ȗ', ['u inverted breve']);
+  this.executeCharTest('ș', ['s comma below']);
+  this.executeCharTest('ț', ['t comma below']);
+  this.executeCharTest('ȟ', ['h caron']);
+  this.executeCharTest('ȧ', ['a overdot']);
+  this.executeCharTest('ȩ', ['e cedilla']);
+  this.executeCharTest('ȯ', ['o overdot']);
+  this.executeCharTest('ȳ', ['y overbar']);
+  this.executeCharTest('ȷ', ['dotless j']);
+  this.executeCharTest('ḁ', ['a à rond souscrit']);
+  this.executeCharTest('ḃ', ['b point en chef']);
+  this.executeCharTest('ḅ', ['b point souscrit']);
+  this.executeCharTest('ḇ', ['b ligne souscrite']);
+  this.executeCharTest('ḋ', ['d point en chef']);
+  this.executeCharTest('ḍ', ['d point souscrit']);
+  this.executeCharTest('ḏ', ['d ligne souscrite']);
+  this.executeCharTest('ḑ', ['d cédille']);
+  this.executeCharTest('ḓ', ['d accent circonflexe souscrit']);
+  this.executeCharTest('ḙ', ['e accent circonflexe souscrit']);
+  this.executeCharTest('ḛ', ['e tilde souscrit']);
+  this.executeCharTest('ḟ', ['f point en chef']);
+  this.executeCharTest('ḡ', ['g macron']);
+  this.executeCharTest('ḣ', ['h point en chef']);
+  this.executeCharTest('ḥ', ['h point souscrit']);
+  this.executeCharTest('ḧ', ['h tréma']);
+  this.executeCharTest('ḩ', ['h cédille']);
+  this.executeCharTest('ḫ', ['h brève souscrit']);
+  this.executeCharTest('ḭ', ['i tilde souscrit']);
+  this.executeCharTest('ḱ', ['k accent aigu']);
+  this.executeCharTest('ḳ', ['k point souscrit']);
+  this.executeCharTest('ḵ', ['k ligne souscrite']);
+  this.executeCharTest('ḷ', ['l point souscrit']);
+  this.executeCharTest('ḻ', ['l ligne souscrite']);
+  this.executeCharTest('ḽ', ['l accent circonflexe souscrit']);
+  this.executeCharTest('ḿ', ['m accent aigu']);
+  this.executeCharTest('ṁ', ['m point en chef']);
+  this.executeCharTest('ṃ', ['m point souscrit']);
+  this.executeCharTest('ṅ', ['n point en chef']);
+  this.executeCharTest('ṇ', ['n point souscrit']);
+  this.executeCharTest('ṉ', ['n ligne souscrite']);
+  this.executeCharTest('ṋ', ['n accent circonflexe souscrit']);
+  this.executeCharTest('ṕ', ['p accent aigu']);
+  this.executeCharTest('ṗ', ['p point en chef']);
+  this.executeCharTest('ṙ', ['r point en chef']);
+  this.executeCharTest('ṛ', ['r point souscrit']);
+  this.executeCharTest('ṟ', ['r ligne souscrite']);
+  this.executeCharTest('ṡ', ['s point en chef']);
+  this.executeCharTest('ṣ', ['s point souscrit']);
+  this.executeCharTest('ṫ', ['t point en chef']);
+  this.executeCharTest('ṭ', ['t point souscrit']);
+  this.executeCharTest('ṯ', ['t ligne souscrite']);
+  this.executeCharTest('ṱ', ['t accent circonflexe souscrit']);
+  this.executeCharTest('ṳ', ['u tréma souscrit']);
+  this.executeCharTest('ṵ', ['u tilde souscrit']);
+  this.executeCharTest('ṷ', ['u accent circonflexe souscrit']);
+  this.executeCharTest('ṽ', ['v tilde']);
+  this.executeCharTest('ṿ', ['v point souscrit']);
+  this.executeCharTest('ẁ', ['w accent grave']);
+  this.executeCharTest('ẃ', ['w accent aigu']);
+  this.executeCharTest('ẅ', ['w tréma']);
+  this.executeCharTest('ẇ', ['w point en chef']);
+  this.executeCharTest('ẉ', ['w point souscrit']);
+  this.executeCharTest('ẋ', ['x point en chef']);
+  this.executeCharTest('ẍ', ['x tréma']);
+  this.executeCharTest('ẏ', ['y point en chef']);
+  this.executeCharTest('ẑ', ['z accent circonflexe']);
+  this.executeCharTest('ẓ', ['z point souscrit']);
+  this.executeCharTest('ẕ', ['z ligne souscrite']);
+  this.executeCharTest('ẖ', ['h ligne souscrite']);
+  this.executeCharTest('ẗ', ['t tréma']);
+  this.executeCharTest('ẘ', ['w rond en chef']);
+  this.executeCharTest('ẙ', ['y rond en chef']);
+  this.executeCharTest('ẚ', ['a demi-rond à droite']);
+  this.executeCharTest('ạ', ['a point souscrit']);
+  this.executeCharTest('ả', ['a crochet en chef']);
+  this.executeCharTest('ẹ', ['e point souscrit']);
+  this.executeCharTest('ẻ', ['e crochet en chef']);
+  this.executeCharTest('ẽ', ['e tilde']);
+  this.executeCharTest('ỉ', ['i crochet en chef']);
+  this.executeCharTest('ị', ['i point souscrit']);
+  this.executeCharTest('ọ', ['o point souscrit']);
+  this.executeCharTest('ỏ', ['o crochet en chef']);
+  this.executeCharTest('ụ', ['u point souscrit']);
+  this.executeCharTest('ủ', ['u crochet en chef']);
+  this.executeCharTest('ỳ', ['y accent grave']);
+  this.executeCharTest('ỵ', ['y point souscrit']);
+  this.executeCharTest('ỷ', ['y crochet en chef']);
+  this.executeCharTest('ỹ', ['y tilde']);
+  this.executeCharTest('ͣ', ['combining a']);
+  this.executeCharTest('ͤ', ['combining e']);
+  this.executeCharTest('ͥ', ['combining i']);
+  this.executeCharTest('ͦ', ['combining o']);
+  this.executeCharTest('ͧ', ['combining u']);
+  this.executeCharTest('ͨ', ['combining c']);
+  this.executeCharTest('ͩ', ['combining d']);
+  this.executeCharTest('ͪ', ['combining h']);
+  this.executeCharTest('ͫ', ['combining m']);
+  this.executeCharTest('ͬ', ['combining r']);
+  this.executeCharTest('ͭ', ['combining t']);
+  this.executeCharTest('ͮ', ['combining v']);
+  this.executeCharTest('ͯ', ['combining x']);
+  this.executeCharTest('ᵢ', ['subscript i']);
+  this.executeCharTest('ᵣ', ['subscript r']);
+  this.executeCharTest('ᵤ', ['subscript u']);
+  this.executeCharTest('ᵥ', ['subscript v']);
+  this.executeCharTest('᷊', ['combining r below']);
+  this.executeCharTest('ᷓ', ['combining flattened open a above']);
+  this.executeCharTest('ᷔ', ['combining ae']);
+  this.executeCharTest('ᷕ', ['combining ao']);
+  this.executeCharTest('ᷖ', ['combining av']);
+  this.executeCharTest('ᷗ', ['combining c cedilla']);
+  this.executeCharTest('ᷘ', ['combining insular d']);
+  this.executeCharTest('ᷙ', ['combining eth']);
+  this.executeCharTest('ᷚ', ['combining g']);
+  this.executeCharTest('ᷛ', ['combining small cap g']);
+  this.executeCharTest('ᷜ', ['combining k']);
+  this.executeCharTest('ᷝ', ['combining l']);
+  this.executeCharTest('ᷞ', ['combining small cap l']);
+  this.executeCharTest('ᷟ', ['combining small cap m']);
+  this.executeCharTest('ᷠ', ['combining n']);
+  this.executeCharTest('ᷡ', ['combining small cap n']);
+  this.executeCharTest('ᷢ', ['combining small cap r']);
+  this.executeCharTest('ᷣ', ['combining r rotunda']);
+  this.executeCharTest('ᷤ', ['combining s']);
+  this.executeCharTest('ᷥ', ['combining long s']);
+  this.executeCharTest('ᷦ', ['combining z']);
+  this.executeCharTest('ⁱ', ['superscript i']);
+  this.executeCharTest('ⁿ', ['superscript n']);
+  this.executeCharTest('ₐ', ['subscript a']);
+  this.executeCharTest('ₑ', ['subscript e']);
+  this.executeCharTest('ₒ', ['subscript o']);
+  this.executeCharTest('ₓ', ['subscript x']);
+  this.executeCharTest('ₔ', ['subscript schwa']);
+  this.executeCharTest('ₕ', ['subscript h']);
+  this.executeCharTest('ₖ', ['subscript k']);
+  this.executeCharTest('ₗ', ['subscript l']);
+  this.executeCharTest('ₘ', ['subscript m']);
+  this.executeCharTest('ₙ', ['subscript n']);
+  this.executeCharTest('ₚ', ['subscript p']);
+  this.executeCharTest('ₛ', ['subscript s']);
+  this.executeCharTest('ₜ', ['subscript t']);
+  this.executeCharTest('⒜', ['parenthesized a']);
+  this.executeCharTest('⒝', ['parenthesized b']);
+  this.executeCharTest('⒞', ['parenthesized c']);
+  this.executeCharTest('⒟', ['parenthesized d']);
+  this.executeCharTest('⒠', ['parenthesized e']);
+  this.executeCharTest('⒡', ['parenthesized f']);
+  this.executeCharTest('⒢', ['parenthesized g']);
+  this.executeCharTest('⒣', ['parenthesized h']);
+  this.executeCharTest('⒤', ['parenthesized i']);
+  this.executeCharTest('⒥', ['parenthesized j']);
+  this.executeCharTest('⒦', ['parenthesized k']);
+  this.executeCharTest('⒧', ['parenthesized l']);
+  this.executeCharTest('⒨', ['parenthesized m']);
+  this.executeCharTest('⒩', ['parenthesized n']);
+  this.executeCharTest('⒪', ['parenthesized o']);
+  this.executeCharTest('⒫', ['parenthesized p']);
+  this.executeCharTest('⒬', ['parenthesized q']);
+  this.executeCharTest('⒭', ['parenthesized r']);
+  this.executeCharTest('⒮', ['parenthesized s']);
+  this.executeCharTest('⒯', ['parenthesized t']);
+  this.executeCharTest('⒰', ['parenthesized u']);
+  this.executeCharTest('⒱', ['parenthesized v']);
+  this.executeCharTest('⒲', ['parenthesized w']);
+  this.executeCharTest('⒳', ['parenthesized x']);
+  this.executeCharTest('⒴', ['parenthesized y']);
+  this.executeCharTest('⒵', ['parenthesized z']);
+  this.executeCharTest('Ⓐ', ['circled cap a']);
+  this.executeCharTest('Ⓑ', ['circled cap b']);
+  this.executeCharTest('Ⓒ', ['circled cap c']);
+  this.executeCharTest('Ⓓ', ['circled cap d']);
+  this.executeCharTest('Ⓔ', ['circled cap e']);
+  this.executeCharTest('Ⓕ', ['circled cap f']);
+  this.executeCharTest('Ⓖ', ['circled cap g']);
+  this.executeCharTest('Ⓗ', ['circled cap h']);
+  this.executeCharTest('Ⓘ', ['circled cap i']);
+  this.executeCharTest('Ⓙ', ['circled cap j']);
+  this.executeCharTest('Ⓚ', ['circled cap k']);
+  this.executeCharTest('Ⓛ', ['circled cap l']);
+  this.executeCharTest('Ⓜ', ['circled cap m']);
+  this.executeCharTest('Ⓝ', ['circled cap n']);
+  this.executeCharTest('Ⓞ', ['circled cap o']);
+  this.executeCharTest('Ⓟ', ['circled cap p']);
+  this.executeCharTest('Ⓠ', ['circled cap q']);
+  this.executeCharTest('Ⓡ', ['circled cap r']);
+  this.executeCharTest('Ⓢ', ['S majuscule cerclée']);
+  this.executeCharTest('Ⓣ', ['circled cap t']);
+  this.executeCharTest('Ⓤ', ['circled cap u']);
+  this.executeCharTest('Ⓥ', ['circled cap v']);
+  this.executeCharTest('Ⓦ', ['circled cap w']);
+  this.executeCharTest('Ⓧ', ['circled cap x']);
+  this.executeCharTest('Ⓨ', ['circled cap y']);
+  this.executeCharTest('Ⓩ', ['circled cap z']);
+  this.executeCharTest('ⓐ', ['circled a']);
+  this.executeCharTest('ⓑ', ['circled b']);
+  this.executeCharTest('ⓒ', ['circled c']);
+  this.executeCharTest('ⓓ', ['circled d']);
+  this.executeCharTest('ⓔ', ['circled e']);
+  this.executeCharTest('ⓕ', ['circled f']);
+  this.executeCharTest('ⓖ', ['circled g']);
+  this.executeCharTest('ⓗ', ['circled h']);
+  this.executeCharTest('ⓘ', ['circled i']);
+  this.executeCharTest('ⓙ', ['circled j']);
+  this.executeCharTest('ⓚ', ['circled k']);
+  this.executeCharTest('ⓛ', ['circled l']);
+  this.executeCharTest('ⓜ', ['circled m']);
+  this.executeCharTest('ⓝ', ['circled n']);
+  this.executeCharTest('ⓞ', ['circled o']);
+  this.executeCharTest('ⓟ', ['circled p']);
+  this.executeCharTest('ⓠ', ['circled q']);
+  this.executeCharTest('ⓡ', ['circled r']);
+  this.executeCharTest('ⓢ', ['circled s']);
+  this.executeCharTest('ⓣ', ['circled t']);
+  this.executeCharTest('ⓤ', ['circled u']);
+  this.executeCharTest('ⓥ', ['circled v']);
+  this.executeCharTest('ⓦ', ['circled w']);
+  this.executeCharTest('ⓧ', ['circled x']);
+  this.executeCharTest('ⓨ', ['circled y']);
+  this.executeCharTest('ⓩ', ['circled z']);
+  this.executeCharTest('ⱼ', ['subscript j']);
+  this.executeCharTest('🄐', ['parenthesized cap a']);
+  this.executeCharTest('🄑', ['parenthesized cap b']);
+  this.executeCharTest('🄒', ['parenthesized cap c']);
+  this.executeCharTest('🄓', ['parenthesized cap d']);
+  this.executeCharTest('🄔', ['parenthesized cap e']);
+  this.executeCharTest('🄕', ['parenthesized cap f']);
+  this.executeCharTest('🄖', ['parenthesized cap g']);
+  this.executeCharTest('🄗', ['parenthesized cap h']);
+  this.executeCharTest('🄘', ['parenthesized cap i']);
+  this.executeCharTest('🄙', ['parenthesized cap j']);
+  this.executeCharTest('🄚', ['parenthesized cap k']);
+  this.executeCharTest('🄛', ['parenthesized cap l']);
+  this.executeCharTest('🄜', ['parenthesized cap m']);
+  this.executeCharTest('🄝', ['parenthesized cap n']);
+  this.executeCharTest('🄞', ['parenthesized cap o']);
+  this.executeCharTest('🄟', ['parenthesized cap p']);
+  this.executeCharTest('🄠', ['parenthesized cap q']);
+  this.executeCharTest('🄡', ['parenthesized cap r']);
+  this.executeCharTest('🄢', ['parenthesized cap s']);
+  this.executeCharTest('🄣', ['parenthesized cap t']);
+  this.executeCharTest('🄤', ['parenthesized cap u']);
+  this.executeCharTest('🄥', ['parenthesized cap v']);
+  this.executeCharTest('🄦', ['parenthesized cap w']);
+  this.executeCharTest('🄧', ['parenthesized cap x']);
+  this.executeCharTest('🄨', ['parenthesized cap y']);
+  this.executeCharTest('🄩', ['parenthesized cap z']);
+  this.executeCharTest('🄪', ['tortoise shell bracketed cap s']);
+  this.executeCharTest('🄫', ['circled italic cap c']);
+  this.executeCharTest('🄬', ['circled italic cap r']);
+  this.executeCharTest('🄰', ['squared cap a']);
+  this.executeCharTest('🄱', ['squared cap b']);
+  this.executeCharTest('🄲', ['squared cap c']);
+  this.executeCharTest('🄳', ['squared cap d']);
+  this.executeCharTest('🄴', ['squared cap e']);
+  this.executeCharTest('🄵', ['squared cap f']);
+  this.executeCharTest('🄶', ['squared cap g']);
+  this.executeCharTest('🄷', ['squared cap h']);
+  this.executeCharTest('🄸', ['squared cap i']);
+  this.executeCharTest('🄹', ['squared cap j']);
+  this.executeCharTest('🄺', ['squared cap k']);
+  this.executeCharTest('🄻', ['squared cap l']);
+  this.executeCharTest('🄼', ['squared cap m']);
+  this.executeCharTest('🄽', ['squared cap n']);
+  this.executeCharTest('🄾', ['squared cap o']);
+  this.executeCharTest('🄿', ['squared cap p']);
+  this.executeCharTest('🅀', ['squared cap q']);
+  this.executeCharTest('🅁', ['squared cap r']);
+  this.executeCharTest('🅂', ['squared cap s']);
+  this.executeCharTest('🅃', ['squared cap t']);
+  this.executeCharTest('🅄', ['squared cap u']);
+  this.executeCharTest('🅅', ['squared cap v']);
+  this.executeCharTest('🅆', ['squared cap w']);
+  this.executeCharTest('🅇', ['squared cap x']);
+  this.executeCharTest('🅈', ['squared cap y']);
+  this.executeCharTest('🅉', ['squared cap z']);
+  this.executeCharTest('🅐', ['negative circled cap a']);
+  this.executeCharTest('🅑', ['negative circled cap b']);
+  this.executeCharTest('🅒', ['negative circled cap c']);
+  this.executeCharTest('🅓', ['negative circled cap d']);
+  this.executeCharTest('🅔', ['negative circled cap e']);
+  this.executeCharTest('🅕', ['negative circled cap f']);
+  this.executeCharTest('🅖', ['negative circled cap g']);
+  this.executeCharTest('🅗', ['negative circled cap h']);
+  this.executeCharTest('🅘', ['negative circled cap i']);
+  this.executeCharTest('🅙', ['negative circled cap j']);
+  this.executeCharTest('🅚', ['negative circled cap k']);
+  this.executeCharTest('🅛', ['negative circled cap l']);
+  this.executeCharTest('🅜', ['negative circled cap m']);
+  this.executeCharTest('🅝', ['negative circled cap n']);
+  this.executeCharTest('🅞', ['negative circled cap o']);
+  this.executeCharTest('🅟', ['negative circled cap p']);
+  this.executeCharTest('🅠', ['negative circled cap q']);
+  this.executeCharTest('🅡', ['negative circled cap r']);
+  this.executeCharTest('🅢', ['negative circled cap s']);
+  this.executeCharTest('🅣', ['negative circled cap t']);
+  this.executeCharTest('🅤', ['negative circled cap u']);
+  this.executeCharTest('🅥', ['negative circled cap v']);
+  this.executeCharTest('🅦', ['negative circled cap w']);
+  this.executeCharTest('🅧', ['negative circled cap x']);
+  this.executeCharTest('🅨', ['negative circled cap y']);
+  this.executeCharTest('🅩', ['negative circled cap z']);
+  this.executeCharTest('🅰', ['negative squared cap a']);
+  this.executeCharTest('🅱', ['negative squared cap b']);
+  this.executeCharTest('🅲', ['negative squared cap c']);
+  this.executeCharTest('🅳', ['negative squared cap d']);
+  this.executeCharTest('🅴', ['negative squared cap e']);
+  this.executeCharTest('🅵', ['negative squared cap f']);
+  this.executeCharTest('🅶', ['negative squared cap g']);
+  this.executeCharTest('🅷', ['negative squared cap h']);
+  this.executeCharTest('🅸', ['negative squared cap i']);
+  this.executeCharTest('🅹', ['negative squared cap j']);
+  this.executeCharTest('🅺', ['negative squared cap k']);
+  this.executeCharTest('🅻', ['negative squared cap l']);
+  this.executeCharTest('🅼', ['negative squared cap m']);
+  this.executeCharTest('🅽', ['negative squared cap n']);
+  this.executeCharTest('🅾', ['negative squared cap o']);
+  this.executeCharTest('🅿', ['negative squared cap p']);
+  this.executeCharTest('🆀', ['negative squared cap q']);
+  this.executeCharTest('🆁', ['negative squared cap r']);
+  this.executeCharTest('🆂', ['negative squared cap s']);
+  this.executeCharTest('🆃', ['negative squared cap t']);
+  this.executeCharTest('🆄', ['negative squared cap u']);
+  this.executeCharTest('🆅', ['negative squared cap v']);
+  this.executeCharTest('🆆', ['negative squared cap w']);
+  this.executeCharTest('🆇', ['negative squared cap x']);
+  this.executeCharTest('🆈', ['negative squared cap y']);
+  this.executeCharTest('🆉', ['negative squared cap z']);
+  this.executeCharTest('🆊', ['crossed negative squared cap p']);
+  this.executeCharTest('Ǖ', ['cap u double overdot overbar']);
+  this.executeCharTest('Ǘ', ['cap u double overdot acute']);
+  this.executeCharTest('Ǚ', ['cap u double overdot caron']);
+  this.executeCharTest('Ǜ', ['cap u double overdot grave']);
+  this.executeCharTest('Ǟ', ['cap a double overdot overbar']);
+  this.executeCharTest('Ǡ', ['cap a overdot overbar']);
+  this.executeCharTest('Ǭ', ['cap o ogonek overbar']);
+  this.executeCharTest('Ǻ', ['cap a ring acute']);
+  this.executeCharTest('Ȫ', ['cap o double overdot overbar']);
+  this.executeCharTest('Ȭ', ['cap o tilde overbar']);
+  this.executeCharTest('Ȱ', ['cap o overdot overbar']);
+  this.executeCharTest('Ḉ', ['C cédille et accent aigu majuscule']);
+  this.executeCharTest('Ḕ', ['E macron et accent grave majuscule']);
+  this.executeCharTest('Ḗ', ['E macron et accent aigu majuscule']);
+  this.executeCharTest('Ḝ', ['E cédille et brève majuscule']);
+  this.executeCharTest('Ḯ', ['I tréma et accent aigu majuscule']);
+  this.executeCharTest('Ḹ', ['L point souscrit et macron majuscule']);
+  this.executeCharTest('Ṍ', ['O tilde et accent aigu majuscule']);
+  this.executeCharTest('Ṏ', ['O tilde et tréma majuscule']);
+  this.executeCharTest('Ṑ', ['O macron et accent grave majuscule']);
+  this.executeCharTest('Ṓ', ['O macron et accent aigu majuscule']);
+  this.executeCharTest('Ṝ', ['R point souscrit et macron majuscule']);
+  this.executeCharTest('Ṥ', ['S accent aigu et point en chef majuscule']);
+  this.executeCharTest('Ṧ', ['S caron et point en chef majuscule']);
+  this.executeCharTest('Ṩ', ['S point souscrit et point en chef majuscule']);
+  this.executeCharTest('Ṹ', ['U tilde et accent aigu majuscule']);
+  this.executeCharTest('Ṻ', ['U macron et tréma majuscule']);
+  this.executeCharTest('Ấ', ['A accent circonflexe et accent aigu majuscule']);
+  this.executeCharTest('Ầ', ['A accent circonflexe et accent grave majuscule']);
+  this.executeCharTest('Ẩ', ['A accent circonflexe et crochet en chef majuscule']);
+  this.executeCharTest('Ẫ', ['A accent circonflexe et tilde majuscule']);
+  this.executeCharTest('Ậ', ['A accent circonflexe et point souscrit majuscule']);
+  this.executeCharTest('Ắ', ['A brève et accent aigu majuscule']);
+  this.executeCharTest('Ằ', ['A brève et accent grave majuscule']);
+  this.executeCharTest('Ẳ', ['A brève et crochet en chef majuscule']);
+  this.executeCharTest('Ẵ', ['A brève et tilde majuscule']);
+  this.executeCharTest('Ặ', ['A brève et point souscrit majuscule']);
+  this.executeCharTest('Ế', ['E accent circonflexe et accent aigu majuscule']);
+  this.executeCharTest('Ề', ['E accent circonflexe et accent grave majuscule']);
+  this.executeCharTest('Ể', ['E accent circonflexe et crochet en chef majuscule']);
+  this.executeCharTest('Ễ', ['E accent circonflexe et tilde majuscule']);
+  this.executeCharTest('Ệ', ['E accent circonflexe et point souscrit majuscule']);
+  this.executeCharTest('Ố', ['O accent circonflexe et accent aigu majuscule']);
+  this.executeCharTest('Ồ', ['O accent circonflexe et accent grave majuscule']);
+  this.executeCharTest('Ổ', ['O accent circonflexe et crochet en chef majuscule']);
+  this.executeCharTest('Ỗ', ['O accent circonflexe et tilde majuscule']);
+  this.executeCharTest('Ộ', ['O accent circonflexe et point souscrit majuscule']);
+  this.executeCharTest('Ớ', ['O cornu accent aigu majuscule']);
+  this.executeCharTest('Ờ', ['O cornu accent grave majuscule']);
+  this.executeCharTest('Ở', ['O cornu crochet en chef majuscule']);
+  this.executeCharTest('Ỡ', ['O cornu tilde majuscule']);
+  this.executeCharTest('Ợ', ['O cornu point souscrit majuscule']);
+  this.executeCharTest('Ứ', ['U cornu accent aigu majuscule']);
+  this.executeCharTest('Ừ', ['U cornu accent grave majuscule']);
+  this.executeCharTest('Ử', ['U cornu crochet en chef majuscule']);
+  this.executeCharTest('Ữ', ['U cornu tilde majuscule']);
+  this.executeCharTest('Ự', ['U cornu point souscrit majuscule']);
+  this.executeCharTest('A', ['A majuscule']);
+  this.executeCharTest('B', ['B majuscule']);
+  this.executeCharTest('C', ['C majuscule']);
+  this.executeCharTest('D', ['D majuscule']);
+  this.executeCharTest('E', ['E majuscule']);
+  this.executeCharTest('F', ['F majuscule']);
+  this.executeCharTest('G', ['G majuscule']);
+  this.executeCharTest('H', ['H majuscule']);
+  this.executeCharTest('I', ['I majuscule']);
+  this.executeCharTest('J', ['J majuscule']);
+  this.executeCharTest('K', ['K majuscule']);
+  this.executeCharTest('L', ['L majuscule']);
+  this.executeCharTest('M', ['M majuscule']);
+  this.executeCharTest('N', ['N majuscule']);
+  this.executeCharTest('O', ['O majuscule']);
+  this.executeCharTest('P', ['P majuscule']);
+  this.executeCharTest('Q', ['Q majuscule']);
+  this.executeCharTest('R', ['R majuscule']);
+  this.executeCharTest('S', ['S majuscule']);
+  this.executeCharTest('T', ['T majuscule']);
+  this.executeCharTest('U', ['U majuscule']);
+  this.executeCharTest('V', ['V majuscule']);
+  this.executeCharTest('W', ['W majuscule']);
+  this.executeCharTest('X', ['X majuscule']);
+  this.executeCharTest('Y', ['Y majuscule']);
+  this.executeCharTest('Z', ['Z majuscule']);
+  this.executeCharTest('Ａ', ['cap a']);
+  this.executeCharTest('Ｂ', ['cap b']);
+  this.executeCharTest('Ｃ', ['cap c']);
+  this.executeCharTest('Ｄ', ['cap d']);
+  this.executeCharTest('Ｅ', ['cap e']);
+  this.executeCharTest('Ｆ', ['cap f']);
+  this.executeCharTest('Ｇ', ['cap g']);
+  this.executeCharTest('Ｈ', ['cap h']);
+  this.executeCharTest('Ｉ', ['cap i']);
+  this.executeCharTest('Ｊ', ['cap j']);
+  this.executeCharTest('Ｋ', ['cap k']);
+  this.executeCharTest('Ｌ', ['cap l']);
+  this.executeCharTest('Ｍ', ['cap m']);
+  this.executeCharTest('Ｎ', ['cap n']);
+  this.executeCharTest('Ｏ', ['cap o']);
+  this.executeCharTest('Ｐ', ['cap p']);
+  this.executeCharTest('Ｑ', ['cap q']);
+  this.executeCharTest('Ｒ', ['cap r']);
+  this.executeCharTest('Ｓ', ['cap s']);
+  this.executeCharTest('Ｔ', ['cap t']);
+  this.executeCharTest('Ｕ', ['cap u']);
+  this.executeCharTest('Ｖ', ['cap v']);
+  this.executeCharTest('Ｗ', ['cap w']);
+  this.executeCharTest('Ｘ', ['cap x']);
+  this.executeCharTest('Ｙ', ['cap y']);
+  this.executeCharTest('Ｚ', ['cap z']);
+  this.executeCharTest('À', ['A accent grave majuscule']);
+  this.executeCharTest('Á', ['A accent aigu majuscule']);
+  this.executeCharTest('Â', ['A accent circonflexe majuscule']);
+  this.executeCharTest('Ã', ['A tilde majuscule']);
+  this.executeCharTest('Ä', ['A tréma majuscule']);
+  this.executeCharTest('Å', ['angstrom']);
+  this.executeCharTest('Ç', ['C cédille majuscule']);
+  this.executeCharTest('È', ['E accent grave majuscule']);
+  this.executeCharTest('É', ['E accent aigu majuscule']);
+  this.executeCharTest('Ê', ['E accent circonflexe majuscule']);
+  this.executeCharTest('Ë', ['E tréma majuscule']);
+  this.executeCharTest('Ì', ['I accent grave majuscule']);
+  this.executeCharTest('Í', ['I accent aigu majuscule']);
+  this.executeCharTest('Î', ['I accent circonflexe majuscule']);
+  this.executeCharTest('Ï', ['I tréma majuscule']);
+  this.executeCharTest('Ñ', ['N tilde majuscule']);
+  this.executeCharTest('Ò', ['O accent grave majuscule']);
+  this.executeCharTest('Ó', ['O accent aigu majuscule']);
+  this.executeCharTest('Ô', ['O accent circonflexe majuscule']);
+  this.executeCharTest('Õ', ['O tilde majuscule']);
+  this.executeCharTest('Ö', ['O tréma majuscule']);
+  this.executeCharTest('Ù', ['U accent grave majuscule']);
+  this.executeCharTest('Ú', ['U accent aigu majuscule']);
+  this.executeCharTest('Û', ['U accent circonflexe majuscule']);
+  this.executeCharTest('Ü', ['U tréma majuscule']);
+  this.executeCharTest('Ý', ['Y accent aigu majuscule']);
+  this.executeCharTest('Ā', ['A macron majuscule']);
+  this.executeCharTest('Ă', ['A brève majuscule']);
+  this.executeCharTest('Ą', ['A ogonek majuscule']);
+  this.executeCharTest('Ć', ['C accent aigu majuscule']);
+  this.executeCharTest('Ĉ', ['C accent circonflexe majuscule']);
+  this.executeCharTest('Ċ', ['C point en chef majuscule']);
+  this.executeCharTest('Č', ['C caron majuscule']);
+  this.executeCharTest('Ď', ['D caron majuscule']);
+  this.executeCharTest('Ē', ['E macron majuscule']);
+  this.executeCharTest('Ĕ', ['cap e breve']);
+  this.executeCharTest('Ė', ['E point en chef majuscule']);
+  this.executeCharTest('Ę', ['E ogonek majuscule']);
+  this.executeCharTest('Ě', ['E caron majuscule']);
+  this.executeCharTest('Ĝ', ['G accent circonflexe majuscule']);
+  this.executeCharTest('Ğ', ['G brève majuscule']);
+  this.executeCharTest('Ġ', ['G point en chef majuscule']);
+  this.executeCharTest('Ģ', ['G cédille majuscule']);
+  this.executeCharTest('Ĥ', ['H accent circonflexe majuscule']);
+  this.executeCharTest('Ĩ', ['I tilde majuscule']);
+  this.executeCharTest('Ī', ['I macron majuscule']);
+  this.executeCharTest('Ĭ', ['cap i breve']);
+  this.executeCharTest('Į', ['I ogonek majuscule']);
+  this.executeCharTest('İ', ['I point en chef majuscule']);
+  this.executeCharTest('Ĵ', ['J accent circonflexe majuscule']);
+  this.executeCharTest('Ķ', ['K cédille majuscule']);
+  this.executeCharTest('Ĺ', ['L accent aigu majuscule']);
+  this.executeCharTest('Ļ', ['L cédille majuscule']);
+  this.executeCharTest('Ľ', ['L caron majuscule']);
+  this.executeCharTest('Ŀ', ['L point médian majuscule']);
+  this.executeCharTest('Ń', ['N accent aigu majuscule']);
+  this.executeCharTest('Ņ', ['N cédille majuscule']);
+  this.executeCharTest('Ň', ['N caron majuscule']);
+  this.executeCharTest('Ō', ['O macron majuscule']);
+  this.executeCharTest('Ŏ', ['cap o breve']);
+  this.executeCharTest('Ő', ['O avec double accent aigu majuscule']);
+  this.executeCharTest('Ŕ', ['R accent aigu majuscule']);
+  this.executeCharTest('Ŗ', ['R cédille majuscule']);
+  this.executeCharTest('Ř', ['R caron majuscule']);
+  this.executeCharTest('Ś', ['S accent aigu majuscule']);
+  this.executeCharTest('Ŝ', ['S accent circonflexe majuscule']);
+  this.executeCharTest('Ş', ['S cédille majuscule']);
+  this.executeCharTest('Š', ['S caron majuscule']);
+  this.executeCharTest('Ţ', ['T cédille majuscule']);
+  this.executeCharTest('Ť', ['T caron majuscule']);
+  this.executeCharTest('Ũ', ['U tilde majuscule']);
+  this.executeCharTest('Ū', ['U macron majuscule']);
+  this.executeCharTest('Ŭ', ['U brève majuscule']);
+  this.executeCharTest('Ů', ['U rond en chef majuscule']);
+  this.executeCharTest('Ű', ['U avec double accent aigu majuscule']);
+  this.executeCharTest('Ų', ['U ogonek majuscule']);
+  this.executeCharTest('Ŵ', ['W accent circonflexe majuscule']);
+  this.executeCharTest('Ŷ', ['Y accent circonflexe majuscule']);
+  this.executeCharTest('Ÿ', ['Y tréma majuscule']);
+  this.executeCharTest('Ź', ['Z accent aigu majuscule']);
+  this.executeCharTest('Ż', ['Z point en chef majuscule']);
+  this.executeCharTest('Ž', ['Z caron majuscule']);
+  this.executeCharTest('Ǎ', ['cap a caron']);
+  this.executeCharTest('Ǐ', ['cap i caron']);
+  this.executeCharTest('Ǒ', ['cap o caron']);
+  this.executeCharTest('Ǔ', ['cap u caron']);
+  this.executeCharTest('Ǧ', ['cap g caron']);
+  this.executeCharTest('Ǩ', ['cap k caron']);
+  this.executeCharTest('Ǫ', ['cap o ogonek']);
+  this.executeCharTest('Ǵ', ['cap g acute']);
+  this.executeCharTest('Ǹ', ['cap n grave']);
+  this.executeCharTest('Ȁ', ['cap a double grave']);
+  this.executeCharTest('Ȃ', ['cap a inverted breve']);
+  this.executeCharTest('Ȅ', ['cap e double grave']);
+  this.executeCharTest('Ȇ', ['cap e inverted breve']);
+  this.executeCharTest('Ȉ', ['cap i double grave']);
+  this.executeCharTest('Ȋ', ['cap i inverted breve']);
+  this.executeCharTest('Ȍ', ['cap o double grave']);
+  this.executeCharTest('Ȏ', ['cap o inverted breve']);
+  this.executeCharTest('Ȑ', ['cap r double grave']);
+  this.executeCharTest('Ȓ', ['cap r inverted breve']);
+  this.executeCharTest('Ȕ', ['cap u double grave']);
+  this.executeCharTest('Ȗ', ['cap u inverted breve']);
+  this.executeCharTest('Ș', ['cap s comma below']);
+  this.executeCharTest('Ț', ['cap t comma below']);
+  this.executeCharTest('Ȟ', ['cap h caron']);
+  this.executeCharTest('Ȧ', ['cap a overdot']);
+  this.executeCharTest('Ȩ', ['cap e cedilla']);
+  this.executeCharTest('Ȯ', ['cap o overdot']);
+  this.executeCharTest('Ȳ', ['cap y overbar']);
+  this.executeCharTest('Ḁ', ['A à rond souscrit majuscule']);
+  this.executeCharTest('Ḃ', ['B point en chef majuscule']);
+  this.executeCharTest('Ḅ', ['B point souscrit majuscule']);
+  this.executeCharTest('Ḇ', ['B ligne souscrite majuscule']);
+  this.executeCharTest('Ḋ', ['D point en chef majuscule']);
+  this.executeCharTest('Ḍ', ['D point souscrit majuscule']);
+  this.executeCharTest('Ḏ', ['D ligne souscrite majuscule']);
+  this.executeCharTest('Ḑ', ['D cédille majuscule']);
+  this.executeCharTest('Ḓ', ['D accent circonflexe souscrit majuscule']);
+  this.executeCharTest('Ḙ', ['E accent circonflexe souscrit majuscule']);
+  this.executeCharTest('Ḛ', ['E tilde souscrit majuscule']);
+  this.executeCharTest('Ḟ', ['F point en chef majuscule']);
+  this.executeCharTest('Ḡ', ['G macron majuscule']);
+  this.executeCharTest('Ḣ', ['H point en chef majuscule']);
+  this.executeCharTest('Ḥ', ['H point souscrit majuscule']);
+  this.executeCharTest('Ḧ', ['H tréma majuscule']);
+  this.executeCharTest('Ḩ', ['H cédille majuscule']);
+  this.executeCharTest('Ḫ', ['H brève souscrit majuscule']);
+  this.executeCharTest('Ḭ', ['I tilde souscrit majuscule']);
+  this.executeCharTest('Ḱ', ['K accent aigu majuscule']);
+  this.executeCharTest('Ḳ', ['K point souscrit majuscule']);
+  this.executeCharTest('Ḵ', ['K ligne souscrite majuscule']);
+  this.executeCharTest('Ḷ', ['L point souscrit majuscule']);
+  this.executeCharTest('Ḻ', ['L ligne souscrite majuscule']);
+  this.executeCharTest('Ḽ', ['L accent circonflexe souscrit majuscule']);
+  this.executeCharTest('Ḿ', ['M accent aigu majuscule']);
+  this.executeCharTest('Ṁ', ['M point en chef majuscule']);
+  this.executeCharTest('Ṃ', ['M point souscrit majuscule']);
+  this.executeCharTest('Ṅ', ['N point en chef majuscule']);
+  this.executeCharTest('Ṇ', ['N point souscrit majuscule']);
+  this.executeCharTest('Ṉ', ['N ligne souscrite majuscule']);
+  this.executeCharTest('Ṋ', ['N accent circonflexe souscrit majuscule']);
+  this.executeCharTest('Ṕ', ['P accent aigu majuscule']);
+  this.executeCharTest('Ṗ', ['P point en chef majuscule']);
+  this.executeCharTest('Ṙ', ['R point en chef majuscule']);
+  this.executeCharTest('Ṛ', ['R point souscrit majuscule']);
+  this.executeCharTest('Ṟ', ['R ligne souscrite majuscule']);
+  this.executeCharTest('Ṡ', ['S point en chef majuscule']);
+  this.executeCharTest('Ṣ', ['S point souscrit majuscule']);
+  this.executeCharTest('Ṫ', ['T point en chef majuscule']);
+  this.executeCharTest('Ṭ', ['T point souscrit majuscule']);
+  this.executeCharTest('Ṯ', ['T ligne souscrite majuscule']);
+  this.executeCharTest('Ṱ', ['T accent circonflexe souscrit majuscule']);
+  this.executeCharTest('Ṳ', ['U tréma souscrit majuscule']);
+  this.executeCharTest('Ṵ', ['U tilde souscrit majuscule']);
+  this.executeCharTest('Ṷ', ['U accent circonflexe souscrit majuscule']);
+  this.executeCharTest('Ṽ', ['V tilde majuscule']);
+  this.executeCharTest('Ṿ', ['V point souscrit majuscule']);
+  this.executeCharTest('Ẁ', ['W accent grave majuscule']);
+  this.executeCharTest('Ẃ', ['W accent aigu majuscule']);
+  this.executeCharTest('Ẅ', ['W tréma majuscule']);
+  this.executeCharTest('Ẇ', ['W point en chef majuscule']);
+  this.executeCharTest('Ẉ', ['W point souscrit majuscule']);
+  this.executeCharTest('Ẋ', ['X point en chef majuscule']);
+  this.executeCharTest('Ẍ', ['X tréma majuscule']);
+  this.executeCharTest('Ẏ', ['Y point en chef majuscule']);
+  this.executeCharTest('Ẑ', ['Z accent circonflexe majuscule']);
+  this.executeCharTest('Ẓ', ['Z point souscrit majuscule']);
+  this.executeCharTest('Ẕ', ['Z ligne souscrite majuscule']);
+  this.executeCharTest('Ạ', ['A point souscrit majuscule']);
+  this.executeCharTest('Ả', ['A crochet en chef majuscule']);
+  this.executeCharTest('Ẹ', ['E point souscrit majuscule']);
+  this.executeCharTest('Ẻ', ['E crochet en chef majuscule']);
+  this.executeCharTest('Ẽ', ['E tilde majuscule']);
+  this.executeCharTest('Ỉ', ['I crochet en chef majuscule']);
+  this.executeCharTest('Ị', ['I point souscrit majuscule']);
+  this.executeCharTest('Ọ', ['O point souscrit majuscule']);
+  this.executeCharTest('Ỏ', ['O crochet en chef majuscule']);
+  this.executeCharTest('Ụ', ['U point souscrit majuscule']);
+  this.executeCharTest('Ủ', ['U crochet en chef majuscule']);
+  this.executeCharTest('Ỳ', ['Y accent grave majuscule']);
+  this.executeCharTest('Ỵ', ['Y point souscrit majuscule']);
+  this.executeCharTest('Ỷ', ['Y crochet en chef majuscule']);
+  this.executeCharTest('Ỹ', ['Y tilde majuscule']);
+  this.executeCharTest('𝕬', ['A majuscule en gothique gras']);
+  this.executeCharTest('𝕭', ['B majuscule en gothique gras']);
+  this.executeCharTest('𝕮', ['C majuscule en gothique gras']);
+  this.executeCharTest('𝕯', ['D majuscule en gothique gras']);
+  this.executeCharTest('𝕰', ['E majuscule en gothique gras']);
+  this.executeCharTest('𝕱', ['F majuscule en gothique gras']);
+  this.executeCharTest('𝕲', ['G majuscule en gothique gras']);
+  this.executeCharTest('𝕳', ['H majuscule en gothique gras']);
+  this.executeCharTest('𝕴', ['I majuscule en gothique gras']);
+  this.executeCharTest('𝕵', ['J majuscule en gothique gras']);
+  this.executeCharTest('𝕶', ['K majuscule en gothique gras']);
+  this.executeCharTest('𝕷', ['L majuscule en gothique gras']);
+  this.executeCharTest('𝕸', ['M majuscule en gothique gras']);
+  this.executeCharTest('𝕹', ['N majuscule en gothique gras']);
+  this.executeCharTest('𝕺', ['O majuscule en gothique gras']);
+  this.executeCharTest('𝕻', ['P majuscule en gothique gras']);
+  this.executeCharTest('𝕼', ['Q majuscule en gothique gras']);
+  this.executeCharTest('𝕽', ['R majuscule en gothique gras']);
+  this.executeCharTest('𝕾', ['S majuscule en gothique gras']);
+  this.executeCharTest('𝕿', ['T majuscule en gothique gras']);
+  this.executeCharTest('𝖀', ['U majuscule en gothique gras']);
+  this.executeCharTest('𝖁', ['V majuscule en gothique gras']);
+  this.executeCharTest('𝖂', ['W majuscule en gothique gras']);
+  this.executeCharTest('𝖃', ['X majuscule en gothique gras']);
+  this.executeCharTest('𝖄', ['Y majuscule en gothique gras']);
+  this.executeCharTest('𝖅', ['Z majuscule en gothique gras']);
+  this.executeCharTest('𝖆', ['a en gothique gras']);
+  this.executeCharTest('𝖇', ['b en gothique gras']);
+  this.executeCharTest('𝖈', ['c en gothique gras']);
+  this.executeCharTest('𝖉', ['d en gothique gras']);
+  this.executeCharTest('𝖊', ['e en gothique gras']);
+  this.executeCharTest('𝖋', ['f en gothique gras']);
+  this.executeCharTest('𝖌', ['g en gothique gras']);
+  this.executeCharTest('𝖍', ['h en gothique gras']);
+  this.executeCharTest('𝖎', ['i en gothique gras']);
+  this.executeCharTest('𝖏', ['j en gothique gras']);
+  this.executeCharTest('𝖐', ['k en gothique gras']);
+  this.executeCharTest('𝖑', ['l en gothique gras']);
+  this.executeCharTest('𝖒', ['m en gothique gras']);
+  this.executeCharTest('𝖓', ['n en gothique gras']);
+  this.executeCharTest('𝖔', ['o en gothique gras']);
+  this.executeCharTest('𝖕', ['p en gothique gras']);
+  this.executeCharTest('𝖖', ['q en gothique gras']);
+  this.executeCharTest('𝖗', ['r en gothique gras']);
+  this.executeCharTest('𝖘', ['s en gothique gras']);
+  this.executeCharTest('𝖙', ['t en gothique gras']);
+  this.executeCharTest('𝖚', ['u en gothique gras']);
+  this.executeCharTest('𝖛', ['v en gothique gras']);
+  this.executeCharTest('𝖜', ['w en gothique gras']);
+  this.executeCharTest('𝖝', ['x en gothique gras']);
+  this.executeCharTest('𝖞', ['y en gothique gras']);
+  this.executeCharTest('𝖟', ['z en gothique gras']);
+  this.executeCharTest('𝐀', ['A majuscule en gras']);
+  this.executeCharTest('𝐁', ['B majuscule en gras']);
+  this.executeCharTest('𝐂', ['C majuscule en gras']);
+  this.executeCharTest('𝐃', ['D majuscule en gras']);
+  this.executeCharTest('𝐄', ['E majuscule en gras']);
+  this.executeCharTest('𝐅', ['F majuscule en gras']);
+  this.executeCharTest('𝐆', ['G majuscule en gras']);
+  this.executeCharTest('𝐇', ['H majuscule en gras']);
+  this.executeCharTest('𝐈', ['I majuscule en gras']);
+  this.executeCharTest('𝐉', ['J majuscule en gras']);
+  this.executeCharTest('𝐊', ['K majuscule en gras']);
+  this.executeCharTest('𝐋', ['L majuscule en gras']);
+  this.executeCharTest('𝐌', ['M majuscule en gras']);
+  this.executeCharTest('𝐍', ['N majuscule en gras']);
+  this.executeCharTest('𝐎', ['O majuscule en gras']);
+  this.executeCharTest('𝐏', ['P majuscule en gras']);
+  this.executeCharTest('𝐐', ['Q majuscule en gras']);
+  this.executeCharTest('𝐑', ['R majuscule en gras']);
+  this.executeCharTest('𝐒', ['S majuscule en gras']);
+  this.executeCharTest('𝐓', ['T majuscule en gras']);
+  this.executeCharTest('𝐔', ['U majuscule en gras']);
+  this.executeCharTest('𝐕', ['V majuscule en gras']);
+  this.executeCharTest('𝐖', ['W majuscule en gras']);
+  this.executeCharTest('𝐗', ['X majuscule en gras']);
+  this.executeCharTest('𝐘', ['Y majuscule en gras']);
+  this.executeCharTest('𝐙', ['Z majuscule en gras']);
+  this.executeCharTest('𝐚', ['a en gras']);
+  this.executeCharTest('𝐛', ['b en gras']);
+  this.executeCharTest('𝐜', ['c en gras']);
+  this.executeCharTest('𝐝', ['c en gras']);
+  this.executeCharTest('𝐞', ['e en gras']);
+  this.executeCharTest('𝐟', ['f en gras']);
+  this.executeCharTest('𝐠', ['g en gras']);
+  this.executeCharTest('𝐡', ['h en gras']);
+  this.executeCharTest('𝐢', ['i en gras']);
+  this.executeCharTest('𝐣', ['j en gras']);
+  this.executeCharTest('𝐤', ['k en gras']);
+  this.executeCharTest('𝐥', ['l en gras']);
+  this.executeCharTest('𝐦', ['m en gras']);
+  this.executeCharTest('𝐧', ['n en gras']);
+  this.executeCharTest('𝐨', ['o en gras']);
+  this.executeCharTest('𝐩', ['p en gras']);
+  this.executeCharTest('𝐪', ['q en gras']);
+  this.executeCharTest('𝐫', ['r en gras']);
+  this.executeCharTest('𝐬', ['s en gras']);
+  this.executeCharTest('𝐭', ['t en gras']);
+  this.executeCharTest('𝐮', ['u en gras']);
+  this.executeCharTest('𝐯', ['v en gras']);
+  this.executeCharTest('𝐰', ['w en gras']);
+  this.executeCharTest('𝐱', ['x en gras']);
+  this.executeCharTest('𝐲', ['y en gras']);
+  this.executeCharTest('𝐳', ['z en gras']);
+  this.executeCharTest('𝑨', ['A majuscule en italique gras']);
+  this.executeCharTest('𝑩', ['B majuscule en italique gras']);
+  this.executeCharTest('𝑪', ['C majuscule en italique gras']);
+  this.executeCharTest('𝑫', ['D majuscule en italique gras']);
+  this.executeCharTest('𝑬', ['E majuscule en italique gras']);
+  this.executeCharTest('𝑭', ['F majuscule en italique gras']);
+  this.executeCharTest('𝑮', ['G majuscule en italique gras']);
+  this.executeCharTest('𝑯', ['H majuscule en italique gras']);
+  this.executeCharTest('𝑰', ['I majuscule en italique gras']);
+  this.executeCharTest('𝑱', ['J majuscule en italique gras']);
+  this.executeCharTest('𝑲', ['K majuscule en italique gras']);
+  this.executeCharTest('𝑳', ['L majuscule en italique gras']);
+  this.executeCharTest('𝑴', ['M majuscule en italique gras']);
+  this.executeCharTest('𝑵', ['N majuscule en italique gras']);
+  this.executeCharTest('𝑶', ['O majuscule en italique gras']);
+  this.executeCharTest('𝑷', ['P majuscule en italique gras']);
+  this.executeCharTest('𝑸', ['Q majuscule en italique gras']);
+  this.executeCharTest('𝑹', ['R majuscule en italique gras']);
+  this.executeCharTest('𝑺', ['S majuscule en italique gras']);
+  this.executeCharTest('𝑻', ['T majuscule en italique gras']);
+  this.executeCharTest('𝑼', ['U majuscule en italique gras']);
+  this.executeCharTest('𝑽', ['V majuscule en italique gras']);
+  this.executeCharTest('𝑾', ['W majuscule en italique gras']);
+  this.executeCharTest('𝑿', ['X majuscule en italique gras']);
+  this.executeCharTest('𝒀', ['Y majuscule en italique gras']);
+  this.executeCharTest('𝒁', ['Z majuscule en italique gras']);
+  this.executeCharTest('𝒂', ['a en italique gras']);
+  this.executeCharTest('𝒃', ['b en italique gras']);
+  this.executeCharTest('𝒄', ['c en italique gras']);
+  this.executeCharTest('𝒅', ['d en italique gras']);
+  this.executeCharTest('𝒆', ['e en italique gras']);
+  this.executeCharTest('𝒇', ['f en italique gras']);
+  this.executeCharTest('𝒈', ['g en italique gras']);
+  this.executeCharTest('𝒉', ['h en italique gras']);
+  this.executeCharTest('𝒊', ['i en italique gras']);
+  this.executeCharTest('𝒋', ['j en italique gras']);
+  this.executeCharTest('𝒌', ['k en italique gras']);
+  this.executeCharTest('𝒍', ['l en italique gras']);
+  this.executeCharTest('𝒎', ['m en italique gras']);
+  this.executeCharTest('𝒏', ['n en italique gras']);
+  this.executeCharTest('𝒐', ['o en italique gras']);
+  this.executeCharTest('𝒑', ['p en italique gras']);
+  this.executeCharTest('𝒒', ['q en italique gras']);
+  this.executeCharTest('𝒓', ['r en italique gras']);
+  this.executeCharTest('𝒔', ['s en italique gras']);
+  this.executeCharTest('𝒕', ['t en italique gras']);
+  this.executeCharTest('𝒖', ['u en italique gras']);
+  this.executeCharTest('𝒗', ['v en italique gras']);
+  this.executeCharTest('𝒘', ['w en italique gras']);
+  this.executeCharTest('𝒙', ['x en italique gras']);
+  this.executeCharTest('𝒚', ['y en italique gras']);
+  this.executeCharTest('𝒛', ['z en italique gras']);
+  this.executeCharTest('𝓐', ['A majuscule en script gras']);
+  this.executeCharTest('𝓑', ['B majuscule en script gras']);
+  this.executeCharTest('𝓒', ['C majuscule en script gras']);
+  this.executeCharTest('𝓓', ['D majuscule en script gras']);
+  this.executeCharTest('𝓔', ['E majuscule en script gras']);
+  this.executeCharTest('𝓕', ['F majuscule en script gras']);
+  this.executeCharTest('𝓖', ['G majuscule en script gras']);
+  this.executeCharTest('𝓗', ['H majuscule en script gras']);
+  this.executeCharTest('𝓘', ['I majuscule en script gras']);
+  this.executeCharTest('𝓙', ['J majuscule en script gras']);
+  this.executeCharTest('𝓚', ['K majuscule en script gras']);
+  this.executeCharTest('𝓛', ['L majuscule en script gras']);
+  this.executeCharTest('𝓜', ['M majuscule en script gras']);
+  this.executeCharTest('𝓝', ['N majuscule en script gras']);
+  this.executeCharTest('𝓞', ['O majuscule en script gras']);
+  this.executeCharTest('𝓟', ['P majuscule en script gras']);
+  this.executeCharTest('𝓠', ['Q majuscule en script gras']);
+  this.executeCharTest('𝓡', ['R majuscule en script gras']);
+  this.executeCharTest('𝓢', ['S majuscule en script gras']);
+  this.executeCharTest('𝓣', ['T majuscule en script gras']);
+  this.executeCharTest('𝓤', ['U majuscule en script gras']);
+  this.executeCharTest('𝓥', ['V majuscule en script gras']);
+  this.executeCharTest('𝓦', ['W majuscule en script gras']);
+  this.executeCharTest('𝓧', ['X majuscule en script gras']);
+  this.executeCharTest('𝓨', ['Y majuscule en script gras']);
+  this.executeCharTest('𝓩', ['Z majuscule en script gras']);
+  this.executeCharTest('𝓪', ['a en script gras']);
+  this.executeCharTest('𝓫', ['b en script gras']);
+  this.executeCharTest('𝓬', ['c en script gras']);
+  this.executeCharTest('𝓭', ['d en script gras']);
+  this.executeCharTest('𝓮', ['e en script gras']);
+  this.executeCharTest('𝓯', ['f en script gras']);
+  this.executeCharTest('𝓰', ['g en script gras']);
+  this.executeCharTest('𝓱', ['h en script gras']);
+  this.executeCharTest('𝓲', ['i en script gras']);
+  this.executeCharTest('𝓳', ['j en script gras']);
+  this.executeCharTest('𝓴', ['k en script gras']);
+  this.executeCharTest('𝓵', ['l en script gras']);
+  this.executeCharTest('𝓶', ['m en script gras']);
+  this.executeCharTest('𝓷', ['n en script gras']);
+  this.executeCharTest('𝓸', ['o en script gras']);
+  this.executeCharTest('𝓹', ['p en script gras']);
+  this.executeCharTest('𝓺', ['q en script gras']);
+  this.executeCharTest('𝓻', ['r en script gras']);
+  this.executeCharTest('𝓼', ['s en script gras']);
+  this.executeCharTest('𝓽', ['t en script gras']);
+  this.executeCharTest('𝓾', ['u en script gras']);
+  this.executeCharTest('𝓿', ['v en script gras']);
+  this.executeCharTest('𝔀', ['w en script gras']);
+  this.executeCharTest('𝔁', ['x en script gras']);
+  this.executeCharTest('𝔂', ['y en script gras']);
+  this.executeCharTest('𝔃', ['z en script gras']);
+  this.executeCharTest('𝔸', ['A majuscule ajouré']);
+  this.executeCharTest('𝔹', ['B majuscule ajouré']);
+  this.executeCharTest('ℂ', ['C majuscule ajouré']);
+  this.executeCharTest('𝔻', ['D majuscule ajouré']);
+  this.executeCharTest('𝔼', ['E majuscule ajouré']);
+  this.executeCharTest('𝔽', ['F majuscule ajouré']);
+  this.executeCharTest('𝔾', ['G majuscule ajouré']);
+  this.executeCharTest('ℍ', ['H majuscule ajouré']);
+  this.executeCharTest('𝕀', ['I majuscule ajouré']);
+  this.executeCharTest('𝕁', ['J majuscule ajouré']);
+  this.executeCharTest('𝕂', ['K majuscule ajouré']);
+  this.executeCharTest('𝕃', ['L majuscule ajouré']);
+  this.executeCharTest('𝕄', ['M majuscule ajouré']);
+  this.executeCharTest('ℕ', ['N majuscule ajouré']);
+  this.executeCharTest('𝕆', ['O majuscule ajouré']);
+  this.executeCharTest('ℙ', ['P majuscule ajouré']);
+  this.executeCharTest('ℚ', ['Q majuscule ajouré']);
+  this.executeCharTest('ℝ', ['R majuscule ajouré']);
+  this.executeCharTest('𝕊', ['S majuscule ajouré']);
+  this.executeCharTest('𝕋', ['T majuscule ajouré']);
+  this.executeCharTest('𝕌', ['U majuscule ajouré']);
+  this.executeCharTest('𝕍', ['V majuscule ajouré']);
+  this.executeCharTest('𝕎', ['W majuscule ajouré']);
+  this.executeCharTest('𝕏', ['X majuscule ajouré']);
+  this.executeCharTest('𝕐', ['Y majuscule ajouré']);
+  this.executeCharTest('ℤ', ['Z majuscule ajouré']);
+  this.executeCharTest('𝕒', ['a ajouré']);
+  this.executeCharTest('𝕓', ['b ajouré']);
+  this.executeCharTest('𝕔', ['c ajouré']);
+  this.executeCharTest('𝕕', ['d ajouré']);
+  this.executeCharTest('𝕖', ['e ajouré']);
+  this.executeCharTest('𝕗', ['f ajouré']);
+  this.executeCharTest('𝕘', ['g ajouré']);
+  this.executeCharTest('𝕙', ['h ajouré']);
+  this.executeCharTest('𝕚', ['i ajouré']);
+  this.executeCharTest('𝕛', ['j ajouré']);
+  this.executeCharTest('𝕜', ['k ajouré']);
+  this.executeCharTest('𝕝', ['l ajouré']);
+  this.executeCharTest('𝕞', ['m ajouré']);
+  this.executeCharTest('𝕟', ['n ajouré']);
+  this.executeCharTest('𝕠', ['o ajouré']);
+  this.executeCharTest('𝕡', ['p ajouré']);
+  this.executeCharTest('𝕢', ['q ajouré']);
+  this.executeCharTest('𝕣', ['r ajouré']);
+  this.executeCharTest('𝕤', ['s ajouré']);
+  this.executeCharTest('𝕥', ['t ajouré']);
+  this.executeCharTest('𝕦', ['u ajouré']);
+  this.executeCharTest('𝕧', ['v ajouré']);
+  this.executeCharTest('𝕨', ['w ajouré']);
+  this.executeCharTest('𝕩', ['x ajouré']);
+  this.executeCharTest('𝕪', ['y ajouré']);
+  this.executeCharTest('𝕫', ['z ajouré']);
+  this.executeCharTest('𝔄', ['A majuscule en gothique']);
+  this.executeCharTest('𝔅', ['B majuscule en gothique']);
+  this.executeCharTest('ℭ', ['C majuscule en gothique']);
+  this.executeCharTest('𝔇', ['D majuscule en gothique']);
+  this.executeCharTest('𝔈', ['E majuscule en gothique']);
+  this.executeCharTest('𝔉', ['F majuscule en gothique']);
+  this.executeCharTest('𝔊', ['G majuscule en gothique']);
+  this.executeCharTest('ℌ', ['H majuscule en gothique']);
+  this.executeCharTest('ℑ', ['I majuscule en gothique']);
+  this.executeCharTest('𝔍', ['J majuscule en gothique']);
+  this.executeCharTest('𝔎', ['K majuscule en gothique']);
+  this.executeCharTest('𝔏', ['L majuscule en gothique']);
+  this.executeCharTest('𝔐', ['M majuscule en gothique']);
+  this.executeCharTest('𝔑', ['N majuscule en gothique']);
+  this.executeCharTest('𝔒', ['O majuscule en gothique']);
+  this.executeCharTest('𝔓', ['P majuscule en gothique']);
+  this.executeCharTest('𝔔', ['Q majuscule en gothique']);
+  this.executeCharTest('ℜ', ['R majuscule en gothique']);
+  this.executeCharTest('𝔖', ['S majuscule en gothique']);
+  this.executeCharTest('𝔗', ['T majuscule en gothique']);
+  this.executeCharTest('𝔘', ['U majuscule en gothique']);
+  this.executeCharTest('𝔙', ['V majuscule en gothique']);
+  this.executeCharTest('𝔚', ['W majuscule en gothique']);
+  this.executeCharTest('𝔛', ['X majuscule en gothique']);
+  this.executeCharTest('𝔜', ['Y majuscule en gothique']);
+  this.executeCharTest('ℨ', ['Z majuscule en gothique']);
+  this.executeCharTest('𝔞', ['a en gothique']);
+  this.executeCharTest('𝔟', ['b en gothique']);
+  this.executeCharTest('𝔠', ['c en gothique']);
+  this.executeCharTest('𝔡', ['d en gothique']);
+  this.executeCharTest('𝔢', ['e en gothique']);
+  this.executeCharTest('𝔣', ['f en gothique']);
+  this.executeCharTest('𝔤', ['g en gothique']);
+  this.executeCharTest('𝔥', ['h en gothique']);
+  this.executeCharTest('𝔦', ['i en gothique']);
+  this.executeCharTest('𝔧', ['j en gothique']);
+  this.executeCharTest('𝔨', ['k en gothique']);
+  this.executeCharTest('𝔩', ['l en gothique']);
+  this.executeCharTest('𝔪', ['m en gothique']);
+  this.executeCharTest('𝔫', ['n en gothique']);
+  this.executeCharTest('𝔬', ['o en gothique']);
+  this.executeCharTest('𝔭', ['p en gothique']);
+  this.executeCharTest('𝔮', ['q en gothique']);
+  this.executeCharTest('𝔯', ['r en gothique']);
+  this.executeCharTest('𝔰', ['s en gothique']);
+  this.executeCharTest('𝔱', ['t en gothique']);
+  this.executeCharTest('𝔲', ['u en gothique']);
+  this.executeCharTest('𝔳', ['v en gothique']);
+  this.executeCharTest('𝔴', ['w en gothique']);
+  this.executeCharTest('𝔵', ['x en gothique']);
+  this.executeCharTest('𝔶', ['y en gothique']);
+  this.executeCharTest('𝔷', ['z en gothique']);
+  this.executeCharTest('𝐴', ['A majuscule en italique']);
+  this.executeCharTest('𝐵', ['B majuscule en italique']);
+  this.executeCharTest('𝐶', ['C majuscule en italique']);
+  this.executeCharTest('𝐷', ['D majuscule en italique']);
+  this.executeCharTest('𝐸', ['E majuscule en italique']);
+  this.executeCharTest('𝐹', ['F majuscule en italique']);
+  this.executeCharTest('𝐺', ['G majuscule en italique']);
+  this.executeCharTest('𝐻', ['H majuscule en italique']);
+  this.executeCharTest('𝐼', ['I majuscule en italique']);
+  this.executeCharTest('𝐽', ['J majuscule en italique']);
+  this.executeCharTest('𝐾', ['K majuscule en italique']);
+  this.executeCharTest('𝐿', ['L majuscule en italique']);
+  this.executeCharTest('𝑀', ['M majuscule en italique']);
+  this.executeCharTest('𝑁', ['N majuscule en italique']);
+  this.executeCharTest('𝑂', ['O majuscule en italique']);
+  this.executeCharTest('𝑃', ['P majuscule en italique']);
+  this.executeCharTest('𝑄', ['Q majuscule en italique']);
+  this.executeCharTest('𝑅', ['R majuscule en italique']);
+  this.executeCharTest('𝑆', ['S majuscule en italique']);
+  this.executeCharTest('𝑇', ['T majuscule en italique']);
+  this.executeCharTest('𝑈', ['U majuscule en italique']);
+  this.executeCharTest('𝑉', ['V majuscule en italique']);
+  this.executeCharTest('𝑊', ['W majuscule en italique']);
+  this.executeCharTest('𝑋', ['X majuscule en italique']);
+  this.executeCharTest('𝑌', ['Y majuscule en italique']);
+  this.executeCharTest('𝑍', ['Z majuscule en italique']);
+  this.executeCharTest('𝑎', ['a en italique']);
+  this.executeCharTest('𝑏', ['b en italique']);
+  this.executeCharTest('𝑐', ['c en italique']);
+  this.executeCharTest('𝑑', ['d en italique']);
+  this.executeCharTest('𝑒', ['e en italique']);
+  this.executeCharTest('𝑓', ['f en italique']);
+  this.executeCharTest('𝑔', ['g en italique']);
+  this.executeCharTest('ℎ', ['constante de planck']);
+  this.executeCharTest('𝑖', ['i en italique']);
+  this.executeCharTest('𝑗', ['j en italique']);
+  this.executeCharTest('𝑘', ['k en italique']);
+  this.executeCharTest('𝑙', ['l en italique']);
+  this.executeCharTest('𝑚', ['m en italique']);
+  this.executeCharTest('𝑛', ['n en italique']);
+  this.executeCharTest('𝑜', ['o en italique']);
+  this.executeCharTest('𝑝', ['p en italique']);
+  this.executeCharTest('𝑞', ['q en italique']);
+  this.executeCharTest('𝑟', ['r en italique']);
+  this.executeCharTest('𝑠', ['s en italique']);
+  this.executeCharTest('𝑡', ['t en italique']);
+  this.executeCharTest('𝑢', ['u en italique']);
+  this.executeCharTest('𝑣', ['v en italique']);
+  this.executeCharTest('𝑤', ['w en italique']);
+  this.executeCharTest('𝑥', ['x en italique']);
+  this.executeCharTest('𝑦', ['y en italique']);
+  this.executeCharTest('𝑧', ['z en italique']);
+  this.executeCharTest('𝙰', ['A majuscule en chasse fixe']);
+  this.executeCharTest('𝙱', ['B majuscule en chasse fixe']);
+  this.executeCharTest('𝙲', ['C majuscule en chasse fixe']);
+  this.executeCharTest('𝙳', ['D majuscule en chasse fixe']);
+  this.executeCharTest('𝙴', ['E majuscule en chasse fixe']);
+  this.executeCharTest('𝙵', ['F majuscule en chasse fixe']);
+  this.executeCharTest('𝙶', ['G majuscule en chasse fixe']);
+  this.executeCharTest('𝙷', ['H majuscule en chasse fixe']);
+  this.executeCharTest('𝙸', ['I majuscule en chasse fixe']);
+  this.executeCharTest('𝙹', ['J majuscule en chasse fixe']);
+  this.executeCharTest('𝙺', ['K majuscule en chasse fixe']);
+  this.executeCharTest('𝙻', ['L majuscule en chasse fixe']);
+  this.executeCharTest('𝙼', ['M majuscule en chasse fixe']);
+  this.executeCharTest('𝙽', ['N majuscule en chasse fixe']);
+  this.executeCharTest('𝙾', ['O majuscule en chasse fixe']);
+  this.executeCharTest('𝙿', ['P majuscule en chasse fixe']);
+  this.executeCharTest('𝚀', ['Q majuscule en chasse fixe']);
+  this.executeCharTest('𝚁', ['R majuscule en chasse fixe']);
+  this.executeCharTest('𝚂', ['S majuscule en chasse fixe']);
+  this.executeCharTest('𝚃', ['T majuscule en chasse fixe']);
+  this.executeCharTest('𝚄', ['U majuscule en chasse fixe']);
+  this.executeCharTest('𝚅', ['V majuscule en chasse fixe']);
+  this.executeCharTest('𝚆', ['W majuscule en chasse fixe']);
+  this.executeCharTest('𝚇', ['X majuscule en chasse fixe']);
+  this.executeCharTest('𝚈', ['Y majuscule en chasse fixe']);
+  this.executeCharTest('𝚉', ['Z majuscule en chasse fixe']);
+  this.executeCharTest('𝚊', ['a en chasse fixe']);
+  this.executeCharTest('𝚋', ['b en chasse fixe']);
+  this.executeCharTest('𝚌', ['c en chasse fixe']);
+  this.executeCharTest('𝚍', ['d en chasse fixe']);
+  this.executeCharTest('𝚎', ['e en chasse fixe']);
+  this.executeCharTest('𝚏', ['f en chasse fixe']);
+  this.executeCharTest('𝚐', ['g en chasse fixe']);
+  this.executeCharTest('𝚑', ['h en chasse fixe']);
+  this.executeCharTest('𝚒', ['i en chasse fixe']);
+  this.executeCharTest('𝚓', ['j en chasse fixe']);
+  this.executeCharTest('𝚔', ['k en chasse fixe']);
+  this.executeCharTest('𝚕', ['l en chasse fixe']);
+  this.executeCharTest('𝚖', ['m en chasse fixe']);
+  this.executeCharTest('𝚗', ['n en chasse fixe']);
+  this.executeCharTest('𝚘', ['o en chasse fixe']);
+  this.executeCharTest('𝚙', ['p en chasse fixe']);
+  this.executeCharTest('𝚚', ['q en chasse fixe']);
+  this.executeCharTest('𝚛', ['r en chasse fixe']);
+  this.executeCharTest('𝚜', ['s en chasse fixe']);
+  this.executeCharTest('𝚝', ['t en chasse fixe']);
+  this.executeCharTest('𝚞', ['u en chasse fixe']);
+  this.executeCharTest('𝚟', ['v en chasse fixe']);
+  this.executeCharTest('𝚠', ['w en chasse fixe']);
+  this.executeCharTest('𝚡', ['x en chasse fixe']);
+  this.executeCharTest('𝚢', ['y en chasse fixe']);
+  this.executeCharTest('𝚣', ['z en chasse fixe']);
+  this.executeCharTest('𝗔', ['A majuscule en sans empattement gras']);
+  this.executeCharTest('𝗕', ['B majuscule en sans empattement gras']);
+  this.executeCharTest('𝗖', ['C majuscule en sans empattement gras']);
+  this.executeCharTest('𝗗', ['D majuscule en sans empattement gras']);
+  this.executeCharTest('𝗘', ['E majuscule en sans empattement gras']);
+  this.executeCharTest('𝗙', ['F majuscule en sans empattement gras']);
+  this.executeCharTest('𝗚', ['G majuscule en sans empattement gras']);
+  this.executeCharTest('𝗛', ['H majuscule en sans empattement gras']);
+  this.executeCharTest('𝗜', ['I majuscule en sans empattement gras']);
+  this.executeCharTest('𝗝', ['J majuscule en sans empattement gras']);
+  this.executeCharTest('𝗞', ['K majuscule en sans empattement gras']);
+  this.executeCharTest('𝗟', ['L majuscule en sans empattement gras']);
+  this.executeCharTest('𝗠', ['M majuscule en sans empattement gras']);
+  this.executeCharTest('𝗡', ['N majuscule en sans empattement gras']);
+  this.executeCharTest('𝗢', ['O majuscule en sans empattement gras']);
+  this.executeCharTest('𝗣', ['P majuscule en sans empattement gras']);
+  this.executeCharTest('𝗤', ['Q majuscule en sans empattement gras']);
+  this.executeCharTest('𝗥', ['R majuscule en sans empattement gras']);
+  this.executeCharTest('𝗦', ['S majuscule en sans empattement gras']);
+  this.executeCharTest('𝗧', ['T majuscule en sans empattement gras']);
+  this.executeCharTest('𝗨', ['U majuscule en sans empattement gras']);
+  this.executeCharTest('𝗩', ['V majuscule en sans empattement gras']);
+  this.executeCharTest('𝗪', ['W majuscule en sans empattement gras']);
+  this.executeCharTest('𝗫', ['X majuscule en sans empattement gras']);
+  this.executeCharTest('𝗬', ['Y majuscule en sans empattement gras']);
+  this.executeCharTest('𝗭', ['Z majuscule en sans empattement gras']);
+  this.executeCharTest('𝗮', ['a en sans empattement gras']);
+  this.executeCharTest('𝗯', ['b en sans empattement gras']);
+  this.executeCharTest('𝗰', ['c en sans empattement gras']);
+  this.executeCharTest('𝗱', ['d en sans empattement gras']);
+  this.executeCharTest('𝗲', ['e en sans empattement gras']);
+  this.executeCharTest('𝗳', ['f en sans empattement gras']);
+  this.executeCharTest('𝗴', ['g en sans empattement gras']);
+  this.executeCharTest('𝗵', ['h en sans empattement gras']);
+  this.executeCharTest('𝗶', ['i en sans empattement gras']);
+  this.executeCharTest('𝗷', ['j en sans empattement gras']);
+  this.executeCharTest('𝗸', ['k en sans empattement gras']);
+  this.executeCharTest('𝗹', ['l en sans empattement gras']);
+  this.executeCharTest('𝗺', ['m en sans empattement gras']);
+  this.executeCharTest('𝗻', ['n en sans empattement gras']);
+  this.executeCharTest('𝗼', ['o en sans empattement gras']);
+  this.executeCharTest('𝗽', ['p en sans empattement gras']);
+  this.executeCharTest('𝗾', ['q en sans empattement gras']);
+  this.executeCharTest('𝗿', ['r en sans empattement gras']);
+  this.executeCharTest('𝘀', ['s en sans empattement gras']);
+  this.executeCharTest('𝘁', ['t en sans empattement gras']);
+  this.executeCharTest('𝘂', ['u en sans empattement gras']);
+  this.executeCharTest('𝘃', ['v en sans empattement gras']);
+  this.executeCharTest('𝘄', ['w en sans empattement gras']);
+  this.executeCharTest('𝘅', ['x en sans empattement gras']);
+  this.executeCharTest('𝘆', ['y en sans empattement gras']);
+  this.executeCharTest('𝘇', ['z en sans empattement gras']);
+  this.executeCharTest('𝘈', ['A majuscule en sans empattement italique']);
+  this.executeCharTest('𝘉', ['B majuscule en sans empattement italique']);
+  this.executeCharTest('𝘊', ['C majuscule en sans empattement italique']);
+  this.executeCharTest('𝘋', ['D majuscule en sans empattement italique']);
+  this.executeCharTest('𝘌', ['E majuscule en sans empattement italique']);
+  this.executeCharTest('𝘍', ['F majuscule en sans empattement italique']);
+  this.executeCharTest('𝘎', ['G majuscule en sans empattement italique']);
+  this.executeCharTest('𝘏', ['H majuscule en sans empattement italique']);
+  this.executeCharTest('𝘐', ['I majuscule en sans empattement italique']);
+  this.executeCharTest('𝘑', ['J majuscule en sans empattement italique']);
+  this.executeCharTest('𝘒', ['K majuscule en sans empattement italique']);
+  this.executeCharTest('𝘓', ['L majuscule en sans empattement italique']);
+  this.executeCharTest('𝘔', ['M majuscule en sans empattement italique']);
+  this.executeCharTest('𝘕', ['N majuscule en sans empattement italique']);
+  this.executeCharTest('𝘖', ['O majuscule en sans empattement italique']);
+  this.executeCharTest('𝘗', ['P majuscule en sans empattement italique']);
+  this.executeCharTest('𝘘', ['Q majuscule en sans empattement italique']);
+  this.executeCharTest('𝘙', ['R majuscule en sans empattement italique']);
+  this.executeCharTest('𝘚', ['S majuscule en sans empattement italique']);
+  this.executeCharTest('𝘛', ['T majuscule en sans empattement italique']);
+  this.executeCharTest('𝘜', ['U majuscule en sans empattement italique']);
+  this.executeCharTest('𝘝', ['V majuscule en sans empattement italique']);
+  this.executeCharTest('𝘞', ['W majuscule en sans empattement italique']);
+  this.executeCharTest('𝘟', ['X majuscule en sans empattement italique']);
+  this.executeCharTest('𝘠', ['Y majuscule en sans empattement italique']);
+  this.executeCharTest('𝘡', ['Z majuscule en sans empattement italique']);
+  this.executeCharTest('𝘢', ['a en sans empattement italique']);
+  this.executeCharTest('𝘣', ['b en sans empattement italique']);
+  this.executeCharTest('𝘤', ['c en sans empattement italique']);
+  this.executeCharTest('𝘥', ['d en sans empattement italique']);
+  this.executeCharTest('𝘦', ['e en sans empattement italique']);
+  this.executeCharTest('𝘧', ['f en sans empattement italique']);
+  this.executeCharTest('𝘨', ['g en sans empattement italique']);
+  this.executeCharTest('𝘩', ['h en sans empattement italique']);
+  this.executeCharTest('𝘪', ['i en sans empattement italique']);
+  this.executeCharTest('𝘫', ['j en sans empattement italique']);
+  this.executeCharTest('𝘬', ['k en sans empattement italique']);
+  this.executeCharTest('𝘭', ['l en sans empattement italique']);
+  this.executeCharTest('𝘮', ['m en sans empattement italique']);
+  this.executeCharTest('𝘯', ['n en sans empattement italique']);
+  this.executeCharTest('𝘰', ['o en sans empattement italique']);
+  this.executeCharTest('𝘱', ['p en sans empattement italique']);
+  this.executeCharTest('𝘲', ['q en sans empattement italique']);
+  this.executeCharTest('𝘳', ['r en sans empattement italique']);
+  this.executeCharTest('𝘴', ['s en sans empattement italique']);
+  this.executeCharTest('𝘵', ['t en sans empattement italique']);
+  this.executeCharTest('𝘶', ['u en sans empattement italique']);
+  this.executeCharTest('𝘷', ['v en sans empattement italique']);
+  this.executeCharTest('𝘸', ['w en sans empattement italique']);
+  this.executeCharTest('𝘹', ['x en sans empattement italique']);
+  this.executeCharTest('𝘺', ['y en sans empattement italique']);
+  this.executeCharTest('𝘻', ['z en sans empattement italique']);
+  this.executeCharTest('𝘼', ['A majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝘽', ['B majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝘾', ['C majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝘿', ['D majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙀', ['E majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙁', ['F majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙂', ['G majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙃', ['H majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙄', ['I majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙅', ['J majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙆', ['K majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙇', ['L majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙈', ['M majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙉', ['N majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙊', ['O majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙋', ['P majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙌', ['Q majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙍', ['R majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙎', ['S majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙏', ['T majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙐', ['U majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙑', ['V majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙒', ['W majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙓', ['X majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙔', ['Y majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙕', ['Z majuscule en sans empattement italique gras']);
+  this.executeCharTest('𝙖', ['a en sans empattement italique gras']);
+  this.executeCharTest('𝙗', ['b en sans empattement italique gras']);
+  this.executeCharTest('𝙘', ['c en sans empattement italique gras']);
+  this.executeCharTest('𝙙', ['d en sans empattement italique gras']);
+  this.executeCharTest('𝙚', ['e en sans empattement italique gras']);
+  this.executeCharTest('𝙛', ['f en sans empattement italique gras']);
+  this.executeCharTest('𝙜', ['g en sans empattement italique gras']);
+  this.executeCharTest('𝙝', ['h en sans empattement italique gras']);
+  this.executeCharTest('𝙞', ['i en sans empattement italique gras']);
+  this.executeCharTest('𝙟', ['j en sans empattement italique gras']);
+  this.executeCharTest('𝙠', ['k en sans empattement italique gras']);
+  this.executeCharTest('𝙡', ['l en sans empattement italique gras']);
+  this.executeCharTest('𝙢', ['m en sans empattement italique gras']);
+  this.executeCharTest('𝙣', ['n en sans empattement italique gras']);
+  this.executeCharTest('𝙤', ['o en sans empattement italique gras']);
+  this.executeCharTest('𝙥', ['p en sans empattement italique gras']);
+  this.executeCharTest('𝙦', ['q en sans empattement italique gras']);
+  this.executeCharTest('𝙧', ['r en sans empattement italique gras']);
+  this.executeCharTest('𝙨', ['s en sans empattement italique gras']);
+  this.executeCharTest('𝙩', ['t en sans empattement italique gras']);
+  this.executeCharTest('𝙪', ['u en sans empattement italique gras']);
+  this.executeCharTest('𝙫', ['v en sans empattement italique gras']);
+  this.executeCharTest('𝙬', ['w en sans empattement italique gras']);
+  this.executeCharTest('𝙭', ['x en sans empattement italique gras']);
+  this.executeCharTest('𝙮', ['y en sans empattement italique gras']);
+  this.executeCharTest('𝙯', ['z en sans empattement italique gras']);
+  this.executeCharTest('𝖠', ['A majuscule en sans empattement']);
+  this.executeCharTest('𝖡', ['B majuscule en sans empattement']);
+  this.executeCharTest('𝖢', ['C majuscule en sans empattement']);
+  this.executeCharTest('𝖣', ['D majuscule en sans empattement']);
+  this.executeCharTest('𝖤', ['E majuscule en sans empattement']);
+  this.executeCharTest('𝖥', ['F majuscule en sans empattement']);
+  this.executeCharTest('𝖦', ['G majuscule en sans empattement']);
+  this.executeCharTest('𝖧', ['H majuscule en sans empattement']);
+  this.executeCharTest('𝖨', ['I majuscule en sans empattement']);
+  this.executeCharTest('𝖩', ['J majuscule en sans empattement']);
+  this.executeCharTest('𝖪', ['K majuscule en sans empattement']);
+  this.executeCharTest('𝖫', ['L majuscule en sans empattement']);
+  this.executeCharTest('𝖬', ['M majuscule en sans empattement']);
+  this.executeCharTest('𝖭', ['N majuscule en sans empattement']);
+  this.executeCharTest('𝖮', ['O majuscule en sans empattement']);
+  this.executeCharTest('𝖯', ['P majuscule en sans empattement']);
+  this.executeCharTest('𝖰', ['Q majuscule en sans empattement']);
+  this.executeCharTest('𝖱', ['R majuscule en sans empattement']);
+  this.executeCharTest('𝖲', ['S majuscule en sans empattement']);
+  this.executeCharTest('𝖳', ['T majuscule en sans empattement']);
+  this.executeCharTest('𝖴', ['U majuscule en sans empattement']);
+  this.executeCharTest('𝖵', ['V majuscule en sans empattement']);
+  this.executeCharTest('𝖶', ['W majuscule en sans empattement']);
+  this.executeCharTest('𝖷', ['X majuscule en sans empattement']);
+  this.executeCharTest('𝖸', ['Y majuscule en sans empattement']);
+  this.executeCharTest('𝖹', ['Z majuscule en sans empattement']);
+  this.executeCharTest('𝖺', ['a en sans empattement']);
+  this.executeCharTest('𝖻', ['b en sans empattement']);
+  this.executeCharTest('𝖼', ['c en sans empattement']);
+  this.executeCharTest('𝖽', ['d en sans empattement']);
+  this.executeCharTest('𝖾', ['e en sans empattement']);
+  this.executeCharTest('𝖿', ['f en sans empattement']);
+  this.executeCharTest('𝗀', ['g en sans empattement']);
+  this.executeCharTest('𝗁', ['h en sans empattement']);
+  this.executeCharTest('𝗂', ['i en sans empattement']);
+  this.executeCharTest('𝗃', ['j en sans empattement']);
+  this.executeCharTest('𝗄', ['k en sans empattement']);
+  this.executeCharTest('𝗅', ['l en sans empattement']);
+  this.executeCharTest('𝗆', ['m en sans empattement']);
+  this.executeCharTest('𝗇', ['n en sans empattement']);
+  this.executeCharTest('𝗈', ['o en sans empattement']);
+  this.executeCharTest('𝗉', ['p en sans empattement']);
+  this.executeCharTest('𝗊', ['q en sans empattement']);
+  this.executeCharTest('𝗋', ['r en sans empattement']);
+  this.executeCharTest('𝗌', ['s en sans empattement']);
+  this.executeCharTest('𝗍', ['t en sans empattement']);
+  this.executeCharTest('𝗎', ['u en sans empattement']);
+  this.executeCharTest('𝗏', ['v en sans empattement']);
+  this.executeCharTest('𝗐', ['w en sans empattement']);
+  this.executeCharTest('𝗑', ['x en sans empattement']);
+  this.executeCharTest('𝗒', ['y en sans empattement']);
+  this.executeCharTest('𝗓', ['z en sans empattement']);
+  this.executeCharTest('𝒜', ['A majuscule en script']);
+  this.executeCharTest('ℬ', ['B ronde majuscule']);
+  this.executeCharTest('𝒞', ['C majuscule en script']);
+  this.executeCharTest('𝒟', ['D majuscule en script']);
+  this.executeCharTest('ℰ', ['E ronde majuscule']);
+  this.executeCharTest('ℱ', ['F ronde majuscule']);
+  this.executeCharTest('𝒢', ['G majuscule en script']);
+  this.executeCharTest('ℋ', ['H ronde majuscule']);
+  this.executeCharTest('ℐ', ['I ronde majuscule']);
+  this.executeCharTest('𝒥', ['J majuscule en script']);
+  this.executeCharTest('𝒦', ['K majuscule en script']);
+  this.executeCharTest('ℒ', ['L ronde majuscule']);
+  this.executeCharTest('ℳ', ['M ronde majuscule']);
+  this.executeCharTest('𝒩', ['N majuscule en script']);
+  this.executeCharTest('𝒪', ['O majuscule en script']);
+  this.executeCharTest('𝒫', ['P majuscule en script']);
+  this.executeCharTest('𝒬', ['Q majuscule en script']);
+  this.executeCharTest('ℛ', ['R ronde majuscule']);
+  this.executeCharTest('𝒮', ['S majuscule en script']);
+  this.executeCharTest('𝒯', ['T majuscule en script']);
+  this.executeCharTest('𝒰', ['U majuscule en script']);
+  this.executeCharTest('𝒱', ['V majuscule en script']);
+  this.executeCharTest('𝒲', ['W majuscule en script']);
+  this.executeCharTest('𝒳', ['X majuscule en script']);
+  this.executeCharTest('𝒴', ['Y majuscule en script']);
+  this.executeCharTest('𝒵', ['Z majuscule en script']);
+  this.executeCharTest('𝒶', ['a en script']);
+  this.executeCharTest('𝒷', ['b en script']);
+  this.executeCharTest('𝒸', ['c en script']);
+  this.executeCharTest('𝒹', ['d en script']);
+  this.executeCharTest('ℯ', ['e ronde minuscule']);
+  this.executeCharTest('𝒻', ['f en script']);
+  this.executeCharTest('ℊ', ['g ronde minuscule']);
+  this.executeCharTest('𝒽', ['h en script']);
+  this.executeCharTest('𝒾', ['i en script']);
+  this.executeCharTest('𝒿', ['j en script']);
+  this.executeCharTest('𝓀', ['k en script']);
+  this.executeCharTest('𝓁', ['script l']);
+  this.executeCharTest('𝓂', ['m en script']);
+  this.executeCharTest('𝓃', ['n en script']);
+  this.executeCharTest('ℴ', ['o ronde minuscule']);
+  this.executeCharTest('𝓅', ['p en script']);
+  this.executeCharTest('𝓆', ['q en script']);
+  this.executeCharTest('𝓇', ['r en script']);
+  this.executeCharTest('𝓈', ['s en script']);
+  this.executeCharTest('𝓉', ['t en script']);
+  this.executeCharTest('𝓊', ['u en script']);
+  this.executeCharTest('𝓋', ['v en script']);
+  this.executeCharTest('𝓌', ['w en script']);
+  this.executeCharTest('𝓍', ['x en script']);
+  this.executeCharTest('𝓎', ['y en script']);
+  this.executeCharTest('𝓏', ['z en script']);
+  this.executeCharTest('⊾', ['angle droit avec arc']);
+  this.executeCharTest('⍼', ['angle droit avec flèche en zigzag vers le bas']);
+  this.executeCharTest('⟀', ['angle tridimensionnel']);
+  this.executeCharTest('⦛', ['measured angle opening left']);
+  this.executeCharTest('⦜', ['right angle variant with square']);
+  this.executeCharTest('⦝', ['angle droit mesuré pointé']);
+  this.executeCharTest('⦞', ['angle with s inside']);
+  this.executeCharTest('⦟', ['acute angle']);
+  this.executeCharTest('⦠', ['spherical angle opening left']);
+  this.executeCharTest('⦡', ['spherical angle opening up']);
+  this.executeCharTest('⦢', ['turned angle']);
+  this.executeCharTest('⦣', ['reversed angle']);
+  this.executeCharTest('⦤', ['angle à barre souscrite']);
+  this.executeCharTest('⦥', ['angle à barre souscrite réfléchie']);
+  this.executeCharTest('⦦', ['angle oblique s\'ouvrant vers le haut']);
+  this.executeCharTest('⦧', ['angle oblique s\'ouvrant vers le bas']);
+  this.executeCharTest('⦨', ['angle calculé à bras vers l\'est et bras fléché vers le nord-est']);
+  this.executeCharTest('⦩', ['angle calculé à bras vers l\'ouest et bras fléché vers le nord-ouest']);
+  this.executeCharTest('⦪', ['angle calculé à bras vers l\'est et bras fléché vers le sud-est']);
+  this.executeCharTest('⦫', ['angle calculé à bras vers l\'ouest et bras fléché vers le sud-ouest']);
+  this.executeCharTest('⦬', ['angle calculé à bras vers le nord et bras fléché vers le nord-est']);
+  this.executeCharTest('⦭', ['angle calculé à bras vers le nord et bras fléché vers le nord-ouest']);
+  this.executeCharTest('⦮', ['angle calculé à bras vers le sud et bras fléché vers le sud-est']);
+  this.executeCharTest('⦯', ['angle calculé à bras vers le sud et bras fléché vers le sud-ouest']);
+  this.executeCharTest('←', ['flèche gauche']);
+  this.executeCharTest('↑', ['flèche vers le haut']);
+  this.executeCharTest('→', ['flèche droite']);
+  this.executeCharTest('↓', ['flèche vers le bas']);
+  this.executeCharTest('↔', ['flèche bilatérale']);
+  this.executeCharTest('↕', ['flèche haut et bas']);
+  this.executeCharTest('↖', ['flèche nord-ouest']);
+  this.executeCharTest('↗', ['flèche nord-est']);
+  this.executeCharTest('↘', ['flèche sud-est']);
+  this.executeCharTest('↙', ['flèche sud-ouest']);
+  this.executeCharTest('↚', ['flèche barrée gauche']);
+  this.executeCharTest('↛', ['flèche barrée droite']);
+  this.executeCharTest('↜', ['flèche ondulée gauche']);
+  this.executeCharTest('↝', ['flèche ondulée droite']);
+  this.executeCharTest('↞', ['flèche à deux pointes gauche']);
+  this.executeCharTest('↟', ['flèche à deux pointes vers le haut']);
+  this.executeCharTest('↠', ['flèche à deux pointes droite']);
+  this.executeCharTest('↡', ['flèche à deux pointes vers le bas']);
+  this.executeCharTest('↢', ['flèche empennée gauche']);
+  this.executeCharTest('↣', ['flèche empennée droite']);
+  this.executeCharTest('↤', ['flèche d\'un taquet gauche']);
+  this.executeCharTest('↥', ['flèche d\'un taquet vers le haut']);
+  this.executeCharTest('↦', ['flèche d\'un taquet droite']);
+  this.executeCharTest('↧', ['flèche d\'un taquet vers le bas']);
+  this.executeCharTest('↨', ['flèche haut-bas sur base']);
+  this.executeCharTest('↩', ['flèche avec crochet gauche']);
+  this.executeCharTest('↪', ['flèche avec crochet droite']);
+  this.executeCharTest('↫', ['flèche avec boucle gauche']);
+  this.executeCharTest('↬', ['flèche avec boucle droite']);
+  this.executeCharTest('↭', ['flèche ondulée bilatérale']);
+  this.executeCharTest('↮', ['flèche barrée bilatérale']);
+  this.executeCharTest('↯', ['flèche vers le bas en zigzag']);
+  this.executeCharTest('↰', ['flèche vers le haut avec pointe gauche']);
+  this.executeCharTest('↱', ['flèche vers le haut avec pointe droite']);
+  this.executeCharTest('↲', ['flèche vers le bas avec pointe gauche']);
+  this.executeCharTest('↳', ['flèche vers le bas avec pointe droite']);
+  this.executeCharTest('↴', ['flèche vers le bas avec coin droit']);
+  this.executeCharTest('↵', ['flèche vers le bas avec coin gauche']);
+  this.executeCharTest('↶', ['flèche semi-circulaire en sens positif']);
+  this.executeCharTest('↷', ['flèche semi-circulaire en sens négatif']);
+  this.executeCharTest('↸', ['flèche nord-ouest vers une barre horizontale longue']);
+  this.executeCharTest('↹', ['flèche gauche vers un taquet sur flèche droite vers un taquet']);
+  this.executeCharTest('↺', ['flèche en sens positif à cercle ouvert']);
+  this.executeCharTest('↻', ['flèche en sens négatif à cercle ouvert']);
+  this.executeCharTest('⇄', ['flèche vers le haut par-dessus flèche gauche']);
+  this.executeCharTest('⇅', ['flèche vers le haut à gauche d\'une flèche vers le bas']);
+  this.executeCharTest('⇆', ['flèche gauche par-dessus flèche droite']);
+  this.executeCharTest('⇇', ['paire de flèches gauche']);
+  this.executeCharTest('⇈', ['paire de flèches vers le haut']);
+  this.executeCharTest('⇉', ['paire de flèches droite']);
+  this.executeCharTest('⇊', ['paire de flèches vers le bas']);
+  this.executeCharTest('⇍', ['double flèche barrée gauche']);
+  this.executeCharTest('⇎', ['double flèche barrée bilatérale']);
+  this.executeCharTest('⇏', ['double flèche barrée droite']);
+  this.executeCharTest('⇐', ['double flèche gauche']);
+  this.executeCharTest('⇑', ['double flèche vers le haut']);
+  this.executeCharTest('⇒', ['double flèche droite']);
+  this.executeCharTest('⇓', ['double flèche vers le bas']);
+  this.executeCharTest('⇔', ['double flèche bilatérale']);
+  this.executeCharTest('⇕', ['double flèche haut-bas']);
+  this.executeCharTest('⇖', ['double flèche nord-ouest']);
+  this.executeCharTest('⇗', ['double flèche nord-est']);
+  this.executeCharTest('⇘', ['double flèche sud-est']);
+  this.executeCharTest('⇙', ['double flèche sud-ouest']);
+  this.executeCharTest('⇚', ['triple flèche gauche']);
+  this.executeCharTest('⇛', ['triple flèche droite']);
+  this.executeCharTest('⇜', ['flèche en tire-bouchon gauche']);
+  this.executeCharTest('⇝', ['flèche en tire-bouchon droite']);
+  this.executeCharTest('⇞', ['flèche vers le haut avec double barre']);
+  this.executeCharTest('⇟', ['flèche vers le bas avec double barre']);
+  this.executeCharTest('⇠', ['flèche pointillée gauche']);
+  this.executeCharTest('⇡', ['flèche pointillée vers le haut']);
+  this.executeCharTest('⇢', ['flèche pointillée droite']);
+  this.executeCharTest('⇣', ['flèche pointillée vers le bas']);
+  this.executeCharTest('⇤', ['flèche gauche vers un taquet']);
+  this.executeCharTest('⇥', ['flèche droite vers un taquet']);
+  this.executeCharTest('⇦', ['flèche blanche gauche']);
+  this.executeCharTest('⇧', ['flèche blanche vers le haut']);
+  this.executeCharTest('⇨', ['flèche blanche droite']);
+  this.executeCharTest('⇩', ['flèche blanche vers le bas']);
+  this.executeCharTest('⇪', ['flèche blanche vers le haut à partir d\'un taquet']);
+  this.executeCharTest('⇫', ['white up arrow on pedestal']);
+  this.executeCharTest('⇬', ['white up arrow on pedestal with horizontal bar']);
+  this.executeCharTest('⇭', ['white up arrow on pedestal with vertical bar']);
+  this.executeCharTest('⇮', ['white double up arrow']);
+  this.executeCharTest('⇯', ['white double up arrow on pedestal']);
+  this.executeCharTest('⇰', ['white right arrow from wall']);
+  this.executeCharTest('⇱', ['north west arrow to corner']);
+  this.executeCharTest('⇲', ['south east arrow to corner']);
+  this.executeCharTest('⇳', ['up down white arrow']);
+  this.executeCharTest('⇴', ['right arrow with small circle']);
+  this.executeCharTest('⇵', ['flèche descendante à gauche d\'une flèche montante']);
+  this.executeCharTest('⇶', ['three right arrows']);
+  this.executeCharTest('⇷', ['left arrow with vertical stroke']);
+  this.executeCharTest('⇸', ['right arrow with vertical stroke']);
+  this.executeCharTest('⇹', ['left right arrow with vertical stroke']);
+  this.executeCharTest('⇺', ['left arrow with double vertical stroke']);
+  this.executeCharTest('⇻', ['right arrow with double vertical stroke']);
+  this.executeCharTest('⇼', ['left right arrow with double vertical stroke']);
+  this.executeCharTest('⇽', ['flèche à tête creuse gauche']);
+  this.executeCharTest('⇾', ['flèche à tête creuse droite']);
+  this.executeCharTest('⇿', ['flèche à tête creuse bilatérale']);
+  this.executeCharTest('⌁', ['electric arrow']);
+  this.executeCharTest('⌃', ['up arrowhead']);
+  this.executeCharTest('⌄', ['down arrowhead']);
+  this.executeCharTest('⌤', ['up arrowhead between two horizontal bars']);
+  this.executeCharTest('⎋', ['broken circle with northwest arrow']);
+  this.executeCharTest('➔', ['heavy wide headed right arrow']);
+  this.executeCharTest('➘', ['heavy down right arrow']);
+  this.executeCharTest('➙', ['heavy right arrow']);
+  this.executeCharTest('➚', ['heavy up right arrow']);
+  this.executeCharTest('➛', ['drafting point right arrow']);
+  this.executeCharTest('➜', ['heavy round tipped right arrow']);
+  this.executeCharTest('➝', ['triangle headed right arrow']);
+  this.executeCharTest('➞', ['heavy triangle headed right arrow']);
+  this.executeCharTest('➟', ['dashed triangle headed right arrow']);
+  this.executeCharTest('➠', ['heavy dashed triangle headed right arrow']);
+  this.executeCharTest('➡', ['black right arrow']);
+  this.executeCharTest('➢', ['three d top lighted right arrowhead']);
+  this.executeCharTest('➣', ['three d bottom lighted right arrowhead']);
+  this.executeCharTest('➤', ['black right arrowhead']);
+  this.executeCharTest('➥', ['heavy black curved down and right arrow']);
+  this.executeCharTest('➦', ['heavy black curved up and right arrow']);
+  this.executeCharTest('➧', ['squat black right arrow']);
+  this.executeCharTest('➨', ['heavy concave pointed black right arrow']);
+  this.executeCharTest('➩', ['right shaded white right arrow']);
+  this.executeCharTest('➪', ['left shaded white right arrow']);
+  this.executeCharTest('➫', ['back tilted shadowed white right arrow']);
+  this.executeCharTest('➬', ['front tilted shadowed white right arrow']);
+  this.executeCharTest('➭', ['heavy lower right shadowed white right arrow']);
+  this.executeCharTest('➮', ['heavy upper right shadowed white right arrow']);
+  this.executeCharTest('➯', ['notched lower right shadowed white right arrow']);
+  this.executeCharTest('➱', ['notched upper right shadowed white right arrow']);
+  this.executeCharTest('➲', ['circled heavy white right arrow']);
+  this.executeCharTest('➳', ['white feathered right arrow']);
+  this.executeCharTest('➴', ['black feathered down right arrow']);
+  this.executeCharTest('➵', ['black feathered right arrow']);
+  this.executeCharTest('➶', ['black feathered up right arrow']);
+  this.executeCharTest('➷', ['heavy black feathered down right arrow']);
+  this.executeCharTest('➸', ['heavy black feathered right arrow']);
+  this.executeCharTest('➹', ['heavy black feathered up right arrow']);
+  this.executeCharTest('➺', ['teardrop barbed right arrow']);
+  this.executeCharTest('➻', ['heavy teardrop shanked right arrow']);
+  this.executeCharTest('➼', ['wedge tailed right arrow']);
+  this.executeCharTest('➽', ['heavy wedge tailed right arrow']);
+  this.executeCharTest('➾', ['open outlined right arrow']);
+  this.executeCharTest('⟰', ['up quadruple arrow']);
+  this.executeCharTest('⟱', ['down quadruple arrow']);
+  this.executeCharTest('⟲', ['anticlockwise gapped circle arrow']);
+  this.executeCharTest('⟳', ['clockwise gapped circle arrow']);
+  this.executeCharTest('⟴', ['right arrow with circled plus']);
+  this.executeCharTest('⟵', ['longue flèche gauche']);
+  this.executeCharTest('⟶', ['longue flèche droite']);
+  this.executeCharTest('⟷', ['longue flèche bilatérale']);
+  this.executeCharTest('⟸', ['longue double flèche gauche']);
+  this.executeCharTest('⟹', ['longue double flèche droite']);
+  this.executeCharTest('⟺', ['longue double flèche bilatérale']);
+  this.executeCharTest('⟻', ['long left arrow from bar']);
+  this.executeCharTest('⟼', ['longue flèche d\'un taquet droite']);
+  this.executeCharTest('⟽', ['long left double arrow from bar']);
+  this.executeCharTest('⟾', ['long right double arrow from bar']);
+  this.executeCharTest('⟿', ['longue flèche en tire-bouchon droite']);
+  this.executeCharTest('⤀', ['two headed right arrow with vertical stroke']);
+  this.executeCharTest('⤁', ['two headed right arrow with double vertical stroke']);
+  this.executeCharTest('⤂', ['double left arrow with vertical stroke']);
+  this.executeCharTest('⤃', ['double right arrow with vertical stroke']);
+  this.executeCharTest('⤄', ['double left right arrow with vertical stroke']);
+  this.executeCharTest('⤅', ['flèche à deux têtes d\'un taquet droite']);
+  this.executeCharTest('⤆', ['double left arrow from bar']);
+  this.executeCharTest('⤇', ['double right arrow from bar']);
+  this.executeCharTest('⤈', ['arrow down with horizontal stroke']);
+  this.executeCharTest('⤉', ['up arrow with horizontal stroke']);
+  this.executeCharTest('⤊', ['up triple arrow']);
+  this.executeCharTest('⤋', ['down triple arrow']);
+  this.executeCharTest('⤌', ['flèche à deux traits gauche']);
+  this.executeCharTest('⤍', ['flèche à deux traits droite']);
+  this.executeCharTest('⤎', ['flèche à trois traits gauche']);
+  this.executeCharTest('⤏', ['flèche à trois traits droite']);
+  this.executeCharTest('⤐', ['flèche à trois traits et à deux têtes droite']);
+  this.executeCharTest('⤑', ['flèche à fût pointillé droite']);
+  this.executeCharTest('⤒', ['flèche jusqu\'à taquet vers le haut']);
+  this.executeCharTest('⤓', ['flèche jusqu\'à taquet vers le bas']);
+  this.executeCharTest('⤔', ['right arrow with tail with vertical stroke']);
+  this.executeCharTest('⤕', ['right arrow with tail with double vertical stroke']);
+  this.executeCharTest('⤖', ['flèche empennée à deux têtes droite']);
+  this.executeCharTest('⤗', ['right two headed arrow with tail with vertical stroke']);
+  this.executeCharTest('⤘', ['right two headed arrow with tail with double vertical stroke']);
+  this.executeCharTest('⤙', ['empenne gauche']);
+  this.executeCharTest('⤚', ['right arrow tail']);
+  this.executeCharTest('⤛', ['double empenne gauche']);
+  this.executeCharTest('⤜', ['double empenne droite']);
+  this.executeCharTest('⤝', ['flèche vers un losange noir à gauche']);
+  this.executeCharTest('⤞', ['flèche vers un losange noir à droite']);
+  this.executeCharTest('⤟', ['flèche d\'un taquet vers un losange noir à gauche']);
+  this.executeCharTest('⤠', ['flèche d\'un taquet vers un losange noir à droite']);
+  this.executeCharTest('⤡', ['north west and south east arrow']);
+  this.executeCharTest('⤢', ['north east and south west arrow']);
+  this.executeCharTest('⤣', ['flèche nord-ouest à crochet']);
+  this.executeCharTest('⤤', ['flèche nord-est à crochet']);
+  this.executeCharTest('⤥', ['flèche sud-est à crochet']);
+  this.executeCharTest('⤦', ['flèche sud-ouest à crochet']);
+  this.executeCharTest('⤧', ['flèches nord-ouest et nord-est']);
+  this.executeCharTest('⤨', ['flèches nord-est et sud-est']);
+  this.executeCharTest('⤩', ['flèches sud-est et sud-ouest']);
+  this.executeCharTest('⤪', ['flèches sud-ouest et nord-ouest']);
+  this.executeCharTest('⤭', ['south east arrow crossing north east arrow']);
+  this.executeCharTest('⤮', ['north east arrow crossing south east arrow']);
+  this.executeCharTest('⤯', ['falling diagonal crossing north east arrow']);
+  this.executeCharTest('⤰', ['rising diagonal crossing south east arrow']);
+  this.executeCharTest('⤱', ['north east arrow crossing north west arrow']);
+  this.executeCharTest('⤲', ['north west arrow crossing north east arrow']);
+  this.executeCharTest('⤳', ['flèche bossue droite']);
+  this.executeCharTest('⤴', ['arrow pointing right then curving up']);
+  this.executeCharTest('⤵', ['flèche courbe vers la droite puis le bas']);
+  this.executeCharTest('⤶', ['flèche courbe vers le bas puis la gauche']);
+  this.executeCharTest('⤷', ['flèche courbe vers le bas puis la droite']);
+  this.executeCharTest('⤸', ['côté droit d\'arc fléché sens horaire']);
+  this.executeCharTest('⤹', ['côté gauche d\'arc fléché sens antihoraire']);
+  this.executeCharTest('⤺', ['top arc anticlockwise arrow']);
+  this.executeCharTest('⤻', ['bottom arc anticlockwise arrow']);
+  this.executeCharTest('⤼', ['arc fléché sens horaire et signe moins souscrit']);
+  this.executeCharTest('⤽', ['arc fléché sens antihoraire et signe plus souscrit']);
+  this.executeCharTest('⤾', ['down right semicircular clockwise arrow']);
+  this.executeCharTest('⤿', ['down left semicircular anticlockwise arrow']);
+  this.executeCharTest('⥀', ['anticlockwise closed circle arrow']);
+  this.executeCharTest('⥁', ['clockwise closed circle arrow']);
+  this.executeCharTest('⥂', ['right arrow above short left arrow']);
+  this.executeCharTest('⥃', ['left arrow above short right arrow']);
+  this.executeCharTest('⥄', ['short right arrow above left arrow']);
+  this.executeCharTest('⥅', ['flèche droite surmontant signe moins']);
+  this.executeCharTest('⥆', ['left arrow with plus below']);
+  this.executeCharTest('⥇', ['right arrow through x']);
+  this.executeCharTest('⥈', ['petit cercle traversé d\'une flèche bilatérale']);
+  this.executeCharTest('⥉', ['petit cercle surmonté d\'une flèche montante à deux têtes']);
+  this.executeCharTest('⥰', ['flèche en épingle à cheveu droite']);
+  this.executeCharTest('⥱', ['flèche droite surmontée d\'un égal']);
+  this.executeCharTest('⥲', ['flèche droite surmontée d\'un tilde']);
+  this.executeCharTest('⥳', ['tilde surmonté d\'une flèche gauche']);
+  this.executeCharTest('⥴', ['tilde surmonté d\'une flèche droite']);
+  this.executeCharTest('⥵', ['presque égal à surmonté d\'une flèche droite']);
+  this.executeCharTest('⥶', ['inférieur à surmonté d\'une flèche gauche']);
+  this.executeCharTest('⥷', ['left arrow through less than']);
+  this.executeCharTest('⥸', ['flèche droite surmontée d\'un supérieur à']);
+  this.executeCharTest('⥹', ['flèche droite surmontée d\'un sous-ensemble de']);
+  this.executeCharTest('⥺', ['left arrow through subset']);
+  this.executeCharTest('⥻', ['flèche gauche surmontée d\'un sur-ensemble de']);
+  this.executeCharTest('⦳', ['ensemble vide flèche droite en chef']);
+  this.executeCharTest('⦴', ['ensemble vide flèche gauche en chef']);
+  this.executeCharTest('⦽', ['up arrow through circle']);
+  this.executeCharTest('⧪', ['black diamond with down arrow']);
+  this.executeCharTest('⧬', ['white circle with down arrow']);
+  this.executeCharTest('⧭', ['black circle with down arrow']);
+  this.executeCharTest('⨗', ['intégrale à crosse fléchée gauche']);
+  this.executeCharTest('⬀', ['north east white arrow']);
+  this.executeCharTest('⬁', ['north west white arrow']);
+  this.executeCharTest('⬂', ['south east white arrow']);
+  this.executeCharTest('⬃', ['south west white arrow']);
+  this.executeCharTest('⬄', ['left right white arrow']);
+  this.executeCharTest('⬅', ['left black arrow']);
+  this.executeCharTest('⬆', ['up black arrow']);
+  this.executeCharTest('⬇', ['down black arrow']);
+  this.executeCharTest('⬈', ['north east black arrow']);
+  this.executeCharTest('⬉', ['north west black arrow']);
+  this.executeCharTest('⬊', ['south east black arrow']);
+  this.executeCharTest('⬋', ['south west black arrow']);
+  this.executeCharTest('⬌', ['left right black arrow']);
+  this.executeCharTest('⬍', ['up down black arrow']);
+  this.executeCharTest('⬎', ['right arrow with tip down']);
+  this.executeCharTest('⬏', ['right arrow with tip up']);
+  this.executeCharTest('⬐', ['left arrow with tip down']);
+  this.executeCharTest('⬑', ['left arrow with tip up']);
+  this.executeCharTest('⬰', ['left arrow with small circle']);
+  this.executeCharTest('⬱', ['three left arrows']);
+  this.executeCharTest('⬲', ['left arrow with circled plus']);
+  this.executeCharTest('⬳', ['long left squiggle arrow']);
+  this.executeCharTest('⬴', ['left two headed arrow with vertical stroke']);
+  this.executeCharTest('⬵', ['left two headed arrow with double vertical stroke']);
+  this.executeCharTest('⬶', ['left two headed arrow from bar']);
+  this.executeCharTest('⬷', ['left two headed triple dash arrow']);
+  this.executeCharTest('⬸', ['left arrow with dotted stem']);
+  this.executeCharTest('⬹', ['left arrow with tail with vertical stroke']);
+  this.executeCharTest('⬺', ['left arrow with tail with double vertical stroke']);
+  this.executeCharTest('⬻', ['left two headed arrow with tail']);
+  this.executeCharTest('⬼', ['left two headed arrow with tail with vertical stroke']);
+  this.executeCharTest('⬽', ['left two headed arrow with tail with double vertical stroke']);
+  this.executeCharTest('⬾', ['left arrow through x']);
+  this.executeCharTest('⬿', ['wave arrow pointing directly left']);
+  this.executeCharTest('⭀', ['equals sign above left arrow']);
+  this.executeCharTest('⭁', ['reverse tilde operator above left arrow']);
+  this.executeCharTest('⭂', ['left arrow above reverse almost equals']);
+  this.executeCharTest('⭃', ['right arrow through greater than']);
+  this.executeCharTest('⭄', ['right arrow through superset']);
+  this.executeCharTest('⭅', ['left quadruple arrow']);
+  this.executeCharTest('⭆', ['right quadruple arrow']);
+  this.executeCharTest('⭇', ['reverse tilde operator above right arrow']);
+  this.executeCharTest('⭈', ['right arrow above reverse almost equals']);
+  this.executeCharTest('⭉', ['tilde operator above left arrow']);
+  this.executeCharTest('⭊', ['left arrow above almost equals']);
+  this.executeCharTest('⭋', ['left arrow above reverse tilde operator']);
+  this.executeCharTest('⭌', ['right arrow above reverse tilde operator']);
+  this.executeCharTest('￩', ['halfwidth left arrow']);
+  this.executeCharTest('￪', ['halfwidth up arrow']);
+  this.executeCharTest('￫', ['halfwidth right arrow']);
+  this.executeCharTest('￬', ['halfwidth down arrow']);
+  this.executeCharTest('ℓ', ['l minuscule en script']);
+  this.executeCharTest('℘', ['fonction elliptique de weierstrass']);
+  this.executeCharTest('ℼ', ['double struck pi']);
+  this.executeCharTest('ℽ', ['double struck gamma']);
+  this.executeCharTest('ℾ', ['double struck cap gamma']);
+  this.executeCharTest('ℿ', ['double struck cap pi']);
+  this.executeCharTest('⅀', ['double struck n ary summation']);
+  this.executeCharTest('ⅅ', ['D majuscule']);
+  this.executeCharTest('ⅆ', ['d minuscule ajouré en italique']);
+  this.executeCharTest('ⅇ', ['e minuscule ajouré en italique']);
+  this.executeCharTest('ⅈ', ['i minuscule ajouré en italique']);
+  this.executeCharTest('ⅉ', ['double struck italic j']);
+  this.executeCharTest('𝚤', ['dotless i']);
+  this.executeCharTest('𝚥', ['dotless j']);
+  this.executeCharTest('(', ['parenthèse gauche']);
+  this.executeCharTest(')', ['parenthèse droite']);
+  this.executeCharTest('[', ['crochet gauche']);
+  this.executeCharTest(']', ['crochet droit']);
+  this.executeCharTest('{', ['accolade gauche']);
+  this.executeCharTest('}', ['accolade droite']);
+  this.executeCharTest('⁅', ['left square bracket with quill']);
+  this.executeCharTest('⁆', ['right square bracket with quill']);
+  this.executeCharTest('⌈', ['plafond à gauche']);
+  this.executeCharTest('⌉', ['plafond à droite']);
+  this.executeCharTest('⌊', ['plancher à gauche']);
+  this.executeCharTest('⌋', ['plancher à droite']);
+  this.executeCharTest('⌌', ['repère sud-est']);
+  this.executeCharTest('⌍', ['repère sud-ouest']);
+  this.executeCharTest('⌎', ['repère nord-est']);
+  this.executeCharTest('⌏', ['repère nord-ouest']);
+  this.executeCharTest('⌜', ['coin nord-ouest']);
+  this.executeCharTest('⌝', ['coin nord-est']);
+  this.executeCharTest('⌞', ['coin sud-ouest']);
+  this.executeCharTest('⌟', ['coin sud-est']);
+  this.executeCharTest('⌠', ['moitié supérieure d\'intégrale']);
+  this.executeCharTest('⌡', ['moitié inférieure d\'intégrale']);
+  this.executeCharTest('〈', ['chevron gauche']);
+  this.executeCharTest('〉', ['chevron droite']);
+  this.executeCharTest('⎛', ['left parenthesis upper hook']);
+  this.executeCharTest('⎜', ['left parenthesis extension']);
+  this.executeCharTest('⎝', ['left parenthesis lower hook']);
+  this.executeCharTest('⎞', ['right parenthesis upper hook']);
+  this.executeCharTest('⎟', ['right parenthesis extension']);
+  this.executeCharTest('⎠', ['right parenthesis lower hook']);
+  this.executeCharTest('⎡', ['left square bracket upper corner']);
+  this.executeCharTest('⎢', ['left square bracket extension']);
+  this.executeCharTest('⎣', ['left square bracket lower corner']);
+  this.executeCharTest('⎤', ['right square bracket upper corner']);
+  this.executeCharTest('⎥', ['right square bracket extension']);
+  this.executeCharTest('⎦', ['right square bracket lower corner']);
+  this.executeCharTest('⎧', ['left curly bracket upper hook']);
+  this.executeCharTest('⎨', ['left curly bracket middle piece']);
+  this.executeCharTest('⎩', ['left curly bracket lower hook']);
+  this.executeCharTest('⎪', ['curly bracket extension']);
+  this.executeCharTest('⎫', ['right curly bracket upper hook']);
+  this.executeCharTest('⎬', ['right curly bracket middle piece']);
+  this.executeCharTest('⎭', ['right curly bracket lower hook']);
+  this.executeCharTest('⎮', ['integral extension']);
+  this.executeCharTest('⎯', ['horizontal line extension']);
+  this.executeCharTest('⎰', ['moitié supérieure gauche ou inférieure droite d\'accolade']);
+  this.executeCharTest('⎱', ['moitié supérieure droite ou inférieure gauche d\'accolade']);
+  this.executeCharTest('⎲', ['summation top']);
+  this.executeCharTest('⎳', ['summation bottom']);
+  this.executeCharTest('⎴', ['crochet vertical supérieur']);
+  this.executeCharTest('⎵', ['crochet vertical inférieur']);
+  this.executeCharTest('⎶', ['bottom square bracket over top square bracket']);
+  this.executeCharTest('⎷', ['radical symbol bottom']);
+  this.executeCharTest('⎸', ['left vertical box line']);
+  this.executeCharTest('⎹', ['right vertical box line']);
+  this.executeCharTest('⏜', ['parenthèse supérieure']);
+  this.executeCharTest('⏝', ['parenthèse inférieure']);
+  this.executeCharTest('⏞', ['accolade supérieure']);
+  this.executeCharTest('⏟', ['accolade inférieure']);
+  this.executeCharTest('⏠', ['crochet en écaille supérieur']);
+  this.executeCharTest('⏡', ['crochet en écaille inférieur']);
+  this.executeCharTest('❨', ['medium left parenthesis ornament']);
+  this.executeCharTest('❩', ['medium right parenthesis ornament']);
+  this.executeCharTest('❪', ['medium flattened left parenthesis ornament']);
+  this.executeCharTest('❫', ['medium flattened right parenthesis ornament']);
+  this.executeCharTest('❬', ['medium left pointing angle bracket ornament']);
+  this.executeCharTest('❭', ['medium right pointing angle bracket ornament']);
+  this.executeCharTest('❮', ['heavy left pointing angle quotation mark ornament']);
+  this.executeCharTest('❯', ['heavy right pointing angle quotation mark ornament']);
+  this.executeCharTest('❰', ['heavy left pointing angle bracket ornament']);
+  this.executeCharTest('❱', ['heavy right pointing angle bracket ornament']);
+  this.executeCharTest('❲', ['light left tortoise shell bracket ornament']);
+  this.executeCharTest('❳', ['light right tortoise shell bracket ornament']);
+  this.executeCharTest('❴', ['medium left curly bracket ornament']);
+  this.executeCharTest('❵', ['medium right curly bracket ornament']);
+  this.executeCharTest('⟅', ['délimiteur de sac en s gauche']);
+  this.executeCharTest('⟆', ['délimiteur de sac en s droite']);
+  this.executeCharTest('⟦', ['crochet blanc gauche']);
+  this.executeCharTest('⟧', ['crochet blanc droit']);
+  this.executeCharTest('⟨', ['chevron mathématique gauche']);
+  this.executeCharTest('⟩', ['chevron droit']);
+  this.executeCharTest('⟪', ['double chevron gauche']);
+  this.executeCharTest('⟫', ['double chevron droit']);
+  this.executeCharTest('⟬', ['crochet gauche en écaille blanche']);
+  this.executeCharTest('⟭', ['crochet droit en écaille blanche']);
+  this.executeCharTest('⟮', ['parenthèse gauche aplatie']);
+  this.executeCharTest('⟯', ['parenthèse droite aplatie']);
+  this.executeCharTest('⦃', ['left white curly bracket']);
+  this.executeCharTest('⦄', ['right white curly bracket']);
+  this.executeCharTest('⦅', ['parenthèse gauche ajourée']);
+  this.executeCharTest('⦆', ['parenthèse droite ajourée']);
+  this.executeCharTest('⦇', ['z notation left image bracket']);
+  this.executeCharTest('⦈', ['z notation right image bracket']);
+  this.executeCharTest('⦉', ['z notation left binding bracket']);
+  this.executeCharTest('⦊', ['z notation right binding bracket']);
+  this.executeCharTest('⦋', ['crochet gauche avec barre souscrite']);
+  this.executeCharTest('⦌', ['crochet droit avec barre souscrite']);
+  this.executeCharTest('⦍', ['crochet gauche avec trait dans le coin supérieur']);
+  this.executeCharTest('⦎', ['crochet droit avec trait dans le coin inférieur']);
+  this.executeCharTest('⦏', ['crochet gauche avec trait dans le coin inférieur']);
+  this.executeCharTest('⦐', ['crochet droit avec trait dans le coin supérieur']);
+  this.executeCharTest('⦑', ['chevron gauche pointé']);
+  this.executeCharTest('⦒', ['chevron droit pointé']);
+  this.executeCharTest('⦓', ['parenthèse arc gauche et inférieur à']);
+  this.executeCharTest('⦔', ['parenthèse arc droite et supérieur à']);
+  this.executeCharTest('⦕', ['parenthèse double arc droite et supérieur à']);
+  this.executeCharTest('⦖', ['parenthèse double arc gauche et inférieur à']);
+  this.executeCharTest('⦗', ['left black tortoise shell bracket']);
+  this.executeCharTest('⦘', ['right black tortoise shell bracket']);
+  this.executeCharTest('⧘', ['left wiggly fence']);
+  this.executeCharTest('⧙', ['right wiggly fence']);
+  this.executeCharTest('⧚', ['double clôture dentelée gauche']);
+  this.executeCharTest('⧛', ['right double wiggly fence']);
+  this.executeCharTest('⧼', ['left pointing curved angle bracket']);
+  this.executeCharTest('⧽', ['right pointing curved angle bracket']);
+  this.executeCharTest('⸢', ['top left half bracket']);
+  this.executeCharTest('⸣', ['top right half bracket']);
+  this.executeCharTest('⸤', ['bottom left half bracket']);
+  this.executeCharTest('⸥', ['bottom right half bracket']);
+  this.executeCharTest('⸦', ['left sideways U bracket']);
+  this.executeCharTest('⸧', ['right sideways U bracket']);
+  this.executeCharTest('⸨', ['left double parenthesis']);
+  this.executeCharTest('⸩', ['right double parenthesis']);
+  this.executeCharTest('〈', ['left angle bracket']);
+  this.executeCharTest('〉', ['right angle bracket']);
+  this.executeCharTest('《', ['double chevron gauche']);
+  this.executeCharTest('》', ['double chevron droit']);
+  this.executeCharTest('「', ['left corner bracket']);
+  this.executeCharTest('」', ['right corner bracket']);
+  this.executeCharTest('『', ['left white corner bracket']);
+  this.executeCharTest('』', ['right white corner bracket']);
+  this.executeCharTest('【', ['left black lenticular bracket']);
+  this.executeCharTest('】', ['right black lenticular bracket']);
+  this.executeCharTest('〔', ['crochet gauche en écaille']);
+  this.executeCharTest('〕', ['crochet droit en écaille']);
+  this.executeCharTest('〖', ['left white lenticular bracket']);
+  this.executeCharTest('〗', ['right white lenticular bracket']);
+  this.executeCharTest('〘', ['left white tortoise shell bracket']);
+  this.executeCharTest('〙', ['right white tortoise shell bracket']);
+  this.executeCharTest('〚', ['crochet blanc gauche']);
+  this.executeCharTest('〛', ['crochet blanc droit']);
+  this.executeCharTest('〝', ['reversed double prime quotation mark']);
+  this.executeCharTest('〞', ['guillemet double prime']);
+  this.executeCharTest('〟', ['low double prime quotation mark']);
+  this.executeCharTest('﴾', ['ornate left parenthesis']);
+  this.executeCharTest('﴿', ['ornate right parenthesis']);
+  this.executeCharTest('︗', ['presentation form for vertical left white lenticular bracket']);
+  this.executeCharTest('︘', ['presentation form for vertical right white lenticular brakcet']);
+  this.executeCharTest('︵', ['forme de présentation de parenthèse gauche verticale']);
+  this.executeCharTest('︶', ['forme de présentation de parenthèse droite verticale']);
+  this.executeCharTest('︷', ['forme de présentation d\'accolade gauche verticale']);
+  this.executeCharTest('︸', ['forme de présentation d\'accolade droite verticale']);
+  this.executeCharTest('︹', ['presentation form for vertical left tortoise shell bracket']);
+  this.executeCharTest('︺', ['presentation form for vertical right tortoise shell bracket']);
+  this.executeCharTest('︻', ['presentation form for vertical left black lenticular bracket']);
+  this.executeCharTest('︼', ['presentation form for vertical right black lenticular bracket']);
+  this.executeCharTest('︽', ['presentation form for vertical left double angle bracket']);
+  this.executeCharTest('︾', ['presentation form for vertical right double angle bracket']);
+  this.executeCharTest('︿', ['over angle bracket']);
+  this.executeCharTest('﹀', ['under angle bracket']);
+  this.executeCharTest('﹁', ['presentation form for vertical left corner bracket']);
+  this.executeCharTest('﹂', ['presentation form for vertical right corner bracket']);
+  this.executeCharTest('﹃', ['presentation form for vertical left white corner bracket']);
+  this.executeCharTest('﹄', ['presentation form for vertical right white corner bracket']);
+  this.executeCharTest('﹇', ['presentation form for vertical left square bracket']);
+  this.executeCharTest('﹈', ['presentation form for vertical right square bracket']);
+  this.executeCharTest('﹙', ['small left parenthesis']);
+  this.executeCharTest('﹚', ['small right parenthesis']);
+  this.executeCharTest('﹛', ['small left curly bracket']);
+  this.executeCharTest('﹜', ['small right curly bracket']);
+  this.executeCharTest('﹝', ['small left tortoise shell bracket']);
+  this.executeCharTest('﹞', ['small right tortoise shell bracket']);
+  this.executeCharTest('（', ['fullwidth left parenthesis']);
+  this.executeCharTest('）', ['fullwidth right parenthesis']);
+  this.executeCharTest('［', ['fullwidth left square bracket']);
+  this.executeCharTest('］', ['fullwidth right square bracket']);
+  this.executeCharTest('｛', ['fullwidth left curly bracket']);
+  this.executeCharTest('｝', ['fullwidth right curly bracket']);
+  this.executeCharTest('｟', ['fullwidth white left parenthesis']);
+  this.executeCharTest('｠', ['fullwidth white right parenthesis']);
+  this.executeCharTest('｢', ['halfwidth left corner bracket']);
+  this.executeCharTest('｣', ['halfwidth right corner bracket']);
+  this.executeCharTest('²', ['exposant deux']);
+  this.executeCharTest('³', ['exposant trois']);
+  this.executeCharTest('¹', ['exposant un']);
+  this.executeCharTest('¼', ['un quart']);
+  this.executeCharTest('½', ['un demi']);
+  this.executeCharTest('¾', ['trois quarts']);
+  this.executeCharTest('⁰', ['super zero']);
+  this.executeCharTest('⁴', ['super four']);
+  this.executeCharTest('⁵', ['super five']);
+  this.executeCharTest('⁶', ['super six']);
+  this.executeCharTest('⁷', ['super seven']);
+  this.executeCharTest('⁸', ['super eight']);
+  this.executeCharTest('⁹', ['super nine']);
+  this.executeCharTest('₀', ['sub zero']);
+  this.executeCharTest('₁', ['sub one']);
+  this.executeCharTest('₂', ['sub two']);
+  this.executeCharTest('₃', ['sub three']);
+  this.executeCharTest('₄', ['sub four']);
+  this.executeCharTest('₅', ['sub five']);
+  this.executeCharTest('₆', ['sub six']);
+  this.executeCharTest('₇', ['sub seven']);
+  this.executeCharTest('₈', ['sub eight']);
+  this.executeCharTest('₉', ['sub nine']);
+  this.executeCharTest('⅐', ['one seventh']);
+  this.executeCharTest('⅑', ['one ninth']);
+  this.executeCharTest('⅒', ['one tenth']);
+  this.executeCharTest('⅓', ['un tiers']);
+  this.executeCharTest('⅔', ['deux tiers']);
+  this.executeCharTest('⅕', ['un cinquième']);
+  this.executeCharTest('⅖', ['deux cinquièmes']);
+  this.executeCharTest('⅗', ['trois cinquièmes']);
+  this.executeCharTest('⅘', ['quatre cinquièmes']);
+  this.executeCharTest('⅙', ['un sixième']);
+  this.executeCharTest('⅚', ['cinq sixièmes']);
+  this.executeCharTest('⅛', ['un huitième']);
+  this.executeCharTest('⅜', ['trois huitièmes']);
+  this.executeCharTest('⅝', ['cinq huitièmes']);
+  this.executeCharTest('⅞', ['sept huitièmes']);
+  this.executeCharTest('⅟', ['numerator one']);
+  this.executeCharTest('↉', ['zero thirds']);
+  this.executeCharTest('①', ['circled one']);
+  this.executeCharTest('②', ['circled two']);
+  this.executeCharTest('③', ['circled three']);
+  this.executeCharTest('④', ['circled four']);
+  this.executeCharTest('⑤', ['circled five']);
+  this.executeCharTest('⑥', ['circled six']);
+  this.executeCharTest('⑦', ['circled seven']);
+  this.executeCharTest('⑧', ['circled eight']);
+  this.executeCharTest('⑨', ['circled nine']);
+  this.executeCharTest('⑩', ['circled ten']);
+  this.executeCharTest('⑪', ['circled eleven']);
+  this.executeCharTest('⑫', ['circled twelve']);
+  this.executeCharTest('⑬', ['circled thirteen']);
+  this.executeCharTest('⑭', ['circled fourteen']);
+  this.executeCharTest('⑮', ['circled fifteen']);
+  this.executeCharTest('⑯', ['circled sixteen']);
+  this.executeCharTest('⑰', ['circled seventeen']);
+  this.executeCharTest('⑱', ['circled eighteen']);
+  this.executeCharTest('⑲', ['circled nineteen']);
+  this.executeCharTest('⑳', ['circled twenty']);
+  this.executeCharTest('⑴', ['parenthesized one']);
+  this.executeCharTest('⑵', ['parenthesized two']);
+  this.executeCharTest('⑶', ['parenthesized three']);
+  this.executeCharTest('⑷', ['parenthesized four']);
+  this.executeCharTest('⑸', ['parenthesized five']);
+  this.executeCharTest('⑹', ['parenthesized six']);
+  this.executeCharTest('⑺', ['parenthesized seven']);
+  this.executeCharTest('⑻', ['parenthesized eight']);
+  this.executeCharTest('⑼', ['parenthesized nine']);
+  this.executeCharTest('⑽', ['parenthesized ten']);
+  this.executeCharTest('⑾', ['parenthesized eleven']);
+  this.executeCharTest('⑿', ['parenthesized twelve']);
+  this.executeCharTest('⒀', ['parenthesized thirteen']);
+  this.executeCharTest('⒁', ['parenthesized fourteen']);
+  this.executeCharTest('⒂', ['parenthesized fifteen']);
+  this.executeCharTest('⒃', ['parenthesized sixteen']);
+  this.executeCharTest('⒄', ['parenthesized seventeen']);
+  this.executeCharTest('⒅', ['parenthesized eighteen']);
+  this.executeCharTest('⒆', ['parenthesized nineteen']);
+  this.executeCharTest('⒇', ['parenthesized twenty']);
+  this.executeCharTest('⒈', ['one period']);
+  this.executeCharTest('⒉', ['two period']);
+  this.executeCharTest('⒊', ['three period']);
+  this.executeCharTest('⒋', ['four period']);
+  this.executeCharTest('⒌', ['five period']);
+  this.executeCharTest('⒍', ['six period']);
+  this.executeCharTest('⒎', ['seven period']);
+  this.executeCharTest('⒏', ['eight period']);
+  this.executeCharTest('⒐', ['nine period']);
+  this.executeCharTest('⒑', ['ten period']);
+  this.executeCharTest('⒒', ['eleven period']);
+  this.executeCharTest('⒓', ['twelve period']);
+  this.executeCharTest('⒔', ['thirteen period']);
+  this.executeCharTest('⒕', ['fourteen period']);
+  this.executeCharTest('⒖', ['fifteen period']);
+  this.executeCharTest('⒗', ['sixteen period']);
+  this.executeCharTest('⒘', ['seventeen period']);
+  this.executeCharTest('⒙', ['eighteen period']);
+  this.executeCharTest('⒚', ['nineteen period']);
+  this.executeCharTest('⒛', ['twenty period']);
+  this.executeCharTest('⓪', ['circled zero']);
+  this.executeCharTest('⓫', ['negative circled eleven']);
+  this.executeCharTest('⓬', ['negative circled twelve']);
+  this.executeCharTest('⓭', ['negative circled thirteen']);
+  this.executeCharTest('⓮', ['negative circled fourteen']);
+  this.executeCharTest('⓯', ['negative circled fifteen']);
+  this.executeCharTest('⓰', ['negative circled sixteen']);
+  this.executeCharTest('⓱', ['negative circled seventeen']);
+  this.executeCharTest('⓲', ['negative circled eighteen']);
+  this.executeCharTest('⓳', ['negative circled nineteen']);
+  this.executeCharTest('⓴', ['negative circled twenty']);
+  this.executeCharTest('⓵', ['double circled one']);
+  this.executeCharTest('⓶', ['double circled two']);
+  this.executeCharTest('⓷', ['double circled three']);
+  this.executeCharTest('⓸', ['double circled four']);
+  this.executeCharTest('⓹', ['double circled five']);
+  this.executeCharTest('⓺', ['double circled six']);
+  this.executeCharTest('⓻', ['double circled seven']);
+  this.executeCharTest('⓼', ['double circled eight']);
+  this.executeCharTest('⓽', ['double circled nine']);
+  this.executeCharTest('⓾', ['double circled ten']);
+  this.executeCharTest('⓿', ['negative circled zero']);
+  this.executeCharTest('❶', ['inverse circled one']);
+  this.executeCharTest('❷', ['inverse circled two']);
+  this.executeCharTest('❸', ['inverse circled three']);
+  this.executeCharTest('❹', ['inverse circled four']);
+  this.executeCharTest('❺', ['inverse circled five']);
+  this.executeCharTest('❻', ['inverse circled six']);
+  this.executeCharTest('❼', ['inverse circled seven']);
+  this.executeCharTest('❽', ['inverse circled eight']);
+  this.executeCharTest('❾', ['inverse circled nine']);
+  this.executeCharTest('❿', ['inverse circled ten']);
+  this.executeCharTest('➀', ['circled one']);
+  this.executeCharTest('➁', ['circled two']);
+  this.executeCharTest('➂', ['circled three']);
+  this.executeCharTest('➃', ['circled four']);
+  this.executeCharTest('➄', ['circled five']);
+  this.executeCharTest('➅', ['circled six']);
+  this.executeCharTest('➆', ['circled seven']);
+  this.executeCharTest('➇', ['circled eight']);
+  this.executeCharTest('➈', ['circled nine']);
+  this.executeCharTest('➉', ['circled ten']);
+  this.executeCharTest('➊', ['inverse circled one']);
+  this.executeCharTest('➋', ['inverse circled two']);
+  this.executeCharTest('➌', ['inverse circled three']);
+  this.executeCharTest('➍', ['inverse circled four']);
+  this.executeCharTest('➎', ['inverse circled five']);
+  this.executeCharTest('➏', ['inverse circled six']);
+  this.executeCharTest('➐', ['inverse circled seven']);
+  this.executeCharTest('➑', ['inverse circled eight']);
+  this.executeCharTest('➒', ['inverse circled nine']);
+  this.executeCharTest('➓', ['inverse circled ten']);
+  this.executeCharTest('㉈', ['circled ten on black square']);
+  this.executeCharTest('㉉', ['circled twenty on black square']);
+  this.executeCharTest('㉊', ['circled thirty on black square']);
+  this.executeCharTest('㉋', ['circled forty on black square']);
+  this.executeCharTest('㉌', ['circled fifty on black square']);
+  this.executeCharTest('㉍', ['circled sixty on black square']);
+  this.executeCharTest('㉎', ['circled seventy on black square']);
+  this.executeCharTest('㉏', ['circled eighty on black square']);
+  this.executeCharTest('㉑', ['circled twenty one']);
+  this.executeCharTest('㉒', ['circled twenty two']);
+  this.executeCharTest('㉓', ['circled twenty three']);
+  this.executeCharTest('㉔', ['circled twenty four']);
+  this.executeCharTest('㉕', ['circled twenty five']);
+  this.executeCharTest('㉖', ['circled twenty six']);
+  this.executeCharTest('㉗', ['circled twenty seven']);
+  this.executeCharTest('㉘', ['circled twenty eight']);
+  this.executeCharTest('㉙', ['circled twenty nine']);
+  this.executeCharTest('㉚', ['circled thirty']);
+  this.executeCharTest('㉛', ['circled thirty one']);
+  this.executeCharTest('㉜', ['circled thirty two']);
+  this.executeCharTest('㉝', ['circled thirty three']);
+  this.executeCharTest('㉞', ['circled thirty four']);
+  this.executeCharTest('㉟', ['circled thirty five']);
+  this.executeCharTest('㊱', ['circled thirty six']);
+  this.executeCharTest('㊲', ['circled thirty seven']);
+  this.executeCharTest('㊳', ['circled thirty eight']);
+  this.executeCharTest('㊴', ['circled thirty nine']);
+  this.executeCharTest('㊵', ['circled forty']);
+  this.executeCharTest('㊶', ['circled forty one']);
+  this.executeCharTest('㊷', ['circled forty two']);
+  this.executeCharTest('㊸', ['circled forty three']);
+  this.executeCharTest('㊹', ['circled forty four']);
+  this.executeCharTest('㊺', ['circled forty five']);
+  this.executeCharTest('㊻', ['circled forty six']);
+  this.executeCharTest('㊼', ['circled forty seven']);
+  this.executeCharTest('㊽', ['circled forty eight']);
+  this.executeCharTest('㊾', ['circled forty nine']);
+  this.executeCharTest('㊿', ['circled fifty']);
+  this.executeCharTest('０', ['zero']);
+  this.executeCharTest('１', ['one']);
+  this.executeCharTest('２', ['two']);
+  this.executeCharTest('３', ['three']);
+  this.executeCharTest('４', ['four']);
+  this.executeCharTest('５', ['five']);
+  this.executeCharTest('６', ['six']);
+  this.executeCharTest('７', ['seven']);
+  this.executeCharTest('８', ['eight']);
+  this.executeCharTest('９', ['nine']);
+  this.executeCharTest('𝟎', ['chiffre mathématique gras 0']);
+  this.executeCharTest('𝟏', ['chiffre mathématique gras 1']);
+  this.executeCharTest('𝟐', ['chiffre mathématique gras 2']);
+  this.executeCharTest('𝟑', ['chiffre mathématique gras 3']);
+  this.executeCharTest('𝟒', ['chiffre mathématique gras 4']);
+  this.executeCharTest('𝟓', ['chiffre mathématique gras 5']);
+  this.executeCharTest('𝟔', ['chiffre mathématique gras 6']);
+  this.executeCharTest('𝟕', ['chiffre mathématique gras 7']);
+  this.executeCharTest('𝟖', ['chiffre mathématique gras 8']);
+  this.executeCharTest('𝟗', ['chiffre mathématique gras 9']);
+  this.executeCharTest('𝟘', ['chiffre mathématique ajouré 0']);
+  this.executeCharTest('𝟙', ['chiffre mathématique ajouré 1']);
+  this.executeCharTest('𝟚', ['chiffre mathématique ajouré 2']);
+  this.executeCharTest('𝟛', ['chiffre mathématique ajouré 3']);
+  this.executeCharTest('𝟜', ['chiffre mathématique ajouré 4']);
+  this.executeCharTest('𝟝', ['chiffre mathématique ajouré 5']);
+  this.executeCharTest('𝟞', ['chiffre mathématique ajouré 6']);
+  this.executeCharTest('𝟟', ['chiffre mathématique ajouré 7']);
+  this.executeCharTest('𝟠', ['chiffre mathématique ajouré 8']);
+  this.executeCharTest('𝟡', ['chiffre mathématique ajouré 9']);
+  this.executeCharTest('𝟢', ['chiffre mathématique sans empattement 0']);
+  this.executeCharTest('𝟣', ['chiffre mathématique sans empattement 1']);
+  this.executeCharTest('𝟤', ['chiffre mathématique sans empattement 2']);
+  this.executeCharTest('𝟥', ['chiffre mathématique sans empattement 3']);
+  this.executeCharTest('𝟦', ['chiffre mathématique sans empattement 4']);
+  this.executeCharTest('𝟧', ['chiffre mathématique sans empattement 5']);
+  this.executeCharTest('𝟨', ['chiffre mathématique sans empattement 6']);
+  this.executeCharTest('𝟩', ['chiffre mathématique sans empattement 7']);
+  this.executeCharTest('𝟪', ['chiffre mathématique sans empattement 8']);
+  this.executeCharTest('𝟫', ['chiffre mathématique sans empattement 9']);
+  this.executeCharTest('𝟬', ['chiffre mathématique gras sans empattement 0']);
+  this.executeCharTest('𝟭', ['chiffre mathématique gras sans empattement 1']);
+  this.executeCharTest('𝟮', ['chiffre mathématique gras sans empattement 2']);
+  this.executeCharTest('𝟯', ['chiffre mathématique gras sans empattement 3']);
+  this.executeCharTest('𝟰', ['chiffre mathématique gras sans empattement 4']);
+  this.executeCharTest('𝟱', ['chiffre mathématique gras sans empattement 5']);
+  this.executeCharTest('𝟲', ['chiffre mathématique gras sans empattement 6']);
+  this.executeCharTest('𝟳', ['chiffre mathématique gras sans empattement 7']);
+  this.executeCharTest('𝟴', ['chiffre mathématique gras sans empattement 8']);
+  this.executeCharTest('𝟵', ['chiffre mathématique gras sans empattement 9']);
+  this.executeCharTest('𝟶', ['chiffre mathématique à chasse fixe 0']);
+  this.executeCharTest('𝟷', ['chiffre mathématique à chasse fixe 1']);
+  this.executeCharTest('𝟸', ['chiffre mathématique à chasse fixe 2']);
+  this.executeCharTest('𝟹', ['chiffre mathématique à chasse fixe 3']);
+  this.executeCharTest('𝟺', ['chiffre mathématique à chasse fixe 4']);
+  this.executeCharTest('𝟻', ['chiffre mathématique à chasse fixe 5']);
+  this.executeCharTest('𝟼', ['chiffre mathématique à chasse fixe 6']);
+  this.executeCharTest('𝟽', ['chiffre mathématique à chasse fixe 7']);
+  this.executeCharTest('𝟾', ['chiffre mathématique à chasse fixe 8']);
+  this.executeCharTest('𝟿', ['chiffre mathématique à chasse fixe 9']);
+  this.executeCharTest('🄀', ['zero period']);
+  this.executeCharTest('🄁', ['zero comma']);
+  this.executeCharTest('🄂', ['one comma']);
+  this.executeCharTest('🄃', ['two comma']);
+  this.executeCharTest('🄄', ['three comma']);
+  this.executeCharTest('🄅', ['four comma']);
+  this.executeCharTest('🄆', ['five comma']);
+  this.executeCharTest('🄇', ['six comma']);
+  this.executeCharTest('🄈', ['seven comma']);
+  this.executeCharTest('🄉', ['eight comma']);
+  this.executeCharTest('🄊', ['nine comma']);
+  this.executeCharTest('─', ['filet horizontal fin']);
+  this.executeCharTest('━', ['box drawings heavy horizontal']);
+  this.executeCharTest('│', ['filet vertical fin']);
+  this.executeCharTest('┃', ['box drawings heavy vertical']);
+  this.executeCharTest('┄', ['box drawings light triple dash horizontal']);
+  this.executeCharTest('┅', ['box drawings heavy triple dash horizontal']);
+  this.executeCharTest('┆', ['box drawings light triple dash vertical']);
+  this.executeCharTest('┇', ['box drawings heavy triple dash vertical']);
+  this.executeCharTest('┈', ['box drawings light quadruple dash horizontal']);
+  this.executeCharTest('┉', ['box drawings heavy quadruple dash horizontal']);
+  this.executeCharTest('┊', ['box drawings light quadruple dash vertical']);
+  this.executeCharTest('┋', ['box drawings heavy quadruple dash vertical']);
+  this.executeCharTest('┌', ['filet fin vers le bas et vers la droite']);
+  this.executeCharTest('┍', ['box drawings down light and right heavy']);
+  this.executeCharTest('┎', ['box drawings down heavy and right light']);
+  this.executeCharTest('┏', ['box drawings heavy down and right']);
+  this.executeCharTest('┐', ['filet fin vers le bas et vers la gauche']);
+  this.executeCharTest('┑', ['box drawings down light and left heavy']);
+  this.executeCharTest('┒', ['box drawings down heavy and left light']);
+  this.executeCharTest('┓', ['box drawings heavy down and left']);
+  this.executeCharTest('└', ['filet fin vers le haut et vers la droite']);
+  this.executeCharTest('┕', ['box drawings up light and right heavy']);
+  this.executeCharTest('┖', ['box drawings up heavy and right light']);
+  this.executeCharTest('┗', ['box drawings heavy up and right']);
+  this.executeCharTest('┘', ['filet fin vers le haut et vers la gauche']);
+  this.executeCharTest('┙', ['box drawings up light and left heavy']);
+  this.executeCharTest('┚', ['box drawings up heavy and left light']);
+  this.executeCharTest('┛', ['box drawings heavy up and left']);
+  this.executeCharTest('├', ['filet fin vertical et vers la droite']);
+  this.executeCharTest('┝', ['box drawings vertical light and right heavy']);
+  this.executeCharTest('┞', ['box drawings up heavy and right down light']);
+  this.executeCharTest('┟', ['box drawings down heavy and right up light']);
+  this.executeCharTest('┠', ['box drawings vertical heavy and right light']);
+  this.executeCharTest('┡', ['box drawings down light and right up heavy']);
+  this.executeCharTest('┢', ['box drawings up light and right down heavy']);
+  this.executeCharTest('┣', ['box drawings heavy vertical and right']);
+  this.executeCharTest('┤', ['filet fin vertical et vers la gauche']);
+  this.executeCharTest('┥', ['box drawings vertical light and left heavy']);
+  this.executeCharTest('┦', ['box drawings up heavy and left down light']);
+  this.executeCharTest('┧', ['box drawings down heavy and left up light']);
+  this.executeCharTest('┨', ['box drawings vertical heavy and left light']);
+  this.executeCharTest('┩', ['box drawings down light and left up heavy']);
+  this.executeCharTest('┪', ['box drawings up light and left down heavy']);
+  this.executeCharTest('┫', ['box drawings heavy vertical and left']);
+  this.executeCharTest('┬', ['filet fin vers le bas et horizontal']);
+  this.executeCharTest('┭', ['box drawings left heavy and right down light']);
+  this.executeCharTest('┮', ['box drawings right heavy and left down light']);
+  this.executeCharTest('┯', ['box drawings down light and horizontal heavy']);
+  this.executeCharTest('┰', ['box drawings down heavy and horizontal light']);
+  this.executeCharTest('┱', ['box drawings right light and left down heavy']);
+  this.executeCharTest('┲', ['box drawings left light and right down heavy']);
+  this.executeCharTest('┳', ['box drawings heavy down and horizontal']);
+  this.executeCharTest('┴', ['filet fin vers le haut et horizontal']);
+  this.executeCharTest('┵', ['box drawings left heavy and right up light']);
+  this.executeCharTest('┶', ['box drawings right heavy and left up light']);
+  this.executeCharTest('┷', ['box drawings up light and horizontal heavy']);
+  this.executeCharTest('┸', ['box drawings up heavy and horizontal light']);
+  this.executeCharTest('┹', ['box drawings right light and left up heavy']);
+  this.executeCharTest('┺', ['box drawings left light and right up heavy']);
+  this.executeCharTest('┻', ['box drawings heavy up and horizontal']);
+  this.executeCharTest('┼', ['filet fin vertical et horizontal']);
+  this.executeCharTest('┽', ['box drawings left heavy and right vertical light']);
+  this.executeCharTest('┾', ['box drawings right heavy and left vertical light']);
+  this.executeCharTest('┿', ['box drawings vertical light and horizontal heavy']);
+  this.executeCharTest('╀', ['box drawings up heavy and down horizontal light']);
+  this.executeCharTest('╁', ['box drawings down heavy and up horizontal light']);
+  this.executeCharTest('╂', ['box drawings vertical heavy and horizontal light']);
+  this.executeCharTest('╃', ['box drawings left up heavy and right down light']);
+  this.executeCharTest('╄', ['box drawings right up heavy and left down light']);
+  this.executeCharTest('╅', ['box drawings left down heavy and right up light']);
+  this.executeCharTest('╆', ['box drawings right down heavy and left up light']);
+  this.executeCharTest('╇', ['box drawings down light and up horizontal heavy']);
+  this.executeCharTest('╈', ['box drawings up light and down horizontal heavy']);
+  this.executeCharTest('╉', ['box drawings right light and left vertical heavy']);
+  this.executeCharTest('╊', ['box drawings left light and right vertical heavy']);
+  this.executeCharTest('╋', ['box drawings heavy vertical and horizontal']);
+  this.executeCharTest('╌', ['box drawings light double dash horizontal']);
+  this.executeCharTest('╍', ['box drawings heavy double dash horizontal']);
+  this.executeCharTest('╎', ['box drawings light double dash vertical']);
+  this.executeCharTest('╏', ['box drawings heavy double dash vertical']);
+  this.executeCharTest('═', ['filet double horizontal']);
+  this.executeCharTest('║', ['filet double vertical']);
+  this.executeCharTest('╒', ['filet simple le bas et double vers la droite']);
+  this.executeCharTest('╓', ['filet double vers le bas et simple vers la droite']);
+  this.executeCharTest('╔', ['filet double vers le bas et vers la droite']);
+  this.executeCharTest('╕', ['filet simple vers le bas et double vers la gauche']);
+  this.executeCharTest('╖', ['filet double vers le bas et simple vers la gauche']);
+  this.executeCharTest('╗', ['filet double vers le bas et vers la gauche']);
+  this.executeCharTest('╘', ['filet simple vers le haut et double vers la droite']);
+  this.executeCharTest('╙', ['filet double vers le haut et simple vers la droite']);
+  this.executeCharTest('╚', ['filet double vers le haut et vers la droite']);
+  this.executeCharTest('╛', ['filet simple vers le haut et double vers la gauche']);
+  this.executeCharTest('╜', ['filet double vers le haut et simple vers la gauche']);
+  this.executeCharTest('╝', ['filet double vers le haut et vers la gauche']);
+  this.executeCharTest('╞', ['filet vertical simple et droit double']);
+  this.executeCharTest('╟', ['filet vertical double et droit simple']);
+  this.executeCharTest('╠', ['filet double vertical et vers la droite']);
+  this.executeCharTest('╡', ['filet vertical simple et gauche double']);
+  this.executeCharTest('╢', ['filet vertical double et gauche simple']);
+  this.executeCharTest('╣', ['filet double vertical et vers la gauche']);
+  this.executeCharTest('╤', ['filet vers le bas simple et horizontal double']);
+  this.executeCharTest('╥', ['filet vers le bas double et horizontal simple']);
+  this.executeCharTest('╦', ['filet double vers le bas et horizontal']);
+  this.executeCharTest('╧', ['filet vers le haut simple et horizontal double']);
+  this.executeCharTest('╨', ['filet vers le haut double et horizontal simple']);
+  this.executeCharTest('╩', ['filet double vers le haut et horizontal']);
+  this.executeCharTest('╪', ['filet vertical simple et horizontal double']);
+  this.executeCharTest('╫', ['filet vertical double et horizontal simple']);
+  this.executeCharTest('╬', ['filet double vertical et horizontall']);
+  this.executeCharTest('╭', ['box drawings light arc down and right']);
+  this.executeCharTest('╮', ['box drawings light arc down and left']);
+  this.executeCharTest('╯', ['box drawings light arc up and left']);
+  this.executeCharTest('╰', ['box drawings light arc up and right']);
+  this.executeCharTest('╱', ['box drawings light diagonal upper right to lower left']);
+  this.executeCharTest('╲', ['box drawings light diagonal upper left to lower right']);
+  this.executeCharTest('╳', ['box drawings light diagonal cross']);
+  this.executeCharTest('╴', ['box drawings light left']);
+  this.executeCharTest('╵', ['box drawings light up']);
+  this.executeCharTest('╶', ['box drawings light right']);
+  this.executeCharTest('╷', ['box drawings light down']);
+  this.executeCharTest('╸', ['box drawings heavy left']);
+  this.executeCharTest('╹', ['box drawings heavy up']);
+  this.executeCharTest('╺', ['box drawings heavy right']);
+  this.executeCharTest('╻', ['box drawings heavy down']);
+  this.executeCharTest('╼', ['box drawings light left and heavy right']);
+  this.executeCharTest('╽', ['box drawings light up and heavy down']);
+  this.executeCharTest('╾', ['box drawings heavy left and light right']);
+  this.executeCharTest('╿', ['box drawings heavy up and light down']);
+  this.executeCharTest('▀', ['moitié supérieure de pavé']);
+  this.executeCharTest('▁', ['lower one eighth block']);
+  this.executeCharTest('▂', ['lower one quarter block']);
+  this.executeCharTest('▃', ['lower three eighths block']);
+  this.executeCharTest('▄', ['moitié inférieure de pavé']);
+  this.executeCharTest('▅', ['lower five eighths block']);
+  this.executeCharTest('▆', ['lower three quarters block']);
+  this.executeCharTest('▇', ['lower seven eighths block']);
+  this.executeCharTest('█', ['pavé plein']);
+  this.executeCharTest('▉', ['left seven eighths block']);
+  this.executeCharTest('▊', ['left three quarters block']);
+  this.executeCharTest('▋', ['left five eighths block']);
+  this.executeCharTest('▌', ['left half block']);
+  this.executeCharTest('▍', ['left three eighths block']);
+  this.executeCharTest('▎', ['left one quarter block']);
+  this.executeCharTest('▏', ['left one eighth block']);
+  this.executeCharTest('▐', ['right half block']);
+  this.executeCharTest('░', ['ombre légère']);
+  this.executeCharTest('▒', ['ombre moyenne']);
+  this.executeCharTest('▓', ['ombre foncée']);
+  this.executeCharTest('▔', ['upper one eighth block']);
+  this.executeCharTest('▕', ['right one eighth block']);
+  this.executeCharTest('▖', ['quadrant lower left']);
+  this.executeCharTest('▗', ['quadrant lower right']);
+  this.executeCharTest('▘', ['quadrant upper left']);
+  this.executeCharTest('▙', ['quadrant upper left and lower left and lower right']);
+  this.executeCharTest('▚', ['quadrant upper left and lower right']);
+  this.executeCharTest('▛', ['quadrant upper left and upper right and lower left']);
+  this.executeCharTest('▜', ['quadrant upper left and upper right and lower right']);
+  this.executeCharTest('▝', ['quadrant upper right']);
+  this.executeCharTest('▞', ['quadrant upper right and lower left']);
+  this.executeCharTest('▟', ['quadrant upper right and lower left and lower right']);
+  this.executeCharTest('■', ['petit carré noir']);
+  this.executeCharTest('□', ['carré blanc']);
+  this.executeCharTest('▢', ['white square with rounded corners']);
+  this.executeCharTest('▣', ['white square containing black small square']);
+  this.executeCharTest('▤', ['square with horizontal fill']);
+  this.executeCharTest('▥', ['square with vertical fill']);
+  this.executeCharTest('▦', ['square with orthogonal crosshatch fill']);
+  this.executeCharTest('▧', ['square with upper left to lower right fill']);
+  this.executeCharTest('▨', ['square with upper right to lower left fill']);
+  this.executeCharTest('▩', ['square with diagonal crosshatch fill']);
+  this.executeCharTest('▪', ['petit carré noir']);
+  this.executeCharTest('▫', ['petit carré blanc']);
+  this.executeCharTest('▬', ['black rectangle']);
+  this.executeCharTest('▭', ['rectangle blanc']);
+  this.executeCharTest('▮', ['rectangle vertical noir']);
+  this.executeCharTest('▯', ['white vertical rectangle']);
+  this.executeCharTest('▰', ['black parallelogram']);
+  this.executeCharTest('▱', ['parallélogramme blanc']);
+  this.executeCharTest('▲', ['petit triangle noir pointant vers le haut']);
+  this.executeCharTest('△', ['triangle blanc pointant vers le haut']);
+  this.executeCharTest('▴', ['petit triangle noir pointant vers le haut']);
+  this.executeCharTest('▵', ['petit triangle blanc pointant vers le haut']);
+  this.executeCharTest('▶', ['petit triangle noir pointant vers la droite']);
+  this.executeCharTest('▷', ['triangle blanc pointant vers la droite']);
+  this.executeCharTest('▸', ['petit triangle noir pointant vers la droite']);
+  this.executeCharTest('▹', ['petit triangle blanc pointant vers la droite']);
+  this.executeCharTest('►', ['black right pointing pointer']);
+  this.executeCharTest('▻', ['white right pointing pointer']);
+  this.executeCharTest('▼', ['petit triangle noir pointant vers le bas']);
+  this.executeCharTest('▽', ['triangle blanc pointant vers le bas']);
+  this.executeCharTest('▾', ['petit triangle noir pointant vers le bas']);
+  this.executeCharTest('▿', ['petit triangle blanc pointant vers le bas']);
+  this.executeCharTest('◀', ['petit triangle noir pointant vers la gauche']);
+  this.executeCharTest('◁', ['petit triangle blanc pointant vers la gauche']);
+  this.executeCharTest('◂', ['petit triangle noir pointant vers la gauche']);
+  this.executeCharTest('◃', ['petit triangle blanc pointant vers la gauche']);
+  this.executeCharTest('◄', ['pointeur noir vers la gauche']);
+  this.executeCharTest('◅', ['pointeur blanc vers la gauche']);
+  this.executeCharTest('◆', ['losange noir']);
+  this.executeCharTest('◇', ['losange blanc']);
+  this.executeCharTest('◈', ['losange blanc évidé']);
+  this.executeCharTest('◉', ['cercle blanc évidé']);
+  this.executeCharTest('◊', ['losange']);
+  this.executeCharTest('○', ['cercle blanc']);
+  this.executeCharTest('◌', ['cercle en pointillés']);
+  this.executeCharTest('◍', ['cercle hachuré verticalement']);
+  this.executeCharTest('◎', ['deux cercles concentriques']);
+  this.executeCharTest('●', ['cercle noir']);
+  this.executeCharTest('◐', ['cercle avec moitié gauche noire']);
+  this.executeCharTest('◑', ['cercle avec moitié droite noire']);
+  this.executeCharTest('◒', ['cercle avec moitié inférieure']);
+  this.executeCharTest('◓', ['cercle avec moitié supérieure']);
+  this.executeCharTest('◔', ['cercle avec quadrant supérieur droit noir']);
+  this.executeCharTest('◕', ['disque avec quadrant supérieur gauche blanc']);
+  this.executeCharTest('◖', ['demi-disque gauche noir']);
+  this.executeCharTest('◗', ['demi-disque droite noir']);
+  this.executeCharTest('◘', ['point noir-au-blanc']);
+  this.executeCharTest('◙', ['cercle noir-au-blanc']);
+  this.executeCharTest('◚', ['demi-cercle supérieur noir-au- blanc']);
+  this.executeCharTest('◛', ['demi-cercle inférieur noir-au- blanc']);
+  this.executeCharTest('◜', ['arc de cercle dans le quadrant supérieur gauchearc de cercle dans le quadrant supérieur gauche']);
+  this.executeCharTest('◝', ['arc de cercle dans le quadrant supérieur droit']);
+  this.executeCharTest('◞', ['arc de cercle dans le quadrant inférieur droit']);
+  this.executeCharTest('◟', ['arc de cercle dans le quadrant inférieur gauche']);
+  this.executeCharTest('◠', ['demi-cercle supérieur']);
+  this.executeCharTest('◡', ['demi-cercle inférieur']);
+  this.executeCharTest('◢', ['coin triangulaire noir inférieur droit']);
+  this.executeCharTest('◣', ['coin triangulaire noir inférieur gauche']);
+  this.executeCharTest('◤', ['coin triangulaire noir supérieur gauche']);
+  this.executeCharTest('◥', ['coin triangulaire noir supérieur droit']);
+  this.executeCharTest('◦', ['opérateur rond']);
+  this.executeCharTest('◧', ['carré à moitié gauche noire']);
+  this.executeCharTest('◨', ['carré à moitié droite noire']);
+  this.executeCharTest('◩', ['carré à moitié supérieure gauche noire']);
+  this.executeCharTest('◪', ['carré à moitié inférieure droite noire']);
+  this.executeCharTest('◫', ['carré blanc à ligne bissectrice verticale']);
+  this.executeCharTest('◬', ['triangle blanc pointant vers le haut pointé']);
+  this.executeCharTest('◭', ['triangle pointe vers le haut À moitié gauche noire']);
+  this.executeCharTest('◮', ['triangle pointe vers le haut À moitié droite noire']);
+  this.executeCharTest('◯', ['grand cercle']);
+  this.executeCharTest('◰', ['white square with upper left quadrant']);
+  this.executeCharTest('◱', ['white square with lower left quadrant']);
+  this.executeCharTest('◲', ['white square with lower right quadrant']);
+  this.executeCharTest('◳', ['white square with upper right quadrant']);
+  this.executeCharTest('◴', ['white circle with upper left quadrant']);
+  this.executeCharTest('◵', ['white circle with lower left quadrant']);
+  this.executeCharTest('◶', ['white circle with lower right quadrant']);
+  this.executeCharTest('◷', ['white circle with upper right quadrant']);
+  this.executeCharTest('◸', ['triangle rectangle supérieur gauche']);
+  this.executeCharTest('◹', ['triangle rectangle supérieur droit']);
+  this.executeCharTest('◺', ['triangle rectangle inférieur gauche']);
+  this.executeCharTest('◻', ['carré moyen blanc']);
+  this.executeCharTest('◼', ['carré moyen noir']);
+  this.executeCharTest('◽', ['carré moyen blanc']);
+  this.executeCharTest('◾', ['carré moyen noir']);
+  this.executeCharTest('◿', ['triangle rectangle inférieur droit']);
+  this.executeCharTest('⬒', ['square with top half black']);
+  this.executeCharTest('⬓', ['square with bottom half black']);
+  this.executeCharTest('⬔', ['square with upper right diagonal half black']);
+  this.executeCharTest('⬕', ['square with lower left diagonal half black']);
+  this.executeCharTest('⬖', ['diamond with left half black']);
+  this.executeCharTest('⬗', ['diamond with right half black']);
+  this.executeCharTest('⬘', ['diamond with top half black']);
+  this.executeCharTest('⬙', ['diamond with bottom half black']);
+  this.executeCharTest('⬚', ['dotted square']);
+  this.executeCharTest('⬛', ['black large square']);
+  this.executeCharTest('⬜', ['white large square']);
+  this.executeCharTest('⬝', ['black very small square']);
+  this.executeCharTest('⬞', ['white very small square']);
+  this.executeCharTest('⬟', ['black pentagon']);
+  this.executeCharTest('⬠', ['white pentagon']);
+  this.executeCharTest('⬡', ['white hexagon']);
+  this.executeCharTest('⬢', ['black hexagon']);
+  this.executeCharTest('⬣', ['horizontal black hexagon']);
+  this.executeCharTest('⬤', ['black large circle']);
+  this.executeCharTest('⬥', ['black medium diamond']);
+  this.executeCharTest('⬦', ['white medium diamond']);
+  this.executeCharTest('⬧', ['black medium lozenge']);
+  this.executeCharTest('⬨', ['white medium lozenge']);
+  this.executeCharTest('⬩', ['black small diamond']);
+  this.executeCharTest('⬪', ['black small lozenge']);
+  this.executeCharTest('⬫', ['white small lozenge']);
+  this.executeCharTest('⬬', ['black horizontal ellipse']);
+  this.executeCharTest('⬭', ['white horizontal ellipse']);
+  this.executeCharTest('⬮', ['black vertical ellipse']);
+  this.executeCharTest('⬯', ['white vertical ellipse']);
+  this.executeCharTest('⭐', ['étoile blanche moyenne']);
+  this.executeCharTest('⭑', ['petite étoile noire']);
+  this.executeCharTest('⭒', ['petite étoile blanche']);
+  this.executeCharTest('⭓', ['black right pointing pentagon']);
+  this.executeCharTest('⭔', ['white right pointing pentagon']);
+  this.executeCharTest('⭕', ['heavy large circle']);
+  this.executeCharTest('⭖', ['heavy oval with oval inside']);
+  this.executeCharTest('⭗', ['heavy circle with circle inside']);
+  this.executeCharTest('⭘', ['heavy circle']);
+  this.executeCharTest('⭙', ['heavy circled saltire']);
+  this.executeCharTest('↼', ['harpon gauche avec dent dressée']);
+  this.executeCharTest('↽', ['harpon gauche avec dent baissée']);
+  this.executeCharTest('↾', ['harpon vers le haut avec dent droite']);
+  this.executeCharTest('↿', ['harpon vers le haut avec dent gauche']);
+  this.executeCharTest('⇀', ['harpon droit avec dent dressée']);
+  this.executeCharTest('⇁', ['harpon droit avec dent baissée']);
+  this.executeCharTest('⇂', ['harpon vers le bas avec dent droite']);
+  this.executeCharTest('⇃', ['harpon vers le bas avec dent gauche']);
+  this.executeCharTest('⇋', ['harpon gauche par-dessus harpon droit']);
+  this.executeCharTest('⇌', ['harpon droit par-dessus harpon gauche']);
+  this.executeCharTest('⥊', ['javelot à dents gauche dressée et droite baissée']);
+  this.executeCharTest('⥋', ['javelot à dents gauche baissée et droite dressée']);
+  this.executeCharTest('⥌', ['up barb right down barb left harpoon']);
+  this.executeCharTest('⥍', ['up barb left down barb right harpoon']);
+  this.executeCharTest('⥎', ['javelot à dents droite et gauche dressées']);
+  this.executeCharTest('⥏', ['javelot à dents supérieure et inférieure droites']);
+  this.executeCharTest('⥐', ['javelot à dents droite et gauche baissées']);
+  this.executeCharTest('⥑', ['javelot à dents supérieure et inférieure gauches']);
+  this.executeCharTest('⥒', ['harpon gauche à dent dressée contre taquet']);
+  this.executeCharTest('⥓', ['harpon droit à dent dressée contre taquet']);
+  this.executeCharTest('⥔', ['harpon vers le haut à dent droite contre taquet']);
+  this.executeCharTest('⥕', ['harpon vers le bas à dent droite contre taquet']);
+  this.executeCharTest('⥖', ['harpon gauche à dent baissée contre taquet']);
+  this.executeCharTest('⥗', ['harpon droit à dent baissée contre taquet']);
+  this.executeCharTest('⥘', ['harpon vers le haut à dent gauche contre taquet']);
+  this.executeCharTest('⥙', ['harpon vers le bas à dent gauche contre taquet']);
+  this.executeCharTest('⥚', ['harpon gauche à dent dressée depuis taquet']);
+  this.executeCharTest('⥛', ['harpon droit à dent dressée depuis taquet']);
+  this.executeCharTest('⥜', ['harpon vers le haut à dent droite depuis taquet']);
+  this.executeCharTest('⥝', ['harpon vers le bas à dent droite depuis taquet']);
+  this.executeCharTest('⥞', ['harpon gauche à dent baissée depuis taquet']);
+  this.executeCharTest('⥟', ['harpon droit à dent baissée depuis taquet']);
+  this.executeCharTest('⥠', ['harpon vers le haut à dent gauche depuis taquet']);
+  this.executeCharTest('⥡', ['harpon vers le bas à dent gauche depuis taquet']);
+  this.executeCharTest('⥢', ['harpon gauche à dent dressée sur harpon gauche à dent baissée']);
+  this.executeCharTest('⥣', ['harpon vers le haut à dent gauche à côté de harpon vers le haut à dent droite']);
+  this.executeCharTest('⥤', ['harpon droit à dent dressée par-dessus harpon droit à dent baissée']);
+  this.executeCharTest('⥥', ['harpon vers le bas à dent gauche à côté de harpon vers le bas à dent droite']);
+  this.executeCharTest('⥦', ['harpon à dent gauche dressée par-dessus harpon à dent droite dressée']);
+  this.executeCharTest('⥧', ['harpon à dent gauche baissée par-dessus harpon à dent droite baissée']);
+  this.executeCharTest('⥨', ['harpon à dent droite dressée par-dessus harpon à dent gauche dressée']);
+  this.executeCharTest('⥩', ['harpon à dent droite baissée par-dessus harpon à dent gauche baissée']);
+  this.executeCharTest('⥪', ['harpon à dent gauche dressée par-dessus long trait']);
+  this.executeCharTest('⥫', ['long trait par-dessus harpon à dent gauche baissée']);
+  this.executeCharTest('⥬', ['harpon à dent droite dressée par-dessus long trait']);
+  this.executeCharTest('⥭', ['long trait par-dessus harpon à dent droite baissée']);
+  this.executeCharTest('⥮', ['harpon vers le haut à dent gauche à côté de harpon vers le bas à dent droite']);
+  this.executeCharTest('⥯', ['harpon vers le bas à dent gauche à côté de harpon vers le haut à dent droite']);
+  this.executeCharTest('⥼', ['ancre gauche']);
+  this.executeCharTest('⥽', ['ancre droite']);
+  this.executeCharTest('⥾', ['ancre vers le haut']);
+  this.executeCharTest('⥿', ['ancre vers le bas']);
+  this.executeCharTest('ℏ', ['constante de planck sur deux pi']);
+  this.executeCharTest('℔', ['l b bar']);
+  this.executeCharTest('№', ['symbole numéro']);
+  this.executeCharTest('℗', ['copyright de programme sonore']);
+  this.executeCharTest('℞', ['ordonnances']);
+  this.executeCharTest('℟', ['response']);
+  this.executeCharTest('℠', ['service mark']);
+  this.executeCharTest('℡', ['telephone sign']);
+  this.executeCharTest('™', ['symbole anglais marque de commerce']);
+  this.executeCharTest('℣', ['versicle']);
+  this.executeCharTest('℥', ['symbole once']);
+  this.executeCharTest('Ω', ['ohm']);
+  this.executeCharTest('℧', ['ohm culbuté']);
+  this.executeCharTest('K', ['degré kelvin']);
+  this.executeCharTest('Å', ['angstroms']);
+  this.executeCharTest('℮', ['estimated']);
+  this.executeCharTest('Ⅎ', ['f culbuté majuscule']);
+  this.executeCharTest('ℹ', ['information source']);
+  this.executeCharTest('℺', ['rotated cap q']);
+  this.executeCharTest('℻', ['facsimile sign']);
+  this.executeCharTest('⅁', ['turned sans serif cap g']);
+  this.executeCharTest('⅂', ['turned sans serif cap l']);
+  this.executeCharTest('⅃', ['reversed sans serif cap l']);
+  this.executeCharTest('⅄', ['turned sans serif cap y']);
+  this.executeCharTest('!', ['factorielle']);
+  this.executeCharTest('#', ['dièse']);
+  this.executeCharTest('$', ['dollars']);
+  this.executeCharTest('%', ['pourcent']);
+  this.executeCharTest('&', ['esperluette']);
+  this.executeCharTest('\'', ['prime']);
+  this.executeCharTest('*', ['astérisque']);
+  this.executeCharTest('+', ['plus']);
+  this.executeCharTest(',', ['virgule']);
+  this.executeCharTest('-', ['moins']);
+  this.executeCharTest('.', ['point']);
+  this.executeCharTest('/', ['barre oblique']);
+  this.executeCharTest(':', ['deux points']);
+  this.executeCharTest(';', ['point virgule']);
+  this.executeCharTest('<', ['inférieur à']);
+  this.executeCharTest('=', ['égale']);
+  this.executeCharTest('>', ['supérieur à']);
+  this.executeCharTest('?', ['point d\'interrogation']);
+  this.executeCharTest('@', ['arobase']);
+  this.executeCharTest('\\', ['barre oblique inversée']);
+  this.executeCharTest('^', ['circonflexe']);
+  this.executeCharTest('_', ['tiret bas']);
+  this.executeCharTest('`', ['accent grave']);
+  this.executeCharTest('|', ['barre verticale']);
+  this.executeCharTest('~', ['tilde']);
+  this.executeCharTest('¡', ['point d\'exclamation renversé']);
+  this.executeCharTest('¢', ['centimes']);
+  this.executeCharTest('£', ['livres']);
+  this.executeCharTest('¤', ['symbole monétaire']);
+  this.executeCharTest('¥', ['yen']);
+  this.executeCharTest('¦', ['barre déjointe']);
+  this.executeCharTest('§', ['paragraphe']);
+  this.executeCharTest('¨', ['tréma']);
+  this.executeCharTest('©', ['copyright']);
+  this.executeCharTest('ª', ['indicateur ordinal féminin']);
+  this.executeCharTest('«', ['guillemet chevron pointant gauche']);
+  this.executeCharTest('¬', ['négation']);
+  this.executeCharTest('®', ['symbole marque déposée']);
+  this.executeCharTest('¯', ['macron']);
+  this.executeCharTest('°', ['degrés']);
+  this.executeCharTest('±', ['plus ou moins']);
+  this.executeCharTest('´', ['accent aigu']);
+  this.executeCharTest('µ', ['symbole micro']);
+  this.executeCharTest('¶', ['fin de paragraphe']);
+  this.executeCharTest('·', ['point médian']);
+  this.executeCharTest('¸', ['cédille']);
+  this.executeCharTest('º', ['indicateur ordinal masculin']);
+  this.executeCharTest('»', ['guillemet chevron pointant droite']);
+  this.executeCharTest('¿', ['point d\'interrogation renversé']);
+  this.executeCharTest('×', ['multiplié par']);
+  this.executeCharTest('÷', ['divisé par']);
+  this.executeCharTest('˘', ['brève']);
+  this.executeCharTest('˙', ['point en chef']);
+  this.executeCharTest('˚', ['rond en chef']);
+  this.executeCharTest('˛', ['ogonek']);
+  this.executeCharTest('˜', ['tilde']);
+  this.executeCharTest('˝', ['double accent aigu']);
+  this.executeCharTest('‐', ['trait d\'union']);
+  this.executeCharTest('‑', ['non breaking hyphen']);
+  this.executeCharTest('‒', ['figure dash']);
+  this.executeCharTest('–', ['trait d\'union insécable']);
+  this.executeCharTest('—', ['tiret numérique']);
+  this.executeCharTest('―', ['barre horizontalle']);
+  this.executeCharTest('‖', ['double ligne verticale']);
+  this.executeCharTest('‗', ['double low line']);
+  this.executeCharTest('‘', ['guillemet-apostrophe culbuté']);
+  this.executeCharTest('’', ['guillemet-apostrophe']);
+  this.executeCharTest('‚', ['guillemet-virgule inférieur']);
+  this.executeCharTest('‛', ['single high reversed 9 quotation mark']);
+  this.executeCharTest('“', ['guillemet-apostrophe double culbuté']);
+  this.executeCharTest('”', ['guillemet-apostrophe double']);
+  this.executeCharTest('„', ['guillemet double prime']);
+  this.executeCharTest('‟', ['double high reversed 9 quotation mark']);
+  this.executeCharTest('†', ['obèle']);
+  this.executeCharTest('‡', ['double obèle']);
+  this.executeCharTest('•', ['puce']);
+  this.executeCharTest('‣', ['triangular bullet']);
+  this.executeCharTest('․', ['one dot leader']);
+  this.executeCharTest('‥', ['point de conduite double']);
+  this.executeCharTest('…', ['points de suspension']);
+  this.executeCharTest('‧', ['hyphenation point']);
+  this.executeCharTest('‰', ['symbole pour mille']);
+  this.executeCharTest('‱', ['symbole pour dix mille']);
+  this.executeCharTest('′', ['prime']);
+  this.executeCharTest('″', ['double prime']);
+  this.executeCharTest('‴', ['triple prime']);
+  this.executeCharTest('‵', ['prime réfléchi']);
+  this.executeCharTest('‶', ['double prime réfléchi']);
+  this.executeCharTest('‷', ['reversed triple prime']);
+  this.executeCharTest('‸', ['caret']);
+  this.executeCharTest('‹', ['guillemet simple gauche']);
+  this.executeCharTest('›', ['guillemet simple droite']);
+  this.executeCharTest('※', ['reference mark']);
+  this.executeCharTest('‼', ['double exclamation mark']);
+  this.executeCharTest('‽', ['interrobang']);
+  this.executeCharTest('‾', ['tiret en chef']);
+  this.executeCharTest('‿', ['undertie']);
+  this.executeCharTest('⁀', ['tirant en chef']);
+  this.executeCharTest('⁁', ['lambda d\'insertion']);
+  this.executeCharTest('⁂', ['asterism']);
+  this.executeCharTest('⁃', ['puce trait d\'union']);
+  this.executeCharTest('⁄', ['barre de fraction']);
+  this.executeCharTest('⁇', ['double question mark']);
+  this.executeCharTest('⁈', ['question exclamation mark']);
+  this.executeCharTest('⁉', ['exclamation question mark']);
+  this.executeCharTest('⁋', ['reversed pilcrow']);
+  this.executeCharTest('⁌', ['black leftwards bullet']);
+  this.executeCharTest('⁍', ['black rightwards bullet']);
+  this.executeCharTest('⁎', ['low asterisk']);
+  this.executeCharTest('⁏', ['point-virgule réfléchi']);
+  this.executeCharTest('⁐', ['resserrer']);
+  this.executeCharTest('⁑', ['two asterisks aligned vertically']);
+  this.executeCharTest('⁒', ['commercial minus']);
+  this.executeCharTest('⁓', ['swung dash']);
+  this.executeCharTest('⁔', ['inverted undertie']);
+  this.executeCharTest('⁕', ['flower punctuation mark']);
+  this.executeCharTest('⁖', ['three dot punctuation']);
+  this.executeCharTest('⁗', ['quadruple prime']);
+  this.executeCharTest('⁘', ['four dot punctuation']);
+  this.executeCharTest('⁙', ['five dot punctuation']);
+  this.executeCharTest('⁚', ['two dot punctuation']);
+  this.executeCharTest('⁛', ['four dot mark']);
+  this.executeCharTest('⁜', ['dotted cross']);
+  this.executeCharTest('⁝', ['tricolon']);
+  this.executeCharTest('⁞', ['vertical four dots']);
+  this.executeCharTest('⁺', ['superscript plus']);
+  this.executeCharTest('⁻', ['superscript minus']);
+  this.executeCharTest('⁼', ['superscript equals']);
+  this.executeCharTest('⁽', ['superscript left parenthesis']);
+  this.executeCharTest('⁾', ['superscript right parenthesis']);
+  this.executeCharTest('₊', ['subscript plus']);
+  this.executeCharTest('₋', ['subscript minus']);
+  this.executeCharTest('₌', ['subscript equals']);
+  this.executeCharTest('₍', ['subscript left parenthesis']);
+  this.executeCharTest('₎', ['subscript right parenthesis']);
+  this.executeCharTest('⅊', ['property line']);
+  this.executeCharTest('⅋', ['turned ampersand']);
+  this.executeCharTest('⅌', ['per']);
+  this.executeCharTest('⅍', ['aktieselskab']);
+  this.executeCharTest('ⅎ', ['turned small f']);
+  this.executeCharTest('∀', ['pour tous']);
+  this.executeCharTest('∁', ['complément']);
+  this.executeCharTest('∂', ['dérivée partielle']);
+  this.executeCharTest('∃', ['il existe']);
+  this.executeCharTest('∄', ['il n\'existe pas']);
+  this.executeCharTest('∅', ['ensemble vide']);
+  this.executeCharTest('∆', ['incrément']);
+  this.executeCharTest('∇', ['nabla']);
+  this.executeCharTest('∈', ['appartient à']);
+  this.executeCharTest('∉', ['n\'appartient pas à']);
+  this.executeCharTest('∊', ['appartient à']);
+  this.executeCharTest('∋', ['contient comme élément']);
+  this.executeCharTest('∌', ['ne contient pas comme élément']);
+  this.executeCharTest('∍', ['contient comme élément']);
+  this.executeCharTest('∎', ['ce qu\'il fallait démontrer']);
+  this.executeCharTest('∏', ['produit']);
+  this.executeCharTest('∐', ['coproduit']);
+  this.executeCharTest('∑', ['sommation']);
+  this.executeCharTest('−', ['moins']);
+  this.executeCharTest('∓', ['moins-ou-plus']);
+  this.executeCharTest('∔', ['plus pointé']);
+  this.executeCharTest('∕', ['division']);
+  this.executeCharTest('∖', ['différence d\'ensembles']);
+  this.executeCharTest('∗', ['opérateur astérisque']);
+  this.executeCharTest('∘', ['opérateur rond']);
+  this.executeCharTest('∙', ['point médian']);
+  this.executeCharTest('√', ['racine carrée']);
+  this.executeCharTest('∛', ['racine cubique']);
+  this.executeCharTest('∜', ['racine quatrième']);
+  this.executeCharTest('∝', ['proportionnel à']);
+  this.executeCharTest('∞', ['infini']);
+  this.executeCharTest('∟', ['angle droit']);
+  this.executeCharTest('∠', ['angle']);
+  this.executeCharTest('∡', ['angle mesuré']);
+  this.executeCharTest('∢', ['angle sphérique']);
+  this.executeCharTest('∣', ['est un diviseur de']);
+  this.executeCharTest('∤', ['n\'est pas un diviseur de']);
+  this.executeCharTest('∥', ['parallèle à']);
+  this.executeCharTest('∦', ['non parallèle à']);
+  this.executeCharTest('∧', ['et logique']);
+  this.executeCharTest('∨', ['ou logique']);
+  this.executeCharTest('∩', ['intersection']);
+  this.executeCharTest('∪', ['union']);
+  this.executeCharTest('∫', ['intégrale']);
+  this.executeCharTest('∬', ['intégrale double']);
+  this.executeCharTest('∭', ['intégrale triple']);
+  this.executeCharTest('∮', ['intégrale de contour']);
+  this.executeCharTest('∯', ['intégrale de surface']);
+  this.executeCharTest('∰', ['intégrale de volume']);
+  this.executeCharTest('∱', ['intégrale en sens négatif']);
+  this.executeCharTest('∲', ['intégrale de contour en sens négatif']);
+  this.executeCharTest('∳', ['intégrale de contour en sens positif']);
+  this.executeCharTest('∴', ['par conséquent']);
+  this.executeCharTest('∵', ['parce que']);
+  this.executeCharTest('∶', ['rapport']);
+  this.executeCharTest('∷', ['proportion']);
+  this.executeCharTest('∸', ['moins pointé']);
+  this.executeCharTest('∹', ['excès']);
+  this.executeCharTest('∺', ['proportion géométrique']);
+  this.executeCharTest('∻', ['homothétique']);
+  this.executeCharTest('∼', ['opérateur tilde']);
+  this.executeCharTest('∽', ['opérateur tilde renversé']);
+  this.executeCharTest('∾', ['s couché renversé']);
+  this.executeCharTest('∿', ['sinusoïde']);
+  this.executeCharTest('≀', ['produit couronne']);
+  this.executeCharTest('≁', ['non tilde']);
+  this.executeCharTest('≂', ['moins tilde']);
+  this.executeCharTest('≃', ['asymptotiquement égal à']);
+  this.executeCharTest('≄', ['non asymptotiquement égal à']);
+  this.executeCharTest('≅', ['approximativement égal à']);
+  this.executeCharTest('≆', ['approximativement mais non strictement égal à']);
+  this.executeCharTest('≇', ['ni approximativement ni strictement égal à']);
+  this.executeCharTest('≈', ['presque égal à']);
+  this.executeCharTest('≉', ['non presque égal à']);
+  this.executeCharTest('≊', ['presque égal ou égal à']);
+  this.executeCharTest('≋', ['triple tilde']);
+  this.executeCharTest('≌', ['entièrement égal à']);
+  this.executeCharTest('≍', ['équivalent à']);
+  this.executeCharTest('≎', ['géométriquement équivalent à']);
+  this.executeCharTest('≏', ['différence entre']);
+  this.executeCharTest('≐', ['tend vers la limite']);
+  this.executeCharTest('≑', ['géométriquement égal à']);
+  this.executeCharTest('≒', ['approximativement égal à ou image de']);
+  this.executeCharTest('≓', ['image de ou approximativement égal à']);
+  this.executeCharTest('≔', ['deux-points égal']);
+  this.executeCharTest('≕', ['égal deux-points']);
+  this.executeCharTest('≖', ['rond dans égal']);
+  this.executeCharTest('≗', ['égal avec rond en chef']);
+  this.executeCharTest('≘', ['correspond à']);
+  this.executeCharTest('≙', ['estime']);
+  this.executeCharTest('≚', ['équiangulaire à']);
+  this.executeCharTest('≛', ['égal avec étoile en chef']);
+  this.executeCharTest('≜', ['égal delta']);
+  this.executeCharTest('≝', ['égal par définition à']);
+  this.executeCharTest('≞', ['mesuré par']);
+  this.executeCharTest('≟', ['égalité en doute']);
+  this.executeCharTest('≠', ['pas égal à']);
+  this.executeCharTest('≡', ['identique à']);
+  this.executeCharTest('≢', ['non identique à']);
+  this.executeCharTest('≣', ['strictement équivalent à']);
+  this.executeCharTest('≤', ['plus petit ou égal à']);
+  this.executeCharTest('≥', ['plus grand ou égal à']);
+  this.executeCharTest('≦', ['plus petit que par-dessus égal à']);
+  this.executeCharTest('≧', ['plus grand que par-dessus égal à']);
+  this.executeCharTest('≨', ['plus petit mais pas égal à']);
+  this.executeCharTest('≩', ['plus grand mais pas égal à']);
+  this.executeCharTest('≪', ['beaucoup plus petit que']);
+  this.executeCharTest('≫', ['beaucoup plus grand que']);
+  this.executeCharTest('≬', ['entre']);
+  this.executeCharTest('≭', ['non équivalent à']);
+  this.executeCharTest('≮', ['pas plus petit que']);
+  this.executeCharTest('≯', ['pas plus grand que']);
+  this.executeCharTest('≰', ['ni plus petit ni égal à']);
+  this.executeCharTest('≱', ['ni plus grand ni égal à']);
+  this.executeCharTest('≲', ['plus petit ou équivalent à']);
+  this.executeCharTest('≳', ['plus grand ou équivalent à']);
+  this.executeCharTest('≴', ['ni plus petit ni équivalent à']);
+  this.executeCharTest('≵', ['ni plus grand ni équivalent à']);
+  this.executeCharTest('≶', ['plus petit ou plus grand que']);
+  this.executeCharTest('≷', ['plus grand ou plus petit que']);
+  this.executeCharTest('≸', ['ni plus petit ni plus grand que']);
+  this.executeCharTest('≹', ['ni plus grand ni plus petit que']);
+  this.executeCharTest('≺', ['précède']);
+  this.executeCharTest('≻', ['suit']);
+  this.executeCharTest('≼', ['précède ou est égal à']);
+  this.executeCharTest('≽', ['suit ou est égal à']);
+  this.executeCharTest('≾', ['précède ou est équivalent à']);
+  this.executeCharTest('≿', ['suit ou est équivalent à']);
+  this.executeCharTest('⊀', ['ne précède pas']);
+  this.executeCharTest('⊁', ['ne suit pas']);
+  this.executeCharTest('⊂', ['sous-ensemble de']);
+  this.executeCharTest('⊃', ['sur-ensemble de']);
+  this.executeCharTest('⊄', ['pas un sous-ensemble de']);
+  this.executeCharTest('⊅', ['pas un sur-ensemble de']);
+  this.executeCharTest('⊆', ['sous-ensemble ou égal à']);
+  this.executeCharTest('⊇', ['sur-ensemble ou égal à']);
+  this.executeCharTest('⊈', ['ni un sous-ensemble ni égal à']);
+  this.executeCharTest('⊉', ['ni un sur-ensemble ni égal à']);
+  this.executeCharTest('⊊', ['sous-ensemble mais pas égal à']);
+  this.executeCharTest('⊋', ['sur-ensemble mais pas égal à']);
+  this.executeCharTest('⊌', ['multiensemble']);
+  this.executeCharTest('⊍', ['multiplication de multiensemble']);
+  this.executeCharTest('⊎', ['union de multiensemble']);
+  this.executeCharTest('⊏', ['image carrée de']);
+  this.executeCharTest('⊐', ['original carré de']);
+  this.executeCharTest('⊑', ['image carrée ou égal à']);
+  this.executeCharTest('⊒', ['original carré ou égal à']);
+  this.executeCharTest('⊓', ['chapeau carré']);
+  this.executeCharTest('⊔', ['coupe carrée']);
+  this.executeCharTest('⊕', ['plus cerclé']);
+  this.executeCharTest('⊖', ['moins cerclé']);
+  this.executeCharTest('⊗', ['multiplié par cerclé']);
+  this.executeCharTest('⊘', ['barre oblique de division cerclée']);
+  this.executeCharTest('⊙', ['opérateur point cerclé']);
+  this.executeCharTest('⊚', ['opérateur rond cerclé']);
+  this.executeCharTest('⊛', ['opérateur astérisque cerclé']);
+  this.executeCharTest('⊜', ['égal cerclé']);
+  this.executeCharTest('⊝', ['tiret cerclé']);
+  this.executeCharTest('⊞', ['plus encadré']);
+  this.executeCharTest('⊟', ['moins encadré']);
+  this.executeCharTest('⊠', ['multiplié par encadré']);
+  this.executeCharTest('⊡', ['opérateur point encadré']);
+  this.executeCharTest('⊢', ['taquet droit']);
+  this.executeCharTest('⊣', ['taquet gauche']);
+  this.executeCharTest('⊤', ['taquet vers le bas']);
+  this.executeCharTest('⊥', ['taquet vers le haut']);
+  this.executeCharTest('⊦', ['assertion']);
+  this.executeCharTest('⊧', ['modélise']);
+  this.executeCharTest('⊨', ['vrai']);
+  this.executeCharTest('⊩', ['oblige']);
+  this.executeCharTest('⊪', ['barre verticale triple avec tourniquet à droite']);
+  this.executeCharTest('⊫', ['barre verticale double avec tourniquet à droite double']);
+  this.executeCharTest('⊬', ['ne prouve pas']);
+  this.executeCharTest('⊭', ['pas vrai']);
+  this.executeCharTest('⊮', ['n\'oblige pas']);
+  this.executeCharTest('⊯', ['non-barre verticale double avec tourniquet à droite double']);
+  this.executeCharTest('⊰', ['précède sous relation']);
+  this.executeCharTest('⊱', ['suit sous relation']);
+  this.executeCharTest('⊲', ['sous-groupe normal de']);
+  this.executeCharTest('⊳', ['contient comme sous-groupe normal']);
+  this.executeCharTest('⊴', ['sous-groupe normal ou égal à']);
+  this.executeCharTest('⊵', ['contient comme sous-groupe normal ou égal à']);
+  this.executeCharTest('⊶', ['original de']);
+  this.executeCharTest('⊷', ['image de']);
+  this.executeCharTest('⊸', ['multijection']);
+  this.executeCharTest('⊹', ['matrice hermitienne conjuguée']);
+  this.executeCharTest('⊺', ['intercale']);
+  this.executeCharTest('⊻', ['ou exclusif']);
+  this.executeCharTest('⊼', ['non et']);
+  this.executeCharTest('⊽', ['non ou']);
+  this.executeCharTest('⊿', ['triangle rectangle']);
+  this.executeCharTest('⋀', ['et logique de la famille']);
+  this.executeCharTest('⋁', ['ou logique de la famille']);
+  this.executeCharTest('⋂', ['intersection de la famille']);
+  this.executeCharTest('⋃', ['réunion de la famille']);
+  this.executeCharTest('⋄', ['opérateur losange']);
+  this.executeCharTest('⋅', ['opérateur point']);
+  this.executeCharTest('⋆', ['opérateur étoile']);
+  this.executeCharTest('⋇', ['divisé multiplié']);
+  this.executeCharTest('⋈', ['nœud papillon']);
+  this.executeCharTest('⋉', ['produit semi-direct à gauche de facteur normal']);
+  this.executeCharTest('⋊', ['produit semi-direct à droite de facteur normal']);
+  this.executeCharTest('⋋', ['produit semi-direct à gauche']);
+  this.executeCharTest('⋌', ['produit semi-direct à droite']);
+  this.executeCharTest('⋍', ['moins tilde renversé']);
+  this.executeCharTest('⋎', ['ou logique recourbé']);
+  this.executeCharTest('⋏', ['et logique recourbé']);
+  this.executeCharTest('⋐', ['sous-ensemble double']);
+  this.executeCharTest('⋑', ['sur-ensemble double']);
+  this.executeCharTest('⋒', ['intersection double']);
+  this.executeCharTest('⋓', ['union double']);
+  this.executeCharTest('⋔', ['fourche']);
+  this.executeCharTest('⋕', ['égal et parallèle à']);
+  this.executeCharTest('⋖', ['plus petit que pointé']);
+  this.executeCharTest('⋗', ['plus grand que pointé']);
+  this.executeCharTest('⋘', ['considérablement plus petit que']);
+  this.executeCharTest('⋙', ['considérablement plus grand que']);
+  this.executeCharTest('⋚', ['plus petit ou égal ou plus grand que']);
+  this.executeCharTest('⋛', ['plus grand ou égal ou plus petit que']);
+  this.executeCharTest('⋜', ['égal ou plus petit que']);
+  this.executeCharTest('⋝', ['égal à deux lignes ou supérieur à']);
+  this.executeCharTest('⋞', ['égal ou précède']);
+  this.executeCharTest('⋟', ['égal ou suit']);
+  this.executeCharTest('⋠', ['ni précédant ni égal à']);
+  this.executeCharTest('⋡', ['ni suivant ni égal à']);
+  this.executeCharTest('⋢', ['ni image carrée ni égal à']);
+  this.executeCharTest('⋣', ['ni original carré ni égal à']);
+  this.executeCharTest('⋤', ['image carré ou différent de']);
+  this.executeCharTest('⋥', ['original carré ou différent de']);
+  this.executeCharTest('⋦', ['plus petit mais non équivalent à']);
+  this.executeCharTest('⋧', ['plus grand mais non équivalent à']);
+  this.executeCharTest('⋨', ['précédant mais non équivalent à']);
+  this.executeCharTest('⋩', ['suivant mais non équivalent à']);
+  this.executeCharTest('⋪', ['pas un sous-groupe normal de']);
+  this.executeCharTest('⋫', ['ne contient pas comme sous-groupe normal']);
+  this.executeCharTest('⋬', ['ni sous-groupe normal ni égal à']);
+  this.executeCharTest('⋭', ['ni égal ni contenant comme sous- groupe normal']);
+  this.executeCharTest('⋮', ['trois points suspendus']);
+  this.executeCharTest('⋯', ['trois points médians']);
+  this.executeCharTest('⋰', ['trois points diagonaux vers le coin haut à droite']);
+  this.executeCharTest('⋱', ['trois points diagonaux vers le coin bas à droite']);
+  this.executeCharTest('⋲', ['appartient à avec long trait horizontal']);
+  this.executeCharTest('⋳', ['appartient à avec barre verticale au bout du trait horizontal']);
+  this.executeCharTest('⋴', ['petit appartient à avec barre verticale au bout du trait horizontal']);
+  this.executeCharTest('⋵', ['appartient à avec point en chef']);
+  this.executeCharTest('⋶', ['appartient à avec trait en chef']);
+  this.executeCharTest('⋷', ['petit appartient à avec trait en chef']);
+  this.executeCharTest('⋸', ['appartient à avec trait souscrit']);
+  this.executeCharTest('⋹', ['appartient à avec deux traits horizontaux']);
+  this.executeCharTest('⋺', ['contient avec long trait horizontal']);
+  this.executeCharTest('⋻', ['contient avec barre verticale au bout du trait horizontal']);
+  this.executeCharTest('⋼', ['petit contient avec barre verticale au bout du trait horizontal']);
+  this.executeCharTest('⋽', ['contient avec trait en chef']);
+  this.executeCharTest('⋾', ['petit contient avec trait en chef']);
+  this.executeCharTest('⋿', ['appartient à un sac en notation z']);
+  this.executeCharTest('⌀', ['diamètre']);
+  this.executeCharTest('⌂', ['maison']);
+  this.executeCharTest('⌅', ['projective']);
+  this.executeCharTest('⌆', ['perspective']);
+  this.executeCharTest('⌇', ['wavy line']);
+  this.executeCharTest('⌐', ['signe négation réfléchi']);
+  this.executeCharTest('⌑', ['square lozenge']);
+  this.executeCharTest('⌒', ['arc']);
+  this.executeCharTest('⌓', ['segment']);
+  this.executeCharTest('⌔', ['sector']);
+  this.executeCharTest('➕', ['bold plus']);
+  this.executeCharTest('➖', ['bold minus']);
+  this.executeCharTest('➗', ['bold division']);
+  this.executeCharTest('➰', ['curly loop']);
+  this.executeCharTest('➿', ['double curly loop']);
+  this.executeCharTest('⟁', ['petit triangle blanc inscrit dans triangle blanc']);
+  this.executeCharTest('⟂', ['perpendiculaire à']);
+  this.executeCharTest('⟃', ['sous-ensemble ouvert']);
+  this.executeCharTest('⟄', ['sur-ensemble ouvert']);
+  this.executeCharTest('⟇', ['ou avec point inscrit']);
+  this.executeCharTest('⟈', ['sous-ensemble précédé d\'une barre oblique inversée']);
+  this.executeCharTest('⟉', ['sur-ensemble suivi d\'une barre oblique']);
+  this.executeCharTest('⟊', ['barre verticale À une traverse']);
+  this.executeCharTest('⟋', ['mathematical rising diagonal']);
+  this.executeCharTest('⟌', ['grande division']);
+  this.executeCharTest('⟍', ['mathematical falling diagonal']);
+  this.executeCharTest('⟎', ['squared logical and']);
+  this.executeCharTest('⟏', ['squared logical or']);
+  this.executeCharTest('⟐', ['white diamond with centered dot']);
+  this.executeCharTest('⟑', ['et pointé']);
+  this.executeCharTest('⟒', ['appartient À ouvert vers le haut']);
+  this.executeCharTest('⟓', ['coin inférieur droit pointé']);
+  this.executeCharTest('⟔', ['coin supérieur gauche pointé']);
+  this.executeCharTest('⟕', ['jointure externe gauche']);
+  this.executeCharTest('⟖', ['jointure externe droite']);
+  this.executeCharTest('⟗', ['jointure externe complète']);
+  this.executeCharTest('⟘', ['grand taquet vers le haut']);
+  this.executeCharTest('⟙', ['grand taquet vers le bas']);
+  this.executeCharTest('⟚', ['double tourniquet bilatéral']);
+  this.executeCharTest('⟛', ['tourniquet bilatéral']);
+  this.executeCharTest('⟜', ['multijection gauche']);
+  this.executeCharTest('⟝', ['long taquet droit']);
+  this.executeCharTest('⟞', ['long taquet gauche']);
+  this.executeCharTest('⟟', ['taquet vers le haut surmonté d\'un cercle']);
+  this.executeCharTest('⟠', ['losange coupé']);
+  this.executeCharTest('⟡', ['losange concave blanc']);
+  this.executeCharTest('⟢', ['losange concave blanc avec trait à gauche']);
+  this.executeCharTest('⟣', ['losange concave blanc avec trait à droite']);
+  this.executeCharTest('⟤', ['carré blanc avec trait à gauche']);
+  this.executeCharTest('⟥', ['carré blanc avec trait à droite']);
+  this.executeCharTest('⤫', ['rising diagonal crossing falling diagonal']);
+  this.executeCharTest('⤬', ['falling diagonal crossing rising diagonal']);
+  this.executeCharTest('⦀', ['triple vertical bar delimiter']);
+  this.executeCharTest('⦁', ['z notation spot']);
+  this.executeCharTest('⦂', ['z notation type colon']);
+  this.executeCharTest('⦙', ['dotted fence']);
+  this.executeCharTest('⦚', ['ligne verticale en zigzag']);
+  this.executeCharTest('⦰', ['ensemble vide réfléchi']);
+  this.executeCharTest('⦱', ['ensemble vide barre en chef']);
+  this.executeCharTest('⦲', ['ensemble vide petit cercle en chef']);
+  this.executeCharTest('⦵', ['cercle à barre horizontale']);
+  this.executeCharTest('⦶', ['barre verticale cerclée']);
+  this.executeCharTest('⦷', ['parallèles cerclées']);
+  this.executeCharTest('⦸', ['circled reverse solidus']);
+  this.executeCharTest('⦹', ['perpendiculaire cerclé']);
+  this.executeCharTest('⦺', ['circle divided by horizontal bar and top half divided by vertical bar']);
+  this.executeCharTest('⦻', ['cercle superposé d\'un x']);
+  this.executeCharTest('⦼', ['signe division pivoté en sens antihoraire cerclé']);
+  this.executeCharTest('⦾', ['puce blanche cerclée']);
+  this.executeCharTest('⦿', ['puce cerclée']);
+  this.executeCharTest('⧀', ['inférieur à cerclé']);
+  this.executeCharTest('⧁', ['supérieur à cerclé']);
+  this.executeCharTest('⧂', ['cercle avec petit cercle à droite']);
+  this.executeCharTest('⧃', ['cercle avec deux petits traits horizontaux à droite']);
+  this.executeCharTest('⧄', ['oblique encadrée']);
+  this.executeCharTest('⧅', ['oblique inversée encadrée']);
+  this.executeCharTest('⧆', ['squared asterisk']);
+  this.executeCharTest('⧇', ['squared small circle']);
+  this.executeCharTest('⧈', ['squared square']);
+  this.executeCharTest('⧉', ['carrés se chevauchant']);
+  this.executeCharTest('⧊', ['triangle with dot above']);
+  this.executeCharTest('⧋', ['triangle with underbar']);
+  this.executeCharTest('⧌', ['s in triangle']);
+  this.executeCharTest('⧍', ['triangle à empattements inférieurs']);
+  this.executeCharTest('⧎', ['triangle droit par-dessus triangle gauche']);
+  this.executeCharTest('⧏', ['triangle gauche à gauche d\'une barre verticale']);
+  this.executeCharTest('⧐', ['triangle droit à droite d\'une barre verticale']);
+  this.executeCharTest('⧑', ['bowtie with left half black']);
+  this.executeCharTest('⧒', ['bowtie with right half black']);
+  this.executeCharTest('⧓', ['black bowtie']);
+  this.executeCharTest('⧔', ['times with left half black']);
+  this.executeCharTest('⧕', ['times with right half black']);
+  this.executeCharTest('⧖', ['white hourglass']);
+  this.executeCharTest('⧗', ['black hourglass']);
+  this.executeCharTest('⧜', ['infini incomplet']);
+  this.executeCharTest('⧝', ['tie over infinity']);
+  this.executeCharTest('⧞', ['infini nié par une barre verticale']);
+  this.executeCharTest('⧟', ['double ended multimap']);
+  this.executeCharTest('⧠', ['square with contoured outline']);
+  this.executeCharTest('⧡', ['increases as']);
+  this.executeCharTest('⧢', ['shuffle product']);
+  this.executeCharTest('⧣', ['égale à et parallèle à incliné']);
+  this.executeCharTest('⧤', ['égale à et parallèle à incliné surmontés d\'un tilde']);
+  this.executeCharTest('⧥', ['identique à et parallèle à incliné']);
+  this.executeCharTest('⧦', ['gleich stark']);
+  this.executeCharTest('⧧', ['thermodynamic']);
+  this.executeCharTest('⧨', ['down pointing triangle with left half black']);
+  this.executeCharTest('⧩', ['down pointing triangle with right half black']);
+  this.executeCharTest('⧫', ['losange fuselé noir']);
+  this.executeCharTest('⧮', ['error barred white square']);
+  this.executeCharTest('⧯', ['error barred black square']);
+  this.executeCharTest('⧰', ['error barred white diamond']);
+  this.executeCharTest('⧱', ['error barred black diamond']);
+  this.executeCharTest('⧲', ['error barred white circle']);
+  this.executeCharTest('⧳', ['error barred black circle']);
+  this.executeCharTest('⧴', ['règle différée']);
+  this.executeCharTest('⧵', ['reverse solidus operator']);
+  this.executeCharTest('⧶', ['barre oblique avec barre en chef']);
+  this.executeCharTest('⧷', ['reverse solidus with horizontal stroke']);
+  this.executeCharTest('⧸', ['big solidus']);
+  this.executeCharTest('⧹', ['big reverse solidus']);
+  this.executeCharTest('⧺', ['double plus']);
+  this.executeCharTest('⧻', ['triple plus']);
+  this.executeCharTest('⧾', ['tiny']);
+  this.executeCharTest('⧿', ['miny']);
+  this.executeCharTest('⨀', ['n ary circled dot operator']);
+  this.executeCharTest('⨁', ['n ary circled plus operator']);
+  this.executeCharTest('⨂', ['n ary circled times operator']);
+  this.executeCharTest('⨃', ['n ary union operator with dot']);
+  this.executeCharTest('⨄', ['n ary union operator with plus']);
+  this.executeCharTest('⨅', ['n ary square intersection operator']);
+  this.executeCharTest('⨆', ['n ary square union operator']);
+  this.executeCharTest('⨇', ['two logical and operator']);
+  this.executeCharTest('⨈', ['two logical or operator']);
+  this.executeCharTest('⨉', ['n ary times operator']);
+  this.executeCharTest('⨊', ['modulo two sum']);
+  this.executeCharTest('⨋', ['summation with integral']);
+  this.executeCharTest('⨌', ['intégrale quadruple']);
+  this.executeCharTest('⨍', ['intégrale à partie finie']);
+  this.executeCharTest('⨎', ['integral with double stroke']);
+  this.executeCharTest('⨏', ['integral average with slash']);
+  this.executeCharTest('⨐', ['fonction de circulation']);
+  this.executeCharTest('⨑', ['intégrale en sens positif']);
+  this.executeCharTest('⨒', ['intégrale de ligne à chemin rectangulaire autour du pôle']);
+  this.executeCharTest('⨓', ['intégrale de ligne à chemin semi-circulaire autour du pôle']);
+  this.executeCharTest('⨔', ['intégrale de ligne évitant le pôle']);
+  this.executeCharTest('⨕', ['intégrale autour d\'un opérateur point']);
+  this.executeCharTest('⨖', ['intégrale quaternion']);
+  this.executeCharTest('⨘', ['integral with times']);
+  this.executeCharTest('⨙', ['integral with intersection']);
+  this.executeCharTest('⨚', ['integral with union']);
+  this.executeCharTest('⨛', ['integral with overbar']);
+  this.executeCharTest('⨜', ['integral with underbar']);
+  this.executeCharTest('⨝', ['join']);
+  this.executeCharTest('⨞', ['large left triangle operator']);
+  this.executeCharTest('⨟', ['z notation schema composition']);
+  this.executeCharTest('⨠', ['z notation schema piping']);
+  this.executeCharTest('⨡', ['z notation schema projection']);
+  this.executeCharTest('⨢', ['plus surmonté d\'un petit cercle']);
+  this.executeCharTest('⨣', ['plus surmonté d\'un circonflexe']);
+  this.executeCharTest('⨤', ['plus surmonté d\'un tilde']);
+  this.executeCharTest('⨥', ['plus à point souscrit']);
+  this.executeCharTest('⨦', ['plus à tilde souscrit']);
+  this.executeCharTest('⨧', ['plus à chiffre deux souscrit']);
+  this.executeCharTest('⨨', ['plus sign with black triangle']);
+  this.executeCharTest('⨩', ['moins surmonté d\'une virgule']);
+  this.executeCharTest('⨪', ['moins à point souscrit']);
+  this.executeCharTest('⨫', ['minus sign with falling dots']);
+  this.executeCharTest('⨬', ['minus sign with rising dots']);
+  this.executeCharTest('⨭', ['plus dans demi-cercle gauche']);
+  this.executeCharTest('⨮', ['plus dans demi-cercle droit']);
+  this.executeCharTest('⨯', ['produit vectoriel']);
+  this.executeCharTest('⨰', ['signe multiplication à point en chef']);
+  this.executeCharTest('⨱', ['signe multiplication à barre souscrite']);
+  this.executeCharTest('⨲', ['semidirect product with bottom closed']);
+  this.executeCharTest('⨳', ['produit fusionné']);
+  this.executeCharTest('⨴', ['signe multiplication dans demi-cercle gauche']);
+  this.executeCharTest('⨵', ['signe multiplication dans demi-cercle droit']);
+  this.executeCharTest('⨶', ['signe multiplication cerclé circonflexe']);
+  this.executeCharTest('⨷', ['signe multiplication doublement cerclé']);
+  this.executeCharTest('⨸', ['signe division cerclé']);
+  this.executeCharTest('⨹', ['plus dans triangle']);
+  this.executeCharTest('⨺', ['moins dans triangle']);
+  this.executeCharTest('⨻', ['signe multiplication dans triangle']);
+  this.executeCharTest('⨼', ['produit interieur']);
+  this.executeCharTest('⨽', ['righthand interior product']);
+  this.executeCharTest('⨾', ['z notation relational composition']);
+  this.executeCharTest('⨿', ['amalgamation ou coproduit']);
+  this.executeCharTest('⩀', ['intersection pointée']);
+  this.executeCharTest('⩁', ['union with minus']);
+  this.executeCharTest('⩂', ['union à barre en chef']);
+  this.executeCharTest('⩃', ['intersection à barre en chef']);
+  this.executeCharTest('⩄', ['intersection avec et logique']);
+  this.executeCharTest('⩅', ['union avec ou logique']);
+  this.executeCharTest('⩆', ['union par-dessus intersection']);
+  this.executeCharTest('⩇', ['intersection par-dessus union']);
+  this.executeCharTest('⩈', ['union par-dessus bar par-dessus intersection']);
+  this.executeCharTest('⩉', ['intersection par-dessus trait par-dessus union']);
+  this.executeCharTest('⩊', ['deux unions soudées côte à côte']);
+  this.executeCharTest('⩋', ['deux intersections soudées côte à côte']);
+  this.executeCharTest('⩌', ['union fermée à empattements']);
+  this.executeCharTest('⩍', ['intersection fermée à empattements']);
+  this.executeCharTest('⩎', ['double square intersection']);
+  this.executeCharTest('⩏', ['double square union']);
+  this.executeCharTest('⩐', ['union fermée à empattements et produit fusionné']);
+  this.executeCharTest('⩑', ['logical and with dot above']);
+  this.executeCharTest('⩒', ['logical or with dot above']);
+  this.executeCharTest('⩓', ['double et logique']);
+  this.executeCharTest('⩔', ['double ou logique']);
+  this.executeCharTest('⩕', ['deux et logiques entrecroisés']);
+  this.executeCharTest('⩖', ['deux ou logiques entrecroisés']);
+  this.executeCharTest('⩗', ['grand ou pentu']);
+  this.executeCharTest('⩘', ['grand et pentu']);
+  this.executeCharTest('⩙', ['logical or overlapping logical and']);
+  this.executeCharTest('⩚', ['et logique à hampe médiane']);
+  this.executeCharTest('⩛', ['ou logique à hampe médiane']);
+  this.executeCharTest('⩜', ['et logique à tiret horizontal']);
+  this.executeCharTest('⩝', ['ou logique à tiret horizontal']);
+  this.executeCharTest('⩞', ['logical and with double overbar']);
+  this.executeCharTest('⩟', ['et logique à barre souscrite']);
+  this.executeCharTest('⩠', ['logical and with double underbar']);
+  this.executeCharTest('⩡', ['small vee with underbar']);
+  this.executeCharTest('⩢', ['logical or with double overbar']);
+  this.executeCharTest('⩣', ['logical or with double underbar']);
+  this.executeCharTest('⩤', ['z notation domain antirestriction']);
+  this.executeCharTest('⩥', ['z notation range antirestriction']);
+  this.executeCharTest('⩦', ['signe égal point souscrit']);
+  this.executeCharTest('⩧', ['identical with dot above']);
+  this.executeCharTest('⩨', ['triple horizontal bar with double vertical stroke']);
+  this.executeCharTest('⩩', ['triple horizontal bar with triple vertical stroke']);
+  this.executeCharTest('⩪', ['opérateur tilde point en chef']);
+  this.executeCharTest('⩫', ['tilde operator with rising dots']);
+  this.executeCharTest('⩬', ['similar minus similar']);
+  this.executeCharTest('⩭', ['congruent point en chef']);
+  this.executeCharTest('⩮', ['equals with asterisk']);
+  this.executeCharTest('⩯', ['presque égal à circonflexe']);
+  this.executeCharTest('⩰', ['approximately equal or equals']);
+  this.executeCharTest('⩱', ['plus signe égal en chef']);
+  this.executeCharTest('⩲', ['égal à signe plus en chef']);
+  this.executeCharTest('⩳', ['tilde signe égal en chef']);
+  this.executeCharTest('⩴', ['double deux-points égal à']);
+  this.executeCharTest('⩵', ['deux signes égal à consécutifs']);
+  this.executeCharTest('⩶', ['three consecutive equals']);
+  this.executeCharTest('⩷', ['égal à deux points en chef deux points souscrits']);
+  this.executeCharTest('⩸', ['équivalent quatre points en chef']);
+  this.executeCharTest('⩹', ['inférieur à avec cercle inscrit']);
+  this.executeCharTest('⩺', ['supérieur à avec cercle inscrit']);
+  this.executeCharTest('⩻', ['inférieur à point d\'interrogation en chef']);
+  this.executeCharTest('⩼', ['supérieur à point d\'interrogation en chef']);
+  this.executeCharTest('⩽', ['plus petit ou égal à pentu']);
+  this.executeCharTest('⩾', ['supérieur à ou égal à pentu']);
+  this.executeCharTest('⩿', ['inférieur à ou égal à pentu point inscrit']);
+  this.executeCharTest('⪀', ['supérieur à ou égal à pentu point inscrit']);
+  this.executeCharTest('⪁', ['inférieur à ou égal à pentu point en chef']);
+  this.executeCharTest('⪂', ['supérieur à ou égal à pentu point en chef']);
+  this.executeCharTest('⪃', ['inférieur à ou égal à pentu point en chef droit']);
+  this.executeCharTest('⪄', ['supérieur à ou égal à pentu point en chef gauche']);
+  this.executeCharTest('⪅', ['less than or approximate']);
+  this.executeCharTest('⪆', ['greater than or approximate']);
+  this.executeCharTest('⪇', ['less than and single line not equals']);
+  this.executeCharTest('⪈', ['greater than and single line not equals']);
+  this.executeCharTest('⪉', ['inférieur à et non approximatif']);
+  this.executeCharTest('⪊', ['supérieur à et non approximatif']);
+  this.executeCharTest('⪋', ['less than above double line equal above greater than']);
+  this.executeCharTest('⪌', ['greater than above double line equal above less than']);
+  this.executeCharTest('⪍', ['inférieur à par-dessus similaire à ou égal à']);
+  this.executeCharTest('⪎', ['supérieur à par-dessus similaire à ou égal à']);
+  this.executeCharTest('⪏', ['inférieur à par-dessus similaire à par-dessus supérieur à']);
+  this.executeCharTest('⪐', ['supérieur à par-dessus similaire à par-dessus inférieur à']);
+  this.executeCharTest('⪑', ['inférieur à par-dessus supérieur à par-dessus égal à deux lignes']);
+  this.executeCharTest('⪒', ['supérieur à par-dessus inférieur à par-dessus égal à deux lignes']);
+  this.executeCharTest('⪓', ['inférieur à par-dessus égal à pentu par-dessus supérieur à par-dessus égal à pentu']);
+  this.executeCharTest('⪔', ['supérieur à par-dessus égal à pentu par-dessus inférieur à par-dessus égal à pentu']);
+  this.executeCharTest('⪕', ['slanted equals or less than']);
+  this.executeCharTest('⪖', ['slanted equals or greater than']);
+  this.executeCharTest('⪗', ['égal à pentu ou inférieur à point inscrit']);
+  this.executeCharTest('⪘', ['égal à pentu ou supérieur à point inscrit']);
+  this.executeCharTest('⪙', ['égal à deux lignes ou inférieur à']);
+  this.executeCharTest('⪚', ['égal à deux lignes ou supérieur à']);
+  this.executeCharTest('⪛', ['double line slanted equals or less than']);
+  this.executeCharTest('⪜', ['double line slanted equals or greater than']);
+  this.executeCharTest('⪝', ['similaire à ou inférieur à']);
+  this.executeCharTest('⪞', ['similaire à ou supérieur à']);
+  this.executeCharTest('⪟', ['similaire à par-dessus inférieur à par-dessus signe égal']);
+  this.executeCharTest('⪠', ['similaire à par-dessus supérieur à par-dessus signe égal']);
+  this.executeCharTest('⪡', ['deux inférieur à emboîtés']);
+  this.executeCharTest('⪢', ['deux supérieur à emboîtés']);
+  this.executeCharTest('⪣', ['double nested less than with underbar']);
+  this.executeCharTest('⪤', ['deux supérieur à entrecroisés']);
+  this.executeCharTest('⪥', ['supérieur à à côté de inférieur à']);
+  this.executeCharTest('⪦', ['inférieur à fermé d\'un arc']);
+  this.executeCharTest('⪧', ['supérieur à fermé d\'un arc']);
+  this.executeCharTest('⪨', ['inférieur à fermé d\'un arc par-dessus égal à pentu']);
+  this.executeCharTest('⪩', ['supérieur à fermé d\'un arc par-dessus égal à pentu']);
+  this.executeCharTest('⪪', ['plus petit que en fourche']);
+  this.executeCharTest('⪫', ['plus grand que en fourche']);
+  this.executeCharTest('⪬', ['plus petit ou égal que en fourche']);
+  this.executeCharTest('⪭', ['plus grand ou égal que en fourche']);
+  this.executeCharTest('⪮', ['signe égal et dos-d\'âne']);
+  this.executeCharTest('⪯', ['précède par-dessus signe égal à une ligne']);
+  this.executeCharTest('⪰', ['succeeds above single line equals sign']);
+  this.executeCharTest('⪱', ['precedes above single line not equals']);
+  this.executeCharTest('⪲', ['succeeds above single line not equals']);
+  this.executeCharTest('⪳', ['precedes above equals sign']);
+  this.executeCharTest('⪴', ['succeeds above equals sign']);
+  this.executeCharTest('⪵', ['précède par-dessus pas égal à']);
+  this.executeCharTest('⪶', ['suit par-dessus pas égal à']);
+  this.executeCharTest('⪷', ['precedes above almost equals']);
+  this.executeCharTest('⪸', ['succeeds above almost equals']);
+  this.executeCharTest('⪹', ['precedes above not almost equals']);
+  this.executeCharTest('⪺', ['succeeds above not almost equals']);
+  this.executeCharTest('⪻', ['double précède']);
+  this.executeCharTest('⪼', ['double suit']);
+  this.executeCharTest('⪽', ['sous-ensemble pointé']);
+  this.executeCharTest('⪾', ['sur-ensemble pointé']);
+  this.executeCharTest('⪿', ['sous-ensemble plus souscrit']);
+  this.executeCharTest('⫀', ['sur-ensemble plus souscrit']);
+  this.executeCharTest('⫁', ['sous-ensemble à signe de multiplication souscrit']);
+  this.executeCharTest('⫂', ['sur-ensemble à signe de multiplication souscrit']);
+  this.executeCharTest('⫃', ['sous-ensemble de ou égal à point en chef']);
+  this.executeCharTest('⫄', ['sur-ensemble de ou égal à point en chef']);
+  this.executeCharTest('⫅', ['subset of above equals sign']);
+  this.executeCharTest('⫆', ['superset of above equals sign']);
+  this.executeCharTest('⫇', ['sous-ensemble de par-dessus opérateur tilde']);
+  this.executeCharTest('⫈', ['sur-ensemble de par-dessus opérateur tilde']);
+  this.executeCharTest('⫉', ['subset of above almost equals']);
+  this.executeCharTest('⫊', ['superset of above almost equals']);
+  this.executeCharTest('⫋', ['subset of above not equals']);
+  this.executeCharTest('⫌', ['superset of above not equals']);
+  this.executeCharTest('⫍', ['square left open box operator']);
+  this.executeCharTest('⫎', ['square right open box operator']);
+  this.executeCharTest('⫏', ['sous-ensemble clos']);
+  this.executeCharTest('⫐', ['sur-ensemble clos']);
+  this.executeCharTest('⫑', ['sous-ensemble clos ou égal à']);
+  this.executeCharTest('⫒', ['sur-ensemble clos ou égal à']);
+  this.executeCharTest('⫓', ['sous-ensemble par-dessus sur-ensemble']);
+  this.executeCharTest('⫔', ['sur-ensemble par-dessus sous-ensemble']);
+  this.executeCharTest('⫕', ['sous-ensemble par-dessus sous-ensemble']);
+  this.executeCharTest('⫖', ['sur-ensemble par-dessus sur-ensemble']);
+  this.executeCharTest('⫗', ['sur-ensemble à côté de sous-ensemble']);
+  this.executeCharTest('⫘', ['sur-ensemble chaîné à sous-ensemble']);
+  this.executeCharTest('⫙', ['appartient à ouvert vers le bas']);
+  this.executeCharTest('⫚', ['fourche surmontée d\'un t']);
+  this.executeCharTest('⫛', ['intersection transversale']);
+  this.executeCharTest('⫝̸', ['forking']);
+  this.executeCharTest('⫝', ['nonforking']);
+  this.executeCharTest('⫞', ['short left tack']);
+  this.executeCharTest('⫟', ['short down tack']);
+  this.executeCharTest('⫠', ['short up tack']);
+  this.executeCharTest('⫡', ['perpendicular with s']);
+  this.executeCharTest('⫢', ['vertical bar triple right turnstile']);
+  this.executeCharTest('⫣', ['double vertical bar left turnstile']);
+  this.executeCharTest('⫤', ['double tourniquet gauche à barre verticale']);
+  this.executeCharTest('⫥', ['double vertical bar double left turnstile']);
+  this.executeCharTest('⫦', ['double barre verticale gauche à traverse']);
+  this.executeCharTest('⫧', ['taquet court vers le bas avec barre en chef']);
+  this.executeCharTest('⫨', ['taquet court vers le haut avec barre souscrite']);
+  this.executeCharTest('⫩', ['taquet court vers le haut par-dessus taquet court vers le bas']);
+  this.executeCharTest('⫪', ['double down tack']);
+  this.executeCharTest('⫫', ['double taquet vers le haut']);
+  this.executeCharTest('⫬', ['signe négation à deux traits']);
+  this.executeCharTest('⫭', ['signe négation à deux traits réfléchi']);
+  this.executeCharTest('⫮', ['n\'est pas un diviseur de à barre de négation réfléchie']);
+  this.executeCharTest('⫯', ['ligne verticale cercle en chef']);
+  this.executeCharTest('⫰', ['ligne verticale cercle souscrit']);
+  this.executeCharTest('⫱', ['taquet vers le bas surmontant un cercle']);
+  this.executeCharTest('⫲', ['parallèlle à vertical à une traverse']);
+  this.executeCharTest('⫳', ['parallèle à avec opérateur tilde']);
+  this.executeCharTest('⫴', ['triple vertical bar binary relation']);
+  this.executeCharTest('⫵', ['triple vertical bar with horizontal stroke']);
+  this.executeCharTest('⫶', ['triple colon operator']);
+  this.executeCharTest('⫷', ['triple nested less than']);
+  this.executeCharTest('⫸', ['triple nested greater than']);
+  this.executeCharTest('⫹', ['double line slanted less than or equals']);
+  this.executeCharTest('⫺', ['double line slanted greater than or equals']);
+  this.executeCharTest('⫻', ['triple solidus binary relation']);
+  this.executeCharTest('⫼', ['large triple vertical bar operator']);
+  this.executeCharTest('⫽', ['double solidus operator']);
+  this.executeCharTest('⫾', ['white vertical bar']);
+  this.executeCharTest('⫿', ['n ary white vertical bar']);
+  this.executeCharTest('〜', ['wave dash']);
+  this.executeCharTest('︐', ['presentation form for vertical comma']);
+  this.executeCharTest('︓', ['presentation form for vertical colon']);
+  this.executeCharTest('︔', ['presentation form for vertical semicolon']);
+  this.executeCharTest('︕', ['presentation form for vertical exclamation mark']);
+  this.executeCharTest('︖', ['presentation form for vertical question mark']);
+  this.executeCharTest('︙', ['presentation form for vertical horizontal ellipsis']);
+  this.executeCharTest('︰', ['presentation form for vertical two dot leader']);
+  this.executeCharTest('︱', ['presentation form for vertical em dash']);
+  this.executeCharTest('︲', ['presentation form for vertical en dash']);
+  this.executeCharTest('︳', ['presentation form for vertical low line']);
+  this.executeCharTest('︴', ['presentation form for vertical wavy low line']);
+  this.executeCharTest('﹅', ['sesame dot']);
+  this.executeCharTest('﹆', ['white sesame dot']);
+  this.executeCharTest('﹉', ['dashed overline']);
+  this.executeCharTest('﹊', ['centerline overline']);
+  this.executeCharTest('﹋', ['wavy overline']);
+  this.executeCharTest('﹌', ['double wavy overline']);
+  this.executeCharTest('﹍', ['dashed low line']);
+  this.executeCharTest('﹎', ['centerline low line']);
+  this.executeCharTest('﹏', ['wavy low line']);
+  this.executeCharTest('﹐', ['small comma']);
+  this.executeCharTest('﹒', ['small full stop']);
+  this.executeCharTest('﹔', ['small semicolon']);
+  this.executeCharTest('﹕', ['small colon']);
+  this.executeCharTest('﹖', ['small question mark']);
+  this.executeCharTest('﹗', ['small exclamation mark']);
+  this.executeCharTest('﹘', ['small em dash']);
+  this.executeCharTest('﹟', ['small number sign']);
+  this.executeCharTest('﹠', ['small ampersand']);
+  this.executeCharTest('﹡', ['small asterisk']);
+  this.executeCharTest('﹢', ['small plus sign']);
+  this.executeCharTest('﹣', ['small hyphen minus']);
+  this.executeCharTest('﹤', ['small less than sign']);
+  this.executeCharTest('﹥', ['small greater than sign']);
+  this.executeCharTest('﹦', ['small equals sign']);
+  this.executeCharTest('﹨', ['integer divide']);
+  this.executeCharTest('﹩', ['small dollar sign']);
+  this.executeCharTest('﹪', ['small percent sign']);
+  this.executeCharTest('﹫', ['small commercial at']);
+  this.executeCharTest('！', ['fullwidth exclamation mark']);
+  this.executeCharTest('＂', ['fullwidth quotation mark']);
+  this.executeCharTest('＃', ['fullwidth number sign']);
+  this.executeCharTest('＄', ['fullwidth dollar sign']);
+  this.executeCharTest('％', ['fullwidth percent sign']);
+  this.executeCharTest('＆', ['fullwidth ampersand']);
+  this.executeCharTest('＇', ['fullwidth apostrophe']);
+  this.executeCharTest('＊', ['fullwidth asterisk']);
+  this.executeCharTest('＋', ['fullwidth plus sign']);
+  this.executeCharTest('，', ['fullwidth comma']);
+  this.executeCharTest('－', ['fullwidth hyphen minus']);
+  this.executeCharTest('．', ['fullwidth full stop']);
+  this.executeCharTest('／', ['fullwidth solidus']);
+  this.executeCharTest('：', ['fullwidth colon']);
+  this.executeCharTest('；', ['fullwidth semicolon']);
+  this.executeCharTest('＜', ['fullwidth less than sign']);
+  this.executeCharTest('＝', ['fullwidth equals sign']);
+  this.executeCharTest('＞', ['fullwidth greater than sign']);
+  this.executeCharTest('？', ['fullwidth question mark']);
+  this.executeCharTest('＠', ['fullwidth commercial at']);
+  this.executeCharTest('＼', ['fullwidth reverse solidus']);
+  this.executeCharTest('＾', ['fullwidth circumflex accent']);
+  this.executeCharTest('＿', ['fullwidth low line']);
+  this.executeCharTest('｀', ['fullwidth grave accent']);
+  this.executeCharTest('｜', ['fullwidth vertical line']);
+  this.executeCharTest('～', ['fullwidth tilde']);
+  this.executeCharTest('￠', ['fullwidth cent sign']);
+  this.executeCharTest('￡', ['fullwidth pound sign']);
+  this.executeCharTest('￢', ['fullwidth not sign']);
+  this.executeCharTest('￣', ['fullwidth macron']);
+  this.executeCharTest('￤', ['fullwidth broken bar']);
+  this.executeCharTest('￥', ['fullwidth yen sign']);
+  this.executeCharTest('￦', ['fullwidth won sign']);
+  this.executeCharTest('￨', ['halfwidth forms light vertical']);
+  this.executeCharTest('￭', ['halfwidth black square']);
+  this.executeCharTest('￮', ['halfwidth white circle']);
+  this.executeCharTest(' ', ['space']);
+  this.executeCharTest(' ', [' ']);
+  this.executeCharTest('­', ['trait d\'union conditionnel']);
+  this.executeCharTest(' ', ['en quad']);
+  this.executeCharTest(' ', ['em quad']);
+  this.executeCharTest(' ', [' ']);
+  this.executeCharTest(' ', [' ']);
+  this.executeCharTest(' ', [' ']);
+  this.executeCharTest(' ', [' ']);
+  this.executeCharTest(' ', ['six per em space']);
+  this.executeCharTest(' ', [' ']);
+  this.executeCharTest(' ', [' ']);
+  this.executeCharTest(' ', [' ']);
+  this.executeCharTest(' ', [' ']);
+  this.executeCharTest('​', ['​']);
+  this.executeCharTest('‌', ['antiliant sans chasse']);
+  this.executeCharTest('‍', ['liant sans chasse']);
+  this.executeCharTest('‎', ['marque gauche-à-droite']);
+  this.executeCharTest('‏', ['marque droite-à-gauche']);
+  this.executeCharTest(' ', ['line separator']);
+  this.executeCharTest(' ', ['paragraph separator']);
+  this.executeCharTest('‪', ['left to right embedding']);
+  this.executeCharTest('‫', ['right to left embedding']);
+  this.executeCharTest('‬', ['pop directional formatting']);
+  this.executeCharTest('‭', ['left to right override']);
+  this.executeCharTest('‮', ['right to left override']);
+  this.executeCharTest(' ', ['narrow no break space']);
+  this.executeCharTest(' ', ['espace moyenne mathématique']);
+  this.executeCharTest('⁠', ['⁠']);
+  this.executeCharTest('⁡', ['de']);
+  this.executeCharTest('⁢', [' ']);
+  this.executeCharTest('⁣', ['⁣']);
+  this.executeCharTest('⁤', ['plus']);
+  this.executeCharTest('⁪', ['inhibit symmetric swapping']);
+  this.executeCharTest('⁫', ['activate symmetric swapping']);
+  this.executeCharTest('⁮', ['national digit shapes']);
+  this.executeCharTest('⁯', ['nominal digit shapes']);
+  this.executeCharTest('﻿', ['espace ultrafine']);
+  this.executeCharTest('￹', ['interlinear annotation anchor']);
+  this.executeCharTest('￺', ['interlinear annotation separator']);
+  this.executeCharTest('￻', ['interlinear annotation terminator']);
+  this.executeCharTest('⏨', ['decimal exponent symbol']);
+  this.executeCharTest('★', ['étoile noire']);
+  this.executeCharTest('☆', ['étoile blanche']);
+  this.executeCharTest('⚪', ['white circle']);
+  this.executeCharTest('⚫', ['black circle']);
+  this.executeCharTest('✅', ['white check']);
+  this.executeCharTest('✓', ['signe de vérification']);
+  this.executeCharTest('✔', ['heavy check']);
+  this.executeCharTest('✕', ['multiplication x']);
+  this.executeCharTest('✖', ['heavy multiplication x']);
+  this.executeCharTest('✗', ['x de bulletin de vote']);
+  this.executeCharTest('✘', ['heavy ballot x']);
+  this.executeCharTest('✛', ['open center cross']);
+  this.executeCharTest('✜', ['heavy open center cross']);
+  this.executeCharTest('✠', ['croix de malte']);
+  this.executeCharTest('✡', ['star of david']);
+  this.executeCharTest('✢', ['four teardrop spoked asterisk']);
+  this.executeCharTest('✣', ['four balloon spoked asterisk']);
+  this.executeCharTest('✤', ['heavy four balloon spoked asterisk']);
+  this.executeCharTest('✥', ['four club spoked asterisk']);
+  this.executeCharTest('✦', ['black four pointed star']);
+  this.executeCharTest('✧', ['white four pointed star']);
+  this.executeCharTest('✨', ['sparkles']);
+  this.executeCharTest('✩', ['stress outlined white star']);
+  this.executeCharTest('✪', ['circled white star']);
+  this.executeCharTest('✫', ['open center black star']);
+  this.executeCharTest('✬', ['black center white star']);
+  this.executeCharTest('✭', ['outlined black star']);
+  this.executeCharTest('✮', ['heavy outlined black star']);
+  this.executeCharTest('✯', ['pinwheel star']);
+  this.executeCharTest('✰', ['shadowed white star']);
+  this.executeCharTest('✱', ['heavy asterisk']);
+  this.executeCharTest('✲', ['open center asterisk']);
+  this.executeCharTest('✳', ['eight spoked asterisk']);
+  this.executeCharTest('✴', ['eight pointed black star']);
+  this.executeCharTest('✵', ['eight pointed pinwheel star']);
+  this.executeCharTest('✶', ['étoile noire à six branches']);
+  this.executeCharTest('✹', ['twelve pointed black star']);
+  this.executeCharTest('✺', ['sixteen pointed asterisk']);
+  this.executeCharTest('✻', ['teardrop spoked asterisk']);
+  this.executeCharTest('✼', ['open center teardrop spoked asterisk']);
+  this.executeCharTest('✽', ['gros astérisque larmé']);
+  this.executeCharTest('✾', ['six petalled black and white florette']);
+  this.executeCharTest('✿', ['black florette']);
+  this.executeCharTest('❀', ['white florette']);
+  this.executeCharTest('❁', ['eight petalled outlined black florette']);
+  this.executeCharTest('❂', ['circled open center eight pointed star']);
+  this.executeCharTest('❃', ['heavy teardrop spoked pinwheel asterisk']);
+  this.executeCharTest('❄', ['snowflake']);
+  this.executeCharTest('❅', ['tight trifoliate snowflake']);
+  this.executeCharTest('❆', ['heavy chevron snowflake']);
+  this.executeCharTest('❇', ['sparkle']);
+  this.executeCharTest('❈', ['heavy sparkle']);
+  this.executeCharTest('❉', ['balloon spoked asterisk']);
+  this.executeCharTest('❊', ['eight teardrop spoked propeller asterisk']);
+  this.executeCharTest('❋', ['heavy eight teardrop spoked propeller asterisk']);
+  this.executeCharTest('❌', ['cross mark']);
+  this.executeCharTest('❍', ['shadowed white circle']);
+};
+
+
+sre.DefaultCharFrenchTest.prototype.testDefaultFunctions = function() {
+  this.executeCharTest('deg', ['degree']);
+  this.executeCharTest('det', ['déterminant']);
+  this.executeCharTest('dim', ['dimension']);
+  this.executeCharTest('hom', ['hom']);
+  this.executeCharTest('Hom', ['hom']);
+  this.executeCharTest('ker', ['kernel']);
+  this.executeCharTest('Tr', ['trace']);
+  this.executeCharTest('tr', ['trace']);
+  this.executeCharTest('log', ['log']);
+  this.executeCharTest('ln', ['logarithme népérien']);
+  this.executeCharTest('lg', ['log base 10']);
+  this.executeCharTest('exp', ['exp']);
+  this.executeCharTest('expt', ['exp']);
+  this.executeCharTest('gcd', ['gcd']);
+  this.executeCharTest('lcm', ['lcm']);
+  this.executeCharTest('arg', ['arg']);
+  this.executeCharTest('im', ['imaginary']);
+  this.executeCharTest('re', ['real']);
+  this.executeCharTest('inf', ['inf']);
+  this.executeCharTest('lim', ['limite']);
+  this.executeCharTest('lim inf', ['liminf']);
+  this.executeCharTest('liminf', ['liminf']);
+  this.executeCharTest('lim sup', ['limsup']);
+  this.executeCharTest('limsup', ['limsup']);
+  this.executeCharTest('max', ['max']);
+  this.executeCharTest('min', ['min']);
+  this.executeCharTest('sup', ['sup']);
+  this.executeCharTest('injlim', ['colimit']);
+  this.executeCharTest('inj lim', ['colimit']);
+  this.executeCharTest('projlim', ['limit']);
+  this.executeCharTest('proj lim', ['limit']);
+  this.executeCharTest('mod', ['mod']);
+  this.executeCharTest('Pr', ['probability']);
+  this.executeCharTest('cosh', ['cosinus hyperbolique']);
+  this.executeCharTest('coth', ['cotangente hyperbolique']);
+  this.executeCharTest('csch', ['cosécante hyperbolique']);
+  this.executeCharTest('sech', ['sécante hyperbolique']);
+  this.executeCharTest('sinh', ['sinus hyperbolique']);
+  this.executeCharTest('tanh', ['tangente hyperbolique']);
+  this.executeCharTest('arcosh', ['area hyperbolic cosine']);
+  this.executeCharTest('arccosh', ['area hyperbolic cosine']);
+  this.executeCharTest('arcoth', ['area hyperbolic cotangent']);
+  this.executeCharTest('arccoth', ['area hyperbolic cotangent']);
+  this.executeCharTest('arcsch', ['area hyperbolic cosecant']);
+  this.executeCharTest('arccsch', ['area hyperbolic cosecant']);
+  this.executeCharTest('arsech', ['area hyperbolic secant']);
+  this.executeCharTest('arcsech', ['area hyperbolic secant']);
+  this.executeCharTest('arsinh', ['area hyperbolic sine']);
+  this.executeCharTest('arcsinh', ['area hyperbolic sine']);
+  this.executeCharTest('artanh', ['area hyperbolic tangent']);
+  this.executeCharTest('arctanh', ['area hyperbolic tangent']);
+  this.executeCharTest('cos', ['cosinus']);
+  this.executeCharTest('cosine', ['cosinus']);
+  this.executeCharTest('cot', ['cotangente']);
+  this.executeCharTest('csc', ['cosécante']);
+  this.executeCharTest('sec', ['sécante']);
+  this.executeCharTest('sin', ['sinus']);
+  this.executeCharTest('sine', ['sinus']);
+  this.executeCharTest('tan', ['tangente']);
+  this.executeCharTest('arccos', ['arc cosine']);
+  this.executeCharTest('arccot', ['arc cotangent']);
+  this.executeCharTest('arccsc', ['arc cosecant']);
+  this.executeCharTest('arcsec', ['arc secant']);
+  this.executeCharTest('arcsin', ['arc sine']);
+  this.executeCharTest('arctan', ['arc tangent']);
+};
+
+
+sre.DefaultCharFrenchTest.prototype.testDefaultUnits = function() {
+  this.executeUnitTest('W', ['watts']);
+  this.executeUnitTest('w', ['watts']);
+  this.executeUnitTest('kw', ['kilowatt']);
+  this.executeUnitTest('kW', ['kilowatt']);
+  this.executeUnitTest('mw', ['milliwatt']);
+  this.executeUnitTest('mW', ['milliwatt']);
+  this.executeUnitTest('kwh', ['kilowatt hour']);
+  this.executeUnitTest('kWh', ['kilowatt hour']);
+  this.executeUnitTest('J', ['joules']);
+  this.executeUnitTest('N', ['newtons']);
+  this.executeUnitTest('A', ['ampères']);
+  this.executeUnitTest('V', ['volts']);
+  this.executeUnitTest('µΩ', ['microohm']);
+  this.executeUnitTest('mΩ', ['milliohm']);
+  this.executeUnitTest('Ω', ['ohms']);
+  this.executeUnitTest('Ohm', ['ohms']);
+  this.executeUnitTest('kΩ', ['kilohm']);
+  this.executeUnitTest('KΩ', ['kilohm']);
+  this.executeUnitTest('MΩ', ['megaohm']);
+  this.executeUnitTest('GΩ', ['gigaohm']);
+  this.executeUnitTest('mm', ['millimeter']);
+  this.executeUnitTest('cm', ['centimeter']);
+  this.executeUnitTest('m', ['mètres']);
+  this.executeUnitTest('km', ['kilometer']);
+  this.executeUnitTest('ft', ['pieds']);
+  this.executeUnitTest('ft.', ['pieds']);
+  this.executeUnitTest('in', ['pouces']);
+  this.executeUnitTest('in.', ['pouces']);
+  this.executeUnitTest('mi', ['miles']);
+  this.executeUnitTest('mi.', ['miles']);
+  this.executeUnitTest('yd', ['yards']);
+  this.executeUnitTest('yd.', ['yards']);
+  this.executeUnitTest('n.m.', ['nautical mile']);
+  this.executeUnitTest('b', ['bit']);
+  this.executeUnitTest('B', ['byte']);
+  this.executeUnitTest('KB', ['kilobyte']);
+  this.executeUnitTest('MB', ['megabyte']);
+  this.executeUnitTest('GB', ['gigabyte']);
+  this.executeUnitTest('TB', ['terabyte']);
+  this.executeUnitTest('doz', ['dozen']);
+  this.executeUnitTest('doz.', ['dozen']);
+  this.executeUnitTest('dz', ['dozen']);
+  this.executeUnitTest('dz.', ['dozen']);
+  this.executeUnitTest('sq', ['square']);
+  this.executeUnitTest('sq.', ['square']);
+  this.executeUnitTest('ha', ['hectare']);
+  this.executeUnitTest('kt', ['knot']);
+  this.executeUnitTest('kt.', ['knot']);
+  this.executeUnitTest('mph', ['miles par heure']);
+  this.executeUnitTest('rpm', ['revolutions per minute']);
+  this.executeUnitTest('kmh', ['kilometers per hour']);
+  this.executeUnitTest('F', ['farads']);
+  this.executeUnitTest('F.', ['farads']);
+  this.executeUnitTest('°F', ['farads']);
+  this.executeUnitTest('C', ['coulombs']);
+  this.executeUnitTest('°C', ['coulombs']);
+  this.executeUnitTest('K', ['kelvins']);
+  this.executeUnitTest('°K', ['kelvins']);
+  this.executeUnitTest('ns', ['nanosecond']);
+  this.executeUnitTest('µs', ['microsecond']);
+  this.executeUnitTest('ms', ['millisecond']);
+  this.executeUnitTest('s', ['secondes']);
+  this.executeUnitTest('min', ['minute']);
+  this.executeUnitTest('h', ['hour']);
+  this.executeUnitTest('hr', ['hour']);
+  this.executeUnitTest('bbl.', ['barils']);
+  this.executeUnitTest('bbl', ['barils']);
+  this.executeUnitTest('cu', ['cubic']);
+  this.executeUnitTest('cu.', ['cubic']);
+  this.executeUnitTest('fl. oz.', ['fluid ounce']);
+  this.executeUnitTest('gal', ['gallons']);
+  this.executeUnitTest('gal.', ['gallons']);
+  this.executeUnitTest('pt', ['pintes']);
+  this.executeUnitTest('pt.', ['pintes']);
+  this.executeUnitTest('qt', ['quarts']);
+  this.executeUnitTest('qt.', ['quarts']);
+  this.executeUnitTest('tbsp', ['cuillères de table']);
+  this.executeUnitTest('tbsp.', ['cuillères de table']);
+  this.executeUnitTest('tsp', ['cuillèes à thé']);
+  this.executeUnitTest('tsp.', ['cuillèes à thé']);
+  this.executeUnitTest('cc', ['cubic centimeter']);
+  this.executeUnitTest('kl', ['kiloliter']);
+  this.executeUnitTest('l', ['litres']);
+  this.executeUnitTest('ml', ['milliliter']);
+  this.executeUnitTest('lb', ['livres']);
+  this.executeUnitTest('lb.', ['livres']);
+  this.executeUnitTest('LT', ['long ton']);
+  this.executeUnitTest('L.T.', ['long ton']);
+  this.executeUnitTest('oz', ['onces']);
+  this.executeUnitTest('oz.', ['onces']);
+  this.executeUnitTest('g', ['grains']);
+  this.executeUnitTest('gr', ['grains']);
+  this.executeUnitTest('kg', ['kilogram']);
+  this.executeUnitTest('mcg', ['microgram']);
+  this.executeUnitTest('µg', ['microgram']);
+  this.executeUnitTest('mg', ['milligram']);
+  this.executeUnitTest('t', ['tonnes']);
+  this.executeUnitTest('T', ['tonnes']);
+};
