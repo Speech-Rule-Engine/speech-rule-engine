@@ -1709,10 +1709,10 @@ sre.ClearspeakCharEnglishTest.prototype.testClearspeakChars = function() {
   this.executeCharTest('𝕫', ['double struck z']);
   this.executeCharTest('𝔄', ['fraktur cap A']);
   this.executeCharTest('𝔅', ['fraktur cap B']);
-  this.executeCharTest('ℭ', ['fraktur cap D']);
-  this.executeCharTest('𝔇', ['fraktur cap E']);
-  this.executeCharTest('𝔈', ['fraktur cap F']);
-  this.executeCharTest('𝔉', ['fraktur cap G']);
+  this.executeCharTest('ℭ', ['fraktur cap C']);
+  this.executeCharTest('𝔇', ['fraktur cap D']);
+  this.executeCharTest('𝔈', ['fraktur cap E']);
+  this.executeCharTest('𝔉', ['fraktur cap F']);
   this.executeCharTest('𝔊', ['fraktur cap G']);
   this.executeCharTest('ℌ', ['fraktur cap H']);
   this.executeCharTest('ℑ', ['fraktur cap I']);
