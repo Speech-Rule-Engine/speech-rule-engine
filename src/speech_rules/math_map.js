@@ -27,6 +27,7 @@ goog.require('sre.BaseUtil');
 goog.require('sre.BrowserUtil');
 goog.require('sre.Engine');
 goog.require('sre.MathCompoundStore');
+goog.require('sre.SymbolIntervals');
 goog.require('sre.SystemExternal');
 goog.require('sre.Variables');
 
@@ -44,7 +45,11 @@ sre.MathMap = function() {
    */
   this.store = sre.MathCompoundStore.getInstance();
 
+  var timeIn = (new Date()).getTime();
   this.retrieveMaps();
+  sre.SymbolIntervals.makeIntervals();
+  var timeOut = (new Date()).getTime();
+  console.log('Time:', timeOut - timeIn);
 
 };
 goog.addSingletonGetter(sre.MathMap);
