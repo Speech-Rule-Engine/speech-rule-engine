@@ -47,7 +47,8 @@ sre.MathMap = function() {
 
   var timeIn = (new Date()).getTime();
   this.retrieveMaps();
-  sre.SymbolIntervals.makeIntervals();
+  // sre.SymbolIntervals.makeIntervals();
+  sre.SymbolIntervals.experimental();
   var timeOut = (new Date()).getTime();
   console.log('Time:', timeOut - timeIn);
 

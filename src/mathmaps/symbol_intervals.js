@@ -73,6 +73,12 @@ sre.SymbolIntervals.makeIntervals = function() {
 };
 
 
+sre.SymbolIntervals.experimental = function() {
+  var int = sre.SymbolIntervals.LATIN[12];
+  var keys = sre.SymbolIntervals.makeInterval(int.interval, int.subst);
+  console.log(keys);
+};
+
 sre.SymbolIntervals.makeInterval = function (int, subst) {
   var start = parseInt(int[0], 16);
   var end = parseInt(int[1], 16);
