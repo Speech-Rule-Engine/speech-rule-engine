@@ -47,8 +47,7 @@ sre.MathMap = function() {
 
   var timeIn = (new Date()).getTime();
   this.retrieveMaps();
-  // sre.SymbolIntervals.makeIntervals();
-  sre.SymbolIntervals.experimental();
+  sre.SymbolIntervals.makeIntervals(this.store);
   var timeOut = (new Date()).getTime();
   console.log('Time:', timeOut - timeIn);
 
@@ -123,19 +122,19 @@ sre.MathMap.SYMBOLS_FILES_ = [
   'hebrew_letters.js',
 
   // Latin
-  'latin-lower-double-accent.js', 'latin-lower-normal.js',
-  'latin-lower-phonetic.js', 'latin-lower-single-accent.js',
-  'latin-rest.js', 'latin-upper-double-accent.js',
-  'latin-upper-normal.js', 'latin-upper-single-accent.js',
+  // 'latin-lower-normal.js', 'latin-upper-normal.js',
+  'latin-lower-double-accent.js', 'latin-lower-phonetic.js',
+  'latin-lower-single-accent.js', 'latin-rest.js',
+  'latin-upper-double-accent.js', 'latin-upper-single-accent.js',
 
   // Latin Mathfonts
-  'latin-mathfonts-bold-fraktur.js', 'latin-mathfonts-bold.js',
-  'latin-mathfonts-bold-italic.js', 'latin-mathfonts-bold-script.js',
-  'latin-mathfonts-double-struck.js', 'latin-mathfonts-fraktur.js',
-  'latin-mathfonts-italic.js', 'latin-mathfonts-monospace.js',
-  'latin-mathfonts-sans-serif-bold.js', 'latin-mathfonts-sans-serif-italic.js',
-  'latin-mathfonts-sans-serif-bold-italic.js', 'latin-mathfonts-sans-serif.js',
-  'latin-mathfonts-script.js',
+  // 'latin-mathfonts-bold-fraktur.js', 'latin-mathfonts-bold.js',
+  // 'latin-mathfonts-bold-italic.js', 'latin-mathfonts-bold-script.js',
+  // 'latin-mathfonts-double-struck.js', 'latin-mathfonts-fraktur.js',
+  // 'latin-mathfonts-italic.js', 'latin-mathfonts-monospace.js',
+  // 'latin-mathfonts-sans-serif-bold.js', 'latin-mathfonts-sans-serif-italic.js',
+  // 'latin-mathfonts-sans-serif-bold-italic.js', 'latin-mathfonts-sans-serif.js',
+  // 'latin-mathfonts-script.js',
 
   // Math Symbols
   'math_angles.js', 'math_arrows.js', 'math_characters.js',

@@ -87,6 +87,7 @@ sre.Locale.fr = {
     'double-struck': 'ajouré',
     'double-struck-italic': 'ajouré en italique',  // TODO: Get the ajoure fonts right!
     'fraktur': 'gothique',
+    'fullwidth': 'pleine largeur',
     'italic': 'italique',
     'monospace': 'chasse fixe',
     'normal': 'normal',

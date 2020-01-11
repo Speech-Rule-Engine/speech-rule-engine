@@ -74,7 +74,29 @@ sre.Locale.en = {
 
   MS_ROOT_INDEX: { },
 
-  FONT: { },
+  FONT: {
+    'bold': 'bold',
+    'bold-fraktur': 'bold fraktur',
+    'bold-italic': 'bold italic',
+    'bold-script': 'bold script',
+    'caligraphic': 'caligraphic',
+    'caligraphic-bold': 'caligraphic bold',
+    'double-struck': 'double struck',
+    'double-struck-italic': 'double struck italic',
+    'fraktur': 'fraktur',
+    'fullwidth': 'fullwidth',
+    'italic': 'italic',
+    'monospace': 'monospace',
+    'normal': 'normal',
+    'oldstyle': 'oldstyle',
+    'oldstyle-bold': 'oldstyle bold',
+    'script': 'script',
+    'sans-serif': 'sans serif',
+    'sans-serif-italic': 'sans serif italic',
+    'sans-serif-bold': 'sans serif bold',
+    'sans-serif-bold-italic': 'sans serif bold italic',
+    'unknown': 'unknown'
+  },
 
   ROLE: {
     // Infixoperators

@@ -44,7 +44,19 @@ sre.SymbolIntervals.Font = {
   SANSSERIF: 'sans-serif',
   SANSSERIFITALIC: 'sans-serif-italic',
   SANSSERIFBOLD: 'sans-serif-bold',
-  SANSSERIFBOLDITALIC: 'sans-serif-bold-italic'
+  SANSSERIFBOLDITALIC: 'sans-serif-bold-italic',
+  // Digit specific. More embellishments than fonts.
+  SUPER: 'super',
+  SUB: 'sub',
+  CIRCLED: 'circled',
+  PARENTHESIZED: 'parenthesized',
+  PERIOD: 'period',
+  NEGATIVECIRCLED: 'negative-circled',
+  DOUBLECIRCLED: 'double-circled',
+  CIRCLEDSANSSERIF: 'circled-sans-serif',
+  NEGATIVECIRCLEDSANSSERIF: 'negative-circled-sans-serif',
+  BLACKBOARD: 'blackboard',
+  COMMA: 'comma'
 };
 
 
@@ -59,41 +71,113 @@ sre.SymbolIntervals.Base = {
 };
 
 
-var latinCap = [
-  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
-  'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
-];
-
-sre.SymbolIntervals.makeIntervals = function() {
-  var intervals = sre.SymbolIntervals.LATIN;
+sre.SymbolIntervals.makeIntervals = function(store) {
+  store.addSymbolRules({locale: 'en'}); // How do I get that? Make intervals per locale.
+  var intervals = sre.SymbolIntervals.INTERVALS;
   for (var i = 0, int; int = intervals[i]; i++) {
     var keys = sre.SymbolIntervals.makeInterval(int.interval, int.subst);
-    console.log(keys);
-  } 
+    var letters = keys.map(function (x) {
+      return sre.SemanticUtil.numberToUnicode(parseInt(x, 16));
+    });
+    sre.SymbolIntervals.makeSpeech(store, keys, letters, int.capital, int.font, int.base);
+  }
 };
 
 
-sre.SymbolIntervals.experimental = function() {
-  var int = sre.SymbolIntervals.LATIN[12];
-  var keys = sre.SymbolIntervals.makeInterval(int.interval, int.subst);
-  console.log(keys);
-};
-
-sre.SymbolIntervals.makeInterval = function (int, subst) {
+sre.SymbolIntervals.makeInterval = function(int, subst) {
+  var num2str = function(x) {
+    var str = i.toString(16).toUpperCase();
+    return str.length > 3 ? str : ('000' + str).slice(-4);
+  };
   var start = parseInt(int[0], 16);
   var end = parseInt(int[1], 16);
   var result = [];
   for (var i = start; i <= end; i++) {
-    var sub = subst[i.toString(16).toUpperCase()];
-    var number = sre.SemanticUtil.numberToUnicode(sub ? parseInt(sub, 16) : i);
-    console.log(i + ': ' + number);
-    result.push(number);
+    var key = num2str(i);
+    key = subst[key] || key;
+    result.push(key);
   }
   return result;
 };
 
 
-sre.SymbolIntervals.LATIN = [
+
+
+sre.SymbolIntervals.capitalise = function(str) {
+  return str[0].toUpperCase() + str.slice(1);
+};
+
+
+// Those need to be localised in messages!
+var baseAlphabets = {
+  latin: [
+    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+    'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
+  ],
+  latinCap: [
+    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+    'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+  ],
+  Greek: [
+    'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta',
+    'iota', 'kappa', 'lamda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho',
+    'final sigma', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega'
+  ],
+  greekCap: [
+    'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta',
+    'Iota', 'Kappa', 'Lamda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi', 'Rho',
+    'final Sigma', 'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega'
+  ]
+};
+
+// Maybe just generate a single one? In case of English it can be the identity.
+var baseDigits = function(a, b) {
+  var res = [];
+  for (var i = a; i <= b; i++) {
+    res.push(i);
+  }
+  return res;
+};
+
+
+var capPrefix = {default: 'cap', mathspeak: 'upper'};
+
+var smallPrefix = {default: ''};
+
+var combiner = function(letter, font, cap) {
+  letter = cap ? cap + ' ' + letter : letter;
+  return font ? font + ' ' + letter : letter;
+};
+
+sre.SymbolIntervals.getFont = function(font) {
+  return (font === 'normal' || font === 'fullwidth') ? '' : sre.Locale.en.FONT[font];
+};
+
+sre.SymbolIntervals.makeSpeech = function(
+  store, keys, unicodes, cap, font, base) {
+  var letters = baseAlphabets[base + (cap ? 'Cap' : '')];
+  var realFont = sre.SymbolIntervals.getFont(font);
+  for (var i = 0, key, unicode, letter;
+       key = keys[i], unicode = unicodes[i], letter = letters[i]; i++) {
+    sre.SymbolIntervals.makeLetter(store, combiner, key, unicode, letter,
+                                   realFont, cap ? capPrefix : smallPrefix, cap);
+  }
+};
+
+// Assume style is always default.
+sre.SymbolIntervals.makeLetter = function(
+  store, combiner, key, unicode, letter, font, prefix, cap) {
+  var mappings = {};
+  var domains = Object.keys(prefix);
+  for (var i = 0, domain; domain = domains[i]; i++) {
+    mappings[domain] = {'default': combiner(letter, font, prefix[domain])};
+  };
+  store.defineRules(key, unicode, cap ? 'Lu' : 'Ll', mappings);
+};
+
+
+sre.SymbolIntervals.INTERVALS = [
+  // Latin
   {
     interval: ['1D400', '1D419'],
     base: sre.SymbolIntervals.Base.LATIN,
@@ -332,6 +416,231 @@ sre.SymbolIntervals.LATIN = [
     subst: {},
     capital: false,
     font: sre.SymbolIntervals.Font.SANSSERIFBOLDITALIC
+  },
+  // Greek
+  {
+    interval: ["1D71C", "1D734"],
+    base: sre.SymbolIntervals.Base.GREEK,
+    subst: {},
+    capital: true,
+    font: sre.SymbolIntervals.Font.BOLDITALIC
+  },
+  {
+    interval: ["1D736", "1D74E"],
+    base: sre.SymbolIntervals.Base.GREEK,
+    subst: {},
+    capital: false,
+    font: sre.SymbolIntervals.Font.BOLDITALIC
+  },
+  {
+    interval: ["1D6A8", "1D6C0"],
+    base: sre.SymbolIntervals.Base.GREEK,
+    subst: {},
+    capital: true,
+    font: sre.SymbolIntervals.Font.BOLD
+  },
+  {
+    interval: ["1D6C2", "1D6DA"],
+    base: sre.SymbolIntervals.Base.GREEK,
+    subst: {},
+    capital: false,
+    font: sre.SymbolIntervals.Font.BOLD
+  },
+  {
+    interval: ["1D6E2", "1D6FA"],
+    base: sre.SymbolIntervals.Base.GREEK,
+    subst: {},
+    capital: true,
+    font: sre.SymbolIntervals.Font.ITALIC
+  },
+  {
+    interval: ["1D6FC", "1D714"],
+    base: sre.SymbolIntervals.Base.GREEK,
+    subst: {},
+    capital: false,
+    font: sre.SymbolIntervals.Font.ITALIC
+  },
+  {
+    interval: ["1D790", "1D7A8"],
+    base: sre.SymbolIntervals.Base.GREEK,
+    subst: {},
+    capital: true,
+    font: sre.SymbolIntervals.Font.SANSSERIFBOLDITALIC
+  },
+  {
+    interval: ["1D7AA", "1D7C2"],
+    base: sre.SymbolIntervals.Base.GREEK,
+    subst: {},
+    capital: false,
+    font: sre.SymbolIntervals.Font.SANSSERIFBOLDITALIC
+  },
+  {
+    interval: ["1D756", "1D76E"],
+    base: sre.SymbolIntervals.Base.GREEK,
+    subst: {},
+    capital: true,
+    font: sre.SymbolIntervals.Font.SANSSERIFBOLD
+  },
+  {
+    interval: ["1D770", "1D788"],
+    base: sre.SymbolIntervals.Base.GREEK,
+    subst: {},
+    capital: false,
+    font: sre.SymbolIntervals.Font.SANSSERIFBOLD
+  },
+  {
+    interval: ["0391", "03A9"],
+    base: sre.SymbolIntervals.Base.GREEK,
+    subst: {},
+    capital: true,
+    font: sre.SymbolIntervals.Font.NORMAL
+  },
+  {
+    interval: ["03B1", "03C9"],
+    base: sre.SymbolIntervals.Base.GREEK,
+    subst: {},
+    capital: false,
+    font: sre.SymbolIntervals.Font.NORMAL
+  },
+  // Digits
+    {
+    interval: ["0030", "0039"],
+    base: sre.SymbolIntervals.Base.DIGIT,
+    subst: {},
+    offset: 0,
+    font: sre.SymbolIntervals.Font.NORMAL
+  },
+  {
+    interval: ["2070", "2079"],
+    base: sre.SymbolIntervals.Base.DIGIT,
+    subst: {
+      '2071': "00B9",
+      '2072': "00B2",
+      '2073': "00B3"
+    },
+    offset: 0,
+    font: sre.SymbolIntervals.Font.SUPER
+  },
+  {
+    interval: ["2080", "2089"],
+    base: sre.SymbolIntervals.Base.DIGIT,
+    subst: {},
+    offset: 0,
+    font: sre.SymbolIntervals.Font.SUB
+  },
+  {
+    interval: ["245F", "2473"],
+    base: sre.SymbolIntervals.Base.DIGIT,
+    subst: {
+      "245F": "24EA"
+    },
+    offset: 0,
+    font: sre.SymbolIntervals.Font.CIRCLED
+  },
+  {
+    interval: ["3251", "325F"],
+    base: sre.SymbolIntervals.Base.DIGIT,
+    subst: {},
+    offset: 21,
+    font: sre.SymbolIntervals.Font.CIRCLED
+  },
+  {
+    interval: ["32B1", "32BF"],
+    base: sre.SymbolIntervals.Base.DIGIT,
+    subst: {},
+    offset: 36,
+    font: sre.SymbolIntervals.Font.CIRCLED
+  },
+  {
+    interval: ["2474", "2487"],
+    base: sre.SymbolIntervals.Base.DIGIT,
+    subst: {},
+    offset: 1,
+    font: sre.SymbolIntervals.Font.PARENTHESIZED // (start at 1)
+  },
+  {
+    interval: ["1F100", "249B"],
+    base: sre.SymbolIntervals.Base.DIGIT,
+    subst: {},
+    offset: 0,
+    font: sre.SymbolIntervals.Font.PERIOD
+  },
+  {
+    interval: ["24FF", "24F4"],
+    base: sre.SymbolIntervals.Base.DIGIT,
+    subst: {},
+    offset: 0,
+    font: sre.SymbolIntervals.Font.NEGATIVECIRCLED
+  },
+  {
+    interval: ["24F5", "24FE"],
+    base: sre.SymbolIntervals.Base.DIGIT,
+    subst: {},
+    offset: 1,
+    font: sre.SymbolIntervals.Font.DOUBLECIRCLED // (starts at 1)
+  },
+  {
+    interval: ["1F10B", "2789"],
+    base: sre.SymbolIntervals.Base.DIGIT,
+    subst: {},
+    offset: 0,
+    font: sre.SymbolIntervals.Font.CIRCLEDSANSSERIF // (0 is NEW)
+  },
+  {
+    interval: ["1F10C", "2793"],
+    base: sre.SymbolIntervals.Base.DIGIT,
+    subst: {},
+    offset: 0,
+    font: sre.SymbolIntervals.Font.NEGATIVECIRCLEDSANSSERIF //  (0 is NEW!)
+  },
+  {
+    interval: ["FF10", "FF19"],
+    base: sre.SymbolIntervals.Base.DIGIT,
+    subst: {},
+    offset: 0,
+    font: sre.SymbolIntervals.Font.FULLWIDTH
+  },
+  {
+    interval: ["1D7CE", "1D7D7"],
+    base: sre.SymbolIntervals.Base.DIGIT,
+    subst: {},
+    offset: 0,
+    font: sre.SymbolIntervals.Font.BOLD
+  },
+  {
+    interval: ["1D7D8", "1D7E1"],
+    base: sre.SymbolIntervals.Base.DIGIT,
+    subst: {},
+    offset: 0,
+    font: sre.SymbolIntervals.Font.BLACKBOARD
+  },
+  {
+    interval: ["1D7E2", "1D7EB"],
+    base: sre.SymbolIntervals.Base.DIGIT,
+    subst: {},
+    offset: 0,
+    font: sre.SymbolIntervals.Font.SANSSERIF
+  },
+  {
+    interval: ["1D7EC", "1D7F5"],
+    base: sre.SymbolIntervals.Base.DIGIT,
+    subst: {},
+    offset: 0,
+    font: sre.SymbolIntervals.Font.SANSSERIFBOLD
+  },
+  {
+    interval: ["1D7F6", "1D7FF"],
+    base: sre.SymbolIntervals.Base.DIGIT,
+    subst: {},
+    offset: 0,
+    font: sre.SymbolIntervals.Font.MONOSPACE
+  },
+  {
+    interval: ["1F101", "1F10A"],
+    base: sre.SymbolIntervals.Base.DIGIT,
+    subst: {},
+    offset: 0,
+    font: sre.SymbolIntervals.Font.COMMA
   }
 ];
 
