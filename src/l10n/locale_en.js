@@ -167,6 +167,8 @@ sre.Locale.en = {
     'inch': 'inches'
   },
 
+  ALPHABETS: {},
+
   NUMBERS: sre.Numbers.en.NUMBERS
 
 };

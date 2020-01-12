@@ -36,7 +36,8 @@ goog.require('sre.Messages');
  *   ENCLOSE: Object.<sre.SemanticAttr.Role>,
  *   NAVIGATE: Object.<string>,
  *   REGEXP: Object.<string>,
- *   NUMBERS: Object.<Function|string>
+ *   NUMBERS: Object.<Function|string>,
+ *   ALPHABETS: Object.<Function|Array.<string>>
  * }}
  */
 sre.Locale.Messages;

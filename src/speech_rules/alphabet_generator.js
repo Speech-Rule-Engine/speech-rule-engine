@@ -17,18 +17,18 @@
  *
  */
 
-goog.provide('sre.SymbolIntervals');
+goog.provide('sre.AlphabetGenerator');
 
 // goog.require('sre.SemanticUtil');
 
 
-// sre.SymbolIntervals = function() {};
+// sre.AlphabetGenerator = function() {};
 
 /**
  * Enumerator for Unicode fonts.
  * @enum {string}
  */
-sre.SymbolIntervals.Font = {
+sre.AlphabetGenerator.Font = {
   BOLD: 'bold',
   BOLDFRAKTUR: 'bold-fraktur',
   BOLDITALIC: 'bold-italic',
@@ -64,27 +64,27 @@ sre.SymbolIntervals.Font = {
  * Enumerator for alphabet bases.
  * @enum {string}
  */
-sre.SymbolIntervals.Base = {
+sre.AlphabetGenerator.Base = {
   LATIN: 'latin',
   GREEK: 'greek',
   DIGIT: 'digit'
 };
 
 
-sre.SymbolIntervals.makeIntervals = function(store) {
-  store.addSymbolRules({locale: 'en'}); // How do I get that? Make intervals per locale.
-  var intervals = sre.SymbolIntervals.INTERVALS;
+sre.AlphabetGenerator.generate = function(locale, store) {
+  store.addSymbolRules({locale: locale}); // How do I get that? Make intervals per locale.
+  var intervals = sre.AlphabetGenerator.INTERVALS;
   for (var i = 0, int; int = intervals[i]; i++) {
-    var keys = sre.SymbolIntervals.makeInterval(int.interval, int.subst);
+    var keys = sre.AlphabetGenerator.makeInterval(int.interval, int.subst);
     var letters = keys.map(function (x) {
       return sre.SemanticUtil.numberToUnicode(parseInt(x, 16));
     });
-    sre.SymbolIntervals.makeSpeech(store, keys, letters, int.capital, int.font, int.base);
+    sre.AlphabetGenerator.makeSpeech(store, keys, letters, int.capital, int.font, int.base);
   }
 };
 
 
-sre.SymbolIntervals.makeInterval = function(int, subst) {
+sre.AlphabetGenerator.makeInterval = function(int, subst) {
   var num2str = function(x) {
     var str = i.toString(16).toUpperCase();
     return str.length > 3 ? str : ('000' + str).slice(-4);
@@ -103,7 +103,7 @@ sre.SymbolIntervals.makeInterval = function(int, subst) {
 
 
 
-sre.SymbolIntervals.capitalise = function(str) {
+sre.AlphabetGenerator.capitalise = function(str) {
   return str[0].toUpperCase() + str.slice(1);
 };
 
@@ -126,7 +126,7 @@ var baseAlphabets = {
   greekCap: [
     'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta',
     'Iota', 'Kappa', 'Lamda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi', 'Rho',
-    'final Sigma', 'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega'
+    'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega'
   ]
 };
 
@@ -149,23 +149,23 @@ var combiner = function(letter, font, cap) {
   return font ? font + ' ' + letter : letter;
 };
 
-sre.SymbolIntervals.getFont = function(font) {
+sre.AlphabetGenerator.getFont = function(font) {
   return (font === 'normal' || font === 'fullwidth') ? '' : sre.Locale.en.FONT[font];
 };
 
-sre.SymbolIntervals.makeSpeech = function(
+sre.AlphabetGenerator.makeSpeech = function(
   store, keys, unicodes, cap, font, base) {
   var letters = baseAlphabets[base + (cap ? 'Cap' : '')];
-  var realFont = sre.SymbolIntervals.getFont(font);
+  var realFont = sre.AlphabetGenerator.getFont(font);
   for (var i = 0, key, unicode, letter;
        key = keys[i], unicode = unicodes[i], letter = letters[i]; i++) {
-    sre.SymbolIntervals.makeLetter(store, combiner, key, unicode, letter,
+    sre.AlphabetGenerator.makeLetter(store, combiner, key, unicode, letter,
                                    realFont, cap ? capPrefix : smallPrefix, cap);
   }
 };
 
 // Assume style is always default.
-sre.SymbolIntervals.makeLetter = function(
+sre.AlphabetGenerator.makeLetter = function(
   store, combiner, key, unicode, letter, font, prefix, cap) {
   var mappings = {};
   var domains = Object.keys(prefix);
@@ -176,67 +176,67 @@ sre.SymbolIntervals.makeLetter = function(
 };
 
 
-sre.SymbolIntervals.INTERVALS = [
+sre.AlphabetGenerator.INTERVALS = [
   // Latin
   {
     interval: ['1D400', '1D419'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {},
     capital: true,
-    font: sre.SymbolIntervals.Font.BOLD
+    font: sre.AlphabetGenerator.Font.BOLD
   },
   {
     interval: ['1D41A', '1D433'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {},
     capital: false,
-    font: sre.SymbolIntervals.Font.BOLD
+    font: sre.AlphabetGenerator.Font.BOLD
   },
   {
     interval: ['1D56C', '1D585'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {},
     capital: true,
-    font: sre.SymbolIntervals.Font.BOLDFRAKTUR
+    font: sre.AlphabetGenerator.Font.BOLDFRAKTUR
   },
   {
     interval: ['1D586', '1D59F'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {},
     capital: false,
-    font: sre.SymbolIntervals.Font.BOLDFRAKTUR
+    font: sre.AlphabetGenerator.Font.BOLDFRAKTUR
   },
   {
     interval: ['1D468', '1D481'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {},
     capital: true,
-    font: sre.SymbolIntervals.Font.BOLDITALIC
+    font: sre.AlphabetGenerator.Font.BOLDITALIC
   },
   {
     interval: ['1D482', '1D49B'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {},
     capital: false,
-    font: sre.SymbolIntervals.Font.BOLDITALIC
+    font: sre.AlphabetGenerator.Font.BOLDITALIC
   },
   {
     interval: ['1D4D0', '1D4E9'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {},
     capital: true,
-    font: sre.SymbolIntervals.Font.BOLDSCRIPT
+    font: sre.AlphabetGenerator.Font.BOLDSCRIPT
   },
   {
     interval: ['1D4EA', '1D503'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {},
     capital: false,
-    font: sre.SymbolIntervals.Font.BOLDSCRIPT
+    font: sre.AlphabetGenerator.Font.BOLDSCRIPT
   },
   {
     interval: ['1D538', '1D551'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {
       '1D53A': '2102',
       '1D53F': '210D',
@@ -247,18 +247,18 @@ sre.SymbolIntervals.INTERVALS = [
       '1D551': '2124'
     },
     capital: true,
-    font: sre.SymbolIntervals.Font.DOUBLESTRUCK
+    font: sre.AlphabetGenerator.Font.DOUBLESTRUCK
   },
   {
     interval: ['1D552', '1D56B'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {},
     capital: false,
-    font: sre.SymbolIntervals.Font.DOUBLESTRUCK
+    font: sre.AlphabetGenerator.Font.DOUBLESTRUCK
   },
   {
     interval: ['1D504', '1D51D'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {
       '1D506': '212D',
       '1D50B': '210C',
@@ -267,76 +267,76 @@ sre.SymbolIntervals.INTERVALS = [
       '1D51D': '2128'
     },
     capital: true,
-    font: sre.SymbolIntervals.Font.FRAKTUR
+    font: sre.AlphabetGenerator.Font.FRAKTUR
   },
   {
     interval: ['1D51E', '1D537'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {},
     capital: false,
-    font: sre.SymbolIntervals.Font.FRAKTUR
+    font: sre.AlphabetGenerator.Font.FRAKTUR
   },
   {
     interval: ['FF21', 'FF3A'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {},
     capital: true,
-    font: sre.SymbolIntervals.Font.FULLWIDTH
+    font: sre.AlphabetGenerator.Font.FULLWIDTH
   },
   {
     interval: ['FF41', 'FF5A'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {},
     capital: false,
-    font: sre.SymbolIntervals.Font.FULLWIDTH
+    font: sre.AlphabetGenerator.Font.FULLWIDTH
   },
   {
     interval: ['1D434', '1D44D'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {},
     capital: true,
-    font: sre.SymbolIntervals.Font.ITALIC
+    font: sre.AlphabetGenerator.Font.ITALIC
   },
   {
     interval: ['1D44E', '1D467'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {
       '1D455': '210E'
     },
     capital: false,
-    font: sre.SymbolIntervals.Font.ITALIC
+    font: sre.AlphabetGenerator.Font.ITALIC
   },
   {
     interval: ['1D670', '1D689'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {},
     capital: true,
-    font: sre.SymbolIntervals.Font.MONOSPACE
+    font: sre.AlphabetGenerator.Font.MONOSPACE
   },
   {
     interval: ['1D68A', '1D6A3'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {},
     capital: false,
-    font: sre.SymbolIntervals.Font.MONOSPACE
+    font: sre.AlphabetGenerator.Font.MONOSPACE
   },
   {
     interval: ['0041', '005A'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {},
     capital: true,
-    font: sre.SymbolIntervals.Font.NORMAL
+    font: sre.AlphabetGenerator.Font.NORMAL
   },
   {
     interval: ['0061', '007A'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {},
     capital: false,
-    font: sre.SymbolIntervals.Font.NORMAL
+    font: sre.AlphabetGenerator.Font.NORMAL
   },
   {
     interval: ['1D49C', '1D4B5'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {
       '1D49D': '212C',
       '1D4A0': '2130',
@@ -348,299 +348,299 @@ sre.SymbolIntervals.INTERVALS = [
       '1D4AD': '211B'
     },
     capital: true,
-    font: sre.SymbolIntervals.Font.SCRIPT
+    font: sre.AlphabetGenerator.Font.SCRIPT
   },
   {
     interval: ['1D4B6', '1D4CF'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {
       '1D4BA': '212F',
       '1D4BC': '210A',
       '1D4C4': '2134'
     },
     capital: false,
-    font: sre.SymbolIntervals.Font.SCRIPT
+    font: sre.AlphabetGenerator.Font.SCRIPT
   },
   {
     interval: ['1D5A0', '1D5B9'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {},
     capital: true,
-    font: sre.SymbolIntervals.Font.SANSSERIF
+    font: sre.AlphabetGenerator.Font.SANSSERIF
   },
   {
     interval: ['1D5BA', '1D5D3'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {},
     capital: false,
-    font: sre.SymbolIntervals.Font.SANSSERIF
+    font: sre.AlphabetGenerator.Font.SANSSERIF
   },
   {
     interval: ['1D608', '1D621'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {},
     capital: true,
-    font: sre.SymbolIntervals.Font.SANSSERIFITALIC
+    font: sre.AlphabetGenerator.Font.SANSSERIFITALIC
   },
   {
     interval: ['1D622', '1D63B'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {},
     capital: false,
-    font: sre.SymbolIntervals.Font.SANSSERIFITALIC
+    font: sre.AlphabetGenerator.Font.SANSSERIFITALIC
   },
   {
     interval: ['1D5D4', '1D5ED'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {},
     capital: true,
-    font: sre.SymbolIntervals.Font.SANSSERIFBOLD
+    font: sre.AlphabetGenerator.Font.SANSSERIFBOLD
   },
   {
     interval: ['1D5EE', '1D607'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {},
     capital: false,
-    font: sre.SymbolIntervals.Font.SANSSERIFBOLD
+    font: sre.AlphabetGenerator.Font.SANSSERIFBOLD
   },
   {
     interval: ['1D63C', '1D655'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {},
     capital: true,
-    font: sre.SymbolIntervals.Font.SANSSERIFBOLDITALIC
+    font: sre.AlphabetGenerator.Font.SANSSERIFBOLDITALIC
   },
   {
     interval: ['1D656', '1D66F'],
-    base: sre.SymbolIntervals.Base.LATIN,
+    base: sre.AlphabetGenerator.Base.LATIN,
     subst: {},
     capital: false,
-    font: sre.SymbolIntervals.Font.SANSSERIFBOLDITALIC
+    font: sre.AlphabetGenerator.Font.SANSSERIFBOLDITALIC
   },
   // Greek
   {
     interval: ["1D71C", "1D734"],
-    base: sre.SymbolIntervals.Base.GREEK,
+    base: sre.AlphabetGenerator.Base.GREEK,
     subst: {},
     capital: true,
-    font: sre.SymbolIntervals.Font.BOLDITALIC
+    font: sre.AlphabetGenerator.Font.BOLDITALIC
   },
   {
     interval: ["1D736", "1D74E"],
-    base: sre.SymbolIntervals.Base.GREEK,
+    base: sre.AlphabetGenerator.Base.GREEK,
     subst: {},
     capital: false,
-    font: sre.SymbolIntervals.Font.BOLDITALIC
+    font: sre.AlphabetGenerator.Font.BOLDITALIC
   },
   {
     interval: ["1D6A8", "1D6C0"],
-    base: sre.SymbolIntervals.Base.GREEK,
+    base: sre.AlphabetGenerator.Base.GREEK,
     subst: {},
     capital: true,
-    font: sre.SymbolIntervals.Font.BOLD
+    font: sre.AlphabetGenerator.Font.BOLD
   },
   {
     interval: ["1D6C2", "1D6DA"],
-    base: sre.SymbolIntervals.Base.GREEK,
+    base: sre.AlphabetGenerator.Base.GREEK,
     subst: {},
     capital: false,
-    font: sre.SymbolIntervals.Font.BOLD
+    font: sre.AlphabetGenerator.Font.BOLD
   },
   {
     interval: ["1D6E2", "1D6FA"],
-    base: sre.SymbolIntervals.Base.GREEK,
+    base: sre.AlphabetGenerator.Base.GREEK,
     subst: {},
     capital: true,
-    font: sre.SymbolIntervals.Font.ITALIC
+    font: sre.AlphabetGenerator.Font.ITALIC
   },
   {
     interval: ["1D6FC", "1D714"],
-    base: sre.SymbolIntervals.Base.GREEK,
+    base: sre.AlphabetGenerator.Base.GREEK,
     subst: {},
     capital: false,
-    font: sre.SymbolIntervals.Font.ITALIC
+    font: sre.AlphabetGenerator.Font.ITALIC
   },
   {
     interval: ["1D790", "1D7A8"],
-    base: sre.SymbolIntervals.Base.GREEK,
+    base: sre.AlphabetGenerator.Base.GREEK,
     subst: {},
     capital: true,
-    font: sre.SymbolIntervals.Font.SANSSERIFBOLDITALIC
+    font: sre.AlphabetGenerator.Font.SANSSERIFBOLDITALIC
   },
   {
     interval: ["1D7AA", "1D7C2"],
-    base: sre.SymbolIntervals.Base.GREEK,
+    base: sre.AlphabetGenerator.Base.GREEK,
     subst: {},
     capital: false,
-    font: sre.SymbolIntervals.Font.SANSSERIFBOLDITALIC
+    font: sre.AlphabetGenerator.Font.SANSSERIFBOLDITALIC
   },
   {
     interval: ["1D756", "1D76E"],
-    base: sre.SymbolIntervals.Base.GREEK,
+    base: sre.AlphabetGenerator.Base.GREEK,
     subst: {},
     capital: true,
-    font: sre.SymbolIntervals.Font.SANSSERIFBOLD
+    font: sre.AlphabetGenerator.Font.SANSSERIFBOLD
   },
   {
     interval: ["1D770", "1D788"],
-    base: sre.SymbolIntervals.Base.GREEK,
+    base: sre.AlphabetGenerator.Base.GREEK,
     subst: {},
     capital: false,
-    font: sre.SymbolIntervals.Font.SANSSERIFBOLD
+    font: sre.AlphabetGenerator.Font.SANSSERIFBOLD
   },
   {
     interval: ["0391", "03A9"],
-    base: sre.SymbolIntervals.Base.GREEK,
+    base: sre.AlphabetGenerator.Base.GREEK,
     subst: {},
     capital: true,
-    font: sre.SymbolIntervals.Font.NORMAL
+    font: sre.AlphabetGenerator.Font.NORMAL
   },
   {
     interval: ["03B1", "03C9"],
-    base: sre.SymbolIntervals.Base.GREEK,
+    base: sre.AlphabetGenerator.Base.GREEK,
     subst: {},
     capital: false,
-    font: sre.SymbolIntervals.Font.NORMAL
+    font: sre.AlphabetGenerator.Font.NORMAL
   },
   // Digits
     {
     interval: ["0030", "0039"],
-    base: sre.SymbolIntervals.Base.DIGIT,
+    base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 0,
-    font: sre.SymbolIntervals.Font.NORMAL
+    font: sre.AlphabetGenerator.Font.NORMAL
   },
   {
     interval: ["2070", "2079"],
-    base: sre.SymbolIntervals.Base.DIGIT,
+    base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {
       '2071': "00B9",
       '2072': "00B2",
       '2073': "00B3"
     },
     offset: 0,
-    font: sre.SymbolIntervals.Font.SUPER
+    font: sre.AlphabetGenerator.Font.SUPER
   },
   {
     interval: ["2080", "2089"],
-    base: sre.SymbolIntervals.Base.DIGIT,
+    base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 0,
-    font: sre.SymbolIntervals.Font.SUB
+    font: sre.AlphabetGenerator.Font.SUB
   },
   {
     interval: ["245F", "2473"],
-    base: sre.SymbolIntervals.Base.DIGIT,
+    base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {
       "245F": "24EA"
     },
     offset: 0,
-    font: sre.SymbolIntervals.Font.CIRCLED
+    font: sre.AlphabetGenerator.Font.CIRCLED
   },
   {
     interval: ["3251", "325F"],
-    base: sre.SymbolIntervals.Base.DIGIT,
+    base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 21,
-    font: sre.SymbolIntervals.Font.CIRCLED
+    font: sre.AlphabetGenerator.Font.CIRCLED
   },
   {
     interval: ["32B1", "32BF"],
-    base: sre.SymbolIntervals.Base.DIGIT,
+    base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 36,
-    font: sre.SymbolIntervals.Font.CIRCLED
+    font: sre.AlphabetGenerator.Font.CIRCLED
   },
   {
     interval: ["2474", "2487"],
-    base: sre.SymbolIntervals.Base.DIGIT,
+    base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 1,
-    font: sre.SymbolIntervals.Font.PARENTHESIZED // (start at 1)
+    font: sre.AlphabetGenerator.Font.PARENTHESIZED // (start at 1)
   },
   {
     interval: ["1F100", "249B"],
-    base: sre.SymbolIntervals.Base.DIGIT,
+    base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 0,
-    font: sre.SymbolIntervals.Font.PERIOD
+    font: sre.AlphabetGenerator.Font.PERIOD
   },
   {
     interval: ["24FF", "24F4"],
-    base: sre.SymbolIntervals.Base.DIGIT,
+    base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 0,
-    font: sre.SymbolIntervals.Font.NEGATIVECIRCLED
+    font: sre.AlphabetGenerator.Font.NEGATIVECIRCLED
   },
   {
     interval: ["24F5", "24FE"],
-    base: sre.SymbolIntervals.Base.DIGIT,
+    base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 1,
-    font: sre.SymbolIntervals.Font.DOUBLECIRCLED // (starts at 1)
+    font: sre.AlphabetGenerator.Font.DOUBLECIRCLED // (starts at 1)
   },
   {
     interval: ["1F10B", "2789"],
-    base: sre.SymbolIntervals.Base.DIGIT,
+    base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 0,
-    font: sre.SymbolIntervals.Font.CIRCLEDSANSSERIF // (0 is NEW)
+    font: sre.AlphabetGenerator.Font.CIRCLEDSANSSERIF // (0 is NEW)
   },
   {
     interval: ["1F10C", "2793"],
-    base: sre.SymbolIntervals.Base.DIGIT,
+    base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 0,
-    font: sre.SymbolIntervals.Font.NEGATIVECIRCLEDSANSSERIF //  (0 is NEW!)
+    font: sre.AlphabetGenerator.Font.NEGATIVECIRCLEDSANSSERIF //  (0 is NEW!)
   },
   {
     interval: ["FF10", "FF19"],
-    base: sre.SymbolIntervals.Base.DIGIT,
+    base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 0,
-    font: sre.SymbolIntervals.Font.FULLWIDTH
+    font: sre.AlphabetGenerator.Font.FULLWIDTH
   },
   {
     interval: ["1D7CE", "1D7D7"],
-    base: sre.SymbolIntervals.Base.DIGIT,
+    base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 0,
-    font: sre.SymbolIntervals.Font.BOLD
+    font: sre.AlphabetGenerator.Font.BOLD
   },
   {
     interval: ["1D7D8", "1D7E1"],
-    base: sre.SymbolIntervals.Base.DIGIT,
+    base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 0,
-    font: sre.SymbolIntervals.Font.BLACKBOARD
+    font: sre.AlphabetGenerator.Font.BLACKBOARD
   },
   {
     interval: ["1D7E2", "1D7EB"],
-    base: sre.SymbolIntervals.Base.DIGIT,
+    base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 0,
-    font: sre.SymbolIntervals.Font.SANSSERIF
+    font: sre.AlphabetGenerator.Font.SANSSERIF
   },
   {
     interval: ["1D7EC", "1D7F5"],
-    base: sre.SymbolIntervals.Base.DIGIT,
+    base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 0,
-    font: sre.SymbolIntervals.Font.SANSSERIFBOLD
+    font: sre.AlphabetGenerator.Font.SANSSERIFBOLD
   },
   {
     interval: ["1D7F6", "1D7FF"],
-    base: sre.SymbolIntervals.Base.DIGIT,
+    base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 0,
-    font: sre.SymbolIntervals.Font.MONOSPACE
+    font: sre.AlphabetGenerator.Font.MONOSPACE
   },
   {
     interval: ["1F101", "1F10A"],
-    base: sre.SymbolIntervals.Base.DIGIT,
+    base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 0,
-    font: sre.SymbolIntervals.Font.COMMA
+    font: sre.AlphabetGenerator.Font.COMMA
   }
 ];
 

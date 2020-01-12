@@ -178,6 +178,8 @@ sre.Locale.fr = {
     'inch': 'inches'
   },
 
+  ALPHABETS: {},
+
   NUMBERS: sre.Numbers.fr.NUMBERS
 
 };

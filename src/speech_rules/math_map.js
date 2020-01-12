@@ -27,7 +27,7 @@ goog.require('sre.BaseUtil');
 goog.require('sre.BrowserUtil');
 goog.require('sre.Engine');
 goog.require('sre.MathCompoundStore');
-goog.require('sre.SymbolIntervals');
+goog.require('sre.AlphabetGenerator');
 goog.require('sre.SystemExternal');
 goog.require('sre.Variables');
 
@@ -47,7 +47,6 @@ sre.MathMap = function() {
 
   var timeIn = (new Date()).getTime();
   this.retrieveMaps();
-  sre.SymbolIntervals.makeIntervals(this.store);
   var timeOut = (new Date()).getTime();
   console.log('Time:', timeOut - timeIn);
 
@@ -110,8 +109,8 @@ sre.MathMap.UNITS_PATH_ = 'units';
  */
 sre.MathMap.SYMBOLS_FILES_ = [
   // Greek
-  'greek-capital.js', 'greek-small.js', 'greek-scripts.js',
-  'greek-symbols.js',
+  'greek-capital.js', 'greek-small.js', 
+  'greek-scripts.js', 'greek-symbols.js',
 
   // Greek Mathfonts
   'greek-mathfonts-bold.js', 'greek-mathfonts-italic.js',
@@ -213,6 +212,7 @@ sre.MathMap.retrieveFiles = function(files, path, func) {
 sre.MathMap.prototype.retrieveMaps = function() {
   for (var i = 0; i < sre.Variables.LOCALES.length; i++) {
     var locale = sre.Variables.LOCALES[i];
+    sre.AlphabetGenerator.generate(locale, this.store);
     sre.MathMap.retrieveFiles(
         sre.MathMap.FUNCTIONS_FILES_,
         locale + '/' + sre.MathMap.FUNCTIONS_PATH_,

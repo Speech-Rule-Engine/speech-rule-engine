@@ -171,6 +171,8 @@ sre.Locale.es = {
     JOINER_FRAC: ' '
   },
 
+  ALPHABETS: {},
+
   NUMBERS: sre.Numbers.es.NUMBERS
 
 };
