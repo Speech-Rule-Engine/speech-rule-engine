@@ -252,18 +252,13 @@ sre.Messages.NUMBERS = {
 
 
 sre.Messages.ALPHABETS = {
-  latinSmall: [
-    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-    'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
-  ],
-  latinCap: [
-    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
-    'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
-  ],
+  latinSmall: [],
+  latinCap: [],
   greekSmall: [],
   greekCap: [],
   digit: function(n) {return n.toString();},
   combiner: function(letter, font, cap) {return letter;},
   capPrefix: {default: ''},
-  smallPrefix: {default: ''}
+  smallPrefix: {default: ''},
+  digitPrefix: {default: ''}
 };
