@@ -75,7 +75,6 @@ sre.AlphabetGenerator.Base = {
 sre.AlphabetGenerator.generate = function(locale, store) {
   sre.Engine.getInstance().locale = locale;
   sre.L10n.setLocale();
-  console.log(sre.Messages);
   store.addSymbolRules({locale: locale});
   var intervals = sre.AlphabetGenerator.INTERVALS;
   for (var i = 0, int; int = intervals[i]; i++) {
@@ -84,10 +83,6 @@ sre.AlphabetGenerator.generate = function(locale, store) {
       return sre.SemanticUtil.numberToUnicode(parseInt(x, 16));
     });
     var alphabet = sre.Messages.ALPHABETS[int.base];
-    console.log(keys);
-    console.log(letters);
-    console.log(alphabet);
-    console.log('offset' in int);
     if ('offset' in int) {
       sre.AlphabetGenerator.numberRules(
         store, keys, letters, alphabet, int.font, int.offset);
@@ -147,7 +142,7 @@ sre.AlphabetGenerator.numberRules = function(store, keys, unicodes, digits, font
 };
 
 // TODO: Correct category Nd vs No.
-// Assume style is always default.
+// Assume style is always default. But what about sub super for characters?
 sre.AlphabetGenerator.makeLetter = function(
   store, combiner, key, unicode, letter, font, prefix, category) {
   var mappings = {};
@@ -155,7 +150,6 @@ sre.AlphabetGenerator.makeLetter = function(
   for (var i = 0, domain; domain = domains[i]; i++) {
     mappings[domain] = {'default': combiner(letter, font, prefix[domain])};
   };
-  console.log(mappings);
   store.defineRules(key, unicode, category, mappings);
 };
 

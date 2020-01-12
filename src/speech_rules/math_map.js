@@ -109,13 +109,14 @@ sre.MathMap.UNITS_PATH_ = 'units';
  */
 sre.MathMap.SYMBOLS_FILES_ = [
   // Greek
-  'greek-capital.js', 'greek-small.js', 
+  // 'greek-capital.js', 'greek-small.js', 
   'greek-scripts.js', 'greek-symbols.js',
+  'greek-rest.js',
 
   // Greek Mathfonts
-  'greek-mathfonts-bold.js', 'greek-mathfonts-italic.js',
-  'greek-mathfonts-bold-italic.js', 'greek-mathfonts-sans-serif-bold.js',
-  'greek-mathfonts-sans-serif-bold-italic.js',
+  // 'greek-mathfonts-bold.js', 'greek-mathfonts-italic.js',
+  // 'greek-mathfonts-bold-italic.js', 'greek-mathfonts-sans-serif-bold.js',
+  // 'greek-mathfonts-sans-serif-bold-italic.js',
 
   // Hebrew
   'hebrew_letters.js',
@@ -137,9 +138,11 @@ sre.MathMap.SYMBOLS_FILES_ = [
 
   // Math Symbols
   'math_angles.js', 'math_arrows.js', 'math_characters.js',
-  'math_delimiters.js', 'math_digits.js', 'math_geometry.js',
+  'math_delimiters.js', 'math_geometry.js',
   'math_harpoons.js', 'math_non_characters.js', 'math_symbols.js',
-  'math_whitespace.js', 'other_stars.js'
+  'math_whitespace.js', 'other_stars.js',
+  // 'math_digits.js',
+  'digits_rest.js'
 ];
 
 
