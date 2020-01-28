@@ -42,7 +42,7 @@
         "default": "fraktur upper C"
       },
       "clearspeak": {
-        "default": "fraktur cap D"
+        "default": "fraktur cap C"
       }
     },
     "key": "212D"
@@ -58,7 +58,7 @@
         "default": "fraktur upper D"
       },
       "clearspeak": {
-        "default": "fraktur cap E"
+        "default": "fraktur cap D"
       }
     },
     "key": "1D507"
@@ -74,7 +74,7 @@
         "default": "fraktur upper E"
       },
       "clearspeak": {
-        "default": "fraktur cap F"
+        "default": "fraktur cap E"
       }
     },
     "key": "1D508"
@@ -90,7 +90,7 @@
         "default": "fraktur upper F"
       },
       "clearspeak": {
-        "default": "fraktur cap G"
+        "default": "fraktur cap F"
       }
     },
     "key": "1D509"
