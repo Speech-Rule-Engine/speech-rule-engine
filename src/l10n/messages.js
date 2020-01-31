@@ -122,7 +122,15 @@ sre.Messages.FONT = {
   'sans-serif-italic': '',
   'sans-serif-bold': '',
   'sans-serif-bold-italic': '',
-  'unknown': '',
+  'unknown': ''
+};
+
+
+/**
+ * Localised embalishment names. Treated like fonts.
+ * @type {Object.<string|Array.<string, Function>>}
+ */
+sre.Messages.EMBELLISH = {
   // More embellishments than fonts.
   'super': '',
   'sub': '',

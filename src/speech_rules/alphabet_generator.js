@@ -118,8 +118,12 @@ sre.AlphabetGenerator.capitalise = function(str) {
 
 
 sre.AlphabetGenerator.getFont = function(font) {
-  return (font === 'normal' || font === 'fullwidth') ? '' : sre.Messages.FONT[font];
+  let realFont = (font === 'normal' || font === 'fullwidth') ? '' :
+      (sre.Messages.FONT[font] || sre.Messages.EMBELLISH[font] || '');
+  return (typeof realFont === 'string') ?
+    [realFont, sre.Messages.ALPHABETS.combiner] : realFont;
 };
+
 
 sre.AlphabetGenerator.alphabetRules = function(store, keys, unicodes, letters, font, cap) {
   var realFont = sre.AlphabetGenerator.getFont(font);
@@ -128,7 +132,7 @@ sre.AlphabetGenerator.alphabetRules = function(store, keys, unicodes, letters, f
     var prefixes = cap ? sre.Messages.ALPHABETS.capPrefix :
         sre.Messages.ALPHABETS.smallPrefix;
     sre.AlphabetGenerator.makeLetter(
-      store, sre.Messages.ALPHABETS.combiner, key, unicode, letter, realFont, prefixes,
+      store, realFont[1], key, unicode, letter, realFont[0], prefixes,
       cap ? 'Lu' : 'Ll');
   }
 };
@@ -139,7 +143,7 @@ sre.AlphabetGenerator.numberRules = function(store, keys, unicodes, digits, font
     var prefixes = sre.Messages.ALPHABETS.digitPrefix;
     var number = digits(i + offset);
     sre.AlphabetGenerator.makeLetter(
-      store, sre.Messages.ALPHABETS.combiner, key, unicode, number, realFont, prefixes, 'Nd');
+      store, realFont[1], key, unicode, number, realFont[0], prefixes, 'Nd');
   }
 };
 

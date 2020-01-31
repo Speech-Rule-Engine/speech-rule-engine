@@ -95,8 +95,12 @@ sre.Locale.en = {
     'sans-serif-italic': 'sans serif italic',
     'sans-serif-bold': 'sans serif bold',
     'sans-serif-bold-italic': 'sans serif bold italic',
-    'unknown': 'unknown',
+    'unknown': 'unknown'
+  },
+
+  EMBELLISH: {
     // Embellishments
+    // TODO: Here we need specialist combiners!
     'super': 'superscript',
     'sub': 'subscript',
     'circled': 'circled',
