@@ -46,6 +46,12 @@ sre.ApiTest = function() {
    * @type {Object.<sre.SemanticAnnotator>}
    */
   this.annotations = null;
+
+  /**
+   * @type {Object.<sre.SemanticVisitor>}
+   */
+  this.visitors = null;
+
 };
 goog.inherits(sre.ApiTest, sre.AbstractTest);
 
@@ -58,7 +64,9 @@ sre.ApiTest.prototype.setUpTest = function() {
       {semantics: true, locale: 'en', domain: 'mathspeak', style: 'default',
         speech: sre.Engine.Speech.NONE});
   this.annotations = sre.SemanticAnnotations.getInstance().annotators;
+  this.visitors = sre.SemanticAnnotations.getInstance().visitors;
   sre.SemanticAnnotations.getInstance().annotators = {};
+  sre.SemanticAnnotations.getInstance().visitors = {};
 };
 
 
@@ -70,6 +78,7 @@ sre.ApiTest.prototype.tearDownTest = function() {
       {semantics: false, domain: 'default', style: 'short',
         speech: sre.Engine.Speech.NONE});
   sre.SemanticAnnotations.getInstance().annotators = this.annotations;
+  sre.SemanticAnnotations.getInstance().visitors = this.visitors;
 };
 
 

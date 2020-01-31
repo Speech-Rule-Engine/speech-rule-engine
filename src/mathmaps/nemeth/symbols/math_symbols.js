@@ -106,7 +106,8 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "⠲"
+        "default": "⠨",
+        "other": "⠲"
       }
     },
     "key": "002E"

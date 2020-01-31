@@ -57,11 +57,11 @@ sre.AataTest = function() {
   this.modality = 'braille';
 
   this.setActive('AataNemeth');
-  this.actual = false;
+  this.actual = true;
 };
 goog.inherits(sre.AataTest, sre.AbstractRuleTest);
 
-
+// Number: ⠼
 /**
  * Expression 1.
  */
