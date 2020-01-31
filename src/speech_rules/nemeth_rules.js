@@ -121,6 +121,16 @@ var addCTXF = sre.NemethRules.addContextFunction_;
 
 
 /**
+ * Adds the annotators.
+ * @private
+ */
+sre.NemethRules.addAnnotators_ = function() {
+  sre.SemanticAnnotations.getInstance().register(
+      sre.NemethUtil.numberIndicator());
+};
+
+
+/**
  * Initialize the custom functions.
  * @private
  */
@@ -241,20 +251,22 @@ sre.NemethRules.initNemethRules_ = function() {
 
   // Number rules
   defineRule(
-      'number', 'default.default', '[t] "⠼"; [n] text() (pause:10)', 'self::number');
+      'number-indicator', 'default.default', '[t] "⠼"; [n] text() (pause:10)',
+       'self::number', 'contains(@annotation, "nemeth:number")');
+
 
   defineRule(
-      'number', 'default.default', '[t] "⠼"; [n] text()',
-      'self::number', 'name(..)="stree"');
+      'number', 'default.default', '[n] text()',
+      'self::number');
 
-  defineRule(
-      'number', 'default.default', '[t] "⠼"; [n] text()',
-      'self::number', 'name(../..)="cell"');
+  // defineRule(
+  //     'number', 'default.default', '[t] "⠼"; [n] text()',
+  //     'self::number', 'name(../..)="cell"');
 
-  defineRule(
-      'number', 'default.default', '[t] "⠼"; [n] text()',
-      'self::number', 'name(../..)="punctuated"',
-      'not(ancestor::fenced)');
+  // defineRule(
+  //     'number', 'default.default', '[t] "⠼"; [n] text()',
+  //     'self::number', 'name(../..)="punctuated"',
+  //     'not(ancestor::fenced)');
 
   defineRule(
       // TODO: Write tests to check that open/close frac is not repeated.
@@ -271,7 +283,7 @@ sre.NemethRules.initNemethRules_ = function() {
 
   defineSpecialisedRule(
       'number-with-chars', 'default.default', 'default.brief',
-      '[t] "Num"; [m] CQFspaceoutNumber');
+      '[t] "⠼"; [m] CQFspaceoutNumber');
   defineSpecialisedRule(
       'number-with-chars', 'default.brief', 'default.sbrief');
 
@@ -333,21 +345,18 @@ sre.NemethRules.initNemethRules_ = function() {
 
   // minus sign
   // defineRule(
-  //     'negative', 'default.default',
-  //     '[t] "negative"; [n] children/*[1]',
-  //     'self::prefixop', '@role="negative"', 'children/identifier');
-  // defineRuleAlias(
-  //     'negative',
+  //     'negative-number', 'default.default',
+  //     '[t] "⠤"; [n] children/*[1]',
   //     'self::prefixop', '@role="negative"', 'children/number');
   // defineRuleAlias(
-  //     'negative',
+  //     'negative-number',
   //     'self::prefixop', '@role="negative"',
   //     'children/fraction[@role="vulgar"]');
+  defineRule(
+      'negative', 'default.default',
+      '[t] "⠤"; [n] children/*[1]',
+      'self::prefixop', '@role="negative"');
 
-  // defineRule(
-  //     'negative', 'default.default',
-  //     '[t] "minus"; [n] children/*[1]',
-  //     'self::prefixop', '@role="negative"');
 
   // Operator rules
   defineRule(
@@ -482,11 +491,7 @@ sre.NemethRules.initNemethRules_ = function() {
   // defineRule(
   //     'vulgar-fraction', 'default.default',
   //     '[t] CSFvulgarFraction',
-  //     'self::fraction', '@role="vulgar"', 'CQFvulgarFractionSmall');
-  // defineSpecialisedRule(
-  //     'vulgar-fraction', 'default.default', 'default.brief');
-  // defineSpecialisedRule(
-  //     'vulgar-fraction', 'default.default', 'default.sbrief');
+  //     'self::fraction', '@role="vulgar"');
 
   defineRule(
       'continued-fraction-outer', 'default.default',
@@ -1417,5 +1422,6 @@ sre.NemethRules.generateNemethTensorRules_ = function() {
 sre.NemethRules.getInstance().initializer = [
   sre.NemethRules.initCustomFunctions_,
   sre.NemethRules.initNemethRules_,
-  sre.NemethRules.generateNemethTensorRules_
+  sre.NemethRules.generateNemethTensorRules_,
+  sre.NemethRules.addAnnotators_
 ];

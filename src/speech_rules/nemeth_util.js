@@ -139,10 +139,6 @@ sre.NemethUtil.enlargeFence = function(text) {
 sre.Grammar.getInstance().setCorrection('enlargeFence',
                                         sre.NemethUtil.enlargeFence);
 
-  // Renewing types/roles
-  // Check if first child then propagate.
-  // if leaf node and first child then enter.
-
 /**
  * 
  * @param {sre.SemanticNode} node 
@@ -150,10 +146,17 @@ sre.Grammar.getInstance().setCorrection('enlargeFence',
  * @return {*}
  */
   sre.NemethUtil.propagateNumber = function(node, info) {
-    console.log(info);
-  if (node.childNodes.length) {
-    return ['', info];
-  }
+    // TODO: Font indicator followed by number.
+    if (node.childNodes.length) {
+      var type = node.type;
+      if (type === sre.SemanticAttr.Type.RELATION ||
+          type === sre.SemanticAttr.Type.PUNCTUATED ||
+          (type === sre.SemanticAttr.Type.PREFIXOP &&
+           node.role === sre.SemanticAttr.Role.NEGATIVE)) {
+        return ['', {number: true}];
+      }
+      return ['', info];
+    }    
     return [info['number'] ? 'number' : '', {number: false}];
 };
   
