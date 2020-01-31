@@ -127,6 +127,26 @@ sre.Messages.FONT = {
 
 
 /**
+ * Localised embalishment names. Treated like fonts.
+ * @type {Object.<string|Array.<string, Function>>}
+ */
+sre.Messages.EMBELLISH = {
+  // More embellishments than fonts.
+  'super': '',
+  'sub': '',
+  'circled': '',
+  'parenthesized': '',
+  'period': '',
+  'negative-circled': '',
+  'double-circled': '',
+  'circled-sans-serif': '',
+  'negative-circled-sans-serif': '',
+  'blackboard': '',
+  'comma': ''
+};
+
+
+/**
  * Localised role names.
  * @type {Object.<sre.SemanticAttr.Role>}
  */
@@ -235,5 +255,18 @@ sre.Messages.NUMBERS = {
   simpleOrdinal: function(n) {return n.toString();},
   numberToWords: function(n) {return n.toString();},
   numberToOrdinal: function(n, m) {return n.toString();},
-  vulgarSep: '-'
+  vulgarSep: '-' // space?
+};
+
+
+sre.Messages.ALPHABETS = {
+  latinSmall: [],
+  latinCap: [],
+  greekSmall: [],
+  greekCap: [],
+  digit: function(n) {return n.toString();},
+  combiner: function(letter, font, cap) {return letter;},
+  capPrefix: {default: ''},
+  smallPrefix: {default: ''},
+  digitPrefix: {default: ''}
 };

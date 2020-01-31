@@ -93,6 +93,7 @@ sre.Locale.es = {
     'double-struck': 'negrita de pizarra',
     'double-struck-italic': 'negrita de pizarra cursiva',
     'fraktur': 'Fraktur',
+    'fullwidth': 'ancho completo',
     'italic': 'cursiva',
     'monospace': 'monoespacio',
     'normal': 'normal',
@@ -169,6 +170,8 @@ sre.Locale.es = {
     JOINER_SUBSUPER: ' ',
     JOINER_FRAC: ' '
   },
+
+  ALPHABETS: {},
 
   NUMBERS: sre.Numbers.es.NUMBERS
 

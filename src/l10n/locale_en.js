@@ -74,7 +74,44 @@ sre.Locale.en = {
 
   MS_ROOT_INDEX: { },
 
-  FONT: { },
+  FONT: {
+    'bold': 'bold',
+    'bold-fraktur': 'bold fraktur',
+    'bold-italic': 'bold italic',
+    'bold-script': 'bold script',
+    'caligraphic': 'caligraphic',
+    'caligraphic-bold': 'caligraphic bold',
+    'double-struck': 'double struck',
+    'double-struck-italic': 'double struck italic',
+    'fraktur': 'fraktur',
+    'fullwidth': 'fullwidth',
+    'italic': 'italic',
+    'monospace': 'monospace',
+    'normal': 'normal',
+    'oldstyle': 'oldstyle',
+    'oldstyle-bold': 'oldstyle bold',
+    'script': 'script',
+    'sans-serif': 'sans serif',
+    'sans-serif-italic': 'sans serif italic',
+    'sans-serif-bold': 'sans serif bold',
+    'sans-serif-bold-italic': 'sans serif bold italic',
+    'unknown': 'unknown'
+  },
+
+  EMBELLISH: {
+    // Embellishments
+    // TODO: Here we need specialist combiners!
+    'super': 'superscript',
+    'sub': 'subscript',
+    'circled': 'circled',
+    'parenthesized': 'parenthesized',
+    'period': 'period',  // After!
+    'negative-circled': 'inverse circled',
+    'double-circled': 'double circled',
+    'circled-sans-serif': 'circled sans serif',
+    'negative-circled-sans-serif': 'inverse circled sans serif',
+    'comma': 'comma'  // After
+  },
 
   ROLE: {
     // Infixoperators
@@ -143,6 +180,35 @@ sre.Locale.en = {
   PLURAL_UNIT: {
     'foot': 'feet',
     'inch': 'inches'
+  },
+
+  ALPHABETS: {
+    latinSmall: [
+      'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+      'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
+    ],
+    latinCap: [
+      'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+      'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+    ],
+    greekSmall: [
+      'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta',
+      'iota', 'kappa', 'lamda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho',
+      'final sigma', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega'
+    ],
+    greekCap: [
+      'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta',
+      'Iota', 'Kappa', 'Lamda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi', 'Rho',
+      'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega'
+    ],
+    digit: function(n) {return n.toString();},
+    combiner: function(letter, font, cap) {
+      letter = cap ? cap + ' ' + letter : letter;
+      return font ? font + ' ' + letter : letter;
+    },
+    capPrefix: {default: 'cap', mathspeak: 'upper'},
+    smallPrefix: {default: ''},
+    digitPrefix: {default: ''}
   },
 
   NUMBERS: sre.Numbers.en.NUMBERS

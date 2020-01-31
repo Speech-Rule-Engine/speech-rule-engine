@@ -115,7 +115,7 @@ sre.ClearspeakPreferences.comparator = function() {
       sre.DynamicProperties.create(
       [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]],
       [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY]],
-      ['mathspeak', 'default'],
+      ['default'],
       ['short', 'default']));
 };
 
