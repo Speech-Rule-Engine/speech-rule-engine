@@ -80,6 +80,6 @@ sre.SemanticAnnotations.prototype.annotate = function(node) {
     this.annotators[key].annotate(node);
   }
   for (var name in this.visitors) {
-    this.visitors[name].visit(node, null);
+    this.visitors[name].visit(node, this.visitors[name].def);
   }
 };

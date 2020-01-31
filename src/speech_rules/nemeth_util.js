@@ -20,7 +20,7 @@
 goog.provide('sre.NemethUtil');
 
 goog.require('sre.MathspeakUtil');
-goog.require('sre.SemanticAnnotator');
+goog.require('sre.SemanticVisitor');
 
 
 goog.scope(function() {
@@ -139,29 +139,31 @@ sre.NemethUtil.enlargeFence = function(text) {
 sre.Grammar.getInstance().setCorrection('enlargeFence',
                                         sre.NemethUtil.enlargeFence);
 
+  // Renewing types/roles
+  // Check if first child then propagate.
+  // if leaf node and first child then enter.
 
 /**
  * 
  * @param {sre.SemanticNode} node 
- * @param {Object.<boolean>} info
+ * @param {Object.<*>} info
  * @return {*}
  */
-sre.NemethUtil.propagateNumber = function(node, info) {
-  if (!info) {
-    return ['number', {number: true}];
+  sre.NemethUtil.propagateNumber = function(node, info) {
+    console.log(info);
+  if (node.childNodes.length) {
+    return ['', info];
   }
-  if (node) {
-    
-  }
+    return [info['number'] ? 'number' : '', {number: false}];
 };
   
 
 /**
- * @return {sre.SemanticAnnotator} A semantic annotator for unit expressions.
+ * @return {sre.SemanticVisitor} A semantic annotator for numbered expressions.
  */
 sre.NemethUtil.numberIndicator = function() {
-  return new sre.SemanticAnnotator(
-      'nemeth', sre.NemethUtil.propagateNumber);
+  return new sre.SemanticVisitor(
+      'nemeth', sre.NemethUtil.propagateNumber, {number: true});
 };
 
 

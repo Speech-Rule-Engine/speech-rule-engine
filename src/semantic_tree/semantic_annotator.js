@@ -65,9 +65,11 @@ sre.SemanticAnnotator.prototype.annotate = function(node) {
 /**
  * @constructor
  * @param {string} domain The domain name of the annotation.
- * @param {function(sre.SemanticNode, *): *} func The annotation function.
+ * @param {function(sre.SemanticNode, Object.<*>): *} func The annotation
+ *     function.
+ * @param {Object.<*>=} opt_def The annotation function.
  */
-sre.SemanticVisitor = function(domain, func) {
+sre.SemanticVisitor = function(domain, func, opt_def) {
 
   /**
    * @type {string}
@@ -75,7 +77,7 @@ sre.SemanticVisitor = function(domain, func) {
   this.domain = domain;
 
   /**
-   * @type {function(sre.SemanticNode, *): *}
+   * @type {function(sre.SemanticNode, Object.<*>): *}
    */
   this.func = func;
 
@@ -85,20 +87,24 @@ sre.SemanticVisitor = function(domain, func) {
    */
   this.name = domain;
 
+  /**
+   * @type {Object.<*>}
+   */
+  this.def = opt_def || {};
 };
 
 
 /**
- * Visits the tree top down and propagates the information.
+ * Visits the tree top down, depth-first and propagates the information.
  * @param {sre.SemanticNode} node The semantic node.
- * @param {*} info The information to propagate.
- * @return {*} The updated information.
+ * @param {Object<*>} info The information to propagate.
+ * @return {*} The result with updated information.
  */
 sre.SemanticVisitor.prototype.visit = function(node, info) {
   var result = this.func(node, info);
   node.addAnnotation(this.domain, result[0]);
   for (var i = 0, child; child = node.childNodes[i]; i++) {
-    result = this.visit(child, result[1]);
+    result = this.visit(child, /** @type{Object<*>} */(result[1]));
   }
   return result;
 };
