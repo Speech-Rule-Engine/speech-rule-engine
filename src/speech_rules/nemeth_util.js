@@ -139,25 +139,54 @@ sre.NemethUtil.enlargeFence = function(text) {
 sre.Grammar.getInstance().setCorrection('enlargeFence',
                                         sre.NemethUtil.enlargeFence);
 
-/**
- * 
- * @param {sre.SemanticNode} node 
- * @param {Object.<*>} info
- * @return {*}
- */
+
+  sre.NemethUtil.NUMBER_PROPAGATORS = [
+    sre.SemanticAttr.Type.MULTIREL,
+    sre.SemanticAttr.Type.RELSEQ,
+    sre.SemanticAttr.Type.PUNCTUATED,
+    sre.SemanticAttr.Type.APPL
+  ];
+
+  sre.NemethUtil.checkParent_ = function(node) {
+    var parent = node.parent;
+    if (!parent) {
+      return false;
+    }
+    var type = parent.type;
+    if (sre.NemethUtil.NUMBER_PROPAGATORS.indexOf(type) !== -1 ||
+        (type === sre.SemanticAttr.Type.PREFIXOP &&
+         parent.role === sre.SemanticAttr.Role.NEGATIVE)) {
+      return true;
+    }
+    return false;
+  };
+  
+  sre.NemethUtil.childNumber_ = function(node) {
+    var parent = node.parent;
+    if (!parent) {
+      return 0;
+    }
+    return parent.childNodes.indexOf(node);
+  };
+  
+  /**
+   * 
+   * @param {sre.SemanticNode} node 
+   * @param {Object.<*>} info
+   * @return {*}
+   */
   sre.NemethUtil.propagateNumber = function(node, info) {
     // TODO: Font indicator followed by number.
-    if (node.childNodes.length) {
-      var type = node.type;
-      if (type === sre.SemanticAttr.Type.RELATION ||
-          type === sre.SemanticAttr.Type.PUNCTUATED ||
-          (type === sre.SemanticAttr.Type.PREFIXOP &&
-           node.role === sre.SemanticAttr.Role.NEGATIVE)) {
-        return ['', {number: true}];
+    if (!node.childNodes.length) {
+      if (sre.NemethUtil.checkParent_(node)) {
+        info.number = true;
       }
-      return ['', info];
-    }    
-    return [info['number'] ? 'number' : '', {number: false}];
+      return [info['number'] ? 'number' : '', {number: false}];
+    }
+    if (sre.NemethUtil.checkParent_(node)) {
+      info.number = true;
+    }
+    return ['', info];
 };
   
 
