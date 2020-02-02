@@ -22,6 +22,7 @@ goog.provide('sre.SemanticAnnotations');
 
 goog.require('sre.SemanticAnnotator');
 goog.require('sre.SemanticNode');
+goog.require('sre.SemanticVisitor');
 
 
 
@@ -36,6 +37,11 @@ sre.SemanticAnnotations = function() {
   this.annotators = {};
 
   /**
+   * @type {Object.<sre.SemanticVisitor>}
+   */
+  this.visitors = {};
+
+  /**
    * @type {number}
    */
   this.counter = 0;
@@ -46,11 +52,12 @@ goog.addSingletonGetter(sre.SemanticAnnotations);
 
 /**
  * Registers an annotator.
- * @param {sre.SemanticAnnotator} annotator The annotator.
+ * @param {sre.SemanticAnnotator|sre.SemanticVisitor} annotator The annotator.
  */
 sre.SemanticAnnotations.prototype.register = function(annotator) {
   annotator.name = annotator.domain + this.counter++;
-  this.annotators[annotator.name] = annotator;
+  ((annotator instanceof sre.SemanticAnnotator) ?
+   this.annotators : this.visitors)[annotator.name] = annotator;
 };
 
 
@@ -60,6 +67,7 @@ sre.SemanticAnnotations.prototype.register = function(annotator) {
  */
 sre.SemanticAnnotations.prototype.unregister = function(name) {
   delete this.annotators[name];
+  delete this.visitors[name];
 };
 
 
@@ -70,5 +78,8 @@ sre.SemanticAnnotations.prototype.unregister = function(name) {
 sre.SemanticAnnotations.prototype.annotate = function(node) {
   for (var key in this.annotators) {
     this.annotators[key].annotate(node);
+  }
+  for (var name in this.visitors) {
+    this.visitors[name].visit(node, this.visitors[name].def);
   }
 };

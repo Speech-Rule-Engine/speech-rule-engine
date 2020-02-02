@@ -59,9 +59,9 @@ sre.SsmlRenderer.prototype.pause = function(pause) {
  * @override
  */
 sre.SsmlRenderer.prototype.prosodyElement = function(attr, value) {
-  value = this.applyScaleFunction(value);
-  var valueStr = value < 0 ? value.toString() : '+' + value;
-  return '<prosody ' + attr.toLowerCase() + '="' + Math.floor(valueStr) +
+  value = Math.floor(this.applyScaleFunction(value));
+  var valueStr = value < 0 ? value.toString() : '+' + value.toString();
+  return '<prosody ' + attr.toLowerCase() + '="' + valueStr +
       (attr === sre.Engine.personalityProps.VOLUME ? '>' : '%">');
 };
 

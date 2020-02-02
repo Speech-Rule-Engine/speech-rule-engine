@@ -74,12 +74,19 @@ if (file) {
   sre.Tests.testList.push(sre[file]);
 }
 if (locale) {
+  console.log(locale);
   if (locale === 'Base') {
     sre.Tests.testList = sre.Tests.testList.concat(sre.BaseTests.testList);
   } else {
     try {
-      sre.Tests.testList =
+      if (sre['Speech' + locale + 'Test']) {
+        sre.Tests.testList =
           sre.Tests.testList.concat(sre['Speech' + locale + 'Test'].testList);
+      }
+      if (sre['Braille' + locale + 'Test']) {
+        sre.Tests.testList =
+          sre.Tests.testList.concat(sre['Braille' + locale + 'Test'].testList);
+      }
     } catch (e) { }
   }
 }
