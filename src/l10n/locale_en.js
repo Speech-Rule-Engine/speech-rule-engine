@@ -101,18 +101,18 @@ sre.Locale.en = {
   EMBELLISH: {
     // Embellishments
     // TODO: Here we need specialist combiners!
-    'super': 'superscript',
-    'sub': 'subscript',
+    'super': 'super',
+    'sub': 'sub',
     'circled': 'circled',
     'parenthesized': 'parenthesized',
     'period': ['period', sre.Locale.postfixCombiner],
-    'negative-circled': 'inverse circled',
+    'negative-circled': 'black circled',
     'double-circled': 'double circled',
     'circled-sans-serif': 'circled sans serif',
-    'negative-circled-sans-serif': 'inverse circled sans serif',
+    'negative-circled-sans-serif': 'black circled sans serif',
     'comma': ['comma', sre.Locale.postfixCombiner],
     'squared': 'squared',
-    'negative-squared': 'negative squared'
+    'negative-squared': 'black squared'
   },
 
   ROLE: {

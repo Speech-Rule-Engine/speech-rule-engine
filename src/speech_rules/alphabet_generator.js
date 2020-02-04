@@ -568,7 +568,7 @@ sre.AlphabetGenerator.INTERVALS = [
     interval: ['03B0', '03D0'],
     base: sre.AlphabetGenerator.Base.GREEKSMALL,
     subst: {
-      '03AA': '2207',
+      '03B0': '2207',
       '03CA': '2202',
       '03CB': '03F5',
       '03CC': '03D1',
@@ -847,7 +847,7 @@ sre.AlphabetGenerator.INTERVALS = [
   },
   {
     interval: ['24D0', '24E9'],
-    base: sre.AlphabetGenerator.Base.LATINCAP,
+    base: sre.AlphabetGenerator.Base.LATINSMALL,
     subst: {},
     capital: false,
     category: 'So',

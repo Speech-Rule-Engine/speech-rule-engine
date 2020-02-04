@@ -3,6 +3,36 @@
     "category": "No",
     "mappings": {
       "default": {
+        "default": "squared"
+      },
+      "mathspeak": {
+        "default": "squared"
+      },
+      "clearspeak": {
+        "default": "squared"
+      }
+    },
+    "key": "00B2"
+  },
+  {
+    "category": "No",
+    "mappings": {
+      "default": {
+        "default": "cubed"
+      },
+      "mathspeak": {
+        "default": "cubed"
+      },
+      "clearspeak": {
+        "default": "cubed"
+      }
+    },
+    "key": "00B3"
+  },
+  {
+    "category": "No",
+    "mappings": {
+      "default": {
         "default": "one quarter"
       }
     },
