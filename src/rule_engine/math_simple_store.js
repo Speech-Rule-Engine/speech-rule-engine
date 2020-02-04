@@ -204,6 +204,23 @@ sre.MathCompoundStore.prototype.defineRules = function(
 
 
 /**
+ * Creates a single rule from strings.
+ * @param {string} name Name of the rule.
+ * @param {string} domain The domain axis.
+ * @param {string} style The style axis.
+ * @param {string} cat The category if it exists.
+ * @param {string} str String for precondition and constraints.
+ * @param {string} content The content for the postcondition.
+ */
+sre.MathCompoundStore.prototype.defineRule = function(
+    name, domain, style, cat, str, content) {
+  var store = this.getSubStore_(str);
+  this.setupStore_(store, cat);
+  store.defineRuleFromStrings(name, domain, style, str, content);
+};
+
+
+/**
  * Changes the internal locale for the rule definitions if the given JSON
  * element is a locale instruction.
  * @param {Object} json JSON object of a speech rules.

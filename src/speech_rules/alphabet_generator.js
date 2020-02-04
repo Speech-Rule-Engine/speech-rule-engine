@@ -180,7 +180,8 @@ sre.AlphabetGenerator.numberRules = function(store, keys, unicodes, digits, font
 // TODO: Correct category Nd vs No.
 // Assume style is always default. But what about sub super for characters?
 
-sre.AlphabetGenerator.parser = new sre.DynamicCstr.Parser([sre.DynamicCstr.Axis.DOMAIN, sre.DynamicCstr.Axis.STYLE]);
+sre.AlphabetGenerator.parser = new sre.DynamicCstr.Parser(
+  [sre.DynamicCstr.Axis.DOMAIN, sre.DynamicCstr.Axis.STYLE]);
 
 // /**
 //  * Makes all the rules 
@@ -189,14 +190,10 @@ sre.AlphabetGenerator.parser = new sre.DynamicCstr.Parser([sre.DynamicCstr.Axis.
 //  */
 sre.AlphabetGenerator.makeLetter = function(
   store, combiner, key, unicode, letter, font, prefix, category) {
-  var mappings = {};
   var domains = Object.keys(prefix);
   for (var i = 0, domain; domain = domains[i]; i++) {
-    console.log(sre.AlphabetGenerator.parser.parse('mathspeak.brief'));
-    console.log(sre.AlphabetGenerator.parser.parse(domain));
-    mappings[domain] = {'default': combiner(letter, font, prefix[domain])};
+    store.defineRule(key, domain, 'default', category, unicode, combiner(letter, font, prefix[domain]));
   };
-  store.defineRules(key, unicode, category, mappings);
 };
 
 
