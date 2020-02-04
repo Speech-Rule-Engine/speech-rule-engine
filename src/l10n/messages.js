@@ -142,7 +142,9 @@ sre.Messages.EMBELLISH = {
   'circled-sans-serif': '',
   'negative-circled-sans-serif': '',
   'blackboard': '',
-  'comma': ''
+  'comma': '',
+  'squared': '',
+  'negative-squared': ''
 };
 
 

@@ -110,7 +110,9 @@ sre.Locale.en = {
     'double-circled': 'double circled',
     'circled-sans-serif': 'circled sans serif',
     'negative-circled-sans-serif': 'inverse circled sans serif',
-    'comma': 'comma'  // After
+    'comma': 'comma',  // After
+    'squared': 'squared',
+    'negative-squared': 'negative squared'
   },
 
   ROLE: {

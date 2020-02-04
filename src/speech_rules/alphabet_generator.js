@@ -19,13 +19,14 @@
 
 goog.provide('sre.AlphabetGenerator');
 
+goog.require('sre.DynamicCstr.Parser');
 goog.require('sre.L10n');
 goog.require('sre.Messages');
 goog.require('sre.SemanticUtil');
 
 
 /**
- * Enumerator for Unicode fonts.
+ * Enumerator for Unicode fonts. These match the font elements in sre.Messages
  * @enum {string}
  */
 sre.AlphabetGenerator.Font = {
@@ -44,8 +45,16 @@ sre.AlphabetGenerator.Font = {
   SANSSERIF: 'sans-serif',
   SANSSERIFITALIC: 'sans-serif-italic',
   SANSSERIFBOLD: 'sans-serif-bold',
-  SANSSERIFBOLDITALIC: 'sans-serif-bold-italic',
-  // Digit specific. More embellishments than fonts.
+  SANSSERIFBOLDITALIC: 'sans-serif-bold-italic'
+};
+
+
+/**
+ * Embellishing/modifying of Unicode characters. These match the embellish
+ * elements in sre.Messages.
+ * @enum {string}
+ */
+sre.AlphabetGenerator.Embellish = {
   SUPER: 'super',
   SUB: 'sub',
   CIRCLED: 'circled',
@@ -55,7 +64,9 @@ sre.AlphabetGenerator.Font = {
   DOUBLECIRCLED: 'double-circled',
   CIRCLEDSANSSERIF: 'circled-sans-serif',
   NEGATIVECIRCLEDSANSSERIF: 'negative-circled-sans-serif',
-  COMMA: 'comma'
+  COMMA: 'comma',
+  SQUARED: 'squared',
+  NEGATIVESQUARED: 'negative-squared'
 };
 
 
@@ -72,6 +83,11 @@ sre.AlphabetGenerator.Base = {
 };
 
 
+/**
+ * Generates alphabet rules for the locale and adds them to the given store.
+ * @param {string} locale The current locale.
+ * @param {sre.MathCompoundStore} store The current speech rule store.
+ */
 sre.AlphabetGenerator.generate = function(locale, store) {
   sre.Engine.getInstance().locale = locale;
   sre.L10n.setLocale();
@@ -85,15 +101,23 @@ sre.AlphabetGenerator.generate = function(locale, store) {
     var alphabet = sre.Messages.ALPHABETS[int.base];
     if ('offset' in int) {
       sre.AlphabetGenerator.numberRules(
-        store, keys, letters, alphabet, int.font, int.offset);
+        store, keys, letters, alphabet, int.font, int.category, int.offset);
     } else {
       sre.AlphabetGenerator.alphabetRules(
-        store, keys, letters, alphabet, int.font, int.capital);
+        store, keys, letters, alphabet, int.font, int.category, int.capital);
     }
   }
 };
 
 
+/**
+ * Creates a list of unicode charactars from an interval specification.
+ * @param {Array.<string>} int Pair of strings that represent the Unicode value
+ *      of the start and end character in the interval.
+ * @param {Object.<string|boolean>} subst Substitutions of characters in the
+ *      above interval.
+ * @return {Array.<number>} The generated interval of Unicode characters.
+ */
 sre.AlphabetGenerator.makeInterval = function(int, subst) {
   var num2str = function(x) {
     var str = i.toString(16).toUpperCase();
@@ -112,54 +136,87 @@ sre.AlphabetGenerator.makeInterval = function(int, subst) {
   return result;
 };
 
-sre.AlphabetGenerator.capitalise = function(str) {
-  return str[0].toUpperCase() + str.slice(1);
-};
 
-
+/**
+ * Retrieves font value for the current locale.
+ * @param {string} font The font of an alphabet.
+ * @return {{font: string, combiner: Function}} The localised font value.
+ */
 sre.AlphabetGenerator.getFont = function(font) {
   let realFont = (font === 'normal' || font === 'fullwidth') ? '' :
       (sre.Messages.FONT[font] || sre.Messages.EMBELLISH[font] || '');
   return (typeof realFont === 'string') ?
-    [realFont, sre.Messages.ALPHABETS.combiner] : realFont;
+    {font: realFont, combiner: sre.Messages.ALPHABETS.combiner} :
+  {font: realFont[0], combiner: realFont[1]};
 };
 
 
-sre.AlphabetGenerator.alphabetRules = function(store, keys, unicodes, letters, font, cap) {
+// /**
+//  * Generates rules for letters. 
+//  * @param {}
+//  * @return {}
+//  */
+sre.AlphabetGenerator.alphabetRules = function(store, keys, unicodes, letters, font, category, cap) {
   var realFont = sre.AlphabetGenerator.getFont(font);
   for (var i = 0, key, unicode, letter;
        key = keys[i], unicode = unicodes[i], letter = letters[i]; i++) {
     var prefixes = cap ? sre.Messages.ALPHABETS.capPrefix :
         sre.Messages.ALPHABETS.smallPrefix;
     sre.AlphabetGenerator.makeLetter(
-      store, realFont[1], key, unicode, letter, realFont[0], prefixes,
-      cap ? 'Lu' : 'Ll');
+      store, realFont.combiner, key, unicode, letter, realFont.font, prefixes, category);
   }
 };
 
-sre.AlphabetGenerator.numberRules = function(store, keys, unicodes, digits, font, offset) {
+sre.AlphabetGenerator.numberRules = function(store, keys, unicodes, digits, font, category, offset) {
   var realFont = sre.AlphabetGenerator.getFont(font);
   for (var i = 0, key, unicode; key = keys[i], unicode = unicodes[i]; i++) {
     var prefixes = sre.Messages.ALPHABETS.digitPrefix;
     var number = digits(i + offset);
     sre.AlphabetGenerator.makeLetter(
-      store, realFont[1], key, unicode, number, realFont[0], prefixes, 'Nd');
+      store, realFont.combiner, key, unicode, number, realFont.font, prefixes, category);
   }
 };
 
 // TODO: Correct category Nd vs No.
 // Assume style is always default. But what about sub super for characters?
+
+sre.AlphabetGenerator.parser = new sre.DynamicCstr.Parser([sre.DynamicCstr.Axis.DOMAIN, sre.DynamicCstr.Axis.STYLE]);
+
+// /**
+//  * Makes all the rules 
+//  * @param {}
+//  * @return {}
+//  */
 sre.AlphabetGenerator.makeLetter = function(
   store, combiner, key, unicode, letter, font, prefix, category) {
   var mappings = {};
   var domains = Object.keys(prefix);
   for (var i = 0, domain; domain = domains[i]; i++) {
+    console.log(sre.AlphabetGenerator.parser.parse('mathspeak.brief'));
+    console.log(sre.AlphabetGenerator.parser.parse(domain));
     mappings[domain] = {'default': combiner(letter, font, prefix[domain])};
   };
   store.defineRules(key, unicode, category, mappings);
 };
 
 
+/**
+ * @typedef {{interval: Array.<string>,
+ *         base: sre.AlphabetGenerator.Base,
+ *         subst: Object.<string|boolean>,
+ *         category: string,
+ *         font: (sre.AlphabetGenerator.Font|sre.AlphabetGenerator.Embellish),
+ *         capital: (boolean|undefined),
+ *         offset: (number|undefined)
+ *         }}
+ */
+sre.AlphabetGenerator.alphabet_;
+
+
+/**
+ * Alphabet definitions by intervals and exceptions
+ * @type {Array.<sre.AlphabetGenerator.alphabet_>}
+ */
 sre.AlphabetGenerator.INTERVALS = [
   // Latin
   {
@@ -167,6 +224,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.LATINCAP,
     subst: {},
     capital: true,
+    category: 'Lu',
     font: sre.AlphabetGenerator.Font.BOLD
   },
   {
@@ -174,6 +232,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.LATINSMALL,
     subst: {},
     capital: false,
+    category: 'Ll',
     font: sre.AlphabetGenerator.Font.BOLD
   },
   {
@@ -181,6 +240,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.LATINCAP,
     subst: {},
     capital: true,
+    category: 'Lu',
     font: sre.AlphabetGenerator.Font.BOLDFRAKTUR
   },
   {
@@ -188,6 +248,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.LATINSMALL,
     subst: {},
     capital: false,
+    category: 'Ll',
     font: sre.AlphabetGenerator.Font.BOLDFRAKTUR
   },
   {
@@ -195,6 +256,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.LATINCAP,
     subst: {},
     capital: true,
+    category: 'Lu',
     font: sre.AlphabetGenerator.Font.BOLDITALIC
   },
   {
@@ -202,6 +264,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.LATINSMALL,
     subst: {},
     capital: false,
+    category: 'Ll',
     font: sre.AlphabetGenerator.Font.BOLDITALIC
   },
   {
@@ -209,6 +272,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.LATINCAP,
     subst: {},
     capital: true,
+    category: 'Lu',
     font: sre.AlphabetGenerator.Font.BOLDSCRIPT
   },
   {
@@ -216,6 +280,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.LATINSMALL,
     subst: {},
     capital: false,
+    category: 'Ll',
     font: sre.AlphabetGenerator.Font.BOLDSCRIPT
   },
   {
@@ -231,6 +296,7 @@ sre.AlphabetGenerator.INTERVALS = [
       '1D551': '2124'
     },
     capital: true,
+    category: 'Lu',
     font: sre.AlphabetGenerator.Font.DOUBLESTRUCK
   },
   {
@@ -238,6 +304,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.LATINSMALL,
     subst: {},
     capital: false,
+    category: 'Ll',
     font: sre.AlphabetGenerator.Font.DOUBLESTRUCK
   },
   {
@@ -251,6 +318,7 @@ sre.AlphabetGenerator.INTERVALS = [
       '1D51D': '2128'
     },
     capital: true,
+    category: 'Lu',
     font: sre.AlphabetGenerator.Font.FRAKTUR
   },
   {
@@ -258,6 +326,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.LATINSMALL,
     subst: {},
     capital: false,
+    category: 'Ll',
     font: sre.AlphabetGenerator.Font.FRAKTUR
   },
   {
@@ -265,6 +334,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.LATINCAP,
     subst: {},
     capital: true,
+    category: 'Lu',
     font: sre.AlphabetGenerator.Font.FULLWIDTH
   },
   {
@@ -272,6 +342,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.LATINSMALL,
     subst: {},
     capital: false,
+    category: 'Ll',
     font: sre.AlphabetGenerator.Font.FULLWIDTH
   },
   {
@@ -279,6 +350,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.LATINCAP,
     subst: {},
     capital: true,
+    category: 'Lu',
     font: sre.AlphabetGenerator.Font.ITALIC
   },
   {
@@ -288,6 +360,7 @@ sre.AlphabetGenerator.INTERVALS = [
       '1D455': '210E'
     },
     capital: false,
+    category: 'Ll',
     font: sre.AlphabetGenerator.Font.ITALIC
   },
   {
@@ -295,6 +368,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.LATINCAP,
     subst: {},
     capital: true,
+    category: 'Lu',
     font: sre.AlphabetGenerator.Font.MONOSPACE
   },
   {
@@ -302,6 +376,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.LATINSMALL,
     subst: {},
     capital: false,
+    category: 'Ll',
     font: sre.AlphabetGenerator.Font.MONOSPACE
   },
   {
@@ -309,6 +384,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.LATINCAP,
     subst: {},
     capital: true,
+    category: 'Lu',
     font: sre.AlphabetGenerator.Font.NORMAL
   },
   {
@@ -316,6 +392,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.LATINSMALL,
     subst: {},
     capital: false,
+    category: 'Ll',
     font: sre.AlphabetGenerator.Font.NORMAL
   },
   {
@@ -332,6 +409,7 @@ sre.AlphabetGenerator.INTERVALS = [
       '1D4AD': '211B'
     },
     capital: true,
+    category: 'Lu',
     font: sre.AlphabetGenerator.Font.SCRIPT
   },
   {
@@ -343,6 +421,7 @@ sre.AlphabetGenerator.INTERVALS = [
       '1D4C4': '2134'
     },
     capital: false,
+    category: 'Ll',
     font: sre.AlphabetGenerator.Font.SCRIPT
   },
   {
@@ -350,6 +429,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.LATINCAP,
     subst: {},
     capital: true,
+    category: 'Lu',
     font: sre.AlphabetGenerator.Font.SANSSERIF
   },
   {
@@ -357,6 +437,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.LATINSMALL,
     subst: {},
     capital: false,
+    category: 'Ll',
     font: sre.AlphabetGenerator.Font.SANSSERIF
   },
   {
@@ -364,6 +445,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.LATINCAP,
     subst: {},
     capital: true,
+    category: 'Lu',
     font: sre.AlphabetGenerator.Font.SANSSERIFITALIC
   },
   {
@@ -371,6 +453,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.LATINSMALL,
     subst: {},
     capital: false,
+    category: 'Ll',
     font: sre.AlphabetGenerator.Font.SANSSERIFITALIC
   },
   {
@@ -378,6 +461,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.LATINCAP,
     subst: {},
     capital: true,
+    category: 'Lu',
     font: sre.AlphabetGenerator.Font.SANSSERIFBOLD
   },
   {
@@ -385,6 +469,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.LATINSMALL,
     subst: {},
     capital: false,
+    category: 'Ll',
     font: sre.AlphabetGenerator.Font.SANSSERIFBOLD
   },
   {
@@ -392,6 +477,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.LATINCAP,
     subst: {},
     capital: true,
+    category: 'Lu',
     font: sre.AlphabetGenerator.Font.SANSSERIFBOLDITALIC
   },
   {
@@ -399,6 +485,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.LATINSMALL,
     subst: {},
     capital: false,
+    category: 'Ll',
     font: sre.AlphabetGenerator.Font.SANSSERIFBOLDITALIC
   },
   // Greek
@@ -407,6 +494,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.GREEKCAP,
     subst: {},
     capital: true,
+    category: 'Lu',
     font: sre.AlphabetGenerator.Font.BOLDITALIC
   },
   {
@@ -414,6 +502,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.GREEKSMALL,
     subst: {},
     capital: false,
+    category: 'Ll',
     font: sre.AlphabetGenerator.Font.BOLDITALIC
   },
   {
@@ -421,6 +510,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.GREEKCAP,
     subst: {},
     capital: true,
+    category: 'Lu',
     font: sre.AlphabetGenerator.Font.BOLD
   },
   {
@@ -428,6 +518,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.GREEKSMALL,
     subst: {},
     capital: false,
+    category: 'Ll',
     font: sre.AlphabetGenerator.Font.BOLD
   },
   {
@@ -435,6 +526,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.GREEKCAP,
     subst: {},
     capital: true,
+    category: 'Lu',
     font: sre.AlphabetGenerator.Font.ITALIC
   },
   {
@@ -442,6 +534,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.GREEKSMALL,
     subst: {},
     capital: false,
+    category: 'Ll',
     font: sre.AlphabetGenerator.Font.ITALIC
   },
   {
@@ -449,6 +542,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.GREEKCAP,
     subst: {},
     capital: true,
+    category: 'Lu',
     font: sre.AlphabetGenerator.Font.SANSSERIFBOLDITALIC
   },
   {
@@ -456,6 +550,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.GREEKSMALL,
     subst: {},
     capital: false,
+    category: 'Ll',
     font: sre.AlphabetGenerator.Font.SANSSERIFBOLDITALIC
   },
   {
@@ -463,6 +558,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.GREEKCAP,
     subst: {},
     capital: true,
+    category: 'Lu',
     font: sre.AlphabetGenerator.Font.SANSSERIFBOLD
   },
   {
@@ -470,6 +566,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.GREEKSMALL,
     subst: {},
     capital: false,
+    category: 'Ll',
     font: sre.AlphabetGenerator.Font.SANSSERIFBOLD
   },
   {
@@ -479,6 +576,7 @@ sre.AlphabetGenerator.INTERVALS = [
       '03A2': false
     },
     capital: true,
+    category: 'Lu',
     font: sre.AlphabetGenerator.Font.NORMAL
   },
   {
@@ -486,6 +584,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.GREEKSMALL,
     subst: {},
     capital: false,
+    category: 'Ll',
     font: sre.AlphabetGenerator.Font.NORMAL
   },
   // Digits
@@ -494,6 +593,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 0,
+    category: 'Nd',
     font: sre.AlphabetGenerator.Font.NORMAL
   },
   {
@@ -505,14 +605,16 @@ sre.AlphabetGenerator.INTERVALS = [
       '2073': '00B3'
     },
     offset: 0,
-    font: sre.AlphabetGenerator.Font.SUPER
+    category: 'No',
+    font: sre.AlphabetGenerator.Embellish.SUPER
   },
   {
     interval: ['2080', '2089'],
     base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 0,
-    font: sre.AlphabetGenerator.Font.SUB
+    category: 'No',
+    font: sre.AlphabetGenerator.Embellish.SUB
   },
   {
     interval: ['245F', '2473'],
@@ -521,28 +623,32 @@ sre.AlphabetGenerator.INTERVALS = [
       '245F': '24EA'
     },
     offset: 0,
-    font: sre.AlphabetGenerator.Font.CIRCLED
+    category: 'No',
+    font: sre.AlphabetGenerator.Embellish.CIRCLED
   },
   {
     interval: ['3251', '325F'],
     base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 21,
-    font: sre.AlphabetGenerator.Font.CIRCLED
+    category: 'No',
+    font: sre.AlphabetGenerator.Embellish.CIRCLED
   },
   {
     interval: ['32B1', '32BF'],
     base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 36,
-    font: sre.AlphabetGenerator.Font.CIRCLED
+    category: 'No',
+    font: sre.AlphabetGenerator.Embellish.CIRCLED
   },
   {
     interval: ['2474', '2487'],
     base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 1,
-    font: sre.AlphabetGenerator.Font.PARENTHESIZED // (start at 1)
+    category: 'No',
+    font: sre.AlphabetGenerator.Embellish.PARENTHESIZED // (start at 1)
   },
   {
     interval: ['2487', '249B'],
@@ -551,7 +657,8 @@ sre.AlphabetGenerator.INTERVALS = [
       '2487': '1F100'
     },
     offset: 0,
-    font: sre.AlphabetGenerator.Font.PERIOD
+    category: 'No',
+    font: sre.AlphabetGenerator.Embellish.PERIOD
   },
   {
     interval: ['2775', '277F'],
@@ -560,21 +667,24 @@ sre.AlphabetGenerator.INTERVALS = [
       '2775': '24FF'
     },
     offset: 0,
-    font: sre.AlphabetGenerator.Font.NEGATIVECIRCLED
+    category: 'No',
+    font: sre.AlphabetGenerator.Embellish.NEGATIVECIRCLED
   },
   {
     interval: ['24EB', '24F4'],
     base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 11,
-    font: sre.AlphabetGenerator.Font.NEGATIVECIRCLED
+    category: 'No',
+    font: sre.AlphabetGenerator.Embellish.NEGATIVECIRCLED
   },
   {
     interval: ['24F5', '24FE'],
     base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 1,
-    font: sre.AlphabetGenerator.Font.DOUBLECIRCLED // (starts at 1)
+    category: 'No',
+    font: sre.AlphabetGenerator.Embellish.DOUBLECIRCLED // (starts at 1)
   },
   {
     interval: ['277F', '2789'],
@@ -583,7 +693,8 @@ sre.AlphabetGenerator.INTERVALS = [
       '277F': '1F10B'
     },
     offset: 0,
-    font: sre.AlphabetGenerator.Font.CIRCLEDSANSSERIF // (0 is NEW)
+    category: 'No',
+    font: sre.AlphabetGenerator.Embellish.CIRCLEDSANSSERIF // (0 is NEW)
   },
   {
     interval: ['2789', '2793'],
@@ -592,13 +703,15 @@ sre.AlphabetGenerator.INTERVALS = [
       '2789': '1F10C'
     },
     offset: 0,
-    font: sre.AlphabetGenerator.Font.NEGATIVECIRCLEDSANSSERIF //  (0 is NEW!)
+    category: 'No',
+    font: sre.AlphabetGenerator.Embellish.NEGATIVECIRCLEDSANSSERIF //  (0 is NEW!)
   },
   {
     interval: ['FF10', 'FF19'],
     base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 0,
+    category: 'Nd',
     font: sre.AlphabetGenerator.Font.FULLWIDTH
   },
   {
@@ -606,6 +719,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 0,
+    category: 'Nd',
     font: sre.AlphabetGenerator.Font.BOLD
   },
   {
@@ -613,6 +727,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 0,
+    category: 'Nd',
     font: sre.AlphabetGenerator.Font.DOUBLESTRUCK
   },
   {
@@ -620,6 +735,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 0,
+    category: 'Nd',
     font: sre.AlphabetGenerator.Font.SANSSERIF
   },
   {
@@ -627,6 +743,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 0,
+    category: 'Nd',
     font: sre.AlphabetGenerator.Font.SANSSERIFBOLD
   },
   {
@@ -634,6 +751,7 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 0,
+    category: 'Nd',
     font: sre.AlphabetGenerator.Font.MONOSPACE
   },
   {
@@ -641,7 +759,66 @@ sre.AlphabetGenerator.INTERVALS = [
     base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
     offset: 0,
-    font: sre.AlphabetGenerator.Font.COMMA
+    category: 'No',
+    font: sre.AlphabetGenerator.Embellish.COMMA
+  },
+  // Other alphabets
+  {
+    interval: ['1F110', '1F129'],
+    base: sre.AlphabetGenerator.Base.LATINCAP,
+    subst: {},
+    capital: true,
+    category: 'So',
+    font: sre.AlphabetGenerator.Embellish.PARENTHESIZED
+  },
+  {
+    interval: ['249C', '24B5'],
+    base: sre.AlphabetGenerator.Base.LATINSMALL,
+    subst: {},
+    capital: false,
+    category: 'So',
+    font: sre.AlphabetGenerator.Embellish.PARENTHESIZED
+  },
+  {
+    interval: ['24B6', '24CF'],
+    base: sre.AlphabetGenerator.Base.LATINCAP,
+    subst: {},
+    capital: true,
+    category: 'So',
+    font: sre.AlphabetGenerator.Embellish.CIRCLED
+  },
+  {
+    interval: ['24D0', '24E9'],
+    base: sre.AlphabetGenerator.Base.LATINCAP,
+    subst: {},
+    capital: false,
+    category: 'So',
+    font: sre.AlphabetGenerator.Embellish.CIRCLED
+  },
+  {
+    interval: ['1F130', '1F149'],
+    base: sre.AlphabetGenerator.Base.LATINCAP,
+    subst: {},
+    capital: true,
+    category: 'So',
+    font: sre.AlphabetGenerator.Embellish.SQUARED
+  },
+  {
+    interval: ['1F170', '1F189'],
+    base: sre.AlphabetGenerator.Base.LATINCAP,
+    subst: {},
+    capital: true,
+    category: 'So',
+    font: sre.AlphabetGenerator.Embellish.NEGATIVESQUARED
+  },
+  {
+    interval: ['1F150', '1F169'],
+    base: sre.AlphabetGenerator.Base.LATINCAP,
+    subst: {},
+    capital: true,
+    category: 'So',
+    font: sre.AlphabetGenerator.Embellish.NEGATIVECIRCLED
   }
+  
 ];
 
