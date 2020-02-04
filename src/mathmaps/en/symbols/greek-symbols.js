@@ -96,73 +96,6 @@
     "key": "03F6"
   },
   {
-    "category": "Lu",
-    "mappings": {
-      "default": {
-        "default": "greek capital theta symbol",
-        "short": "cap theta"
-      },
-      "mathspeak": {
-        "default": "upper Theta"
-      },
-      "clearspeak": {
-        "default": "cap Theta"
-      }
-    },
-    "key": "03F4"
-  },
-  {
-    "category": "Lu",
-    "mappings": {
-      "default": {
-        "default": "mathematical bold capital theta symbol",
-        "alternative": "bold capital theta",
-        "short": "bold cap theta"
-      },
-      "mathspeak": {
-        "default": "bold upper Theta"
-      },
-      "clearspeak": {
-        "default": "bold cap Theta"
-      }
-    },
-    "key": "1D6B9"
-  },
-  {
-    "category": "Lu",
-    "mappings": {
-      "default": {
-        "default": "mathematical italic capital theta symbol",
-        "alternative": "italic capital theta",
-        "short": "italic cap theta"
-      },
-      "mathspeak": {
-        "default": "italic upper Theta"
-      },
-      "clearspeak": {
-        "default": "italic cap Theta"
-      }
-    },
-    "key": "1D6F3"
-  },
-  {
-    "category": "Lu",
-    "mappings": {
-      "default": {
-        "default": "mathematical sans serif bold capital theta symbol",
-        "alternative": "sans serif bold capital theta",
-        "short": "sans serif bold cap theta"
-      },
-      "mathspeak": {
-        "default": "sans serif bold upper Theta"
-      },
-      "clearspeak": {
-        "default": "sans serif bold cap Theta"
-      }
-    },
-    "key": "1D767"
-  },
-  {
     "category": "Sm",
     "mappings": {
       "default": {
@@ -429,15 +362,10 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital digamma",
-        "alternative": "bold capital digamma",
-        "short": "bold cap digamma"
+        "default": "bold cap Digamma"
       },
       "mathspeak": {
         "default": "bold upper Digamma"
-      },
-      "clearspeak": {
-        "default": "bold cap Digamma"
       }
     },
     "key": "1D7CA"
@@ -446,9 +374,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold small digamma",
-        "alternative": "bold small digamma",
-        "short": "bold digamma"
+        "default": "bold digamma"
       }
     },
     "key": "1D7CB"

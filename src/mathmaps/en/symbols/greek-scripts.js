@@ -4,9 +4,7 @@
     "key": "1D26",
     "mappings": {
       "default": {
-        "default": "greek letter small capital gamma",
-        "alternative": "greek letter gamma",
-        "short": "small cap gamma"
+        "default": "small cap Gamma"
       },
       "mathspeak": {
         "default": "small upper Gamma"
@@ -18,12 +16,10 @@
     "key": "1D27",
     "mappings": {
       "default": {
-        "default": "greek letter small capital lamda",
-        "alternative": "greek letter lamda",
-        "short": "small cap lamda"
+        "default": "small cap Lambda"
       },
       "mathspeak": {
-        "default": "small upper Lamda"
+        "default": "small upper Lambda"
       }
     }
   },
@@ -32,9 +28,7 @@
     "key": "1D28",
     "mappings": {
       "default": {
-        "default": "greek letter small capital pi",
-        "alternative": "greek letter pi",
-        "short": "small cap pi"
+        "default": "small cap Pi"
       },
       "mathspeak": {
         "default": "small upper Pi"
@@ -46,9 +40,7 @@
     "key": "1D29",
     "mappings": {
       "default": {
-        "default": "greek letter small capital rho",
-        "alternative": "greek letter rho",
-        "short": "small cap rho"
+        "default": "small cap Rho"
       },
       "mathspeak": {
         "default": "small upper Rho"
@@ -60,9 +52,7 @@
     "key": "1D2A",
     "mappings": {
       "default": {
-        "default": "greek letter small capital psi",
-        "alternative": "greek letter psi",
-        "short": "small cap psi"
+        "default": "small cap Psi"
       },
       "mathspeak": {
         "default": "small upper Psi"
@@ -74,9 +64,7 @@
     "key": "1D5E",
     "mappings": {
       "default": {
-        "default": "modifier letter small greek gamma",
-        "alternative": "greek letter superscript gamma",
-        "short": "superscript gamma"
+        "default": "superscript gamma"
       }
     }
   },
@@ -85,9 +73,7 @@
     "key": "1D60",
     "mappings": {
       "default": {
-        "default": "modifier letter small greek phi",
-        "alternative": "greek letter superscript phi",
-        "short": "superscript phi"
+        "default": "superscript phi"
       }
     }
   },
@@ -96,8 +82,7 @@
     "key": "1D66",
     "mappings": {
       "default": {
-        "default": "greek subscript small letter beta",
-        "short": "subscript beta"
+        "default": "subscript beta"
       }
     }
   },
@@ -106,9 +91,7 @@
     "key": "1D67",
     "mappings": {
       "default": {
-        "default": "greek subscript small letter gamma",
-        "alternative": "greek letter gamma",
-        "short": "subscript gamma"
+        "default": "subscript gamma"
       }
     }
   },
@@ -117,9 +100,7 @@
     "key": "1D68",
     "mappings": {
       "default": {
-        "default": "greek subscript small letter rho",
-        "alternative": "greek letter rho",
-        "short": "subscript rho"
+        "default": "subscript rho"
       }
     }
   },
@@ -128,9 +109,7 @@
     "key": "1D69",
     "mappings": {
       "default": {
-        "default": "greek subscript small letter phi",
-        "alternative": "greek letter phi",
-        "short": "subscript phi"
+        "default": "subscript phi"
       }
     }
   },
@@ -139,9 +118,7 @@
     "key": "1D6A",
     "mappings": {
       "default": {
-        "default": "greek subscript small letter chi",
-        "alternative": "greek letter chi",
-        "short": "subscript chi"
+        "default": "subscript chi"
       }
     }
   }

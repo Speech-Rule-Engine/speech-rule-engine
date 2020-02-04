@@ -638,7 +638,7 @@ sre.AlphabetGenerator.INTERVALS = [
     interval: ['0391', '03A9'],
     base: sre.AlphabetGenerator.Base.GREEKCAP,
     subst: {
-      '03A2': false
+      '03A2': '03F4'
     },
     capital: true,
     category: 'Lu',
