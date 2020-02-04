@@ -1873,18 +1873,6 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "partial differential"
-      },
-      "mathspeak": {
-        "default": "partial-differential"
-      }
-    },
-    "key": "2202"
-  },
-  {
-    "category": "Sm",
-    "mappings": {
-      "default": {
         "default": "there exists"
       },
       "mathspeak": {

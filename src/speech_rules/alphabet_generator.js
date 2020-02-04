@@ -555,20 +555,31 @@ sre.AlphabetGenerator.INTERVALS = [
   },
   // Greek
   {
-    interval: ['1D71C', '1D735'],
+    interval: ['0391', '03AA'],
     base: sre.AlphabetGenerator.Base.GREEKCAP,
-    subst: {},
+    subst: {
+      '03A2': '03F4',
+      '03AA': '2207'
+    },
     capital: true,
     category: 'Lu',
-    font: sre.AlphabetGenerator.Font.BOLDITALIC
+    font: sre.AlphabetGenerator.Font.NORMAL
   },
   {
-    interval: ['1D736', '1D74E'],
+    interval: ['03B1', '03D0'],
     base: sre.AlphabetGenerator.Base.GREEKSMALL,
-    subst: {},
+    subst: {
+      '03CA': '2202',
+      '03CB': '03F5',
+      '03CC': '03D1',
+      '03CD': '03F0',
+      '03CE': '03D5',
+      '03CF': '03F1',
+      '03D0': '03D6'
+    },
     capital: false,
     category: 'Ll',
-    font: sre.AlphabetGenerator.Font.BOLDITALIC
+    font: sre.AlphabetGenerator.Font.NORMAL
   },
   {
     interval: ['1D6A8', '1D6C1'],
@@ -579,7 +590,7 @@ sre.AlphabetGenerator.INTERVALS = [
     font: sre.AlphabetGenerator.Font.BOLD
   },
   {
-    interval: ['1D6C2', '1D6DA'],
+    interval: ['1D6C2', '1D6E1'],
     base: sre.AlphabetGenerator.Base.GREEKSMALL,
     subst: {},
     capital: false,
@@ -595,7 +606,7 @@ sre.AlphabetGenerator.INTERVALS = [
     font: sre.AlphabetGenerator.Font.ITALIC
   },
   {
-    interval: ['1D6FC', '1D714'],
+    interval: ['1D6FC', '1D71B'],
     base: sre.AlphabetGenerator.Base.GREEKSMALL,
     subst: {},
     capital: false,
@@ -603,20 +614,20 @@ sre.AlphabetGenerator.INTERVALS = [
     font: sre.AlphabetGenerator.Font.ITALIC
   },
   {
-    interval: ['1D790', '1D7A9'],
+    interval: ['1D71C', '1D735'],
     base: sre.AlphabetGenerator.Base.GREEKCAP,
     subst: {},
     capital: true,
     category: 'Lu',
-    font: sre.AlphabetGenerator.Font.SANSSERIFBOLDITALIC
+    font: sre.AlphabetGenerator.Font.BOLDITALIC
   },
   {
-    interval: ['1D7AA', '1D7C2'],
+    interval: ['1D736', '1D755'],
     base: sre.AlphabetGenerator.Base.GREEKSMALL,
     subst: {},
     capital: false,
     category: 'Ll',
-    font: sre.AlphabetGenerator.Font.SANSSERIFBOLDITALIC
+    font: sre.AlphabetGenerator.Font.BOLDITALIC
   },
   {
     interval: ['1D756', '1D76F'],
@@ -627,7 +638,7 @@ sre.AlphabetGenerator.INTERVALS = [
     font: sre.AlphabetGenerator.Font.SANSSERIFBOLD
   },
   {
-    interval: ['1D770', '1D788'],
+    interval: ['1D770', '1D78F'],
     base: sre.AlphabetGenerator.Base.GREEKSMALL,
     subst: {},
     capital: false,
@@ -635,23 +646,20 @@ sre.AlphabetGenerator.INTERVALS = [
     font: sre.AlphabetGenerator.Font.SANSSERIFBOLD
   },
   {
-    interval: ['0391', '03AA'],
+    interval: ['1D790', '1D7A9'],
     base: sre.AlphabetGenerator.Base.GREEKCAP,
-    subst: {
-      '03A2': '03F4',
-      '03AA': '2207'
-    },
+    subst: {},
     capital: true,
     category: 'Lu',
-    font: sre.AlphabetGenerator.Font.NORMAL
+    font: sre.AlphabetGenerator.Font.SANSSERIFBOLDITALIC
   },
   {
-    interval: ['03B1', '03C9'],
+    interval: ['1D7AA', '1D7C9'],
     base: sre.AlphabetGenerator.Base.GREEKSMALL,
     subst: {},
     capital: false,
     category: 'Ll',
-    font: sre.AlphabetGenerator.Font.NORMAL
+    font: sre.AlphabetGenerator.Font.SANSSERIFBOLDITALIC
   },
   // Digits
     {
@@ -830,22 +838,6 @@ sre.AlphabetGenerator.INTERVALS = [
   },
   // Other alphabets
   {
-    interval: ['1F110', '1F129'],
-    base: sre.AlphabetGenerator.Base.LATINCAP,
-    subst: {},
-    capital: true,
-    category: 'So',
-    font: sre.AlphabetGenerator.Embellish.PARENTHESIZED
-  },
-  {
-    interval: ['249C', '24B5'],
-    base: sre.AlphabetGenerator.Base.LATINSMALL,
-    subst: {},
-    capital: false,
-    category: 'So',
-    font: sre.AlphabetGenerator.Embellish.PARENTHESIZED
-  },
-  {
     interval: ['24B6', '24CF'],
     base: sre.AlphabetGenerator.Base.LATINCAP,
     subst: {},
@@ -860,6 +852,22 @@ sre.AlphabetGenerator.INTERVALS = [
     capital: false,
     category: 'So',
     font: sre.AlphabetGenerator.Embellish.CIRCLED
+  },
+  {
+    interval: ['1F110', '1F129'],
+    base: sre.AlphabetGenerator.Base.LATINCAP,
+    subst: {},
+    capital: true,
+    category: 'So',
+    font: sre.AlphabetGenerator.Embellish.PARENTHESIZED
+  },
+  {
+    interval: ['249C', '24B5'],
+    base: sre.AlphabetGenerator.Base.LATINSMALL,
+    subst: {},
+    capital: false,
+    category: 'So',
+    font: sre.AlphabetGenerator.Embellish.PARENTHESIZED
   },
   {
     interval: ['1F130', '1F149'],
