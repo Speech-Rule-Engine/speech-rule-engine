@@ -105,12 +105,12 @@ sre.Locale.en = {
     'sub': 'subscript',
     'circled': 'circled',
     'parenthesized': 'parenthesized',
-    'period': 'period',  // After!
+    'period': ['period', sre.Locale.postfixCombiner],
     'negative-circled': 'inverse circled',
     'double-circled': 'double circled',
     'circled-sans-serif': 'circled sans serif',
     'negative-circled-sans-serif': 'inverse circled sans serif',
-    'comma': 'comma',  // After
+    'comma': ['comma', sre.Locale.postfixCombiner],
     'squared': 'squared',
     'negative-squared': 'negative squared'
   },
@@ -208,23 +208,23 @@ sre.Locale.en = {
   },
 
   ALPHABET_TRANSFORMERS: {
-    digit: {default: function(n) {return n === 0 ? 'zero' : sre.Numbers.en.numberToWords(n);}, //,
-            mathspeak: function(n) {return n.toString();},
-            clearspeak: function(n) {return n.toString();}},
-    letter: {default: function(n) {return n;}}
+    digit: {
+      default: function(n) {
+          return n === 0 ? 'zero' : sre.Numbers.en.numberToWords(n);},
+      mathspeak: function(n) {return n.toString();},
+      clearspeak: function(n) {return n.toString();}},
+    letter: {
+      default: function(n) {return n;}
+    }
   },
 
   ALPHABET_PREFIXES: {
     capPrefix: {default: 'cap', mathspeak: 'upper'},
     smallPrefix: {default: ''},
-    digitPrefix: {default: 'digit'}
+    digitPrefix: {default: ''}
   },
 
-  ALPHABET_COMBINER: function(letter, font, cap) {
-    console.log('here: ' + letter + ' ' + font + ' ' + cap);
-      letter = cap ? cap + ' ' + letter : letter;
-      return font ? font + ' ' + letter : letter;
-  }
+  ALPHABET_COMBINER: sre.Locale.prefixCombiner
 
 };
 

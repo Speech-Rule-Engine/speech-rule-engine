@@ -100,7 +100,7 @@ sre.Messages.MS_ROOT_INDEX = { };
 
 /**
  * Localised font names.
- * @type {Object.<sre.SemanticAttr.Font>}
+ * @type {Object.<sre.SemanticAttr.Font|Array.<sre.SemanticAttr.Font, sre.Locale.Combiner>>}
  */
 sre.Messages.FONT = {
   'bold': '',
@@ -128,7 +128,7 @@ sre.Messages.FONT = {
 
 /**
  * Localised embalishment names. Treated like fonts.
- * @type {Object.<string|Array.<string, Function>>}
+ * @type {Object.<string|Array.<string, sre.Locale.Combiner>>}
  */
 sre.Messages.EMBELLISH = {
   // More embellishments than fonts.
@@ -290,7 +290,7 @@ sre.Messages.ALPHABET_PREFIXES = {
 
 /**
  * Transformer functions for alphabet rules that can be specialised by rule set.
- * @type {Object.<Object.<Function>>}
+ * @type {Object.<Object.<sre.Locale.Transformer>>}
  */
 sre.Messages.ALPHABET_TRANSFORMERS = {
   digit: {default: function(n) {return n.toString();}},

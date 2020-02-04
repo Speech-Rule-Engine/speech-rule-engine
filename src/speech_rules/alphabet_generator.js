@@ -13,7 +13,8 @@
 // limitations under the License.
 
 /**
- * @fileoverview Symbol intervals for Unicode mappings.
+ * @fileoverview Generator for simple speech rules wrt. symbol intervals of
+ *     Unicode mappings.
  *
  */
 
@@ -83,12 +84,21 @@ sre.AlphabetGenerator.Base = {
 };
 
 
-// TODO: Change that to default value!
-sre.AlphabetGenerator.smallDomains_ = ['default'];
-sre.AlphabetGenerator.capDomains_ = ['default'];
-sre.AlphabetGenerator.digitDomains_ = ['default'];
+/**
+ * Structure to hold domain combinations for a locale during rule generation.
+ * @type {Object.<Array.<string>>}
+ * @private
+ */
+sre.AlphabetGenerator.Domains_ = {
+  small: ['default'],
+  capital: ['default'],
+  digit: ['default']
+};
 
 
+/**
+ * Generates the domain combinations for the given locale.
+ */
 sre.AlphabetGenerator.makeDomains_ = function() {
   var prefs = sre.Messages.ALPHABET_PREFIXES;
   var trans = sre.Messages.ALPHABET_TRANSFORMERS;
@@ -98,11 +108,11 @@ sre.AlphabetGenerator.makeDomains_ = function() {
     Object.keys(obj2).forEach(function(k) {result[k] = true;});
     return Object.keys(result);
   };
-  sre.AlphabetGenerator.smallDomains_ = combineKeys(
+  sre.AlphabetGenerator.Domains_.small = combineKeys(
       prefs.smallPrefix, trans.letter);
-  sre.AlphabetGenerator.capDomains_ = combineKeys(
+  sre.AlphabetGenerator.Domains_.capital = combineKeys(
       prefs.capPrefix, trans.letter);
-  sre.AlphabetGenerator.digitDomains_ = combineKeys(
+  sre.AlphabetGenerator.Domains_.digit = combineKeys(
       prefs.digitPrefix, trans.digit);
 };
 
@@ -125,11 +135,11 @@ sre.AlphabetGenerator.generate = function(locale, store) {
     });
     if ('offset' in int) {
       sre.AlphabetGenerator.numberRules(
-        store, keys, letters, int.font, int.category, int.offset);
+        store, keys, letters, int.font, int.category, int.offset || 0);
     } else {
       var alphabet = sre.Messages.ALPHABETS[int.base];
       sre.AlphabetGenerator.alphabetRules(
-        store, keys, letters, alphabet, int.font, int.category, int.capital);
+        store, keys, letters, alphabet, int.font, int.category, !!int.capital);
     }
   }
 };
@@ -165,7 +175,8 @@ sre.AlphabetGenerator.makeInterval = function(int, subst) {
 /**
  * Retrieves font value for the current locale.
  * @param {string} font The font of an alphabet.
- * @return {{font: string, combiner: Function}} The localised font value.
+ * @return {{font: string, combiner: sre.Locale.Combiner}} The localised font
+ *     value.
  */
 sre.AlphabetGenerator.getFont = function(font) {
   let realFont = (font === 'normal' || font === 'fullwidth') ? '' :
@@ -176,49 +187,80 @@ sre.AlphabetGenerator.getFont = function(font) {
 };
 
 
-// /**
-//  * Generates rules for letters. 
-//  * @param {}
-//  * @return {}
-//  */
-sre.AlphabetGenerator.alphabetRules = function(store, keys, unicodes, letters, font, category, cap) {
+/**
+ * Generates rules for letters.
+ * @param {sre.MathCompoundStore} store The compound store.
+ * @param {Array.<number>} keys The unicode values to add.
+ * @param {Array.<string>} unicodes The actual unicode characters corrsponding
+ *     to the values in keys.
+ * @param {Array.<string>} letters The letters of the corresponding alphabet.
+ * @param {string} font The font name.
+ * @param {string} category The category name.
+ * @param {boolean} cap True if it is an alphabet of capitals.
+ */
+sre.AlphabetGenerator.alphabetRules = function(
+  store, keys, unicodes, letters, font, category, cap) {
   var realFont = sre.AlphabetGenerator.getFont(font);
   for (var i = 0, key, unicode, letter;
        key = keys[i], unicode = unicodes[i], letter = letters[i]; i++) {
     var prefixes = cap ? sre.Messages.ALPHABET_PREFIXES.capPrefix :
         sre.Messages.ALPHABET_PREFIXES.smallPrefix;
-    var domains = cap ? sre.AlphabetGenerator.capDomains_ :
-        sre.AlphabetGenerator.smallDomains_;
+    var domains = cap ? sre.AlphabetGenerator.Domains_.capital :
+        sre.AlphabetGenerator.Domains_.small;
     sre.AlphabetGenerator.makeLetter(
       store, realFont.combiner, key, unicode, letter, realFont.font, prefixes, category,
       sre.Messages.ALPHABET_TRANSFORMERS.letter, domains);
   }
 };
 
-sre.AlphabetGenerator.numberRules = function(store, keys, unicodes, font, category, offset) {
+
+/**
+ * Generates rules for numbers.
+ * @param {sre.MathCompoundStore} store The compound store.
+ * @param {Array.<number>} keys The unicode values to add.
+ * @param {Array.<string>} unicodes The actual unicode characters corrsponding
+ *     to the values in keys.
+ * @param {string} font The font name.
+ * @param {string} category The category name.
+ * @param {number} offset The offset value for the initial number.
+ */
+sre.AlphabetGenerator.numberRules = function(
+    store, keys, unicodes, font, category, offset) {
   var realFont = sre.AlphabetGenerator.getFont(font);
   for (var i = 0, key, unicode; key = keys[i], unicode = unicodes[i]; i++) {
     var prefixes = sre.Messages.ALPHABET_PREFIXES.digitPrefix;
     var number = i + offset;
     sre.AlphabetGenerator.makeLetter(
       store, realFont.combiner, key, unicode, number, realFont.font, prefixes, category,
-      sre.Messages.ALPHABET_TRANSFORMERS.digit, sre.AlphabetGenerator.digitDomains_);
+      sre.Messages.ALPHABET_TRANSFORMERS.digit, sre.AlphabetGenerator.Domains_.digit);
   }
 };
 
-// /**
-//  * Makes all the rules 
-//  * @param {}
-//  * @return {}
-//  */
+/**
+ * Makes all rules for a single character.
+ * @param {sre.MathCompoundStore} store The compound store.
+ * @param {sre.Locale.Combiner} combiner The combining
+ *     function for generating the rule action.
+ * @param {number} key The unicode value of the character.
+ * @param {string} unicode The actual unicode character.
+ * @param {string|number} letter The letter of the corresponding alphabet or
+ *     number.
+ * @param {string} font The font name.
+ * @param {Object.<string>} prefixes The prefixes for caps, small, or number.
+ * @param {string} category The category name.
+ * @param {Object.<sre.Locale.Transformer>} transformers The transformer method
+ *      for the particular type of character.
+ * @param {Array.<string>} domains The list of domains in which to create
+ *     rules. They correspond to the union of the domains for prefixes and
+ *     transformers.
+ */
 sre.AlphabetGenerator.makeLetter = function(
-  store, combiner, key, unicode, letter, font, prefixes, category, transformers, domains) {
-  console.log(transformers);
-  console.log(prefixes);
+  store, combiner, key, unicode, letter, font, prefixes, category,
+  transformers, domains) {
   for (var i = 0, domain; domain = domains[i]; i++) {
-    var transformer = transformers[domain] || transformers['default'];
-    var prefix = prefixes[domain] || prefixes['default'];
-    store.defineRule(key, domain, 'default', category, unicode, combiner(
+    var transformer = (domain in transformers) ? transformers[domain] : transformers['default'];
+    var prefix = (domain in prefixes) ? prefixes[domain] : prefixes['default'];
+    store.defineRule(key.toString(), domain, 'default', category, unicode, combiner(
       transformer(letter), font, prefix));
   };
 };
