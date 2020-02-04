@@ -20,7 +20,6 @@
 
 goog.provide('sre.AlphabetGenerator');
 
-goog.require('sre.DynamicCstr.Parser');
 goog.require('sre.L10n');
 goog.require('sre.Messages');
 goog.require('sre.SemanticUtil');
