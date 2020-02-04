@@ -187,7 +187,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   // TODO: Make that work on tensor elements?
   defineRule(
       'capital', 'clearspeak.default',
-      '[n] text() (pitch:0.6,grammar:ignoreFont="majuscule")',
+      '[n] text() (pitch:0.6,grammar:ignoreCaps="majuscule")',
       'self::identifier',
       '@role="latinletter" or @role="greekletter" or @role="simple function"',
       'CQFisCapital');

@@ -373,3 +373,6 @@ sre.Grammar.getInstance().setPreprocessor('annotation',
                                           sre.Grammar.addAnnotation_);
 sre.Grammar.getInstance().setPreprocessor('noTranslateText',
                                           sre.Grammar.noTranslateText_);
+sre.Grammar.getInstance().setCorrection('ignoreCaps',
+                                        sre.Grammar.correctFont_);
+
