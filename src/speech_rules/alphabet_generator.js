@@ -555,20 +555,20 @@ sre.AlphabetGenerator.INTERVALS = [
   },
   // Greek
   {
-    interval: ['0391', '03AA'],
+    interval: ['0391', '03A9'],
     base: sre.AlphabetGenerator.Base.GREEKCAP,
     subst: {
-      '03A2': '03F4',
-      '03AA': '2207'
+      '03A2': '03F4'
     },
     capital: true,
     category: 'Lu',
     font: sre.AlphabetGenerator.Font.NORMAL
   },
   {
-    interval: ['03B1', '03D0'],
+    interval: ['03B0', '03D0'],
     base: sre.AlphabetGenerator.Base.GREEKSMALL,
     subst: {
+      '03AA': '2207',
       '03CA': '2202',
       '03CB': '03F5',
       '03CC': '03D1',
@@ -582,7 +582,7 @@ sre.AlphabetGenerator.INTERVALS = [
     font: sre.AlphabetGenerator.Font.NORMAL
   },
   {
-    interval: ['1D6A8', '1D6C1'],
+    interval: ['1D6A8', '1D6C0'],
     base: sre.AlphabetGenerator.Base.GREEKCAP,
     subst: {},
     capital: true,
@@ -590,7 +590,7 @@ sre.AlphabetGenerator.INTERVALS = [
     font: sre.AlphabetGenerator.Font.BOLD
   },
   {
-    interval: ['1D6C2', '1D6E1'],
+    interval: ['1D6C1', '1D6E1'],
     base: sre.AlphabetGenerator.Base.GREEKSMALL,
     subst: {},
     capital: false,
@@ -598,7 +598,7 @@ sre.AlphabetGenerator.INTERVALS = [
     font: sre.AlphabetGenerator.Font.BOLD
   },
   {
-    interval: ['1D6E2', '1D6FB'],
+    interval: ['1D6E2', '1D6FA'],
     base: sre.AlphabetGenerator.Base.GREEKCAP,
     subst: {},
     capital: true,
@@ -606,7 +606,7 @@ sre.AlphabetGenerator.INTERVALS = [
     font: sre.AlphabetGenerator.Font.ITALIC
   },
   {
-    interval: ['1D6FC', '1D71B'],
+    interval: ['1D6FB', '1D71B'],
     base: sre.AlphabetGenerator.Base.GREEKSMALL,
     subst: {},
     capital: false,
@@ -614,7 +614,7 @@ sre.AlphabetGenerator.INTERVALS = [
     font: sre.AlphabetGenerator.Font.ITALIC
   },
   {
-    interval: ['1D71C', '1D735'],
+    interval: ['1D71C', '1D734'],
     base: sre.AlphabetGenerator.Base.GREEKCAP,
     subst: {},
     capital: true,
@@ -622,7 +622,7 @@ sre.AlphabetGenerator.INTERVALS = [
     font: sre.AlphabetGenerator.Font.BOLDITALIC
   },
   {
-    interval: ['1D736', '1D755'],
+    interval: ['1D735', '1D755'],
     base: sre.AlphabetGenerator.Base.GREEKSMALL,
     subst: {},
     capital: false,
@@ -630,7 +630,7 @@ sre.AlphabetGenerator.INTERVALS = [
     font: sre.AlphabetGenerator.Font.BOLDITALIC
   },
   {
-    interval: ['1D756', '1D76F'],
+    interval: ['1D756', '1D76E'],
     base: sre.AlphabetGenerator.Base.GREEKCAP,
     subst: {},
     capital: true,
@@ -638,7 +638,7 @@ sre.AlphabetGenerator.INTERVALS = [
     font: sre.AlphabetGenerator.Font.SANSSERIFBOLD
   },
   {
-    interval: ['1D770', '1D78F'],
+    interval: ['1D76F', '1D78F'],
     base: sre.AlphabetGenerator.Base.GREEKSMALL,
     subst: {},
     capital: false,
@@ -646,7 +646,7 @@ sre.AlphabetGenerator.INTERVALS = [
     font: sre.AlphabetGenerator.Font.SANSSERIFBOLD
   },
   {
-    interval: ['1D790', '1D7A9'],
+    interval: ['1D790', '1D7A8'],
     base: sre.AlphabetGenerator.Base.GREEKCAP,
     subst: {},
     capital: true,
@@ -654,7 +654,7 @@ sre.AlphabetGenerator.INTERVALS = [
     font: sre.AlphabetGenerator.Font.SANSSERIFBOLDITALIC
   },
   {
-    interval: ['1D7AA', '1D7C9'],
+    interval: ['1D7A9', '1D7C9'],
     base: sre.AlphabetGenerator.Base.GREEKSMALL,
     subst: {},
     capital: false,
