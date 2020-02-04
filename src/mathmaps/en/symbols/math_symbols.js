@@ -1930,15 +1930,6 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "nabla"
-      }
-    },
-    "key": "2207"
-  },
-  {
-    "category": "Sm",
-    "mappings": {
-      "default": {
         "default": "element of"
       },
       "mathspeak": {

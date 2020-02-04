@@ -203,8 +203,8 @@ sre.Locale.en = {
     greekCap: [
       'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta',
       'Iota', 'Kappa', 'Lamda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi', 'Rho',
-      'Theta symbol', 'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega'
-    ]  // TODO: get rid of symbol!
+      'Theta', 'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega', 'Nabla'
+    ]
   },
 
   ALPHABET_TRANSFORMERS: {

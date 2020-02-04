@@ -99,16 +99,6 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "mathematical bold nabla",
-        "alternative": "bold nabla"
-      }
-    },
-    "key": "1D6C1"
-  },
-  {
-    "category": "Sm",
-    "mappings": {
-      "default": {
         "default": "mathematical bold partial differential",
         "alternative": "bold partial differential",
         "short": "bold partial differential"
@@ -186,17 +176,6 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "mathematical italic nabla",
-        "alternative": "italic nabla",
-        "short": "italic nabla"
-      }
-    },
-    "key": "1D6FB"
-  },
-  {
-    "category": "Sm",
-    "mappings": {
-      "default": {
         "default": "mathematical italic partial differential",
         "alternative": "italic partial differential",
         "short": "italic partial differential"
@@ -269,17 +248,6 @@
       }
     },
     "key": "1D71B"
-  },
-  {
-    "category": "Sm",
-    "mappings": {
-      "default": {
-        "default": "mathematical sans serif bold nabla",
-        "alternative": "sans serif bold nabla",
-        "short": "sans serif bold nabla"
-      }
-    },
-    "key": "1D76F"
   },
   {
     "category": "Sm",

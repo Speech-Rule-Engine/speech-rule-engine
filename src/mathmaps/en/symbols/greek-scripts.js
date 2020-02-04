@@ -16,10 +16,10 @@
     "key": "1D27",
     "mappings": {
       "default": {
-        "default": "small cap Lambda"
+        "default": "small cap Lamda"
       },
       "mathspeak": {
-        "default": "small upper Lambda"
+        "default": "small upper Lamda"
       }
     }
   },
