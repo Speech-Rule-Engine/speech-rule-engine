@@ -184,6 +184,8 @@ sre.Locale.en = {
     'inch': 'inches'
   },
 
+  NUMBERS: sre.Numbers.en.NUMBERS,
+
   ALPHABETS: {
     latinSmall: [
       'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
@@ -202,18 +204,27 @@ sre.Locale.en = {
       'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta',
       'Iota', 'Kappa', 'Lamda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi', 'Rho',
       'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega'
-    ],
-    digit: function(n) {return n.toString();},
-    combiner: function(letter, font, cap) {
-      letter = cap ? cap + ' ' + letter : letter;
-      return font ? font + ' ' + letter : letter;
-    },
-    capPrefix: {default: 'cap', mathspeak: 'upper'},
-    smallPrefix: {default: ''},
-    digitPrefix: {default: ''}
+    ]
   },
 
-  NUMBERS: sre.Numbers.en.NUMBERS
+  ALPHABET_TRANSFORMERS: {
+    digit: {default: function(n) {return n === 0 ? 'zero' : sre.Numbers.en.numberToWords(n);}, //,
+            mathspeak: function(n) {return n.toString();},
+            clearspeak: function(n) {return n.toString();}},
+    letter: {default: function(n) {return n;}}
+  },
+
+  ALPHABET_PREFIXES: {
+    capPrefix: {default: 'cap', mathspeak: 'upper'},
+    smallPrefix: {default: ''},
+    digitPrefix: {default: 'digit'}
+  },
+
+  ALPHABET_COMBINER: function(letter, font, cap) {
+    console.log('here: ' + letter + ' ' + font + ' ' + cap);
+      letter = cap ? cap + ' ' + letter : letter;
+      return font ? font + ' ' + letter : letter;
+  }
 
 };
 

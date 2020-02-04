@@ -51,7 +51,8 @@ sre.AbstractCharacterTest.prototype.executeCharTest = function(char, answers) {
     try {
       this.executeRuleTest(char, answers[i], this.styles[i]);
     } catch (err) {
-      console.log('\nFailed Character: ' + char);
+      console.log('\nFailed Character: ' + char + ' (' +
+                  this.domain + '.' + this.styles[i] + ')');
       throw(err);
     }
   }

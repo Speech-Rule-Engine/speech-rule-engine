@@ -83,6 +83,30 @@ sre.AlphabetGenerator.Base = {
 };
 
 
+// TODO: Change that to default value!
+sre.AlphabetGenerator.smallDomains_ = ['default'];
+sre.AlphabetGenerator.capDomains_ = ['default'];
+sre.AlphabetGenerator.digitDomains_ = ['default'];
+
+
+sre.AlphabetGenerator.makeDomains_ = function() {
+  var prefs = sre.Messages.ALPHABET_PREFIXES;
+  var trans = sre.Messages.ALPHABET_TRANSFORMERS;
+  var combineKeys = function(obj1, obj2) {
+    var result = {};
+    Object.keys(obj1).forEach(function(k) {result[k] = true;});
+    Object.keys(obj2).forEach(function(k) {result[k] = true;});
+    return Object.keys(result);
+  };
+  sre.AlphabetGenerator.smallDomains_ = combineKeys(
+      prefs.smallPrefix, trans.letter);
+  sre.AlphabetGenerator.capDomains_ = combineKeys(
+      prefs.capPrefix, trans.letter);
+  sre.AlphabetGenerator.digitDomains_ = combineKeys(
+      prefs.digitPrefix, trans.digit);
+};
+
+
 /**
  * Generates alphabet rules for the locale and adds them to the given store.
  * @param {string} locale The current locale.
@@ -92,17 +116,18 @@ sre.AlphabetGenerator.generate = function(locale, store) {
   sre.Engine.getInstance().locale = locale;
   sre.L10n.setLocale();
   store.addSymbolRules({locale: locale});
+  sre.AlphabetGenerator.makeDomains_();
   var intervals = sre.AlphabetGenerator.INTERVALS;
   for (var i = 0, int; int = intervals[i]; i++) {
     var keys = sre.AlphabetGenerator.makeInterval(int.interval, int.subst);
     var letters = keys.map(function (x) {
       return sre.SemanticUtil.numberToUnicode(parseInt(x, 16));
     });
-    var alphabet = sre.Messages.ALPHABETS[int.base];
     if ('offset' in int) {
       sre.AlphabetGenerator.numberRules(
-        store, keys, letters, alphabet, int.font, int.category, int.offset);
+        store, keys, letters, int.font, int.category, int.offset);
     } else {
+      var alphabet = sre.Messages.ALPHABETS[int.base];
       sre.AlphabetGenerator.alphabetRules(
         store, keys, letters, alphabet, int.font, int.category, int.capital);
     }
@@ -146,7 +171,7 @@ sre.AlphabetGenerator.getFont = function(font) {
   let realFont = (font === 'normal' || font === 'fullwidth') ? '' :
       (sre.Messages.FONT[font] || sre.Messages.EMBELLISH[font] || '');
   return (typeof realFont === 'string') ?
-    {font: realFont, combiner: sre.Messages.ALPHABETS.combiner} :
+    {font: realFont, combiner: sre.Messages.ALPHABET_COMBINER} :
   {font: realFont[0], combiner: realFont[1]};
 };
 
@@ -160,28 +185,26 @@ sre.AlphabetGenerator.alphabetRules = function(store, keys, unicodes, letters, f
   var realFont = sre.AlphabetGenerator.getFont(font);
   for (var i = 0, key, unicode, letter;
        key = keys[i], unicode = unicodes[i], letter = letters[i]; i++) {
-    var prefixes = cap ? sre.Messages.ALPHABETS.capPrefix :
-        sre.Messages.ALPHABETS.smallPrefix;
+    var prefixes = cap ? sre.Messages.ALPHABET_PREFIXES.capPrefix :
+        sre.Messages.ALPHABET_PREFIXES.smallPrefix;
+    var domains = cap ? sre.AlphabetGenerator.capDomains_ :
+        sre.AlphabetGenerator.smallDomains_;
     sre.AlphabetGenerator.makeLetter(
-      store, realFont.combiner, key, unicode, letter, realFont.font, prefixes, category);
+      store, realFont.combiner, key, unicode, letter, realFont.font, prefixes, category,
+      sre.Messages.ALPHABET_TRANSFORMERS.letter, domains);
   }
 };
 
-sre.AlphabetGenerator.numberRules = function(store, keys, unicodes, digits, font, category, offset) {
+sre.AlphabetGenerator.numberRules = function(store, keys, unicodes, font, category, offset) {
   var realFont = sre.AlphabetGenerator.getFont(font);
   for (var i = 0, key, unicode; key = keys[i], unicode = unicodes[i]; i++) {
-    var prefixes = sre.Messages.ALPHABETS.digitPrefix;
-    var number = digits(i + offset);
+    var prefixes = sre.Messages.ALPHABET_PREFIXES.digitPrefix;
+    var number = i + offset;
     sre.AlphabetGenerator.makeLetter(
-      store, realFont.combiner, key, unicode, number, realFont.font, prefixes, category);
+      store, realFont.combiner, key, unicode, number, realFont.font, prefixes, category,
+      sre.Messages.ALPHABET_TRANSFORMERS.digit, sre.AlphabetGenerator.digitDomains_);
   }
 };
-
-// TODO: Correct category Nd vs No.
-// Assume style is always default. But what about sub super for characters?
-
-sre.AlphabetGenerator.parser = new sre.DynamicCstr.Parser(
-  [sre.DynamicCstr.Axis.DOMAIN, sre.DynamicCstr.Axis.STYLE]);
 
 // /**
 //  * Makes all the rules 
@@ -189,10 +212,14 @@ sre.AlphabetGenerator.parser = new sre.DynamicCstr.Parser(
 //  * @return {}
 //  */
 sre.AlphabetGenerator.makeLetter = function(
-  store, combiner, key, unicode, letter, font, prefix, category) {
-  var domains = Object.keys(prefix);
+  store, combiner, key, unicode, letter, font, prefixes, category, transformers, domains) {
+  console.log(transformers);
+  console.log(prefixes);
   for (var i = 0, domain; domain = domains[i]; i++) {
-    store.defineRule(key, domain, 'default', category, unicode, combiner(letter, font, prefix[domain]));
+    var transformer = transformers[domain] || transformers['default'];
+    var prefix = prefixes[domain] || prefixes['default'];
+    store.defineRule(key, domain, 'default', category, unicode, combiner(
+      transformer(letter), font, prefix));
   };
 };
 

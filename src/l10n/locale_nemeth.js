@@ -167,10 +167,20 @@ sre.Locale.nemeth = {
     LEVEL: 'Level'
   },
 
-  ALPHABETS: {},
-
   NUMBERS: {
     // TODO: We should not need this!
     simpleOrdinal: function(x) {return x;}
+  },
+
+  ALPHABETS: {},
+
+  ALPHABET_TRANSFORMERS: {},
+
+  ALPHABET_PREFIXES: {},
+
+  ALPHABET_COMBINER: function(letter, font, cap) {
+      letter = cap ? cap + ' ' + letter : letter;
+      return font ? font + ' ' + letter : letter;
   }
+
 };

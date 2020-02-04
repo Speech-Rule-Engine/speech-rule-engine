@@ -178,8 +178,17 @@ sre.Locale.fr = {
     'inch': 'inches'
   },
 
+  NUMBERS: sre.Numbers.fr.NUMBERS,
+
   ALPHABETS: {},
 
-  NUMBERS: sre.Numbers.fr.NUMBERS
+  ALPHABET_TRANSFORMERS: {},
+
+  ALPHABET_PREFIXES: {},
+
+  ALPHABET_COMBINER: function(letter, font, cap) {
+      letter = cap ? cap + ' ' + letter : letter;
+      return font ? font + ' ' + letter : letter;
+  }
 
 };

@@ -171,8 +171,17 @@ sre.Locale.es = {
     JOINER_FRAC: ' '
   },
 
+  NUMBERS: sre.Numbers.es.NUMBERS,
+
   ALPHABETS: {},
 
-  NUMBERS: sre.Numbers.es.NUMBERS
+  ALPHABET_TRANSFORMERS: {},
+
+  ALPHABET_PREFIXES: {},
+
+  ALPHABET_COMBINER: function(letter, font, cap) {
+      letter = cap ? cap + ' ' + letter : letter;
+      return font ? font + ' ' + letter : letter;
+  }
 
 };

@@ -252,6 +252,10 @@ sre.Messages.PLURAL = function(unit) {
 };
 
 
+/**
+ * Localisable number computation.
+ * @type {Object.<Function|string>}
+ */
 sre.Messages.NUMBERS = {
   wordOrdinal: function(n) {return n.toString();},
   simpleOrdinal: function(n) {return n.toString();},
@@ -261,14 +265,41 @@ sre.Messages.NUMBERS = {
 };
 
 
+/**
+ * Localisable alphabets.
+ * @type {Object.<Array.<string>>}
+ */
 sre.Messages.ALPHABETS = {
   latinSmall: [],
   latinCap: [],
   greekSmall: [],
-  greekCap: [],
-  digit: function(n) {return n.toString();},
-  combiner: function(letter, font, cap) {return letter;},
+  greekCap: []
+};
+
+
+/**
+ * Prefixes for alphabet rules that can be specialised by rule set.
+ * @type {Object.<Object.<string>>}
+ */
+sre.Messages.ALPHABET_PREFIXES = {
   capPrefix: {default: ''},
   smallPrefix: {default: ''},
   digitPrefix: {default: ''}
 };
+
+
+/**
+ * Transformer functions for alphabet rules that can be specialised by rule set.
+ * @type {Object.<Object.<Function>>}
+ */
+sre.Messages.ALPHABET_TRANSFORMERS = {
+  digit: {default: function(n) {return n.toString();}},
+  letter: {default: function(n) {return n;}}
+};
+
+
+/**
+ * Default combiner for alphabet rules.
+ * @type {function(string, string, string): string}
+ */
+sre.Messages.ALPHABET_COMBINER = function(letter, font, cap) {return letter;};
