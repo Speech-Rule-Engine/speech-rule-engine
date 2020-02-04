@@ -50,6 +50,7 @@ sre.Tests.prototype.run = function() {
   this.runner.summary();
   var timeOut = (new Date()).getTime();
   this.runner.output('Time for tests: ' + (timeOut - timeIn) + 'ms\n');
+  // sre.AbstractCharacterTest.testOutput();
   process.exit(this.runner.success() ? 0 : 1);
 };
 
