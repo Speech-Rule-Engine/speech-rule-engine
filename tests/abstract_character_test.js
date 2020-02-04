@@ -48,7 +48,12 @@ goog.inherits(sre.AbstractCharacterTest, sre.AbstractRuleTest);
  */
 sre.AbstractCharacterTest.prototype.executeCharTest = function(char, answers) {
   for (var i = 0; i < answers.length; i++) {
-    this.executeRuleTest(char, answers[i], this.styles[i]);
+    try {
+      this.executeRuleTest(char, answers[i], this.styles[i]);
+    } catch (err) {
+      console.log('\nFailed Character: ' + char);
+      throw(err);
+    }
   }
 };
 
