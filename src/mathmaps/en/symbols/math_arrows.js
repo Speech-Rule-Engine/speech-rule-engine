@@ -6,7 +6,6 @@
         "default": "left arrow"
       },
       "mathspeak": {
-        "default": "left-arrow",
         "sbrief": "L arrow"
       }
     },
@@ -19,7 +18,6 @@
         "default": "up arrow"
       },
       "mathspeak": {
-        "default": "up-arrow",
         "sbrief": "U arrow"
       }
     },
@@ -32,7 +30,6 @@
         "default": "right arrow"
       },
       "mathspeak": {
-        "default": "right-arrow",
         "sbrief": "R arrow"
       }
     },
@@ -45,7 +42,6 @@
         "default": "down arrow"
       },
       "mathspeak": {
-        "default": "down-arrow",
         "sbrief": "D arrow"
       }
     },
@@ -58,7 +54,6 @@
         "default": "left right arrow"
       },
       "mathspeak": {
-        "default": "left-right-arrow",
         "sbrief": "L R arrow"
       }
     },
@@ -71,7 +66,6 @@
         "default": "up down arrow"
       },
       "mathspeak": {
-        "default": "up down-arrow",
         "sbrief": "U D arrow"
       }
     },
@@ -84,7 +78,6 @@
         "default": "up left arrow"
       },
       "mathspeak": {
-        "default": "up left-arrow",
         "sbrief": "U L arrow"
       }
     },
@@ -97,7 +90,6 @@
         "default": "up right arrow"
       },
       "mathspeak": {
-        "default": "up right-arrow",
         "sbrief": "U R arrow"
       }
     },
@@ -110,7 +102,6 @@
         "default": "down right arrow"
       },
       "mathspeak": {
-        "default": "down right-arrow",
         "sbrief": "D R arrow"
       }
     },
@@ -123,7 +114,6 @@
         "default": "down left arrow"
       },
       "mathspeak": {
-        "default": "down left-arrow",
         "sbrief": "D L arrow"
       }
     },
@@ -136,7 +126,6 @@
         "default": "left arrow with stroke"
       },
       "mathspeak": {
-        "default": "left-arrow with stroke",
         "sbrief": "L arrow with stroke"
       }
     },
@@ -149,7 +138,6 @@
         "default": "right arrow with stroke"
       },
       "mathspeak": {
-        "default": "right-arrow with stroke",
         "sbrief": "R arrow with stroke"
       }
     },
@@ -186,7 +174,6 @@
         "default": "two headed left arrow"
       },
       "mathspeak": {
-        "default": "two headed left-arrow",
         "sbrief": "two headed L arrow"
       }
     },
@@ -199,7 +186,6 @@
         "default": "two headed up arrow"
       },
       "mathspeak": {
-        "default": "two headed up-arrow",
         "sbrief": "two headed U arrow"
       }
     },
@@ -212,7 +198,6 @@
         "default": "two headed right arrow"
       },
       "mathspeak": {
-        "default": "two headed right-arrow",
         "sbrief": "two headed R arrow"
       }
     },
@@ -225,7 +210,6 @@
         "default": "two headed down arrow"
       },
       "mathspeak": {
-        "default": "two headed down-arrow",
         "sbrief": "two headed D arrow"
       }
     },
@@ -238,7 +222,6 @@
         "default": "left arrow with tail"
       },
       "mathspeak": {
-        "default": "left-arrow with tail",
         "sbrief": "L arrow with tail"
       }
     },
@@ -251,7 +234,6 @@
         "default": "right arrow with tail"
       },
       "mathspeak": {
-        "default": "right-arrow with tail",
         "sbrief": "R arrow with tail"
       }
     },
@@ -264,7 +246,6 @@
         "default": "left arrow from bar"
       },
       "mathspeak": {
-        "default": "left-arrow from bar",
         "sbrief": "L arrow from bar"
       }
     },
@@ -277,7 +258,6 @@
         "default": "up arrow from bar"
       },
       "mathspeak": {
-        "default": "up-arrow from bar",
         "sbrief": "U arrow from bar"
       }
     },
@@ -290,7 +270,6 @@
         "default": "right arrow from bar"
       },
       "mathspeak": {
-        "default": "right-arrow from bar",
         "sbrief": "R arrow from bar"
       }
     },
@@ -303,7 +282,6 @@
         "default": "down arrow from bar"
       },
       "mathspeak": {
-        "default": "down-arrow from bar",
         "sbrief": "D arrow from bar"
       }
     },
@@ -316,7 +294,6 @@
         "default": "up down arrow with base"
       },
       "mathspeak": {
-        "default": "up down-arrow with base",
         "sbrief": "U D arrow with base"
       }
     },
@@ -329,7 +306,6 @@
         "default": "left arrow with hook"
       },
       "mathspeak": {
-        "default": "left-arrow with hook",
         "sbrief": "L arrow with hook"
       }
     },
@@ -342,7 +318,6 @@
         "default": "right arrow with hook"
       },
       "mathspeak": {
-        "default": "right-arrow with hook",
         "sbrief": "R arrow with hook"
       }
     },
@@ -355,7 +330,6 @@
         "default": "left arrow with loop"
       },
       "mathspeak": {
-        "default": "left-arrow with loop",
         "sbrief": "L arrow with loop"
       }
     },
@@ -368,7 +342,6 @@
         "default": "right arrow with loop"
       },
       "mathspeak": {
-        "default": "right-arrow with loop",
         "sbrief": "R arrow with loop"
       }
     },
@@ -393,7 +366,6 @@
         "default": "left right arrow with stroke"
       },
       "mathspeak": {
-        "default": "left-right-arrow with stroke",
         "sbrief": "L R arrow with stroke"
       }
     },
@@ -418,7 +390,6 @@
         "default": "up arrow with tip left"
       },
       "mathspeak": {
-        "default": "up-arrow with tip left",
         "sbrief": "U arrow with tip left"
       }
     },
@@ -431,7 +402,6 @@
         "default": "up arrow with tip right"
       },
       "mathspeak": {
-        "default": "up-arrow with tip right",
         "sbrief": "U arrow with tip right"
       }
     },
@@ -444,7 +414,6 @@
         "default": "down arrow with tip left"
       },
       "mathspeak": {
-        "default": "down-arrow with tip left",
         "sbrief": "D arrow with tip left"
       }
     },
@@ -457,7 +426,6 @@
         "default": "down arrow with tip right"
       },
       "mathspeak": {
-        "default": "down-arrow with tip right",
         "sbrief": "D arrow with tip right"
       }
     },
@@ -470,7 +438,6 @@
         "default": "right arrow with corner down"
       },
       "mathspeak": {
-        "default": "right-arrow with corner down",
         "sbrief": "R arrow with corner down"
       }
     },
@@ -483,7 +450,6 @@
         "default": "down arrow with corner left"
       },
       "mathspeak": {
-        "default": "down-arrow with corner left",
         "sbrief": "D arrow with corner left"
       }
     },
@@ -514,7 +480,6 @@
         "default": "up left arrow to long bar"
       },
       "mathspeak": {
-        "default": "up left-arrow to long bar",
         "sbrief": "U L arrow to long bar"
       }
     },
@@ -527,7 +492,6 @@
         "default": "left arrow to bar over right arrow to bar"
       },
       "mathspeak": {
-        "default": "left-arrow to bar over right-arrow to bar",
         "sbrief": "L arrow to bar over R arrow to bar"
       }
     },
@@ -558,7 +522,6 @@
         "default": "right arrow over left arrow"
       },
       "mathspeak": {
-        "default": "right-arrow over left-arrow",
         "sbrief": "R arrow over L arrow"
       }
     },
@@ -571,7 +534,6 @@
         "default": "up arrow left of down arrow"
       },
       "mathspeak": {
-        "default": "up-arrow left of down-arrow",
         "sbrief": "U arrow L of D arrow"
       }
     },
@@ -584,7 +546,6 @@
         "default": "left arrow over right arrow"
       },
       "mathspeak": {
-        "default": "left-arrow over right-arrow",
         "sbrief": "L arrow over R arrow"
       }
     },
@@ -849,7 +810,6 @@
         "default": "up arrow with double stroke"
       },
       "mathspeak": {
-        "default": "up-arrow with double stroke",
         "sbrief": "U arrow with double stroke"
       }
     },
@@ -862,7 +822,6 @@
         "default": "down arrow with double stroke"
       },
       "mathspeak": {
-        "default": "down-arrow with double stroke",
         "sbrief": "D arrow with double stroke"
       }
     },
@@ -923,7 +882,6 @@
         "default": "left arrow to bar"
       },
       "mathspeak": {
-        "default": "left-arrow to bar",
         "sbrief": "L arrow to bar"
       }
     },
@@ -936,7 +894,6 @@
         "default": "right arrow to bar"
       },
       "mathspeak": {
-        "default": "right-arrow to bar",
         "sbrief": "R arrow to bar"
       }
     },
@@ -949,7 +906,6 @@
         "default": "white left arrow"
       },
       "mathspeak": {
-        "default": "white left-arrow",
         "sbrief": "white L arrow"
       }
     },
@@ -962,7 +918,6 @@
         "default": "white up arrow"
       },
       "mathspeak": {
-        "default": "white up-arrow",
         "sbrief": "white U arrow"
       }
     },
@@ -975,7 +930,6 @@
         "default": "white right arrow"
       },
       "mathspeak": {
-        "default": "white right-arrow",
         "sbrief": "white R arrow"
       }
     },
@@ -988,7 +942,6 @@
         "default": "white down arrow"
       },
       "mathspeak": {
-        "default": "white down-arrow",
         "sbrief": "white D arrow"
       }
     },
@@ -1001,7 +954,6 @@
         "default": "white up arrow from bar"
       },
       "mathspeak": {
-        "default": "white up-arrow from bar",
         "sbrief": "white U arrow from bar"
       }
     },
@@ -1014,7 +966,6 @@
         "default": "white up arrow on pedestal"
       },
       "mathspeak": {
-        "default": "white up-arrow on pedestal",
         "sbrief": "white U arrow on pedestal"
       }
     },
@@ -1027,7 +978,6 @@
         "default": "white up arrow on pedestal with horizontal bar"
       },
       "mathspeak": {
-        "default": "white up-arrow on pedestal with horizontal bar",
         "sbrief": "white U arrow on pedestal with horizontal bar"
       }
     },
@@ -1040,7 +990,6 @@
         "default": "white up arrow on pedestal with vertical bar"
       },
       "mathspeak": {
-        "default": "white up-arrow on pedestal with vertical bar",
         "sbrief": "white U arrow on pedestal with vertical bar"
       }
     },
@@ -1053,7 +1002,6 @@
         "default": "white double up arrow"
       },
       "mathspeak": {
-        "default": "white double up-arrow",
         "sbrief": "white double U arrow"
       }
     },
@@ -1066,7 +1014,6 @@
         "default": "white double up arrow on pedestal"
       },
       "mathspeak": {
-        "default": "white double up-arrow on pedestal",
         "sbrief": "white double U arrow on pedestal"
       }
     },
@@ -1079,7 +1026,6 @@
         "default": "white right arrow from wall"
       },
       "mathspeak": {
-        "default": "white right-arrow from wall",
         "sbrief": "white R arrow from wall"
       }
     },
@@ -1122,7 +1068,6 @@
         "default": "right arrow with small circle"
       },
       "mathspeak": {
-        "default": "right-arrow with small circle",
         "sbrief": "R arrow with small circle"
       }
     },
@@ -1135,7 +1080,6 @@
         "default": "down arrow left of up arrow"
       },
       "mathspeak": {
-        "default": "down-arrow left of up-arrow",
         "sbrief": "D arrow l of U arrow"
       }
     },
@@ -1148,7 +1092,6 @@
         "default": "three right arrows"
       },
       "mathspeak": {
-        "default": "three right-arrows",
         "sbrief": "three R arrows"
       }
     },
@@ -1161,7 +1104,6 @@
         "default": "left arrow with vertical stroke"
       },
       "mathspeak": {
-        "default": "left-arrow with vertical stroke",
         "sbrief": "L arrow with vertical stroke"
       }
     },
@@ -1174,7 +1116,6 @@
         "default": "right arrow with vertical stroke"
       },
       "mathspeak": {
-        "default": "right-arrow with vertical stroke",
         "sbrief": "R arrow with vertical stroke"
       }
     },
@@ -1187,7 +1128,6 @@
         "default": "left right arrow with vertical stroke"
       },
       "mathspeak": {
-        "default": "left-right-arrow with vertical stroke",
         "sbrief": "L R arrow with vertical stroke"
       }
     },
@@ -1200,7 +1140,6 @@
         "default": "left arrow with double vertical stroke"
       },
       "mathspeak": {
-        "default": "left-arrow with double vertical stroke",
         "sbrief": "L arrow with double vertical stroke"
       }
     },
@@ -1213,7 +1152,6 @@
         "default": "right arrow with double vertical stroke"
       },
       "mathspeak": {
-        "default": "right-arrow with double vertical stroke",
         "sbrief": "R arrow with double vertical stroke"
       }
     },
@@ -1226,7 +1164,6 @@
         "default": "left right arrow with double vertical stroke"
       },
       "mathspeak": {
-        "default": "left-right-arrow with double vertical stroke",
         "sbrief": "L R arrow with double vertical stroke"
       }
     },
@@ -1284,7 +1221,6 @@
         "default": "up arrowhead"
       },
       "mathspeak": {
-        "default": "up-arrowhead",
         "sbrief": "U arrowhead"
       }
     },
@@ -1297,7 +1233,6 @@
         "default": "down arrowhead"
       },
       "mathspeak": {
-        "default": "down-arrowhead",
         "sbrief": "D arrowhead"
       }
     },
@@ -1311,7 +1246,6 @@
         "alternative": "enter key"
       },
       "mathspeak": {
-        "default": "up-arrowhead between two horizontal bars",
         "sbrief": "U arrowhead between two horizontal bars"
       }
     },
@@ -1333,7 +1267,6 @@
         "default": "heavy wide headed right arrow"
       },
       "mathspeak": {
-        "default": "heavy wide headed right-arrow",
         "sbrief": "heavy wide headed R arrow"
       }
     },
@@ -1346,7 +1279,6 @@
         "default": "heavy down right arrow"
       },
       "mathspeak": {
-        "default": "heavy down right-arrow",
         "sbrief": "heavy d R arrow"
       }
     },
@@ -1359,7 +1291,6 @@
         "default": "heavy right arrow"
       },
       "mathspeak": {
-        "default": "heavy right-arrow",
         "sbrief": "heavy R arrow"
       }
     },
@@ -1372,7 +1303,6 @@
         "default": "heavy up right arrow"
       },
       "mathspeak": {
-        "default": "heavy up right-arrow",
         "sbrief": "heavy U R arrow"
       }
     },
@@ -1385,7 +1315,6 @@
         "default": "drafting point right arrow"
       },
       "mathspeak": {
-        "default": "drafting point right-arrow",
         "sbrief": "drafting point R arrow"
       }
     },
@@ -1398,7 +1327,6 @@
         "default": "heavy round tipped right arrow"
       },
       "mathspeak": {
-        "default": "heavy round tipped right-arrow",
         "sbrief": "heavy round tipped R arrow"
       }
     },
@@ -1411,7 +1339,6 @@
         "default": "triangle headed right arrow"
       },
       "mathspeak": {
-        "default": "triangle headed right-arrow",
         "sbrief": "triangle headed R arrow"
       }
     },
@@ -1424,7 +1351,6 @@
         "default": "heavy triangle headed right arrow"
       },
       "mathspeak": {
-        "default": "heavy triangle headed right-arrow",
         "sbrief": "heavy triangle headed R arrow"
       }
     },
@@ -1437,7 +1363,6 @@
         "default": "dashed triangle headed right arrow"
       },
       "mathspeak": {
-        "default": "dashed triangle headed right-arrow",
         "sbrief": "dashed triangle headed R arrow"
       }
     },
@@ -1450,7 +1375,6 @@
         "default": "heavy dashed triangle headed right arrow"
       },
       "mathspeak": {
-        "default": "heavy dashed triangle headed right-arrow",
         "sbrief": "heavy dashed triangle headed R arrow"
       }
     },
@@ -1463,7 +1387,6 @@
         "default": "black right arrow"
       },
       "mathspeak": {
-        "default": "black right-arrow",
         "sbrief": "black R arrow"
       }
     },
@@ -1476,7 +1399,6 @@
         "default": "three d top lighted right arrowhead"
       },
       "mathspeak": {
-        "default": "three d top lighted right-arrowhead",
         "sbrief": "three d top lighted R arrowhead"
       }
     },
@@ -1489,7 +1411,6 @@
         "default": "three d bottom lighted right arrowhead"
       },
       "mathspeak": {
-        "default": "three d bottom lighted right-arrowhead",
         "sbrief": "three d bottom lighted R arrowhead"
       }
     },
@@ -1502,7 +1423,6 @@
         "default": "black right arrowhead"
       },
       "mathspeak": {
-        "default": "black right-arrowhead",
         "sbrief": "black R arrowhead"
       }
     },
@@ -1515,7 +1435,6 @@
         "default": "heavy black curved down and right arrow"
       },
       "mathspeak": {
-        "default": "heavy black curved down and right-arrow",
         "sbrief": "heavy black curved d and R arrow"
       }
     },
@@ -1528,7 +1447,6 @@
         "default": "heavy black curved up and right arrow"
       },
       "mathspeak": {
-        "default": "heavy black curved up and right-arrow",
         "sbrief": "heavy black curved U and R arrow"
       }
     },
@@ -1541,7 +1459,6 @@
         "default": "squat black right arrow"
       },
       "mathspeak": {
-        "default": "squat black right-arrow",
         "sbrief": "squat black R arrow"
       }
     },
@@ -1554,7 +1471,6 @@
         "default": "heavy concave pointed black right arrow"
       },
       "mathspeak": {
-        "default": "heavy concave pointed black right-arrow",
         "sbrief": "heavy concave pointed black R arrow"
       }
     },
@@ -1567,7 +1483,6 @@
         "default": "right shaded white right arrow"
       },
       "mathspeak": {
-        "default": "right shaded white right-arrow",
         "sbrief": "right shaded white R arrow"
       }
     },
@@ -1580,7 +1495,6 @@
         "default": "left shaded white right arrow"
       },
       "mathspeak": {
-        "default": "left shaded white right-arrow",
         "sbrief": "left shaded white R arrow"
       }
     },
@@ -1593,7 +1507,6 @@
         "default": "back tilted shadowed white right arrow"
       },
       "mathspeak": {
-        "default": "back tilted shadowed white right-arrow",
         "sbrief": "back tilted shadowed white R arrow"
       }
     },
@@ -1606,7 +1519,6 @@
         "default": "front tilted shadowed white right arrow"
       },
       "mathspeak": {
-        "default": "front tilted shadowed white right-arrow",
         "sbrief": "front tilted shadowed white R arrow"
       }
     },
@@ -1619,7 +1531,6 @@
         "default": "heavy lower right shadowed white right arrow"
       },
       "mathspeak": {
-        "default": "heavy lower right shadowed white right-arrow",
         "sbrief": "heavy lower right shadowed white R arrow"
       }
     },
@@ -1632,7 +1543,6 @@
         "default": "heavy upper right shadowed white right arrow"
       },
       "mathspeak": {
-        "default": "heavy upper right shadowed white right-arrow",
         "sbrief": "heavy upper right shadowed white R arrow"
       }
     },
@@ -1645,7 +1555,6 @@
         "default": "notched lower right shadowed white right arrow"
       },
       "mathspeak": {
-        "default": "notched lower right shadowed white right-arrow",
         "sbrief": "notched lower right shadowed white R arrow"
       }
     },
@@ -1658,7 +1567,6 @@
         "default": "notched upper right shadowed white right arrow"
       },
       "mathspeak": {
-        "default": "notched upper right shadowed white right-arrow",
         "sbrief": "notched upper right shadowed white R arrow"
       }
     },
@@ -1671,7 +1579,6 @@
         "default": "circled heavy white right arrow"
       },
       "mathspeak": {
-        "default": "circled heavy white right-arrow",
         "sbrief": "circled heavy white R arrow"
       }
     },
@@ -1684,7 +1591,6 @@
         "default": "white feathered right arrow"
       },
       "mathspeak": {
-        "default": "white feathered right-arrow",
         "sbrief": "white feathered R arrow"
       }
     },
@@ -1697,7 +1603,6 @@
         "default": "black feathered down right arrow"
       },
       "mathspeak": {
-        "default": "black feathered down right-arrow",
         "sbrief": "black feathered d R arrow"
       }
     },
@@ -1710,7 +1615,6 @@
         "default": "black feathered right arrow"
       },
       "mathspeak": {
-        "default": "black feathered right-arrow",
         "sbrief": "black feathered R arrow"
       }
     },
@@ -1723,7 +1627,6 @@
         "default": "black feathered up right arrow"
       },
       "mathspeak": {
-        "default": "black feathered up right-arrow",
         "sbrief": "black feathered U R arrow"
       }
     },
@@ -1736,7 +1639,6 @@
         "default": "heavy black feathered down right arrow"
       },
       "mathspeak": {
-        "default": "heavy black feathered down right-arrow",
         "sbrief": "heavy black feathered d R arrow"
       }
     },
@@ -1749,7 +1651,6 @@
         "default": "heavy black feathered right arrow"
       },
       "mathspeak": {
-        "default": "heavy black feathered right-arrow",
         "sbrief": "heavy black feathered R arrow"
       }
     },
@@ -1762,7 +1663,6 @@
         "default": "heavy black feathered up right arrow"
       },
       "mathspeak": {
-        "default": "heavy black feathered up right-arrow",
         "sbrief": "heavy black feathered U R arrow"
       }
     },
@@ -1775,7 +1675,6 @@
         "default": "teardrop barbed right arrow"
       },
       "mathspeak": {
-        "default": "teardrop barbed right-arrow",
         "sbrief": "teardrop barbed R arrow"
       }
     },
@@ -1788,7 +1687,6 @@
         "default": "heavy teardrop shanked right arrow"
       },
       "mathspeak": {
-        "default": "heavy teardrop shanked right-arrow",
         "sbrief": "heavy teardrop shanked R arrow"
       }
     },
@@ -1801,7 +1699,6 @@
         "default": "wedge tailed right arrow"
       },
       "mathspeak": {
-        "default": "wedge tailed right-arrow",
         "sbrief": "wedge tailed R arrow"
       }
     },
@@ -1814,7 +1711,6 @@
         "default": "heavy wedge tailed right arrow"
       },
       "mathspeak": {
-        "default": "heavy wedge tailed right-arrow",
         "sbrief": "heavy wedge tailed R arrow"
       }
     },
@@ -1827,7 +1723,6 @@
         "default": "open outlined right arrow"
       },
       "mathspeak": {
-        "default": "open outlined right-arrow",
         "sbrief": "open outlined R arrow"
       }
     },
@@ -1882,7 +1777,6 @@
         "default": "right arrow with circled plus"
       },
       "mathspeak": {
-        "default": "right-arrow with circled plus",
         "sbrief": "R arrow with circled plus"
       }
     },
@@ -1895,7 +1789,6 @@
         "default": "long left arrow"
       },
       "mathspeak": {
-        "default": "long left-arrow",
         "sbrief": "long L arrow"
       }
     },
@@ -1908,7 +1801,6 @@
         "default": "long right arrow"
       },
       "mathspeak": {
-        "default": "long right-arrow",
         "sbrief": "long R arrow"
       }
     },
@@ -1921,7 +1813,6 @@
         "default": "long left right arrow"
       },
       "mathspeak": {
-        "default": "long left-right-arrow",
         "sbrief": "long L R arrow"
       }
     },
@@ -1970,7 +1861,6 @@
         "default": "long left arrow from bar"
       },
       "mathspeak": {
-        "default": "long left-arrow from bar",
         "sbrief": "long L arrow from bar"
       }
     },
@@ -1983,7 +1873,6 @@
         "default": "long right arrow from bar"
       },
       "mathspeak": {
-        "default": "long right-arrow from bar",
         "sbrief": "long R arrow from bar"
       }
     },
@@ -2032,7 +1921,6 @@
         "default": "two headed right arrow with vertical stroke"
       },
       "mathspeak": {
-        "default": "two headed right-arrow with vertical stroke",
         "sbrief": "two headed R arrow with vertical stroke"
       }
     },
@@ -2045,7 +1933,6 @@
         "default": "two headed right arrow with double vertical stroke"
       },
       "mathspeak": {
-        "default": "two headed right-arrow with double vertical stroke",
         "sbrief": "two headed R arrow with double vertical stroke"
       }
     },
@@ -2058,7 +1945,6 @@
         "default": "double left arrow with vertical stroke"
       },
       "mathspeak": {
-        "default": "double left-arrow with vertical stroke",
         "sbrief": "double L arrow with vertical stroke"
       }
     },
@@ -2071,7 +1957,6 @@
         "default": "double right arrow with vertical stroke"
       },
       "mathspeak": {
-        "default": "double right-arrow with vertical stroke",
         "sbrief": "double R arrow with vertical stroke"
       }
     },
@@ -2084,7 +1969,6 @@
         "default": "double left right arrow with vertical stroke"
       },
       "mathspeak": {
-        "default": "double left-right-arrow with vertical stroke",
         "sbrief": "double L R arrow with vertical stroke"
       }
     },
@@ -2097,7 +1981,6 @@
         "default": "two headed right arrow from bar"
       },
       "mathspeak": {
-        "default": "two headed right-arrow from bar",
         "sbrief": "two headed R arrow from bar"
       }
     },
@@ -2110,7 +1993,6 @@
         "default": "double left arrow from bar"
       },
       "mathspeak": {
-        "default": "double left-arrow from bar",
         "sbrief": "double L arrow from bar"
       }
     },
@@ -2123,7 +2005,6 @@
         "default": "double right arrow from bar"
       },
       "mathspeak": {
-        "default": "double right-arrow from bar",
         "sbrief": "double R arrow from bar"
       }
     },
@@ -2145,7 +2026,6 @@
         "default": "up arrow with horizontal stroke"
       },
       "mathspeak": {
-        "default": "up-arrow with horizontal stroke",
         "sbrief": "U arrow with horizontal stroke"
       }
     },
@@ -2242,7 +2122,6 @@
         "default": "right arrow with dotted stem"
       },
       "mathspeak": {
-        "default": "right-arrow with dotted stem",
         "sbrief": "R arrow with dotted stem"
       }
     },
@@ -2255,7 +2134,6 @@
         "default": "up arrow to bar"
       },
       "mathspeak": {
-        "default": "up-arrow to bar",
         "sbrief": "U arrow to bar"
       }
     },
@@ -2268,7 +2146,6 @@
         "default": "down arrow to bar"
       },
       "mathspeak": {
-        "default": "down-arrow to bar",
         "sbrief": "D arrow to bar"
       }
     },
@@ -2281,7 +2158,6 @@
         "default": "right arrow with tail with vertical stroke"
       },
       "mathspeak": {
-        "default": "right-arrow with tail with vertical stroke",
         "sbrief": "R arrow with tail with vertical stroke"
       }
     },
@@ -2294,7 +2170,6 @@
         "default": "right arrow with tail with double vertical stroke"
       },
       "mathspeak": {
-        "default": "right-arrow with tail with double vertical stroke",
         "sbrief": "R arrow with tail with double vertical stroke"
       }
     },
@@ -2343,7 +2218,6 @@
         "default": "left arrow tail"
       },
       "mathspeak": {
-        "default": "left-arrow tail",
         "sbrief": "L arrow tail"
       }
     },
@@ -2356,7 +2230,6 @@
         "default": "right arrow tail"
       },
       "mathspeak": {
-        "default": "right-arrow tail",
         "sbrief": "R arrow tail"
       }
     },
@@ -2393,7 +2266,6 @@
         "default": "left arrow to black diamond"
       },
       "mathspeak": {
-        "default": "left-arrow to black diamond",
         "sbrief": "L arrow to black diamond"
       }
     },
@@ -2406,7 +2278,6 @@
         "default": "right arrow to black diamond"
       },
       "mathspeak": {
-        "default": "right-arrow to black diamond",
         "sbrief": "R arrow to black diamond"
       }
     },
@@ -2419,7 +2290,6 @@
         "default": "left arrow from bar to black diamond"
       },
       "mathspeak": {
-        "default": "left-arrow from bar to black diamond",
         "sbrief": "L arrow from bar to black diamond"
       }
     },
@@ -2432,7 +2302,6 @@
         "default": "right arrow from bar to black diamond"
       },
       "mathspeak": {
-        "default": "right-arrow from bar to black diamond",
         "sbrief": "R arrow from bar to black diamond"
       }
     },
@@ -2736,7 +2605,6 @@
         "default": "right arrow above short left arrow"
       },
       "mathspeak": {
-        "default": "right-arrow above short left-arrow",
         "sbrief": "R arrow above short L arrow"
       }
     },
@@ -2749,7 +2617,6 @@
         "default": "left arrow above short right arrow"
       },
       "mathspeak": {
-        "default": "left-arrow above short right-arrow",
         "sbrief": "L arrow above short R arrow"
       }
     },
@@ -2762,7 +2629,6 @@
         "default": "short right arrow above left arrow"
       },
       "mathspeak": {
-        "default": "short right-arrow above left-arrow",
         "sbrief": "short R arrow above L arrow"
       }
     },
@@ -2775,7 +2641,6 @@
         "default": "right arrow with plus below"
       },
       "mathspeak": {
-        "default": "right-arrow with plus below",
         "sbrief": "R arrow with plus below"
       }
     },
@@ -2788,7 +2653,6 @@
         "default": "left arrow with plus below"
       },
       "mathspeak": {
-        "default": "left-arrow with plus below",
         "sbrief": "L arrow with plus below"
       }
     },
@@ -2801,7 +2665,6 @@
         "default": "right arrow through x"
       },
       "mathspeak": {
-        "default": "right-arrow through x",
         "sbrief": "R arrow through x"
       }
     },
@@ -2814,7 +2677,6 @@
         "default": "left right arrow through small circle"
       },
       "mathspeak": {
-        "default": "left-right-arrow through small circle",
         "sbrief": "L R arrow through small circle"
       }
     },
@@ -2851,7 +2713,6 @@
         "default": "equals sign above right arrow"
       },
       "mathspeak": {
-        "default": "equals sign above right-arrow",
         "sbrief": "equals sign above R arrow"
       }
     },
@@ -2864,7 +2725,6 @@
         "default": "tilde operator above right arrow"
       },
       "mathspeak": {
-        "default": "tilde operator above right-arrow",
         "sbrief": "tilde operator above R arrow"
       }
     },
@@ -2877,7 +2737,6 @@
         "default": "left arrow above tilde operator"
       },
       "mathspeak": {
-        "default": "left-arrow above tilde operator",
         "sbrief": "L arrow above tilde operator"
       }
     },
@@ -2890,7 +2749,6 @@
         "default": "right arrow above tilde operator"
       },
       "mathspeak": {
-        "default": "right-arrow above tilde operator",
         "sbrief": "R arrow above tilde operator"
       }
     },
@@ -2903,7 +2761,6 @@
         "default": "right arrow above almost equals"
       },
       "mathspeak": {
-        "default": "right-arrow above almost equals",
         "sbrief": "R arrow above almost equals"
       }
     },
@@ -2916,7 +2773,6 @@
         "default": "less than above left arrow"
       },
       "mathspeak": {
-        "default": "less than above left-arrow",
         "sbrief": "less than above L arrow"
       }
     },
@@ -2929,7 +2785,6 @@
         "default": "left arrow through less than"
       },
       "mathspeak": {
-        "default": "left-arrow through less than",
         "sbrief": "L arrow through less than"
       }
     },
@@ -2942,7 +2797,6 @@
         "default": "greater than above right arrow"
       },
       "mathspeak": {
-        "default": "greater than above right-arrow",
         "sbrief": "greater than above R arrow"
       }
     },
@@ -2955,7 +2809,6 @@
         "default": "subset above right arrow"
       },
       "mathspeak": {
-        "default": "subset above right-arrow",
         "sbrief": "subset above R arrow"
       }
     },
@@ -2968,7 +2821,6 @@
         "default": "left arrow through subset"
       },
       "mathspeak": {
-        "default": "left-arrow through subset",
         "sbrief": "L arrow through subset"
       }
     },
@@ -2981,7 +2833,6 @@
         "default": "superset above left arrow"
       },
       "mathspeak": {
-        "default": "superset above left-arrow",
         "sbrief": "suerset above L arrow"
       }
     },
@@ -2994,7 +2845,6 @@
         "default": "empty set with right arrow above"
       },
       "mathspeak": {
-        "default": "empty set with right-arrow above",
         "sbrief": "empty set with R arrow above"
       }
     },
@@ -3007,7 +2857,6 @@
         "default": "empty set with left arrow above"
       },
       "mathspeak": {
-        "default": "empty set with left-arrow above",
         "sbrief": "empty set with L arrow above"
       }
     },
@@ -3020,7 +2869,6 @@
         "default": "up arrow through circle"
       },
       "mathspeak": {
-        "default": "up-arrow through circle",
         "sbrief": "U arrow through circle"
       }
     },
@@ -3033,7 +2881,6 @@
         "default": "black diamond with down arrow"
       },
       "mathspeak": {
-        "default": "black diamond with down-arrow",
         "sbrief": "black diamond with D arrow"
       }
     },
@@ -3046,7 +2893,6 @@
         "default": "white circle with down arrow"
       },
       "mathspeak": {
-        "default": "white circle with down-arrow",
         "sbrief": "white circle with D arrow"
       }
     },
@@ -3059,7 +2905,6 @@
         "default": "black circle with down arrow"
       },
       "mathspeak": {
-        "default": "black circle with down-arrow",
         "sbrief": "black circle with D arrow"
       }
     },
@@ -3072,7 +2917,6 @@
         "default": "integral with left arrow with hook"
       },
       "mathspeak": {
-        "default": "integral with left-arrow with hook",
         "sbrief": "integral with L arrow with hook"
       }
     },
@@ -3229,7 +3073,6 @@
         "default": "right arrow with tip down"
       },
       "mathspeak": {
-        "default": "right-arrow with tip down",
         "sbrief": "R arrow with tip down"
       }
     },
@@ -3242,7 +3085,6 @@
         "default": "right arrow with tip up"
       },
       "mathspeak": {
-        "default": "right-arrow with tip up",
         "sbrief": "R arrow with tip up"
       }
     },
@@ -3255,7 +3097,6 @@
         "default": "left arrow with tip down"
       },
       "mathspeak": {
-        "default": "left-arrow with tip down",
         "sbrief": "L arrow with tip down"
       }
     },
@@ -3268,7 +3109,6 @@
         "default": "left arrow with tip up"
       },
       "mathspeak": {
-        "default": "left-arrow with tip up",
         "sbrief": "L arrow with tip up"
       }
     },
@@ -3281,7 +3121,6 @@
         "default": "left arrow with small circle"
       },
       "mathspeak": {
-        "default": "left-arrow with small circle",
         "sbrief": "L arrow with small circle"
       }
     },
@@ -3294,7 +3133,6 @@
         "default": "three left arrows"
       },
       "mathspeak": {
-        "default": "three left-arrows",
         "sbrief": "three L arrows"
       }
     },
@@ -3307,7 +3145,6 @@
         "default": "left arrow with circled plus"
       },
       "mathspeak": {
-        "default": "left-arrow with circled plus",
         "sbrief": "L arrow with circled plus"
       }
     },
@@ -3380,7 +3217,6 @@
         "default": "left arrow with dotted stem"
       },
       "mathspeak": {
-        "default": "left-arrow with dotted stem",
         "sbrief": "L arrow with dotted stem"
       }
     },
@@ -3393,7 +3229,6 @@
         "default": "left arrow with tail with vertical stroke"
       },
       "mathspeak": {
-        "default": "left-arrow with tail with vertical stroke",
         "sbrief": "L arrow with tail with vertical stroke"
       }
     },
@@ -3406,7 +3241,6 @@
         "default": "left arrow with tail with double vertical stroke"
       },
       "mathspeak": {
-        "default": "left-arrow with tail with double vertical stroke",
         "sbrief": "L arrow with tail with double vertical stroke"
       }
     },
@@ -3455,7 +3289,6 @@
         "default": "left arrow through x"
       },
       "mathspeak": {
-        "default": "left-arrow through x",
         "sbrief": "L arrow through x"
       }
     },
@@ -3477,7 +3310,6 @@
         "default": "equals sign above left arrow"
       },
       "mathspeak": {
-        "default": "equals sign above left-arrow",
         "sbrief": "equals sign above L arrow"
       }
     },
@@ -3490,7 +3322,6 @@
         "default": "reverse tilde operator above left arrow"
       },
       "mathspeak": {
-        "default": "reverse tilde operator above left-arrow",
         "sbrief": "reverse tilde operator above L arrow"
       }
     },
@@ -3503,7 +3334,6 @@
         "default": "left arrow above reverse almost equals"
       },
       "mathspeak": {
-        "default": "left-arrow above reverse almost equals",
         "sbrief": "L arrow above reverse almost equals"
       }
     },
@@ -3516,7 +3346,6 @@
         "default": "right arrow through greater than"
       },
       "mathspeak": {
-        "default": "right-arrow through greater than",
         "sbrief": "R arrow through greater than"
       }
     },
@@ -3529,7 +3358,6 @@
         "default": "right arrow through superset"
       },
       "mathspeak": {
-        "default": "right-arrow through superset",
         "sbrief": "R arrow through superset"
       }
     },
@@ -3566,7 +3394,6 @@
         "default": "reverse tilde operator above right arrow"
       },
       "mathspeak": {
-        "default": "reverse tilde operator above right-arrow",
         "sbrief": "reverse tilde operator above R arrow"
       }
     },
@@ -3579,7 +3406,6 @@
         "default": "right arrow above reverse almost equals"
       },
       "mathspeak": {
-        "default": "right-arrow above reverse almost equals",
         "sbrief": "R arrow above reverse almost equals"
       }
     },
@@ -3592,7 +3418,6 @@
         "default": "tilde operator above left arrow"
       },
       "mathspeak": {
-        "default": "tilde operator above left-arrow",
         "sbrief": "tilde operator above L arrow"
       }
     },
@@ -3605,7 +3430,6 @@
         "default": "left arrow above almost equals"
       },
       "mathspeak": {
-        "default": "left-arrow above almost equals",
         "sbrief": "L arrow above almost equals"
       }
     },
@@ -3618,7 +3442,6 @@
         "default": "left arrow above reverse tilde operator"
       },
       "mathspeak": {
-        "default": "left-arrow above reverse tilde operator",
         "sbrief": "L arrow above reverse tilde operator"
       }
     },
@@ -3631,7 +3454,6 @@
         "default": "right arrow above reverse tilde operator"
       },
       "mathspeak": {
-        "default": "right-arrow above reverse tilde operator",
         "sbrief": "R arrow above reverse tilde operator"
       }
     },
@@ -3644,7 +3466,6 @@
         "default": "halfwidth left arrow"
       },
       "mathspeak": {
-        "default": "halfwidth left-arrow",
         "sbrief": "halfwidth L arrow"
       }
     },
@@ -3657,7 +3478,6 @@
         "default": "halfwidth up arrow"
       },
       "mathspeak": {
-        "default": "halfwidth up-arrow",
         "sbrief": "halfwidth U arrow"
       }
     },
@@ -3670,7 +3490,6 @@
         "default": "halfwidth right arrow"
       },
       "mathspeak": {
-        "default": "halfwidth right-arrow",
         "sbrief": "halfwidth R arrow"
       }
     },
@@ -3683,7 +3502,6 @@
         "default": "halfwidth down arrow"
       },
       "mathspeak": {
-        "default": "halfwidth down-arrow",
         "sbrief": "halfwidth D arrow"
       }
     },
