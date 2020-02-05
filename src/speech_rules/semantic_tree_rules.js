@@ -97,6 +97,10 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
       '[n] ./*[1]', 'self::stree');
 
   defineRule(
+      'factorial', 'default.default', '[t] "factorial"', 'self::punctuation',
+      'text()="!"', 'name(preceding-sibling::*[1])!="text"');
+
+  defineRule(
       'multrel', 'default.default',
       '[t] "multirelation"; [m] children/* (sepFunc:CTXFcontentIterator)',
       'self::multirel');
