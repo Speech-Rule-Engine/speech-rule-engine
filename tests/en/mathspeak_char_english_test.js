@@ -400,10 +400,10 @@ sre.MathspeakCharEnglishTest.prototype.testMathspeakChars = function() {
   this.executeCharTest('𝟀', ['sans serif bold italic chi', 'sans serif bold italic chi', 'sans serif bold italic chi']);
   this.executeCharTest('𝟁', ['sans serif bold italic psi', 'sans serif bold italic psi', 'sans serif bold italic psi']);
   this.executeCharTest('𝟂', ['sans serif bold italic omega', 'sans serif bold italic omega', 'sans serif bold italic omega']);
-  this.executeCharTest('ℵ', ['alef', 'alef', 'alef']);
-  this.executeCharTest('ℶ', ['bet', 'bet', 'bet']);
-  this.executeCharTest('ℷ', ['gimel', 'gimel', 'gimel']);
-  this.executeCharTest('ℸ', ['dalet', 'dalet', 'dalet']);
+  this.executeCharTest('ℵ', ['first transfinite cardinal', 'first transfinite cardinal', 'first transfinite cardinal']);
+  this.executeCharTest('ℶ', ['second transfinite cardinal', 'second transfinite cardinal', 'second transfinite cardinal']);
+  this.executeCharTest('ℷ', ['third transfinite cardinal', 'third transfinite cardinal', 'third transfinite cardinal']);
+  this.executeCharTest('ℸ', ['fourth transfinite cardinal', 'fourth transfinite cardinal', 'fourth transfinite cardinal']);
   this.executeCharTest('ǖ', ['u double overdot overbar', 'u double overdot overbar', 'u double overdot overbar']);
   this.executeCharTest('ǘ', ['u double overdot acute', 'u double overdot acute', 'u double overdot acute']);
   this.executeCharTest('ǚ', ['u double overdot caron', 'u double overdot caron', 'u double overdot caron']);

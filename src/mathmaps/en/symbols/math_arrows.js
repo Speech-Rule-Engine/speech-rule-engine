@@ -3,8 +3,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards arrow",
-        "short": "left arrow"
+        "default": "left arrow"
       },
       "mathspeak": {
         "default": "left-arrow",
@@ -17,8 +16,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "upwards arrow",
-        "short": "up arrow"
+        "default": "up arrow"
       },
       "mathspeak": {
         "default": "up-arrow",
@@ -31,8 +29,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards arrow",
-        "short": "right arrow"
+        "default": "right arrow"
       },
       "mathspeak": {
         "default": "right-arrow",
@@ -45,8 +42,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "downwards arrow",
-        "short": "down arrow"
+        "default": "down arrow"
       },
       "mathspeak": {
         "default": "down-arrow",
@@ -85,8 +81,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "north west arrow",
-        "short": "up left arrow"
+        "default": "up left arrow"
       },
       "mathspeak": {
         "default": "up left-arrow",
@@ -99,8 +94,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "north east arrow",
-        "short": "up right arrow"
+        "default": "up right arrow"
       },
       "mathspeak": {
         "default": "up right-arrow",
@@ -113,8 +107,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "south east arrow",
-        "short": "down right arrow"
+        "default": "down right arrow"
       },
       "mathspeak": {
         "default": "down right-arrow",
@@ -127,8 +120,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "south west arrow",
-        "short": "down left arrow"
+        "default": "down left arrow"
       },
       "mathspeak": {
         "default": "down left-arrow",
@@ -141,8 +133,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards arrow with stroke",
-        "short": "left arrow with stroke"
+        "default": "left arrow with stroke"
       },
       "mathspeak": {
         "default": "left-arrow with stroke",
@@ -155,8 +146,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards arrow with stroke",
-        "short": "right arrow with stroke"
+        "default": "right arrow with stroke"
       },
       "mathspeak": {
         "default": "right-arrow with stroke",
@@ -169,8 +159,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "leftwards wave arrow",
-        "short": "left wave arrow"
+        "default": "left wave arrow"
       },
       "mathspeak": {
         "sbrief": "L wave arrow"
@@ -182,8 +171,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "rightwards wave arrow",
-        "short": "right wave arrow"
+        "default": "right wave arrow"
       },
       "mathspeak": {
         "sbrief": "R wave arrow"
@@ -195,9 +183,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "leftwards two headed arrow",
-        "alternative": "left two headed arrow",
-        "short": "two headed left arrow"
+        "default": "two headed left arrow"
       },
       "mathspeak": {
         "default": "two headed left-arrow",
@@ -210,9 +196,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "upwards two headed arrow",
-        "alternative": "up two headed arrow",
-        "short": "two headed up arrow"
+        "default": "two headed up arrow"
       },
       "mathspeak": {
         "default": "two headed up-arrow",
@@ -225,9 +209,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards two headed arrow",
-        "alternative": "right two headed arrow",
-        "short": "two headed right arrow"
+        "default": "two headed right arrow"
       },
       "mathspeak": {
         "default": "two headed right-arrow",
@@ -240,9 +222,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "downwards two headed arrow",
-        "alternative": "down two headed arrow",
-        "short": "two headed down arrow"
+        "default": "two headed down arrow"
       },
       "mathspeak": {
         "default": "two headed down-arrow",
@@ -255,8 +235,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "leftwards arrow with tail",
-        "short": "left arrow with tail"
+        "default": "left arrow with tail"
       },
       "mathspeak": {
         "default": "left-arrow with tail",
@@ -269,8 +248,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards arrow with tail",
-        "short": "right arrow with tail"
+        "default": "right arrow with tail"
       },
       "mathspeak": {
         "default": "right-arrow with tail",
@@ -283,8 +261,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "leftwards arrow from bar",
-        "short": "left arrow from bar"
+        "default": "left arrow from bar"
       },
       "mathspeak": {
         "default": "left-arrow from bar",
@@ -297,8 +274,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "upwards arrow from bar",
-        "short": "up arrow from bar"
+        "default": "up arrow from bar"
       },
       "mathspeak": {
         "default": "up-arrow from bar",
@@ -311,8 +287,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards arrow from bar",
-        "short": "right arrow from bar"
+        "default": "right arrow from bar"
       },
       "mathspeak": {
         "default": "right-arrow from bar",
@@ -325,8 +300,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "downwards arrow from bar",
-        "short": "down arrow from bar"
+        "default": "down arrow from bar"
       },
       "mathspeak": {
         "default": "down-arrow from bar",
@@ -352,8 +326,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "leftwards arrow with hook",
-        "short": "left arrow with hook"
+        "default": "left arrow with hook"
       },
       "mathspeak": {
         "default": "left-arrow with hook",
@@ -366,8 +339,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "rightwards arrow with hook",
-        "short": "right arrow with hook"
+        "default": "right arrow with hook"
       },
       "mathspeak": {
         "default": "right-arrow with hook",
@@ -380,8 +352,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "leftwards arrow with loop",
-        "short": "left arrow with loop"
+        "default": "left arrow with loop"
       },
       "mathspeak": {
         "default": "left-arrow with loop",
@@ -394,8 +365,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "rightwards arrow with loop",
-        "short": "right arrow with loop"
+        "default": "right arrow with loop"
       },
       "mathspeak": {
         "default": "right-arrow with loop",
@@ -433,8 +403,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "downwards zigzag arrow",
-        "short": "down zigzag arrow"
+        "default": "down zigzag arrow"
       },
       "mathspeak": {
         "sbrief": "d zigzag arrow"
@@ -446,8 +415,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "upwards arrow with tip leftwards",
-        "short": "up arrow with tip left"
+        "default": "up arrow with tip left"
       },
       "mathspeak": {
         "default": "up-arrow with tip left",
@@ -460,8 +428,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "upwards arrow with tip rightwards",
-        "short": "up arrow with tip right"
+        "default": "up arrow with tip right"
       },
       "mathspeak": {
         "default": "up-arrow with tip right",
@@ -474,8 +441,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "downwards arrow with tip leftwards",
-        "short": "down arrow with tip left"
+        "default": "down arrow with tip left"
       },
       "mathspeak": {
         "default": "down-arrow with tip left",
@@ -488,8 +454,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "downwards arrow with tip rightwards",
-        "short": "down arrow with tip right"
+        "default": "down arrow with tip right"
       },
       "mathspeak": {
         "default": "down-arrow with tip right",
@@ -502,8 +467,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "rightwards arrow with corner downwards",
-        "short": "right arrow with corner down"
+        "default": "right arrow with corner down"
       },
       "mathspeak": {
         "default": "right-arrow with corner down",
@@ -516,8 +480,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "downwards arrow with corner leftwards",
-        "short": "down arrow with corner left"
+        "default": "down arrow with corner left"
       },
       "mathspeak": {
         "default": "down-arrow with corner left",
@@ -548,8 +511,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "north west arrow to long bar",
-        "short": "up left arrow to long bar"
+        "default": "up left arrow to long bar"
       },
       "mathspeak": {
         "default": "up left-arrow to long bar",
@@ -562,8 +524,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "leftwards arrow to bar over rightwards arrow to bar",
-        "short": "left arrow to bar over right arrow to bar"
+        "default": "left arrow to bar over right arrow to bar"
       },
       "mathspeak": {
         "default": "left-arrow to bar over right-arrow to bar",
@@ -594,8 +555,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "rightwards arrow over leftwards arrow",
-        "short": "right arrow over left arrow"
+        "default": "right arrow over left arrow"
       },
       "mathspeak": {
         "default": "right-arrow over left-arrow",
@@ -608,8 +568,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "upwards arrow leftwards of downwards arrow",
-        "short": "up arrow left of down arrow"
+        "default": "up arrow left of down arrow"
       },
       "mathspeak": {
         "default": "up-arrow left of down-arrow",
@@ -622,8 +581,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "leftwards arrow over rightwards arrow",
-        "short": "left arrow over right arrow"
+        "default": "left arrow over right arrow"
       },
       "mathspeak": {
         "default": "left-arrow over right-arrow",
@@ -636,8 +594,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "leftwards paired arrows",
-        "short": "left paired arrows"
+        "default": "left paired arrows"
       },
       "mathspeak": {
         "sbrief": "L paired arrows"
@@ -649,8 +606,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "upwards paired arrows",
-        "short": "up paired arrows"
+        "default": "up paired arrows"
       },
       "mathspeak": {
         "sbrief": "U paired arrows"
@@ -662,8 +618,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "rightwards paired arrows",
-        "short": "right paired arrows"
+        "default": "right paired arrows"
       },
       "mathspeak": {
         "sbrief": "R paired arrows"
@@ -675,8 +630,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "downwards paired arrows",
-        "short": "down paired arrows"
+        "default": "down paired arrows"
       },
       "mathspeak": {
         "sbrief": "D paired arrows"
@@ -688,8 +642,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "leftwards double arrow with stroke",
-        "short": "left double arrow with stroke"
+        "default": "left double arrow with stroke"
       },
       "mathspeak": {
         "sbrief": "L double arrow with stroke"
@@ -713,8 +666,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards double arrow with stroke",
-        "short": "right double arrow with stroke"
+        "default": "right double arrow with stroke"
       },
       "mathspeak": {
         "sbrief": "R double arrow with stroke"
@@ -726,8 +678,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "leftwards double arrow",
-        "short": "left double arrow"
+        "default": "left double arrow"
       },
       "mathspeak": {
         "sbrief": "L double arrow"
@@ -739,8 +690,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "upwards double arrow",
-        "short": "up double arrow"
+        "default": "up double arrow"
       },
       "mathspeak": {
         "sbrief": "U double arrow"
@@ -752,8 +702,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards double arrow",
-        "short": "right double arrow"
+        "default": "right double arrow"
       },
       "mathspeak": {
         "sbrief": "R double arrow"
@@ -765,8 +714,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "downwards double arrow",
-        "short": "down double arrow"
+        "default": "down double arrow"
       },
       "mathspeak": {
         "sbrief": "d double arrow"
@@ -802,8 +750,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "north west double arrow",
-        "short": "up left double arrow"
+        "default": "up left double arrow"
       },
       "mathspeak": {
         "sbrief": "U L double arrow"
@@ -815,8 +762,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "north east double arrow",
-        "short": "up right double arrow"
+        "default": "up right double arrow"
       },
       "mathspeak": {
         "sbrief": "U R double arrow"
@@ -828,8 +774,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "south east double arrow",
-        "short": "down right double arrow"
+        "default": "down right double arrow"
       },
       "mathspeak": {
         "sbrief": "d R double arrow"
@@ -841,8 +786,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "south west double arrow",
-        "short": "down left double arrow"
+        "default": "down left double arrow"
       },
       "mathspeak": {
         "sbrief": "d L double arrow"
@@ -854,8 +798,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "leftwards triple arrow",
-        "short": "left triple arrow"
+        "default": "left triple arrow"
       },
       "mathspeak": {
         "sbrief": "L triple arrow"
@@ -867,8 +810,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "rightwards triple arrow",
-        "short": "right triple arrow"
+        "default": "right triple arrow"
       },
       "mathspeak": {
         "sbrief": "r triple arrow"
@@ -880,8 +822,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "leftwards squiggle arrow",
-        "short": "left squiggle arrow"
+        "default": "left squiggle arrow"
       },
       "mathspeak": {
         "sbrief": "L squiggle arrow"
@@ -893,8 +834,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "rightwards squiggle arrow",
-        "short": "right squiggle arrow"
+        "default": "right squiggle arrow"
       },
       "mathspeak": {
         "sbrief": "r squiggle arrow"
@@ -906,8 +846,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "upwards arrow with double stroke",
-        "short": "up arrow with double stroke"
+        "default": "up arrow with double stroke"
       },
       "mathspeak": {
         "default": "up-arrow with double stroke",
@@ -920,8 +859,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "downwards arrow with double stroke",
-        "short": "down arrow with double stroke"
+        "default": "down arrow with double stroke"
       },
       "mathspeak": {
         "default": "down-arrow with double stroke",
@@ -934,8 +872,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "leftwards dasheD arrow",
-        "short": "left dasheD arrow"
+        "default": "left dasheD arrow"
       },
       "mathspeak": {
         "sbrief": "L dasheD arrow"
@@ -947,8 +884,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "upwards dasheD arrow",
-        "short": "up dasheD arrow"
+        "default": "up dasheD arrow"
       },
       "mathspeak": {
         "sbrief": "U dasheD arrow"
@@ -960,8 +896,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "rightwards dasheD arrow",
-        "short": "right dasheD arrow"
+        "default": "right dasheD arrow"
       },
       "mathspeak": {
         "sbrief": "r dasheD arrow"
@@ -973,8 +908,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "downwards dasheD arrow",
-        "short": "down dasheD arrow"
+        "default": "down dasheD arrow"
       },
       "mathspeak": {
         "sbrief": "d dasheD arrow"
@@ -986,8 +920,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "leftwards arrow to bar",
-        "short": "left arrow to bar"
+        "default": "left arrow to bar"
       },
       "mathspeak": {
         "default": "left-arrow to bar",
@@ -1000,8 +933,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "rightwards arrow to bar",
-        "short": "right arrow to bar"
+        "default": "right arrow to bar"
       },
       "mathspeak": {
         "default": "right-arrow to bar",
@@ -1014,8 +946,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "leftwards white arrow",
-        "short": "white left arrow"
+        "default": "white left arrow"
       },
       "mathspeak": {
         "default": "white left-arrow",
@@ -1028,8 +959,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "upwards white arrow",
-        "short": "white up arrow"
+        "default": "white up arrow"
       },
       "mathspeak": {
         "default": "white up-arrow",
@@ -1042,8 +972,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "rightwards white arrow",
-        "short": "white right arrow"
+        "default": "white right arrow"
       },
       "mathspeak": {
         "default": "white right-arrow",
@@ -1056,8 +985,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "downwards white arrow",
-        "short": "white down arrow"
+        "default": "white down arrow"
       },
       "mathspeak": {
         "default": "white down-arrow",
@@ -1070,8 +998,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "upwards white arrow from bar",
-        "short": "white up arrow from bar"
+        "default": "white up arrow from bar"
       },
       "mathspeak": {
         "default": "white up-arrow from bar",
@@ -1084,9 +1011,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "upwards white arrow on pedestal",
-        "alternative": "up white arrow on pedestal",
-        "short": "white up arrow on pedestal"
+        "default": "white up arrow on pedestal"
       },
       "mathspeak": {
         "default": "white up-arrow on pedestal",
@@ -1099,9 +1024,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "upwards white arrow on pedestal with horizontal bar",
-        "alternative": "up white arrow on pedestal with horizontal bar",
-        "short": "white up arrow on pedestal with horizontal bar"
+        "default": "white up arrow on pedestal with horizontal bar"
       },
       "mathspeak": {
         "default": "white up-arrow on pedestal with horizontal bar",
@@ -1114,9 +1037,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "upwards white arrow on pedestal with vertical bar",
-        "alternative": "up white arrow on pedestal with vertical bar",
-        "short": "white up arrow on pedestal with vertical bar"
+        "default": "white up arrow on pedestal with vertical bar"
       },
       "mathspeak": {
         "default": "white up-arrow on pedestal with vertical bar",
@@ -1129,9 +1050,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "upwards white double arrow",
-        "alternative": "up white double arrow",
-        "short": "white double up arrow"
+        "default": "white double up arrow"
       },
       "mathspeak": {
         "default": "white double up-arrow",
@@ -1144,9 +1063,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "upwards white double arrow on pedestal",
-        "alternative": "up white double arrow on pedestal",
-        "short": "white double up arrow on pedestal"
+        "default": "white double up arrow on pedestal"
       },
       "mathspeak": {
         "default": "white double up-arrow on pedestal",
@@ -1159,9 +1076,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "rightwards white arrow from wall",
-        "alternative": "right white arrow from wall",
-        "short": "white right arrow from wall"
+        "default": "white right arrow from wall"
       },
       "mathspeak": {
         "default": "white right-arrow from wall",
@@ -1217,8 +1132,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "down arrow leftwards of upwards arrow",
-        "short": "down arrow left of up arrow"
+        "default": "down arrow left of up arrow"
       },
       "mathspeak": {
         "default": "down-arrow left of up-arrow",
@@ -1231,8 +1145,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "three rightwards arrows",
-        "short": "three right arrows"
+        "default": "three right arrows"
       },
       "mathspeak": {
         "default": "three right-arrows",
@@ -1245,8 +1158,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards arrow with vertical stroke",
-        "short": "left arrow with vertical stroke"
+        "default": "left arrow with vertical stroke"
       },
       "mathspeak": {
         "default": "left-arrow with vertical stroke",
@@ -1259,8 +1171,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards arrow with vertical stroke",
-        "short": "right arrow with vertical stroke"
+        "default": "right arrow with vertical stroke"
       },
       "mathspeak": {
         "default": "right-arrow with vertical stroke",
@@ -1286,8 +1197,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards arrow with double vertical stroke",
-        "short": "left arrow with double vertical stroke"
+        "default": "left arrow with double vertical stroke"
       },
       "mathspeak": {
         "default": "left-arrow with double vertical stroke",
@@ -1300,8 +1210,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards arrow with double vertical stroke",
-        "short": "right arrow with double vertical stroke"
+        "default": "right arrow with double vertical stroke"
       },
       "mathspeak": {
         "default": "right-arrow with double vertical stroke",
@@ -1327,8 +1236,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards open headed arrow",
-        "short": "left open headed arrow"
+        "default": "left open headed arrow"
       },
       "mathspeak": {
         "sbrief": "l open headed arrow"
@@ -1340,8 +1248,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards open headed arrow",
-        "short": "right open headed arrow"
+        "default": "right open headed arrow"
       },
       "mathspeak": {
         "sbrief": "r open headed arrow"
@@ -1423,8 +1330,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy wide headed rightwards arrow",
-        "short": "heavy wide headed right arrow"
+        "default": "heavy wide headed right arrow"
       },
       "mathspeak": {
         "default": "heavy wide headed right-arrow",
@@ -1437,8 +1343,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy south east arrow",
-        "short": "heavy down right arrow"
+        "default": "heavy down right arrow"
       },
       "mathspeak": {
         "default": "heavy down right-arrow",
@@ -1451,8 +1356,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy rightwards arrow",
-        "short": "heavy right arrow"
+        "default": "heavy right arrow"
       },
       "mathspeak": {
         "default": "heavy right-arrow",
@@ -1465,8 +1369,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy north east arrow",
-        "short": "heavy up right arrow"
+        "default": "heavy up right arrow"
       },
       "mathspeak": {
         "default": "heavy up right-arrow",
@@ -1479,8 +1382,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "drafting point rightwards arrow",
-        "short": "drafting point right arrow"
+        "default": "drafting point right arrow"
       },
       "mathspeak": {
         "default": "drafting point right-arrow",
@@ -1493,8 +1395,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy round tipped rightwards arrow",
-        "short": "heavy round tipped right arrow"
+        "default": "heavy round tipped right arrow"
       },
       "mathspeak": {
         "default": "heavy round tipped right-arrow",
@@ -1507,8 +1408,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "triangle headed rightwards arrow",
-        "short": "triangle headed right arrow"
+        "default": "triangle headed right arrow"
       },
       "mathspeak": {
         "default": "triangle headed right-arrow",
@@ -1521,8 +1421,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy triangle headed rightwards arrow",
-        "short": "heavy triangle headed right arrow"
+        "default": "heavy triangle headed right arrow"
       },
       "mathspeak": {
         "default": "heavy triangle headed right-arrow",
@@ -1535,8 +1434,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "dashed triangle headed rightwards arrow",
-        "short": "dashed triangle headed right arrow"
+        "default": "dashed triangle headed right arrow"
       },
       "mathspeak": {
         "default": "dashed triangle headed right-arrow",
@@ -1549,8 +1447,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy dashed triangle headed rightwards arrow",
-        "short": "heavy dashed triangle headed right arrow"
+        "default": "heavy dashed triangle headed right arrow"
       },
       "mathspeak": {
         "default": "heavy dashed triangle headed right-arrow",
@@ -1563,8 +1460,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "black rightwards arrow",
-        "short": "black right arrow"
+        "default": "black right arrow"
       },
       "mathspeak": {
         "default": "black right-arrow",
@@ -1577,8 +1473,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "three d top lighted rightwards arrowhead",
-        "short": "three d top lighted right arrowhead"
+        "default": "three d top lighted right arrowhead"
       },
       "mathspeak": {
         "default": "three d top lighted right-arrowhead",
@@ -1591,8 +1486,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "three d bottom lighted rightwards arrowhead",
-        "short": "three d bottom lighted right arrowhead"
+        "default": "three d bottom lighted right arrowhead"
       },
       "mathspeak": {
         "default": "three d bottom lighted right-arrowhead",
@@ -1605,8 +1499,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "black rightwards arrowhead",
-        "short": "black right arrowhead"
+        "default": "black right arrowhead"
       },
       "mathspeak": {
         "default": "black right-arrowhead",
@@ -1619,8 +1512,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy black curved downwards and rightwards arrow",
-        "short": "heavy black curved down and right arrow"
+        "default": "heavy black curved down and right arrow"
       },
       "mathspeak": {
         "default": "heavy black curved down and right-arrow",
@@ -1633,8 +1525,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy black curved upwards and rightwards arrow",
-        "short": "heavy black curved up and right arrow"
+        "default": "heavy black curved up and right arrow"
       },
       "mathspeak": {
         "default": "heavy black curved up and right-arrow",
@@ -1647,8 +1538,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "squat black rightwards arrow",
-        "short": "squat black right arrow"
+        "default": "squat black right arrow"
       },
       "mathspeak": {
         "default": "squat black right-arrow",
@@ -1661,8 +1551,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy concave pointed black rightwards arrow",
-        "short": "heavy concave pointed black right arrow"
+        "default": "heavy concave pointed black right arrow"
       },
       "mathspeak": {
         "default": "heavy concave pointed black right-arrow",
@@ -1675,8 +1564,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "right shaded white rightwards arrow",
-        "short": "right shaded white right arrow"
+        "default": "right shaded white right arrow"
       },
       "mathspeak": {
         "default": "right shaded white right-arrow",
@@ -1689,8 +1577,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left shaded white rightwards arrow",
-        "short": "left shaded white right arrow"
+        "default": "left shaded white right arrow"
       },
       "mathspeak": {
         "default": "left shaded white right-arrow",
@@ -1703,8 +1590,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "back tilted shadowed white rightwards arrow",
-        "short": "back tilted shadowed white right arrow"
+        "default": "back tilted shadowed white right arrow"
       },
       "mathspeak": {
         "default": "back tilted shadowed white right-arrow",
@@ -1717,8 +1603,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "front tilted shadowed white rightwards arrow",
-        "short": "front tilted shadowed white right arrow"
+        "default": "front tilted shadowed white right arrow"
       },
       "mathspeak": {
         "default": "front tilted shadowed white right-arrow",
@@ -1731,8 +1616,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy lower right shadowed white rightwards arrow",
-        "short": "heavy lower right shadowed white right arrow"
+        "default": "heavy lower right shadowed white right arrow"
       },
       "mathspeak": {
         "default": "heavy lower right shadowed white right-arrow",
@@ -1745,8 +1629,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy upper right shadowed white rightwards arrow",
-        "short": "heavy upper right shadowed white right arrow"
+        "default": "heavy upper right shadowed white right arrow"
       },
       "mathspeak": {
         "default": "heavy upper right shadowed white right-arrow",
@@ -1759,8 +1642,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "notched lower right shadowed white rightwards arrow",
-        "short": "notched lower right shadowed white right arrow"
+        "default": "notched lower right shadowed white right arrow"
       },
       "mathspeak": {
         "default": "notched lower right shadowed white right-arrow",
@@ -1773,8 +1655,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "notched upper right shadowed white rightwards arrow",
-        "short": "notched upper right shadowed white right arrow"
+        "default": "notched upper right shadowed white right arrow"
       },
       "mathspeak": {
         "default": "notched upper right shadowed white right-arrow",
@@ -1787,8 +1668,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "circled heavy white rightwards arrow",
-        "short": "circled heavy white right arrow"
+        "default": "circled heavy white right arrow"
       },
       "mathspeak": {
         "default": "circled heavy white right-arrow",
@@ -1801,8 +1681,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "white feathered rightwards arrow",
-        "short": "white feathered right arrow"
+        "default": "white feathered right arrow"
       },
       "mathspeak": {
         "default": "white feathered right-arrow",
@@ -1815,8 +1694,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "black feathered south east arrow",
-        "short": "black feathered down right arrow"
+        "default": "black feathered down right arrow"
       },
       "mathspeak": {
         "default": "black feathered down right-arrow",
@@ -1829,8 +1707,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "black feathered rightwards arrow",
-        "short": "black feathered right arrow"
+        "default": "black feathered right arrow"
       },
       "mathspeak": {
         "default": "black feathered right-arrow",
@@ -1843,8 +1720,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "black feathered north east arrow",
-        "short": "black feathered up right arrow"
+        "default": "black feathered up right arrow"
       },
       "mathspeak": {
         "default": "black feathered up right-arrow",
@@ -1857,8 +1733,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy black feathered south east arrow",
-        "short": "heavy black feathered down right arrow"
+        "default": "heavy black feathered down right arrow"
       },
       "mathspeak": {
         "default": "heavy black feathered down right-arrow",
@@ -1871,8 +1746,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy black feathered rightwards arrow",
-        "short": "heavy black feathered right arrow"
+        "default": "heavy black feathered right arrow"
       },
       "mathspeak": {
         "default": "heavy black feathered right-arrow",
@@ -1885,8 +1759,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy black feathered north east arrow",
-        "short": "heavy black feathered up right arrow"
+        "default": "heavy black feathered up right arrow"
       },
       "mathspeak": {
         "default": "heavy black feathered up right-arrow",
@@ -1899,8 +1772,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "teardrop barbed rightwards arrow",
-        "short": "teardrop barbed right arrow"
+        "default": "teardrop barbed right arrow"
       },
       "mathspeak": {
         "default": "teardrop barbed right-arrow",
@@ -1913,8 +1785,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy teardrop shanked rightwards arrow",
-        "short": "heavy teardrop shanked right arrow"
+        "default": "heavy teardrop shanked right arrow"
       },
       "mathspeak": {
         "default": "heavy teardrop shanked right-arrow",
@@ -1927,8 +1798,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "wedge tailed rightwards arrow",
-        "short": "wedge tailed right arrow"
+        "default": "wedge tailed right arrow"
       },
       "mathspeak": {
         "default": "wedge tailed right-arrow",
@@ -1941,8 +1811,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy wedge tailed rightwards arrow",
-        "short": "heavy wedge tailed right arrow"
+        "default": "heavy wedge tailed right arrow"
       },
       "mathspeak": {
         "default": "heavy wedge tailed right-arrow",
@@ -1955,8 +1824,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "open outlined rightwards arrow",
-        "short": "open outlined right arrow"
+        "default": "open outlined right arrow"
       },
       "mathspeak": {
         "default": "open outlined right-arrow",
@@ -1969,8 +1837,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "upwards quadruple arrow",
-        "short": "up quadruple arrow"
+        "default": "up quadruple arrow"
       },
       "mathspeak": {
         "sbrief": "U quadruple arrow"
@@ -1982,8 +1849,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "downwards quadruple arrow",
-        "short": "down quadruple arrow"
+        "default": "down quadruple arrow"
       },
       "mathspeak": {
         "sbrief": "d quadrule arrow"
@@ -2026,8 +1892,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "long leftwards arrow",
-        "short": "long left arrow"
+        "default": "long left arrow"
       },
       "mathspeak": {
         "default": "long left-arrow",
@@ -2040,8 +1905,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "long rightwards arrow",
-        "short": "long right arrow"
+        "default": "long right arrow"
       },
       "mathspeak": {
         "default": "long right-arrow",
@@ -2067,8 +1931,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "long leftwards double arrow",
-        "short": "long left double arrow"
+        "default": "long left double arrow"
       },
       "mathspeak": {
         "sbrief": "long l double arrow"
@@ -2080,8 +1943,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "long rightwards double arrow",
-        "short": "long right double arrow"
+        "default": "long right double arrow"
       },
       "mathspeak": {
         "sbrief": "long R double arrow"
@@ -2105,8 +1967,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "long leftwards arrow from bar",
-        "short": "long left arrow from bar"
+        "default": "long left arrow from bar"
       },
       "mathspeak": {
         "default": "long left-arrow from bar",
@@ -2119,8 +1980,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "long rightwards arrow from bar",
-        "short": "long right arrow from bar"
+        "default": "long right arrow from bar"
       },
       "mathspeak": {
         "default": "long right-arrow from bar",
@@ -2133,8 +1993,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "long leftwards double arrow from bar",
-        "short": "long left double arrow from bar"
+        "default": "long left double arrow from bar"
       },
       "mathspeak": {
         "sbrief": "long l double arrow from bar"
@@ -2146,8 +2005,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "long rightwards double arrow from bar",
-        "short": "long right double arrow from bar"
+        "default": "long right double arrow from bar"
       },
       "mathspeak": {
         "sbrief": "long R double arrow from bar"
@@ -2159,8 +2017,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "long rightwards squiggle arrow",
-        "short": "long right squiggle arrow"
+        "default": "long right squiggle arrow"
       },
       "mathspeak": {
         "sbrief": "long r squiggle arrow"
@@ -2172,9 +2029,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards two headed arrow with vertical stroke",
-        "alternative": "right two headed arrow with vertical stroke",
-        "short": "two headed right arrow with vertical stroke"
+        "default": "two headed right arrow with vertical stroke"
       },
       "mathspeak": {
         "default": "two headed right-arrow with vertical stroke",
@@ -2187,9 +2042,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards two headed arrow with double vertical stroke",
-        "alternative": "right two headed arrow with double vertical stroke",
-        "short": "two headed right arrow with double vertical stroke"
+        "default": "two headed right arrow with double vertical stroke"
       },
       "mathspeak": {
         "default": "two headed right-arrow with double vertical stroke",
@@ -2202,9 +2055,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards double arrow with vertical stroke",
-        "alternative": "left double arrow with vertical stroke",
-        "short": "double left arrow with vertical stroke"
+        "default": "double left arrow with vertical stroke"
       },
       "mathspeak": {
         "default": "double left-arrow with vertical stroke",
@@ -2217,9 +2068,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards double arrow with vertical stroke",
-        "alternative": "right double arrow with vertical stroke",
-        "short": "double right arrow with vertical stroke"
+        "default": "double right arrow with vertical stroke"
       },
       "mathspeak": {
         "default": "double right-arrow with vertical stroke",
@@ -2232,8 +2081,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left right double arrow with vertical stroke",
-        "short": "double left right arrow with vertical stroke"
+        "default": "double left right arrow with vertical stroke"
       },
       "mathspeak": {
         "default": "double left-right-arrow with vertical stroke",
@@ -2246,9 +2094,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards two headed arrow from bar",
-        "alternative": "right two headed arrow from bar",
-        "short": "two headed right arrow from bar"
+        "default": "two headed right arrow from bar"
       },
       "mathspeak": {
         "default": "two headed right-arrow from bar",
@@ -2261,9 +2107,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards double arrow from bar",
-        "alternative": "left double arrow from bar",
-        "short": "double left arrow from bar"
+        "default": "double left arrow from bar"
       },
       "mathspeak": {
         "default": "double left-arrow from bar",
@@ -2276,9 +2120,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards double arrow from bar",
-        "alternative": "right double arrow from bar",
-        "short": "double right arrow from bar"
+        "default": "double right arrow from bar"
       },
       "mathspeak": {
         "default": "double right-arrow from bar",
@@ -2291,9 +2133,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "downwards arrow with horizontal stroke",
-        "alternative": "down arrow with horizontal stroke",
-        "short": "arrow down with horizontal stroke"
+        "default": "arrow down with horizontal stroke"
       }
     },
     "key": "2908"
@@ -2302,8 +2142,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "upwards arrow with horizontal stroke",
-        "short": "up arrow with horizontal stroke"
+        "default": "up arrow with horizontal stroke"
       },
       "mathspeak": {
         "default": "up-arrow with horizontal stroke",
@@ -2316,8 +2155,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "upwards triple arrow",
-        "short": "up triple arrow"
+        "default": "up triple arrow"
       },
       "mathspeak": {
         "sbrief": "U triple arrow"
@@ -2329,8 +2167,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "downwards triple arrow",
-        "short": "down triple arrow"
+        "default": "down triple arrow"
       },
       "mathspeak": {
         "sbrief": "d triple arrow"
@@ -2342,8 +2179,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards double dash arrow",
-        "short": "left double dash arrow"
+        "default": "left double dash arrow"
       },
       "mathspeak": {
         "sbrief": "l double dash arrow"
@@ -2355,8 +2191,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards double dash arrow",
-        "short": "right double dash arrow"
+        "default": "right double dash arrow"
       },
       "mathspeak": {
         "sbrief": "R double dash arrow"
@@ -2368,8 +2203,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards triple dash arrow",
-        "short": "left triple dash arrow"
+        "default": "left triple dash arrow"
       },
       "mathspeak": {
         "sbrief": "l triple dash arrow"
@@ -2381,8 +2215,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards triple dash arrow",
-        "short": "right triple dash arrow"
+        "default": "right triple dash arrow"
       },
       "mathspeak": {
         "sbrief": "r triple dash arrow"
@@ -2394,8 +2227,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards two headed triple dash arrow",
-        "short": "right two headed triple dash arrow"
+        "default": "right two headed triple dash arrow"
       },
       "mathspeak": {
         "sbrief": "r two headed triple dash arrow"
@@ -2407,8 +2239,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards arrow with dotted stem",
-        "short": "right arrow with dotted stem"
+        "default": "right arrow with dotted stem"
       },
       "mathspeak": {
         "default": "right-arrow with dotted stem",
@@ -2421,8 +2252,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "upwards arrow to bar",
-        "short": "up arrow to bar"
+        "default": "up arrow to bar"
       },
       "mathspeak": {
         "default": "up-arrow to bar",
@@ -2435,8 +2265,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "downwards arrow to bar",
-        "short": "down arrow to bar"
+        "default": "down arrow to bar"
       },
       "mathspeak": {
         "default": "down-arrow to bar",
@@ -2449,8 +2278,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards arrow with tail with vertical stroke",
-        "short": "right arrow with tail with vertical stroke"
+        "default": "right arrow with tail with vertical stroke"
       },
       "mathspeak": {
         "default": "right-arrow with tail with vertical stroke",
@@ -2463,8 +2291,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards arrow with tail with double vertical stroke",
-        "short": "right arrow with tail with double vertical stroke"
+        "default": "right arrow with tail with double vertical stroke"
       },
       "mathspeak": {
         "default": "right-arrow with tail with double vertical stroke",
@@ -2477,8 +2304,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards two headed arrow with tail",
-        "short": "right two headed arrow with tail"
+        "default": "right two headed arrow with tail"
       },
       "mathspeak": {
         "sbrief": "r two headed arrow with tail"
@@ -2490,8 +2316,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards two headed arrow with tail with vertical stroke",
-        "short": "right two headed arrow with tail with vertical stroke"
+        "default": "right two headed arrow with tail with vertical stroke"
       },
       "mathspeak": {
         "sbrief": "r two headed arrow with tail with vertical stroke"
@@ -2503,8 +2328,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards two headed arrow with tail with double vertical stroke",
-        "short": "right two headed arrow with tail with double vertical stroke"
+        "default": "right two headed arrow with tail with double vertical stroke"
       },
       "mathspeak": {
         "sbrief": "r two headed arrow with tail with double vertical stroke"
@@ -2516,8 +2340,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards arrow tail",
-        "short": "left arrow tail"
+        "default": "left arrow tail"
       },
       "mathspeak": {
         "default": "left-arrow tail",
@@ -2530,8 +2353,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards arrow tail",
-        "short": "right arrow tail"
+        "default": "right arrow tail"
       },
       "mathspeak": {
         "default": "right-arrow tail",
@@ -2544,8 +2366,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards double arrow tail",
-        "short": "left double arrow tail"
+        "default": "left double arrow tail"
       },
       "mathspeak": {
         "sbrief": "l double arrow tail"
@@ -2557,8 +2378,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards double arrow tail",
-        "short": "right double arrow tail"
+        "default": "right double arrow tail"
       },
       "mathspeak": {
         "sbrief": "R double arrow tail"
@@ -2570,8 +2390,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards arrow to black diamond",
-        "short": "left arrow to black diamond"
+        "default": "left arrow to black diamond"
       },
       "mathspeak": {
         "default": "left-arrow to black diamond",
@@ -2584,8 +2403,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards arrow to black diamond",
-        "short": "right arrow to black diamond"
+        "default": "right arrow to black diamond"
       },
       "mathspeak": {
         "default": "right-arrow to black diamond",
@@ -2598,8 +2416,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards arrow from bar to black diamond",
-        "short": "left arrow from bar to black diamond"
+        "default": "left arrow from bar to black diamond"
       },
       "mathspeak": {
         "default": "left-arrow from bar to black diamond",
@@ -2612,8 +2429,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards arrow from bar to black diamond",
-        "short": "right arrow from bar to black diamond"
+        "default": "right arrow from bar to black diamond"
       },
       "mathspeak": {
         "default": "right-arrow from bar to black diamond",
@@ -2779,8 +2595,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "arrow pointing rightwards then curving upwards",
-        "short": "arrow pointing right then curving up"
+        "default": "arrow pointing right then curving up"
       }
     },
     "key": "2934"
@@ -2789,8 +2604,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "arrow pointing rightwards then curving downwards",
-        "short": "arrow pointing right then curving down"
+        "default": "arrow pointing right then curving down"
       }
     },
     "key": "2935"
@@ -2799,8 +2613,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "arrow pointing downwards then curving leftwards",
-        "short": "arrow pointing down then curving left"
+        "default": "arrow pointing down then curving left"
       }
     },
     "key": "2936"
@@ -2809,8 +2622,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "arrow pointing downwards then curving rightwards",
-        "short": "arrow pointing down then curving right"
+        "default": "arrow pointing down then curving right"
       }
     },
     "key": "2937"
@@ -2879,8 +2691,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "lower right semicircular clockwise arrow",
-        "short": "down right semicircular clockwise arrow"
+        "default": "down right semicircular clockwise arrow"
       },
       "mathspeak": {
         "sbrief": "d r semicircular clockwise arrow"
@@ -2892,8 +2703,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "lower left semicircular anticlockwise arrow",
-        "short": "down left semicircular anticlockwise arrow"
+        "default": "down left semicircular anticlockwise arrow"
       },
       "mathspeak": {
         "sbrief": "d l semicircular anticlockwise arrow"
@@ -2923,8 +2733,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards arrow above short leftwards arrow",
-        "short": "right arrow above short left arrow"
+        "default": "right arrow above short left arrow"
       },
       "mathspeak": {
         "default": "right-arrow above short left-arrow",
@@ -2937,8 +2746,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards arrow above short rightwards arrow",
-        "short": "left arrow above short right arrow"
+        "default": "left arrow above short right arrow"
       },
       "mathspeak": {
         "default": "left-arrow above short right-arrow",
@@ -2951,8 +2759,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "short rightwards arrow above leftwards arrow",
-        "short": "short right arrow above left arrow"
+        "default": "short right arrow above left arrow"
       },
       "mathspeak": {
         "default": "short right-arrow above left-arrow",
@@ -2965,8 +2772,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards arrow with plus below",
-        "short": "right arrow with plus below"
+        "default": "right arrow with plus below"
       },
       "mathspeak": {
         "default": "right-arrow with plus below",
@@ -2979,8 +2785,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards arrow with plus below",
-        "short": "left arrow with plus below"
+        "default": "left arrow with plus below"
       },
       "mathspeak": {
         "default": "left-arrow with plus below",
@@ -2993,8 +2798,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards arrow through x",
-        "short": "right arrow through x"
+        "default": "right arrow through x"
       },
       "mathspeak": {
         "default": "right-arrow through x",
@@ -3020,8 +2824,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "upwards two headed arrow from small circle",
-        "short": "up two headed arrow from small circle"
+        "default": "up two headed arrow from small circle"
       },
       "mathspeak": {
         "sbrief": "U two headed arrow from small circle"
@@ -3045,8 +2848,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "equals sign above rightwards arrow",
-        "short": "equals sign above right arrow"
+        "default": "equals sign above right arrow"
       },
       "mathspeak": {
         "default": "equals sign above right-arrow",
@@ -3059,8 +2861,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "tilde operator above rightwards arrow",
-        "short": "tilde operator above right arrow"
+        "default": "tilde operator above right arrow"
       },
       "mathspeak": {
         "default": "tilde operator above right-arrow",
@@ -3073,8 +2874,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards arrow above tilde operator",
-        "short": "left arrow above tilde operator"
+        "default": "left arrow above tilde operator"
       },
       "mathspeak": {
         "default": "left-arrow above tilde operator",
@@ -3087,8 +2887,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards arrow above tilde operator",
-        "short": "right arrow above tilde operator"
+        "default": "right arrow above tilde operator"
       },
       "mathspeak": {
         "default": "right-arrow above tilde operator",
@@ -3101,8 +2900,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards arrow above almost equals",
-        "short": "right arrow above almost equals"
+        "default": "right arrow above almost equals"
       },
       "mathspeak": {
         "default": "right-arrow above almost equals",
@@ -3115,8 +2913,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "less than above leftwards arrow",
-        "short": "less than above left arrow"
+        "default": "less than above left arrow"
       },
       "mathspeak": {
         "default": "less than above left-arrow",
@@ -3129,8 +2926,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards arrow through less than",
-        "short": "left arrow through less than"
+        "default": "left arrow through less than"
       },
       "mathspeak": {
         "default": "left-arrow through less than",
@@ -3143,8 +2939,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "greater than above rightwards arrow",
-        "short": "greater than above right arrow"
+        "default": "greater than above right arrow"
       },
       "mathspeak": {
         "default": "greater than above right-arrow",
@@ -3157,8 +2952,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "subset above rightwards arrow",
-        "short": "subset above right arrow"
+        "default": "subset above right arrow"
       },
       "mathspeak": {
         "default": "subset above right-arrow",
@@ -3171,8 +2965,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards arrow through subset",
-        "short": "left arrow through subset"
+        "default": "left arrow through subset"
       },
       "mathspeak": {
         "default": "left-arrow through subset",
@@ -3185,8 +2978,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "superset above leftwards arrow",
-        "short": "superset above left arrow"
+        "default": "superset above left arrow"
       },
       "mathspeak": {
         "default": "superset above left-arrow",
@@ -3277,8 +3069,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "integral with leftwards arrow with hook",
-        "short": "integral with left arrow with hook"
+        "default": "integral with left arrow with hook"
       },
       "mathspeak": {
         "default": "integral with left-arrow with hook",
@@ -3339,8 +3130,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "leftwards black arrow",
-        "short": "left black arrow"
+        "default": "left black arrow"
       },
       "mathspeak": {
         "sbrief": "L black arrow"
@@ -3352,8 +3142,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "upwards black arrow",
-        "short": "up black arrow"
+        "default": "up black arrow"
       },
       "mathspeak": {
         "sbrief": "U black arrow"
@@ -3365,8 +3154,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "downwards black arrow",
-        "short": "down black arrow"
+        "default": "down black arrow"
       },
       "mathspeak": {
         "sbrief": "D black arrow"
@@ -3438,8 +3226,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "rightwards arrow with tip downwards",
-        "short": "right arrow with tip down"
+        "default": "right arrow with tip down"
       },
       "mathspeak": {
         "default": "right-arrow with tip down",
@@ -3452,8 +3239,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "rightwards arrow with tip upwards",
-        "short": "right arrow with tip up"
+        "default": "right arrow with tip up"
       },
       "mathspeak": {
         "default": "right-arrow with tip up",
@@ -3466,8 +3252,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "leftwards arrow with tip downwards",
-        "short": "left arrow with tip down"
+        "default": "left arrow with tip down"
       },
       "mathspeak": {
         "default": "left-arrow with tip down",
@@ -3480,8 +3265,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "leftwards arrow with tip upwards",
-        "short": "left arrow with tip up"
+        "default": "left arrow with tip up"
       },
       "mathspeak": {
         "default": "left-arrow with tip up",
@@ -3507,8 +3291,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "three leftwards arrows",
-        "short": "three left arrows"
+        "default": "three left arrows"
       },
       "mathspeak": {
         "default": "three left-arrows",
@@ -3534,8 +3317,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "long leftwards squiggle arrow",
-        "short": "long left squiggle arrow"
+        "default": "long left squiggle arrow"
       },
       "mathspeak": {
         "sbrief": "long l squiggle arrow"
@@ -3547,8 +3329,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards two headed arrow with vertical stroke",
-        "short": "left two headed arrow with vertical stroke"
+        "default": "left two headed arrow with vertical stroke"
       },
       "mathspeak": {
         "sbrief": "l two headed arrow with vertical stroke"
@@ -3560,8 +3341,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards two headed arrow with double vertical stroke",
-        "short": "left two headed arrow with double vertical stroke"
+        "default": "left two headed arrow with double vertical stroke"
       },
       "mathspeak": {
         "sbrief": "l two headed arrow with double vertical stroke"
@@ -3573,8 +3353,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards two headed arrow from bar",
-        "short": "left two headed arrow from bar"
+        "default": "left two headed arrow from bar"
       },
       "mathspeak": {
         "sbrief": "l two headed arrow from bar"
@@ -3586,8 +3365,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards two headed triple dash arrow",
-        "short": "left two headed triple dash arrow"
+        "default": "left two headed triple dash arrow"
       },
       "mathspeak": {
         "sbrief": "l two headed triple dash arrow"
@@ -3599,8 +3377,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards arrow with dotted stem",
-        "short": "left arrow with dotted stem"
+        "default": "left arrow with dotted stem"
       },
       "mathspeak": {
         "default": "left-arrow with dotted stem",
@@ -3613,8 +3390,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards arrow with tail with vertical stroke",
-        "short": "left arrow with tail with vertical stroke"
+        "default": "left arrow with tail with vertical stroke"
       },
       "mathspeak": {
         "default": "left-arrow with tail with vertical stroke",
@@ -3627,8 +3403,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards arrow with tail with double vertical stroke",
-        "short": "left arrow with tail with double vertical stroke"
+        "default": "left arrow with tail with double vertical stroke"
       },
       "mathspeak": {
         "default": "left-arrow with tail with double vertical stroke",
@@ -3641,8 +3416,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards two headed arrow with tail",
-        "short": "left two headed arrow with tail"
+        "default": "left two headed arrow with tail"
       },
       "mathspeak": {
         "sbrief": "l two headed arrow with tail"
@@ -3654,8 +3428,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards two headed arrow with tail with vertical stroke",
-        "short": "left two headed arrow with tail with vertical stroke"
+        "default": "left two headed arrow with tail with vertical stroke"
       },
       "mathspeak": {
         "sbrief": "l two headed arrow with tail with vertical stroke"
@@ -3667,8 +3440,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards two headed arrow with tail with double vertical stroke",
-        "short": "left two headed arrow with tail with double vertical stroke"
+        "default": "left two headed arrow with tail with double vertical stroke"
       },
       "mathspeak": {
         "sbrief": "l two headed arrow with tail with double vertical stroke"
@@ -3680,8 +3452,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards arrow through x",
-        "short": "left arrow through x"
+        "default": "left arrow through x"
       },
       "mathspeak": {
         "default": "left-arrow through x",
@@ -3703,8 +3474,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "equals sign above leftwards arrow",
-        "short": "equals sign above left arrow"
+        "default": "equals sign above left arrow"
       },
       "mathspeak": {
         "default": "equals sign above left-arrow",
@@ -3717,8 +3487,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "reverse tilde operator above leftwards arrow",
-        "short": "reverse tilde operator above left arrow"
+        "default": "reverse tilde operator above left arrow"
       },
       "mathspeak": {
         "default": "reverse tilde operator above left-arrow",
@@ -3731,8 +3500,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards arrow above reverse almost equals",
-        "short": "left arrow above reverse almost equals"
+        "default": "left arrow above reverse almost equals"
       },
       "mathspeak": {
         "default": "left-arrow above reverse almost equals",
@@ -3745,8 +3513,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards arrow through greater than",
-        "short": "right arrow through greater than"
+        "default": "right arrow through greater than"
       },
       "mathspeak": {
         "default": "right-arrow through greater than",
@@ -3759,8 +3526,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards arrow through superset",
-        "short": "right arrow through superset"
+        "default": "right arrow through superset"
       },
       "mathspeak": {
         "default": "right-arrow through superset",
@@ -3773,8 +3539,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "leftwards quadruple arrow",
-        "short": "left quadruple arrow"
+        "default": "left quadruple arrow"
       },
       "mathspeak": {
         "sbrief": "l quadrule arrow"
@@ -3786,8 +3551,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "rightwards quadruple arrow",
-        "short": "right quadruple arrow"
+        "default": "right quadruple arrow"
       },
       "mathspeak": {
         "sbrief": "r quadrule arrow"
@@ -3799,8 +3563,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "reverse tilde operator above rightwards arrow",
-        "short": "reverse tilde operator above right arrow"
+        "default": "reverse tilde operator above right arrow"
       },
       "mathspeak": {
         "default": "reverse tilde operator above right-arrow",
@@ -3813,8 +3576,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards arrow above reverse almost equals",
-        "short": "right arrow above reverse almost equals"
+        "default": "right arrow above reverse almost equals"
       },
       "mathspeak": {
         "default": "right-arrow above reverse almost equals",
@@ -3827,8 +3589,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "tilde operator above leftwards arrow",
-        "short": "tilde operator above left arrow"
+        "default": "tilde operator above left arrow"
       },
       "mathspeak": {
         "default": "tilde operator above left-arrow",
@@ -3841,8 +3602,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards arrow above almost equals",
-        "short": "left arrow above almost equals"
+        "default": "left arrow above almost equals"
       },
       "mathspeak": {
         "default": "left-arrow above almost equals",
@@ -3855,8 +3615,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards arrow above reverse tilde operator",
-        "short": "left arrow above reverse tilde operator"
+        "default": "left arrow above reverse tilde operator"
       },
       "mathspeak": {
         "default": "left-arrow above reverse tilde operator",
@@ -3869,8 +3628,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards arrow above reverse tilde operator",
-        "short": "right arrow above reverse tilde operator"
+        "default": "right arrow above reverse tilde operator"
       },
       "mathspeak": {
         "default": "right-arrow above reverse tilde operator",
@@ -3883,8 +3641,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "halfwidth leftwards arrow",
-        "short": "halfwidth left arrow"
+        "default": "halfwidth left arrow"
       },
       "mathspeak": {
         "default": "halfwidth left-arrow",
@@ -3897,8 +3654,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "halfwidth upwards arrow",
-        "short": "halfwidth up arrow"
+        "default": "halfwidth up arrow"
       },
       "mathspeak": {
         "default": "halfwidth up-arrow",
@@ -3911,8 +3667,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "halfwidth rightwards arrow",
-        "short": "halfwidth right arrow"
+        "default": "halfwidth right arrow"
       },
       "mathspeak": {
         "default": "halfwidth right-arrow",
@@ -3925,8 +3680,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "halfwidth downwards arrow",
-        "short": "halfwidth down arrow"
+        "default": "halfwidth down arrow"
       },
       "mathspeak": {
         "default": "halfwidth down-arrow",
