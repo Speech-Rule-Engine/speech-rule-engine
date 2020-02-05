@@ -4,8 +4,7 @@
     "key": "0363",
     "mappings": {
       "default": {
-        "default": "combining latin small letter a",
-        "short": "combining a"
+        "default": "combining a"
       }
     }
   },
@@ -14,8 +13,7 @@
     "key": "0364",
     "mappings": {
       "default": {
-        "default": "combining latin small letter e",
-        "short": "combining e"
+        "default": "combining e"
       }
     }
   },
@@ -24,8 +22,7 @@
     "key": "0365",
     "mappings": {
       "default": {
-        "default": "combining latin small letter i",
-        "short": "combining i"
+        "default": "combining i"
       }
     }
   },
@@ -34,8 +31,7 @@
     "key": "0366",
     "mappings": {
       "default": {
-        "default": "combining latin small letter o",
-        "short": "combining o"
+        "default": "combining o"
       }
     }
   },
@@ -44,8 +40,7 @@
     "key": "0367",
     "mappings": {
       "default": {
-        "default": "combining latin small letter u",
-        "short": "combining u"
+        "default": "combining u"
       }
     }
   },
@@ -54,8 +49,7 @@
     "key": "0368",
     "mappings": {
       "default": {
-        "default": "combining latin small letter c",
-        "short": "combining c"
+        "default": "combining c"
       }
     }
   },
@@ -64,8 +58,7 @@
     "key": "0369",
     "mappings": {
       "default": {
-        "default": "combining latin small letter d",
-        "short": "combining d"
+        "default": "combining d"
       }
     }
   },
@@ -74,8 +67,7 @@
     "key": "036A",
     "mappings": {
       "default": {
-        "default": "combining latin small letter h",
-        "short": "combining h"
+        "default": "combining h"
       }
     }
   },
@@ -84,8 +76,7 @@
     "key": "036B",
     "mappings": {
       "default": {
-        "default": "combining latin small letter m",
-        "short": "combining m"
+        "default": "combining m"
       }
     }
   },
@@ -94,8 +85,7 @@
     "key": "036C",
     "mappings": {
       "default": {
-        "default": "combining latin small letter r",
-        "short": "combining r"
+        "default": "combining r"
       }
     }
   },
@@ -104,8 +94,7 @@
     "key": "036D",
     "mappings": {
       "default": {
-        "default": "combining latin small letter t",
-        "short": "combining t"
+        "default": "combining t"
       }
     }
   },
@@ -114,8 +103,7 @@
     "key": "036E",
     "mappings": {
       "default": {
-        "default": "combining latin small letter v",
-        "short": "combining v"
+        "default": "combining v"
       }
     }
   },
@@ -124,8 +112,7 @@
     "key": "036F",
     "mappings": {
       "default": {
-        "default": "combining latin small letter x",
-        "short": "combining x"
+        "default": "combining x"
       }
     }
   },
@@ -134,8 +121,7 @@
     "key": "1D62",
     "mappings": {
       "default": {
-        "default": "latin subscript small letter i",
-        "short": "subscript i"
+        "default": "subscript i"
       }
     }
   },
@@ -144,8 +130,7 @@
     "key": "1D63",
     "mappings": {
       "default": {
-        "default": "latin subscript small letter r",
-        "short": "subscript r"
+        "default": "subscript r"
       }
     }
   },
@@ -154,8 +139,7 @@
     "key": "1D64",
     "mappings": {
       "default": {
-        "default": "latin subscript small letter u",
-        "short": "subscript u"
+        "default": "subscript u"
       }
     }
   },
@@ -164,8 +148,7 @@
     "key": "1D65",
     "mappings": {
       "default": {
-        "default": "latin subscript small letter v",
-        "short": "subscript v"
+        "default": "subscript v"
       }
     }
   },
@@ -174,8 +157,7 @@
     "key": "1DCA",
     "mappings": {
       "default": {
-        "default": "combining latin small letter r below",
-        "short": "combining r below"
+        "default": "combining r below"
       }
     }
   },
@@ -184,8 +166,7 @@
     "key": "1DD3",
     "mappings": {
       "default": {
-        "default": "combining latin small letter flattened open a above",
-        "short": "combining flattened open a above"
+        "default": "combining flattened open a above"
       }
     }
   },
@@ -194,8 +175,7 @@
     "key": "1DD4",
     "mappings": {
       "default": {
-        "default": "combining latin small letter ae",
-        "short": "combining ae"
+        "default": "combining ae"
       }
     }
   },
@@ -204,8 +184,7 @@
     "key": "1DD5",
     "mappings": {
       "default": {
-        "default": "combining latin small letter ao",
-        "short": "combining ao"
+        "default": "combining ao"
       }
     }
   },
@@ -214,8 +193,7 @@
     "key": "1DD6",
     "mappings": {
       "default": {
-        "default": "combining latin small letter av",
-        "short": "combining av"
+        "default": "combining av"
       }
     }
   },
@@ -224,8 +202,7 @@
     "key": "1DD7",
     "mappings": {
       "default": {
-        "default": "combining latin small letter c cedilla",
-        "short": "combining c cedilla"
+        "default": "combining c cedilla"
       }
     }
   },
@@ -234,8 +211,7 @@
     "key": "1DD8",
     "mappings": {
       "default": {
-        "default": "combining latin small letter insular d",
-        "short": "combining insular d"
+        "default": "combining insular d"
       }
     }
   },
@@ -244,8 +220,7 @@
     "key": "1DD9",
     "mappings": {
       "default": {
-        "default": "combining latin small letter eth",
-        "short": "combining eth"
+        "default": "combining eth"
       }
     }
   },
@@ -254,8 +229,7 @@
     "key": "1DDA",
     "mappings": {
       "default": {
-        "default": "combining latin small letter g",
-        "short": "combining g"
+        "default": "combining g"
       }
     }
   },
@@ -264,8 +238,7 @@
     "key": "1DDB",
     "mappings": {
       "default": {
-        "default": "combining latin letter small capital g",
-        "short": "combining small cap g"
+        "default": "combining small cap G"
       },
       "mathspeak": {
         "default": "combining small upper G"
@@ -277,8 +250,7 @@
     "key": "1DDC",
     "mappings": {
       "default": {
-        "default": "combining latin small letter k",
-        "short": "combining k"
+        "default": "combining k"
       }
     }
   },
@@ -287,8 +259,7 @@
     "key": "1DDD",
     "mappings": {
       "default": {
-        "default": "combining latin small letter l",
-        "short": "combining l"
+        "default": "combining l"
       }
     }
   },
@@ -297,8 +268,7 @@
     "key": "1DDE",
     "mappings": {
       "default": {
-        "default": "combining latin letter small capital l",
-        "short": "combining small cap l"
+        "default": "combining small cap L"
       },
       "mathspeak": {
         "default": "combining small upper L"
@@ -310,8 +280,7 @@
     "key": "1DDF",
     "mappings": {
       "default": {
-        "default": "combining latin letter small capital m",
-        "short": "combining small cap m"
+        "default": "combining small cap M"
       },
       "mathspeak": {
         "default": "combining small upper M"
@@ -323,8 +292,7 @@
     "key": "1DE0",
     "mappings": {
       "default": {
-        "default": "combining latin small letter n",
-        "short": "combining n"
+        "default": "combining n"
       }
     }
   },
@@ -333,8 +301,7 @@
     "key": "1DE1",
     "mappings": {
       "default": {
-        "default": "combining latin letter small capital n",
-        "short": "combining small cap n"
+        "default": "combining small cap N"
       },
       "mathspeak": {
         "default": "combining small upper N"
@@ -346,8 +313,7 @@
     "key": "1DE2",
     "mappings": {
       "default": {
-        "default": "combining latin letter small capital r",
-        "short": "combining small cap r"
+        "default": "combining small cap R"
       },
       "mathspeak": {
         "default": "combining small upper R"
@@ -359,8 +325,7 @@
     "key": "1DE3",
     "mappings": {
       "default": {
-        "default": "combining latin small letter r rotunda",
-        "short": "combining r rotunda"
+        "default": "combining r rotunda"
       }
     }
   },
@@ -369,8 +334,7 @@
     "key": "1DE4",
     "mappings": {
       "default": {
-        "default": "combining latin small letter s",
-        "short": "combining s"
+        "default": "combining s"
       }
     }
   },
@@ -379,8 +343,7 @@
     "key": "1DE5",
     "mappings": {
       "default": {
-        "default": "combining latin small letter long s",
-        "short": "combining long s"
+        "default": "combining long s"
       }
     }
   },
@@ -389,8 +352,7 @@
     "key": "1DE6",
     "mappings": {
       "default": {
-        "default": "combining latin small letter z",
-        "short": "combining z"
+        "default": "combining z"
       }
     }
   },
@@ -399,8 +361,7 @@
     "key": "2071",
     "mappings": {
       "default": {
-        "default": "superscript latin small letter i",
-        "short": "superscript i"
+        "default": "superscript i"
       }
     }
   },
@@ -409,8 +370,7 @@
     "key": "207F",
     "mappings": {
       "default": {
-        "default": "superscript latin small letter n",
-        "short": "superscript n"
+        "default": "superscript n"
       }
     }
   },
@@ -419,8 +379,7 @@
     "key": "2090",
     "mappings": {
       "default": {
-        "default": "latin subscript small letter a",
-        "short": "subscript a"
+        "default": "subscript a"
       }
     }
   },
@@ -429,8 +388,7 @@
     "key": "2091",
     "mappings": {
       "default": {
-        "default": "latin subscript small letter e",
-        "short": "subscript e"
+        "default": "subscript e"
       }
     }
   },
@@ -439,8 +397,7 @@
     "key": "2092",
     "mappings": {
       "default": {
-        "default": "latin subscript small letter o",
-        "short": "subscript o"
+        "default": "subscript o"
       }
     }
   },
@@ -449,8 +406,7 @@
     "key": "2093",
     "mappings": {
       "default": {
-        "default": "latin subscript small letter x",
-        "short": "subscript x"
+        "default": "subscript x"
       }
     }
   },
@@ -459,8 +415,7 @@
     "key": "2094",
     "mappings": {
       "default": {
-        "default": "latin subscript small letter schwa",
-        "short": "subscript schwa"
+        "default": "subscript schwa"
       }
     }
   },
@@ -469,8 +424,7 @@
     "key": "2095",
     "mappings": {
       "default": {
-        "default": "latin subscript small letter h",
-        "short": "subscript h"
+        "default": "subscript h"
       }
     }
   },
@@ -479,8 +433,7 @@
     "key": "2096",
     "mappings": {
       "default": {
-        "default": "latin subscript small letter k",
-        "short": "subscript k"
+        "default": "subscript k"
       }
     }
   },
@@ -489,8 +442,7 @@
     "key": "2097",
     "mappings": {
       "default": {
-        "default": "latin subscript small letter l",
-        "short": "subscript l"
+        "default": "subscript l"
       }
     }
   },
@@ -499,8 +451,7 @@
     "key": "2098",
     "mappings": {
       "default": {
-        "default": "latin subscript small letter m",
-        "short": "subscript m"
+        "default": "subscript m"
       }
     }
   },
@@ -509,8 +460,7 @@
     "key": "2099",
     "mappings": {
       "default": {
-        "default": "latin subscript small letter n",
-        "short": "subscript n"
+        "default": "subscript n"
       }
     }
   },
@@ -519,8 +469,7 @@
     "key": "209A",
     "mappings": {
       "default": {
-        "default": "latin subscript small letter p",
-        "short": "subscript p"
+        "default": "subscript p"
       }
     }
   },
@@ -529,8 +478,7 @@
     "key": "209B",
     "mappings": {
       "default": {
-        "default": "latin subscript small letter s",
-        "short": "subscript s"
+        "default": "subscript s"
       }
     }
   },
@@ -539,8 +487,7 @@
     "key": "209C",
     "mappings": {
       "default": {
-        "default": "latin subscript small letter t",
-        "short": "subscript t"
+        "default": "subscript t"
       }
     }
   },
@@ -549,8 +496,7 @@
     "key": "2C7C",
     "mappings": {
       "default": {
-        "default": "latin subscript small letter j",
-        "short": "subscript j"
+        "default": "subscript j"
       }
     }
   },
@@ -559,8 +505,7 @@
     "key": "1F12A",
     "mappings": {
       "default": {
-        "default": "tortoise shell bracketed latin capital letter s",
-        "short": "tortoise shell bracketed cap s"
+        "default": "tortoise shell bracketed cap S"
       },
       "mathspeak": {
         "default": "tortoise shell bracketed upper S"
@@ -572,8 +517,7 @@
     "key": "1F12B",
     "mappings": {
       "default": {
-        "default": "circled italic latin capital letter c",
-        "short": "circled italic cap c"
+        "default": "circled italic cap C"
       },
       "mathspeak": {
         "default": "circled italic upper C"
@@ -585,8 +529,7 @@
     "key": "1F12C",
     "mappings": {
       "default": {
-        "default": "circled italic latin capital letter r",
-        "short": "circled italic cap r"
+        "default": "circled italic cap R"
       },
       "mathspeak": {
         "default": "circled italic upper R"
@@ -598,8 +541,7 @@
     "key": "1F18A",
     "mappings": {
       "default": {
-        "default": "crossed negative squared latin capital letter p",
-        "short": "crossed negative squared cap p"
+        "default": "crossed negative squared cap P"
       },
       "mathspeak": {
         "default": "crossed negative squared upper P"
