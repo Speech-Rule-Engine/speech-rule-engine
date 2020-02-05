@@ -1,5 +1,15 @@
 [{"locale": "en"},
-  {
+    {
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "italic h",
+        "physics": "planck constant"
+      }
+    },
+    "key": "210E"
+  },
+ {
     "category": "Mn",
     "key": "0363",
     "mappings": {
