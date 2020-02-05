@@ -2457,7 +2457,7 @@ sre.MathspeakCharEnglishTest.prototype.testMathspeakChars = function() {
   this.executeCharTest('ℽ', ['double struck gamma', 'double struck gamma', 'double struck gamma']);
   this.executeCharTest('ℾ', ['double struck upper Gamma', 'double struck upper Gamma', 'double struck upper Gamma']);
   this.executeCharTest('ℿ', ['double struck upper Pi', 'double struck upper Pi', 'double struck upper Pi']);
-  this.executeCharTest('⅀', ['double struck n ary summation', 'double struck n ary summation', 'double struck n ary summation']);
+  this.executeCharTest('⅀', ['double struck sigma summation', 'double struck sigma summation', 'double struck sigma summation']);
   this.executeCharTest('ⅅ', ['double struck italic upper D', 'double struck italic upper D', 'double struck italic upper D']);
   this.executeCharTest('ⅆ', ['double struck italic d', 'double struck italic d', 'double struck italic d']);
   this.executeCharTest('ⅇ', ['double struck italic e', 'double struck italic e', 'double struck italic e']);
