@@ -1190,11 +1190,11 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'underbar', 'self::enclose', '@role="bottom"');
   defineRule(
       'leftbar', 'mathspeak.default',
-      '[t] "vertical-bar"; [n] children/*[1]',
+      '[t] "vertical bar"; [n] children/*[1]',
       'self::enclose', '@role="left"');
   defineRule(
       'rightbar', 'mathspeak.default',
-      '[n] children/*[1]; [t] "vertical-bar"',
+      '[n] children/*[1]; [t] "vertical bar"',
       'self::enclose', '@role="right"');
 
   // Crossout

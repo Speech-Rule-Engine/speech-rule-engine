@@ -310,7 +310,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "broken bar"
+        "default": "broken vertical bar"
       }
     },
     "key": "00A6"
@@ -7897,7 +7897,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "broken bar"
+        "default": "broken vertical bar"
       }
     },
     "key": "FFE4"
