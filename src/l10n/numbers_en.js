@@ -67,13 +67,16 @@ sre.Numbers.en.hundredsToWords_ = function(number) {
   var n = number % 1000;
   var str = '';
   str += sre.Numbers.en.onesNumbers_[Math.floor(n / 100)] ?
-      sre.Numbers.en.onesNumbers_[Math.floor(n / 100)] + '-hundred' : '';
+      sre.Numbers.en.onesNumbers_[Math.floor(n / 100)] +
+      sre.Numbers.en.NUMBERS.numSep + 'hundred' : '';
   n = n % 100;
   if (n) {
-    str += str ? '-' : '';
+    str += str ? sre.Numbers.en.NUMBERS.numSep : '';
     str += sre.Numbers.en.onesNumbers_[n] ||
         (sre.Numbers.en.tensNumbers_[Math.floor(n / 10)] +
-        (n % 10 ? '-' + sre.Numbers.en.onesNumbers_[n % 10] : ''));
+         (n % 10 ?
+          sre.Numbers.en.NUMBERS.numSep + sre.Numbers.en.onesNumbers_[n % 10] :
+          ''));
   }
   return str;
 };
@@ -183,5 +186,6 @@ sre.Numbers.en.NUMBERS = {
   simpleOrdinal: sre.Numbers.en.simpleOrdinal,
   numberToWords: sre.Numbers.en.numberToWords,
   numberToOrdinal: sre.Numbers.en.numberToOrdinal,
-  vulgarSep: ' '
+  vulgarSep: ' ',
+  numSep: ' '  // TODO: For simple speech output this should be different.
 };
