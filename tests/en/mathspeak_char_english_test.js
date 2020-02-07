@@ -3311,7 +3311,7 @@ sre.MathspeakCharEnglishTest.prototype.testMathspeakChars = function() {
   this.executeCharTest('£', ['pound sign', 'pound sign', 'pound sign']);
   this.executeCharTest('¤', ['currency sign', 'currency sign', 'currency sign']);
   this.executeCharTest('¥', ['yen sign', 'yen sign', 'yen sign']);
-  this.executeCharTest('¦', ['broken bar', 'broken bar', 'broken bar']);
+  this.executeCharTest('¦', ['broken vertical bar', 'broken vertical bar', 'broken vertical bar']);
   this.executeCharTest('§', ['section sign', 'section sign', 'section sign']);
   this.executeCharTest('¨', ['two dots', 'two dots', 'two dots']);
   this.executeCharTest('©', ['copyright sign', 'copyright sign', 'copyright sign']);
@@ -4126,7 +4126,7 @@ sre.MathspeakCharEnglishTest.prototype.testMathspeakChars = function() {
   this.executeCharTest('￡', ['pound sign', 'pound sign', 'pound sign']);
   this.executeCharTest('￢', ['not sign', 'not sign', 'not sign']);
   this.executeCharTest('￣', ['bar', 'bar', 'bar']);
-  this.executeCharTest('￤', ['broken bar', 'broken bar', 'broken bar']);
+  this.executeCharTest('￤', ['broken vertical bar', 'broken vertical bar', 'broken vertical bar']);
   this.executeCharTest('￥', ['yen sign', 'yen sign', 'yen sign']);
   this.executeCharTest('￦', ['won sign', 'won sign', 'won sign']);
   this.executeCharTest('￨', ['halfwidth forms light vertical', 'halfwidth forms light vertical', 'halfwidth forms light vertical']);
