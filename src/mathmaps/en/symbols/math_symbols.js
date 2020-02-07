@@ -665,7 +665,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "low single quotation mark"
+        "default": "low right single quotation mark"
       }
     },
     "key": "201A"
@@ -674,7 +674,7 @@
     "category": "Pi",
     "mappings": {
       "default": {
-        "default": "single reversed comma quotation mark"
+        "default": "left reversed single quotation mark"
       }
     },
     "key": "201B"
@@ -701,7 +701,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "double low comma quotation mark"
+        "default": " low right double quotation mark"
       }
     },
     "key": "201E"
@@ -710,7 +710,7 @@
     "category": "Pi",
     "mappings": {
       "default": {
-        "default": "double reversed comma quotation mark"
+        "default": "left reversed double quotation mark"
       }
     },
     "key": "201F"
@@ -2272,7 +2272,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "greater than or equals to"
+        "default": "greater than or equals"
       },
       "clearspeak": {
         "default": "is greater than or equal to"
@@ -2311,7 +2311,7 @@
         "default": "less than but not equals"
       },
       "clearspeak": {
-        "default": "is less than but not equals to"
+        "default": "is less than but not equal to"
       }
     },
     "key": "2268"
@@ -2323,7 +2323,7 @@
         "default": "greater than but not equals"
       },
       "clearspeak": {
-        "default": "is greater than but not equals to"
+        "default": "is greater than but not equal to"
       }
     },
     "key": "2269"
@@ -2401,7 +2401,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "neither less than nor equals to"
+        "default": "neither less than nor equals"
       },
       "clearspeak": {
         "default": "is neither less than nor equal to"
@@ -2413,7 +2413,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "neither greater than nor equals to"
+        "default": "neither greater than nor equals"
       },
       "clearspeak": {
         "default": "is neither greater than nor equal to"
@@ -4001,7 +4001,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "mathematical rising diagonal"
+        "default": "rising diagonal"
       }
     },
     "key": "27CB"
@@ -4019,7 +4019,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "mathematical falling diagonal"
+        "default": "falling diagonal"
       }
     },
     "key": "27CD"
