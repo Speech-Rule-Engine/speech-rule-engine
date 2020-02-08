@@ -99,9 +99,9 @@ sre.ClearspeakEnglishIssues.prototype.testIssue320 = function() {
       '<mo minsize="150%">|</mo></mrow><mn>2</mn></msup><mo>=</mo>' +
       '<mn>0</mn></mrow>',
       'open paren, the fraction with numerator partial-differential squared, ' +
-      'and denominator, the partial-differential of x squared, plus, the ' +
-      'fraction with numerator  partial-differential squared, and ' +
-      'denominator, the partial-differential of y squared, close paren, ' +
+      'and denominator partial-differential x squared, plus, the ' +
+      'fraction with numerator partial-differential squared, and ' +
+      'denominator partial-differential y squared, close paren, ' +
       'times, the absolute value of phi times, open paren, x plus normal i, ' +
       'y, close paren, squared equals 0');
 };
