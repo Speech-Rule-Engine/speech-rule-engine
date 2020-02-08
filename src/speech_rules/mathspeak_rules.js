@@ -841,6 +841,10 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'cube', 'mathspeak.default', 'mathspeak.brief');
   defineSpecialisedRule(
       'cube', 'mathspeak.default', 'mathspeak.sbrief');
+  defineRuleAlias(
+      'cube', 'self::superscript', 'children/*[2]',
+      'children/*[2][text()=3]', '@embellished',
+      'children/*[1][@role="prefix operator"]');
 
   // Primes
   // This rule uses some redundancy for ordering!
