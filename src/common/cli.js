@@ -271,7 +271,7 @@ sre.Cli.prototype.commandLine = function() {
              processor, 'enriched').
       option('-g, --generate <depth>', 'Include generated speech in enriched' +
              ' MathML (with -m option only).', set, 'speech').
-      option('-r, --structure', 'Include structure attribute in enriched' +
+      option('-w, --structure', 'Include structure attribute in enriched' +
              ' MathML (with -m option only).', set, 'structure').
       option('').
       option('-P, --pprint', 'Pretty print output whenever possible.',
