@@ -122,6 +122,7 @@ sre.AlphabetGenerator.makeDomains_ = function() {
  * @param {sre.MathCompoundStore} store The current speech rule store.
  */
 sre.AlphabetGenerator.generate = function(locale, store) {
+  var oldLocale = sre.Engine.getInstance().locale;
   sre.Engine.getInstance().locale = locale;
   sre.L10n.setLocale();
   store.addSymbolRules({locale: locale});
@@ -141,6 +142,8 @@ sre.AlphabetGenerator.generate = function(locale, store) {
         store, keys, letters, alphabet, int.font, int.category, !!int.capital);
     }
   }
+  sre.Engine.getInstance().locale = oldLocale;
+  sre.L10n.setLocale();
 };
 
 
