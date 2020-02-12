@@ -1178,9 +1178,9 @@ sre.MathspeakFrenchTest.prototype.testSample_8_9_2 = function() {
       '<mfrac><mrow><mi>d</mi><msup><mi>f</mi><mrow><mo>\'</mo><mo>\'</mo>' +
       '</mrow></msup><mrow><mo>(</mo><mi>y</mi><mo>)</mo></mrow></mrow>' +
       '<mrow><mi>d</mi><mi>y</mi></mrow></mfrac></mrow>';
-  this.executeRuleTest(mml, 'f triple-prime parenthèse gauche y parenthèse droite égale début fraction d f double-prime parenthèse gauche y parenthèse droite sur d y fin fraction', 'default');
-  this.executeRuleTest(mml, 'f triple-prime parenthèse gauche y parenthèse droite égale début frac d f double-prime parenthèse gauche y parenthèse droite sur d y fin frac', 'brief');
-  this.executeRuleTest(mml, 'f triple-prime parenthèse gauche y parenthèse droite égale frac d f double-prime parenthèse gauche y parenthèse droite sur d y fin frac', 'sbrief');
+  this.executeRuleTest(mml, 'f triple prime parenthèse gauche y parenthèse droite égale début fraction d f double prime parenthèse gauche y parenthèse droite sur d y fin fraction', 'default');
+  this.executeRuleTest(mml, 'f triple prime parenthèse gauche y parenthèse droite égale début frac d f double prime parenthèse gauche y parenthèse droite sur d y fin frac', 'brief');
+  this.executeRuleTest(mml, 'f triple prime parenthèse gauche y parenthèse droite égale frac d f double prime parenthèse gauche y parenthèse droite sur d y fin frac', 'sbrief');
 };
 
 
@@ -1191,9 +1191,9 @@ sre.MathspeakFrenchTest.prototype.testSample_8_10_1 = function() {
   var mml = '<mrow><msup><mi>ρ</mi><mo>\'</mo></msup><mo>=</mo><msubsup>' +
       '<mi>ρ</mi><mo>+</mo><mo>\'</mo></msubsup><mo>+</mo><msubsup>' +
       '<mi>ρ</mi><mo>-</mo><mo>\'</mo></msubsup></mrow>';
-  this.executeRuleTest(mml, 'rho prime égale rho prime indice plus position de base plus rho prime indice moins', 'default');
-  this.executeRuleTest(mml, 'rho prime égale rho prime sub plus position de base plus rho prime sub moins', 'brief');
-  this.executeRuleTest(mml, 'rho prime égale rho prime sub plus position de base plus rho prime sub moins', 'sbrief');
+  this.executeRuleTest(mml, 'rhô prime égale rhô prime indice plus position de base plus rhô prime indice moins', 'default');
+  this.executeRuleTest(mml, 'rhô prime égale rhô prime sub plus position de base plus rhô prime sub moins', 'brief');
+  this.executeRuleTest(mml, 'rhô prime égale rhô prime sub plus position de base plus rhô prime sub moins', 'sbrief');
 };
 
 

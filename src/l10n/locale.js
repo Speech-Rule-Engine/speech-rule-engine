@@ -170,6 +170,9 @@ sre.Locale.prefixCombiner = function(letter, font, cap) {
 };
 
 
+/**
+ * @type {sre.Locale.Combiner}
+ */
 sre.Locale.postfixCombiner = function(letter, font, cap) {
   letter = cap ? cap + ' ' + letter : letter;
   return font ? letter + ' ' + font : letter;

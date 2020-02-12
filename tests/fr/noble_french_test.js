@@ -2592,9 +2592,9 @@ sre.NobleFrenchTest.prototype.testSample_103 = function() {
       '<mo>)</mo>' +
       '</msqrt>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'f égale 1,013 début fraction W majuscule sur L majuscule au carré fin fraction début racine carrée début fraction E majuscule sur rho fin fraction fin racine carrée début racine carrée parenthèse gauche 1 plus 0,293 début fraction L majuscule au carré sur EW au carré fin fraction sigma parenthèse droite fin racine carrée', 'default');
-  this.executeRuleTest(mml, 'f égale 1,013 début frac W majuscule sur L majuscule au carré fin frac début racine carrée début frac E majuscule sur rho fin frac fin racine carrée début racine carrée parenthèse gauche 1 plus 0,293 début frac L majuscule au carré sur EW au carré fin frac sigma parenthèse droite fin racine carrée', 'brief');
-  this.executeRuleTest(mml, 'f égale 1,013 frac W majuscule sur L majuscule au carré fin frac racine carrée frac E majuscule sur rho fin frac fin racine carrée racine carrée parenthèse gauche 1 plus 0,293 frac L majuscule au carré sur EW au carré fin frac sigma parenthèse droite fin racine carrée',
+  this.executeRuleTest(mml, 'f égale 1,013 début fraction W majuscule sur L majuscule au carré fin fraction début racine carrée début fraction E majuscule sur rhô fin fraction fin racine carrée début racine carrée parenthèse gauche 1 plus 0,293 début fraction L majuscule au carré sur EW au carré fin fraction sigma parenthèse droite fin racine carrée', 'default');
+  this.executeRuleTest(mml, 'f égale 1,013 début frac W majuscule sur L majuscule au carré fin frac début racine carrée début frac E majuscule sur rhô fin frac fin racine carrée début racine carrée parenthèse gauche 1 plus 0,293 début frac L majuscule au carré sur EW au carré fin frac sigma parenthèse droite fin racine carrée', 'brief');
+  this.executeRuleTest(mml, 'f égale 1,013 frac W majuscule sur L majuscule au carré fin frac racine carrée frac E majuscule sur rhô fin frac fin racine carrée racine carrée parenthèse gauche 1 plus 0,293 frac L majuscule au carré sur EW au carré fin frac sigma parenthèse droite fin racine carrée',
                        'sbrief');
 };
 

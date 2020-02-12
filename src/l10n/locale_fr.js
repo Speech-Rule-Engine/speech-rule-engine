@@ -25,6 +25,12 @@ goog.require('sre.Messages');
 goog.require('sre.Numbers.fr');
 
 
+var combiner = function(letter, font, cap) {
+  letter = cap ? letter + ' ' + cap : letter;
+  return font ? letter + ' en ' + font : letter;
+};
+
+
 /**
  * @type {sre.Locale.Messages}
  */
@@ -93,7 +99,7 @@ sre.Locale.fr = {
     'normal': 'normal',
     'oldstyle': 'ancien',
     'oldstyle-bold': 'ancien gras',
-    'script': 'script',
+    'script': 'ronde', // Special with 'de ronde'
     'sans-serif': 'sans empattement',
     'sans-serif-italic': 'sans empattement italique',
     'sans-serif-bold': 'sans empattement gras',
@@ -180,15 +186,48 @@ sre.Locale.fr = {
 
   NUMBERS: sre.Numbers.fr.NUMBERS,
 
-  ALPHABETS: {},
+  ALPHABETS: {
+    latinSmall: [
+      'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+      'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
+    ],
+    latinCap: [
+      'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+      'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+    ],
+    greekSmall: [
+      'nabla',  // This is here as it is small.
+      'alpha', 'bêta', 'gamma', 'delta', 'epsilon', 'zêta', 'êta', 'thêta',
+      'iota', 'kappa', 'lambda', 'mû', 'nû', 'xi', 'omicron', 'pi', 'rhô',
+      'sigma final', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'oméga',
+      // Symbols below
+      'dérivée partielle', 'epsilon', 'thêta', 'kappa', 'phi', 'rhô', 'pi'      
+    ],
+    greekCap: [
+      'Alpha', 'Bêta', 'Gamma', 'Delta', 'Epsilon', 'Zêta', 'Êta', 'Thêta',
+      'Iota', 'Kappa', 'Lambda', 'Mû', 'Nû', 'Xi', 'Omicron', 'Pi', 'Rhô',
+      'Thêta', // Theta symbol
+      'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Oméga'
+    ]
+  },
 
-  ALPHABET_TRANSFORMERS: {},
+  ALPHABET_TRANSFORMERS: {
+    digit: {
+      default: function(n) {
+          return n === 0 ? 'zero' : sre.Numbers.fr.numberToWords(n);},
+      mathspeak: function(n) {return n.toString();},
+      clearspeak: function(n) {return n.toString();}},
+    letter: {
+      default: function(n) {return n;}
+    }
+  },
 
-  ALPHABET_PREFIXES: {},
+  ALPHABET_PREFIXES: {
+    capPrefix: {default: 'majuscule'},
+    smallPrefix: {default: ''},
+    digitPrefix: {default: ''}
+  },
 
-  ALPHABET_COMBINER: function(letter, font, cap) {
-      letter = cap ? cap + ' ' + letter : letter;
-      return font ? font + ' ' + letter : letter;
-  }
+  ALPHABET_COMBINER: combiner
 
 };
