@@ -2407,6 +2407,8 @@ sre.SemanticProcessor.testColumns_ = function(columns, index, pred) {
 sre.SemanticProcessor.MATHJAX_FONTS = {
   '-tex-caligraphic': sre.SemanticAttr.Font.CALIGRAPHIC,
   '-tex-caligraphic-bold': sre.SemanticAttr.Font.CALIGRAPHICBOLD,
+  '-tex-calligraphic': sre.SemanticAttr.Font.CALIGRAPHIC,
+  '-tex-calligraphic-bold': sre.SemanticAttr.Font.CALIGRAPHICBOLD,
   '-tex-oldstyle': sre.SemanticAttr.Font.OLDSTYLE,
   '-tex-oldstyle-bold': sre.SemanticAttr.Font.OLDSTYLEBOLD,
   '-tex-mathit': sre.SemanticAttr.Font.ITALIC
