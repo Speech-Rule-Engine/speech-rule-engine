@@ -634,11 +634,7 @@ sre.MmlcloudEnglishTest.prototype.testEncloseLeftbar = function() {
  */
 sre.MmlcloudEnglishTest.prototype.testEncloseRightbar = function() {
   this.executeRuleTest('<menclose notation="right"><mi>a</mi></menclose>',
-<<<<<<< HEAD
                        'a vertical bar', 'default');
-=======
-                       'a vertical-bar', 'default');
->>>>>>> explicit_font_tests
 };
 
 
@@ -658,8 +654,6 @@ sre.MmlcloudEnglishTest.prototype.testIssue279 = function() {
       ' right parenthesis EndLabel EndLayout');
 };
 
-<<<<<<< HEAD
-=======
 
 /**
  * Tests for issue #320 and related expressions.
@@ -695,5 +689,3 @@ sre.MmlcloudEnglishTest.prototype.testIssue320 = function() {
       ' EndFraction right-parenthesis StartAbsoluteValue phi left-parenthesis' +
       ' x plus normal i y right-parenthesis EndAbsoluteValue squared equals 0');
 };
-
->>>>>>> explicit_font_tests
