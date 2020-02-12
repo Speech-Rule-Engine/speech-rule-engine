@@ -50,7 +50,6 @@ sre.MathspeakFrenchFontTest = function() {
    * @override
    */
   this.semantics = true;
-  this.actual = true;
 
   this.setActive('MathspeakFrenchFont');
 };

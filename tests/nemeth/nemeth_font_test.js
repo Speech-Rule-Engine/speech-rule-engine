@@ -55,7 +55,6 @@ sre.NemethFontTest = function() {
    * @override
    */
   this.semantics = true;
-  this.actual = true;
 
   this.setActive('NemethFont');
 };
