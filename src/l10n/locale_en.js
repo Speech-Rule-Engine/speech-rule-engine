@@ -98,23 +98,6 @@ sre.Locale.en = {
     'unknown': 'unknown'
   },
 
-  EMBELLISH: {
-    // Embellishments
-    // TODO: Here we need specialist combiners!
-    'super': 'super',
-    'sub': 'sub',
-    'circled': 'circled',
-    'parenthesized': 'parenthesized',
-    'period': ['period', sre.Locale.postfixCombiner],
-    'negative-circled': 'black circled',
-    'double-circled': 'double circled',
-    'circled-sans-serif': 'circled sans serif',
-    'negative-circled-sans-serif': 'black circled sans serif',
-    'comma': ['comma', sre.Locale.postfixCombiner],
-    'squared': 'squared',
-    'negative-squared': 'black squared'
-  },
-
   ROLE: {
     // Infixoperators
     'addition': 'addition',
