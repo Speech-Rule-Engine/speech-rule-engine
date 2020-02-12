@@ -74,7 +74,46 @@ sre.Locale.en = {
 
   MS_ROOT_INDEX: { },
 
-  FONT: { },
+  FONT: {
+    'bold': 'bold',
+    'bold-fraktur': 'bold fraktur',
+    'bold-italic': 'bold italic',
+    'bold-script': 'bold script',
+    'caligraphic': 'calligraphic',
+    'caligraphic-bold': 'calligraphic bold',
+    'double-struck': 'double struck',
+    'double-struck-italic': 'double struck italic',
+    'fraktur': 'fraktur',
+    'fullwidth': 'fullwidth',
+    'italic': 'italic',
+    'monospace': 'monospace',
+    'normal': 'normal',
+    'oldstyle': 'oldstyle',
+    'oldstyle-bold': 'oldstyle bold',
+    'script': 'script',
+    'sans-serif': 'sans serif',
+    'sans-serif-italic': 'sans serif italic',
+    'sans-serif-bold': 'sans serif bold',
+    'sans-serif-bold-italic': 'sans serif bold italic',
+    'unknown': 'unknown'
+  },
+
+  EMBELLISH: {
+    // Embellishments
+    // TODO: Here we need specialist combiners!
+    'super': 'super',
+    'sub': 'sub',
+    'circled': 'circled',
+    'parenthesized': 'parenthesized',
+    'period': ['period', sre.Locale.postfixCombiner],
+    'negative-circled': 'black circled',
+    'double-circled': 'double circled',
+    'circled-sans-serif': 'circled sans serif',
+    'negative-circled-sans-serif': 'black circled sans serif',
+    'comma': ['comma', sre.Locale.postfixCombiner],
+    'squared': 'squared',
+    'negative-squared': 'black squared'
+  },
 
   ROLE: {
     // Infixoperators
