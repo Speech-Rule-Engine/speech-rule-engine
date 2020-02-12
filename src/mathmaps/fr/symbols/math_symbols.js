@@ -841,15 +841,6 @@
     "category": "Sm"
   },
   {
-    "key": "2202",
-    "mappings": {
-      "default": {
-        "default": "dérivée partielle"
-      }
-    },
-    "category": "Sm"
-  },
-  {
     "key": "2203",
     "mappings": {
       "default": {
@@ -881,15 +872,6 @@
     "mappings": {
       "default": {
         "default": "incrément"
-      }
-    },
-    "category": "Sm"
-  },
-  {
-    "key": "2207",
-    "mappings": {
-      "default": {
-        "default": "nabla"
       }
     },
     "category": "Sm"
