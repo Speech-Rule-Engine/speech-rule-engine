@@ -1390,10 +1390,10 @@ sre.MathspeakFrenchTest.prototype.testSample_9_3_3 = function() {
       '<mo>&#x2026;</mo></mrow><mn>5</mn></mroot></mrow><mn>4</mn></mroot>' +
       '</mrow><mn>3</mn></mroot></mrow></msqrt><mo>,</mo><mi>x</mi>' +
       '<mo>∈</mo><mi>ℝ</mi></mrow>';
-  this.executeRuleTest(mml, 'x exposant e moins 2 position de base égale début racine carrée imbriquée x début racine cubique imbriquée x indice du radical imbriquée 4 début racine imbriquée x indice du radical 5 début racine x points de suspension fin racine fin racine imbriquée fin racine cubique imbriquée fin racine carrée imbriquée virgule x appartient à R majuscule en ajouré',
+  this.executeRuleTest(mml, 'x exposant e moins 2 position de base égale début racine carrée imbriquée x début racine cubique imbriquée x indice du radical imbriquée 4 début racine imbriquée x indice du radical 5 début racine x points de suspension fin racine fin racine imbriquée fin racine cubique imbriquée fin racine carrée imbriquée virgule x appartient à R majuscule ajouré',
                        'default');
-  this.executeRuleTest(mml, 'x sup e moins 2 position de base égale début racine carrée imbriquée x début racine cubique imbriquée x indice du radical imbriquée 4 début racine imbriquée x indice du radical 5 début racine x points de suspension fin racine fin racine imbriquée fin racine cubique imbriquée fin racine carrée imbriquée virgule x appartient à R majuscule en ajouré', 'brief');
-  this.executeRuleTest(mml, 'x sup e moins 2 position de base égale racine carrée imbriquée x racine cubique imbriquée x indice imbriquée 4 racine imbriquée x indice 5 racine x points de suspension fin racine fin racine imbriquée fin racine cubique imbriquée fin racine carrée imbriquée virgule x appartient à R majuscule en ajouré', 'sbrief');
+  this.executeRuleTest(mml, 'x sup e moins 2 position de base égale début racine carrée imbriquée x début racine cubique imbriquée x indice du radical imbriquée 4 début racine imbriquée x indice du radical 5 début racine x points de suspension fin racine fin racine imbriquée fin racine cubique imbriquée fin racine carrée imbriquée virgule x appartient à R majuscule ajouré', 'brief');
+  this.executeRuleTest(mml, 'x sup e moins 2 position de base égale racine carrée imbriquée x racine cubique imbriquée x indice imbriquée 4 racine imbriquée x indice 5 racine x points de suspension fin racine fin racine imbriquée fin racine cubique imbriquée fin racine carrée imbriquée virgule x appartient à R majuscule ajouré', 'sbrief');
 };
 
 

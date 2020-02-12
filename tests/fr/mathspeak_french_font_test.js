@@ -77,19 +77,19 @@ goog.inherits(sre.MathspeakFrenchFontTest, sre.AbstractRuleTest);
  */
 sre.MathspeakFrenchFontTest.prototype.testLatinMathfontsUpper = function() {
   this.executeRuleTest('<mi>&#x0041;</mi>', 'A majuscule', 'default');
-  this.executeRuleTest('<mi>&#xFF21;</mi>', 'upper A', 'default');
+  this.executeRuleTest('<mi>&#xFF21;</mi>', 'A majuscule', 'default');
   this.executeRuleTest('<mi>&#x1D400;</mi>', 'A majuscule en gras', 'default');
   this.executeRuleTest('<mi>&#x1D434;</mi>', 'A majuscule en italique', 'default');
   this.executeRuleTest('<mi>&#x1D468;</mi>', 'A majuscule en italique gras', 'default');
-  this.executeRuleTest('<mi>&#x1D49C;</mi>', 'A majuscule en script', 'default');
-  this.executeRuleTest('<mi>&#x1D4D0;</mi>', 'A majuscule en script gras', 'default');
+  this.executeRuleTest('<mi>&#x1D49C;</mi>', 'A majuscule de ronde', 'default');
+  this.executeRuleTest('<mi>&#x1D4D0;</mi>', 'A majuscule de ronde en gras', 'default');
   this.executeRuleTest('<mi>&#x1D504;</mi>', 'A majuscule en gothique', 'default');
-  this.executeRuleTest('<mi>&#x1D538;</mi>', 'A majuscule en ajouré', 'default');
+  this.executeRuleTest('<mi>&#x1D538;</mi>', 'A majuscule ajouré', 'default');
   this.executeRuleTest('<mi>&#x1D56C;</mi>', 'A majuscule en gothique gras', 'default');
-  this.executeRuleTest('<mi>&#x1D5A0;</mi>', 'A majuscule en sans empattement', 'default');
-  this.executeRuleTest('<mi>&#x1D5D4;</mi>', 'A majuscule en sans empattement gras', 'default');
-  this.executeRuleTest('<mi>&#x1D608;</mi>', 'A majuscule en sans empattement italique', 'default');
-  this.executeRuleTest('<mi>&#x1D63C;</mi>', 'A majuscule en sans empattement italique gras', 'default');
+  this.executeRuleTest('<mi>&#x1D5A0;</mi>', 'A majuscule sans empattement', 'default');
+  this.executeRuleTest('<mi>&#x1D5D4;</mi>', 'A majuscule en gras sans empattement', 'default');
+  this.executeRuleTest('<mi>&#x1D608;</mi>', 'A majuscule en italique sans empattement', 'default');
+  this.executeRuleTest('<mi>&#x1D63C;</mi>', 'A majuscule en italique gras sans empattement', 'default');
   this.executeRuleTest('<mi>&#x1D670;</mi>', 'A majuscule en chasse fixe', 'default');
 };
 
@@ -102,8 +102,8 @@ sre.MathspeakFrenchFontTest.prototype.testGreekMathfontsUpper = function() {
   this.executeRuleTest('<mi>&#x1D6A8;</mi>', 'Alpha majuscule en gras', 'default');
   this.executeRuleTest('<mi>&#x1D6E2;</mi>', 'Alpha majuscule en italique', 'default');
   this.executeRuleTest('<mi>&#x1D71C;</mi>', 'Alpha majuscule en italique gras', 'default');
-  this.executeRuleTest('<mi>&#x1D756;</mi>', 'Alpha majuscule en sans empattement gras', 'default');
-  this.executeRuleTest('<mi>&#x1D790;</mi>', 'Alpha majuscule en sans empattement italique gras', 'default');
+  this.executeRuleTest('<mi>&#x1D756;</mi>', 'Alpha majuscule en gras sans empattement', 'default');
+  this.executeRuleTest('<mi>&#x1D790;</mi>', 'Alpha majuscule en italique gras sans empattement', 'default');
 };
 
 
@@ -116,15 +116,15 @@ sre.MathspeakFrenchFontTest.prototype.testLatinMathfontsSmall = function() {
   this.executeRuleTest('<mi>&#x1D41A;</mi>', 'a en gras', 'default');
   this.executeRuleTest('<mi>&#x1D44E;</mi>', 'a en italique', 'default');
   this.executeRuleTest('<mi>&#x1D482;</mi>', 'a en italique gras', 'default');
-  this.executeRuleTest('<mi>&#x1D4B6;</mi>', 'a en script', 'default');
-  this.executeRuleTest('<mi>&#x1D4EA;</mi>', 'a en script gras', 'default');
+  this.executeRuleTest('<mi>&#x1D4B6;</mi>', 'a de ronde', 'default');
+  this.executeRuleTest('<mi>&#x1D4EA;</mi>', 'a de ronde en gras', 'default');
   this.executeRuleTest('<mi>&#x1D51E;</mi>', 'a en gothique', 'default');
-  this.executeRuleTest('<mi>&#x1D552;</mi>', 'a en ajouré', 'default');
+  this.executeRuleTest('<mi>&#x1D552;</mi>', 'a ajouré', 'default');
   this.executeRuleTest('<mi>&#x1D586;</mi>', 'a en gothique gras', 'default');
-  this.executeRuleTest('<mi>&#x1D5BA;</mi>', 'a en sans empattement', 'default');
-  this.executeRuleTest('<mi>&#x1D5EE;</mi>', 'a en sans empattement gras', 'default');
-  this.executeRuleTest('<mi>&#x1D622;</mi>', 'a en sans empattement italique', 'default');
-  this.executeRuleTest('<mi>&#x1D656;</mi>', 'a en sans empattement italique gras', 'default');
+  this.executeRuleTest('<mi>&#x1D5BA;</mi>', 'a sans empattement', 'default');
+  this.executeRuleTest('<mi>&#x1D5EE;</mi>', 'a en gras sans empattement', 'default');
+  this.executeRuleTest('<mi>&#x1D622;</mi>', 'a en italique sans empattement', 'default');
+  this.executeRuleTest('<mi>&#x1D656;</mi>', 'a en italique gras sans empattement', 'default');
   this.executeRuleTest('<mi>&#x1D68A;</mi>', 'a en chasse fixe', 'default');
 };
 
@@ -137,8 +137,8 @@ sre.MathspeakFrenchFontTest.prototype.testGreekMathfontsSmall = function() {
   this.executeRuleTest('<mi>&#x1D6C2;</mi>', 'alpha en gras', 'default');
   this.executeRuleTest('<mi>&#x1D6FC;</mi>', 'alpha en italique', 'default');
   this.executeRuleTest('<mi>&#x1D736;</mi>', 'alpha en italique gras', 'default');
-  this.executeRuleTest('<mi>&#x1D770;</mi>', 'alpha en sans empattement gras', 'default');
-  this.executeRuleTest('<mi>&#x1D7AA;</mi>', 'alpha en sans empattement italique gras', 'default');
+  this.executeRuleTest('<mi>&#x1D770;</mi>', 'alpha en gras sans empattement', 'default');
+  this.executeRuleTest('<mi>&#x1D7AA;</mi>', 'alpha en italique gras sans empattement', 'default');
 };
 
 
@@ -154,15 +154,15 @@ sre.MathspeakFrenchFontTest.prototype.testLatinMathvariantUpper = function() {
   this.executeRuleTest('<mi mathvariant="bold">A</mi>', 'A majuscule en gras', 'default');
   this.executeRuleTest('<mi mathvariant="italic">A</mi>', 'A majuscule', 'default');
   this.executeRuleTest('<mi mathvariant="bold-italic">A</mi>', 'A majuscule en italique gras', 'default');
-  this.executeRuleTest('<mi mathvariant="script">A</mi>', 'A majuscule en script', 'default');
-  this.executeRuleTest('<mi mathvariant="bold-script">A</mi>', 'A majuscule en script gras', 'default');
+  this.executeRuleTest('<mi mathvariant="script">A</mi>', 'A majuscule de ronde', 'default');
+  this.executeRuleTest('<mi mathvariant="bold-script">A</mi>', 'A majuscule de ronde en gras', 'default');
   this.executeRuleTest('<mi mathvariant="fraktur">A</mi>', 'A majuscule en gothique', 'default');
-  this.executeRuleTest('<mi mathvariant="double-struck">A</mi>', 'A majuscule en ajouré', 'default');
+  this.executeRuleTest('<mi mathvariant="double-struck">A</mi>', 'A majuscule ajouré', 'default');
   this.executeRuleTest('<mi mathvariant="bold-fraktur">A</mi>', 'A majuscule en gothique gras', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif">A</mi>', 'A majuscule en sans empattement', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold">A</mi>', 'A majuscule en sans empattement gras', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-italic">A</mi>', 'A majuscule en sans empattement italique', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">A</mi>', 'A majuscule en sans empattement italique gras', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif">A</mi>', 'A majuscule sans empattement', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold">A</mi>', 'A majuscule en gras sans empattement', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-italic">A</mi>', 'A majuscule en italique sans empattement', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">A</mi>', 'A majuscule en italique gras sans empattement', 'default');
   this.executeRuleTest('<mi mathvariant="monospace">A</mi>', 'A majuscule en chasse fixe', 'default');
 };
 
@@ -187,8 +187,8 @@ sre.MathspeakFrenchFontTest.prototype.testGreekMathvariantUpper = function() {
   this.executeRuleTest('<mi mathvariant="bold">&#x0391;</mi>', 'Alpha majuscule en gras', 'default');
   this.executeRuleTest('<mi mathvariant="italic">&#x0391;</mi>', 'Alpha majuscule', 'default');
   this.executeRuleTest('<mi mathvariant="bold-italic">&#x0391;</mi>', 'Alpha majuscule en italique gras', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold">&#x0391;</mi>', 'Alpha majuscule en sans empattement gras', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">&#x0391;</mi>', 'Alpha majuscule en sans empattement italique gras', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold">&#x0391;</mi>', 'Alpha majuscule en gras sans empattement', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">&#x0391;</mi>', 'Alpha majuscule en italique gras sans empattement', 'default');
 };
 
 
@@ -200,15 +200,15 @@ sre.MathspeakFrenchFontTest.prototype.testLatinMathvariantSmall = function() {
   this.executeRuleTest('<mi mathvariant="bold">a</mi>', 'a en gras', 'default');
   this.executeRuleTest('<mi mathvariant="italic">a</mi>', 'a', 'default');
   this.executeRuleTest('<mi mathvariant="bold-italic">a</mi>', 'a en italique gras', 'default');
-  this.executeRuleTest('<mi mathvariant="script">a</mi>', 'a en script', 'default');
-  this.executeRuleTest('<mi mathvariant="bold-script">a</mi>', 'a en script gras', 'default');
+  this.executeRuleTest('<mi mathvariant="script">a</mi>', 'a de ronde', 'default');
+  this.executeRuleTest('<mi mathvariant="bold-script">a</mi>', 'a de ronde en gras', 'default');
   this.executeRuleTest('<mi mathvariant="fraktur">a</mi>', 'a en gothique', 'default');
-  this.executeRuleTest('<mi mathvariant="double-struck">a</mi>', 'a en ajouré', 'default');
+  this.executeRuleTest('<mi mathvariant="double-struck">a</mi>', 'a ajouré', 'default');
   this.executeRuleTest('<mi mathvariant="bold-fraktur">a</mi>', 'a en gothique gras', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif">a</mi>', 'a en sans empattement', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold">a</mi>', 'a en sans empattement gras', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-italic">a</mi>', 'a en sans empattement italique', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">a</mi>', 'a en sans empattement italique gras', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif">a</mi>', 'a sans empattement', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold">a</mi>', 'a en gras sans empattement', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-italic">a</mi>', 'a en italique sans empattement', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">a</mi>', 'a en italique gras sans empattement', 'default');
   this.executeRuleTest('<mi mathvariant="monospace">a</mi>', 'a en chasse fixe', 'default');
 };
 
@@ -221,8 +221,8 @@ sre.MathspeakFrenchFontTest.prototype.testGreekMathvariantSmall = function() {
   this.executeRuleTest('<mi mathvariant="bold">&#x03B1;</mi>', 'alpha en gras', 'default');
   this.executeRuleTest('<mi mathvariant="italic">&#x03B1;</mi>', 'alpha', 'default');
   this.executeRuleTest('<mi mathvariant="bold-italic">&#x03B1;</mi>', 'alpha en italique gras', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold">&#x03B1;</mi>', 'alpha en sans empattement gras', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">&#x03B1;</mi>', 'alpha en sans empattement italique gras', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold">&#x03B1;</mi>', 'alpha en gras sans empattement', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">&#x03B1;</mi>', 'alpha en italique gras sans empattement', 'default');
 };
 
 
@@ -235,19 +235,19 @@ sre.MathspeakFrenchFontTest.prototype.testGreekMathvariantSmall = function() {
  */
 sre.MathspeakFrenchFontTest.prototype.testLatinFontVariantsUpper = function() {
   this.executeRuleTest('<mi mathvariant="normal">&#x0041;</mi>', 'A majuscule en normal', 'default');
-  this.executeRuleTest('<mi mathvariant="normal">&#xFF21;</mi>', 'upper A en normal', 'default');
+  this.executeRuleTest('<mi mathvariant="normal">&#xFF21;</mi>', 'A majuscule en normal', 'default');
   this.executeRuleTest('<mi mathvariant="bold">&#x1D400;</mi>', 'A majuscule en gras', 'default');
   this.executeRuleTest('<mi mathvariant="italic">&#x1D434;</mi>', 'A majuscule en italique', 'default');
   this.executeRuleTest('<mi mathvariant="bold-italic">&#x1D468;</mi>', 'A majuscule en italique gras', 'default');
-  this.executeRuleTest('<mi mathvariant="script">&#x1D49C;</mi>', 'A majuscule en script', 'default');
-  this.executeRuleTest('<mi mathvariant="bold-script">&#x1D4D0;</mi>', 'A majuscule en script gras', 'default');
+  this.executeRuleTest('<mi mathvariant="script">&#x1D49C;</mi>', 'A majuscule de ronde', 'default');
+  this.executeRuleTest('<mi mathvariant="bold-script">&#x1D4D0;</mi>', 'A majuscule de ronde en gras', 'default');
   this.executeRuleTest('<mi mathvariant="fraktur">&#x1D504;</mi>', 'A majuscule en gothique', 'default');
-  this.executeRuleTest('<mi mathvariant="double-struck">&#x1D538;</mi>', 'A majuscule en ajouré', 'default');
+  this.executeRuleTest('<mi mathvariant="double-struck">&#x1D538;</mi>', 'A majuscule ajouré', 'default');
   this.executeRuleTest('<mi mathvariant="bold-fraktur">&#x1D56C;</mi>', 'A majuscule en gothique gras', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif">&#x1D5A0;</mi>', 'A majuscule en sans empattement', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold">&#x1D5D4;</mi>', 'A majuscule en sans empattement gras', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-italic">&#x1D608;</mi>', 'A majuscule en sans empattement italique', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">&#x1D63C;</mi>', 'A majuscule en sans empattement italique gras', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif">&#x1D5A0;</mi>', 'A majuscule sans empattement', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold">&#x1D5D4;</mi>', 'A majuscule en gras sans empattement', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-italic">&#x1D608;</mi>', 'A majuscule en italique sans empattement', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">&#x1D63C;</mi>', 'A majuscule en italique gras sans empattement', 'default');
   this.executeRuleTest('<mi mathvariant="monospace">&#x1D670;</mi>', 'A majuscule en chasse fixe', 'default');
 };
 
@@ -260,8 +260,8 @@ sre.MathspeakFrenchFontTest.prototype.testGreekFontVariantsUpper = function() {
   this.executeRuleTest('<mi mathvariant="bold">&#x1D6A8;</mi>', 'Alpha majuscule en gras', 'default');
   this.executeRuleTest('<mi mathvariant="italic">&#x1D6E2;</mi>', 'Alpha majuscule en italique', 'default');
   this.executeRuleTest('<mi mathvariant="bold-italic">&#x1D71C;</mi>', 'Alpha majuscule en italique gras', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold">&#x1D756;</mi>', 'Alpha majuscule en sans empattement gras', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">&#x1D790;</mi>', 'Alpha majuscule en sans empattement italique gras', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold">&#x1D756;</mi>', 'Alpha majuscule en gras sans empattement', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">&#x1D790;</mi>', 'Alpha majuscule en italique gras sans empattement', 'default');
 };
 
 
@@ -274,15 +274,15 @@ sre.MathspeakFrenchFontTest.prototype.testLatinFontVariantsSmall = function() {
   this.executeRuleTest('<mi mathvariant="bold">&#x1D41A;</mi>', 'a en gras', 'default');
   this.executeRuleTest('<mi mathvariant="italic">&#x1D44E;</mi>', 'a en italique', 'default');
   this.executeRuleTest('<mi mathvariant="bold-italic">&#x1D482;</mi>', 'a en italique gras', 'default');
-  this.executeRuleTest('<mi mathvariant="script">&#x1D4B6;</mi>', 'a en script', 'default');
-  this.executeRuleTest('<mi mathvariant="bold-script">&#x1D4EA;</mi>', 'a en script gras', 'default');
+  this.executeRuleTest('<mi mathvariant="script">&#x1D4B6;</mi>', 'a de ronde', 'default');
+  this.executeRuleTest('<mi mathvariant="bold-script">&#x1D4EA;</mi>', 'a de ronde en gras', 'default');
   this.executeRuleTest('<mi mathvariant="fraktur">&#x1D51E;</mi>', 'a en gothique', 'default');
-  this.executeRuleTest('<mi mathvariant="double-struck">&#x1D552;</mi>', 'a en ajouré', 'default');
+  this.executeRuleTest('<mi mathvariant="double-struck">&#x1D552;</mi>', 'a ajouré', 'default');
   this.executeRuleTest('<mi mathvariant="bold-fraktur">&#x1D586;</mi>', 'a en gothique gras', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif">&#x1D5BA;</mi>', 'a en sans empattement', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold">&#x1D5EE;</mi>', 'a en sans empattement gras', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-italic">&#x1D622;</mi>', 'a en sans empattement italique', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">&#x1D656;</mi>', 'a en sans empattement italique gras', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif">&#x1D5BA;</mi>', 'a sans empattement', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold">&#x1D5EE;</mi>', 'a en gras sans empattement', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-italic">&#x1D622;</mi>', 'a en italique sans empattement', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">&#x1D656;</mi>', 'a en italique gras sans empattement', 'default');
   this.executeRuleTest('<mi mathvariant="monospace">&#x1D68A;</mi>', 'a en chasse fixe', 'default');
 };
 
@@ -295,6 +295,6 @@ sre.MathspeakFrenchFontTest.prototype.testGreekFontVariantsSmall = function() {
   this.executeRuleTest('<mi mathvariant="bold">&#x1D6C2;</mi>', 'alpha en gras', 'default');
   this.executeRuleTest('<mi mathvariant="italic">&#x1D6FC;</mi>', 'alpha en italique', 'default');
   this.executeRuleTest('<mi mathvariant="bold-italic">&#x1D736;</mi>', 'alpha en italique gras', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold">&#x1D770;</mi>', 'alpha en sans empattement gras', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">&#x1D7AA;</mi>', 'alpha en sans empattement italique gras', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold">&#x1D770;</mi>', 'alpha en gras sans empattement', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">&#x1D7AA;</mi>', 'alpha en italique gras sans empattement', 'default');
 };

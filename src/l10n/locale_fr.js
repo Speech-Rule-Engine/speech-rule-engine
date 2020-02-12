@@ -27,7 +27,7 @@ goog.require('sre.Numbers.fr');
 
 var combiner = function(letter, font, cap) {
   letter = cap ? letter + ' ' + cap : letter;
-  return font ? letter + ' en ' + font : letter;
+  return font ? letter + ' ' + font : letter;
 };
 
 
@@ -84,26 +84,26 @@ sre.Locale.fr = {
   },
 
   FONT: {
-    'bold': 'gras',
-    'bold-fraktur': 'gothique gras',
-    'bold-italic': 'italique gras',
-    'bold-script': 'script gras',
-    'caligraphic': 'calligraphique',
-    'caligraphic-bold': 'calligraphique gras',
+    'bold': 'en gras',
+    'bold-fraktur': 'en gothique gras',
+    'bold-italic': 'en italique gras',
+    'bold-script': 'de ronde en gras',
+    'caligraphic': 'en calligraphique',
+    'caligraphic-bold': 'en calligraphique gras',
     'double-struck': 'ajouré',
-    'double-struck-italic': 'ajouré en italique',  // TODO: Get the ajoure fonts right!
-    'fraktur': 'gothique',
-    'fullwidth': 'pleine largeur',
-    'italic': 'italique',
-    'monospace': 'chasse fixe',
-    'normal': 'normal',
-    'oldstyle': 'ancien',
-    'oldstyle-bold': 'ancien gras',
-    'script': 'ronde', // Special with 'de ronde'
+    'double-struck-italic': 'ajouré en italique',
+    'fraktur': 'en gothique',
+    'fullwidth': 'en pleine largeur',
+    'italic': 'en italique',
+    'monospace': 'en chasse fixe',
+    'normal': 'en normal',
+    'oldstyle': 'en ancien',
+    'oldstyle-bold': 'en ancien gras',
+    'script': 'de ronde',
     'sans-serif': 'sans empattement',
-    'sans-serif-italic': 'sans empattement italique',
-    'sans-serif-bold': 'sans empattement gras',
-    'sans-serif-bold-italic': 'sans empattement italique gras',
+    'sans-serif-italic': 'en italique sans empattement',
+    'sans-serif-bold': 'en gras sans empattement',
+    'sans-serif-bold-italic': 'en italique gras sans empattement',
     'unknown': 'inconnu'
   },
 
