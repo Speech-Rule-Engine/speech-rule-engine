@@ -1250,22 +1250,22 @@ sre.SemanticAttr = function() {
       role: sre.SemanticAttr.Role.DIVISION
     },
     {set: this.prefixOps,
-      type: sre.SemanticAttr.Type.PREFIXOP,
-      role: sre.SemanticAttr.Role.PREFIXFUNC
+      type: sre.SemanticAttr.Type.OPERATOR,
+      role: sre.SemanticAttr.Role.PREFIXOP
     },
     {set: this.prefixOpsBold,
-      type: sre.SemanticAttr.Type.PREFIXOP,
-      role: sre.SemanticAttr.Role.PREFIXFUNC,
+      type: sre.SemanticAttr.Type.OPERATOR,
+      role: sre.SemanticAttr.Role.PREFIXOP,
       font: sre.SemanticAttr.Font.BOLD
     },
     {set: this.prefixOpsItalic,
-      type: sre.SemanticAttr.Type.PREFIXOP,
-      role: sre.SemanticAttr.Role.PREFIXFUNC,
+      type: sre.SemanticAttr.Type.OPERATOR,
+      role: sre.SemanticAttr.Role.PREFIXOP,
       font: sre.SemanticAttr.Font.ITALIC
     },
     {set: this.prefixOpsSansSerifBold,
-      type: sre.SemanticAttr.Type.PREFIXOP,
-      role: sre.SemanticAttr.Role.PREFIXFUNC,
+      type: sre.SemanticAttr.Type.OPERATOR,
+      role: sre.SemanticAttr.Role.PREFIXOP,
       font: sre.SemanticAttr.Font.SANSSERIFBOLD
     },
     // Relations
@@ -1486,6 +1486,8 @@ sre.SemanticAttr.Role = {
   POSITIVE: 'positive',
   NEGATION: 'negation',
   MULTIOP: 'multiop',
+  PREFIXOP: 'prefix operator',
+  POSTFIXOP: 'postfix operator',
 
   // Functions.
   LIMFUNC: 'limit function',

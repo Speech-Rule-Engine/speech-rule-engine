@@ -634,7 +634,11 @@ sre.MmlcloudEnglishTest.prototype.testEncloseLeftbar = function() {
  */
 sre.MmlcloudEnglishTest.prototype.testEncloseRightbar = function() {
   this.executeRuleTest('<menclose notation="right"><mi>a</mi></menclose>',
+<<<<<<< HEAD
                        'a vertical bar', 'default');
+=======
+                       'a vertical-bar', 'default');
+>>>>>>> explicit_font_tests
 };
 
 
@@ -654,3 +658,42 @@ sre.MmlcloudEnglishTest.prototype.testIssue279 = function() {
       ' right parenthesis EndLabel EndLayout');
 };
 
+<<<<<<< HEAD
+=======
+
+/**
+ * Tests for issue #320 and related expressions.
+ */
+sre.MmlcloudEnglishTest.prototype.testIssue320 = function() {
+  // mglyph is ignored!
+  this.executeRuleTest(
+      '<mo>∂</mo>', 'partial-differential');
+  this.executeRuleTest(
+      '<mi>x</mi><mo>!</mo>', 'x factorial');
+  this.executeRuleTest(
+      '<mo>-</mo><mo>-</mo><mi>x</mi>', 'minus negative x');
+  this.executeRuleTest(
+      '<mo>+</mo><mo>+</mo><mi>x</mi>', 'plus plus x');
+  this.executeRuleTest(
+      '<mi>sin</mi><mi>sin</mi><mi>x</mi>', 'sine sine x');
+  this.executeRuleTest(
+      '<mo>∂</mo><mo>∂</mo><mi>x</mi>',
+      'partial-differential partial-differential x');
+  this.executeRuleTest(
+      '<mrow><mrow><mo>(</mo><mfrac><msup><mo>∂</mo><mn>2</mn></msup>' +
+      '<mrow><mo>∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac>' +
+      '<mo>+</mo><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo>∂</mo>' +
+      '<msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac><mo>)</mo></mrow>' +
+      '<msup><mrow><mo minsize="150%">|</mo><mi>φ <!-- \varphi --></mi>' +
+      '<mo stretchy="false">(</mo><mi>x</mi><mo>+</mo>' +
+      '<mi mathvariant="normal">i</mi><mi>y</mi><mo stretchy="false">)</mo>' +
+      '<mo minsize="150%">|</mo></mrow><mn>2</mn></msup><mo>=</mo>' +
+      '<mn>0</mn></mrow>',
+      'left-parenthesis StartFraction partial-differential squared Over' +
+      ' partial-differential x squared EndFraction plus StartFraction' +
+      ' partial-differential squared Over partial-differential y squared' +
+      ' EndFraction right-parenthesis StartAbsoluteValue phi left-parenthesis' +
+      ' x plus normal i y right-parenthesis EndAbsoluteValue squared equals 0');
+};
+
+>>>>>>> explicit_font_tests
