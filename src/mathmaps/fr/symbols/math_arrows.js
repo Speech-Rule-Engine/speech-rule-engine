@@ -60,7 +60,7 @@
     "key": "2196",
     "mappings": {
       "default": {
-        "default": "flèche nord-ouest"
+        "default": "flèche nord ouest"
       }
     },
     "category": "So"
@@ -69,7 +69,7 @@
     "key": "2197",
     "mappings": {
       "default": {
-        "default": "flèche nord-est"
+        "default": "flèche nord est"
       }
     },
     "category": "So"
@@ -78,7 +78,7 @@
     "key": "2198",
     "mappings": {
       "default": {
-        "default": "flèche sud-est"
+        "default": "flèche sud est"
       }
     },
     "category": "So"
@@ -87,7 +87,7 @@
     "key": "2199",
     "mappings": {
       "default": {
-        "default": "flèche sud-ouest"
+        "default": "flèche sud ouest"
       }
     },
     "category": "So"
@@ -222,7 +222,7 @@
     "key": "21A8",
     "mappings": {
       "default": {
-        "default": "flèche haut-bas sur base"
+        "default": "flèche haut bas sur base"
       }
     },
     "category": "So"
@@ -348,7 +348,7 @@
     "key": "21B6",
     "mappings": {
       "default": {
-        "default": "flèche semi-circulaire en sens positif"
+        "default": "flèche semi circulaire en sens positif"
       }
     },
     "category": "So"
@@ -357,7 +357,7 @@
     "key": "21B7",
     "mappings": {
       "default": {
-        "default": "flèche semi-circulaire en sens négatif"
+        "default": "flèche semi circulaire en sens négatif"
       }
     },
     "category": "So"
@@ -366,7 +366,7 @@
     "key": "21B8",
     "mappings": {
       "default": {
-        "default": "flèche nord-ouest vers une barre horizontale longue"
+        "default": "flèche nord ouest vers une barre horizontale longue"
       }
     },
     "category": "So"
@@ -402,7 +402,7 @@
     "key": "21C4",
     "mappings": {
       "default": {
-        "default": "flèche vers le haut par-dessus flèche gauche"
+        "default": "flèche vers le haut par dessus flèche gauche"
       }
     },
     "category": "So"
@@ -420,7 +420,7 @@
     "key": "21C6",
     "mappings": {
       "default": {
-        "default": "flèche gauche par-dessus flèche droite"
+        "default": "flèche gauche par dessus flèche droite"
       }
     },
     "category": "So"
@@ -537,7 +537,7 @@
     "key": "21D5",
     "mappings": {
       "default": {
-        "default": "double flèche haut-bas"
+        "default": "double flèche haut bas"
       }
     },
     "category": "So"
@@ -546,7 +546,7 @@
     "key": "21D6",
     "mappings": {
       "default": {
-        "default": "double flèche nord-ouest"
+        "default": "double flèche nord ouest"
       }
     },
     "category": "So"
@@ -555,7 +555,7 @@
     "key": "21D7",
     "mappings": {
       "default": {
-        "default": "double flèche nord-est"
+        "default": "double flèche nord est"
       }
     },
     "category": "So"
@@ -564,7 +564,7 @@
     "key": "21D8",
     "mappings": {
       "default": {
-        "default": "double flèche sud-est"
+        "default": "double flèche sud est"
       }
     },
     "category": "So"
@@ -573,7 +573,7 @@
     "key": "21D9",
     "mappings": {
       "default": {
-        "default": "double flèche sud-ouest"
+        "default": "double flèche sud ouest"
       }
     },
     "category": "So"
@@ -600,7 +600,7 @@
     "key": "21DC",
     "mappings": {
       "default": {
-        "default": "flèche en tire-bouchon gauche"
+        "default": "flèche en tire bouchon gauche"
       }
     },
     "category": "So"
@@ -609,7 +609,7 @@
     "key": "21DD",
     "mappings": {
       "default": {
-        "default": "flèche en tire-bouchon droite"
+        "default": "flèche en tire bouchon droite"
       }
     },
     "category": "So"
@@ -790,7 +790,7 @@
     "key": "21F1",
     "mappings": {
       "default": {
-        "default": "flèche nord-ouest en encoignure"
+        "default": "flèche nord ouest en encoignure"
       }
     }
   },
@@ -799,7 +799,7 @@
     "key": "21F2",
     "mappings": {
       "default": {
-        "default": "flèche sud-est en encoignure"
+        "default": "flèche sud est en encoignure"
       }
     }
   },
@@ -961,7 +961,7 @@
     "key": "238B",
     "mappings": {
       "default": {
-        "default": "cercle brisé à flèche nord-ouest (échappement)"
+        "default": "cercle brisé à flèche nord ouest (échappement)"
       }
     }
   },
@@ -979,7 +979,7 @@
     "key": "2798",
     "mappings": {
       "default": {
-        "default": "flèche grasse sud-est"
+        "default": "flèche grasse sud est"
       }
     }
   },
@@ -997,7 +997,7 @@
     "key": "279A",
     "mappings": {
       "default": {
-        "default": "flèche grasse nord-est"
+        "default": "flèche grasse nord est"
       }
     }
   },
@@ -1069,7 +1069,7 @@
     "key": "27A2",
     "mappings": {
       "default": {
-        "default": "pointe de flèche vers la droite en trompe-l'œil éclairée par le haut"
+        "default": "pointe de flèche vers la droite en trompe l'œil éclairée par le haut"
       }
     }
   },
@@ -1078,7 +1078,7 @@
     "key": "27A3",
     "mappings": {
       "default": {
-        "default": "pointe de flèche vers la droite en trompe-l'œil éclairée par le bas"
+        "default": "pointe de flèche vers la droite en trompe l'œil éclairée par le bas"
       }
     }
   },
@@ -1186,7 +1186,7 @@
     "key": "27AF",
     "mappings": {
       "default": {
-        "default": "flèche encochée blanche vers la droite ombrée à l'avant et par-dessous"
+        "default": "flèche encochée blanche vers la droite ombrée à l'avant et par dessous"
       }
     }
   },
@@ -1195,7 +1195,7 @@
     "key": "27B1",
     "mappings": {
       "default": {
-        "default": "flèche encochée blanche vers la droite ombrée à l'avant et par-dessus"
+        "default": "flèche encochée blanche vers la droite ombrée à l'avant et par dessus"
       }
     }
   },
@@ -1222,7 +1222,7 @@
     "key": "27B4",
     "mappings": {
       "default": {
-        "default": "flèche empennée noir sud-est"
+        "default": "flèche empennée noir sud est"
       }
     }
   },
@@ -1240,7 +1240,7 @@
     "key": "27B6",
     "mappings": {
       "default": {
-        "default": "flèche empennée noir nord-est"
+        "default": "flèche empennée noir nord est"
       }
     }
   },
@@ -1249,7 +1249,7 @@
     "key": "27B7",
     "mappings": {
       "default": {
-        "default": "flèche empennée gras noire sud-est"
+        "default": "flèche empennée gras noire sud est"
       }
     }
   },
@@ -1267,7 +1267,7 @@
     "key": "27B9",
     "mappings": {
       "default": {
-        "default": "flèche empennée gras noire nord-est"
+        "default": "flèche empennée gras noire nord est"
       }
     }
   },
@@ -1455,7 +1455,7 @@
     "key": "27FF",
     "mappings": {
       "default": {
-        "default": "longue flèche en tire-bouchon droite"
+        "default": "longue flèche en tire bouchon droite"
       }
     },
     "category": "Sm"
@@ -1762,7 +1762,7 @@
     "key": "2921",
     "mappings": {
       "default": {
-        "default": "flèche nord-ouest et sud-est"
+        "default": "flèche nord ouest et sud est"
       }
     }
   },
@@ -1771,7 +1771,7 @@
     "key": "2922",
     "mappings": {
       "default": {
-        "default": "flèche nord-est et sud-ouest"
+        "default": "flèche nord est et sud ouest"
       }
     }
   },
@@ -1779,7 +1779,7 @@
     "key": "2923",
     "mappings": {
       "default": {
-        "default": "flèche nord-ouest à crochet"
+        "default": "flèche nord ouest à crochet"
       }
     },
     "category": "Sm"
@@ -1788,7 +1788,7 @@
     "key": "2924",
     "mappings": {
       "default": {
-        "default": "flèche nord-est à crochet"
+        "default": "flèche nord est à crochet"
       }
     },
     "category": "Sm"
@@ -1797,7 +1797,7 @@
     "key": "2925",
     "mappings": {
       "default": {
-        "default": "flèche sud-est à crochet"
+        "default": "flèche sud est à crochet"
       }
     },
     "category": "Sm"
@@ -1806,7 +1806,7 @@
     "key": "2926",
     "mappings": {
       "default": {
-        "default": "flèche sud-ouest à crochet"
+        "default": "flèche sud ouest à crochet"
       }
     },
     "category": "Sm"
@@ -1815,7 +1815,7 @@
     "key": "2927",
     "mappings": {
       "default": {
-        "default": "flèches nord-ouest et nord-est"
+        "default": "flèches nord ouest et nord est"
       }
     },
     "category": "Sm"
@@ -1824,7 +1824,7 @@
     "key": "2928",
     "mappings": {
       "default": {
-        "default": "flèches nord-est et sud-est"
+        "default": "flèches nord est et sud est"
       }
     },
     "category": "Sm"
@@ -1833,7 +1833,7 @@
     "key": "2929",
     "mappings": {
       "default": {
-        "default": "flèches sud-est et sud-ouest"
+        "default": "flèches sud est et sud ouest"
       }
     },
     "category": "Sm"
@@ -1842,7 +1842,7 @@
     "key": "292A",
     "mappings": {
       "default": {
-        "default": "flèches sud-ouest et nord-ouest"
+        "default": "flèches sud ouest et nord ouest"
       }
     },
     "category": "Sm"
@@ -1852,7 +1852,7 @@
     "key": "292D",
     "mappings": {
       "default": {
-        "default": "flèche sud-est sur flèche nord-est"
+        "default": "flèche sud est sur flèche nord est"
       }
     }
   },
@@ -1861,7 +1861,7 @@
     "key": "292E",
     "mappings": {
       "default": {
-        "default": "flèche nord-est sur flèche sud-est"
+        "default": "flèche nord est sur flèche sud est"
       }
     }
   },
@@ -1870,7 +1870,7 @@
     "key": "292F",
     "mappings": {
       "default": {
-        "default": "diagonale descendante sur flèche nord-est"
+        "default": "diagonale descendante sur flèche nord est"
       }
     }
   },
@@ -1879,7 +1879,7 @@
     "key": "2930",
     "mappings": {
       "default": {
-        "default": "diagonale montante sur flèche sud-est"
+        "default": "diagonale montante sur flèche sud est"
       }
     }
   },
@@ -1888,7 +1888,7 @@
     "key": "2931",
     "mappings": {
       "default": {
-        "default": "flèche nord-est sur flèche nord-ouest"
+        "default": "flèche nord est sur flèche nord ouest"
       }
     }
   },
@@ -1897,7 +1897,7 @@
     "key": "2932",
     "mappings": {
       "default": {
-        "default": "flèche nord-ouest sur flèche nord-est"
+        "default": "flèche nord ouest sur flèche nord est"
       }
     }
   },
@@ -2005,7 +2005,7 @@
     "key": "293E",
     "mappings": {
       "default": {
-        "default": "demi-cercle fléché inférieur droit sens horaire"
+        "default": "demi cercle fléché inférieur droit sens horaire"
       }
     }
   },
@@ -2014,7 +2014,7 @@
     "key": "293F",
     "mappings": {
       "default": {
-        "default": "demi-cercle fléché inférieur gauche sens antihoraire"
+        "default": "demi cercle fléché inférieur gauche sens antihoraire"
       }
     }
   },
@@ -2193,7 +2193,7 @@
     "key": "2979",
     "mappings": {
       "default": {
-        "default": "flèche droite surmontée d'un sous-ensemble de"
+        "default": "flèche droite surmontée d'un sous ensemble de"
       }
     },
     "category": "Sm"
@@ -2203,7 +2203,7 @@
     "key": "297A",
     "mappings": {
       "default": {
-        "default": "flèche vers la gauche au travers d'un sous-ensemble de"
+        "default": "flèche vers la gauche au travers d'un sous ensemble de"
       }
     }
   },
@@ -2211,7 +2211,7 @@
     "key": "297B",
     "mappings": {
       "default": {
-        "default": "flèche gauche surmontée d'un sur-ensemble de"
+        "default": "flèche gauche surmontée d'un sur ensemble de"
       }
     },
     "category": "Sm"
@@ -2284,7 +2284,7 @@
     "key": "2B00",
     "mappings": {
       "default": {
-        "default": "flèche blanche nord-est"
+        "default": "flèche blanche nord est"
       }
     }
   },
@@ -2293,7 +2293,7 @@
     "key": "2B01",
     "mappings": {
       "default": {
-        "default": "flèche blanche nord-ouest"
+        "default": "flèche blanche nord ouest"
       }
     }
   },
@@ -2302,7 +2302,7 @@
     "key": "2B02",
     "mappings": {
       "default": {
-        "default": "flèche blanche sud-est"
+        "default": "flèche blanche sud est"
       }
     }
   },
@@ -2311,7 +2311,7 @@
     "key": "2B03",
     "mappings": {
       "default": {
-        "default": "flèche blanche sud-ouest"
+        "default": "flèche blanche sud ouest"
       }
     }
   },
@@ -2356,7 +2356,7 @@
     "key": "2B08",
     "mappings": {
       "default": {
-        "default": "flèche noire nord-est"
+        "default": "flèche noire nord est"
       }
     }
   },
@@ -2365,7 +2365,7 @@
     "key": "2B09",
     "mappings": {
       "default": {
-        "default": "flèche noire nord-ouest"
+        "default": "flèche noire nord ouest"
       }
     }
   },
@@ -2374,7 +2374,7 @@
     "key": "2B0A",
     "mappings": {
       "default": {
-        "default": "flèche noire sud-est"
+        "default": "flèche noire sud est"
       }
     }
   },
@@ -2383,7 +2383,7 @@
     "key": "2B0B",
     "mappings": {
       "default": {
-        "default": "flèche noire sud-ouest"
+        "default": "flèche noire sud ouest"
       }
     }
   },
@@ -2473,7 +2473,7 @@
     "key": "2B33",
     "mappings": {
       "default": {
-        "default": "longue flèche vers la gauche en tire-bouchon"
+        "default": "longue flèche vers la gauche en tire bouchon"
       }
     }
   },
@@ -2626,7 +2626,7 @@
     "key": "2B44",
     "mappings": {
       "default": {
-        "default": "flèche vers la droite au travers d'un sous-ensemble de"
+        "default": "flèche vers la droite au travers d'un sous ensemble de"
       }
     }
   },
@@ -2680,7 +2680,7 @@
     "key": "2B4A",
     "mappings": {
       "default": {
-        "default": "flèche vers la gauche par-dessus presque égal à"
+        "default": "flèche vers la gauche par dessus presque égal à"
       }
     }
   },
@@ -2707,7 +2707,7 @@
     "key": "FFE9",
     "mappings": {
       "default": {
-        "default": "flèche vers la gauche demi-chasse"
+        "default": "flèche vers la gauche demi chasse"
       }
     }
   },
@@ -2716,7 +2716,7 @@
     "key": "FFEA",
     "mappings": {
       "default": {
-        "default": "flèche vers le haut demi-chasse"
+        "default": "flèche vers le haut demi chasse"
       }
     }
   },
@@ -2725,7 +2725,7 @@
     "key": "FFEB",
     "mappings": {
       "default": {
-        "default": "flèche vers la droite demi-chasse"
+        "default": "flèche vers la droite demi chasse"
       }
     }
   },
@@ -2734,7 +2734,7 @@
     "key": "FFEC",
     "mappings": {
       "default": {
-        "default": "flèche vers le bas demi-chasse"
+        "default": "flèche vers le bas demi chasse"
       }
     }
   }

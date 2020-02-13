@@ -270,7 +270,7 @@
     "key": "324E",
     "mappings": {
       "default": {
-        "default": "soixante-dix cerclé sur carré noir"
+        "default": "soixante dix cerclé sur carré noir"
       }
     },
     "category": "No"
@@ -279,7 +279,7 @@
     "key": "324F",
     "mappings": {
       "default": {
-        "default": "quatre-vingts cerclé sur carré noir"
+        "default": "quatre vingts cerclé sur carré noir"
       }
     },
     "category": "No"

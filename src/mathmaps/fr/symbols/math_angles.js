@@ -150,7 +150,7 @@
     "key": "29A8",
     "mappings": {
       "default": {
-        "default": "angle calculé à bras vers l'est et bras fléché vers le nord-est"
+        "default": "angle calculé à bras vers l'est et bras fléché vers le nord est"
       }
     },
     "category": "Sm"
@@ -159,7 +159,7 @@
     "key": "29A9",
     "mappings": {
       "default": {
-        "default": "angle calculé à bras vers l'ouest et bras fléché vers le nord-ouest"
+        "default": "angle calculé à bras vers l'ouest et bras fléché vers le nord ouest"
       }
     },
     "category": "Sm"
@@ -168,7 +168,7 @@
     "key": "29AA",
     "mappings": {
       "default": {
-        "default": "angle calculé à bras vers l'est et bras fléché vers le sud-est"
+        "default": "angle calculé à bras vers l'est et bras fléché vers le sud est"
       }
     },
     "category": "Sm"
@@ -177,7 +177,7 @@
     "key": "29AB",
     "mappings": {
       "default": {
-        "default": "angle calculé à bras vers l'ouest et bras fléché vers le sud-ouest"
+        "default": "angle calculé à bras vers l'ouest et bras fléché vers le sud ouest"
       }
     },
     "category": "Sm"
@@ -186,7 +186,7 @@
     "key": "29AC",
     "mappings": {
       "default": {
-        "default": "angle calculé à bras vers le nord et bras fléché vers le nord-est"
+        "default": "angle calculé à bras vers le nord et bras fléché vers le nord est"
       }
     },
     "category": "Sm"
@@ -195,7 +195,7 @@
     "key": "29AD",
     "mappings": {
       "default": {
-        "default": "angle calculé à bras vers le nord et bras fléché vers le nord-ouest"
+        "default": "angle calculé à bras vers le nord et bras fléché vers le nord ouest"
       }
     },
     "category": "Sm"
@@ -204,7 +204,7 @@
     "key": "29AE",
     "mappings": {
       "default": {
-        "default": "angle calculé à bras vers le sud et bras fléché vers le sud-est"
+        "default": "angle calculé à bras vers le sud et bras fléché vers le sud est"
       }
     },
     "category": "Sm"
@@ -213,7 +213,7 @@
     "key": "29AF",
     "mappings": {
       "default": {
-        "default": "angle calculé à bras vers le sud et bras fléché vers le sud-ouest"
+        "default": "angle calculé à bras vers le sud et bras fléché vers le sud ouest"
       }
     },
     "category": "Sm"

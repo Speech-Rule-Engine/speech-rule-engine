@@ -493,7 +493,7 @@
     "key": "274A",
     "mappings": {
       "default": {
-        "default": "astérisque-hélice à huit branches larmées"
+        "default": "astérisque hélice à huit branches larmées"
       }
     }
   },
@@ -502,7 +502,7 @@
     "key": "274B",
     "mappings": {
       "default": {
-        "default": "gros astérisque-hélice à huit branches larmées"
+        "default": "gros astérisque hélice à huit branches larmées"
       }
     }
   },

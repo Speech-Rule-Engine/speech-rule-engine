@@ -1581,7 +1581,7 @@
     "key": "1E9A",
     "mappings": {
       "default": {
-        "default": "a demi-rond à droite"
+        "default": "a demi rond à droite"
       }
     },
     "category": "Ll"

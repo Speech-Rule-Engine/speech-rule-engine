@@ -1932,7 +1932,7 @@
     "key": "25D6",
     "mappings": {
       "default": {
-        "default": "demi-disque gauche noir"
+        "default": "demi disque gauche noir"
       }
     },
     "category": "So"
@@ -1941,7 +1941,7 @@
     "key": "25D7",
     "mappings": {
       "default": {
-        "default": "demi-disque droite noir"
+        "default": "demi disque droite noir"
       }
     },
     "category": "So"
@@ -1950,7 +1950,7 @@
     "key": "25D8",
     "mappings": {
       "default": {
-        "default": "point noir-au-blanc"
+        "default": "point noir au blanc"
       }
     },
     "category": "So"
@@ -1959,7 +1959,7 @@
     "key": "25D9",
     "mappings": {
       "default": {
-        "default": "cercle noir-au-blanc"
+        "default": "cercle noir au blanc"
       }
     },
     "category": "So"
@@ -1968,7 +1968,7 @@
     "key": "25DA",
     "mappings": {
       "default": {
-        "default": "demi-cercle supérieur noir-au- blanc"
+        "default": "demi cercle supérieur noir au  blanc"
       }
     },
     "category": "So"
@@ -1977,7 +1977,7 @@
     "key": "25DB",
     "mappings": {
       "default": {
-        "default": "demi-cercle inférieur noir-au- blanc"
+        "default": "demi cercle inférieur noir au  blanc"
       }
     },
     "category": "So"
@@ -2022,7 +2022,7 @@
     "key": "25E0",
     "mappings": {
       "default": {
-        "default": "demi-cercle supérieur"
+        "default": "demi cercle supérieur"
       }
     },
     "category": "So"
@@ -2031,7 +2031,7 @@
     "key": "25E1",
     "mappings": {
       "default": {
-        "default": "demi-cercle inférieur"
+        "default": "demi cercle inférieur"
       }
     },
     "category": "So"

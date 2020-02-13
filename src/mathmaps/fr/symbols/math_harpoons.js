@@ -78,7 +78,7 @@
     "key": "21CB",
     "mappings": {
       "default": {
-        "default": "harpon gauche par-dessus harpon droit"
+        "default": "harpon gauche par dessus harpon droit"
       }
     },
     "category": "So"
@@ -87,7 +87,7 @@
     "key": "21CC",
     "mappings": {
       "default": {
-        "default": "harpon droit par-dessus harpon gauche"
+        "default": "harpon droit par dessus harpon gauche"
       }
     },
     "category": "So"
@@ -330,7 +330,7 @@
     "key": "2964",
     "mappings": {
       "default": {
-        "default": "harpon droit à dent dressée par-dessus harpon droit à dent baissée"
+        "default": "harpon droit à dent dressée par dessus harpon droit à dent baissée"
       }
     },
     "category": "Sm"
@@ -348,7 +348,7 @@
     "key": "2966",
     "mappings": {
       "default": {
-        "default": "harpon à dent gauche dressée par-dessus harpon à dent droite dressée"
+        "default": "harpon à dent gauche dressée par dessus harpon à dent droite dressée"
       }
     },
     "category": "Sm"
@@ -357,7 +357,7 @@
     "key": "2967",
     "mappings": {
       "default": {
-        "default": "harpon à dent gauche baissée par-dessus harpon à dent droite baissée"
+        "default": "harpon à dent gauche baissée par dessus harpon à dent droite baissée"
       }
     },
     "category": "Sm"
@@ -366,7 +366,7 @@
     "key": "2968",
     "mappings": {
       "default": {
-        "default": "harpon à dent droite dressée par-dessus harpon à dent gauche dressée"
+        "default": "harpon à dent droite dressée par dessus harpon à dent gauche dressée"
       }
     },
     "category": "Sm"
@@ -375,7 +375,7 @@
     "key": "2969",
     "mappings": {
       "default": {
-        "default": "harpon à dent droite baissée par-dessus harpon à dent gauche baissée"
+        "default": "harpon à dent droite baissée par dessus harpon à dent gauche baissée"
       }
     },
     "category": "Sm"
@@ -384,7 +384,7 @@
     "key": "296A",
     "mappings": {
       "default": {
-        "default": "harpon à dent gauche dressée par-dessus long trait"
+        "default": "harpon à dent gauche dressée par dessus long trait"
       }
     },
     "category": "Sm"
@@ -393,7 +393,7 @@
     "key": "296B",
     "mappings": {
       "default": {
-        "default": "long trait par-dessus harpon à dent gauche baissée"
+        "default": "long trait par dessus harpon à dent gauche baissée"
       }
     },
     "category": "Sm"
@@ -402,7 +402,7 @@
     "key": "296C",
     "mappings": {
       "default": {
-        "default": "harpon à dent droite dressée par-dessus long trait"
+        "default": "harpon à dent droite dressée par dessus long trait"
       }
     },
     "category": "Sm"
@@ -411,7 +411,7 @@
     "key": "296D",
     "mappings": {
       "default": {
-        "default": "long trait par-dessus harpon à dent droite baissée"
+        "default": "long trait par dessus harpon à dent droite baissée"
       }
     },
     "category": "Sm"

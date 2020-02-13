@@ -34,7 +34,7 @@
     "key": "2000",
     "mappings": {
       "default": {
-        "default": "demi-cadratin"
+        "default": "demi cadratin"
       }
     }
   },
@@ -159,7 +159,7 @@
     "key": "200E",
     "mappings": {
       "default": {
-        "default": "marque gauche-à-droite"
+        "default": "marque gauche à droite"
       }
     },
     "category": "Cf"
@@ -168,7 +168,7 @@
     "key": "200F",
     "mappings": {
       "default": {
-        "default": "marque droite-à-gauche"
+        "default": "marque droite à gauche"
       }
     },
     "category": "Cf"
@@ -196,7 +196,7 @@
     "key": "202A",
     "mappings": {
       "default": {
-        "default": "enchâssement gauche-à-droite"
+        "default": "enchâssement gauche à droite"
       }
     }
   },
@@ -205,7 +205,7 @@
     "key": "202B",
     "mappings": {
       "default": {
-        "default": "enchâssement droite-à-gauche"
+        "default": "enchâssement droite à gauche"
       }
     }
   },
@@ -223,7 +223,7 @@
     "key": "202D",
     "mappings": {
       "default": {
-        "default": "forçage gauche-à-droite"
+        "default": "forçage gauche à droite"
       }
     }
   },
@@ -232,7 +232,7 @@
     "key": "202E",
     "mappings": {
       "default": {
-        "default": "forçage droite-à-gauche"
+        "default": "forçage droite à gauche"
       }
     }
   },

@@ -120,7 +120,7 @@
     "key": "230C",
     "mappings": {
       "default": {
-        "default": "repère sud-est"
+        "default": "repère sud est"
       }
     },
     "category": "So"
@@ -129,7 +129,7 @@
     "key": "230D",
     "mappings": {
       "default": {
-        "default": "repère sud-ouest"
+        "default": "repère sud ouest"
       }
     },
     "category": "So"
@@ -138,7 +138,7 @@
     "key": "230E",
     "mappings": {
       "default": {
-        "default": "repère nord-est"
+        "default": "repère nord est"
       }
     },
     "category": "So"
@@ -147,7 +147,7 @@
     "key": "230F",
     "mappings": {
       "default": {
-        "default": "repère nord-ouest"
+        "default": "repère nord ouest"
       }
     },
     "category": "So"
@@ -156,7 +156,7 @@
     "key": "231C",
     "mappings": {
       "default": {
-        "default": "coin nord-ouest"
+        "default": "coin nord ouest"
       }
     },
     "category": "So"
@@ -165,7 +165,7 @@
     "key": "231D",
     "mappings": {
       "default": {
-        "default": "coin nord-est"
+        "default": "coin nord est"
       }
     },
     "category": "So"
@@ -174,7 +174,7 @@
     "key": "231E",
     "mappings": {
       "default": {
-        "default": "coin sud-ouest"
+        "default": "coin sud ouest"
       }
     },
     "category": "So"
@@ -183,7 +183,7 @@
     "key": "231F",
     "mappings": {
       "default": {
-        "default": "coin sud-est"
+        "default": "coin sud est"
       }
     },
     "category": "So"
@@ -562,7 +562,7 @@
     "key": "2768",
     "mappings": {
       "default": {
-        "default": "parenthèse de fantaisie gauche demi-grasse"
+        "default": "parenthèse de fantaisie gauche demi grasse"
       }
     }
   },
@@ -571,7 +571,7 @@
     "key": "2769",
     "mappings": {
       "default": {
-        "default": "parenthèse de fantaisie droite demi-grasse"
+        "default": "parenthèse de fantaisie droite demi grasse"
       }
     }
   },
@@ -580,7 +580,7 @@
     "key": "276A",
     "mappings": {
       "default": {
-        "default": "parenthèse de fantaisie gauche demi-grasse aplatie"
+        "default": "parenthèse de fantaisie gauche demi grasse aplatie"
       }
     }
   },
@@ -589,7 +589,7 @@
     "key": "276B",
     "mappings": {
       "default": {
-        "default": "parenthèse de fantaisie droite demi-grasse aplatie"
+        "default": "parenthèse de fantaisie droite demi grasse aplatie"
       }
     }
   },
@@ -598,7 +598,7 @@
     "key": "276C",
     "mappings": {
       "default": {
-        "default": "chevron de fantaisie vers la gauche demi-gras"
+        "default": "chevron de fantaisie vers la gauche demi gras"
       }
     }
   },
@@ -607,7 +607,7 @@
     "key": "276D",
     "mappings": {
       "default": {
-        "default": "chevron de fantaisie vers la droite demi-gras"
+        "default": "chevron de fantaisie vers la droite demi gras"
       }
     }
   },
@@ -1633,7 +1633,7 @@
     "key": "FF62",
     "mappings": {
       "default": {
-        "default": "crochet gauche en coin demi-chasse"
+        "default": "crochet gauche en coin demi chasse"
       }
     }
   },
@@ -1642,7 +1642,7 @@
     "key": "FF63",
     "mappings": {
       "default": {
-        "default": "crochet droit en coin demi-chasse"
+        "default": "crochet droit en coin demi chasse"
       }
     }
   }
