@@ -132,7 +132,7 @@ sre.MmlcloudFrenchTest.prototype.testAbsValueVsNeutral = function() {
   this.executeRuleTest(mml, 'valeur absolue a fin valeur absolue',
                        'sbrief');
   mml = '<mo>｜</mo><mi>a</mi><mo>‖</mo>';
-  this.executeRuleTest(mml, 'vertical bar a double ligne verticale', 'default');
+  this.executeRuleTest(mml, 'barre verticale a double ligne verticale', 'default');
   mml = '<mo>‖</mo><mi>a</mi><mo>‖</mo>';
   this.executeRuleTest(mml, 'double ligne verticale a double ligne verticale',
                        'default');

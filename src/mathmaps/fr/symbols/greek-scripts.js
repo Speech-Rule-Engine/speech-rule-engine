@@ -34,7 +34,7 @@
     "key": "1D29",
     "mappings": {
       "default": {
-        "default": "petite rh majusculeô"
+        "default": "petite rhô majuscule"
       }
     }
   },

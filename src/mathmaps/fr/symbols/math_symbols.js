@@ -7334,7 +7334,7 @@
     "key": "FF01",
     "mappings": {
       "default": {
-        "default": "point d'exclamation pleine chasse"
+        "default": "point d'exclamation"
       }
     }
   },
@@ -7343,7 +7343,7 @@
     "key": "FF02",
     "mappings": {
       "default": {
-        "default": "guillemet pleine chasse"
+        "default": "guillemet"
       }
     }
   },
@@ -7352,7 +7352,7 @@
     "key": "FF03",
     "mappings": {
       "default": {
-        "default": "croisillon pleine chasse"
+        "default": "croisillon"
       }
     }
   },
@@ -7361,7 +7361,7 @@
     "key": "FF04",
     "mappings": {
       "default": {
-        "default": "symbole dollar pleine chasse"
+        "default": "symbole dollar"
       }
     }
   },
@@ -7370,7 +7370,7 @@
     "key": "FF05",
     "mappings": {
       "default": {
-        "default": "symbole pour cent pleine chasse"
+        "default": "symbole pour cent"
       }
     }
   },
@@ -7379,7 +7379,7 @@
     "key": "FF06",
     "mappings": {
       "default": {
-        "default": "perluète pleine chasse"
+        "default": "perluète"
       }
     }
   },
@@ -7388,7 +7388,7 @@
     "key": "FF07",
     "mappings": {
       "default": {
-        "default": "apostrophe pleine chasse"
+        "default": "apostrophe"
       }
     }
   },
@@ -7397,7 +7397,7 @@
     "key": "FF0A",
     "mappings": {
       "default": {
-        "default": "astérisque pleine chasse"
+        "default": "astérisque"
       }
     }
   },
@@ -7406,7 +7406,7 @@
     "key": "FF0B",
     "mappings": {
       "default": {
-        "default": "plus pleine chasse"
+        "default": "plus"
       }
     }
   },
@@ -7415,7 +7415,7 @@
     "key": "FF0C",
     "mappings": {
       "default": {
-        "default": "virgule pleine chasse"
+        "default": "virgule"
       }
     }
   },
@@ -7424,7 +7424,7 @@
     "key": "FF0D",
     "mappings": {
       "default": {
-        "default": "tiret pleine chasse"
+        "default": "tiret"
       }
     }
   },
@@ -7433,7 +7433,7 @@
     "key": "FF0E",
     "mappings": {
       "default": {
-        "default": "point pleine chasse"
+        "default": "point"
       }
     }
   },
@@ -7442,7 +7442,7 @@
     "key": "FF0F",
     "mappings": {
       "default": {
-        "default": "barre oblique pleine chasse"
+        "default": "barre oblique"
       }
     }
   },
@@ -7451,7 +7451,7 @@
     "key": "FF1A",
     "mappings": {
       "default": {
-        "default": "deux points colon pleine chasse"
+        "default": "deux points colon"
       }
     }
   },
@@ -7460,7 +7460,7 @@
     "key": "FF1B",
     "mappings": {
       "default": {
-        "default": "point virgule pleine chasse"
+        "default": "point virgule"
       }
     }
   },
@@ -7469,7 +7469,7 @@
     "key": "FF1C",
     "mappings": {
       "default": {
-        "default": "inférieur à pleine chasse"
+        "default": "inférieur à"
       }
     }
   },
@@ -7478,7 +7478,7 @@
     "key": "FF1D",
     "mappings": {
       "default": {
-        "default": "égal à pleine chasse"
+        "default": "égal à"
       }
     }
   },
@@ -7487,7 +7487,7 @@
     "key": "FF1E",
     "mappings": {
       "default": {
-        "default": "supérieur à pleine chasse"
+        "default": "supérieur à"
       }
     }
   },
@@ -7496,7 +7496,7 @@
     "key": "FF1F",
     "mappings": {
       "default": {
-        "default": "point d'interrogation pleine chasse"
+        "default": "point d'interrogation"
       }
     }
   },
@@ -7505,7 +7505,7 @@
     "key": "FF20",
     "mappings": {
       "default": {
-        "default": "arrobe pleine chasse"
+        "default": "arrobe"
       }
     }
   },
@@ -7514,7 +7514,7 @@
     "key": "FF3C",
     "mappings": {
       "default": {
-        "default": "barre oblique inversée pleine chasse"
+        "default": "barre oblique inversée"
       }
     }
   },
@@ -7523,7 +7523,7 @@
     "key": "FF3E",
     "mappings": {
       "default": {
-        "default": "accent circonflexe pleine chasse"
+        "default": "accent circonflexe"
       }
     }
   },
@@ -7532,7 +7532,7 @@
     "key": "FF3F",
     "mappings": {
       "default": {
-        "default": "tiret bas pleine chasse"
+        "default": "tiret bas"
       }
     }
   },
@@ -7541,7 +7541,7 @@
     "key": "FF40",
     "mappings": {
       "default": {
-        "default": "accent grave pleine chasse"
+        "default": "accent grave"
       }
     }
   },
@@ -7550,7 +7550,7 @@
     "key": "FF5C",
     "mappings": {
       "default": {
-        "default": "ligne verticale pleine chasse"
+        "default": "barre verticale"
       }
     }
   },
@@ -7559,7 +7559,7 @@
     "key": "FF5E",
     "mappings": {
       "default": {
-        "default": "tilde pleine chasse"
+        "default": "tilde"
       }
     }
   },
@@ -7568,7 +7568,7 @@
     "key": "FFE0",
     "mappings": {
       "default": {
-        "default": "symbole centime pleine chasse"
+        "default": "symbole centime"
       }
     }
   },
@@ -7577,7 +7577,7 @@
     "key": "FFE1",
     "mappings": {
       "default": {
-        "default": "symbole livre pleine chasse"
+        "default": "symbole livre"
       }
     }
   },
@@ -7586,7 +7586,7 @@
     "key": "FFE2",
     "mappings": {
       "default": {
-        "default": "négation pleine chasse"
+        "default": "négation"
       }
     }
   },
@@ -7595,7 +7595,7 @@
     "key": "FFE3",
     "mappings": {
       "default": {
-        "default": "macron pleine chasse *"
+        "default": "macron *"
       }
     }
   },
@@ -7604,7 +7604,7 @@
     "key": "FFE4",
     "mappings": {
       "default": {
-        "default": "ligne brisée pleine chasse"
+        "default": "ligne brisée"
       }
     }
   },
@@ -7613,7 +7613,7 @@
     "key": "FFE5",
     "mappings": {
       "default": {
-        "default": "symbole yen pleine chasse"
+        "default": "symbole yen"
       }
     }
   },
@@ -7622,7 +7622,7 @@
     "key": "FFE6",
     "mappings": {
       "default": {
-        "default": "symbole won pleine chasse"
+        "default": "symbole won"
       }
     }
   },
@@ -7631,7 +7631,7 @@
     "key": "FFE8",
     "mappings": {
       "default": {
-        "default": "ligne verticale mince demi chasse"
+        "default": "ligne verticale mince"
       }
     }
   },
@@ -7640,7 +7640,7 @@
     "key": "FFED",
     "mappings": {
       "default": {
-        "default": "carré noir demi chasse"
+        "default": "carré noir"
       }
     }
   },
@@ -7649,7 +7649,7 @@
     "key": "FFEE",
     "mappings": {
       "default": {
-        "default": "cercle blanc demi chasse"
+        "default": "cercle blanc"
       }
     }
   }

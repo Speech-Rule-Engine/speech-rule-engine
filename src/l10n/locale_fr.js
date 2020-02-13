@@ -107,6 +107,24 @@ sre.Locale.fr = {
     'unknown': 'inconnu'
   },
 
+
+  EMBELLISH: {
+    // Embellishments
+    // TODO: Here we need specialist combiners!
+    'super': ['exposant', sre.Locale.prefixCombiner],
+    'sub': ['indice', sre.Locale.prefixCombiner],
+    'circled': 'encerclé',
+    'parenthesized': 'entre parenthèses',
+    'period': 'un point',
+    'negative-circled': 'encerclé noir',
+    'double-circled': 'encerclé double',
+    'circled-sans-serif': 'sans empattement encerclé',
+    'negative-circled-sans-serif': 'sans empattement encerclé noir',
+    'comma': 'virgule',
+    'squared': 'encadré',
+    'negative-squared': 'encadré inverse'
+  },
+
   ROLE: {
     // Infixoperators
     'addition': 'addition',
