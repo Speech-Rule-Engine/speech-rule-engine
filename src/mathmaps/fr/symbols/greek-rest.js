@@ -1,4 +1,7 @@
-[{"locale": "fr"},
+[
+  {
+    "locale": "fr"
+  },
   {
     "category": "Lu",
     "key": "0394",

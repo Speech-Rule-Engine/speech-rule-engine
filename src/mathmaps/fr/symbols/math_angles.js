@@ -30,6 +30,24 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "299B",
+    "mappings": {
+      "default": {
+        "default": "angle mesuré s'ouvrant vers la gauche"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "299C",
+    "mappings": {
+      "default": {
+        "default": "variante d'angle avec carré"
+      }
+    }
+  },
+  {
     "key": "299D",
     "mappings": {
       "default": {
@@ -37,6 +55,60 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "299E",
+    "mappings": {
+      "default": {
+        "default": "angle avec s inscrit"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "299F",
+    "mappings": {
+      "default": {
+        "default": "angle aigu"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29A0",
+    "mappings": {
+      "default": {
+        "default": "angle sphérique s'ouvrant vers la gauche"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29A1",
+    "mappings": {
+      "default": {
+        "default": "angle sphérique s'ouvrant vers le haut"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29A2",
+    "mappings": {
+      "default": {
+        "default": "angle culbuté"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29A3",
+    "mappings": {
+      "default": {
+        "default": "angle réfléchi"
+      }
+    }
   },
   {
     "key": "29A4",

@@ -1,4 +1,7 @@
-[{"locale": "fr"},
+[
+  {
+    "locale": "fr"
+  },
   {
     "key": "00B2",
     "mappings": {

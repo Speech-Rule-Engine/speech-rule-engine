@@ -327,6 +327,15 @@
     "category": "Ll"
   },
   {
+    "category": "Ll",
+    "key": "0115",
+    "mappings": {
+      "default": {
+        "default": "e bréve"
+      }
+    }
+  },
+  {
     "key": "0117",
     "mappings": {
       "default": {
@@ -381,6 +390,15 @@
     "category": "Ll"
   },
   {
+    "category": "Ll",
+    "key": "0123",
+    "mappings": {
+      "default": {
+        "default": "g cédille"
+      }
+    }
+  },
+  {
     "key": "0125",
     "mappings": {
       "default": {
@@ -406,6 +424,15 @@
       }
     },
     "category": "Ll"
+  },
+  {
+    "category": "Ll",
+    "key": "012D",
+    "mappings": {
+      "default": {
+        "default": "i bréve"
+      }
+    }
   },
   {
     "key": "012F",
@@ -514,6 +541,15 @@
       }
     },
     "category": "Ll"
+  },
+  {
+    "category": "Ll",
+    "key": "014F",
+    "mappings": {
+      "default": {
+        "default": "o bréve"
+      }
+    }
   },
   {
     "key": "0151",
@@ -705,6 +741,78 @@
     "category": "Ll"
   },
   {
+    "category": "Ll",
+    "key": "01CE",
+    "mappings": {
+      "default": {
+        "default": "a caron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01D0",
+    "mappings": {
+      "default": {
+        "default": "i caron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01D2",
+    "mappings": {
+      "default": {
+        "default": "o caron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01D4",
+    "mappings": {
+      "default": {
+        "default": "u caron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01E7",
+    "mappings": {
+      "default": {
+        "default": "g caron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01E9",
+    "mappings": {
+      "default": {
+        "default": "k caron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01EB",
+    "mappings": {
+      "default": {
+        "default": "o ogonek"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01F0",
+    "mappings": {
+      "default": {
+        "default": "j caron"
+      }
+    }
+  },
+  {
     "key": "01F5",
     "mappings": {
       "default": {
@@ -712,6 +820,195 @@
       }
     },
     "category": "Ll"
+  },
+  {
+    "category": "Ll",
+    "key": "01F9",
+    "mappings": {
+      "default": {
+        "default": "n grave"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0201",
+    "mappings": {
+      "default": {
+        "default": "a double accent grave"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0203",
+    "mappings": {
+      "default": {
+        "default": "a brève renversée"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0205",
+    "mappings": {
+      "default": {
+        "default": "e double accent grave"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0207",
+    "mappings": {
+      "default": {
+        "default": "e brève renversée"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0209",
+    "mappings": {
+      "default": {
+        "default": "i double accent grave"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "020B",
+    "mappings": {
+      "default": {
+        "default": "i brève renversée"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "020D",
+    "mappings": {
+      "default": {
+        "default": "o double accent grave"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "020F",
+    "mappings": {
+      "default": {
+        "default": "o brève renversée"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0211",
+    "mappings": {
+      "default": {
+        "default": "r double accent grave"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0213",
+    "mappings": {
+      "default": {
+        "default": "r brève renversée"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0215",
+    "mappings": {
+      "default": {
+        "default": "u double accent grave"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0217",
+    "mappings": {
+      "default": {
+        "default": "u brève renversée"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0219",
+    "mappings": {
+      "default": {
+        "default": "s virgule souscrite *"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "021B",
+    "mappings": {
+      "default": {
+        "default": "t virgule souscrite *"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "021F",
+    "mappings": {
+      "default": {
+        "default": "h caron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0227",
+    "mappings": {
+      "default": {
+        "default": "a point en chef"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0229",
+    "mappings": {
+      "default": {
+        "default": "e cédille"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "022F",
+    "mappings": {
+      "default": {
+        "default": "o point en chef"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0233",
+    "mappings": {
+      "default": {
+        "default": "y macron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0237",
+    "mappings": {
+      "default": {
+        "default": "j sans point"
+      }
+    }
   },
   {
     "key": "1E01",

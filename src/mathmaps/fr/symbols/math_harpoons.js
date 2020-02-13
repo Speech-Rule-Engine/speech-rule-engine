@@ -111,6 +111,24 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "294C",
+    "mappings": {
+      "default": {
+        "default": "crampon à dents supérieure droite et inférieure gauche"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "294D",
+    "mappings": {
+      "default": {
+        "default": "crampon à dents supérieure gauche et inférieure droite"
+      }
+    }
+  },
+  {
     "key": "294E",
     "mappings": {
       "default": {

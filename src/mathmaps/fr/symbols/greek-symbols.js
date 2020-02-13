@@ -28,5 +28,23 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Lu",
+    "key": "1D7CA",
+    "mappings": {
+      "default": {
+        "default": "Digamma en gras"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D7CB",
+    "mappings": {
+      "default": {
+        "default": "digamma en gras"
+      }
+    }
   }
 ]

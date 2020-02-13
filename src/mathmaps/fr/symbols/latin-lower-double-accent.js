@@ -3,6 +3,105 @@
     "locale": "fr"
   },
   {
+    "category": "Ll",
+    "key": "01D6",
+    "mappings": {
+      "default": {
+        "default": "u trémaa et macron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01D8",
+    "mappings": {
+      "default": {
+        "default": "u trémaa et accent aigu"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01DA",
+    "mappings": {
+      "default": {
+        "default": "u trémaa et caron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01DC",
+    "mappings": {
+      "default": {
+        "default": "u trémaa et accent grave"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01DF",
+    "mappings": {
+      "default": {
+        "default": "a trémaa et macron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01E1",
+    "mappings": {
+      "default": {
+        "default": "a point en chef et macron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01ED",
+    "mappings": {
+      "default": {
+        "default": "o ogonek et macron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01FB",
+    "mappings": {
+      "default": {
+        "default": "a rond en chef et accent aigu"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "022B",
+    "mappings": {
+      "default": {
+        "default": "o tréma et macron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "022D",
+    "mappings": {
+      "default": {
+        "default": "o tilde et macron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0231",
+    "mappings": {
+      "default": {
+        "default": "o point en chef et macron"
+      }
+    }
+  },
+  {
     "key": "1E09",
     "mappings": {
       "default": {

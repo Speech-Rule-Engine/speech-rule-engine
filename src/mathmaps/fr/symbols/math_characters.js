@@ -21,6 +21,51 @@
     "category": "Sm"
   },
   {
+    "category": "Ll",
+    "key": "213C",
+    "mappings": {
+      "default": {
+        "default": "pi ajouré"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "213D",
+    "mappings": {
+      "default": {
+        "default": "gamma ajouré"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "213E",
+    "mappings": {
+      "default": {
+        "default": "Gamma majuscule ajouré"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "213F",
+    "mappings": {
+      "default": {
+        "default": "Pi majuscule ajouré"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2140",
+    "mappings": {
+      "default": {
+        "default": "sommation de la famille ajouré"
+      }
+    }
+  },
+  {
     "key": "2145",
     "mappings": {
       "default": {
@@ -33,7 +78,7 @@
     "key": "2146",
     "mappings": {
       "default": {
-        "default": "d minuscule ajouré en italique"
+        "default": "d ajouré en italique"
       }
     },
     "category": "Ll"
@@ -42,7 +87,7 @@
     "key": "2147",
     "mappings": {
       "default": {
-        "default": "e minuscule ajouré en italique"
+        "default": "e ajouré en italique"
       }
     },
     "category": "Ll"
@@ -51,10 +96,19 @@
     "key": "2148",
     "mappings": {
       "default": {
-        "default": "i minuscule ajouré en italique"
+        "default": "i ajouré en italique"
       }
     },
     "category": "Ll"
+  },
+  {
+    "category": "Ll",
+    "key": "2149",
+    "mappings": {
+      "default": {
+        "default": "j ajouré en italique"
+      }
+    }
   },
   {
     "key": "1D6A4",
