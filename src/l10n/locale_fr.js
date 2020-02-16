@@ -25,12 +25,6 @@ goog.require('sre.Messages');
 goog.require('sre.Numbers.fr');
 
 
-var combiner = function(letter, font, cap) {
-  letter = cap ? letter + ' ' + cap : letter;
-  return font ? letter + ' ' + font : letter;
-};
-
-
 /**
  * @type {sre.Locale.Messages}
  */
@@ -246,6 +240,9 @@ sre.Locale.fr = {
     digitPrefix: {default: ''}
   },
 
-  ALPHABET_COMBINER: combiner
+  ALPHABET_COMBINER: function(letter, font, cap) {
+    letter = cap ? letter + ' ' + cap : letter;
+    return font ? letter + ' ' + font : letter;
+  }
 
 };
