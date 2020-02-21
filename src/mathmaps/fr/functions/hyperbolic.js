@@ -73,5 +73,54 @@
     "names": [
       "tanh"
     ]
+  },
+
+  {"category": "Area",
+   "mappings": {
+     "default": {
+       "default": "arc cosinus hyperbolique"
+     } },
+   "key": "arcosh",
+   "names": ["arcosh", "arccosh"]
+  },
+  {"category": "Area",
+   "mappings": {
+     "default": {
+       "default": "arc cotangente hyperbolique"
+     } },
+   "key": "arcoth",
+   "names": ["arcoth", "arccoth"]
+  },
+  {"category": "Area",
+   "mappings": {
+     "default": {
+       "default": "arc cosécante hyperbolique"
+     } },
+   "key": "arcsch",
+   "names": ["arcsch", "arccsch"]
+  },
+  {"category": "Area",
+   "mappings": {
+     "default": {
+       "default": "arc sécante hyperbolique"
+     } },
+   "key": "arsech",
+   "names": ["arsech", "arcsech"]
+  },
+  {"category": "Area",
+   "mappings": {
+     "default": {
+       "default": "arc sinus hyperbolique"
+     } },
+   "key": "arsinh",
+   "names": ["arsinh", "arcsinh"]
+  },
+  {"category": "Area",
+   "mappings": {
+     "default": {
+       "default": "arc tangente hyperbolique"
+     } },
+   "key": "artanh",
+   "names": ["artanh", "arctanh"]
   }
 ]
