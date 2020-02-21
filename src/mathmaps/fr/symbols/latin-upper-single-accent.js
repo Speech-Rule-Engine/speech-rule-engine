@@ -322,7 +322,7 @@
     "key": "0114",
     "mappings": {
       "default": {
-        "default": "E bréve majuscule"
+        "default": "E brève majuscule"
       }
     }
   },
@@ -421,7 +421,7 @@
     "key": "012C",
     "mappings": {
       "default": {
-        "default": "I bréve majuscule"
+        "default": "I brève majuscule"
       }
     }
   },
@@ -538,7 +538,7 @@
     "key": "014E",
     "mappings": {
       "default": {
-        "default": "O bréve majuscule"
+        "default": "O brève majuscule"
       }
     }
   },

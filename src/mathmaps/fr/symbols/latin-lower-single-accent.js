@@ -331,7 +331,7 @@
     "key": "0115",
     "mappings": {
       "default": {
-        "default": "e bréve"
+        "default": "e brève"
       }
     }
   },
@@ -430,7 +430,7 @@
     "key": "012D",
     "mappings": {
       "default": {
-        "default": "i bréve"
+        "default": "i brève"
       }
     }
   },
@@ -547,7 +547,7 @@
     "key": "014F",
     "mappings": {
       "default": {
-        "default": "o bréve"
+        "default": "o brève"
       }
     }
   },
