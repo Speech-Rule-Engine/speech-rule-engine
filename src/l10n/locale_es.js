@@ -156,6 +156,23 @@ sre.Locale.es = {
     'unknown': 'división larga'
   },
 
+  EMBELLISH: {
+    // Embellishments
+    // TODO: Here we need specialist combiners!
+    'super': 'super',
+    'sub': 'sub',
+    'circled': 'circled',
+    'parenthesized': 'parenthesized',
+    'period': ['period', sre.Locale.postfixCombiner],
+    'negative-circled': 'black circled',
+    'double-circled': 'double circled',
+    'circled-sans-serif': 'circled sans serif',
+    'negative-circled-sans-serif': 'black circled sans serif',
+    'comma': ['comma', sre.Locale.postfixCombiner],
+    'squared': 'squared',
+    'negative-squared': 'black squared'
+  },
+
   NAVIGATE: {
     COLLAPSIBLE: 'plegable',
     EXPANDABLE: 'ampliable',
@@ -184,17 +201,17 @@ sre.Locale.es = {
     ],
     greekSmall: [
       'nabla',  // This is here as it is small.
-      'alpha', 'bêta', 'gamma', 'delta', 'epsilon', 'zêta', 'êta', 'thêta',
-      'iota', 'kappa', 'lambda', 'mû', 'nû', 'xi', 'omicron', 'pi', 'rhô',
-      'sigma final', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'oméga',
+      'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta',
+      'iota', 'kappa', 'lamda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho',
+      'final sigma', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega',
       // Symbols below
-      'dérivée partielle', 'epsilon', 'thêta', 'kappa', 'phi', 'rhô', 'pi'
+      'partial differential', 'epsilon', 'theta', 'kappa', 'phi', 'rho', 'pi'
     ],
     greekCap: [
-      'Alpha', 'Bêta', 'Gamma', 'Delta', 'Epsilon', 'Zêta', 'Êta', 'Thêta',
-      'Iota', 'Kappa', 'Lambda', 'Mû', 'Nû', 'Xi', 'Omicron', 'Pi', 'Rhô',
-      'Thêta', // Theta symbol
-      'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Oméga'
+      'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta',
+      'Iota', 'Kappa', 'Lamda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi', 'Rho',
+      'Theta', // Theta symbol
+      'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega'
     ]
   },
 
