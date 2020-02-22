@@ -1254,13 +1254,13 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'not(contains(@grammar, "singularUnit"))');
   defineRule(
       'unit-square', 'mathspeak.default',
-      '[t] "square"; [n] children/*[1]',
+      '[t] "al cuadrado"; [n] children/*[1]',
       'self::superscript', '@role="unit"', 'children/*[2][text()=2]',
       'name(children/*[1])="identifier"');
 
   defineRule(
       'unit-cubic', 'mathspeak.default',
-      '[t] "cubic"; [n] children/*[1]',
+      '[t] "al cubo"; [n] children/*[1]',
       'self::superscript', '@role="unit"', 'children/*[2][text()=3]',
       'name(children/*[1])="identifier"');
   defineRule(
