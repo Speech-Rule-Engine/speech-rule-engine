@@ -53,8 +53,8 @@ sre.AbstractCharacterTest.prototype.executeCharTest = function(char, answers) {
     } catch (err) {
       console.log('\nFailed Character: ' + char + ' (' +
                   this.domain + '.' + this.styles[i] + ')');
-      console.log(err);
-      // throw(err);
+      // console.log(err);
+      throw(err);
     }
   }
 };
@@ -110,18 +110,18 @@ sre.AbstractCharacterTest.testOutput = function() {
       mathspeak: ['default', 'brief', 'sbrief'],
       clearspeak: ['default']
     },
-    es: {
-      default: ['default'],
-      mathspeak: ['default', 'brief', 'sbrief']
-    },
+    // es: {
+    //   default: ['default'],
+    //   mathspeak: ['default', 'brief', 'sbrief']
+    // },
     fr: {
       default: ['default'],
       mathspeak: ['default', 'brief', 'sbrief'],
       clearspeak: ['default']
-    },
-    nemeth: {
-      default: ['default']
-    }
+    }// ,
+    // nemeth: {
+    //   default: ['default']
+    // }
   };
   var stores = sre.MathMap.getInstance().store['subStores_'];
   var allRules = {};
