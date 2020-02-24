@@ -201,24 +201,24 @@ sre.Locale.es = {
     ],
     greekSmall: [
       'nabla',  // This is here as it is small.
-      'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta',
-      'iota', 'kappa', 'lamda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho',
-      'final sigma', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega',
+      'alfa', 'beta', 'gamma', 'delta', 'épsilon', 'zeta', 'eta', 'theta',
+      'iota', 'kappa', 'lambda', 'mi', 'ni', 'xi', 'ómicron', 'pi', 'rho',
+      'sigma final', 'sigma', 'tau', 'ípsilon', 'phi', 'ji', 'psi', 'omega',
       // Symbols below
-      'partial differential', 'epsilon', 'theta', 'kappa', 'phi', 'rho', 'pi'
+      'diferencial parcial', 'épsilon', 'theta', 'kappa', 'phi', 'rho', 'pi'
     ],
     greekCap: [
-      'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta',
-      'Iota', 'Kappa', 'Lamda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi', 'Rho',
+      'Alfa', 'Beta', 'Gamma', 'Delta', 'Épsilon', 'Zeta', 'Eta', 'Theta',
+      'Iota', 'Kappa', 'Lambda', 'Mi', 'Ni', 'Xi', 'Ómicron', 'Pi', 'Rho',
       'Theta', // Theta symbol
-      'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega'
+      'Sigma', 'Tau', 'Ípsilon', 'Phi', 'Ji', 'Psi', 'Omega'
     ]
   },
 
   ALPHABET_TRANSFORMERS: {
     digit: {
       default: function(n) {
-          return n === 0 ? 'zero' : sre.Numbers.es.numberToWords(n);},
+          return n === 0 ? 'cero' : sre.Numbers.es.numberToWords(n);},
       mathspeak: function(n) {return n.toString();},
       clearspeak: function(n) {return n.toString();}},
     letter: {

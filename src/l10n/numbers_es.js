@@ -70,9 +70,12 @@ sre.Numbers.es.numberToOrdinal = function(num, plural) {
     return sre.Numbers.es.onesOrdinals_[num - 1];
   }
   var result = [];
-  if (num > 1000) {
+  if (num >= 1000) {
     num = num - 1000;
     result.push('milésima');
+  }
+  if (!num) {
+    return result.join(' ');
   }
   var pos = 0;
   pos = Math.floor(num / 100);
