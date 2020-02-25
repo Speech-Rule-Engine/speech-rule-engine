@@ -21,6 +21,51 @@
     "category": "Sm"
   },
   {
+    "category": "Ll",
+    "key": "213C",
+    "mappings": {
+      "default": {
+        "default": "negrita de pizarra pi"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "213D",
+    "mappings": {
+      "default": {
+        "default": "negrita de pizarra gamma"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "213E",
+    "mappings": {
+      "default": {
+        "default": "negrita de pizarra mayúscula Gamma"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "213F",
+    "mappings": {
+      "default": {
+        "default": "negrita de pizarra mayúscula Pi"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2140",
+    "mappings": {
+      "default": {
+        "default": "negrita de pizarra suma de n-ary"
+      }
+    }
+  },
+  {
     "key": "2145",
     "mappings": {
       "default": {
@@ -58,9 +103,18 @@
   },
   {
     "category": "Ll",
+    "key": "2149",
     "mappings": {
       "default": {
-        "default": "cursiva dotless i"
+        "default": "negrita de pizarra cursiva j"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "cursiva sin punto i"
       }
     },
     "key": "1D6A4"
@@ -69,7 +123,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "cursiva dotless j"
+        "default": "cursiva sin punto j"
       }
     },
     "key": "1D6A5"

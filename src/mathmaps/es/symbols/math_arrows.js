@@ -733,6 +733,96 @@
     "category": "So"
   },
   {
+    "category": "So",
+    "key": "21EB",
+    "mappings": {
+      "default": {
+        "default": "flecha blanca hacia arriba en el pedestal"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "21EC",
+    "mappings": {
+      "default": {
+        "default": "flecha blanca hacia arriba sobre pedestal con barra horizontal"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "21ED",
+    "mappings": {
+      "default": {
+        "default": "flecha blanca hacia arriba sobre pedestal con barra vertical"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "21EE",
+    "mappings": {
+      "default": {
+        "default": "flecha doble hacia arriba blanca"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "21EF",
+    "mappings": {
+      "default": {
+        "default": "flecha doble hacia arriba blanca en pedestal"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "21F0",
+    "mappings": {
+      "default": {
+        "default": "flecha blanca hacia la derecha de la pared"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "21F1",
+    "mappings": {
+      "default": {
+        "default": "flecha del noroeste a la esquina"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "21F2",
+    "mappings": {
+      "default": {
+        "default": "flecha del sudeste a la esquina"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "21F3",
+    "mappings": {
+      "default": {
+        "default": "arriba abajo flecha blanca"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "21F4",
+    "mappings": {
+      "default": {
+        "default": "flecha derecha con círculo pequeño"
+      }
+    }
+  },
+  {
     "key": "21F5",
     "mappings": {
       "default": {
@@ -740,6 +830,69 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "21F6",
+    "mappings": {
+      "default": {
+        "default": "tres flechas a la derecha"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "21F7",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la izquierda con trazo vertical"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "21F8",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha con trazo vertical"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "21F9",
+    "mappings": {
+      "default": {
+        "default": "flecha izquierda derecha con trazo vertical"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "21FA",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la izquierda con doble trazo vertical"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "21FB",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha con doble trazo vertical"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "21FC",
+    "mappings": {
+      "default": {
+        "default": "flecha izquierda derecha con doble trazo vertical"
+      }
+    }
   },
   {
     "key": "21FD",
@@ -767,6 +920,402 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "So",
+    "key": "2301",
+    "mappings": {
+      "default": {
+        "default": "flecha electrica"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2303",
+    "mappings": {
+      "default": {
+        "default": "flecha arriba"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2304",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia abajo"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2324",
+    "mappings": {
+      "default": {
+        "default": "flecha arriba entre dos barras horizontales"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "238B",
+    "mappings": {
+      "default": {
+        "default": "círculo roto con la flecha del noroeste"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2794",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha con cabeza ancha"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2798",
+    "mappings": {
+      "default": {
+        "default": "flecha Sureste pesada"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2799",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha pesada"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "279A",
+    "mappings": {
+      "default": {
+        "default": "flecha pesada del noreste"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "279B",
+    "mappings": {
+      "default": {
+        "default": "punto de dibujo Flecha hacia la derecha"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "279C",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha con punta redonda redonda"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "279D",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha con forma de triángulo"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "279E",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha con forma de triángulo pesado"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "279F",
+    "mappings": {
+      "default": {
+        "default": "triángulo punteado hacia la flecha hacia la derecha"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27A0",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha con forma de triángulo de trazo pesado"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27A1",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha negra"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27A2",
+    "mappings": {
+      "default": {
+        "default": "punta de flecha tridimensional hacia la derecha hacia arriba"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27A3",
+    "mappings": {
+      "default": {
+        "default": "punta de flecha hacia la derecha con iluminación inferior en tres dimensiones"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27A4",
+    "mappings": {
+      "default": {
+        "default": "punta de flecha negra hacia la derecha"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27A5",
+    "mappings": {
+      "default": {
+        "default": "pesado negro curvado hacia abajo y hacia la derecha flecha"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27A6",
+    "mappings": {
+      "default": {
+        "default": "pesado negro curvado hacia arriba y hacia la derecha flecha"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27A7",
+    "mappings": {
+      "default": {
+        "default": "squat Black Arrow hacia la derecha"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27A8",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha de color negro cóncava puntiaguda pesada"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27A9",
+    "mappings": {
+      "default": {
+        "default": "sombra derecha flecha blanca hacia la derecha"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27AA",
+    "mappings": {
+      "default": {
+        "default": "sombra hacia la izquierda blanca a la izquierda"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27AB",
+    "mappings": {
+      "default": {
+        "default": "back-Tilted Shadowed White Right Arrow"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27AC",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha blanca sombreada inclinada hacia delante"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27AD",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha pesada inferior, sombreada a la derecha, blanca"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27AE",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha blanca superior derecha sombreada pesada"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27AF",
+    "mappings": {
+      "default": {
+        "default": "con muesca, flecha derecha hacia abajo, a la derecha, hacia la derecha"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27B1",
+    "mappings": {
+      "default": {
+        "default": "con muescas, flecha derecha hacia arriba, a la derecha, hacia la derecha"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27B2",
+    "mappings": {
+      "default": {
+        "default": "círculo pesado blanco flecha hacia la derecha"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27B3",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha con plumas blancas"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27B4",
+    "mappings": {
+      "default": {
+        "default": "flecha suroriental de plumas negras"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27B5",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha con plumas negras"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27B6",
+    "mappings": {
+      "default": {
+        "default": "flecha del noreste con plumas negras"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27B7",
+    "mappings": {
+      "default": {
+        "default": "flecha suroriental con plumas negras pesadas"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27B8",
+    "mappings": {
+      "default": {
+        "default": "flecha derecha pesada con plumas negras"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27B9",
+    "mappings": {
+      "default": {
+        "default": "flecha del noreste con plumas negras pesadas"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27BA",
+    "mappings": {
+      "default": {
+        "default": "lágrima-flecha de flecha hacia la derecha"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27BB",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha con forma de lágrima pesada"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27BC",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha de cola de cuña"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27BD",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha de cola de cuña pesada"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27BE",
+    "mappings": {
+      "default": {
+        "default": "open-Outlined Outward Arrow"
+      }
+    }
   },
   {
     "key": "27F0",
@@ -913,6 +1462,51 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "2900",
+    "mappings": {
+      "default": {
+        "default": "flecha de dos cabezas hacia la derecha con trazo vertical"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2901",
+    "mappings": {
+      "default": {
+        "default": "flecha de dos cabezas hacia la derecha con doble movimiento vertical"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2902",
+    "mappings": {
+      "default": {
+        "default": "doble flecha hacia la izquierda con trazo vertical"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2903",
+    "mappings": {
+      "default": {
+        "default": "doble flecha hacia la derecha con trazo vertical"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2904",
+    "mappings": {
+      "default": {
+        "default": "izquierda Derecha Doble Flecha con Trazo Vertical"
+      }
+    }
+  },
+  {
     "key": "2905",
     "mappings": {
       "default": {
@@ -920,6 +1514,60 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2906",
+    "mappings": {
+      "default": {
+        "default": "doble flecha hacia la izquierda de la barra"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2907",
+    "mappings": {
+      "default": {
+        "default": "flecha doble hacia la derecha de la barra"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2908",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia abajo con trazo horizontal"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2909",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia arriba con trazo horizontal"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "290A",
+    "mappings": {
+      "default": {
+        "default": "flecha triple hacia arriba"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "290B",
+    "mappings": {
+      "default": {
+        "default": "triple flecha hacia abajo"
+      }
+    }
   },
   {
     "key": "290C",
@@ -994,6 +1642,24 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "2914",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha con cola con trazo vertical"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2915",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha con la cola con doble trazo vertical"
+      }
+    }
+  },
+  {
     "key": "2916",
     "mappings": {
       "default": {
@@ -1003,6 +1669,24 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "2917",
+    "mappings": {
+      "default": {
+        "default": "flecha de dos cabezas hacia la derecha con cola con trazo vertical"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2918",
+    "mappings": {
+      "default": {
+        "default": "flecha de dos cabezas hacia la derecha con cola con doble movimiento vertical"
+      }
+    }
+  },
+  {
     "key": "2919",
     "mappings": {
       "default": {
@@ -1010,6 +1694,15 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "291A",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha"
+      }
+    }
   },
   {
     "key": "291B",
@@ -1064,6 +1757,24 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2921",
+    "mappings": {
+      "default": {
+        "default": "flechas del noroeste y sureste"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2922",
+    "mappings": {
+      "default": {
+        "default": "flecha noreste y sudoeste"
+      }
+    }
   },
   {
     "key": "2923",
@@ -1138,6 +1849,60 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "292D",
+    "mappings": {
+      "default": {
+        "default": "flecha Sureste Cruzando Flecha Noreste"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "292E",
+    "mappings": {
+      "default": {
+        "default": "north East Arrow Crossing South East Arrow"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "292F",
+    "mappings": {
+      "default": {
+        "default": "caída en diagonal que cruza la flecha noreste"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2930",
+    "mappings": {
+      "default": {
+        "default": "creciente Cruce de la Cruz del Sureste de la Flecha"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2931",
+    "mappings": {
+      "default": {
+        "default": "north East Arrow Crossing North West Arrow"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2932",
+    "mappings": {
+      "default": {
+        "default": "north West Arrow Crossing North East Arrow"
+      }
+    }
+  },
+  {
     "key": "2933",
     "mappings": {
       "default": {
@@ -1145,6 +1910,15 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2934",
+    "mappings": {
+      "default": {
+        "default": "flecha que apunta hacia la derecha y luego curva hacia arriba"
+      }
+    }
   },
   {
     "key": "2935",
@@ -1192,6 +1966,24 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "293A",
+    "mappings": {
+      "default": {
+        "default": "arco superior flecha hacia la izquierda"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "293B",
+    "mappings": {
+      "default": {
+        "default": "arco inferior flecha hacia la izquierda"
+      }
+    }
+  },
+  {
     "key": "293C",
     "mappings": {
       "default": {
@@ -1210,6 +2002,69 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "293E",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha semicircular inferior derecha"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "293F",
+    "mappings": {
+      "default": {
+        "default": "flecha inferior izquierda semicircular en sentido antihorario"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2940",
+    "mappings": {
+      "default": {
+        "default": "círculo cerrado en sentido contrario a las agujas del reloj"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2941",
+    "mappings": {
+      "default": {
+        "default": "círculo cerrado en el sentido de las agujas del reloj"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2942",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha sobre la flecha corta hacia la izquierda"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2943",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la izquierda sobre la flecha corta hacia la derecha"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2944",
+    "mappings": {
+      "default": {
+        "default": "flecha corta hacia la derecha arriba flecha hacia la izquierda"
+      }
+    }
+  },
+  {
     "key": "2945",
     "mappings": {
       "default": {
@@ -1217,6 +2072,24 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2946",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la izquierda con más abajo"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2947",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha a través de X"
+      }
+    }
   },
   {
     "key": "2948",
@@ -1300,6 +2173,15 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "2977",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la izquierda a través de menos de"
+      }
+    }
+  },
+  {
     "key": "2978",
     "mappings": {
       "default": {
@@ -1316,6 +2198,15 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "297A",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la izquierda a través del subconjunto"
+      }
+    }
   },
   {
     "key": "297B",
@@ -1345,6 +2236,42 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "29BD",
+    "mappings": {
+      "default": {
+        "default": "flecha arriba a través del círculo"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29EA",
+    "mappings": {
+      "default": {
+        "default": "diamante negro con flecha hacia abajo"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29EC",
+    "mappings": {
+      "default": {
+        "default": "círculo blanco con flecha hacia abajo"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29ED",
+    "mappings": {
+      "default": {
+        "default": "círculo negro con flecha hacia abajo"
+      }
+    }
+  },
+  {
     "key": "2A17",
     "mappings": {
       "default": {
@@ -1352,5 +2279,464 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "So",
+    "key": "2B00",
+    "mappings": {
+      "default": {
+        "default": "flecha blanca del noreste"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B01",
+    "mappings": {
+      "default": {
+        "default": "flecha blanca del noroeste"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B02",
+    "mappings": {
+      "default": {
+        "default": "flecha blanca del sureste"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B03",
+    "mappings": {
+      "default": {
+        "default": "sudoeste flecha blanca"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B04",
+    "mappings": {
+      "default": {
+        "default": "izquierda derecha flecha blanca"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B05",
+    "mappings": {
+      "default": {
+        "default": "flecha negra hacia la izquierda"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B06",
+    "mappings": {
+      "default": {
+        "default": "flecha negra hacia arriba"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B07",
+    "mappings": {
+      "default": {
+        "default": "flecha negra hacia abajo"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B08",
+    "mappings": {
+      "default": {
+        "default": "flecha negra del noreste"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B09",
+    "mappings": {
+      "default": {
+        "default": "flecha negra del noroeste"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B0A",
+    "mappings": {
+      "default": {
+        "default": "flecha negra sur este"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B0B",
+    "mappings": {
+      "default": {
+        "default": "sudoeste flecha negra"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B0C",
+    "mappings": {
+      "default": {
+        "default": "izquierda derecha flecha negra"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B0D",
+    "mappings": {
+      "default": {
+        "default": "arriba abajo flecha negra"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B0E",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha con la punta hacia abajo"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B0F",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha con la punta hacia arriba"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B10",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la izquierda con la punta hacia abajo"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B11",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la izquierda con la punta hacia arriba"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B30",
+    "mappings": {
+      "default": {
+        "default": "flecha izquierda con círculo pequeño"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B31",
+    "mappings": {
+      "default": {
+        "default": "tres flechas a la izquierda"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B32",
+    "mappings": {
+      "default": {
+        "default": "flecha izquierda con un círculo más"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B33",
+    "mappings": {
+      "default": {
+        "default": "flecha de flecha larga hacia la izquierda"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B34",
+    "mappings": {
+      "default": {
+        "default": "flecha de dos cabezas hacia la izquierda con trazo vertical"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B35",
+    "mappings": {
+      "default": {
+        "default": "flecha de dos cabezas hacia la izquierda con doble movimiento vertical"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B36",
+    "mappings": {
+      "default": {
+        "default": "flecha de dos cabezas hacia la izquierda de la barra"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B37",
+    "mappings": {
+      "default": {
+        "default": "flecha triple de dos cabezas hacia la izquierda"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B38",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la izquierda con tallo punteado"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B39",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la izquierda con cola con trazo vertical"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B3A",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la izquierda con cola con doble trazo vertical"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B3B",
+    "mappings": {
+      "default": {
+        "default": "flecha de dos cabezas hacia la izquierda con cola"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B3C",
+    "mappings": {
+      "default": {
+        "default": "flecha de dos cabezas hacia la izquierda con cola con trazo vertical"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B3D",
+    "mappings": {
+      "default": {
+        "default": "flecha de dos cabezas hacia la izquierda con cola con doble movimiento vertical"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B3E",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la izquierda a través de X"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B3F",
+    "mappings": {
+      "default": {
+        "default": "ola flecha apuntando directamente a la izquierda"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B40",
+    "mappings": {
+      "default": {
+        "default": "signo de igual flecha arriba a la izquierda"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B41",
+    "mappings": {
+      "default": {
+        "default": "operador de tilde inverso sobre la flecha hacia la izquierda"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B42",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la izquierda sobre el reverso casi igual a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B43",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha a través de mayor-que"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B44",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha a través de Superset"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B45",
+    "mappings": {
+      "default": {
+        "default": "flecha cuádruple hacia la izquierda"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B46",
+    "mappings": {
+      "default": {
+        "default": "flecha cuádruple hacia la derecha"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B47",
+    "mappings": {
+      "default": {
+        "default": "operador de tilde inverso sobre la flecha hacia la derecha"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B48",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha sobre el reverso casi igual a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B49",
+    "mappings": {
+      "default": {
+        "default": "operador de tilde sobre la flecha hacia la izquierda"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B4A",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la izquierda por encima de casi igual a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B4B",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la izquierda sobre el operador de tilde inverso"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B4C",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la derecha sobre el operador de tilde inverso"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "FFE9",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia la izquierda de medio ancho"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "FFEA",
+    "mappings": {
+      "default": {
+        "default": "flecha ascendente de medio ancho"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "FFEB",
+    "mappings": {
+      "default": {
+        "default": "flecha de medio ancho hacia la derecha"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "FFEC",
+    "mappings": {
+      "default": {
+        "default": "flecha hacia abajo de medio ancho"
+      }
+    }
   }
 ]

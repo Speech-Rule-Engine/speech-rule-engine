@@ -541,6 +541,24 @@
     "category": "Pd"
   },
   {
+    "category": "Pd",
+    "key": "2011",
+    "mappings": {
+      "default": {
+        "default": "guión no rompible"
+      }
+    }
+  },
+  {
+    "category": "Pd",
+    "key": "2012",
+    "mappings": {
+      "default": {
+        "default": "figura Dash"
+      }
+    }
+  },
+  {
     "key": "2013",
     "mappings": {
       "default": {
@@ -577,6 +595,15 @@
     "category": "Po"
   },
   {
+    "category": "Po",
+    "key": "2017",
+    "mappings": {
+      "default": {
+        "default": "línea baja doble"
+      }
+    }
+  },
+  {
     "key": "2018",
     "mappings": {
       "default": {
@@ -602,6 +629,15 @@
       }
     },
     "category": "Ps"
+  },
+  {
+    "category": "Pi",
+    "key": "201B",
+    "mappings": {
+      "default": {
+        "default": "marca de comillas simple con inversión alta-9"
+      }
+    }
   },
   {
     "key": "201C",
@@ -631,6 +667,15 @@
     "category": "Ps"
   },
   {
+    "category": "Pi",
+    "key": "201F",
+    "mappings": {
+      "default": {
+        "default": "doble alto-invertido-9 comillas"
+      }
+    }
+  },
+  {
     "key": "2020",
     "mappings": {
       "default": {
@@ -658,6 +703,24 @@
     "category": "Po"
   },
   {
+    "category": "Po",
+    "key": "2023",
+    "mappings": {
+      "default": {
+        "default": "bala triangular"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "2024",
+    "mappings": {
+      "default": {
+        "default": "líder de un punto"
+      }
+    }
+  },
+  {
     "key": "2025",
     "mappings": {
       "default": {
@@ -674,6 +737,15 @@
       }
     },
     "category": "Po"
+  },
+  {
+    "category": "Po",
+    "key": "2027",
+    "mappings": {
+      "default": {
+        "default": "punto de separación"
+      }
+    }
   },
   {
     "key": "2030",
@@ -739,6 +811,24 @@
     "category": "Po"
   },
   {
+    "category": "Po",
+    "key": "2037",
+    "mappings": {
+      "default": {
+        "default": "prime Prime invertido"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "2038",
+    "mappings": {
+      "default": {
+        "default": "signo de intercalación"
+      }
+    }
+  },
+  {
     "key": "2039",
     "mappings": {
       "default": {
@@ -759,6 +849,33 @@
     "category": "Pf"
   },
   {
+    "category": "Po",
+    "key": "203B",
+    "mappings": {
+      "default": {
+        "default": "marca de referencia"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "203C",
+    "mappings": {
+      "default": {
+        "default": "doble signo de exclamación"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "203D",
+    "mappings": {
+      "default": {
+        "default": "interrobang"
+      }
+    }
+  },
+  {
     "key": "203E",
     "mappings": {
       "default": {
@@ -766,6 +883,15 @@
       }
     },
     "category": "Po"
+  },
+  {
+    "category": "Pc",
+    "key": "203F",
+    "mappings": {
+      "default": {
+        "default": "undertie"
+      }
+    }
   },
   {
     "key": "2040",
@@ -786,6 +912,15 @@
     "category": "Po"
   },
   {
+    "category": "Po",
+    "key": "2042",
+    "mappings": {
+      "default": {
+        "default": "asterismo"
+      }
+    }
+  },
+  {
     "key": "2043",
     "mappings": {
       "default": {
@@ -802,6 +937,69 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Po",
+    "key": "2047",
+    "mappings": {
+      "default": {
+        "default": "doble signo de interrogación"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "2048",
+    "mappings": {
+      "default": {
+        "default": "pregunta Signo de exclamación"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "2049",
+    "mappings": {
+      "default": {
+        "default": "signo de interrogación de exclamación"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "204B",
+    "mappings": {
+      "default": {
+        "default": "signo de Pilcrow invertido"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "204C",
+    "mappings": {
+      "default": {
+        "default": "bala negra hacia la izquierda"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "204D",
+    "mappings": {
+      "default": {
+        "default": "bala negra hacia la derecha"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "204E",
+    "mappings": {
+      "default": {
+        "default": "bajo asterisco"
+      }
+    }
   },
   {
     "key": "204F",
@@ -822,6 +1020,60 @@
     "category": "Po"
   },
   {
+    "category": "Po",
+    "key": "2051",
+    "mappings": {
+      "default": {
+        "default": "dos asteriscos alineados verticalmente"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2052",
+    "mappings": {
+      "default": {
+        "default": "signo de menos comercial"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "2053",
+    "mappings": {
+      "default": {
+        "default": "swung Dash"
+      }
+    }
+  },
+  {
+    "category": "Pc",
+    "key": "2054",
+    "mappings": {
+      "default": {
+        "default": "ropa interior invertida"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "2055",
+    "mappings": {
+      "default": {
+        "default": "signo de puntuación de la flor"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "2056",
+    "mappings": {
+      "default": {
+        "default": "puntuación de tres puntos"
+      }
+    }
+  },
+  {
     "key": "2057",
     "mappings": {
       "default": {
@@ -829,6 +1081,204 @@
       }
     },
     "category": "Po"
+  },
+  {
+    "category": "Po",
+    "key": "2058",
+    "mappings": {
+      "default": {
+        "default": "puntuación de cuatro puntos"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "2059",
+    "mappings": {
+      "default": {
+        "default": "puntuación de cinco puntos"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "205A",
+    "mappings": {
+      "default": {
+        "default": "puntuación de dos puntos"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "205B",
+    "mappings": {
+      "default": {
+        "default": "marca de cuatro puntos"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "205C",
+    "mappings": {
+      "default": {
+        "default": "cruz punteada"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "205D",
+    "mappings": {
+      "default": {
+        "default": "tricolon"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "205E",
+    "mappings": {
+      "default": {
+        "default": "cuatro puntos verticales"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "207A",
+    "mappings": {
+      "default": {
+        "default": "superscript Plus Sign"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "207B",
+    "mappings": {
+      "default": {
+        "default": "superíndice menos"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "207C",
+    "mappings": {
+      "default": {
+        "default": "superscript Equals Sign"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "207D",
+    "mappings": {
+      "default": {
+        "default": "paréntesis izquierdo superíndice"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "207E",
+    "mappings": {
+      "default": {
+        "default": "paréntesis derecho superíndice"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "208A",
+    "mappings": {
+      "default": {
+        "default": "signo de subíndice más"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "208B",
+    "mappings": {
+      "default": {
+        "default": "subíndice menos"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "208C",
+    "mappings": {
+      "default": {
+        "default": "signo de subíndice es igual"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "208D",
+    "mappings": {
+      "default": {
+        "default": "subíndice paréntesis izquierdo"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "208E",
+    "mappings": {
+      "default": {
+        "default": "subíndice de paréntesis derecho"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "214A",
+    "mappings": {
+      "default": {
+        "default": "línea de propiedad"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "214B",
+    "mappings": {
+      "default": {
+        "default": "ampersand convertido"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "214C",
+    "mappings": {
+      "default": {
+        "default": "por signo"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "214D",
+    "mappings": {
+      "default": {
+        "default": "aktieselskab"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "214E",
+    "mappings": {
+      "default": {
+        "default": "torneado pequeño f"
+      }
+    }
   },
   {
     "key": "2200",
@@ -844,15 +1294,6 @@
     "mappings": {
       "default": {
         "default": "complementario"
-      }
-    },
-    "category": "Sm"
-  },
-  {
-    "key": "2202",
-    "mappings": {
-      "default": {
-        "default": "derivada parcial"
       }
     },
     "category": "Sm"
@@ -889,15 +1330,6 @@
     "mappings": {
       "default": {
         "default": "incremento"
-      }
-    },
-    "category": "Sm"
-  },
-  {
-    "key": "2207",
-    "mappings": {
-      "default": {
-        "default": "gradiente"
       }
     },
     "category": "Sm"
@@ -3164,6 +3596,15 @@
     "category": "So"
   },
   {
+    "category": "So",
+    "key": "2307",
+    "mappings": {
+      "default": {
+        "default": "línea ondulada"
+      }
+    }
+  },
+  {
     "key": "2310",
     "mappings": {
       "default": {
@@ -3171,6 +3612,15 @@
       }
     },
     "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "2311",
+    "mappings": {
+      "default": {
+        "default": "pastillas cuadradas"
+      }
+    }
   },
   {
     "key": "2312",
@@ -3189,6 +3639,60 @@
       }
     },
     "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "2314",
+    "mappings": {
+      "default": {
+        "default": "sector"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2795",
+    "mappings": {
+      "default": {
+        "default": "signo más pesado"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2796",
+    "mappings": {
+      "default": {
+        "default": "signo menos pesado"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2797",
+    "mappings": {
+      "default": {
+        "default": "signo de la división pesada"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27B0",
+    "mappings": {
+      "default": {
+        "default": "bucle rizado"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27BF",
+    "mappings": {
+      "default": {
+        "default": "doble bucle rizado"
+      }
+    }
   },
   {
     "key": "27C1",
@@ -3263,6 +3767,15 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "27CB",
+    "mappings": {
+      "default": {
+        "default": "diagonal matemático de levantamiento"
+      }
+    }
+  },
+  {
     "key": "27CC",
     "mappings": {
       "default": {
@@ -3270,6 +3783,42 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "27CD",
+    "mappings": {
+      "default": {
+        "default": "diagonal descendente matemática"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "27CE",
+    "mappings": {
+      "default": {
+        "default": "cuadrado Lógico Y"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "27CF",
+    "mappings": {
+      "default": {
+        "default": "cuadrado Lógico O"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "27D0",
+    "mappings": {
+      "default": {
+        "default": "diamante blanco con punto centrado"
+      }
+    }
   },
   {
     "key": "27D1",
@@ -3383,7 +3932,7 @@
     "key": "27DD",
     "mappings": {
       "default": {
-        "default": "T horizontal derecha larga"
+        "default": "t horizontal derecha larga"
       }
     },
     "category": "Sm"
@@ -3392,7 +3941,7 @@
     "key": "27DE",
     "mappings": {
       "default": {
-        "default": "T horizontal izquierda larga"
+        "default": "t horizontal izquierda larga"
       }
     },
     "category": "Sm"
@@ -3461,6 +4010,60 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "292B",
+    "mappings": {
+      "default": {
+        "default": "cruce en diagonal Cruce en diagonal Caída en diagonal"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "292C",
+    "mappings": {
+      "default": {
+        "default": "diagonal descendente Cruce diagonal ascendente"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2980",
+    "mappings": {
+      "default": {
+        "default": "delimitador de barra vertical triple"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2981",
+    "mappings": {
+      "default": {
+        "default": "punto de notación Z"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2982",
+    "mappings": {
+      "default": {
+        "default": "tipo de notación Z Colon"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2999",
+    "mappings": {
+      "default": {
+        "default": "valla punteada"
+      }
+    }
+  },
+  {
     "key": "299A",
     "mappings": {
       "default": {
@@ -3524,6 +4127,15 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "29B8",
+    "mappings": {
+      "default": {
+        "default": "círculo inverso solidus"
+      }
+    }
+  },
+  {
     "key": "29B9",
     "mappings": {
       "default": {
@@ -3531,6 +4143,15 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "29BA",
+    "mappings": {
+      "default": {
+        "default": "círculo dividido por barra horizontal y mitad superior dividido por barra vertical"
+      }
+    }
   },
   {
     "key": "29BB",
@@ -3623,6 +4244,33 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "29C6",
+    "mappings": {
+      "default": {
+        "default": "asterisco cuadrado"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29C7",
+    "mappings": {
+      "default": {
+        "default": "pequeño círculo cuadrado"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29C8",
+    "mappings": {
+      "default": {
+        "default": "cuadrado cuadrado"
+      }
+    }
+  },
+  {
     "key": "29C9",
     "mappings": {
       "default": {
@@ -3630,6 +4278,33 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "29CA",
+    "mappings": {
+      "default": {
+        "default": "triángulo con punto arriba"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29CB",
+    "mappings": {
+      "default": {
+        "default": "triángulo con barra inferior"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29CC",
+    "mappings": {
+      "default": {
+        "default": "s en triangulo"
+      }
+    }
   },
   {
     "key": "29CD",
@@ -3668,6 +4343,69 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "29D1",
+    "mappings": {
+      "default": {
+        "default": "pajarita Con Mitad Izquierda Negra"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29D2",
+    "mappings": {
+      "default": {
+        "default": "pajarita Con Mitad Derecha Negra"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29D3",
+    "mappings": {
+      "default": {
+        "default": "pajarita Negra"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29D4",
+    "mappings": {
+      "default": {
+        "default": "tiempos con Mitad Izquierda Negra"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29D5",
+    "mappings": {
+      "default": {
+        "default": "tiempos con la mitad derecha negra"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29D6",
+    "mappings": {
+      "default": {
+        "default": "reloj de arena blanco"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29D7",
+    "mappings": {
+      "default": {
+        "default": "reloj de arena negro"
+      }
+    }
+  },
+  {
     "key": "29DC",
     "mappings": {
       "default": {
@@ -3677,6 +4415,15 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "29DD",
+    "mappings": {
+      "default": {
+        "default": "empate sobre el infinito"
+      }
+    }
+  },
+  {
     "key": "29DE",
     "mappings": {
       "default": {
@@ -3684,6 +4431,42 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "29DF",
+    "mappings": {
+      "default": {
+        "default": "multimapa de doble extremo"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29E0",
+    "mappings": {
+      "default": {
+        "default": "cuadrado con contorno contorneado"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29E1",
+    "mappings": {
+      "default": {
+        "default": "aumenta como"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29E2",
+    "mappings": {
+      "default": {
+        "default": "shuffle Product"
+      }
+    }
   },
   {
     "key": "29E3",
@@ -3713,6 +4496,42 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "29E6",
+    "mappings": {
+      "default": {
+        "default": "gleich Stark"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29E7",
+    "mappings": {
+      "default": {
+        "default": "termodinamica"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29E8",
+    "mappings": {
+      "default": {
+        "default": "triángulo que apunta hacia abajo con la mitad izquierda negra"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29E9",
+    "mappings": {
+      "default": {
+        "default": "triángulo que apunta hacia abajo con la mitad derecha negra"
+      }
+    }
+  },
+  {
     "key": "29EB",
     "mappings": {
       "default": {
@@ -3720,6 +4539,60 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "29EE",
+    "mappings": {
+      "default": {
+        "default": "plaza blanca con error"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29EF",
+    "mappings": {
+      "default": {
+        "default": "error en la Plaza Negra"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29F0",
+    "mappings": {
+      "default": {
+        "default": "error White Barred Diamond"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29F1",
+    "mappings": {
+      "default": {
+        "default": "error Black Barred Diamond"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29F2",
+    "mappings": {
+      "default": {
+        "default": "círculo blanco con error"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29F3",
+    "mappings": {
+      "default": {
+        "default": "círculo negro con barras de error"
+      }
+    }
   },
   {
     "key": "29F4",
@@ -3731,6 +4604,15 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "29F5",
+    "mappings": {
+      "default": {
+        "default": "operador de Solidus Inverso"
+      }
+    }
+  },
+  {
     "key": "29F6",
     "mappings": {
       "default": {
@@ -3738,6 +4620,177 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "29F7",
+    "mappings": {
+      "default": {
+        "default": "solidus inverso con trazo horizontal"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29F8",
+    "mappings": {
+      "default": {
+        "default": "sólido grande"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29F9",
+    "mappings": {
+      "default": {
+        "default": "sólido inverso grande"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29FA",
+    "mappings": {
+      "default": {
+        "default": "doble Plus"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29FB",
+    "mappings": {
+      "default": {
+        "default": "triple Plus"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29FE",
+    "mappings": {
+      "default": {
+        "default": "minúsculo"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29FF",
+    "mappings": {
+      "default": {
+        "default": "miny"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A00",
+    "mappings": {
+      "default": {
+        "default": "operador de puntos circulares N-Ary"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A01",
+    "mappings": {
+      "default": {
+        "default": "operador N-Ary Circled Plus"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A02",
+    "mappings": {
+      "default": {
+        "default": "operador de los tiempos en círculo de N-Ary"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A03",
+    "mappings": {
+      "default": {
+        "default": "operador de la unión N-Ary con punto"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A04",
+    "mappings": {
+      "default": {
+        "default": "n-Ary Union Operator con Plus"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A05",
+    "mappings": {
+      "default": {
+        "default": "operador de intersecciones cuadradas N-Ary"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A06",
+    "mappings": {
+      "default": {
+        "default": "n-Ary Square Union Operator"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A07",
+    "mappings": {
+      "default": {
+        "default": "dos lógico y operador"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A08",
+    "mappings": {
+      "default": {
+        "default": "dos lógico u operador"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A09",
+    "mappings": {
+      "default": {
+        "default": "operador de N-Ary Times"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A0A",
+    "mappings": {
+      "default": {
+        "default": "modulo dos sumas"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A0B",
+    "mappings": {
+      "default": {
+        "default": "suma con Integral"
+      }
+    }
   },
   {
     "key": "2A0C",
@@ -3756,6 +4809,24 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A0E",
+    "mappings": {
+      "default": {
+        "default": "integral con Doble Trazo"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A0F",
+    "mappings": {
+      "default": {
+        "default": "promedio Integral con Slash"
+      }
+    }
   },
   {
     "key": "2A10",
@@ -3821,6 +4892,96 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "2A18",
+    "mappings": {
+      "default": {
+        "default": "integral con Times Sign"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A19",
+    "mappings": {
+      "default": {
+        "default": "integral con Intersección"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A1A",
+    "mappings": {
+      "default": {
+        "default": "integral con union"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A1B",
+    "mappings": {
+      "default": {
+        "default": "integral con Overbar"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A1C",
+    "mappings": {
+      "default": {
+        "default": "integral con barra inferior"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A1D",
+    "mappings": {
+      "default": {
+        "default": "unirse"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A1E",
+    "mappings": {
+      "default": {
+        "default": "operador de triángulo izquierdo grande"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A1F",
+    "mappings": {
+      "default": {
+        "default": "composición de esquemas de notación Z"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A20",
+    "mappings": {
+      "default": {
+        "default": "esquema de notación Z"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A21",
+    "mappings": {
+      "default": {
+        "default": "proyección del esquema de notación Z"
+      }
+    }
+  },
+  {
     "key": "2A22",
     "mappings": {
       "default": {
@@ -3875,6 +5036,15 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "2A28",
+    "mappings": {
+      "default": {
+        "default": "signo más con triángulo negro"
+      }
+    }
+  },
+  {
     "key": "2A29",
     "mappings": {
       "default": {
@@ -3891,6 +5061,24 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A2B",
+    "mappings": {
+      "default": {
+        "default": "signo menos con puntos que caen"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A2C",
+    "mappings": {
+      "default": {
+        "default": "signo menos con puntos crecientes"
+      }
+    }
   },
   {
     "key": "2A2D",
@@ -3936,6 +5124,15 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A32",
+    "mappings": {
+      "default": {
+        "default": "producto semidirecto con fondo cerrado"
+      }
+    }
   },
   {
     "key": "2A33",
@@ -4028,6 +5225,24 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "2A3D",
+    "mappings": {
+      "default": {
+        "default": "producto interior derecho"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A3E",
+    "mappings": {
+      "default": {
+        "default": "notación Z Composición Relacional"
+      }
+    }
+  },
+  {
     "key": "2A3F",
     "mappings": {
       "default": {
@@ -4044,6 +5259,15 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A41",
+    "mappings": {
+      "default": {
+        "default": "unión con signo de menos"
+      }
+    }
   },
   {
     "key": "2A42",
@@ -4154,6 +5378,24 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "2A4E",
+    "mappings": {
+      "default": {
+        "default": "intersección cuadrada doble"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A4F",
+    "mappings": {
+      "default": {
+        "default": "unión cuadrada doble"
+      }
+    }
+  },
+  {
     "key": "2A50",
     "mappings": {
       "default": {
@@ -4161,6 +5403,24 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A51",
+    "mappings": {
+      "default": {
+        "default": "lógico y con punto arriba."
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A52",
+    "mappings": {
+      "default": {
+        "default": "lógico o con punto arriba"
+      }
+    }
   },
   {
     "key": "2A53",
@@ -4217,6 +5477,15 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "2A59",
+    "mappings": {
+      "default": {
+        "default": "lógica o superpuesta, lógica y"
+      }
+    }
+  },
+  {
     "key": "2A5A",
     "mappings": {
       "default": {
@@ -4253,6 +5522,15 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "2A5E",
+    "mappings": {
+      "default": {
+        "default": "lógica y con doble Overbar"
+      }
+    }
+  },
+  {
     "key": "2A5F",
     "mappings": {
       "default": {
@@ -4260,6 +5538,60 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A60",
+    "mappings": {
+      "default": {
+        "default": "lógica y con doble barra inferior."
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A61",
+    "mappings": {
+      "default": {
+        "default": "pequeño Vee con Underbar"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A62",
+    "mappings": {
+      "default": {
+        "default": "lógica o con doble barra."
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A63",
+    "mappings": {
+      "default": {
+        "default": "lógica o con doble barra inferior"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A64",
+    "mappings": {
+      "default": {
+        "default": "notación Z Dominio Antirestricción"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A65",
+    "mappings": {
+      "default": {
+        "default": "rango de notación Z Antirestricción"
+      }
+    }
   },
   {
     "key": "2A66",
@@ -4271,6 +5603,33 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "2A67",
+    "mappings": {
+      "default": {
+        "default": "idéntico con punto arriba"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A68",
+    "mappings": {
+      "default": {
+        "default": "triple barra horizontal con doble movimiento vertical"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A69",
+    "mappings": {
+      "default": {
+        "default": "triple barra horizontal con triple movimiento vertical"
+      }
+    }
+  },
+  {
     "key": "2A6A",
     "mappings": {
       "default": {
@@ -4278,6 +5637,24 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A6B",
+    "mappings": {
+      "default": {
+        "default": "operador de tilde con puntos crecientes"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A6C",
+    "mappings": {
+      "default": {
+        "default": "similares menos similares"
+      }
+    }
   },
   {
     "key": "2A6D",
@@ -4289,6 +5666,15 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "2A6E",
+    "mappings": {
+      "default": {
+        "default": "igual a Asterisco"
+      }
+    }
+  },
+  {
     "key": "2A6F",
     "mappings": {
       "default": {
@@ -4296,6 +5682,15 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A70",
+    "mappings": {
+      "default": {
+        "default": "aproximadamente igual o igual a"
+      }
+    }
   },
   {
     "key": "2A71",
@@ -4341,6 +5736,15 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A76",
+    "mappings": {
+      "default": {
+        "default": "tres signos de igualdad consecutivos"
+      }
+    }
   },
   {
     "key": "2A77",
@@ -4469,6 +5873,42 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "2A85",
+    "mappings": {
+      "default": {
+        "default": "menor que o aproximado"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A86",
+    "mappings": {
+      "default": {
+        "default": "mayor que o aproximado"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A87",
+    "mappings": {
+      "default": {
+        "default": "menor que una línea no es igual a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A88",
+    "mappings": {
+      "default": {
+        "default": "mayores y una sola línea no son iguales a"
+      }
+    }
+  },
+  {
     "key": "2A89",
     "mappings": {
       "default": {
@@ -4485,6 +5925,24 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A8B",
+    "mappings": {
+      "default": {
+        "default": "menos que arriba de la doble línea igual por encima de mayor que"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A8C",
+    "mappings": {
+      "default": {
+        "default": "más que arriba de la línea doble igual sobre menos que"
+      }
+    }
   },
   {
     "key": "2A8D",
@@ -4559,6 +6017,24 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "2A95",
+    "mappings": {
+      "default": {
+        "default": "inclinado igual o menor que"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A96",
+    "mappings": {
+      "default": {
+        "default": "inclinado igual o mayor que"
+      }
+    }
+  },
+  {
     "key": "2A97",
     "mappings": {
       "default": {
@@ -4593,6 +6069,24 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A9B",
+    "mappings": {
+      "default": {
+        "default": "doble línea inclinada igual o menor que"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A9C",
+    "mappings": {
+      "default": {
+        "default": "doble línea inclinada igual o mayor que"
+      }
+    }
   },
   {
     "key": "2A9D",
@@ -4647,6 +6141,15 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2AA3",
+    "mappings": {
+      "default": {
+        "default": "doble anidada menor que con barra inferior"
+      }
+    }
   },
   {
     "key": "2AA4",
@@ -4757,6 +6260,51 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "2AB0",
+    "mappings": {
+      "default": {
+        "default": "sucede por encima de la línea de igual signo"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AB1",
+    "mappings": {
+      "default": {
+        "default": "precede por encima de una línea no es igual a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AB2",
+    "mappings": {
+      "default": {
+        "default": "tiene éxito por encima de una línea no es igual a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AB3",
+    "mappings": {
+      "default": {
+        "default": "precede arriba del signo igual"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AB4",
+    "mappings": {
+      "default": {
+        "default": "sucede por encima del signo igual"
+      }
+    }
+  },
+  {
     "key": "2AB5",
     "mappings": {
       "default": {
@@ -4773,6 +6321,42 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2AB7",
+    "mappings": {
+      "default": {
+        "default": "precede por encima de casi igual a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AB8",
+    "mappings": {
+      "default": {
+        "default": "tiene éxito por encima de casi igual a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AB9",
+    "mappings": {
+      "default": {
+        "default": "precede arriba no es igual a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2ABA",
+    "mappings": {
+      "default": {
+        "default": "tiene éxito por encima de no casi igual a"
+      }
+    }
   },
   {
     "key": "2ABB",
@@ -4865,6 +6449,24 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "2AC5",
+    "mappings": {
+      "default": {
+        "default": "subconjunto de signo igual arriba"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AC6",
+    "mappings": {
+      "default": {
+        "default": "superconjunto de signo igual arriba"
+      }
+    }
+  },
+  {
     "key": "2AC7",
     "mappings": {
       "default": {
@@ -4881,6 +6483,60 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2AC9",
+    "mappings": {
+      "default": {
+        "default": "subconjunto de Arriba Casi Igual a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2ACA",
+    "mappings": {
+      "default": {
+        "default": "superconjunto de arriba casi igual a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2ACB",
+    "mappings": {
+      "default": {
+        "default": "subconjunto de lo anterior no es igual a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2ACC",
+    "mappings": {
+      "default": {
+        "default": "superconjunto de arriba no es igual a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2ACD",
+    "mappings": {
+      "default": {
+        "default": "operador de caja abierta a la izquierda cuadrada"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2ACE",
+    "mappings": {
+      "default": {
+        "default": "operador de caja abierta a la derecha cuadrada"
+      }
+    }
   },
   {
     "key": "2ACF",
@@ -5000,6 +6656,78 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "2ADC",
+    "mappings": {
+      "default": {
+        "default": "bifurcación"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2ADD",
+    "mappings": {
+      "default": {
+        "default": "nonforking"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2ADE",
+    "mappings": {
+      "default": {
+        "default": "tachuela Izquierda Corta"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2ADF",
+    "mappings": {
+      "default": {
+        "default": "tachuela corta hacia abajo"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AE0",
+    "mappings": {
+      "default": {
+        "default": "short Up Tack"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AE1",
+    "mappings": {
+      "default": {
+        "default": "perpendicular con s"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AE2",
+    "mappings": {
+      "default": {
+        "default": "barra vertical Torniquete a la derecha"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AE3",
+    "mappings": {
+      "default": {
+        "default": "barra vertical doble Torniquete izquierdo"
+      }
+    }
+  },
+  {
     "key": "2AE4",
     "mappings": {
       "default": {
@@ -5007,6 +6735,15 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2AE5",
+    "mappings": {
+      "default": {
+        "default": "doble barra vertical doble torniquete izquierdo"
+      }
+    }
   },
   {
     "key": "2AE6",
@@ -5043,6 +6780,15 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2AEA",
+    "mappings": {
+      "default": {
+        "default": "tachuela doble"
+      }
+    }
   },
   {
     "key": "2AEB",
@@ -5126,6 +6872,438 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "2AF4",
+    "mappings": {
+      "default": {
+        "default": "relación binaria de barra vertical triple"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AF5",
+    "mappings": {
+      "default": {
+        "default": "barra vertical triple con trazo horizontal"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AF6",
+    "mappings": {
+      "default": {
+        "default": "operador Triple Colon"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AF7",
+    "mappings": {
+      "default": {
+        "default": "triple anidada menos que"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AF8",
+    "mappings": {
+      "default": {
+        "default": "triple anidado mayor que"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AF9",
+    "mappings": {
+      "default": {
+        "default": "doble línea inclinada menor o igual a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AFA",
+    "mappings": {
+      "default": {
+        "default": "doble línea inclinada mayor o igual a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AFB",
+    "mappings": {
+      "default": {
+        "default": "relación Binaria Triple Sólida"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AFC",
+    "mappings": {
+      "default": {
+        "default": "operador de barra vertical triple grande"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AFD",
+    "mappings": {
+      "default": {
+        "default": "operador Doble Sólido"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AFE",
+    "mappings": {
+      "default": {
+        "default": "barra vertical blanca"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AFF",
+    "mappings": {
+      "default": {
+        "default": "barra vertical blanca N-Ary"
+      }
+    }
+  },
+  {
+    "category": "Pd",
+    "key": "301C",
+    "mappings": {
+      "default": {
+        "default": "wave Dash"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE10",
+    "mappings": {
+      "default": {
+        "default": "formulario de presentación para coma vertical"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE13",
+    "mappings": {
+      "default": {
+        "default": "formulario de presentación para colon vertical"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE14",
+    "mappings": {
+      "default": {
+        "default": "formulario de presentación para punto y coma vertical"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE15",
+    "mappings": {
+      "default": {
+        "default": "formulario de presentación para el signo de exclamación vertical"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE16",
+    "mappings": {
+      "default": {
+        "default": "formulario de presentación para el signo de interrogación vertical"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE19",
+    "mappings": {
+      "default": {
+        "default": "formulario de presentación para elipsis horizontal vertical"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE30",
+    "mappings": {
+      "default": {
+        "default": "formulario de presentación para líder vertical de dos puntos"
+      }
+    }
+  },
+  {
+    "category": "Pd",
+    "key": "FE31",
+    "mappings": {
+      "default": {
+        "default": "formulario de presentación para Vertical Em Dash"
+      }
+    }
+  },
+  {
+    "category": "Pd",
+    "key": "FE32",
+    "mappings": {
+      "default": {
+        "default": "formulario de presentación para Vertical En Dash"
+      }
+    }
+  },
+  {
+    "category": "Pc",
+    "key": "FE33",
+    "mappings": {
+      "default": {
+        "default": "formulario de presentación para línea vertical baja"
+      }
+    }
+  },
+  {
+    "category": "Pc",
+    "key": "FE34",
+    "mappings": {
+      "default": {
+        "default": "formulario de presentación para línea baja ondulada vertical"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE45",
+    "mappings": {
+      "default": {
+        "default": "punto de sésamo"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE46",
+    "mappings": {
+      "default": {
+        "default": "punto de sésamo blanco"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE49",
+    "mappings": {
+      "default": {
+        "default": "línea discontinua"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE4A",
+    "mappings": {
+      "default": {
+        "default": "centinela Overline"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE4B",
+    "mappings": {
+      "default": {
+        "default": "ondulado Overline"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE4C",
+    "mappings": {
+      "default": {
+        "default": "doble Ondulado Ondulado"
+      }
+    }
+  },
+  {
+    "category": "Pc",
+    "key": "FE4D",
+    "mappings": {
+      "default": {
+        "default": "línea baja discontinua"
+      }
+    }
+  },
+  {
+    "category": "Pc",
+    "key": "FE4E",
+    "mappings": {
+      "default": {
+        "default": "línea baja de línea central"
+      }
+    }
+  },
+  {
+    "category": "Pc",
+    "key": "FE4F",
+    "mappings": {
+      "default": {
+        "default": "línea baja ondulada"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE50",
+    "mappings": {
+      "default": {
+        "default": "comas pequeñas"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE52",
+    "mappings": {
+      "default": {
+        "default": "parada completa pequeña"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE54",
+    "mappings": {
+      "default": {
+        "default": "pequeño punto y coma"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE55",
+    "mappings": {
+      "default": {
+        "default": "pequeño colon"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE56",
+    "mappings": {
+      "default": {
+        "default": "pequeño signo de interrogación"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE57",
+    "mappings": {
+      "default": {
+        "default": "pequeño signo de exclamación"
+      }
+    }
+  },
+  {
+    "category": "Pd",
+    "key": "FE58",
+    "mappings": {
+      "default": {
+        "default": "pequeño Em Dash"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE5F",
+    "mappings": {
+      "default": {
+        "default": "signo de número pequeño"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE60",
+    "mappings": {
+      "default": {
+        "default": "ampersand pequeño"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE61",
+    "mappings": {
+      "default": {
+        "default": "pequeño asterisco"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "FE62",
+    "mappings": {
+      "default": {
+        "default": "signo más pequeño"
+      }
+    }
+  },
+  {
+    "category": "Pd",
+    "key": "FE63",
+    "mappings": {
+      "default": {
+        "default": "pequeño guión-menos"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "FE64",
+    "mappings": {
+      "default": {
+        "default": "signo menor que pequeño"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "FE65",
+    "mappings": {
+      "default": {
+        "default": "signo mayor que pequeño"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "FE66",
+    "mappings": {
+      "default": {
+        "default": "signo pequeño igual"
+      }
+    }
+  },
+  {
     "key": "FE68",
     "mappings": {
       "default": {
@@ -5135,6 +7313,249 @@
     "category": "Po"
   },
   {
+    "category": "Sc",
+    "key": "FE69",
+    "mappings": {
+      "default": {
+        "default": "pequeño signo de dólar"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE6A",
+    "mappings": {
+      "default": {
+        "default": "signo de porcentaje pequeño"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE6B",
+    "mappings": {
+      "default": {
+        "default": "pequeño comercial en"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF01",
+    "mappings": {
+      "default": {
+        "default": "signo de exclamación de ancho completo"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF02",
+    "mappings": {
+      "default": {
+        "default": "comillas de ancho completo"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF03",
+    "mappings": {
+      "default": {
+        "default": "número de signo de ancho completo"
+      }
+    }
+  },
+  {
+    "category": "Sc",
+    "key": "FF04",
+    "mappings": {
+      "default": {
+        "default": "signo de dólar de ancho completo"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF05",
+    "mappings": {
+      "default": {
+        "default": "signo de porcentaje de ancho completo"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF06",
+    "mappings": {
+      "default": {
+        "default": "ampersand de ancho completo"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF07",
+    "mappings": {
+      "default": {
+        "default": "apóstrofe de ancho completo"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF0A",
+    "mappings": {
+      "default": {
+        "default": "asterisco de ancho completo"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "FF0B",
+    "mappings": {
+      "default": {
+        "default": "signo de ancho completo"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF0C",
+    "mappings": {
+      "default": {
+        "default": "coma de ancho completo"
+      }
+    }
+  },
+  {
+    "category": "Pd",
+    "key": "FF0D",
+    "mappings": {
+      "default": {
+        "default": "ancho de ancho completo"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF0E",
+    "mappings": {
+      "default": {
+        "default": "fullwidth Full Stop"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF0F",
+    "mappings": {
+      "default": {
+        "default": "sólido de ancho completo"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF1A",
+    "mappings": {
+      "default": {
+        "default": "ancho completo de colon"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF1B",
+    "mappings": {
+      "default": {
+        "default": "punto y coma de ancho completo"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "FF1C",
+    "mappings": {
+      "default": {
+        "default": "ancho completo menos de la señal"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "FF1D",
+    "mappings": {
+      "default": {
+        "default": "signo de igual ancho completo"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "FF1E",
+    "mappings": {
+      "default": {
+        "default": "ancho completo mayor que el signo"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF1F",
+    "mappings": {
+      "default": {
+        "default": "signo de interrogación de ancho completo"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF20",
+    "mappings": {
+      "default": {
+        "default": "comercial de ancho completo en"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF3C",
+    "mappings": {
+      "default": {
+        "default": "sólido inverso de ancho completo"
+      }
+    }
+  },
+  {
+    "category": "Sk",
+    "key": "FF3E",
+    "mappings": {
+      "default": {
+        "default": "acento circunflejo de ancho completo"
+      }
+    }
+  },
+  {
+    "category": "Pc",
+    "key": "FF3F",
+    "mappings": {
+      "default": {
+        "default": "línea baja de ancho completo"
+      }
+    }
+  },
+  {
+    "category": "Sk",
+    "key": "FF40",
+    "mappings": {
+      "default": {
+        "default": "acento grave de ancho completo"
+      }
+    }
+  },
+  {
     "key": "FF5C",
     "mappings": {
       "default": {
@@ -5142,5 +7563,104 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "FF5E",
+    "mappings": {
+      "default": {
+        "default": "tilde de ancho completo"
+      }
+    }
+  },
+  {
+    "category": "Sc",
+    "key": "FFE0",
+    "mappings": {
+      "default": {
+        "default": "signo de centavo de ancho completo"
+      }
+    }
+  },
+  {
+    "category": "Sc",
+    "key": "FFE1",
+    "mappings": {
+      "default": {
+        "default": "signo de libra de ancho completo"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "FFE2",
+    "mappings": {
+      "default": {
+        "default": "fullwidth no firmar"
+      }
+    }
+  },
+  {
+    "category": "Sk",
+    "key": "FFE3",
+    "mappings": {
+      "default": {
+        "default": "ancho completo macron"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "FFE4",
+    "mappings": {
+      "default": {
+        "default": "barra rota de ancho completo"
+      }
+    }
+  },
+  {
+    "category": "Sc",
+    "key": "FFE5",
+    "mappings": {
+      "default": {
+        "default": "signo de yen de ancho completo"
+      }
+    }
+  },
+  {
+    "category": "Sc",
+    "key": "FFE6",
+    "mappings": {
+      "default": {
+        "default": "signo de ancho completo ganado"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "FFE8",
+    "mappings": {
+      "default": {
+        "default": "formas de ancho medio luz vertical"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "FFED",
+    "mappings": {
+      "default": {
+        "default": "medio ancho cuadrado negro"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "FFEE",
+    "mappings": {
+      "default": {
+        "default": "círculo blanco de medio ancho"
+      }
+    }
   }
 ]
