@@ -22,6 +22,7 @@
 goog.provide('sre.Locale.nemeth');
 
 goog.require('sre.Locale');
+goog.require('sre.Numbers.nemeth');
 
 
 /**
@@ -92,7 +93,7 @@ sre.Locale.nemeth = {
     'fraktur': '⠸',
     'italic': '⠨',
     'monospace': '',
-    'normal': ' ',
+    'normal': '',
     'oldstyle': '',
     'oldstyle-bold': '⠸',
     'script': '⠈',
@@ -172,15 +173,50 @@ sre.Locale.nemeth = {
     simpleOrdinal: function(x) {return x;}
   },
 
-  ALPHABETS: {},
 
-  ALPHABET_TRANSFORMERS: {},
+  ALPHABETS: {
+    latinSmall: [
+      '⠁', '⠃', '⠉', '⠙', '⠑', '⠋', '⠛', '⠓', '⠊', '⠚', '⠅', '⠇', '⠍',
+      '⠝', '⠕', '⠏', '⠟', '⠗', '⠎', '⠞', '⠥', '⠧', '⠺', '⠭', '⠽', '⠵'
+    ],
+    latinCap: [
+      '⠠⠁', '⠠⠃', '⠠⠉', '⠠⠙', '⠠⠑', '⠠⠋', '⠠⠛', '⠠⠓', '⠠⠊', '⠠⠚',
+      '⠠⠅', '⠠⠇', '⠠⠍', '⠠⠝', '⠠⠕', '⠠⠏', '⠠⠟', '⠠⠗', '⠠⠎', '⠠⠞',
+      '⠠⠥', '⠠⠧', '⠠⠺', '⠠⠭', '⠠⠽', '⠠⠵'
+    ],
+    greekSmall: [
+      '⠨⠫',  // This is here as it is small.
+      '⠨⠁', '⠨⠃', '⠨⠛', '⠨⠙', '⠨⠑', '⠨⠱', '⠨⠦', '⠨⠹',
+      '⠨⠊', '⠨⠅', '⠨⠇', '⠨⠍', '⠨⠝', '⠨⠭', '⠨⠕', '⠨⠏', '⠨⠗',
+      '⠨⠒', '⠨⠎', '⠨⠞', '⠨⠥', '⠨⠋', '⠨⠯', '⠨⠓', '⠨⠕',
+      // Symbols below
+      '⠈⠙', '⠨⠑', '⠨⠹', '⠨⠅', '⠨⠋', '⠨⠗', '⠨⠏'
+    ],
+    greekCap: [
+      '⠨⠠⠁', '⠨⠠⠃', '⠨⠠⠛', '⠨⠠⠙', '⠨⠠⠑', '⠨⠠⠱', '⠨⠠⠣', '⠨⠠⠹',
+      '⠨⠠⠊', '⠨⠠⠅', '⠨⠠⠇', '⠨⠠⠍', '⠨⠠⠝', '⠨⠠⠭', '⠨⠠⠕', '⠨⠠⠏', '⠨⠠⠗',
+      '⠨⠠⠹',  // Theta symbol
+      '⠨⠠⠎', '⠨⠠⠥', '⠨⠠⠥', '⠨⠠⠋', '⠨⠠⠯', '⠨⠠⠫', '⠨⠠⠺'
+    ]
+  },
 
-  ALPHABET_PREFIXES: {},
+  ALPHABET_TRANSFORMERS: {
+    digit: {
+      default: sre.Numbers.nemeth.numberToWords
+    },
+    letter: {
+      default: function(n) {return n;}
+    }
+  },
+
+  ALPHABET_PREFIXES: {
+    capPrefix: {default: ''},
+    smallPrefix: {default: ''},
+    digitPrefix: {default: ''}
+  },
 
   ALPHABET_COMBINER: function(letter, font, cap) {
-      letter = cap ? cap + ' ' + letter : letter;
-      return font ? font + ' ' + letter : letter;
+      return font ? font + letter : letter;
   }
 
 };
