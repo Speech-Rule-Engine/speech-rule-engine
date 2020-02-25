@@ -89,13 +89,13 @@ sre.NemethFontTest.prototype.testLatinMathfontsUpper = function() {
   this.executeRuleTest('<mi>&#x1D49C;</mi>', '⠈⠠⠁', 'default');
   this.executeRuleTest('<mi>&#x1D4D0;</mi>', '⠸⠈⠠⠁', 'default');
   this.executeRuleTest('<mi>&#x1D504;</mi>', '⠸⠠⠁', 'default');
-  this.executeRuleTest('<mi>&#x1D538;</mi>', '⠸⠈⠠⠁', 'default');
+  this.executeRuleTest('<mi>&#x1D538;</mi>', '⠸⠠⠁', 'default');
   this.executeRuleTest('<mi>&#x1D56C;</mi>', '⠸⠀⠸⠠⠁', 'default');
   this.executeRuleTest('<mi>&#x1D5A0;</mi>', '⠠⠨⠠⠁', 'default');
   this.executeRuleTest('<mi>&#x1D5D4;</mi>', '⠠⠨⠸⠠⠁', 'default');
   this.executeRuleTest('<mi>&#x1D608;</mi>', '⠠⠨⠨⠠⠁', 'default');
   this.executeRuleTest('<mi>&#x1D63C;</mi>', '⠠⠨⠸⠨⠠⠁', 'default');
-  this.executeRuleTest('<mi>&#x1D670;</mi>', 'monospace⠠⠁', 'default');
+  this.executeRuleTest('<mi>&#x1D670;</mi>', '⠠⠁', 'default');
 };
 
 
@@ -124,13 +124,13 @@ sre.NemethFontTest.prototype.testLatinMathfontsSmall = function() {
   this.executeRuleTest('<mi>&#x1D4B6;</mi>', '⠈⠁', 'default');
   this.executeRuleTest('<mi>&#x1D4EA;</mi>', '⠸⠈⠁', 'default');
   this.executeRuleTest('<mi>&#x1D51E;</mi>', '⠸⠁', 'default');
-  this.executeRuleTest('<mi>&#x1D552;</mi>', '⠸⠈⠁', 'default');
+  this.executeRuleTest('<mi>&#x1D552;</mi>', '⠸⠁', 'default');
   this.executeRuleTest('<mi>&#x1D586;</mi>', '⠸⠀⠸⠁', 'default');
   this.executeRuleTest('<mi>&#x1D5BA;</mi>', '⠠⠨⠁', 'default');
   this.executeRuleTest('<mi>&#x1D5EE;</mi>', '⠠⠨⠸⠁', 'default');
   this.executeRuleTest('<mi>&#x1D622;</mi>', '⠠⠨⠨⠁', 'default');
   this.executeRuleTest('<mi>&#x1D656;</mi>', '⠠⠨⠸⠨⠁', 'default');
-  this.executeRuleTest('<mi>&#x1D68A;</mi>', 'monospace⠁', 'default');
+  this.executeRuleTest('<mi>&#x1D68A;</mi>', '⠁', 'default');
 };
 
 
@@ -155,7 +155,7 @@ sre.NemethFontTest.prototype.testGreekMathfontsSmall = function() {
  * Test for Latin with mathvariant upper letters.
  */
 sre.NemethFontTest.prototype.testLatinMathvariantUpper = function() {
-  this.executeRuleTest('<mi mathvariant="normal">A</mi>', ' ⠠⠁', 'default');
+  this.executeRuleTest('<mi mathvariant="normal">A</mi>', '⠠⠁', 'default');
   this.executeRuleTest('<mi mathvariant="bold">A</mi>', '⠸⠠⠁', 'default');
   this.executeRuleTest('<mi mathvariant="italic">A</mi>', '⠠⠁', 'default');
   this.executeRuleTest('<mi mathvariant="bold-italic">A</mi>', '⠸⠨⠠⠁', 'default');
@@ -168,7 +168,7 @@ sre.NemethFontTest.prototype.testLatinMathvariantUpper = function() {
   this.executeRuleTest('<mi mathvariant="sans-serif-bold">A</mi>', '⠠⠨⠸⠠⠁', 'default');
   this.executeRuleTest('<mi mathvariant="sans-serif-italic">A</mi>', '⠠⠨⠨⠠⠁', 'default');
   this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">A</mi>', '⠠⠨⠸⠨⠠⠁', 'default');
-  this.executeRuleTest('<mi mathvariant="monospace">A</mi>', 'monospace⠠⠁', 'default');
+  this.executeRuleTest('<mi mathvariant="monospace">A</mi>', '⠠⠁', 'default');
 };
 
 
@@ -188,7 +188,7 @@ sre.NemethFontTest.prototype.testLatinMathvariantMathJax = function() {
  * Test for Greek with mathvariant upper letters.
  */
 sre.NemethFontTest.prototype.testGreekMathvariantUpper = function() {
-  this.executeRuleTest('<mi mathvariant="normal">&#x0391;</mi>', ' ⠨⠠⠁', 'default');
+  this.executeRuleTest('<mi mathvariant="normal">&#x0391;</mi>', '⠨⠠⠁', 'default');
   this.executeRuleTest('<mi mathvariant="bold">&#x0391;</mi>', '⠸⠨⠠⠁', 'default');
   this.executeRuleTest('<mi mathvariant="italic">&#x0391;</mi>', '⠨⠠⠁', 'default');
   this.executeRuleTest('<mi mathvariant="bold-italic">&#x0391;</mi>', '⠸⠨⠨⠠⠁', 'default');
@@ -201,7 +201,7 @@ sre.NemethFontTest.prototype.testGreekMathvariantUpper = function() {
  * Test for Latin with mathvariant small letters.
  */
 sre.NemethFontTest.prototype.testLatinMathvariantSmall = function() { 
-  this.executeRuleTest('<mi mathvariant="normal">a</mi>', ' ⠁', 'default');
+  this.executeRuleTest('<mi mathvariant="normal">a</mi>', '⠁', 'default');
   this.executeRuleTest('<mi mathvariant="bold">a</mi>', '⠸⠁', 'default');
   this.executeRuleTest('<mi mathvariant="italic">a</mi>', '⠁', 'default');
   this.executeRuleTest('<mi mathvariant="bold-italic">a</mi>', '⠸⠨⠁', 'default');
@@ -214,7 +214,7 @@ sre.NemethFontTest.prototype.testLatinMathvariantSmall = function() {
   this.executeRuleTest('<mi mathvariant="sans-serif-bold">a</mi>', '⠠⠨⠸⠁', 'default');
   this.executeRuleTest('<mi mathvariant="sans-serif-italic">a</mi>', '⠠⠨⠨⠁', 'default');
   this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">a</mi>', '⠠⠨⠸⠨⠁', 'default');
-  this.executeRuleTest('<mi mathvariant="monospace">a</mi>', 'monospace⠁', 'default');
+  this.executeRuleTest('<mi mathvariant="monospace">a</mi>', '⠁', 'default');
 };
 
 
@@ -222,7 +222,7 @@ sre.NemethFontTest.prototype.testLatinMathvariantSmall = function() {
  * Test for Greek with mathvariant small letters.
  */
 sre.NemethFontTest.prototype.testGreekMathvariantSmall = function() {
-  this.executeRuleTest('<mi mathvariant="normal">&#x03B1;</mi>', ' ⠨⠁', 'default');
+  this.executeRuleTest('<mi mathvariant="normal">&#x03B1;</mi>', '⠨⠁', 'default');
   this.executeRuleTest('<mi mathvariant="bold">&#x03B1;</mi>', '⠸⠨⠁', 'default');
   this.executeRuleTest('<mi mathvariant="italic">&#x03B1;</mi>', '⠨⠁', 'default');
   this.executeRuleTest('<mi mathvariant="bold-italic">&#x03B1;</mi>', '⠸⠨⠨⠁', 'default');
@@ -239,21 +239,21 @@ sre.NemethFontTest.prototype.testGreekMathvariantSmall = function() {
  * Test for Unicode Latin mathfonts with mathvariant upper letters.
  */
 sre.NemethFontTest.prototype.testLatinFontVariantsUpper = function() {
-  this.executeRuleTest('<mi mathvariant="normal">&#x0041;</mi>', ' ⠠⠁', 'default');
-  this.executeRuleTest('<mi mathvariant="normal">&#xFF21;</mi>', ' ⠠⠁', 'default');
+  this.executeRuleTest('<mi mathvariant="normal">&#x0041;</mi>', '⠠⠁', 'default');
+  this.executeRuleTest('<mi mathvariant="normal">&#xFF21;</mi>', '⠠⠁', 'default');
   this.executeRuleTest('<mi mathvariant="bold">&#x1D400;</mi>', '⠸⠠⠁', 'default');
   this.executeRuleTest('<mi mathvariant="italic">&#x1D434;</mi>', '⠨⠠⠁', 'default');
   this.executeRuleTest('<mi mathvariant="bold-italic">&#x1D468;</mi>', '⠸⠨⠠⠁', 'default');
   this.executeRuleTest('<mi mathvariant="script">&#x1D49C;</mi>', '⠈⠠⠁', 'default');
   this.executeRuleTest('<mi mathvariant="bold-script">&#x1D4D0;</mi>', '⠸⠈⠠⠁', 'default');
   this.executeRuleTest('<mi mathvariant="fraktur">&#x1D504;</mi>', '⠸⠠⠁', 'default');
-  this.executeRuleTest('<mi mathvariant="double-struck">&#x1D538;</mi>', '⠸⠈⠠⠁', 'default');
+  this.executeRuleTest('<mi mathvariant="double-struck">&#x1D538;</mi>', '⠸⠠⠁', 'default');
   this.executeRuleTest('<mi mathvariant="bold-fraktur">&#x1D56C;</mi>', '⠸⠀⠸⠠⠁', 'default');
   this.executeRuleTest('<mi mathvariant="sans-serif">&#x1D5A0;</mi>', '⠠⠨⠠⠁', 'default');
   this.executeRuleTest('<mi mathvariant="sans-serif-bold">&#x1D5D4;</mi>', '⠠⠨⠸⠠⠁', 'default');
   this.executeRuleTest('<mi mathvariant="sans-serif-italic">&#x1D608;</mi>', '⠠⠨⠨⠠⠁', 'default');
   this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">&#x1D63C;</mi>', '⠠⠨⠸⠨⠠⠁', 'default');
-  this.executeRuleTest('<mi mathvariant="monospace">&#x1D670;</mi>', 'monospace⠠⠁', 'default');
+  this.executeRuleTest('<mi mathvariant="monospace">&#x1D670;</mi>', '⠠⠁', 'default');
 };
 
 
@@ -261,7 +261,7 @@ sre.NemethFontTest.prototype.testLatinFontVariantsUpper = function() {
  * Test for Unicode Greek mathfonts with mathvariant upper letters.
  */
 sre.NemethFontTest.prototype.testGreekFontVariantsUpper = function() {
-  this.executeRuleTest('<mi mathvariant="normal">&#x0391;</mi>', ' ⠨⠠⠁', 'default');
+  this.executeRuleTest('<mi mathvariant="normal">&#x0391;</mi>', '⠨⠠⠁', 'default');
   this.executeRuleTest('<mi mathvariant="bold">&#x1D6A8;</mi>', '⠸⠨⠠⠁', 'default');
   this.executeRuleTest('<mi mathvariant="italic">&#x1D6E2;</mi>', '⠨⠨⠠⠁', 'default');
   this.executeRuleTest('<mi mathvariant="bold-italic">&#x1D71C;</mi>', '⠸⠨⠨⠠⠁', 'default');
@@ -274,21 +274,21 @@ sre.NemethFontTest.prototype.testGreekFontVariantsUpper = function() {
  * Test for Unicode Latin mathfonts with mathvariant small letters.
  */
 sre.NemethFontTest.prototype.testLatinFontVariantsSmall = function() { 
-  this.executeRuleTest('<mi mathvariant="normal">&#x0061;</mi>', ' ⠁', 'default');
-  this.executeRuleTest('<mi mathvariant="normal">&#xFF41;</mi>', ' ⠁', 'default');
+  this.executeRuleTest('<mi mathvariant="normal">&#x0061;</mi>', '⠁', 'default');
+  this.executeRuleTest('<mi mathvariant="normal">&#xFF41;</mi>', '⠁', 'default');
   this.executeRuleTest('<mi mathvariant="bold">&#x1D41A;</mi>', '⠸⠁', 'default');
   this.executeRuleTest('<mi mathvariant="italic">&#x1D44E;</mi>', '⠨⠁', 'default');
   this.executeRuleTest('<mi mathvariant="bold-italic">&#x1D482;</mi>', '⠸⠨⠁', 'default');
   this.executeRuleTest('<mi mathvariant="script">&#x1D4B6;</mi>', '⠈⠁', 'default');
   this.executeRuleTest('<mi mathvariant="bold-script">&#x1D4EA;</mi>', '⠸⠈⠁', 'default');
   this.executeRuleTest('<mi mathvariant="fraktur">&#x1D51E;</mi>', '⠸⠁', 'default');
-  this.executeRuleTest('<mi mathvariant="double-struck">&#x1D552;</mi>', '⠸⠈⠁', 'default');
+  this.executeRuleTest('<mi mathvariant="double-struck">&#x1D552;</mi>', '⠸⠁', 'default');
   this.executeRuleTest('<mi mathvariant="bold-fraktur">&#x1D586;</mi>', '⠸⠀⠸⠁', 'default');
   this.executeRuleTest('<mi mathvariant="sans-serif">&#x1D5BA;</mi>', '⠠⠨⠁', 'default');
   this.executeRuleTest('<mi mathvariant="sans-serif-bold">&#x1D5EE;</mi>', '⠠⠨⠸⠁', 'default');
   this.executeRuleTest('<mi mathvariant="sans-serif-italic">&#x1D622;</mi>', '⠠⠨⠨⠁', 'default');
   this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">&#x1D656;</mi>', '⠠⠨⠸⠨⠁', 'default');
-  this.executeRuleTest('<mi mathvariant="monospace">&#x1D68A;</mi>', 'monospace⠁', 'default');
+  this.executeRuleTest('<mi mathvariant="monospace">&#x1D68A;</mi>', '⠁', 'default');
 };
 
 
@@ -296,7 +296,7 @@ sre.NemethFontTest.prototype.testLatinFontVariantsSmall = function() {
  * Test for Unicode Greek mathfonts with mathvariant small letters.
  */
 sre.NemethFontTest.prototype.testGreekFontVariantsSmall = function() {
-  this.executeRuleTest('<mi mathvariant="normal">&#x03B1;</mi>', ' ⠨⠁', 'default');
+  this.executeRuleTest('<mi mathvariant="normal">&#x03B1;</mi>', '⠨⠁', 'default');
   this.executeRuleTest('<mi mathvariant="bold">&#x1D6C2;</mi>', '⠸⠨⠁', 'default');
   this.executeRuleTest('<mi mathvariant="italic">&#x1D6FC;</mi>', '⠨⠨⠁', 'default');
   this.executeRuleTest('<mi mathvariant="bold-italic">&#x1D736;</mi>', '⠸⠨⠨⠁', 'default');

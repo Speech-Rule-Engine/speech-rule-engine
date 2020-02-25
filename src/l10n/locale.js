@@ -94,8 +94,11 @@ sre.Locale.combinePostfixIndex = function(postfix, index) {
  * @return {string} The localized font name.
  */
 sre.Locale.localFont = function(font) {
-  let realFont = sre.Messages.FONT[font] || font || '';
-  return  (typeof realFont === 'string') ? realFont : realFont[0];
+  let realFont = sre.Messages.FONT[font];
+  if (realFont === undefined) {
+    realFont = font || '';
+  }
+  return (typeof realFont === 'string') ? realFont : realFont[0];
 };
 
 
