@@ -25,7 +25,7 @@ goog.require('sre.Numbers.es');
 
 
 var sansserifCombiner = function(letter, font, cap) {
-  letter = 'sans serif' + (cap ? cap + ' ' + letter : letter);
+  letter = 'sans serif ' + (cap ? cap + ' ' + letter : letter);
   return font ? letter + ' ' + font : letter;
 };
 
