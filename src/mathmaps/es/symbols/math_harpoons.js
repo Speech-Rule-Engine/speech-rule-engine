@@ -93,31 +93,49 @@
     "category": "So"
   },
   {
+    "category": "Sm",
     "key": "294A",
     "mappings": {
       "default": {
-        "default": "left barb up right barb down harpoon"
+        "default": "barra izquierda arriba barra derecha abajo arpón"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
     "key": "294B",
     "mappings": {
       "default": {
-        "default": "left barb down right barb up harpoon"
+        "default": "barra izquierda abajo barra derecha arriba arpón"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
+    "key": "294C",
+    "mappings": {
+      "default": {
+        "default": "up barb right down barb left harpoon"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "294D",
+    "mappings": {
+      "default": {
+        "default": "arriba barb izquierda abajo barb derecha arpón"
+      }
+    }
+  },
+  {
+    "category": "Sm",
     "key": "294E",
     "mappings": {
       "default": {
-        "default": "left barb up right barb up harpoon"
+        "default": "barra izquierda arriba barra derecha arriba arpón"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "294F",
@@ -129,13 +147,13 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
     "key": "2950",
     "mappings": {
       "default": {
-        "default": "left barb down right barb down harpoon"
+        "default": "barra izquierda abajo barra derecha abajo arpón"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2951",
@@ -147,220 +165,220 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
     "key": "2952",
     "mappings": {
       "default": {
-        "default": "leftwards harpoon to bar with barb upwards"
+        "default": "arpón a la izquierda con púa hasta la barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
     "key": "2953",
     "mappings": {
       "default": {
-        "default": "rightwards harpoon to bar with barb upwards"
+        "default": "arpón a la derecha con púa hasta la barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
     "key": "2954",
     "mappings": {
       "default": {
-        "default": "upwards harpoon to bar with barb rightwards"
+        "default": "arpón ascendente con púa derecha a barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
     "key": "2955",
     "mappings": {
       "default": {
-        "default": "downwards harpoon to bar with barb rightwards"
+        "default": "arpón hacia abajo con púa derecha a barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
     "key": "2956",
     "mappings": {
       "default": {
-        "default": "leftwards harpoon to bar with barb downwards"
+        "default": "arpón a la izquierda con púas abajo a la barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
     "key": "2957",
     "mappings": {
       "default": {
-        "default": "rightwards harpoon to bar with barb downwards"
+        "default": "arpón a la derecha con púa abajo a la barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
     "key": "2958",
     "mappings": {
       "default": {
-        "default": "upwards harpoon to bar with barb leftwards"
+        "default": "arpón ascendente con púa izquierda a barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
     "key": "2959",
     "mappings": {
       "default": {
-        "default": "downwards harpoon to bar with barb leftwards"
+        "default": "arpón hacia abajo con la barra izquierda a la barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
     "key": "295A",
     "mappings": {
       "default": {
-        "default": "leftwards harpoon from bar with barb upwards"
+        "default": "arpón a la izquierda con púa arriba de la barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
     "key": "295B",
     "mappings": {
       "default": {
-        "default": "rightwards harpoon from bar with barb upwards"
+        "default": "arpón a la derecha con púa arriba del bar"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
     "key": "295C",
     "mappings": {
       "default": {
-        "default": "upwards harpoon from bar with barb rightwards"
+        "default": "arpón ascendente con púa derecha de barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
     "key": "295D",
     "mappings": {
       "default": {
-        "default": "downwards harpoon from bar with barb rightwards"
+        "default": "arpón hacia abajo con púa derecha de barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
     "key": "295E",
     "mappings": {
       "default": {
-        "default": "leftwards harpoon from bar with barb downwards"
+        "default": "arpón a la izquierda con púa abajo de barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
     "key": "295F",
     "mappings": {
       "default": {
-        "default": "rightwards harpoon from bar with barb downwards"
+        "default": "arpón a la derecha con púa abajo de barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
     "key": "2960",
     "mappings": {
       "default": {
-        "default": "upwards harpoon from bar with barb leftwards"
+        "default": "arpón ascendente con púa izquierda de barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
     "key": "2961",
     "mappings": {
       "default": {
-        "default": "downwards harpoon from bar with barb leftwards"
+        "default": "arpón hacia abajo con barra izquierda de barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
     "key": "2962",
     "mappings": {
       "default": {
-        "default": "leftwards harpoon with barb up above leftwards harpoon with barb down"
+        "default": "arpón a la izquierda con púas arriba arriba arpón a la izquierda con púas abajo"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
     "key": "2963",
     "mappings": {
       "default": {
-        "default": "upwards harpoon with barb left beside upwards harpoon with barb right"
+        "default": "arpón ascendente con púa izquierda al lado arpón ascendente con púa derecha"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
     "key": "2964",
     "mappings": {
       "default": {
-        "default": "rightwards harpoon with barb up above rightwards harpoon with barb down"
+        "default": "arpón a la derecha con púas arriba arriba arpón a la derecha con púas abajo"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
     "key": "2965",
     "mappings": {
       "default": {
-        "default": "downwards harpoon with barb left beside downwards harpoon with barb right"
+        "default": "arpón hacia abajo con lengüeta a la izquierda al lado arpón hacia abajo con lengüeta a la derecha"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
     "key": "2966",
     "mappings": {
       "default": {
-        "default": "leftwards harpoon with barb up above rightwards harpoon with barb up"
+        "default": "arpón a la izquierda con púa arriba arriba arpón a la derecha con púa arriba"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
     "key": "2967",
     "mappings": {
       "default": {
-        "default": "leftwards harpoon with barb down above rightwards harpoon with barb down"
+        "default": "arpón a la izquierda con púa abajo arriba arpón a la derecha con púa abajo"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
     "key": "2968",
     "mappings": {
       "default": {
-        "default": "rightwards harpoon with barb up above leftwards harpoon with barb up"
+        "default": "arpón a la derecha con púas arriba arriba arpón a la izquierda con púas arriba"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
     "key": "2969",
     "mappings": {
       "default": {
-        "default": "rightwards harpoon with barb down above leftwards harpoon with barb down"
+        "default": "arpón a la derecha con púa abajo arriba arpón a la izquierda con púa abajo"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "296A",
@@ -399,40 +417,40 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
     "key": "296E",
     "mappings": {
       "default": {
-        "default": "upwards harpoon to the left of downwards harpoon"
+        "default": "arpón ascendente con púa izquierda al lado arpón hacia abajo con púa derecha"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
     "key": "296F",
     "mappings": {
       "default": {
-        "default": "upwards harpoon to the right of downwards harpoon"
+        "default": "arpón hacia abajo con lengüeta a la izquierda al lado arpón hacia arriba con pica a la derecha"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
     "key": "297C",
     "mappings": {
       "default": {
-        "default": "left fish tail"
+        "default": "cola de pescado izquierda"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
+    "category": "Sm",
     "key": "297D",
     "mappings": {
       "default": {
-        "default": "right fish tail"
+        "default": "cola de pescado derecha"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "297E",
@@ -444,12 +462,12 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
     "key": "297F",
     "mappings": {
       "default": {
-        "default": "down fish tail"
+        "default": "cola de pez abajo"
       }
-    },
-    "category": "Sm"
+    }
   }
 ]
