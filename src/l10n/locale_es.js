@@ -100,10 +100,10 @@ sre.Locale.es = {
     'oldstyle': 'estilo antiguo',
     'oldstyle-bold': 'estilo antiguo negrita',
     'script': 'script',
-    'sans-serif': 'sans-serif',
-    'sans-serif-italic': 'sans-serif cursiva',
-    'sans-serif-bold': 'sans-serif negrita',
-    'sans-serif-bold-italic': 'sans-serif negrita cursiva',
+    'sans-serif': 'sans serif',
+    'sans-serif-italic': 'sans serif cursiva',
+    'sans-serif-bold': 'sans serif negrita',
+    'sans-serif-bold-italic': 'sans serif negrita cursiva',
     'unknown': 'desconocida'
   },
 

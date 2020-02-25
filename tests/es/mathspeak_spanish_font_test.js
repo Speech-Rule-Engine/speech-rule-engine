@@ -86,10 +86,10 @@ sre.MathspeakSpanishFontTest.prototype.testLatinMathfontsUpper = function() {
   this.executeRuleTest('<mi>&#x1D504;</mi>', 'Fraktur mayúscula A', 'default');
   this.executeRuleTest('<mi>&#x1D538;</mi>', 'negrita de pizarra mayúscula A', 'default');
   this.executeRuleTest('<mi>&#x1D56C;</mi>', 'negrita Fraktur mayúscula A', 'default');
-  this.executeRuleTest('<mi>&#x1D5A0;</mi>', 'sans-serif mayúscula A', 'default');
-  this.executeRuleTest('<mi>&#x1D5D4;</mi>', 'sans-serif negrita mayúscula A', 'default');
-  this.executeRuleTest('<mi>&#x1D608;</mi>', 'sans-serif cursiva mayúscula A', 'default');
-  this.executeRuleTest('<mi>&#x1D63C;</mi>', 'sans-serif negrita cursiva mayúscula A', 'default');
+  this.executeRuleTest('<mi>&#x1D5A0;</mi>', 'sans serif mayúscula A', 'default');
+  this.executeRuleTest('<mi>&#x1D5D4;</mi>', 'sans serif negrita mayúscula A', 'default');
+  this.executeRuleTest('<mi>&#x1D608;</mi>', 'sans serif cursiva mayúscula A', 'default');
+  this.executeRuleTest('<mi>&#x1D63C;</mi>', 'sans serif negrita cursiva mayúscula A', 'default');
   this.executeRuleTest('<mi>&#x1D670;</mi>', 'monoespacio mayúscula A', 'default');
 };
 
@@ -102,8 +102,8 @@ sre.MathspeakSpanishFontTest.prototype.testGreekMathfontsUpper = function() {
   this.executeRuleTest('<mi>&#x1D6A8;</mi>', 'negrita mayúscula Alfa', 'default');
   this.executeRuleTest('<mi>&#x1D6E2;</mi>', 'cursiva mayúscula Alfa', 'default');
   this.executeRuleTest('<mi>&#x1D71C;</mi>', 'negrita cursiva mayúscula Alfa', 'default');
-  this.executeRuleTest('<mi>&#x1D756;</mi>', 'sans-serif negrita mayúscula Alfa', 'default');
-  this.executeRuleTest('<mi>&#x1D790;</mi>', 'sans-serif negrita cursiva mayúscula Alfa', 'default');
+  this.executeRuleTest('<mi>&#x1D756;</mi>', 'sans serif negrita mayúscula Alfa', 'default');
+  this.executeRuleTest('<mi>&#x1D790;</mi>', 'sans serif negrita cursiva mayúscula Alfa', 'default');
 };
 
 
@@ -121,10 +121,10 @@ sre.MathspeakSpanishFontTest.prototype.testLatinMathfontsSmall = function() {
   this.executeRuleTest('<mi>&#x1D51E;</mi>', 'Fraktur a', 'default');
   this.executeRuleTest('<mi>&#x1D552;</mi>', 'negrita de pizarra a', 'default');
   this.executeRuleTest('<mi>&#x1D586;</mi>', 'negrita Fraktur a', 'default');
-  this.executeRuleTest('<mi>&#x1D5BA;</mi>', 'sans-serif a', 'default');
-  this.executeRuleTest('<mi>&#x1D5EE;</mi>', 'sans-serif negrita a', 'default');
-  this.executeRuleTest('<mi>&#x1D622;</mi>', 'sans-serif cursiva a', 'default');
-  this.executeRuleTest('<mi>&#x1D656;</mi>', 'sans-serif negrita cursiva a', 'default');
+  this.executeRuleTest('<mi>&#x1D5BA;</mi>', 'sans serif a', 'default');
+  this.executeRuleTest('<mi>&#x1D5EE;</mi>', 'sans serif negrita a', 'default');
+  this.executeRuleTest('<mi>&#x1D622;</mi>', 'sans serif cursiva a', 'default');
+  this.executeRuleTest('<mi>&#x1D656;</mi>', 'sans serif negrita cursiva a', 'default');
   this.executeRuleTest('<mi>&#x1D68A;</mi>', 'monoespacio a', 'default');
 };
 
@@ -137,8 +137,8 @@ sre.MathspeakSpanishFontTest.prototype.testGreekMathfontsSmall = function() {
   this.executeRuleTest('<mi>&#x1D6C2;</mi>', 'negrita alfa', 'default');
   this.executeRuleTest('<mi>&#x1D6FC;</mi>', 'cursiva alfa', 'default');
   this.executeRuleTest('<mi>&#x1D736;</mi>', 'negrita cursiva alfa', 'default');
-  this.executeRuleTest('<mi>&#x1D770;</mi>', 'sans-serif negrita alfa', 'default');
-  this.executeRuleTest('<mi>&#x1D7AA;</mi>', 'sans-serif negrita cursiva alfa', 'default');
+  this.executeRuleTest('<mi>&#x1D770;</mi>', 'sans serif negrita alfa', 'default');
+  this.executeRuleTest('<mi>&#x1D7AA;</mi>', 'sans serif negrita cursiva alfa', 'default');
 };
 
 
@@ -159,10 +159,10 @@ sre.MathspeakSpanishFontTest.prototype.testLatinMathvariantUpper = function() {
   this.executeRuleTest('<mi mathvariant="fraktur">A</mi>', 'Fraktur mayúscula A', 'default');
   this.executeRuleTest('<mi mathvariant="double-struck">A</mi>', 'negrita de pizarra mayúscula A', 'default');
   this.executeRuleTest('<mi mathvariant="bold-fraktur">A</mi>', 'negrita Fraktur mayúscula A', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif">A</mi>', 'sans-serif mayúscula A', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold">A</mi>', 'sans-serif negrita mayúscula A', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-italic">A</mi>', 'sans-serif cursiva mayúscula A', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">A</mi>', 'sans-serif negrita cursiva mayúscula A', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif">A</mi>', 'sans serif mayúscula A', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold">A</mi>', 'sans serif negrita mayúscula A', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-italic">A</mi>', 'sans serif cursiva mayúscula A', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">A</mi>', 'sans serif negrita cursiva mayúscula A', 'default');
   this.executeRuleTest('<mi mathvariant="monospace">A</mi>', 'monoespacio mayúscula A', 'default');
 };
 
@@ -187,8 +187,8 @@ sre.MathspeakSpanishFontTest.prototype.testGreekMathvariantUpper = function() {
   this.executeRuleTest('<mi mathvariant="bold">&#x0391;</mi>', 'negrita mayúscula Alfa', 'default');
   this.executeRuleTest('<mi mathvariant="italic">&#x0391;</mi>', 'mayúscula Alfa', 'default');
   this.executeRuleTest('<mi mathvariant="bold-italic">&#x0391;</mi>', 'negrita cursiva mayúscula Alfa', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold">&#x0391;</mi>', 'sans-serif negrita mayúscula Alfa', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">&#x0391;</mi>', 'sans-serif negrita cursiva mayúscula Alfa', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold">&#x0391;</mi>', 'sans serif negrita mayúscula Alfa', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">&#x0391;</mi>', 'sans serif negrita cursiva mayúscula Alfa', 'default');
 };
 
 
@@ -205,10 +205,10 @@ sre.MathspeakSpanishFontTest.prototype.testLatinMathvariantSmall = function() {
   this.executeRuleTest('<mi mathvariant="fraktur">a</mi>', 'Fraktur a', 'default');
   this.executeRuleTest('<mi mathvariant="double-struck">a</mi>', 'negrita de pizarra a', 'default');
   this.executeRuleTest('<mi mathvariant="bold-fraktur">a</mi>', 'negrita Fraktur a', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif">a</mi>', 'sans-serif a', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold">a</mi>', 'sans-serif negrita a', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-italic">a</mi>', 'sans-serif cursiva a', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">a</mi>', 'sans-serif negrita cursiva a', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif">a</mi>', 'sans serif a', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold">a</mi>', 'sans serif negrita a', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-italic">a</mi>', 'sans serif cursiva a', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">a</mi>', 'sans serif negrita cursiva a', 'default');
   this.executeRuleTest('<mi mathvariant="monospace">a</mi>', 'monoespacio a', 'default');
 };
 
@@ -221,8 +221,8 @@ sre.MathspeakSpanishFontTest.prototype.testGreekMathvariantSmall = function() {
   this.executeRuleTest('<mi mathvariant="bold">&#x03B1;</mi>', 'negrita alfa', 'default');
   this.executeRuleTest('<mi mathvariant="italic">&#x03B1;</mi>', 'alfa', 'default');
   this.executeRuleTest('<mi mathvariant="bold-italic">&#x03B1;</mi>', 'negrita cursiva alfa', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold">&#x03B1;</mi>', 'sans-serif negrita alfa', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">&#x03B1;</mi>', 'sans-serif negrita cursiva alfa', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold">&#x03B1;</mi>', 'sans serif negrita alfa', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">&#x03B1;</mi>', 'sans serif negrita cursiva alfa', 'default');
 };
 
 
@@ -244,10 +244,10 @@ sre.MathspeakSpanishFontTest.prototype.testLatinFontVariantsUpper = function() {
   this.executeRuleTest('<mi mathvariant="fraktur">&#x1D504;</mi>', 'Fraktur mayúscula A', 'default');
   this.executeRuleTest('<mi mathvariant="double-struck">&#x1D538;</mi>', 'negrita de pizarra mayúscula A', 'default');
   this.executeRuleTest('<mi mathvariant="bold-fraktur">&#x1D56C;</mi>', 'negrita Fraktur mayúscula A', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif">&#x1D5A0;</mi>', 'sans-serif mayúscula A', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold">&#x1D5D4;</mi>', 'sans-serif negrita mayúscula A', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-italic">&#x1D608;</mi>', 'sans-serif cursiva mayúscula A', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">&#x1D63C;</mi>', 'sans-serif negrita cursiva mayúscula A', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif">&#x1D5A0;</mi>', 'sans serif mayúscula A', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold">&#x1D5D4;</mi>', 'sans serif negrita mayúscula A', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-italic">&#x1D608;</mi>', 'sans serif cursiva mayúscula A', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">&#x1D63C;</mi>', 'sans serif negrita cursiva mayúscula A', 'default');
   this.executeRuleTest('<mi mathvariant="monospace">&#x1D670;</mi>', 'monoespacio mayúscula A', 'default');
 };
 
@@ -260,8 +260,8 @@ sre.MathspeakSpanishFontTest.prototype.testGreekFontVariantsUpper = function() {
   this.executeRuleTest('<mi mathvariant="bold">&#x1D6A8;</mi>', 'negrita mayúscula Alfa', 'default');
   this.executeRuleTest('<mi mathvariant="italic">&#x1D6E2;</mi>', 'cursiva mayúscula Alfa', 'default');
   this.executeRuleTest('<mi mathvariant="bold-italic">&#x1D71C;</mi>', 'negrita cursiva mayúscula Alfa', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold">&#x1D756;</mi>', 'sans-serif negrita mayúscula Alfa', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">&#x1D790;</mi>', 'sans-serif negrita cursiva mayúscula Alfa', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold">&#x1D756;</mi>', 'sans serif negrita mayúscula Alfa', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">&#x1D790;</mi>', 'sans serif negrita cursiva mayúscula Alfa', 'default');
 };
 
 
@@ -279,10 +279,10 @@ sre.MathspeakSpanishFontTest.prototype.testLatinFontVariantsSmall = function() {
   this.executeRuleTest('<mi mathvariant="fraktur">&#x1D51E;</mi>', 'Fraktur a', 'default');
   this.executeRuleTest('<mi mathvariant="double-struck">&#x1D552;</mi>', 'negrita de pizarra a', 'default');
   this.executeRuleTest('<mi mathvariant="bold-fraktur">&#x1D586;</mi>', 'negrita Fraktur a', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif">&#x1D5BA;</mi>', 'sans-serif a', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold">&#x1D5EE;</mi>', 'sans-serif negrita a', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-italic">&#x1D622;</mi>', 'sans-serif cursiva a', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">&#x1D656;</mi>', 'sans-serif negrita cursiva a', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif">&#x1D5BA;</mi>', 'sans serif a', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold">&#x1D5EE;</mi>', 'sans serif negrita a', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-italic">&#x1D622;</mi>', 'sans serif cursiva a', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">&#x1D656;</mi>', 'sans serif negrita cursiva a', 'default');
   this.executeRuleTest('<mi mathvariant="monospace">&#x1D68A;</mi>', 'monoespacio a', 'default');
 };
 
@@ -295,6 +295,6 @@ sre.MathspeakSpanishFontTest.prototype.testGreekFontVariantsSmall = function() {
   this.executeRuleTest('<mi mathvariant="bold">&#x1D6C2;</mi>', 'negrita alfa', 'default');
   this.executeRuleTest('<mi mathvariant="italic">&#x1D6FC;</mi>', 'cursiva alfa', 'default');
   this.executeRuleTest('<mi mathvariant="bold-italic">&#x1D736;</mi>', 'negrita cursiva alfa', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold">&#x1D770;</mi>', 'sans-serif negrita alfa', 'default');
-  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">&#x1D7AA;</mi>', 'sans-serif negrita cursiva alfa', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold">&#x1D770;</mi>', 'sans serif negrita alfa', 'default');
+  this.executeRuleTest('<mi mathvariant="sans-serif-bold-italic">&#x1D7AA;</mi>', 'sans serif negrita cursiva alfa', 'default');
 };
