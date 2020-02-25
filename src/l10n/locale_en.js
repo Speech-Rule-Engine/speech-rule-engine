@@ -21,7 +21,6 @@
 goog.provide('sre.Locale.en');
 
 goog.require('sre.Locale');
-goog.require('sre.Messages');
 goog.require('sre.Numbers.en');
 
 

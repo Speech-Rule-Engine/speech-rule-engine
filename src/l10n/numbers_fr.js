@@ -19,8 +19,6 @@
 
 goog.provide('sre.Numbers.fr');
 
-goog.require('sre.Messages');
-
 
 sre.Numbers.fr.SUB_ISO = 'fr';
 

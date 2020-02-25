@@ -19,8 +19,6 @@
 
 goog.provide('sre.Numbers.es');
 
-goog.require('sre.Messages');
-
 
 // Numbers
 /**

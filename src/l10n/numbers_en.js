@@ -19,8 +19,6 @@
 
 goog.provide('sre.Numbers.en');
 
-goog.require('sre.Messages');
-
 
 /**
  * String representation of zero to nineteen.
