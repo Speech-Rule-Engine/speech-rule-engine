@@ -24,6 +24,12 @@ goog.require('sre.Locale');
 goog.require('sre.Numbers.es');
 
 
+var sansserifCombiner = function(letter, font, cap) {
+  letter = 'sans serif' + (cap ? cap + ' ' + letter : letter);
+  return font ? letter + ' ' + font : letter;
+};
+
+
 /**
  * @type {sre.Locale.Messages}
  */
@@ -159,18 +165,18 @@ sre.Locale.es = {
   EMBELLISH: {
     // Embellishments
     // TODO: Here we need specialist combiners!
-    'super': 'super',
-    'sub': 'sub',
-    'circled': 'circled',
-    'parenthesized': 'parenthesized',
-    'period': ['period', sre.Locale.postfixCombiner],
-    'negative-circled': 'black circled',
-    'double-circled': 'double circled',
-    'circled-sans-serif': 'circled sans serif',
-    'negative-circled-sans-serif': 'black circled sans serif',
-    'comma': ['comma', sre.Locale.postfixCombiner],
-    'squared': 'squared',
-    'negative-squared': 'black squared'
+    'super': 'superíndice',
+    'sub': 'subíndice',
+    'circled': ['en circulo', sre.Locale.postfixCombiner],
+    'parenthesized': ['entre paréntesis', sre.Locale.postfixCombiner],
+    'period': ['punto', sre.Locale.postfixCombiner],
+    'negative-circled': ['en circulo negro', sre.Locale.postfixCombiner],
+    'double-circled': ['en doble circulo', sre.Locale.postfixCombiner],
+    'circled-sans-serif': ['en circulo', sansserifCombiner],
+    'negative-circled-sans-serif': ['en circulo negro', sansserifCombiner],
+    'comma': ['coma', sre.Locale.postfixCombiner],
+    'squared': ['en cuadrado', sre.Locale.postfixCombiner],
+    'negative-squared': ['en cuadrado negro', sre.Locale.postfixCombiner]
   },
 
   NAVIGATE: {
