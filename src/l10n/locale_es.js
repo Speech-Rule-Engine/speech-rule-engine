@@ -232,9 +232,6 @@ sre.Locale.es = {
     digitPrefix: {default: ''}
   },
 
-  ALPHABET_COMBINER: function(letter, font, cap) {
-    letter = cap ? cap + ' ' + letter : letter;
-    return font ? letter + ' ' + font : letter;
-  }
+  ALPHABET_COMBINER: sre.Locale.prefixCombiner
 
 };

@@ -25,6 +25,7 @@ goog.require('sre.Messages');
 sre.Numbers.fr.SUB_ISO = 'fr';
 
 
+// Numbers
 /**
  * String representation of zero to nineteen.
  * @type {Array.<string>}
@@ -139,6 +140,7 @@ sre.Numbers.fr.numberToWords = function(number) {
 };
 
 
+// Ordinals
 /**
  * @type {Object.<string>}
  */
