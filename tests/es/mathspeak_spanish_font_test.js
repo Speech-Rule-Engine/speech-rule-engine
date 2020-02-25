@@ -77,7 +77,7 @@ goog.inherits(sre.MathspeakSpanishFontTest, sre.AbstractRuleTest);
  */
 sre.MathspeakSpanishFontTest.prototype.testLatinMathfontsUpper = function() {
   this.executeRuleTest('<mi>&#x0041;</mi>', 'mayúscula A', 'default');
-  this.executeRuleTest('<mi>&#xFF21;</mi>', 'upper A', 'default');
+  this.executeRuleTest('<mi>&#xFF21;</mi>', 'mayúscula A', 'default');
   this.executeRuleTest('<mi>&#x1D400;</mi>', 'negrita mayúscula A', 'default');
   this.executeRuleTest('<mi>&#x1D434;</mi>', 'cursiva mayúscula A', 'default');
   this.executeRuleTest('<mi>&#x1D468;</mi>', 'negrita cursiva mayúscula A', 'default');
@@ -235,7 +235,7 @@ sre.MathspeakSpanishFontTest.prototype.testGreekMathvariantSmall = function() {
  */
 sre.MathspeakSpanishFontTest.prototype.testLatinFontVariantsUpper = function() {
   this.executeRuleTest('<mi mathvariant="normal">&#x0041;</mi>', 'normal mayúscula A', 'default');
-  this.executeRuleTest('<mi mathvariant="normal">&#xFF21;</mi>', 'normal upper A', 'default');
+  this.executeRuleTest('<mi mathvariant="normal">&#xFF21;</mi>', 'normal mayúscula A', 'default');
   this.executeRuleTest('<mi mathvariant="bold">&#x1D400;</mi>', 'negrita mayúscula A', 'default');
   this.executeRuleTest('<mi mathvariant="italic">&#x1D434;</mi>', 'cursiva mayúscula A', 'default');
   this.executeRuleTest('<mi mathvariant="bold-italic">&#x1D468;</mi>', 'negrita cursiva mayúscula A', 'default');
