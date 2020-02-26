@@ -1320,7 +1320,7 @@
     "key": "2206",
     "mappings": {
       "default": {
-        "default": "increment"
+        "default": "Differenz"
       }
     },
     "category": "Sm"
@@ -1438,7 +1438,7 @@
     "key": "2214",
     "mappings": {
       "default": {
-        "default": "Punkt Plus"
+        "default": "Plus mit Punkt"
       }
     }
   },
@@ -1455,7 +1455,7 @@
     "key": "2216",
     "mappings": {
       "default": {
-        "default": "Mengen-Minus"
+        "default": "Mengendifferenz"
       }
     },
     "category": "Sm"
@@ -1464,7 +1464,7 @@
     "key": "2217",
     "mappings": {
       "default": {
-        "default": "asterisk operator"
+        "default": "Sternoperator"
       }
     },
     "category": "Sm"
@@ -1482,7 +1482,7 @@
     "key": "2219",
     "mappings": {
       "default": {
-        "default": "bullet operator"
+        "default": "Kreisoperator"
       }
     },
     "category": "Sm"
@@ -1491,7 +1491,7 @@
     "key": "221A",
     "mappings": {
       "default": {
-        "default": "radical"
+        "default": "Quadratwurzelzeichen"
       }
     },
     "category": "Sm"
@@ -1500,7 +1500,7 @@
     "key": "221B",
     "mappings": {
       "default": {
-        "default": "dritte Wurzel"
+        "default": "Kubikwurzelzeichen"
       }
     },
     "category": "Sm"
@@ -1545,7 +1545,7 @@
     "key": "2220",
     "mappings": {
       "default": {
-        "default": "Winkel"
+        "default": "ebener Winkel"
       }
     },
     "category": "Sm"
@@ -1555,7 +1555,7 @@
     "key": "2221",
     "mappings": {
       "default": {
-        "default": "Gemessener Winkel"
+        "default": "gerichteter Winkel"
       }
     }
   },
@@ -1564,7 +1564,7 @@
     "key": "2222",
     "mappings": {
       "default": {
-        "default": "Sphärischer Winkel"
+        "default": "Raumwinkel"
       }
     }
   },
@@ -1662,7 +1662,7 @@
     "key": "222D",
     "mappings": {
       "default": {
-        "default": "Dreifaches Integral"
+        "default": "Dreifachintegral"
       }
     },
     "category": "Sm"
@@ -1671,7 +1671,7 @@
     "key": "222E",
     "mappings": {
       "default": {
-        "default": "Kontur-Integral"
+        "default": "Randintegral"
       }
     },
     "category": "Sm"
@@ -1680,7 +1680,7 @@
     "key": "222F",
     "mappings": {
       "default": {
-        "default": "Flächenintegral"
+        "default": "Oberflächenintegral"
       }
     },
     "category": "Sm"
@@ -1689,7 +1689,7 @@
     "key": "2230",
     "mappings": {
       "default": {
-        "default": "Volumsintegral"
+        "default": "Volumenintegral"
       }
     },
     "category": "Sm"
@@ -1707,7 +1707,7 @@
     "key": "2232",
     "mappings": {
       "default": {
-        "default": "Kontur-Integral im Uhrzeigersinn"
+        "default": "Kurvenintegral im Uhrzeigersinn"
       }
     },
     "category": "Sm"
@@ -1716,7 +1716,7 @@
     "key": "2233",
     "mappings": {
       "default": {
-        "default": "Kontur-Integral im Gegenuhrzeigersinn"
+        "default": "Kurvenintegral im Gegenuhrzeigersinn"
       }
     },
     "category": "Sm"
@@ -1725,7 +1725,7 @@
     "key": "2234",
     "mappings": {
       "default": {
-        "default": "deshalb"
+        "default": "folglich"
       }
     },
     "category": "Sm"
@@ -1762,7 +1762,7 @@
     "key": "2238",
     "mappings": {
       "default": {
-        "default": "Punkt Minus"
+        "default": "Minus mit Punkt"
       }
     }
   },
@@ -1789,7 +1789,7 @@
     "key": "223B",
     "mappings": {
       "default": {
-        "default": "Homothetisch"
+        "default": "homothetisch"
       }
     }
   },
@@ -1798,7 +1798,7 @@
     "key": "223C",
     "mappings": {
       "default": {
-        "default": "Tilde-Operator"
+        "default": "Tildeoperator"
       }
     }
   },
@@ -1816,7 +1816,7 @@
     "key": "223E",
     "mappings": {
       "default": {
-        "default": "Umgekehrtes faules S"
+        "default": "Umgekehrtes stummes S"
       }
     }
   },
@@ -1825,7 +1825,7 @@
     "key": "223F",
     "mappings": {
       "default": {
-        "default": "Sinus"
+        "default": "Sinuswelle"
       }
     }
   },
@@ -1834,7 +1834,7 @@
     "key": "2240",
     "mappings": {
       "default": {
-        "default": "Kranz Produkt"
+        "default": "Kranzprodukt"
       }
     }
   },
@@ -1843,7 +1843,7 @@
     "key": "2241",
     "mappings": {
       "default": {
-        "default": "Nicht Tilde"
+        "default": "durchgestrichene Tilde"
       }
     }
   },
@@ -1852,7 +1852,7 @@
     "key": "2242",
     "mappings": {
       "default": {
-        "default": "Minus Tilde"
+        "default": "Minus über Tilde"
       }
     }
   },
@@ -1923,7 +1923,7 @@
     "key": "224A",
     "mappings": {
       "default": {
-        "default": "beinahe oder ganz gleich"
+        "default": "beinahe gleich oder gleich"
       }
     },
     "category": "Sm"
@@ -1933,7 +1933,7 @@
     "key": "224B",
     "mappings": {
       "default": {
-        "default": "Dreifache Tilde"
+        "default": "dreifache Tilde"
       }
     }
   },
@@ -1942,7 +1942,7 @@
     "key": "224C",
     "mappings": {
       "default": {
-        "default": "Alle gleich"
+        "default": "alles gleich"
       }
     }
   },
@@ -2023,7 +2023,7 @@
     "key": "2255",
     "mappings": {
       "default": {
-        "default": "Gleiche Doppelpunkt"
+        "default": "definiert als von rechts"
       }
     }
   },
@@ -2032,7 +2032,7 @@
     "key": "2256",
     "mappings": {
       "default": {
-        "default": "Ring gleich"
+        "default": "ungefähr gleich"
       }
     }
   },
@@ -2041,7 +2041,7 @@
     "key": "2257",
     "mappings": {
       "default": {
-        "default": "Ring gleich zu"
+        "default": "ungefähr gleich"
       }
     }
   },
@@ -2059,7 +2059,7 @@
     "key": "2259",
     "mappings": {
       "default": {
-        "default": "Schätzungen"
+        "default": "entspricht"
       }
     }
   },
@@ -2068,7 +2068,7 @@
     "key": "225A",
     "mappings": {
       "default": {
-        "default": "Gleichwinklig zu"
+        "default": "gleichwinklig zu"
       }
     }
   },
@@ -2077,7 +2077,7 @@
     "key": "225B",
     "mappings": {
       "default": {
-        "default": "Stern gleich"
+        "default": "gleich mit Stern"
       }
     }
   },
@@ -2086,7 +2086,7 @@
     "key": "225C",
     "mappings": {
       "default": {
-        "default": "Delta gleich"
+        "default": "gleich mit Delta"
       }
     }
   },
@@ -2104,7 +2104,7 @@
     "key": "225E",
     "mappings": {
       "default": {
-        "default": "Gemessen mit"
+        "default": "gemessen mit"
       }
     }
   },
@@ -2113,7 +2113,7 @@
     "key": "225F",
     "mappings": {
       "default": {
-        "default": "Befragt gleich"
+        "default": "vielleicht gleich"
       }
     }
   },
@@ -2130,7 +2130,7 @@
     "key": "2261",
     "mappings": {
       "default": {
-        "default": "identisch mit"
+        "default": "kongruent mit"
       }
     },
     "category": "Sm"
@@ -2139,7 +2139,7 @@
     "key": "2262",
     "mappings": {
       "default": {
-        "default": "nicht identisch mit"
+        "default": "nicht kongruent mit"
       }
     },
     "category": "Sm"
@@ -2148,7 +2148,7 @@
     "key": "2263",
     "mappings": {
       "default": {
-        "default": "streng äquivalent mit"
+        "default": "genau äquivalent mit"
       }
     },
     "category": "Sm"
@@ -2175,7 +2175,7 @@
     "key": "2266",
     "mappings": {
       "default": {
-        "default": "less than over equal to"
+        "default": "kleiner als über gleich"
       }
     },
     "category": "Sm"
@@ -2184,7 +2184,7 @@
     "key": "2267",
     "mappings": {
       "default": {
-        "default": "greater than over equal to"
+        "default": "größer als über gleich"
       }
     },
     "category": "Sm"
@@ -2356,7 +2356,7 @@
     "key": "227A",
     "mappings": {
       "default": {
-        "default": "Geht voran"
+        "default": "vorangehend"
       }
     }
   },
@@ -2365,7 +2365,7 @@
     "key": "227B",
     "mappings": {
       "default": {
-        "default": "Gelingt es"
+        "default": "nachfolgend"
       }
     }
   },
@@ -2374,7 +2374,7 @@
     "key": "227C",
     "mappings": {
       "default": {
-        "default": "Precedes oder gleich bis"
+        "default": "vorangehend oder gleich"
       }
     }
   },
@@ -2383,7 +2383,7 @@
     "key": "227D",
     "mappings": {
       "default": {
-        "default": "Erfolgreich oder gleich bis"
+        "default": "nachfolgend oder gleich"
       }
     }
   },
@@ -2392,7 +2392,7 @@
     "key": "227E",
     "mappings": {
       "default": {
-        "default": "Vorgänger oder Äquivalent zu"
+        "default": "vorangehend oder äquivalent"
       }
     }
   },
@@ -2401,7 +2401,7 @@
     "key": "227F",
     "mappings": {
       "default": {
-        "default": "Erfolgreich oder gleichwertig mit"
+        "default": "nachfolgend oder äquivalent"
       }
     }
   },
@@ -2410,7 +2410,7 @@
     "key": "2280",
     "mappings": {
       "default": {
-        "default": "Geht nicht voraus"
+        "default": "nicht vorangehend"
       }
     }
   },
@@ -2419,7 +2419,7 @@
     "key": "2281",
     "mappings": {
       "default": {
-        "default": "Gelingt nicht"
+        "default": "nicht nachfolgend"
       }
     }
   },
@@ -2428,7 +2428,7 @@
     "key": "2282",
     "mappings": {
       "default": {
-        "default": "Teilmenge von"
+        "default": "echte Teilmenge von"
       }
     }
   },
@@ -2437,7 +2437,7 @@
     "key": "2283",
     "mappings": {
       "default": {
-        "default": "Superset Of"
+        "default": "echte Obermenge von"
       }
     }
   },
@@ -2446,7 +2446,7 @@
     "key": "2284",
     "mappings": {
       "default": {
-        "default": "Keine Untermenge von"
+        "default": "keine echte Teilmenge von"
       }
     }
   },
@@ -2455,7 +2455,7 @@
     "key": "2285",
     "mappings": {
       "default": {
-        "default": "Kein Supersatz von"
+        "default": "kein echte Obermenge von"
       }
     }
   },
@@ -2464,7 +2464,7 @@
     "key": "2286",
     "mappings": {
       "default": {
-        "default": "Teilmenge oder gleich bis"
+        "default": "Teilmenge oder gleich"
       }
     }
   },
@@ -2473,7 +2473,7 @@
     "key": "2287",
     "mappings": {
       "default": {
-        "default": "Obermenge von oder gleich"
+        "default": "Obermenge oder gleich"
       }
     }
   },
@@ -2482,7 +2482,7 @@
     "key": "2288",
     "mappings": {
       "default": {
-        "default": "Weder eine Untermenge noch Gleichheit"
+        "default": "weder Teilmenge noch gleich"
       }
     }
   },
@@ -2491,7 +2491,7 @@
     "key": "2289",
     "mappings": {
       "default": {
-        "default": "Weder eine Obermenge noch Gleichwertiges"
+        "default": "weder Obermenge noch gleich"
       }
     }
   },
@@ -2500,7 +2500,7 @@
     "key": "228A",
     "mappings": {
       "default": {
-        "default": "Teilmenge mit Nicht gleich bis"
+        "default": "Teilmenge aber nicht gleich"
       }
     }
   },
@@ -2509,7 +2509,7 @@
     "key": "228B",
     "mappings": {
       "default": {
-        "default": "Superset von mit Nicht gleich zu"
+        "default": "Obermenge aber nicht gleich"
       }
     }
   },
@@ -2518,7 +2518,7 @@
     "key": "228C",
     "mappings": {
       "default": {
-        "default": "Multiset"
+        "default": "Multimenge"
       }
     }
   },
@@ -2527,7 +2527,7 @@
     "key": "228D",
     "mappings": {
       "default": {
-        "default": "Multiset-Multiplikation"
+        "default": "Multimengenmultiplikation"
       }
     }
   },
@@ -2536,7 +2536,7 @@
     "key": "228E",
     "mappings": {
       "default": {
-        "default": "Multiset Union"
+        "default": "Multimengenvereinigung"
       }
     }
   },
@@ -2545,7 +2545,7 @@
     "key": "228F",
     "mappings": {
       "default": {
-        "default": "Quadratisches Bild von"
+        "default": "quadratisches Bild von"
       }
     }
   },
@@ -2554,7 +2554,7 @@
     "key": "2290",
     "mappings": {
       "default": {
-        "default": "Quadratisches Original von"
+        "default": "quadratisches Original von"
       }
     }
   },
@@ -2563,7 +2563,7 @@
     "key": "2291",
     "mappings": {
       "default": {
-        "default": "Quadratisches Bild oder gleich"
+        "default": "quadratisches Bild oder gleich"
       }
     }
   },
@@ -2572,7 +2572,7 @@
     "key": "2292",
     "mappings": {
       "default": {
-        "default": "Quadratisches Original oder gleich"
+        "default": "quadratisches Original oder gleich"
       }
     }
   },
@@ -2581,7 +2581,7 @@
     "key": "2293",
     "mappings": {
       "default": {
-        "default": "Quadratische Kappe"
+        "default": "quadratische Schnittmenge"
       }
     }
   },
@@ -2590,7 +2590,7 @@
     "key": "2294",
     "mappings": {
       "default": {
-        "default": "Quadratische Tasse"
+        "default": "quadratische VereinigungTasse"
       }
     }
   },
@@ -2599,7 +2599,7 @@
     "key": "2295",
     "mappings": {
       "default": {
-        "default": "Eingekreistes Plus"
+        "default": "eingekreistes Plus"
       }
     }
   },
@@ -2608,7 +2608,7 @@
     "key": "2296",
     "mappings": {
       "default": {
-        "default": "Eingekreiste Minus"
+        "default": "eingekreistes Minus"
       }
     }
   },
@@ -2617,7 +2617,7 @@
     "key": "2297",
     "mappings": {
       "default": {
-        "default": "Eingekreiste Zeiten"
+        "default": "eingekreiste Multiplikation"
       }
     }
   },
@@ -2626,7 +2626,7 @@
     "key": "2298",
     "mappings": {
       "default": {
-        "default": "Eingekreister Division-Schrägstrich"
+        "default": "eingekreiste Division"
       }
     }
   },
@@ -2635,7 +2635,7 @@
     "key": "2299",
     "mappings": {
       "default": {
-        "default": "Eingekreiste Punktoperator"
+        "default": "eingekreister Punktoperator"
       }
     }
   },
@@ -2644,7 +2644,7 @@
     "key": "229A",
     "mappings": {
       "default": {
-        "default": "Eingekreister Ringoperator"
+        "default": "eingekreister Ringoperator"
       }
     }
   },
@@ -2653,7 +2653,7 @@
     "key": "229B",
     "mappings": {
       "default": {
-        "default": "Eingekreister Stern-Operator"
+        "default": "eingekreister Sternoperator"
       }
     }
   },
@@ -2662,7 +2662,7 @@
     "key": "229C",
     "mappings": {
       "default": {
-        "default": "Eingekreiste Gleiche"
+        "default": "eingekreistes Gleich"
       }
     }
   },
@@ -2671,7 +2671,7 @@
     "key": "229D",
     "mappings": {
       "default": {
-        "default": "Circled Dash"
+        "default": "eingekreister Gedankenstrich"
       }
     }
   },
@@ -2680,7 +2680,7 @@
     "key": "229E",
     "mappings": {
       "default": {
-        "default": "Quadrat Plus"
+        "default": "eingerahmtes Plus"
       }
     }
   },
@@ -2689,7 +2689,7 @@
     "key": "229F",
     "mappings": {
       "default": {
-        "default": "Squared Minus"
+        "default": "eingerahmtes Minus"
       }
     }
   },
@@ -2698,7 +2698,7 @@
     "key": "22A0",
     "mappings": {
       "default": {
-        "default": "Quadratische Zeiten"
+        "default": "eingerahmte Multiplikation"
       }
     }
   },
@@ -2707,7 +2707,7 @@
     "key": "22A1",
     "mappings": {
       "default": {
-        "default": "Quadrat-Punkt-Operator"
+        "default": "eingerahmter Punktoperator"
       }
     }
   },
@@ -2716,7 +2716,7 @@
     "key": "22A2",
     "mappings": {
       "default": {
-        "default": "Richtige Tack"
+        "default": "ergibt"
       }
     }
   },
@@ -2725,7 +2725,7 @@
     "key": "22A3",
     "mappings": {
       "default": {
-        "default": "Linke Tack"
+        "default": "ergibt nicht"
       }
     }
   },
@@ -2734,7 +2734,7 @@
     "key": "22A4",
     "mappings": {
       "default": {
-        "default": "Down Tack"
+        "default": "senkrecht von"
       }
     }
   },
@@ -2743,7 +2743,7 @@
     "key": "22A5",
     "mappings": {
       "default": {
-        "default": "Up Tack"
+        "default": "senkrecht auf"
       }
     }
   },
@@ -2761,7 +2761,7 @@
     "key": "22A7",
     "mappings": {
       "default": {
-        "default": "Modelle"
+        "default": "Model"
       }
     }
   },
@@ -2770,7 +2770,7 @@
     "key": "22A8",
     "mappings": {
       "default": {
-        "default": "Wahr"
+        "default": "wahr"
       }
     }
   },
@@ -2779,7 +2779,7 @@
     "key": "22A9",
     "mappings": {
       "default": {
-        "default": "Kräfte"
+        "default": "erzwingen"
       }
     }
   },
@@ -2788,7 +2788,7 @@
     "key": "22AA",
     "mappings": {
       "default": {
-        "default": "Dreifachvertikales rechtes Drehkreuz"
+        "default": "dreifache vertikale Leiste mit rechtem Drehkreuz"
       }
     }
   },
@@ -2797,7 +2797,7 @@
     "key": "22AB",
     "mappings": {
       "default": {
-        "default": "Doppelte vertikale Stange Doppelte rechte Drehsperre"
+        "default": "doppelte vertikale Leiste mit doppeltem rechtem Drehkreuz"
       }
     }
   },
@@ -2806,7 +2806,7 @@
     "key": "22AC",
     "mappings": {
       "default": {
-        "default": "Beweist nicht"
+        "default": "beweist nicht"
       }
     }
   },
@@ -2815,7 +2815,7 @@
     "key": "22AD",
     "mappings": {
       "default": {
-        "default": "Nicht wahr"
+        "default": "nicht wahr"
       }
     }
   },
@@ -2824,7 +2824,7 @@
     "key": "22AE",
     "mappings": {
       "default": {
-        "default": "Erzwingt nicht"
+        "default": "nicht erzwingen"
       }
     }
   },
@@ -2833,7 +2833,7 @@
     "key": "22AF",
     "mappings": {
       "default": {
-        "default": "Negiertes doppeltes vertikales Balken-Doppelkreuz rechts"
+        "default": "negierte doppelte vertikale Leiste mit doppeltem rechten Drehkreuz"
       }
     }
   },
@@ -2842,7 +2842,7 @@
     "key": "22B0",
     "mappings": {
       "default": {
-        "default": "Geht unter Beziehung"
+        "default": "vorangehend in Relation"
       }
     }
   },
@@ -2851,7 +2851,7 @@
     "key": "22B1",
     "mappings": {
       "default": {
-        "default": "Erfolg unter Relation"
+        "default": "nachfolgend in Relation"
       }
     }
   },
@@ -2860,7 +2860,7 @@
     "key": "22B2",
     "mappings": {
       "default": {
-        "default": "Normale Untergruppe von"
+        "default": "normale Untergruppe"
       }
     }
   },
@@ -2869,7 +2869,7 @@
     "key": "22B3",
     "mappings": {
       "default": {
-        "default": "Enthält eine normale Untergruppe"
+        "default": "enthält normale Untergruppe"
       }
     }
   },
@@ -2878,7 +2878,7 @@
     "key": "22B4",
     "mappings": {
       "default": {
-        "default": "Normale Untergruppe von oder gleich bis"
+        "default": "normale Untergruppe von oder gleich"
       }
     }
   },
@@ -2887,7 +2887,7 @@
     "key": "22B5",
     "mappings": {
       "default": {
-        "default": "Enthält als normale Untergruppe oder gleich"
+        "default": "enthält normale Untergruppe oder gleich"
       }
     }
   },
@@ -2914,7 +2914,7 @@
     "key": "22B8",
     "mappings": {
       "default": {
-        "default": "Multimap"
+        "default": "Mehrfachzuordnung"
       }
     }
   },
@@ -2923,7 +2923,7 @@
     "key": "22B9",
     "mappings": {
       "default": {
-        "default": "Hermitianische Konjugatmatrix"
+        "default": "hermitesch konjugierte Matrix"
       }
     }
   },
@@ -2932,7 +2932,7 @@
     "key": "22BA",
     "mappings": {
       "default": {
-        "default": "Interkalieren"
+        "default": "einschalten"
       }
     }
   },
@@ -2941,7 +2941,7 @@
     "key": "22BB",
     "mappings": {
       "default": {
-        "default": "Xor"
+        "default": "Ausschließendes Oder"
       }
     }
   },
@@ -2950,7 +2950,7 @@
     "key": "22BC",
     "mappings": {
       "default": {
-        "default": "Nand"
+        "default": "Nand verknüpft mit"
       }
     }
   },
@@ -2959,7 +2959,16 @@
     "key": "22BD",
     "mappings": {
       "default": {
-        "default": "Noch"
+        "default": "Nor verknüpft mit"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "22BE",
+    "mappings": {
+      "default": {
+        "default": "rechter Winkel mit Bogen"
       }
     }
   },
@@ -2968,7 +2977,7 @@
     "key": "22BF",
     "mappings": {
       "default": {
-        "default": "Rechtwinkliges Dreieck"
+        "default": "rechtwinkliges Dreieck"
       }
     }
   },
@@ -2977,7 +2986,7 @@
     "key": "22C0",
     "mappings": {
       "default": {
-        "default": "N-Ary Logisch Und"
+        "default": "N-stufiges logisches Und"
       }
     }
   },
@@ -2986,7 +2995,7 @@
     "key": "22C1",
     "mappings": {
       "default": {
-        "default": "N-Ary Logical Or"
+        "default": "N-stufiges logisches Oder"
       }
     }
   },
@@ -2995,7 +3004,7 @@
     "key": "22C2",
     "mappings": {
       "default": {
-        "default": "N-Ary-Kreuzung"
+        "default": "N-stufiger Durchschnitt"
       }
     }
   },
@@ -3004,7 +3013,7 @@
     "key": "22C3",
     "mappings": {
       "default": {
-        "default": "N-Ary Union"
+        "default": "N-stufige Vereinigung"
       }
     }
   },
@@ -3013,7 +3022,7 @@
     "key": "22C4",
     "mappings": {
       "default": {
-        "default": "Diamantbediener"
+        "default": "Rautenoperator"
       }
     }
   },
@@ -3022,7 +3031,7 @@
     "key": "22C5",
     "mappings": {
       "default": {
-        "default": "Punktoperator"
+        "default": "Multiplikationspunkt"
       }
     }
   },
@@ -3031,7 +3040,7 @@
     "key": "22C6",
     "mappings": {
       "default": {
-        "default": "Star Operator"
+        "default": "Sternoperator"
       }
     }
   },
@@ -3040,7 +3049,7 @@
     "key": "22C7",
     "mappings": {
       "default": {
-        "default": "Divisionszeiten"
+        "default": "Divisionsanzahl"
       }
     }
   },
@@ -3049,7 +3058,7 @@
     "key": "22C8",
     "mappings": {
       "default": {
-        "default": "Krawatte"
+        "default": "Schleife"
       }
     }
   },
@@ -3058,7 +3067,7 @@
     "key": "22C9",
     "mappings": {
       "default": {
-        "default": "Linker normaler Faktor-Halbreiter"
+        "default": "linkes halbdirektes Produkt"
       }
     }
   },
@@ -3067,7 +3076,7 @@
     "key": "22CA",
     "mappings": {
       "default": {
-        "default": "Rechtes normales Faktor-Halbreiterprodukt"
+        "default": "rechtes halbdirektes Produkt"
       }
     }
   },
@@ -3076,7 +3085,7 @@
     "key": "22CB",
     "mappings": {
       "default": {
-        "default": "Linkes halbdirektes Produkt"
+        "default": "linkes halbdirektes Produkt"
       }
     }
   },
@@ -3085,7 +3094,7 @@
     "key": "22CC",
     "mappings": {
       "default": {
-        "default": "Rechtes Halbdirektprodukt"
+        "default": "rechtes halbdirektes Produkt"
       }
     }
   },
@@ -3094,7 +3103,7 @@
     "key": "22CD",
     "mappings": {
       "default": {
-        "default": "Umgekehrte Tilde ist gleich"
+        "default": "umgekehrte Tilde gleich"
       }
     }
   },
@@ -3103,7 +3112,7 @@
     "key": "22CE",
     "mappings": {
       "default": {
-        "default": "Curly Logical Oder"
+        "default": "geschweiftes logisches Oder"
       }
     }
   },
@@ -3112,7 +3121,7 @@
     "key": "22CF",
     "mappings": {
       "default": {
-        "default": "Curly Logical And"
+        "default": "geschweiftes logisches Und"
       }
     }
   },
@@ -3121,7 +3130,7 @@
     "key": "22D0",
     "mappings": {
       "default": {
-        "default": "Doppelte Teilmenge"
+        "default": "doppelte Teilmenge"
       }
     }
   },
@@ -3130,7 +3139,7 @@
     "key": "22D1",
     "mappings": {
       "default": {
-        "default": "Doppelter Supersatz"
+        "default": "doppelte Obermenge"
       }
     }
   },
@@ -3139,7 +3148,7 @@
     "key": "22D2",
     "mappings": {
       "default": {
-        "default": "Doppelte Kreuzung"
+        "default": "doppelter Durchschnitt"
       }
     }
   },
@@ -3148,7 +3157,7 @@
     "key": "22D3",
     "mappings": {
       "default": {
-        "default": "Doppelte Union"
+        "default": "doppelte Vereinigung"
       }
     }
   },
@@ -3157,7 +3166,7 @@
     "key": "22D4",
     "mappings": {
       "default": {
-        "default": "Heugabel"
+        "default": "echter Durchschnitt"
       }
     }
   },
@@ -3166,7 +3175,7 @@
     "key": "22D5",
     "mappings": {
       "default": {
-        "default": "Gleich und parallel zu"
+        "default": "gleich und parallel"
       }
     }
   },
@@ -3175,7 +3184,7 @@
     "key": "22D6",
     "mappings": {
       "default": {
-        "default": "Weniger als mit Dot"
+        "default": "kleiner als mit Punkt"
       }
     }
   },
@@ -3184,7 +3193,7 @@
     "key": "22D7",
     "mappings": {
       "default": {
-        "default": "Größer als mit Punkt"
+        "default": "größer als mit Punkt"
       }
     }
   },
@@ -3193,7 +3202,7 @@
     "key": "22D8",
     "mappings": {
       "default": {
-        "default": "Sehr viel weniger als"
+        "default": "sehr viel kleiner als"
       }
     }
   },
@@ -3202,7 +3211,7 @@
     "key": "22D9",
     "mappings": {
       "default": {
-        "default": "Sehr viel größer als"
+        "default": "sehr viel größer als"
       }
     }
   },
@@ -3211,7 +3220,7 @@
     "key": "22DA",
     "mappings": {
       "default": {
-        "default": "Weniger als gleich oder größer als"
+        "default": "kleiner als, gleich oder größer als"
       }
     }
   },
@@ -3220,7 +3229,7 @@
     "key": "22DB",
     "mappings": {
       "default": {
-        "default": "Größer als gleich oder kleiner als"
+        "default": "größer als, gleich oder kleiner als"
       }
     }
   },
@@ -3229,7 +3238,7 @@
     "key": "22DC",
     "mappings": {
       "default": {
-        "default": "Gleich oder weniger als"
+        "default": "gleich oder kleiner als"
       }
     }
   },
@@ -3238,7 +3247,7 @@
     "key": "22DD",
     "mappings": {
       "default": {
-        "default": "Gleich oder größer als"
+        "default": "gleich oder größer als"
       }
     }
   },
@@ -3247,7 +3256,7 @@
     "key": "22DE",
     "mappings": {
       "default": {
-        "default": "Gleich oder geht voraus"
+        "default": "gleich oder vorangehend"
       }
     }
   },
@@ -3256,7 +3265,7 @@
     "key": "22DF",
     "mappings": {
       "default": {
-        "default": "Gleich oder erfolgreich"
+        "default": "gleich oder nachfolgend"
       }
     }
   },
@@ -3265,7 +3274,7 @@
     "key": "22E0",
     "mappings": {
       "default": {
-        "default": "Geht nicht voraus oder gleich"
+        "default": "weder vorangehend oder gleich"
       }
     }
   },
@@ -3274,7 +3283,7 @@
     "key": "22E1",
     "mappings": {
       "default": {
-        "default": "Nicht erfolgreich oder gleich"
+        "default": "weder nachfolgend oder gleich"
       }
     }
   },
@@ -3283,7 +3292,7 @@
     "key": "22E2",
     "mappings": {
       "default": {
-        "default": "Kein quadratisches Bild oder gleich"
+        "default": "kein quadratisches Bild oder gleich"
       }
     }
   },
@@ -3292,7 +3301,7 @@
     "key": "22E3",
     "mappings": {
       "default": {
-        "default": "Kein quadratisches Original oder gleich"
+        "default": "kein quadratisches Original oder gleich"
       }
     }
   },
@@ -3301,7 +3310,7 @@
     "key": "22E4",
     "mappings": {
       "default": {
-        "default": "Quadratisches Bild oder nicht gleich"
+        "default": "quadratisches Bild oder nicht gleich"
       }
     }
   },
@@ -3310,7 +3319,7 @@
     "key": "22E5",
     "mappings": {
       "default": {
-        "default": "Quadratisches Original oder nicht gleich"
+        "default": "quadratisches Original oder nicht gleich"
       }
     }
   },
@@ -3319,7 +3328,7 @@
     "key": "22E6",
     "mappings": {
       "default": {
-        "default": "Weniger als, aber nicht gleichwertig"
+        "default": "kleiner als, aber nicht äquivalent"
       }
     }
   },
@@ -3328,7 +3337,7 @@
     "key": "22E7",
     "mappings": {
       "default": {
-        "default": "Größer als, aber nicht gleichwertig"
+        "default": "größer als, aber nicht äquivalent"
       }
     }
   },
@@ -3337,7 +3346,7 @@
     "key": "22E8",
     "mappings": {
       "default": {
-        "default": "Steht vor aber nicht gleichwertig zu"
+        "default": "vorangehend, aber nicht äquivalent"
       }
     }
   },
@@ -3346,7 +3355,7 @@
     "key": "22E9",
     "mappings": {
       "default": {
-        "default": "Erfolgreich, aber nicht gleichwertig"
+        "default": "nachfolgend, aber nicht äquivalent"
       }
     }
   },
@@ -3355,7 +3364,7 @@
     "key": "22EA",
     "mappings": {
       "default": {
-        "default": "Nicht normale Untergruppe von"
+        "default": "nicht normale Untergruppe von"
       }
     }
   },
@@ -3364,7 +3373,7 @@
     "key": "22EB",
     "mappings": {
       "default": {
-        "default": "Enthält keine normale Untergruppe"
+        "default": "enthält keine normale Untergruppe"
       }
     }
   },
@@ -3373,7 +3382,7 @@
     "key": "22EC",
     "mappings": {
       "default": {
-        "default": "Keine normale Untergruppe von oder gleich"
+        "default": "keine normale Untergruppe von oder gleich"
       }
     }
   },
@@ -3382,7 +3391,7 @@
     "key": "22ED",
     "mappings": {
       "default": {
-        "default": "Enthält nicht als normale Untergruppe oder gleich"
+        "default": "enthält nicht als normale Untergruppe oder gleich"
       }
     }
   },
@@ -3400,7 +3409,7 @@
     "key": "22EF",
     "mappings": {
       "default": {
-        "default": "Mittellinie horizontale Ellipsis"
+        "default": "Zentrierte horizontale Ellipse"
       }
     }
   },
@@ -3409,7 +3418,7 @@
     "key": "22F0",
     "mappings": {
       "default": {
-        "default": "Rechte rechtwinklige Ellipsis"
+        "default": "Diagonale Ellipse unten links nach oben rechts"
       }
     }
   },
@@ -3418,7 +3427,7 @@
     "key": "22F1",
     "mappings": {
       "default": {
-        "default": "Unten rechts diagonale Ellipse"
+        "default": "Diagonale Ellipse, oben links nach unten rechts"
       }
     }
   },
@@ -3427,7 +3436,7 @@
     "key": "22F2",
     "mappings": {
       "default": {
-        "default": "Element mit mit langem horizontalem Hub"
+        "default": "Element mit langem horizontalen Strich"
       }
     }
   },
@@ -3436,7 +3445,7 @@
     "key": "22F3",
     "mappings": {
       "default": {
-        "default": "Element mit mit vertikaler Leiste am Ende des horizontalen Strichs"
+        "default": "Element mit vertikalem Strich am Ende des horizontalen Strichs"
       }
     }
   },
@@ -3445,7 +3454,7 @@
     "key": "22F4",
     "mappings": {
       "default": {
-        "default": "Kleines Element mit mit vertikaler Leiste am Ende des horizontalen Strichs"
+        "default": "kleines Element mit vertikalem Strich am Ende des horizontalen Strichs"
       }
     }
   },
@@ -3454,7 +3463,7 @@
     "key": "22F5",
     "mappings": {
       "default": {
-        "default": "Element von mit Punkt oben"
+        "default": "Element mit Punkt"
       }
     }
   },
@@ -3463,7 +3472,7 @@
     "key": "22F6",
     "mappings": {
       "default": {
-        "default": "Element von mit Overbar"
+        "default": "Element mit Überstrich"
       }
     }
   },
@@ -3471,7 +3480,7 @@
     "key": "22F7",
     "mappings": {
       "default": {
-        "default": "element of or equal to"
+        "default": "kleines Element mit Überstrich"
       }
     },
     "category": "Sm"
@@ -3481,7 +3490,7 @@
     "key": "22F8",
     "mappings": {
       "default": {
-        "default": "Element von mit Underbar"
+        "default": "Element mit Unterstrich"
       }
     }
   },
@@ -3490,7 +3499,7 @@
     "key": "22F9",
     "mappings": {
       "default": {
-        "default": "Element mit zwei horizontalen Strichen"
+        "default": "Element mit 2 horizontalen Strichen"
       }
     }
   },
@@ -3499,7 +3508,7 @@
     "key": "22FA",
     "mappings": {
       "default": {
-        "default": "Enthält einen langen horizontalen Strich"
+        "default": "umgekehrtes Elementzeichen mit langem horizontalen Strich"
       }
     }
   },
@@ -3508,7 +3517,7 @@
     "key": "22FB",
     "mappings": {
       "default": {
-        "default": "Enthält einen vertikalen Balken am Ende des horizontalen Strichs"
+        "default": "umgekehrtes Elementzeichen mit vertikalem Strich am Ende des horizontalen Strichs"
       }
     }
   },
@@ -3517,7 +3526,7 @@
     "key": "22FC",
     "mappings": {
       "default": {
-        "default": "Kleine Enthält mit vertikaler Leiste am Ende des horizontalen Strichs"
+        "default": "kleines umgekehrtes Elementzeichen mit vertikalem Strich am Ende des horizontalen Strichs"
       }
     }
   },
@@ -3525,7 +3534,7 @@
     "key": "22FD",
     "mappings": {
       "default": {
-        "default": "contains or equal to"
+        "default": "umgekehrtes Elementzeichen mit Überstrich"
       }
     },
     "category": "Sm"
@@ -3535,7 +3544,7 @@
     "key": "22FE",
     "mappings": {
       "default": {
-        "default": "Kleine enthält mit Overbar"
+        "default": "kleines umgekehrtes Elementzeichen mit Überstrich"
       }
     }
   },
@@ -4111,7 +4120,7 @@
     "key": "29B7",
     "mappings": {
       "default": {
-        "default": "Eingekreiste Parallele"
+        "default": "eingekreiste Parallele"
       }
     }
   },
@@ -4120,7 +4129,7 @@
     "key": "29B8",
     "mappings": {
       "default": {
-        "default": "Eingekreister umgekehrter Solidus"
+        "default": "eingekreister umgekehrter Solidus"
       }
     }
   },
@@ -4129,7 +4138,7 @@
     "key": "29B9",
     "mappings": {
       "default": {
-        "default": "Eingekreistes Senkrecht"
+        "default": "eingekreistes Senkrecht"
       }
     }
   },
@@ -4156,7 +4165,7 @@
     "key": "29BC",
     "mappings": {
       "default": {
-        "default": "Eingekreistes, gegen den Uhrzeigersinn gedrehtes Divisionszeichen"
+        "default": "eingekreistes, gegen den Uhrzeigersinn gedrehtes Divisionszeichen"
       }
     }
   },
@@ -4165,7 +4174,7 @@
     "key": "29BE",
     "mappings": {
       "default": {
-        "default": "Eingekreiste weiße Kugel"
+        "default": "eingekreiste weiße Kugel"
       }
     }
   },
@@ -4174,7 +4183,7 @@
     "key": "29BF",
     "mappings": {
       "default": {
-        "default": "Eingekreiste Kugel"
+        "default": "eingekreiste Kugel"
       }
     }
   },
@@ -4183,7 +4192,7 @@
     "key": "29C0",
     "mappings": {
       "default": {
-        "default": "Eingekreist weniger als"
+        "default": "eingekreist weniger als"
       }
     }
   },
@@ -4192,7 +4201,7 @@
     "key": "29C1",
     "mappings": {
       "default": {
-        "default": "Eingekreist größer als"
+        "default": "eingekreist größer als"
       }
     }
   },
@@ -5155,7 +5164,7 @@
     "key": "2A36",
     "mappings": {
       "default": {
-        "default": "Eingekreistes Multiplikationszeichen mit Circumflex-Akzent"
+        "default": "eingekreistes Multiplikationszeichen mit Circumflex-Akzent"
       }
     }
   },
