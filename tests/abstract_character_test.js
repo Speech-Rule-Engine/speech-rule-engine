@@ -118,10 +118,10 @@ sre.AbstractCharacterTest.testOutput = function() {
       default: ['default'],
       mathspeak: ['default', 'brief', 'sbrief'],
       clearspeak: ['default']
-    }// ,
-    // nemeth: {
-    //   default: ['default']
-    // }
+    },
+    nemeth: {
+      default: ['default']
+    }
   };
   var stores = sre.MathMap.getInstance().store['subStores_'];
   var allRules = {};
