@@ -661,7 +661,7 @@ sre.MmlcloudEnglishTest.prototype.testIssue279 = function() {
 sre.MmlcloudEnglishTest.prototype.testIssue320 = function() {
   // mglyph is ignored!
   this.executeRuleTest(
-      '<mo>∂</mo>', 'partial-differential');
+      '<mo>∂</mo>', 'partial differential');
   this.executeRuleTest(
       '<mi>x</mi><mo>!</mo>', 'x factorial');
   this.executeRuleTest(
@@ -672,7 +672,7 @@ sre.MmlcloudEnglishTest.prototype.testIssue320 = function() {
       '<mi>sin</mi><mi>sin</mi><mi>x</mi>', 'sine sine x');
   this.executeRuleTest(
       '<mo>∂</mo><mo>∂</mo><mi>x</mi>',
-      'partial-differential partial-differential x');
+      'partial differential partial differential x');
   this.executeRuleTest(
       '<mrow><mrow><mo>(</mo><mfrac><msup><mo>∂</mo><mn>2</mn></msup>' +
       '<mrow><mo>∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac>' +
@@ -683,9 +683,9 @@ sre.MmlcloudEnglishTest.prototype.testIssue320 = function() {
       '<mi mathvariant="normal">i</mi><mi>y</mi><mo stretchy="false">)</mo>' +
       '<mo minsize="150%">|</mo></mrow><mn>2</mn></msup><mo>=</mo>' +
       '<mn>0</mn></mrow>',
-      'left-parenthesis StartFraction partial-differential squared Over' +
-      ' partial-differential x squared EndFraction plus StartFraction' +
-      ' partial-differential squared Over partial-differential y squared' +
-      ' EndFraction right-parenthesis StartAbsoluteValue phi left-parenthesis' +
-      ' x plus normal i y right-parenthesis EndAbsoluteValue squared equals 0');
+      'left parenthesis StartFraction partial differential squared Over' +
+      ' partial differential x squared EndFraction plus StartFraction' +
+      ' partial differential squared Over partial differential y squared' +
+      ' EndFraction right parenthesis StartAbsoluteValue phi left parenthesis' +
+      ' x plus normal i y right parenthesis EndAbsoluteValue squared equals 0');
 };

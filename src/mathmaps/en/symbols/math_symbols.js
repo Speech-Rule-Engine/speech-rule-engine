@@ -701,7 +701,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": " low right double quotation mark"
+        "default": "low right double quotation mark"
       }
     },
     "key": "201E"

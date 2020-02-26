@@ -187,7 +187,7 @@ sre.SemanticRuleTest.prototype.testUnitsExpressions = function() {
       '<msup>' +
       '<mi mathvariant="normal" class="MathML-Unit">s</mi>' +
       '<mn>2</mn></msup></mfrac>',
-      'three times m times kilometers hours times cap n divided' +
+      'three times m times kilometers hours times cap N divided' +
       ' by square seconds'
   );
   this.executeRuleTest(
@@ -254,13 +254,13 @@ sre.SemanticRuleTest.prototype.testQuadratic = function() {
       '</mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow>';
   this.executeRuleTest(
       mml,
-      'x equals negative b plus minus Square root of b squared minus four' +
+      'x equals negative b plus or minus Square root of b squared minus four' +
       ' times a times c divided by two times a'
   );
   this.locale = 'es';
   this.executeRuleTest(
       mml,
-      'x igual negative b más menos Square root of b squared menos four por' +
-      ' a por c divided by two por a'
+      'x igual negative b más menos Square root of b squared menos cuatro por' +
+      ' a por c divided by dos por a'
   );
 };

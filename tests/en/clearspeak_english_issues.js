@@ -76,7 +76,7 @@ sre.ClearspeakEnglishIssues.prototype.testIssueNumbers = function() {
  */
 sre.ClearspeakEnglishIssues.prototype.testIssue320 = function() {
   this.executeRuleTest(
-      '<mo>∂</mo>', 'partial-differential');
+      '<mo>∂</mo>', 'partial differential');
   this.executeRuleTest(
       '<mi>x</mi><mo>!</mo>', 'x factorial');
   this.executeRuleTest(
@@ -87,7 +87,7 @@ sre.ClearspeakEnglishIssues.prototype.testIssue320 = function() {
       '<mi>sin</mi><mi>sin</mi><mi>x</mi>', 'sine sine x');
   this.executeRuleTest(
       '<mo>∂</mo><mo>∂</mo><mi>x</mi>',
-      'partial-differential partial-differential x');
+      'partial differential partial differential x');
   this.executeRuleTest(
       '<mrow><mrow><mo>(</mo><mfrac><msup><mo>∂</mo><mn>2</mn></msup>' +
       '<mrow><mo>∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac>' +
@@ -98,10 +98,10 @@ sre.ClearspeakEnglishIssues.prototype.testIssue320 = function() {
       '<mi mathvariant="normal">i</mi><mi>y</mi><mo stretchy="false">)</mo>' +
       '<mo minsize="150%">|</mo></mrow><mn>2</mn></msup><mo>=</mo>' +
       '<mn>0</mn></mrow>',
-      'open paren, the fraction with numerator partial-differential squared, ' +
-      'and denominator partial-differential x squared, plus, the ' +
-      'fraction with numerator partial-differential squared, and ' +
-      'denominator partial-differential y squared, close paren, ' +
+      'open paren, the fraction with numerator partial differential squared, ' +
+      'and denominator partial differential x squared, plus, the ' +
+      'fraction with numerator partial differential squared, and ' +
+      'denominator partial differential y squared, close paren, ' +
       'times, the absolute value of phi times, open paren, x plus normal i, ' +
       'y, close paren, squared equals 0');
 };

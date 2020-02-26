@@ -73,30 +73,30 @@ sre.MathAlphabetsTest.prototype.runCharacterTests = function(chars) {
  */
 sre.MathAlphabetsTest.prototype.testLowerPlaneLatin = function() {
   this.runCharacterTests({
-    'ℂ': 'double struck capital c',
-    'ℊ': 'script small g',
-    'ℋ': 'script capital h',
-    'ℌ': 'fraktur capital h',
-    'ℍ': 'double struck capital h',
-    'ℎ': 'italic small h',
-    'ℐ': 'script capital i',
-    'ℑ': 'fraktur capital i',
-    'ℒ': 'script capital l',
-    'ℕ': 'double struck capital n',
-    'ℙ': 'double struck capital p',
-    'ℚ': 'double struck capital q',
-    'ℛ': 'script capital r',
-    'ℜ': 'fraktur capital r',
-    'ℝ': 'double struck capital r',
-    'ℤ': 'double struck capital z',
-    'ℨ': 'fraktur capital z',
-    'ℬ': 'script capital b',
-    'ℭ': 'fraktur capital c',
-    'ℯ': 'script small e',
-    'ℰ': 'script capital e',
-    'ℱ': 'script capital f',
-    'ℳ': 'script capital m',
-    'ℴ': 'script small o'
+    'ℂ': 'double struck cap C',
+    'ℊ': 'script g',
+    'ℋ': 'script cap H',
+    'ℌ': 'fraktur cap H',
+    'ℍ': 'double struck cap H',
+    'ℎ': 'italic h',
+    'ℐ': 'script cap I',
+    'ℑ': 'fraktur cap I',
+    'ℒ': 'script cap L',
+    'ℕ': 'double struck cap N',
+    'ℙ': 'double struck cap P',
+    'ℚ': 'double struck cap Q',
+    'ℛ': 'script cap R',
+    'ℜ': 'fraktur cap R',
+    'ℝ': 'double struck cap R',
+    'ℤ': 'double struck cap Z',
+    'ℨ': 'fraktur cap Z',
+    'ℬ': 'script cap B',
+    'ℭ': 'fraktur cap C',
+    'ℯ': 'script e',
+    'ℰ': 'script cap E',
+    'ℱ': 'script cap F',
+    'ℳ': 'script cap M',
+    'ℴ': 'script o'
   });
 };
 
@@ -106,20 +106,20 @@ sre.MathAlphabetsTest.prototype.testLowerPlaneLatin = function() {
  */
 sre.MathAlphabetsTest.prototype.testOtherCharacters = function() {
   this.runCharacterTests({
-    'ℓ': 'script small l',
-    '℘': 'script capital p',
-    'ℼ': 'double struck small pi',
-    'ℽ': 'double struck small gamma',
-    'ℾ': 'double struck capital gamma',
-    'ℿ': 'double struck capital pi',
-    '⅀': 'double struck n ary summation',
-    'ⅅ': 'double struck italic capital d',
-    'ⅆ': 'double struck italic small d',
-    'ⅇ': 'double struck italic small e',
-    'ⅈ': 'double struck italic small i',
-    'ⅉ': 'double struck italic small j',
-    '𝚤': 'italic small dotless i',
-    '𝚥': 'italic small dotless j'
+    'ℓ': 'script l',
+    '℘': 'script cap P',
+    'ℼ': 'double struck pi',
+    'ℽ': 'double struck gamma',
+    'ℾ': 'double struck cap Gamma',
+    'ℿ': 'double struck cap Pi',
+    '⅀': 'double struck sum',
+    'ⅅ': 'double struck italic cap D',
+    'ⅆ': 'double struck italic d',
+    'ⅇ': 'double struck italic e',
+    'ⅈ': 'double struck italic i',
+    'ⅉ': 'double struck italic j',
+    '𝚤': 'italic dotless i',
+    '𝚥': 'italic dotless j'
   });
 };
 
@@ -129,17 +129,17 @@ sre.MathAlphabetsTest.prototype.testOtherCharacters = function() {
  */
 sre.MathAlphabetsTest.prototype.testUpperPlaneAlphabetsCaps = function() {
   this.runCharacterTests({
-    '𝕬': 'bold fraktur capital a',
-    '𝐀': 'bold capital a',
-    '𝓐': 'bold script capital a',
-    '𝔸': 'double struck capital a',
-    '𝔄': 'fraktur capital a',
-    '𝐴': 'italic capital a',
-    '𝙰': 'monospace capital a',
-    '𝗔': 'sans serif bold capital a',
-    '𝘈': 'sans serif italic capital a',
-    '𝖠': 'sans serif capital a',
-    '𝒜': 'script capital a'
+    '𝕬': 'bold fraktur cap A',
+    '𝐀': 'bold cap A',
+    '𝓐': 'bold script cap A',
+    '𝔸': 'double struck cap A',
+    '𝔄': 'fraktur cap A',
+    '𝐴': 'italic cap A',
+    '𝙰': 'monospace cap A',
+    '𝗔': 'sans serif bold cap A',
+    '𝘈': 'sans serif italic cap A',
+    '𝖠': 'sans serif cap A',
+    '𝒜': 'script cap A'
   });
 };
 
@@ -149,17 +149,17 @@ sre.MathAlphabetsTest.prototype.testUpperPlaneAlphabetsCaps = function() {
  */
 sre.MathAlphabetsTest.prototype.testUpperPlaneAlphabetsLower = function() {
   this.runCharacterTests({
-    '𝖆': 'bold fraktur small a',
-    '𝐚': 'bold small a',
-    '𝓪': 'bold script small a',
-    '𝕒': 'double struck small a',
-    '𝔞': 'fraktur small a',
-    '𝑎': 'italic small a',
-    '𝚊': 'monospace small a',
-    '𝗮': 'sans serif bold small a',
-    '𝘢': 'sans serif italic small a',
-    '𝖺': 'sans serif small a',
-    '𝒶': 'script small a'
+    '𝖆': 'bold fraktur a',
+    '𝐚': 'bold a',
+    '𝓪': 'bold script a',
+    '𝕒': 'double struck a',
+    '𝔞': 'fraktur a',
+    '𝑎': 'italic a',
+    '𝚊': 'monospace a',
+    '𝗮': 'sans serif bold a',
+    '𝘢': 'sans serif italic a',
+    '𝖺': 'sans serif a',
+    '𝒶': 'script a'
   });
 };
 

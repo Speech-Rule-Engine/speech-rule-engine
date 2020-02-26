@@ -51,8 +51,8 @@ sre.AbstractCharacterTest.prototype.executeCharTest = function(char, answers) {
     try {
       this.executeRuleTest(char, answers[i], this.styles[i]);
     } catch (err) {
-      console.log('\nFailed Character: ' + char + ' (' +
-                  this.domain + '.' + this.styles[i] + ')');
+      console.info('\nFailed Character: ' + char + ' (' +
+                   this.domain + '.' + this.styles[i] + ')');
       console.log(err);
       // throw(err);
     }
@@ -106,7 +106,7 @@ sre.AbstractCharacterTest.testOutput = function() {
   
   var constraints = {
     en: {
-      default: ['default', 'short', 'alternative'],
+      default: ['default'],
       mathspeak: ['default', 'brief', 'sbrief'],
       clearspeak: ['default']
     },

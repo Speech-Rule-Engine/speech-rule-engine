@@ -135,13 +135,13 @@ sre.ApiTest.prototype.testSetupEngine = function() {
   this.executeTest(
       'toSpeech',
       sre.ApiTest.QUADRATIC,
-      'x equals StartFraction negative b plus-or-minus StartRoot' +
+      'x equals StartFraction negative b plus or minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
   this.system.setupEngine({domain: 'default', style: 'short'});
   this.executeTest(
       'toSpeech',
       sre.ApiTest.QUADRATIC,
-      'x equals negative b plus minus Square root of b squared minus four' +
+      'x equals negative b plus or minus Square root of b squared minus four' +
       ' times a times c divided by two times a');
   this.system.setupEngine({domain: 'mathspeak', style: 'default'});
 };
@@ -154,7 +154,7 @@ sre.ApiTest.prototype.testToSpeech = function() {
   this.executeTest(
       'toSpeech',
       sre.ApiTest.QUADRATIC,
-      'x equals StartFraction negative b plus-or-minus StartRoot' +
+      'x equals StartFraction negative b plus or minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
 };
 
@@ -251,7 +251,7 @@ sre.ApiTest.prototype.testToDescription = function() {
       '"text":"negative","userValue":"","annotation":"",' +
       '"attributes":{},"personality":{}},{"context":"","text":"b",' +
       '"userValue":"","annotation":"","attributes":{},"personality":{}},' +
-      '{"context":"","text":"plus-or-minus",' +
+      '{"context":"","text":"plus or minus",' +
       '"userValue":"","annotation":"","attributes":{},"personality":{}},' +
       '{"context":"","text":"StartRoot","userValue":"",' +
       '"annotation":"","attributes":{},"personality":{}},' +
@@ -376,7 +376,7 @@ sre.ApiTest.prototype.testToEnriched = function() {
       ' data-semantic-type="relseq" data-semantic-role="equality"' +
       ' data-semantic-id="24" data-semantic-children="0,23"' +
       ' data-semantic-content="1" data-semantic-speech="x equals' +
-      ' StartFraction negative b plus-or-minus StartRoot' +
+      ' StartFraction negative b plus or minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction"><mi' +
       ' data-semantic-type="identifier"' +
       ' data-semantic-role="latinletter" data-semantic-font="italic"' +
@@ -457,7 +457,7 @@ sre.ApiTest.prototype.testToEnriched = function() {
       ' data-semantic-type="relseq" data-semantic-role="equality"' +
       ' data-semantic-id="24" data-semantic-children="0,23"' +
       ' data-semantic-content="1" data-semantic-speech="x equals' +
-      ' StartFraction negative b plus-or-minus StartRoot b squared minus 4' +
+      ' StartFraction negative b plus or minus StartRoot b squared minus 4' +
       ' a c EndRoot Over 2 a EndFraction"><mi' +
       ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
       ' data-semantic-font="italic" data-semantic-id="0"' +
@@ -468,12 +468,12 @@ sre.ApiTest.prototype.testToEnriched = function() {
       '</mo><mfrac data-semantic-type="fraction"' +
       ' data-semantic-role="division" data-semantic-id="23"' +
       ' data-semantic-children="18,22" data-semantic-parent="24"' +
-      ' data-semantic-speech="StartFraction negative b plus-or-minus' +
+      ' data-semantic-speech="StartFraction negative b plus or minus' +
       ' StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction"><mrow' +
       ' data-semantic-type="infixop" data-semantic-role="addition"' +
       ' data-semantic-id="18" data-semantic-children="17,16"' +
       ' data-semantic-content="4" data-semantic-parent="23"' +
-      ' data-semantic-speech="negative b plus-or-minus StartRoot b squared' +
+      ' data-semantic-speech="negative b plus or minus StartRoot b squared' +
       ' minus 4 a c EndRoot" data-semantic-prefix="Numerator"><mrow' +
       ' data-semantic-type="prefixop" data-semantic-role="negative"' +
       ' data-semantic-id="17" data-semantic-children="3"' +
@@ -488,7 +488,7 @@ sre.ApiTest.prototype.testToEnriched = function() {
       ' data-semantic-type="operator" data-semantic-role="addition"' +
       ' data-semantic-id="4" data-semantic-parent="18"' +
       ' data-semantic-operator="infixop,±"' +
-      ' data-semantic-speech="plus-or-minus">±<!-- ± --></mo><msqrt' +
+      ' data-semantic-speech="plus or minus">±<!-- ± --></mo><msqrt' +
       ' data-semantic-type="sqrt" data-semantic-role="unknown"' +
       ' data-semantic-id="16" data-semantic-children="15"' +
       ' data-semantic-parent="18" data-semantic-speech="StartRoot b squared' +
@@ -564,7 +564,7 @@ sre.ApiTest.prototype.testSyntaxWalker = function() {
   this.executeTest(
       'walk',
       sre.ApiTest.QUADRATIC,
-      'x equals StartFraction negative b plus-or-minus StartRoot' +
+      'x equals StartFraction negative b plus or minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
   this.executeTest(
       'move', move('DOWN'),
@@ -574,18 +574,18 @@ sre.ApiTest.prototype.testSyntaxWalker = function() {
       'equals');
   this.executeTest(
       'move', move('RIGHT'),
-      'StartFraction negative b plus-or-minus StartRoot' +
+      'StartFraction negative b plus or minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
   this.executeTest(
       'move', move('DOWN'),
-      'Numerator negative b plus-or-minus StartRoot' +
+      'Numerator negative b plus or minus StartRoot' +
       ' b squared minus 4 a c EndRoot');
   this.executeTest(
       'move', move('SPACE'),
       'Level 2 Numerator');
   this.executeTest(
       'move', move('UP'),
-      'StartFraction negative b plus-or-minus StartRoot' +
+      'StartFraction negative b plus or minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
   this.executeTest(
       'move', move('LEFT'),
@@ -611,25 +611,25 @@ sre.ApiTest.prototype.testSemanticWalker = function() {
   this.executeTest(
       'walk',
       sre.ApiTest.QUADRATIC,
-      'x equals StartFraction negative b plus-or-minus StartRoot' +
+      'x equals StartFraction negative b plus or minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
   this.executeTest(
       'move', move('DOWN'),
       'x');
   this.executeTest(
       'move', move('RIGHT'),
-      'equals StartFraction negative b plus-or-minus StartRoot' +
+      'equals StartFraction negative b plus or minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
   this.executeTest(
       'move', move('DOWN'),
-      'Numerator negative b plus-or-minus StartRoot' +
+      'Numerator negative b plus or minus StartRoot' +
       ' b squared minus 4 a c EndRoot');
   this.executeTest(
       'move', move('SPACE'),
       'Level 2 Numerator');
   this.executeTest(
       'move', move('UP'),
-      'equals StartFraction negative b plus-or-minus StartRoot' +
+      'equals StartFraction negative b plus or minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
   this.executeTest(
       'move', move('LEFT'),
