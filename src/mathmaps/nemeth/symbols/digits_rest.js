@@ -1,9 +1,12 @@
-[{"locale": "nemeth"},
+[
+  {
+    "locale": "nemeth"
+  },
   {
     "category": "No",
     "mappings": {
       "default": {
-        "default": "one quarter"
+        "default": "⠹⠂⠌⠲⠼"
       }
     },
     "key": "00BC"
@@ -12,7 +15,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "one half"
+        "default": "⠹⠂⠌⠆⠼"
       }
     },
     "key": "00BD"
@@ -21,7 +24,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "three quarters"
+        "default": "⠹⠒⠌⠲⠼"
       }
     },
     "key": "00BE"
@@ -30,7 +33,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "one seventh"
+        "default": "⠹⠂⠌⠶⠼"
       }
     },
     "key": "2150"
@@ -39,7 +42,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "one ninth"
+        "default": "⠹⠂⠌⠔⠼"
       }
     },
     "key": "2151"
@@ -48,7 +51,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "one tenth"
+        "default": "⠹⠂⠌⠂⠴⠼"
       }
     },
     "key": "2152"
@@ -57,7 +60,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "one third"
+        "default": "⠹⠂⠌⠒⠼"
       }
     },
     "key": "2153"
@@ -66,7 +69,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "two thirds"
+        "default": "⠹⠆⠌⠒⠼"
       }
     },
     "key": "2154"
@@ -75,7 +78,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "one fifth"
+        "default": "⠹⠂⠌⠢⠼"
       }
     },
     "key": "2155"
@@ -84,7 +87,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "two fifths"
+        "default": "⠹⠆⠌⠢⠼"
       }
     },
     "key": "2156"
@@ -93,7 +96,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "three fifths"
+        "default": "⠹⠒⠌⠢⠼"
       }
     },
     "key": "2157"
@@ -102,7 +105,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "four fifths"
+        "default": "⠹⠲⠌⠢⠼"
       }
     },
     "key": "2158"
@@ -111,7 +114,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "one sixth"
+        "default": "⠹⠂⠌⠖⠼"
       }
     },
     "key": "2159"
@@ -120,7 +123,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "five sixths"
+        "default": "⠹⠢⠌⠖⠼"
       }
     },
     "key": "215A"
@@ -129,7 +132,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "one eighth"
+        "default": "⠹⠂⠌⠦⠼"
       }
     },
     "key": "215B"
@@ -138,7 +141,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "three eighths"
+        "default": "⠹⠒⠌⠦⠼"
       }
     },
     "key": "215C"
@@ -147,7 +150,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "five eighths"
+        "default": "⠹⠢⠌⠦⠼"
       }
     },
     "key": "215D"
@@ -156,7 +159,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "seven eighths"
+        "default": "⠹⠶⠌⠦⠼"
       }
     },
     "key": "215E"
@@ -165,7 +168,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "numerator one"
+        "default": "⠹⠂⠌⠼"
       }
     },
     "key": "215F"
@@ -174,7 +177,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "zero thirds"
+        "default": "⠹⠴⠌⠒⠼"
       }
     },
     "key": "2189"
@@ -183,7 +186,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "circled ten on black square"
+        "default": "⠫⠸⠲⠸⠫⠫⠉⠸⠫⠼⠂⠴⠻⠻"
       }
     },
     "key": "3248"
@@ -192,7 +195,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "circled twenty on black square"
+        "default": "⠫⠸⠲⠸⠫⠫⠉⠸⠫⠼⠆⠴⠻⠻"
       }
     },
     "key": "3249"
@@ -201,7 +204,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "circled thirty on black square"
+        "default": "⠫⠸⠲⠸⠫⠫⠉⠸⠫⠼⠒⠴⠻⠻"
       }
     },
     "key": "324A"
@@ -210,7 +213,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "circled forty on black square"
+        "default": "⠫⠸⠲⠸⠫⠫⠉⠸⠫⠼⠲⠴⠻⠻"
       }
     },
     "key": "324B"
@@ -219,7 +222,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "circled fifty on black square"
+        "default": "⠫⠸⠲⠸⠫⠫⠉⠸⠫⠼⠢⠴⠻⠻"
       }
     },
     "key": "324C"
@@ -228,7 +231,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "circled sixty on black square"
+        "default": "⠫⠸⠲⠸⠫⠫⠉⠸⠫⠼⠖⠴⠻⠻"
       }
     },
     "key": "324D"
@@ -237,7 +240,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "circled seventy on black square"
+        "default": "⠫⠸⠲⠸⠫⠫⠉⠸⠫⠼⠶⠴⠻⠻"
       }
     },
     "key": "324E"
@@ -246,7 +249,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "circled eighty on black square"
+        "default": "⠫⠸⠲⠸⠫⠫⠉⠸⠫⠼⠦⠴⠻⠻"
       }
     },
     "key": "324F"
