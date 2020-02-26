@@ -24,7 +24,7 @@
     "key": "005B",
     "mappings": {
       "default": {
-        "default": "eckig Klammer auf"
+        "default": "eckige Klammer auf"
       }
     },
     "category": "Ps"
@@ -61,7 +61,7 @@
     "key": "2045",
     "mappings": {
       "default": {
-        "default": "Linke eckige Klammer mit Pinole"
+        "default": "Linke eckige Klammer mit Stachel"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "2046",
     "mappings": {
       "default": {
-        "default": "Rechte eckige Klammer mit Pinole"
+        "default": "Rechte eckige Klammer mit Stachel"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "2308",
     "mappings": {
       "default": {
-        "default": "Linke Decke"
+        "default": "linke Aufrundungsklammer"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "2309",
     "mappings": {
       "default": {
-        "default": "Rechte Decke"
+        "default": "rechte Aufrundungsklammer"
       }
     }
   },
@@ -97,7 +97,7 @@
     "key": "230A",
     "mappings": {
       "default": {
-        "default": "Linke Etage"
+        "default": "linke Abrundungsklammer"
       }
     }
   },
@@ -106,7 +106,7 @@
     "key": "230B",
     "mappings": {
       "default": {
-        "default": "Rechter Boden"
+        "default": "rechter Abrundungsklammer"
       }
     }
   },
@@ -115,7 +115,7 @@
     "key": "230C",
     "mappings": {
       "default": {
-        "default": "Unten rechts beschneiden"
+        "default": "unterer rechter Abschnitt"
       }
     }
   },
@@ -124,7 +124,7 @@
     "key": "230D",
     "mappings": {
       "default": {
-        "default": "Unten links beschneiden"
+        "default": "Unterer linker Abschnitt"
       }
     }
   },
@@ -133,7 +133,7 @@
     "key": "230E",
     "mappings": {
       "default": {
-        "default": "Oben rechts beschneiden"
+        "default": "Oberer rechter Abschnitt"
       }
     }
   },
@@ -142,7 +142,7 @@
     "key": "230F",
     "mappings": {
       "default": {
-        "default": "Oben links beschneiden"
+        "default": "Oberer linker Abschnitt"
       }
     }
   },
@@ -187,7 +187,7 @@
     "key": "2320",
     "mappings": {
       "default": {
-        "default": "Obere Hälfte Integral"
+        "default": "Obere Hälfte eines Integrals"
       }
     }
   },
@@ -196,7 +196,7 @@
     "key": "2321",
     "mappings": {
       "default": {
-        "default": "Untere Hälfte Integral"
+        "default": "Untere Hälfte eines Integrals"
       }
     }
   },
@@ -205,7 +205,7 @@
     "key": "2329",
     "mappings": {
       "default": {
-        "default": "Winkel nach links zeigenden Winkel"
+        "default": "Linke spitze Klammer"
       }
     }
   },
@@ -214,7 +214,7 @@
     "key": "232A",
     "mappings": {
       "default": {
-        "default": "Winkel nach rechts zeigenden Winkeln"
+        "default": "Rechte spitze Klammer"
       }
     }
   },
@@ -223,7 +223,7 @@
     "key": "239B",
     "mappings": {
       "default": {
-        "default": "Oberer Haken der linken Klammer"
+        "default": "Oberer Teil der linken Klammer"
       }
     }
   },
@@ -241,7 +241,7 @@
     "key": "239D",
     "mappings": {
       "default": {
-        "default": "Unterer Haken der linken Klammer"
+        "default": "Unterer Teil der linken Klammer"
       }
     }
   },
@@ -250,7 +250,7 @@
     "key": "239E",
     "mappings": {
       "default": {
-        "default": "Oberer Haken der rechten Klammer"
+        "default": "Oberer Teil der rechten Klammer"
       }
     }
   },
@@ -268,7 +268,7 @@
     "key": "23A0",
     "mappings": {
       "default": {
-        "default": "Unterer Haken der rechten Klammer"
+        "default": "Unterer Teil der rechten Klammer"
       }
     }
   },
@@ -277,7 +277,7 @@
     "key": "23A1",
     "mappings": {
       "default": {
-        "default": "Linke eckige Klammer, obere Ecke"
+        "default": "Oberer Teil der linken eckigen Klammer"
       }
     }
   },
@@ -295,7 +295,7 @@
     "key": "23A3",
     "mappings": {
       "default": {
-        "default": "Linke eckige Klammer, untere Ecke"
+        "default": "unterer Teil der linken eckigen Klammer"
       }
     }
   },
@@ -304,7 +304,7 @@
     "key": "23A4",
     "mappings": {
       "default": {
-        "default": "Rechte eckige Klammer obere Ecke"
+        "default": "Oberer Teil der rechten eckigen Klammer"
       }
     }
   },
@@ -322,7 +322,7 @@
     "key": "23A6",
     "mappings": {
       "default": {
-        "default": "Rechte eckige Klammer, untere Ecke"
+        "default": "unterer Teil der rechten eckigen Klammer"
       }
     }
   },
@@ -331,7 +331,7 @@
     "key": "23A7",
     "mappings": {
       "default": {
-        "default": "Linke geschweifte Klammer, oberer Haken"
+        "default": "oberer Teil der linken geschweiften Klammer"
       }
     }
   },
@@ -340,7 +340,7 @@
     "key": "23A8",
     "mappings": {
       "default": {
-        "default": "Linke geschweifte Klammer Mittelstück"
+        "default": "Mittelstück der linken geschweiften Klammer"
       }
     }
   },
@@ -349,7 +349,7 @@
     "key": "23A9",
     "mappings": {
       "default": {
-        "default": "Linke geschweifte Klammer, unterer Haken"
+        "default": "unterer Teil der linken geschweiften Klammer"
       }
     }
   },
@@ -358,7 +358,7 @@
     "key": "23AA",
     "mappings": {
       "default": {
-        "default": "Curly Bracket Extension"
+        "default": "Zwischenteil einer geschweiften Klammer"
       }
     }
   },
@@ -367,7 +367,7 @@
     "key": "23AB",
     "mappings": {
       "default": {
-        "default": "Rechter geschweifter Halterungshaken"
+        "default": "oberer Teil der rechten geschweiften Klammer"
       }
     }
   },
@@ -376,7 +376,7 @@
     "key": "23AC",
     "mappings": {
       "default": {
-        "default": "Rechte geschweifte Klammer Mittelstück"
+        "default": "Mittelstück der rechten geschweiften Klammer"
       }
     }
   },
@@ -385,7 +385,7 @@
     "key": "23AD",
     "mappings": {
       "default": {
-        "default": "Unterer Haken der rechten geschweiften Klammer"
+        "default": "unterer Teil der rechten geschweiften Klammer"
       }
     }
   },
@@ -394,7 +394,7 @@
     "key": "23AE",
     "mappings": {
       "default": {
-        "default": "Integrale Erweiterung"
+        "default": "Mittelteil eines Integrals"
       }
     }
   },
@@ -403,7 +403,7 @@
     "key": "23AF",
     "mappings": {
       "default": {
-        "default": "Horizontale Linienverlängerung"
+        "default": "Erweiterung einer Querlinie"
       }
     }
   },
@@ -412,7 +412,7 @@
     "key": "23B0",
     "mappings": {
       "default": {
-        "default": "Geschweifte Bracketsektion oben links oder rechts unten"
+        "default": "Geschweiftes Klammerteil oben links oder rechts unten"
       }
     }
   },
@@ -421,7 +421,7 @@
     "key": "23B1",
     "mappings": {
       "default": {
-        "default": "Obere rechte oder untere linke geschweifte Klammer"
+        "default": "Geschweiftes Klammerteil oben rechts oder unten links"
       }
     }
   },
@@ -430,7 +430,7 @@
     "key": "23B2",
     "mappings": {
       "default": {
-        "default": "Summation Top"
+        "default": "Oberer Teil einer Summe"
       }
     }
   },
@@ -439,7 +439,7 @@
     "key": "23B3",
     "mappings": {
       "default": {
-        "default": "Summation Bottom"
+        "default": "Unterer Teil einer Summe"
       }
     }
   },
@@ -447,7 +447,7 @@
     "key": "23B4",
     "mappings": {
       "default": {
-        "default": "over square bracket"
+        "default": "Obere eckige Klammer"
       }
     },
     "category": "So"
@@ -456,7 +456,7 @@
     "key": "23B5",
     "mappings": {
       "default": {
-        "default": "under square bracket"
+        "default": "Untere eckige Klammer"
       }
     },
     "category": "So"
@@ -466,7 +466,7 @@
     "key": "23B6",
     "mappings": {
       "default": {
-        "default": "Untere eckige Klammer über obere eckige Klammer"
+        "default": "Untere eckige Klammer auf oberer eckiger Klammer"
       }
     }
   },
@@ -475,7 +475,7 @@
     "key": "23B7",
     "mappings": {
       "default": {
-        "default": "Radikales Symbol unten"
+        "default": "Unterer Teil des Radikalsymbols"
       }
     }
   },
@@ -502,7 +502,7 @@
     "key": "23DC",
     "mappings": {
       "default": {
-        "default": "Top-Klammer"
+        "default": "Obere Klammer"
       }
     }
   },
@@ -511,7 +511,7 @@
     "key": "23DD",
     "mappings": {
       "default": {
-        "default": "Unterste Klammer"
+        "default": "Untere Klammer"
       }
     }
   },
@@ -520,7 +520,7 @@
     "key": "23DE",
     "mappings": {
       "default": {
-        "default": "Top Curly Bracket"
+        "default": "Obere geschweifte Klammer"
       }
     }
   },
@@ -529,7 +529,7 @@
     "key": "23DF",
     "mappings": {
       "default": {
-        "default": "Geschweifte Klammer"
+        "default": "Untere geschweifte Klammer"
       }
     }
   },
@@ -538,7 +538,7 @@
     "key": "23E0",
     "mappings": {
       "default": {
-        "default": "Top Tortoise Shell Bracket"
+        "default": "Obere eckige Klammer"
       }
     }
   },
@@ -547,7 +547,7 @@
     "key": "23E1",
     "mappings": {
       "default": {
-        "default": "Schildkrötenhalterung unten"
+        "default": "Untere eckige Klammer"
       }
     }
   },
@@ -574,7 +574,7 @@
     "key": "276A",
     "mappings": {
       "default": {
-        "default": "Mittlere abgeflachte linke Parenthesis-Verzierung"
+        "default": "Mittlere abgeflachte linke Klammerverzierung"
       }
     }
   },
