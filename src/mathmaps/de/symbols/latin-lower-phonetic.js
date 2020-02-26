@@ -273,6 +273,15 @@
     }
   },
   {
+    "key": "0138",
+    "mappings": {
+      "default": {
+        "default": "kra"
+      }
+    },
+    "category": "Ll"
+  },
+  {
     "category": "Ll",
     "key": "017F",
     "mappings": {
@@ -318,6 +327,15 @@
     }
   },
   {
+    "key": "0192",
+    "mappings": {
+      "default": {
+        "default": "f mit Haken"
+      }
+    },
+    "category": "Ll"
+  },
+  {
     "category": "Ll",
     "key": "0195",
     "mappings": {
@@ -334,6 +352,15 @@
         "default": "Lateinischer Kleinbuchstabe K mit Haken"
       }
     }
+  },
+  {
+    "key": "019A",
+    "mappings": {
+      "default": {
+        "default": "l mit Strich"
+      }
+    },
+    "category": "Ll"
   },
   {
     "category": "Ll",
@@ -784,6 +811,15 @@
         "default": "Lateinischer Kleinbuchstabe Schwa mit Haken"
       }
     }
+  },
+  {
+    "key": "025B",
+    "mappings": {
+      "default": {
+        "default": "offenes e"
+      }
+    },
+    "category": "Ll"
   },
   {
     "category": "Ll",
@@ -1837,5 +1873,23 @@
         "default": "Lateinischer Kleinbuchstabe Ezh mit Retroflex-Haken"
       }
     }
+  },
+  {
+    "key": "0149",
+    "mappings": {
+      "default": {
+        "default": "n mit Apostroph davor"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "014B",
+    "mappings": {
+      "default": {
+        "default": "eng"
+      }
+    },
+    "category": "Ll"
   }
 ]

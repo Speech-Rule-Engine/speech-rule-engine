@@ -7,7 +7,7 @@
     "key": "2150",
     "mappings": {
       "default": {
-        "default": "Vulgäre Fraktion Ein Siebter"
+        "default": "ein siebtel"
       }
     }
   },
@@ -16,7 +16,7 @@
     "key": "2151",
     "mappings": {
       "default": {
-        "default": "Vulgäre Fraktion Ein Neunter"
+        "default": "ein neuntel"
       }
     }
   },
@@ -25,7 +25,7 @@
     "key": "2152",
     "mappings": {
       "default": {
-        "default": "Vulgäre Fraktion Ein Zehntel"
+        "default": "ein zehntel"
       }
     }
   },
@@ -34,7 +34,7 @@
     "key": "2153",
     "mappings": {
       "default": {
-        "default": "Vulgar Fraction One Third"
+        "default": "ein drittel"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "2154",
     "mappings": {
       "default": {
-        "default": "Vulgar Fraction Zwei Drittel"
+        "default": "zwei drittel"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "2155",
     "mappings": {
       "default": {
-        "default": "Vulgäre Fraktion Ein Fünfter"
+        "default": "ein fünftel"
       }
     }
   },
@@ -61,7 +61,7 @@
     "key": "2156",
     "mappings": {
       "default": {
-        "default": "Vulgar Fraction Zwei Fünftel"
+        "default": "zwei fünftel"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "2157",
     "mappings": {
       "default": {
-        "default": "Vulgar Fraction Drei Fünftel"
+        "default": "drei fünftel"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "2158",
     "mappings": {
       "default": {
-        "default": "Vulgar Fraction Vier Fünftel"
+        "default": "vier fünftel"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "2159",
     "mappings": {
       "default": {
-        "default": "Vulgar Fraction One Sechster"
+        "default": "ein sechstel"
       }
     }
   },
@@ -97,7 +97,7 @@
     "key": "215A",
     "mappings": {
       "default": {
-        "default": "Vulgäre Fraktion Fünf Sechstel"
+        "default": "fünf sechstel"
       }
     }
   },
@@ -106,7 +106,7 @@
     "key": "215B",
     "mappings": {
       "default": {
-        "default": "Vulgar Fraction One Achte"
+        "default": "ein achtel"
       }
     }
   },
@@ -115,7 +115,7 @@
     "key": "215C",
     "mappings": {
       "default": {
-        "default": "Vulgäre Fraktion Drei Achtel"
+        "default": "drei achtel"
       }
     }
   },
@@ -124,7 +124,7 @@
     "key": "215D",
     "mappings": {
       "default": {
-        "default": "Vulgäre Fraktion Fünf Achtel"
+        "default": "fünf achtel"
       }
     }
   },
@@ -133,7 +133,7 @@
     "key": "215E",
     "mappings": {
       "default": {
-        "default": "Vulgäre Fraktion Sieben Achtel"
+        "default": "sieben achtel"
       }
     }
   },
@@ -142,7 +142,7 @@
     "key": "215F",
     "mappings": {
       "default": {
-        "default": "Bruchzahler Eins"
+        "default": "Bruchzähler eins"
       }
     }
   },
@@ -151,7 +151,7 @@
     "key": "2189",
     "mappings": {
       "default": {
-        "default": "Vulgar Fraction Zero Thirds"
+        "default": "null drittel"
       }
     }
   },
@@ -160,7 +160,7 @@
     "key": "3248",
     "mappings": {
       "default": {
-        "default": "Eingekreiste Zahl Zehn auf schwarzem Quadrat"
+        "default": "eingekreiste Zehn auf schwarzem Quadrat"
       }
     }
   },
@@ -169,7 +169,7 @@
     "key": "3249",
     "mappings": {
       "default": {
-        "default": "Eingekreiste Zahl zwanzig auf schwarzem Quadrat"
+        "default": "eingekreiste Zwanzig auf schwarzem Quadrat"
       }
     }
   },
@@ -178,7 +178,7 @@
     "key": "324A",
     "mappings": {
       "default": {
-        "default": "Eingekreiste Zahl Dreißig auf schwarzem Quadrat"
+        "default": "eingekreiste Dreißig auf schwarzem Quadrat"
       }
     }
   },
@@ -187,7 +187,7 @@
     "key": "324B",
     "mappings": {
       "default": {
-        "default": "Eingekreiste Zahl Vierzig auf schwarzem Quadrat"
+        "default": "eingekreiste Vierzig auf schwarzem Quadrat"
       }
     }
   },
@@ -196,7 +196,7 @@
     "key": "324C",
     "mappings": {
       "default": {
-        "default": "Eingekreiste Zahl fünfzig auf schwarzem Quadrat"
+        "default": "eingekreiste Fünfzig auf schwarzem Quadrat"
       }
     }
   },
@@ -205,7 +205,7 @@
     "key": "324D",
     "mappings": {
       "default": {
-        "default": "Eingekreiste Zahl Sechzig auf schwarzem Quadrat"
+        "default": "eingekreiste Sechzig auf schwarzem Quadrat"
       }
     }
   },
@@ -214,7 +214,7 @@
     "key": "324E",
     "mappings": {
       "default": {
-        "default": "Eingekreiste Zahl siebzig auf schwarzem Quadrat"
+        "default": "eingekreiste Siebzig auf schwarzem Quadrat"
       }
     }
   },
@@ -223,7 +223,7 @@
     "key": "324F",
     "mappings": {
       "default": {
-        "default": "Eingekreiste Zahl Achtzig auf schwarzem Quadrat"
+        "default": "eingekreiste Achtzig auf schwarzem Quadrat"
       }
     }
   }

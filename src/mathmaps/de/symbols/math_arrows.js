@@ -2109,6 +2109,15 @@
     }
   },
   {
+    "key": "2970",
+    "mappings": {
+      "default": {
+        "default": "round implies"
+      }
+    },
+    "category": "Sm"
+  },
+  {
     "category": "Sm",
     "key": "2971",
     "mappings": {

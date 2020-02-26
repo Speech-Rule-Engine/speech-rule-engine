@@ -7,7 +7,7 @@
     "key": "03D0",
     "mappings": {
       "default": {
-        "default": "Griechisches Beta-Symbol"
+        "default": "beta"
       }
     }
   },
@@ -16,7 +16,7 @@
     "key": "03D7",
     "mappings": {
       "default": {
-        "default": "Griechisches Kai Symbol"
+        "default": "kai"
       }
     }
   },
@@ -25,7 +25,7 @@
     "key": "03F6",
     "mappings": {
       "default": {
-        "default": "Griechisch umgekehrt Lunate Epsilon Symbol"
+        "default": "umgekehrtes epsilon"
       }
     }
   },
@@ -34,7 +34,7 @@
     "key": "1D7CA",
     "mappings": {
       "default": {
-        "default": "Mathematisches mutiges Kapital Digamma"
+        "default": "fettes großes Digamma"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "1D7CB",
     "mappings": {
       "default": {
-        "default": "Mathematisches fettes kleines Digamma"
+        "default": "fettes digamma"
       }
     }
   }
