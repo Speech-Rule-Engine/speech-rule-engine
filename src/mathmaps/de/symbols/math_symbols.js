@@ -402,7 +402,7 @@
     "key": "00B6",
     "mappings": {
       "default": {
-        "default": "paragraph sign (pilcrow"
+        "default": "Paragraf"
       }
     },
     "category": "Po"
@@ -411,7 +411,8 @@
     "key": "00B7",
     "mappings": {
       "default": {
-        "default": "Punkt mittig"
+        "default": "mal",
+        "alternative": "Punkt mittig"
       }
     },
     "category": "Po"
@@ -457,7 +458,7 @@
     "key": "00D7",
     "mappings": {
       "default": {
-        "default": "Multiplikationskreuz"
+        "default": "mal"
       }
     }
   },
@@ -466,7 +467,7 @@
     "key": "00F7",
     "mappings": {
       "default": {
-        "default": "Divisionszeichen"
+        "default": "geteilt durch"
       }
     }
   },
@@ -474,7 +475,7 @@
     "key": "02D8",
     "mappings": {
       "default": {
-        "default": "breve"
+        "default": "Breve"
       }
     },
     "category": "Sk"
@@ -483,7 +484,7 @@
     "key": "02D9",
     "mappings": {
       "default": {
-        "default": "Punkt darüber"
+        "default": "Überpunkt"
       }
     },
     "category": "Sk"
@@ -492,7 +493,7 @@
     "key": "02DA",
     "mappings": {
       "default": {
-        "default": "Ring darüber"
+        "default": "Überring"
       }
     },
     "category": "Sk"
@@ -501,7 +502,7 @@
     "key": "02DB",
     "mappings": {
       "default": {
-        "default": "ogonek"
+        "default": "Ogonek"
       }
     },
     "category": "Sk"
@@ -519,7 +520,7 @@
     "key": "02DD",
     "mappings": {
       "default": {
-        "default": "double acute accent"
+        "default": "Doppleakutakzent"
       }
     },
     "category": "Sk"
@@ -592,7 +593,7 @@
     "key": "2017",
     "mappings": {
       "default": {
-        "default": "Double Low Line"
+        "default": "Doppelter Unterstrich"
       }
     }
   },
@@ -619,7 +620,7 @@
     "key": "201A",
     "mappings": {
       "default": {
-        "default": "Einzelnes Low-9-Anführungszeichen"
+        "default": "Einzelnes rechtes Anführungszeichen"
       }
     }
   },
@@ -628,7 +629,7 @@
     "key": "201B",
     "mappings": {
       "default": {
-        "default": "Einzelnes Hoch-9-Anführungszeichen"
+        "default": "Einzelnes linkes Anführungszeichen"
       }
     }
   },
@@ -655,7 +656,7 @@
     "key": "201E",
     "mappings": {
       "default": {
-        "default": "Doppelte Low-9-Anführungszeichen"
+        "default": "Doppeltes rechtes Anführungszeichen"
       }
     }
   },
@@ -664,7 +665,7 @@
     "key": "201F",
     "mappings": {
       "default": {
-        "default": "Doppelte Hoch-9-Anführungszeichen"
+        "default": "Doppeltes linkes Anführungszeichen"
       }
     }
   },
@@ -709,7 +710,7 @@
     "key": "2024",
     "mappings": {
       "default": {
-        "default": "Ein Punktführer"
+        "default": "Einzelpunkt"
       }
     }
   },
@@ -718,7 +719,7 @@
     "key": "2025",
     "mappings": {
       "default": {
-        "default": "Zwei Punktführer"
+        "default": "zwei Punkte"
       }
     }
   },
@@ -727,7 +728,7 @@
     "key": "2026",
     "mappings": {
       "default": {
-        "default": "Horizontale Ellipsis"
+        "default": "horizontale Ellipsis"
       }
     }
   },
@@ -745,7 +746,7 @@
     "key": "2030",
     "mappings": {
       "default": {
-        "default": "Per Mille-Zeichen"
+        "default": "promille"
       }
     }
   },
@@ -754,7 +755,7 @@
     "key": "2031",
     "mappings": {
       "default": {
-        "default": "Pro Zehntausend-Zeichen"
+        "default": "pro Zehntausend"
       }
     }
   },
@@ -762,7 +763,7 @@
     "key": "2032",
     "mappings": {
       "default": {
-        "default": "strich"
+        "default": "Strich"
       }
     },
     "category": "Po"
@@ -771,7 +772,7 @@
     "key": "2033",
     "mappings": {
       "default": {
-        "default": "zwei-strich"
+        "default": "zwei Strich"
       }
     },
     "category": "Po"
@@ -780,7 +781,7 @@
     "key": "2034",
     "mappings": {
       "default": {
-        "default": "drei-strich"
+        "default": "drei Strich"
       }
     },
     "category": "Po"
@@ -790,7 +791,7 @@
     "key": "2035",
     "mappings": {
       "default": {
-        "default": "Umgekehrter Prime"
+        "default": "strich invertiert"
       }
     }
   },
@@ -799,7 +800,7 @@
     "key": "2036",
     "mappings": {
       "default": {
-        "default": "Double Prime rückgängig gemacht"
+        "default": "zwei Strich invertiert"
       }
     }
   },
@@ -808,7 +809,7 @@
     "key": "2037",
     "mappings": {
       "default": {
-        "default": "Triple Prime rückgängig gemacht"
+        "default": "drei Strich invertiert"
       }
     }
   },
@@ -3031,7 +3032,8 @@
     "key": "22C5",
     "mappings": {
       "default": {
-        "default": "Multiplikationspunkt"
+        "default": "mal",
+        "alternative": "Multiplikationspunkt"
       }
     }
   },
@@ -3796,7 +3798,7 @@
     "key": "27CE",
     "mappings": {
       "default": {
-        "default": "Squared Logical And"
+        "default": "quadratisches und"
       }
     }
   },
@@ -3805,7 +3807,7 @@
     "key": "27CF",
     "mappings": {
       "default": {
-        "default": "Squared Logical Oder"
+        "default": "quadratisches oder"
       }
     }
   },
@@ -4228,7 +4230,7 @@
     "key": "29C4",
     "mappings": {
       "default": {
-        "default": "Squared Rising Diagonal Slash"
+        "default": "Quadrat mit Diagonale links unten nach rechts oben"
       }
     }
   },
@@ -4237,7 +4239,7 @@
     "key": "29C5",
     "mappings": {
       "default": {
-        "default": "Squared Falling Diagonal Slash"
+        "default": "Quadrat mit Diagonale links oben nach rechts unten"
       }
     }
   },
@@ -4264,7 +4266,7 @@
     "key": "29C8",
     "mappings": {
       "default": {
-        "default": "Quadratisches Quadrat"
+        "default": "Doppelquadrat"
       }
     }
   },
@@ -4300,7 +4302,7 @@
     "key": "29CC",
     "mappings": {
       "default": {
-        "default": "S Im Dreieck"
+        "default": "S im Dreieck"
       }
     }
   },
