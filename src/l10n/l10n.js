@@ -21,6 +21,7 @@
 goog.provide('sre.L10n');
 
 goog.require('sre.Engine');
+goog.require('sre.Locale.de');
 goog.require('sre.Locale.en');
 goog.require('sre.Locale.es');
 goog.require('sre.Locale.fr');
