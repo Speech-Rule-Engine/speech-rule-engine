@@ -16,7 +16,7 @@
     "key": "2118",
     "mappings": {
       "default": {
-        "default": "Skript Hauptstadt P"
+        "default": "Skript groß P"
       }
     }
   },
@@ -25,7 +25,7 @@
     "key": "213C",
     "mappings": {
       "default": {
-        "default": "Doppelt geschlagener kleiner Pi"
+        "default": "pi mit Doppelstrich"
       }
     }
   },
@@ -34,7 +34,7 @@
     "key": "213D",
     "mappings": {
       "default": {
-        "default": "Doppelt geschlagenes kleines Gamma"
+        "default": "kleines gamma mit Doppelstrich"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "213E",
     "mappings": {
       "default": {
-        "default": "Doppelt getroffene Hauptstadt Gamma"
+        "default": "groß Gamma mit Doppelstrich"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "213F",
     "mappings": {
       "default": {
-        "default": "Doppelt getroffene Hauptstadt Pi"
+        "default": "groß Pi mit Doppelstrich"
       }
     }
   },
@@ -61,7 +61,7 @@
     "key": "2140",
     "mappings": {
       "default": {
-        "default": "Doppelte N-Ary-Summierung"
+        "default": "Summenzeichen mit Doppelstrich"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "2145",
     "mappings": {
       "default": {
-        "default": "Doppelt geschlagenes Kursivkapital D"
+        "default": "groß D kursiv mit Doppelstrich"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "2149",
     "mappings": {
       "default": {
-        "default": "Doppelt geschlagene Italic Small J"
+        "default": "j kursiv mit Doppelstrich"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "1D6A4",
     "mappings": {
       "default": {
-        "default": "Mathematisch kursiv kleines punktloses ich"
+        "default": "kursiv kleines punktloses i"
       }
     }
   },
@@ -97,7 +97,7 @@
     "key": "1D6A5",
     "mappings": {
       "default": {
-        "default": "Mathematisch kursiv kleines punktloses J"
+        "default": "kursiv kleines punktloses j"
       }
     }
   }

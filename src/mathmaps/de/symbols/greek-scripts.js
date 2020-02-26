@@ -7,7 +7,7 @@
     "key": "1D26",
     "mappings": {
       "default": {
-        "default": "Griechischer Buchstabe Kleine Hauptstadt Gamma"
+        "default": "kleines groß Gamma"
       }
     }
   },
@@ -16,7 +16,7 @@
     "key": "1D27",
     "mappings": {
       "default": {
-        "default": "Griechischer Brief Kleine Hauptstadt Lamda"
+        "default": "kleines groß Lamda"
       }
     }
   },
@@ -25,7 +25,7 @@
     "key": "1D28",
     "mappings": {
       "default": {
-        "default": "Griechischer Buchstabe Small Capital Pi"
+        "default": "kleines groß Pi"
       }
     }
   },
@@ -34,7 +34,7 @@
     "key": "1D29",
     "mappings": {
       "default": {
-        "default": "Griechischer Buchstabe Kleine Hauptstadt Rho"
+        "default": "kleines groß Rho"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "1D2A",
     "mappings": {
       "default": {
-        "default": "Griechischer Buchstabe Kleine Hauptstadt Psi"
+        "default": "kleines groß Psi"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "1D5E",
     "mappings": {
       "default": {
-        "default": "Änderungsschreiben Small Greek Gamma"
+        "default": "hochgestelltes kleines gamma"
       }
     }
   },
@@ -61,7 +61,7 @@
     "key": "1D60",
     "mappings": {
       "default": {
-        "default": "Modifier Letter Kleiner griechischer Phi"
+        "default": "hochgestelltes kleines phi"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "1D66",
     "mappings": {
       "default": {
-        "default": "Griechisches tiefgestelltes Kleinbuchstabe Beta"
+        "default": "tiefgestelltes kleines beta"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "1D67",
     "mappings": {
       "default": {
-        "default": "Griechischer Index Kleinbuchstabe Gamma"
+        "default": "tiefgestelltes kleines gamma"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "1D68",
     "mappings": {
       "default": {
-        "default": "Griechischer Index Kleinbuchstabe Rho"
+        "default": "tiefgestelltes kleines rho"
       }
     }
   },
@@ -97,7 +97,7 @@
     "key": "1D69",
     "mappings": {
       "default": {
-        "default": "Griechischer tiefgestellter Kleinbuchstabe Phi"
+        "default": "tiefgestelltes kleines phi"
       }
     }
   },
@@ -106,7 +106,7 @@
     "key": "1D6A",
     "mappings": {
       "default": {
-        "default": "Griechischer Index Kleinbuchstabe Chi"
+        "default": "tiefgestelltes kleines chi"
       }
     }
   }
