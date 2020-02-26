@@ -74,33 +74,34 @@ sre.Locale.de = {
 
   MS_ROOT_INDEX: { },
 
+  // TODO: Grammar of numbers vs digits! Currently grammar is wrt. letters.
   FONT: {
-    'bold': 'fett',
-    'bold-fraktur': 'Fraktur fett',
-    'bold-italic': 'fettkursiv',
-    'bold-script': 'Schreibschrift fett',
-    'caligraphic': 'kalligrafisch',
-    'caligraphic-bold': 'kalligrafisch fett',
+    'bold': 'fettes',
+    'bold-fraktur': 'fettes Fraktur',
+    'bold-italic': 'fettkursives',
+    'bold-script': 'fettes Schreibschrift',
+    'caligraphic': 'kalligrafisches',
+    'caligraphic-bold': 'fettes kalligrafisches',
     'double-struck': ['mit Doppelstrich', sre.Locale.postfixCombiner],
     'double-struck-italic': ['kursiv mit Doppelstrich', sre.Locale.postfixCombiner],
     'fraktur': 'Fraktur',
-    'fullwidth': 'vollbreit',
-    'italic': 'kursiv',
-    'monospace': 'festbreit',
-    'normal': 'normal',
-    'oldstyle': 'antiquiert',
-    'oldstyle-bold': 'antiquiert fett',
+    'fullwidth': 'vollbreites',
+    'italic': 'kursives',
+    'monospace': 'festbreites',
+    'normal': 'normales',
+    'oldstyle': 'antiquiertes',
+    'oldstyle-bold': 'antiquiertes fettes',
     'script': 'Schreibschrift',
-    'sans-serif': 'serifenlos',
-    'sans-serif-italic': 'serifenlos kursiv',
-    'sans-serif-bold': 'serifenlos fett',
-    'sans-serif-bold-italic': 'serifenlos fettkursiv',
+    'sans-serif': 'serifenloses',
+    'sans-serif-italic': 'serifenlos kursives',
+    'sans-serif-bold': 'serifenlos fettes',
+    'sans-serif-bold-italic': 'serifenlos fettkursives',
     'unknown': 'unbekannt'
   },
 
   EMBELLISH: {
     // Embellishments
-    // TODO: Here we need specialist combiners!
+    // TODO: Grammar of numbers vs digits!
     'super': 'hoch',
     'sub': 'subskript',
     'circled': 'eingekreist',
@@ -224,7 +225,7 @@ sre.Locale.de = {
   },
 
   ALPHABET_PREFIXES: {
-    capPrefix: {default: 'groß'},
+    capPrefix: {default: 'großes'},
     smallPrefix: {default: ''},
     digitPrefix: {default: ''}
   },
