@@ -3,30 +3,102 @@
     "locale": "de"
   },
   {
-    "key": "2146",
+    "category": "Ll",
+    "key": "2113",
     "mappings": {
       "default": {
-        "default": "d"
+        "default": "Skript klein L"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "key": "2147",
+    "category": "Sm",
+    "key": "2118",
     "mappings": {
       "default": {
-        "default": "e"
+        "default": "Skript Hauptstadt P"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "key": "2148",
+    "category": "Ll",
+    "key": "213C",
     "mappings": {
       "default": {
-        "default": "i"
+        "default": "Doppelt geschlagener kleiner Pi"
       }
-    },
-    "category": "Ll"
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "213D",
+    "mappings": {
+      "default": {
+        "default": "Doppelt geschlagenes kleines Gamma"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "213E",
+    "mappings": {
+      "default": {
+        "default": "Doppelt getroffene Hauptstadt Gamma"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "213F",
+    "mappings": {
+      "default": {
+        "default": "Doppelt getroffene Hauptstadt Pi"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2140",
+    "mappings": {
+      "default": {
+        "default": "Doppelte N-Ary-Summierung"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "2145",
+    "mappings": {
+      "default": {
+        "default": "Doppelt geschlagenes Kursivkapital D"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "2149",
+    "mappings": {
+      "default": {
+        "default": "Doppelt geschlagene Italic Small J"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D6A4",
+    "mappings": {
+      "default": {
+        "default": "Mathematisch kursiv kleines punktloses ich"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D6A5",
+    "mappings": {
+      "default": {
+        "default": "Mathematisch kursiv kleines punktloses J"
+      }
+    }
   }
 ]
