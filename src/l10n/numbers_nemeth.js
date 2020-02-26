@@ -39,5 +39,6 @@ sre.Numbers.nemeth.numberToWords = function(number) {
 
 
 sre.Numbers.nemeth.NUMBERS = {
-  numberToWords: sre.Numbers.nemeth.numberToWords
+  numberToWords: sre.Numbers.nemeth.numberToWords,
+  simpleOrdinal: function(x) {return x;}
 };

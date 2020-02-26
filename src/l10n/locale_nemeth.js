@@ -25,6 +25,26 @@ goog.require('sre.Locale');
 goog.require('sre.Numbers.nemeth');
 
 
+let postfixCombiner = function(letter, font, cap) {
+    return font ? letter + font : letter;
+};
+
+
+let embellishCombiner = function(letter, font, cap) {
+  return font + (cap ? cap : '⠰') + letter + '⠻';
+};
+
+
+let doubleEmbellishCombiner = function(letter, font, cap) {
+  return font + (cap ? cap : '⠰') + letter + '⠻⠻';
+};
+
+
+let parensCombiner = function(letter, font, cap) {
+  return font + (cap ? cap : '⠰') + letter + '⠾';
+};
+
+
 /**
  * @type {sre.Locale.Messages}
  */
@@ -104,6 +124,23 @@ sre.Locale.nemeth = {
     'unknown': ''
   },
 
+  EMBELLISH: {
+    // Embellishments
+    // TODO: Here we need specialist combiners!
+    'super': '⠘',
+    'sub': '⠰',
+    'circled': ['⠫⠉⠸⠫', embellishCombiner],
+    'parenthesized': ['⠷', parensCombiner],
+    'period': ['⠸⠲', postfixCombiner],
+    'negative-circled': ['⠫⠸⠉⠸⠫', embellishCombiner],
+    'double-circled': ['⠫⠉⠸⠫⠫⠉⠸⠫', doubleEmbellishCombiner],
+    'circled-sans-serif': ['⠫⠉⠸⠫⠠⠨', embellishCombiner],
+    'negative-circled-sans-serif': ['⠫⠸⠉⠸⠫⠠⠨', embellishCombiner],
+    'comma': ['⠠', postfixCombiner],
+    'squared': ['⠫⠲⠸⠫', embellishCombiner],
+    'negative-squared': ['⠫⠸⠲⠸⠫', embellishCombiner]
+  },
+
   ROLE: {
     // Infixoperators
     'addition': 'addition',
@@ -168,11 +205,7 @@ sre.Locale.nemeth = {
     LEVEL: 'Level'
   },
 
-  NUMBERS: {
-    // TODO: We should not need this!
-    simpleOrdinal: function(x) {return x;}
-  },
-
+  NUMBERS: sre.Numbers.nemeth.NUMBERS,
 
   ALPHABETS: {
     latinSmall: [
@@ -212,11 +245,11 @@ sre.Locale.nemeth = {
   ALPHABET_PREFIXES: {
     capPrefix: {default: ''},
     smallPrefix: {default: ''},
-    digitPrefix: {default: ''}
+    digitPrefix: {default: '⠼'}
   },
 
   ALPHABET_COMBINER: function(letter, font, cap) {
-      return font ? font + letter : letter;
+    return font ? font + letter : letter;
   }
 
 };
