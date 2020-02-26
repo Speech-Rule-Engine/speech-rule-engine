@@ -21,6 +21,7 @@ goog.require('sre.ClearspeakCharFrenchTest');
 goog.require('sre.DefaultCharFrenchTest');
 goog.require('sre.MathspeakCharFrenchTest');
 goog.require('sre.MathspeakEmbellishFrenchTest');
+goog.require('sre.MathspeakFrenchFontTest');
 goog.require('sre.MathspeakFrenchTest');
 goog.require('sre.MmlcloudFrenchTest');
 goog.require('sre.NobleFrenchTest');
@@ -39,6 +40,7 @@ sre.SpeechFrenchTest.testList = [
   sre.MathspeakCharFrenchTest,
   sre.MathspeakEmbellishFrenchTest,
   sre.MathspeakFrenchTest,
+  sre.MathspeakFrenchFontTest,
   sre.MmlcloudFrenchTest,
   sre.NobleFrenchTest,
   sre.PrefixFrenchTest,

@@ -21,7 +21,6 @@
 goog.provide('sre.Locale.en');
 
 goog.require('sre.Locale');
-goog.require('sre.Messages');
 goog.require('sre.Numbers.en');
 
 
@@ -79,8 +78,8 @@ sre.Locale.en = {
     'bold-fraktur': 'bold fraktur',
     'bold-italic': 'bold italic',
     'bold-script': 'bold script',
-    'caligraphic': 'caligraphic',
-    'caligraphic-bold': 'caligraphic bold',
+    'caligraphic': 'calligraphic',
+    'caligraphic-bold': 'calligraphic bold',
     'double-struck': 'double struck',
     'double-struck-italic': 'double struck italic',
     'fraktur': 'fraktur',

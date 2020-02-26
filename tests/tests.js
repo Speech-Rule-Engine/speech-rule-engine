@@ -71,7 +71,9 @@ sre.Tests.allTests = sre.Tests.allTests.concat(sre.BrailleNemethTest.testList);
 var file = sre.SystemExternal.process.env['FILE'];
 var locale = sre.SystemExternal.process.env['LOCALE'];
 if (file) {
-  sre.Tests.testList.push(sre[file]);
+  sre.Tests.testList =
+    sre.Tests.testList.concat(file.split(',').map(
+      function(x) {return sre[x];}));
 }
 if (locale) {
   console.log(locale);

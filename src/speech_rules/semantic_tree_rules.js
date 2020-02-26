@@ -172,7 +172,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
   // Prefix Operator
   defineRule(
       'prefix', 'default.default',
-      '[t] "prefix"; [n] text(); [t] "of" (pause 150);' +
+      '[t] "prefix"; [m] content/* (pause 150);' +
       '[n] children/*[1]',
       'self::prefixop');
 
@@ -184,7 +184,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
   // Postfix Operator
   defineRule(
       'postfix', 'default.default',
-      '[n] children/*[1]; [t] "postfix"; [n] text() (pause 300)',
+      '[n] children/*[1]; [t] "postfix"; [m] content/* (pause 300)',
       'self::postfixop');
 
   defineRule(

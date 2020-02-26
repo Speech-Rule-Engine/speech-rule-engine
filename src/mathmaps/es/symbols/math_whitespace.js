@@ -3,6 +3,15 @@
     "locale": "es"
   },
   {
+    "category": "Zs",
+    "key": "0020",
+    "mappings": {
+      "default": {
+        "default": "espacio"
+      }
+    }
+  },
+  {
     "key": "00A0",
     "mappings": {
       "default": {
@@ -19,6 +28,24 @@
       }
     },
     "category": "Cf"
+  },
+  {
+    "category": "Zs",
+    "key": "2000",
+    "mappings": {
+      "default": {
+        "default": "en quad"
+      }
+    }
+  },
+  {
+    "category": "Zs",
+    "key": "2001",
+    "mappings": {
+      "default": {
+        "default": "em Quad"
+      }
+    }
   },
   {
     "key": "2002",
@@ -55,6 +82,15 @@
       }
     },
     "category": "Zs"
+  },
+  {
+    "category": "Zs",
+    "key": "2006",
+    "mappings": {
+      "default": {
+        "default": "espacio Six-Per-Em"
+      }
+    }
   },
   {
     "key": "2007",
@@ -138,6 +174,78 @@
     "category": "Cf"
   },
   {
+    "category": "Zl",
+    "key": "2028",
+    "mappings": {
+      "default": {
+        "default": "separador de linea"
+      }
+    }
+  },
+  {
+    "category": "Zp",
+    "key": "2029",
+    "mappings": {
+      "default": {
+        "default": "separador de párrafo"
+      }
+    }
+  },
+  {
+    "category": "Cf",
+    "key": "202A",
+    "mappings": {
+      "default": {
+        "default": "incrustación de izquierda a derecha"
+      }
+    }
+  },
+  {
+    "category": "Cf",
+    "key": "202B",
+    "mappings": {
+      "default": {
+        "default": "incrustación de derecha a izquierda"
+      }
+    }
+  },
+  {
+    "category": "Cf",
+    "key": "202C",
+    "mappings": {
+      "default": {
+        "default": "formato direccional pop"
+      }
+    }
+  },
+  {
+    "category": "Cf",
+    "key": "202D",
+    "mappings": {
+      "default": {
+        "default": "anulación de izquierda a derecha"
+      }
+    }
+  },
+  {
+    "category": "Cf",
+    "key": "202E",
+    "mappings": {
+      "default": {
+        "default": "anulación de derecha a izquierda"
+      }
+    }
+  },
+  {
+    "category": "Zs",
+    "key": "202F",
+    "mappings": {
+      "default": {
+        "default": "espacio estrecho sin descanso"
+      }
+    }
+  },
+  {
     "key": "205F",
     "mappings": {
       "default": {
@@ -192,6 +300,42 @@
     "category": "Cf"
   },
   {
+    "category": "Cf",
+    "key": "206A",
+    "mappings": {
+      "default": {
+        "default": "inhibir el intercambio simétrico"
+      }
+    }
+  },
+  {
+    "category": "Cf",
+    "key": "206B",
+    "mappings": {
+      "default": {
+        "default": "activar el intercambio simétrico"
+      }
+    }
+  },
+  {
+    "category": "Cf",
+    "key": "206E",
+    "mappings": {
+      "default": {
+        "default": "formas de dígitos nacionales"
+      }
+    }
+  },
+  {
+    "category": "Cf",
+    "key": "206F",
+    "mappings": {
+      "default": {
+        "default": "formas de dígitos nominales"
+      }
+    }
+  },
+  {
     "key": "FEFF",
     "mappings": {
       "default": {
@@ -199,5 +343,32 @@
       }
     },
     "category": "Cf"
+  },
+  {
+    "category": "Cf",
+    "key": "FFF9",
+    "mappings": {
+      "default": {
+        "default": "ancla de anotación interlinear"
+      }
+    }
+  },
+  {
+    "category": "Cf",
+    "key": "FFFA",
+    "mappings": {
+      "default": {
+        "default": "separador de anotación interlinear"
+      }
+    }
+  },
+  {
+    "category": "Cf",
+    "key": "FFFB",
+    "mappings": {
+      "default": {
+        "default": "terminador de anotación interlinear"
+      }
+    }
   }
 ]

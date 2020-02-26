@@ -75,5 +75,54 @@
     "names": [
       "tan"
     ]
+  },
+
+  {"category": "Cyclometric",
+   "mappings": {
+     "default": {
+       "default": "cosinus hyperbolique"
+     } },
+   "key": "arccos",
+   "names": ["arccos"]
+  },
+  {"category": "Cyclometric",
+   "mappings": {
+     "default": {
+       "default": "cotangente hyperbolique"
+     } },
+   "key": "arccot",
+   "names": ["arccot"]
+  },
+  {"category": "Cyclometric",
+   "mappings": {
+     "default": {
+       "default": "cosécante hyperbolique"
+     } },
+   "key": "arccsc",
+   "names": ["arccsc"]
+  },
+  {"category": "Cyclometric",
+   "mappings": {
+     "default": {
+       "default": "sécante hyperbolique"
+     } },
+   "key": "arcsec",
+   "names": ["arcsec"]
+  },
+  {"category": "Cyclometric",
+   "mappings": {
+     "default": {
+       "default": "sinus hyperbolique"
+     } },
+   "key": "arcsin",
+   "names": ["arcsin"]
+  },
+  {"category": "Cyclometric",
+   "mappings": {
+     "default": {
+       "default": "tangente hyperbolique"
+     } },
+   "key": "arctan",
+   "names": ["arctan"]
   }
 ]
