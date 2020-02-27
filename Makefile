@@ -34,7 +34,9 @@ JSON_SRC = $(SRC_DIR)/mathmaps
 JSON_DST = $(LIB_DIR)/mathmaps
 MAPS = functions symbols units
 IEMAPS_FILE = $(JSON_DST)/mathmaps_ie.js
-LOCALES = $(JSON_SRC)/*  ## $(foreach dir, $(MAPS), $(JSON_SRC)/$(dir))
+LOCALES = $(notdir $(wildcard $(JSON_SRC)/*))  ## $(foreach dir, $(MAPS), $(JSON_SRC)/$(dir))
+LOC_SRC = $(JSON_SRC)/*  ## $(foreach dir, $(MAPS), $(JSON_SRC)/$(dir))
+LOC_DST = $(addprefix $(JSON_DST)/, $(addsuffix .js,$(LOCALES)))
 
 TEST_DIR = $(abspath ./tests)
 TEST_TARGET = $(LIB_DIR)/test.js
@@ -91,7 +93,7 @@ FIXJSSTYLE = python $(LINT_ROOT)/fixjsstyle.py --strict --jsdoc -x '$(LINT_EXCLU
 
 #######################################################################3
 
-all: directories deps compile start_files
+all: directories deps compile start_files maps
 
 directories: $(BIN_DIR)
 
@@ -197,32 +199,34 @@ clean_test:
 
 publish: clean compile browser maps iemaps
 
-maps: $(JSON_DST)
-	@for j in $(LOCALES); do\
-		echo "Creating mappings for locale `basename $$j`."; \
-		locale_file=$(JSON_DST)/`basename $$j`.js; \
-		echo '{' > $$locale_file; \
-		for dir in $(MAPS); do\
-			for i in $(JSON_SRC)/`basename $$j`/$$dir/*.js; do\
-				echo '"'`basename $$j`'/'`basename $$i`'": '  >> $$locale_file; \
-				$(JSON_MINIFY) $$i >> $$locale_file; \
-				echo ','  >> $$locale_file; \
-			done; \
-		done; \
-		head -n -1 $$locale_file > $$locale_file.tmp; \
-		echo '}\n' >> $$locale_file.tmp; \
-		mv $$locale_file.tmp $$locale_file; \
-	done
-
 $(JSON_DST):
 	@echo "Creating JSON destination."
 	@mkdir -p $(JSON_DST)
 
-iemaps:
+maps: $(JSON_DST) $(LOC_DST)
+
+$(LOC_DST):
+	@echo "Creating mappings for locale `basename $@ .js`."
+	@echo '{' > $@
+	@for dir in $(MAPS); do\
+		for i in $(JSON_SRC)/`basename $@ .js`/$$dir/*.js; do\
+			echo '"'`basename $@`'/'`basename $$i`'": '  >> $@; \
+			$(JSON_MINIFY) $$i >> $@; \
+			echo ','  >> $@; \
+		done; \
+	done
+	@head -n -1 $@ > $@.tmp
+	@echo '}\n' >> $@.tmp
+	@mv $@.tmp $@
+
+iemaps: $(JSON_DST) $(IEMAPS_FILE)
+
+$(IEMAPS_FILE):
+	@echo "Creating mappings for IE."
 	@echo 'sre.BrowserUtil.mapsForIE = {' > $(IEMAPS_FILE)
 	@for j in $(LOCALES); do\
 		for dir in $(MAPS); do\
-			for i in $(JSON_SRC)/`basename $$j`/$$dir/*.js; do\
+			for i in $(JSON_SRC)/$$j/$$dir/*.js; do\
 				echo '"'`basename $$j`'/'`basename $$i`'": '  >> $(IEMAPS_FILE); \
 				$(JSON_MINIFY) $$i >> $(IEMAPS_FILE); \
 				echo ','  >> $(IEMAPS_FILE); \
