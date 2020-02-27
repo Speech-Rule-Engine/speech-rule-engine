@@ -51,7 +51,7 @@ sre.SummaryGerman.defineRule_ = goog.bind(
 
 /** @private */
 sre.SummaryGerman.defineRuleAlias_ = goog.bind(
-    sre.SummaryGerman.mathStore.defineGermanAlias,
+    sre.SummaryGerman.mathStore.defineRulesAlias,
     sre.SummaryGerman.mathStore);
 
 
