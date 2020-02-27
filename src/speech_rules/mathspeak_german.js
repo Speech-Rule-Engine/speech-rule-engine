@@ -12,8 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//
+// This work was sponsored by ETH Zurich
+//
+
 /**
- * @fileoverview Mathspeak rules.
+ * @fileoverview Mathspeak rules in German.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -53,7 +57,7 @@ sre.MathspeakGerman.defineRule_ = goog.bind(
 
 /** @private */
 sre.MathspeakGerman.defineRuleAlias_ = goog.bind(
-    sre.MathspeakGerman.mathStore.defineGermanAlias,
+    sre.MathspeakGerman.mathStore.defineRulesAlias,
     sre.MathspeakGerman.mathStore);
 
 
@@ -484,7 +488,7 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
       'children/*[2]/descendant-or-self::*[@role="ellipsis" and ' +
       'not(following-sibling::*)]');
   defineSpecialisedRule(
-      'continued-fraction-inner', 'mathspeak.brief', 'mathspeak.sbrief',
+      'continued-fraction-inner', 'mathspeak.default', 'mathspeak.sbrief',
       '[t] "Bruch"; [n] children/*[1];' +
       '[t] "durch"; [n] children/*[2]');
 
@@ -589,7 +593,7 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
   defineRule(
       'integral', 'mathspeak.default',
       '[n] children/*[1]; [t] "Index"; [n] children/*[2];' +
-      '[t] "Hochstellung"; [n] children/*[3]; [t] "Grundlinie";',
+      '[t] "Hoch"; [n] children/*[3]; [t] "Grundlinie";',
       'self::limboth', '@role="integral"');
   defineSpecialisedRule(
       'integral', 'mathspeak.default', 'mathspeak.brief',
@@ -775,7 +779,7 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
   // Square
   defineRule(
       'square', 'mathspeak.default',
-      '[n] children/*[1]; [t] "zum Quadrat"',
+      '[n] children/*[1]; [t] "quadrat"',
       'self::superscript', 'children/*[2]',
       'children/*[2][text()=2]',
       'name(children/*[1])!="text" or ' +
@@ -1321,8 +1325,8 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
  * Generates the tensor rules.
  * @private
  */
-sre.MathspeakGerman.generateTensorGerman_ = function() {
-  sre.MathspeakUtil.generateTensorGerman(sre.MathspeakGerman.mathStore);
+sre.MathspeakGerman.generateTensorRules_ = function() {
+  sre.MathspeakUtil.generateTensorRules(sre.MathspeakGerman.mathStore);
 };
 
 });  // goog.scope
@@ -1332,5 +1336,5 @@ sre.MathspeakGerman.generateTensorGerman_ = function() {
 sre.MathspeakGerman.getInstance().initializer = [
   sre.MathspeakGerman.initCustomFunctions_,
   sre.MathspeakGerman.initMathspeakGerman_,
-  sre.MathspeakGerman.generateTensorGerman_
+  sre.MathspeakGerman.generateTensorRules_
 ];

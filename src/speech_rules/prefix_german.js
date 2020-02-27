@@ -1,5 +1,5 @@
-// Copyright 2016 Volker Sorge
-// Copyright (c) 2016 The MathJax Consortium
+// Copyright 2020 Volker Sorge
+// Copyright (c) 2020 The MathJax Consortium
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,8 +13,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//
+// This work was sponsored by ETH Zurich
+//
+
 /**
- * @fileoverview Prefix rules.
+ * @fileoverview Prefix rules German.
  * @author v.sorge@mathjax.com (Volker Sorge)
  */
 
@@ -33,6 +37,7 @@ goog.require('sre.NumbersUtil');
 sre.PrefixGerman = function() {
   sre.PrefixGerman.base(this, 'constructor');
   this.modality = 'prefix';
+  this.locale = 'de';
 };
 goog.inherits(sre.PrefixGerman, sre.MathStore);
 goog.addSingletonGetter(sre.PrefixGerman);
@@ -52,7 +57,7 @@ sre.PrefixGerman.defineRule_ = goog.bind(
 
 /** @private */
 sre.PrefixGerman.defineRuleAlias_ = goog.bind(
-    sre.PrefixGerman.mathStore.defineGermanAlias,
+    sre.PrefixGerman.mathStore.defineRulesAlias,
     sre.PrefixGerman.mathStore);
 
 

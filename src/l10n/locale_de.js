@@ -12,7 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//
 // This work was sponsored by ETH Zurich
+//
 
 /**
  * @fileoverview German message file.
@@ -36,14 +38,14 @@ sre.Locale.de = {
     FRAC_B: 'Bruch',
     FRAC_S: 'Bruch',
     END: 'Ende',
-    FRAC_OVER: 'Over',
-    TWICE: 'Twice',
+    FRAC_OVER: 'durch',
+    TWICE: 'Twice',  // TODO: Do we need this?
     NEST_FRAC: 'geschachtelt',
-    ENDFRAC: 'Bruchende',
+    ENDFRAC: 'EndeBruch',
     SUPER: 'Hoch',
     SUB: 'Index',
     SUP: 'Hoch',
-    SUPERSCRIPT: 'hochgestellt',
+    SUPERSCRIPT: 'Hoch',
     SUBSCRIPT: 'Index',
     BASELINE: 'Grundlinie',
     BASE: 'Grund',
@@ -72,7 +74,10 @@ sre.Locale.de = {
   },
 
 
-  MS_ROOT_INDEX: { },
+  MS_ROOT_INDEX: {
+    '2': 'Quadrat',
+    '3': 'Kubik'
+  },
 
   // TODO: Grammar of numbers vs digits! Currently grammar is wrt. letters.
   FONT: {
@@ -130,8 +135,8 @@ sre.Locale.de = {
     // Roles of matrices or vectors.
     'determinant': 'Determinante',
     'rowvector': 'Zeilenvektor',
-    'binomial': 'binomial',
-    'squarematrix': 'Quadratmatrize',
+    'binomial': 'Binomialkoeffizient',
+    'squarematrix': 'quadratische Matrize',
     // Roles of rows, lines, cells.
     'multiline': 'mehrzeilig',
     'matrix': 'Matrize',

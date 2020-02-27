@@ -70,7 +70,7 @@ sre.AbstractRuleTest = function() {
    * file, rather than the expected output.
    * @type {boolean}
    */
-  this.actual = false;
+  this.actual = true;
 
 };
 goog.inherits(sre.AbstractRuleTest, sre.AbstractExamples);

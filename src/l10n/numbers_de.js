@@ -12,7 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//
 // This work was sponsored by ETH Zurich
+//
 
 /**
  * @fileoverview Translating numbers into German.
@@ -145,6 +147,9 @@ sre.Numbers.de.numberToOrdinal = function(num, plural) {
 sre.Numbers.de.wordOrdinal = function(number) {
   if (number === 1) {
     return 'erste';
+  }
+  if (number === 8) {
+    return 'achte';
   }
   var ordinal = sre.Numbers.de.numberToWords(number);
   return ordinal + (number < 19 ? 'te' : 'ste');

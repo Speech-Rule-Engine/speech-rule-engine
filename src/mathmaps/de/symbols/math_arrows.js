@@ -2707,7 +2707,7 @@
     "key": "FFE9",
     "mappings": {
       "default": {
-        "default": "Halbbreite Pfeil nach links"
+        "default": "Halbbreiter Pfeil nach links"
       }
     }
   },
@@ -2716,7 +2716,7 @@
     "key": "FFEA",
     "mappings": {
       "default": {
-        "default": "Halbbreite Pfeil nach oben"
+        "default": "Halbbreiter Pfeil nach oben"
       }
     }
   },
@@ -2725,7 +2725,7 @@
     "key": "FFEB",
     "mappings": {
       "default": {
-        "default": "Halbbreite Pfeil nach rechts"
+        "default": "Halbbreiter Pfeil nach rechts"
       }
     }
   },
@@ -2734,7 +2734,7 @@
     "key": "FFEC",
     "mappings": {
       "default": {
-        "default": "Halbbreite Pfeil nach unten"
+        "default": "Halbbreiter Pfeil nach unten"
       }
     }
   }
