@@ -197,24 +197,34 @@ clean_test:
 
 publish: clean compile browser maps iemaps
 
-maps: $(MAPS)
-
-$(MAPS): 
+maps: $(JSON_DST)
 	@for j in $(LOCALES); do\
-		dir=$(JSON_DST)/`basename $$j`/$@; \
-		mkdir -p $$dir; \
-		for i in $$j/$@/*.js; do\
-			$(JSON_MINIFY) $$i > $$dir/`basename $$i`; \
+		echo "Creating mappings for locale `basename $$j`."; \
+		locale_file=$(JSON_DST)/`basename $$j`.js; \
+		echo '{' > $$locale_file; \
+		for dir in $(MAPS); do\
+			for i in $(JSON_SRC)/`basename $$j`/$$dir/*.js; do\
+				echo '"'`basename $$j`'/'`basename $$i`'": '  >> $$locale_file; \
+				$(JSON_MINIFY) $$i >> $$locale_file; \
+				echo ','  >> $$locale_file; \
+			done; \
 		done; \
+		head -n -1 $$locale_file > $$locale_file.tmp; \
+		echo '}\n' >> $$locale_file.tmp; \
+		mv $$locale_file.tmp $$locale_file; \
 	done
+
+$(JSON_DST):
+	@echo "Creating JSON destination."
+	@mkdir -p $(JSON_DST)
 
 iemaps:
 	@echo 'sre.BrowserUtil.mapsForIE = {' > $(IEMAPS_FILE)
 	@for j in $(LOCALES); do\
 		for dir in $(MAPS); do\
-			for i in $(JSON_DST)/`basename $$j`/$$dir/*.js; do\
+			for i in $(JSON_SRC)/`basename $$j`/$$dir/*.js; do\
 				echo '"'`basename $$j`'/'`basename $$i`'": '  >> $(IEMAPS_FILE); \
-				cat $$i >> $(IEMAPS_FILE); \
+				$(JSON_MINIFY) $$i >> $(IEMAPS_FILE); \
 				echo ','  >> $(IEMAPS_FILE); \
 			done; \
 		done; \
