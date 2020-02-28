@@ -175,51 +175,50 @@ sre.Engine.registerTest(function() {
 // ];
 
 
-/**
- * Retrieves JSON rule mappings from a list of files at a given path and adds
- * them as rules to the current store.
- * @param {Array.<string>} files List of file names.
- * @param {string} path A path name.
- * @param {function(JSONType)} func Method adding the rules.
- */
-sre.MathMap.retrieveFiles = function(files, path, func) {
-  if (files) return;
-  path = sre.BaseUtil.makePath(sre.SystemExternal.jsonPath + path);
-  switch (sre.Engine.getInstance().mode) {
-    case sre.Engine.Mode.ASYNC:
-      sre.MathMap.toFetch_ += files.length;
-      for (var i = 0, file; file = files[i]; i++) {
-        sre.MathMap.fromFile_(path + file,
-            function(err, json) {
-              sre.MathMap.toFetch_--;
-              if (err) return;
-              JSON.parse(json).forEach(function(x) {func(x);});
-            });
-      }
-      break;
-    case sre.Engine.Mode.HTTP:
-      var isIE = sre.Engine.getInstance().isIE;
-      sre.MathMap.toFetch_ += files.length;
-      for (i = 0; file = files[i]; i++) {
-        isIE ?
-            sre.MathMap.getJsonIE_(file, func) :
-            sre.MathMap.getJsonAjax_(path + file, func);
-      }
-      break;
-    case sre.Engine.Mode.SYNC:
-    default:
-      var innerFunc = function(file) { return path + file; };
-      sre.MathMap.parseFiles(files.map(innerFunc)).
-          forEach(function(json) {func(json);});
-      break;
-  }
-};
+// /**
+//  * Retrieves JSON rule mappings from a list of files at a given path and adds
+//  * them as rules to the current store.
+//  * @param {Array.<string>} files List of file names.
+//  * @param {string} path A path name.
+//  * @param {function(JSONType)} func Method adding the rules.
+//  */
+// sre.MathMap.retrieveFiles = function(files, path, func) {
+//   if (files) return;
+//   path = sre.BaseUtil.makePath(sre.SystemExternal.jsonPath + path);
+//   switch (sre.Engine.getInstance().mode) {
+//     case sre.Engine.Mode.ASYNC:
+//       sre.MathMap.toFetch_ += files.length;
+//       for (var i = 0, file; file = files[i]; i++) {
+//         sre.MathMap.fromFile_(path + file,
+//             function(err, json) {
+//               sre.MathMap.toFetch_--;
+//               if (err) return;
+//               JSON.parse(json).forEach(function(x) {func(x);});
+//             });
+//       }
+//       break;
+//     case sre.Engine.Mode.HTTP:
+//       var isIE = sre.Engine.getInstance().isIE;
+//       sre.MathMap.toFetch_ += files.length;
+//       for (i = 0; file = files[i]; i++) {
+//         isIE ?
+//             sre.MathMap.getJsonIE_(file, func) :
+//             sre.MathMap.getJsonAjax_(path + file, func);
+//       }
+//       break;
+//     case sre.Engine.Mode.SYNC:
+//     default:
+//       var innerFunc = function(file) { return path + file; };
+//       sre.MathMap.parseFiles(files.map(innerFunc)).
+//           forEach(function(json) {func(json);});
+//       break;
+//   }
+// };
 
 
 sre.MathMap.prototype.retrieveFilesNew = function(locale) {
   var file = sre.BaseUtil.makePath(sre.SystemExternal.jsonPath) +
       locale + '.js';
-  console.log(sre.Engine.getInstance().mode);
   switch (sre.Engine.getInstance().mode) {
     case sre.Engine.Mode.ASYNC:
       sre.MathMap.toFetch_++;
@@ -227,37 +226,30 @@ sre.MathMap.prototype.retrieveFilesNew = function(locale) {
             function(err, json) {
               sre.MathMap.toFetch_--;
               if (err) return;
-              var js = JSON.parse(json);
-              console.log(js);
+              goog.bind(this.parse, this)(json);
             });
       break;
-    // case sre.Engine.Mode.HTTP:
-    //   var isIE = sre.Engine.getInstance().isIE;
-    //   sre.MathMap.toFetch_ += files.length;
-    //   for (i = 0; file = files[i]; i++) {
-    //     isIE ?
-    //         sre.MathMap.getJsonIE_(file, func) :
-    //         sre.MathMap.getJsonAjax_(path + file, func);
-    //   }
-    //   break;
+    case sre.Engine.Mode.HTTP:
+      var isIE = sre.Engine.getInstance().isIE;
+      sre.MathMap.toFetch_++;
+      isIE ?
+        sre.MathMap.getJsonIE_(file, null) :
+        this.getJsonAjax_(file);
+      break;
     case sre.Engine.Mode.SYNC:
     default:
     var strs = sre.MathMap.loadFile(file);
-    var js = /** @type {!Object<Array>} */(JSON.parse(strs));
-    console.log('Retrieving ' + locale);
-    this.parseMaps(js);
-      // var innerFunc = function(file) { return path + file; };
-      // sre.MathMap.parseFiles(files.map(innerFunc)).
-      //     forEach(function(json) {func(json);});
-      break;
+    this.parseMaps(strs);
+    break;
   }
 };
 
 
 sre.MathMap.prototype.parseMaps = function(json) {
-  for (var i = 0, key; key = Object.keys(json)[i]; i++) {
+  var js = /** @type {!Object<Array>} */(JSON.parse(json));
+  for (var i = 0, key; key = Object.keys(js)[i]; i++) {
     var info = key.split('/');
-    json[key].forEach(this.addRules[info[1]]);
+    js[key].forEach(this.addRules[info[1]]);
   }
 };
 
@@ -290,7 +282,7 @@ sre.MathMap.prototype.retrieveMaps = function() {
 /**
  * Gets JSON elements from the global JSON object in case of IE browsers.
  * @param {string} file The name of a JSON file.
- * @param {function(JSONType)} func Method adding the rules.
+ * @param {function(JSONType)|null} func Method adding the rules.
  * @param {number=} opt_count Optional counter argument for callback.
  * @private
  */
@@ -382,16 +374,16 @@ sre.MathMap.readJSON_ = function(path) {
 /**
  * Sents AJAX request to retrieve a JSON rule file.
  * @param {string} file The file to retrieve.
- * @param {function(JSONType)} func Method adding the retrieved rules.
  * @private
  */
-sre.MathMap.getJsonAjax_ = function(file, func) {
+sre.MathMap.prototype.getJsonAjax_ = function(file) {
   var httpRequest = new XMLHttpRequest();
+  var parse = goog.bind(this.parseMaps, this);
   httpRequest.onreadystatechange = function() {
     if (httpRequest.readyState === 4) {
       sre.MathMap.toFetch_--;
       if (httpRequest.status === 200) {
-        JSON.parse(httpRequest.responseText).forEach(function(x) {func(x);});
+        parse(httpRequest.responseText);
       }
     }
   };
