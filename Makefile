@@ -125,7 +125,7 @@ $(DEPS):
 
 start_files: directories $(INTERACTIVE)
 
-interactive: directories $(INTERACTIVE) deps
+interactive: directories $(INTERACTIVE) deps maps
 
 $(INTERACTIVE): 
 	@echo "Making interactive script."
@@ -140,7 +140,7 @@ $(INTERACTIVE):
 	@echo "  }" >> $@
 	@echo "  return true;" >> $@
 	@echo "};" >> $@
-	@echo "process.env.SRE_JSON_PATH = '$(JSON_SRC)';" >> $@
+	@echo "process.env.SRE_JSON_PATH = '$(JSON_DST)';" >> $@
 	@echo "require('$(DEPS)');" >> $@ 
 	@echo "goog.require('sre.System');" >> $@
 	@echo "sre.System.setAsync()" >> $@
