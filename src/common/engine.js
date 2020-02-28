@@ -184,6 +184,13 @@ sre.Engine = function() {
    * @private
    */
   this.setupTests_ = [];
+
+  /**
+   * True if configuration block has been applied in HTTP mode.
+   * @type {boolean}
+   */
+  this.config = false;
+
 };
 goog.addSingletonGetter(sre.Engine);
 
