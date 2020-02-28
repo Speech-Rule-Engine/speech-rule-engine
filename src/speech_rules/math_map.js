@@ -45,6 +45,12 @@ sre.MathMap = function() {
    */
   this.store = sre.MathCompoundStore.getInstance();
 
+  this.addRules = {
+    functions: goog.bind(this.store.addFunctionRules, this.store),
+    symbols: goog.bind(this.store.addSymbolRules, this.store),
+    units: goog.bind(this.store.addUnitRules, this.store)
+  };
+
   var timeIn = (new Date()).getTime();
   this.retrieveMaps();
   var timeOut = (new Date()).getTime();
@@ -65,108 +71,108 @@ sre.Engine.registerTest(function() {
 });
 
 
-/**
- * Stringifies MathMap into JSON object.
- * @return {string} The stringified version of the mapping.
- */
-sre.MathMap.prototype.stringify = function() {
-  return JSON.stringify(this);
-};
+// /**
+//  * Stringifies MathMap into JSON object.
+//  * @return {string} The stringified version of the mapping.
+//  */
+// sre.MathMap.prototype.stringify = function() {
+//   return JSON.stringify(this);
+// };
 
 
-/**
- * Subpath to dir containing ChromeVox JSON definitions for symbols.
- * @type {string}
- * @const
- * @private
- */
-sre.MathMap.SYMBOLS_PATH_ = 'symbols';
+// /**
+//  * Subpath to dir containing ChromeVox JSON definitions for symbols.
+//  * @type {string}
+//  * @const
+//  * @private
+//  */
+// sre.MathMap.SYMBOLS_PATH_ = 'symbols';
 
 
-/**
- * Subpath to dir containing ChromeVox JSON definitions for functions.
- * @type {string}
- * @const
- * @private
- */
-sre.MathMap.FUNCTIONS_PATH_ = 'functions';
+// /**
+//  * Subpath to dir containing ChromeVox JSON definitions for functions.
+//  * @type {string}
+//  * @const
+//  * @private
+//  */
+// sre.MathMap.FUNCTIONS_PATH_ = 'functions';
 
 
-/**
- * Subpath to dir containing ChromeVox JSON definitions for units.
- * @type {string}
- * @const
- * @private
- */
-sre.MathMap.UNITS_PATH_ = 'units';
+// /**
+//  * Subpath to dir containing ChromeVox JSON definitions for units.
+//  * @type {string}
+//  * @const
+//  * @private
+//  */
+// sre.MathMap.UNITS_PATH_ = 'units';
 
 
-/**
- * Array of JSON filenames containing symbol definitions for math speak.
- * @type {Array.<string>}
- * @const
- * @private
- */
-sre.MathMap.SYMBOLS_FILES_ = [
-  // Greek
-  // 'greek-capital.js', 'greek-small.js', 
-  'greek-scripts.js', 'greek-symbols.js',
-  'greek-rest.js',
+// /**
+//  * Array of JSON filenames containing symbol definitions for math speak.
+//  * @type {Array.<string>}
+//  * @const
+//  * @private
+//  */
+// sre.MathMap.SYMBOLS_FILES_ = [
+//   // Greek
+//   // 'greek-capital.js', 'greek-small.js', 
+//   'greek-scripts.js', 'greek-symbols.js',
+//   'greek-rest.js',
 
-  // Greek Mathfonts
-  // 'greek-mathfonts-bold.js', 'greek-mathfonts-italic.js',
-  // 'greek-mathfonts-bold-italic.js', 'greek-mathfonts-sans-serif-bold.js',
-  // 'greek-mathfonts-sans-serif-bold-italic.js',
+//   // Greek Mathfonts
+//   // 'greek-mathfonts-bold.js', 'greek-mathfonts-italic.js',
+//   // 'greek-mathfonts-bold-italic.js', 'greek-mathfonts-sans-serif-bold.js',
+//   // 'greek-mathfonts-sans-serif-bold-italic.js',
 
-  // Hebrew
-  'hebrew_letters.js',
+//   // Hebrew
+//   'hebrew_letters.js',
 
-  // Latin
-  // 'latin-lower-normal.js', 'latin-upper-normal.js',
-  'latin-lower-double-accent.js', 'latin-lower-phonetic.js',
-  'latin-lower-single-accent.js', 'latin-rest.js',
-  'latin-upper-double-accent.js', 'latin-upper-single-accent.js',
+//   // Latin
+//   // 'latin-lower-normal.js', 'latin-upper-normal.js',
+//   'latin-lower-double-accent.js', 'latin-lower-phonetic.js',
+//   'latin-lower-single-accent.js', 'latin-rest.js',
+//   'latin-upper-double-accent.js', 'latin-upper-single-accent.js',
 
-  // Latin Mathfonts
-  // 'latin-mathfonts-bold-fraktur.js', 'latin-mathfonts-bold.js',
-  // 'latin-mathfonts-bold-italic.js', 'latin-mathfonts-bold-script.js',
-  // 'latin-mathfonts-double-struck.js', 'latin-mathfonts-fraktur.js',
-  // 'latin-mathfonts-italic.js', 'latin-mathfonts-monospace.js',
-  // 'latin-mathfonts-sans-serif-bold.js', 'latin-mathfonts-sans-serif-italic.js',
-  // 'latin-mathfonts-sans-serif-bold-italic.js', 'latin-mathfonts-sans-serif.js',
-  // 'latin-mathfonts-script.js',
+//   // Latin Mathfonts
+//   // 'latin-mathfonts-bold-fraktur.js', 'latin-mathfonts-bold.js',
+//   // 'latin-mathfonts-bold-italic.js', 'latin-mathfonts-bold-script.js',
+//   // 'latin-mathfonts-double-struck.js', 'latin-mathfonts-fraktur.js',
+//   // 'latin-mathfonts-italic.js', 'latin-mathfonts-monospace.js',
+//   // 'latin-mathfonts-sans-serif-bold.js', 'latin-mathfonts-sans-serif-italic.js',
+//   // 'latin-mathfonts-sans-serif-bold-italic.js', 'latin-mathfonts-sans-serif.js',
+//   // 'latin-mathfonts-script.js',
 
-  // Math Symbols
-  'math_angles.js', 'math_arrows.js', 'math_characters.js',
-  'math_delimiters.js', 'math_geometry.js',
-  'math_harpoons.js', 'math_non_characters.js', 'math_symbols.js',
-  'math_whitespace.js', 'other_stars.js',
-  // 'math_digits.js',
-  'digits_rest.js'
-];
-
-
-/**
- * Array of JSON filenames containing symbol definitions for math speak.
- * @type {Array.<string>}
- * @const
- * @private
- */
-sre.MathMap.FUNCTIONS_FILES_ = [
-  'algebra.js', 'elementary.js', 'hyperbolic.js', 'trigonometry.js'
-];
+//   // Math Symbols
+//   'math_angles.js', 'math_arrows.js', 'math_characters.js',
+//   'math_delimiters.js', 'math_geometry.js',
+//   'math_harpoons.js', 'math_non_characters.js', 'math_symbols.js',
+//   'math_whitespace.js', 'other_stars.js',
+//   // 'math_digits.js',
+//   'digits_rest.js'
+// ];
 
 
-/**
- * Array of JSON filenames containing unit definitions for math speak.
- * @type {Array.<string>}
- * @const
- * @private
- */
-sre.MathMap.UNITS_FILES_ = [
-  'energy.js', 'length.js', 'memory.js', 'other.js', 'speed.js',
-  'temperature.js', 'time.js', 'volume.js', 'weight.js'
-];
+// /**
+//  * Array of JSON filenames containing symbol definitions for math speak.
+//  * @type {Array.<string>}
+//  * @const
+//  * @private
+//  */
+// sre.MathMap.FUNCTIONS_FILES_ = [
+//   'algebra.js', 'elementary.js', 'hyperbolic.js', 'trigonometry.js'
+// ];
+
+
+// /**
+//  * Array of JSON filenames containing unit definitions for math speak.
+//  * @type {Array.<string>}
+//  * @const
+//  * @private
+//  */
+// sre.MathMap.UNITS_FILES_ = [
+//   'energy.js', 'length.js', 'memory.js', 'other.js', 'speed.js',
+//   'temperature.js', 'time.js', 'volume.js', 'weight.js'
+// ];
 
 
 /**
@@ -177,6 +183,7 @@ sre.MathMap.UNITS_FILES_ = [
  * @param {function(JSONType)} func Method adding the rules.
  */
 sre.MathMap.retrieveFiles = function(files, path, func) {
+  if (files) return;
   path = sre.BaseUtil.makePath(sre.SystemExternal.jsonPath + path);
   switch (sre.Engine.getInstance().mode) {
     case sre.Engine.Mode.ASYNC:
@@ -209,6 +216,52 @@ sre.MathMap.retrieveFiles = function(files, path, func) {
 };
 
 
+sre.MathMap.prototype.retrieveFilesNew = function(locale) {
+  var file = sre.BaseUtil.makePath(sre.SystemExternal.jsonPath) +
+      locale + '.js';
+  console.log(sre.Engine.getInstance().mode);
+  switch (sre.Engine.getInstance().mode) {
+    case sre.Engine.Mode.ASYNC:
+      sre.MathMap.toFetch_++;
+        sre.MathMap.fromFile_(file,
+            function(err, json) {
+              sre.MathMap.toFetch_--;
+              if (err) return;
+              var js = JSON.parse(json);
+              console.log(js);
+            });
+      break;
+    // case sre.Engine.Mode.HTTP:
+    //   var isIE = sre.Engine.getInstance().isIE;
+    //   sre.MathMap.toFetch_ += files.length;
+    //   for (i = 0; file = files[i]; i++) {
+    //     isIE ?
+    //         sre.MathMap.getJsonIE_(file, func) :
+    //         sre.MathMap.getJsonAjax_(path + file, func);
+    //   }
+    //   break;
+    case sre.Engine.Mode.SYNC:
+    default:
+    var strs = sre.MathMap.loadFile(file);
+    var js = /** @type {!Object<Array>} */(JSON.parse(strs));
+    console.log('Retrieving ' + locale);
+    this.parseMaps(js);
+      // var innerFunc = function(file) { return path + file; };
+      // sre.MathMap.parseFiles(files.map(innerFunc)).
+      //     forEach(function(json) {func(json);});
+      break;
+  }
+};
+
+
+sre.MathMap.prototype.parseMaps = function(json) {
+  for (var i = 0, key; key = Object.keys(json)[i]; i++) {
+    var info = key.split('/');
+    json[key].forEach(this.addRules[info[1]]);
+  }
+};
+
+
 /**
  * Retrieves mappings and adds them to the respective stores.
  */
@@ -216,18 +269,20 @@ sre.MathMap.prototype.retrieveMaps = function() {
   for (var i = 0; i < sre.Variables.LOCALES.length; i++) {
     var locale = sre.Variables.LOCALES[i];
     sre.AlphabetGenerator.generate(locale, this.store);
-    sre.MathMap.retrieveFiles(
-        sre.MathMap.FUNCTIONS_FILES_,
-        locale + '/' + sre.MathMap.FUNCTIONS_PATH_,
-        goog.bind(this.store.addFunctionRules, this.store));
-    sre.MathMap.retrieveFiles(
-        sre.MathMap.SYMBOLS_FILES_,
-        locale + '/' + sre.MathMap.SYMBOLS_PATH_,
-        goog.bind(this.store.addSymbolRules, this.store));
-    sre.MathMap.retrieveFiles(
-        sre.MathMap.UNITS_FILES_,
-        locale + '/' + sre.MathMap.UNITS_PATH_,
-        goog.bind(this.store.addUnitRules, this.store));
+    this.retrieveFilesNew(locale);
+    // Remove below!
+    // sre.MathMap.retrieveFiles(
+    //     sre.MathMap.FUNCTIONS_FILES_,
+    //     locale + '/' + sre.MathMap.FUNCTIONS_PATH_,
+    //     goog.bind(this.store.addFunctionRules, this.store));
+    // sre.MathMap.retrieveFiles(
+    //     sre.MathMap.SYMBOLS_FILES_,
+    //     locale + '/' + sre.MathMap.SYMBOLS_PATH_,
+    //     goog.bind(this.store.addSymbolRules, this.store));
+    // sre.MathMap.retrieveFiles(
+    //     sre.MathMap.UNITS_FILES_,
+    //     locale + '/' + sre.MathMap.UNITS_PATH_,
+    //     goog.bind(this.store.addUnitRules, this.store));
   }
 };
 

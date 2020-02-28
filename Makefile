@@ -166,7 +166,7 @@ $(TEST_DEPS):
 	@echo Building Javascript dependencies in test directory $(TEST_DEPS)
 	@$(DEPSWRITER) --root_with_prefix="$(TEST_DIR) $(TEST_DIR)" > $(TEST_DEPS)
 
-test: directories test_deps deps test_compile test_script run_test
+test: directories test_deps deps test_compile test_script maps run_test
 
 test_compile: $(TEST_TARGET)
 
@@ -180,7 +180,7 @@ $(TEST):
 	@echo "Making test script."
 	@echo "#!/bin/bash" > $@
 	@echo "## This script is automatically generated. Do not edit!" >> $@
-	@echo "\nexport SRE_JSON_PATH=$(JSON_SRC)\n" >> $@
+	@echo "\nexport SRE_JSON_PATH=$(JSON_DST)\n" >> $@
 	@echo $(NODEJS) $(TEST_TARGET) "\$$@" >> $@
 	@chmod 755 $@
 
@@ -210,7 +210,7 @@ $(LOC_DST):
 	@echo '{' > $@
 	@for dir in $(MAPS); do\
 		for i in $(JSON_SRC)/`basename $@ .js`/$$dir/*.js; do\
-			echo '"'`basename $@`'/'`basename $$i`'": '  >> $@; \
+			echo '"'`basename $@ .js`/$$dir/`basename $$i`'": '  >> $@; \
 			$(JSON_MINIFY) $$i >> $@; \
 			echo ','  >> $@; \
 		done; \
