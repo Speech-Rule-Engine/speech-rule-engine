@@ -80,7 +80,7 @@
   {"category": "Cyclometric",
    "mappings": {
      "default": {
-       "default": "cosinus hyperbolique"
+       "default": "arc cosinus"
      } },
    "key": "arccos",
    "names": ["arccos"]
@@ -88,7 +88,7 @@
   {"category": "Cyclometric",
    "mappings": {
      "default": {
-       "default": "cotangente hyperbolique"
+       "default": "arc cotangente"
      } },
    "key": "arccot",
    "names": ["arccot"]
@@ -96,7 +96,7 @@
   {"category": "Cyclometric",
    "mappings": {
      "default": {
-       "default": "cosécante hyperbolique"
+       "default": "arc cosécante"
      } },
    "key": "arccsc",
    "names": ["arccsc"]
@@ -104,7 +104,7 @@
   {"category": "Cyclometric",
    "mappings": {
      "default": {
-       "default": "sécante hyperbolique"
+       "default": "arc sécante"
      } },
    "key": "arcsec",
    "names": ["arcsec"]
@@ -112,7 +112,7 @@
   {"category": "Cyclometric",
    "mappings": {
      "default": {
-       "default": "sinus hyperbolique"
+       "default": "arc sinus"
      } },
    "key": "arcsin",
    "names": ["arcsin"]
@@ -120,7 +120,7 @@
   {"category": "Cyclometric",
    "mappings": {
      "default": {
-       "default": "tangente hyperbolique"
+       "default": "arc tangente"
      } },
    "key": "arctan",
    "names": ["arctan"]

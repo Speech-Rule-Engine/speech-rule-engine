@@ -60,12 +60,12 @@
       "default": {
         "default": "plus grand commun diviseur"
       },
-     "mathspeak": {
-       "default": "pgcd"
-     },
-     "clearspeak": {
-       "default": "pgcd"
-     }
+      "mathspeak": {
+        "default": "pgcd"
+      },
+      "clearspeak": {
+        "default": "pgcd"
+      }
     },
     "category": "Elementary"
   },
@@ -78,12 +78,12 @@
       "default": {
         "default": "plus petit commun multiple"
       },
-     "mathspeak": {
-       "default": "ppcm"
-     },
-     "clearspeak": {
-       "default": "ppcm"
-     }
+      "mathspeak": {
+        "default": "ppcm"
+      },
+      "clearspeak": {
+        "default": "ppcm"
+      }
     },
     "category": "Elementary"
   },
@@ -134,7 +134,7 @@
       }
     },
     "category": "Limits"
-  },,
+  },
   {
     "key": "lim",
     "mappings": {
@@ -191,7 +191,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "límite inferior"
+        "default": "limite inferior"
       }
     },
     "category": "Limits"
@@ -204,7 +204,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "límite superior"
+        "default": "limite superior"
       }
     },
     "category": "Limits"

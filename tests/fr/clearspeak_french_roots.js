@@ -87,7 +87,7 @@ sre.ClearspeakFrenchRoots.prototype.testRoot004 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mn>3</mn><mo>∓</mo><msqrt><mn>2</mn></msqrt>' +
       '</mrow></math>';
-  var speech = '3 moins-ou-plus la racine carrée de 2';
+  var speech = '3 moins ou plus la racine carrée de 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -383,7 +383,7 @@ sre.ClearspeakFrenchRoots.prototype.testRoot027 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mn>3</mn><mo>∓</mo><msqrt><mn>2</mn></msqrt>' +
       '</mrow></math>';
-  var speech = '3 moins-ou-plus la racine carrée de 2';
+  var speech = '3 moins ou plus la racine carrée de 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -692,7 +692,7 @@ sre.ClearspeakFrenchRoots.prototype.testRoot051 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mn>3</mn><mo>∓</mo><msqrt><mn>2</mn></msqrt>' +
       '</mrow></math>';
-  var speech = '3 moins-ou-plus la racine carrée de 2, fin racine';
+  var speech = '3 moins ou plus la racine carrée de 2, fin racine';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -988,7 +988,7 @@ sre.ClearspeakFrenchRoots.prototype.testRoot074 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mn>3</mn><mo>∓</mo><msqrt><mn>2</mn></msqrt>' +
       '</mrow></math>';
-  var speech = '3 moins-ou-plus la racine carrée de 2, fin racine';
+  var speech = '3 moins ou plus la racine carrée de 2, fin racine';
   this.executeRuleTest(mathml, speech, preference);
 };
 
