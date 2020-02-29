@@ -179,31 +179,6 @@ sre.MathMap.loadFile = function(file) {
 };
 
 
-// /**
-//  * Loads a list of JSON files.
-//  * @param {Array.<string>} files An array of valid filenames.
-//  * @return {Array.<string>} A string representing JSON array.
-//  */
-// sre.MathMap.loadFiles = function(files) {
-//   return files.map(sre.MathMap.loadFile);
-// };
-
-
-// /**
-//  * Creates an array of JSON objects from a list of files.
-//  * @param {Array.<string>} files An array of filenames.
-//  * @return {Array.<JSONType>} Array of JSON objects.
-//  */
-// sre.MathMap.parseFiles = function(files) {
-//   var strs = sre.MathMap.loadFiles(files);
-
-//   return [].concat.apply([], strs.map(
-//       // Note: As JSON.parse does not expect the value index as the second
-//       // parameter, we wrap it.
-//       function(value) { return JSON.parse(value); }));
-// };
-
-
 /**
  * Takes path to a JSON file and returns a JSON object.
  * @param {string} path Contains the path to a JSON file.
