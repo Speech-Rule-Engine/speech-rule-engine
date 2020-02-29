@@ -121,12 +121,6 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
       'self::relseq[@role="equality"]', 'count(./children/*)>2');
 
   defineRule(
-      'multi-equality', 'default.short',
-      '[t] "equation sequence"; [m] children/* ' +
-          '(sepFunc:CTXFcontentIterator)',
-      'self::relseq[@role="equality"]', 'count(./children/*)>2');
-
-  defineRule(
       'equality', 'default.default',
       '[n] children/*[1]; [p] (pause:200); [n] content/*[1] (pause:200);' +
           '[n] children/*[2]',

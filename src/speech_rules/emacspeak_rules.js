@@ -129,12 +129,6 @@ sre.EmacspeakRules.initSemanticRules_ = function() {
       'self::relseq[@role="equality"]', 'count(./children/*)>2');
 
   defineRule(
-      'multi-equality', 'emacspeak.short',
-      '[t] "equation sequence"; [m] children/* ' +
-          '(sepFunc:CTXFcontentIterator)',
-      'self::relseq[@role="equality"]', 'count(./children/*)>2');
-
-  defineRule(
       'equality', 'emacspeak.default',
       '[t] "equation"; [t] "left hand side"; [n] children/*[1];' +
           '[p] (pause:200); [n] content/*[1] (pause:200);' +
