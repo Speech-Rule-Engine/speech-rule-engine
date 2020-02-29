@@ -277,9 +277,6 @@
       "default": {
         "default": "times",
         "alternative": "invisible times"
-      },
-      "mathspeak": {
-        "nemeth": "⠈⠡"
       }
     },
     "key": "2062"
