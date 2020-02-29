@@ -205,13 +205,13 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
   // Font rules
   defineRule(
       'font', 'mathspeak.default',
-      '[n] . (grammar:ignoreFont=@font); [t] "en"; [t] @font (grammar:localFont)',
+      '[n] . (grammar:ignoreFont=@font); [t] @font (grammar:localFont)',
       'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"');
 
   defineRule(
       'font-identifier-short', 'mathspeak.default',
-      '[n] . (grammar:ignoreFont=@font); [t] "en"; [t] @font (grammar:localFont);',
+      '[n] . (grammar:ignoreFont=@font); [t] @font (grammar:localFont);',
       'self::identifier', 'string-length(text())=1',
       '@font', 'not(contains(@grammar, "ignoreFont"))', '@font="normal"',
       '""=translate(text(), ' +
@@ -225,7 +225,7 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
 
   defineRule(
       'font-identifier', 'mathspeak.default',
-      '[n] . (grammar:ignoreFont=@font); [t] "en"; [t] @font (grammar:localFont)',
+      '[n] . (grammar:ignoreFont=@font); [t] @font (grammar:localFont)',
       'self::identifier', 'string-length(text())=1',
       '@font', '@font="normal"', 'not(contains(@grammar, "ignoreFont"))',
       '@role!="unit"');
@@ -303,7 +303,7 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
 
   defineRule(
       'number-baseline-font', 'mathspeak.default',
-      '[t] "position de base"; [n] . (grammar:ignoreFont=@font); [t] "en"; ' +
+      '[t] "position de base"; [n] . (grammar:ignoreFont=@font); ' +
       '[t] @font (grammar:localFont)',
       'self::number', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"', 'preceding-sibling::identifier',
@@ -312,7 +312,7 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
       'parent::*/parent::infixop[@role="implicit"]');
   defineSpecialisedRule(
       'number-baseline-font', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "base"; [n] . (grammar:ignoreFont=@font); [t] "en"; ' +
+      '[t] "base"; [n] . (grammar:ignoreFont=@font); ' +
       '[t] @font (grammar:localFont)');
   defineSpecialisedRule(
       'number-baseline-font', 'mathspeak.brief', 'mathspeak.sbrief');
@@ -443,13 +443,13 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
       'single-prime', 'mathspeak.default', '[t] "prime"',
       'self::punctuated', '@role="prime"', 'count(children/*)=1');
   defineRule(
-      'double-prime', 'mathspeak.default', '[t] "double-prime"',
+      'double-prime', 'mathspeak.default', '[t] "double prime"',
       'self::punctuated', '@role="prime"', 'count(children/*)=2');
   defineRule(
-      'triple-prime', 'mathspeak.default', '[t] "triple-prime"',
+      'triple-prime', 'mathspeak.default', '[t] "triple prime"',
       'self::punctuated', '@role="prime"', 'count(children/*)=3');
   defineRule(
-      'quadruple-prime', 'mathspeak.default', '[t] "quadruple-prime"',
+      'quadruple-prime', 'mathspeak.default', '[t] "quadruple prime"',
       'self::punctuated', '@role="prime"', 'count(children/*)=4');
   defineRule(
       'counted-prime', 'mathspeak.default',

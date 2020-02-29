@@ -1178,9 +1178,9 @@ sre.MathspeakFrenchTest.prototype.testSample_8_9_2 = function() {
       '<mfrac><mrow><mi>d</mi><msup><mi>f</mi><mrow><mo>\'</mo><mo>\'</mo>' +
       '</mrow></msup><mrow><mo>(</mo><mi>y</mi><mo>)</mo></mrow></mrow>' +
       '<mrow><mi>d</mi><mi>y</mi></mrow></mfrac></mrow>';
-  this.executeRuleTest(mml, 'f triple-prime parenthèse gauche y parenthèse droite égale début fraction d f double-prime parenthèse gauche y parenthèse droite sur d y fin fraction', 'default');
-  this.executeRuleTest(mml, 'f triple-prime parenthèse gauche y parenthèse droite égale début frac d f double-prime parenthèse gauche y parenthèse droite sur d y fin frac', 'brief');
-  this.executeRuleTest(mml, 'f triple-prime parenthèse gauche y parenthèse droite égale frac d f double-prime parenthèse gauche y parenthèse droite sur d y fin frac', 'sbrief');
+  this.executeRuleTest(mml, 'f triple prime parenthèse gauche y parenthèse droite égale début fraction d f double prime parenthèse gauche y parenthèse droite sur d y fin fraction', 'default');
+  this.executeRuleTest(mml, 'f triple prime parenthèse gauche y parenthèse droite égale début frac d f double prime parenthèse gauche y parenthèse droite sur d y fin frac', 'brief');
+  this.executeRuleTest(mml, 'f triple prime parenthèse gauche y parenthèse droite égale frac d f double prime parenthèse gauche y parenthèse droite sur d y fin frac', 'sbrief');
 };
 
 
@@ -1191,9 +1191,9 @@ sre.MathspeakFrenchTest.prototype.testSample_8_10_1 = function() {
   var mml = '<mrow><msup><mi>ρ</mi><mo>\'</mo></msup><mo>=</mo><msubsup>' +
       '<mi>ρ</mi><mo>+</mo><mo>\'</mo></msubsup><mo>+</mo><msubsup>' +
       '<mi>ρ</mi><mo>-</mo><mo>\'</mo></msubsup></mrow>';
-  this.executeRuleTest(mml, 'rho prime égale rho prime indice plus position de base plus rho prime indice moins', 'default');
-  this.executeRuleTest(mml, 'rho prime égale rho prime sub plus position de base plus rho prime sub moins', 'brief');
-  this.executeRuleTest(mml, 'rho prime égale rho prime sub plus position de base plus rho prime sub moins', 'sbrief');
+  this.executeRuleTest(mml, 'rhô prime égale rhô prime indice plus position de base plus rhô prime indice moins', 'default');
+  this.executeRuleTest(mml, 'rhô prime égale rhô prime sub plus position de base plus rhô prime sub moins', 'brief');
+  this.executeRuleTest(mml, 'rhô prime égale rhô prime sub plus position de base plus rhô prime sub moins', 'sbrief');
 };
 
 
@@ -1390,10 +1390,10 @@ sre.MathspeakFrenchTest.prototype.testSample_9_3_3 = function() {
       '<mo>&#x2026;</mo></mrow><mn>5</mn></mroot></mrow><mn>4</mn></mroot>' +
       '</mrow><mn>3</mn></mroot></mrow></msqrt><mo>,</mo><mi>x</mi>' +
       '<mo>∈</mo><mi>ℝ</mi></mrow>';
-  this.executeRuleTest(mml, 'x exposant e moins 2 position de base égale début racine carrée imbriquée x début racine cubique imbriquée x indice du radical imbriquée 4 début racine imbriquée x indice du radical 5 début racine x points de suspension fin racine fin racine imbriquée fin racine cubique imbriquée fin racine carrée imbriquée virgule x appartient à R majuscule en ajouré',
+  this.executeRuleTest(mml, 'x exposant e moins 2 position de base égale début racine carrée imbriquée x début racine cubique imbriquée x indice du radical imbriquée 4 début racine imbriquée x indice du radical 5 début racine x points de suspension fin racine fin racine imbriquée fin racine cubique imbriquée fin racine carrée imbriquée virgule x appartient à R majuscule ajouré',
                        'default');
-  this.executeRuleTest(mml, 'x sup e moins 2 position de base égale début racine carrée imbriquée x début racine cubique imbriquée x indice du radical imbriquée 4 début racine imbriquée x indice du radical 5 début racine x points de suspension fin racine fin racine imbriquée fin racine cubique imbriquée fin racine carrée imbriquée virgule x appartient à R majuscule en ajouré', 'brief');
-  this.executeRuleTest(mml, 'x sup e moins 2 position de base égale racine carrée imbriquée x racine cubique imbriquée x indice imbriquée 4 racine imbriquée x indice 5 racine x points de suspension fin racine fin racine imbriquée fin racine cubique imbriquée fin racine carrée imbriquée virgule x appartient à R majuscule en ajouré', 'sbrief');
+  this.executeRuleTest(mml, 'x sup e moins 2 position de base égale début racine carrée imbriquée x début racine cubique imbriquée x indice du radical imbriquée 4 début racine imbriquée x indice du radical 5 début racine x points de suspension fin racine fin racine imbriquée fin racine cubique imbriquée fin racine carrée imbriquée virgule x appartient à R majuscule ajouré', 'brief');
+  this.executeRuleTest(mml, 'x sup e moins 2 position de base égale racine carrée imbriquée x racine cubique imbriquée x indice imbriquée 4 racine imbriquée x indice 5 racine x points de suspension fin racine fin racine imbriquée fin racine cubique imbriquée fin racine carrée imbriquée virgule x appartient à R majuscule ajouré', 'sbrief');
 };
 
 

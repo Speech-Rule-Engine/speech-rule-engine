@@ -2022,44 +2022,44 @@ sre.NobleSpanishTest.prototype.testSample_70 = function() {
       '<mn>1</mn></mrow><mrow><mi>s</mi></mrow></msubsup><mo>+</mo>' +
       '<msubsup><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow><mrow><mi>s' +
       '</mi></mrow></msubsup><mo stretchy="false">)</mo><mo>.</mo></mrow>';
-  this.executeRuleTest(mml, 'sans-serif mayúscula E paréntesis izquierdo' +
+  this.executeRuleTest(mml, 'sans serif mayúscula E paréntesis izquierdo' +
                        ' sumatorio bajoíndice mayúscula I perteneciente a' +
                        ' mayúscula E subíndice k más 1 línea base finalizar' +
                        ' índices empezar valor absoluto mayúscula I' +
                        ' finalizar valor absoluto superíndice s línea base' +
-                       ' paréntesis derecho igual sans-serif mayúscula E' +
+                       ' paréntesis derecho igual sans serif mayúscula E' +
                        ' paréntesis izquierdo sumatorio bajoíndice' +
                        ' mayúscula I perteneciente a mayúscula E subíndice' +
                        ' k línea base finalizar índices empezar valor' +
                        ' absoluto mayúscula I finalizar valor absoluto' +
                        ' superíndice s línea base paréntesis derecho' +
-                       ' sans-serif mayúscula E paréntesis izquierdo' +
+                       ' sans serif mayúscula E paréntesis izquierdo' +
                        ' mayúscula R subíndice 1 superíndice s línea base' +
                        ' más mayúscula R subíndice 2 superíndice s línea' +
                        ' base paréntesis derecho punto', 'default');
-  this.executeRuleTest(mml, 'sans-serif mayúscula E paréntesis izquierdo' +
+  this.executeRuleTest(mml, 'sans serif mayúscula E paréntesis izquierdo' +
                        ' sumatorio bajoíndice mayúscula I perteneciente a' +
                        ' mayúscula E sub k más 1 finalizar índices empezar' +
                        ' valor absoluto mayúscula I finalizar valor' +
-                       ' absoluto sup s paréntesis derecho igual sans-serif' +
+                       ' absoluto sup s paréntesis derecho igual sans serif' +
                        ' mayúscula E paréntesis izquierdo sumatorio' +
                        ' bajoíndice mayúscula I perteneciente a mayúscula E' +
                        ' sub k finalizar índices empezar valor absoluto' +
                        ' mayúscula I finalizar valor absoluto sup s' +
-                       ' paréntesis derecho sans-serif mayúscula E' +
+                       ' paréntesis derecho sans serif mayúscula E' +
                        ' paréntesis izquierdo mayúscula R sub 1 sup s más' +
                        ' mayúscula R sub 2 sup s paréntesis derecho punto',
                        'brief');
-  this.executeRuleTest(mml, 'sans-serif mayúscula E paréntesis izquierdo' +
+  this.executeRuleTest(mml, 'sans serif mayúscula E paréntesis izquierdo' +
                        ' sumatorio bajoíndice mayúscula I perteneciente a' +
                        ' mayúscula E sub k más 1 finalizar índices valor' +
                        ' absoluto mayúscula I finalizar valor absoluto sup' +
-                       ' s paréntesis derecho igual sans-serif mayúscula E' +
+                       ' s paréntesis derecho igual sans serif mayúscula E' +
                        ' paréntesis izquierdo sumatorio bajoíndice' +
                        ' mayúscula I perteneciente a mayúscula E sub k' +
                        ' finalizar índices valor absoluto mayúscula I' +
                        ' finalizar valor absoluto sup s paréntesis derecho' +
-                       ' sans-serif mayúscula E paréntesis izquierdo' +
+                       ' sans serif mayúscula E paréntesis izquierdo' +
                        ' mayúscula R sub 1 sup s más mayúscula R sub 2 sup' +
                        ' s paréntesis derecho punto', 'sbrief');
 };
@@ -3545,16 +3545,16 @@ sre.NobleSpanishTest.prototype.testSample_102 = function() {
       '</msubsup>' +
       '<mo>)</mo>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'mayúscula Delta phi recta subíndice peak línea' +
+  this.executeRuleTest(mml, 'mayúscula Delta phi subíndice peak línea' +
                        ' base igual tangente superíndice menos 1 línea base' +
                        ' paréntesis izquierdo k al cuadrado mayúscula Q' +
                        ' subíndice tank superíndice series línea base' +
                        ' paréntesis derecho', 'default');
-  this.executeRuleTest(mml, 'mayúscula Delta phi recta sub peak igual' +
+  this.executeRuleTest(mml, 'mayúscula Delta phi sub peak igual' +
                        ' tangente sup menos 1 paréntesis izquierdo k al' +
                        ' cuadrado mayúscula Q sub tank sup series' +
                        ' paréntesis derecho', 'brief');
-  this.executeRuleTest(mml, 'mayúscula Delta phi recta sub peak igual' +
+  this.executeRuleTest(mml, 'mayúscula Delta phi sub peak igual' +
                        ' tangente sup menos 1 paréntesis izquierdo k al' +
                        ' cuadrado mayúscula Q sub tank sup series' +
                        ' paréntesis derecho', 'sbrief');

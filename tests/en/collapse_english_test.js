@@ -67,9 +67,9 @@ sre.CollapseEnglishTest.prototype.testCollapsedAddition = function() {
  */
 sre.CollapseEnglishTest.prototype.testCollapsedBigop = function() {
   var mml = '<mo>&#x2211;</mo><mi>x</mi>';
-  this.executeRuleTest(mml, 'collapsed sigma-summation', 'default');
-  this.executeRuleTest(mml, 'collapsed sigma-summation', 'brief');
-  this.executeRuleTest(mml, 'collapsed sigma-summation', 'sbrief');
+  this.executeRuleTest(mml, 'collapsed sigma summation', 'default');
+  this.executeRuleTest(mml, 'collapsed sigma summation', 'brief');
+  this.executeRuleTest(mml, 'collapsed sigma summation', 'sbrief');
 };
 
 

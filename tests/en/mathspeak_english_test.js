@@ -55,9 +55,9 @@ goog.inherits(sre.MathspeakEnglishTest, sre.AbstractRuleTest);
  */
 sre.MathspeakEnglishTest.prototype.testSample_1_1_1 = function() {
   var mml = '<mrow><mi>π</mi><mo>≈</mo><mn>3.14159</mn></mrow>';
-  this.executeRuleTest(mml, 'pi almost-equals 3.14159', 'default');
-  this.executeRuleTest(mml, 'pi almost-equals 3.14159', 'brief');
-  this.executeRuleTest(mml, 'pi almost-equals 3.14159', 'sbrief');
+  this.executeRuleTest(mml, 'pi almost equals 3.14159', 'default');
+  this.executeRuleTest(mml, 'pi almost equals 3.14159', 'brief');
+  this.executeRuleTest(mml, 'pi almost equals 3.14159', 'sbrief');
 };
 
 
@@ -133,9 +133,9 @@ sre.MathspeakEnglishTest.prototype.testSample_1_4_1 = function() {
  */
 sre.MathspeakEnglishTest.prototype.testSample_1_4_2 = function() {
   var mml = '<mrow><mn>#FF0000</mn></mrow>';
-  this.executeRuleTest(mml, 'Number number-sign F F 0 0 0 0', 'default');
-  this.executeRuleTest(mml, 'Num num-sign F F 0 0 0 0', 'brief');
-  this.executeRuleTest(mml, 'Num num-sign F F 0 0 0 0', 'sbrief');
+  this.executeRuleTest(mml, 'Number number sign F F 0 0 0 0', 'default');
+  this.executeRuleTest(mml, 'Num num sign F F 0 0 0 0', 'brief');
+  this.executeRuleTest(mml, 'Num num sign F F 0 0 0 0', 'sbrief');
 };
 
 
@@ -196,13 +196,13 @@ sre.MathspeakEnglishTest.prototype.testSample_2_1_1 = function() {
       '<mi>X</mi><mo>-</mo><mi>x</mi><mo>)</mo></mrow><mn>2</mn></msup>' +
       '<mo>-</mo><msup><mrow><mo>(</mo><mi>Y</mi><mo>-</mo><mi>y</mi>' +
       '<mo>)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mrow>';
-  this.executeRuleTest(mml, 'd equals StartRoot left-parenthesis upper X' +
-                       ' minus x right-parenthesis squared minus' +
-                       ' left-parenthesis upper Y minus y right-parenthesis' +
+  this.executeRuleTest(mml, 'd equals StartRoot left parenthesis upper X' +
+                       ' minus x right parenthesis squared minus' +
+                       ' left parenthesis upper Y minus y right parenthesis' +
                        ' squared EndRoot', 'default');
-  this.executeRuleTest(mml, 'd equals StartRoot left-p\'ren upper X minus x' +
-                       ' right-p\'ren squared minus left-p\'ren upper Y minus' +
-                       ' y right-p\'ren squared EndRoot', 'brief');
+  this.executeRuleTest(mml, 'd equals StartRoot left p\'ren upper X minus x' +
+                       ' right p\'ren squared minus left p\'ren upper Y minus' +
+                       ' y right p\'ren squared EndRoot', 'brief');
   this.executeRuleTest(mml, 'd equals Root L p\'ren upper X minus x R p\'ren' +
                        ' squared minus L p\'ren upper Y minus y R p\'ren' +
                        ' squared EndRoot', 'sbrief');
@@ -218,11 +218,11 @@ sre.MathspeakEnglishTest.prototype.testSample_2_3_1 = function() {
       '<mspace width="4.pt"/><mi>B</mi><mo>→</mo><mi>C</mi>' +
       '<mspace width="4.pt"/><mtext>then</mtext><mspace width="4.pt"/>' +
       '<mi>A</mi><mo>→</mo><mi>C</mi><mo>.</mo></mrow>';
-  this.executeRuleTest(mml, 'If upper A right-arrow upper B and upper B' +
-                       ' right-arrow upper C then upper A right-arrow upper C' +
+  this.executeRuleTest(mml, 'If upper A right arrow upper B and upper B' +
+                       ' right arrow upper C then upper A right arrow upper C' +
                        ' period', 'default');
-  this.executeRuleTest(mml, 'If upper A right-arrow upper B and upper B' +
-                       ' right-arrow upper C then upper A right-arrow upper' +
+  this.executeRuleTest(mml, 'If upper A right arrow upper B and upper B' +
+                       ' right arrow upper C then upper A right arrow upper' +
                        ' C period', 'brief');
   this.executeRuleTest(mml, 'If upper A R arrow upper B and upper B R arrow' +
                        ' upper C then upper A R arrow upper C period',
@@ -236,9 +236,9 @@ sre.MathspeakEnglishTest.prototype.testSample_2_3_1 = function() {
 sre.MathspeakEnglishTest.prototype.testSample_2_6_1 = function() {
   var mml = '<mrow><mo mathvariant="bold">[</mo><mi>x</mi>' +
       '<mo mathvariant="bold">]</mo></mrow>';
-  this.executeRuleTest(mml, 'bold left-bracket x bold right-bracket',
+  this.executeRuleTest(mml, 'bold left bracket x bold right bracket',
                        'default');
-  this.executeRuleTest(mml, 'bold left-brack x bold right-brack', 'brief');
+  this.executeRuleTest(mml, 'bold left brack x bold right brack', 'brief');
   this.executeRuleTest(mml, 'bold L brack x bold R brack', 'sbrief');
 };
 
@@ -251,13 +251,13 @@ sre.MathspeakEnglishTest.prototype.testSample_2_6_2 = function() {
       '<mi mathvariant="bold">l</mi><mo>=</mo><mo>-</mo><mfrac><mrow>' +
       '<mi>d</mi><mi>Φ</mi><mi>B</mi></mrow><mrow><mi>d</mi><mi>t</mi>' +
       '</mrow></mfrac></mrow>';
-  this.executeRuleTest(mml, 'contour-integral upper E dot d bold l equals' +
+  this.executeRuleTest(mml, 'contour integral upper E dot d bold l equals' +
                        ' minus StartFraction d upper Phi upper B Over d t' +
                        ' EndFraction', 'default');
-  this.executeRuleTest(mml, 'contour-integral upper E dot d bold l equals' +
+  this.executeRuleTest(mml, 'contour integral upper E dot d bold l equals' +
                        ' minus StartFrac d upper Phi upper B Over d t' +
                        ' EndFrac', 'brief');
-  this.executeRuleTest(mml, 'contour-integral upper E dot d bold l equals' +
+  this.executeRuleTest(mml, 'contour integral upper E dot d bold l equals' +
                        ' minus Frac d upper Phi upper B Over d t EndFrac',
                        'sbrief');
 };
@@ -288,15 +288,15 @@ sre.MathspeakEnglishTest.prototype.testSample_4_2_1 = function() {
       '<mo>=</mo><mo>{</mo><mi>Α</mi><mo>,</mo><mi>Β</mi><mo>,</mo>' +
       '<mi>Γ</mi><mo>,</mo><mi>Δ</mi><mo>,</mo><mi>Ε</mi><mo>,</mo>' +
       '<mi>Φ</mi><mo>}</mo></mrow>';
-  this.executeRuleTest(mml, 'Uppercase left-parenthesis StartSet alpha comma' +
+  this.executeRuleTest(mml, 'Uppercase left parenthesis StartSet alpha comma' +
                        ' beta comma gamma comma delta comma epsilon comma phi' +
-                       ' EndSet right-parenthesis equals StartSet upper' +
+                       ' EndSet right parenthesis equals StartSet upper' +
                        ' Alpha comma upper Beta comma upper Gamma comma upper' +
                        ' Delta comma upper Epsilon comma upper Phi EndSet',
                        'default');
-  this.executeRuleTest(mml, 'Uppercase left-p\'ren StartSet alpha comma beta' +
+  this.executeRuleTest(mml, 'Uppercase left p\'ren StartSet alpha comma beta' +
                        ' comma gamma comma delta comma epsilon comma phi' +
-                       ' EndSet right-p\'ren equals StartSet upper Alpha' +
+                       ' EndSet right p\'ren equals StartSet upper Alpha' +
                        ' comma upper Beta comma upper Gamma comma upper Delta' +
                        ' comma upper Epsilon comma upper Phi EndSet', 'brief');
   this.executeRuleTest(mml, 'Uppercase L p\'ren Set alpha comma beta comma' +
@@ -324,9 +324,9 @@ sre.MathspeakEnglishTest.prototype.testSample_5_1_1 = function() {
 sre.MathspeakEnglishTest.prototype.testSample_5_1_2 = function() {
   var mml = '<mrow><mo>(</mo><mn>1</mn><mtext>-to-</mtext>' +
       '<mn>1</mn><mo>)</mo></mrow>';
-  this.executeRuleTest(mml, 'left-parenthesis 1 hyphen to hyphen 1' +
-                       ' right-parenthesis', 'default');
-  this.executeRuleTest(mml, 'left-p\'ren 1 hyphen to hyphen 1 right-p\'ren',
+  this.executeRuleTest(mml, 'left parenthesis 1 hyphen to hyphen 1' +
+                       ' right parenthesis', 'default');
+  this.executeRuleTest(mml, 'left p\'ren 1 hyphen to hyphen 1 right p\'ren',
                        'brief');
   this.executeRuleTest(mml, 'L p\'ren 1 hyphen to hyphen 1 R p\'ren', 'sbrief');
 };
@@ -390,19 +390,19 @@ sre.MathspeakEnglishTest.prototype.untestSample_6_2_2_old = function() {
       '<mi>b</mi><mfenced separators="" open="|" close="|"><mo>-</mo>' +
       '<mn>15</mn></mfenced></mrow>';
   this.executeRuleTest(mml, 'StartAbsoluteValue a StartAbsoluteValue' +
-                       ' plus-or-minus b EndAbsoluteValue minus 15' +
-                       ' EndAbsoluteValue not-equals StartAbsoluteValue a' +
-                       ' EndAbsoluteValue plus-or-minus b StartAbsoluteValue' +
+                       ' plus or minus b EndAbsoluteValue minus 15' +
+                       ' EndAbsoluteValue not equals StartAbsoluteValue a' +
+                       ' EndAbsoluteValue plus or minus b StartAbsoluteValue' +
                        ' minus 15 EndAbsoluteValue', 'default');
   this.executeRuleTest(mml, 'StartAbsoluteValue a StartAbsoluteValue' +
-                       ' plus-or-minus b EndAbsoluteValue minus 15' +
-                       ' EndAbsoluteValue not-equals StartAbsoluteValue a' +
-                       ' EndAbsoluteValue plus-or-minus b StartAbsoluteValue' +
+                       ' plus or minus b EndAbsoluteValue minus 15' +
+                       ' EndAbsoluteValue not equals StartAbsoluteValue a' +
+                       ' EndAbsoluteValue plus or minus b StartAbsoluteValue' +
                        ' minus 15 EndAbsoluteValue', 'brief');
-  this.executeRuleTest(mml, 'AbsoluteValue a AbsoluteValue plus-or-minus b' +
+  this.executeRuleTest(mml, 'AbsoluteValue a AbsoluteValue plus or minus b' +
                        ' EndAbsoluteValue minus 15 EndAbsoluteValue' +
-                       ' not-equals AbsoluteValue a EndAbsoluteValue' +
-                       ' plus-or-minus b AbsoluteValue minus 15' +
+                       ' not equals AbsoluteValue a EndAbsoluteValue' +
+                       ' plus or minus b AbsoluteValue minus 15' +
                        ' EndAbsoluteValue', 'sbrief');
 };
 
@@ -418,20 +418,20 @@ sre.MathspeakEnglishTest.prototype.testSample_6_2_2 = function() {
       '<mfenced open="|" close="|"><mi>a</mi></mfenced><mo>&#xb1;</mo>' +
       '<mfenced separators="" open="|" close="|"><mi>b</mi><mo>-</mo>' +
       '<mi>c</mi></mfenced></mrow>';
-  this.executeRuleTest(mml, 'StartAbsoluteValue a plus-or-minus' +
+  this.executeRuleTest(mml, 'StartAbsoluteValue a plus or minus' +
                        ' StartAbsoluteValue b minus c EndAbsoluteValue' +
-                       ' EndAbsoluteValue not-equals StartAbsoluteValue a' +
-                       ' EndAbsoluteValue plus-or-minus StartAbsoluteValue b' +
+                       ' EndAbsoluteValue not equals StartAbsoluteValue a' +
+                       ' EndAbsoluteValue plus or minus StartAbsoluteValue b' +
                        ' minus c EndAbsoluteValue', 'default');
-  this.executeRuleTest(mml, 'StartAbsoluteValue a plus-or-minus' +
+  this.executeRuleTest(mml, 'StartAbsoluteValue a plus or minus' +
                        ' StartAbsoluteValue b minus c EndAbsoluteValue' +
-                       ' EndAbsoluteValue not-equals StartAbsoluteValue a' +
-                       ' EndAbsoluteValue plus-or-minus StartAbsoluteValue b' +
+                       ' EndAbsoluteValue not equals StartAbsoluteValue a' +
+                       ' EndAbsoluteValue plus or minus StartAbsoluteValue b' +
                        ' minus c EndAbsoluteValue', 'brief');
-  this.executeRuleTest(mml, 'AbsoluteValue a plus-or-minus' +
+  this.executeRuleTest(mml, 'AbsoluteValue a plus or minus' +
                        ' AbsoluteValue b minus c EndAbsoluteValue' +
-                       ' EndAbsoluteValue not-equals AbsoluteValue a' +
-                       ' EndAbsoluteValue plus-or-minus AbsoluteValue b' +
+                       ' EndAbsoluteValue not equals AbsoluteValue a' +
+                       ' EndAbsoluteValue plus or minus AbsoluteValue b' +
                        ' minus c EndAbsoluteValue', 'sbrief');
 };
 
@@ -471,15 +471,15 @@ sre.MathspeakEnglishTest.prototype.testSample_7_2_1 = function() {
       '</mfrac><mo>≠</mo><mfrac><mi>x</mi><mfrac><mi>y</mi><mi>z</mi>' +
       '</mfrac></mfrac></mrow>';
   this.executeRuleTest(mml, 'StartStartFraction StartFraction x Over y' +
-                       ' EndFraction OverOver z EndEndFraction not-equals' +
+                       ' EndFraction OverOver z EndEndFraction not equals' +
                        ' StartStartFraction x OverOver StartFraction y Over' +
                        ' z EndFraction EndEndFraction', 'default');
   this.executeRuleTest(mml, 'StartStartFrac StartFrac x Over y EndFrac' +
-                       ' OverOver z EndEndFrac not-equals StartStartFrac x' +
+                       ' OverOver z EndEndFrac not equals StartStartFrac x' +
                        ' OverOver StartFrac y Over z EndFrac EndEndFrac',
                        'brief');
   this.executeRuleTest(mml, 'NestFrac Frac x Over y EndFrac NestOver z' +
-                       ' NestEndFrac not-equals NestFrac x NestOver Frac y' +
+                       ' NestEndFrac not equals NestFrac x NestOver Frac y' +
                        ' Over z EndFrac NestEndFrac', 'sbrief');
 };
 
@@ -502,23 +502,23 @@ sre.MathspeakEnglishTest.prototype.testSample_7_3_1 = function() {
       '<mrow><mn>2</mn><mi>x</mi></mrow><mrow><mn>1</mn><mo>-</mo>' +
       '<mi>x</mi></mrow></mfrac></mfenced><mn>2</mn></msup></mrow></mfrac>';
   this.executeRuleTest(mml, 'StartStartStartFraction StartStartFraction' +
-                       ' left-parenthesis 1 minus x right-parenthesis' +
+                       ' left parenthesis 1 minus x right parenthesis' +
                        ' StartFraction d Over d x EndFraction' +
-                       ' left-parenthesis 2 x right-parenthesis minus 2 x' +
+                       ' left parenthesis 2 x right parenthesis minus 2 x' +
                        ' StartFraction d Over d x EndFraction' +
-                       ' left-parenthesis 1 minus x right-parenthesis' +
-                       ' OverOver left-parenthesis 1 minus x' +
-                       ' right-parenthesis squared EndEndFraction' +
-                       ' OverOverOver 1 plus left-parenthesis StartFraction' +
-                       ' 2 x Over 1 minus x EndFraction right-parenthesis' +
+                       ' left parenthesis 1 minus x right parenthesis' +
+                       ' OverOver left parenthesis 1 minus x' +
+                       ' right parenthesis squared EndEndFraction' +
+                       ' OverOverOver 1 plus left parenthesis StartFraction' +
+                       ' 2 x Over 1 minus x EndFraction right parenthesis' +
                        ' squared EndEndEndFraction', 'default');
-  this.executeRuleTest(mml, 'StartStartStartFrac StartStartFrac left-p\'ren 1' +
-                       ' minus x right-p\'ren StartFrac d Over d x EndFrac' +
-                       ' left-p\'ren 2 x right-p\'ren minus 2 x StartFrac d' +
-                       ' Over d x EndFrac left-p\'ren 1 minus x right-p\'ren' +
-                       ' OverOver left-p\'ren 1 minus x right-p\'ren squared' +
-                       ' EndEndFrac OverOverOver 1 plus left-p\'ren StartFrac' +
-                       ' 2 x Over 1 minus x EndFrac right-p\'ren squared' +
+  this.executeRuleTest(mml, 'StartStartStartFrac StartStartFrac left p\'ren 1' +
+                       ' minus x right p\'ren StartFrac d Over d x EndFrac' +
+                       ' left p\'ren 2 x right p\'ren minus 2 x StartFrac d' +
+                       ' Over d x EndFrac left p\'ren 1 minus x right p\'ren' +
+                       ' OverOver left p\'ren 1 minus x right p\'ren squared' +
+                       ' EndEndFrac OverOverOver 1 plus left p\'ren StartFrac' +
+                       ' 2 x Over 1 minus x EndFrac right p\'ren squared' +
                        ' EndEndEndFrac', 'brief');
   this.executeRuleTest(mml, 'NestTwiceFrac NestFrac L p\'ren 1 minus x R' +
                        ' p\'ren Frac d Over d x EndFrac L p\'ren 2 x R p\'ren' +
@@ -571,16 +571,16 @@ sre.MathspeakEnglishTest.prototype.testSample_7_4_1 = function() {
       '<mo movablelimits="true" form="prefix">∞</mo></munderover><mfrac>' +
       '<mi>n</mi><mn>2</mn></mfrac></mrow>';
   this.executeRuleTest(mml, 'one half plus two halves plus three halves plus' +
-                       ' four halves plus ellipsis equals sigma-summation' +
+                       ' four halves plus ellipsis equals sigma summation' +
                        ' Underscript n equals 1 Overscript infinity' +
                        ' Endscripts StartFraction n Over 2 EndFraction',
                        'default');
   this.executeRuleTest(mml, 'one half plus two halves plus three halves plus' +
-                       ' four halves plus ellipsis equals sigma-summation' +
+                       ' four halves plus ellipsis equals sigma summation' +
                        ' Underscript n equals 1 Overscript infinity' +
                        ' Endscripts StartFrac n Over 2 EndFrac', 'brief');
   this.executeRuleTest(mml, 'one half plus two halves plus three halves plus' +
-                       ' four halves plus ellipsis equals sigma-summation' +
+                       ' four halves plus ellipsis equals sigma summation' +
                        ' Underscript n equals 1 Overscript infinity' +
                        ' Endscripts Frac n Over 2 EndFrac', 'sbrief');
 };
@@ -595,11 +595,11 @@ sre.MathspeakEnglishTest.prototype.testSample_7_4_2 = function() {
       '<mn>25</mn></mfrac></mrow>';
   this.executeRuleTest(mml, 'StartFraction 20 Over 5 EndFraction times' +
                        ' StartFraction 1 Over 100 EndFraction equals' +
-                       ' one twenty-fifth', 'default');
+                       ' one twenty fifth', 'default');
   this.executeRuleTest(mml, 'StartFrac 20 Over 5 EndFrac times StartFrac 1' +
-                       ' Over 100 EndFrac equals one twenty-fifth', 'brief');
+                       ' Over 100 EndFrac equals one twenty fifth', 'brief');
   this.executeRuleTest(mml, 'Frac 20 Over 5 EndFrac times Frac 1 Over 100' +
-                       ' EndFrac equals one twenty-fifth', 'sbrief');
+                       ' EndFrac equals one twenty fifth', 'sbrief');
 };
 
 
@@ -693,11 +693,11 @@ sre.MathspeakEnglishTest.prototype.testSample_8_1_2 = function() {
       '<mi>x</mi><mo>+</mo><mi>c</mi></mfenced><mi>y</mi><mo>=</mo>' +
       '<mn>0</mn></mrow>';
   this.executeRuleTest(mml, 'StartFraction d squared y Over d x squared' +
-                       ' EndFraction plus left-parenthesis a x squared plus' +
-                       ' b x plus c right-parenthesis y equals 0', 'default');
+                       ' EndFraction plus left parenthesis a x squared plus' +
+                       ' b x plus c right parenthesis y equals 0', 'default');
   this.executeRuleTest(mml, 'StartFrac d squared y Over d x squared EndFrac' +
-                       ' plus left-p\'ren a x squared plus b x plus c' +
-                       ' right-p\'ren y equals 0', 'brief');
+                       ' plus left p\'ren a x squared plus b x plus c' +
+                       ' right p\'ren y equals 0', 'brief');
   this.executeRuleTest(mml, 'Frac d squared y Over d x squared EndFrac plus' +
                        ' L p\'ren a x squared plus b x plus c R p\'ren y' +
                        ' equals 0', 'sbrief');
@@ -826,11 +826,11 @@ sre.MathspeakEnglishTest.prototype.testSample_8_4_4 = function() {
       '<mi>c</mi></msub></msup></msup><mo>≠</mo><msup><mi>y</mi><mrow>' +
       '<msup><mi>a</mi><mi>b</mi></msup><mi>c</mi></mrow></msup></mrow>';
   this.executeRuleTest(mml, 'y Superscript a Super Superscript b Super Super' +
-                       ' Subscript c Baseline not-equals y Superscript a' +
+                       ' Subscript c Baseline not equals y Superscript a' +
                        ' Super Superscript b Superscript c', 'default');
-  this.executeRuleTest(mml, 'y Sup a Sup Sup b Sup Sup Sub c Base not-equals' +
+  this.executeRuleTest(mml, 'y Sup a Sup Sup b Sup Sup Sub c Base not equals' +
                        ' y Sup a Sup Sup b Sup c', 'brief');
-  this.executeRuleTest(mml, 'y Sup a Sup Sup b Sup Sup Sub c Base not-equals' +
+  this.executeRuleTest(mml, 'y Sup a Sup Sup b Sup Sup Sub c Base not equals' +
                        ' y Sup a Sup Sup b Sup c', 'sbrief');
 };
 
@@ -916,11 +916,11 @@ sre.MathspeakEnglishTest.prototype.testSample_8_4_8 = function() {
   var mml = '<msup><mi>T</mi><mfenced separators="" open="(" close=")">' +
       '<msup><mi>x</mi><mi>a</mi></msup><mo>+</mo><msup><mi>y</mi>' +
       '<mi>b</mi></msup></mfenced></msup>';
-  this.executeRuleTest(mml, 'upper T Superscript left-parenthesis x Super' +
+  this.executeRuleTest(mml, 'upper T Superscript left parenthesis x Super' +
                        ' Superscript a Superscript plus y Super Superscript' +
-                       ' b Superscript right-parenthesis', 'default');
-  this.executeRuleTest(mml, 'upper T Sup left-p\'ren x Sup Sup a Sup plus y' +
-                       ' Sup Sup b Sup right-p\'ren', 'brief');
+                       ' b Superscript right parenthesis', 'default');
+  this.executeRuleTest(mml, 'upper T Sup left p\'ren x Sup Sup a Sup plus y' +
+                       ' Sup Sup b Sup right p\'ren', 'brief');
   this.executeRuleTest(mml, 'upper T Sup L p\'ren x Sup Sup a Sup plus y Sup' +
                        ' Sup b Sup R p\'ren', 'sbrief');
 };
@@ -979,9 +979,9 @@ sre.MathspeakEnglishTest.prototype.testSample_8_5_5 = function() {
   var mml = '<mrow><mn>4</mn><mi>Fe</mi><mo>+</mo><mn>3</mn><msub>' +
       '<mi>O</mi><mn>2</mn></msub><mo>→</mo><mn>2</mn><msub><mi>Fe</mi>' +
       '<mn>2</mn></msub><msub><mi>O</mi><mn>3</mn></msub></mrow>';
-  this.executeRuleTest(mml, '4 upper F e plus 3 upper O 2 right-arrow 2' +
+  this.executeRuleTest(mml, '4 upper F e plus 3 upper O 2 right arrow 2' +
                        ' upper F e 2 upper O 3', 'default');
-  this.executeRuleTest(mml, '4 upper F e plus 3 upper O 2 right-arrow 2' +
+  this.executeRuleTest(mml, '4 upper F e plus 3 upper O 2 right arrow 2' +
                        ' upper F e 2 upper O 3', 'brief');
   this.executeRuleTest(mml, '4 upper F e plus 3 upper O 2 R arrow 2 upper F' +
                        ' e 2 upper O 3', 'sbrief');
@@ -1022,15 +1022,15 @@ sre.MathspeakEnglishTest.prototype.testSample_8_5_8 = function() {
       '<mi>x</mi><mo>)</mo></mrow></mrow><mrow><msub>' +
       '<mo form="prefix">log</mo><mn>10</mn></msub><mrow><mo>(</mo>' +
       '<mn>2</mn><mo>)</mo></mrow></mrow></mfrac></mrow>';
-  this.executeRuleTest(mml, 'log Subscript 2 Baseline left-parenthesis x' +
-                       ' right-parenthesis equals StartFraction log' +
-                       ' Subscript 10 Baseline left-parenthesis x' +
-                       ' right-parenthesis Over log Subscript 10 Baseline' +
-                       ' left-parenthesis 2 right-parenthesis EndFraction',
+  this.executeRuleTest(mml, 'log Subscript 2 Baseline left parenthesis x' +
+                       ' right parenthesis equals StartFraction log' +
+                       ' Subscript 10 Baseline left parenthesis x' +
+                       ' right parenthesis Over log Subscript 10 Baseline' +
+                       ' left parenthesis 2 right parenthesis EndFraction',
                        'default');
-  this.executeRuleTest(mml, 'log Sub 2 Base left-p\'ren x right-p\'ren equals' +
-                       ' StartFrac log Sub 10 Base left-p\'ren x right-p\'ren' +
-                       ' Over log Sub 10 Base left-p\'ren 2 right-p\'ren' +
+  this.executeRuleTest(mml, 'log Sub 2 Base left p\'ren x right p\'ren equals' +
+                       ' StartFrac log Sub 10 Base left p\'ren x right p\'ren' +
+                       ' Over log Sub 10 Base left p\'ren 2 right p\'ren' +
                        ' EndFrac', 'brief');
   this.executeRuleTest(mml, 'log Sub 2 Base L p\'ren x R p\'ren equals Frac' +
                        ' log Sub 10 Base L p\'ren x R p\'ren Over log Sub 10' +
@@ -1072,12 +1072,12 @@ sre.MathspeakEnglishTest.prototype.testSample_8_5_10 = function() {
 sre.MathspeakEnglishTest.prototype.testSample_8_6_1 = function() {
   var mml = '<mrow><mi>$</mi><mi>n</mi><mn>2</mn><mo>=</mo><mn>2</mn>' +
       '<mo>*</mo><mi>$</mi><mi>n</mi><mo>+</mo><mn>1</mn><mo>;</mo></mrow>';
-  this.executeRuleTest(mml, 'dollar-sign n Baseline 2 equals 2 asterisk' +
-                       ' dollar-sign n plus 1 semicolon', 'default');
-  this.executeRuleTest(mml, 'dollar-sign n Base 2 equals 2 asterisk' +
-                       ' dollar-sign n plus 1 semicolon', 'brief');
-  this.executeRuleTest(mml, 'dollar-sign n Base 2 equals 2 asterisk' +
-                       ' dollar-sign n plus 1 semicolon', 'sbrief');
+  this.executeRuleTest(mml, 'dollar sign n Baseline 2 equals 2 asterisk' +
+                       ' dollar sign n plus 1 semicolon', 'default');
+  this.executeRuleTest(mml, 'dollar sign n Base 2 equals 2 asterisk' +
+                       ' dollar sign n plus 1 semicolon', 'brief');
+  this.executeRuleTest(mml, 'dollar sign n Base 2 equals 2 asterisk' +
+                       ' dollar sign n plus 1 semicolon', 'sbrief');
 };
 
 
@@ -1421,15 +1421,15 @@ sre.MathspeakEnglishTest.prototype.testSample_8_9_2 = function() {
       '<mfrac><mrow><mi>d</mi><msup><mi>f</mi><mrow><mo>\'</mo><mo>\'</mo>' +
       '</mrow></msup><mrow><mo>(</mo><mi>y</mi><mo>)</mo></mrow></mrow>' +
       '<mrow><mi>d</mi><mi>y</mi></mrow></mfrac></mrow>';
-  this.executeRuleTest(mml, 'f triple-prime left-parenthesis y' +
-                       ' right-parenthesis equals StartFraction d f' +
-                       ' double-prime left-parenthesis y right-parenthesis' +
+  this.executeRuleTest(mml, 'f triple prime left parenthesis y' +
+                       ' right parenthesis equals StartFraction d f' +
+                       ' double prime left parenthesis y right parenthesis' +
                        ' Over d y EndFraction', 'default');
-  this.executeRuleTest(mml, 'f triple-prime left-p\'ren y right-p\'ren equals' +
-                       ' StartFrac d f double-prime left-p\'ren y' +
-                       ' right-p\'ren Over d y EndFrac', 'brief');
-  this.executeRuleTest(mml, 'f triple-prime L p\'ren y R p\'ren equals Frac d' +
-                       ' f double-prime L p\'ren y R p\'ren Over d y EndFrac',
+  this.executeRuleTest(mml, 'f triple prime left p\'ren y right p\'ren equals' +
+                       ' StartFrac d f double prime left p\'ren y' +
+                       ' right p\'ren Over d y EndFrac', 'brief');
+  this.executeRuleTest(mml, 'f triple prime L p\'ren y R p\'ren equals Frac d' +
+                       ' f double prime L p\'ren y R p\'ren Over d y EndFrac',
                        'sbrief');
 };
 
@@ -1595,19 +1595,19 @@ sre.MathspeakEnglishTest.prototype.testSample_9_2_2 = function() {
       '<mo>=</mo><msup><mi>x</mi><mfrac><mi>m</mi><mi>n</mi></mfrac>' +
       '</msup><mo>,</mo><mi>x</mi><mo>></mo><mn>0</mn></mrow>';
   this.executeRuleTest(mml, 'RootIndex n StartRoot x Superscript m Baseline' +
-                       ' EndRoot equals left-parenthesis RootIndex n' +
-                       ' StartRoot x EndRoot right-parenthesis Superscript m' +
+                       ' EndRoot equals left parenthesis RootIndex n' +
+                       ' StartRoot x EndRoot right parenthesis Superscript m' +
                        ' Baseline equals x Superscript StartFraction m Over' +
-                       ' n EndFraction Baseline comma x greater-than 0',
+                       ' n EndFraction Baseline comma x greater than 0',
                        'default');
   this.executeRuleTest(mml, 'RootIndex n StartRoot x Sup m Base EndRoot' +
-                       ' equals left-p\'ren RootIndex n StartRoot x EndRoot' +
-                       ' right-p\'ren Sup m Base equals x Sup StartFrac m' +
-                       ' Over n EndFrac Base comma x greater-than 0', 'brief');
+                       ' equals left p\'ren RootIndex n StartRoot x EndRoot' +
+                       ' right p\'ren Sup m Base equals x Sup StartFrac m' +
+                       ' Over n EndFrac Base comma x greater than 0', 'brief');
   this.executeRuleTest(mml, 'Index n Root x Sup m Base EndRoot equals L' +
                        ' p\'ren Index n Root x EndRoot R p\'ren Sup m Base' +
                        ' equals x Sup Frac m Over n EndFrac Base comma x' +
-                       ' greater-than 0', 'sbrief');
+                       ' greater than 0', 'sbrief');
 };
 
 
@@ -1678,19 +1678,19 @@ sre.MathspeakEnglishTest.prototype.testSample_9_3_3 = function() {
                        ' NestedTwiceStartRoot x NestedRootIndex 4' +
                        ' NestedStartRoot x RootIndex 5 StartRoot x ellipsis' +
                        ' EndRoot NestedEndRoot NestedTwiceEndRoot' +
-                       ' Nested3EndRoot comma x element-of double-struck' +
+                       ' Nested3EndRoot comma x element of double struck' +
                        ' upper R', 'default');
   this.executeRuleTest(mml, 'x Sup e minus 2 Base equals Nest3StartRoot x' +
                        ' NestTwiceRootIndex 3 NestTwiceStartRoot x' +
                        ' NestRootIndex 4 NestStartRoot x RootIndex 5' +
                        ' StartRoot x ellipsis EndRoot NestEndRoot' +
-                       ' NestTwiceEndRoot Nest3EndRoot comma x element-of' +
-                       ' double-struck upper R', 'brief');
+                       ' NestTwiceEndRoot Nest3EndRoot comma x element of' +
+                       ' double struck upper R', 'brief');
   this.executeRuleTest(mml, 'x Sup e minus 2 Base equals Nest3Root x' +
                        ' NestTwiceIndex 3 NestTwiceRoot x NestIndex 4' +
                        ' NestRoot x Index 5 Root x ellipsis EndRoot' +
                        ' NestEndRoot NestTwiceEndRoot Nest3EndRoot comma x' +
-                       ' element-of double-struck upper R', 'sbrief');
+                       ' element of double struck upper R', 'sbrief');
 };
 
 
@@ -1802,9 +1802,9 @@ sre.MathspeakEnglishTest.prototype.testSample_10_2_2 = function() {
  */
 sre.MathspeakEnglishTest.prototype.testSample_11_1_1 = function() {
   var mml = '<mover accent="true"><mi>x</mi><mo>¨</mo></mover>';
-  this.executeRuleTest(mml, 'ModifyingAbove x With two-dots', 'default');
-  this.executeRuleTest(mml, 'ModAbove x With two-dots', 'brief');
-  this.executeRuleTest(mml, 'ModAbove x With two-dots', 'sbrief');
+  this.executeRuleTest(mml, 'ModifyingAbove x With two dots', 'default');
+  this.executeRuleTest(mml, 'ModAbove x With two dots', 'brief');
+  this.executeRuleTest(mml, 'ModAbove x With two dots', 'sbrief');
 };
 
 
@@ -1814,9 +1814,9 @@ sre.MathspeakEnglishTest.prototype.testSample_11_1_1 = function() {
 sre.MathspeakEnglishTest.prototype.testSample_11_1_2 = function() {
   var mml = '<mover accent="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mo>→</mo></mover>';
-  this.executeRuleTest(mml, 'ModifyingAbove x plus y With right-arrow',
+  this.executeRuleTest(mml, 'ModifyingAbove x plus y With right arrow',
                        'default');
-  this.executeRuleTest(mml, 'ModAbove x plus y With right-arrow', 'brief');
+  this.executeRuleTest(mml, 'ModAbove x plus y With right arrow', 'brief');
   this.executeRuleTest(mml, 'ModAbove x plus y With R arrow', 'sbrief');
 };
 
@@ -1928,10 +1928,10 @@ sre.MathspeakEnglishTest.prototype.untestSample_11_6_2 = function() {
       '<mo>+</mo><mi>b</mi></mrow><mo>→</mo></mover><mo>˙</mo></mover>' +
       '<mo>←</mo></munder><mo>˙</mo></munder>';
   this.executeRuleTest(mml, 'ModifyingAbove ModifyingBelow a plus b With' +
-                       ' left-arrow With right-arrow Underscript dot' +
+                       ' left arrow With right arrow Underscript dot' +
                        ' Overscript dot Endscripts', 'default');
-  this.executeRuleTest(mml, 'ModAbove ModBelow a plus b With left-arrow With' +
-                       ' right-arrow Underscript dot Overscript dot' +
+  this.executeRuleTest(mml, 'ModAbove ModBelow a plus b With left arrow With' +
+                       ' right arrow Underscript dot Overscript dot' +
                        ' Endscripts', 'brief');
   this.executeRuleTest(mml, 'ModAbove ModBelow a plus b With l arrow With r' +
                        ' arrow Underscript dot Overscript dot Endscripts',
@@ -1961,12 +1961,12 @@ sre.MathspeakEnglishTest.prototype.testSample_11_7_1 = function() {
   var mml = '<mrow><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo>' +
       '<mn>1</mn></mrow><mi>∞</mi></munderover><msub><mi>a</mi><mi>n</mi>' +
       '</msub></mrow>';
-  this.executeRuleTest(mml, 'sigma-summation Underscript n equals 1' +
+  this.executeRuleTest(mml, 'sigma summation Underscript n equals 1' +
                        ' Overscript infinity Endscripts a Subscript' +
                        ' n', 'default');
-  this.executeRuleTest(mml, 'sigma-summation Underscript n equals 1' +
+  this.executeRuleTest(mml, 'sigma summation Underscript n equals 1' +
                        ' Overscript infinity Endscripts a Sub n', 'brief');
-  this.executeRuleTest(mml, 'sigma-summation Underscript n equals 1' +
+  this.executeRuleTest(mml, 'sigma summation Underscript n equals 1' +
                        ' Overscript infinity Endscripts a Sub n', 'sbrief');
 };
 
@@ -2151,9 +2151,9 @@ sre.MathspeakEnglishTest.prototype.testSample_13_1_4 = function() {
       ' class="MathML-Unit">mi</mi></mrow><mo>≈</mo>' +
       '<mrow><mn>1.6</mn><mi mathvariant="normal"' +
       ' class="MathML-Unit">km</mi></mrow>';
-  this.executeRuleTest(mml, '1 miles almost-equals 1.6 kilometers', 'default');
-  this.executeRuleTest(mml, '1 miles almost-equals 1.6 kilometers', 'brief');
-  this.executeRuleTest(mml, '1 miles almost-equals 1.6 kilometers', 'sbrief');
+  this.executeRuleTest(mml, '1 miles almost equals 1.6 kilometers', 'default');
+  this.executeRuleTest(mml, '1 miles almost equals 1.6 kilometers', 'brief');
+  this.executeRuleTest(mml, '1 miles almost equals 1.6 kilometers', 'sbrief');
 };
 
 
@@ -2183,13 +2183,13 @@ sre.MathspeakEnglishTest.prototype.testSample_14_1_1 = function() {
       '<mtext>fluoride</mtext></mrow></mtd></mtr></mtable>';
   this.executeRuleTest(mml, 'StartLayout 1st Row 1st Column upper H 2 2nd' +
                        ' Column plus 3rd Column upper F 2 4th Column' +
-                       ' right-arrow 5th Column 2 upper H upper F 2nd Row' +
+                       ' right arrow 5th Column 2 upper H upper F 2nd Row' +
                        ' 1st Column hydrogen 2nd Column Blank 3rd Column' +
                        ' fluorine 4th Column Blank 5th Column hydrogen' +
                        ' fluoride EndLayout', 'default');
   this.executeRuleTest(mml, 'StartLayout 1st Row 1st Column upper H 2 2nd' +
                        ' Column plus 3rd Column upper F 2 4th Column' +
-                       ' right-arrow 5th Column 2 upper H upper F 2nd Row' +
+                       ' right arrow 5th Column 2 upper H upper F 2nd Row' +
                        ' 1st Column hydrogen 2nd Column Blank 3rd Column' +
                        ' fluorine 4th Column Blank 5th Column hydrogen' +
                        ' fluoride EndLayout', 'brief');
@@ -2212,17 +2212,17 @@ sre.MathspeakEnglishTest.prototype.testSample_14_3_1 = function() {
       '</mtr><mtr><mtd><mrow><mi>y</mi><mo>≥</mo><mn>0</mn></mrow></mtd>' +
       '<mtd><mrow><mn>2</mn><mi>y</mi></mrow></mtd></mtr></mtable>' +
       '</mfenced></mrow>';
-  this.executeRuleTest(mml, 'x equals StartLayout Enlarged left-brace 1st' +
-                       ' Row 1st Column y less-than 0 2nd Column 0 2nd Row' +
-                       ' 1st Column y greater-than-or-equal-to 0 2nd Column' +
+  this.executeRuleTest(mml, 'x equals StartLayout Enlarged left brace 1st' +
+                       ' Row 1st Column y less than 0 2nd Column 0 2nd Row' +
+                       ' 1st Column y greater than or equals 0 2nd Column' +
                        ' 2 y EndLayout', 'default');
-  this.executeRuleTest(mml, 'x equals StartLayout Enlarged left-brace 1st' +
-                       ' Row 1st Column y less-than 0 2nd Column 0 2nd Row' +
-                       ' 1st Column y greater-than-or-equal-to 0 2nd Column' +
+  this.executeRuleTest(mml, 'x equals StartLayout Enlarged left brace 1st' +
+                       ' Row 1st Column y less than 0 2nd Column 0 2nd Row' +
+                       ' 1st Column y greater than or equals 0 2nd Column' +
                        ' 2 y EndLayout', 'brief');
   this.executeRuleTest(mml, 'x equals Layout Enlarged L brace 1st Row 1st' +
-                       ' Column y less-than 0 2nd Column 0 2nd Row 1st' +
-                       ' Column y greater-than-or-equal-to 0 2nd Column 2 y' +
+                       ' Column y less than 0 2nd Column 0 2nd Row 1st' +
+                       ' Column y greater than or equals 0 2nd Column 2 y' +
                        ' EndLayout', 'sbrief');
 };
 
@@ -2270,12 +2270,12 @@ sre.MathspeakEnglishTest.prototype.testSample_15_2_1 = function() {
       '</mrow>';
   this.executeRuleTest(mml, 'Start 2 By 2 Determinant 1st Row 1st Column a' +
                        ' plus 1 2nd Column b 2nd Row 1st Column c 2nd Column' +
-                       ' d EndDeterminant equals left-parenthesis a plus 1' +
-                       ' right-parenthesis d minus b c', 'default');
+                       ' d EndDeterminant equals left parenthesis a plus 1' +
+                       ' right parenthesis d minus b c', 'default');
   this.executeRuleTest(mml, 'Start 2 By 2 Determinant 1st Row 1st Column a' +
                        ' plus 1 2nd Column b 2nd Row 1st Column c 2nd Column' +
-                       ' d EndDeterminant equals left-p\'ren a plus 1' +
-                       ' right-p\'ren d minus b c', 'brief');
+                       ' d EndDeterminant equals left p\'ren a plus 1' +
+                       ' right p\'ren d minus b c', 'brief');
   this.executeRuleTest(mml, '2 By 2 Determinant 1st Row 1st Column a plus 1' +
                        ' 2nd Column b 2nd Row 1st Column c 2nd Column d' +
                        ' EndDeterminant equals L p\'ren a plus 1 R p\'ren d' +

@@ -4,9 +4,7 @@
     "key": "01D5",
     "mappings": {
       "default": {
-        "default": "latin capital letter u with diaeresis and macron",
-        "alternative": "latin capital letter u double overdot overbar",
-        "short": "cap u double overdot overbar"
+        "default": "cap U double overdot overbar"
       },
       "mathspeak": {
         "default": "upper U double overdot overbar"
@@ -18,9 +16,7 @@
     "key": "01D7",
     "mappings": {
       "default": {
-        "default": "latin capital letter u with diaeresis and acute",
-        "alternative": "latin capital letter u double overdot acute",
-        "short": "cap u double overdot acute"
+        "default": "cap U double overdot acute"
       },
       "mathspeak": {
         "default": "upper U double overdot acute"
@@ -32,9 +28,7 @@
     "key": "01D9",
     "mappings": {
       "default": {
-        "default": "latin capital letter u with diaeresis and caron",
-        "alternative": "latin capital letter u double overdot hacek",
-        "short": "cap u double overdot caron"
+        "default": "cap U double overdot caron"
       },
       "mathspeak": {
         "default": "upper U double overdot caron"
@@ -46,9 +40,7 @@
     "key": "01DB",
     "mappings": {
       "default": {
-        "default": "latin capital letter u with diaeresis and grave",
-        "alternative": "latin capital letter u double overdot grave",
-        "short": "cap u double overdot grave"
+        "default": "cap U double overdot grave"
       },
       "mathspeak": {
         "default": "upper U double overdot grave"
@@ -60,9 +52,7 @@
     "key": "01DE",
     "mappings": {
       "default": {
-        "default": "latin capital letter a with diaeresis and macron",
-        "alternative": "latin capital letter a double overdot overbar",
-        "short": "cap a double overdot overbar"
+        "default": "cap A double overdot overbar"
       },
       "mathspeak": {
         "default": "upper A double overdot overbar"
@@ -74,9 +64,7 @@
     "key": "01E0",
     "mappings": {
       "default": {
-        "default": "latin capital letter a with dot above and macron",
-        "alternative": "latin capital letter a dot overbar",
-        "short": "cap a overdot overbar"
+        "default": "cap A overdot overbar"
       },
       "mathspeak": {
         "default": "upper A overdot overbar"
@@ -88,9 +76,7 @@
     "key": "01EC",
     "mappings": {
       "default": {
-        "default": "latin capital letter o with ogonek and macron",
-        "alternative": "latin capital letter o ogonek overbar",
-        "short": "cap o ogonek overbar"
+        "default": "cap O ogonek overbar"
       },
       "mathspeak": {
         "default": "upper O ogonek overbar"
@@ -102,9 +88,7 @@
     "key": "01FA",
     "mappings": {
       "default": {
-        "default": "latin capital letter a with ring above and acute",
-        "alternative": "latin capital letter a ring acute",
-        "short": "cap a ring acute"
+        "default": "cap A ring acute"
       },
       "mathspeak": {
         "default": "upper A ring acute"
@@ -116,9 +100,7 @@
     "key": "022A",
     "mappings": {
       "default": {
-        "default": "latin capital letter o with diaeresis and macron",
-        "alternative": "latin capital letter o double overdot overbar",
-        "short": "cap o double overdot overbar"
+        "default": "cap O double overdot overbar"
       },
       "mathspeak": {
         "default": "upper O double overdot overbar"
@@ -130,9 +112,7 @@
     "key": "022C",
     "mappings": {
       "default": {
-        "default": "latin capital letter o with tilde and macron",
-        "alternative": "latin capital letter o tilde overbar",
-        "short": "cap o tilde overbar"
+        "default": "cap O tilde overbar"
       },
       "mathspeak": {
         "default": "upper O tilde overbar"
@@ -144,9 +124,7 @@
     "key": "0230",
     "mappings": {
       "default": {
-        "default": "latin capital letter o with dot above and macron",
-        "alternative": "latin capital letter o overdot overbar",
-        "short": "cap o overdot overbar"
+        "default": "cap O overdot overbar"
       },
       "mathspeak": {
         "default": "upper O overdot overbar"
@@ -158,9 +136,7 @@
     "key": "1E08",
     "mappings": {
       "default": {
-        "default": "latin capital letter c with cedilla and acute",
-        "alternative": "latin capital letter c cedilla acute",
-        "short": "cap c cedilla acute"
+        "default": "cap C cedilla acute"
       },
       "mathspeak": {
         "default": "upper C cedilla acute"
@@ -172,9 +148,7 @@
     "key": "1E14",
     "mappings": {
       "default": {
-        "default": "latin capital letter e with macron and grave",
-        "alternative": "latin capital letter e overbar grave",
-        "short": "cap e overbar grave"
+        "default": "cap E overbar grave"
       },
       "mathspeak": {
         "default": "upper E overbar grave"
@@ -186,9 +160,7 @@
     "key": "1E16",
     "mappings": {
       "default": {
-        "default": "latin capital letter e with macron and acute",
-        "alternative": "latin capital letter e overbar acute",
-        "short": "cap e overbar acute"
+        "default": "cap E overbar acute"
       },
       "mathspeak": {
         "default": "upper E overbar acute"
@@ -200,9 +172,7 @@
     "key": "1E1C",
     "mappings": {
       "default": {
-        "default": "latin capital letter e with cedilla and breve",
-        "alternative": "latin capital letter e cedilla breve",
-        "short": "cap e cedilla breve"
+        "default": "cap E cedilla breve"
       },
       "mathspeak": {
         "default": "upper E cedilla breve"
@@ -214,9 +184,7 @@
     "key": "1E2E",
     "mappings": {
       "default": {
-        "default": "latin capital letter i with diaeresis and acute",
-        "alternative": "latin capital letter i double overdot acute",
-        "short": "cap i double overdot acute"
+        "default": "cap I double overdot acute"
       },
       "mathspeak": {
         "default": "upper I double overdot acute"
@@ -228,9 +196,7 @@
     "key": "1E38",
     "mappings": {
       "default": {
-        "default": "latin capital letter l with dot below and macron",
-        "alternative": "latin capital letter l underdot overbar",
-        "short": "cap l underdot overbar"
+        "default": "cap L underdot overbar"
       },
       "mathspeak": {
         "default": "upper L underdot overbar"
@@ -242,9 +208,7 @@
     "key": "1E4C",
     "mappings": {
       "default": {
-        "default": "latin capital letter o with tilde and acute",
-        "alternative": "latin capital letter o tilde acute",
-        "short": "cap o tilde acute"
+        "default": "cap O tilde acute"
       },
       "mathspeak": {
         "default": "upper O tilde acute"
@@ -256,9 +220,7 @@
     "key": "1E4E",
     "mappings": {
       "default": {
-        "default": "latin capital letter o with tilde and diaeresis",
-        "alternative": "latin capital letter o tilde double overdot",
-        "short": "cap o tilde double overdot"
+        "default": "cap O tilde double overdot"
       },
       "mathspeak": {
         "default": "upper O tilde double overdot"
@@ -270,9 +232,7 @@
     "key": "1E50",
     "mappings": {
       "default": {
-        "default": "latin capital letter o with macron and grave",
-        "alternative": "latin capital letter o overbar grave",
-        "short": "cap o overbar grave"
+        "default": "cap O overbar grave"
       },
       "mathspeak": {
         "default": "upper O overbar grave"
@@ -284,9 +244,7 @@
     "key": "1E52",
     "mappings": {
       "default": {
-        "default": "latin capital letter o with macron and acute",
-        "alternative": "latin capital letter o overbar acute",
-        "short": "cap o overbar acute"
+        "default": "cap O overbar acute"
       },
       "mathspeak": {
         "default": "upper O overbar acute"
@@ -298,9 +256,7 @@
     "key": "1E5C",
     "mappings": {
       "default": {
-        "default": "latin capital letter r with dot below and macron",
-        "alternative": "cap r underdot and overbar",
-        "short": "cap r overbar underdot"
+        "default": "cap R overbar underdot"
       },
       "mathspeak": {
         "default": "upper R overbar underdot"
@@ -312,9 +268,7 @@
     "key": "1E64",
     "mappings": {
       "default": {
-        "default": "latin capital letter s with acute dot above",
-        "alternative": "latin capital letter s acute overdot",
-        "short": "cap s acute overdot"
+        "default": "cap S acute overdot"
       },
       "mathspeak": {
         "default": "upper S acute overdot"
@@ -326,9 +280,7 @@
     "key": "1E66",
     "mappings": {
       "default": {
-        "default": "latin capital letter s with caron and dot above",
-        "alternative": "latin capital letter s caron overdot",
-        "short": "cap s caron overdot"
+        "default": "cap S caron overdot"
       },
       "mathspeak": {
         "default": "upper S caron overdot"
@@ -340,9 +292,7 @@
     "key": "1E68",
     "mappings": {
       "default": {
-        "default": "latin capital letter s with dot below and dot above",
-        "alternative": "latin capital letter s underdot overdot",
-        "short": "cap s underdot overdot"
+        "default": "cap S underdot overdot"
       },
       "mathspeak": {
         "default": "upper S underdot overdot"
@@ -354,9 +304,7 @@
     "key": "1E78",
     "mappings": {
       "default": {
-        "default": "latin capital letter u with tilde and acute",
-        "alternative": "latin capital letter u tilde acute",
-        "short": "cap u tilde acute"
+        "default": "cap U tilde acute"
       },
       "mathspeak": {
         "default": "upper U tilde acute"
@@ -368,9 +316,7 @@
     "key": "1E7A",
     "mappings": {
       "default": {
-        "default": "latin capital letter u with macron and diaeresis",
-        "alternative": "latin capital letter u overbar double overdot",
-        "short": "cap u overbar double overdot"
+        "default": "cap U overbar double overdot"
       },
       "mathspeak": {
         "default": "upper U overbar double overdot"
@@ -382,9 +328,7 @@
     "key": "1EA4",
     "mappings": {
       "default": {
-        "default": "latin capital letter a with circumflex and acute",
-        "alternative": "latin capital letter a hat acute",
-        "short": "cap a hat acute"
+        "default": "cap A hat acute"
       },
       "mathspeak": {
         "default": "upper A hat acute"
@@ -396,9 +340,7 @@
     "key": "1EA6",
     "mappings": {
       "default": {
-        "default": "latin capital letter a with circumflex and grave",
-        "alternative": "latin capital letter a hat grave",
-        "short": "cap a hat grave"
+        "default": "cap A hat grave"
       },
       "mathspeak": {
         "default": "upper A hat grave"
@@ -410,9 +352,7 @@
     "key": "1EA8",
     "mappings": {
       "default": {
-        "default": "latin capital letter a with circumflex and hook above",
-        "alternative": "latin capital letter a hat hook",
-        "short": "cap a hat hook"
+        "default": "cap A hat hook"
       },
       "mathspeak": {
         "default": "upper A hat hook"
@@ -424,9 +364,7 @@
     "key": "1EAA",
     "mappings": {
       "default": {
-        "default": "latin capital letter a with circumflex and tilde",
-        "alternative": "latin capital letter a hat tilde",
-        "short": "cap a hat tilde"
+        "default": "cap A hat tilde"
       },
       "mathspeak": {
         "default": "upper A hat tilde"
@@ -438,9 +376,7 @@
     "key": "1EAC",
     "mappings": {
       "default": {
-        "default": "latin capital letter a with circumflex and dot below",
-        "alternative": "latin capital letter a hat underdot",
-        "short": "cap a hat underdot"
+        "default": "cap A hat underdot"
       },
       "mathspeak": {
         "default": "upper A hat underdot"
@@ -452,9 +388,7 @@
     "key": "1EAE",
     "mappings": {
       "default": {
-        "default": "latin capital letter a with breve and acute",
-        "alternative": "latin capital letter a breve acute",
-        "short": "cap a breve acute"
+        "default": "cap A breve acute"
       },
       "mathspeak": {
         "default": "upper A breve acute"
@@ -466,9 +400,7 @@
     "key": "1EB0",
     "mappings": {
       "default": {
-        "default": "latin capital letter a with breve and grave",
-        "alternative": "latin capital letter a breve grave",
-        "short": "cap a breve grave"
+        "default": "cap A breve grave"
       },
       "mathspeak": {
         "default": "upper A breve grave"
@@ -480,9 +412,7 @@
     "key": "1EB2",
     "mappings": {
       "default": {
-        "default": "latin capital letter a with breve and hook above",
-        "alternative": "latin capital letter a breve hook",
-        "short": "cap a breve hook"
+        "default": "cap A breve hook"
       },
       "mathspeak": {
         "default": "upper A breve hook"
@@ -494,9 +424,7 @@
     "key": "1EB4",
     "mappings": {
       "default": {
-        "default": "latin capital letter a with breve and tilde",
-        "alternative": "latin capital letter a breve tilde",
-        "short": "cap a breve tilde"
+        "default": "cap A breve tilde"
       },
       "mathspeak": {
         "default": "upper A breve tilde"
@@ -508,9 +436,7 @@
     "key": "1EB6",
     "mappings": {
       "default": {
-        "default": "latin capital letter a with breve and dot below",
-        "alternative": "latin capital letter a breve underdot",
-        "short": "cap a breve underdot"
+        "default": "cap A breve underdot"
       },
       "mathspeak": {
         "default": "upper A breve underdot"
@@ -522,9 +448,7 @@
     "key": "1EBE",
     "mappings": {
       "default": {
-        "default": "latin capital letter e with circumflex and acute",
-        "alternative": "latin capital letter e hat acute",
-        "short": "cap e hat acute"
+        "default": "cap E hat acute"
       },
       "mathspeak": {
         "default": "upper E hat acute"
@@ -536,9 +460,7 @@
     "key": "1EC0",
     "mappings": {
       "default": {
-        "default": "latin capital letter e with circumflex and grave",
-        "alternative": "latin capital letter e hat grave",
-        "short": "cap e hat grave"
+        "default": "cap E hat grave"
       },
       "mathspeak": {
         "default": "upper E hat grave"
@@ -550,9 +472,7 @@
     "key": "1EC2",
     "mappings": {
       "default": {
-        "default": "latin capital letter e with circumflex and hook above",
-        "alternative": "latin capital letter e hat hook",
-        "short": "cap e hat hook"
+        "default": "cap E hat hook"
       },
       "mathspeak": {
         "default": "upper E hat hook"
@@ -564,9 +484,7 @@
     "key": "1EC4",
     "mappings": {
       "default": {
-        "default": "latin capital letter e with circumflex and tilde",
-        "alternative": "latin capital letter e hat tilde",
-        "short": "cap e hat tilde"
+        "default": "cap E hat tilde"
       },
       "mathspeak": {
         "default": "upper E hat tilde"
@@ -578,9 +496,7 @@
     "key": "1EC6",
     "mappings": {
       "default": {
-        "default": "latin capital letter e with circumflex and dot below",
-        "alternative": "latin capital letter e hat underdot",
-        "short": "cap e hat underdot"
+        "default": "cap E hat underdot"
       },
       "mathspeak": {
         "default": "upper E hat underdot"
@@ -592,9 +508,7 @@
     "key": "1ED0",
     "mappings": {
       "default": {
-        "default": "latin capital letter o with circumflex and acute",
-        "alternative": "latin capital letter o hat acute",
-        "short": "cap o hat acute"
+        "default": "cap O hat acute"
       },
       "mathspeak": {
         "default": "upper O hat acute"
@@ -606,9 +520,7 @@
     "key": "1ED2",
     "mappings": {
       "default": {
-        "default": "latin capital letter o with circumflex and grave",
-        "alternative": "latin capital letter o hat grave",
-        "short": "cap o hat grave"
+        "default": "cap O hat grave"
       },
       "mathspeak": {
         "default": "upper O hat grave"
@@ -620,9 +532,7 @@
     "key": "1ED4",
     "mappings": {
       "default": {
-        "default": "latin capital letter o with circumflex and hook above",
-        "alternative": "latin capital letter o hat hook",
-        "short": "cap o hat hook"
+        "default": "cap O hat hook"
       },
       "mathspeak": {
         "default": "upper O hat hook"
@@ -634,9 +544,7 @@
     "key": "1ED6",
     "mappings": {
       "default": {
-        "default": "latin capital letter o with circumflex and tilde",
-        "alternative": "latin capital letter o hat tilde",
-        "short": "cap o hat tilde"
+        "default": "cap O hat tilde"
       },
       "mathspeak": {
         "default": "upper O hat tilde"
@@ -648,9 +556,7 @@
     "key": "1ED8",
     "mappings": {
       "default": {
-        "default": "latin capital letter o with circumflex and dot below",
-        "alternative": "latin capital letter o hat underdot",
-        "short": "cap o hat underdot"
+        "default": "cap O hat underdot"
       },
       "mathspeak": {
         "default": "upper O hat underdot"
@@ -662,9 +568,7 @@
     "key": "1EDA",
     "mappings": {
       "default": {
-        "default": "latin capital letter o with horn and acute",
-        "alternative": "latin capital letter o acute prime",
-        "short": "cap o acute prime"
+        "default": "cap O acute prime"
       },
       "mathspeak": {
         "default": "upper O acute prime"
@@ -676,9 +580,7 @@
     "key": "1EDC",
     "mappings": {
       "default": {
-        "default": "latin capital letter o with horn and grave",
-        "alternative": "latin capital letter o grave prime",
-        "short": "cap o grave prime"
+        "default": "cap O grave prime"
       },
       "mathspeak": {
         "default": "upper O grave prime"
@@ -690,9 +592,7 @@
     "key": "1EDE",
     "mappings": {
       "default": {
-        "default": "latin capital letter o with horn and hook above",
-        "alternative": "latin capital letter o hook prime",
-        "short": "cap o hook prime"
+        "default": "cap O hook prime"
       },
       "mathspeak": {
         "default": "upper O hook prime"
@@ -704,9 +604,7 @@
     "key": "1EE0",
     "mappings": {
       "default": {
-        "default": "latin capital letter o with horn and tilde",
-        "alternative": "latin capital letter o tilde prime",
-        "short": "cap o tilde prime"
+        "default": "cap O tilde prime"
       },
       "mathspeak": {
         "default": "upper O tilde prime"
@@ -718,9 +616,7 @@
     "key": "1EE2",
     "mappings": {
       "default": {
-        "default": "latin capital letter o with horn and dot below",
-        "alternative": "latin capital letter o underdot prime",
-        "short": "cap o underdot prime"
+        "default": "cap O underdot prime"
       },
       "mathspeak": {
         "default": "upper O underdot prime"
@@ -732,9 +628,7 @@
     "key": "1EE8",
     "mappings": {
       "default": {
-        "default": "latin capital letter u with horn and acute",
-        "alternative": "latin capital letter u acute prime",
-        "short": "cap u acute prime"
+        "default": "cap U acute prime"
       },
       "mathspeak": {
         "default": "upper U acute prime"
@@ -746,9 +640,7 @@
     "key": "1EEA",
     "mappings": {
       "default": {
-        "default": "latin capital letter u with horn and grave",
-        "alternative": "latin capital letter u grave prime",
-        "short": "cap u grave prime"
+        "default": "cap U grave prime"
       },
       "mathspeak": {
         "default": "upper U grave prime"
@@ -760,9 +652,7 @@
     "key": "1EEC",
     "mappings": {
       "default": {
-        "default": "latin capital letter u with horn and hook above",
-        "alternative": "latin capital letter u hook prime",
-        "short": "cap u hook prime"
+        "default": "cap U hook prime"
       },
       "mathspeak": {
         "default": "upper U hook prime"
@@ -774,9 +664,7 @@
     "key": "1EEE",
     "mappings": {
       "default": {
-        "default": "latin capital letter u with horn and tilde",
-        "alternative": "latin capital letter u tilde prime",
-        "short": "cap u tilde prime"
+        "default": "cap U tilde prime"
       },
       "mathspeak": {
         "default": "upper U tilde prime"
@@ -788,9 +676,7 @@
     "key": "1EF0",
     "mappings": {
       "default": {
-        "default": "latin capital letter u with horn and dot below",
-        "alternative": "latin capital letter u underdot prime",
-        "short": "cap u underdot prime"
+        "default": "cap U underdot prime"
       },
       "mathspeak": {
         "default": "upper U underdot prime"

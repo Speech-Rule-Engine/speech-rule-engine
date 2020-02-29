@@ -341,10 +341,7 @@ sre.Grammar.correctFont_ = function(text, correction) {
   if (!correction || !text) {
     return text;
   }
-  // TODO: Combine with localFont.
-  correction = sre.Messages.MS_FUNC.FONT_REGEXP(sre.L10n.getLocale().FONT[correction] || correction);
-  // var correctionComp = correction.split(/ |-/);
-  // var regExp = new RegExp('^' + correctionComp.join('( |-)') + '( |-)');
+  correction = sre.Messages.MS_FUNC.FONT_REGEXP(sre.Locale.localFont(correction));
   return text.replace(correction, '');
 };
 
@@ -373,3 +370,6 @@ sre.Grammar.getInstance().setPreprocessor('annotation',
                                           sre.Grammar.addAnnotation_);
 sre.Grammar.getInstance().setPreprocessor('noTranslateText',
                                           sre.Grammar.noTranslateText_);
+sre.Grammar.getInstance().setCorrection('ignoreCaps',
+                                        sre.Grammar.correctFont_);
+

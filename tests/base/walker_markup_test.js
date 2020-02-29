@@ -121,12 +121,12 @@ sre.WalkerMarkupTest.prototype.runMoveTests_ = function(markup) {
   sre.Engine.getInstance().markup = markup;
   this.startWalker_();
   this.executeTest_(null,
-      'x equals StartFraction negative b plus-or-minus StartRoot' +
+      'x equals StartFraction negative b plus or minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
   this.executeTest_('X', 'equality');
   this.executeTest_('DOWN', 'x');
   this.executeTest_('RIGHT',
-      'equals StartFraction negative b plus-or-minus StartRoot' +
+      'equals StartFraction negative b plus or minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
 };
 

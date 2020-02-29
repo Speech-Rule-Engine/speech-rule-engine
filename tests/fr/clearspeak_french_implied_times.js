@@ -2036,7 +2036,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testExtra009 = function() {
       '<mi>v</mi></mrow>   <mo>)</mo></mrow><mo>=</mo><mo>−</mo><mrow><mo>(' +
       '</mo>    <mrow>     <mi>u</mi><mi>v</mi></mrow>   <mo>)</mo></mrow>' +
       '</mrow>   </semantics></math>';
-  var speech = 'négatif u de v, égale u de négatif v, égale négatif u v';
+  var speech = 'négatif u de v, égale u de négatif v, égale négatif u de v';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2154,7 +2154,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testExtra019 = function() {
   var mathml = '<math><mrow><mi>V</mi><mo>=</mo><mi mathvariant="script">l' +
       '</mi><mi>w</mi><mrow><mo>(</mo><mn>8</mn><mo>)</mo></mrow></mrow>' +
       '</math>';
-  var speech = 'V égale l en script, w de 8';
+  var speech = 'V égale l de ronde, w de 8';
   // w is considered a simple function.
   //var speech = '';
   this.executeRuleTest(mathml, speech, preference);

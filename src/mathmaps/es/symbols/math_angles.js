@@ -30,6 +30,24 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "299B",
+    "mappings": {
+      "default": {
+        "default": "Ángulo medido de apertura a la izquierda"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "299C",
+    "mappings": {
+      "default": {
+        "default": "Variante de ángulo recto con cuadrado"
+      }
+    }
+  },
+  {
     "key": "299D",
     "mappings": {
       "default": {
@@ -37,6 +55,60 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "299E",
+    "mappings": {
+      "default": {
+        "default": "Ángulo con S dentro"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "299F",
+    "mappings": {
+      "default": {
+        "default": "Ángulo agudo"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29A0",
+    "mappings": {
+      "default": {
+        "default": "Ángulo esférico de apertura a la izquierda"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29A1",
+    "mappings": {
+      "default": {
+        "default": "Apertura de ángulo esférico"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29A2",
+    "mappings": {
+      "default": {
+        "default": "Ángulo de giro"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29A3",
+    "mappings": {
+      "default": {
+        "default": "Ángulo invertido"
+      }
+    }
   },
   {
     "key": "29A4",
