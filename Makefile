@@ -227,7 +227,7 @@ $(IEMAPS_FILE):
 	@for j in $(LOCALES); do\
 		for dir in $(MAPS); do\
 			for i in $(JSON_SRC)/$$j/$$dir/*.js; do\
-				echo '"'`basename $$j`'/'`basename $$i`'": '  >> $(IEMAPS_FILE); \
+				echo '"'`basename $$j`/$$dir/`basename $$i`'": '  >> $(IEMAPS_FILE); \
 				$(JSON_MINIFY) $$i >> $(IEMAPS_FILE); \
 				echo ','  >> $(IEMAPS_FILE); \
 			done; \

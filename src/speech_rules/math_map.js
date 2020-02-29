@@ -45,6 +45,10 @@ sre.MathMap = function() {
    */
   this.store = sre.MathCompoundStore.getInstance();
 
+  /**
+   * Methods for parsing json structures.
+   * @type {Object.<function(Array.<string>)>}
+   */
   this.addRules = {
     functions: goog.bind(this.store.addFunctionRules, this.store),
     symbols: goog.bind(this.store.addSymbolRules, this.store),
@@ -71,7 +75,7 @@ sre.Engine.registerTest(function() {
 });
 
 
-sre.MathMap.prototype.retrieveFilesNew = function(locale) {
+sre.MathMap.prototype.retrieveFiles = function(locale) {
   var file = sre.BaseUtil.makePath(sre.SystemExternal.jsonPath) +
       locale + '.js';
   switch (sre.Engine.getInstance().mode) {
@@ -85,11 +89,8 @@ sre.MathMap.prototype.retrieveFilesNew = function(locale) {
             });
       break;
     case sre.Engine.Mode.HTTP:
-      var isIE = sre.Engine.getInstance().isIE;
       sre.MathMap.toFetch_++;
-      isIE ?
-        sre.MathMap.getJsonIE_(file, null) :
-        this.getJsonAjax_(file);
+      this.getJsonAjax_(file);
       break;
     case sre.Engine.Mode.SYNC:
     default:
@@ -102,6 +103,10 @@ sre.MathMap.prototype.retrieveFilesNew = function(locale) {
 
 sre.MathMap.prototype.parseMaps = function(json) {
   var js = /** @type {!Object<Array>} */(JSON.parse(json));
+  this.addMaps(js);
+};
+
+sre.MathMap.prototype.addMaps = function(js) {
   for (var i = 0, key; key = Object.keys(js)[i]; i++) {
     var info = key.split('/');
     js[key].forEach(this.addRules[info[1]]);
@@ -113,40 +118,37 @@ sre.MathMap.prototype.parseMaps = function(json) {
  * Retrieves mappings and adds them to the respective stores.
  */
 sre.MathMap.prototype.retrieveMaps = function() {
+  if (sre.Engine.getInstance().isIE &&
+      sre.Engine.getInstance().mode === sre.Engine.Mode.HTTP) {
+    this.getJsonIE_();
+    return;
+  }
   for (var i = 0; i < sre.Variables.LOCALES.length; i++) {
     var locale = sre.Variables.LOCALES[i];
     sre.AlphabetGenerator.generate(locale, this.store);
-    this.retrieveFilesNew(locale);
+    this.retrieveFiles(locale);
   }
 };
 
 
 /**
  * Gets JSON elements from the global JSON object in case of IE browsers.
- * @param {string} file The name of a JSON file.
- * @param {function(JSONType)|null} func Method adding the rules.
  * @param {number=} opt_count Optional counter argument for callback.
  * @private
  */
-sre.MathMap.getJsonIE_ = function(file, func, opt_count) {
+sre.MathMap.prototype.getJsonIE_ = function(opt_count) {
   var count = opt_count || 1;
   if (!sre.BrowserUtil.mapsForIE) {
     if (count <= 5) {
       setTimeout(
-          function() {sre.MathMap.getJsonIE_(file, func, count++);},
+        goog.bind(function() {this.getJsonIE_(count++);}, this),
           300);
     } else {
       sre.MathMap.toFetch_--;
     }
     return;
   }
-  for (var i = 0; i < sre.Variables.LOCALES.length; i++) {
-    var locale = sre.Variables.LOCALES[i];
-    var json = sre.BrowserUtil.mapsForIE[locale + '/' + file];
-    if (json) {
-      json.forEach(function(x) {func(x);});
-    }
-  }
+  this.addMaps(sre.BrowserUtil.mapsForIE);
   sre.MathMap.toFetch_--;
 };
 
@@ -177,29 +179,29 @@ sre.MathMap.loadFile = function(file) {
 };
 
 
-/**
- * Loads a list of JSON files.
- * @param {Array.<string>} files An array of valid filenames.
- * @return {Array.<string>} A string representing JSON array.
- */
-sre.MathMap.loadFiles = function(files) {
-  return files.map(sre.MathMap.loadFile);
-};
+// /**
+//  * Loads a list of JSON files.
+//  * @param {Array.<string>} files An array of valid filenames.
+//  * @return {Array.<string>} A string representing JSON array.
+//  */
+// sre.MathMap.loadFiles = function(files) {
+//   return files.map(sre.MathMap.loadFile);
+// };
 
 
-/**
- * Creates an array of JSON objects from a list of files.
- * @param {Array.<string>} files An array of filenames.
- * @return {Array.<JSONType>} Array of JSON objects.
- */
-sre.MathMap.parseFiles = function(files) {
-  var strs = sre.MathMap.loadFiles(files);
+// /**
+//  * Creates an array of JSON objects from a list of files.
+//  * @param {Array.<string>} files An array of filenames.
+//  * @return {Array.<JSONType>} Array of JSON objects.
+//  */
+// sre.MathMap.parseFiles = function(files) {
+//   var strs = sre.MathMap.loadFiles(files);
 
-  return [].concat.apply([], strs.map(
-      // Note: As JSON.parse does not expect the value index as the second
-      // parameter, we wrap it.
-      function(value) { return JSON.parse(value); }));
-};
+//   return [].concat.apply([], strs.map(
+//       // Note: As JSON.parse does not expect the value index as the second
+//       // parameter, we wrap it.
+//       function(value) { return JSON.parse(value); }));
+// };
 
 
 /**
