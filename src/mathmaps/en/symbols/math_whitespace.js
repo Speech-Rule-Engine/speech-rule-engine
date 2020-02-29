@@ -265,8 +265,8 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "function application",
-        "short": "of"
+        "default": "of",
+        "alternative": "function application"
       }
     },
     "key": "2061"
@@ -275,8 +275,8 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "invisible times",
-        "short": "times"
+        "default": "times",
+        "alternative": "invisible times"
       },
       "mathspeak": {
         "nemeth": "⠈⠡"
@@ -288,8 +288,8 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "invisible separator",
-        "short": "separator"
+        "default": "separator",
+        "alternative": "invisible separator"
       }
     },
     "key": "2063"
@@ -298,8 +298,8 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "invisible plus",
-        "short": "plus"
+        "default": "plus",
+        "alternative": "invisible plus"
       }
     },
     "key": "2064"

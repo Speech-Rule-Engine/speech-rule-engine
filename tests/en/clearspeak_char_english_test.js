@@ -4177,9 +4177,9 @@ sre.ClearspeakCharEnglishTest.prototype.testClearspeakChars = function() {
   this.executeCharTest('☆', ['white star']);
   this.executeCharTest('⚪', ['white circle']);
   this.executeCharTest('⚫', ['black circle']);
-  this.executeCharTest('✅', ['white check']);
-  this.executeCharTest('✓', ['check']);
-  this.executeCharTest('✔', ['heavy check']);
+  this.executeCharTest('✅', ['white check mark']);
+  this.executeCharTest('✓', ['check mark']);
+  this.executeCharTest('✔', ['heavy check mark']);
   this.executeCharTest('✕', ['multiplication x']);
   this.executeCharTest('✖', ['heavy multiplication x']);
   this.executeCharTest('✗', ['ballot x']);
@@ -4263,8 +4263,8 @@ sre.ClearspeakCharEnglishTest.prototype.testClearspeakFunctions = function() {
   this.executeCharTest('sup', ['sup']);
   this.executeCharTest('injlim', ['colimit']);
   this.executeCharTest('inj lim', ['colimit']);
-  this.executeCharTest('projlim', ['limit']);
-  this.executeCharTest('proj lim', ['limit']);
+  this.executeCharTest('projlim', ['projective limit']);
+  this.executeCharTest('proj lim', ['projective limit']);
   this.executeCharTest('mod', ['mod']);
   this.executeCharTest('Pr', ['probability']);
   this.executeCharTest('cosh', ['hyperbolic cosine']);

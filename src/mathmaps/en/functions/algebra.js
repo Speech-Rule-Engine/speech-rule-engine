@@ -36,6 +36,9 @@
      },
      "mathspeak": {
        "default": "hom"
+     },
+     "clearspeak": {
+       "default": "hom"
      }
    },
    "key": "hom",
