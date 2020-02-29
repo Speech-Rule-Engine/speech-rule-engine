@@ -2,8 +2,7 @@
   {"category": "Hyperbolic",
    "mappings": {
      "default": {
-       "default": "hyperbolic cosine function",
-       "short": "hyperbolic cosine"
+       "default": "hyperbolic cosine"
      }
    },
    "key": "cosh",
@@ -12,32 +11,34 @@
   {"category": "Hyperbolic",
    "mappings": {
      "default": {
-       "default": "hyperbolic cotangent function",
-       "short": "hyperbolic cotangent"} },
+       "default": "hyperbolic cotangent"
+     }
+   },
    "key": "coth",
    "names": ["coth"]
   },
   {"category": "Hyperbolic",
    "mappings": {
      "default": {
-       "default": "hyperbolic cosecant function",
-       "short": "hyperbolic cosecant"} },
+       "default": "hyperbolic cosecant"
+     }
+   },
    "key": "csch",
    "names": ["csch"]
   },
   {"category": "Hyperbolic",
    "mappings": {
      "default": {
-       "default": "hyperbolic secant function",
-       "short": "hyperbolic secant"} },
+       "default": "hyperbolic secant"
+     }
+   },
    "key": "sech",
    "names": ["sech"]
   },
   {"category": "Hyperbolic",
    "mappings": {
      "default": {
-       "default": "hyperbolic sine function",
-       "short": "hyperbolic sine"
+       "default": "hyperbolic sine"
      }
    },
    "key": "sinh",
@@ -46,8 +47,9 @@
   {"category": "Hyperbolic",
    "mappings": {
      "default": {
-       "default": "hyperbolic tangent function",
-       "short": "hyperbolic tangent"} },
+       "default": "hyperbolic tangent"
+     }
+   },
    "key": "tanh",
    "names": ["tanh"]
   },
@@ -55,54 +57,54 @@
   {"category": "Area",
    "mappings": {
      "default": {
-       "default": "inverse hyperbolic cosine function",
-       "alternative": "area hyperbolic cosine function",
-       "short": "area hyperbolic cosine"} },
+       "default": "area hyperbolic cosine"
+     }
+   },
    "key": "arcosh",
    "names": ["arcosh", "arccosh"]
   },
   {"category": "Area",
    "mappings": {
      "default": {
-       "default": "inverse hyperbolic cotangent function",
-       "alternative": "area hyperbolic cotangent function",
-       "short": "area hyperbolic cotangent"} },
+       "default": "area hyperbolic cotangent"
+     }
+   },
    "key": "arcoth",
    "names": ["arcoth", "arccoth"]
   },
   {"category": "Area",
    "mappings": {
      "default": {
-       "default": "inverse hyperbolic cosecant function",
-       "alternative": "area hyperbolic cosecant function",
-       "short": "area hyperbolic cosecant"} },
+       "default": "area hyperbolic cosecant"
+     }
+   },
    "key": "arcsch",
    "names": ["arcsch", "arccsch"]
   },
   {"category": "Area",
    "mappings": {
      "default": {
-       "default": "inverse hyperbolic secant function",
-       "alternative": "area hyperbolic secant function",
-       "short": "area hyperbolic secant"} },
+       "default": "area hyperbolic secant"
+     }
+   },
    "key": "arsech",
    "names": ["arsech", "arcsech"]
   },
   {"category": "Area",
    "mappings": {
      "default": {
-       "default": "inverse hyperbolic sine function",
-       "alternative": "area hyperbolic sine function",
-       "short": "area hyperbolic sine"} },
+       "default": "area hyperbolic sine"
+     }
+   },
    "key": "arsinh",
    "names": ["arsinh", "arcsinh"]
   },
   {"category": "Area",
    "mappings": {
      "default": {
-       "default": "inverse hyperbolic tangent function",
-       "alternative": "area hyperbolic tangent function",
-       "short": "area hyperbolic tangent"} },
+       "default": "area hyperbolic tangent"
+     }
+   },
    "key": "artanh",
    "names": ["artanh", "arctanh"]
   }

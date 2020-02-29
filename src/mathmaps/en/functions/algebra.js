@@ -11,11 +11,10 @@
   {"category": "Algebra",
    "mappings": {
      "default": {
-       "default": "determinant",
-       "short": "det"
-     },
-     "clearspeak": {
        "default": "determinant"
+     },
+     "mathspeak": {
+       "default": "det"
      }
    },
    "key": "det",
@@ -33,8 +32,10 @@
   {"category": "Algebra",
    "mappings": {
      "default": {
-       "default": "homomorphism",
-       "short": "hom"
+       "default": "homomorphism"
+     },
+     "mathspeak": {
+       "default": "hom"
      }
    },
    "key": "hom",

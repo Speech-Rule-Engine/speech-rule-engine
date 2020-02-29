@@ -2,9 +2,7 @@
   {"category": "Logarithm",
    "mappings": {
      "default": {
-       "default": "logarithm",
-       "alternative": "logarithm function",
-       "short": "log"
+       "default": "log"
      }
    },
    "key": "log",
@@ -13,9 +11,7 @@
   {"category": "Logarithm",
    "mappings": {
      "default": {
-       "default": "natural logarithm",
-       "alternative": "natural logarithm function",
-       "short": "natural log"
+       "default": "natural log"
      },
      "mathspeak": {
        "default": "ln"
@@ -32,16 +28,21 @@
   {"category": "Logarithm",
    "mappings": {
      "default": {
-       "default": "logarithm base 10",
-       "short": "log base 10"} },
+       "default": "log base 10"
+     }
+   },
    "key": "lg",
    "names": ["lg"]},
   {"category": "Elementary",
    "mappings": {
      "default": {
-       "default": "exponential",
-       "alternative": "exponential function",
-       "short": "exp"
+       "default": "exponential"
+     },
+     "mathspeak": {
+       "default": "exp"
+     },
+     "clearspeak": {
+       "default": "exp"
      }
    },
    "key": "exp",
