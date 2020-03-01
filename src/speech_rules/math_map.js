@@ -45,6 +45,8 @@ sre.MathMap = function() {
    */
   this.store = sre.MathCompoundStore.getInstance();
 
+  this.loaded_ = [];
+
   /**
    * Methods for parsing json structures.
    * @type {Object.<function(Array.<string>)>}
@@ -55,13 +57,35 @@ sre.MathMap = function() {
     units: goog.bind(this.store.addUnitRules, this.store)
   };
 
-  var timeIn = (new Date()).getTime();
-  this.retrieveMaps();
-  var timeOut = (new Date()).getTime();
-  console.log('Time:', timeOut - timeIn);
-
 };
 goog.addSingletonGetter(sre.MathMap);
+
+
+sre.MathMap.oldInst_ = sre.MathMap.getInstance;
+sre.MathMap.getInstance = function() {
+  var instance = sre.MathMap.oldInst_();
+  instance.loadLocale();
+  return instance;
+};
+
+
+sre.MathMap.prototype.loadLocale = function() {
+  var timeIn = (new Date()).getTime();
+  var locale = sre.Engine.getInstance().locale;
+  if (this.loaded_.indexOf(locale) === -1) {
+    var async = sre.Engine.getInstance().mode === sre.Engine.Mode.ASYNC;
+    if (async) {
+      sre.Engine.getInstance().mode = sre.Engine.Mode.SYNC;
+    }
+    this.loaded_.push(locale);
+    this.retrieveMaps(locale);
+    if (async) {
+      sre.Engine.getInstance().mode = sre.Engine.Mode.ASYNC;
+    }
+  }
+  var timeOut = (new Date()).getTime();
+  console.log('Time:', timeOut - timeIn);
+};
 
 
 /**
@@ -75,17 +99,22 @@ sre.Engine.registerTest(function() {
 });
 
 
+/**
+ * Retrieves JSON rule mappings for a given locale.
+ * @param {string} locale The target locale.
+ */
 sre.MathMap.prototype.retrieveFiles = function(locale) {
   var file = sre.BaseUtil.makePath(sre.SystemExternal.jsonPath) +
       locale + '.js';
   switch (sre.Engine.getInstance().mode) {
     case sre.Engine.Mode.ASYNC:
       sre.MathMap.toFetch_++;
+      var parse = goog.bind(this.parseMaps, this);
         sre.MathMap.fromFile_(file,
             function(err, json) {
               sre.MathMap.toFetch_--;
               if (err) return;
-              goog.bind(this.parse, this)(json);
+              parse(json);
             });
       break;
     case sre.Engine.Mode.HTTP:
@@ -106,6 +135,7 @@ sre.MathMap.prototype.parseMaps = function(json) {
   this.addMaps(js);
 };
 
+// Optional locale argument for ie?
 sre.MathMap.prototype.addMaps = function(js) {
   for (var i = 0, key; key = Object.keys(js)[i]; i++) {
     var info = key.split('/');
@@ -116,18 +146,16 @@ sre.MathMap.prototype.addMaps = function(js) {
 
 /**
  * Retrieves mappings and adds them to the respective stores.
+ * @param {string} locale The target locale.
  */
-sre.MathMap.prototype.retrieveMaps = function() {
+sre.MathMap.prototype.retrieveMaps = function(locale) {
   if (sre.Engine.getInstance().isIE &&
       sre.Engine.getInstance().mode === sre.Engine.Mode.HTTP) {
     this.getJsonIE_();
     return;
   }
-  for (var i = 0; i < sre.Variables.LOCALES.length; i++) {
-    var locale = sre.Variables.LOCALES[i];
-    sre.AlphabetGenerator.generate(locale, this.store);
-    this.retrieveFiles(locale);
-  }
+  sre.AlphabetGenerator.generate(locale, this.store);
+  this.retrieveFiles(locale);
 };
 
 
