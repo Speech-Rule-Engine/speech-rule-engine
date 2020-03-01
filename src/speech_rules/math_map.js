@@ -174,8 +174,9 @@ sre.MathMap.loadFile = function(file) {
   try {
     return sre.MathMap.readJSON_(file);
   } catch (x) {
-    console.error('Unable to load file: ' + file + ', error: ' + x);
+    console.error('Unable to load file: ' + file + '\n' + x);
   }
+  return '{}';
 };
 
 
