@@ -135,11 +135,20 @@ sre.MathMap.prototype.parseMaps = function(json) {
   this.addMaps(js);
 };
 
-// Optional locale argument for ie?
-sre.MathMap.prototype.addMaps = function(js) {
-  for (var i = 0, key; key = Object.keys(js)[i]; i++) {
+
+/**
+ * Adds JSON mappings to the mathmap store.
+ * @param {!Object.<Array>} json The json mappings.
+ * @param {string=} opt_locale Optionally the locale for the mappings to
+ *     add. This is necessary for the single IE dictionary.
+ */
+sre.MathMap.prototype.addMaps = function(json, opt_locale) {
+  for (var i = 0, key; key = Object.keys(json)[i]; i++) {
     var info = key.split('/');
-    js[key].forEach(this.addRules[info[1]]);
+    if (opt_locale && opt_locale !== info[0]) {
+      continue;
+    }
+    json[key].forEach(this.addRules[info[1]]);
   }
 };
 
@@ -149,35 +158,34 @@ sre.MathMap.prototype.addMaps = function(js) {
  * @param {string} locale The target locale.
  */
 sre.MathMap.prototype.retrieveMaps = function(locale) {
+  sre.AlphabetGenerator.generate(locale, this.store);
   if (sre.Engine.getInstance().isIE &&
       sre.Engine.getInstance().mode === sre.Engine.Mode.HTTP) {
-    this.getJsonIE_();
+    this.getJsonIE_(locale);
     return;
   }
-  sre.AlphabetGenerator.generate(locale, this.store);
   this.retrieveFiles(locale);
 };
 
 
 /**
  * Gets JSON elements from the global JSON object in case of IE browsers.
+ * @param {string} locale The target locale.
  * @param {number=} opt_count Optional counter argument for callback.
  * @private
  */
-sre.MathMap.prototype.getJsonIE_ = function(opt_count) {
+sre.MathMap.prototype.getJsonIE_ = function(locale, opt_count) {
   var count = opt_count || 1;
+  console.log(sre.MathMap.toFetch_);
   if (!sre.BrowserUtil.mapsForIE) {
     if (count <= 5) {
       setTimeout(
-        goog.bind(function() {this.getJsonIE_(count++);}, this),
+        goog.bind(function() {this.getJsonIE_(locale, count++);}, this),
           300);
-    } else {
-      sre.MathMap.toFetch_--;
     }
     return;
   }
-  this.addMaps(sre.BrowserUtil.mapsForIE);
-  sre.MathMap.toFetch_--;
+  this.addMaps(sre.BrowserUtil.mapsForIE, locale);
 };
 
 
