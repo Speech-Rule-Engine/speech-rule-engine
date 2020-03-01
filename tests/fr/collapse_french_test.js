@@ -40,7 +40,6 @@ sre.CollapseFrenchTest = function() {
 
   this.domain = 'mathspeak';
   this.locale = 'fr';
-  // this.actual = true;
   this.setActive('CollapseFrench');
 };
 goog.inherits(sre.CollapseFrenchTest, sre.CollapseRuleTest);

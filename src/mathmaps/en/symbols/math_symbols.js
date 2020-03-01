@@ -1301,8 +1301,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "per sign",
-        "short": "per"
+        "default": "per"
       }
     },
     "key": "214C"

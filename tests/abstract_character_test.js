@@ -53,8 +53,7 @@ sre.AbstractCharacterTest.prototype.executeCharTest = function(char, answers) {
     } catch (err) {
       console.info('\nFailed Character: ' + char + ' (' +
                    this.domain + '.' + this.styles[i] + ')');
-      console.log(err);
-      // throw(err);
+      throw(err);
     }
   }
 };

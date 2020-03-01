@@ -84,7 +84,7 @@ sre.SemanticRuleTest.prototype.testUnitsSingle = function() {
 sre.SemanticRuleTest.prototype.testUnitsSimple = function() {
   this.executeRuleTest(
       '<mi>min</mi><mi mathvariant="normal" class="MathML-Unit">min</mi>',
-      'min of minutes'
+      'minimum of minutes'
   );
   this.executeRuleTest(
       '<mn>3</mn><mi mathvariant="normal" class="MathML-Unit">km</mi>',

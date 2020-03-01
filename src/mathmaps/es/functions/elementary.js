@@ -54,7 +54,7 @@
   {
     "key": "gcd",
     "names": [
-      "gcd"
+      "gcd", "mcd", "MCD"
     ],
     "mappings": {
       "default": {
@@ -66,7 +66,7 @@
   {
     "key": "lcm",
     "names": [
-      "lcm"
+      "lcm", "mcm", "MCM"
     ],
     "mappings": {
       "default": {
