@@ -108,17 +108,17 @@ sre.Locale.de = {
     // Embellishments
     // TODO: Grammar of numbers vs digits!
     'super': 'hoch',
-    'sub': 'subskript',
+    'sub': 'Index',
     'circled': 'eingekreist',
-    'parenthesized': ['in Klammern', sre.Locale.postfixCombiner],
+    'parenthesized': 'eingeklammert',
     'period': ['Punkt', sre.Locale.postfixCombiner],
     'negative-circled': 'schwarz eingekreist',
     'double-circled': 'doppelt eingekreist',
     'circled-sans-serif': 'eingekreist serifenlos',
     'negative-circled-sans-serif': 'schwarz eingekreist serifenlos',
     'comma': ['Komma', sre.Locale.postfixCombiner],
-    'squared': ['in Quadrat', sre.Locale.postfixCombiner],
-    'negative-squared': ['in schwarzen Quadrat', sre.Locale.postfixCombiner]
+    'squared': 'umrahmt',
+    'negative-squared': 'schwarz umrahmt'
   },
 
   ROLE: {
