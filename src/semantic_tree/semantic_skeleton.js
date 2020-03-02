@@ -260,34 +260,43 @@ sre.SemanticSkeleton.collapsedLeafs = function(var_args) {
 /**
  * Computes skeletal structure for a semantic tree folding together content and
  * child nodes in a "syntactic" manner.
+ * @param {!Element} mml A mml node to add a structure to.
  * @param {!sre.SemanticTree} tree A semantic tree.
  * @return {!sre.SemanticSkeleton} The skeletal structure.
  */
-sre.SemanticSkeleton.fromStructure = function(tree) {
-  return new sre.SemanticSkeleton(sre.SemanticSkeleton.tree_(tree.root));
+sre.SemanticSkeleton.fromStructure = function(mml, tree) {
+  return new sre.SemanticSkeleton(sre.SemanticSkeleton.tree_(mml, tree.root));
 };
 
 
 /**
  * Recursively computes skeletal structure for a semantic tree starting at the
  * given node; folding together content and child nodes in a "syntactic" manner.
+ * @param {Node} mml A mml node to add a structure to.
  * @param {sre.SemanticNode} node A semantic node.
  * @return {!sre.SemanticSkeleton.Sexp} The sexp structure.
  * @private
  */
-sre.SemanticSkeleton.tree_ = function(node) {
+sre.SemanticSkeleton.tree_ = function(mml, node) {
   if (!node) {
     return [];
   }
   if (!node.childNodes.length) {
     return node.id;
   }
-  var skeleton = [node.id];
+  var id = node.id;
+  var skeleton = [id];
+  var mmlChild = sre.XpathUtil.evalXPath(
+    './/*[@' + sre.EnrichMathml.Attribute.ID + '=' + id + ']', mml)[0];
   var children = sre.SemanticSkeleton.combineContentChildren(
       node, node.contentNodes.map(function(x) {return x;}),
       node.childNodes.map(function(x) {return x;}));
+  if (mmlChild) {
+    mmlChild.setAttribute(sre.EnrichMathml.Attribute.OWNS,
+                          children.map(x => x.id).join(' '));
+  }
   for (var i = 0, child; child = children[i]; i++) {
-    skeleton.push(sre.SemanticSkeleton.tree_(child));
+    skeleton.push(sre.SemanticSkeleton.tree_(mml, child));
   }
   return skeleton;
 };

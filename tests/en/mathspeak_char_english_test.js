@@ -3352,7 +3352,7 @@ sre.MathspeakCharEnglishTest.prototype.testMathspeakChars = function() {
   this.executeCharTest('‛', ['left reversed single quotation mark', 'left reversed single quotation mark', 'left reversed single quotation mark']);
   this.executeCharTest('“', ['left double quotation mark', 'left double quotation mark', 'left double quotation mark']);
   this.executeCharTest('”', ['right double quotation mark', 'right double quotation mark', 'right double quotation mark']);
-  this.executeCharTest('„', [' low right double quotation mark', ' low right double quotation mark', ' low right double quotation mark']);
+  this.executeCharTest('„', ['low right double quotation mark', 'low right double quotation mark', 'low right double quotation mark']);
   this.executeCharTest('‟', ['left reversed double quotation mark', 'left reversed double quotation mark', 'left reversed double quotation mark']);
   this.executeCharTest('†', ['dagger', 'dagger', 'dagger']);
   this.executeCharTest('‡', ['double dagger', 'double dagger', 'double dagger']);
@@ -4178,9 +4178,9 @@ sre.MathspeakCharEnglishTest.prototype.testMathspeakChars = function() {
   this.executeCharTest('☆', ['white star', 'white star', 'white star']);
   this.executeCharTest('⚪', ['white circle', 'white circle', 'white circle']);
   this.executeCharTest('⚫', ['black circle', 'black circle', 'black circle']);
-  this.executeCharTest('✅', ['white check', 'white check', 'white check']);
-  this.executeCharTest('✓', ['check', 'check', 'check']);
-  this.executeCharTest('✔', ['heavy check', 'heavy check', 'heavy check']);
+  this.executeCharTest('✅', ['white check mark', 'white check mark', 'white check mark']);
+  this.executeCharTest('✓', ['check mark', 'check mark', 'check mark']);
+  this.executeCharTest('✔', ['heavy check mark', 'heavy check mark', 'heavy check mark']);
   this.executeCharTest('✕', ['multiplication x', 'multiplication x', 'multiplication x']);
   this.executeCharTest('✖', ['heavy multiplication x', 'heavy multiplication x', 'heavy multiplication x']);
   this.executeCharTest('✗', ['ballot x', 'ballot x', 'ballot x']);
@@ -4264,8 +4264,8 @@ sre.MathspeakCharEnglishTest.prototype.testMathspeakFunctions = function() {
   this.executeCharTest('sup', ['sup', 'sup', 'sup']);
   this.executeCharTest('injlim', ['colimit', 'colimit', 'colimit']);
   this.executeCharTest('inj lim', ['colimit', 'colimit', 'colimit']);
-  this.executeCharTest('projlim', ['limit', 'limit', 'limit']);
-  this.executeCharTest('proj lim', ['limit', 'limit', 'limit']);
+  this.executeCharTest('projlim', ['projective limit', 'projective limit', 'projective limit']);
+  this.executeCharTest('proj lim', ['projective limit', 'projective limit', 'projective limit']);
   this.executeCharTest('mod', ['mod', 'mod', 'mod']);
   this.executeCharTest('Pr', ['probability', 'probability', 'probability']);
   this.executeCharTest('cosh', ['hyperbolic cosine', 'hyperbolic cosine', 'hyperbolic cosine']);

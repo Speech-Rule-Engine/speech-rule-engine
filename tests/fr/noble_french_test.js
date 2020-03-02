@@ -956,9 +956,9 @@ sre.NobleFrenchTest.prototype.testSample_55 = function() {
       '</mn></mrow></munder><munder><mo>&#x22C3;</mo><mrow><mi>k</mi>' +
       '<mo>&#x2265;</mo><mi>n</mi></mrow></munder><msub><mi>E</mi><mrow>' +
       '<mi>k</mi></mrow></msub><mo>.</mo></mrow>';
-  this.executeRuleTest(mml, 'liminf début souscript n flèche droite infini fin scripts E majuscule indice n position de base égale réunion de la famille début souscript n plus grand ou égal à 1 fin scripts intersection de la famille début souscript k plus grand ou égal à n fin scripts E majuscule indice k position de base virgule limsup début souscript n flèche droite infini fin scripts E majuscule indice n position de base égale intersection de la famille début souscript n plus grand ou égal à 1 fin scripts réunion de la famille début souscript k plus grand ou égal à n fin scripts E majuscule indice k position de base point', 'default');
-  this.executeRuleTest(mml, 'liminf début souscript n flèche droite infini fin scripts E majuscule sub n position de base égale réunion de la famille début souscript n plus grand ou égal à 1 fin scripts intersection de la famille début souscript k plus grand ou égal à n fin scripts E majuscule sub k position de base virgule limsup début souscript n flèche droite infini fin scripts E majuscule sub n position de base égale intersection de la famille début souscript n plus grand ou égal à 1 fin scripts réunion de la famille début souscript k plus grand ou égal à n fin scripts E majuscule sub k position de base point', 'brief');
-  this.executeRuleTest(mml, 'liminf début souscript n flèche droite infini fin scripts E majuscule sub n position de base égale réunion de la famille début souscript n plus grand ou égal à 1 fin scripts intersection de la famille début souscript k plus grand ou égal à n fin scripts E majuscule sub k position de base virgule limsup début souscript n flèche droite infini fin scripts E majuscule sub n position de base égale intersection de la famille début souscript n plus grand ou égal à 1 fin scripts réunion de la famille début souscript k plus grand ou égal à n fin scripts E majuscule sub k position de base point', 'sbrief');
+  this.executeRuleTest(mml, 'limite inferior début souscript n flèche droite infini fin scripts E majuscule indice n position de base égale réunion de la famille début souscript n plus grand ou égal à 1 fin scripts intersection de la famille début souscript k plus grand ou égal à n fin scripts E majuscule indice k position de base virgule limite superior début souscript n flèche droite infini fin scripts E majuscule indice n position de base égale intersection de la famille début souscript n plus grand ou égal à 1 fin scripts réunion de la famille début souscript k plus grand ou égal à n fin scripts E majuscule indice k position de base point', 'default');
+  this.executeRuleTest(mml, 'limite inferior début souscript n flèche droite infini fin scripts E majuscule sub n position de base égale réunion de la famille début souscript n plus grand ou égal à 1 fin scripts intersection de la famille début souscript k plus grand ou égal à n fin scripts E majuscule sub k position de base virgule limite superior début souscript n flèche droite infini fin scripts E majuscule sub n position de base égale intersection de la famille début souscript n plus grand ou égal à 1 fin scripts réunion de la famille début souscript k plus grand ou égal à n fin scripts E majuscule sub k position de base point', 'brief');
+  this.executeRuleTest(mml, 'limite inferior début souscript n flèche droite infini fin scripts E majuscule sub n position de base égale réunion de la famille début souscript n plus grand ou égal à 1 fin scripts intersection de la famille début souscript k plus grand ou égal à n fin scripts E majuscule sub k position de base virgule limite superior début souscript n flèche droite infini fin scripts E majuscule sub n position de base égale intersection de la famille début souscript n plus grand ou égal à 1 fin scripts réunion de la famille début souscript k plus grand ou égal à n fin scripts E majuscule sub k position de base point', 'sbrief');
 };
 
 
@@ -2336,10 +2336,10 @@ sre.NobleFrenchTest.prototype.testSample_99 = function() {
       '</mrow>' +
       '</mrow>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'TCS indice gas position de base égale négatif un-demi parenthèse gauche début fraction P majuscule indice seal position de base sur P majuscule indice max position de base fin fraction parenthèse droite parenthèse gauche début fraction 1 sur T majuscule indice seal position de base fin fraction parenthèse droite',
+  this.executeRuleTest(mml, 'TCS indice gas position de base égale négatif un-demi parenthèse gauche début fraction P majuscule indice seal position de base sur P majuscule indice maximum position de base fin fraction parenthèse droite parenthèse gauche début fraction 1 sur T majuscule indice seal position de base fin fraction parenthèse droite',
                        'default');
-  this.executeRuleTest(mml, 'TCS sub gas position de base égale négatif un-demi parenthèse gauche début frac P majuscule sub seal position de base sur P majuscule sub max position de base fin frac parenthèse droite parenthèse gauche début frac 1 sur T majuscule sub seal position de base fin frac parenthèse droite', 'brief');
-  this.executeRuleTest(mml, 'TCS sub gas position de base égale négatif un-demi parenthèse gauche frac P majuscule sub seal position de base sur P majuscule sub max position de base fin frac parenthèse droite parenthèse gauche frac 1 sur T majuscule sub seal position de base fin frac parenthèse droite', 'sbrief');
+  this.executeRuleTest(mml, 'TCS sub gas position de base égale négatif un-demi parenthèse gauche début frac P majuscule sub seal position de base sur P majuscule sub maximum position de base fin frac parenthèse droite parenthèse gauche début frac 1 sur T majuscule sub seal position de base fin frac parenthèse droite', 'brief');
+  this.executeRuleTest(mml, 'TCS sub gas position de base égale négatif un-demi parenthèse gauche frac P majuscule sub seal position de base sur P majuscule sub maximum position de base fin frac parenthèse droite parenthèse gauche frac 1 sur T majuscule sub seal position de base fin frac parenthèse droite', 'sbrief');
 };
 
 
@@ -2887,10 +2887,10 @@ sre.NobleFrenchTest.prototype.testSample_108 = function() {
       '<mo>/2)</mo>' +
       '</mrow>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'f parenthèse gauche x parenthèse droite égale début fraction 1 sur début racine carrée 2 pi fin racine carrée fin fraction exp parenthèse gauche négatif x au carré barre oblique 2 parenthèse droite',
+  this.executeRuleTest(mml, 'f parenthèse gauche x parenthèse droite égale début fraction 1 sur début racine carrée 2 pi fin racine carrée fin fraction exponentielle parenthèse gauche négatif x au carré barre oblique 2 parenthèse droite',
                        'default');
-  this.executeRuleTest(mml, 'f parenthèse gauche x parenthèse droite égale début frac 1 sur début racine carrée 2 pi fin racine carrée fin frac exp parenthèse gauche négatif x au carré barre oblique 2 parenthèse droite', 'brief');
-  this.executeRuleTest(mml, 'f parenthèse gauche x parenthèse droite égale frac 1 sur racine carrée 2 pi fin racine carrée fin frac exp parenthèse gauche négatif x au carré barre oblique 2 parenthèse droite',
+  this.executeRuleTest(mml, 'f parenthèse gauche x parenthèse droite égale début frac 1 sur début racine carrée 2 pi fin racine carrée fin frac exponentielle parenthèse gauche négatif x au carré barre oblique 2 parenthèse droite', 'brief');
+  this.executeRuleTest(mml, 'f parenthèse gauche x parenthèse droite égale frac 1 sur racine carrée 2 pi fin racine carrée fin frac exponentielle parenthèse gauche négatif x au carré barre oblique 2 parenthèse droite',
                        'sbrief');
 };
 
