@@ -16,7 +16,7 @@
     "key": "0363",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe A kombinieren"
+        "default": "kombinierendes a"
       }
     }
   },
@@ -25,7 +25,7 @@
     "key": "0364",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe E kombinieren"
+        "default": "kombinierendes e"
       }
     }
   },
@@ -34,7 +34,7 @@
     "key": "0365",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe I"
+        "default": "kombinierendes i"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "0366",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe O kombinieren"
+        "default": "kombinierendes o"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "0367",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe U"
+        "default": "kombinierendes u"
       }
     }
   },
@@ -61,7 +61,7 @@
     "key": "0368",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe C kombinieren"
+        "default": "kombinierendes c"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "0369",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe D"
+        "default": "kombinierendes d"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "036A",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe H"
+        "default": "kombinierendes h"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "036B",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe kombinieren M"
+        "default": "kombinierendes m"
       }
     }
   },
@@ -97,7 +97,7 @@
     "key": "036C",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe R kombinieren"
+        "default": "kombinierendes r"
       }
     }
   },
@@ -106,7 +106,7 @@
     "key": "036D",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe T kombinieren"
+        "default": "kombinierendes t"
       }
     }
   },
@@ -115,7 +115,7 @@
     "key": "036E",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe V kombinieren"
+        "default": "kombinierendes v"
       }
     }
   },
@@ -124,7 +124,7 @@
     "key": "036F",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe X kombinieren"
+        "default": "kombinierendes x"
       }
     }
   },
@@ -133,7 +133,7 @@
     "key": "1D62",
     "mappings": {
       "default": {
-        "default": "Lateinischer tiefgestellter Kleinbuchstabe I"
+        "default": "tiefgestelltes i"
       }
     }
   },
@@ -142,7 +142,7 @@
     "key": "1D63",
     "mappings": {
       "default": {
-        "default": "Lateinischer tiefgestellter Kleinbuchstabe R"
+        "default": "tiefgestelltes r"
       }
     }
   },
@@ -151,7 +151,7 @@
     "key": "1D64",
     "mappings": {
       "default": {
-        "default": "Lateinischer tiefgestellter Kleinbuchstabe U"
+        "default": "tiefgestelltes u"
       }
     }
   },
@@ -160,7 +160,7 @@
     "key": "1D65",
     "mappings": {
       "default": {
-        "default": "Lateinischer tiefgestellter Kleinbuchstabe V"
+        "default": "tiefgestelltes v"
       }
     }
   },
@@ -169,7 +169,7 @@
     "key": "1DCA",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe R unten"
+        "default": "tiefgestelltes r"
       }
     }
   },
@@ -178,7 +178,7 @@
     "key": "1DD3",
     "mappings": {
       "default": {
-        "default": "Kombinierte lateinische Kleinbuchstaben abgeflacht Öffnen Sie oben"
+        "default": "kombinierendes oberes w"
       }
     }
   },
@@ -187,7 +187,7 @@
     "key": "1DD4",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Ae"
+        "default": "kombinierendes ae"
       }
     }
   },
@@ -196,7 +196,7 @@
     "key": "1DD5",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Ao"
+        "default": "kombinierendes ao"
       }
     }
   },
@@ -205,7 +205,7 @@
     "key": "1DD6",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe kombinieren Av"
+        "default": "kombinierendes av"
       }
     }
   },
@@ -214,7 +214,7 @@
     "key": "1DD7",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe C Cedilla kombinieren"
+        "default": "kombinierendes c mit Cedilla"
       }
     }
   },
@@ -223,7 +223,7 @@
     "key": "1DD8",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Insular D"
+        "default": "kombinierendes insulares d"
       }
     }
   },
@@ -232,7 +232,7 @@
     "key": "1DD9",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Eth"
+        "default": "kombinierendes eth"
       }
     }
   },
@@ -241,7 +241,7 @@
     "key": "1DDA",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe G"
+        "default": "kombinierendes g"
       }
     }
   },
@@ -250,7 +250,7 @@
     "key": "1DDB",
     "mappings": {
       "default": {
-        "default": "Lateinischer Buchstabe mit kleinem Kapital kombinieren G"
+        "default": "kombinierendes Kapitälchen g"
       }
     }
   },
@@ -259,7 +259,7 @@
     "key": "1DDC",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe K"
+        "default": "kombinierendes k"
       }
     }
   },
@@ -268,7 +268,7 @@
     "key": "1DDD",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe L kombinieren"
+        "default": "kombinierendes l"
       }
     }
   },
@@ -277,7 +277,7 @@
     "key": "1DDE",
     "mappings": {
       "default": {
-        "default": "Kombination lateinischer Buchstaben mit kleinem Kapital L"
+        "default": "kombinierendes Kapitälchen L"
       }
     }
   },
@@ -286,7 +286,7 @@
     "key": "1DDF",
     "mappings": {
       "default": {
-        "default": "Lateinischer Buchstabe mit kleinem Kapital kombinieren M"
+        "default": "kombinierendes Kapitälchen M"
       }
     }
   },
@@ -295,7 +295,7 @@
     "key": "1DE0",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe N kombinieren"
+        "default": "kombinierendes n"
       }
     }
   },
@@ -304,7 +304,7 @@
     "key": "1DE1",
     "mappings": {
       "default": {
-        "default": "Lateinischer Buchstabe mit kleinem Kapital N"
+        "default": "kombinierendes Kapitälchen N"
       }
     }
   },
@@ -313,7 +313,7 @@
     "key": "1DE2",
     "mappings": {
       "default": {
-        "default": "Lateinischer Buchstabe mit kleinem Kapital R"
+        "default": "kombinierendes lateinisches Kapitälchen R"
       }
     }
   },
@@ -322,7 +322,7 @@
     "key": "1DE3",
     "mappings": {
       "default": {
-        "default": "Lateinische Kleinbuchstabe R Rotunde kombinieren"
+        "default": "kombinierendes r rotunda"
       }
     }
   },
@@ -331,7 +331,7 @@
     "key": "1DE4",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe S"
+        "default": "kombinierendes s"
       }
     }
   },
@@ -340,7 +340,7 @@
     "key": "1DE5",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Lang S"
+        "default": "kombinierendes langes s"
       }
     }
   },
@@ -349,7 +349,7 @@
     "key": "1DE6",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Z kombinieren"
+        "default": "kombinierendes z"
       }
     }
   },
@@ -358,7 +358,7 @@
     "key": "2071",
     "mappings": {
       "default": {
-        "default": "Großer lateinischer Kleinbuchstabe I"
+        "default": "hochgestelltes i"
       }
     }
   },
@@ -367,7 +367,7 @@
     "key": "207F",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe N"
+        "default": "hochgestelltes n"
       }
     }
   },
@@ -376,7 +376,7 @@
     "key": "2090",
     "mappings": {
       "default": {
-        "default": "Lateinischer tiefgestellter Kleinbuchstabe A"
+        "default": "tiefgestelltes a"
       }
     }
   },
@@ -385,7 +385,7 @@
     "key": "2091",
     "mappings": {
       "default": {
-        "default": "Lateinischer tiefgestellter Kleinbuchstabe E"
+        "default": "tiefgestelltes e"
       }
     }
   },
@@ -394,7 +394,7 @@
     "key": "2092",
     "mappings": {
       "default": {
-        "default": "Lateinischer tiefgestellter Kleinbuchstabe O"
+        "default": "tiefgestelltes o"
       }
     }
   },
@@ -403,7 +403,7 @@
     "key": "2093",
     "mappings": {
       "default": {
-        "default": "Lateinischer tiefgestellter Kleinbuchstabe X"
+        "default": "tiefgestelltes x"
       }
     }
   },
@@ -412,7 +412,7 @@
     "key": "2094",
     "mappings": {
       "default": {
-        "default": "Lateinischer tiefgestellter Kleinbuchstabe Schwa"
+        "default": "tiefgestelltes schwa"
       }
     }
   },
@@ -421,7 +421,7 @@
     "key": "2095",
     "mappings": {
       "default": {
-        "default": "Lateinischer Index Kleinbuchstabe H"
+        "default": "tiefgestelltes h"
       }
     }
   },
@@ -430,7 +430,7 @@
     "key": "2096",
     "mappings": {
       "default": {
-        "default": "Lateinischer tiefgestellter Kleinbuchstabe K"
+        "default": "tiefgestelltes k"
       }
     }
   },
@@ -439,7 +439,7 @@
     "key": "2097",
     "mappings": {
       "default": {
-        "default": "Lateinischer tiefgestellter Kleinbuchstabe L"
+        "default": "tiefgestelltes l"
       }
     }
   },
@@ -448,7 +448,7 @@
     "key": "2098",
     "mappings": {
       "default": {
-        "default": "Lateinischer tiefgestellter Kleinbuchstabe M"
+        "default": "tiefgestelltes m"
       }
     }
   },
@@ -457,7 +457,7 @@
     "key": "2099",
     "mappings": {
       "default": {
-        "default": "Lateinischer tiefgestellter Kleinbuchstabe N"
+        "default": "tiefgestelltes n"
       }
     }
   },
@@ -466,7 +466,7 @@
     "key": "209A",
     "mappings": {
       "default": {
-        "default": "Lateinischer Index Kleinbuchstabe P"
+        "default": "tiefgestelltes p"
       }
     }
   },
@@ -475,7 +475,7 @@
     "key": "209B",
     "mappings": {
       "default": {
-        "default": "Lateinischer tiefgestellter Kleinbuchstabe S"
+        "default": "tiefgestelltes s"
       }
     }
   },
@@ -484,7 +484,7 @@
     "key": "209C",
     "mappings": {
       "default": {
-        "default": "Lateinischer tiefgestellter Kleinbuchstabe T"
+        "default": "tiefgestelltes t"
       }
     }
   },
@@ -493,7 +493,7 @@
     "key": "2C7C",
     "mappings": {
       "default": {
-        "default": "Lateinischer tiefgestellter Kleinbuchstabe J"
+        "default": "tiefgestelltes j"
       }
     }
   },
@@ -502,7 +502,7 @@
     "key": "1F12A",
     "mappings": {
       "default": {
-        "default": "Schildkrötenpanzer eingeklammerter lateinischer Großbuchstabe S"
+        "default": "groß S in stumpfen Klammern"
       }
     }
   },
@@ -511,7 +511,7 @@
     "key": "1F12B",
     "mappings": {
       "default": {
-        "default": "Eingekreist kursiver lateinischer Großbuchstabe C"
+        "default": "eingekreistes kursives groß C"
       }
     }
   },
@@ -520,7 +520,7 @@
     "key": "1F12C",
     "mappings": {
       "default": {
-        "default": "Eingekreist kursiver lateinischer Großbuchstabe R"
+        "default": "eingekreistes kursives groß R"
       }
     }
   },
@@ -529,7 +529,7 @@
     "key": "1F18A",
     "mappings": {
       "default": {
-        "default": "Gekreuzter negativer quadratischer lateinischer Großbuchstabe P"
+        "default": "durchgestrichenes P auf schwarzen Quadrat"
       }
     }
   }

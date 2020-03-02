@@ -7,7 +7,7 @@
     "key": "00F8",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe o mit Strich"
+        "default": "o mit Strich"
       }
     }
   },
@@ -16,7 +16,7 @@
     "key": "0111",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe D mit Strich"
+        "default": "d mit Strich"
       }
     }
   },
@@ -25,7 +25,7 @@
     "key": "0127",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe H mit Strich"
+        "default": "h mit Strich"
       }
     }
   },
@@ -34,7 +34,7 @@
     "key": "0142",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe L mit Strich"
+        "default": "l mit Strich"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "0167",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe T mit Strich"
+        "default": "t mit Strich"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "0180",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe B mit Strich"
+        "default": "b mit Strich"
       }
     }
   },
@@ -61,7 +61,7 @@
     "key": "019B",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Lambda mit Schlaganfall"
+        "default": "lambda mit Strich"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "01B6",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Z mit Strich"
+        "default": "z mit Strich"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "01BE",
     "mappings": {
       "default": {
-        "default": "Lateinischer Buchstabe invertiert Glottal mit Schlaganfall"
+        "default": "umgekehrter Glottalanschlag mit Strich"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "01E5",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe G mit Strich"
+        "default": "g mit Strich"
       }
     }
   },
@@ -97,7 +97,7 @@
     "key": "01FF",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe O mit Strich und Akut"
+        "default": "o mit Strich und Akut"
       }
     }
   },
@@ -106,7 +106,7 @@
     "key": "023C",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe C mit Strich"
+        "default": "c mit Strich"
       }
     }
   },
@@ -115,7 +115,7 @@
     "key": "0247",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe E mit Strich"
+        "default": "e mit Strich"
       }
     }
   },
@@ -124,7 +124,7 @@
     "key": "0249",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe J mit Strich"
+        "default": "j mit Strich"
       }
     }
   },
@@ -133,7 +133,7 @@
     "key": "024D",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe R mit Strich"
+        "default": "r mit Strich"
       }
     }
   },
@@ -142,7 +142,7 @@
     "key": "024F",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Y mit Strich"
+        "default": "y mit Strich"
       }
     }
   },
@@ -151,7 +151,7 @@
     "key": "025F",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Dotless J mit Strich"
+        "default": "punktloses j mit Strich"
       }
     }
   },
@@ -160,7 +160,7 @@
     "key": "0268",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe I mit Strich"
+        "default": "i mit Strich"
       }
     }
   },
@@ -169,7 +169,7 @@
     "key": "0284",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Dotless J mit Strich und Haken"
+        "default": "punktloses j mit Strich und Haken"
       }
     }
   },
@@ -178,7 +178,7 @@
     "key": "02A1",
     "mappings": {
       "default": {
-        "default": "Lateinischer Buchstabe Glottal Stop mit Schlaganfall"
+        "default": "Glottalanschlag mit Strich"
       }
     }
   },
@@ -187,7 +187,7 @@
     "key": "02A2",
     "mappings": {
       "default": {
-        "default": "Lateinischer Buchstabe umgekehrt Glottalhalt mit Schlaganfall"
+        "default": "umgekehrter Glottalanschlag mit Strich"
       }
     }
   },
@@ -196,7 +196,7 @@
     "key": "1D13",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe seitlich O mit Strich"
+        "default": "liegendes O mit Strich"
       }
     }
   },
@@ -205,7 +205,7 @@
     "key": "1D7C",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Iota mit Schlaganfall"
+        "default": "iota mit Strich"
       }
     }
   },
@@ -214,7 +214,7 @@
     "key": "1D7D",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe P mit Strich"
+        "default": "p mit Strich"
       }
     }
   },
@@ -223,7 +223,7 @@
     "key": "1D7F",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Upsilon mit Schlaganfall"
+        "default": "upsilon mit Strich"
       }
     }
   },
@@ -232,7 +232,7 @@
     "key": "1E9C",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe lang mit diagonalem Anschlag"
+        "default": "lang mit diagonalem Anschlag"
       }
     }
   },
@@ -241,7 +241,7 @@
     "key": "1E9D",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Lang S mit hohem Hub"
+        "default": "lang S mit hohem Hub"
       }
     }
   },
@@ -250,7 +250,7 @@
     "key": "018D",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe wurde Delta gedreht"
+        "default": "wurde Delta gedreht"
       }
     }
   },
@@ -259,7 +259,7 @@
     "key": "1E9B",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe lang mit Punkt oben"
+        "default": "lang mit Punkt oben"
       }
     }
   },
@@ -268,7 +268,7 @@
     "key": "1E9F",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Delta"
+        "default": "delta"
       }
     }
   },
@@ -286,7 +286,7 @@
     "key": "017F",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe lang S"
+        "default": "lang S"
       }
     }
   },
@@ -295,7 +295,7 @@
     "key": "0183",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe B mit Oberleiste"
+        "default": "b mit Oberleiste"
       }
     }
   },
@@ -304,7 +304,7 @@
     "key": "0185",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Ton sechs"
+        "default": "ton sechs"
       }
     }
   },
@@ -313,7 +313,7 @@
     "key": "0188",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe C mit Haken"
+        "default": "c mit Haken"
       }
     }
   },
@@ -322,7 +322,7 @@
     "key": "018C",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe D mit Oberleiste"
+        "default": "d mit Oberleiste"
       }
     }
   },
@@ -340,7 +340,7 @@
     "key": "0195",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Hv"
+        "default": "hv"
       }
     }
   },
@@ -349,7 +349,7 @@
     "key": "0199",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe K mit Haken"
+        "default": "k mit Haken"
       }
     }
   },
@@ -367,7 +367,7 @@
     "key": "019E",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe N mit langem rechtem Bein"
+        "default": "n mit langem rechtem Bein"
       }
     }
   },
@@ -376,7 +376,7 @@
     "key": "01A1",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe O mit Horn"
+        "default": "o mit Horn"
       }
     }
   },
@@ -385,7 +385,7 @@
     "key": "01A3",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Oi"
+        "default": "oi"
       }
     }
   },
@@ -394,7 +394,7 @@
     "key": "01A5",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe P mit Haken"
+        "default": "p mit Haken"
       }
     }
   },
@@ -403,7 +403,7 @@
     "key": "01A8",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Ton zwei"
+        "default": "ton zwei"
       }
     }
   },
@@ -412,7 +412,7 @@
     "key": "01AA",
     "mappings": {
       "default": {
-        "default": "Lateinischer Buchstabe umgedreht Esh-Schleife"
+        "default": "umgedrehte esh Schleife"
       }
     }
   },
@@ -421,7 +421,7 @@
     "key": "01AB",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe T mit Palatal Hook"
+        "default": "t mit palatal Haken"
       }
     }
   },
@@ -430,7 +430,7 @@
     "key": "01AD",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe T mit Haken"
+        "default": "t mit Haken"
       }
     }
   },
@@ -439,7 +439,7 @@
     "key": "01B0",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe U mit Horn"
+        "default": "u mit Horn"
       }
     }
   },
@@ -448,7 +448,7 @@
     "key": "01B4",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Y mit Haken"
+        "default": "y mit Haken"
       }
     }
   },
@@ -457,7 +457,7 @@
     "key": "01B9",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Ezh rückgängig gemacht"
+        "default": "umgekehrtes ezh"
       }
     }
   },
@@ -466,7 +466,7 @@
     "key": "01BA",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Ezh mit Schwanz"
+        "default": "ezh mit Schwanz"
       }
     }
   },
@@ -475,7 +475,7 @@
     "key": "01BD",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Ton fünf"
+        "default": "ton fünf"
       }
     }
   },
@@ -484,7 +484,7 @@
     "key": "01BF",
     "mappings": {
       "default": {
-        "default": "Lateinischer Buchstabe Wynn"
+        "default": "wynn"
       }
     }
   },
@@ -493,7 +493,7 @@
     "key": "01C6",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Dz mit Caron"
+        "default": "dz mit Caron"
       }
     }
   },
@@ -502,7 +502,7 @@
     "key": "01C9",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Lj"
+        "default": "lj"
       }
     }
   },
@@ -511,7 +511,7 @@
     "key": "01CC",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Nj"
+        "default": "nj"
       }
     }
   },
@@ -520,7 +520,7 @@
     "key": "01E3",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Ae mit Macron"
+        "default": "ae mit Macron"
       }
     }
   },
@@ -529,7 +529,7 @@
     "key": "01EF",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Ezh mit Caron"
+        "default": "ezh mit Caron"
       }
     }
   },
@@ -538,7 +538,7 @@
     "key": "01F3",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Dz"
+        "default": "dz"
       }
     }
   },
@@ -547,7 +547,7 @@
     "key": "021D",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Yogh"
+        "default": "yogh"
       }
     }
   },
@@ -556,7 +556,7 @@
     "key": "026E",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Lezh"
+        "default": "lezh"
       }
     }
   },
@@ -565,7 +565,7 @@
     "key": "0292",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Ezh"
+        "default": "ezh"
       }
     }
   },
@@ -574,7 +574,7 @@
     "key": "0293",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Ezh mit Locken"
+        "default": "ezh mit Kringel"
       }
     }
   },
@@ -583,7 +583,7 @@
     "key": "02A4",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Dezh Digraph"
+        "default": "dezh Digraph"
       }
     }
   },
@@ -592,7 +592,7 @@
     "key": "01DD",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe gedreht E"
+        "default": "gedreht E"
       }
     }
   },
@@ -601,7 +601,7 @@
     "key": "01FD",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Ae mit Akut"
+        "default": "ae mit Akut"
       }
     }
   },
@@ -610,7 +610,7 @@
     "key": "0221",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe D mit Locken"
+        "default": "d mit Kringel"
       }
     }
   },
@@ -619,7 +619,7 @@
     "key": "0223",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Ou"
+        "default": "ou"
       }
     }
   },
@@ -628,7 +628,7 @@
     "key": "0225",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Z mit Haken"
+        "default": "z mit Haken"
       }
     }
   },
@@ -637,7 +637,7 @@
     "key": "0234",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe L mit Locken"
+        "default": "l mit Kringel"
       }
     }
   },
@@ -646,7 +646,7 @@
     "key": "0235",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe N mit Locken"
+        "default": "n mit Kringel"
       }
     }
   },
@@ -655,7 +655,7 @@
     "key": "0236",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe T mit Locken"
+        "default": "t mit Kringel"
       }
     }
   },
@@ -664,7 +664,7 @@
     "key": "0238",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Db"
+        "default": "db"
       }
     }
   },
@@ -673,7 +673,7 @@
     "key": "0239",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Qp Digraph"
+        "default": "qp Digraph"
       }
     }
   },
@@ -682,7 +682,7 @@
     "key": "023F",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe S mit Swash Tail"
+        "default": "s mit Swash Tail"
       }
     }
   },
@@ -691,7 +691,7 @@
     "key": "0240",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Z mit Swash Tail"
+        "default": "z mit Swash Tail"
       }
     }
   },
@@ -700,7 +700,7 @@
     "key": "0242",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Glottal Stop"
+        "default": "Glottalanschlag"
       }
     }
   },
@@ -709,7 +709,7 @@
     "key": "024B",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Q mit Hakenschwanz"
+        "default": "q mit Hakenschwanz"
       }
     }
   },
@@ -718,7 +718,7 @@
     "key": "0250",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe gedreht A"
+        "default": "gedreht A"
       }
     }
   },
@@ -727,7 +727,7 @@
     "key": "0251",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Alpha"
+        "default": "alpha"
       }
     }
   },
@@ -736,7 +736,7 @@
     "key": "0252",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe gedrehtes Alpha"
+        "default": "gedrehtes Alpha"
       }
     }
   },
@@ -745,7 +745,7 @@
     "key": "0253",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe B mit Haken"
+        "default": "b mit Haken"
       }
     }
   },
@@ -754,7 +754,7 @@
     "key": "0254",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Open O"
+        "default": "open O"
       }
     }
   },
@@ -763,7 +763,7 @@
     "key": "0255",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe C mit Locken"
+        "default": "c mit Kringel"
       }
     }
   },
@@ -772,7 +772,7 @@
     "key": "0256",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe D mit Schwanz"
+        "default": "d mit Schwanz"
       }
     }
   },
@@ -781,7 +781,7 @@
     "key": "0257",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe D mit Haken"
+        "default": "d mit Haken"
       }
     }
   },
@@ -790,7 +790,7 @@
     "key": "0258",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe umgedreht E"
+        "default": "umgedreht E"
       }
     }
   },
@@ -799,7 +799,7 @@
     "key": "0259",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Schwa"
+        "default": "schwa"
       }
     }
   },
@@ -808,7 +808,7 @@
     "key": "025A",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Schwa mit Haken"
+        "default": "schwa mit Haken"
       }
     }
   },
@@ -826,7 +826,7 @@
     "key": "025C",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe umgedreht offen E"
+        "default": "umgedrehtes offenes e"
       }
     }
   },
@@ -835,7 +835,7 @@
     "key": "025D",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe umgekehrtes E mit Haken"
+        "default": "umgekehrtes offenes e mit Haken"
       }
     }
   },
@@ -844,7 +844,7 @@
     "key": "025E",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe geschlossen aufgehoben E"
+        "default": "umgekehrtes geschlossenes epsilon"
       }
     }
   },
@@ -853,7 +853,7 @@
     "key": "0260",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe G mit Haken"
+        "default": "g mit Haken"
       }
     }
   },
@@ -862,7 +862,7 @@
     "key": "0261",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe G"
+        "default": "g"
       }
     }
   },
@@ -871,7 +871,7 @@
     "key": "0263",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Gamma"
+        "default": "gamma"
       }
     }
   },
@@ -880,7 +880,7 @@
     "key": "0264",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe rammt Horn"
+        "default": "mini gamma"
       }
     }
   },
@@ -889,7 +889,7 @@
     "key": "0265",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe gedreht H"
+        "default": "gedrehtes h"
       }
     }
   },
@@ -898,7 +898,7 @@
     "key": "0266",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe H mit Haken"
+        "default": "h mit Haken"
       }
     }
   },
@@ -907,7 +907,7 @@
     "key": "0267",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Heng mit Haken"
+        "default": "h mit Haken"
       }
     }
   },
@@ -916,7 +916,7 @@
     "key": "0269",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Iota"
+        "default": "iota"
       }
     }
   },
@@ -925,7 +925,7 @@
     "key": "026B",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe L mit mittlerer Tilde"
+        "default": "l mit mittlerer Tilde"
       }
     }
   },
@@ -934,7 +934,7 @@
     "key": "026C",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe L mit Gürtel"
+        "default": "l mit Gurt"
       }
     }
   },
@@ -943,7 +943,7 @@
     "key": "026D",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe L mit Retroflex-Haken"
+        "default": "l mit Retroflexhaken"
       }
     }
   },
@@ -952,7 +952,7 @@
     "key": "026F",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe gedreht M"
+        "default": "gedreht M"
       }
     }
   },
@@ -961,7 +961,7 @@
     "key": "0270",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe gedrehtes M mit langem Bein"
+        "default": "gedrehtes M mit langem Bein"
       }
     }
   },
@@ -970,7 +970,7 @@
     "key": "0271",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe M mit Haken"
+        "default": "m mit Haken"
       }
     }
   },
@@ -979,7 +979,7 @@
     "key": "0272",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe N mit linkem Haken"
+        "default": "n mit linkem Haken"
       }
     }
   },
@@ -988,7 +988,7 @@
     "key": "0273",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe N mit Retroflex-Haken"
+        "default": "n mit Retroflexhaken"
       }
     }
   },
@@ -997,7 +997,7 @@
     "key": "0275",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe gesperrt O"
+        "default": "o mit balken"
       }
     }
   },
@@ -1006,7 +1006,7 @@
     "key": "0277",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe geschlossenes Omega"
+        "default": "geschlossenes omega"
       }
     }
   },
@@ -1015,7 +1015,7 @@
     "key": "0278",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Phi"
+        "default": "phi"
       }
     }
   },
@@ -1024,7 +1024,7 @@
     "key": "0279",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe gedreht R"
+        "default": "gedrehtes r"
       }
     }
   },
@@ -1033,7 +1033,7 @@
     "key": "027A",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe gedrehtes R mit langem Bein"
+        "default": "gedrehtes r mit langem Bein"
       }
     }
   },
@@ -1042,7 +1042,7 @@
     "key": "027B",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe gedrehtes R mit Haken"
+        "default": "gedrehtes r mit langem Bein und Haken"
       }
     }
   },
@@ -1051,7 +1051,7 @@
     "key": "027C",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe R mit langem Bein"
+        "default": "r mit langem Bein"
       }
     }
   },
@@ -1060,7 +1060,7 @@
     "key": "027D",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe R mit Endstück"
+        "default": "r mit Endstück"
       }
     }
   },
@@ -1069,7 +1069,7 @@
     "key": "027E",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe R mit Angelhaken"
+        "default": "r mit Angelhaken"
       }
     }
   },
@@ -1078,7 +1078,7 @@
     "key": "027F",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe umgedreht R mit Angelhaken"
+        "default": "umgedrehtes R mit Angelhaken"
       }
     }
   },
@@ -1087,7 +1087,7 @@
     "key": "0282",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe S mit Haken"
+        "default": "s mit Haken"
       }
     }
   },
@@ -1096,7 +1096,7 @@
     "key": "0283",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Esh"
+        "default": "esh"
       }
     }
   },
@@ -1105,7 +1105,7 @@
     "key": "0285",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Squat umgekehrt"
+        "default": "squat umgekehrt"
       }
     }
   },
@@ -1114,7 +1114,7 @@
     "key": "0286",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Esh mit Locken"
+        "default": "esh mit Kringel"
       }
     }
   },
@@ -1123,7 +1123,7 @@
     "key": "0287",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe gedreht T"
+        "default": "gedreht T"
       }
     }
   },
@@ -1132,7 +1132,7 @@
     "key": "0288",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe T mit Retroflex-Haken"
+        "default": "t mit Retroflexhaken"
       }
     }
   },
@@ -1141,7 +1141,7 @@
     "key": "0289",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe U Bar"
+        "default": "u Bar"
       }
     }
   },
@@ -1150,7 +1150,7 @@
     "key": "028A",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Upsilon"
+        "default": "upsilon"
       }
     }
   },
@@ -1159,7 +1159,7 @@
     "key": "028B",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe V mit Haken"
+        "default": "v mit Haken"
       }
     }
   },
@@ -1168,7 +1168,7 @@
     "key": "028C",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe gedreht v"
+        "default": "gedrehtes v"
       }
     }
   },
@@ -1177,7 +1177,7 @@
     "key": "028D",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe gedreht W"
+        "default": "gedrehtes w"
       }
     }
   },
@@ -1186,7 +1186,7 @@
     "key": "028E",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe gedrehtes Y"
+        "default": "gedrehtes y"
       }
     }
   },
@@ -1195,7 +1195,7 @@
     "key": "0290",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Z mit Retroflex-Haken"
+        "default": "z mit Retroflexhaken"
       }
     }
   },
@@ -1204,7 +1204,7 @@
     "key": "0291",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Z mit Locken"
+        "default": "z mit Kringel"
       }
     }
   },
@@ -1213,7 +1213,7 @@
     "key": "0295",
     "mappings": {
       "default": {
-        "default": "Lateinischer Brief Pharyngeal stimmhaft Fricative"
+        "default": "pharyngales stimmhaft Frikativ"
       }
     }
   },
@@ -1222,7 +1222,7 @@
     "key": "0296",
     "mappings": {
       "default": {
-        "default": "Lateinischer Buchstabe invertiert Glottalanschlag"
+        "default": "invertierter Glottalanschlag"
       }
     }
   },
@@ -1231,7 +1231,7 @@
     "key": "0297",
     "mappings": {
       "default": {
-        "default": "Lateinischer Buchstabe gestreckt C"
+        "default": "gestrecktes C"
       }
     }
   },
@@ -1240,7 +1240,7 @@
     "key": "0298",
     "mappings": {
       "default": {
-        "default": "Lateinischer Buchstabe Bilabial Click"
+        "default": "bilabialer Klick"
       }
     }
   },
@@ -1249,7 +1249,7 @@
     "key": "029A",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe geschlossen offen E"
+        "default": "geschlossenes offenes e"
       }
     }
   },
@@ -1258,7 +1258,7 @@
     "key": "029E",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe gedreht K"
+        "default": "gedrehtes k"
       }
     }
   },
@@ -1267,7 +1267,7 @@
     "key": "02A0",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Q mit Haken"
+        "default": "q mit Haken"
       }
     }
   },
@@ -1276,7 +1276,7 @@
     "key": "02A3",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Dz Digraph"
+        "default": "dz Digraph"
       }
     }
   },
@@ -1285,7 +1285,7 @@
     "key": "02A5",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Dz Digraph mit Locken"
+        "default": "dz Digraph mit Kringel"
       }
     }
   },
@@ -1294,7 +1294,7 @@
     "key": "02A6",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Ts Digraph"
+        "default": "ts Digraph"
       }
     }
   },
@@ -1303,7 +1303,7 @@
     "key": "02A7",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Tesh Digraph"
+        "default": "tesh Digraph"
       }
     }
   },
@@ -1312,7 +1312,7 @@
     "key": "02A8",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Tc Digraph mit Locken"
+        "default": "tc Digraph mit Kringel"
       }
     }
   },
@@ -1321,7 +1321,7 @@
     "key": "02A9",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Feng Digraph"
+        "default": "feng Digraph"
       }
     }
   },
@@ -1330,7 +1330,7 @@
     "key": "02AA",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Ls Digraph"
+        "default": "ls Digraph"
       }
     }
   },
@@ -1339,7 +1339,7 @@
     "key": "02AB",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Lz Digraph"
+        "default": "lz Digraph"
       }
     }
   },
@@ -1348,7 +1348,7 @@
     "key": "02AC",
     "mappings": {
       "default": {
-        "default": "Lateinischer Buchstabe Bilabial Perkussiv"
+        "default": "bilabiales Perkussiv"
       }
     }
   },
@@ -1357,7 +1357,7 @@
     "key": "02AD",
     "mappings": {
       "default": {
-        "default": "Lateinischer Buchstabe Bidental Percussive"
+        "default": "bidentales Perkussiv"
       }
     }
   },
@@ -1366,7 +1366,7 @@
     "key": "02AE",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe gedreht H mit Angelhaken"
+        "default": "gedrehtes h mit Angelhaken"
       }
     }
   },
@@ -1375,7 +1375,7 @@
     "key": "02AF",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe gedreht H mit Angelhaken und Schwanz"
+        "default": "gedrehtes h mit Angelhaken und Schwanz"
       }
     }
   },
@@ -1384,7 +1384,7 @@
     "key": "1D02",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe gedrehtes Ae"
+        "default": "gedrehtes ae"
       }
     }
   },
@@ -1393,7 +1393,7 @@
     "key": "1D08",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe aufgedreht E"
+        "default": "gedrehtes e"
       }
     }
   },
@@ -1402,7 +1402,7 @@
     "key": "1D09",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe"
+        "default": "gedrehtes i"
       }
     }
   },
@@ -1411,7 +1411,7 @@
     "key": "1D11",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe seitlich O"
+        "default": "liegendes O"
       }
     }
   },
@@ -1420,7 +1420,7 @@
     "key": "1D12",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe seitlich geöffnet O"
+        "default": "liegendes geöffnet O"
       }
     }
   },
@@ -1429,7 +1429,7 @@
     "key": "1D14",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe gedreht Oe"
+        "default": "gedreht Oe"
       }
     }
   },
@@ -1438,7 +1438,7 @@
     "key": "1D16",
     "mappings": {
       "default": {
-        "default": "Lateinische Kleinbuchstabe Oben"
+        "default": "obere Hälfte O"
       }
     }
   },
@@ -1447,7 +1447,7 @@
     "key": "1D17",
     "mappings": {
       "default": {
-        "default": "Lateinische Kleinbuchstabe Untere Hälfte O"
+        "default": "untere Hälfte O"
       }
     }
   },
@@ -1456,7 +1456,7 @@
     "key": "1D1D",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe seitlich U"
+        "default": "liegendes U"
       }
     }
   },
@@ -1465,7 +1465,7 @@
     "key": "1D1E",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe seitlich Diaeresized U"
+        "default": "liegendes u Umlaut"
       }
     }
   },
@@ -1474,7 +1474,7 @@
     "key": "1D1F",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe seitlich gedreht M"
+        "default": "liegendes m"
       }
     }
   },
@@ -1483,7 +1483,7 @@
     "key": "1D24",
     "mappings": {
       "default": {
-        "default": "Lateinischer Buchstabe Stimmiger Kehlkopfspirant"
+        "default": "stimmhaft laryngaler Frikativ"
       }
     }
   },
@@ -1492,7 +1492,7 @@
     "key": "1D25",
     "mappings": {
       "default": {
-        "default": "Lateinischer Buchstabe Ain"
+        "default": "Ain"
       }
     }
   },
@@ -1501,7 +1501,7 @@
     "key": "1D6B",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Ue"
+        "default": "ue"
       }
     }
   },
@@ -1510,7 +1510,7 @@
     "key": "1D6C",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe B mit mittlerer Tilde"
+        "default": "b mit mittlerer Tilde"
       }
     }
   },
@@ -1519,7 +1519,7 @@
     "key": "1D6D",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe D mit mittlerer Tilde"
+        "default": "d mit mittlerer Tilde"
       }
     }
   },
@@ -1528,7 +1528,7 @@
     "key": "1D6E",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe F mit mittlerer Tilde"
+        "default": "f mit mittlerer Tilde"
       }
     }
   },
@@ -1537,7 +1537,7 @@
     "key": "1D6F",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe M mit mittlerer Tilde"
+        "default": "m mit mittlerer Tilde"
       }
     }
   },
@@ -1546,7 +1546,7 @@
     "key": "1D70",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe N mit mittlerer Tilde"
+        "default": "n mit mittlerer Tilde"
       }
     }
   },
@@ -1555,7 +1555,7 @@
     "key": "1D71",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe P mit mittlerer Tilde"
+        "default": "p mit mittlerer Tilde"
       }
     }
   },
@@ -1564,7 +1564,7 @@
     "key": "1D72",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe R mit mittlerer Tilde"
+        "default": "r mit mittlerer Tilde"
       }
     }
   },
@@ -1573,7 +1573,7 @@
     "key": "1D73",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe R mit Angelhaken und mittlerer Tilde"
+        "default": "r mit Angelhaken und mittlerer Tilde"
       }
     }
   },
@@ -1582,7 +1582,7 @@
     "key": "1D74",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe S mit mittlerer Tilde"
+        "default": "s mit mittlerer Tilde"
       }
     }
   },
@@ -1591,7 +1591,7 @@
     "key": "1D75",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe T mit mittlerer Tilde"
+        "default": "t mit mittlerer Tilde"
       }
     }
   },
@@ -1600,7 +1600,7 @@
     "key": "1D76",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Z mit mittlerer Tilde"
+        "default": "z mit mittlerer Tilde"
       }
     }
   },
@@ -1609,7 +1609,7 @@
     "key": "1D77",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe gedreht G"
+        "default": "gedreht G"
       }
     }
   },
@@ -1618,7 +1618,7 @@
     "key": "1D79",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Insular G"
+        "default": "insular G"
       }
     }
   },
@@ -1627,7 +1627,7 @@
     "key": "1D7A",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Th mit Durchgestrichen"
+        "default": "th mit Durchgestrichen"
       }
     }
   },
@@ -1636,7 +1636,7 @@
     "key": "1D80",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe B mit Palatal Hook"
+        "default": "b mit Palatalhaken"
       }
     }
   },
@@ -1645,7 +1645,7 @@
     "key": "1D81",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe D mit Palatal Hook"
+        "default": "d mit Palatalhaken"
       }
     }
   },
@@ -1654,7 +1654,7 @@
     "key": "1D82",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe F mit Palatal Hook"
+        "default": "f mit Palatalhaken"
       }
     }
   },
@@ -1663,7 +1663,7 @@
     "key": "1D83",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe G mit Palatal Hook"
+        "default": "g mit Palatalhaken"
       }
     }
   },
@@ -1672,7 +1672,7 @@
     "key": "1D84",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe K mit Palatalhaken"
+        "default": "k mit Palatalhaken"
       }
     }
   },
@@ -1681,7 +1681,7 @@
     "key": "1D85",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe L mit Palatal Hook"
+        "default": "l mit Palatalhaken"
       }
     }
   },
@@ -1690,7 +1690,7 @@
     "key": "1D86",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe M mit Palatal Hook"
+        "default": "m mit Palatalhaken"
       }
     }
   },
@@ -1699,7 +1699,7 @@
     "key": "1D87",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe N mit Palatal Hook"
+        "default": "n mit Palatalhaken"
       }
     }
   },
@@ -1708,7 +1708,7 @@
     "key": "1D88",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe P mit Palatal Hook"
+        "default": "p mit Palatalhaken"
       }
     }
   },
@@ -1717,7 +1717,7 @@
     "key": "1D89",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe R mit Palatal Hook"
+        "default": "r mit Palatalhaken"
       }
     }
   },
@@ -1726,7 +1726,7 @@
     "key": "1D8A",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe S mit Palatal Hook"
+        "default": "s mit Palatalhaken"
       }
     }
   },
@@ -1735,7 +1735,7 @@
     "key": "1D8B",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Esh mit Palatal Hook"
+        "default": "esh mit Palatalhaken"
       }
     }
   },
@@ -1744,7 +1744,7 @@
     "key": "1D8C",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe V mit Palatal Hook"
+        "default": "v mit Palatalhaken"
       }
     }
   },
@@ -1753,7 +1753,7 @@
     "key": "1D8D",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe X mit Palatal Hook"
+        "default": "x mit Palatalhaken"
       }
     }
   },
@@ -1762,7 +1762,7 @@
     "key": "1D8E",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Z mit Palatalhaken"
+        "default": "z mit Palatalhaken"
       }
     }
   },
@@ -1771,7 +1771,7 @@
     "key": "1D8F",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe a mit Retroflex-Haken"
+        "default": "a mit Retroflexhaken"
       }
     }
   },
@@ -1780,7 +1780,7 @@
     "key": "1D90",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Alpha mit Retroflex-Haken"
+        "default": "alpha mit Retroflexhaken"
       }
     }
   },
@@ -1789,7 +1789,7 @@
     "key": "1D91",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe D mit Haken und Schwanz"
+        "default": "d mit Haken und Schwanz"
       }
     }
   },
@@ -1798,7 +1798,7 @@
     "key": "1D92",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe E mit Retroflex-Haken"
+        "default": "e mit Retroflexhaken"
       }
     }
   },
@@ -1807,7 +1807,7 @@
     "key": "1D93",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe offenes E mit Retroflex-Haken"
+        "default": "offenes e mit Retroflexhaken"
       }
     }
   },
@@ -1816,7 +1816,7 @@
     "key": "1D94",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe umgedreht, offenes E mit Retroflex-Haken"
+        "default": "umgedrehtes offenes e mit Retroflexhaken"
       }
     }
   },
@@ -1825,7 +1825,7 @@
     "key": "1D95",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Schwa mit Retroflex-Haken"
+        "default": "schwa mit Retroflexhaken"
       }
     }
   },
@@ -1834,7 +1834,7 @@
     "key": "1D96",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe I mit Retroflex-Haken"
+        "default": "i mit Retroflexhaken"
       }
     }
   },
@@ -1843,7 +1843,7 @@
     "key": "1D97",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Open O mit Retroflex-Haken"
+        "default": "offenes o mit Retroflexhaken"
       }
     }
   },
@@ -1852,7 +1852,7 @@
     "key": "1D98",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Esh mit Retroflex-Haken"
+        "default": "esh mit Retroflexhaken"
       }
     }
   },
@@ -1861,7 +1861,7 @@
     "key": "1D99",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe U mit Retroflex-Haken"
+        "default": "u mit Retroflexhaken"
       }
     }
   },
@@ -1870,7 +1870,7 @@
     "key": "1D9A",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Ezh mit Retroflex-Haken"
+        "default": "ezh mit Retroflexhaken"
       }
     }
   },

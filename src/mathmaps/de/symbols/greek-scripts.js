@@ -7,7 +7,7 @@
     "key": "1D26",
     "mappings": {
       "default": {
-        "default": "kleines groß Gamma"
+        "default": "Kapitälchen Gamma"
       }
     }
   },
@@ -16,7 +16,7 @@
     "key": "1D27",
     "mappings": {
       "default": {
-        "default": "kleines groß Lamda"
+        "default": "Kapitälchen Lamda"
       }
     }
   },
@@ -25,7 +25,7 @@
     "key": "1D28",
     "mappings": {
       "default": {
-        "default": "kleines groß Pi"
+        "default": "Kapitälchen Pi"
       }
     }
   },
@@ -34,7 +34,7 @@
     "key": "1D29",
     "mappings": {
       "default": {
-        "default": "kleines groß Rho"
+        "default": "Kapitälchen Rho"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "1D2A",
     "mappings": {
       "default": {
-        "default": "kleines groß Psi"
+        "default": "Kapitälchen Psi"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "1D5E",
     "mappings": {
       "default": {
-        "default": "hochgestelltes kleines gamma"
+        "default": "hochgestelltes gamma"
       }
     }
   },
@@ -61,7 +61,7 @@
     "key": "1D60",
     "mappings": {
       "default": {
-        "default": "hochgestelltes kleines phi"
+        "default": "hochgestelltes phi"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "1D66",
     "mappings": {
       "default": {
-        "default": "tiefgestelltes kleines beta"
+        "default": "tiefgestelltes beta"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "1D67",
     "mappings": {
       "default": {
-        "default": "tiefgestelltes kleines gamma"
+        "default": "tiefgestelltes gamma"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "1D68",
     "mappings": {
       "default": {
-        "default": "tiefgestelltes kleines rho"
+        "default": "tiefgestelltes rho"
       }
     }
   },
@@ -97,7 +97,7 @@
     "key": "1D69",
     "mappings": {
       "default": {
-        "default": "tiefgestelltes kleines phi"
+        "default": "tiefgestelltes phi"
       }
     }
   },
@@ -106,7 +106,7 @@
     "key": "1D6A",
     "mappings": {
       "default": {
-        "default": "tiefgestelltes kleines chi"
+        "default": "tiefgestelltes chi"
       }
     }
   }

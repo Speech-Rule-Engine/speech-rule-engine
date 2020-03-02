@@ -250,7 +250,7 @@
     "key": "0101",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe a mit Macron"
+        "default": "a mit Macron"
       }
     }
   },
@@ -259,7 +259,7 @@
     "key": "0103",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe a mit Breve"
+        "default": "a mit Breve"
       }
     }
   },
@@ -268,7 +268,7 @@
     "key": "0105",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe a mit Ogonek"
+        "default": "a mit Ogonek"
       }
     }
   },
@@ -304,7 +304,7 @@
     "key": "010D",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe C mit Caron"
+        "default": "c mit Caron"
       }
     }
   },
@@ -313,7 +313,7 @@
     "key": "010F",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe D mit Caron"
+        "default": "d mit Caron"
       }
     }
   },
@@ -322,7 +322,7 @@
     "key": "0113",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe E mit Macron"
+        "default": "e mit Macron"
       }
     }
   },
@@ -331,7 +331,7 @@
     "key": "0115",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe E mit Breve"
+        "default": "e mit Breve"
       }
     }
   },
@@ -349,7 +349,7 @@
     "key": "0119",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe E mit Ogonek"
+        "default": "e mit Ogonek"
       }
     }
   },
@@ -358,7 +358,7 @@
     "key": "011B",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe E mit Caron"
+        "default": "e mit Caron"
       }
     }
   },
@@ -376,7 +376,7 @@
     "key": "011F",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe G mit Breve"
+        "default": "g mit Breve"
       }
     }
   },
@@ -394,7 +394,7 @@
     "key": "0123",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe G mit Cedilla"
+        "default": "g mit Cedilla"
       }
     }
   },
@@ -421,7 +421,7 @@
     "key": "012B",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe I mit Macron"
+        "default": "i mit Macron"
       }
     }
   },
@@ -430,7 +430,7 @@
     "key": "012D",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe I mit Breve"
+        "default": "i mit Breve"
       }
     }
   },
@@ -439,7 +439,7 @@
     "key": "012F",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe I mit Ogonek"
+        "default": "i mit Ogonek"
       }
     }
   },
@@ -493,7 +493,7 @@
     "key": "013E",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe L mit Caron"
+        "default": "l mit Caron"
       }
     }
   },
@@ -529,7 +529,7 @@
     "key": "0148",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe N mit Caron"
+        "default": "n mit Caron"
       }
     }
   },
@@ -538,7 +538,7 @@
     "key": "014D",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe O mit Macron"
+        "default": "o mit Macron"
       }
     }
   },
@@ -547,7 +547,7 @@
     "key": "014F",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe O mit Breve"
+        "default": "o mit Breve"
       }
     }
   },
@@ -583,7 +583,7 @@
     "key": "0159",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe R mit Caron"
+        "default": "r mit Caron"
       }
     }
   },
@@ -619,7 +619,7 @@
     "key": "0161",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe S mit Caron"
+        "default": "s mit Caron"
       }
     }
   },
@@ -637,7 +637,7 @@
     "key": "0165",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe T mit Caron"
+        "default": "t mit Caron"
       }
     }
   },
@@ -655,7 +655,7 @@
     "key": "016B",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe U mit Macron"
+        "default": "u mit Macron"
       }
     }
   },
@@ -664,7 +664,7 @@
     "key": "016D",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe U mit Breve"
+        "default": "u mit Breve"
       }
     }
   },
@@ -691,7 +691,7 @@
     "key": "0173",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe U mit Ogonek"
+        "default": "u mit Ogonek"
       }
     }
   },
@@ -736,7 +736,7 @@
     "key": "017E",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Z mit Caron"
+        "default": "z mit Caron"
       }
     }
   },
@@ -745,7 +745,7 @@
     "key": "01CE",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe a mit Caron"
+        "default": "a mit Caron"
       }
     }
   },
@@ -754,7 +754,7 @@
     "key": "01D0",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe I mit Caron"
+        "default": "i mit Caron"
       }
     }
   },
@@ -763,7 +763,7 @@
     "key": "01D2",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe O mit Caron"
+        "default": "o mit Caron"
       }
     }
   },
@@ -772,7 +772,7 @@
     "key": "01D4",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe U mit Caron"
+        "default": "u mit Caron"
       }
     }
   },
@@ -781,7 +781,7 @@
     "key": "01E7",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe G mit Caron"
+        "default": "g mit Caron"
       }
     }
   },
@@ -790,7 +790,7 @@
     "key": "01E9",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe K mit Caron"
+        "default": "k mit Caron"
       }
     }
   },
@@ -799,7 +799,7 @@
     "key": "01EB",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe O mit Ogonek"
+        "default": "o mit Ogonek"
       }
     }
   },
@@ -808,7 +808,7 @@
     "key": "01F0",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe J mit Caron"
+        "default": "j mit Caron"
       }
     }
   },
@@ -826,7 +826,7 @@
     "key": "01F9",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe N mit Grab"
+        "default": "n mit Grab"
       }
     }
   },
@@ -835,7 +835,7 @@
     "key": "0201",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe a mit Doppelgrab"
+        "default": "a mit Doppelgrab"
       }
     }
   },
@@ -844,7 +844,7 @@
     "key": "0203",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe a mit umgekehrter Breve"
+        "default": "a mit umgekehrter Breve"
       }
     }
   },
@@ -853,7 +853,7 @@
     "key": "0205",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe E mit Doppelgrab"
+        "default": "e mit Doppelgrab"
       }
     }
   },
@@ -862,7 +862,7 @@
     "key": "0207",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe E mit umgekehrter Breve"
+        "default": "e mit umgekehrter Breve"
       }
     }
   },
@@ -871,7 +871,7 @@
     "key": "0209",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe I mit Doppelgrab"
+        "default": "i mit Doppelgrab"
       }
     }
   },
@@ -880,7 +880,7 @@
     "key": "020B",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe I mit umgekehrter Breve"
+        "default": "i mit umgekehrter Breve"
       }
     }
   },
@@ -889,7 +889,7 @@
     "key": "020D",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe O mit Doppelgrab"
+        "default": "o mit Doppelgrab"
       }
     }
   },
@@ -898,7 +898,7 @@
     "key": "020F",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe O mit umgekehrter Breve"
+        "default": "o mit umgekehrter Breve"
       }
     }
   },
@@ -907,7 +907,7 @@
     "key": "0211",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe R mit Doppelgrab"
+        "default": "r mit Doppelgrab"
       }
     }
   },
@@ -916,7 +916,7 @@
     "key": "0213",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe R mit umgekehrter Breve"
+        "default": "r mit umgekehrter Breve"
       }
     }
   },
@@ -925,7 +925,7 @@
     "key": "0215",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe U mit Doppelgrab"
+        "default": "u mit Doppelgrab"
       }
     }
   },
@@ -934,7 +934,7 @@
     "key": "0217",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe U mit umgekehrter Breve"
+        "default": "u mit umgekehrter Breve"
       }
     }
   },
@@ -943,7 +943,7 @@
     "key": "0219",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe S mit untenstehendem Komma"
+        "default": "s mit untenstehendem Komma"
       }
     }
   },
@@ -952,7 +952,7 @@
     "key": "021B",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe T mit untenstehendem Komma"
+        "default": "t mit untenstehendem Komma"
       }
     }
   },
@@ -961,7 +961,7 @@
     "key": "021F",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe H mit Caron"
+        "default": "h mit Caron"
       }
     }
   },
@@ -970,7 +970,7 @@
     "key": "0227",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe a mit Punkt oben"
+        "default": "a mit Punkt oben"
       }
     }
   },
@@ -979,7 +979,7 @@
     "key": "0229",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe E mit Cedilla"
+        "default": "e mit Cedilla"
       }
     }
   },
@@ -988,7 +988,7 @@
     "key": "022F",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe O mit Punkt oben"
+        "default": "o mit Punkt oben"
       }
     }
   },
@@ -997,7 +997,7 @@
     "key": "0233",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Y mit Macron"
+        "default": "y mit Macron"
       }
     }
   },
@@ -1006,7 +1006,7 @@
     "key": "0237",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Dotless J"
+        "default": "dotless J"
       }
     }
   },
@@ -1015,7 +1015,7 @@
     "key": "1E01",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe a mit Ring unten"
+        "default": "a mit Ring unten"
       }
     }
   },
@@ -1024,7 +1024,7 @@
     "key": "1E03",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe B mit Punkt oben"
+        "default": "b mit Punkt oben"
       }
     }
   },
@@ -1033,7 +1033,7 @@
     "key": "1E05",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe B mit untenstehendem Punkt"
+        "default": "b mit untenstehendem Punkt"
       }
     }
   },
@@ -1042,7 +1042,7 @@
     "key": "1E07",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe B mit Zeile darunter"
+        "default": "b mit Zeile darunter"
       }
     }
   },
@@ -1051,7 +1051,7 @@
     "key": "1E0B",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe D mit Punkt oben"
+        "default": "d mit Punkt oben"
       }
     }
   },
@@ -1060,7 +1060,7 @@
     "key": "1E0D",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe D mit untenstehendem Punkt"
+        "default": "d mit untenstehendem Punkt"
       }
     }
   },
@@ -1069,7 +1069,7 @@
     "key": "1E0F",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe D mit Zeile darunter"
+        "default": "d mit Zeile darunter"
       }
     }
   },
@@ -1078,7 +1078,7 @@
     "key": "1E11",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe D mit Cedilla"
+        "default": "d mit Cedilla"
       }
     }
   },
@@ -1087,7 +1087,7 @@
     "key": "1E13",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe D mit darunterem Zirkumflex"
+        "default": "d mit darunterem Zirkumflex"
       }
     }
   },
@@ -1096,7 +1096,7 @@
     "key": "1E19",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe E mit darunterem Zirkumflex"
+        "default": "e mit darunterem Zirkumflex"
       }
     }
   },
@@ -1105,7 +1105,7 @@
     "key": "1E1B",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe E mit darunterliegender Tilde"
+        "default": "e mit darunterliegender Tilde"
       }
     }
   },
@@ -1114,7 +1114,7 @@
     "key": "1E1F",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe F mit Punkt oben"
+        "default": "f mit Punkt oben"
       }
     }
   },
@@ -1123,7 +1123,7 @@
     "key": "1E21",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe G mit Macron"
+        "default": "g mit Macron"
       }
     }
   },
@@ -1132,7 +1132,7 @@
     "key": "1E23",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe H mit Punkt oben"
+        "default": "h mit Punkt oben"
       }
     }
   },
@@ -1141,7 +1141,7 @@
     "key": "1E25",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe H mit untenstehendem Punkt"
+        "default": "h mit untenstehendem Punkt"
       }
     }
   },
@@ -1150,7 +1150,7 @@
     "key": "1E27",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe H mit Diärese"
+        "default": "h mit Diärese"
       }
     }
   },
@@ -1159,7 +1159,7 @@
     "key": "1E29",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe H mit Cedilla"
+        "default": "h mit Cedilla"
       }
     }
   },
@@ -1168,7 +1168,7 @@
     "key": "1E2B",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe H mit Breve unten"
+        "default": "h mit Breve unten"
       }
     }
   },
@@ -1177,7 +1177,7 @@
     "key": "1E2D",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe I mit darunterliegender Tilde"
+        "default": "i mit darunterliegender Tilde"
       }
     }
   },
@@ -1186,7 +1186,7 @@
     "key": "1E31",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe K mit Akut"
+        "default": "k mit Akut"
       }
     }
   },
@@ -1195,7 +1195,7 @@
     "key": "1E33",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe K mit untenstehendem Punkt"
+        "default": "k mit untenstehendem Punkt"
       }
     }
   },
@@ -1204,7 +1204,7 @@
     "key": "1E35",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe K mit Zeile darunter"
+        "default": "k mit Zeile darunter"
       }
     }
   },
@@ -1213,7 +1213,7 @@
     "key": "1E37",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe L mit Punkt unten"
+        "default": "l mit Punkt unten"
       }
     }
   },
@@ -1222,7 +1222,7 @@
     "key": "1E3B",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe L mit Zeile darunter"
+        "default": "l mit Zeile darunter"
       }
     }
   },
@@ -1231,7 +1231,7 @@
     "key": "1E3D",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe L mit darunterem Zirkumflex"
+        "default": "l mit darunterem Zirkumflex"
       }
     }
   },
@@ -1240,7 +1240,7 @@
     "key": "1E3F",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe M mit Akut"
+        "default": "m mit Akut"
       }
     }
   },
@@ -1249,7 +1249,7 @@
     "key": "1E41",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe M mit Punkt oben"
+        "default": "m mit Punkt oben"
       }
     }
   },
@@ -1258,7 +1258,7 @@
     "key": "1E43",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe M mit untenstehendem Punkt"
+        "default": "m mit untenstehendem Punkt"
       }
     }
   },
@@ -1267,7 +1267,7 @@
     "key": "1E45",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe N mit Punkt oben"
+        "default": "n mit Punkt oben"
       }
     }
   },
@@ -1276,7 +1276,7 @@
     "key": "1E47",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe N mit untenstehendem Punkt"
+        "default": "n mit untenstehendem Punkt"
       }
     }
   },
@@ -1285,7 +1285,7 @@
     "key": "1E49",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe N mit Zeile darunter"
+        "default": "n mit Zeile darunter"
       }
     }
   },
@@ -1294,7 +1294,7 @@
     "key": "1E4B",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe N mit darunterem Zirkumflex"
+        "default": "n mit darunterem Zirkumflex"
       }
     }
   },
@@ -1303,7 +1303,7 @@
     "key": "1E55",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe P mit Akut"
+        "default": "p mit Akut"
       }
     }
   },
@@ -1312,7 +1312,7 @@
     "key": "1E57",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe P mit Punkt oben"
+        "default": "p mit Punkt oben"
       }
     }
   },
@@ -1321,7 +1321,7 @@
     "key": "1E59",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe R mit Punkt oben"
+        "default": "r mit Punkt oben"
       }
     }
   },
@@ -1330,7 +1330,7 @@
     "key": "1E5B",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe R mit untenstehendem Punkt"
+        "default": "r mit untenstehendem Punkt"
       }
     }
   },
@@ -1339,7 +1339,7 @@
     "key": "1E5F",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe R mit Zeile darunter"
+        "default": "r mit Zeile darunter"
       }
     }
   },
@@ -1348,7 +1348,7 @@
     "key": "1E61",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe S mit Punkt oben"
+        "default": "s mit Punkt oben"
       }
     }
   },
@@ -1357,7 +1357,7 @@
     "key": "1E63",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe S mit untenstehendem Punkt"
+        "default": "s mit untenstehendem Punkt"
       }
     }
   },
@@ -1366,7 +1366,7 @@
     "key": "1E6B",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe T mit Punkt oben"
+        "default": "t mit Punkt oben"
       }
     }
   },
@@ -1375,7 +1375,7 @@
     "key": "1E6D",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe T mit untenstehendem Punkt"
+        "default": "t mit untenstehendem Punkt"
       }
     }
   },
@@ -1384,7 +1384,7 @@
     "key": "1E6F",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe T mit Zeile darunter"
+        "default": "t mit Zeile darunter"
       }
     }
   },
@@ -1393,7 +1393,7 @@
     "key": "1E71",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe T mit darunterem Zirkumflex"
+        "default": "t mit darunterem Zirkumflex"
       }
     }
   },
@@ -1402,7 +1402,7 @@
     "key": "1E73",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe U mit untenstehender Diärese"
+        "default": "u mit untenstehender Diärese"
       }
     }
   },
@@ -1411,7 +1411,7 @@
     "key": "1E75",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe U mit darunterliegender Tilde"
+        "default": "u mit darunterliegender Tilde"
       }
     }
   },
@@ -1420,7 +1420,7 @@
     "key": "1E77",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe U mit darunterem Zirkumflex"
+        "default": "u mit darunterem Zirkumflex"
       }
     }
   },
@@ -1429,7 +1429,7 @@
     "key": "1E7D",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe V mit Tilde"
+        "default": "v mit Tilde"
       }
     }
   },
@@ -1438,7 +1438,7 @@
     "key": "1E7F",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe V mit untenstehendem Punkt"
+        "default": "v mit untenstehendem Punkt"
       }
     }
   },
@@ -1447,7 +1447,7 @@
     "key": "1E81",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe W mit Grab"
+        "default": "w mit Grab"
       }
     }
   },
@@ -1456,7 +1456,7 @@
     "key": "1E83",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe W mit Akut"
+        "default": "w mit Akut"
       }
     }
   },
@@ -1465,7 +1465,7 @@
     "key": "1E85",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe W mit Diärese"
+        "default": "w mit Diärese"
       }
     }
   },
@@ -1474,7 +1474,7 @@
     "key": "1E87",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe W mit Punkt oben"
+        "default": "w mit Punkt oben"
       }
     }
   },
@@ -1483,7 +1483,7 @@
     "key": "1E89",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe W mit Punkt unten"
+        "default": "w mit Punkt unten"
       }
     }
   },
@@ -1492,7 +1492,7 @@
     "key": "1E8B",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe X mit Punkt oben"
+        "default": "x mit Punkt oben"
       }
     }
   },
@@ -1501,7 +1501,7 @@
     "key": "1E8D",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe X mit Diärese"
+        "default": "x mit Diärese"
       }
     }
   },
@@ -1510,7 +1510,7 @@
     "key": "1E8F",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Y mit Punkt oben"
+        "default": "y mit Punkt oben"
       }
     }
   },
@@ -1519,7 +1519,7 @@
     "key": "1E91",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Z mit Zirkumflex"
+        "default": "z mit Zirkumflex"
       }
     }
   },
@@ -1528,7 +1528,7 @@
     "key": "1E93",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Z mit untenstehendem Punkt"
+        "default": "z mit untenstehendem Punkt"
       }
     }
   },
@@ -1537,7 +1537,7 @@
     "key": "1E95",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Z mit Zeile darunter"
+        "default": "z mit Zeile darunter"
       }
     }
   },
@@ -1546,7 +1546,7 @@
     "key": "1E96",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe H mit Zeile darunter"
+        "default": "h mit Zeile darunter"
       }
     }
   },
@@ -1555,7 +1555,7 @@
     "key": "1E97",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe T mit Diärese"
+        "default": "t mit Diärese"
       }
     }
   },
@@ -1564,7 +1564,7 @@
     "key": "1E98",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe W mit Ring oben"
+        "default": "w mit Ring oben"
       }
     }
   },
@@ -1573,7 +1573,7 @@
     "key": "1E99",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Y mit Ring oben"
+        "default": "y mit Ring oben"
       }
     }
   },
@@ -1582,7 +1582,7 @@
     "key": "1E9A",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe a mit rechtem Halbring"
+        "default": "a mit rechtem Halbring"
       }
     }
   },
@@ -1591,7 +1591,7 @@
     "key": "1EA1",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe a mit Punkt unten"
+        "default": "a mit Punkt unten"
       }
     }
   },
@@ -1600,7 +1600,7 @@
     "key": "1EA3",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe a mit Haken oben"
+        "default": "a mit Haken oben"
       }
     }
   },
@@ -1609,7 +1609,7 @@
     "key": "1EB9",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe E mit untenstehendem Punkt"
+        "default": "e mit untenstehendem Punkt"
       }
     }
   },
@@ -1618,7 +1618,7 @@
     "key": "1EBB",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe E mit Haken oben"
+        "default": "e mit Haken oben"
       }
     }
   },
@@ -1627,7 +1627,7 @@
     "key": "1EBD",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe E mit Tilde"
+        "default": "e mit Tilde"
       }
     }
   },
@@ -1636,7 +1636,7 @@
     "key": "1EC9",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe I mit Haken oben"
+        "default": "i mit Haken oben"
       }
     }
   },
@@ -1645,7 +1645,7 @@
     "key": "1ECB",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe I mit untenstehendem Punkt"
+        "default": "i mit untenstehendem Punkt"
       }
     }
   },
@@ -1654,7 +1654,7 @@
     "key": "1ECD",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe O mit untenstehendem Punkt"
+        "default": "o mit untenstehendem Punkt"
       }
     }
   },
@@ -1663,7 +1663,7 @@
     "key": "1ECF",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe O mit Haken oben"
+        "default": "o mit Haken oben"
       }
     }
   },
@@ -1672,7 +1672,7 @@
     "key": "1EE5",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe U mit untenstehendem Punkt"
+        "default": "u mit untenstehendem Punkt"
       }
     }
   },
@@ -1681,7 +1681,7 @@
     "key": "1EE7",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe U mit Haken oben"
+        "default": "u mit Haken oben"
       }
     }
   },
@@ -1690,7 +1690,7 @@
     "key": "1EF3",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Y mit Grab"
+        "default": "y mit Grab"
       }
     }
   },
@@ -1699,7 +1699,7 @@
     "key": "1EF5",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Y mit untenstehendem Punkt"
+        "default": "y mit untenstehendem Punkt"
       }
     }
   },
@@ -1708,7 +1708,7 @@
     "key": "1EF7",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Y mit Haken oben"
+        "default": "y mit Haken oben"
       }
     }
   },
@@ -1717,7 +1717,7 @@
     "key": "1EF9",
     "mappings": {
       "default": {
-        "default": "Lateinischer Kleinbuchstabe Y mit Tilde"
+        "default": "y mit Tilde"
       }
     }
   }
