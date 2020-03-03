@@ -103,10 +103,10 @@ var addCTXF = sre.ClearspeakGerman.addContextFunction_;
  * @private
  */
 sre.ClearspeakGerman.addAnnotators_ = function() {
-  sre.SemanticAnnotations.getInstance().register(
-      sre.ClearspeakUtil.simpleExpression());
-  sre.SemanticAnnotations.getInstance().register(
-      sre.ClearspeakUtil.unitExpression());
+  // sre.SemanticAnnotations.getInstance().register(
+  //     sre.ClearspeakUtil.simpleExpression());
+  // sre.SemanticAnnotations.getInstance().register(
+  //     sre.ClearspeakUtil.unitExpression());
 };
 
 
@@ -168,33 +168,49 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
   defineRule(
       'font', 'clearspeak.default',
       '[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font,pause:"short")',
-      'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
-      '@font!="normal"');
+      'self::*', 'name(self::*)!="number"', '@font', 'not(contains(@grammar, "ignoreFont"))',
+    '@font!="normal"');
+  defineSpecialisedRule('font', 'clearspeak.default', 'clearspeak.Caps_SayCaps');
+
+  defineRule(
+      'font-number', 'clearspeak.default',
+      '[t] @font (grammar:localFontNumber); [n] . (grammar:ignoreFont=@font)',
+      'self::number', '@font', 
+      'not(contains(@grammar, "ignoreFont"))', '@font!="normal"');
 
   defineRule(
       'font-identifier', 'clearspeak.default',
       '[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font,pause:"short")',
-      'self::identifier', 'string-length(text())=1',
+      'self::identifier', 'string-length(text())=1 or string-length(text())=2',
       '@font', '@font="normal"', 'not(contains(@grammar, "ignoreFont"))',
       '@role!="unit"');
+  defineSpecialisedRule('font-identifier', 'clearspeak.default',
+                        'clearspeak.Caps_SayCaps');
 
   defineRule(
       'omit-font', 'clearspeak.default',
       '[n] self::* (grammar:ignoreFont=@font)',
-      'self::identifier', 'string-length(text())=1', '@font',
-      'not(contains(@grammar, "ignoreFont"))', '@font="italic"');
+      'self::identifier', 'string-length(text())=1 or string-length(text())=2',
+      '@font', 'not(contains(@grammar, "ignoreFont"))', '@font="italic"',
+      'self::*'); // Redudancy for ordering
+  defineSpecialisedRule('omit-font', 'clearspeak.default',
+                        'clearspeak.Caps_SayCaps');
 
-  // defineRule(
-  //     'german-font', 'clearspeak.default',
-  //     '[t] "German"; [n] self::* (grammar:ignoreFont=@font)',
-  //     'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
-  //     '@font="fraktur"');
+  defineRule(
+      'font-double-struck', 'clearspeak.default',
+      '[n] . (grammar:ignoreFont=@font); [t] @font (grammar:localFont)',
+      'self::*', 'name(self::*)!="number"',
+      'string-length(text())=1 or string-length(text())=2', '@font',
+      'not(contains(@grammar, "ignoreFont"))', '@font="double-struck"');
+  defineSpecialisedRule('font-double-struck', 'clearspeak.default',
+                        'clearspeak.Caps_SayCaps');
 
-  // defineRule(
-  //     'german-font', 'clearspeak.default',
-  //     '[t] "bold German"; [n] self::* (grammar:ignoreFont=@font)',
-  //     'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
-  //     '@font="bold-fraktur"');
+  defineRule(
+      'font-number-double-struck', 'clearspeak.default',
+      '[n] . (grammar:ignoreFont=@font); [t] @font (grammar:localFontNumber)',
+      'self::number',
+      'string-length(text())=1 or string-length(text())=2', '@font',
+      'not(contains(@grammar, "ignoreFont"))', '@font="double-struck"');
 
   //
   // Text rules

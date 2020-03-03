@@ -204,8 +204,14 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
   defineRule(
       'font', 'mathspeak.default',
       '[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)',
-      'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
-      '@font!="normal"');
+      'self::*', 'name(self::*)!="number"', '@font',
+      'not(contains(@grammar, "ignoreFont"))', '@font!="normal"');
+
+  defineRule(
+      'font-number', 'mathspeak.default',
+      '[t] @font (grammar:localFontNumber); [n] . (grammar:ignoreFont=@font)',
+      'self::number', '@font',
+      'not(contains(@grammar, "ignoreFont"))', '@font!="normal"');
 
   defineRule(
       'font-identifier-short', 'mathspeak.default',
@@ -224,15 +230,30 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
   defineRule(
       'font-identifier', 'mathspeak.default',
       '[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)',
-      'self::identifier', 'string-length(text())=1',
+      'self::identifier', 'string-length(text())=1 or string-length(text())=2',
       '@font', '@font="normal"', 'not(contains(@grammar, "ignoreFont"))',
       '@role!="unit"');
 
   defineRule(
       'omit-font', 'mathspeak.default',
       '[n] . (grammar:ignoreFont=@font)',
-      'self::identifier', 'string-length(text())=1', '@font',
-      'not(contains(@grammar, "ignoreFont"))', '@font="italic"');
+      'self::identifier', 'string-length(text())=1 or string-length(text())=2',
+      '@font', 'not(contains(@grammar, "ignoreFont"))', '@font="italic"',
+      'self::*'); // Redudancy for ordering
+
+  defineRule(
+      'font-double-struck', 'mathspeak.default',
+      '[n] . (grammar:ignoreFont=@font); [t] @font (grammar:localFont)',
+      'self::*', 'name(self::*)!="number"',
+      'string-length(text())=1 or string-length(text())=2', '@font',
+      'not(contains(@grammar, "ignoreFont"))', '@font="double-struck"');
+
+  defineRule(
+      'font-number-double-struck', 'mathspeak.default',
+      '[n] . (grammar:ignoreFont=@font); [t] @font (grammar:localFontNumber)',
+      'self::number',
+      'string-length(text())=1 or string-length(text())=2', '@font',
+      'not(contains(@grammar, "ignoreFont"))', '@font="double-struck"');
 
   // Number rules
   defineRule(
@@ -804,7 +825,7 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
       'children/*[2][text()=2]', '@embellished',
       'children/*[1][@role="prefix operator"]');
 
-  // Cube 
+  // Cube
   defineRule(
       'cube', 'mathspeak.default',
       '[n] children/*[1]; [t] "kubik"',
