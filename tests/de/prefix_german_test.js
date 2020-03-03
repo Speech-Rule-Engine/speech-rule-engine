@@ -52,12 +52,12 @@ goog.inherits(sre.PrefixGermanTest, sre.PrefixRuleTest);
  */
 sre.PrefixGermanTest.prototype.testSubSuper = function() {
   var subscript = '<msub><mi>a</mi><mi>b</mi></msub>';
-  this.executeTest(subscript, 0, 'base');
-  this.executeTest(subscript, 1, 'indice');
+  this.executeTest(subscript, 0, 'Basis');
+  this.executeTest(subscript, 1, 'Index');
   this.executeTest(subscript, 2, '');
   var superscript = '<msup><mi>a</mi><mi>b</mi></msup>';
-  this.executeTest(superscript, 0, 'base');
-  this.executeTest(superscript, 1, 'exposant');
+  this.executeTest(superscript, 0, 'Basis');
+  this.executeTest(superscript, 1, 'Exponent');
   this.executeTest(superscript, 2, '');
 };
 
@@ -67,12 +67,12 @@ sre.PrefixGermanTest.prototype.testSubSuper = function() {
  */
 sre.PrefixGermanTest.prototype.testOverUnder = function() {
   var overscore = '<mover><mi>a</mi><mi>b</mi></mover>';
-  this.executeTest(overscore, 0, 'base');
-  this.executeTest(overscore, 1, 'indice suscrit');
+  this.executeTest(overscore, 0, 'Basis');
+  this.executeTest(overscore, 1, 'Oberer Grenzwert');
   this.executeTest(overscore, 2, '');
   var underscore = '<munder><mi>a</mi><mi>b</mi></munder>';
-  this.executeTest(underscore, 0, 'base');
-  this.executeTest(underscore, 1, 'indice souscrit');
+  this.executeTest(underscore, 0, 'Basis');
+  this.executeTest(underscore, 1, 'Unterer Grenzwert');
   this.executeTest(underscore, 2, '');
 };
 
@@ -82,8 +82,8 @@ sre.PrefixGermanTest.prototype.testOverUnder = function() {
  */
 sre.PrefixGermanTest.prototype.testFractions = function() {
   var fraction = '<mfrac><mi>a</mi><mi>b</mi></mfrac>';
-  this.executeTest(fraction, 0, 'numérateur');
-  this.executeTest(fraction, 1, 'dénominateur');
+  this.executeTest(fraction, 0, 'Zähler');
+  this.executeTest(fraction, 1, 'Nenner');
   this.executeTest(fraction, 2, '');
 };
 
@@ -93,11 +93,11 @@ sre.PrefixGermanTest.prototype.testFractions = function() {
  */
 sre.PrefixGermanTest.prototype.testRoots = function() {
   var sqrt = '<msqrt><mi>a</mi></msqrt>';
-  this.executeTest(sqrt, 0, 'radicande');
+  this.executeTest(sqrt, 0, 'Radikand');
   this.executeTest(sqrt, 1, '');
   var root = '<mroot><mi>a</mi><mi>b</mi></mroot>';
-  this.executeTest(root, 1, 'radicande');
-  this.executeTest(root, 0, 'indice');
+  this.executeTest(root, 1, 'Radikand');
+  this.executeTest(root, 0, 'Wurzelexponent');
   this.executeTest(root, 2, '');
 };
 
@@ -108,11 +108,11 @@ sre.PrefixGermanTest.prototype.testRoots = function() {
 sre.PrefixGermanTest.prototype.testSimpleTensors = function() {
   var tensor = '<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>';
-  this.executeTest(tensor, 0, 'base');
-  this.executeTest(tensor, 1, 'indice inférieur gauche');
-  this.executeTest(tensor, 2, 'indice supérieur gauche');
-  this.executeTest(tensor, 3, 'indice inférieur droite');
-  this.executeTest(tensor, 4, 'indice supérieur droite');
+  this.executeTest(tensor, 0, 'Basis');
+  this.executeTest(tensor, 1, 'linker Index');
+  this.executeTest(tensor, 2, 'links hochgestellt');
+  this.executeTest(tensor, 3, 'rechter Index');
+  this.executeTest(tensor, 4, 'rechts hochgestellt');
 };
 
 
@@ -122,15 +122,15 @@ sre.PrefixGermanTest.prototype.testSimpleTensors = function() {
 sre.PrefixGermanTest.prototype.testComplexTensors = function() {
   var tensor = '<mmultiscripts><mi>A</mi><mn>3</mn><mn>4</mn><mi>k</mi><mi>l</mi>' +
       '<mprescripts/><mn>1</mn><mn>2</mn><mi>i</mi><mi>j</mi></mmultiscripts>';
-  this.executeTest(tensor, 0, 'base');
-  this.executeTest(tensor, 1, '1er indice inférieur gauche');
-  this.executeTest(tensor, 2, '2e indice inférieur gauche');
-  this.executeTest(tensor, 3, '1er indice supérieur gauche');
-  this.executeTest(tensor, 4, '2e indice supérieur gauche');
-  this.executeTest(tensor, 5, '1er indice inférieur droite');
-  this.executeTest(tensor, 6, '2e indice inférieur droite');
-  this.executeTest(tensor, 7, '1er indice supérieur droite');
-  this.executeTest(tensor, 8, '2e indice supérieur droite');
+  this.executeTest(tensor, 0, 'Basis');
+  this.executeTest(tensor, 1, '1. linker Index');
+  this.executeTest(tensor, 2, '2. linker Index');
+  this.executeTest(tensor, 3, '1. links hochgestellt');
+  this.executeTest(tensor, 4, '2. links hochgestellt');
+  this.executeTest(tensor, 5, '1. rechter Index');
+  this.executeTest(tensor, 6, '2. rechter Index');
+  this.executeTest(tensor, 7, '1. rechts hochgestellt');
+  this.executeTest(tensor, 8, '2. rechts hochgestellt');
   this.executeTest(tensor, 17, '');
 };
 
@@ -141,8 +141,8 @@ sre.PrefixGermanTest.prototype.testComplexTensors = function() {
 sre.PrefixGermanTest.prototype.testBinomials = function() {
   var binomial = '<mfenced open="(" close=")"><mfrac linethickness="0">' +
       '<mi>n</mi><mi>k</mi></mfrac></mfenced>';
-  this.executeTest(binomial, 2, 'nombre d\'éléments disponibles');
-  this.executeTest(binomial, 3, 'nombre d\'éléments choisis');
+  this.executeTest(binomial, 2, 'Grundgesamtheit');
+  this.executeTest(binomial, 3, 'Stichprobengröße');
   this.executeTest(binomial, 0, '');
   this.executeTest(binomial, 4, '');
   this.executeTest(binomial, 5, '');
@@ -158,9 +158,9 @@ sre.PrefixGermanTest.prototype.testVectors = function() {
       '<mtr><mtd><mn>2</mn></mtd></mtr>' +
       '<mtr><mtd><mn>3</mn></mtd></mtr>' +
       '</mtable></mfenced>';
-  this.executeTest(vector, 2, '1re rangée');
-  this.executeTest(vector, 5, '2e rangée');
-  this.executeTest(vector, 8, '3e rangée');
+  this.executeTest(vector, 2, '1. Zeile');
+  this.executeTest(vector, 5, '2. Zeile');
+  this.executeTest(vector, 8, '3. Zeile');
   this.executeTest(vector, 0, '');
   this.executeTest(vector, 6, '');
   this.executeTest(vector, 10, '');
@@ -175,12 +175,12 @@ sre.PrefixGermanTest.prototype.testMatrices = function() {
       '<mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr>' +
       '<mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr>' +
       '</mtable></mfenced>';
-  this.executeTest(matrix, 4, '1re rangée');
-  this.executeTest(matrix, 1, '1re colonne');
-  this.executeTest(matrix, 3, '2e colonne');
-  this.executeTest(matrix, 9, '2e rangée');
-  this.executeTest(matrix, 6, '1re colonne');
-  this.executeTest(matrix, 8, '2e colonne');
+  this.executeTest(matrix, 4, '1. Zeile');
+  this.executeTest(matrix, 1, '1. Spalte');
+  this.executeTest(matrix, 3, '2. Spalte');
+  this.executeTest(matrix, 9, '2. Zeile');
+  this.executeTest(matrix, 6, '1. Spalte');
+  this.executeTest(matrix, 8, '2. Spalte');
   this.executeTest(matrix, 2, '');
   this.executeTest(matrix, 7, '');
   this.executeTest(matrix, 12, '');

@@ -61,7 +61,7 @@ sre.Locale.de = {
     NEST_FRAC: 'geschachtelt',
     ENDFRAC: 'Ende Bruch',
     SUPER: 'hoch',
-    SUB: 'Index',
+    SUB: 'Index',   //TODO: Maybe Index should be 'tief'?
     SUP: 'hoch',
     SUPERSCRIPT: 'hoch',
     SUBSCRIPT: 'Index',
@@ -167,7 +167,7 @@ sre.Locale.de = {
     'binomial': 'Binomialkoeffizient',
     'squarematrix': 'quadratische Matrize',
     // Roles of rows, lines, cells.
-    'multiline': 'mehrzeilig',
+    'multiline': 'mehrzeiligem Ausdruck',
     'matrix': 'Matrize',
     'vector': 'Vektor',
     'cases': 'Fallunterscheidung',
