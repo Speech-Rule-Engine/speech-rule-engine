@@ -60,10 +60,10 @@ sre.Locale.de = {
     TWICE: 'Twice',  // TODO: Do we need this?
     NEST_FRAC: 'geschachtelt',
     ENDFRAC: 'Ende Bruch',
-    SUPER: 'Hoch',
+    SUPER: 'hoch',
     SUB: 'Index',
-    SUP: 'Hoch',
-    SUPERSCRIPT: 'Hoch',
+    SUP: 'hoch',
+    SUPERSCRIPT: 'hoch',
     SUBSCRIPT: 'Index',
     BASELINE: 'Grundlinie',
     BASE: 'Grund',
@@ -211,7 +211,7 @@ sre.Locale.de = {
     DECIMAL_MARK: '\\,',
     DIGIT_GROUP: '.',
     JOINER_SUBSUPER: ' ',
-    JOINER_FRAC: ''
+    JOINER_FRAC: ' '
   },
 
   PLURAL_UNIT: {

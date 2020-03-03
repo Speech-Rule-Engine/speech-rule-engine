@@ -401,13 +401,13 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
 
   defineRule(
       'fences-neutral', 'mathspeak.default',
-      '[t] "Betragbeginn"; [n] children/*[1]; [t] "Betragende"',
+      '[t] "Anfang Betrag"; [n] children/*[1]; [t] "Ende Betrag"',
       'self::fenced', '@role="neutral"',
       'content/*[1][text()]="|" or content/*[1][text()]="❘" or' +
       ' content/*[1][text()]="｜"');
   defineSpecialisedRule(
       'fences-neutral', 'mathspeak.default', 'mathspeak.sbrief',
-      '[t] "Betrag"; [n] children/*[1]; [t] "Betragende"');
+      '[t] "Betrag"; [n] children/*[1]; [t] "Ende Betrag"');
   defineRule(
       'fences-neutral', 'mathspeak.default',
       '[n] content/*[1]; [n] children/*[1]; [n] content/*[2]',
@@ -417,7 +417,7 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
   // TODO (sorge) Maybe check for punctuated element and singleton?
   defineRule(
       'fences-set', 'mathspeak.default',
-      '[t] "Mengenbeginn"; [n] children/*[1]; [t] "Mengenende"',
+      '[t] "Anfang Menge"; [n] children/*[1]; [t] "Ende Menge"',
       'self::fenced', '@role="set empty" or @role="set extended"' +
       ' or @role="set singleton" or @role="set collection"',
       // 'self::fenced', '@role="leftright"', 'content/*[1][text()]="{"',
@@ -425,7 +425,7 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
       'not(name(../..)="appl")');
   defineSpecialisedRule(
       'fences-set', 'mathspeak.default', 'mathspeak.sbrief',
-      '[t] "Menge"; [n] children/*[1]; [t] "Mengenende"');
+      '[t] "Menge"; [n] children/*[1]; [t] "Ende Menge"');
 
 
   // Text rules
@@ -497,7 +497,7 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
 
   defineRule(
       'continued-fraction-inner', 'mathspeak.default',
-      '[t] "BeginnBruch"; [n] children/*[1];' +
+      '[t] "Anfang Bruch"; [n] children/*[1];' +
       '[t] "durch"; [n] children/*[2]',
       'self::fraction', 'ancestor::fraction',
       'children/*[2]/descendant-or-self::*[@role="ellipsis" and ' +
@@ -599,17 +599,17 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
   defineRule(
       'limboth-end', 'mathspeak.default',
       '[n] children/*[1]; [t] CSFunderscript; [n] children/*[2];' +
-      '[t] CSFoverscript; [n] children/*[3]; [t] "Überschriftende"',
+      '[t] CSFoverscript; [n] children/*[3]; [t] "Ende Überschrift"',
       'self::limboth');
   defineRule(
       'limlower-end', 'mathspeak.default',
       '[n] children/*[1]; [t] CSFunderscript; [n] children/*[2];' +
-      ' [t] "Unterschriftende"',
+      ' [t] "Ende Unterschrift"',
       'self::limlower');
   defineRule(
       'limupper-end', 'mathspeak.default',
       '[n] children/*[1]; [t] CSFoverscript; [n] children/*[2];' +
-      ' [t] "Überschriftende"',
+      ' [t] "Ende Überschrift"',
       'self::limupper');
   defineRuleAlias(
       'limlower-end', 'self::underscore', '@role="limit function"');
@@ -812,7 +812,7 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
   // Square
   defineRule(
       'square', 'mathspeak.default',
-      '[n] children/*[1]; [t] "quadrat"',
+      '[n] children/*[1]; [t] "Quadrat"',
       'self::superscript', 'children/*[2]',
       'children/*[2][text()=2]',
       'name(children/*[1])!="text" or ' +
@@ -840,7 +840,7 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
   // Cube
   defineRule(
       'cube', 'mathspeak.default',
-      '[n] children/*[1]; [t] "kubik"',
+      '[n] children/*[1]; [t] "Kubik"',
       'self::superscript', 'children/*[2]',
       'children/*[2][text()=3]',
       'name(children/*[1])!="text" or ' +
@@ -1056,14 +1056,14 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
       '[t] "Anfang"; [t] count(children/*);  [t] "mal";' +
       '[t] count(children/*[1]/children/*); [t] "Matrize"; ' +
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Zeile ");' +
-      ' [t] "Matrizenende"',
+      ' [t] "Ende Matrize"',
       'self::matrix');
   defineRule(
       'matrix', 'mathspeak.sbrief',
-      '[t] count(children/*);  [t] "By";' +
-      '[t] count(children/*[1]/children/*); [t] "Matrix"; ' +
+      '[t] count(children/*);  [t] "mal";' +
+      '[t] count(children/*[1]/children/*); [t] "Matrize"; ' +
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Zeile ");' +
-      ' [t] "Matrizenende"', 'self::matrix');
+      ' [t] "Ende Matrize"', 'self::matrix');
   defineRuleAlias(
       'matrix', 'self::vector');
 
@@ -1074,7 +1074,7 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
       'self::row');
   defineRule(
       'row-with-label', 'mathspeak.default',
-      '[t] "mit Bezeichner"; [n] content/*[1]; [t] "Bezeichnerende"(pause: 200); ' +
+      '[t] "mit Bezeichner"; [n] content/*[1]; [t] "Ende Bezeichner"(pause: 200); ' +
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Spalte")',
       'self::row', 'content');
   defineRule(
@@ -1110,28 +1110,28 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
       '[t] "Anfang"; [t] count(children/*);  [t] "mal";' +
       '[t] count(children/*[1]/children/*); [t] "Determinante";' +
       ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"Zeile ");' +
-      ' [t] "Determinantenende"',
+      ' [t] "Ende Determinante"',
       'self::matrix', '@role="determinant"');
   defineSpecialisedRule(
       'determinant', 'mathspeak.default', 'mathspeak.sbrief',
       '[t] count(children/*);  [t] "mal";' +
       '[t] count(children/*[1]/children/*); [t] "Determinante";' +
       ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"Zeile ");' +
-      ' [t] "Determinantenende"');
+      ' [t] "Ende Determinante"');
 
   defineRule(
       'determinant-simple', 'mathspeak.default',
       '[t] "Anfang"; [t] count(children/*);  [t] "mal";' +
       '[t] count(children/*[1]/children/*); [t] "Determinante";' +
       ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"Zeile",' +
-      'grammar:simpleDet); [t] "Determinantenende"',
+      'grammar:simpleDet); [t] "Ende Determinante"',
       'self::matrix', '@role="determinant"', 'CQFdetIsSimple');
   defineSpecialisedRule(
       'determinant-simple', 'mathspeak.default', 'mathspeak.sbrief',
       '[t] count(children/*);  [t] "mal";' +
       '[t] count(children/*[1]/children/*); [t] "Determinante";' +
       ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"Zeile",' +
-      'grammar:simpleDet); [t] "Determinantenende"');
+      'grammar:simpleDet); [t] "Ende Determinante"');
   defineRule(
       'row-simple', 'mathspeak.default',
       '[m] children/*;',
@@ -1140,46 +1140,46 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
   defineRule(
       'layout', 'mathspeak.default', '[t] "Anfang Anordnung"; ' +
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Zeile ");' +
-      ' [t] "Anordnungsende"', 'self::table');
+      ' [t] "Ende Anordnung"', 'self::table');
   defineRule(
       'layout', 'mathspeak.sbrief', '[t] "Anordnung"; ' +
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Zeile ");' +
-      ' [t] "Anordnungsende"', 'self::table');
+      ' [t] "Ende Anordnung"', 'self::table');
 
   defineRule(
       'binomial', 'mathspeak.default',
       '[t] "Anfang Binomialkoeffizient"; [n] children/*[2]/children/*[1]; ' +
       '[t] "aus";  [n] children/*[1]/children/*[1];' +
-      ' [t] "Binomialkoeffizientenende"',
+      ' [t] "Ende Binomialkoeffizient"',
       'self::vector', '@role="binomial"');
   defineRule(
       'binomial', 'mathspeak.brief',
       '[t] "Anfang Binomial"; [n] children/*[2]/children/*[1]; ' +
       '[t] "aus";  [n] children/*[1]/children/*[1];' +
-      ' [t] "Binomialende"',
+      ' [t] "Ende Binomial"',
       'self::vector', '@role="binomial"');
   defineRule(
       'binomial', 'mathspeak.sbrief',
       '[t] "Binomial"; [n] children/*[2]/children/*[1]; ' +
       '[t] "aus";  [n] children/*[1]/children/*[1];' +
-      ' [t] "Binomialende"',
+      ' [t] "Ende Binomial"',
       'self::vector', '@role="binomial"');
 
   defineRule(
       'cases', 'mathspeak.default', '[t] "Anfang Fallunterscheidung"; ' +
       '[t] "große"; [n] content/*[1];' +
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Zeile ");' +
-      ' [t] "Fallunterscheidungsende"', 'self::cases');
+      ' [t] "Ende Fallunterscheidung"', 'self::cases');
   defineRule(
       'cases', 'mathspeak.brief', '[t] "Anfang Fälle"; ' +
       '[t] "große"; [n] content/*[1];' +
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Zeile ");' +
-      ' [t] "Fälle Ende"', 'self::cases');
+      ' [t] "Ende Fälle"', 'self::cases');
   defineRule(
       'cases', 'mathspeak.sbrief', '[t] "Fälle"; ' +
       '[t] "große"; [n] content/*[1];' +
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Zeile ");' +
-      ' [t] "Fälle Ende"', 'self::cases');
+      ' [t] "Ende Fälle"', 'self::cases');
 
   // Multiline rules.
   defineRuleAlias(
@@ -1190,7 +1190,7 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
       '[m] children/*', 'self::line');
   defineRule(
       'line-with-label', 'mathspeak.default',
-      '[t] "mit Bezeichner"; [n] content/*[1]; [t] "Bezeichnerende" (pause: 200); ' +
+      '[t] "mit Bezeichner"; [n] content/*[1]; [t] "Ende Bezeichner" (pause: 200); ' +
       '[m] children/*',
       'self::line', 'content');
   defineSpecialisedRule(
@@ -1209,7 +1209,7 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
   defineSpecialisedRule('empty-line', 'mathspeak.brief', 'mathspeak.sbrief');
   defineRule(
       'empty-line-with-label', 'mathspeak.default',
-      '[t] "mit Bezeichner"; [n] content/*[1]; [t] "Bezeichnerende"(pause: 200); ' +
+      '[t] "mit Bezeichner"; [n] content/*[1]; [t] "Ende Bezeichner"(pause: 200); ' +
       '[t] "leer"', 'self::line', 'count(children/*)=0', 'content');
   defineSpecialisedRule(
       'empty-line-with-label', 'mathspeak.default', 'mathspeak.brief',
@@ -1221,7 +1221,7 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
   defineRule(
       'enclose', 'mathspeak.default',
       '[t] "Anfang Umschließung"; [t] @role (grammar:localEnclose);' +
-      ' [n] children/*[1]; [t] "Umschließungsende"',
+      ' [n] children/*[1]; [t] "Ende Umschließung"',
       'self::enclose');
   defineRuleAlias(
       'overbar', 'self::enclose', '@role="top"');
@@ -1239,13 +1239,13 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
   // Crossout
   defineRule(
       'crossout', 'mathspeak.default',
-      '[t] "durchkreutzt"; [n] children/*[1]; [t] "duchkreutzt Ende"',
+      '[t] "durchkreutzt"; [n] children/*[1]; [t] "Ende duchkreutzt"',
       'self::enclose', '@role="updiagonalstrike" or' +
       ' @role="downdiagonalstrike" or @role="horizontalstrike"');
   defineRule(
       'cancel', 'mathspeak.default',
       '[t] "durchkreutzt"; [n] children/*[1]/children/*[1]; [t] "mit";' +
-      ' [n] children/*[2]; [t] "duchkreutzt Ende"',
+      ' [n] children/*[2]; [t] "Ende duchkreutzt"',
       'self::overscore', '@role="updiagonalstrike" or' +
       ' @role="downdiagonalstrike" or @role="horizontalstrike"');
   defineSpecialisedRule(
@@ -1258,7 +1258,7 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
   defineRule(
       'cancel-reverse', 'mathspeak.default',
       '[t] "durchkreutzt"; [n] children/*[2]/children/*[1]; [t] "mit";' +
-      ' [n] children/*[1]; [t] "duchkreutzt Ende"',
+      ' [n] children/*[1]; [t] "Ende duchkreutzt"',
       'self::overscore', 'name(children/*[2])="enclose"',
       'children/*[2][@role="updiagonalstrike" or' +
       ' @role="downdiagonalstrike" or @role="horizontalstrike"]');
@@ -1299,13 +1299,13 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
       'self::identifier', '@role="unit"');
   defineRule(
       'unit-square', 'mathspeak.default',
-      '[t] "quadrat"; [n] children/*[1]',
+      '[t] "Quadrat"; [n] children/*[1]',
       'self::superscript', '@role="unit"', 'children/*[2][text()=2]',
       'name(children/*[1])="identifier"');
 
   defineRule(
       'unit-cubic', 'mathspeak.default',
-      '[t] "kubik"; [n] children/*[1]',
+      '[t] "Kubik"; [n] children/*[1]',
       'self::superscript', '@role="unit"', 'children/*[2][text()=3]',
       'name(children/*[1])="identifier"');
   defineRule(
