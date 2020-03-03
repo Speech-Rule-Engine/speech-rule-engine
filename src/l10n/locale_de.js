@@ -23,9 +23,27 @@
  */
 goog.provide('sre.Locale.de');
 
+goog.require('sre.Grammar');
 goog.require('sre.Locale');
 goog.require('sre.Numbers.de');
 
+
+var germanPrefixCombiner =  function(letter, font, cap) {
+  if (cap === 's') {
+    font = font.split(' ').map(function (x) {
+      return x.replace(/s$/, '');
+    }).join(' ');
+    cap = '';
+  }
+  letter = cap ? cap + ' ' + letter : letter;
+  return font ? font + ' ' + letter : letter;
+};
+
+
+var germanPostfixCombiner = function(letter, font, cap) {
+  letter = (!cap || (cap === 's')) ? letter : cap + ' ' + letter;
+  return font ? letter + ' ' + font : letter;
+};
 
 /**
  * @type {sre.Locale.Messages}
@@ -69,7 +87,10 @@ sre.Locale.de = {
     COMBINE_NESTED_FRACTION: function(a, b, c) {return a + b + c;},
     COMBINE_NESTED_RADICAL: function(a, b, c) {return a + b + c;},
     FONT_REGEXP: function(font) {
-      return new RegExp('^' + font.split(/ |-/).join('( |-)') + '( |-)');
+      font = font.split(' ').map(function (x) {
+      return x.replace(/s$/, '(|s)');
+      }).join(' ');
+      return new RegExp('((^' + font + ' )|( ' + font + '$))');
     }
   },
 
@@ -87,20 +108,20 @@ sre.Locale.de = {
     'bold-script': 'fettes Schreibschrift',
     'caligraphic': 'kalligrafisches',
     'caligraphic-bold': 'fettes kalligrafisches',
-    'double-struck': ['mit Doppelstrich', sre.Locale.postfixCombiner],
-    'double-struck-italic': ['kursiv mit Doppelstrich', sre.Locale.postfixCombiner],
+    'double-struck': ['mit Doppelstrich', germanPostfixCombiner],
+    'double-struck-italic': ['kursiv mit Doppelstrich', germanPostfixCombiner],
     'fraktur': 'Fraktur',
     'fullwidth': 'vollbreites',
     'italic': 'kursives',
-    'monospace': 'festbreites',
+    'monospace': 'nichtproportionales',
     'normal': 'normales',
     'oldstyle': 'antiquiertes',
     'oldstyle-bold': 'antiquiertes fettes',
     'script': 'Schreibschrift',
     'sans-serif': 'serifenloses',
-    'sans-serif-italic': 'serifenlos kursives',
-    'sans-serif-bold': 'serifenlos fettes',
-    'sans-serif-bold-italic': 'serifenlos fettkursives',
+    'sans-serif-italic': 'serifenloses kursives',
+    'sans-serif-bold': 'serifenloses fettes',
+    'sans-serif-bold-italic': 'serifenloses fettkursives',
     'unknown': 'unbekannt'
   },
 
@@ -109,16 +130,16 @@ sre.Locale.de = {
     // TODO: Grammar of numbers vs digits!
     'super': 'hoch',
     'sub': 'Index',
-    'circled': 'eingekreist',
-    'parenthesized': 'eingeklammert',
-    'period': ['Punkt', sre.Locale.postfixCombiner],
-    'negative-circled': 'schwarz eingekreist',
-    'double-circled': 'doppelt eingekreist',
-    'circled-sans-serif': 'eingekreist serifenlos',
-    'negative-circled-sans-serif': 'schwarz eingekreist serifenlos',
-    'comma': ['Komma', sre.Locale.postfixCombiner],
-    'squared': 'umrahmt',
-    'negative-squared': 'schwarz umrahmt'
+    'circled': 'eingekreistes',
+    'parenthesized': 'eingeklammertes',
+    'period': ['Punkt', germanPostfixCombiner],
+    'negative-circled': 'schwarz eingekreistes',
+    'double-circled': 'doppelt eingekreistes',
+    'circled-sans-serif': 'eingekreistes serifenloses',
+    'negative-circled-sans-serif': 'schwarz eingekreistes serifenloses',
+    'comma': ['Komma', germanPostfixCombiner],
+    'squared': 'umrahmtes',
+    'negative-squared': 'schwarz umrahmtes'
   },
 
   ROLE: {
@@ -221,7 +242,7 @@ sre.Locale.de = {
   ALPHABET_TRANSFORMERS: {
     digit: {
       default: function(n) {
-          return n === 0 ? 'Null' : sre.Numbers.de.numberToWords(n);},
+          return n === 0 ? 'null' : sre.Numbers.de.numberToWords(n);},
       mathspeak: function(n) {return n.toString();},
       clearspeak: function(n) {return n.toString();}},
     letter: {
@@ -232,10 +253,23 @@ sre.Locale.de = {
   ALPHABET_PREFIXES: {
     capPrefix: {default: 'großes'},
     smallPrefix: {default: ''},
-    digitPrefix: {default: ''}
+    digitPrefix: {default: 's'}
   },
 
-  ALPHABET_COMBINER: sre.Locale.prefixCombiner
+  ALPHABET_COMBINER: germanPrefixCombiner
 
 };
 
+
+sre.Grammar.getInstance().setCorrection(
+  'localFontNumber', function(font) {
+    let realFont = sre.Messages.FONT[font];
+    if (realFont === undefined) {
+      realFont = font || '';
+    }
+    realFont = (typeof realFont === 'string') ? realFont : realFont[0];
+    return realFont.split(' ').map(function (x) {
+      return x.replace(/s$/, '');
+    }).join(' ');
+  }
+);

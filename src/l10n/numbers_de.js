@@ -117,7 +117,7 @@ sre.Numbers.de.numberToWords = function(number) {
     number = Math.floor(number / 1000);
     pos++;
   }
-  return str;
+  return str.replace(/ein$/, 'eins');
 };
 
 
@@ -147,6 +147,12 @@ sre.Numbers.de.numberToOrdinal = function(num, plural) {
 sre.Numbers.de.wordOrdinal = function(number) {
   if (number === 1) {
     return 'erste';
+  }
+  if (number === 3) {
+    return 'dritte';
+  }
+  if (number === 7) {
+    return 'siebte';
   }
   if (number === 8) {
     return 'achte';
