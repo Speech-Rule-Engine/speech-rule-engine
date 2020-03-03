@@ -59,7 +59,7 @@ sre.Locale.de = {
     FRAC_OVER: 'durch',
     TWICE: 'Twice',  // TODO: Do we need this?
     NEST_FRAC: 'geschachtelt',
-    ENDFRAC: 'EndeBruch',
+    ENDFRAC: 'Ende Bruch',
     SUPER: 'Hoch',
     SUB: 'Index',
     SUP: 'Hoch',
