@@ -51,7 +51,7 @@ var germanPostfixCombiner = function(letter, font, cap) {
 sre.Locale.de = {
 
   MS: {
-    START: 'Beginn',
+    START: 'Anfang',
     FRAC_V: 'Bruch',
     FRAC_B: 'Bruch',
     FRAC_S: 'Bruch',
@@ -67,10 +67,10 @@ sre.Locale.de = {
     SUBSCRIPT: 'Index',
     BASELINE: 'Grundlinie',
     BASE: 'Grund',
-    NESTED: 'geschachtelt',
-    NEST_ROOT: 'geschachtelt',
-    STARTROOT: 'Beginn Wurzel',
-    ENDROOT: 'Wurzelende',
+    NESTED: 'geschachtelte',
+    NEST_ROOT: 'geschachtelte',
+    STARTROOT: 'Anfang Wurzel',
+    ENDROOT: 'Ende Wurzel',
     ROOTINDEX: 'Wurzelexponent',
     ROOT: 'Wurzel',
     INDEX: 'Exponent',
@@ -82,10 +82,18 @@ sre.Locale.de = {
 
   MS_FUNC: {
     FRAC_NEST_DEPTH: sre.Locale.vulgarNestingDepth,
-    RADICAL_NEST_DEPTH: sre.Locale.nestingToString,
-    COMBINE_ROOT_INDEX: function(postfix, index) {return postfix;},
+    RADICAL_NEST_DEPTH: function(x) {return (x > 1) ?
+                                     sre.Numbers.de.NUMBERS.numberToWords(x) + 'fach' : '';},
+    COMBINE_ROOT_INDEX: function(postfix, index) {
+      var root = index ? index + 'wurzel' : '';
+      return postfix.replace('Wurzel', root);
+    },
     COMBINE_NESTED_FRACTION: function(a, b, c) {return a + b + c;},
-    COMBINE_NESTED_RADICAL: function(a, b, c) {return a + b + c;},
+    COMBINE_NESTED_RADICAL: function(a, b, c) {
+      a = c.match(/exponent$/) ? a + 'r' : a;
+      var count = (b ? b + ' ' : '') + a;
+      return c.match(/ /) ? c.replace(/ /, ' ' + count + ' ') : count + ' ' + c;
+    },
     FONT_REGEXP: function(font) {
       font = font.split(' ').map(function (x) {
       return x.replace(/s$/, '(|s)');

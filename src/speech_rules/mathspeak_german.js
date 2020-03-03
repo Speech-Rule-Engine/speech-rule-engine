@@ -301,24 +301,24 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
       'parent::*/parent::infixop[@role="implicit"]');
   defineSpecialisedRule(
       'number-baseline', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "Base"; [n] . (grammar:baseline)');
+      '[t] "Grund"; [n] . (grammar:baseline)');
   defineSpecialisedRule(
       'number-baseline', 'mathspeak.brief', 'mathspeak.sbrief');
 
 
   defineRule(
       'number-baseline-font', 'mathspeak.default',
-      '[t] "Grundlinie"; [t] @font; [n] . (grammar:ignoreFont=@font)',
+      '[t] "Grundlinie"; [t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)',
       'self::number', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"', 'preceding-sibling::identifier',
       'preceding-sibling::*[@role="latinletter" or @role="greekletter" or' +
       ' @role="otherletter"]',
       'parent::*/parent::infixop[@role="implicit"]');
-  // defineSpecialisedRule(
-  //     'number-baseline-font', 'mathspeak.default', 'mathspeak.brief',
-  //     '[t] "Base"; [t] @font; [n] . (grammar:ignoreFont=@font)');
-  // defineSpecialisedRule(
-  //     'number-baseline-font', 'mathspeak.brief', 'mathspeak.sbrief');
+  defineSpecialisedRule(
+      'number-baseline-font', 'mathspeak.default', 'mathspeak.brief',
+      '[t] "Grund"; [t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)');
+  defineSpecialisedRule(
+      'number-baseline-font', 'mathspeak.brief', 'mathspeak.sbrief');
 
   defineRule(
       'identifier', 'mathspeak.default', '[m] CQFspaceoutIdentifier',
@@ -425,7 +425,7 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
       'not(name(../..)="appl")');
   defineSpecialisedRule(
       'fences-set', 'mathspeak.default', 'mathspeak.sbrief',
-      '[t] "Set"; [n] children/*[1]; [t] "EndSet"');
+      '[t] "Menge"; [n] children/*[1]; [t] "Mengenende"');
 
 
   // Text rules
@@ -494,12 +494,6 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
       'self::fraction', 'not(ancestor::fraction)',
       'children/*[2]/descendant-or-self::*[@role="ellipsis" and ' +
       'not(following-sibling::*)]');
-  // defineSpecialisedRule(
-  //     'continued-fraction-outer', 'mathspeak.default', 'mathspeak.brief',
-  //     '[t] "ContinuedFrac"; [n] children/*[1];' +
-  //     '[t] "Over"; [n] children/*[2]');
-  // defineSpecialisedRule(
-  //     'continued-fraction-outer', 'mathspeak.brief', 'mathspeak.sbrief');
 
   defineRule(
       'continued-fraction-inner', 'mathspeak.default',
@@ -532,6 +526,24 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
       '[t] CSFopenRadicalSbrief; [n] children/*[1];' +
           ' [t] CSFcloseRadicalBrief',
       'self::sqrt');
+
+  defineRule(
+      'root-small', 'mathspeak.default',
+      '[t] CSFopenRadicalVerbose; [n] children/*[2];' +
+          ' [t] CSFcloseRadicalVerbose',
+      'self::root', 'children/*[1][text()=3 or text()=2]');
+
+  defineRule(
+      'root-small', 'mathspeak.brief',
+      '[t] CSFopenRadicalBrief; [n] children/*[2];' +
+          ' [t] CSFcloseRadicalBrief',
+      'self::root', 'children/*[1][text()=3 or text()=2]');
+
+  defineRule(
+      'root-small', 'mathspeak.sbrief',
+      '[t] CSFopenRadicalSbrief; [n] children/*[2];' +
+          ' [t] CSFcloseRadicalBrief',
+      'self::root', 'children/*[1][text()=3 or text()=2]');
 
   defineRule(
       'root', 'mathspeak.default',
@@ -587,17 +599,17 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
   defineRule(
       'limboth-end', 'mathspeak.default',
       '[n] children/*[1]; [t] CSFunderscript; [n] children/*[2];' +
-      '[t] CSFoverscript; [n] children/*[3]; [t] "Endscripts"',
+      '[t] CSFoverscript; [n] children/*[3]; [t] "Überschriftende"',
       'self::limboth');
   defineRule(
       'limlower-end', 'mathspeak.default',
       '[n] children/*[1]; [t] CSFunderscript; [n] children/*[2];' +
-      ' [t] "Endscripts"', //TODO: What to call that?
+      ' [t] "Unterschriftende"',
       'self::limlower');
   defineRule(
       'limupper-end', 'mathspeak.default',
       '[n] children/*[1]; [t] CSFoverscript; [n] children/*[2];' +
-      ' [t] "Endscripts"', //TODO: What to call that?
+      ' [t] "Überschriftende"',
       'self::limupper');
   defineRuleAlias(
       'limlower-end', 'self::underscore', '@role="limit function"');

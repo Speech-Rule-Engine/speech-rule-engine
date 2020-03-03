@@ -60,6 +60,53 @@ sre.MmlcloudGermanTest = function() {
 goog.inherits(sre.MmlcloudGermanTest, sre.AbstractRuleTest);
 
 
+// Special tests for roots
+sre.MmlcloudGermanTest.prototype.testMathspeakRoots = function() {
+  this.executeRuleTest(
+    '<msqrt><mi>a</mi></msqrt>',
+    'Anfang Quadratwurzel a Ende Quadratwurzel', 'default');
+  this.executeRuleTest(
+    '<mroot><mi>a</mi><mn>2</mn></mroot>',
+    'Anfang Quadratwurzel a Ende Quadratwurzel', 'default');
+  this.executeRuleTest(
+    '<mroot><mi>a</mi><mn>3</mn></mroot>',
+    'Anfang Kubikwurzel a Ende Kubikwurzel', 'default');
+  this.executeRuleTest(
+    '<mroot><mi>a</mi><mn>4</mn></mroot>',
+    'Wurzelexponent 4 Anfang Wurzel a Ende Wurzel', 'default');
+  this.executeRuleTest(
+    '<msqrt><msqrt><mi>a</mi></msqrt></msqrt>',
+    'Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Quadratwurzel', 'default');
+  this.executeRuleTest(
+    '<msqrt><msqrt><msqrt><mi>a</mi></msqrt></msqrt></msqrt>',
+    'Anfang zweifach geschachtelte Quadratwurzel Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Quadratwurzel Ende zweifach geschachtelte Quadratwurzel', 'default');
+  this.executeRuleTest(
+    '<mroot><mroot><mi>a</mi><mn>2</mn></mroot><mn>2</mn></mroot>',
+    'Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Quadratwurzel', 'default');
+  this.executeRuleTest(
+    '<mroot><mroot><mroot><mi>a</mi><mn>2</mn></mroot><mn>2</mn></mroot><mn>2</mn></mroot>',
+    'Anfang zweifach geschachtelte Quadratwurzel Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Quadratwurzel Ende zweifach geschachtelte Quadratwurzel', 'default');
+  this.executeRuleTest(
+    '<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>3</mn></mroot>',
+    'Anfang geschachtelte Kubikwurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Kubikwurzel', 'default');
+  this.executeRuleTest(
+    '<mroot><mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>3</mn></mroot><mn>3</mn></mroot>',
+    'Anfang zweifach geschachtelte Kubikwurzel Anfang geschachtelte Kubikwurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Kubikwurzel Ende zweifach geschachtelte Kubikwurzel', 'default');
+  this.executeRuleTest(
+    '<mroot><mroot><mi>a</mi><mn>4</mn></mroot><mn>4</mn></mroot>',
+    'geschachtelter Wurzelexponent 4 Anfang geschachtelte Wurzel Wurzelexponent 4 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel', 'default');
+  this.executeRuleTest(
+    '<mroot><mroot><mroot><mi>a</mi><mn>4</mn></mroot><mn>4</mn></mroot><mn>4</mn></mroot>',
+    'zweifach geschachtelter Wurzelexponent 4 Anfang zweifach geschachtelte Wurzel geschachtelter Wurzelexponent 4 Anfang geschachtelte Wurzel Wurzelexponent 4 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel Ende zweifach geschachtelte Wurzel', 'default');
+  this.executeRuleTest(
+    '<mroot><mroot><mroot><mi>a</mi><mn>4</mn></mroot><mn>3</mn></mroot><mn>2</mn></mroot>',
+    'Anfang zweifach geschachtelte Quadratwurzel Anfang geschachtelte Kubikwurzel Wurzelexponent 4 Anfang Wurzel a Ende Wurzel Ende geschachtelte Kubikwurzel Ende zweifach geschachtelte Quadratwurzel', 'default');
+  this.executeRuleTest(
+    '<mroot><mroot><mroot><mi>a</mi><mn>2</mn></mroot><mn>3</mn></mroot><mn>4</mn></mroot>',
+    'zweifach geschachtelter Wurzelexponent 4 Anfang zweifach geschachtelte Wurzel Anfang geschachtelte Kubikwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Kubikwurzel Ende zweifach geschachtelte Wurzel', 'default');
+};
+
+
 /**
  * Testing for correct treatment of special HTML entities: non-breaking spaces,
  * left and right angle bracket.
@@ -391,7 +438,7 @@ sre.MmlcloudGermanTest.prototype.testSquareWithText = function() {
  * Testing SubSuperscript Baseline expression in multi-relation
  * Simplified test case for expressions similar to 18.
  */
-sre.MmlcloudGermanTest.prototype.untestFootnoteWithText = function() {
+sre.MmlcloudGermanTest.prototype.testFootnoteWithText = function() {
   var mml = '<mrow><mtext>area&#x00A0;of&#x00A0;triangle</mtext>' +
       '<mtext>&#x00A0;</mtext>' +
       '<msup><mrow><mtext>area&#x00A0;of&#x00A0;square</mtext>' +
@@ -411,7 +458,7 @@ sre.MmlcloudGermanTest.prototype.untestFootnoteWithText = function() {
  * Testing SubSuperscript Baseline expression in multi-relation
  * Simplified test case for expressions similar to 18.
  */
-sre.MmlcloudGermanTest.prototype.untestFootnoteWithSimpleText = function() {
+sre.MmlcloudGermanTest.prototype.testFootnoteWithSimpleText = function() {
   var mml = '<msup><mtext>area&#x00A0;of&#x00A0;triangle</mtext>' +
       '<mn>2</mn></msup>';
   this.executeRuleTest(mml, '', 'default');
@@ -520,7 +567,7 @@ sre.MmlcloudGermanTest.prototype.testTextLabelledLine = function() {
 /**
  * Test for general enclose.
  */
-sre.MmlcloudGermanTest.prototype.untestEncloseGeneral = function() {
+sre.MmlcloudGermanTest.prototype.testEncloseGeneral = function() {
   this.executeRuleTest('<menclose notation="circle"><mi>a</mi></menclose>',
                        '', 'default');
 };
