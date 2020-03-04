@@ -166,9 +166,11 @@ sre.MathspeakGerman.initCustomFunctions_ = function() {
 */
 sre.MathspeakGerman.initMathspeakGerman_ = function() {
   // TODO: This needs to be prioritized!
+  //
+  // We could say "kollabiert X", but the postscript avoids hassle with Grammar.
   defineRule(
       'collapsed', 'mathspeak.default',
-      '[n] . (engine:modality=summary,grammar:collapsed); [t] "kollapiert"',
+      '[n] . (engine:modality=summary,grammar:collapsed); [t] "kollabiert"',
       'self::*', '@alternative', 'not(contains(@grammar, "collapsed"))',
       'self::*', 'self::*', 'self::*', 'self::*', 'self::*'
   );

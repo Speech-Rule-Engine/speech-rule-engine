@@ -212,8 +212,8 @@ sre.SummaryGerman.initSummaryGerman_ = function() {
   // Content following the root expression.
   defineRule(
       'abstr-root-nested', 'default.default',
-      '[t] "verschachtelte Wurzel mit Exponent"; ' +
-      '[n] children/*[1] (engine:modality="speech"); [t] "Expnentende"',
+      '[t] "verschachtelte Wurzel mit Wurzelexponent"; ' +
+      '[n] children/*[1] (engine:modality="speech"); [t] "Ende Wurzelexponent"',
       'self::root', 'contains(@grammar, "collapsed")',
       'children/*/descendant-or-self::sqrt or' +
       ' children/*/descendant-or-self::root',
@@ -339,7 +339,7 @@ sre.SummaryGerman.initSummaryGerman_ = function() {
   );
   defineRule(
       'abstr-vector', 'mathspeak.brief',
-      '[t] "vector"',
+      '[t] "Vektor"',
       'self::vector'
   );
   defineSpecialisedRule(
@@ -474,7 +474,7 @@ sre.SummaryGerman.initSummaryGerman_ = function() {
   );
   defineRule(
       'abstr-punctuated', 'mathspeak.brief',
-      '[n] content/*[1]; [t] "separated list"',
+      '[t] "mit"; [n] content/*[1]; [t] "getrennte Liste";',
       'self::punctuated'
   );
   defineSpecialisedRule(
@@ -497,7 +497,7 @@ sre.SummaryGerman.initSummaryGerman_ = function() {
 
   defineRule(
       'abstr-integral', 'default.default',
-      '[t] "integral"',
+      '[t] "Integral"',
       '@role="integral"'
   );
 
@@ -564,7 +564,7 @@ sre.SummaryGerman.initSummaryGerman_ = function() {
   defineRule(
       'abstr-table', 'default.default',
       '[t] "Tabelle mit"; ' +
-      '[t] count(children/*); [t] "Zeihlen und";' +
+      '[t] count(children/*); [t] "Zeilen und";' +
       '[t] count(children/*[1]/children/*); [t] "Spalten"',
       'self::table'
   );
