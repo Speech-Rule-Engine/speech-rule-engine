@@ -43,6 +43,8 @@ sre.MathspeakCharGermanTest = function() {
    */
   this.styles = ['default', 'brief', 'sbrief'];
 
+  // TODO: Remove
+  this.actual = true;
   this.setActive('MathspeakCharactersGerman');
 };
 goog.inherits(sre.MathspeakCharGermanTest, sre.AbstractCharacterTest);

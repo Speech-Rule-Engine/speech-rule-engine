@@ -64,9 +64,9 @@ goog.inherits(sre.MathspeakGermanTest, sre.AbstractRuleTest);
  */
 sre.MathspeakGermanTest.prototype.testSample_1_1_1 = function() {
   var mml = '<mrow><mi>π</mi><mo>≈</mo><mn>3,14159</mn></mrow>';
-  this.executeRuleTest(mml, 'pi presque égal à 3,14159', 'default');
-  this.executeRuleTest(mml, 'pi presque égal à 3,14159', 'brief');
-  this.executeRuleTest(mml, 'pi presque égal à 3,14159', 'sbrief');
+  this.executeRuleTest(mml, 'pi beinahe gleich 3,141 59', 'default');
+  this.executeRuleTest(mml, 'pi beinahe gleich 3,141 59', 'brief');
+  this.executeRuleTest(mml, 'pi beinahe gleich 3,141 59', 'sbrief');
 };
 
 
@@ -76,9 +76,9 @@ sre.MathspeakGermanTest.prototype.testSample_1_1_1 = function() {
 sre.MathspeakGermanTest.prototype.testSample_1_1_2 = function() {
   var mml = '<mrow><mn>102</mn><mo>+</mo><mn>2214</mn><mo>+</mo><mn>15</mn>' +
       '<mo>=</mo><mn>2331</mn></mrow>';
-  this.executeRuleTest(mml, '102 plus 2214 plus 15 égale 2331', 'default');
-  this.executeRuleTest(mml, '102 plus 2214 plus 15 égale 2331', 'brief');
-  this.executeRuleTest(mml, '102 plus 2214 plus 15 égale 2331', 'sbrief');
+  this.executeRuleTest(mml, '102 plus 2214 plus 15 ist gleich 2331', 'default');
+  this.executeRuleTest(mml, '102 plus 2214 plus 15 ist gleich 2331', 'brief');
+  this.executeRuleTest(mml, '102 plus 2214 plus 15 ist gleich 2331', 'sbrief');
 };
 
 
@@ -87,9 +87,9 @@ sre.MathspeakGermanTest.prototype.testSample_1_1_2 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_1_1_3 = function() {
   var mml = '<mrow><mn>59</mn><mo>×</mo><mn>0</mn><mo>=</mo><mn>0</mn></mrow>';
-  this.executeRuleTest(mml, '59 multiplié par 0 égale 0', 'default');
-  this.executeRuleTest(mml, '59 multiplié par 0 égale 0', 'brief');
-  this.executeRuleTest(mml, '59 multiplié par 0 égale 0', 'sbrief');
+  this.executeRuleTest(mml, '59 mal 0 ist gleich 0', 'default');
+  this.executeRuleTest(mml, '59 mal 0 ist gleich 0', 'brief');
+  this.executeRuleTest(mml, '59 mal 0 ist gleich 0', 'sbrief');
 };
 
 
@@ -98,9 +98,9 @@ sre.MathspeakGermanTest.prototype.testSample_1_1_3 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_1_2_1 = function() {
   var mml = '<mrow><mn>3</mn><mo>-</mo><mo>-</mo><mn>2</mn></mrow>';
-  this.executeRuleTest(mml, '3 moins négatif 2', 'default');
-  this.executeRuleTest(mml, '3 moins négatif 2', 'brief');
-  this.executeRuleTest(mml, '3 moins négatif 2', 'sbrief');
+  this.executeRuleTest(mml, '3 minus negativ 2', 'default');
+  this.executeRuleTest(mml, '3 minus negativ 2', 'brief');
+  this.executeRuleTest(mml, '3 minus negativ 2', 'sbrief');
 };
 
 
@@ -109,9 +109,9 @@ sre.MathspeakGermanTest.prototype.testSample_1_2_1 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_1_2_2 = function() {
   var mml = '<mrow><mo>-</mo><mi>y</mi></mrow>';
-  this.executeRuleTest(mml, 'négatif y', 'default');
-  this.executeRuleTest(mml, 'négatif y', 'brief');
-  this.executeRuleTest(mml, 'négatif y', 'sbrief');
+  this.executeRuleTest(mml, 'negativ y', 'default');
+  this.executeRuleTest(mml, 'negativ y', 'brief');
+  this.executeRuleTest(mml, 'negativ y', 'sbrief');
 };
 
 
@@ -120,9 +120,9 @@ sre.MathspeakGermanTest.prototype.testSample_1_2_2 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_1_2_3 = function() {
   var mml = '<mrow><mo>-</mo><mn>32</mn></mrow>';
-  this.executeRuleTest(mml, 'négatif 32', 'default');
-  this.executeRuleTest(mml, 'négatif 32', 'brief');
-  this.executeRuleTest(mml, 'négatif 32', 'sbrief');
+  this.executeRuleTest(mml, 'negativ 32', 'default');
+  this.executeRuleTest(mml, 'negativ 32', 'brief');
+  this.executeRuleTest(mml, 'negativ 32', 'sbrief');
 };
 
 
@@ -131,9 +131,9 @@ sre.MathspeakGermanTest.prototype.testSample_1_2_3 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_1_4_1 = function() {
   var mml = '<mrow><mn>t2e4</mn></mrow>';
-  this.executeRuleTest(mml, 'nombre t 2 e 4', 'default');
-  this.executeRuleTest(mml, 'nombre t 2 e 4', 'brief');
-  this.executeRuleTest(mml, 'nombre t 2 e 4', 'sbrief');
+  this.executeRuleTest(mml, 'Zahl t 2 e 4', 'default');
+  this.executeRuleTest(mml, 'Zahl t 2 e 4', 'brief');
+  this.executeRuleTest(mml, 'Zahl t 2 e 4', 'sbrief');
 };
 
 
@@ -142,9 +142,9 @@ sre.MathspeakGermanTest.prototype.testSample_1_4_1 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_1_4_2 = function() {
   var mml = '<mrow><mn>#FF0000</mn></mrow>';
-  this.executeRuleTest(mml, 'nombre dièse F majuscule F majuscule 0 0 0 0', 'default');
-  this.executeRuleTest(mml, 'nombre dièse F majuscule F majuscule 0 0 0 0', 'brief');
-  this.executeRuleTest(mml, 'nombre dièse F majuscule F majuscule 0 0 0 0', 'sbrief');
+  this.executeRuleTest(mml, 'Zahl Nummernzeichen F F 0 0 0 0', 'default');
+  this.executeRuleTest(mml, 'Zahl Nummernzeichen F F 0 0 0 0', 'brief');
+  this.executeRuleTest(mml, 'Zahl Nummernzeichen F F 0 0 0 0', 'sbrief');
 };
 
 
@@ -154,9 +154,9 @@ sre.MathspeakGermanTest.prototype.testSample_1_4_2 = function() {
 sre.MathspeakGermanTest.prototype.testSample_1_4_3 = function() {
   var mml = '<mrow><mn>0x15FF</mn><mo>+</mo><mn>0x2B01</mn><mo>=</mo>' +
       '<mn>0x4100</mn></mrow>';
-  this.executeRuleTest(mml, 'nombre 0 x 1 5 F majuscule F majuscule plus nombre 0 x 2 B majuscule 0 1 égale nombre 0 x 4 1 0 0', 'default');
-  this.executeRuleTest(mml, 'nombre 0 x 1 5 F majuscule F majuscule plus nombre 0 x 2 B majuscule 0 1 égale nombre 0 x 4 1 0 0', 'brief');
-  this.executeRuleTest(mml, 'nombre 0 x 1 5 F majuscule F majuscule plus nombre 0 x 2 B majuscule 0 1 égale nombre 0 x 4 1 0 0', 'sbrief');
+  this.executeRuleTest(mml, 'Zahl 0 x 1 5 F F plus Zahl 0 x 2 B 0 1 ist gleich Zahl 0 x 4 1 0 0', 'default');
+  this.executeRuleTest(mml, 'Zahl 0 x 1 5 F F plus Zahl 0 x 2 B 0 1 ist gleich Zahl 0 x 4 1 0 0', 'brief');
+  this.executeRuleTest(mml, 'Zahl 0 x 1 5 F F plus Zahl 0 x 2 B 0 1 ist gleich Zahl 0 x 4 1 0 0', 'sbrief');
 };
 
 
@@ -166,12 +166,9 @@ sre.MathspeakGermanTest.prototype.testSample_1_4_3 = function() {
 sre.MathspeakGermanTest.prototype.testSample_1_5_1 = function() {
   var mml = '<mrow><mn>I</mn><mo>,</mo><mn>II</mn><mo>,</mo><mn>III</mn>' +
       '<mo>,</mo><mn>IV</mn><mo>,</mo><mn>V</mn><mo>.</mo></mrow>';
-  this.executeRuleTest(mml, 'I majuscule virgule MotMajuscule I I virgule MotMajuscule I I I virgule MotMajuscule I V virgule V majuscule point',
-                       'default');
-  this.executeRuleTest(mml, 'I majuscule virgule MotMajuscule I I virgule MotMajuscule I I I virgule MotMajuscule I V virgule V majuscule point',
-                       'brief');
-  this.executeRuleTest(mml, 'I majuscule virgule MotMajuscule I I virgule MotMajuscule I I I virgule MotMajuscule I V virgule V majuscule point',
-                       'sbrief');
+  this.executeRuleTest(mml, 'großes I Komma Wort groß I I Komma Wort groß I I I Komma Wort groß I V Komma großes V Punkt', 'default');
+  this.executeRuleTest(mml, 'großes I Komma Wort groß I I Komma Wort groß I I I Komma Wort groß I V Komma großes V Punkt', 'brief');
+  this.executeRuleTest(mml, 'großes I Komma Wort groß I I Komma Wort groß I I I Komma Wort groß I V Komma großes V Punkt', 'sbrief');
 };
 
 
@@ -183,9 +180,9 @@ sre.MathspeakGermanTest.prototype.testSample_2_1_1 = function() {
       '<mi>X</mi><mo>-</mo><mi>x</mi><mo>)</mo></mrow><mn>2</mn></msup>' +
       '<mo>-</mo><msup><mrow><mo>(</mo><mi>Y</mi><mo>-</mo><mi>y</mi>' +
       '<mo>)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mrow>';
-  this.executeRuleTest(mml, 'd égale début racine carrée parenthèse gauche X majuscule moins x parenthèse droite au carré moins parenthèse gauche Y majuscule moins y parenthèse droite au carré fin racine carrée', 'default');
-  this.executeRuleTest(mml, 'd égale début racine carrée parenthèse gauche X majuscule moins x parenthèse droite au carré moins parenthèse gauche Y majuscule moins y parenthèse droite au carré fin racine carrée', 'brief');
-  this.executeRuleTest(mml, 'd égale racine carrée parenthèse gauche X majuscule moins x parenthèse droite au carré moins parenthèse gauche Y majuscule moins y parenthèse droite au carré fin racine carrée', 'sbrief');
+  this.executeRuleTest(mml, 'd ist gleich Anfang Quadratwurzel Klammer auf großes X minus x Klammer zu Quadrat minus Klammer auf großes Y minus y Klammer zu Quadrat Ende Quadratwurzel', 'default');
+  this.executeRuleTest(mml, 'd ist gleich Anfang Quadratwurzel Klammer auf großes X minus x Klammer zu Quadrat minus Klammer auf großes Y minus y Klammer zu Quadrat Ende Quadratwurzel', 'brief');
+  this.executeRuleTest(mml, 'd ist gleich Quadratwurzel Klammer auf großes X minus x Klammer zu Quadrat minus Klammer auf großes Y minus y Klammer zu Quadrat Ende Quadratwurzel', 'sbrief');
 };
 
 
@@ -198,12 +195,9 @@ sre.MathspeakGermanTest.prototype.testSample_2_3_1 = function() {
       '<mspace width="4.pt"/><mi>B</mi><mo>→</mo><mi>C</mi>' +
       '<mspace width="4.pt"/><mtext>dann</mtext><mspace width="4.pt"/>' +
       '<mi>A</mi><mo>→</mo><mi>C</mi><mo>.</mo></mrow>';
-  this.executeRuleTest(mml, 'Si A majuscule flèche droite B majuscule et B majuscule flèche droite C majuscule alors A majuscule flèche droite C majuscule point',
-                       'default');
-  this.executeRuleTest(mml, 'Si A majuscule flèche droite B majuscule et B majuscule flèche droite C majuscule alors A majuscule flèche droite C majuscule point',
-                       'brief');
-  this.executeRuleTest(mml, 'Si A majuscule flèche droite B majuscule et B majuscule flèche droite C majuscule alors A majuscule flèche droite C majuscule point',
-                       'sbrief');
+  this.executeRuleTest(mml, 'Wenn großes A Pfeil nach rechts großes B und großes B Pfeil nach rechts großes C dann großes A Pfeil nach rechts großes C Punkt', 'default');
+  this.executeRuleTest(mml, 'Wenn großes A Pfeil nach rechts großes B und großes B Pfeil nach rechts großes C dann großes A Pfeil nach rechts großes C Punkt', 'brief');
+  this.executeRuleTest(mml, 'Wenn großes A Pfeil nach rechts großes B und großes B Pfeil nach rechts großes C dann großes A Pfeil nach rechts großes C Punkt', 'sbrief');
 };
 
 
@@ -213,9 +207,9 @@ sre.MathspeakGermanTest.prototype.testSample_2_3_1 = function() {
 sre.MathspeakGermanTest.prototype.testSample_2_6_1 = function() {
   var mml = '<mrow><mo mathvariant="bold">[</mo><mi>x</mi>' +
       '<mo mathvariant="bold">]</mo></mrow>';
-  this.executeRuleTest(mml, 'crochet gauche en gras x crochet droit en gras', 'default');
-  this.executeRuleTest(mml, 'crochet gauche en gras x crochet droit en gras', 'brief');
-  this.executeRuleTest(mml, 'crochet gauche en gras x crochet droit en gras', 'sbrief');
+  this.executeRuleTest(mml, 'fettes eckige Klammer auf x fettes eckige Klammer zu', 'default');
+  this.executeRuleTest(mml, 'fettes eckige Klammer auf x fettes eckige Klammer zu', 'brief');
+  this.executeRuleTest(mml, 'fettes eckige Klammer auf x fettes eckige Klammer zu', 'sbrief');
 };
 
 
@@ -227,10 +221,9 @@ sre.MathspeakGermanTest.prototype.testSample_2_6_2 = function() {
       '<mi mathvariant="bold">l</mi><mo>=</mo><mo>-</mo><mfrac><mrow>' +
       '<mi>d</mi><mi>Φ</mi><mi>B</mi></mrow><mrow><mi>d</mi><mi>t</mi>' +
       '</mrow></mfrac></mrow>';
-  this.executeRuleTest(mml, 'intégrale de contour E majuscule point médian d l en gras égale négatif début fraction d Phi majuscule B majuscule sur d t fin fraction',
-                       'default');
-  this.executeRuleTest(mml, 'intégrale de contour E majuscule point médian d l en gras égale négatif début frac d Phi majuscule B majuscule sur d t fin frac', 'brief');
-  this.executeRuleTest(mml, 'intégrale de contour E majuscule point médian d l en gras égale négatif frac d Phi majuscule B majuscule sur d t fin frac', 'sbrief');
+  this.executeRuleTest(mml, 'Randintegral großes E mal d fettes l ist gleich minus Anfang Bruch d großes Phi großes B durch d t Ende Bruch', 'default');
+  this.executeRuleTest(mml, 'Randintegral großes E mal d fettes l ist gleich minus Anfang Bruch d großes Phi großes B durch d t Ende Bruch', 'brief');
+  this.executeRuleTest(mml, 'Randintegral großes E mal d fettes l ist gleich minus Bruch d großes Phi großes B durch d t Ende Bruch', 'sbrief');
 };
 
 
@@ -239,11 +232,11 @@ sre.MathspeakGermanTest.prototype.testSample_2_6_2 = function() {
  */
 sre.MathspeakGermanTest.prototype.testNegativeVsMinus = function() {
   var mml = '<mrow><mo>-</mo><mfrac><mn>1</mn><mi>b</mi></mfrac></mrow>';
-  this.executeRuleTest(mml, 'négatif début fraction 1 sur b fin fraction', 'default');
+  this.executeRuleTest(mml, 'minus Anfang Bruch 1 durch b Ende Bruch', 'default');
   mml = '<mrow><mo>-</mo><mfrac><mi>a</mi><mi>b</mi></mfrac></mrow>';
-  this.executeRuleTest(mml, 'négatif début fraction a sur b fin fraction', 'default');
+  this.executeRuleTest(mml, 'minus Anfang Bruch a durch b Ende Bruch', 'default');
   mml = '<mrow><mo>-</mo><mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>';
-  this.executeRuleTest(mml, 'négatif 3 et un-demi', 'default');
+  this.executeRuleTest(mml, 'negativ 3 eins halb', 'default');
 };
 
 
@@ -257,10 +250,9 @@ sre.MathspeakGermanTest.prototype.testSample_4_2_1 = function() {
       '<mo>=</mo><mo>{</mo><mi>Α</mi><mo>,</mo><mi>Β</mi><mo>,</mo>' +
       '<mi>Γ</mi><mo>,</mo><mi>Δ</mi><mo>,</mo><mi>Ε</mi><mo>,</mo>' +
       '<mi>Φ</mi><mo>}</mo></mrow>';
-  this.executeRuleTest(mml, 'Majuscule parenthèse gauche début ensemble alpha virgule bêta virgule gamma virgule delta virgule epsilon virgule phi fin ensemble parenthèse droite égale début ensemble Alpha majuscule virgule Bêta majuscule virgule Gamma majuscule virgule Delta majuscule virgule Epsilon majuscule virgule Phi majuscule fin ensemble', 'default');
-  this.executeRuleTest(mml, 'Majuscule parenthèse gauche début ensemble alpha virgule bêta virgule gamma virgule delta virgule epsilon virgule phi fin ensemble parenthèse droite égale début ensemble Alpha majuscule virgule Bêta majuscule virgule Gamma majuscule virgule Delta majuscule virgule Epsilon majuscule virgule Phi majuscule fin ensemble',
-                       'brief');
-  this.executeRuleTest(mml, 'Majuscule parenthèse gauche ensemble alpha virgule bêta virgule gamma virgule delta virgule epsilon virgule phi fin ensemble parenthèse droite égale ensemble Alpha majuscule virgule Bêta majuscule virgule Gamma majuscule virgule Delta majuscule virgule Epsilon majuscule virgule Phi majuscule fin ensemble', 'sbrief');
+  this.executeRuleTest(mml, 'Gross Klammer auf Anfang Menge alpha Komma beta Komma gamma Komma delta Komma epsilon Komma phi Ende Menge Klammer zu ist gleich Anfang Menge großes Alpha Komma großes Beta Komma großes Gamma Komma groß delta Komma großes Epsilon Komma großes Phi Ende Menge', 'default');
+  this.executeRuleTest(mml, 'Gross Klammer auf Anfang Menge alpha Komma beta Komma gamma Komma delta Komma epsilon Komma phi Ende Menge Klammer zu ist gleich Anfang Menge großes Alpha Komma großes Beta Komma großes Gamma Komma groß delta Komma großes Epsilon Komma großes Phi Ende Menge', 'brief');
+  this.executeRuleTest(mml, 'Gross Klammer auf Menge alpha Komma beta Komma gamma Komma delta Komma epsilon Komma phi Ende Menge Klammer zu ist gleich Menge großes Alpha Komma großes Beta Komma großes Gamma Komma groß delta Komma großes Epsilon Komma großes Phi Ende Menge', 'sbrief');
 };
 
 
@@ -269,9 +261,9 @@ sre.MathspeakGermanTest.prototype.testSample_4_2_1 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_5_1_1 = function() {
   var mml = '<mrow><mi>y</mi><mo>-</mo><mn>1</mn></mrow>';
-  this.executeRuleTest(mml, 'y moins 1', 'default');
-  this.executeRuleTest(mml, 'y moins 1', 'brief');
-  this.executeRuleTest(mml, 'y moins 1', 'sbrief');
+  this.executeRuleTest(mml, 'y minus 1', 'default');
+  this.executeRuleTest(mml, 'y minus 1', 'brief');
+  this.executeRuleTest(mml, 'y minus 1', 'sbrief');
 };
 
 
@@ -281,12 +273,9 @@ sre.MathspeakGermanTest.prototype.testSample_5_1_1 = function() {
 sre.MathspeakGermanTest.prototype.testSample_5_1_2 = function() {
   var mml = '<mrow><mo>(</mo><mn>1</mn><mtext> a </mtext>' +
       '<mn>1</mn><mo>)</mo></mrow>';
-  this.executeRuleTest(mml, 'parenthèse gauche 1 a 1 parenthèse droite',
-                       'default');
-  this.executeRuleTest(mml, 'parenthèse gauche 1 a 1 parenthèse droite',
-                       'brief');
-  this.executeRuleTest(mml, 'parenthèse gauche 1 a 1 parenthèse droite',
-                       'sbrief');
+  this.executeRuleTest(mml, 'Klammer auf 1 a 1 Klammer zu', 'default');
+  this.executeRuleTest(mml, 'Klammer auf 1 a 1 Klammer zu', 'brief');
+  this.executeRuleTest(mml, 'Klammer auf 1 a 1 Klammer zu', 'sbrief');
 };
 
 
@@ -295,9 +284,9 @@ sre.MathspeakGermanTest.prototype.testSample_5_1_2 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_5_1_3 = function() {
   var mml = '<mrow><mo>-</mo><mn>1</mn></mrow>';
-  this.executeRuleTest(mml, 'négatif 1', 'default');
-  this.executeRuleTest(mml, 'négatif 1', 'brief');
-  this.executeRuleTest(mml, 'négatif 1', 'sbrief');
+  this.executeRuleTest(mml, 'negativ 1', 'default');
+  this.executeRuleTest(mml, 'negativ 1', 'brief');
+  this.executeRuleTest(mml, 'negativ 1', 'sbrief');
 };
 
 
@@ -309,11 +298,9 @@ sre.MathspeakGermanTest.prototype.testSample_6_1_1 = function() {
       '<mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo>' +
       '<mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo>,</mo>' +
       '<mn>8</mn><mo>,</mo><mo>&#x2026;</mo><mo>}</mo></mrow>';
-  this.executeRuleTest(mml, 'Les numéros de Fibonacci sont deux points début ensemble 0 virgule 1 virgule 1 virgule 2 virgule 3 virgule 5 virgule 8 virgule points de suspension fin ensemble',
-                       'default');
-  this.executeRuleTest(mml, 'Les numéros de Fibonacci sont deux points début ensemble 0 virgule 1 virgule 1 virgule 2 virgule 3 virgule 5 virgule 8 virgule points de suspension fin ensemble',
-                       'brief');
-  this.executeRuleTest(mml, 'Les numéros de Fibonacci sont deux points ensemble 0 virgule 1 virgule 1 virgule 2 virgule 3 virgule 5 virgule 8 virgule points de suspension fin ensemble', 'sbrief');
+  this.executeRuleTest(mml, 'Die Fibonaccizahlen sind Doppelpunkt Anfang Menge 0 Komma 1 Komma 1 Komma 2 Komma 3 Komma 5 Komma 8 Komma horizontale Ellipsis Ende Menge', 'default');
+  this.executeRuleTest(mml, 'Die Fibonaccizahlen sind Doppelpunkt Anfang Menge 0 Komma 1 Komma 1 Komma 2 Komma 3 Komma 5 Komma 8 Komma horizontale Ellipsis Ende Menge', 'brief');
+  this.executeRuleTest(mml, 'Die Fibonaccizahlen sind Doppelpunkt Menge 0 Komma 1 Komma 1 Komma 2 Komma 3 Komma 5 Komma 8 Komma horizontale Ellipsis Ende Menge', 'sbrief');
 };
 
 
@@ -323,9 +310,9 @@ sre.MathspeakGermanTest.prototype.testSample_6_1_1 = function() {
 sre.MathspeakGermanTest.prototype.testSample_6_2_1 = function() {
   var mml = '<mrow><mo>|</mo><mn>4</mn><mo>-</mo><mn>7</mn><mo>|</mo>' +
       '<mo>=</mo><mn>3</mn></mrow>';
-  this.executeRuleTest(mml, 'début valeur absolue 4 moins 7 fin valeur absolue égale 3', 'default');
-  this.executeRuleTest(mml, 'début valeur absolue 4 moins 7 fin valeur absolue égale 3', 'brief');
-  this.executeRuleTest(mml, 'valeur absolue 4 moins 7 fin valeur absolue égale 3', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang Betrag 4 minus 7 Ende Betrag ist gleich 3', 'default');
+  this.executeRuleTest(mml, 'Anfang Betrag 4 minus 7 Ende Betrag ist gleich 3', 'brief');
+  this.executeRuleTest(mml, 'Betrag 4 minus 7 Ende Betrag ist gleich 3', 'sbrief');
 };
 
 
@@ -340,9 +327,9 @@ sre.MathspeakGermanTest.prototype.testSample_6_2_2 = function() {
       '<mfenced open="|" close="|"><mi>a</mi></mfenced><mo>&#xb1;</mo>' +
       '<mfenced separators="" open="|" close="|"><mi>b</mi><mo>-</mo>' +
       '<mi>c</mi></mfenced></mrow>';
-  this.executeRuleTest(mml, 'début valeur absolue a plus ou moins début valeur absolue b moins c fin valeur absolue fin valeur absolue pas égal à début valeur absolue a fin valeur absolue plus ou moins début valeur absolue b moins c fin valeur absolue', 'default');
-  this.executeRuleTest(mml, 'début valeur absolue a plus ou moins début valeur absolue b moins c fin valeur absolue fin valeur absolue pas égal à début valeur absolue a fin valeur absolue plus ou moins début valeur absolue b moins c fin valeur absolue', 'brief');
-  this.executeRuleTest(mml, 'valeur absolue a plus ou moins valeur absolue b moins c fin valeur absolue fin valeur absolue pas égal à valeur absolue a fin valeur absolue plus ou moins valeur absolue b moins c fin valeur absolue', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang Betrag a plus minus Anfang Betrag b minus c Ende Betrag Ende Betrag ungleich Anfang Betrag a Ende Betrag plus minus Anfang Betrag b minus c Ende Betrag', 'default');
+  this.executeRuleTest(mml, 'Anfang Betrag a plus minus Anfang Betrag b minus c Ende Betrag Ende Betrag ungleich Anfang Betrag a Ende Betrag plus minus Anfang Betrag b minus c Ende Betrag', 'brief');
+  this.executeRuleTest(mml, 'Betrag a plus minus Betrag b minus c Ende Betrag Ende Betrag ungleich Betrag a Ende Betrag plus minus Betrag b minus c Ende Betrag', 'sbrief');
 };
 
 
@@ -351,9 +338,9 @@ sre.MathspeakGermanTest.prototype.testSample_6_2_2 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_7_1_1 = function() {
   var mml = '<mfrac><mn>1</mn><mi>x</mi></mfrac>';
-  this.executeRuleTest(mml, 'début fraction 1 sur x fin fraction', 'default');
-  this.executeRuleTest(mml, 'début frac 1 sur x fin frac', 'brief');
-  this.executeRuleTest(mml, 'frac 1 sur x fin frac', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang Bruch 1 durch x Ende Bruch', 'default');
+  this.executeRuleTest(mml, 'Anfang Bruch 1 durch x Ende Bruch', 'brief');
+  this.executeRuleTest(mml, 'Bruch 1 durch x Ende Bruch', 'sbrief');
 };
 
 
@@ -364,10 +351,9 @@ sre.MathspeakGermanTest.prototype.testSample_7_1_2 = function() {
   var mml = '<mrow><mi>a</mi><mo>-</mo><mfrac><mrow><mi>b</mi><mo>+</mo>' +
       '<mi>c</mi></mrow><mrow><mi>d</mi><mo>-</mo><mi>e</mi></mrow>' +
       '</mfrac><mo>×</mo><mi>f</mi></mrow>';
-  this.executeRuleTest(mml, 'a moins début fraction b plus c sur d moins e fin fraction multiplié par f', 'default');
-  this.executeRuleTest(mml, 'a moins début frac b plus c sur d moins e fin frac multiplié par f', 'brief');
-  this.executeRuleTest(mml, 'a moins frac b plus c sur d moins e fin frac multiplié par f',
-                       'sbrief');
+  this.executeRuleTest(mml, 'a minus Anfang Bruch b plus c durch d minus e Ende Bruch mal f', 'default');
+  this.executeRuleTest(mml, 'a minus Anfang Bruch b plus c durch d minus e Ende Bruch mal f', 'brief');
+  this.executeRuleTest(mml, 'a minus Bruch b plus c durch d minus e Ende Bruch mal f', 'sbrief');
 };
 
 
@@ -378,10 +364,9 @@ sre.MathspeakGermanTest.prototype.testSample_7_2_1 = function() {
   var mml = '<mrow><mfrac><mfrac><mi>x</mi><mi>y</mi></mfrac><mi>z</mi>' +
       '</mfrac><mo>≠</mo><mfrac><mi>x</mi><mfrac><mi>y</mi><mi>z</mi>' +
       '</mfrac></mfrac></mrow>';
-  this.executeRuleTest(mml, 'début début fraction début fraction x sur y fin fraction sur sur z fin fin fraction pas égal à début début fraction x sur sur début fraction y sur z fin fraction fin fin fraction',
-                       'default');
-  this.executeRuleTest(mml, 'début début frac début frac x sur y fin frac sur sur z fin fin frac pas égal à début début frac x sur sur début frac y sur z fin frac fin fin frac', 'brief');
-  this.executeRuleTest(mml, 'frac1imbriquée frac x sur y fin frac sur1imbriquée z fin frac1imbriquée pas égal à frac1imbriquée x sur1imbriquée frac y sur z fin frac fin frac1imbriquée', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang Anfang Bruch Anfang Bruch x durch y Ende Bruch durch durch z Ende Ende Bruch ungleich Anfang Anfang Bruch x durch durch Anfang Bruch y durch z Ende Bruch Ende Ende Bruch', 'default');
+  this.executeRuleTest(mml, 'Anfang Anfang Bruch Anfang Bruch x durch y Ende Bruch durch durch z Ende Ende Bruch ungleich Anfang Anfang Bruch x durch durch Anfang Bruch y durch z Ende Bruch Ende Ende Bruch', 'brief');
+  this.executeRuleTest(mml, 'geschachteltBruch Bruch x durch y Ende Bruch geschachteltdurch z geschachteltEnde Bruch ungleich geschachteltBruch x geschachteltdurch Bruch y durch z Ende Bruch geschachteltEnde Bruch', 'sbrief');
 };
 
 
@@ -402,9 +387,9 @@ sre.MathspeakGermanTest.prototype.testSample_7_3_1 = function() {
       '<mo>+</mo><msup><mfenced separators="" open="(" close=")"><mfrac>' +
       '<mrow><mn>2</mn><mi>x</mi></mrow><mrow><mn>1</mn><mo>-</mo>' +
       '<mi>x</mi></mrow></mfrac></mfenced><mn>2</mn></msup></mrow></mfrac>';
-  this.executeRuleTest(mml, 'début début début fraction début début fraction parenthèse gauche 1 moins x parenthèse droite début fraction d sur d x fin fraction parenthèse gauche 2 x parenthèse droite moins 2 x début fraction d sur d x fin fraction parenthèse gauche 1 moins x parenthèse droite sur sur parenthèse gauche 1 moins x parenthèse droite au carré fin fin fraction sur sur sur 1 plus parenthèse gauche début fraction 2 x sur 1 moins x fin fraction parenthèse droite au carré fin fin fin fraction', 'default');
-  this.executeRuleTest(mml, 'début début début frac début début frac parenthèse gauche 1 moins x parenthèse droite début frac d sur d x fin frac parenthèse gauche 2 x parenthèse droite moins 2 x début frac d sur d x fin frac parenthèse gauche 1 moins x parenthèse droite sur sur parenthèse gauche 1 moins x parenthèse droite au carré fin fin frac sur sur sur 1 plus parenthèse gauche début frac 2 x sur 1 moins x fin frac parenthèse droite au carré fin fin fin frac', 'brief');
-  this.executeRuleTest(mml, 'frac2imbriquée frac1imbriquée parenthèse gauche 1 moins x parenthèse droite frac d sur d x fin frac parenthèse gauche 2 x parenthèse droite moins 2 x frac d sur d x fin frac parenthèse gauche 1 moins x parenthèse droite sur1imbriquée parenthèse gauche 1 moins x parenthèse droite au carré fin frac1imbriquée sur2imbriquée 1 plus parenthèse gauche frac 2 x sur 1 moins x fin frac parenthèse droite au carré fin frac2imbriquée', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang Anfang Anfang Bruch Anfang Anfang Bruch Klammer auf 1 minus x Klammer zu Anfang Bruch d durch d x Ende Bruch Klammer auf 2 x Klammer zu minus 2 x Anfang Bruch d durch d x Ende Bruch Klammer auf 1 minus x Klammer zu durch durch Klammer auf 1 minus x Klammer zu Quadrat Ende Ende Bruch durch durch durch 1 plus Klammer auf Anfang Bruch 2 x durch 1 minus x Ende Bruch Klammer zu Quadrat Ende Ende Ende Bruch', 'default');
+  this.executeRuleTest(mml, 'Anfang Anfang Anfang Bruch Anfang Anfang Bruch Klammer auf 1 minus x Klammer zu Anfang Bruch d durch d x Ende Bruch Klammer auf 2 x Klammer zu minus 2 x Anfang Bruch d durch d x Ende Bruch Klammer auf 1 minus x Klammer zu durch durch Klammer auf 1 minus x Klammer zu Quadrat Ende Ende Bruch durch durch durch 1 plus Klammer auf Anfang Bruch 2 x durch 1 minus x Ende Bruch Klammer zu Quadrat Ende Ende Ende Bruch', 'brief');
+  this.executeRuleTest(mml, 'geschachteltzweifachBruch geschachteltBruch Klammer auf 1 minus x Klammer zu Bruch d durch d x Ende Bruch Klammer auf 2 x Klammer zu minus 2 x Bruch d durch d x Ende Bruch Klammer auf 1 minus x Klammer zu geschachteltdurch Klammer auf 1 minus x Klammer zu Quadrat geschachteltEnde Bruch geschachteltzweifachdurch 1 plus Klammer auf Bruch 2 x durch 1 minus x Ende Bruch Klammer zu Quadrat geschachteltzweifachEnde Bruch', 'sbrief');
 };
 
 
@@ -418,9 +403,9 @@ sre.MathspeakGermanTest.prototype.testSample_7_3_2 = function() {
       '<mn>1</mn><mrow><mo>&#x2026;</mo><mo>+</mo><mfrac><mn>1</mn><msub>' +
       '<mi>a</mi><mi>n</mi></msub></mfrac></mrow></mfrac></mrow></mfrac>' +
       '</mrow></mfrac></mrow>';
-  this.executeRuleTest(mml, 'a indice 0 position de base plus début début début début fraction 1 sur sur sur sur a indice 1 position de base plus début début début fraction 1 sur sur sur a indice 2 position de base plus début début fraction 1 sur sur points de suspension plus début fraction 1 sur a indice n position de base fin fraction fin fin fraction fin fin fin fraction fin fin fin fin fraction', 'default');
-  this.executeRuleTest(mml, 'a 0 plus début début début début frac 1 sur sur sur sur a 1 plus début début début frac 1 sur sur sur a 2 plus début début frac 1 sur sur points de suspension plus début frac 1 sur a sub n position de base fin frac fin fin frac fin fin fin frac fin fin fin fin frac', 'brief');
-  this.executeRuleTest(mml, 'a 0 plus frac3imbriquée 1 sur3imbriquée a 1 plus frac2imbriquée 1 sur2imbriquée a 2 plus frac1imbriquée 1 sur1imbriquée points de suspension plus frac 1 sur a sub n position de base fin frac fin frac1imbriquée fin frac2imbriquée fin frac3imbriquée', 'sbrief');
+  this.executeRuleTest(mml, 'a 0 plus Anfang Anfang Anfang Anfang Bruch 1 durch durch durch durch a 1 plus Anfang Anfang Anfang Bruch 1 durch durch durch a 2 plus Anfang Anfang Bruch 1 durch durch horizontale Ellipsis plus Anfang Bruch 1 durch a Index n Grundlinie Ende Bruch Ende Ende Bruch Ende Ende Ende Bruch Ende Ende Ende Ende Bruch', 'default');
+  this.executeRuleTest(mml, 'a 0 plus Anfang Anfang Anfang Anfang Bruch 1 durch durch durch durch a 1 plus Anfang Anfang Anfang Bruch 1 durch durch durch a 2 plus Anfang Anfang Bruch 1 durch durch horizontale Ellipsis plus Anfang Bruch 1 durch a Index n Grund Ende Bruch Ende Ende Bruch Ende Ende Ende Bruch Ende Ende Ende Ende Bruch', 'brief');
+  this.executeRuleTest(mml, 'a 0 plus geschachteltdreifachBruch 1 geschachteltdreifachdurch a 1 plus geschachteltzweifachBruch 1 geschachteltzweifachdurch a 2 plus geschachteltBruch 1 geschachteltdurch horizontale Ellipsis plus Bruch 1 durch a Index n Grund Ende Bruch geschachteltEnde Bruch geschachteltzweifachEnde Bruch geschachteltdreifachEnde Bruch', 'sbrief');
 };
 
 
@@ -435,10 +420,9 @@ sre.MathspeakGermanTest.prototype.testSample_7_4_1 = function() {
       '<mo>=</mo><mn>1</mn></mrow>' +
       '<mo movablelimits="true" form="prefix">∞</mo></munderover><mfrac>' +
       '<mi>n</mi><mn>2</mn></mfrac></mrow>';
-  this.executeRuleTest(mml, 'un-demi plus deux-demis plus trois-demis plus quatre-demis plus points de suspension égale sommation début souscript n égale 1 début suscript infini fin scripts début fraction n sur 2 fin fraction',
-                       'default');
-  this.executeRuleTest(mml, 'un-demi plus deux-demis plus trois-demis plus quatre-demis plus points de suspension égale sommation début souscript n égale 1 début suscript infini fin scripts début frac n sur 2 fin frac', 'brief');
-  this.executeRuleTest(mml, 'un-demi plus deux-demis plus trois-demis plus quatre-demis plus points de suspension égale sommation début souscript n égale 1 début suscript infini fin scripts frac n sur 2 fin frac', 'sbrief');
+  this.executeRuleTest(mml, 'eins halb plus zwei halbe plus drei halbe plus vier halbe plus horizontale Ellipsis ist gleich Summe Unterschrift n ist gleich 1 Überschrift unendlich Ende Überschrift Anfang Bruch n durch 2 Ende Bruch', 'default');
+  this.executeRuleTest(mml, 'eins halb plus zwei halbe plus drei halbe plus vier halbe plus horizontale Ellipsis ist gleich Summe Unterschrift n ist gleich 1 Überschrift unendlich Ende Überschrift Anfang Bruch n durch 2 Ende Bruch', 'brief');
+  this.executeRuleTest(mml, 'eins halb plus zwei halbe plus drei halbe plus vier halbe plus horizontale Ellipsis ist gleich Summe Unterschrift n ist gleich 1 Überschrift unendlich Ende Überschrift Bruch n durch 2 Ende Bruch', 'sbrief');
 };
 
 
@@ -449,9 +433,9 @@ sre.MathspeakGermanTest.prototype.testSample_7_4_2 = function() {
   var mml = '<mrow><mfrac><mn>20</mn><mn>5</mn></mfrac><mo>×</mo><mfrac>' +
       '<mn>1</mn><mn>100</mn></mfrac><mo>=</mo><mfrac><mn>1</mn>' +
       '<mn>25</mn></mfrac></mrow>';
-  this.executeRuleTest(mml, 'début fraction 20 sur 5 fin fraction multiplié par début fraction 1 sur 100 fin fraction égale un-vingt-cinquième', 'default');
-  this.executeRuleTest(mml, 'début frac 20 sur 5 fin frac multiplié par début frac 1 sur 100 fin frac égale un-vingt-cinquième', 'brief');
-  this.executeRuleTest(mml, 'frac 20 sur 5 fin frac multiplié par frac 1 sur 100 fin frac égale un-vingt-cinquième', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang Bruch 20 durch 5 Ende Bruch mal Anfang Bruch 1 durch 100 Ende Bruch ist gleich eins fünfundzwanzigstel', 'default');
+  this.executeRuleTest(mml, 'Anfang Bruch 20 durch 5 Ende Bruch mal Anfang Bruch 1 durch 100 Ende Bruch ist gleich eins fünfundzwanzigstel', 'brief');
+  this.executeRuleTest(mml, 'Bruch 20 durch 5 Ende Bruch mal Bruch 1 durch 100 Ende Bruch ist gleich eins fünfundzwanzigstel', 'sbrief');
 };
 
 
@@ -462,9 +446,9 @@ sre.MathspeakGermanTest.prototype.testSample_7_4_3 = function() {
   var mml = '<mrow><mfrac><mfrac><mn>3</mn><mn>5</mn></mfrac><mn>8</mn>' +
       '</mfrac><mo>=</mo><mfrac><mn>3</mn><mn>5</mn></mfrac><mo>×</mo>' +
       '<mfrac><mn>1</mn><mn>8</mn></mfrac></mrow>';
-  this.executeRuleTest(mml, 'début début fraction trois-cinquièmes sur sur 8 fin fin fraction égale trois-cinquièmes multiplié par un-huitième', 'default');
-  this.executeRuleTest(mml, 'début début frac trois-cinquièmes sur sur 8 fin fin frac égale trois-cinquièmes multiplié par un-huitième', 'brief');
-  this.executeRuleTest(mml, 'frac1imbriquée trois-cinquièmes sur1imbriquée 8 fin frac1imbriquée égale trois-cinquièmes multiplié par un-huitième', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang Bruch drei fünftel durch 8 Ende Bruch ist gleich drei fünftel mal eins achtel', 'default');
+  this.executeRuleTest(mml, 'Anfang Bruch drei fünftel durch 8 Ende Bruch ist gleich drei fünftel mal eins achtel', 'brief');
+  this.executeRuleTest(mml, 'Bruch drei fünftel durch 8 Ende Bruch ist gleich drei fünftel mal eins achtel', 'sbrief');
 };
 
 
@@ -474,11 +458,9 @@ sre.MathspeakGermanTest.prototype.testSample_7_4_3 = function() {
 sre.MathspeakGermanTest.prototype.testSample_7_5_1 = function() {
   var mml = '<mrow><mn>3</mn><mfrac><mn>5</mn><mn>8</mn></mfrac><mo>=</mo>' +
       '<mfrac><mn>29</mn><mn>8</mn></mfrac></mrow>';
-  this.executeRuleTest(mml, '3 et cinq-huitièmes égale début fraction 29 sur 8 fin fraction', 'default');
-  this.executeRuleTest(mml, '3 et cinq-huitièmes égale début frac 29 sur 8 fin frac',
-                       'brief');
-  this.executeRuleTest(mml, '3 et cinq-huitièmes égale frac 29 sur 8 fin frac',
-                       'sbrief');
+  this.executeRuleTest(mml, '3 fünf achtel ist gleich Anfang Bruch 29 durch 8 Ende Bruch', 'default');
+  this.executeRuleTest(mml, '3 fünf achtel ist gleich Anfang Bruch 29 durch 8 Ende Bruch', 'brief');
+  this.executeRuleTest(mml, '3 fünf achtel ist gleich Bruch 29 durch 8 Ende Bruch', 'sbrief');
 };
 
 
@@ -496,9 +478,9 @@ sre.MathspeakGermanTest.prototype.testSample_7_6_1 = function() {
       '<mi>b</mi><mn>1</mn></msub><msub><mi>a</mi><mn>1</mn></msub></mfrac>' +
       '<mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><msub><mi>a</mi>' +
       '<mn>2</mn></msub></mfrac><mo>+</mo><mo>&#x2026;</mo></mrow>';
-  this.executeRuleTest(mml, 'a indice 0 position de base plus fraction continue b indice 1 position de base sur a indice 1 position de base plus début fraction b indice 2 position de base sur a indice 2 position de base plus début fraction b indice 3 position de base sur a indice 3 position de base plus points de suspension égale a indice 0 position de base plus début fraction b indice 1 position de base sur a indice 1 position de base fin fraction plus début fraction b indice 2 position de base sur a indice 2 position de base fin fraction plus points de suspension', 'default');
-  this.executeRuleTest(mml, 'a 0 plus frac continue b 1 sur a 1 plus début frac b 2 sur a 2 plus début frac b 3 sur a 3 plus points de suspension égale a 0 plus début frac b 1 sur a 1 fin frac plus début frac b 2 sur a 2 fin frac plus points de suspension', 'brief');
-  this.executeRuleTest(mml, 'a 0 plus frac continue b 1 sur a 1 plus frac b 2 sur a 2 plus frac b 3 sur a 3 plus points de suspension égale a 0 plus frac b 1 sur a 1 fin frac plus frac b 2 sur a 2 fin frac plus points de suspension', 'sbrief');
+  this.executeRuleTest(mml, 'a 0 plus Kettenbruch b 1 durch a 1 plus Anfang Bruch b 2 durch a 2 plus Anfang Bruch b 3 durch a 3 plus horizontale Ellipsis ist gleich a 0 plus Anfang Bruch b 1 durch a 1 Ende Bruch plus Anfang Bruch b 2 durch a 2 Ende Bruch plus horizontale Ellipsis', 'default');
+  this.executeRuleTest(mml, 'a 0 plus Anfang Anfang Anfang Bruch b 1 durch durch durch a 1 plus Anfang Anfang Bruch b 2 durch durch a 2 plus Anfang Bruch b 3 durch a 3 plus horizontale Ellipsis Ende Bruch Ende Ende Bruch Ende Ende Ende Bruch ist gleich a 0 plus Anfang Bruch b 1 durch a 1 Ende Bruch plus Anfang Bruch b 2 durch a 2 Ende Bruch plus horizontale Ellipsis', 'brief');
+  this.executeRuleTest(mml, 'a 0 plus geschachteltzweifachBruch b 1 geschachteltzweifachdurch a 1 plus Bruch b 2 durch a 2 plus Bruch b 3 durch a 3 plus horizontale Ellipsis geschachteltzweifachEnde Bruch ist gleich a 0 plus Bruch b 1 durch a 1 Ende Bruch plus Bruch b 2 durch a 2 Ende Bruch plus horizontale Ellipsis', 'sbrief');
 };
 
 
@@ -509,9 +491,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_1_1 = function() {
   var mml = '<mrow><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mn>6</mn>' +
       '<msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mi>x</mi><mo>=</mo>' +
       '<mn>30</mn></mrow>';
-  this.executeRuleTest(mml, 'x cubique plus 6 x au carré moins x égale 30', 'default');
-  this.executeRuleTest(mml, 'x cubique plus 6 x au carré moins x égale 30', 'brief');
-  this.executeRuleTest(mml, 'x cubique plus 6 x au carré moins x égale 30', 'sbrief');
+  this.executeRuleTest(mml, 'x Kubik plus 6 x Quadrat minus x ist gleich 30', 'default');
+  this.executeRuleTest(mml, 'x Kubik plus 6 x Quadrat minus x ist gleich 30', 'brief');
+  this.executeRuleTest(mml, 'x Kubik plus 6 x Quadrat minus x ist gleich 30', 'sbrief');
 };
 
 
@@ -525,9 +507,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_1_2 = function() {
       '<mi>a</mi><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi>' +
       '<mi>x</mi><mo>+</mo><mi>c</mi></mfenced><mi>y</mi><mo>=</mo>' +
       '<mn>0</mn></mrow>';
-  this.executeRuleTest(mml, 'début fraction d au carré y sur d x au carré fin fraction plus parenthèse gauche a x au carré plus b x plus c parenthèse droite y égale 0', 'default');
-  this.executeRuleTest(mml, 'début frac d au carré y sur d x au carré fin frac plus parenthèse gauche a x au carré plus b x plus c parenthèse droite y égale 0', 'brief');
-  this.executeRuleTest(mml, 'frac d au carré y sur d x au carré fin frac plus parenthèse gauche a x au carré plus b x plus c parenthèse droite y égale 0', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang Bruch d Quadrat y durch d x Quadrat Ende Bruch plus Klammer auf a x Quadrat plus b x plus c Klammer zu y ist gleich 0', 'default');
+  this.executeRuleTest(mml, 'Anfang Bruch d Quadrat y durch d x Quadrat Ende Bruch plus Klammer auf a x Quadrat plus b x plus c Klammer zu y ist gleich 0', 'brief');
+  this.executeRuleTest(mml, 'Bruch d Quadrat y durch d x Quadrat Ende Bruch plus Klammer auf a x Quadrat plus b x plus c Klammer zu y ist gleich 0', 'sbrief');
 };
 
 
@@ -536,10 +518,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_1_2 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_8_2_1 = function() {
   var mml = '<msup><mi>x</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup>';
-  this.executeRuleTest(mml, 'x exposant un-demi', 'default');
-  this.executeRuleTest(mml, 'x sup un-demi',
-                       'brief');
-  this.executeRuleTest(mml, 'x sup un-demi', 'sbrief');
+  this.executeRuleTest(mml, 'x hoch eins halb', 'default');
+  this.executeRuleTest(mml, 'x hoch eins halb', 'brief');
+  this.executeRuleTest(mml, 'x hoch eins halb', 'sbrief');
 };
 
 
@@ -548,9 +529,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_2_1 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_8_2_2 = function() {
   var mml = '<msub><mi>x</mi><mi>n</mi></msub>';
-  this.executeRuleTest(mml, 'x indice n', 'default');
-  this.executeRuleTest(mml, 'x sub n', 'brief');
-  this.executeRuleTest(mml, 'x sub n', 'sbrief');
+  this.executeRuleTest(mml, 'x Index n', 'default');
+  this.executeRuleTest(mml, 'x Index n', 'brief');
+  this.executeRuleTest(mml, 'x Index n', 'sbrief');
 };
 
 
@@ -559,9 +540,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_2_2 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_8_2_3 = function() {
   var mml = '<msup><mi>x</mi><mi>a</mi></msup>';
-  this.executeRuleTest(mml, 'x exposant a', 'default');
-  this.executeRuleTest(mml, 'x sup a', 'brief');
-  this.executeRuleTest(mml, 'x sup a', 'sbrief');
+  this.executeRuleTest(mml, 'x hoch a', 'default');
+  this.executeRuleTest(mml, 'x hoch a', 'brief');
+  this.executeRuleTest(mml, 'x hoch a', 'sbrief');
 };
 
 
@@ -571,9 +552,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_2_3 = function() {
 sre.MathspeakGermanTest.prototype.testSample_8_3_1 = function() {
   var mml = '<msup><mi>x</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow>' +
       '</msup>';
-  this.executeRuleTest(mml, 'x exposant m plus n', 'default');
-  this.executeRuleTest(mml, 'x sup m plus n', 'brief');
-  this.executeRuleTest(mml, 'x sup m plus n', 'sbrief');
+  this.executeRuleTest(mml, 'x hoch m plus n', 'default');
+  this.executeRuleTest(mml, 'x hoch m plus n', 'brief');
+  this.executeRuleTest(mml, 'x hoch m plus n', 'sbrief');
 };
 
 
@@ -583,10 +564,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_3_1 = function() {
 sre.MathspeakGermanTest.prototype.testSample_8_3_2 = function() {
   var mml = '<mrow><msub><mi>T</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn>' +
       '</mrow></msub><mo>+</mo><mn>5</mn><mo>=</mo><mn>0</mn></mrow>';
-  this.executeRuleTest(mml, 'T majuscule indice n moins 1 position de base plus 5 égale 0', 'default');
-  this.executeRuleTest(mml, 'T majuscule sub n moins 1 position de base plus 5 égale 0', 'brief');
-  this.executeRuleTest(mml, 'T majuscule sub n moins 1 position de base plus 5 égale 0',
-                       'sbrief');
+  this.executeRuleTest(mml, 'großes T Index n minus 1 Grundlinie plus 5 ist gleich 0', 'default');
+  this.executeRuleTest(mml, 'großes T Index n minus 1 Grund plus 5 ist gleich 0', 'brief');
+  this.executeRuleTest(mml, 'großes T Index n minus 1 Grund plus 5 ist gleich 0', 'sbrief');
 };
 
 
@@ -597,9 +577,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_3_3 = function() {
   var mml = '<mrow><msup><mi>x</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi>' +
       '</mrow></msup><mo>=</mo><msup><mi>x</mi><mi>m</mi></msup><msup>' +
       '<mi>x</mi><mi>n</mi></msup></mrow>';
-  this.executeRuleTest(mml, 'x exposant m plus n position de base égale x exposant m position de base x exposant n', 'default');
-  this.executeRuleTest(mml, 'x sup m plus n position de base égale x sup m position de base x sup n', 'brief');
-  this.executeRuleTest(mml, 'x sup m plus n position de base égale x sup m position de base x sup n', 'sbrief');
+  this.executeRuleTest(mml, 'x hoch m plus n Grundlinie ist gleich x hoch m Grundlinie x hoch n', 'default');
+  this.executeRuleTest(mml, 'x hoch m plus n Grund ist gleich x hoch m Grund x hoch n', 'brief');
+  this.executeRuleTest(mml, 'x hoch m plus n Grund ist gleich x hoch m Grund x hoch n', 'sbrief');
 };
 
 
@@ -610,11 +590,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_4_1 = function() {
   var mml = '<msup><mi>x</mi><mrow><msub><mi>a</mi><mi>n</mi></msub>' +
       '<mo>+</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn>' +
       '</mrow></msub></mrow></msup>';
-  this.executeRuleTest(mml, 'x exposant a sup-indice n sup plus a sup-indice n moins 1', 'default');
-  this.executeRuleTest(mml, 'x sup a sup-sub n sup plus a sup-sub n moins 1',
-                       'brief');
-  this.executeRuleTest(mml, 'x sup a sup-sub n sup plus a sup-sub n moins 1',
-                       'sbrief');
+  this.executeRuleTest(mml, 'x hoch a hoch Index n hoch plus a hoch Index n minus 1', 'default');
+  this.executeRuleTest(mml, 'x hoch a hoch Index n hoch plus a hoch Index n minus 1', 'brief');
+  this.executeRuleTest(mml, 'x hoch a hoch Index n hoch plus a hoch Index n minus 1', 'sbrief');
 };
 
 
@@ -623,9 +601,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_4_1 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_8_4_2 = function() {
   var mml = '<msup><mi>x</mi><msub><mi>a</mi><mi>b</mi></msub></msup>';
-  this.executeRuleTest(mml, 'x exposant a sup-indice b', 'default');
-  this.executeRuleTest(mml, 'x sup a sup-sub b', 'brief');
-  this.executeRuleTest(mml, 'x sup a sup-sub b', 'sbrief');
+  this.executeRuleTest(mml, 'x hoch a hoch Index b', 'default');
+  this.executeRuleTest(mml, 'x hoch a hoch Index b', 'brief');
+  this.executeRuleTest(mml, 'x hoch a hoch Index b', 'sbrief');
 };
 
 
@@ -634,9 +612,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_4_2 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_8_4_3 = function() {
   var mml = '<msub><mi>x</mi><msup><mi>a</mi><mi>b</mi></msup></msub>';
-  this.executeRuleTest(mml, 'x indice a sub-exposant b', 'default');
-  this.executeRuleTest(mml, 'x sub a sub-sup b', 'brief');
-  this.executeRuleTest(mml, 'x sub a sub-sup b', 'sbrief');
+  this.executeRuleTest(mml, 'x Index a Index hoch b', 'default');
+  this.executeRuleTest(mml, 'x Index a Index hoch b', 'brief');
+  this.executeRuleTest(mml, 'x Index a Index hoch b', 'sbrief');
 };
 
 
@@ -647,10 +625,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_4_4 = function() {
   var mml = '<mrow><msup><mi>y</mi><msup><mi>a</mi><msub><mi>b</mi>' +
       '<mi>c</mi></msub></msup></msup><mo>≠</mo><msup><mi>y</mi><mrow>' +
       '<msup><mi>a</mi><mi>b</mi></msup><mi>c</mi></mrow></msup></mrow>';
-  this.executeRuleTest(mml, 'y exposant a sup-exposant b sup-sup-indice c position de base pas égal à y exposant a sup-exposant b sup c',
-                       'default');
-  this.executeRuleTest(mml, 'y sup a sup-sup b sup-sup-sub c position de base pas égal à y sup a sup-sup b sup c', 'brief');
-  this.executeRuleTest(mml, 'y sup a sup-sup b sup-sup-sub c position de base pas égal à y sup a sup-sup b sup c', 'sbrief');
+  this.executeRuleTest(mml, 'y hoch a hoch hoch b hoch hoch Index c Grundlinie ungleich y hoch a hoch hoch b hoch c', 'default');
+  this.executeRuleTest(mml, 'y hoch a hoch hoch b hoch hoch Index c Grund ungleich y hoch a hoch hoch b hoch c', 'brief');
+  this.executeRuleTest(mml, 'y hoch a hoch hoch b hoch hoch Index c Grund ungleich y hoch a hoch hoch b hoch c', 'sbrief');
 };
 
 
@@ -660,9 +637,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_4_4 = function() {
 sre.MathspeakGermanTest.prototype.testSample_8_4_5 = function() {
   var mml = '<msup><mi>y</mi><msup><mi>a</mi><mrow><msub><mrow/><mi>c</mi>' +
       '</msub><mi>b</mi></mrow></msup></msup>';
-  this.executeRuleTest(mml, 'y exposant a sup-sup-indice c sup-sup b', 'default');
-  this.executeRuleTest(mml, 'y sup a sup-sup-sub c sup-sup b', 'brief');
-  this.executeRuleTest(mml, 'y sup a sup-sup-sub c sup-sup b', 'sbrief');
+  this.executeRuleTest(mml, 'y hoch a hoch hoch Index c hoch hoch b', 'default');
+  this.executeRuleTest(mml, 'y hoch a hoch hoch Index c hoch hoch b', 'brief');
+  this.executeRuleTest(mml, 'y hoch a hoch hoch Index c hoch hoch b', 'sbrief');
 };
 
 
@@ -672,10 +649,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_4_5 = function() {
 sre.MathspeakGermanTest.prototype.testSample_8_4_5Short = function() {
   var mml = '<msup><mi>y</mi><msup><mi>a</mi><mrow><msub><mrow/><mi>c</mi>' +
       '</msub></mrow></msup></msup>';
-  this.executeRuleTest(mml, 'y exposant a sup-sup-indice c',
-                       'default');
-  this.executeRuleTest(mml, 'y sup a sup-sup-sub c', 'brief');
-  this.executeRuleTest(mml, 'y sup a sup-sup-sub c', 'sbrief');
+  this.executeRuleTest(mml, 'y hoch a hoch hoch Index c', 'default');
+  this.executeRuleTest(mml, 'y hoch a hoch hoch Index c', 'brief');
+  this.executeRuleTest(mml, 'y hoch a hoch hoch Index c', 'sbrief');
 };
 
 
@@ -685,9 +661,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_4_5Short = function() {
 sre.MathspeakGermanTest.prototype.testSample_8_4_5Inv = function() {
   var mml = '<msub><mi>y</mi><msub><mi>a</mi><mrow><msup><mrow/><mi>c</mi>' +
       '</msup></mrow></msub></msub>';
-  this.executeRuleTest(mml, 'y indice a sub-sub-exposant c', 'default');
-  this.executeRuleTest(mml, 'y sub a sub-sub-sup c', 'brief');
-  this.executeRuleTest(mml, 'y sub a sub-sub-sup c', 'sbrief');
+  this.executeRuleTest(mml, 'y Index a Index Index hoch c', 'default');
+  this.executeRuleTest(mml, 'y Index a Index Index hoch c', 'brief');
+  this.executeRuleTest(mml, 'y Index a Index Index hoch c', 'sbrief');
 };
 
 
@@ -697,9 +673,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_4_5Inv = function() {
 sre.MathspeakGermanTest.prototype.testSample_8_4_5InvShort = function() {
   var mml = '<msub><mi>y</mi><msub><mi>a</mi><mrow><msup><mrow/><mi>c</mi>' +
       '</msup><mi>b</mi></mrow></msub></msub>';
-  this.executeRuleTest(mml, 'y indice a sub-sub-exposant c sub-sub b', 'default');
-  this.executeRuleTest(mml, 'y sub a sub-sub-sup c sub-sub b', 'brief');
-  this.executeRuleTest(mml, 'y sub a sub-sub-sup c sub-sub b', 'sbrief');
+  this.executeRuleTest(mml, 'y Index a Index Index hoch c Index Index b', 'default');
+  this.executeRuleTest(mml, 'y Index a Index Index hoch c Index Index b', 'brief');
+  this.executeRuleTest(mml, 'y Index a Index Index hoch c Index Index b', 'sbrief');
 };
 
 
@@ -708,9 +684,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_4_5InvShort = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_8_4_6 = function() {
   var mml = '<msup><mi>x</mi><msup><mi>a</mi><mi>b</mi></msup></msup>';
-  this.executeRuleTest(mml, 'x exposant a sup-exposant b', 'default');
-  this.executeRuleTest(mml, 'x sup a sup-sup b', 'brief');
-  this.executeRuleTest(mml, 'x sup a sup-sup b', 'sbrief');
+  this.executeRuleTest(mml, 'x hoch a hoch hoch b', 'default');
+  this.executeRuleTest(mml, 'x hoch a hoch hoch b', 'brief');
+  this.executeRuleTest(mml, 'x hoch a hoch hoch b', 'sbrief');
 };
 
 
@@ -719,9 +695,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_4_6 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_8_4_7 = function() {
   var mml = '<msub><mi>x</mi><msub><mi>a</mi><mi>b</mi></msub></msub>';
-  this.executeRuleTest(mml, 'x indice a sub-indice b', 'default');
-  this.executeRuleTest(mml, 'x sub a sub-sub b', 'brief');
-  this.executeRuleTest(mml, 'x sub a sub-sub b', 'sbrief');
+  this.executeRuleTest(mml, 'x Index a Index Index b', 'default');
+  this.executeRuleTest(mml, 'x Index a Index Index b', 'brief');
+  this.executeRuleTest(mml, 'x Index a Index Index b', 'sbrief');
 };
 
 
@@ -732,10 +708,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_4_8 = function() {
   var mml = '<msup><mi>T</mi><mfenced separators="" open="(" close=")">' +
       '<msup><mi>x</mi><mi>a</mi></msup><mo>+</mo><msup><mi>y</mi>' +
       '<mi>b</mi></msup></mfenced></msup>';
-  this.executeRuleTest(mml, 'T majuscule exposant parenthèse gauche x sup-exposant a sup plus y sup-exposant b sup parenthèse droite',
-                       'default');
-  this.executeRuleTest(mml, 'T majuscule sup parenthèse gauche x sup-sup a sup plus y sup-sup b sup parenthèse droite', 'brief');
-  this.executeRuleTest(mml, 'T majuscule sup parenthèse gauche x sup-sup a sup plus y sup-sup b sup parenthèse droite', 'sbrief');
+  this.executeRuleTest(mml, 'großes T hoch Klammer auf x hoch hoch a hoch plus y hoch hoch b hoch Klammer zu', 'default');
+  this.executeRuleTest(mml, 'großes T hoch Klammer auf x hoch hoch a hoch plus y hoch hoch b hoch Klammer zu', 'brief');
+  this.executeRuleTest(mml, 'großes T hoch Klammer auf x hoch hoch a hoch plus y hoch hoch b hoch Klammer zu', 'sbrief');
 };
 
 
@@ -744,7 +719,7 @@ sre.MathspeakGermanTest.prototype.testSample_8_4_8 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_8_5_1 = function() {
   var mml = '<msub><mi>x</mi><mn>1</mn></msub>';
-  this.executeRuleTest(mml, 'x indice 1', 'default');
+  this.executeRuleTest(mml, 'x 1', 'default');
   this.executeRuleTest(mml, 'x 1', 'brief');
   this.executeRuleTest(mml, 'x 1', 'sbrief');
 };
@@ -755,9 +730,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_5_1 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_8_5_2 = function() {
   var mml = '<msub><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub>';
-  this.executeRuleTest(mml, 'x indice négatif 1', 'default');
-  this.executeRuleTest(mml, 'x sub négatif 1', 'brief');
-  this.executeRuleTest(mml, 'x sub négatif 1', 'sbrief');
+  this.executeRuleTest(mml, 'x Index negativ 1', 'default');
+  this.executeRuleTest(mml, 'x Index negativ 1', 'brief');
+  this.executeRuleTest(mml, 'x Index negativ 1', 'sbrief');
 };
 
 
@@ -767,7 +742,7 @@ sre.MathspeakGermanTest.prototype.testSample_8_5_2 = function() {
 sre.MathspeakGermanTest.prototype.testSample_8_5_3 = function() {
   var mml = '<msub><mi>x</mi><mrow><mn>10000</mn></mrow>' +
       '</msub>';
-  this.executeRuleTest(mml, 'x indice 10000', 'default');
+  this.executeRuleTest(mml, 'x 10000', 'default');
   this.executeRuleTest(mml, 'x 10000', 'brief');
   this.executeRuleTest(mml, 'x 10000', 'sbrief');
 };
@@ -781,7 +756,7 @@ sre.MathspeakGermanTest.prototype.testSample_8_5_3 = function() {
 sre.MathspeakGermanTest.prototype.testSample_8_5_4 = function() {
   var mml = '<msub><mi>x</mi><mrow><mn>1,3</mn></mrow>' +
       '</msub>';
-  this.executeRuleTest(mml, 'x indice 1,3', 'default');
+  this.executeRuleTest(mml, 'x 1,3', 'default');
   this.executeRuleTest(mml, 'x 1,3', 'brief');
   this.executeRuleTest(mml, 'x 1,3', 'sbrief');
 };
@@ -794,12 +769,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_5_5 = function() {
   var mml = '<mrow><mn>4</mn><mi>Fe</mi><mo>+</mo><mn>3</mn><msub>' +
       '<mi>O</mi><mn>2</mn></msub><mo>→</mo><mn>2</mn><msub><mi>Fe</mi>' +
       '<mn>2</mn></msub><msub><mi>O</mi><mn>3</mn></msub></mrow>';
-  this.executeRuleTest(mml, '4 F majuscule e plus 3 O majuscule indice 2 position de base flèche droite 2 F majuscule e indice 2 position de base O majuscule indice 3',
-                       'default');
-  this.executeRuleTest(mml, '4 F majuscule e plus 3 O majuscule 2 flèche droite 2 F majuscule e 2 O majuscule 3',
-                       'brief');
-  this.executeRuleTest(mml, '4 F majuscule e plus 3 O majuscule 2 flèche droite 2 F majuscule e 2 O majuscule 3',
-                       'sbrief');
+  this.executeRuleTest(mml, '4 normales großes F e plus 3 großes O 2 Pfeil nach rechts 2 normales großes F e 2 großes O 3', 'default');
+  this.executeRuleTest(mml, '4 normales großes F e plus 3 großes O 2 Pfeil nach rechts 2 normales großes F e 2 großes O 3', 'brief');
+  this.executeRuleTest(mml, '4 normales großes F e plus 3 großes O 2 Pfeil nach rechts 2 normales großes F e 2 großes O 3', 'sbrief');
 };
 
 
@@ -809,9 +781,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_5_5 = function() {
 sre.MathspeakGermanTest.prototype.testSample_8_5_6 = function() {
   var mml = '<msub><mi>a</mi><mrow><mn>2</mn><mo>,</mo><mn>3</mn></mrow>' +
       '</msub>';
-  this.executeRuleTest(mml, 'a indice 2 virgule 3', 'default');
-  this.executeRuleTest(mml, 'a sub 2 virgule 3', 'brief');
-  this.executeRuleTest(mml, 'a sub 2 virgule 3', 'sbrief');
+  this.executeRuleTest(mml, 'a Index 2 Komma 3', 'default');
+  this.executeRuleTest(mml, 'a Index 2 Komma 3', 'brief');
+  this.executeRuleTest(mml, 'a Index 2 Komma 3', 'sbrief');
 };
 
 
@@ -821,11 +793,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_5_6 = function() {
 sre.MathspeakGermanTest.prototype.testSample_8_5_7 = function() {
   var mml = '<msub><mi>T</mi><mrow><msub><mi>n</mi><mn>1</mn></msub>' +
       '<mo>+</mo><msub><mi>n</mi><mn>0</mn></msub></mrow></msub>';
-  this.executeRuleTest(mml, 'T majuscule indice n sub-indice 1 sub plus n sub-indice 0', 'default');
-  this.executeRuleTest(mml, 'T majuscule sub n 1 plus n 0',
-                       'brief');
-  this.executeRuleTest(mml, 'T majuscule sub n 1 plus n 0',
-                       'sbrief');
+  this.executeRuleTest(mml, 'großes T Index n 1 plus n 0', 'default');
+  this.executeRuleTest(mml, 'großes T Index n 1 plus n 0', 'brief');
+  this.executeRuleTest(mml, 'großes T Index n 1 plus n 0', 'sbrief');
 };
 
 
@@ -839,9 +809,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_5_8 = function() {
       '<mi>x</mi><mo>)</mo></mrow></mrow><mrow><msub>' +
       '<mo form="prefix">log</mo><mn>10</mn></msub><mrow><mo>(</mo>' +
       '<mn>2</mn><mo>)</mo></mrow></mrow></mfrac></mrow>';
-  this.executeRuleTest(mml, 'log base 2 parenthèse gauche x parenthèse droite égale début fraction log base 10 parenthèse gauche x parenthèse droite sur log base 10 parenthèse gauche 2 parenthèse droite fin fraction', 'default');
-  this.executeRuleTest(mml, 'log base 2 parenthèse gauche x parenthèse droite égale début frac log base 10 parenthèse gauche x parenthèse droite sur log base 10 parenthèse gauche 2 parenthèse droite fin frac', 'brief');
-  this.executeRuleTest(mml, 'log base 2 parenthèse gauche x parenthèse droite égale frac log base 10 parenthèse gauche x parenthèse droite sur log base 10 parenthèse gauche 2 parenthèse droite fin frac', 'sbrief');
+  this.executeRuleTest(mml, 'logarithmus Index 2 Grundlinie Klammer auf x Klammer zu ist gleich Anfang Bruch logarithmus Index 10 Grundlinie Klammer auf x Klammer zu durch logarithmus Index 10 Grundlinie Klammer auf 2 Klammer zu Ende Bruch', 'default');
+  this.executeRuleTest(mml, 'logarithmus Index 2 Grund Klammer auf x Klammer zu ist gleich Anfang Bruch logarithmus Index 10 Grund Klammer auf x Klammer zu durch logarithmus Index 10 Grund Klammer auf 2 Klammer zu Ende Bruch', 'brief');
+  this.executeRuleTest(mml, 'logarithmus Index 2 Grund Klammer auf x Klammer zu ist gleich Bruch logarithmus Index 10 Grund Klammer auf x Klammer zu durch logarithmus Index 10 Grund Klammer auf 2 Klammer zu Ende Bruch', 'sbrief');
 };
 
 
@@ -850,9 +820,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_5_8 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_8_5_9 = function() {
   var mml = '<msub><mi>Φ</mi><mn>5</mn></msub>';
-  this.executeRuleTest(mml, 'Phi majuscule indice 5', 'default');
-  this.executeRuleTest(mml, 'Phi majuscule 5', 'brief');
-  this.executeRuleTest(mml, 'Phi majuscule 5', 'sbrief');
+  this.executeRuleTest(mml, 'großes Phi 5', 'default');
+  this.executeRuleTest(mml, 'großes Phi 5', 'brief');
+  this.executeRuleTest(mml, 'großes Phi 5', 'sbrief');
 };
 
 
@@ -863,10 +833,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_5_10 = function() {
   var mml = '<mrow><mo form="prefix">ln</mo><mi>x</mi><mo>=</mo><msubsup>' +
       '<mo>∫</mo><mn>1</mn><mi>x</mi></msubsup><mfrac><mrow><mi>d</mi>' +
       '<mi>t</mi></mrow><mi>t</mi></mfrac></mrow>';
-  this.executeRuleTest(mml, 'logarithme népérien x égale intégrale indice inférieur 1 indice supérieur x position de base début fraction d t sur t fin fraction', 'default');
-  this.executeRuleTest(mml, 'logarithme népérien x égale intégrale inf 1 sup x position de base début frac d t sur t fin frac',
-                       'brief');
-  this.executeRuleTest(mml, 'logarithme népérien x égale intégrale inf 1 sup x position de base frac d t sur t fin frac', 'sbrief');
+  this.executeRuleTest(mml, 'der natürlicher logarithmus x ist gleich Integral Index 1 Hoch x Grundlinie Anfang Bruch d t durch t Ende Bruch', 'default');
+  this.executeRuleTest(mml, 'der natürlicher logarithmus x ist gleich Integral Index 1 Hoch x Base Anfang Bruch d t durch t Ende Bruch', 'brief');
+  this.executeRuleTest(mml, 'der natürlicher logarithmus x ist gleich Integral Index 1 Hoch x Base Bruch d t durch t Ende Bruch', 'sbrief');
 };
 
 
@@ -876,9 +845,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_5_10 = function() {
 sre.MathspeakGermanTest.prototype.testSample_8_6_1 = function() {
   var mml = '<mrow><mi>$</mi><mi>n</mi><mn>2</mn><mo>=</mo><mn>2</mn>' +
       '<mo>*</mo><mi>$</mi><mi>n</mi><mo>+</mo><mn>1</mn><mo>;</mo></mrow>';
-  this.executeRuleTest(mml, 'dollars n position de base 2 égale 2 astérisque dollars n plus 1 point virgule', 'default');
-  this.executeRuleTest(mml, 'dollars n base 2 égale 2 astérisque dollars n plus 1 point virgule', 'brief');
-  this.executeRuleTest(mml, 'dollars n base 2 égale 2 astérisque dollars n plus 1 point virgule', 'sbrief');
+  this.executeRuleTest(mml, 'Dollar n Grundlinie 2 ist gleich 2 times Dollar n plus 1 Strichpunkt', 'default');
+  this.executeRuleTest(mml, 'Dollar n Grund 2 ist gleich 2 times Dollar n plus 1 Strichpunkt', 'brief');
+  this.executeRuleTest(mml, 'Dollar n Grund 2 ist gleich 2 times Dollar n plus 1 Strichpunkt', 'sbrief');
 };
 
 
@@ -889,9 +858,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_8_1_naive = function() {
   var mml = '<mmultiscripts><mi>x</mi><mrow><mi>e</mi><mi>f</mi></mrow>' +
       '<mrow><mi>g</mi><mi>h</mi></mrow><mprescripts/><mrow><mi>c</mi>' +
       '<mi>d</mi></mrow><mrow><mi>a</mi><mi>b</mi></mrow></mmultiscripts>';
-  this.executeRuleTest(mml, 'indice gauche c d exposant gauche a b position de base x indice e f exposant g h', 'default');
-  this.executeRuleTest(mml, 'sub gauche c d sup gauche a b position de base x sub e f sup g h', 'brief');
-  this.executeRuleTest(mml, 'sub gauche c d sup gauche a b position de base x sub e f sup g h', 'sbrief');
+  this.executeRuleTest(mml, 'Index c d hoch a b Grundlinie x Index e f hoch g h', 'default');
+  this.executeRuleTest(mml, 'Index c d hoch a b Grund x Index e f hoch g h', 'brief');
+  this.executeRuleTest(mml, 'Index c d hoch a b Grund x Index e f hoch g h', 'sbrief');
 };
 
 
@@ -902,9 +871,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_8_1 = function() {
   var mml = '<mmultiscripts><mi>x</mi><mi>e</mi>' +
       '<mi>g</mi><mi>f</mi><mi>h</mi><mprescripts/><mi>c</mi>' +
       '<mi>a</mi><mi>d</mi><mi>b</mi></mmultiscripts>';
-  this.executeRuleTest(mml, 'indice gauche c d exposant gauche a b position de base x indice e f exposant g h', 'default');
-  this.executeRuleTest(mml, 'sub gauche c d sup gauche a b position de base x sub e f sup g h', 'brief');
-  this.executeRuleTest(mml, 'sub gauche c d sup gauche a b position de base x sub e f sup g h', 'sbrief');
+  this.executeRuleTest(mml, 'Index c d hoch a b Grundlinie x Index e f hoch g h', 'default');
+  this.executeRuleTest(mml, 'Index c d hoch a b Grund x Index e f hoch g h', 'brief');
+  this.executeRuleTest(mml, 'Index c d hoch a b Grund x Index e f hoch g h', 'sbrief');
 };
 
 
@@ -914,9 +883,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_8_1 = function() {
 sre.MathspeakGermanTest.prototype.testSampleTensorMultiSimpleABC = function() {
   var mml = '<mmultiscripts><mi>x</mi><msup><mi>c</mi><mi>l</mi></msup>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
-  this.executeRuleTest(mml, 'indice gauche a exposant gauche b position de base x indice c sub-exposant l', 'default');
-  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sub-sup l', 'brief');
-  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sub-sup l', 'sbrief');
+  this.executeRuleTest(mml, 'Index a hoch b Grundlinie x Index c Index hoch l', 'default');
+  this.executeRuleTest(mml, 'Index a hoch b Grund x Index c Index hoch l', 'brief');
+  this.executeRuleTest(mml, 'Index a hoch b Grund x Index c Index hoch l', 'sbrief');
 };
 
 
@@ -926,9 +895,9 @@ sre.MathspeakGermanTest.prototype.testSampleTensorMultiSimpleABC = function() {
 sre.MathspeakGermanTest.prototype.testSampleTensorMultiSub = function() {
   var mml = '<mmultiscripts><mi>x</mi><msub><mi>c</mi><mi>l</mi></msub>' +
       '<mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
-  this.executeRuleTest(mml, 'indice gauche a exposant gauche b position de base x indice c sub-indice l exposant d', 'default');
-  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sub-sub l sup d', 'brief');
-  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sub-sub l sup d', 'sbrief');
+  this.executeRuleTest(mml, 'Index a hoch b Grundlinie x Index c Index Index l hoch d', 'default');
+  this.executeRuleTest(mml, 'Index a hoch b Grund x Index c Index Index l hoch d', 'brief');
+  this.executeRuleTest(mml, 'Index a hoch b Grund x Index c Index Index l hoch d', 'sbrief');
 };
 
 
@@ -939,9 +908,9 @@ sre.MathspeakGermanTest.prototype.testSampleTensorMultiSubSup = function() {
   var mml = '<mmultiscripts><mi>x</mi><msub><mi>c</mi><msup><mi>l</mi>' +
       '<mi>k</mi></msup></msub><mi>d</mi><mi>e</mi><none/>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
-  this.executeRuleTest(mml, 'indice gauche a exposant gauche b position de base x indice c sub-indice l sub-sub-exposant k sub e exposant d', 'default');
-  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sub-sub l sub-sub-sup k sub e sup d', 'brief');
-  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sub-sub l sub-sub-sup k sub e sup d', 'sbrief');
+  this.executeRuleTest(mml, 'Index a hoch b Grundlinie x Index c Index Index l Index Index hoch k Index e hoch d', 'default');
+  this.executeRuleTest(mml, 'Index a hoch b Grund x Index c Index Index l Index Index hoch k Index e hoch d', 'brief');
+  this.executeRuleTest(mml, 'Index a hoch b Grund x Index c Index Index l Index Index hoch k Index e hoch d', 'sbrief');
 };
 
 
@@ -951,10 +920,9 @@ sre.MathspeakGermanTest.prototype.testSampleTensorMultiSubSup = function() {
 sre.MathspeakGermanTest.prototype.testSampleTensorMultiSimple = function() {
   var mml = '<mmultiscripts><mi>x</mi><msup><mi>c</mi><mi>l</mi></msup>' +
       '<mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
-  this.executeRuleTest(mml, 'indice gauche a exposant gauche b position de base x indice c sub-exposant l exposant d',
-                       'default');
-  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sub-sup l sup d', 'brief');
-  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sub-sup l sup d', 'sbrief');
+  this.executeRuleTest(mml, 'Index a hoch b Grundlinie x Index c Index hoch l hoch d', 'default');
+  this.executeRuleTest(mml, 'Index a hoch b Grund x Index c Index hoch l hoch d', 'brief');
+  this.executeRuleTest(mml, 'Index a hoch b Grund x Index c Index hoch l hoch d', 'sbrief');
 };
 
 
@@ -965,10 +933,9 @@ sre.MathspeakGermanTest.prototype.testSampleTensorMultiComplex = function() {
   var mml = '<mmultiscripts><mi>x</mi><mrow><mi>c</mi><msup><mi>k</mi>' +
       '<mi>l</mi></msup></mrow><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
-  this.executeRuleTest(mml, 'indice gauche a exposant gauche b position de base x indice c k sub-exposant l exposant d',
-                       'default');
-  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c k sub-sup l sup d', 'brief');
-  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c k sub-sup l sup d', 'sbrief');
+  this.executeRuleTest(mml, 'Index a hoch b Grundlinie x Index c k Index hoch l hoch d', 'default');
+  this.executeRuleTest(mml, 'Index a hoch b Grund x Index c k Index hoch l hoch d', 'brief');
+  this.executeRuleTest(mml, 'Index a hoch b Grund x Index c k Index hoch l hoch d', 'sbrief');
 };
 
 
@@ -980,10 +947,9 @@ sre.MathspeakGermanTest.prototype.testSampleTwoTensors = function() {
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>' +
       '<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
-  this.executeRuleTest(mml, 'indice gauche a exposant gauche b position de base x indice c exposant d position de base indice gauche a exposant gauche b position de base x indice c exposant d',
-                       'default');
-  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sup d position de base sub gauche a sup gauche b position de base x sub c sup d', 'brief');
-  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sup d position de base sub gauche a sup gauche b position de base x sub c sup d', 'sbrief');
+  this.executeRuleTest(mml, 'Index a hoch b Grundlinie x Index c hoch d Grundlinie Index a hoch b Grundlinie x Index c hoch d', 'default');
+  this.executeRuleTest(mml, 'Index a hoch b Grund x Index c hoch d Grund Index a hoch b Grund x Index c hoch d', 'brief');
+  this.executeRuleTest(mml, 'Index a hoch b Grund x Index c hoch d Grund Index a hoch b Grund x Index c hoch d', 'sbrief');
 };
 
 
@@ -1000,9 +966,9 @@ sre.MathspeakGermanTest.prototype.testSampleTwoTensors = function() {
 sre.MathspeakGermanTest.prototype.testSamplePartialTensorABCD = function() {
   var mml = '<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
-  this.executeRuleTest(mml, 'indice gauche a exposant gauche b position de base x indice c exposant d', 'default');
-  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sup d', 'brief');
-  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sup d', 'sbrief');
+  this.executeRuleTest(mml, 'Index a hoch b Grundlinie x Index c hoch d', 'default');
+  this.executeRuleTest(mml, 'Index a hoch b Grund x Index c hoch d', 'brief');
+  this.executeRuleTest(mml, 'Index a hoch b Grund x Index c hoch d', 'sbrief');
 };
 
 
@@ -1012,9 +978,9 @@ sre.MathspeakGermanTest.prototype.testSamplePartialTensorABCD = function() {
 sre.MathspeakGermanTest.prototype.testSamplePartialTensorABC = function() {
   var mml = '<mmultiscripts><mi>x</mi><mi>c</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
-  this.executeRuleTest(mml, 'indice gauche a exposant gauche b position de base x indice c', 'default');
-  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c', 'brief');
-  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c', 'sbrief');
+  this.executeRuleTest(mml, 'Index a hoch b Grundlinie x Index c', 'default');
+  this.executeRuleTest(mml, 'Index a hoch b Grund x Index c', 'brief');
+  this.executeRuleTest(mml, 'Index a hoch b Grund x Index c', 'sbrief');
 };
 
 
@@ -1024,9 +990,9 @@ sre.MathspeakGermanTest.prototype.testSamplePartialTensorABC = function() {
 sre.MathspeakGermanTest.prototype.testSamplePartialTensorABD = function() {
   var mml = '<mmultiscripts><mi>x</mi><none/><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
-  this.executeRuleTest(mml, 'indice gauche a exposant gauche b position de base x exposant d', 'default');
-  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sup d', 'brief');
-  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sup d', 'sbrief');
+  this.executeRuleTest(mml, 'Index a hoch b Grundlinie x hoch d', 'default');
+  this.executeRuleTest(mml, 'Index a hoch b Grund x hoch d', 'brief');
+  this.executeRuleTest(mml, 'Index a hoch b Grund x hoch d', 'sbrief');
 };
 
 
@@ -1036,10 +1002,9 @@ sre.MathspeakGermanTest.prototype.testSamplePartialTensorABD = function() {
 sre.MathspeakGermanTest.prototype.testSamplePartialTensorAB = function() {
   var mml = '<mmultiscripts><mi>x</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
-  this.executeRuleTest(mml, 'indice gauche a exposant gauche b position de base x',
-                       'default');
-  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x', 'brief');
-  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x', 'sbrief');
+  this.executeRuleTest(mml, 'Index a hoch b Grundlinie x', 'default');
+  this.executeRuleTest(mml, 'Index a hoch b Grund x', 'brief');
+  this.executeRuleTest(mml, 'Index a hoch b Grund x', 'sbrief');
 };
 
 
@@ -1049,9 +1014,9 @@ sre.MathspeakGermanTest.prototype.testSamplePartialTensorAB = function() {
 sre.MathspeakGermanTest.prototype.testSamplePartialTensorABCR = function() {
   var mml = '<mmultiscripts><mi>x</mi><mi>c</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>';
-  this.executeRuleTest(mml, 'indice gauche a exposant gauche b position de base x indice c position de base r', 'default');
-  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c position de base r', 'brief');
-  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c position de base r', 'sbrief');
+  this.executeRuleTest(mml, 'Index a hoch b Grundlinie x Index c Grundlinie r', 'default');
+  this.executeRuleTest(mml, 'Index a hoch b Grund x Index c Grund r', 'brief');
+  this.executeRuleTest(mml, 'Index a hoch b Grund x Index c Grund r', 'sbrief');
 };
 
 
@@ -1061,9 +1026,9 @@ sre.MathspeakGermanTest.prototype.testSamplePartialTensorABCR = function() {
 sre.MathspeakGermanTest.prototype.testSamplePartialTensorABCDR = function() {
   var mml = '<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>';
-  this.executeRuleTest(mml, 'indice gauche a exposant gauche b position de base x indice c exposant d position de base r', 'default');
-  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sup d position de base r', 'brief');
-  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sup d position de base r', 'sbrief');
+  this.executeRuleTest(mml, 'Index a hoch b Grundlinie x Index c hoch d Grundlinie r', 'default');
+  this.executeRuleTest(mml, 'Index a hoch b Grund x Index c hoch d Grund r', 'brief');
+  this.executeRuleTest(mml, 'Index a hoch b Grund x Index c hoch d Grund r', 'sbrief');
 };
 
 
@@ -1074,9 +1039,9 @@ sre.MathspeakGermanTest.prototype.testSamplePartialTensorABCDRoot =
     function() {
   var mml = '<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt>';
-  this.executeRuleTest(mml, 'début racine carrée indice gauche a exposant gauche b position de base x indice c exposant d position de base fin racine carrée', 'default');
-  this.executeRuleTest(mml, 'début racine carrée sub gauche a sup gauche b position de base x sub c sup d position de base fin racine carrée', 'brief');
-  this.executeRuleTest(mml, 'racine carrée sub gauche a sup gauche b position de base x sub c sup d position de base fin racine carrée', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang Quadratwurzel Index a hoch b Grundlinie x Index c hoch d Grundlinie Ende Quadratwurzel', 'default');
+  this.executeRuleTest(mml, 'Anfang Quadratwurzel Index a hoch b Grund x Index c hoch d Grund Ende Quadratwurzel', 'brief');
+  this.executeRuleTest(mml, 'Quadratwurzel Index a hoch b Grund x Index c hoch d Grund Ende Quadratwurzel', 'sbrief');
 };
 
 
@@ -1087,9 +1052,9 @@ sre.MathspeakGermanTest.prototype.testSamplePartialTensorABCDRootR =
     function() {
   var mml = '<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>';
-  this.executeRuleTest(mml, 'début racine carrée indice gauche a exposant gauche b position de base x indice c exposant d position de base fin racine carrée r', 'default');
-  this.executeRuleTest(mml, 'début racine carrée sub gauche a sup gauche b position de base x sub c sup d position de base fin racine carrée r', 'brief');
-  this.executeRuleTest(mml, 'racine carrée sub gauche a sup gauche b position de base x sub c sup d position de base fin racine carrée r', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang Quadratwurzel Index a hoch b Grundlinie x Index c hoch d Grundlinie Ende Quadratwurzel r', 'default');
+  this.executeRuleTest(mml, 'Anfang Quadratwurzel Index a hoch b Grund x Index c hoch d Grund Ende Quadratwurzel r', 'brief');
+  this.executeRuleTest(mml, 'Quadratwurzel Index a hoch b Grund x Index c hoch d Grund Ende Quadratwurzel r', 'sbrief');
 };
 
 
@@ -1100,10 +1065,9 @@ sre.MathspeakGermanTest.prototype.testSamplePartialTensorABCDFrac =
     function() {
   var mml = '<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac>';
-  this.executeRuleTest(mml, 'début fraction 1 sur indice gauche a exposant gauche b position de base x indice c exposant d position de base fin fraction', 'default');
-  this.executeRuleTest(mml, 'début frac 1 sur sub gauche a sup gauche b position de base x sub c sup d position de base fin frac', 'brief');
-  this.executeRuleTest(mml, 'frac 1 sur sub gauche a sup gauche b position de base x sub c sup d position de base fin frac',
-      'sbrief');
+  this.executeRuleTest(mml, 'Anfang Bruch 1 durch Index a hoch b Grundlinie x Index c hoch d Grundlinie Ende Bruch', 'default');
+  this.executeRuleTest(mml, 'Anfang Bruch 1 durch Index a hoch b Grund x Index c hoch d Grund Ende Bruch', 'brief');
+  this.executeRuleTest(mml, 'Bruch 1 durch Index a hoch b Grund x Index c hoch d Grund Ende Bruch', 'sbrief');
 };
 
 
@@ -1114,10 +1078,9 @@ sre.MathspeakGermanTest.prototype.testSamplePartialTensorABCDFracR =
     function() {
   var mml = '<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>';
-  this.executeRuleTest(mml, 'début fraction 1 sur indice gauche a exposant gauche b position de base x indice c exposant d position de base fin fraction r', 'default');
-  this.executeRuleTest(mml, 'début frac 1 sur sub gauche a sup gauche b position de base x sub c sup d position de base fin frac r', 'brief');
-  this.executeRuleTest(mml, 'frac 1 sur sub gauche a sup gauche b position de base x sub c sup d position de base fin frac r',
-      'sbrief');
+  this.executeRuleTest(mml, 'Anfang Bruch 1 durch Index a hoch b Grundlinie x Index c hoch d Grundlinie Ende Bruch r', 'default');
+  this.executeRuleTest(mml, 'Anfang Bruch 1 durch Index a hoch b Grund x Index c hoch d Grund Ende Bruch r', 'brief');
+  this.executeRuleTest(mml, 'Bruch 1 durch Index a hoch b Grund x Index c hoch d Grund Ende Bruch r', 'sbrief');
 };
 
 
@@ -1126,12 +1089,11 @@ sre.MathspeakGermanTest.prototype.testSamplePartialTensorABCDFracR =
  */
 sre.MathspeakGermanTest.prototype.testSampleSimpleSquare = function() {
   var mml = '<msubsup><mi>T</mi><mn>0</mn><mn>2</mn></msubsup>';
-  this.executeRuleTest(mml, 'T majuscule indice 0 au carré', 'default');
+  this.executeRuleTest(mml, 'großes T 0 Quadrat', 'default');
   mml = '<msup><msub><mi>T</mi><mn>0</mn></msub><mn>2</mn></msup>';
-  this.executeRuleTest(mml, 'T majuscule indice 0 position de base au carré',
-                       'default');
-  this.executeRuleTest(mml, 'T majuscule 0 au carré', 'brief');
-  this.executeRuleTest(mml, 'T majuscule 0 au carré', 'sbrief');
+  this.executeRuleTest(mml, 'großes T 0 Quadrat', 'default');
+  this.executeRuleTest(mml, 'großes T 0 Quadrat', 'brief');
+  this.executeRuleTest(mml, 'großes T 0 Quadrat', 'sbrief');
 };
 
 
@@ -1140,12 +1102,11 @@ sre.MathspeakGermanTest.prototype.testSampleSimpleSquare = function() {
  */
 sre.MathspeakGermanTest.prototype.testSampleSimpleCube = function() {
   var mml = '<msubsup><mi>T</mi><mn>0</mn><mn>3</mn></msubsup>';
-  this.executeRuleTest(mml, 'T majuscule indice 0 cubique', 'default');
+  this.executeRuleTest(mml, 'großes T 0 Kubik', 'default');
   mml = '<msup><msub><mi>T</mi><mn>0</mn></msub><mn>3</mn></msup>';
-  this.executeRuleTest(mml, 'T majuscule indice 0 position de base cubique',
-                       'default');
-  this.executeRuleTest(mml, 'T majuscule 0 cubique', 'brief');
-  this.executeRuleTest(mml, 'T majuscule 0 cubique', 'sbrief');
+  this.executeRuleTest(mml, 'großes T 0 Kubik', 'default');
+  this.executeRuleTest(mml, 'großes T 0 Kubik', 'brief');
+  this.executeRuleTest(mml, 'großes T 0 Kubik', 'sbrief');
 };
 
 
@@ -1155,10 +1116,9 @@ sre.MathspeakGermanTest.prototype.testSampleSimpleCube = function() {
 sre.MathspeakGermanTest.prototype.testSample_8_8_2 = function() {
   var mml = '<msubsup><mi>T</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow>' +
       '<mn>2</mn></msubsup>';
-  this.executeRuleTest(mml, 'T majuscule indice n moins 1 exposant 2',
-                       'default');
-  this.executeRuleTest(mml, 'T majuscule sub n moins 1 sup 2', 'brief');
-  this.executeRuleTest(mml, 'T majuscule sub n moins 1 sup 2', 'sbrief');
+  this.executeRuleTest(mml, 'großes T Index n minus 1 hoch 2', 'default');
+  this.executeRuleTest(mml, 'großes T Index n minus 1 hoch 2', 'brief');
+  this.executeRuleTest(mml, 'großes T Index n minus 1 hoch 2', 'sbrief');
 };
 
 
@@ -1167,9 +1127,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_8_2 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_8_9_1 = function() {
   var mml = '<msup><mi>x</mi><mo>\'</mo></msup>';
-  this.executeRuleTest(mml, 'x prime', 'default');
-  this.executeRuleTest(mml, 'x prime', 'brief');
-  this.executeRuleTest(mml, 'x prime', 'sbrief');
+  this.executeRuleTest(mml, 'x Hochkomma', 'default');
+  this.executeRuleTest(mml, 'x Hochkomma', 'brief');
+  this.executeRuleTest(mml, 'x Hochkomma', 'sbrief');
 };
 
 
@@ -1182,9 +1142,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_9_2 = function() {
       '<mfrac><mrow><mi>d</mi><msup><mi>f</mi><mrow><mo>\'</mo><mo>\'</mo>' +
       '</mrow></msup><mrow><mo>(</mo><mi>y</mi><mo>)</mo></mrow></mrow>' +
       '<mrow><mi>d</mi><mi>y</mi></mrow></mfrac></mrow>';
-  this.executeRuleTest(mml, 'f triple prime parenthèse gauche y parenthèse droite égale début fraction d f double prime parenthèse gauche y parenthèse droite sur d y fin fraction', 'default');
-  this.executeRuleTest(mml, 'f triple prime parenthèse gauche y parenthèse droite égale début frac d f double prime parenthèse gauche y parenthèse droite sur d y fin frac', 'brief');
-  this.executeRuleTest(mml, 'f triple prime parenthèse gauche y parenthèse droite égale frac d f double prime parenthèse gauche y parenthèse droite sur d y fin frac', 'sbrief');
+  this.executeRuleTest(mml, 'f drei Strich Klammer auf y Klammer zu ist gleich Anfang Bruch d f zwei Strich Klammer auf y Klammer zu durch d y Ende Bruch', 'default');
+  this.executeRuleTest(mml, 'f drei Strich Klammer auf y Klammer zu ist gleich Anfang Bruch d f zwei Strich Klammer auf y Klammer zu durch d y Ende Bruch', 'brief');
+  this.executeRuleTest(mml, 'f drei Strich Klammer auf y Klammer zu ist gleich Bruch d f zwei Strich Klammer auf y Klammer zu durch d y Ende Bruch', 'sbrief');
 };
 
 
@@ -1195,9 +1155,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_10_1 = function() {
   var mml = '<mrow><msup><mi>ρ</mi><mo>\'</mo></msup><mo>=</mo><msubsup>' +
       '<mi>ρ</mi><mo>+</mo><mo>\'</mo></msubsup><mo>+</mo><msubsup>' +
       '<mi>ρ</mi><mo>-</mo><mo>\'</mo></msubsup></mrow>';
-  this.executeRuleTest(mml, 'rhô prime égale rhô prime indice plus position de base plus rhô prime indice moins', 'default');
-  this.executeRuleTest(mml, 'rhô prime égale rhô prime sub plus position de base plus rhô prime sub moins', 'brief');
-  this.executeRuleTest(mml, 'rhô prime égale rhô prime sub plus position de base plus rhô prime sub moins', 'sbrief');
+  this.executeRuleTest(mml, 'rho Hochkomma ist gleich rho Hochkomma Index plus Grundlinie plus rho Hochkomma Index minus', 'default');
+  this.executeRuleTest(mml, 'rho Hochkomma ist gleich rho Hochkomma Index plus Grund plus rho Hochkomma Index minus', 'brief');
+  this.executeRuleTest(mml, 'rho Hochkomma ist gleich rho Hochkomma Index plus Grund plus rho Hochkomma Index minus', 'sbrief');
 };
 
 
@@ -1206,9 +1166,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_10_1 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_8_10_2 = function() {
   var mml = '<msubsup><mi>x</mi><mn>10</mn><mo>\'</mo></msubsup>';
-  this.executeRuleTest(mml, 'x prime indice 10', 'default');
-  this.executeRuleTest(mml, 'x prime 10', 'brief');
-  this.executeRuleTest(mml, 'x prime 10', 'sbrief');
+  this.executeRuleTest(mml, 'x Hochkomma 10', 'default');
+  this.executeRuleTest(mml, 'x Hochkomma 10', 'brief');
+  this.executeRuleTest(mml, 'x Hochkomma 10', 'sbrief');
 };
 
 
@@ -1217,9 +1177,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_10_2 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_8_10_3 = function() {
   var mml = '<msubsup><mi>T</mi><mi>n</mi><mo>\'</mo></msubsup>';
-  this.executeRuleTest(mml, 'T majuscule prime indice n', 'default');
-  this.executeRuleTest(mml, 'T majuscule prime sub n', 'brief');
-  this.executeRuleTest(mml, 'T majuscule prime sub n', 'sbrief');
+  this.executeRuleTest(mml, 'großes T Hochkomma Index n', 'default');
+  this.executeRuleTest(mml, 'großes T Hochkomma Index n', 'brief');
+  this.executeRuleTest(mml, 'großes T Hochkomma Index n', 'sbrief');
 };
 
 
@@ -1234,10 +1194,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_11_1 = function() {
       '<mtd><msup><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow>' +
       '</msup></mtd><mtd><msup><mi>z</mi><mrow><mi>n</mi><mo>+</mo>' +
       '<mn>1</mn></mrow></msup></mtd></mtr></mtable></mfenced>';
-  this.executeRuleTest(mml, 'début matrice 2 par 3 1re rangée 1re colonne x exposant n 2e colonne y exposant n 3e colonne z exposant n 2e rangée 1re colonne x exposant n plus 1 2e colonne y exposant n plus 1 3e colonne z exposant n plus 1 fin matrice',
-                       'default');
-  this.executeRuleTest(mml, 'début matrice 2 par 3 1re rangée 1re colonne x sup n 2e colonne y sup n 3e colonne z sup n 2e rangée 1re colonne x sup n plus 1 2e colonne y sup n plus 1 3e colonne z sup n plus 1 fin matrice', 'brief');
-  this.executeRuleTest(mml, 'matrice 2 par 3 1re rangée 1re colonne x sup n 2e colonne y sup n 3e colonne z sup n 2e rangée 1re colonne x sup n plus 1 2e colonne y sup n plus 1 3e colonne z sup n plus 1 fin matrice', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang 2 mal 3 Matrize 1. Zeile 1. Spalte x hoch n 2. Spalte y hoch n 3. Spalte z hoch n 2. Zeile 1. Spalte x hoch n plus 1 2. Spalte y hoch n plus 1 3. Spalte z hoch n plus 1 Ende Matrize', 'default');
+  this.executeRuleTest(mml, 'Anfang 2 mal 3 Matrize 1. Zeile 1. Spalte x hoch n 2. Spalte y hoch n 3. Spalte z hoch n 2. Zeile 1. Spalte x hoch n plus 1 2. Spalte y hoch n plus 1 3. Spalte z hoch n plus 1 Ende Matrize', 'brief');
+  this.executeRuleTest(mml, '2 mal 3 Matrize 1. Zeile 1. Spalte x hoch n 2. Spalte y hoch n 3. Spalte z hoch n 2. Zeile 1. Spalte x hoch n plus 1 2. Spalte y hoch n plus 1 3. Spalte z hoch n plus 1 Ende Matrize', 'sbrief');
 };
 
 
@@ -1247,10 +1206,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_11_1 = function() {
 sre.MathspeakGermanTest.prototype.testSample_8_12_1 = function() {
   var mml = '<msup><mrow><msub><mi>x</mi><mi>a</mi></msub></mrow><mi>b</mi>' +
       '</msup>';
-  this.executeRuleTest(mml, 'x indice a position de base exposant b',
-                       'default');
-  this.executeRuleTest(mml, 'x sub a position de base sup b', 'brief');
-  this.executeRuleTest(mml, 'x sub a position de base sup b', 'sbrief');
+  this.executeRuleTest(mml, 'x Index a Grundlinie hoch b', 'default');
+  this.executeRuleTest(mml, 'x Index a Grund hoch b', 'brief');
+  this.executeRuleTest(mml, 'x Index a Grund hoch b', 'sbrief');
 };
 
 
@@ -1260,10 +1218,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_12_1 = function() {
 sre.MathspeakGermanTest.prototype.testSample_8_12_2 = function() {
   var mml = '<msub><mrow><msup><mi>x</mi><mi>b</mi></msup></mrow><mi>a</mi>' +
       '</msub>';
-  this.executeRuleTest(mml, 'x exposant b position de base indice a',
-                       'default');
-  this.executeRuleTest(mml, 'x sup b position de base sub a', 'brief');
-  this.executeRuleTest(mml, 'x sup b position de base sub a', 'sbrief');
+  this.executeRuleTest(mml, 'x hoch b Grundlinie Index a', 'default');
+  this.executeRuleTest(mml, 'x hoch b Grund Index a', 'brief');
+  this.executeRuleTest(mml, 'x hoch b Grund Index a', 'sbrief');
 };
 
 
@@ -1273,9 +1230,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_12_2 = function() {
 sre.MathspeakGermanTest.prototype.testSample_8_13_1 = function() {
   var mml = '<mrow><msup><mo form="prefix">log</mo><mn>4</mn></msup><mmultiscripts>' +
       '<mi>x</mi><mprescripts/><none/><mi>b</mi></mmultiscripts></mrow>';
-  this.executeRuleTest(mml, 'log exposant 4 position de base exposant gauche b position de base x', 'default');
-  this.executeRuleTest(mml, 'log sup 4 position de base sup gauche b position de base x', 'brief');
-  this.executeRuleTest(mml, 'log sup 4 position de base sup gauche b position de base x', 'sbrief');
+  this.executeRuleTest(mml, 'logarithmus hoch 4 Grundlinie hoch b Grundlinie x', 'default');
+  this.executeRuleTest(mml, 'logarithmus hoch 4 Grund hoch b Grund x', 'brief');
+  this.executeRuleTest(mml, 'logarithmus hoch 4 Grund hoch b Grund x', 'sbrief');
 };
 
 
@@ -1285,9 +1242,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_13_1 = function() {
 sre.MathspeakGermanTest.prototype.testSample_8_13_2 = function() {
   var mml = '<mrow><msub><mi>T</mi><mi>n</mi></msub><mmultiscripts><mi>y</mi>' +
       '<mprescripts/><mi>a</mi></mmultiscripts></mrow>';
-  this.executeRuleTest(mml, 'T majuscule indice n position de base indice gauche a position de base y', 'default');
-  this.executeRuleTest(mml, 'T majuscule sub n position de base sub gauche a position de base y', 'brief');
-  this.executeRuleTest(mml, 'T majuscule sub n position de base sub gauche a position de base y', 'sbrief');
+  this.executeRuleTest(mml, 'großes T Index n Grundlinie Index a Grundlinie y', 'default');
+  this.executeRuleTest(mml, 'großes T Index n Grund Index a Grund y', 'brief');
+  this.executeRuleTest(mml, 'großes T Index n Grund Index a Grund y', 'sbrief');
 };
 
 
@@ -1296,10 +1253,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_13_2 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_9_1_1 = function() {
   var mml = '<msqrt><mn>2</mn></msqrt>';
-  this.executeRuleTest(mml, 'début racine carrée 2 fin racine carrée', 'default');
-  this.executeRuleTest(mml, 'début racine carrée 2 fin racine carrée', 'brief');
-  this.executeRuleTest(mml, 'racine carrée 2 fin racine carrée',
-                       'sbrief');
+  this.executeRuleTest(mml, 'Anfang Quadratwurzel 2 Ende Quadratwurzel', 'default');
+  this.executeRuleTest(mml, 'Anfang Quadratwurzel 2 Ende Quadratwurzel', 'brief');
+  this.executeRuleTest(mml, 'Quadratwurzel 2 Ende Quadratwurzel', 'sbrief');
 };
 
 
@@ -1310,10 +1266,9 @@ sre.MathspeakGermanTest.prototype.testSample_9_1_1 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_9_1_2 = function() {
   var mml = '<msqrt><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msqrt>';
-  this.executeRuleTest(mml, 'début racine carrée m plus n fin racine carrée', 'default');
-  this.executeRuleTest(mml, 'début racine carrée m plus n fin racine carrée', 'brief');
-  this.executeRuleTest(mml, 'racine carrée m plus n fin racine carrée',
-                       'sbrief');
+  this.executeRuleTest(mml, 'Anfang Quadratwurzel m plus n Ende Quadratwurzel', 'default');
+  this.executeRuleTest(mml, 'Anfang Quadratwurzel m plus n Ende Quadratwurzel', 'brief');
+  this.executeRuleTest(mml, 'Quadratwurzel m plus n Ende Quadratwurzel', 'sbrief');
 };
 
 
@@ -1323,9 +1278,9 @@ sre.MathspeakGermanTest.prototype.testSample_9_1_2 = function() {
 sre.MathspeakGermanTest.prototype.testSample_9_2_1 = function() {
   var mml = '<mroot><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow>' +
       '<mi>m</mi><mo>+</mo><mi>n</mi></mrow></mroot>';
-  this.executeRuleTest(mml, 'indice du radical m plus n début racine x plus y fin racine', 'default');
-  this.executeRuleTest(mml, 'indice du radical m plus n début racine x plus y fin racine', 'brief');
-  this.executeRuleTest(mml, 'indice m plus n racine x plus y fin racine', 'sbrief');
+  this.executeRuleTest(mml, 'Wurzelexponent m plus n Anfang Wurzel x plus y Ende Wurzel', 'default');
+  this.executeRuleTest(mml, 'Wurzelexponent m plus n Anfang Wurzel x plus y Ende Wurzel', 'brief');
+  this.executeRuleTest(mml, 'Exponent m plus n Wurzel x plus y Ende Wurzel', 'sbrief');
 };
 
 
@@ -1338,9 +1293,9 @@ sre.MathspeakGermanTest.prototype.testSample_9_2_2 = function() {
       '<mroot><mi>x</mi><mi>n</mi></mroot></mfenced><mi>m</mi></msup>' +
       '<mo>=</mo><msup><mi>x</mi><mfrac><mi>m</mi><mi>n</mi></mfrac>' +
       '</msup><mo>,</mo><mi>x</mi><mo>></mo><mn>0</mn></mrow>';
-  this.executeRuleTest(mml, 'indice du radical n début racine x exposant m position de base fin racine égale parenthèse gauche indice du radical n début racine x fin racine parenthèse droite exposant m position de base égale x exposant début fraction m sur n fin fraction position de base virgule x supérieur à 0', 'default');
-  this.executeRuleTest(mml, 'indice du radical n début racine x sup m position de base fin racine égale parenthèse gauche indice du radical n début racine x fin racine parenthèse droite sup m position de base égale x sup début frac m sur n fin frac position de base virgule x supérieur à 0', 'brief');
-  this.executeRuleTest(mml, 'indice n racine x sup m position de base fin racine égale parenthèse gauche indice n racine x fin racine parenthèse droite sup m position de base égale x sup frac m sur n fin frac position de base virgule x supérieur à 0', 'sbrief');
+  this.executeRuleTest(mml, 'Wurzelexponent n Anfang Wurzel x hoch m Grundlinie Ende Wurzel ist gleich Klammer auf Wurzelexponent n Anfang Wurzel x Ende Wurzel Klammer zu hoch m Grundlinie ist gleich x hoch Anfang Bruch m durch n Ende Bruch Grundlinie Komma x größer als 0', 'default');
+  this.executeRuleTest(mml, 'Wurzelexponent n Anfang Wurzel x hoch m Grund Ende Wurzel ist gleich Klammer auf Wurzelexponent n Anfang Wurzel x Ende Wurzel Klammer zu hoch m Grund ist gleich x hoch Anfang Bruch m durch n Ende Bruch Grund Komma x größer als 0', 'brief');
+  this.executeRuleTest(mml, 'Exponent n Wurzel x hoch m Grund Ende Wurzel ist gleich Klammer auf Exponent n Wurzel x Ende Wurzel Klammer zu hoch m Grund ist gleich x hoch Bruch m durch n Ende Bruch Grund Komma x größer als 0', 'sbrief');
 };
 
 
@@ -1350,9 +1305,9 @@ sre.MathspeakGermanTest.prototype.testSample_9_2_2 = function() {
 sre.MathspeakGermanTest.prototype.testSample_9_2_3 = function() {
   var mml = '<mrow><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><msup>' +
       '<mi>x</mi><mfrac><mn>1</mn><mn>3</mn></mfrac></msup></mrow>';
-  this.executeRuleTest(mml, 'début racine cubique x fin racine cubique égale x exposant un-tiers', 'default');
-  this.executeRuleTest(mml, 'début racine cubique x fin racine cubique égale x sup un-tiers', 'brief');
-  this.executeRuleTest(mml, 'racine cubique x fin racine cubique égale x sup un-tiers', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang Kubikwurzel x Ende Kubikwurzel ist gleich x hoch eins drittel', 'default');
+  this.executeRuleTest(mml, 'Anfang Kubikwurzel x Ende Kubikwurzel ist gleich x hoch eins drittel', 'brief');
+  this.executeRuleTest(mml, 'Kubikwurzel x Ende Kubikwurzel ist gleich x hoch eins drittel', 'sbrief');
 };
 
 
@@ -1363,9 +1318,9 @@ sre.MathspeakGermanTest.prototype.testSample_9_3_1 = function() {
   var mml = '<msqrt><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow>' +
       '</msqrt><mo>+</mo><msqrt><mrow><mi>y</mi><mo>+</mo><mn>1</mn>' +
       '</mrow></msqrt></mrow></msqrt>';
-  this.executeRuleTest(mml, 'début racine carrée imbriquée début racine carrée x plus 1 fin racine carrée plus début racine carrée y plus 1 fin racine carrée fin racine carrée imbriquée', 'default');
-  this.executeRuleTest(mml, 'début racine carrée imbriquée début racine carrée x plus 1 fin racine carrée plus début racine carrée y plus 1 fin racine carrée fin racine carrée imbriquée', 'brief');
-  this.executeRuleTest(mml, 'racine carrée imbriquée racine carrée x plus 1 fin racine carrée plus racine carrée y plus 1 fin racine carrée fin racine carrée imbriquée', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel x plus 1 Ende Quadratwurzel plus Anfang Quadratwurzel y plus 1 Ende Quadratwurzel Ende geschachtelte Quadratwurzel', 'default');
+  this.executeRuleTest(mml, 'Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel x plus 1 Ende Quadratwurzel plus Anfang Quadratwurzel y plus 1 Ende Quadratwurzel Ende geschachtelte Quadratwurzel', 'brief');
+  this.executeRuleTest(mml, 'geschachtelte Quadratwurzel Quadratwurzel x plus 1 Ende Quadratwurzel plus Quadratwurzel y plus 1 Ende Quadratwurzel Ende geschachtelte Quadratwurzel', 'sbrief');
 };
 
 
@@ -1376,11 +1331,9 @@ sre.MathspeakGermanTest.prototype.testSample_9_3_2 = function() {
   var mml = '<mrow><mroot><mroot><mi>x</mi><mi>m</mi></mroot><mi>n</mi>' +
       '</mroot><mo>=</mo><mroot><mroot><mi>x</mi><mi>n</mi></mroot>' +
       '<mi>m</mi></mroot></mrow>';
-  this.executeRuleTest(mml, 'indice du radical imbriquée n début racine imbriquée indice du radical m début racine x fin racine fin racine imbriquée égale indice du radical imbriquée m début racine imbriquée indice du radical n début racine x fin racine fin racine imbriquée',
-                       'default');
-  this.executeRuleTest(mml, 'indice du radical imbriquée n début racine imbriquée indice du radical m début racine x fin racine fin racine imbriquée égale indice du radical imbriquée m début racine imbriquée indice du radical n début racine x fin racine fin racine imbriquée',
-                       'brief');
-  this.executeRuleTest(mml, 'indice imbriquée n racine imbriquée indice m racine x fin racine fin racine imbriquée égale indice imbriquée m racine imbriquée indice n racine x fin racine fin racine imbriquée', 'sbrief');
+  this.executeRuleTest(mml, 'geschachtelter Wurzelexponent n Anfang geschachtelte Wurzel Wurzelexponent m Anfang Wurzel x Ende Wurzel Ende geschachtelte Wurzel ist gleich geschachtelter Wurzelexponent m Anfang geschachtelte Wurzel Wurzelexponent n Anfang Wurzel x Ende Wurzel Ende geschachtelte Wurzel', 'default');
+  this.executeRuleTest(mml, 'geschachtelter Wurzelexponent n Anfang geschachtelte Wurzel Wurzelexponent m Anfang Wurzel x Ende Wurzel Ende geschachtelte Wurzel ist gleich geschachtelter Wurzelexponent m Anfang geschachtelte Wurzel Wurzelexponent n Anfang Wurzel x Ende Wurzel Ende geschachtelte Wurzel', 'brief');
+  this.executeRuleTest(mml, 'geschachtelte Exponent n geschachtelte Wurzel Exponent m Wurzel x Ende Wurzel Ende geschachtelte Wurzel ist gleich geschachtelte Exponent m geschachtelte Wurzel Exponent n Wurzel x Ende Wurzel Ende geschachtelte Wurzel', 'sbrief');
 };
 
 
@@ -1394,10 +1347,9 @@ sre.MathspeakGermanTest.prototype.testSample_9_3_3 = function() {
       '<mo>&#x2026;</mo></mrow><mn>5</mn></mroot></mrow><mn>4</mn></mroot>' +
       '</mrow><mn>3</mn></mroot></mrow></msqrt><mo>,</mo><mi>x</mi>' +
       '<mo>∈</mo><mi>ℝ</mi></mrow>';
-  this.executeRuleTest(mml, 'x exposant e moins 2 position de base égale début racine carrée imbriquée x début racine cubique imbriquée x indice du radical imbriquée 4 début racine imbriquée x indice du radical 5 début racine x points de suspension fin racine fin racine imbriquée fin racine cubique imbriquée fin racine carrée imbriquée virgule x appartient à R majuscule ajouré',
-                       'default');
-  this.executeRuleTest(mml, 'x sup e moins 2 position de base égale début racine carrée imbriquée x début racine cubique imbriquée x indice du radical imbriquée 4 début racine imbriquée x indice du radical 5 début racine x points de suspension fin racine fin racine imbriquée fin racine cubique imbriquée fin racine carrée imbriquée virgule x appartient à R majuscule ajouré', 'brief');
-  this.executeRuleTest(mml, 'x sup e moins 2 position de base égale racine carrée imbriquée x racine cubique imbriquée x indice imbriquée 4 racine imbriquée x indice 5 racine x points de suspension fin racine fin racine imbriquée fin racine cubique imbriquée fin racine carrée imbriquée virgule x appartient à R majuscule ajouré', 'sbrief');
+  this.executeRuleTest(mml, 'x hoch e minus 2 Grundlinie ist gleich Anfang dreifach geschachtelte Quadratwurzel x Anfang zweifach geschachtelte Kubikwurzel x geschachtelter Wurzelexponent 4 Anfang geschachtelte Wurzel x Wurzelexponent 5 Anfang Wurzel x horizontale Ellipsis Ende Wurzel Ende geschachtelte Wurzel Ende zweifach geschachtelte Kubikwurzel Ende dreifach geschachtelte Quadratwurzel Komma x Element von großes R mit Doppelstrich', 'default');
+  this.executeRuleTest(mml, 'x hoch e minus 2 Grund ist gleich Anfang dreifach geschachtelte Quadratwurzel x Anfang zweifach geschachtelte Kubikwurzel x geschachtelter Wurzelexponent 4 Anfang geschachtelte Wurzel x Wurzelexponent 5 Anfang Wurzel x horizontale Ellipsis Ende Wurzel Ende geschachtelte Wurzel Ende zweifach geschachtelte Kubikwurzel Ende dreifach geschachtelte Quadratwurzel Komma x Element von großes R mit Doppelstrich', 'brief');
+  this.executeRuleTest(mml, 'x hoch e minus 2 Grund ist gleich dreifach geschachtelte Quadratwurzel x zweifach geschachtelte Kubikwurzel x geschachtelte Exponent 4 geschachtelte Wurzel x Exponent 5 Wurzel x horizontale Ellipsis Ende Wurzel Ende geschachtelte Wurzel Ende zweifach geschachtelte Kubikwurzel Ende dreifach geschachtelte Quadratwurzel Komma x Element von großes R mit Doppelstrich', 'sbrief');
 };
 
 
@@ -1412,9 +1364,9 @@ sre.MathspeakGermanTest.prototype.testSample_9_3_4 = function() {
       '<mo>+</mo><msqrt><mrow><mn>2</mn><mo>+</mo><msqrt><mn>2</mn>' +
       '</msqrt></mrow></msqrt></mrow></msqrt><mn>2</mn></mfrac>' +
       '<mo>&#x2026;</mo></mrow>';
-  this.executeRuleTest(mml, 'début fraction 2 sur pi fin fraction égale début fraction début racine carrée 2 fin racine carrée sur 2 fin fraction début fraction début racine carrée imbriquée 2 plus début racine carrée 2 fin racine carrée fin racine carrée imbriquée sur 2 fin fraction début fraction début racine carrée imbriquée 2 plus début racine carrée imbriquée 2 plus début racine carrée 2 fin racine carrée fin racine carrée imbriquée fin racine carrée imbriquée sur 2 fin fraction points de suspension', 'default');
-  this.executeRuleTest(mml, 'début frac 2 sur pi fin frac égale début frac début racine carrée 2 fin racine carrée sur 2 fin frac début frac début racine carrée imbriquée 2 plus début racine carrée 2 fin racine carrée fin racine carrée imbriquée sur 2 fin frac début frac début racine carrée imbriquée 2 plus début racine carrée imbriquée 2 plus début racine carrée 2 fin racine carrée fin racine carrée imbriquée fin racine carrée imbriquée sur 2 fin frac points de suspension', 'brief');
-  this.executeRuleTest(mml, 'frac 2 sur pi fin frac égale frac racine carrée 2 fin racine carrée sur 2 fin frac frac racine carrée imbriquée 2 plus racine carrée 2 fin racine carrée fin racine carrée imbriquée sur 2 fin frac frac racine carrée imbriquée 2 plus racine carrée imbriquée 2 plus racine carrée 2 fin racine carrée fin racine carrée imbriquée fin racine carrée imbriquée sur 2 fin frac points de suspension', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang Bruch 2 durch pi Ende Bruch ist gleich Anfang Bruch Anfang Quadratwurzel 2 Ende Quadratwurzel durch 2 Ende Bruch Anfang Bruch Anfang geschachtelte Quadratwurzel 2 plus Anfang Quadratwurzel 2 Ende Quadratwurzel Ende geschachtelte Quadratwurzel durch 2 Ende Bruch Anfang Bruch Anfang zweifach geschachtelte Quadratwurzel 2 plus Anfang geschachtelte Quadratwurzel 2 plus Anfang Quadratwurzel 2 Ende Quadratwurzel Ende geschachtelte Quadratwurzel Ende zweifach geschachtelte Quadratwurzel durch 2 Ende Bruch horizontale Ellipsis', 'default');
+  this.executeRuleTest(mml, 'Anfang Bruch 2 durch pi Ende Bruch ist gleich Anfang Bruch Anfang Quadratwurzel 2 Ende Quadratwurzel durch 2 Ende Bruch Anfang Bruch Anfang geschachtelte Quadratwurzel 2 plus Anfang Quadratwurzel 2 Ende Quadratwurzel Ende geschachtelte Quadratwurzel durch 2 Ende Bruch Anfang Bruch Anfang zweifach geschachtelte Quadratwurzel 2 plus Anfang geschachtelte Quadratwurzel 2 plus Anfang Quadratwurzel 2 Ende Quadratwurzel Ende geschachtelte Quadratwurzel Ende zweifach geschachtelte Quadratwurzel durch 2 Ende Bruch horizontale Ellipsis', 'brief');
+  this.executeRuleTest(mml, 'Bruch 2 durch pi Ende Bruch ist gleich Bruch Quadratwurzel 2 Ende Quadratwurzel durch 2 Ende Bruch Bruch geschachtelte Quadratwurzel 2 plus Quadratwurzel 2 Ende Quadratwurzel Ende geschachtelte Quadratwurzel durch 2 Ende Bruch Bruch zweifach geschachtelte Quadratwurzel 2 plus geschachtelte Quadratwurzel 2 plus Quadratwurzel 2 Ende Quadratwurzel Ende geschachtelte Quadratwurzel Ende zweifach geschachtelte Quadratwurzel durch 2 Ende Bruch horizontale Ellipsis', 'sbrief');
 };
 
 
@@ -1427,10 +1379,9 @@ sre.MathspeakGermanTest.prototype.testSample_10_1_1 = function() {
       '<mrow><mn>2</mn><menclose notation="updiagonalstrike"><mi>y</mi>' +
       '</menclose></mrow></mfrac><mo>=</mo><mfrac><mn>5</mn><mn>2</mn>' +
       '</mfrac><mi>x</mi></mrow>';
-  this.executeRuleTest(mml, 'début fraction 5 x début biffé y fin biffé sur 2 début biffé y fin biffé fin fraction égale cinq-demis x', 'default');
-  this.executeRuleTest(mml, 'début frac 5 x début biffé y fin biffé sur 2 début biffé y fin biffé fin frac égale cinq-demis x',
-                       'brief');
-  this.executeRuleTest(mml, 'frac 5 x début biffé y fin biffé sur 2 début biffé y fin biffé fin frac égale cinq-demis x', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang Bruch 5 x durchkreutzt y Ende duchkreutzt durch 2 durchkreutzt y Ende duchkreutzt Ende Bruch ist gleich fünf halbe x', 'default');
+  this.executeRuleTest(mml, 'Anfang Bruch 5 x durchkreutzt y Ende duchkreutzt durch 2 durchkreutzt y Ende duchkreutzt Ende Bruch ist gleich fünf halbe x', 'brief');
+  this.executeRuleTest(mml, 'Bruch 5 x durchkreutzt y Ende duchkreutzt durch 2 durchkreutzt y Ende duchkreutzt Ende Bruch ist gleich fünf halbe x', 'sbrief');
 };
 
 
@@ -1443,10 +1394,9 @@ sre.MathspeakGermanTest.prototype.testSample_10_2_1 = function() {
       '<mn>2</mn></mover><munder><menclose notation="updiagonalstrike">' +
       '<mn>18</mn></menclose><mn>3</mn></munder></mfrac><mo>=</mo><mfrac>' +
       '<mn>2</mn><mn>3</mn></mfrac></mrow>';
-  this.executeRuleTest(mml, 'début fraction 12 sur 18 fin fraction égale début fraction début biffé 12 avec 2 fin biffé sur début biffé 18 avec 3 fin biffé fin fraction égale deux-tiers', 'default');
-  this.executeRuleTest(mml, 'début frac 12 sur 18 fin frac égale début frac début biffé 12 avec 2 fin biffé sur début biffé 18 avec 3 fin biffé fin frac égale deux-tiers',
-                       'brief');
-  this.executeRuleTest(mml, 'frac 12 sur 18 fin frac égale frac début biffé 12 avec 2 fin biffé sur début biffé 18 avec 3 fin biffé fin frac égale deux-tiers', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang Bruch 12 durch 18 Ende Bruch ist gleich Anfang Bruch durchkreutzt 12 mit 2 Ende duchkreutzt durch durchkreutzt 18 mit 3 Ende duchkreutzt Ende Bruch ist gleich zwei drittel', 'default');
+  this.executeRuleTest(mml, 'Anfang Bruch 12 durch 18 Ende Bruch ist gleich Anfang Bruch durchkreutzt 12 mit 2 Ende duchkreutzt durch durchkreutzt 18 mit 3 Ende duchkreutzt Ende Bruch ist gleich zwei drittel', 'brief');
+  this.executeRuleTest(mml, 'Bruch 12 durch 18 Ende Bruch ist gleich Bruch durchkreutzt 12 mit 2 Ende duchkreutzt durch durchkreutzt 18 mit 3 Ende duchkreutzt Ende Bruch ist gleich zwei drittel', 'sbrief');
 };
 
 
@@ -1461,10 +1411,9 @@ sre.MathspeakGermanTest.prototype.testSample_10_2_2 = function() {
       '<menclose notation="updiagonalstrike">' +
       '<mn>18</mn></menclose></mover></mfrac><mo>=</mo><mfrac>' +
       '<mn>2</mn><mn>3</mn></mfrac></mrow>';
-  this.executeRuleTest(mml, 'début fraction 12 sur 18 fin fraction égale début fraction début biffé 12 avec 2 fin biffé sur début biffé 18 avec 3 fin biffé fin fraction égale deux-tiers', 'default');
-  this.executeRuleTest(mml, 'début frac 12 sur 18 fin frac égale début frac début biffé 12 avec 2 fin biffé sur début biffé 18 avec 3 fin biffé fin frac égale deux-tiers',
-                       'brief');
-  this.executeRuleTest(mml, 'frac 12 sur 18 fin frac égale frac début biffé 12 avec 2 fin biffé sur début biffé 18 avec 3 fin biffé fin frac égale deux-tiers', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang Bruch 12 durch 18 Ende Bruch ist gleich Anfang Bruch durchkreutzt 12 mit 2 Ende duchkreutzt durch durchkreutzt 18 mit 3 Ende duchkreutzt Ende Bruch ist gleich zwei drittel', 'default');
+  this.executeRuleTest(mml, 'Anfang Bruch 12 durch 18 Ende Bruch ist gleich Anfang Bruch durchkreutzt 12 mit 2 Ende duchkreutzt durch durchkreutzt 18 mit 3 Ende duchkreutzt Ende Bruch ist gleich zwei drittel', 'brief');
+  this.executeRuleTest(mml, 'Bruch 12 durch 18 Ende Bruch ist gleich Bruch durchkreutzt 12 mit 2 Ende duchkreutzt durch durchkreutzt 18 mit 3 Ende duchkreutzt Ende Bruch ist gleich zwei drittel', 'sbrief');
 };
 
 
@@ -1473,9 +1422,9 @@ sre.MathspeakGermanTest.prototype.testSample_10_2_2 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_11_1_1 = function() {
   var mml = '<mover accent="true"><mi>x</mi><mo>¨</mo></mover>';
-  this.executeRuleTest(mml, 'suscrire x avec tréma', 'default');
-  this.executeRuleTest(mml, 'suscrire x avec tréma', 'brief');
-  this.executeRuleTest(mml, 'suscrire x avec tréma', 'sbrief');
+  this.executeRuleTest(mml, 'modifiziert oben x mit diaeresis', 'default');
+  this.executeRuleTest(mml, 'mod oben x mit diaeresis', 'brief');
+  this.executeRuleTest(mml, 'mod oben x mit diaeresis', 'sbrief');
 };
 
 
@@ -1485,10 +1434,9 @@ sre.MathspeakGermanTest.prototype.testSample_11_1_1 = function() {
 sre.MathspeakGermanTest.prototype.testSample_11_1_2 = function() {
   var mml = '<mover accent="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mo>→</mo></mover>';
-  this.executeRuleTest(mml, 'suscrire x plus y avec flèche droite', 'default');
-  this.executeRuleTest(mml, 'suscrire x plus y avec flèche droite', 'brief');
-  this.executeRuleTest(mml, 'suscrire x plus y avec flèche droite',
-                       'sbrief');
+  this.executeRuleTest(mml, 'modifiziert oben x plus y mit Pfeil nach rechts', 'default');
+  this.executeRuleTest(mml, 'mod oben x plus y mit Pfeil nach rechts', 'brief');
+  this.executeRuleTest(mml, 'mod oben x plus y mit Pfeil nach rechts', 'sbrief');
 };
 
 
@@ -1497,10 +1445,9 @@ sre.MathspeakGermanTest.prototype.testSample_11_1_2 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_11_1_3 = function() {
   var mml = '<mover accent="true"><mi>x</mi><mo>^</mo></mover>';
-  this.executeRuleTest(mml, 'suscrire x avec circonflexe',
-                       'default');
-  this.executeRuleTest(mml, 'suscrire x avec circonflexe', 'brief');
-  this.executeRuleTest(mml, 'suscrire x avec circonflexe', 'sbrief');
+  this.executeRuleTest(mml, 'modifiziert oben x mit circumflex', 'default');
+  this.executeRuleTest(mml, 'mod oben x mit circumflex', 'brief');
+  this.executeRuleTest(mml, 'mod oben x mit circumflex', 'sbrief');
 };
 
 
@@ -1509,12 +1456,9 @@ sre.MathspeakGermanTest.prototype.testSample_11_1_3 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_11_2_1 = function() {
   var mml = '<munder accent="true"><mi>x</mi><mi>˙</mi></munder>';
-  this.executeRuleTest(mml, 'souscrire x avec point en chef',
-                       'default');
-  this.executeRuleTest(mml, 'souscrire x avec point en chef',
-                       'brief');
-  this.executeRuleTest(mml, 'souscrire x avec point en chef',
-                       'sbrief');
+  this.executeRuleTest(mml, 'modifiziert unten x mit Überpunkt', 'default');
+  this.executeRuleTest(mml, 'mod unten x mit Überpunkt', 'brief');
+  this.executeRuleTest(mml, 'mod unten x mit Überpunkt', 'sbrief');
 };
 
 
@@ -1523,9 +1467,9 @@ sre.MathspeakGermanTest.prototype.testSample_11_2_1 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_11_3_1 = function() {
   var mml = '<mover accent="true"><mi>x</mi><mo>˜</mo></mover>';
-  this.executeRuleTest(mml, 'suscrire x avec tilde', 'default');
-  this.executeRuleTest(mml, 'suscrire x avec tilde', 'brief');
-  this.executeRuleTest(mml, 'suscrire x avec tilde', 'sbrief');
+  this.executeRuleTest(mml, 'x Tilde oben', 'default');
+  this.executeRuleTest(mml, 'mod oben x mit Tilde', 'brief');
+  this.executeRuleTest(mml, 'mod oben x mit Tilde', 'sbrief');
 };
 
 
@@ -1534,9 +1478,9 @@ sre.MathspeakGermanTest.prototype.testSample_11_3_1 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_11_3_2 = function() {
   var mml = '<mover accent="true"><mi>x</mi><mo>¯</mo></mover>';
-  this.executeRuleTest(mml, 'suscrire x avec macron', 'default');
-  this.executeRuleTest(mml, 'suscrire x avec macron', 'brief');
-  this.executeRuleTest(mml, 'suscrire x avec macron', 'sbrief');
+  this.executeRuleTest(mml, 'x Überstrich', 'default');
+  this.executeRuleTest(mml, 'mod oben x mit macron', 'brief');
+  this.executeRuleTest(mml, 'mod oben x mit macron', 'sbrief');
 };
 
 
@@ -1545,9 +1489,9 @@ sre.MathspeakGermanTest.prototype.testSample_11_3_2 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_11_3_3 = function() {
   var mml = '<munder accentunder="true"><mi>y</mi><mo>˜</mo></munder>';
-  this.executeRuleTest(mml, 'souscrire y avec tilde', 'default');
-  this.executeRuleTest(mml, 'souscrire y avec tilde', 'brief');
-  this.executeRuleTest(mml, 'souscrire y avec tilde', 'sbrief');
+  this.executeRuleTest(mml, 'y Tilde unten', 'default');
+  this.executeRuleTest(mml, 'mod unten y mit Tilde', 'brief');
+  this.executeRuleTest(mml, 'mod unten y mit Tilde', 'sbrief');
 };
 
 
@@ -1557,9 +1501,9 @@ sre.MathspeakGermanTest.prototype.testSample_11_3_3 = function() {
 sre.MathspeakGermanTest.prototype.testSample_11_4_1 = function() {
   var mml = '<mover accent="true"><mover accent="true"><mi>x</mi><mo>¯</mo>' +
       '</mover><mo>¯</mo></mover>';
-  this.executeRuleTest(mml, 'sus-suscrire suscrire x avec macron avec macron', 'default');
-  this.executeRuleTest(mml, 'sus-suscrire suscrire x avec macron avec macron', 'brief');
-  this.executeRuleTest(mml, 'sus-suscrire suscrire x avec macron avec macron', 'sbrief');
+  this.executeRuleTest(mml, 'x Überstrich Überstrich', 'default');
+  this.executeRuleTest(mml, 'mod oben oben mod oben x mit macron mit macron', 'brief');
+  this.executeRuleTest(mml, 'mod oben oben mod oben x mit macron mit macron', 'sbrief');
 };
 
 
@@ -1570,9 +1514,9 @@ sre.MathspeakGermanTest.prototype.testSample_11_4_2 = function() {
   var mml = '<munder><munder><mover accent="true"><mover accent="true">' +
       '<mi>y</mi><mo>¯</mo></mover><mo>¯</mo></mover>' +
       '<mo>\u005F</mo></munder><mo>\u005F</mo></munder>';
-  this.executeRuleTest(mml, 'sous-souscrire souscrire sus-suscrire suscrire y avec macron avec macron avec tiret bas avec tiret bas', 'default');
-  this.executeRuleTest(mml, 'sous-souscrire souscrire sus-suscrire suscrire y avec macron avec macron avec tiret bas avec tiret bas', 'brief');
-  this.executeRuleTest(mml, 'sous-souscrire souscrire sus-suscrire suscrire y avec macron avec macron avec tiret bas avec tiret bas', 'sbrief');
+  this.executeRuleTest(mml, 'y Überstrich Überstrich Unterstrich Unterstrich', 'default');
+  this.executeRuleTest(mml, 'mod unten unten mod unten mod oben oben mod oben y mit macron mit macron mit Unterstrich mit Unterstrich', 'brief');
+  this.executeRuleTest(mml, 'mod unten unten mod unten mod oben oben mod oben y mit macron mit macron mit Unterstrich mit Unterstrich', 'sbrief');
 };
 
 
@@ -1582,9 +1526,9 @@ sre.MathspeakGermanTest.prototype.testSample_11_4_2 = function() {
 sre.MathspeakGermanTest.prototype.testSample_11_6_1 = function() {
   var mml = '<munder accentunder="true"><munder><mrow><mi>a</mi><mo>+</mo>' +
       '<mi>b</mi></mrow><mo>\u005F</mo></munder><mo>*</mo></munder>';
-  this.executeRuleTest(mml, 'sous-souscrire souscrire a plus b avec tiret bas avec astérisque', 'default');
-  this.executeRuleTest(mml, 'sous-souscrire souscrire a plus b avec tiret bas avec astérisque', 'brief');
-  this.executeRuleTest(mml, 'sous-souscrire souscrire a plus b avec tiret bas avec astérisque', 'sbrief');
+  this.executeRuleTest(mml, 'modifiziert unten unten modifiziert unten a plus b mit Unterstrich mit times', 'default');
+  this.executeRuleTest(mml, 'mod unten unten mod unten a plus b mit Unterstrich mit times', 'brief');
+  this.executeRuleTest(mml, 'mod unten unten mod unten a plus b mit Unterstrich mit times', 'sbrief');
 };
 
 
@@ -1594,9 +1538,9 @@ sre.MathspeakGermanTest.prototype.testSample_11_6_1 = function() {
 sre.MathspeakGermanTest.prototype.testSample_11_6_3 = function() {
   var mml = '<mover><mover accent="true"><mrow><mi>x</mi><mo>+</mo>' +
       '<mi>y</mi></mrow><mo>˜</mo></mover><mo>¯</mo></mover>';
-  this.executeRuleTest(mml, 'sus-suscrire suscrire x plus y avec tilde avec macron', 'default');
-  this.executeRuleTest(mml, 'sus-suscrire suscrire x plus y avec tilde avec macron', 'brief');
-  this.executeRuleTest(mml, 'sus-suscrire suscrire x plus y avec tilde avec macron', 'sbrief');
+  this.executeRuleTest(mml, 'modifiziert oben oben modifiziert oben x plus y mit Tilde mit macron', 'default');
+  this.executeRuleTest(mml, 'mod oben oben mod oben x plus y mit Tilde mit macron', 'brief');
+  this.executeRuleTest(mml, 'mod oben oben mod oben x plus y mit Tilde mit macron', 'sbrief');
 };
 
 
@@ -1607,9 +1551,9 @@ sre.MathspeakGermanTest.prototype.testSample_11_7_1 = function() {
   var mml = '<mrow><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo>' +
       '<mn>1</mn></mrow><mi>∞</mi></munderover><msub><mi>a</mi><mi>n</mi>' +
       '</msub></mrow>';
-  this.executeRuleTest(mml, 'sommation début souscript n égale 1 début suscript infini fin scripts a indice n', 'default');
-  this.executeRuleTest(mml, 'sommation début souscript n égale 1 début suscript infini fin scripts a sub n', 'brief');
-  this.executeRuleTest(mml, 'sommation début souscript n égale 1 début suscript infini fin scripts a sub n', 'sbrief');
+  this.executeRuleTest(mml, 'Summe Unterschrift n ist gleich 1 Überschrift unendlich Ende Überschrift a Index n', 'default');
+  this.executeRuleTest(mml, 'Summe Unterschrift n ist gleich 1 Überschrift unendlich Ende Überschrift a Index n', 'brief');
+  this.executeRuleTest(mml, 'Summe Unterschrift n ist gleich 1 Überschrift unendlich Ende Überschrift a Index n', 'sbrief');
 };
 
 
@@ -1621,9 +1565,9 @@ sre.MathspeakGermanTest.prototype.testSample_11_8_1 = function() {
       '<mi>y</mi></mrow> <mo>\u005F</mo></munder><mrow><mi>a</mi>' +
       '<mo>=</mo><mn>5</mn></mrow></munder><mrow><mi>b</mi><mo>=</mo>' +
       '<mn>3</mn></mrow></munder></mrow>';
-  this.executeRuleTest(mml, 'souscrire x plus y avec tiret bas début souscript a égale 5 début soussouscript b égale 3 fin scripts', 'default');
-  this.executeRuleTest(mml, 'souscrire x plus y avec tiret bas début souscript a égale 5 début soussouscript b égale 3 fin scripts', 'brief');
-  this.executeRuleTest(mml, 'souscrire x plus y avec tiret bas début souscript a égale 5 début soussouscript b égale 3 fin scripts', 'sbrief');
+  this.executeRuleTest(mml, 'modifiziert unten x plus y mit Unterstrich Unterschrift a ist gleich 5 UnterUnterschrift b ist gleich 3 Ende Unterschrift', 'default');
+  this.executeRuleTest(mml, 'mod unten x plus y mit Unterstrich Unterschrift a ist gleich 5 UnterUnterschrift b ist gleich 3 Ende Unterschrift', 'brief');
+  this.executeRuleTest(mml, 'mod unten x plus y mit Unterstrich Unterschrift a ist gleich 5 UnterUnterschrift b ist gleich 3 Ende Unterschrift', 'sbrief');
 };
 
 
@@ -1634,9 +1578,9 @@ sre.MathspeakGermanTest.prototype.testSample_11_8_2 = function() {
   var mml = '<mrow><mover><mover><mover><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mo>¯</mo></mover><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow>' +
       '</mover><mrow><mi>m</mi><mo>=</mo><mn>2</mn></mrow></mover></mrow>';
-  this.executeRuleTest(mml, 'suscrire x plus y avec macron début suscript n égale 1 début sussuscript m égale 2 fin scripts', 'default');
-  this.executeRuleTest(mml, 'suscrire x plus y avec macron début suscript n égale 1 début sussuscript m égale 2 fin scripts', 'brief');
-  this.executeRuleTest(mml, 'suscrire x plus y avec macron début suscript n égale 1 début sussuscript m égale 2 fin scripts', 'sbrief');
+  this.executeRuleTest(mml, 'modifiziert oben x plus y mit macron Überschrift n ist gleich 1 ÜberÜberschrift m ist gleich 2 Ende Überschrift', 'default');
+  this.executeRuleTest(mml, 'mod oben x plus y mit macron Überschrift n ist gleich 1 ÜberÜberschrift m ist gleich 2 Ende Überschrift', 'brief');
+  this.executeRuleTest(mml, 'mod oben x plus y mit macron Überschrift n ist gleich 1 ÜberÜberschrift m ist gleich 2 Ende Überschrift', 'sbrief');
 };
 
 
@@ -1646,9 +1590,9 @@ sre.MathspeakGermanTest.prototype.testSample_11_8_2 = function() {
 sre.MathspeakGermanTest.prototype.testSample_12_1_1 = function() {
   var mml = '<mrow><msub><mo form="prefix">log</mo><mi>b</mi></msub>' +
       '<mi>x</mi></mrow>';
-  this.executeRuleTest(mml, 'log base b x', 'default');
-  this.executeRuleTest(mml, 'log base b x', 'brief');
-  this.executeRuleTest(mml, 'log base b x', 'sbrief');
+  this.executeRuleTest(mml, 'logarithmus Index b Grundlinie x', 'default');
+  this.executeRuleTest(mml, 'logarithmus Index b Grund x', 'brief');
+  this.executeRuleTest(mml, 'logarithmus Index b Grund x', 'sbrief');
 };
 
 
@@ -1657,9 +1601,9 @@ sre.MathspeakGermanTest.prototype.testSample_12_1_1 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_12_1_2 = function() {
   var mml = '<mrow><mo form="prefix">cos</mo><mi>y</mi></mrow>';
-  this.executeRuleTest(mml, 'cosinus y', 'default');
-  this.executeRuleTest(mml, 'cosinus y', 'brief');
-  this.executeRuleTest(mml, 'cosinus y', 'sbrief');
+  this.executeRuleTest(mml, 'kosinus y', 'default');
+  this.executeRuleTest(mml, 'kosinus y', 'brief');
+  this.executeRuleTest(mml, 'kosinus y', 'sbrief');
 };
 
 
@@ -1696,13 +1640,13 @@ sre.MathspeakGermanTest.prototype.testSample_13_1_1 = function() {
       ' class="MathML-Unit">ft</mi>' +
       '</mrow><mi mathvariant="normal" class="MathML-Unit">min</mi>' +
       '</mfrac></mrow>';
-  this.executeRuleTest(mml, 'début fraction 60 début biffé miles fin biffé sur début biffé hour fin biffé fin fraction multiplié par début fraction 5,280 pieds sur 1 début biffé miles fin biffé fin fraction multiplié par début fraction 1 début biffé hour fin biffé sur 60 minute fin fraction égale début fraction 5,280 pieds sur minute fin fraction', 'default');
-  this.executeRuleTest(mml, 'début frac 60 début biffé miles fin biffé sur début biffé hour fin biffé fin frac multiplié par début frac 5,280 pieds sur 1 début biffé miles fin biffé fin frac multiplié par début frac 1 début biffé hour fin biffé sur 60 minute fin frac égale début frac 5,280 pieds sur minute fin frac', 'brief');
-  this.executeRuleTest(mml, 'frac 60 début biffé miles fin biffé sur début biffé hour fin biffé fin frac multiplié par frac 5,280 pieds sur 1 début biffé miles fin biffé fin frac multiplié par frac 1 début biffé hour fin biffé sur 60 minute fin frac égale frac 5,280 pieds sur minute fin frac',
-                       'sbrief');
+  this.executeRuleTest(mml, 'Anfang Bruch 60 durchkreutzt meilens Ende duchkreutzt durch durchkreutzt hours Ende duchkreutzt Ende Bruch mal Anfang Bruch 5,280 fußs durch 1 durchkreutzt meilens Ende duchkreutzt Ende Bruch mal Anfang Bruch 1 durchkreutzt hours Ende duchkreutzt durch 60 minutes Ende Bruch ist gleich Anfang Bruch 5,280 fußs durch minutes Ende Bruch', 'default');
+  this.executeRuleTest(mml, 'Anfang Bruch 60 durchkreutzt meilens Ende duchkreutzt durch durchkreutzt hours Ende duchkreutzt Ende Bruch mal Anfang Bruch 5,280 fußs durch 1 durchkreutzt meilens Ende duchkreutzt Ende Bruch mal Anfang Bruch 1 durchkreutzt hours Ende duchkreutzt durch 60 minutes Ende Bruch ist gleich Anfang Bruch 5,280 fußs durch minutes Ende Bruch', 'brief');
+  this.executeRuleTest(mml, 'Bruch 60 durchkreutzt meilens Ende duchkreutzt durch durchkreutzt hours Ende duchkreutzt Ende Bruch mal Bruch 5,280 fußs durch 1 durchkreutzt meilens Ende duchkreutzt Ende Bruch mal Bruch 1 durchkreutzt hours Ende duchkreutzt durch 60 minutes Ende Bruch ist gleich Bruch 5,280 fußs durch minutes Ende Bruch', 'sbrief');
 };
 
 
+// TODO: Get the Units right!
 /**
  * Testing Rule 13.1, Example 2.
  */
@@ -1714,9 +1658,9 @@ sre.MathspeakGermanTest.prototype.testSample_13_1_2 = function() {
       '<mo>·</mo><msup><mi mathvariant="normal" class="MathML-Unit">s</mi>' +
       '<mrow><mo>-</mo><mn>2</mn></mrow>' +
       '</msup></mrow>';
-  this.executeRuleTest(mml, '1 joules égale 1 kilogram point médian mètres au carré point médian secondes exposant négatif 2', 'default');
-  this.executeRuleTest(mml, '1 joules égale 1 kilogram point médian mètres au carré point médian secondes sup négatif 2', 'brief');
-  this.executeRuleTest(mml, '1 joules égale 1 kilogram point médian mètres au carré point médian secondes sup négatif 2', 'sbrief');
+  this.executeRuleTest(mml, '1 joules ist gleich 1 kilograms mal meters Quadrat mal seconds hoch negativ 2', 'default');
+  this.executeRuleTest(mml, '1 joules ist gleich 1 kilograms mal meters Quadrat mal seconds hoch negativ 2', 'brief');
+  this.executeRuleTest(mml, '1 joules ist gleich 1 kilograms mal meters Quadrat mal seconds hoch negativ 2', 'sbrief');
 };
 
 
@@ -1729,10 +1673,9 @@ sre.MathspeakGermanTest.prototype.testSample_13_1_3 = function() {
       '<mi>m</mi><mi mathvariant="normal" class="MathML-Unit">cm</mi>' +
       '<mo>=</mo><mrow><mfrac><mi>m</mi><mn>1,000</mn></mfrac>' +
       '<mi mathvariant="normal" class="MathML-Unit">km</mi></mrow>';
-  this.executeRuleTest(mml, 'm mètres égale 100 m centimeter égale début fraction m sur 1,000 fin fraction kilometer',
-                       'default');
-  this.executeRuleTest(mml, 'm mètres égale 100 m centimeter égale début frac m sur 1,000 fin frac kilometer', 'brief');
-  this.executeRuleTest(mml, 'm mètres égale 100 m centimeter égale frac m sur 1,000 fin frac kilometer', 'sbrief');
+  this.executeRuleTest(mml, 'm meters ist gleich 100 m centimeters ist gleich Anfang Bruch m durch 1,000 Ende Bruch kilometers', 'default');
+  this.executeRuleTest(mml, 'm meters ist gleich 100 m centimeters ist gleich Anfang Bruch m durch 1,000 Ende Bruch kilometers', 'brief');
+  this.executeRuleTest(mml, 'm meters ist gleich 100 m centimeters ist gleich Bruch m durch 1,000 Ende Bruch kilometers', 'sbrief');
 };
 
 
@@ -1744,9 +1687,9 @@ sre.MathspeakGermanTest.prototype.testSample_13_1_4 = function() {
       ' class="MathML-Unit">mi</mi></mrow><mo>≈</mo>' +
       '<mrow><mn>1.6</mn><mi mathvariant="normal"' +
       ' class="MathML-Unit">km</mi></mrow>';
-  this.executeRuleTest(mml, '1 miles presque égal à 1,6 kilometer', 'default');
-  this.executeRuleTest(mml, '1 miles presque égal à 1,6 kilometer', 'brief');
-  this.executeRuleTest(mml, '1 miles presque égal à 1,6 kilometer', 'sbrief');
+  this.executeRuleTest(mml, '1 meilens beinahe gleich 1\\,6 kilometers', 'default');
+  this.executeRuleTest(mml, '1 meilens beinahe gleich 1\\,6 kilometers', 'brief');
+  this.executeRuleTest(mml, '1 meilens beinahe gleich 1\\,6 kilometers', 'sbrief');
 };
 
 
@@ -1757,9 +1700,9 @@ sre.MathspeakGermanTest.prototype.testSample_13_1_5 = function() {
   var mml = '<mrow><mn>1</mn><mi mathvariant="normal"' +
       ' class="MathML-Unit">in</mi><mo>=</mo><mn>2.54</mn>' +
       '<mi mathvariant="normal" class="MathML-Unit">cm</mi></mrow>';
-  this.executeRuleTest(mml, '1 pouces égale 2,54 centimeter', 'default');
-  this.executeRuleTest(mml, '1 pouces égale 2,54 centimeter', 'brief');
-  this.executeRuleTest(mml, '1 pouces égale 2,54 centimeter', 'sbrief');
+  this.executeRuleTest(mml, '1 zolls ist gleich 2\\,54 centimeters', 'default');
+  this.executeRuleTest(mml, '1 zolls ist gleich 2\\,54 centimeters', 'brief');
+  this.executeRuleTest(mml, '1 zolls ist gleich 2\\,54 centimeters', 'sbrief');
 };
 
 
@@ -1774,9 +1717,9 @@ sre.MathspeakGermanTest.prototype.testSample_14_1_1 = function() {
       '<mtext>fluorine</mtext></mtd><mtd/><mtd><mrow>' +
       '<mtext>hydrogen</mtext><mspace width="4.pt"/>' +
       '<mtext>fluoride</mtext></mrow></mtd></mtr></mtable>';
-  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne H majuscule indice 2 2e colonne plus 3e colonne F majuscule indice 2 4e colonne flèche droite 5e colonne 2 H majuscule F majuscule 2e rangée 1re colonne hydrogen 2e colonne vide 3e colonne fluorine 4e colonne vide 5e colonne hydrogen fluoride fin tableau', 'default');
-  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne H majuscule 2 2e colonne plus 3e colonne F majuscule 2 4e colonne flèche droite 5e colonne 2 H majuscule F majuscule 2e rangée 1re colonne hydrogen 2e colonne vide 3e colonne fluorine 4e colonne vide 5e colonne hydrogen fluoride fin tableau', 'brief');
-  this.executeRuleTest(mml, 'tableau 1re rangée 1re colonne H majuscule 2 2e colonne plus 3e colonne F majuscule 2 4e colonne flèche droite 5e colonne 2 H majuscule F majuscule 2e rangée 1re colonne hydrogen 2e colonne vide 3e colonne fluorine 4e colonne vide 5e colonne hydrogen fluoride fin tableau', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang Anordnung 1. Zeile 1. Spalte großes H 2 2. Spalte plus 3. Spalte großes F 2 4. Spalte Pfeil nach rechts 5. Spalte 2 großes H großes F 2. Zeile 1. Spalte hydrogen 2. Spalte leer 3. Spalte fluorine 4. Spalte leer 5. Spalte hydrogen fluoride Ende Anordnung', 'default');
+  this.executeRuleTest(mml, 'Anfang Anordnung 1. Zeile 1. Spalte großes H 2 2. Spalte plus 3. Spalte großes F 2 4. Spalte Pfeil nach rechts 5. Spalte 2 großes H großes F 2. Zeile 1. Spalte hydrogen 2. Spalte leer 3. Spalte fluorine 4. Spalte leer 5. Spalte hydrogen fluoride Ende Anordnung', 'brief');
+  this.executeRuleTest(mml, 'Anordnung 1. Zeile 1. Spalte großes H 2 2. Spalte plus 3. Spalte großes F 2 4. Spalte Pfeil nach rechts 5. Spalte 2 großes H großes F 2. Zeile 1. Spalte hydrogen 2. Spalte leer 3. Spalte fluorine 4. Spalte leer 5. Spalte hydrogen fluoride Ende Anordnung', 'sbrief');
 };
 
 
@@ -1790,9 +1733,9 @@ sre.MathspeakGermanTest.prototype.testSample_14_3_1 = function() {
       '</mtr><mtr><mtd><mrow><mi>y</mi><mo>≥</mo><mn>0</mn></mrow></mtd>' +
       '<mtd><mrow><mn>2</mn><mi>y</mi></mrow></mtd></mtr></mtable>' +
       '</mfenced></mrow>';
-  this.executeRuleTest(mml, 'x égale début tableau accolade gauche élargie 1re rangée 1re colonne y inférieur à 0 2e colonne 0 2e rangée 1re colonne y plus grand ou égal à 0 2e colonne 2 y fin tableau', 'default');
-  this.executeRuleTest(mml, 'x égale début tableau accolade gauche élargie 1re rangée 1re colonne y inférieur à 0 2e colonne 0 2e rangée 1re colonne y plus grand ou égal à 0 2e colonne 2 y fin tableau', 'brief');
-  this.executeRuleTest(mml, 'x égale tableau accolade gauche élargie 1re rangée 1re colonne y inférieur à 0 2e colonne 0 2e rangée 1re colonne y plus grand ou égal à 0 2e colonne 2 y fin tableau', 'sbrief');
+  this.executeRuleTest(mml, 'x ist gleich Anfang Fallunterscheidung große geschwungene Klammer auf 1. Zeile 1. Spalte y kleiner als 0 2. Spalte 0 2. Zeile 1. Spalte y größer oder gleich 0 2. Spalte 2 y Ende Fallunterscheidung', 'default');
+  this.executeRuleTest(mml, 'x ist gleich Anfang Fälle große geschwungene Klammer auf 1. Zeile 1. Spalte y kleiner als 0 2. Spalte 0 2. Zeile 1. Spalte y größer oder gleich 0 2. Spalte 2 y Ende Fälle', 'brief');
+  this.executeRuleTest(mml, 'x ist gleich Fälle große geschwungene Klammer auf 1. Zeile 1. Spalte y kleiner als 0 2. Spalte 0 2. Zeile 1. Spalte y größer oder gleich 0 2. Spalte 2 y Ende Fälle', 'sbrief');
 };
 
 
@@ -1809,9 +1752,9 @@ sre.MathspeakGermanTest.prototype.testSample_15_1_1 = function() {
       '<mtd><mrow><mi>z</mi><mo>+</mo><mi>a</mi></mrow></mtd><mtd><mrow>' +
       '<mi>z</mi><mo>+</mo><mi>b</mi></mrow></mtd><mtd><mrow><mi>z</mi>' +
       '<mo>+</mo><mi>c</mi></mrow></mtd></mtr></mtable></mfenced>';
-  this.executeRuleTest(mml, 'début matrice 3 par 3 1re rangée 1re colonne x plus a 2e colonne x plus b 3e colonne x plus c 2e rangée 1re colonne y plus a 2e colonne y plus b 3e colonne y plus c 3e rangée 1re colonne z plus a 2e colonne z plus b 3e colonne z plus c fin matrice', 'default');
-  this.executeRuleTest(mml, 'début matrice 3 par 3 1re rangée 1re colonne x plus a 2e colonne x plus b 3e colonne x plus c 2e rangée 1re colonne y plus a 2e colonne y plus b 3e colonne y plus c 3e rangée 1re colonne z plus a 2e colonne z plus b 3e colonne z plus c fin matrice', 'brief');
-  this.executeRuleTest(mml, 'matrice 3 par 3 1re rangée 1re colonne x plus a 2e colonne x plus b 3e colonne x plus c 2e rangée 1re colonne y plus a 2e colonne y plus b 3e colonne y plus c 3e rangée 1re colonne z plus a 2e colonne z plus b 3e colonne z plus c fin matrice', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang 3 mal 3 Matrize 1. Zeile 1. Spalte x plus a 2. Spalte x plus b 3. Spalte x plus c 2. Zeile 1. Spalte y plus a 2. Spalte y plus b 3. Spalte y plus c 3. Zeile 1. Spalte z plus a 2. Spalte z plus b 3. Spalte z plus c Ende Matrize', 'default');
+  this.executeRuleTest(mml, 'Anfang 3 mal 3 Matrize 1. Zeile 1. Spalte x plus a 2. Spalte x plus b 3. Spalte x plus c 2. Zeile 1. Spalte y plus a 2. Spalte y plus b 3. Spalte y plus c 3. Zeile 1. Spalte z plus a 2. Spalte z plus b 3. Spalte z plus c Ende Matrize', 'brief');
+  this.executeRuleTest(mml, '3 mal 3 Matrize 1. Zeile 1. Spalte x plus a 2. Spalte x plus b 3. Spalte x plus c 2. Zeile 1. Spalte y plus a 2. Spalte y plus b 3. Spalte y plus c 3. Zeile 1. Spalte z plus a 2. Spalte z plus b 3. Spalte z plus c Ende Matrize', 'sbrief');
 };
 
 
@@ -1825,9 +1768,9 @@ sre.MathspeakGermanTest.prototype.testSample_15_2_1 = function() {
       '</mtable></mfenced><mo>=</mo><mrow><mo>(</mo><mi>a</mi><mo>+</mo>' +
       '<mn>1</mn><mo>)</mo></mrow><mi>d</mi><mo>-</mo><mi>b</mi><mi>c</mi>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'début déterminant 2 par 2 1re rangée 1re colonne a plus 1 2e colonne b 2e rangée 1re colonne c 2e colonne d fin déterminant égale parenthèse gauche a plus 1 parenthèse droite d moins b c', 'default');
-  this.executeRuleTest(mml, 'début déterminant 2 par 2 1re rangée 1re colonne a plus 1 2e colonne b 2e rangée 1re colonne c 2e colonne d fin déterminant égale parenthèse gauche a plus 1 parenthèse droite d moins b c', 'brief');
-  this.executeRuleTest(mml, 'déterminant 2 par 2 1re rangée 1re colonne a plus 1 2e colonne b 2e rangée 1re colonne c 2e colonne d fin déterminant égale parenthèse gauche a plus 1 parenthèse droite d moins b c', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang 2 mal 2 Determinante 1. Zeile 1. Spalte a plus 1 2. Spalte b 2. Zeile 1. Spalte c 2. Spalte d Ende Determinante ist gleich Klammer auf a plus 1 Klammer zu d minus b c', 'default');
+  this.executeRuleTest(mml, 'Anfang 2 mal 2 Determinante 1. Zeile 1. Spalte a plus 1 2. Spalte b 2. Zeile 1. Spalte c 2. Spalte d Ende Determinante ist gleich Klammer auf a plus 1 Klammer zu d minus b c', 'brief');
+  this.executeRuleTest(mml, '2 mal 2 Determinante 1. Zeile 1. Spalte a plus 1 2. Spalte b 2. Zeile 1. Spalte c 2. Spalte d Ende Determinante ist gleich Klammer auf a plus 1 Klammer zu d minus b c', 'sbrief');
 };
 
 
@@ -1839,9 +1782,9 @@ sre.MathspeakGermanTest.prototype.testSample_15_4_1 = function() {
       '</mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd>' +
       '<mi>d</mi></mtd></mtr></mtable></mfenced><mo>=</mo><mi>a</mi>' +
       '<mi>d</mi><mo>-</mo><mi>b</mi><mi>c</mi></mrow>';
-  this.executeRuleTest(mml, 'début déterminant 2 par 2 1re rangée a b 2e rangée c d fin déterminant égale a d moins b c', 'default');
-  this.executeRuleTest(mml, 'début déterminant 2 par 2 1re rangée a b 2e rangée c d fin déterminant égale a d moins b c', 'brief');
-  this.executeRuleTest(mml, 'déterminant 2 par 2 1re rangée a b 2e rangée c d fin déterminant égale a d moins b c', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang 2 mal 2 Determinante 1. Zeile a b 2. Zeile c d Ende Determinante ist gleich a d minus b c', 'default');
+  this.executeRuleTest(mml, 'Anfang 2 mal 2 Determinante 1. Zeile a b 2. Zeile c d Ende Determinante ist gleich a d minus b c', 'brief');
+  this.executeRuleTest(mml, '2 mal 2 Determinante 1. Zeile a b 2. Zeile c d Ende Determinante ist gleich a d minus b c', 'sbrief');
 };
 
 
@@ -1851,9 +1794,7 @@ sre.MathspeakGermanTest.prototype.testSample_15_4_1 = function() {
 sre.MathspeakGermanTest.prototype.testSample_15_6_1 = function() {
   var mml = '<mfenced open="(" close=")"><mtable><mtr><mtd><mi>x</mi></mtd>' +
       '</mtr><mtr><mtd><mi>y</mi></mtd></mtr></mtable></mfenced>';
-  this.executeRuleTest(mml, 'début binomiale y parmi x fin binomiale',
-                       'default');
-  this.executeRuleTest(mml, 'début binomiale y parmi x fin binomiale',
-                       'brief');
-  this.executeRuleTest(mml, 'binomiale x parmi y fin binomiale', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang Binomialkoeffizient y aus x Ende Binomialkoeffizient', 'default');
+  this.executeRuleTest(mml, 'Anfang Binomial y aus x Ende Binomial', 'brief');
+  this.executeRuleTest(mml, 'Binomial y aus x Ende Binomial', 'sbrief');
 };
