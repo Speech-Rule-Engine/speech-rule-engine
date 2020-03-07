@@ -3,9 +3,6 @@
     "locale": "de"
   },
   {
-    "locale": "de"
-  },
-  {
     "key": "W",
     "mappings": {
       "default": {
