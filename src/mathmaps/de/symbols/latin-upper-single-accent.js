@@ -241,7 +241,7 @@
     "key": "0100",
     "mappings": {
       "default": {
-        "default": "groß A mit Macron"
+        "default": "groß A mit Makron"
       }
     }
   },
@@ -313,7 +313,7 @@
     "key": "0112",
     "mappings": {
       "default": {
-        "default": "groß E mit Macron"
+        "default": "groß E mit Makron"
       }
     }
   },
@@ -412,7 +412,7 @@
     "key": "012A",
     "mappings": {
       "default": {
-        "default": "groß I mit Macron"
+        "default": "groß I mit Makron"
       }
     }
   },
@@ -529,7 +529,7 @@
     "key": "014C",
     "mappings": {
       "default": {
-        "default": "groß O mit Macron"
+        "default": "groß O mit Makron"
       }
     }
   },
@@ -646,7 +646,7 @@
     "key": "016A",
     "mappings": {
       "default": {
-        "default": "groß U mit Macron"
+        "default": "groß U mit Makron"
       }
     }
   },
@@ -988,7 +988,7 @@
     "key": "0232",
     "mappings": {
       "default": {
-        "default": "groß Y mit Macron"
+        "default": "groß Y mit Makron"
       }
     }
   },
@@ -1105,7 +1105,7 @@
     "key": "1E20",
     "mappings": {
       "default": {
-        "default": "groß G mit Macron"
+        "default": "groß G mit Makron"
       }
     }
   },

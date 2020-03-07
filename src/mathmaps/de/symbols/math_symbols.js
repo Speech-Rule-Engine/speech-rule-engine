@@ -357,7 +357,8 @@
     "key": "00AF",
     "mappings": {
       "default": {
-        "default": "macron"
+        "default": "Überstrich",
+        "alternative": "Makron"
       }
     },
     "category": "Sk"
@@ -3735,7 +3736,7 @@
     "key": "27C7",
     "mappings": {
       "default": {
-        "default": "Oder mit Dot Inside"
+        "default": "Oder mit innerem Punkt"
       }
     }
   },
@@ -3744,7 +3745,7 @@
     "key": "27C8",
     "mappings": {
       "default": {
-        "default": "Reverse Solidus Vorhergehender Teilsatz"
+        "default": "Umgekehrter Schrägstrich Vorhergehender Teilsatz"
       }
     }
   },
@@ -3753,7 +3754,7 @@
     "key": "27C9",
     "mappings": {
       "default": {
-        "default": "Superset Vorgänger Solidus"
+        "default": "Superset Vorgänger Schrägstrich"
       }
     }
   },
@@ -4131,7 +4132,7 @@
     "key": "29B8",
     "mappings": {
       "default": {
-        "default": "eingekreister umgekehrter Solidus"
+        "default": "eingekreister umgekehrter Schrägstrich"
       }
     }
   },
@@ -4608,7 +4609,7 @@
     "key": "29F5",
     "mappings": {
       "default": {
-        "default": "Reverse Solidus Operator"
+        "default": "Umgekehrter Schrägstrich Operator"
       }
     }
   },
@@ -4617,7 +4618,7 @@
     "key": "29F6",
     "mappings": {
       "default": {
-        "default": "Solidus mit Overbar"
+        "default": "Schrägstrich mit Overbar"
       }
     }
   },
@@ -4626,7 +4627,7 @@
     "key": "29F7",
     "mappings": {
       "default": {
-        "default": "Umgekehrter Solidus mit horizontalem Hub"
+        "default": "Umgekehrter Schrägstrich mit horizontalem Hub"
       }
     }
   },
@@ -4635,7 +4636,7 @@
     "key": "29F8",
     "mappings": {
       "default": {
-        "default": "Großer Solidus"
+        "default": "Großer Schrägstrich"
       }
     }
   },
@@ -4644,7 +4645,7 @@
     "key": "29F9",
     "mappings": {
       "default": {
-        "default": "Großer umgekehrter Solidus"
+        "default": "Großer umgekehrter Schrägstrich"
       }
     }
   },
@@ -5553,7 +5554,7 @@
     "key": "2A61",
     "mappings": {
       "default": {
-        "default": "Kleines Vee mit Underbar"
+        "default": "kleines Vee mit Underbar"
       }
     }
   },
@@ -6210,7 +6211,7 @@
     "key": "2AAA",
     "mappings": {
       "default": {
-        "default": "Kleiner als"
+        "default": "kleiner als"
       }
     }
   },
@@ -6228,7 +6229,7 @@
     "key": "2AAC",
     "mappings": {
       "default": {
-        "default": "Kleiner als oder gleich"
+        "default": "kleiner als oder gleich"
       }
     }
   },
@@ -6939,7 +6940,7 @@
     "key": "2AFB",
     "mappings": {
       "default": {
-        "default": "Dreifache Solidus-Binärbeziehung"
+        "default": "Dreifache Schrägstrich-Binärbeziehung"
       }
     }
   },
@@ -6957,7 +6958,7 @@
     "key": "2AFD",
     "mappings": {
       "default": {
-        "default": "Doppelter Solidus-Operator"
+        "default": "Doppelter Schrägstrich-Operator"
       }
     }
   },
@@ -7173,7 +7174,7 @@
     "key": "FE50",
     "mappings": {
       "default": {
-        "default": "Kleines Komma"
+        "default": "kleines Komma"
       }
     }
   },
@@ -7182,7 +7183,7 @@
     "key": "FE52",
     "mappings": {
       "default": {
-        "default": "Kleiner voller Stopp"
+        "default": "kleiner Punkt"
       }
     }
   },
@@ -7191,7 +7192,7 @@
     "key": "FE54",
     "mappings": {
       "default": {
-        "default": "Kleines Semikolon"
+        "default": "kleines Semikolon"
       }
     }
   },
@@ -7200,7 +7201,7 @@
     "key": "FE55",
     "mappings": {
       "default": {
-        "default": "Kleiner Doppelpunkt"
+        "default": "kleiner Doppelpunkt"
       }
     }
   },
@@ -7209,7 +7210,7 @@
     "key": "FE56",
     "mappings": {
       "default": {
-        "default": "Kleines Fragezeichen"
+        "default": "kleines Fragezeichen"
       }
     }
   },
@@ -7218,7 +7219,7 @@
     "key": "FE57",
     "mappings": {
       "default": {
-        "default": "Kleines Ausrufezeichen"
+        "default": "kleines Ausrufezeichen"
       }
     }
   },
@@ -7227,7 +7228,7 @@
     "key": "FE58",
     "mappings": {
       "default": {
-        "default": "Kleiner Em Dash"
+        "default": "kleiner Em Dash"
       }
     }
   },
@@ -7236,7 +7237,7 @@
     "key": "FE5F",
     "mappings": {
       "default": {
-        "default": "Kleines Nummernzeichen"
+        "default": "kleines Nummernzeichen"
       }
     }
   },
@@ -7245,7 +7246,7 @@
     "key": "FE60",
     "mappings": {
       "default": {
-        "default": "Kleines kaufmännisches"
+        "default": "kleines kaufmännisches"
       }
     }
   },
@@ -7254,7 +7255,7 @@
     "key": "FE61",
     "mappings": {
       "default": {
-        "default": "Kleines Sternchen"
+        "default": "kleines Sternchen"
       }
     }
   },
@@ -7263,7 +7264,7 @@
     "key": "FE62",
     "mappings": {
       "default": {
-        "default": "Kleines Pluszeichen"
+        "default": "kleines Pluszeichen"
       }
     }
   },
@@ -7272,7 +7273,7 @@
     "key": "FE63",
     "mappings": {
       "default": {
-        "default": "Kleiner Bindestrich-Minus"
+        "default": "kleiner Bindestrich-Minus"
       }
     }
   },
@@ -7281,7 +7282,7 @@
     "key": "FE64",
     "mappings": {
       "default": {
-        "default": "Kleines weniger als Zeichen"
+        "default": "kleines weniger als Zeichen"
       }
     }
   },
@@ -7290,7 +7291,7 @@
     "key": "FE65",
     "mappings": {
       "default": {
-        "default": "Kleines Größeres als Zeichen"
+        "default": "kleines Größeres als Zeichen"
       }
     }
   },
@@ -7299,7 +7300,7 @@
     "key": "FE66",
     "mappings": {
       "default": {
-        "default": "Kleines Gleichheitszeichen"
+        "default": "kleines Gleichheitszeichen"
       }
     }
   },
@@ -7308,7 +7309,7 @@
     "key": "FE68",
     "mappings": {
       "default": {
-        "default": "Kleiner umgekehrter Solidus"
+        "default": "kleiner umgekehrter Schrägstrich"
       }
     }
   },
@@ -7317,7 +7318,7 @@
     "key": "FE69",
     "mappings": {
       "default": {
-        "default": "Kleines Dollarzeichen"
+        "default": "kleines Dollarzeichen"
       }
     }
   },
@@ -7326,7 +7327,7 @@
     "key": "FE6A",
     "mappings": {
       "default": {
-        "default": "Kleines Prozentzeichen"
+        "default": "kleines Prozentzeichen"
       }
     }
   },
@@ -7335,7 +7336,7 @@
     "key": "FE6B",
     "mappings": {
       "default": {
-        "default": "Kleine kommerzielle bei"
+        "default": "kleine kommerzielle bei"
       }
     }
   },
@@ -7344,7 +7345,7 @@
     "key": "FF01",
     "mappings": {
       "default": {
-        "default": "Ausrufezeichen mit voller Breite"
+        "default": "vollbreites Ausrufezeichen"
       }
     }
   },
@@ -7353,7 +7354,7 @@
     "key": "FF02",
     "mappings": {
       "default": {
-        "default": "Vollbreites Anführungszeichen"
+        "default": "vollbreites Anführungszeichen"
       }
     }
   },
@@ -7362,7 +7363,7 @@
     "key": "FF03",
     "mappings": {
       "default": {
-        "default": "Nummernschild mit voller Breite"
+        "default": "vollbreites Nummernzeichen"
       }
     }
   },
@@ -7371,7 +7372,7 @@
     "key": "FF04",
     "mappings": {
       "default": {
-        "default": "Dollarzeichen in voller Breite"
+        "default": "vollbreites Dollarzeichen"
       }
     }
   },
@@ -7380,7 +7381,7 @@
     "key": "FF05",
     "mappings": {
       "default": {
-        "default": "Vollbreites Prozentzeichen"
+        "default": "vollbreites Prozentzeichen"
       }
     }
   },
@@ -7389,7 +7390,7 @@
     "key": "FF06",
     "mappings": {
       "default": {
-        "default": "Vollbreites kaufmännisches"
+        "default": "vollbreites kaufmännisches und"
       }
     }
   },
@@ -7398,7 +7399,7 @@
     "key": "FF07",
     "mappings": {
       "default": {
-        "default": "Vollbreite Apostrophe"
+        "default": "vollbreites Apostroph"
       }
     }
   },
@@ -7407,7 +7408,7 @@
     "key": "FF0A",
     "mappings": {
       "default": {
-        "default": "Stern mit voller Breite"
+        "default": "vollbreiter Stern"
       }
     }
   },
@@ -7416,7 +7417,7 @@
     "key": "FF0B",
     "mappings": {
       "default": {
-        "default": "Fullwidth Plus-Zeichen"
+        "default": "vollbreites Plus"
       }
     }
   },
@@ -7425,7 +7426,7 @@
     "key": "FF0C",
     "mappings": {
       "default": {
-        "default": "Kommando mit voller Breite"
+        "default": "vollbreites Komma"
       }
     }
   },
@@ -7434,7 +7435,7 @@
     "key": "FF0D",
     "mappings": {
       "default": {
-        "default": "Vollbreite Bindestrich-Minus"
+        "default": "vollbreites Minus"
       }
     }
   },
@@ -7443,7 +7444,7 @@
     "key": "FF0E",
     "mappings": {
       "default": {
-        "default": "Fullwidth Full Stop"
+        "default": "vollbreiter Punkt"
       }
     }
   },
@@ -7452,7 +7453,7 @@
     "key": "FF0F",
     "mappings": {
       "default": {
-        "default": "Solidus mit voller Breite"
+        "default": "Schrägstrich mit voller Breite"
       }
     }
   },
@@ -7461,7 +7462,7 @@
     "key": "FF1A",
     "mappings": {
       "default": {
-        "default": "Vollbreiter Doppelpunkt"
+        "default": "vollbreiter Doppelpunkt"
       }
     }
   },
@@ -7470,7 +7471,7 @@
     "key": "FF1B",
     "mappings": {
       "default": {
-        "default": "Semikolon mit voller Breite"
+        "default": "vollbreites Semikolon"
       }
     }
   },
@@ -7488,7 +7489,7 @@
     "key": "FF1D",
     "mappings": {
       "default": {
-        "default": "Gleichspannungszeichen mit voller Breite"
+        "default": "vollbreites Gleichspannungszeichen"
       }
     }
   },
@@ -7506,7 +7507,7 @@
     "key": "FF1F",
     "mappings": {
       "default": {
-        "default": "Vollbreites Fragezeichen"
+        "default": "vollbreites Fragezeichen"
       }
     }
   },
@@ -7524,7 +7525,7 @@
     "key": "FF3C",
     "mappings": {
       "default": {
-        "default": "Reverse Solidus mit voller Breite"
+        "default": "Umgekehrter Schrägstrich mit voller Breite"
       }
     }
   },
@@ -7542,7 +7543,7 @@
     "key": "FF3F",
     "mappings": {
       "default": {
-        "default": "Low Line mit voller Breite"
+        "default": "vollbreites Low Line"
       }
     }
   },
@@ -7551,7 +7552,7 @@
     "key": "FF40",
     "mappings": {
       "default": {
-        "default": "Vollbreiter Grabakzent"
+        "default": "vollbreiter Grabakzent"
       }
     }
   },
@@ -7560,7 +7561,7 @@
     "key": "FF5C",
     "mappings": {
       "default": {
-        "default": "Vertikale Linie mit voller Breite"
+        "default": "vollbreites Vertikale Linie"
       }
     }
   },
@@ -7569,7 +7570,7 @@
     "key": "FF5E",
     "mappings": {
       "default": {
-        "default": "Vollbreite Tilde"
+        "default": "vollbreite Tilde"
       }
     }
   },
@@ -7578,7 +7579,7 @@
     "key": "FFE0",
     "mappings": {
       "default": {
-        "default": "Vollbreites Cent-Zeichen"
+        "default": "vollbreites Cent-Zeichen"
       }
     }
   },
@@ -7587,7 +7588,7 @@
     "key": "FFE1",
     "mappings": {
       "default": {
-        "default": "Vollbreites Pfundzeichen"
+        "default": "vollbreites Pfundzeichen"
       }
     }
   },
@@ -7596,7 +7597,7 @@
     "key": "FFE2",
     "mappings": {
       "default": {
-        "default": "Vollbreite nicht signieren"
+        "default": "vollbreite nicht Symbol"
       }
     }
   },
@@ -7605,7 +7606,8 @@
     "key": "FFE3",
     "mappings": {
       "default": {
-        "default": "Vollbreite Macron"
+        "default": "vollbreiter Überstrich",
+        "alternative": "vollbreites Makron"
       }
     }
   },
@@ -7614,7 +7616,7 @@
     "key": "FFE4",
     "mappings": {
       "default": {
-        "default": "Gebrochene Leiste mit voller Breite"
+        "default": "vollbreite gestrichelte Linie"
       }
     }
   },
@@ -7623,7 +7625,7 @@
     "key": "FFE5",
     "mappings": {
       "default": {
-        "default": "Yen-Zeichen mit voller Breite"
+        "default": "vollbreites Yen-Zeichen"
       }
     }
   },
@@ -7632,7 +7634,7 @@
     "key": "FFE6",
     "mappings": {
       "default": {
-        "default": "Volles Won-Zeichen"
+        "default": "vollbreites Won-Zeichen"
       }
     }
   },

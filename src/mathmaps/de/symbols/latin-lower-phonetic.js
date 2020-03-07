@@ -520,7 +520,7 @@
     "key": "01E3",
     "mappings": {
       "default": {
-        "default": "ae mit Macron"
+        "default": "ae mit Makron"
       }
     }
   },
