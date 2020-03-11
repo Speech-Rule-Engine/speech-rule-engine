@@ -92,7 +92,7 @@ sre.SystemExternal.xpath = sre.SystemExternal.documentSupported() ?
       var wgx = sre.SystemExternal.require('wicked-good-xpath');
       wgx.install(window);
       window.document.XPathResult = window.XPathResult;
-      return window.document;
+	  return window.document;
     }();
 
 

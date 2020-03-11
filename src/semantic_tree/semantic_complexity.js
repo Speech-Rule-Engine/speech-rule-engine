@@ -348,6 +348,7 @@ sre.SemanticComplexity.speechOperatorCounter = function() {
 			var SquCounter = 0;
 			var CubeCounter = 0;
 			var FracCounter = 0;
+      var SlashCounter = 0;
 			var RootCounter = 0;
 			var BracketCounter = 0;
 			var BraceCounter = 0;
@@ -369,6 +370,9 @@ sre.SemanticComplexity.speechOperatorCounter = function() {
 					case 'StartFraction':
 						FracCounter += 1;
 						break;
+          case 'slash':
+            SlashCounter += 1;
+            break;
 					case 'StartRoot':
 						RootCounter += 1;
 						break;
@@ -401,8 +405,8 @@ sre.SemanticComplexity.speechOperatorCounter = function() {
 							if ((words[i]).length === 1){
 								if ((words[i+1]).length === 1)
 									ImplicitMultiCounter += 1;
-							}}};// ExplicitMulti, and paranthesis
+							}}};//paranthesis and Chances of Errors
 			};
-			return [PlusCounter, MinusCounter, FracCounter, RootCounter, ChancesOfError, SupCounter, SquCounter, CubeCounter, ExplicitMultiCounter, BracketCounter, BraceCounter, ParenthesisCounter, ImplicitMultiCounter];
+			return [PlusCounter, MinusCounter, FracCounter, RootCounter, ChancesOfError, SupCounter, SquCounter+CubeCounter, ExplicitMultiCounter, BracketCounter, BraceCounter, ParenthesisCounter, ImplicitMultiCounter, SlashCounter, FracCounter+SlashCounter];
 		})
 };
