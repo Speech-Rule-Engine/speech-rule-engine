@@ -482,7 +482,7 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
 
   defineRule(
       'vulgar-fraction', 'mathspeak.default',
-      '[t] CSFvulgarFraction',
+      '[t] CSFvulgarFraction (grammar:correctOne)',
       'self::fraction', '@role="vulgar"', 'CQFvulgarFractionSmall');
   defineSpecialisedRule(
       'vulgar-fraction', 'mathspeak.default', 'mathspeak.brief');

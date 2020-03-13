@@ -140,42 +140,42 @@ sre.PrefixGerman.initPrefixGerman_ = function() {
       'count(preceding-sibling::*)=0');
   defineRule(
       'leftsub', 'default.default',
-      '[t] "linker Index"; [p] (pause:200)',
+      '[t] "linker unterer Index"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
       '@role="leftsub"');
   defineRule(
       'leftsub', 'default.default',
-      '[t] CSFordinalPosition; [t] "linker Index"; [p] (pause:200)',
+      '[t] CSFordinalPosition; [t] "linker unterer Index"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
       '../../@role="leftsub"');
   defineRule(
       'leftsuper', 'default.default',
-      '[t] "links hochgestellt"; [p] (pause:200)',
+      '[t] "linker oberer Index"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
       '@role="leftsuper"');
   defineRule(
       'leftsuper', 'default.default',
-      '[t] CSFordinalPosition; [t] "links hochgestellt"; [p] (pause:200)',
+      '[t] CSFordinalPosition; [t] "linker oberer Index"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
       '../../@role="leftsuper"');
   defineRule(
       'rightsub', 'default.default',
-      '[t] "rechter Index"; [p] (pause:200)',
+      '[t] "rechter unterer Index"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
       '@role="rightsub"');
   defineRule(
       'rightsub', 'default.default',
-      '[t] CSFordinalPosition; [t] "rechter Index"; [p] (pause:200)',
+      '[t] CSFordinalPosition; [t] "rechter unterer Index"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
       '../../@role="rightsub"');
   defineRule(
       'rightsuper', 'default.default',
-      '[t] "rechts hochgestellt"; [p] (pause:200)',
+      '[t] "rechter oberer Index"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
       '@role="rightsuper"');
   defineRule(
       'rightsuper', 'default.default',
-      '[t] CSFordinalPosition; [t] "rechts hochgestellt"; [p] (pause:200)',
+      '[t] CSFordinalPosition; [t] "rechter oberer Index"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
       '../../@role="rightsuper"');
   defineRule(

@@ -109,10 +109,10 @@ sre.PrefixGermanTest.prototype.testSimpleTensors = function() {
   var tensor = '<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>';
   this.executeTest(tensor, 0, 'Basis');
-  this.executeTest(tensor, 1, 'linker Index');
-  this.executeTest(tensor, 2, 'links hochgestellt');
-  this.executeTest(tensor, 3, 'rechter Index');
-  this.executeTest(tensor, 4, 'rechts hochgestellt');
+  this.executeTest(tensor, 1, 'linker unterer Index');
+  this.executeTest(tensor, 2, 'linker oberer Index');
+  this.executeTest(tensor, 3, 'rechter unterer Index');
+  this.executeTest(tensor, 4, 'rechter oberer Index');
 };
 
 
@@ -123,14 +123,14 @@ sre.PrefixGermanTest.prototype.testComplexTensors = function() {
   var tensor = '<mmultiscripts><mi>A</mi><mn>3</mn><mn>4</mn><mi>k</mi><mi>l</mi>' +
       '<mprescripts/><mn>1</mn><mn>2</mn><mi>i</mi><mi>j</mi></mmultiscripts>';
   this.executeTest(tensor, 0, 'Basis');
-  this.executeTest(tensor, 1, '1. linker Index');
-  this.executeTest(tensor, 2, '2. linker Index');
-  this.executeTest(tensor, 3, '1. links hochgestellt');
-  this.executeTest(tensor, 4, '2. links hochgestellt');
-  this.executeTest(tensor, 5, '1. rechter Index');
-  this.executeTest(tensor, 6, '2. rechter Index');
-  this.executeTest(tensor, 7, '1. rechts hochgestellt');
-  this.executeTest(tensor, 8, '2. rechts hochgestellt');
+  this.executeTest(tensor, 1, '1. linker unterer Index');
+  this.executeTest(tensor, 2, '2. linker unterer Index');
+  this.executeTest(tensor, 3, '1. linker oberer Index');
+  this.executeTest(tensor, 4, '2. linker oberer Index');
+  this.executeTest(tensor, 5, '1. rechter unterer Index');
+  this.executeTest(tensor, 6, '2. rechter unterer Index');
+  this.executeTest(tensor, 7, '1. rechter oberer Index');
+  this.executeTest(tensor, 8, '2. rechter oberer Index');
   this.executeTest(tensor, 17, '');
 };
 

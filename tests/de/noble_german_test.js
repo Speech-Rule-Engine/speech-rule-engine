@@ -55,6 +55,10 @@ sre.NobleGermanTest = function() {
    */
   this.locale = 'de';
 
+  this.actual = true;
+  
+  this.compare = true;
+  
   this.setActive('NobleSamplesGerman');
 };
 goog.inherits(sre.NobleGermanTest, sre.AbstractRuleTest);

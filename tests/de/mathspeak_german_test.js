@@ -54,6 +54,10 @@ sre.MathspeakGermanTest = function() {
    */
   this.semantics = true;
 
+  this.actual = true;
+  
+  this.compare = true;
+  
   this.setActive('MathspeakGerman');
 };
 goog.inherits(sre.MathspeakGermanTest, sre.AbstractRuleTest);
@@ -809,9 +813,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_5_8 = function() {
       '<mi>x</mi><mo>)</mo></mrow></mrow><mrow><msub>' +
       '<mo form="prefix">log</mo><mn>10</mn></msub><mrow><mo>(</mo>' +
       '<mn>2</mn><mo>)</mo></mrow></mrow></mfrac></mrow>';
-  this.executeRuleTest(mml, 'logarithmus Index 2 Grundlinie Klammer auf x Klammer zu ist gleich Anfang Bruch logarithmus Index 10 Grundlinie Klammer auf x Klammer zu durch logarithmus Index 10 Grundlinie Klammer auf 2 Klammer zu Ende Bruch', 'default');
-  this.executeRuleTest(mml, 'logarithmus Index 2 Grund Klammer auf x Klammer zu ist gleich Anfang Bruch logarithmus Index 10 Grund Klammer auf x Klammer zu durch logarithmus Index 10 Grund Klammer auf 2 Klammer zu Ende Bruch', 'brief');
-  this.executeRuleTest(mml, 'logarithmus Index 2 Grund Klammer auf x Klammer zu ist gleich Bruch logarithmus Index 10 Grund Klammer auf x Klammer zu durch logarithmus Index 10 Grund Klammer auf 2 Klammer zu Ende Bruch', 'sbrief');
+  this.executeRuleTest(mml, 'Logarithmus Index 2 Grundlinie Klammer auf x Klammer zu ist gleich Anfang Bruch Logarithmus Index 10 Grundlinie Klammer auf x Klammer zu durch Logarithmus Index 10 Grundlinie Klammer auf 2 Klammer zu Ende Bruch', 'default');
+  this.executeRuleTest(mml, 'Logarithmus Index 2 Grund Klammer auf x Klammer zu ist gleich Anfang Bruch Logarithmus Index 10 Grund Klammer auf x Klammer zu durch Logarithmus Index 10 Grund Klammer auf 2 Klammer zu Ende Bruch', 'brief');
+  this.executeRuleTest(mml, 'Logarithmus Index 2 Grund Klammer auf x Klammer zu ist gleich Bruch Logarithmus Index 10 Grund Klammer auf x Klammer zu durch Logarithmus Index 10 Grund Klammer auf 2 Klammer zu Ende Bruch', 'sbrief');
 };
 
 
@@ -833,9 +837,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_5_10 = function() {
   var mml = '<mrow><mo form="prefix">ln</mo><mi>x</mi><mo>=</mo><msubsup>' +
       '<mo>∫</mo><mn>1</mn><mi>x</mi></msubsup><mfrac><mrow><mi>d</mi>' +
       '<mi>t</mi></mrow><mi>t</mi></mfrac></mrow>';
-  this.executeRuleTest(mml, 'der natürlicher logarithmus x ist gleich Integral Index 1 Hoch x Grundlinie Anfang Bruch d t durch t Ende Bruch', 'default');
-  this.executeRuleTest(mml, 'der natürlicher logarithmus x ist gleich Integral Index 1 Hoch x Base Anfang Bruch d t durch t Ende Bruch', 'brief');
-  this.executeRuleTest(mml, 'der natürlicher logarithmus x ist gleich Integral Index 1 Hoch x Base Bruch d t durch t Ende Bruch', 'sbrief');
+  this.executeRuleTest(mml, 'natürlicher Logarithmus x ist gleich Integral Index 1 Hoch x Grundlinie Anfang Bruch d t durch t Ende Bruch', 'default');
+  this.executeRuleTest(mml, 'natürlicher Logarithmus x ist gleich Integral Index 1 Hoch x Base Anfang Bruch d t durch t Ende Bruch', 'brief');
+  this.executeRuleTest(mml, 'natürlicher Logarithmus x ist gleich Integral Index 1 Hoch x Base Bruch d t durch t Ende Bruch', 'sbrief');
 };
 
 
@@ -1230,9 +1234,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_12_2 = function() {
 sre.MathspeakGermanTest.prototype.testSample_8_13_1 = function() {
   var mml = '<mrow><msup><mo form="prefix">log</mo><mn>4</mn></msup><mmultiscripts>' +
       '<mi>x</mi><mprescripts/><none/><mi>b</mi></mmultiscripts></mrow>';
-  this.executeRuleTest(mml, 'logarithmus hoch 4 Grundlinie hoch b Grundlinie x', 'default');
-  this.executeRuleTest(mml, 'logarithmus hoch 4 Grund hoch b Grund x', 'brief');
-  this.executeRuleTest(mml, 'logarithmus hoch 4 Grund hoch b Grund x', 'sbrief');
+  this.executeRuleTest(mml, 'Logarithmus hoch 4 Grundlinie hoch b Grundlinie x', 'default');
+  this.executeRuleTest(mml, 'Logarithmus hoch 4 Grund hoch b Grund x', 'brief');
+  this.executeRuleTest(mml, 'Logarithmus hoch 4 Grund hoch b Grund x', 'sbrief');
 };
 
 
@@ -1590,9 +1594,9 @@ sre.MathspeakGermanTest.prototype.testSample_11_8_2 = function() {
 sre.MathspeakGermanTest.prototype.testSample_12_1_1 = function() {
   var mml = '<mrow><msub><mo form="prefix">log</mo><mi>b</mi></msub>' +
       '<mi>x</mi></mrow>';
-  this.executeRuleTest(mml, 'logarithmus Index b Grundlinie x', 'default');
-  this.executeRuleTest(mml, 'logarithmus Index b Grund x', 'brief');
-  this.executeRuleTest(mml, 'logarithmus Index b Grund x', 'sbrief');
+  this.executeRuleTest(mml, 'Logarithmus Index b Grundlinie x', 'default');
+  this.executeRuleTest(mml, 'Logarithmus Index b Grund x', 'brief');
+  this.executeRuleTest(mml, 'Logarithmus Index b Grund x', 'sbrief');
 };
 
 

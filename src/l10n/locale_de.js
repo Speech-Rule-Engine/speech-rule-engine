@@ -206,7 +206,7 @@ sre.Locale.de = {
   },
 
   REGEXP: {
-    TEXT: 'a-zA-Z',
+    TEXT: 'a-zA-ZäöüÄÖÜß',
     NUMBER: '((\\d{1,3})(?=(.| ))((.| )\\d{3})*(\\,\\d+)?)|^\\d*\\,\\d+|^\\d+',
     DECIMAL_MARK: '\\,',
     DIGIT_GROUP: '.',
@@ -219,6 +219,8 @@ sre.Locale.de = {
     'inch': 'Zoll'
   },
 
+  PLURAL: function(unit) {return unit;},
+  
   NUMBERS: sre.Numbers.de.NUMBERS,
 
   ALPHABETS: {
@@ -267,6 +269,13 @@ sre.Locale.de = {
   ALPHABET_COMBINER: germanPrefixCombiner
 
 };
+
+
+sre.Grammar.getInstance().setCorrection(
+  'correctOne', function(number) {
+    return number.replace(/^eins /, 'ein ');
+  }
+);
 
 
 sre.Grammar.getInstance().setCorrection(

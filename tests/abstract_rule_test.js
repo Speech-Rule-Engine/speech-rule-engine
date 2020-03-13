@@ -72,6 +72,12 @@ sre.AbstractRuleTest = function() {
    */
   this.actual = false;
 
+  /**
+   * Flag indicating if English output should be generate for comparison.
+   * @type {boolean}
+   */
+  this.compare = false;
+
 };
 goog.inherits(sre.AbstractRuleTest, sre.AbstractExamples);
 
@@ -132,8 +138,16 @@ sre.AbstractRuleTest.prototype.appendRuleExample = function(
       ', Style: ' +
       sre.AbstractRuleTest.htmlCell_(sre.AbstractRuleTest.styleMap_(style)) +
       '.</h2>';
+  var outList = [input];
+  if (this.compare) {
+    sre.System.getInstance().setupEngine(
+      {semantics: this.semantics, domain: this.domain, style: style,
+       modality: this.modality, rules: this.rules, locale: 'en'});
+    outList.push(this.getSpeech(input));
+  }
+  outList.push(output);
   this.appendExamples(
-      key, sre.AbstractRuleTest.htmlRow([input, output].concat(rest)));
+    key, sre.AbstractRuleTest.htmlRow(outList.concat(rest)));
 };
 
 

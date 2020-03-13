@@ -649,9 +649,9 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
   // TODO: Umkehrfunktion? Inverse Funktion?
   defineRule(
       'function-prefix-inverse', 'clearspeak.default',
-      '[p] (pause:"short"); [t] "the inverse";' +
+      '[p] (pause:"short"); [t] "der inverse";' +
       ' [n] children/*[1]/children/*[1];' +
-      ' [t] "of"; [n] children/*[2]; [p] (pause:"short")',
+      ' [t] "von"; [n] children/*[2]; [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       'name(children/*[1])="superscript"',
       'name(children/*[1]/children/*[2])="prefixop"',
@@ -662,7 +662,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
 
   defineRule(
       'appl-triginverse', 'clearspeak.Trig_TrigInverse',
-      '[p] (pause:"short"); [n] children/*[1]; [t] "of";' +
+      '[p] (pause:"short"); [n] children/*[1]; [t] "von";' +
       ' [n] children/*[2]; [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       'name(children/*[1])="superscript"',
@@ -670,9 +670,9 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'children/*[1]/children/*[2][@role="negative"]',
       'children/*[1]/children/*[2]/children/*[1][text()="1"]');
 
-  defineRule(
+  defineRule(  // TODO: Spacing after arkus?
       'function-prefix-arc-simple', 'clearspeak.Trig_ArcTrig',
-      '[p] (pause:"short"); [t] "arc"; [n] children/*[1]/children/*[1];' +
+      '[p] (pause:"short"); [t] "arkus"; [n] children/*[1]/children/*[1];' +
       ' [n] children/*[2]; [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       'name(children/*[1])="superscript"',
@@ -682,7 +682,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'not(contains(@grammar, "functions_none"))');
   defineRule(
       'function-prefix-arc-simple', 'clearspeak.Trig_ArcTrig',
-      '[p] (pause:"short"); [t] "arc"; [n] children/*[1]/children/*[1];' +
+      '[p] (pause:"short"); [t] "arkus"; [n] children/*[1]/children/*[1];' +
       ' [p] (pause:"short"); [n] children/*[2]; [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       'name(children/*[1])="superscript"',
@@ -697,8 +697,8 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
 
   defineRule(
       'function-prefix-arc', 'clearspeak.Trig_ArcTrig',
-      '[p] (pause:"short"); [t] "arc"; [n] children/*[1]/children/*[1];' +
-      ' [t] "of"; [n] children/*[2]; [p] (pause:"short")',
+      '[p] (pause:"short"); [t] "arkus"; [n] children/*[1]/children/*[1];' +
+      ' [t] "von"; [n] children/*[2]; [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       'name(children/*[1])="superscript"',
       'name(children/*[1]/children/*[2])="prefixop"',
@@ -712,7 +712,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
 
   defineRule(
       'function-inverse', 'clearspeak.default',
-      '[n] children/*[1]; [t] "inverse"',
+      '[n] children/*[1]; [t] "invers"',
       'self::superscript', '@role="prefix function" or @role="simple function"',
       'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
       'children/*[2]/children/*[1][text()="1"]',
@@ -720,13 +720,13 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
 
   defineRule(
       'superscript-prefix-function', 'clearspeak.default',
-      '[t] "the"; [n] children/*[2] (grammar:ordinal);' +
-      ' [t] "power of"; [n] children/*[1]',
+      '[t] "die"; [n] children/*[2] (grammar:ordinal);' +
+      ' [t] "Potenz von"; [n] children/*[1]',
       'self::superscript', '@role="prefix function"',
       'name(children/*[2])="number"', 'children/*[2][@role="integer"]');
   defineRule(
       'superscript-prefix-function', 'clearspeak.default',
-      '[t] "the"; [n] children/*[2] (grammar:ordinal); [t] "power of";' +
+      '[t] "die"; [n] children/*[2] (grammar:ordinal); [t] "Potenz";' +
       ' [n] children/*[1]',
       'self::superscript', '@role="prefix function"',
       'name(children/*[2])="identifier"');
@@ -745,21 +745,22 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
   //
   // Superscript rules
   //
+
+  // TODO: Something better for: "raised to the exponent"?
   defineRule(
       'superscript', 'clearspeak.default',
-      '[n] children/*[1]; [t] "raised to the exponent" (pause:"short"); ' +
+      '[n] children/*[1]; [t] "hoch Exponent" (pause:"short"); ' +
       '[n] children/*[2]; [p] (pause:"short");' +
-      ' [t] "end exponent" (pause:"short")',
+      ' [t] "Ende Exponent" (pause:"short")',
       'self::superscript');
   defineRule(
       'superscript-simple-exponent', 'clearspeak.default',
-      '[n] children/*[1]; [t] "raised to the"; [n] children/*[2]; ' +
-      '[t] "power" (pause:"short")',
+      '[n] children/*[1]; [t] "hoch"; [n] children/*[2]; ' +
+      '[p] (pause:"short")',
       'self::superscript', 'not(descendant::superscript)');
   defineRule(
       'superscript-simple-exponent-end', 'clearspeak.default',
-      '[n] children/*[1]; [t] "raised to the"; [n] children/*[2]; ' +
-      '[t] "power"',
+      '[n] children/*[1]; [t] "hoch Exponent"; [n] children/*[2]; ',
       'self::superscript', 'not(descendant::superscript)',
       'not(following-sibling::*)');
 
@@ -797,8 +798,8 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
 
   defineRule(
       'superscript-ordinal', 'clearspeak.default',
-      '[n] children/*[1]; [t] "to the"; [n] children/*[2] (grammar:ordinal);' +
-      ' [t] "power" (pause:"short")',
+      '[n] children/*[1]; [t] "zur"; [n] children/*[2] (grammar:ordinal,join:"");' +
+      ' [t] "n Potenz" (pause:"short")',
       'self::superscript', 'name(children/*[2])="number"',
       'children/*[2][@role="integer"]');
   defineRuleAlias(
@@ -808,16 +809,16 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       ' @role="otherletter"]');
   defineRule(
       'superscript-non-ordinal', 'clearspeak.default',
-      '[n] children/*[1]; [t] "to the"; [n] children/*[2];' +
-      ' [t] "power" (pause:"short")',
+      '[n] children/*[1]; [t] "zur"; [n] children/*[2];' +
+      ' [t] "n Potenz" (pause:"short")',
       'self::superscript', 'children/*[2][@role="negative"]',
       'name(children/*[2]/children/*[1])="number"',
       'children/*[2]/children/*[1][@role="integer"]');
 
   defineRule(
       'superscript-simple-function', 'clearspeak.default',
-      '[t] "the"; [n] children/*[2] (grammar:ordinal);' +
-      ' [t] "power of" (pause:"short"); [n] children/*[1]',
+      '[t] "die"; [n] children/*[2] (grammar:ordinal);' +
+      ' [t] "Potenz von" (pause:"short"); [n] children/*[1]',
       'self::superscript', 'name(children/*[1])="identifier"',
       'children/*[1][@role="simple function"]',
       'children/*[2][@role!="prime"]',
@@ -832,7 +833,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
 
   defineRule(
       'superscript-ordinal', 'clearspeak.Exponent_Ordinal',
-      '[n] children/*[1]; [t] "to the"; [n] children/*[2] (grammar:ordinal);' +
+      '[n] children/*[1]; [t] "hoch"; [n] children/*[2] (grammar:ordinal);' +
       ' [p] (pause:"short")',
       'self::superscript', 'name(children/*[2])="number"',
       'children/*[2][@role="integer"]');
@@ -885,9 +886,6 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       ' [t] "end exponent" (pause:"short")',
       'self::superscript', 'children//superscript');
 
-  // TODO: QUESTION: German say there should be a power in the default case, but
-  //       it is neither in the examples, nor does it make sense.
-  //
   // First exponent end exponent, second internally use power.
   //
   defineRule(
@@ -916,7 +914,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'contains(@grammar, "ordinal")', 'text()!="0"');
   defineRule(
       'exponent', 'clearspeak.Exponent_Ordinal',
-      '[t] "zero"', 'self::number', '@role="integer"',
+      '[t] "nullte"', 'self::number', '@role="integer"',
       'contains(@grammar, "ordinal")', 'text()="0"');
   defineRule(
       'exponent', 'clearspeak.Exponent_OrdinalPower',
@@ -924,13 +922,13 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'contains(@grammar, "ordinal")', 'text()!="0"');
   defineRule(
       'exponent', 'clearspeak.Exponent_OrdinalPower',
-      '[t] "zero"', 'self::number', '@role="integer"',
+      '[t] "nullte"', 'self::number', '@role="integer"',
       'contains(@grammar, "ordinal")', 'text()="0"');
 
   // Square
   defineRule(
       'square', 'clearspeak.default',
-      '[n] children/*[1]; [t] "squared"',
+      '[n] children/*[1]; [t] "Quadrat"',
       'self::superscript', 'children/*[2][text()="2"]',
       'name(children/*[1])!="text" or ' +
       // Special exception dealing with footnotes.
@@ -942,7 +940,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
   // Cube
   defineRule(
       'cube', 'clearspeak.default',
-      '[n] children/*[1]; [t] "cubed"',
+      '[n] children/*[1]; [t] "Kubik"',
       'self::superscript', 'children/*[2][text()="3"]',
       'name(children/*[1])!="text" or ' +
       // Special exception dealing with footnotes.
@@ -2277,45 +2275,45 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
   );
   defineRule(
       'left-super', 'clearspeak.default',
-      '[t] "left super"; [n] text()', 'self::*[@role="leftsuper"]',
+      '[t] "linker oberer Index"; [n] text()', 'self::*[@role="leftsuper"]',
       'not(contains(@grammar,"combinatorics"))'
   );
   defineRule(
       'left-super', 'clearspeak.default',
-      '[t] "left super"; [m] children/*',
+      '[t] "linker oberer Index"; [m] children/*',
       'self::punctuated', '@role="leftsuper"',
       'not(contains(@grammar,"combinatorics"))'
   );
   defineRule(
       'left-sub', 'clearspeak.default',
-      '[t] "left sub"; [n] text()', 'self::*[@role="leftsub"]',
+      '[t] "linker unterer Index"; [n] text()', 'self::*[@role="leftsub"]',
       'not(contains(@grammar,"combinatorics"))'
   );
   defineRule(
       'left-sub', 'clearspeak.default',
-      '[t] "left sub"; [m] children/*',
+      '[t] "linker unterer Index"; [m] children/*',
       'self::punctuated', '@role="leftsub"',
       'not(contains(@grammar,"combinatorics"))'
   );
   defineRule(
       'right-super', 'clearspeak.default',
-      '[t] "right super"; [n] text()', 'self::*[@role="rightsuper"]',
+      '[t] "rechter oberer Index"; [n] text()', 'self::*[@role="rightsuper"]',
       'not(contains(@grammar,"combinatorics"))'
   );
   defineRule(
       'right-super', 'clearspeak.default',
-      '[t] "right super"; [m] children/*',
+      '[t] "rechter oberer Index"; [m] children/*',
       'self::punctuated', '@role="rightsuper"',
       'not(contains(@grammar,"combinatorics"))'
   );
   defineRule(
       'right-sub', 'clearspeak.default',
-      '[t] "right sub"; [n] text()', 'self::*[@role="rightsub"]',
+      '[t] "rechter unterer Index"; [n] text()', 'self::*[@role="rightsub"]',
       'not(contains(@grammar,"combinatorics"))'
   );
   defineRule(
       'right-sub', 'clearspeak.default',
-      '[t] "right sub"; [m] children/*',
+      '[t] "rechter unterer Index"; [m] children/*',
       'self::punctuated', '@role="rightsub"',
       'not(contains(@grammar,"combinatorics"))'
   );
