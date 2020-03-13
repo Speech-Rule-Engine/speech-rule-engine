@@ -12,6 +12,15 @@
     "category": "Ll"
   },
   {
+    "category": "So",
+    "key": "2114",
+    "mappings": {
+      "default": {
+        "default": "L B símbolo de barra"
+      }
+    }
+  },
+  {
     "key": "2116",
     "mappings": {
       "default": {
@@ -39,6 +48,33 @@
     "category": "So"
   },
   {
+    "category": "So",
+    "key": "211F",
+    "mappings": {
+      "default": {
+        "default": "respuesta"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2120",
+    "mappings": {
+      "default": {
+        "default": "marca de servicio"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2121",
+    "mappings": {
+      "default": {
+        "default": "señal de telefono"
+      }
+    }
+  },
+  {
     "key": "2122",
     "mappings": {
       "default": {
@@ -46,6 +82,15 @@
       }
     },
     "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "2123",
+    "mappings": {
+      "default": {
+        "default": "versículo"
+      }
+    }
   },
   {
     "key": "2125",
@@ -93,6 +138,15 @@
     "category": "Lu"
   },
   {
+    "category": "So",
+    "key": "212E",
+    "mappings": {
+      "default": {
+        "default": "Símbolo estimado"
+      }
+    }
+  },
+  {
     "key": "2132",
     "mappings": {
       "default": {
@@ -100,5 +154,68 @@
       }
     },
     "category": "Lu"
+  },
+  {
+    "category": "Ll",
+    "key": "2139",
+    "mappings": {
+      "default": {
+        "default": "fuente de información"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "213A",
+    "mappings": {
+      "default": {
+        "default": "capital rotado Q"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "213B",
+    "mappings": {
+      "default": {
+        "default": "signo de fax"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2141",
+    "mappings": {
+      "default": {
+        "default": "convertido sans serif mayúscula G"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2142",
+    "mappings": {
+      "default": {
+        "default": "convertido sans serif mayúscula L"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2143",
+    "mappings": {
+      "default": {
+        "default": "invertido sans serif mayúscula L"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2144",
+    "mappings": {
+      "default": {
+        "default": "convertido en sans serif mayúscula Y"
+      }
+    }
   }
 ]

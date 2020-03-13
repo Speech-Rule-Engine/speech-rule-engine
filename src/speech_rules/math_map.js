@@ -27,6 +27,7 @@ goog.require('sre.BaseUtil');
 goog.require('sre.BrowserUtil');
 goog.require('sre.Engine');
 goog.require('sre.MathCompoundStore');
+goog.require('sre.AlphabetGenerator');
 goog.require('sre.SystemExternal');
 goog.require('sre.Variables');
 
@@ -44,7 +45,10 @@ sre.MathMap = function() {
    */
   this.store = sre.MathCompoundStore.getInstance();
 
+  var timeIn = (new Date()).getTime();
   this.retrieveMaps();
+  var timeOut = (new Date()).getTime();
+  console.log('Time:', timeOut - timeIn);
 
 };
 goog.addSingletonGetter(sre.MathMap);
@@ -105,37 +109,40 @@ sre.MathMap.UNITS_PATH_ = 'units';
  */
 sre.MathMap.SYMBOLS_FILES_ = [
   // Greek
-  'greek-capital.js', 'greek-small.js', 'greek-scripts.js',
-  'greek-symbols.js',
+  // 'greek-capital.js', 'greek-small.js', 
+  'greek-scripts.js', 'greek-symbols.js',
+  'greek-rest.js',
 
   // Greek Mathfonts
-  'greek-mathfonts-bold.js', 'greek-mathfonts-italic.js',
-  'greek-mathfonts-bold-italic.js', 'greek-mathfonts-sans-serif-bold.js',
-  'greek-mathfonts-sans-serif-bold-italic.js',
+  // 'greek-mathfonts-bold.js', 'greek-mathfonts-italic.js',
+  // 'greek-mathfonts-bold-italic.js', 'greek-mathfonts-sans-serif-bold.js',
+  // 'greek-mathfonts-sans-serif-bold-italic.js',
 
   // Hebrew
   'hebrew_letters.js',
 
   // Latin
-  'latin-lower-double-accent.js', 'latin-lower-normal.js',
-  'latin-lower-phonetic.js', 'latin-lower-single-accent.js',
-  'latin-rest.js', 'latin-upper-double-accent.js',
-  'latin-upper-normal.js', 'latin-upper-single-accent.js',
+  // 'latin-lower-normal.js', 'latin-upper-normal.js',
+  'latin-lower-double-accent.js', 'latin-lower-phonetic.js',
+  'latin-lower-single-accent.js', 'latin-rest.js',
+  'latin-upper-double-accent.js', 'latin-upper-single-accent.js',
 
   // Latin Mathfonts
-  'latin-mathfonts-bold-fraktur.js', 'latin-mathfonts-bold.js',
-  'latin-mathfonts-bold-italic.js', 'latin-mathfonts-bold-script.js',
-  'latin-mathfonts-double-struck.js', 'latin-mathfonts-fraktur.js',
-  'latin-mathfonts-italic.js', 'latin-mathfonts-monospace.js',
-  'latin-mathfonts-sans-serif-bold.js', 'latin-mathfonts-sans-serif-italic.js',
-  'latin-mathfonts-sans-serif-bold-italic.js', 'latin-mathfonts-sans-serif.js',
-  'latin-mathfonts-script.js',
+  // 'latin-mathfonts-bold-fraktur.js', 'latin-mathfonts-bold.js',
+  // 'latin-mathfonts-bold-italic.js', 'latin-mathfonts-bold-script.js',
+  // 'latin-mathfonts-double-struck.js', 'latin-mathfonts-fraktur.js',
+  // 'latin-mathfonts-italic.js', 'latin-mathfonts-monospace.js',
+  // 'latin-mathfonts-sans-serif-bold.js', 'latin-mathfonts-sans-serif-italic.js',
+  // 'latin-mathfonts-sans-serif-bold-italic.js', 'latin-mathfonts-sans-serif.js',
+  // 'latin-mathfonts-script.js',
 
   // Math Symbols
   'math_angles.js', 'math_arrows.js', 'math_characters.js',
-  'math_delimiters.js', 'math_digits.js', 'math_geometry.js',
+  'math_delimiters.js', 'math_geometry.js',
   'math_harpoons.js', 'math_non_characters.js', 'math_symbols.js',
-  'math_whitespace.js', 'other_stars.js'
+  'math_whitespace.js', 'other_stars.js',
+  // 'math_digits.js',
+  'digits_rest.js'
 ];
 
 
@@ -208,6 +215,7 @@ sre.MathMap.retrieveFiles = function(files, path, func) {
 sre.MathMap.prototype.retrieveMaps = function() {
   for (var i = 0; i < sre.Variables.LOCALES.length; i++) {
     var locale = sre.Variables.LOCALES[i];
+    sre.AlphabetGenerator.generate(locale, this.store);
     sre.MathMap.retrieveFiles(
         sre.MathMap.FUNCTIONS_FILES_,
         locale + '/' + sre.MathMap.FUNCTIONS_PATH_,

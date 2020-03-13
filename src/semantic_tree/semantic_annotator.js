@@ -19,6 +19,7 @@
  */
 
 goog.provide('sre.SemanticAnnotator');
+goog.provide('sre.SemanticVisitor');
 
 goog.require('sre.SemanticNode');
 
@@ -51,10 +52,59 @@ sre.SemanticAnnotator = function(domain, func) {
 
 
 /**
- * Annotates a single semantic node.
+ * Annotates the tree bottom up.
  * @param {sre.SemanticNode} node The semantic node.
  */
 sre.SemanticAnnotator.prototype.annotate = function(node) {
   node.childNodes.forEach(goog.bind(this.annotate, this));
   node.addAnnotation(this.domain, this.func(node));
+};
+
+
+
+/**
+ * @constructor
+ * @param {string} domain The domain name of the annotation.
+ * @param {function(sre.SemanticNode, Object.<*>): *} func The annotation
+ *     function.
+ * @param {Object.<*>=} opt_def The annotation function.
+ */
+sre.SemanticVisitor = function(domain, func, opt_def) {
+
+  /**
+   * @type {string}
+   */
+  this.domain = domain;
+
+  /**
+   * @type {function(sre.SemanticNode, Object.<*>): *}
+   */
+  this.func = func;
+
+  /**
+   * This can be changed to a unique name.
+   * @type {string}
+   */
+  this.name = domain;
+
+  /**
+   * @type {Object.<*>}
+   */
+  this.def = opt_def || {};
+};
+
+
+/**
+ * Visits the tree top down, depth-first and propagates the information.
+ * @param {sre.SemanticNode} node The semantic node.
+ * @param {Object<*>} info The information to propagate.
+ * @return {*} The result with updated information.
+ */
+sre.SemanticVisitor.prototype.visit = function(node, info) {
+  var result = this.func(node, info);
+  node.addAnnotation(this.domain, result[0]);
+  for (var i = 0, child; child = node.childNodes[i]; i++) {
+    result = this.visit(child, /** @type{Object<*>} */(result[1]));
+  }
+  return result;
 };

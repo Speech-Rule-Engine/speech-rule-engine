@@ -154,14 +154,14 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   // Font rules
   defineRule(
       'font', 'clearspeak.default',
-      '[n] . (grammar:ignoreFont=@font); [t] "en";' +
+      '[n] . (grammar:ignoreFont=@font); ' +
       ' [t] @font (grammar:localFont,pause:"short")',
       'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"');
 
   defineRule(
       'font-identifier', 'clearspeak.default',
-      '[n] . (grammar:ignoreFont=@font); [t] "en";' +
+      '[n] . (grammar:ignoreFont=@font); ' +
       ' [t] @font (grammar:localFont,pause:"short")',
       'self::identifier', 'string-length(text())=1',
       '@font', '@font="normal"', 'not(contains(@grammar, "ignoreFont"))',
@@ -187,7 +187,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   // TODO: Make that work on tensor elements?
   defineRule(
       'capital', 'clearspeak.default',
-      '[n] text() (pitch:0.6,grammar:ignoreFont="majuscule")',
+      '[n] text() (pitch:0.6,grammar:ignoreCaps="majuscule")',
       'self::identifier',
       '@role="latinletter" or @role="greekletter" or @role="simple function"',
       'CQFisCapital');

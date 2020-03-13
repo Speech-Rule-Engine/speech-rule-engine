@@ -846,7 +846,7 @@ sre.ClearspeakEnglishFractions.prototype.testFrac057 = function() {
   var preference = 'Fraction_Ordinal';
   var mathml = '<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32' +
       '</mn></mrow></mfrac></mrow></math>';
-  var speech = 'twelve thirty-seconds';
+  var speech = 'twelve thirty seconds';
   this.executeRuleTest(mathml, speech, preference);
 };
 

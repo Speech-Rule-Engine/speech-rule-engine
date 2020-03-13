@@ -100,7 +100,7 @@ sre.Messages.MS_ROOT_INDEX = { };
 
 /**
  * Localised font names.
- * @type {Object.<sre.SemanticAttr.Font>}
+ * @type {Object.<sre.SemanticAttr.Font|Array.<sre.SemanticAttr.Font, sre.Locale.Combiner>>}
  */
 sre.Messages.FONT = {
   'bold': '',
@@ -123,6 +123,28 @@ sre.Messages.FONT = {
   'sans-serif-bold': '',
   'sans-serif-bold-italic': '',
   'unknown': ''
+};
+
+
+/**
+ * Localised embalishment names. Treated like fonts.
+ * @type {Object.<string|Array.<string, sre.Locale.Combiner>>}
+ */
+sre.Messages.EMBELLISH = {
+  // More embellishments than fonts.
+  'super': '',
+  'sub': '',
+  'circled': '',
+  'parenthesized': '',
+  'period': '',
+  'negative-circled': '',
+  'double-circled': '',
+  'circled-sans-serif': '',
+  'negative-circled-sans-serif': '',
+  'blackboard': '',
+  'comma': '',
+  'squared': '',
+  'negative-squared': ''
 };
 
 
@@ -230,10 +252,54 @@ sre.Messages.PLURAL = function(unit) {
 };
 
 
+/**
+ * Localisable number computation.
+ * @type {Object.<Function|string>}
+ */
 sre.Messages.NUMBERS = {
   wordOrdinal: function(n) {return n.toString();},
   simpleOrdinal: function(n) {return n.toString();},
   numberToWords: function(n) {return n.toString();},
   numberToOrdinal: function(n, m) {return n.toString();},
-  vulgarSep: '-'
+  vulgarSep: '-' // space?
 };
+
+
+/**
+ * Localisable alphabets.
+ * @type {Object.<Array.<string>>}
+ */
+sre.Messages.ALPHABETS = {
+  latinSmall: [],
+  latinCap: [],
+  greekSmall: [],
+  greekCap: []
+};
+
+
+/**
+ * Prefixes for alphabet rules that can be specialised by rule set.
+ * @type {Object.<Object.<string>>}
+ */
+sre.Messages.ALPHABET_PREFIXES = {
+  capPrefix: {default: ''},
+  smallPrefix: {default: ''},
+  digitPrefix: {default: ''}
+};
+
+
+/**
+ * Transformer functions for alphabet rules that can be specialised by rule set.
+ * @type {Object.<Object.<sre.Locale.Transformer>>}
+ */
+sre.Messages.ALPHABET_TRANSFORMERS = {
+  digit: {default: function(n) {return n.toString();}},
+  letter: {default: function(n) {return n;}}
+};
+
+
+/**
+ * Default combiner for alphabet rules.
+ * @type {function(string, string, string): string}
+ */
+sre.Messages.ALPHABET_COMBINER = function(letter, font, cap) {return letter;};

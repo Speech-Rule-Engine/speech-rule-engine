@@ -3,8 +3,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light horizontal",
-        "alternative": "forms light horizontal"
+        "default": "box drawings light horizontal"
       }
     },
     "key": "2500"
@@ -13,8 +12,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings heavy horizontal",
-        "alternative": "forms heavy horizontal"
+        "default": "box drawings heavy horizontal"
       }
     },
     "key": "2501"
@@ -23,8 +21,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light vertical",
-        "alternative": "forms light vertical"
+        "default": "box drawings light vertical"
       }
     },
     "key": "2502"
@@ -33,8 +30,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings heavy vertical",
-        "alternative": "forms heavy vertical"
+        "default": "box drawings heavy vertical"
       }
     },
     "key": "2503"
@@ -43,8 +39,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light triple dash horizontal",
-        "alternative": "forms light triple dash horizontal"
+        "default": "box drawings light triple dash horizontal"
       }
     },
     "key": "2504"
@@ -53,8 +48,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings heavy triple dash horizontal",
-        "alternative": "forms heavy triple dash horizontal"
+        "default": "box drawings heavy triple dash horizontal"
       }
     },
     "key": "2505"
@@ -63,8 +57,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light triple dash vertical",
-        "alternative": "forms light triple dash vertical"
+        "default": "box drawings light triple dash vertical"
       }
     },
     "key": "2506"
@@ -73,8 +66,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings heavy triple dash vertical",
-        "alternative": "forms heavy triple dash vertical"
+        "default": "box drawings heavy triple dash vertical"
       }
     },
     "key": "2507"
@@ -83,8 +75,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light quadruple dash horizontal",
-        "alternative": "forms light quadruple dash horizontal"
+        "default": "box drawings light quadruple dash horizontal"
       }
     },
     "key": "2508"
@@ -93,8 +84,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings heavy quadruple dash horizontal",
-        "alternative": "forms heavy quadruple dash horizontal"
+        "default": "box drawings heavy quadruple dash horizontal"
       }
     },
     "key": "2509"
@@ -103,8 +93,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light quadruple dash vertical",
-        "alternative": "forms light quadruple dash vertical"
+        "default": "box drawings light quadruple dash vertical"
       }
     },
     "key": "250A"
@@ -113,8 +102,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings heavy quadruple dash vertical",
-        "alternative": "forms heavy quadruple dash vertical"
+        "default": "box drawings heavy quadruple dash vertical"
       }
     },
     "key": "250B"
@@ -123,8 +111,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light down and right",
-        "alternative": "forms light down and right"
+        "default": "box drawings light down and right"
       }
     },
     "key": "250C"
@@ -133,8 +120,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings down light and right heavy",
-        "alternative": "forms down light and right heavy"
+        "default": "box drawings down light and right heavy"
       }
     },
     "key": "250D"
@@ -143,8 +129,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings down heavy and right light",
-        "alternative": "forms down heavy and right light"
+        "default": "box drawings down heavy and right light"
       }
     },
     "key": "250E"
@@ -153,8 +138,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings heavy down and right",
-        "alternative": "forms heavy down and right"
+        "default": "box drawings heavy down and right"
       }
     },
     "key": "250F"
@@ -163,8 +147,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light down and left",
-        "alternative": "forms light down and left"
+        "default": "box drawings light down and left"
       }
     },
     "key": "2510"
@@ -173,8 +156,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings down light and left heavy",
-        "alternative": "forms down light and left heavy"
+        "default": "box drawings down light and left heavy"
       }
     },
     "key": "2511"
@@ -183,8 +165,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings down heavy and left light",
-        "alternative": "forms down heavy and left light"
+        "default": "box drawings down heavy and left light"
       }
     },
     "key": "2512"
@@ -193,8 +174,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings heavy down and left",
-        "alternative": "forms heavy down and left"
+        "default": "box drawings heavy down and left"
       }
     },
     "key": "2513"
@@ -203,8 +183,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light up and right",
-        "alternative": "forms light up and right"
+        "default": "box drawings light up and right"
       }
     },
     "key": "2514"
@@ -213,8 +192,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings up light and right heavy",
-        "alternative": "forms up light and right heavy"
+        "default": "box drawings up light and right heavy"
       }
     },
     "key": "2515"
@@ -223,8 +201,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings up heavy and right light",
-        "alternative": "forms up heavy and right light"
+        "default": "box drawings up heavy and right light"
       }
     },
     "key": "2516"
@@ -233,8 +210,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings heavy up and right",
-        "alternative": "forms heavy up and right"
+        "default": "box drawings heavy up and right"
       }
     },
     "key": "2517"
@@ -243,8 +219,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light up and left",
-        "alternative": "forms light up and left"
+        "default": "box drawings light up and left"
       }
     },
     "key": "2518"
@@ -253,8 +228,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings up light and left heavy",
-        "alternative": "forms up light and left heavy"
+        "default": "box drawings up light and left heavy"
       }
     },
     "key": "2519"
@@ -263,8 +237,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings up heavy and left light",
-        "alternative": "forms up heavy and left light"
+        "default": "box drawings up heavy and left light"
       }
     },
     "key": "251A"
@@ -273,8 +246,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings heavy up and left",
-        "alternative": "forms heavy up and left"
+        "default": "box drawings heavy up and left"
       }
     },
     "key": "251B"
@@ -283,8 +255,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light vertical and right",
-        "alternative": "forms light vertical and right"
+        "default": "box drawings light vertical and right"
       }
     },
     "key": "251C"
@@ -293,8 +264,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings vertical light and right heavy",
-        "alternative": "forms vertical light and right heavy"
+        "default": "box drawings vertical light and right heavy"
       }
     },
     "key": "251D"
@@ -303,8 +273,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings up heavy and right down light",
-        "alternative": "forms up heavy and right down light"
+        "default": "box drawings up heavy and right down light"
       }
     },
     "key": "251E"
@@ -313,8 +282,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings down heavy and right up light",
-        "alternative": "forms down heavy and right up light"
+        "default": "box drawings down heavy and right up light"
       }
     },
     "key": "251F"
@@ -323,8 +291,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings vertical heavy and right light",
-        "alternative": "forms vertical heavy and right light"
+        "default": "box drawings vertical heavy and right light"
       }
     },
     "key": "2520"
@@ -333,8 +300,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings down light and right up heavy",
-        "alternative": "forms down light and right up heavy"
+        "default": "box drawings down light and right up heavy"
       }
     },
     "key": "2521"
@@ -343,8 +309,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings up light and right down heavy",
-        "alternative": "forms up light and right down heavy"
+        "default": "box drawings up light and right down heavy"
       }
     },
     "key": "2522"
@@ -353,8 +318,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings heavy vertical and right",
-        "alternative": "forms heavy vertical and right"
+        "default": "box drawings heavy vertical and right"
       }
     },
     "key": "2523"
@@ -363,8 +327,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light vertical and left",
-        "alternative": "forms light vertical and left"
+        "default": "box drawings light vertical and left"
       }
     },
     "key": "2524"
@@ -373,8 +336,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings vertical light and left heavy",
-        "alternative": "forms vertical light and left heavy"
+        "default": "box drawings vertical light and left heavy"
       }
     },
     "key": "2525"
@@ -383,8 +345,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings up heavy and left down light",
-        "alternative": "forms up heavy and left down light"
+        "default": "box drawings up heavy and left down light"
       }
     },
     "key": "2526"
@@ -393,8 +354,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings down heavy and left up light",
-        "alternative": "forms down heavy and left up light"
+        "default": "box drawings down heavy and left up light"
       }
     },
     "key": "2527"
@@ -403,8 +363,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings vertical heavy and left light",
-        "alternative": "forms vertical heavy and left light"
+        "default": "box drawings vertical heavy and left light"
       }
     },
     "key": "2528"
@@ -413,8 +372,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings down light and left up heavy",
-        "alternative": "forms down light and left up heavy"
+        "default": "box drawings down light and left up heavy"
       }
     },
     "key": "2529"
@@ -423,8 +381,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings up light and left down heavy",
-        "alternative": "forms up light and left down heavy"
+        "default": "box drawings up light and left down heavy"
       }
     },
     "key": "252A"
@@ -433,8 +390,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings heavy vertical and left",
-        "alternative": "forms heavy vertical and left"
+        "default": "box drawings heavy vertical and left"
       }
     },
     "key": "252B"
@@ -443,8 +399,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light down and horizontal",
-        "alternative": "forms light down and horizontal"
+        "default": "box drawings light down and horizontal"
       }
     },
     "key": "252C"
@@ -453,8 +408,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings left heavy and right down light",
-        "alternative": "forms left heavy and right down light"
+        "default": "box drawings left heavy and right down light"
       }
     },
     "key": "252D"
@@ -463,8 +417,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings right heavy and left down light",
-        "alternative": "forms right heavy and left down light"
+        "default": "box drawings right heavy and left down light"
       }
     },
     "key": "252E"
@@ -473,8 +426,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings down light and horizontal heavy",
-        "alternative": "forms down light and horizontal heavy"
+        "default": "box drawings down light and horizontal heavy"
       }
     },
     "key": "252F"
@@ -483,8 +435,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings down heavy and horizontal light",
-        "alternative": "forms down heavy and horizontal light"
+        "default": "box drawings down heavy and horizontal light"
       }
     },
     "key": "2530"
@@ -493,8 +444,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings right light and left down heavy",
-        "alternative": "forms right light and left down heavy"
+        "default": "box drawings right light and left down heavy"
       }
     },
     "key": "2531"
@@ -503,8 +453,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings left light and right down heavy",
-        "alternative": "forms left light and right down heavy"
+        "default": "box drawings left light and right down heavy"
       }
     },
     "key": "2532"
@@ -513,8 +462,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings heavy down and horizontal",
-        "alternative": "forms heavy down and horizontal"
+        "default": "box drawings heavy down and horizontal"
       }
     },
     "key": "2533"
@@ -523,8 +471,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light up and horizontal",
-        "alternative": "forms light up and horizontal"
+        "default": "box drawings light up and horizontal"
       }
     },
     "key": "2534"
@@ -533,8 +480,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings left heavy and right up light",
-        "alternative": "forms left heavy and right up light"
+        "default": "box drawings left heavy and right up light"
       }
     },
     "key": "2535"
@@ -543,8 +489,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings right heavy and left up light",
-        "alternative": "forms right heavy and left up light"
+        "default": "box drawings right heavy and left up light"
       }
     },
     "key": "2536"
@@ -553,8 +498,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings up light and horizontal heavy",
-        "alternative": "forms up light and horizontal heavy"
+        "default": "box drawings up light and horizontal heavy"
       }
     },
     "key": "2537"
@@ -563,8 +507,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings up heavy and horizontal light",
-        "alternative": "forms up heavy and horizontal light"
+        "default": "box drawings up heavy and horizontal light"
       }
     },
     "key": "2538"
@@ -573,8 +516,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings right light and left up heavy",
-        "alternative": "forms right light and left up heavy"
+        "default": "box drawings right light and left up heavy"
       }
     },
     "key": "2539"
@@ -583,8 +525,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings left light and right up heavy",
-        "alternative": "forms left light and right up heavy"
+        "default": "box drawings left light and right up heavy"
       }
     },
     "key": "253A"
@@ -593,8 +534,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings heavy up and horizontal",
-        "alternative": "forms heavy up and horizontal"
+        "default": "box drawings heavy up and horizontal"
       }
     },
     "key": "253B"
@@ -603,8 +543,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light vertical and horizontal",
-        "alternative": "forms light vertical and horizontal"
+        "default": "box drawings light vertical and horizontal"
       }
     },
     "key": "253C"
@@ -613,8 +552,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings left heavy and right vertical light",
-        "alternative": "forms left heavy and right vertical light"
+        "default": "box drawings left heavy and right vertical light"
       }
     },
     "key": "253D"
@@ -623,8 +561,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings right heavy and left vertical light",
-        "alternative": "forms right heavy and left vertical light"
+        "default": "box drawings right heavy and left vertical light"
       }
     },
     "key": "253E"
@@ -633,8 +570,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings vertical light and horizontal heavy",
-        "alternative": "forms vertical light and horizontal heavy"
+        "default": "box drawings vertical light and horizontal heavy"
       }
     },
     "key": "253F"
@@ -643,8 +579,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings up heavy and down horizontal light",
-        "alternative": "forms up heavy and down horizontal light"
+        "default": "box drawings up heavy and down horizontal light"
       }
     },
     "key": "2540"
@@ -653,8 +588,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings down heavy and up horizontal light",
-        "alternative": "forms down heavy and up horizontal light"
+        "default": "box drawings down heavy and up horizontal light"
       }
     },
     "key": "2541"
@@ -663,8 +597,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings vertical heavy and horizontal light",
-        "alternative": "forms vertical heavy and horizontal light"
+        "default": "box drawings vertical heavy and horizontal light"
       }
     },
     "key": "2542"
@@ -673,8 +606,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings left up heavy and right down light",
-        "alternative": "forms left up heavy and right down light"
+        "default": "box drawings left up heavy and right down light"
       }
     },
     "key": "2543"
@@ -683,8 +615,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings right up heavy and left down light",
-        "alternative": "forms right up heavy and left down light"
+        "default": "box drawings right up heavy and left down light"
       }
     },
     "key": "2544"
@@ -693,8 +624,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings left down heavy and right up light",
-        "alternative": "forms left down heavy and right up light"
+        "default": "box drawings left down heavy and right up light"
       }
     },
     "key": "2545"
@@ -703,8 +633,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings right down heavy and left up light",
-        "alternative": "forms right down heavy and left up light"
+        "default": "box drawings right down heavy and left up light"
       }
     },
     "key": "2546"
@@ -713,8 +642,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings down light and up horizontal heavy",
-        "alternative": "forms down light and up horizontal heavy"
+        "default": "box drawings down light and up horizontal heavy"
       }
     },
     "key": "2547"
@@ -723,8 +651,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings up light and down horizontal heavy",
-        "alternative": "forms up light and down horizontal heavy"
+        "default": "box drawings up light and down horizontal heavy"
       }
     },
     "key": "2548"
@@ -733,8 +660,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings right light and left vertical heavy",
-        "alternative": "forms right light and left vertical heavy"
+        "default": "box drawings right light and left vertical heavy"
       }
     },
     "key": "2549"
@@ -743,8 +669,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings left light and right vertical heavy",
-        "alternative": "forms left light and right vertical heavy"
+        "default": "box drawings left light and right vertical heavy"
       }
     },
     "key": "254A"
@@ -753,8 +678,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings heavy vertical and horizontal",
-        "alternative": "forms heavy vertical and horizontal"
+        "default": "box drawings heavy vertical and horizontal"
       }
     },
     "key": "254B"
@@ -763,8 +687,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light double dash horizontal",
-        "alternative": "forms light double dash horizontal"
+        "default": "box drawings light double dash horizontal"
       }
     },
     "key": "254C"
@@ -773,8 +696,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings heavy double dash horizontal",
-        "alternative": "forms heavy double dash horizontal"
+        "default": "box drawings heavy double dash horizontal"
       }
     },
     "key": "254D"
@@ -783,8 +705,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light double dash vertical",
-        "alternative": "forms light double dash vertical"
+        "default": "box drawings light double dash vertical"
       }
     },
     "key": "254E"
@@ -793,8 +714,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings heavy double dash vertical",
-        "alternative": "forms heavy double dash vertical"
+        "default": "box drawings heavy double dash vertical"
       }
     },
     "key": "254F"
@@ -803,8 +723,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings double horizontal",
-        "alternative": "forms double horizontal"
+        "default": "box drawings double horizontal"
       }
     },
     "key": "2550"
@@ -813,8 +732,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings double vertical",
-        "alternative": "forms double vertical"
+        "default": "box drawings double vertical"
       }
     },
     "key": "2551"
@@ -823,8 +741,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings down single and right double",
-        "alternative": "forms down single and right double"
+        "default": "box drawings down single and right double"
       }
     },
     "key": "2552"
@@ -833,8 +750,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings down double and right single",
-        "alternative": "forms down double and right single"
+        "default": "box drawings down double and right single"
       }
     },
     "key": "2553"
@@ -843,8 +759,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings double down and right",
-        "alternative": "forms double down and right"
+        "default": "box drawings double down and right"
       }
     },
     "key": "2554"
@@ -853,8 +768,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings down single and left double",
-        "alternative": "forms down single and left double"
+        "default": "box drawings down single and left double"
       }
     },
     "key": "2555"
@@ -863,8 +777,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings down double and left single",
-        "alternative": "forms down double and left single"
+        "default": "box drawings down double and left single"
       }
     },
     "key": "2556"
@@ -873,8 +786,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings double down and left",
-        "alternative": "forms double down and left"
+        "default": "box drawings double down and left"
       }
     },
     "key": "2557"
@@ -883,8 +795,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings up single and right double",
-        "alternative": "forms up single and right double"
+        "default": "box drawings up single and right double"
       }
     },
     "key": "2558"
@@ -893,8 +804,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings up double and right single",
-        "alternative": "forms up double and right single"
+        "default": "box drawings up double and right single"
       }
     },
     "key": "2559"
@@ -903,8 +813,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings double up and right",
-        "alternative": "forms double up and right"
+        "default": "box drawings double up and right"
       }
     },
     "key": "255A"
@@ -913,8 +822,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings up single and left double",
-        "alternative": "forms up single and left double"
+        "default": "box drawings up single and left double"
       }
     },
     "key": "255B"
@@ -923,8 +831,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings up double and left single",
-        "alternative": "forms up double and left single"
+        "default": "box drawings up double and left single"
       }
     },
     "key": "255C"
@@ -933,8 +840,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings double up and left",
-        "alternative": "forms double up and left"
+        "default": "box drawings double up and left"
       }
     },
     "key": "255D"
@@ -943,8 +849,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings vertical single and right double",
-        "alternative": "forms vertical single and right double"
+        "default": "box drawings vertical single and right double"
       }
     },
     "key": "255E"
@@ -953,8 +858,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings vertical double and right single",
-        "alternative": "forms vertical double and right single"
+        "default": "box drawings vertical double and right single"
       }
     },
     "key": "255F"
@@ -963,8 +867,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings double vertical and right",
-        "alternative": "forms double vertical and right"
+        "default": "box drawings double vertical and right"
       }
     },
     "key": "2560"
@@ -973,8 +876,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings vertical single and left double",
-        "alternative": "forms vertical single and left double"
+        "default": "box drawings vertical single and left double"
       }
     },
     "key": "2561"
@@ -983,8 +885,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings vertical double and left single",
-        "alternative": "forms vertical double and left single"
+        "default": "box drawings vertical double and left single"
       }
     },
     "key": "2562"
@@ -993,8 +894,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings double vertical and left",
-        "alternative": "forms double vertical and left"
+        "default": "box drawings double vertical and left"
       }
     },
     "key": "2563"
@@ -1003,8 +903,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings down single and horizontal double",
-        "alternative": "forms down single and horizontal double"
+        "default": "box drawings down single and horizontal double"
       }
     },
     "key": "2564"
@@ -1013,8 +912,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings down double and horizontal single",
-        "alternative": "forms down double and horizontal single"
+        "default": "box drawings down double and horizontal single"
       }
     },
     "key": "2565"
@@ -1023,8 +921,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings double down and horizontal",
-        "alternative": "forms double down and horizontal"
+        "default": "box drawings double down and horizontal"
       }
     },
     "key": "2566"
@@ -1033,8 +930,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings up single and horizontal double",
-        "alternative": "forms up single and horizontal double"
+        "default": "box drawings up single and horizontal double"
       }
     },
     "key": "2567"
@@ -1043,8 +939,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings up double and horizontal single",
-        "alternative": "forms up double and horizontal single"
+        "default": "box drawings up double and horizontal single"
       }
     },
     "key": "2568"
@@ -1053,8 +948,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings double up and horizontal",
-        "alternative": "forms double up and horizontal"
+        "default": "box drawings double up and horizontal"
       }
     },
     "key": "2569"
@@ -1063,8 +957,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings vertical single and horizontal double",
-        "alternative": "forms vertical single and horizontal double"
+        "default": "box drawings vertical single and horizontal double"
       }
     },
     "key": "256A"
@@ -1073,8 +966,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings vertical double and horizontal single",
-        "alternative": "forms vertical double and horizontal single"
+        "default": "box drawings vertical double and horizontal single"
       }
     },
     "key": "256B"
@@ -1083,8 +975,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings double vertical and horizontal",
-        "alternative": "forms double vertical and horizontal"
+        "default": "box drawings double vertical and horizontal"
       }
     },
     "key": "256C"
@@ -1093,8 +984,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light arc down and right",
-        "alternative": "forms light arc down and right"
+        "default": "box drawings light arc down and right"
       }
     },
     "key": "256D"
@@ -1103,8 +993,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light arc down and left",
-        "alternative": "forms light arc down and left"
+        "default": "box drawings light arc down and left"
       }
     },
     "key": "256E"
@@ -1113,8 +1002,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light arc up and left",
-        "alternative": "forms light arc up and left"
+        "default": "box drawings light arc up and left"
       }
     },
     "key": "256F"
@@ -1123,8 +1011,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light arc up and right",
-        "alternative": "forms light arc up and right"
+        "default": "box drawings light arc up and right"
       }
     },
     "key": "2570"
@@ -1133,8 +1020,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light diagonal upper right to lower left",
-        "alternative": "forms light diagonal upper right to lower left"
+        "default": "box drawings light diagonal upper right to lower left"
       }
     },
     "key": "2571"
@@ -1143,8 +1029,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light diagonal upper left to lower right",
-        "alternative": "forms light diagonal upper left to lower right"
+        "default": "box drawings light diagonal upper left to lower right"
       }
     },
     "key": "2572"
@@ -1153,8 +1038,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light diagonal cross",
-        "alternative": "forms light diagonal cross"
+        "default": "box drawings light diagonal cross"
       }
     },
     "key": "2573"
@@ -1163,8 +1047,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light left",
-        "alternative": "forms light left"
+        "default": "box drawings light left"
       }
     },
     "key": "2574"
@@ -1173,8 +1056,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light up",
-        "alternative": "forms light up"
+        "default": "box drawings light up"
       }
     },
     "key": "2575"
@@ -1183,8 +1065,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light right",
-        "alternative": "forms light right"
+        "default": "box drawings light right"
       }
     },
     "key": "2576"
@@ -1193,8 +1074,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light down",
-        "alternative": "forms light down"
+        "default": "box drawings light down"
       }
     },
     "key": "2577"
@@ -1203,8 +1083,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings heavy left",
-        "alternative": "forms heavy left"
+        "default": "box drawings heavy left"
       }
     },
     "key": "2578"
@@ -1213,8 +1092,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings heavy up",
-        "alternative": "forms heavy up"
+        "default": "box drawings heavy up"
       }
     },
     "key": "2579"
@@ -1223,8 +1101,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings heavy right",
-        "alternative": "forms heavy right"
+        "default": "box drawings heavy right"
       }
     },
     "key": "257A"
@@ -1233,8 +1110,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings heavy down",
-        "alternative": "forms heavy down"
+        "default": "box drawings heavy down"
       }
     },
     "key": "257B"
@@ -1243,8 +1119,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light left and heavy right",
-        "alternative": "forms light left and heavy right"
+        "default": "box drawings light left and heavy right"
       }
     },
     "key": "257C"
@@ -1253,8 +1128,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings light up and heavy down",
-        "alternative": "forms light up and heavy down"
+        "default": "box drawings light up and heavy down"
       }
     },
     "key": "257D"
@@ -1263,8 +1137,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings heavy left and light right",
-        "alternative": "forms heavy left and light right"
+        "default": "box drawings heavy left and light right"
       }
     },
     "key": "257E"
@@ -1273,8 +1146,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "box drawings heavy up and light down",
-        "alternative": "forms heavy up and light down"
+        "default": "box drawings heavy up and light down"
       }
     },
     "key": "257F"
@@ -1337,8 +1209,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "lower three quarters block",
-        "alternative": "lower three quarter block"
+        "default": "lower three quarters block"
       }
     },
     "key": "2586"
@@ -1374,8 +1245,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left three quarters block",
-        "alternative": "left three quarter block"
+        "default": "left three quarters block"
       }
     },
     "key": "258A"
@@ -1735,8 +1605,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "black up pointing triangle",
-        "alternative": "black up pointing triangle"
+        "default": "black up pointing triangle"
       }
     },
     "key": "25B2"
@@ -1745,8 +1614,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "white up pointing triangle",
-        "alternative": "white up pointing triangle"
+        "default": "white up pointing triangle"
       }
     },
     "key": "25B3"
@@ -1755,8 +1623,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "black up pointing small triangle",
-        "alternative": "black up pointing small triangle"
+        "default": "black up pointing small triangle"
       }
     },
     "key": "25B4"
@@ -1765,8 +1632,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "white up pointing small triangle",
-        "alternative": "white up pointing small triangle"
+        "default": "white up pointing small triangle"
       }
     },
     "key": "25B5"
@@ -1775,8 +1641,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "black right pointing triangle",
-        "alternative": "black right pointing triangle"
+        "default": "black right pointing triangle"
       }
     },
     "key": "25B6"
@@ -1785,8 +1650,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "white right pointing triangle",
-        "alternative": "white right pointing triangle"
+        "default": "white right pointing triangle"
       }
     },
     "key": "25B7"
@@ -1795,8 +1659,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "black right pointing small triangle",
-        "alternative": "black right pointing small triangle"
+        "default": "black right pointing small triangle"
       }
     },
     "key": "25B8"
@@ -1805,8 +1668,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "white right pointing small triangle",
-        "alternative": "white right pointing small triangle"
+        "default": "white right pointing small triangle"
       }
     },
     "key": "25B9"
@@ -1815,8 +1677,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "black right pointing pointer",
-        "alternative": "black right pointing pointer"
+        "default": "black right pointing pointer"
       }
     },
     "key": "25BA"
@@ -1825,8 +1686,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "white right pointing pointer",
-        "alternative": "white right pointing pointer"
+        "default": "white right pointing pointer"
       }
     },
     "key": "25BB"
@@ -1835,8 +1695,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "black down pointing triangle",
-        "alternative": "black down pointing triangle"
+        "default": "black down pointing triangle"
       }
     },
     "key": "25BC"
@@ -1845,8 +1704,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "white down pointing triangle",
-        "alternative": "white down pointing triangle"
+        "default": "white down pointing triangle"
       }
     },
     "key": "25BD"
@@ -1855,8 +1713,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "black down pointing small triangle",
-        "alternative": "black down pointing small triangle"
+        "default": "black down pointing small triangle"
       }
     },
     "key": "25BE"
@@ -1865,8 +1722,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "white down pointing small triangle",
-        "alternative": "white down pointing small triangle"
+        "default": "white down pointing small triangle"
       }
     },
     "key": "25BF"
@@ -1875,8 +1731,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "black left pointing triangle",
-        "alternative": "black left pointing triangle"
+        "default": "black left pointing triangle"
       }
     },
     "key": "25C0"
@@ -1885,8 +1740,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "white left pointing triangle",
-        "alternative": "white left pointing triangle"
+        "default": "white left pointing triangle"
       }
     },
     "key": "25C1"
@@ -1895,8 +1749,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "black left pointing small triangle",
-        "alternative": "black left pointing small triangle"
+        "default": "black left pointing small triangle"
       }
     },
     "key": "25C2"
@@ -1905,8 +1758,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "white left pointing small triangle",
-        "alternative": "white left pointing small triangle"
+        "default": "white left pointing small triangle"
       }
     },
     "key": "25C3"
@@ -1915,8 +1767,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "black left pointing pointer",
-        "alternative": "black left pointing pointer"
+        "default": "black left pointing pointer"
       }
     },
     "key": "25C4"
@@ -1925,8 +1776,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "white left pointing pointer",
-        "alternative": "white left pointing pointer"
+        "default": "white left pointing pointer"
       }
     },
     "key": "25C5"
@@ -2277,8 +2127,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "white up pointing triangle with dot",
-        "alternative": "white up pointing triangle with dot"
+        "default": "white up pointing triangle with dot"
       }
     },
     "key": "25EC"
@@ -2287,8 +2136,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "up pointing triangle with left half black",
-        "alternative": "up pointing triangle with left half black"
+        "default": "up pointing triangle with left half black"
       }
     },
     "key": "25ED"
@@ -2297,8 +2145,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "up pointing triangle with right half black",
-        "alternative": "up pointing triangle with right half black"
+        "default": "up pointing triangle with right half black"
       }
     },
     "key": "25EE"

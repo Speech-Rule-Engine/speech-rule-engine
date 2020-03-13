@@ -318,6 +318,15 @@
     "category": "Lu"
   },
   {
+    "category": "Lu",
+    "key": "0114",
+    "mappings": {
+      "default": {
+        "default": "mayúscula E con breve"
+      }
+    }
+  },
+  {
     "key": "0116",
     "mappings": {
       "default": {
@@ -406,6 +415,15 @@
       }
     },
     "category": "Lu"
+  },
+  {
+    "category": "Lu",
+    "key": "012C",
+    "mappings": {
+      "default": {
+        "default": "mayúscula I con breve"
+      }
+    }
   },
   {
     "key": "012E",
@@ -514,6 +532,15 @@
       }
     },
     "category": "Lu"
+  },
+  {
+    "category": "Lu",
+    "key": "014E",
+    "mappings": {
+      "default": {
+        "default": "mayúscula O con breve"
+      }
+    }
   },
   {
     "key": "0150",
@@ -712,6 +739,258 @@
       }
     },
     "category": "Lu"
+  },
+  {
+    "category": "Lu",
+    "key": "01CD",
+    "mappings": {
+      "default": {
+        "default": "mayúscula A con acento"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "01CF",
+    "mappings": {
+      "default": {
+        "default": "mayúscula I con acento"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "01D1",
+    "mappings": {
+      "default": {
+        "default": "mayúscula O con acento"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "01D3",
+    "mappings": {
+      "default": {
+        "default": "mayúscula U con acento"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "01E6",
+    "mappings": {
+      "default": {
+        "default": "mayúscula G con acento"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "01E8",
+    "mappings": {
+      "default": {
+        "default": "mayúscula K con acento"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "01EA",
+    "mappings": {
+      "default": {
+        "default": "mayúscula O con pecíolo"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "01F4",
+    "mappings": {
+      "default": {
+        "default": "mayúscula G con acento agudo"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "01F8",
+    "mappings": {
+      "default": {
+        "default": "mayúscula N con grave"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0200",
+    "mappings": {
+      "default": {
+        "default": "mayúscula con doble tumba"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0202",
+    "mappings": {
+      "default": {
+        "default": "mayúscula a con breve invertido"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0204",
+    "mappings": {
+      "default": {
+        "default": "mayúscula E con doble tumba"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0206",
+    "mappings": {
+      "default": {
+        "default": "mayúscula E con Breve invertido"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0208",
+    "mappings": {
+      "default": {
+        "default": "mayúscula I con doble tumba"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "020A",
+    "mappings": {
+      "default": {
+        "default": "mayúscula I con Breve invertido"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "020C",
+    "mappings": {
+      "default": {
+        "default": "mayúscula O con doble tumba"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "020E",
+    "mappings": {
+      "default": {
+        "default": "mayúscula O con Breve invertido"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0210",
+    "mappings": {
+      "default": {
+        "default": "mayúscula R con doble tumba"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0212",
+    "mappings": {
+      "default": {
+        "default": "mayúscula R con breve invertido"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0214",
+    "mappings": {
+      "default": {
+        "default": "mayúscula U con doble tumba"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0216",
+    "mappings": {
+      "default": {
+        "default": "mayúscula U con breve invertido"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0218",
+    "mappings": {
+      "default": {
+        "default": "mayúscula S con coma debajo"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "021A",
+    "mappings": {
+      "default": {
+        "default": "mayúscula T con coma debajo"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "021E",
+    "mappings": {
+      "default": {
+        "default": "mayúscula H con Caron"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0226",
+    "mappings": {
+      "default": {
+        "default": "mayúscula con un punto arriba"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0228",
+    "mappings": {
+      "default": {
+        "default": "mayúscula E con cedilla"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "022E",
+    "mappings": {
+      "default": {
+        "default": "mayúscula O con punto arriba"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0232",
+    "mappings": {
+      "default": {
+        "default": "Mayúscula Y con Macron"
+      }
+    }
   },
   {
     "key": "1E00",

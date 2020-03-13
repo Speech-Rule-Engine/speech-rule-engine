@@ -75,5 +75,54 @@
     "names": [
       "tan"
     ]
+  },
+
+  {"category": "Cyclometric",
+   "mappings": {
+     "default": {
+       "default": "arc cosinus"
+     } },
+   "key": "arccos",
+   "names": ["arccos"]
+  },
+  {"category": "Cyclometric",
+   "mappings": {
+     "default": {
+       "default": "arc cotangente"
+     } },
+   "key": "arccot",
+   "names": ["arccot"]
+  },
+  {"category": "Cyclometric",
+   "mappings": {
+     "default": {
+       "default": "arc cosécante"
+     } },
+   "key": "arccsc",
+   "names": ["arccsc"]
+  },
+  {"category": "Cyclometric",
+   "mappings": {
+     "default": {
+       "default": "arc sécante"
+     } },
+   "key": "arcsec",
+   "names": ["arcsec"]
+  },
+  {"category": "Cyclometric",
+   "mappings": {
+     "default": {
+       "default": "arc sinus"
+     } },
+   "key": "arcsin",
+   "names": ["arcsin"]
+  },
+  {"category": "Cyclometric",
+   "mappings": {
+     "default": {
+       "default": "arc tangente"
+     } },
+   "key": "arctan",
+   "names": ["arctan"]
   }
 ]
