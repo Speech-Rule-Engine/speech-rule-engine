@@ -55,7 +55,16 @@ JSON_MINIFY = npx json-minify
 # Compiling as rigidly as possible.
 # (Currently we use automatically all)
 ##################################################################
-CLOSURE_ERRORS = accessControls ambiguousFunctionDecl checkEventfulObjectDisposal checkRegExp checkTypes checkVars conformanceViolations const constantProperty deprecated deprecatedAnnotations duplicateMessage es3 es5Strict externsValidation fileoverviewTags globalThis internetExplorerChecks invalidCasts misplacedTypeAnnotation missingGetCssName missingProperties missingProvide missingRequire missingReturn msgDescriptions nonStandardJsDocs suspiciousCode strictModuleDepCheck typeInvalidation undefinedNames undefinedVars unknownDefines unusedLocalVariables unusedPrivateMembers uselessCode useOfGoogBase underscore visibility # * reportUnknownTypes newCheckTypes
+CLOSURE_ERRORS = accessControls checkDebuggerStatement checkRegExp checkTypes checkVars closureDepMethodUsageChecks conformanceViolations conformanceViolations constantProperty const deprecatedAnnotations deprecated duplicateMessage es5Strict externsValidation globalThis invalidCasts misplacedTypeAnnotation missingGetCssName missingProperties missingProvide missingRequire missingReturn msgDescriptions nonStandardJsDocs strictModuleDepCheck suspiciousCode tweakValidation typeInvalidation undefinedNames undefinedVars unknownDefines unusedLocalVariables unusedPrivateMembers untranspilableFeatures uselessCode underscore violatedModuleDep visibility # * reportUnknownTypes
+# Deleted Warnings:
+# ambiguousFunctionDecl checkEventfulObjectDisposal es3 fileoverviewTags internetExplorerChecks newCheckTypes
+# useOfGoogBase
+#
+# New Warnings:
+# checkDebuggerStatement closureDepMethodUsageChecks conformanceViolations
+# extraRequire strictCheckTypes strictMissingProperties strictPrimitiveOperators (not yet inserted)
+# tweakValidation useOfGoogBase violatedModuleDep
+#
 MAKE_ERROR_FLAG = --jscomp_error=$(error)
 ERROR_FLAGS = $(foreach error, $(CLOSURE_ERRORS), $(MAKE_ERROR_FLAG))
 
@@ -77,7 +86,7 @@ CLOSURE_LIB_NAME = google-closure-library
 CLOSURE_LIB = $(NODE_MODULES)/$(CLOSURE_LIB_NAME)
 CLOSURE_ROOT = $(CLOSURE_LIB)/closure/bin/build
 COMPILER_JAR = $(NODE_MODULES)/google-closure-compiler/cli.js
-CLOSURE_COMPILER = $(COMPILER_JAR) --dependency_mode=STRICT $(CLOSURE_LIB)/closure/goog/base.js $(ERROR_FLAGS) $(EXTERN_FLAGS) '!**externs.js' --output_wrapper_file $(LICENSE)
+CLOSURE_COMPILER = $(COMPILER_JAR) --dependency_mode=PRUNE $(CLOSURE_LIB)/closure/goog/base.js $(ERROR_FLAGS) $(EXTERN_FLAGS) '!**externs.js' --output_wrapper_file $(LICENSE)
 DEPSWRITER = python $(CLOSURE_ROOT)/depswriter.py
 
 space = $(null) #
