@@ -55,15 +55,66 @@ JSON_MINIFY = npx json-minify
 # Compiling as rigidly as possible.
 # (Currently we use automatically all)
 ##################################################################
-CLOSURE_ERRORS = accessControls checkDebuggerStatement checkRegExp checkTypes checkVars closureDepMethodUsageChecks conformanceViolations conformanceViolations constantProperty const deprecatedAnnotations deprecated duplicateMessage es5Strict externsValidation globalThis invalidCasts misplacedTypeAnnotation missingGetCssName missingProperties missingProvide missingRequire missingReturn msgDescriptions nonStandardJsDocs strictModuleDepCheck suspiciousCode tweakValidation typeInvalidation undefinedNames undefinedVars unknownDefines unusedLocalVariables unusedPrivateMembers untranspilableFeatures uselessCode underscore violatedModuleDep visibility # * reportUnknownTypes
+CLOSURE_ERRORS = accessControls\
+	checkDebuggerStatement\
+	checkRegExp\
+	checkTypes\
+	checkVars\
+	closureDepMethodUsageChecks\
+	conformanceViolations\
+	constantProperty\
+	const\
+	deprecatedAnnotations\
+	deprecated\
+	duplicateMessage\
+	duplicate\
+	es5Strict\
+	externsValidation\
+	globalThis\
+	invalidCasts\
+	misplacedSuppress\
+	misplacedTypeAnnotation\
+	missingGetCssName\
+	missingProperties\
+	missingProvide\
+	missingRequire\
+	missingReturn\
+	nonStandardJsDocs\
+	strictModuleDepCheck\
+	suspiciousCode\
+	tweakValidation\
+	typeInvalidation\
+	undefinedNames\
+	undefinedVars\
+	unknownDefines\
+	unusedLocalVariables\
+	unusedPrivateMembers\
+	untranspilableFeatures\
+	uselessCode\
+	violatedModuleDep\
+	visibility\
+#	reportUnknownTypes\
+#       extraRequire\
+#       strictCheckTypes\
+#       strictMissingProperties\
+#       strictPrimitiveOperators
+
 # Deleted Warnings:
-# ambiguousFunctionDecl checkEventfulObjectDisposal es3 fileoverviewTags internetExplorerChecks newCheckTypes
+# ambiguousFunctionDe
 # useOfGoogBase
+#
+# Old and removed:
+# msgDescriptions underscore
 #
 # New Warnings:
 # checkDebuggerStatement closureDepMethodUsageChecks conformanceViolations
-# extraRequire strictCheckTypes strictMissingProperties strictPrimitiveOperators (not yet inserted)
-# tweakValidation useOfGoogBase violatedModuleDep
+# ---- not yet inserted Start ----
+# extraRequire
+# strictCheckTypes
+# strictMissingProperties
+# strictPrimitiveOperators
+# ---- not yet inserted End ----
+# tweakValidation violatedModuleDep
 #
 MAKE_ERROR_FLAG = --jscomp_error=$(error)
 ERROR_FLAGS = $(foreach error, $(CLOSURE_ERRORS), $(MAKE_ERROR_FLAG))
