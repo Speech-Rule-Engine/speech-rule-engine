@@ -65,10 +65,7 @@ sre.Cli = function() {
  * @param {string|boolean} value The cli option value.
  * @param {string} def The default for the option.
  */
-sre.Cli.prototype.set = function(value, arg, def) {
-  console.log(value);
-  console.log(arg);
-  console.log(def);
+sre.Cli.prototype.set = function(arg, value, def) {
   this.setup[arg] = typeof value === 'undefined' ?
       ((arg === 'semantics') ? false : true) : value;
 };
@@ -254,7 +251,7 @@ sre.Cli.prototype.commandLine = function() {
       option('-o, --output [name]', 'Output file [name]. Defaults to stdout.').
       option('').
       option('-d, --domain [name]', 'Speech rule set [name]. See also --options' +
-             ' for defails.', set('domain'), 'mathspeak').
+             ' for details.', set('domain'), 'mathspeak').
       option('-t, --style [name]', 'Speech style [name]. See also --options' +
              ' for details.', set('style'), 'default').
       option('-c, --locale [code]', 'Locale [code].', set('locale'), 'en').
