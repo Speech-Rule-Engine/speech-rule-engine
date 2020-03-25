@@ -24,12 +24,10 @@
 goog.provide('sre.EnrichMathml');
 goog.provide('sre.EnrichMathml.Attribute');
 
-goog.require('sre.BaseUtil');
 goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
 goog.require('sre.Engine');
 goog.require('sre.EnrichCaseFactory');
-goog.require('sre.Semantic');
 goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticSkeleton');
 goog.require('sre.SemanticSkeleton.Sexp');

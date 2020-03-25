@@ -23,7 +23,6 @@
 
 goog.provide('sre.NodeSpeechGenerator');
 
-goog.require('sre.EnrichMathml');
 goog.require('sre.TreeSpeechGenerator');
 goog.require('sre.WalkerUtil');
 

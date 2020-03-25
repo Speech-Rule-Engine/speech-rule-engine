@@ -23,7 +23,6 @@ goog.require('sre.MathStore');
 goog.require('sre.MathmlStoreUtil');
 goog.require('sre.MathspeakSpanishUtil');
 goog.require('sre.MathspeakUtil');
-goog.require('sre.SystemExternal');
 
 
 

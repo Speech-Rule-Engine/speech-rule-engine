@@ -22,7 +22,6 @@
 goog.provide('sre.EnrichSpeechTest');
 
 goog.require('sre.AbstractTest');
-goog.require('sre.DomUtil');
 goog.require('sre.Engine');
 goog.require('sre.Enrich');
 goog.require('sre.System');
