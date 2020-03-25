@@ -2,9 +2,7 @@
   {"category": "Logarithm",
    "mappings": {
      "default": {
-       "default": "logarithm",
-       "alternative": "logarithm function",
-       "short": "log"
+       "default": "log"
      }
    },
    "key": "log",
@@ -13,9 +11,7 @@
   {"category": "Logarithm",
    "mappings": {
      "default": {
-       "default": "natural logarithm",
-       "alternative": "natural logarithm function",
-       "short": "natural log"
+       "default": "natural log"
      },
      "mathspeak": {
        "default": "ln"
@@ -32,16 +28,21 @@
   {"category": "Logarithm",
    "mappings": {
      "default": {
-       "default": "logarithm base 10",
-       "short": "log base 10"} },
+       "default": "log base 10"
+     }
+   },
    "key": "lg",
    "names": ["lg"]},
   {"category": "Elementary",
    "mappings": {
      "default": {
-       "default": "exponential",
-       "alternative": "exponential function",
-       "short": "exp"
+       "default": "exponential"
+     },
+     "mathspeak": {
+       "default": "exp"
+     },
+     "clearspeak": {
+       "default": "exp"
      }
    },
    "key": "exp",
@@ -51,8 +52,13 @@
   {"category": "Elementary",
    "mappings": {
      "default": {
-       "default": "greatest common divisor",
-       "short": "gcd"
+       "default": "greatest common divisor"
+     },
+     "mathspeak": {
+       "default": "gcd"
+     },
+     "clearspeak": {
+       "default": "gcd"
      }
    },
    "key": "gcd",
@@ -61,8 +67,13 @@
   {"category": "Elementary",
    "mappings": {
      "default": {
-       "default": "least common multiple",
-       "short": "lcm"
+       "default": "least common multiple"
+     },
+     "mathspeak": {
+       "default": "lcm"
+     },
+     "clearspeak": {
+       "default": "lcm"
      }
    },
    "key": "lcm",
@@ -72,8 +83,13 @@
   {"category": "Complex",
    "mappings": {
      "default": {
-       "default": "argument",
-       "short": "arg"
+       "default": "argument"
+     },
+     "mathspeak": {
+       "default": "arg"
+     },
+     "clearspeak": {
+       "default": "arg"
      }
    },
    "key": "arg",
@@ -82,11 +98,13 @@
   {"category": "Complex",
    "mappings": {
      "default": {
-       "default": "imaginary part",
-       "short": "imaginary"
+       "default": "imaginary part"
      },
      "mathspeak": {
        "default": "im"
+     },
+     "clearspeak": {
+       "default": "imaginary"
      }
    },
    "key": "im",
@@ -95,11 +113,13 @@
   {"category": "Complex",
    "mappings": {
      "default": {
-       "default": "real part",
-       "short": "real"
+       "default": "real part"
      },
      "mathspeak": {
        "default": "re"
+     },
+     "clearspeak": {
+       "default": "real"
      }
    },
    "key": "re",
@@ -109,8 +129,13 @@
   {"category": "Limits",
    "mappings": {
      "default": {
-       "default": "infimum",
-       "short": "inf"
+       "default": "infimum"
+     },
+     "mathspeak": {
+       "default": "inf"
+     },
+     "clearspeak": {
+       "default": "inf"
      }
    },
    "key": "inf",
@@ -119,11 +144,13 @@
   {"category": "Limits",
    "mappings": {
      "default": {
-       "default": "limit",
-       "short": "lim"
+       "default": "limit"
      },
      "mathspeak": {
        "default": "limit"
+     },
+     "clearspeak": {
+       "default": "lim"
      }
    },
    "key": "lim",
@@ -132,9 +159,13 @@
   {"category": "Limits",
    "mappings": {
      "default": {
-       "default": "infimum default",
-       "alternative": "inferior limit",
-       "short": "liminf"
+       "default": "limit inferior"
+     },
+     "mathspeak": {
+       "default": "liminf"
+     },
+     "clearspeak": {
+       "default": "liminf"
      }
    },
    "key": "liminf",
@@ -143,9 +174,13 @@
   {"category": "Limits",
    "mappings": {
      "default": {
-       "default": "supremum limit",
-       "alternative": "superior limit",
-       "short": "limsup"
+       "default": "limit superior"
+     },
+     "mathspeak": {
+       "default": "limsup"
+     },
+     "clearspeak": {
+       "default": "limsup"
      }
    },
    "key": "limsup",
@@ -154,8 +189,13 @@
   {"category": "Limits",
    "mappings": {
      "default": {
-       "default": "maximum",
-       "short": "max"
+       "default": "maximum"
+     },
+     "mathspeak": {
+       "default": "max"
+     },
+     "clearspeak": {
+       "default": "max"
      }
    },
    "key": "max",
@@ -164,8 +204,13 @@
   {"category": "Limits",
    "mappings": {
      "default": {
-       "default": "minimum",
-       "short": "min"
+       "default": "minimum"
+     },
+     "mathspeak": {
+       "default": "min"
+     },
+     "clearspeak": {
+       "default": "min"
      }
    },
    "key": "min",
@@ -174,8 +219,13 @@
   {"category": "Limits",
    "mappings": {
      "default": {
-       "default": "supremum",
-       "short": "sup"
+       "default": "supremum"
+     },
+     "mathspeak": {
+       "default": "sup"
+     },
+     "clearspeak": {
+       "default": "sup"
      }
    },
    "key": "sup",
@@ -184,9 +234,7 @@
   {"category": "Limits",
    "mappings": {
      "default": {
-       "default": "injective limit",
-       "alternative": "direct limit",
-       "short": "colimit"
+       "default": "colimit"
      }
    },
    "key": "injlim",
@@ -195,9 +243,7 @@
   {"category": "Limits",
    "mappings": {
      "default": {
-       "default": "projective limit",
-       "alternative": "inverse limit",
-       "short": "limit"
+       "default": "projective limit"
      }
    },
    "key": "projlim",
@@ -208,8 +254,13 @@
   {"category": "Elementary",
    "mappings": {
      "default": {
-       "default": "modulo",
-       "short": "mod"
+       "default": "modulo"
+     },
+     "mathspeak": {
+       "default": "mod"
+     },
+     "clearspeak": {
+       "default": "mod"
      }
    },
    "key": "mod",

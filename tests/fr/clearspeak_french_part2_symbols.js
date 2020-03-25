@@ -211,7 +211,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testTriangle001 = function() {
   var preference = 'TriangleSymbol_Auto';
   var mathml = '<math><mrow><mi>Δ</mi><mi>A</mi><mi>B</mi><mi>C</mi></mrow>' +
       '</math>';
-  var speech = 'Delta A B C';
+  var speech = 'triangle A B C';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -223,7 +223,7 @@ sre.ClearspeakFrenchPart2Symbols.prototype.testTriangle002 = function() {
   var preference = 'TriangleSymbol_Auto';
   var mathml = '<math><mrow><mi>Δ</mi><mi>D</mi><mi>E</mi><mi>F</mi></mrow>' +
       '</math>';
-  var speech = 'Delta D E F';
+  var speech = 'triangle D E F';
   this.executeRuleTest(mathml, speech, preference);
 };
 

@@ -24,12 +24,10 @@
 goog.provide('sre.EnrichMathml');
 goog.provide('sre.EnrichMathml.Attribute');
 
-goog.require('sre.BaseUtil');
 goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
 goog.require('sre.Engine');
 goog.require('sre.EnrichCaseFactory');
-goog.require('sre.Semantic');
 goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticSkeleton');
 goog.require('sre.SemanticSkeleton.Sexp');
@@ -88,6 +86,7 @@ sre.EnrichMathml.Attribute = {
   ID: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'id',
   ANNOTATION: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'annotation',
   OPERATOR: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'operator',
+  OWNS: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'owns',
   PARENT: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'parent',
   PREFIX: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'prefix',
   ROLE: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'role',
@@ -112,8 +111,9 @@ sre.EnrichMathml.enrich = function(mml, semantic) {
   var oldMml = mml.cloneNode(true);
   sre.EnrichMathml.walkTree(semantic.root);
   if (sre.Engine.getInstance().structure) {
-    mml.setAttribute(sre.EnrichMathml.Attribute.STRUCTURE,
-                     sre.SemanticSkeleton.fromStructure(semantic).toString());
+    mml.setAttribute(
+      sre.EnrichMathml.Attribute.STRUCTURE,
+      sre.SemanticSkeleton.fromStructure(mml, semantic).toString());
   }
   sre.Debugger.getInstance().generateOutput(
       function() {
@@ -657,46 +657,6 @@ sre.EnrichMathml.setAttributes = function(mml, semantic) {
   }
   if (semantic.parent) {
     mml.setAttribute(sre.EnrichMathml.Attribute.PARENT, semantic.parent.id);
-  }
-};
-
-
-/**
- * Combines content and children lists depending ont the type of the semantic
- * node.
- * @param {!sre.SemanticNode} semantic The semantic tree node.
- * @param {!Array.<!Element>} content The list of content nodes.
- * @param {!Array.<!Element>} children The list of child nodes.
- * @return {!Array.<!Element>} The combined list.
- * @private
- */
-sre.EnrichMathml.combineContentChildren_ = function(
-    semantic, content, children) {
-  switch (semantic.type) {
-    case sre.Semantic.Type.RELSEQ:
-    case sre.Semantic.Type.INFIXOP:
-    case sre.Semantic.Type.MULTIREL:
-      return sre.BaseUtil.interleaveLists(children, content);
-    case sre.Semantic.Type.PREFIXOP:
-      return content.concat(children);
-    case sre.Semantic.Type.POSTFIXOP:
-      return children.concat(content);
-    case sre.Semantic.Type.FENCED:
-      children.unshift(content[0]);
-      children.push(content[1]);
-      return children;
-    case sre.Semantic.Type.APPL:
-      return [children[0], content[0], children[1]];
-    case sre.Semantic.Type.ROOT:
-      return [children[1], children[0]];
-    case sre.Semantic.Type.ROW:
-    case sre.Semantic.Type.LINE:
-      if (content.length) {
-        children.unshift(content[0]);
-      }
-      return children;
-    default:
-      return children;
   }
 };
 

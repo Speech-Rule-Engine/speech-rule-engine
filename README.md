@@ -248,7 +248,7 @@ The following is a list of command line options for the speech rule engine.
 | | |
 | -m | --mathml  | Generate enriched MathML. |
 | -g | --generate [depth] | Include generated speech in enriched MathML. Supported values: none, shallow, deep  (default: none) |
-| -r | --structure | Include structure attribute in enriched MathML. |
+| -w | --structure | Include structure attribute in enriched MathML. |
 | | |
 | | |
 | | |

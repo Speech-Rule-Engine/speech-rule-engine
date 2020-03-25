@@ -1963,7 +1963,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testArcTrig026 = function() {
 sre.ClearspeakFrenchTrigometry.prototype.testAllTrig01 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>arcsin</mi><mi>x</mi></mrow></math>';
-  var speech = 'arc sine x';
+  var speech = 'arc sinus x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1974,7 +1974,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testAllTrig01 = function() {
 sre.ClearspeakFrenchTrigometry.prototype.testAllTrig02 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>arccos</mi><mi>x</mi></mrow></math>';
-  var speech = 'arc cosine x';
+  var speech = 'arc cosinus x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1985,7 +1985,7 @@ sre.ClearspeakFrenchTrigometry.prototype.testAllTrig02 = function() {
 sre.ClearspeakFrenchTrigometry.prototype.testAllTrig03 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>arctan</mi><mi>x</mi></mrow></math>';
-  var speech = 'arc tangent x';
+  var speech = 'arc tangente x';
   this.executeRuleTest(mathml, speech, preference);
 };
 

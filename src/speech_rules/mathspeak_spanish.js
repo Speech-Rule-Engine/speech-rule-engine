@@ -23,7 +23,6 @@ goog.require('sre.MathStore');
 goog.require('sre.MathmlStoreUtil');
 goog.require('sre.MathspeakSpanishUtil');
 goog.require('sre.MathspeakUtil');
-goog.require('sre.SystemExternal');
 
 
 
@@ -345,11 +344,11 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
   // Operator rules
   defineRule(
       'prefix', 'mathspeak.default',
-      '[n] text(); [n] children/*[1]',
+      '[m] content/*; [n] children/*[1]',
       'self::prefixop');
   defineRule(
       'postfix', 'mathspeak.default',
-      '[n] children/*[1]; [n] text()',
+      '[n] children/*[1]; [m] content/*',
       'self::postfixop');
 
   defineRule(
@@ -807,6 +806,10 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'square', 'mathspeak.default', 'mathspeak.brief');
   defineSpecialisedRule(
       'square', 'mathspeak.default', 'mathspeak.sbrief');
+  defineRuleAlias(
+      'square', 'self::superscript', 'children/*[2]',
+      'children/*[2][text()=2]', '@embellished',
+      'children/*[1][@role="prefix operator"]');
 
   // Cube
   defineRule(
@@ -831,6 +834,10 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'cube', 'mathspeak.default', 'mathspeak.brief');
   defineSpecialisedRule(
       'cube', 'mathspeak.default', 'mathspeak.sbrief');
+  defineRuleAlias(
+      'cube', 'self::superscript', 'children/*[2]',
+      'children/*[2][text()=3]', '@embellished',
+      'children/*[1][@role="prefix operator"]');
 
   // Primes
   // This rule uses some redundancy for ordering!
@@ -1246,13 +1253,13 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'not(contains(@grammar, "singularUnit"))');
   defineRule(
       'unit-square', 'mathspeak.default',
-      '[t] "square"; [n] children/*[1]',
+      '[t] "al cuadrado"; [n] children/*[1]',
       'self::superscript', '@role="unit"', 'children/*[2][text()=2]',
       'name(children/*[1])="identifier"');
 
   defineRule(
       'unit-cubic', 'mathspeak.default',
-      '[t] "cubic"; [n] children/*[1]',
+      '[t] "al cubo"; [n] children/*[1]',
       'self::superscript', '@role="unit"', 'children/*[2][text()=3]',
       'name(children/*[1])="identifier"');
   defineRule(

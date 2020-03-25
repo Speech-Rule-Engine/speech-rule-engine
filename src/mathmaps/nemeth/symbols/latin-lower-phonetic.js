@@ -544,51 +544,6 @@
   },
   {
     "category": "Ll",
-    "key": "021D",
-    "mappings": {
-      "default": {
-        "default": "⠄⡳⠭⠴⠆⠂⠙⠄"
-      }
-    }
-  },
-  {
-    "category": "Ll",
-    "key": "026E",
-    "mappings": {
-      "default": {
-        "default": "⠄⡳⠭⠴⠆⠖⠑⠄"
-      }
-    }
-  },
-  {
-    "category": "Ll",
-    "key": "0292",
-    "mappings": {
-      "default": {
-        "default": "⠄⡳⠭⠴⠆⠔⠆⠄"
-      }
-    }
-  },
-  {
-    "category": "Ll",
-    "key": "0293",
-    "mappings": {
-      "default": {
-        "default": "⠄⡳⠭⠴⠆⠔⠒⠄"
-      }
-    }
-  },
-  {
-    "category": "Ll",
-    "key": "02A4",
-    "mappings": {
-      "default": {
-        "default": "⠄⡳⠭⠴⠆⠁⠲⠄"
-      }
-    }
-  },
-  {
-    "category": "Ll",
     "key": "01DD",
     "mappings": {
       "default": {

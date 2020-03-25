@@ -85,7 +85,7 @@ sre.Engine = function() {
    * Current style.
    * @type {string}
    */
-  this.style = 'short';
+  this.style = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE];
 
   /**
    * Current locale.
@@ -184,6 +184,13 @@ sre.Engine = function() {
    * @private
    */
   this.setupTests_ = [];
+
+  /**
+   * True if configuration block has been applied in HTTP mode.
+   * @type {boolean}
+   */
+  this.config = false;
+
 };
 goog.addSingletonGetter(sre.Engine);
 
@@ -353,7 +360,7 @@ sre.Engine.prototype.setDynamicCstr = function(opt_dynamic) {
       [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]],
       [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY]],
       [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN]],
-      ['short', sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE]]);
+      [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE]]);
   var comparator = this.comparators[this.domain];
   var parser = this.parsers[this.domain];
   this.parser = parser ? parser : this.defaultParser;

@@ -22,9 +22,7 @@
 goog.provide('sre.TableWalker');
 
 goog.require('sre.Focus');
-goog.require('sre.Levels');
 goog.require('sre.SyntaxWalker');
-goog.require('sre.WalkerUtil');
 
 
 
@@ -191,7 +189,7 @@ sre.TableWalker.prototype.verticalMove_ = function(direction) {
  * @protected
  */
 sre.TableWalker.prototype.jumpCell = function() {
-  if (!this.isInTable_()) {
+  if (!this.isInTable_() || this.key_ === null) {
     return this.getFocus();
   }
   if (this.moved === sre.Walker.move.ROW) {

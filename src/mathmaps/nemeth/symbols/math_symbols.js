@@ -106,7 +106,8 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "⠲"
+        "default": "⠨",
+        "other": "⠲"
       }
     },
     "key": "002E"
@@ -1285,15 +1286,6 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠈⠙"
-      }
-    },
-    "key": "2202"
-  },
-  {
-    "category": "Sm",
-    "mappings": {
-      "default": {
         "default": "⠈⠿"
       }
     },
@@ -1325,15 +1317,6 @@
       }
     },
     "key": "2206"
-  },
-  {
-    "category": "Sm",
-    "mappings": {
-      "default": {
-        "default": "⠨⠫"
-      }
-    },
-    "key": "2207"
   },
   {
     "category": "Sm",

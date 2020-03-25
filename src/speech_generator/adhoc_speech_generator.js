@@ -23,7 +23,6 @@
 goog.provide('sre.AdhocSpeechGenerator');
 
 goog.require('sre.AbstractSpeechGenerator');
-goog.require('sre.EnrichMathml.Attribute');
 
 
 

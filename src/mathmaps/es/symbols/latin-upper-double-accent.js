@@ -3,6 +3,105 @@
     "locale": "es"
   },
   {
+    "category": "Lu",
+    "key": "01D5",
+    "mappings": {
+      "default": {
+        "default": "mayúscula U con diéresis y macron"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "01D7",
+    "mappings": {
+      "default": {
+        "default": "mayúscula U con diéresis y acento agudo"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "01D9",
+    "mappings": {
+      "default": {
+        "default": "mayúscula U con diéresis y acento"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "01DB",
+    "mappings": {
+      "default": {
+        "default": "mayúscula U con diéresis y grave"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "01DE",
+    "mappings": {
+      "default": {
+        "default": "mayúscula A con diéresis y macron"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "01E0",
+    "mappings": {
+      "default": {
+        "default": "mayúscula A con punto arriba y macron"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "01EC",
+    "mappings": {
+      "default": {
+        "default": "mayúscula O con pecíolo y macron"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "01FA",
+    "mappings": {
+      "default": {
+        "default": "mayúscula A con ring above y acento agudo"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "022A",
+    "mappings": {
+      "default": {
+        "default": "mayúscula O con diaéresis y macron"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "022C",
+    "mappings": {
+      "default": {
+        "default": "mayúscula O con tilde y macron"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0230",
+    "mappings": {
+      "default": {
+        "default": "mayúscula O con dot above y macron"
+      }
+    }
+  },
+  {
     "key": "1E08",
     "mappings": {
       "default": {

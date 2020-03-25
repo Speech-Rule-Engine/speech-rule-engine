@@ -24,7 +24,6 @@ goog.require('sre.BrailleNemethTest');
 goog.require('sre.SpeechEnglishTest');
 goog.require('sre.SpeechFrenchTest');
 goog.require('sre.SpeechSpanishTest');
-goog.require('sre.System');
 goog.require('sre.TestRunner');
 
 
@@ -50,6 +49,7 @@ sre.Tests.prototype.run = function() {
   this.runner.summary();
   var timeOut = (new Date()).getTime();
   this.runner.output('Time for tests: ' + (timeOut - timeIn) + 'ms\n');
+  // sre.AbstractCharacterTest.testOutput();
   process.exit(this.runner.success() ? 0 : 1);
 };
 
@@ -70,15 +70,24 @@ sre.Tests.allTests = sre.Tests.allTests.concat(sre.BrailleNemethTest.testList);
 var file = sre.SystemExternal.process.env['FILE'];
 var locale = sre.SystemExternal.process.env['LOCALE'];
 if (file) {
-  sre.Tests.testList.push(sre[file]);
+  sre.Tests.testList =
+    sre.Tests.testList.concat(file.split(',').map(
+      function(x) {return sre[x];}));
 }
 if (locale) {
+  console.log(locale);
   if (locale === 'Base') {
     sre.Tests.testList = sre.Tests.testList.concat(sre.BaseTests.testList);
   } else {
     try {
-      sre.Tests.testList =
+      if (sre['Speech' + locale + 'Test']) {
+        sre.Tests.testList =
           sre.Tests.testList.concat(sre['Speech' + locale + 'Test'].testList);
+      }
+      if (sre['Braille' + locale + 'Test']) {
+        sre.Tests.testList =
+          sre.Tests.testList.concat(sre['Braille' + locale + 'Test'].testList);
+      }
     } catch (e) { }
   }
 }

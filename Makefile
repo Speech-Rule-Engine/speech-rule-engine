@@ -34,7 +34,9 @@ JSON_SRC = $(SRC_DIR)/mathmaps
 JSON_DST = $(LIB_DIR)/mathmaps
 MAPS = functions symbols units
 IEMAPS_FILE = $(JSON_DST)/mathmaps_ie.js
-LOCALES = $(JSON_SRC)/*  ## $(foreach dir, $(MAPS), $(JSON_SRC)/$(dir))
+LOCALES = $(notdir $(wildcard $(JSON_SRC)/*))  ## $(foreach dir, $(MAPS), $(JSON_SRC)/$(dir))
+LOC_SRC = $(JSON_SRC)/*  ## $(foreach dir, $(MAPS), $(JSON_SRC)/$(dir))
+LOC_DST = $(addprefix $(JSON_DST)/, $(addsuffix .js,$(LOCALES)))
 
 TEST_DIR = $(abspath ./tests)
 TEST_TARGET = $(LIB_DIR)/test.js
@@ -55,7 +57,49 @@ JSON_MINIFY = npx json-minify
 # Compiling as rigidly as possible.
 # (Currently we use automatically all)
 ##################################################################
-CLOSURE_ERRORS = accessControls ambiguousFunctionDecl checkEventfulObjectDisposal checkRegExp checkTypes checkVars conformanceViolations const constantProperty deprecated deprecatedAnnotations duplicateMessage es3 es5Strict externsValidation fileoverviewTags globalThis internetExplorerChecks invalidCasts misplacedTypeAnnotation missingGetCssName missingProperties missingProvide missingRequire missingReturn msgDescriptions nonStandardJsDocs suspiciousCode strictModuleDepCheck typeInvalidation undefinedNames undefinedVars unknownDefines unusedLocalVariables unusedPrivateMembers uselessCode useOfGoogBase underscore visibility # * reportUnknownTypes newCheckTypes
+CLOSURE_ERRORS = accessControls\
+	checkDebuggerStatement\
+	checkRegExp\
+	checkTypes\
+	checkVars\
+	closureDepMethodUsageChecks\
+	conformanceViolations\
+	constantProperty\
+	const\
+	deprecatedAnnotations\
+	deprecated\
+	duplicateMessage\
+	duplicate\
+	es5Strict\
+	externsValidation\
+        extraRequire\
+	globalThis\
+	invalidCasts\
+	misplacedSuppress\
+	misplacedTypeAnnotation\
+	missingGetCssName\
+	missingProperties\
+	missingProvide\
+	missingRequire\
+	missingReturn\
+	nonStandardJsDocs\
+	strictModuleDepCheck\
+        strictPrimitiveOperators\
+	suspiciousCode\
+	tweakValidation\
+	typeInvalidation\
+	undefinedNames\
+	undefinedVars\
+	unknownDefines\
+	unusedLocalVariables\
+	unusedPrivateMembers\
+	untranspilableFeatures\
+	uselessCode\
+	violatedModuleDep\
+	visibility\
+#	reportUnknownTypes\
+#       strictCheckTypes\
+#       strictMissingProperties
 MAKE_ERROR_FLAG = --jscomp_error=$(error)
 ERROR_FLAGS = $(foreach error, $(CLOSURE_ERRORS), $(MAKE_ERROR_FLAG))
 
@@ -77,7 +121,7 @@ CLOSURE_LIB_NAME = google-closure-library
 CLOSURE_LIB = $(NODE_MODULES)/$(CLOSURE_LIB_NAME)
 CLOSURE_ROOT = $(CLOSURE_LIB)/closure/bin/build
 COMPILER_JAR = $(NODE_MODULES)/google-closure-compiler/cli.js
-CLOSURE_COMPILER = $(COMPILER_JAR) --dependency_mode=STRICT $(CLOSURE_LIB)/closure/goog/base.js $(ERROR_FLAGS) $(EXTERN_FLAGS) '!**externs.js' --output_wrapper_file $(LICENSE)
+CLOSURE_COMPILER = $(COMPILER_JAR) --dependency_mode=PRUNE $(CLOSURE_LIB)/closure/goog/base.js $(ERROR_FLAGS) $(EXTERN_FLAGS) '!**externs.js' --output_wrapper_file $(LICENSE)
 DEPSWRITER = python $(CLOSURE_ROOT)/depswriter.py
 
 space = $(null) #
@@ -91,7 +135,7 @@ FIXJSSTYLE = python $(LINT_ROOT)/fixjsstyle.py --strict --jsdoc -x '$(LINT_EXCLU
 
 #######################################################################3
 
-all: directories deps compile start_files
+all: directories deps compile start_files maps
 
 directories: $(BIN_DIR)
 
@@ -123,7 +167,7 @@ $(DEPS):
 
 start_files: directories $(INTERACTIVE)
 
-interactive: directories $(INTERACTIVE) deps
+interactive: directories $(INTERACTIVE) deps maps
 
 $(INTERACTIVE): 
 	@echo "Making interactive script."
@@ -138,7 +182,7 @@ $(INTERACTIVE):
 	@echo "  }" >> $@
 	@echo "  return true;" >> $@
 	@echo "};" >> $@
-	@echo "process.env.SRE_JSON_PATH = '$(JSON_SRC)';" >> $@
+	@echo "process.env.SRE_JSON_PATH = '$(JSON_DST)';" >> $@
 	@echo "require('$(DEPS)');" >> $@ 
 	@echo "goog.require('sre.System');" >> $@
 	@echo "sre.System.setAsync()" >> $@
@@ -164,7 +208,7 @@ $(TEST_DEPS):
 	@echo Building Javascript dependencies in test directory $(TEST_DEPS)
 	@$(DEPSWRITER) --root_with_prefix="$(TEST_DIR) $(TEST_DIR)" > $(TEST_DEPS)
 
-test: directories test_deps deps test_compile test_script run_test
+test: directories test_deps deps test_compile test_script maps run_test
 
 test_compile: $(TEST_TARGET)
 
@@ -178,7 +222,7 @@ $(TEST):
 	@echo "Making test script."
 	@echo "#!/bin/bash" > $@
 	@echo "## This script is automatically generated. Do not edit!" >> $@
-	@echo "\nexport SRE_JSON_PATH=$(JSON_SRC)\n" >> $@
+	@echo "\nexport SRE_JSON_PATH=$(JSON_DST)\n" >> $@
 	@echo $(NODEJS) $(TEST_TARGET) "\$$@" >> $@
 	@chmod 755 $@
 
@@ -197,24 +241,36 @@ clean_test:
 
 publish: clean compile browser maps iemaps
 
-maps: $(MAPS)
+$(JSON_DST):
+	@echo "Creating JSON destination."
+	@mkdir -p $(JSON_DST)
 
-$(MAPS): 
-	@for j in $(LOCALES); do\
-		dir=$(JSON_DST)/`basename $$j`/$@; \
-		mkdir -p $$dir; \
-		for i in $$j/$@/*.js; do\
-			$(JSON_MINIFY) $$i > $$dir/`basename $$i`; \
+maps: $(JSON_DST) $(LOC_DST)
+
+$(LOC_DST):
+	@echo "Creating mappings for locale `basename $@ .js`."
+	@echo '{' > $@
+	@for dir in $(MAPS); do\
+		for i in $(JSON_SRC)/`basename $@ .js`/$$dir/*.js; do\
+			echo '"'`basename $@ .js`/$$dir/`basename $$i`'": '  >> $@; \
+			$(JSON_MINIFY) $$i >> $@; \
+			echo ','  >> $@; \
 		done; \
 	done
+	@head -n -1 $@ > $@.tmp
+	@echo '}\n' >> $@.tmp
+	@mv $@.tmp $@
 
-iemaps:
+iemaps: $(JSON_DST) $(IEMAPS_FILE)
+
+$(IEMAPS_FILE):
+	@echo "Creating mappings for IE."
 	@echo 'sre.BrowserUtil.mapsForIE = {' > $(IEMAPS_FILE)
 	@for j in $(LOCALES); do\
 		for dir in $(MAPS); do\
-			for i in $(JSON_DST)/`basename $$j`/$$dir/*.js; do\
-				echo '"'`basename $$j`'/'`basename $$i`'": '  >> $(IEMAPS_FILE); \
-				cat $$i >> $(IEMAPS_FILE); \
+			for i in $(JSON_SRC)/$$j/$$dir/*.js; do\
+				echo '"'`basename $$j`/$$dir/`basename $$i`'": '  >> $(IEMAPS_FILE); \
+				$(JSON_MINIFY) $$i >> $(IEMAPS_FILE); \
 				echo ','  >> $(IEMAPS_FILE); \
 			done; \
 		done; \

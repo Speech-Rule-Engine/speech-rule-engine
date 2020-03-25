@@ -22,7 +22,6 @@
 goog.provide('sre.PrefixRuleTest');
 
 goog.require('sre.AbstractRuleTest');
-goog.require('sre.DynamicCstr');
 goog.require('sre.Semantic');
 goog.require('sre.SpeechGeneratorUtil');
 

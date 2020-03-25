@@ -899,7 +899,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar007 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mn>0</mn><mo>.</mo><mover accent="true"><mrow>' +
       '<mn>12</mn></mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = 'la décimale 0 virgule suivi par le chiffre répété 1 2';
+  var speech = 'la décimale 0 virgule suivi par les chiffres répétés 1 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -911,7 +911,7 @@ sre.ClearspeakFrenchPart3Adornments.prototype.testBar008 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mn>2</mn><mo>.</mo><mover accent="true"><mrow>' +
       '<mn>134</mn></mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = 'la décimale 2 virgule suivi par le chiffre répété 1 3 4';
+  var speech = 'la décimale 2 virgule suivi par les chiffres répétés 1 3 4';
   this.executeRuleTest(mathml, speech, preference);
 };
 

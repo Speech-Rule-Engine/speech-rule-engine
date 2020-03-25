@@ -19,9 +19,7 @@
 
 goog.provide('sre.ClearspeakRules');
 
-goog.require('sre.ClearspeakPreferences');
 goog.require('sre.ClearspeakUtil');
-goog.require('sre.Engine');
 goog.require('sre.Grammar');
 goog.require('sre.MathStore');
 goog.require('sre.MathspeakUtil');
@@ -162,13 +160,13 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   // Font rules
   defineRule(
       'font', 'clearspeak.default',
-      '[t] @font; [n] self::* (grammar:ignoreFont=@font,pause:"short")',
+      '[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font,pause:"short")',
       'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"');
 
   defineRule(
       'font-identifier', 'clearspeak.default',
-      '[t] @font; [n] self::* (grammar:ignoreFont=@font,pause:"short")',
+      '[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font,pause:"short")',
       'self::identifier', 'string-length(text())=1',
       '@font', '@font="normal"', 'not(contains(@grammar, "ignoreFont"))',
       '@role!="unit"');
@@ -205,7 +203,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   // TODO: Make that work on tensor elements?
   defineRule(
       'capital', 'clearspeak.default',
-      '[n] text() (pitch:0.6,grammar:ignoreFont="cap")',
+      '[n] text() (pitch:0.6,grammar:ignoreCaps="cap")',
       'self::identifier',
       '@role="latinletter" or @role="greekletter" or @role="simple function"',
       'CQFisCapital');

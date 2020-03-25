@@ -21,7 +21,6 @@
 goog.provide('sre.StringRenderer');
 
 goog.require('sre.AbstractAudioRenderer');
-goog.require('sre.BaseUtil');
 
 
 

@@ -25,7 +25,6 @@ goog.provide('sre.SemanticNodeFactory');
 
 goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticDefault');
-goog.require('sre.SemanticMeaningCollator');
 goog.require('sre.SemanticNode');
 goog.require('sre.SemanticNodeCollator');
 
