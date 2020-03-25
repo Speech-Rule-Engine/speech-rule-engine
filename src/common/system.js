@@ -20,27 +20,16 @@
  */
 goog.provide('sre.System');
 
-goog.require('sre.AuralRendering');
 goog.require('sre.BaseUtil');
 goog.require('sre.Debugger');
-goog.require('sre.DomUtil');
-goog.require('sre.DynamicCstr');
 goog.require('sre.Engine');
 goog.require('sre.Engine.Error');
-goog.require('sre.Enrich');
-goog.require('sre.HighlighterFactory');
 goog.require('sre.L10n');
-goog.require('sre.MathStore');
 goog.require('sre.ProcessorFactory');
-goog.require('sre.Semantic');
-goog.require('sre.SpeechGeneratorFactory');
-goog.require('sre.SpeechGeneratorUtil');
 goog.require('sre.SpeechRuleEngine');
 goog.require('sre.SpeechRuleStores');
 goog.require('sre.SystemExternal');
 goog.require('sre.Variables');
-goog.require('sre.WalkerFactory');
-goog.require('sre.WalkerUtil');
 
 
 

@@ -27,7 +27,6 @@
 goog.provide('sre.SemanticTree');
 
 goog.require('sre.DomUtil');
-goog.require('sre.MathUtil');
 goog.require('sre.SemanticAnnotations');
 goog.require('sre.SemanticMathml');
 goog.require('sre.SemanticNode');

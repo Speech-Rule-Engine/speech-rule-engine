@@ -24,6 +24,13 @@ goog.provide('sre.Processor');
 goog.provide('sre.ProcessorFactory');
 
 goog.require('sre.Engine');
+goog.require('sre.Enrich');
+goog.require('sre.HighlighterFactory');
+goog.require('sre.Semantic');
+goog.require('sre.SpeechGeneratorFactory');
+goog.require('sre.SpeechGeneratorUtil');
+goog.require('sre.WalkerFactory');
+goog.require('sre.WalkerUtil');
 
 
 /**

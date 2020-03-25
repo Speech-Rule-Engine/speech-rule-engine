@@ -24,7 +24,6 @@ goog.require('sre.BrailleNemethTest');
 goog.require('sre.SpeechEnglishTest');
 goog.require('sre.SpeechFrenchTest');
 goog.require('sre.SpeechSpanishTest');
-goog.require('sre.System');
 goog.require('sre.TestRunner');
 
 
