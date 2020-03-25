@@ -347,8 +347,7 @@ sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE] =
     sre.DynamicCstr.DEFAULT_VALUE;
 sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.TOPIC] =
     sre.DynamicCstr.DEFAULT_VALUE;
-sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY] =
-    'speech';// sre.DynamicCstr.DEFAULT_VALUE;
+sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY] = 'speech';
 
 
 

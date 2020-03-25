@@ -6,12 +6,14 @@ Speech Rule Engine
 NodeJS version of the ChromeVox speech rule engine.
 Forked from ChromeVox release 1.31.0
 
-Speech rule engine (SRE) can translate XML expressions into speech strings according to rules that
-can be specified in a syntax using Xpath expressions.  It was originally designed for translation
-of MathML and MathJax DOM elements for the ChromeVox screen reader. 
-Besides the rules originally designed for the use in ChromeVox, it also has an implemententation of the 
-full set of Mathspeak rules. In addition it contains a library for semantic interpretation and enrichment
-of MathML expressions.
+Speech rule engine (SRE) can translate XML expressions into speech strings
+according to rules that can be specified in a syntax using Xpath expressions.
+It was originally designed for translation of MathML and MathJax DOM elements
+for the ChromeVox screen reader.  Besides the rules originally designed for the
+use in ChromeVox, it also has an implemententation of the full set of Mathspeak
+and Clearspeak rules, localisation into a number of languages and Braille output
+currently in Nemeth. In addition it contains a library for semantic
+interpretation and enrichment of MathML expressions.
 
 There are three ways of using this engine:
 
@@ -81,9 +83,9 @@ Most common options are
 
 | Option | Value |
 | ---- | ---- |
-| *domain* | Domain or subject area of speech rules (e.g., mathspeak, emacspeak).|
+| *domain* | Domain or subject area of speech rules (e.g., mathspeak, clearspeak).|
 | *style* | Style of speech rules (e.g., brief).|
-| *locale* | Language locale in 639-1. Currently available: en, es |
+| *locale* | Language locale in 639-1. Currently available: en, es, fr |
 | *markup*| Set the markup: ```none```, ```ssml```, ```sable```, ```voicexml```, ```acss``` |
 | *walker* | A walker to use for interactive exploration: ```None```, ```Syntax```, ```Semantic```, ```Table``` |
 
@@ -227,7 +229,7 @@ The following is a list of command line options for the speech rule engine.
 | | |
 | -d | --domain [name] | Domain or subject area [name]. |
 ||| This refers to a particular subject type of speech rules or subject area rules are defined for (e.g., mathspeak, physics). |
-||| If no domain parameter is provided, domain default is used. |
+||| If no domain parameter is provided, default is used. |
 | -t | --style [name]  | Speech style [name]. |
 ||| Selects a particular speech style (e.g., brief). |
 ||| If no style parameter is provided, style default is used. |
