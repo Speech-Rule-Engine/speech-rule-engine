@@ -82,6 +82,7 @@ CLOSURE_ERRORS = accessControls\
 	missingReturn\
 	nonStandardJsDocs\
 	strictModuleDepCheck\
+        strictPrimitiveOperators\
 	suspiciousCode\
 	tweakValidation\
 	typeInvalidation\
@@ -97,7 +98,6 @@ CLOSURE_ERRORS = accessControls\
 #	reportUnknownTypes\
 #       strictCheckTypes\
 #       strictMissingProperties\
-#       strictPrimitiveOperators
 
 # Deleted Warnings:
 # ambiguousFunctionDe

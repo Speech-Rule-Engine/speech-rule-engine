@@ -189,7 +189,7 @@ sre.TableWalker.prototype.verticalMove_ = function(direction) {
  * @protected
  */
 sre.TableWalker.prototype.jumpCell = function() {
-  if (!this.isInTable_()) {
+  if (!this.isInTable_() || this.key_ === null) {
     return this.getFocus();
   }
   if (this.moved === sre.Walker.move.ROW) {

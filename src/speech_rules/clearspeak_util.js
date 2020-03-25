@@ -259,8 +259,8 @@ sre.ClearspeakUtil.isSimpleFraction_ = function(node) {
   if (sre.ClearspeakUtil.hasPreference('Fraction_Ordinal')) {
     return true;
   }
-  var enumerator = node.childNodes[0].textContent;
-  var denominator = node.childNodes[1].textContent;
+  var enumerator = parseInt(node.childNodes[0].textContent, 10);
+  var denominator = parseInt(node.childNodes[1].textContent, 10);
   return enumerator > 0 && enumerator < 20 &&
       denominator > 0 && denominator < 11;
 };
