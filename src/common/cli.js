@@ -250,12 +250,20 @@ sre.Cli.prototype.commandLine = function() {
       option('-i, --input [name]', 'Input file [name]. (Deprecated)').
       option('-o, --output [name]', 'Output file [name]. Defaults to stdout.').
       option('').
-      option('-d, --domain [name]', 'Speech rule set [name]. See also --options' +
-             ' for details.', set('domain'), 'default').
-      option('-t, --style [name]', 'Speech style [name]. See also --options' +
-             ' for details.', set('style'), 'default').
-      option('-c, --locale [code]', 'Locale [code].', set('locale'), 'en').
-      option('-b, --modality [name]', 'Modality [name].', set('modality'), 'speech').
+      option('-d, --domain [name]', 'Speech rule set [name]. See --options' +
+             ' for details.',
+             set(sre.DynamicCstr.Axis.DOMAIN),
+             sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN]).
+      option('-t, --style [name]', 'Speech style [name]. See --options' +
+             ' for details.',
+             set(sre.DynamicCstr.Axis.STYLE),
+             sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE]).
+      option('-c, --locale [code]', 'Locale [code].',
+             set(sre.DynamicCstr.Axis.LOCALE),
+             sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]).
+      option('-b, --modality [name]', 'Modality [name].',
+             set(sre.DynamicCstr.Axis.MODALITY),
+             sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY]).
       option('-s, --semantics', 'Switch OFF semantics interpretation. (Deprecated)',
              set('semantics')).
       option('-k, --markup [name]', 'Generate speech output with markup tags.',
