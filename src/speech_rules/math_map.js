@@ -69,7 +69,6 @@ sre.MathMap.getInstance = function() {
 
 
 sre.MathMap.prototype.loadLocale = function() {
-  var timeIn = (new Date()).getTime();
   var locale = sre.Engine.getInstance().locale;
   if (this.loaded_.indexOf(locale) === -1) {
     var async = sre.Engine.getInstance().mode === sre.Engine.Mode.ASYNC;
@@ -82,8 +81,6 @@ sre.MathMap.prototype.loadLocale = function() {
       sre.Engine.getInstance().mode = sre.Engine.Mode.ASYNC;
     }
   }
-  var timeOut = (new Date()).getTime();
-  console.log('Time:', timeOut - timeIn);
 };
 
 
@@ -175,7 +172,6 @@ sre.MathMap.prototype.retrieveMaps = function(locale) {
  */
 sre.MathMap.prototype.getJsonIE_ = function(locale, opt_count) {
   var count = opt_count || 1;
-  console.log(sre.MathMap.toFetch_);
   if (!sre.BrowserUtil.mapsForIE) {
     if (count <= 5) {
       setTimeout(
