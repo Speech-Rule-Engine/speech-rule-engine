@@ -97,25 +97,7 @@ CLOSURE_ERRORS = accessControls\
 	visibility\
 #	reportUnknownTypes\
 #       strictCheckTypes\
-#       strictMissingProperties\
-
-# Deleted Warnings:
-# ambiguousFunctionDe
-# useOfGoogBase
-#
-# Old and removed:
-# msgDescriptions underscore
-#
-# New Warnings:
-# checkDebuggerStatement closureDepMethodUsageChecks conformanceViolations
-# ---- not yet inserted Start ----
-# extraRequire
-# strictCheckTypes
-# strictMissingProperties
-# strictPrimitiveOperators
-# ---- not yet inserted End ----
-# tweakValidation violatedModuleDep
-#
+#       strictMissingProperties
 MAKE_ERROR_FLAG = --jscomp_error=$(error)
 ERROR_FLAGS = $(foreach error, $(CLOSURE_ERRORS), $(MAKE_ERROR_FLAG))
 
