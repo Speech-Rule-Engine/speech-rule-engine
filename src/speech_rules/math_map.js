@@ -29,7 +29,6 @@ goog.require('sre.Engine');
 goog.require('sre.MathCompoundStore');
 goog.require('sre.AlphabetGenerator');
 goog.require('sre.SystemExternal');
-goog.require('sre.Variables');
 
 
 
