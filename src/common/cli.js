@@ -253,7 +253,7 @@ sre.Cli.prototype.commandLine = function() {
       option('-i, --input [name]', 'Input file [name]. (Deprecated)').
       option('-o, --output [name]', 'Output file [name]. Defaults to stdout.').
       option('').
-      option('-d, --dom [name]', 'Speech rule set [name]. See also --options' +
+      option('-d, --domain [name]', 'Speech rule set [name]. See also --options' +
              ' for defails.', set('domain'), 'mathspeak').
       option('-t, --style [name]', 'Speech style [name]. See also --options' +
              ' for details.', set('style'), 'default').

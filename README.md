@@ -225,7 +225,7 @@ The following is a list of command line options for the speech rule engine.
 | | |
 | | |
 | | |
-| -d | --dom [name] | Domain or subject area [name]. |
+| -d | --domain [name] | Domain or subject area [name]. |
 ||| This refers to a particular subject type of speech rules or subject area rules are defined for (e.g., mathspeak, physics). |
 ||| If no domain parameter is provided, domain default is used. |
 | -t | --style [name]  | Speech style [name]. |
