@@ -29,7 +29,6 @@ goog.require('sre.Engine');
 goog.require('sre.MathCompoundStore');
 goog.require('sre.AlphabetGenerator');
 goog.require('sre.SystemExternal');
-goog.require('sre.Variables');
 
 
 
@@ -45,6 +44,8 @@ sre.MathMap = function() {
    */
   this.store = sre.MathCompoundStore.getInstance();
 
+  this.loaded_ = [];
+
   /**
    * Methods for parsing json structures.
    * @type {Object.<function(Array.<string>)>}
@@ -55,13 +56,32 @@ sre.MathMap = function() {
     units: goog.bind(this.store.addUnitRules, this.store)
   };
 
-  var timeIn = (new Date()).getTime();
-  this.retrieveMaps();
-  var timeOut = (new Date()).getTime();
-  console.log('Time:', timeOut - timeIn);
-
 };
 goog.addSingletonGetter(sre.MathMap);
+
+
+sre.MathMap.oldInst_ = sre.MathMap.getInstance;
+sre.MathMap.getInstance = function() {
+  var instance = sre.MathMap.oldInst_();
+  instance.loadLocale();
+  return instance;
+};
+
+
+sre.MathMap.prototype.loadLocale = function() {
+  var locale = sre.Engine.getInstance().locale;
+  if (this.loaded_.indexOf(locale) === -1) {
+    var async = sre.Engine.getInstance().mode === sre.Engine.Mode.ASYNC;
+    if (async) {
+      sre.Engine.getInstance().mode = sre.Engine.Mode.SYNC;
+    }
+    this.loaded_.push(locale);
+    this.retrieveMaps(locale);
+    if (async) {
+      sre.Engine.getInstance().mode = sre.Engine.Mode.ASYNC;
+    }
+  }
+};
 
 
 /**
@@ -75,17 +95,22 @@ sre.Engine.registerTest(function() {
 });
 
 
+/**
+ * Retrieves JSON rule mappings for a given locale.
+ * @param {string} locale The target locale.
+ */
 sre.MathMap.prototype.retrieveFiles = function(locale) {
   var file = sre.BaseUtil.makePath(sre.SystemExternal.jsonPath) +
       locale + '.js';
   switch (sre.Engine.getInstance().mode) {
     case sre.Engine.Mode.ASYNC:
       sre.MathMap.toFetch_++;
+      var parse = goog.bind(this.parseMaps, this);
         sre.MathMap.fromFile_(file,
             function(err, json) {
               sre.MathMap.toFetch_--;
               if (err) return;
-              goog.bind(this.parse, this)(json);
+              parse(json);
             });
       break;
     case sre.Engine.Mode.HTTP:
@@ -106,50 +131,56 @@ sre.MathMap.prototype.parseMaps = function(json) {
   this.addMaps(js);
 };
 
-sre.MathMap.prototype.addMaps = function(js) {
-  for (var i = 0, key; key = Object.keys(js)[i]; i++) {
+
+/**
+ * Adds JSON mappings to the mathmap store.
+ * @param {!Object.<Array>} json The json mappings.
+ * @param {string=} opt_locale Optionally the locale for the mappings to
+ *     add. This is necessary for the single IE dictionary.
+ */
+sre.MathMap.prototype.addMaps = function(json, opt_locale) {
+  for (var i = 0, key; key = Object.keys(json)[i]; i++) {
     var info = key.split('/');
-    js[key].forEach(this.addRules[info[1]]);
+    if (opt_locale && opt_locale !== info[0]) {
+      continue;
+    }
+    json[key].forEach(this.addRules[info[1]]);
   }
 };
 
 
 /**
  * Retrieves mappings and adds them to the respective stores.
+ * @param {string} locale The target locale.
  */
-sre.MathMap.prototype.retrieveMaps = function() {
+sre.MathMap.prototype.retrieveMaps = function(locale) {
+  sre.AlphabetGenerator.generate(locale, this.store);
   if (sre.Engine.getInstance().isIE &&
       sre.Engine.getInstance().mode === sre.Engine.Mode.HTTP) {
-    this.getJsonIE_();
+    this.getJsonIE_(locale);
     return;
   }
-  for (var i = 0; i < sre.Variables.LOCALES.length; i++) {
-    var locale = sre.Variables.LOCALES[i];
-    sre.AlphabetGenerator.generate(locale, this.store);
-    this.retrieveFiles(locale);
-  }
+  this.retrieveFiles(locale);
 };
 
 
 /**
  * Gets JSON elements from the global JSON object in case of IE browsers.
+ * @param {string} locale The target locale.
  * @param {number=} opt_count Optional counter argument for callback.
  * @private
  */
-sre.MathMap.prototype.getJsonIE_ = function(opt_count) {
+sre.MathMap.prototype.getJsonIE_ = function(locale, opt_count) {
   var count = opt_count || 1;
   if (!sre.BrowserUtil.mapsForIE) {
     if (count <= 5) {
       setTimeout(
-        goog.bind(function() {this.getJsonIE_(count++);}, this),
+        goog.bind(function() {this.getJsonIE_(locale, count++);}, this),
           300);
-    } else {
-      sre.MathMap.toFetch_--;
     }
     return;
   }
-  this.addMaps(sre.BrowserUtil.mapsForIE);
-  sre.MathMap.toFetch_--;
+  this.addMaps(sre.BrowserUtil.mapsForIE, locale);
 };
 
 
