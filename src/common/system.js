@@ -95,9 +95,11 @@ sre.System.prototype.setupEngine = function(feature) {
  * @private
  */
 sre.System.prototype.configBlocks_ = function(feature) {
-  if (sre.Engine.getInstance().mode !== sre.Engine.Mode.HTTP) {
+  if (sre.Engine.getInstance().config ||
+      sre.Engine.getInstance().mode !== sre.Engine.Mode.HTTP) {
     return;
   }
+  sre.Engine.getInstance().config = true;
   var scripts = document.documentElement.querySelectorAll(
       'script[type="text/x-sre-config"]');
   for (var i = 0, m = scripts.length; i < m; i++) {

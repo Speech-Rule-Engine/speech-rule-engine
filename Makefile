@@ -34,7 +34,9 @@ JSON_SRC = $(SRC_DIR)/mathmaps
 JSON_DST = $(LIB_DIR)/mathmaps
 MAPS = functions symbols units
 IEMAPS_FILE = $(JSON_DST)/mathmaps_ie.js
-LOCALES = $(JSON_SRC)/*  ## $(foreach dir, $(MAPS), $(JSON_SRC)/$(dir))
+LOCALES = $(notdir $(wildcard $(JSON_SRC)/*))  ## $(foreach dir, $(MAPS), $(JSON_SRC)/$(dir))
+LOC_SRC = $(JSON_SRC)/*  ## $(foreach dir, $(MAPS), $(JSON_SRC)/$(dir))
+LOC_DST = $(addprefix $(JSON_DST)/, $(addsuffix .js,$(LOCALES)))
 
 TEST_DIR = $(abspath ./tests)
 TEST_TARGET = $(LIB_DIR)/test.js
@@ -133,7 +135,7 @@ FIXJSSTYLE = python $(LINT_ROOT)/fixjsstyle.py --strict --jsdoc -x '$(LINT_EXCLU
 
 #######################################################################3
 
-all: directories deps compile start_files
+all: directories deps compile start_files maps
 
 directories: $(BIN_DIR)
 
@@ -165,7 +167,7 @@ $(DEPS):
 
 start_files: directories $(INTERACTIVE)
 
-interactive: directories $(INTERACTIVE) deps
+interactive: directories $(INTERACTIVE) deps maps
 
 $(INTERACTIVE): 
 	@echo "Making interactive script."
@@ -180,7 +182,7 @@ $(INTERACTIVE):
 	@echo "  }" >> $@
 	@echo "  return true;" >> $@
 	@echo "};" >> $@
-	@echo "process.env.SRE_JSON_PATH = '$(JSON_SRC)';" >> $@
+	@echo "process.env.SRE_JSON_PATH = '$(JSON_DST)';" >> $@
 	@echo "require('$(DEPS)');" >> $@ 
 	@echo "goog.require('sre.System');" >> $@
 	@echo "sre.System.setAsync()" >> $@
@@ -206,7 +208,7 @@ $(TEST_DEPS):
 	@echo Building Javascript dependencies in test directory $(TEST_DEPS)
 	@$(DEPSWRITER) --root_with_prefix="$(TEST_DIR) $(TEST_DIR)" > $(TEST_DEPS)
 
-test: directories test_deps deps test_compile test_script run_test
+test: directories test_deps deps test_compile test_script maps run_test
 
 test_compile: $(TEST_TARGET)
 
@@ -220,7 +222,7 @@ $(TEST):
 	@echo "Making test script."
 	@echo "#!/bin/bash" > $@
 	@echo "## This script is automatically generated. Do not edit!" >> $@
-	@echo "\nexport SRE_JSON_PATH=$(JSON_SRC)\n" >> $@
+	@echo "\nexport SRE_JSON_PATH=$(JSON_DST)\n" >> $@
 	@echo $(NODEJS) $(TEST_TARGET) "\$$@" >> $@
 	@chmod 755 $@
 
@@ -239,24 +241,36 @@ clean_test:
 
 publish: clean compile browser maps iemaps
 
-maps: $(MAPS)
+$(JSON_DST):
+	@echo "Creating JSON destination."
+	@mkdir -p $(JSON_DST)
 
-$(MAPS): 
-	@for j in $(LOCALES); do\
-		dir=$(JSON_DST)/`basename $$j`/$@; \
-		mkdir -p $$dir; \
-		for i in $$j/$@/*.js; do\
-			$(JSON_MINIFY) $$i > $$dir/`basename $$i`; \
+maps: $(JSON_DST) $(LOC_DST)
+
+$(LOC_DST):
+	@echo "Creating mappings for locale `basename $@ .js`."
+	@echo '{' > $@
+	@for dir in $(MAPS); do\
+		for i in $(JSON_SRC)/`basename $@ .js`/$$dir/*.js; do\
+			echo '"'`basename $@ .js`/$$dir/`basename $$i`'": '  >> $@; \
+			$(JSON_MINIFY) $$i >> $@; \
+			echo ','  >> $@; \
 		done; \
 	done
+	@head -n -1 $@ > $@.tmp
+	@echo '}\n' >> $@.tmp
+	@mv $@.tmp $@
 
-iemaps:
+iemaps: $(JSON_DST) $(IEMAPS_FILE)
+
+$(IEMAPS_FILE):
+	@echo "Creating mappings for IE."
 	@echo 'sre.BrowserUtil.mapsForIE = {' > $(IEMAPS_FILE)
 	@for j in $(LOCALES); do\
 		for dir in $(MAPS); do\
-			for i in $(JSON_DST)/`basename $$j`/$$dir/*.js; do\
-				echo '"'`basename $$j`'/'`basename $$i`'": '  >> $(IEMAPS_FILE); \
-				cat $$i >> $(IEMAPS_FILE); \
+			for i in $(JSON_SRC)/$$j/$$dir/*.js; do\
+				echo '"'`basename $$j`/$$dir/`basename $$i`'": '  >> $(IEMAPS_FILE); \
+				$(JSON_MINIFY) $$i >> $(IEMAPS_FILE); \
 				echo ','  >> $(IEMAPS_FILE); \
 			done; \
 		done; \

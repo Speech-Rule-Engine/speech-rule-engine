@@ -45,6 +45,16 @@ sre.MathMap = function() {
    */
   this.store = sre.MathCompoundStore.getInstance();
 
+  /**
+   * Methods for parsing json structures.
+   * @type {Object.<function(Array.<string>)>}
+   */
+  this.addRules = {
+    functions: goog.bind(this.store.addFunctionRules, this.store),
+    symbols: goog.bind(this.store.addSymbolRules, this.store),
+    units: goog.bind(this.store.addUnitRules, this.store)
+  };
+
   var timeIn = (new Date()).getTime();
   this.retrieveMaps();
   var timeOut = (new Date()).getTime();
@@ -65,146 +75,41 @@ sre.Engine.registerTest(function() {
 });
 
 
-/**
- * Stringifies MathMap into JSON object.
- * @return {string} The stringified version of the mapping.
- */
-sre.MathMap.prototype.stringify = function() {
-  return JSON.stringify(this);
-};
-
-
-/**
- * Subpath to dir containing ChromeVox JSON definitions for symbols.
- * @type {string}
- * @const
- * @private
- */
-sre.MathMap.SYMBOLS_PATH_ = 'symbols';
-
-
-/**
- * Subpath to dir containing ChromeVox JSON definitions for functions.
- * @type {string}
- * @const
- * @private
- */
-sre.MathMap.FUNCTIONS_PATH_ = 'functions';
-
-
-/**
- * Subpath to dir containing ChromeVox JSON definitions for units.
- * @type {string}
- * @const
- * @private
- */
-sre.MathMap.UNITS_PATH_ = 'units';
-
-
-/**
- * Array of JSON filenames containing symbol definitions for math speak.
- * @type {Array.<string>}
- * @const
- * @private
- */
-sre.MathMap.SYMBOLS_FILES_ = [
-  // Greek
-  // 'greek-capital.js', 'greek-small.js', 
-  'greek-scripts.js', 'greek-symbols.js',
-  'greek-rest.js',
-
-  // Greek Mathfonts
-  // 'greek-mathfonts-bold.js', 'greek-mathfonts-italic.js',
-  // 'greek-mathfonts-bold-italic.js', 'greek-mathfonts-sans-serif-bold.js',
-  // 'greek-mathfonts-sans-serif-bold-italic.js',
-
-  // Hebrew
-  'hebrew_letters.js',
-
-  // Latin
-  // 'latin-lower-normal.js', 'latin-upper-normal.js',
-  'latin-lower-double-accent.js', 'latin-lower-phonetic.js',
-  'latin-lower-single-accent.js', 'latin-rest.js',
-  'latin-upper-double-accent.js', 'latin-upper-single-accent.js',
-
-  // Latin Mathfonts
-  // 'latin-mathfonts-bold-fraktur.js', 'latin-mathfonts-bold.js',
-  // 'latin-mathfonts-bold-italic.js', 'latin-mathfonts-bold-script.js',
-  // 'latin-mathfonts-double-struck.js', 'latin-mathfonts-fraktur.js',
-  // 'latin-mathfonts-italic.js', 'latin-mathfonts-monospace.js',
-  // 'latin-mathfonts-sans-serif-bold.js', 'latin-mathfonts-sans-serif-italic.js',
-  // 'latin-mathfonts-sans-serif-bold-italic.js', 'latin-mathfonts-sans-serif.js',
-  // 'latin-mathfonts-script.js',
-
-  // Math Symbols
-  'math_angles.js', 'math_arrows.js', 'math_characters.js',
-  'math_delimiters.js', 'math_geometry.js',
-  'math_harpoons.js', 'math_non_characters.js', 'math_symbols.js',
-  'math_whitespace.js', 'other_stars.js',
-  // 'math_digits.js',
-  'digits_rest.js'
-];
-
-
-/**
- * Array of JSON filenames containing symbol definitions for math speak.
- * @type {Array.<string>}
- * @const
- * @private
- */
-sre.MathMap.FUNCTIONS_FILES_ = [
-  'algebra.js', 'elementary.js', 'hyperbolic.js', 'trigonometry.js'
-];
-
-
-/**
- * Array of JSON filenames containing unit definitions for math speak.
- * @type {Array.<string>}
- * @const
- * @private
- */
-sre.MathMap.UNITS_FILES_ = [
-  'energy.js', 'length.js', 'memory.js', 'other.js', 'speed.js',
-  'temperature.js', 'time.js', 'volume.js', 'weight.js'
-];
-
-
-/**
- * Retrieves JSON rule mappings from a list of files at a given path and adds
- * them as rules to the current store.
- * @param {Array.<string>} files List of file names.
- * @param {string} path A path name.
- * @param {function(JSONType)} func Method adding the rules.
- */
-sre.MathMap.retrieveFiles = function(files, path, func) {
-  path = sre.BaseUtil.makePath(sre.SystemExternal.jsonPath + path);
+sre.MathMap.prototype.retrieveFiles = function(locale) {
+  var file = sre.BaseUtil.makePath(sre.SystemExternal.jsonPath) +
+      locale + '.js';
   switch (sre.Engine.getInstance().mode) {
     case sre.Engine.Mode.ASYNC:
-      sre.MathMap.toFetch_ += files.length;
-      for (var i = 0, file; file = files[i]; i++) {
-        sre.MathMap.fromFile_(path + file,
+      sre.MathMap.toFetch_++;
+        sre.MathMap.fromFile_(file,
             function(err, json) {
               sre.MathMap.toFetch_--;
               if (err) return;
-              JSON.parse(json).forEach(function(x) {func(x);});
+              goog.bind(this.parse, this)(json);
             });
-      }
       break;
     case sre.Engine.Mode.HTTP:
-      var isIE = sre.Engine.getInstance().isIE;
-      sre.MathMap.toFetch_ += files.length;
-      for (i = 0; file = files[i]; i++) {
-        isIE ?
-            sre.MathMap.getJsonIE_(file, func) :
-            sre.MathMap.getJsonAjax_(path + file, func);
-      }
+      sre.MathMap.toFetch_++;
+      this.getJsonAjax_(file);
       break;
     case sre.Engine.Mode.SYNC:
     default:
-      var innerFunc = function(file) { return path + file; };
-      sre.MathMap.parseFiles(files.map(innerFunc)).
-          forEach(function(json) {func(json);});
-      break;
+    var strs = sre.MathMap.loadFile(file);
+    this.parseMaps(strs);
+    break;
+  }
+};
+
+
+sre.MathMap.prototype.parseMaps = function(json) {
+  var js = /** @type {!Object<Array>} */(JSON.parse(json));
+  this.addMaps(js);
+};
+
+sre.MathMap.prototype.addMaps = function(js) {
+  for (var i = 0, key; key = Object.keys(js)[i]; i++) {
+    var info = key.split('/');
+    js[key].forEach(this.addRules[info[1]]);
   }
 };
 
@@ -213,51 +118,37 @@ sre.MathMap.retrieveFiles = function(files, path, func) {
  * Retrieves mappings and adds them to the respective stores.
  */
 sre.MathMap.prototype.retrieveMaps = function() {
+  if (sre.Engine.getInstance().isIE &&
+      sre.Engine.getInstance().mode === sre.Engine.Mode.HTTP) {
+    this.getJsonIE_();
+    return;
+  }
   for (var i = 0; i < sre.Variables.LOCALES.length; i++) {
     var locale = sre.Variables.LOCALES[i];
     sre.AlphabetGenerator.generate(locale, this.store);
-    sre.MathMap.retrieveFiles(
-        sre.MathMap.FUNCTIONS_FILES_,
-        locale + '/' + sre.MathMap.FUNCTIONS_PATH_,
-        goog.bind(this.store.addFunctionRules, this.store));
-    sre.MathMap.retrieveFiles(
-        sre.MathMap.SYMBOLS_FILES_,
-        locale + '/' + sre.MathMap.SYMBOLS_PATH_,
-        goog.bind(this.store.addSymbolRules, this.store));
-    sre.MathMap.retrieveFiles(
-        sre.MathMap.UNITS_FILES_,
-        locale + '/' + sre.MathMap.UNITS_PATH_,
-        goog.bind(this.store.addUnitRules, this.store));
+    this.retrieveFiles(locale);
   }
 };
 
 
 /**
  * Gets JSON elements from the global JSON object in case of IE browsers.
- * @param {string} file The name of a JSON file.
- * @param {function(JSONType)} func Method adding the rules.
  * @param {number=} opt_count Optional counter argument for callback.
  * @private
  */
-sre.MathMap.getJsonIE_ = function(file, func, opt_count) {
+sre.MathMap.prototype.getJsonIE_ = function(opt_count) {
   var count = opt_count || 1;
   if (!sre.BrowserUtil.mapsForIE) {
     if (count <= 5) {
       setTimeout(
-          function() {sre.MathMap.getJsonIE_(file, func, count++);},
+        goog.bind(function() {this.getJsonIE_(count++);}, this),
           300);
     } else {
       sre.MathMap.toFetch_--;
     }
     return;
   }
-  for (var i = 0; i < sre.Variables.LOCALES.length; i++) {
-    var locale = sre.Variables.LOCALES[i];
-    var json = sre.BrowserUtil.mapsForIE[locale + '/' + file];
-    if (json) {
-      json.forEach(function(x) {func(x);});
-    }
-  }
+  this.addMaps(sre.BrowserUtil.mapsForIE);
   sre.MathMap.toFetch_--;
 };
 
@@ -283,33 +174,9 @@ sre.MathMap.loadFile = function(file) {
   try {
     return sre.MathMap.readJSON_(file);
   } catch (x) {
-    console.error('Unable to load file: ' + file + ', error: ' + x);
+    console.error('Unable to load file: ' + file + '\n' + x);
   }
-};
-
-
-/**
- * Loads a list of JSON files.
- * @param {Array.<string>} files An array of valid filenames.
- * @return {Array.<string>} A string representing JSON array.
- */
-sre.MathMap.loadFiles = function(files) {
-  return files.map(sre.MathMap.loadFile);
-};
-
-
-/**
- * Creates an array of JSON objects from a list of files.
- * @param {Array.<string>} files An array of filenames.
- * @return {Array.<JSONType>} Array of JSON objects.
- */
-sre.MathMap.parseFiles = function(files) {
-  var strs = sre.MathMap.loadFiles(files);
-
-  return [].concat.apply([], strs.map(
-      // Note: As JSON.parse does not expect the value index as the second
-      // parameter, we wrap it.
-      function(value) { return JSON.parse(value); }));
+  return '{}';
 };
 
 
@@ -327,16 +194,16 @@ sre.MathMap.readJSON_ = function(path) {
 /**
  * Sents AJAX request to retrieve a JSON rule file.
  * @param {string} file The file to retrieve.
- * @param {function(JSONType)} func Method adding the retrieved rules.
  * @private
  */
-sre.MathMap.getJsonAjax_ = function(file, func) {
+sre.MathMap.prototype.getJsonAjax_ = function(file) {
   var httpRequest = new XMLHttpRequest();
+  var parse = goog.bind(this.parseMaps, this);
   httpRequest.onreadystatechange = function() {
     if (httpRequest.readyState === 4) {
       sre.MathMap.toFetch_--;
       if (httpRequest.status === 200) {
-        JSON.parse(httpRequest.responseText).forEach(function(x) {func(x);});
+        parse(httpRequest.responseText);
       }
     }
   };
