@@ -341,7 +341,8 @@ sre.DynamicCstr.DEFAULT_VALUE = 'default';
  */
 sre.DynamicCstr.DEFAULT_VALUES = {};
 sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE] = 'en';
-sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN] = 'mathspeak';
+sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN] =
+    sre.DynamicCstr.DEFAULT_VALUE;
 sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE] =
     sre.DynamicCstr.DEFAULT_VALUE;
 sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.TOPIC] =

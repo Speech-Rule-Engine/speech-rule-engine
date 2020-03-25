@@ -251,7 +251,7 @@ sre.Cli.prototype.commandLine = function() {
       option('-o, --output [name]', 'Output file [name]. Defaults to stdout.').
       option('').
       option('-d, --domain [name]', 'Speech rule set [name]. See also --options' +
-             ' for details.', set('domain'), 'mathspeak').
+             ' for details.', set('domain'), 'default').
       option('-t, --style [name]', 'Speech style [name]. See also --options' +
              ' for details.', set('style'), 'default').
       option('-c, --locale [code]', 'Locale [code].', set('locale'), 'en').
