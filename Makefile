@@ -70,6 +70,7 @@ CLOSURE_ERRORS = accessControls\
 	duplicate\
 	es5Strict\
 	externsValidation\
+        extraRequire\
 	globalThis\
 	invalidCasts\
 	misplacedSuppress\
@@ -94,7 +95,6 @@ CLOSURE_ERRORS = accessControls\
 	violatedModuleDep\
 	visibility\
 #	reportUnknownTypes\
-#       extraRequire\
 #       strictCheckTypes\
 #       strictMissingProperties\
 #       strictPrimitiveOperators

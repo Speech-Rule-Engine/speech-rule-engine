@@ -24,7 +24,6 @@ goog.provide('sre.SemanticWalker');
 goog.require('sre.AbstractWalker');
 goog.require('sre.Focus');
 goog.require('sre.Levels');
-goog.require('sre.WalkerUtil');
 
 
 

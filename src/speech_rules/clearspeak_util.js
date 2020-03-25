@@ -19,10 +19,7 @@
 
 goog.provide('sre.ClearspeakUtil');
 
-goog.require('sre.AuditoryDescription');
-goog.require('sre.BaseUtil');
 goog.require('sre.DomUtil');
-goog.require('sre.MathspeakUtil');
 goog.require('sre.Messages');
 goog.require('sre.SemanticAnnotator');
 goog.require('sre.StoreUtil');

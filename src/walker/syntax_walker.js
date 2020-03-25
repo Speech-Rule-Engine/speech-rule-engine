@@ -22,9 +22,7 @@
 goog.provide('sre.SyntaxWalker');
 
 goog.require('sre.AbstractWalker');
-goog.require('sre.Focus');
 goog.require('sre.Levels');
-goog.require('sre.WalkerUtil');
 
 
 
