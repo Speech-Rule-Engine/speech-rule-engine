@@ -22,9 +22,7 @@
 goog.provide('sre.SyntaxWalker');
 
 goog.require('sre.AbstractWalker');
-goog.require('sre.Focus');
 goog.require('sre.Levels');
-goog.require('sre.WalkerUtil');
 
 
 
@@ -130,8 +128,11 @@ sre.SyntaxWalker.prototype.combineContentChildren = function(
  */
 sre.SyntaxWalker.prototype.left = function() {
   sre.SyntaxWalker.base(this, 'left');
-  var index = this.levels.indexOf(this.primaryId()) - 1;
-  var id = this.levels.get(index);
+  var index = this.levels.indexOf(this.primaryId());
+  if (index === null) {
+    return null;
+  }
+  var id = this.levels.get(index - 1);
   return id ? this.singletonFocus(id) : null;
 };
 
@@ -141,8 +142,11 @@ sre.SyntaxWalker.prototype.left = function() {
  */
 sre.SyntaxWalker.prototype.right = function() {
   sre.SyntaxWalker.base(this, 'right');
-  var index = this.levels.indexOf(this.primaryId()) + 1;
-  var id = this.levels.get(index);
+  var index = this.levels.indexOf(this.primaryId());
+  if (index === null) {
+    return null;
+  }
+  var id = this.levels.get(index + 1);
   return id ? this.singletonFocus(id) : null;
 };
 

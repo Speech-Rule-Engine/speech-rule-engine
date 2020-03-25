@@ -20,7 +20,6 @@
  */
 goog.provide('sre.SsmlStepRenderer');
 
-goog.require('sre.Engine');
 goog.require('sre.SsmlRenderer');
 
 

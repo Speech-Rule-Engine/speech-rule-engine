@@ -21,7 +21,6 @@
 goog.provide('sre.Api');
 
 goog.require('sre.DomUtil');
-goog.require('sre.Engine.Mode');
 goog.require('sre.System');
 
 
