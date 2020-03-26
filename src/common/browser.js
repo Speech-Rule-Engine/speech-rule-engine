@@ -20,7 +20,6 @@
  */
 goog.provide('sre.Browser');
 
-goog.require('sre.BrowserUtil');
 goog.require('sre.Engine.Mode');
 goog.require('sre.System');
 
