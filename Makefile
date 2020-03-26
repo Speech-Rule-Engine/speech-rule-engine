@@ -156,7 +156,7 @@ compile: $(TARGET)
 
 $(TARGET): $(SRC)
 	@echo Compiling Speech Rule Engine
-	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Cli --js_output_file=$(TARGET) $^
+	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Cli --entry_point=goog:sre.Api --js_output_file=$(TARGET) $^
 
 deps: $(DEPS)
 
