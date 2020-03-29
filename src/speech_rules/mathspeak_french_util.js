@@ -19,13 +19,6 @@
 
 goog.provide('sre.MathspeakFrenchUtil');
 
-goog.require('sre.BaseUtil');
-goog.require('sre.DomUtil');
-goog.require('sre.Semantic');
-goog.require('sre.SemanticProcessor');
-goog.require('sre.SystemExternal');
-goog.require('sre.XpathUtil');
-
 
 /**
  * Predicate to decide if a root has a small index, i.e., between 1 and 10.

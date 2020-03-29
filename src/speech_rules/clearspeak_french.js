@@ -19,9 +19,7 @@
 
 goog.provide('sre.ClearspeakFrench');
 
-goog.require('sre.ClearspeakPreferences');
 goog.require('sre.ClearspeakUtil');
-goog.require('sre.Engine');
 goog.require('sre.Grammar');
 goog.require('sre.MathStore');
 goog.require('sre.MathspeakUtil');

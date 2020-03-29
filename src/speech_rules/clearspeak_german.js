@@ -23,9 +23,7 @@
 
 goog.provide('sre.ClearspeakGerman');
 
-goog.require('sre.ClearspeakPreferences');
 goog.require('sre.ClearspeakUtil');
-goog.require('sre.Engine');
 goog.require('sre.Grammar');
 goog.require('sre.MathStore');
 goog.require('sre.MathspeakUtil');

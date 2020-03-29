@@ -21,11 +21,11 @@
 goog.provide('sre.L10n');
 
 goog.require('sre.Engine');
-goog.require('sre.Locale.de');
-goog.require('sre.Locale.en');
-goog.require('sre.Locale.es');
-goog.require('sre.Locale.fr');
-goog.require('sre.Locale.nemeth');
+/** @suppress {extraRequire} */goog.require('sre.Locale.de');
+/** @suppress {extraRequire} */goog.require('sre.Locale.en');
+/** @suppress {extraRequire} */goog.require('sre.Locale.es');
+/** @suppress {extraRequire} */goog.require('sre.Locale.fr');
+/** @suppress {extraRequire} */goog.require('sre.Locale.nemeth');
 goog.require('sre.Messages');
 
 

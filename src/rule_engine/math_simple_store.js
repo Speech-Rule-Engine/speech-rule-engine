@@ -27,12 +27,9 @@
 goog.provide('sre.MathCompoundStore');
 goog.provide('sre.MathSimpleStore');
 
-goog.require('sre.BaseUtil');
-goog.require('sre.DomUtil');
 goog.require('sre.DynamicCstr');
 goog.require('sre.MathStore');
 goog.require('sre.SpeechRule');
-goog.require('sre.XpathUtil');
 
 
 

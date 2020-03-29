@@ -22,7 +22,6 @@ goog.provide('sre.MathmlStoreUtil');
 
 goog.require('sre.AuditoryDescription');
 goog.require('sre.Engine');
-goog.require('sre.Grammar');
 goog.require('sre.MathUtil');
 goog.require('sre.XpathUtil');
 

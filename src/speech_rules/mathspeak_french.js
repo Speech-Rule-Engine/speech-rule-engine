@@ -24,7 +24,6 @@ goog.require('sre.MathStore');
 goog.require('sre.MathmlStoreUtil');
 goog.require('sre.MathspeakFrenchUtil');
 goog.require('sre.MathspeakUtil');
-goog.require('sre.SystemExternal');
 
 
 
