@@ -32,7 +32,7 @@ goog.provide('sre.SpeechRuleEngine');
 
 goog.require('sre.AuditoryDescription');
 goog.require('sre.BaseRuleStore');
-goog.require('sre.BaseUtil');
+goog.require('sre.ClearspeakPreferences');
 goog.require('sre.Debugger');
 goog.require('sre.DynamicCstr');
 goog.require('sre.Engine');

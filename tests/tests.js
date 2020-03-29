@@ -25,7 +25,6 @@ goog.require('sre.SpeechEnglishTest');
 goog.require('sre.SpeechFrenchTest');
 goog.require('sre.SpeechGermanTest');
 goog.require('sre.SpeechSpanishTest');
-goog.require('sre.System');
 goog.require('sre.TestRunner');
 
 

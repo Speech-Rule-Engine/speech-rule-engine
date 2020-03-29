@@ -24,7 +24,6 @@
 goog.provide('sre.TreeSpeechGenerator');
 
 goog.require('sre.AbstractSpeechGenerator');
-goog.require('sre.EnrichMathml.Attribute');
 goog.require('sre.SpeechGeneratorUtil');
 goog.require('sre.WalkerUtil');
 

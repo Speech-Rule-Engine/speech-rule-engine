@@ -23,12 +23,9 @@ goog.provide('sre.MathStore');
 goog.require('sre.AuditoryDescription');
 goog.require('sre.BaseRuleStore');
 goog.require('sre.BaseUtil');
-goog.require('sre.DynamicCstr');
-goog.require('sre.Engine');
 goog.require('sre.Locale.en');
 goog.require('sre.Messages');
 goog.require('sre.SpeechRule');
-goog.require('sre.Trie');
 
 
 

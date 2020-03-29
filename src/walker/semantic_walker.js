@@ -24,7 +24,6 @@ goog.provide('sre.SemanticWalker');
 goog.require('sre.AbstractWalker');
 goog.require('sre.Focus');
 goog.require('sre.Levels');
-goog.require('sre.WalkerUtil');
 
 
 
@@ -194,8 +193,11 @@ sre.SemanticWalker.prototype.makePairList = function(children, content) {
  */
 sre.SemanticWalker.prototype.left = function() {
   sre.SemanticWalker.base(this, 'left');
-  var index = this.levels.indexOf(this.getFocus()) - 1;
-  var ids = this.levels.get(index);
+  var index = this.levels.indexOf(this.getFocus());
+  if (index === null) {
+    return null;
+  }
+  var ids = this.levels.get(index - 1);
   return ids ? ids : null;
 };
 
@@ -205,8 +207,11 @@ sre.SemanticWalker.prototype.left = function() {
  */
 sre.SemanticWalker.prototype.right = function() {
   sre.SemanticWalker.base(this, 'right');
-  var index = this.levels.indexOf(this.getFocus()) + 1;
-  var ids = this.levels.get(index);
+  var index = this.levels.indexOf(this.getFocus());
+  if (index === null) {
+    return null;
+  }
+  var ids = this.levels.get(index + 1);
   return ids ? ids : null;
 };
 

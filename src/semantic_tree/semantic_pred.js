@@ -22,7 +22,6 @@
 goog.provide('sre.SemanticPred');
 
 goog.require('sre.SemanticAttr');
-goog.require('sre.SemanticUtil');
 
 
 /**

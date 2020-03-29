@@ -21,7 +21,6 @@
 goog.provide('sre.ClearspeakRuleTest');
 
 goog.require('sre.AbstractRuleTest');
-goog.require('sre.ClearspeakPreferences');
 
 
 

@@ -20,7 +20,6 @@
  */
 goog.provide('sre.Cli');
 
-goog.require('sre.Api');
 goog.require('sre.Debugger');
 goog.require('sre.Engine');
 goog.require('sre.Engine.Mode');
@@ -62,10 +61,11 @@ sre.Cli = function() {
 
 /**
  * Sets parameters for the speech rule engine.
- * @param {string|boolean} value The cli option value.
  * @param {string} arg The option to set.
+ * @param {string|boolean} value The cli option value.
+ * @param {string} def The default for the option.
  */
-sre.Cli.prototype.set = function(value, arg) {
+sre.Cli.prototype.set = function(arg, value, def) {
   this.setup[arg] = typeof value === 'undefined' ?
       ((arg === 'semantics') ? false : true) : value;
 };
@@ -237,7 +237,11 @@ sre.Cli.prototype.readExpression_ = function(input) {
 sre.Cli.prototype.commandLine = function() {
   var commander = sre.SystemExternal.commander;
   var system = this.system;
-  var set = goog.bind(this.set, this);
+  var set = goog.bind(function(key) {
+    return goog.bind(function(val, def) {
+      this.set(key, val, def);
+    }, this);
+  }, this);
   var processor = goog.bind(this.processor, this);
 
   commander.version(system.version).
@@ -246,17 +250,26 @@ sre.Cli.prototype.commandLine = function() {
       option('-i, --input [name]', 'Input file [name]. (Deprecated)').
       option('-o, --output [name]', 'Output file [name]. Defaults to stdout.').
       option('').
-      option('-d, --dom [name]', 'Domain or subject area [name].',
-             set, 'domain').
-      option('-t, --style [name]', 'Speech style [name].', set, 'style').
-      option('-c, --locale [code]', 'Locale [code].', set, 'locale').
-      option('-b, --modality [name]', 'Modality [name].', set, 'modality').
+      option('-d, --domain [name]', 'Speech rule set [name]. See --options' +
+             ' for details.',
+             set(sre.DynamicCstr.Axis.DOMAIN),
+             sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN]).
+      option('-t, --style [name]', 'Speech style [name]. See --options' +
+             ' for details.',
+             set(sre.DynamicCstr.Axis.STYLE),
+             sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE]).
+      option('-c, --locale [code]', 'Locale [code].',
+             set(sre.DynamicCstr.Axis.LOCALE),
+             sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]).
+      option('-b, --modality [name]', 'Modality [name].',
+             set(sre.DynamicCstr.Axis.MODALITY),
+             sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY]).
       option('-s, --semantics', 'Switch OFF semantics interpretation. (Deprecated)',
-             set, 'semantics').
+             set('semantics')).
       option('-k, --markup [name]', 'Generate speech output with markup tags.',
-             set, 'markup').
+             set('markup'), 'none').
       option('-r, --rate [value]', 'Base rate [value] for tagged speech' +
-             ' output.', set, 'rate').
+             ' output.', set('rate'), '100').
       option('').
       option('-p, --speech', 'Generate speech output (default).',
              processor, 'speech').
@@ -270,12 +283,12 @@ sre.Cli.prototype.commandLine = function() {
       option('-m, --mathml', 'Generate enriched MathML.',
              processor, 'enriched').
       option('-g, --generate <depth>', 'Include generated speech in enriched' +
-             ' MathML (with -m option only).', set, 'speech').
+             ' MathML (with -m option only).', set('speech'), 'none').
       option('-w, --structure', 'Include structure attribute in enriched' +
              ' MathML (with -m option only).', set, 'structure').
       option('').
       option('-P, --pprint', 'Pretty print output whenever possible.',
-             set, 'pprint').
+             set('pprint')).
       option('-v, --verbose', 'Verbose mode.').
       option('-l, --log [name]', 'Log file [name].').
       option('--options', 'List engine setup options.').

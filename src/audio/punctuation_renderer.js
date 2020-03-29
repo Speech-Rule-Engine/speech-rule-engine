@@ -22,7 +22,6 @@
 goog.provide('sre.PunctuationRenderer');
 
 goog.require('sre.AbstractAudioRenderer');
-goog.require('sre.BaseUtil');
 
 
 

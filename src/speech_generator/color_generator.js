@@ -24,7 +24,6 @@ goog.provide('sre.ColorGenerator');
 
 goog.require('sre.AbstractSpeechGenerator');
 goog.require('sre.ContrastPicker');
-goog.require('sre.EnrichMathml.Attribute');
 goog.require('sre.RebuildStree');
 goog.require('sre.WalkerUtil');
 
