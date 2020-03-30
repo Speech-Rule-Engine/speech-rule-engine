@@ -1194,13 +1194,13 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
   // Fraction rules
   defineRule(
       'fraction', 'clearspeak.default',
-      '[p] (pause:short); [t] "der Bruch mit Zähler";' +
+      '[p] (pause:short); [t] "Bruch mit Zähler";' +
       ' [n] children/*[1]; [p] (pause:short);' +
       ' [t] "und Nenner"; [n] children/*[2]; [p] (pause:short)',
       'self::fraction');
   defineRule(
       'fraction', 'clearspeak.Functions_None',
-      '[p] (pause:short); [t] "der Bruch mit Zähler";' +
+      '[p] (pause:short); [t] "Bruch mit Zähler";' +
       ' [n] children/*[1]; [p] (pause:short);' +
       ' [t] "und Nenner"; [n] children/*[2]; [p] (pause:short)',
       'self::fraction',
@@ -1250,7 +1250,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'self::fraction');
   defineRule(
       'fraction', 'clearspeak.Fraction_FracOver',
-      '[p] (pause:short); [t] "der Bruch"; [n] children/*[1];' +
+      '[p] (pause:short); [t] "Bruch"; [n] children/*[1];' +
           ' [t] "geteilt durch"; [n] children/*[2]; [p] (pause:short)',
       'self::fraction');
   defineRule(
@@ -1260,14 +1260,14 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'self::fraction');
   defineRule(
       'fraction', 'clearspeak.Fraction_GeneralEndFrac',
-      '[p] (pause:short); [t] "der Bruch mit Zähler";' +
+      '[p] (pause:short); [t] "Bruch mit Zähler";' +
       ' [n] children/*[1]; [p] (pause:short);' +
           ' [t] "und Nenner"; [n] children/*[2]; [p] (pause:short);' +
       ' [t] "Ende Bruch"; [p] (pause:short)',
       'self::fraction');
   defineRule(
       'fraction', 'clearspeak.Fraction_General',
-      '[p] (pause:short); [t] "der Bruch mit Zähler";' +
+      '[p] (pause:short); [t] "Bruch mit Zähler";' +
       ' [n] children/*[1]; [p] (pause:short);' +
           ' [t] "und Nenner"; [n] children/*[2]; [p] (pause:short)',
       'self::fraction');
@@ -1304,24 +1304,24 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
   // TODO: Deal with the extra pause recursively and reduce number of rules!
   defineRule(
       'sqrt', 'clearspeak.default',
-      '[t] "die Quadratwurzel aus"; [n] children/*[1] (grammar:EndRoot=false);' +
+      '[t] "Quadratwurzel aus"; [n] children/*[1] (grammar:EndRoot=false);' +
       ' [p] (pause:short)',
       'self::sqrt');
   defineRule(
       'sqrt-nested', 'clearspeak.default',
-      '[p] (pause: "short"); [t] "die Quadratwurzel aus";' +
+      '[p] (pause: "short"); [t] "Quadratwurzel aus";' +
       ' [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)',
       'self::sqrt', 'not(preceding-sibling::*)',
       'ancestor::sqrt|ancestor::root');
   defineRule(
       'negative-sqrt', 'clearspeak.default',
-      '[t] "die negative Quadratwurzel aus";' +
+      '[t] "negative Quadratwurzel aus";' +
       ' [n] children/*[1]/children/*[1] (grammar:EndRoot=false);' +
       ' [p] (pause:short)',
       'self::prefixop', '@role="negative"', 'name(children/*[1])="sqrt"');
   defineRule(
       'negative-sqrt', 'clearspeak.default',
-      '[p] (pause: "short"); [t] "die negative Quadratwurzel aus";' +
+      '[p] (pause: "short"); [t] "negative Quadratwurzel aus";' +
       ' [n] children/*[1]/children/*[1] (grammar:EndRoot=false);' +
       ' [p] (pause:short)',
       'self::prefixop', '@role="negative"', 'name(children/*[1])="sqrt"',
@@ -1329,7 +1329,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
 
   defineRule(
       'sqrt-plus-minus', 'clearspeak.Roots_PosNegSqRoot',
-      '[t] "die positive Quadratwurzel aus";' +
+      '[t] "positive Quadratwurzel aus";' +
       ' [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)',
       'self::sqrt',
       'parent::stree or not(parent::*/parent::infixop[@role="addition"]) or' +
@@ -1337,7 +1337,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       ' and parent::*/parent::*/text()!="∓")');
   defineRule(
       'sqrt-nested-plus-minus', 'clearspeak.Roots_PosNegSqRoot',
-      '[p] (pause: "short"); [t] "die positive Quadratwurzel aus";' +
+      '[p] (pause: "short"); [t] "positive Quadratwurzel aus";' +
       ' [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)',
       'self::sqrt', 'not(preceding-sibling::*)',
       'ancestor::sqrt|ancestor::root',
@@ -1346,7 +1346,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       ' and parent::*/parent::*/text()!="∓")');
   defineRule(
       'sqrt-plus-minus', 'clearspeak.Roots_PosNegSqRootEnd',
-      '[t] "die positive Quadratwurzel aus";' +
+      '[t] "positive Quadratwurzel aus";' +
       ' [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)',
       'self::sqrt', 'parent::stree or' +
       ' not(parent::*/parent::infixop[@role="addition"]) or' +
@@ -1354,7 +1354,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       ' parent::*/parent::*/text()!="∓")');
   defineRule(
       'sqrt-nested-plus-minus', 'clearspeak.Roots_PosNegSqRootEnd',
-      '[p] (pause: "short"); [t] "die positive Quadratwurzel aus";' +
+      '[p] (pause: "short"); [t] "positive Quadratwurzel aus";' +
       ' [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)',
       'self::sqrt', 'not(preceding-sibling::*)',
       'ancestor::sqrt|ancestor::root',
@@ -1385,12 +1385,12 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
   // Cube roots
   defineRule(
       'cube', 'clearspeak.default',
-      '[t] "die Kubikwurzel aus"; [n] children/*[2] (grammar:EndRoot=false);' +
+      '[t] "Kubikwurzel aus"; [n] children/*[2] (grammar:EndRoot=false);' +
       ' [p] (pause:short)',
       'self::root', 'children/*[1][text()="3"]');
   defineRule(
       'cube-nested', 'clearspeak.default',
-      '[p] (pause:short); [t] "die Kubikwurzel aus"; ' +
+      '[p] (pause:short); [t] "Kubikwurzel aus"; ' +
       '[n] children/*[2] (grammar:EndRoot=false); [p] (pause:short)',
       'self::root', 'children/*[1][text()="3"]', 'not(preceding-sibling::*)',
       'ancestor::sqrt|ancestor::root');
@@ -1542,6 +1542,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
 
   // Named sets (They need additional dummy constraints for ordering!)
   //
+  // TODO: Check grammar!
   defineRule(
       'natural-numbers', 'clearspeak.default',
       '[t] "die natürlichen Zahlen"', 'self::identifier',
