@@ -66,8 +66,16 @@ sre.Cli = function() {
  * @param {string} def The default for the option.
  */
 sre.Cli.prototype.set = function(arg, value, def) {
-  this.setup[arg] = typeof value === 'undefined' ?
-      ((arg === 'semantics') ? false : true) : value;
+  if (typeof value === 'undefined') {
+    this.setup[arg] = (arg === 'semantics') ? false : true;
+    return;
+  }
+  if (arg === 'locale' &&
+      sre.Variables.LOCALES.indexOf(value.toString()) === -1) {
+    console.error('Locale ' + value + ' does not exist! Using en instead.');
+    value = 'en';
+  }
+  this.setup[arg] = value;
 };
 
 
