@@ -47,5 +47,10 @@ sre.L10n.setLocale = function() {
  * @return {sre.Locale.Messages} A message object.
  */
 sre.L10n.getLocale = function() {
+  let locale = sre.Engine.getInstance().locale;
+  if (sre.Variables.LOCALES.indexOf(locale) === -1) {
+    console.error('Locale ' + locale + ' does not exist! Using en instead.');
+    sre.Engine.getInstance().locale = 'en';
+  }
   return sre.Locale[sre.Engine.getInstance().locale] || sre.Locale['en'];
 };
