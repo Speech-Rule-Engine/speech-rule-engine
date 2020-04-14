@@ -66,11 +66,8 @@ sre.Cli = function() {
  * @param {string} def The default for the option.
  */
 sre.Cli.prototype.set = function(arg, value, def) {
-  if (typeof value === 'undefined') {
-    this.setup[arg] = (arg === 'semantics') ? false : true;
-    return;
-  }
-  this.setup[arg] = value;
+  this.setup[arg] = typeof value === 'undefined' ?
+      ((arg === 'semantics') ? false : true) : value;
 };
 
 
