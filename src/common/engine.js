@@ -106,12 +106,6 @@ sre.Engine = function() {
   this.walker = 'Table';
 
   /**
-   * Semantics flag.
-   * @type {boolean}
-   */
-  this.semantics = true;
-
-  /**
    * The mode in which the engine is running (sync, async, http).
    * @type {sre.Engine.Mode}
    */
@@ -326,7 +320,7 @@ goog.inherits(sre.Engine.Error, Error);
 
 
 sre.Engine.BINARY_FEATURES = [
-  'strict', 'cache', 'semantics', 'structure', 'pprint'
+  'strict', 'cache', 'structure', 'pprint'
 ];
 
 

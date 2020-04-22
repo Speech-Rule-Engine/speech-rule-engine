@@ -115,11 +115,15 @@ Deprecated Options
 
 | Option | Value |
 | ---- | ---- |
-| *semantics* | Boolean flag to switch **OFF** semantic interpretation. **Non-semantic rule sets are deprecated.** |
 | *rules* | A list of rulesets to use by SRE. This allows to artificially restrict available speech rules, which can be useful for testing and during rule development. ***Always expects a list, even if only one rule set is supplied!*** |
-|| **Note that setting rule sets is no longer useful with the new rule indexing structures.** | 
+|| **Note that setting rule sets is no longer useful with the new rule indexing structures. It is only retained for testing purposes.** | 
 
 
+Removed Options
+
+| Option | Value |
+| ---- | ---- |
+| *semantics* | Boolean flag to switch **OFF** semantic interpretation. **Non-semantic have been removed since v3.0.** |
 
 #### Experimental methods for navigating math expressions:
 
