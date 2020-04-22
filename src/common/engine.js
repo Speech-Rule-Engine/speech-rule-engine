@@ -34,18 +34,6 @@ goog.require('sre.DynamicCstr');
  * @constructor
  */
 sre.Engine = function() {
-  /**
-   * The actual node that is currently being translated.
-   * @type {Node}
-   */
-  this.activeHost = null;
-
-  /**
-   * When traversing some nodes one occassionally wants to store and work with
-   * an alternative representation.
-   * @type {Node}
-   */
-  this.alternativeHost = null;
 
   /**
    * @type {function(string, !sre.DynamicCstr): string}
