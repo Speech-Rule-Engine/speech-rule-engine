@@ -116,7 +116,7 @@ Deprecated Options
 | Option | Value |
 | ---- | ---- |
 | *rules* | A list of rulesets to use by SRE. This allows to artificially restrict available speech rules, which can be useful for testing and during rule development. ***Always expects a list, even if only one rule set is supplied!*** |
-|| **Note that setting rule sets is no longer useful with the new rule indexing structures. It is only retained for testing purposes.** | 
+|| **Note that setting rule sets is no longer useful with the new rule indexing structures. It is only retained for testing purposes.** |
 
 
 Removed Options

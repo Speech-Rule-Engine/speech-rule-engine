@@ -262,38 +262,3 @@ sre.MathUtil.isNotWhitespace = function(element) {
   return (sre.MathUtil.isMathmlTag(element) &&
           !sre.MathUtil.isWhitespace(element));
 };
-
-
-/**
- * Constructs a closure that returns separators for an MathML mfenced
- * expression.
- * Separators in MathML are represented by a list and used up one by one
- * until the final element is used as the default.
- * Example: a b c d e  and separators [+,-,*]
- * would result in a + b - c * d * e.
- * @param {string} separators String representing a list of mfenced separators.
- * @return {?function(): string} A closure that returns the next separator
- * for an mfenced expression starting with the first node in nodes.
- */
-sre.MathUtil.nextSeparatorFunction = function(separators) {
-  if (separators) {
-    // Mathjax does not expand empty separators.
-    if (separators.match(/^\s+$/)) {
-      return null;
-    } else {
-      var sepList = separators.replace(/\s/g, '')
-          .split('')
-              .filter(function(x) {return x;});
-    }
-  } else {
-    // When no separator is given MathML uses comma as default.
-    var sepList = [','];
-  }
-
-  return function() {
-    if (sepList.length > 1) {
-      return sepList.shift();
-    }
-    return sepList[0];
-  };
-};
