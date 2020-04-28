@@ -16,8 +16,7 @@ currently in Nemeth.
 SRE contains a library for semantic interpretation to re-represents any
 mathematical expression in its own internal semantic format, overcoming the poor
 design of presentation MathML by fully disassembling and reconstructing an
-expression. For a better understanding of the representation have a look at it
-its
+expression. For a better understanding of the representation have a look at its
 [visualiser](http://zorkow.github.io/semantic-tree-visualiser/visualise.html).
 The semantic trees can be used in their own XML format directly or used to
 enrich the input MathML expressions with semantic information and speech
