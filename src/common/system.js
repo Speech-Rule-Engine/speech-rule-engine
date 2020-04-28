@@ -171,12 +171,6 @@ sre.System.prototype.toSpeech = function(expr) {
 
 
 /**
- * @deprecated Use toSpeech().
- */
-sre.System.prototype.processExpression = sre.System.prototype.toSpeech;
-
-
-/**
  * Function to translate MathML string into Semantic Tree.
  * @param {string} expr Processes a given MathML expression for translation.
  * @return {Node} The semantic tree as Xml.
@@ -237,12 +231,6 @@ sre.System.prototype.processString = function(processor, input) {
 sre.System.prototype.fileToSpeech = function(input, opt_output) {
   sre.System.getInstance().processFile('speech', input, opt_output);
 };
-
-
-/**
- * @deprecated Use fileToSpeech().
- */
-sre.System.prototype.processFile = sre.System.prototype.fileToSpeech;
 
 
 /**

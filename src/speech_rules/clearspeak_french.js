@@ -101,7 +101,7 @@ var addCTXF = sre.ClearspeakFrench.addContextFunction_;
 sre.ClearspeakFrench.initCustomFunctions_ = function() {
   addCTXF('CTXFpauseSeparator', sre.StoreUtil.pauseSeparator);
   addCTXF('CTXFnodeCounter', sre.ClearspeakUtil.nodeCounter);
-  addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
+  addCTXF('CTXFcontentIterator', sre.StoreUtil.contentIterator);
   addCSF('CSFvulgarFraction', sre.NumbersUtil.vulgarFraction);
   addCQF('CQFvulgarFractionSmall', sre.ClearspeakUtil.isSmallVulgarFraction);
   addCQF('CQFcellsSimple', sre.ClearspeakUtil.allCellsSimple);

@@ -66,8 +66,7 @@ sre.Cli = function() {
  * @param {string} def The default for the option.
  */
 sre.Cli.prototype.set = function(arg, value, def) {
-  this.setup[arg] = typeof value === 'undefined' ?
-      ((arg === 'semantics') ? false : true) : value;
+  this.setup[arg] = typeof value === 'undefined' ? true : value;
 };
 
 
@@ -264,8 +263,6 @@ sre.Cli.prototype.commandLine = function() {
       option('-b, --modality [name]', 'Modality [name].',
              set(sre.DynamicCstr.Axis.MODALITY),
              sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY]).
-      option('-s, --semantics', 'Switch OFF semantics interpretation. (Deprecated)',
-             set('semantics')).
       option('-k, --markup [name]', 'Generate speech output with markup tags.',
              set('markup'), 'none').
       option('-r, --rate [value]', 'Base rate [value] for tagged speech' +

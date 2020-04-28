@@ -110,7 +110,7 @@ sre.ClearspeakRules.addAnnotators_ = function() {
 sre.ClearspeakRules.initCustomFunctions_ = function() {
   addCTXF('CTXFpauseSeparator', sre.StoreUtil.pauseSeparator);
   addCTXF('CTXFnodeCounter', sre.ClearspeakUtil.nodeCounter);
-  addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
+  addCTXF('CTXFcontentIterator', sre.StoreUtil.contentIterator);
   addCSF('CSFvulgarFraction', sre.NumbersUtil.vulgarFraction);
   addCQF('CQFvulgarFractionSmall', sre.ClearspeakUtil.isSmallVulgarFraction);
   addCQF('CQFcellsSimple', sre.ClearspeakUtil.allCellsSimple);

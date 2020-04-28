@@ -20,7 +20,6 @@
 goog.provide('sre.MathspeakRules');
 
 goog.require('sre.MathStore');
-goog.require('sre.MathmlStoreUtil');
 goog.require('sre.MathspeakUtil');
 
 
@@ -142,7 +141,7 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
   addCSF('CSFoverscript', sre.MathspeakUtil.nestedOverscore);
 
   addCTXF('CTXFordinalCounter', sre.NumbersUtil.ordinalCounter);
-  addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
+  addCTXF('CTXFcontentIterator', sre.StoreUtil.contentIterator);
 
   // Layout related.
   addCQF('CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple);

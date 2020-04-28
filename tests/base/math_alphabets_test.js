@@ -78,7 +78,7 @@ sre.MathAlphabetsTest.prototype.testLowerPlaneLatin = function() {
     'ℋ': 'script cap H',
     'ℌ': 'fraktur cap H',
     'ℍ': 'double struck cap H',
-    'ℎ': 'italic h',
+    'ℎ': 'h',
     'ℐ': 'script cap I',
     'ℑ': 'fraktur cap I',
     'ℒ': 'script cap L',
