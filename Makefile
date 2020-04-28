@@ -257,7 +257,7 @@ $(LOC_DST):
 			echo ','  >> $@; \
 		done; \
 	done
-	@head -n -1 $@ > $@.tmp
+	@sed '$$d' $@ > $@.tmp
 	@echo '}\n' >> $@.tmp
 	@mv $@.tmp $@
 
