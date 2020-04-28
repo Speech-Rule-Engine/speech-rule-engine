@@ -100,7 +100,7 @@ sre.AcssRenderer.prototype.markup = function(descrs) {
  * @override
  */
 sre.AcssRenderer.prototype.error = function(key) {
-  return '(error "' + key + '")';
+  return '(error "' + sre.EventUtil.Move[key.toString()] + '")';
 };
 
 
