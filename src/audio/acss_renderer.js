@@ -91,7 +91,8 @@ sre.AcssRenderer.prototype.markup = function(descrs) {
 //   console.log('when');
 //   return '(exp ' +
 //       strs.map(function(str) {
-//         return str.string.replace(/^\(exp /, '').replace(/\)$/, '');}).join(' ') +
+//         return str.string.replace(/^\(exp /, '').
+//             replace(/\)$/, '');}).join(' ') +
 //       ')';
 // };
 

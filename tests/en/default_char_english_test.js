@@ -33,7 +33,7 @@ sre.DefaultCharEnglishTest = function() {
   this.locale = 'en';
   this.domain = 'default';
   this.semantics = true;
-  
+
   /**
    * @type {Array.<string>}
    */
@@ -43,7 +43,7 @@ sre.DefaultCharEnglishTest = function() {
 };
 goog.inherits(sre.DefaultCharEnglishTest, sre.AbstractCharacterTest);
 
-                                            
+
 sre.DefaultCharEnglishTest.prototype.testDefaultChars = function() {
   this.executeCharTest('0', ['zero']);
   this.executeCharTest('1', ['one']);

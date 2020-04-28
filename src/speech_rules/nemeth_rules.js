@@ -251,7 +251,7 @@ sre.NemethRules.initNemethRules_ = function() {
   // Number rules
   defineRule(
       'number-indicator', 'default.default', '[t] "⠼"; [n] text() (pause:10)',
-       'self::number', 'contains(@annotation, "nemeth:number")');
+      'self::number', 'contains(@annotation, "nemeth:number")');
 
 
   defineRule(

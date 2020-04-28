@@ -33,7 +33,7 @@ sre.ClearspeakCharEnglishTest = function() {
   this.locale = 'en';
   this.domain = 'clearspeak';
   this.semantics = true;
-  
+
   /**
    * @type {Array.<string>}
    */
@@ -43,7 +43,7 @@ sre.ClearspeakCharEnglishTest = function() {
 };
 goog.inherits(sre.ClearspeakCharEnglishTest, sre.AbstractCharacterTest);
 
-                                            
+
 sre.ClearspeakCharEnglishTest.prototype.testClearspeakChars = function() {
   this.executeCharTest('0', ['0']);
   this.executeCharTest('1', ['1']);

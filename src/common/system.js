@@ -128,6 +128,11 @@ sre.System.setAsync = function() {
 };
 
 
+/**
+ * Query the engine setup.
+ * @return {Object.<boolean|string>} Object vector with all engine feature
+ *     values.
+ */
 sre.System.prototype.engineSetup = function() {
   var engineFeatures = ['mode'].
       concat(sre.Engine.STRING_FEATURES, sre.Engine.BINARY_FEATURES);
@@ -141,6 +146,10 @@ sre.System.prototype.engineSetup = function() {
 };
 
 
+/**
+ * @return {boolean} True if engine is ready, i.e., unicode file for the current
+ *     locale has been loaded.
+ */
 sre.System.prototype.engineReady = function() {
   return sre.Engine.isReady();
 };

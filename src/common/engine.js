@@ -43,7 +43,8 @@ sre.Engine = function() {
   /**
    * @type {!sre.DynamicCstr.Parser}
    */
-  this.defaultParser = new sre.DynamicCstr.Parser(sre.DynamicCstr.DEFAULT_ORDER);
+  this.defaultParser =
+      new sre.DynamicCstr.Parser(sre.DynamicCstr.DEFAULT_ORDER);
   this.parser = this.defaultParser;
   this.parsers = {};
 
@@ -307,11 +308,19 @@ sre.Engine.Error = function(msg) {
 goog.inherits(sre.Engine.Error, Error);
 
 
+/**
+ * Binary feature vector.
+ * @type {Array.<string>}
+ */
 sre.Engine.BINARY_FEATURES = [
   'strict', 'cache', 'structure', 'pprint'
 ];
 
 
+/**
+ * String feature vector.
+ * @type {Array.<string>}
+ */
 sre.Engine.STRING_FEATURES = [
   'markup', 'style', 'domain', 'speech', 'walker',
   'locale', 'modality', 'rate'
@@ -353,6 +362,9 @@ sre.Engine.prototype.setDynamicCstr = function(opt_dynamic) {
 };
 
 
+/**
+ * @type {Object.<string>}
+ */
 sre.Engine.DOMAIN_TO_STYLES = {
   'mathspeak': 'default',
   'clearspeak': 'default'

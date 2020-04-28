@@ -86,6 +86,11 @@ sre.AbstractAudioRenderer.prototype.finalize = function(str) {
 };
 
 
+/**
+ * Maps named pauses to numerical values.
+ * @param {string} value The alpha value for the pause.
+ * @return {number} The corresponding numerical value.
+ */
 sre.AbstractAudioRenderer.prototype.pauseValue = function(value) {
   var numeric;
   switch (value) {
@@ -99,7 +104,7 @@ sre.AbstractAudioRenderer.prototype.pauseValue = function(value) {
       numeric = 250;
       break;
     default:
-      numeric = value;
+      numeric = parseInt(value, 10);
   }
   return Math.floor(numeric *
                     parseInt(sre.Engine.getInstance().getRate(), 10) / 100);

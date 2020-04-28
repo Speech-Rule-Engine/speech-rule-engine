@@ -369,9 +369,9 @@ sre.ClearspeakPreferences.smartPreferences = function(item, locale) {
   var explorer = sre.ClearspeakPreferences.getSpeechExplorer(item);
   if (!explorer) {
     return [{type: 'radio',
-             content: 'Standard',
-             id: 'clearspeak-default',
-             variable: 'speechRules'}];
+      content: 'Standard',
+      id: 'clearspeak-default',
+      variable: 'speechRules'}];
   }
   var smart = sre.ClearspeakPreferences.relevantPreferences(
       explorer.walker.getFocus().getSemanticPrimary());

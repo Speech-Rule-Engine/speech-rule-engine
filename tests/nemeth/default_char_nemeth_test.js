@@ -34,7 +34,7 @@ sre.DefaultCharNemethTest = function() {
   this.domain = 'default';
   this.semantics = true;
   this.modality = 'braille';
-  
+
   /**
    * @type {Array.<string>}
    */

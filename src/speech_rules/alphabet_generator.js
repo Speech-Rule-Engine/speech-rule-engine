@@ -130,16 +130,16 @@ sre.AlphabetGenerator.generate = function(locale, store) {
   var intervals = sre.AlphabetGenerator.INTERVALS;
   for (var i = 0, int; int = intervals[i]; i++) {
     var keys = sre.AlphabetGenerator.makeInterval(int.interval, int.subst);
-    var letters = keys.map(function (x) {
+    var letters = keys.map(function(x) {
       return sre.SemanticUtil.numberToUnicode(parseInt(x, 16));
     });
     if ('offset' in int) {
       sre.AlphabetGenerator.numberRules(
-        store, keys, letters, int.font, int.category, int.offset || 0);
+          store, keys, letters, int.font, int.category, int.offset || 0);
     } else {
       var alphabet = sre.Messages.ALPHABETS[int.base];
       sre.AlphabetGenerator.alphabetRules(
-        store, keys, letters, alphabet, int.font, int.category, !!int.capital);
+          store, keys, letters, alphabet, int.font, int.category, !!int.capital);
     }
   }
   sre.Engine.getInstance().locale = oldLocale;
@@ -184,8 +184,8 @@ sre.AlphabetGenerator.getFont = function(font) {
   let realFont = (font === 'normal' || font === 'fullwidth') ? '' :
       (sre.Messages.FONT[font] || sre.Messages.EMBELLISH[font] || '');
   return (typeof realFont === 'string') ?
-    {font: realFont, combiner: sre.Messages.ALPHABET_COMBINER} :
-  {font: realFont[0], combiner: realFont[1]};
+      {font: realFont, combiner: sre.Messages.ALPHABET_COMBINER} :
+      {font: realFont[0], combiner: realFont[1]};
 };
 
 
@@ -201,7 +201,7 @@ sre.AlphabetGenerator.getFont = function(font) {
  * @param {boolean} cap True if it is an alphabet of capitals.
  */
 sre.AlphabetGenerator.alphabetRules = function(
-  store, keys, unicodes, letters, font, category, cap) {
+    store, keys, unicodes, letters, font, category, cap) {
   var realFont = sre.AlphabetGenerator.getFont(font);
   for (var i = 0, key, unicode, letter;
        key = keys[i], unicode = unicodes[i], letter = letters[i]; i++) {
@@ -210,8 +210,8 @@ sre.AlphabetGenerator.alphabetRules = function(
     var domains = cap ? sre.AlphabetGenerator.Domains_.capital :
         sre.AlphabetGenerator.Domains_.small;
     sre.AlphabetGenerator.makeLetter(
-      store, realFont.combiner, key, unicode, letter, realFont.font, prefixes, category,
-      sre.Messages.ALPHABET_TRANSFORMERS.letter, domains);
+        store, realFont.combiner, key, unicode, letter, realFont.font, prefixes, category,
+        sre.Messages.ALPHABET_TRANSFORMERS.letter, domains);
   }
 };
 
@@ -233,10 +233,11 @@ sre.AlphabetGenerator.numberRules = function(
     var prefixes = sre.Messages.ALPHABET_PREFIXES.digitPrefix;
     var number = i + offset;
     sre.AlphabetGenerator.makeLetter(
-      store, realFont.combiner, key, unicode, number, realFont.font, prefixes, category,
-      sre.Messages.ALPHABET_TRANSFORMERS.digit, sre.AlphabetGenerator.Domains_.digit);
+        store, realFont.combiner, key, unicode, number, realFont.font, prefixes, category,
+        sre.Messages.ALPHABET_TRANSFORMERS.digit, sre.AlphabetGenerator.Domains_.digit);
   }
 };
+
 
 /**
  * Makes all rules for a single character.
@@ -257,14 +258,14 @@ sre.AlphabetGenerator.numberRules = function(
  *     transformers.
  */
 sre.AlphabetGenerator.makeLetter = function(
-  store, combiner, key, unicode, letter, font, prefixes, category,
-  transformers, domains) {
+    store, combiner, key, unicode, letter, font, prefixes, category,
+    transformers, domains) {
   for (var i = 0, domain; domain = domains[i]; i++) {
     var transformer = (domain in transformers) ? transformers[domain] : transformers['default'];
     var prefix = (domain in prefixes) ? prefixes[domain] : prefixes['default'];
     store.defineRule(key.toString(), domain, 'default', category, unicode, combiner(
-      transformer(letter), font, prefix));
-  };
+        transformer(letter), font, prefix));
+  }
 };
 
 
@@ -665,7 +666,7 @@ sre.AlphabetGenerator.INTERVALS = [
     font: sre.AlphabetGenerator.Font.SANSSERIFBOLDITALIC
   },
   // Digits
-    {
+  {
     interval: ['0030', '0039'],
     base: sre.AlphabetGenerator.Base.DIGIT,
     subst: {},
@@ -896,6 +897,6 @@ sre.AlphabetGenerator.INTERVALS = [
     category: 'So',
     font: sre.AlphabetGenerator.Embellish.NEGATIVECIRCLED
   }
-  
+
 ];
 

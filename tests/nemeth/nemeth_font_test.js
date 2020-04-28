@@ -13,7 +13,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Tests for fonts. 
+ * @fileoverview Tests for fonts.
  *
  * @author Volker.Sorge@gmail.com (Volker Sorge)
  */
@@ -45,7 +45,7 @@ sre.NemethFontTest = function() {
    * @override
    */
   this.locale = 'nemeth';
-  
+
   /**
    * @override
    */
@@ -62,20 +62,21 @@ goog.inherits(sre.NemethFontTest, sre.AbstractRuleTest);
 
 
 /**
- *  
+ *
  * Font tests serve primarily to check for correct replacement of font names.
- * 
+ *
  * We check:
  * 1. Fonts for unicode characters (with mathfonts on plane 1).
  * 2. Fonts for mathvariant inclusion (including TeX specific fonts).
  * 3. Correct replacements in case both unicode and mathvariants are given.
- * 
+ *
  */
 
 
 /**
  *  Part 1: Unicode Characters
  */
+
 
 /**
  * Test for Unicode Latin mathfonts upper letters.
@@ -115,7 +116,7 @@ sre.NemethFontTest.prototype.testGreekMathfontsUpper = function() {
 /**
  * Test for Unicode Latin mathfonts small letters.
  */
-sre.NemethFontTest.prototype.testLatinMathfontsSmall = function() { 
+sre.NemethFontTest.prototype.testLatinMathfontsSmall = function() {
   this.executeRuleTest('<mi>&#x0061;</mi>', '⠁', 'default');
   this.executeRuleTest('<mi>&#xFF41;</mi>', '⠁', 'default');
   this.executeRuleTest('<mi>&#x1D41A;</mi>', '⠸⠁', 'default');
@@ -150,6 +151,7 @@ sre.NemethFontTest.prototype.testGreekMathfontsSmall = function() {
 /**
  *  Part 2: Mathvariants
  */
+
 
 /**
  * Test for Latin with mathvariant upper letters.
@@ -200,7 +202,7 @@ sre.NemethFontTest.prototype.testGreekMathvariantUpper = function() {
 /**
  * Test for Latin with mathvariant small letters.
  */
-sre.NemethFontTest.prototype.testLatinMathvariantSmall = function() { 
+sre.NemethFontTest.prototype.testLatinMathvariantSmall = function() {
   this.executeRuleTest('<mi mathvariant="normal">a</mi>', '⠁', 'default');
   this.executeRuleTest('<mi mathvariant="bold">a</mi>', '⠸⠁', 'default');
   this.executeRuleTest('<mi mathvariant="italic">a</mi>', '⠁', 'default');
@@ -234,6 +236,7 @@ sre.NemethFontTest.prototype.testGreekMathvariantSmall = function() {
 /**
  *  Part 3: Mathvariants and Unicode Characters
  */
+
 
 /**
  * Test for Unicode Latin mathfonts with mathvariant upper letters.
@@ -273,7 +276,7 @@ sre.NemethFontTest.prototype.testGreekFontVariantsUpper = function() {
 /**
  * Test for Unicode Latin mathfonts with mathvariant small letters.
  */
-sre.NemethFontTest.prototype.testLatinFontVariantsSmall = function() { 
+sre.NemethFontTest.prototype.testLatinFontVariantsSmall = function() {
   this.executeRuleTest('<mi mathvariant="normal">&#x0061;</mi>', '⠁', 'default');
   this.executeRuleTest('<mi mathvariant="normal">&#xFF41;</mi>', '⠁', 'default');
   this.executeRuleTest('<mi mathvariant="bold">&#x1D41A;</mi>', '⠸⠁', 'default');

@@ -53,7 +53,7 @@ sre.AbstractCharacterTest.prototype.executeCharTest = function(char, answers) {
     } catch (err) {
       console.info('\nFailed Character: ' + char + ' (' +
                    this.domain + '.' + this.styles[i] + ')');
-      throw(err);
+      throw (err);
     }
   }
 };
@@ -64,7 +64,7 @@ sre.AbstractCharacterTest.prototype.executeUnitTest = function(char, answers) {
   try {
     this.executeCharTest(char, answers);
   } catch (err) {
-    throw(err);
+    throw (err);
   } finally {
     sre.Grammar.getInstance().popState();
   }
@@ -80,7 +80,7 @@ sre.AbstractCharacterTest.prototype.executeRuleTest = function(text, answer, opt
   sre.SpeechRuleEngine.getInstance().clearCache();
   sre.System.getInstance().setupEngine(
       {semantics: this.semantics, domain: this.domain, style: style,
-       modality: this.modality, rules: this.rules, locale: this.locale});
+        modality: this.modality, rules: this.rules, locale: this.locale});
   var aural = sre.AuralRendering.getInstance();
   var descrs = [
     sre.AuditoryDescription.create({text: text}, {adjust: true})];
@@ -90,7 +90,7 @@ sre.AbstractCharacterTest.prototype.executeRuleTest = function(text, answer, opt
   try {
     this.assert.equal(actual, result);
   } catch (err) {
-    throw(err);
+    throw (err);
   } finally {
     sre.Grammar.getInstance().popState();
   }
@@ -102,7 +102,7 @@ sre.AbstractCharacterTest.prototype.executeRuleTest = function(text, answer, opt
  * (Temporary Auxiliary Method.)
  */
 sre.AbstractCharacterTest.testOutput = function() {
-  
+
   var constraints = {
     en: {
       default: ['default'],
@@ -144,7 +144,7 @@ sre.AbstractCharacterTest.testOutput = function() {
           }
           sre.Grammar.getInstance().pushState(grammar);
           var descrs = [
-              sre.AuditoryDescription.create({text: comps[0]}, {adjust: true})];
+            sre.AuditoryDescription.create({text: comps[0]}, {adjust: true})];
           result.push(aural.finalize(aural.markup(descrs)));
           allRules[loc].push(result);
           sre.Grammar.getInstance().popState();

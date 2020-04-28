@@ -61,6 +61,7 @@ sre.AataTest = function() {
 };
 goog.inherits(sre.AataTest, sre.AbstractRuleTest);
 
+
 // Number: ⠼
 /**
  * Expression 1.

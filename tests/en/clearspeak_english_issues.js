@@ -69,8 +69,6 @@ sre.ClearspeakEnglishIssues.prototype.testIssueNumbers = function() {
 };
 
 
-
-
 /**
  * Tests for issue #320 and related expressions.
  */

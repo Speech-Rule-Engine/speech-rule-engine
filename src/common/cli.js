@@ -111,7 +111,8 @@ sre.Cli.prototype.enumerate = function() {
         let styles = Object.keys(dyna2[ax3]).sort();
         if (ax3 === 'clearspeak') {
           var clear3 = true;
-          var prefs = sre.ClearspeakPreferences.getLocalePreferences(dynamic)[ax1];
+          var prefs =
+              sre.ClearspeakPreferences.getLocalePreferences(dynamic)[ax1];
           for (var ax4 in prefs) {
             table.push([compStr(clear1 ? ax1 : '', length[0]),
                         compStr(clear2 ? ax2 : '', length[1]),

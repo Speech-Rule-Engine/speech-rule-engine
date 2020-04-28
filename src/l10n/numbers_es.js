@@ -91,7 +91,7 @@ sre.Numbers.es.tensToWords_ = function(number) {
 sre.Numbers.es.hundredsToWords_ = function(number) {
   var n = number % 1000;
   var hundred = Math.floor(n / 100);
-  var hundreds =  sre.Numbers.es.hundredsNumbers_[hundred];
+  var hundreds = sre.Numbers.es.hundredsNumbers_[hundred];
   var tens = sre.Numbers.es.tensToWords_(n % 100);
   if (hundred === 1) {
     if (!tens) {
@@ -128,7 +128,7 @@ sre.Numbers.es.numberToWords = function(number) {
       } else {
         large = large.replace(/ón$/, 'ones');
         str = sre.Numbers.es.hundredsToWords_(hundreds) + ' ' + large +
-          (str ? ' ' + str : '');
+            (str ? ' ' + str : '');
       }
     }
     number = Math.floor(number / 1000);

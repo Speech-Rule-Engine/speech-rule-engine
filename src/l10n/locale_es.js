@@ -224,7 +224,7 @@ sre.Locale.es = {
   ALPHABET_TRANSFORMERS: {
     digit: {
       default: function(n) {
-          return n === 0 ? 'cero' : sre.Numbers.es.numberToWords(n);},
+        return n === 0 ? 'cero' : sre.Numbers.es.numberToWords(n);},
       mathspeak: function(n) {return n.toString();},
       clearspeak: function(n) {return n.toString();}},
     letter: {

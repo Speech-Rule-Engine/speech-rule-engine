@@ -23,11 +23,11 @@
 
 goog.provide('sre.MathMap');
 
+goog.require('sre.AlphabetGenerator');
 goog.require('sre.BaseUtil');
 goog.require('sre.BrowserUtil');
 goog.require('sre.Engine');
 goog.require('sre.MathCompoundStore');
-goog.require('sre.AlphabetGenerator');
 goog.require('sre.SystemExternal');
 
 
@@ -106,7 +106,7 @@ sre.MathMap.prototype.retrieveFiles = function(locale) {
     case sre.Engine.Mode.ASYNC:
       sre.MathMap.toFetch_++;
       var parse = goog.bind(this.parseMaps, this);
-        sre.MathMap.fromFile_(file,
+      sre.MathMap.fromFile_(file,
             function(err, json) {
               sre.MathMap.toFetch_--;
               if (err) return;
@@ -119,9 +119,9 @@ sre.MathMap.prototype.retrieveFiles = function(locale) {
       break;
     case sre.Engine.Mode.SYNC:
     default:
-    var strs = sre.MathMap.loadFile(file);
-    this.parseMaps(strs);
-    break;
+      var strs = sre.MathMap.loadFile(file);
+      this.parseMaps(strs);
+      break;
   }
 };
 
@@ -175,7 +175,7 @@ sre.MathMap.prototype.getJsonIE_ = function(locale, opt_count) {
   if (!sre.BrowserUtil.mapsForIE) {
     if (count <= 5) {
       setTimeout(
-        goog.bind(function() {this.getJsonIE_(locale, count++);}, this),
+          goog.bind(function() {this.getJsonIE_(locale, count++);}, this),
           300);
     }
     return;

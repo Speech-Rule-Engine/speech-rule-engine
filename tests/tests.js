@@ -71,7 +71,7 @@ var file = sre.SystemExternal.process.env['FILE'];
 var locale = sre.SystemExternal.process.env['LOCALE'];
 if (file) {
   sre.Tests.testList =
-    sre.Tests.testList.concat(file.split(',').map(
+      sre.Tests.testList.concat(file.split(',').map(
       function(x) {return sre[x];}));
 }
 if (locale) {
@@ -82,11 +82,11 @@ if (locale) {
     try {
       if (sre['Speech' + locale + 'Test']) {
         sre.Tests.testList =
-          sre.Tests.testList.concat(sre['Speech' + locale + 'Test'].testList);
+            sre.Tests.testList.concat(sre['Speech' + locale + 'Test'].testList);
       }
       if (sre['Braille' + locale + 'Test']) {
         sre.Tests.testList =
-          sre.Tests.testList.concat(sre['Braille' + locale + 'Test'].testList);
+            sre.Tests.testList.concat(sre['Braille' + locale + 'Test'].testList);
       }
     } catch (e) { }
   }

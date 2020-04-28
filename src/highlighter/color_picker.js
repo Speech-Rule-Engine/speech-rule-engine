@@ -221,25 +221,42 @@ sre.ContrastPicker = function() {
   this.incr = 50;
 };
 
+
+/**
+ * Generates the current color as rgb color in hex code.
+ * @return {string} The rgb color attribute.
+ */
 sre.ContrastPicker.prototype.generate = function() {
   return sre.ColorPicker.RGB2hex_(
       sre.ColorPicker.rgb2RGB_(
       sre.ColorPicker.hsl2rgb_(
-       this.hue, this.sat, this.light)));
+      this.hue, this.sat, this.light)));
 };
 
+
+/**
+ * Increments the hue value of the current color.
+ */
 sre.ContrastPicker.prototype.increment = function() {
   this.hue = (this.hue + this.incr) % 360;
 };
 
 
+/**
+ * Transforms a HSL triple into an rgb value triple.
+ * @param {number} h The hue.
+ * @param {number} s The saturation.
+ * @param {number} l The luminosity.
+ * @return {!Iterable} The rgb value triple.
+ * @private
+ */
 sre.ColorPicker.hsl2rgb_ = function(h, s, l) {
   s = s > 1 ? s / 100 : s;
   l = l > 1 ? l / 100 : l;
-  let c = (1 - Math.abs(2 * l - 1)) * s;
-  let x = c * (1 - Math.abs((h / 60) % 2 - 1));
-  let m = l - c / 2;
-  let[r, g, b] = [0, 0, 0];
+  var c = (1 - Math.abs(2 * l - 1)) * s;
+  var x = c * (1 - Math.abs((h / 60) % 2 - 1));
+  var m = l - c / 2;
+  var r = 0, g = 0, b = 0;
   if (0 <= h && h < 60) {
     [r, g, b] = [c, x, 0];
   } else if (60 <= h && h < 120) {
@@ -256,13 +273,28 @@ sre.ColorPicker.hsl2rgb_ = function(h, s, l) {
   return [r, g, b].map(x => x + m);
 };
 
+
+/**
+ * Translates an rgb value triple into an RGB values (0..255).
+ * @param {!Iterable} rgb The rgb values.
+ * @return {{red: number, green: number, blue: number}} The RGB triple.
+ * @private
+ */
 sre.ColorPicker.rgb2RGB_ = function([red, green, blue]) {
-  return {red: Math.round(255 * red),
-          green: Math.round(255 * green),
-          blue: Math.round(255 * blue)};
+  return {
+    red: Math.round(255 * red),
+    green: Math.round(255 * green),
+    blue: Math.round(255 * blue)
+  };
 };
 
+
+/**
+ * Transoforms RGB value triple into the hex values attribute.
+ * @param {Object.<number>} col The RGB triple.
+ * @return {string} The rgb attribute entry.
+ * @private
+ */
 sre.ColorPicker.RGB2hex_ = function(col) {
-  return 'rgb(' + col.red + ',' + col.green + ',' +
-        col.blue + ')';
+  return 'rgb(' + col.red + ',' + col.green + ',' + col.blue + ')';
 };

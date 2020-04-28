@@ -111,7 +111,7 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
   /**
    * The node that currently inspected. Initially this is the entire math
    * expression.
-   * @type {null|sre.Focus}
+   * @type {sre.Focus}
    * @private
    */
   this.focus_ = null;
@@ -165,6 +165,7 @@ sre.AbstractWalker.prototype.getXml = function() {
   }
   return this.xml_;
 };
+
 
 /**
  * @override
@@ -233,7 +234,7 @@ sre.AbstractWalker.prototype.deactivate = function() {
 sre.AbstractWalker.prototype.getFocus = function(opt_update) {
   if (!this.focus_) {
     this.focus_ = sre.Focus.factory(
-      this.rootId, [this.rootId], this.getRebuilt(), this.node);
+        this.rootId, [this.rootId], this.getRebuilt(), this.node);
   }
   if (opt_update) {
     this.updateFocus();
@@ -580,7 +581,7 @@ sre.AbstractWalker.prototype.rebuildStree = function() {
   this.rootId = rebuilt.stree.root.id.toString();
   this.generator.setRebuilt(rebuilt);
   this.focus_ = sre.Focus.factory(
-    this.rootId, [this.rootId], rebuilt, this.node);
+      this.rootId, [this.rootId], rebuilt, this.node);
   this.levels = this.initLevels();
   sre.SpeechGeneratorUtil.connectMactions(this.node, this.getXml(), rebuilt.xml);
   return rebuilt;

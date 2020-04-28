@@ -32,7 +32,7 @@ sre.Numbers.nemeth.oneNumbers_ = [
  */
 sre.Numbers.nemeth.numberToWords = function(number) {
   var digits = number.toString().split('');
-  return digits.map(function (digit) {
+  return digits.map(function(digit) {
     return sre.Numbers.nemeth.oneNumbers_[parseInt(digit, 10)];
   }).join('');
 };

@@ -13,7 +13,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Tests for fonts. 
+ * @fileoverview Tests for fonts.
  *
  * @author Volker.Sorge@gmail.com (Volker Sorge)
  */
@@ -45,7 +45,7 @@ sre.MathspeakSpanishFontTest = function() {
    * @override
    */
   this.locale = 'es';
-  
+
   /**
    * @override
    */
@@ -57,20 +57,21 @@ goog.inherits(sre.MathspeakSpanishFontTest, sre.AbstractRuleTest);
 
 
 /**
- *  
+ *
  * Font tests serve primarily to check for correct replacement of font names.
- * 
+ *
  * We check:
  * 1. Fonts for unicode characters (with mathfonts on plane 1).
  * 2. Fonts for mathvariant inclusion (including TeX specific fonts).
  * 3. Correct replacements in case both unicode and mathvariants are given.
- * 
+ *
  */
 
 
 /**
  *  Part 1: Unicode Characters
  */
+
 
 /**
  * Test for Unicode Latin mathfonts upper letters.
@@ -110,7 +111,7 @@ sre.MathspeakSpanishFontTest.prototype.testGreekMathfontsUpper = function() {
 /**
  * Test for Unicode Latin mathfonts small letters.
  */
-sre.MathspeakSpanishFontTest.prototype.testLatinMathfontsSmall = function() { 
+sre.MathspeakSpanishFontTest.prototype.testLatinMathfontsSmall = function() {
   this.executeRuleTest('<mi>&#x0061;</mi>', 'a', 'default');
   this.executeRuleTest('<mi>&#xFF41;</mi>', 'a', 'default');
   this.executeRuleTest('<mi>&#x1D41A;</mi>', 'negrita a', 'default');
@@ -145,6 +146,7 @@ sre.MathspeakSpanishFontTest.prototype.testGreekMathfontsSmall = function() {
 /**
  *  Part 2: Mathvariants
  */
+
 
 /**
  * Test for Latin with mathvariant upper letters.
@@ -195,7 +197,7 @@ sre.MathspeakSpanishFontTest.prototype.testGreekMathvariantUpper = function() {
 /**
  * Test for Latin with mathvariant small letters.
  */
-sre.MathspeakSpanishFontTest.prototype.testLatinMathvariantSmall = function() { 
+sre.MathspeakSpanishFontTest.prototype.testLatinMathvariantSmall = function() {
   this.executeRuleTest('<mi mathvariant="normal">a</mi>', 'normal a', 'default');
   this.executeRuleTest('<mi mathvariant="bold">a</mi>', 'negrita a', 'default');
   this.executeRuleTest('<mi mathvariant="italic">a</mi>', 'a', 'default');
@@ -229,6 +231,7 @@ sre.MathspeakSpanishFontTest.prototype.testGreekMathvariantSmall = function() {
 /**
  *  Part 3: Mathvariants and Unicode Characters
  */
+
 
 /**
  * Test for Unicode Latin mathfonts with mathvariant upper letters.
@@ -268,7 +271,7 @@ sre.MathspeakSpanishFontTest.prototype.testGreekFontVariantsUpper = function() {
 /**
  * Test for Unicode Latin mathfonts with mathvariant small letters.
  */
-sre.MathspeakSpanishFontTest.prototype.testLatinFontVariantsSmall = function() { 
+sre.MathspeakSpanishFontTest.prototype.testLatinFontVariantsSmall = function() {
   this.executeRuleTest('<mi mathvariant="normal">&#x0061;</mi>', 'normal a', 'default');
   this.executeRuleTest('<mi mathvariant="normal">&#xFF41;</mi>', 'normal a', 'default');
   this.executeRuleTest('<mi mathvariant="bold">&#x1D41A;</mi>', 'negrita a', 'default');

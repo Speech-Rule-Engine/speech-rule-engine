@@ -33,7 +33,7 @@ sre.MathspeakCharEnglishTest = function() {
   this.locale = 'en';
   this.domain = 'mathspeak';
   this.semantics = true;
-  
+
   /**
    * @type {Array.<string>}
    */
@@ -43,7 +43,7 @@ sre.MathspeakCharEnglishTest = function() {
 };
 goog.inherits(sre.MathspeakCharEnglishTest, sre.AbstractCharacterTest);
 
-                                            
+
 sre.MathspeakCharEnglishTest.prototype.testMathspeakChars = function() {
   this.executeCharTest('0', ['0', '0', '0']);
   this.executeCharTest('1', ['1', '1', '1']);
