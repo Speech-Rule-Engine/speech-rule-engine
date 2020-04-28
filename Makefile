@@ -275,7 +275,7 @@ $(IEMAPS_FILE):
 			done; \
 		done; \
 	done
-	@head -n -1 $(IEMAPS_FILE) > $(IEMAPS_FILE).tmp
+	@sed '$$d' $(IEMAPS_FILE) > $(IEMAPS_FILE).tmp
 	@echo '}\n' >> $(IEMAPS_FILE).tmp
 	@mv $(IEMAPS_FILE).tmp $(IEMAPS_FILE)
 
