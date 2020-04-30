@@ -32,7 +32,7 @@ goog.require('sre.XpathUtil');
 sre.MathspeakSpanishUtil.ordinalCounter = function(node, context) {
   var counter = 0;
   return function() {
-    return sre.Messages.NUMBERS.numberToOrdinal(++counter, null) +
+    return sre.Messages.NUMBERS.numberToOrdinal(++counter, false) +
         ' ' + context;
   };
 };

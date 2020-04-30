@@ -19,6 +19,8 @@
 
 goog.provide('sre.Numbers.nemeth');
 
+goog.require('sre.Numbers');
+
 
 /**
  * @type {Array.<string>}
@@ -42,7 +44,9 @@ sre.Numbers.nemeth.numberToWords = function(number) {
 };
 
 
+/**
+ * @type {sre.Numbers}
+ */
 sre.Numbers.nemeth.NUMBERS = {
-  numberToWords: sre.Numbers.nemeth.numberToWords,
-  simpleOrdinal: function(x) {return x;}
+  numberToWords: sre.Numbers.nemeth.numberToWords
 };

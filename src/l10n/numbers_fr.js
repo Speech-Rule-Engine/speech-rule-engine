@@ -19,7 +19,13 @@
 
 goog.provide('sre.Numbers.fr');
 
+goog.require('sre.Numbers');
 
+
+/**
+ * Sub-ISO specification. Possible values: fr, be, sw.
+ * @type {string}
+ */
 sre.Numbers.fr.SUB_ISO = 'fr';
 
 
@@ -204,6 +210,9 @@ sre.Numbers.fr.simpleOrdinal = function(number) {
 };
 
 
+/**
+ * @type {sre.Numbers}
+ */
 sre.Numbers.fr.NUMBERS = {
   wordOrdinal: sre.Numbers.fr.wordOrdinal,
   simpleOrdinal: sre.Numbers.fr.simpleOrdinal,

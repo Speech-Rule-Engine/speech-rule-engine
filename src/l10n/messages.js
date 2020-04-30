@@ -20,6 +20,8 @@
  */
 goog.provide('sre.Messages');
 
+goog.require('sre.Numbers');
+
 
 // One (or more) flat message object per rule set.
 /**
@@ -245,7 +247,8 @@ sre.Messages.PLURAL_UNIT = { };
 
 /**
  * Function to build regular plurals for units.
- * @type {function(string): string}
+ * @param {string} unit A unit expression.
+ * @return {string} The unit in plural.
  */
 sre.Messages.PLURAL = function(unit) {
   return (/.*s$/.test(unit)) ? unit : unit + 's';
@@ -254,15 +257,9 @@ sre.Messages.PLURAL = function(unit) {
 
 /**
  * Localisable number computation.
- * @type {Object.<Function|string>}
+ * @type {sre.Numbers}
  */
-sre.Messages.NUMBERS = {
-  wordOrdinal: function(n) {return n.toString();},
-  simpleOrdinal: function(n) {return n.toString();},
-  numberToWords: function(n) {return n.toString();},
-  numberToOrdinal: function(n, m) {return n.toString();},
-  vulgarSep: '-' // space?
-};
+sre.Messages.NUMBERS = sre.Numbers.NUMBERS;
 
 
 /**
@@ -289,12 +286,23 @@ sre.Messages.ALPHABET_PREFIXES = {
 
 
 /**
+ * A trivial transformer.
+ * @param {string|number} input A number or string.
+ * @return {string} The input as a string.
+ * @private
+ */
+sre.Messages.identityTransformer_ = function(input) {
+  return input.toString();
+};
+
+
+/**
  * Transformer functions for alphabet rules that can be specialised by rule set.
  * @type {Object.<Object.<sre.Locale.Transformer>>}
  */
 sre.Messages.ALPHABET_TRANSFORMERS = {
-  digit: {default: function(n) {return n.toString();}},
-  letter: {default: function(n) {return n;}}
+  digit: {default: sre.Messages.identityTransformer_},
+  letter: {default: sre.Messages.identityTransformer_}
 };
 
 
