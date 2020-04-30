@@ -122,7 +122,8 @@ sre.Numbers.fr.numberToWords = function(number) {
         if (str.match(RegExp(rest))) {
           str = huns + (pos ? '-mille-' : '') + str;
         } else if (str.match(RegExp(rest.replace(/s$/, '')))) {
-          str = huns + (pos ? '-mille-' : '') + str.replace(rest.replace(/s$/, ''), rest);
+          str = huns + (pos ? '-mille-' : '') +
+              str.replace(rest.replace(/s$/, ''), rest);
         } else {
           str = huns + (pos ? '-' + large + '-' : '') + str;
         }

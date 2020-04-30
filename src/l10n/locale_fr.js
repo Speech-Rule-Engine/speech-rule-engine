@@ -65,7 +65,8 @@ sre.Locale.fr = {
     FRAC_NEST_DEPTH: function(node) { return false; },
     RADICAL_NEST_DEPTH: sre.Locale.nestingToString,
     COMBINE_ROOT_INDEX: sre.Locale.combinePostfixIndex,
-    COMBINE_NESTED_FRACTION: function(a, b, c) {return c.replace(/ $/g, '') + b + a;},
+    COMBINE_NESTED_FRACTION: function(a, b, c) {
+      return c.replace(/ $/g, '') + b + a;},
     COMBINE_NESTED_RADICAL: function(a, b, c) {return c + ' ' + a;},
     FONT_REGEXP: function(font) {return RegExp(' (en |)' + font + '$');}
   },

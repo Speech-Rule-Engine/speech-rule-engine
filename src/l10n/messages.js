@@ -299,7 +299,10 @@ sre.Messages.ALPHABET_TRANSFORMERS = {
 
 
 /**
- * Default combiner for alphabet rules.
- * @type {function(string, string, string): string}
+ * A default combiner for alphabet.
+ * @param {string} letter The letter.
+ * @param {string} font The font name.
+ * @param {string} cap Capitalisation expression.
+ * @return {string} The speech string as `letter`.
  */
 sre.Messages.ALPHABET_COMBINER = function(letter, font, cap) {return letter;};

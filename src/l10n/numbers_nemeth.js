@@ -20,6 +20,10 @@
 goog.provide('sre.Numbers.nemeth');
 
 
+/**
+ * @type {Array.<string>}
+ * @private
+ */
 sre.Numbers.nemeth.oneNumbers_ = [
   '⠴', '⠂', '⠆', '⠒', '⠲', '⠢', '⠖', '⠶', '⠦', '⠔'
 ];

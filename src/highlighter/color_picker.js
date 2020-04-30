@@ -247,7 +247,7 @@ sre.ContrastPicker.prototype.increment = function() {
  * @param {number} h The hue.
  * @param {number} s The saturation.
  * @param {number} l The luminosity.
- * @return {!Iterable} The rgb value triple.
+ * @return {{red: number, green: number, blue: number}} The rgb value triple.
  * @private
  */
 sre.ColorPicker.hsl2rgb_ = function(h, s, l) {
@@ -270,21 +270,21 @@ sre.ColorPicker.hsl2rgb_ = function(h, s, l) {
   } else if (300 <= h && h < 360) {
     [r, g, b] = [c, 0, x];
   }
-  return [r, g, b].map(x => x + m);
+  return {red: r + m, green: g + m, blue: b + m};
 };
 
 
 /**
  * Translates an rgb value triple into an RGB values (0..255).
- * @param {!Iterable} rgb The rgb values.
+ * @param {{red: number, green: number, blue: number}} rgb The rgb values.
  * @return {{red: number, green: number, blue: number}} The RGB triple.
  * @private
  */
-sre.ColorPicker.rgb2RGB_ = function([red, green, blue]) {
+sre.ColorPicker.rgb2RGB_ = function(rgb) {
   return {
-    red: Math.round(255 * red),
-    green: Math.round(255 * green),
-    blue: Math.round(255 * blue)
+    red: Math.round(255 * rgb.red),
+    green: Math.round(255 * rgb.green),
+    blue: Math.round(255 * rgb.blue)
   };
 };
 
