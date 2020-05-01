@@ -119,12 +119,15 @@ sre.PrefixFrench.initPrefixFrench_ = function() {
   defineRule( // NEW additions!
       'overscript', 'default.default',
       '[t] "indice suscrit"; [p] (pause:200)',
-      'self::*', 'name(../..)="overscore" or name(../..)="limupper" or name(../..)="limboth"',
-      'count(preceding-sibling::*)=1 or count(preceding-sibling::*)=2');  // check this final disjunctive constraint
+      'self::*', 'name(../..)="overscore" or name(../..)="limupper" or' +
+      ' name(../..)="limboth"',
+      'count(preceding-sibling::*)=1 or count(preceding-sibling::*)=2');
+      // check this final disjunctive constraint
   defineRule( // NEW additions!
       'underscript', 'default.default',
       '[t] "indice souscrit"; [p] (pause:200)',
-      'self::*', 'name(../..)="underscore" or name(../..)="limlower" or name(../..)="limboth"',
+      'self::*', 'name(../..)="underscore" or name(../..)="limlower" or' +
+      ' name(../..)="limboth"',
       'count(preceding-sibling::*)=1');
   defineRule(
       'radicand', 'default.default',

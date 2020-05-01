@@ -64,7 +64,8 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
   } else if (this.node.hasAttribute(sre.AbstractWalker.SRE_ID_ATTR)) {
     this.id = this.node.getAttribute(sre.AbstractWalker.SRE_ID_ATTR);
   } else {
-    this.node.setAttribute(sre.AbstractWalker.SRE_ID_ATTR, sre.AbstractWalker.ID_COUNTER);
+    this.node.setAttribute(sre.AbstractWalker.SRE_ID_ATTR,
+                           sre.AbstractWalker.ID_COUNTER);
     this.id = sre.AbstractWalker.ID_COUNTER++;
   }
 
@@ -93,14 +94,20 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
    */
   this.rootId = this.rootNode.getAttribute(sre.EnrichMathml.Attribute.ID);
 
-  // All of these need to be initialised later!
+  /**
+   * The original XML string. Kept for lazy initialization.
+   * @type {string}
+   * @private
+   */
+  this.xmlString_ = xml;
+
+  // All of these fields are initialized later for lazy evaluation.
   /**
    * The original xml/mathml node on which the walker is called.
    * @type {Element}
-   */ // Change!
+   * @private
+   */
   this.xml_ = null;
-
-  this.xmlString_ = xml;
 
   /**
    * @type {sre.RebuildStree}
@@ -115,7 +122,7 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
    * @private
    */
   this.focus_ = null;
-  // End of uninitialised fields.
+  // End of uninitialized fields.
 
   /**
    * @type {Object.<sre.EventUtil.KeyCode, function()>}
@@ -159,6 +166,9 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
 };
 
 
+/**
+ * @override
+ */
 sre.AbstractWalker.prototype.getXml = function() {
   if (!this.xml_) {
     this.xml_ = sre.DomUtil.parseInput(this.xmlString_);
@@ -183,6 +193,13 @@ sre.AbstractWalker.prototype.getRebuilt = function() {
  * @type {number}
  */
 sre.AbstractWalker.ID_COUNTER = 0;
+
+
+/**
+ * Attribute that saves the explorer id in a node when we have multiple
+ * explorers.
+ * @type {string}
+ */
 sre.AbstractWalker.SRE_ID_ATTR = 'sre-explorer-id';
 
 
@@ -259,6 +276,9 @@ sre.AbstractWalker.prototype.getDepth = function() {
 };
 
 
+/**
+ * @return {boolean} True if modality of walker's speech generator is speech.
+ */
 sre.AbstractWalker.prototype.isSpeech = function() {
   return this.generator.modality === sre.EnrichMathml.Attribute.SPEECH;
 };
@@ -583,7 +603,8 @@ sre.AbstractWalker.prototype.rebuildStree = function() {
   this.focus_ = sre.Focus.factory(
       this.rootId, [this.rootId], rebuilt, this.node);
   this.levels = this.initLevels();
-  sre.SpeechGeneratorUtil.connectMactions(this.node, this.getXml(), rebuilt.xml);
+  sre.SpeechGeneratorUtil.connectMactions(
+      this.node, this.getXml(), rebuilt.xml);
   return rebuilt;
 };
 
@@ -670,7 +691,8 @@ sre.AbstractWalker.prototype.focusFromId = function(id, ids) {
  * @protected
  */
 sre.AbstractWalker.prototype.summary = function() {
-  this.moved = this.isSpeech() ? sre.Walker.move.SUMMARY : sre.Walker.move.REPEAT;
+  this.moved = this.isSpeech() ? sre.Walker.move.SUMMARY :
+      sre.Walker.move.REPEAT;
   return this.getFocus().clone();
 };
 
@@ -682,8 +704,10 @@ sre.AbstractWalker.prototype.summary = function() {
 sre.AbstractWalker.prototype.summary_ = function() {
   var sprimary = this.getFocus().getSemanticPrimary();
   var sid = sprimary.id.toString();
-  var snode = this.getRebuilt().xml.getAttribute('id') === sid ? this.getRebuilt().xml :
-      sre.DomUtil.querySelectorAllByAttrValue(this.getRebuilt().xml, 'id', sid)[0];
+  var snode = this.getRebuilt().xml.getAttribute('id') === sid ?
+      this.getRebuilt().xml :
+      sre.DomUtil.querySelectorAllByAttrValue(
+          this.getRebuilt().xml, 'id', sid)[0];
   var summary = sre.SpeechGeneratorUtil.retrieveSummary(snode);
   var speech = this.mergePrefix_([summary]);
   return speech;
@@ -696,7 +720,8 @@ sre.AbstractWalker.prototype.summary_ = function() {
  * @protected
  */
 sre.AbstractWalker.prototype.detail = function() {
-  this.moved = this.isSpeech() ? sre.Walker.move.DETAIL : sre.Walker.move.REPEAT;
+  this.moved = this.isSpeech() ?
+      sre.Walker.move.DETAIL : sre.Walker.move.REPEAT;
   return this.getFocus().clone();
 };
 
@@ -708,8 +733,10 @@ sre.AbstractWalker.prototype.detail = function() {
 sre.AbstractWalker.prototype.detail_ = function() {
   var sprimary = this.getFocus().getSemanticPrimary();
   var sid = sprimary.id.toString();
-  var snode = this.getRebuilt().xml.getAttribute('id') === sid ? this.getRebuilt().xml :
-      sre.DomUtil.querySelectorAllByAttrValue(this.getRebuilt().xml, 'id', sid)[0];
+  var snode = this.getRebuilt().xml.getAttribute('id') === sid ?
+      this.getRebuilt().xml :
+      sre.DomUtil.querySelectorAllByAttrValue(
+          this.getRebuilt().xml, 'id', sid)[0];
   var oldAlt = snode.getAttribute('alternative');
   snode.removeAttribute('alternative');
   var descrs = sre.SpeechGeneratorUtil.computeSpeechWithoutCache(
@@ -781,12 +808,18 @@ sre.AbstractWalker.prototype.undo = function() {
 sre.AbstractWalker.prototype.update = function(options) {
   this.generator.setOptions(options);
   sre.System.getInstance().setupEngine(options);
-  sre.SpeechGeneratorFactory.generator('Tree').getSpeech(this.node, this.getXml());
+  sre.SpeechGeneratorFactory.generator('Tree').
+      getSpeech(this.node, this.getXml());
 };
 
 
 // Facilities for keyboard driven rules cycling.
 // TODO: Refactor this into the speech generators.
+/**
+ * Cycles to next speech rule set if possible.
+ * @return {sre.Focus} The current focus. Either the old one or if cycling was
+ *     possible a cloned focus.
+ */
 sre.AbstractWalker.prototype.nextRules = function() {
   var options = this.generator.getOptions();
   if (options.modality !== 'speech') {
@@ -794,7 +827,8 @@ sre.AbstractWalker.prototype.nextRules = function() {
   }
   // TODO: Check if domains exist for the current locale.
   sre.Engine.DOMAIN_TO_STYLES[options.domain] = options.style;
-  options.domain = (options.domain === 'mathspeak') ? 'clearspeak' : 'mathspeak';
+  options.domain = (options.domain === 'mathspeak') ?
+      'clearspeak' : 'mathspeak';
   options.style = sre.Engine.DOMAIN_TO_STYLES[options.domain];
   this.update(options);
   this.moved = sre.Walker.move.REPEAT;
@@ -802,6 +836,12 @@ sre.AbstractWalker.prototype.nextRules = function() {
 };
 
 
+/**
+ * Cycles to next style or preference of the speech rule set if possible.
+ * @param {string} domain The current speech rule set name.
+ * @param {string} style The current style name.
+ * @return {string} The new style name.
+ */
 sre.AbstractWalker.prototype.nextStyle = function(domain, style) {
   if (domain === 'mathspeak') {
     var styles = ['default', 'brief', 'sbrief'];
@@ -835,6 +875,11 @@ sre.AbstractWalker.prototype.nextStyle = function(domain, style) {
 };
 
 
+/**
+ * Cycles to previous speech rule set if possible.
+ * @return {sre.Focus} The current focus. Either the old one or if cycling was
+ *     possible a cloned focus.
+ */
 sre.AbstractWalker.prototype.previousRules = function() {
   var options = this.generator.getOptions();
   if (options.modality !== 'speech') {

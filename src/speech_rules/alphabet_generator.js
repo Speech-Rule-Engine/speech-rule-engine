@@ -97,6 +97,7 @@ sre.AlphabetGenerator.Domains_ = {
 
 /**
  * Generates the domain combinations for the given locale.
+ * @private
  */
 sre.AlphabetGenerator.makeDomains_ = function() {
   var prefs = sre.Messages.ALPHABET_PREFIXES;
@@ -139,7 +140,8 @@ sre.AlphabetGenerator.generate = function(locale, store) {
     } else {
       var alphabet = sre.Messages.ALPHABETS[int.base];
       sre.AlphabetGenerator.alphabetRules(
-          store, keys, letters, alphabet, int.font, int.category, !!int.capital);
+          store, keys, letters, alphabet,
+          int.font, int.category, !!int.capital);
     }
   }
   sre.Engine.getInstance().locale = oldLocale;
@@ -210,8 +212,8 @@ sre.AlphabetGenerator.alphabetRules = function(
     var domains = cap ? sre.AlphabetGenerator.Domains_.capital :
         sre.AlphabetGenerator.Domains_.small;
     sre.AlphabetGenerator.makeLetter(
-        store, realFont.combiner, key, unicode, letter, realFont.font, prefixes, category,
-        sre.Messages.ALPHABET_TRANSFORMERS.letter, domains);
+        store, realFont.combiner, key, unicode, letter, realFont.font, prefixes,
+        category, sre.Messages.ALPHABET_TRANSFORMERS.letter, domains);
   }
 };
 
@@ -233,8 +235,9 @@ sre.AlphabetGenerator.numberRules = function(
     var prefixes = sre.Messages.ALPHABET_PREFIXES.digitPrefix;
     var number = i + offset;
     sre.AlphabetGenerator.makeLetter(
-        store, realFont.combiner, key, unicode, number, realFont.font, prefixes, category,
-        sre.Messages.ALPHABET_TRANSFORMERS.digit, sre.AlphabetGenerator.Domains_.digit);
+        store, realFont.combiner, key, unicode, number, realFont.font, prefixes,
+        category, sre.Messages.ALPHABET_TRANSFORMERS.digit,
+        sre.AlphabetGenerator.Domains_.digit);
   }
 };
 
@@ -261,10 +264,11 @@ sre.AlphabetGenerator.makeLetter = function(
     store, combiner, key, unicode, letter, font, prefixes, category,
     transformers, domains) {
   for (var i = 0, domain; domain = domains[i]; i++) {
-    var transformer = (domain in transformers) ? transformers[domain] : transformers['default'];
+    var transformer = (domain in transformers) ?
+        transformers[domain] : transformers['default'];
     var prefix = (domain in prefixes) ? prefixes[domain] : prefixes['default'];
-    store.defineRule(key.toString(), domain, 'default', category, unicode, combiner(
-        transformer(letter), font, prefix));
+    store.defineRule(key.toString(), domain, 'default', category, unicode,
+                     combiner(transformer(letter), font, prefix));
   }
 };
 
@@ -762,7 +766,8 @@ sre.AlphabetGenerator.INTERVALS = [
     subst: {},
     offset: 1,
     category: 'No',
-    font: sre.AlphabetGenerator.Embellish.DOUBLECIRCLED // (starts at 1)
+    font: sre.AlphabetGenerator.Embellish.DOUBLECIRCLED
+    // (starts at 1)
   },
   {
     interval: ['277F', '2789'],
@@ -772,7 +777,8 @@ sre.AlphabetGenerator.INTERVALS = [
     },
     offset: 0,
     category: 'No',
-    font: sre.AlphabetGenerator.Embellish.CIRCLEDSANSSERIF // (0 is NEW)
+    font: sre.AlphabetGenerator.Embellish.CIRCLEDSANSSERIF
+    // (0 is NEW)
   },
   {
     interval: ['2789', '2793'],
@@ -782,7 +788,8 @@ sre.AlphabetGenerator.INTERVALS = [
     },
     offset: 0,
     category: 'No',
-    font: sre.AlphabetGenerator.Embellish.NEGATIVECIRCLEDSANSSERIF //  (0 is NEW!)
+    font: sre.AlphabetGenerator.Embellish.NEGATIVECIRCLEDSANSSERIF
+    //  (0 is NEW!)
   },
   {
     interval: ['FF10', 'FF19'],

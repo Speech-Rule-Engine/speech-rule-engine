@@ -320,6 +320,7 @@ sre.ClearspeakPreferences.getLocalePreferences = function(opt_dynamic) {
  * @param {Object} dynamic Optionally a tree structure with the dynamic
  *     constraints.
  * @return {Object.<sre.DynamicProperties>} Mapping of locale to preferences.
+ * @private
  */
 sre.ClearspeakPreferences.getLocalePreferences_ = function(dynamic) {
   var result = {};

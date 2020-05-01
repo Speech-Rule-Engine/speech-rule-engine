@@ -42,6 +42,10 @@ sre.NemethRules = function() {
 goog.inherits(sre.NemethRules, sre.MathStore);
 goog.addSingletonGetter(sre.NemethRules);
 
+
+/**
+ * @override
+ */
 sre.NemethRules.prototype.evaluateDefault = function(node) {
   var rest = node.textContent.slice(0);
   var descs = new Array();
@@ -1050,7 +1054,8 @@ sre.NemethRules.initNemethRules_ = function() {
 
   defineRule(
       'matrix-row', 'default.default',
-      '[n] ../../content/*[1] (grammar:enlargeFence); [m] children/* (separator:"⠀"); ' +
+      '[n] ../../content/*[1] (grammar:enlargeFence); [m] children/*' +
+      ' (separator:"⠀"); ' +
       '[n] ../../content/*[2] (grammar:enlargeFence); ',
       'self::row');
   defineRule(
@@ -1088,7 +1093,8 @@ sre.NemethRules.initNemethRules_ = function() {
   //     'self::matrix', '@role="determinant"');
   // defineRule(
   //     'row-simple', 'default.default',
-  //     '[n] ../../content/*[1] (grammar:enlargeFence); [m] children/* (separator:"⠀"); ' +
+  //     '[n] ../../content/*[1] (grammar:enlargeFence); [m] children/*' +
+  //     ' (separator:"⠀"); ' +
   //     '[n] ../../content/*[2] (grammar:enlargeFence); ',
   //     'self::row', '@role="determinant"');
 
