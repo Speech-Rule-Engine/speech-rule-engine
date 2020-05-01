@@ -62,7 +62,7 @@ Current API functions are divided into three categories.
 | ---- | ---- |
 | `toSpeech(mathml)` | Speech string for the MathML. |
 | `toSemantic(mathml)` | XML representation of the semantic tree for the MathML. |
-| `toJson(mathml)` | The semantic tree in JSON. This method only works in Node, not in browser mode. |
+| `toJson(mathml)` | The semantic tree in JSON. |
 | `toDescription(mathml)` | The array of auditory description objects of the MathML expression. |
 | `toEnriched(mathml)` | The semantically enriched MathML expression. |
 
@@ -72,13 +72,14 @@ engineReady flag below.**
 
 #### Methods that take an input filename and optionally an output filename:
 
-If the output filename is not provided, output will be written to stdout.
+If the output filename is not provided, output will be written to stdout. _Note
+that the file methods only work in Node!_
 
 | Method | Return Value |
 | ---- | ---- |
 | `file.toSpeech(input, output)` | Speech string for the MathML. |
 | `file.toSemantic(input, output)` | XML representation of the semantic tree for the MathML. |
-| `file.toJson(input, output)` | The semantic tree in JSON. This method only works in Node, not in browser mode. |
+| `file.toJson(input, output)` | The semantic tree in JSON.  |
 | `file.toDescription(input, output)` | The array of auditory description objects of the MathML expression. |
 | `file.toEnriched(input, output)` | The semantically enriched MathML expression. |
 
