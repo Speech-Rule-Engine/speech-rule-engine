@@ -97,6 +97,11 @@ sre.SemanticMathml.prototype.parse = function(mml) {
 };
 
 
+/**
+ * Retains external attributes from the source node to the semantic node.
+ * @param {sre.SemanticNode} to The target node.
+ * @param {Node} from The source node.
+ */
 sre.SemanticMathml.prototype.addAttributes = function(to, from) {
   if (from.hasAttributes()) {
     var attrs = from.attributes;
