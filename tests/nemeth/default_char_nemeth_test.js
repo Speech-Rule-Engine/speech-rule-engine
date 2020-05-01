@@ -3317,7 +3317,7 @@ sre.DefaultCharNemethTest.prototype.testDefaultChars = function() {
   this.executeCharTest('¯', ['⠱']);
   this.executeCharTest('°', ['⠘⠨⠡']);
   this.executeCharTest('±', ['⠬⠤']);
-  this.executeCharTest('´', ['acute']);
+  this.executeCharTest('´', ['⠈']);
   this.executeCharTest('µ', ['⠨⠍']);
   this.executeCharTest('¶', ['⠄⡳⠭⠴⠴⠃⠖⠄']);
   this.executeCharTest('·', ['⠡']);

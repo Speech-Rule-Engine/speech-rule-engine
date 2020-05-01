@@ -76,24 +76,17 @@ sre.AbstractCharacterTest.prototype.executeUnitTest = function(char, answers) {
  */
 sre.AbstractCharacterTest.prototype.executeRuleTest = function(text, answer, opt_style) {
   var style = opt_style || this.style;
-  sre.Grammar.getInstance().pushState({translate: true});
   sre.SpeechRuleEngine.getInstance().clearCache();
   sre.System.getInstance().setupEngine(
       {semantics: this.semantics, domain: this.domain, style: style,
         modality: this.modality, rules: this.rules, locale: this.locale});
   var aural = sre.AuralRendering.getInstance();
   var descrs = [
-    sre.AuditoryDescription.create({text: text}, {adjust: true})];
+    sre.AuditoryDescription.create({text: text}, {adjust: true, translate: true})];
   var result = aural.finalize(aural.markup(descrs));
   var actual = this.actual ? result : answer;
   this.appendRuleExample(text, actual, style);
-  try {
-    this.assert.equal(actual, result);
-  } catch (err) {
-    throw (err);
-  } finally {
-    sre.Grammar.getInstance().popState();
-  }
+  this.assert.equal(actual, result);
 };
 
 
