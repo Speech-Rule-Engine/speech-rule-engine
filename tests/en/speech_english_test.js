@@ -15,9 +15,9 @@
 
 goog.provide('sre.SpeechEnglishTest');
 
+goog.require('sre.ClearspeakCharEnglishTest');
 goog.require('sre.ClearspeakEnglishTest');
 goog.require('sre.CollapseEnglishTest');
-goog.require('sre.ClearspeakCharEnglishTest');
 goog.require('sre.DefaultCharEnglishTest');
 goog.require('sre.MathspeakCharEnglishTest');
 goog.require('sre.MathspeakEmbellishEnglishTest');

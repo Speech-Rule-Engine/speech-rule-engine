@@ -112,8 +112,8 @@ sre.EnrichMathml.enrich = function(mml, semantic) {
   sre.EnrichMathml.walkTree(semantic.root);
   if (sre.Engine.getInstance().structure) {
     mml.setAttribute(
-      sre.EnrichMathml.Attribute.STRUCTURE,
-      sre.SemanticSkeleton.fromStructure(mml, semantic).toString());
+        sre.EnrichMathml.Attribute.STRUCTURE,
+        sre.SemanticSkeleton.fromStructure(mml, semantic).toString());
   }
   sre.Debugger.getInstance().generateOutput(
       function() {

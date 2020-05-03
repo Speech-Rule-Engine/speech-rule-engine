@@ -40,12 +40,6 @@ sre.CollapseEnglishTest = function() {
 
   this.domain = 'mathspeak';
 
-  /**
-   * @override
-   */
-  this.semantics = true;
-
-
   this.setActive('CollapseEnglish');
 };
 goog.inherits(sre.CollapseEnglishTest, sre.CollapseRuleTest);

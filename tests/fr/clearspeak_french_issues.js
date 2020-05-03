@@ -45,6 +45,9 @@ goog.inherits(sre.ClearspeakFrenchIssues, sre.ClearspeakFrenchRuleTest);
 //
 
 
+/**
+ * Issue #230
+ */
 sre.ClearspeakFrenchIssues.prototype.testIssue230 = function() {
   var preference = 'default';
   this.executeRuleTest(
@@ -56,6 +59,9 @@ sre.ClearspeakFrenchIssues.prototype.testIssue230 = function() {
 };
 
 
+/**
+ * Issues with number expressions.
+ */
 sre.ClearspeakFrenchIssues.prototype.testIssueNumbers = function() {
   var preference = 'default';
   this.executeRuleTest(

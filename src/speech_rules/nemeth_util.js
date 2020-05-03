@@ -122,6 +122,13 @@ sre.NemethUtil.indexRadical = function(node) {
   return sre.NemethUtil.nestedRadical(node, msg.MS.ROOTINDEX);
 };
 
+
+/**
+ * Enlarges a fence operator. The enlargement indicator might need to be
+ * interspersed if multiple neutral fences are used.
+ * @param {string} text The text representing the fence.
+ * @return {string} The fence with the enlargment indicator.
+ */
 sre.NemethUtil.enlargeFence = function(text) {
   var start = '⠠';
   if (text.length === 1) {
@@ -140,55 +147,77 @@ sre.Grammar.getInstance().setCorrection('enlargeFence',
                                         sre.NemethUtil.enlargeFence);
 
 
-  sre.NemethUtil.NUMBER_PROPAGATORS = [
-    sre.SemanticAttr.Type.MULTIREL,
-    sre.SemanticAttr.Type.RELSEQ,
-    sre.SemanticAttr.Type.PUNCTUATED,
-    sre.SemanticAttr.Type.APPL
-  ];
+/**
+ * @type {Array.<sre.SemanticAttr.Type>}
+ * @private
+ */
+sre.NemethUtil.NUMBER_PROPAGATORS_ = [
+  sre.SemanticAttr.Type.MULTIREL,
+  sre.SemanticAttr.Type.RELSEQ,
+  sre.SemanticAttr.Type.PUNCTUATED,
+  sre.SemanticAttr.Type.APPL
+];
 
-  sre.NemethUtil.checkParent_ = function(node) {
-    var parent = node.parent;
-    if (!parent) {
-      return false;
-    }
-    var type = parent.type;
-    if (sre.NemethUtil.NUMBER_PROPAGATORS.indexOf(type) !== -1 ||
-        (type === sre.SemanticAttr.Type.PREFIXOP &&
-         parent.role === sre.SemanticAttr.Role.NEGATIVE)) {
-      return true;
-    }
+
+/**
+ * Checks if a Nemeth number indicator has to be propagated after the node's
+ * parent.
+ * @param {!sre.SemanticNode} node The node which can get a number indicator.
+ * @return {boolean} True if parent is a relation, puntuation or application or
+ *     a negative sign.
+ * @private
+ */
+sre.NemethUtil.checkParent_ = function(node) {
+  var parent = node.parent;
+  if (!parent) {
     return false;
-  };
-  
-  sre.NemethUtil.childNumber_ = function(node) {
-    var parent = node.parent;
-    if (!parent) {
-      return 0;
-    }
-    return parent.childNodes.indexOf(node);
-  };
-  
-  /**
-   * 
-   * @param {sre.SemanticNode} node 
-   * @param {Object.<*>} info
-   * @return {*}
-   */
-  sre.NemethUtil.propagateNumber = function(node, info) {
-    // TODO: Font indicator followed by number.
-    if (!node.childNodes.length) {
-      if (sre.NemethUtil.checkParent_(node)) {
-        info.number = true;
-      }
-      return [info['number'] ? 'number' : '', {number: false}];
-    }
+  }
+  var type = parent.type;
+  if (sre.NemethUtil.NUMBER_PROPAGATORS_.indexOf(type) !== -1 ||
+      (type === sre.SemanticAttr.Type.PREFIXOP &&
+      parent.role === sre.SemanticAttr.Role.NEGATIVE)) {
+    return true;
+  }
+  return false;
+};
+
+
+// /**
+//  *
+//  * @param {!sre.SemanticNode} node
+//  * @return {boolean}
+//  * @private
+//  */
+// sre.NemethUtil.childNumber_ = function(node) {
+//   var parent = node.parent;
+//   if (!parent) {
+//     return 0;
+//   }
+//   return parent.childNodes.indexOf(node);
+// };
+
+
+/**
+ * Propagates annotation for the Nemeth number indicator.
+ * @param {sre.SemanticNode} node The semantic node.
+ * @param {Object<?,*>} info The information, i.e., {number: true|false}.
+ * @return {Array.<*>} Info pair consisting of a string and the updated
+ *     information object.
+ */
+sre.NemethUtil.propagateNumber = function(node, info) {
+  // TODO: Font indicator followed by number.
+  if (!node.childNodes.length) {
     if (sre.NemethUtil.checkParent_(node)) {
       info.number = true;
     }
-    return ['', info];
+    return [info['number'] ? 'number' : '', {number: false}];
+  }
+  if (sre.NemethUtil.checkParent_(node)) {
+    info.number = true;
+  }
+  return ['', info];
 };
-  
+
 
 /**
  * @return {sre.SemanticVisitor} A semantic annotator for numbered expressions.

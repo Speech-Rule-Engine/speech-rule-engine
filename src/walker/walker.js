@@ -61,6 +61,12 @@ sre.Walker.prototype.speech = function() {};
 
 
 /**
+ * @return {!Element} The XML element.
+ */
+sre.Walker.prototype.getXml = function() {};
+
+
+/**
  * @return {!sre.RebuildStree} The rebuilt semantic tree for the walker.
  */
 sre.Walker.prototype.getRebuilt = function() {};

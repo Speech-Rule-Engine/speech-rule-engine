@@ -19,7 +19,13 @@
 
 goog.provide('sre.Numbers.nemeth');
 
+goog.require('sre.Numbers');
 
+
+/**
+ * @type {Array.<string>}
+ * @private
+ */
 sre.Numbers.nemeth.oneNumbers_ = [
   '⠴', '⠂', '⠆', '⠒', '⠲', '⠢', '⠖', '⠶', '⠦', '⠔'
 ];
@@ -32,13 +38,15 @@ sre.Numbers.nemeth.oneNumbers_ = [
  */
 sre.Numbers.nemeth.numberToWords = function(number) {
   var digits = number.toString().split('');
-  return digits.map(function (digit) {
+  return digits.map(function(digit) {
     return sre.Numbers.nemeth.oneNumbers_[parseInt(digit, 10)];
   }).join('');
 };
 
 
+/**
+ * @type {sre.Numbers}
+ */
 sre.Numbers.nemeth.NUMBERS = {
-  numberToWords: sre.Numbers.nemeth.numberToWords,
-  simpleOrdinal: function(x) {return x;}
+  numberToWords: sre.Numbers.nemeth.numberToWords
 };

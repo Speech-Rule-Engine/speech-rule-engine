@@ -536,8 +536,8 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       '(name(children/*[2])="fenced" and not(contains(' +
       'children/*[2]/children/*[1]/@annotation, "clearspeak:simple")))' +
       ' or name(children/*[2])="fraction" or ' +
-      '(name(children/*[2])!="fenced" and not(contains(children/*[2]/@annotation' +
-      ', "clearspeak:simple")))',
+      '(name(children/*[2])!="fenced" and ' +
+      'not(contains(children/*[2]/@annotation, "clearspeak:simple")))',
       'self::*');
   defineRule(
       'function-prefix-subscript', 'clearspeak.default',
@@ -735,11 +735,13 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       'self::superscript');
   defineRule(
       'superscript-simple-exponent', 'clearspeak.default',
-      '[n] children/*[1]; [t] "à la puissance"; [n] children/*[2]; [p] (pause:"medium")',
+      '[n] children/*[1]; [t] "à la puissance"; [n] children/*[2]; ' +
+      '[p] (pause:"medium")',
       'self::superscript', 'not(descendant::superscript)');
   defineRule(
       'superscript-simple-exponent', 'clearspeak.default',
-      '[n] children/*[1]; [t] "à la puissance"; [n] children/*[2]; [p] (pause:"medium") ',
+      '[n] children/*[1]; [t] "à la puissance"; [n] children/*[2]; ' +
+      '[p] (pause:"medium") ',
       'self::superscript', 'not(descendant::superscript)',
       'not(following-sibling::*)');
 
@@ -1622,26 +1624,26 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   // Determinant
   defineRule(
       'determinant', 'clearspeak.default',
-      '[t] "le déterminant de la matrice de dimension"; [t] count(children/*);  [t] "par";' +
-      '[t] count(children/*[1]/children/*); ' +
-      '[p] (pause:long); [m] children/* ' +
+      '[t] "le déterminant de la matrice de dimension"; ' +
+      '[t] count(children/*); [t] "par"; [t] count(children/*[1]/children/*);' +
+      ' [p] (pause:long); [m] children/* ' +
       '(ctxtFunc:CTXFnodeCounter,context:"rangée-:",grammar:simpleDet);' +
       ' [p] (pause:long)',
       'self::matrix', '@role="determinant"', 'count(children/*)<4',
       'CQFcellsSimple');
   defineRule(
       'determinant-simple', 'clearspeak.default',
-      '[t] "le déterminant de la matrice de dimension"; [t] count(children/*);  [t] "par";' +
-      '[t] count(children/*[1]/children/*); ' +
-      '[p] (pause:long); [m] children/* ' +
+      '[t] "le déterminant de la matrice de dimension"; ' +
+      '[t] count(children/*);  [t] "par"; ' +
+      '[t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* ' +
       '(ctxtFunc:CTXFnodeCounter,context:"rangée-:");' +
       ' [p] (pause:long)',
       'self::matrix', '@role="determinant"');
   // Vector
   defineRule(
       'matrix-vector', 'clearspeak.default',
-      '[t] "la matrice colonne de dimension"; [t] count(children/*);  [t] "par";' +
-      '[t] count(children/*[1]/children/*); ' +
+      '[t] "la matrice colonne de dimension"; [t] count(children/*); ' +
+      '[t] "par"; [t] count(children/*[1]/children/*); ' +
       '[p] (pause:long); [m] children/* ' +
       '(ctxtFunc:CTXFnodeCounter,context:"rangée-:",grammar:simpleDet);' +
       ' [p] (pause:long)',
@@ -1650,8 +1652,8 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       'matrix-vector', 'clearspeak.default', 'clearspeak.Matrix_SpeakColNum');
   defineRule(
       'matrix-vector-simple', 'clearspeak.default',
-      '[t] "la matrice colonne de dimension"; [t] count(children/*);  [t] "par";' +
-      '[t] count(children/*[1]/children/*); ' +
+      '[t] "la matrice colonne de dimension"; [t] count(children/*); ' +
+      '[t] "par"; [t] count(children/*[1]/children/*); ' +
       '[p] (pause:long); [m] children/* ' +
       '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
       ' [p] (pause:long)',
@@ -1659,8 +1661,8 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       '@role!="squarematrix"');
   defineRule(
       'matrix-vector-simple', 'clearspeak.Matrix_SilentColNum',
-      '[t] "la matrice colonne de dimension"; [t] count(children/*);  [t] "par";' +
-      '[t] count(children/*[1]/children/*); ' +
+      '[t] "la matrice colonne de dimension"; [t] count(children/*); ' +
+      '[t] "par"; [t] count(children/*[1]/children/*); ' +
       '[p] (pause:long); [m] children/* ' +
       '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
       ' [p] (pause:long)',
@@ -1668,8 +1670,8 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
 
   defineRule(
       'matrix-row-vector', 'clearspeak.default',
-      '[t] "la matrice ligne de dimension"; [t] count(children/*);  [t] "par";' +
-      '[t] count(children/*[1]/children/*); ' +
+      '[t] "la matrice ligne de dimension"; [t] count(children/*); ' +
+      '[t] "par"; [t] count(children/*[1]/children/*); ' +
       '[p] (pause:long); [m] children/*[1]/children/* ' +
       '(ctxtFunc:CTXFnodeCounter,context:"colonne-:",grammar:simpleDet);' +
       ' [p] (pause:long)',
@@ -1679,8 +1681,8 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       'clearspeak.Matrix_SpeakColNum');
   defineRule(
       'matrix-row-vector-simple', 'clearspeak.default',
-      '[t] "la matrice ligne de dimension"; [t] count(children/*);  [t] "par";' +
-      '[t] count(children/*[1]/children/*); ' +
+      '[t] "la matrice ligne de dimension"; [t] count(children/*); ' +
+      '[t] "par"; [t] count(children/*[1]/children/*); ' +
       '[p] (pause:long); [m] children/*[1]/children/* ' +
       '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
       ' [p] (pause:long)',
@@ -1688,8 +1690,8 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       'CQFcellsSimple');
   defineRule(
       'matrix-row-vector-simple', 'clearspeak.Matrix_SilentColNum',
-      '[t] "la matrice ligne de dimension"; [t] count(children/*);  [t] "par";' +
-      '[t] count(children/*[1]/children/*); ' +
+      '[t] "la matrice ligne de dimension"; [t] count(children/*); ' +
+      '[t] "par"; [t] count(children/*[1]/children/*); ' +
       '[p] (pause:long); [m] children/*[1]/children/* ' +
       '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
       ' [p] (pause:long)',
@@ -1735,8 +1737,8 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
 
   defineRule(
       'vector', 'clearspeak.Matrix_Vector',
-      '[t] "le vecteur colonne de dimension"; [t] count(children/*);  [t] "par";' +
-      '[t] count(children/*[1]/children/*); ' +
+      '[t] "le vecteur colonne de dimension"; [t] count(children/*); ' +
+      '[t] "par"; [t] count(children/*[1]/children/*); ' +
       '[p] (pause:long); [m] children/* ' +
       '(ctxtFunc:CTXFnodeCounter,context:"rangée-:",grammar:simpleDet); ' +
       '[p] (pause:long)',
@@ -1745,8 +1747,8 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       'vector', 'clearspeak.Matrix_Vector', 'clearspeak.Matrix_EndVector');
   defineRule(
       'vector-simple', 'clearspeak.Matrix_Vector',
-      '[t] "le vecteur colonne de dimension"; [t] count(children/*);  [t] "par"; ' +
-      '[t] count(children/*[1]/children/*); ' +
+      '[t] "le vecteur colonne de dimension"; [t] count(children/*); ' +
+      '[t] "par";  [t] count(children/*[1]/children/*); ' +
       '[p] (pause:long); [m] children/* ' +
       '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet); ' +
       '[p] (pause:long)',
@@ -1757,8 +1759,8 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
 
   defineRule(
       'row-vector', 'clearspeak.Matrix_Vector',
-      '[t] "le vecteur ligne de dimension"; [t] count(children/*);  [t] "par";' +
-      '[t] count(children/*[1]/children/*);' +
+      '[t] "le vecteur ligne de dimension"; [t] count(children/*); ' +
+      '[t] "par"; [t] count(children/*[1]/children/*);' +
       ' [p] (pause:long); [m] children/*[1]/children/* ' +
       '(ctxtFunc:CTXFnodeCounter,context:"colonne-:",grammar:simpleDet);' +
       ' [p] (pause:long)',
@@ -1767,8 +1769,8 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       'row-vector', 'clearspeak.Matrix_Vector', 'clearspeak.Matrix_EndVector');
   defineRule(
       'row-vector-simple', 'clearspeak.Matrix_Vector',
-      '[t] "le vecteur ligne de dimension"; [t] count(children/*);  [t] "par";' +
-      '[t] count(children/*[1]/children/*);' +
+      '[t] "le vecteur ligne de dimension"; [t] count(children/*); ' +
+      '[t] "par"; [t] count(children/*[1]/children/*);' +
       ' [p] (pause:long); [m] children/*[1]/children/* ' +
       '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
       ' [p] (pause:long)',
@@ -2159,13 +2161,15 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   );
   defineRule(
       'adorned-sign', 'clearspeak.default',
-      '[t] "signe"; [n] children/*[1] ; [t] "avec"; [n] children/*[2]; [t] "dessus"',
+      '[t] "signe"; [n] children/*[1] ; [t] "avec"; [n] children/*[2]; ' +
+      '[t] "dessus"',
       'self::overscore', '@embellished',
       'name(children/*[1])="operator" or name(children/*[1])="relation"'
   );
   defineRule(
-      'factorial', 'clearspeak.default', '[t] "factorielle"', 'self::punctuation',
-      'text()="!"', 'name(preceding-sibling::*[1])!="text"');
+      'factorial', 'clearspeak.default', '[t] "factorielle"',
+      'self::punctuation', 'text()="!"',
+      'name(preceding-sibling::*[1])!="text"');
 
   // Tensors:
   defineRule(
@@ -2236,16 +2240,16 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   );
   defineRule(
       'choose', 'clearspeak.CombinationPermutation_ChoosePermute',
-      '[t] "combinaison de"; [n] children/*[3] (grammar:combinatorics); [t] "parmi"; ' +
-      '[n] children/*[4] (grammar:combinatorics)',
+      '[t] "combinaison de"; [n] children/*[3] (grammar:combinatorics); ' +
+      '[t] "parmi"; [n] children/*[4] (grammar:combinatorics)',
       'self::tensor', 'name(children/*[3])="empty"',
       'name(children/*[5])="empty"',
       'children/*[1][text()="C"]'
   );
   defineRule(
       'permute', 'clearspeak.CombinationPermutation_ChoosePermute',
-      '[t] "permutation de"; [n] children/*[2] (grammar:combinatorics); [t] "parmi"; ' +
-      '[n] children/*[4] (grammar:combinatorics)',
+      '[t] "permutation de"; [n] children/*[2] (grammar:combinatorics); ' +
+      '[t] "parmi"; [n] children/*[4] (grammar:combinatorics)',
       'self::tensor', 'name(children/*[3])="empty"',
       'name(children/*[5])="empty"',
       'children/*[1][text()="P"]'

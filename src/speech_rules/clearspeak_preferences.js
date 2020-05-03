@@ -206,19 +206,16 @@ sre.ClearspeakPreferences.Parser.prototype.parse = function(str) {
   var initial = sre.ClearspeakPreferences.Parser.base(this, 'parse', str);
   var style = initial.getValue(sre.DynamicCstr.Axis.STYLE);
   var locale = initial.getValue(sre.DynamicCstr.Axis.LOCALE);
-  if (style === sre.DynamicCstr.DEFAULT_VALUE) {
-    return new sre.ClearspeakPreferences(
-        {'locale': locale,
-          'modality': sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY],
-          'domain': 'clearspeak',
-          'style': sre.DynamicCstr.DEFAULT_VALUE}, {});
+  var pref = {};
+  if (style !== sre.DynamicCstr.DEFAULT_VALUE) {
+    pref = this.fromPreference(style);
+    style = this.toPreference(pref);
   }
-  var preferences = this.fromPreference(style);
-  return new sre.ClearspeakPreferences(
-      {'locale': locale,
-        'modality': sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY],
-        'domain': 'clearspeak',
-        'style': this.toPreference(preferences)}, preferences);
+  return new sre.ClearspeakPreferences({
+    'locale': locale,
+    'modality': sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY],
+    'domain': 'clearspeak',
+    'style': style}, pref);
 };
 
 
@@ -264,11 +261,11 @@ sre.ClearspeakPreferences.fromPreference = function(pref) {
  * Creates a style string from a set of preference mappings, by joining them via
  * underscore and colon in the form:
  * preference1_setting1:preference2_setting2:....:preferenceN_settingN
- * @param {!Object.<string>} preferences A preference mapping.
+ * @param {!Object.<string>} pref A preference mapping.
  * @return {string} A style string created from the preferences.
  */
-sre.ClearspeakPreferences.Parser.prototype.toPreference = function(preferences) {
-  return sre.ClearspeakPreferences.toPreference(preferences);
+sre.ClearspeakPreferences.Parser.prototype.toPreference = function(pref) {
+  return sre.ClearspeakPreferences.toPreference(pref);
 };
 
 
@@ -276,14 +273,14 @@ sre.ClearspeakPreferences.Parser.prototype.toPreference = function(preferences) 
  * Creates a style string from a set of preference mappings, by joining them via
  * underscore and colon in the form:
  * preference1_setting1:preference2_setting2:....:preferenceN_settingN
- * @param {!Object.<string>} preferences A preference mapping.
+ * @param {!Object.<string>} pref A preference mapping.
  * @return {string} A style string created from the preferences.
  */
-sre.ClearspeakPreferences.toPreference = function(preferences) {
-  var keys = Object.keys(preferences);
+sre.ClearspeakPreferences.toPreference = function(pref) {
+  var keys = Object.keys(pref);
   var str = [];
   for (var i = 0; i < keys.length; i++) {
-    str.push(keys[i] + '_' + preferences[keys[i]]);
+    str.push(keys[i] + '_' + pref[keys[i]]);
   }
   return str.length ? str.join(':') : sre.DynamicCstr.DEFAULT_VALUE;
 };
@@ -320,11 +317,13 @@ sre.ClearspeakPreferences.getLocalePreferences = function(opt_dynamic) {
  * @param {Object} dynamic Optionally a tree structure with the dynamic
  *     constraints.
  * @return {Object.<sre.DynamicProperties>} Mapping of locale to preferences.
+ * @private
  */
 sre.ClearspeakPreferences.getLocalePreferences_ = function(dynamic) {
   var result = {};
   for (var locale in dynamic) {
-    if (!dynamic[locale]['speech'] || !dynamic[locale]['speech']['clearspeak']) {
+    if (!dynamic[locale]['speech'] ||
+        !dynamic[locale]['speech']['clearspeak']) {
       continue;
     }
     var locPrefs = Object.keys(dynamic[locale]['speech']['clearspeak']);
@@ -346,8 +345,14 @@ sre.ClearspeakPreferences.getLocalePreferences_ = function(dynamic) {
 };
 
 
-// TODO: Sort this out in MathJax in the future!
+// TODO: The following should be done in MathJax in the future!
+/**
+ * Retrieves a speech explorer from a MathJax math item.
+ * @param {MathItem} item A Math Item.
+ * @return {Explorer} A speech explorer if the item has one.
+ */
 sre.ClearspeakPreferences.getSpeechExplorer = function(item) {
+  console.log(item);
   let explorers = item['attached'];
   if (!explorers || !explorers.length) {
     return null;
@@ -358,8 +363,15 @@ sre.ClearspeakPreferences.getSpeechExplorer = function(item) {
   });
 };
 
-// This returns the menu settings.
-// item is the mathItem.
+
+/**
+ * Computes a selection of clearspeak preferences for the MathJax context menu
+ * wrt. currently focused subexpression.
+ * @param {MathItem} item A Math Item.
+ * @param {string} locale The current locale.
+ * @return {Array.<Object.<string>>} The menu settings for a new radio button
+ *    sub menu.
+ */
 sre.ClearspeakPreferences.smartPreferences = function(item, locale) {
   var prefs = sre.ClearspeakPreferences.getLocalePreferences();
   var loc = prefs[locale];
@@ -369,9 +381,9 @@ sre.ClearspeakPreferences.smartPreferences = function(item, locale) {
   var explorer = sre.ClearspeakPreferences.getSpeechExplorer(item);
   if (!explorer) {
     return [{type: 'radio',
-             content: 'Standard',
-             id: 'clearspeak-default',
-             variable: 'speechRules'}];
+      content: 'Standard',
+      id: 'clearspeak-default',
+      variable: 'speechRules'}];
   }
   var smart = sre.ClearspeakPreferences.relevantPreferences(
       explorer.walker.getFocus().getSemanticPrimary());
@@ -402,7 +414,14 @@ sre.ClearspeakPreferences.smartPreferences = function(item, locale) {
 };
 
 
+/**
+ * Computes a clearspeak preference that should be changed given the type of the
+ * node.
+ * @param {sre.SemanticNode} node A semantic node.
+ * @return {string} The preference that fits the node's type and role.
+ */
 sre.ClearspeakPreferences.relevantPreferences = function(node) {
+  console.log(sre.ClearspeakPreferences.SEMANTIC_MAPPING_);
   let roles = sre.ClearspeakPreferences.SEMANTIC_MAPPING_[node.type];
   if (!roles) {
     return 'ImpliedTimes';
@@ -411,45 +430,81 @@ sre.ClearspeakPreferences.relevantPreferences = function(node) {
 };
 
 
+/**
+ * @type {Array.<Array.<string>>}
+ * @private
+ */
 sre.ClearspeakPreferences.REVERSE_MAPPING_ = [
-  ['AbsoluteValue', sre.SemanticAttr.Type.FENCED, sre.SemanticAttr.Role.NEUTRAL],
-  ['Bar', sre.SemanticAttr.Type.OVERSCORE, sre.SemanticAttr.Role.OVERACCENT], // more
-  ['Caps', sre.SemanticAttr.Type.IDENTIFIER, sre.SemanticAttr.Role.LATINLETTER], // more
-  ['CombinationPermutation', sre.SemanticAttr.Type.APPL, sre.SemanticAttr.Role.UNKNOWN], // more
-  ['Ellipses', sre.SemanticAttr.Type.PUNCTUATION, sre.SemanticAttr.Role.ELLIPSIS],
+  ['AbsoluteValue', sre.SemanticAttr.Type.FENCED,
+   sre.SemanticAttr.Role.NEUTRAL],
+  ['Bar', sre.SemanticAttr.Type.OVERSCORE,
+   sre.SemanticAttr.Role.OVERACCENT], // more
+  ['Caps', sre.SemanticAttr.Type.IDENTIFIER,
+   sre.SemanticAttr.Role.LATINLETTER], // more
+  ['CombinationPermutation', sre.SemanticAttr.Type.APPL,
+   sre.SemanticAttr.Role.UNKNOWN], // more
+  ['Ellipses', sre.SemanticAttr.Type.PUNCTUATION,
+   sre.SemanticAttr.Role.ELLIPSIS],
   ['Exponent', sre.SemanticAttr.Type.SUPERSCRIPT, ''],
   ['Fraction', sre.SemanticAttr.Type.FRACTION, ''],
-  ['Functions', sre.SemanticAttr.Type.APPL, sre.SemanticAttr.Role.SIMPLEFUNC],
-  ['ImpliedTimes', sre.SemanticAttr.Type.OPERATOR, sre.SemanticAttr.Role.IMPLICIT],
-  ['Log', sre.SemanticAttr.Type.APPL, sre.SemanticAttr.Role.PREFIXFUNC], // specific
+  ['Functions', sre.SemanticAttr.Type.APPL,
+   sre.SemanticAttr.Role.SIMPLEFUNC],
+  ['ImpliedTimes', sre.SemanticAttr.Type.OPERATOR,
+   sre.SemanticAttr.Role.IMPLICIT],
+  ['Log', sre.SemanticAttr.Type.APPL,
+   sre.SemanticAttr.Role.PREFIXFUNC], // specific
   ['Matrix', sre.SemanticAttr.Type.MATRIX, ''], // multiple
   ['Matrix', sre.SemanticAttr.Type.VECTOR, ''], // multiple
-  ['MultiLineLabel', sre.SemanticAttr.Type.MULTILINE, sre.SemanticAttr.Role.LABEL], // more, multiple (table)
-  ['MultiLineOverview', sre.SemanticAttr.Type.MULTILINE, sre.SemanticAttr.Role.TABLE], // more, multiple (table)
-  ['MultiLinePausesBetweenColumns', sre.SemanticAttr.Type.MULTILINE, sre.SemanticAttr.Role.TABLE], // more, multiple (table)
-  ['MultiLineLabel', sre.SemanticAttr.Type.TABLE, sre.SemanticAttr.Role.LABEL], // more, multiple (table)
-  ['MultiLineOverview', sre.SemanticAttr.Type.TABLE, sre.SemanticAttr.Role.TABLE], // more, multiple (table)
-  ['MultiLinePausesBetweenColumns', sre.SemanticAttr.Type.TABLE, sre.SemanticAttr.Role.TABLE], // more, multiple (table)
-  ['MultiLineLabel', sre.SemanticAttr.Type.CASES, sre.SemanticAttr.Role.LABEL], // more, multiple (table)
-  ['MultiLineOverview', sre.SemanticAttr.Type.CASES, sre.SemanticAttr.Role.TABLE], // more, multiple (table)
-  ['MultiLinePausesBetweenColumns', sre.SemanticAttr.Type.CASES, sre.SemanticAttr.Role.TABLE], // more, multiple (table)
-  ['MultsymbolDot', sre.SemanticAttr.Type.OPERATOR, sre.SemanticAttr.Role.MULTIPLICATION], // multiple?
-  ['MultsymbolX', sre.SemanticAttr.Type.OPERATOR, sre.SemanticAttr.Role.MULTIPLICATION], // multiple?
-  ['Paren', sre.SemanticAttr.Type.FENCED, sre.SemanticAttr.Role.LEFTRIGHT],
-  ['Prime', sre.SemanticAttr.Type.SUPERSCRIPT, sre.SemanticAttr.Role.PRIME],
+  ['MultiLineLabel', sre.SemanticAttr.Type.MULTILINE,
+   sre.SemanticAttr.Role.LABEL], // more, multiple (table)
+  ['MultiLineOverview', sre.SemanticAttr.Type.MULTILINE,
+   sre.SemanticAttr.Role.TABLE], // more, multiple (table)
+  ['MultiLinePausesBetweenColumns', sre.SemanticAttr.Type.MULTILINE,
+   sre.SemanticAttr.Role.TABLE], // more, multiple (table)
+  ['MultiLineLabel', sre.SemanticAttr.Type.TABLE,
+   sre.SemanticAttr.Role.LABEL], // more, multiple (table)
+  ['MultiLineOverview', sre.SemanticAttr.Type.TABLE,
+   sre.SemanticAttr.Role.TABLE], // more, multiple (table)
+  ['MultiLinePausesBetweenColumns', sre.SemanticAttr.Type.TABLE,
+   sre.SemanticAttr.Role.TABLE], // more, multiple (table)
+  ['MultiLineLabel', sre.SemanticAttr.Type.CASES,
+   sre.SemanticAttr.Role.LABEL], // more, multiple (table)
+  ['MultiLineOverview', sre.SemanticAttr.Type.CASES,
+   sre.SemanticAttr.Role.TABLE], // more, multiple (table)
+  ['MultiLinePausesBetweenColumns', sre.SemanticAttr.Type.CASES,
+   sre.SemanticAttr.Role.TABLE], // more, multiple (table)
+  ['MultsymbolDot', sre.SemanticAttr.Type.OPERATOR,
+   sre.SemanticAttr.Role.MULTIPLICATION], // multiple?
+  ['MultsymbolX', sre.SemanticAttr.Type.OPERATOR,
+   sre.SemanticAttr.Role.MULTIPLICATION], // multiple?
+  ['Paren', sre.SemanticAttr.Type.FENCED,
+   sre.SemanticAttr.Role.LEFTRIGHT],
+  ['Prime', sre.SemanticAttr.Type.SUPERSCRIPT,
+   sre.SemanticAttr.Role.PRIME],
   ['Roots', sre.SemanticAttr.Type.ROOT, ''], // multiple (sqrt)
   ['Roots', sre.SemanticAttr.Type.SQRT, ''], // multiple (sqrt)
-  ['SetMemberSymbol', sre.SemanticAttr.Type.RELATION, sre.SemanticAttr.Role.ELEMENT],
-  ['Sets', sre.SemanticAttr.Type.FENCED, sre.SemanticAttr.Role.SETEXT], // multiple
-  ['TriangleSymbol', sre.SemanticAttr.Type.IDENTIFIER, sre.SemanticAttr.Role.GREEKLETTER], //????
-  ['Trig', sre.SemanticAttr.Type.APPL, sre.SemanticAttr.Role.PREFIXFUNC], // specific
-  ['VerticalLine', sre.SemanticAttr.Type.PUNCTUATED, sre.SemanticAttr.Role.VBAR]
+  ['SetMemberSymbol', sre.SemanticAttr.Type.RELATION,
+   sre.SemanticAttr.Role.ELEMENT],
+  ['Sets', sre.SemanticAttr.Type.FENCED,
+   sre.SemanticAttr.Role.SETEXT], // multiple
+  ['TriangleSymbol', sre.SemanticAttr.Type.IDENTIFIER,
+   sre.SemanticAttr.Role.GREEKLETTER], //????
+  ['Trig', sre.SemanticAttr.Type.APPL,
+   sre.SemanticAttr.Role.PREFIXFUNC], // specific
+  ['VerticalLine', sre.SemanticAttr.Type.PUNCTUATED,
+   sre.SemanticAttr.Role.VBAR]
 ];
 
 
+/**
+ * @type {Object.<sre.SemanticAttr.Type,
+ *        Object.<sre.SemanticAttr.Role|string, string>>}
+ * @private
+ */
 sre.ClearspeakPreferences.SEMANTIC_MAPPING_ = function() {
   var result = {};
-  for (var i = 0, triple; triple = sre.ClearspeakPreferences.REVERSE_MAPPING_[i]; i++) {
+  for (var i = 0, triple;
+       triple = sre.ClearspeakPreferences.REVERSE_MAPPING_[i]; i++) {
     var pref = triple[0];
     var role = result[triple[1]];
     if (!role) {
@@ -462,27 +517,29 @@ sre.ClearspeakPreferences.SEMANTIC_MAPPING_ = function() {
 }();
 
 
-sre.ClearspeakPreferences.currentPreference = function(kind) {
-  let prefs = sre.Engine.DOMAIN_TO_STYLES['clearspeak'];
-  if (prefs === 'default') {
-    return sre.ClearspeakPreferences.AUTO;
-  }
-  let parsed = sre.ClearspeakPreferences.fromPreference(prefs);
-  return parsed[kind] || sre.ClearspeakPreferences.AUTO;
-};
-
-
+/**
+ * Look up the setting of a preference in a preference settings sting.
+ * @param {string} prefs Preference settings.
+ * @param {string} kind The preference to look up.
+ * @return {string} The setting of that preference. If it does not exist,
+ *     returns Auto.
+ */
 sre.ClearspeakPreferences.findPreference = function(prefs, kind) {
-  console.log('Preferences: ' + prefs);
   if (prefs === 'default') {
     return sre.ClearspeakPreferences.AUTO;
   }
   let parsed = sre.ClearspeakPreferences.fromPreference(prefs);
-  console.log(parsed);
   return parsed[kind] || sre.ClearspeakPreferences.AUTO;
 };
 
 
+/**
+ * Adds or updates a value in a preference settings.
+ * @param {string} prefs Preference settings.
+ * @param {string} kind New preference name.
+ * @param {string} value New preference value.
+ * @return {string} The updated preference settings.
+ */
 sre.ClearspeakPreferences.addPreference = function(prefs, kind, value) {
   if (prefs === 'default') {
     return kind + '_' + value;
@@ -496,6 +553,7 @@ sre.ClearspeakPreferences.addPreference = function(prefs, kind, value) {
 /**
  * Add new comparator and parser.
  */
-sre.Engine.getInstance().comparators['clearspeak'] = sre.ClearspeakPreferences.comparator;
-sre.Engine.getInstance().parsers['clearspeak'] = new sre.ClearspeakPreferences.Parser();
-
+sre.Engine.getInstance().comparators['clearspeak'] =
+    sre.ClearspeakPreferences.comparator;
+sre.Engine.getInstance().parsers['clearspeak'] =
+    new sre.ClearspeakPreferences.Parser();

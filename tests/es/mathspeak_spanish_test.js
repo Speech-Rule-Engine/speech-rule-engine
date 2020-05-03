@@ -45,11 +45,6 @@ sre.MathspeakSpanishTest = function() {
    */
   this.locale = 'es';
 
-  /**
-   * @override
-   */
-  this.semantics = true;
-
   this.setActive('MathspeakSpanish');
 
 };

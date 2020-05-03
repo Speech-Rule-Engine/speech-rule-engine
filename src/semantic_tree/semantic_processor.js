@@ -1342,10 +1342,10 @@ sre.SemanticProcessor.prototype.getFunctionArgs_ = function(
         }
       }
       // TODO: (simons) If we have a prefix/simple function or implicit with
-      //       prefix/simple function children only (i.e., a function composition)
-      //       then we combine them via a function composition. Function
-      //       composition is currently implicit, but we might want to remember
-      //       this a bit better.
+      //       prefix/simple function children only (i.e., a function
+      //       composition) then we combine them via a function
+      //       composition. Function composition is currently implicit, but we
+      //       might want to remember this a bit better.
       funcNode = sre.SemanticProcessor.getInstance().functionNode_(func, arg);
       partition.tail.unshift(funcNode);
       return partition.tail;
@@ -2572,10 +2572,12 @@ sre.SemanticProcessor.prototype.inference = function(node, semantics, parse) {
   var children = sre.DomUtil.toArray(node.childNodes);
   var content = [];
   if (label === 'left' || label === 'both') {
-    content.push(this.getLabel(node, children, parse, sre.SemanticAttr.Role.LEFT));
+    content.push(
+        this.getLabel(node, children, parse, sre.SemanticAttr.Role.LEFT));
   }
   if (label === 'right' || label === 'both') {
-    content.push(this.getLabel(node, children, parse, sre.SemanticAttr.Role.RIGHT));
+    content.push(
+        this.getLabel(node, children, parse, sre.SemanticAttr.Role.RIGHT));
   }
   var formulas = this.getFormulas(node, children, parse);
   var inference = this.factory_.makeBranchNode(
@@ -2596,7 +2598,8 @@ sre.SemanticProcessor.prototype.inference = function(node, semantics, parse) {
  * @param {string} side The side the label is on.
  * @return {!sre.SemanticNode} The semantic node for the label.
  */
-sre.SemanticProcessor.prototype.getLabel = function(node, children, parse, side) {
+sre.SemanticProcessor.prototype.getLabel = function(
+    node, children, parse, side) {
   var label = this.findNestedRow(children, 'prooflabel', side);
   var sem = this.factory_.makeBranchNode(
       sre.SemanticAttr.Type.RULELABEL,
@@ -2650,8 +2653,8 @@ sre.SemanticProcessor.prototype.getFormulas = function(node, children, parse) {
  * @param {Array.<Element>} nodes A node list.
  * @param {string} semantic A semantic key.
  * @param {string=} opt_value Optionally the semantic value.
- * @return {Element} The first element in that row that contains the semantic key
- *     (and has its value if the latter is given.)
+ * @return {Element} The first element in that row that contains the semantic
+ *     key (and has its value if the latter is given.)
  */
 sre.SemanticProcessor.prototype.findNestedRow = function(
     nodes, semantic, opt_value) {
@@ -2668,6 +2671,7 @@ sre.SemanticProcessor.prototype.findNestedRow = function(
  * @param {number} level The maximum level to search.
  * @param {string|undefined} value Optionally the semantic value.
  * @return {Element} The first matching element in the row.
+ * @private
  */
 sre.SemanticProcessor.prototype.findNestedRow_ = function(
     nodes, semantic, level, value) {

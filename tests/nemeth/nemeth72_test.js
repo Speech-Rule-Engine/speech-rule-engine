@@ -44,11 +44,6 @@ sre.Nemeth72Test = function() {
   /**
    * @override
    */
-  this.semantics = true;
-
-  /**
-   * @override
-   */
   this.locale = 'nemeth';
 
   /**
@@ -89,7 +84,9 @@ sre.Nemeth72Test.prototype.test_10_15 = function() {
 };
 
 
-
+/**
+ * page 156.169(1)
+ */
 sre.Nemeth72Test.prototype.test_156_169_1 = function() {
   var nemeth = '⠝⠯';
   var mml = '<mi>n</mi><mo>!</mo>';

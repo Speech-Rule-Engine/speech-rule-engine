@@ -383,6 +383,15 @@
     "key": "00B1"
   },
   {
+    "category": "Sk",
+    "mappings": {
+      "default": {
+        "default": "⠈"
+      }
+    },
+    "key": "00B4"
+  },
+  {
     "category": "Ll",
     "mappings": {
       "default": {

@@ -23,11 +23,11 @@
 
 goog.provide('sre.MathMap');
 
+goog.require('sre.AlphabetGenerator');
 goog.require('sre.BaseUtil');
 goog.require('sre.BrowserUtil');
 goog.require('sre.Engine');
 goog.require('sre.MathCompoundStore');
-goog.require('sre.AlphabetGenerator');
 goog.require('sre.SystemExternal');
 
 
@@ -60,7 +60,16 @@ sre.MathMap = function() {
 goog.addSingletonGetter(sre.MathMap);
 
 
+/**
+ * @type {Function}
+ * @private
+ */
 sre.MathMap.oldInst_ = sre.MathMap.getInstance;
+
+
+/**
+ * @return {!sre.MathMap} The instance of the MathMap singleton.
+ */
 sre.MathMap.getInstance = function() {
   var instance = sre.MathMap.oldInst_();
   instance.loadLocale();
@@ -68,6 +77,9 @@ sre.MathMap.getInstance = function() {
 };
 
 
+/**
+ * Loads a new locale if necessary.
+ */
 sre.MathMap.prototype.loadLocale = function() {
   var locale = sre.Engine.getInstance().locale;
   if (this.loaded_.indexOf(locale) === -1) {
@@ -106,12 +118,12 @@ sre.MathMap.prototype.retrieveFiles = function(locale) {
     case sre.Engine.Mode.ASYNC:
       sre.MathMap.toFetch_++;
       var parse = goog.bind(this.parseMaps, this);
-        sre.MathMap.fromFile_(file,
-            function(err, json) {
-              sre.MathMap.toFetch_--;
-              if (err) return;
-              parse(json);
-            });
+      sre.MathMap.fromFile_(file,
+          function(err, json) {
+            sre.MathMap.toFetch_--;
+            if (err) return;
+            parse(json);
+          });
       break;
     case sre.Engine.Mode.HTTP:
       sre.MathMap.toFetch_++;
@@ -119,13 +131,17 @@ sre.MathMap.prototype.retrieveFiles = function(locale) {
       break;
     case sre.Engine.Mode.SYNC:
     default:
-    var strs = sre.MathMap.loadFile(file);
-    this.parseMaps(strs);
-    break;
+      var strs = sre.MathMap.loadFile(file);
+      this.parseMaps(strs);
+      break;
   }
 };
 
 
+/**
+ * Parses JSON mappings from a string and them to the MathStore.
+ * @param {string} json The json mappings string.
+ */
 sre.MathMap.prototype.parseMaps = function(json) {
   var js = /** @type {!Object<Array>} */(JSON.parse(json));
   this.addMaps(js);
@@ -175,7 +191,7 @@ sre.MathMap.prototype.getJsonIE_ = function(locale, opt_count) {
   if (!sre.BrowserUtil.mapsForIE) {
     if (count <= 5) {
       setTimeout(
-        goog.bind(function() {this.getJsonIE_(locale, count++);}, this),
+          goog.bind(function() {this.getJsonIE_(locale, count++);}, this),
           300);
     }
     return;

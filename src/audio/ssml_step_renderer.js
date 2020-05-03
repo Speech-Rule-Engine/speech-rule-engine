@@ -34,6 +34,9 @@ sre.SsmlStepRenderer = function() {
 goog.inherits(sre.SsmlStepRenderer, sre.SsmlRenderer);
 
 
+/**
+ * @override
+ */
 sre.SsmlStepRenderer.prototype.markup = function(descrs) {
   sre.SsmlStepRenderer.MARKS = {};
   return sre.SsmlStepRenderer.base(this, 'markup', descrs);
@@ -42,9 +45,15 @@ sre.SsmlStepRenderer.prototype.markup = function(descrs) {
 
 /**
  * @type {string}
+ * @private
  */
 sre.SsmlStepRenderer.CHARACTER_ATTR_ = 'character';
 
+
+/**
+ * Record for remembering mark ids.
+ * @type {Object.<boolean>}
+ */
 sre.SsmlStepRenderer.MARKS = {};
 
 
@@ -61,8 +70,9 @@ sre.SsmlStepRenderer.prototype.merge = function(strs) {
       sre.SsmlStepRenderer.MARKS[id] = true;
     }
     if (str.string.length === 1 && str.string.match(/[a-zA-Z]/)) {
-      result.push('<say-as interpret-as="' + sre.SsmlStepRenderer.CHARACTER_ATTR_ +
-                  '">' + str.string + '</say-as>');
+      result.push(
+          '<say-as interpret-as="' + sre.SsmlStepRenderer.CHARACTER_ATTR_ +
+          '">' + str.string + '</say-as>');
     } else {
       result.push(str.string);
     }

@@ -132,11 +132,14 @@ sre.MathspeakFrench.initCustomFunctions_ = function() {
   addCSF('CSFbaselineVerbose', sre.MathspeakFrenchUtil.baselineVerbose);
   addCSF('CSFbaselineBrief', sre.MathspeakFrenchUtil.baselineBrief);
   // Tensor specific:
-  addCSF('CSFleftsuperscriptVerbose', sre.MathspeakFrenchUtil.leftSuperscriptVerbose);
-  addCSF('CSFleftsubscriptVerbose', sre.MathspeakFrenchUtil.leftSubscriptVerbose);
+  addCSF('CSFleftsuperscriptVerbose',
+         sre.MathspeakFrenchUtil.leftSuperscriptVerbose);
+  addCSF('CSFleftsubscriptVerbose',
+         sre.MathspeakFrenchUtil.leftSubscriptVerbose);
   addCSF('CSFrightsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose);
   addCSF('CSFrightsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose);
-  addCSF('CSFleftsuperscriptBrief', sre.MathspeakFrenchUtil.leftSuperscriptBrief);
+  addCSF('CSFleftsuperscriptBrief',
+         sre.MathspeakFrenchUtil.leftSuperscriptBrief);
   addCSF('CSFleftsubscriptBrief', sre.MathspeakFrenchUtil.leftSubscriptBrief);
   addCSF('CSFrightsuperscriptBrief', sre.MathspeakUtil.superscriptBrief);
   addCSF('CSFrightsubscriptBrief', sre.MathspeakUtil.subscriptBrief);
@@ -276,8 +279,8 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
   //     '[t] "position de base"; [n] . (grammar:baseline)',
   //     'self::number', 'not(contains(@grammar, "ignoreFont"))',
   //     'preceding-sibling::identifier', 'not(contains(@grammar, "baseline"))',
-  //     'preceding-sibling::*[1][@role="latinletter" or @role="greekletter" or' +
-  //     ' @role="otherletter"]',
+  //     'preceding-sibling::*[1][@role="latinletter" or @role="greekletter"' +
+  //     ' or @role="otherletter"]',
   //     'parent::*/parent::infixop[@role="implicit"]');
   // defineSpecialisedRule(
   //     'number-baseline', 'mathspeak.default', 'mathspeak.brief',
@@ -431,8 +434,9 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
 
   // Special symbols
   defineRule(
-      'factorial', 'mathspeak.default', '[t] "factorielle"', 'self::punctuation',
-      'text()="!"', 'name(preceding-sibling::*[1])!="text"');
+      'factorial', 'mathspeak.default', '[t] "factorielle"',
+      'self::punctuation', 'text()="!"',
+      'name(preceding-sibling::*[1])!="text"');
   defineRule(
       'minus', 'mathspeak.default', '[t] "moins"',
       'self::operator', 'text()="\u002D"');
@@ -1059,7 +1063,8 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
       'self::row');
   defineRule(
       'row-with-label', 'mathspeak.default',
-      '[t] "avec étiquette"; [n] content/*[1]; [t] "fin étiquette"(pause: 200); ' +
+      '[t] "avec étiquette"; [n] content/*[1]; ' +
+      '[t] "fin étiquette"(pause: 200); ' +
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"colonne")',
       'self::row', 'content');
   defineRule(
@@ -1165,8 +1170,8 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
       '[m] children/*', 'self::line');
   defineRule(
       'line-with-label', 'mathspeak.default',
-      '[t] "avec etiquette"; [n] content/*[1]; [t] "fin etiquette" (pause: 200); ' +
-      '[m] children/*',
+      '[t] "avec etiquette"; [n] content/*[1]; ' +
+      '[t] "fin etiquette" (pause: 200); [m] children/*',
       'self::line', 'content');
   defineSpecialisedRule(
       'line-with-label', 'mathspeak.default', 'mathspeak.brief',
@@ -1184,8 +1189,9 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
   defineSpecialisedRule('empty-line', 'mathspeak.brief', 'mathspeak.sbrief');
   defineRule(
       'empty-line-with-label', 'mathspeak.default',
-      '[t] "avec etiquette"; [n] content/*[1]; [t] "fin etiquette" (pause: 200); ' +
-      '[t] "vide"', 'self::line', 'count(children/*)=0', 'content');
+      '[t] "avec etiquette"; [n] content/*[1]; ' +
+      '[t] "fin etiquette" (pause: 200); [t] "vide"',
+      'self::line', 'count(children/*)=0', 'content');
   defineSpecialisedRule(
       'empty-line-with-label', 'mathspeak.default', 'mathspeak.brief',
       '[t] "etiquette"; [n] content/*[1] (pause: 200); [t] "vide"');
