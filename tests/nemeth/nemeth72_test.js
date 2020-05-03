@@ -57,11 +57,11 @@ sre.Nemeth72Test = function() {
 goog.inherits(sre.Nemeth72Test, sre.AbstractRuleTest);
 
 
-/**
- *
- */
-sre.Nemeth72Test.prototype.test = function() {
-};
+// /**
+//  *
+//  */
+// sre.Nemeth72Test.prototype.test = function() {
+// };
 
 
 /**
@@ -91,4 +91,70 @@ sre.Nemeth72Test.prototype.test_156_169_1 = function() {
   var nemeth = '⠝⠯';
   var mml = '<mi>n</mi><mo>!</mo>';
   this.executeRuleTest(mml, nemeth);
+};
+
+
+// Number indicator
+/**
+ * Number indicator page 8
+ */
+sre.Nemeth72Test.prototype.test_number_8 = function() {
+  this.executeRuleTest('<mn>1,378</mn>', '⠼⠂⠠⠒⠶⠦');
+  // Continental 
+  // this.executeRuleTest('<mn>1.378</mn>', '');
+  this.executeRuleTest('<mn>3.76</mn>', '⠼⠒⠨⠶⠖');
+  // Continental 
+  // this.executeRuleTest('<mn>3,76</mn>', '');
+  this.executeRuleTest('<mn>1,478</mn>', '⠼⠂⠠⠲⠶⠦');
+  this.executeRuleTest(
+    '<mn>100</mn><mo>,</mo><mn>200</mn><mo>,</mo><mn>300</mn>',
+    '⠼⠂⠴⠴⠠⠀⠼⠆⠴⠴⠠⠀⠼⠒⠴⠴');
+  this.executeRuleTest('<mn>.35</mn>', '⠼⠨⠒⠢');
+  this.executeRuleTest('<mn>3.14</mn>', '⠼⠒⠨⠂⠲');
+  this.executeRuleTest(
+    '<mn>.2</mn><msub><mi>a</mi><mn>1</mn></msub>' +
+      '<msub><mi>a</mi><mn>2</mn></msub><msub><mi>a</mi><mn>3</mn></msub>',
+    '⠼⠨⠆⠁⠂⠁⠆⠁⠒');
+  this.executeRuleTest(
+    '<mn>.</mn><msub><mi>a</mi><mn>1</mn></msub>' +
+      '<msub><mi>a</mi><mn>2</mn></msub><msub><mi>a</mi><mn>3</mn></msub>',
+    '⠨⠐⠁⠂⠁⠆⠁⠒');
+  this.executeRuleTest(
+    '<mn>.1</mn><mo>+</mo><mn>.2</mn><mo>=</mo><mo>.</mo><mo>----</mo>',
+    '⠼⠨⠂⠬⠨⠆⠀⠨⠅⠀⠨⠐⠤⠤⠤⠤');
+};
+
+
+/**
+ * Number indicator page 9
+ */
+sre.Nemeth72Test.prototype.test_number_9 = function() {
+  this.executeRuleTest('<mn>27</mn>', '⠼⠆⠶');
+  // Ignored (2)
+  this.executeRuleTest(
+    '<mn>1</mn><mo>+</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>0</mn>',
+    '⠼⠂⠬⠭⠬⠽⠀⠨⠅⠀⠼⠴');
+  this.executeRuleTest(
+    '<mi>y</mi><mo>=</mo><mn>2</mn><mi>sin</mi><mo>&#x2061;</mo><mi>x</mi>',
+    '⠽⠀⠨⠅⠀⠼⠆⠎⠊⠝⠀⠭');
+  this.executeRuleTest(
+    '<mi>sin</mi><mo>&#x2061;</mo><mn>1</mn>',
+    '⠎⠊⠝⠀⠼⠂');
+  this.executeRuleTest(
+    '<msup><mi>sin</mi><mn>2</mn></msup><mo>&#x2061;</mo><mn>2</mn><mi>x</mi>',
+    '⠎⠊⠝⠘⠆⠀⠼⠆⠭'); // End baseline is not needed
+  this.executeRuleTest(
+    '<mn>0.333</mn><mo>&#x2026;</mo><mn>3</mn><mo>&#x2026;</mo>',
+    '⠼⠴⠨⠒⠒⠒⠀⠄⠄⠄⠀⠒⠀⠼⠄⠄⠄'); // Spacing is missing, number indicator is missing
+  this.executeRuleTest(
+    '<msub><mi>log</mi><mrow><mn>10</mn></mrow></msub><mo>&#x2061;</mo><mn>2</mn>',
+    '⠇⠕⠛⠂⠴⠀⠼⠆'); //  Additional ⠰ + no need for baseline ⠐
+  // Ignored (9) for now
+  this.executeRuleTest(
+    '<mo>(</mo><mi>x</mi><mo>=</mo><mn>0</mn><mo>)</mo>',
+    '⠷⠭⠀⠨⠅⠀⠼⠴⠾');
+  this.executeRuleTest(
+    '<mfrac><mn>11</mn><mn>5</mn></mfrac>',
+    '⠹⠼⠂⠂⠌⠢⠼');
+    // Note that this differes from the book as we linearise fractions.
 };

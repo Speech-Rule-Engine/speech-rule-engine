@@ -1243,6 +1243,11 @@ sre.NemethRules.initNemethRules_ = function() {
       'self::punctuated', '@role="startpunct"');
 
   defineRule(
+      'punctuation', 'default.default', '[n] text(); [t] "⠐"',
+      'self::punctuation', '@role="fullstop"',
+      'contains(@annotation, "nemeth:number")');
+
+  defineRule(
       'integral-punct', 'default.default',
       '[n] children/*[1]; [n] children/*[3]',
       'self::punctuated', '@role="integral"');
@@ -1251,6 +1256,11 @@ sre.NemethRules.initNemethRules_ = function() {
       'punctuated', 'default.default',
       '[m] children/*',
       'self::punctuated');
+
+  defineRule(
+      'punctuation', 'default.default', '[n] text(); [t] "⠀"',
+      'self::punctuation' , 'parent::*/parent::punctuated'
+  );
 
   // Unit rules.
   defineRule(
