@@ -44,6 +44,9 @@ sre.ClearspeakCharFrenchTest = function() {
 goog.inherits(sre.ClearspeakCharFrenchTest, sre.AbstractCharacterTest);
 
 
+/**
+ * Runs all character translation tests for clearspeak.
+ */
 sre.ClearspeakCharFrenchTest.prototype.testClearspeakChars = function() {
   this.executeCharTest('0', ['0']);
   this.executeCharTest('1', ['1']);
@@ -4254,6 +4257,9 @@ sre.ClearspeakCharFrenchTest.prototype.testClearspeakChars = function() {
 };
 
 
+/**
+ * Runs all function name translation tests for clearspeak.
+ */
 sre.ClearspeakCharFrenchTest.prototype.testClearspeakFunctions = function() {
   this.executeCharTest('deg', ['degré']);
   this.executeCharTest('det', ['déterminant']);
@@ -4323,6 +4329,9 @@ sre.ClearspeakCharFrenchTest.prototype.testClearspeakFunctions = function() {
 };
 
 
+/**
+ * Runs all unit expression translation tests for clearspeak.
+ */
 sre.ClearspeakCharFrenchTest.prototype.testClearspeakUnits = function() {
   this.executeCharTest('W:unit', ['watts']);
   this.executeCharTest('w:unit', ['watts']);

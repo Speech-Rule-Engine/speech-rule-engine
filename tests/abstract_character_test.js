@@ -59,6 +59,11 @@ sre.AbstractCharacterTest.prototype.executeCharTest = function(char, answers) {
 };
 
 
+/**
+ * Execute test for a single unit string.
+ * @param {string} char The character or string representing the unit.
+ * @param {Array.<string>} answers A list of answers.
+ */
 sre.AbstractCharacterTest.prototype.executeUnitTest = function(char, answers) {
   sre.Grammar.getInstance().pushState({annotation: 'unit'});
   try {

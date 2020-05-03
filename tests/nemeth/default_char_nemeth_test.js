@@ -45,6 +45,9 @@ sre.DefaultCharNemethTest = function() {
 goog.inherits(sre.DefaultCharNemethTest, sre.AbstractCharacterTest);
 
 
+/**
+ * Runs all character translation tests for nemeth.
+ */
 sre.DefaultCharNemethTest.prototype.testDefaultChars = function() {
   this.executeCharTest('0', ['⠴']);
   this.executeCharTest('1', ['⠂']);
@@ -4255,6 +4258,9 @@ sre.DefaultCharNemethTest.prototype.testDefaultChars = function() {
 };
 
 
+/**
+ * Runs all function name translation tests for nemeth.
+ */
 sre.DefaultCharNemethTest.prototype.testDefaultFunctions = function() {
   this.executeCharTest('deg', ['⠙⠑⠛']);
   this.executeCharTest('det', ['⠙⠑⠞']);
@@ -4324,6 +4330,9 @@ sre.DefaultCharNemethTest.prototype.testDefaultFunctions = function() {
 };
 
 
+/**
+ * Runs all unit expression translation tests for nemeth.
+ */
 sre.DefaultCharNemethTest.prototype.testDefaultUnits = function() {
   this.executeUnitTest('W', ['⠠⠺']);
   this.executeUnitTest('w', ['⠠⠺']);

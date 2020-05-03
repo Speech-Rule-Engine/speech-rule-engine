@@ -60,6 +60,10 @@ sre.Tests.prototype.run = function() {
  */
 sre.Tests.testList = [];
 
+
+/**
+ * @type {Array}
+ */
 sre.Tests.allTests = [];
 sre.Tests.allTests = sre.Tests.allTests.concat(sre.BaseTests.testList);
 sre.Tests.allTests = sre.Tests.allTests.concat(sre.SpeechEnglishTest.testList);

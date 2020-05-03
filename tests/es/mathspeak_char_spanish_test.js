@@ -44,6 +44,9 @@ sre.MathspeakCharSpanishTest = function() {
 goog.inherits(sre.MathspeakCharSpanishTest, sre.AbstractCharacterTest);
 
 
+/**
+ * Runs all character translation tests for mathspeak.
+ */
 sre.MathspeakCharSpanishTest.prototype.testMathspeakChars = function() {
   this.executeCharTest('0', ['0', '0', '0']);
   this.executeCharTest('1', ['1', '1', '1']);
@@ -4254,6 +4257,9 @@ sre.MathspeakCharSpanishTest.prototype.testMathspeakChars = function() {
 };
 
 
+/**
+ * Runs all function name translation tests for mathspeak.
+ */
 sre.MathspeakCharSpanishTest.prototype.testMathspeakFunctions = function() {
   this.executeCharTest('deg', ['grados', 'grados', 'grados']);
   this.executeCharTest('det', ['determinante', 'determinante', 'determinante']);
@@ -4324,6 +4330,9 @@ sre.MathspeakCharSpanishTest.prototype.testMathspeakFunctions = function() {
 };
 
 
+/**
+ * Runs all unit expression translation tests for mathspeak.
+ */
 sre.MathspeakCharSpanishTest.prototype.testMathspeakUnits = function() {
   this.executeUnitTest('W', ['watt', 'watt', 'watt']);
   this.executeUnitTest('w', ['watt', 'watt', 'watt']);
