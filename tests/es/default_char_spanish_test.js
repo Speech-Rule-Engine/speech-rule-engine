@@ -32,12 +32,11 @@ sre.DefaultCharSpanishTest = function() {
 
   this.locale = 'es';
   this.domain = 'default';
-  this.semantics = true;
 
   /**
    * @type {Array.<string>}
    */
-  this.styles = ['default', 'short', 'alternative'];
+  this.styles = ['default'];
 
   this.setActive('DefaultCharactersSpanish');
 };

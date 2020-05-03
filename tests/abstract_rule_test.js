@@ -54,11 +54,6 @@ sre.AbstractRuleTest = function() {
   this.modality = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY];
 
   /**
-   * @type {boolean}
-   */
-  this.semantics = false;
-
-  /**
    * Specify particular rule sets for a test. By default all available rule sets
    * are used.
    * @type {Array.<string>}
@@ -99,7 +94,7 @@ sre.AbstractRuleTest.prototype.executeRuleTest = function(mml, answer,
           mml + '</math>';
   sre.SpeechRuleEngine.getInstance().clearCache();
   sre.System.getInstance().setupEngine(
-      {semantics: this.semantics, domain: this.domain, style: style,
+      {domain: this.domain, style: style,
         modality: this.modality, rules: this.rules, locale: this.locale});
   var result = this.getSpeech(mathMl);
   var actual = this.actual ? result : answer;

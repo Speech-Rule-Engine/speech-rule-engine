@@ -32,7 +32,6 @@ sre.DefaultCharNemethTest = function() {
 
   this.locale = 'nemeth';
   this.domain = 'default';
-  this.semantics = true;
   this.modality = 'braille';
 
   /**

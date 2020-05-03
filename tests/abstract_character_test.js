@@ -83,7 +83,7 @@ sre.AbstractCharacterTest.prototype.executeRuleTest = function(text, answer, opt
   var style = opt_style || this.style;
   sre.SpeechRuleEngine.getInstance().clearCache();
   sre.System.getInstance().setupEngine(
-      {semantics: this.semantics, domain: this.domain, style: style,
+      {domain: this.domain, style: style,
         modality: this.modality, rules: this.rules, locale: this.locale});
   var aural = sre.AuralRendering.getInstance();
   var descrs = [

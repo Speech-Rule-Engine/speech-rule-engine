@@ -60,7 +60,7 @@ goog.inherits(sre.WalkerMarkupTest, sre.AbstractTest);
  */
 sre.WalkerMarkupTest.prototype.setUpTest = function() {
   this.system.setupEngine(
-      {semantics: true, locale: 'en', domain: 'default', style: 'short',
+      {locale: 'en', domain: 'default', style: 'default',
         speech: sre.Engine.Speech.NONE});
 };
 
@@ -70,8 +70,8 @@ sre.WalkerMarkupTest.prototype.setUpTest = function() {
  */
 sre.WalkerMarkupTest.prototype.tearDownTest = function() {
   this.system.setupEngine(
-      {semantics: false, domain: 'default', style: 'short',
-        markup: sre.Engine.Markup.NONE, speech: sre.Engine.Speech.NONE});
+      {domain: 'default', style: 'default', markup: sre.Engine.Markup.NONE,
+        speech: sre.Engine.Speech.NONE});
   // TODO: Reset the rule sets.
 };
 

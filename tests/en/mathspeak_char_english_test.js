@@ -32,7 +32,6 @@ sre.MathspeakCharEnglishTest = function() {
 
   this.locale = 'en';
   this.domain = 'mathspeak';
-  this.semantics = true;
 
   /**
    * @type {Array.<string>}

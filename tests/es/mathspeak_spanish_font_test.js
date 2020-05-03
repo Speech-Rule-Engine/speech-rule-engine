@@ -46,11 +46,6 @@ sre.MathspeakSpanishFontTest = function() {
    */
   this.locale = 'es';
 
-  /**
-   * @override
-   */
-  this.semantics = true;
-
   this.setActive('MathspeakSpanishFont');
 };
 goog.inherits(sre.MathspeakSpanishFontTest, sre.AbstractRuleTest);

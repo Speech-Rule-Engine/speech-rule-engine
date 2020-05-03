@@ -40,11 +40,6 @@ sre.MathspeakEmbellishEnglishTest = function() {
    */
   this.domain = 'mathspeak';
 
-  /**
-   * @override
-   */
-  this.semantics = true;
-
   this.setActive('EmbellishedSymbolsEnglish');
 };
 goog.inherits(sre.MathspeakEmbellishEnglishTest, sre.AbstractRuleTest);

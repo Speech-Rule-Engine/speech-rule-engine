@@ -48,7 +48,7 @@ goog.inherits(sre.MarkupTest, sre.AbstractTest);
  */
 sre.MarkupTest.prototype.setUpTest = function() {
   sre.System.getInstance().setupEngine(
-      {modality: 'speech', domain: 'default', style: 'short'});
+      {modality: 'speech', domain: 'default', style: 'default'});
 };
 
 
@@ -240,7 +240,7 @@ sre.MarkupTest.prototype.testSsmlStep = function() {
       ' rate="+25%"> 4 a c </prosody> <break time="250ms"/> and denominator ' +
       '<prosody rate="+25%"> 2 a </prosody> <break time="250ms"/>',
       sre.Engine.Markup.SSML);
-  sre.System.getInstance().setupEngine({domain: 'default', style: 'short'});
+  sre.System.getInstance().setupEngine({domain: 'default', style: 'default'});
 };
 
 

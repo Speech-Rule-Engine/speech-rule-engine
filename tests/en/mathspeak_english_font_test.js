@@ -41,11 +41,6 @@ sre.MathspeakEnglishFontTest = function() {
    */
   this.domain = 'mathspeak';
 
-  /**
-   * @override
-   */
-  this.semantics = true;
-
   this.setActive('MathspeakEnglishFont');
 };
 goog.inherits(sre.MathspeakEnglishFontTest, sre.AbstractRuleTest);

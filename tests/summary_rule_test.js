@@ -49,11 +49,6 @@ sre.SummaryRuleTest = function() {
   this.modality = 'summary';
 
   /**
-   * @override
-   */
-  this.semantics = true;
-
-  /**
    * Keyboard steps preceding speech computation.
    * @type {Array.<string>}
    */

@@ -44,11 +44,6 @@ sre.AataTest = function() {
   /**
    * @override
    */
-  this.semantics = true;
-
-  /**
-   * @override
-   */
   this.locale = 'nemeth';
 
   /**

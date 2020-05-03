@@ -32,7 +32,6 @@ sre.DefaultCharEnglishTest = function() {
 
   this.locale = 'en';
   this.domain = 'default';
-  this.semantics = true;
 
   /**
    * @type {Array.<string>}

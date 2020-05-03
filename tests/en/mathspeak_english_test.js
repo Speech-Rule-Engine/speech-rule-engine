@@ -40,11 +40,6 @@ sre.MathspeakEnglishTest = function() {
    */
   this.domain = 'mathspeak';
 
-  /**
-   * @override
-   */
-  this.semantics = true;
-
   this.setActive('MathspeakEnglish');
 };
 goog.inherits(sre.MathspeakEnglishTest, sre.AbstractRuleTest);

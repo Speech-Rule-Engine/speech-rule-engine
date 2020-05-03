@@ -44,11 +44,6 @@ sre.Nemeth72Test = function() {
   /**
    * @override
    */
-  this.semantics = true;
-
-  /**
-   * @override
-   */
   this.locale = 'nemeth';
 
   /**
@@ -87,7 +82,6 @@ sre.Nemeth72Test.prototype.test_10_15 = function() {
   var mml = '<mo>-</mo><mn>.3</mn>';
   this.executeRuleTest(mml, nemeth);
 };
-
 
 
 /**

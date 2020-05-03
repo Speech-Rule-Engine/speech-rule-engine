@@ -45,11 +45,6 @@ sre.MathspeakFrenchTest = function() {
    */
   this.locale = 'fr';
 
-  /**
-   * @override
-   */
-  this.semantics = true;
-
   this.setActive('MathspeakFrench');
 };
 goog.inherits(sre.MathspeakFrenchTest, sre.AbstractRuleTest);

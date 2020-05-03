@@ -51,11 +51,6 @@ sre.NemethFontTest = function() {
    */
   this.modality = 'braille';
 
-  /**
-   * @override
-   */
-  this.semantics = true;
-
   this.setActive('NemethFont');
 };
 goog.inherits(sre.NemethFontTest, sre.AbstractRuleTest);

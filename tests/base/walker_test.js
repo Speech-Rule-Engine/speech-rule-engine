@@ -68,9 +68,8 @@ goog.inherits(sre.WalkerTest, sre.AbstractTest);
  */
 sre.WalkerTest.prototype.setUpTest = function() {
   this.system.setupEngine(
-      {semantics: true, modality: 'speech',
-        locale: 'en', domain: 'mathspeak', style: 'default',
-        speech: sre.Engine.Speech.NONE});
+      {modality: 'speech', locale: 'en', domain: 'mathspeak',
+        style: 'default', speech: sre.Engine.Speech.NONE});
 };
 
 
@@ -79,8 +78,7 @@ sre.WalkerTest.prototype.setUpTest = function() {
  */
 sre.WalkerTest.prototype.tearDownTest = function() {
   this.system.setupEngine(
-      {semantics: false, domain: 'default', style: 'short',
-        speech: sre.Engine.Speech.NONE});
+      {domain: 'default', style: 'short', speech: sre.Engine.Speech.NONE});
 };
 
 

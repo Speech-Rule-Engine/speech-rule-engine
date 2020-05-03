@@ -32,7 +32,6 @@ sre.ClearspeakCharEnglishTest = function() {
 
   this.locale = 'en';
   this.domain = 'clearspeak';
-  this.semantics = true;
 
   /**
    * @type {Array.<string>}

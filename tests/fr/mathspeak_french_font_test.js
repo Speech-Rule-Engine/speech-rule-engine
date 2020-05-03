@@ -46,11 +46,6 @@ sre.MathspeakFrenchFontTest = function() {
    */
   this.locale = 'fr';
 
-  /**
-   * @override
-   */
-  this.semantics = true;
-
   this.setActive('MathspeakFrenchFont');
 };
 goog.inherits(sre.MathspeakFrenchFontTest, sre.AbstractRuleTest);
