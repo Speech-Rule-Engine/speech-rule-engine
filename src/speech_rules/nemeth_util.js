@@ -160,7 +160,7 @@ sre.NemethUtil.NUMBER_PROPAGATORS_ = [
 
 
 /**
- * Checks if a Nemeth number indicator has to be propagated after the node's
+ * Checks if a Nemeth number indicator has to be propagated beyond the node's
  * parent.
  * @param {!sre.SemanticNode} node The node which can get a number indicator.
  * @return {boolean} True if parent is a relation, puntuation or application or
