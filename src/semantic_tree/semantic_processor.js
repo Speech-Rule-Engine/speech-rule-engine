@@ -2053,14 +2053,15 @@ sre.SemanticProcessor.exprFont_ = function(node) {
 
 /**
  * Creates a fraction node with the appropriate role.
- * @param {string} linethickness The line thickness attribute value.
  * @param {!sre.SemanticNode} denom The denominator node.
  * @param {!sre.SemanticNode} enume The enumerator node.
+ * @param {string} linethickness The line thickness attribute value.
+ * @param {boolean} bevelled Is it a bevelled fraction?
  * @return {!sre.SemanticNode} The new fraction node.
  */
 sre.SemanticProcessor.prototype.fractionLikeNode = function(
-    linethickness, denom, enume) {
-  if (sre.SemanticUtil.isZeroLength(linethickness)) {
+  denom, enume, linethickness, bevelled) {
+  if (!bevelled && sre.SemanticUtil.isZeroLength(linethickness)) {
     var child0 = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
         sre.SemanticAttr.Type.LINE, [denom], []);
     var child1 = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
@@ -2073,7 +2074,11 @@ sre.SemanticProcessor.prototype.fractionLikeNode = function(
     // return sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
     //     sre.SemanticAttr.Type.MULTILINE, [child0, child1], []);
   } else {
-    return sre.SemanticProcessor.getInstance().fractionNode_(denom, enume);
+    node = sre.SemanticProcessor.getInstance().fractionNode_(denom, enume);
+    if (bevelled) {
+      node.addAnnotation('general', 'bevelled');
+    }
+    return node;
   }
 };
 

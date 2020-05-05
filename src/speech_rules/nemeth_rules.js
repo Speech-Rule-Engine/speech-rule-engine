@@ -140,6 +140,7 @@ sre.NemethRules.initCustomFunctions_ = function() {
   addCSF('CSFopenFraction', sre.NemethUtil.openingFraction);
   addCSF('CSFcloseFraction', sre.NemethUtil.closingFraction);
   addCSF('CSFoverFraction', sre.NemethUtil.overFraction);
+  addCSF('CSFoverBevFraction', sre.NemethUtil.overBevelledFraction);
 
   // Radical function.
   addCSF('CSFopenRadicalVerbose', sre.NemethUtil.openingRadical);
@@ -400,6 +401,12 @@ sre.NemethRules.initNemethRules_ = function() {
       '[t] CSFopenFraction; [n] children/*[1];' +
           ' [t] CSFoverFraction; [n] children/*[2]; [t] CSFcloseFraction',
       'self::fraction');
+
+  defineRule(
+      'bevelled-fraction', 'default.default',
+      '[t] CSFopenFraction; [n] children/*[1];' +
+          ' [t] CSFoverBevFraction; [n] children/*[2]; [t] CSFcloseFraction',
+      'self::fraction', 'contains(@annotation, "general:bevelled")');
 
   // Continued Fractions are currently literally transcribed in linear format!
   // 
