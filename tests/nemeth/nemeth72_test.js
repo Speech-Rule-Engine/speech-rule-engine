@@ -57,13 +57,6 @@ sre.Nemeth72Test = function() {
 goog.inherits(sre.Nemeth72Test, sre.AbstractRuleTest);
 
 
-// /**
-//  *
-//  */
-// sre.Nemeth72Test.prototype.test = function() {
-// };
-
-
 /**
  * page 10.14
  */
@@ -100,10 +93,10 @@ sre.Nemeth72Test.prototype.test_156_169_1 = function() {
  */
 sre.Nemeth72Test.prototype.test_number_para_8_a = function() {
   this.executeRuleTest('<mn>1,378</mn>', '⠼⠂⠠⠒⠶⠦');
-  // Continental 
+  // Continental
   // this.executeRuleTest('<mn>1.378</mn>', '');
   this.executeRuleTest('<mn>3.76</mn>', '⠼⠒⠨⠶⠖');
-  // Continental 
+  // Continental
   // this.executeRuleTest('<mn>3,76</mn>', '');
 };
 
@@ -203,8 +196,54 @@ sre.Nemeth72Test.prototype.test_number_para_9_b = function() {
 
 // Rule XII - Fractions (Page 75ff.)
 /**
+ * Paragraph 62 (a)
+ *
+ * Simple Fraction indicators
+ */
+sre.Nemeth72Test.prototype.test_para_62_a = function() {
+  this.executeRuleTest(
+    '<mfrac><mn>1</mn><mn>3</mn></mfrac>',
+    '⠹⠂⠌⠒⠼'
+  );
+  this.executeRuleTest(
+    '<msup><mi>x</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup>',
+    '⠭⠘⠹⠂⠌⠆⠼'
+  );
+  this.executeRuleTest(
+    '<mfrac><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mi>c</mi></mfrac>',
+    '⠹⠁⠬⠃⠌⠉⠼'
+  );
+  this.executeRuleTest(
+    '<mfrac><msup><mi>x</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup><mn>2</mn></mfrac>',
+    '⠹⠭⠘⠹⠂⠌⠆⠼⠐⠌⠆⠼'
+  );
+  this.executeRuleTest(
+    '<mtext>rate</mtext><mo>=</mo><mfrac><mtext>distance</mtext><mtext>time</mtext></mfrac>',
+    '⠗⠁⠞⠑⠀⠨⠅⠀⠹⠙⠊⠎⠞⠁⠝⠉⠑⠌⠞⠊⠍⠑⠼'
+  );
+};
+
+
+/**
+ * Paragraph 62 (b)
+ *
+ * Simple bevelled fractions
+ */
+sre.Nemeth72Test.prototype.test_para_62_b = function() {
+  this.executeRuleTest(
+    '<mfrac bevelled="true"><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mrow><mi>c</mi><mo>+</mo><mi>d</mi></mrow></mfrac>',
+    '⠹⠁⠬⠃⠸⠌⠉⠬⠙⠼'
+  );
+  // this.executeRuleTest(
+  //   '<mn>3</mn><mstyle size="small"><mi>x</mi><mo>/</mo><mi>y</mi></mstyle>',
+  //   '⠼⠒⠹⠭⠸⠌⠽⠼'
+  // ); // Can't deal with smaller type yet.
+};
+
+
+/**
  * Paragraph 66
- * 
+ *
  * Number indicator + Fractions
  */
 sre.Nemeth72Test.prototype.test_para_66 = function() {
@@ -255,7 +294,7 @@ sre.Nemeth72Test.prototype.test_para_68 = function() {
   // (1) linearized
   this.executeRuleTest(
     '<mfrac><mfrac><mrow><mn>1</mn><mfrac><mn>1</mn><mn>4</mn></mfrac></mrow><mrow><mn>1</mn><mfrac><mn>3</mn><mn>5</mn></mfrac></mrow></mfrac><mn>5</mn></mfrac>',
-    '⠠⠠⠹⠠⠹⠂⠸⠹⠂⠌⠲⠸⠼⠠⠌⠂⠸⠹⠒⠌⠢⠸⠼⠠⠼⠠⠠⠌⠢⠠⠠⠼' 
+    '⠠⠠⠹⠠⠹⠂⠸⠹⠂⠌⠲⠸⠼⠠⠌⠂⠸⠹⠒⠌⠢⠸⠼⠠⠼⠠⠠⠌⠢⠠⠠⠼'
   );
   // (4)
   this.executeRuleTest(
@@ -311,4 +350,3 @@ sre.Nemeth72Test.prototype.test_para_103_a = function() {
     '⠜⠭⠻⠘⠒'
   );
 };
-
