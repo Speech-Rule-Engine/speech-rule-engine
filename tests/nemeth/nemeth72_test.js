@@ -221,6 +221,7 @@ sre.Nemeth72Test.prototype.test_para_66 = function() {
   //   '<mfrac><mrow><mn>2</mn><mo>/</mo><mn>3</mn></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></mfrac>',
   //   '⠠⠹⠆⠸⠌⠒⠠⠌⠒⠸⠌⠆⠠⠼'
   // ); // Need to consider regular division operator for complex (but not hypercomplex!) fraction.
+  //    // Extend to nesting depth computation to work with type/role pairs.
   this.executeRuleTest(
     '<mfrac><mn>5</mn><mrow><mn>4</mn><mfrac><mn>3</mn><mn>8</mn></mfrac></mrow></mfrac>',
     '⠠⠹⠢⠠⠌⠲⠸⠹⠒⠌⠦⠸⠼⠠⠼'
