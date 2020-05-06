@@ -68,7 +68,7 @@ sre.NemethUtil.overFraction = function(node) {
 sre.NemethUtil.overBevelledFraction = function(node) {
   var depth = sre.MathspeakUtil.fractionNestingDepth(node);
   return new Array(depth).join(msg.MS.FRACTION_REPEAT) +
-    '⠸' + msg.MS.FRACTION_OVER;
+      '⠸' + msg.MS.FRACTION_OVER;
 };
 
 

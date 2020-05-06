@@ -236,7 +236,7 @@ sre.NemethRules.initNemethRules_ = function() {
   // Number rules
   defineRule(
       'number-indicator', 'default.default', '[t] "⠼"; [n] text() (pause:10)',
-      'self::number', 'contains(@annotation, "nemeth:number")', 
+      'self::number', 'contains(@annotation, "nemeth:number")',
       'not(ancestor::sqrt)', 'not(ancestor::root)', 'not(ancestor::fraction)');
 
 
@@ -409,7 +409,7 @@ sre.NemethRules.initNemethRules_ = function() {
       'self::fraction', 'contains(@annotation, "general:bevelled")');
 
   // Continued Fractions are currently literally transcribed in linear format!
-  // 
+  //
   // defineRule(
   //     'continued-fraction-outer', 'default.default',
   //     '[t] "ContinuedFraction"; [n] children/*[1];' +
@@ -546,10 +546,10 @@ sre.NemethRules.initNemethRules_ = function() {
       // Second child is a number but not mixed or other.
       'name(./children/*[2])="number"',
       './children/*[2][@role!="mixed"]',
-    './children/*[2][@role!="othernumber"]',
-    'self::*'
+      './children/*[2][@role!="othernumber"]',
+      'self::*'
   );
-  
+
 
   defineRule(
       'subscript-baseline', 'default.default',
@@ -902,7 +902,7 @@ sre.NemethRules.initNemethRules_ = function() {
 
   defineRule(
       'punctuation-comma', 'default.default', '[n] text(); [t] "⠀"',
-      'self::punctuation' , 'parent::*/parent::punctuated', 
+      'self::punctuation' , 'parent::*/parent::punctuated',
       'following-sibling::*', '@role!="fullstop"',
   );
 
@@ -910,7 +910,7 @@ sre.NemethRules.initNemethRules_ = function() {
       'punctuation-ellipses', 'default.default',
       '[t] "⠀"; [n] text(); [t] "⠀"',
       'self::punctuation' , 'parent::*/parent::punctuated',
-      'following-sibling::*', '@role="ellipsis"', 
+      'following-sibling::*', '@role="ellipsis"',
       'name(preceding-sibling::*[1])!="punctuation"'
   );
   defineRule(

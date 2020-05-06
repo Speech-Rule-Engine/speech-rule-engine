@@ -165,9 +165,9 @@ sre.SemanticMathml.prototype.rows_ = function(node, children) {
  */
 sre.SemanticMathml.prototype.fraction_ = function(node, children) {
   var sem = sre.SemanticProcessor.getInstance().fractionLikeNode(
-    this.parse(children[0]), this.parse(children[1]),
-    node.getAttribute('linethickness'),
-    node.getAttribute('bevelled') === 'true');
+      this.parse(children[0]), this.parse(children[1]),
+      node.getAttribute('linethickness'),
+      node.getAttribute('bevelled') === 'true');
   return sem;
 };
 

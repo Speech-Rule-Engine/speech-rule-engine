@@ -993,7 +993,8 @@ sre.SemanticProcessor.prototype.getPunctuationInRow_ = function(nodes) {
   }
   var allowedType = function(x) {
     var type = x.type;
-    return type === 'punctuation' || type === 'text' || type === 'operator' || type === 'relation';
+    return type === 'punctuation' || type === 'text' ||
+        type === 'operator' || type === 'relation';
   };
   // Partition with improved ellipses handling.
   var partition = sre.SemanticProcessor.partitionNodes_(
@@ -2060,7 +2061,7 @@ sre.SemanticProcessor.exprFont_ = function(node) {
  * @return {!sre.SemanticNode} The new fraction node.
  */
 sre.SemanticProcessor.prototype.fractionLikeNode = function(
-  denom, enume, linethickness, bevelled) {
+    denom, enume, linethickness, bevelled) {
   if (!bevelled && sre.SemanticUtil.isZeroLength(linethickness)) {
     var child0 = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
         sre.SemanticAttr.Type.LINE, [denom], []);

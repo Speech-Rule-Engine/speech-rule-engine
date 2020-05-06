@@ -107,8 +107,8 @@ sre.Nemeth72Test.prototype.test_number_para_8_a = function() {
 sre.Nemeth72Test.prototype.test_number_para_8_b = function() {
   this.executeRuleTest('<mn>1,478</mn>', '⠼⠂⠠⠲⠶⠦');
   this.executeRuleTest(
-    '<mn>100</mn><mo>,</mo><mn>200</mn><mo>,</mo><mn>300</mn>',
-    '⠼⠂⠴⠴⠠⠀⠼⠆⠴⠴⠠⠀⠼⠒⠴⠴');
+      '<mn>100</mn><mo>,</mo><mn>200</mn><mo>,</mo><mn>300</mn>',
+      '⠼⠂⠴⠴⠠⠀⠼⠆⠴⠴⠠⠀⠼⠒⠴⠴');
 };
 
 
@@ -119,16 +119,16 @@ sre.Nemeth72Test.prototype.test_number_para_8_c = function() {
   this.executeRuleTest('<mn>.35</mn>', '⠼⠨⠒⠢');
   this.executeRuleTest('<mn>3.14</mn>', '⠼⠒⠨⠂⠲');
   this.executeRuleTest(
-    '<mn>.2</mn><msub><mi>a</mi><mn>1</mn></msub>' +
+      '<mn>.2</mn><msub><mi>a</mi><mn>1</mn></msub>' +
       '<msub><mi>a</mi><mn>2</mn></msub><msub><mi>a</mi><mn>3</mn></msub>',
-    '⠼⠨⠆⠁⠂⠁⠆⠁⠒');
+      '⠼⠨⠆⠁⠂⠁⠆⠁⠒');
   this.executeRuleTest(
-    '<mn>.</mn><msub><mi>a</mi><mn>1</mn></msub>' +
+      '<mn>.</mn><msub><mi>a</mi><mn>1</mn></msub>' +
       '<msub><mi>a</mi><mn>2</mn></msub><msub><mi>a</mi><mn>3</mn></msub>',
-    '⠨⠐⠁⠂⠁⠆⠁⠒');
+      '⠨⠐⠁⠂⠁⠆⠁⠒');
   this.executeRuleTest(
-    '<mn>.1</mn><mo>+</mo><mn>.2</mn><mo>=</mo><mo>.</mo><mo>----</mo>',
-    '⠼⠨⠂⠬⠨⠆⠀⠨⠅⠀⠨⠐⠤⠤⠤⠤');
+      '<mn>.1</mn><mo>+</mo><mn>.2</mn><mo>=</mo><mo>.</mo><mo>----</mo>',
+      '⠼⠨⠂⠬⠨⠆⠀⠨⠅⠀⠨⠐⠤⠤⠤⠤');
 };
 
 
@@ -139,38 +139,38 @@ sre.Nemeth72Test.prototype.test_number_para_9_a = function() {
   this.executeRuleTest('<mn>27</mn>', '⠼⠆⠶');
   // Ignored (2)
   this.executeRuleTest(
-    '<mn>1</mn><mo>+</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>0</mn>',
-    '⠼⠂⠬⠭⠬⠽⠀⠨⠅⠀⠼⠴');
+      '<mn>1</mn><mo>+</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>0</mn>',
+      '⠼⠂⠬⠭⠬⠽⠀⠨⠅⠀⠼⠴');
   this.executeRuleTest(
-    '<mi>y</mi><mo>=</mo><mn>2</mn><mi>sin</mi><mo>&#x2061;</mo><mi>x</mi>',
-    '⠽⠀⠨⠅⠀⠼⠆⠎⠊⠝⠀⠭');
+      '<mi>y</mi><mo>=</mo><mn>2</mn><mi>sin</mi><mo>&#x2061;</mo><mi>x</mi>',
+      '⠽⠀⠨⠅⠀⠼⠆⠎⠊⠝⠀⠭');
   this.executeRuleTest(
-    '<mi>sin</mi><mo>&#x2061;</mo><mn>1</mn>',
-    '⠎⠊⠝⠀⠼⠂');
+      '<mi>sin</mi><mo>&#x2061;</mo><mn>1</mn>',
+      '⠎⠊⠝⠀⠼⠂');
   this.executeRuleTest(
-    '<msup><mi>sin</mi><mn>2</mn></msup><mo>&#x2061;</mo><mn>2</mn><mi>x</mi>',
-    '⠎⠊⠝⠘⠆⠀⠼⠆⠭');
+      '<msup><mi>sin</mi><mn>2</mn></msup><mo>&#x2061;</mo><mn>2</mn><mi>x</mi>',
+      '⠎⠊⠝⠘⠆⠀⠼⠆⠭');
   this.executeRuleTest(
-    '<mn>0.333</mn><mo>&#x2026;</mo><mn>3</mn><mo>&#x2026;</mo>',
-    '⠼⠴⠨⠒⠒⠒⠀⠄⠄⠄⠀⠼⠒⠀⠄⠄⠄');
+      '<mn>0.333</mn><mo>&#x2026;</mo><mn>3</mn><mo>&#x2026;</mo>',
+      '⠼⠴⠨⠒⠒⠒⠀⠄⠄⠄⠀⠼⠒⠀⠄⠄⠄');
   this.executeRuleTest(
-    '<msub><mi>log</mi><mrow><mn>10</mn></mrow></msub><mo>&#x2061;</mo><mn>2</mn>',
-    '⠇⠕⠛⠰⠂⠴⠀⠼⠆'); //  Additional ⠰, as we indicate the 10 subscript!
+      '<msub><mi>log</mi><mrow><mn>10</mn></mrow></msub><mo>&#x2061;</mo><mn>2</mn>',
+      '⠇⠕⠛⠰⠂⠴⠀⠼⠆'); //  Additional ⠰, as we indicate the 10 subscript!
   // Ignored (9) for now
   this.executeRuleTest(
-    '<mo>(</mo><mi>x</mi><mo>=</mo><mn>0</mn><mo>)</mo>',
-    '⠷⠭⠀⠨⠅⠀⠼⠴⠾');
+      '<mo>(</mo><mi>x</mi><mo>=</mo><mn>0</mn><mo>)</mo>',
+      '⠷⠭⠀⠨⠅⠀⠼⠴⠾');
   this.executeRuleTest(
-    '<mfrac><mn>11</mn><mn>5</mn></mfrac>',
-    '⠹⠂⠂⠌⠢⠼');
+      '<mfrac><mn>11</mn><mn>5</mn></mfrac>',
+      '⠹⠂⠂⠌⠢⠼');
   // Note that 11 differs from the book as we linearise fractions.
   // Ignored (12, 13)
   this.executeRuleTest(
-    '<mo>-</mo><mn>1</mn>',
-    '⠤⠼⠂');
+      '<mo>-</mo><mn>1</mn>',
+      '⠤⠼⠂');
   this.executeRuleTest(
-    '<mo>-</mo><mn>.3</mn>',
-    '⠤⠼⠨⠒');
+      '<mo>-</mo><mn>.3</mn>',
+      '⠤⠼⠨⠒');
 };
 
 
@@ -179,18 +179,18 @@ sre.Nemeth72Test.prototype.test_number_para_9_a = function() {
  */
 sre.Nemeth72Test.prototype.test_number_para_9_b = function() {
   this.executeRuleTest(
-    '<mtext>&#8220;</mtext><mn>3</mn><mtext>&#8195;dogs&#8221;</mtext>',
-    '⠦⠼⠒⠀⠙⠕⠛⠎⠴');
+      '<mtext>&#8220;</mtext><mn>3</mn><mtext>&#8195;dogs&#8221;</mtext>',
+      '⠦⠼⠒⠀⠙⠕⠛⠎⠴');
   this.executeRuleTest(
-    '<mtext>Probability</mtext><mo>--</mo><mn>0</mn>',
-    '⠠⠏⠗⠕⠃⠁⠃⠊⠇⠊⠞⠽⠤⠤⠼⠴'
+      '<mtext>Probability</mtext><mo>--</mo><mn>0</mn>',
+      '⠠⠏⠗⠕⠃⠁⠃⠊⠇⠊⠞⠽⠤⠤⠼⠴'
   ); // (2) Note this is uncontracted Grade 1
   this.executeRuleTest(
-    '<mtext>&#8220;</mtext><mn>.5</mn>',
-    '⠦⠼⠨⠢');
+      '<mtext>&#8220;</mtext><mn>.5</mn>',
+      '⠦⠼⠨⠢');
   this.executeRuleTest(
-    '<mtext>&#8220;</mtext><mo>-</mo><mn>4</mn>',
-    '⠦⠤⠼⠲');
+      '<mtext>&#8220;</mtext><mo>-</mo><mn>4</mn>',
+      '⠦⠤⠼⠲');
 };
 
 
@@ -202,24 +202,24 @@ sre.Nemeth72Test.prototype.test_number_para_9_b = function() {
  */
 sre.Nemeth72Test.prototype.test_para_62_a = function() {
   this.executeRuleTest(
-    '<mfrac><mn>1</mn><mn>3</mn></mfrac>',
-    '⠹⠂⠌⠒⠼'
+      '<mfrac><mn>1</mn><mn>3</mn></mfrac>',
+      '⠹⠂⠌⠒⠼'
   );
   this.executeRuleTest(
-    '<msup><mi>x</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup>',
-    '⠭⠘⠹⠂⠌⠆⠼'
+      '<msup><mi>x</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup>',
+      '⠭⠘⠹⠂⠌⠆⠼'
   );
   this.executeRuleTest(
-    '<mfrac><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mi>c</mi></mfrac>',
-    '⠹⠁⠬⠃⠌⠉⠼'
+      '<mfrac><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mi>c</mi></mfrac>',
+      '⠹⠁⠬⠃⠌⠉⠼'
   );
   this.executeRuleTest(
-    '<mfrac><msup><mi>x</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup><mn>2</mn></mfrac>',
-    '⠹⠭⠘⠹⠂⠌⠆⠼⠐⠌⠆⠼'
+      '<mfrac><msup><mi>x</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup><mn>2</mn></mfrac>',
+      '⠹⠭⠘⠹⠂⠌⠆⠼⠐⠌⠆⠼'
   );
   this.executeRuleTest(
-    '<mtext>rate</mtext><mo>=</mo><mfrac><mtext>distance</mtext><mtext>time</mtext></mfrac>',
-    '⠗⠁⠞⠑⠀⠨⠅⠀⠹⠙⠊⠎⠞⠁⠝⠉⠑⠌⠞⠊⠍⠑⠼'
+      '<mtext>rate</mtext><mo>=</mo><mfrac><mtext>distance</mtext><mtext>time</mtext></mfrac>',
+      '⠗⠁⠞⠑⠀⠨⠅⠀⠹⠙⠊⠎⠞⠁⠝⠉⠑⠌⠞⠊⠍⠑⠼'
   );
 };
 
@@ -231,8 +231,8 @@ sre.Nemeth72Test.prototype.test_para_62_a = function() {
  */
 sre.Nemeth72Test.prototype.test_para_62_b = function() {
   this.executeRuleTest(
-    '<mfrac bevelled="true"><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mrow><mi>c</mi><mo>+</mo><mi>d</mi></mrow></mfrac>',
-    '⠹⠁⠬⠃⠸⠌⠉⠬⠙⠼'
+      '<mfrac bevelled="true"><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mrow><mi>c</mi><mo>+</mo><mi>d</mi></mrow></mfrac>',
+      '⠹⠁⠬⠃⠸⠌⠉⠬⠙⠼'
   );
   // this.executeRuleTest(
   //   '<mn>3</mn><mstyle size="small"><mi>x</mi><mo>/</mo><mi>y</mi></mstyle>',
@@ -248,12 +248,12 @@ sre.Nemeth72Test.prototype.test_para_62_b = function() {
  */
 sre.Nemeth72Test.prototype.test_para_66 = function() {
   this.executeRuleTest(
-    '<mfrac><mfrac><mn>3</mn><mn>8</mn></mfrac><mn>5</mn></mfrac>',
-    '⠠⠹⠹⠒⠌⠦⠼⠠⠌⠢⠠⠼'
+      '<mfrac><mfrac><mn>3</mn><mn>8</mn></mfrac><mn>5</mn></mfrac>',
+      '⠠⠹⠹⠒⠌⠦⠼⠠⠌⠢⠠⠼'
   );
   this.executeRuleTest(
-    '<mfrac><mrow><mn>1</mn><mrow><mo>/</mo></mrow><mn>2</mn></mrow><mrow><mn>2</mn><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mfrac>',
-    '⠠⠹⠂⠸⠌⠆⠠⠌⠆⠸⠹⠆⠌⠒⠸⠼⠠⠼'
+      '<mfrac><mrow><mn>1</mn><mrow><mo>/</mo></mrow><mn>2</mn></mrow><mrow><mn>2</mn><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mfrac>',
+      '⠠⠹⠂⠸⠌⠆⠠⠌⠆⠸⠹⠆⠌⠒⠸⠼⠠⠼'
   );
   // this.executeRuleTest(
   //   // '<mfrac><mfrac bevelled="true"><mn>2</mn><mn>3</mn></mfrac><mfrac bevelled="true"><mn>3</mn><mn>2</mn></mfrac></mfrac>',
@@ -262,16 +262,16 @@ sre.Nemeth72Test.prototype.test_para_66 = function() {
   // ); // Need to consider regular division operator for complex (but not hypercomplex!) fraction.
   //    // Extend to nesting depth computation to work with type/role pairs.
   this.executeRuleTest(
-    '<mfrac><mn>5</mn><mrow><mn>4</mn><mfrac><mn>3</mn><mn>8</mn></mfrac></mrow></mfrac>',
-    '⠠⠹⠢⠠⠌⠲⠸⠹⠒⠌⠦⠸⠼⠠⠼'
+      '<mfrac><mn>5</mn><mrow><mn>4</mn><mfrac><mn>3</mn><mn>8</mn></mfrac></mrow></mfrac>',
+      '⠠⠹⠢⠠⠌⠲⠸⠹⠒⠌⠦⠸⠼⠠⠼'
   );
   // this.executeRuleTest(
   //   '<mfrac><mrow><mn>3</mn><mo>/</mo><mn>4</mn></mrow><mn>5</mn></mfrac>',
   //   '⠠⠹⠒⠸⠌⠲⠠⠌⠢⠠⠼'
   // ); // Need to consider regular division operator for complex (but not hypercomplex!) fraction.
   this.executeRuleTest(
-    '<mfrac bevelled="true"><mfrac><mn>1</mn><mn>2</mn></mfrac><mfrac><mn>3</mn><mn>4</mn></mfrac></mfrac>',
-    '⠠⠹⠹⠂⠌⠆⠼⠠⠸⠌⠹⠒⠌⠲⠼⠠⠼'
+      '<mfrac bevelled="true"><mfrac><mn>1</mn><mn>2</mn></mfrac><mfrac><mn>3</mn><mn>4</mn></mfrac></mfrac>',
+      '⠠⠹⠹⠂⠌⠆⠼⠠⠸⠌⠹⠒⠌⠲⠼⠠⠼'
   );
 };
 
@@ -281,8 +281,8 @@ sre.Nemeth72Test.prototype.test_para_66 = function() {
  */
 sre.Nemeth72Test.prototype.test_para_67 = function() {
   this.executeRuleTest(
-    '<mfrac><mi>a</mi><msup><mi>b</mi><mrow><mfrac><mfrac><mn>3</mn><mn>4</mn></mfrac><mfrac><mn>5</mn><mn>6</mn></mfrac></mfrac></mrow></msup></mfrac>',
-    '⠹⠁⠌⠃⠘⠠⠹⠹⠒⠌⠲⠼⠠⠌⠹⠢⠌⠖⠼⠠⠼⠐⠼'
+      '<mfrac><mi>a</mi><msup><mi>b</mi><mrow><mfrac><mfrac><mn>3</mn><mn>4</mn></mfrac><mfrac><mn>5</mn><mn>6</mn></mfrac></mfrac></mrow></msup></mfrac>',
+      '⠹⠁⠌⠃⠘⠠⠹⠹⠒⠌⠲⠼⠠⠌⠹⠢⠌⠖⠼⠠⠼⠐⠼'
   );
 };
 
@@ -293,13 +293,13 @@ sre.Nemeth72Test.prototype.test_para_67 = function() {
 sre.Nemeth72Test.prototype.test_para_68 = function() {
   // (1) linearized
   this.executeRuleTest(
-    '<mfrac><mfrac><mrow><mn>1</mn><mfrac><mn>1</mn><mn>4</mn></mfrac></mrow><mrow><mn>1</mn><mfrac><mn>3</mn><mn>5</mn></mfrac></mrow></mfrac><mn>5</mn></mfrac>',
-    '⠠⠠⠹⠠⠹⠂⠸⠹⠂⠌⠲⠸⠼⠠⠌⠂⠸⠹⠒⠌⠢⠸⠼⠠⠼⠠⠠⠌⠢⠠⠠⠼'
+      '<mfrac><mfrac><mrow><mn>1</mn><mfrac><mn>1</mn><mn>4</mn></mfrac></mrow><mrow><mn>1</mn><mfrac><mn>3</mn><mn>5</mn></mfrac></mrow></mfrac><mn>5</mn></mfrac>',
+      '⠠⠠⠹⠠⠹⠂⠸⠹⠂⠌⠲⠸⠼⠠⠌⠂⠸⠹⠒⠌⠢⠸⠼⠠⠼⠠⠠⠌⠢⠠⠠⠼'
   );
   // (4)
   this.executeRuleTest(
-    '<mfrac><mfrac><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>&#x2212;</mo><mi>x</mi><mo stretchy="false">)</mo><mfrac><mi>d</mi><mi>dx</mi></mfrac><mo stretchy="false">(</mo><mn>2</mn><mi>x</mi><mo stretchy="false">)</mo><mo>&#x2212;</mo><mn>2</mn><mi>x</mi><mfrac><mi>d</mi><mi>dx</mi></mfrac><mo stretchy="false">(</mo><mn>1</mn><mo>&#x2212;</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>&#x2212;</mo><mi>x</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow></mfrac><mrow><mn>1</mn><mo>+</mo><msup><mrow data-mjx-texclass="INNER"><mo data-mjx-texclass="OPEN">(</mo><mfrac><mrow><mn>2</mn><mi>x</mi></mrow><mrow><mn>1</mn><mo>&#x2212;</mo><mi>x</mi></mrow></mfrac><mo data-mjx-texclass="CLOSE">)</mo></mrow><mn>2</mn></msup></mrow></mfrac>',
-    '⠠⠠⠹⠠⠹⠷⠂⠤⠭⠾⠹⠙⠌⠙⠭⠼⠷⠆⠭⠾⠤⠆⠭⠹⠙⠌⠙⠭⠼⠷⠂⠤⠭⠾⠠⠌⠷⠂⠤⠭⠾⠘⠆⠐⠠⠼⠠⠠⠌⠂⠬⠷⠹⠆⠭⠌⠂⠤⠭⠼⠾⠘⠆⠐⠠⠠⠼'
+      '<mfrac><mfrac><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>&#x2212;</mo><mi>x</mi><mo stretchy="false">)</mo><mfrac><mi>d</mi><mi>dx</mi></mfrac><mo stretchy="false">(</mo><mn>2</mn><mi>x</mi><mo stretchy="false">)</mo><mo>&#x2212;</mo><mn>2</mn><mi>x</mi><mfrac><mi>d</mi><mi>dx</mi></mfrac><mo stretchy="false">(</mo><mn>1</mn><mo>&#x2212;</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>&#x2212;</mo><mi>x</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow></mfrac><mrow><mn>1</mn><mo>+</mo><msup><mrow data-mjx-texclass="INNER"><mo data-mjx-texclass="OPEN">(</mo><mfrac><mrow><mn>2</mn><mi>x</mi></mrow><mrow><mn>1</mn><mo>&#x2212;</mo><mi>x</mi></mrow></mfrac><mo data-mjx-texclass="CLOSE">)</mo></mrow><mn>2</mn></msup></mrow></mfrac>',
+      '⠠⠠⠹⠠⠹⠷⠂⠤⠭⠾⠹⠙⠌⠙⠭⠼⠷⠆⠭⠾⠤⠆⠭⠹⠙⠌⠙⠭⠼⠷⠂⠤⠭⠾⠠⠌⠷⠂⠤⠭⠾⠘⠆⠐⠠⠼⠠⠠⠌⠂⠬⠷⠹⠆⠭⠌⠂⠤⠭⠼⠾⠘⠆⠐⠠⠠⠼'
   );
 };
 
@@ -310,8 +310,8 @@ sre.Nemeth72Test.prototype.test_para_68 = function() {
 sre.Nemeth72Test.prototype.test_para_69 = function() {
   // (1) continued Fraction linearized
   this.executeRuleTest(
-    '<msqrt><mn>2</mn></msqrt><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mo>+</mo><mo>&#x2026;</mo></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow>',
-    '⠜⠆⠻⠀⠨⠅⠀⠼⠂⠬⠠⠠⠠⠹⠂⠠⠠⠠⠌⠆⠬⠠⠠⠹⠂⠠⠠⠌⠆⠬⠠⠹⠂⠠⠌⠆⠬⠹⠂⠌⠆⠬⠄⠄⠄⠼⠠⠼⠠⠠⠼⠠⠠⠠⠼'
+      '<msqrt><mn>2</mn></msqrt><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mo>+</mo><mo>&#x2026;</mo></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow>',
+      '⠜⠆⠻⠀⠨⠅⠀⠼⠂⠬⠠⠠⠠⠹⠂⠠⠠⠠⠌⠆⠬⠠⠠⠹⠂⠠⠠⠌⠆⠬⠠⠹⠂⠠⠌⠆⠬⠹⠂⠌⠆⠬⠄⠄⠄⠼⠠⠼⠠⠠⠼⠠⠠⠠⠼'
   );
 };
 
@@ -322,31 +322,31 @@ sre.Nemeth72Test.prototype.test_para_69 = function() {
  */
 sre.Nemeth72Test.prototype.test_para_103_a = function() {
   this.executeRuleTest(
-    '<msqrt><mn>2</mn></msqrt>',
-    '⠜⠆⠻'
+      '<msqrt><mn>2</mn></msqrt>',
+      '⠜⠆⠻'
   );
   this.executeRuleTest(
-    '<msqrt><mi>x</mi><mo>+</mo><mi>y</mi></msqrt>',
-    '⠜⠭⠬⠽⠻'
+      '<msqrt><mi>x</mi><mo>+</mo><mi>y</mi></msqrt>',
+      '⠜⠭⠬⠽⠻'
   );
   this.executeRuleTest(
-    '<msqrt><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></msqrt>',
-    '⠜⠭⠘⠆⠐⠬⠂⠻'
+      '<msqrt><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></msqrt>',
+      '⠜⠭⠘⠆⠐⠬⠂⠻'
   );
   this.executeRuleTest(
-    '<msqrt><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></msqrt>',
-    '⠜⠭⠘⠆⠐⠬⠽⠘⠆⠐⠻'
+      '<msqrt><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></msqrt>',
+      '⠜⠭⠘⠆⠐⠬⠽⠘⠆⠐⠻'
   );
   this.executeRuleTest(
-    '<msqrt><mfrac><mi>x</mi><mi>y</mi></mfrac></msqrt>',
-    '⠜⠹⠭⠌⠽⠼⠻'
+      '<msqrt><mfrac><mi>x</mi><mi>y</mi></mfrac></msqrt>',
+      '⠜⠹⠭⠌⠽⠼⠻'
   );
   this.executeRuleTest(
-    '<mn>3</mn><msqrt><mi>a</mi></msqrt>',
-    '⠼⠒⠜⠁⠻'
+      '<mn>3</mn><msqrt><mi>a</mi></msqrt>',
+      '⠼⠒⠜⠁⠻'
   );
   this.executeRuleTest(
-    '<msup><msqrt><mi>x</mi></msqrt><mn>3</mn></msup>',
-    '⠜⠭⠻⠘⠒'
+      '<msup><msqrt><mi>x</mi></msqrt><mn>3</mn></msup>',
+      '⠜⠭⠻⠘⠒'
   );
 };
