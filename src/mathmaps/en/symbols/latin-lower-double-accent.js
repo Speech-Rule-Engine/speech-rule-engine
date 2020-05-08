@@ -4,9 +4,7 @@
     "key": "01D6",
     "mappings": {
       "default": {
-        "default": "latin small letter u with diaeresis and macron",
-        "alternative": "latin small letter u double overdot overbar",
-        "short": "u double overdot overbar"
+        "default": "u double overdot overbar"
       }
     }
   },
@@ -15,9 +13,7 @@
     "key": "01D8",
     "mappings": {
       "default": {
-        "default": "latin small letter u with diaeresis and acute",
-        "alternative": "latin small letter u double overdot acute",
-        "short": "u double overdot acute"
+        "default": "u double overdot acute"
       }
     }
   },
@@ -26,9 +22,7 @@
     "key": "01DA",
     "mappings": {
       "default": {
-        "default": "latin small letter u with diaeresis and caron",
-        "alternative": "latin small letter u double overdot hacek",
-        "short": "u double overdot caron"
+        "default": "u double overdot caron"
       }
     }
   },
@@ -37,9 +31,7 @@
     "key": "01DC",
     "mappings": {
       "default": {
-        "default": "latin small letter u with diaeresis and grave",
-        "alternative": "latin small letter u double overdot grave",
-        "short": "u double overdot grave"
+        "default": "u double overdot grave"
       }
     }
   },
@@ -48,9 +40,7 @@
     "key": "01DF",
     "mappings": {
       "default": {
-        "default": "latin small letter a with diaeresis and macron",
-        "alternative": "latin small letter a double overdot overbar",
-        "short": "a double overdot overbar"
+        "default": "a double overdot overbar"
       }
     }
   },
@@ -59,9 +49,7 @@
     "key": "01E1",
     "mappings": {
       "default": {
-        "default": "latin small letter a with dot above and macron",
-        "alternative": "latin small letter a dot overbar",
-        "short": "a overdot overbar"
+        "default": "a overdot overbar"
       }
     }
   },
@@ -70,9 +58,7 @@
     "key": "01ED",
     "mappings": {
       "default": {
-        "default": "latin small letter o with ogonek and macron",
-        "alternative": "latin small letter o ogonek overbar",
-        "short": "o ogonek overbar"
+        "default": "o ogonek overbar"
       }
     }
   },
@@ -81,9 +67,7 @@
     "key": "01FB",
     "mappings": {
       "default": {
-        "default": "latin small letter a with ring above and acute",
-        "alternative": "latin small letter a ring above acute",
-        "short": "a ring above acute"
+        "default": "a ring above acute"
       }
     }
   },
@@ -92,9 +76,7 @@
     "key": "022B",
     "mappings": {
       "default": {
-        "default": "latin small letter o with diaeresis and macron",
-        "alternative": "latin small letter o double overdot overbar",
-        "short": "o double overdot overbar"
+        "default": "o double overdot overbar"
       }
     }
   },
@@ -103,9 +85,7 @@
     "key": "022D",
     "mappings": {
       "default": {
-        "default": "latin small letter o with tilde and macron",
-        "alternative": "latin small letter o tilde overbar",
-        "short": "o tilde overbar"
+        "default": "o tilde overbar"
       }
     }
   },
@@ -114,9 +94,7 @@
     "key": "0231",
     "mappings": {
       "default": {
-        "default": "latin small letter o with dot above and macron",
-        "alternative": "latin small letter o overdot overbar",
-        "short": "o overdot overbar"
+        "default": "o overdot overbar"
       }
     }
   },
@@ -125,9 +103,7 @@
     "key": "1E09",
     "mappings": {
       "default": {
-        "default": "latin small letter c with cedilla and acute",
-        "alternative": "latin small letter c cedilla acute",
-        "short": "c cedilla acute"
+        "default": "c cedilla acute"
       }
     }
   },
@@ -136,9 +112,7 @@
     "key": "1E15",
     "mappings": {
       "default": {
-        "default": "latin small letter e with macron and grave",
-        "alternative": "latin small letter e overbar grave",
-        "short": "e overbar grave"
+        "default": "e overbar grave"
       }
     }
   },
@@ -147,9 +121,7 @@
     "key": "1E17",
     "mappings": {
       "default": {
-        "default": "latin small letter e with macron and acute",
-        "alternative": "latin small letter e overbar acute",
-        "short": "e overbar acute"
+        "default": "e overbar acute"
       }
     }
   },
@@ -158,9 +130,7 @@
     "key": "1E1D",
     "mappings": {
       "default": {
-        "default": "latin small letter e with cedilla and breve",
-        "alternative": "latin small letter e cedilla breve",
-        "short": "e cedilla breve"
+        "default": "e cedilla breve"
       }
     }
   },
@@ -169,9 +139,7 @@
     "key": "1E2F",
     "mappings": {
       "default": {
-        "default": "latin small letter i with diaeresis and acute",
-        "alternative": "latin small letter i double overdot acute",
-        "short": "i double overdot acute"
+        "default": "i double overdot acute"
       }
     }
   },
@@ -180,9 +148,7 @@
     "key": "1E39",
     "mappings": {
       "default": {
-        "default": "latin small letter l with dot below and macron",
-        "alternative": "latin small letter l underdot overbar",
-        "short": "l underdot overbar"
+        "default": "l underdot overbar"
       }
     }
   },
@@ -191,9 +157,7 @@
     "key": "1E4D",
     "mappings": {
       "default": {
-        "default": "latin small letter o with tilde and acute",
-        "alternative": "latin small letter o tilde acute",
-        "short": "o tilde acute"
+        "default": "o tilde acute"
       }
     }
   },
@@ -202,9 +166,7 @@
     "key": "1E4F",
     "mappings": {
       "default": {
-        "default": "latin small letter o with tilde and diaeresis",
-        "alternative": "latin small letter o tilde double overdot",
-        "short": "o tilde double overdot"
+        "default": "o tilde double overdot"
       }
     }
   },
@@ -213,9 +175,7 @@
     "key": "1E51",
     "mappings": {
       "default": {
-        "default": "latin small letter o with macron and grave",
-        "alternative": "latin small letter o overbar grave",
-        "short": "o overbar grave"
+        "default": "o overbar grave"
       }
     }
   },
@@ -224,9 +184,7 @@
     "key": "1E53",
     "mappings": {
       "default": {
-        "default": "latin small letter o with macron and acute",
-        "alternative": "latin small letter o overbar acute",
-        "short": "o overbar acute"
+        "default": "o overbar acute"
       }
     }
   },
@@ -235,9 +193,7 @@
     "key": "1E5D",
     "mappings": {
       "default": {
-        "default": "latin small letter r with dot below and macron",
-        "alternative": "latin small letter r underdot overbar",
-        "short": "r underdot overbar"
+        "default": "r underdot overbar"
       }
     }
   },
@@ -246,9 +202,7 @@
     "key": "1E65",
     "mappings": {
       "default": {
-        "default": "latin small letter s with acute and dot above",
-        "alternative": "latin small letter s acute overdot",
-        "short": "s acute overdot"
+        "default": "s acute overdot"
       }
     }
   },
@@ -257,9 +211,7 @@
     "key": "1E67",
     "mappings": {
       "default": {
-        "default": "latin small letter s with caron and dot above",
-        "alternative": "latin small letter s caron overdot",
-        "short": "s caron overdot"
+        "default": "s caron overdot"
       }
     }
   },
@@ -268,9 +220,7 @@
     "key": "1E69",
     "mappings": {
       "default": {
-        "default": "latin small letter s with dot below and dot above",
-        "alternative": "latin small letter s underdot overdot",
-        "short": "s underdot overdot"
+        "default": "s underdot overdot"
       }
     }
   },
@@ -279,9 +229,7 @@
     "key": "1E79",
     "mappings": {
       "default": {
-        "default": "latin small letter u with tilde and acute",
-        "alternative": "latin small letter u tilde acute",
-        "short": "u tilde acute"
+        "default": "u tilde acute"
       }
     }
   },
@@ -290,9 +238,7 @@
     "key": "1E7B",
     "mappings": {
       "default": {
-        "default": "latin small letter u with macron and diaeresis",
-        "alternative": "latin small letter u overbar double overdot",
-        "short": "u overbar double overdot"
+        "default": "u overbar double overdot"
       }
     }
   },
@@ -301,9 +247,7 @@
     "key": "1EA5",
     "mappings": {
       "default": {
-        "default": "latin small letter a with circumflex and acute",
-        "alternative": "latin small letter a hat acute",
-        "short": "a hat acute"
+        "default": "a hat acute"
       }
     }
   },
@@ -312,9 +256,7 @@
     "key": "1EA7",
     "mappings": {
       "default": {
-        "default": "latin small letter a with circumflex and grave",
-        "alternative": "latin small letter a hat grave",
-        "short": "a hat grave"
+        "default": "a hat grave"
       }
     }
   },
@@ -323,9 +265,7 @@
     "key": "1EA9",
     "mappings": {
       "default": {
-        "default": "latin small letter a with circumflex and hook above",
-        "alternative": "latin small letter a hat hook above",
-        "short": "a hat hook above"
+        "default": "a hat hook above"
       }
     }
   },
@@ -334,9 +274,7 @@
     "key": "1EAB",
     "mappings": {
       "default": {
-        "default": "latin small letter a with circumflex and tilde",
-        "alternative": "latin small letter a hat tilde",
-        "short": "a hat tilde"
+        "default": "a hat tilde"
       }
     }
   },
@@ -345,9 +283,7 @@
     "key": "1EAD",
     "mappings": {
       "default": {
-        "default": "latin small letter a with circumflex and dot below",
-        "alternative": "latin small letter a hat underdot",
-        "short": "a hat underdot"
+        "default": "a hat underdot"
       }
     }
   },
@@ -356,9 +292,7 @@
     "key": "1EAF",
     "mappings": {
       "default": {
-        "default": "latin small letter a with breve and acute",
-        "alternative": "latin small letter a breve acute",
-        "short": "a breve acute"
+        "default": "a breve acute"
       }
     }
   },
@@ -367,9 +301,7 @@
     "key": "1EB1",
     "mappings": {
       "default": {
-        "default": "latin small letter a with breve and grave",
-        "alternative": "latin small letter a breve grave",
-        "short": "a breve grave"
+        "default": "a breve grave"
       }
     }
   },
@@ -378,9 +310,7 @@
     "key": "1EB3",
     "mappings": {
       "default": {
-        "default": "latin small letter a with breve and hook above",
-        "alternative": "latin small letter a breve hook above",
-        "short": "a breve hook above"
+        "default": "a breve hook above"
       }
     }
   },
@@ -389,9 +319,7 @@
     "key": "1EB5",
     "mappings": {
       "default": {
-        "default": "latin small letter a with breve and tilde",
-        "alternative": "latin small letter a breve tilde",
-        "short": "a breve tilde"
+        "default": "a breve tilde"
       }
     }
   },
@@ -400,9 +328,7 @@
     "key": "1EB7",
     "mappings": {
       "default": {
-        "default": "latin small letter a with breve and dot below",
-        "alternative": "latin small letter a breve underdot",
-        "short": "a breve underdot"
+        "default": "a breve underdot"
       }
     }
   },
@@ -411,9 +337,7 @@
     "key": "1EBF",
     "mappings": {
       "default": {
-        "default": "latin small letter e with circumflex and acute",
-        "alternative": "latin small letter e hat acute",
-        "short": "e hat acute"
+        "default": "e hat acute"
       }
     }
   },
@@ -422,9 +346,7 @@
     "key": "1EC1",
     "mappings": {
       "default": {
-        "default": "latin small letter e with circumflex and grave",
-        "alternative": "latin small letter e hat grave",
-        "short": "e hat grave"
+        "default": "e hat grave"
       }
     }
   },
@@ -433,9 +355,7 @@
     "key": "1EC3",
     "mappings": {
       "default": {
-        "default": "latin small letter e with circumflex and hook above",
-        "alternative": "latin small letter e hat hook above",
-        "short": "e hat hook above"
+        "default": "e hat hook above"
       }
     }
   },
@@ -444,9 +364,7 @@
     "key": "1EC5",
     "mappings": {
       "default": {
-        "default": "latin small letter e with circumflex and tilde",
-        "alternative": "latin small letter e hat tilde",
-        "short": "e hat tilde"
+        "default": "e hat tilde"
       }
     }
   },
@@ -455,9 +373,7 @@
     "key": "1EC7",
     "mappings": {
       "default": {
-        "default": "latin small letter e with circumflex and dot below",
-        "alternative": "latin small letter e hat underdot",
-        "short": "e hat underdot"
+        "default": "e hat underdot"
       }
     }
   },
@@ -466,9 +382,7 @@
     "key": "1ED1",
     "mappings": {
       "default": {
-        "default": "latin small letter o with circumflex and acute",
-        "alternative": "latin small letter o hat acute",
-        "short": "o hat acute"
+        "default": "o hat acute"
       }
     }
   },
@@ -477,9 +391,7 @@
     "key": "1ED3",
     "mappings": {
       "default": {
-        "default": "latin small letter o with circumflex and grave",
-        "alternative": "latin small letter o hat grave",
-        "short": "o hat grave"
+        "default": "o hat grave"
       }
     }
   },
@@ -488,9 +400,7 @@
     "key": "1ED5",
     "mappings": {
       "default": {
-        "default": "latin small letter o with circumflex and hook above",
-        "alternative": "latin small letter o hat hook above",
-        "short": "o hat hook above"
+        "default": "o hat hook above"
       }
     }
   },
@@ -499,9 +409,7 @@
     "key": "1ED7",
     "mappings": {
       "default": {
-        "default": "latin small letter o with circumflex and tilde",
-        "alternative": "latin small letter o hat tilde",
-        "short": "o hat tilde"
+        "default": "o hat tilde"
       }
     }
   },
@@ -510,9 +418,7 @@
     "key": "1ED9",
     "mappings": {
       "default": {
-        "default": "latin small letter o with circumflex and dot below",
-        "alternative": "latin small letter o hat underdot",
-        "short": "o hat underdot"
+        "default": "o hat underdot"
       }
     }
   },
@@ -521,9 +427,7 @@
     "key": "1EDB",
     "mappings": {
       "default": {
-        "default": "latin small letter o with horn and acute",
-        "alternative": "latin small letter o acute prime",
-        "short": "o acute prime"
+        "default": "o acute prime"
       }
     }
   },
@@ -532,9 +436,7 @@
     "key": "1EDD",
     "mappings": {
       "default": {
-        "default": "latin small letter o with horn and grave",
-        "alternative": "latin small letter o grave prime",
-        "short": "o grave prime"
+        "default": "o grave prime"
       }
     }
   },
@@ -543,9 +445,7 @@
     "key": "1EDF",
     "mappings": {
       "default": {
-        "default": "latin small letter o with horn and hook above",
-        "alternative": "latin small letter o hook above prime",
-        "short": "o hook above prime"
+        "default": "o hook above prime"
       }
     }
   },
@@ -554,9 +454,7 @@
     "key": "1EE1",
     "mappings": {
       "default": {
-        "default": "latin small letter o with horn and tilde",
-        "alternative": "latin small letter o tilde prime",
-        "short": "o tilde prime"
+        "default": "o tilde prime"
       }
     }
   },
@@ -565,9 +463,7 @@
     "key": "1EE3",
     "mappings": {
       "default": {
-        "default": "latin small letter o with horn and dot below",
-        "alternative": "latin small letter o underdot prime",
-        "short": "o underdot prime"
+        "default": "o underdot prime"
       }
     }
   },
@@ -576,9 +472,7 @@
     "key": "1EE9",
     "mappings": {
       "default": {
-        "default": "latin small letter u with horn and acute",
-        "alternative": "latin small letter u acute prime",
-        "short": "u acute prime"
+        "default": "u acute prime"
       }
     }
   },
@@ -587,9 +481,7 @@
     "key": "1EEB",
     "mappings": {
       "default": {
-        "default": "latin small letter u with horn and grave",
-        "alternative": "latin small letter u grave prime",
-        "short": "u grave prime"
+        "default": "u grave prime"
       }
     }
   },
@@ -598,9 +490,7 @@
     "key": "1EED",
     "mappings": {
       "default": {
-        "default": "latin small letter u with horn and hook above",
-        "alternative": "latin small letter u hook above prime",
-        "short": "u hook above prime"
+        "default": "u hook above prime"
       }
     }
   },
@@ -609,9 +499,7 @@
     "key": "1EEF",
     "mappings": {
       "default": {
-        "default": "latin small letter u with horn and tilde",
-        "alternative": "latin small letter u tilde prime",
-        "short": "u tilde prime"
+        "default": "u tilde prime"
       }
     }
   },
@@ -620,9 +508,7 @@
     "key": "1EF1",
     "mappings": {
       "default": {
-        "default": "latin small letter u with horn and dot below",
-        "alternative": "latin small letter u underdot prime",
-        "short": "u underdot prime"
+        "default": "u underdot prime"
       }
     }
   }

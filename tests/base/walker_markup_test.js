@@ -60,7 +60,7 @@ goog.inherits(sre.WalkerMarkupTest, sre.AbstractTest);
  */
 sre.WalkerMarkupTest.prototype.setUpTest = function() {
   this.system.setupEngine(
-      {semantics: true, locale: 'en', domain: 'default', style: 'short',
+      {locale: 'en', domain: 'default', style: 'default',
         speech: sre.Engine.Speech.NONE});
 };
 
@@ -70,17 +70,23 @@ sre.WalkerMarkupTest.prototype.setUpTest = function() {
  */
 sre.WalkerMarkupTest.prototype.tearDownTest = function() {
   this.system.setupEngine(
-      {semantics: false, domain: 'default', style: 'short',
-        markup: sre.Engine.Markup.NONE, speech: sre.Engine.Speech.NONE});
+      {domain: 'default', style: 'default', markup: sre.Engine.Markup.NONE,
+        speech: sre.Engine.Speech.NONE});
   // TODO: Reset the rule sets.
 };
 
 
+/**
+ * @type {string}
+ */
 sre.WalkerMarkupTest.DIV_MML =
     '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
     '<mfrac><mi>x</mi><mi>y</mi></mfrac></math>';
 
 
+/**
+ * @type {string}
+ */
 sre.WalkerMarkupTest.DIV_RENDERED =
     '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
     '<mfrac data-semantic-type="fraction" data-semantic-role="division"' +
@@ -108,6 +114,10 @@ sre.WalkerMarkupTest.prototype.executeTest_ = function(move, result) {
 };
 
 
+/**
+ * Starts the walker on the current node.
+ * @private
+ */
 sre.WalkerMarkupTest.prototype.startWalker_ = function() {
   this.walker = sre.WalkerFactory.walker(
       'Syntax', this.div, sre.SpeechGeneratorFactory.generator('Node'),
@@ -117,20 +127,28 @@ sre.WalkerMarkupTest.prototype.startWalker_ = function() {
 };
 
 
+/**
+ * Runs a sequence of move tests on the current node.
+ * @param {sre.Engine.Markup} markup The markup that is used for the results.
+ * @private
+ */
 sre.WalkerMarkupTest.prototype.runMoveTests_ = function(markup) {
   sre.Engine.getInstance().markup = markup;
   this.startWalker_();
   this.executeTest_(null,
-      'x equals StartFraction negative b plus-or-minus StartRoot' +
+      'x equals StartFraction negative b plus or minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
   this.executeTest_('X', 'equality');
   this.executeTest_('DOWN', 'x');
   this.executeTest_('RIGHT',
-      'equals StartFraction negative b plus-or-minus StartRoot' +
+      'equals StartFraction negative b plus or minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
 };
 
 
+/**
+ * Tests for SSML markup.
+ */
 sre.WalkerMarkupTest.prototype.untestSsml = function() {
-  this.runMoveTests_('ssml');
+  this.runMoveTests_(sre.Engine.Markup.SSML);
 };

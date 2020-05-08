@@ -44,11 +44,6 @@ sre.AataTest = function() {
   /**
    * @override
    */
-  this.semantics = true;
-
-  /**
-   * @override
-   */
   this.locale = 'nemeth';
 
   /**
@@ -62,6 +57,7 @@ sre.AataTest = function() {
 goog.inherits(sre.AataTest, sre.AbstractRuleTest);
 
 
+// Number: ⠼
 /**
  * Expression 1.
  */
@@ -75,7 +71,7 @@ sre.AataTest.prototype.testAataExpression_1 = function() {
       '<mspace width="0.333em"></mspace>' +
       '<mi>n</mi>' +
       '<mo stretchy="false">)</mo>';
-  var nemeth = '⠗⠸⠇⠎⠷⠍⠕⠙⠝⠾';
+  var nemeth = '⠗⠀⠸⠇⠀⠎⠷⠍⠕⠙⠀⠝⠾';  // ⠗⠸⠇⠎⠷⠍⠕⠙⠝⠾
   this.executeRuleTest(mml, nemeth);
 };
 
@@ -95,7 +91,7 @@ sre.AataTest.prototype.testAataExpression_2 = function() {
       '<mspace width="thinmathspace"></mspace>' +
       '<mspace width="thinmathspace"></mspace>' +
       '<mi>n</mi>';
-  var nemeth = '⠽⠀⠨⠅⠀⠭⠘⠠⠑⠐⠍⠕⠙⠝';
+  var nemeth = '⠽⠀⠨⠅⠀⠭⠘⠠⠑⠐⠍⠕⠙⠀⠝';  // ⠽⠀⠨⠅⠀⠭⠘⠠⠑⠐⠍⠕⠙⠝
   this.executeRuleTest(mml, nemeth);
 };
 
@@ -125,7 +121,7 @@ sre.AataTest.prototype.testAataExpression_3 = function() {
       '<mtext>' +
       '</mtext>' +
       '<mn>16</mn>';
-  var nemeth = '⠳⠠⠭overTilde⠳⠀⠨⠅⠀⠆⠘⠲⠐⠀⠨⠅⠀16';
+  var nemeth = '⠳⠐⠠⠭⠣⠈⠱⠻⠳⠀⠨⠅⠀⠼⠆⠘⠲⠀⠨⠅⠀⠼⠂⠖';  // ⠳⠠⠭overTilde⠳⠀⠨⠅⠀⠆⠘⠲⠐⠀⠨⠅⠀16
   this.executeRuleTest(mml, nemeth);
 };
 
@@ -137,7 +133,7 @@ sre.AataTest.prototype.testAataExpression_4 = function() {
   var mml = '<mrow class="MJX-TeXAtom-ORD">' +
       '<mi class="MJX-tex-caligraphic" mathvariant="script">S</mi>' +
       '</mrow>';
-  var nemeth = 'caligraphic⠠⠎';
+  var nemeth = '⠳⠐⠠⠭⠣⠈⠱⠻⠳⠀⠨⠅⠀⠆⠘⠲⠐⠀⠨⠅⠀⠂⠖';  // caligraphic⠠⠎
   this.executeRuleTest(mml, nemeth);
 };
 

@@ -20,7 +20,6 @@
 goog.provide('sre.MathspeakRules');
 
 goog.require('sre.MathStore');
-goog.require('sre.MathmlStoreUtil');
 goog.require('sre.MathspeakUtil');
 
 
@@ -142,7 +141,7 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
   addCSF('CSFoverscript', sre.MathspeakUtil.nestedOverscore);
 
   addCTXF('CTXFordinalCounter', sre.NumbersUtil.ordinalCounter);
-  addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
+  addCTXF('CTXFcontentIterator', sre.StoreUtil.contentIterator);
 
   // Layout related.
   addCQF('CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple);
@@ -348,11 +347,11 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   // Operator rules
   defineRule(
       'prefix', 'mathspeak.default',
-      '[n] text(); [n] children/*[1]',
+      '[m] content/*; [n] children/*[1]',
       'self::prefixop');
   defineRule(
       'postfix', 'mathspeak.default',
-      '[n] children/*[1]; [n] text()',
+      '[n] children/*[1]; [m] content/*',
       'self::postfixop');
 
   defineRule(
@@ -434,13 +433,13 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'single-prime', 'mathspeak.default', '[t] "prime"',
       'self::punctuated', '@role="prime"', 'count(children/*)=1');
   defineRule(
-      'double-prime', 'mathspeak.default', '[t] "double-prime"',
+      'double-prime', 'mathspeak.default', '[t] "double prime"',
       'self::punctuated', '@role="prime"', 'count(children/*)=2');
   defineRule(
-      'triple-prime', 'mathspeak.default', '[t] "triple-prime"',
+      'triple-prime', 'mathspeak.default', '[t] "triple prime"',
       'self::punctuated', '@role="prime"', 'count(children/*)=3');
   defineRule(
-      'quadruple-prime', 'mathspeak.default', '[t] "quadruple-prime"',
+      'quadruple-prime', 'mathspeak.default', '[t] "quadruple prime"',
       'self::punctuated', '@role="prime"', 'count(children/*)=4');
   defineRule(
       'counted-prime', 'mathspeak.default',
@@ -813,6 +812,10 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'square', 'mathspeak.default', 'mathspeak.brief');
   defineSpecialisedRule(
       'square', 'mathspeak.default', 'mathspeak.sbrief');
+  defineRuleAlias(
+      'square', 'self::superscript', 'children/*[2]',
+      'children/*[2][text()=2]', '@embellished',
+      'children/*[1][@role="prefix operator"]');
 
   // Cube
   defineRule(
@@ -837,6 +840,10 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'cube', 'mathspeak.default', 'mathspeak.brief');
   defineSpecialisedRule(
       'cube', 'mathspeak.default', 'mathspeak.sbrief');
+  defineRuleAlias(
+      'cube', 'self::superscript', 'children/*[2]',
+      'children/*[2][text()=3]', '@embellished',
+      'children/*[1][@role="prefix operator"]');
 
   // Primes
   // This rule uses some redundancy for ordering!
@@ -1190,11 +1197,11 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'underbar', 'self::enclose', '@role="bottom"');
   defineRule(
       'leftbar', 'mathspeak.default',
-      '[t] "vertical-bar"; [n] children/*[1]',
+      '[t] "vertical bar"; [n] children/*[1]',
       'self::enclose', '@role="left"');
   defineRule(
       'rightbar', 'mathspeak.default',
-      '[n] children/*[1]; [t] "vertical-bar"',
+      '[n] children/*[1]; [t] "vertical bar"',
       'self::enclose', '@role="right"');
 
   // Crossout

@@ -42,12 +42,6 @@ sre.ClearspeakFrenchRuleTest = function() {
    */
   this.domain = 'clearspeak';
 
-  /**
-   * @override
-   */
-  this.semantics = true;
-  this.actual = true;
-
   this.setActive('ClearspeakFrench');
   this.startExamples();
 };

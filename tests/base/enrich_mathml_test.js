@@ -48,7 +48,6 @@ goog.inherits(sre.EnrichMathmlTest, sre.AbstractExamples);
  */
 sre.EnrichMathmlTest.prototype.setUpTest = function() {
   // Make sure the engine is in a default mode.
-  sre.System.getInstance().setupEngine({semantics: true});
   this.attrBlacklist = [
     'data-semantic-annotation',
     'data-semantic-font',

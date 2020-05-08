@@ -20,6 +20,7 @@
 goog.provide('sre.NemethUtil');
 
 goog.require('sre.MathspeakUtil');
+goog.require('sre.SemanticVisitor');
 
 
 goog.scope(function() {
@@ -27,7 +28,7 @@ var msg = sre.Messages;
 
 
 /**
- * Opening string for fractions in Mathspeak verbose mode.
+ * Opening string for fractions in linear Nemeth.
  * @param {!Node} node The fraction node.
  * @return {string} The opening string.
  */
@@ -38,7 +39,7 @@ sre.NemethUtil.openingFraction = function(node) {
 
 
 /**
- * Closing string for fractions in Mathspeak verbose mode.
+ * Closing string for fractions in linear Nemeth.
  * @param {!Node} node The fraction node.
  * @return {string} The closing string.
  */
@@ -49,13 +50,25 @@ sre.NemethUtil.closingFraction = function(node) {
 
 
 /**
- * Middle string for fractions in Mathspeak verbose mode.
+ * Middle string for fractions in linear Nemeth.
  * @param {!Node} node The fraction node.
  * @return {string} The middle string.
  */
 sre.NemethUtil.overFraction = function(node) {
   var depth = sre.MathspeakUtil.fractionNestingDepth(node);
   return new Array(depth).join(msg.MS.FRACTION_REPEAT) + msg.MS.FRACTION_OVER;
+};
+
+
+/**
+ * Middle string for bevelled fractions in Nemeth.
+ * @param {!Node} node The fraction node.
+ * @return {string} The middle string.
+ */
+sre.NemethUtil.overBevelledFraction = function(node) {
+  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
+  return new Array(depth).join(msg.MS.FRACTION_REPEAT) +
+      '⠸' + msg.MS.FRACTION_OVER;
 };
 
 
@@ -93,7 +106,7 @@ sre.NemethUtil.radicalNestingDepth = function(node, opt_depth) {
 
 
 /**
- * Opening string for radicals in Mathspeak verbose mode.
+ * Opening string for radicals in Nemeth.
  * @param {!Node} node The radical node.
  * @return {string} The opening string.
  */
@@ -103,7 +116,7 @@ sre.NemethUtil.openingRadical = function(node) {
 
 
 /**
- * Closing string for radicals in Nemeth verbose mode.
+ * Closing string for radicals in Nemeth.
  * @param {!Node} node The radical node.
  * @return {string} The closing string.
  */
@@ -113,7 +126,7 @@ sre.NemethUtil.closingRadical = function(node) {
 
 
 /**
- * Middle string for radicals in Nemeth verbose mode.
+ * Middle string for radicals in Nemeth.
  * @param {!Node} node The radical node.
  * @return {string} The middle string.
  */
@@ -121,6 +134,13 @@ sre.NemethUtil.indexRadical = function(node) {
   return sre.NemethUtil.nestedRadical(node, msg.MS.ROOTINDEX);
 };
 
+
+/**
+ * Enlarges a fence operator. The enlargement indicator might need to be
+ * interspersed if multiple neutral fences are used.
+ * @param {string} text The text representing the fence.
+ * @return {string} The fence with the enlargment indicator.
+ */
 sre.NemethUtil.enlargeFence = function(text) {
   var start = '⠠';
   if (text.length === 1) {
@@ -137,5 +157,87 @@ sre.NemethUtil.enlargeFence = function(text) {
 
 sre.Grammar.getInstance().setCorrection('enlargeFence',
                                         sre.NemethUtil.enlargeFence);
+
+
+/**
+ * @type {Array.<sre.SemanticAttr.Type>}
+ * @private
+ */
+sre.NemethUtil.NUMBER_PROPAGATORS_ = [
+  sre.SemanticAttr.Type.MULTIREL,
+  sre.SemanticAttr.Type.RELSEQ,
+  sre.SemanticAttr.Type.PUNCTUATED,
+  sre.SemanticAttr.Type.APPL
+];
+
+
+/**
+ * Checks if a Nemeth number indicator has to be propagated beyond the node's
+ * parent.
+ * @param {!sre.SemanticNode} node The node which can get a number indicator.
+ * @return {boolean} True if parent is a relation, puntuation or application or
+ *     a negative sign.
+ * @private
+ */
+sre.NemethUtil.checkParent_ = function(node) {
+  var parent = node.parent;
+  if (!parent) {
+    return false;
+  }
+  var type = parent.type;
+  if (sre.NemethUtil.NUMBER_PROPAGATORS_.indexOf(type) !== -1 ||
+      (type === sre.SemanticAttr.Type.PREFIXOP &&
+      parent.role === sre.SemanticAttr.Role.NEGATIVE)) {
+    return true;
+  }
+  return false;
+};
+
+
+// /**
+//  *
+//  * @param {!sre.SemanticNode} node
+//  * @return {boolean}
+//  * @private
+//  */
+// sre.NemethUtil.childNumber_ = function(node) {
+//   var parent = node.parent;
+//   if (!parent) {
+//     return 0;
+//   }
+//   return parent.childNodes.indexOf(node);
+// };
+
+
+/**
+ * Propagates annotation for the Nemeth number indicator.
+ * @param {sre.SemanticNode} node The semantic node.
+ * @param {Object<?,*>} info The information, i.e., {number: true|false}.
+ * @return {Array.<*>} Info pair consisting of a string and the updated
+ *     information object.
+ */
+sre.NemethUtil.propagateNumber = function(node, info) {
+  // TODO: Font indicator followed by number.
+  if (!node.childNodes.length) {
+    if (sre.NemethUtil.checkParent_(node)) {
+      info.number = true;
+    }
+    return [info['number'] ? 'number' : '', {number: false}];
+  }
+  if (sre.NemethUtil.checkParent_(node)) {
+    info.number = true;
+  }
+  return ['', info];
+};
+
+
+/**
+ * @return {sre.SemanticVisitor} A semantic annotator for numbered expressions.
+ */
+sre.NemethUtil.numberIndicator = function() {
+  return new sre.SemanticVisitor(
+      'nemeth', sre.NemethUtil.propagateNumber, {number: true});
+};
+
 
 });  // goog.scope

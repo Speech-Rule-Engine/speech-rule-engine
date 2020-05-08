@@ -4,9 +4,7 @@
     "key": "00F8",
     "mappings": {
       "default": {
-        "default": "latin small letter o with stroke",
-        "alternative": "latin small letter o slash",
-        "short": "o with stroke"
+        "default": "o with stroke"
       }
     }
   },
@@ -15,9 +13,7 @@
     "key": "0111",
     "mappings": {
       "default": {
-        "default": "latin small letter d with stroke",
-        "alternative": "latin small letter d bar",
-        "short": "d with stroke"
+        "default": "d with stroke"
       }
     }
   },
@@ -26,9 +22,7 @@
     "key": "0127",
     "mappings": {
       "default": {
-        "default": "latin small letter h with stroke",
-        "alternative": "latin small letter h bar",
-        "short": "h with stroke"
+        "default": "h with stroke"
       }
     }
   },
@@ -37,9 +31,7 @@
     "key": "0142",
     "mappings": {
       "default": {
-        "default": "latin small letter l with stroke",
-        "alternative": "latin small letter l slash",
-        "short": "l with stroke"
+        "default": "l with stroke"
       }
     }
   },
@@ -48,9 +40,7 @@
     "key": "0167",
     "mappings": {
       "default": {
-        "default": "latin small letter t with stroke",
-        "alternative": "latin small letter t bar",
-        "short": "t with stroke"
+        "default": "t with stroke"
       }
     }
   },
@@ -59,9 +49,7 @@
     "key": "0180",
     "mappings": {
       "default": {
-        "default": "latin small letter b with stroke",
-        "alternative": "latin small letter b bar",
-        "short": "b with stroke"
+        "default": "b with stroke"
       }
     }
   },
@@ -70,9 +58,7 @@
     "key": "019B",
     "mappings": {
       "default": {
-        "default": "latin small letter lambda with stroke",
-        "alternative": "latin small letter barred lambda",
-        "short": "lambda with stroke"
+        "default": "lambda with stroke"
       }
     }
   },
@@ -81,9 +67,7 @@
     "key": "01B6",
     "mappings": {
       "default": {
-        "default": "latin small letter z with stroke",
-        "alternative": "latin small letter z bar",
-        "short": "z with stroke"
+        "default": "z with stroke"
       }
     }
   },
@@ -92,9 +76,7 @@
     "key": "01BE",
     "mappings": {
       "default": {
-        "default": "latin letter inverted glottal stop with stroke",
-        "alternative": "latin letter inverted glottal stop bar",
-        "short": "latin letter inverted glottal stop with stroke"
+        "default": "latin letter inverted glottal stop with stroke"
       }
     }
   },
@@ -103,9 +85,7 @@
     "key": "01E5",
     "mappings": {
       "default": {
-        "default": "latin small letter g with stroke",
-        "alternative": "latin small letter g bar",
-        "short": "g with stroke"
+        "default": "g with stroke"
       }
     }
   },
@@ -114,8 +94,7 @@
     "key": "01FF",
     "mappings": {
       "default": {
-        "default": "latin small letter o with stroke and acute",
-        "short": "o with stroke and acute"
+        "default": "o with stroke and acute"
       }
     }
   },
@@ -124,8 +103,7 @@
     "key": "023C",
     "mappings": {
       "default": {
-        "default": "latin small letter c with stroke",
-        "short": "c with stroke"
+        "default": "c with stroke"
       }
     }
   },
@@ -134,8 +112,7 @@
     "key": "0247",
     "mappings": {
       "default": {
-        "default": "latin small letter e with stroke",
-        "short": "e with stroke"
+        "default": "e with stroke"
       }
     }
   },
@@ -144,8 +121,7 @@
     "key": "0249",
     "mappings": {
       "default": {
-        "default": "latin small letter j with stroke",
-        "short": "j with stroke"
+        "default": "j with stroke"
       }
     }
   },
@@ -154,8 +130,7 @@
     "key": "024D",
     "mappings": {
       "default": {
-        "default": "latin small letter r with stroke",
-        "short": "r with stroke"
+        "default": "r with stroke"
       }
     }
   },
@@ -164,8 +139,7 @@
     "key": "024F",
     "mappings": {
       "default": {
-        "default": "latin small letter y with stroke",
-        "short": "y with stroke"
+        "default": "y with stroke"
       }
     }
   },
@@ -174,9 +148,7 @@
     "key": "025F",
     "mappings": {
       "default": {
-        "default": "latin small letter dotless j with stroke",
-        "alternative": "latin small letter dotless j bar",
-        "short": "dotless j with stroke"
+        "default": "dotless j with stroke"
       }
     }
   },
@@ -185,9 +157,7 @@
     "key": "0268",
     "mappings": {
       "default": {
-        "default": "latin small letter i with stroke",
-        "alternative": "latin small letter barred i",
-        "short": "i with stroke"
+        "default": "i with stroke"
       }
     }
   },
@@ -196,9 +166,7 @@
     "key": "0284",
     "mappings": {
       "default": {
-        "default": "latin small letter dotless j with stroke and hook",
-        "alternative": "latin small letter dotless j bar hook",
-        "short": "dotless j with stroke and hook"
+        "default": "dotless j with stroke and hook"
       }
     }
   },
@@ -207,9 +175,7 @@
     "key": "02A1",
     "mappings": {
       "default": {
-        "default": "latin letter glottal stop with stroke",
-        "alternative": "latin letter glottal stop bar",
-        "short": "latin letter glottal stop with stroke"
+        "default": "latin letter glottal stop with stroke"
       }
     }
   },
@@ -218,9 +184,7 @@
     "key": "02A2",
     "mappings": {
       "default": {
-        "default": "latin letter reversed glottal stop with stroke",
-        "alternative": "latin letter reversed glottal stop bar",
-        "short": "latin letter reversed glottal stop with stroke"
+        "default": "latin letter reversed glottal stop with stroke"
       }
     }
   },
@@ -229,8 +193,7 @@
     "key": "1D13",
     "mappings": {
       "default": {
-        "default": "latin small letter sideways o with stroke",
-        "short": "sideways o with stroke"
+        "default": "sideways o with stroke"
       }
     }
   },
@@ -239,8 +202,7 @@
     "key": "1D7C",
     "mappings": {
       "default": {
-        "default": "latin small letter iota with stroke",
-        "short": "iota with stroke"
+        "default": "iota with stroke"
       }
     }
   },
@@ -249,8 +211,7 @@
     "key": "1D7D",
     "mappings": {
       "default": {
-        "default": "latin small letter p with stroke",
-        "short": "p with stroke"
+        "default": "p with stroke"
       }
     }
   },
@@ -259,8 +220,7 @@
     "key": "1D7F",
     "mappings": {
       "default": {
-        "default": "latin small letter upsilon with stroke",
-        "short": "upsilon with stroke"
+        "default": "upsilon with stroke"
       }
     }
   },
@@ -269,8 +229,7 @@
     "key": "1E9C",
     "mappings": {
       "default": {
-        "default": "latin small letter long s with diagonal stroke",
-        "short": "long s with diagonal stroke"
+        "default": "long s with diagonal stroke"
       }
     }
   },
@@ -279,8 +238,7 @@
     "key": "1E9D",
     "mappings": {
       "default": {
-        "default": "latin small letter long s with high stroke",
-        "short": "long s with high stroke"
+        "default": "long s with high stroke"
       }
     }
   },
@@ -289,8 +247,7 @@
     "key": "018D",
     "mappings": {
       "default": {
-        "default": "latin small letter turned delta",
-        "short": "turned delta"
+        "default": "turned delta"
       }
     }
   },
@@ -299,8 +256,7 @@
     "key": "1E9B",
     "mappings": {
       "default": {
-        "default": "latin small letter long s with dot above",
-        "short": "long s with dot above"
+        "default": "long s with dot above"
       }
     }
   },
@@ -309,8 +265,7 @@
     "key": "1E9F",
     "mappings": {
       "default": {
-        "default": "latin small letter delta",
-        "short": "delta"
+        "default": "delta"
       }
     }
   },
@@ -319,8 +274,7 @@
     "key": "0138",
     "mappings": {
       "default": {
-        "default": "latin small letter kra",
-        "short": "kra"
+        "default": "kra"
       }
     }
   },
@@ -329,8 +283,7 @@
     "key": "017F",
     "mappings": {
       "default": {
-        "default": "latin small letter long s",
-        "short": "long s"
+        "default": "long s"
       }
     }
   },
@@ -339,9 +292,7 @@
     "key": "0183",
     "mappings": {
       "default": {
-        "default": "latin small letter b with topbar",
-        "alternative": "latin small letter b topbar",
-        "short": "b with topbar"
+        "default": "b with topbar"
       }
     }
   },
@@ -350,8 +301,7 @@
     "key": "0185",
     "mappings": {
       "default": {
-        "default": "latin small letter tone six",
-        "short": "tone six"
+        "default": "tone six"
       }
     }
   },
@@ -360,9 +310,7 @@
     "key": "0188",
     "mappings": {
       "default": {
-        "default": "latin small letter c with hook",
-        "alternative": "latin small letter c hook",
-        "short": "c with hook"
+        "default": "c with hook"
       }
     }
   },
@@ -371,9 +319,7 @@
     "key": "018C",
     "mappings": {
       "default": {
-        "default": "latin small letter d with topbar",
-        "alternative": "latin small letter d topbar",
-        "short": "d with topbar"
+        "default": "d with topbar"
       }
     }
   },
@@ -382,9 +328,7 @@
     "key": "0192",
     "mappings": {
       "default": {
-        "default": "latin small letter f with hook",
-        "alternative": "latin small letter script f",
-        "short": "f with hook"
+        "default": "f with hook"
       }
     }
   },
@@ -393,9 +337,7 @@
     "key": "0195",
     "mappings": {
       "default": {
-        "default": "latin small letter hv",
-        "alternative": "latin small letter h v",
-        "short": "hv"
+        "default": "hv"
       }
     }
   },
@@ -404,9 +346,7 @@
     "key": "0199",
     "mappings": {
       "default": {
-        "default": "latin small letter k with hook",
-        "alternative": "latin small letter k hook",
-        "short": "k with hook"
+        "default": "k with hook"
       }
     }
   },
@@ -415,9 +355,7 @@
     "key": "019A",
     "mappings": {
       "default": {
-        "default": "latin small letter l with bar",
-        "alternative": "latin small letter barred l",
-        "short": "l with bar"
+        "default": "l with bar"
       }
     }
   },
@@ -426,8 +364,7 @@
     "key": "019E",
     "mappings": {
       "default": {
-        "default": "latin small letter n with long right leg",
-        "short": "n with long right leg"
+        "default": "n with long right leg"
       }
     }
   },
@@ -436,9 +373,7 @@
     "key": "01A1",
     "mappings": {
       "default": {
-        "default": "latin small letter o with horn",
-        "alternative": "latin small letter o horn",
-        "short": "o with horn"
+        "default": "o with horn"
       }
     }
   },
@@ -447,9 +382,7 @@
     "key": "01A3",
     "mappings": {
       "default": {
-        "default": "latin small letter oi",
-        "alternative": "latin small letter o i",
-        "short": "oi"
+        "default": "oi"
       }
     }
   },
@@ -458,9 +391,7 @@
     "key": "01A5",
     "mappings": {
       "default": {
-        "default": "latin small letter p with hook",
-        "alternative": "latin small letter p hook",
-        "short": "p with hook"
+        "default": "p with hook"
       }
     }
   },
@@ -469,8 +400,7 @@
     "key": "01A8",
     "mappings": {
       "default": {
-        "default": "latin small letter tone two",
-        "short": "tone two"
+        "default": "tone two"
       }
     }
   },
@@ -479,8 +409,7 @@
     "key": "01AA",
     "mappings": {
       "default": {
-        "default": "latin letter reversed esh loop",
-        "short": "latin letter reversed esh loop"
+        "default": "latin letter reversed esh loop"
       }
     }
   },
@@ -489,9 +418,7 @@
     "key": "01AB",
     "mappings": {
       "default": {
-        "default": "latin small letter t with palatal hook",
-        "alternative": "latin small letter t palatal hook",
-        "short": "t with palatal hook"
+        "default": "t with palatal hook"
       }
     }
   },
@@ -500,9 +427,7 @@
     "key": "01AD",
     "mappings": {
       "default": {
-        "default": "latin small letter t with hook",
-        "alternative": "latin small letter t hook",
-        "short": "t with hook"
+        "default": "t with hook"
       }
     }
   },
@@ -511,9 +436,7 @@
     "key": "01B0",
     "mappings": {
       "default": {
-        "default": "latin small letter u with horn",
-        "alternative": "latin small letter u horn",
-        "short": "u with horn"
+        "default": "u with horn"
       }
     }
   },
@@ -522,9 +445,7 @@
     "key": "01B4",
     "mappings": {
       "default": {
-        "default": "latin small letter y with hook",
-        "alternative": "latin small letter y hook",
-        "short": "y with hook"
+        "default": "y with hook"
       }
     }
   },
@@ -533,9 +454,7 @@
     "key": "01B9",
     "mappings": {
       "default": {
-        "default": "latin small letter ezh reversed",
-        "alternative": "latin small letter reversed yogh",
-        "short": "ezh reversed"
+        "default": "ezh reversed"
       }
     }
   },
@@ -544,9 +463,7 @@
     "key": "01BA",
     "mappings": {
       "default": {
-        "default": "latin small letter ezh with tail",
-        "alternative": "latin small letter yogh with tail",
-        "short": "ezh with tail"
+        "default": "ezh with tail"
       }
     }
   },
@@ -555,8 +472,7 @@
     "key": "01BD",
     "mappings": {
       "default": {
-        "default": "latin small letter tone five",
-        "short": "tone five"
+        "default": "tone five"
       }
     }
   },
@@ -565,8 +481,7 @@
     "key": "01BF",
     "mappings": {
       "default": {
-        "default": "latin letter wynn",
-        "short": "latin letter wynn"
+        "default": "latin letter wynn"
       }
     }
   },
@@ -575,9 +490,7 @@
     "key": "01C6",
     "mappings": {
       "default": {
-        "default": "latin small letter dz with caron",
-        "alternative": "latin small letter d z hacek",
-        "short": "dz with caron"
+        "default": "dz with caron"
       }
     }
   },
@@ -586,9 +499,7 @@
     "key": "01C9",
     "mappings": {
       "default": {
-        "default": "latin small letter lj",
-        "alternative": "latin small letter l j",
-        "short": "lj"
+        "default": "lj"
       }
     }
   },
@@ -597,9 +508,7 @@
     "key": "01CC",
     "mappings": {
       "default": {
-        "default": "latin small letter nj",
-        "alternative": "latin small letter n j",
-        "short": "nj"
+        "default": "nj"
       }
     }
   },
@@ -608,9 +517,7 @@
     "key": "01E3",
     "mappings": {
       "default": {
-        "default": "latin small letter ae with macron",
-        "alternative": "latin small letter a e macron",
-        "short": "ae with macron"
+        "default": "ae with macron"
       }
     }
   },
@@ -619,9 +526,7 @@
     "key": "01EF",
     "mappings": {
       "default": {
-        "default": "latin small letter ezh with caron",
-        "alternative": "latin small letter yogh hacek",
-        "short": "ezh with caron"
+        "default": "ezh with caron"
       }
     }
   },
@@ -630,8 +535,7 @@
     "key": "01F3",
     "mappings": {
       "default": {
-        "default": "latin small letter dz",
-        "short": "dz"
+        "default": "dz"
       }
     }
   },
@@ -640,8 +544,7 @@
     "key": "021D",
     "mappings": {
       "default": {
-        "default": "latin small letter yogh",
-        "short": "yogh"
+        "default": "yogh"
       }
     }
   },
@@ -650,9 +553,7 @@
     "key": "026E",
     "mappings": {
       "default": {
-        "default": "latin small letter lezh",
-        "alternative": "latin small letter l yogh",
-        "short": "lezh"
+        "default": "lezh"
       }
     }
   },
@@ -661,9 +562,7 @@
     "key": "0292",
     "mappings": {
       "default": {
-        "default": "latin small letter ezh",
-        "alternative": "latin small letter yogh",
-        "short": "ezh"
+        "default": "ezh"
       }
     }
   },
@@ -672,9 +571,7 @@
     "key": "0293",
     "mappings": {
       "default": {
-        "default": "latin small letter ezh with curl",
-        "alternative": "latin small letter yogh curl",
-        "short": "ezh with curl"
+        "default": "ezh with curl"
       }
     }
   },
@@ -683,9 +580,7 @@
     "key": "02A4",
     "mappings": {
       "default": {
-        "default": "latin small letter dezh digraph",
-        "alternative": "latin small letter d yogh",
-        "short": "dezh digraph"
+        "default": "dezh digraph"
       }
     }
   },
@@ -694,8 +589,7 @@
     "key": "01DD",
     "mappings": {
       "default": {
-        "default": "latin small letter turned e",
-        "short": "turned e"
+        "default": "turned e"
       }
     }
   },
@@ -704,8 +598,7 @@
     "key": "01FD",
     "mappings": {
       "default": {
-        "default": "latin small letter ae with acute",
-        "short": "ae with acute"
+        "default": "ae with acute"
       }
     }
   },
@@ -714,8 +607,7 @@
     "key": "0221",
     "mappings": {
       "default": {
-        "default": "latin small letter d with curl",
-        "short": "d with curl"
+        "default": "d with curl"
       }
     }
   },
@@ -724,8 +616,7 @@
     "key": "0223",
     "mappings": {
       "default": {
-        "default": "latin small letter ou",
-        "short": "ou"
+        "default": "ou"
       }
     }
   },
@@ -734,8 +625,7 @@
     "key": "0225",
     "mappings": {
       "default": {
-        "default": "latin small letter z with hook",
-        "short": "z with hook"
+        "default": "z with hook"
       }
     }
   },
@@ -744,8 +634,7 @@
     "key": "0234",
     "mappings": {
       "default": {
-        "default": "latin small letter l with curl",
-        "short": "l with curl"
+        "default": "l with curl"
       }
     }
   },
@@ -754,8 +643,7 @@
     "key": "0235",
     "mappings": {
       "default": {
-        "default": "latin small letter n with curl",
-        "short": "n with curl"
+        "default": "n with curl"
       }
     }
   },
@@ -764,8 +652,7 @@
     "key": "0236",
     "mappings": {
       "default": {
-        "default": "latin small letter t with curl",
-        "short": "t with curl"
+        "default": "t with curl"
       }
     }
   },
@@ -774,8 +661,7 @@
     "key": "0238",
     "mappings": {
       "default": {
-        "default": "latin small letter db digraph",
-        "short": "db digraph"
+        "default": "db digraph"
       }
     }
   },
@@ -784,8 +670,7 @@
     "key": "0239",
     "mappings": {
       "default": {
-        "default": "latin small letter qp digraph",
-        "short": "qp digraph"
+        "default": "qp digraph"
       }
     }
   },
@@ -794,8 +679,7 @@
     "key": "023F",
     "mappings": {
       "default": {
-        "default": "latin small letter s with swash tail",
-        "short": "s with swash tail"
+        "default": "s with swash tail"
       }
     }
   },
@@ -804,8 +688,7 @@
     "key": "0240",
     "mappings": {
       "default": {
-        "default": "latin small letter z with swash tail",
-        "short": "z with swash tail"
+        "default": "z with swash tail"
       }
     }
   },
@@ -814,8 +697,7 @@
     "key": "0242",
     "mappings": {
       "default": {
-        "default": "latin small letter glottal stop",
-        "short": "glottal stop"
+        "default": "glottal stop"
       }
     }
   },
@@ -824,8 +706,7 @@
     "key": "024B",
     "mappings": {
       "default": {
-        "default": "latin small letter q with hook tail",
-        "short": "q with hook tail"
+        "default": "q with hook tail"
       }
     }
   },
@@ -834,8 +715,7 @@
     "key": "0250",
     "mappings": {
       "default": {
-        "default": "latin small letter turned a",
-        "short": "turned a"
+        "default": "turned a"
       }
     }
   },
@@ -844,9 +724,7 @@
     "key": "0251",
     "mappings": {
       "default": {
-        "default": "latin small letter alpha",
-        "alternative": "latin small letter script a",
-        "short": "alpha"
+        "default": "alpha"
       }
     }
   },
@@ -855,9 +733,7 @@
     "key": "0252",
     "mappings": {
       "default": {
-        "default": "latin small letter turned alpha",
-        "alternative": "latin small letter turned script a",
-        "short": "turned alpha"
+        "default": "turned alpha"
       }
     }
   },
@@ -866,9 +742,7 @@
     "key": "0253",
     "mappings": {
       "default": {
-        "default": "latin small letter b with hook",
-        "alternative": "latin small letter b hook",
-        "short": "b with hook"
+        "default": "b with hook"
       }
     }
   },
@@ -877,8 +751,7 @@
     "key": "0254",
     "mappings": {
       "default": {
-        "default": "latin small letter open o",
-        "short": "open o"
+        "default": "open o"
       }
     }
   },
@@ -887,9 +760,7 @@
     "key": "0255",
     "mappings": {
       "default": {
-        "default": "latin small letter c with curl",
-        "alternative": "latin small letter c curl",
-        "short": "c with curl"
+        "default": "c with curl"
       }
     }
   },
@@ -898,9 +769,7 @@
     "key": "0256",
     "mappings": {
       "default": {
-        "default": "latin small letter d with tail",
-        "alternative": "latin small letter d retroflex hook",
-        "short": "d with tail"
+        "default": "d with tail"
       }
     }
   },
@@ -909,9 +778,7 @@
     "key": "0257",
     "mappings": {
       "default": {
-        "default": "latin small letter d with hook",
-        "alternative": "latin small letter d hook",
-        "short": "d with hook"
+        "default": "d with hook"
       }
     }
   },
@@ -920,8 +787,7 @@
     "key": "0258",
     "mappings": {
       "default": {
-        "default": "latin small letter reversed e",
-        "short": "reversed e"
+        "default": "reversed e"
       }
     }
   },
@@ -930,8 +796,7 @@
     "key": "0259",
     "mappings": {
       "default": {
-        "default": "latin small letter schwa",
-        "short": "schwa"
+        "default": "schwa"
       }
     }
   },
@@ -940,9 +805,7 @@
     "key": "025A",
     "mappings": {
       "default": {
-        "default": "latin small letter schwa with hook",
-        "alternative": "latin small letter schwa hook",
-        "short": "schwa with hook"
+        "default": "schwa with hook"
       }
     }
   },
@@ -951,9 +814,7 @@
     "key": "025B",
     "mappings": {
       "default": {
-        "default": "latin small letter open e",
-        "alternative": "latin small letter epsilon",
-        "short": "open e"
+        "default": "open e"
       }
     }
   },
@@ -962,9 +823,7 @@
     "key": "025C",
     "mappings": {
       "default": {
-        "default": "latin small letter reversed open e",
-        "alternative": "latin small letter reversed epsilon",
-        "short": "reversed open e"
+        "default": "reversed open e"
       }
     }
   },
@@ -973,9 +832,7 @@
     "key": "025D",
     "mappings": {
       "default": {
-        "default": "latin small letter reversed open e with hook",
-        "alternative": "latin small letter reversed epsilon hook",
-        "short": "reversed open e with hook"
+        "default": "reversed open e with hook"
       }
     }
   },
@@ -984,9 +841,7 @@
     "key": "025E",
     "mappings": {
       "default": {
-        "default": "latin small letter closed reversed open e",
-        "alternative": "latin small letter closed reversed epsilon",
-        "short": "closed reversed open e"
+        "default": "closed reversed open e"
       }
     }
   },
@@ -995,9 +850,7 @@
     "key": "0260",
     "mappings": {
       "default": {
-        "default": "latin small letter g with hook",
-        "alternative": "latin small letter g hook",
-        "short": "g with hook"
+        "default": "g with hook"
       }
     }
   },
@@ -1006,8 +859,7 @@
     "key": "0261",
     "mappings": {
       "default": {
-        "default": "latin small letter script g",
-        "short": "script g"
+        "default": "script g"
       }
     }
   },
@@ -1016,8 +868,7 @@
     "key": "0263",
     "mappings": {
       "default": {
-        "default": "latin small letter gamma",
-        "short": "gamma"
+        "default": "gamma"
       }
     }
   },
@@ -1026,9 +877,7 @@
     "key": "0264",
     "mappings": {
       "default": {
-        "default": "latin small letter rams horn",
-        "alternative": "latin small letter baby gamma",
-        "short": "rams horn"
+        "default": "rams horn"
       }
     }
   },
@@ -1037,8 +886,7 @@
     "key": "0265",
     "mappings": {
       "default": {
-        "default": "latin small letter turned h",
-        "short": "turned h"
+        "default": "turned h"
       }
     }
   },
@@ -1047,9 +895,7 @@
     "key": "0266",
     "mappings": {
       "default": {
-        "default": "latin small letter h with hook",
-        "alternative": "latin small letter h hook",
-        "short": "h with hook"
+        "default": "h with hook"
       }
     }
   },
@@ -1058,9 +904,7 @@
     "key": "0267",
     "mappings": {
       "default": {
-        "default": "latin small letter heng with hook",
-        "alternative": "latin small letter heng hook",
-        "short": "heng with hook"
+        "default": "heng with hook"
       }
     }
   },
@@ -1069,8 +913,7 @@
     "key": "0269",
     "mappings": {
       "default": {
-        "default": "latin small letter iota",
-        "short": "iota"
+        "default": "iota"
       }
     }
   },
@@ -1079,8 +922,7 @@
     "key": "026B",
     "mappings": {
       "default": {
-        "default": "latin small letter l with middle tilde",
-        "short": "l with middle tilde"
+        "default": "l with middle tilde"
       }
     }
   },
@@ -1089,9 +931,7 @@
     "key": "026C",
     "mappings": {
       "default": {
-        "default": "latin small letter l with belt",
-        "alternative": "latin small letter l belt",
-        "short": "l with belt"
+        "default": "l with belt"
       }
     }
   },
@@ -1100,9 +940,7 @@
     "key": "026D",
     "mappings": {
       "default": {
-        "default": "latin small letter l with retroflex hook",
-        "alternative": "latin small letter l retroflex hook",
-        "short": "l with retroflex hook"
+        "default": "l with retroflex hook"
       }
     }
   },
@@ -1111,8 +949,7 @@
     "key": "026F",
     "mappings": {
       "default": {
-        "default": "latin small letter turned m",
-        "short": "turned m"
+        "default": "turned m"
       }
     }
   },
@@ -1121,8 +958,7 @@
     "key": "0270",
     "mappings": {
       "default": {
-        "default": "latin small letter turned m with long leg",
-        "short": "turned m with long leg"
+        "default": "turned m with long leg"
       }
     }
   },
@@ -1131,9 +967,7 @@
     "key": "0271",
     "mappings": {
       "default": {
-        "default": "latin small letter m with hook",
-        "alternative": "latin small letter m hook",
-        "short": "m with hook"
+        "default": "m with hook"
       }
     }
   },
@@ -1142,9 +976,7 @@
     "key": "0272",
     "mappings": {
       "default": {
-        "default": "latin small letter n with left hook",
-        "alternative": "latin small letter n hook",
-        "short": "n with left hook"
+        "default": "n with left hook"
       }
     }
   },
@@ -1153,9 +985,7 @@
     "key": "0273",
     "mappings": {
       "default": {
-        "default": "latin small letter n with retroflex hook",
-        "alternative": "latin small letter n retroflex hook",
-        "short": "n with retroflex hook"
+        "default": "n with retroflex hook"
       }
     }
   },
@@ -1164,8 +994,7 @@
     "key": "0275",
     "mappings": {
       "default": {
-        "default": "latin small letter barred o",
-        "short": "barred o"
+        "default": "barred o"
       }
     }
   },
@@ -1174,8 +1003,7 @@
     "key": "0277",
     "mappings": {
       "default": {
-        "default": "latin small letter closed omega",
-        "short": "closed omega"
+        "default": "closed omega"
       }
     }
   },
@@ -1184,8 +1012,7 @@
     "key": "0278",
     "mappings": {
       "default": {
-        "default": "latin small letter phi",
-        "short": "phi"
+        "default": "phi"
       }
     }
   },
@@ -1194,8 +1021,7 @@
     "key": "0279",
     "mappings": {
       "default": {
-        "default": "latin small letter turned r",
-        "short": "turned r"
+        "default": "turned r"
       }
     }
   },
@@ -1204,8 +1030,7 @@
     "key": "027A",
     "mappings": {
       "default": {
-        "default": "latin small letter turned r with long leg",
-        "short": "turned r with long leg"
+        "default": "turned r with long leg"
       }
     }
   },
@@ -1214,9 +1039,7 @@
     "key": "027B",
     "mappings": {
       "default": {
-        "default": "latin small letter turned r with hook",
-        "alternative": "latin small letter turned r hook",
-        "short": "turned r with hook"
+        "default": "turned r with hook"
       }
     }
   },
@@ -1225,8 +1048,7 @@
     "key": "027C",
     "mappings": {
       "default": {
-        "default": "latin small letter r with long leg",
-        "short": "r with long leg"
+        "default": "r with long leg"
       }
     }
   },
@@ -1235,9 +1057,7 @@
     "key": "027D",
     "mappings": {
       "default": {
-        "default": "latin small letter r with tail",
-        "alternative": "latin small letter r hook",
-        "short": "r with tail"
+        "default": "r with tail"
       }
     }
   },
@@ -1246,9 +1066,7 @@
     "key": "027E",
     "mappings": {
       "default": {
-        "default": "latin small letter r with fishhook",
-        "alternative": "latin small letter fishhook r",
-        "short": "r with fishhook"
+        "default": "r with fishhook"
       }
     }
   },
@@ -1257,9 +1075,7 @@
     "key": "027F",
     "mappings": {
       "default": {
-        "default": "latin small letter reversed r with fishhook",
-        "alternative": "latin small letter reversed fishhook r",
-        "short": "reversed r with fishhook"
+        "default": "reversed r with fishhook"
       }
     }
   },
@@ -1268,9 +1084,7 @@
     "key": "0282",
     "mappings": {
       "default": {
-        "default": "latin small letter s with hook",
-        "alternative": "latin small letter s hook",
-        "short": "s with hook"
+        "default": "s with hook"
       }
     }
   },
@@ -1279,8 +1093,7 @@
     "key": "0283",
     "mappings": {
       "default": {
-        "default": "latin small letter esh",
-        "short": "esh"
+        "default": "esh"
       }
     }
   },
@@ -1289,8 +1102,7 @@
     "key": "0285",
     "mappings": {
       "default": {
-        "default": "latin small letter squat reversed esh",
-        "short": "squat reversed esh"
+        "default": "squat reversed esh"
       }
     }
   },
@@ -1299,9 +1111,7 @@
     "key": "0286",
     "mappings": {
       "default": {
-        "default": "latin small letter esh with curl",
-        "alternative": "latin small letter esh curl",
-        "short": "esh with curl"
+        "default": "esh with curl"
       }
     }
   },
@@ -1310,8 +1120,7 @@
     "key": "0287",
     "mappings": {
       "default": {
-        "default": "latin small letter turned t",
-        "short": "turned t"
+        "default": "turned t"
       }
     }
   },
@@ -1320,9 +1129,7 @@
     "key": "0288",
     "mappings": {
       "default": {
-        "default": "latin small letter t with retroflex hook",
-        "alternative": "latin small letter t retroflex hook",
-        "short": "t with retroflex hook"
+        "default": "t with retroflex hook"
       }
     }
   },
@@ -1331,8 +1138,7 @@
     "key": "0289",
     "mappings": {
       "default": {
-        "default": "latin small letter u bar",
-        "short": "u bar"
+        "default": "u bar"
       }
     }
   },
@@ -1341,8 +1147,7 @@
     "key": "028A",
     "mappings": {
       "default": {
-        "default": "latin small letter upsilon",
-        "short": "upsilon"
+        "default": "upsilon"
       }
     }
   },
@@ -1351,9 +1156,7 @@
     "key": "028B",
     "mappings": {
       "default": {
-        "default": "latin small letter v with hook",
-        "alternative": "latin small letter script v",
-        "short": "v with hook"
+        "default": "v with hook"
       }
     }
   },
@@ -1362,8 +1165,7 @@
     "key": "028C",
     "mappings": {
       "default": {
-        "default": "latin small letter turned v",
-        "short": "turned v"
+        "default": "turned v"
       }
     }
   },
@@ -1372,8 +1174,7 @@
     "key": "028D",
     "mappings": {
       "default": {
-        "default": "latin small letter turned w",
-        "short": "turned w"
+        "default": "turned w"
       }
     }
   },
@@ -1382,8 +1183,7 @@
     "key": "028E",
     "mappings": {
       "default": {
-        "default": "latin small letter turned y",
-        "short": "turned y"
+        "default": "turned y"
       }
     }
   },
@@ -1392,9 +1192,7 @@
     "key": "0290",
     "mappings": {
       "default": {
-        "default": "latin small letter z with retroflex hook",
-        "alternative": "latin small letter z retroflex hook",
-        "short": "z with retroflex hook"
+        "default": "z with retroflex hook"
       }
     }
   },
@@ -1403,9 +1201,7 @@
     "key": "0291",
     "mappings": {
       "default": {
-        "default": "latin small letter z with curl",
-        "alternative": "latin small letter z curl",
-        "short": "z with curl"
+        "default": "z with curl"
       }
     }
   },
@@ -1414,9 +1210,7 @@
     "key": "0295",
     "mappings": {
       "default": {
-        "default": "latin letter pharyngeal voiced fricative",
-        "alternative": "latin letter reversed glottal stop",
-        "short": "latin letter pharyngeal voiced fricative"
+        "default": "latin letter pharyngeal voiced fricative"
       }
     }
   },
@@ -1425,8 +1219,7 @@
     "key": "0296",
     "mappings": {
       "default": {
-        "default": "latin letter inverted glottal stop",
-        "short": "latin letter inverted glottal stop"
+        "default": "latin letter inverted glottal stop"
       }
     }
   },
@@ -1435,8 +1228,7 @@
     "key": "0297",
     "mappings": {
       "default": {
-        "default": "latin letter stretched c",
-        "short": "latin letter stretched c"
+        "default": "latin letter stretched c"
       }
     }
   },
@@ -1445,9 +1237,7 @@
     "key": "0298",
     "mappings": {
       "default": {
-        "default": "latin letter bilabial click",
-        "alternative": "latin letter bullseye",
-        "short": "latin letter bilabial click"
+        "default": "latin letter bilabial click"
       }
     }
   },
@@ -1456,9 +1246,7 @@
     "key": "029A",
     "mappings": {
       "default": {
-        "default": "latin small letter closed open e",
-        "alternative": "latin small letter closed epsilon",
-        "short": "closed open e"
+        "default": "closed open e"
       }
     }
   },
@@ -1467,8 +1255,7 @@
     "key": "029E",
     "mappings": {
       "default": {
-        "default": "latin small letter turned k",
-        "short": "turned k"
+        "default": "turned k"
       }
     }
   },
@@ -1477,9 +1264,7 @@
     "key": "02A0",
     "mappings": {
       "default": {
-        "default": "latin small letter q with hook",
-        "alternative": "latin small letter q hook",
-        "short": "q with hook"
+        "default": "q with hook"
       }
     }
   },
@@ -1488,9 +1273,7 @@
     "key": "02A3",
     "mappings": {
       "default": {
-        "default": "latin small letter dz digraph",
-        "alternative": "latin small letter d z",
-        "short": "dz digraph"
+        "default": "dz digraph"
       }
     }
   },
@@ -1499,9 +1282,7 @@
     "key": "02A5",
     "mappings": {
       "default": {
-        "default": "latin small letter dz digraph with curl",
-        "alternative": "latin small letter d z curl",
-        "short": "dz digraph with curl"
+        "default": "dz digraph with curl"
       }
     }
   },
@@ -1510,9 +1291,7 @@
     "key": "02A6",
     "mappings": {
       "default": {
-        "default": "latin small letter ts digraph",
-        "alternative": "latin small letter t s",
-        "short": "ts digraph"
+        "default": "ts digraph"
       }
     }
   },
@@ -1521,9 +1300,7 @@
     "key": "02A7",
     "mappings": {
       "default": {
-        "default": "latin small letter tesh digraph",
-        "alternative": "latin small letter t esh",
-        "short": "tesh digraph"
+        "default": "tesh digraph"
       }
     }
   },
@@ -1532,9 +1309,7 @@
     "key": "02A8",
     "mappings": {
       "default": {
-        "default": "latin small letter tc digraph with curl",
-        "alternative": "latin small letter t c curl",
-        "short": "tc digraph with curl"
+        "default": "tc digraph with curl"
       }
     }
   },
@@ -1543,8 +1318,7 @@
     "key": "02A9",
     "mappings": {
       "default": {
-        "default": "latin small letter feng digraph",
-        "short": "feng digraph"
+        "default": "feng digraph"
       }
     }
   },
@@ -1553,8 +1327,7 @@
     "key": "02AA",
     "mappings": {
       "default": {
-        "default": "latin small letter ls digraph",
-        "short": "ls digraph"
+        "default": "ls digraph"
       }
     }
   },
@@ -1563,8 +1336,7 @@
     "key": "02AB",
     "mappings": {
       "default": {
-        "default": "latin small letter lz digraph",
-        "short": "lz digraph"
+        "default": "lz digraph"
       }
     }
   },
@@ -1573,8 +1345,7 @@
     "key": "02AC",
     "mappings": {
       "default": {
-        "default": "latin letter bilabial percussive",
-        "short": "latin letter bilabial percussive"
+        "default": "latin letter bilabial percussive"
       }
     }
   },
@@ -1583,8 +1354,7 @@
     "key": "02AD",
     "mappings": {
       "default": {
-        "default": "latin letter bidental percussive",
-        "short": "latin letter bidental percussive"
+        "default": "latin letter bidental percussive"
       }
     }
   },
@@ -1593,8 +1363,7 @@
     "key": "02AE",
     "mappings": {
       "default": {
-        "default": "latin small letter turned h with fishhook",
-        "short": "turned h with fishhook"
+        "default": "turned h with fishhook"
       }
     }
   },
@@ -1603,8 +1372,7 @@
     "key": "02AF",
     "mappings": {
       "default": {
-        "default": "latin small letter turned h with fishhook and tail",
-        "short": "turned h with fishhook and tail"
+        "default": "turned h with fishhook and tail"
       }
     }
   },
@@ -1613,8 +1381,7 @@
     "key": "1D02",
     "mappings": {
       "default": {
-        "default": "latin small letter turned ae",
-        "short": "turned ae"
+        "default": "turned ae"
       }
     }
   },
@@ -1623,8 +1390,7 @@
     "key": "1D08",
     "mappings": {
       "default": {
-        "default": "latin small letter turned open e",
-        "short": "turned open e"
+        "default": "turned open e"
       }
     }
   },
@@ -1633,8 +1399,7 @@
     "key": "1D09",
     "mappings": {
       "default": {
-        "default": "latin small letter turned i",
-        "short": "turned i"
+        "default": "turned i"
       }
     }
   },
@@ -1643,8 +1408,7 @@
     "key": "1D11",
     "mappings": {
       "default": {
-        "default": "latin small letter sideways o",
-        "short": "sideways o"
+        "default": "sideways o"
       }
     }
   },
@@ -1653,8 +1417,7 @@
     "key": "1D12",
     "mappings": {
       "default": {
-        "default": "latin small letter sideways open o",
-        "short": "sideways open o"
+        "default": "sideways open o"
       }
     }
   },
@@ -1663,8 +1426,7 @@
     "key": "1D14",
     "mappings": {
       "default": {
-        "default": "latin small letter turned oe",
-        "short": "turned oe"
+        "default": "turned oe"
       }
     }
   },
@@ -1673,8 +1435,7 @@
     "key": "1D16",
     "mappings": {
       "default": {
-        "default": "latin small letter top half o",
-        "short": "top half o"
+        "default": "top half o"
       }
     }
   },
@@ -1683,8 +1444,7 @@
     "key": "1D17",
     "mappings": {
       "default": {
-        "default": "latin small letter bottom half o",
-        "short": "bottom half o"
+        "default": "bottom half o"
       }
     }
   },
@@ -1693,8 +1453,7 @@
     "key": "1D1D",
     "mappings": {
       "default": {
-        "default": "latin small letter sideways u",
-        "short": "sideways u"
+        "default": "sideways u"
       }
     }
   },
@@ -1703,8 +1462,7 @@
     "key": "1D1E",
     "mappings": {
       "default": {
-        "default": "latin small letter sideways diaeresized u",
-        "short": "sideways diaeresized u"
+        "default": "sideways diaeresized u"
       }
     }
   },
@@ -1713,8 +1471,7 @@
     "key": "1D1F",
     "mappings": {
       "default": {
-        "default": "latin small letter sideways turned m",
-        "short": "sideways turned m"
+        "default": "sideways turned m"
       }
     }
   },
@@ -1723,8 +1480,7 @@
     "key": "1D24",
     "mappings": {
       "default": {
-        "default": "latin letter voiced laryngeal spirant",
-        "short": "latin letter voiced laryngeal spirant"
+        "default": "latin letter voiced laryngeal spirant"
       }
     }
   },
@@ -1733,8 +1489,7 @@
     "key": "1D25",
     "mappings": {
       "default": {
-        "default": "latin letter ain",
-        "short": "latin letter ain"
+        "default": "latin letter ain"
       }
     }
   },
@@ -1743,8 +1498,7 @@
     "key": "1D6B",
     "mappings": {
       "default": {
-        "default": "latin small letter ue",
-        "short": "ue"
+        "default": "ue"
       }
     }
   },
@@ -1753,8 +1507,7 @@
     "key": "1D6C",
     "mappings": {
       "default": {
-        "default": "latin small letter b with middle tilde",
-        "short": "b with middle tilde"
+        "default": "b with middle tilde"
       }
     }
   },
@@ -1763,8 +1516,7 @@
     "key": "1D6D",
     "mappings": {
       "default": {
-        "default": "latin small letter d with middle tilde",
-        "short": "d with middle tilde"
+        "default": "d with middle tilde"
       }
     }
   },
@@ -1773,8 +1525,7 @@
     "key": "1D6E",
     "mappings": {
       "default": {
-        "default": "latin small letter f with middle tilde",
-        "short": "f with middle tilde"
+        "default": "f with middle tilde"
       }
     }
   },
@@ -1783,8 +1534,7 @@
     "key": "1D6F",
     "mappings": {
       "default": {
-        "default": "latin small letter m with middle tilde",
-        "short": "m with middle tilde"
+        "default": "m with middle tilde"
       }
     }
   },
@@ -1793,8 +1543,7 @@
     "key": "1D70",
     "mappings": {
       "default": {
-        "default": "latin small letter n with middle tilde",
-        "short": "n with middle tilde"
+        "default": "n with middle tilde"
       }
     }
   },
@@ -1803,8 +1552,7 @@
     "key": "1D71",
     "mappings": {
       "default": {
-        "default": "latin small letter p with middle tilde",
-        "short": "p with middle tilde"
+        "default": "p with middle tilde"
       }
     }
   },
@@ -1813,8 +1561,7 @@
     "key": "1D72",
     "mappings": {
       "default": {
-        "default": "latin small letter r with middle tilde",
-        "short": "r with middle tilde"
+        "default": "r with middle tilde"
       }
     }
   },
@@ -1823,8 +1570,7 @@
     "key": "1D73",
     "mappings": {
       "default": {
-        "default": "latin small letter r with fishhook and middle tilde",
-        "short": "r with fishhook and middle tilde"
+        "default": "r with fishhook and middle tilde"
       }
     }
   },
@@ -1833,8 +1579,7 @@
     "key": "1D74",
     "mappings": {
       "default": {
-        "default": "latin small letter s with middle tilde",
-        "short": "s with middle tilde"
+        "default": "s with middle tilde"
       }
     }
   },
@@ -1843,8 +1588,7 @@
     "key": "1D75",
     "mappings": {
       "default": {
-        "default": "latin small letter t with middle tilde",
-        "short": "t with middle tilde"
+        "default": "t with middle tilde"
       }
     }
   },
@@ -1853,8 +1597,7 @@
     "key": "1D76",
     "mappings": {
       "default": {
-        "default": "latin small letter z with middle tilde",
-        "short": "z with middle tilde"
+        "default": "z with middle tilde"
       }
     }
   },
@@ -1863,8 +1606,7 @@
     "key": "1D77",
     "mappings": {
       "default": {
-        "default": "latin small letter turned g",
-        "short": "turned g"
+        "default": "turned g"
       }
     }
   },
@@ -1873,8 +1615,7 @@
     "key": "1D79",
     "mappings": {
       "default": {
-        "default": "latin small letter insular g",
-        "short": "insular g"
+        "default": "insular g"
       }
     }
   },
@@ -1883,8 +1624,7 @@
     "key": "1D7A",
     "mappings": {
       "default": {
-        "default": "latin small letter th with strikethrough",
-        "short": "th with strikethrough"
+        "default": "th with strikethrough"
       }
     }
   },
@@ -1893,8 +1633,7 @@
     "key": "1D80",
     "mappings": {
       "default": {
-        "default": "latin small letter b with palatal hook",
-        "short": "b with palatal hook"
+        "default": "b with palatal hook"
       }
     }
   },
@@ -1903,8 +1642,7 @@
     "key": "1D81",
     "mappings": {
       "default": {
-        "default": "latin small letter d with palatal hook",
-        "short": "d with palatal hook"
+        "default": "d with palatal hook"
       }
     }
   },
@@ -1913,8 +1651,7 @@
     "key": "1D82",
     "mappings": {
       "default": {
-        "default": "latin small letter f with palatal hook",
-        "short": "f with palatal hook"
+        "default": "f with palatal hook"
       }
     }
   },
@@ -1923,8 +1660,7 @@
     "key": "1D83",
     "mappings": {
       "default": {
-        "default": "latin small letter g with palatal hook",
-        "short": "g with palatal hook"
+        "default": "g with palatal hook"
       }
     }
   },
@@ -1933,8 +1669,7 @@
     "key": "1D84",
     "mappings": {
       "default": {
-        "default": "latin small letter k with palatal hook",
-        "short": "k with palatal hook"
+        "default": "k with palatal hook"
       }
     }
   },
@@ -1943,8 +1678,7 @@
     "key": "1D85",
     "mappings": {
       "default": {
-        "default": "latin small letter l with palatal hook",
-        "short": "l with palatal hook"
+        "default": "l with palatal hook"
       }
     }
   },
@@ -1953,8 +1687,7 @@
     "key": "1D86",
     "mappings": {
       "default": {
-        "default": "latin small letter m with palatal hook",
-        "short": "m with palatal hook"
+        "default": "m with palatal hook"
       }
     }
   },
@@ -1963,8 +1696,7 @@
     "key": "1D87",
     "mappings": {
       "default": {
-        "default": "latin small letter n with palatal hook",
-        "short": "n with palatal hook"
+        "default": "n with palatal hook"
       }
     }
   },
@@ -1973,8 +1705,7 @@
     "key": "1D88",
     "mappings": {
       "default": {
-        "default": "latin small letter p with palatal hook",
-        "short": "p with palatal hook"
+        "default": "p with palatal hook"
       }
     }
   },
@@ -1983,8 +1714,7 @@
     "key": "1D89",
     "mappings": {
       "default": {
-        "default": "latin small letter r with palatal hook",
-        "short": "r with palatal hook"
+        "default": "r with palatal hook"
       }
     }
   },
@@ -1993,8 +1723,7 @@
     "key": "1D8A",
     "mappings": {
       "default": {
-        "default": "latin small letter s with palatal hook",
-        "short": "s with palatal hook"
+        "default": "s with palatal hook"
       }
     }
   },
@@ -2003,8 +1732,7 @@
     "key": "1D8B",
     "mappings": {
       "default": {
-        "default": "latin small letter esh with palatal hook",
-        "short": "esh with palatal hook"
+        "default": "esh with palatal hook"
       }
     }
   },
@@ -2013,8 +1741,7 @@
     "key": "1D8C",
     "mappings": {
       "default": {
-        "default": "latin small letter v with palatal hook",
-        "short": "v with palatal hook"
+        "default": "v with palatal hook"
       }
     }
   },
@@ -2023,8 +1750,7 @@
     "key": "1D8D",
     "mappings": {
       "default": {
-        "default": "latin small letter x with palatal hook",
-        "short": "x with palatal hook"
+        "default": "x with palatal hook"
       }
     }
   },
@@ -2033,8 +1759,7 @@
     "key": "1D8E",
     "mappings": {
       "default": {
-        "default": "latin small letter z with palatal hook",
-        "short": "z with palatal hook"
+        "default": "z with palatal hook"
       }
     }
   },
@@ -2043,8 +1768,7 @@
     "key": "1D8F",
     "mappings": {
       "default": {
-        "default": "latin small letter a with retroflex hook",
-        "short": "a with retroflex hook"
+        "default": "a with retroflex hook"
       }
     }
   },
@@ -2053,8 +1777,7 @@
     "key": "1D90",
     "mappings": {
       "default": {
-        "default": "latin small letter alpha with retroflex hook",
-        "short": "alpha with retroflex hook"
+        "default": "alpha with retroflex hook"
       }
     }
   },
@@ -2063,8 +1786,7 @@
     "key": "1D91",
     "mappings": {
       "default": {
-        "default": "latin small letter d with hook and tail",
-        "short": "d with hook and tail"
+        "default": "d with hook and tail"
       }
     }
   },
@@ -2073,8 +1795,7 @@
     "key": "1D92",
     "mappings": {
       "default": {
-        "default": "latin small letter e with retroflex hook",
-        "short": "e with retroflex hook"
+        "default": "e with retroflex hook"
       }
     }
   },
@@ -2083,8 +1804,7 @@
     "key": "1D93",
     "mappings": {
       "default": {
-        "default": "latin small letter open e with retroflex hook",
-        "short": "open e with retroflex hook"
+        "default": "open e with retroflex hook"
       }
     }
   },
@@ -2093,8 +1813,7 @@
     "key": "1D94",
     "mappings": {
       "default": {
-        "default": "latin small letter reversed open e with retroflex hook",
-        "short": "reversed open e with retroflex hook"
+        "default": "reversed open e with retroflex hook"
       }
     }
   },
@@ -2103,8 +1822,7 @@
     "key": "1D95",
     "mappings": {
       "default": {
-        "default": "latin small letter schwa with retroflex hook",
-        "short": "schwa with retroflex hook"
+        "default": "schwa with retroflex hook"
       }
     }
   },
@@ -2113,8 +1831,7 @@
     "key": "1D96",
     "mappings": {
       "default": {
-        "default": "latin small letter i with retroflex hook",
-        "short": "i with retroflex hook"
+        "default": "i with retroflex hook"
       }
     }
   },
@@ -2123,8 +1840,7 @@
     "key": "1D97",
     "mappings": {
       "default": {
-        "default": "latin small letter open o with retroflex hook",
-        "short": "open o with retroflex hook"
+        "default": "open o with retroflex hook"
       }
     }
   },
@@ -2133,8 +1849,7 @@
     "key": "1D98",
     "mappings": {
       "default": {
-        "default": "latin small letter esh with retroflex hook",
-        "short": "esh with retroflex hook"
+        "default": "esh with retroflex hook"
       }
     }
   },
@@ -2143,8 +1858,7 @@
     "key": "1D99",
     "mappings": {
       "default": {
-        "default": "latin small letter u with retroflex hook",
-        "short": "u with retroflex hook"
+        "default": "u with retroflex hook"
       }
     }
   },
@@ -2153,8 +1867,7 @@
     "key": "1D9A",
     "mappings": {
       "default": {
-        "default": "latin small letter ezh with retroflex hook",
-        "short": "ezh with retroflex hook"
+        "default": "ezh with retroflex hook"
       }
     }
   },
@@ -2163,9 +1876,7 @@
     "key": "0149",
     "mappings": {
       "default": {
-        "default": "latin small letter n preceded by apostrophe",
-        "alternative": "latin small letter apostrophe n",
-        "short": "n preceded by apostrophe"
+        "default": "n preceded by apostrophe"
       }
     }
   },
@@ -2174,8 +1885,7 @@
     "key": "014B",
     "mappings": {
       "default": {
-        "default": "latin small letter eng",
-        "short": "eng"
+        "default": "eng"
       }
     }
   }

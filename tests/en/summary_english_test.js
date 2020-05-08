@@ -59,9 +59,9 @@ sre.SummaryEnglishTest.prototype.testAbstrAddition = function() {
  */
 sre.SummaryEnglishTest.prototype.testAbstrBigop = function() {
   var mml = '<mo>&#x2211;</mo><mi>x</mi>';
-  this.executeRuleTest(mml, 'sigma-summation', 'default');
-  this.executeRuleTest(mml, 'sigma-summation', 'brief');
-  this.executeRuleTest(mml, 'sigma-summation', 'sbrief');
+  this.executeRuleTest(mml, 'sigma summation', 'default');
+  this.executeRuleTest(mml, 'sigma summation', 'brief');
+  this.executeRuleTest(mml, 'sigma summation', 'sbrief');
 };
 
 

@@ -22,7 +22,6 @@
 goog.provide('sre.EnrichSpeechTest');
 
 goog.require('sre.AbstractTest');
-goog.require('sre.DomUtil');
 goog.require('sre.Engine');
 goog.require('sre.Enrich');
 goog.require('sre.System');
@@ -52,8 +51,8 @@ sre.EnrichSpeechTest.prototype.setUpTest = function() {
   sre.System.getInstance().setupEngine(
       {domain: 'mathspeak',
         style: 'default',
-        speech: sre.Engine.Speech.SHALLOW,
-        semantics: true});
+        speech: sre.Engine.Speech.SHALLOW
+      });
 };
 
 
@@ -63,9 +62,9 @@ sre.EnrichSpeechTest.prototype.setUpTest = function() {
 sre.EnrichSpeechTest.prototype.tearDownTest = function() {
   sre.System.getInstance().setupEngine(
       {domain: 'default',
-        style: 'short',
-        speech: sre.Engine.Speech.NONE,
-        semantics: false});
+        style: 'default',
+        speech: sre.Engine.Speech.NONE
+      });
 };
 
 

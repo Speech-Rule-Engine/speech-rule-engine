@@ -21,7 +21,6 @@
 goog.provide('sre.EmacspeakRules');
 
 goog.require('sre.MathStore');
-goog.require('sre.MathmlStoreUtil');
 goog.require('sre.MathspeakUtil');
 goog.require('sre.StoreUtil');
 
@@ -90,7 +89,7 @@ var addCTXF = sre.EmacspeakRules.addContextFunction_;
  */
 sre.EmacspeakRules.initCustomFunctions_ = function() {
   addCTXF('CTXFnodeCounter', sre.StoreUtil.nodeCounter);
-  addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
+  addCTXF('CTXFcontentIterator', sre.StoreUtil.contentIterator);
 
   addCQF('CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction);
 
@@ -126,12 +125,6 @@ sre.EmacspeakRules.initSemanticRules_ = function() {
       '[t] "equation sequence"; [m] children/* ' +
           '(context:"part",ctxtFunc:CTXFnodeCounter,' +
           'sepFunc:CTXFcontentIterator)',
-      'self::relseq[@role="equality"]', 'count(./children/*)>2');
-
-  defineRule(
-      'multi-equality', 'emacspeak.short',
-      '[t] "equation sequence"; [m] children/* ' +
-          '(sepFunc:CTXFcontentIterator)',
       'self::relseq[@role="equality"]', 'count(./children/*)>2');
 
   defineRule(

@@ -991,10 +991,43 @@ sre.SemanticProcessor.prototype.getPunctuationInRow_ = function(nodes) {
   if (nodes.length <= 1) {
     return nodes;
   }
+  var allowedType = function(x) {
+    var type = x.type;
+    return type === 'punctuation' || type === 'text' ||
+        type === 'operator' || type === 'relation';
+  };
+  // Partition with improved ellipses handling.
   var partition = sre.SemanticProcessor.partitionNodes_(
       nodes, function(x) {
-        return sre.SemanticPred.isPunctuation(x) &&
-            !sre.SemanticPred.isAttribute('role', 'ELLIPSIS')(x);});
+        if (!sre.SemanticPred.isPunctuation(x)) {
+          return false;
+        }
+        if (sre.SemanticPred.isPunctuation(x) &&
+            !sre.SemanticPred.isAttribute('role', 'ELLIPSIS')(x)) {
+          return true;
+        }
+        var index = nodes.indexOf(x);
+        if (index === 0) {
+          if (nodes[1] && allowedType(nodes[1])) {
+            return false;
+          }
+          return true;
+        }
+        // We now know the previous element exists
+        var prev = nodes[index - 1];
+        if (index === nodes.length - 1) {
+          if (allowedType(prev)) {
+            return false;
+          }
+          return true;
+        }
+        // We now know the next element exists
+        var next = nodes[index + 1];
+        if (allowedType(prev) && allowedType(next)) {
+          return false;
+        }
+        return true;
+      });
   if (partition.rel.length === 0) {
     return nodes;
   }
@@ -1342,10 +1375,10 @@ sre.SemanticProcessor.prototype.getFunctionArgs_ = function(
         }
       }
       // TODO: (simons) If we have a prefix/simple function or implicit with
-      //       prefix/simple function children only (i.e., a function composition)
-      //       then we combine them via a function composition. Function
-      //       composition is currently implicit, but we might want to remember
-      //       this a bit better.
+      //       prefix/simple function children only (i.e., a function
+      //       composition) then we combine them via a function
+      //       composition. Function composition is currently implicit, but we
+      //       might want to remember this a bit better.
       funcNode = sre.SemanticProcessor.getInstance().functionNode_(func, arg);
       partition.tail.unshift(funcNode);
       return partition.tail;
@@ -1877,7 +1910,7 @@ sre.SemanticProcessor.partitionNodes_ = function(nodes, pred) {
 sre.SemanticProcessor.prototype.mfenced = function(
     open, close, sepValue, children) {
   if (sepValue && children.length > 0) {
-    var separators = sre.MathUtil.nextSeparatorFunction(sepValue);
+    var separators = sre.SemanticProcessor.nextSeparatorFunction_(sepValue);
     var newChildren = [children.shift()];
     children.forEach(goog.bind(function(child) {
       newChildren.push(sre.SemanticProcessor.getInstance().factory_.
@@ -1907,6 +1940,42 @@ sre.SemanticProcessor.prototype.mfenced = function(
         makeContentNode(close));
   }
   return sre.SemanticProcessor.getInstance().row(children);
+};
+
+
+/**
+ * Constructs a closure that returns separators for an MathML mfenced
+ * expression.
+ * Separators in MathML are represented by a list and used up one by one
+ * until the final element is used as the default.
+ * Example: a b c d e  and separators [+,-,*]
+ * would result in a + b - c * d * e.
+ * @param {string} separators String representing a list of mfenced separators.
+ * @return {?function(): string} A closure that returns the next separator
+ * for an mfenced expression starting with the first node in nodes.
+ * @private
+ */
+sre.SemanticProcessor.nextSeparatorFunction_ = function(separators) {
+  if (separators) {
+    // Mathjax does not expand empty separators.
+    if (separators.match(/^\s+$/)) {
+      return null;
+    } else {
+      var sepList = separators.replace(/\s/g, '')
+          .split('')
+              .filter(function(x) {return x;});
+    }
+  } else {
+    // When no separator is given MathML uses comma as default.
+    var sepList = [','];
+  }
+
+  return function() {
+    if (sepList.length > 1) {
+      return sepList.shift();
+    }
+    return sepList[0];
+  };
 };
 
 
@@ -1985,14 +2054,15 @@ sre.SemanticProcessor.exprFont_ = function(node) {
 
 /**
  * Creates a fraction node with the appropriate role.
- * @param {string} linethickness The line thickness attribute value.
  * @param {!sre.SemanticNode} denom The denominator node.
  * @param {!sre.SemanticNode} enume The enumerator node.
+ * @param {string} linethickness The line thickness attribute value.
+ * @param {boolean} bevelled Is it a bevelled fraction?
  * @return {!sre.SemanticNode} The new fraction node.
  */
 sre.SemanticProcessor.prototype.fractionLikeNode = function(
-    linethickness, denom, enume) {
-  if (sre.SemanticUtil.isZeroLength(linethickness)) {
+    denom, enume, linethickness, bevelled) {
+  if (!bevelled && sre.SemanticUtil.isZeroLength(linethickness)) {
     var child0 = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
         sre.SemanticAttr.Type.LINE, [denom], []);
     var child1 = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
@@ -2005,7 +2075,11 @@ sre.SemanticProcessor.prototype.fractionLikeNode = function(
     // return sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
     //     sre.SemanticAttr.Type.MULTILINE, [child0, child1], []);
   } else {
-    return sre.SemanticProcessor.getInstance().fractionNode_(denom, enume);
+    node = sre.SemanticProcessor.getInstance().fractionNode_(denom, enume);
+    if (bevelled) {
+      node.addAnnotation('general', 'bevelled');
+    }
+    return node;
   }
 };
 
@@ -2407,6 +2481,8 @@ sre.SemanticProcessor.testColumns_ = function(columns, index, pred) {
 sre.SemanticProcessor.MATHJAX_FONTS = {
   '-tex-caligraphic': sre.SemanticAttr.Font.CALIGRAPHIC,
   '-tex-caligraphic-bold': sre.SemanticAttr.Font.CALIGRAPHICBOLD,
+  '-tex-calligraphic': sre.SemanticAttr.Font.CALIGRAPHIC,
+  '-tex-calligraphic-bold': sre.SemanticAttr.Font.CALIGRAPHICBOLD,
   '-tex-oldstyle': sre.SemanticAttr.Font.OLDSTYLE,
   '-tex-oldstyle-bold': sre.SemanticAttr.Font.OLDSTYLEBOLD,
   '-tex-mathit': sre.SemanticAttr.Font.ITALIC
@@ -2534,10 +2610,12 @@ sre.SemanticProcessor.prototype.inference = function(node, semantics, parse) {
   var children = sre.DomUtil.toArray(node.childNodes);
   var content = [];
   if (label === 'left' || label === 'both') {
-    content.push(this.getLabel(node, children, parse, sre.SemanticAttr.Role.LEFT));
+    content.push(
+        this.getLabel(node, children, parse, sre.SemanticAttr.Role.LEFT));
   }
   if (label === 'right' || label === 'both') {
-    content.push(this.getLabel(node, children, parse, sre.SemanticAttr.Role.RIGHT));
+    content.push(
+        this.getLabel(node, children, parse, sre.SemanticAttr.Role.RIGHT));
   }
   var formulas = this.getFormulas(node, children, parse);
   var inference = this.factory_.makeBranchNode(
@@ -2558,7 +2636,8 @@ sre.SemanticProcessor.prototype.inference = function(node, semantics, parse) {
  * @param {string} side The side the label is on.
  * @return {!sre.SemanticNode} The semantic node for the label.
  */
-sre.SemanticProcessor.prototype.getLabel = function(node, children, parse, side) {
+sre.SemanticProcessor.prototype.getLabel = function(
+    node, children, parse, side) {
   var label = this.findNestedRow(children, 'prooflabel', side);
   var sem = this.factory_.makeBranchNode(
       sre.SemanticAttr.Type.RULELABEL,
@@ -2612,8 +2691,8 @@ sre.SemanticProcessor.prototype.getFormulas = function(node, children, parse) {
  * @param {Array.<Element>} nodes A node list.
  * @param {string} semantic A semantic key.
  * @param {string=} opt_value Optionally the semantic value.
- * @return {Element} The first element in that row that contains the semantic key
- *     (and has its value if the latter is given.)
+ * @return {Element} The first element in that row that contains the semantic
+ *     key (and has its value if the latter is given.)
  */
 sre.SemanticProcessor.prototype.findNestedRow = function(
     nodes, semantic, opt_value) {
@@ -2630,6 +2709,7 @@ sre.SemanticProcessor.prototype.findNestedRow = function(
  * @param {number} level The maximum level to search.
  * @param {string|undefined} value Optionally the semantic value.
  * @return {Element} The first matching element in the row.
+ * @private
  */
 sre.SemanticProcessor.prototype.findNestedRow_ = function(
     nodes, semantic, level, value) {

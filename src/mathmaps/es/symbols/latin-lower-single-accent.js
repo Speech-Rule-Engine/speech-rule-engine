@@ -329,6 +329,15 @@
     "category": "Ll"
   },
   {
+    "category": "Ll",
+    "key": "0115",
+    "mappings": {
+      "default": {
+        "default": "e con breve"
+      }
+    }
+  },
+  {
     "key": "0117",
     "mappings": {
       "default": {
@@ -383,6 +392,15 @@
     "category": "Ll"
   },
   {
+    "category": "Ll",
+    "key": "0123",
+    "mappings": {
+      "default": {
+        "default": "g con cedilla"
+      }
+    }
+  },
+  {
     "key": "0125",
     "mappings": {
       "default": {
@@ -408,6 +426,15 @@
       }
     },
     "category": "Ll"
+  },
+  {
+    "category": "Ll",
+    "key": "012D",
+    "mappings": {
+      "default": {
+        "default": "i con breve"
+      }
+    }
   },
   {
     "key": "012F",
@@ -516,6 +543,15 @@
       }
     },
     "category": "Ll"
+  },
+  {
+    "category": "Ll",
+    "key": "014F",
+    "mappings": {
+      "default": {
+        "default": "o con breve"
+      }
+    }
   },
   {
     "key": "0151",
@@ -707,6 +743,78 @@
     "category": "Ll"
   },
   {
+    "category": "Ll",
+    "key": "01CE",
+    "mappings": {
+      "default": {
+        "default": "a con acento"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01D0",
+    "mappings": {
+      "default": {
+        "default": "i con acento"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01D2",
+    "mappings": {
+      "default": {
+        "default": "o con acento"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01D4",
+    "mappings": {
+      "default": {
+        "default": "u con acento"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01E7",
+    "mappings": {
+      "default": {
+        "default": "g con acento"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01E9",
+    "mappings": {
+      "default": {
+        "default": "k con acento"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01EB",
+    "mappings": {
+      "default": {
+        "default": "o con pecíolo"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01F0",
+    "mappings": {
+      "default": {
+        "default": "j con acento"
+      }
+    }
+  },
+  {
     "key": "01F5",
     "mappings": {
       "default": {
@@ -714,6 +822,195 @@
       }
     },
     "category": "Ll"
+  },
+  {
+    "category": "Ll",
+    "key": "01F9",
+    "mappings": {
+      "default": {
+        "default": "n con grave"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0201",
+    "mappings": {
+      "default": {
+        "default": "a con doble tumba"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0203",
+    "mappings": {
+      "default": {
+        "default": "a con letras invertidas"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0205",
+    "mappings": {
+      "default": {
+        "default": "e con doble tumba"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0207",
+    "mappings": {
+      "default": {
+        "default": "e con letras invertidas"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0209",
+    "mappings": {
+      "default": {
+        "default": "i con doble tumba"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "020B",
+    "mappings": {
+      "default": {
+        "default": "i con Breve invertida"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "020D",
+    "mappings": {
+      "default": {
+        "default": "o con doble tumba"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "020F",
+    "mappings": {
+      "default": {
+        "default": "o con letras invertidas"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0211",
+    "mappings": {
+      "default": {
+        "default": "r con doble sepulcro"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0213",
+    "mappings": {
+      "default": {
+        "default": "r con letras invertidas"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0215",
+    "mappings": {
+      "default": {
+        "default": "u con doble tumba"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0217",
+    "mappings": {
+      "default": {
+        "default": "u con letras invertidas"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0219",
+    "mappings": {
+      "default": {
+        "default": "s con coma debajo"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "021B",
+    "mappings": {
+      "default": {
+        "default": "t con coma debajo"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "021F",
+    "mappings": {
+      "default": {
+        "default": "h con caron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0227",
+    "mappings": {
+      "default": {
+        "default": "con un punto arriba"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0229",
+    "mappings": {
+      "default": {
+        "default": "e con cedilla"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "022F",
+    "mappings": {
+      "default": {
+        "default": "o con punto arriba"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0233",
+    "mappings": {
+      "default": {
+        "default": "y con Macron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0237",
+    "mappings": {
+      "default": {
+        "default": "s in punto j"
+      }
+    }
   },
   {
     "key": "1E01",

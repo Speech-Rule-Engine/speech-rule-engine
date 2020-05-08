@@ -34,18 +34,6 @@ goog.require('sre.DynamicCstr');
  * @constructor
  */
 sre.Engine = function() {
-  /**
-   * The actual node that is currently being translated.
-   * @type {Node}
-   */
-  this.activeHost = null;
-
-  /**
-   * When traversing some nodes one occassionally wants to store and work with
-   * an alternative representation.
-   * @type {Node}
-   */
-  this.alternativeHost = null;
 
   /**
    * @type {function(string, !sre.DynamicCstr): string}
@@ -55,7 +43,8 @@ sre.Engine = function() {
   /**
    * @type {!sre.DynamicCstr.Parser}
    */
-  this.defaultParser = new sre.DynamicCstr.Parser(sre.DynamicCstr.DEFAULT_ORDER);
+  this.defaultParser =
+      new sre.DynamicCstr.Parser(sre.DynamicCstr.DEFAULT_ORDER);
   this.parser = this.defaultParser;
   this.parsers = {};
 
@@ -85,7 +74,7 @@ sre.Engine = function() {
    * Current style.
    * @type {string}
    */
-  this.style = 'short';
+  this.style = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE];
 
   /**
    * Current locale.
@@ -104,12 +93,6 @@ sre.Engine = function() {
    * @type {string}
    */
   this.walker = 'Table';
-
-  /**
-   * Semantics flag.
-   * @type {boolean}
-   */
-  this.semantics = true;
 
   /**
    * The mode in which the engine is running (sync, async, http).
@@ -184,6 +167,13 @@ sre.Engine = function() {
    * @private
    */
   this.setupTests_ = [];
+
+  /**
+   * True if configuration block has been applied in HTTP mode.
+   * @type {boolean}
+   */
+  this.config = false;
+
 };
 goog.addSingletonGetter(sre.Engine);
 
@@ -318,11 +308,19 @@ sre.Engine.Error = function(msg) {
 goog.inherits(sre.Engine.Error, Error);
 
 
+/**
+ * Binary feature vector.
+ * @type {Array.<string>}
+ */
 sre.Engine.BINARY_FEATURES = [
-  'strict', 'cache', 'semantics', 'structure', 'pprint'
+  'strict', 'cache', 'structure', 'pprint'
 ];
 
 
+/**
+ * String feature vector.
+ * @type {Array.<string>}
+ */
 sre.Engine.STRING_FEATURES = [
   'markup', 'style', 'domain', 'speech', 'walker',
   'locale', 'modality', 'rate'
@@ -353,7 +351,7 @@ sre.Engine.prototype.setDynamicCstr = function(opt_dynamic) {
       [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]],
       [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY]],
       [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN]],
-      ['short', sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE]]);
+      [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE]]);
   var comparator = this.comparators[this.domain];
   var parser = this.parsers[this.domain];
   this.parser = parser ? parser : this.defaultParser;
@@ -364,6 +362,9 @@ sre.Engine.prototype.setDynamicCstr = function(opt_dynamic) {
 };
 
 
+/**
+ * @type {Object.<string>}
+ */
 sre.Engine.DOMAIN_TO_STYLES = {
   'mathspeak': 'default',
   'clearspeak': 'default'

@@ -46,15 +46,6 @@ goog.inherits(sre.RebuildStreeTest, sre.AbstractTest);
 
 
 /**
- * @override
- */
-sre.RebuildStreeTest.prototype.setUpTest = function() {
-  // Make sure the engine is in a default mode.
-  sre.System.getInstance().setupEngine({semantics: true});
-};
-
-
-/**
  * Tests if for a given mathml snippet results in a particular semantic tree.
  * @param {string} expr MathML expression.
  */

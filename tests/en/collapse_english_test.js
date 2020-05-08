@@ -40,12 +40,6 @@ sre.CollapseEnglishTest = function() {
 
   this.domain = 'mathspeak';
 
-  /**
-   * @override
-   */
-  this.semantics = true;
-
-
   this.setActive('CollapseEnglish');
 };
 goog.inherits(sre.CollapseEnglishTest, sre.CollapseRuleTest);
@@ -67,9 +61,9 @@ sre.CollapseEnglishTest.prototype.testCollapsedAddition = function() {
  */
 sre.CollapseEnglishTest.prototype.testCollapsedBigop = function() {
   var mml = '<mo>&#x2211;</mo><mi>x</mi>';
-  this.executeRuleTest(mml, 'collapsed sigma-summation', 'default');
-  this.executeRuleTest(mml, 'collapsed sigma-summation', 'brief');
-  this.executeRuleTest(mml, 'collapsed sigma-summation', 'sbrief');
+  this.executeRuleTest(mml, 'collapsed sigma summation', 'default');
+  this.executeRuleTest(mml, 'collapsed sigma summation', 'brief');
+  this.executeRuleTest(mml, 'collapsed sigma summation', 'sbrief');
 };
 
 

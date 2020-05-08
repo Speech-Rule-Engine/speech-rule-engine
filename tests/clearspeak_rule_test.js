@@ -21,7 +21,6 @@
 goog.provide('sre.ClearspeakRuleTest');
 
 goog.require('sre.AbstractRuleTest');
-goog.require('sre.ClearspeakPreferences');
 
 
 
@@ -37,10 +36,6 @@ sre.ClearspeakRuleTest = function() {
    */
   this.domain = 'clearspeak';
 
-  /**
-   * @override
-   */
-  this.semantics = true;
 };
 goog.inherits(sre.ClearspeakRuleTest, sre.AbstractRuleTest);
 

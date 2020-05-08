@@ -341,10 +341,8 @@ sre.Grammar.correctFont_ = function(text, correction) {
   if (!correction || !text) {
     return text;
   }
-  // TODO: Combine with localFont.
-  correction = sre.Messages.MS_FUNC.FONT_REGEXP(sre.L10n.getLocale().FONT[correction] || correction);
-  // var correctionComp = correction.split(/ |-/);
-  // var regExp = new RegExp('^' + correctionComp.join('( |-)') + '( |-)');
+  correction =
+      sre.Messages.MS_FUNC.FONT_REGEXP(sre.Locale.localFont(correction));
   return text.replace(correction, '');
 };
 
@@ -360,6 +358,15 @@ sre.Grammar.addAnnotation_ = function(text, annotation) {
   return text + ':' + annotation;
 };
 
+
+// TODO: Check if that is still necessary!
+/**
+ * Method switches of translation of text elements if they match the regexp of
+ * locale.
+ * @param {string} text The text.
+ * @return {string} The untranslated text.
+ * @private
+ */
 sre.Grammar.noTranslateText_ = function(text) {
   if (text.match(new RegExp('^[' + sre.Messages.REGEXP.TEXT + ']+$'))) {
     sre.Grammar.getInstance().currentFlags['translate'] = false;
@@ -367,9 +374,13 @@ sre.Grammar.noTranslateText_ = function(text) {
   return text;
 };
 
+
 sre.Grammar.getInstance().setCorrection('ignoreFont',
                                         sre.Grammar.correctFont_);
 sre.Grammar.getInstance().setPreprocessor('annotation',
                                           sre.Grammar.addAnnotation_);
 sre.Grammar.getInstance().setPreprocessor('noTranslateText',
                                           sre.Grammar.noTranslateText_);
+sre.Grammar.getInstance().setCorrection('ignoreCaps',
+                                        sre.Grammar.correctFont_);
+
