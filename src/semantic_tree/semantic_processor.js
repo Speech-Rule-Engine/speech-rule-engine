@@ -991,10 +991,43 @@ sre.SemanticProcessor.prototype.getPunctuationInRow_ = function(nodes) {
   if (nodes.length <= 1) {
     return nodes;
   }
+  var allowedType = function(x) {
+    var type = x.type;
+    return type === 'punctuation' || type === 'text' ||
+        type === 'operator' || type === 'relation';
+  };
+  // Partition with improved ellipses handling.
   var partition = sre.SemanticProcessor.partitionNodes_(
       nodes, function(x) {
-        return sre.SemanticPred.isPunctuation(x) &&
-            !sre.SemanticPred.isAttribute('role', 'ELLIPSIS')(x);});
+        if (!sre.SemanticPred.isPunctuation(x)) {
+          return false;
+        }
+        if (sre.SemanticPred.isPunctuation(x) &&
+            !sre.SemanticPred.isAttribute('role', 'ELLIPSIS')(x)) {
+          return true;
+        }
+        var index = nodes.indexOf(x);
+        if (index === 0) {
+          if (nodes[1] && allowedType(nodes[1])) {
+            return false;
+          }
+          return true;
+        }
+        // We now know the previous element exists
+        var prev = nodes[index - 1];
+        if (index === nodes.length - 1) {
+          if (allowedType(prev)) {
+            return false;
+          }
+          return true;
+        }
+        // We now know the next element exists
+        var next = nodes[index + 1];
+        if (allowedType(prev) && allowedType(next)) {
+          return false;
+        }
+        return true;
+      });
   if (partition.rel.length === 0) {
     return nodes;
   }
@@ -2021,14 +2054,15 @@ sre.SemanticProcessor.exprFont_ = function(node) {
 
 /**
  * Creates a fraction node with the appropriate role.
- * @param {string} linethickness The line thickness attribute value.
  * @param {!sre.SemanticNode} denom The denominator node.
  * @param {!sre.SemanticNode} enume The enumerator node.
+ * @param {string} linethickness The line thickness attribute value.
+ * @param {boolean} bevelled Is it a bevelled fraction?
  * @return {!sre.SemanticNode} The new fraction node.
  */
 sre.SemanticProcessor.prototype.fractionLikeNode = function(
-    linethickness, denom, enume) {
-  if (sre.SemanticUtil.isZeroLength(linethickness)) {
+    denom, enume, linethickness, bevelled) {
+  if (!bevelled && sre.SemanticUtil.isZeroLength(linethickness)) {
     var child0 = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
         sre.SemanticAttr.Type.LINE, [denom], []);
     var child1 = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
@@ -2041,7 +2075,11 @@ sre.SemanticProcessor.prototype.fractionLikeNode = function(
     // return sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
     //     sre.SemanticAttr.Type.MULTILINE, [child0, child1], []);
   } else {
-    return sre.SemanticProcessor.getInstance().fractionNode_(denom, enume);
+    node = sre.SemanticProcessor.getInstance().fractionNode_(denom, enume);
+    if (bevelled) {
+      node.addAnnotation('general', 'bevelled');
+    }
+    return node;
   }
 };
 

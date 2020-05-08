@@ -38,6 +38,7 @@ sre.NemethRules = function() {
 
   this.modality = 'braille';
 
+  // sre.Debugger.getInstance().init();
 };
 goog.inherits(sre.NemethRules, sre.MathStore);
 goog.addSingletonGetter(sre.NemethRules);
@@ -90,12 +91,6 @@ sre.NemethRules.defineRuleAlias_ = goog.bind(
 
 
 /** @private */
-sre.NemethRules.defineSpecialisedRule_ = goog.bind(
-    sre.NemethRules.mathStore.defineSpecialisedRule,
-    sre.NemethRules.mathStore);
-
-
-/** @private */
 sre.NemethRules.addContextFunction_ = goog.bind(
     sre.NemethRules.mathStore.contextFunctions.add,
     sre.NemethRules.mathStore.contextFunctions);
@@ -116,7 +111,6 @@ sre.NemethRules.addCustomString_ = goog.bind(
 goog.scope(function() {
 var defineRule = sre.NemethRules.defineRule_;
 var defineRuleAlias = sre.NemethRules.defineRuleAlias_;
-var defineSpecialisedRule = sre.NemethRules.defineSpecialisedRule_;
 
 var addCQF = sre.NemethRules.addCustomQuery_;
 var addCSF = sre.NemethRules.addCustomString_;
@@ -146,8 +140,7 @@ sre.NemethRules.initCustomFunctions_ = function() {
   addCSF('CSFopenFraction', sre.NemethUtil.openingFraction);
   addCSF('CSFcloseFraction', sre.NemethUtil.closingFraction);
   addCSF('CSFoverFraction', sre.NemethUtil.overFraction);
-  addCSF('CSFvulgarFraction', sre.NumbersUtil.vulgarFraction);
-  addCQF('CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction);
+  addCSF('CSFoverBevFraction', sre.NemethUtil.overBevelledFraction);
 
   // Radical function.
   addCSF('CSFopenRadicalVerbose', sre.NemethUtil.openingRadical);
@@ -240,22 +233,11 @@ sre.NemethRules.initNemethRules_ = function() {
       '@role!="greekletter"',
       'not(contains(@grammar, "ignoreFont"))', '@font="italic"');
 
-  // defineRule(
-  //     'german-font', 'default.default',
-  //     '[t] "German"; [n] . (grammar:ignoreFont=@font)',
-  //     'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
-  //     '@font="fraktur"');
-
-  // defineRule(
-  //     'german-font', 'default.default',
-  //     '[t] "bold German"; [n] . (grammar:ignoreFont=@font)',
-  //     'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
-  //     '@font="bold-fraktur"');
-
   // Number rules
   defineRule(
       'number-indicator', 'default.default', '[t] "⠼"; [n] text() (pause:10)',
-      'self::number', 'contains(@annotation, "nemeth:number")');
+      'self::number', 'contains(@annotation, "nemeth:number")',
+      'not(ancestor::sqrt)', 'not(ancestor::root)', 'not(ancestor::fraction)');
 
 
   defineRule(
@@ -274,7 +256,8 @@ sre.NemethRules.initNemethRules_ = function() {
   defineRule(
       // TODO: Write tests to check that open/close frac is not repeated.
       'mixed-number', 'default.default',
-      '[n] children/*[1]; [t] "⠸⠹"; [n] children/*[2]; [t] "⠸⠼"',
+      '[n] children/*[1]; [t] "⠸⠹"; [n] children/*[2]/children/*[1]; [t] "⠌";' +
+      ' [n] children/*[2]/children/*[2]; [t] "⠸⠼"',
       'self::number', '@role="mixed"');
 
   defineRule(
@@ -284,11 +267,6 @@ sre.NemethRules.initNemethRules_ = function() {
       '"" != translate(text(), "0123456789.,", "")',
       'text() != translate(text(), "0123456789.,", "")');
 
-  defineSpecialisedRule(
-      'number-with-chars', 'default.default', 'default.brief',
-      '[t] "⠼"; [m] CQFspaceoutNumber');
-  defineSpecialisedRule(
-      'number-with-chars', 'default.brief', 'default.sbrief');
 
   // Maybe duplicate this rule for self::text
   defineRule(
@@ -314,11 +292,6 @@ sre.NemethRules.initNemethRules_ = function() {
       'preceding-sibling::*[1][@role="latinletter" or @role="greekletter" or' +
       ' @role="otherletter"]',
       'parent::*/parent::infixop[@role="implicit"]');
-  defineSpecialisedRule(
-      'number-baseline', 'default.default', 'default.brief',
-      '[t] "Base"; [n] text()');
-  defineSpecialisedRule(
-      'number-baseline', 'default.brief', 'default.sbrief');
 
 
   defineRule(
@@ -329,32 +302,12 @@ sre.NemethRules.initNemethRules_ = function() {
       'preceding-sibling::*[@role="latinletter" or @role="greekletter" or' +
       ' @role="otherletter"]',
       'parent::*/parent::infixop[@role="implicit"]');
-  defineSpecialisedRule(
-      'number-baseline-font', 'default.default', 'default.brief',
-      '[t] "Base"; [n] text()');
-  defineSpecialisedRule(
-      'number-baseline-font', 'default.brief', 'default.sbrief');
-
-  // identifier
-  // defineRule(
-  //     'identifier', 'default.default', '[m] CQFspaceoutIdentifier',
-  //     'self::identifier', 'string-length(text())>1', '@role!="unit"',
-  //     '@role!="protected"',
-  //     'not(@font) or @font="normal" or contains(@grammar, "ignoreFont")');
 
   defineRule(
       'identifier', 'default.default', '[n] text()',
       'self::identifier', '@role="protected"');
 
   // minus sign
-  // defineRule(
-  //     'negative-number', 'default.default',
-  //     '[t] "⠤"; [n] children/*[1]',
-  //     'self::prefixop', '@role="negative"', 'children/number');
-  // defineRuleAlias(
-  //     'negative-number',
-  //     'self::prefixop', '@role="negative"',
-  //     'children/fraction[@role="vulgar"]');
   defineRule(
       'negative', 'default.default',
       '[t] "⠤"; [n] children/*[1]',
@@ -413,33 +366,10 @@ sre.NemethRules.initNemethRules_ = function() {
       '[n] content/*[1]; [n] children/*[1]; [n] content/*[2]',
       'self::fenced');
 
-  // defineRule(
-  //     'fences-neutral', 'default.default',
-  //     '[t] "StartAbsoluteValue"; [n] children/*[1]; [t] "EndAbsoluteValue"',
-  //     'self::fenced', '@role="neutral"',
-  //     'content/*[1][text()]="|" or content/*[1][text()]="❘" or' +
-  //     ' content/*[1][text()]="｜"');
-  // defineSpecialisedRule(
-  //     'fences-neutral', 'default.default', 'default.sbrief',
-  //     '[t] "AbsoluteValue"; [n] children/*[1]; [t] "EndAbsoluteValue"');
   defineRule(
       'fences-neutral', 'default.default',
       '[n] content/*[1]; [n] children/*[1]; [n] content/*[2]',
       'self::fenced', '@role="neutral"');
-
-
-  // TODO (sorge) Maybe check for punctuated element and singleton?
-  // defineRule(
-  //     'fences-set', 'default.default',
-  //     '[t] "StartSet"; [n] children/*[1]; [t] "EndSet"',
-  //     'self::fenced', '@role="set empty" or @role="set extended"' +
-  //     ' or @role="set singleton" or @role="set collection"',
-  //     // 'self::fenced', '@role="leftright"', 'content/*[1][text()]="{"',
-  //     // 'content/*[2][text()]="}"', 'count(children/*)=1',
-  //     'not(name(../..)="appl")');
-  // defineSpecialisedRule(
-  //     'fences-set', 'default.default', 'default.sbrief',
-  //     '[t] "Set"; [n] children/*[1]; [t] "EndSet"');
 
 
   // Text rules
@@ -450,9 +380,6 @@ sre.NemethRules.initNemethRules_ = function() {
   defineRule(
       'factorial', 'default.default', '[t] "⠯"', 'self::punctuation',
       'text()="!"', 'name(preceding-sibling::*[1])!="text"');
-  // defineRule(
-  //     'minus', 'default.default', '[t] "minus"',
-  //     'self::operator', 'text()="\u002D"');
 
   defineRule(
       'single-prime', 'default.default', '[t] "⠄"',
@@ -466,10 +393,6 @@ sre.NemethRules.initNemethRules_ = function() {
   defineRule(
       'quadruple-prime', 'default.default', '[t] "⠄⠄⠄⠄"',
       'self::punctuated', '@role="prime"', 'count(children/*)=4');
-  // defineRule(
-  //     'counted-prime', 'default.default',
-  //     '[t] count(children/*); [t] "prime"',
-  //     'self::punctuated', '@role="prime"');
 
   // Fraction rules
 
@@ -480,51 +403,28 @@ sre.NemethRules.initNemethRules_ = function() {
       'self::fraction');
 
   defineRule(
-      'fraction', 'default.brief',
-      '[t] CSFopenFracBrief; [n] children/*[1];' +
-          ' [t] CSFoverFraction; [n] children/*[2]; [t] CSFcloseFracBrief',
-      'self::fraction');
+      'bevelled-fraction', 'default.default',
+      '[t] CSFopenFraction; [n] children/*[1];' +
+          ' [t] CSFoverBevFraction; [n] children/*[2]; [t] CSFcloseFraction',
+      'self::fraction', 'contains(@annotation, "general:bevelled")');
 
-  defineRule(
-      'fraction', 'default.sbrief',
-      '[t] CSFopenFracSbrief; [n] children/*[1];' +
-          ' [t] CSFoverFracSbrief; [n] children/*[2]; [t] CSFcloseFracSbrief',
-      'self::fraction');
+  // Continued Fractions are currently literally transcribed in linear format!
+  //
+  // defineRule(
+  //     'continued-fraction-outer', 'default.default',
+  //     '[t] "ContinuedFraction"; [n] children/*[1];' +
+  //     '[t] "Over"; [n] children/*[2]',
+  //     'self::fraction', 'not(ancestor::fraction)',
+  //     'children/*[2]/descendant-or-self::*[@role="ellipsis" and ' +
+  //     'not(following-sibling::*)]');
 
   // defineRule(
-  //     'vulgar-fraction', 'default.default',
-  //     '[t] CSFvulgarFraction',
-  //     'self::fraction', '@role="vulgar"');
-
-  defineRule(
-      'continued-fraction-outer', 'default.default',
-      '[t] "ContinuedFraction"; [n] children/*[1];' +
-      '[t] "Over"; [n] children/*[2]',
-      'self::fraction', 'not(ancestor::fraction)',
-      'children/*[2]/descendant-or-self::*[@role="ellipsis" and ' +
-      'not(following-sibling::*)]');
-  defineSpecialisedRule(
-      'continued-fraction-outer', 'default.default', 'default.brief',
-      '[t] "ContinuedFrac"; [n] children/*[1];' +
-      '[t] "Over"; [n] children/*[2]');
-  defineSpecialisedRule(
-      'continued-fraction-outer', 'default.brief', 'default.sbrief');
-
-  defineRule(
-      'continued-fraction-inner', 'default.default',
-      '[t] "StartFraction"; [n] children/*[1];' +
-      '[t] "Over"; [n] children/*[2]',
-      'self::fraction', 'ancestor::fraction',
-      'children/*[2]/descendant-or-self::*[@role="ellipsis" and ' +
-      'not(following-sibling::*)]');
-  defineSpecialisedRule(
-      'continued-fraction-inner', 'default.default', 'default.brief',
-      '[t] "StartFrac"; [n] children/*[1];' +
-      '[t] "Over"; [n] children/*[2]');
-  defineSpecialisedRule(
-      'continued-fraction-inner', 'default.brief', 'default.sbrief',
-      '[t] "Frac"; [n] children/*[1];' +
-      '[t] "Over"; [n] children/*[2]');
+  //     'continued-fraction-inner', 'default.default',
+  //     '[t] "StartFraction"; [n] children/*[1];' +
+  //     '[t] "Over"; [n] children/*[2]',
+  //     'self::fraction', 'ancestor::fraction',
+  //     'children/*[2]/descendant-or-self::*[@role="ellipsis" and ' +
+  //     'not(following-sibling::*)]');
 
   // Radical rules
 
@@ -539,20 +439,6 @@ sre.NemethRules.initNemethRules_ = function() {
       '[t] CSFindexRadicalVerbose; [n] children/*[1];' +
           '[t] "⠜"; [n] children/*[2];' +
           ' [t] CSFcloseRadicalVerbose',
-      'self::root');
-
-  defineRule(
-      'root', 'default.brief',
-      '[t] CSFindexRadicalBrief; [n] children/*[1];' +
-          '[t] CSFopenRadicalBrief; [n] children/*[2];' +
-          ' [t] CSFcloseRadicalBrief',
-      'self::root');
-
-  defineRule(
-      'root', 'default.sbrief',
-      '[t] CSFindexRadicalSbrief; [n] children/*[1];' +
-          '[t] CSFopenRadicalSbrief; [n] children/*[2];' +
-          ' [t] CSFcloseRadicalBrief',
       'self::root');
 
   // Limits
@@ -617,12 +503,6 @@ sre.NemethRules.initNemethRules_ = function() {
       '[n] children/*[1]; [t] "Subscript"; [n] children/*[2];' +
       '[t] "Superscript"; [n] children/*[3]; [t] "Baseline";',
       'self::limboth', '@role="integral"');
-  defineSpecialisedRule(
-      'integral', 'default.default', 'default.brief',
-      '[n] children/*[1]; [t] "Sub"; [n] children/*[2];' +
-      '[t] "Sup"; [n] children/*[3]; [t] "Base";');
-  defineSpecialisedRule(
-      'integral', 'default.brief', 'default.sbrief');
 
   defineRule(
       'bigop', 'default.default',
@@ -657,12 +537,6 @@ sre.NemethRules.initNemethRules_ = function() {
       'subscript', 'default.default',
       '[n] children/*[1]; [t] CSFsubscriptVerbose; [n] children/*[2]',
       'self::subscript');
-  defineRule(
-      'subscript', 'default.brief',
-      '[n] children/*[1]; [t] CSFsubscriptBrief; [n] children/*[2]',
-      'self::subscript');
-  defineSpecialisedRule(
-      'subscript', 'default.brief', 'default.sbrief');
 
   defineRule(
       'subscript-simple', 'default.default',
@@ -672,17 +546,17 @@ sre.NemethRules.initNemethRules_ = function() {
       // Second child is a number but not mixed or other.
       'name(./children/*[2])="number"',
       './children/*[2][@role!="mixed"]',
-      './children/*[2][@role!="othernumber"]');
-  defineSpecialisedRule(
-      'subscript-simple', 'default.default', 'default.brief');
-  defineSpecialisedRule(
-      'subscript-simple', 'default.default', 'default.sbrief');
+      './children/*[2][@role!="othernumber"]',
+      'self::*'
+  );
+
 
   defineRule(
       'subscript-baseline', 'default.default',
       '[n] children/*[1]; [t] CSFsubscriptVerbose; [n] children/*[2];' +
       ' [t] CSFbaselineVerbose',
       'self::subscript', 'following-sibling::*',
+      '@role!="prefix function"',
       'not(name(following-sibling::subscript/children/*[1])="empty" or ' +
       '(name(following-sibling::infixop[@role="implicit"]/children/*[1])=' +
       '"subscript" and ' +
@@ -690,12 +564,6 @@ sre.NemethRules.initNemethRules_ = function() {
       '@role!="subsup"',
       'not(following-sibling::*[@role="rightsuper" or @role="rightsub"' +
       ' or @role="leftsub" or @role="leftsub"])');
-  defineSpecialisedRule(
-      'subscript-baseline', 'default.default', 'default.brief',
-      '[n] children/*[1]; [t] CSFsubscriptBrief; [n] children/*[2];' +
-      ' [t] CSFbaselineBrief');
-  defineSpecialisedRule(
-      'subscript-baseline', 'default.brief', 'default.sbrief');
   defineRuleAlias(
       'subscript-baseline',
       'self::subscript', 'not(following-sibling::*)',
@@ -720,10 +588,6 @@ sre.NemethRules.initNemethRules_ = function() {
       'name(children/*[2])="infixop"',
       'name(children/*[2][@role="implicit"]/children/*[1])="superscript"',
       'name(children/*[2]/children/*[1]/children/*[1])="empty"');
-  defineSpecialisedRule(
-      'subscript-empty-sup', 'default.default', 'default.brief');
-  defineSpecialisedRule(
-      'subscript-empty-sup', 'default.brief', 'default.sbrief');
   defineRuleAlias(
       'subscript-empty-sup', 'self::subscript',
       'name(children/*[2])="superscript"',
@@ -735,11 +599,6 @@ sre.NemethRules.initNemethRules_ = function() {
       'superscript', 'default.default',
       '[n] children/*[1]; [t] CSFsuperscriptVerbose; [n] children/*[2]',
       'self::superscript');
-  defineSpecialisedRule(
-      'superscript', 'default.default', 'default.brief',
-      '[n] children/*[1]; [t] CSFsuperscriptBrief; [n] children/*[2]');
-  defineSpecialisedRule(
-      'superscript', 'default.brief', 'default.sbrief');
 
 
   defineRule(
@@ -747,18 +606,13 @@ sre.NemethRules.initNemethRules_ = function() {
       '[n] children/*[1]; [t] CSFsuperscriptVerbose; [n] children/*[2];' +
       '[t] CSFbaselineVerbose',
       'self::superscript', 'following-sibling::*',
+      '@role!="prefix function"',
       'not(name(following-sibling::superscript/children/*[1])="empty" or ' +
       '(name(following-sibling::infixop[@role="implicit"]/children/*[1])=' +
       '"superscript" and ' +
       'name(following-sibling::*/children/*[1]/children/*[1])="empty")) and ' +
       'not(following-sibling::*[@role="rightsuper" or @role="rightsub"' +
       ' or @role="leftsub" or @role="leftsub"])');
-  defineSpecialisedRule(
-      'superscript-baseline', 'default.default', 'default.brief',
-      '[n] children/*[1]; [t] CSFsuperscriptBrief; [n] children/*[2];' +
-      '[t] CSFbaselineBrief');
-  defineSpecialisedRule(
-      'superscript-baseline', 'default.brief', 'default.sbrief');
   defineRuleAlias(
       'superscript-baseline',
       'self::superscript', 'not(following-sibling::*)',
@@ -789,62 +643,11 @@ sre.NemethRules.initNemethRules_ = function() {
       'name(children/*[2])="infixop"',
       'name(children/*[2][@role="implicit"]/children/*[1])="subscript"',
       'name(children/*[2]/children/*[1]/children/*[1])="empty"');
-  defineSpecialisedRule(
-      'superscript-empty-sub', 'default.default', 'default.brief');
-  defineSpecialisedRule(
-      'superscript-empty-sub', 'default.brief', 'default.sbrief');
   defineRuleAlias(
       'superscript-empty-sub', 'self::superscript',
       'name(children/*[2])="subscript"',
       'name(children/*[2]/children/*[1])="empty"');
 
-  // Square
-  // defineRule(
-  //     'square', 'default.default',
-  //     '[n] children/*[1]; [t] "squared"',
-  //     'self::superscript', 'children/*[2]',
-  //     'children/*[2][text()=2]',
-  //     'name(children/*[1])!="text" or ' +
-  //     // Special exception dealing with footnotes.
-  //     'not(name(children/*[1])="text" and ' +
-  //     '(name(../../../punctuated[@role="text"]/..)="stree" ' +
-  //     'or name(..)="stree"))',
-  //     'name(children/*[1])!="subscript" or (' +
-  //     // Keep squared if we have a simple subscript.
-  //     'name(children/*[1])="subscript" and ' +
-  //     'name(children/*[1]/children/*[1])="identifier" and ' +
-  //     'name(children/*[1]/children/*[2])="number" and ' +
-  //     'children/*[1]/children/*[2][@role!="mixed"] and ' +
-  //     'children/*[1]/children/*[2][@role!="othernumber"])',
-  //     'not(@embellished)');
-  // defineSpecialisedRule(
-  //     'square', 'default.default', 'default.brief');
-  // defineSpecialisedRule(
-  //     'square', 'default.default', 'default.sbrief');
-
-  // Cube
-  // defineRule(
-  //     'cube', 'default.default',
-  //     '[n] children/*[1]; [t] "cubed"',
-  //     'self::superscript', 'children/*[2]',
-  //     'children/*[2][text()=3]',
-  //     'name(children/*[1])!="text" or ' +
-  //     // Special exception dealing with footnotes.
-  //     'not(name(children/*[1])="text" and ' +
-  //     '(name(../../../punctuated[@role="text"]/..)="stree" ' +
-  //     'or name(..)="stree"))',
-  //     'name(children/*[1])!="subscript" or (' +
-  //     // Keep cubed if we have a simple subscript.
-  //     'name(children/*[1])="subscript" and ' +
-  //     'name(children/*[1]/children/*[1])="identifier" and ' +
-  //     'name(children/*[1]/children/*[2])="number" and ' +
-  //     'children/*[1]/children/*[2][@role!="mixed"] and ' +
-  //     'children/*[1]/children/*[2][@role!="othernumber"])',
-  //     'not(@embellished)');
-  // defineSpecialisedRule(
-  //     'cube', 'default.default', 'default.brief');
-  // defineSpecialisedRule(
-  //     'cube', 'default.default', 'default.sbrief');
 
   // Primes
   // This rule uses some redundancy for ordering!
@@ -852,10 +655,6 @@ sre.NemethRules.initNemethRules_ = function() {
       'prime', 'default.default',
       '[n] children/*[1]; [n] children/*[2]',
       'self::superscript', 'children/*[2]', 'children/*[2][@role="prime"]');
-  defineSpecialisedRule(
-      'prime', 'default.default', 'default.brief');
-  defineSpecialisedRule(
-      'prime', 'default.default', 'default.sbrief');
 
   defineRule(
       'prime-subscript', 'default.default',
@@ -863,12 +662,6 @@ sre.NemethRules.initNemethRules_ = function() {
       ' [t] CSFsubscriptVerbose; [n] children/*[1]/children/*[2]',
       'self::superscript', 'children/*[2][@role="prime"]',
       'name(children/*[1])="subscript"', 'not(following-sibling::*)');
-  defineSpecialisedRule(
-      'prime-subscript', 'default.default', 'default.brief',
-      '[n] children/*[1]/children/*[1]; [n] children/*[2];' +
-      ' [t] CSFsubscriptBrief; [n] children/*[1]/children/*[2]');
-  defineSpecialisedRule(
-      'prime-subscript', 'default.brief', 'default.sbrief');
 
   defineRule(
       'prime-subscript-baseline', 'default.default',
@@ -877,13 +670,6 @@ sre.NemethRules.initNemethRules_ = function() {
       ' [t] CSFbaselineVerbose',
       'self::superscript', 'children/*[2][@role="prime"]',
       'name(children/*[1])="subscript"', 'following-sibling::*');
-  defineSpecialisedRule(
-      'prime-subscript-baseline', 'default.default', 'default.brief',
-      '[n] children/*[1]/children/*[1]; [n] children/*[2];' +
-      ' [t] CSFsubscriptBrief; [n] children/*[1]/children/*[2];' +
-      ' [t] CSFbaselineBrief');
-  defineSpecialisedRule(
-      'prime-subscript-baseline', 'default.brief', 'default.sbrief');
   defineRuleAlias(
       'prime-subscript-baseline',
       'self::superscript', 'children/*[2][@role="prime"]',
@@ -902,10 +688,6 @@ sre.NemethRules.initNemethRules_ = function() {
       'children/*[1]/children/*[2][@role!="mixed"]',
       'children/*[1]/children/*[2][@role!="othernumber"]'
   );
-  defineSpecialisedRule(
-      'prime-subscript-simple', 'default.default', 'default.brief');
-  defineSpecialisedRule(
-      'prime-subscript-simple', 'default.default', 'default.sbrief');
 
   // Modifiers
   defineRule(
@@ -919,12 +701,6 @@ sre.NemethRules.initNemethRules_ = function() {
       'self::overscore', 'children/*[2][@role="overaccent"]',
       'contains(@grammar, "modified")'
   );
-  defineSpecialisedRule(
-      'overscore', 'default.default', 'default.brief',
-      '[t] "ModAbove"; [n] children/*[1]; [t] "With"; [n] children/*[2]'
-  );
-  defineSpecialisedRule(
-      'overscore', 'default.brief', 'default.sbrief');
 
   defineRule(
       'double-overscore', 'default.default',
@@ -934,12 +710,6 @@ sre.NemethRules.initNemethRules_ = function() {
       'name(children/*[1])="overscore"',
       'children/*[1]/children/*[2][@role="overaccent"]'
   );
-  defineSpecialisedRule(
-      'double-overscore', 'default.default', 'default.brief',
-      '[t] "ModAbove Above"; [n] children/*[1]; [t] "With"; [n] children/*[2]'
-  );
-  defineSpecialisedRule(
-      'double-overscore', 'default.brief', 'default.sbrief');
 
   defineRule(
       'underscore', 'default.default',
@@ -952,12 +722,6 @@ sre.NemethRules.initNemethRules_ = function() {
       'self::underscore', 'children/*[2][@role="underaccent"]',
       'contains(@grammar, "modified")'
   );
-  defineSpecialisedRule(
-      'underscore', 'default.default', 'default.brief',
-      '[t] "ModBelow"; [n] children/*[1]; [t] "With"; [n] children/*[2]'
-  );
-  defineSpecialisedRule(
-      'underscore', 'default.brief', 'default.sbrief');
 
   defineRule(
       'double-underscore', 'default.default',
@@ -966,78 +730,6 @@ sre.NemethRules.initNemethRules_ = function() {
       'self::underscore', 'children/*[2][@role="underaccent"]',
       'name(children/*[1])="underscore"',
       'children/*[1]/children/*[2][@role="underaccent"]');
-  defineSpecialisedRule(
-      'double-underscore', 'default.default', 'default.brief',
-      '[t] "ModBelow Below"; [n] children/*[1]; [t] "With"; [n] children/*[2]'
-  );
-  defineSpecialisedRule(
-      'double-underscore', 'default.brief', 'default.sbrief');
-
-  // defineRule(
-  //     'overbar', 'default.default',
-  //     '[n] children/*[1]; [t] "overbar"',
-  //     'self::overscore',
-  //     '@role="latinletter" or @role="greekletter" or @role="otherletter"',
-  //     'children/*[2][@role="overaccent"]',   // redundancy
-  //     'children/*[2][text()="\u00AF" or text()="\uFFE3" or text()="\uFF3F"' +
-  //     ' or text()="\u005F" or text()="\u203E"]'
-  // );
-  // defineSpecialisedRule(
-  //     'overbar', 'default.default', 'default.brief',
-  //     '[n] children/*[1]; [t] "overBar"'
-  // );
-  // defineSpecialisedRule(
-  //     'overbar', 'default.brief', 'default.sbrief');
-
-  // defineRule(
-  //     'underbar', 'default.default',
-  //     '[n] children/*[1]; [t] "underbar"',
-  //     'self::underscore',
-  //     '@role="latinletter" or @role="greekletter" or @role="otherletter"',
-  //     'children/*[2][@role="underaccent"]',   // redundancy
-  //     'children/*[2][text()="\u00AF" or text()="\uFFE3" or text()="\uFF3F"' +
-  //     ' or text()="\u005F" or text()="\u203E"]'
-  // );
-  // defineSpecialisedRule(
-  //     'underbar', 'default.default', 'default.brief',
-  //     '[n] children/*[1]; [t] "underBar"'
-  // );
-  // defineSpecialisedRule(
-  //     'underbar', 'default.brief', 'default.sbrief');
-
-  // TODO: Large tilde vs short tilde.
-  //
-  // defineRule(
-  //     'overtilde', 'default.default',
-  //     '[n] children/*[1]; [t] "overTilde"',
-  //     'self::overscore',
-  //     'children/*[2][@role="overaccent"]',   // redundancy
-  //     '@role="latinletter" or @role="greekletter" or @role="otherletter"',
-  //     'children/*[2][text()="\u007E" or text()="\u02DC" or text()="\u223C"' +
-  //     ' or text()="\uFF5E"]'
-  // );
-  // defineSpecialisedRule(
-  //     'overtilde', 'default.default', 'default.brief',
-  //     '[n] children/*[1]; [t] "overtilde"'
-  // );
-  // defineSpecialisedRule(
-  //     'overtilde', 'default.brief', 'default.sbrief');
-
-  // defineRule(
-  //     'undertilde', 'default.default',
-  //     '[n] children/*[1]; [t] "underTilde"',
-  //     'self::underscore',
-  //     '@role="latinletter" or @role="greekletter" or @role="otherletter"',
-  //     'children/*[2][@role="underaccent"]',   // redundancy
-  //     'children/*[2][text()="\u007E" or text()="\u02DC" or text()="\u223C"' +
-  //     ' or text()="\uFF5E"]'
-  // );
-  // defineSpecialisedRule(
-  //     'undertilde', 'default.default', 'default.brief',
-  //     '[n] children/*[1]; [t] "undertilde"'
-  // );
-  // defineSpecialisedRule(
-  //     'undertilde', 'default.brief', 'default.sbrief');
 
   // Layout Elements
   defineRule(
@@ -1063,18 +755,6 @@ sre.NemethRules.initNemethRules_ = function() {
       '[t] "with Label"; [n] content/*[1]; [t] "EndLabel"(pause: 200); ' +
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
       'self::row', 'content');
-  defineRule(
-      'row-with-label', 'default.brief',
-      '[t] "Label"; [n] content/*[1]; ' +
-      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
-      'self::row', 'content');
-  defineSpecialisedRule(
-      'row-with-label', 'default.brief', 'default.sbrief');
-  defineRule(
-      'row-with-text-label', 'default.sbrief',
-      '[t] "Label"; [t] CSFRemoveParens;' +
-      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
-      'self::row', 'content', 'name(content/cell/children/*[1])="text"');
   defineRule(
       'empty-row', 'default.default',
       '[t] "⠀" (pause:300)', 'self::row', 'count(children/*)=0');
@@ -1102,10 +782,6 @@ sre.NemethRules.initNemethRules_ = function() {
       'layout', 'default.default', '[t] "StartLayout"; ' +
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
       ' [t] "EndLayout"', 'self::table');
-  defineRule(
-      'layout', 'default.sbrief', '[t] "Layout"; ' +
-      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
-      ' [t] "EndLayout"', 'self::table');
 
   // defineRule(
   //     'binomial', 'default.default',
@@ -1113,20 +789,9 @@ sre.NemethRules.initNemethRules_ = function() {
   //     '[t] "Choose"; [n] children/*[2]/children/*[1]; ' +
   //     ' [t] "EndBinomialOrMatrix"',
   //     'self::vector', '@role="binomial"');
-  // defineRule(
-  //     'binomial', 'default.sbrief',
-  //     '[t] "BinomialOrMatrix"; [n] children/*[1]/children/*[1]; ' +
-  //     '[t] "Choose"; [n] children/*[2]/children/*[1]; ' +
-  //     ' [t] "EndBinomialOrMatrix"',
-  //     'self::vector', '@role="binomial"');
 
   defineRule(
       'cases', 'default.default', '[t] "StartLayout"; ' +
-      '[t] "Enlarged"; [n] content/*[1];' +
-      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
-      ' [t] "EndLayout"', 'self::cases');
-  defineRule(
-      'cases', 'default.sbrief', '[t] "Layout"; ' +
       '[t] "Enlarged"; [n] content/*[1];' +
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
       ' [t] "EndLayout"', 'self::cases');
@@ -1143,29 +808,15 @@ sre.NemethRules.initNemethRules_ = function() {
       '[t] "with Label"; [n] content/*[1]; [t] "EndLabel" (pause: 200); ' +
       '[m] children/*',
       'self::line', 'content');
-  defineSpecialisedRule(
-      'line-with-label', 'default.default', 'default.brief',
-      '[t] "Label"; [n] content/*[1] (pause: 200); [m] children/*');
-  defineSpecialisedRule(
-      'line-with-label', 'default.brief', 'default.sbrief');
-  defineRule(
-      'line-with-text-label', 'default.sbrief',
-      '[t] "Label"; [t] CSFRemoveParens; [m] children/*',
-      'self::line', 'content', 'name(content/cell/children/*[1])="text"');
+
   defineRule(
       'empty-line', 'default.default',
       '[t] "Blank"', 'self::line', 'count(children/*)=0', 'not(content)');
-  defineSpecialisedRule('empty-line', 'default.default', 'default.brief');
-  defineSpecialisedRule('empty-line', 'default.brief', 'default.sbrief');
+
   defineRule(
       'empty-line-with-label', 'default.default',
       '[t] "with Label"; [n] content/*[1]; [t] "EndLabel"(pause: 200); ' +
       '[t] "Blank"', 'self::line', 'count(children/*)=0', 'content');
-  defineSpecialisedRule(
-      'empty-line-with-label', 'default.default', 'default.brief',
-      '[t] "Label"; [n] content/*[1] (pause: 200); [t] "Blank"');
-  defineSpecialisedRule(
-      'empty-line-with-label', 'default.brief', 'default.sbrief');
 
   // Enclose
   defineRule( // TODO: Localise the roles.
@@ -1207,10 +858,6 @@ sre.NemethRules.initNemethRules_ = function() {
       ' [n] children/*[2]; [t] "⠻"',
       'self::overscore', '@role="updiagonalstrike" or' +
       ' @role="downdiagonalstrike" or @role="horizontalstrike"');
-  defineSpecialisedRule(
-      'cancel', 'default.default', 'default.brief');
-  defineSpecialisedRule(
-      'cancel', 'default.default', 'default.sbrief');
   defineRuleAlias('cancel',
       'self::underscore', '@role="updiagonalstrike" or' +
       ' @role="downdiagonalstrike" or @role="horizontalstrike"');
@@ -1221,10 +868,6 @@ sre.NemethRules.initNemethRules_ = function() {
       'self::overscore', 'name(children/*[2])="enclose"',
       'children/*[2][@role="updiagonalstrike" or' +
       ' @role="downdiagonalstrike" or @role="horizontalstrike"]');
-  defineSpecialisedRule(
-      'cancel-reverse', 'default.default', 'default.brief');
-  defineSpecialisedRule(
-      'cancel-reverse', 'default.default', 'default.sbrief');
   defineRuleAlias('cancel-reverse',
       'self::underscore', 'name(children/*[2])="enclose"',
       'children/*[2][@role="updiagonalstrike" or' +
@@ -1243,6 +886,11 @@ sre.NemethRules.initNemethRules_ = function() {
       'self::punctuated', '@role="startpunct"');
 
   defineRule(
+      'punctuation', 'default.default', '[n] text(); [t] "⠐"',
+      'self::punctuation', '@role="fullstop"',
+      'contains(@annotation, "nemeth:number")');
+
+  defineRule(
       'integral-punct', 'default.default',
       '[n] children/*[1]; [n] children/*[3]',
       'self::punctuated', '@role="integral"');
@@ -1251,6 +899,26 @@ sre.NemethRules.initNemethRules_ = function() {
       'punctuated', 'default.default',
       '[m] children/*',
       'self::punctuated');
+
+  defineRule(
+      'punctuation-comma', 'default.default', '[n] text(); [t] "⠀"',
+      'self::punctuation' , 'parent::*/parent::punctuated',
+      'following-sibling::*', '@role!="fullstop"',
+  );
+
+  defineRule(
+      'punctuation-ellipses', 'default.default',
+      '[t] "⠀"; [n] text(); [t] "⠀"',
+      'self::punctuation' , 'parent::*/parent::punctuated',
+      'following-sibling::*', '@role="ellipsis"',
+      'name(preceding-sibling::*[1])!="punctuation"'
+  );
+  defineRule(
+      'punctuation-ellipses', 'default.default',
+      '[t] "⠀"; [n] text();',
+      'self::punctuation' , 'parent::*/parent::punctuated',
+      '@role="ellipsis"', 'name(preceding-sibling::*[1])!="punctuation"'
+  );
 
   // Unit rules.
   defineRule(
@@ -1341,14 +1009,12 @@ sre.NemethRules.childNumber_ = {
  * @param {string} constellation Bitvector representing of possible tensor
  *     constellation.
  * @return {Array.<string>} A list consisting of additional constraints for the
- *     tensor rule, plus the strings for the verbose and brief rule, in that
- *     order.
+ *     tensor rule plus the strings for the rule.
  * @private
  */
 sre.NemethRules.generateTensorRuleStrings_ = function(constellation) {
   var constraints = [];
   var verbString = '';
-  var briefString = '';
   var constel = parseInt(constellation, 2);
 
   for (var i = 0; i < 5; i++) {
@@ -1357,15 +1023,12 @@ sre.NemethRules.generateTensorRuleStrings_ = function(constellation) {
       var compString = sre.NemethRules.componentString_[i % 3];
       verbString = '[t] ' + compString + 'Verbose; [n] ' + childString + ';' +
           verbString;
-      briefString = '[t] ' + compString + 'Brief; [n] ' + childString + ';' +
-          briefString;
     } else {
       constraints.unshift('name(' + childString + ')="empty"');
     }
     constel >>= 1;
   }
   constraints.push(verbString);
-  constraints.push(briefString);
   return constraints;
 };
 
@@ -1385,30 +1048,19 @@ sre.NemethRules.generateNemethTensorRules_ = function() {
   for (var i = 0, constel; constel = constellations[i]; i++) {
     var name = 'tensor' + constel;
     var components = sre.NemethRules.generateTensorRuleStrings_(constel);
-    var briefStr = components.pop();
     var verbStr = components.pop();
     var verbList = [name, 'default.default', verbStr, 'self::tensor'].
         concat(components);
-    var briefList = [name, 'default.brief', briefStr, 'self::tensor'].
-        concat(components);
     // Rules without neighbour.
     defineRule.apply(null, verbList);
-    defineRule.apply(null, briefList);
-    defineSpecialisedRule(name, 'default.brief', 'default.sbrief');
     // Rules with baseline.
     var baselineStr = sre.NemethRules.componentString_[2];
     verbStr += '; [t]' + baselineStr + 'Verbose';
-    briefStr += '; [t]' + baselineStr + 'Brief';
     name = name + '-baseline';
     verbList = [name, 'default.default', verbStr, 'self::tensor',
                 'following-sibling::*'].
         concat(components);
-    briefList = [name, 'default.brief', briefStr, 'self::tensor',
-                 'following-sibling::*'].
-        concat(components);
     defineRule.apply(null, verbList);
-    defineRule.apply(null, briefList);
-    defineSpecialisedRule(name, 'default.brief', 'default.sbrief');
     // Rules without neighbour but baseline.
     var aliasList = [name, 'self::tensor', 'not(following-sibling::*)',
                      'ancestor::fraction|ancestor::punctuated|' +

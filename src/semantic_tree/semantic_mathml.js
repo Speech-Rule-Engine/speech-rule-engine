@@ -37,8 +37,7 @@ sre.SemanticMathml = function() {
   sre.SemanticMathml.base(this, 'constructor', 'MathML');
 
   /**
-   * @type {Object.<string,
-   *                function(Element, Array.<Element>): !sre.SemanticNode>}
+   * @type {Object.<function(Element, Array.<Element>): !sre.SemanticNode>}
    * @private
    */
   this.parseMap_ = {
@@ -165,9 +164,11 @@ sre.SemanticMathml.prototype.rows_ = function(node, children) {
  * @private
  */
 sre.SemanticMathml.prototype.fraction_ = function(node, children) {
-  return sre.SemanticProcessor.getInstance().fractionLikeNode(
-      node.getAttribute('linethickness'), this.parse(children[0]),
-      this.parse(children[1]));
+  var sem = sre.SemanticProcessor.getInstance().fractionLikeNode(
+      this.parse(children[0]), this.parse(children[1]),
+      node.getAttribute('linethickness'),
+      node.getAttribute('bevelled') === 'true');
+  return sem;
 };
 
 

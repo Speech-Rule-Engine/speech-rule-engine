@@ -352,7 +352,6 @@ sre.ClearspeakPreferences.getLocalePreferences_ = function(dynamic) {
  * @return {Explorer} A speech explorer if the item has one.
  */
 sre.ClearspeakPreferences.getSpeechExplorer = function(item) {
-  console.log(item);
   let explorers = item['attached'];
   if (!explorers || !explorers.length) {
     return null;
@@ -421,7 +420,6 @@ sre.ClearspeakPreferences.smartPreferences = function(item, locale) {
  * @return {string} The preference that fits the node's type and role.
  */
 sre.ClearspeakPreferences.relevantPreferences = function(node) {
-  console.log(sre.ClearspeakPreferences.SEMANTIC_MAPPING_);
   let roles = sre.ClearspeakPreferences.SEMANTIC_MAPPING_[node.type];
   if (!roles) {
     return 'ImpliedTimes';

@@ -28,7 +28,7 @@ var msg = sre.Messages;
 
 
 /**
- * Opening string for fractions in Mathspeak verbose mode.
+ * Opening string for fractions in linear Nemeth.
  * @param {!Node} node The fraction node.
  * @return {string} The opening string.
  */
@@ -39,7 +39,7 @@ sre.NemethUtil.openingFraction = function(node) {
 
 
 /**
- * Closing string for fractions in Mathspeak verbose mode.
+ * Closing string for fractions in linear Nemeth.
  * @param {!Node} node The fraction node.
  * @return {string} The closing string.
  */
@@ -50,13 +50,25 @@ sre.NemethUtil.closingFraction = function(node) {
 
 
 /**
- * Middle string for fractions in Mathspeak verbose mode.
+ * Middle string for fractions in linear Nemeth.
  * @param {!Node} node The fraction node.
  * @return {string} The middle string.
  */
 sre.NemethUtil.overFraction = function(node) {
   var depth = sre.MathspeakUtil.fractionNestingDepth(node);
   return new Array(depth).join(msg.MS.FRACTION_REPEAT) + msg.MS.FRACTION_OVER;
+};
+
+
+/**
+ * Middle string for bevelled fractions in Nemeth.
+ * @param {!Node} node The fraction node.
+ * @return {string} The middle string.
+ */
+sre.NemethUtil.overBevelledFraction = function(node) {
+  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
+  return new Array(depth).join(msg.MS.FRACTION_REPEAT) +
+      '⠸' + msg.MS.FRACTION_OVER;
 };
 
 
@@ -94,7 +106,7 @@ sre.NemethUtil.radicalNestingDepth = function(node, opt_depth) {
 
 
 /**
- * Opening string for radicals in Mathspeak verbose mode.
+ * Opening string for radicals in Nemeth.
  * @param {!Node} node The radical node.
  * @return {string} The opening string.
  */
@@ -104,7 +116,7 @@ sre.NemethUtil.openingRadical = function(node) {
 
 
 /**
- * Closing string for radicals in Nemeth verbose mode.
+ * Closing string for radicals in Nemeth.
  * @param {!Node} node The radical node.
  * @return {string} The closing string.
  */
@@ -114,7 +126,7 @@ sre.NemethUtil.closingRadical = function(node) {
 
 
 /**
- * Middle string for radicals in Nemeth verbose mode.
+ * Middle string for radicals in Nemeth.
  * @param {!Node} node The radical node.
  * @return {string} The middle string.
  */
@@ -160,7 +172,7 @@ sre.NemethUtil.NUMBER_PROPAGATORS_ = [
 
 
 /**
- * Checks if a Nemeth number indicator has to be propagated after the node's
+ * Checks if a Nemeth number indicator has to be propagated beyond the node's
  * parent.
  * @param {!sre.SemanticNode} node The node which can get a number indicator.
  * @return {boolean} True if parent is a relation, puntuation or application or
