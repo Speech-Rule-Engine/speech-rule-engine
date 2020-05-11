@@ -6,7 +6,7 @@
     "key": "cosh",
     "mappings": {
       "default": {
-        "default": "kosinus hyperbolikus"
+        "default": "Kosinus hyperbolicus"
       }
     },
     "category": "Hyperbolic",
@@ -18,7 +18,7 @@
     "key": "coth",
     "mappings": {
       "default": {
-        "default": "kotangens hyperbolikus"
+        "default": "Kotangens hyperbolicus"
       }
     },
     "category": "Hyperbolic",
@@ -30,7 +30,7 @@
     "key": "csch",
     "mappings": {
       "default": {
-        "default": "kosekans hyperbolikus"
+        "default": "Kosekans hyperbolicus"
       }
     },
     "category": "Hyperbolic",
@@ -42,7 +42,7 @@
     "key": "sech",
     "mappings": {
       "default": {
-        "default": "sekans hyperbolikus"
+        "default": "Sekans hyperbolicus"
       }
     },
     "category": "Hyperbolic",
@@ -54,7 +54,7 @@
     "key": "sinh",
     "mappings": {
       "default": {
-        "default": "sinus hyperbolikus"
+        "default": "Sinus hyperbolicus"
       }
     },
     "category": "Hyperbolic",
@@ -66,7 +66,7 @@
     "key": "tanh",
     "mappings": {
       "default": {
-        "default": "tangens hyperbolikus"
+        "default": "Tangens hyperbolicus"
       }
     },
     "category": "Hyperbolic",
@@ -78,7 +78,7 @@
     "key": "arcosh",
     "mappings": {
       "default": {
-        "default": "der areakosinus hyperbolicus"
+        "default": "Areakosinus hyperbolicus"
       }
     },
     "category": "Area",
@@ -91,7 +91,7 @@
     "key": "arcoth",
     "mappings": {
       "default": {
-        "default": "der areako-tangens hyperbolicus"
+        "default": "Areakotangens hyperbolicus"
       }
     },
     "category": "Area",
@@ -104,7 +104,7 @@
     "key": "arcsch",
     "mappings": {
       "default": {
-        "default": "der areakosekans hyperbolicus"
+        "default": "Areakosekans hyperbolicus"
       }
     },
     "category": "Area",
@@ -117,7 +117,7 @@
     "key": "arsech",
     "mappings": {
       "default": {
-        "default": "der areasekans hyperbolicus"
+        "default": "Areasekans hyperbolicus"
       }
     },
     "category": "Area",
@@ -130,7 +130,7 @@
     "key": "arsinh",
     "mappings": {
       "default": {
-        "default": "der areasinus hyperbolicus"
+        "default": "Areasinus hyperbolicus"
       }
     },
     "category": "Area",
@@ -143,7 +143,7 @@
     "key": "artanh",
     "mappings": {
       "default": {
-        "default": "der areatangens hyperbolicus "
+        "default": "Areatangens hyperbolicus "
       }
     },
     "category": "Area",

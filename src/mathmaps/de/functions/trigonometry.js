@@ -83,7 +83,7 @@
         "default": "Arkuskosinus"
       },
      "clearspeak": {
-       "Trig_TrigInverse": "inverser kosinus"
+       "Trig_TrigInverse": "inverser Kosinus"
      }
     },
     "category": "Cyclometric",
@@ -98,7 +98,7 @@
         "default": "Arkuskotangens"
       },
      "clearspeak": {
-       "Trig_TrigInverse": "inverser kotangens"
+       "Trig_TrigInverse": "inverser Kotangens"
      }
     },
     "category": "Cyclometric",
@@ -113,7 +113,7 @@
         "default": "Arkuskosekans"
       },
      "clearspeak": {
-       "Trig_TrigInverse": "inverser kosekans"
+       "Trig_TrigInverse": "inverser Kosekans"
      }
     },
     "category": "Cyclometric",
@@ -128,7 +128,7 @@
         "default": "Arkussekans"
       },
      "clearspeak": {
-       "Trig_TrigInverse": "inverser sekans"
+       "Trig_TrigInverse": "inverser Sekans"
      }
     },
     "category": "Cyclometric",
@@ -143,7 +143,7 @@
         "default": "Arkussinus"
       },
      "clearspeak": {
-       "Trig_TrigInverse": "inverser sinus"
+       "Trig_TrigInverse": "inverser Sinus"
      }
     },
     "category": "Cyclometric",
@@ -158,7 +158,7 @@
         "default": "Arkustangens"
       },
      "clearspeak": {
-       "Trig_TrigInverse": "inverser tangens"
+       "Trig_TrigInverse": "inverser Tangens"
      }
     },
     "category": "Cyclometric",
