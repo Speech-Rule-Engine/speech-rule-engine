@@ -640,7 +640,8 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
 
   defineRule(  // TODO: Spacing after arkus?
       'function-prefix-arc-simple', 'clearspeak.Trig_ArcTrig',
-      '[p] (pause:"short"); [t] "arkus"; [n] children/*[1]/children/*[1];' +
+      '[p] (pause:"short"); [t] "Arkus" (join:"");' +
+      ' [n] children/*[1]/children/*[1] (grammar:lowercase);' +
       ' [n] children/*[2]; [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       'name(children/*[1])="superscript"',
@@ -650,7 +651,8 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'not(contains(@grammar, "functions_none"))');
   defineRule(
       'function-prefix-arc-simple', 'clearspeak.Trig_ArcTrig',
-      '[p] (pause:"short"); [t] "Arkus"; [n] children/*[1]/children/*[1];' +
+      '[p] (pause:"short"); [t] "Arkus" (join:"");' +
+      ' [n] children/*[1]/children/*[1] (grammar:lowercase);' +
       ' [p] (pause:"short"); [n] children/*[2]; [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       'name(children/*[1])="superscript"',
@@ -665,7 +667,8 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
 
   defineRule(
       'function-prefix-arc', 'clearspeak.Trig_ArcTrig',
-      '[p] (pause:"short"); [t] "Arkus"; [n] children/*[1]/children/*[1];' +
+      '[p] (pause:"short"); [t] "Arkus" (join:"");' +
+      ' [n] children/*[1]/children/*[1] (grammar:lowercase);' +
       ' [t] "von"; [n] children/*[2]; [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       'name(children/*[1])="superscript"',

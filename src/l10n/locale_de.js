@@ -290,3 +290,10 @@ sre.Grammar.getInstance().setCorrection(
     }).join(' ');
   }
 );
+
+
+sre.Grammar.getInstance().setCorrection(
+  'lowercase', function(name) {
+    return name.toLowerCase();
+  }
+);
