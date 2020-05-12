@@ -79,10 +79,15 @@ sre.ClearspeakPreferences.PREFERENCES = new sre.DynamicProperties({
   Caps: ['Auto', 'SayCaps'],
   CombinationPermutation: ['Auto', 'ChoosePermute'],
   Ellipses: ['Auto', 'AndSoOn'],
-  Exponent: ['Auto', 'AfterPower', 'Ordinal', 'OrdinalPower'],
+  Exponent: ['Auto', 'AfterPower', 'Ordinal', 'OrdinalPower',
+             // The following are German
+             'Exponent', 'Power'
+            ],
   Fraction: ['Auto', 'EndFrac', 'FracOver', 'General', 'GeneralEndFrac',
              'Ordinal', 'Over', 'OverEndFrac', 'Per'],
-  Functions: ['Auto', 'None', 'Reciprocal'],  // Reciprocal is French
+  Functions: ['Auto', 'None',
+              // Reciprocal is French
+              'Reciprocal'],
   ImpliedTimes: ['Auto', 'MoreImpliedTimes', 'None'],
   Log: ['Auto', 'LnAsNaturalLog'],
   Matrix: ['Auto', 'Combinatoric', 'EndMatrix', 'EndVector', 'SilentColNum',
@@ -100,7 +105,9 @@ sre.ClearspeakPreferences.PREFERENCES = new sre.DynamicProperties({
   SetMemberSymbol: ['Auto', 'Belongs', 'Element', 'Member'],
   Sets: ['Auto', 'SilentBracket', 'woall', 'woAll'],
   TriangleSymbol: ['Auto', 'Delta'],
-  Trig: ['Auto', 'ArcTrig', 'TrigInverse', 'Reciprocal'], // Reciprocal French
+  Trig: ['Auto', 'ArcTrig', 'TrigInverse',
+         // Reciprocal French
+         'Reciprocal'],
   VerticalLine: ['Auto', 'Divides', 'Given', 'SuchThat']
 });
 
@@ -498,4 +505,3 @@ sre.ClearspeakPreferences.addPreference = function(prefs, kind, value) {
  */
 sre.Engine.getInstance().comparators['clearspeak'] = sre.ClearspeakPreferences.comparator;
 sre.Engine.getInstance().parsers['clearspeak'] = new sre.ClearspeakPreferences.Parser();
-
