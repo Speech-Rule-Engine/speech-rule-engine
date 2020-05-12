@@ -119,7 +119,6 @@ sre.ClearspeakGerman.initCustomFunctions_ = function() {
   addCSF('CSFvulgarFraction', sre.NumbersUtil.vulgarFraction);
   addCQF('CQFvulgarFractionSmall', sre.ClearspeakUtil.isSmallVulgarFraction);
   addCQF('CQFcellsSimple', sre.ClearspeakUtil.allCellsSimple);
-  addCSF('CSFordinalExponent', sre.ClearspeakUtil.ordinalExponent);
   addCSF('CSFwordOrdinal', sre.ClearspeakUtil.wordOrdinal);
   addCQF('CQFisCapital', sre.ClearspeakUtil.isCapitalLetter);
   addCQF('CQFmatchingFences', sre.ClearspeakUtil.matchingFences);
@@ -891,42 +890,11 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'self::superscript', 'not(descendant::superscript)',
       'not(following-sibling::*)');
 
-  defineRule(
-      'superscript-ordinal', 'clearspeak.Exponent_OrdinalPower',
-      '[n] children/*[1]; [t] "to the"; [n] children/*[2] (grammar:ordinal);' +
-      ' [t] "power"; [p] (pause:"short")',
-      'self::superscript', 'name(children/*[2])="number"',
-      'children/*[2][@role="integer"]');
-  defineRule(
-      'superscript-ordinal', 'clearspeak.Exponent_OrdinalPower',
-      '[n] children/*[1]; [t] "to the"; [n] children/*[2]; [t] "power"; ' +
-      '[p] (pause:"short")',
-      'self::superscript', 'name(children/*[2])="prefixop"',
-      'children/*[2][@role="negative"]',
-      'name(children/*[2]/children/*[1])="number"',
-      'children/*[2]/children/*[1][@role="integer"]');
-  defineRule(
-      'superscript-ordinal', 'clearspeak.Exponent_OrdinalPower',
-      '[n] children/*[1]; [t] "to the"; [n] children/*[2] (grammar:ordinal);' +
-      ' [t] "power"; [p] (pause:"short")',
-      'self::superscript', 'name(children/*[2])="identifier"',
-      'children/*[2][@role="latinletter" or @role="greekletter" or ' +
-      '@role="otherletter"]');
-  defineRule(
-      'superscript-ordinal-default', 'clearspeak.Exponent_OrdinalPower',
-      '[n] children/*[1]; [t] "raised to the exponent" (pause:"short"); ' +
-      '[n] children/*[2]; [p] (pause:"short");' +
-      ' [t] "End Exponent" (pause:"short")',
-      'self::superscript', 'children//superscript');
 
   defineRule(
       'exponent', 'clearspeak.Exponent_Power',
       '[n] text() (join:""); [t] "te"', 'self::identifier',
       'contains(@grammar, "ordinal")');
-  defineRule(
-      'exponent', 'clearspeak.Exponent_Power',
-      '[t] CSFordinalExponent', 'self::number', '@role="integer"',
-      'contains(@grammar, "ordinal")', 'text()!="0"');
   defineRule(
       'exponent', 'clearspeak.Exponent_Power',
       '[t] CSFwordOrdinal', 'self::number', '@role="integer"',
