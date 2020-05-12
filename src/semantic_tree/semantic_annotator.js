@@ -104,7 +104,7 @@ sre.SemanticVisitor.prototype.visit = function(node, info) {
   var result = this.func(node, info);
   node.addAnnotation(this.domain, result[0]);
   for (var i = 0, child; child = node.childNodes[i]; i++) {
-    result = this.visit(child, /** @type{Object<*>} */(result[1]));
+    result = this.visit(child, /** @type {Object<*>} */(result[1]));
   }
   return result;
 };

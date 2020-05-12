@@ -287,7 +287,7 @@ sre.SemanticSkeleton.tree_ = function(mml, node) {
   var id = node.id;
   var skeleton = [id];
   var mmlChild = sre.XpathUtil.evalXPath(
-    './/*[@' + sre.EnrichMathml.Attribute.ID + '=' + id + ']', mml)[0];
+      './/self::*[@' + sre.EnrichMathml.Attribute.ID + '=' + id + ']', mml)[0];
   var children = sre.SemanticSkeleton.combineContentChildren(
       node, node.contentNodes.map(function(x) {return x;}),
       node.childNodes.map(function(x) {return x;}));

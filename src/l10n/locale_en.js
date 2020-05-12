@@ -213,7 +213,7 @@ sre.Locale.en = {
   ALPHABET_TRANSFORMERS: {
     digit: {
       default: function(n) {
-          return n === 0 ? 'zero' : sre.Numbers.en.numberToWords(n);},
+        return n === 0 ? 'zero' : sre.Numbers.en.numberToWords(n);},
       mathspeak: function(n) {return n.toString();},
       clearspeak: function(n) {return n.toString();}},
     letter: {

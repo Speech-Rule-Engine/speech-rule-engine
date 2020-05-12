@@ -110,7 +110,7 @@ sre.ClearspeakRules.addAnnotators_ = function() {
 sre.ClearspeakRules.initCustomFunctions_ = function() {
   addCTXF('CTXFpauseSeparator', sre.StoreUtil.pauseSeparator);
   addCTXF('CTXFnodeCounter', sre.ClearspeakUtil.nodeCounter);
-  addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
+  addCTXF('CTXFcontentIterator', sre.StoreUtil.contentIterator);
   addCSF('CSFvulgarFraction', sre.NumbersUtil.vulgarFraction);
   addCQF('CQFvulgarFractionSmall', sre.ClearspeakUtil.isSmallVulgarFraction);
   addCQF('CQFcellsSimple', sre.ClearspeakUtil.allCellsSimple);
@@ -160,13 +160,15 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   // Font rules
   defineRule(
       'font', 'clearspeak.default',
-      '[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font,pause:"short")',
+      '[t] @font (grammar:localFont); ' +
+      '[n] self::* (grammar:ignoreFont=@font,pause:"short")',
       'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"');
 
   defineRule(
       'font-identifier', 'clearspeak.default',
-      '[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font,pause:"short")',
+      '[t] @font (grammar:localFont); ' +
+      '[n] self::* (grammar:ignoreFont=@font,pause:"short")',
       'self::identifier', 'string-length(text())=1',
       '@font', '@font="normal"', 'not(contains(@grammar, "ignoreFont"))',
       '@role!="unit"');
@@ -550,8 +552,8 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '(name(children/*[2])="fenced" and not(contains(' +
       'children/*[2]/children/*[1]/@annotation, "clearspeak:simple")))' +
       ' or name(children/*[2])="fraction" or ' +
-      '(name(children/*[2])!="fenced" and not(contains(children/*[2]/@annotation' +
-      ', "clearspeak:simple")))',
+      '(name(children/*[2])!="fenced" and ' +
+      'not(contains(children/*[2]/@annotation, "clearspeak:simple")))',
       'self::*');
   defineRule(
       'function-prefix-subscript', 'clearspeak.default',

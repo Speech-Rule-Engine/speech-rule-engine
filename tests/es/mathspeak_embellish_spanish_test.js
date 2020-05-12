@@ -43,11 +43,6 @@ sre.MathspeakEmbellishSpanishTest = function() {
   /**
    * @override
    */
-  this.semantics = true;
-
-  /**
-   * @override
-   */
   this.locale = 'es';
 
   this.setActive('EmbellishedSymbolsSpanish');

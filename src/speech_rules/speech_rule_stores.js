@@ -25,7 +25,6 @@ goog.require('sre.ClearspeakFrench');
 goog.require('sre.ClearspeakGerman');
 goog.require('sre.ClearspeakRules');
 goog.require('sre.EmacspeakRules');
-goog.require('sre.MathmlStoreRules');
 goog.require('sre.MathspeakFrench');
 goog.require('sre.MathspeakGerman');
 goog.require('sre.MathspeakRules');
@@ -47,7 +46,6 @@ goog.require('sre.SummarySpanish');
  * @private
  */
 sre.SpeechRuleStores.RULE_SETS_ = {
-  'MathmlStoreRules': sre.MathmlStoreRules,
   'SemanticTreeRules': sre.SemanticTreeRules,
   'MathspeakFrench': sre.MathspeakFrench,
   'MathspeakGerman': sre.MathspeakGerman,

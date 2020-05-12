@@ -44,11 +44,6 @@ sre.AataTest = function() {
   /**
    * @override
    */
-  this.semantics = true;
-
-  /**
-   * @override
-   */
   this.locale = 'nemeth';
 
   /**
@@ -60,6 +55,7 @@ sre.AataTest = function() {
   this.actual = true;
 };
 goog.inherits(sre.AataTest, sre.AbstractRuleTest);
+
 
 // Number: ⠼
 /**

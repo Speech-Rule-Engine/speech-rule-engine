@@ -32,9 +32,8 @@ sre.DefaultCharNemethTest = function() {
 
   this.locale = 'nemeth';
   this.domain = 'default';
-  this.semantics = true;
   this.modality = 'braille';
-  
+
   /**
    * @type {Array.<string>}
    */
@@ -45,6 +44,9 @@ sre.DefaultCharNemethTest = function() {
 goog.inherits(sre.DefaultCharNemethTest, sre.AbstractCharacterTest);
 
 
+/**
+ * Runs all character translation tests for nemeth.
+ */
 sre.DefaultCharNemethTest.prototype.testDefaultChars = function() {
   this.executeCharTest('0', ['⠴']);
   this.executeCharTest('1', ['⠂']);
@@ -3317,7 +3319,7 @@ sre.DefaultCharNemethTest.prototype.testDefaultChars = function() {
   this.executeCharTest('¯', ['⠱']);
   this.executeCharTest('°', ['⠘⠨⠡']);
   this.executeCharTest('±', ['⠬⠤']);
-  this.executeCharTest('´', ['acute']);
+  this.executeCharTest('´', ['⠈']);
   this.executeCharTest('µ', ['⠨⠍']);
   this.executeCharTest('¶', ['⠄⡳⠭⠴⠴⠃⠖⠄']);
   this.executeCharTest('·', ['⠡']);
@@ -4128,20 +4130,20 @@ sre.DefaultCharNemethTest.prototype.testDefaultChars = function() {
   this.executeCharTest(' ', ['⠀']);
   this.executeCharTest(' ', ['⠀']);
   this.executeCharTest('­', ['⠤']);
-  this.executeCharTest(' ', ['⠄⡳⠭⠆⠴⠴⠴⠄']);
-  this.executeCharTest(' ', ['⠄⡳⠭⠆⠴⠴⠂⠄']);
-  this.executeCharTest(' ', ['⠄⡳⠭⠆⠴⠴⠆⠄']);
-  this.executeCharTest(' ', ['⠄⡳⠭⠆⠴⠴⠒⠄']);
-  this.executeCharTest(' ', ['⠄⡳⠭⠆⠴⠴⠲⠄']);
-  this.executeCharTest(' ', ['⠄⡳⠭⠆⠴⠴⠢⠄']);
-  this.executeCharTest(' ', ['⠄⡳⠭⠆⠴⠴⠖⠄']);
+  this.executeCharTest(' ', ['⠀']);
+  this.executeCharTest(' ', ['⠀']);
+  this.executeCharTest(' ', ['⠀']);
+  this.executeCharTest(' ', ['⠀']);
+  this.executeCharTest(' ', ['⠀']);
+  this.executeCharTest(' ', ['⠀']);
+  this.executeCharTest(' ', ['⠀']);
   this.executeCharTest(' ', ['⠀']);
   this.executeCharTest(' ', ['⠀']);
   this.executeCharTest(' ', ['⠀']);
   this.executeCharTest(' ', ['⠀']);
   this.executeCharTest('​', ['⠀']);
-  this.executeCharTest('‌', ['⠄⡳⠭⠆⠴⠴⠉⠄']);
-  this.executeCharTest('‍', ['⠄⡳⠭⠆⠴⠴⠙⠄']);
+  this.executeCharTest('‌', ['‌']);
+  this.executeCharTest('‍', ['‍']);
   this.executeCharTest('‎', ['⠄⡳⠭⠆⠴⠴⠑⠄']);
   this.executeCharTest('‏', ['⠄⡳⠭⠆⠴⠴⠋⠄']);
   this.executeCharTest(' ', ['⠄⡳⠭⠆⠴⠆⠦⠄']);
@@ -4151,9 +4153,9 @@ sre.DefaultCharNemethTest.prototype.testDefaultChars = function() {
   this.executeCharTest('‬', ['⠄⡳⠭⠆⠴⠆⠉⠄']);
   this.executeCharTest('‭', ['⠄⡳⠭⠆⠴⠆⠙⠄']);
   this.executeCharTest('‮', ['⠄⡳⠭⠆⠴⠆⠑⠄']);
-  this.executeCharTest(' ', ['⠄⡳⠭⠆⠴⠆⠋⠄']);
+  this.executeCharTest(' ', ['⠀']);
   this.executeCharTest(' ', ['⠀']);
-  this.executeCharTest('⁠', ['⠄⡳⠭⠆⠴⠖⠴⠄']);
+  this.executeCharTest('⁠', ['⁠']);
   this.executeCharTest('⁡', ['⠀']);
   this.executeCharTest('⁢', ['⠈⠡']);
   this.executeCharTest('⁣', ['⠠']);
@@ -4255,6 +4257,9 @@ sre.DefaultCharNemethTest.prototype.testDefaultChars = function() {
 };
 
 
+/**
+ * Runs all function name translation tests for nemeth.
+ */
 sre.DefaultCharNemethTest.prototype.testDefaultFunctions = function() {
   this.executeCharTest('deg', ['⠙⠑⠛']);
   this.executeCharTest('det', ['⠙⠑⠞']);
@@ -4324,6 +4329,9 @@ sre.DefaultCharNemethTest.prototype.testDefaultFunctions = function() {
 };
 
 
+/**
+ * Runs all unit expression translation tests for nemeth.
+ */
 sre.DefaultCharNemethTest.prototype.testDefaultUnits = function() {
   this.executeUnitTest('W', ['⠠⠺']);
   this.executeUnitTest('w', ['⠠⠺']);

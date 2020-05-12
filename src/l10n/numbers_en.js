@@ -19,6 +19,8 @@
 
 goog.provide('sre.Numbers.en');
 
+goog.require('sre.Numbers');
+
 
 /**
  * String representation of zero to nineteen.
@@ -179,6 +181,9 @@ sre.Numbers.en.simpleOrdinal = function(number) {
 };
 
 
+/**
+ * @type {sre.Numbers}
+ */
 sre.Numbers.en.NUMBERS = {
   wordOrdinal: sre.Numbers.en.wordOrdinal,
   simpleOrdinal: sre.Numbers.en.simpleOrdinal,

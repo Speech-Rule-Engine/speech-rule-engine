@@ -21,7 +21,6 @@
 goog.provide('sre.EmacspeakRules');
 
 goog.require('sre.MathStore');
-goog.require('sre.MathmlStoreUtil');
 goog.require('sre.MathspeakUtil');
 goog.require('sre.StoreUtil');
 
@@ -90,7 +89,7 @@ var addCTXF = sre.EmacspeakRules.addContextFunction_;
  */
 sre.EmacspeakRules.initCustomFunctions_ = function() {
   addCTXF('CTXFnodeCounter', sre.StoreUtil.nodeCounter);
-  addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
+  addCTXF('CTXFcontentIterator', sre.StoreUtil.contentIterator);
 
   addCQF('CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction);
 

@@ -130,7 +130,7 @@ LINT_EXCLUDE_FILES = deps.js,$(IEMAPS_FILE)
 LINT_EXCLUDE_DIRS = $(JSON_SRC)
 
 LINT_ROOT = $(NODE_MODULES)/closure-linter-wrapper/tools/
-GJSLINT = python $(LINT_ROOT)/gjslint.py --unix_mode --strict --jsdoc -x '$(LINT_EXCLUDE_FILES)' -e '$(LINT_EXCLUDE_DIRS)' -r
+GJSLINT = python $(LINT_ROOT)/gjslint.py --unix_mode --strict --jsdoc -x '$(LINT_EXCLUDE_FILES)' -e '$(LINT_EXCLUDE_DIRS)'
 FIXJSSTYLE = python $(LINT_ROOT)/fixjsstyle.py --strict --jsdoc -x '$(LINT_EXCLUDE_FILES)' -e '$(LINT_EXCLUDE_DIRS)' -r
 
 #######################################################################3
@@ -143,8 +143,8 @@ $(BIN_DIR):
 	mkdir -p $(BIN_DIR)
 
 lint:
-	$(GJSLINT) $(SRC_DIR)
-	$(GJSLINT) $(TEST_DIR)
+	$(GJSLINT) -r $(SRC_DIR)
+	$(GJSLINT) --disable 0110 -r $(TEST_DIR)
 
 
 fixjsstyle:
@@ -257,7 +257,7 @@ $(LOC_DST):
 			echo ','  >> $@; \
 		done; \
 	done
-	@head -n -1 $@ > $@.tmp
+	@sed '$$d' $@ > $@.tmp
 	@echo '}\n' >> $@.tmp
 	@mv $@.tmp $@
 
@@ -275,7 +275,7 @@ $(IEMAPS_FILE):
 			done; \
 		done; \
 	done
-	@head -n -1 $(IEMAPS_FILE) > $(IEMAPS_FILE).tmp
+	@sed '$$d' $(IEMAPS_FILE) > $(IEMAPS_FILE).tmp
 	@echo '}\n' >> $(IEMAPS_FILE).tmp
 	@mv $(IEMAPS_FILE).tmp $(IEMAPS_FILE)
 

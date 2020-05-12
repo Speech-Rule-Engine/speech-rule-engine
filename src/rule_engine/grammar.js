@@ -341,7 +341,8 @@ sre.Grammar.correctFont_ = function(text, correction) {
   if (!correction || !text) {
     return text;
   }
-  correction = sre.Messages.MS_FUNC.FONT_REGEXP(sre.Locale.localFont(correction));
+  correction =
+      sre.Messages.MS_FUNC.FONT_REGEXP(sre.Locale.localFont(correction));
   return text.replace(correction, '');
 };
 
@@ -357,12 +358,22 @@ sre.Grammar.addAnnotation_ = function(text, annotation) {
   return text + ':' + annotation;
 };
 
+
+// TODO: Check if that is still necessary!
+/**
+ * Method switches of translation of text elements if they match the regexp of
+ * locale.
+ * @param {string} text The text.
+ * @return {string} The untranslated text.
+ * @private
+ */
 sre.Grammar.noTranslateText_ = function(text) {
   if (text.match(new RegExp('^[' + sre.Messages.REGEXP.TEXT + ']+$'))) {
     sre.Grammar.getInstance().currentFlags['translate'] = false;
   }
   return text;
 };
+
 
 sre.Grammar.getInstance().setCorrection('ignoreFont',
                                         sre.Grammar.correctFont_);
