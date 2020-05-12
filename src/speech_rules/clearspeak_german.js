@@ -877,21 +877,6 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'not(contains(@grammar, "functions_none"))');
 
   defineRule(
-      'superscript-simple-function', 'clearspeak.Functions_None',
-      '[n] . (grammar:functions_none)',
-      'self::superscript', 'name(children/*[1])="identifier"',
-      'children/*[1][@role="simple function"]',
-      'not(contains(@grammar, "functions_none"))');
-
-  // Exponent_Exponent Rules
-  defineRule(
-      'superscript-simple-exponent-end', 'clearspeak.Exponent_Exponent',
-      '[n] children/*[1]; [t] "mit Exponent"; [n] children/*[2]; ',
-      'self::superscript', 'not(descendant::superscript)',
-      'not(following-sibling::*)');
-
-
-  defineRule(
       'exponent', 'clearspeak.Exponent_Power',
       '[n] text() (join:""); [t] "te"', 'self::identifier',
       'contains(@grammar, "ordinal")');
@@ -903,6 +888,58 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'exponent', 'clearspeak.Exponent_Power',
       '[t] "nullte"', 'self::number', '@role="integer"',
       'contains(@grammar, "ordinal")', 'text()="0"');
+
+  // Exponent_Exponent Rules
+  defineRule(
+      'superscript-simple-exp', 'clearspeak.Exponent_Exponent',
+      '[n] children/*[1]; [t] "mit Exponent"; [n] children/*[2]; ' +
+      '[p] (pause:"short")',
+      'self::superscript', 'not(descendant::superscript)');
+  defineRule(
+      'superscript-simple-exp-end', 'clearspeak.Exponent_Exponent',
+      '[n] children/*[1]; [t] "mit Exponent"; [n] children/*[2]; ',
+      'self::superscript', 'not(descendant::superscript)',
+      'not(following-sibling::*)');
+
+  defineRuleAlias(
+      'superscript-simple-exp', 'self::superscript',
+      'children/superscript/children/*[2][text()="2"] or ' +
+      'children/superscript/children/*[2][text()="3"]',
+      'name(children/superscript/children/*[1])="number"',
+      'contains(children/superscript/children/*[1]/@annotation, ' +
+      '"clearspeak:simple")');
+  defineRuleAlias(
+      'superscript-simple-exp', 'self::superscript',
+      'children/superscript/children/*[2][text()="2"] or ' +
+      'children/superscript/children/*[2][text()="3"]',
+      'name(children/superscript/children/*[1])="fraction"',
+      'contains(children/superscript/children/*[1]/@annotation,' +
+      ' "clearspeak:simple")');
+  defineRuleAlias(
+      'superscript-simple-exp', 'self::superscript',
+      'children/superscript/children/*[2][text()="2"] or' +
+      ' children/superscript/children/*[2][text()="3"]',
+      'name(children/superscript/children/*[1])="identifier"');
+
+  defineRuleAlias(
+      'superscript-simple-exp', 'self::superscript',
+      'children/*[2][@role="implicit"]', 'count(children/*[2]/children/*)=2',
+      'contains(children/*[2]/children/*[1]/@annotation, "simple")',
+      'name(children/*[2]/children/*[2])="superscript"',
+      '(name(children/*[2]/children/*[2]/children/*[1])="number" and ' +
+      'contains(children/*[2]/children/*[2]/children/*[1]/@annotation,' +
+      ' "clearspeak:simple")) or ' +
+      'name(children/*[2]/children/*[2]/children/*[1])="identifier"',
+      'children/*[2]/children/*[2]/children/*[2][text()="2"] or ' +
+      'children/*[2]/children/*[2]/children/*[2][text()="3"]');
+
+
+  defineRule(
+      'superscript-simple-function', 'clearspeak.Functions_None',
+      '[n] . (grammar:functions_none)',
+      'self::superscript', 'name(children/*[1])="identifier"',
+      'children/*[1][@role="simple function"]',
+      'not(contains(@grammar, "functions_none"))');
 
   // Square
   defineRule(

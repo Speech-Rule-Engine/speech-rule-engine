@@ -30,7 +30,6 @@ goog.require('sre.ClearspeakGermanRuleTest');
 sre.ClearspeakGermanExponents = function() {
 
   sre.ClearspeakGermanExponents.base(this, 'constructor');
- sre.Debugger.getInstance().init();
 
   /**
    * @override
