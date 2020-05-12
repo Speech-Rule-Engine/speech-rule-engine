@@ -802,14 +802,14 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'children/*[2]/children/*[2]/children/*[2][text()="2"] or ' +
       'children/*[2]/children/*[2]/children/*[2][text()="3"]');
 
-  // Exponent_Power Rules
+  // Exponent_OrdinalPower Rules
   defineRule(
-      'superscript-simple-power', 'clearspeak.Exponent_Power',
+      'superscript-simple-power', 'clearspeak.Exponent_OrdinalPower',
       '[n] children/*[1]; [t] "potenziert mit"; [n] children/*[2]; ' +
       '[p] (pause:"short")',
       'self::superscript', 'not(descendant::superscript)');
   defineRule(
-      'superscript-simple-power-end', 'clearspeak.Exponent_Power',
+      'superscript-simple-power-end', 'clearspeak.Exponent_OrdinalPower',
       '[n] children/*[1]; [t] "potenziert mit"; [n] children/*[2]; ',
       'self::superscript', 'not(descendant::superscript)',
       'not(following-sibling::*)');
@@ -848,7 +848,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
 
 
   defineRule(
-      'superscript-ordinal-power', 'clearspeak.Exponent_Power',
+      'superscript-ordinal-power', 'clearspeak.Exponent_OrdinalPower',
       '[n] children/*[1]; [t] "zur"; [n] children/*[2] (grammar:ordinal,join:"");' +
       ' [t] "n Potenz" (pause:"short")',
       'self::superscript', 'name(children/*[2])="number"',
@@ -859,7 +859,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'children/*[2][@role="latinletter" or @role="greekletter" or' +
       ' @role="otherletter"]');
   defineRule(
-      'superscript-non-ordinal', 'clearspeak.Exponent_Power',
+      'superscript-non-ordinal', 'clearspeak.Exponent_OrdinalPower',
       '[n] children/*[1]; [t] "zur negativ";' +
       ' [n] children/*[2]/children/*[1] (grammar:ordinal, join:"");' +
       ' [t] "n Potenz" (pause:"short")',
@@ -868,7 +868,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'children/*[2]/children/*[1][@role="integer"]');
 
   defineRule(
-      'superscript-simple-function', 'clearspeak.Exponent_Power',
+      'superscript-simple-function', 'clearspeak.Exponent_OrdinalPower',
       '[t] "die"; [n] children/*[2] (grammar:ordinal);' +
       ' [t] "Potenz von" (pause:"short"); [n] children/*[1]',
       'self::superscript', 'name(children/*[1])="identifier"',
@@ -877,15 +877,15 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'not(contains(@grammar, "functions_none"))');
 
   defineRule(
-      'exponent', 'clearspeak.Exponent_Power',
+      'exponent', 'clearspeak.Exponent_OrdinalPower',
       '[n] text() (join:""); [t] "te"', 'self::identifier',
       'contains(@grammar, "ordinal")');
   defineRule(
-      'exponent', 'clearspeak.Exponent_Power',
+      'exponent', 'clearspeak.Exponent_OrdinalPower',
       '[t] CSFwordOrdinal', 'self::number', '@role="integer"',
       'contains(@grammar, "ordinal")', 'text()!="0"');
   defineRule(
-      'exponent', 'clearspeak.Exponent_Power',
+      'exponent', 'clearspeak.Exponent_OrdinalPower',
       '[t] "nullte"', 'self::number', '@role="integer"',
       'contains(@grammar, "ordinal")', 'text()="0"');
 

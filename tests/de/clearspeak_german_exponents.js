@@ -1252,7 +1252,7 @@ sre.ClearspeakGermanExponents.prototype.testExp40 = function() {
  * Testing ClearspeakGermanExponents Example Exp085
  */
 sre.ClearspeakGermanExponents.prototype.testExp085n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>2</mn></msup></mrow></math>';
   var speech = '3 to the second power';
   this.executeRuleTest(mathml, speech, preference);
@@ -1263,7 +1263,7 @@ sre.ClearspeakGermanExponents.prototype.testExp085n = function() {
  * Testing ClearspeakGermanExponents Example Exp086
  */
 sre.ClearspeakGermanExponents.prototype.testExp086n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>3</mn></msup></mrow></math>';
   var speech = '3 to the third power';
   this.executeRuleTest(mathml, speech, preference);
@@ -1274,7 +1274,7 @@ sre.ClearspeakGermanExponents.prototype.testExp086n = function() {
  * Testing ClearspeakGermanExponents Example Exp087
  */
 sre.ClearspeakGermanExponents.prototype.testExp087n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>0</mn></msup></mrow></math>';
   var speech = '3 to the zero power';
   this.executeRuleTest(mathml, speech, preference);
@@ -1285,7 +1285,7 @@ sre.ClearspeakGermanExponents.prototype.testExp087n = function() {
  * Testing ClearspeakGermanExponents Example Exp088
  */
 sre.ClearspeakGermanExponents.prototype.testExp088n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>1</mn></msup></mrow></math>';
   var speech = '3 to the first power';
   this.executeRuleTest(mathml, speech, preference);
@@ -1296,7 +1296,7 @@ sre.ClearspeakGermanExponents.prototype.testExp088n = function() {
  * Testing ClearspeakGermanExponents Example Exp089
  */
 sre.ClearspeakGermanExponents.prototype.testExp089n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>5</mn></msup></mrow></math>';
   var speech = '3 to the fifth power';
   this.executeRuleTest(mathml, speech, preference);
@@ -1307,7 +1307,7 @@ sre.ClearspeakGermanExponents.prototype.testExp089n = function() {
  * Testing ClearspeakGermanExponents Example Exp090
  */
 sre.ClearspeakGermanExponents.prototype.testExp090n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mn>5.0</mn></mrow>' +
       '</msup></mrow></math>';
   var speech = '3 raised to the 5.0 power';
@@ -1319,7 +1319,7 @@ sre.ClearspeakGermanExponents.prototype.testExp090n = function() {
  * Testing ClearspeakGermanExponents Example Exp091
  */
 sre.ClearspeakGermanExponents.prototype.testExp091n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>4</mn><mrow><mn>11</mn></mrow></msup>' +
       '</mrow></math>';
   var speech = '4 to the eleventh power';
@@ -1331,7 +1331,7 @@ sre.ClearspeakGermanExponents.prototype.testExp091n = function() {
  * Testing ClearspeakGermanExponents Example Exp092
  */
 sre.ClearspeakGermanExponents.prototype.testExp092n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2</mn>' +
       '</mrow></msup></mrow></math>';
   var speech = '3 to the negative 2 power';
@@ -1343,7 +1343,7 @@ sre.ClearspeakGermanExponents.prototype.testExp092n = function() {
  * Testing ClearspeakGermanExponents Example Exp093
  */
 sre.ClearspeakGermanExponents.prototype.testExp093n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2.0</mn>' +
       '</mrow></msup></mrow></math>';
   var speech = '3 raised to the negative 2.0 power';
@@ -1355,7 +1355,7 @@ sre.ClearspeakGermanExponents.prototype.testExp093n = function() {
  * Testing ClearspeakGermanExponents Example Exp094
  */
 sre.ClearspeakGermanExponents.prototype.testExp094n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>4</mn><mi>x</mi></msup></mrow></math>';
   var speech = '4 to the xth power';
   this.executeRuleTest(mathml, speech, preference);
@@ -1366,7 +1366,7 @@ sre.ClearspeakGermanExponents.prototype.testExp094n = function() {
  * Testing ClearspeakGermanExponents Example Exp095
  */
 sre.ClearspeakGermanExponents.prototype.testExp095n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mi>y</mi><mo>+</mo><mn>2' +
       '</mn></mrow></msup></mrow></math>';
   var speech = '3 raised to the y plus 2 power';
@@ -1378,7 +1378,7 @@ sre.ClearspeakGermanExponents.prototype.testExp095n = function() {
  * Testing ClearspeakGermanExponents Example Exp096
  */
 sre.ClearspeakGermanExponents.prototype.testExp096n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn>' +
       '<mi>y</mi><mo>−</mo><mn>3</mn></mrow><mo>)</mo></mrow></mrow><mrow>' +
       '<mn>3</mn><mi>z</mi><mo>+</mo><mn>8</mn></mrow></msup></mrow></math>';
@@ -1392,7 +1392,7 @@ sre.ClearspeakGermanExponents.prototype.testExp096n = function() {
  * Testing ClearspeakGermanExponents Example Exp097
  */
 sre.ClearspeakGermanExponents.prototype.testExp097n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/>' +
       '<mn>2</mn></msup></mrow></math>';
   var speech = 'p sub 1, to the second power';
@@ -1404,7 +1404,7 @@ sre.ClearspeakGermanExponents.prototype.testExp097n = function() {
  * Testing ClearspeakGermanExponents Example Exp098
  */
 sre.ClearspeakGermanExponents.prototype.testExp098n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/>' +
       '<mn>3</mn></msup></mrow></math>';
   var speech = 'p sub 1, to the third power';
@@ -1416,7 +1416,7 @@ sre.ClearspeakGermanExponents.prototype.testExp098n = function() {
  * Testing ClearspeakGermanExponents Example Exp099
  */
 sre.ClearspeakGermanExponents.prototype.testExp099n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/>' +
       '<mn>4</mn></msup></mrow></math>';
   var speech = 'p sub 1, to the fourth power';
@@ -1428,7 +1428,7 @@ sre.ClearspeakGermanExponents.prototype.testExp099n = function() {
  * Testing ClearspeakGermanExponents Example Exp100
  */
 sre.ClearspeakGermanExponents.prototype.testExp100n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/>' +
       '<mrow><mn>10</mn></mrow></msup></mrow></math>';
   var speech = 'p sub 1, to the tenth power';
@@ -1440,7 +1440,7 @@ sre.ClearspeakGermanExponents.prototype.testExp100n = function() {
  * Testing ClearspeakGermanExponents Example Exp101
  */
 sre.ClearspeakGermanExponents.prototype.testExp101n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/>' +
       '<mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>';
   var speech = 'p sub 1, raised to the x plus 1 power';
@@ -1452,7 +1452,7 @@ sre.ClearspeakGermanExponents.prototype.testExp101n = function() {
  * Testing ClearspeakGermanExponents Example Exp102
  */
 sre.ClearspeakGermanExponents.prototype.testExp102n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow></msub><msup><mrow/><mn>2</mn></msup></mrow></math>';
   var speech = 'p sub, x sub 1, to the second power';
@@ -1464,7 +1464,7 @@ sre.ClearspeakGermanExponents.prototype.testExp102n = function() {
  * Testing ClearspeakGermanExponents Example Exp103
  */
 sre.ClearspeakGermanExponents.prototype.testExp103n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow></msub><msup><mrow/><mn>3</mn></msup></mrow></math>';
   var speech = 'p sub, x sub 1, to the third power';
@@ -1476,7 +1476,7 @@ sre.ClearspeakGermanExponents.prototype.testExp103n = function() {
  * Testing ClearspeakGermanExponents Example Exp104
  */
 sre.ClearspeakGermanExponents.prototype.testExp104n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow></msub><msup><mrow/><mn>4</mn></msup></mrow></math>';
   var speech = 'p sub, x sub 1, to the fourth power';
@@ -1488,7 +1488,7 @@ sre.ClearspeakGermanExponents.prototype.testExp104n = function() {
  * Testing ClearspeakGermanExponents Example Exp105
  */
 sre.ClearspeakGermanExponents.prototype.testExp105n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow></msub><msup><mrow/><mrow><mn>10</mn></mrow>' +
       '</msup></mrow></math>';
@@ -1501,7 +1501,7 @@ sre.ClearspeakGermanExponents.prototype.testExp105n = function() {
  * Testing ClearspeakGermanExponents Example Exp106
  */
 sre.ClearspeakGermanExponents.prototype.testExp106n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1' +
       '</mn></msub></mrow></msub><msup><mrow/><mrow><mi>y</mi><mo>+</mo>' +
       '<mn>1</mn></mrow></msup></mrow></math>';
@@ -1514,7 +1514,7 @@ sre.ClearspeakGermanExponents.prototype.testExp106n = function() {
  * Testing ClearspeakGermanExponents Example Exp107
  */
 sre.ClearspeakGermanExponents.prototype.testExp107n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2' +
       '</mn></msup></mrow></msup></mrow></math>';
   var speech = '3 raised to the exponent, 2 to the second power, end exponent';
@@ -1526,7 +1526,7 @@ sre.ClearspeakGermanExponents.prototype.testExp107n = function() {
  * Testing ClearspeakGermanExponents Example Exp108
  */
 sre.ClearspeakGermanExponents.prototype.testExp108n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mn>2</mn><msup><mi>x' +
       '</mi><mn>2</mn></msup></mrow></msup></mrow></math>';
   var speech = '3 raised to the exponent, 2 x to the second power, end' +
@@ -1539,7 +1539,7 @@ sre.ClearspeakGermanExponents.prototype.testExp108n = function() {
  * Testing ClearspeakGermanExponents Example Exp109
  */
 sre.ClearspeakGermanExponents.prototype.testExp109n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>5</mn><mrow><msup><mn>2</mn><mn>3' +
       '</mn></msup></mrow></msup></mrow></math>';
   var speech = '5 raised to the exponent, 2 to the third power, end exponent';
@@ -1551,7 +1551,7 @@ sre.ClearspeakGermanExponents.prototype.testExp109n = function() {
  * Testing ClearspeakGermanExponents Example Exp110
  */
 sre.ClearspeakGermanExponents.prototype.testExp110n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>5</mn><mrow><mn>2</mn><msup><mi>x' +
       '</mi><mn>3</mn></msup></mrow></msup></mrow></math>';
   var speech = '5 raised to the exponent, 2 x to the third power, end exponent';
@@ -1563,7 +1563,7 @@ sre.ClearspeakGermanExponents.prototype.testExp110n = function() {
  * Testing ClearspeakGermanExponents Example Exp111
  */
 sre.ClearspeakGermanExponents.prototype.testExp111n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2' +
       '</mn></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>';
   var speech = '3 raised to the exponent, 2 to the second power, plus 1,' +
@@ -1576,7 +1576,7 @@ sre.ClearspeakGermanExponents.prototype.testExp111n = function() {
  * Testing ClearspeakGermanExponents Example Exp112
  */
 sre.ClearspeakGermanExponents.prototype.testExp112n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2' +
       '</mn></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow></math>';
   var speech = '3 raised to the exponent, 2 to the second power, end' +
@@ -1589,7 +1589,7 @@ sre.ClearspeakGermanExponents.prototype.testExp112n = function() {
  * Testing ClearspeakGermanExponents Example Exp113
  */
 sre.ClearspeakGermanExponents.prototype.testExp113n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>2' +
       '</mn></msup><mo>+</mo><mn>3</mn><msup><mi>x</mi><mn>3</mn></msup>' +
       '</mrow></msup></mrow></math>';
@@ -1603,7 +1603,7 @@ sre.ClearspeakGermanExponents.prototype.testExp113n = function() {
  * Testing ClearspeakGermanExponents Example Exp114
  */
 sre.ClearspeakGermanExponents.prototype.testExp114n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4' +
       '</mn></msup></mrow></msup></mrow></math>';
   var speech = '3 raised to the exponent, 3 to the fourth power, end exponent';
@@ -1615,7 +1615,7 @@ sre.ClearspeakGermanExponents.prototype.testExp114n = function() {
  * Testing ClearspeakGermanExponents Example Exp115
  */
 sre.ClearspeakGermanExponents.prototype.testExp115n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4' +
       '</mn></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>';
   var speech = '3 raised to the exponent, 3 to the fourth power, plus 2,' +
@@ -1628,7 +1628,7 @@ sre.ClearspeakGermanExponents.prototype.testExp115n = function() {
  * Testing ClearspeakGermanExponents Example Exp116
  */
 sre.ClearspeakGermanExponents.prototype.testExp116n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4' +
       '</mn></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow></math>';
   var speech = '3 raised to the exponent, 3 to the fourth power, end' +
@@ -1641,7 +1641,7 @@ sre.ClearspeakGermanExponents.prototype.testExp116n = function() {
  * Testing ClearspeakGermanExponents Example Exp117
  */
 sre.ClearspeakGermanExponents.prototype.testExp117n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>4' +
       '</mn></msup></mrow></msup></mrow></math>';
   var speech = '2 raised to the exponent, x to the fourth power, end exponent';
@@ -1653,7 +1653,7 @@ sre.ClearspeakGermanExponents.prototype.testExp117n = function() {
  * Testing ClearspeakGermanExponents Example Exp118
  */
 sre.ClearspeakGermanExponents.prototype.testExp118n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><msup><mrow><mn>10</mn>' +
       '</mrow><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow></msup></mrow>' +
       '</msup></mrow></math>';
@@ -1667,7 +1667,7 @@ sre.ClearspeakGermanExponents.prototype.testExp118n = function() {
  * Testing ClearspeakGermanExponents Example Exp119
  */
 sre.ClearspeakGermanExponents.prototype.testExp119n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow>' +
       '<mn>10</mn></mrow></msup></mrow></msup></mrow></math>';
   var speech = '3 raised to the exponent, 3 to the tenth power, end exponent';
@@ -1679,7 +1679,7 @@ sre.ClearspeakGermanExponents.prototype.testExp119n = function() {
  * Testing ClearspeakGermanExponents Example Exp120
  */
 sre.ClearspeakGermanExponents.prototype.testExp120n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow>' +
       '<mn>10</mn></mrow></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow>' +
       '</math>';
@@ -1693,7 +1693,7 @@ sre.ClearspeakGermanExponents.prototype.testExp120n = function() {
  * Testing ClearspeakGermanExponents Example Exp121
  */
 sre.ClearspeakGermanExponents.prototype.testExp121n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow>' +
       '<mn>10</mn></mrow></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow>' +
       '</math>';
@@ -1707,7 +1707,7 @@ sre.ClearspeakGermanExponents.prototype.testExp121n = function() {
  * Testing ClearspeakGermanExponents Example Exp122
  */
 sre.ClearspeakGermanExponents.prototype.testExp122n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
       '</mrow><mn>2</mn></msup></mrow></msup></mrow></math>';
@@ -1721,7 +1721,7 @@ sre.ClearspeakGermanExponents.prototype.testExp122n = function() {
  * Testing ClearspeakGermanExponents Example Exp123
  */
 sre.ClearspeakGermanExponents.prototype.testExp123n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
       '</mrow><mrow><mn>10</mn></mrow></msup></mrow></msup></mrow></math>';
@@ -1735,7 +1735,7 @@ sre.ClearspeakGermanExponents.prototype.testExp123n = function() {
  * Testing ClearspeakGermanExponents Example Exp124
  */
 sre.ClearspeakGermanExponents.prototype.testExp124n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
       '</mrow><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow>' +
@@ -1750,7 +1750,7 @@ sre.ClearspeakGermanExponents.prototype.testExp124n = function() {
  * Testing ClearspeakGermanExponents Example Exp125
  */
 sre.ClearspeakGermanExponents.prototype.testExp125n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
       '</mrow><mi>y</mi></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow>' +
@@ -1765,7 +1765,7 @@ sre.ClearspeakGermanExponents.prototype.testExp125n = function() {
  * Testing ClearspeakGermanExponents Example Exp126
  */
 sre.ClearspeakGermanExponents.prototype.testExp126n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
       '</mrow><mi>y</mi></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow>' +
@@ -1780,7 +1780,7 @@ sre.ClearspeakGermanExponents.prototype.testExp126n = function() {
  * Testing ClearspeakGermanExponents Example Exp127
  */
 sre.ClearspeakGermanExponents.prototype.testExp127n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1' +
       '</mn><mn>2</mn></mfrac><msup><mi>x</mi><mn>2</mn></msup></mrow>' +
       '</msup></mrow></math>';
@@ -1794,7 +1794,7 @@ sre.ClearspeakGermanExponents.prototype.testExp127n = function() {
  * Testing ClearspeakGermanExponents Example Exp128
  */
 sre.ClearspeakGermanExponents.prototype.testExp128n = function() {
-  var preference = 'Exponent_Power';
+  var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1' +
       '</mn><mn>2</mn></mfrac><msup><mrow><mrow><mo>(</mo><mrow><mfrac>' +
       '<mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><mi>σ</mi></mfrac></mrow>' +
