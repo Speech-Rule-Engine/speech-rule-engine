@@ -2374,8 +2374,6 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'children/*[1][text()="P"]'
   );
 
-
-
 };
 
 });  // goog.scope
