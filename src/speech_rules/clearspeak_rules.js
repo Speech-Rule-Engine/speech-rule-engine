@@ -124,6 +124,9 @@ sre.ClearspeakRules.initCustomFunctions_ = function() {
   addCQF('CQFisHyperbolic', sre.ClearspeakUtil.isHyperbolic);
   addCQF('CQFisLogarithm', sre.ClearspeakUtil.isLogarithmWithBase);
   addCQF('CQFspaceoutNumber', sre.MathspeakUtil.spaceoutNumber);
+  // Currency.
+  addCQF('CQFfirstCurrency', sre.ClearspeakUtil.firstCurrency);
+  addCQF('CQFlastCurrency', sre.ClearspeakUtil.lastCurrency);
 };
 
 
@@ -2367,6 +2370,27 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'unit-divide', 'clearspeak.default',
       '[n] children/*[1]; [t] "per"; [n] children/*[2]',
       'self::fraction', '@role="unit"');
+
+  // Currencies
+  defineRule(
+      'currency', 'clearspeak.default',
+      '[m] children/*[position()>1]; [n] children/*[1];',
+      'self::infixop', 'contains(@annotation, "clearspeak:unit")',
+      'children/*[1][@role="unit"]', 'CQFfirstCurrency'
+  );
+  defineRule(
+      'currency', 'clearspeak.Currency_Position',
+      '[m] children/*', 'self::infixop',
+      'contains(@annotation, "clearspeak:unit")'
+  );
+  defineSpecialisedRule(
+    'currency', 'clearspeak.Currency_Position', 'clearspeak.Currency_Prefix');
+  defineRule(
+      'currency', 'clearspeak.Currency_Prefix',
+      '[n] children/*[last()]; [m] children/*[position()<last()]; ',
+      'self::infixop', 'contains(@annotation, "clearspeak:unit")',
+      'children/*[last()][@role="unit"]', 'CQFlastCurrency'
+  );
 
 };
 

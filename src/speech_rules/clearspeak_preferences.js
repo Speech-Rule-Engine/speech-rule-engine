@@ -78,6 +78,7 @@ sre.ClearspeakPreferences.PREFERENCES = new sre.DynamicProperties({
   Bar: ['Auto', 'Conjugate'],
   Caps: ['Auto', 'SayCaps'],
   CombinationPermutation: ['Auto', 'ChoosePermute'],
+  Currency: ['Auto', 'Position', 'Prefix'],
   Ellipses: ['Auto', 'AndSoOn'],
   Exponent: ['Auto', 'AfterPower', 'Ordinal', 'OrdinalPower'],
   Fraction: ['Auto', 'EndFrac', 'FracOver', 'General', 'GeneralEndFrac',
