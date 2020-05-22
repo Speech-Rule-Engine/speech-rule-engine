@@ -252,7 +252,22 @@ sre.Grammar.prototype.runProcessors_ = function(text, funcs) {
  */
 sre.Grammar.translateString_ = function(text) {
   var engine = sre.Engine.getInstance();
-  return engine.evaluator(text, engine.dynamicCstr) || text;
+  var result = engine.evaluator(text, engine.dynamicCstr) || text;
+  return sre.Grammar.cleanUnit_(result);
+};
+
+
+/**
+ * Removes unit suffix in case no unit with this name was found.
+ * @param {string} text The text.
+ * @return {string} The cleaned text incase it contained the :unit suffix.
+ */
+sre.Grammar.cleanUnit_ =  function(text) {
+  console.log(text);
+  if (text.match(/:unit$/)) {
+    return text.replace(/:unit$/, '');
+  }
+  return text;
 };
 
 
@@ -383,4 +398,3 @@ sre.Grammar.getInstance().setPreprocessor('noTranslateText',
                                           sre.Grammar.noTranslateText_);
 sre.Grammar.getInstance().setCorrection('ignoreCaps',
                                         sre.Grammar.correctFont_);
-
