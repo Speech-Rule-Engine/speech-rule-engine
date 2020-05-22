@@ -124,6 +124,9 @@ sre.ClearspeakRules.initCustomFunctions_ = function() {
   addCQF('CQFisHyperbolic', sre.ClearspeakUtil.isHyperbolic);
   addCQF('CQFisLogarithm', sre.ClearspeakUtil.isLogarithmWithBase);
   addCQF('CQFspaceoutNumber', sre.MathspeakUtil.spaceoutNumber);
+  // Currency.
+  addCQF('CQFfirstCurrency', sre.ClearspeakUtil.firstCurrency);
+  addCQF('CQFlastCurrency', sre.ClearspeakUtil.lastCurrency);
 };
 
 
@@ -2330,6 +2333,64 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   );
 
 
+  // Unit rules.
+  defineRule(
+      'unit', 'clearspeak.default',
+      '[t] text() (grammar:annotation="unit":translate:plural)',
+      'self::identifier', '@role="unit"');
+  defineRule(
+      'unit-square', 'clearspeak.default',
+      '[t] "square"; [n] children/*[1]',
+      'self::superscript', '@role="unit"', 'children/*[2][text()=2]',
+      'name(children/*[1])="identifier"');
+
+  defineRule(
+      'unit-cubic', 'clearspeak.default',
+      '[t] "cubic"; [n] children/*[1]',
+      'self::superscript', '@role="unit"', 'children/*[2][text()=3]',
+      'name(children/*[1])="identifier"');
+  defineRule(
+      'reciprocal', 'clearspeak.default',
+      '[t] "reciprocal"; [n] children/*[1]',
+      'self::superscript', '@role="unit"', 'name(children/*[1])="identifier"',
+      'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
+      'children/*[2]/children/*[1][text()=1]',
+      'count(preceding-sibling::*)=0 or preceding-sibling::*[@role!="unit"]');
+  defineRule(
+      'reciprocal', 'clearspeak.default',
+      '[t] "per"; [n] children/*[1]',
+      'self::superscript', '@role="unit"', 'name(children/*[1])="identifier"',
+      'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
+      'children/*[2]/children/*[1][text()=1]',
+      'preceding-sibling::*[@role="unit"]');
+  defineRule(
+      'unit-combine', 'clearspeak.default',
+      '[m] children/*', 'self::infixop', '@role="unit"');
+  defineRule(
+      'unit-divide', 'clearspeak.default',
+      '[n] children/*[1]; [t] "per"; [n] children/*[2]',
+      'self::fraction', '@role="unit"');
+
+  // Currencies
+  defineRule(
+      'currency', 'clearspeak.default',
+      '[m] children/*[position()>1]; [n] children/*[1];',
+      'self::infixop', 'contains(@annotation, "clearspeak:unit")',
+      'children/*[1][@role="unit"]', 'CQFfirstCurrency'
+  );
+  defineRule(
+      'currency', 'clearspeak.Currency_Position',
+      '[m] children/*', 'self::infixop',
+      'contains(@annotation, "clearspeak:unit")'
+  );
+  defineSpecialisedRule(
+    'currency', 'clearspeak.Currency_Position', 'clearspeak.Currency_Prefix');
+  defineRule(
+      'currency', 'clearspeak.Currency_Prefix',
+      '[n] children/*[last()]; [m] children/*[position()<last()]; ',
+      'self::infixop', 'contains(@annotation, "clearspeak:unit")',
+      'children/*[last()][@role="unit"]', 'CQFlastCurrency'
+  );
 
 };
 
