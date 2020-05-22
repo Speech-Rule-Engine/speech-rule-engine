@@ -383,7 +383,7 @@ sre.SemanticMeaningCollator.prototype.default = function() {
 
 /**
  * Derives a default mapping from the collator if there is a possible reduction.
- * @return {?sre.SemanticDefault} The unambiguous default mapping. Null, if not
+ * @return {?sre.SemanticDefault} The unambiguous default mapping. Null, if no
  *     reduction can be achieved.
  */
 sre.SemanticMeaningCollator.prototype.newDefault = function() {

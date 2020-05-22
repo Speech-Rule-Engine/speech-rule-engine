@@ -1298,6 +1298,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[n] children/*[1]; [t] "per"; [n] children/*[2]',
       'self::fraction', '@role="unit"');
 
+  // Inference rules
   defineRule(
       'inference', 'mathspeak.default',
       '[t] "inference rule"; [m] content/*; [t] "with conclusion"; ' +
