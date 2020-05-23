@@ -263,7 +263,6 @@ sre.Grammar.translateString_ = function(text) {
  * @return {string} The cleaned text incase it contained the :unit suffix.
  */
 sre.Grammar.cleanUnit_ =  function(text) {
-  console.log(text);
   if (text.match(/:unit$/)) {
     return text.replace(/:unit$/, '');
   }

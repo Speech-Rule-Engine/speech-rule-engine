@@ -22,6 +22,7 @@ goog.provide('sre.MathspeakSpanish');
 goog.require('sre.MathStore');
 goog.require('sre.MathspeakSpanishUtil');
 goog.require('sre.MathspeakUtil');
+goog.require('sre.UnitUtil');
 
 
 
@@ -144,13 +145,13 @@ sre.MathspeakSpanish.initCustomFunctions_ = function() {
 
   addCTXF('CTXFordinalCounter', sre.MathspeakSpanishUtil.ordinalCounter);
   addCTXF('CTXFcontentIterator', sre.StoreUtil.contentIterator);
-  addCTXF('CTXFunitMultipliers', sre.MathspeakSpanishUtil.unitMultipliers);
+  addCTXF('CTXFunitMultipliers', sre.UnitUtil.unitMultipliers);
 
   // Layout related.
   addCQF('CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple);
   addCSF('CSFRemoveParens', sre.MathspeakUtil.removeParens);
 
-  addCQF('CQFoneLeft', sre.MathspeakSpanishUtil.oneLeft);
+  addCQF('CQFoneLeft', sre.UnitUtil.oneLeft);
 
   // Dummy.
   addCQF('CQFresetNesting', sre.MathspeakUtil.resetNestingDepth);
@@ -1242,39 +1243,42 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
 
   // Unit rules.
   defineRule(
-      'unit', 'mathspeak.default',
+      'unit-singular', 'mathspeak.default',
       '[t] text() (grammar:annotation="unit":translate)',
       'self::identifier', '@role="unit"');
   defineRule(
-      'unit', 'mathspeak.default',
+      'unit-plural', 'mathspeak.default',
       '[t] text() (grammar:annotation="unit":translate:plural)',
       'self::identifier', '@role="unit"',
       'not(contains(@grammar, "singularUnit"))');
+
   defineRule(
       'unit-square', 'mathspeak.default',
       '[t] "al cuadrado"; [n] children/*[1]',
       'self::superscript', '@role="unit"', 'children/*[2][text()=2]',
       'name(children/*[1])="identifier"');
-
   defineRule(
       'unit-cubic', 'mathspeak.default',
       '[t] "al cubo"; [n] children/*[1]',
       'self::superscript', '@role="unit"', 'children/*[2][text()=3]',
       'name(children/*[1])="identifier"');
+
   defineRule(
       'reciprocal', 'mathspeak.default',
-      '[t] "reciprocal"; [n] children/*[1]',
+      '[t] "recíproco"; [n] children/*[1]',
       'self::superscript', '@role="unit"', 'name(children/*[1])="identifier"',
       'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
       'children/*[2]/children/*[1][text()=1]',
       'count(preceding-sibling::*)=0 or preceding-sibling::*[@role!="unit"]');
   defineRule(
       'reciprocal', 'mathspeak.default',
-      '[t] "per"; [n] children/*[1]',
+      '[t] "por"; [n] children/*[1]',
       'self::superscript', '@role="unit"', 'name(children/*[1])="identifier"',
       'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
       'children/*[2]/children/*[1][text()=1]',
       'preceding-sibling::*[@role="unit"]');
+
+  // TODO: Write test for default.
   defineRule(
       'unit-combine', 'mathspeak.default',
       '[m] children/* (sepFunc:CTXFunitMultipliers)',
@@ -1292,7 +1296,7 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'not(contains(@grammar, "singularUnit"))', 'CQFoneLeft');
   defineRule(
       'unit-divide', 'mathspeak.default',
-      '[n] children/*[1]; [t] "per"; [n] children/*[2]',
+      '[n] children/*[1]; [t] "por"; [n] children/*[2]',
       'self::fraction', '@role="unit"');
 
 };
