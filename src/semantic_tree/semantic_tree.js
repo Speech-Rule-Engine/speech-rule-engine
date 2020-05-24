@@ -65,6 +65,7 @@ sre.SemanticTree = function(mml) {
     this.root = this.parser.parse(mml);
   }
   sre.SemanticTree.implicitVisitor_.visit(this.root, {});
+  sre.SemanticTree.unitVisitor_.visit(this.root, {});
 
   sre.SemanticAnnotations.getInstance().annotate(this.root);
 
@@ -84,6 +85,27 @@ sre.SemanticTree.implicitVisitor_ = new sre.SemanticVisitor(
           return !x.embellished &&
             x.textContent === sre.SemanticAttr.invisibleTimes();})) {
       node.role = sre.SemanticAttr.Role.IMPLICIT;
+    }
+    return false;
+  });
+
+
+/**
+ * Visitor to propagate unit expressions if possible.
+ * @type {sre.SemanticVisitor}
+ */
+sre.SemanticTree.unitVisitor_ = new sre.SemanticVisitor(
+  'general',
+  function(node, info) {
+    if (node.type === sre.SemanticAttr.Type.INFIXOP &&
+        node.role === sre.SemanticAttr.Role.MULTIPLICATION) {
+      var children = node.childNodes;
+      if (children.length &&
+          (sre.SemanticPred.isPureUnit(children[0]) ||
+           sre.SemanticPred.isUnitCounter(children[0])) &&
+          node.childNodes.slice(1).every(sre.SemanticPred.isPureUnit)) {
+      node.role = sre.SemanticAttr.Role.UNIT;
+      }
     }
     return false;
   });
