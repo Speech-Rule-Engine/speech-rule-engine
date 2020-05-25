@@ -4341,7 +4341,7 @@ sre.MathspeakCharSpanishTest.prototype.testMathspeakUnits = function() {
   this.executeUnitTest('mW', ['miliwatt', 'miliwatt', 'miliwatt']);
   this.executeUnitTest('kwh', ['kilowatt hora', 'kilowatt hora', 'kilowatt hora']);
   this.executeUnitTest('kWh', ['kilowatt hora', 'kilowatt hora', 'kilowatt hora']);
-  this.executeUnitTest('J', ['Joules', 'Joules', 'Joules']);
+  this.executeUnitTest('J', ['Joule', 'Joule', 'Joule']);
   this.executeUnitTest('N', ['Newton', 'Newton', 'Newton']);
   this.executeUnitTest('A', ['Ampere', 'Ampere', 'Ampere']);
   this.executeUnitTest('V', ['Voltio', 'Voltio', 'Voltio']);

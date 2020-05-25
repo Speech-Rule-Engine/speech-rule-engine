@@ -2151,11 +2151,11 @@ sre.MathspeakSpanishTest.prototype.testSample_13_1_2 = function() {
       '<mo>·</mo><msup><mi mathvariant="normal" class="MathML-Unit">s</mi>' +
       '<mrow><mo>-</mo><mn>2</mn></mrow>' +
       '</msup></mrow>';
-  this.executeRuleTest(mml, '1 Joules igual 1 kilogramo por metro al' +
+  this.executeRuleTest(mml, '1 Joule igual 1 kilogramo por metros al' +
                        ' cuadrado por segundos superíndice menos 2', 'default');
-  this.executeRuleTest(mml, '1 Joules igual 1 kilogramo por metro al' +
+  this.executeRuleTest(mml, '1 Joule igual 1 kilogramo por metros al' +
                        ' cuadrado por segundos sup menos 2', 'brief');
-  this.executeRuleTest(mml, '1 Joules igual 1 kilogramo por metro al' +
+  this.executeRuleTest(mml, '1 Joule igual 1 kilogramo por metros al' +
                        ' cuadrado por segundos sup menos 2', 'sbrief');
 };
 
