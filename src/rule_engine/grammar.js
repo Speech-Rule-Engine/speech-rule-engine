@@ -264,6 +264,7 @@ sre.Grammar.translateString_ = function(text) {
  */
 sre.Grammar.cleanUnit_ =  function(text) {
   if (text.match(/:unit$/)) {
+    sre.Grammar.getInstance().setParameter('plural', false);
     return text.replace(/:unit$/, '');
   }
   return text;

@@ -293,12 +293,16 @@ sre.SemanticProcessor.prototype.combineUnits_ = function(nodes) {
       unitNode = comp.pop();
     }
     if (comp.length > 1) {
-      var operator = sre.SemanticProcessor.getInstance().factory_.
-          makeContentNode(sre.SemanticAttr.invisibleTimes());
       // For now we assume this is a multiplication using invisible times.
+      var operators = sre.SemanticProcessor.getInstance().factory_.
+          makeMultipleContentNodes(comp.length - 1,
+                                   sre.SemanticAttr.invisibleTimes());
+      // TODO: Refactor with similar code above.
       unitNode = sre.SemanticProcessor.getInstance().
-          infixNode_(comp, operator);
+          infixNode_(comp, /**@type{!sre.SemanticNode}*/(operators[0]));
       unitNode.role = sre.SemanticAttr.Role.UNIT;
+      operators.forEach(function(op) {op.parent = unitNode;});
+      unitNode.contentNodes = operators;
     }
     if (unitNode) {
       result.push(unitNode);
