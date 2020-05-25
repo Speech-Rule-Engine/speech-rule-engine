@@ -911,24 +911,26 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'square', 'clearspeak.default',
       '[n] children/*[1]; [t] "squared"',
-      'self::superscript', 'children/*[2][text()="2"]',
+      'self::superscript', '@role!="unit"',
+      'children/*[2][text()="2"]',
       'name(children/*[1])!="text" or ' +
       // Special exception dealing with footnotes.
       'not(name(children/*[1])="text" and ' +
       '(name(../../../punctuated[@role="text"]/..)="stree" ' +
-      'or name(..)="stree"))', 'self::*', 'self::*'
+      'or name(..)="stree"))', 'self::*'
   );
 
   // Cube
   defineRule(
       'cube', 'clearspeak.default',
       '[n] children/*[1]; [t] "cubed"',
-      'self::superscript', 'children/*[2][text()="3"]',
+      'self::superscript', '@role!="unit"',
+      'children/*[2][text()="3"]',
       'name(children/*[1])!="text" or ' +
       // Special exception dealing with footnotes.
       'not(name(children/*[1])="text" and ' +
       '(name(../../../punctuated[@role="text"]/..)="stree" ' +
-      'or name(..)="stree"))', 'self::*', 'self::*'
+      'or name(..)="stree"))', 'self::*'
   );
 
 
@@ -2335,40 +2337,53 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
 
   // Unit rules.
   defineRule(
-      'unit', 'clearspeak.default',
-      '[t] text() (grammar:annotation="unit":translate:plural)',
+      'unit-singular', 'clearspeak.default',
+      '[t] text() (grammar:annotation="unit":translate)',
       'self::identifier', '@role="unit"');
+  defineRule(
+      'unit-plural', 'clearspeak.default',
+      '[t] text() (grammar:annotation="unit":translate:plural)',
+      'self::identifier', '@role="unit"',
+      'not(contains(@grammar, "singularUnit"))');
+
   defineRule(
       'unit-square', 'clearspeak.default',
       '[t] "square"; [n] children/*[1]',
       'self::superscript', '@role="unit"', 'children/*[2][text()=2]',
       'name(children/*[1])="identifier"');
-
   defineRule(
       'unit-cubic', 'clearspeak.default',
       '[t] "cubic"; [n] children/*[1]',
       'self::superscript', '@role="unit"', 'children/*[2][text()=3]',
       'name(children/*[1])="identifier"');
+
   defineRule(
-      'reciprocal', 'clearspeak.default',
+      'unit-reciprocal', 'clearspeak.default',
       '[t] "reciprocal"; [n] children/*[1]',
       'self::superscript', '@role="unit"', 'name(children/*[1])="identifier"',
       'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
       'children/*[2]/children/*[1][text()=1]',
       'count(preceding-sibling::*)=0 or preceding-sibling::*[@role!="unit"]');
   defineRule(
-      'reciprocal', 'clearspeak.default',
-      '[t] "per"; [n] children/*[1]',
+      'unit-reciprocal', 'clearspeak.default',
+      '[t] "per"; [n] children/*[1] (grammar:singularUnit)',
       'self::superscript', '@role="unit"', 'name(children/*[1])="identifier"',
       'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
       'children/*[2]/children/*[1][text()=1]',
       'preceding-sibling::*[@role="unit"]');
+
   defineRule(
       'unit-combine', 'clearspeak.default',
       '[m] children/*', 'self::infixop', '@role="unit"');
   defineRule(
+      'unit-combine-singular', 'clearspeak.default',
+      '[n] children/*[1]; [n] children/*[2] (grammar:singularUnit); ' +
+      '[m] children/*[position()>2]',
+      'self::infixop', '@role="unit"', 'name(children/*[1])="number"',
+      'children/*[1][text()=1]');
+  defineRule(
       'unit-divide', 'clearspeak.default',
-      '[n] children/*[1]; [t] "per"; [n] children/*[2]',
+      '[n] children/*[1]; [t] "per"; [n] children/*[2] (grammar:singularUnit)',
       'self::fraction', '@role="unit"');
 
   // Currencies
