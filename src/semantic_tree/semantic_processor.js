@@ -86,18 +86,13 @@ sre.SemanticProcessor.prototype.identifierNode = function(content, font, unit) {
 
 
 /**
- * Create a branching node for an implicit operation, currently assumed to
- * be of multiplicative type.
+ * Create a branching node for an implicit operation, currently assumed to be of
+ * multiplicative type. Determines mixed numbers and unit elements.
  * @param {!Array.<!sre.SemanticNode>} nodes The operands.
  * @return {!sre.SemanticNode} The new branch node.
  * @private
  */
 sre.SemanticProcessor.prototype.implicitNode_ = function(nodes) {
-  nodes = sre.SemanticProcessor.getInstance().getMixedNumbers_(nodes);
-  nodes = sre.SemanticProcessor.getInstance().combineUnits_(nodes);
-  if (nodes.length === 1) {
-    return nodes[0];
-  }
   var operators = sre.SemanticProcessor.getInstance().factory_.
       makeMultipleContentNodes(nodes.length - 1,
                                sre.SemanticAttr.invisibleTimes());
@@ -108,6 +103,23 @@ sre.SemanticProcessor.prototype.implicitNode_ = function(nodes) {
   operators.forEach(function(op) {op.parent = newNode;});
   newNode.contentNodes = operators;
   return newNode;
+};
+
+
+/**
+ * Process a list of nodes and create a node for implicit operations, currently
+ * assumed to be of multiplicative type. Determines mixed numbers and unit
+ * elements.
+ * @param {!Array.<!sre.SemanticNode>} nodes The operands.
+ * @return {!sre.SemanticNode} The new branch node.
+ */
+sre.SemanticProcessor.prototype.implicitNode = function(nodes) {
+  nodes = sre.SemanticProcessor.getInstance().getMixedNumbers_(nodes);
+  nodes = sre.SemanticProcessor.getInstance().combineUnits_(nodes);
+  if (nodes.length === 1) {
+    return nodes[0];
+  }
+  return sre.SemanticProcessor.getInstance().implicitNode_(nodes);
 };
 
 
@@ -294,15 +306,8 @@ sre.SemanticProcessor.prototype.combineUnits_ = function(nodes) {
     }
     if (comp.length > 1) {
       // For now we assume this is a multiplication using invisible times.
-      var operators = sre.SemanticProcessor.getInstance().factory_.
-          makeMultipleContentNodes(comp.length - 1,
-                                   sre.SemanticAttr.invisibleTimes());
-      // TODO: Refactor with similar code above.
-      unitNode = sre.SemanticProcessor.getInstance().
-          infixNode_(comp, /**@type{!sre.SemanticNode}*/(operators[0]));
+      unitNode = sre.SemanticProcessor.getInstance().implicitNode_(comp);
       unitNode.role = sre.SemanticAttr.Role.UNIT;
-      operators.forEach(function(op) {op.parent = unitNode;});
-      unitNode.contentNodes = operators;
     }
     if (unitNode) {
       result.push(unitNode);
@@ -453,7 +458,7 @@ sre.SemanticProcessor.prototype.operationsInRow_ = function(nodes) {
       nodes, sre.SemanticPred.isOperator);
   // At this point, we know that split.head is not empty!
   var node = sre.SemanticProcessor.getInstance().prefixNode_(
-      sre.SemanticProcessor.getInstance().implicitNode_(
+      sre.SemanticProcessor.getInstance().implicitNode(
           /** @type {!Array.<!sre.SemanticNode>} */ (split.head)),
       prefix);
   if (!split.div) {
@@ -506,7 +511,7 @@ sre.SemanticProcessor.prototype.operationsTree_ = function(
   }
 
   var node = sre.SemanticProcessor.getInstance().prefixNode_(
-      sre.SemanticProcessor.getInstance().implicitNode_(split.head), prefixes);
+      sre.SemanticProcessor.getInstance().implicitNode(split.head), prefixes);
   var newNode = sre.SemanticProcessor.getInstance().appendOperand_(
       root, lastop, node);
   if (!split.div) {
