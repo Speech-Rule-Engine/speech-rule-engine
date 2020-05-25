@@ -5,8 +5,7 @@
     "key": "$",
     "mappings": {
       "default": {
-        "default": "dollars",
-        "singular": "dollar"
+        "default": "dollar"
       }
     },
     "names": [
@@ -18,8 +17,7 @@
     "key": "£",
     "mappings": {
       "default": {
-        "default": "pounds",
-        "singular": "pound"
+        "default": "pound"
       }
     },
     "names": [
@@ -43,8 +41,7 @@
     "key": "€",
     "mappings": {
       "default": {
-        "default": "euros",
-        "singular": "euro"
+        "default": "euro"
       }
     },
     "names": [
@@ -56,7 +53,7 @@
     "key": "₡",
     "mappings": {
       "default": {
-        "default": "colons"
+        "default": "colon"
       }
     },
     "names": [
@@ -80,8 +77,7 @@
     "key": "₣",
     "mappings": {
       "default": {
-        "default": "francs",
-        "singular": "franc"
+        "default": "franc"
       }
     },
     "names": [
@@ -105,7 +101,7 @@
     "key": "₥",
     "mappings": {
       "default": {
-        "default": "mills"
+        "default": "mill"
       }
     },
     "names": [
@@ -141,7 +137,7 @@
     "key": "₨",
     "mappings": {
       "default": {
-        "default": "rupees"
+        "default": "rupee"
       }
     },
     "names": [
@@ -165,8 +161,7 @@
     "key": "₪",
     "mappings": {
       "default": {
-        "default": "sheqels",
-        "singular": "sheqel"
+        "default": "sheqel"
       }
     },
     "names": [
@@ -238,7 +233,7 @@
     "key": "₱",
     "mappings": {
       "default": {
-        "default": "pesos"
+        "default": "peso"
       }
     },
     "names": [
@@ -262,7 +257,7 @@
     "key": "₳",
     "mappings": {
       "default": {
-        "default": "australs"
+        "default": "austral"
       }
     },
     "names": [
@@ -274,7 +269,7 @@
     "key": "₴",
     "mappings": {
       "default": {
-        "default": "hryvnias"
+        "default": "hryvnia"
       }
     },
     "names": [
@@ -310,7 +305,7 @@
     "key": "₷",
     "mappings": {
       "default": {
-        "default": "spesmilos"
+        "default": "spesmilo"
       }
     },
     "names": [
@@ -322,7 +317,7 @@
     "key": "₸",
     "mappings": {
       "default": {
-        "default": "tenges"
+        "default": "tenge"
       }
     },
     "names": [
@@ -334,7 +329,7 @@
     "key": "₺",
     "mappings": {
       "default": {
-        "default": "turkish liras"
+        "default": "turkish lira"
       }
     },
     "names": [
@@ -358,8 +353,7 @@
     "key": "¢",
     "mappings": {
       "default": {
-        "default": "cents",
-        "singular": "cent"
+        "default": "cent"
       }
     },
     "names": [
