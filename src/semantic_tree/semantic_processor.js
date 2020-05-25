@@ -557,8 +557,7 @@ sre.SemanticProcessor.prototype.appendMultiplicativeOp_ = function(
     root, op, node) {
   // This ensures that implicit nodes stay together, which is probably what
   // we want.
-  if (      sre.SemanticPred.isImplicit(root) ||
-            root.role === sre.SemanticAttr.Role.IMPLICIT) {
+  if (sre.SemanticPred.isImplicit(root)) {
     return sre.SemanticProcessor.getInstance().infixNode_([root, node], op);
   }
   var lastRoot = root;
@@ -601,8 +600,7 @@ sre.SemanticProcessor.prototype.appendExistingOperator_ = function(
   if (!root || root.type !== sre.SemanticAttr.Type.INFIXOP ||
       // This ensures that implicit nodes stay together, which is probably what
       // we want.
-      sre.SemanticPred.isImplicit(root) ||
-      root.role === sre.SemanticAttr.Role.IMPLICIT) {
+      sre.SemanticPred.isImplicit(root)) {
     return false;
   }
   if (root.contentNodes[0].equals(op)) {
