@@ -39,9 +39,6 @@ sre.UnitUtil.unitMultipliers = function(nodes, context) {
   var children = nodes;
   var counter = 0;
   return function() {
-    console.log(counter);
-    console.log(children[counter].toString());
-    console.log(children[counter+1].toString());
     var descr = sre.AuditoryDescription.create({
       text: (sre.UnitUtil.rightMostUnit(children[counter]) &&
              sre.UnitUtil.leftMostUnit(children[counter + 1])) ?

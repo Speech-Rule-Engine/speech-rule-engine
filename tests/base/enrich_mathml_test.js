@@ -8006,7 +8006,7 @@ sre.EnrichMathmlTest.prototype.testMathmlSimpleUnits = function() {
   );
   this.executeMathmlTest(
       '<mn>3</mn><mi mathvariant="normal" class="MathML-Unit">km</mi>',
-      '<math type="infixop" role="implicit" id="3" children="0,1"' +
+      '<math type="infixop" role="unit" id="3" children="0,1"' +
       ' content="2">' +
       '<mn type="number" role="integer" id="0" parent="3">3</mn>' +
       '<mo type="operator" role="multiplication" id="2" parent="3"' +
@@ -8018,19 +8018,17 @@ sre.EnrichMathmlTest.prototype.testMathmlSimpleUnits = function() {
   this.executeMathmlTest(
       '<mn>3</mn><mi mathvariant="normal" class="MathML-Unit">km</mi>' +
       '<mi mathvariant="normal" class="MathML-Unit">h</mi>',
-      '<math type="infixop" role="implicit" id="6" children="0,4"' +
-      ' content="5">' +
-      '<mn type="number" role="integer" id="0" parent="6">3</mn>' +
-      '<mo type="operator" role="multiplication" id="5" parent="6"' +
-      ' added="true" operator="infixop,⁢">⁢</mo>' +
-      '<mrow type="infixop" role="unit" id="4" children="1,2" content="3"' +
-      ' parent="6">' +
-      '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
-      ' role="unit" id="1" parent="4">km</mi>' +
-      '<mo type="operator" role="multiplication" id="3" parent="4"' +
+      '<math type="infixop" role="unit" id="5" children="0,1,2"' +
+      ' content="3,4">' +
+      '<mn type="number" role="integer" id="0" parent="5">3</mn>' +
+      '<mo type="operator" role="multiplication" id="3" parent="5"' +
       ' added="true" operator="infixop,⁢">⁢</mo>' +
       '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
-      ' role="unit" id="2" parent="4">h</mi>' +
+      ' role="unit" id="1" parent="5">km</mi>' +
+      '<mo type="operator" role="multiplication" id="4" parent="5"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
+      ' role="unit" id="2" parent="5">h</mi>' +
       '</mrow>' +
       '</math>'
   );
@@ -8158,23 +8156,25 @@ sre.EnrichMathmlTest.prototype.testMathmlComplexUnits = function() {
       '<msup>' +
       '<mi mathvariant="normal" class="MathML-Unit">s</mi>' +
       '<mn>2</mn></msup></mfrac>',
-      '<math type="infixop" role="implicit" id="13" children="0,1,10"' +
-      ' content="11,12">' +
-      '<mn type="number" role="integer" id="0" parent="13">3</mn>' +
-      '<mo type="operator" role="multiplication" id="11" parent="13"' +
+      '<math type="infixop" role="implicit" id="14" children="0,1,11"' +
+      ' content="12,13">' +
+      '<mn type="number" role="integer" id="0" parent="14">3</mn>' +
+      '<mo type="operator" role="multiplication" id="12" parent="14"' +
       ' added="true" operator="infixop,⁢">⁢</mo>' +
-      '<mi type="identifier" role="latinletter" id="1" parent="13">m</mi>' +
-      '<mo type="operator" role="multiplication" id="12" parent="13"' +
+      '<mi type="identifier" role="latinletter" id="1" parent="14">m</mi>' +
+      '<mo type="operator" role="multiplication" id="13" parent="14"' +
       ' added="true" operator="infixop,⁢">⁢</mo>' +
-      '<mrow type="infixop" role="unit" id="10" children="2,3,8"' +
-      ' content="9" parent="13">' +
+      '<mrow type="infixop" role="unit" id="11" children="2,3,8"' +
+      ' content="9,10" parent="14">' +
       '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
-      ' role="unit" id="2" parent="10">km</mi>' +
-      '<mo type="operator" role="multiplication" id="9" parent="10"' +
+      ' role="unit" id="2" parent="11">km</mi>' +
+      '<mo type="operator" role="multiplication" id="9" parent="11"' +
       ' added="true" operator="infixop,⁢">⁢</mo>' +
       '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
-      ' role="unit" id="3" parent="10">h</mi>' +
-      '<mfrac type="fraction" role="unit" id="8" children="4,7" parent="10">' +
+      ' role="unit" id="3" parent="11">h</mi>' +
+      '<mo type="operator" role="multiplication" id="10" parent="11"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mfrac type="fraction" role="unit" id="8" children="4,7" parent="11">' +
       '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
       ' role="unit" id="4" parent="8">N</mi>' +
       '<msup type="superscript" role="unit" id="7" children="5,6" parent="8">' +

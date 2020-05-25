@@ -280,16 +280,31 @@ sre.SemanticProcessor.prototype.combineUnits_ = function(nodes) {
   do {
     var comp = partition.comp.shift();
     var rel = partition.rel.shift();
+    var unitNode = null;
+    var last = result.pop();
+    if (last) {
+      if (!comp.length || !sre.SemanticPred.isUnitCounter(last)) {
+        result.push(last);
+      } else {
+        comp.unshift(last);
+      }
+    }
     if (comp.length === 1) {
-      result = result.concat(comp);
+      unitNode = comp.pop();
     }
     if (comp.length > 1) {
-      var operator = sre.SemanticProcessor.getInstance().factory_.
-          makeContentNode(sre.SemanticAttr.invisibleTimes());
       // For now we assume this is a multiplication using invisible times.
-      var unitNode = sre.SemanticProcessor.getInstance().
-          infixNode_(comp, operator);
+      var operators = sre.SemanticProcessor.getInstance().factory_.
+          makeMultipleContentNodes(comp.length - 1,
+                                   sre.SemanticAttr.invisibleTimes());
+      // TODO: Refactor with similar code above.
+      unitNode = sre.SemanticProcessor.getInstance().
+          infixNode_(comp, /**@type{!sre.SemanticNode}*/(operators[0]));
       unitNode.role = sre.SemanticAttr.Role.UNIT;
+      operators.forEach(function(op) {op.parent = unitNode;});
+      unitNode.contentNodes = operators;
+    }
+    if (unitNode) {
       result.push(unitNode);
     }
     if (rel) {
@@ -542,7 +557,8 @@ sre.SemanticProcessor.prototype.appendMultiplicativeOp_ = function(
     root, op, node) {
   // This ensures that implicit nodes stay together, which is probably what
   // we want.
-  if (root.role === sre.SemanticAttr.Role.IMPLICIT) {
+  if (      sre.SemanticPred.isImplicit(root) ||
+            root.role === sre.SemanticAttr.Role.IMPLICIT) {
     return sre.SemanticProcessor.getInstance().infixNode_([root, node], op);
   }
   var lastRoot = root;
@@ -585,6 +601,7 @@ sre.SemanticProcessor.prototype.appendExistingOperator_ = function(
   if (!root || root.type !== sre.SemanticAttr.Type.INFIXOP ||
       // This ensures that implicit nodes stay together, which is probably what
       // we want.
+      sre.SemanticPred.isImplicit(root) ||
       root.role === sre.SemanticAttr.Role.IMPLICIT) {
     return false;
   }
@@ -2098,9 +2115,8 @@ sre.SemanticProcessor.prototype.fractionNode_ = function(denom, enume) {
     return sre.SemanticPred.isAttribute('type', 'NUMBER')(x) &&
         sre.SemanticPred.isAttribute('role', 'INTEGER')(x);
   }) ? sre.SemanticAttr.Role.VULGAR :
-      newNode.childNodes.every(function(x) {
-        return sre.SemanticPred.isAttribute('role', 'UNIT')(x);
-      }) ? sre.SemanticAttr.Role.UNIT : sre.SemanticAttr.Role.DIVISION;
+    newNode.childNodes.every(sre.SemanticPred.isPureUnit) ?
+    sre.SemanticAttr.Role.UNIT : sre.SemanticAttr.Role.DIVISION;
   this.propagateSimpleFunction(newNode);
   return newNode;
 };

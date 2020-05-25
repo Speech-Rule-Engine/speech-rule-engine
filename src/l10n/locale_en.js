@@ -180,7 +180,11 @@ sre.Locale.en = {
 
   PLURAL_UNIT: {
     'foot': 'feet',
-    'inch': 'inches'
+    'inch': 'inches',
+    'square foot': 'square feet',
+    'square inch': 'square inches',
+    'cubic foot': 'cubic feet',
+    'cubic inch': 'cubic inches'
   },
 
   NUMBERS: sre.Numbers.en.NUMBERS,
