@@ -1254,12 +1254,12 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
 
   defineRule(
       'unit-square', 'mathspeak.default',
-      '[t] "al cuadrado"; [n] children/*[1]',
+      '[n] children/*[1]; [t] "cuadrado"',
       'self::superscript', '@role="unit"', 'children/*[2][text()=2]',
       'name(children/*[1])="identifier"');
   defineRule(
       'unit-cubic', 'mathspeak.default',
-      '[t] "al cubo"; [n] children/*[1]',
+      '[n] children/*[1]; [t] "cúbico"',
       'self::superscript', '@role="unit"', 'children/*[2][text()=3]',
       'name(children/*[1])="identifier"');
 
@@ -1283,20 +1283,33 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'unit-combine', 'mathspeak.default',
       '[m] children/* (sepFunc:CTXFunitMultipliers)',
       'self::infixop', '@role="unit"');
-  defineRule(
-      'unit-combine', 'mathspeak.default',
+  // TODO: Go over that again after refactoring of Units.
+   defineRule(
+      'unit-combine-mult', 'mathspeak.default',
       '[m] children/* (sepFunc:CTXFunitMultipliers);',
       'self::infixop', '@role="multiplication" or @role="implicit"',
       'children/*[@role="unit"]');
   defineRule(
-      'unit-combine', 'mathspeak.default',
-      '[n] . (grammar:singularUnit);',
-      'self::infixop', '@role="multiplication" or @role="implicit"',
-      'children/*[@role="unit"]',
-      'not(contains(@grammar, "singularUnit"))', 'CQFoneLeft');
+      'unit-combiner-singular', 'mathspeak.default',
+      '[n] children/*[1]; [t] "por"; ' +
+      '[m] children/*[position()>1] (grammar:!singularUnit, sepFunc:CTXFunitMultipliers)',
+      'self::infixop', '@role="unit"', 'name(children/*[1])!="number"',
+      'contains(@grammar, "singularUnit")', 'count(children/*)>1');
+  defineRule(
+      'unit-combine-singular-first', 'mathspeak.default',
+      '[n] children/*[1]; [n] children/*[2] (grammar:singularUnit); ' +
+      '[t] "por"; ' +
+      '[m] children/*[position()>2] (sepFunc:CTXFunitMultipliers)',
+      'self::infixop', '@role="unit"', 'name(children/*[1])="number"',
+      'children/*[1][text()=1]');
+  defineRule(
+      'unit-combine-singular-first', 'mathspeak.default',
+      '[n] children/*[1]; [n] children/*[2] (grammar:singularUnit); ',
+      'self::infixop', '@role="unit"', 'name(children/*[1])="number"',
+      'children/*[1][text()=1]', 'count(children/*)=2');
   defineRule(
       'unit-divide', 'mathspeak.default',
-      '[n] children/*[1]; [t] "por"; [n] children/*[2]',
+      '[n] children/*[1]; [t] "por"; [n] children/*[2] (grammar:singularUnit)',
       'self::fraction', '@role="unit"');
 
 };
