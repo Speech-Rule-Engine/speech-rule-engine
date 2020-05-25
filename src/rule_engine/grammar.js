@@ -251,9 +251,24 @@ sre.Grammar.prototype.runProcessors_ = function(text, funcs) {
  * @private
  */
 sre.Grammar.translateString_ = function(text) {
+  text = sre.Grammar.prepareUnit_(text);
   var engine = sre.Engine.getInstance();
   var result = engine.evaluator(text, engine.dynamicCstr) || text;
   return sre.Grammar.cleanUnit_(result);
+};
+
+
+/**
+ * Prepares a unit expression for matching.
+ * @param {string} text The text to test.
+ * @return {string} The cleaned string.
+ */
+sre.Grammar.prepareUnit_ =  function(text) {
+  var match = text.match(/:unit$/);
+  return match ?
+    text.slice(0, match.index).replace(/\s+/g, ' ') +
+    text.slice(match.index) :
+    text;
 };
 
 
