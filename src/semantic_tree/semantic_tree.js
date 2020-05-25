@@ -75,6 +75,7 @@ sre.SemanticTree = function(mml) {
 /**
  * Visitor to rewrite implied times operations into implicit operations.
  * @type {sre.SemanticVisitor}
+ * @private
  */
 sre.SemanticTree.implicitVisitor_ = new sre.SemanticVisitor(
   'general',
@@ -93,6 +94,7 @@ sre.SemanticTree.implicitVisitor_ = new sre.SemanticVisitor(
 /**
  * Visitor to propagate unit expressions if possible.
  * @type {sre.SemanticVisitor}
+ * @private
  */
 sre.SemanticTree.unitVisitor_ = new sre.SemanticVisitor(
   'general',
