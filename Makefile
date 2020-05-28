@@ -120,8 +120,10 @@ COMPILER_FLAGS = $(EXTERN_FLAGS) $(ERROR_FLAGS)
 CLOSURE_LIB_NAME = google-closure-library
 CLOSURE_LIB = $(NODE_MODULES)/$(CLOSURE_LIB_NAME)
 CLOSURE_ROOT = $(CLOSURE_LIB)/closure/bin/build
+GOOG_BASE = $(CLOSURE_LIB)/closure/goog/base.js
+GOOG_BASE_CLEAN = $(CLOSURE_LIB)/sre_cleaned
 COMPILER_JAR = $(NODE_MODULES)/google-closure-compiler/cli.js
-CLOSURE_COMPILER = $(COMPILER_JAR) --dependency_mode=PRUNE $(CLOSURE_LIB)/closure/goog/base.js $(ERROR_FLAGS) $(EXTERN_FLAGS) '!**externs.js' --output_wrapper_file $(LICENSE)
+CLOSURE_COMPILER = $(COMPILER_JAR) --dependency_mode=PRUNE $(GOOG_BASE) $(ERROR_FLAGS) $(EXTERN_FLAGS) '!**externs.js' --output_wrapper_file $(LICENSE)
 DEPSWRITER = python $(CLOSURE_ROOT)/depswriter.py
 
 space = $(null) #
@@ -136,6 +138,11 @@ FIXJSSTYLE = python $(LINT_ROOT)/fixjsstyle.py --strict --jsdoc -x '$(LINT_EXCLU
 #######################################################################3
 
 all: directories deps compile start_files maps
+
+## This is a hack to get around a closure library problem.
+$(GOOG_BASE_CLEAN):
+	@sed -i s/"^.*@deprecated Use ES6.*"// $(GOOG_BASE)
+	@touch $(GOOG_BASE_CLEAN)
 
 directories: $(BIN_DIR)
 
@@ -154,7 +161,7 @@ fixjsstyle:
 
 compile: $(TARGET)
 
-$(TARGET): $(SRC)
+$(TARGET): $(GOOG_BASE_CLEAN) $(SRC)
 	@echo Compiling Speech Rule Engine
 	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Cli --entry_point=goog:sre.Api --js_output_file=$(TARGET) $^
 
@@ -212,7 +219,7 @@ test: directories test_deps deps test_compile test_script maps run_test
 
 test_compile: $(TEST_TARGET)
 
-$(TEST_TARGET): $(TEST_SRC) $(SRC)
+$(TEST_TARGET): $(GOOG_BASE_CLEAN) $(TEST_SRC) $(SRC)
 	@echo Compiling test version of Speech Rule Engine
 	@$(CLOSURE_COMPILER) $(TEST_FLAGS) --entry_point=goog:sre.Tests --js_output_file=$(TEST_TARGET) $^
 
@@ -279,7 +286,7 @@ $(IEMAPS_FILE):
 	@echo '}\n' >> $(IEMAPS_FILE).tmp
 	@mv $(IEMAPS_FILE).tmp $(IEMAPS_FILE)
 
-api: $(SRC)
+api: $(GOOG_BASE_CLEAN) $(SRC)
 	@echo Compiling Speech Rule Engine API
 	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Api --js_output_file=$(TARGET) $^
 
@@ -288,35 +295,35 @@ api: $(SRC)
 # Other useful targets.
 ##################################################################
 
-browser: $(SRC)
+browser: $(GOOG_BASE_CLEAN) $(SRC)
 	@echo Compiling browser ready Speech Rule Engine
 	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Browser --js_output_file=$(BROWSER) $^
 
 clean_browser:
 	rm -f $(BROWSER)
 
-mathjax: $(SRC)
+mathjax: $(GOOG_BASE_CLEAN) $(SRC)
 	@echo Compiling MathJax ready Speech Rule Engine
 	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Mathjax --js_output_file=$(MATHJAX) $^
 
 clean_mathjax:
 	rm -f $(MATHJAX)
 
-semantic: $(SRC)
+semantic: $(GOOG_BASE_CLEAN) $(SRC)
 	@echo Compiling browser ready Semantic Tree API
 	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Semantic --js_output_file=$(SEMANTIC) $^
 
 clean_semantic:
 	rm -f $(SEMANTIC)
 
-semantic_node: $(SRC)
+semantic_node: $(GOOG_BASE_CLEAN) $(SRC)
 	@echo Compiling Semantic Tree API for Node
 	@$(CLOSURE_COMPILER) --entry_point=goog:sre.SemanticApi --js_output_file=$(SEMANTIC_NODE) $^
 
 clean_semantic_node:
 	rm -f $(SEMANTIC_NODE)
 
-enrich: $(SRC)
+enrich: $(GOOG_BASE_CLEAN) $(SRC)
 	@echo Compiling browser ready MathML Enrichment API
 	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Enrich --js_output_file=$(ENRICH) $^
 
