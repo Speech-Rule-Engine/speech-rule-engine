@@ -197,7 +197,7 @@ sre.AbstractHighlighter.prototype.isHighlighted = function(node) {
 
 
 /**
- * Sets the indicator attributge that node is already highlighted.
+ * Sets the indicator attribute that node is already highlighted.
  * @param {Node} node The node.
  */
 sre.AbstractHighlighter.prototype.setHighlighted = function(node) {
@@ -206,7 +206,7 @@ sre.AbstractHighlighter.prototype.setHighlighted = function(node) {
 
 
 /**
- * Removes the indicator attributge that node is already highlighted.
+ * Removes the indicator attribute that node is already highlighted.
  * @param {Node} node The node.
  */
 sre.AbstractHighlighter.prototype.unsetHighlighted = function(node) {
