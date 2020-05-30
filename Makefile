@@ -300,14 +300,18 @@ api: $(GOOG_BASE_CLEAN) $(SRC)
 # Other useful targets.
 ##################################################################
 
-browser: $(GOOG_BASE_CLEAN) $(SRC)
+browser: $(BROWSER) maps
+
+$(BROWSER): $(GOOG_BASE_CLEAN) $(SRC)
 	@echo Compiling browser ready Speech Rule Engine
 	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Browser --js_output_file=$(BROWSER) $^
 
 clean_browser:
 	rm -f $(BROWSER)
 
-mathjax: $(GOOG_BASE_CLEAN) $(SRC)
+mathjax: $(MATHJAX) maps
+
+$(MATHJAX): $(GOOG_BASE_CLEAN) $(SRC)
 	@echo Compiling MathJax ready Speech Rule Engine
 	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Mathjax --js_output_file=$(MATHJAX) $^
 
