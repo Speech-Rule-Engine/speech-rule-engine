@@ -288,14 +288,18 @@ api: $(SRC)
 # Other useful targets.
 ##################################################################
 
-browser: $(SRC)
+browser: $(BROWSER) maps
+
+$(BROWSER): $(SRC)
 	@echo Compiling browser ready Speech Rule Engine
 	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Browser --js_output_file=$(BROWSER) $^
 
 clean_browser:
 	rm -f $(BROWSER)
 
-mathjax: $(SRC)
+mathjax: $(MATHJAX) maps
+
+$(MATHJAX): $(SRC)
 	@echo Compiling MathJax ready Speech Rule Engine
 	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Mathjax --js_output_file=$(MATHJAX) $^
 
