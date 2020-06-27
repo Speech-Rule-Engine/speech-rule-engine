@@ -4341,7 +4341,7 @@ sre.DefaultCharSpanishTest.prototype.testDefaultUnits = function() {
   this.executeUnitTest('mW', ['miliwatt']);
   this.executeUnitTest('kwh', ['kilowatt hora']);
   this.executeUnitTest('kWh', ['kilowatt hora']);
-  this.executeUnitTest('J', ['Joules']);
+  this.executeUnitTest('J', ['Joule']);
   this.executeUnitTest('N', ['Newton']);
   this.executeUnitTest('A', ['Ampere']);
   this.executeUnitTest('V', ['Voltio']);

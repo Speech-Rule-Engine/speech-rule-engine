@@ -256,6 +256,13 @@ sre.Messages.PLURAL = function(unit) {
 
 
 /**
+ * The times expression between units, if used.
+ * @type {string}
+ */
+sre.Messages.UNIT_TIMES = '';
+
+
+/**
  * Localisable number computation.
  * @type {sre.Numbers}
  */

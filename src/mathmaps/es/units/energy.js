@@ -61,7 +61,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "Joules"
+        "default": "Joule"
       }
     },
     "category": "energy"

@@ -1284,13 +1284,13 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
       'self::identifier', '@role="unit"');
   defineRule(
       'unit-square', 'mathspeak.default',
-      '[t] "au carré"; [n] children/*[1]',
+      '[n] children/*[1]; [t] "carré"',
       'self::superscript', '@role="unit"', 'children/*[2][text()=2]',
       'name(children/*[1])="identifier"');
 
   defineRule(
       'unit-cubic', 'mathspeak.default',
-      '[t] "cubique"; [n] children/*[1]',
+      '[n] children/*[1]; [t] "cubique"',
       'self::superscript', '@role="unit"', 'children/*[2][text()=3]',
       'name(children/*[1])="identifier"');
   defineRule(
