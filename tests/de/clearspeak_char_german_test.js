@@ -42,8 +42,6 @@ sre.ClearspeakCharGermanTest = function() {
    */
   this.styles = ['default'];
 
-  // TODO: Remove
-  this.actual = true;
   this.setActive('ClearspeakCharactersGerman');
 };
 goog.inherits(sre.ClearspeakCharGermanTest, sre.AbstractCharacterTest);

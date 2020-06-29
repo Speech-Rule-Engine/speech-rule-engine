@@ -50,8 +50,6 @@ sre.NobleGermanTest = function() {
    */
   this.locale = 'de';
 
-  this.actual = true;
-  
   this.compare = true;
   
   this.setActive('NobleSamplesGerman');

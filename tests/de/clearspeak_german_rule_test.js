@@ -44,7 +44,6 @@ sre.ClearspeakGermanRuleTest = function() {
    */
   this.domain = 'clearspeak';
 
-  this.actual = true;
   this.compare = true;
 
   this.setActive('ClearspeakGerman');

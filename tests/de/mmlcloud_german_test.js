@@ -50,8 +50,6 @@ sre.MmlcloudGermanTest = function() {
    */
   this.locale = 'de';
 
-  // TODO: Remove
-  this.actual = true;
   this.setActive('MathmlCloudGerman');
 };
 goog.inherits(sre.MmlcloudGermanTest, sre.AbstractRuleTest);

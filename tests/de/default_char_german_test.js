@@ -43,8 +43,6 @@ sre.DefaultCharGermanTest = function() {
   this.styles = ['default'];
 
   this.setActive('DefaultCharactersGerman');
-  // TODO: Remove
-  this.actual = true;
 };
 goog.inherits(sre.DefaultCharGermanTest, sre.AbstractCharacterTest);
 
