@@ -1240,13 +1240,13 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
   // Crossout
   defineRule(
       'crossout', 'mathspeak.default',
-      '[t] "durchkreutzt"; [n] children/*[1]; [t] "Ende duchkreutzt"',
+      '[t] "durchgestrichen"; [n] children/*[1]; [t] "Ende duchgestrichen"',
       'self::enclose', '@role="updiagonalstrike" or' +
       ' @role="downdiagonalstrike" or @role="horizontalstrike"');
   defineRule(
       'cancel', 'mathspeak.default',
-      '[t] "durchkreutzt"; [n] children/*[1]/children/*[1]; [t] "mit";' +
-      ' [n] children/*[2]; [t] "Ende duchkreutzt"',
+      '[t] "durchgestrichen"; [n] children/*[1]/children/*[1]; [t] "mit";' +
+      ' [n] children/*[2]; [t] "Ende duchgestrichen"',
       'self::overscore', '@role="updiagonalstrike" or' +
       ' @role="downdiagonalstrike" or @role="horizontalstrike"');
   defineSpecialisedRule(
@@ -1258,8 +1258,8 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
       ' @role="downdiagonalstrike" or @role="horizontalstrike"');
   defineRule(
       'cancel-reverse', 'mathspeak.default',
-      '[t] "durchkreutzt"; [n] children/*[2]/children/*[1]; [t] "mit";' +
-      ' [n] children/*[1]; [t] "Ende duchkreutzt"',
+      '[t] "durchgestrichen"; [n] children/*[2]/children/*[1]; [t] "mit";' +
+      ' [n] children/*[1]; [t] "Ende duchgestrichen"',
       'self::overscore', 'name(children/*[2])="enclose"',
       'children/*[2][@role="updiagonalstrike" or' +
       ' @role="downdiagonalstrike" or @role="horizontalstrike"]');
