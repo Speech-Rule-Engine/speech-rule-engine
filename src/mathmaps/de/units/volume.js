@@ -6,9 +6,7 @@
     "key": "bbl",
     "mappings": {
       "default": {
-        "default": "fass",
-        "singular": "fass",
-        "dual": ""
+        "default": "Faß"
       }
     },
     "category": "volume",
@@ -21,9 +19,8 @@
     "key": "gal",
     "mappings": {
       "default": {
-        "default": "gallonen",
-        "singular": "gallone",
-        "dual": ""
+        "plural": "Gallonen",
+        "default": "Gallone"
       }
     },
     "category": "volume",
@@ -36,9 +33,7 @@
     "key": "pt",
     "mappings": {
       "default": {
-        "default": "pinten",
-        "singular": "pint",
-        "dual": ""
+        "default": "Pint"
       }
     },
     "category": "volume",
@@ -51,9 +46,8 @@
     "key": "qt",
     "mappings": {
       "default": {
-        "default": "quarts",
-        "singular": "quart",
-        "dual": ""
+        "plural": "Quarts",
+        "default": "Quart"
       }
     },
     "category": "volume",
@@ -66,9 +60,7 @@
     "key": "tbsp",
     "mappings": {
       "default": {
-        "default": "esslöffel",
-        "singular": "esslöffel",
-        "dual": ""
+        "default": "Esslöffel"
       }
     },
     "category": "volume",
@@ -81,9 +73,7 @@
     "key": "tsp",
     "mappings": {
       "default": {
-        "default": "teelöffel",
-        "singular": "teelöffel",
-        "dual": ""
+        "default": "Teelöffel"
       }
     },
     "category": "volume",
@@ -96,9 +86,7 @@
     "key": "l",
     "mappings": {
       "default": {
-        "default": "liter",
-        "singular": "liter",
-        "dual": ""
+        "default": "Liter"
       }
     },
     "category": "volume",

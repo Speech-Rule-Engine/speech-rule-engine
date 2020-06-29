@@ -6,9 +6,7 @@
     "key": "m",
     "mappings": {
       "default": {
-        "default": "meter",
-        "singular": "meter",
-        "dual": ""
+        "default": "Meter"
       }
     },
     "category": "length",
@@ -20,9 +18,7 @@
     "key": "ft",
     "mappings": {
       "default": {
-        "default": "fuß",
-        "singular": "fuß",
-        "dual": ""
+        "default": "Fuß"
       }
     },
     "category": "length",
@@ -35,9 +31,7 @@
     "key": "in",
     "mappings": {
       "default": {
-        "default": "zoll",
-        "singular": "zoll",
-        "dual": ""
+        "default": "Zoll"
       }
     },
     "category": "length",
@@ -50,9 +44,8 @@
     "key": "mi",
     "mappings": {
       "default": {
-        "default": "meilen",
-        "singular": "meile",
-        "dual": ""
+        "plural": "Meilen",
+        "default": "Meile"
       }
     },
     "category": "length",
@@ -65,9 +58,8 @@
     "key": "yd",
     "mappings": {
       "default": {
-        "default": "yards",
-        "singular": "yard",
-        "dual": ""
+        "plural": "Yards",
+        "default": "Yard"
       }
     },
     "category": "length",

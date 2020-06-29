@@ -6,9 +6,7 @@
     "key": "lb",
     "mappings": {
       "default": {
-        "default": "pfund",
-        "singular": "pfund",
-        "dual": ""
+        "default": "Pfund"
       }
     },
     "category": "weight",
@@ -21,9 +19,8 @@
     "key": "oz",
     "mappings": {
       "default": {
-        "default": "unzen",
-        "singular": "unze",
-        "dual": ""
+        "plural": "Unzen",
+        "default": "Unze"
       }
     },
     "category": "weight",
@@ -36,9 +33,7 @@
     "key": "gr",
     "mappings": {
       "default": {
-        "default": "grains",
-        "singular": "grain",
-        "dual": ""
+        "default": "Grain"
       }
     },
     "category": "weight",
@@ -51,9 +46,8 @@
     "key": "t",
     "mappings": {
       "default": {
-        "default": "tonnen",
-        "singular": "tonne",
-        "dual": ""
+        "plural": "Tonnen",
+        "default": "Tonne"
       }
     },
     "category": "weight",

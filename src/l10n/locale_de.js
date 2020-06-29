@@ -215,8 +215,12 @@ sre.Locale.de = {
   },
 
   PLURAL_UNIT: {
-    'foot': 'Fuß',
-    'inch': 'Zoll'
+    'Meile': 'Meilen',
+    'Yard': 'Yards',
+    'Joule': 'Joules',
+    'Byte': 'Bytes',
+    'Gallone': 'Gallonen',
+    'Tonne': 'Tonnen'
   },
 
   PLURAL: function(unit) {return unit;},

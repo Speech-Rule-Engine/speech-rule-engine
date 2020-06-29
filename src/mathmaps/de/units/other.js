@@ -6,9 +6,7 @@
     "key": "ha",
     "mappings": {
       "default": {
-        "default": "hektar",
-        "singular": "hektar",
-        "dual": ""
+        "default": "Hektar"
       }
     },
     "category": "other",

@@ -6,9 +6,8 @@
     "key": "B",
     "mappings": {
       "default": {
-        "default": "bytes",
-        "singular": "byte",
-        "dual": ""
+        "plural": "Bytes",
+        "default": "Byte"
       }
     },
     "category": "memory",
