@@ -194,6 +194,12 @@ sre.Locale.es = {
     JOINER_FRAC: ' '
   },
 
+  PLURAL_UNIT: { },
+
+  PLURAL: function(unit) {
+      return (/.*s$/.test(unit)) ? unit : unit + 's';
+  },
+
   NUMBERS: sre.Numbers.es.NUMBERS,
 
   ALPHABETS: {
