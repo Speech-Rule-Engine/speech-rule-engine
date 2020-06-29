@@ -30,6 +30,7 @@ goog.require('sre.DomUtil');
 goog.require('sre.SemanticAnnotations');
 goog.require('sre.SemanticMathml');
 goog.require('sre.SemanticNode');
+goog.require('sre.SemanticVisitor');
 goog.require('sre.SystemExternal');
 
 
@@ -63,10 +64,53 @@ sre.SemanticTree = function(mml) {
     this.parser.getFactory().defaultMap = newDefault;
     this.root = this.parser.parse(mml);
   }
+  sre.SemanticTree.implicitVisitor_.visit(this.root, {});
+  sre.SemanticTree.unitVisitor_.visit(this.root, {});
 
   sre.SemanticAnnotations.getInstance().annotate(this.root);
 
 };
+
+
+/**
+ * Visitor to rewrite implied times operations into implicit operations.
+ * @type {sre.SemanticVisitor}
+ * @private
+ */
+sre.SemanticTree.implicitVisitor_ = new sre.SemanticVisitor(
+  'general',
+  function(node, info) {
+    if (node.type === sre.SemanticAttr.Type.INFIXOP &&
+        node.role === sre.SemanticAttr.Role.MULTIPLICATION &&
+        node.contentNodes.every(function(x) {
+          return !x.embellished &&
+            x.textContent === sre.SemanticAttr.invisibleTimes();})) {
+      node.role = sre.SemanticAttr.Role.IMPLICIT;
+    }
+    return false;
+  });
+
+
+/**
+ * Visitor to propagate unit expressions if possible.
+ * @type {sre.SemanticVisitor}
+ * @private
+ */
+sre.SemanticTree.unitVisitor_ = new sre.SemanticVisitor(
+  'general',
+  function(node, info) {
+    if (node.type === sre.SemanticAttr.Type.INFIXOP &&
+        node.role === sre.SemanticAttr.Role.MULTIPLICATION) {
+      var children = node.childNodes;
+      if (children.length &&
+          (sre.SemanticPred.isPureUnit(children[0]) ||
+           sre.SemanticPred.isUnitCounter(children[0])) &&
+          node.childNodes.slice(1).every(sre.SemanticPred.isPureUnit)) {
+      node.role = sre.SemanticAttr.Role.UNIT;
+      }
+    }
+    return false;
+  });
 
 
 /**

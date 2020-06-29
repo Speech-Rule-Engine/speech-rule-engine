@@ -242,7 +242,7 @@ sre.EmacspeakRules.initSemanticRules_ = function() {
   defineRule(
       'simple-fraction', 'emacspeak.default',
       '[p] (pause:100); [n] children/*[1] (rate:0.35); [t] "over"; ' +
-          ' [n] children/*[2] (rate:-0.35); [p] (pause:100)',
+          ' [n] children/*[2] (rate:0.35); [p] (pause:100)',
       'self::fraction',
       'name(children/*[1])="number" or name(children/*[1])="identifier"',
       'name(children/*[2])="number" or name(children/*[2])="identifier"');
@@ -254,7 +254,7 @@ sre.EmacspeakRules.initSemanticRules_ = function() {
       'fraction', 'emacspeak.default',
       '[p] (pause:250); [n] children/*[1] (rate:0.35); [p] (pause:250);' +
           ' [t] "divided by"; [p] (pause:250); ' +
-          ' [n] children/*[2] (rate:-0.35); [p] (pause:250)',
+          ' [n] children/*[2] (rate:0.35); [p] (pause:250)',
       'self::fraction');
 
   defineRule(

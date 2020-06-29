@@ -1,6 +1,6 @@
 Speech Rule Engine
 ==================
-[![Build Status](https://travis-ci.org/zorkow/speech-rule-engine.svg?branch=master)](https://travis-ci.org/zorkow/speech-rule-engine) [![Dependencies](https://david-dm.org/zorkow/speech-rule-engine.svg)](https://david-dm.org/zorkow/speech-rule-engine) [![devDependency Status](https://david-dm.org/zorkow/speech-rule-engine/dev-status.svg)](https://david-dm.org/zorkow/speech-rule-engine#info=devDependencies) [![Coverage Status](https://coveralls.io/repos/zorkow/speech-rule-engine/badge.svg?branch=master&service=github)](https://coveralls.io/github/zorkow/speech-rule-engine?branch=master)
+[![Build Status](https://travis-ci.org/zorkow/speech-rule-engine.svg?branch=master)](https://travis-ci.org/zorkow/speech-rule-engine) [![Dependencies](https://david-dm.org/zorkow/speech-rule-engine.svg)](https://david-dm.org/zorkow/speech-rule-engine) [![devDependency Status](https://david-dm.org/zorkow/speech-rule-engine/dev-status.svg)](https://david-dm.org/zorkow/speech-rule-engine#info=devDependencies) [![NPM version](https://img.shields.io/npm/v/speech-rule-engine.svg?style=flat)](https://www.npmjs.com/package/speech-rule-engine) [![NPM monthly downloads](https://img.shields.io/npm/dm/speech-rule-engine.svg?style=flat)](https://npmjs.org/package/speech-rule-engine) [![NPM total downloads](https://img.shields.io/npm/dt/speech-rule-engine.svg?style=flat)](https://npmjs.org/package/speech-rule-engine) [![Linux Build Status](https://img.shields.io/travis/zorkow/speech-rule-engine.svg?style=flat&label=Travis)](https://travis-ci.org/zorkow/speech-rule-engine) [![Coverage Status](https://coveralls.io/repos/zorkow/speech-rule-engine/badge.svg?branch=master&service=github)](https://coveralls.io/github/zorkow/speech-rule-engine?branch=master)
 
 NodeJS version of the ChromeVox speech rule engine.
 Forked from ChromeVox release 1.31.0
@@ -17,7 +17,7 @@ SRE contains a library for semantic interpretation to re-represents any
 mathematical expression in its own internal semantic format, overcoming the poor
 design of presentation MathML by fully disassembling and reconstructing an
 expression. For a better understanding of the representation have a look at its
-[visualiser](http://zorkow.github.io/semantic-tree-visualiser/visualise.html).
+[visualiser](https://zorkow.github.io/semantic-tree-visualiser/visualise.html).
 The semantic trees can be used in their own XML format directly or used to
 enrich the input MathML expressions with semantic information and speech
 strings.
@@ -138,7 +138,7 @@ a more detailed overview of `locale, domain, style` combinations, use the
 Enriched MathML output is markup that embeds the internal semantic structure SRE
 uses into a modified represnentation of the original MathML. To get an idea of
 the semantic tree, take a look at [its
-visualisation](http://zorkow.github.io/semantic-tree-visualiser/visualise.html).
+visualisation](https://zorkow.github.io/semantic-tree-visualiser/visualise.html).
 
 | Option | Value |
 | ---- | ---- |
@@ -389,7 +389,7 @@ This make command is also useful for local testing of the package.
 
 ### Documentation
 
-To generate documentation from the [JSDOC](http://usejsdoc.org/), simply run
+To generate documentation from the [JSDOC](https://jsdoc.app/), simply run
 
     make docs
 

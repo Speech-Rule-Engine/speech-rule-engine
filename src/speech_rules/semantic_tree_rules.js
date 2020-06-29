@@ -469,7 +469,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
   defineRule(
       'root', 'default.default',
       '[t] "root of order"; [n] children/*[1];' +
-          '[t] "over"; [n] children/*[1] (rate:0.35); [p] (pause:400)',
+          '[t] "over"; [n] children/*[2] (rate:0.35); [p] (pause:400)',
       'self::root');
 
   defineRule(
