@@ -49,11 +49,6 @@ sre.MathspeakGermanTest = function() {
    */
   this.locale = 'de';
 
-  /**
-   * @override
-   */
-  this.semantics = true;
-
   this.actual = true;
   
   this.compare = true;

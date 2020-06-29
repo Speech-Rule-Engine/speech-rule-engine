@@ -50,11 +50,6 @@ sre.MathspeakGermanFontTest = function() {
    */
   this.locale = 'de';
   
-  /**
-   * @override
-   */
-  this.semantics = true;
-  
   this.setActive('MathspeakGermanFont');
 };
 goog.inherits(sre.MathspeakGermanFontTest, sre.AbstractRuleTest);

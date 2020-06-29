@@ -48,11 +48,6 @@ sre.NobleGermanTest = function() {
   /**
    * @override
    */
-  this.semantics = true;
-
-  /**
-   * @override
-   */
   this.locale = 'de';
 
   this.actual = true;

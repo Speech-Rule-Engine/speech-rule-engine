@@ -47,11 +47,6 @@ sre.MathspeakEmbellishGermanTest = function() {
   /**
    * @override
    */
-  this.semantics = true;
-
-  /**
-   * @override
-   */
   this.locale = 'de';
 
   this.setActive('EmbellishedSymbolsGerman');

@@ -48,11 +48,6 @@ sre.MmlcloudGermanTest = function() {
   /**
    * @override
    */
-  this.semantics = true;
-
-  /**
-   * @override
-   */
   this.locale = 'de';
 
   // TODO: Remove

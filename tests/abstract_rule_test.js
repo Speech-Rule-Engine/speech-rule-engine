@@ -136,7 +136,7 @@ sre.AbstractRuleTest.prototype.appendRuleExample = function(
   var outList = [input];
   if (this.compare) {
     sre.System.getInstance().setupEngine(
-      {semantics: this.semantics, domain: this.domain, style: style,
+      {domain: this.domain, style: style,
        modality: this.modality, rules: this.rules, locale: 'en'});
     outList.push(this.getSpeech(input));
   }
