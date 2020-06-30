@@ -841,7 +841,7 @@ sre.ClearspeakCharGermanTest.prototype.testClearspeakChars = function() {
   this.executeCharTest('Α', ['großes Alpha']);
   this.executeCharTest('Β', ['großes Beta']);
   this.executeCharTest('Γ', ['großes Gamma']);
-  this.executeCharTest('Δ', ['groß Delta']);
+  this.executeCharTest('Δ', ['Dreieck']);
   this.executeCharTest('Ε', ['großes Epsilon']);
   this.executeCharTest('Ζ', ['großes Zeta']);
   this.executeCharTest('Η', ['großes Eta']);

@@ -233,7 +233,7 @@ sre.MathspeakGermanTest.prototype.testNegativeVsMinus = function() {
   mml = '<mrow><mo>-</mo><mfrac><mi>a</mi><mi>b</mi></mfrac></mrow>';
   this.executeRuleTest(mml, 'minus Anfang Bruch a durch b Ende Bruch', 'default');
   mml = '<mrow><mo>-</mo><mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>';
-  this.executeRuleTest(mml, 'negativ 3 eins halb', 'default');
+  this.executeRuleTest(mml, 'negativ 3 ein halb', 'default');
 };
 
 
@@ -247,9 +247,9 @@ sre.MathspeakGermanTest.prototype.testSample_4_2_1 = function() {
       '<mo>=</mo><mo>{</mo><mi>Α</mi><mo>,</mo><mi>Β</mi><mo>,</mo>' +
       '<mi>Γ</mi><mo>,</mo><mi>Δ</mi><mo>,</mo><mi>Ε</mi><mo>,</mo>' +
       '<mi>Φ</mi><mo>}</mo></mrow>';
-  this.executeRuleTest(mml, 'Gross Klammer auf Anfang Menge alpha Komma beta Komma gamma Komma delta Komma epsilon Komma phi Ende Menge Klammer zu ist gleich Anfang Menge großes Alpha Komma großes Beta Komma großes Gamma Komma groß delta Komma großes Epsilon Komma großes Phi Ende Menge', 'default');
-  this.executeRuleTest(mml, 'Gross Klammer auf Anfang Menge alpha Komma beta Komma gamma Komma delta Komma epsilon Komma phi Ende Menge Klammer zu ist gleich Anfang Menge großes Alpha Komma großes Beta Komma großes Gamma Komma groß delta Komma großes Epsilon Komma großes Phi Ende Menge', 'brief');
-  this.executeRuleTest(mml, 'Gross Klammer auf Menge alpha Komma beta Komma gamma Komma delta Komma epsilon Komma phi Ende Menge Klammer zu ist gleich Menge großes Alpha Komma großes Beta Komma großes Gamma Komma groß delta Komma großes Epsilon Komma großes Phi Ende Menge', 'sbrief');
+  this.executeRuleTest(mml, 'Gross Klammer auf Anfang Menge alpha Komma beta Komma gamma Komma delta Komma epsilon Komma phi Ende Menge Klammer zu ist gleich Anfang Menge großes Alpha Komma großes Beta Komma großes Gamma Komma großes Delta Komma großes Epsilon Komma großes Phi Ende Menge', 'default');
+  this.executeRuleTest(mml, 'Gross Klammer auf Anfang Menge alpha Komma beta Komma gamma Komma delta Komma epsilon Komma phi Ende Menge Klammer zu ist gleich Anfang Menge großes Alpha Komma großes Beta Komma großes Gamma Komma großes Delta Komma großes Epsilon Komma großes Phi Ende Menge', 'brief');
+  this.executeRuleTest(mml, 'Gross Klammer auf Menge alpha Komma beta Komma gamma Komma delta Komma epsilon Komma phi Ende Menge Klammer zu ist gleich Menge großes Alpha Komma großes Beta Komma großes Gamma Komma großes Delta Komma großes Epsilon Komma großes Phi Ende Menge', 'sbrief');
 };
 
 
@@ -417,9 +417,9 @@ sre.MathspeakGermanTest.prototype.testSample_7_4_1 = function() {
       '<mo>=</mo><mn>1</mn></mrow>' +
       '<mo movablelimits="true" form="prefix">∞</mo></munderover><mfrac>' +
       '<mi>n</mi><mn>2</mn></mfrac></mrow>';
-  this.executeRuleTest(mml, 'eins halb plus zwei halbe plus drei halbe plus vier halbe plus horizontale Ellipsis ist gleich Summe Unterschrift n ist gleich 1 Überschrift unendlich Ende Überschrift Anfang Bruch n durch 2 Ende Bruch', 'default');
-  this.executeRuleTest(mml, 'eins halb plus zwei halbe plus drei halbe plus vier halbe plus horizontale Ellipsis ist gleich Summe Unterschrift n ist gleich 1 Überschrift unendlich Ende Überschrift Anfang Bruch n durch 2 Ende Bruch', 'brief');
-  this.executeRuleTest(mml, 'eins halb plus zwei halbe plus drei halbe plus vier halbe plus horizontale Ellipsis ist gleich Summe Unterschrift n ist gleich 1 Überschrift unendlich Ende Überschrift Bruch n durch 2 Ende Bruch', 'sbrief');
+  this.executeRuleTest(mml, 'ein halb plus zwei halbe plus drei halbe plus vier halbe plus horizontale Ellipsis ist gleich Summe Unterschrift n ist gleich 1 Überschrift unendlich Ende Überschrift Anfang Bruch n durch 2 Ende Bruch', 'default');
+  this.executeRuleTest(mml, 'ein halb plus zwei halbe plus drei halbe plus vier halbe plus horizontale Ellipsis ist gleich Summe Unterschrift n ist gleich 1 Überschrift unendlich Ende Überschrift Anfang Bruch n durch 2 Ende Bruch', 'brief');
+  this.executeRuleTest(mml, 'ein halb plus zwei halbe plus drei halbe plus vier halbe plus horizontale Ellipsis ist gleich Summe Unterschrift n ist gleich 1 Überschrift unendlich Ende Überschrift Bruch n durch 2 Ende Bruch', 'sbrief');
 };
 
 
@@ -430,9 +430,9 @@ sre.MathspeakGermanTest.prototype.testSample_7_4_2 = function() {
   var mml = '<mrow><mfrac><mn>20</mn><mn>5</mn></mfrac><mo>×</mo><mfrac>' +
       '<mn>1</mn><mn>100</mn></mfrac><mo>=</mo><mfrac><mn>1</mn>' +
       '<mn>25</mn></mfrac></mrow>';
-  this.executeRuleTest(mml, 'Anfang Bruch 20 durch 5 Ende Bruch mal Anfang Bruch 1 durch 100 Ende Bruch ist gleich eins fünfundzwanzigstel', 'default');
-  this.executeRuleTest(mml, 'Anfang Bruch 20 durch 5 Ende Bruch mal Anfang Bruch 1 durch 100 Ende Bruch ist gleich eins fünfundzwanzigstel', 'brief');
-  this.executeRuleTest(mml, 'Bruch 20 durch 5 Ende Bruch mal Bruch 1 durch 100 Ende Bruch ist gleich eins fünfundzwanzigstel', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang Bruch 20 durch 5 Ende Bruch mal Anfang Bruch 1 durch 100 Ende Bruch ist gleich ein fünfundzwanzigstel', 'default');
+  this.executeRuleTest(mml, 'Anfang Bruch 20 durch 5 Ende Bruch mal Anfang Bruch 1 durch 100 Ende Bruch ist gleich ein fünfundzwanzigstel', 'brief');
+  this.executeRuleTest(mml, 'Bruch 20 durch 5 Ende Bruch mal Bruch 1 durch 100 Ende Bruch ist gleich ein fünfundzwanzigstel', 'sbrief');
 };
 
 
@@ -443,9 +443,9 @@ sre.MathspeakGermanTest.prototype.testSample_7_4_3 = function() {
   var mml = '<mrow><mfrac><mfrac><mn>3</mn><mn>5</mn></mfrac><mn>8</mn>' +
       '</mfrac><mo>=</mo><mfrac><mn>3</mn><mn>5</mn></mfrac><mo>×</mo>' +
       '<mfrac><mn>1</mn><mn>8</mn></mfrac></mrow>';
-  this.executeRuleTest(mml, 'Anfang Bruch drei fünftel durch 8 Ende Bruch ist gleich drei fünftel mal eins achtel', 'default');
-  this.executeRuleTest(mml, 'Anfang Bruch drei fünftel durch 8 Ende Bruch ist gleich drei fünftel mal eins achtel', 'brief');
-  this.executeRuleTest(mml, 'Bruch drei fünftel durch 8 Ende Bruch ist gleich drei fünftel mal eins achtel', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang Bruch drei fünftel durch 8 Ende Bruch ist gleich drei fünftel mal ein achtel', 'default');
+  this.executeRuleTest(mml, 'Anfang Bruch drei fünftel durch 8 Ende Bruch ist gleich drei fünftel mal ein achtel', 'brief');
+  this.executeRuleTest(mml, 'Bruch drei fünftel durch 8 Ende Bruch ist gleich drei fünftel mal ein achtel', 'sbrief');
 };
 
 
@@ -515,9 +515,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_1_2 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_8_2_1 = function() {
   var mml = '<msup><mi>x</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup>';
-  this.executeRuleTest(mml, 'x hoch eins halb', 'default');
-  this.executeRuleTest(mml, 'x hoch eins halb', 'brief');
-  this.executeRuleTest(mml, 'x hoch eins halb', 'sbrief');
+  this.executeRuleTest(mml, 'x hoch ein halb', 'default');
+  this.executeRuleTest(mml, 'x hoch ein halb', 'brief');
+  this.executeRuleTest(mml, 'x hoch ein halb', 'sbrief');
 };
 
 
@@ -1302,9 +1302,9 @@ sre.MathspeakGermanTest.prototype.testSample_9_2_2 = function() {
 sre.MathspeakGermanTest.prototype.testSample_9_2_3 = function() {
   var mml = '<mrow><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><msup>' +
       '<mi>x</mi><mfrac><mn>1</mn><mn>3</mn></mfrac></msup></mrow>';
-  this.executeRuleTest(mml, 'Anfang Kubikwurzel x Ende Kubikwurzel ist gleich x hoch eins drittel', 'default');
-  this.executeRuleTest(mml, 'Anfang Kubikwurzel x Ende Kubikwurzel ist gleich x hoch eins drittel', 'brief');
-  this.executeRuleTest(mml, 'Kubikwurzel x Ende Kubikwurzel ist gleich x hoch eins drittel', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang Kubikwurzel x Ende Kubikwurzel ist gleich x hoch ein drittel', 'default');
+  this.executeRuleTest(mml, 'Anfang Kubikwurzel x Ende Kubikwurzel ist gleich x hoch ein drittel', 'brief');
+  this.executeRuleTest(mml, 'Kubikwurzel x Ende Kubikwurzel ist gleich x hoch ein drittel', 'sbrief');
 };
 
 
@@ -1376,9 +1376,9 @@ sre.MathspeakGermanTest.prototype.testSample_10_1_1 = function() {
       '<mrow><mn>2</mn><menclose notation="updiagonalstrike"><mi>y</mi>' +
       '</menclose></mrow></mfrac><mo>=</mo><mfrac><mn>5</mn><mn>2</mn>' +
       '</mfrac><mi>x</mi></mrow>';
-  this.executeRuleTest(mml, 'Anfang Bruch 5 x durchkreutzt y Ende duchkreutzt durch 2 durchkreutzt y Ende duchkreutzt Ende Bruch ist gleich fünf halbe x', 'default');
-  this.executeRuleTest(mml, 'Anfang Bruch 5 x durchkreutzt y Ende duchkreutzt durch 2 durchkreutzt y Ende duchkreutzt Ende Bruch ist gleich fünf halbe x', 'brief');
-  this.executeRuleTest(mml, 'Bruch 5 x durchkreutzt y Ende duchkreutzt durch 2 durchkreutzt y Ende duchkreutzt Ende Bruch ist gleich fünf halbe x', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang Bruch 5 x durchgestrichen y Ende duchgestrichen durch 2 durchgestrichen y Ende duchgestrichen Ende Bruch ist gleich fünf halbe x', 'default');
+  this.executeRuleTest(mml, 'Anfang Bruch 5 x durchgestrichen y Ende duchgestrichen durch 2 durchgestrichen y Ende duchgestrichen Ende Bruch ist gleich fünf halbe x', 'brief');
+  this.executeRuleTest(mml, 'Bruch 5 x durchgestrichen y Ende duchgestrichen durch 2 durchgestrichen y Ende duchgestrichen Ende Bruch ist gleich fünf halbe x', 'sbrief');
 };
 
 
@@ -1391,9 +1391,9 @@ sre.MathspeakGermanTest.prototype.testSample_10_2_1 = function() {
       '<mn>2</mn></mover><munder><menclose notation="updiagonalstrike">' +
       '<mn>18</mn></menclose><mn>3</mn></munder></mfrac><mo>=</mo><mfrac>' +
       '<mn>2</mn><mn>3</mn></mfrac></mrow>';
-  this.executeRuleTest(mml, 'Anfang Bruch 12 durch 18 Ende Bruch ist gleich Anfang Bruch durchkreutzt 12 mit 2 Ende duchkreutzt durch durchkreutzt 18 mit 3 Ende duchkreutzt Ende Bruch ist gleich zwei drittel', 'default');
-  this.executeRuleTest(mml, 'Anfang Bruch 12 durch 18 Ende Bruch ist gleich Anfang Bruch durchkreutzt 12 mit 2 Ende duchkreutzt durch durchkreutzt 18 mit 3 Ende duchkreutzt Ende Bruch ist gleich zwei drittel', 'brief');
-  this.executeRuleTest(mml, 'Bruch 12 durch 18 Ende Bruch ist gleich Bruch durchkreutzt 12 mit 2 Ende duchkreutzt durch durchkreutzt 18 mit 3 Ende duchkreutzt Ende Bruch ist gleich zwei drittel', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang Bruch 12 durch 18 Ende Bruch ist gleich Anfang Bruch durchgestrichen 12 mit 2 Ende duchgestrichen durch durchgestrichen 18 mit 3 Ende duchgestrichen Ende Bruch ist gleich zwei drittel', 'default');
+  this.executeRuleTest(mml, 'Anfang Bruch 12 durch 18 Ende Bruch ist gleich Anfang Bruch durchgestrichen 12 mit 2 Ende duchgestrichen durch durchgestrichen 18 mit 3 Ende duchgestrichen Ende Bruch ist gleich zwei drittel', 'brief');
+  this.executeRuleTest(mml, 'Bruch 12 durch 18 Ende Bruch ist gleich Bruch durchgestrichen 12 mit 2 Ende duchgestrichen durch durchgestrichen 18 mit 3 Ende duchgestrichen Ende Bruch ist gleich zwei drittel', 'sbrief');
 };
 
 
@@ -1408,9 +1408,9 @@ sre.MathspeakGermanTest.prototype.testSample_10_2_2 = function() {
       '<menclose notation="updiagonalstrike">' +
       '<mn>18</mn></menclose></mover></mfrac><mo>=</mo><mfrac>' +
       '<mn>2</mn><mn>3</mn></mfrac></mrow>';
-  this.executeRuleTest(mml, 'Anfang Bruch 12 durch 18 Ende Bruch ist gleich Anfang Bruch durchkreutzt 12 mit 2 Ende duchkreutzt durch durchkreutzt 18 mit 3 Ende duchkreutzt Ende Bruch ist gleich zwei drittel', 'default');
-  this.executeRuleTest(mml, 'Anfang Bruch 12 durch 18 Ende Bruch ist gleich Anfang Bruch durchkreutzt 12 mit 2 Ende duchkreutzt durch durchkreutzt 18 mit 3 Ende duchkreutzt Ende Bruch ist gleich zwei drittel', 'brief');
-  this.executeRuleTest(mml, 'Bruch 12 durch 18 Ende Bruch ist gleich Bruch durchkreutzt 12 mit 2 Ende duchkreutzt durch durchkreutzt 18 mit 3 Ende duchkreutzt Ende Bruch ist gleich zwei drittel', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang Bruch 12 durch 18 Ende Bruch ist gleich Anfang Bruch durchgestrichen 12 mit 2 Ende duchgestrichen durch durchgestrichen 18 mit 3 Ende duchgestrichen Ende Bruch ist gleich zwei drittel', 'default');
+  this.executeRuleTest(mml, 'Anfang Bruch 12 durch 18 Ende Bruch ist gleich Anfang Bruch durchgestrichen 12 mit 2 Ende duchgestrichen durch durchgestrichen 18 mit 3 Ende duchgestrichen Ende Bruch ist gleich zwei drittel', 'brief');
+  this.executeRuleTest(mml, 'Bruch 12 durch 18 Ende Bruch ist gleich Bruch durchgestrichen 12 mit 2 Ende duchgestrichen durch durchgestrichen 18 mit 3 Ende duchgestrichen Ende Bruch ist gleich zwei drittel', 'sbrief');
 };
 
 
@@ -1476,8 +1476,8 @@ sre.MathspeakGermanTest.prototype.testSample_11_3_1 = function() {
 sre.MathspeakGermanTest.prototype.testSample_11_3_2 = function() {
   var mml = '<mover accent="true"><mi>x</mi><mo>¯</mo></mover>';
   this.executeRuleTest(mml, 'x Überstrich', 'default');
-  this.executeRuleTest(mml, 'mod oben x mit macron', 'brief');
-  this.executeRuleTest(mml, 'mod oben x mit macron', 'sbrief');
+  this.executeRuleTest(mml, 'mod oben x mit Überstrich', 'brief');
+  this.executeRuleTest(mml, 'mod oben x mit Überstrich', 'sbrief');
 };
 
 
@@ -1499,8 +1499,8 @@ sre.MathspeakGermanTest.prototype.testSample_11_4_1 = function() {
   var mml = '<mover accent="true"><mover accent="true"><mi>x</mi><mo>¯</mo>' +
       '</mover><mo>¯</mo></mover>';
   this.executeRuleTest(mml, 'x Überstrich Überstrich', 'default');
-  this.executeRuleTest(mml, 'mod oben oben mod oben x mit macron mit macron', 'brief');
-  this.executeRuleTest(mml, 'mod oben oben mod oben x mit macron mit macron', 'sbrief');
+  this.executeRuleTest(mml, 'mod oben oben mod oben x mit Überstrich mit Überstrich', 'brief');
+  this.executeRuleTest(mml, 'mod oben oben mod oben x mit Überstrich mit Überstrich', 'sbrief');
 };
 
 
@@ -1512,8 +1512,8 @@ sre.MathspeakGermanTest.prototype.testSample_11_4_2 = function() {
       '<mi>y</mi><mo>¯</mo></mover><mo>¯</mo></mover>' +
       '<mo>\u005F</mo></munder><mo>\u005F</mo></munder>';
   this.executeRuleTest(mml, 'y Überstrich Überstrich Unterstrich Unterstrich', 'default');
-  this.executeRuleTest(mml, 'mod unten unten mod unten mod oben oben mod oben y mit macron mit macron mit Unterstrich mit Unterstrich', 'brief');
-  this.executeRuleTest(mml, 'mod unten unten mod unten mod oben oben mod oben y mit macron mit macron mit Unterstrich mit Unterstrich', 'sbrief');
+  this.executeRuleTest(mml, 'mod unten unten mod unten mod oben oben mod oben y mit Überstrich mit Überstrich mit Unterstrich mit Unterstrich', 'brief');
+  this.executeRuleTest(mml, 'mod unten unten mod unten mod oben oben mod oben y mit Überstrich mit Überstrich mit Unterstrich mit Unterstrich', 'sbrief');
 };
 
 
@@ -1535,9 +1535,9 @@ sre.MathspeakGermanTest.prototype.testSample_11_6_1 = function() {
 sre.MathspeakGermanTest.prototype.testSample_11_6_3 = function() {
   var mml = '<mover><mover accent="true"><mrow><mi>x</mi><mo>+</mo>' +
       '<mi>y</mi></mrow><mo>˜</mo></mover><mo>¯</mo></mover>';
-  this.executeRuleTest(mml, 'modifiziert oben oben modifiziert oben x plus y mit Tilde mit macron', 'default');
-  this.executeRuleTest(mml, 'mod oben oben mod oben x plus y mit Tilde mit macron', 'brief');
-  this.executeRuleTest(mml, 'mod oben oben mod oben x plus y mit Tilde mit macron', 'sbrief');
+  this.executeRuleTest(mml, 'modifiziert oben oben modifiziert oben x plus y mit Tilde mit Überstrich', 'default');
+  this.executeRuleTest(mml, 'mod oben oben mod oben x plus y mit Tilde mit Überstrich', 'brief');
+  this.executeRuleTest(mml, 'mod oben oben mod oben x plus y mit Tilde mit Überstrich', 'sbrief');
 };
 
 
@@ -1575,9 +1575,9 @@ sre.MathspeakGermanTest.prototype.testSample_11_8_2 = function() {
   var mml = '<mrow><mover><mover><mover><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mo>¯</mo></mover><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow>' +
       '</mover><mrow><mi>m</mi><mo>=</mo><mn>2</mn></mrow></mover></mrow>';
-  this.executeRuleTest(mml, 'modifiziert oben x plus y mit macron Überschrift n ist gleich 1 ÜberÜberschrift m ist gleich 2 Ende Überschrift', 'default');
-  this.executeRuleTest(mml, 'mod oben x plus y mit macron Überschrift n ist gleich 1 ÜberÜberschrift m ist gleich 2 Ende Überschrift', 'brief');
-  this.executeRuleTest(mml, 'mod oben x plus y mit macron Überschrift n ist gleich 1 ÜberÜberschrift m ist gleich 2 Ende Überschrift', 'sbrief');
+  this.executeRuleTest(mml, 'modifiziert oben x plus y mit Überstrich Überschrift n ist gleich 1 ÜberÜberschrift m ist gleich 2 Ende Überschrift', 'default');
+  this.executeRuleTest(mml, 'mod oben x plus y mit Überstrich Überschrift n ist gleich 1 ÜberÜberschrift m ist gleich 2 Ende Überschrift', 'brief');
+  this.executeRuleTest(mml, 'mod oben x plus y mit Überstrich Überschrift n ist gleich 1 ÜberÜberschrift m ist gleich 2 Ende Überschrift', 'sbrief');
 };
 
 
@@ -1598,9 +1598,9 @@ sre.MathspeakGermanTest.prototype.testSample_12_1_1 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_12_1_2 = function() {
   var mml = '<mrow><mo form="prefix">cos</mo><mi>y</mi></mrow>';
-  this.executeRuleTest(mml, 'kosinus y', 'default');
-  this.executeRuleTest(mml, 'kosinus y', 'brief');
-  this.executeRuleTest(mml, 'kosinus y', 'sbrief');
+  this.executeRuleTest(mml, 'Kosinus y', 'default');
+  this.executeRuleTest(mml, 'Kosinus y', 'brief');
+  this.executeRuleTest(mml, 'Kosinus y', 'sbrief');
 };
 
 
@@ -1609,9 +1609,9 @@ sre.MathspeakGermanTest.prototype.testSample_12_1_2 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_12_1_3 = function() {
   var mml = '<mrow><mo form="prefix">sin</mo><mi>x</mi></mrow>';
-  this.executeRuleTest(mml, 'sinus x', 'default');
-  this.executeRuleTest(mml, 'sinus x', 'brief');
-  this.executeRuleTest(mml, 'sinus x', 'sbrief');
+  this.executeRuleTest(mml, 'Sinus x', 'default');
+  this.executeRuleTest(mml, 'Sinus x', 'brief');
+  this.executeRuleTest(mml, 'Sinus x', 'sbrief');
 };
 
 
@@ -1637,9 +1637,9 @@ sre.MathspeakGermanTest.prototype.testSample_13_1_1 = function() {
       ' class="MathML-Unit">ft</mi>' +
       '</mrow><mi mathvariant="normal" class="MathML-Unit">min</mi>' +
       '</mfrac></mrow>';
-  this.executeRuleTest(mml, 'Anfang Bruch 60 durchkreutzt meilens Ende duchkreutzt durch durchkreutzt hours Ende duchkreutzt Ende Bruch mal Anfang Bruch 5,280 fußs durch 1 durchkreutzt meilens Ende duchkreutzt Ende Bruch mal Anfang Bruch 1 durchkreutzt hours Ende duchkreutzt durch 60 minutes Ende Bruch ist gleich Anfang Bruch 5,280 fußs durch minutes Ende Bruch', 'default');
-  this.executeRuleTest(mml, 'Anfang Bruch 60 durchkreutzt meilens Ende duchkreutzt durch durchkreutzt hours Ende duchkreutzt Ende Bruch mal Anfang Bruch 5,280 fußs durch 1 durchkreutzt meilens Ende duchkreutzt Ende Bruch mal Anfang Bruch 1 durchkreutzt hours Ende duchkreutzt durch 60 minutes Ende Bruch ist gleich Anfang Bruch 5,280 fußs durch minutes Ende Bruch', 'brief');
-  this.executeRuleTest(mml, 'Bruch 60 durchkreutzt meilens Ende duchkreutzt durch durchkreutzt hours Ende duchkreutzt Ende Bruch mal Bruch 5,280 fußs durch 1 durchkreutzt meilens Ende duchkreutzt Ende Bruch mal Bruch 1 durchkreutzt hours Ende duchkreutzt durch 60 minutes Ende Bruch ist gleich Bruch 5,280 fußs durch minutes Ende Bruch', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang Bruch 60 durchgestrichen Meilen Ende duchgestrichen durch durchgestrichen Stunden Ende duchgestrichen Ende Bruch mal Anfang Bruch 5,280 Fuß durch 1 durchgestrichen Meilen Ende duchgestrichen Ende Bruch mal Anfang Bruch 1 durchgestrichen Stunden Ende duchgestrichen durch 60 Minuten Ende Bruch ist gleich Anfang Bruch 5,280 Fuß durch Minuten Ende Bruch', 'default');
+  this.executeRuleTest(mml, 'Anfang Bruch 60 durchgestrichen Meilen Ende duchgestrichen durch durchgestrichen Stunden Ende duchgestrichen Ende Bruch mal Anfang Bruch 5,280 Fuß durch 1 durchgestrichen Meilen Ende duchgestrichen Ende Bruch mal Anfang Bruch 1 durchgestrichen Stunden Ende duchgestrichen durch 60 Minuten Ende Bruch ist gleich Anfang Bruch 5,280 Fuß durch Minuten Ende Bruch', 'brief');
+  this.executeRuleTest(mml, 'Bruch 60 durchgestrichen Meilen Ende duchgestrichen durch durchgestrichen Stunden Ende duchgestrichen Ende Bruch mal Bruch 5,280 Fuß durch 1 durchgestrichen Meilen Ende duchgestrichen Ende Bruch mal Bruch 1 durchgestrichen Stunden Ende duchgestrichen durch 60 Minuten Ende Bruch ist gleich Bruch 5,280 Fuß durch Minuten Ende Bruch', 'sbrief');
 };
 
 
@@ -1655,9 +1655,9 @@ sre.MathspeakGermanTest.prototype.testSample_13_1_2 = function() {
       '<mo>·</mo><msup><mi mathvariant="normal" class="MathML-Unit">s</mi>' +
       '<mrow><mo>-</mo><mn>2</mn></mrow>' +
       '</msup></mrow>';
-  this.executeRuleTest(mml, '1 joules ist gleich 1 kilograms mal meters Quadrat mal seconds hoch negativ 2', 'default');
-  this.executeRuleTest(mml, '1 joules ist gleich 1 kilograms mal meters Quadrat mal seconds hoch negativ 2', 'brief');
-  this.executeRuleTest(mml, '1 joules ist gleich 1 kilograms mal meters Quadrat mal seconds hoch negativ 2', 'sbrief');
+  this.executeRuleTest(mml, '1 Joules ist gleich 1 Kilogramm mal Meter Quadrat mal Sekunden hoch negativ 2', 'default');
+  this.executeRuleTest(mml, '1 Joules ist gleich 1 Kilogramm mal Meter Quadrat mal Sekunden hoch negativ 2', 'brief');
+  this.executeRuleTest(mml, '1 Joules ist gleich 1 Kilogramm mal Meter Quadrat mal Sekunden hoch negativ 2', 'sbrief');
 };
 
 
@@ -1670,9 +1670,9 @@ sre.MathspeakGermanTest.prototype.testSample_13_1_3 = function() {
       '<mi>m</mi><mi mathvariant="normal" class="MathML-Unit">cm</mi>' +
       '<mo>=</mo><mrow><mfrac><mi>m</mi><mn>1,000</mn></mfrac>' +
       '<mi mathvariant="normal" class="MathML-Unit">km</mi></mrow>';
-  this.executeRuleTest(mml, 'm meters ist gleich 100 m centimeters ist gleich Anfang Bruch m durch 1,000 Ende Bruch kilometers', 'default');
-  this.executeRuleTest(mml, 'm meters ist gleich 100 m centimeters ist gleich Anfang Bruch m durch 1,000 Ende Bruch kilometers', 'brief');
-  this.executeRuleTest(mml, 'm meters ist gleich 100 m centimeters ist gleich Bruch m durch 1,000 Ende Bruch kilometers', 'sbrief');
+  this.executeRuleTest(mml, 'm Meter ist gleich 100 m Zentimeter ist gleich Anfang Bruch m durch 1,000 Ende Bruch Kilometer', 'default');
+  this.executeRuleTest(mml, 'm Meter ist gleich 100 m Zentimeter ist gleich Anfang Bruch m durch 1,000 Ende Bruch Kilometer', 'brief');
+  this.executeRuleTest(mml, 'm Meter ist gleich 100 m Zentimeter ist gleich Bruch m durch 1,000 Ende Bruch Kilometer', 'sbrief');
 };
 
 
@@ -1684,9 +1684,9 @@ sre.MathspeakGermanTest.prototype.testSample_13_1_4 = function() {
       ' class="MathML-Unit">mi</mi></mrow><mo>≈</mo>' +
       '<mrow><mn>1.6</mn><mi mathvariant="normal"' +
       ' class="MathML-Unit">km</mi></mrow>';
-  this.executeRuleTest(mml, '1 meilens beinahe gleich 1\\,6 kilometers', 'default');
-  this.executeRuleTest(mml, '1 meilens beinahe gleich 1\\,6 kilometers', 'brief');
-  this.executeRuleTest(mml, '1 meilens beinahe gleich 1\\,6 kilometers', 'sbrief');
+  this.executeRuleTest(mml, '1 Meilen beinahe gleich 1\\,6 Kilometer', 'default');
+  this.executeRuleTest(mml, '1 Meilen beinahe gleich 1\\,6 Kilometer', 'brief');
+  this.executeRuleTest(mml, '1 Meilen beinahe gleich 1\\,6 Kilometer', 'sbrief');
 };
 
 
@@ -1697,9 +1697,9 @@ sre.MathspeakGermanTest.prototype.testSample_13_1_5 = function() {
   var mml = '<mrow><mn>1</mn><mi mathvariant="normal"' +
       ' class="MathML-Unit">in</mi><mo>=</mo><mn>2.54</mn>' +
       '<mi mathvariant="normal" class="MathML-Unit">cm</mi></mrow>';
-  this.executeRuleTest(mml, '1 zolls ist gleich 2\\,54 centimeters', 'default');
-  this.executeRuleTest(mml, '1 zolls ist gleich 2\\,54 centimeters', 'brief');
-  this.executeRuleTest(mml, '1 zolls ist gleich 2\\,54 centimeters', 'sbrief');
+  this.executeRuleTest(mml, '1 Zoll ist gleich 2\\,54 Zentimeter', 'default');
+  this.executeRuleTest(mml, '1 Zoll ist gleich 2\\,54 Zentimeter', 'brief');
+  this.executeRuleTest(mml, '1 Zoll ist gleich 2\\,54 Zentimeter', 'sbrief');
 };
 
 

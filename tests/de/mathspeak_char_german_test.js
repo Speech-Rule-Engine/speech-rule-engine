@@ -841,7 +841,7 @@ sre.MathspeakCharGermanTest.prototype.testMathspeakChars = function() {
   this.executeCharTest('Α', ['großes Alpha', 'großes Alpha', 'großes Alpha']);
   this.executeCharTest('Β', ['großes Beta', 'großes Beta', 'großes Beta']);
   this.executeCharTest('Γ', ['großes Gamma', 'großes Gamma', 'großes Gamma']);
-  this.executeCharTest('Δ', ['groß Delta', 'groß Delta', 'groß Delta']);
+  this.executeCharTest('Δ', ['großes Delta', 'großes Delta', 'großes Delta']);
   this.executeCharTest('Ε', ['großes Epsilon', 'großes Epsilon', 'großes Epsilon']);
   this.executeCharTest('Ζ', ['großes Zeta', 'großes Zeta', 'großes Zeta']);
   this.executeCharTest('Η', ['großes Eta', 'großes Eta', 'großes Eta']);

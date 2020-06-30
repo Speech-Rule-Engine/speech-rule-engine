@@ -5,8 +5,9 @@
   {
     "key": "0394",
     "mappings": {
-      "default": {
-        "default": "groß Delta"
+      "clearspeak": {
+        "default": "Dreieck",
+        "TriangleSymbol_Delta": "großes Delta"
       }
     },
     "category": "Lu"

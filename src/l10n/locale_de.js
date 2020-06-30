@@ -220,7 +220,10 @@ sre.Locale.de = {
     'Joule': 'Joules',
     'Gallone': 'Gallonen',
     'Unze': 'Unzen',
-    'Tonne': 'Tonnen'
+    'Tonne': 'Tonnen',
+    'Minute': 'Minuten',
+    'Stunde': 'Stunden',
+    'Sekunde': 'Sekunden'
   },
 
   PLURAL: function(unit) {
