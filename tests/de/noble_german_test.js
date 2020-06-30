@@ -72,9 +72,9 @@ sre.NobleGermanTest.prototype.testSample_1 = function() {
       '</mfrac>' +
       '<mo>=</mo>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'negativ 5 eins fünftel minus 6 zwei drittel ist gleich', 'default');
-  this.executeRuleTest(mml, 'negativ 5 eins fünftel minus 6 zwei drittel ist gleich', 'brief');
-  this.executeRuleTest(mml, 'negativ 5 eins fünftel minus 6 zwei drittel ist gleich', 'sbrief');
+  this.executeRuleTest(mml, 'negativ 5 ein fünftel minus 6 zwei drittel ist gleich', 'default');
+  this.executeRuleTest(mml, 'negativ 5 ein fünftel minus 6 zwei drittel ist gleich', 'brief');
+  this.executeRuleTest(mml, 'negativ 5 ein fünftel minus 6 zwei drittel ist gleich', 'sbrief');
 };
 
 
@@ -355,9 +355,9 @@ sre.NobleGermanTest.prototype.testSample_19 = function() {
       '</mfrac>' +
       '<mi>b</mi><mi>h</mi>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'großes A ist gleich eins halb b h', 'default');
-  this.executeRuleTest(mml, 'großes A ist gleich eins halb b h', 'brief');
-  this.executeRuleTest(mml, 'großes A ist gleich eins halb b h', 'sbrief');
+  this.executeRuleTest(mml, 'großes A ist gleich ein halb b h', 'default');
+  this.executeRuleTest(mml, 'großes A ist gleich ein halb b h', 'brief');
+  this.executeRuleTest(mml, 'großes A ist gleich ein halb b h', 'sbrief');
 };
 
 
@@ -540,9 +540,9 @@ sre.NobleGermanTest.prototype.testSample_28 = function() {
       '<mo stretchy="true">&#x00AF;</mo>' +
       '</mover>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'modifiziert oben großes G großes H mit macron', 'default');
-  this.executeRuleTest(mml, 'mod oben großes G großes H mit macron', 'brief');
-  this.executeRuleTest(mml, 'mod oben großes G großes H mit macron', 'sbrief');
+  this.executeRuleTest(mml, 'modifiziert oben großes G großes H mit Überstrich', 'default');
+  this.executeRuleTest(mml, 'mod oben großes G großes H mit Überstrich', 'brief');
+  this.executeRuleTest(mml, 'mod oben großes G großes H mit Überstrich', 'sbrief');
 };
 
 
@@ -564,10 +564,10 @@ sre.NobleGermanTest.prototype.testSample_29 = function() {
       '<mo stretchy="true">&#x00AF;</mo>' +
       '</mover>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'modifiziert oben großes W großes X mit macron ungefähr gleich modifiziert oben großes Y großes Z mit macron',
+  this.executeRuleTest(mml, 'modifiziert oben großes W großes X mit Überstrich ungefähr gleich modifiziert oben großes Y großes Z mit Überstrich',
                        'default');
-  this.executeRuleTest(mml, 'mod oben großes W großes X mit macron ungefähr gleich mod oben großes Y großes Z mit macron', 'brief');
-  this.executeRuleTest(mml, 'mod oben großes W großes X mit macron ungefähr gleich mod oben großes Y großes Z mit macron', 'sbrief');
+  this.executeRuleTest(mml, 'mod oben großes W großes X mit Überstrich ungefähr gleich mod oben großes Y großes Z mit Überstrich', 'brief');
+  this.executeRuleTest(mml, 'mod oben großes W großes X mit Überstrich ungefähr gleich mod oben großes Y großes Z mit Überstrich', 'sbrief');
 };
 
 
@@ -680,10 +680,10 @@ sre.NobleGermanTest.prototype.testSample_35 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow>' +
       '<mn>3</mn></mrow></mfrac><mrow><mo>(</mo><msup><mrow><mn>3</mn>' +
       '</mrow><mrow><mi>x</mi></mrow></msup><mo>)</mo></mrow></mrow>';
-  this.executeRuleTest(mml, 'y ist gleich eins drittel Klammer auf 3 hoch x Grundlinie Klammer zu', 'default');
-  this.executeRuleTest(mml, 'y ist gleich eins drittel Klammer auf 3 hoch x Grund Klammer zu',
+  this.executeRuleTest(mml, 'y ist gleich ein drittel Klammer auf 3 hoch x Grundlinie Klammer zu', 'default');
+  this.executeRuleTest(mml, 'y ist gleich ein drittel Klammer auf 3 hoch x Grund Klammer zu',
                        'brief');
-  this.executeRuleTest(mml, 'y ist gleich eins drittel Klammer auf 3 hoch x Grund Klammer zu', 'sbrief');
+  this.executeRuleTest(mml, 'y ist gleich ein drittel Klammer auf 3 hoch x Grund Klammer zu', 'sbrief');
 };
 
 
@@ -933,10 +933,10 @@ sre.NobleGermanTest.prototype.testSample_54 = function() {
       '</mn><mo>)</mo></mrow><mo>+</mo><mrow><mo>(</mo><mn>2</mn><mo>×' +
       '</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac>' +
       '<mo>×</mo><mi>π</mi><mo>×</mo><mn>5</mn><mo>)</mo></mrow></mrow>';
-  this.executeRuleTest(mml, 'Klammer auf eins halb mal eins halb mal pi mal 2 Klammer zu plus Klammer auf 2 mal eins halb mal pi mal 5 Klammer zu', 'default');
-  this.executeRuleTest(mml, 'Klammer auf eins halb mal eins halb mal pi mal 2 Klammer zu plus Klammer auf 2 mal eins halb mal pi mal 5 Klammer zu',
+  this.executeRuleTest(mml, 'Klammer auf ein halb mal ein halb mal pi mal 2 Klammer zu plus Klammer auf 2 mal ein halb mal pi mal 5 Klammer zu', 'default');
+  this.executeRuleTest(mml, 'Klammer auf ein halb mal ein halb mal pi mal 2 Klammer zu plus Klammer auf 2 mal ein halb mal pi mal 5 Klammer zu',
                        'brief');
-  this.executeRuleTest(mml, 'Klammer auf eins halb mal eins halb mal pi mal 2 Klammer zu plus Klammer auf 2 mal eins halb mal pi mal 5 Klammer zu', 'sbrief');
+  this.executeRuleTest(mml, 'Klammer auf ein halb mal ein halb mal pi mal 2 Klammer zu plus Klammer auf 2 mal ein halb mal pi mal 5 Klammer zu', 'sbrief');
 };
 
 
@@ -957,9 +957,9 @@ sre.NobleGermanTest.prototype.testSample_55 = function() {
       '</mn></mrow></munder><munder><mo>&#x22C3;</mo><mrow><mi>k</mi>' +
       '<mo>&#x2265;</mo><mi>n</mi></mrow></munder><msub><mi>E</mi><mrow>' +
       '<mi>k</mi></mrow></msub><mo>.</mo></mrow>';
-  this.executeRuleTest(mml, 'liminf Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift großes E Index n Grundlinie ist gleich N-stufige Vereinigung Unterschrift n größer oder gleich 1 Ende Unterschrift N-stufiger Durchschnitt Unterschrift k größer oder gleich n Ende Unterschrift großes E Index k Grundlinie Komma limsup Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift großes E Index n Grundlinie ist gleich N-stufiger Durchschnitt Unterschrift n größer oder gleich 1 Ende Unterschrift N-stufige Vereinigung Unterschrift k größer oder gleich n Ende Unterschrift großes E Index k Grundlinie Punkt', 'default');
-  this.executeRuleTest(mml, 'liminf Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift großes E Index n Grund ist gleich N-stufige Vereinigung Unterschrift n größer oder gleich 1 Ende Unterschrift N-stufiger Durchschnitt Unterschrift k größer oder gleich n Ende Unterschrift großes E Index k Grund Komma limsup Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift großes E Index n Grund ist gleich N-stufiger Durchschnitt Unterschrift n größer oder gleich 1 Ende Unterschrift N-stufige Vereinigung Unterschrift k größer oder gleich n Ende Unterschrift großes E Index k Grund Punkt', 'brief');
-  this.executeRuleTest(mml, 'liminf Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift großes E Index n Grund ist gleich N-stufige Vereinigung Unterschrift n größer oder gleich 1 Ende Unterschrift N-stufiger Durchschnitt Unterschrift k größer oder gleich n Ende Unterschrift großes E Index k Grund Komma limsup Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift großes E Index n Grund ist gleich N-stufiger Durchschnitt Unterschrift n größer oder gleich 1 Ende Unterschrift N-stufige Vereinigung Unterschrift k größer oder gleich n Ende Unterschrift großes E Index k Grund Punkt', 'sbrief');
+  this.executeRuleTest(mml, 'Limes inferior Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift großes E Index n Grundlinie ist gleich N-stufige Vereinigung Unterschrift n größer oder gleich 1 Ende Unterschrift N-stufiger Durchschnitt Unterschrift k größer oder gleich n Ende Unterschrift großes E Index k Grundlinie Komma Limes superior Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift großes E Index n Grundlinie ist gleich N-stufiger Durchschnitt Unterschrift n größer oder gleich 1 Ende Unterschrift N-stufige Vereinigung Unterschrift k größer oder gleich n Ende Unterschrift großes E Index k Grundlinie Punkt', 'default');
+  this.executeRuleTest(mml, 'Limes inferior Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift großes E Index n Grund ist gleich N-stufige Vereinigung Unterschrift n größer oder gleich 1 Ende Unterschrift N-stufiger Durchschnitt Unterschrift k größer oder gleich n Ende Unterschrift großes E Index k Grund Komma Limes superior Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift großes E Index n Grund ist gleich N-stufiger Durchschnitt Unterschrift n größer oder gleich 1 Ende Unterschrift N-stufige Vereinigung Unterschrift k größer oder gleich n Ende Unterschrift großes E Index k Grund Punkt', 'brief');
+  this.executeRuleTest(mml, 'Limes inferior Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift großes E Index n Grund ist gleich N-stufige Vereinigung Unterschrift n größer oder gleich 1 Ende Unterschrift N-stufiger Durchschnitt Unterschrift k größer oder gleich n Ende Unterschrift großes E Index k Grund Komma Limes superior Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift großes E Index n Grund ist gleich N-stufiger Durchschnitt Unterschrift n größer oder gleich 1 Ende Unterschrift N-stufige Vereinigung Unterschrift k größer oder gleich n Ende Unterschrift großes E Index k Grund Punkt', 'sbrief');
 };
 
 
@@ -1092,9 +1092,9 @@ sre.NobleGermanTest.prototype.testSample_60 = function() {
       '<mrow><mi>n</mi></mrow></msub><mo>&#x2212;</mo><mi>X</mi>' +
       '<mo>&#x007C;</mo><mo>}</mo></mrow><mo>=</mo><mn>0</mn><mo>.</mo>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'limes Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift großes E geschwungene Klammer auf Anfang Betrag großes X Index n Grundlinie minus großes X Ende Betrag geschwungene Klammer zu ist gleich großes E geschwungene Klammer auf limes Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift Anfang Betrag großes X Index n Grundlinie minus großes X Ende Betrag geschwungene Klammer zu ist gleich 0 Punkt', 'default');
-  this.executeRuleTest(mml, 'limes Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift großes E geschwungene Klammer auf Anfang Betrag großes X Index n Grund minus großes X Ende Betrag geschwungene Klammer zu ist gleich großes E geschwungene Klammer auf limes Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift Anfang Betrag großes X Index n Grund minus großes X Ende Betrag geschwungene Klammer zu ist gleich 0 Punkt', 'brief');
-  this.executeRuleTest(mml, 'limes Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift großes E geschwungene Klammer auf Betrag großes X Index n Grund minus großes X Ende Betrag geschwungene Klammer zu ist gleich großes E geschwungene Klammer auf limes Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift Betrag großes X Index n Grund minus großes X Ende Betrag geschwungene Klammer zu ist gleich 0 Punkt', 'sbrief');
+  this.executeRuleTest(mml, 'Limes Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift großes E geschwungene Klammer auf Anfang Betrag großes X Index n Grundlinie minus großes X Ende Betrag geschwungene Klammer zu ist gleich großes E geschwungene Klammer auf Limes Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift Anfang Betrag großes X Index n Grundlinie minus großes X Ende Betrag geschwungene Klammer zu ist gleich 0 Punkt', 'default');
+  this.executeRuleTest(mml, 'Limes Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift großes E geschwungene Klammer auf Anfang Betrag großes X Index n Grund minus großes X Ende Betrag geschwungene Klammer zu ist gleich großes E geschwungene Klammer auf Limes Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift Anfang Betrag großes X Index n Grund minus großes X Ende Betrag geschwungene Klammer zu ist gleich 0 Punkt', 'brief');
+  this.executeRuleTest(mml, 'Limes Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift großes E geschwungene Klammer auf Betrag großes X Index n Grund minus großes X Ende Betrag geschwungene Klammer zu ist gleich großes E geschwungene Klammer auf Limes Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift Betrag großes X Index n Grund minus großes X Ende Betrag geschwungene Klammer zu ist gleich 0 Punkt', 'sbrief');
 };
 
 
@@ -1332,9 +1332,9 @@ sre.NobleGermanTest.prototype.testSample_68 = function() {
       ' mathvariant="italic">it</mi><mi>&#x03C9;</mi></mrow></msup><mi' +
       ' mathvariant="normal">d</mi><mi>t</mi></mfenced></mrow><mrow><mn>2' +
       '</mn></mrow></msup><mo>.</mo></mrow>';
-  this.executeRuleTest(mml, 'großes S Klammer auf omega Klammer zu ist gleich limes Unterschrift großes T Pfeil nach rechts unendlich Ende Unterschrift Anfang Bruch 1 durch 2 großes T Ende Bruch Anfang Betrag Integral Index negativ großes T Hoch großes T Grundlinie Komma f Komma Klammer auf Komma t Komma Klammer zu Komma normales e hoch i t omega Grundlinie Komma normales d Komma t Ende Betrag Quadrat Punkt', 'default');
-  this.executeRuleTest(mml, 'großes S Klammer auf omega Klammer zu ist gleich limes Unterschrift großes T Pfeil nach rechts unendlich Ende Unterschrift Anfang Bruch 1 durch 2 großes T Ende Bruch Anfang Betrag Integral Index negativ großes T Hoch großes T Base Komma f Komma Klammer auf Komma t Komma Klammer zu Komma normales e hoch i t omega Grund Komma normales d Komma t Ende Betrag Quadrat Punkt', 'brief');
-  this.executeRuleTest(mml, 'großes S Klammer auf omega Klammer zu ist gleich limes Unterschrift großes T Pfeil nach rechts unendlich Ende Unterschrift Bruch 1 durch 2 großes T Ende Bruch Betrag Integral Index negativ großes T Hoch großes T Base Komma f Komma Klammer auf Komma t Komma Klammer zu Komma normales e hoch i t omega Grund Komma normales d Komma t Ende Betrag Quadrat Punkt', 'sbrief');
+  this.executeRuleTest(mml, 'großes S Klammer auf omega Klammer zu ist gleich Limes Unterschrift großes T Pfeil nach rechts unendlich Ende Unterschrift Anfang Bruch 1 durch 2 großes T Ende Bruch Anfang Betrag Integral Index negativ großes T Hoch großes T Grundlinie Komma f Komma Klammer auf Komma t Komma Klammer zu Komma normales e hoch i t omega Grundlinie Komma normales d Komma t Ende Betrag Quadrat Punkt', 'default');
+  this.executeRuleTest(mml, 'großes S Klammer auf omega Klammer zu ist gleich Limes Unterschrift großes T Pfeil nach rechts unendlich Ende Unterschrift Anfang Bruch 1 durch 2 großes T Ende Bruch Anfang Betrag Integral Index negativ großes T Hoch großes T Base Komma f Komma Klammer auf Komma t Komma Klammer zu Komma normales e hoch i t omega Grund Komma normales d Komma t Ende Betrag Quadrat Punkt', 'brief');
+  this.executeRuleTest(mml, 'großes S Klammer auf omega Klammer zu ist gleich Limes Unterschrift großes T Pfeil nach rechts unendlich Ende Unterschrift Bruch 1 durch 2 großes T Ende Bruch Betrag Integral Index negativ großes T Hoch großes T Base Komma f Komma Klammer auf Komma t Komma Klammer zu Komma normales e hoch i t omega Grund Komma normales d Komma t Ende Betrag Quadrat Punkt', 'sbrief');
 };
 
 
@@ -1769,9 +1769,9 @@ sre.NobleGermanTest.prototype.testSample_87 = function() {
       '<mn>3</mn>' +
       '</mfrac>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'Anfang Bruch eins halb durch drei viertel Ende Bruch ist gleich zwei drittel', 'default');
-  this.executeRuleTest(mml, 'Anfang Bruch eins halb durch drei viertel Ende Bruch ist gleich zwei drittel', 'brief');
-  this.executeRuleTest(mml, 'Bruch eins halb durch drei viertel Ende Bruch ist gleich zwei drittel', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang Bruch ein halb durch drei viertel Ende Bruch ist gleich zwei drittel', 'default');
+  this.executeRuleTest(mml, 'Anfang Bruch ein halb durch drei viertel Ende Bruch ist gleich zwei drittel', 'brief');
+  this.executeRuleTest(mml, 'Bruch ein halb durch drei viertel Ende Bruch ist gleich zwei drittel', 'sbrief');
 };
 
 
@@ -1831,9 +1831,9 @@ sre.NobleGermanTest.prototype.testSample_89 = function() {
       '<mn>4</mn><mo>!</mo></mrow>' +
       '</mfrac>' +
       '<mo>&#x2212;</mo><mo>&#x2026;</mo></mrow>';
-  this.executeRuleTest(mml, 'kosinus x ist gleich 1 minus Anfang Bruch x Quadrat durch 2 Fakultät Ende Bruch plus Anfang Bruch x hoch 4 Grundlinie durch 4 Fakultät Ende Bruch minus horizontale Ellipsis', 'default');
-  this.executeRuleTest(mml, 'kosinus x ist gleich 1 minus Anfang Bruch x Quadrat durch 2 Fakultät Ende Bruch plus Anfang Bruch x hoch 4 Grund durch 4 Fakultät Ende Bruch minus horizontale Ellipsis', 'brief');
-  this.executeRuleTest(mml, 'kosinus x ist gleich 1 minus Bruch x Quadrat durch 2 Fakultät Ende Bruch plus Bruch x hoch 4 Grund durch 4 Fakultät Ende Bruch minus horizontale Ellipsis', 'sbrief');
+  this.executeRuleTest(mml, 'Kosinus x ist gleich 1 minus Anfang Bruch x Quadrat durch 2 Fakultät Ende Bruch plus Anfang Bruch x hoch 4 Grundlinie durch 4 Fakultät Ende Bruch minus horizontale Ellipsis', 'default');
+  this.executeRuleTest(mml, 'Kosinus x ist gleich 1 minus Anfang Bruch x Quadrat durch 2 Fakultät Ende Bruch plus Anfang Bruch x hoch 4 Grund durch 4 Fakultät Ende Bruch minus horizontale Ellipsis', 'brief');
+  this.executeRuleTest(mml, 'Kosinus x ist gleich 1 minus Bruch x Quadrat durch 2 Fakultät Ende Bruch plus Bruch x hoch 4 Grund durch 4 Fakultät Ende Bruch minus horizontale Ellipsis', 'sbrief');
 };
 
 
@@ -1899,9 +1899,9 @@ sre.NobleGermanTest.prototype.testSample_92 = function() {
       '<mi>x</mi>' +
       '</mfrac>' +
       '<mo>=</mo><mn>1</mn></mrow>';
-  this.executeRuleTest(mml, 'limes Unterschrift x Pfeil nach rechts 0 Ende Unterschrift Anfang Bruch sinus x durch x Ende Bruch ist gleich 1', 'default');
-  this.executeRuleTest(mml, 'limes Unterschrift x Pfeil nach rechts 0 Ende Unterschrift Anfang Bruch sinus x durch x Ende Bruch ist gleich 1', 'brief');
-  this.executeRuleTest(mml, 'limes Unterschrift x Pfeil nach rechts 0 Ende Unterschrift Bruch sinus x durch x Ende Bruch ist gleich 1', 'sbrief');
+  this.executeRuleTest(mml, 'Limes Unterschrift x Pfeil nach rechts 0 Ende Unterschrift Anfang Bruch Sinus x durch x Ende Bruch ist gleich 1', 'default');
+  this.executeRuleTest(mml, 'Limes Unterschrift x Pfeil nach rechts 0 Ende Unterschrift Anfang Bruch Sinus x durch x Ende Bruch ist gleich 1', 'brief');
+  this.executeRuleTest(mml, 'Limes Unterschrift x Pfeil nach rechts 0 Ende Unterschrift Bruch Sinus x durch x Ende Bruch ist gleich 1', 'sbrief');
 };
 
 
@@ -2337,10 +2337,10 @@ sre.NobleGermanTest.prototype.testSample_99 = function() {
       '</mrow>' +
       '</mrow>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'TCS Index gas Grundlinie ist gleich minus eins halb Klammer auf Anfang Bruch großes P Index seal Grundlinie durch großes P Index max Grundlinie Ende Bruch Klammer zu Klammer auf Anfang Bruch 1 durch großes T Index seal Grundlinie Ende Bruch Klammer zu',
+  this.executeRuleTest(mml, 'TCS Index gas Grundlinie ist gleich minus ein halb Klammer auf Anfang Bruch großes P Index seal Grundlinie durch großes P Index Maximum Grundlinie Ende Bruch Klammer zu Klammer auf Anfang Bruch 1 durch großes T Index seal Grundlinie Ende Bruch Klammer zu',
                        'default');
-  this.executeRuleTest(mml, 'TCS Index gas Grund ist gleich minus eins halb Klammer auf Anfang Bruch großes P Index seal Grund durch großes P Index max Grund Ende Bruch Klammer zu Klammer auf Anfang Bruch 1 durch großes T Index seal Grund Ende Bruch Klammer zu', 'brief');
-  this.executeRuleTest(mml, 'TCS Index gas Grund ist gleich minus eins halb Klammer auf Bruch großes P Index seal Grund durch großes P Index max Grund Ende Bruch Klammer zu Klammer auf Bruch 1 durch großes T Index seal Grund Ende Bruch Klammer zu', 'sbrief');
+  this.executeRuleTest(mml, 'TCS Index gas Grund ist gleich minus ein halb Klammer auf Anfang Bruch großes P Index seal Grund durch großes P Index Maximum Grund Ende Bruch Klammer zu Klammer auf Anfang Bruch 1 durch großes T Index seal Grund Ende Bruch Klammer zu', 'brief');
+  this.executeRuleTest(mml, 'TCS Index gas Grund ist gleich minus ein halb Klammer auf Bruch großes P Index seal Grund durch großes P Index Maximum Grund Ende Bruch Klammer zu Klammer auf Bruch 1 durch großes T Index seal Grund Ende Bruch Klammer zu', 'sbrief');
 };
 
 
@@ -2546,9 +2546,9 @@ sre.NobleGermanTest.prototype.testSample_102 = function() {
       '</msubsup>' +
       '<mo>)</mo>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'groß delta phi Index peak Grundlinie ist gleich tangens hoch negativ 1 Grundlinie Klammer auf k Quadrat großes Q Index tank hoch series Grundlinie Klammer zu', 'default');
-  this.executeRuleTest(mml, 'groß delta phi Index peak Grund ist gleich tangens hoch negativ 1 Grund Klammer auf k Quadrat großes Q Index tank hoch series Grund Klammer zu', 'brief');
-  this.executeRuleTest(mml, 'groß delta phi Index peak Grund ist gleich tangens hoch negativ 1 Grund Klammer auf k Quadrat großes Q Index tank hoch series Grund Klammer zu', 'sbrief');
+  this.executeRuleTest(mml, 'großes Delta phi Index peak Grundlinie ist gleich Tangens hoch negativ 1 Grundlinie Klammer auf k Quadrat großes Q Index tank hoch series Grundlinie Klammer zu', 'default');
+  this.executeRuleTest(mml, 'großes Delta phi Index peak Grund ist gleich Tangens hoch negativ 1 Grund Klammer auf k Quadrat großes Q Index tank hoch series Grund Klammer zu', 'brief');
+  this.executeRuleTest(mml, 'großes Delta phi Index peak Grund ist gleich Tangens hoch negativ 1 Grund Klammer auf k Quadrat großes Q Index tank hoch series Grund Klammer zu', 'sbrief');
 };
 
 
@@ -2666,9 +2666,9 @@ sre.NobleGermanTest.prototype.testSample_104 = function() {
       '</mfenced>' +
       '</mrow>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'u Index n Grundlinie Klammer auf x Klammer zu ist gleich gamma Index n Grundlinie Klammer auf kosinus hyperbolikus k Index n Grundlinie x minus kosinus k Index n Grundlinie x Klammer zu plus Klammer auf sinus hyperbolikus k Index n Grundlinie x minus sinus k Index n Grundlinie x Klammer zu', 'default');
-  this.executeRuleTest(mml, 'u Index n Grund Klammer auf x Klammer zu ist gleich gamma Index n Grund Klammer auf kosinus hyperbolikus k Index n Grund x minus kosinus k Index n Grund x Klammer zu plus Klammer auf sinus hyperbolikus k Index n Grund x minus sinus k Index n Grund x Klammer zu', 'brief');
-  this.executeRuleTest(mml, 'u Index n Grund Klammer auf x Klammer zu ist gleich gamma Index n Grund Klammer auf kosinus hyperbolikus k Index n Grund x minus kosinus k Index n Grund x Klammer zu plus Klammer auf sinus hyperbolikus k Index n Grund x minus sinus k Index n Grund x Klammer zu', 'sbrief');
+  this.executeRuleTest(mml, 'u Index n Grundlinie Klammer auf x Klammer zu ist gleich gamma Index n Grundlinie Klammer auf Kosinus hyperbolicus k Index n Grundlinie x minus Kosinus k Index n Grundlinie x Klammer zu plus Klammer auf Sinus hyperbolicus k Index n Grundlinie x minus Sinus k Index n Grundlinie x Klammer zu', 'default');
+  this.executeRuleTest(mml, 'u Index n Grund Klammer auf x Klammer zu ist gleich gamma Index n Grund Klammer auf Kosinus hyperbolicus k Index n Grund x minus Kosinus k Index n Grund x Klammer zu plus Klammer auf Sinus hyperbolicus k Index n Grund x minus Sinus k Index n Grund x Klammer zu', 'brief');
+  this.executeRuleTest(mml, 'u Index n Grund Klammer auf x Klammer zu ist gleich gamma Index n Grund Klammer auf Kosinus hyperbolicus k Index n Grund x minus Kosinus k Index n Grund x Klammer zu plus Klammer auf Sinus hyperbolicus k Index n Grund x minus Sinus k Index n Grund x Klammer zu', 'sbrief');
 };
 
 
@@ -2922,9 +2922,9 @@ sre.NobleGermanTest.prototype.testSample_109 = function() {
       '</mrow>' +
       '</mfrac>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'Anfang Bruch d x durch d theta Ende Bruch ist gleich Anfang Bruch beta durch kosinus Quadrat theta Ende Bruch', 'default');
-  this.executeRuleTest(mml, 'Anfang Bruch d x durch d theta Ende Bruch ist gleich Anfang Bruch beta durch kosinus Quadrat theta Ende Bruch', 'brief');
-  this.executeRuleTest(mml, 'Bruch d x durch d theta Ende Bruch ist gleich Bruch beta durch kosinus Quadrat theta Ende Bruch', 'sbrief');
+  this.executeRuleTest(mml, 'Anfang Bruch d x durch d theta Ende Bruch ist gleich Anfang Bruch beta durch Kosinus Quadrat theta Ende Bruch', 'default');
+  this.executeRuleTest(mml, 'Anfang Bruch d x durch d theta Ende Bruch ist gleich Anfang Bruch beta durch Kosinus Quadrat theta Ende Bruch', 'brief');
+  this.executeRuleTest(mml, 'Bruch d x durch d theta Ende Bruch ist gleich Bruch beta durch Kosinus Quadrat theta Ende Bruch', 'sbrief');
 };
 
 
