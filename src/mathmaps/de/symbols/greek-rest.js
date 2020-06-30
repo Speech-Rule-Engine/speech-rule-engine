@@ -6,7 +6,7 @@
     "key": "0394",
     "mappings": {
       "default": {
-        "default": "groß delta"
+        "default": "groß Delta"
       }
     },
     "category": "Lu"

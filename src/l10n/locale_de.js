@@ -218,12 +218,17 @@ sre.Locale.de = {
     'Meile': 'Meilen',
     'Yard': 'Yards',
     'Joule': 'Joules',
-    'Byte': 'Bytes',
     'Gallone': 'Gallonen',
+    'Unze': 'Unzen',
     'Tonne': 'Tonnen'
   },
 
-  PLURAL: function(unit) {return unit;},
+  PLURAL: function(unit) {
+    if (unit.match(/(B|b)yte$/)) {
+      return unit.replace(/yte$/, 'ytes');
+    }
+    return unit;
+  },
   
   NUMBERS: sre.Numbers.de.NUMBERS,
 

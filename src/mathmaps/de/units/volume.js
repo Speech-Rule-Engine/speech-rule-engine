@@ -2,11 +2,47 @@
   {
     "locale": "de"
   },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "Kubik"
+     }
+   },
+   "key": "cu",
+   "names": ["cu", "cu."]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "Kubikinch"
+     }
+   },
+   "key": "cu inch",
+   "names": ["cu in", "cu. in."]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "Kubikfuß"
+     }
+   },
+   "key": "cu ft",
+   "names": ["cu ft", "cu. ft."]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "Kubikyard"
+     }
+   },
+   "key": "cu yd",
+   "names": ["cu yd", "cu. yd."]
+  },
   {
     "key": "bbl",
     "mappings": {
       "default": {
-        "default": "Faß"
+        "default": "Fass"
       }
     },
     "category": "volume",
@@ -14,6 +50,15 @@
       "bbl.",
       "bbl"
     ]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "Fluid ounce"
+     }
+   },
+   "key": "fl. oz.",
+   "names": ["fl. oz.", "fl oz"]
   },
   {
     "key": "gal",
@@ -66,7 +111,9 @@
     "category": "volume",
     "names": [
       "tbsp",
-      "tbsp."
+      "tbsp.",
+      "Tbsp",
+      "Tbsp."
     ]
   },
   {
@@ -82,16 +129,40 @@
       "tsp."
     ]
   },
-  {
-    "key": "l",
-    "mappings": {
-      "default": {
-        "default": "Liter"
-      }
-    },
-    "category": "volume",
-    "names": [
-      "l"
-    ]
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "Kubikzentimeter"
+     }
+   },
+   "key": "cc",
+   "names": ["cc", "ccm"]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "Kiloliter"
+     }
+   },
+   "key": "kl",
+   "names": ["kl"]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "Liter"
+     }
+   },
+   "key": "l",
+   "names": ["l"]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "Milliliter"
+     }
+   },
+   "key": "ml",
+   "names": ["ml"]
   }
 ]

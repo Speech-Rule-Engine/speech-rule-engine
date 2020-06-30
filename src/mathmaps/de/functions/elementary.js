@@ -114,22 +114,10 @@
     ]
   },
   {
-    "key": "lim",
-    "mappings": {
-      "default": {
-        "default": "Limes"
-      }
-    },
-    "category": "Limits",
-    "names": [
-      "lim"
-    ]
-  },
-  {
     "key": "mod",
     "mappings": {
       "default": {
-        "default": "Modulo"
+        "default": "modulo"
       }
     },
     "category": "Elementary",
@@ -149,7 +137,7 @@
   {"category": "Limits",
    "mappings": {
      "default": {
-       "default": "limes"
+       "default": "Limes"
      }
    },
    "key": "lim",
@@ -219,16 +207,6 @@
    "names": ["projlim", "proj lim"]
   },
 
-
-  {"category": "Elementary",
-   "mappings": {
-     "default": {
-       "default": "modulo"
-     }
-   },
-   "key": "mod",
-   "names": ["mod"]
-  },
 
   {"category": "Probability",
    "mappings": {

@@ -2,6 +2,15 @@
   {
     "locale": "de"
   },
+  {"category": "speed",
+   "mappings": {
+     "default": {
+       "default": "Knoten"
+     }
+   },
+   "key": "kt",
+   "names": ["kt", "kt."]
+  },
   {
     "key": "mph",
     "mappings": {

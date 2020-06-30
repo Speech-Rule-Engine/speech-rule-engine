@@ -2967,15 +2967,6 @@
   },
   {
     "category": "Sm",
-    "key": "22BE",
-    "mappings": {
-      "default": {
-        "default": "rechter Winkel mit Bogen"
-      }
-    }
-  },
-  {
-    "category": "Sm",
     "key": "22BF",
     "mappings": {
       "default": {
@@ -3871,7 +3862,7 @@
     "key": "27D6",
     "mappings": {
       "default": {
-        "default": "Rechter äußerer Join"
+        "default": "rechter äußerer Join"
       }
     }
   },

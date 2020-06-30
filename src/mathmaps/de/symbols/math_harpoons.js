@@ -439,7 +439,7 @@
     "key": "297C",
     "mappings": {
       "default": {
-        "default": "Linke Fischschwanz"
+        "default": "linker Fischschwanz"
       }
     }
   },
@@ -448,7 +448,7 @@
     "key": "297D",
     "mappings": {
       "default": {
-        "default": "Rechter Fischschwanz"
+        "default": "rechter Fischschwanz"
       }
     }
   },

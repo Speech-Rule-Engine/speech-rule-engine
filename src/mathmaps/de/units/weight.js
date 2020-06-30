@@ -29,11 +29,20 @@
       "oz."
     ]
   },
+  {"category": "weight",
+   "mappings": {
+     "default": {
+       "default": "Long ton"
+     }
+   },
+   "key": "LT",
+   "names": ["LT", "L.T."]
+  },
   {
     "key": "gr",
     "mappings": {
       "default": {
-        "default": "Grain"
+        "default": "Gramm"
       }
     },
     "category": "weight",
@@ -41,6 +50,33 @@
       "g",
       "gr"
     ]
+  },
+  {"category": "weight",
+   "mappings": {
+     "default": {
+       "default": "Kilogramm"
+     }
+   },
+   "key": "kg",
+   "names": ["kg"]
+  },
+  {"category": "weight",
+   "mappings": {
+     "default": {
+       "default": "Mikrogramm"
+     }
+   },
+   "key": "mcg",
+   "names": ["mcg", "µg"]
+  },
+  {"category": "weight",
+   "mappings": {
+     "default": {
+       "default": "Milligramm"
+     }
+   },
+   "key": "mg",
+   "names": ["mg"]
   },
   {
     "key": "t",
