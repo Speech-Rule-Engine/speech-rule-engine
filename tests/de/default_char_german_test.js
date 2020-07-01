@@ -3476,7 +3476,7 @@ sre.DefaultCharGermanTest.prototype.testDefaultChars = function() {
   this.executeCharTest('∝', ['proportional zu']);
   this.executeCharTest('∞', ['unendlich']);
   this.executeCharTest('∟', ['rechter Winkel']);
-  this.executeCharTest('∠', ['ebener Winkel']);
+  this.executeCharTest('∠', ['Winkel']);
   this.executeCharTest('∡', ['gerichteter Winkel']);
   this.executeCharTest('∢', ['Raumwinkel']);
   this.executeCharTest('∣', ['teilt']);

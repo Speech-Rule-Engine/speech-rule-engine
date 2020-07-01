@@ -3476,7 +3476,7 @@ sre.MathspeakCharGermanTest.prototype.testMathspeakChars = function() {
   this.executeCharTest('∝', ['proportional zu', 'proportional zu', 'proportional zu']);
   this.executeCharTest('∞', ['unendlich', 'unendlich', 'unendlich']);
   this.executeCharTest('∟', ['rechter Winkel', 'rechter Winkel', 'rechter Winkel']);
-  this.executeCharTest('∠', ['ebener Winkel', 'ebener Winkel', 'ebener Winkel']);
+  this.executeCharTest('∠', ['Winkel', 'Winkel', 'Winkel']);
   this.executeCharTest('∡', ['gerichteter Winkel', 'gerichteter Winkel', 'gerichteter Winkel']);
   this.executeCharTest('∢', ['Raumwinkel', 'Raumwinkel', 'Raumwinkel']);
   this.executeCharTest('∣', ['teilt', 'teilt', 'teilt']);

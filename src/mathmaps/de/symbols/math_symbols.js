@@ -1547,7 +1547,7 @@
     "key": "2220",
     "mappings": {
       "default": {
-        "default": "ebener Winkel"
+        "default": "Winkel"
       }
     },
     "category": "Sm"

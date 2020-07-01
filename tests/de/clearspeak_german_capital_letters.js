@@ -134,7 +134,7 @@ sre.ClearspeakGermanCapitalLetters.prototype.testCap008 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C</mi></mrow>' +
       '</math>';
-  var speech = 'ebener Winkel A B C';
+  var speech = 'Winkel A B C';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -146,7 +146,7 @@ sre.ClearspeakGermanCapitalLetters.prototype.testCap009 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C' +
       '</mi></mrow></math>';
-  var speech = 'der Winkel zwischen ebener Winkel A B C';
+  var speech = 'das Maß des Winkels A B C';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -157,7 +157,7 @@ sre.ClearspeakGermanCapitalLetters.prototype.testCap009 = function() {
 sre.ClearspeakGermanCapitalLetters.prototype.testCap010 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi></mrow></math>';
-  var speech = 'der Winkel zwischen ebener Winkel A';
+  var speech = 'das Maß des Winkels A';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -253,7 +253,7 @@ sre.ClearspeakGermanCapitalLetters.prototype.testCap018 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C</mi></mrow>' +
       '</math>';
-  var speech = 'ebener Winkel großes A, großes B, großes C';
+  var speech = 'Winkel großes A, großes B, großes C';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -265,7 +265,7 @@ sre.ClearspeakGermanCapitalLetters.prototype.testCap019 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C' +
       '</mi></mrow></math>';
-  var speech = 'der Winkel zwischen ebener Winkel großes A, großes B, großes C';
+  var speech = 'das Maß des Winkels großes A, großes B, großes C';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -276,7 +276,7 @@ sre.ClearspeakGermanCapitalLetters.prototype.testCap019 = function() {
 sre.ClearspeakGermanCapitalLetters.prototype.testCap020 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi></mrow></math>';
-  var speech = 'der Winkel zwischen ebener Winkel großes A';
+  var speech = 'das Maß des Winkels großes A';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -287,6 +287,6 @@ sre.ClearspeakGermanCapitalLetters.prototype.testCap020 = function() {
 sre.ClearspeakGermanCapitalLetters.prototype.testCap020a = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mo>∠</mo><mi>A</mi></mrow></math>';
-  var speech = 'ebener Winkel großes A';
+  var speech = 'Winkel großes A';
   this.executeRuleTest(mathml, speech, preference);
 };

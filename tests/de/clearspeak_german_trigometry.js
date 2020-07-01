@@ -415,7 +415,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrig031 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>tan</mi><mrow><mo>(</mo><mrow><mo>∠</mo>' +
       '<mi>D</mi><mi>E</mi><mi>F</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Tangens von, Klammer auf, ebener Winkel D E F, Klammer zu';
+  var speech = 'der Tangens von, Klammer auf, Winkel D E F, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -427,7 +427,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrig032 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>tan</mi><mrow><mo>(</mo><mrow><mo>∠</mo>' +
       '<mi>D</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Tangens von, Klammer auf, ebener Winkel D, Klammer zu';
+  var speech = 'der Tangens von, Klammer auf, Winkel D, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 

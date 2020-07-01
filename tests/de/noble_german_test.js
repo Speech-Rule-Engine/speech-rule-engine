@@ -294,9 +294,9 @@ sre.NobleGermanTest.prototype.testSample_15 = function() {
   var mml = '<mrow>' +
       '<mi>m</mi><mo>&#x2220;</mo><mn>1</mn><mo>=</mo><mi>30°</mi>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'm ebener Winkel 1 ist gleich 30 Grad', 'default');
-  this.executeRuleTest(mml, 'm ebener Winkel 1 ist gleich 30 Grad', 'brief');
-  this.executeRuleTest(mml, 'm ebener Winkel 1 ist gleich 30 Grad', 'sbrief');
+  this.executeRuleTest(mml, 'm Winkel 1 ist gleich 30 Grad', 'default');
+  this.executeRuleTest(mml, 'm Winkel 1 ist gleich 30 Grad', 'brief');
+  this.executeRuleTest(mml, 'm Winkel 1 ist gleich 30 Grad', 'sbrief');
 };
 
 
@@ -307,9 +307,9 @@ sre.NobleGermanTest.prototype.testSample_16 = function() {
   var mml = '<mrow>' +
       '<mi>m</mi><mo>&#x2220;</mo><mn>2</mn><mo>=</mo>' +
       '<mi>60°</mi>  </mrow>';
-  this.executeRuleTest(mml, 'm ebener Winkel 2 ist gleich 60 Grad', 'default');
-  this.executeRuleTest(mml, 'm ebener Winkel 2 ist gleich 60 Grad', 'brief');
-  this.executeRuleTest(mml, 'm ebener Winkel 2 ist gleich 60 Grad', 'sbrief');
+  this.executeRuleTest(mml, 'm Winkel 2 ist gleich 60 Grad', 'default');
+  this.executeRuleTest(mml, 'm Winkel 2 ist gleich 60 Grad', 'brief');
+  this.executeRuleTest(mml, 'm Winkel 2 ist gleich 60 Grad', 'sbrief');
 };
 
 
@@ -321,11 +321,11 @@ sre.NobleGermanTest.prototype.testSample_17 = function() {
       '<mi>m</mi><mo>&#x2220;</mo><mn>1</mn><mo>+</mo><mi>m</mi>' +
       '<mo>&#x2220;</mo><mn>2</mn><mo>=</mo>' +
       '<mi>90°</mi>  </mrow>';
-  this.executeRuleTest(mml, 'm ebener Winkel 1 plus m ebener Winkel 2 ist gleich 90 Grad',
+  this.executeRuleTest(mml, 'm Winkel 1 plus m Winkel 2 ist gleich 90 Grad',
                        'default');
-  this.executeRuleTest(mml, 'm ebener Winkel 1 plus m ebener Winkel 2 ist gleich 90 Grad',
+  this.executeRuleTest(mml, 'm Winkel 1 plus m Winkel 2 ist gleich 90 Grad',
                        'brief');
-  this.executeRuleTest(mml, 'm ebener Winkel 1 plus m ebener Winkel 2 ist gleich 90 Grad',
+  this.executeRuleTest(mml, 'm Winkel 1 plus m Winkel 2 ist gleich 90 Grad',
                        'sbrief');
 };
 
@@ -338,9 +338,9 @@ sre.NobleGermanTest.prototype.testSample_18 = function() {
       '<mi>m</mi><mo>&#x2220;</mo><mi>M</mi><mo>+</mo><mi>m</mi>' +
       '<mo>&#x2220;</mo><mi>N</mi><mo>=</mo>' +
       '<mi>180°</mi>  </mrow>';
-  this.executeRuleTest(mml, 'm ebener Winkel großes M plus m ebener Winkel großes N ist gleich 180 Grad', 'default');
-  this.executeRuleTest(mml, 'm ebener Winkel großes M plus m ebener Winkel großes N ist gleich 180 Grad', 'brief');
-  this.executeRuleTest(mml, 'm ebener Winkel großes M plus m ebener Winkel großes N ist gleich 180 Grad', 'sbrief');
+  this.executeRuleTest(mml, 'm Winkel großes M plus m Winkel großes N ist gleich 180 Grad', 'default');
+  this.executeRuleTest(mml, 'm Winkel großes M plus m Winkel großes N ist gleich 180 Grad', 'brief');
+  this.executeRuleTest(mml, 'm Winkel großes M plus m Winkel großes N ist gleich 180 Grad', 'sbrief');
 };
 
 
@@ -578,11 +578,11 @@ sre.NobleGermanTest.prototype.testSample_30 = function() {
   var mml = '<mrow>' +
       '<mo>&#x2220;</mo><mi>B</mi><mi>E</mi><mi>F</mi>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'ebener Winkel großes B großes E großes F',
+  this.executeRuleTest(mml, 'Winkel großes B großes E großes F',
                        'default');
-  this.executeRuleTest(mml, 'ebener Winkel großes B großes E großes F',
+  this.executeRuleTest(mml, 'Winkel großes B großes E großes F',
                        'brief');
-  this.executeRuleTest(mml, 'ebener Winkel großes B großes E großes F',
+  this.executeRuleTest(mml, 'Winkel großes B großes E großes F',
                        'sbrief');
 };
 
@@ -594,11 +594,11 @@ sre.NobleGermanTest.prototype.testSample_31 = function() {
   var mml = '<mrow>' +
       '<mo>&#x2220;</mo><mi>B</mi><mi>E</mi><mi>D</mi>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'ebener Winkel großes B großes E großes D',
+  this.executeRuleTest(mml, 'Winkel großes B großes E großes D',
                        'default');
-  this.executeRuleTest(mml, 'ebener Winkel großes B großes E großes D',
+  this.executeRuleTest(mml, 'Winkel großes B großes E großes D',
                        'brief');
-  this.executeRuleTest(mml, 'ebener Winkel großes B großes E großes D',
+  this.executeRuleTest(mml, 'Winkel großes B großes E großes D',
                        'sbrief');
 };
 
@@ -610,11 +610,11 @@ sre.NobleGermanTest.prototype.testSample_32 = function() {
   var mml = '<mrow>' +
       '<mo>&#x2220;</mo><mi>D</mi><mi>E</mi><mi>F</mi>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'ebener Winkel großes D großes E großes F',
+  this.executeRuleTest(mml, 'Winkel großes D großes E großes F',
                        'default');
-  this.executeRuleTest(mml, 'ebener Winkel großes D großes E großes F',
+  this.executeRuleTest(mml, 'Winkel großes D großes E großes F',
                        'brief');
-  this.executeRuleTest(mml, 'ebener Winkel großes D großes E großes F',
+  this.executeRuleTest(mml, 'Winkel großes D großes E großes F',
                        'sbrief');
 };
 

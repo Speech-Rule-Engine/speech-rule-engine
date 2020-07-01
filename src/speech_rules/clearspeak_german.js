@@ -1479,7 +1479,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
   // Angle
   defineRule(
       'angle-measure', 'clearspeak.default',
-      '[t] "der Winkel zwischen"; [n] content/*[1]; ' +
+      '[t] "das Maß des Winkels"; ' +
       '[n] children/*[2] (grammar:angle)',
       'self::infixop', 'content/*[1]/text()="∠"', 'children/*[1][text()="m"]');
 
