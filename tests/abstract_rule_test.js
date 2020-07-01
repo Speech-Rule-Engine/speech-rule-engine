@@ -206,10 +206,8 @@ sre.AbstractRuleTest.prototype.join = function(examples) {
  * @override
  */
 sre.AbstractRuleTest.prototype.header = function() {
-  var mathjax = '<script type="text/javascript" async ' +
-      'src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/' +
-      'MathJax.js?config=TeX-AMS-MML_HTMLorMML-full">' +
-      '</script>';
+  var mathjax = '<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>\n' +
+      '<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>';
   var style = '\n<style>\n table, th, td {\n' +
       '  border: 1px solid black; }\n</style>\n';
   return '<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">' +
