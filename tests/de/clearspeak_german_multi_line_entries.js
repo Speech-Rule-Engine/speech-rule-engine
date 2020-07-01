@@ -53,7 +53,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline001 = function() {
   var mathml = '<math><mtable><mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=' +
       '</mo><mn>7</mn></mtd></mtr><mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo>' +
       '<mn>3</mn><mi>y</mi><mo>=</mo><mn>17</mn></mtd></mtr></mtable></math>';
-  var speech = '2 lignes, Ligne 1: x plus y égale 7. Ligne 2: 2 x, plus 3 y, égale 17';
+  var speech = '2 Zeilen, Zeile 1: x plus y ist gleich 7. Zeile 2: 2 x, plus 3 y, ist gleich 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -69,7 +69,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline002 = function() {
       '</mtr><mtr><mtd><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y' +
       '</mi></mrow></mtd><mtd><mo>=</mo></mtd><mtd><mrow><mn>17</mn></mrow>' +
       '</mtd></mtr></mtable></mrow></math>';
-  var speech = '2 lignes, Ligne 1: x plus y; égale; 7. Ligne 2: 2 x, plus 3 y; égale; 17';
+  var speech = '2 Zeilen, Zeile 1: x plus y; ist gleich; 7. Zeile 2: 2 x, plus 3 y; ist gleich; 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -86,7 +86,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline003 = function() {
       '<mo>+</mo></mtd><mtd><mrow><mn>3</mn><mi>y</mi></mrow></mtd><mtd>' +
       '<mo>=</mo></mtd><mtd><mrow><mn>17</mn></mrow></mtd></mtr></mtable>' +
       '</mrow></math>';
-  var speech = '2 lignes, Ligne 1: x; plus; y; égale; 7. Ligne 2: 2 x; plus; 3 y; égale; 17';
+  var speech = '2 Zeilen, Zeile 1: x; plus; y; ist gleich; 7. Zeile 2: 2 x; plus; 3 y; ist gleich; 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -101,7 +101,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline004 = function() {
       '<mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>7</mn></mtd></mtr><mtr>' +
       '<mtd><mtext>Equation 2: </mtext><mn>2</mn><mi>x</mi><mo>+</mo><mn>3' +
       '</mn><mi>y</mi><mo>=</mo><mn>17</mn></mtd></mtr></mtable></math>';
-  var speech = '2 lignes, Ligne 1: Equation 1 deux points x plus y égale 7. Ligne 2: Equation 2 deux points 2 x, plus 3 y, égale 17';
+  var speech = '2 Zeilen, Zeile 1: Equation 1 Doppelpunkt x plus y ist gleich 7. Zeile 2: Equation 2 Doppelpunkt 2 x, plus 3 y, ist gleich 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -118,7 +118,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline005 = function() {
       '</mtext></mrow></mtd><mtd><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>3' +
       '</mn><mi>y</mi><mo>=</mo><mn>17</mn></mrow></mtd></mtr></mtable>' +
       '</mrow></math>';
-  var speech = '2 lignes, Ligne 1: Equation 1 deux points; x plus y égale 7. Ligne 2: Equation 2 deux points; 2 x, plus 3 y, égale 17';
+  var speech = '2 Zeilen, Zeile 1: Equation 1 Doppelpunkt; x plus y ist gleich 7. Zeile 2: Equation 2 Doppelpunkt; 2 x, plus 3 y, ist gleich 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -136,7 +136,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline006 = function() {
       '<mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi></mrow>' +
       '</mtd><mtd><mo>=</mo></mtd><mtd><mrow><mn>17</mn></mrow></mtd></mtr>' +
       '</mtable><mtext></mtext></mrow></math>';
-  var speech = '2 lignes, Ligne 1: Equation 1 deux points; x plus y; égale; 7. Ligne 2: Equation 2 deux points; 2 x, plus 3 y; égale; 17';
+  var speech = '2 Zeilen, Zeile 1: Equation 1 Doppelpunkt; x plus y; ist gleich; 7. Zeile 2: Equation 2 Doppelpunkt; 2 x, plus 3 y; ist gleich; 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -154,7 +154,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline007 = function() {
       '<mtr><mtd><mn>3</mn><mi>x</mi><mo>+</mo><mn>2</mn><mi>y</mi><mo>+' +
       '</mo><mn>5</mn><mi>z</mi><mo>=</mo><mn>1</mn></mtd></mtr></mtable>' +
       '</math>';
-  var speech = '3 lignes, Ligne 1: 4 x, plus 3 y, plus 2 z, égale 17. Ligne 2: 2 x, plus 4 y, plus 6 z, égale 6. Ligne 3: 3 x, plus 2 y, plus 5 z, égale 1';
+  var speech = '3 Zeilen, Zeile 1: 4 x, plus 3 y, plus 2 z, ist gleich 17. Zeile 2: 2 x, plus 4 y, plus 6 z, ist gleich 6. Zeile 3: 3 x, plus 2 y, plus 5 z, ist gleich 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -177,7 +177,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline008 = function() {
       '</mrow></mtd><mtd><mo>+</mo></mtd><mtd><mrow><mn>5</mn><mi>z</mi>' +
       '</mrow></mtd><mtd><mo>=</mo></mtd><mtd><mn>1</mn></mtd></mtr>' +
       '</mtable></mrow></math>';
-  var speech = '3 lignes, Ligne 1: 4 x; plus; 3 y; plus; 2 z; égale; 1. Ligne 2: 2 x; plus; 4 y; plus; 6 z; égale; 6. Ligne 3: 3 x; plus; 2 y; plus; 5 z; égale; 1';
+  var speech = '3 Zeilen, Zeile 1: 4 x; plus; 3 y; plus; 2 z; ist gleich; 1. Zeile 2: 2 x; plus; 4 y; plus; 6 z; ist gleich; 6. Zeile 3: 3 x; plus; 2 y; plus; 5 z; ist gleich; 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -196,7 +196,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline009 = function() {
       '<mtext>Equation 3: </mtext><mn>3</mn><mi>x</mi><mo>+</mo><mn>2</mn>' +
       '<mi>y</mi><mo>+</mo><mn>5</mn><mi>z</mi><mo>=</mo><mn>1</mn></mtd>' +
       '</mtr></mtable></math>';
-  var speech = '3 lignes, Ligne 1: Equation 1 deux points 4 x, plus 3 y, plus 2 z, égale 17. Ligne 2: Equation 2 deux points 2 x, plus 4 y, plus 6 z, égale 6. Ligne 3: Equation 3 deux points 3 x, plus 2 y, plus 5 z, égale 1';
+  var speech = '3 Zeilen, Zeile 1: Equation 1 Doppelpunkt 4 x, plus 3 y, plus 2 z, ist gleich 17. Zeile 2: Equation 2 Doppelpunkt 2 x, plus 4 y, plus 6 z, ist gleich 6. Zeile 3: Equation 3 Doppelpunkt 3 x, plus 2 y, plus 5 z, ist gleich 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -211,7 +211,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline010 = function() {
       '</mo><mn>0</mn></mtd></mtr><mtr><mtd><mi>y</mi><mo>≥</mo><mn>0</mn>' +
       '</mtd></mtr><mtr><mtd><mn>3</mn><mi>x</mi><mo>−</mo><mn>5</mn><mi>y' +
       '</mi><mo>≤</mo><mn>30</mn></mtd></mtr></mtable></math>';
-  var speech = '3 lignes, Ligne 1: x plus grand ou égal à 0. Ligne 2: y plus grand ou égal à 0. Ligne 3: 3 x, moins 5 y, plus petit ou égal à 30';
+  var speech = '3 Zeilen, Zeile 1: x größer oder gleich 0. Zeile 2: y größer oder gleich 0. Zeile 3: 3 x, minus 5 y, kleiner oder gleich 30';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -227,7 +227,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline011 = function() {
       '<mo>=</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>3</mn><mi>x</mi></mtd>' +
       '</mtr><mtr><mtd><mn>8</mn><mo>=</mo><mn>2</mn><mi>x</mi></mtd></mtr>' +
       '<mtr><mtd><mn>4</mn><mo>=</mo><mi>x</mi></mtd></mtr></mtable></math>';
-  var speech = '4 lignes, Ligne 1: 3 x, plus 8 égale 5 x. Ligne 2: 8 égale 5 x, moins 3 x. Ligne 3: 8 égale 2 x. Ligne 4: 4 égale x';
+  var speech = '4 Zeilen, Zeile 1: 3 x, plus 8 ist gleich 5 x. Zeile 2: 8 ist gleich 5 x, minus 3 x. Zeile 3: 8 ist gleich 2 x. Zeile 4: 4 ist gleich x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -250,7 +250,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline012 = function() {
       '</mtd></mtr><mtr><mtd><mrow/></mtd><mtd><mrow/></mtd><mtd><mn>4</mn>' +
       '</mtd><mtd><mo>=</mo></mtd><mtd><mi>x</mi></mtd><mtd><mrow/></mtd>' +
       '<mtd><mrow/></mtd></mtr></mtable></mrow></math>';
-  var speech = '4 lignes, Ligne 1: 3 x; plus; 8; égale; 5 x; vide; vide. Ligne 2: vide; vide; 8; égale; 5 x; moins; 3 x. Ligne 3: vide; vide; 8; égale; 2 x; vide; vide. Ligne 4: vide; vide; 4; égale; x; vide; vide';
+  var speech = '4 Zeilen, Zeile 1: 3 x; plus; 8; ist gleich; 5 x; leer; leer. Zeile 2: leer; leer; 8; ist gleich; 5 x; minus; 3 x. Zeile 3: leer; leer; 8; ist gleich; 2 x; leer; leer. Zeile 4: leer; leer; 4; ist gleich; x; leer; leer';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -268,7 +268,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline013 = function() {
       '<mtext>Step 3:  </mtext><mn>8</mn><mo>=</mo><mn>2</mn><mi>x</mi>' +
       '</mtd></mtr><mtr><mtd><mtext>Step 4:  </mtext><mn>4</mn><mo>=</mo>' +
       '<mi>x</mi></mtd></mtr></mtable></math>';
-  var speech = '4 lignes, Ligne 1: Step 1 deux points 3 x, plus 8 égale 5 x. Ligne 2: Step 2 deux points 8 égale 5 x, moins 3 x. Ligne 3: Step 3 deux points 8 égale 2 x. Ligne 4: Step 4 deux points 4 égale x';
+  var speech = '4 Zeilen, Zeile 1: Step 1 Doppelpunkt 3 x, plus 8 ist gleich 5 x. Zeile 2: Step 2 Doppelpunkt 8 ist gleich 5 x, minus 3 x. Zeile 3: Step 3 Doppelpunkt 8 ist gleich 2 x. Zeile 4: Step 4 Doppelpunkt 4 ist gleich x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -285,7 +285,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline014 = function() {
       '</mrow></mtd></mtr><mtr><mtd><mrow><mi>x</mi><mtext>   if </mtext>' +
       '<mi>x</mi><mo>≥</mo><mn>0</mn></mrow></mtd></mtr></mtable></mrow>' +
       '</mrow></mrow></math>';
-  var speech = 'f de x, égale, 2 cas, Cas 1: négatif x if x inférieur à 0. Cas 2: x if x plus grand ou égal à 0';
+  var speech = 'f von x, ist gleich, 2 Fälle, Fall 1: negativ x if x kleiner als 0. Fall 2: x if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -302,7 +302,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline015 = function() {
       '<mo>&lt;</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd><mi>x</mi></mtd>' +
       '<mtd><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo><mn>0</mn></mrow>' +
       '</mtd></mtr></mtable></mrow></mrow></mrow></math>';
-  var speech = 'f de x, égale, 2 cas, Cas 1: négatif x; if x inférieur à 0. Cas 2: x; if x plus grand ou égal à 0';
+  var speech = 'f von x, ist gleich, 2 Fälle, Fall 1: negativ x; if x kleiner als 0. Fall 2: x; if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -319,7 +319,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline016 = function() {
       '</mrow></mtd></mtr><mtr><mtd><mrow><mi>x</mi><mtext>   if </mtext>' +
       '<mi>x</mi><mo>≥</mo><mn>0</mn></mrow></mtd></mtr></mtable></mrow>' +
       '</mrow></mrow></math>';
-  var speech = 'f de x, égale, 2 cas, Cas 1: négatif x if x inférieur à 0. Cas 2: x if x plus grand ou égal à 0';
+  var speech = 'f von x, ist gleich, 2 Fälle, Fall 1: negativ x if x kleiner als 0. Fall 2: x if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -336,7 +336,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline017 = function() {
       '<mo>&lt;</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd><mi>x</mi></mtd>' +
       '<mtd><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo><mn>0</mn></mrow>' +
       '</mtd></mtr></mtable></mrow></mrow></mrow></math>';
-  var speech = 'f de x, égale, 2 cas, Cas 1: négatif x; if x inférieur à 0. Cas 2: x; if x plus grand ou égal à 0';
+  var speech = 'f von x, ist gleich, 2 Fälle, Fall 1: negativ x; if x kleiner als 0. Fall 2: x; if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -354,7 +354,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline018 = function() {
       '<mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>x' +
       '</mi></mrow></mtd><mtd><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo>' +
       '<mn>0</mn></mrow></mtd></mtr></mtable></mrow></math>';
-  var speech = '2 cas, Cas 1: f de x, égale négatif x; if x inférieur à 0. Cas 2: f de x, égale x; if x plus grand ou égal à 0';
+  var speech = '2 Fälle, Fall 1: f von x, ist gleich negativ x; if x kleiner als 0. Fall 2: f von x, ist gleich x; if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -368,7 +368,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline019 = function() {
   var mathml = '<math><mtable><mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=' +
       '</mo><mn>7</mn></mtd></mtr><mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo>' +
       '<mn>3</mn><mi>y</mi><mo>=</mo><mn>17</mn></mtd></mtr></mtable></math>';
-  var speech = '2 équations, Équation 1: x plus y égale 7. Équation 2: 2 x, plus 3 y, égale 17';
+  var speech = '2 Gleichungen, Gleichung 1: x plus y ist gleich 7. Gleichung 2: 2 x, plus 3 y, ist gleich 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -384,7 +384,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline019a = function() {
       '</mtr><mtr><mtd><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y' +
       '</mi></mrow></mtd><mtd><mo>=</mo></mtd><mtd><mrow><mn>17</mn></mrow>' +
       '</mtd></mtr></mtable></mrow></math>';
-  var speech = '2 équations, Équation 1: x plus y; égale; 7. Équation 2: 2 x, plus 3 y; égale; 17';
+  var speech = '2 Gleichungen, Gleichung 1: x plus y; ist gleich; 7. Gleichung 2: 2 x, plus 3 y; ist gleich; 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -399,7 +399,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline020 = function() {
       '<mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>7</mn></mtd></mtr>' +
       '<mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi><mo>=' +
       '</mo><mn>17</mn></mtd></mtr></mtable></semantics></math>';
-  var speech = '2 lignes, Ligne 1: x plus y égale 7. Ligne 2: 2 x, plus 3 y, égale 17';
+  var speech = '2 Zeilen, Zeile 1: x plus y ist gleich 7. Zeile 2: 2 x, plus 3 y, ist gleich 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -415,7 +415,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline021 = function() {
       '</mtr><mtr><mtd><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y' +
       '</mi></mrow></mtd><mtd><mo>=</mo></mtd><mtd><mrow><mn>17</mn></mrow>' +
       '</mtd></mtr></mtable></mrow></math>';
-  var speech = '2 lignes, Ligne 1: x plus y; égale; 7. Ligne 2: 2 x, plus 3 y; égale; 17';
+  var speech = '2 Zeilen, Zeile 1: x plus y; ist gleich; 7. Zeile 2: 2 x, plus 3 y; ist gleich; 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -429,7 +429,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline022 = function() {
   var mathml = '<math><mtable><mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=' +
       '</mo><mn>7</mn></mtd></mtr><mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo>' +
       '<mn>3</mn><mi>y</mi><mo>=</mo><mn>17</mn></mtd></mtr></mtable></math>';
-  var speech = '2 colonnes, rangée 1: x plus y égale 7. rangée 2: 2 x, plus 3 y, égale 17';
+  var speech = '2 Zeilen, Zeile 1: x plus y ist gleich 7. Zeile 2: 2 x, plus 3 y, ist gleich 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -445,7 +445,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline023 = function() {
       '</mtr><mtr><mtd><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y' +
       '</mi></mrow></mtd><mtd><mo>=</mo></mtd><mtd><mrow><mn>17</mn></mrow>' +
       '</mtd></mtr></mtable></mrow></math>';
-  var speech = '2 colonnes, rangée 1: x plus y; égale; 7. rangée 2: 2 x, plus 3 y; égale; 17';
+  var speech = '2 Zeilen, Zeile 1: x plus y; ist gleich; 7. Zeile 2: 2 x, plus 3 y; ist gleich; 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -461,7 +461,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline024 = function() {
       '<mo>=</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>3</mn><mi>x</mi></mtd>' +
       '</mtr><mtr><mtd><mn>8</mn><mo>=</mo><mn>2</mn><mi>x</mi></mtd></mtr>' +
       '<mtr><mtd><mn>4</mn><mo>=</mo><mi>x</mi></mtd></mtr></mtable></math>';
-  var speech = '4  étapes,  Étape 1: 3 x, plus 8 égale 5 x.  Étape 2: 8 égale 5 x, moins 3 x.  Étape 3: 8 égale 2 x.  Étape 4: 4 égale x';
+  var speech = '4 Rechenschritte, Schritt 1: 3 x, plus 8 ist gleich 5 x. Schritt 2: 8 ist gleich 5 x, minus 3 x. Schritt 3: 8 ist gleich 2 x. Schritt 4: 4 ist gleich x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -484,7 +484,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline025 = function() {
       '</mtd></mtr><mtr><mtd><mrow/></mtd><mtd><mrow/></mtd><mtd><mn>4</mn>' +
       '</mtd><mtd><mo>=</mo></mtd><mtd><mi>x</mi></mtd><mtd><mrow/></mtd>' +
       '<mtd><mrow/></mtd></mtr></mtable></mrow></math>';
-  var speech = '4  étapes,  Étape 1: 3 x; plus; 8; égale; 5 x; vide; vide.  Étape 2: vide; vide; 8; égale; 5 x; moins; 3 x.  Étape 3: vide; vide; 8; égale; 2 x; vide; vide.  Étape 4: vide; vide; 4; égale; x; vide; vide';
+  var speech = '4 Rechenschritte, Schritt 1: 3 x; plus; 8; ist gleich; 5 x; leer; leer. Schritt 2: leer; leer; 8; ist gleich; 5 x; minus; 3 x. Schritt 3: leer; leer; 8; ist gleich; 2 x; leer; leer. Schritt 4: leer; leer; 4; ist gleich; x; leer; leer';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -499,7 +499,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline026 = function() {
       '</mo><mn>0</mn></mtd></mtr><mtr><mtd><mi>y</mi><mo>≥</mo><mn>0</mn>' +
       '</mtd></mtr><mtr><mtd><mn>3</mn><mi>x</mi><mo>−</mo><mn>5</mn><mi>y' +
       '</mi><mo>≤</mo><mn>30</mn></mtd></mtr></mtable></math>';
-  var speech = '3 contraintes, Contrainte 1: x plus grand ou égal à 0. Contrainte 2: y plus grand ou égal à 0. Contrainte 3: 3 x, moins 5 y, plus petit ou égal à 30';
+  var speech = '3 Bedingungen, Bedingung 1: x größer oder gleich 0. Bedingung 2: y größer oder gleich 0. Bedingung 3: 3 x, minus 5 y, kleiner oder gleich 30';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -515,7 +515,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline026a = function() {
       '</mo><mn>0</mn></mtd></mtr><mtr><mtd><mi>y</mi><mo>≥</mo><mn>0</mn>' +
       '</mtd></mtr><mtr><mtd><mn>3</mn><mi>x</mi><mo>−</mo><mn>5</mn><mi>y' +
       '</mi><mo>≤</mo><mn>30</mn></mtd></mtr></mtable></math>';
-  var speech = '3 lignes, x plus grand ou égal à 0. y plus grand ou égal à 0. 3 x, moins 5 y, plus petit ou égal à 30';
+  var speech = '3 Zeilen, x größer oder gleich 0. y größer oder gleich 0. 3 x, minus 5 y, kleiner oder gleich 30';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -538,7 +538,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline026b = function() {
       '</mtd></mtr><mtr><mtd><mrow/></mtd><mtd><mrow/></mtd><mtd><mn>4</mn>' +
       '</mtd><mtd><mo>=</mo></mtd><mtd><mi>x</mi></mtd><mtd><mrow/></mtd>' +
       '<mtd><mrow/></mtd></mtr></mtable></mrow></math>';
-  var speech = '4 lignes, 3 x; plus; 8; égale; 5 x; vide; vide. vide; vide; 8; égale; 5 x; moins; 3 x. vide; vide; 8; égale; 2 x; vide; vide. vide; vide; 4; égale; x; vide; vide';
+  var speech = '4 Zeilen, 3 x; plus; 8; ist gleich; 5 x; leer; leer. leer; leer; 8; ist gleich; 5 x; minus; 3 x. leer; leer; 8; ist gleich; 2 x; leer; leer. leer; leer; 4; ist gleich; x; leer; leer';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -555,7 +555,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline026c = function() {
       '</mrow></mtd></mtr><mtr><mtd><mrow><mi>x</mi><mtext>   if </mtext>' +
       '<mi>x</mi><mo>≥</mo><mn>0</mn></mrow></mtd></mtr></mtable></mrow>' +
       '</mrow></mrow></math>';
-  var speech = 'f de x, égale, 2 cas, négatif x if x inférieur à 0. x if x plus grand ou égal à 0';
+  var speech = 'f von x, ist gleich, 2 Fälle, negativ x if x kleiner als 0. x if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -569,7 +569,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline027 = function() {
   var mathml = '<math><mtable><mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=' +
       '</mo><mn>7</mn></mtd></mtr><mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo>' +
       '<mn>3</mn><mi>y</mi><mo>=</mo><mn>17</mn></mtd></mtr></mtable></math>';
-  var speech = '2 lignes, Ligne 1: x plus y égale 7. Ligne 2: 2 x, plus 3 y, égale 17';
+  var speech = '2 Zeilen, Zeile 1: x plus y ist gleich 7. Zeile 2: 2 x, plus 3 y, ist gleich 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -585,7 +585,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline028 = function() {
       '</mtr><mtr><mtd><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y' +
       '</mi></mrow></mtd><mtd><mo>=</mo></mtd><mtd><mrow><mn>17</mn></mrow>' +
       '</mtd></mtr></mtable></mrow></math>';
-  var speech = '2 lignes, Ligne 1: x plus y. égale. 7. Ligne 2: 2 x, plus 3 y. égale. 17';
+  var speech = '2 Zeilen, Zeile 1: x plus y. ist gleich. 7. Zeile 2: 2 x, plus 3 y. ist gleich. 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -602,7 +602,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline029 = function() {
       '<mo>+</mo></mtd><mtd><mrow><mn>3</mn><mi>y</mi></mrow></mtd><mtd>' +
       '<mo>=</mo></mtd><mtd><mrow><mn>17</mn></mrow></mtd></mtr></mtable>' +
       '</mrow></math>';
-  var speech = '2 lignes, Ligne 1: x. plus. y. égale. 7. Ligne 2: 2 x. plus. 3 y. égale. 17';
+  var speech = '2 Zeilen, Zeile 1: x. plus. y. ist gleich. 7. Zeile 2: 2 x. plus. 3 y. ist gleich. 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -619,7 +619,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline030 = function() {
       '<mtr><mtd><mrow><mtext>Equation 2:</mtext></mrow></mtd><mtd><mrow>' +
       '<mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi><mo>=</mo><mn>17' +
       '</mn></mrow></mtd></mtr></mtable></mrow></math>';
-  var speech = '2 lignes, Ligne 1: Equation 1 deux points. x plus y égale 7. Ligne 2: Equation 2 deux points. 2 x, plus 3 y, égale 17';
+  var speech = '2 Zeilen, Zeile 1: Equation 1 Doppelpunkt. x plus y ist gleich 7. Zeile 2: Equation 2 Doppelpunkt. 2 x, plus 3 y, ist gleich 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -637,7 +637,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline031 = function() {
       '<mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi></mrow>' +
       '</mtd><mtd><mo>=</mo></mtd><mtd><mrow><mn>17</mn></mrow></mtd></mtr>' +
       '</mtable><mtext></mtext></mrow></math>';
-  var speech = '2 lignes, Ligne 1: Equation 1 deux points. x plus y. égale. 7. Ligne 2: Equation 2 deux points. 2 x, plus 3 y. égale. 17';
+  var speech = '2 Zeilen, Zeile 1: Equation 1 Doppelpunkt. x plus y. ist gleich. 7. Zeile 2: Equation 2 Doppelpunkt. 2 x, plus 3 y. ist gleich. 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -660,7 +660,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline032 = function() {
       '</mrow></mtd><mtd><mo>+</mo></mtd><mtd><mrow><mn>5</mn><mi>z</mi>' +
       '</mrow></mtd><mtd><mo>=</mo></mtd><mtd><mn>1</mn></mtd></mtr>' +
       '</mtable></mrow></math>';
-  var speech = '3 lignes, Ligne 1: 4 x. plus. 3 y. plus. 2 z. égale. 1. Ligne 2: 2 x. plus. 4 y. plus. 6 z. égale. 6. Ligne 3: 3 x. plus. 2 y. plus. 5 z. égale. 1';
+  var speech = '3 Zeilen, Zeile 1: 4 x. plus. 3 y. plus. 2 z. ist gleich. 1. Zeile 2: 2 x. plus. 4 y. plus. 6 z. ist gleich. 6. Zeile 3: 3 x. plus. 2 y. plus. 5 z. ist gleich. 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -683,7 +683,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline033 = function() {
       '</mtd></mtr><mtr><mtd><mrow/></mtd><mtd><mrow/></mtd><mtd><mn>4</mn>' +
       '</mtd><mtd><mo>=</mo></mtd><mtd><mi>x</mi></mtd><mtd><mrow/></mtd>' +
       '<mtd><mrow/></mtd></mtr></mtable></mrow></math>';
-  var speech = '4 lignes, Ligne 1: 3 x. plus. 8. égale. 5 x. vide. vide. Ligne 2: vide. vide. 8. égale. 5 x. moins. 3 x. Ligne 3: vide. vide. 8. égale. 2 x. vide. vide. Ligne 4: vide. vide. 4. égale. x. vide. vide';
+  var speech = '4 Zeilen, Zeile 1: 3 x. plus. 8. ist gleich. 5 x. leer. leer. Zeile 2: leer. leer. 8. ist gleich. 5 x. minus. 3 x. Zeile 3: leer. leer. 8. ist gleich. 2 x. leer. leer. Zeile 4: leer. leer. 4. ist gleich. x. leer. leer';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -700,7 +700,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline034 = function() {
       '<mo>&lt;</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd><mi>x</mi></mtd>' +
       '<mtd><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo><mn>0</mn></mrow>' +
       '</mtd></mtr></mtable></mrow></mrow></mrow></math>';
-  var speech = 'f de x, égale, 2 cas, Cas 1: négatif x. if x inférieur à 0. Cas 2: x. if x plus grand ou égal à 0';
+  var speech = 'f von x, ist gleich, 2 Fälle, Fall 1: negativ x. if x kleiner als 0. Fall 2: x. if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -717,7 +717,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline035 = function() {
       '<mo>&lt;</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd><mi>x</mi></mtd>' +
       '<mtd><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo><mn>0</mn></mrow>' +
       '</mtd></mtr></mtable></mrow></mrow></mrow></math>';
-  var speech = 'f de x, égale, 2 cas, Cas 1: négatif x. if x inférieur à 0. Cas 2: x. if x plus grand ou égal à 0';
+  var speech = 'f von x, ist gleich, 2 Fälle, Fall 1: negativ x. if x kleiner als 0. Fall 2: x. if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -735,7 +735,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline036 = function() {
       '<mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>x</mi>' +
       '</mrow></mtd><mtd><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo><mn>0' +
       '</mn></mrow></mtd></mtr></mtable></mrow></math>';
-  var speech = '2 cas, Cas 1: f de x, égale négatif x. if x inférieur à 0. Cas 2: f de x, égale x. if x plus grand ou égal à 0';
+  var speech = '2 Fälle, Fall 1: f von x, ist gleich negativ x. if x kleiner als 0. Fall 2: f von x, ist gleich x. if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -751,7 +751,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline037 = function() {
       '</mtr><mtr><mtd><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y' +
       '</mi></mrow></mtd><mtd><mo>=</mo></mtd><mtd><mrow><mn>17</mn></mrow>' +
       '</mtd></mtr></mtable></mrow></math>';
-  var speech = '2 équations, Équation 1: x plus y. égale. 7. Équation 2: 2 x, plus 3 y. égale. 17';
+  var speech = '2 Gleichungen, Gleichung 1: x plus y. ist gleich. 7. Gleichung 2: 2 x, plus 3 y. ist gleich. 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -767,7 +767,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline038 = function() {
       '</mtr><mtr><mtd><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y' +
       '</mi></mrow></mtd><mtd><mo>=</mo></mtd><mtd><mrow><mn>17</mn></mrow>' +
       '</mtd></mtr></mtable></mrow></math>';
-  var speech = '2 lignes, Ligne 1: x plus y. égale. 7. Ligne 2: 2 x, plus 3 y. égale. 17';
+  var speech = '2 Zeilen, Zeile 1: x plus y. ist gleich. 7. Zeile 2: 2 x, plus 3 y. ist gleich. 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -783,7 +783,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline039 = function() {
       '</mtr><mtr><mtd><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y' +
       '</mi></mrow></mtd><mtd><mo>=</mo></mtd><mtd><mrow><mn>17</mn></mrow>' +
       '</mtd></mtr></mtable></mrow></math>';
-  var speech = '2 colonnes, rangée 1: x plus y. égale. 7. rangée 2: 2 x, plus 3 y. égale. 17';
+  var speech = '2 Zeilen, Zeile 1: x plus y. ist gleich. 7. Zeile 2: 2 x, plus 3 y. ist gleich. 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -806,7 +806,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline040 = function() {
       '</mtd></mtr><mtr><mtd><mrow/></mtd><mtd><mrow/></mtd><mtd><mn>4</mn>' +
       '</mtd><mtd><mo>=</mo></mtd><mtd><mi>x</mi></mtd><mtd><mrow/></mtd>' +
       '<mtd><mrow/></mtd></mtr></mtable></mrow></math>';
-  var speech = '4  étapes,  Étape 1: 3 x. plus. 8. égale. 5 x. vide. vide.  Étape 2: vide. vide. 8. égale. 5 x. moins. 3 x.  Étape 3: vide. vide. 8. égale. 2 x. vide. vide.  Étape 4: vide. vide. 4. égale. x. vide. vide';
+  var speech = '4 Rechenschritte, Schritt 1: 3 x. plus. 8. ist gleich. 5 x. leer. leer. Schritt 2: leer. leer. 8. ist gleich. 5 x. minus. 3 x. Schritt 3: leer. leer. 8. ist gleich. 2 x. leer. leer. Schritt 4: leer. leer. 4. ist gleich. x. leer. leer';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -822,7 +822,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline041 = function() {
       '</mtr><mtr><mtd><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y' +
       '</mi></mrow></mtd><mtd><mo>=</mo></mtd><mtd><mrow><mn>17</mn></mrow>' +
       '</mtd></mtr></mtable></mrow></math>';
-  var speech = '2 lignes, Ligne 1: x plus y, égale, 7. Ligne 2: 2 x, plus 3 y, égale, 17';
+  var speech = '2 Zeilen, Zeile 1: x plus y, ist gleich, 7. Zeile 2: 2 x, plus 3 y, ist gleich, 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -839,7 +839,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline042 = function() {
       '<mo>+</mo></mtd><mtd><mrow><mn>3</mn><mi>y</mi></mrow></mtd><mtd>' +
       '<mo>=</mo></mtd><mtd><mrow><mn>17</mn></mrow></mtd></mtr></mtable>' +
       '</mrow></math>';
-  var speech = '2 lignes, Ligne 1: x, plus, y, égale, 7. Ligne 2: 2 x, plus, 3 y, égale, 17';
+  var speech = '2 Zeilen, Zeile 1: x, plus, y, ist gleich, 7. Zeile 2: 2 x, plus, 3 y, ist gleich, 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -856,7 +856,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline043 = function() {
       '</mtext></mrow></mtd><mtd><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>3' +
       '</mn><mi>y</mi><mo>=</mo><mn>17</mn></mrow></mtd></mtr></mtable>' +
       '</mrow></math>';
-  var speech = '2 lignes, Ligne 1: Equation 1 deux points, x plus y égale 7. Ligne 2: Equation 2 deux points, 2 x, plus 3 y, égale 17';
+  var speech = '2 Zeilen, Zeile 1: Equation 1 Doppelpunkt, x plus y ist gleich 7. Zeile 2: Equation 2 Doppelpunkt, 2 x, plus 3 y, ist gleich 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -874,7 +874,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline044 = function() {
       '<mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi></mrow>' +
       '</mtd><mtd><mo>=</mo></mtd><mtd><mrow><mn>17</mn></mrow></mtd></mtr>' +
       '</mtable><mtext></mtext></mrow></math>';
-  var speech = '2 lignes, Ligne 1: Equation 1 deux points, x plus y, égale, 7. Ligne 2: Equation 2 deux points, 2 x, plus 3 y, égale, 17';
+  var speech = '2 Zeilen, Zeile 1: Equation 1 Doppelpunkt, x plus y, ist gleich, 7. Zeile 2: Equation 2 Doppelpunkt, 2 x, plus 3 y, ist gleich, 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -897,7 +897,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline045 = function() {
       '</mrow></mtd><mtd><mo>+</mo></mtd><mtd><mrow><mn>5</mn><mi>z</mi>' +
       '</mrow></mtd><mtd><mo>=</mo></mtd><mtd><mn>1</mn></mtd></mtr>' +
       '</mtable></mrow></math>';
-  var speech = '3 lignes, Ligne 1: 4 x, plus, 3 y, plus, 2 z, égale, 1. Ligne 2: 2 x, plus, 4 y, plus, 6 z, égale, 6. Ligne 3: 3 x, plus, 2 y, plus, 5 z, égale, 1';
+  var speech = '3 Zeilen, Zeile 1: 4 x, plus, 3 y, plus, 2 z, ist gleich, 1. Zeile 2: 2 x, plus, 4 y, plus, 6 z, ist gleich, 6. Zeile 3: 3 x, plus, 2 y, plus, 5 z, ist gleich, 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -920,7 +920,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline046 = function() {
       '</mtd></mtr><mtr><mtd><mrow/></mtd><mtd><mrow/></mtd><mtd><mn>4</mn>' +
       '</mtd><mtd><mo>=</mo></mtd><mtd><mi>x</mi></mtd><mtd><mrow/></mtd>' +
       '<mtd><mrow/></mtd></mtr></mtable></mrow></math>';
-  var speech = '4 lignes, Ligne 1: 3 x, plus, 8, égale, 5 x, vide, vide. Ligne 2: vide, vide, 8, égale, 5 x, moins, 3 x. Ligne 3: vide, vide, 8, égale, 2 x, vide, vide. Ligne 4: vide, vide, 4, égale, x, vide, vide';
+  var speech = '4 Zeilen, Zeile 1: 3 x, plus, 8, ist gleich, 5 x, leer, leer. Zeile 2: leer, leer, 8, ist gleich, 5 x, minus, 3 x. Zeile 3: leer, leer, 8, ist gleich, 2 x, leer, leer. Zeile 4: leer, leer, 4, ist gleich, x, leer, leer';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -937,7 +937,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline047 = function() {
       '<mo>&lt;</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd><mi>x</mi></mtd>' +
       '<mtd><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo><mn>0</mn></mrow>' +
       '</mtd></mtr></mtable></mrow></mrow></mrow></math>';
-  var speech = 'f de x, égale, 2 cas, Cas 1: négatif x, if x inférieur à 0. Cas 2: x, if x plus grand ou égal à 0';
+  var speech = 'f von x, ist gleich, 2 Fälle, Fall 1: negativ x, if x kleiner als 0. Fall 2: x, if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -954,7 +954,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline048 = function() {
       '<mo>&lt;</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd><mi>x</mi></mtd>' +
       '<mtd><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo><mn>0</mn></mrow>' +
       '</mtd></mtr></mtable></mrow></mrow></mrow></math>';
-  var speech = 'f de x, égale, 2 cas, Cas 1: négatif x, if x inférieur à 0. Cas 2: x, if x plus grand ou égal à 0';
+  var speech = 'f von x, ist gleich, 2 Fälle, Fall 1: negativ x, if x kleiner als 0. Fall 2: x, if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -972,7 +972,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline049 = function() {
       '<mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>x</mi>' +
       '</mrow></mtd><mtd><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo><mn>0' +
       '</mn></mrow></mtd></mtr></mtable></mrow></math>';
-  var speech = '2 cas, Cas 1: f de x, égale négatif x, if x inférieur à 0. Cas 2: f de x, égale x, if x plus grand ou égal à 0';
+  var speech = '2 Fälle, Fall 1: f von x, ist gleich negativ x, if x kleiner als 0. Fall 2: f von x, ist gleich x, if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -988,7 +988,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline050 = function() {
       '</mtr><mtr><mtd><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y' +
       '</mi></mrow></mtd><mtd><mo>=</mo></mtd><mtd><mrow><mn>17</mn></mrow>' +
       '</mtd></mtr></mtable></mrow></math>';
-  var speech = '2 équations, Équation 1: x plus y, égale, 7. Équation 2: 2 x, plus 3 y, égale, 17';
+  var speech = '2 Gleichungen, Gleichung 1: x plus y, ist gleich, 7. Gleichung 2: 2 x, plus 3 y, ist gleich, 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1004,7 +1004,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline051 = function() {
       '</mtr><mtr><mtd><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y' +
       '</mi></mrow></mtd><mtd><mo>=</mo></mtd><mtd><mrow><mn>17</mn></mrow>' +
       '</mtd></mtr></mtable></mrow></math>';
-  var speech = '2 lignes, Ligne 1: x plus y, égale, 7. Ligne 2: 2 x, plus 3 y, égale, 17';
+  var speech = '2 Zeilen, Zeile 1: x plus y, ist gleich, 7. Zeile 2: 2 x, plus 3 y, ist gleich, 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1020,7 +1020,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline052 = function() {
       '</mtr><mtr><mtd><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y' +
       '</mi></mrow></mtd><mtd><mo>=</mo></mtd><mtd><mrow><mn>17</mn></mrow>' +
       '</mtd></mtr></mtable></mrow></math>';
-  var speech = '2 colonnes, rangée 1: x plus y, égale, 7. rangée 2: 2 x, plus 3 y, égale, 17';
+  var speech = '2 Zeilen, Zeile 1: x plus y, ist gleich, 7. Zeile 2: 2 x, plus 3 y, ist gleich, 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1043,7 +1043,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline053 = function() {
       '</mtd></mtr><mtr><mtd><mrow/></mtd><mtd><mrow/></mtd><mtd><mn>4</mn>' +
       '</mtd><mtd><mo>=</mo></mtd><mtd><mi>x</mi></mtd><mtd><mrow/></mtd>' +
       '<mtd><mrow/></mtd></mtr></mtable></mrow></math>';
-  var speech = '4  étapes,  Étape 1: 3 x, plus, 8, égale, 5 x, vide, vide.  Étape 2: vide, vide, 8, égale, 5 x, moins, 3 x.  Étape 3: vide, vide, 8, égale, 2 x, vide, vide.  Étape 4: vide, vide, 4, égale, x, vide, vide';
+  var speech = '4 Rechenschritte, Schritt 1: 3 x, plus, 8, ist gleich, 5 x, leer, leer. Schritt 2: leer, leer, 8, ist gleich, 5 x, minus, 3 x. Schritt 3: leer, leer, 8, ist gleich, 2 x, leer, leer. Schritt 4: leer, leer, 4, ist gleich, x, leer, leer';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1057,7 +1057,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline054 = function() {
   var mathml = '<math><mtable><mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=' +
       '</mo><mn>7</mn></mtd></mtr><mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo>' +
       '<mn>3</mn><mi>y</mi><mo>=</mo><mn>17</mn></mtd></mtr></mtable></math>';
-  var speech = 'Ligne 1: x plus y égale 7. Ligne 2: 2 x, plus 3 y, égale 17';
+  var speech = 'Zeile 1: x plus y ist gleich 7. Zeile 2: 2 x, plus 3 y, ist gleich 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1073,7 +1073,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline055 = function() {
       '</mtr><mtr><mtd><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y' +
       '</mi></mrow></mtd><mtd><mo>=</mo></mtd><mtd><mrow><mn>17</mn></mrow>' +
       '</mtd></mtr></mtable></mrow></math>';
-  var speech = 'Ligne 1: x plus y; égale; 7. Ligne 2: 2 x, plus 3 y; égale; 17';
+  var speech = 'Zeile 1: x plus y; ist gleich; 7. Zeile 2: 2 x, plus 3 y; ist gleich; 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1090,7 +1090,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline056 = function() {
       '<mo>+</mo></mtd><mtd><mrow><mn>3</mn><mi>y</mi></mrow></mtd><mtd>' +
       '<mo>=</mo></mtd><mtd><mrow><mn>17</mn></mrow></mtd></mtr></mtable>' +
       '</mrow></math>';
-  var speech = 'Ligne 1: x; plus; y; égale; 7. Ligne 2: 2 x; plus; 3 y; égale; 17';
+  var speech = 'Zeile 1: x; plus; y; ist gleich; 7. Zeile 2: 2 x; plus; 3 y; ist gleich; 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1105,7 +1105,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline057 = function() {
       '<mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>7</mn></mtd></mtr><mtr>' +
       '<mtd><mtext>Equation 2: </mtext><mn>2</mn><mi>x</mi><mo>+</mo><mn>3' +
       '</mn><mi>y</mi><mo>=</mo><mn>17</mn></mtd></mtr></mtable></math>';
-  var speech = 'Ligne 1: Equation 1 deux points x plus y égale 7. Ligne 2: Equation 2 deux points 2 x, plus 3 y, égale 17';
+  var speech = 'Zeile 1: Equation 1 Doppelpunkt x plus y ist gleich 7. Zeile 2: Equation 2 Doppelpunkt 2 x, plus 3 y, ist gleich 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1122,7 +1122,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline058 = function() {
       '</mtext></mrow></mtd><mtd><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>3' +
       '</mn><mi>y</mi><mo>=</mo><mn>17</mn></mrow></mtd></mtr></mtable>' +
       '</mrow></math>';
-  var speech = 'Ligne 1: Equation 1 deux points; x plus y égale 7. Ligne 2: Equation 2 deux points; 2 x, plus 3 y, égale 17';
+  var speech = 'Zeile 1: Equation 1 Doppelpunkt; x plus y ist gleich 7. Zeile 2: Equation 2 Doppelpunkt; 2 x, plus 3 y, ist gleich 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1140,7 +1140,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline059 = function() {
       '<mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi></mrow>' +
       '</mtd><mtd><mo>=</mo></mtd><mtd><mrow><mn>17</mn></mrow></mtd></mtr>' +
       '</mtable><mtext></mtext></mrow></math>';
-  var speech = 'Ligne 1: Equation 1 deux points; x plus y; égale; 7. Ligne 2: Equation 2 deux points; 2 x, plus 3 y; égale; 17';
+  var speech = 'Zeile 1: Equation 1 Doppelpunkt; x plus y; ist gleich; 7. Zeile 2: Equation 2 Doppelpunkt; 2 x, plus 3 y; ist gleich; 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1158,7 +1158,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline060 = function() {
       '<mtr><mtd><mn>3</mn><mi>x</mi><mo>+</mo><mn>2</mn><mi>y</mi><mo>+' +
       '</mo><mn>5</mn><mi>z</mi><mo>=</mo><mn>1</mn></mtd></mtr></mtable>' +
       '</math>';
-  var speech = 'Ligne 1: 4 x, plus 3 y, plus 2 z, égale 17. Ligne 2: 2 x, plus 4 y, plus 6 z, égale 6. Ligne 3: 3 x, plus 2 y, plus 5 z, égale 1';
+  var speech = 'Zeile 1: 4 x, plus 3 y, plus 2 z, ist gleich 17. Zeile 2: 2 x, plus 4 y, plus 6 z, ist gleich 6. Zeile 3: 3 x, plus 2 y, plus 5 z, ist gleich 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1181,7 +1181,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline061 = function() {
       '</mrow></mtd><mtd><mo>+</mo></mtd><mtd><mrow><mn>5</mn><mi>z</mi>' +
       '</mrow></mtd><mtd><mo>=</mo></mtd><mtd><mn>1</mn></mtd></mtr>' +
       '</mtable></mrow></math>';
-  var speech = 'Ligne 1: 4 x; plus; 3 y; plus; 2 z; égale; 1. Ligne 2: 2 x; plus; 4 y; plus; 6 z; égale; 6. Ligne 3: 3 x; plus; 2 y; plus; 5 z; égale; 1';
+  var speech = 'Zeile 1: 4 x; plus; 3 y; plus; 2 z; ist gleich; 1. Zeile 2: 2 x; plus; 4 y; plus; 6 z; ist gleich; 6. Zeile 3: 3 x; plus; 2 y; plus; 5 z; ist gleich; 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1200,7 +1200,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline062 = function() {
       '<mtext>Equation 3: </mtext><mn>3</mn><mi>x</mi><mo>+</mo><mn>2</mn>' +
       '<mi>y</mi><mo>+</mo><mn>5</mn><mi>z</mi><mo>=</mo><mn>1</mn></mtd>' +
       '</mtr></mtable></math>';
-  var speech = 'Ligne 1: Equation 1 deux points 4 x, plus 3 y, plus 2 z, égale 17. Ligne 2: Equation 2 deux points 2 x, plus 4 y, plus 6 z, égale 6. Ligne 3: Equation 3 deux points 3 x, plus 2 y, plus 5 z, égale 1';
+  var speech = 'Zeile 1: Equation 1 Doppelpunkt 4 x, plus 3 y, plus 2 z, ist gleich 17. Zeile 2: Equation 2 Doppelpunkt 2 x, plus 4 y, plus 6 z, ist gleich 6. Zeile 3: Equation 3 Doppelpunkt 3 x, plus 2 y, plus 5 z, ist gleich 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1218,7 +1218,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline063 = function() {
       '<mtext>Step 3:  </mtext><mn>8</mn><mo>=</mo><mn>2</mn><mi>x</mi>' +
       '</mtd></mtr><mtr><mtd><mtext>Step 4:  </mtext><mn>4</mn><mo>=</mo>' +
       '<mi>x</mi></mtd></mtr></mtable></math>';
-  var speech = 'Ligne 1: Step 1 deux points 3 x, plus 8 égale 5 x. Ligne 2: Step 2 deux points 8 égale 5 x, moins 3 x. Ligne 3: Step 3 deux points 8 égale 2 x. Ligne 4: Step 4 deux points 4 égale x';
+  var speech = 'Zeile 1: Step 1 Doppelpunkt 3 x, plus 8 ist gleich 5 x. Zeile 2: Step 2 Doppelpunkt 8 ist gleich 5 x, minus 3 x. Zeile 3: Step 3 Doppelpunkt 8 ist gleich 2 x. Zeile 4: Step 4 Doppelpunkt 4 ist gleich x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1235,7 +1235,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline064 = function() {
       '</mrow></mtd></mtr><mtr><mtd><mrow><mi>x</mi><mtext>   if </mtext>' +
       '<mi>x</mi><mo>≥</mo><mn>0</mn></mrow></mtd></mtr></mtable></mrow>' +
       '</mrow></mrow></math>';
-  var speech = 'f de x, égale, Cas 1: négatif x if x inférieur à 0. Cas 2: x if x plus grand ou égal à 0';
+  var speech = 'f von x, ist gleich, Fall 1: negativ x if x kleiner als 0. Fall 2: x if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1252,7 +1252,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline065 = function() {
       '<mo>&lt;</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd><mi>x</mi></mtd>' +
       '<mtd><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo><mn>0</mn></mrow>' +
       '</mtd></mtr></mtable></mrow></mrow></mrow></math>';
-  var speech = 'f de x, égale, Cas 1: négatif x; if x inférieur à 0. Cas 2: x; if x plus grand ou égal à 0';
+  var speech = 'f von x, ist gleich, Fall 1: negativ x; if x kleiner als 0. Fall 2: x; if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1269,7 +1269,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline066 = function() {
       '</mrow></mtd></mtr><mtr><mtd><mrow><mi>x</mi><mtext>   if </mtext>' +
       '<mi>x</mi><mo>≥</mo><mn>0</mn></mrow></mtd></mtr></mtable></mrow>' +
       '</mrow></mrow></math>';
-  var speech = 'f de x, égale, Cas 1: négatif x if x inférieur à 0. Cas 2: x if x plus grand ou égal à 0';
+  var speech = 'f von x, ist gleich, Fall 1: negativ x if x kleiner als 0. Fall 2: x if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1287,7 +1287,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline067 = function() {
       '<mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>x</mi>' +
       '</mrow></mtd><mtd><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo><mn>0' +
       '</mn></mrow></mtd></mtr></mtable></mrow></math>';
-  var speech = 'Cas 1: f de x, égale négatif x; if x inférieur à 0. Cas 2: f de x, égale x; if x plus grand ou égal à 0';
+  var speech = 'Fall 1: f von x, ist gleich negativ x; if x kleiner als 0. Fall 2: f von x, ist gleich x; if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1301,7 +1301,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline068 = function() {
   var mathml = '<math><mtable><mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=' +
       '</mo><mn>7</mn></mtd></mtr><mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo>' +
       '<mn>3</mn><mi>y</mi><mo>=</mo><mn>17</mn></mtd></mtr></mtable></math>';
-  var speech = 'Équation 1: x plus y égale 7. Équation 2: 2 x, plus 3 y, égale 17';
+  var speech = 'Gleichung 1: x plus y ist gleich 7. Gleichung 2: 2 x, plus 3 y, ist gleich 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1315,7 +1315,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline069 = function() {
   var mathml = '<math><mtable><mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=' +
       '</mo><mn>7</mn></mtd></mtr><mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo>' +
       '<mn>3</mn><mi>y</mi><mo>=</mo><mn>17</mn></mtd></mtr></mtable></math>';
-  var speech = 'Ligne 1: x plus y égale 7. Ligne 2: 2 x, plus 3 y, égale 17';
+  var speech = 'Zeile 1: x plus y ist gleich 7. Zeile 2: 2 x, plus 3 y, ist gleich 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1329,7 +1329,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline070 = function() {
   var mathml = '<math><mtable><mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=' +
       '</mo><mn>7</mn></mtd></mtr><mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo>' +
       '<mn>3</mn><mi>y</mi><mo>=</mo><mn>17</mn></mtd></mtr></mtable></math>';
-  var speech = 'rangée 1: x plus y égale 7. rangée 2: 2 x, plus 3 y, égale 17';
+  var speech = 'Zeile 1: x plus y ist gleich 7. Zeile 2: 2 x, plus 3 y, ist gleich 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1345,7 +1345,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline071 = function() {
       '<mo>=</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>3</mn><mi>x</mi></mtd>' +
       '</mtr><mtr><mtd><mn>8</mn><mo>=</mo><mn>2</mn><mi>x</mi></mtd></mtr>' +
       '<mtr><mtd><mn>4</mn><mo>=</mo><mi>x</mi></mtd></mtr></mtable></math>';
-  var speech = ' Étape 1: 3 x, plus 8 égale 5 x.  Étape 2: 8 égale 5 x, moins 3 x.  Étape 3: 8 égale 2 x.  Étape 4: 4 égale x';
+  var speech = 'Schritt 1: 3 x, plus 8 ist gleich 5 x. Schritt 2: 8 ist gleich 5 x, minus 3 x. Schritt 3: 8 ist gleich 2 x. Schritt 4: 4 ist gleich x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1368,7 +1368,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline072 = function() {
       '</mtd></mtr><mtr><mtd><mrow/></mtd><mtd><mrow/></mtd><mtd><mn>4</mn>' +
       '</mtd><mtd><mo>=</mo></mtd><mtd><mi>x</mi></mtd><mtd><mrow/></mtd>' +
       '<mtd><mrow/></mtd></mtr></mtable></mrow></math>';
-  var speech = ' Étape 1: 3 x; plus; 8; égale; 5 x; vide; vide.  Étape 2: vide; vide; 8; égale; 5 x; moins; 3 x.  Étape 3: vide; vide; 8; égale; 2 x; vide; vide.  Étape 4: vide; vide; 4; égale; x; vide; vide';
+  var speech = 'Schritt 1: 3 x; plus; 8; ist gleich; 5 x; leer; leer. Schritt 2: leer; leer; 8; ist gleich; 5 x; minus; 3 x. Schritt 3: leer; leer; 8; ist gleich; 2 x; leer; leer. Schritt 4: leer; leer; 4; ist gleich; x; leer; leer';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1383,6 +1383,6 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline073 = function() {
       '</mo><mn>0</mn></mtd></mtr><mtr><mtd><mi>y</mi><mo>≥</mo><mn>0</mn>' +
       '</mtd></mtr><mtr><mtd><mn>3</mn><mi>x</mi><mo>−</mo><mn>5</mn><mi>y' +
       '</mi><mo>≤</mo><mn>30</mn></mtd></mtr></mtable></math>';
-  var speech = 'Contrainte 1: x plus grand ou égal à 0. Contrainte 2: y plus grand ou égal à 0. Contrainte 3: 3 x, moins 5 y, plus petit ou égal à 30';
+  var speech = 'Bedingung 1: x größer oder gleich 0. Bedingung 2: y größer oder gleich 0. Bedingung 3: 3 x, minus 5 y, kleiner oder gleich 30';
   this.executeRuleTest(mathml, speech, preference);
 };

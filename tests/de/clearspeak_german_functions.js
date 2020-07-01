@@ -52,7 +52,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction001 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'f de x';
+  var speech = 'f von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -64,7 +64,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction002 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'g de x';
+  var speech = 'g von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -76,7 +76,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction003 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'h de x';
+  var speech = 'h von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -88,7 +88,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction004 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x' +
       '</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f de 2 x';
+  var speech = 'f von 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -100,7 +100,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction005 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>2' +
       '</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g de négatif 2 x';
+  var speech = 'g von negativ 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -112,7 +112,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction006 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1' +
       '</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h de un-demi';
+  var speech = 'h von ein halb';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -126,7 +126,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction007 = function() {
   var preference = 'Fraction_Over';
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1' +
       '</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h de, parenthèse gauche, 1 sur 2, parenthèse droite';
+  var speech = 'h von, Klammer auf, 1 geteilt durch 2, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -139,7 +139,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction008 = function() {
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+' +
       '</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mrow>' +
       '<mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>+</mo><mn>1</mn></mrow></math>';
-  var speech = 'f de, parenthèse gauche, x plus 1, parenthèse droite, égale f de x, plus 1';
+  var speech = 'f von, Klammer auf, x plus 1, Klammer zu, ist gleich f von x, plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -151,7 +151,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction009 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x' +
       '</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g de, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'g von, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -163,7 +163,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction010 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>x' +
       '</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g de, parenthèse gauche, x au carré, parenthèse droite';
+  var speech = 'g von, Klammer auf, x Quadrat, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -175,7 +175,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction011 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f inverse de x';
+  var speech = 'f invers von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -187,7 +187,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction012 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g inverse de x';
+  var speech = 'g invers von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -199,7 +199,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction013 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h inverse de x';
+  var speech = 'h invers von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -212,7 +212,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction014 = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = 'f inverse de 2 x';
+  var speech = 'f invers von 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -225,7 +225,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction015 = function() {
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g inverse de négatif 2 x';
+  var speech = 'g invers von negativ 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -238,7 +238,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction016 = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mn>3</mn><mi>x</mi><mo>−</mo>' +
       '<mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f inverse de, parenthèse gauche, 3 x, moins 1, parenthèse droite';
+  var speech = 'f invers von, Klammer auf, 3 x, minus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -251,7 +251,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction017 = function() {
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>2</mn>' +
       '</msup></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g inverse de, parenthèse gauche, x au carré, parenthèse droite';
+  var speech = 'g invers von, Klammer auf, x Quadrat, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -264,7 +264,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction018 = function() {
   var mathml = '<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn>' +
       '</mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h inverse de un-demi';
+  var speech = 'h invers von ein halb';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -279,7 +279,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction019 = function() {
   var mathml = '<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn>' +
       '</mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h inverse de, parenthèse gauche, 1 sur 2, parenthèse droite';
+  var speech = 'h invers von, Klammer auf, 1 geteilt durch 2, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -292,7 +292,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction020 = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f inverse de, f de x';
+  var speech = 'f invers von, f von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -305,7 +305,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction021 = function() {
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g inverse de, g de x';
+  var speech = 'g invers von, g von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -318,7 +318,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction022 = function() {
   var mathml = '<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h inverse de, h de x';
+  var speech = 'h invers von, h von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -332,7 +332,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction023 = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'f inverse de, f de 2 x';
+  var speech = 'f invers von, f von 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -346,7 +346,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction024 = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow>' +
       '<mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = 'g inverse de, g de négatif 2 x';
+  var speech = 'g invers von, g von negativ 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -360,7 +360,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction025 = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'h inverse de, h de un-demi';
+  var speech = 'h invers von, h von ein halb';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -376,7 +376,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction026 = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'h inverse de, parenthèse gauche, h de, parenthèse gauche, 1 sur 2, parenthèse droite, parenthèse droite';
+  var speech = 'h invers von, Klammer auf, h von, Klammer auf, 1 geteilt durch 2, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -390,7 +390,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction027 = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mrow>' +
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)' +
       '</mo></mrow><mo>=</mo><mi>x</mi><mo>+</mo><mn>1</mn></mrow></math>';
-  var speech = 'f inverse de, parenthèse gauche, f de, parenthèse gauche, x plus 1, parenthèse droite, parenthèse droite, égale x plus 1';
+  var speech = 'f invers von, Klammer auf, f von, Klammer auf, x plus 1, Klammer zu, Klammer zu, ist gleich x plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -404,7 +404,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction028 = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow>' +
       '<mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g inverse de, parenthèse gauche, g de, parenthèse gauche, 2 x, plus 1, parenthèse droite, parenthèse droite';
+  var speech = 'g invers von, Klammer auf, g von, Klammer auf, 2 x, plus 1, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -418,7 +418,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction029 = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow>' +
       '<msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'g inverse de, parenthèse gauche, g de, parenthèse gauche, x au carré, parenthèse droite, parenthèse droite';
+  var speech = 'g invers von, Klammer auf, g von, Klammer auf, x Quadrat, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -431,7 +431,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction030 = function() {
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><msup><mi>f' +
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f de, f inverse de x';
+  var speech = 'f von, f invers von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -444,7 +444,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction031 = function() {
   var mathml = '<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>g' +
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g de, g inverse de x';
+  var speech = 'g von, g invers von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -457,7 +457,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction032 = function() {
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><msup><mi>h' +
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h de, h inverse de x';
+  var speech = 'h von, h invers von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -471,7 +471,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction033 = function() {
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'f de, f inverse de 2 x';
+  var speech = 'f von, f invers von 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -485,7 +485,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction034 = function() {
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow>' +
       '<mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = 'g de, g inverse de négatif 2 x';
+  var speech = 'g von, g invers von negativ 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -499,7 +499,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction035 = function() {
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow>' +
       '<mn>3</mn><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f de, parenthèse gauche, f inverse de, parenthèse gauche, 3 x, moins 1, parenthèse droite, parenthèse droite';
+  var speech = 'f von, Klammer auf, f invers von, Klammer auf, 3 x, minus 1, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -513,7 +513,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction036 = function() {
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow>' +
       '<msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'g de, g inverse de, parenthèse gauche, x au carré, parenthèse droite';
+  var speech = 'g von, g invers von, Klammer auf, x Quadrat, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -527,7 +527,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction037 = function() {
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'h de, h inverse de un-demi';
+  var speech = 'h von, h invers von ein halb';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -543,7 +543,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction038 = function() {
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'h de, h inverse de, parenthèse gauche, fraction 1 sur 2, parenthèse droite';
+  var speech = 'h von, h invers von, Klammer auf, Bruch 1 geteilt durch 2, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -556,7 +556,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction039 = function() {
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi>' +
       '<mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'f de, g de x';
+  var speech = 'f von, g von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -569,7 +569,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction040 = function() {
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi>' +
       '<mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f de, parenthèse gauche, g de, parenthèse gauche, x plus 1, parenthèse droite, parenthèse droite';
+  var speech = 'f von, Klammer auf, g von, Klammer auf, x plus 1, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -582,7 +582,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction041 = function() {
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mi>g</mi>' +
       '<mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'h de, g de x';
+  var speech = 'h von, g von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -596,7 +596,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction042 = function() {
       '<mrow><mo>(</mo><mrow><mfrac><mi>x</mi><mrow><mi>x</mi><mo>+</mo>' +
       '<mn>1</mn></mrow></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'h de, parenthèse gauche, g de, parenthèse gauche, fraction avec numérateur x, et dénominateur x plus 1, parenthèse droite, parenthèse droite';
+  var speech = 'h von, Klammer auf, g von, Klammer auf, Bruch mit Zähler x, und Nenner x plus 1, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -611,7 +611,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction043 = function() {
       '</mrow><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo' +
       ' stretchy="false">)</mo><mo>+</mo><mi>g</mi><mo stretchy="false">(' +
       '</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></math>';
-  var speech = 'parenthèse gauche, f plus g, parenthèse droite, de x, égale f de x, plus g de x';
+  var speech = 'Klammer auf, f plus g, Klammer zu, von x, ist gleich f von x, plus g von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -627,7 +627,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction044 = function() {
       '<mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow><mo>+</mo><mi>g</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+' +
       '</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'parenthèse gauche, f plus g, parenthèse droite, de, parenthèse gauche, x plus 1, parenthèse droite, égale f de, parenthèse gauche, x plus 1, parenthèse droite, plus g de, parenthèse gauche, x plus 1, parenthèse droite';
+  var speech = 'Klammer auf, f plus g, Klammer zu, von, Klammer auf, x plus 1, Klammer zu, ist gleich f von, Klammer auf, x plus 1, Klammer zu, plus g von, Klammer auf, x plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -640,7 +640,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction045 = function() {
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>⋅</mo><mi>g' +
       '</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'parenthèse gauche, f opérateur point g, parenthèse droite, de x';
+  var speech = 'Klammer auf, f mal g, Klammer zu, von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -653,7 +653,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction046 = function() {
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>⋅</mo><mi>g' +
       '</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x' +
       '</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'parenthèse gauche, f opérateur point g, parenthèse droite, de, parenthèse gauche, 2 x, plus 5, parenthèse droite';
+  var speech = 'Klammer auf, f mal g, Klammer zu, von, Klammer auf, 2 x, plus 5, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -668,7 +668,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction047 = function() {
       '</mo></mrow><mo>=</mo><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow></mfrac></mrow></math>';
-  var speech = 'parenthèse gauche, f sur g, parenthèse droite, de x, égale, f de x, sur g de x';
+  var speech = 'Klammer auf, f geteilt durch g, Klammer zu, von x, ist gleich, f von x, geteilt durch g von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -685,7 +685,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction048 = function() {
       '</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>g' +
       '</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn>' +
       '</mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math>';
-  var speech = 'parenthèse gauche, f sur g, parenthèse droite, de, parenthèse gauche, 2 x, plus 5, parenthèse droite, égale, fraction avec numérateur f de, parenthèse gauche, 2 x, plus 5, parenthèse droite, et dénominateur g de, parenthèse gauche, 2 x, plus 5, parenthèse droite';
+  var speech = 'Klammer auf, f geteilt durch g, Klammer zu, von, Klammer auf, 2 x, plus 5, Klammer zu, ist gleich, Bruch mit Zähler f von, Klammer auf, 2 x, plus 5, Klammer zu, und Nenner g von, Klammer auf, 2 x, plus 5, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -700,7 +700,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction049 = function() {
       '</mrow><mo>=</mo><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow>' +
       '<mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow>' +
       '</math>';
-  var speech = 'parenthèse gauche, f opérateur rond g, parenthèse droite, de x, égale f de, g de x';
+  var speech = 'Klammer auf, f verknüpft mit g, Klammer zu, von x, ist gleich f von, g von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -712,7 +712,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction050 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mn>2</mn><mi>f</mi><mrow><mo>(</mo><mi>x</mi>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '2 f de x';
+  var speech = '2 f von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -724,7 +724,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction051 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>c</mi><mi>f</mi><mrow><mo>(</mo><mi>x</mi>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'c f de x';
+  var speech = 'c f von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -736,7 +736,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction052 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>f</mi><mn>2</mn></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f au carré de x';
+  var speech = 'f Quadrat von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -749,7 +749,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction053 = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mn>2</mn></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'f au carré de, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'f Quadrat von, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -761,7 +761,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction054 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>f</mi><mn>3</mn></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f au cube de x';
+  var speech = 'f Kubik von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -774,7 +774,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction055 = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mn>3</mn></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'f au cube de, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'f Kubik von, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -786,7 +786,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction056 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>f</mi><mn>4</mn></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f à la puissance 4; de x';
+  var speech = 'f hoch 4, von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -799,7 +799,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction057 = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mn>4</mn></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'f à la puissance 4; de, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'f hoch 4, von, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -811,7 +811,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction058 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>f</mi><mn>5</mn></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f à la puissance 5; de x';
+  var speech = 'f hoch 5, von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -824,7 +824,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction059 = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mn>5</mn></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'f à la puissance 5; de, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'f hoch 5, von, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -836,7 +836,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction060 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>f</mi><mi>n</mi></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f à la puissance n; de x';
+  var speech = 'f hoch n, von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -849,7 +849,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction061 = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mi>n</mi></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'f à la puissance n; de, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'f hoch n, von, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -861,7 +861,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction062 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>g</mi><mn>2</mn></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g au carré de x';
+  var speech = 'g Quadrat von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -874,7 +874,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction063 = function() {
   var mathml = '<math><mrow><msup><mi>g</mi><mn>2</mn></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'g au carré de, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'g Quadrat von, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -886,7 +886,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction064 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>h</mi><mn>3</mn></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h au cube de x';
+  var speech = 'h Kubik von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -899,7 +899,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction065 = function() {
   var mathml = '<math><mrow><msup><mi>h</mi><mn>3</mn></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'h au cube de, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'h Kubik von, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -911,7 +911,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction066 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>g</mi><mn>4</mn></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g à la puissance 4; de x';
+  var speech = 'g hoch 4, von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -924,7 +924,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction067 = function() {
   var mathml = '<math><mrow><msup><mi>g</mi><mn>4</mn></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'g à la puissance 4; de, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'g hoch 4, von, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -936,7 +936,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction068 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>h</mi><mn>5</mn></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h à la puissance 5; de x';
+  var speech = 'h hoch 5, von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -949,7 +949,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction069 = function() {
   var mathml = '<math><mrow><msup><mi>h</mi><mn>5</mn></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'h à la puissance 5; de, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'h hoch 5, von, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -961,7 +961,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction070 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>g</mi><mi>n</mi></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g à la puissance n; de x';
+  var speech = 'g hoch n, von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -974,7 +974,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction071 = function() {
   var mathml = '<math><mrow><msup><mi>g</mi><mi>n</mi></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'g à la puissance n; de, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'g hoch n, von, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -986,7 +986,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction072 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msub><mi>f</mi><mn>1</mn></msub><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f sub 1, de x';
+  var speech = 'f Index 1, von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -999,7 +999,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction073 = function() {
   var mathml = '<math><mrow><msub><mi>g</mi><mn>2</mn></msub><mrow><mo>(' +
       '</mo><mrow><msup><mi>x</mi><mn>3</mn></msup></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'g sub 2, de, parenthèse gauche, x au cube, parenthèse droite';
+  var speech = 'g Index 2, von, Klammer auf, x Kubik, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1012,7 +1012,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction074 = function() {
   var mathml = '<math><mrow><msub><mi>h</mi><mi>n</mi></msub><mrow><mo>(' +
       '</mo><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'h sub n, de, parenthèse gauche, 3 x, moins 2, parenthèse droite';
+  var speech = 'h Index n, von, Klammer auf, 3 x, minus 2, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1025,7 +1025,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction075 = function() {
   var mathml = '<math><mrow><msubsup><mi>f</mi><mn>1</mn><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'f sub 1, inverse de x';
+  var speech = 'f Index 1, invers von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1038,7 +1038,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction076 = function() {
   var mathml = '<math><mrow><msubsup><mi>g</mi><mn>2</mn><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x' +
       '</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g sub 2, inverse de, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'g Index 2, invers von, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1051,7 +1051,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction077 = function() {
   var mathml = '<math><mrow><msubsup><mi>h</mi><mi>n</mi><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'h sub n, inverse de x';
+  var speech = 'h Index n, invers von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1065,7 +1065,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction078 = function() {
       '<mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mrow><msub><mi>g</mi>' +
       '<mn>2</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'g sub 1, inverse de, g sub 2, de x';
+  var speech = 'g Index 1, invers von, g Index 2, von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1079,7 +1079,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction079 = function() {
       '</mo><mrow><msubsup><mi>g</mi><mn>2</mn><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msubsup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'f sub 1, de, g sub 2, inverse de x';
+  var speech = 'f Index 1, von, g Index 2, invers von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1091,7 +1091,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction080 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,' +
       '</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f de, parenthèse gauche, x virgule y, parenthèse droite';
+  var speech = 'f von, Klammer auf, x Komma y, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1104,7 +1104,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction081 = function() {
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,' +
       '</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow>' +
       '</math>';
-  var speech = 'f de, parenthèse gauche, x virgule y virgule z, parenthèse droite';
+  var speech = 'f von, Klammer auf, x Komma y Komma z, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1117,7 +1117,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction082 = function() {
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+' +
       '</mo><mn>1</mn><mo>,</mo><mn>2</mn><mi>y</mi></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'f de, parenthèse gauche, x plus 1, virgule, 2 y, parenthèse droite';
+  var speech = 'f von, Klammer auf, x plus 1, Komma, 2 y, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1130,7 +1130,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction083 = function() {
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x' +
       '</mi><mo>,</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo>,</mo><msup><mi>x' +
       '</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f de, parenthèse gauche, 2 x, virgule, x plus 1, virgule, x au carré, parenthèse droite';
+  var speech = 'f von, Klammer auf, 2 x, Komma, x plus 1, Komma, x Quadrat, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1142,7 +1142,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction084 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'f fois x';
+  var speech = 'f mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1154,7 +1154,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction085 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'g fois x';
+  var speech = 'g mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1166,7 +1166,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction086 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'h fois x';
+  var speech = 'h mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1178,7 +1178,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction087 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x' +
       '</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f fois 2 x';
+  var speech = 'f mal 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1190,7 +1190,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction088 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>2' +
       '</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g fois négatif 2 x';
+  var speech = 'g mal negativ 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1202,7 +1202,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction089 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1' +
       '</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h fois un-demi';
+  var speech = 'h mal ein halb';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1214,7 +1214,7 @@ sre.ClearspeakGermanFunctions.prototype.untestFunction090 = function() {
   var preference = 'Functions_None:Fraction_Over';
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1' +
       '</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'XXXX';
+  var speech = 'XXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1227,7 +1227,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction091 = function() {
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+' +
       '</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mrow>' +
       '<mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>+</mo><mn>1</mn></mrow></math>';
-  var speech = 'f fois, parenthèse gauche, x plus 1, parenthèse droite, égale, f fois x, plus 1';
+  var speech = 'f mal, Klammer auf, x plus 1, Klammer zu, ist gleich, f mal x, plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1239,7 +1239,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction092 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x' +
       '</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g fois, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'g mal, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1251,7 +1251,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction093 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>x' +
       '</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g fois, parenthèse gauche, x au carré, parenthèse droite';
+  var speech = 'g mal, Klammer auf, x Quadrat, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1263,7 +1263,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction094 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f à la puissance négatif 1; fois x';
+  var speech = 'f hoch negativ 1, mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1275,7 +1275,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction095 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g à la puissance négatif 1; fois x';
+  var speech = 'g hoch negativ 1, mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1287,7 +1287,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction096 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h à la puissance négatif 1; fois x';
+  var speech = 'h hoch negativ 1, mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1300,7 +1300,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction097 = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = 'f à la puissance négatif 1; fois 2 x';
+  var speech = 'f hoch negativ 1, mal 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1313,7 +1313,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction098 = function() {
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g à la puissance négatif 1; fois négatif 2 x';
+  var speech = 'g hoch negativ 1, mal negativ 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1326,7 +1326,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction099 = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mn>3</mn><mi>x</mi><mo>−</mo>' +
       '<mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f à la puissance négatif 1; fois, parenthèse gauche, 3 x, moins 1, parenthèse droite';
+  var speech = 'f hoch negativ 1, mal, Klammer auf, 3 x, minus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1339,7 +1339,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction100 = function() {
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>2</mn>' +
       '</msup></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g à la puissance négatif 1; fois, parenthèse gauche, x au carré, parenthèse droite';
+  var speech = 'g hoch negativ 1, mal, Klammer auf, x Quadrat, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1352,7 +1352,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction101 = function() {
   var mathml = '<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn>' +
       '</mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h à la puissance négatif 1; fois un-demi';
+  var speech = 'h hoch negativ 1, mal ein halb';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1365,7 +1365,7 @@ sre.ClearspeakGermanFunctions.prototype.untestFunction102 = function() {
   var mathml = '<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn>' +
       '</mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'XXXX';
+  var speech = 'XXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1378,7 +1378,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction103 = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f à la puissance négatif 1; fois, f fois x';
+  var speech = 'f hoch negativ 1, mal, f mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1391,7 +1391,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction104 = function() {
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g à la puissance négatif 1; fois, g fois x';
+  var speech = 'g hoch negativ 1, mal, g mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1404,7 +1404,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction105 = function() {
   var mathml = '<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h à la puissance négatif 1; fois, h fois x';
+  var speech = 'h hoch negativ 1, mal, h mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1418,7 +1418,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction106 = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'f à la puissance négatif 1; fois, f fois 2 x';
+  var speech = 'f hoch negativ 1, mal, f mal 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1432,7 +1432,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction107 = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow>' +
       '<mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = 'g à la puissance négatif 1; fois, g fois négatif 2 x';
+  var speech = 'g hoch negativ 1, mal, g mal negativ 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1446,7 +1446,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction108 = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'h à la puissance négatif 1; fois, h fois un-demi';
+  var speech = 'h hoch negativ 1, mal, h mal ein halb';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1460,7 +1460,7 @@ sre.ClearspeakGermanFunctions.prototype.untestFunction109 = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'XXXX';
+  var speech = 'XXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1474,7 +1474,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction110 = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mrow>' +
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)' +
       '</mo></mrow><mo>=</mo><mi>x</mi><mo>+</mo><mn>1</mn></mrow></math>';
-  var speech = 'f à la puissance négatif 1; fois, parenthèse gauche, f fois, parenthèse gauche, x plus 1, parenthèse droite, parenthèse droite, égale x plus 1';
+  var speech = 'f hoch negativ 1, mal, Klammer auf, f mal, Klammer auf, x plus 1, Klammer zu, Klammer zu, ist gleich x plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1488,7 +1488,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction111 = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow>' +
       '<mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g à la puissance négatif 1; fois, parenthèse gauche, g fois, parenthèse gauche, 2 x, plus 1, parenthèse droite, parenthèse droite';
+  var speech = 'g hoch negativ 1, mal, Klammer auf, g mal, Klammer auf, 2 x, plus 1, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1502,7 +1502,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction112 = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow>' +
       '<msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'g à la puissance négatif 1; fois, parenthèse gauche, g fois, parenthèse gauche, x au carré, parenthèse droite, parenthèse droite';
+  var speech = 'g hoch negativ 1, mal, Klammer auf, g mal, Klammer auf, x Quadrat, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1515,7 +1515,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction113 = function() {
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><msup><mi>f' +
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f fois, parenthèse gauche, f à la puissance négatif 1; fois x, parenthèse droite';
+  var speech = 'f mal, Klammer auf, f hoch negativ 1, mal x, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1528,7 +1528,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction114 = function() {
   var mathml = '<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>g' +
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g fois, parenthèse gauche, g à la puissance négatif 1; fois x, parenthèse droite';
+  var speech = 'g mal, Klammer auf, g hoch negativ 1, mal x, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1541,7 +1541,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction115 = function() {
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><msup><mi>h' +
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h fois, parenthèse gauche, h à la puissance négatif 1; fois x, parenthèse droite';
+  var speech = 'h mal, Klammer auf, h hoch negativ 1, mal x, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1555,7 +1555,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction116 = function() {
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'f fois, parenthèse gauche, f à la puissance négatif 1; fois 2 x, parenthèse droite';
+  var speech = 'f mal, Klammer auf, f hoch negativ 1, mal 2 x, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1569,7 +1569,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction117 = function() {
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow>' +
       '<mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = 'g fois, parenthèse gauche, g à la puissance négatif 1; fois négatif 2 x, parenthèse droite';
+  var speech = 'g mal, Klammer auf, g hoch negativ 1, mal negativ 2 x, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1583,7 +1583,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction118 = function() {
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow>' +
       '<mn>3</mn><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f fois, parenthèse gauche, f à la puissance négatif 1; fois, parenthèse gauche, 3 x, moins 1, parenthèse droite, parenthèse droite';
+  var speech = 'f mal, Klammer auf, f hoch negativ 1, mal, Klammer auf, 3 x, minus 1, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1597,7 +1597,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction119 = function() {
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow>' +
       '<msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'g fois, parenthèse gauche, g à la puissance négatif 1; fois, parenthèse gauche, x au carré, parenthèse droite, parenthèse droite';
+  var speech = 'g mal, Klammer auf, g hoch negativ 1, mal, Klammer auf, x Quadrat, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1611,7 +1611,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction120 = function() {
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'h fois, parenthèse gauche, h à la puissance négatif 1; fois un-demi, parenthèse droite';
+  var speech = 'h mal, Klammer auf, h hoch negativ 1, mal ein halb, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1625,7 +1625,7 @@ sre.ClearspeakGermanFunctions.prototype.untestFunction121 = function() {
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'XXXX';
+  var speech = 'XXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1638,7 +1638,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction122 = function() {
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi>' +
       '<mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'f fois, g fois x';
+  var speech = 'f mal, g mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1651,7 +1651,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction123 = function() {
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi>' +
       '<mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f fois, parenthèse gauche, g fois, parenthèse gauche, x plus 1, parenthèse droite, parenthèse droite';
+  var speech = 'f mal, Klammer auf, g mal, Klammer auf, x plus 1, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1664,7 +1664,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction124 = function() {
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mi>g</mi>' +
       '<mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'h fois, g fois x';
+  var speech = 'h mal, g mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1678,7 +1678,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction125 = function() {
       '<mrow><mo>(</mo><mrow><mfrac><mi>x</mi><mrow><mi>x</mi><mo>+</mo>' +
       '<mn>1</mn></mrow></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'h fois, parenthèse gauche, g fois, parenthèse gauche, fraction avec numérateur x, et dénominateur x plus 1, parenthèse droite, parenthèse droite';
+  var speech = 'h mal, Klammer auf, g mal, Klammer auf, Bruch mit Zähler x, und Nenner x plus 1, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1693,7 +1693,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction126 = function() {
       '</mrow><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo' +
       ' stretchy="false">)</mo><mo>+</mo><mi>g</mi><mo stretchy="false">(' +
       '</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></math>';
-  var speech = 'parenthèse gauche, f plus g, parenthèse droite, fois x, égale, f fois x, plus, g fois x';
+  var speech = 'Klammer auf, f plus g, Klammer zu, mal x, ist gleich, f mal x, plus, g mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1709,7 +1709,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction127 = function() {
       '<mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow><mo>+</mo><mi>g</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+' +
       '</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'parenthèse gauche, f plus g, parenthèse droite, fois, parenthèse gauche, x plus 1, parenthèse droite, égale, f fois, parenthèse gauche, x plus 1, parenthèse droite, plus, g fois, parenthèse gauche, x plus 1, parenthèse droite';
+  var speech = 'Klammer auf, f plus g, Klammer zu, mal, Klammer auf, x plus 1, Klammer zu, ist gleich, f mal, Klammer auf, x plus 1, Klammer zu, plus, g mal, Klammer auf, x plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1722,7 +1722,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction128 = function() {
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>⋅</mo><mi>g' +
       '</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'parenthèse gauche, f opérateur point g, parenthèse droite, fois x';
+  var speech = 'Klammer auf, f mal g, Klammer zu, mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1735,7 +1735,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction129 = function() {
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>⋅</mo><mi>g' +
       '</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x' +
       '</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'parenthèse gauche, f opérateur point g, parenthèse droite, fois, parenthèse gauche, 2 x, plus 5, parenthèse droite';
+  var speech = 'Klammer auf, f mal g, Klammer zu, mal, Klammer auf, 2 x, plus 5, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1750,7 +1750,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction130 = function() {
       '</mo></mrow><mo>=</mo><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow></mfrac></mrow></math>';
-  var speech = 'parenthèse gauche, f sur g, parenthèse droite, fois x, égale, fraction avec numérateur, f fois x, et dénominateur, g fois x';
+  var speech = 'Klammer auf, f geteilt durch g, Klammer zu, mal x, ist gleich, Bruch mit Zähler, f mal x, und Nenner, g mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1767,7 +1767,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction131 = function() {
       '</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>g' +
       '</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn>' +
       '</mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math>';
-  var speech = 'parenthèse gauche, f sur g, parenthèse droite, fois, parenthèse gauche, 2 x, plus 5, parenthèse droite, égale, fraction avec numérateur, f fois, parenthèse gauche, 2 x, plus 5, parenthèse droite, et dénominateur, g fois, parenthèse gauche, 2 x, plus 5, parenthèse droite';
+  var speech = 'Klammer auf, f geteilt durch g, Klammer zu, mal, Klammer auf, 2 x, plus 5, Klammer zu, ist gleich, Bruch mit Zähler, f mal, Klammer auf, 2 x, plus 5, Klammer zu, und Nenner, g mal, Klammer auf, 2 x, plus 5, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1779,7 +1779,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction132 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mn>2</mn><mi>f</mi><mrow><mo>(</mo><mi>x</mi>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '2, f fois x';
+  var speech = '2, f mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1791,7 +1791,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction133 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mi>c</mi><mi>f</mi><mrow><mo>(</mo><mi>x</mi>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'c, f fois x';
+  var speech = 'c, f mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1803,7 +1803,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction134 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>f</mi><mn>2</mn></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f au carré fois x';
+  var speech = 'f Quadrat mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1816,7 +1816,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction135 = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mn>2</mn></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'f au carré fois, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'f Quadrat mal, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1828,7 +1828,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction136 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>f</mi><mn>3</mn></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f au cube fois x';
+  var speech = 'f Kubik mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1841,7 +1841,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction137 = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mn>3</mn></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'f au cube fois, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'f Kubik mal, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1853,7 +1853,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction138 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>f</mi><mn>4</mn></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f à la puissance 4; fois x';
+  var speech = 'f hoch 4, mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1866,7 +1866,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction139 = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mn>4</mn></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'f à la puissance 4; fois, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'f hoch 4, mal, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1878,7 +1878,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction140 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>f</mi><mn>5</mn></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f à la puissance 5; fois x';
+  var speech = 'f hoch 5, mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1891,7 +1891,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction141 = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mn>5</mn></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'f à la puissance 5; fois, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'f hoch 5, mal, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1903,7 +1903,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction142 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>f</mi><mi>n</mi></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f à la puissance n; fois x';
+  var speech = 'f hoch n, mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1916,7 +1916,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction143 = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mi>n</mi></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'f à la puissance n; fois, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'f hoch n, mal, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1928,7 +1928,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction144 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>g</mi><mn>2</mn></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g au carré fois x';
+  var speech = 'g Quadrat mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1941,7 +1941,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction145 = function() {
   var mathml = '<math><mrow><msup><mi>g</mi><mn>2</mn></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'g au carré fois, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'g Quadrat mal, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1953,7 +1953,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction146 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>h</mi><mn>3</mn></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h au cube fois x';
+  var speech = 'h Kubik mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1966,7 +1966,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction147 = function() {
   var mathml = '<math><mrow><msup><mi>h</mi><mn>3</mn></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'h au cube fois, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'h Kubik mal, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1978,7 +1978,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction148 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>g</mi><mn>4</mn></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g à la puissance 4; fois x';
+  var speech = 'g hoch 4, mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1991,7 +1991,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction149 = function() {
   var mathml = '<math><mrow><msup><mi>g</mi><mn>4</mn></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'g à la puissance 4; fois, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'g hoch 4, mal, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2003,7 +2003,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction150 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>h</mi><mn>5</mn></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h à la puissance 5; fois x';
+  var speech = 'h hoch 5, mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2016,7 +2016,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction151 = function() {
   var mathml = '<math><mrow><msup><mi>h</mi><mn>5</mn></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'h à la puissance 5; fois, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'h hoch 5, mal, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2028,7 +2028,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction152 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>g</mi><mi>n</mi></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g à la puissance n; fois x';
+  var speech = 'g hoch n, mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2041,7 +2041,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction153 = function() {
   var mathml = '<math><mrow><msup><mi>g</mi><mi>n</mi></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'g à la puissance n; fois, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'g hoch n, mal, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2053,7 +2053,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction154 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msub><mi>f</mi><mn>1</mn></msub><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f sub 1, fois x';
+  var speech = 'f Index 1, mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2066,7 +2066,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction156 = function() {
   var mathml = '<math><mrow><msub><mi>g</mi><mn>2</mn></msub><mrow><mo>(' +
       '</mo><mrow><msup><mi>x</mi><mn>3</mn></msup></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'g sub 2, fois, parenthèse gauche, x au cube, parenthèse droite';
+  var speech = 'g Index 2, mal, Klammer auf, x Kubik, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2079,7 +2079,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction157 = function() {
   var mathml = '<math><mrow><msub><mi>h</mi><mi>n</mi></msub><mrow><mo>(' +
       '</mo><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'h sub n, fois, parenthèse gauche, 3 x, moins 2, parenthèse droite';
+  var speech = 'h Index n, mal, Klammer auf, 3 x, minus 2, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2092,7 +2092,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction158 = function() {
   var mathml = '<math><mrow><msubsup><mi>f</mi><mn>1</mn><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'f sub 1, à la puissance négatif 1; fois x';
+  var speech = 'f Index 1, hoch negativ 1, mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2105,7 +2105,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction159 = function() {
   var mathml = '<math><mrow><msubsup><mi>g</mi><mn>2</mn><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x' +
       '</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g sub 2, à la puissance négatif 1; fois, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'g Index 2, hoch negativ 1, mal, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2118,7 +2118,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction160 = function() {
   var mathml = '<math><mrow><msubsup><mi>h</mi><mi>n</mi><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'h sub n, à la puissance négatif 1; fois x';
+  var speech = 'h Index n, hoch negativ 1, mal x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2132,7 +2132,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction161 = function() {
       '<mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mrow><msub><mi>g</mi>' +
       '<mn>2</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'g sub 1, à la puissance négatif 1; fois, parenthèse gauche, g sub 2, fois x, parenthèse droite';
+  var speech = 'g Index 1, hoch negativ 1, mal, Klammer auf, g Index 2, mal x, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2146,7 +2146,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction162 = function() {
       '</mo><mrow><msubsup><mi>g</mi><mn>2</mn><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msubsup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'f sub 1, fois, parenthèse gauche, g sub 2, à la puissance négatif 1; fois x, parenthèse droite';
+  var speech = 'f Index 1, mal, Klammer auf, g Index 2, hoch negativ 1, mal x, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2158,7 +2158,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction163 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,' +
       '</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f fois, parenthèse gauche, x virgule y, parenthèse droite';
+  var speech = 'f mal, Klammer auf, x Komma y, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2171,7 +2171,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction164 = function() {
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,' +
       '</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow>' +
       '</math>';
-  var speech = 'f fois, parenthèse gauche, x virgule y virgule z, parenthèse droite';
+  var speech = 'f mal, Klammer auf, x Komma y Komma z, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2184,7 +2184,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction165 = function() {
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+' +
       '</mo><mn>1</mn><mo>,</mo><mn>2</mn><mi>y</mi></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'f fois, parenthèse gauche, x plus 1, virgule, 2 y, parenthèse droite';
+  var speech = 'f mal, Klammer auf, x plus 1, Komma, 2 y, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2197,7 +2197,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction166 = function() {
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x' +
       '</mi><mo>,</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo>,</mo><msup><mi>x' +
       '</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f fois, parenthèse gauche, 2 x, virgule, x plus 1, virgule, x au carré, parenthèse droite';
+  var speech = 'f mal, Klammer auf, 2 x, Komma, x plus 1, Komma, x Quadrat, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2212,7 +2212,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction011b = function() {
   var preference = 'Functions_Reciprocal';
   var mathml = '<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de f de x';
+  var speech = 'f invers von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2224,7 +2224,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction012b = function() {
   var preference = 'Functions_Reciprocal';
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de g de x';
+  var speech = 'g invers von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2236,7 +2236,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction013b = function() {
   var preference = 'Functions_Reciprocal';
   var mathml = '<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de h de x';
+  var speech = 'h invers von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2249,7 +2249,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction014b = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de f de 2 x';
+  var speech = 'f invers von 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2262,7 +2262,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction015b = function() {
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de g de négatif 2 x';
+  var speech = 'g invers von negativ 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2275,7 +2275,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction016b = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mn>3</mn><mi>x</mi><mo>−</mo>' +
       '<mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de f de, parenthèse gauche, 3 x, moins 1, parenthèse droite';
+  var speech = 'f invers von, Klammer auf, 3 x, minus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2288,7 +2288,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction017b = function() {
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>2</mn>' +
       '</msup></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de g de, parenthèse gauche, x au carré, parenthèse droite';
+  var speech = 'g invers von, Klammer auf, x Quadrat, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2301,7 +2301,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction018b = function() {
   var mathml = '<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn>' +
       '</mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de h de un-demi';
+  var speech = 'h invers von ein halb';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2316,7 +2316,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction019b = function() {
   var mathml = '<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn>' +
       '</mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de h de, 1 sur 2';
+  var speech = 'h invers von, 1 geteilt durch 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2329,7 +2329,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction020b = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de f de, f de x';
+  var speech = 'f invers von, f von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2342,7 +2342,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction021b = function() {
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de g de, g de x';
+  var speech = 'g invers von, g von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2355,7 +2355,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction022b = function() {
   var mathml = '<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de h de, h de x';
+  var speech = 'h invers von, h von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2369,7 +2369,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction023b = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'la reciproque de f de, f de 2 x';
+  var speech = 'f invers von, f von 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2383,7 +2383,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction024b = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow>' +
       '<mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de g de, g de négatif 2 x';
+  var speech = 'g invers von, g von negativ 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2397,7 +2397,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction025b = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de h de, h de un-demi';
+  var speech = 'h invers von, h von ein halb';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2413,7 +2413,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction026b = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de h de, h de, 1 sur 2';
+  var speech = 'h invers von, h von, 1 geteilt durch 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2427,7 +2427,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction027b = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mrow>' +
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)' +
       '</mo></mrow><mo>=</mo><mi>x</mi><mo>+</mo><mn>1</mn></mrow></math>';
-  var speech = 'la reciproque de f de, parenthèse gauche, f de, parenthèse gauche, x plus 1, parenthèse droite, parenthèse droite, égale x plus 1';
+  var speech = 'f invers von, Klammer auf, f von, Klammer auf, x plus 1, Klammer zu, Klammer zu, ist gleich x plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2441,7 +2441,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction028b = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow>' +
       '<mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de g de, parenthèse gauche, g de, parenthèse gauche, 2 x, plus 1, parenthèse droite, parenthèse droite';
+  var speech = 'g invers von, Klammer auf, g von, Klammer auf, 2 x, plus 1, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2455,7 +2455,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction029b = function() {
       '</mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow>' +
       '<msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de g de, parenthèse gauche, g de, parenthèse gauche, x au carré, parenthèse droite, parenthèse droite';
+  var speech = 'g invers von, Klammer auf, g von, Klammer auf, x Quadrat, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2468,7 +2468,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction030b = function() {
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><msup><mi>f' +
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f de, la reciproque de f de x';
+  var speech = 'f von, f invers von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2481,7 +2481,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction031b = function() {
   var mathml = '<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>g' +
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g de, la reciproque de g de x';
+  var speech = 'g von, g invers von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2494,7 +2494,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction032b = function() {
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><msup><mi>h' +
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h de, la reciproque de h de x';
+  var speech = 'h von, h invers von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2508,7 +2508,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction033b = function() {
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'f de, la reciproque de f de 2 x';
+  var speech = 'f von, f invers von 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2522,7 +2522,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction034b = function() {
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow>' +
       '<mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = 'g de, la reciproque de g de négatif 2 x';
+  var speech = 'g von, g invers von negativ 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2536,7 +2536,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction035b = function() {
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow>' +
       '<mn>3</mn><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f de, parenthèse gauche, la reciproque de f de, parenthèse gauche, 3 x, moins 1, parenthèse droite, parenthèse droite';
+  var speech = 'f von, Klammer auf, f invers von, Klammer auf, 3 x, minus 1, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2550,7 +2550,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction036b = function() {
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow>' +
       '<msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'g de, la reciproque de g de, parenthèse gauche, x au carré, parenthèse droite';
+  var speech = 'g von, g invers von, Klammer auf, x Quadrat, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2564,7 +2564,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction037b = function() {
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'h de, la reciproque de h de un-demi';
+  var speech = 'h von, h invers von ein halb';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2580,7 +2580,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction038b = function() {
       '</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow>' +
       '<mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'h de, la reciproque de h de, fraction 1 sur 2';
+  var speech = 'h von, h invers von, Bruch 1 geteilt durch 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2593,7 +2593,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction039b = function() {
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi>' +
       '<mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'f de, g de x';
+  var speech = 'f von, g von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2606,7 +2606,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction040b = function() {
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi>' +
       '<mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f de, parenthèse gauche, g de, parenthèse gauche, x plus 1, parenthèse droite, parenthèse droite';
+  var speech = 'f von, Klammer auf, g von, Klammer auf, x plus 1, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2619,7 +2619,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction041b = function() {
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mi>g</mi>' +
       '<mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'h de, g de x';
+  var speech = 'h von, g von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2633,7 +2633,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction042b = function() {
       '<mrow><mo>(</mo><mrow><mfrac><mi>x</mi><mrow><mi>x</mi><mo>+</mo>' +
       '<mn>1</mn></mrow></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'h de, parenthèse gauche, g de, parenthèse gauche, fraction avec numérateur x, et dénominateur x plus 1, parenthèse droite, parenthèse droite';
+  var speech = 'h von, Klammer auf, g von, Klammer auf, Bruch mit Zähler x, und Nenner x plus 1, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2648,7 +2648,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction043b = function() {
       '</mrow><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo' +
       ' stretchy="false">)</mo><mo>+</mo><mi>g</mi><mo stretchy="false">(' +
       '</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></math>';
-  var speech = 'parenthèse gauche, f plus g, parenthèse droite, de x, égale f de x, plus g de x';
+  var speech = 'Klammer auf, f plus g, Klammer zu, von x, ist gleich f von x, plus g von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2664,7 +2664,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction044b = function() {
       '<mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow><mo>+</mo><mi>g</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+' +
       '</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'parenthèse gauche, f plus g, parenthèse droite, de, parenthèse gauche, x plus 1, parenthèse droite, égale f de, parenthèse gauche, x plus 1, parenthèse droite, plus g de, parenthèse gauche, x plus 1, parenthèse droite';
+  var speech = 'Klammer auf, f plus g, Klammer zu, von, Klammer auf, x plus 1, Klammer zu, ist gleich f von, Klammer auf, x plus 1, Klammer zu, plus g von, Klammer auf, x plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2677,7 +2677,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction045b = function() {
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>⋅</mo><mi>g' +
       '</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'parenthèse gauche, f opérateur point g, parenthèse droite, de x';
+  var speech = 'Klammer auf, f mal g, Klammer zu, von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2690,7 +2690,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction046b = function() {
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>⋅</mo><mi>g' +
       '</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x' +
       '</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'parenthèse gauche, f opérateur point g, parenthèse droite, de, parenthèse gauche, 2 x, plus 5, parenthèse droite';
+  var speech = 'Klammer auf, f mal g, Klammer zu, von, Klammer auf, 2 x, plus 5, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2705,7 +2705,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction047b = function() {
       '</mo></mrow><mo>=</mo><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mi>x' +
       '</mi><mo>)</mo></mrow></mrow></mfrac></mrow></math>';
-  var speech = 'parenthèse gauche, f sur g, parenthèse droite, de x, égale, f de x, sur g de x';
+  var speech = 'Klammer auf, f geteilt durch g, Klammer zu, von x, ist gleich, f von x, geteilt durch g von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2722,7 +2722,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction048b = function() {
       '</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>g' +
       '</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn>' +
       '</mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math>';
-  var speech = 'parenthèse gauche, f sur g, parenthèse droite, de, parenthèse gauche, 2 x, plus 5, parenthèse droite, égale, fraction avec numérateur f de, parenthèse gauche, 2 x, plus 5, parenthèse droite, et dénominateur g de, parenthèse gauche, 2 x, plus 5, parenthèse droite';
+  var speech = 'Klammer auf, f geteilt durch g, Klammer zu, von, Klammer auf, 2 x, plus 5, Klammer zu, ist gleich, Bruch mit Zähler f von, Klammer auf, 2 x, plus 5, Klammer zu, und Nenner g von, Klammer auf, 2 x, plus 5, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2737,7 +2737,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction049b = function() {
       '</mrow><mo>=</mo><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow>' +
       '<mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow>' +
       '</math>';
-  var speech = 'parenthèse gauche, f opérateur rond g, parenthèse droite, de x, égale f de, g de x';
+  var speech = 'Klammer auf, f verknüpft mit g, Klammer zu, von x, ist gleich f von, g von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2749,7 +2749,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction050b = function() {
   var preference = 'Functions_Reciprocal';
   var mathml = '<math><mrow><mn>2</mn><mi>f</mi><mrow><mo>(</mo><mi>x</mi>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '2 f de x';
+  var speech = '2 f von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2761,7 +2761,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction051b = function() {
   var preference = 'Functions_Reciprocal';
   var mathml = '<math><mrow><mi>c</mi><mi>f</mi><mrow><mo>(</mo><mi>x</mi>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'c f de x';
+  var speech = 'c f von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2773,7 +2773,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction052b = function() {
   var preference = 'Functions_Reciprocal';
   var mathml = '<math><mrow><msup><mi>f</mi><mn>2</mn></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f au carré de x';
+  var speech = 'f Quadrat von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2786,7 +2786,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction053b = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mn>2</mn></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'f au carré de, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'f Quadrat von, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2798,7 +2798,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction054b = function() {
   var preference = 'Functions_Reciprocal';
   var mathml = '<math><mrow><msup><mi>f</mi><mn>3</mn></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f au cube de x';
+  var speech = 'f Kubik von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2811,7 +2811,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction055b = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mn>3</mn></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'f au cube de, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'f Kubik von, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2823,7 +2823,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction056b = function() {
   var preference = 'Functions_Reciprocal';
   var mathml = '<math><mrow><msup><mi>f</mi><mn>4</mn></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f à la puissance 4; de x';
+  var speech = 'f hoch 4, von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2836,7 +2836,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction057b = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mn>4</mn></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'f à la puissance 4; de, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'f hoch 4, von, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2848,7 +2848,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction058b = function() {
   var preference = 'Functions_Reciprocal';
   var mathml = '<math><mrow><msup><mi>f</mi><mn>5</mn></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f à la puissance 5; de x';
+  var speech = 'f hoch 5, von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2861,7 +2861,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction059b = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mn>5</mn></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'f à la puissance 5; de, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'f hoch 5, von, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2873,7 +2873,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction060b = function() {
   var preference = 'Functions_Reciprocal';
   var mathml = '<math><mrow><msup><mi>f</mi><mi>n</mi></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f à la puissance n; de x';
+  var speech = 'f hoch n, von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2886,7 +2886,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction061b = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mi>n</mi></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'f à la puissance n; de, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'f hoch n, von, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2898,7 +2898,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction062b = function() {
   var preference = 'Functions_Reciprocal';
   var mathml = '<math><mrow><msup><mi>g</mi><mn>2</mn></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g au carré de x';
+  var speech = 'g Quadrat von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2911,7 +2911,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction063b = function() {
   var mathml = '<math><mrow><msup><mi>g</mi><mn>2</mn></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'g au carré de, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'g Quadrat von, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2923,7 +2923,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction064b = function() {
   var preference = 'Functions_Reciprocal';
   var mathml = '<math><mrow><msup><mi>h</mi><mn>3</mn></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h au cube de x';
+  var speech = 'h Kubik von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2936,7 +2936,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction065b = function() {
   var mathml = '<math><mrow><msup><mi>h</mi><mn>3</mn></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'h au cube de, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'h Kubik von, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2948,7 +2948,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction066b = function() {
   var preference = 'Functions_Reciprocal';
   var mathml = '<math><mrow><msup><mi>g</mi><mn>4</mn></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g à la puissance 4; de x';
+  var speech = 'g hoch 4, von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2961,7 +2961,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction067b = function() {
   var mathml = '<math><mrow><msup><mi>g</mi><mn>4</mn></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'g à la puissance 4; de, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'g hoch 4, von, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2973,7 +2973,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction068b = function() {
   var preference = 'Functions_Reciprocal';
   var mathml = '<math><mrow><msup><mi>h</mi><mn>5</mn></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h à la puissance 5; de x';
+  var speech = 'h hoch 5, von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2986,7 +2986,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction069b = function() {
   var mathml = '<math><mrow><msup><mi>h</mi><mn>5</mn></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'h à la puissance 5; de, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'h hoch 5, von, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2998,7 +2998,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction070b = function() {
   var preference = 'Functions_Reciprocal';
   var mathml = '<math><mrow><msup><mi>g</mi><mi>n</mi></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g à la puissance n; de x';
+  var speech = 'g hoch n, von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -3011,7 +3011,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction071b = function() {
   var mathml = '<math><mrow><msup><mi>g</mi><mi>n</mi></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'g à la puissance n; de, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'g hoch n, von, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -3023,7 +3023,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction072b = function() {
   var preference = 'Functions_Reciprocal';
   var mathml = '<math><mrow><msub><mi>f</mi><mn>1</mn></msub><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f sub 1, de x';
+  var speech = 'f Index 1, von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -3036,7 +3036,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction073b = function() {
   var mathml = '<math><mrow><msub><mi>g</mi><mn>2</mn></msub><mrow><mo>(' +
       '</mo><mrow><msup><mi>x</mi><mn>3</mn></msup></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'g sub 2, de, parenthèse gauche, x au cube, parenthèse droite';
+  var speech = 'g Index 2, von, Klammer auf, x Kubik, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -3049,7 +3049,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction074b = function() {
   var mathml = '<math><mrow><msub><mi>h</mi><mi>n</mi></msub><mrow><mo>(' +
       '</mo><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'h sub n, de, parenthèse gauche, 3 x, moins 2, parenthèse droite';
+  var speech = 'h Index n, von, Klammer auf, 3 x, minus 2, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -3062,7 +3062,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction075b = function() {
   var mathml = '<math><mrow><msubsup><mi>f</mi><mn>1</mn><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'la reciproque de, f sub 1, de x';
+  var speech = 'f Index 1, invers von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -3075,7 +3075,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction076b = function() {
   var mathml = '<math><mrow><msubsup><mi>g</mi><mn>2</mn><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x' +
       '</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de, g sub 2, de, parenthèse gauche, 2 x, plus 1, parenthèse droite';
+  var speech = 'g Index 2, invers von, Klammer auf, 2 x, plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -3088,7 +3088,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction077b = function() {
   var mathml = '<math><mrow><msubsup><mi>h</mi><mi>n</mi><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'la reciproque de, h sub n, de x';
+  var speech = 'h Index n, invers von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -3102,7 +3102,7 @@ sre.ClearspeakGermanFunctions.prototype.testFunction078b = function() {
       '<mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mrow><msub><mi>g</mi>' +
       '<mn>2</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'la reciproque de, g sub 1, de, g sub 2, de x';
+  var speech = 'g Index 1, invers von, g Index 2, von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -3116,6 +3116,6 @@ sre.ClearspeakGermanFunctions.prototype.testFunction079b = function() {
       '</mo><mrow><msubsup><mi>g</mi><mn>2</mn><mrow><mo>−</mo><mn>1</mn>' +
       '</mrow></msubsup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'f sub 1, de, la reciproque de, g sub 2, de x';
+  var speech = 'f Index 1, von, g Index 2, invers von x';
   this.executeRuleTest(mathml, speech, preference);
 };

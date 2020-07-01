@@ -1595,27 +1595,27 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'natural-numbers', 'clearspeak.default',
       '[t] "die natürlichen Zahlen"', 'self::identifier',
       'text()="\u2115" or (text()="N" and @font="double-struck")',
-      'self::*', 'self::*', 'self::*');
+      'self::*', 'self::*', 'self::*', 'self::*', 'self::*');
   defineRule(
       'integers', 'clearspeak.default',
       '[t] "die ganzen Zahlen"', 'self::identifier',
       'text()="\u2124" or (text()="Z" and @font="double-struck")',
-      'self::*', 'self::*', 'self::*');
+      'self::*', 'self::*', 'self::*', 'self::*', 'self::*');
   defineRule(
       'rational-numbers', 'clearspeak.default',
       '[t] "die rationalen Zahlen"', 'self::identifier',
       'text()="\u211A" or (text()="Q" and @font="double-struck")',
-      'self::*', 'self::*', 'self::*');
+      'self::*', 'self::*', 'self::*', 'self::*', 'self::*');
   defineRule(
       'real-numbers', 'clearspeak.default',
       '[t] "die reellen Zahlen"', 'self::identifier',
       'text()="\u211D" or (text()="R" and @font="double-struck")',
-      'self::*', 'self::*', 'self::*');
+      'self::*', 'self::*', 'self::*', 'self::*', 'self::*');
   defineRule(
       'complex-numbers', 'clearspeak.default',
       '[t] "die komplexen Zahlen"', 'self::identifier',
       'text()="\u2102" or (text()="C" and @font="double-struck")',
-      'self::*', 'self::*', 'self::*');
+      'self::*', 'self::*', 'self::*', 'self::*', 'self::*');
 
   // Named sets with superscripts
   defineRule(
@@ -1623,31 +1623,31 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       '[t] "n" (join: "-"); [n] children/*[2] (grammar:numbers2alpha)',
       'self::superscript', 'children/*[1]/text()="\u2115"' +
       ' or (children/*[1]/text()="N" and @font="double-struck")',
-      'self::*', 'self::*', 'self::*');
+      'self::*', 'self::*', 'self::*', 'self::*', 'self::*');
   defineRule(
       'integers-super', 'clearspeak.default',
       '[t] "z" (join: "-"); [n] children/*[2] (grammar:numbers2alpha)',
       'self::superscript', 'children/*[1]/text()="\u2124"' +
       ' or (children/*[1]/text()="Z" and @font="double-struck")',
-      'self::*', 'self::*', 'self::*');
+      'self::*', 'self::*', 'self::*', 'self::*', 'self::*');
   defineRule(
       'rational-numbers-super', 'clearspeak.default',
       '[t] "q" (join: "-"); [n] children/*[2] (grammar:numbers2alpha)',
       'self::superscript', 'children/*[1]/text()="\u211A"' +
       ' or (children/*[1]/text()="Q" and @font="double-struck")',
-      'self::*', 'self::*', 'self::*');
+      'self::*', 'self::*', 'self::*', 'self::*', 'self::*');
   defineRule(
       'real-numbers-super', 'clearspeak.default',
       '[t] "r" (join:"-"); [n] children/*[2] (grammar:numbers2alpha)',
       'self::superscript', 'children/*[1]/text()="\u211D"' +
       ' or (children/*[1]/text()="R" and @font="double-struck")',
-      'self::*', 'self::*', 'self::*');
+      'self::*', 'self::*', 'self::*', 'self::*', 'self::*');
   defineRule(
       'complex-numbers-super', 'clearspeak.default',
       '[t] "c" (join:"-"); [n] children/*[2] (grammar:numbers2alpha)',
       'self::superscript', 'children/*[1]/text()="\u2102"' +
       ' or (children/*[1]/text()="C" and @font="double-struck")',
-      'self::*', 'self::*', 'self::*');
+      'self::*', 'self::*', 'self::*', 'self::*', 'self::*');
 
   // Partial named sets.
   defineRule(
@@ -1655,35 +1655,36 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       '[t] "die natürlichen Zahlen mit Null"',
       'self::subscript', 'children/*[1]/text()="\u2115"' +
       ' or (children/*[1]/text()="N" and @font="double-struck")',
-      'children/*[2]/text()="0"');
+      'children/*[2]/text()="0"',
+      'self::*', 'self::*', 'self::*', 'self::*', 'self::*');
   defineRule(
       'positive-integers', 'clearspeak.default',
       '[t] "die positiven ganzen Zahlen"',
       'self::superscript', 'children/*[1]/text()="\u2124"' +
       ' or (children/*[1]/text()="Z" and @font="double-struck")',
       'children/*[2]/text()="+"',
-      'self::*', 'self::*', 'self::*');
+      'self::*', 'self::*', 'self::*', 'self::*', 'self::*');
   defineRule(
       'positive-integers', 'clearspeak.default',
       '[t] "die negativen ganzen Zahlen"',
       'self::superscript', 'children/*[1]/text()="\u2124"' +
       ' or (children/*[1]/text()="Z" and @font="double-struck")',
       'children/*[2]/text()="-"',
-      'self::*', 'self::*', 'self::*');
+      'self::*', 'self::*', 'self::*', 'self::*', 'self::*');
   defineRule(
       'positive-rational-numbers', 'clearspeak.default',
       '[t] "die positiven rationalen Zahlen"',
       'self::superscript', 'children/*[1]/text()="\u211A"' +
       ' or (children/*[1]/text()="Q" and @font="double-struck")',
       'children/*[2]/text()="+"',
-      'self::*', 'self::*', 'self::*');
+      'self::*', 'self::*', 'self::*', 'self::*', 'self::*');
   defineRule(
       'negative-rational-numbers', 'clearspeak.default',
       '[t] "die negativen rationalen Zahlen"',
       'self::superscript', 'children/*[1]/text()="\u211A"' +
       ' or (children/*[1]/text()="Q" and @font="double-struck")',
       'children/*[2]/text()="-"',
-      'self::*', 'self::*', 'self::*');
+      'self::*', 'self::*', 'self::*', 'self::*', 'self::*');
   // TODO: Do we need positive and negative real numbers. Usually they are more
   //       complex notation!
 

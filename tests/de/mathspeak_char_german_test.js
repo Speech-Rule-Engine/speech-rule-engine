@@ -3323,7 +3323,7 @@ sre.MathspeakCharGermanTest.prototype.testMathspeakChars = function() {
   this.executeCharTest('<', ['kleiner als', 'kleiner als', 'kleiner als']);
   this.executeCharTest('=', ['ist gleich', 'ist gleich', 'ist gleich']);
   this.executeCharTest('>', ['größer als', 'größer als', 'größer als']);
-  this.executeCharTest('?', ['Frgezeichen', 'Frgezeichen', 'Frgezeichen']);
+  this.executeCharTest('?', ['Fragezeichen', 'Fragezeichen', 'Fragezeichen']);
   this.executeCharTest('@', ['Klammeraffe', 'Klammeraffe', 'Klammeraffe']);
   this.executeCharTest('\\', ['Umgekehrter Schrägstrich', 'Umgekehrter Schrägstrich', 'Umgekehrter Schrägstrich']);
   this.executeCharTest('^', ['circumflex', 'circumflex', 'circumflex']);

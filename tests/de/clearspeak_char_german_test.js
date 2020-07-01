@@ -3323,7 +3323,7 @@ sre.ClearspeakCharGermanTest.prototype.testClearspeakChars = function() {
   this.executeCharTest('<', ['kleiner als']);
   this.executeCharTest('=', ['ist gleich']);
   this.executeCharTest('>', ['größer als']);
-  this.executeCharTest('?', ['Frgezeichen']);
+  this.executeCharTest('?', ['Fragezeichen']);
   this.executeCharTest('@', ['Klammeraffe']);
   this.executeCharTest('\\', ['Umgekehrter Schrägstrich']);
   this.executeCharTest('^', ['circumflex']);

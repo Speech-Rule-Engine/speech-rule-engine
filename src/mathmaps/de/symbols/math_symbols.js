@@ -168,7 +168,7 @@
     "key": "003F",
     "mappings": {
       "default": {
-        "default": "Frgezeichen"
+        "default": "Fragezeichen"
       }
     },
     "category": "Po"

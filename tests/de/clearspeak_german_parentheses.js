@@ -76,7 +76,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen003 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mn>2</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−' +
       '</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2 plus négatif 2';
+  var speech = '2 plus negativ 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -88,7 +88,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen004 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mn>2</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−' +
       '</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2 moins négatif 2';
+  var speech = '2 minus negativ 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -100,7 +100,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen004a = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mn>2</mn><mo>−</mo><mrow><mo>−' +
       '</mo><mn>2</mn></mrow></mrow></math>';
-  var speech = '2 moins négatif 2';
+  var speech = '2 minus negativ 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -113,7 +113,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen005 = function() {
   var mathml = '<math><mrow><mn>2</mn><mo>−</mo><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow><mn>3' +
       '</mn></msup></mrow></math>';
-  var speech = '2 moins, parenthèse gauche, négatif 2, parenthèse droite, au cube';
+  var speech = '2 minus, Klammer auf, negativ 2, Klammer zu, Kubik';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -126,7 +126,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen006 = function() {
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn>' +
       '<mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow>' +
       '</math>';
-  var speech = 'parenthèse gauche, 2 x, parenthèse droite, au carré';
+  var speech = 'Klammer auf, 2 x, Klammer zu, Quadrat';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -139,7 +139,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen007 = function() {
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn>' +
       '<mi>x</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>y</mi><mo>+</mo>' +
       '<mn>1</mn></mrow></msup></mrow></math>';
-  var speech = 'parenthèse gauche, 2 x, parenthèse droite, à la puissance y plus 1';
+  var speech = 'Klammer auf, 2 x, Klammer zu, hoch y plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -151,7 +151,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen008 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x' +
       '</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'négatif 2 x';
+  var speech = 'negativ 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -164,7 +164,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen009 = function() {
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mo>−</mo>' +
       '<mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup>' +
       '</mrow></math>';
-  var speech = 'parenthèse gauche, négatif 2 x, parenthèse droite, au carré';
+  var speech = 'Klammer auf, negativ 2 x, Klammer zu, Quadrat';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -177,7 +177,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen010 = function() {
   var mathml = '<math><mrow><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup>' +
       '</mrow></math>';
-  var speech = 'négatif, parenthèse gauche, 2 x, parenthèse droite, au carré';
+  var speech = 'negativ, Klammer auf, 2 x, Klammer zu, Quadrat';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -189,7 +189,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen011 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2' +
       '</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'un-demi';
+  var speech = 'ein halb';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -202,7 +202,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen012 = function() {
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mn>3</mn><mn>4' +
       '</mn></mfrac><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
   // TODO: (QUESTION) This is against the Paren_Auto rules! (page 31)!
-  var speech = 'trois-quarts x';
+  var speech = 'drei viertel x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -215,7 +215,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen013 = function() {
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mn>11</mn>' +
       '</mrow><mrow><mn>22</mn></mrow></mfrac></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'parenthèse gauche, 11 sur 22, parenthèse droite';
+  var speech = 'Klammer auf, 11 geteilt durch 22, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -228,7 +228,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen014 = function() {
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1' +
       '</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mn>4</mn>' +
       '</msup></mrow></math>';
-  var speech = 'un-demi à la puissance 4';
+  var speech = 'ein halb hoch 4';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -241,7 +241,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen015 = function() {
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mrow>' +
       '<mn>11</mn></mrow><mrow><mn>15</mn></mrow></mfrac></mrow><mo>)</mo>' +
       '</mrow></mrow><mn>2</mn></msup></mrow></math>';
-  var speech = 'parenthèse gauche, 11 sur 15, parenthèse droite, au carré';
+  var speech = 'Klammer auf, 11 geteilt durch 15, Klammer zu, Quadrat';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -253,7 +253,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen016 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>25</mn></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = 'parenthèse gauche, 25, parenthèse droite';
+  var speech = 'Klammer auf, 25, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -265,7 +265,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen017 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'parenthèse gauche, 2 x, parenthèse droite';
+  var speech = 'Klammer auf, 2 x, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -277,7 +277,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen018 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><mn>2</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−' +
       '</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2 plus, parenthèse gauche, négatif 2, parenthèse droite';
+  var speech = '2 plus, Klammer auf, negativ 2, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -289,7 +289,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen019 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><mn>2</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−' +
       '</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2 moins, parenthèse gauche, négatif 2, parenthèse droite';
+  var speech = '2 minus, Klammer auf, negativ 2, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -302,7 +302,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen020 = function() {
   var mathml = '<math><mrow><mn>2</mn><mo>−</mo><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow><mn>3' +
       '</mn></msup></mrow></math>';
-  var speech = '2 moins, parenthèse gauche, négatif 2, parenthèse droite, au cube';
+  var speech = '2 minus, Klammer auf, negativ 2, Klammer zu, Kubik';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -315,7 +315,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen021 = function() {
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn>' +
       '<mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow>' +
       '</math>';
-  var speech = 'parenthèse gauche, 2 x, parenthèse droite, au carré';
+  var speech = 'Klammer auf, 2 x, Klammer zu, Quadrat';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -328,7 +328,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen022 = function() {
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn>' +
       '<mi>x</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>y</mi><mo>+</mo>' +
       '<mn>1</mn></mrow></msup></mrow></math>';
-  var speech = 'parenthèse gauche, 2 x, parenthèse droite, à la puissance y plus 1';
+  var speech = 'Klammer auf, 2 x, Klammer zu, hoch y plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -340,7 +340,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen023 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x' +
       '</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'parenthèse gauche, négatif 2 x, parenthèse droite';
+  var speech = 'Klammer auf, negativ 2 x, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -353,7 +353,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen024 = function() {
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mo>−</mo>' +
       '<mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup>' +
       '</mrow></math>';
-  var speech = 'parenthèse gauche, négatif 2 x, parenthèse droite, au carré';
+  var speech = 'Klammer auf, negativ 2 x, Klammer zu, Quadrat';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -366,7 +366,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen025 = function() {
   var mathml = '<math><mrow><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup>' +
       '</mrow></math>';
-  var speech = 'négatif, parenthèse gauche, 2 x, parenthèse droite, au carré';
+  var speech = 'negativ, Klammer auf, 2 x, Klammer zu, Quadrat';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -378,7 +378,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen026 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2' +
       '</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'parenthèse gauche, un-demi, parenthèse droite';
+  var speech = 'Klammer auf, ein halb, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -390,7 +390,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen027 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mn>3</mn><mn>4' +
       '</mn></mfrac><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'parenthèse gauche, trois-quarts x, parenthèse droite';
+  var speech = 'Klammer auf, drei viertel x, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -403,7 +403,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen028 = function() {
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mn>11</mn>' +
       '</mrow><mrow><mn>22</mn></mrow></mfrac></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'parenthèse gauche, 11 sur 22, parenthèse droite';
+  var speech = 'Klammer auf, 11 geteilt durch 22, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -416,7 +416,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen029 = function() {
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1' +
       '</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mn>4</mn>' +
       '</msup></mrow></math>';
-  var speech = 'parenthèse gauche, un-demi, parenthèse droite, à la puissance 4';
+  var speech = 'Klammer auf, ein halb, Klammer zu, hoch 4';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -429,7 +429,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen030 = function() {
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mrow>' +
       '<mn>11</mn></mrow><mrow><mn>15</mn></mrow></mfrac></mrow><mo>)</mo>' +
       '</mrow></mrow><mn>2</mn></msup></mrow></math>';
-  var speech = 'parenthèse gauche, 11 sur 15, parenthèse droite, au carré';
+  var speech = 'Klammer auf, 11 geteilt durch 15, Klammer zu, Quadrat';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -441,7 +441,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen031 = function() {
   var preference = 'Paren_CoordPoint';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mn>2' +
       '</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'le point avec coordonées 1 virgule 2';
+  var speech = 'der Punkt mit Koordinaten 1 Komma 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -453,7 +453,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen032 = function() {
   var preference = 'Paren_CoordPoint';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y' +
       '</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'le point avec coordonées x virgule y';
+  var speech = 'der Punkt mit Koordinaten x Komma y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -465,7 +465,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen033 = function() {
   var preference = 'Paren_CoordPoint';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mn>2' +
       '</mn><mo>,</mo><mn>3</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'le point avec coordonées 1 virgule 2 virgule 3';
+  var speech = 'der Punkt mit Koordinaten 1 Komma 2 Komma 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -477,7 +477,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen034 = function() {
   var preference = 'Paren_CoordPoint';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y' +
       '</mi><mo>,</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'le point avec coordonées x virgule y virgule z';
+  var speech = 'der Punkt mit Koordinaten x Komma y Komma z';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -489,7 +489,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen035 = function() {
   var preference = 'Paren_CoordPoint';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mn>2' +
       '</mn><mo>,</mo><mn>386</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'le point avec coordonées 1 virgule 2 virgule 386';
+  var speech = 'der Punkt mit Koordinaten 1 Komma 2 Komma 386';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -501,7 +501,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen036 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>,</mo>' +
       '<mtext></mtext><mi>b</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'un intervalle de a à b, sans inclure a ni b';
+  var speech = 'das Interval von a bis b, ohne a und b';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -513,7 +513,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen037 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>0</mn><mo>,</mo>' +
       '<mtext></mtext><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'un intervalle de 0 à 1, sans inclure 0 ni 1';
+  var speech = 'das Interval von 0 bis 1, ohne 0 und 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -525,7 +525,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen038 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mi>a</mi><mo>,</mo>' +
       '<mtext></mtext><mi>b</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'un intervalle de a à b, avec a inclus, mais sans inclure b';
+  var speech = 'das Interval von a bis b, einschließlich a, aber ohne b';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -537,7 +537,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen039 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mn>0</mn><mo>,</mo>' +
       '<mtext></mtext><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'un intervalle de 0 à 1, avec 0 inclus, mais sans inclure 1';
+  var speech = 'das Interval von 0 bis 1, einschließlich 0, aber ohne 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -549,7 +549,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen040 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>,</mo>' +
       '<mtext></mtext><mi>b</mi></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'un intervalle de a à b, sans inclure a, mais avec b inclus';
+  var speech = 'das Interval von a bis b, ohne a, aber einschließlich b';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -561,7 +561,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen041 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>0</mn><mo>,</mo>' +
       '<mtext></mtext><mn>1</mn></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'un intervalle de 0 à 1, sans inclure 0, mais avec 1 inclus';
+  var speech = 'das Interval von 0 bis 1, ohne 0, aber einschließlich 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -573,7 +573,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen042 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mi>a</mi><mo>,</mo>' +
       '<mtext></mtext><mi>b</mi></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'un intervalle de a à b, avec a et b inclus';
+  var speech = 'das Interval von a bis b, einschließlich a und b';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -585,7 +585,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen043 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mn>0</mn><mo>,</mo>' +
       '<mtext></mtext><mn>1</mn></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'un intervalle de 0 à 1, avec 0 et 1 inclus';
+  var speech = 'das Interval von 0 bis 1, einschließlich 0 und 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -597,7 +597,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen044 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mi>∞</mi><mo>,' +
       '</mo><mtext></mtext><mi>b</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'un intervalle de négatif infini à b, sans inclure b';
+  var speech = 'das Interval von negativ unendlich bis b, ohne b';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -609,7 +609,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen045 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mi>∞</mi><mo>,' +
       '</mo><mtext></mtext><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'un intervalle de négatif infini à 1, sans inclure 1';
+  var speech = 'das Interval von negativ unendlich bis 1, ohne 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -621,7 +621,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen046 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mo stretchy="false">(</mo><mo>−</mo><mi>∞</mi>' +
       '<mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></math>';
-  var speech = 'un intervalle de négatif infini à b, avec b inclus';
+  var speech = 'das Interval von negativ unendlich bis b, einschließlich b';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -633,7 +633,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen047 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mo stretchy="false">(</mo><mo>−</mo><mi>∞</mi>' +
       '<mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></math>';
-  var speech = 'un intervalle de négatif infini à 1, avec 1 inclus';
+  var speech = 'das Interval von negativ unendlich bis 1, einschließlich 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -645,7 +645,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen048 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>,</mo>' +
       '<mtext></mtext><mi>∞</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'un intervalle de a à infini, sans inclure a';
+  var speech = 'das Interval von a bis unendlich, ohne a';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -657,7 +657,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen049 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo>' +
       '<mtext></mtext><mi>∞</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'un intervalle de 1 à infini, sans inclure 1';
+  var speech = 'das Interval von 1 bis unendlich, ohne 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -669,7 +669,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen050 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo>' +
       '<mi>∞</mi><mo stretchy="false">)</mo></mrow></math>';
-  var speech = 'un intervalle de a à infini, avec a inclus';
+  var speech = 'das Interval von a bis unendlich, einschließlich a';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -681,7 +681,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen051 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mo stretchy="false">[</mo><mn>1</mn><mo>,</mo>' +
       '<mi>∞</mi><mo stretchy="false">)</mo></mrow></math>';
-  var speech = 'un intervalle de 1 à infini, avec 1 inclus';
+  var speech = 'das Interval von 1 bis unendlich, einschließlich 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -693,7 +693,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen052 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mi>∞</mi><mo>,' +
       '</mo><mtext></mtext><mi>∞</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'un intervalle de négatif infini à infini';
+  var speech = 'das Interval von negativ unendlich bis unendlich';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -706,7 +706,7 @@ sre.ClearspeakGermanParentheses.prototype.testParen053 = function() {
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mi>∞</mi><mo>,' +
       '</mo><mtext></mtext><mo>+</mo><mi>∞</mi></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'un intervalle de négatif infini à positif infini';
+  var speech = 'das Interval von negativ unendlich bis positiv unendlich';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -719,7 +719,7 @@ sre.ClearspeakGermanParentheses.prototype.testNest001 = function() {
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi>' +
       '<mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'f de, g de x';
+  var speech = 'f von, g von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -732,7 +732,7 @@ sre.ClearspeakGermanParentheses.prototype.testNest002 = function() {
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi>' +
       '<mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f de, parenthèse gauche, g de, parenthèse gauche, x plus 1, parenthèse droite, parenthèse droite';
+  var speech = 'f von, Klammer auf, g von, Klammer auf, x plus 1, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -745,7 +745,7 @@ sre.ClearspeakGermanParentheses.prototype.testNest003 = function() {
   var mathml = '<math><mrow><mn>6</mn><mo>−</mo><mrow><mo>[</mo><mrow><mn>2' +
       '</mn><mo>−</mo><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>5</mn>' +
       '</mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '6 moins, crochet gauche, 2 moins, parenthèse gauche, 3 plus 5, parenthèse droite, crochet droit';
+  var speech = '6 minus, eckige Klammer auf, 2 minus, Klammer auf, 3 plus 5, Klammer zu, eckige Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -758,7 +758,7 @@ sre.ClearspeakGermanParentheses.prototype.testNest004 = function() {
   var mathml = '<math><mrow><mn>6</mn><mo>−</mo><mrow><mo>(</mo><mrow><mn>2' +
       '</mn><mo>−</mo><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>5</mn>' +
       '</mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '6 moins, parenthèse gauche, 2 moins, deuxième parenthèse gauche, 3 plus 5, deuxième parenthèse droite, parenthèse droite';
+  var speech = '6 minus, Klammer auf, 2 minus, zweite Klammer auf, 3 plus 5, zweite Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -772,7 +772,7 @@ sre.ClearspeakGermanParentheses.prototype.testNest005 = function() {
       '</mo><mn>3</mn><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo>' +
       '<mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></mrow>' +
       '</math>';
-  var speech = '4  , crochet gauche, x plus 3  , parenthèse gauche, 2 x, plus 1, parenthèse droite, crochet droit';
+  var speech = '4  , eckige Klammer auf, x plus 3  , Klammer auf, 2 x, plus 1, Klammer zu, eckige Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -786,7 +786,7 @@ sre.ClearspeakGermanParentheses.prototype.testNest006 = function() {
       '</mo><mn>3</mn><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo>' +
       '<mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow>' +
       '</math>';
-  var speech = '4  , parenthèse gauche, x plus 3  , deuxième parenthèse gauche, 2 x, plus 1, deuxième parenthèse droite, parenthèse droite';
+  var speech = '4  , Klammer auf, x plus 3  , zweite Klammer auf, 2 x, plus 1, zweite Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -801,7 +801,7 @@ sre.ClearspeakGermanParentheses.prototype.testNest007 = function() {
       '</mrow><mo>)</mo></mrow><mo>−</mo><mrow><mo>(</mo><mrow><mn>2</mn>' +
       '<mo>+</mo><mn>8</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = '1 plus, parenthèse gauche, 2 plus, deuxième parenthèse gauche, 3 plus 7, deuxième parenthèse droite, moins, deuxième parenthèse gauche, 2 plus 8, deuxième parenthèse droite, parenthèse droite';
+  var speech = '1 plus, Klammer auf, 2 plus, zweite Klammer auf, 3 plus 7, zweite Klammer zu, minus, zweite Klammer auf, 2 plus 8, zweite Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -815,7 +815,7 @@ sre.ClearspeakGermanParentheses.prototype.testNest008 = function() {
       '</mn><mo>+</mo><mrow><mo>(</mo><mrow><mn>3</mn><mo>−</mo><mrow><mo>(' +
       '</mo><mrow><mn>4</mn><mo>−</mo><mn>5</mn></mrow><mo>)</mo></mrow>' +
       '</mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '1 plus, parenthèse gauche, 2 plus, deuxième parenthèse gauche, 3 moins, troisième parenthèse gauche, 4 moins 5, troisième parenthèse droite, deuxième parenthèse droite, parenthèse droite';
+  var speech = '1 plus, Klammer auf, 2 plus, zweite Klammer auf, 3 minus, dritte Klammer auf, 4 minus 5, dritte Klammer zu, zweite Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -833,7 +833,7 @@ sre.ClearspeakGermanParentheses.prototype.testNest009 = function() {
       '<mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow>' +
       '<mo>+</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'parenthèse gauche, deuxième parenthèse gauche, 2 plus, troisième parenthèse gauche, 3 plus 4, troisième parenthèse droite, plus 5, deuxième parenthèse droite, plus 6 plus, deuxième parenthèse gauche, troisième parenthèse gauche, 7 plus, quatrième parenthèse gauche, 8 plus 1, quatrième parenthèse droite, troisième parenthèse droite, plus 2, deuxième parenthèse droite, parenthèse droite';
+  var speech = 'Klammer auf, zweite Klammer auf, 2 plus, dritte Klammer auf, 3 plus 4, dritte Klammer zu, plus 5, zweite Klammer zu, plus 6 plus, zweite Klammer auf, dritte Klammer auf, 7 plus, vierte Klammer auf, 8 plus 1, vierte Klammer zu, dritte Klammer zu, plus 2, zweite Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -869,7 +869,7 @@ sre.ClearspeakGermanParentheses.prototype.testSilParen003 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−' +
       '</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2 plus, négatif 2';
+  var speech = '2 plus, negativ 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -881,7 +881,7 @@ sre.ClearspeakGermanParentheses.prototype.testSilParen004 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−' +
       '</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2 moins, négatif 2';
+  var speech = '2 minus, negativ 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -894,7 +894,7 @@ sre.ClearspeakGermanParentheses.prototype.testSilParen005 = function() {
   var mathml = '<math><mrow><mn>2</mn><mo>−</mo><msup><mrow><mrow><mo>(' +
       '</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow><mn>3' +
       '</mn></msup></mrow></math>';
-  var speech = '2 moins, négatif 2, au cube';
+  var speech = '2 minus, negativ 2, Kubik';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -907,7 +907,7 @@ sre.ClearspeakGermanParentheses.prototype.testSilParen006 = function() {
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn>' +
       '<mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow>' +
       '</math>';
-  var speech = '2 x, au carré';
+  var speech = '2 x, Quadrat';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -920,7 +920,7 @@ sre.ClearspeakGermanParentheses.prototype.testSilParen007 = function() {
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn>' +
       '<mi>x</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>y</mi><mo>+</mo>' +
       '<mn>1</mn></mrow></msup></mrow></math>';
-  var speech = '2 x, à la puissance y plus 1';
+  var speech = '2 x, hoch y plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -932,7 +932,7 @@ sre.ClearspeakGermanParentheses.prototype.testSilParen008 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x' +
       '</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'négatif 2 x';
+  var speech = 'negativ 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -945,7 +945,7 @@ sre.ClearspeakGermanParentheses.prototype.testSilParen009 = function() {
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mo>−</mo>' +
       '<mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup>' +
       '</mrow></math>';
-  var speech = 'négatif 2 x, au carré';
+  var speech = 'negativ 2 x, Quadrat';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -958,7 +958,7 @@ sre.ClearspeakGermanParentheses.prototype.testSilParen010 = function() {
   var mathml = '<math><mrow><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup>' +
       '</mrow></math>';
-  var speech = 'négatif, 2 x, au carré';
+  var speech = 'negativ, 2 x, Quadrat';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -970,7 +970,7 @@ sre.ClearspeakGermanParentheses.prototype.testSilParen011 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2' +
       '</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'un-demi';
+  var speech = 'ein halb';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -982,7 +982,7 @@ sre.ClearspeakGermanParentheses.prototype.testSilParen012 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mn>3</mn><mn>4' +
       '</mn></mfrac><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'trois-quarts x';
+  var speech = 'drei viertel x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -995,7 +995,7 @@ sre.ClearspeakGermanParentheses.prototype.testSilParen013 = function() {
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mn>11</mn>' +
       '</mrow><mrow><mn>22</mn></mrow></mfrac></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = '11 sur 22';
+  var speech = '11 geteilt durch 22';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1008,7 +1008,7 @@ sre.ClearspeakGermanParentheses.prototype.testSilParen014 = function() {
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1' +
       '</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mn>4</mn>' +
       '</msup></mrow></math>';
-  var speech = 'un-demi, à la puissance 4';
+  var speech = 'ein halb, hoch 4';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1021,6 +1021,6 @@ sre.ClearspeakGermanParentheses.prototype.testSilParen015 = function() {
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mrow>' +
       '<mn>11</mn></mrow><mrow><mn>15</mn></mrow></mfrac></mrow><mo>)</mo>' +
       '</mrow></mrow><mn>2</mn></msup></mrow></math>';
-  var speech = '11 sur 15, au carré';
+  var speech = '11 geteilt durch 15, Quadrat';
   this.executeRuleTest(mathml, speech, preference);
 };

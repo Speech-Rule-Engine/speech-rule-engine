@@ -76,7 +76,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes003 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mn>4</mn></msup><mrow><mo>(' +
       '</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>';
-  var speech = '2 à la puissance 4;   3';
+  var speech = '2 hoch 4,   3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -88,7 +88,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes004 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mo>+' +
       '</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2  , parenthèse gauche, 3 plus 4, parenthèse droite';
+  var speech = '2  , Klammer auf, 3 plus 4, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -100,7 +100,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes005 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mo>+' +
       '</mo><mn>4</mn></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2  , crochet gauche, 3 plus 4, crochet droit';
+  var speech = '2  , eckige Klammer auf, 3 plus 4, eckige Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -125,7 +125,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes007 = function() {
   var mathml = '<math><mrow><mn>2</mn><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow><mn>2' +
       '</mn></msup></mrow></math>';
-  var speech = '2  , parenthèse gauche, 3 plus 4, parenthèse droite, au carré';
+  var speech = '2  , Klammer auf, 3 plus 4, Klammer zu, Quadrat';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -138,7 +138,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes008 = function() {
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mo>+</mo><mn>7' +
       '</mn></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>−' +
       '</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'parenthèse gauche, 2 plus 7, parenthèse droite,  , parenthèse gauche, 3 moins 6, parenthèse droite';
+  var speech = 'Klammer auf, 2 plus 7, Klammer zu,  , Klammer auf, 3 minus 6, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -151,7 +151,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes009 = function() {
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mn>2</mn><mo>+</mo><mn>7' +
       '</mn></mrow><mo>]</mo></mrow><mrow><mo>[</mo><mrow><mn>3</mn><mo>−' +
       '</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'crochet gauche, 2 plus 7, crochet droit,  , crochet gauche, 3 moins 6, crochet droit';
+  var speech = 'eckige Klammer auf, 2 plus 7, eckige Klammer zu,  , eckige Klammer auf, 3 minus 6, eckige Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -164,7 +164,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.untestImpTimes010 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mi>z' +
       '</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'XXXX';
+  var speech = 'XXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -176,7 +176,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes011 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mo>+' +
       '</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'x  , parenthèse gauche, y plus z, parenthèse droite';
+  var speech = 'x  , Klammer auf, y plus z, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -188,7 +188,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes012 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mi>y</mi><mo>+' +
       '</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2  , parenthèse gauche, y plus 1, parenthèse droite';
+  var speech = '2  , Klammer auf, y plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -200,7 +200,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes013 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>−</mo>' +
       '<mn>1</mn><mo stretchy="false">)</mo><mi>x</mi></mrow></math>';
-  var speech = 'parenthèse gauche, 2 moins 1, parenthèse droite,   x';
+  var speech = 'Klammer auf, 2 minus 1, Klammer zu,   x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -213,7 +213,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes014 = function() {
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><mrow><mo>(' +
       '</mo><mrow><mn>3</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'p sub 1,  , parenthèse gauche, 3 plus 7, parenthèse droite';
+  var speech = 'p Index 1,  , Klammer auf, 3 plus 7, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -226,7 +226,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes015 = function() {
   var mathml = '<math><mrow><msubsup><mi>p</mi><mn>1</mn><mrow><msub><mi>a' +
       '</mi><mn>1</mn></msub></mrow></msubsup><msubsup><mi>p</mi><mn>2</mn>' +
       '<mrow><msub><mi>a</mi><mn>2</mn></msub></mrow></msubsup></mrow></math>';
-  var speech = 'p sub 1, à la puissance, a sub 1; p sub 2, à la puissance, a sub 2';
+  var speech = 'p Index 1, hoch, a Index 1, p Index 2, hoch, a Index 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -241,7 +241,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes016 = function() {
       '<mn>4</mn></mrow></msup><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>−</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo>' +
       '<mn>4</mn></mrow></msup></mrow></math>';
-  var speech = 'parenthèse gauche, x plus y, parenthèse droite, à la puissance négatif 4;  , parenthèse gauche, x moins y, parenthèse droite, à la puissance négatif 4';
+  var speech = 'Klammer auf, x plus y, Klammer zu, hoch negativ 4,  , Klammer auf, x minus y, Klammer zu, hoch negativ 4';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -254,7 +254,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes017 = function() {
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><mn>4</mn><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow>' +
       '</mrow></msup></mrow></math>';
-  var speech = '2 à la puissance 4  , parenthèse gauche, x plus y, parenthèse droite';
+  var speech = '2 hoch 4  , Klammer auf, x plus y, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -277,7 +277,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes019 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><msup><mi>x</mi><mn>2</mn></msup><msup><mi>y' +
       '</mi><mn>3</mn></msup></mrow></math>';
-  var speech = 'x au carré, y au cube';
+  var speech = 'x Quadrat, y Kubik';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -290,7 +290,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes020 = function() {
   var mathml = '<math><mrow><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>1' +
       '</mn></mrow></msup><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>2' +
       '</mn></mrow></msup></mrow></math>';
-  var speech = 'x à la puissance y plus 1; x à la puissance y plus 2';
+  var speech = 'x hoch y plus 1, x hoch y plus 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -303,7 +303,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes021 = function() {
   var mathml = '<math><mrow><msqrt><mi>a</mi></msqrt><msqrt><mi>b</mi>' +
       '</msqrt><mo>=</mo><msqrt><mrow><mi>a</mi><mi>b</mi></mrow></msqrt>' +
       '</mrow></math>';
-  var speech = 'la racine carrée de a, la racine carrée de b, égale la racine carrée de a b';
+  var speech = 'Quadratwurzel aus a, Quadratwurzel aus b, ist gleich Quadratwurzel aus a b';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -316,7 +316,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes022 = function() {
   var mathml = '<math><mrow><msqrt><mn>3</mn></msqrt><msqrt><mrow><mn>10' +
       '</mn></mrow></msqrt><mo>=</mo><msqrt><mrow><mn>30</mn></mrow>' +
       '</msqrt></mrow></math>';
-  var speech = 'la racine carrée de 3, la racine carrée de 10, égale la racine carrée de 30';
+  var speech = 'Quadratwurzel aus 3, Quadratwurzel aus 10, ist gleich Quadratwurzel aus 30';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -327,7 +327,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes022 = function() {
 sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes023 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mn>2</mn><msqrt><mn>3</mn></msqrt></mrow></math>';
-  var speech = '2 la racine carrée de 3';
+  var speech = '2 Quadratwurzel aus 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -339,7 +339,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes024 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mn>1</mn><mo>+</mo><mn>2</mn><msqrt><mn>3</mn>' +
       '</msqrt></mrow></math>';
-  var speech = '1 plus 2 la racine carrée de 3';
+  var speech = '1 plus 2 Quadratwurzel aus 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -353,7 +353,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes025 = function() {
       '<mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn>' +
       '</msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'f de x, égale x au carré  , parenthèse gauche, x plus 1, parenthèse droite';
+  var speech = 'f von x, ist gleich x Quadrat  , Klammer auf, x plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -367,7 +367,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes026 = function() {
       '<mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn>' +
       '</msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'f fois x, égale x au carré  , parenthèse gauche, x plus 1, parenthèse droite';
+  var speech = 'f mal x, ist gleich x Quadrat  , Klammer auf, x plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -379,7 +379,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes027 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>sin</mi><mi>x</mi><mi>cos</mi><mi>y</mi>' +
       '<mo>+</mo><mi>cos</mi><mi>x</mi><mi>sin</mi><mi>y</mi></mrow></math>';
-  var speech = 'sinus x cosinus y, plus, cosinus x sinus y';
+  var speech = 'Sinus x Kosinus y, plus, Kosinus x Sinus y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -393,7 +393,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes027a = function() {
       '<mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mi>cos</mi><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'sinus de, parenthèse gauche, x plus y, parenthèse droite, cosinus de, parenthèse gauche, x plus y, parenthèse droite';
+  var speech = 'der Sinus von, Klammer auf, x plus y, Klammer zu, der Kosinus von, Klammer auf, x plus y, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -405,7 +405,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes028 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10' +
       '</mn></mrow></msub><mi>x</mi><mi>y</mi></mrow></math>';
-  var speech = 'log base 10 de, x y';
+  var speech = 'der Logarithmus Basis 10 von, x y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -418,7 +418,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes029 = function() {
   var mathml = '<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>log</mi>' +
       '<mi>x</mi><mi>log</mi><mi>y</mi></mrow></math>';
-  var speech = 'log de, parenthèse gauche, x plus y, parenthèse droite, égale, log x log y';
+  var speech = 'der Logarithmus von, Klammer auf, x plus y, Klammer zu, ist gleich, Logarithmus x Logarithmus y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -434,7 +434,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes030 = function() {
       '<mo>(</mo><mrow><mtable><mtr><mtd><mn>7</mn></mtd><mtd><mn>4</mn>' +
       '</mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la matrice de dimension 2 par 2. rangée 1: 1, 3 rangée 2: 5, 2.   la matrice de dimension 2 par 2. rangée 1: 7, 4 rangée 2: 0, 1';
+  var speech = 'die 2 mal 2 Matrize. Zeile 1: 1, 3 Zeile 2: 5, 2.   die 2 mal 2 Matrize. Zeile 1: 7, 4 Zeile 2: 0, 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -448,7 +448,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes031 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2  , parenthèse gauche, 3  , parenthèse gauche, parenthèse gauche, 4 plus 5, parenthèse droite, plus 6, parenthèse droite, parenthèse droite';
+  var speech = '2  , Klammer auf, 3  , Klammer auf, Klammer auf, 4 plus 5, Klammer zu, plus 6, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -462,7 +462,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes032 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2  , parenthèse gauche, 3  , deuxième parenthèse gauche, troisième parenthèse gauche, 4 plus 5, troisième parenthèse droite, plus 6, deuxième parenthèse droite, parenthèse droite';
+  var speech = '2  , Klammer auf, 3  , zweite Klammer auf, dritte Klammer auf, 4 plus 5, dritte Klammer zu, plus 6, zweite Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -476,7 +476,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes033 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2  , crochet gauche, 3  , parenthèse gauche, parenthèse gauche, 4 plus 5, parenthèse droite, plus 6, parenthèse droite, crochet droit';
+  var speech = '2  , eckige Klammer auf, 3  , Klammer auf, Klammer auf, 4 plus 5, Klammer zu, plus 6, Klammer zu, eckige Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -490,7 +490,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes034 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2  , crochet gauche, 3  , parenthèse gauche, deuxième parenthèse gauche, 4 plus 5, deuxième parenthèse droite, plus 6, parenthèse droite, crochet droit';
+  var speech = '2  , eckige Klammer auf, 3  , Klammer auf, zweite Klammer auf, 4 plus 5, zweite Klammer zu, plus 6, Klammer zu, eckige Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -502,7 +502,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes035 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>|</mo><mi>x</mi><mo>|</mo>' +
       '</mrow></mrow></math>';
-  var speech = '2  , la valeur absolue de x';
+  var speech = '2  , der Betrag von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -514,7 +514,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes036 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow>' +
       '<mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow></mrow></math>';
-  var speech = 'la valeur absolue de x,  , la valeur absolue de y';
+  var speech = 'der Betrag von x,  , der Betrag von y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -527,7 +527,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes037 = function() {
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mrow><mi>y</mi><mo>−' +
       '</mo><mn>1</mn></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = 'la valeur absolue de x plus 1,  , la valeur absolue de y moins 1';
+  var speech = 'der Betrag von x plus 1,  , der Betrag von y minus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -540,7 +540,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes037a = function() {
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mrow><mi>y</mi><mo>−' +
       '</mo><mn>1</mn></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = 'la valeur absolue de x plus 1, fin de valeur absolue,  , la valeur absolue de y moins 1, fin de valeur absolue';
+  var speech = 'der Betrag von x plus 1, Ende Betrag,  , der Betrag von y minus 1, Ende Betrag';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -553,7 +553,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes038 = function() {
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo>' +
       '</mrow><mo>−</mo><mn>1</mn></mrow></math>';
-  var speech = 'la valeur absolue de x plus 1,  , la valeur absolue de y, moins 1';
+  var speech = 'der Betrag von x plus 1,  , der Betrag von y, minus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -566,7 +566,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes0381 = function() {
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo>' +
       '</mrow><mo>−</mo><mn>1</mn></mrow></math>';
-  var speech = 'la valeur absolue de x plus 1, fin de valeur absolue,  , la valeur absolue de y, fin de valeur absolue, moins 1';
+  var speech = 'der Betrag von x plus 1, Ende Betrag,  , der Betrag von y, Ende Betrag, minus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -602,7 +602,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes041 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><msup><mn>2</mn><mn>4</mn></msup><mrow><mo>(' +
       '</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>';
-  var speech = '2 à la puissance 4;   3';
+  var speech = '2 hoch 4,   3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -614,7 +614,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes042 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mo>+' +
       '</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2  , parenthèse gauche, 3 plus 4, parenthèse droite';
+  var speech = '2  , Klammer auf, 3 plus 4, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -626,7 +626,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes043 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mo>+' +
       '</mo><mn>4</mn></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2  , crochet gauche, 3 plus 4, crochet droit';
+  var speech = '2  , eckige Klammer auf, 3 plus 4, eckige Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -651,7 +651,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes045 = function() {
   var mathml = '<math><mrow><mn>2</mn><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow><mn>2' +
       '</mn></msup></mrow></math>';
-  var speech = '2  , parenthèse gauche, 3 plus 4, parenthèse droite, au carré';
+  var speech = '2  , Klammer auf, 3 plus 4, Klammer zu, Quadrat';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -664,7 +664,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes046 = function() {
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mo>+</mo><mn>7' +
       '</mn></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>−' +
       '</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'parenthèse gauche, 2 plus 7, parenthèse droite,  , parenthèse gauche, 3 moins 6, parenthèse droite';
+  var speech = 'Klammer auf, 2 plus 7, Klammer zu,  , Klammer auf, 3 minus 6, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -677,7 +677,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes047 = function() {
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mn>2</mn><mo>+</mo><mn>7' +
       '</mn></mrow><mo>]</mo></mrow><mrow><mo>[</mo><mrow><mn>3</mn><mo>−' +
       '</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'crochet gauche, 2 plus 7, crochet droit,  , crochet gauche, 3 moins 6, crochet droit';
+  var speech = 'eckige Klammer auf, 2 plus 7, eckige Klammer zu,  , eckige Klammer auf, 3 minus 6, eckige Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -690,7 +690,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.untestImpTimes048 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mi>z' +
       '</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'XXXX';
+  var speech = 'XXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -702,7 +702,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes049 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mo>+' +
       '</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'x  , parenthèse gauche, y plus z, parenthèse droite';
+  var speech = 'x  , Klammer auf, y plus z, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -714,7 +714,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes050 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mi>y</mi><mo>+' +
       '</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2  , parenthèse gauche, y plus 1, parenthèse droite';
+  var speech = '2  , Klammer auf, y plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -726,7 +726,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes051 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>−</mo>' +
       '<mn>1</mn><mo stretchy="false">)</mo><mi>x</mi></mrow></math>';
-  var speech = 'parenthèse gauche, 2 moins 1, parenthèse droite,   x';
+  var speech = 'Klammer auf, 2 minus 1, Klammer zu,   x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -739,7 +739,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes052 = function() {
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><mrow><mo>(' +
       '</mo><mrow><mn>3</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'p sub 1,  , parenthèse gauche, 3 plus 7, parenthèse droite';
+  var speech = 'p Index 1,  , Klammer auf, 3 plus 7, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -752,7 +752,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes053 = function() {
   var mathml = '<math><mrow><msubsup><mi>p</mi><mn>1</mn><mrow><msub><mi>a' +
       '</mi><mn>1</mn></msub></mrow></msubsup><msubsup><mi>p</mi><mn>2</mn>' +
       '<mrow><msub><mi>a</mi><mn>2</mn></msub></mrow></msubsup></mrow></math>';
-  var speech = 'p sub 1, à la puissance, a sub 1;  , p sub 2, à la puissance, a sub 2';
+  var speech = 'p Index 1, hoch, a Index 1,  , p Index 2, hoch, a Index 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -767,7 +767,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes054 = function() {
       '<mn>4</mn></mrow></msup><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>−</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo>' +
       '<mn>4</mn></mrow></msup></mrow></math>';
-  var speech = 'parenthèse gauche, x plus y, parenthèse droite, à la puissance négatif 4;  , parenthèse gauche, x moins y, parenthèse droite, à la puissance négatif 4';
+  var speech = 'Klammer auf, x plus y, Klammer zu, hoch negativ 4,  , Klammer auf, x minus y, Klammer zu, hoch negativ 4';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -780,7 +780,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes055 = function() {
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><mn>4</mn><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow>' +
       '</mrow></msup></mrow></math>';
-  var speech = '2 à la puissance 4  , parenthèse gauche, x plus y, parenthèse droite';
+  var speech = '2 hoch 4  , Klammer auf, x plus y, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -803,7 +803,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes057 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><msup><mi>x</mi><mn>2</mn></msup><msup><mi>y' +
       '</mi><mn>3</mn></msup></mrow></math>';
-  var speech = 'x au carré   y au cube';
+  var speech = 'x Quadrat   y Kubik';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -816,7 +816,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes058 = function() {
   var mathml = '<math><mrow><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>1' +
       '</mn></mrow></msup><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>2' +
       '</mn></mrow></msup></mrow></math>';
-  var speech = 'x à la puissance y plus 1;   x à la puissance y plus 2';
+  var speech = 'x hoch y plus 1,   x hoch y plus 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -829,7 +829,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes059 = function() {
   var mathml = '<math><mrow><msqrt><mi>a</mi></msqrt><msqrt><mi>b</mi>' +
       '</msqrt><mo>=</mo><msqrt><mrow><mi>a</mi><mi>b</mi></mrow></msqrt>' +
       '</mrow></math>';
-  var speech = 'la racine carrée de a,   la racine carrée de b, égale la racine carrée de a   b';
+  var speech = 'Quadratwurzel aus a,   Quadratwurzel aus b, ist gleich Quadratwurzel aus a   b';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -842,7 +842,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes060 = function() {
   var mathml = '<math><mrow><msqrt><mn>3</mn></msqrt><msqrt><mrow><mn>10' +
       '</mn></mrow></msqrt><mo>=</mo><msqrt><mrow><mn>30</mn></mrow>' +
       '</msqrt></mrow></math>';
-  var speech = 'la racine carrée de 3,   la racine carrée de 10, égale la racine carrée de 30';
+  var speech = 'Quadratwurzel aus 3,   Quadratwurzel aus 10, ist gleich Quadratwurzel aus 30';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -853,7 +853,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes060 = function() {
 sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes061 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mn>2</mn><msqrt><mn>3</mn></msqrt></mrow></math>';
-  var speech = '2   la racine carrée de 3';
+  var speech = '2   Quadratwurzel aus 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -865,7 +865,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes062 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mn>1</mn><mo>+</mo><mn>2</mn><msqrt><mn>3</mn>' +
       '</msqrt></mrow></math>';
-  var speech = '1 plus 2   la racine carrée de 3';
+  var speech = '1 plus 2   Quadratwurzel aus 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -879,7 +879,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes063 = function() {
       '<mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn>' +
       '</msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'f de x, égale x au carré  , parenthèse gauche, x plus 1, parenthèse droite';
+  var speech = 'f von x, ist gleich x Quadrat  , Klammer auf, x plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -893,7 +893,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes064 = function() {
       '<mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn>' +
       '</msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'f fois x, égale x au carré  , parenthèse gauche, x plus 1, parenthèse droite';
+  var speech = 'f mal x, ist gleich x Quadrat  , Klammer auf, x plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -905,7 +905,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes065 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mi>sin</mi><mi>x</mi><mi>cos</mi><mi>y</mi>' +
       '<mo>+</mo><mi>cos</mi><mi>x</mi><mi>sin</mi><mi>y</mi></mrow></math>';
-  var speech = 'sinus x,   cosinus y plus cosinus x,   sinus y';
+  var speech = 'Sinus x,   Kosinus y plus Kosinus x,   Sinus y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -919,7 +919,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes065a = function() {
       '<mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mi>cos</mi><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'sinus de, parenthèse gauche, x plus y, parenthèse droite,  , cosinus de, parenthèse gauche, x plus y, parenthèse droite';
+  var speech = 'der Sinus von, Klammer auf, x plus y, Klammer zu,  , der Kosinus von, Klammer auf, x plus y, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -931,7 +931,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes066 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10' +
       '</mn></mrow></msub><mi>x</mi><mi>y</mi></mrow></math>';
-  var speech = 'log base 10 de, x   y';
+  var speech = 'der Logarithmus Basis 10 von, x   y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -944,7 +944,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes067 = function() {
   var mathml = '<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>log</mi>' +
       '<mi>x</mi><mi>log</mi><mi>y</mi></mrow></math>';
-  var speech = 'log de, parenthèse gauche, x plus y, parenthèse droite, égale log x,   log y';
+  var speech = 'der Logarithmus von, Klammer auf, x plus y, Klammer zu, ist gleich Logarithmus x,   Logarithmus y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -960,7 +960,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes068 = function() {
       '<mo>(</mo><mrow><mtable><mtr><mtd><mn>7</mn></mtd><mtd><mn>4</mn>' +
       '</mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la matrice de dimension 2 par 2. rangée 1: 1, 3 rangée 2: 5, 2.   la matrice de dimension 2 par 2. rangée 1: 7, 4 rangée 2: 0, 1';
+  var speech = 'die 2 mal 2 Matrize. Zeile 1: 1, 3 Zeile 2: 5, 2.   die 2 mal 2 Matrize. Zeile 1: 7, 4 Zeile 2: 0, 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -974,7 +974,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes069 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2  , parenthèse gauche, 3  , parenthèse gauche, parenthèse gauche, 4 plus 5, parenthèse droite, plus 6, parenthèse droite, parenthèse droite';
+  var speech = '2  , Klammer auf, 3  , Klammer auf, Klammer auf, 4 plus 5, Klammer zu, plus 6, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -988,7 +988,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes070 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2  , parenthèse gauche, 3  , deuxième parenthèse gauche, troisième parenthèse gauche, 4 plus 5, troisième parenthèse droite, plus 6, deuxième parenthèse droite, parenthèse droite';
+  var speech = '2  , Klammer auf, 3  , zweite Klammer auf, dritte Klammer auf, 4 plus 5, dritte Klammer zu, plus 6, zweite Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1002,7 +1002,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes070a = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2  , crochet gauche, 3  , parenthèse gauche, parenthèse gauche, 4 plus 5, parenthèse droite, plus 6, parenthèse droite, crochet droit';
+  var speech = '2  , eckige Klammer auf, 3  , Klammer auf, Klammer auf, 4 plus 5, Klammer zu, plus 6, Klammer zu, eckige Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1016,7 +1016,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes071 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2  , crochet gauche, 3  , parenthèse gauche, deuxième parenthèse gauche, 4 plus 5, deuxième parenthèse droite, plus 6, parenthèse droite, crochet droit';
+  var speech = '2  , eckige Klammer auf, 3  , Klammer auf, zweite Klammer auf, 4 plus 5, zweite Klammer zu, plus 6, Klammer zu, eckige Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1028,7 +1028,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes072 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>|</mo><mi>x</mi><mo>|</mo>' +
       '</mrow></mrow></math>';
-  var speech = '2  , la valeur absolue de x';
+  var speech = '2  , der Betrag von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1040,7 +1040,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes073 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow>' +
       '<mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow></mrow></math>';
-  var speech = 'la valeur absolue de x,  , la valeur absolue de y';
+  var speech = 'der Betrag von x,  , der Betrag von y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1053,7 +1053,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes074 = function() {
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mrow><mi>y</mi><mo>−' +
       '</mo><mn>1</mn></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = 'la valeur absolue de x plus 1,  , la valeur absolue de y moins 1';
+  var speech = 'der Betrag von x plus 1,  , der Betrag von y minus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1066,7 +1066,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes074a = function() {
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mrow><mi>y</mi><mo>−' +
       '</mo><mn>1</mn></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = 'la valeur absolue de x plus 1, fin de valeur absolue,  , la valeur absolue de y moins 1, fin de valeur absolue';
+  var speech = 'der Betrag von x plus 1, Ende Betrag,  , der Betrag von y minus 1, Ende Betrag';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1079,7 +1079,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes075 = function() {
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo>' +
       '</mrow><mo>−</mo><mn>1</mn></mrow></math>';
-  var speech = 'la valeur absolue de x plus 1,  , la valeur absolue de y, moins 1';
+  var speech = 'der Betrag von x plus 1,  , der Betrag von y, minus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1092,7 +1092,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes076 = function() {
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo>' +
       '</mrow><mo>−</mo><mn>1</mn></mrow></math>';
-  var speech = 'la valeur absolue de x plus 1, fin de valeur absolue,  , la valeur absolue de y, fin de valeur absolue, moins 1';
+  var speech = 'der Betrag von x plus 1, Ende Betrag,  , der Betrag von y, Ende Betrag, minus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1104,7 +1104,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes077 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mn>3</mn><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = '2, parenthèse gauche, 3, parenthèse droite';
+  var speech = '2, Klammer auf, 3, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1116,7 +1116,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes078 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mn>3</mn><mo>]</mo>' +
       '</mrow></mrow></math>';
-  var speech = '2, crochet gauche, 3, crochet droit';
+  var speech = '2, eckige Klammer auf, 3, eckige Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1128,7 +1128,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes079 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><msup><mn>2</mn><mn>4</mn></msup><mrow><mo>(' +
       '</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>';
-  var speech = '2 à la puissance 4; parenthèse gauche, 3, parenthèse droite';
+  var speech = '2 hoch 4, Klammer auf, 3, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1140,7 +1140,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes080 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mo>+' +
       '</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2, parenthèse gauche, 3 plus 4, parenthèse droite';
+  var speech = '2, Klammer auf, 3 plus 4, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1152,7 +1152,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes081 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mo>+' +
       '</mo><mn>4</mn></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2, crochet gauche, 3 plus 4, crochet droit';
+  var speech = '2, eckige Klammer auf, 3 plus 4, eckige Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1164,7 +1164,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes082 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow>' +
       '<mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow></math>';
-  var speech = 'parenthèse gauche, 3, parenthèse droite, parenthèse gauche, 2, parenthèse droite';
+  var speech = 'Klammer auf, 3, Klammer zu, Klammer auf, 2, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1177,7 +1177,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes083 = function() {
   var mathml = '<math><mrow><mn>2</mn><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow><mn>2' +
       '</mn></msup></mrow></math>';
-  var speech = '2, parenthèse gauche, 3 plus 4, parenthèse droite, au carré';
+  var speech = '2, Klammer auf, 3 plus 4, Klammer zu, Quadrat';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1190,7 +1190,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes084 = function() {
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mo>+</mo><mn>7' +
       '</mn></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>−' +
       '</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'parenthèse gauche, 2 plus 7, parenthèse droite, parenthèse gauche, 3 moins 6, parenthèse droite';
+  var speech = 'Klammer auf, 2 plus 7, Klammer zu, Klammer auf, 3 minus 6, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1203,7 +1203,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes085 = function() {
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mn>2</mn><mo>+</mo><mn>7' +
       '</mn></mrow><mo>]</mo></mrow><mrow><mo>[</mo><mrow><mn>3</mn><mo>−' +
       '</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'crochet gauche, 2 plus 7, crochet droit, crochet gauche, 3 moins 6, crochet droit';
+  var speech = 'eckige Klammer auf, 2 plus 7, eckige Klammer zu, eckige Klammer auf, 3 minus 6, eckige Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1216,7 +1216,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.untestImpTimes086 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mi>z' +
       '</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'XXXX';
+  var speech = 'XXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1228,7 +1228,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes087 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mo>+' +
       '</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'x, parenthèse gauche, y plus z, parenthèse droite';
+  var speech = 'x, Klammer auf, y plus z, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1240,7 +1240,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes088 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mi>y</mi><mo>+' +
       '</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2, parenthèse gauche, y plus 1, parenthèse droite';
+  var speech = '2, Klammer auf, y plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1252,7 +1252,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes089 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>−</mo>' +
       '<mn>1</mn><mo stretchy="false">)</mo><mi>x</mi></mrow></math>';
-  var speech = 'parenthèse gauche, 2 moins 1, parenthèse droite, x';
+  var speech = 'Klammer auf, 2 minus 1, Klammer zu, x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1265,7 +1265,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes090 = function() {
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><mrow><mo>(' +
       '</mo><mrow><mn>3</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'p sub 1, parenthèse gauche, 3 plus 7, parenthèse droite';
+  var speech = 'p Index 1, Klammer auf, 3 plus 7, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1278,7 +1278,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes091 = function() {
   var mathml = '<math><mrow><msubsup><mi>p</mi><mn>1</mn><mrow><msub><mi>a' +
       '</mi><mn>1</mn></msub></mrow></msubsup><msubsup><mi>p</mi><mn>2</mn>' +
       '<mrow><msub><mi>a</mi><mn>2</mn></msub></mrow></msubsup></mrow></math>';
-  var speech = 'p sub 1, à la puissance, a sub 1; p sub 2, à la puissance, a sub 2';
+  var speech = 'p Index 1, hoch, a Index 1, p Index 2, hoch, a Index 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1293,7 +1293,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes092 = function() {
       '<mn>4</mn></mrow></msup><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>−</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo>' +
       '<mn>4</mn></mrow></msup></mrow></math>';
-  var speech = 'parenthèse gauche, x plus y, parenthèse droite, à la puissance négatif 4; parenthèse gauche, x moins y, parenthèse droite, à la puissance négatif 4';
+  var speech = 'Klammer auf, x plus y, Klammer zu, hoch negativ 4, Klammer auf, x minus y, Klammer zu, hoch negativ 4';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1306,7 +1306,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes093 = function() {
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><mn>4</mn><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow>' +
       '</mrow></msup></mrow></math>';
-  var speech = '2 à la puissance 4, parenthèse gauche, x plus y, parenthèse droite';
+  var speech = '2 hoch 4, Klammer auf, x plus y, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1329,7 +1329,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes095 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><msup><mi>x</mi><mn>2</mn></msup><msup><mi>y' +
       '</mi><mn>3</mn></msup></mrow></math>';
-  var speech = 'x au carré y au cube';
+  var speech = 'x Quadrat y Kubik';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1342,7 +1342,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes096 = function() {
   var mathml = '<math><mrow><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>1' +
       '</mn></mrow></msup><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>2' +
       '</mn></mrow></msup></mrow></math>';
-  var speech = 'x à la puissance y plus 1; x à la puissance y plus 2';
+  var speech = 'x hoch y plus 1, x hoch y plus 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1355,7 +1355,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes097 = function() {
   var mathml = '<math><mrow><msqrt><mi>a</mi></msqrt><msqrt><mi>b</mi>' +
       '</msqrt><mo>=</mo><msqrt><mrow><mi>a</mi><mi>b</mi></mrow></msqrt>' +
       '</mrow></math>';
-  var speech = 'la racine carrée de a, la racine carrée de b, égale la racine carrée de a b';
+  var speech = 'Quadratwurzel aus a, Quadratwurzel aus b, ist gleich Quadratwurzel aus a b';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1368,7 +1368,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes098 = function() {
   var mathml = '<math><mrow><msqrt><mn>3</mn></msqrt><msqrt><mrow><mn>10' +
       '</mn></mrow></msqrt><mo>=</mo><msqrt><mrow><mn>30</mn></mrow>' +
       '</msqrt></mrow></math>';
-  var speech = 'la racine carrée de 3, la racine carrée de 10, égale la racine carrée de 30';
+  var speech = 'Quadratwurzel aus 3, Quadratwurzel aus 10, ist gleich Quadratwurzel aus 30';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1379,7 +1379,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes098 = function() {
 sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes099 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mn>2</mn><msqrt><mn>3</mn></msqrt></mrow></math>';
-  var speech = '2 la racine carrée de 3';
+  var speech = '2 Quadratwurzel aus 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1391,7 +1391,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes100 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mn>1</mn><mo>+</mo><mn>2</mn><msqrt><mn>3</mn>' +
       '</msqrt></mrow></math>';
-  var speech = '1 plus 2 la racine carrée de 3';
+  var speech = '1 plus 2 Quadratwurzel aus 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1405,7 +1405,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes101 = function() {
       '<mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn>' +
       '</msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'f de x, égale x au carré, parenthèse gauche, x plus 1, parenthèse droite';
+  var speech = 'f von x, ist gleich x Quadrat, Klammer auf, x plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1420,7 +1420,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.untestImpTimes102 = function() {
       '<mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn>' +
       '</msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'XXXX';
+  var speech = 'XXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1432,7 +1432,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes103 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mi>sin</mi><mi>x</mi><mi>cos</mi><mi>y</mi>' +
       '<mo>+</mo><mi>cos</mi><mi>x</mi><mi>sin</mi><mi>y</mi></mrow></math>';
-  var speech = 'sinus x cosinus y, plus, cosinus x sinus y';
+  var speech = 'Sinus x Kosinus y, plus, Kosinus x Sinus y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1444,7 +1444,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes104 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10' +
       '</mn></mrow></msub><mi>x</mi><mi>y</mi></mrow></math>';
-  var speech = 'log base 10 de, x y';
+  var speech = 'der Logarithmus Basis 10 von, x y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1457,7 +1457,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes105 = function() {
   var mathml = '<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>log</mi>' +
       '<mi>x</mi><mi>log</mi><mi>y</mi></mrow></math>';
-  var speech = 'log de, parenthèse gauche, x plus y, parenthèse droite, égale, log x log y';
+  var speech = 'der Logarithmus von, Klammer auf, x plus y, Klammer zu, ist gleich, Logarithmus x Logarithmus y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1473,7 +1473,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes106 = function() {
       '<mo>(</mo><mrow><mtable><mtr><mtd><mn>7</mn></mtd><mtd><mn>4</mn>' +
       '</mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la matrice de dimension 2 par 2. rangée 1: 1, 3 rangée 2: 5, 2. la matrice de dimension 2 par 2. rangée 1: 7, 4 rangée 2: 0, 1';
+  var speech = 'die 2 mal 2 Matrize. Zeile 1: 1, 3 Zeile 2: 5, 2. die 2 mal 2 Matrize. Zeile 1: 7, 4 Zeile 2: 0, 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1487,7 +1487,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes107 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2, parenthèse gauche, 3, parenthèse gauche, parenthèse gauche, 4 plus 5, parenthèse droite, plus 6, parenthèse droite, parenthèse droite';
+  var speech = '2, Klammer auf, 3, Klammer auf, Klammer auf, 4 plus 5, Klammer zu, plus 6, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1501,7 +1501,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes108 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2, parenthèse gauche, 3, deuxième parenthèse gauche, troisième parenthèse gauche, 4 plus 5, troisième parenthèse droite, plus 6, deuxième parenthèse droite, parenthèse droite';
+  var speech = '2, Klammer auf, 3, zweite Klammer auf, dritte Klammer auf, 4 plus 5, dritte Klammer zu, plus 6, zweite Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1515,7 +1515,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes109 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2, crochet gauche, 3, parenthèse gauche, parenthèse gauche, 4 plus 5, parenthèse droite, plus 6, parenthèse droite, crochet droit';
+  var speech = '2, eckige Klammer auf, 3, Klammer auf, Klammer auf, 4 plus 5, Klammer zu, plus 6, Klammer zu, eckige Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1529,7 +1529,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes110 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2, crochet gauche, 3, parenthèse gauche, deuxième parenthèse gauche, 4 plus 5, deuxième parenthèse droite, plus 6, parenthèse droite, crochet droit';
+  var speech = '2, eckige Klammer auf, 3, Klammer auf, zweite Klammer auf, 4 plus 5, zweite Klammer zu, plus 6, Klammer zu, eckige Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1541,7 +1541,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes111 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>|</mo><mi>x</mi><mo>|</mo>' +
       '</mrow></mrow></math>';
-  var speech = '2, la valeur absolue de x';
+  var speech = '2, der Betrag von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1553,7 +1553,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes112 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow>' +
       '<mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow></mrow></math>';
-  var speech = 'la valeur absolue de x, la valeur absolue de y';
+  var speech = 'der Betrag von x, der Betrag von y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1566,7 +1566,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes113 = function() {
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mrow><mi>y</mi><mo>−' +
       '</mo><mn>1</mn></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = 'la valeur absolue de x plus 1, la valeur absolue de y moins 1';
+  var speech = 'der Betrag von x plus 1, der Betrag von y minus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1579,7 +1579,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes114 = function() {
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo>' +
       '</mrow><mo>−</mo><mn>1</mn></mrow></math>';
-  var speech = 'la valeur absolue de x plus 1, la valeur absolue de y, moins 1';
+  var speech = 'der Betrag von x plus 1, der Betrag von y, minus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1596,7 +1596,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimesSilPar001 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mn>3</mn><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = '2, parenthèse gauche, 3, parenthèse droite';
+  var speech = '2, Klammer auf, 3, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1608,7 +1608,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimesSilPar002 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mn>3</mn><mo>]</mo>' +
       '</mrow></mrow></math>';
-  var speech = '2, crochet gauche, 3, crochet droit';
+  var speech = '2, eckige Klammer auf, 3, eckige Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1620,7 +1620,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimesSilPar003 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><msup><mn>2</mn><mn>4</mn></msup><mrow><mo>(' +
       '</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>';
-  var speech = '2 à la puissance 4; parenthèse gauche, 3, parenthèse droite';
+  var speech = '2 hoch 4, Klammer auf, 3, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1632,7 +1632,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimesSilPar004 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mo>+' +
       '</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2, parenthèse gauche, 3 plus 4, parenthèse droite';
+  var speech = '2, Klammer auf, 3 plus 4, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1644,7 +1644,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimesSilPar005 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mo>+' +
       '</mo><mn>4</mn></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2, crochet gauche, 3 plus 4, crochet droit';
+  var speech = '2, eckige Klammer auf, 3 plus 4, eckige Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1656,7 +1656,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimesSilPar006 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow>' +
       '<mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow></math>';
-  var speech = 'parenthèse gauche, 3, parenthèse droite, parenthèse gauche, 2, parenthèse droite';
+  var speech = 'Klammer auf, 3, Klammer zu, Klammer auf, 2, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1669,7 +1669,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimesSilPar007 = function() {
   var mathml = '<math><mrow><mn>2</mn><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow><mn>2' +
       '</mn></msup></mrow></math>';
-  var speech = '2, parenthèse gauche, 3 plus 4, parenthèse droite, au carré';
+  var speech = '2, Klammer auf, 3 plus 4, Klammer zu, Quadrat';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1682,7 +1682,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimesSilPar008 = function() {
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mo>+</mo><mn>7' +
       '</mn></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>−' +
       '</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'parenthèse gauche, 2 plus 7, parenthèse droite, parenthèse gauche, 3 moins 6, parenthèse droite';
+  var speech = 'Klammer auf, 2 plus 7, Klammer zu, Klammer auf, 3 minus 6, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1695,7 +1695,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimesSilPar009 = function() {
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mn>2</mn><mo>+</mo><mn>7' +
       '</mn></mrow><mo>]</mo></mrow><mrow><mo>[</mo><mrow><mn>3</mn><mo>−' +
       '</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'crochet gauche, 2 plus 7, crochet droit, crochet gauche, 3 moins 6, crochet droit';
+  var speech = 'eckige Klammer auf, 2 plus 7, eckige Klammer zu, eckige Klammer auf, 3 minus 6, eckige Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1708,7 +1708,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.untestImpTimesSilPar010 = function() 
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mi>z' +
       '</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'XXXX';
+  var speech = 'XXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1720,7 +1720,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimesSilPar011 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mo>+' +
       '</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'x, parenthèse gauche, y plus z, parenthèse droite';
+  var speech = 'x, Klammer auf, y plus z, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1732,7 +1732,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimesSilPar012 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mi>y</mi><mo>+' +
       '</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2, parenthèse gauche, y plus 1, parenthèse droite';
+  var speech = '2, Klammer auf, y plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1744,7 +1744,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimesSilPar013 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>−</mo>' +
       '<mn>1</mn><mo stretchy="false">)</mo><mi>x</mi></mrow></math>';
-  var speech = 'parenthèse gauche, 2 moins 1, parenthèse droite, x';
+  var speech = 'Klammer auf, 2 minus 1, Klammer zu, x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1757,7 +1757,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimesSilPar014 = function() {
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><mrow><mo>(' +
       '</mo><mrow><mn>3</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'p sub 1, parenthèse gauche, 3 plus 7, parenthèse droite';
+  var speech = 'p Index 1, Klammer auf, 3 plus 7, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1772,7 +1772,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimesSilPar015 = function() {
       '<mn>4</mn></mrow></msup><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>−</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo>' +
       '<mn>4</mn></mrow></msup></mrow></math>';
-  var speech = 'parenthèse gauche, x plus y, parenthèse droite, à la puissance négatif 4; parenthèse gauche, x moins y, parenthèse droite, à la puissance négatif 4';
+  var speech = 'Klammer auf, x plus y, Klammer zu, hoch negativ 4, Klammer auf, x minus y, Klammer zu, hoch negativ 4';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1785,7 +1785,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimesSilPar016 = function() {
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><mn>4</mn><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow>' +
       '</mrow></msup></mrow></math>';
-  var speech = '2 à la puissance 4, parenthèse gauche, x plus y, parenthèse droite';
+  var speech = '2 hoch 4, Klammer auf, x plus y, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1800,7 +1800,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimesSilPar017 = function() {
       '<mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn>' +
       '</msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'f de x, égale x au carré, parenthèse gauche, x plus 1, parenthèse droite';
+  var speech = 'f von x, ist gleich x Quadrat, Klammer auf, x plus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1815,7 +1815,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.untestImpTimesSilPar018 = function() 
       '<mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn>' +
       '</msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'XXXX';
+  var speech = 'XXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1829,7 +1829,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimesSilPar019 = function() {
   var mathml = '<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>log</mi>' +
       '<mi>x</mi><mi>log</mi><mi>y</mi></mrow></math>';
-  var speech = 'log de, parenthèse gauche, x plus y, parenthèse droite, égale, log x log y';
+  var speech = 'der Logarithmus von, Klammer auf, x plus y, Klammer zu, ist gleich, Logarithmus x Logarithmus y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1845,7 +1845,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimesSilPar020 = function() {
       '<mo>(</mo><mrow><mtable><mtr><mtd><mn>7</mn></mtd><mtd><mn>4</mn>' +
       '</mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'la matrice de dimension 2 par 2. rangée 1: 1, 3 rangée 2: 5, 2. la matrice de dimension 2 par 2. rangée 1: 7, 4 rangée 2: 0, 1';
+  var speech = 'die 2 mal 2 Matrize. Zeile 1: 1, 3 Zeile 2: 5, 2. die 2 mal 2 Matrize. Zeile 1: 7, 4 Zeile 2: 0, 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1859,7 +1859,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimesSilPar021 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2, parenthèse gauche, 3, parenthèse gauche, parenthèse gauche, 4 plus 5, parenthèse droite, plus 6, parenthèse droite, parenthèse droite';
+  var speech = '2, Klammer auf, 3, Klammer auf, Klammer auf, 4 plus 5, Klammer zu, plus 6, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1873,7 +1873,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimesSilPar022 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2, parenthèse gauche, 3, deuxième parenthèse gauche, troisième parenthèse gauche, 4 plus 5, troisième parenthèse droite, plus 6, deuxième parenthèse droite, parenthèse droite';
+  var speech = '2, Klammer auf, 3, zweite Klammer auf, dritte Klammer auf, 4 plus 5, dritte Klammer zu, plus 6, zweite Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1887,7 +1887,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimesSilPar023 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2, crochet gauche, 3, parenthèse gauche, parenthèse gauche, 4 plus 5, parenthèse droite, plus 6, parenthèse droite, crochet droit';
+  var speech = '2, eckige Klammer auf, 3, Klammer auf, Klammer auf, 4 plus 5, Klammer zu, plus 6, Klammer zu, eckige Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1901,7 +1901,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimesSilPar024 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2, crochet gauche, 3, parenthèse gauche, deuxième parenthèse gauche, 4 plus 5, deuxième parenthèse droite, plus 6, parenthèse droite, crochet droit';
+  var speech = '2, eckige Klammer auf, 3, Klammer auf, zweite Klammer auf, 4 plus 5, zweite Klammer zu, plus 6, Klammer zu, eckige Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1925,7 +1925,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testExtra001 = function() {
       '<mrow><mfrac><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>+</mo><msub>' +
       '<mi>b</mi><mn>2</mn></msub></mrow><mn>2</mn></mfrac></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = 'A égale h de, parenthèse gauche, fraction avec numérateur, b sub 1, plus, b sub 2, et dénominateur 2, parenthèse droite';
+  var speech = 'A ist gleich h von, Klammer auf, Bruch mit Zähler, b Index 1, plus, b Index 2, und Nenner 2, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1939,7 +1939,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testExtra002 = function() {
       '<mrow><mfrac><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>+</mo><msub>' +
       '<mi>b</mi><mn>2</mn></msub></mrow><mn>2</mn></mfrac></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = 'A égale, h fois, parenthèse gauche, fraction avec numérateur, b sub 1, plus, b sub 2, et dénominateur 2, parenthèse droite';
+  var speech = 'A ist gleich, h mal, Klammer auf, Bruch mit Zähler, b Index 1, plus, b Index 2, und Nenner 2, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1952,7 +1952,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testExtra003 = function() {
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mn>0</mn><mo>)</mo>' +
       '</mrow><mo>=</mo><mn>0</mn><mrow><mo>(</mo><mi>a</mi><mo>)</mo>' +
       '</mrow><mo>=</mo><mn>0</mn></mrow></math>';
-  var speech = 'a de 0, égale 0   a égale 0';
+  var speech = 'a von 0, ist gleich 0   a ist gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1965,7 +1965,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testExtra004 = function() {
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mn>0</mn><mo>)</mo>' +
       '</mrow><mo>=</mo><mn>0</mn><mrow><mo>(</mo><mi>a</mi><mo>)</mo>' +
       '</mrow><mo>=</mo><mn>0</mn></mrow></math>';
-  var speech = 'a fois 0, égale 0   a égale 0';
+  var speech = 'a mal 0, ist gleich 0   a ist gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1979,7 +1979,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testExtra005 = function() {
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>1' +
       '</mn></mrow><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mi>a</mi></mrow>' +
       '</math>';
-  var speech = 'a fois négatif 1, égale négatif a';
+  var speech = 'a mal negativ 1, ist gleich negativ a';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1992,7 +1992,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testExtra006 = function() {
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>1' +
       '</mn></mrow><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mi>a</mi></mrow>' +
       '</math>';
-  var speech = 'a de négatif 1, égale négatif a';
+  var speech = 'a von negativ 1, ist gleich negativ a';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2006,7 +2006,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.untestExtra007 = function() {
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mi>b</mi><mi>c' +
       '</mi></mrow><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mrow><mi>a' +
       '</mi><mi>b</mi></mrow><mo>)</mo></mrow><mi>c</mi></mrow></math>';
-  var speech = 'XXXX';
+  var speech = 'XXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2020,7 +2020,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.untestExtra008 = function() {
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mfrac><mn>1' +
       '</mn><mi>a</mi></mfrac></mrow><mo>)</mo></mrow><mo>=</mo><mn>1</mn>' +
       '</mrow></math>';
-  var speech = 'XXXX';
+  var speech = 'XXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2036,7 +2036,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testExtra009 = function() {
       '<mi>v</mi></mrow>   <mo>)</mo></mrow><mo>=</mo><mo>−</mo><mrow><mo>(' +
       '</mo>    <mrow>     <mi>u</mi><mi>v</mi></mrow>   <mo>)</mo></mrow>' +
       '</mrow>   </semantics></math>';
-  var speech = 'négatif u de v, égale u de négatif v, égale négatif u v';
+  var speech = 'negativ u von v, ist gleich u von negativ v, ist gleich negativ u von v';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2048,7 +2048,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testExtra010 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>B</mi><mrow><mo>(</mo><mrow><mn>2</mn><mo>,' +
       '</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'B de, parenthèse gauche, 2 virgule 6, parenthèse droite';
+  var speech = 'B von, Klammer auf, 2 Komma 6, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2060,7 +2060,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testExtra012 = function() {
   var preference = 'ImpliedTimes_Auto:Functions_None';
   var mathml = '<math><mrow><mi>B</mi><mrow><mo>(</mo><mrow><mn>2</mn><mo>,' +
       '</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'B fois, parenthèse gauche, 2 virgule 6, parenthèse droite';
+  var speech = 'B mal, Klammer auf, 2 Komma 6, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2073,7 +2073,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.untestExtra013 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>B</mi><mrow><mo>(</mo><mrow><mn>2</mn><mo>,' +
       '</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'XXXX';
+  var speech = 'XXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2085,7 +2085,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testExtra014 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>p</mi><mrow><mo>(</mo><mi>w</mi><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'p de w';
+  var speech = 'p von w';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2097,7 +2097,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testExtra015 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo>' +
       '</mrow><mo>=</mo><mn>2</mn><mi>t</mi><mo>+</mo><mn>4</mn></mrow></math>';
-  var speech = 'x de t, égale 2 t, plus 4';
+  var speech = 'x von t, ist gleich 2 t, plus 4';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2111,7 +2111,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testExtra016 = function() {
       '</mrow><mo>=</mo><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>3' +
       '</mn></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>−' +
       '</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'k de x, égale, parenthèse gauche, x plus 3, parenthèse droite,  , parenthèse gauche, x moins 5, parenthèse droite';
+  var speech = 'k von x, ist gleich, Klammer auf, x plus 3, Klammer zu,  , Klammer auf, x minus 5, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2126,7 +2126,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.untestExtra017 = function() {
       '<mo>−</mo><mn>12</mn><mi>a</mi><mo>=</mo><mn>3</mn><mi>a</mi><mrow>' +
       '<mo>(</mo><mi>a</mi><mo>)</mo></mrow><mo>−</mo><mn>3</mn><mi>a</mi>' +
       '<mrow><mo>(</mo><mn>4</mn><mo>)</mo></mrow></mrow></math>';
-  var speech = 'XXXX';
+  var speech = 'XXX';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2141,7 +2141,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testExtra018 = function() {
       '<mo>(</mo><mrow><msub><mi>T</mi><mn>0</mn></msub><mo>−</mo><msub>' +
       '<mi>T</mi><mi>s</mi></msub></mrow><mo>)</mo></mrow><msup><mi>e</mi>' +
       '<mrow><mo>−</mo><mi>k</mi><mi>t</mi></mrow></msup></mrow></math>';
-  var speech = 'T de t, égale, T sub s, plus, parenthèse gauche, T sub 0, moins, T sub s, parenthèse droite,   e à la puissance négatif k t';
+  var speech = 'T von t, ist gleich, T Index s, plus, Klammer auf, T Index 0, minus, T Index s, Klammer zu,   e hoch negativ k t';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2154,7 +2154,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testExtra019 = function() {
   var mathml = '<math><mrow><mi>V</mi><mo>=</mo><mi mathvariant="script">l' +
       '</mi><mi>w</mi><mrow><mo>(</mo><mn>8</mn><mo>)</mo></mrow></mrow>' +
       '</math>';
-  var speech = 'V égale l en script, w de 8';
+  var speech = 'V ist gleich Schreibschrift l, w von 8';
   // w is considered a simple function.
   //var speech = '';
   this.executeRuleTest(mathml, speech, preference);
@@ -2170,6 +2170,6 @@ sre.ClearspeakGermanImpliedTimes.prototype.untestExtra020 = function() {
   var mathml = '<math><mrow><mi>V</mi><mo>=</mo><mi mathvariant="script">l' +
       '</mi><mi>w</mi><mrow><mo>(</mo><mn>8</mn><mo>)</mo></mrow></mrow>' +
       '</math>';
-  var speech = 'XXXX';
+  var speech = 'XXX';
   this.executeRuleTest(mathml, speech, preference);
 };
