@@ -309,3 +309,17 @@ sre.Grammar.getInstance().setCorrection(
     return name.toLowerCase();
   }
 );
+
+
+sre.Grammar.getInstance().setCorrection(
+  'article', function(name) {    
+    return name;
+  }
+);
+
+
+sre.Grammar.getInstance().setCorrection(
+  'masculine', function(name) {    
+    return name;
+  }
+);

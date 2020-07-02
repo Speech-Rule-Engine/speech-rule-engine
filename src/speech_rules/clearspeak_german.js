@@ -470,16 +470,19 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
 
   defineRule(
       'appl', 'clearspeak.default',
-      '[n] children/*[1]; [t] "von"; [n] children/*[2]; [p] (pause:"short")',
+      '[n] children/*[1]; [t] "von"; ' +
+      '[n] children/*[2] (grammar:case="dative"); [p] (pause:"short")',
       'self::appl');
   defineRule(
       'appl-simple', 'clearspeak.default',
-      '[n] children/*[1]; [t] "von"; [p] (pause:"short"); [n] children/*[2];' +
+      '[n] children/*[1]; [t] "von"; [p] (pause:"short");' +
+      ' [n] children/*[2] (grammar:case="dative");' +
       ' [p] (pause:"short")',
       'self::appl', '@role="simple function"', 'name(children/*[2])="appl"');
   defineRule(
       'appl-simple', 'clearspeak.default',
-      '[n] children/*[1]; [t] "von"; [p] (pause:"short"); [n] children/*[2];' +
+      '[n] children/*[1]; [t] "von"; [p] (pause:"short");' +
+      ' [n] children/*[2] (grammar:case="dative");' +
       ' [p] (pause:"short")',
       'self::appl', '@role="simple function"', 'name(children/*[2])="fenced"',
       'name(children/*[2]/children/*[1])="appl"');
@@ -537,8 +540,8 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
   // TODO: Check grammar!
   defineRule(
       'function-prefix-fenced-or-frac-arg', 'clearspeak.default',
-      '[p] (pause:"short"); [t] "der"; [n] children/*[1]; [t] "von";' +
-      ' [n] children/*[2]; [p] (pause:"short")',
+      '[p] (pause:"short"); [t] "der" (grammar:article); [n] children/*[1]; [t] "von";' +
+      ' [n] children/*[2] (grammar:case="dative"); [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       '(name(children/*[2])="fenced" and not(contains(' +
       'children/*[2]/children/*[1]/@annotation, "clearspeak:simple")))' +
@@ -548,8 +551,8 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'self::*');
   defineRule(
       'function-prefix-subscript', 'clearspeak.default',
-      '[p] (pause:"short"); [t] "der"; [n] children/*[1]; [t] "von";' +
-      ' [p] (pause:"short"); [n] children/*[2]; [p] (pause:"short")',
+      '[p] (pause:"short"); [t] "der" (grammar:article); [n] children/*[1]; [t] "von";' +
+      ' [p] (pause:"short"); [n] children/*[2] (grammar:case="dative"); [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       'name(children/*[1])="subscript"', 'self::*');
 
@@ -568,7 +571,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'not(contains(@grammar, "NatLog"))');
   defineRule(
       'function-ln', 'clearspeak.default',
-      '[n] children/*[1]; [t] "von"; [n] children/*[2]; [p] (pause:"short")',
+      '[n] children/*[1]; [t] "von"; [n] children/*[2] (grammar:case="dative"); [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       'content/*[2][text()="ln"]', 'name(children/*[2])="fenced"',
       'not(contains(@grammar, "NatLog"))');
@@ -591,7 +594,8 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
   defineRule(
       'function-prefix-as-exp', 'clearspeak.default',
       '[n] children/*[1]; [t] "von";' +
-      ' [p] (pause:"short"); [n] children/*[2]; [p] (pause:"short")',
+      ' [p] (pause:"short"); [n] children/*[2] (grammar:case="dative");' +
+      ' [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       'name(parent::*/parent::*)="superscript"', 'not(following-sibling::*)',
       '(name(children/*[2])="fenced" and not(contains(' +
@@ -601,7 +605,8 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
   defineRule(
       'function-prefix-subscript-as-exp', 'clearspeak.default',
       '[n] children/*[1]; [t] "von";' +
-      ' [p] (pause:"short"); [n] children/*[2]; [p] (pause:"short")',
+      ' [p] (pause:"short"); [n] children/*[2] (grammar:case="dative");' +
+      ' [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       'name(parent::*/parent::*)="superscript"', 'not(following-sibling::*)',
       'name(children/*[1])="subscript"');
@@ -609,16 +614,18 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
 
   defineRule(
       'function-prefix-hyper', 'clearspeak.default',
-      '[p] (pause:"short"); [n] children/*[1]; [t] "von"; [n] children/*[2];' +
+      '[p] (pause:"short"); [n] children/*[1]; [t] "von"; ' +
+      '[n] children/*[2] (grammar:case="dative");' +
       ' [p] (pause:"short")',
       'self::appl', '@role="prefix function"', 'CQFisHyperbolic');
 
   // TODO: Umkehrfunktion? Inverse Funktion?
   defineRule(
       'function-prefix-inverse', 'clearspeak.default',
-      '[p] (pause:"short"); [t] "der inverse";' +
-      ' [n] children/*[1]/children/*[1];' +
-      ' [t] "von"; [n] children/*[2]; [p] (pause:"short")',
+      '[p] (pause:"short"); [t] "der" (grammar:article);' +
+      ' [t] "inverse" (grammar:masculine); [n] children/*[1]/children/*[1];' +
+      ' [t] "von"; [n] children/*[2] (grammar:case="dative");' +
+      ' [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       'name(children/*[1])="superscript"',
       'name(children/*[1]/children/*[2])="prefixop"',
@@ -630,7 +637,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
   defineRule(
       'appl-triginverse', 'clearspeak.Trig_TrigInverse',
       '[p] (pause:"short"); [n] children/*[1]; [t] "von";' +
-      ' [n] children/*[2]; [p] (pause:"short")',
+      ' [n] children/*[2] (grammar:case="dative"); [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       'name(children/*[1])="superscript"',
       'name(children/*[1]/children/*[2])="prefixop"',
@@ -668,7 +675,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'function-prefix-arc', 'clearspeak.Trig_ArcTrig',
       '[p] (pause:"short"); [t] "Arkus" (join:"");' +
       ' [n] children/*[1]/children/*[1] (grammar:lowercase);' +
-      ' [t] "von"; [n] children/*[2]; [p] (pause:"short")',
+      ' [t] "von"; [n] children/*[2] (grammar:case="dative"); [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       'name(children/*[1])="superscript"',
       'name(children/*[1]/children/*[2])="prefixop"',
@@ -690,13 +697,13 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
 
   defineRule(
       'superscript-prefix-function', 'clearspeak.default',
-      '[t] "die"; [n] children/*[2] (grammar:ordinal);' +
+      '[t] "die" (grammar:article); [n] children/*[2] (grammar:ordinal);' +
       ' [t] "Potenz von"; [n] children/*[1]',
       'self::superscript', '@role="prefix function"',
       'name(children/*[2])="number"', 'children/*[2][@role="integer"]');
   defineRule(
       'superscript-prefix-function', 'clearspeak.default',
-      '[t] "die"; [n] children/*[2] (grammar:ordinal); [t] "Potenz";' +
+      '[t] "die" (grammar:article); [n] children/*[2] (grammar:ordinal); [t] "Potenz";' +
       ' [n] children/*[1]',
       'self::superscript', '@role="prefix function"',
       'name(children/*[2])="identifier"');
@@ -869,7 +876,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
 
   defineRule(
       'superscript-simple-function', 'clearspeak.Exponent_OrdinalPower',
-      '[t] "die"; [n] children/*[2] (grammar:ordinal);' +
+      '[t] "die" (grammar:article); [n] children/*[2] (grammar:ordinal);' +
       ' [t] "Potenz von" (pause:"short"); [n] children/*[1]',
       'self::superscript', 'name(children/*[1])="identifier"',
       'children/*[1][@role="simple function"]',
@@ -1445,12 +1452,12 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
   // Higher roots
   defineRule(
       'root', 'clearspeak.default',
-      '[t] "die"; [n] children/*[1] (grammar:ordinal); [t] "Wurzel aus";' +
+      '[t] "die" (grammar:article); [n] children/*[1] (grammar:ordinal); [t] "Wurzel aus";' +
       ' [n] children/*[2] (grammar:EndRoot=false); [p] (pause:short)',
       'self::root');
   defineRule(
       'root-nested', 'clearspeak.default',
-      '[p] (pause:short); [t] "die"; [n] children/*[1] (grammar:ordinal); ' +
+      '[p] (pause:short); [t] "die" (grammar:article); [n] children/*[1] (grammar:ordinal); ' +
       '[t] "Wurzel aus"; [n] children/*[2] (grammar:EndRoot=false);' +
       ' [p] (pause:short)',
       'self::root', 'not(preceding-sibling::*)',
@@ -1497,13 +1504,13 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
   //                additional semantic annotation.
   defineRule(
       'set-prefix-operators', 'clearspeak.default',
-      '[t] "der"; [n] self::* (grammar:!prefix); [t] "von"',
+      '[t] "der" (grammar:article); [n] self::* (grammar:!prefix); [t] "von"',
       'self::*', 'contains(@grammar,"prefix")',
       'descendant-or-self::*/text()="\u2229"',
       'self::*', 'self::*', 'self::*');
   defineRule(
       'set-prefix-operators', 'clearspeak.default',
-      '[t] "die"; [n] self::* (grammar:!prefix); [t] "von"',
+      '[t] "die" (grammar:article); [n] self::* (grammar:!prefix); [t] "von"',
       'self::*', 'contains(@grammar,"prefix")',
       'descendant-or-self::*/text()="\u222A"',
       'self::*', 'self::*', 'self::*');
@@ -1725,14 +1732,14 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
   // Matrix
   defineRule(
       'matrix', 'clearspeak.default',
-      '[t] "die"; [t] count(children/*);  [t] "mal";' +
+      '[t] "die" (grammar:article); [t] count(children/*);  [t] "mal";' +
       '[t] count(children/*[1]/children/*); [t] "Matrize"; [p] (pause:long);' +
       ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Zeile-:");' +
       ' [p] (pause:long)',
       'self::matrix');
   defineRule(
       'matrix-simple', 'clearspeak.default',
-      '[t] "die"; [t] count(children/*);  [t] "mal";' +
+      '[t] "die" (grammar:article); [t] count(children/*);  [t] "mal";' +
       '[t] count(children/*[1]/children/*); [t] "Matrize";' +
       ' [p] (pause:long); [m] children/* ' +
       '(ctxtFunc:CTXFnodeCounter,context:"Zeile-:",grammar:simpleDet);' +
@@ -1747,7 +1754,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
   // Determinant
   defineRule(
       'determinant', 'clearspeak.default',
-      '[t] "die Determinante der"; [t] count(children/*);  [t] "mal";' +
+      '[t] "die" (grammar:article); [t] "Determinante der"; [t] count(children/*);  [t] "mal";' +
       '[t] count(children/*[1]/children/*); [t] "Matrize"; ' +
       '[p] (pause:long); [m] children/* ' +
       '(ctxtFunc:CTXFnodeCounter,context:"Zeile-:",grammar:simpleDet);' +
@@ -1756,7 +1763,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'CQFcellsSimple');
   defineRule(
       'determinant-simple', 'clearspeak.default',
-      '[t] "die Determinante der"; [t] count(children/*);  [t] "mal";' +
+      '[t] "die" (grammar:article); [t] "Determinante der"; [t] count(children/*);  [t] "mal";' +
       '[t] count(children/*[1]/children/*); [t] "Matrize"; ' +
       '[p] (pause:long); [m] children/* ' +
       '(ctxtFunc:CTXFnodeCounter,context:"Zeile-:");' +
@@ -1765,7 +1772,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
   // Vector
   defineRule(
       'matrix-vector', 'clearspeak.default',
-      '[t] "die"; [t] count(children/*);  [t] "mal";' +
+      '[t] "die" (grammar:article); [t] count(children/*);  [t] "mal";' +
       '[t] count(children/*[1]/children/*); [t] "Spaltenmatrize"; ' +
       '[p] (pause:long); [m] children/* ' +
       '(ctxtFunc:CTXFnodeCounter,context:"Zeile-:",grammar:simpleDet);' +
@@ -1775,7 +1782,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'matrix-vector', 'clearspeak.default', 'clearspeak.Matrix_SpeakColNum');
   defineRule(
       'matrix-vector-simple', 'clearspeak.default',
-      '[t] "die"; [t] count(children/*);  [t] "mal";' +
+      '[t] "die" (grammar:article); [t] count(children/*);  [t] "mal";' +
       '[t] count(children/*[1]/children/*); [t] "Spaltenmatrize"; ' +
       '[p] (pause:long); [m] children/* ' +
       '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
@@ -1784,7 +1791,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       '@role!="squarematrix"');
   defineRule(
       'matrix-vector-simple', 'clearspeak.Matrix_SilentColNum',
-      '[t] "die"; [t] count(children/*);  [t] "mal";' +
+      '[t] "die" (grammar:article); [t] count(children/*);  [t] "mal";' +
       '[t] count(children/*[1]/children/*); [t] "Spaltenmatrize"; ' +
       '[p] (pause:long); [m] children/* ' +
       '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
@@ -1793,7 +1800,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
 
   defineRule(
       'matrix-row-vector', 'clearspeak.default',
-      '[t] "die"; [t] count(children/*);  [t] "mal";' +
+      '[t] "die" (grammar:article); [t] count(children/*);  [t] "mal";' +
       '[t] count(children/*[1]/children/*); [t] "Zeilenmatrize"; ' +
       '[p] (pause:long); [m] children/*[1]/children/* ' +
       '(ctxtFunc:CTXFnodeCounter,context:"Spalte-:",grammar:simpleDet);' +
@@ -1804,7 +1811,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'clearspeak.Matrix_SpeakColNum');
   defineRule(
       'matrix-row-vector-simple', 'clearspeak.default',
-      '[t] "die"; [t] count(children/*);  [t] "mal";' +
+      '[t] "die" (grammar:article); [t] count(children/*);  [t] "mal";' +
       '[t] count(children/*[1]/children/*); [t] "Zeilenmatrize"; ' +
       '[p] (pause:long); [m] children/*[1]/children/* ' +
       '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
@@ -1813,7 +1820,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'CQFcellsSimple');
   defineRule(
       'matrix-row-vector-simple', 'clearspeak.Matrix_SilentColNum',
-      '[t] "die"; [t] count(children/*);  [t] "mal";' +
+      '[t] "die" (grammar:article); [t] count(children/*);  [t] "mal";' +
       '[t] count(children/*[1]/children/*); [t] "Zeilenmatrize"; ' +
       '[p] (pause:long); [m] children/*[1]/children/* ' +
       '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
@@ -1860,7 +1867,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
 
   defineRule(
       'vector', 'clearspeak.Matrix_Vector',
-      '[t] "der"; [t] count(children/*);  [t] "mal";' +
+      '[t] "der" (grammar:article); [t] count(children/*);  [t] "mal";' +
       '[t] count(children/*[1]/children/*); [t] "Spaltenvektor"; ' +
       '[p] (pause:long); [m] children/* ' +
       '(ctxtFunc:CTXFnodeCounter,context:"Zeile-:",grammar:simpleDet); ' +
@@ -1870,7 +1877,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'vector', 'clearspeak.Matrix_Vector', 'clearspeak.Matrix_EndVector');
   defineRule(
       'vector-simple', 'clearspeak.Matrix_Vector',
-      '[t] "der"; [t] count(children/*);  [t] "mal"; ' +
+      '[t] "der" (grammar:article); [t] count(children/*);  [t] "mal"; ' +
       '[t] count(children/*[1]/children/*); [t] "Spaltenvektor"; ' +
       '[p] (pause:long); [m] children/* ' +
       '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet); ' +
@@ -1882,7 +1889,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
 
   defineRule(
       'row-vector', 'clearspeak.Matrix_Vector',
-      '[t] "der"; [t] count(children/*);  [t] "mal";' +
+      '[t] "der" (grammar:article); [t] count(children/*);  [t] "mal";' +
       '[t] count(children/*[1]/children/*); [t] "Zeilenvektor";' +
       ' [p] (pause:long); [m] children/*[1]/children/* ' +
       '(ctxtFunc:CTXFnodeCounter,context:"Spalte-:",grammar:simpleDet);' +
@@ -1892,7 +1899,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'row-vector', 'clearspeak.Matrix_Vector', 'clearspeak.Matrix_EndVector');
   defineRule(
       'row-vector-simple', 'clearspeak.Matrix_Vector',
-      '[t] "der"; [t] count(children/*);  [t] "mal";' +
+      '[t] "der" (grammar:article); [t] count(children/*);  [t] "mal";' +
       '[t] count(children/*[1]/children/*); [t] "Zeilenvektor";' +
       ' [p] (pause:long); [m] children/*[1]/children/* ' +
       '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
