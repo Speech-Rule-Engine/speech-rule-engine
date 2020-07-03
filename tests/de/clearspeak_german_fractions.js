@@ -123,7 +123,7 @@ sre.ClearspeakGermanFractions.prototype.testFrac002e = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mo>−</mo><mi>x</mi></mrow><mi>y' +
       '</mi></mfrac></mrow></math>';
-  var speech = 'negativ x geteilt durch y';
+  var speech = 'minus x geteilt durch y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -135,7 +135,7 @@ sre.ClearspeakGermanFractions.prototype.testFrac002f = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mo>−</mo><mn>2</mn><mi>x</mi>' +
       '</mrow><mrow><mn>3</mn><mi>y</mi></mrow></mfrac></mrow></math>';
-  var speech = 'negativ 2 x geteilt durch 3 y';
+  var speech = 'minus 2 x geteilt durch 3 y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -147,7 +147,7 @@ sre.ClearspeakGermanFractions.prototype.testFrac002g = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mi>y</mi></mrow><mrow>' +
       '<mo>−</mo><mi>c</mi><mi>d</mi></mrow></mfrac></mrow></math>';
-  var speech = 'x y geteilt durch negativ c d';
+  var speech = 'x y geteilt durch minus c d';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -160,7 +160,7 @@ sre.ClearspeakGermanFractions.prototype.testFrac002h = function() {
   var mathml = '<math><mrow><mfrac><mrow><mfrac><mn>1</mn><mn>2</mn>' +
       '</mfrac></mrow><mrow><mo>−</mo><mfrac><mn>1</mn><mn>3</mn></mfrac>' +
       '</mrow></mfrac></mrow></math>';
-  var speech = 'ein halb geteilt durch negativ ein drittel';
+  var speech = 'ein halb geteilt durch minus ein drittel';
   this.executeRuleTest(mathml, speech, preference);
 };
 

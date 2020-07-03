@@ -143,7 +143,7 @@ sre.ClearspeakGermanExponents.prototype.testExp009 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2</mn>' +
       '</mrow></msup></mrow></math>';
-  var speech = '3 hoch negativ 2';
+  var speech = '3 hoch minus 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -155,7 +155,7 @@ sre.ClearspeakGermanExponents.prototype.testExp010a = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2.0</mn>' +
       '</mrow></msup></mrow></math>';
-  var speech = '3 hoch negativ 2\\,0';
+  var speech = '3 hoch minus 2\\,0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -593,7 +593,7 @@ sre.ClearspeakGermanExponents.prototype.testExp035 = function() {
       '</mn><mn>2</mn></mfrac><msup><mrow><mrow><mo>(</mo><mrow><mfrac>' +
       '<mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><mi>σ</mi></mfrac></mrow>' +
       '<mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msup></mrow></math>';
-  var speech = 'e mit Exponent, negativ ein halb  , Klammer auf, Bruch mit Zähler x minus my, und Nenner sigma, Klammer zu, Quadrat, Ende Exponent';
+  var speech = 'e mit Exponent, minus ein halb  , Klammer auf, Bruch mit Zähler x minus my, und Nenner sigma, Klammer zu, Quadrat, Ende Exponent';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -751,7 +751,7 @@ sre.ClearspeakGermanExponents.prototype.testExp093n = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2.0</mn>' +
       '</mrow></msup></mrow></math>';
-  var speech = '3 potenziert mit negativ 2\\,0';
+  var speech = '3 potenziert mit minus 2\\,0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1174,7 +1174,7 @@ sre.ClearspeakGermanExponents.prototype.testExp127n = function() {
   var mathml = '<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1' +
       '</mn><mn>2</mn></mfrac><msup><mi>x</mi><mn>2</mn></msup></mrow>' +
       '</msup></mrow></math>';
-  var speech = 'e mit Exponent, negativ ein halb x zur zweiten Potenz, Ende Exponent';
+  var speech = 'e mit Exponent, minus ein halb x zur zweiten Potenz, Ende Exponent';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1188,7 +1188,7 @@ sre.ClearspeakGermanExponents.prototype.testExp128n = function() {
       '</mn><mn>2</mn></mfrac><msup><mrow><mrow><mo>(</mo><mrow><mfrac>' +
       '<mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><mi>σ</mi></mfrac></mrow>' +
       '<mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msup></mrow></math>';
-  var speech = 'e mit Exponent, negativ ein halb  , Klammer auf, Bruch mit Zähler x minus my, und Nenner sigma, Klammer zu, zur zweiten Potenz, Ende Exponent';
+  var speech = 'e mit Exponent, minus ein halb  , Klammer auf, Bruch mit Zähler x minus my, und Nenner sigma, Klammer zu, zur zweiten Potenz, Ende Exponent';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1279,7 +1279,7 @@ sre.ClearspeakGermanExponents.prototype.testExp136m = function() {
   var preference = 'Exponent_Exponent';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2</mn>' +
       '</mrow></msup></mrow></math>';
-  var speech = '3 mit Exponent negativ 2';
+  var speech = '3 mit Exponent minus 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1291,7 +1291,7 @@ sre.ClearspeakGermanExponents.prototype.testExp137m = function() {
   var preference = 'Exponent_Exponent';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2.0</mn>' +
       '</mrow></msup></mrow></math>';
-  var speech = '3 mit Exponent negativ 2\\,0';
+  var speech = '3 mit Exponent minus 2\\,0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1738,7 +1738,7 @@ sre.ClearspeakGermanExponents.prototype.testExp173m = function() {
   var mathml = '<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1' +
       '</mn><mn>2</mn></mfrac><msup><mi>x</mi><mn>2</mn></msup></mrow>' +
       '</msup></mrow></math>';
-  var speech = 'e mit Exponent, negativ ein halb x mit Exponent 2, Ende Exponent';
+  var speech = 'e mit Exponent, minus ein halb x mit Exponent 2, Ende Exponent';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1752,6 +1752,6 @@ sre.ClearspeakGermanExponents.prototype.testExp174m = function() {
       '</mn><mn>2</mn></mfrac><msup><mrow><mrow><mo>(</mo><mrow><mfrac>' +
       '<mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><mi>σ</mi></mfrac></mrow>' +
       '<mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msup></mrow></math>';
-  var speech = 'e mit Exponent, negativ ein halb  , Klammer auf, Bruch mit Zähler x minus my, und Nenner sigma, Klammer zu, mit Exponent 2, Ende Exponent';
+  var speech = 'e mit Exponent, minus ein halb  , Klammer auf, Bruch mit Zähler x minus my, und Nenner sigma, Klammer zu, mit Exponent 2, Ende Exponent';
   this.executeRuleTest(mathml, speech, preference);
 };

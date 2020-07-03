@@ -361,7 +361,6 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
   // Primes
   // This rule uses some redundancy for ordering!
   //
-  // TODO: Consider if they make sense in German!
   defineRule(
       'prime', 'clearspeak.default',
       '[n] children/*[1]; [n] children/*[2]',
@@ -467,6 +466,12 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
   defineRule(
       'function', 'clearspeak.default',
       '[n] text()', 'self::function');
+  defineRule(
+      'function-article', 'clearspeak.default',
+      '[t] "der" (grammar:article); [n] text()',
+      'self::function', '@role="prefix function"',
+      'contains(@grammar, "addArticle")');
+
 
   defineRule(
       'appl', 'clearspeak.default',
@@ -540,7 +545,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
   // TODO: Check grammar!
   defineRule(
       'function-prefix-fenced-or-frac-arg', 'clearspeak.default',
-      '[p] (pause:"short"); [t] "der" (grammar:article); [n] children/*[1]; [t] "von";' +
+      '[p] (pause:"short"); [n] children/*[1] (grammar:addArticle); [t] "von";' +
       ' [n] children/*[2] (grammar:case="dative"); [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       '(name(children/*[2])="fenced" and not(contains(' +
@@ -551,7 +556,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'self::*');
   defineRule(
       'function-prefix-subscript', 'clearspeak.default',
-      '[p] (pause:"short"); [t] "der" (grammar:article); [n] children/*[1]; [t] "von";' +
+      '[p] (pause:"short"); [n] children/*[1] (grammar:addArticle); [t] "von";' +
       ' [p] (pause:"short"); [n] children/*[2] (grammar:case="dative"); [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       'name(children/*[1])="subscript"', 'self::*');
@@ -703,7 +708,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'name(children/*[2])="number"', 'children/*[2][@role="integer"]');
   defineRule(
       'superscript-prefix-function', 'clearspeak.default',
-      '[t] "die" (grammar:article); [n] children/*[2] (grammar:ordinal); [t] "Potenz";' +
+      '[t] "die" (grammar:article); [n] children/*[2] (grammar:ordinal); [t] "Potenz von";' +
       ' [n] children/*[1]',
       'self::superscript', '@role="prefix function"',
       'name(children/*[2])="identifier"');
@@ -884,15 +889,15 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'not(contains(@grammar, "functions_none"))');
 
   defineRule(
-      'exponent', 'clearspeak.Exponent_OrdinalPower',
+      'exponent', 'clearspeak.default',
       '[n] text() (join:""); [t] "te"', 'self::identifier',
       'contains(@grammar, "ordinal")');
   defineRule(
-      'exponent', 'clearspeak.Exponent_OrdinalPower',
+      'exponent', 'clearspeak.default',
       '[t] CSFwordOrdinal', 'self::number', '@role="integer"',
       'contains(@grammar, "ordinal")', 'text()!="0"');
   defineRule(
-      'exponent', 'clearspeak.Exponent_OrdinalPower',
+      'exponent', 'clearspeak.default',
       '[t] "nullte"', 'self::number', '@role="integer"',
       'contains(@grammar, "ordinal")', 'text()="0"');
 
@@ -1476,12 +1481,12 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
   // minus sign
   defineRule(
       'negative', 'clearspeak.default',
-      '[t] "negativ"; [n] children/*[1]',
+      '[t] "minus"; [n] children/*[1]',
       'self::prefixop', '@role="negative"');
   defineRule(
       'positive', 'clearspeak.default',
-      '[t] "positiv"; [n] children/*[1]',
-      'self::prefixop', '@role="positive"');
+      '[t] "plus"; [n] children/*[1]',
+      'self::prefixop', '@role="positive"'); // Maybe mention Vorzeichen?
 
   // Angle
   defineRule(

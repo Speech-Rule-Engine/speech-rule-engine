@@ -340,7 +340,7 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
   // minus sign
   defineRule(
       'negative', 'mathspeak.default',
-      '[t] "negativ"; [n] children/*[1]',
+      '[t] "minus"; [n] children/*[1]',
       'self::prefixop', '@role="negative"', 'children/identifier');
   defineRuleAlias(
       'negative',

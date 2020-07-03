@@ -279,7 +279,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrig020 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>tan</mi><mrow><mo>(</mo><mrow><mo>−</mo>' +
       '<mi>π</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'Tangens negativ pi';
+  var speech = 'Tangens minus pi';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -342,7 +342,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrig025 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mn>4</mn>' +
       '</msup><mi>x</mi></mrow></math>';
-  var speech = 'die 4 Potenz von Sinus x';
+  var speech = 'die vierte Potenz von Sinus x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -354,7 +354,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrig026 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mn>5</mn>' +
       '</msup><mi>x</mi></mrow></math>';
-  var speech = 'die 5 Potenz von Kosinus x';
+  var speech = 'die fünfte Potenz von Kosinus x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -366,7 +366,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrig027 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mi>n</mi>' +
       '</msup><mi>x</mi></mrow></math>';
-  var speech = 'die n Potenz Tangens x';
+  var speech = 'die nte Potenz von Tangens x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -585,7 +585,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrig043 = function() {
       '<mfrac><mi>π</mi><mn>8</mn></mfrac></mrow><mo>)</mo></mrow><mo>=' +
       '</mo><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msqrt><mrow><mn>2' +
       '</mn><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></msqrt></mrow></math>';
-  var speech = 'der Sinus von, Klammer auf, negativ, pi geteilt durch 8, Klammer zu, ist gleich negativ ein halb Quadratwurzel aus 2 minus Quadratwurzel aus 2, Wurzel Ende, Wurzel Ende';
+  var speech = 'der Sinus von, Klammer auf, minus, pi geteilt durch 8, Klammer zu, ist gleich minus ein halb Quadratwurzel aus 2 minus Quadratwurzel aus 2, Wurzel Ende, Wurzel Ende';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -778,7 +778,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrigInvAuto013 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der inverse Sinus von negativ x';
+  var speech = 'der inverse Sinus von minus x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -791,7 +791,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrigInvAuto014 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der inverse Kosinus von negativ x';
+  var speech = 'der inverse Kosinus von minus x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -804,7 +804,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrigInvAuto015 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
       '<mo>+</mo><mn>12</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der inverse Tangens von, Klammer auf, negativ x plus 12, Klammer zu';
+  var speech = 'der inverse Tangens von, Klammer auf, minus x plus 12, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -817,7 +817,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrigInvAuto016 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
       '<mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der inverse Kotangens von, Klammer auf, negativ x minus 1, Klammer zu';
+  var speech = 'der inverse Kotangens von, Klammer auf, minus x minus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -858,7 +858,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrigInvAuto019 = function() {
       '<mo>(</mo><mrow><mo>−</mo><mfrac><mrow><msqrt><mn>2</mn></msqrt>' +
       '</mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'der Kosinus von, Klammer auf, der inverse Kosinus von, Klammer auf, negativ, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2, Klammer zu, Klammer zu';
+  var speech = 'der Kosinus von, Klammer auf, der inverse Kosinus von, Klammer auf, minus, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -873,7 +873,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrigInvAuto020 = function() {
       '</msup><mrow><mo>(</mo><mrow><mfrac><mrow><msqrt><mn>2</mn></msqrt>' +
       '</mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'der Kosinus von, Klammer auf, negativ, der inverse Kosinus von, Klammer auf, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2, Klammer zu, Klammer zu';
+  var speech = 'der Kosinus von, Klammer auf, minus, der inverse Kosinus von, Klammer auf, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -925,7 +925,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrigInvAuto024 = function() {
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo>' +
       '<msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow>' +
       '</msup><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Sinus von, Klammer auf, negativ, der inverse Tangens von 1, Klammer zu';
+  var speech = 'der Sinus von, Klammer auf, minus, der inverse Tangens von 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -939,7 +939,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrigInvAuto025 = function() {
       '<msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow>' +
       '</msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Sinus von, Klammer auf, negativ, der inverse Tangens von negativ 1, Klammer zu';
+  var speech = 'der Sinus von, Klammer auf, minus, der inverse Tangens von minus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1112,7 +1112,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrigReciprocal013 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der inverse Sinus von negativ x';
+  var speech = 'der inverse Sinus von minus x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1125,7 +1125,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrigReciprocal014 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der inverse Kosinus von negativ x';
+  var speech = 'der inverse Kosinus von minus x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1138,7 +1138,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrigReciprocal015 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
       '<mo>+</mo><mn>12</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der inverse Tangens von, Klammer auf, negativ x plus 12, Klammer zu';
+  var speech = 'der inverse Tangens von, Klammer auf, minus x plus 12, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1151,7 +1151,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrigReciprocal016 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
       '<mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der inverse Kotangens von, Klammer auf, negativ x minus 1, Klammer zu';
+  var speech = 'der inverse Kotangens von, Klammer auf, minus x minus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1192,7 +1192,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrigReciprocal019 = function() {
       '<mo>(</mo><mrow><mo>−</mo><mfrac><mrow><msqrt><mn>2</mn></msqrt>' +
       '</mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'der Kosinus von, Klammer auf, der inverse Kosinus von, Klammer auf, negativ, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2, Klammer zu, Klammer zu';
+  var speech = 'der Kosinus von, Klammer auf, der inverse Kosinus von, Klammer auf, minus, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1207,7 +1207,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrigReciprocal020 = function() {
       '</msup><mrow><mo>(</mo><mrow><mfrac><mrow><msqrt><mn>2</mn></msqrt>' +
       '</mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'der Kosinus von, Klammer auf, negativ, der inverse Kosinus von, Klammer auf, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2, Klammer zu, Klammer zu';
+  var speech = 'der Kosinus von, Klammer auf, minus, der inverse Kosinus von, Klammer auf, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1259,7 +1259,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrigReciprocal024 = function() {
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo>' +
       '<msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow>' +
       '</msup><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Sinus von, Klammer auf, negativ, der inverse Tangens von 1, Klammer zu';
+  var speech = 'der Sinus von, Klammer auf, minus, der inverse Tangens von 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1273,7 +1273,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrigReciprocal025 = function() {
       '<msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow>' +
       '</msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Sinus von, Klammer auf, negativ, der inverse Tangens von negativ 1, Klammer zu';
+  var speech = 'der Sinus von, Klammer auf, minus, der inverse Tangens von minus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1445,7 +1445,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrigInverse013 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'Sinus invers von negativ x';
+  var speech = 'Sinus invers von minus x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1458,7 +1458,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrigInverse014 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'Kosinus invers von negativ x';
+  var speech = 'Kosinus invers von minus x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1471,7 +1471,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrigInverse015 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
       '<mo>+</mo><mn>12</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'Tangens invers von, Klammer auf, negativ x plus 12, Klammer zu';
+  var speech = 'Tangens invers von, Klammer auf, minus x plus 12, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1484,7 +1484,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrigInverse016 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
       '<mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'Kotangens invers von, Klammer auf, negativ x minus 1, Klammer zu';
+  var speech = 'Kotangens invers von, Klammer auf, minus x minus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1525,7 +1525,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrigInverse019 = function() {
       '<mo>(</mo><mrow><mo>−</mo><mfrac><mrow><msqrt><mn>2</mn></msqrt>' +
       '</mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'der Kosinus von, Klammer auf, Kosinus invers von, Klammer auf, negativ, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2, Klammer zu, Klammer zu';
+  var speech = 'der Kosinus von, Klammer auf, Kosinus invers von, Klammer auf, minus, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1540,7 +1540,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrigInverse020 = function() {
       '</msup><mrow><mo>(</mo><mrow><mfrac><mrow><msqrt><mn>2</mn></msqrt>' +
       '</mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'der Kosinus von, Klammer auf, negativ, Kosinus invers von, Klammer auf, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2, Klammer zu, Klammer zu';
+  var speech = 'der Kosinus von, Klammer auf, minus, Kosinus invers von, Klammer auf, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1592,7 +1592,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrigInverse024 = function() {
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo>' +
       '<msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow>' +
       '</msup><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Sinus von, Klammer auf, negativ, Tangens invers von 1, Klammer zu';
+  var speech = 'der Sinus von, Klammer auf, minus, Tangens invers von 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1606,7 +1606,7 @@ sre.ClearspeakGermanTrigometry.prototype.testTrigInverse025 = function() {
       '<msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow>' +
       '</msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Sinus von, Klammer auf, negativ, Tangens invers von negativ 1, Klammer zu';
+  var speech = 'der Sinus von, Klammer auf, minus, Tangens invers von minus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1778,7 +1778,7 @@ sre.ClearspeakGermanTrigometry.prototype.testArcTrig013 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'Arkussinus negativ x';
+  var speech = 'Arkussinus minus x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1791,7 +1791,7 @@ sre.ClearspeakGermanTrigometry.prototype.testArcTrig014 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'Arkuskosinus negativ x';
+  var speech = 'Arkuskosinus minus x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1804,7 +1804,7 @@ sre.ClearspeakGermanTrigometry.prototype.testArcTrig015 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
       '<mo>+</mo><mn>12</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'Arkustangens von, Klammer auf, negativ x plus 12, Klammer zu';
+  var speech = 'Arkustangens von, Klammer auf, minus x plus 12, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1817,7 +1817,7 @@ sre.ClearspeakGermanTrigometry.prototype.testArcTrig016 = function() {
   var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo>' +
       '<mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi>' +
       '<mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'Arkuskotangens von, Klammer auf, negativ x minus 1, Klammer zu';
+  var speech = 'Arkuskotangens von, Klammer auf, minus x minus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1858,7 +1858,7 @@ sre.ClearspeakGermanTrigometry.prototype.testArcTrig019 = function() {
       '<mo>(</mo><mrow><mo>−</mo><mfrac><mrow><msqrt><mn>2</mn></msqrt>' +
       '</mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'der Kosinus von, Klammer auf, Arkuskosinus von, Klammer auf, negativ, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2, Klammer zu, Klammer zu';
+  var speech = 'der Kosinus von, Klammer auf, Arkuskosinus von, Klammer auf, minus, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1873,7 +1873,7 @@ sre.ClearspeakGermanTrigometry.prototype.testArcTrig020 = function() {
       '</msup><mrow><mo>(</mo><mrow><mfrac><mrow><msqrt><mn>2</mn></msqrt>' +
       '</mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'der Kosinus von, Klammer auf, negativ, Arkuskosinus von, Klammer auf, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2, Klammer zu, Klammer zu';
+  var speech = 'der Kosinus von, Klammer auf, minus, Arkuskosinus von, Klammer auf, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2, Klammer zu, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1925,7 +1925,7 @@ sre.ClearspeakGermanTrigometry.prototype.testArcTrig024 = function() {
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo>' +
       '<msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow>' +
       '</msup><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Sinus von, Klammer auf, negativ, Arkustangens 1, Klammer zu';
+  var speech = 'der Sinus von, Klammer auf, minus, Arkustangens 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1939,7 +1939,7 @@ sre.ClearspeakGermanTrigometry.prototype.testArcTrig025 = function() {
       '<msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow>' +
       '</msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Sinus von, Klammer auf, negativ, Arkustangens negativ 1, Klammer zu';
+  var speech = 'der Sinus von, Klammer auf, minus, Arkustangens minus 1, Klammer zu';
   this.executeRuleTest(mathml, speech, preference);
 };
 

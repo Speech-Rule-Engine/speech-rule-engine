@@ -219,7 +219,7 @@ sre.ClearspeakGermanRoots.prototype.testRoot014 = function() {
   var mathml = '<math><mrow><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn>' +
       '</msup></mrow></math>';
-  var speech = 'negativ, Klammer auf, Quadratwurzel aus x, Klammer zu, Quadrat';
+  var speech = 'minus, Klammer auf, Quadratwurzel aus x, Klammer zu, Quadrat';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -336,7 +336,7 @@ sre.ClearspeakGermanRoots.prototype.testRoot023 = function() {
       '<msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn>' +
       '<mi>a</mi><mi>c</mi></mrow></msqrt></mrow><mrow><mn>2</mn><mi>a</mi>' +
       '</mrow></mfrac></mrow></math>';
-  var speech = 'Bruch mit Zähler negativ b plus minus Quadratwurzel aus b Quadrat minus 4 a c, und Nenner 2 a';
+  var speech = 'Bruch mit Zähler minus b plus minus Quadratwurzel aus b Quadrat minus 4 a c, und Nenner 2 a';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -528,7 +528,7 @@ sre.ClearspeakGermanRoots.prototype.testRoot038 = function() {
   var mathml = '<math><mrow><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn>' +
       '</msup></mrow></math>';
-  var speech = 'negativ, Klammer auf, positive Quadratwurzel aus x, Klammer zu, Quadrat';
+  var speech = 'minus, Klammer auf, positive Quadratwurzel aus x, Klammer zu, Quadrat';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -645,7 +645,7 @@ sre.ClearspeakGermanRoots.prototype.testRoot047 = function() {
       '<msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn>' +
       '<mi>a</mi><mi>c</mi></mrow></msqrt></mrow><mrow><mn>2</mn><mi>a</mi>' +
       '</mrow></mfrac></mrow></math>';
-  var speech = 'Bruch mit Zähler negativ b plus minus Quadratwurzel aus b Quadrat minus 4 a c, und Nenner 2 a';
+  var speech = 'Bruch mit Zähler minus b plus minus Quadratwurzel aus b Quadrat minus 4 a c, und Nenner 2 a';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -824,7 +824,7 @@ sre.ClearspeakGermanRoots.prototype.testRoot061 = function() {
   var mathml = '<math><mrow><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn>' +
       '</msup></mrow></math>';
-  var speech = 'negativ, Klammer auf, Quadratwurzel aus x, Wurzel Ende, Klammer zu, Quadrat';
+  var speech = 'minus, Klammer auf, Quadratwurzel aus x, Wurzel Ende, Klammer zu, Quadrat';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -941,7 +941,7 @@ sre.ClearspeakGermanRoots.prototype.testRoot070 = function() {
       '<msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn>' +
       '<mi>a</mi><mi>c</mi></mrow></msqrt></mrow><mrow><mn>2</mn><mi>a</mi>' +
       '</mrow></mfrac></mrow></math>';
-  var speech = 'Bruch mit Zähler negativ b plus minus Quadratwurzel aus b Quadrat minus 4 a c, Wurzel Ende, und Nenner 2 a';
+  var speech = 'Bruch mit Zähler minus b plus minus Quadratwurzel aus b Quadrat minus 4 a c, Wurzel Ende, und Nenner 2 a';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1237,7 +1237,7 @@ sre.ClearspeakGermanRoots.prototype.testRoot093 = function() {
       '<msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn>' +
       '<mi>a</mi><mi>c</mi></mrow></msqrt></mrow><mrow><mn>2</mn><mi>a</mi>' +
       '</mrow></mfrac></mrow></math>';
-  var speech = 'Bruch mit Zähler negativ b plus minus Quadratwurzel aus b Quadrat minus 4 a c, Wurzel Ende, und Nenner 2 a';
+  var speech = 'Bruch mit Zähler minus b plus minus Quadratwurzel aus b Quadrat minus 4 a c, Wurzel Ende, und Nenner 2 a';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1264,7 +1264,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot001 = function() {
 sre.ClearspeakGermanRoots.prototype.testHighRoot002 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>';
-  var speech = 'die 4 Wurzel aus n';
+  var speech = 'die vierte Wurzel aus n';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1276,7 +1276,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot003 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn>' +
       '</mroot></mrow></math>';
-  var speech = 'die 5 Wurzel aus 35';
+  var speech = 'die fünfte Wurzel aus 35';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1288,7 +1288,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot004 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn>' +
       '</mroot></mrow></math>';
-  var speech = 'die 9 Wurzel aus 146';
+  var speech = 'die neunte Wurzel aus 146';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1299,7 +1299,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot004 = function() {
 sre.ClearspeakGermanRoots.prototype.testHighRoot005 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mi>d</mi><mi>n</mi></mroot></mrow></math>';
-  var speech = 'die n Wurzel aus d';
+  var speech = 'die nte Wurzel aus d';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1311,7 +1311,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot006 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi>' +
       '</mroot></mrow></math>';
-  var speech = 'die m Wurzel aus 243';
+  var speech = 'die mte Wurzel aus 243';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1323,7 +1323,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot007 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup>' +
       '</mrow><mi>i</mi></mroot></mrow></math>';
-  var speech = 'die i Wurzel aus 2 hoch i';
+  var speech = 'die ite Wurzel aus 2 hoch i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1335,7 +1335,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot008 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi>' +
       '</mroot></mrow></math>';
-  var speech = 'die j Wurzel aus 125';
+  var speech = 'die jte Wurzel aus 125';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1347,7 +1347,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot009 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>y</mi><mn>3</mn></mroot>' +
       '</mrow></math>';
-  var speech = 'negativ Kubikwurzel aus y';
+  var speech = 'minus Kubikwurzel aus y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1359,7 +1359,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot010 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot>' +
       '</mrow></math>';
-  var speech = 'negativ die 4 Wurzel aus n';
+  var speech = 'minus die vierte Wurzel aus n';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1381,7 +1381,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot011 = function() {
 sre.ClearspeakGermanRoots.prototype.testHighRoot012 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>';
-  var speech = 'die 4 Wurzel aus n, Wurzel Ende';
+  var speech = 'die vierte Wurzel aus n, Wurzel Ende';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1393,7 +1393,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot013 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn>' +
       '</mroot></mrow></math>';
-  var speech = 'die 5 Wurzel aus 35, Wurzel Ende';
+  var speech = 'die fünfte Wurzel aus 35, Wurzel Ende';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1405,7 +1405,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot014 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn>' +
       '</mroot></mrow></math>';
-  var speech = 'die 9 Wurzel aus 146, Wurzel Ende';
+  var speech = 'die neunte Wurzel aus 146, Wurzel Ende';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1416,7 +1416,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot014 = function() {
 sre.ClearspeakGermanRoots.prototype.testHighRoot015 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mi>d</mi><mi>n</mi></mroot></mrow></math>';
-  var speech = 'die n Wurzel aus d, Wurzel Ende';
+  var speech = 'die nte Wurzel aus d, Wurzel Ende';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1428,7 +1428,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot016 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi>' +
       '</mroot></mrow></math>';
-  var speech = 'die m Wurzel aus 243, Wurzel Ende';
+  var speech = 'die mte Wurzel aus 243, Wurzel Ende';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1440,7 +1440,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot017 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup>' +
       '</mrow><mi>i</mi></mroot></mrow></math>';
-  var speech = 'die i Wurzel aus 2 hoch i, Wurzel Ende';
+  var speech = 'die ite Wurzel aus 2 hoch i, Wurzel Ende';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1452,7 +1452,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot018 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi>' +
       '</mroot></mrow></math>';
-  var speech = 'die j Wurzel aus 125, Wurzel Ende';
+  var speech = 'die jte Wurzel aus 125, Wurzel Ende';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1464,7 +1464,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot019 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>y</mi><mn>3</mn></mroot>' +
       '</mrow></math>';
-  var speech = 'negativ Kubikwurzel aus y, Wurzel Ende';
+  var speech = 'minus Kubikwurzel aus y, Wurzel Ende';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1476,7 +1476,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot020 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot>' +
       '</mrow></math>';
-  var speech = 'negativ die 4 Wurzel aus n, Wurzel Ende';
+  var speech = 'minus die vierte Wurzel aus n, Wurzel Ende';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1498,7 +1498,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot021 = function() {
 sre.ClearspeakGermanRoots.prototype.testHighRoot022 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>';
-  var speech = 'die 4 Wurzel aus n';
+  var speech = 'die vierte Wurzel aus n';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1510,7 +1510,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot023 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn>' +
       '</mroot></mrow></math>';
-  var speech = 'die 5 Wurzel aus 35';
+  var speech = 'die fünfte Wurzel aus 35';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1522,7 +1522,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot024 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn>' +
       '</mroot></mrow></math>';
-  var speech = 'die 9 Wurzel aus 146';
+  var speech = 'die neunte Wurzel aus 146';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1533,7 +1533,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot024 = function() {
 sre.ClearspeakGermanRoots.prototype.testHighRoot025 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mi>d</mi><mi>n</mi></mroot></mrow></math>';
-  var speech = 'die n Wurzel aus d';
+  var speech = 'die nte Wurzel aus d';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1545,7 +1545,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot026 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi>' +
       '</mroot></mrow></math>';
-  var speech = 'die m Wurzel aus 243';
+  var speech = 'die mte Wurzel aus 243';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1557,7 +1557,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot027 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup>' +
       '</mrow><mi>i</mi></mroot></mrow></math>';
-  var speech = 'die i Wurzel aus 2 hoch i';
+  var speech = 'die ite Wurzel aus 2 hoch i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1569,7 +1569,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot028 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi>' +
       '</mroot></mrow></math>';
-  var speech = 'die j Wurzel aus 125';
+  var speech = 'die jte Wurzel aus 125';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1581,7 +1581,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot029 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>y</mi><mn>3</mn></mroot>' +
       '</mrow></math>';
-  var speech = 'negativ Kubikwurzel aus y';
+  var speech = 'minus Kubikwurzel aus y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1593,7 +1593,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot030 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot>' +
       '</mrow></math>';
-  var speech = 'negativ die 4 Wurzel aus n';
+  var speech = 'minus die vierte Wurzel aus n';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1615,7 +1615,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot031 = function() {
 sre.ClearspeakGermanRoots.prototype.testHighRoot032 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>';
-  var speech = 'die 4 Wurzel aus n, Wurzel Ende';
+  var speech = 'die vierte Wurzel aus n, Wurzel Ende';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1627,7 +1627,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot033 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn>' +
       '</mroot></mrow></math>';
-  var speech = 'die 5 Wurzel aus 35, Wurzel Ende';
+  var speech = 'die fünfte Wurzel aus 35, Wurzel Ende';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1639,7 +1639,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot034 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn>' +
       '</mroot></mrow></math>';
-  var speech = 'die 9 Wurzel aus 146, Wurzel Ende';
+  var speech = 'die neunte Wurzel aus 146, Wurzel Ende';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1650,7 +1650,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot034 = function() {
 sre.ClearspeakGermanRoots.prototype.testHighRoot035 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mi>d</mi><mi>n</mi></mroot></mrow></math>';
-  var speech = 'die n Wurzel aus d, Wurzel Ende';
+  var speech = 'die nte Wurzel aus d, Wurzel Ende';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1662,7 +1662,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot036 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi>' +
       '</mroot></mrow></math>';
-  var speech = 'die m Wurzel aus 243, Wurzel Ende';
+  var speech = 'die mte Wurzel aus 243, Wurzel Ende';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1674,7 +1674,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot037 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup>' +
       '</mrow><mi>i</mi></mroot></mrow></math>';
-  var speech = 'die i Wurzel aus 2 hoch i, Wurzel Ende';
+  var speech = 'die ite Wurzel aus 2 hoch i, Wurzel Ende';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1686,7 +1686,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot038 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi>' +
       '</mroot></mrow></math>';
-  var speech = 'die j Wurzel aus 125, Wurzel Ende';
+  var speech = 'die jte Wurzel aus 125, Wurzel Ende';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1698,7 +1698,7 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot039 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>y</mi><mn>3</mn></mroot>' +
       '</mrow></math>';
-  var speech = 'negativ Kubikwurzel aus y, Wurzel Ende';
+  var speech = 'minus Kubikwurzel aus y, Wurzel Ende';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1710,6 +1710,6 @@ sre.ClearspeakGermanRoots.prototype.testHighRoot040 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot>' +
       '</mrow></math>';
-  var speech = 'negativ die 4 Wurzel aus n, Wurzel Ende';
+  var speech = 'minus die vierte Wurzel aus n, Wurzel Ende';
   this.executeRuleTest(mathml, speech, preference);
 };

@@ -292,7 +292,7 @@ sre.ClearspeakGermanPart2Symbols.prototype.testEllipses003 = function() {
       '<mtext></mtext><mn>0</mn><mo>,</mo><mtext></mtext><mn>1</mn><mo>,' +
       '</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mo>…</mo>' +
       '</mrow></math>';
-  var speech = 'horizontale Ellipsis Komma, negativ 2, Komma, negativ 1, Komma 0 Komma 1 Komma 2 Komma horizontale Ellipsis';
+  var speech = 'horizontale Ellipsis Komma, minus 2, Komma, minus 1, Komma 0 Komma 1 Komma 2 Komma horizontale Ellipsis';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -333,7 +333,7 @@ sre.ClearspeakGermanPart2Symbols.prototype.testEllipses006 = function() {
       '<mtext></mtext><mn>0</mn><mo>,</mo><mtext></mtext><mn>1</mn><mo>,' +
       '</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mo>…</mo>' +
       '</mrow></math>';
-  var speech = 'horizontale Ellipsis Komma, negativ 2, Komma, negativ 1, Komma 0 Komma 1 Komma 2 Komma horizontale Ellipsis';
+  var speech = 'horizontale Ellipsis Komma, minus 2, Komma, minus 1, Komma 0 Komma 1 Komma 2 Komma horizontale Ellipsis';
   this.executeRuleTest(mathml, speech, preference);
 };
 

@@ -241,7 +241,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes016 = function() {
       '<mn>4</mn></mrow></msup><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>−</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo>' +
       '<mn>4</mn></mrow></msup></mrow></math>';
-  var speech = 'Klammer auf, x plus y, Klammer zu, hoch negativ 4,  , Klammer auf, x minus y, Klammer zu, hoch negativ 4';
+  var speech = 'Klammer auf, x plus y, Klammer zu, hoch minus 4,  , Klammer auf, x minus y, Klammer zu, hoch minus 4';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -767,7 +767,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes054 = function() {
       '<mn>4</mn></mrow></msup><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>−</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo>' +
       '<mn>4</mn></mrow></msup></mrow></math>';
-  var speech = 'Klammer auf, x plus y, Klammer zu, hoch negativ 4,  , Klammer auf, x minus y, Klammer zu, hoch negativ 4';
+  var speech = 'Klammer auf, x plus y, Klammer zu, hoch minus 4,  , Klammer auf, x minus y, Klammer zu, hoch minus 4';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1293,7 +1293,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimes092 = function() {
       '<mn>4</mn></mrow></msup><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>−</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo>' +
       '<mn>4</mn></mrow></msup></mrow></math>';
-  var speech = 'Klammer auf, x plus y, Klammer zu, hoch negativ 4, Klammer auf, x minus y, Klammer zu, hoch negativ 4';
+  var speech = 'Klammer auf, x plus y, Klammer zu, hoch minus 4, Klammer auf, x minus y, Klammer zu, hoch minus 4';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1772,7 +1772,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testImpTimesSilPar015 = function() {
       '<mn>4</mn></mrow></msup><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>−</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo>' +
       '<mn>4</mn></mrow></msup></mrow></math>';
-  var speech = 'Klammer auf, x plus y, Klammer zu, hoch negativ 4, Klammer auf, x minus y, Klammer zu, hoch negativ 4';
+  var speech = 'Klammer auf, x plus y, Klammer zu, hoch minus 4, Klammer auf, x minus y, Klammer zu, hoch minus 4';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1979,7 +1979,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testExtra005 = function() {
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>1' +
       '</mn></mrow><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mi>a</mi></mrow>' +
       '</math>';
-  var speech = 'a mal negativ 1, ist gleich negativ a';
+  var speech = 'a mal minus 1, ist gleich minus a';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1992,7 +1992,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testExtra006 = function() {
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>1' +
       '</mn></mrow><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mi>a</mi></mrow>' +
       '</math>';
-  var speech = 'a von negativ 1, ist gleich negativ a';
+  var speech = 'a von minus 1, ist gleich minus a';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2036,7 +2036,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testExtra009 = function() {
       '<mi>v</mi></mrow>   <mo>)</mo></mrow><mo>=</mo><mo>−</mo><mrow><mo>(' +
       '</mo>    <mrow>     <mi>u</mi><mi>v</mi></mrow>   <mo>)</mo></mrow>' +
       '</mrow>   </semantics></math>';
-  var speech = 'negativ u von v, ist gleich u von negativ v, ist gleich negativ u von v';
+  var speech = 'minus u von v, ist gleich u von minus v, ist gleich minus u von v';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2141,7 +2141,7 @@ sre.ClearspeakGermanImpliedTimes.prototype.testExtra018 = function() {
       '<mo>(</mo><mrow><msub><mi>T</mi><mn>0</mn></msub><mo>−</mo><msub>' +
       '<mi>T</mi><mi>s</mi></msub></mrow><mo>)</mo></mrow><msup><mi>e</mi>' +
       '<mrow><mo>−</mo><mi>k</mi><mi>t</mi></mrow></msup></mrow></math>';
-  var speech = 'T von t, ist gleich, T Index s, plus, Klammer auf, T Index 0, minus, T Index s, Klammer zu,   e hoch negativ k t';
+  var speech = 'T von t, ist gleich, T Index s, plus, Klammer auf, T Index 0, minus, T Index s, Klammer zu,   e hoch minus k t';
   this.executeRuleTest(mathml, speech, preference);
 };
 

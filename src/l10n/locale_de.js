@@ -312,14 +312,14 @@ sre.Grammar.getInstance().setCorrection(
 
 
 sre.Grammar.getInstance().setCorrection(
-  'article', function(name) {    
+  'article', function(name) {
     return name;
   }
 );
 
 
 sre.Grammar.getInstance().setCorrection(
-  'masculine', function(name) {    
+  'masculine', function(name) {
     return name;
   }
 );

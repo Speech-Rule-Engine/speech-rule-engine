@@ -285,7 +285,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline014 = function() {
       '</mrow></mtd></mtr><mtr><mtd><mrow><mi>x</mi><mtext>   if </mtext>' +
       '<mi>x</mi><mo>≥</mo><mn>0</mn></mrow></mtd></mtr></mtable></mrow>' +
       '</mrow></mrow></math>';
-  var speech = 'f von x, ist gleich, 2 Fälle, Fall 1: negativ x if x kleiner als 0. Fall 2: x if x größer oder gleich 0';
+  var speech = 'f von x, ist gleich, 2 Fälle, Fall 1: minus x if x kleiner als 0. Fall 2: x if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -302,7 +302,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline015 = function() {
       '<mo>&lt;</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd><mi>x</mi></mtd>' +
       '<mtd><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo><mn>0</mn></mrow>' +
       '</mtd></mtr></mtable></mrow></mrow></mrow></math>';
-  var speech = 'f von x, ist gleich, 2 Fälle, Fall 1: negativ x; if x kleiner als 0. Fall 2: x; if x größer oder gleich 0';
+  var speech = 'f von x, ist gleich, 2 Fälle, Fall 1: minus x; if x kleiner als 0. Fall 2: x; if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -319,7 +319,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline016 = function() {
       '</mrow></mtd></mtr><mtr><mtd><mrow><mi>x</mi><mtext>   if </mtext>' +
       '<mi>x</mi><mo>≥</mo><mn>0</mn></mrow></mtd></mtr></mtable></mrow>' +
       '</mrow></mrow></math>';
-  var speech = 'f von x, ist gleich, 2 Fälle, Fall 1: negativ x if x kleiner als 0. Fall 2: x if x größer oder gleich 0';
+  var speech = 'f von x, ist gleich, 2 Fälle, Fall 1: minus x if x kleiner als 0. Fall 2: x if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -336,7 +336,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline017 = function() {
       '<mo>&lt;</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd><mi>x</mi></mtd>' +
       '<mtd><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo><mn>0</mn></mrow>' +
       '</mtd></mtr></mtable></mrow></mrow></mrow></math>';
-  var speech = 'f von x, ist gleich, 2 Fälle, Fall 1: negativ x; if x kleiner als 0. Fall 2: x; if x größer oder gleich 0';
+  var speech = 'f von x, ist gleich, 2 Fälle, Fall 1: minus x; if x kleiner als 0. Fall 2: x; if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -354,7 +354,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline018 = function() {
       '<mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>x' +
       '</mi></mrow></mtd><mtd><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo>' +
       '<mn>0</mn></mrow></mtd></mtr></mtable></mrow></math>';
-  var speech = '2 Fälle, Fall 1: f von x, ist gleich negativ x; if x kleiner als 0. Fall 2: f von x, ist gleich x; if x größer oder gleich 0';
+  var speech = '2 Fälle, Fall 1: f von x, ist gleich minus x; if x kleiner als 0. Fall 2: f von x, ist gleich x; if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -555,7 +555,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline026c = function() {
       '</mrow></mtd></mtr><mtr><mtd><mrow><mi>x</mi><mtext>   if </mtext>' +
       '<mi>x</mi><mo>≥</mo><mn>0</mn></mrow></mtd></mtr></mtable></mrow>' +
       '</mrow></mrow></math>';
-  var speech = 'f von x, ist gleich, 2 Fälle, negativ x if x kleiner als 0. x if x größer oder gleich 0';
+  var speech = 'f von x, ist gleich, 2 Fälle, minus x if x kleiner als 0. x if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -700,7 +700,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline034 = function() {
       '<mo>&lt;</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd><mi>x</mi></mtd>' +
       '<mtd><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo><mn>0</mn></mrow>' +
       '</mtd></mtr></mtable></mrow></mrow></mrow></math>';
-  var speech = 'f von x, ist gleich, 2 Fälle, Fall 1: negativ x. if x kleiner als 0. Fall 2: x. if x größer oder gleich 0';
+  var speech = 'f von x, ist gleich, 2 Fälle, Fall 1: minus x. if x kleiner als 0. Fall 2: x. if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -717,7 +717,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline035 = function() {
       '<mo>&lt;</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd><mi>x</mi></mtd>' +
       '<mtd><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo><mn>0</mn></mrow>' +
       '</mtd></mtr></mtable></mrow></mrow></mrow></math>';
-  var speech = 'f von x, ist gleich, 2 Fälle, Fall 1: negativ x. if x kleiner als 0. Fall 2: x. if x größer oder gleich 0';
+  var speech = 'f von x, ist gleich, 2 Fälle, Fall 1: minus x. if x kleiner als 0. Fall 2: x. if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -735,7 +735,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline036 = function() {
       '<mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>x</mi>' +
       '</mrow></mtd><mtd><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo><mn>0' +
       '</mn></mrow></mtd></mtr></mtable></mrow></math>';
-  var speech = '2 Fälle, Fall 1: f von x, ist gleich negativ x. if x kleiner als 0. Fall 2: f von x, ist gleich x. if x größer oder gleich 0';
+  var speech = '2 Fälle, Fall 1: f von x, ist gleich minus x. if x kleiner als 0. Fall 2: f von x, ist gleich x. if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -937,7 +937,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline047 = function() {
       '<mo>&lt;</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd><mi>x</mi></mtd>' +
       '<mtd><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo><mn>0</mn></mrow>' +
       '</mtd></mtr></mtable></mrow></mrow></mrow></math>';
-  var speech = 'f von x, ist gleich, 2 Fälle, Fall 1: negativ x, if x kleiner als 0. Fall 2: x, if x größer oder gleich 0';
+  var speech = 'f von x, ist gleich, 2 Fälle, Fall 1: minus x, if x kleiner als 0. Fall 2: x, if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -954,7 +954,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline048 = function() {
       '<mo>&lt;</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd><mi>x</mi></mtd>' +
       '<mtd><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo><mn>0</mn></mrow>' +
       '</mtd></mtr></mtable></mrow></mrow></mrow></math>';
-  var speech = 'f von x, ist gleich, 2 Fälle, Fall 1: negativ x, if x kleiner als 0. Fall 2: x, if x größer oder gleich 0';
+  var speech = 'f von x, ist gleich, 2 Fälle, Fall 1: minus x, if x kleiner als 0. Fall 2: x, if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -972,7 +972,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline049 = function() {
       '<mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>x</mi>' +
       '</mrow></mtd><mtd><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo><mn>0' +
       '</mn></mrow></mtd></mtr></mtable></mrow></math>';
-  var speech = '2 Fälle, Fall 1: f von x, ist gleich negativ x, if x kleiner als 0. Fall 2: f von x, ist gleich x, if x größer oder gleich 0';
+  var speech = '2 Fälle, Fall 1: f von x, ist gleich minus x, if x kleiner als 0. Fall 2: f von x, ist gleich x, if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1235,7 +1235,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline064 = function() {
       '</mrow></mtd></mtr><mtr><mtd><mrow><mi>x</mi><mtext>   if </mtext>' +
       '<mi>x</mi><mo>≥</mo><mn>0</mn></mrow></mtd></mtr></mtable></mrow>' +
       '</mrow></mrow></math>';
-  var speech = 'f von x, ist gleich, Fall 1: negativ x if x kleiner als 0. Fall 2: x if x größer oder gleich 0';
+  var speech = 'f von x, ist gleich, Fall 1: minus x if x kleiner als 0. Fall 2: x if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1252,7 +1252,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline065 = function() {
       '<mo>&lt;</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd><mi>x</mi></mtd>' +
       '<mtd><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo><mn>0</mn></mrow>' +
       '</mtd></mtr></mtable></mrow></mrow></mrow></math>';
-  var speech = 'f von x, ist gleich, Fall 1: negativ x; if x kleiner als 0. Fall 2: x; if x größer oder gleich 0';
+  var speech = 'f von x, ist gleich, Fall 1: minus x; if x kleiner als 0. Fall 2: x; if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1269,7 +1269,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline066 = function() {
       '</mrow></mtd></mtr><mtr><mtd><mrow><mi>x</mi><mtext>   if </mtext>' +
       '<mi>x</mi><mo>≥</mo><mn>0</mn></mrow></mtd></mtr></mtable></mrow>' +
       '</mrow></mrow></math>';
-  var speech = 'f von x, ist gleich, Fall 1: negativ x if x kleiner als 0. Fall 2: x if x größer oder gleich 0';
+  var speech = 'f von x, ist gleich, Fall 1: minus x if x kleiner als 0. Fall 2: x if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1287,7 +1287,7 @@ sre.ClearspeakGermanMultiLineEntries.prototype.testMultiline067 = function() {
       '<mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>x</mi>' +
       '</mrow></mtd><mtd><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo><mn>0' +
       '</mn></mrow></mtd></mtr></mtable></mrow></math>';
-  var speech = 'Fall 1: f von x, ist gleich negativ x; if x kleiner als 0. Fall 2: f von x, ist gleich x; if x größer oder gleich 0';
+  var speech = 'Fall 1: f von x, ist gleich minus x; if x kleiner als 0. Fall 2: f von x, ist gleich x; if x größer oder gleich 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 

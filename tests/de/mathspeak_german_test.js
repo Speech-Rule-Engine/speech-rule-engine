@@ -95,9 +95,9 @@ sre.MathspeakGermanTest.prototype.testSample_1_1_3 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_1_2_1 = function() {
   var mml = '<mrow><mn>3</mn><mo>-</mo><mo>-</mo><mn>2</mn></mrow>';
-  this.executeRuleTest(mml, '3 minus negativ 2', 'default');
-  this.executeRuleTest(mml, '3 minus negativ 2', 'brief');
-  this.executeRuleTest(mml, '3 minus negativ 2', 'sbrief');
+  this.executeRuleTest(mml, '3 minus minus 2', 'default');
+  this.executeRuleTest(mml, '3 minus minus 2', 'brief');
+  this.executeRuleTest(mml, '3 minus minus 2', 'sbrief');
 };
 
 
@@ -106,9 +106,9 @@ sre.MathspeakGermanTest.prototype.testSample_1_2_1 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_1_2_2 = function() {
   var mml = '<mrow><mo>-</mo><mi>y</mi></mrow>';
-  this.executeRuleTest(mml, 'negativ y', 'default');
-  this.executeRuleTest(mml, 'negativ y', 'brief');
-  this.executeRuleTest(mml, 'negativ y', 'sbrief');
+  this.executeRuleTest(mml, 'minus y', 'default');
+  this.executeRuleTest(mml, 'minus y', 'brief');
+  this.executeRuleTest(mml, 'minus y', 'sbrief');
 };
 
 
@@ -117,9 +117,9 @@ sre.MathspeakGermanTest.prototype.testSample_1_2_2 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_1_2_3 = function() {
   var mml = '<mrow><mo>-</mo><mn>32</mn></mrow>';
-  this.executeRuleTest(mml, 'negativ 32', 'default');
-  this.executeRuleTest(mml, 'negativ 32', 'brief');
-  this.executeRuleTest(mml, 'negativ 32', 'sbrief');
+  this.executeRuleTest(mml, 'minus 32', 'default');
+  this.executeRuleTest(mml, 'minus 32', 'brief');
+  this.executeRuleTest(mml, 'minus 32', 'sbrief');
 };
 
 
@@ -233,7 +233,7 @@ sre.MathspeakGermanTest.prototype.testNegativeVsMinus = function() {
   mml = '<mrow><mo>-</mo><mfrac><mi>a</mi><mi>b</mi></mfrac></mrow>';
   this.executeRuleTest(mml, 'minus Anfang Bruch a durch b Ende Bruch', 'default');
   mml = '<mrow><mo>-</mo><mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>';
-  this.executeRuleTest(mml, 'negativ 3 ein halb', 'default');
+  this.executeRuleTest(mml, 'minus 3 ein halb', 'default');
 };
 
 
@@ -281,9 +281,9 @@ sre.MathspeakGermanTest.prototype.testSample_5_1_2 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_5_1_3 = function() {
   var mml = '<mrow><mo>-</mo><mn>1</mn></mrow>';
-  this.executeRuleTest(mml, 'negativ 1', 'default');
-  this.executeRuleTest(mml, 'negativ 1', 'brief');
-  this.executeRuleTest(mml, 'negativ 1', 'sbrief');
+  this.executeRuleTest(mml, 'minus 1', 'default');
+  this.executeRuleTest(mml, 'minus 1', 'brief');
+  this.executeRuleTest(mml, 'minus 1', 'sbrief');
 };
 
 
@@ -727,9 +727,9 @@ sre.MathspeakGermanTest.prototype.testSample_8_5_1 = function() {
  */
 sre.MathspeakGermanTest.prototype.testSample_8_5_2 = function() {
   var mml = '<msub><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub>';
-  this.executeRuleTest(mml, 'x Index negativ 1', 'default');
-  this.executeRuleTest(mml, 'x Index negativ 1', 'brief');
-  this.executeRuleTest(mml, 'x Index negativ 1', 'sbrief');
+  this.executeRuleTest(mml, 'x Index minus 1', 'default');
+  this.executeRuleTest(mml, 'x Index minus 1', 'brief');
+  this.executeRuleTest(mml, 'x Index minus 1', 'sbrief');
 };
 
 
@@ -1655,9 +1655,9 @@ sre.MathspeakGermanTest.prototype.testSample_13_1_2 = function() {
       '<mo>·</mo><msup><mi mathvariant="normal" class="MathML-Unit">s</mi>' +
       '<mrow><mo>-</mo><mn>2</mn></mrow>' +
       '</msup></mrow>';
-  this.executeRuleTest(mml, '1 Joules ist gleich 1 Kilogramm mal Meter Quadrat mal Sekunden hoch negativ 2', 'default');
-  this.executeRuleTest(mml, '1 Joules ist gleich 1 Kilogramm mal Meter Quadrat mal Sekunden hoch negativ 2', 'brief');
-  this.executeRuleTest(mml, '1 Joules ist gleich 1 Kilogramm mal Meter Quadrat mal Sekunden hoch negativ 2', 'sbrief');
+  this.executeRuleTest(mml, '1 Joules ist gleich 1 Kilogramm mal Meter Quadrat mal Sekunden hoch minus 2', 'default');
+  this.executeRuleTest(mml, '1 Joules ist gleich 1 Kilogramm mal Meter Quadrat mal Sekunden hoch minus 2', 'brief');
+  this.executeRuleTest(mml, '1 Joules ist gleich 1 Kilogramm mal Meter Quadrat mal Sekunden hoch minus 2', 'sbrief');
 };
 
 
