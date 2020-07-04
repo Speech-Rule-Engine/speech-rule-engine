@@ -4259,7 +4259,7 @@ sre.ClearspeakCharGermanTest.prototype.testClearspeakChars = function() {
 
 sre.ClearspeakCharGermanTest.prototype.testClearspeakFunctions = function() {
   this.executeCharTest('deg', ['Grad']);
-  this.executeCharTest('det', ['Determinante von']);
+  this.executeCharTest('det', ['Determinante']);
   this.executeCharTest('dim', ['Dimension']);
   this.executeCharTest('hom', ['hom']);
   this.executeCharTest('Hom', ['hom']);

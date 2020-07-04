@@ -471,7 +471,13 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       '[t] "der" (grammar:article); [n] text()',
       'self::function', '@role="prefix function"',
       'contains(@grammar, "addArticle")');
-
+  // TODO: Gender needs to be assigned on definition of the function name!
+  defineRule(
+      'function-article-fem', 'clearspeak.default',
+      '[t] "die" (grammar:article); [n] text()',
+      'self::function', '@role="prefix function"',
+      'contains(@grammar, "addArticle")',
+      'text()="det" or text()="dim" or text()="tr"');
 
   defineRule(
       'appl', 'clearspeak.default',
@@ -728,7 +734,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
 
   // Three versions for superscript:
   // Auto: hoch X (inclusive Quadrat Kubik, ie., no "hoch 2,3")
-  // Power: zur Xten Potenz
+  // OrdinalPower: zur Xten Potenz
   // Exponent: mit Exponent X
   //
   // Implementation:

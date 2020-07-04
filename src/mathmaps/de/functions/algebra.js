@@ -15,7 +15,7 @@
     "key": "det",
     "mappings": {
       "default": {
-        "default": "Determinante von"
+        "default": "Determinante"
       }
     },
     "category": "Algebra",

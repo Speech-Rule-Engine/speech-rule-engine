@@ -476,7 +476,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix026 = function(
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
       '</mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'der Determinante von von die 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5';
+  var speech = 'die Determinante von der 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -506,7 +506,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix028 = function(
       '</mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn>' +
       '</mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd>' +
       '<mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Determinante von von die 3 mal 3 Matrize. Zeile 1: 2, 4, 1 Zeile 2: 3, 5, 2 Zeile 3: 1, 4, 7';
+  var speech = 'die Determinante von der 3 mal 3 Matrize. Zeile 1: 2, 4, 1 Zeile 2: 3, 5, 2 Zeile 3: 1, 4, 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -542,7 +542,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix030 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd>' +
       '<mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Determinante von von die 4 mal 4 Matrize. Zeile 1: Spalte 1, 0; Spalte 2, 3; Spalte 3, 4; Spalte 4, 3. Zeile 2: Spalte 1, 2; Spalte 2, 1; Spalte 3, 0; Spalte 4, 9. Zeile 3: Spalte 1, 3; Spalte 2, 0; Spalte 3, 2; Spalte 4, 1. Zeile 4: Spalte 1, 6; Spalte 2, 2; Spalte 3, 9; Spalte 4, 0';
+  var speech = 'die Determinante von der 4 mal 4 Matrize. Zeile 1: Spalte 1, 0; Spalte 2, 3; Spalte 3, 4; Spalte 4, 3. Zeile 2: Spalte 1, 2; Spalte 2, 1; Spalte 3, 0; Spalte 4, 9. Zeile 3: Spalte 1, 3; Spalte 2, 0; Spalte 3, 2; Spalte 4, 1. Zeile 4: Spalte 1, 6; Spalte 2, 2; Spalte 3, 9; Spalte 4, 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -570,7 +570,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix032 = function(
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
       '</mtd><mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Determinante von von die 2 mal 2 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5 plus x';
+  var speech = 'die Determinante von der 2 mal 2 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5 plus x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -598,7 +598,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix034 = function(
       '<mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd>' +
       '</mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Determinante von von die 2 mal 2 Matrize. Zeile 1: 2 x, 1 Zeile 2: 7, 5';
+  var speech = 'die Determinante von der 2 mal 2 Matrize. Zeile 1: 2 x, 1 Zeile 2: 7, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -628,7 +628,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix036 = function(
       '</mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>' +
       '</mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Determinante von von die 2 mal 2 Matrize. Zeile 1: 2 x, y Zeile 2: ein halb, zwei drittel';
+  var speech = 'die Determinante von der 2 mal 2 Matrize. Zeile 1: 2 x, y Zeile 2: ein halb, zwei drittel';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -660,7 +660,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix038 = function(
       '<mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Determinante von von die 2 mal 2 Matrize. Zeile 1: ein halb, zwei drittel Zeile 2: drei viertel, ein fünftel';
+  var speech = 'die Determinante von der 2 mal 2 Matrize. Zeile 1: ein halb, zwei drittel Zeile 2: drei viertel, ein fünftel';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1118,7 +1118,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix068 = function(
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
       '</mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'der Determinante von von die 2 mal 2 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5';
+  var speech = 'die Determinante von der 2 mal 2 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1148,7 +1148,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix070 = function(
       '</mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn>' +
       '</mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd>' +
       '<mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Determinante von von die 3 mal 3 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 4; Spalte 3, 1. Zeile 2: Spalte 1, 3; Spalte 2, 5; Spalte 3, 2. Zeile 3: Spalte 1, 1; Spalte 2, 4; Spalte 3, 7';
+  var speech = 'die Determinante von der 3 mal 3 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 4; Spalte 3, 1. Zeile 2: Spalte 1, 3; Spalte 2, 5; Spalte 3, 2. Zeile 3: Spalte 1, 1; Spalte 2, 4; Spalte 3, 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1184,7 +1184,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix072 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd>' +
       '<mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Determinante von von die 4 mal 4 Matrize. Zeile 1: Spalte 1, 0; Spalte 2, 3; Spalte 3, 4; Spalte 4, 3. Zeile 2: Spalte 1, 2; Spalte 2, 1; Spalte 3, 0; Spalte 4, 9. Zeile 3: Spalte 1, 3; Spalte 2, 0; Spalte 3, 2; Spalte 4, 1. Zeile 4: Spalte 1, 6; Spalte 2, 2; Spalte 3, 9; Spalte 4, 0';
+  var speech = 'die Determinante von der 4 mal 4 Matrize. Zeile 1: Spalte 1, 0; Spalte 2, 3; Spalte 3, 4; Spalte 4, 3. Zeile 2: Spalte 1, 2; Spalte 2, 1; Spalte 3, 0; Spalte 4, 9. Zeile 3: Spalte 1, 3; Spalte 2, 0; Spalte 3, 2; Spalte 4, 1. Zeile 4: Spalte 1, 6; Spalte 2, 2; Spalte 3, 9; Spalte 4, 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1212,7 +1212,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix074 = function(
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
       '</mtd><mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Determinante von von die 2 mal 2 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5 plus x';
+  var speech = 'die Determinante von der 2 mal 2 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5 plus x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1240,7 +1240,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix076 = function(
       '<mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd>' +
       '</mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Determinante von von die 2 mal 2 Matrize. Zeile 1: Spalte 1, 2 x; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5';
+  var speech = 'die Determinante von der 2 mal 2 Matrize. Zeile 1: Spalte 1, 2 x; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1270,7 +1270,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix078 = function(
       '</mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>' +
       '</mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Determinante von von die 2 mal 2 Matrize. Zeile 1: Spalte 1, 2 x; Spalte 2, y. Zeile 2: Spalte 1, ein halb; Spalte 2, zwei drittel';
+  var speech = 'die Determinante von der 2 mal 2 Matrize. Zeile 1: Spalte 1, 2 x; Spalte 2, y. Zeile 2: Spalte 1, ein halb; Spalte 2, zwei drittel';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1302,7 +1302,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix080 = function(
       '<mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Determinante von von die 2 mal 2 Matrize. Zeile 1: Spalte 1, ein halb; Spalte 2, zwei drittel. Zeile 2: Spalte 1, drei viertel; Spalte 2, ein fünftel';
+  var speech = 'die Determinante von der 2 mal 2 Matrize. Zeile 1: Spalte 1, ein halb; Spalte 2, zwei drittel. Zeile 2: Spalte 1, drei viertel; Spalte 2, ein fünftel';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1706,7 +1706,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix106 = function(
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
       '</mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'der Determinante von von die 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5';
+  var speech = 'die Determinante von der 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1736,7 +1736,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix108 = function(
       '</mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn>' +
       '</mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd>' +
       '<mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Determinante von von die 3 mal 3 Matrize. Zeile 1: 2, 4, 1 Zeile 2: 3, 5, 2 Zeile 3: 1, 4, 7';
+  var speech = 'die Determinante von der 3 mal 3 Matrize. Zeile 1: 2, 4, 1 Zeile 2: 3, 5, 2 Zeile 3: 1, 4, 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1772,7 +1772,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix110 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd>' +
       '<mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Determinante von von die 4 mal 4 Matrize. Zeile 1: 0, 3, 4, 3 Zeile 2: 2, 1, 0, 9 Zeile 3: 3, 0, 2, 1 Zeile 4: 6, 2, 9, 0';
+  var speech = 'die Determinante von der 4 mal 4 Matrize. Zeile 1: 0, 3, 4, 3 Zeile 2: 2, 1, 0, 9 Zeile 3: 3, 0, 2, 1 Zeile 4: 6, 2, 9, 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1800,7 +1800,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix112 = function(
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
       '</mtd><mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Determinante von von die 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5 plus x';
+  var speech = 'die Determinante von der 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5 plus x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1828,7 +1828,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix114 = function(
       '<mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd>' +
       '</mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Determinante von von die 2 mal 2 Matrize. Zeile 1: 2 x, 1 Zeile 2: 7, 5';
+  var speech = 'die Determinante von der 2 mal 2 Matrize. Zeile 1: 2 x, 1 Zeile 2: 7, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1858,7 +1858,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix116 = function(
       '</mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>' +
       '</mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Determinante von von die 2 mal 2 Matrize. Zeile 1: 2 x, y Zeile 2: ein halb, zwei drittel';
+  var speech = 'die Determinante von der 2 mal 2 Matrize. Zeile 1: 2 x, y Zeile 2: ein halb, zwei drittel';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1890,7 +1890,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix118 = function(
       '<mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Determinante von von die 2 mal 2 Matrize. Zeile 1: ein halb, zwei drittel Zeile 2: drei viertel, ein fünftel';
+  var speech = 'die Determinante von der 2 mal 2 Matrize. Zeile 1: ein halb, zwei drittel Zeile 2: drei viertel, ein fünftel';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2296,7 +2296,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix145 = function(
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
       '</mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'der Determinante von von die 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5. Ende Matrize';
+  var speech = 'die Determinante von der 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5. Ende Matrize';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2326,7 +2326,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix147 = function(
       '</mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn>' +
       '</mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd>' +
       '<mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Determinante von von die 3 mal 3 Matrize. Zeile 1: 2, 4, 1 Zeile 2: 3, 5, 2 Zeile 3: 1, 4, 7. Ende Matrize';
+  var speech = 'die Determinante von der 3 mal 3 Matrize. Zeile 1: 2, 4, 1 Zeile 2: 3, 5, 2 Zeile 3: 1, 4, 7. Ende Matrize';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2362,7 +2362,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix149 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd>' +
       '<mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Determinante von von die 4 mal 4 Matrize. Zeile 1: Spalte 1, 0; Spalte 2, 3; Spalte 3, 4; Spalte 4, 3. Zeile 2: Spalte 1, 2; Spalte 2, 1; Spalte 3, 0; Spalte 4, 9. Zeile 3: Spalte 1, 3; Spalte 2, 0; Spalte 3, 2; Spalte 4, 1. Zeile 4: Spalte 1, 6; Spalte 2, 2; Spalte 3, 9; Spalte 4, 0. Ende Matrize';
+  var speech = 'die Determinante von der 4 mal 4 Matrize. Zeile 1: Spalte 1, 0; Spalte 2, 3; Spalte 3, 4; Spalte 4, 3. Zeile 2: Spalte 1, 2; Spalte 2, 1; Spalte 3, 0; Spalte 4, 9. Zeile 3: Spalte 1, 3; Spalte 2, 0; Spalte 3, 2; Spalte 4, 1. Zeile 4: Spalte 1, 6; Spalte 2, 2; Spalte 3, 9; Spalte 4, 0. Ende Matrize';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2390,7 +2390,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix151 = function(
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
       '</mtd><mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Determinante von von die 2 mal 2 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5 plus x. Ende Matrize';
+  var speech = 'die Determinante von der 2 mal 2 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5 plus x. Ende Matrize';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2418,7 +2418,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix153 = function(
       '<mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd>' +
       '</mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Determinante von von die 2 mal 2 Matrize. Zeile 1: 2 x, 1 Zeile 2: 7, 5. Ende Matrize';
+  var speech = 'die Determinante von der 2 mal 2 Matrize. Zeile 1: 2 x, 1 Zeile 2: 7, 5. Ende Matrize';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2448,7 +2448,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix155 = function(
       '</mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>' +
       '</mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Determinante von von die 2 mal 2 Matrize. Zeile 1: 2 x, y Zeile 2: ein halb, zwei drittel. Ende Matrize';
+  var speech = 'die Determinante von der 2 mal 2 Matrize. Zeile 1: 2 x, y Zeile 2: ein halb, zwei drittel. Ende Matrize';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2480,7 +2480,7 @@ sre.ClearspeakGermanMatricesAndCombinatorics.prototype.testMatrix157 = function(
       '<mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'der Determinante von von die 2 mal 2 Matrize. Zeile 1: ein halb, zwei drittel Zeile 2: drei viertel, ein fünftel. Ende Matrize';
+  var speech = 'die Determinante von der 2 mal 2 Matrize. Zeile 1: ein halb, zwei drittel Zeile 2: drei viertel, ein fünftel. Ende Matrize';
   this.executeRuleTest(mathml, speech, preference);
 };
 

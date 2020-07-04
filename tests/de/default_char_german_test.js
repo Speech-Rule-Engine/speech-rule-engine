@@ -4259,7 +4259,7 @@ sre.DefaultCharGermanTest.prototype.testDefaultChars = function() {
 
 sre.DefaultCharGermanTest.prototype.testDefaultFunctions = function() {
   this.executeCharTest('deg', ['Grad']);
-  this.executeCharTest('det', ['Determinante von']);
+  this.executeCharTest('det', ['Determinante']);
   this.executeCharTest('dim', ['Dimension']);
   this.executeCharTest('hom', ['Homomorphismus']);
   this.executeCharTest('Hom', ['Homomorphismus']);

@@ -4259,7 +4259,7 @@ sre.MathspeakCharGermanTest.prototype.testMathspeakChars = function() {
 
 sre.MathspeakCharGermanTest.prototype.testMathspeakFunctions = function() {
   this.executeCharTest('deg', ['Grad', 'Grad', 'Grad']);
-  this.executeCharTest('det', ['Determinante von', 'Determinante von', 'Determinante von']);
+  this.executeCharTest('det', ['Determinante', 'Determinante', 'Determinante']);
   this.executeCharTest('dim', ['Dimension', 'Dimension', 'Dimension']);
   this.executeCharTest('hom', ['hom', 'hom', 'hom']);
   this.executeCharTest('Hom', ['hom', 'hom', 'hom']);

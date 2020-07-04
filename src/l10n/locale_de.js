@@ -313,6 +313,10 @@ sre.Grammar.getInstance().setCorrection(
 
 sre.Grammar.getInstance().setCorrection(
   'article', function(name) {
+    let decl = sre.Grammar.getInstance().getParameter('case');
+    if (decl === 'dative') {
+      return {'der': 'dem', 'die': 'der', 'das': 'dem'}[name];
+    }
     return name;
   }
 );
@@ -320,6 +324,10 @@ sre.Grammar.getInstance().setCorrection(
 
 sre.Grammar.getInstance().setCorrection(
   'masculine', function(name) {
+    let decl = sre.Grammar.getInstance().getParameter('case');
+    if (decl === 'dative') {
+      return name + 'n';
+    }
     return name;
   }
 );
