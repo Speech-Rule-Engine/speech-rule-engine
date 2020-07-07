@@ -568,7 +568,8 @@ sre.SemanticProcessor.prototype.appendMultiplicativeOp_ = function(
   }
   var lastRoot = root;
   var lastChild = root.childNodes[root.childNodes.length - 1];
-  while (lastChild && lastChild.type === sre.SemanticAttr.Type.INFIXOP) {
+  while (lastChild && lastChild.type === sre.SemanticAttr.Type.INFIXOP
+         && !sre.SemanticPred.isImplicit(lastChild)) {
     lastRoot = lastChild;
     lastChild = lastRoot.childNodes[root.childNodes.length - 1];
   }
