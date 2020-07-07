@@ -12906,3 +12906,30 @@ sre.SemanticTreeTest.prototype.testStreeVulgarFractions = function() {
       '</fraction>'
   );
 };
+
+
+/**
+ * Issue 376: Division treated similar to multiplication. 
+ */
+sre.SemanticTreeTest.prototype.testIssue376 = function() {
+  this.executeTreeTest(
+      '<mn>2</mn><mo>+</mo><mn>27</mn><mo>÷</mo><mn>9</mn>',
+      '<infixop role="addition" id="5">+' +
+      '<content>' +
+      '<operator role="addition" id="1">+</operator>' +
+      '</content>' +
+      '<children>' +
+      '<number role="integer" font="normal" id="0">2</number>' +
+      '<infixop role="division" id="6">÷' +
+      '<content>' +
+      '<operator role="division" id="3">÷</operator>' +
+      '</content>' +
+      '<children>' +
+      '<number role="integer" font="normal" id="2">27</number>' +
+      '<number role="integer" font="normal" id="4">9</number>' +
+      '</children>' +
+      '</infixop>' +
+      '</children>' +
+      '</infixop>'
+  );
+};
