@@ -71,6 +71,12 @@ sre.Numbers.es.largeNumbers_ = [
 ];
 
 
+/**
+ * Turns a tens position in a number into words.
+ * @param {number} number The number to translate.
+ * @return {string} The word for the tens position.
+ * @private
+ */
 sre.Numbers.es.tensToWords_ = function(number) {
   var n = number % 100;
   if (n < 30) {
@@ -91,7 +97,7 @@ sre.Numbers.es.tensToWords_ = function(number) {
 sre.Numbers.es.hundredsToWords_ = function(number) {
   var n = number % 1000;
   var hundred = Math.floor(n / 100);
-  var hundreds =  sre.Numbers.es.hundredsNumbers_[hundred];
+  var hundreds = sre.Numbers.es.hundredsNumbers_[hundred];
   var tens = sre.Numbers.es.tensToWords_(n % 100);
   if (hundred === 1) {
     if (!tens) {
@@ -128,7 +134,7 @@ sre.Numbers.es.numberToWords = function(number) {
       } else {
         large = large.replace(/ón$/, 'ones');
         str = sre.Numbers.es.hundredsToWords_(hundreds) + ' ' + large +
-          (str ? ' ' + str : '');
+            (str ? ' ' + str : '');
       }
     }
     number = Math.floor(number / 1000);
@@ -228,6 +234,9 @@ sre.Numbers.es.simpleOrdinal = function(number) {
 };
 
 
+/**
+ * @type {sre.Numbers}
+ */
 sre.Numbers.es.NUMBERS = {
   // wordOrdinal: sre.Numbers.es.wordOrdinal,
   simpleOrdinal: sre.Numbers.es.simpleOrdinal,

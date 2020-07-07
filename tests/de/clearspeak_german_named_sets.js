@@ -56,7 +56,7 @@ goog.inherits(sre.ClearspeakGermanNamedSets, sre.ClearspeakGermanRuleTest);
 sre.ClearspeakGermanNamedSets.prototype.testNumSys001 = function() {
   var preference = 'default';
   var mathml = '<mi>ℝ</mi>';
-  var speech = 'les nombres réels';
+  var speech = 'die reellen Zahlen';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -67,7 +67,7 @@ sre.ClearspeakGermanNamedSets.prototype.testNumSys001 = function() {
 sre.ClearspeakGermanNamedSets.prototype.testNumSys001a = function() {
   var preference = 'default';
   var mathml = '<mi mathvariant="double-struck">R</mi>';
-  var speech = 'les nombres réels';
+  var speech = 'die reellen Zahlen';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -78,7 +78,7 @@ sre.ClearspeakGermanNamedSets.prototype.testNumSys001a = function() {
 sre.ClearspeakGermanNamedSets.prototype.testNumSys002 = function() {
   var preference = 'default';
   var mathml = '<mi>ℂ</mi>';
-  var speech = 'les nombres complexes';
+  var speech = 'die komplexen Zahlen';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -89,7 +89,7 @@ sre.ClearspeakGermanNamedSets.prototype.testNumSys002 = function() {
 sre.ClearspeakGermanNamedSets.prototype.testNumSys003 = function() {
   var preference = 'default';
   var mathml = '<mi>ℤ</mi>';
-  var speech = 'les nombres entiers';
+  var speech = 'die ganzen Zahlen';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -100,7 +100,7 @@ sre.ClearspeakGermanNamedSets.prototype.testNumSys003 = function() {
 sre.ClearspeakGermanNamedSets.prototype.testNumSys004 = function() {
   var preference = 'default';
   var mathml = '<mi>ℚ</mi>';
-  var speech = 'les Nombres rationnels';
+  var speech = 'die rationalen Zahlen';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -111,7 +111,7 @@ sre.ClearspeakGermanNamedSets.prototype.testNumSys004 = function() {
 sre.ClearspeakGermanNamedSets.prototype.testNumSys005 = function() {
   var preference = 'default';
   var mathml = '<mi>ℕ</mi>';
-  var speech = 'les nombres entier naturel';
+  var speech = 'die natürlichen Zahlen';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -122,7 +122,7 @@ sre.ClearspeakGermanNamedSets.prototype.testNumSys005 = function() {
 sre.ClearspeakGermanNamedSets.prototype.testNumSys005a = function() {
   var preference = 'default';
   var mathml = '<msub><mi>ℕ</mi><mn>0</mn></msub>';
-  var speech = 'les nombres entiers naturel avec zero';
+  var speech = 'die natürlichen Zahlen mit Null';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -133,7 +133,7 @@ sre.ClearspeakGermanNamedSets.prototype.testNumSys005a = function() {
 sre.ClearspeakGermanNamedSets.prototype.testNumSys006 = function() {
   var preference = 'default';
   var mathml = '<mrow><msup><mi>ℤ</mi><mo>+</mo></msup></mrow>';
-  var speech = 'les nombres entiers positif';
+  var speech = 'die positiven ganzen Zahlen';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -144,7 +144,7 @@ sre.ClearspeakGermanNamedSets.prototype.testNumSys006 = function() {
 sre.ClearspeakGermanNamedSets.prototype.testNumSys006a = function() {
   var preference = 'default';
   var mathml = '<mrow><msup><mi>ℤ</mi><mo>-</mo></msup></mrow>';
-  var speech = 'les nombres entiers négatif';
+  var speech = 'die negativen ganzen Zahlen';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -155,7 +155,7 @@ sre.ClearspeakGermanNamedSets.prototype.testNumSys006a = function() {
 sre.ClearspeakGermanNamedSets.prototype.testNumSys007 = function() {
   var preference = 'default';
   var mathml = '<mrow><msup><mi>ℝ</mi><mn>2</mn></msup></mrow>';
-  var speech = 'r-deux';
+  var speech = 'r-zwei';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -166,7 +166,7 @@ sre.ClearspeakGermanNamedSets.prototype.testNumSys007 = function() {
 sre.ClearspeakGermanNamedSets.prototype.testNumSys008 = function() {
   var preference = 'default';
   var mathml = '<mrow><msup><mi>ℤ</mi><mn>3</mn></msup></mrow>';
-  var speech = 'z-trois';
+  var speech = 'z-drei';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -188,6 +188,6 @@ sre.ClearspeakGermanNamedSets.prototype.testNumSys009 = function() {
 sre.ClearspeakGermanNamedSets.prototype.testNumSys010 = function() {
   var preference = 'default';
   var mathml = '<mrow><msup><mi>ℝ</mi><mi>∞</mi></msup></mrow>';
-  var speech = 'r-infini';
+  var speech = 'r-unendlich';
   this.executeRuleTest(mathml, speech, preference);
 };

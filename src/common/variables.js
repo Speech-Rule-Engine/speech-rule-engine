@@ -33,7 +33,7 @@ sre.Variables = function() {};
  * @const
  * @type {string}
  */
-sre.Variables.VERSION = '3.0.0-beta.10';
+sre.Variables.VERSION = '3.1.0-beta.1';
 
 
 /**
@@ -67,6 +67,6 @@ sre.Variables.url = 'https://cdn.jsdelivr.net/npm/speech-rule-engine@' +
  * @type {string}
  */
 sre.Variables.WGXpath =
-  'https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js';
+    'https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js';
 
 

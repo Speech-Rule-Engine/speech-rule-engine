@@ -86,18 +86,13 @@ sre.SemanticProcessor.prototype.identifierNode = function(content, font, unit) {
 
 
 /**
- * Create a branching node for an implicit operation, currently assumed to
- * be of multiplicative type.
+ * Create a branching node for an implicit operation, currently assumed to be of
+ * multiplicative type. Determines mixed numbers and unit elements.
  * @param {!Array.<!sre.SemanticNode>} nodes The operands.
  * @return {!sre.SemanticNode} The new branch node.
  * @private
  */
 sre.SemanticProcessor.prototype.implicitNode_ = function(nodes) {
-  nodes = sre.SemanticProcessor.getInstance().getMixedNumbers_(nodes);
-  nodes = sre.SemanticProcessor.getInstance().combineUnits_(nodes);
-  if (nodes.length === 1) {
-    return nodes[0];
-  }
   var operators = sre.SemanticProcessor.getInstance().factory_.
       makeMultipleContentNodes(nodes.length - 1,
                                sre.SemanticAttr.invisibleTimes());
@@ -108,6 +103,23 @@ sre.SemanticProcessor.prototype.implicitNode_ = function(nodes) {
   operators.forEach(function(op) {op.parent = newNode;});
   newNode.contentNodes = operators;
   return newNode;
+};
+
+
+/**
+ * Process a list of nodes and create a node for implicit operations, currently
+ * assumed to be of multiplicative type. Determines mixed numbers and unit
+ * elements.
+ * @param {!Array.<!sre.SemanticNode>} nodes The operands.
+ * @return {!sre.SemanticNode} The new branch node.
+ */
+sre.SemanticProcessor.prototype.implicitNode = function(nodes) {
+  nodes = sre.SemanticProcessor.getInstance().getMixedNumbers_(nodes);
+  nodes = sre.SemanticProcessor.getInstance().combineUnits_(nodes);
+  if (nodes.length === 1) {
+    return nodes[0];
+  }
+  return sre.SemanticProcessor.getInstance().implicitNode_(nodes);
 };
 
 
@@ -280,16 +292,24 @@ sre.SemanticProcessor.prototype.combineUnits_ = function(nodes) {
   do {
     var comp = partition.comp.shift();
     var rel = partition.rel.shift();
+    var unitNode = null;
+    var last = result.pop();
+    if (last) {
+      if (!comp.length || !sre.SemanticPred.isUnitCounter(last)) {
+        result.push(last);
+      } else {
+        comp.unshift(last);
+      }
+    }
     if (comp.length === 1) {
-      result = result.concat(comp);
+      unitNode = comp.pop();
     }
     if (comp.length > 1) {
-      var operator = sre.SemanticProcessor.getInstance().factory_.
-          makeContentNode(sre.SemanticAttr.invisibleTimes());
       // For now we assume this is a multiplication using invisible times.
-      var unitNode = sre.SemanticProcessor.getInstance().
-          infixNode_(comp, operator);
+      unitNode = sre.SemanticProcessor.getInstance().implicitNode_(comp);
       unitNode.role = sre.SemanticAttr.Role.UNIT;
+    }
+    if (unitNode) {
       result.push(unitNode);
     }
     if (rel) {
@@ -438,7 +458,7 @@ sre.SemanticProcessor.prototype.operationsInRow_ = function(nodes) {
       nodes, sre.SemanticPred.isOperator);
   // At this point, we know that split.head is not empty!
   var node = sre.SemanticProcessor.getInstance().prefixNode_(
-      sre.SemanticProcessor.getInstance().implicitNode_(
+      sre.SemanticProcessor.getInstance().implicitNode(
           /** @type {!Array.<!sre.SemanticNode>} */ (split.head)),
       prefix);
   if (!split.div) {
@@ -491,7 +511,7 @@ sre.SemanticProcessor.prototype.operationsTree_ = function(
   }
 
   var node = sre.SemanticProcessor.getInstance().prefixNode_(
-      sre.SemanticProcessor.getInstance().implicitNode_(split.head), prefixes);
+      sre.SemanticProcessor.getInstance().implicitNode(split.head), prefixes);
   var newNode = sre.SemanticProcessor.getInstance().appendOperand_(
       root, lastop, node);
   if (!split.div) {
@@ -542,7 +562,7 @@ sre.SemanticProcessor.prototype.appendMultiplicativeOp_ = function(
     root, op, node) {
   // This ensures that implicit nodes stay together, which is probably what
   // we want.
-  if (root.role === sre.SemanticAttr.Role.IMPLICIT) {
+  if (sre.SemanticPred.isImplicit(root)) {
     return sre.SemanticProcessor.getInstance().infixNode_([root, node], op);
   }
   var lastRoot = root;
@@ -585,7 +605,7 @@ sre.SemanticProcessor.prototype.appendExistingOperator_ = function(
   if (!root || root.type !== sre.SemanticAttr.Type.INFIXOP ||
       // This ensures that implicit nodes stay together, which is probably what
       // we want.
-      root.role === sre.SemanticAttr.Role.IMPLICIT) {
+      sre.SemanticPred.isImplicit(root)) {
     return false;
   }
   if (root.contentNodes[0].equals(op)) {
@@ -991,10 +1011,43 @@ sre.SemanticProcessor.prototype.getPunctuationInRow_ = function(nodes) {
   if (nodes.length <= 1) {
     return nodes;
   }
+  var allowedType = function(x) {
+    var type = x.type;
+    return type === 'punctuation' || type === 'text' ||
+        type === 'operator' || type === 'relation';
+  };
+  // Partition with improved ellipses handling.
   var partition = sre.SemanticProcessor.partitionNodes_(
       nodes, function(x) {
-        return sre.SemanticPred.isPunctuation(x) &&
-            !sre.SemanticPred.isAttribute('role', 'ELLIPSIS')(x);});
+        if (!sre.SemanticPred.isPunctuation(x)) {
+          return false;
+        }
+        if (sre.SemanticPred.isPunctuation(x) &&
+            !sre.SemanticPred.isAttribute('role', 'ELLIPSIS')(x)) {
+          return true;
+        }
+        var index = nodes.indexOf(x);
+        if (index === 0) {
+          if (nodes[1] && allowedType(nodes[1])) {
+            return false;
+          }
+          return true;
+        }
+        // We now know the previous element exists
+        var prev = nodes[index - 1];
+        if (index === nodes.length - 1) {
+          if (allowedType(prev)) {
+            return false;
+          }
+          return true;
+        }
+        // We now know the next element exists
+        var next = nodes[index + 1];
+        if (allowedType(prev) && allowedType(next)) {
+          return false;
+        }
+        return true;
+      });
   if (partition.rel.length === 0) {
     return nodes;
   }
@@ -1342,10 +1395,10 @@ sre.SemanticProcessor.prototype.getFunctionArgs_ = function(
         }
       }
       // TODO: (simons) If we have a prefix/simple function or implicit with
-      //       prefix/simple function children only (i.e., a function composition)
-      //       then we combine them via a function composition. Function
-      //       composition is currently implicit, but we might want to remember
-      //       this a bit better.
+      //       prefix/simple function children only (i.e., a function
+      //       composition) then we combine them via a function
+      //       composition. Function composition is currently implicit, but we
+      //       might want to remember this a bit better.
       funcNode = sre.SemanticProcessor.getInstance().functionNode_(func, arg);
       partition.tail.unshift(funcNode);
       return partition.tail;
@@ -1877,7 +1930,7 @@ sre.SemanticProcessor.partitionNodes_ = function(nodes, pred) {
 sre.SemanticProcessor.prototype.mfenced = function(
     open, close, sepValue, children) {
   if (sepValue && children.length > 0) {
-    var separators = sre.MathUtil.nextSeparatorFunction(sepValue);
+    var separators = sre.SemanticProcessor.nextSeparatorFunction_(sepValue);
     var newChildren = [children.shift()];
     children.forEach(goog.bind(function(child) {
       newChildren.push(sre.SemanticProcessor.getInstance().factory_.
@@ -1907,6 +1960,42 @@ sre.SemanticProcessor.prototype.mfenced = function(
         makeContentNode(close));
   }
   return sre.SemanticProcessor.getInstance().row(children);
+};
+
+
+/**
+ * Constructs a closure that returns separators for an MathML mfenced
+ * expression.
+ * Separators in MathML are represented by a list and used up one by one
+ * until the final element is used as the default.
+ * Example: a b c d e  and separators [+,-,*]
+ * would result in a + b - c * d * e.
+ * @param {string} separators String representing a list of mfenced separators.
+ * @return {?function(): string} A closure that returns the next separator
+ * for an mfenced expression starting with the first node in nodes.
+ * @private
+ */
+sre.SemanticProcessor.nextSeparatorFunction_ = function(separators) {
+  if (separators) {
+    // Mathjax does not expand empty separators.
+    if (separators.match(/^\s+$/)) {
+      return null;
+    } else {
+      var sepList = separators.replace(/\s/g, '')
+          .split('')
+              .filter(function(x) {return x;});
+    }
+  } else {
+    // When no separator is given MathML uses comma as default.
+    var sepList = [','];
+  }
+
+  return function() {
+    if (sepList.length > 1) {
+      return sepList.shift();
+    }
+    return sepList[0];
+  };
 };
 
 
@@ -1985,14 +2074,15 @@ sre.SemanticProcessor.exprFont_ = function(node) {
 
 /**
  * Creates a fraction node with the appropriate role.
- * @param {string} linethickness The line thickness attribute value.
  * @param {!sre.SemanticNode} denom The denominator node.
  * @param {!sre.SemanticNode} enume The enumerator node.
+ * @param {string} linethickness The line thickness attribute value.
+ * @param {boolean} bevelled Is it a bevelled fraction?
  * @return {!sre.SemanticNode} The new fraction node.
  */
 sre.SemanticProcessor.prototype.fractionLikeNode = function(
-    linethickness, denom, enume) {
-  if (sre.SemanticUtil.isZeroLength(linethickness)) {
+    denom, enume, linethickness, bevelled) {
+  if (!bevelled && sre.SemanticUtil.isZeroLength(linethickness)) {
     var child0 = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
         sre.SemanticAttr.Type.LINE, [denom], []);
     var child1 = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
@@ -2005,7 +2095,11 @@ sre.SemanticProcessor.prototype.fractionLikeNode = function(
     // return sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
     //     sre.SemanticAttr.Type.MULTILINE, [child0, child1], []);
   } else {
-    return sre.SemanticProcessor.getInstance().fractionNode_(denom, enume);
+    node = sre.SemanticProcessor.getInstance().fractionNode_(denom, enume);
+    if (bevelled) {
+      node.addAnnotation('general', 'bevelled');
+    }
+    return node;
   }
 };
 
@@ -2024,9 +2118,8 @@ sre.SemanticProcessor.prototype.fractionNode_ = function(denom, enume) {
     return sre.SemanticPred.isAttribute('type', 'NUMBER')(x) &&
         sre.SemanticPred.isAttribute('role', 'INTEGER')(x);
   }) ? sre.SemanticAttr.Role.VULGAR :
-      newNode.childNodes.every(function(x) {
-        return sre.SemanticPred.isAttribute('role', 'UNIT')(x);
-      }) ? sre.SemanticAttr.Role.UNIT : sre.SemanticAttr.Role.DIVISION;
+    newNode.childNodes.every(sre.SemanticPred.isPureUnit) ?
+    sre.SemanticAttr.Role.UNIT : sre.SemanticAttr.Role.DIVISION;
   this.propagateSimpleFunction(newNode);
   return newNode;
 };
@@ -2536,10 +2629,12 @@ sre.SemanticProcessor.prototype.inference = function(node, semantics, parse) {
   var children = sre.DomUtil.toArray(node.childNodes);
   var content = [];
   if (label === 'left' || label === 'both') {
-    content.push(this.getLabel(node, children, parse, sre.SemanticAttr.Role.LEFT));
+    content.push(
+        this.getLabel(node, children, parse, sre.SemanticAttr.Role.LEFT));
   }
   if (label === 'right' || label === 'both') {
-    content.push(this.getLabel(node, children, parse, sre.SemanticAttr.Role.RIGHT));
+    content.push(
+        this.getLabel(node, children, parse, sre.SemanticAttr.Role.RIGHT));
   }
   var formulas = this.getFormulas(node, children, parse);
   var inference = this.factory_.makeBranchNode(
@@ -2560,7 +2655,8 @@ sre.SemanticProcessor.prototype.inference = function(node, semantics, parse) {
  * @param {string} side The side the label is on.
  * @return {!sre.SemanticNode} The semantic node for the label.
  */
-sre.SemanticProcessor.prototype.getLabel = function(node, children, parse, side) {
+sre.SemanticProcessor.prototype.getLabel = function(
+    node, children, parse, side) {
   var label = this.findNestedRow(children, 'prooflabel', side);
   var sem = this.factory_.makeBranchNode(
       sre.SemanticAttr.Type.RULELABEL,
@@ -2614,8 +2710,8 @@ sre.SemanticProcessor.prototype.getFormulas = function(node, children, parse) {
  * @param {Array.<Element>} nodes A node list.
  * @param {string} semantic A semantic key.
  * @param {string=} opt_value Optionally the semantic value.
- * @return {Element} The first element in that row that contains the semantic key
- *     (and has its value if the latter is given.)
+ * @return {Element} The first element in that row that contains the semantic
+ *     key (and has its value if the latter is given.)
  */
 sre.SemanticProcessor.prototype.findNestedRow = function(
     nodes, semantic, opt_value) {
@@ -2632,6 +2728,7 @@ sre.SemanticProcessor.prototype.findNestedRow = function(
  * @param {number} level The maximum level to search.
  * @param {string|undefined} value Optionally the semantic value.
  * @return {Element} The first matching element in the row.
+ * @private
  */
 sre.SemanticProcessor.prototype.findNestedRow_ = function(
     nodes, semantic, level, value) {

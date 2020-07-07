@@ -127,7 +127,8 @@ sre.NumbersUtil.vulgarFractionSmall = function(node, enumer, denom) {
  */
 sre.NumbersUtil.ordinalPosition = function(node) {
   var children = sre.DomUtil.toArray(node.parentNode.childNodes);
-  return sre.Messages.NUMBERS.simpleOrdinal(children.indexOf(node) + 1).toString();
+  return sre.Messages.NUMBERS.simpleOrdinal(
+      children.indexOf(node) + 1).toString();
 };
 
 

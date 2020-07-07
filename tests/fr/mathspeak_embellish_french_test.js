@@ -43,11 +43,6 @@ sre.MathspeakEmbellishFrenchTest = function() {
   /**
    * @override
    */
-  this.semantics = true;
-
-  /**
-   * @override
-   */
   this.locale = 'fr';
 
   this.setActive('EmbellishedSymbolsFrench');

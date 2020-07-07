@@ -6,7 +6,11 @@
     "key": "00B2",
     "mappings": {
       "default": {
-        "default": "zum Quadrat"
+        "default": "Quadrat"
+      },
+      "clearspeak": {
+        "Exponent_Exponent": "mit Exponent 2",
+        "Exponent_OrdinalPower": "zur zweiten Potenz"
       }
     },
     "category": "No"
@@ -15,7 +19,11 @@
     "key": "00B3",
     "mappings": {
       "default": {
-        "default": "hoch drei"
+        "default": "Kubik"
+      },
+      "clearspeak": {
+        "Exponent_Exponent": "mit Exponent 3",
+        "Exponent_OrdinalPower": "zur dritten Potenz"
       }
     },
     "category": "No"

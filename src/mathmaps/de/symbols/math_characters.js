@@ -34,7 +34,7 @@
     "key": "213D",
     "mappings": {
       "default": {
-        "default": "kleines gamma mit Doppelstrich"
+        "default": "gamma mit Doppelstrich"
       }
     }
   },
@@ -76,6 +76,33 @@
   },
   {
     "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "d kursiv mit Doppelstrich"
+      }
+    },
+    "key": "2146"
+  },
+  {
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "e kursiv mit Doppelstrich"
+      }
+    },
+    "key": "2147"
+  },
+  {
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "i kursiv mit Doppelstrich"
+      }
+    },
+    "key": "2148"
+  },
+  {
+    "category": "Ll",
     "key": "2149",
     "mappings": {
       "default": {
@@ -88,7 +115,7 @@
     "key": "1D6A4",
     "mappings": {
       "default": {
-        "default": "kursiv kleines punktloses i"
+        "default": "punktloses i kursiv"
       }
     }
   },
@@ -97,7 +124,7 @@
     "key": "1D6A5",
     "mappings": {
       "default": {
-        "default": "kursiv kleines punktloses j"
+        "default": "punktloses j kursiv"
       }
     }
   }

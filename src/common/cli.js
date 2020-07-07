@@ -66,8 +66,7 @@ sre.Cli = function() {
  * @param {string} def The default for the option.
  */
 sre.Cli.prototype.set = function(arg, value, def) {
-  this.setup[arg] = typeof value === 'undefined' ?
-      ((arg === 'semantics') ? false : true) : value;
+  this.setup[arg] = typeof value === 'undefined' ? true : value;
 };
 
 
@@ -112,7 +111,8 @@ sre.Cli.prototype.enumerate = function() {
         let styles = Object.keys(dyna2[ax3]).sort();
         if (ax3 === 'clearspeak') {
           var clear3 = true;
-          var prefs = sre.ClearspeakPreferences.getLocalePreferences(dynamic)[ax1];
+          var prefs =
+              sre.ClearspeakPreferences.getLocalePreferences(dynamic)[ax1];
           for (var ax4 in prefs) {
             table.push([compStr(clear1 ? ax1 : '', length[0]),
                         compStr(clear2 ? ax2 : '', length[1]),
@@ -264,8 +264,6 @@ sre.Cli.prototype.commandLine = function() {
       option('-b, --modality [name]', 'Modality [name].',
              set(sre.DynamicCstr.Axis.MODALITY),
              sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY]).
-      option('-s, --semantics', 'Switch OFF semantics interpretation. (Deprecated)',
-             set('semantics')).
       option('-k, --markup [name]', 'Generate speech output with markup tags.',
              set('markup'), 'none').
       option('-r, --rate [value]', 'Base rate [value] for tagged speech' +
@@ -285,7 +283,7 @@ sre.Cli.prototype.commandLine = function() {
       option('-g, --generate <depth>', 'Include generated speech in enriched' +
              ' MathML (with -m option only).', set('speech'), 'none').
       option('-w, --structure', 'Include structure attribute in enriched' +
-             ' MathML (with -m option only).', set, 'structure').
+             ' MathML (with -m option only).', set('structure')).
       option('').
       option('-P, --pprint', 'Pretty print output whenever possible.',
              set('pprint')).

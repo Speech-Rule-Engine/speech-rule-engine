@@ -44,11 +44,6 @@ sre.NobleFrenchTest = function() {
   /**
    * @override
    */
-  this.semantics = true;
-
-  /**
-   * @override
-   */
   this.locale = 'fr';
 
   this.setActive('NobleSamplesFrench');

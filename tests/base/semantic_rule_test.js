@@ -35,16 +35,6 @@ sre.SemanticRuleTest = function() {
    */
   this.information = 'Semantic rule tests.';
 
-  /**
-   * @override
-   */
-  this.style = 'short';
-
-  /**
-   * @override
-   */
-  this.semantics = true;
-
   this.setActive('SemanticTreeRules');
 };
 goog.inherits(sre.SemanticRuleTest, sre.AbstractRuleTest);
@@ -88,7 +78,7 @@ sre.SemanticRuleTest.prototype.testUnitsSimple = function() {
   );
   this.executeRuleTest(
       '<mn>3</mn><mi mathvariant="normal" class="MathML-Unit">km</mi>',
-      'three times kilometers');
+      'three kilometers');
   this.executeRuleTest(
       '<mi mathvariant="normal" class="MathML-Unit">km</mi>' +
       '<mo>+</mo><mi mathvariant="normal" class="MathML-Unit">s</mi>',
@@ -134,7 +124,7 @@ sre.SemanticRuleTest.prototype.testUnitsSuperscript = function() {
   this.executeRuleTest(
       '<mn>3</mn><msup><mi mathvariant="normal" class="MathML-Unit">m</mi>' +
       '<mrow><mo>-</mo><mn>1</mn></mrow></msup>',
-      'three times reciprocal meters');
+      'three reciprocal meters');
   this.executeRuleTest(
       '<mfrac><mi mathvariant="normal" class="MathML-Unit">km</mi>' +
       '<mi mathvariant="normal" class="MathML-Unit">h</mi></mfrac>',
@@ -151,7 +141,7 @@ sre.SemanticRuleTest.prototype.testUnitsSuperscript = function() {
   this.executeRuleTest(
       '<mn>3</mn><mi mathvariant="normal" class="MathML-Unit">km</mi>' +
       '<mi mathvariant="normal" class="MathML-Unit">h</mi>',
-      'three times kilometers hours'
+      'three kilometers hours'
   );
 };
 

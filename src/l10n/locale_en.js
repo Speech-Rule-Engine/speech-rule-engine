@@ -180,7 +180,11 @@ sre.Locale.en = {
 
   PLURAL_UNIT: {
     'foot': 'feet',
-    'inch': 'inches'
+    'inch': 'inches',
+    'square foot': 'square feet',
+    'square inch': 'square inches',
+    'cubic foot': 'cubic feet',
+    'cubic inch': 'cubic inches'
   },
 
   NUMBERS: sre.Numbers.en.NUMBERS,
@@ -213,7 +217,7 @@ sre.Locale.en = {
   ALPHABET_TRANSFORMERS: {
     digit: {
       default: function(n) {
-          return n === 0 ? 'zero' : sre.Numbers.en.numberToWords(n);},
+        return n === 0 ? 'zero' : sre.Numbers.en.numberToWords(n);},
       mathspeak: function(n) {return n.toString();},
       clearspeak: function(n) {return n.toString();}},
     letter: {

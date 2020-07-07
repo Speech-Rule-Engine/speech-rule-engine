@@ -40,36 +40,66 @@ sre.MathspeakFrenchUtil.smallRoot = function(node) {
 };
 
 
+/**
+ * Computes baseline prefix in verbose mode.
+ * @param {!Node} node Subscript node.
+ * @return {string} The prefix string.
+ */
 sre.MathspeakFrenchUtil.baselineVerbose = function(node) {
   var baseline = sre.MathspeakUtil.baselineVerbose(node);
-  // return baseline === msg.MS.BASELINE ? baseline :
-  //   'position-' + baseline.replace(/\-$/, '');
   return baseline.replace(/\-$/, '');
 };
 
 
+/**
+ * Computes baseline prefix in brief mode.
+ * @param {!Node} node Subscript node.
+ * @return {string} The prefix string.
+ */
 sre.MathspeakFrenchUtil.baselineBrief = function(node) {
   var baseline = sre.MathspeakUtil.baselineBrief(node);
-  // return baseline === msg.MS.BASE ? baseline :
-  //   'position-' + baseline.replace(/\-$/, '');
   return baseline.replace(/\-$/, '');
 };
 
+
+/**
+ * Computes left superscript prefix in verbose mode.
+ * @param {!Node} node Tensor node.
+ * @return {string} The prefix string.
+ */
 sre.MathspeakFrenchUtil.leftSuperscriptVerbose = function(node) {
   var leftIndex = sre.MathspeakUtil.superscriptVerbose(node);
   return leftIndex.replace(/^exposant/, 'exposant gauche');
 };
 
+
+/**
+ * Computes left subscript prefix in verbose mode.
+ * @param {!Node} node Tensor node.
+ * @return {string} The prefix string.
+ */
 sre.MathspeakFrenchUtil.leftSubscriptVerbose = function(node) {
   var leftIndex = sre.MathspeakUtil.subscriptVerbose(node);
   return leftIndex.replace(/^indice/, 'indice gauche');
 };
 
+
+/**
+ * Computes left superscript prefix in brief mode.
+ * @param {!Node} node Tensor node.
+ * @return {string} The prefix string.
+ */
 sre.MathspeakFrenchUtil.leftSuperscriptBrief = function(node) {
   var leftIndex = sre.MathspeakUtil.superscriptBrief(node);
   return leftIndex.replace(/^sup/, 'sup gauche');
 };
 
+
+/**
+ * Computes left subscript prefix in brief mode.
+ * @param {!Node} node Tensor node.
+ * @return {string} The prefix string.
+ */
 sre.MathspeakFrenchUtil.leftSubscriptBrief = function(node) {
   var leftIndex = sre.MathspeakUtil.subscriptBrief(node);
   return leftIndex.replace(/^sub/, 'sub gauche');

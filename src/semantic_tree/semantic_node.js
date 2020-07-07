@@ -205,7 +205,8 @@ sre.SemanticNode.prototype.allAttributes = function() {
     attributes.push([sre.SemanticNode.Attribute.FONT, this.font]);
   }
   if (Object.keys(this.annotation).length) {
-    attributes.push([sre.SemanticNode.Attribute.ANNOTATION, this.xmlAnnotation()]);
+    attributes.push(
+        [sre.SemanticNode.Attribute.ANNOTATION, this.xmlAnnotation()]);
   }
   if (this.embellished) {
     attributes.push([sre.SemanticNode.Attribute.EMBELLISHED, this.embellished]);
@@ -222,6 +223,7 @@ sre.SemanticNode.prototype.allAttributes = function() {
 /**
  * Adds the external attributes for this node to its XML representation.
  * @param {Node} node The XML node.
+ * @private
  */
 sre.SemanticNode.prototype.addExternalAttributes_ = function(node) {
   for (var attr in this.attributes) {
@@ -277,7 +279,7 @@ sre.SemanticNode.prototype.toJson = function() {
  * @param {boolean=} opt_text Text indicator. If true non-breaking spaces are
  *     retained.
  */
-sre.SemanticNode.prototype.updateContent = function(content, opt_text = false) {
+sre.SemanticNode.prototype.updateContent = function(content, opt_text) {
   // Remove superfluous whitespace only if it is not the only content!
   // But without removing non-breaking spaces if we have a text.
   var newContent = opt_text ?
@@ -435,6 +437,7 @@ sre.SemanticNode.prototype.displayTree = function() {
  * Convenience method to display the whole tree and its elements.
  * @param {number} depth The depth of the tree.
  * @return {string} String with nested tree display.
+ * @private
  */
 sre.SemanticNode.prototype.displayTree_ = function(depth) {
   depth++;

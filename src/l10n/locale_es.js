@@ -194,6 +194,12 @@ sre.Locale.es = {
     JOINER_FRAC: ' '
   },
 
+  PLURAL_UNIT: { },
+
+  PLURAL: function(unit) {
+      return (/.*s$/.test(unit)) ? unit : unit + 's';
+  },
+
   NUMBERS: sre.Numbers.es.NUMBERS,
 
   ALPHABETS: {
@@ -224,7 +230,7 @@ sre.Locale.es = {
   ALPHABET_TRANSFORMERS: {
     digit: {
       default: function(n) {
-          return n === 0 ? 'cero' : sre.Numbers.es.numberToWords(n);},
+        return n === 0 ? 'cero' : sre.Numbers.es.numberToWords(n);},
       mathspeak: function(n) {return n.toString();},
       clearspeak: function(n) {return n.toString();}},
     letter: {
@@ -238,6 +244,8 @@ sre.Locale.es = {
     digitPrefix: {default: ''}
   },
 
-  ALPHABET_COMBINER: sre.Locale.prefixCombiner
+  ALPHABET_COMBINER: sre.Locale.prefixCombiner,
+
+  UNIT_TIMES: 'por'
 
 };

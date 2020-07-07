@@ -53,7 +53,7 @@ sre.ClearspeakGermanSetsEnclosedInSetBrackets.prototype.testSet001 = function() 
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|' +
       '</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}' +
       '</mo></mrow></math>';
-  var speech = 'ensemble des x est un les nombres entiers tel que 2 inférieur à x inférieur à 7';
+  var speech = 'die Menge aller x in die ganzen Zahlen mit 2 kleiner als x kleiner als 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -65,7 +65,7 @@ sre.ClearspeakGermanSetsEnclosedInSetBrackets.prototype.testSet002 = function() 
   var preference = 'Sets_Auto';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>|</mo><mrow><mo>|</mo>' +
       '<mi>x</mi><mo>|</mo></mrow><mo>></mo><mn>2</mn><mo>}</mo></mrow></math>';
-  var speech = 'ensemble des x tel que, la valeur absolue de x, supérieur à 2';
+  var speech = 'die Menge aller x mit, der Betrag von x, größer als 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -78,7 +78,7 @@ sre.ClearspeakGermanSetsEnclosedInSetBrackets.prototype.testSet003 = function() 
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>:' +
       '</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}' +
       '</mo></mrow></math>';
-  var speech = 'ensemble des x est un les nombres entiers tel que 2 inférieur à x inférieur à 7';
+  var speech = 'die Menge aller x in die ganzen Zahlen mit 2 kleiner als x kleiner als 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -91,7 +91,7 @@ sre.ClearspeakGermanSetsEnclosedInSetBrackets.prototype.testSet004 = function() 
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℕ</mi><mo>:' +
       '</mo><mi>x</mi><mtext> is an even number</mtext><mo>}</mo></mrow>' +
       '</math>';
-  var speech = 'ensemble des x est un les nombres entier naturel tel que x is an even number';
+  var speech = 'die Menge aller x in die natürlichen Zahlen mit x is an even number';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -104,7 +104,7 @@ sre.ClearspeakGermanSetsEnclosedInSetBrackets.prototype.testSet005 = function() 
   var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo>' +
       '<mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mtext></mtext>' +
       '<mn>3</mn></mrow><mo>}</mo></mrow></mrow></math>';
-  var speech = 'ensemble 1 virgule 2 virgule 3';
+  var speech = 'die Menge 1 Komma 2 Komma 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -117,7 +117,7 @@ sre.ClearspeakGermanSetsEnclosedInSetBrackets.prototype.testSet006 = function() 
   var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo>' +
       '<mn>112</mn><mo>,</mo><mtext></mtext><mn>1</mn><mo>,</mo><mn>253' +
       '</mn></mrow><mo>}</mo></mrow></mrow></math>';
-  var speech = 'ensemble 1 virgule 112 virgule 1 virgule 253';
+  var speech = 'die Menge 1 Komma 112 Komma 1 Komma 253';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -130,7 +130,7 @@ sre.ClearspeakGermanSetsEnclosedInSetBrackets.prototype.testSet007 = function() 
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|' +
       '</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}' +
       '</mo></mrow></math>';
-  var speech = 'ensemble de x est un les nombres entiers tel que 2 inférieur à x inférieur à 7';
+  var speech = 'die Menge von x in die ganzen Zahlen mit 2 kleiner als x kleiner als 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -142,7 +142,7 @@ sre.ClearspeakGermanSetsEnclosedInSetBrackets.prototype.testSet008 = function() 
   var preference = 'Sets_woAll';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>|</mo><mrow><mo>|</mo>' +
       '<mi>x</mi><mo>|</mo></mrow><mo>></mo><mn>2</mn><mo>}</mo></mrow></math>';
-  var speech = 'ensemble de x tel que, la valeur absolue de x, supérieur à 2';
+  var speech = 'die Menge von x mit, der Betrag von x, größer als 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -155,7 +155,7 @@ sre.ClearspeakGermanSetsEnclosedInSetBrackets.prototype.testSet009 = function() 
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>:' +
       '</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}' +
       '</mo></mrow></math>';
-  var speech = 'ensemble de x est un les nombres entiers tel que 2 inférieur à x inférieur à 7';
+  var speech = 'die Menge von x in die ganzen Zahlen mit 2 kleiner als x kleiner als 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -168,7 +168,7 @@ sre.ClearspeakGermanSetsEnclosedInSetBrackets.prototype.testSet010 = function() 
   var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo>' +
       '<mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mtext></mtext>' +
       '<mn>3</mn></mrow><mo>}</mo></mrow></mrow></math>';
-  var speech = 'ensemble 1 virgule 2 virgule 3';
+  var speech = 'die Menge 1 Komma 2 Komma 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -181,7 +181,7 @@ sre.ClearspeakGermanSetsEnclosedInSetBrackets.prototype.testSet011 = function() 
   var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo>' +
       '<mtext></mtext><mn>112</mn><mo>,</mo><mtext></mtext><mn>1</mn><mo>,' +
       '</mo><mtext></mtext><mn>253</mn></mrow><mo>}</mo></mrow></mrow></math>';
-  var speech = 'ensemble 1 virgule 112 virgule 1 virgule 253';
+  var speech = 'die Menge 1 Komma 112 Komma 1 Komma 253';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -194,7 +194,7 @@ sre.ClearspeakGermanSetsEnclosedInSetBrackets.prototype.testSet012 = function() 
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|' +
       '</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}' +
       '</mo></mrow></math>';
-  var speech = 'ensemble des x est un les nombres entiers tel que 2 inférieur à x inférieur à 7';
+  var speech = 'die Menge aller x in die ganzen Zahlen mit 2 kleiner als x kleiner als 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -206,7 +206,7 @@ sre.ClearspeakGermanSetsEnclosedInSetBrackets.prototype.testSet013 = function() 
   var preference = 'Sets_SilentBracket';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>|</mo><mrow><mo>|</mo>' +
       '<mi>x</mi><mo>|</mo></mrow><mo>></mo><mn>2</mn><mo>}</mo></mrow></math>';
-  var speech = 'ensemble des x tel que, la valeur absolue de x, supérieur à 2';
+  var speech = 'die Menge aller x mit, der Betrag von x, größer als 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -219,7 +219,7 @@ sre.ClearspeakGermanSetsEnclosedInSetBrackets.prototype.testSet014 = function() 
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>:' +
       '</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}' +
       '</mo></mrow></math>';
-  var speech = 'ensemble des x est un les nombres entiers tel que 2 inférieur à x inférieur à 7';
+  var speech = 'die Menge aller x in die ganzen Zahlen mit 2 kleiner als x kleiner als 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -232,7 +232,7 @@ sre.ClearspeakGermanSetsEnclosedInSetBrackets.prototype.testSet015 = function() 
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℕ</mi><mo>:' +
       '</mo><mi>x</mi><mtext> is an even number</mtext><mo>}</mo></mrow>' +
       '</math>';
-  var speech = 'ensemble des x est un les nombres entier naturel tel que x is an even number';
+  var speech = 'die Menge aller x in die natürlichen Zahlen mit x is an even number';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -245,7 +245,7 @@ sre.ClearspeakGermanSetsEnclosedInSetBrackets.prototype.testSet016 = function() 
   var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo>' +
       '<mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mtext></mtext>' +
       '<mn>3</mn></mrow><mo>}</mo></mrow></mrow></math>';
-  var speech = '1 virgule 2 virgule 3';
+  var speech = '1 Komma 2 Komma 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -258,6 +258,6 @@ sre.ClearspeakGermanSetsEnclosedInSetBrackets.prototype.testSet017 = function() 
   var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo>' +
       '<mtext></mtext><mn>112</mn><mo>,</mo><mtext></mtext><mn>1</mn><mo>,' +
       '</mo><mtext></mtext><mn>253</mn></mrow><mo>}</mo></mrow></mrow></math>';
-  var speech = '1 virgule 112 virgule 1 virgule 253';
+  var speech = '1 Komma 112 Komma 1 Komma 253';
   this.executeRuleTest(mathml, speech, preference);
 };

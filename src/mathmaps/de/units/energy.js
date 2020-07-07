@@ -3,15 +3,10 @@
     "locale": "de"
   },
   {
-    "locale": "de"
-  },
-  {
     "key": "W",
     "mappings": {
       "default": {
-        "default": "watt",
-        "singular": "watt",
-        "dual": ""
+        "default": "Watt"
       }
     },
     "category": "energy",
@@ -20,13 +15,39 @@
       "w"
     ]
   },
+  {"category": "energy",
+   "mappings": {
+     "default": {
+       "default": "Kilowatt"
+     }
+   },
+   "key": "kW",
+   "names": ["kw", "kW"]
+  },
+  {"category": "energy",
+   "mappings": {
+     "default": {
+       "default": "Milliwatt"
+     }
+   },
+   "key": "mW",
+   "names": ["mw", "mW"]
+  },
+  {"category": "energy",
+   "mappings": {
+     "default": {
+       "default": "Kilowattstunde"
+     }
+   },
+   "key": "kwh",
+   "names": ["kwh", "kWh"]
+  },
   {
     "key": "J",
     "mappings": {
       "default": {
-        "default": "joule",
-        "singular": "joule",
-        "dual": ""
+        "default": "Joule",
+        "plural": "Joules"
       }
     },
     "category": "energy",
@@ -38,9 +59,7 @@
     "key": "N",
     "mappings": {
       "default": {
-        "default": "newton",
-        "singular": "newton",
-        "dual": ""
+        "default": "Newton"
       }
     },
     "category": "energy",
@@ -52,9 +71,7 @@
     "key": "A",
     "mappings": {
       "default": {
-        "default": "amps",
-        "singular": "amp",
-        "dual": ""
+        "default": "Ampere"
       }
     },
     "category": "energy",
@@ -66,9 +83,7 @@
     "key": "V",
     "mappings": {
       "default": {
-        "default": "volt",
-        "singular": "volt",
-        "dual": ""
+        "default": "Volt"
       }
     },
     "category": "energy",
@@ -76,13 +91,29 @@
       "V"
     ]
   },
+  {"category": "energy",
+   "mappings": {
+     "default": {
+       "default": "Mikroohm"
+     }
+   },
+   "key": "µ\u03A9",
+   "names": ["µ\u03A9"]
+  },
+  {"category": "energy",
+   "mappings": {
+     "default": {
+       "default": "Milliohm"
+     }
+   },
+   "key": "m\u03A9",
+   "names": ["m\u03A9"]
+  },
   {
     "key": "Ω",
     "mappings": {
       "default": {
-        "default": "ohm",
-        "singular": "ohm",
-        "dual": ""
+        "default": "Ohm"
       }
     },
     "category": "energy",
@@ -90,5 +121,32 @@
       "Ω",
       "Ohm"
     ]
+  },
+  {"category": "energy",
+   "mappings": {
+     "default": {
+       "default": "Kiloohm"
+     }
+   },
+   "key": "k\u03A9",
+   "names": ["k\u03A9", "K\u03A9"]
+  },
+  {"category": "energy",
+   "mappings": {
+     "default": {
+       "default": "Megaohm"
+     }
+   },
+   "key": "M\u03A9",
+   "names": ["M\u03A9"]
+  },
+  {"category": "energy",
+   "mappings": {
+     "default": {
+       "default": "Gigaohm"
+     }
+   },
+   "key": "G\u03A9",
+   "names": ["G\u03A9"]
   }
 ]

@@ -50,11 +50,6 @@ sre.ClearspeakGermanFontTest = function() {
    */
   this.locale = 'de';
   
-  /**
-   * @override
-   */
-  this.semantics = true;
-  
   this.setActive('ClearspeakGermanFont');
 };
 goog.inherits(sre.ClearspeakGermanFontTest, sre.AbstractRuleTest);

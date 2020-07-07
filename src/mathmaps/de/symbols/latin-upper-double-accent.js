@@ -7,7 +7,7 @@
     "key": "01D5",
     "mappings": {
       "default": {
-        "default": "groß U mit Diärese und Macron"
+        "default": "groß U mit Diärese und Makron"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "01DE",
     "mappings": {
       "default": {
-        "default": "groß A mit Diärese und Macron"
+        "default": "groß A mit Diärese und Makron"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "01E0",
     "mappings": {
       "default": {
-        "default": "groß A mit Dot Above und Macron"
+        "default": "groß A mit Dot Above und Makron"
       }
     }
   },
@@ -61,7 +61,7 @@
     "key": "01EC",
     "mappings": {
       "default": {
-        "default": "groß O mit Ogonek und Macron"
+        "default": "groß O mit Ogonek und Makron"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "022A",
     "mappings": {
       "default": {
-        "default": "groß O mit Diärese und Macron"
+        "default": "groß O mit Diärese und Makron"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "022C",
     "mappings": {
       "default": {
-        "default": "groß O mit Tilde und Macron"
+        "default": "groß O mit Tilde und Makron"
       }
     }
   },
@@ -97,7 +97,7 @@
     "key": "0230",
     "mappings": {
       "default": {
-        "default": "groß O mit Punkt oben und Macron"
+        "default": "groß O mit Punkt oben und Makron"
       }
     }
   },
@@ -115,7 +115,7 @@
     "key": "1E14",
     "mappings": {
       "default": {
-        "default": "groß E mit Macron und Grab"
+        "default": "groß E mit Makron und Grab"
       }
     }
   },
@@ -124,7 +124,7 @@
     "key": "1E16",
     "mappings": {
       "default": {
-        "default": "groß E mit Macron und Akut"
+        "default": "groß E mit Makron und Akut"
       }
     }
   },
@@ -151,7 +151,7 @@
     "key": "1E38",
     "mappings": {
       "default": {
-        "default": "groß L mit Dot Below und Macron"
+        "default": "groß L mit Dot Below und Makron"
       }
     }
   },
@@ -178,7 +178,7 @@
     "key": "1E50",
     "mappings": {
       "default": {
-        "default": "groß O mit Macron und Grab"
+        "default": "groß O mit Makron und Grab"
       }
     }
   },
@@ -187,7 +187,7 @@
     "key": "1E52",
     "mappings": {
       "default": {
-        "default": "groß O mit Macron und Akut"
+        "default": "groß O mit Makron und Akut"
       }
     }
   },
@@ -196,7 +196,7 @@
     "key": "1E5C",
     "mappings": {
       "default": {
-        "default": "groß R mit Punkt unten und Macron"
+        "default": "groß R mit Punkt unten und Makron"
       }
     }
   },
@@ -241,7 +241,7 @@
     "key": "1E7A",
     "mappings": {
       "default": {
-        "default": "groß U mit Macron und Diärese"
+        "default": "groß U mit Makron und Diärese"
       }
     }
   },

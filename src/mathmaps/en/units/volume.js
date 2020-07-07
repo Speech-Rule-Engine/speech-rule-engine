@@ -1,13 +1,5 @@
-[{"locale": "en"},
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "barrel"
-     }
-   },
-   "key": "bbl",
-   "names": ["bbl.", "bbl"]
-  },
+[
+  {"locale": "en"},
   {"category": "volume",
    "mappings": {
      "default": {
@@ -20,11 +12,49 @@
   {"category": "volume",
    "mappings": {
      "default": {
+       "default": "cubic inch"
+     }
+   },
+   "key": "cu inch",
+   "names": ["cu in", "cu. in."]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "cubic foot",
+       "plural": "cubic feet"
+     }
+   },
+   "key": "cu ft",
+   "names": ["cu ft", "cu. ft."]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "cubic yard"
+     }
+   },
+   "key": "cu yd",
+   "names": ["cu yd", "cu. yd."]
+  },
+
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "barrel"
+     }
+   },
+   "key": "bbl",
+   "names": ["bbl.", "bbl"]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
        "default": "fluid ounce"
      }
    },
    "key": "fl. oz.",
-   "names": ["fl. oz."]
+   "names": ["fl. oz.", "fl oz"]
   },
   {"category": "volume",
    "mappings": {
@@ -53,6 +83,16 @@
    "key": "qt",
    "names": ["qt", "qt."]
   },
+ 
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "fluid dram"
+     }
+   },
+   "key": "fluid dram",
+   "names": ["fl dr", "fl. dr."]
+  },
   {"category": "volume",
    "mappings": {
      "default": {
@@ -60,7 +100,7 @@
      }
    },
    "key": "tbsp",
-   "names": ["tbsp", "tbsp."]
+   "names": ["tbsp", "tbsp.", "Tbsp", "Tbsp."]
   },
   {"category": "volume",
    "mappings": {
@@ -74,11 +114,21 @@
   {"category": "volume",
    "mappings": {
      "default": {
+       "default": "cup"
+     }
+   },
+   "key": "cup",
+   "names": ["cp", "cp."]
+  },
+
+  {"category": "volume",
+   "mappings": {
+     "default": {
        "default": "cubic centimeter"
      }
    },
    "key": "cc",
-   "names": ["cc"]
+   "names": ["cc", "ccm"]
   },
   {"category": "volume",
    "mappings": {

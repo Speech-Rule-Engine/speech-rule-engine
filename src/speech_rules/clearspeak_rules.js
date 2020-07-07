@@ -110,7 +110,7 @@ sre.ClearspeakRules.addAnnotators_ = function() {
 sre.ClearspeakRules.initCustomFunctions_ = function() {
   addCTXF('CTXFpauseSeparator', sre.StoreUtil.pauseSeparator);
   addCTXF('CTXFnodeCounter', sre.ClearspeakUtil.nodeCounter);
-  addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
+  addCTXF('CTXFcontentIterator', sre.StoreUtil.contentIterator);
   addCSF('CSFvulgarFraction', sre.NumbersUtil.vulgarFraction);
   addCQF('CQFvulgarFractionSmall', sre.ClearspeakUtil.isSmallVulgarFraction);
   addCQF('CQFcellsSimple', sre.ClearspeakUtil.allCellsSimple);
@@ -124,6 +124,9 @@ sre.ClearspeakRules.initCustomFunctions_ = function() {
   addCQF('CQFisHyperbolic', sre.ClearspeakUtil.isHyperbolic);
   addCQF('CQFisLogarithm', sre.ClearspeakUtil.isLogarithmWithBase);
   addCQF('CQFspaceoutNumber', sre.MathspeakUtil.spaceoutNumber);
+  // Currency.
+  addCQF('CQFfirstCurrency', sre.ClearspeakUtil.firstCurrency);
+  addCQF('CQFlastCurrency', sre.ClearspeakUtil.lastCurrency);
 };
 
 
@@ -160,13 +163,15 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   // Font rules
   defineRule(
       'font', 'clearspeak.default',
-      '[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font,pause:"short")',
+      '[t] @font (grammar:localFont); ' +
+      '[n] self::* (grammar:ignoreFont=@font,pause:"short")',
       'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"');
 
   defineRule(
       'font-identifier', 'clearspeak.default',
-      '[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font,pause:"short")',
+      '[t] @font (grammar:localFont); ' +
+      '[n] self::* (grammar:ignoreFont=@font,pause:"short")',
       'self::identifier', 'string-length(text())=1',
       '@font', '@font="normal"', 'not(contains(@grammar, "ignoreFont"))',
       '@role!="unit"');
@@ -475,6 +480,11 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'function', 'clearspeak.default',
       '[n] text()', 'self::function');
+  defineRule(
+      'function-article', 'clearspeak.default',
+      '[t] "the"; [n] text()',
+      'self::function', '@role="prefix function"',
+      'contains(@grammar, "addArticle")');
 
   defineRule(
       'appl', 'clearspeak.default',
@@ -544,18 +554,18 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   // REMEMBER: When testing for function we can use the one in content!
   defineRule(
       'function-prefix-fenced-or-frac-arg', 'clearspeak.default',
-      '[p] (pause:"short"); [t] "the"; [n] children/*[1]; [t] "of";' +
+      '[p] (pause:"short"); [n] children/*[1] (grammar:addArticle); [t] "of";' +
       ' [n] children/*[2]; [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       '(name(children/*[2])="fenced" and not(contains(' +
       'children/*[2]/children/*[1]/@annotation, "clearspeak:simple")))' +
       ' or name(children/*[2])="fraction" or ' +
-      '(name(children/*[2])!="fenced" and not(contains(children/*[2]/@annotation' +
-      ', "clearspeak:simple")))',
+      '(name(children/*[2])!="fenced" and ' +
+      'not(contains(children/*[2]/@annotation, "clearspeak:simple")))',
       'self::*');
   defineRule(
       'function-prefix-subscript', 'clearspeak.default',
-      '[p] (pause:"short"); [t] "the"; [n] children/*[1]; [t] "of";' +
+      '[p] (pause:"short"); [n] children/*[1] (grammar:addArticle); [t] "of";' +
       ' [p] (pause:"short"); [n] children/*[2]; [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       'name(children/*[1])="subscript"', 'self::*');
@@ -906,24 +916,26 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'square', 'clearspeak.default',
       '[n] children/*[1]; [t] "squared"',
-      'self::superscript', 'children/*[2][text()="2"]',
+      'self::superscript', '@role!="unit"',
+      'children/*[2][text()="2"]',
       'name(children/*[1])!="text" or ' +
       // Special exception dealing with footnotes.
       'not(name(children/*[1])="text" and ' +
       '(name(../../../punctuated[@role="text"]/..)="stree" ' +
-      'or name(..)="stree"))', 'self::*', 'self::*'
+      'or name(..)="stree"))', 'self::*'
   );
 
   // Cube
   defineRule(
       'cube', 'clearspeak.default',
       '[n] children/*[1]; [t] "cubed"',
-      'self::superscript', 'children/*[2][text()="3"]',
+      'self::superscript', '@role!="unit"',
+      'children/*[2][text()="3"]',
       'name(children/*[1])!="text" or ' +
       // Special exception dealing with footnotes.
       'not(name(children/*[1])="text" and ' +
       '(name(../../../punctuated[@role="text"]/..)="stree" ' +
-      'or name(..)="stree"))', 'self::*', 'self::*'
+      'or name(..)="stree"))', 'self::*'
   );
 
 
@@ -2328,6 +2340,77 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   );
 
 
+  // Unit rules.
+  defineRule(
+      'unit-singular', 'clearspeak.default',
+      '[t] text() (grammar:annotation="unit":translate)',
+      'self::identifier', '@role="unit"');
+  defineRule(
+      'unit-plural', 'clearspeak.default',
+      '[t] text() (grammar:annotation="unit":translate:plural)',
+      'self::identifier', '@role="unit"',
+      'not(contains(@grammar, "singularUnit"))');
+
+  defineRule(
+      'unit-square', 'clearspeak.default',
+      '[t] "square"; [n] children/*[1]',
+      'self::superscript', '@role="unit"', 'children/*[2][text()=2]',
+      'name(children/*[1])="identifier"');
+  defineRule(
+      'unit-cubic', 'clearspeak.default',
+      '[t] "cubic"; [n] children/*[1]',
+      'self::superscript', '@role="unit"', 'children/*[2][text()=3]',
+      'name(children/*[1])="identifier"');
+
+  defineRule(
+      'unit-reciprocal', 'clearspeak.default',
+      '[t] "reciprocal"; [n] children/*[1]',
+      'self::superscript', '@role="unit"', 'name(children/*[1])="identifier"',
+      'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
+      'children/*[2]/children/*[1][text()=1]',
+      'count(preceding-sibling::*)=0 or preceding-sibling::*[@role!="unit"]');
+  defineRule(
+      'unit-reciprocal', 'clearspeak.default',
+      '[t] "per"; [n] children/*[1] (grammar:singularUnit)',
+      'self::superscript', '@role="unit"', 'name(children/*[1])="identifier"',
+      'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
+      'children/*[2]/children/*[1][text()=1]',
+      'preceding-sibling::*[@role="unit"]');
+
+  defineRule(
+      'unit-combine', 'clearspeak.default',
+      '[m] children/*', 'self::infixop', '@role="unit"');
+  defineRule(
+      'unit-combine-singular', 'clearspeak.default',
+      '[n] children/*[1]; [n] children/*[2] (grammar:singularUnit); ' +
+      '[m] children/*[position()>2]',
+      'self::infixop', '@role="unit"', 'name(children/*[1])="number"',
+      'children/*[1][text()=1]');
+  defineRule(
+      'unit-divide', 'clearspeak.default',
+      '[n] children/*[1]; [t] "per"; [n] children/*[2] (grammar:singularUnit)',
+      'self::fraction', '@role="unit"');
+
+  // Currencies
+  defineRule(
+      'currency', 'clearspeak.default',
+      '[m] children/*[position()>1]; [n] children/*[1];',
+      'self::infixop', 'contains(@annotation, "clearspeak:unit")',
+      'children/*[1][@role="unit"]', 'CQFfirstCurrency'
+  );
+  defineRule(
+      'currency', 'clearspeak.Currency_Position',
+      '[m] children/*', 'self::infixop',
+      'contains(@annotation, "clearspeak:unit")'
+  );
+  defineSpecialisedRule(
+    'currency', 'clearspeak.Currency_Position', 'clearspeak.Currency_Prefix');
+  defineRule(
+      'currency', 'clearspeak.Currency_Prefix',
+      '[n] children/*[last()]; [m] children/*[position()<last()]; ',
+      'self::infixop', 'contains(@annotation, "clearspeak:unit")',
+      'children/*[last()][@role="unit"]', 'CQFlastCurrency'
+  );
 
 };
 

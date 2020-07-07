@@ -36,10 +36,6 @@ sre.ClearspeakRuleTest = function() {
    */
   this.domain = 'clearspeak';
 
-  /**
-   * @override
-   */
-  this.semantics = true;
 };
 goog.inherits(sre.ClearspeakRuleTest, sre.AbstractRuleTest);
 

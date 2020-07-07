@@ -2,13 +2,21 @@
   {
     "locale": "de"
   },
+  {"category": "speed",
+   "mappings": {
+     "default": {
+       "default": "Knoten"
+     }
+   },
+   "key": "kt",
+   "names": ["kt", "kt."]
+  },
   {
     "key": "mph",
     "mappings": {
       "default": {
-        "default": "meilen pro stunde",
-        "singular": "meile pro stunde",
-        "dual": ""
+        "default": "Meilen pro Stunde",
+        "singular": "Meile pro Stunde"
       }
     },
     "category": "speed",
@@ -17,12 +25,23 @@
     ]
   },
   {
+    "key": "kmh",
+    "mappings": {
+      "default": {
+        "default": "Kilometer pro Stunde"
+      }
+    },
+    "category": "speed",
+    "names": [
+      "kmh"
+    ]
+  },
+  {
     "key": "rpm",
     "mappings": {
       "default": {
-        "default": "umdrehungen pro minute",
-        "singular": "umdrehung pro minute",
-        "dual": ""
+        "default": "Umdrehungen pro Minute",
+        "singular": "Umdrehung pro Minute"
       }
     },
     "category": "speed",

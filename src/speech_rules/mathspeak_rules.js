@@ -20,7 +20,6 @@
 goog.provide('sre.MathspeakRules');
 
 goog.require('sre.MathStore');
-goog.require('sre.MathmlStoreUtil');
 goog.require('sre.MathspeakUtil');
 
 
@@ -142,7 +141,7 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
   addCSF('CSFoverscript', sre.MathspeakUtil.nestedOverscore);
 
   addCTXF('CTXFordinalCounter', sre.NumbersUtil.ordinalCounter);
-  addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
+  addCTXF('CTXFcontentIterator', sre.StoreUtil.contentIterator);
 
   // Layout related.
   addCQF('CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple);
@@ -1266,31 +1265,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'unit', 'mathspeak.default',
       '[t] text() (grammar:annotation="unit":translate:plural)',
       'self::identifier', '@role="unit"');
-  defineRule(
-      'unit-square', 'mathspeak.default',
-      '[t] "square"; [n] children/*[1]',
-      'self::superscript', '@role="unit"', 'children/*[2][text()=2]',
-      'name(children/*[1])="identifier"');
 
-  defineRule(
-      'unit-cubic', 'mathspeak.default',
-      '[t] "cubic"; [n] children/*[1]',
-      'self::superscript', '@role="unit"', 'children/*[2][text()=3]',
-      'name(children/*[1])="identifier"');
-  defineRule(
-      'reciprocal', 'mathspeak.default',
-      '[t] "reciprocal"; [n] children/*[1]',
-      'self::superscript', '@role="unit"', 'name(children/*[1])="identifier"',
-      'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
-      'children/*[2]/children/*[1][text()=1]',
-      'count(preceding-sibling::*)=0 or preceding-sibling::*[@role!="unit"]');
-  defineRule(
-      'reciprocal', 'mathspeak.default',
-      '[t] "per"; [n] children/*[1]',
-      'self::superscript', '@role="unit"', 'name(children/*[1])="identifier"',
-      'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
-      'children/*[2]/children/*[1][text()=1]',
-      'preceding-sibling::*[@role="unit"]');
   defineRule(
       'unit-combine', 'mathspeak.default',
       '[m] children/*', 'self::infixop', '@role="unit"');
@@ -1299,6 +1274,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[n] children/*[1]; [t] "per"; [n] children/*[2]',
       'self::fraction', '@role="unit"');
 
+  // Inference rules
   defineRule(
       'inference', 'mathspeak.default',
       '[t] "inference rule"; [m] content/*; [t] "with conclusion"; ' +

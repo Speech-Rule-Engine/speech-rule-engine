@@ -197,7 +197,7 @@ sre.AbstractHighlighter.prototype.isHighlighted = function(node) {
 
 
 /**
- * Sets the indicator attributge that node is already highlighted.
+ * Sets the indicator attribute that node is already highlighted.
  * @param {Node} node The node.
  */
 sre.AbstractHighlighter.prototype.setHighlighted = function(node) {
@@ -206,7 +206,7 @@ sre.AbstractHighlighter.prototype.setHighlighted = function(node) {
 
 
 /**
- * Removes the indicator attributge that node is already highlighted.
+ * Removes the indicator attribute that node is already highlighted.
  * @param {Node} node The node.
  */
 sre.AbstractHighlighter.prototype.unsetHighlighted = function(node) {
@@ -214,7 +214,10 @@ sre.AbstractHighlighter.prototype.unsetHighlighted = function(node) {
 };
 
 
-// New colorization methods for v3.
+/**
+ * Tree colorization method for all sub-expressions.
+ * @param {Node} node The node.
+ */
 sre.AbstractHighlighter.prototype.colorizeAll = function(node) {
   var allNodes = sre.XpathUtil.evalXPath(
       './/*[@' + sre.EnrichMathml.Attribute.ID + ']', node);
@@ -222,6 +225,10 @@ sre.AbstractHighlighter.prototype.colorizeAll = function(node) {
 };
 
 
+/**
+ * Removes tree colorization.
+ * @param {Node} node The node.
+ */
 sre.AbstractHighlighter.prototype.uncolorizeAll = function(node) {
   var allNodes = sre.XpathUtil.evalXPath(
       './/*[@' + sre.EnrichMathml.Attribute.ID + ']', node);
@@ -229,6 +236,10 @@ sre.AbstractHighlighter.prototype.uncolorizeAll = function(node) {
 };
 
 
+/**
+ * Tree colors a single node.
+ * @param {Node} node The node.
+ */
 // TODO: Generalise this to use the highlighter method and background.
 sre.AbstractHighlighter.prototype.colorize = function(node) {
   var fore = sre.EnrichMathml.addPrefix('foreground');
@@ -239,6 +250,10 @@ sre.AbstractHighlighter.prototype.colorize = function(node) {
 };
 
 
+/**
+ * Removes tree coloring from a single node.
+ * @param {Node} node The node.
+ */
 sre.AbstractHighlighter.prototype.uncolorize = function(node) {
   var fore = sre.EnrichMathml.addPrefix('foreground') + '-old';
   if (node.hasAttribute(fore)) {

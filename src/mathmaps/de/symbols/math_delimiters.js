@@ -691,7 +691,7 @@
     "key": "27C6",
     "mappings": {
       "default": {
-        "default": "Rechter S-förmiger Taschenbegrenzer"
+        "default": "rechter S-förmiger Taschenbegrenzer"
       }
     }
   },
@@ -943,7 +943,7 @@
     "key": "2994",
     "mappings": {
       "default": {
-        "default": "Rechter Bogen größer als Halterung"
+        "default": "rechter Bogen größer als Halterung"
       }
     }
   },
@@ -997,7 +997,7 @@
     "key": "29D9",
     "mappings": {
       "default": {
-        "default": "Rechter wackeliger Zaun"
+        "default": "rechter wackeliger Zaun"
       }
     }
   },
@@ -1015,7 +1015,7 @@
     "key": "29DB",
     "mappings": {
       "default": {
-        "default": "Rechter doppelter wackeliger Zaun"
+        "default": "rechter doppelter wackeliger Zaun"
       }
     }
   },

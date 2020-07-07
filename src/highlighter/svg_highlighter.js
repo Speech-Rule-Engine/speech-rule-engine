@@ -83,10 +83,21 @@ sre.SvgHighlighter.prototype.highlightNode = function(node) {
     rect.setAttribute('transform', transform);
   }
   rect.setAttribute('fill', this.colorString().background);
+  rect.setAttribute(sre.AbstractHighlighter.ATTR, true);
   node.parentNode.insertBefore(rect, node);
   info = {node: rect, foreground: node.getAttribute('fill')};
   node.setAttribute('fill', this.colorString().foreground);
   return info;
+};
+
+
+/**
+ * @override
+ */
+sre.SvgHighlighter.prototype.setHighlighted = function(node) {
+  if (node.tagName === 'svg') {
+    sre.SvgHighlighter.base(this, 'setHighlighted', node);
+  }
 };
 
 

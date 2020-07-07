@@ -24,7 +24,6 @@
 goog.provide('sre.MathspeakGerman');
 
 goog.require('sre.MathStore');
-goog.require('sre.MathmlStoreUtil');
 goog.require('sre.MathspeakUtil');
 
 
@@ -148,7 +147,7 @@ sre.MathspeakGerman.initCustomFunctions_ = function() {
   addCSF('CSFoverscript', sre.MathspeakUtil.nestedOverscore);
 
   addCTXF('CTXFordinalCounter', sre.NumbersUtil.ordinalCounter);
-  addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
+  addCTXF('CTXFcontentIterator', sre.StoreUtil.contentIterator);
 
   // Layout related.
   addCQF('CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple);
@@ -341,7 +340,7 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
   // minus sign
   defineRule(
       'negative', 'mathspeak.default',
-      '[t] "negativ"; [n] children/*[1]',
+      '[t] "minus"; [n] children/*[1]',
       'self::prefixop', '@role="negative"', 'children/identifier');
   defineRuleAlias(
       'negative',
@@ -482,7 +481,7 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
 
   defineRule(
       'vulgar-fraction', 'mathspeak.default',
-      '[t] CSFvulgarFraction',
+      '[t] CSFvulgarFraction (grammar:correctOne)',
       'self::fraction', '@role="vulgar"', 'CQFvulgarFractionSmall');
   defineSpecialisedRule(
       'vulgar-fraction', 'mathspeak.default', 'mathspeak.brief');
@@ -1241,13 +1240,13 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
   // Crossout
   defineRule(
       'crossout', 'mathspeak.default',
-      '[t] "durchkreutzt"; [n] children/*[1]; [t] "Ende duchkreutzt"',
+      '[t] "durchgestrichen"; [n] children/*[1]; [t] "Ende duchgestrichen"',
       'self::enclose', '@role="updiagonalstrike" or' +
       ' @role="downdiagonalstrike" or @role="horizontalstrike"');
   defineRule(
       'cancel', 'mathspeak.default',
-      '[t] "durchkreutzt"; [n] children/*[1]/children/*[1]; [t] "mit";' +
-      ' [n] children/*[2]; [t] "Ende duchkreutzt"',
+      '[t] "durchgestrichen"; [n] children/*[1]/children/*[1]; [t] "mit";' +
+      ' [n] children/*[2]; [t] "Ende duchgestrichen"',
       'self::overscore', '@role="updiagonalstrike" or' +
       ' @role="downdiagonalstrike" or @role="horizontalstrike"');
   defineSpecialisedRule(
@@ -1259,8 +1258,8 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
       ' @role="downdiagonalstrike" or @role="horizontalstrike"');
   defineRule(
       'cancel-reverse', 'mathspeak.default',
-      '[t] "durchkreutzt"; [n] children/*[2]/children/*[1]; [t] "mit";' +
-      ' [n] children/*[1]; [t] "Ende duchkreutzt"',
+      '[t] "durchgestrichen"; [n] children/*[2]/children/*[1]; [t] "mit";' +
+      ' [n] children/*[1]; [t] "Ende duchgestrichen"',
       'self::overscore', 'name(children/*[2])="enclose"',
       'children/*[2][@role="updiagonalstrike" or' +
       ' @role="downdiagonalstrike" or @role="horizontalstrike"]');

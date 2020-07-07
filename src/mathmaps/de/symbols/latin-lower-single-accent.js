@@ -250,7 +250,7 @@
     "key": "0101",
     "mappings": {
       "default": {
-        "default": "a mit Macron"
+        "default": "a mit Makron"
       }
     }
   },
@@ -322,7 +322,7 @@
     "key": "0113",
     "mappings": {
       "default": {
-        "default": "e mit Macron"
+        "default": "e mit Makron"
       }
     }
   },
@@ -421,7 +421,7 @@
     "key": "012B",
     "mappings": {
       "default": {
-        "default": "i mit Macron"
+        "default": "i mit Makron"
       }
     }
   },
@@ -538,7 +538,7 @@
     "key": "014D",
     "mappings": {
       "default": {
-        "default": "o mit Macron"
+        "default": "o mit Makron"
       }
     }
   },
@@ -655,7 +655,7 @@
     "key": "016B",
     "mappings": {
       "default": {
-        "default": "u mit Macron"
+        "default": "u mit Makron"
       }
     }
   },
@@ -997,7 +997,7 @@
     "key": "0233",
     "mappings": {
       "default": {
-        "default": "y mit Macron"
+        "default": "y mit Makron"
       }
     }
   },
@@ -1123,7 +1123,7 @@
     "key": "1E21",
     "mappings": {
       "default": {
-        "default": "g mit Macron"
+        "default": "g mit Makron"
       }
     }
   },

@@ -128,6 +128,11 @@ sre.System.setAsync = function() {
 };
 
 
+/**
+ * Query the engine setup.
+ * @return {Object.<boolean|string>} Object vector with all engine feature
+ *     values.
+ */
 sre.System.prototype.engineSetup = function() {
   var engineFeatures = ['mode'].
       concat(sre.Engine.STRING_FEATURES, sre.Engine.BINARY_FEATURES);
@@ -141,6 +146,10 @@ sre.System.prototype.engineSetup = function() {
 };
 
 
+/**
+ * @return {boolean} True if engine is ready, i.e., unicode file for the current
+ *     locale has been loaded.
+ */
 sre.System.prototype.engineReady = function() {
   return sre.Engine.isReady();
 };
@@ -168,12 +177,6 @@ sre.System.prototype.engineReady = function() {
 sre.System.prototype.toSpeech = function(expr) {
   return sre.System.getInstance().processString('speech', expr);
 };
-
-
-/**
- * @deprecated Use toSpeech().
- */
-sre.System.prototype.processExpression = sre.System.prototype.toSpeech;
 
 
 /**
@@ -237,12 +240,6 @@ sre.System.prototype.processString = function(processor, input) {
 sre.System.prototype.fileToSpeech = function(input, opt_output) {
   sre.System.getInstance().processFile('speech', input, opt_output);
 };
-
-
-/**
- * @deprecated Use fileToSpeech().
- */
-sre.System.prototype.processFile = sre.System.prototype.fileToSpeech;
 
 
 /**

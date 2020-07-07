@@ -231,8 +231,8 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   );
   defineRule(
       'abstr-root', 'default.default',
-      '[t] "racine d\'indice";' +
-      '[n] children/*[1] (engine:modality=speech);  [n] . (engine:style=feminine)',
+      '[t] "racine d\'indice"; [n] children/*[1] (engine:modality=speech); ' +
+      '[n] . (engine:style=feminine)',
       'self::root'
   );
   defineRule(
@@ -246,7 +246,8 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   // Content following the root expression.
   defineRule(
       'abstr-root-nested', 'default.default',
-      '[t] "racine imbriquée d\'indice"; [n] children/*[1] (engine:modality=speech);' +
+      '[t] "racine imbriquée d\'indice"; ' +
+      '[n] children/*[1] (engine:modality=speech);' +
       ' [t] "fin indice"; [n] . (engine:style=feminine);',
       'self::root', 'contains(@grammar, "collapsed")',
       'children/*/descendant-or-self::sqrt or' +
@@ -256,7 +257,8 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   defineRule(
       'abstr-root-nested', 'default.default',
       '[t] "racine imbriquée d\'indice"; ' +
-      '[n] children/*[1] (engine:modality=speech);  [n] . (engine:style=feminine)',
+      '[n] children/*[1] (engine:modality=speech); ' +
+      '[n] . (engine:style=feminine)',
       'self::root', 'children/*/descendant-or-self::sqrt or' +
       ' children/*/descendant-or-self::root'
   );
@@ -331,7 +333,8 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   );
   defineRule(
       'abstr-var-addition', 'default.default',
-      '[t] "somme avec un nombre variable d\'opérandes"; [n] . (engine:style=feminine)',
+      '[t] "somme avec un nombre variable d\'opérandes"; ' +
+      '[n] . (engine:style=feminine)',
       'self::infixop', '@role="addition"',
       'count(./children/*)>2', './children/punctuation[@role="ellipsis"]'
   );
@@ -441,7 +444,8 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
 
   defineRule(
       'abstr-rowvector', 'default.default',
-      '[t] "vecteur ligne de dimension"; [t] count(./children/row/children/*); ' +
+      '[t] "vecteur ligne de dimension"; ' +
+      '[t] count(./children/row/children/*); ' +
       '[n] . (engine:style=masculine)',
       'self::matrix', '@role="rowvector"'
   );
@@ -633,7 +637,8 @@ sre.SummaryFrench.initSummaryFrench_ = function() {
   );
   defineRule(
       'abstr-cell', 'default.default',
-      '[t] "dans"; [t] @role (grammar:localRole); [n] . (engine:style=feminine);',
+      '[t] "dans"; [t] @role (grammar:localRole); ' +
+      '[n] . (engine:style=feminine);',
       'self::cell'
   );
 

@@ -49,19 +49,19 @@ sre.ClearspeakGermanIssues.prototype.testIssue230 = function() {
   var preference = 'default';
   this.executeRuleTest(
       '<mn>5</mn><mfrac><mn>3</mn><mn>224</mn></mfrac>',
-      '5 et, 3 sur 224', preference);
+      '5, 3 geteilt durch 224', preference);
   this.executeRuleTest(
       '<mn>5</mn><mfrac><mn>3</mn><mn>4</mn></mfrac>',
-      '5 et trois-quarts', preference);
+      '5 drei viertel', preference);
 };
 
 
 sre.ClearspeakGermanIssues.prototype.testIssueNumbers = function() {
   var preference = 'default';
   this.executeRuleTest(
-      '<mrow><mn>t2e4</mn></mrow>', 'nombre t 2 e 4', preference);
+      '<mrow><mn>t2e4</mn></mrow>', 'Zahl t 2 e 4', preference);
   this.executeRuleTest(
-      '<mrow><mn>#FF0000</mn></mrow>', 'nombre dièse F F 0 0 0 0', preference);
+      '<mrow><mn>#FF0000</mn></mrow>', 'Zahl Nummernzeichen F F 0 0 0 0', preference);
   this.executeRuleTest(
-      '<mrow><mn>#FFFF</mn></mrow>', 'nombre dièse F F F F', preference);
+      '<mrow><mn>#FFFF</mn></mrow>', 'Zahl Nummernzeichen F F F F', preference);
 };

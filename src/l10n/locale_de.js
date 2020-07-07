@@ -206,7 +206,7 @@ sre.Locale.de = {
   },
 
   REGEXP: {
-    TEXT: 'a-zA-Z',
+    TEXT: 'a-zA-ZäöüÄÖÜß',
     NUMBER: '((\\d{1,3})(?=(.| ))((.| )\\d{3})*(\\,\\d+)?)|^\\d*\\,\\d+|^\\d+',
     DECIMAL_MARK: '\\,',
     DIGIT_GROUP: '.',
@@ -215,10 +215,24 @@ sre.Locale.de = {
   },
 
   PLURAL_UNIT: {
-    'foot': 'Fuß',
-    'inch': 'Zoll'
+    'Meile': 'Meilen',
+    'Yard': 'Yards',
+    'Joule': 'Joules',
+    'Gallone': 'Gallonen',
+    'Unze': 'Unzen',
+    'Tonne': 'Tonnen',
+    'Minute': 'Minuten',
+    'Stunde': 'Stunden',
+    'Sekunde': 'Sekunden'
   },
 
+  PLURAL: function(unit) {
+    if (unit.match(/(B|b)yte$/)) {
+      return unit.replace(/yte$/, 'ytes');
+    }
+    return unit;
+  },
+  
   NUMBERS: sre.Numbers.de.NUMBERS,
 
   ALPHABETS: {
@@ -270,6 +284,13 @@ sre.Locale.de = {
 
 
 sre.Grammar.getInstance().setCorrection(
+  'correctOne', function(number) {
+    return number.replace(/^eins /, 'ein ');
+  }
+);
+
+
+sre.Grammar.getInstance().setCorrection(
   'localFontNumber', function(font) {
     let realFont = sre.Messages.FONT[font];
     if (realFont === undefined) {
@@ -279,5 +300,34 @@ sre.Grammar.getInstance().setCorrection(
     return realFont.split(' ').map(function (x) {
       return x.replace(/s$/, '');
     }).join(' ');
+  }
+);
+
+
+sre.Grammar.getInstance().setCorrection(
+  'lowercase', function(name) {
+    return name.toLowerCase();
+  }
+);
+
+
+sre.Grammar.getInstance().setCorrection(
+  'article', function(name) {
+    let decl = sre.Grammar.getInstance().getParameter('case');
+    if (decl === 'dative') {
+      return {'der': 'dem', 'die': 'der', 'das': 'dem'}[name];
+    }
+    return name;
+  }
+);
+
+
+sre.Grammar.getInstance().setCorrection(
+  'masculine', function(name) {
+    let decl = sre.Grammar.getInstance().getParameter('case');
+    if (decl === 'dative') {
+      return name + 'n';
+    }
+    return name;
   }
 );

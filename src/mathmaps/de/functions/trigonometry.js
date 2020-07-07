@@ -6,7 +6,7 @@
     "key": "cos",
     "mappings": {
       "default": {
-        "default": "kosinus"
+        "default": "Kosinus"
       }
     },
     "category": "Trigonometric",
@@ -19,7 +19,7 @@
     "key": "cot",
     "mappings": {
       "default": {
-        "default": "kotangens"
+        "default": "Kotangens"
       }
     },
     "category": "Trigonometric",
@@ -31,7 +31,7 @@
     "key": "csc",
     "mappings": {
       "default": {
-        "default": "kosekans"
+        "default": "Kosekans"
       }
     },
     "category": "Trigonometric",
@@ -43,7 +43,7 @@
     "key": "sec",
     "mappings": {
       "default": {
-        "default": "sekans"
+        "default": "Sekans"
       }
     },
     "category": "Trigonometric",
@@ -55,7 +55,7 @@
     "key": "sin",
     "mappings": {
       "default": {
-        "default": "sinus"
+        "default": "Sinus"
       }
     },
     "category": "Trigonometric",
@@ -68,7 +68,7 @@
     "key": "tan",
     "mappings": {
       "default": {
-        "default": "tangens"
+        "default": "Tangens"
       }
     },
     "category": "Trigonometric",
@@ -80,8 +80,11 @@
     "key": "arccos",
     "mappings": {
       "default": {
-        "default": "arkuskosinus"
-      }
+        "default": "Arkuskosinus"
+      },
+     "clearspeak": {
+       "Trig_TrigInverse": "inverser Kosinus"
+     }
     },
     "category": "Cyclometric",
     "names": [
@@ -92,8 +95,11 @@
     "key": "arccot",
     "mappings": {
       "default": {
-        "default": "arkuskotangens"
-      }
+        "default": "Arkuskotangens"
+      },
+     "clearspeak": {
+       "Trig_TrigInverse": "inverser Kotangens"
+     }
     },
     "category": "Cyclometric",
     "names": [
@@ -104,8 +110,11 @@
     "key": "arccsc",
     "mappings": {
       "default": {
-        "default": "arkuskosekans"
-      }
+        "default": "Arkuskosekans"
+      },
+     "clearspeak": {
+       "Trig_TrigInverse": "inverser Kosekans"
+     }
     },
     "category": "Cyclometric",
     "names": [
@@ -116,8 +125,11 @@
     "key": "arcsec",
     "mappings": {
       "default": {
-        "default": "arkussekans "
-      }
+        "default": "Arkussekans"
+      },
+     "clearspeak": {
+       "Trig_TrigInverse": "inverser Sekans"
+     }
     },
     "category": "Cyclometric",
     "names": [
@@ -128,8 +140,11 @@
     "key": "arcsin",
     "mappings": {
       "default": {
-        "default": "arkussinus"
-      }
+        "default": "Arkussinus"
+      },
+     "clearspeak": {
+       "Trig_TrigInverse": "inverser Sinus"
+     }
     },
     "category": "Cyclometric",
     "names": [
@@ -140,8 +155,11 @@
     "key": "arctan",
     "mappings": {
       "default": {
-        "default": "arkustangens"
-      }
+        "default": "Arkustangens"
+      },
+     "clearspeak": {
+       "Trig_TrigInverse": "inverser Tangens"
+     }
     },
     "category": "Cyclometric",
     "names": [

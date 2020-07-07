@@ -61,7 +61,7 @@ goog.inherits(sre.ApiTest, sre.AbstractTest);
  */
 sre.ApiTest.prototype.setUpTest = function() {
   this.system.setupEngine(
-      {semantics: true, locale: 'en', domain: 'mathspeak', style: 'default',
+      {locale: 'en', domain: 'mathspeak', style: 'default',
         speech: sre.Engine.Speech.NONE});
   this.annotations = sre.SemanticAnnotations.getInstance().annotators;
   this.visitors = sre.SemanticAnnotations.getInstance().visitors;
@@ -75,8 +75,7 @@ sre.ApiTest.prototype.setUpTest = function() {
  */
 sre.ApiTest.prototype.tearDownTest = function() {
   this.system.setupEngine(
-      {semantics: false, domain: 'default', style: 'short',
-        speech: sre.Engine.Speech.NONE});
+      {domain: 'default', style: 'default', speech: sre.Engine.Speech.NONE});
   sre.SemanticAnnotations.getInstance().annotators = this.annotations;
   sre.SemanticAnnotations.getInstance().visitors = this.visitors;
 };
@@ -137,7 +136,7 @@ sre.ApiTest.prototype.testSetupEngine = function() {
       sre.ApiTest.QUADRATIC,
       'x equals StartFraction negative b plus or minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
-  this.system.setupEngine({domain: 'default', style: 'short'});
+  this.system.setupEngine({domain: 'default', style: 'default'});
   this.executeTest(
       'toSpeech',
       sre.ApiTest.QUADRATIC,

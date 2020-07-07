@@ -60,3 +60,32 @@ sre.StoreUtil.pauseSeparator = function(nodes, context) {
         {text: '', personality: {pause: value}})];
   };
 };
+
+
+/**
+ * Iterates over the list of content nodes of the parent of the given nodes.
+ * @param {Array.<Node>} nodes A node array.
+ * @param {string} context A context string.
+ * @return {function(): Array.<sre.AuditoryDescription>} A closure that returns
+ *     the content of the next content node. Returns only context string if list
+ *     is exhausted.
+ */
+sre.StoreUtil.contentIterator = function(nodes, context) {
+  if (nodes.length > 0) {
+    var contentNodes = sre.XpathUtil.evalXPath('../../content/*', nodes[0]);
+  } else {
+    var contentNodes = [];
+  }
+  return function() {
+    var content = contentNodes.shift();
+    var contextDescr = context ?
+        [sre.AuditoryDescription.create(
+            {text: context}, {translate: true})] :
+        [];
+    if (!content) {
+      return contextDescr;
+    }
+    var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(content);
+    return contextDescr.concat(descrs);
+  };
+};

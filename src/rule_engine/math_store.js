@@ -229,7 +229,8 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
       var rest = s;
       while (rest) {
         num = this.matchNumber_(rest);
-        var alpha = rest.match(new RegExp('^[' + sre.Messages.REGEXP.TEXT + ']+'));
+        var alpha = rest.match(
+            new RegExp('^[' + sre.Messages.REGEXP.TEXT + ']+'));
         if (num) {
           descs.push(this.evaluate_(num.number));
           rest = rest.substring(num.length);
@@ -261,6 +262,7 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
  * English writing, it will attempt to translate it.
  * @param {string} str The string to match.
  * @return {?{number: string, length: number}} The number and its length.
+ * @private
  */
 sre.MathStore.prototype.matchNumber_ = function(str) {
   var locNum = str.match(new RegExp('^' + sre.Messages.REGEXP.NUMBER));

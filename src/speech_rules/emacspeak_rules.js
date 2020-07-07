@@ -21,7 +21,6 @@
 goog.provide('sre.EmacspeakRules');
 
 goog.require('sre.MathStore');
-goog.require('sre.MathmlStoreUtil');
 goog.require('sre.MathspeakUtil');
 goog.require('sre.StoreUtil');
 
@@ -90,7 +89,7 @@ var addCTXF = sre.EmacspeakRules.addContextFunction_;
  */
 sre.EmacspeakRules.initCustomFunctions_ = function() {
   addCTXF('CTXFnodeCounter', sre.StoreUtil.nodeCounter);
-  addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
+  addCTXF('CTXFcontentIterator', sre.StoreUtil.contentIterator);
 
   addCQF('CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction);
 
@@ -243,7 +242,7 @@ sre.EmacspeakRules.initSemanticRules_ = function() {
   defineRule(
       'simple-fraction', 'emacspeak.default',
       '[p] (pause:100); [n] children/*[1] (rate:0.35); [t] "over"; ' +
-          ' [n] children/*[2] (rate:-0.35); [p] (pause:100)',
+          ' [n] children/*[2] (rate:0.35); [p] (pause:100)',
       'self::fraction',
       'name(children/*[1])="number" or name(children/*[1])="identifier"',
       'name(children/*[2])="number" or name(children/*[2])="identifier"');
@@ -255,7 +254,7 @@ sre.EmacspeakRules.initSemanticRules_ = function() {
       'fraction', 'emacspeak.default',
       '[p] (pause:250); [n] children/*[1] (rate:0.35); [p] (pause:250);' +
           ' [t] "divided by"; [p] (pause:250); ' +
-          ' [n] children/*[2] (rate:-0.35); [p] (pause:250)',
+          ' [n] children/*[2] (rate:0.35); [p] (pause:250)',
       'self::fraction');
 
   defineRule(
