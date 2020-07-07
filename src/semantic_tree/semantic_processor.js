@@ -543,7 +543,8 @@ sre.SemanticProcessor.prototype.appendOperand_ = function(root, op, node) {
       root, op, node)) {
     return root;
   }
-  return op.role === sre.SemanticAttr.Role.MULTIPLICATION ?
+  return (op.role === sre.SemanticAttr.Role.MULTIPLICATION ||
+          op.role === sre.SemanticAttr.Role.DIVISION) ?
       sre.SemanticProcessor.getInstance().appendMultiplicativeOp_(
       root, op, node) :
       sre.SemanticProcessor.getInstance().appendAdditiveOp_(root, op, node);
