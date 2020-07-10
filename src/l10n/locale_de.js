@@ -208,8 +208,8 @@ sre.Locale.de = {
   REGEXP: {
     TEXT: 'a-zA-ZäöüÄÖÜß',
     NUMBER: '((\\d{1,3})(?=(.| ))((.| )\\d{3})*(\\,\\d+)?)|^\\d*\\,\\d+|^\\d+',
-    DECIMAL_MARK: '\\,',
-    DIGIT_GROUP: '.',
+    DECIMAL_MARK: ',',
+    DIGIT_GROUP: '\\.',
     JOINER_SUBSUPER: ' ',
     JOINER_FRAC: ' '
   },
