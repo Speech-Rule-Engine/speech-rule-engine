@@ -309,7 +309,8 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
 
   defineRule(
       'number-baseline-font', 'mathspeak.default',
-      '[t] "Grundlinie"; [t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)',
+      '[t] "Grundlinie"; [t] @font (grammar:localFont);' +
+      ' [n] . (grammar:ignoreFont=@font)',
       'self::number', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"', 'preceding-sibling::identifier',
       'preceding-sibling::*[@role="latinletter" or @role="greekletter" or' +
@@ -317,7 +318,8 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
       'parent::*/parent::infixop[@role="implicit"]');
   defineSpecialisedRule(
       'number-baseline-font', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "Grund"; [t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)');
+      '[t] "Grund"; [t] @font (grammar:localFont); ' +
+      '[n] . (grammar:ignoreFont=@font)');
   defineSpecialisedRule(
       'number-baseline-font', 'mathspeak.brief', 'mathspeak.sbrief');
 
@@ -958,7 +960,8 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
 
   defineRule(
       'underscore', 'mathspeak.default',
-      '[t] "modifiziert unten"; [n] children/*[1]; [t] "mit"; [n] children/*[2]',
+      '[t] "modifiziert unten"; [n] children/*[1]; [t] "mit";' +
+      ' [n] children/*[2]',
       'self::underscore', 'children/*[2][@role="underaccent"]'
   );
   defineSpecialisedRule(
@@ -1051,7 +1054,8 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
       'self::row');
   defineRule(
       'row-with-label', 'mathspeak.default',
-      '[t] "mit Bezeichner"; [n] content/*[1]; [t] "Ende Bezeichner"(pause: 200); ' +
+      '[t] "mit Bezeichner"; [n] content/*[1];' +
+      ' [t] "Ende Bezeichner"(pause: 200); ' +
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Spalte")',
       'self::row', 'content');
   defineRule(
@@ -1164,8 +1168,8 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
       '[m] children/*', 'self::line');
   defineRule(
       'line-with-label', 'mathspeak.default',
-      '[t] "mit Bezeichner"; [n] content/*[1]; [t] "Ende Bezeichner" (pause: 200); ' +
-      '[m] children/*',
+      '[t] "mit Bezeichner"; [n] content/*[1]; ' +
+      '[t] "Ende Bezeichner" (pause: 200); [m] children/*',
       'self::line', 'content');
   defineSpecialisedRule(
       'line-with-label', 'mathspeak.default', 'mathspeak.brief',
@@ -1183,8 +1187,9 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
   defineSpecialisedRule('empty-line', 'mathspeak.brief', 'mathspeak.sbrief');
   defineRule(
       'empty-line-with-label', 'mathspeak.default',
-      '[t] "mit Bezeichner"; [n] content/*[1]; [t] "Ende Bezeichner"(pause: 200); ' +
-      '[t] "leer"', 'self::line', 'count(children/*)=0', 'content');
+      '[t] "mit Bezeichner"; [n] content/*[1]; ' +
+      '[t] "Ende Bezeichner"(pause: 200); [t] "leer"',
+      'self::line', 'count(children/*)=0', 'content');
   defineSpecialisedRule(
       'empty-line-with-label', 'mathspeak.default', 'mathspeak.brief',
       '[t] "Bezeichner"; [n] content/*[1] (pause: 200); [t] "leer"');

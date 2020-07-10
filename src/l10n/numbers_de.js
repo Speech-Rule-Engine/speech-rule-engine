@@ -63,6 +63,7 @@ sre.Numbers.de.largeNumbers_ = [
  * Changes number one 'eins' into a prefix.
  * @param {string} num number string.
  * @return {string} If it is a one, it is made into prefix.
+ * @private
  */
 sre.Numbers.de.onePrefix_ = function(num) {
   return num === sre.Numbers.de.onesNumbers_[1] ? 'ein' : num;
@@ -173,6 +174,9 @@ sre.Numbers.de.simpleOrdinal = function(number) {
 };
 
 
+/**
+ * @type {sre.Numbers}
+ */
 sre.Numbers.de.NUMBERS = {
   wordOrdinal: sre.Numbers.de.wordOrdinal,
   simpleOrdinal: sre.Numbers.de.simpleOrdinal,

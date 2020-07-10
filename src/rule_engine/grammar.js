@@ -262,6 +262,7 @@ sre.Grammar.translateString_ = function(text) {
  * Prepares a unit expression for matching.
  * @param {string} text The text to test.
  * @return {string} The cleaned string.
+ * @private
  */
 sre.Grammar.prepareUnit_ = function(text) {
   var match = text.match(/:unit$/);
@@ -276,6 +277,7 @@ sre.Grammar.prepareUnit_ = function(text) {
  * Removes unit suffix in case no unit with this name was found.
  * @param {string} text The text.
  * @return {string} The cleaned text incase it contained the :unit suffix.
+ * @private
  */
 sre.Grammar.cleanUnit_ = function(text) {
   if (text.match(/:unit$/)) {

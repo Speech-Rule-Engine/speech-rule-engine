@@ -191,7 +191,7 @@ sre.SummaryGerman.initSummaryGerman_ = function() {
   // Content following the root expression.
   defineRule(
       'abstr-root', 'default.default',
-      '[t] "Wurzel mit Exponent"; [n] children/*[1] (engine:modality="speech");' +
+      '[t] "Wurzel mit Exponent"; [n] children/*[1] (engine:modality=speech);' +
       ' [t] "Exponentende"',
       'self::root', 'contains(@grammar, "collapsed")',
       'following-sibling::* or ancestor::*/following-sibling::*'

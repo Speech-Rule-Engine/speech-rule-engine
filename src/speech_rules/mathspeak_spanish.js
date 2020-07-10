@@ -1291,8 +1291,8 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'children/*[@role="unit"]');
   defineRule(
       'unit-combiner-singular', 'mathspeak.default',
-      '[n] children/*[1]; [t] "por"; ' +
-      '[m] children/*[position()>1] (grammar:!singularUnit, sepFunc:CTXFunitMultipliers)',
+      '[n] children/*[1]; [t] "por"; [m] children/*[position()>1] ' +
+      '(grammar:!singularUnit, sepFunc:CTXFunitMultipliers)',
       'self::infixop', '@role="unit"', 'name(children/*[1])!="number"',
       'contains(@grammar, "singularUnit")', 'count(children/*)>1');
   defineRule(

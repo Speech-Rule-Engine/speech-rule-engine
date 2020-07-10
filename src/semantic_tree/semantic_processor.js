@@ -539,7 +539,7 @@ sre.SemanticProcessor.prototype.appendOperand_ = function(root, op, node) {
   if (root.type !== sre.SemanticAttr.Type.INFIXOP) {
     return sre.SemanticProcessor.getInstance().infixNode_([root, node], op);
   }
-  var division = sre.SemanticProcessor.getInstance().appendDivisionOp_(root, op, node);
+  var division = this.appendDivisionOp_(root, op, node);
   if (division) {
     return division;
   }
