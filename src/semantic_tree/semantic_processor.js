@@ -539,15 +539,61 @@ sre.SemanticProcessor.prototype.appendOperand_ = function(root, op, node) {
   if (root.type !== sre.SemanticAttr.Type.INFIXOP) {
     return sre.SemanticProcessor.getInstance().infixNode_([root, node], op);
   }
+  var division = sre.SemanticProcessor.getInstance().appendDivisionOp_(root, op, node);
+  if (division) {
+    return division;
+  }
   if (sre.SemanticProcessor.getInstance().appendExistingOperator_(
       root, op, node)) {
     return root;
   }
-  return (op.role === sre.SemanticAttr.Role.MULTIPLICATION ||
-          op.role === sre.SemanticAttr.Role.DIVISION) ?
-      sre.SemanticProcessor.getInstance().appendMultiplicativeOp_(
-      root, op, node) :
-      sre.SemanticProcessor.getInstance().appendAdditiveOp_(root, op, node);
+  return op.role === sre.SemanticAttr.Role.MULTIPLICATION ?
+     sre.SemanticProcessor.getInstance().appendMultiplicativeOp_(
+       root, op, node) :
+     sre.SemanticProcessor.getInstance().appendAdditiveOp_(root, op, node);
+};
+
+
+/**
+ * Appends an operand to a divsion operator.
+ * @param {!sre.SemanticNode} root The root node.
+ * @param {!sre.SemanticNode} op The operator node.
+ * @param {!sre.SemanticNode} node The operand node to be added.
+ * @return {sre.SemanticNode} The modified root node or null.
+ * @private
+ */
+sre.SemanticProcessor.prototype.appendDivisionOp_ = function(root, op, node) {
+  if (op.role === sre.SemanticAttr.Role.DIVISION) {
+    if (sre.SemanticPred.isImplicit(root)) {
+      return sre.SemanticProcessor.getInstance().infixNode_([root, node], op);
+    }
+    return this.appendLastOperand_(root, op, node);
+  }
+  return root.role === sre.SemanticAttr.Role.DIVISION ?
+    this.infixNode_([root, node], op) : null;
+};
+
+
+/**
+ * Appends an operand as rightmost child of an infix operator.
+ * @param {!sre.SemanticNode} root The root node.
+ * @param {!sre.SemanticNode} op The operator node.
+ * @param {!sre.SemanticNode} node The operand node to be added.
+ * @return {!sre.SemanticNode} The modified root node.
+ * @private
+ */
+sre.SemanticProcessor.prototype.appendLastOperand_ = function(root, op, node) {
+  var lastRoot = root;
+  var lastChild = root.childNodes[root.childNodes.length - 1];
+  while (lastChild && lastChild.type === sre.SemanticAttr.Type.INFIXOP
+         && !sre.SemanticPred.isImplicit(lastChild)) {
+    lastRoot = lastChild;
+    lastChild = lastRoot.childNodes[root.childNodes.length - 1];
+  }
+  var newNode = sre.SemanticProcessor.getInstance().infixNode_(
+      [lastRoot.childNodes.pop(), node], op);
+  lastRoot.appendChild(newNode);
+  return root;
 };
 
 
@@ -568,7 +614,8 @@ sre.SemanticProcessor.prototype.appendMultiplicativeOp_ = function(
   }
   var lastRoot = root;
   var lastChild = root.childNodes[root.childNodes.length - 1];
-  while (lastChild && lastChild.type === sre.SemanticAttr.Type.INFIXOP) {
+  while (lastChild && lastChild.type === sre.SemanticAttr.Type.INFIXOP
+         && !sre.SemanticPred.isImplicit(lastChild)) {
     lastRoot = lastChild;
     lastChild = lastRoot.childNodes[root.childNodes.length - 1];
   }

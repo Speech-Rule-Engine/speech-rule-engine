@@ -10958,74 +10958,72 @@ sre.EnrichMathmlTest.prototype.testMathmlSwapElementLayers = function() {
   this.executeMathmlTest(
       '<mrow><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ</mi></mrow><mo' +
       ' mathvariant="italic">⁢</mo><mi>m</mi>',
-      '<math type="infixop" role="division" id="3" children="0,6"' +
-      ' content="1"><mi type="identifier" role="latinletter" id="0"' +
-      ' parent="3">n</mi><mo mathvariant="normal" type="operator"' +
-      ' role="division" id="1" parent="3" operator="infixop,/">/</mo><mrow' +
-      ' children="2,5" content="4" id="6" parent="3" role="implicit"' +
-      ' type="infixop"><mrow><mi type="identifier" role="greekletter"' +
-      ' id="2" parent="6">ϕ</mi></mrow><mo mathvariant="italic"' +
+      '<math type="infixop" role="implicit" id="6" children="3,5"' +
+      ' content="4"><mrow type="infixop" role="division" id="3"' +
+      ' children="0,2" content="1" parent="6"><mi type="identifier"' +
+      ' role="latinletter" id="0" parent="3">n</mi><mo mathvariant="normal"' +
+      ' type="operator" role="division" id="1" parent="3"' +
+      ' operator="infixop,/">/</mo><mi type="identifier" role="greekletter"' +
+      ' id="2" parent="3">ϕ</mi></mrow><mo mathvariant="italic"' +
       ' type="operator" role="multiplication" id="4" parent="6"' +
       ' operator="infixop,⁢">⁢</mo><mi type="identifier" role="latinletter"' +
-      ' id="5" parent="6">m</mi></mrow></math>'
+      ' id="5" parent="6">m</mi></math>'
   );
   this.executeMathmlTest(
       '<mrow><mpadded><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ</mi>' +
       '</mpadded></mrow><mo mathvariant="italic">⁢</mo><mi>m</mi>',
-      '<math type="infixop" role="division" id="3" children="0,6"' +
-      ' content="1"><mi type="identifier" role="latinletter" id="0"' +
-      ' parent="3">n</mi><mo mathvariant="normal" type="operator"' +
-      ' role="division" id="1" parent="3" operator="infixop,/">/</mo><mrow' +
-      ' children="2,5" content="4" id="6" parent="3" role="implicit"' +
-      ' type="infixop"><mrow><mpadded><mi type="identifier"' +
-      ' role="greekletter" id="2" parent="6">ϕ</mi>' +
-      '</mpadded></mrow><mo mathvariant="italic"' +
+      '<math type="infixop" role="implicit" id="6" children="3,5"' +
+      ' content="4"><mrow><mpadded type="infixop" role="division" id="3"' +
+      ' children="0,2" content="1" parent="6"><mi type="identifier"' +
+      ' role="latinletter" id="0" parent="3">n</mi><mo mathvariant="normal"' +
+      ' type="operator" role="division" id="1" parent="3"' +
+      ' operator="infixop,/">/</mo><mi type="identifier" role="greekletter"' +
+      ' id="2" parent="3">ϕ</mi></mpadded></mrow><mo mathvariant="italic"' +
       ' type="operator" role="multiplication" id="4" parent="6"' +
       ' operator="infixop,⁢">⁢</mo><mi type="identifier" role="latinletter"' +
-      ' id="5" parent="6">m</mi></mrow></math>'
+      ' id="5" parent="6">m</mi></math>'
   );
-  // // This one moves the error around!
   this.executeMathmlTest(
       '<mrow><merror><mi>a</mi></merror><mi>n</mi><mo mathvariant="normal">/' +
       '</mo><mi>ϕ</mi></mrow><mo mathvariant="italic">⁢</mo><mi>m</mi>',
-      '<math type="infixop" role="division" id="3" children="0,6"' +
-      ' content="1"><mi type="identifier" role="latinletter" id="0"' +
-      ' parent="3">n</mi><mo mathvariant="normal" type="operator"' +
-      ' role="division" id="1" parent="3" operator="infixop,/">/</mo><mrow' +
-      ' children="2,5" content="4" id="6" parent="3" role="implicit"' +
-      ' type="infixop"><mrow><merror><mi>a</mi></merror><mi' +
-      ' type="identifier" role="greekletter" id="2" parent="6">ϕ</mi></mrow>' +
-      '<mo mathvariant="italic" type="operator" role="multiplication" id="4"' +
+      '<math type="infixop" role="implicit" id="6" children="3,5"' +
+      ' content="4"><mrow><merror><mi>a</mi></merror><mrow type="infixop"' +
+      ' role="division" id="3" children="0,2" content="1" parent="6"><mi' +
+      ' type="identifier" role="latinletter" id="0" parent="3">n</mi><mo' +
+      ' mathvariant="normal" type="operator" role="division" id="1"' +
+      ' parent="3" operator="infixop,/">/</mo><mi type="identifier"' +
+      ' role="greekletter" id="2" parent="3">ϕ</mi></mrow></mrow><mo' +
+      ' mathvariant="italic" type="operator" role="multiplication" id="4"' +
       ' parent="6" operator="infixop,⁢">⁢</mo><mi type="identifier"' +
-      ' role="latinletter" id="5" parent="6">m</mi></mrow></math>'
+      ' role="latinletter" id="5" parent="6">m</mi></math>'
   );
   this.executeMathmlTest(
       '<mrow><mrow><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ</mi></mrow>' +
       '<mo mathvariant="italic">⁢</mo><mi>m</mi></mrow>',
-      '<math type="infixop" role="division" id="3" children="0,6"' +
-      ' content="1"><mi type="identifier" role="latinletter" id="0"' +
-      ' parent="3">n</mi><mo mathvariant="normal" type="operator"' +
-      ' role="division" id="1" parent="3" operator="infixop,/">/</mo><mrow>' +
-      '<mrow type="infixop" role="implicit" id="6" children="2,5"' +
-      ' content="4" parent="3"><mrow><mi type="identifier"' +
-      ' role="greekletter" id="2" parent="6">ϕ</mi></mrow><mo' +
-      ' mathvariant="italic" type="operator" role="multiplication" id="4"' +
-      ' parent="6" operator="infixop,⁢">⁢</mo><mi type="identifier"' +
-      ' role="latinletter" id="5" parent="6">m</mi></mrow></mrow></math>'
+      '<math><mrow type="infixop" role="implicit" id="6" children="3,5"' +
+      ' content="4"><mrow type="infixop" role="division" id="3"' +
+      ' children="0,2" content="1" parent="6"><mi type="identifier"' +
+      ' role="latinletter" id="0" parent="3">n</mi><mo mathvariant="normal"' +
+      ' type="operator" role="division" id="1" parent="3"' +
+      ' operator="infixop,/">/</mo><mi type="identifier" role="greekletter"' +
+      ' id="2" parent="3">ϕ</mi></mrow><mo mathvariant="italic"' +
+      ' type="operator" role="multiplication" id="4" parent="6"' +
+      ' operator="infixop,⁢">⁢</mo><mi type="identifier" role="latinletter"' +
+      ' id="5" parent="6">m</mi></mrow></math>'
   );
   this.executeMathmlTest(
       '<mrow><mrow><mrow><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ</mi>' +
       '</mrow><mo mathvariant="italic">⁢</mo><mi>m</mi></mrow></mrow>',
-      '<math><mrow type="infixop" role="division" id="3" children="0,6"' +
-      ' content="1"><mi type="identifier" role="latinletter" id="0"' +
-      ' parent="3">n</mi><mo mathvariant="normal" type="operator"' +
-      ' role="division" id="1" parent="3" operator="infixop,/">/</mo><mrow>' +
-      '<mrow type="infixop" role="implicit" id="6" children="2,5"' +
-      ' content="4" parent="3"><mrow><mi type="identifier"' +
-      ' role="greekletter" id="2" parent="6">ϕ</mi></mrow><mo' +
-      ' mathvariant="italic" type="operator" role="multiplication" id="4"' +
-      ' parent="6" operator="infixop,⁢">⁢</mo><mi type="identifier"' +
-      ' role="latinletter" id="5" parent="6">m</mi></mrow></mrow></mrow></math>'
+      '<math><mrow><mrow type="infixop" role="implicit" id="6"' +
+      ' children="3,5" content="4"><mrow type="infixop" role="division"' +
+      ' id="3" children="0,2" content="1" parent="6"><mi type="identifier"' +
+      ' role="latinletter" id="0" parent="3">n</mi><mo mathvariant="normal"' +
+      ' type="operator" role="division" id="1" parent="3"' +
+      ' operator="infixop,/">/</mo><mi type="identifier" role="greekletter"' +
+      ' id="2" parent="3">ϕ</mi></mrow><mo mathvariant="italic"' +
+      ' type="operator" role="multiplication" id="4" parent="6"' +
+      ' operator="infixop,⁢">⁢</mo><mi type="identifier" role="latinletter"' +
+      ' id="5" parent="6">m</mi></mrow></mrow></math>'
   );
   this.executeMathmlTest(
       '<mi>a</mi><mrow><mrow><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ' +
@@ -11033,22 +11031,23 @@ sre.EnrichMathmlTest.prototype.testMathmlSwapElementLayers = function() {
       '</mo><mi>m</mi>',
       '<math type="infixop" role="implicit" id="12" children="11,9"' +
       ' content="8"><mrow type="infixop" role="implicit" id="11"' +
-      ' children="0,4" content="10" parent="12"><mi type="identifier"' +
+      ' children="0,7" content="10" parent="12"><mi type="identifier"' +
       ' role="latinletter" id="0" parent="11">a</mi><mo type="operator"' +
       ' role="multiplication" id="10" parent="11" added="true"' +
-      ' operator="infixop,⁢">⁢</mo><mrow type="infixop" role="division"' +
-      ' id="4" children="1,7" content="2" parent="11"><mi type="identifier"' +
+      ' operator="infixop,⁢">⁢</mo><mrow type="infixop"' +
+      ' role="multiplication" id="7" children="4,6" content="5"' +
+      ' parent="11"><mrow type="infixop" role="division" id="4"' +
+      ' children="1,3" content="2" parent="7"><mi type="identifier"' +
       ' role="latinletter" id="1" parent="4">n</mi><mo mathvariant="normal"' +
       ' type="operator" role="division" id="2" parent="4"' +
-      ' operator="infixop,/">/</mo><mrow type="infixop"' +
-      ' role="multiplication" id="7" children="3,6" content="5" parent="4">' +
-      '<mrow><mi type="identifier" role="greekletter" id="3" parent="7">ϕ' +
-      '</mi></mrow><mo type="operator" role="multiplication" id="5"' +
-      ' parent="7" operator="infixop,*">*</mo><mi type="identifier"' +
-      ' role="latinletter" id="6" parent="7">b</mi></mrow></mrow></mrow><mo' +
-      ' mathvariant="italic" type="operator" role="multiplication" id="8"' +
-      ' parent="12" operator="infixop,⁢">⁢</mo><mi type="identifier"' +
-      ' role="latinletter" id="9" parent="12">m</mi></math>'
+      ' operator="infixop,/">/</mo><mi type="identifier" role="greekletter"' +
+      ' id="3" parent="4">ϕ</mi></mrow><mo type="operator"' +
+      ' role="multiplication" id="5" parent="7" operator="infixop,*">*</mo>' +
+      '<mi type="identifier" role="latinletter" id="6" parent="7">b</mi>' +
+      '</mrow></mrow><mo mathvariant="italic" type="operator"' +
+      ' role="multiplication" id="8" parent="12" operator="infixop,⁢">⁢' +
+      '</mo><mi type="identifier" role="latinletter" id="9" parent="12">m' +
+      '</mi></math>'
   );
 };
 
