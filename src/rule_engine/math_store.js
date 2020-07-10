@@ -279,7 +279,7 @@ sre.MathStore.prototype.matchNumber_ = function(str) {
       replace(new RegExp(sre.Locale.en.REGEXP.DIGIT_GROUP, 'g'), 'X').
       replace(new RegExp(sre.Locale.en.REGEXP.DECIMAL_MARK, 'g'),
               sre.Messages.REGEXP.DECIMAL_MARK).
-      replace(/X/g, sre.Messages.REGEXP.DIGIT_GROUP);
+      replace(/X/g, sre.Messages.REGEXP.DIGIT_GROUP.replace(/\\/g, ''));
   return {number: number, length: enNum[0].length};
 };
 

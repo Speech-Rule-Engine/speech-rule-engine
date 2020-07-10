@@ -480,6 +480,11 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'function', 'clearspeak.default',
       '[n] text()', 'self::function');
+  defineRule(
+      'function-article', 'clearspeak.default',
+      '[t] "the"; [n] text()',
+      'self::function', '@role="prefix function"',
+      'contains(@grammar, "addArticle")');
 
   defineRule(
       'appl', 'clearspeak.default',
@@ -549,7 +554,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   // REMEMBER: When testing for function we can use the one in content!
   defineRule(
       'function-prefix-fenced-or-frac-arg', 'clearspeak.default',
-      '[p] (pause:"short"); [t] "the"; [n] children/*[1]; [t] "of";' +
+      '[p] (pause:"short"); [n] children/*[1] (grammar:addArticle); [t] "of";' +
       ' [n] children/*[2]; [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       '(name(children/*[2])="fenced" and not(contains(' +
@@ -560,7 +565,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'self::*');
   defineRule(
       'function-prefix-subscript', 'clearspeak.default',
-      '[p] (pause:"short"); [t] "the"; [n] children/*[1]; [t] "of";' +
+      '[p] (pause:"short"); [n] children/*[1] (grammar:addArticle); [t] "of";' +
       ' [p] (pause:"short"); [n] children/*[2]; [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       'name(children/*[1])="subscript"', 'self::*');
