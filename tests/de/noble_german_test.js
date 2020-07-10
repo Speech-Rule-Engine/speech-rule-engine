@@ -113,9 +113,9 @@ sre.NobleGermanTest.prototype.testSample_3 = function() {
       '</mrow>' +
       '<mo>)</mo></mrow><mo>=</mo>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'minus 24\\,15 minus Klammer auf 13\\,7 Klammer zu ist gleich', 'default');
-  this.executeRuleTest(mml, 'minus 24\\,15 minus Klammer auf 13\\,7 Klammer zu ist gleich', 'brief');
-  this.executeRuleTest(mml, 'minus 24\\,15 minus Klammer auf 13\\,7 Klammer zu ist gleich', 'sbrief');
+  this.executeRuleTest(mml, 'minus 24,15 minus Klammer auf 13,7 Klammer zu ist gleich', 'default');
+  this.executeRuleTest(mml, 'minus 24,15 minus Klammer auf 13,7 Klammer zu ist gleich', 'brief');
+  this.executeRuleTest(mml, 'minus 24,15 minus Klammer auf 13,7 Klammer zu ist gleich', 'sbrief');
 };
 
 
@@ -411,9 +411,9 @@ sre.NobleGermanTest.prototype.testSample_21 = function() {
       '<mn>2</mn>' +
       '</msup>' +
       '</mrow>';
-  this.executeRuleTest(mml, '0\\,6 Quadrat', 'default');
-  this.executeRuleTest(mml, '0\\,6 Quadrat', 'brief');
-  this.executeRuleTest(mml, '0\\,6 Quadrat', 'sbrief');
+  this.executeRuleTest(mml, '0,6 Quadrat', 'default');
+  this.executeRuleTest(mml, '0,6 Quadrat', 'brief');
+  this.executeRuleTest(mml, '0,6 Quadrat', 'sbrief');
 };
 
 
@@ -429,9 +429,9 @@ sre.NobleGermanTest.prototype.testSample_22 = function() {
       '<mn>2</mn>' +
       '</msup>    ' +
       '</mrow>';
-  this.executeRuleTest(mml, '1\\,5 Quadrat', 'default');
-  this.executeRuleTest(mml, '1\\,5 Quadrat', 'brief');
-  this.executeRuleTest(mml, '1\\,5 Quadrat', 'sbrief');
+  this.executeRuleTest(mml, '1,5 Quadrat', 'default');
+  this.executeRuleTest(mml, '1,5 Quadrat', 'brief');
+  this.executeRuleTest(mml, '1,5 Quadrat', 'sbrief');
 };
 
 
@@ -731,9 +731,9 @@ sre.NobleGermanTest.prototype.testSample_38 = function() {
 sre.NobleGermanTest.prototype.testSample_39 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><msup><mrow><mn>0.5</mn></mrow>' +
       '<mrow><mi>x</mi></mrow></msup></mrow>';
-  this.executeRuleTest(mml, 'y ist gleich 0\\,5 hoch x', 'default');
-  this.executeRuleTest(mml, 'y ist gleich 0\\,5 hoch x', 'brief');
-  this.executeRuleTest(mml, 'y ist gleich 0\\,5 hoch x', 'sbrief');
+  this.executeRuleTest(mml, 'y ist gleich 0,5 hoch x', 'default');
+  this.executeRuleTest(mml, 'y ist gleich 0,5 hoch x', 'brief');
+  this.executeRuleTest(mml, 'y ist gleich 0,5 hoch x', 'sbrief');
 };
 
 
@@ -900,9 +900,9 @@ sre.NobleGermanTest.prototype.testSample_52 = function() {
       '</mrow>' +
       '</mfrac>    ' +
       '</mrow>';
-  this.executeRuleTest(mml, '0\\,25 größer als fünf sechzehntel', 'default');
-  this.executeRuleTest(mml, '0\\,25 größer als fünf sechzehntel', 'brief');
-  this.executeRuleTest(mml, '0\\,25 größer als fünf sechzehntel', 'sbrief');
+  this.executeRuleTest(mml, '0,25 größer als fünf sechzehntel', 'default');
+  this.executeRuleTest(mml, '0,25 größer als fünf sechzehntel', 'brief');
+  this.executeRuleTest(mml, '0,25 größer als fünf sechzehntel', 'sbrief');
 };
 
 

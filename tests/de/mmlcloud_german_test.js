@@ -50,8 +50,6 @@ sre.MmlcloudGermanTest = function() {
    */
   this.locale = 'de';
 
-  // TODO: Remove
-  this.actual = true;
   this.setActive('MathmlCloudGerman');
 };
 goog.inherits(sre.MmlcloudGermanTest, sre.AbstractRuleTest);
@@ -195,17 +193,17 @@ sre.MmlcloudGermanTest.prototype.testAbsValueVsNeutral = function() {
  */
 sre.MmlcloudGermanTest.prototype.testNegativeVulgarFraction = function() {
   var mml = '<mo>-</mo><mfrac><mn>5</mn><mn>18</mn></mfrac>';
-  this.executeRuleTest(mml, 'negativ fünf achtzehntel', 'default');
-  this.executeRuleTest(mml, 'negativ fünf achtzehntel',
+  this.executeRuleTest(mml, 'minus fünf achtzehntel', 'default');
+  this.executeRuleTest(mml, 'minus fünf achtzehntel',
                        'brief');
-  this.executeRuleTest(mml, 'negativ fünf achtzehntel', 'sbrief');
+  this.executeRuleTest(mml, 'minus fünf achtzehntel', 'sbrief');
   mml = '<mfrac><mn>1</mn><mn>2</mn></mfrac><mo>-</mo>' +
       '<mfrac><mn>5</mn><mn>18</mn></mfrac>';
   this.executeRuleTest(mml, 'ein halb minus fünf achtzehntel', 'default');
   mml = '<mo>-</mo><mfrac><mn>5.2</mn><mi>a</mi></mfrac>';
-  this.executeRuleTest(mml, 'minus Anfang Bruch 5\,2 durch a Ende Bruch', 'default');
+  this.executeRuleTest(mml, 'minus Anfang Bruch 5,2 durch a Ende Bruch', 'default');
   mml = '<mo>-</mo><mfrac><mn>5.2</mn><mn>18</mn></mfrac>';
-  this.executeRuleTest(mml, 'minus Anfang Bruch 5\,2 durch 18 Ende Bruch', 'default');
+  this.executeRuleTest(mml, 'minus Anfang Bruch 5,2 durch 18 Ende Bruch', 'default');
 };
 
 
@@ -255,7 +253,7 @@ sre.MmlcloudGermanTest.prototype.testOtherFonts = function() {
   this.executeRuleTest('<mi>30</mi>', 'normales 30');
   this.executeRuleTest('<mi>3</mi>', 'kursive 3');
   this.executeRuleTest('<mi>30°</mi>', '30 Grad');
-  this.executeRuleTest('<mi>30mA</mi>', '3 0  m großes A');
+  this.executeRuleTest('<mi>30mA</mi>', '3 0 m großes A');
 };
 
 
@@ -485,13 +483,13 @@ sre.MmlcloudGermanTest.prototype.testMultiline = function() {
 sre.MmlcloudGermanTest.prototype.testRelationsWithEmpty = function() {
   this.executeRuleTest(
       '<mo>&#x2264;</mo><mn>2</mn>',
-      '>kleiner oder gleich 2');
+      'kleiner oder gleich 2');
   this.executeRuleTest(
       '<mo>=</mo><mn>2</mn><mo>=</mo>',
       'ist gleich 2 ist gleich');
   this.executeRuleTest(
       '<mo>&#x2264;</mo><mn>2</mn><mo>=</mo>',
-      '>kleiner oder gleich 2 ist gleich');
+      'kleiner oder gleich 2 ist gleich');
   this.executeRuleTest(
       '<mtable><mtr><mtd><mn>1</mn></mtd><mtd><mi></mi><mo>&#x2264;</mo><mn>2' +
       '</mn></mtd></mtr></mtable>',

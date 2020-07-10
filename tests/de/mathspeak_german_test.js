@@ -1684,9 +1684,9 @@ sre.MathspeakGermanTest.prototype.testSample_13_1_4 = function() {
       ' class="MathML-Unit">mi</mi></mrow><mo>≈</mo>' +
       '<mrow><mn>1.6</mn><mi mathvariant="normal"' +
       ' class="MathML-Unit">km</mi></mrow>';
-  this.executeRuleTest(mml, '1 Meilen beinahe gleich 1\\,6 Kilometer', 'default');
-  this.executeRuleTest(mml, '1 Meilen beinahe gleich 1\\,6 Kilometer', 'brief');
-  this.executeRuleTest(mml, '1 Meilen beinahe gleich 1\\,6 Kilometer', 'sbrief');
+  this.executeRuleTest(mml, '1 Meilen beinahe gleich 1,6 Kilometer', 'default');
+  this.executeRuleTest(mml, '1 Meilen beinahe gleich 1,6 Kilometer', 'brief');
+  this.executeRuleTest(mml, '1 Meilen beinahe gleich 1,6 Kilometer', 'sbrief');
 };
 
 
@@ -1697,9 +1697,9 @@ sre.MathspeakGermanTest.prototype.testSample_13_1_5 = function() {
   var mml = '<mrow><mn>1</mn><mi mathvariant="normal"' +
       ' class="MathML-Unit">in</mi><mo>=</mo><mn>2.54</mn>' +
       '<mi mathvariant="normal" class="MathML-Unit">cm</mi></mrow>';
-  this.executeRuleTest(mml, '1 Zoll ist gleich 2\\,54 Zentimeter', 'default');
-  this.executeRuleTest(mml, '1 Zoll ist gleich 2\\,54 Zentimeter', 'brief');
-  this.executeRuleTest(mml, '1 Zoll ist gleich 2\\,54 Zentimeter', 'sbrief');
+  this.executeRuleTest(mml, '1 Zoll ist gleich 2,54 Zentimeter', 'default');
+  this.executeRuleTest(mml, '1 Zoll ist gleich 2,54 Zentimeter', 'brief');
+  this.executeRuleTest(mml, '1 Zoll ist gleich 2,54 Zentimeter', 'sbrief');
 };
 
 

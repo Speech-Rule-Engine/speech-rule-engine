@@ -108,7 +108,7 @@ sre.ClearspeakGermanExponents.prototype.testExp006 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mn>5.0</mn></mrow>' +
       '</msup></mrow></math>';
-  var speech = '3 hoch 5\\,0';
+  var speech = '3 hoch 5,0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -155,7 +155,7 @@ sre.ClearspeakGermanExponents.prototype.testExp010a = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2.0</mn>' +
       '</mrow></msup></mrow></math>';
-  var speech = '3 hoch minus 2\\,0';
+  var speech = '3 hoch minus 2,0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -715,7 +715,7 @@ sre.ClearspeakGermanExponents.prototype.testExp090n = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mn>5.0</mn></mrow>' +
       '</msup></mrow></math>';
-  var speech = '3 potenziert mit 5\\,0';
+  var speech = '3 potenziert mit 5,0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -751,7 +751,7 @@ sre.ClearspeakGermanExponents.prototype.testExp093n = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2.0</mn>' +
       '</mrow></msup></mrow></math>';
-  var speech = '3 potenziert mit minus 2\\,0';
+  var speech = '3 potenziert mit minus 2,0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1255,7 +1255,7 @@ sre.ClearspeakGermanExponents.prototype.testExp134m = function() {
   var preference = 'Exponent_Exponent';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mn>5.0</mn></mrow>' +
       '</msup></mrow></math>';
-  var speech = '3 mit Exponent 5\\,0';
+  var speech = '3 mit Exponent 5,0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1291,7 +1291,7 @@ sre.ClearspeakGermanExponents.prototype.testExp137m = function() {
   var preference = 'Exponent_Exponent';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2.0</mn>' +
       '</mrow></msup></mrow></math>';
-  var speech = '3 mit Exponent minus 2\\,0';
+  var speech = '3 mit Exponent minus 2,0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
