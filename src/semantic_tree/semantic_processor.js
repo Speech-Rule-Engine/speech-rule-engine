@@ -554,6 +554,14 @@ sre.SemanticProcessor.prototype.appendOperand_ = function(root, op, node) {
 };
 
 
+/**
+ * Appends an operand to a divsion operator.
+ * @param {!sre.SemanticNode} root The root node.
+ * @param {!sre.SemanticNode} op The operator node.
+ * @param {!sre.SemanticNode} node The operand node to be added.
+ * @return {sre.SemanticNode} The modified root node or null.
+ * @private
+ */
 sre.SemanticProcessor.prototype.appendDivisionOp_ = function(root, op, node) {
   if (op.role === sre.SemanticAttr.Role.DIVISION) {
     if (sre.SemanticPred.isImplicit(root)) {
@@ -562,10 +570,18 @@ sre.SemanticProcessor.prototype.appendDivisionOp_ = function(root, op, node) {
     return this.appendLastOperand_(root, op, node);
   }
   return root.role === sre.SemanticAttr.Role.DIVISION ?
-    this.infixNode_([root, node], op) : false;
+    this.infixNode_([root, node], op) : null;
 };
 
 
+/**
+ * Appends an operand as rightmost child of an infix operator.
+ * @param {!sre.SemanticNode} root The root node.
+ * @param {!sre.SemanticNode} op The operator node.
+ * @param {!sre.SemanticNode} node The operand node to be added.
+ * @return {!sre.SemanticNode} The modified root node.
+ * @private
+ */
 sre.SemanticProcessor.prototype.appendLastOperand_ = function(root, op, node) {
   var lastRoot = root;
   var lastChild = root.childNodes[root.childNodes.length - 1];
@@ -578,7 +594,8 @@ sre.SemanticProcessor.prototype.appendLastOperand_ = function(root, op, node) {
       [lastRoot.childNodes.pop(), node], op);
   lastRoot.appendChild(newNode);
   return root;
-}
+};
+
 
 /**
  * Appends a multiplicative operator and operand.
