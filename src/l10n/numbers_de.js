@@ -55,7 +55,7 @@ sre.Numbers.de.tensNumbers_ = [
 sre.Numbers.de.largeNumbers_ = [
   '', 'tausend', 'million', 'milliarde', 'billion', 'billiarde', 'trillion',
   'trilliard', 'quadrillion', 'quadrilliard', 'quintillion', 'quintilliarde',
-  'sextillion', 'sextilliarde', 
+  'sextillion', 'sextilliarde',
 ];
 
 
@@ -68,6 +68,7 @@ sre.Numbers.de.onePrefix_ = function(num) {
   return num === sre.Numbers.de.onesNumbers_[1] ? 'ein' : num;
 };
 
+
 /**
  * Translates a number of up to twelve digits into a string representation.
  * @param {number} number The number to translate.
@@ -78,7 +79,7 @@ sre.Numbers.de.hundredsToWords_ = function(number) {
   var n = number % 1000;
   var str = '';
   var ones = sre.Numbers.de.onesNumbers_[Math.floor(n / 100)];
-  str +=  ones ? sre.Numbers.de.onePrefix_(ones) + 'hundert' : '';
+  str += ones ? sre.Numbers.de.onePrefix_(ones) + 'hundert' : '';
   n = n % 100;
   if (n) {
     str += str ? sre.Numbers.de.NUMBERS.numSep : '';
@@ -88,7 +89,7 @@ sre.Numbers.de.hundredsToWords_ = function(number) {
     } else {
       var tens = sre.Numbers.de.tensNumbers_[Math.floor(n / 10)];
       ones = sre.Numbers.de.onesNumbers_[n % 10];
-      str += ones ? sre.Numbers.de.onePrefix_(ones) + 'und' + tens: tens;
+      str += ones ? sre.Numbers.de.onePrefix_(ones) + 'und' + tens : tens;
     }
   }
   return str;

@@ -263,12 +263,12 @@ sre.Grammar.translateString_ = function(text) {
  * @param {string} text The text to test.
  * @return {string} The cleaned string.
  */
-sre.Grammar.prepareUnit_ =  function(text) {
+sre.Grammar.prepareUnit_ = function(text) {
   var match = text.match(/:unit$/);
   return match ?
-    text.slice(0, match.index).replace(/\s+/g, ' ') +
-    text.slice(match.index) :
-    text;
+      text.slice(0, match.index).replace(/\s+/g, ' ') +
+      text.slice(match.index) :
+      text;
 };
 
 
@@ -277,7 +277,7 @@ sre.Grammar.prepareUnit_ =  function(text) {
  * @param {string} text The text.
  * @return {string} The cleaned text incase it contained the :unit suffix.
  */
-sre.Grammar.cleanUnit_ =  function(text) {
+sre.Grammar.cleanUnit_ = function(text) {
   if (text.match(/:unit$/)) {
     sre.Grammar.getInstance().setParameter('plural', false);
     return text.replace(/:unit$/, '');

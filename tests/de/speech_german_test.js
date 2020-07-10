@@ -20,8 +20,8 @@
 goog.provide('sre.SpeechGermanTest');
 
 goog.require('sre.ClearspeakCharGermanTest');
-goog.require('sre.ClearspeakGermanTest');
 goog.require('sre.ClearspeakGermanFontTest');
+goog.require('sre.ClearspeakGermanTest');
 goog.require('sre.CollapseGermanTest');
 goog.require('sre.DefaultCharGermanTest');
 goog.require('sre.MathspeakCharGermanTest');

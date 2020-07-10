@@ -12909,7 +12909,7 @@ sre.SemanticTreeTest.prototype.testStreeVulgarFractions = function() {
 
 
 /**
- * Issue 376: Division treated similar to multiplication. 
+ * Issue 376: Division treated similar to multiplication.
  */
 sre.SemanticTreeTest.prototype.testIssue376 = function() {
   this.executeTreeTest(

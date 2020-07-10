@@ -136,13 +136,13 @@ sre.AbstractRuleTest.prototype.appendRuleExample = function(
   var outList = [input];
   if (this.compare) {
     sre.System.getInstance().setupEngine(
-      {domain: this.domain, style: style,
-       modality: this.modality, rules: this.rules, locale: 'en'});
+        {domain: this.domain, style: style,
+          modality: this.modality, rules: this.rules, locale: 'en'});
     outList.push(this.getSpeech(input));
   }
   outList.push(output);
   this.appendExamples(
-    key, sre.AbstractRuleTest.htmlRow(outList.concat(rest)));
+      key, sre.AbstractRuleTest.htmlRow(outList.concat(rest)));
 };
 
 

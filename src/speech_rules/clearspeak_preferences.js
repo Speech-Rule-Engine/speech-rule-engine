@@ -83,7 +83,7 @@ sre.ClearspeakPreferences.PREFERENCES = new sre.DynamicProperties({
   Exponent: ['Auto', 'AfterPower', 'Ordinal', 'OrdinalPower',
              // The following are German
              'Exponent'
-            ],
+  ],
   Fraction: ['Auto', 'EndFrac', 'FracOver', 'General', 'GeneralEndFrac',
              'Ordinal', 'Over', 'OverEndFrac', 'Per'],
   Functions: ['Auto', 'None',

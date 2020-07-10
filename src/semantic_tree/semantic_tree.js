@@ -78,17 +78,17 @@ sre.SemanticTree = function(mml) {
  * @private
  */
 sre.SemanticTree.implicitVisitor_ = new sre.SemanticVisitor(
-  'general',
-  function(node, info) {
-    if (node.type === sre.SemanticAttr.Type.INFIXOP &&
-        node.role === sre.SemanticAttr.Role.MULTIPLICATION &&
-        node.contentNodes.every(function(x) {
-          return !x.embellished &&
+    'general',
+    function(node, info) {
+      if (node.type === sre.SemanticAttr.Type.INFIXOP &&
+          node.role === sre.SemanticAttr.Role.MULTIPLICATION &&
+          node.contentNodes.every(function(x) {
+            return !x.embellished &&
             x.textContent === sre.SemanticAttr.invisibleTimes();})) {
-      node.role = sre.SemanticAttr.Role.IMPLICIT;
-    }
-    return false;
-  });
+        node.role = sre.SemanticAttr.Role.IMPLICIT;
+      }
+      return false;
+    });
 
 
 /**
@@ -97,20 +97,20 @@ sre.SemanticTree.implicitVisitor_ = new sre.SemanticVisitor(
  * @private
  */
 sre.SemanticTree.unitVisitor_ = new sre.SemanticVisitor(
-  'general',
-  function(node, info) {
-    if (node.type === sre.SemanticAttr.Type.INFIXOP &&
-        node.role === sre.SemanticAttr.Role.MULTIPLICATION) {
-      var children = node.childNodes;
-      if (children.length &&
-          (sre.SemanticPred.isPureUnit(children[0]) ||
-           sre.SemanticPred.isUnitCounter(children[0])) &&
-          node.childNodes.slice(1).every(sre.SemanticPred.isPureUnit)) {
-      node.role = sre.SemanticAttr.Role.UNIT;
+    'general',
+    function(node, info) {
+      if (node.type === sre.SemanticAttr.Type.INFIXOP &&
+          node.role === sre.SemanticAttr.Role.MULTIPLICATION) {
+        var children = node.childNodes;
+        if (children.length &&
+            (sre.SemanticPred.isPureUnit(children[0]) ||
+            sre.SemanticPred.isUnitCounter(children[0])) &&
+            node.childNodes.slice(1).every(sre.SemanticPred.isPureUnit)) {
+          node.role = sre.SemanticAttr.Role.UNIT;
+        }
       }
-    }
-    return false;
-  });
+      return false;
+    });
 
 
 /**

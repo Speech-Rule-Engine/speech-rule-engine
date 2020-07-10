@@ -28,9 +28,9 @@ goog.require('sre.Locale');
 goog.require('sre.Numbers.de');
 
 
-var germanPrefixCombiner =  function(letter, font, cap) {
+var germanPrefixCombiner = function(letter, font, cap) {
   if (cap === 's') {
-    font = font.split(' ').map(function (x) {
+    font = font.split(' ').map(function(x) {
       return x.replace(/s$/, '');
     }).join(' ');
     cap = '';
@@ -44,6 +44,7 @@ var germanPostfixCombiner = function(letter, font, cap) {
   letter = (!cap || (cap === 's')) ? letter : cap + ' ' + letter;
   return font ? letter + ' ' + font : letter;
 };
+
 
 /**
  * @type {sre.Locale.Messages}
@@ -83,7 +84,7 @@ sre.Locale.de = {
   MS_FUNC: {
     FRAC_NEST_DEPTH: sre.Locale.vulgarNestingDepth,
     RADICAL_NEST_DEPTH: function(x) {return (x > 1) ?
-                                     sre.Numbers.de.NUMBERS.numberToWords(x) + 'fach' : '';},
+          sre.Numbers.de.NUMBERS.numberToWords(x) + 'fach' : '';},
     COMBINE_ROOT_INDEX: function(postfix, index) {
       var root = index ? index + 'wurzel' : '';
       return postfix.replace('Wurzel', root);
@@ -95,8 +96,8 @@ sre.Locale.de = {
       return c.match(/ /) ? c.replace(/ /, ' ' + count + ' ') : count + ' ' + c;
     },
     FONT_REGEXP: function(font) {
-      font = font.split(' ').map(function (x) {
-      return x.replace(/s$/, '(|s)');
+      font = font.split(' ').map(function(x) {
+        return x.replace(/s$/, '(|s)');
       }).join(' ');
       return new RegExp('((^' + font + ' )|( ' + font + '$))');
     }
@@ -232,7 +233,7 @@ sre.Locale.de = {
     }
     return unit;
   },
-  
+
   NUMBERS: sre.Numbers.de.NUMBERS,
 
   ALPHABETS: {
@@ -264,7 +265,7 @@ sre.Locale.de = {
   ALPHABET_TRANSFORMERS: {
     digit: {
       default: function(n) {
-          return n === 0 ? 'null' : sre.Numbers.de.numberToWords(n);},
+        return n === 0 ? 'null' : sre.Numbers.de.numberToWords(n);},
       mathspeak: function(n) {return n.toString();},
       clearspeak: function(n) {return n.toString();}},
     letter: {
@@ -284,50 +285,50 @@ sre.Locale.de = {
 
 
 sre.Grammar.getInstance().setCorrection(
-  'correctOne', function(number) {
-    return number.replace(/^eins /, 'ein ');
-  }
-);
-
-
-sre.Grammar.getInstance().setCorrection(
-  'localFontNumber', function(font) {
-    let realFont = sre.Messages.FONT[font];
-    if (realFont === undefined) {
-      realFont = font || '';
+    'correctOne', function(number) {
+      return number.replace(/^eins /, 'ein ');
     }
-    realFont = (typeof realFont === 'string') ? realFont : realFont[0];
-    return realFont.split(' ').map(function (x) {
-      return x.replace(/s$/, '');
-    }).join(' ');
-  }
 );
 
 
 sre.Grammar.getInstance().setCorrection(
-  'lowercase', function(name) {
-    return name.toLowerCase();
-  }
-);
-
-
-sre.Grammar.getInstance().setCorrection(
-  'article', function(name) {
-    let decl = sre.Grammar.getInstance().getParameter('case');
-    if (decl === 'dative') {
-      return {'der': 'dem', 'die': 'der', 'das': 'dem'}[name];
+    'localFontNumber', function(font) {
+      let realFont = sre.Messages.FONT[font];
+      if (realFont === undefined) {
+        realFont = font || '';
+      }
+      realFont = (typeof realFont === 'string') ? realFont : realFont[0];
+      return realFont.split(' ').map(function(x) {
+        return x.replace(/s$/, '');
+      }).join(' ');
     }
-    return name;
-  }
 );
 
 
 sre.Grammar.getInstance().setCorrection(
-  'masculine', function(name) {
-    let decl = sre.Grammar.getInstance().getParameter('case');
-    if (decl === 'dative') {
-      return name + 'n';
+    'lowercase', function(name) {
+      return name.toLowerCase();
     }
-    return name;
-  }
+);
+
+
+sre.Grammar.getInstance().setCorrection(
+    'article', function(name) {
+      let decl = sre.Grammar.getInstance().getParameter('case');
+      if (decl === 'dative') {
+        return {'der': 'dem', 'die': 'der', 'das': 'dem'}[name];
+      }
+      return name;
+    }
+);
+
+
+sre.Grammar.getInstance().setCorrection(
+    'masculine', function(name) {
+      let decl = sre.Grammar.getInstance().getParameter('case');
+      if (decl === 'dative') {
+        return name + 'n';
+      }
+      return name;
+    }
 );

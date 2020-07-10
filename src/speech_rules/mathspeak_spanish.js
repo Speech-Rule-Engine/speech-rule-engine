@@ -1284,7 +1284,7 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       '[m] children/* (sepFunc:CTXFunitMultipliers)',
       'self::infixop', '@role="unit"');
   // TODO: Go over that again after refactoring of Units.
-   defineRule(
+  defineRule(
       'unit-combine-mult', 'mathspeak.default',
       '[m] children/* (sepFunc:CTXFunitMultipliers);',
       'self::infixop', '@role="multiplication" or @role="implicit"',

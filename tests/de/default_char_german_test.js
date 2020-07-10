@@ -36,7 +36,7 @@ sre.DefaultCharGermanTest = function() {
 
   this.locale = 'de';
   this.domain = 'default';
-  
+
   /**
    * @type {Array.<string>}
    */

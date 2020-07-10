@@ -463,8 +463,8 @@ sre.SemanticPred.isNumber = function(node) {
  */
 sre.SemanticPred.isUnitCounter = function(node) {
   return sre.SemanticPred.isNumber(node) ||
-    node.role === sre.SemanticAttr.Role.VULGAR ||
-    node.role === sre.SemanticAttr.Role.MIXED;
+      node.role === sre.SemanticAttr.Role.VULGAR ||
+      node.role === sre.SemanticAttr.Role.MIXED;
 };
 
 
@@ -477,7 +477,7 @@ sre.SemanticPred.isUnitCounter = function(node) {
 sre.SemanticPred.isPureUnit = function(node) {
   var children = node.childNodes;
   return node.role === sre.SemanticAttr.Role.UNIT && (
-    !children.length || children[0].role === sre.SemanticAttr.Role.UNIT
+      !children.length || children[0].role === sre.SemanticAttr.Role.UNIT
   );
 };
 
@@ -490,8 +490,8 @@ sre.SemanticPred.isPureUnit = function(node) {
  */
 sre.SemanticPred.isImplicit = function(node) {
   return node.role === sre.SemanticAttr.Role.IMPLICIT ||
-    (node.role === sre.SemanticAttr.Role.UNIT &&
-     !!node.contentNodes.length &&
-     node.contentNodes[0].textContent === sre.SemanticAttr.invisibleTimes()
-    );
+      (node.role === sre.SemanticAttr.Role.UNIT &&
+      !!node.contentNodes.length &&
+      node.contentNodes[0].textContent === sre.SemanticAttr.invisibleTimes()
+      );
 };

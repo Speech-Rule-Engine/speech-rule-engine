@@ -50,7 +50,7 @@ sre.MathspeakGermanTest = function() {
   this.locale = 'de';
 
   this.compare = true;
-  
+
   this.setActive('MathspeakGerman');
 };
 goog.inherits(sre.MathspeakGermanTest, sre.AbstractRuleTest);

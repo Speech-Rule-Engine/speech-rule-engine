@@ -548,9 +548,9 @@ sre.SemanticProcessor.prototype.appendOperand_ = function(root, op, node) {
     return root;
   }
   return op.role === sre.SemanticAttr.Role.MULTIPLICATION ?
-     sre.SemanticProcessor.getInstance().appendMultiplicativeOp_(
-       root, op, node) :
-     sre.SemanticProcessor.getInstance().appendAdditiveOp_(root, op, node);
+      sre.SemanticProcessor.getInstance().appendMultiplicativeOp_(
+      root, op, node) :
+      sre.SemanticProcessor.getInstance().appendAdditiveOp_(root, op, node);
 };
 
 
@@ -570,7 +570,7 @@ sre.SemanticProcessor.prototype.appendDivisionOp_ = function(root, op, node) {
     return this.appendLastOperand_(root, op, node);
   }
   return root.role === sre.SemanticAttr.Role.DIVISION ?
-    this.infixNode_([root, node], op) : null;
+      this.infixNode_([root, node], op) : null;
 };
 
 
@@ -585,8 +585,8 @@ sre.SemanticProcessor.prototype.appendDivisionOp_ = function(root, op, node) {
 sre.SemanticProcessor.prototype.appendLastOperand_ = function(root, op, node) {
   var lastRoot = root;
   var lastChild = root.childNodes[root.childNodes.length - 1];
-  while (lastChild && lastChild.type === sre.SemanticAttr.Type.INFIXOP
-         && !sre.SemanticPred.isImplicit(lastChild)) {
+  while (lastChild && lastChild.type === sre.SemanticAttr.Type.INFIXOP &&
+         !sre.SemanticPred.isImplicit(lastChild)) {
     lastRoot = lastChild;
     lastChild = lastRoot.childNodes[root.childNodes.length - 1];
   }
@@ -614,8 +614,8 @@ sre.SemanticProcessor.prototype.appendMultiplicativeOp_ = function(
   }
   var lastRoot = root;
   var lastChild = root.childNodes[root.childNodes.length - 1];
-  while (lastChild && lastChild.type === sre.SemanticAttr.Type.INFIXOP
-         && !sre.SemanticPred.isImplicit(lastChild)) {
+  while (lastChild && lastChild.type === sre.SemanticAttr.Type.INFIXOP &&
+         !sre.SemanticPred.isImplicit(lastChild)) {
     lastRoot = lastChild;
     lastChild = lastRoot.childNodes[root.childNodes.length - 1];
   }
@@ -2166,8 +2166,8 @@ sre.SemanticProcessor.prototype.fractionNode_ = function(denom, enume) {
     return sre.SemanticPred.isAttribute('type', 'NUMBER')(x) &&
         sre.SemanticPred.isAttribute('role', 'INTEGER')(x);
   }) ? sre.SemanticAttr.Role.VULGAR :
-    newNode.childNodes.every(sre.SemanticPred.isPureUnit) ?
-    sre.SemanticAttr.Role.UNIT : sre.SemanticAttr.Role.DIVISION;
+      newNode.childNodes.every(sre.SemanticPred.isPureUnit) ?
+      sre.SemanticAttr.Role.UNIT : sre.SemanticAttr.Role.DIVISION;
   this.propagateSimpleFunction(newNode);
   return newNode;
 };

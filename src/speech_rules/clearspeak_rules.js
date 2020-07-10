@@ -2404,7 +2404,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'contains(@annotation, "clearspeak:unit")'
   );
   defineSpecialisedRule(
-    'currency', 'clearspeak.Currency_Position', 'clearspeak.Currency_Prefix');
+      'currency', 'clearspeak.Currency_Position', 'clearspeak.Currency_Prefix');
   defineRule(
       'currency', 'clearspeak.Currency_Prefix',
       '[n] children/*[last()]; [m] children/*[position()<last()]; ',

@@ -154,7 +154,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'font', 'clearspeak.default',
       '[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font,pause:"short")',
       'self::*', 'name(self::*)!="number"', '@font', 'not(contains(@grammar, "ignoreFont"))',
-    '@font!="normal"');
+      '@font!="normal"');
   defineSpecialisedRule('font', 'clearspeak.default', 'clearspeak.Caps_SayCaps');
 
   defineRule(

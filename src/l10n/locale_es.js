@@ -197,7 +197,7 @@ sre.Locale.es = {
   PLURAL_UNIT: { },
 
   PLURAL: function(unit) {
-      return (/.*s$/.test(unit)) ? unit : unit + 's';
+    return (/.*s$/.test(unit)) ? unit : unit + 's';
   },
 
   NUMBERS: sre.Numbers.es.NUMBERS,

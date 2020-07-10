@@ -58,47 +58,47 @@ goog.inherits(sre.MmlcloudGermanTest, sre.AbstractRuleTest);
 // Special tests for roots
 sre.MmlcloudGermanTest.prototype.testMathspeakRoots = function() {
   this.executeRuleTest(
-    '<msqrt><mi>a</mi></msqrt>',
-    'Anfang Quadratwurzel a Ende Quadratwurzel', 'default');
+      '<msqrt><mi>a</mi></msqrt>',
+      'Anfang Quadratwurzel a Ende Quadratwurzel', 'default');
   this.executeRuleTest(
-    '<mroot><mi>a</mi><mn>2</mn></mroot>',
-    'Anfang Quadratwurzel a Ende Quadratwurzel', 'default');
+      '<mroot><mi>a</mi><mn>2</mn></mroot>',
+      'Anfang Quadratwurzel a Ende Quadratwurzel', 'default');
   this.executeRuleTest(
-    '<mroot><mi>a</mi><mn>3</mn></mroot>',
-    'Anfang Kubikwurzel a Ende Kubikwurzel', 'default');
+      '<mroot><mi>a</mi><mn>3</mn></mroot>',
+      'Anfang Kubikwurzel a Ende Kubikwurzel', 'default');
   this.executeRuleTest(
-    '<mroot><mi>a</mi><mn>4</mn></mroot>',
-    'Wurzelexponent 4 Anfang Wurzel a Ende Wurzel', 'default');
+      '<mroot><mi>a</mi><mn>4</mn></mroot>',
+      'Wurzelexponent 4 Anfang Wurzel a Ende Wurzel', 'default');
   this.executeRuleTest(
-    '<msqrt><msqrt><mi>a</mi></msqrt></msqrt>',
-    'Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Quadratwurzel', 'default');
+      '<msqrt><msqrt><mi>a</mi></msqrt></msqrt>',
+      'Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Quadratwurzel', 'default');
   this.executeRuleTest(
-    '<msqrt><msqrt><msqrt><mi>a</mi></msqrt></msqrt></msqrt>',
-    'Anfang zweifach geschachtelte Quadratwurzel Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Quadratwurzel Ende zweifach geschachtelte Quadratwurzel', 'default');
+      '<msqrt><msqrt><msqrt><mi>a</mi></msqrt></msqrt></msqrt>',
+      'Anfang zweifach geschachtelte Quadratwurzel Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Quadratwurzel Ende zweifach geschachtelte Quadratwurzel', 'default');
   this.executeRuleTest(
-    '<mroot><mroot><mi>a</mi><mn>2</mn></mroot><mn>2</mn></mroot>',
-    'Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Quadratwurzel', 'default');
+      '<mroot><mroot><mi>a</mi><mn>2</mn></mroot><mn>2</mn></mroot>',
+      'Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Quadratwurzel', 'default');
   this.executeRuleTest(
-    '<mroot><mroot><mroot><mi>a</mi><mn>2</mn></mroot><mn>2</mn></mroot><mn>2</mn></mroot>',
-    'Anfang zweifach geschachtelte Quadratwurzel Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Quadratwurzel Ende zweifach geschachtelte Quadratwurzel', 'default');
+      '<mroot><mroot><mroot><mi>a</mi><mn>2</mn></mroot><mn>2</mn></mroot><mn>2</mn></mroot>',
+      'Anfang zweifach geschachtelte Quadratwurzel Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Quadratwurzel Ende zweifach geschachtelte Quadratwurzel', 'default');
   this.executeRuleTest(
-    '<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>3</mn></mroot>',
-    'Anfang geschachtelte Kubikwurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Kubikwurzel', 'default');
+      '<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>3</mn></mroot>',
+      'Anfang geschachtelte Kubikwurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Kubikwurzel', 'default');
   this.executeRuleTest(
-    '<mroot><mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>3</mn></mroot><mn>3</mn></mroot>',
-    'Anfang zweifach geschachtelte Kubikwurzel Anfang geschachtelte Kubikwurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Kubikwurzel Ende zweifach geschachtelte Kubikwurzel', 'default');
+      '<mroot><mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>3</mn></mroot><mn>3</mn></mroot>',
+      'Anfang zweifach geschachtelte Kubikwurzel Anfang geschachtelte Kubikwurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Kubikwurzel Ende zweifach geschachtelte Kubikwurzel', 'default');
   this.executeRuleTest(
-    '<mroot><mroot><mi>a</mi><mn>4</mn></mroot><mn>4</mn></mroot>',
-    'geschachtelter Wurzelexponent 4 Anfang geschachtelte Wurzel Wurzelexponent 4 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel', 'default');
+      '<mroot><mroot><mi>a</mi><mn>4</mn></mroot><mn>4</mn></mroot>',
+      'geschachtelter Wurzelexponent 4 Anfang geschachtelte Wurzel Wurzelexponent 4 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel', 'default');
   this.executeRuleTest(
-    '<mroot><mroot><mroot><mi>a</mi><mn>4</mn></mroot><mn>4</mn></mroot><mn>4</mn></mroot>',
-    'zweifach geschachtelter Wurzelexponent 4 Anfang zweifach geschachtelte Wurzel geschachtelter Wurzelexponent 4 Anfang geschachtelte Wurzel Wurzelexponent 4 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel Ende zweifach geschachtelte Wurzel', 'default');
+      '<mroot><mroot><mroot><mi>a</mi><mn>4</mn></mroot><mn>4</mn></mroot><mn>4</mn></mroot>',
+      'zweifach geschachtelter Wurzelexponent 4 Anfang zweifach geschachtelte Wurzel geschachtelter Wurzelexponent 4 Anfang geschachtelte Wurzel Wurzelexponent 4 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel Ende zweifach geschachtelte Wurzel', 'default');
   this.executeRuleTest(
-    '<mroot><mroot><mroot><mi>a</mi><mn>4</mn></mroot><mn>3</mn></mroot><mn>2</mn></mroot>',
-    'Anfang zweifach geschachtelte Quadratwurzel Anfang geschachtelte Kubikwurzel Wurzelexponent 4 Anfang Wurzel a Ende Wurzel Ende geschachtelte Kubikwurzel Ende zweifach geschachtelte Quadratwurzel', 'default');
+      '<mroot><mroot><mroot><mi>a</mi><mn>4</mn></mroot><mn>3</mn></mroot><mn>2</mn></mroot>',
+      'Anfang zweifach geschachtelte Quadratwurzel Anfang geschachtelte Kubikwurzel Wurzelexponent 4 Anfang Wurzel a Ende Wurzel Ende geschachtelte Kubikwurzel Ende zweifach geschachtelte Quadratwurzel', 'default');
   this.executeRuleTest(
-    '<mroot><mroot><mroot><mi>a</mi><mn>2</mn></mroot><mn>3</mn></mroot><mn>4</mn></mroot>',
-    'zweifach geschachtelter Wurzelexponent 4 Anfang zweifach geschachtelte Wurzel Anfang geschachtelte Kubikwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Kubikwurzel Ende zweifach geschachtelte Wurzel', 'default');
+      '<mroot><mroot><mroot><mi>a</mi><mn>2</mn></mroot><mn>3</mn></mroot><mn>4</mn></mroot>',
+      'zweifach geschachtelter Wurzelexponent 4 Anfang zweifach geschachtelte Wurzel Anfang geschachtelte Kubikwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Kubikwurzel Ende zweifach geschachtelte Wurzel', 'default');
 };
 
 
