@@ -97,18 +97,6 @@ var addCTXF = sre.ClearspeakGerman.addContextFunction_;
 
 
 /**
- * Adds the annotators.
- * @private
- */
-sre.ClearspeakGerman.addAnnotators_ = function() {
-  // sre.SemanticAnnotations.getInstance().register(
-  //     sre.ClearspeakUtil.simpleExpression());
-  // sre.SemanticAnnotations.getInstance().register(
-  //     sre.ClearspeakUtil.unitExpression());
-};
-
-
-/**
  * Initialize the custom functions.
  * @private
  */
@@ -509,20 +497,6 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       '[n] children/*[1]; [n] children/*[2]',
       'self::appl', '@role="prefix function"');
 
-  // TODO: This could be problematic. Decide at end if it is worth keeping.
-  // Does not fully work with ImpTimes065 for example.
-  //
-  // (changes: testCap003, testCap013, testFracfunct009, testLog018,
-  // testTrig035)
-  //
-  // defineRule(
-  //     'function-prefix', 'clearspeak.default',
-  //     '[n] children/*[1]; [n] children/*[2]; [p] (pause:"short")',
-  //   'self::appl', '@role="prefix function"',
-  //   'parent::*/parent::infixop[@role!="implicit"]|
-  //    parent::*/parent::relseq|parent::*/parent::multrel',
-  //   'following-sibling::*');
-
   defineRule(
       'binary-operation', 'clearspeak.ImpliedTimes_MoreImpliedTimes',
       '[n] . (grammar:impliedTimes); [p] (pause:"short")',
@@ -547,8 +521,6 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
       'self::appl', '@role="prefix function"',
       'name(children/*[1])!="function"');
 
-  // REMEMBER: When testing for function we can use the one in content!
-  // TODO: Check grammar!
   defineRule(
       'function-prefix-fenced-or-frac-arg', 'clearspeak.default',
       '[p] (pause:"short"); [n] children/*[1] (grammar:addArticle); [t] "von";' +
@@ -2367,7 +2339,6 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
   );
 
   // Special rules for combinatorics.
-  // TODO: Check these with Gerhard.
   defineRule(
       'combinatorics', 'clearspeak.default',
       '[n] children/*[2] (grammar:combinatorics); [n] children/*[1]; ' +
@@ -2400,8 +2371,7 @@ sre.ClearspeakGerman.initClearspeakGerman_ = function() {
 
 sre.ClearspeakGerman.getInstance().initializer = [
   sre.ClearspeakGerman.initCustomFunctions_,
-  sre.ClearspeakGerman.initClearspeakGerman_,
-  sre.ClearspeakGerman.addAnnotators_
+  sre.ClearspeakGerman.initClearspeakGerman_
 ];
 
 

@@ -991,12 +991,6 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
       'children/*[2][text()="\u00AF" or text()="\uFFE3" or text()="\uFF3F"' +
       ' or text()="\u005F" or text()="\u203E"]'
   );
-  // defineSpecialisedRule(
-  //     'overbar', 'mathspeak.default', 'mathspeak.brief',
-  //     '[n] children/*[1]; [t] "Überstrich"'
-  // );
-  // defineSpecialisedRule(
-  //     'overbar', 'mathspeak.brief', 'mathspeak.sbrief');
 
   defineRule(
       'underbar', 'mathspeak.default',
@@ -1007,12 +1001,6 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
       'children/*[2][text()="\u00AF" or text()="\uFFE3" or text()="\uFF3F"' +
       ' or text()="\u005F" or text()="\u203E"]'
   );
-  // defineSpecialisedRule(
-  //     'underbar', 'mathspeak.default', 'mathspeak.brief',
-  //     '[n] children/*[1]; [t] "underBar"'
-  // );
-  // defineSpecialisedRule(
-  //     'underbar', 'mathspeak.brief', 'mathspeak.sbrief');
 
   defineRule(
       'overtilde', 'mathspeak.default',
@@ -1023,12 +1011,6 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
       'children/*[2][text()="\u007E" or text()="\u02DC" or text()="\u223C"' +
       ' or text()="\uFF5E"]'
   );
-  // defineSpecialisedRule(
-  //     'overtilde', 'mathspeak.default', 'mathspeak.brief',
-  //     '[n] children/*[1]; [t] "overtilde"'
-  // );
-  // defineSpecialisedRule(
-  //     'overtilde', 'mathspeak.brief', 'mathspeak.sbrief');
 
   defineRule(
       'undertilde', 'mathspeak.default',
@@ -1039,12 +1021,6 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
       'children/*[2][text()="\u007E" or text()="\u02DC" or text()="\u223C"' +
       ' or text()="\uFF5E"]'
   );
-  // defineSpecialisedRule(
-  //     'undertilde', 'mathspeak.default', 'mathspeak.brief',
-  //     '[n] children/*[1]; [t] "undertilde"'
-  // );
-  // defineSpecialisedRule(
-  //     'undertilde', 'mathspeak.brief', 'mathspeak.sbrief');
 
   // Layout Elements
   defineRule(
@@ -1098,9 +1074,6 @@ sre.MathspeakGerman.initMathspeakGerman_ = function() {
       'matrix-cell', 'mathspeak.default',
       '[n] children/*[1]; [p] (pause: 300)', 'self::cell');
 
-  // defineRule(
-  //     'empty-cell', 'mathspeak.default',
-  //     '[t] "Blank"', 'self::cell', 'count(children/*)=1', 'children/empty');
   defineRule(
       'empty-cell', 'mathspeak.default',
       '[t] "leer"; [p] (pause: 300)', 'self::cell', 'count(children/*)=0');
