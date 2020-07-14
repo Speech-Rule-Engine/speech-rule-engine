@@ -38,7 +38,7 @@ sre.MathStore = function() {
   sre.MathStore.base(this, 'constructor');
 
   /**
-   * @type {Array.<function()>}
+   * @type {Array.<function(sre.MathStore)>}
    */
   this.initializer = [];
 
@@ -60,7 +60,7 @@ goog.inherits(sre.MathStore, sre.BaseRuleStore);
 sre.MathStore.prototype.initialize = function() {
   if (this.initialized) return;
   for (var i = 0, func; func = this.initializer[i]; i++) {
-    func();
+    func(this);
   }
   this.setSpeechRules(this.trie.collectRules());
   this.initialized = true;
@@ -302,4 +302,13 @@ sre.MathStore.prototype.matchNumber_ = function(str) {
 sre.MathStore.prototype.evaluate_ = function(text) {
   return sre.AuditoryDescription.create(
       {text: text}, {adjust: true, translate: true});
+};
+
+
+/**
+ * @override
+ */
+sre.MathStore.prototype.parse = function(ruleSet) {
+  sre.MathStore.base(this, 'parse', ruleSet);
+  this.initializer = ruleSet['initialize'] || [];
 };
