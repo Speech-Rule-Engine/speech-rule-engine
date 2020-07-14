@@ -55,7 +55,9 @@ sre.MmlcloudGermanTest = function() {
 goog.inherits(sre.MmlcloudGermanTest, sre.AbstractRuleTest);
 
 
-// Special tests for roots
+/**
+ * Roots in German.
+ */
 sre.MmlcloudGermanTest.prototype.testMathspeakRoots = function() {
   this.executeRuleTest(
       '<msqrt><mi>a</mi></msqrt>',

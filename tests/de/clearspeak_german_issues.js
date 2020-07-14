@@ -39,12 +39,12 @@ sre.ClearspeakGermanIssues = function() {
 goog.inherits(sre.ClearspeakGermanIssues, sre.ClearspeakGermanRuleTest);
 
 
-
 //
 // Issues
 //
-
-
+/**
+ * Issue #230
+ */
 sre.ClearspeakGermanIssues.prototype.testIssue230 = function() {
   var preference = 'default';
   this.executeRuleTest(
@@ -56,6 +56,9 @@ sre.ClearspeakGermanIssues.prototype.testIssue230 = function() {
 };
 
 
+/**
+ * Issues with number expressions.
+ */
 sre.ClearspeakGermanIssues.prototype.testIssueNumbers = function() {
   var preference = 'default';
   this.executeRuleTest(

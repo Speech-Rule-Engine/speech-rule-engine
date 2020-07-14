@@ -47,6 +47,9 @@ sre.DefaultCharGermanTest = function() {
 goog.inherits(sre.DefaultCharGermanTest, sre.AbstractCharacterTest);
 
 
+/**
+ * Runs all character translation tests for default domain.
+ */
 sre.DefaultCharGermanTest.prototype.testDefaultChars = function() {
   this.executeCharTest('0', ['null']);
   this.executeCharTest('1', ['eins']);
@@ -4257,6 +4260,9 @@ sre.DefaultCharGermanTest.prototype.testDefaultChars = function() {
 };
 
 
+/**
+ * Runs all function name translation tests for default domain.
+ */
 sre.DefaultCharGermanTest.prototype.testDefaultFunctions = function() {
   this.executeCharTest('deg', ['Grad']);
   this.executeCharTest('det', ['Determinante']);
@@ -4326,6 +4332,9 @@ sre.DefaultCharGermanTest.prototype.testDefaultFunctions = function() {
 };
 
 
+/**
+ * Runs all unit expression translation tests for default domain.
+ */
 sre.DefaultCharGermanTest.prototype.testDefaultUnits = function() {
   this.executeUnitTest('ha', ['Hektar']);
   this.executeUnitTest('W', ['Watt']);
