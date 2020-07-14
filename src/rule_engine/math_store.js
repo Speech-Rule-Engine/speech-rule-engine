@@ -42,6 +42,12 @@ sre.MathStore = function() {
    */
   this.initializer = [];
 
+  this.parseMethods['defineRuleAlias'] = goog.bind(this.defineRuleAlias, this);
+  this.parseMethods['defineUniqueRuleAlias'] =
+      goog.bind(this.defineUniqueRuleAlias, this);
+  this.parseMethods['defineSpecialisedRule'] =
+      goog.bind(this.defineSpecialisedRule, this);
+
 };
 goog.inherits(sre.MathStore, sre.BaseRuleStore);
 
