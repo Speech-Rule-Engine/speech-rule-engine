@@ -286,7 +286,6 @@ sre.ClearspeakUtil.simpleExpression = function() {
         return sre.ClearspeakUtil.isSimpleExpression(node) ? 'simple' : ''; });
 };
 
-
 /**
  * Decides if node has markup of simple node in clearspeak.
  * @param {Node} node The node in question.
