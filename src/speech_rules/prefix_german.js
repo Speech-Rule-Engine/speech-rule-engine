@@ -143,7 +143,7 @@ sre.PrefixGerman = {
       '[t] CSFordinalPosition; [t] "Zeile"; [p] (pause:200)',
       'self::row'
   ],
-  ['defineRuleAlias',
+  ['defineRulesAlias',
       'row', 'self::line'
   ],
   ['defineRule',
