@@ -82,6 +82,9 @@ sre.SpeechRuleEngine = function() {
    */
   this.evaluators_ = {};
 
+  // Already loaded and intialized rule sets.
+  this.ruleSets_ = {};
+
   // sre.Debugger.getInstance().init();
 
   sre.Engine.registerTest(
@@ -99,9 +102,19 @@ sre.SpeechRuleEngine.prototype.parameterize = function(ruleSetNames) {
   var ruleSets = {};
   for (var i = 0, m = ruleSetNames.length; i < m; i++) {
     var name = ruleSetNames[i];
+    if (this.ruleSets_[name]) {
+      ruleSets[name] = this.ruleSets_[name];
+      continue;
+    }
     var set = sre.SpeechRuleStores.getConstructor(name);
     if (set && set.getInstance) {
       ruleSets[name] = set.getInstance();
+      this.ruleSets_[name] = set.getInstance();
+    } else if (set) {
+      let store = new sre.MathStore();
+      store.parse(set);
+      this.ruleSets_[name] = store;
+      ruleSets[name] = store;
     }
   }
   this.parameterize_(ruleSets);

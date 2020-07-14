@@ -96,6 +96,13 @@ sre.BaseRuleStore = function() {
    */
   this.initialized = false;
 
+  this.parseMethods = {
+    'defineRule': goog.bind(this.defineRule, this),
+    'addCQF': goog.bind(this.context.customQueries.add, this.context.customQueries),
+    'addCSF': goog.bind(this.context.customStrings.add, this.context.customStrings),
+    'addCTXF': goog.bind(this.context.contextFunctions.add, this.context.contextFunctions)
+  };
+
 };
 
 
@@ -331,4 +338,23 @@ sre.BaseRuleStore.prototype.setSpeechRules = function(rules) {
  */
 sre.BaseRuleStore.prototype.parseCstr = function(cstr) {
   return this.parser.parse(this.locale + '.' + this.modality + '.' + cstr);
+};
+
+
+sre.BaseRuleStore.prototype.parse = function(ruleSet) {
+  this.modality = ruleSet.modality || this.modality;
+  this.locale = ruleSet.locale || this.locale;
+  this.parseRules(ruleSet.rules || []);
+};
+
+sre.BaseRuleStore.prototype.parseRules = function(rules) {
+  rules.forEach(goog.bind(this.parseRule, this));
+};
+
+sre.BaseRuleStore.prototype.parseRule = function(rule) {
+  let type = rule[0];
+  let method = this.parseMethods[type];
+  if (type && method) {
+    method.apply(this, rule.slice(1));
+  }
 };
