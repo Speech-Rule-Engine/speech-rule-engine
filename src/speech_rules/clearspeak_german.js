@@ -35,7 +35,7 @@ goog.require('sre.StoreUtil');
  */
 sre.ClearspeakGerman = {
   locale: 'de',
-  rules: [
+  functions: [
     ['addCTXF', 'CTXFpauseSeparator', sre.StoreUtil.pauseSeparator],
     ['addCTXF', 'CTXFnodeCounter', sre.ClearspeakUtil.nodeCounter],
     ['addCTXF', 'CTXFcontentIterator', sre.StoreUtil.contentIterator],
@@ -50,8 +50,10 @@ sre.ClearspeakGerman = {
     ['addCQF', 'CQFsimpleArguments', sre.ClearspeakUtil.simpleArguments],
     ['addCQF', 'CQFisHyperbolic', sre.ClearspeakUtil.isHyperbolic],
     ['addCQF', 'CQFisLogarithm', sre.ClearspeakUtil.isLogarithmWithBase],
-    ['addCQF', 'CQFspaceoutNumber', sre.MathspeakUtil.spaceoutNumber],
+    ['addCQF', 'CQFspaceoutNumber', sre.MathspeakUtil.spaceoutNumber]
+  ],
 
+  rules: [
     ['defineRule',
       'collapsed', 'clearspeak.default',
       '[t] "kollapiert"; [n] . (engine:modality=summary,grammar:collapsed)',

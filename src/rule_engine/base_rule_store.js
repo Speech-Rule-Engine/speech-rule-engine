@@ -97,10 +97,7 @@ sre.BaseRuleStore = function() {
   this.initialized = false;
 
   this.parseMethods = {
-    'defineRule': goog.bind(this.defineRule, this),
-    'addCQF': goog.bind(this.context.customQueries.add, this.context.customQueries),
-    'addCSF': goog.bind(this.context.customStrings.add, this.context.customStrings),
-    'addCTXF': goog.bind(this.context.contextFunctions.add, this.context.contextFunctions)
+    'defineRule': goog.bind(this.defineRule, this)
   };
 
 };
@@ -344,12 +341,15 @@ sre.BaseRuleStore.prototype.parseCstr = function(cstr) {
 sre.BaseRuleStore.prototype.parse = function(ruleSet) {
   this.modality = ruleSet.modality || this.modality;
   this.locale = ruleSet.locale || this.locale;
+  this.context.parse(ruleSet.functions || []);
   this.parseRules(ruleSet.rules || []);
 };
+
 
 sre.BaseRuleStore.prototype.parseRules = function(rules) {
   rules.forEach(goog.bind(this.parseRule, this));
 };
+
 
 sre.BaseRuleStore.prototype.parseRule = function(rule) {
   let type = rule[0];

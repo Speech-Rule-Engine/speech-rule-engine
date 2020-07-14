@@ -33,8 +33,10 @@ goog.require('sre.NumbersUtil');
 sre.PrefixGerman = {
   modality: 'prefix',
   locale: 'de',
+  functions: [
+    ['addCSF', 'CSFordinalPosition', sre.NumbersUtil.ordinalPosition]
+  ],
   rules: [
-    ['addCSF', 'CSFordinalPosition', sre.NumbersUtil.ordinalPosition],
   ['defineRule',
       'numerator', 'default.default',
       '[t] "Zähler"; [p] (pause:200)',

@@ -31,7 +31,7 @@ goog.require('sre.MathspeakUtil');
  */
 sre.MathspeakGerman = {
   locale: 'de',
-  rules: [
+  functions: [
     ['addCQF', 'CQFspaceoutNumber', sre.MathspeakUtil.spaceoutNumber],
     ['addCQF', 'CQFspaceoutIdentifier', sre.MathspeakUtil.spaceoutIdentifier],
 
@@ -87,9 +87,10 @@ sre.MathspeakGerman = {
     ['addCSF', 'CSFRemoveParens', sre.MathspeakUtil.removeParens],
 
   // Dummy.
-    ['addCQF', 'CQFresetNesting', sre.MathspeakUtil.resetNestingDepth],
+    ['addCQF', 'CQFresetNesting', sre.MathspeakUtil.resetNestingDepth]
+  ],
 
-
+  rules: [
   // TODO: This needs to be prioritized!
   //
   // We could say "kollabiert X", but the postscript avoids hassle with Grammar.
