@@ -97,7 +97,7 @@ sre.BaseRuleStore = function() {
   this.initialized = false;
 
   this.parseMethods = {
-    'defineRule': goog.bind(this.defineRule, this)
+    'Rule': goog.bind(this.defineRule, this)
   };
 
 };
