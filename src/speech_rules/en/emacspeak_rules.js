@@ -28,6 +28,7 @@ goog.require('sre.StoreUtil');
  * Emacspeak rules.
  */
 sre.EmacspeakRules = {
+  domain: 'emacspeak',
   functions: [
     ['CTXF', 'CTXFnodeCounter', sre.StoreUtil.nodeCounter],
     ['CTXF', 'CTXFcontentIterator', sre.StoreUtil.contentIterator],
@@ -37,16 +38,16 @@ sre.EmacspeakRules = {
   rules: [
     // Initial rule
     ['Rule',
-     'stree', 'emacspeak.default',
+     'stree', 'default',
      '[n] ./*[1]', 'self::stree'],
 
     ['Rule',
-     'multrel', 'emacspeak.default',
+     'multrel', 'default',
      '[t] "multirelation"; [m] children/* (sepFunc:CTXFcontentIterator)',
      'self::multirel'],
 
     ['Rule',
-     'variable-equality', 'emacspeak.default',
+     'variable-equality', 'default',
      '[t] "equation sequence"; [m] children/* ' +
      '(context:"part",ctxtFunc:CTXFnodeCounter,' +
      'sepFunc:CTXFcontentIterator)',
@@ -54,40 +55,40 @@ sre.EmacspeakRules = {
      './children/punctuation[@role="ellipsis"]'], // Make that better!
 
     ['Rule',
-     'multi-equality', 'emacspeak.default',
+     'multi-equality', 'default',
      '[t] "equation sequence"; [m] children/* ' +
      '(context:"part",ctxtFunc:CTXFnodeCounter,' +
      'sepFunc:CTXFcontentIterator)',
      'self::relseq[@role="equality"]', 'count(./children/*)>2'],
 
     ['Rule',
-     'equality', 'emacspeak.default',
+     'equality', 'default',
      '[t] "equation"; [t] "left hand side"; [n] children/*[1];' +
      '[p] (pause:200); [n] content/*[1] (pause:200);' +
      '[t] "right hand side"; [n] children/*[2]',
      'self::relseq[@role="equality"]', 'count(./children/*)=2'],
 
     ['Rule',
-     'simple-equality', 'emacspeak.default',
+     'simple-equality', 'default',
      '[n] children/*[1]; [p] (pause:200); [n] content/*[1] (pause:200);' +
      '[n] children/*[2]',
      'self::relseq[@role="equality"]', 'count(./children/*)=2',
      './children/identifier or ./children/number'],
 
     ['Rule',
-     'simple-equality2', 'emacspeak.default',
+     'simple-equality2', 'default',
      '[n] children/*[1]; [p] (pause:200); [n] content/*[1] (pause:200);' +
      '[n] children/*[2]',
      'self::relseq[@role="equality"]', 'count(./children/*)=2',
      './children/function or ./children/appl'],
 
     ['Rule',
-     'relseq', 'emacspeak.default',
+     'relseq', 'default',
      '[m] children/* (sepFunc:CTXFcontentIterator)',
      'self::relseq'],
 
     ['Rule',
-     'implicit', 'emacspeak.default',
+     'implicit', 'default',
      '[m] children/*', 'self::infixop', '@role="implicit"',
      'children/*[1][@role="latinletter"] or ' +
      'children/*[1][@role="greekletter"] or ' +
@@ -100,13 +101,13 @@ sre.EmacspeakRules = {
     ],
 
     ['Rule',
-     'binary-operation', 'emacspeak.default',
+     'binary-operation', 'default',
      '[p] (pause:100); [m] children/* (sepFunc:CTXFcontentIterator);' +
      ' [p] (pause:100);',
      'self::infixop'],
 
     ['Rule',
-     'variable-addition', 'emacspeak.default',
+     'variable-addition', 'default',
      '[t] "sum with variable number of summands";' +
      '[p] (pause:400); [m] children/* (sepFunc:CTXFcontentIterator)',
      'self::infixop[@role="addition"]', 'count(children/*)>2',
@@ -114,39 +115,39 @@ sre.EmacspeakRules = {
 
     // Prefix Operator
     ['Rule',
-     'prefix', 'emacspeak.default',
+     'prefix', 'default',
      '[t] "prefix"; [n] text(); [t] "of" (pause 150);' +
      '[n] children/*[1]',
      'self::prefixop'],
 
     ['Rule',
-     'negative', 'emacspeak.default',
+     'negative', 'default',
      '[t] "negative"; [n] children/*[1]',
      'self::prefixop', 'self::prefixop[@role="negative"]'],
 
     // Postfix Operator
     ['Rule',
-     'postfix', 'emacspeak.default',
+     'postfix', 'default',
      '[n] children/*[1]; [t] "postfix"; [n] text() (pause 300)',
      'self::postfixop'],
 
     ['Rule',
-     'identifier', 'emacspeak.default',
+     'identifier', 'default',
      '[n] text()', 'self::identifier'],
 
     ['Rule',
-     'number', 'emacspeak.default',
+     'number', 'default',
      '[n] text()', 'self::number'],
 
     // Font rules
     ['Rule',
-     'font', 'emacspeak.default',
+     'font', 'default',
      '[t] @font; [n] . (grammar:ignoreFont=@font)',
      'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
      '@font!="normal"'],
 
     ['Rule',
-     'font-identifier-short', 'emacspeak.default',
+     'font-identifier-short', 'default',
      '[t] @font; [n] CQFhideFont; [t] CSFshowFont',
      'self::identifier', 'string-length(text())=1',
      '@font', '@font="normal"', '""=translate(text(), ' +
@@ -159,55 +160,55 @@ sre.EmacspeakRules = {
      '@role!="unit"'],
 
     ['Rule',
-     'font-identifier', 'emacspeak.default',
+     'font-identifier', 'default',
      '[t] @font; [n] . (grammar:ignoreFont=@font)',
      'self::identifier', 'string-length(text())=1',
      '@font', '@font="normal"', 'not(contains(@grammar, "ignoreFont"))',
      '@role!="unit"'],
 
     ['Rule',
-     'omit-font', 'emacspeak.default',
+     'omit-font', 'default',
      '[n] . (grammar:ignoreFont=@font)',
      'self::identifier', 'string-length(text())=1', '@font',
      'not(contains(@grammar, "ignoreFont"))', '@font="italic"'],
 
     // Fraction
     ['Rule',
-     'simple-fraction', 'emacspeak.default',
+     'simple-fraction', 'default',
      '[p] (pause:100); [n] children/*[1] (rate:0.35); [t] "over"; ' +
      ' [n] children/*[2] (rate:0.35); [p] (pause:100)',
      'self::fraction',
      'name(children/*[1])="number" or name(children/*[1])="identifier"',
      'name(children/*[2])="number" or name(children/*[2])="identifier"'],
     ['Rule',
-     'vulgar-fraction', 'emacspeak.default',
+     'vulgar-fraction', 'default',
      '[t] CSFvulgarFraction',
      'self::fraction', '@role="vulgar"', 'CQFvulgarFractionSmall'],
     ['Rule',
-     'fraction', 'emacspeak.default',
+     'fraction', 'default',
      '[p] (pause:250); [n] children/*[1] (rate:0.35); [p] (pause:250);' +
      ' [t] "divided by"; [p] (pause:250); ' +
      ' [n] children/*[2] (rate:0.35); [p] (pause:250)',
      'self::fraction'],
 
     ['Rule',
-     'superscript', 'emacspeak.default',
+     'superscript', 'default',
      '[n] children/*[1]; [t] "super"; [n] children/*[2] (pitch:0.35);' +
      '[p] (pause:300)',
      'self::superscript'],
     ['Rule',
-     'subscript', 'emacspeak.default',
+     'subscript', 'default',
      '[n] children/*[1]; [t] "sub"; [n] children/*[2] (pitch:-0.35);' +
      '[p] (pause:300)',
      'self::subscript'],
 
     ['Rule',
-     'ellipsis', 'emacspeak.default',
+     'ellipsis', 'default',
      '[p] (pause:200); [t] "ellipsis"; [p] (pause:300)',
      'self::punctuation', 'self::punctuation[@role="ellipsis"]'],
 
     ['Rule',
-     'fence-single', 'emacspeak.default',
+     'fence-single', 'default',
      '[n] text()',
      'self::punctuation', 'self::punctuation[@role="openfence"]'],
     ['Alias','fence-single', 'self::punctuation',
@@ -218,76 +219,76 @@ sre.EmacspeakRules = {
      'self::punctuation[@role="application"]'],
 
     ['Rule',
-     'omit-empty', 'emacspeak.default',
+     'omit-empty', 'default',
      '[p] (pause:100)',
      'self::empty'],
 
     ['Rule',
-     'fences-open-close', 'emacspeak.default',
+     'fences-open-close', 'default',
      '[p] (pause:200); [n] children/*[1] (rate:0.35); [p] (pause:200)',
      'self::fenced', '@role="leftright"'],
 
     ['Rule',
-     'fences-open-close-in-appl', 'emacspeak.default',
+     'fences-open-close-in-appl', 'default',
      '[p] (pause:200); [n] children/*[1]; [p] (pause:200);',
      'self::fenced[@role="leftright"]', './parent::children/parent::appl'],
 
     ['Rule',
-     'fences-neutral', 'emacspeak.default',
+     'fences-neutral', 'default',
      '[p] (pause:100); [t] "absolute value of"; [n] children/*[1];' +
      '[p] (pause:350);',
      'self::fenced', 'self::fenced[@role="neutral"]'],
 
     ['Rule',
-     'omit-fences', 'emacspeak.default',
+     'omit-fences', 'default',
      '[p] (pause:500); [n] children/*[1]; [p] (pause:200);',
      'self::fenced'],
 
     // Matrix rules.
     ['Rule',
-     'matrix', 'emacspeak.default',
+     'matrix', 'default',
      '[t] "matrix"; [m] children/* ' +
      '(ctxtFunc:CTXFnodeCounter,context:"row",pause:100)',
      'self::matrix'],
 
     ['Rule',
-     'matrix-row', 'emacspeak.default',
+     'matrix-row', 'default',
      '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"column",pause:100)',
      'self::row[@role="matrix"]'],
 
     ['Rule',
-     'matrix-cell', 'emacspeak.default',
+     'matrix-cell', 'default',
      '[n] children/*[1]', 'self::cell[@role="matrix"]'],
 
     // Vector rules.
     ['Rule',
-     'vector', 'emacspeak.default',
+     'vector', 'default',
      '[t] "vector"; [m] children/* ' +
      '(ctxtFunc:CTXFnodeCounter,context:"element",pause:100)',
      'self::vector'],
 
     // Cases rules.
     ['Rule',
-     'cases', 'emacspeak.default',
+     'cases', 'default',
      '[t] "case statement"; [m] children/* ' +
      '(ctxtFunc:CTXFnodeCounter,context:"case",pause:100)',
      'self::cases'],
 
     ['Rule',
-     'cases-row', 'emacspeak.default',
+     'cases-row', 'default',
      '[m] children/*', 'self::row[@role="cases"]'],
 
     ['Rule',
-     'cases-cell', 'emacspeak.default',
+     'cases-cell', 'default',
      '[n] children/*[1]', 'self::cell[@role="cases"]'],
 
     ['Rule',
-     'row', 'emacspeak.default',
+     'row', 'default',
      '[m] ./* (ctxtFunc:CTXFnodeCounter,context:"column",pause:100)',
      'self::row'],
 
     ['Rule',
-     'cases-end', 'emacspeak.default',
+     'cases-end', 'default',
      '[t] "case statement"; ' +
      '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"case",pause:100);' +
      '[t] "end cases"',
@@ -295,24 +296,24 @@ sre.EmacspeakRules = {
 
     // Multiline rules.
     ['Rule',
-     'multiline', 'emacspeak.default',
+     'multiline', 'default',
      '[t] "multiline equation";' +
      '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"line",pause:100)',
      'self::multiline'],
 
     ['Rule',
-     'line', 'emacspeak.default',
+     'line', 'default',
      '[m] children/*', 'self::line'],
 
     // Table rules.
     ['Rule',
-     'table', 'emacspeak.default',
+     'table', 'default',
      '[t] "multiline equation";' +
      '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"row",pause:200)',
      'self::table'],
 
     ['Rule',
-     'table-row', 'emacspeak.default',
+     'table-row', 'default',
      '[m] children/* (pause:100)', 'self::row[@role="table"]'],
 
     ['Alias',
@@ -321,61 +322,61 @@ sre.EmacspeakRules = {
 
     // Rules for punctuated expressions.
     ['Rule',
-     'end-punct', 'emacspeak.default',
+     'end-punct', 'default',
      '[m] children/*; [p] (pause:300)',
      'self::punctuated', '@role="endpunct"'],
 
     ['Rule',
-     'start-punct', 'emacspeak.default',
+     'start-punct', 'default',
      '[n] content/*[1]; [p] (pause:200); [m] children/*[position()>1]',
      'self::punctuated', '@role="startpunct"'],
 
     ['Rule',
-     'integral-punct', 'emacspeak.default',
+     'integral-punct', 'default',
      '[n] children/*[1] (rate:0.2); [n] children/*[3] (rate:0.2)',
      'self::punctuated', '@role="integral"'],
 
     ['Rule',
-     'punctuated', 'emacspeak.default',
+     'punctuated', 'default',
      '[m] children/* (pause:100)',
      'self::punctuated'],
 
     // Function rules
     ['Rule',
-     'function', 'emacspeak.default',
+     'function', 'default',
      '[n] text()', 'self::function'],
 
     ['Rule',
-     'appl', 'emacspeak.default',
+     'appl', 'default',
      '[n] children/*[1]; [n] content/*[1]; [n] children/*[2]', 'self::appl'],
 
     // Limit operator rules
     ['Rule',
-     'sum-only', 'emacspeak.default',
+     'sum-only', 'default',
      '[n] children/*[1]; [t] "from"; [n] children/*[2]; [t] "to";' +
      '[n] children/*[3]', 'self::limboth', '@role="sum" or @role="integral"'],
 
     ['Rule',
-     'limboth', 'emacspeak.default',
+     'limboth', 'default',
      '[n] children/*[1]; [p] (pause 100); [t] "over"; [n] children/*[2];' +
      '[t] "under"; [n] children/*[3]; [p] (pause 250);',
      'self::limboth'],
 
     ['Rule',
-     'limlower', 'emacspeak.default',
+     'limlower', 'default',
      '[n] children/*[1]; [t] "over"; [n] children/*[2];', 'self::limlower'],
 
     ['Rule',
-     'limupper', 'emacspeak.default',
+     'limupper', 'default',
      '[n] children/*[1]; [t] "under"; [n] children/*[2];', 'self::limupper'],
 
     // Bigoperator rules
     ['Rule',
-     'largeop', 'emacspeak.default',
+     'largeop', 'default',
      '[n] text()', 'self::largeop'],
 
     ['Rule',
-     'bigop', 'emacspeak.default',
+     'bigop', 'default',
      '[n] children/*[1]; [p] (pause 100); [t] "over"; [n] children/*[2];' +
      '[p] (pause 250);',
      'self::bigop'],
@@ -383,79 +384,79 @@ sre.EmacspeakRules = {
 
     // Integral rules
     ['Rule',
-     'integral', 'emacspeak.default',
+     'integral', 'default',
      '[n] children/*[1]; [p] (pause 100); [n] children/*[2];' +
      '[p] (pause 200); [n] children/*[3] (rate:0.35);', 'self::integral'],
 
 
     ['Rule',
-     'sqrt', 'emacspeak.default',
+     'sqrt', 'default',
      '[t] "Square root of"; [n] children/*[1] (rate:0.35); [p] (pause:400)',
      'self::sqrt'],
 
     ['Rule',
-     'square', 'emacspeak.default',
+     'square', 'default',
      '[n] children/*[1]; [t] "squared" (pitch:0.35); [p] (pause:200)',
      'self::superscript', 'children/*[2][text()=2]',
      'name(./children/*[1])!="text"'],
 
     ['Rule',
-     'cube', 'emacspeak.default',
+     'cube', 'default',
      '[n] children/*[1]; [t] "cubed" (pitch:0.35); [p] (pause:200)',
      'self::superscript', 'children/*[2][text()=3]',
      'name(./children/*[1])!="text"'],
 
     ['Rule',
-     'root', 'emacspeak.default',
+     'root', 'default',
      '[t] "root of order"; [n] children/*[1];' +
      '[t] "over"; [n] children/*[1] (rate:0.35); [p] (pause:400)',
      'self::root'],
 
     // TODO (sorge) This is probably unnecessary now!
     ['Rule',
-     'text-no-mult', 'emacspeak.default',
+     'text-no-mult', 'default',
      '[n] children/*[1]; [p] (pause:200); [n] children/*[2]',
      'self::infixop', 'children/text'],
 
     ['Rule',
-     'text', 'emacspeak.default',
+     'text', 'default',
      '[n] text(); [p] (pause:200)',
      'self::text'],
 
     ['Rule',
-     'unit', 'emacspeak.default',
+     'unit', 'default',
      '[t] text() (annotation:unit, preprocess)',
      'self::identifier', '@role="unit"'],
     ['Rule',
-     'unit-square', 'emacspeak.default',
+     'unit-square', 'default',
      '[t] "square"; [n] children/*[1]',
      'self::superscript', '@role="unit"', 'children/*[2][text()=2]',
      'name(children/*[1])="identifier"'],
 
     ['Rule',
-     'unit-cubic', 'emacspeak.default',
+     'unit-cubic', 'default',
      '[t] "cubic"; [n] children/*[1]',
      'self::superscript', '@role="unit"', 'children/*[2][text()=3]',
      'name(children/*[1])="identifier"'],
     ['Rule',
-     'reciprocal', 'emacspeak.default',
+     'reciprocal', 'default',
      '[t] "reciprocal"; [n] children/*[1]',
      'self::superscript', '@role="unit"', 'name(children/*[1])="identifier"',
      'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
      'children/*[2]/children/*[1][text()=1]',
      'count(preceding-sibling::*)=0 or preceding-sibling::*[@role!="unit"]'],
     ['Rule',
-     'reciprocal', 'emacspeak.default',
+     'reciprocal', 'default',
      '[t] "per"; [n] children/*[1]',
      'self::superscript', '@role="unit"', 'name(children/*[1])="identifier"',
      'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
      'children/*[2]/children/*[1][text()=1]',
      'preceding-sibling::*[@role="unit"]'],
     ['Rule',
-     'unit-combine', 'emacspeak.default',
+     'unit-combine', 'default',
      '[m] children/*', 'self::infixop', '@role="unit"'],
     ['Rule',
-     'unit-divide', 'emacspeak.default',
+     'unit-divide', 'default',
      '[n] children/*[1] (pitch:0.3); [t] "per";' +
      ' [n] children/*[2] (pitch:-0.3)',
      'self::fraction', '@role="unit"']

@@ -92,6 +92,12 @@ sre.BaseRuleStore = function() {
   this.modality = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY];
 
   /**
+   * Default domain.
+   * @type {?string}
+   */
+  this.domain = null;
+  
+  /**
    * @type {boolean}
    */
   this.initialized = false;
@@ -334,13 +340,17 @@ sre.BaseRuleStore.prototype.setSpeechRules = function(rules) {
  * @return {!sre.DynamicCstr} The parsed constraint including locale.
  */
 sre.BaseRuleStore.prototype.parseCstr = function(cstr) {
-  return this.parser.parse(this.locale + '.' + this.modality + '.' + cstr);
+  return this.parser.parse(
+    this.locale + '.' + this.modality +
+      (this.domain ? '.' + this.domain: '') + 
+      '.' + cstr);
 };
 
 
 sre.BaseRuleStore.prototype.parse = function(ruleSet) {
   this.modality = ruleSet.modality || this.modality;
   this.locale = ruleSet.locale || this.locale;
+  this.domain = ruleSet.domain || this.domain;
   this.context.parse(ruleSet.functions || []);
   this.parseRules(ruleSet.rules || []);
 };

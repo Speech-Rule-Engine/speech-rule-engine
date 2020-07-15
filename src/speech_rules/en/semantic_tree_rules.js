@@ -23,6 +23,7 @@ goog.provide('sre.SemanticTreeRules');
 goog.require('sre.StoreUtil');
 
 sre.SemanticTreeRules = {
+  domain: 'default',
   functions : [
     // Context functions
     ['CTXF', 'CTXFnodeCounter', sre.StoreUtil.nodeCounter],
@@ -33,27 +34,27 @@ sre.SemanticTreeRules = {
     // Rules
     //
     ['Rule',
-      'collapsed', 'default.default',
+      'collapsed', 'default',
       '[t] "collapsed"; [n] . (engine:modality=summary,grammar:collapsed)',
       'self::*', '@alternative', 'not(contains(@grammar, "collapsed"))',
       'self::*', 'self::*', 'self::*', 'self::*', 'self::*'
     ],
   // Initial rule
   ['Rule',
-      'stree', 'default.default',
+      'stree', 'default',
       '[n] ./*[1]', 'self::stree'],
 
   ['Rule',
-      'factorial', 'default.default', '[t] "factorial"', 'self::punctuation',
+      'factorial', 'default', '[t] "factorial"', 'self::punctuation',
       'text()="!"', 'name(preceding-sibling::*[1])!="text"'],
 
   ['Rule',
-      'multrel', 'default.default',
+      'multrel', 'default',
       '[t] "multirelation"; [m] children/* (sepFunc:CTXFcontentIterator)',
       'self::multirel'],
 
   ['Rule',
-      'variable-equality', 'default.default',
+      'variable-equality', 'default',
       '[t] "equation sequence"; [m] children/* ' +
           '(context:"part",ctxtFunc:CTXFnodeCounter,' +
           'sepFunc:CTXFcontentIterator)',
@@ -61,95 +62,95 @@ sre.SemanticTreeRules = {
       './children/punctuation[@role="ellipsis"]'],// Make that better!
 
   ['Rule',
-      'multi-equality', 'default.default',
+      'multi-equality', 'default',
       '[t] "equation sequence"; [m] children/* ' +
           '(context:"part",ctxtFunc:CTXFnodeCounter,' +
           'sepFunc:CTXFcontentIterator)',
       'self::relseq[@role="equality"]', 'count(./children/*)>2'],
 
   ['Rule',
-      'equality', 'default.default',
+      'equality', 'default',
       '[n] children/*[1]; [p] (pause:200); [n] content/*[1] (pause:200);' +
           '[n] children/*[2]',
       'self::relseq[@role="equality"]', 'count(./children/*)=2'],
 
   ['Rule',
-      'simple-equality', 'default.default',
+      'simple-equality', 'default',
       '[n] children/*[1]; [p] (pause:200); [n] content/*[1] (pause:200);' +
           '[n] children/*[2]',
       'self::relseq[@role="equality"]', 'count(./children/*)=2',
       './children/identifier or ./children/number'],
 
   ['Rule',
-      'simple-equality2', 'default.default',
+      'simple-equality2', 'default',
       '[n] children/*[1]; [p] (pause:200); [n] content/*[1] (pause:200);' +
           '[n] children/*[2]',
       'self::relseq[@role="equality"]', 'count(./children/*)=2',
       './children/function or ./children/appl'],
 
   ['Rule',
-      'relseq', 'default.default',
+      'relseq', 'default',
       '[m] children/* (sepFunc:CTXFcontentIterator)',
       'self::relseq'],
 
   ['Rule',
-      'binary-operation', 'default.default',
+      'binary-operation', 'default',
       '[m] children/* (sepFunc:CTXFcontentIterator);',
       'self::infixop'],
 
   ['Rule',
-      'variable-addition', 'default.default',
+      'variable-addition', 'default',
       '[t] "sum with variable number of summands";' +
           '[p] (pause:400); [m] children/* (sepFunc:CTXFcontentIterator)',
       'self::infixop[@role="addition"]', 'count(children/*)>2',
       'children/punctuation[@role="ellipsis"]'],// Make that better!
 
   ['Rule',
-      'multi-addition', 'default.default',
+      'multi-addition', 'default',
       '[t] "sum with"; [t] count(./children/*); [t] "summands";' +
           '[p] (pause:400); [m] children/* (sepFunc:CTXFcontentIterator)',
       'self::infixop[@role="addition"]', 'count(./children/*)>2'],
 
   // Prefix Operator
   ['Rule',
-      'prefix', 'default.default',
+      'prefix', 'default',
       '[t] "prefix"; [m] content/* (pause 150);' +
       '[n] children/*[1]',
       'self::prefixop'],
 
   ['Rule',
-      'negative', 'default.default',
+      'negative', 'default',
       '[t] "negative"; [n] children/*[1]',
       'self::prefixop', 'self::prefixop[@role="negative"]'],
 
   // Postfix Operator
   ['Rule',
-      'postfix', 'default.default',
+      'postfix', 'default',
       '[n] children/*[1]; [t] "postfix"; [m] content/* (pause 300)',
       'self::postfixop'],
 
   ['Rule',
-      'identifier', 'default.default',
+      'identifier', 'default',
       '[n] text()', 'self::identifier'],
 
   ['Rule',
-      'number', 'default.default',
+      'number', 'default',
       '[n] text()', 'self::number'],
 
   ['Rule',
-      'mixed-number', 'default.default',
+      'mixed-number', 'default',
       '[n] children/*[1]; [t] "and"; [n] children/*[2]; ',
       'self::number', '@role="mixed"'],
 
   // Font rules
   ['Rule',
-      'font', 'default.default',
+      'font', 'default',
       '[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)',
       'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"'],
 
   ['Rule',
-      'font-identifier-short', 'default.default',
+      'font-identifier-short', 'default',
       '[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1',
       '@font', 'not(contains(@grammar, "ignoreFont"))', '@font="normal"',
@@ -163,43 +164,43 @@ sre.SemanticTreeRules = {
       '@role!="unit"'],
 
   ['Rule',
-      'font-identifier', 'default.default',
+      'font-identifier', 'default',
       '[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1',
       '@font', '@font="normal"', 'not(contains(@grammar, "ignoreFont"))',
       '@role!="unit"'],
 
   ['Rule',
-      'omit-font', 'default.default',
+      'omit-font', 'default',
       '[n] . (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1', '@font',
       'not(contains(@grammar, "ignoreFont"))', '@font="italic"'],
 
   // Fraction
   ['Rule',
-      'fraction', 'default.default',
+      'fraction', 'default',
       '[p] (pause:250); [n] children/*[1] (rate:0.35); [p] (pause:250);' +
           ' [t] "divided by"; [n] children/*[2] (rate:-0.35); [p] (pause:400)',
       'self::fraction'],
 
   ['Rule',
-      'superscript', 'default.default',
+      'superscript', 'default',
       '[n] children/*[1]; [t] "super"; [n] children/*[2] (pitch:0.35);' +
       '[p] (pause:300)',
       'self::superscript'],
   ['Rule',
-      'subscript', 'default.default',
+      'subscript', 'default',
       '[n] children/*[1]; [t] "sub"; [n] children/*[2] (pitch:-0.35);' +
       '[p] (pause:300)',
       'self::subscript'],
 
   ['Rule',
-      'ellipsis', 'default.default',
+      'ellipsis', 'default',
       '[p] (pause:200); [t] "ellipsis"; [p] (pause:300)',
       'self::punctuation', 'self::punctuation[@role="ellipsis"]'],
 
   ['Rule',
-      'fence-single', 'default.default',
+      'fence-single', 'default',
       '[n] text()',
    'self::punctuation', 'self::punctuation[@role="openfence"]'],
   ['Aliases', 'fence-single', 'self::punctuation',
@@ -210,78 +211,78 @@ sre.SemanticTreeRules = {
                   'self::punctuation[@role="application"]'],
 
   ['Rule',
-      'omit-empty', 'default.default',
+      'omit-empty', 'default',
       '[p] (pause:100)',
       'self::empty'],
 
   // Fences rules.
   ['Rule',
-      'fences-open-close', 'default.default',
+      'fences-open-close', 'default',
       '[p] (pause:100); [n] content/*[1]; ' +
       '[n] children/*[1]; [n] content/*[2]; [p] (pause:100)',
       'self::fenced', '@role="leftright"'],
 
   ['Rule',
-      'fences-open-close-in-appl', 'default.default',
+      'fences-open-close-in-appl', 'default',
       '[p] (pause:200); [n] children/*[1]; [p] (pause:200);',
       'self::fenced[@role="leftright"]', './parent::children/parent::appl'],
 
   ['Rule',
-      'fences-neutral', 'default.default',
+      'fences-neutral', 'default',
       '[p] (pause:100); [t] "absolute value of"; [n] children/*[1];' +
       '[p] (pause:350);',
       'self::fenced', 'self::fenced[@role="neutral"]'],
 
   ['Rule',
-      'omit-fences', 'default.default',
+      'omit-fences', 'default',
       '[p] (pause:500); [n] children/*[1]; [p] (pause:200);',
       'self::fenced'],
 
   // Matrix rules.
   ['Rule',
-      'matrix', 'default.default',
+      'matrix', 'default',
       '[t] "matrix"; [m] children/* ' +
       '(ctxtFunc:CTXFnodeCounter,context:"row",pause:100)',
       'self::matrix'],
 
   ['Rule',
-      'matrix-row', 'default.default',
+      'matrix-row', 'default',
       '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"column",pause:100)',
       'self::row[@role="matrix"]'],
 
   ['Rule',
-      'matrix-cell', 'default.default',
+      'matrix-cell', 'default',
       '[n] children/*[1]', 'self::cell[@role="matrix"]'],
 
   // Vector rules.
   ['Rule',
-      'vector', 'default.default',
+      'vector', 'default',
       '[t] "vector"; [m] children/* ' +
       '(ctxtFunc:CTXFnodeCounter,context:"element",pause:100)',
       'self::vector'],
 
   // Cases rules.
   ['Rule',
-      'cases', 'default.default',
+      'cases', 'default',
       '[t] "case statement"; [m] children/* ' +
       '(ctxtFunc:CTXFnodeCounter,context:"case",pause:100)',
       'self::cases'],
 
   ['Rule',
-      'cases-row', 'default.default',
+      'cases-row', 'default',
       '[m] children/*', 'self::row[@role="cases"]'],
 
   ['Rule',
-      'cases-cell', 'default.default',
+      'cases-cell', 'default',
       '[n] children/*[1]', 'self::cell[@role="cases"]'],
 
   ['Rule',
-      'row', 'default.default',
+      'row', 'default',
       '[m] ./* (ctxtFunc:CTXFnodeCounter,context:"column",pause:100)',
       'self::row'],
 
   ['Rule',
-      'cases-end', 'default.default',
+      'cases-end', 'default',
       '[t] "case statement"; ' +
       '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"case",pause:100);' +
       '[t] "end cases"',
@@ -289,102 +290,102 @@ sre.SemanticTreeRules = {
 
   // Multiline rules.
   ['Rule',
-      'multiline', 'default.default',
+      'multiline', 'default',
       '[t] "multiline equation";' +
       '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"line",pause:100)',
       'self::multiline'],
 
   ['Rule',
-      'multiline-ineq', 'default.default',
+      'multiline-ineq', 'default',
       '[t] "multiline inequality";' +
       '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"row",pause:100)',
       'self::multiline', '@role="inequality"'],
 
   ['Rule',
-      'line', 'default.default',
+      'line', 'default',
       '[m] children/*', 'self::line'],
 
   // Table rules.
   ['Rule',
-      'table', 'default.default',
+      'table', 'default',
       '[t] "multiline equation";' +
       '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"row",pause:200)',
       'self::table'],
 
   ['Rule',
-      'table-ineq', 'default.default',
+      'table-ineq', 'default',
       '[t] "multiline inequality";' +
       '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"row",pause:200)',
       'self::table', '@role="inequality"'],
 
   ['Rule',
-      'table-row', 'default.default',
+      'table-row', 'default',
       '[m] children/* (pause:100)', 'self::row[@role="table"]'],
 
   ['Aliases',
       'cases-cell', 'self::cell[@role="table"]'],
 
   ['Rule',
-      'empty-cell', 'default.default',
+      'empty-cell', 'default',
       '[t] "Blank"', 'self::cell', 'count(children/*)=0'],
 
   // Rules for punctuated expressions.
   ['Rule',
-      'end-punct', 'default.default',
+      'end-punct', 'default',
       '[m] children/*; [p] (pause:300)',
       'self::punctuated', '@role="endpunct"'],
 
   ['Rule',
-      'start-punct', 'default.default',
+      'start-punct', 'default',
       '[n] content/*[1]; [p] (pause:200); [m] children/*[position()>1]',
       'self::punctuated', '@role="startpunct"'],
 
   ['Rule',
-      'integral-punct', 'default.default',
+      'integral-punct', 'default',
       '[n] children/*[1] (rate:0.2); [n] children/*[3] (rate:0.2)',
       'self::punctuated', '@role="integral"'],
 
   ['Rule',
-      'punctuated', 'default.default',
+      'punctuated', 'default',
       '[m] children/* (pause:100)',
       'self::punctuated'],
 
   // Function rules
   ['Rule',
-      'function', 'default.default',
+      'function', 'default',
       '[n] text()', 'self::function'],
 
   ['Rule',
-      'appl', 'default.default',
+      'appl', 'default',
       '[n] children/*[1]; [n] content/*[1]; [n] children/*[2]', 'self::appl'],
 
   // Limit operator rules
   ['Rule',
-      'sum-only', 'default.default',
+      'sum-only', 'default',
       '[n] children/*[1]; [t] "from"; [n] children/*[2]; [t] "to";' +
       '[n] children/*[3]', 'self::limboth', 'self::limboth[@role="sum"]'],
 
   ['Rule',
-      'limboth', 'default.default',
+      'limboth', 'default',
       '[n] children/*[1]; [p] (pause 100); [t] "over"; [n] children/*[2];' +
       '[t] "under"; [n] children/*[3]; [p] (pause 250);',
       'self::limboth'],
 
   ['Rule',
-      'limlower', 'default.default',
+      'limlower', 'default',
       '[n] children/*[1]; [t] "over"; [n] children/*[2];', 'self::limlower'],
 
   ['Rule',
-      'limupper', 'default.default',
+      'limupper', 'default',
       '[n] children/*[1]; [t] "under"; [n] children/*[2];', 'self::limupper'],
 
   // Bigoperator rules
   ['Rule',
-      'largeop', 'default.default',
+      'largeop', 'default',
       '[n] text()', 'self::largeop'],
 
   ['Rule',
-      'bigop', 'default.default',
+      'bigop', 'default',
       '[n] children/*[1]; [p] (pause 100); [t] "over"; [n] children/*[2];' +
       '[p] (pause 250);',
       'self::bigop'],
@@ -392,73 +393,73 @@ sre.SemanticTreeRules = {
 
   // Integral rules
   ['Rule',
-      'integral', 'default.default',
+      'integral', 'default',
       '[n] children/*[1]; [p] (pause 100); [n] children/*[2];' +
       '[p] (pause 200); [n] children/*[3] (rate:0.35);', 'self::integral'],
 
 
   ['Rule',
-      'sqrt', 'default.default',
+      'sqrt', 'default',
       '[t] "Square root of"; [n] children/*[1] (rate:0.35); [p] (pause:400)',
       'self::sqrt'],
 
   ['Rule',
-      'square', 'default.default',
+      'square', 'default',
       '[n] children/*[1]; [t] "squared" (pitch:0.35); [p] (pause:300)',
       'self::superscript', 'children/*[2][text()=2]',
       'name(./children/*[1])!="text"'],
 
   ['Rule',
-      'cube', 'default.default',
+      'cube', 'default',
       '[n] children/*[1]; [t] "cubed" (pitch:0.35); [p] (pause:300)',
       'self::superscript', 'children/*[2][text()=3]',
       'name(./children/*[1])!="text"'],
 
   ['Rule',
-      'root', 'default.default',
+      'root', 'default',
       '[t] "root of order"; [n] children/*[1];' +
           '[t] "over"; [n] children/*[2] (rate:0.35); [p] (pause:400)',
       'self::root'],
 
   ['Rule',
-      'text', 'default.default',
+      'text', 'default',
       '[n] text(); [p] (pause:200)',
       'self::text'],
 
   ['Rule',
-      'unit', 'default.default',
+      'unit', 'default',
       '[t] text() (grammar:annotation="unit":translate:plural)',
       'self::identifier', '@role="unit"'],
   ['Rule',
-      'unit-square', 'default.default',
+      'unit-square', 'default',
       '[t] "square"; [n] children/*[1]',
       'self::superscript', '@role="unit"', 'children/*[2][text()=2]',
       'name(children/*[1])="identifier"'],
 
   ['Rule',
-      'unit-cubic', 'default.default',
+      'unit-cubic', 'default',
       '[t] "cubic"; [n] children/*[1]',
       'self::superscript', '@role="unit"', 'children/*[2][text()=3]',
       'name(children/*[1])="identifier"'],
   ['Rule',
-      'reciprocal', 'default.default',
+      'reciprocal', 'default',
       '[t] "reciprocal"; [n] children/*[1]',
       'self::superscript', '@role="unit"', 'name(children/*[1])="identifier"',
       'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
       'children/*[2]/children/*[1][text()=1]',
       'count(preceding-sibling::*)=0 or preceding-sibling::*[@role!="unit"]'],
   ['Rule',
-      'reciprocal', 'default.default',
+      'reciprocal', 'default',
       '[t] "per"; [n] children/*[1]',
       'self::superscript', '@role="unit"', 'name(children/*[1])="identifier"',
       'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
       'children/*[2]/children/*[1][text()=1]',
       'preceding-sibling::*[@role="unit"]'],
   ['Rule',
-      'unit-combine', 'default.default',
+      'unit-combine', 'default',
       '[m] children/*', 'self::infixop', '@role="unit"'],
   ['Rule',
-      'unit-divide', 'default.default',
+      'unit-divide', 'default',
       '[n] children/*[1] (pitch:0.3); [t] "per";' +
       ' [n] children/*[2] (pitch:-0.3)',
    'self::fraction', '@role="unit"']
