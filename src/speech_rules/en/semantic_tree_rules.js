@@ -202,11 +202,11 @@ sre.SemanticTreeRules = {
       'fence-single', 'default.default',
       '[n] text()',
    'self::punctuation', 'self::punctuation[@role="openfence"]'],
-  ['defineRuleAlias', 'fence-single', 'self::punctuation',
+  ['Aliases', 'fence-single', 'self::punctuation',
                   'self::punctuation[@role="closefence"]'],
-  ['defineRuleAlias', 'fence-single', 'self::punctuation',
+  ['Aliases', 'fence-single', 'self::punctuation',
                   'self::punctuation[@role="vbar"]'],
-  ['defineRuleAlias', 'fence-single', 'self::punctuation',
+  ['Aliases', 'fence-single', 'self::punctuation',
                   'self::punctuation[@role="application"]'],
 
   ['Rule',
@@ -321,7 +321,7 @@ sre.SemanticTreeRules = {
       'table-row', 'default.default',
       '[m] children/* (pause:100)', 'self::row[@role="table"]'],
 
-  ['defineRuleAlias',
+  ['Aliases',
       'cases-cell', 'self::cell[@role="table"]'],
 
   ['Rule',
