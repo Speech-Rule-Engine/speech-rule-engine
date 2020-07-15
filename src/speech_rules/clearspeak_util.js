@@ -697,3 +697,15 @@ sre.ClearspeakUtil.lastCurrency = function(node) {
       lookupCategory(last.textContent + ':unit') === 'currency';
   return result ? [node] : [];
 };
+
+
+/**
+ * Adds the annotators.
+ */
+sre.ClearspeakUtil.addAnnotators = function() {
+  sre.SemanticAnnotations.getInstance().register(
+      sre.ClearspeakUtil.simpleExpression());
+  sre.SemanticAnnotations.getInstance().register(
+      sre.ClearspeakUtil.unitExpression());
+};
+

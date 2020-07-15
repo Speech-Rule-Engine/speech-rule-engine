@@ -834,28 +834,28 @@ sre.MathspeakUtil.generateTensorRules = function(store) {
     var components = sre.MathspeakUtil.generateTensorRuleStrings_(constel);
     var briefStr = components.pop();
     var verbStr = components.pop();
-    var verbList = [name, 'mathspeak.default', verbStr, 'self::tensor'].
+    var verbList = [name, 'default', verbStr, 'self::tensor'].
         concat(components);
-    var briefList = [name, 'mathspeak.brief', briefStr, 'self::tensor'].
+    var briefList = [name, 'brief', briefStr, 'self::tensor'].
         concat(components);
     // Rules without neighbour.
     defineRule.apply(null, verbList);
     defineRule.apply(null, briefList);
-    defineSpecialisedRule(name, 'mathspeak.brief', 'mathspeak.sbrief');
+    defineSpecialisedRule(name, 'brief', 'sbrief');
     // Rules with baseline.
     var baselineStr = sre.MathspeakUtil.componentString_[2];
     verbStr += '; [t]' + baselineStr + 'Verbose';
     briefStr += '; [t]' + baselineStr + 'Brief';
     name = name + '-baseline';
-    verbList = [name, 'mathspeak.default', verbStr, 'self::tensor',
+    verbList = [name, 'default', verbStr, 'self::tensor',
                 'following-sibling::*'].
         concat(components);
-    briefList = [name, 'mathspeak.brief', briefStr, 'self::tensor',
+    briefList = [name, 'brief', briefStr, 'self::tensor',
                  'following-sibling::*'].
         concat(components);
     defineRule.apply(null, verbList);
     defineRule.apply(null, briefList);
-    defineSpecialisedRule(name, 'mathspeak.brief', 'mathspeak.sbrief');
+    defineSpecialisedRule(name, 'brief', 'sbrief');
     // Rules without neighbour but baseline.
     var aliasList = [name, 'self::tensor', 'not(following-sibling::*)',
                      'ancestor::fraction|ancestor::punctuated|' +
