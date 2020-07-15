@@ -240,4 +240,108 @@ sre.NemethUtil.numberIndicator = function() {
 };
 
 
+/**
+ * Adds the annotators.
+ */
+sre.NemethUtil.addAnnotators = function() {
+  sre.SemanticAnnotations.getInstance().register(
+      sre.NemethUtil.numberIndicator());
+};
+
+
+/**
+ * Component strings for tensor speech rules.
+ * @enum {string}
+ * @private
+ */
+sre.NemethUtil.componentString_ = {
+  2 : 'CSFbaseline',
+  1 : 'CSFsubscript',
+  0 : 'CSFsuperscript'
+};
+
+
+/**
+ * Child number translation for tensor speech rules.
+ * @enum {number}
+ * @private
+ */
+sre.NemethUtil.childNumber_ = {
+  4 : 2,
+  3 : 3,
+  2 : 1,
+  1 : 4,
+  0 : 5
+};
+
+
+/**
+ * Generates the rule strings and constraints for tensor rules.
+ * @param {string} constellation Bitvector representing of possible tensor
+ *     constellation.
+ * @return {Array.<string>} A list consisting of additional constraints for the
+ *     tensor rule plus the strings for the rule.
+ * @private
+ */
+sre.NemethUtil.generateTensorRuleStrings_ = function(constellation) {
+  var constraints = [];
+  var verbString = '';
+  var constel = parseInt(constellation, 2);
+
+  for (var i = 0; i < 5; i++) {
+    var childString = 'children/*[' + sre.NemethUtil.childNumber_[i] + ']';
+    if (constel & 1) {
+      var compString = sre.NemethUtil.componentString_[i % 3];
+      verbString = '[t] ' + compString + 'Verbose; [n] ' + childString + ';' +
+          verbString;
+    } else {
+      constraints.unshift('name(' + childString + ')="empty"');
+    }
+    constel >>= 1;
+  }
+  constraints.push(verbString);
+  return constraints;
+};
+
+
+/**
+ * Generator for tensor speech rules.
+ */
+sre.NemethUtil.generateTensorRules = function(store) {
+  // Constellations are built as bitvectors with the meaning:
+  //
+  //  lsub lsuper base rsub rsuper
+  var defineRule = goog.bind(store.defineRule, store);
+  var defineRulesAlias = goog.bind(store.defineRulesAlias, store);
+  var constellations = ['11111', '11110', '11101', '11100',
+                        '10111', '10110', '10101', '10100',
+                        '01111', '01110', '01101', '01100'
+  ];
+  for (var i = 0, constel; constel = constellations[i]; i++) {
+    var name = 'tensor' + constel;
+    var components = sre.NemethUtil.generateTensorRuleStrings_(constel);
+    var verbStr = components.pop();
+    var verbList = [name, 'default.default', verbStr, 'self::tensor'].
+        concat(components);
+    // Rules without neighbour.
+    defineRule.apply(null, verbList);
+    // Rules with baseline.
+    var baselineStr = sre.NemethUtil.componentString_[2];
+    verbStr += '; [t]' + baselineStr + 'Verbose';
+    name = name + '-baseline';
+    verbList = [name, 'default.default', verbStr, 'self::tensor',
+                'following-sibling::*'].
+        concat(components);
+    defineRule.apply(null, verbList);
+    // Rules without neighbour but baseline.
+    var aliasList = [name, 'self::tensor', 'not(following-sibling::*)',
+                     'ancestor::fraction|ancestor::punctuated|' +
+                     'ancestor::fenced|ancestor::root|ancestor::sqrt|' +
+                     'ancestor::relseq|ancestor::multirel|' +
+                     '@embellished'].
+        concat(components);
+    defineRulesAlias.apply(null, aliasList);
+  }
+};
+
 });  // goog.scope

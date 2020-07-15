@@ -32,6 +32,7 @@ goog.provide('sre.SpeechRuleEngine');
 
 goog.require('sre.AuditoryDescription');
 goog.require('sre.BaseRuleStore');
+goog.require('sre.BrailleStore');
 goog.require('sre.ClearspeakPreferences');
 goog.require('sre.Debugger');
 goog.require('sre.DynamicCstr');
@@ -82,7 +83,9 @@ sre.SpeechRuleEngine = function() {
    */
   this.evaluators_ = {};
 
-  // Already loaded and intialized rule sets.
+  /**
+   * @type {Object.<sre.BaseRuleStore>}
+   */
   this.ruleSets_ = {};
 
   // sre.Debugger.getInstance().init();
@@ -111,13 +114,27 @@ sre.SpeechRuleEngine.prototype.parameterize = function(ruleSetNames) {
       ruleSets[name] = set.getInstance();
       this.ruleSets_[name] = set.getInstance();
     } else if (set) {
-      let store = new sre.MathStore();
+      let store = this.storeFactory_(set.modality);
       store.parse(set);
       this.ruleSets_[name] = store;
       ruleSets[name] = store;
     }
   }
   this.parameterize_(ruleSets);
+};
+
+
+/**
+ * Factory method for generating rule stores by modality.
+ * @param {string} modality The modality.
+ * @return {sre.BaseRuleStore} The generated rule store.
+ */
+sre.SpeechRuleEngine.prototype.storeFactory_ = function(modality) {
+  let constructors = {
+    braille: sre.BrailleStore,
+    speech: sre.MathStore
+  };
+  return new (constructors[modality] || sre.MathStore)();
 };
 
 
