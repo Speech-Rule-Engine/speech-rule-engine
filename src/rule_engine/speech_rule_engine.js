@@ -85,6 +85,7 @@ sre.SpeechRuleEngine = function() {
 
   /**
    * @type {Object.<sre.BaseRuleStore>}
+   * @private
    */
   this.ruleSets_ = {};
 
@@ -128,6 +129,7 @@ sre.SpeechRuleEngine.prototype.parameterize = function(ruleSetNames) {
  * Factory method for generating rule stores by modality.
  * @param {string} modality The modality.
  * @return {sre.BaseRuleStore} The generated rule store.
+ * @private
  */
 sre.SpeechRuleEngine.prototype.storeFactory_ = function(modality) {
   let constructors = {

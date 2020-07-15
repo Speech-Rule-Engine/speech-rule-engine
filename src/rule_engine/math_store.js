@@ -44,7 +44,7 @@ sre.MathStore = function() {
 
   this.parseMethods['Alias'] = goog.bind(this.defineRuleAlias, this);
   this.parseMethods['Aliases'] =
-       goog.bind(this.defineRulesAlias, this);
+      goog.bind(this.defineRulesAlias, this);
   this.parseMethods['UniqueAlias'] =
       goog.bind(this.defineUniqueRuleAlias, this);
   this.parseMethods['SpecializedRule'] =
@@ -310,5 +310,6 @@ sre.MathStore.prototype.evaluate_ = function(text) {
  */
 sre.MathStore.prototype.parse = function(ruleSet) {
   sre.MathStore.base(this, 'parse', ruleSet);
-  this.initializer = ruleSet['initialize'] || [];
+  this.initializer = /** @type {Array.<function(sre.MathStore)>} */(
+      ruleSet['initialize'] || []);
 };

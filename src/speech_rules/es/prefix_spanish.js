@@ -23,6 +23,9 @@ goog.provide('sre.PrefixSpanish');
 goog.require('sre.NumbersUtil');
 
 
+/**
+ * Spanish prefix rules.
+ */
 sre.PrefixSpanish = {
   locale: 'es',
   modality: 'prefix',

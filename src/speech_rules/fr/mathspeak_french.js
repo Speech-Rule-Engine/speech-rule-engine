@@ -66,12 +66,16 @@ sre.MathspeakFrench = {
     ['CSF', 'CSFbaselineVerbose', sre.MathspeakFrenchUtil.baselineVerbose],
     ['CSF', 'CSFbaselineBrief', sre.MathspeakFrenchUtil.baselineBrief],
     // Tensor specific:
-    ['CSF', 'CSFleftsuperscriptVerbose', sre.MathspeakFrenchUtil.leftSuperscriptVerbose],
-    ['CSF', 'CSFleftsubscriptVerbose',         sre.MathspeakFrenchUtil.leftSubscriptVerbose],
+    ['CSF', 'CSFleftsuperscriptVerbose',
+     sre.MathspeakFrenchUtil.leftSuperscriptVerbose],
+    ['CSF', 'CSFleftsubscriptVerbose',
+     sre.MathspeakFrenchUtil.leftSubscriptVerbose],
     ['CSF', 'CSFrightsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose],
     ['CSF', 'CSFrightsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose],
-    ['CSF', 'CSFleftsuperscriptBrief',         sre.MathspeakFrenchUtil.leftSuperscriptBrief],
-    ['CSF', 'CSFleftsubscriptBrief', sre.MathspeakFrenchUtil.leftSubscriptBrief],
+    ['CSF', 'CSFleftsuperscriptBrief',
+     sre.MathspeakFrenchUtil.leftSuperscriptBrief],
+    ['CSF', 'CSFleftsubscriptBrief',
+     sre.MathspeakFrenchUtil.leftSubscriptBrief],
     ['CSF', 'CSFrightsuperscriptBrief', sre.MathspeakUtil.superscriptBrief],
     ['CSF', 'CSFrightsubscriptBrief', sre.MathspeakUtil.subscriptBrief],
 
@@ -200,18 +204,18 @@ sre.MathspeakFrench = {
      '"")'],
 
     // ['Rule',
-    //     'number-baseline', 'default',
-    //     '[t] "position de base"; [n] . (grammar:baseline)',
-    //     'self::number', 'not(contains(@grammar, "ignoreFont"))',
-    //     'preceding-sibling::identifier', 'not(contains(@grammar, "baseline"))',
-    //     'preceding-sibling::*[1][@role="latinletter" or @role="greekletter"' +
-    //     ' or @role="otherletter"]',
-    //     'parent::*/parent::infixop[@role="implicit"]'],
+    //   'number-baseline', 'default',
+    //   '[t] "position de base"; [n] . (grammar:baseline)',
+    //   'self::number', 'not(contains(@grammar, "ignoreFont"))',
+    //   'preceding-sibling::identifier', 'not(contains(@grammar, "baseline"))',
+    //   'preceding-sibling::*[1][@role="latinletter" or @role="greekletter"' +
+    //   ' or @role="otherletter"]',
+    //   'parent::*/parent::infixop[@role="implicit"]'],
     // ['SpecializedRule',
-    //     'number-baseline', 'default', 'brief',
-    //     '[t] "position de base"; [n] . (grammar:baseline)'],
+    //   'number-baseline', 'default', 'brief',
+    //   '[t] "position de base"; [n] . (grammar:baseline)'],
     // ['SpecializedRule',
-    //     'number-baseline', 'brief', 'sbrief'],
+    //   'number-baseline', 'brief', 'sbrief'],
     ['Rule',
      'number-baseline', 'default',
      '[t] "position de base"; [n] . (grammar:baseline)',
@@ -302,7 +306,7 @@ sre.MathspeakFrench = {
      'implicit', 'self::infixop', '@role="leftsuper" or' +
      ' @role="leftsub" or @role="rightsuper" or @role="rightsub"'],
 
-    ['Rule','subtraction', 'default',
+    ['Rule', 'subtraction', 'default',
      '[m] children/* (separator:"moins");', 'self::infixop',
      '@role="subtraction"'],
 
@@ -621,18 +625,18 @@ sre.MathspeakFrench = {
 
     // Commented out for Lise.
     // ['Rule',
-    //     'subscript-simple', 'default',
-    //     '[n] children/*[1]; [n] children/*[2]',
-    //     'self::subscript',
-    //     'name(./children/*[1])="identifier"',
+    //   'subscript-simple', 'default',
+    //   '[n] children/*[1]; [n] children/*[2]',
+    //   'self::subscript',
+    //   'name(./children/*[1])="identifier"',
     //     // Second child is a number but not mixed or other.
-    //     'name(./children/*[2])="number"',
-    //     './children/*[2][@role!="mixed"]',
-    //     './children/*[2][@role!="othernumber"]'],
+    //   'name(./children/*[2])="number"',
+    //   './children/*[2][@role!="mixed"]',
+    //   './children/*[2][@role!="othernumber"]'],
     // ['SpecializedRule',
-    //     'subscript-simple', 'default', 'brief'],
+    //   'subscript-simple', 'default', 'brief'],
     // ['SpecializedRule',
-    //     'subscript-simple', 'default', 'sbrief'],
+    //   'subscript-simple', 'default', 'sbrief'],
     ['Rule',
      'subscript-simple', 'brief',
      '[n] children/*[1]; [n] children/*[2]',
@@ -878,7 +882,7 @@ sre.MathspeakFrench = {
      'children/*[1]/children/*[2][@role!="othernumber"]'
     ],
     // ['SpecializedRule',
-    //     'prime-subscript-simple', 'default', 'brief'],
+    //   'prime-subscript-simple', 'default', 'brief'],
     ['SpecializedRule',
      'prime-subscript-simple', 'brief', 'sbrief'],
 
@@ -913,50 +917,50 @@ sre.MathspeakFrench = {
      'children/*[1]/children/*[2][@role="underaccent"]'],
 
     // ['Rule',
-    //     'overbar', 'default',
-    //     '[n] children/*[1]; [t] "barre"',
-    //     'self::overscore',
-    //     '@role="latinletter" or @role="greekletter" or @role="otherletter"',
-    //     'children/*[2][@role="overaccent"]',   // redundancy
-    //     'children/*[2][text()="\u00AF" or text()="\uFFE3" or text()="\uFF3F"' +
-    //     ' or text()="\u005F" or text()="\u203E"]'
+    //   'overbar', 'default',
+    //   '[n] children/*[1]; [t] "barre"',
+    //   'self::overscore',
+    //   '@role="latinletter" or @role="greekletter" or @role="otherletter"',
+    //   'children/*[2][@role="overaccent"]',   // redundancy
+    //   'children/*[2][text()="\u00AF" or text()="\uFFE3" or text()="\uFF3F"' +
+    //   ' or text()="\u005F" or text()="\u203E"]'
     // ],
 
     // ['Rule',
-    //     'overbar-single', 'default',
-    //     '[n] children/*[1]; [n] children/*[2]',
-    //     'self::overscore', '@role="latinletter"',
-    //     'string-length(children/*[1]/text())="1"'
+    //   'overbar-single', 'default',
+    //   '[n] children/*[1]; [n] children/*[2]',
+    //   'self::overscore', '@role="latinletter"',
+    //   'string-length(children/*[1]/text())="1"'
     // ],
 
     // ['Rule',
-    //     'underbar', 'default',
-    //     '[t] "souscrire";  [n] children/*[1]; [t] "avec barre"',
-    //     'self::underscore',
-    //     '@role="latinletter" or @role="greekletter" or @role="otherletter"',
-    //     'children/*[2][@role="underaccent"]',   // redundancy
-    //     'children/*[2][text()="\u00AF" or text()="\uFFE3" or text()="\uFF3F"' +
-    //     ' or text()="\u005F" or text()="\u203E"]'
+    //   'underbar', 'default',
+    //   '[t] "souscrire";  [n] children/*[1]; [t] "avec barre"',
+    //   'self::underscore',
+    //   '@role="latinletter" or @role="greekletter" or @role="otherletter"',
+    //   'children/*[2][@role="underaccent"]',   // redundancy
+    //   'children/*[2][text()="\u00AF" or text()="\uFFE3" or text()="\uFF3F"' +
+    //   ' or text()="\u005F" or text()="\u203E"]'
     // ],
 
     // ['Rule',
-    //     'overtilde', 'default',
-    //     '[n] children/*[1]; [t] "tilde sus"',
-    //     'self::overscore',
-    //     'children/*[2][@role="overaccent"]',   // redundancy
-    //     '@role="latinletter" or @role="greekletter" or @role="otherletter"',
-    //     'children/*[2][text()="\u007E" or text()="\u02DC" or text()="\u223C"' +
-    //     ' or text()="\uFF5E"]'
+    //   'overtilde', 'default',
+    //   '[n] children/*[1]; [t] "tilde sus"',
+    //   'self::overscore',
+    //   'children/*[2][@role="overaccent"]',   // redundancy
+    //   '@role="latinletter" or @role="greekletter" or @role="otherletter"',
+    //   'children/*[2][text()="\u007E" or text()="\u02DC" or text()="\u223C"' +
+    //   ' or text()="\uFF5E"]'
     // ],
 
     // ['Rule',
-    //     'undertilde', 'default',
-    //     '[n] children/*[1]; [t] "tilde sous"',
-    //     'self::underscore',
-    //     '@role="latinletter" or @role="greekletter" or @role="otherletter"',
-    //     'children/*[2][@role="underaccent"]',   // redundancy
-    //     'children/*[2][text()="\u007E" or text()="\u02DC" or text()="\u223C"' +
-    //     ' or text()="\uFF5E"]'
+    //   'undertilde', 'default',
+    //   '[n] children/*[1]; [t] "tilde sous"',
+    //   'self::underscore',
+    //   '@role="latinletter" or @role="greekletter" or @role="otherletter"',
+    //   'children/*[2][@role="underaccent"]',   // redundancy
+    //   'children/*[2][text()="\u007E" or text()="\u02DC" or text()="\u223C"' +
+    //   ' or text()="\uFF5E"]'
     // ],
 
     // Layout Elements
@@ -1013,8 +1017,8 @@ sre.MathspeakFrench = {
      '[n] children/*[1]; [p] (pause: 300)', 'self::cell'],
 
     // ['Rule',
-    //     'empty-cell', 'default',
-    //     '[t] "vide"', 'self::cell', 'count(children/*)=1', 'children/empty'],
+    //   'empty-cell', 'default',
+    //   '[t] "vide"', 'self::cell', 'count(children/*)=1', 'children/empty'],
     ['Rule',
      'empty-cell', 'default',
      '[t] "vide"; [p] (pause: 300)', 'self::cell', 'count(children/*)=0'],
@@ -1110,8 +1114,8 @@ sre.MathspeakFrench = {
     ['Rule',
      'empty-line', 'default',
      '[t] "vide"', 'self::line', 'count(children/*)=0', 'not(content)'],
-    ['SpecializedRule','empty-line', 'default', 'brief'],
-    ['SpecializedRule','empty-line', 'brief', 'sbrief'],
+    ['SpecializedRule', 'empty-line', 'default', 'brief'],
+    ['SpecializedRule', 'empty-line', 'brief', 'sbrief'],
     ['Rule',
      'empty-line-with-label', 'default',
      '[t] "avec etiquette"; [n] content/*[1]; ' +
@@ -1162,7 +1166,7 @@ sre.MathspeakFrench = {
      'cancel', 'default', 'brief'],
     ['SpecializedRule',
      'cancel', 'default', 'sbrief'],
-    ['Aliases','cancel',
+    ['Aliases', 'cancel',
      'self::underscore', '@role="updiagonalstrike" or' +
      ' @role="downdiagonalstrike" or @role="horizontalstrike"'],
     ['Rule',
@@ -1176,7 +1180,7 @@ sre.MathspeakFrench = {
      'cancel-reverse', 'default', 'brief'],
     ['SpecializedRule',
      'cancel-reverse', 'default', 'sbrief'],
-    ['Aliases','cancel-reverse',
+    ['Aliases', 'cancel-reverse',
      'self::underscore', 'name(children/*[2])="enclose"',
      'children/*[2][@role="updiagonalstrike" or' +
      ' @role="downdiagonalstrike" or @role="horizontalstrike"]'],

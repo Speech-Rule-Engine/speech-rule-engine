@@ -294,7 +294,7 @@ sre.MathspeakRules = {
      'implicit', 'self::infixop', '@role="leftsuper" or' +
      ' @role="leftsub" or @role="rightsuper" or @role="rightsub"'],
 
-    ['Rule','subtraction', 'default',
+    ['Rule', 'subtraction', 'default',
      '[m] children/* (separator:"minus");', 'self::infixop',
      '@role="subtraction"'],
 
@@ -1005,8 +1005,8 @@ sre.MathspeakRules = {
      '[n] children/*[1]; [p] (pause: 300)', 'self::cell'],
 
     // ['Rule',
-    //     'empty-cell', 'default',
-    //     '[t] "Blank"', 'self::cell', 'count(children/*)=1', 'children/empty'],
+    //   'empty-cell', 'default',
+    //   '[t] "Blank"', 'self::cell', 'count(children/*)=1', 'children/empty'],
     ['Rule',
      'empty-cell', 'default',
      '[t] "Blank"; [p] (pause: 300)', 'self::cell', 'count(children/*)=0'],
@@ -1101,8 +1101,8 @@ sre.MathspeakRules = {
     ['Rule',
      'empty-line', 'default',
      '[t] "Blank"', 'self::line', 'count(children/*)=0', 'not(content)'],
-    ['SpecializedRule','empty-line', 'default', 'brief'],
-    ['SpecializedRule','empty-line', 'brief', 'sbrief'],
+    ['SpecializedRule', 'empty-line', 'default', 'brief'],
+    ['SpecializedRule', 'empty-line', 'brief', 'sbrief'],
     ['Rule',
      'empty-line-with-label', 'default',
      '[t] "with Label"; [n] content/*[1]; [t] "EndLabel"(pause: 200); ' +
@@ -1148,7 +1148,7 @@ sre.MathspeakRules = {
      'cancel', 'default', 'brief'],
     ['SpecializedRule',
      'cancel', 'default', 'sbrief'],
-    ['Aliases','cancel',
+    ['Aliases', 'cancel',
      'self::underscore', '@role="updiagonalstrike" or' +
      ' @role="downdiagonalstrike" or @role="horizontalstrike"'],
     ['Rule',
@@ -1162,7 +1162,7 @@ sre.MathspeakRules = {
      'cancel-reverse', 'default', 'brief'],
     ['SpecializedRule',
      'cancel-reverse', 'default', 'sbrief'],
-    ['Aliases','cancel-reverse',
+    ['Aliases', 'cancel-reverse',
      'self::underscore', 'name(children/*[2])="enclose"',
      'children/*[2][@role="updiagonalstrike" or' +
      ' @role="downdiagonalstrike" or @role="horizontalstrike"]'],

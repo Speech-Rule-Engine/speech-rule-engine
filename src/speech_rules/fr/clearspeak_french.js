@@ -878,7 +878,8 @@ sre.ClearspeakFrench = {
      'parent::*/parent::*[@role!="simple function"]',
      'parent::*/parent::*[@role!="prefix function"]'],
 
-    // TODO: Localise nesting level method. Uses mathspeak English ordinal method.
+    // TODO: Localise nesting level method. Uses mathspeak English ordinal
+    // method.
     ['Rule',
      'fence-nesting', 'Paren_SpeakNestingLevel',
      '[n] text() (grammar:insertNesting=CSFnestingDepth)',
@@ -1357,8 +1358,8 @@ sre.ClearspeakFrench = {
      '', 'self::operator', '@role="multiplication"', 'text()="⁢"'],
     // TODO: XPath 2.0 would help here!
 
-    // REMARK: Currently we have accelerated rate only with multi-character simple
-    // expressions or if they are the enumerator of a fraction.
+    // REMARK: Currently we have accelerated rate only with multi-character
+    // simple expressions or if they are the enumerator of a fraction.
     //
     ['Rule',
      'binary-operation-simple', 'default',
@@ -1489,8 +1490,8 @@ sre.ClearspeakFrench = {
      ' or (children/*[1]/text()="Q" and @font="double-struck")',
      'children/*[2]/text()="-"',
      'self::*', 'self::*', 'self::*'],
-    // TODO: Do we need positive and negative real numbers. Usually they are more
-    //       complex notation!
+    // TODO: Do we need positive and negative real numbers. Usually they are
+    //       more complex notation!
 
     // Absolute Values
     ['Rule',
@@ -1781,17 +1782,17 @@ sre.ClearspeakFrench = {
      'row-medium', 'default',
      '[m] children/* (sepFunc:CTXFpauseSeparator,separator:"medium")',
      'self::row', '@role="table"'],
-    ['Aliases','row-medium', 'self::row', '@role="cases"'],
+    ['Aliases', 'row-medium', 'self::row', '@role="cases"'],
     ['Rule',
      'row-long', 'MultiLinePausesBetweenColumns_Long',
      '[m] children/* (sepFunc:CTXFpauseSeparator,separator:"long")',
      'self::row', '@role="table"'],
-    ['Aliases','row-long', 'self::row', '@role="cases"'],
+    ['Aliases', 'row-long', 'self::row', '@role="cases"'],
     ['Rule',
      'row-short', 'MultiLinePausesBetweenColumns_Short',
      '[m] children/* (sepFunc:CTXFpauseSeparator,separator:"short")',
      'self::row', '@role="table"'],
-    ['Aliases','row-short', 'self::row', '@role="cases"'],
+    ['Aliases', 'row-short', 'self::row', '@role="cases"'],
     // TODO: Get rid of blank!
     ['Rule',
      'blank-cell', 'default',
@@ -1916,9 +1917,9 @@ sre.ClearspeakFrench = {
      ' [m] children/* (sepFunc:CTXFpauseSeparator,separator:"long");' +
      ' [p] (pause:long)', 'self::table',
      'contains(@grammar, "layoutSummary")'],
-    ['Aliases','lines-none', 'self::multiline',
+    ['Aliases', 'lines-none', 'self::multiline',
      'contains(@grammar, "layoutSummary")'],
-    ['Aliases','lines-none', 'self::cases',
+    ['Aliases', 'lines-none', 'self::cases',
      'contains(@grammar, "layoutSummary")'],
 
 

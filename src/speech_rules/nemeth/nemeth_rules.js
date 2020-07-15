@@ -751,7 +751,7 @@ sre.NemethRules = {
      ' [n] children/*[2]; [t] "⠻"',
      'self::overscore', '@role="updiagonalstrike" or' +
      ' @role="downdiagonalstrike" or @role="horizontalstrike"'],
-    ['Aliases','cancel',
+    ['Aliases', 'cancel',
      'self::underscore', '@role="updiagonalstrike" or' +
      ' @role="downdiagonalstrike" or @role="horizontalstrike"'],
     ['Rule',
@@ -761,7 +761,7 @@ sre.NemethRules = {
      'self::overscore', 'name(children/*[2])="enclose"',
      'children/*[2][@role="updiagonalstrike" or' +
      ' @role="downdiagonalstrike" or @role="horizontalstrike"]'],
-    ['Aliases','cancel-reverse',
+    ['Aliases', 'cancel-reverse',
      'self::underscore', 'name(children/*[2])="enclose"',
      'children/*[2][@role="updiagonalstrike" or' +
      ' @role="downdiagonalstrike" or @role="horizontalstrike"]'],

@@ -291,6 +291,7 @@ sre.NemethUtil.generateTensorRuleStrings_ = function(constellation) {
 
 /**
  * Generator for tensor speech rules.
+ * @param {sre.MathStore} store The mathstore to which the rules are added.
  */
 sre.NemethUtil.generateTensorRules = function(store) {
   // Constellations are built as bitvectors with the meaning:

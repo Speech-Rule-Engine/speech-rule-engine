@@ -24,7 +24,6 @@ goog.require('sre.MathspeakUtil');
 goog.require('sre.UnitUtil');
 
 
-
 /**
  * Spansih Mathspeak rules.
  */
@@ -291,7 +290,7 @@ sre.MathspeakSpanish = {
      'implicit', 'self::infixop', '@role="leftsuper" or' +
      ' @role="leftsub" or @role="rightsuper" or @role="rightsub"'],
 
-    ['Rule','subtraction', 'default',
+    ['Rule', 'subtraction', 'default',
      '[m] children/* (separator:"menos");', 'self::infixop',
      '@role="subtraction"'],
 
@@ -1081,8 +1080,8 @@ sre.MathspeakSpanish = {
     ['Rule',
      'empty-line', 'default',
      '[t] "espacio"', 'self::line', 'count(children/*)=0', 'not(content)'],
-    ['SpecializedRule','empty-line', 'default', 'brief'],
-    ['SpecializedRule','empty-line', 'brief', 'sbrief'],
+    ['SpecializedRule', 'empty-line', 'default', 'brief'],
+    ['SpecializedRule', 'empty-line', 'brief', 'sbrief'],
     ['Rule',
      'empty-line-with-label', 'default',
      '[t] "con etiqueta"; [n] content/*[1]; ' +
@@ -1129,7 +1128,7 @@ sre.MathspeakSpanish = {
      'cancel', 'default', 'brief'],
     ['SpecializedRule',
      'cancel', 'default', 'sbrief'],
-    ['Aliases','cancel',
+    ['Aliases', 'cancel',
      'self::underscore', '@role="updiagonalstrike" or' +
      ' @role="downdiagonalstrike" or @role="horizontalstrike"'],
     ['Rule',
@@ -1143,7 +1142,7 @@ sre.MathspeakSpanish = {
      'cancel-reverse', 'default', 'brief'],
     ['SpecializedRule',
      'cancel-reverse', 'default', 'sbrief'],
-    ['Aliases','cancel-reverse',
+    ['Aliases', 'cancel-reverse',
      'self::underscore', 'name(children/*[2])="enclose"',
      'children/*[2][@role="updiagonalstrike" or' +
      ' @role="downdiagonalstrike" or @role="horizontalstrike"]'],

@@ -33,504 +33,504 @@ sre.SummaryGerman = {
   locale: 'de',
   rules: [
     // Identifier
-  ['Rule',
+    ['Rule',
       'abstr-identifier', 'default.default',
       '[t] "langer Bezeichner"',
       'self::identifier', 'contains(@grammar, "collapsed")'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-identifier', 'default.default',
       '[t] "Bezeichner"',
       'self::identifier'
-  ],
+    ],
 
-  // Numbers
-  ['Rule',
+    // Numbers
+    ['Rule',
       'abstr-number', 'default.default',
       '[t] "lange Zahl"',
       'self::number', 'contains(@grammar, "collapsed")'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-number', 'default.default',
       '[t] "Zahl"',
       'self::number'
-  ],
+    ],
 
-  ['Rule',
+    ['Rule',
       'abstr-mixed-number', 'default.default',
       '[t] "langer gemischter Bruch"',
       'self::number', '@role="mixed"', 'contains(@grammar, "collapsed")'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-mixed-number', 'default.default',
       '[t] "gemischter Bruch"',
       'self::number', '@role="mixed"'
-  ],
+    ],
 
-  // Text
-  ['Rule',
+    // Text
+    ['Rule',
       'abstr-text', 'default.default',
       '[t] "Text"',
       'self::text'
-  ],
+    ],
 
-  // Functions
-  ['Rule',
+    // Functions
+    ['Rule',
       'abstr-function', 'default.default',
       '[t] "Funktionsausdruck"',
       'self::function'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-function', 'mathspeak.brief',
       '[t] "Funktion"',
       'self::function'
-  ],
-  ['SpecializedRule',
+    ],
+    ['SpecializedRule',
       'abstr-function', 'mathspeak.brief', 'mathspeak.sbrief'
-  ],
+    ],
 
-  ['Rule',
+    ['Rule',
       'abstr-lim', 'default.default',
       '[t] "Grenzwertfunktion"',
       'self::function', '@role="limit function"'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-lim', 'mathspeak.brief',
       '[t] "Grenzwert"',
       'self::function', '@role="limit function"'
-  ],
-  ['SpecializedRule',
+    ],
+    ['SpecializedRule',
       'abstr-lim', 'mathspeak.brief', 'mathspeak.sbrief'
-  ],
-  // TODO: Missing simple function
-  // TODO: Application
+    ],
+    // TODO: Missing simple function
+    // TODO: Application
 
-  // Fraction
-  ['Rule',
+    // Fraction
+    ['Rule',
       'abstr-fraction', 'default.default',
       '[t] "Bruch"',
       'self::fraction'
-  ],
+    ],
 
-  ['Rule',
+    ['Rule',
       'abstr-continued-fraction', 'default.default',
       '[t] "Kettenbruch"',
       'self::fraction',
       'children/*[2]/descendant-or-self::*[@role="ellipsis"]'
-  ],
+    ],
 
 
-  // Roots
-  ['Rule',
+    // Roots
+    ['Rule',
       'abstr-sqrt', 'default.default',
       '[t] "Quadratwurzel"',
       'self::sqrt'
-  ],
+    ],
 
-  ['Rule',
+    ['Rule',
       'abstr-sqrt-nested', 'default.default',
       '[t] "verschachtelte Quadratwurzel"',
       'self::sqrt',
       'children/*/descendant-or-self::sqrt or' +
-      ' children/*/descendant-or-self::root'
-  ],
+     ' children/*/descendant-or-self::root'
+    ],
 
-  // Content following the root expression.
-  ['Rule',
+    // Content following the root expression.
+    ['Rule',
       'abstr-root', 'default.default',
       '[t] "Wurzel mit Exponent"; [n] children/*[1] (engine:modality=speech);' +
-      ' [t] "Exponentende"',
+     ' [t] "Exponentende"',
       'self::root', 'contains(@grammar, "collapsed")',
       'following-sibling::* or ancestor::*/following-sibling::*'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-root', 'default.default',
       '[t] "Wurzel mit Exponent"; [n] children/*[1] (engine:modality=speech)',
       'self::root'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-root', 'mathspeak.brief',
       '[t] "Wurzel"',
       'self::root'
-  ],
-  ['SpecializedRule',
+    ],
+    ['SpecializedRule',
       'abstr-root', 'mathspeak.brief', 'mathspeak.sbrief'
-  ],
-  // Content following the root expression.
-  ['Rule',
+    ],
+    // Content following the root expression.
+    ['Rule',
       'abstr-root-nested', 'default.default',
       '[t] "verschachtelte Wurzel mit Wurzelexponent"; ' +
-      '[n] children/*[1] (engine:modality="speech"); [t] "Ende Wurzelexponent"',
+     '[n] children/*[1] (engine:modality="speech"); [t] "Ende Wurzelexponent"',
       'self::root', 'contains(@grammar, "collapsed")',
       'children/*/descendant-or-self::sqrt or' +
-      ' children/*/descendant-or-self::root',
+     ' children/*/descendant-or-self::root',
       'following-sibling::* or ancestor::*/following-sibling::*'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-root-nested', 'default.default',
       '[t] "verschachtelte Wurzel mit Exponent"; ' +
-      '[n] children/*[1] (engine:modality="speech")',
+     '[n] children/*[1] (engine:modality="speech")',
       'self::root', 'children/*/descendant-or-self::sqrt or' +
-      ' children/*/descendant-or-self::root'
-  ],
-  ['Rule',
+     ' children/*/descendant-or-self::root'
+    ],
+    ['Rule',
       'abstr-root-nested', 'mathspeak.brief',
       '[t] "verschachtelte Wurzel"',
       'self::root', 'children/*/descendant-or-self::sqrt or ' +
-      'children/*/descendant-or-self::root'
-  ],
-  ['SpecializedRule',
+     'children/*/descendant-or-self::root'
+    ],
+    ['SpecializedRule',
       'abstr-root-nested', 'mathspeak.brief', 'mathspeak.sbrief'
-  ],
+    ],
 
-  // Superscript
-  ['Rule',
+    // Superscript
+    ['Rule',
       'abstr-superscript', 'default.default',
       '[t] "Potenz"',
       'self::superscript'
-  ],
+    ],
 
-  // Subscript
-  ['Rule',
+    // Subscript
+    ['Rule',
       'abstr-subscript', 'default.default',
       '[t] "Index"',
       'self::subscript'
-  ],
+    ],
 
-  // Subsuperscript
-  ['Rule',
+    // Subsuperscript
+    ['Rule',
       'abstr-subsup', 'default.default',
       '[t] "Potenz mit Index"',
       'self::superscript',
       'name(children/*[1])="subscript"'
-  ],
+    ],
 
-  // Infixop
-  ['Rule',
+    // Infixop
+    ['Rule',
       'abstr-infixop', 'default.default',
       '[t] @role (grammar:localRole); [t] "mit"; [t] count(./children/*);' +
-      ' [t] "Elementen"',
+     ' [t] "Elementen"',
       'self::infixop'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-infixop', 'default.default',
       '[t] @role (grammar:localRole); ' +
-      '[t] "mit veränderlicher Anzahl an Elementen"',
+     '[t] "mit veränderlicher Anzahl an Elementen"',
       'self::infixop', 'count(./children/*)>2',
       './children/punctuation[@role="ellipsis"]'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-infixop', 'mathspeak.brief',
       '[t] @role (grammar:localRole)',
       'self::infixop'
-  ],
-  ['SpecializedRule',
+    ],
+    ['SpecializedRule',
       'abstr-infixop', 'mathspeak.brief', 'mathspeak.sbrief'
-  ],
+    ],
 
-  ['Rule',
+    ['Rule',
       'abstr-addition', 'default.default',
       '[t] "Summe mit"; [t] count(./children/*); [t] "Summanden"',
       'self::infixop', '@role="addition"'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-addition', 'mathspeak.brief',
       '[t] "Summe"',
       'self::infixop', '@role="addition"'
-  ],
-  ['SpecializedRule',
+    ],
+    ['SpecializedRule',
       'abstr-addition', 'mathspeak.brief', 'mathspeak.sbrief'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-var-addition', 'default.default',
       '[t] "Summe mit veränderlicher Anzahl an Summanden"',
       'self::infixop', '@role="addition"',
       'count(./children/*)>2', './children/punctuation[@role="ellipsis"]'
-  ],
+    ],
 
-  ['Rule',
+    ['Rule',
       'abstr-multiplication', 'default.default',
       '[t] "Produkt mit"; [t] count(./children/*); [t] "Faktoren"',
       'self::infixop', '@role="multiplication"'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-multiplication', 'mathspeak.brief',
       '[t] "Produkt"',
       'self::infixop', '@role="multiplication"'
-  ],
-  ['SpecializedRule',
+    ],
+    ['SpecializedRule',
       'abstr-multiplication', 'mathspeak.brief', 'mathspeak.sbrief'
-  ],
-  ['Aliases',
+    ],
+    ['Aliases',
       'abstr-multiplication',
       'self::infixop', '@role="implicit"'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-var-multiplication', 'default.default',
       '[t] "Produkt mit veränderlicher Anzahl an Faktoren"',
       'self::infixop', '@role="multiplication"',
       'count(./children/*)>2', './children/punctuation[@role="ellipsis"]'
-  ],
-  ['Aliases',
+    ],
+    ['Aliases',
       'abstr-var-multiplication',
       'self::infixop', '@role="implicit"',
       'count(./children/*)>2', './children/punctuation[@role="ellipsis"]'
-  ],
+    ],
 
 
-  // Vector
-  ['Rule',
+    // Vector
+    ['Rule',
       'abstr-vector', 'default.default',
       '[t] count(./children/*) ; [t] "dimensionaler Vektor"',
       'self::vector'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-vector', 'mathspeak.brief',
       '[t] "Vektor"',
       'self::vector'
-  ],
-  ['SpecializedRule',
+    ],
+    ['SpecializedRule',
       'abstr-vector', 'mathspeak.brief', 'mathspeak.sbrief'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-var-vector', 'default.default',
       '[t] "n dimensionaler Vektor"',
       'self::vector',
       './children/*/children/punctuation[@role="ellipsis"]'
-  ],
+    ],
 
-  ['Rule',
+    ['Rule',
       'abstr-binomial', 'default.default',
       '[t] "Binomialkoeffizient"',
       'self::vector', '@role="binomial"'
-  ],
-  // These two are needed to avoid the vector rule firing.
-  ['SpecializedRule',
+    ],
+    // These two are needed to avoid the vector rule firing.
+    ['SpecializedRule',
       'abstr-binomial', 'default.default', 'mathspeak.brief'],
-  ['SpecializedRule',
+    ['SpecializedRule',
       'abstr-binomial', 'default.default', 'mathspeak.sbrief'],
 
 
-  // Matrix
-  ['Rule',
+    // Matrix
+    ['Rule',
       'abstr-determinant', 'default.default',
       '[t] count(./children/*); [t] "dimensionale Determinante"',
       'self::matrix', '@role="determinant"'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-determinant', 'mathspeak.brief',
       '[t] "Determinante"',
       'self::matrix', '@role="determinant"'
-  ],
-  ['SpecializedRule',
+    ],
+    ['SpecializedRule',
       'abstr-determinant', 'mathspeak.brief', 'mathspeak.sbrief'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-var-determinant', 'default.default',
       '[t] "n dimensionale Determinante"',
       'self::matrix', '@role="determinant"',
       './children/*/children/*/children/punctuation[@role="ellipsis"]'
-  ],
+    ],
 
-  ['Rule',
+    ['Rule',
       'abstr-squarematrix', 'default.default',
       '[t] count(./children/*); [t] "dimensionale quadratische Matrize"',
       'self::matrix', '@role="squarematrix"'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-squarematrix', 'mathspeak.brief',
       '[t] "quadratische Matrize"',
       'self::matrix', '@role="squarematrix"'
-  ],
-  ['SpecializedRule',
+    ],
+    ['SpecializedRule',
       'abstr-squarematrix', 'mathspeak.brief', 'mathspeak.sbrief'
-  ],
+    ],
 
-  ['Rule',
+    ['Rule',
       'abstr-rowvector', 'default.default',
       '[t] count(./children/row/children/*); [t] "dimensionaler Zeilenvektor"',
       'self::matrix', '@role="rowvector"'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-rowvector', 'mathspeak.brief',
       '[t] "Zeilenvektor"',
       'self::matrix', '@role="rowvector"'
-  ],
-  ['SpecializedRule',
+    ],
+    ['SpecializedRule',
       'abstr-rowvector', 'mathspeak.brief', 'mathspeak.sbrief'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-var-matrix', 'default.default',
       '[t] "n dimensionaler Zeilenvektor"',
       'self::matrix', '@role="rowvector"',
       './children/*/children/*/children/punctuation[@role="ellipsis"]'
-  ],
+    ],
 
-  ['Rule',
+    ['Rule',
       'abstr-matrix', 'default.default',
       '[t] count(children/*);  [t] "mal";' +
-      '[t] count(children/*[1]/children/*); [t] "Matrize"',
+     '[t] count(children/*[1]/children/*); [t] "Matrize"',
       'self::matrix'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-matrix', 'mathspeak.brief',
       '[t] "Matrize"',
       'self::matrix'
-  ],
-  ['SpecializedRule',
+    ],
+    ['SpecializedRule',
       'abstr-matrix', 'mathspeak.brief', 'mathspeak.sbrief'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-var-matrix', 'default.default',
       '[t] "n mal m dimensionale Matrize"',
       'self::matrix',
       './children/*/children/*/children/punctuation[@role="ellipsis"]'
-  ],
+    ],
 
 
-  // Cases
-  ['Rule',
+    // Cases
+    ['Rule',
       'abstr-cases', 'default.default',
       '[t] "Fallunterscheidung";' +
-      '[t] "mit"; [t] count(children/*); [t] "Fällen"',
+     '[t] "mit"; [t] count(children/*); [t] "Fällen"',
       'self::cases'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-cases', 'mathspeak.brief',
       '[t] "Fallunterscheidung"',
       'self::cases'
-  ],
-  ['SpecializedRule',
+    ],
+    ['SpecializedRule',
       'abstr-cases', 'mathspeak.brief', 'mathspeak.sbrief'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-var-cases', 'default.default',
       '[t] "Fallunterscheidung mit veränderlicher Anzahl an Fällen"',
       'self::cases',
       './children/row/children/cell/children/punctuation[@role="ellipsis"]' +
-      'or ./children/line/children/punctuation[@role="ellipsis"]'
-  ],
+     'or ./children/line/children/punctuation[@role="ellipsis"]'
+    ],
 
 
-  // Punctuated
-  ['Rule',
+    // Punctuated
+    ['Rule',
       'abstr-punctuated', 'default.default',
       '[t] "mit"; [n] content/*[1]; [t] "getrennte Liste der Länge"; ' +
-      '[t] count(children/*) - count(content/*)',
+     '[t] count(children/*) - count(content/*)',
       'self::punctuated'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-punctuated', 'mathspeak.brief',
       '[t] "mit"; [n] content/*[1]; [t] "getrennte Liste";',
       'self::punctuated'
-  ],
-  ['SpecializedRule',
+    ],
+    ['SpecializedRule',
       'abstr-punctuated', 'mathspeak.brief', 'mathspeak.sbrief'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-var-punctuated', 'default.default',
       '[t] "mit"; [n] content/*[1]; [t] "getrennte Liste";' +
-      '[t] "veränderlicher Länge"',
+     '[t] "veränderlicher Länge"',
       'self::punctuated',
       './children/punctuation[@role="ellipsis"]'
-  ],
+    ],
 
 
-  ['Rule',
+    ['Rule',
       'abstr-bigop', 'default.default',
       '[n] content/*[1]',
       'self::bigop'
-  ],
+    ],
 
-  ['Rule',
+    ['Rule',
       'abstr-integral', 'default.default',
       '[t] "Integral"',
       '@role="integral"'
-  ],
+    ],
 
-  ['Rule',
+    ['Rule',
       'abstr-relation', 'default.default',
       '[t] @role (grammar:localRole);',
       'self::relseq', 'count(./children/*)=2'
-  ],
+    ],
 
-  ['Rule',
+    ['Rule',
       'abstr-relation-seq', 'default.default',
       '[t] @role (grammar:localRole, join:""); [t] "ssequenz";' +
-      ' [t] "mit"; [t] count(./children/*); [t] "Elementen"',
+     ' [t] "mit"; [t] count(./children/*); [t] "Elementen"',
       'self::relseq', 'count(./children/*)>2'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-relation-seq', 'mathspeak.brief',
       '[t] @role (grammar:localRole, join:""); [t] "ssequenz"',
       'self::relseq', 'count(./children/*)>2'
-  ],
-  ['SpecializedRule',
+    ],
+    ['SpecializedRule',
       'abstr-relation-seq', 'mathspeak.brief', 'mathspeak.sbrief'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-var-relation', 'default.default',
       '[t] @role (grammar:localRole, join:""); [t] "ssequenz";' +
-      '[t] "mit veränderlicher Anzahl an Elementen"',
+     '[t] "mit veränderlicher Anzahl an Elementen"',
       'self::relseq', 'count(./children/*)>2',
       './children/punctuation[@role="ellipsis"]'
-  ],
+    ],
 
-  ['UniqueAlias',
+    ['UniqueAlias',
       'abstr-relation', 'default.default',
       'self::multirel',
       '@role!="unknown"', 'count(./children/*)>2'
-  ],
-  ['Aliases',
+    ],
+    ['Aliases',
       'abstr-var-relation',
       'self::multirel', '@role!="unknown"',
       'count(./children/*)>2', './children/punctuation[@role="ellipsis"]'
-  ],
+    ],
 
-  ['Rule',
+    ['Rule',
       'abstr-multirel', 'default.default',
       '[t] "Relationsequenz";' +
-      ' [t] "mit"; [t] count(./children/*); [t] "Elementen"',
+     ' [t] "mit"; [t] count(./children/*); [t] "Elementen"',
       'self::multirel', 'count(./children/*)>2'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-multirel', 'mathspeak.brief',
       '[t] "Relationsequenz"',
       'self::multirel', 'count(./children/*)>2'
-  ],
-  ['SpecializedRule',
+    ],
+    ['SpecializedRule',
       'abstr-multirel', 'mathspeak.brief', 'mathspeak.sbrief'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-var-multirel', 'default.default',
       '[t] "Relationsequenz mit veränderlicher Anzahl an Elementen"',
       'self::multirel', 'count(./children/*)>2',
       './children/punctuation[@role="ellipsis"]'
-  ],
+    ],
 
-  ['Rule',
+    ['Rule',
       'abstr-table', 'default.default',
       '[t] "Tabelle mit"; ' +
-      '[t] count(children/*); [t] "Zeilen und";' +
-      '[t] count(children/*[1]/children/*); [t] "Spalten"',
+     '[t] count(children/*); [t] "Zeilen und";' +
+     '[t] count(children/*[1]/children/*); [t] "Spalten"',
       'self::table'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-line', 'default.default',
       '[t] "in"; [t] @role (grammar:localRole);',
       'self::line'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-row', 'default.default',
       '[t] "in"; [t] @role (grammar:localRole);' +
-      '[t] count(preceding-sibling::..); [t] "mit";' +
-      '[t] count(children/*); [t] "Spalten"',
+     '[t] count(preceding-sibling::..); [t] "mit";' +
+     '[t] count(children/*); [t] "Spalten"',
       'self::row'
-  ],
-  ['Rule',
+    ],
+    ['Rule',
       'abstr-cell', 'default.default',
       '[t] "in"; [t] @role (grammar:localRole);',
       'self::cell'
-  ]
+    ]
   ]
 };

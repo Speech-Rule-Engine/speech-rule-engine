@@ -96,7 +96,7 @@ sre.BaseRuleStore = function() {
    * @type {?string}
    */
   this.domain = null;
-  
+
   /**
    * @type {boolean}
    */
@@ -341,12 +341,17 @@ sre.BaseRuleStore.prototype.setSpeechRules = function(rules) {
  */
 sre.BaseRuleStore.prototype.parseCstr = function(cstr) {
   return this.parser.parse(
-    this.locale + '.' + this.modality +
-      (this.domain ? '.' + this.domain: '') + 
+      this.locale + '.' + this.modality +
+      (this.domain ? '.' + this.domain : '') +
       '.' + cstr);
 };
 
 
+/**
+ * Parses a rule set definition.
+ * @param {Object.<string|Array<*>>} ruleSet The
+ *     definition object.
+ */
 sre.BaseRuleStore.prototype.parse = function(ruleSet) {
   this.modality = ruleSet.modality || this.modality;
   this.locale = ruleSet.locale || this.locale;
@@ -356,15 +361,16 @@ sre.BaseRuleStore.prototype.parse = function(ruleSet) {
 };
 
 
+/**
+ * Parse a list of rules, each given as a list of strings.
+ * @param {Array.<Array.<string>>} rules The list of rules.
+ */
 sre.BaseRuleStore.prototype.parseRules = function(rules) {
-  rules.forEach(goog.bind(this.parseRule, this));
-};
-
-
-sre.BaseRuleStore.prototype.parseRule = function(rule) {
-  let type = rule[0];
-  let method = this.parseMethods[type];
-  if (type && method) {
-    method.apply(this, rule.slice(1));
+  for (var i = 0, rule; rule = rules[i]; i++) {
+    let type = rule[0];
+    let method = this.parseMethods[type];
+    if (type && method) {
+      method.apply(this, rule.slice(1));
+    }
   }
 };
