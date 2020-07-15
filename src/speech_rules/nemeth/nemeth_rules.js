@@ -24,6 +24,9 @@ goog.require('sre.MathspeakUtil');
 goog.require('sre.NemethUtil');
 
 
+/**
+ * Nemeth Rules.
+ */
 sre.NemethRules = {
   locale: 'nemeth',
   modality: 'braille',

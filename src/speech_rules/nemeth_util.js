@@ -194,21 +194,6 @@ sre.NemethUtil.checkParent_ = function(node) {
 };
 
 
-// /**
-//  *
-//  * @param {!sre.SemanticNode} node
-//  * @return {boolean}
-//  * @private
-//  */
-// sre.NemethUtil.childNumber_ = function(node) {
-//   var parent = node.parent;
-//   if (!parent) {
-//     return 0;
-//   }
-//   return parent.childNodes.indexOf(node);
-// };
-
-
 /**
  * Propagates annotation for the Nemeth number indicator.
  * @param {sre.SemanticNode} node The semantic node.
