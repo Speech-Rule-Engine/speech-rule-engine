@@ -38,7 +38,7 @@
   "devDependencies": {
     "closure-linter-wrapper": ">=1.1.0",
     "google-closure-compiler": ">=20190618.0.0",
-    "google-closure-library": ">=20190618.0.0",
+    "google-closure-library": "^20200517.0.0",
     "jsdoc": ">=3.6.2",
     "json-minify": ">=1.0.0"
   },
