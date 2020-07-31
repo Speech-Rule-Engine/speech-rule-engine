@@ -8343,7 +8343,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleUnits = function() {
   );
   this.executeTreeTest(
       '<mn>3</mn><mi mathvariant="normal" class="MathML-Unit">km</mi>',
-      '<infixop role="implicit" id="3">\u2062' +
+      '<infixop role="unit" id="3">\u2062' +
       '<content>' +
       '<operator role="multiplication" id="2">\u2062</operator>' +
       '</content>' +
@@ -8356,21 +8356,15 @@ sre.SemanticTreeTest.prototype.testStreeSimpleUnits = function() {
   this.executeTreeTest(
       '<mn>3</mn><mi mathvariant="normal" class="MathML-Unit">km</mi>' +
       '<mi mathvariant="normal" class="MathML-Unit">h</mi>',
-      '<infixop role="implicit" id="6">\u2062' +
+      '<infixop role="unit" id="5">\u2062' +
       '<content>' +
-      '<operator role="multiplication" id="5">\u2062</operator>' +
+      '<operator role="multiplication" id="3">\u2062</operator>' +
+      '<operator role="multiplication" id="4">\u2062</operator>' +
       '</content>' +
       '<children>' +
       '<number role="integer" font="normal" id="0">3</number>' +
-      '<infixop role="unit" id="4">\u2062' +
-      '<content>' +
-      '<operator role="multiplication" id="3">\u2062</operator>' +
-      '</content>' +
-      '<children>' +
       '<identifier role="unit" font="normal" id="1">km</identifier>' +
       '<identifier role="unit" font="normal" id="2">h</identifier>' +
-      '</children>' +
-      '</infixop>' +
       '</children>' +
       '</infixop>'
   );
@@ -8500,17 +8494,18 @@ sre.SemanticTreeTest.prototype.testStreeComplexUnits = function() {
       '<msup>' +
       '<mi mathvariant="normal" class="MathML-Unit">s</mi>' +
       '<mn>2</mn></msup></mfrac>',
-      '<infixop role="implicit" id="13">\u2062' +
+      '<infixop role="implicit" id="14">\u2062' +
       '<content>' +
-      '<operator role="multiplication" id="11">\u2062</operator>' +
       '<operator role="multiplication" id="12">\u2062</operator>' +
+      '<operator role="multiplication" id="13">\u2062</operator>' +
       '</content>' +
       '<children>' +
       '<number role="integer" font="normal" id="0">3</number>' +
       '<identifier role="latinletter" font="italic" id="1">m</identifier>' +
-      '<infixop role="unit" id="10">\u2062' +
+      '<infixop role="unit" id="11">\u2062' +
       '<content>' +
       '<operator role="multiplication" id="9">\u2062</operator>' +
+      '<operator role="multiplication" id="10">\u2062</operator>' +
       '</content>' +
       '<children>' +
       '<identifier role="unit" font="normal" id="2">km</identifier>' +

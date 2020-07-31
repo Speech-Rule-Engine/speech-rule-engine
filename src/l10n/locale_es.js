@@ -238,6 +238,8 @@ sre.Locale.es = {
     digitPrefix: {default: ''}
   },
 
-  ALPHABET_COMBINER: sre.Locale.prefixCombiner
+  ALPHABET_COMBINER: sre.Locale.prefixCombiner,
+
+  UNIT_TIMES: 'por'
 
 };
