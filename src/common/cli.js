@@ -246,10 +246,8 @@ sre.Cli.prototype.commandLine = function() {
 
   commander.version(system.version).
       usage('[options] <file ...>').
-      option('').
       option('-i, --input [name]', 'Input file [name]. (Deprecated)').
       option('-o, --output [name]', 'Output file [name]. Defaults to stdout.').
-      option('').
       option('-d, --domain [name]', 'Speech rule set [name]. See --options' +
              ' for details.',
              set(sre.DynamicCstr.Axis.DOMAIN),
@@ -268,7 +266,6 @@ sre.Cli.prototype.commandLine = function() {
              set('markup'), 'none').
       option('-r, --rate [value]', 'Base rate [value] for tagged speech' +
              ' output.', set('rate'), '100').
-      option('').
       option('-p, --speech', 'Generate speech output (default).',
              processor, 'speech').
       option('-a, --audit', 'Generate auditory descriptions (JSON format).',
@@ -277,20 +274,18 @@ sre.Cli.prototype.commandLine = function() {
              processor, 'json').
       option('-x, --xml', 'Generate XML of semantic tree.',
              processor, 'semantic').
-      option('').
       option('-m, --mathml', 'Generate enriched MathML.',
              processor, 'enriched').
       option('-g, --generate <depth>', 'Include generated speech in enriched' +
              ' MathML (with -m option only).', set('speech'), 'none').
       option('-w, --structure', 'Include structure attribute in enriched' +
              ' MathML (with -m option only).', set('structure')).
-      option('').
       option('-P, --pprint', 'Pretty print output whenever possible.',
              set('pprint')).
       option('-v, --verbose', 'Verbose mode.').
       option('-l, --log [name]', 'Log file [name].').
-      option('--options', 'List engine setup options.').
-      on('option:options', goog.bind(function() {
+      option('--opt', 'List engine setup options.').
+      on('option:opt', goog.bind(function() {
         this.enumerate(); sre.SystemExternal.process.exit(0);}, this)).
       parse(sre.SystemExternal.process.argv);
   this.system.setupEngine(this.setup);
