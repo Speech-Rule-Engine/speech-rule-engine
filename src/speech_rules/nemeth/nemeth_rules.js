@@ -179,22 +179,24 @@ sre.NemethRules = {
 
     ['Rule',
      'number-baseline', 'default',
-     '[t] "Baseline"; [n] text()',
+     '[t] "⠐"; [n] text()',
      'self::number', 'not(contains(@grammar, "ignoreFont"))',
      'preceding-sibling::identifier',
      'preceding-sibling::*[1][@role="latinletter" or @role="greekletter" or' +
      ' @role="otherletter"]',
      'parent::*/parent::infixop[@role="implicit"]'],
+    // TODO: Not sure about that baseline at the beginning.
 
 
     ['Rule',
      'number-baseline-font', 'default',
-     '[t] "Baseline"; [t] @font; [n] . (grammar:ignoreFont=@font)',
+     '[t] "⠐"; [t] @font; [n] . (grammar:ignoreFont=@font)',
      'self::number', '@font', 'not(contains(@grammar, "ignoreFont"))',
      '@font!="normal"', 'preceding-sibling::identifier',
      'preceding-sibling::*[@role="latinletter" or @role="greekletter" or' +
      ' @role="otherletter"]',
      'parent::*/parent::infixop[@role="implicit"]'],
+    // TODO: Not sure about that baseline at the beginning.
 
     ['Rule',
      'identifier', 'default', '[n] text()',
@@ -393,9 +395,10 @@ sre.NemethRules = {
      'self::integral'],
     ['Rule',
      'integral', 'default',
-     '[n] children/*[1]; [t] "Subscript"; [n] children/*[2];' +
-     '[t] "Superscript"; [n] children/*[3]; [t] "Baseline";',
+     '[n] children/*[1]; [t] "⠰"; [n] children/*[2];' +
+     '[t] "⠘"; [n] children/*[3]; [t] "⠐"',
      'self::limboth', '@role="integral"'],
+    // TODO: Not sure about the indicators and that baseline at the end.
 
     ['Rule',
      'bigop', 'default',
@@ -672,9 +675,8 @@ sre.NemethRules = {
     //     'self::row', '@role="determinant"'],
 
     ['Rule',
-     'layout', 'default', '[t] "StartLayout"; ' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
-     ' [t] "EndLayout"', 'self::table'],
+     'layout', 'default', '[m] children/* (separator:"⠀", join:"");',
+     'self::table'],
 
     // ['Rule',
     //     'binomial', 'default',
@@ -684,10 +686,10 @@ sre.NemethRules = {
     //     'self::vector', '@role="binomial"'],
 
     ['Rule',
-     'cases', 'default', '[t] "StartLayout"; ' +
-     '[t] "Enlarged"; [n] content/*[1];' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
-     ' [t] "EndLayout"', 'self::cases'],
+     'cases', 'default',
+     '[n] ../../content/*[1] (grammar:enlargeFence); [m] children/*' +
+     ' (separator:"⠀"); [t] "⠐"',
+     'self::cases'],  // TODO: Not sure about that baseline at the end.
 
     // Multiline rules.
     ['Aliases',
@@ -704,7 +706,7 @@ sre.NemethRules = {
 
     ['Rule',
      'empty-line', 'default',
-     '[t] "Blank"', 'self::line', 'count(children/*)=0', 'not(content)'],
+     '[t] "⠀"', 'self::line', 'count(children/*)=0', 'not(content)'],
 
     ['Rule',
      'empty-line-with-label', 'default',
@@ -814,42 +816,42 @@ sre.NemethRules = {
     ],
 
     // Unit rules.
-    ['Rule',
-     'unit', 'default',
-     '[t] text() (grammar:annotation="unit":translate)',
-     'self::identifier', '@role="unit"'],
-    ['Rule',
-     'unit-square', 'default',
-     '[t] "square"; [n] children/*[1]',
-     'self::superscript', '@role="unit"', 'children/*[2][text()=2]',
-     'name(children/*[1])="identifier"'],
+    // ['Rule',
+    //  'unit', 'default',
+    //  '[t] text() (grammar:annotation="unit":translate)',
+    //  'self::identifier', '@role="unit"'],
+    // ['Rule',
+    //  'unit-square', 'default',
+    //  '[t] "square"; [n] children/*[1]',
+    //  'self::superscript', '@role="unit"', 'children/*[2][text()=2]',
+    //  'name(children/*[1])="identifier"'],
 
-    ['Rule',
-     'unit-cubic', 'default',
-     '[t] "cubic"; [n] children/*[1]',
-     'self::superscript', '@role="unit"', 'children/*[2][text()=3]',
-     'name(children/*[1])="identifier"'],
-    ['Rule',
-     'reciprocal', 'default',
-     '[t] "reciprocal"; [n] children/*[1]',
-     'self::superscript', '@role="unit"', 'name(children/*[1])="identifier"',
-     'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
-     'children/*[2]/children/*[1][text()=1]',
-     'count(preceding-sibling::*)=0 or preceding-sibling::*[@role!="unit"]'],
-    ['Rule',
-     'reciprocal', 'default',
-     '[t] "per"; [n] children/*[1]',
-     'self::superscript', '@role="unit"', 'name(children/*[1])="identifier"',
-     'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
-     'children/*[2]/children/*[1][text()=1]',
-     'preceding-sibling::*[@role="unit"]'],
-    ['Rule',
-     'unit-combine', 'default',
-     '[m] children/*', 'self::infixop', '@role="unit"'],
-    ['Rule',
-     'unit-divide', 'default',
-     '[n] children/*[1]; [t] "per"; [n] children/*[2]',
-     'self::fraction', '@role="unit"'],
+    // ['Rule',
+    //  'unit-cubic', 'default',
+    //  '[t] "cubic"; [n] children/*[1]',
+    //  'self::superscript', '@role="unit"', 'children/*[2][text()=3]',
+    //  'name(children/*[1])="identifier"'],
+    // ['Rule',
+    //  'reciprocal', 'default',
+    //  '[t] "reciprocal"; [n] children/*[1]',
+    //  'self::superscript', '@role="unit"', 'name(children/*[1])="identifier"',
+    //  'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
+    //  'children/*[2]/children/*[1][text()=1]',
+    //  'count(preceding-sibling::*)=0 or preceding-sibling::*[@role!="unit"]'],
+    // ['Rule',
+    //  'reciprocal', 'default',
+    //  '[t] "per"; [n] children/*[1]',
+    //  'self::superscript', '@role="unit"', 'name(children/*[1])="identifier"',
+    //  'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
+    //  'children/*[2]/children/*[1][text()=1]',
+    //  'preceding-sibling::*[@role="unit"]'],
+    // ['Rule',
+    //  'unit-combine', 'default',
+    //  '[m] children/*', 'self::infixop', '@role="unit"'],
+    // ['Rule',
+    //  'unit-divide', 'default',
+    //  '[n] children/*[1]; [t] "per"; [n] children/*[2]',
+    //  'self::fraction', '@role="unit"'],
 
     // TODO: Add a semantical role for reference signs/footnotes.
     //       Fix the number rule so that a footnote number is indicated.
