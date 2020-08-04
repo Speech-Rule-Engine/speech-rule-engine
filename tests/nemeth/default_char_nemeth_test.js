@@ -38,6 +38,7 @@ sre.DefaultCharNemethTest = function() {
    * @type {Array.<string>}
    */
   this.styles = ['default'];
+  this.compare = true;
 
   this.setActive('DefaultCharactersNemeth');
 };
