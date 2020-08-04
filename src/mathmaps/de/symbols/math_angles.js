@@ -7,7 +7,7 @@
     "key": "22BE",
     "mappings": {
       "default": {
-        "default": "Rechter Winkel mit Bogen"
+        "default": "rechter Winkel mit Bogen"
       }
     }
   },
@@ -16,7 +16,7 @@
     "key": "237C",
     "mappings": {
       "default": {
-        "default": "Rechter Winkel mit nach unten gerichtetem Zickzackpfeil"
+        "default": "rechter Winkel mit nach unten gerichtetem Zickzackpfeil"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "299D",
     "mappings": {
       "default": {
-        "default": "Rechter Winkel mit Punkt gemessen"
+        "default": "rechter Winkel mit Punkt gemessen"
       }
     }
   },

@@ -15,9 +15,9 @@
 
 goog.provide('sre.SpeechFrenchTest');
 
+goog.require('sre.ClearspeakCharFrenchTest');
 goog.require('sre.ClearspeakFrenchTest');
 goog.require('sre.CollapseFrenchTest');
-goog.require('sre.ClearspeakCharFrenchTest');
 goog.require('sre.DefaultCharFrenchTest');
 goog.require('sre.MathspeakCharFrenchTest');
 goog.require('sre.MathspeakEmbellishFrenchTest');

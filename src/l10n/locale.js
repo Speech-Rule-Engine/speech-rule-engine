@@ -40,8 +40,8 @@ goog.require('sre.Messages');
  *   NUMBERS: Object.<Function|string>,
  *   ALPHABETS: Object.<Array.<string>>,
  *   ALPHABET_PREFIXES: Object.<Object.<string>>,
- *   ALPHABET_TRANSFORMERS: Object.<Object.<Function>>,
- *   ALPHABET_COMBINER: function(string, string, string): string
+ *   ALPHABET_TRANSFORMERS: Object.<Object.<sre.Locale.Transformer>>,
+ *   ALPHABET_COMBINER: sre.Locale.Combiner
  * }}
  */
 sre.Locale.Messages;
@@ -165,7 +165,11 @@ sre.Locale.Combiner;
 
 
 /**
- * @type {sre.Locale.Combiner}
+ * A combiner adding the font name before the letter. Empty strings are ignored.
+ * @param {string} letter The letter.
+ * @param {string} font The font name.
+ * @param {string} cap Capitalisation expression.
+ * @return {string} The speech string as `font cap letter`.
  */
 sre.Locale.prefixCombiner = function(letter, font, cap) {
   letter = cap ? cap + ' ' + letter : letter;
@@ -174,7 +178,11 @@ sre.Locale.prefixCombiner = function(letter, font, cap) {
 
 
 /**
- * @type {sre.Locale.Combiner}
+ * A combiner adding the font name after the letter. Empty strings are ignored.
+ * @param {string} letter The letter.
+ * @param {string} font The font name.
+ * @param {string} cap Capitalisation expression.
+ * @return {string} The speech string as `cap letter font`.
  */
 sre.Locale.postfixCombiner = function(letter, font, cap) {
   letter = cap ? cap + ' ' + letter : letter;

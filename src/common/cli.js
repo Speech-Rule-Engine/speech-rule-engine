@@ -20,7 +20,6 @@
  */
 goog.provide('sre.Cli');
 
-goog.require('sre.Api');
 goog.require('sre.Debugger');
 goog.require('sre.Engine');
 goog.require('sre.Engine.Mode');
@@ -62,12 +61,12 @@ sre.Cli = function() {
 
 /**
  * Sets parameters for the speech rule engine.
- * @param {string|boolean} value The cli option value.
  * @param {string} arg The option to set.
+ * @param {string|boolean} value The cli option value.
+ * @param {string} def The default for the option.
  */
-sre.Cli.prototype.set = function(value, arg) {
-  this.setup[arg] = typeof value === 'undefined' ?
-      ((arg === 'semantics') ? false : true) : value;
+sre.Cli.prototype.set = function(arg, value, def) {
+  this.setup[arg] = typeof value === 'undefined' ? true : value;
 };
 
 
@@ -112,7 +111,8 @@ sre.Cli.prototype.enumerate = function() {
         let styles = Object.keys(dyna2[ax3]).sort();
         if (ax3 === 'clearspeak') {
           var clear3 = true;
-          var prefs = sre.ClearspeakPreferences.getLocalePreferences(dynamic)[ax1];
+          var prefs =
+              sre.ClearspeakPreferences.getLocalePreferences(dynamic)[ax1];
           for (var ax4 in prefs) {
             table.push([compStr(clear1 ? ax1 : '', length[0]),
                         compStr(clear2 ? ax2 : '', length[1]),
@@ -237,27 +237,35 @@ sre.Cli.prototype.readExpression_ = function(input) {
 sre.Cli.prototype.commandLine = function() {
   var commander = sre.SystemExternal.commander;
   var system = this.system;
-  var set = goog.bind(this.set, this);
+  var set = goog.bind(function(key) {
+    return goog.bind(function(val, def) {
+      this.set(key, val, def);
+    }, this);
+  }, this);
   var processor = goog.bind(this.processor, this);
 
   commander.version(system.version).
       usage('[options] <file ...>').
-      option('').
       option('-i, --input [name]', 'Input file [name]. (Deprecated)').
       option('-o, --output [name]', 'Output file [name]. Defaults to stdout.').
-      option('').
-      option('-d, --dom [name]', 'Domain or subject area [name].',
-             set, 'domain').
-      option('-t, --style [name]', 'Speech style [name].', set, 'style').
-      option('-c, --locale [code]', 'Locale [code].', set, 'locale').
-      option('-b, --modality [name]', 'Modality [name].', set, 'modality').
-      option('-s, --semantics', 'Switch OFF semantics interpretation. (Deprecated)',
-             set, 'semantics').
+      option('-d, --domain [name]', 'Speech rule set [name]. See --options' +
+             ' for details.',
+             set(sre.DynamicCstr.Axis.DOMAIN),
+             sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN]).
+      option('-t, --style [name]', 'Speech style [name]. See --options' +
+             ' for details.',
+             set(sre.DynamicCstr.Axis.STYLE),
+             sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE]).
+      option('-c, --locale [code]', 'Locale [code].',
+             set(sre.DynamicCstr.Axis.LOCALE),
+             sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]).
+      option('-b, --modality [name]', 'Modality [name].',
+             set(sre.DynamicCstr.Axis.MODALITY),
+             sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY]).
       option('-k, --markup [name]', 'Generate speech output with markup tags.',
-             set, 'markup').
+             set('markup'), 'none').
       option('-r, --rate [value]', 'Base rate [value] for tagged speech' +
-             ' output.', set, 'rate').
-      option('').
+             ' output.', set('rate'), '100').
       option('-p, --speech', 'Generate speech output (default).',
              processor, 'speech').
       option('-a, --audit', 'Generate auditory descriptions (JSON format).',
@@ -266,20 +274,18 @@ sre.Cli.prototype.commandLine = function() {
              processor, 'json').
       option('-x, --xml', 'Generate XML of semantic tree.',
              processor, 'semantic').
-      option('').
       option('-m, --mathml', 'Generate enriched MathML.',
              processor, 'enriched').
       option('-g, --generate <depth>', 'Include generated speech in enriched' +
-             ' MathML (with -m option only).', set, 'speech').
+             ' MathML (with -m option only).', set('speech'), 'none').
       option('-w, --structure', 'Include structure attribute in enriched' +
-             ' MathML (with -m option only).', set, 'structure').
-      option('').
+             ' MathML (with -m option only).', set('structure')).
       option('-P, --pprint', 'Pretty print output whenever possible.',
-             set, 'pprint').
+             set('pprint')).
       option('-v, --verbose', 'Verbose mode.').
       option('-l, --log [name]', 'Log file [name].').
-      option('--options', 'List engine setup options.').
-      on('option:options', goog.bind(function() {
+      option('--opt', 'List engine setup options.').
+      on('option:opt', goog.bind(function() {
         this.enumerate(); sre.SystemExternal.process.exit(0);}, this)).
       parse(sre.SystemExternal.process.argv);
   this.system.setupEngine(this.setup);

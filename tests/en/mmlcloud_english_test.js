@@ -42,11 +42,6 @@ sre.MmlcloudEnglishTest = function() {
    */
   this.domain = 'mathspeak';
 
-  /**
-   * @override
-   */
-  this.semantics = true;
-
   this.setActive('MathmlCloudEnglish');
 };
 goog.inherits(sre.MmlcloudEnglishTest, sre.AbstractRuleTest);

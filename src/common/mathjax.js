@@ -15,6 +15,7 @@
 
 /**
  * @fileoverview Setup for loading the speech rule engine as MathJax extension.
+ *               This is for MathJax versions >=2.7 and <3.0.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */

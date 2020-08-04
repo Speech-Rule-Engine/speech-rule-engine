@@ -19,7 +19,13 @@
 
 goog.provide('sre.Numbers.fr');
 
+goog.require('sre.Numbers');
 
+
+/**
+ * Sub-ISO specification. Possible values: fr, be, sw.
+ * @type {string}
+ */
 sre.Numbers.fr.SUB_ISO = 'fr';
 
 
@@ -122,7 +128,8 @@ sre.Numbers.fr.numberToWords = function(number) {
         if (str.match(RegExp(rest))) {
           str = huns + (pos ? '-mille-' : '') + str;
         } else if (str.match(RegExp(rest.replace(/s$/, '')))) {
-          str = huns + (pos ? '-mille-' : '') + str.replace(rest.replace(/s$/, ''), rest);
+          str = huns + (pos ? '-mille-' : '') +
+              str.replace(rest.replace(/s$/, ''), rest);
         } else {
           str = huns + (pos ? '-' + large + '-' : '') + str;
         }
@@ -203,6 +210,9 @@ sre.Numbers.fr.simpleOrdinal = function(number) {
 };
 
 
+/**
+ * @type {sre.Numbers}
+ */
 sre.Numbers.fr.NUMBERS = {
   wordOrdinal: sre.Numbers.fr.wordOrdinal,
   simpleOrdinal: sre.Numbers.fr.simpleOrdinal,

@@ -6,7 +6,7 @@
     "key": "00C0",
     "mappings": {
       "default": {
-        "default": "groß A mit Grave"
+        "default": "groß A mit Gravis"
       }
     },
     "category": "Lu"
@@ -69,7 +69,7 @@
     "key": "00C8",
     "mappings": {
       "default": {
-        "default": "groß E mit Grave"
+        "default": "groß E mit Gravis"
       }
     },
     "category": "Lu"
@@ -105,7 +105,7 @@
     "key": "00CC",
     "mappings": {
       "default": {
-        "default": "groß I mit Grave"
+        "default": "groß I mit Gravis"
       }
     },
     "category": "Lu"
@@ -150,7 +150,7 @@
     "key": "00D2",
     "mappings": {
       "default": {
-        "default": "großes o mit Grave"
+        "default": "großes o mit Gravis"
       }
     },
     "category": "Lu"
@@ -195,7 +195,7 @@
     "key": "00D9",
     "mappings": {
       "default": {
-        "default": "groß U mit Grave"
+        "default": "groß U mit Gravis"
       }
     },
     "category": "Lu"
@@ -817,7 +817,7 @@
     "key": "01F8",
     "mappings": {
       "default": {
-        "default": "groß N mit Grab"
+        "default": "groß N mit Gravis"
       }
     }
   },
@@ -826,7 +826,7 @@
     "key": "0200",
     "mappings": {
       "default": {
-        "default": "groß A mit Doppelgrab"
+        "default": "groß A mit Doppelgravis"
       }
     }
   },
@@ -844,7 +844,7 @@
     "key": "0204",
     "mappings": {
       "default": {
-        "default": "groß E mit Doppelgrab"
+        "default": "groß E mit Doppelgravis"
       }
     }
   },
@@ -862,7 +862,7 @@
     "key": "0208",
     "mappings": {
       "default": {
-        "default": "groß I mit Doppelgrab"
+        "default": "groß I mit Doppelgravis"
       }
     }
   },
@@ -880,7 +880,7 @@
     "key": "020C",
     "mappings": {
       "default": {
-        "default": "groß O mit Doppelgrab"
+        "default": "groß O mit Doppelgravis"
       }
     }
   },
@@ -898,7 +898,7 @@
     "key": "0210",
     "mappings": {
       "default": {
-        "default": "groß R mit Doppelgrab"
+        "default": "groß R mit Doppelgravis"
       }
     }
   },
@@ -916,7 +916,7 @@
     "key": "0214",
     "mappings": {
       "default": {
-        "default": "groß U mit Doppelgrab"
+        "default": "groß U mit Doppelgravis"
       }
     }
   },
@@ -1429,7 +1429,7 @@
     "key": "1E80",
     "mappings": {
       "default": {
-        "default": "groß W mit Grab"
+        "default": "groß W mit Gravis"
       }
     }
   },
@@ -1627,7 +1627,7 @@
     "key": "1EF2",
     "mappings": {
       "default": {
-        "default": "groß Y mit Grab"
+        "default": "groß Y mit Gravis"
       }
     }
   },

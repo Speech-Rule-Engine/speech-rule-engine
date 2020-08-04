@@ -168,7 +168,7 @@
     "key": "003F",
     "mappings": {
       "default": {
-        "default": "Frgezeichen"
+        "default": "Fragezeichen"
       }
     },
     "category": "Po"
@@ -1547,7 +1547,7 @@
     "key": "2220",
     "mappings": {
       "default": {
-        "default": "ebener Winkel"
+        "default": "Winkel"
       }
     },
     "category": "Sm"
@@ -2967,15 +2967,6 @@
   },
   {
     "category": "Sm",
-    "key": "22BE",
-    "mappings": {
-      "default": {
-        "default": "rechter Winkel mit Bogen"
-      }
-    }
-  },
-  {
-    "category": "Sm",
     "key": "22BF",
     "mappings": {
       "default": {
@@ -3871,7 +3862,7 @@
     "key": "27D6",
     "mappings": {
       "default": {
-        "default": "Rechter äußerer Join"
+        "default": "rechter äußerer Join"
       }
     }
   },
@@ -5896,7 +5887,7 @@
     "key": "2A87",
     "mappings": {
       "default": {
-        "default": "Weniger als und Single-Line nicht gleich"
+        "default": "Kleiner als aber nicht gleich"
       }
     }
   },
@@ -5905,7 +5896,7 @@
     "key": "2A88",
     "mappings": {
       "default": {
-        "default": "Größer als und einzeilig Nicht gleich"
+        "default": "Größer als aber nicht gleich"
       }
     }
   },
@@ -5913,7 +5904,7 @@
     "key": "2A89",
     "mappings": {
       "default": {
-        "default": "less than but not approximately equal to"
+        "default": "Kleiner als aber nicht ungefähr gleich"
       }
     },
     "category": "Sm"
@@ -5922,7 +5913,7 @@
     "key": "2A8A",
     "mappings": {
       "default": {
-        "default": "greater than but not approximately equal to"
+        "default": "Größer als aber nicht ungefähr gleich"
       }
     },
     "category": "Sm"
@@ -5932,7 +5923,7 @@
     "key": "2A8B",
     "mappings": {
       "default": {
-        "default": "Weniger als oben Zweizeilig gleich größer als Größer als"
+        "default": "Weniger als aber größer als oben"
       }
     }
   },
@@ -5941,7 +5932,7 @@
     "key": "2A8C",
     "mappings": {
       "default": {
-        "default": "Größer als oben Zweizeilig gleich größer als Weniger"
+        "default": "Größer als aber weniger als unten und größer als oben"
       }
     }
   },
@@ -6057,7 +6048,7 @@
     "key": "2A99",
     "mappings": {
       "default": {
-        "default": "equal (double over less than"
+        "default": "Gleich oder kleiner als"
       }
     },
     "category": "Sm"
@@ -6066,7 +6057,7 @@
     "key": "2A9A",
     "mappings": {
       "default": {
-        "default": "equal to or greater than"
+        "default": "Gleich oder größer als"
       }
     },
     "category": "Sm"
@@ -6093,7 +6084,7 @@
     "key": "2A9D",
     "mappings": {
       "default": {
-        "default": "equivalent to or less than"
+        "default": "Äquivalent oder kleiner als"
       }
     },
     "category": "Sm"
@@ -6129,7 +6120,7 @@
     "key": "2AA1",
     "mappings": {
       "default": {
-        "default": "nested less than"
+        "default": "Verschachteltes kleiner als"
       }
     },
     "category": "Sm"
@@ -6138,7 +6129,7 @@
     "key": "2AA2",
     "mappings": {
       "default": {
-        "default": "nested greater than"
+        "default": "Verschachteltes größer als"
       }
     },
     "category": "Sm"
@@ -7552,7 +7543,7 @@
     "key": "FF40",
     "mappings": {
       "default": {
-        "default": "vollbreiter Grabakzent"
+        "default": "vollbreiter Gravis Akzent"
       }
     }
   },

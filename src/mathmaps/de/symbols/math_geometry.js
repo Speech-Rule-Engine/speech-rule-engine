@@ -1348,7 +1348,7 @@
     "key": "2595",
     "mappings": {
       "default": {
-        "default": "Rechter achter Block"
+        "default": "rechter achter Block"
       }
     }
   },
@@ -1942,7 +1942,7 @@
     "key": "25D7",
     "mappings": {
       "default": {
-        "default": "Rechter halber schwarzer Kreis"
+        "default": "rechter halber schwarzer Kreis"
       }
     }
   },

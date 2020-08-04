@@ -24,7 +24,6 @@
 goog.provide('sre.BaseRuleStore');
 
 goog.require('sre.AuditoryDescription');
-goog.require('sre.BaseUtil');
 goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
 goog.require('sre.DynamicCstr');
@@ -93,9 +92,19 @@ sre.BaseRuleStore = function() {
   this.modality = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY];
 
   /**
+   * Default domain.
+   * @type {?string}
+   */
+  this.domain = null;
+
+  /**
    * @type {boolean}
    */
   this.initialized = false;
+
+  this.parseMethods = {
+    'Rule': goog.bind(this.defineRule, this)
+  };
 
 };
 
@@ -331,5 +340,37 @@ sre.BaseRuleStore.prototype.setSpeechRules = function(rules) {
  * @return {!sre.DynamicCstr} The parsed constraint including locale.
  */
 sre.BaseRuleStore.prototype.parseCstr = function(cstr) {
-  return this.parser.parse(this.locale + '.' + this.modality + '.' + cstr);
+  return this.parser.parse(
+      this.locale + '.' + this.modality +
+      (this.domain ? '.' + this.domain : '') +
+      '.' + cstr);
+};
+
+
+/**
+ * Parses a rule set definition.
+ * @param {Object.<string|Array<*>>} ruleSet The
+ *     definition object.
+ */
+sre.BaseRuleStore.prototype.parse = function(ruleSet) {
+  this.modality = ruleSet.modality || this.modality;
+  this.locale = ruleSet.locale || this.locale;
+  this.domain = ruleSet.domain || this.domain;
+  this.context.parse(ruleSet.functions || []);
+  this.parseRules(ruleSet.rules || []);
+};
+
+
+/**
+ * Parse a list of rules, each given as a list of strings.
+ * @param {Array.<Array.<string>>} rules The list of rules.
+ */
+sre.BaseRuleStore.prototype.parseRules = function(rules) {
+  for (var i = 0, rule; rule = rules[i]; i++) {
+    let type = rule[0];
+    let method = this.parseMethods[type];
+    if (type && method) {
+      method.apply(this, rule.slice(1));
+    }
+  }
 };

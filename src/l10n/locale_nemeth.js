@@ -26,7 +26,7 @@ goog.require('sre.Numbers.nemeth');
 
 
 let postfixCombiner = function(letter, font, cap) {
-    return font ? letter + font : letter;
+  return font ? letter + font : letter;
 };
 
 

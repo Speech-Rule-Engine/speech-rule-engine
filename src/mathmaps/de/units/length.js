@@ -3,12 +3,34 @@
     "locale": "de"
   },
   {
+    "key": "mm",
+    "names": [
+      "mm"
+    ],
+    "mappings": {
+      "default": {
+        "default": "Millimeter"
+      }
+    },
+    "category": "length"
+  },
+  {
+    "key": "cm",
+    "names": [
+      "cm"
+    ],
+    "mappings": {
+      "default": {
+        "default": "Zentimeter"
+      }
+    },
+    "category": "length"
+  },
+  {
     "key": "m",
     "mappings": {
       "default": {
-        "default": "meter",
-        "singular": "meter",
-        "dual": ""
+        "default": "Meter"
       }
     },
     "category": "length",
@@ -16,13 +38,20 @@
       "m"
     ]
   },
+  {"category": "length",
+   "mappings": {
+     "default": {
+       "default": "Kilometer"
+     }
+   },
+   "key": "km",
+   "names": ["km"]
+  },
   {
     "key": "ft",
     "mappings": {
       "default": {
-        "default": "fuß",
-        "singular": "fuß",
-        "dual": ""
+        "default": "Fuß"
       }
     },
     "category": "length",
@@ -35,9 +64,7 @@
     "key": "in",
     "mappings": {
       "default": {
-        "default": "zoll",
-        "singular": "zoll",
-        "dual": ""
+        "default": "Zoll"
       }
     },
     "category": "length",
@@ -50,9 +77,8 @@
     "key": "mi",
     "mappings": {
       "default": {
-        "default": "meilen",
-        "singular": "meile",
-        "dual": ""
+        "plural": "Meilen",
+        "default": "Meile"
       }
     },
     "category": "length",
@@ -65,9 +91,8 @@
     "key": "yd",
     "mappings": {
       "default": {
-        "default": "yards",
-        "singular": "yard",
-        "dual": ""
+        "plural": "Yards",
+        "default": "Yard"
       }
     },
     "category": "length",
@@ -75,5 +100,17 @@
       "yd",
       "yd."
     ]
+  },
+  {
+    "key": "n.m.",
+    "names": [
+      "n.m."
+    ],
+    "mappings": {
+      "default": {
+        "default": "nautische Meile"
+      }
+    },
+    "category": "length"
   }
 ]

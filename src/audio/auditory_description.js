@@ -22,8 +22,6 @@
  */
 goog.provide('sre.AuditoryDescription');
 
-goog.require('sre.BaseUtil');
-goog.require('sre.Engine');
 goog.require('sre.Span');
 
 

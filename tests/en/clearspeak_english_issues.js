@@ -24,9 +24,9 @@ goog.require('sre.ClearspeakEnglishRuleTest');
 
 
 /**
-* @constructor
-* @extends {sre.ClearspeakEnglishRuleTest}
-*/
+ * @constructor
+ * @extends {sre.ClearspeakEnglishRuleTest}
+ */
 sre.ClearspeakEnglishIssues = function() {
   sre.ClearspeakEnglishIssues.base(this, 'constructor');
 
@@ -39,12 +39,12 @@ sre.ClearspeakEnglishIssues = function() {
 goog.inherits(sre.ClearspeakEnglishIssues, sre.ClearspeakEnglishRuleTest);
 
 
-
 //
 // Issues
 //
-
-
+/**
+ * Issue #230
+ */
 sre.ClearspeakEnglishIssues.prototype.testIssue230 = function() {
   var preference = 'default';
   this.executeRuleTest(
@@ -56,6 +56,9 @@ sre.ClearspeakEnglishIssues.prototype.testIssue230 = function() {
 };
 
 
+/**
+ * Issues with number expressions.
+ */
 sre.ClearspeakEnglishIssues.prototype.testIssueNumbers = function() {
   var preference = 'default';
   this.executeRuleTest(
@@ -67,8 +70,6 @@ sre.ClearspeakEnglishIssues.prototype.testIssueNumbers = function() {
       '<mrow><mn>#FFFF</mn></mrow>',
       'number number sign F F F F', preference);
 };
-
-
 
 
 /**

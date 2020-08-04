@@ -33,7 +33,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠴⠴⠄"
+        "default": "⠀"
       }
     },
     "key": "2000"
@@ -42,7 +42,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠴⠂⠄"
+        "default": "⠀"
       }
     },
     "key": "2001"
@@ -51,7 +51,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠴⠆⠄"
+        "default": "⠀"
       }
     },
     "key": "2002"
@@ -60,7 +60,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠴⠒⠄"
+        "default": "⠀"
       }
     },
     "key": "2003"
@@ -69,7 +69,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠴⠲⠄"
+        "default": "⠀"
       }
     },
     "key": "2004"
@@ -78,7 +78,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠴⠢⠄"
+        "default": "⠀"
       }
     },
     "key": "2005"
@@ -87,7 +87,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠴⠖⠄"
+        "default": "⠀"
       }
     },
     "key": "2006"
@@ -141,7 +141,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠴⠉⠄"
+        "default": ""
       }
     },
     "key": "200C"
@@ -150,7 +150,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠴⠙⠄"
+        "default": ""
       }
     },
     "key": "200D"
@@ -240,7 +240,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠆⠋⠄"
+        "default": "⠀"
       }
     },
     "key": "202F"
@@ -258,7 +258,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠖⠴⠄"
+        "default": ""
       }
     },
     "key": "2060"

@@ -30,8 +30,8 @@ sre.ClearspeakGermanAbsoluteValue = function() {
   sre.ClearspeakGermanAbsoluteValue.base(this, 'constructor');
 
   /**
-* @override
-  */
+   * @override
+   */
   this.information = 'ClearspeakGermanAbsoluteValue rule tests.';
 
 };
@@ -50,7 +50,7 @@ goog.inherits(sre.ClearspeakGermanAbsoluteValue, sre.ClearspeakGermanRuleTest);
 sre.ClearspeakGermanAbsoluteValue.prototype.testAbs01 = function() {
   var preference = 'AbsoluteValue_Auto';
   var mathml = '<mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow></mrow>';
-  var speech = 'la valeur absolue de x';
+  var speech = 'der Betrag von x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -62,7 +62,7 @@ sre.ClearspeakGermanAbsoluteValue.prototype.testAbs02 = function() {
   var preference = 'AbsoluteValue_Auto';
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn>' +
       '</mrow><mo>|</mo></mrow></mrow>';
-  var speech = 'la valeur absolue de x plus 1';
+  var speech = 'der Betrag von x plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -74,7 +74,7 @@ sre.ClearspeakGermanAbsoluteValue.prototype.testAbs03 = function() {
   var preference = 'AbsoluteValue_Auto';
   var mathml = '<mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>+</mo>' +
       '<mn>1</mn></mrow>';
-  var speech = 'la valeur absolue de x, plus 1';
+  var speech = 'der Betrag von x, plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -87,7 +87,7 @@ sre.ClearspeakGermanAbsoluteValue.prototype.testAbs04 = function() {
   var mathml = '<mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>+</mo>' +
       '<mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow><mo>≥</mo><mrow><mo>|' +
       '</mo><mi>z</mi><mo>|</mo></mrow></mrow>';
-  var speech = 'la valeur absolue de x, plus, la valeur absolue de y, plus grand ou égal à, la valeur absolue de z';
+  var speech = 'der Betrag von x, plus, der Betrag von y, größer oder gleich, der Betrag von z';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -98,7 +98,7 @@ sre.ClearspeakGermanAbsoluteValue.prototype.testAbs04 = function() {
 sre.ClearspeakGermanAbsoluteValue.prototype.testAbsEnd01 = function() {
   var preference = 'AbsoluteValue_AbsEnd';
   var mathml = '<mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow></mrow>';
-  var speech = 'la valeur absolue de x, fin de valeur absolue';
+  var speech = 'der Betrag von x, Ende Betrag';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -110,7 +110,7 @@ sre.ClearspeakGermanAbsoluteValue.prototype.testAbsEnd02 = function() {
   var preference = 'AbsoluteValue_AbsEnd';
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn>' +
       '</mrow><mo>|</mo></mrow></mrow>';
-  var speech = 'la valeur absolue de x plus 1, fin de valeur absolue';
+  var speech = 'der Betrag von x plus 1, Ende Betrag';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -122,7 +122,7 @@ sre.ClearspeakGermanAbsoluteValue.prototype.testAbsEnd03 = function() {
   var preference = 'AbsoluteValue_AbsEnd';
   var mathml = '<mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>+</mo>' +
       '<mn>1</mn></mrow>';
-  var speech = 'la valeur absolue de x, fin de valeur absolue, plus 1';
+  var speech = 'der Betrag von x, Ende Betrag, plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -135,7 +135,7 @@ sre.ClearspeakGermanAbsoluteValue.prototype.testAbsEnd04 = function() {
   var mathml = '<mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>+</mo>' +
       '<mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow><mo>≥</mo><mrow><mo>|' +
       '</mo><mi>z</mi><mo>|</mo></mrow></mrow>';
-  var speech = 'la valeur absolue de x, fin de valeur absolue, plus, la valeur absolue de y, fin de valeur absolue, plus grand ou égal à, la valeur absolue de z, fin de valeur absolue';
+  var speech = 'der Betrag von x, Ende Betrag, plus, der Betrag von y, Ende Betrag, größer oder gleich, der Betrag von z, Ende Betrag';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -146,7 +146,7 @@ sre.ClearspeakGermanAbsoluteValue.prototype.testAbsEnd04 = function() {
 sre.ClearspeakGermanAbsoluteValue.prototype.testCard01 = function() {
   var preference = 'AbsoluteValue_Cardinality';
   var mathml = '<mrow><mrow><mo>|</mo><mi>S</mi><mo>|</mo></mrow></mrow>';
-  var speech = 'la cardinalité de S';
+  var speech = 'die Mächtigkeit der Menge S';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -157,7 +157,7 @@ sre.ClearspeakGermanAbsoluteValue.prototype.testCard01 = function() {
 sre.ClearspeakGermanAbsoluteValue.prototype.testDeterminant01 = function() {
   var preference = 'AbsoluteValue_Determinant';
   var mathml = '<mrow><mrow><mo>|</mo><mi>M</mi><mo>|</mo></mrow></mrow>';
-  var speech = 'le déterminant de M';
+  var speech = 'die Determinante von M';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -175,7 +175,7 @@ sre.ClearspeakGermanAbsoluteValue.prototype.testAbsDet01 = function() {
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn>' +
       '</mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd>' +
       '<mn>5</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>';
-  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5';
+  var speech = 'die Determinante der 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -190,7 +190,7 @@ sre.ClearspeakGermanAbsoluteValue.prototype.testAbsDet02 = function() {
       '<mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr>' +
       '<mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn>' +
       '</mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>';
-  var speech = 'le déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7';
+  var speech = 'die Determinante der 3 mal 3 Matrize. Zeile 1: 2, 4, 1 Zeile 2: 3, 5, 2 Zeile 3: 1, 4, 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -208,7 +208,7 @@ sre.ClearspeakGermanAbsoluteValue.prototype.testAbsDet03 = function() {
       '</mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd>' +
       '<mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>|' +
       '</mo></mrow></mrow>';
-  var speech = 'le déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0';
+  var speech = 'die Determinante der 4 mal 4 Matrize. Zeile 1: Spalte 1, 0; Spalte 2, 3; Spalte 3, 4; Spalte 4, 3. Zeile 2: Spalte 1, 2; Spalte 2, 1; Spalte 3, 0; Spalte 4, 9. Zeile 3: Spalte 1, 3; Spalte 2, 0; Spalte 3, 2; Spalte 4, 1. Zeile 4: Spalte 1, 6; Spalte 2, 2; Spalte 3, 9; Spalte 4, 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -222,7 +222,7 @@ sre.ClearspeakGermanAbsoluteValue.prototype.testAbsDet04 = function() {
       '</mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd>' +
       '<mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr></mtable>' +
       '</mrow><mo>|</mo></mrow></mrow>';
-  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x';
+  var speech = 'die Determinante der 2 mal 2 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5 plus x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -236,7 +236,7 @@ sre.ClearspeakGermanAbsoluteValue.prototype.testAbsDet05 = function() {
       '</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd>' +
       '<mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>|' +
       '</mo></mrow></mrow>';
-  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5';
+  var speech = 'die Determinante der 2 mal 2 Matrize. Zeile 1: 2 x, 1 Zeile 2: 7, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -251,7 +251,7 @@ sre.ClearspeakGermanAbsoluteValue.prototype.testAbsDet06 = function() {
       '<mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow>' +
       '<mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr></mtable>' +
       '</mrow><mo>|</mo></mrow></mrow>';
-  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers';
+  var speech = 'die Determinante der 2 mal 2 Matrize. Zeile 1: 2 x, y Zeile 2: ein halb, zwei drittel';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -267,7 +267,7 @@ sre.ClearspeakGermanAbsoluteValue.prototype.testAbsDet07 = function() {
       '<mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>1' +
       '</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>|</mo>' +
       '</mrow></mrow>';
-  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième';
+  var speech = 'die Determinante der 2 mal 2 Matrize. Zeile 1: ein halb, zwei drittel Zeile 2: drei viertel, ein fünftel';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -280,7 +280,7 @@ sre.ClearspeakGermanAbsoluteValue.prototype.testAbsDet08 = function() {
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn>' +
       '</mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd>' +
       '<mn>5</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>';
-  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5';
+  var speech = 'die Determinante der 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -295,7 +295,7 @@ sre.ClearspeakGermanAbsoluteValue.prototype.testAbsDet09 = function() {
       '<mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr>' +
       '<mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn></mtd>' +
       '</mtr></mtable></mrow><mo>|</mo></mrow></mrow>';
-  var speech = 'le déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7';
+  var speech = 'die Determinante der 3 mal 3 Matrize. Zeile 1: 2, 4, 1 Zeile 2: 3, 5, 2 Zeile 3: 1, 4, 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -313,7 +313,7 @@ sre.ClearspeakGermanAbsoluteValue.prototype.testAbsDet10 = function() {
       '</mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd>' +
       '<mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>|' +
       '</mo></mrow></mrow>';
-  var speech = 'le déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0';
+  var speech = 'die Determinante der 4 mal 4 Matrize. Zeile 1: Spalte 1, 0; Spalte 2, 3; Spalte 3, 4; Spalte 4, 3. Zeile 2: Spalte 1, 2; Spalte 2, 1; Spalte 3, 0; Spalte 4, 9. Zeile 3: Spalte 1, 3; Spalte 2, 0; Spalte 3, 2; Spalte 4, 1. Zeile 4: Spalte 1, 6; Spalte 2, 2; Spalte 3, 9; Spalte 4, 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -327,7 +327,7 @@ sre.ClearspeakGermanAbsoluteValue.prototype.testAbsDet11 = function() {
       '</mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd>' +
       '<mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr></mtable>' +
       '</mrow><mo>|</mo></mrow></mrow>';
-  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x';
+  var speech = 'die Determinante der 2 mal 2 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5 plus x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -341,7 +341,7 @@ sre.ClearspeakGermanAbsoluteValue.prototype.testAbsDet12 = function() {
       '</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd>' +
       '<mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>|' +
       '</mo></mrow></mrow>';
-  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5';
+  var speech = 'die Determinante der 2 mal 2 Matrize. Zeile 1: 2 x, 1 Zeile 2: 7, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -356,7 +356,7 @@ sre.ClearspeakGermanAbsoluteValue.prototype.testAbsDet13 = function() {
       '<mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow>' +
       '<mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr></mtable>' +
       '</mrow><mo>|</mo></mrow></mrow>';
-  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers';
+  var speech = 'die Determinante der 2 mal 2 Matrize. Zeile 1: 2 x, y Zeile 2: ein halb, zwei drittel';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -372,6 +372,6 @@ sre.ClearspeakGermanAbsoluteValue.prototype.testAbsDet14 = function() {
       '<mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>1' +
       '</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>|</mo>' +
       '</mrow></mrow>';
-  var speech = 'le déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième';
+  var speech = 'die Determinante der 2 mal 2 Matrize. Zeile 1: ein halb, zwei drittel Zeile 2: drei viertel, ein fünftel';
   this.executeRuleTest(mathml, speech, preference);
 };

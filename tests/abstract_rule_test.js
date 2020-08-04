@@ -54,11 +54,6 @@ sre.AbstractRuleTest = function() {
   this.modality = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY];
 
   /**
-   * @type {boolean}
-   */
-  this.semantics = false;
-
-  /**
    * Specify particular rule sets for a test. By default all available rule sets
    * are used.
    * @type {Array.<string>}
@@ -105,7 +100,7 @@ sre.AbstractRuleTest.prototype.executeRuleTest = function(mml, answer,
           mml + '</math>';
   sre.SpeechRuleEngine.getInstance().clearCache();
   sre.System.getInstance().setupEngine(
-      {semantics: this.semantics, domain: this.domain, style: style,
+      {domain: this.domain, style: style,
         modality: this.modality, rules: this.rules, locale: this.locale});
   var result = this.getSpeech(mathMl);
   var actual = this.actual ? result : answer;
@@ -141,13 +136,13 @@ sre.AbstractRuleTest.prototype.appendRuleExample = function(
   var outList = [input];
   if (this.compare) {
     sre.System.getInstance().setupEngine(
-      {semantics: this.semantics, domain: this.domain, style: style,
-       modality: this.modality, rules: this.rules, locale: 'en'});
+        {domain: this.domain, style: style,
+          modality: this.modality, rules: this.rules, locale: 'en'});
     outList.push(this.getSpeech(input));
   }
   outList.push(output);
   this.appendExamples(
-    key, sre.AbstractRuleTest.htmlRow(outList.concat(rest)));
+      key, sre.AbstractRuleTest.htmlRow(outList.concat(rest)));
 };
 
 
@@ -211,10 +206,8 @@ sre.AbstractRuleTest.prototype.join = function(examples) {
  * @override
  */
 sre.AbstractRuleTest.prototype.header = function() {
-  var mathjax = '<script type="text/javascript" async ' +
-      'src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/' +
-      'MathJax.js?config=TeX-AMS-MML_HTMLorMML-full">' +
-      '</script>';
+  var mathjax = '<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>\n' +
+      '<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>';
   var style = '\n<style>\n table, th, td {\n' +
       '  border: 1px solid black; }\n</style>\n';
   return '<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">' +

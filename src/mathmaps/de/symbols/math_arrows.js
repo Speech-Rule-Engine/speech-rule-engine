@@ -817,7 +817,7 @@
     "key": "21F4",
     "mappings": {
       "default": {
-        "default": "Rechter Pfeil mit kleinem Kreis"
+        "default": "rechter Pfeil mit kleinem Kreis"
       }
     }
   },
@@ -1357,7 +1357,7 @@
     "key": "27F4",
     "mappings": {
       "default": {
-        "default": "Rechter Pfeil mit Circled Plus"
+        "default": "rechter Pfeil mit Circled Plus"
       }
     }
   },

@@ -24,7 +24,6 @@ goog.provide('sre.ColorGenerator');
 
 goog.require('sre.AbstractSpeechGenerator');
 goog.require('sre.ContrastPicker');
-goog.require('sre.EnrichMathml.Attribute');
 goog.require('sre.RebuildStree');
 goog.require('sre.WalkerUtil');
 
@@ -65,9 +64,14 @@ sre.ColorGenerator.prototype.generateSpeech = function(node, xml) {
 };
 
 
+/**
+ * Colors the leave nodes of an XML tree.
+ * @param {!Node} node The root node.
+ * @private
+ */
 sre.ColorGenerator.prototype.colorLeaves_ = function(node) {
   let leaves = [];
-  visitStree(this.getRebuilt().streeRoot, leaves, {});
+  sre.ColorGenerator.visitStree_(this.getRebuilt().streeRoot, leaves, {});
   for (let id of leaves) {
     let color = this.contrast.generate();
     let success = false;
@@ -84,7 +88,14 @@ sre.ColorGenerator.prototype.colorLeaves_ = function(node) {
 };
 
 
-// Returns true if successful
+/**
+ * Colors a single leave node in an XML tree.
+ * @param {!Node} node The node to color.
+ * @param {string} id The ID of the node.
+ * @param {string} color The color string.
+ * @return {boolean} Returns true if successful.
+ * @private
+ */
 sre.ColorGenerator.prototype.colorLeave_ = function(node, id, color) {
   let aux = sre.WalkerUtil.getBySemanticId(node, id);
   if (aux) {
@@ -95,8 +106,15 @@ sre.ColorGenerator.prototype.colorLeave_ = function(node, id, color) {
 };
 
 
-// Visits depth-first and collates leaves.
-function visitStree(tree, leaves, ignore) {
+/**
+ * Visits semantic tree depth-first and collates leaves.
+ * @param {sre.SemanticNode} tree The semantic root node of the current tree.
+ * @param {Array.<number|Array.<number>>} leaves Ids or id lists of leaves. This
+ *     is array is a collator for tail recursion.
+ * @param {Object.<boolean>} ignore Record of ids to be ignored.
+ * @private
+ */
+sre.ColorGenerator.visitStree_ = function(tree, leaves, ignore) {
   if (!tree.childNodes.length) {
     if (!ignore[tree.id]) {
       leaves.push(tree.id);
@@ -117,7 +135,7 @@ function visitStree(tree, leaves, ignore) {
       let rest = [];
       for (let child of tree.childNodes) {
         let tt = [];
-        visitStree(child, tt, ignore);
+        sre.ColorGenerator.visitStree_(child, tt, ignore);
         if (tt.length <= 2) {
           factors.push(tt.shift());
         }
@@ -127,6 +145,7 @@ function visitStree(tree, leaves, ignore) {
       rest.forEach(x => leaves.push(x));
       return;
     }
-    tree.childNodes.forEach(x => visitStree(x, leaves, ignore));
+    tree.childNodes.forEach(
+        x => sre.ColorGenerator.visitStree_(x, leaves, ignore));
   }
-}
+};

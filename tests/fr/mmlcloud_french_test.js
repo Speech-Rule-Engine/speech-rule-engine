@@ -44,11 +44,6 @@ sre.MmlcloudFrenchTest = function() {
   /**
    * @override
    */
-  this.semantics = true;
-
-  /**
-   * @override
-   */
   this.locale = 'fr';
 
   this.setActive('MathmlCloudFrench');

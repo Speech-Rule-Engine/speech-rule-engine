@@ -28,23 +28,36 @@ goog.require('sre.SemanticMeaning');
 
 
 
-// TODO: Have some ordering mechanism.
+// TODO: Have some better ordering mechanism than array order.
 /**
+ * A structure for ordering semantic comparators.
  * @constructor
  */
 sre.SemanticOrdering = function() {
 
+  /**
+   * @type {Array.<sre.SemanticComparator>}
+   */
   this.comparators = [];
 
 };
 goog.addSingletonGetter(sre.SemanticOrdering);
 
 
+/**
+ * @param {sre.SemanticComparator} comparator Adds the comparator
+ */
 sre.SemanticOrdering.prototype.add = function(comparator) {
   this.comparators.push(comparator);
 };
 
 
+/**
+ * Apply the list of ordered comparators to two meaning elements.
+ * @param {sre.SemanticMeaning} meaning1 The first meaning.
+ * @param {sre.SemanticMeaning} meaning2 The second meaning.
+ * @return {number} 0, 1, -1 depending on the partial order.
+ */
 sre.SemanticOrdering.prototype.apply = function(meaning1, meaning2) {
   for (var i = 0, comparator; comparator = this.comparators[i]; i++) {
     var result = comparator.compare(meaning1, meaning2);
@@ -56,6 +69,10 @@ sre.SemanticOrdering.prototype.apply = function(meaning1, meaning2) {
 };
 
 
+/**
+ * Sorts a list of semantic meaning elements.
+ * @param {Array.<sre.SemanticMeaning>} meanings List of meaning elements.
+ */
 sre.SemanticOrdering.prototype.sort = function(meanings) {
   meanings.sort(goog.bind(this.apply, this));
 };
@@ -120,6 +137,13 @@ sre.SemanticComparator.prototype.compare = function(meaning1, meaning2) {
 };
 
 
+/**
+ * Comparator expressing preference for simple function roles over others in a
+ * semantic meaning.
+ * @param {sre.SemanticMeaning} meaning1 The first meaning.
+ * @param {sre.SemanticMeaning} meaning2 The second meaning.
+ * @return {number} 0, 1, -1 depending on the partial order.
+ */
 sre.SemanticOrdering.simpleFunction = function(meaning1, meaning2) {
   if (meaning1.role === sre.SemanticAttr.Role.SIMPLEFUNC) {
     return 1;
