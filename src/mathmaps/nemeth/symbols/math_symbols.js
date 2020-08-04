@@ -1457,7 +1457,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠆⠂⠖⠄"
+        "default": "⠸⠡"
       }
     },
     "key": "2216"
