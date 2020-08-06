@@ -1354,7 +1354,7 @@ sre.SemanticProcessor.classifyFunction_ = function(funcNode, restNodes) {
       restNodes[0].textContent === sre.SemanticAttr.functionApplication()) {
     // Remove explicit function application. This is destructive on the
     // underlying list.
-    // TODO (sorge) This should not be distructive!
+    // TODO (sorge) This should not be destructive!
     restNodes.shift();
     var role = sre.SemanticAttr.Role.SIMPLEFUNC;
     if (funcNode.role === sre.SemanticAttr.Role.PREFIXFUNC ||
