@@ -646,6 +646,10 @@ sre.NemethRules = {
      ' (separator:"⠀"); ' +
      '[n] ../../content/*[2] (grammar:enlargeFence); ',
      'self::row'],
+    ['Aliases',
+     'matrix-row', 'self::line', '@role="vector"'],
+    ['Aliases',
+     'matrix-row', 'self::line', '@role="binomial"'],
     ['Rule',
      'row-with-label', 'default',
      '[t] "with Label"; [n] content/*[1]; [t] "EndLabel"(pause: 200); ' +

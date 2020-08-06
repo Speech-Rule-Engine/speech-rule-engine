@@ -48,5 +48,6 @@ sre.Numbers.nemeth.numberToWords = function(number) {
  * @type {sre.Numbers}
  */
 sre.Numbers.nemeth.NUMBERS = {
-  numberToWords: sre.Numbers.nemeth.numberToWords
+  numberToWords: sre.Numbers.nemeth.numberToWords,
+  simpleOrdinal: sre.Numbers.nemeth.numberToWords
 };
