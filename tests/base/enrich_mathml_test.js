@@ -11264,3 +11264,31 @@ sre.EnrichMathmlTest.prototype.testMathmlHiddenEmptyTokens = function() {
       ' parent="4">|</mo></mrow><mi type="identifier" role="latinletter"' +
       ' id="3" parent="4">t</mi></msub></math>');
 };
+
+
+/**
+ * Issue 382: Singleton integral in expression
+ */
+sre.EnrichMathmlTest.prototype.testIssue382 = function() {
+  this.executeMathmlTest(
+    '<mo>=</mo><mo>&#x222B;</mo>',
+    '<math type="relseq" role="equality" id="3" children="2,1" content="0"><mrow type="empty" role="unknown" id="2" parent="3"/><mo type="relation" role="equality" id="0" parent="3" operator="relseq,=">=</mo><mo type="largeop" role="integral" id="1" parent="3">∫</mo></math>'
+  );
+  // TODO: This should be improved.
+  this.executeMathmlTest(
+    '<mo>&#x222B;</mo><mo>+</mo><mo>&#x222B;</mo>',
+    '<math type="integral" role="integral" id="5" children="0,3,4" content="0"><mo type="largeop" role="integral" id="0" parent="5" operator="integral">∫</mo><mrow type="prefixop" role="positive" id="3" children="2" content="1" parent="5"><mo type="operator" role="addition" id="1" parent="3" operator="prefixop,+">+</mo><mo type="largeop" role="integral" id="2" parent="3">∫</mo></mrow><mrow type="empty" role="unknown" id="4" parent="5"/></math>'
+  );
+};
+
+
+/**
+ * Issue 383: Mathoperator with dash
+ */
+sre.EnrichMathmlTest.prototype.testIssue383 = function() {
+  this.executeMathmlTest(
+    '<mrow><mtext>-</mtext><mi mathvariant="normal">p</mi>' +
+      '</mrow><mo>&#x2061;</mo><mi>&#x3C9;</mi>',
+    '<math type="appl" role="simple function" id="7" children="3,5" content="6"><mrow type="punctuated" role="simple function" id="3" children="0,1" parent="7" collapsed="(3 (c 2) 0 1)"><mtext type="text" role="simple function" id="0" parent="3">-</mtext><mi mathvariant="normal" type="identifier" role="latinletter" id="1" parent="3">p</mi></mrow><mo type="punctuation" role="application" id="6" parent="7" added="true" operator="appl">⁡</mo><mi type="identifier" role="greekletter" id="5" parent="7">ω</mi></math>'
+  );
+};
