@@ -441,6 +441,61 @@ sre.SemanticPred.isSetNode = function(node) {
 };
 
 
+// TODO: Rewrite as dictionary or map!
+/**
+ * @type {Array.<sre.SemanticAttr.Type>}
+ * @private
+ */
+sre.SemanticPred.illegalSingleton_ = [
+  sre.SemanticAttr.Type.PUNCTUATED,
+  sre.SemanticAttr.Type.RELSEQ,
+  sre.SemanticAttr.Type.MULTIREL,
+  sre.SemanticAttr.Type.INFIXOP,
+  sre.SemanticAttr.Type.TABLE,
+  sre.SemanticAttr.Type.MULTILINE,
+  sre.SemanticAttr.Type.CASES,
+  sre.SemanticAttr.Type.INFERENCE
+];
+
+
+/**
+ * @type {Array.<sre.SemanticAttr.Type>}
+ * @private
+ */
+sre.SemanticPred.scriptedElement_ = [
+  sre.SemanticAttr.Type.LIMUPPER,
+  sre.SemanticAttr.Type.LIMLOWER,
+  sre.SemanticAttr.Type.LIMBOTH,
+  sre.SemanticAttr.Type.SUBSCRIPT,
+  sre.SemanticAttr.Type.SUPERSCRIPT,
+  sre.SemanticAttr.Type.UNDERSCORE,
+  sre.SemanticAttr.Type.OVERSCORE,
+  sre.SemanticAttr.Type.TENSOR
+];
+
+
+/**
+ * Is the node a likely candidate for a singleton set element.
+ * @param {sre.SemanticNode} node The node.
+ * @return {boolean} True if the node is a set.
+ */
+sre.SemanticPred.isSingletonSetContent = function(node) {
+  let type = node.type;
+  if (sre.SemanticPred.illegalSingleton_.indexOf(type) !== -1) {
+    return false;
+  }
+  if (type === sre.SemanticAttr.Type.FENCED) {
+    return node.role === sre.SemanticAttr.Role.LEFTRIGHT ?
+      sre.SemanticPred.isSingletonSetContent(node.childNodes[0]) :
+      true;
+  }
+  if (sre.SemanticPred.scriptedElement_.indexOf(type) !== -1) {
+    return sre.SemanticPred.isSingletonSetContent(node.childNodes[0]);
+  }
+  return true;
+};
+
+
 /**
  * Tests if a number an integer or a decimal.
  * @param {sre.SemanticNode} node The semantic node.
