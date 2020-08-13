@@ -12933,3 +12933,49 @@ sre.SemanticTreeTest.prototype.testIssue376 = function() {
       '</infixop>'
   );
 };
+
+
+/**
+ * Issue 382: Singleton integral in expression
+ */
+sre.SemanticTreeTest.prototype.testIssue382 = function() {
+  this.executeTreeTest(
+    '<mo>=</mo><mo>&#x222B;</mo>',
+    '<relseq role="equality" id="3">=<content>' +
+      '<relation role="equality" id="0">=</relation></content>' +
+      '<children><empty role="unknown" id="2"/>' +
+      '<largeop role="integral" id="1">∫</largeop></children></relseq>'
+  );
+  // TODO: This should be improved.
+  this.executeTreeTest(
+    '<mo>&#x222B;</mo><mo>+</mo><mo>&#x222B;</mo>',
+    '<integral role="integral" id="5">' +
+      '<content><largeop role="integral" id="0">∫</largeop></content>' +
+      '<children><largeop role="integral" id="0">∫</largeop>' +
+      '<prefixop role="positive" id="3">+<content>' +
+      '<operator role="addition" id="1">+</operator></content>' +
+      '<children><largeop role="integral" id="2">∫</largeop></children>' +
+      '</prefixop><empty role="unknown" id="4"/></children></integral>'
+  );
+};
+
+
+/**
+ * Issue 383: Mathoperator with dash
+ */
+sre.SemanticTreeTest.prototype.testIssue383 = function() {
+  this.executeTreeTest(
+    '<mrow><mtext>-</mtext><mi mathvariant="normal">p</mi>' +
+      '</mrow><mo>&#x2061;</mo><mi>&#x3C9;</mi>',
+    '<appl role="simple function" id="7">' +
+      '<content><punctuation role="application" id="6">⁡' +
+      '</punctuation></content><children>' +
+      '<punctuated role="simple function" id="3">' +
+      '<content><punctuation role="dummy" id="2">⁣</punctuation></content>' +
+      '<children><text role="simple function" id="0">-</text>' +
+      '<identifier role="latinletter" font="normal" id="1">p</identifier>' +
+      '</children></punctuated>' +
+      '<identifier role="greekletter" font="italic" id="5">ω</identifier>' +
+      '</children></appl>'
+  );
+};

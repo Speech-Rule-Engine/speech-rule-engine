@@ -1404,7 +1404,11 @@ sre.SemanticProcessor.prototype.getFunctionArgs_ = function(
   switch (heuristic) {
     case 'integral':
       var components = sre.SemanticProcessor.getInstance().
-          getIntegralArgs_(rest);
+            getIntegralArgs_(rest);
+      if (!components.intvar && !components.integrand.length) {
+        components.rest.unshift(func);
+        return components.rest;
+      }
       var integrand = sre.SemanticProcessor.getInstance().
           row(components.integrand);
       var funcNode = sre.SemanticProcessor.getInstance().integralNode_(
