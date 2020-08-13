@@ -11167,7 +11167,7 @@ sre.EnrichMathmlTest.prototype.testMathmlSets = function() {
   );
   this.executeMathmlTest(
       '<mo>{</mo><mi>x</mi><mi>y</mi><mo>}</mo>',
-      '<math type="fenced" role="leftright" id="6" children="5"' +
+      '<math type="fenced" role="set singleton" id="6" children="5"' +
       ' content="0,3"><mo type="fence" role="open" id="0" parent="6"' +
       ' operator="fenced">{</mo><mrow type="infixop" role="implicit" id="5"' +
       ' children="1,2" content="4" parent="6"><mi type="identifier"' +
@@ -11179,7 +11179,7 @@ sre.EnrichMathmlTest.prototype.testMathmlSets = function() {
   );
   this.executeMathmlTest(
       '<mo>{</mo><mfrac><mi>x</mi><mi>y</mi></mfrac><mo>}</mo>',
-      '<math type="fenced" role="leftright" id="5" children="3"' +
+      '<math type="fenced" role="set singleton" id="5" children="3"' +
       ' content="0,4"><mo type="fence" role="open" id="0" parent="5"' +
       ' operator="fenced">{</mo><mfrac type="fraction" role="division"' +
       ' id="3" children="1,2" parent="5"><mi type="identifier"' +
@@ -11199,6 +11199,46 @@ sre.EnrichMathmlTest.prototype.testMathmlSets = function() {
       ' role="latinletter" id="2" parent="4">x</mi><mo type="fence"' +
       ' role="close" id="3" parent="4" operator="fenced">}</mo></mrow></math>'
   );
+  this.executeMathmlTest(
+    '<mo>{</mo><mi>x</mi><mo>*</mo><mi>y</mi><mo>}</mo>',
+      '<math type="fenced" role="leftright" id="6" children="5"' +
+      ' content="0,4"><mo type="fence" role="open" id="0" parent="6"' +
+      ' operator="fenced">{</mo><mrow type="infixop" role="multiplication" ' +
+      ' id="5" children="1,3" content="2" parent="6"><mi type="identifier"' +
+      ' role="latinletter" id="1" parent="5">x</mi><mo type="operator"' +
+      ' role="multiplication" id="2" parent="5"' +
+      ' operator="infixop,*">*</mo><mi type="identifier" role="latinletter"' +
+      ' id="3" parent="5">y</mi></mrow><mo type="fence" role="close" id="4"' +
+      ' parent="6" operator="fenced">}</mo></math>'
+  );
+  // Test for issue #287
+  this.executeMathmlTest(
+    '<msub><mi mathvariant="normal">&#x393;</mi><mrow>' +
+      '<mo fence="false" stretchy="false">{</mo><msub><mrow>' +
+      '<mi mathvariant="-tex-calligraphic">M</mi></mrow><mi>k</mi></msub>' +
+      '<mo fence="false" stretchy="false">}</mo></mrow></msub>' +
+      '<mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo>',
+    '<math type="appl" role="simple function" id="13" children="7,11" content="12,0">' +
+      '<msub type="subscript" role="simple function" id="7" children="0,6" parent="13">' +
+      '<mi mathvariant="normal" type="identifier" role="simple function" id="0" parent="7" operator="appl">Γ</mi>' +
+      '<mrow type="fenced" role="set singleton" id="6" children="4" content="1,5" parent="7">' +
+      '<mo fence="false" stretchy="false" type="fence" role="open" id="1" parent="6" operator="fenced">{</mo>' +
+      '<msub type="subscript" role="latinletter" id="4" children="2,3" parent="6">' +
+      '<mrow>' +
+      '<mi mathvariant="-tex-calligraphic" type="identifier" role="latinletter" id="2" parent="4">M</mi>' +
+      '</mrow>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="4">k</mi>' +
+      '</msub>' +
+      '<mo fence="false" stretchy="false" type="fence" role="close" id="5" parent="6" operator="fenced">}</mo>' +
+      '</mrow>' +
+      '</msub>' +
+      '<mo type="punctuation" role="application" id="12" parent="13" added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="11" children="9" content="8,10" parent="13">' +
+      '<mo stretchy="false" type="fence" role="open" id="8" parent="11" operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="9" parent="11">X</mi>' +
+      '<mo stretchy="false" type="fence" role="close" id="10" parent="11" operator="fenced">)</mo>' +
+      '</mrow></math>'
+);
 };
 
 
