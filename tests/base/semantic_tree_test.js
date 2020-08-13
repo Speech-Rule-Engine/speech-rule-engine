@@ -12796,7 +12796,7 @@ sre.SemanticTreeTest.prototype.testStreeSets = function() {
   );
   this.executeTreeTest(
       '<mo>{</mo><mi>x</mi><mi>y</mi><mo>}</mo>',
-      '<fenced role="leftright" id="6">' +
+      '<fenced role="set singleton" id="6">' +
       '<content>' +
       '<fence role="open" id="0">{</fence>' +
       '<fence role="close" id="3">}</fence>' +
@@ -12816,7 +12816,7 @@ sre.SemanticTreeTest.prototype.testStreeSets = function() {
   );
   this.executeTreeTest(
       '<mo>{</mo><mfrac><mi>x</mi><mi>y</mi></mfrac><mo>}</mo>',
-      '<fenced role="leftright" id="5">' +
+      '<fenced role="set singleton" id="5">' +
       '<content>' +
       '<fence role="open" id="0">{</fence>' +
       '<fence role="close" id="4">}</fence>' +
@@ -12847,6 +12847,69 @@ sre.SemanticTreeTest.prototype.testStreeSets = function() {
       '</content>' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="2">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '</children>' +
+      '</appl>'
+  );
+  this.executeTreeTest(
+    '<mo>{</mo><mi>x</mi><mo>*</mo><mi>y</mi><mo>}</mo>',
+    '<fenced role="leftright" id="6">' +
+      '<content>' +
+      '<fence role="open" id="0">{</fence>' +
+      '<fence role="close" id="4">}</fence>' +
+      '</content>' +
+      '<children>' +
+      '<infixop role="multiplication" id="5">*<content>' +
+      '<operator role="multiplication" id="2">*</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '<identifier role="latinletter" font="italic" id="3">y</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '</children>' +
+      '</fenced>'
+  );
+  // Test for issue #287
+  this.executeTreeTest(
+    '<msub><mi mathvariant="normal">&#x393;</mi><mrow>' +
+      '<mo fence="false" stretchy="false">{</mo><msub><mrow>' +
+      '<mi mathvariant="-tex-calligraphic">M</mi></mrow><mi>k</mi></msub>' +
+      '<mo fence="false" stretchy="false">}</mo></mrow></msub>' +
+      '<mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo>',
+    '<appl role="simple function" id="13">' +
+      '<content>' +
+      '<punctuation role="application" id="12">⁡</punctuation>' +
+      '<identifier role="simple function" font="normal" id="0">Γ</identifier>' +
+      '</content>' +
+      '<children>' +
+      '<subscript role="simple function" id="7">' +
+      '<children>' +
+      '<identifier role="simple function" font="normal" id="0">Γ</identifier>' +
+      '<fenced role="set singleton" id="6">' +
+      '<content>' +
+      '<fence role="open" id="1">{</fence>' +
+      '<fence role="close" id="5">}</fence>' +
+      '</content>' +
+      '<children>' +
+      '<subscript role="latinletter" id="4">' +
+      '<children>' +
+      '<identifier role="latinletter" font="caligraphic" id="2">M</identifier>' +
+      '<identifier role="latinletter" font="italic" id="3">k</identifier>' +
+      '</children>' +
+      '</subscript>' +
+      '</children>' +
+      '</fenced>' +
+      '</children>' +
+      '</subscript>' +
+      '<fenced role="leftright" id="11">' +
+      '<content>' +
+      '<fence role="open" id="8">(</fence>' +
+      '<fence role="close" id="10">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="9">X</identifier>' +
       '</children>' +
       '</fenced>' +
       '</children>' +

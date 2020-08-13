@@ -994,14 +994,14 @@ sre.SemanticProcessor.prototype.classifyHorizontalFence_ = function(node) {
   if (!sre.SemanticPred.isSetNode(node) || children.length > 1) {
     return;
   }
-  var type = children[0].type;
   if (children.length === 0 ||
       children[0].type === sre.SemanticAttr.Type.EMPTY) {
     node.role = sre.SemanticAttr.Role.SETEMPTY;
     return;
   }
-  if (type === sre.SemanticAttr.Type.IDENTIFIER ||
-      type === sre.SemanticAttr.Type.NUMBER) {
+  var type = children[0].type;
+  if (children.length === 1 &&
+      sre.SemanticPred.isSingletonSetContent(children[0])) {
     node.role = sre.SemanticAttr.Role.SETSINGLE;
     return;
   }
