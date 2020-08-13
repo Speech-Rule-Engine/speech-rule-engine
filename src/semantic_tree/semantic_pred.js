@@ -447,10 +447,10 @@ sre.SemanticPred.isSetNode = function(node) {
  * @private
  */
 sre.SemanticPred.illegalSingleton_ = [
+  sre.SemanticAttr.Type.PUNCTUATION,
   sre.SemanticAttr.Type.PUNCTUATED,
   sre.SemanticAttr.Type.RELSEQ,
   sre.SemanticAttr.Type.MULTIREL,
-  sre.SemanticAttr.Type.INFIXOP,
   sre.SemanticAttr.Type.TABLE,
   sre.SemanticAttr.Type.MULTILINE,
   sre.SemanticAttr.Type.CASES,
@@ -481,7 +481,9 @@ sre.SemanticPred.scriptedElement_ = [
  */
 sre.SemanticPred.isSingletonSetContent = function(node) {
   let type = node.type;
-  if (sre.SemanticPred.illegalSingleton_.indexOf(type) !== -1) {
+  if (sre.SemanticPred.illegalSingleton_.indexOf(type) !== -1 ||
+      (type === sre.SemanticAttr.Type.INFIXOP &&
+       node.role !== sre.SemanticAttr.Role.IMPLICIT)) {
     return false;
   }
   if (type === sre.SemanticAttr.Type.FENCED) {
