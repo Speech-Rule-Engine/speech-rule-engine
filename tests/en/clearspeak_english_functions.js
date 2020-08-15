@@ -854,7 +854,7 @@ sre.ClearspeakEnglishFunctions.prototype.testFunction060 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>f</mi><mi>n</mi></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the nth power of, f of x';
+  var speech = 'the n-th power of, f of x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -867,7 +867,7 @@ sre.ClearspeakEnglishFunctions.prototype.testFunction061 = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mi>n</mi></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'the nth power of, f of, open paren, 2 x, plus 1, close paren';
+  var speech = 'the n-th power of, f of, open paren, 2 x, plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -980,7 +980,7 @@ sre.ClearspeakEnglishFunctions.prototype.testFunction070 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>g</mi><mi>n</mi></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the nth power of, g of x';
+  var speech = 'the n-th power of, g of x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -993,7 +993,7 @@ sre.ClearspeakEnglishFunctions.prototype.testFunction071 = function() {
   var mathml = '<math><mrow><msup><mi>g</mi><mi>n</mi></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'the nth power of, g of, open paren, 2 x, plus 1, close paren';
+  var speech = 'the n-th power of, g of, open paren, 2 x, plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1952,7 +1952,7 @@ sre.ClearspeakEnglishFunctions.prototype.testFunction142 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>f</mi><mi>n</mi></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f to the nth power, times x';
+  var speech = 'f to the n-th power, times x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1965,7 +1965,7 @@ sre.ClearspeakEnglishFunctions.prototype.testFunction143 = function() {
   var mathml = '<math><mrow><msup><mi>f</mi><mi>n</mi></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'f to the nth power, times, open paren, 2 x, plus 1, close' +
+  var speech = 'f to the n-th power, times, open paren, 2 x, plus 1, close' +
       ' paren';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -2080,7 +2080,7 @@ sre.ClearspeakEnglishFunctions.prototype.testFunction152 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>g</mi><mi>n</mi></msup><mrow><mo>(' +
       '</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g to the nth power, times x';
+  var speech = 'g to the n-th power, times x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2093,7 +2093,7 @@ sre.ClearspeakEnglishFunctions.prototype.testFunction153 = function() {
   var mathml = '<math><mrow><msup><mi>g</mi><mi>n</mi></msup><mrow><mo>(' +
       '</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'g to the nth power, times, open paren, 2 x, plus 1, close' +
+  var speech = 'g to the n-th power, times, open paren, 2 x, plus 1, close' +
       ' paren';
   this.executeRuleTest(mathml, speech, preference);
 };
