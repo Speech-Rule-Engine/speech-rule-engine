@@ -367,7 +367,7 @@ sre.ClearspeakEnglishTrigometry.prototype.testTrig027 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mi>n</mi>' +
       '</msup><mi>x</mi></mrow></math>';
-  var speech = 'the nth power of tangent x';
+  var speech = 'the n-th power of tangent x';
   this.executeRuleTest(mathml, speech, preference);
 };
 

@@ -7189,16 +7189,14 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
       '<children>' +
       '<largeop>\u222B</largeop>' +
       '<identifier>x</identifier>' +
-      '<punctuated>' +
+      '<prefixop>d' +
       '<content>' +
-      '<punctuation>\u2063</punctuation>' +
+      '<identifier>d</identifier>' +
       '</content>' +
       '<children>' +
-      '<identifier>d</identifier>' +
-      '<punctuation>\u2063</punctuation>' +
       '<identifier>x</identifier>' +
       '</children>' +
-      '</punctuated>' +
+      '</prefixop>' +
       '</children>' +
       '</integral>');
 
@@ -7218,16 +7216,14 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
       '<identifier>y</identifier>' +
       '</children>' +
       '</infixop>' +
-      '<punctuated>' +
+      '<prefixop>d' +
       '<content>' +
-      '<punctuation>\u2063</punctuation>' +
+      '<identifier>d</identifier>' +
       '</content>' +
       '<children>' +
-      '<identifier>d</identifier>' +
-      '<punctuation>\u2063</punctuation>' +
       '<identifier>x</identifier>' +
       '</children>' +
-      '</punctuated>' +
+      '</prefixop>' +
       '</children>' +
       '</integral>');
 
@@ -7265,16 +7261,14 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
       '</children>' +
       '</limboth>' +
       '<identifier>x</identifier>' +
-      '<punctuated>' +
+      '<prefixop>d' +
       '<content>' +
-      '<punctuation>\u2063</punctuation>' +
+      '<identifier>d</identifier>' +
       '</content>' +
       '<children>' +
-      '<identifier>d</identifier>' +
-      '<punctuation>\u2063</punctuation>' +
       '<identifier>x</identifier>' +
       '</children>' +
-      '</punctuated>' +
+      '</prefixop>' +
       '</children>' +
       '</integral>');
 
@@ -12796,7 +12790,7 @@ sre.SemanticTreeTest.prototype.testStreeSets = function() {
   );
   this.executeTreeTest(
       '<mo>{</mo><mi>x</mi><mi>y</mi><mo>}</mo>',
-      '<fenced role="leftright" id="6">' +
+      '<fenced role="set singleton" id="6">' +
       '<content>' +
       '<fence role="open" id="0">{</fence>' +
       '<fence role="close" id="3">}</fence>' +
@@ -12816,7 +12810,7 @@ sre.SemanticTreeTest.prototype.testStreeSets = function() {
   );
   this.executeTreeTest(
       '<mo>{</mo><mfrac><mi>x</mi><mi>y</mi></mfrac><mo>}</mo>',
-      '<fenced role="leftright" id="5">' +
+      '<fenced role="set singleton" id="5">' +
       '<content>' +
       '<fence role="open" id="0">{</fence>' +
       '<fence role="close" id="4">}</fence>' +
@@ -12847,6 +12841,69 @@ sre.SemanticTreeTest.prototype.testStreeSets = function() {
       '</content>' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="2">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '</children>' +
+      '</appl>'
+  );
+  this.executeTreeTest(
+    '<mo>{</mo><mi>x</mi><mo>*</mo><mi>y</mi><mo>}</mo>',
+    '<fenced role="leftright" id="6">' +
+      '<content>' +
+      '<fence role="open" id="0">{</fence>' +
+      '<fence role="close" id="4">}</fence>' +
+      '</content>' +
+      '<children>' +
+      '<infixop role="multiplication" id="5">*<content>' +
+      '<operator role="multiplication" id="2">*</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '<identifier role="latinletter" font="italic" id="3">y</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '</children>' +
+      '</fenced>'
+  );
+  // Test for issue #287
+  this.executeTreeTest(
+    '<msub><mi mathvariant="normal">&#x393;</mi><mrow>' +
+      '<mo fence="false" stretchy="false">{</mo><msub><mrow>' +
+      '<mi mathvariant="-tex-calligraphic">M</mi></mrow><mi>k</mi></msub>' +
+      '<mo fence="false" stretchy="false">}</mo></mrow></msub>' +
+      '<mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo>',
+    '<appl role="simple function" id="13">' +
+      '<content>' +
+      '<punctuation role="application" id="12">⁡</punctuation>' +
+      '<identifier role="simple function" font="normal" id="0">Γ</identifier>' +
+      '</content>' +
+      '<children>' +
+      '<subscript role="simple function" id="7">' +
+      '<children>' +
+      '<identifier role="simple function" font="normal" id="0">Γ</identifier>' +
+      '<fenced role="set singleton" id="6">' +
+      '<content>' +
+      '<fence role="open" id="1">{</fence>' +
+      '<fence role="close" id="5">}</fence>' +
+      '</content>' +
+      '<children>' +
+      '<subscript role="latinletter" id="4">' +
+      '<children>' +
+      '<identifier role="latinletter" font="caligraphic" id="2">M</identifier>' +
+      '<identifier role="latinletter" font="italic" id="3">k</identifier>' +
+      '</children>' +
+      '</subscript>' +
+      '</children>' +
+      '</fenced>' +
+      '</children>' +
+      '</subscript>' +
+      '<fenced role="leftright" id="11">' +
+      '<content>' +
+      '<fence role="open" id="8">(</fence>' +
+      '<fence role="close" id="10">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="9">X</identifier>' +
       '</children>' +
       '</fenced>' +
       '</children>' +
@@ -12931,5 +12988,51 @@ sre.SemanticTreeTest.prototype.testIssue376 = function() {
       '</infixop>' +
       '</children>' +
       '</infixop>'
+  );
+};
+
+
+/**
+ * Issue 382: Singleton integral in expression
+ */
+sre.SemanticTreeTest.prototype.testIssue382 = function() {
+  this.executeTreeTest(
+    '<mo>=</mo><mo>&#x222B;</mo>',
+    '<relseq role="equality" id="3">=<content>' +
+      '<relation role="equality" id="0">=</relation></content>' +
+      '<children><empty role="unknown" id="2"/>' +
+      '<largeop role="integral" id="1">∫</largeop></children></relseq>'
+  );
+  // TODO: This should be improved.
+  this.executeTreeTest(
+    '<mo>&#x222B;</mo><mo>+</mo><mo>&#x222B;</mo>',
+    '<integral role="integral" id="5">' +
+      '<content><largeop role="integral" id="0">∫</largeop></content>' +
+      '<children><largeop role="integral" id="0">∫</largeop>' +
+      '<prefixop role="positive" id="3">+<content>' +
+      '<operator role="addition" id="1">+</operator></content>' +
+      '<children><largeop role="integral" id="2">∫</largeop></children>' +
+      '</prefixop><empty role="unknown" id="4"/></children></integral>'
+  );
+};
+
+
+/**
+ * Issue 383: Mathoperator with dash
+ */
+sre.SemanticTreeTest.prototype.testIssue383 = function() {
+  this.executeTreeTest(
+    '<mrow><mtext>-</mtext><mi mathvariant="normal">p</mi>' +
+      '</mrow><mo>&#x2061;</mo><mi>&#x3C9;</mi>',
+    '<appl role="simple function" id="7">' +
+      '<content><punctuation role="application" id="6">⁡' +
+      '</punctuation></content><children>' +
+      '<punctuated role="simple function" id="3">' +
+      '<content><punctuation role="dummy" id="2">⁣</punctuation></content>' +
+      '<children><text role="simple function" id="0">-</text>' +
+      '<identifier role="latinletter" font="normal" id="1">p</identifier>' +
+      '</children></punctuated>' +
+      '<identifier role="greekletter" font="italic" id="5">ω</identifier>' +
+      '</children></appl>'
   );
 };

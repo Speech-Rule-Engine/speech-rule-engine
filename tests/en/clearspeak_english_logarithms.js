@@ -107,7 +107,7 @@ sre.ClearspeakEnglishLogarithms.prototype.testLog005 = function() {
       '</msub><mrow><mo>(</mo><mrow><msup><mi>x</mi><mi>k</mi></msup>' +
       '</mrow><mo>)</mo></mrow><mo>=</mo><mi>k</mi><msub><mrow><mi>log</mi>' +
       '</mrow><mi>b</mi></msub><mi>x</mi></mrow></math>';
-  var speech = 'the log base b of, open paren, x to the kth power, close' +
+  var speech = 'the log base b of, open paren, x to the k-th power, close' +
       ' paren, equals k, the log base b of, x';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -134,7 +134,7 @@ sre.ClearspeakEnglishLogarithms.prototype.testLog007 = function() {
   var mathml = '<math><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10' +
       '</mn></mrow></msub><msup><mrow><mn>10</mn></mrow><mi>x</mi></msup>' +
       '<mo>=</mo><mi>x</mi></mrow></math>';
-  var speech = 'the log base 10 of, 10 to the xth power, equals x';
+  var speech = 'the log base 10 of, 10 to the x-th power, equals x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -400,7 +400,7 @@ sre.ClearspeakEnglishLogarithms.prototype.testNatLog003 = function() {
   var mathml = '<math><mrow><mi>ln</mi><mrow><mo>(</mo><mrow><msup><mi>e' +
       '</mi><mi>x</mi></msup></mrow><mo>)</mo></mrow><mo>=</mo><mi>x</mi>' +
       '</mrow></math>';
-  var speech = 'l n of, open paren, e to the xth power, close paren, equals x';
+  var speech = 'l n of, open paren, e to the x-th power, close paren, equals x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -425,7 +425,7 @@ sre.ClearspeakEnglishLogarithms.prototype.testNatLog005 = function() {
   var mathml = '<math><mrow><mi>ln</mi><mrow><mo>(</mo><mrow><msup><mi>e' +
       '</mi><mi>x</mi></msup></mrow><mo>)</mo></mrow><mo>=</mo><mi>x</mi>' +
       '</mrow></math>';
-  var speech = 'l n of, open paren, e to the xth power, close paren, equals x';
+  var speech = 'l n of, open paren, e to the x-th power, close paren, equals x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -505,7 +505,7 @@ sre.ClearspeakEnglishLogarithms.prototype.testNatLog011 = function() {
   var mathml = '<math><mrow><mi>ln</mi><mrow><mo>(</mo><mrow><msup><mi>e' +
       '</mi><mi>x</mi></msup></mrow><mo>)</mo></mrow><mo>=</mo><mi>x</mi>' +
       '</mrow></math>';
-  var speech = 'the natural log of, open paren, e to the xth power, close' +
+  var speech = 'the natural log of, open paren, e to the x-th power, close' +
       ' paren, equals x';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -531,7 +531,7 @@ sre.ClearspeakEnglishLogarithms.prototype.testNatLog013 = function() {
   var mathml = '<math><mrow><mi>ln</mi><mrow><mo>(</mo><mrow><msup><mi>e' +
       '</mi><mi>x</mi></msup></mrow><mo>)</mo></mrow><mo>=</mo><mi>x</mi>' +
       '</mrow></math>';
-  var speech = 'the natural log of, open paren, e to the xth power, close' +
+  var speech = 'the natural log of, open paren, e to the x-th power, close' +
       ' paren, equals x';
   this.executeRuleTest(mathml, speech, preference);
 };

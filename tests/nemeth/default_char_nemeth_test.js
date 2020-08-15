@@ -38,6 +38,7 @@ sre.DefaultCharNemethTest = function() {
    * @type {Array.<string>}
    */
   this.styles = ['default'];
+  this.compare = true;
 
   this.setActive('DefaultCharactersNemeth');
 };
@@ -2780,8 +2781,8 @@ sre.DefaultCharNemethTest.prototype.testDefaultChars = function() {
   this.executeCharTest('⎹', ['⠄⡳⠭⠆⠒⠃⠔⠄']);
   this.executeCharTest('⏜', ['⠄⡳⠭⠆⠒⠙⠉⠄']);
   this.executeCharTest('⏝', ['⠄⡳⠭⠆⠒⠙⠙⠄']);
-  this.executeCharTest('⏞', ['⠄⡳⠭⠆⠒⠙⠑⠄']);
-  this.executeCharTest('⏟', ['⠄⡳⠭⠆⠒⠙⠋⠄']);
+  this.executeCharTest('⏞', ['⠣⠨⠷']);
+  this.executeCharTest('⏟', ['⠣⠨⠾']);
   this.executeCharTest('⏠', ['⠄⡳⠭⠆⠒⠑⠴⠄']);
   this.executeCharTest('⏡', ['⠄⡳⠭⠆⠒⠑⠂⠄']);
   this.executeCharTest('❨', ['⠄⡳⠭⠆⠶⠖⠦⠄']);
@@ -3438,7 +3439,7 @@ sre.DefaultCharNemethTest.prototype.testDefaultChars = function() {
   this.executeCharTest('∓', ['⠤⠬']);
   this.executeCharTest('∔', ['⠄⡳⠭⠆⠆⠂⠲⠄']);
   this.executeCharTest('∕', ['⠸⠌']);
-  this.executeCharTest('∖', ['⠄⡳⠭⠆⠆⠂⠖⠄']);
+  this.executeCharTest('∖', ['⠸⠡']);
   this.executeCharTest('∗', ['⠈⠼']);
   this.executeCharTest('∘', ['⠘⠨⠡']);
   this.executeCharTest('∙', ['⠄⡳⠭⠆⠆⠂⠔⠄']);

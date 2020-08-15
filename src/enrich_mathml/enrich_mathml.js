@@ -370,6 +370,11 @@ sre.EnrichMathml.functionApplication_ = function(oldNode, newNode) {
   if (oldNode && newNode && oldNode.textContent && newNode.textContent &&
       oldNode.textContent === appl && newNode.textContent === appl &&
       newNode.getAttribute(sre.EnrichMathml.Attribute.ADDED) === 'true') {
+    for (var i = 0, attr; attr = oldNode.attributes[i]; i++) {
+      if (!newNode.hasAttribute(attr.nodeName)) {
+        newNode.setAttribute(attr.nodeName, attr.nodeValue);
+      }
+    }
     sre.DomUtil.replaceNode(oldNode, newNode);
     return true;
   }

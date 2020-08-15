@@ -2275,5 +2275,33 @@ sre.RebuildStreeTest.prototype.testRebuildSets = function() {
   this.executeRebuildTest('<mo>{</mo><mfrac><mi>x</mi><mi>y</mi></mfrac>' +
       '<mo>}</mo>');
   this.executeRebuildTest('<mi>P</mi><mo>{</mo><mi>x</mi><mo>}</mo>');
+  this.executeRebuildTest('<mo>{</mo><mi>x</mi><mo>*</mo><mi>y</mi><mo>}</mo>');
+  // Test for issue #287
+  this.executeRebuildTest(
+    '<msub><mi mathvariant="normal">&#x393;</mi><mrow>' +
+      '<mo fence="false" stretchy="false">{</mo><msub><mrow>' +
+      '<mi mathvariant="-tex-calligraphic">M</mi></mrow><mi>k</mi></msub>' +
+      '<mo fence="false" stretchy="false">}</mo></mrow></msub>' +
+      '<mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo>');
 };
 
+
+
+/**
+ * Issue 382: Singleton integral in expression
+ */
+sre.RebuildStreeTest.prototype.testIssue382 = function() {
+  this.executeRebuildTest('<mo>=</mo><mo>&#x222B;</mo>');
+  // TODO: This should be improved.
+  this.executeRebuildTest('<mo>&#x222B;</mo><mo>+</mo><mo>&#x222B;</mo>');
+};
+
+
+/**
+ * Issue 383: Mathoperator with dash
+ */
+sre.RebuildStreeTest.prototype.testIssue383 = function() {
+  this.executeRebuildTest(
+    '<mrow><mtext>-</mtext><mi mathvariant="normal">p</mi>' +
+      '</mrow><mo>&#x2061;</mo><mi>&#x3C9;</mi>');
+};
