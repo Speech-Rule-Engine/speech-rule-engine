@@ -7189,16 +7189,14 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
       '<children>' +
       '<largeop>\u222B</largeop>' +
       '<identifier>x</identifier>' +
-      '<punctuated>' +
+      '<prefixop>d' +
       '<content>' +
-      '<punctuation>\u2063</punctuation>' +
+      '<identifier>d</identifier>' +
       '</content>' +
       '<children>' +
-      '<identifier>d</identifier>' +
-      '<punctuation>\u2063</punctuation>' +
       '<identifier>x</identifier>' +
       '</children>' +
-      '</punctuated>' +
+      '</prefixop>' +
       '</children>' +
       '</integral>');
 
@@ -7218,16 +7216,14 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
       '<identifier>y</identifier>' +
       '</children>' +
       '</infixop>' +
-      '<punctuated>' +
+      '<prefixop>d' +
       '<content>' +
-      '<punctuation>\u2063</punctuation>' +
+      '<identifier>d</identifier>' +
       '</content>' +
       '<children>' +
-      '<identifier>d</identifier>' +
-      '<punctuation>\u2063</punctuation>' +
       '<identifier>x</identifier>' +
       '</children>' +
-      '</punctuated>' +
+      '</prefixop>' +
       '</children>' +
       '</integral>');
 
@@ -7265,16 +7261,14 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
       '</children>' +
       '</limboth>' +
       '<identifier>x</identifier>' +
-      '<punctuated>' +
+      '<prefixop>d' +
       '<content>' +
-      '<punctuation>\u2063</punctuation>' +
+      '<identifier>d</identifier>' +
       '</content>' +
       '<children>' +
-      '<identifier>d</identifier>' +
-      '<punctuation>\u2063</punctuation>' +
       '<identifier>x</identifier>' +
       '</children>' +
-      '</punctuated>' +
+      '</prefixop>' +
       '</children>' +
       '</integral>');
 
