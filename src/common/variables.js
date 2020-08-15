@@ -33,7 +33,7 @@ sre.Variables = function() {};
  * @const
  * @type {string}
  */
-sre.Variables.VERSION = '3.0.1';
+sre.Variables.VERSION = '3.1.0';
 
 
 /**
@@ -41,7 +41,7 @@ sre.Variables.VERSION = '3.0.1';
  * @const
  * @type {Array.<string>}
  */
-sre.Variables.LOCALES = ['en', 'es', 'fr', 'nemeth'];
+sre.Variables.LOCALES = ['de', 'en', 'es', 'fr', 'nemeth'];
 
 
 /**

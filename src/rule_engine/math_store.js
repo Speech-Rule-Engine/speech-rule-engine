@@ -38,9 +38,17 @@ sre.MathStore = function() {
   sre.MathStore.base(this, 'constructor');
 
   /**
-   * @type {Array.<function()>}
+   * @type {Array.<function(sre.MathStore)>}
    */
   this.initializer = [];
+
+  this.parseMethods['Alias'] = goog.bind(this.defineRuleAlias, this);
+  this.parseMethods['Aliases'] =
+      goog.bind(this.defineRulesAlias, this);
+  this.parseMethods['UniqueAlias'] =
+      goog.bind(this.defineUniqueRuleAlias, this);
+  this.parseMethods['SpecializedRule'] =
+      goog.bind(this.defineSpecialisedRule, this);
 
 };
 goog.inherits(sre.MathStore, sre.BaseRuleStore);
@@ -52,7 +60,7 @@ goog.inherits(sre.MathStore, sre.BaseRuleStore);
 sre.MathStore.prototype.initialize = function() {
   if (this.initialized) return;
   for (var i = 0, func; func = this.initializer[i]; i++) {
-    func();
+    func(this);
   }
   this.setSpeechRules(this.trie.collectRules());
   this.initialized = true;
@@ -279,7 +287,7 @@ sre.MathStore.prototype.matchNumber_ = function(str) {
       replace(new RegExp(sre.Locale.en.REGEXP.DIGIT_GROUP, 'g'), 'X').
       replace(new RegExp(sre.Locale.en.REGEXP.DECIMAL_MARK, 'g'),
               sre.Messages.REGEXP.DECIMAL_MARK).
-      replace(/X/g, sre.Messages.REGEXP.DIGIT_GROUP);
+      replace(/X/g, sre.Messages.REGEXP.DIGIT_GROUP.replace(/\\/g, ''));
   return {number: number, length: enNum[0].length};
 };
 
@@ -294,4 +302,14 @@ sre.MathStore.prototype.matchNumber_ = function(str) {
 sre.MathStore.prototype.evaluate_ = function(text) {
   return sre.AuditoryDescription.create(
       {text: text}, {adjust: true, translate: true});
+};
+
+
+/**
+ * @override
+ */
+sre.MathStore.prototype.parse = function(ruleSet) {
+  sre.MathStore.base(this, 'parse', ruleSet);
+  this.initializer = /** @type {Array.<function(sre.MathStore)>} */(
+      ruleSet['initialize'] || []);
 };

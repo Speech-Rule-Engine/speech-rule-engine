@@ -539,6 +539,10 @@ sre.SemanticProcessor.prototype.appendOperand_ = function(root, op, node) {
   if (root.type !== sre.SemanticAttr.Type.INFIXOP) {
     return sre.SemanticProcessor.getInstance().infixNode_([root, node], op);
   }
+  var division = this.appendDivisionOp_(root, op, node);
+  if (division) {
+    return division;
+  }
   if (sre.SemanticProcessor.getInstance().appendExistingOperator_(
       root, op, node)) {
     return root;
@@ -547,6 +551,49 @@ sre.SemanticProcessor.prototype.appendOperand_ = function(root, op, node) {
       sre.SemanticProcessor.getInstance().appendMultiplicativeOp_(
       root, op, node) :
       sre.SemanticProcessor.getInstance().appendAdditiveOp_(root, op, node);
+};
+
+
+/**
+ * Appends an operand to a divsion operator.
+ * @param {!sre.SemanticNode} root The root node.
+ * @param {!sre.SemanticNode} op The operator node.
+ * @param {!sre.SemanticNode} node The operand node to be added.
+ * @return {sre.SemanticNode} The modified root node or null.
+ * @private
+ */
+sre.SemanticProcessor.prototype.appendDivisionOp_ = function(root, op, node) {
+  if (op.role === sre.SemanticAttr.Role.DIVISION) {
+    if (sre.SemanticPred.isImplicit(root)) {
+      return sre.SemanticProcessor.getInstance().infixNode_([root, node], op);
+    }
+    return this.appendLastOperand_(root, op, node);
+  }
+  return root.role === sre.SemanticAttr.Role.DIVISION ?
+      this.infixNode_([root, node], op) : null;
+};
+
+
+/**
+ * Appends an operand as rightmost child of an infix operator.
+ * @param {!sre.SemanticNode} root The root node.
+ * @param {!sre.SemanticNode} op The operator node.
+ * @param {!sre.SemanticNode} node The operand node to be added.
+ * @return {!sre.SemanticNode} The modified root node.
+ * @private
+ */
+sre.SemanticProcessor.prototype.appendLastOperand_ = function(root, op, node) {
+  var lastRoot = root;
+  var lastChild = root.childNodes[root.childNodes.length - 1];
+  while (lastChild && lastChild.type === sre.SemanticAttr.Type.INFIXOP &&
+         !sre.SemanticPred.isImplicit(lastChild)) {
+    lastRoot = lastChild;
+    lastChild = lastRoot.childNodes[root.childNodes.length - 1];
+  }
+  var newNode = sre.SemanticProcessor.getInstance().infixNode_(
+      [lastRoot.childNodes.pop(), node], op);
+  lastRoot.appendChild(newNode);
+  return root;
 };
 
 
@@ -567,7 +614,8 @@ sre.SemanticProcessor.prototype.appendMultiplicativeOp_ = function(
   }
   var lastRoot = root;
   var lastChild = root.childNodes[root.childNodes.length - 1];
-  while (lastChild && lastChild.type === sre.SemanticAttr.Type.INFIXOP) {
+  while (lastChild && lastChild.type === sre.SemanticAttr.Type.INFIXOP &&
+         !sre.SemanticPred.isImplicit(lastChild)) {
     lastRoot = lastChild;
     lastChild = lastRoot.childNodes[root.childNodes.length - 1];
   }
@@ -946,14 +994,14 @@ sre.SemanticProcessor.prototype.classifyHorizontalFence_ = function(node) {
   if (!sre.SemanticPred.isSetNode(node) || children.length > 1) {
     return;
   }
-  var type = children[0].type;
   if (children.length === 0 ||
       children[0].type === sre.SemanticAttr.Type.EMPTY) {
     node.role = sre.SemanticAttr.Role.SETEMPTY;
     return;
   }
-  if (type === sre.SemanticAttr.Type.IDENTIFIER ||
-      type === sre.SemanticAttr.Type.NUMBER) {
+  var type = children[0].type;
+  if (children.length === 1 &&
+      sre.SemanticPred.isSingletonSetContent(children[0])) {
     node.role = sre.SemanticAttr.Role.SETSINGLE;
     return;
   }
@@ -1306,7 +1354,7 @@ sre.SemanticProcessor.classifyFunction_ = function(funcNode, restNodes) {
       restNodes[0].textContent === sre.SemanticAttr.functionApplication()) {
     // Remove explicit function application. This is destructive on the
     // underlying list.
-    // TODO (sorge) This should not be distructive!
+    // TODO (sorge) This should not be destructive!
     restNodes.shift();
     var role = sre.SemanticAttr.Role.SIMPLEFUNC;
     if (funcNode.role === sre.SemanticAttr.Role.PREFIXFUNC ||
@@ -1356,7 +1404,11 @@ sre.SemanticProcessor.prototype.getFunctionArgs_ = function(
   switch (heuristic) {
     case 'integral':
       var components = sre.SemanticProcessor.getInstance().
-          getIntegralArgs_(rest);
+            getIntegralArgs_(rest);
+      if (!components.intvar && !components.integrand.length) {
+        components.rest.unshift(func);
+        return components.rest;
+      }
       var integrand = sre.SemanticProcessor.getInstance().
           row(components.integrand);
       var funcNode = sre.SemanticProcessor.getInstance().integralNode_(
@@ -1471,10 +1523,8 @@ sre.SemanticProcessor.prototype.getIntegralArgs_ = function(nodes, opt_args) {
     return {integrand: args, intvar: firstNode, rest: nodes.slice(1)};
   }
   if (nodes[1] && sre.SemanticPred.isIntegralDxBoundary(firstNode, nodes[1])) {
-    var comma = sre.SemanticProcessor.getInstance().factory_.makeContentNode(
-        sre.SemanticAttr.invisibleComma());
-    var intvar = sre.SemanticProcessor.getInstance().punctuatedNode_(
-        [firstNode, comma, nodes[1]], [comma]);
+    var intvar = sre.SemanticProcessor.getInstance().prefixNode_(
+      /** @type {!sre.SemanticNode} */(nodes[1]), [firstNode]);
     intvar.role = sre.SemanticAttr.Role.INTEGRAL;
     return {integrand: args, intvar: intvar, rest: nodes.slice(2)};
   }
@@ -2118,8 +2168,8 @@ sre.SemanticProcessor.prototype.fractionNode_ = function(denom, enume) {
     return sre.SemanticPred.isAttribute('type', 'NUMBER')(x) &&
         sre.SemanticPred.isAttribute('role', 'INTEGER')(x);
   }) ? sre.SemanticAttr.Role.VULGAR :
-    newNode.childNodes.every(sre.SemanticPred.isPureUnit) ?
-    sre.SemanticAttr.Role.UNIT : sre.SemanticAttr.Role.DIVISION;
+      newNode.childNodes.every(sre.SemanticPred.isPureUnit) ?
+      sre.SemanticAttr.Role.UNIT : sre.SemanticAttr.Role.DIVISION;
   this.propagateSimpleFunction(newNode);
   return newNode;
 };

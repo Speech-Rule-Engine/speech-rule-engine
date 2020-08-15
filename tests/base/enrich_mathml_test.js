@@ -6949,7 +6949,7 @@ sre.EnrichMathmlTest.prototype.testMathmlIntegrals = function() {
       '<mi>&#x222B;</mi><mi>dx</mi>',
       '<math type="integral" role="integral" id="3" children="0,2,1"' +
       ' content="0">' +
-      '<mi type="largeop" role="integral" id="0" parent="3"' +
+     '<mi type="largeop" role="integral" id="0" parent="3"' +
       ' operator="integral">∫</mi>' +
       '<mrow type="empty" role="unknown" id="2" parent="3"/>' +
       '<mi type="identifier" role="unknown" id="1" parent="3">dx</mi>' +
@@ -6971,18 +6971,16 @@ sre.EnrichMathmlTest.prototype.testMathmlIntegrals = function() {
 
   this.executeMathmlTest(
       '<mrow><mi>&#x222B;</mi><mi>x</mi><mi>d</mi><mi>x</mi></mrow>',
-      '<math>' +
-      '<mrow type="integral" role="integral" id="6" children="0,1,5"' +
+      '<math><mrow type="integral" role="integral" id="5" children="0,1,4"' +
       ' content="0">' +
-      '<mi type="largeop" role="integral" id="0" parent="6"' +
+      '<mi type="largeop" role="integral" id="0" parent="5"' +
       ' operator="integral">∫</mi>' +
-      '<mi type="identifier" role="latinletter" id="1" parent="6">x</mi>' +
-      '<mrow type="punctuated" role="integral" id="5" children="2,4,3"' +
-      ' content="4" parent="6">' +
-      '<mi type="identifier" role="latinletter" id="2" parent="5">d</mi>' +
-      '<mo type="punctuation" role="comma" id="4" parent="5"' +
-      ' added="true" operator="punctuated">⁣</mo>' +
-      '<mi type="identifier" role="latinletter" id="3" parent="5">x</mi>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="5">x</mi>' +
+      '<mrow type="prefixop" role="integral" id="4" children="3"' +
+      ' content="2" parent="5">' +
+      '<mi type="identifier" role="latinletter" id="2" parent="4"' +
+      ' operator="prefixop,d">d</mi>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="4">x</mi>' +
       '</mrow>' +
       '</mrow>' +
       '</math>'
@@ -6992,23 +6990,21 @@ sre.EnrichMathmlTest.prototype.testMathmlIntegrals = function() {
       '<mrow><mi>&#x222B;</mi><mi>x</mi><mo>+</mo><mi>y</mi><mi>d</mi>' +
       '<mi>x</mi></mrow>',
       '<math>' +
-      '<mrow type="integral" role="integral" id="9" children="0,8,7"' +
-      ' content="0">' +
-      '<mi type="largeop" role="integral" id="0" parent="9"' +
+      '<mrow type="integral" role="integral" id="8" children="0,7,6" content="0">' +
+      '<mi type="largeop" role="integral" id="0" parent="8"' +
       ' operator="integral">∫</mi>' +
-      '<mrow type="infixop" role="addition" id="8" children="1,3"' +
-      ' content="2" parent="9">' +
-      '<mi type="identifier" role="latinletter" id="1" parent="8">x</mi>' +
-      '<mo type="operator" role="addition" id="2" parent="8"' +
+      '<mrow type="infixop" role="addition" id="7" children="1,3"' +
+      ' content="2" parent="8">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="7">x</mi>' +
+      '<mo type="operator" role="addition" id="2" parent="7"' +
       ' operator="infixop,+">+</mo>' +
-      '<mi type="identifier" role="latinletter" id="3" parent="8">y</mi>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="7">y</mi>' +
       '</mrow>' +
-      '<mrow type="punctuated" role="integral" id="7" children="4,6,5"' +
-      ' content="6" parent="9">' +
-      '<mi type="identifier" role="latinletter" id="4" parent="7">d</mi>' +
-      '<mo type="punctuation" role="comma" id="6" parent="7"' +
-      ' added="true" operator="punctuated">⁣</mo>' +
-      '<mi type="identifier" role="latinletter" id="5" parent="7">x</mi>' +
+      '<mrow type="prefixop" role="integral" id="6" children="5"' +
+      ' content="4" parent="8">' +
+      '<mi type="identifier" role="latinletter" id="4" parent="6"' +
+      ' operator="prefixop,d">d</mi>' +
+      '<mi type="identifier" role="latinletter" id="5" parent="6">x</mi>' +
       '</mrow>' +
       '</mrow>' +
       '</math>'
@@ -7039,22 +7035,20 @@ sre.EnrichMathmlTest.prototype.testMathmlIntegrals = function() {
       '<munderover><mi>&#x222B;</mi><mn>0</mn>' +
       '<mn>10</mn></munderover><mi>x</mi>' +
       '<mi>d</mi><mi>x</mi>',
-      '<math type="integral" role="integral" id="9" children="3,4,8"' +
-      ' content="0">' +
+      '<math type="integral" role="integral" id="8" children="3,4,7" content="0">' +
       '<munderover type="limboth" role="integral" id="3" children="0,1,2"' +
-      ' parent="9">' +
+      ' parent="8">' +
       '<mi type="largeop" role="integral" id="0" parent="3"' +
       ' operator="integral">∫</mi>' +
       '<mn type="number" role="integer" id="1" parent="3">0</mn>' +
       '<mn type="number" role="integer" id="2" parent="3">10</mn>' +
       '</munderover>' +
-      '<mi type="identifier" role="latinletter" id="4" parent="9">x</mi>' +
-      '<mrow type="punctuated" role="integral" id="8" children="5,7,6"' +
-      ' content="7" parent="9">' +
-      '<mi type="identifier" role="latinletter" id="5" parent="8">d</mi>' +
-      '<mo type="punctuation" role="comma" id="7" parent="8"' +
-      ' added="true" operator="punctuated">⁣</mo>' +
-      '<mi type="identifier" role="latinletter" id="6" parent="8">x</mi>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="8">x</mi>' +
+      '<mrow type="prefixop" role="integral" id="7" children="6"' +
+      ' content="5" parent="8">' +
+      '<mi type="identifier" role="latinletter" id="5" parent="7"' +
+      ' operator="prefixop,d">d</mi>' +
+      '<mi type="identifier" role="latinletter" id="6" parent="7">x</mi>' +
       '</mrow>' +
       '</math>'
   );
@@ -10958,74 +10952,72 @@ sre.EnrichMathmlTest.prototype.testMathmlSwapElementLayers = function() {
   this.executeMathmlTest(
       '<mrow><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ</mi></mrow><mo' +
       ' mathvariant="italic">⁢</mo><mi>m</mi>',
-      '<math type="infixop" role="division" id="3" children="0,6"' +
-      ' content="1"><mi type="identifier" role="latinletter" id="0"' +
-      ' parent="3">n</mi><mo mathvariant="normal" type="operator"' +
-      ' role="division" id="1" parent="3" operator="infixop,/">/</mo><mrow' +
-      ' children="2,5" content="4" id="6" parent="3" role="implicit"' +
-      ' type="infixop"><mrow><mi type="identifier" role="greekletter"' +
-      ' id="2" parent="6">ϕ</mi></mrow><mo mathvariant="italic"' +
+      '<math type="infixop" role="implicit" id="6" children="3,5"' +
+      ' content="4"><mrow type="infixop" role="division" id="3"' +
+      ' children="0,2" content="1" parent="6"><mi type="identifier"' +
+      ' role="latinletter" id="0" parent="3">n</mi><mo mathvariant="normal"' +
+      ' type="operator" role="division" id="1" parent="3"' +
+      ' operator="infixop,/">/</mo><mi type="identifier" role="greekletter"' +
+      ' id="2" parent="3">ϕ</mi></mrow><mo mathvariant="italic"' +
       ' type="operator" role="multiplication" id="4" parent="6"' +
       ' operator="infixop,⁢">⁢</mo><mi type="identifier" role="latinletter"' +
-      ' id="5" parent="6">m</mi></mrow></math>'
+      ' id="5" parent="6">m</mi></math>'
   );
   this.executeMathmlTest(
       '<mrow><mpadded><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ</mi>' +
       '</mpadded></mrow><mo mathvariant="italic">⁢</mo><mi>m</mi>',
-      '<math type="infixop" role="division" id="3" children="0,6"' +
-      ' content="1"><mi type="identifier" role="latinletter" id="0"' +
-      ' parent="3">n</mi><mo mathvariant="normal" type="operator"' +
-      ' role="division" id="1" parent="3" operator="infixop,/">/</mo><mrow' +
-      ' children="2,5" content="4" id="6" parent="3" role="implicit"' +
-      ' type="infixop"><mrow><mpadded><mi type="identifier"' +
-      ' role="greekletter" id="2" parent="6">ϕ</mi>' +
-      '</mpadded></mrow><mo mathvariant="italic"' +
+      '<math type="infixop" role="implicit" id="6" children="3,5"' +
+      ' content="4"><mrow><mpadded type="infixop" role="division" id="3"' +
+      ' children="0,2" content="1" parent="6"><mi type="identifier"' +
+      ' role="latinletter" id="0" parent="3">n</mi><mo mathvariant="normal"' +
+      ' type="operator" role="division" id="1" parent="3"' +
+      ' operator="infixop,/">/</mo><mi type="identifier" role="greekletter"' +
+      ' id="2" parent="3">ϕ</mi></mpadded></mrow><mo mathvariant="italic"' +
       ' type="operator" role="multiplication" id="4" parent="6"' +
       ' operator="infixop,⁢">⁢</mo><mi type="identifier" role="latinletter"' +
-      ' id="5" parent="6">m</mi></mrow></math>'
+      ' id="5" parent="6">m</mi></math>'
   );
-  // // This one moves the error around!
   this.executeMathmlTest(
       '<mrow><merror><mi>a</mi></merror><mi>n</mi><mo mathvariant="normal">/' +
       '</mo><mi>ϕ</mi></mrow><mo mathvariant="italic">⁢</mo><mi>m</mi>',
-      '<math type="infixop" role="division" id="3" children="0,6"' +
-      ' content="1"><mi type="identifier" role="latinletter" id="0"' +
-      ' parent="3">n</mi><mo mathvariant="normal" type="operator"' +
-      ' role="division" id="1" parent="3" operator="infixop,/">/</mo><mrow' +
-      ' children="2,5" content="4" id="6" parent="3" role="implicit"' +
-      ' type="infixop"><mrow><merror><mi>a</mi></merror><mi' +
-      ' type="identifier" role="greekletter" id="2" parent="6">ϕ</mi></mrow>' +
-      '<mo mathvariant="italic" type="operator" role="multiplication" id="4"' +
+      '<math type="infixop" role="implicit" id="6" children="3,5"' +
+      ' content="4"><mrow><merror><mi>a</mi></merror><mrow type="infixop"' +
+      ' role="division" id="3" children="0,2" content="1" parent="6"><mi' +
+      ' type="identifier" role="latinletter" id="0" parent="3">n</mi><mo' +
+      ' mathvariant="normal" type="operator" role="division" id="1"' +
+      ' parent="3" operator="infixop,/">/</mo><mi type="identifier"' +
+      ' role="greekletter" id="2" parent="3">ϕ</mi></mrow></mrow><mo' +
+      ' mathvariant="italic" type="operator" role="multiplication" id="4"' +
       ' parent="6" operator="infixop,⁢">⁢</mo><mi type="identifier"' +
-      ' role="latinletter" id="5" parent="6">m</mi></mrow></math>'
+      ' role="latinletter" id="5" parent="6">m</mi></math>'
   );
   this.executeMathmlTest(
       '<mrow><mrow><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ</mi></mrow>' +
       '<mo mathvariant="italic">⁢</mo><mi>m</mi></mrow>',
-      '<math type="infixop" role="division" id="3" children="0,6"' +
-      ' content="1"><mi type="identifier" role="latinletter" id="0"' +
-      ' parent="3">n</mi><mo mathvariant="normal" type="operator"' +
-      ' role="division" id="1" parent="3" operator="infixop,/">/</mo><mrow>' +
-      '<mrow type="infixop" role="implicit" id="6" children="2,5"' +
-      ' content="4" parent="3"><mrow><mi type="identifier"' +
-      ' role="greekletter" id="2" parent="6">ϕ</mi></mrow><mo' +
-      ' mathvariant="italic" type="operator" role="multiplication" id="4"' +
-      ' parent="6" operator="infixop,⁢">⁢</mo><mi type="identifier"' +
-      ' role="latinletter" id="5" parent="6">m</mi></mrow></mrow></math>'
+      '<math><mrow type="infixop" role="implicit" id="6" children="3,5"' +
+      ' content="4"><mrow type="infixop" role="division" id="3"' +
+      ' children="0,2" content="1" parent="6"><mi type="identifier"' +
+      ' role="latinletter" id="0" parent="3">n</mi><mo mathvariant="normal"' +
+      ' type="operator" role="division" id="1" parent="3"' +
+      ' operator="infixop,/">/</mo><mi type="identifier" role="greekletter"' +
+      ' id="2" parent="3">ϕ</mi></mrow><mo mathvariant="italic"' +
+      ' type="operator" role="multiplication" id="4" parent="6"' +
+      ' operator="infixop,⁢">⁢</mo><mi type="identifier" role="latinletter"' +
+      ' id="5" parent="6">m</mi></mrow></math>'
   );
   this.executeMathmlTest(
       '<mrow><mrow><mrow><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ</mi>' +
       '</mrow><mo mathvariant="italic">⁢</mo><mi>m</mi></mrow></mrow>',
-      '<math><mrow type="infixop" role="division" id="3" children="0,6"' +
-      ' content="1"><mi type="identifier" role="latinletter" id="0"' +
-      ' parent="3">n</mi><mo mathvariant="normal" type="operator"' +
-      ' role="division" id="1" parent="3" operator="infixop,/">/</mo><mrow>' +
-      '<mrow type="infixop" role="implicit" id="6" children="2,5"' +
-      ' content="4" parent="3"><mrow><mi type="identifier"' +
-      ' role="greekletter" id="2" parent="6">ϕ</mi></mrow><mo' +
-      ' mathvariant="italic" type="operator" role="multiplication" id="4"' +
-      ' parent="6" operator="infixop,⁢">⁢</mo><mi type="identifier"' +
-      ' role="latinletter" id="5" parent="6">m</mi></mrow></mrow></mrow></math>'
+      '<math><mrow><mrow type="infixop" role="implicit" id="6"' +
+      ' children="3,5" content="4"><mrow type="infixop" role="division"' +
+      ' id="3" children="0,2" content="1" parent="6"><mi type="identifier"' +
+      ' role="latinletter" id="0" parent="3">n</mi><mo mathvariant="normal"' +
+      ' type="operator" role="division" id="1" parent="3"' +
+      ' operator="infixop,/">/</mo><mi type="identifier" role="greekletter"' +
+      ' id="2" parent="3">ϕ</mi></mrow><mo mathvariant="italic"' +
+      ' type="operator" role="multiplication" id="4" parent="6"' +
+      ' operator="infixop,⁢">⁢</mo><mi type="identifier" role="latinletter"' +
+      ' id="5" parent="6">m</mi></mrow></mrow></math>'
   );
   this.executeMathmlTest(
       '<mi>a</mi><mrow><mrow><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ' +
@@ -11033,22 +11025,23 @@ sre.EnrichMathmlTest.prototype.testMathmlSwapElementLayers = function() {
       '</mo><mi>m</mi>',
       '<math type="infixop" role="implicit" id="12" children="11,9"' +
       ' content="8"><mrow type="infixop" role="implicit" id="11"' +
-      ' children="0,4" content="10" parent="12"><mi type="identifier"' +
+      ' children="0,7" content="10" parent="12"><mi type="identifier"' +
       ' role="latinletter" id="0" parent="11">a</mi><mo type="operator"' +
       ' role="multiplication" id="10" parent="11" added="true"' +
-      ' operator="infixop,⁢">⁢</mo><mrow type="infixop" role="division"' +
-      ' id="4" children="1,7" content="2" parent="11"><mi type="identifier"' +
+      ' operator="infixop,⁢">⁢</mo><mrow type="infixop"' +
+      ' role="multiplication" id="7" children="4,6" content="5"' +
+      ' parent="11"><mrow type="infixop" role="division" id="4"' +
+      ' children="1,3" content="2" parent="7"><mi type="identifier"' +
       ' role="latinletter" id="1" parent="4">n</mi><mo mathvariant="normal"' +
       ' type="operator" role="division" id="2" parent="4"' +
-      ' operator="infixop,/">/</mo><mrow type="infixop"' +
-      ' role="multiplication" id="7" children="3,6" content="5" parent="4">' +
-      '<mrow><mi type="identifier" role="greekletter" id="3" parent="7">ϕ' +
-      '</mi></mrow><mo type="operator" role="multiplication" id="5"' +
-      ' parent="7" operator="infixop,*">*</mo><mi type="identifier"' +
-      ' role="latinletter" id="6" parent="7">b</mi></mrow></mrow></mrow><mo' +
-      ' mathvariant="italic" type="operator" role="multiplication" id="8"' +
-      ' parent="12" operator="infixop,⁢">⁢</mo><mi type="identifier"' +
-      ' role="latinletter" id="9" parent="12">m</mi></math>'
+      ' operator="infixop,/">/</mo><mi type="identifier" role="greekletter"' +
+      ' id="3" parent="4">ϕ</mi></mrow><mo type="operator"' +
+      ' role="multiplication" id="5" parent="7" operator="infixop,*">*</mo>' +
+      '<mi type="identifier" role="latinletter" id="6" parent="7">b</mi>' +
+      '</mrow></mrow><mo mathvariant="italic" type="operator"' +
+      ' role="multiplication" id="8" parent="12" operator="infixop,⁢">⁢' +
+      '</mo><mi type="identifier" role="latinletter" id="9" parent="12">m' +
+      '</mi></math>'
   );
 };
 
@@ -11168,7 +11161,7 @@ sre.EnrichMathmlTest.prototype.testMathmlSets = function() {
   );
   this.executeMathmlTest(
       '<mo>{</mo><mi>x</mi><mi>y</mi><mo>}</mo>',
-      '<math type="fenced" role="leftright" id="6" children="5"' +
+      '<math type="fenced" role="set singleton" id="6" children="5"' +
       ' content="0,3"><mo type="fence" role="open" id="0" parent="6"' +
       ' operator="fenced">{</mo><mrow type="infixop" role="implicit" id="5"' +
       ' children="1,2" content="4" parent="6"><mi type="identifier"' +
@@ -11180,7 +11173,7 @@ sre.EnrichMathmlTest.prototype.testMathmlSets = function() {
   );
   this.executeMathmlTest(
       '<mo>{</mo><mfrac><mi>x</mi><mi>y</mi></mfrac><mo>}</mo>',
-      '<math type="fenced" role="leftright" id="5" children="3"' +
+      '<math type="fenced" role="set singleton" id="5" children="3"' +
       ' content="0,4"><mo type="fence" role="open" id="0" parent="5"' +
       ' operator="fenced">{</mo><mfrac type="fraction" role="division"' +
       ' id="3" children="1,2" parent="5"><mi type="identifier"' +
@@ -11200,6 +11193,46 @@ sre.EnrichMathmlTest.prototype.testMathmlSets = function() {
       ' role="latinletter" id="2" parent="4">x</mi><mo type="fence"' +
       ' role="close" id="3" parent="4" operator="fenced">}</mo></mrow></math>'
   );
+  this.executeMathmlTest(
+    '<mo>{</mo><mi>x</mi><mo>*</mo><mi>y</mi><mo>}</mo>',
+      '<math type="fenced" role="leftright" id="6" children="5"' +
+      ' content="0,4"><mo type="fence" role="open" id="0" parent="6"' +
+      ' operator="fenced">{</mo><mrow type="infixop" role="multiplication" ' +
+      ' id="5" children="1,3" content="2" parent="6"><mi type="identifier"' +
+      ' role="latinletter" id="1" parent="5">x</mi><mo type="operator"' +
+      ' role="multiplication" id="2" parent="5"' +
+      ' operator="infixop,*">*</mo><mi type="identifier" role="latinletter"' +
+      ' id="3" parent="5">y</mi></mrow><mo type="fence" role="close" id="4"' +
+      ' parent="6" operator="fenced">}</mo></math>'
+  );
+  // Test for issue #287
+  this.executeMathmlTest(
+    '<msub><mi mathvariant="normal">&#x393;</mi><mrow>' +
+      '<mo fence="false" stretchy="false">{</mo><msub><mrow>' +
+      '<mi mathvariant="-tex-calligraphic">M</mi></mrow><mi>k</mi></msub>' +
+      '<mo fence="false" stretchy="false">}</mo></mrow></msub>' +
+      '<mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo>',
+    '<math type="appl" role="simple function" id="13" children="7,11" content="12,0">' +
+      '<msub type="subscript" role="simple function" id="7" children="0,6" parent="13">' +
+      '<mi mathvariant="normal" type="identifier" role="simple function" id="0" parent="7" operator="appl">Γ</mi>' +
+      '<mrow type="fenced" role="set singleton" id="6" children="4" content="1,5" parent="7">' +
+      '<mo fence="false" stretchy="false" type="fence" role="open" id="1" parent="6" operator="fenced">{</mo>' +
+      '<msub type="subscript" role="latinletter" id="4" children="2,3" parent="6">' +
+      '<mrow>' +
+      '<mi mathvariant="-tex-calligraphic" type="identifier" role="latinletter" id="2" parent="4">M</mi>' +
+      '</mrow>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="4">k</mi>' +
+      '</msub>' +
+      '<mo fence="false" stretchy="false" type="fence" role="close" id="5" parent="6" operator="fenced">}</mo>' +
+      '</mrow>' +
+      '</msub>' +
+      '<mo type="punctuation" role="application" id="12" parent="13" added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="11" children="9" content="8,10" parent="13">' +
+      '<mo stretchy="false" type="fence" role="open" id="8" parent="11" operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="9" parent="11">X</mi>' +
+      '<mo stretchy="false" type="fence" role="close" id="10" parent="11" operator="fenced">)</mo>' +
+      '</mrow></math>'
+);
 };
 
 
@@ -11264,4 +11297,32 @@ sre.EnrichMathmlTest.prototype.testMathmlHiddenEmptyTokens = function() {
       '<mrow><mo/><mo/><mo type="punctuation" role="vbar" id="2"' +
       ' parent="4">|</mo></mrow><mi type="identifier" role="latinletter"' +
       ' id="3" parent="4">t</mi></msub></math>');
+};
+
+
+/**
+ * Issue 382: Singleton integral in expression
+ */
+sre.EnrichMathmlTest.prototype.testIssue382 = function() {
+  this.executeMathmlTest(
+    '<mo>=</mo><mo>&#x222B;</mo>',
+    '<math type="relseq" role="equality" id="3" children="2,1" content="0"><mrow type="empty" role="unknown" id="2" parent="3"/><mo type="relation" role="equality" id="0" parent="3" operator="relseq,=">=</mo><mo type="largeop" role="integral" id="1" parent="3">∫</mo></math>'
+  );
+  // TODO: This should be improved.
+  this.executeMathmlTest(
+    '<mo>&#x222B;</mo><mo>+</mo><mo>&#x222B;</mo>',
+    '<math type="integral" role="integral" id="5" children="0,3,4" content="0"><mo type="largeop" role="integral" id="0" parent="5" operator="integral">∫</mo><mrow type="prefixop" role="positive" id="3" children="2" content="1" parent="5"><mo type="operator" role="addition" id="1" parent="3" operator="prefixop,+">+</mo><mo type="largeop" role="integral" id="2" parent="3">∫</mo></mrow><mrow type="empty" role="unknown" id="4" parent="5"/></math>'
+  );
+};
+
+
+/**
+ * Issue 383: Mathoperator with dash
+ */
+sre.EnrichMathmlTest.prototype.testIssue383 = function() {
+  this.executeMathmlTest(
+    '<mrow><mtext>-</mtext><mi mathvariant="normal">p</mi>' +
+      '</mrow><mo>&#x2061;</mo><mi>&#x3C9;</mi>',
+    '<math type="appl" role="simple function" id="7" children="3,5" content="6"><mrow type="punctuated" role="simple function" id="3" children="0,1" parent="7" collapsed="(3 (c 2) 0 1)"><mtext type="text" role="simple function" id="0" parent="3">-</mtext><mi mathvariant="normal" type="identifier" role="latinletter" id="1" parent="3">p</mi></mrow><mo type="punctuation" role="application" id="6" parent="7" added="true" operator="appl">⁡</mo><mi type="identifier" role="greekletter" id="5" parent="7">ω</mi></math>'
+  );
 };

@@ -80,10 +80,15 @@ sre.ClearspeakPreferences.PREFERENCES = new sre.DynamicProperties({
   CombinationPermutation: ['Auto', 'ChoosePermute'],
   Currency: ['Auto', 'Position', 'Prefix'],
   Ellipses: ['Auto', 'AndSoOn'],
-  Exponent: ['Auto', 'AfterPower', 'Ordinal', 'OrdinalPower'],
+  Exponent: ['Auto', 'AfterPower', 'Ordinal', 'OrdinalPower',
+             // The following are German
+             'Exponent'
+  ],
   Fraction: ['Auto', 'EndFrac', 'FracOver', 'General', 'GeneralEndFrac',
              'Ordinal', 'Over', 'OverEndFrac', 'Per'],
-  Functions: ['Auto', 'None', 'Reciprocal'],  // Reciprocal is French
+  Functions: ['Auto', 'None',
+              // Reciprocal is French
+              'Reciprocal'],
   ImpliedTimes: ['Auto', 'MoreImpliedTimes', 'None'],
   Log: ['Auto', 'LnAsNaturalLog'],
   Matrix: ['Auto', 'Combinatoric', 'EndMatrix', 'EndVector', 'SilentColNum',
@@ -99,9 +104,11 @@ sre.ClearspeakPreferences.PREFERENCES = new sre.DynamicProperties({
   Prime: ['Auto', 'Angle', 'Length'],
   Roots: ['Auto', 'PosNegSqRoot', 'PosNegSqRootEnd', 'RootEnd'],
   SetMemberSymbol: ['Auto', 'Belongs', 'Element', 'Member'],
-  Sets: ['Auto', 'SilentBracket', 'woall', 'woAll'],
+  Sets: ['Auto', 'SilentBracket', 'woAll'],
   TriangleSymbol: ['Auto', 'Delta'],
-  Trig: ['Auto', 'ArcTrig', 'TrigInverse', 'Reciprocal'], // Reciprocal French
+  Trig: ['Auto', 'ArcTrig', 'TrigInverse',
+         // Reciprocal French
+         'Reciprocal'],
   VerticalLine: ['Auto', 'Divides', 'Given', 'SuchThat']
 });
 
