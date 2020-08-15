@@ -1332,7 +1332,7 @@ sre.ClearspeakEnglishRoots.prototype.testHighRoot004 = function() {
 sre.ClearspeakEnglishRoots.prototype.testHighRoot005 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mi>d</mi><mi>n</mi></mroot></mrow></math>';
-  var speech = 'the nth root of d';
+  var speech = 'the n-th root of d';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1344,7 +1344,7 @@ sre.ClearspeakEnglishRoots.prototype.testHighRoot006 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi>' +
       '</mroot></mrow></math>';
-  var speech = 'the mth root of 243';
+  var speech = 'the m-th root of 243';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1356,7 +1356,7 @@ sre.ClearspeakEnglishRoots.prototype.testHighRoot007 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup>' +
       '</mrow><mi>i</mi></mroot></mrow></math>';
-  var speech = 'the ith root of 2 to the ith power';
+  var speech = 'the i-th root of 2 to the i-th power';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1368,7 +1368,7 @@ sre.ClearspeakEnglishRoots.prototype.testHighRoot008 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi>' +
       '</mroot></mrow></math>';
-  var speech = 'the jth root of 125';
+  var speech = 'the j-th root of 125';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1449,7 +1449,7 @@ sre.ClearspeakEnglishRoots.prototype.testHighRoot014 = function() {
 sre.ClearspeakEnglishRoots.prototype.testHighRoot015 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mi>d</mi><mi>n</mi></mroot></mrow></math>';
-  var speech = 'the nth root of d, end root';
+  var speech = 'the n-th root of d, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1461,7 +1461,7 @@ sre.ClearspeakEnglishRoots.prototype.testHighRoot016 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi>' +
       '</mroot></mrow></math>';
-  var speech = 'the mth root of 243, end root';
+  var speech = 'the m-th root of 243, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1473,7 +1473,7 @@ sre.ClearspeakEnglishRoots.prototype.testHighRoot017 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup>' +
       '</mrow><mi>i</mi></mroot></mrow></math>';
-  var speech = 'the ith root of 2 to the ith power, end root';
+  var speech = 'the i-th root of 2 to the i-th power, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1485,7 +1485,7 @@ sre.ClearspeakEnglishRoots.prototype.testHighRoot018 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi>' +
       '</mroot></mrow></math>';
-  var speech = 'the jth root of 125, end root';
+  var speech = 'the j-th root of 125, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1566,7 +1566,7 @@ sre.ClearspeakEnglishRoots.prototype.testHighRoot024 = function() {
 sre.ClearspeakEnglishRoots.prototype.testHighRoot025 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mi>d</mi><mi>n</mi></mroot></mrow></math>';
-  var speech = 'the nth root of d';
+  var speech = 'the n-th root of d';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1578,7 +1578,7 @@ sre.ClearspeakEnglishRoots.prototype.testHighRoot026 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi>' +
       '</mroot></mrow></math>';
-  var speech = 'the mth root of 243';
+  var speech = 'the m-th root of 243';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1590,7 +1590,7 @@ sre.ClearspeakEnglishRoots.prototype.testHighRoot027 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup>' +
       '</mrow><mi>i</mi></mroot></mrow></math>';
-  var speech = 'the ith root of 2 to the ith power';
+  var speech = 'the i-th root of 2 to the i-th power';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1602,7 +1602,7 @@ sre.ClearspeakEnglishRoots.prototype.testHighRoot028 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi>' +
       '</mroot></mrow></math>';
-  var speech = 'the jth root of 125';
+  var speech = 'the j-th root of 125';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1683,7 +1683,7 @@ sre.ClearspeakEnglishRoots.prototype.testHighRoot034 = function() {
 sre.ClearspeakEnglishRoots.prototype.testHighRoot035 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mi>d</mi><mi>n</mi></mroot></mrow></math>';
-  var speech = 'the nth root of d, end root';
+  var speech = 'the n-th root of d, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1695,7 +1695,7 @@ sre.ClearspeakEnglishRoots.prototype.testHighRoot036 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi>' +
       '</mroot></mrow></math>';
-  var speech = 'the mth root of 243, end root';
+  var speech = 'the m-th root of 243, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1707,7 +1707,7 @@ sre.ClearspeakEnglishRoots.prototype.testHighRoot037 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup>' +
       '</mrow><mi>i</mi></mroot></mrow></math>';
-  var speech = 'the ith root of 2 to the ith power, end root';
+  var speech = 'the i-th root of 2 to the i-th power, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1719,7 +1719,7 @@ sre.ClearspeakEnglishRoots.prototype.testHighRoot038 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi>' +
       '</mroot></mrow></math>';
-  var speech = 'the jth root of 125, end root';
+  var speech = 'the j-th root of 125, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
 

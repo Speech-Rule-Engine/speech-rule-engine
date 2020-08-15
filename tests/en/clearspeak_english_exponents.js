@@ -165,7 +165,7 @@ sre.ClearspeakEnglishExponents.prototype.testExp010a = function() {
 sre.ClearspeakEnglishExponents.prototype.testExp011 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>4</mn><mi>x</mi></msup></mrow></math>';
-  var speech = '4 to the xth power';
+  var speech = '4 to the x-th power';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -560,7 +560,7 @@ sre.ClearspeakEnglishExponents.prototype.testExp032 = function() {
       '</mrow><mi>y</mi></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow>' +
       '</math>';
   var speech = '3 raised to the exponent, open paren, x plus 1, close' +
-      ' paren, to the yth power, plus 2, end exponent';
+      ' paren, to the y-th power, plus 2, end exponent';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -575,7 +575,7 @@ sre.ClearspeakEnglishExponents.prototype.testExp033 = function() {
       '</mrow><mi>y</mi></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow>' +
       '</math>';
   var speech = '3 raised to the exponent, open paren, x plus 1, close' +
-      ' paren, to the yth power, end exponent, plus 2';
+      ' paren, to the y-th power, end exponent, plus 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -617,7 +617,7 @@ sre.ClearspeakEnglishExponents.prototype.testExp035 = function() {
 sre.ClearspeakEnglishExponents.prototype.testExp036 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mi>n</mi></msup></mrow></math>';
-  var speech = '2 to the nth power';
+  var speech = '2 to the n-th power';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -628,7 +628,7 @@ sre.ClearspeakEnglishExponents.prototype.testExp036 = function() {
 sre.ClearspeakEnglishExponents.prototype.testExp037 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mi>m</mi></msup></mrow></math>';
-  var speech = '2 to the mth power';
+  var speech = '2 to the m-th power';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -639,7 +639,7 @@ sre.ClearspeakEnglishExponents.prototype.testExp037 = function() {
 sre.ClearspeakEnglishExponents.prototype.testExp038 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mi>i</mi></msup></mrow></math>';
-  var speech = '2 to the ith power';
+  var speech = '2 to the i-th power';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -650,7 +650,7 @@ sre.ClearspeakEnglishExponents.prototype.testExp038 = function() {
 sre.ClearspeakEnglishExponents.prototype.testExp039 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mi>j</mi></msup></mrow></math>';
-  var speech = '2 to the jth power';
+  var speech = '2 to the j-th power';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -661,7 +661,7 @@ sre.ClearspeakEnglishExponents.prototype.testExp039 = function() {
 sre.ClearspeakEnglishExponents.prototype.testExp40 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mi>a</mi></msup></mrow></math>';
-  var speech = '2 to the ath power';
+  var speech = '2 to the a-th power';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -775,7 +775,7 @@ sre.ClearspeakEnglishExponents.prototype.testExp049 = function() {
 sre.ClearspeakEnglishExponents.prototype.testExp050 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>4</mn><mi>x</mi></msup></mrow></math>';
-  var speech = '4 to the xth';
+  var speech = '4 to the x-th';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1171,7 +1171,7 @@ sre.ClearspeakEnglishExponents.prototype.testExp081 = function() {
       '</mrow><mi>y</mi></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow>' +
       '</math>';
   var speech = '3 raised to the exponent, open paren, x plus 1, close' +
-      ' paren, to the yth, plus 2, end exponent';
+      ' paren, to the y-th, plus 2, end exponent';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1186,7 +1186,7 @@ sre.ClearspeakEnglishExponents.prototype.testExp082 = function() {
       '</mrow><mi>y</mi></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow>' +
       '</math>';
   var speech = '3 raised to the exponent, open paren, x plus 1, close' +
-      ' paren, to the yth, end exponent, plus 2';
+      ' paren, to the y-th, end exponent, plus 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1330,7 +1330,7 @@ sre.ClearspeakEnglishExponents.prototype.testExp093 = function() {
 sre.ClearspeakEnglishExponents.prototype.testExp094 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>4</mn><mi>x</mi></msup></mrow></math>';
-  var speech = '4 to the xth power';
+  var speech = '4 to the x-th power';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1729,7 +1729,7 @@ sre.ClearspeakEnglishExponents.prototype.testExp125 = function() {
       '</mrow><mi>y</mi></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow>' +
       '</math>';
   var speech = '3 raised to the exponent, open paren, x plus 1, close' +
-      ' paren, to the yth power, plus 2, end exponent';
+      ' paren, to the y-th power, plus 2, end exponent';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1744,7 +1744,7 @@ sre.ClearspeakEnglishExponents.prototype.testExp126 = function() {
       '</mrow><mi>y</mi></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow>' +
       '</math>';
   var speech = '3 raised to the exponent, open paren, x plus 1, close' +
-      ' paren, to the yth power, end exponent, plus 2';
+      ' paren, to the y-th power, end exponent, plus 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
