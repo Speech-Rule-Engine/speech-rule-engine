@@ -6949,7 +6949,7 @@ sre.EnrichMathmlTest.prototype.testMathmlIntegrals = function() {
       '<mi>&#x222B;</mi><mi>dx</mi>',
       '<math type="integral" role="integral" id="3" children="0,2,1"' +
       ' content="0">' +
-      '<mi type="largeop" role="integral" id="0" parent="3"' +
+     '<mi type="largeop" role="integral" id="0" parent="3"' +
       ' operator="integral">∫</mi>' +
       '<mrow type="empty" role="unknown" id="2" parent="3"/>' +
       '<mi type="identifier" role="unknown" id="1" parent="3">dx</mi>' +
@@ -6971,18 +6971,16 @@ sre.EnrichMathmlTest.prototype.testMathmlIntegrals = function() {
 
   this.executeMathmlTest(
       '<mrow><mi>&#x222B;</mi><mi>x</mi><mi>d</mi><mi>x</mi></mrow>',
-      '<math>' +
-      '<mrow type="integral" role="integral" id="6" children="0,1,5"' +
+      '<math><mrow type="integral" role="integral" id="5" children="0,1,4"' +
       ' content="0">' +
-      '<mi type="largeop" role="integral" id="0" parent="6"' +
+      '<mi type="largeop" role="integral" id="0" parent="5"' +
       ' operator="integral">∫</mi>' +
-      '<mi type="identifier" role="latinletter" id="1" parent="6">x</mi>' +
-      '<mrow type="punctuated" role="integral" id="5" children="2,4,3"' +
-      ' content="4" parent="6">' +
-      '<mi type="identifier" role="latinletter" id="2" parent="5">d</mi>' +
-      '<mo type="punctuation" role="comma" id="4" parent="5"' +
-      ' added="true" operator="punctuated">⁣</mo>' +
-      '<mi type="identifier" role="latinletter" id="3" parent="5">x</mi>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="5">x</mi>' +
+      '<mrow type="prefixop" role="integral" id="4" children="3"' +
+      ' content="2" parent="5">' +
+      '<mi type="identifier" role="latinletter" id="2" parent="4"' +
+      ' operator="prefixop,d">d</mi>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="4">x</mi>' +
       '</mrow>' +
       '</mrow>' +
       '</math>'
@@ -6992,23 +6990,21 @@ sre.EnrichMathmlTest.prototype.testMathmlIntegrals = function() {
       '<mrow><mi>&#x222B;</mi><mi>x</mi><mo>+</mo><mi>y</mi><mi>d</mi>' +
       '<mi>x</mi></mrow>',
       '<math>' +
-      '<mrow type="integral" role="integral" id="9" children="0,8,7"' +
-      ' content="0">' +
-      '<mi type="largeop" role="integral" id="0" parent="9"' +
+      '<mrow type="integral" role="integral" id="8" children="0,7,6" content="0">' +
+      '<mi type="largeop" role="integral" id="0" parent="8"' +
       ' operator="integral">∫</mi>' +
-      '<mrow type="infixop" role="addition" id="8" children="1,3"' +
-      ' content="2" parent="9">' +
-      '<mi type="identifier" role="latinletter" id="1" parent="8">x</mi>' +
-      '<mo type="operator" role="addition" id="2" parent="8"' +
+      '<mrow type="infixop" role="addition" id="7" children="1,3"' +
+      ' content="2" parent="8">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="7">x</mi>' +
+      '<mo type="operator" role="addition" id="2" parent="7"' +
       ' operator="infixop,+">+</mo>' +
-      '<mi type="identifier" role="latinletter" id="3" parent="8">y</mi>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="7">y</mi>' +
       '</mrow>' +
-      '<mrow type="punctuated" role="integral" id="7" children="4,6,5"' +
-      ' content="6" parent="9">' +
-      '<mi type="identifier" role="latinletter" id="4" parent="7">d</mi>' +
-      '<mo type="punctuation" role="comma" id="6" parent="7"' +
-      ' added="true" operator="punctuated">⁣</mo>' +
-      '<mi type="identifier" role="latinletter" id="5" parent="7">x</mi>' +
+      '<mrow type="prefixop" role="integral" id="6" children="5"' +
+      ' content="4" parent="8">' +
+      '<mi type="identifier" role="latinletter" id="4" parent="6"' +
+      ' operator="prefixop,d">d</mi>' +
+      '<mi type="identifier" role="latinletter" id="5" parent="6">x</mi>' +
       '</mrow>' +
       '</mrow>' +
       '</math>'
@@ -7039,22 +7035,20 @@ sre.EnrichMathmlTest.prototype.testMathmlIntegrals = function() {
       '<munderover><mi>&#x222B;</mi><mn>0</mn>' +
       '<mn>10</mn></munderover><mi>x</mi>' +
       '<mi>d</mi><mi>x</mi>',
-      '<math type="integral" role="integral" id="9" children="3,4,8"' +
-      ' content="0">' +
+      '<math type="integral" role="integral" id="8" children="3,4,7" content="0">' +
       '<munderover type="limboth" role="integral" id="3" children="0,1,2"' +
-      ' parent="9">' +
+      ' parent="8">' +
       '<mi type="largeop" role="integral" id="0" parent="3"' +
       ' operator="integral">∫</mi>' +
       '<mn type="number" role="integer" id="1" parent="3">0</mn>' +
       '<mn type="number" role="integer" id="2" parent="3">10</mn>' +
       '</munderover>' +
-      '<mi type="identifier" role="latinletter" id="4" parent="9">x</mi>' +
-      '<mrow type="punctuated" role="integral" id="8" children="5,7,6"' +
-      ' content="7" parent="9">' +
-      '<mi type="identifier" role="latinletter" id="5" parent="8">d</mi>' +
-      '<mo type="punctuation" role="comma" id="7" parent="8"' +
-      ' added="true" operator="punctuated">⁣</mo>' +
-      '<mi type="identifier" role="latinletter" id="6" parent="8">x</mi>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="8">x</mi>' +
+      '<mrow type="prefixop" role="integral" id="7" children="6"' +
+      ' content="5" parent="8">' +
+      '<mi type="identifier" role="latinletter" id="5" parent="7"' +
+      ' operator="prefixop,d">d</mi>' +
+      '<mi type="identifier" role="latinletter" id="6" parent="7">x</mi>' +
       '</mrow>' +
       '</math>'
   );
