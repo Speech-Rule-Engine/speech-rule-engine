@@ -1523,10 +1523,8 @@ sre.SemanticProcessor.prototype.getIntegralArgs_ = function(nodes, opt_args) {
     return {integrand: args, intvar: firstNode, rest: nodes.slice(1)};
   }
   if (nodes[1] && sre.SemanticPred.isIntegralDxBoundary(firstNode, nodes[1])) {
-    var comma = sre.SemanticProcessor.getInstance().factory_.makeContentNode(
-        sre.SemanticAttr.invisibleComma());
-    var intvar = sre.SemanticProcessor.getInstance().punctuatedNode_(
-        [firstNode, comma, nodes[1]], [comma]);
+    var intvar = sre.SemanticProcessor.getInstance().prefixNode_(
+      /** @type {!sre.SemanticNode} */(nodes[1]), [firstNode]);
     intvar.role = sre.SemanticAttr.Role.INTEGRAL;
     return {integrand: args, intvar: intvar, rest: nodes.slice(2)};
   }
