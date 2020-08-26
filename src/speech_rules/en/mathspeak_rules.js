@@ -83,9 +83,7 @@ sre.MathspeakRules = {
     ['CSF', 'CSFRemoveParens', sre.MathspeakUtil.removeParens],
 
     // Dummy.
-    ['CQF', 'CQFresetNesting', sre.MathspeakUtil.resetNestingDepth],
-
-    ['CSF', 'CSFdirectSpeech', sre.MathspeakUtil.getSpeechAnnotation]
+    ['CQF', 'CQFresetNesting', sre.MathspeakUtil.resetNestingDepth]
   ],
   rules: [
     // TODO: This needs to be prioritized!
