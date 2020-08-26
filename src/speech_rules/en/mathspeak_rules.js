@@ -83,7 +83,9 @@ sre.MathspeakRules = {
     ['CSF', 'CSFRemoveParens', sre.MathspeakUtil.removeParens],
 
     // Dummy.
-    ['CQF', 'CQFresetNesting', sre.MathspeakUtil.resetNestingDepth]
+    ['CQF', 'CQFresetNesting', sre.MathspeakUtil.resetNestingDepth],
+
+    ['CSF', 'CSFdirectSpeech', sre.MathspeakUtil.getSpeechAnnotation]
   ],
   rules: [
     // TODO: This needs to be prioritized!
@@ -97,6 +99,10 @@ sre.MathspeakRules = {
      'collapsed', 'default', 'brief'],
     ['SpecializedRule',
      'collapsed', 'brief', 'sbrief'],
+    // Direct speech rule
+    ['Rule',
+     'direct-speech', 'default',
+     '[t] @ext-speech', 'self::*', '@ext-speech'],
 
     // Initial rule
     ['Rule',

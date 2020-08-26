@@ -96,6 +96,8 @@ sre.SemanticMathml.prototype.parse = function(mml) {
 };
 
 
+sre.SemanticMathml.directSpeechKeys = ['aria-label', 'exact-speech'];
+
 /**
  * Retains external attributes from the source node to the semantic node.
  * @param {sre.SemanticNode} to The target node.
@@ -108,6 +110,9 @@ sre.SemanticMathml.prototype.addAttributes = function(to, from) {
       var key = attrs[i].name;
       if (key.match(/^ext/)) {
         to.attributes[key] = attrs[i].value;
+      }
+      if (sre.SemanticMathml.directSpeechKeys.indexOf(key) !== -1) {
+        to.attributes['ext-speech'] = attrs[i].value;
       }
     }
   }
