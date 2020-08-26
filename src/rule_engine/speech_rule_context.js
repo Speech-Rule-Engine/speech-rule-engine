@@ -149,6 +149,8 @@ sre.SpeechRuleContext.prototype.parse = function(functions) {
     let call = map[kind];
     if (call) {
       call.add(func[0], func[1]);
+    } else {
+      console.error('FunctionError: Invalid function name ' + func[0]);
     }
   }
 };
