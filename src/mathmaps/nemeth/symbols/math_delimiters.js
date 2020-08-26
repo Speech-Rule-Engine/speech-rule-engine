@@ -519,7 +519,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠒⠙⠑⠄"
+        "default": "⠣⠨⠷"
       }
     },
     "key": "23DE"
@@ -528,7 +528,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠒⠙⠋⠄"
+        "default": "⠣⠨⠾"
       }
     },
     "key": "23DF"

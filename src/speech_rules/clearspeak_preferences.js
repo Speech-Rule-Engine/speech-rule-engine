@@ -104,7 +104,7 @@ sre.ClearspeakPreferences.PREFERENCES = new sre.DynamicProperties({
   Prime: ['Auto', 'Angle', 'Length'],
   Roots: ['Auto', 'PosNegSqRoot', 'PosNegSqRootEnd', 'RootEnd'],
   SetMemberSymbol: ['Auto', 'Belongs', 'Element', 'Member'],
-  Sets: ['Auto', 'SilentBracket', 'woall', 'woAll'],
+  Sets: ['Auto', 'SilentBracket', 'woAll'],
   TriangleSymbol: ['Auto', 'Delta'],
   Trig: ['Auto', 'ArcTrig', 'TrigInverse',
          // Reciprocal French

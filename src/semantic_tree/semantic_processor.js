@@ -994,14 +994,14 @@ sre.SemanticProcessor.prototype.classifyHorizontalFence_ = function(node) {
   if (!sre.SemanticPred.isSetNode(node) || children.length > 1) {
     return;
   }
-  var type = children[0].type;
   if (children.length === 0 ||
       children[0].type === sre.SemanticAttr.Type.EMPTY) {
     node.role = sre.SemanticAttr.Role.SETEMPTY;
     return;
   }
-  if (type === sre.SemanticAttr.Type.IDENTIFIER ||
-      type === sre.SemanticAttr.Type.NUMBER) {
+  var type = children[0].type;
+  if (children.length === 1 &&
+      sre.SemanticPred.isSingletonSetContent(children[0])) {
     node.role = sre.SemanticAttr.Role.SETSINGLE;
     return;
   }
@@ -1354,7 +1354,7 @@ sre.SemanticProcessor.classifyFunction_ = function(funcNode, restNodes) {
       restNodes[0].textContent === sre.SemanticAttr.functionApplication()) {
     // Remove explicit function application. This is destructive on the
     // underlying list.
-    // TODO (sorge) This should not be distructive!
+    // TODO (sorge) This should not be destructive!
     restNodes.shift();
     var role = sre.SemanticAttr.Role.SIMPLEFUNC;
     if (funcNode.role === sre.SemanticAttr.Role.PREFIXFUNC ||
@@ -1404,7 +1404,11 @@ sre.SemanticProcessor.prototype.getFunctionArgs_ = function(
   switch (heuristic) {
     case 'integral':
       var components = sre.SemanticProcessor.getInstance().
-          getIntegralArgs_(rest);
+            getIntegralArgs_(rest);
+      if (!components.intvar && !components.integrand.length) {
+        components.rest.unshift(func);
+        return components.rest;
+      }
       var integrand = sre.SemanticProcessor.getInstance().
           row(components.integrand);
       var funcNode = sre.SemanticProcessor.getInstance().integralNode_(
@@ -1519,10 +1523,8 @@ sre.SemanticProcessor.prototype.getIntegralArgs_ = function(nodes, opt_args) {
     return {integrand: args, intvar: firstNode, rest: nodes.slice(1)};
   }
   if (nodes[1] && sre.SemanticPred.isIntegralDxBoundary(firstNode, nodes[1])) {
-    var comma = sre.SemanticProcessor.getInstance().factory_.makeContentNode(
-        sre.SemanticAttr.invisibleComma());
-    var intvar = sre.SemanticProcessor.getInstance().punctuatedNode_(
-        [firstNode, comma, nodes[1]], [comma]);
+    var intvar = sre.SemanticProcessor.getInstance().prefixNode_(
+      /** @type {!sre.SemanticNode} */(nodes[1]), [firstNode]);
     intvar.role = sre.SemanticAttr.Role.INTEGRAL;
     return {integrand: args, intvar: intvar, rest: nodes.slice(2)};
   }

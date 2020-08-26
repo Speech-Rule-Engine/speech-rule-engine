@@ -2,6 +2,12 @@ Speech Rule Engine
 ==================
 [![Build Status](https://travis-ci.org/zorkow/speech-rule-engine.svg?branch=master)](https://travis-ci.org/zorkow/speech-rule-engine) [![Dependencies](https://david-dm.org/zorkow/speech-rule-engine.svg)](https://david-dm.org/zorkow/speech-rule-engine) [![devDependency Status](https://david-dm.org/zorkow/speech-rule-engine/dev-status.svg)](https://david-dm.org/zorkow/speech-rule-engine#info=devDependencies) [![NPM version](https://img.shields.io/npm/v/speech-rule-engine.svg?style=flat)](https://www.npmjs.com/package/speech-rule-engine) [![NPM monthly downloads](https://img.shields.io/npm/dm/speech-rule-engine.svg?style=flat)](https://npmjs.org/package/speech-rule-engine) [![NPM total downloads](https://img.shields.io/npm/dt/speech-rule-engine.svg?style=flat)](https://npmjs.org/package/speech-rule-engine) [![Linux Build Status](https://img.shields.io/travis/zorkow/speech-rule-engine.svg?style=flat&label=Travis)](https://travis-ci.org/zorkow/speech-rule-engine) [![Coverage Status](https://coveralls.io/repos/zorkow/speech-rule-engine/badge.svg?branch=master&service=github)](https://coveralls.io/github/zorkow/speech-rule-engine?branch=master)
 
+***
+
+**Breaking Change:** Please move to v3.0.2 (master) or v3.1.0-beta.3 (develop). [More info here.](#breaking-change)
+
+***
+
 NodeJS version of the ChromeVox speech rule engine.
 Forked from ChromeVox release 1.31.0
 
@@ -131,7 +137,7 @@ internal to SRE and are therefore not exposed via the command line interface.
 Observe that not every _domain_ (i.e., speech rule set) implements every
 style. Similarly, not every speech rule set is implemneted in every locale. For
 a more detailed overview of `locale, domain, style` combinations, use the
-`--options` switch on the command line interface.
+`--opt` switch on the command line interface.
 
 #### Options for enriched MathML output
 
@@ -287,7 +293,7 @@ The following is a list of command line options for the speech rule engine.
 | -l | --log [name]    | Log file [name]. Verbose output is redirected to this file. |
 ||| If not given verbose output is printed to stdout. |
 | -h | --help   | Enumerates all command line options. |
-|    | --options | Enumerates all available options for locale, modality, domain and style. |
+|    | --opt    | Enumerates all available options for locale, modality, domain and style. |
 | -V | --version  |  Outputs the version number |
 
 Browser Library
@@ -425,3 +431,23 @@ to adapt your code, in case you have been using this functionality.
 | -s | --semantics     | Switch on semantics interpretation. |
 ||| **This option is now removed.** |
 ||| There is no longer support for non-semantic rule sets. |
+
+
+## Breaking Change
+
+Due to a breaking change in
+the [commander library](https://github.com/tj/commander.js/releases/tag/v6.0.0)
+old versions of SRE might break when newly installed from `npm`.  SRE relies on
+commander for running its command line interface.
+
+**Therefore, please move to SRE v3.0.2 (master) or v3.1.0-beta.3 (develop).**
+
+
+If you want to run older versions of SRE, you need to manually downgrade the
+`commander` package to `v5.1.0` by running 
+
+```bash
+npm install commander@5.1.0
+```
+
+Note, that the command line option `--options` has now been renamed to `--opt`.

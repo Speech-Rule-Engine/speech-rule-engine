@@ -85,13 +85,21 @@ sre.AbstractCharacterTest.prototype.executeRuleTest = function(text, answer, opt
   sre.System.getInstance().setupEngine(
       {domain: this.domain, style: style,
         modality: this.modality, rules: this.rules, locale: this.locale});
-  var aural = sre.AuralRendering.getInstance();
-  var descrs = [
-    sre.AuditoryDescription.create({text: text}, {adjust: true, translate: true})];
-  var result = aural.finalize(aural.markup(descrs));
+  var result = this.getSpeech(text);
   var actual = this.actual ? result : answer;
   this.appendRuleExample(text, actual, style);
   this.assert.equal(actual, result);
+};
+
+
+/**
+ * @override
+ */
+sre.AbstractCharacterTest.prototype.getSpeech = function(text) {
+  var aural = sre.AuralRendering.getInstance();
+  var descrs = [
+    sre.AuditoryDescription.create({text: text}, {adjust: true, translate: true})];
+  return aural.finalize(aural.markup(descrs));
 };
 
 

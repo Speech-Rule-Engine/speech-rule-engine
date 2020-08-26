@@ -807,7 +807,7 @@ sre.ClearspeakRules = {
 
     ['Rule',
      'exponent', 'default',
-     '[n] text() (join:""); [t] "th"', 'self::identifier',
+     '[n] text() (join:"-"); [t] "th"', 'self::identifier',
      'contains(@grammar, "ordinal")'],
     ['Rule',
      'exponent', 'default',
