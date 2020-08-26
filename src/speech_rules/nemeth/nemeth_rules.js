@@ -32,39 +32,39 @@ sre.NemethRules = {
   modality: 'braille',
   domain: 'default',
   functions: [
-    ['CQF', 'CQFspaceoutNumber', sre.MathspeakUtil.spaceoutNumber],
-    ['CQF', 'CQFspaceoutIdentifier', sre.MathspeakUtil.spaceoutIdentifier],
+    ['CQFspaceoutNumber', sre.MathspeakUtil.spaceoutNumber],
+    ['CQFspaceoutIdentifier', sre.MathspeakUtil.spaceoutIdentifier],
 
-    ['CSF', 'CSFspaceoutText', sre.MathspeakUtil.spaceoutText],
+    ['CSFspaceoutText', sre.MathspeakUtil.spaceoutText],
     // Fraction function.
-    ['CSF', 'CSFopenFraction', sre.NemethUtil.openingFraction],
-    ['CSF', 'CSFcloseFraction', sre.NemethUtil.closingFraction],
-    ['CSF', 'CSFoverFraction', sre.NemethUtil.overFraction],
-    ['CSF', 'CSFoverBevFraction', sre.NemethUtil.overBevelledFraction],
+    ['CSFopenFraction', sre.NemethUtil.openingFraction],
+    ['CSFcloseFraction', sre.NemethUtil.closingFraction],
+    ['CSFoverFraction', sre.NemethUtil.overFraction],
+    ['CSFoverBevFraction', sre.NemethUtil.overBevelledFraction],
 
     // Radical function.
-    ['CSF', 'CSFopenRadicalVerbose', sre.NemethUtil.openingRadical],
-    ['CSF', 'CSFcloseRadicalVerbose', sre.NemethUtil.closingRadical],
-    ['CSF', 'CSFindexRadicalVerbose', sre.NemethUtil.indexRadical],
+    ['CSFopenRadicalVerbose', sre.NemethUtil.openingRadical],
+    ['CSFcloseRadicalVerbose', sre.NemethUtil.closingRadical],
+    ['CSFindexRadicalVerbose', sre.NemethUtil.indexRadical],
 
     // Sub- Superscript.
-    ['CSF', 'CSFsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose],
-    ['CSF', 'CSFsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose],
-    ['CSF', 'CSFbaselineVerbose', sre.MathspeakUtil.baselineVerbose],
+    ['CSFsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose],
+    ['CSFsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose],
+    ['CSFbaselineVerbose', sre.MathspeakUtil.baselineVerbose],
 
     // Over- Underscore.
-    ['CSF', 'CSFunderscript', sre.MathspeakUtil.nestedUnderscore],
-    ['CSF', 'CSFoverscript', sre.MathspeakUtil.nestedOverscore],
+    ['CSFunderscript', sre.MathspeakUtil.nestedUnderscore],
+    ['CSFoverscript', sre.MathspeakUtil.nestedOverscore],
 
-    ['CTF', 'CTFordinalCounter', sre.NumbersUtil.ordinalCounter],
-    ['CTF', 'CTFcontentIterator', sre.StoreUtil.contentIterator],
+    ['CTFordinalCounter', sre.NumbersUtil.ordinalCounter],
+    ['CTFcontentIterator', sre.StoreUtil.contentIterator],
 
     // Layout related.
-    ['CQF', 'CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple],
-    ['CSF', 'CSFRemoveParens', sre.MathspeakUtil.removeParens],
+    ['CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple],
+    ['CSFRemoveParens', sre.MathspeakUtil.removeParens],
 
     // Dummy.
-    ['CQF', 'CQFresetNesting', sre.MathspeakUtil.resetNestingDepth]
+    ['CQFresetNesting', sre.MathspeakUtil.resetNestingDepth]
   ],
   rules: [
     // Initial rule

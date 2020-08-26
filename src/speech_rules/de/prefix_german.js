@@ -35,7 +35,7 @@ sre.PrefixGerman = {
   locale: 'de',
   domain: 'default',
   functions: [
-    ['CSF', 'CSFordinalPosition', sre.NumbersUtil.ordinalPosition]
+    ['CSFordinalPosition', sre.NumbersUtil.ordinalPosition]
   ],
   rules: [
     ['Rule',

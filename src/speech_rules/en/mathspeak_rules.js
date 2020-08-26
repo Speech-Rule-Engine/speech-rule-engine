@@ -28,62 +28,62 @@ goog.require('sre.MathspeakUtil');
 sre.MathspeakRules = {
   domain: 'mathspeak',
   functions: [
-    ['CQF', 'CQFspaceoutNumber', sre.MathspeakUtil.spaceoutNumber],
-    ['CQF', 'CQFspaceoutIdentifier', sre.MathspeakUtil.spaceoutIdentifier],
+    ['CQFspaceoutNumber', sre.MathspeakUtil.spaceoutNumber],
+    ['CQFspaceoutIdentifier', sre.MathspeakUtil.spaceoutIdentifier],
 
-    ['CSF', 'CSFspaceoutText', sre.MathspeakUtil.spaceoutText],
+    ['CSFspaceoutText', sre.MathspeakUtil.spaceoutText],
     // Fraction function.
-    ['CSF', 'CSFopenFracVerbose', sre.MathspeakUtil.openingFractionVerbose],
-    ['CSF', 'CSFcloseFracVerbose', sre.MathspeakUtil.closingFractionVerbose],
-    ['CSF', 'CSFoverFracVerbose', sre.MathspeakUtil.overFractionVerbose],
-    ['CSF', 'CSFopenFracBrief', sre.MathspeakUtil.openingFractionBrief],
-    ['CSF', 'CSFcloseFracBrief', sre.MathspeakUtil.closingFractionBrief],
-    ['CSF', 'CSFopenFracSbrief', sre.MathspeakUtil.openingFractionSbrief],
-    ['CSF', 'CSFcloseFracSbrief', sre.MathspeakUtil.closingFractionSbrief],
-    ['CSF', 'CSFoverFracSbrief', sre.MathspeakUtil.overFractionSbrief],
-    ['CSF', 'CSFvulgarFraction', sre.NumbersUtil.vulgarFraction],
-    ['CQF', 'CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction],
+    ['CSFopenFracVerbose', sre.MathspeakUtil.openingFractionVerbose],
+    ['CSFcloseFracVerbose', sre.MathspeakUtil.closingFractionVerbose],
+    ['CSFoverFracVerbose', sre.MathspeakUtil.overFractionVerbose],
+    ['CSFopenFracBrief', sre.MathspeakUtil.openingFractionBrief],
+    ['CSFcloseFracBrief', sre.MathspeakUtil.closingFractionBrief],
+    ['CSFopenFracSbrief', sre.MathspeakUtil.openingFractionSbrief],
+    ['CSFcloseFracSbrief', sre.MathspeakUtil.closingFractionSbrief],
+    ['CSFoverFracSbrief', sre.MathspeakUtil.overFractionSbrief],
+    ['CSFvulgarFraction', sre.NumbersUtil.vulgarFraction],
+    ['CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction],
 
     // Radical function.
-    ['CSF', 'CSFopenRadicalVerbose', sre.MathspeakUtil.openingRadicalVerbose],
-    ['CSF', 'CSFcloseRadicalVerbose', sre.MathspeakUtil.closingRadicalVerbose],
-    ['CSF', 'CSFindexRadicalVerbose', sre.MathspeakUtil.indexRadicalVerbose],
-    ['CSF', 'CSFopenRadicalBrief', sre.MathspeakUtil.openingRadicalBrief],
-    ['CSF', 'CSFcloseRadicalBrief', sre.MathspeakUtil.closingRadicalBrief],
-    ['CSF', 'CSFindexRadicalBrief', sre.MathspeakUtil.indexRadicalBrief],
-    ['CSF', 'CSFopenRadicalSbrief', sre.MathspeakUtil.openingRadicalSbrief],
-    ['CSF', 'CSFindexRadicalSbrief', sre.MathspeakUtil.indexRadicalSbrief],
+    ['CSFopenRadicalVerbose', sre.MathspeakUtil.openingRadicalVerbose],
+    ['CSFcloseRadicalVerbose', sre.MathspeakUtil.closingRadicalVerbose],
+    ['CSFindexRadicalVerbose', sre.MathspeakUtil.indexRadicalVerbose],
+    ['CSFopenRadicalBrief', sre.MathspeakUtil.openingRadicalBrief],
+    ['CSFcloseRadicalBrief', sre.MathspeakUtil.closingRadicalBrief],
+    ['CSFindexRadicalBrief', sre.MathspeakUtil.indexRadicalBrief],
+    ['CSFopenRadicalSbrief', sre.MathspeakUtil.openingRadicalSbrief],
+    ['CSFindexRadicalSbrief', sre.MathspeakUtil.indexRadicalSbrief],
 
     // Sub- Superscript.
-    ['CSF', 'CSFsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose],
-    ['CSF', 'CSFsuperscriptBrief', sre.MathspeakUtil.superscriptBrief],
-    ['CSF', 'CSFsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose],
-    ['CSF', 'CSFsubscriptBrief', sre.MathspeakUtil.subscriptBrief],
-    ['CSF', 'CSFbaselineVerbose', sre.MathspeakUtil.baselineVerbose],
-    ['CSF', 'CSFbaselineBrief', sre.MathspeakUtil.baselineBrief],
+    ['CSFsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose],
+    ['CSFsuperscriptBrief', sre.MathspeakUtil.superscriptBrief],
+    ['CSFsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose],
+    ['CSFsubscriptBrief', sre.MathspeakUtil.subscriptBrief],
+    ['CSFbaselineVerbose', sre.MathspeakUtil.baselineVerbose],
+    ['CSFbaselineBrief', sre.MathspeakUtil.baselineBrief],
     // Tensor specific.
-    ['CSF', 'CSFleftsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose],
-    ['CSF', 'CSFleftsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose],
-    ['CSF', 'CSFrightsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose],
-    ['CSF', 'CSFrightsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose],
-    ['CSF', 'CSFleftsuperscriptBrief', sre.MathspeakUtil.superscriptBrief],
-    ['CSF', 'CSFleftsubscriptBrief', sre.MathspeakUtil.subscriptBrief],
-    ['CSF', 'CSFrightsuperscriptBrief', sre.MathspeakUtil.superscriptBrief],
-    ['CSF', 'CSFrightsubscriptBrief', sre.MathspeakUtil.subscriptBrief],
+    ['CSFleftsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose],
+    ['CSFleftsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose],
+    ['CSFrightsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose],
+    ['CSFrightsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose],
+    ['CSFleftsuperscriptBrief', sre.MathspeakUtil.superscriptBrief],
+    ['CSFleftsubscriptBrief', sre.MathspeakUtil.subscriptBrief],
+    ['CSFrightsuperscriptBrief', sre.MathspeakUtil.superscriptBrief],
+    ['CSFrightsubscriptBrief', sre.MathspeakUtil.subscriptBrief],
 
     // Over- Underscore.
-    ['CSF', 'CSFunderscript', sre.MathspeakUtil.nestedUnderscore],
-    ['CSF', 'CSFoverscript', sre.MathspeakUtil.nestedOverscore],
+    ['CSFunderscript', sre.MathspeakUtil.nestedUnderscore],
+    ['CSFoverscript', sre.MathspeakUtil.nestedOverscore],
 
-    ['CTF', 'CTFordinalCounter', sre.NumbersUtil.ordinalCounter],
-    ['CTF', 'CTFcontentIterator', sre.StoreUtil.contentIterator],
+    ['CTFordinalCounter', sre.NumbersUtil.ordinalCounter],
+    ['CTFcontentIterator', sre.StoreUtil.contentIterator],
 
     // Layout related.
-    ['CQF', 'CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple],
-    ['CSF', 'CSFRemoveParens', sre.MathspeakUtil.removeParens],
+    ['CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple],
+    ['CSFRemoveParens', sre.MathspeakUtil.removeParens],
 
     // Dummy.
-    ['CQF', 'CQFresetNesting', sre.MathspeakUtil.resetNestingDepth]
+    ['CQFresetNesting', sre.MathspeakUtil.resetNestingDepth]
   ],
   rules: [
     // TODO: This needs to be prioritized!

@@ -30,8 +30,8 @@ sre.SemanticTreeRules = {
   domain: 'default',
   functions: [
     // Context functions
-    ['CTF', 'CTFnodeCounter', sre.StoreUtil.nodeCounter],
-    ['CTF', 'CTFcontentIterator', sre.StoreUtil.contentIterator],
+    ['CTFnodeCounter', sre.StoreUtil.nodeCounter],
+    ['CTFcontentIterator', sre.StoreUtil.contentIterator],
   ],
   rules: [
     //

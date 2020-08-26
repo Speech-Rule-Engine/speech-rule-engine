@@ -142,10 +142,13 @@ sre.SpeechRuleContext.prototype.constructString = function(node, expr) {
  */
 sre.SpeechRuleContext.prototype.parse = function(functions) {
   for (var i = 0, func; func = functions[i]; i++) {
-    let kind = func[0];
+    let kind = func[0].slice(0, 3);
     let map = {CQF: this.customQueries,
       CSF: this.customStrings,
       CTF: this.contextFunctions};
-    map[kind].add(func[1], func[2]);
+    let call = map[kind];
+    if (call) {
+      call.add(func[0], func[1]);
+    }
   }
 };

@@ -30,10 +30,10 @@ goog.require('sre.StoreUtil');
 sre.EmacspeakRules = {
   domain: 'emacspeak',
   functions: [
-    ['CTF', 'CTFnodeCounter', sre.StoreUtil.nodeCounter],
-    ['CTF', 'CTFcontentIterator', sre.StoreUtil.contentIterator],
-    ['CQF', 'CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction],
-    ['CSF', 'CSFvulgarFraction', sre.NumbersUtil.vulgarFraction]
+    ['CTFnodeCounter', sre.StoreUtil.nodeCounter],
+    ['CTFcontentIterator', sre.StoreUtil.contentIterator],
+    ['CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction],
+    ['CSFvulgarFraction', sre.NumbersUtil.vulgarFraction]
   ],
   rules: [
     // Initial rule

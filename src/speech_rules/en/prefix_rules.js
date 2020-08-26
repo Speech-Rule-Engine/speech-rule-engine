@@ -30,7 +30,7 @@ sre.PrefixRules = {
   modality: 'prefix',
   domain: 'default',
   functions: [
-    ['CSF', 'CSFordinalPosition', sre.NumbersUtil.ordinalPosition],
+    ['CSFordinalPosition', sre.NumbersUtil.ordinalPosition],
   ],
   rules: [
     ['Rule',
