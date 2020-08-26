@@ -30,8 +30,8 @@ goog.require('sre.StoreUtil');
 sre.EmacspeakRules = {
   domain: 'emacspeak',
   functions: [
-    ['CTXF', 'CTXFnodeCounter', sre.StoreUtil.nodeCounter],
-    ['CTXF', 'CTXFcontentIterator', sre.StoreUtil.contentIterator],
+    ['CTF', 'CTFnodeCounter', sre.StoreUtil.nodeCounter],
+    ['CTF', 'CTFcontentIterator', sre.StoreUtil.contentIterator],
     ['CQF', 'CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction],
     ['CSF', 'CSFvulgarFraction', sre.NumbersUtil.vulgarFraction]
   ],
@@ -43,22 +43,22 @@ sre.EmacspeakRules = {
 
     ['Rule',
      'multrel', 'default',
-     '[t] "multirelation"; [m] children/* (sepFunc:CTXFcontentIterator)',
+     '[t] "multirelation"; [m] children/* (sepFunc:CTFcontentIterator)',
      'self::multirel'],
 
     ['Rule',
      'variable-equality', 'default',
      '[t] "equation sequence"; [m] children/* ' +
-     '(context:"part",ctxtFunc:CTXFnodeCounter,' +
-     'sepFunc:CTXFcontentIterator)',
+     '(context:"part",ctxtFunc:CTFnodeCounter,' +
+     'sepFunc:CTFcontentIterator)',
      'self::relseq[@role="equality"]', 'count(./children/*)>2',
      './children/punctuation[@role="ellipsis"]'], // Make that better!
 
     ['Rule',
      'multi-equality', 'default',
      '[t] "equation sequence"; [m] children/* ' +
-     '(context:"part",ctxtFunc:CTXFnodeCounter,' +
-     'sepFunc:CTXFcontentIterator)',
+     '(context:"part",ctxtFunc:CTFnodeCounter,' +
+     'sepFunc:CTFcontentIterator)',
      'self::relseq[@role="equality"]', 'count(./children/*)>2'],
 
     ['Rule',
@@ -84,7 +84,7 @@ sre.EmacspeakRules = {
 
     ['Rule',
      'relseq', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator)',
+     '[m] children/* (sepFunc:CTFcontentIterator)',
      'self::relseq'],
 
     ['Rule',
@@ -102,14 +102,14 @@ sre.EmacspeakRules = {
 
     ['Rule',
      'binary-operation', 'default',
-     '[p] (pause:100); [m] children/* (sepFunc:CTXFcontentIterator);' +
+     '[p] (pause:100); [m] children/* (sepFunc:CTFcontentIterator);' +
      ' [p] (pause:100);',
      'self::infixop'],
 
     ['Rule',
      'variable-addition', 'default',
      '[t] "sum with variable number of summands";' +
-     '[p] (pause:400); [m] children/* (sepFunc:CTXFcontentIterator)',
+     '[p] (pause:400); [m] children/* (sepFunc:CTFcontentIterator)',
      'self::infixop[@role="addition"]', 'count(children/*)>2',
      'children/punctuation[@role="ellipsis"]'], // Make that better!
 
@@ -248,12 +248,12 @@ sre.EmacspeakRules = {
     ['Rule',
      'matrix', 'default',
      '[t] "matrix"; [m] children/* ' +
-     '(ctxtFunc:CTXFnodeCounter,context:"row",pause:100)',
+     '(ctxtFunc:CTFnodeCounter,context:"row",pause:100)',
      'self::matrix'],
 
     ['Rule',
      'matrix-row', 'default',
-     '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"column",pause:100)',
+     '[m] children/* (ctxtFunc:CTFnodeCounter,context:"column",pause:100)',
      'self::row[@role="matrix"]'],
 
     ['Rule',
@@ -264,14 +264,14 @@ sre.EmacspeakRules = {
     ['Rule',
      'vector', 'default',
      '[t] "vector"; [m] children/* ' +
-     '(ctxtFunc:CTXFnodeCounter,context:"element",pause:100)',
+     '(ctxtFunc:CTFnodeCounter,context:"element",pause:100)',
      'self::vector'],
 
     // Cases rules.
     ['Rule',
      'cases', 'default',
      '[t] "case statement"; [m] children/* ' +
-     '(ctxtFunc:CTXFnodeCounter,context:"case",pause:100)',
+     '(ctxtFunc:CTFnodeCounter,context:"case",pause:100)',
      'self::cases'],
 
     ['Rule',
@@ -284,13 +284,13 @@ sre.EmacspeakRules = {
 
     ['Rule',
      'row', 'default',
-     '[m] ./* (ctxtFunc:CTXFnodeCounter,context:"column",pause:100)',
+     '[m] ./* (ctxtFunc:CTFnodeCounter,context:"column",pause:100)',
      'self::row'],
 
     ['Rule',
      'cases-end', 'default',
      '[t] "case statement"; ' +
-     '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"case",pause:100);' +
+     '[m] children/* (ctxtFunc:CTFnodeCounter,context:"case",pause:100);' +
      '[t] "end cases"',
      'self::cases', 'following-sibling::*'],
 
@@ -298,7 +298,7 @@ sre.EmacspeakRules = {
     ['Rule',
      'multiline', 'default',
      '[t] "multiline equation";' +
-     '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"line",pause:100)',
+     '[m] children/* (ctxtFunc:CTFnodeCounter,context:"line",pause:100)',
      'self::multiline'],
 
     ['Rule',
@@ -309,7 +309,7 @@ sre.EmacspeakRules = {
     ['Rule',
      'table', 'default',
      '[t] "multiline equation";' +
-     '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"row",pause:200)',
+     '[m] children/* (ctxtFunc:CTFnodeCounter,context:"row",pause:200)',
      'self::table'],
 
     ['Rule',

@@ -84,8 +84,8 @@ sre.MathspeakFrench = {
     ['CSF', 'CSFunderscript', sre.MathspeakUtil.nestedUnderscore],
     ['CSF', 'CSFoverscript', sre.MathspeakUtil.nestedOverscore],
 
-    ['CTXF', 'CTXFordinalCounter', sre.NumbersUtil.ordinalCounter],
-    ['CTXF', 'CTXFcontentIterator', sre.StoreUtil.contentIterator],
+    ['CTF', 'CTFordinalCounter', sre.NumbersUtil.ordinalCounter],
+    ['CTF', 'CTFcontentIterator', sre.StoreUtil.contentIterator],
 
     // Layout related.
     ['CQF', 'CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple],
@@ -296,7 +296,7 @@ sre.MathspeakFrench = {
 
     ['Rule',
      'binary-operation', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator);', 'self::infixop'],
+     '[m] children/* (sepFunc:CTFcontentIterator);', 'self::infixop'],
 
     // Implicit times is currently ignored!
     ['Rule',
@@ -584,7 +584,7 @@ sre.MathspeakFrench = {
     // Relations
     ['Rule',
      'relseq', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator)',
+     '[m] children/* (sepFunc:CTFcontentIterator)',
      'self::relseq'],
 
     ['Rule',
@@ -594,12 +594,12 @@ sre.MathspeakFrench = {
 
     ['Rule',
      'multi-equality', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator)',
+     '[m] children/* (sepFunc:CTFcontentIterator)',
      'self::relseq', '@role="equality"', 'count(./children/*)>2'],
 
     ['Rule',
      'multrel', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator)',
+     '[m] children/* (sepFunc:CTFcontentIterator)',
      'self::multirel'],
 
     // Subscripts
@@ -973,40 +973,40 @@ sre.MathspeakFrench = {
      'matrix', 'default',
      '[t] "début matrice"; [t] count(children/*);  [t] "par";' +
      '[t] count(children/*[1]/children/*); ' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée ");' +
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"rangée ");' +
      ' [t] "fin matrice"',
      'self::matrix'],
     ['Rule',
      'matrix', 'sbrief',
      '[t] "matrice"; [t] count(children/*);  [t] "par";' +
      '[t] count(children/*[1]/children/*); ' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée ");' +
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"rangée ");' +
      ' [t] "fin matrice"', 'self::matrix'],
     ['Aliases',
      'matrix', 'self::vector'],
 
     ['Rule',
      'matrix-row', 'default',
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"colonne");' +
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"colonne");' +
      '[p] (pause: 200)',
      'self::row'],
     ['Rule',
      'row-with-label', 'default',
      '[t] "avec étiquette"; [n] content/*[1]; ' +
      '[t] "fin étiquette"(pause: 200); ' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"colonne")',
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"colonne")',
      'self::row', 'content'],
     ['Rule',
      'row-with-label', 'brief',
      '[t] "étiquette"; [n] content/*[1]; ' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"colonne")',
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"colonne")',
      'self::row', 'content'],
     ['SpecializedRule',
      'row-with-label', 'brief', 'sbrief'],
     ['Rule',
      'row-with-text-label', 'sbrief',
      '[t] "étiquette"; [t] CSFRemoveParens;' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"colonne")',
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"colonne")',
      'self::row', 'content', 'name(content/cell/children/*[1])="text"'],
     ['Rule',
      'empty-row', 'default',
@@ -1028,28 +1028,28 @@ sre.MathspeakFrench = {
      'determinant', 'default',
      '[t] "début déterminant"; [t] count(children/*);  [t] "par";' +
      '[t] count(children/*[1]/children/*); [t] "";' +
-     ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée ");' +
+     ' [m] children/* (ctxtFunc:CTFordinalCounter,context:"rangée ");' +
      ' [t] "fin déterminant"',
      'self::matrix', '@role="determinant"'],
     ['SpecializedRule',
      'determinant', 'default', 'sbrief',
      '[t] "déterminant"; [t] count(children/*);  [t] "par";' +
      '[t] count(children/*[1]/children/*);' +
-     ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée ");' +
+     ' [m] children/* (ctxtFunc:CTFordinalCounter,context:"rangée ");' +
      ' [t] "fin déterminant"'],
 
     ['Rule',
      'determinant-simple', 'default',
      '[t] "début déterminant"; [t] count(children/*);  [t] "par";' +
      '[t] count(children/*[1]/children/*);' +
-     ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée",' +
+     ' [m] children/* (ctxtFunc:CTFordinalCounter,context:"rangée",' +
      'grammar:simpleDet); [t] "fin déterminant"',
      'self::matrix', '@role="determinant"', 'CQFdetIsSimple'],
     ['SpecializedRule',
      'determinant-simple', 'default', 'sbrief',
      '[t] "déterminant"; [t] count(children/*);  [t] "par";' +
      '[t] count(children/*[1]/children/*);' +
-     ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée",' +
+     ' [m] children/* (ctxtFunc:CTFordinalCounter,context:"rangée",' +
      'grammar:simpleDet); [t] "fin déterminant"'],
     ['Rule',
      'row-simple', 'default',
@@ -1058,11 +1058,11 @@ sre.MathspeakFrench = {
 
     ['Rule',
      'layout', 'default', '[t] "début tableau"; ' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée ");' +
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"rangée ");' +
      ' [t] "fin tableau"', 'self::table'],
     ['Rule',
      'layout', 'sbrief', '[t] "tableau"; ' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée ");' +
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"rangée ");' +
      ' [t] "fin tableau"', 'self::table'],
 
     ['Rule',
@@ -1082,12 +1082,12 @@ sre.MathspeakFrench = {
     ['Rule',
      'cases', 'default', '[t] "début tableau"; ' +
      '[n] content/*[1]; [t] "élargie";' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée ");' +
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"rangée ");' +
      ' [t] "fin tableau"', 'self::cases'],
     ['Rule',
      'cases', 'sbrief', '[t] "tableau"; ' +
      '[n] content/*[1]; [t] "élargie"; ' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée ");' +
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"rangée ");' +
      ' [t] "fin tableau"', 'self::cases'],
 
     // Multiline rules.

@@ -56,8 +56,8 @@ sre.NemethRules = {
     ['CSF', 'CSFunderscript', sre.MathspeakUtil.nestedUnderscore],
     ['CSF', 'CSFoverscript', sre.MathspeakUtil.nestedOverscore],
 
-    ['CTXF', 'CTXFordinalCounter', sre.NumbersUtil.ordinalCounter],
-    ['CTXF', 'CTXFcontentIterator', sre.StoreUtil.contentIterator],
+    ['CTF', 'CTFordinalCounter', sre.NumbersUtil.ordinalCounter],
+    ['CTF', 'CTFcontentIterator', sre.StoreUtil.contentIterator],
 
     // Layout related.
     ['CQF', 'CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple],
@@ -221,7 +221,7 @@ sre.NemethRules = {
 
     ['Rule',
      'binary-operation', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator);', 'self::infixop'],
+     '[m] children/* (sepFunc:CTFcontentIterator);', 'self::infixop'],
 
     // Implicit times is currently ignored!
     ['Rule',
@@ -410,7 +410,7 @@ sre.NemethRules = {
     // Relations
     ['Rule',
      'relseq', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator)',
+     '[m] children/* (sepFunc:CTFcontentIterator)',
      'self::relseq'],
 
     ['Rule',
@@ -420,12 +420,12 @@ sre.NemethRules = {
 
     ['Rule',
      'multi-equality', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator)',
+     '[m] children/* (sepFunc:CTFcontentIterator)',
      'self::relseq', '@role="equality"', 'count(./children/*)>2'],
 
     ['Rule',
      'multrel', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator)',
+     '[m] children/* (sepFunc:CTFcontentIterator)',
      'self::multirel'],
 
     // Subscripts
@@ -653,7 +653,7 @@ sre.NemethRules = {
     ['Rule',
      'row-with-label', 'default',
      '[t] "with Label"; [n] content/*[1]; [t] "EndLabel"(pause: 200); ' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"Column")',
      'self::row', 'content'],
     ['Rule',
      'empty-row', 'default',

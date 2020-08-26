@@ -145,7 +145,7 @@ sre.SpeechRuleContext.prototype.parse = function(functions) {
     let kind = func[0];
     let map = {CQF: this.customQueries,
       CSF: this.customStrings,
-      CTXF: this.contextFunctions};
+      CTF: this.contextFunctions};
     map[kind].add(func[1], func[2]);
   }
 };

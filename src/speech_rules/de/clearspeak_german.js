@@ -36,9 +36,9 @@ sre.ClearspeakGerman = {
   locale: 'de',
   domain: 'clearspeak',
   functions: [
-    ['CTXF', 'CTXFpauseSeparator', sre.StoreUtil.pauseSeparator],
-    ['CTXF', 'CTXFnodeCounter', sre.ClearspeakUtil.nodeCounter],
-    ['CTXF', 'CTXFcontentIterator', sre.StoreUtil.contentIterator],
+    ['CTF', 'CTFpauseSeparator', sre.StoreUtil.pauseSeparator],
+    ['CTF', 'CTFnodeCounter', sre.ClearspeakUtil.nodeCounter],
+    ['CTF', 'CTFcontentIterator', sre.StoreUtil.contentIterator],
     ['CSF', 'CSFvulgarFraction', sre.NumbersUtil.vulgarFraction],
     ['CQF', 'CQFvulgarFractionSmall', sre.ClearspeakUtil.isSmallVulgarFraction],
     ['CQF', 'CQFcellsSimple', sre.ClearspeakUtil.allCellsSimple],
@@ -1433,22 +1433,22 @@ sre.ClearspeakGerman = {
 
     ['Rule',
       'binary-operation', 'default',
-      '[m] children/* (sepFunc:CTXFcontentIterator);', 'self::infixop'],
+      '[m] children/* (sepFunc:CTFcontentIterator);', 'self::infixop'],
     ['Rule',
       'binary-operation', 'ImpliedTimes_MoreImpliedTimes',
-      '[m] children/* (sepFunc:CTXFcontentIterator);', 'self::infixop',
+      '[m] children/* (sepFunc:CTFcontentIterator);', 'self::infixop',
       '@role="implicit"'],
     ['Rule',
       'binary-operation-pause', 'default',
-      '[p] (pause:short); [m] children/* (sepFunc:CTXFcontentIterator);',
+      '[p] (pause:short); [m] children/* (sepFunc:CTFcontentIterator);',
       'self::infixop', '@role="implicit"', 'name(children/*[1])="appl"'],
     ['Rule',
       'binary-operation-pause', 'default',
-      '[m] children/* (sepFunc:CTXFcontentIterator); [p] (pause:short)',
+      '[m] children/* (sepFunc:CTFcontentIterator); [p] (pause:short)',
       'self::infixop', '@role="implicit"', 'name(children/*[last()])="appl"'],
     ['Rule',
       'binary-operation-pause', 'default',
-      '[p] (pause:short); [m] children/* (sepFunc:CTXFcontentIterator);' +
+      '[p] (pause:short); [m] children/* (sepFunc:CTFcontentIterator);' +
      ' [p] (pause:short)',
       'self::infixop', '@role="implicit"', 'name(children/*[1])="appl"',
       'name(children/*[last()])="appl"'],
@@ -1503,12 +1503,12 @@ sre.ClearspeakGerman = {
     // Relations
     ['Rule',
       'relseq', 'default',
-      '[m] children/* (sepFunc:CTXFcontentIterator)',
+      '[m] children/* (sepFunc:CTFcontentIterator)',
       'self::relseq'],
 
     ['Rule',
       'multrel', 'default',
-      '[m] children/* (sepFunc:CTXFcontentIterator)',
+      '[m] children/* (sepFunc:CTFcontentIterator)',
       'self::multirel'],
 
     // Named sets (They need additional dummy constraints for ordering!)
@@ -1650,7 +1650,7 @@ sre.ClearspeakGerman = {
       'matrix', 'default',
       '[t] "die" (grammar:article); [t] count(children/*);  [t] "mal";' +
      '[t] count(children/*[1]/children/*); [t] "Matrize"; [p] (pause:long);' +
-     ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Zeile-:");' +
+     ' [m] children/* (ctxtFunc:CTFnodeCounter,context:"Zeile-:");' +
      ' [p] (pause:long)',
       'self::matrix'],
     ['Rule',
@@ -1658,7 +1658,7 @@ sre.ClearspeakGerman = {
       '[t] "die" (grammar:article); [t] count(children/*);  [t] "mal";' +
      '[t] count(children/*[1]/children/*); [t] "Matrize";' +
      ' [p] (pause:long); [m] children/* ' +
-     '(ctxtFunc:CTXFnodeCounter,context:"Zeile-:",grammar:simpleDet);' +
+     '(ctxtFunc:CTFnodeCounter,context:"Zeile-:",grammar:simpleDet);' +
      ' [p] (pause:long)',
       'self::matrix', 'count(children/*)<4',
       'count(children/*[1]/children/*)<4', 'CQFcellsSimple'],
@@ -1673,7 +1673,7 @@ sre.ClearspeakGerman = {
       '[t] "die" (grammar:article); [t] "Determinante der"; ' +
      '[t] count(children/*); [t] "mal"; [t] count(children/*[1]/children/*);' +
      ' [t] "Matrize"; [p] (pause:long); [m] children/* ' +
-     '(ctxtFunc:CTXFnodeCounter,context:"Zeile-:",grammar:simpleDet);' +
+     '(ctxtFunc:CTFnodeCounter,context:"Zeile-:",grammar:simpleDet);' +
      ' [p] (pause:long)',
       'self::matrix', '@role="determinant"', 'count(children/*)<4',
       'CQFcellsSimple'],
@@ -1682,7 +1682,7 @@ sre.ClearspeakGerman = {
       '[t] "die" (grammar:article); [t] "Determinante der"; ' +
      '[t] count(children/*); [t] "mal"; [t] count(children/*[1]/children/*);' +
      ' [t] "Matrize"; [p] (pause:long); [m] children/* ' +
-     '(ctxtFunc:CTXFnodeCounter,context:"Zeile-:");' +
+     '(ctxtFunc:CTFnodeCounter,context:"Zeile-:");' +
      ' [p] (pause:long)',
       'self::matrix', '@role="determinant"'],
     // Vector
@@ -1691,7 +1691,7 @@ sre.ClearspeakGerman = {
       '[t] "die" (grammar:article); [t] count(children/*);  [t] "mal";' +
      '[t] count(children/*[1]/children/*); [t] "Spaltenmatrize"; ' +
      '[p] (pause:long); [m] children/* ' +
-     '(ctxtFunc:CTXFnodeCounter,context:"Zeile-:",grammar:simpleDet);' +
+     '(ctxtFunc:CTFnodeCounter,context:"Zeile-:",grammar:simpleDet);' +
      ' [p] (pause:long)',
       'self::vector'],
     ['SpecializedRule',
@@ -1701,7 +1701,7 @@ sre.ClearspeakGerman = {
       '[t] "die" (grammar:article); [t] count(children/*);  [t] "mal";' +
      '[t] count(children/*[1]/children/*); [t] "Spaltenmatrize"; ' +
      '[p] (pause:long); [m] children/* ' +
-     '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
+     '(sepFunc:CTFpauseSeparator,separator:"short",grammar:simpleDet);' +
      ' [p] (pause:long)',
       'self::vector', 'count(children/*)<4', 'CQFcellsSimple',
       '@role!="squarematrix"'],
@@ -1710,7 +1710,7 @@ sre.ClearspeakGerman = {
       '[t] "die" (grammar:article); [t] count(children/*);  [t] "mal";' +
      '[t] count(children/*[1]/children/*); [t] "Spaltenmatrize"; ' +
      '[p] (pause:long); [m] children/* ' +
-     '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
+     '(sepFunc:CTFpauseSeparator,separator:"short",grammar:simpleDet);' +
      ' [p] (pause:long)',
       'self::vector'],
 
@@ -1719,7 +1719,7 @@ sre.ClearspeakGerman = {
       '[t] "die" (grammar:article); [t] count(children/*);  [t] "mal";' +
      '[t] count(children/*[1]/children/*); [t] "Zeilenmatrize"; ' +
      '[p] (pause:long); [m] children/*[1]/children/* ' +
-     '(ctxtFunc:CTXFnodeCounter,context:"Spalte-:",grammar:simpleDet);' +
+     '(ctxtFunc:CTFnodeCounter,context:"Spalte-:",grammar:simpleDet);' +
      ' [p] (pause:long)',
       'self::matrix', '@role="rowvector"'],
     ['SpecializedRule',
@@ -1730,7 +1730,7 @@ sre.ClearspeakGerman = {
       '[t] "die" (grammar:article); [t] count(children/*);  [t] "mal";' +
      '[t] count(children/*[1]/children/*); [t] "Zeilenmatrize"; ' +
      '[p] (pause:long); [m] children/*[1]/children/* ' +
-     '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
+     '(sepFunc:CTFpauseSeparator,separator:"short",grammar:simpleDet);' +
      ' [p] (pause:long)',
       'self::matrix', '@role="rowvector"', 'count(children/*[1]/children/*)<4',
       'CQFcellsSimple'],
@@ -1739,18 +1739,18 @@ sre.ClearspeakGerman = {
       '[t] "die" (grammar:article); [t] count(children/*);  [t] "mal";' +
      '[t] count(children/*[1]/children/*); [t] "Zeilenmatrize"; ' +
      '[p] (pause:long); [m] children/*[1]/children/* ' +
-     '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
+     '(sepFunc:CTFpauseSeparator,separator:"short",grammar:simpleDet);' +
      ' [p] (pause:long)',
       'self::matrix', '@role="rowvector"'],
 
 
     ['Rule',
       'matrix-row-simple', 'default',
-      '[m] children/* (sepFunc:CTXFpauseSeparator,separator:"short")',
+      '[m] children/* (sepFunc:CTFpauseSeparator,separator:"short")',
       'self::row', 'contains(@grammar, "simpleDet")'],
     ['Rule',
       'matrix-row-simple', 'Matrix_SilentColNum',
-      '[m] children/* (sepFunc:CTXFpauseSeparator,separator:"short")',
+      '[m] children/* (sepFunc:CTFpauseSeparator,separator:"short")',
       'self::row'],
     ['Rule',
       'line-simple', 'default',
@@ -1758,8 +1758,8 @@ sre.ClearspeakGerman = {
       'self::line', 'contains(@grammar, "simpleDet")'],
     ['Rule',
       'matrix-row', 'default',
-      '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"Spalte-,- ",' +
-     'sepFunc:CTXFpauseSeparator,separator:"medium"); [p] (pause:long)',
+      '[m] children/* (ctxtFunc:CTFnodeCounter,context:"Spalte-,- ",' +
+     'sepFunc:CTFpauseSeparator,separator:"medium"); [p] (pause:long)',
       'self::row'],
     ['SpecializedRule',
       'matrix-row', 'default', 'Matrix_SpeakColNum'],
@@ -1786,7 +1786,7 @@ sre.ClearspeakGerman = {
       '[t] "der" (grammar:article); [t] count(children/*);  [t] "mal";' +
      '[t] count(children/*[1]/children/*); [t] "Spaltenvektor"; ' +
      '[p] (pause:long); [m] children/* ' +
-     '(ctxtFunc:CTXFnodeCounter,context:"Zeile-:",grammar:simpleDet); ' +
+     '(ctxtFunc:CTFnodeCounter,context:"Zeile-:",grammar:simpleDet); ' +
      '[p] (pause:long)',
       'self::vector'],
     ['SpecializedRule',
@@ -1796,7 +1796,7 @@ sre.ClearspeakGerman = {
       '[t] "der" (grammar:article); [t] count(children/*);  [t] "mal"; ' +
      '[t] count(children/*[1]/children/*); [t] "Spaltenvektor"; ' +
      '[p] (pause:long); [m] children/* ' +
-     '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet); ' +
+     '(sepFunc:CTFpauseSeparator,separator:"short",grammar:simpleDet); ' +
      '[p] (pause:long)',
       'self::vector', 'count(children/*)<4', 'CQFcellsSimple'],
     ['SpecializedRule',
@@ -1808,7 +1808,7 @@ sre.ClearspeakGerman = {
       '[t] "der" (grammar:article); [t] count(children/*);  [t] "mal";' +
      '[t] count(children/*[1]/children/*); [t] "Zeilenvektor";' +
      ' [p] (pause:long); [m] children/*[1]/children/* ' +
-     '(ctxtFunc:CTXFnodeCounter,context:"Spalte-:",grammar:simpleDet);' +
+     '(ctxtFunc:CTFnodeCounter,context:"Spalte-:",grammar:simpleDet);' +
      ' [p] (pause:long)',
       'self::matrix', '@role="rowvector"'],
     ['SpecializedRule',
@@ -1818,7 +1818,7 @@ sre.ClearspeakGerman = {
       '[t] "der" (grammar:article); [t] count(children/*);  [t] "mal";' +
      '[t] count(children/*[1]/children/*); [t] "Zeilenvektor";' +
      ' [p] (pause:long); [m] children/*[1]/children/* ' +
-     '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
+     '(sepFunc:CTFpauseSeparator,separator:"short",grammar:simpleDet);' +
      ' [p] (pause:long)',
       'self::matrix', '@role="rowvector"', 'count(children/*[1]/children/*)<4',
       'CQFcellsSimple'],
@@ -1887,8 +1887,8 @@ sre.ClearspeakGerman = {
     ['Rule',
       'lines', 'default',
       '[p] (pause:short);' +
-     ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Zeile-:",' +
-     'sepFunc:CTXFpauseSeparator,separator:"long");' +
+     ' [m] children/* (ctxtFunc:CTFnodeCounter,context:"Zeile-:",' +
+     'sepFunc:CTFpauseSeparator,separator:"long");' +
      ' [p] (pause:long)', 'self::table'],
     ['Aliases',
       'lines', 'self::multiline'],
@@ -1898,17 +1898,17 @@ sre.ClearspeakGerman = {
       '[n] children/*[1]', 'self::line'],
     ['Rule',
       'row-medium', 'default',
-      '[m] children/* (sepFunc:CTXFpauseSeparator,separator:"medium")',
+      '[m] children/* (sepFunc:CTFpauseSeparator,separator:"medium")',
       'self::row', '@role="table"'],
     ['Aliases', 'row-medium', 'self::row', '@role="cases"'],
     ['Rule',
       'row-long', 'MultiLinePausesBetweenColumns_Long',
-      '[m] children/* (sepFunc:CTXFpauseSeparator,separator:"long")',
+      '[m] children/* (sepFunc:CTFpauseSeparator,separator:"long")',
       'self::row', '@role="table"'],
     ['Aliases', 'row-long', 'self::row', '@role="cases"'],
     ['Rule',
       'row-short', 'MultiLinePausesBetweenColumns_Short',
-      '[m] children/* (sepFunc:CTXFpauseSeparator,separator:"short")',
+      '[m] children/* (sepFunc:CTFpauseSeparator,separator:"short")',
       'self::row', '@role="table"'],
     ['Aliases', 'row-short', 'self::row', '@role="cases"'],
     // TODO: Get rid of blank!
@@ -1923,8 +1923,8 @@ sre.ClearspeakGerman = {
     ['Rule',
       'cases', 'default',
       '[p] (pause:short); ' +
-     ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Fall-:",' +
-     'sepFunc:CTXFpauseSeparator,separator:"long");' +
+     ' [m] children/* (ctxtFunc:CTFnodeCounter,context:"Fall-:",' +
+     'sepFunc:CTFpauseSeparator,separator:"long");' +
      ' [p] (pause:long)', 'self::cases'],
 
     // Label Preferences:
@@ -1942,8 +1942,8 @@ sre.ClearspeakGerman = {
     ['Rule',
       'lines-cases', 'MultiLineLabel_Case',
       '[p] (pause:short);' +
-     ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Fall-:",' +
-     'sepFunc:CTXFpauseSeparator,separator:"long");' +
+     ' [m] children/* (ctxtFunc:CTFnodeCounter,context:"Fall-:",' +
+     'sepFunc:CTFpauseSeparator,separator:"long");' +
      ' [p] (pause:long)', 'self::table'],
     ['Aliases',
       'lines-cases', 'self::multiline'],
@@ -1962,8 +1962,8 @@ sre.ClearspeakGerman = {
     ['Rule',
       'lines-equations', 'MultiLineLabel_Equation',
       '[p] (pause:short);' +
-     ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Gleichung-:",' +
-     'sepFunc:CTXFpauseSeparator,separator:"long");' +
+     ' [m] children/* (ctxtFunc:CTFnodeCounter,context:"Gleichung-:",' +
+     'sepFunc:CTFpauseSeparator,separator:"long");' +
      ' [p] (pause:long)', 'self::table'],
     ['Aliases',
       'lines-equations', 'self::multiline'],
@@ -1982,8 +1982,8 @@ sre.ClearspeakGerman = {
     ['Rule',
       'lines-steps', 'MultiLineLabel_Step',
       '[p] (pause:short);' +
-     ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Schritt-:",' +
-     'sepFunc:CTXFpauseSeparator,separator:"long");' +
+     ' [m] children/* (ctxtFunc:CTFnodeCounter,context:"Schritt-:",' +
+     'sepFunc:CTFpauseSeparator,separator:"long");' +
      ' [p] (pause:long)', 'self::table'],
     ['Aliases',
       'lines-steps', 'self::multiline'],
@@ -2002,8 +2002,8 @@ sre.ClearspeakGerman = {
     ['Rule',
       'lines-rows', 'MultiLineLabel_Row',
       '[p] (pause:short);' +
-     ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Zeile-:",' +
-     'sepFunc:CTXFpauseSeparator,separator:"long");' +
+     ' [m] children/* (ctxtFunc:CTFnodeCounter,context:"Zeile-:",' +
+     'sepFunc:CTFpauseSeparator,separator:"long");' +
      ' [p] (pause:long)', 'self::table'],
     ['Aliases',
       'lines-rows', 'self::multiline'],
@@ -2022,8 +2022,8 @@ sre.ClearspeakGerman = {
     ['Rule',
       'lines-constraints', 'MultiLineLabel_Constraint',
       '[p] (pause:short);' +
-     ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Bedingung-:",' +
-     'sepFunc:CTXFpauseSeparator,separator:"long");' +
+     ' [m] children/* (ctxtFunc:CTFnodeCounter,context:"Bedingung-:",' +
+     'sepFunc:CTFpauseSeparator,separator:"long");' +
      ' [p] (pause:long)', 'self::table'],
     ['Aliases',
       'lines-constraints', 'self::multiline'],
@@ -2032,7 +2032,7 @@ sre.ClearspeakGerman = {
     ['Rule',
       'lines-none', 'MultiLineLabel_None',
       '[p] (pause:short);' +
-     ' [m] children/* (sepFunc:CTXFpauseSeparator,separator:"long");' +
+     ' [m] children/* (sepFunc:CTFpauseSeparator,separator:"long");' +
      ' [p] (pause:long)', 'self::table',
       'contains(@grammar, "layoutSummary")'],
     ['Aliases', 'lines-none', 'self::multiline',

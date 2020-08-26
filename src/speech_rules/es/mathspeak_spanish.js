@@ -77,9 +77,9 @@ sre.MathspeakSpanish = {
     ['CSF', 'CSFunderscript', sre.MathspeakUtil.nestedUnderscore],
     ['CSF', 'CSFoverscript', sre.MathspeakUtil.nestedOverscore],
 
-    ['CTXF', 'CTXFordinalCounter', sre.MathspeakSpanishUtil.ordinalCounter],
-    ['CTXF', 'CTXFcontentIterator', sre.StoreUtil.contentIterator],
-    ['CTXF', 'CTXFunitMultipliers', sre.UnitUtil.unitMultipliers],
+    ['CTF', 'CTFordinalCounter', sre.MathspeakSpanishUtil.ordinalCounter],
+    ['CTF', 'CTFcontentIterator', sre.StoreUtil.contentIterator],
+    ['CTF', 'CTFunitMultipliers', sre.UnitUtil.unitMultipliers],
 
     // Layout related.
     ['CQF', 'CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple],
@@ -280,7 +280,7 @@ sre.MathspeakSpanish = {
 
     ['Rule',
      'binary-operation', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator);', 'self::infixop'],
+     '[m] children/* (sepFunc:CTFcontentIterator);', 'self::infixop'],
 
     // Implicit times is currently ignored!
     ['Rule',
@@ -560,7 +560,7 @@ sre.MathspeakSpanish = {
     // Relations
     ['Rule',
      'relseq', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator)',
+     '[m] children/* (sepFunc:CTFcontentIterator)',
      'self::relseq'],
 
     ['Rule',
@@ -570,12 +570,12 @@ sre.MathspeakSpanish = {
 
     ['Rule',
      'multi-equality', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator)',
+     '[m] children/* (sepFunc:CTFcontentIterator)',
      'self::relseq', '@role="equality"', 'count(./children/*)>2'],
 
     ['Rule',
      'multrel', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator)',
+     '[m] children/* (sepFunc:CTFcontentIterator)',
      'self::multirel'],
 
     // Subscripts
@@ -942,40 +942,40 @@ sre.MathspeakSpanish = {
      'matrix', 'default',
      '[t] "empezar matriz"; [t] count(children/*);  [t] "por";' +
      '[t] count(children/*[1]/children/*); ' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"fila ");' +
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"fila ");' +
      ' [t] "finalizar matriz"',
      'self::matrix'],
     ['Rule',
      'matrix', 'sbrief',
      '[t] "matriz"; [t] count(children/*);  [t] "por";' +
      '[t] count(children/*[1]/children/*); ' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:" ");' +
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:" ");' +
      ' [t] "finalizar matriz"', 'self::matrix'],
     ['Aliases',
      'matrix', 'self::vector'],
 
     ['Rule',
      'matrix-row', 'default',
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"columna");' +
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"columna");' +
      '[p] (pause: 200)',
      'self::row'],
     ['Rule',
      'row-with-label', 'default',
      '[t] "con etiqueta"; [n] content/*[1]; ' +
      '[t] "finalizar etiqueta" (pause: 200); ' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"columna")',
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"columna")',
      'self::row', 'content'],
     ['Rule',
      'row-with-label', 'brief',
      '[t] "etiqueta"; [n] content/*[1]; ' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"columna")',
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"columna")',
      'self::row', 'content'],
     ['SpecializedRule',
      'row-with-label', 'brief', 'sbrief'],
     ['Rule',
      'row-with-text-label', 'sbrief',
      '[t] "etiqueta"; [t] CSFRemoveParens;' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"columna")',
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"columna")',
      'self::row', 'content', 'name(content/cell/children/*[1])="text"'],
     ['Rule',
      'empty-row', 'default',
@@ -994,28 +994,28 @@ sre.MathspeakSpanish = {
      'determinant', 'default',
      '[t] "empezar determinante"; [t] count(children/*);  [t] "por";' +
      '[t] count(children/*[1]/children/*);' +
-     ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"fila ");' +
+     ' [m] children/* (ctxtFunc:CTFordinalCounter,context:"fila ");' +
      ' [t] "finalizar determinante"',
      'self::matrix', '@role="determinant"'],
     ['SpecializedRule',
      'determinant', 'default', 'sbrief',
      '[t] "determinante"; [t] count(children/*);  [t] "por";' +
      '[t] count(children/*[1]/children/*);' +
-     ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"fila ");' +
+     ' [m] children/* (ctxtFunc:CTFordinalCounter,context:"fila ");' +
      ' [t] "finalizar determinante"'],
 
     ['Rule',
      'determinant-simple', 'default',
      '[t] "empezar determinante"; [t] count(children/*);  [t] "por";' +
      '[t] count(children/*[1]/children/*);' +
-     ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"fila",' +
+     ' [m] children/* (ctxtFunc:CTFordinalCounter,context:"fila",' +
      'grammar:simpleDet); [t] "finalizar determinante"',
      'self::matrix', '@role="determinant"', 'CQFdetIsSimple'],
     ['SpecializedRule',
      'determinant-simple', 'default', 'sbrief',
      '[t] "determinante"; [t] count(children/*);  [t] "por";' +
      '[t] count(children/*[1]/children/*);' +
-     ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"fila",' +
+     ' [m] children/* (ctxtFunc:CTFordinalCounter,context:"fila",' +
      'grammar:simpleDet); [t] "finalizar determinante"'],
     ['Rule',
      'row-simple', 'default',
@@ -1024,11 +1024,11 @@ sre.MathspeakSpanish = {
 
     ['Rule',
      'layout', 'default', '[t] "empezar esquema"; ' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"fila ");' +
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"fila ");' +
      ' [t] "finalizar esquema"', 'self::table'],
     ['Rule',
      'layout', 'sbrief', '[t] "esquema"; ' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"fila ");' +
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"fila ");' +
      ' [t] "finalizar esquema"', 'self::table'],
 
     ['Rule',
@@ -1047,12 +1047,12 @@ sre.MathspeakSpanish = {
     ['Rule',
      'cases', 'default', '[t] "empezar esquema"; ' +
      '[n] content/*[1]; [t] "alargada"; ' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"fila ");' +
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"fila ");' +
      ' [t] "finalizar esquema"', 'self::cases'],
     ['Rule',
      'cases', 'sbrief', '[t] "esquema"; ' +
      '[n] content/*[1]; [t] "alargada"; ' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"fila ");' +
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"fila ");' +
      ' [t] "finalizar esquema"', 'self::cases'],
 
     // Multiline rules.
@@ -1208,25 +1208,25 @@ sre.MathspeakSpanish = {
     // TODO: Write test for default.
     ['Rule',
      'unit-combine', 'default',
-     '[m] children/* (sepFunc:CTXFunitMultipliers)',
+     '[m] children/* (sepFunc:CTFunitMultipliers)',
      'self::infixop', '@role="unit"'],
     // TODO: Go over that again after refactoring of Units.
     ['Rule',
      'unit-combine-mult', 'default',
-     '[m] children/* (sepFunc:CTXFunitMultipliers);',
+     '[m] children/* (sepFunc:CTFunitMultipliers);',
      'self::infixop', '@role="multiplication" or @role="implicit"',
      'children/*[@role="unit"]'],
     ['Rule',
      'unit-combiner-singular', 'default',
      '[n] children/*[1]; [t] "por"; [m] children/*[position()>1] ' +
-     '(grammar:!singularUnit, sepFunc:CTXFunitMultipliers)',
+     '(grammar:!singularUnit, sepFunc:CTFunitMultipliers)',
      'self::infixop', '@role="unit"', 'name(children/*[1])!="number"',
      'contains(@grammar, "singularUnit")', 'count(children/*)>1'],
     ['Rule',
      'unit-combine-singular-first', 'default',
      '[n] children/*[1]; [n] children/*[2] (grammar:singularUnit); ' +
      '[t] "por"; ' +
-     '[m] children/*[position()>2] (sepFunc:CTXFunitMultipliers)',
+     '[m] children/*[position()>2] (sepFunc:CTFunitMultipliers)',
      'self::infixop', '@role="unit"', 'name(children/*[1])="number"',
      'children/*[1][text()=1]'],
     ['Rule',

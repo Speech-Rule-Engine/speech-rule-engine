@@ -32,9 +32,9 @@ sre.ClearspeakFrench = {
   locale: 'fr',
   domain: 'clearspeak',
   functions: [
-    ['CTXF', 'CTXFpauseSeparator', sre.StoreUtil.pauseSeparator],
-    ['CTXF', 'CTXFnodeCounter', sre.ClearspeakUtil.nodeCounter],
-    ['CTXF', 'CTXFcontentIterator', sre.StoreUtil.contentIterator],
+    ['CTF', 'CTFpauseSeparator', sre.StoreUtil.pauseSeparator],
+    ['CTF', 'CTFnodeCounter', sre.ClearspeakUtil.nodeCounter],
+    ['CTF', 'CTFcontentIterator', sre.StoreUtil.contentIterator],
     ['CSF', 'CSFvulgarFraction', sre.NumbersUtil.vulgarFraction],
     ['CQF', 'CQFvulgarFractionSmall', sre.ClearspeakUtil.isSmallVulgarFraction],
     ['CQF', 'CQFcellsSimple', sre.ClearspeakUtil.allCellsSimple],
@@ -1317,22 +1317,22 @@ sre.ClearspeakFrench = {
 
     ['Rule',
      'binary-operation', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator);', 'self::infixop'],
+     '[m] children/* (sepFunc:CTFcontentIterator);', 'self::infixop'],
     ['Rule',
      'binary-operation', 'ImpliedTimes_MoreImpliedTimes',
-     '[m] children/* (sepFunc:CTXFcontentIterator);', 'self::infixop',
+     '[m] children/* (sepFunc:CTFcontentIterator);', 'self::infixop',
      '@role="implicit"'],
     ['Rule',
      'binary-operation-pause', 'default',
-     '[p] (pause:short); [m] children/* (sepFunc:CTXFcontentIterator);',
+     '[p] (pause:short); [m] children/* (sepFunc:CTFcontentIterator);',
      'self::infixop', '@role="implicit"', 'name(children/*[1])="appl"'],
     ['Rule',
      'binary-operation-pause', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator); [p] (pause:short)',
+     '[m] children/* (sepFunc:CTFcontentIterator); [p] (pause:short)',
      'self::infixop', '@role="implicit"', 'name(children/*[last()])="appl"'],
     ['Rule',
      'binary-operation-pause', 'default',
-     '[p] (pause:short); [m] children/* (sepFunc:CTXFcontentIterator);' +
+     '[p] (pause:short); [m] children/* (sepFunc:CTFcontentIterator);' +
      ' [p] (pause:short)',
      'self::infixop', '@role="implicit"', 'name(children/*[1])="appl"',
      'name(children/*[last()])="appl"'],
@@ -1387,12 +1387,12 @@ sre.ClearspeakFrench = {
     // Relations
     ['Rule',
      'relseq', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator)',
+     '[m] children/* (sepFunc:CTFcontentIterator)',
      'self::relseq'],
 
     ['Rule',
      'multrel', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator)',
+     '[m] children/* (sepFunc:CTFcontentIterator)',
      'self::multirel'],
 
     // Named sets (They need additional dummy constraints for ordering!)
@@ -1532,7 +1532,7 @@ sre.ClearspeakFrench = {
      'matrix', 'default',
      '[t] "la matrice de dimension"; [t] count(children/*);  [t] "par";' +
      '[t] count(children/*[1]/children/*); [p] (pause:long);' +
-     ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"rangée-:");' +
+     ' [m] children/* (ctxtFunc:CTFnodeCounter,context:"rangée-:");' +
      ' [p] (pause:long)',
      'self::matrix'],
     ['Rule',
@@ -1540,7 +1540,7 @@ sre.ClearspeakFrench = {
      '[t] "la matrice de dimension"; [t] count(children/*);  [t] "par";' +
      '[t] count(children/*[1]/children/*); ' +
      ' [p] (pause:long); [m] children/* ' +
-     '(ctxtFunc:CTXFnodeCounter,context:"rangée-:",grammar:simpleDet);' +
+     '(ctxtFunc:CTFnodeCounter,context:"rangée-:",grammar:simpleDet);' +
      ' [p] (pause:long)',
      'self::matrix', 'count(children/*)<4',
      'count(children/*[1]/children/*)<4', 'CQFcellsSimple'],
@@ -1555,7 +1555,7 @@ sre.ClearspeakFrench = {
      '[t] "le déterminant de la matrice de dimension"; ' +
      '[t] count(children/*); [t] "par"; [t] count(children/*[1]/children/*);' +
      ' [p] (pause:long); [m] children/* ' +
-     '(ctxtFunc:CTXFnodeCounter,context:"rangée-:",grammar:simpleDet);' +
+     '(ctxtFunc:CTFnodeCounter,context:"rangée-:",grammar:simpleDet);' +
      ' [p] (pause:long)',
      'self::matrix', '@role="determinant"', 'count(children/*)<4',
      'CQFcellsSimple'],
@@ -1564,7 +1564,7 @@ sre.ClearspeakFrench = {
      '[t] "le déterminant de la matrice de dimension"; ' +
      '[t] count(children/*);  [t] "par"; ' +
      '[t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* ' +
-     '(ctxtFunc:CTXFnodeCounter,context:"rangée-:");' +
+     '(ctxtFunc:CTFnodeCounter,context:"rangée-:");' +
      ' [p] (pause:long)',
      'self::matrix', '@role="determinant"'],
     // Vector
@@ -1573,7 +1573,7 @@ sre.ClearspeakFrench = {
      '[t] "la matrice colonne de dimension"; [t] count(children/*); ' +
      '[t] "par"; [t] count(children/*[1]/children/*); ' +
      '[p] (pause:long); [m] children/* ' +
-     '(ctxtFunc:CTXFnodeCounter,context:"rangée-:",grammar:simpleDet);' +
+     '(ctxtFunc:CTFnodeCounter,context:"rangée-:",grammar:simpleDet);' +
      ' [p] (pause:long)',
      'self::vector'],
     ['SpecializedRule',
@@ -1583,7 +1583,7 @@ sre.ClearspeakFrench = {
      '[t] "la matrice colonne de dimension"; [t] count(children/*); ' +
      '[t] "par"; [t] count(children/*[1]/children/*); ' +
      '[p] (pause:long); [m] children/* ' +
-     '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
+     '(sepFunc:CTFpauseSeparator,separator:"short",grammar:simpleDet);' +
      ' [p] (pause:long)',
      'self::vector', 'count(children/*)<4', 'CQFcellsSimple',
      '@role!="squarematrix"'],
@@ -1592,7 +1592,7 @@ sre.ClearspeakFrench = {
      '[t] "la matrice colonne de dimension"; [t] count(children/*); ' +
      '[t] "par"; [t] count(children/*[1]/children/*); ' +
      '[p] (pause:long); [m] children/* ' +
-     '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
+     '(sepFunc:CTFpauseSeparator,separator:"short",grammar:simpleDet);' +
      ' [p] (pause:long)',
      'self::vector'],
 
@@ -1601,7 +1601,7 @@ sre.ClearspeakFrench = {
      '[t] "la matrice ligne de dimension"; [t] count(children/*); ' +
      '[t] "par"; [t] count(children/*[1]/children/*); ' +
      '[p] (pause:long); [m] children/*[1]/children/* ' +
-     '(ctxtFunc:CTXFnodeCounter,context:"colonne-:",grammar:simpleDet);' +
+     '(ctxtFunc:CTFnodeCounter,context:"colonne-:",grammar:simpleDet);' +
      ' [p] (pause:long)',
      'self::matrix', '@role="rowvector"'],
     ['SpecializedRule',
@@ -1612,7 +1612,7 @@ sre.ClearspeakFrench = {
      '[t] "la matrice ligne de dimension"; [t] count(children/*); ' +
      '[t] "par"; [t] count(children/*[1]/children/*); ' +
      '[p] (pause:long); [m] children/*[1]/children/* ' +
-     '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
+     '(sepFunc:CTFpauseSeparator,separator:"short",grammar:simpleDet);' +
      ' [p] (pause:long)',
      'self::matrix', '@role="rowvector"', 'count(children/*[1]/children/*)<4',
      'CQFcellsSimple'],
@@ -1621,18 +1621,18 @@ sre.ClearspeakFrench = {
      '[t] "la matrice ligne de dimension"; [t] count(children/*); ' +
      '[t] "par"; [t] count(children/*[1]/children/*); ' +
      '[p] (pause:long); [m] children/*[1]/children/* ' +
-     '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
+     '(sepFunc:CTFpauseSeparator,separator:"short",grammar:simpleDet);' +
      ' [p] (pause:long)',
      'self::matrix', '@role="rowvector"'],
 
 
     ['Rule',
      'matrix-row-simple', 'default',
-     '[m] children/* (sepFunc:CTXFpauseSeparator,separator:"short")',
+     '[m] children/* (sepFunc:CTFpauseSeparator,separator:"short")',
      'self::row', 'contains(@grammar, "simpleDet")'],
     ['Rule',
      'matrix-row-simple', 'Matrix_SilentColNum',
-     '[m] children/* (sepFunc:CTXFpauseSeparator,separator:"short")',
+     '[m] children/* (sepFunc:CTFpauseSeparator,separator:"short")',
      'self::row'],
     ['Rule',
      'line-simple', 'default',
@@ -1640,8 +1640,8 @@ sre.ClearspeakFrench = {
      'self::line', 'contains(@grammar, "simpleDet")'],
     ['Rule',
      'matrix-row', 'default',
-     '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"colonne-,- ",' +
-     'sepFunc:CTXFpauseSeparator,separator:"medium"); [p] (pause:long)',
+     '[m] children/* (ctxtFunc:CTFnodeCounter,context:"colonne-,- ",' +
+     'sepFunc:CTFpauseSeparator,separator:"medium"); [p] (pause:long)',
      'self::row'],
     ['SpecializedRule',
      'matrix-row', 'default', 'Matrix_SpeakColNum'],
@@ -1668,7 +1668,7 @@ sre.ClearspeakFrench = {
      '[t] "le vecteur colonne de dimension"; [t] count(children/*); ' +
      '[t] "par"; [t] count(children/*[1]/children/*); ' +
      '[p] (pause:long); [m] children/* ' +
-     '(ctxtFunc:CTXFnodeCounter,context:"rangée-:",grammar:simpleDet); ' +
+     '(ctxtFunc:CTFnodeCounter,context:"rangée-:",grammar:simpleDet); ' +
      '[p] (pause:long)',
      'self::vector'],
     ['SpecializedRule',
@@ -1678,7 +1678,7 @@ sre.ClearspeakFrench = {
      '[t] "le vecteur colonne de dimension"; [t] count(children/*); ' +
      '[t] "par";  [t] count(children/*[1]/children/*); ' +
      '[p] (pause:long); [m] children/* ' +
-     '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet); ' +
+     '(sepFunc:CTFpauseSeparator,separator:"short",grammar:simpleDet); ' +
      '[p] (pause:long)',
      'self::vector', 'count(children/*)<4', 'CQFcellsSimple'],
     ['SpecializedRule',
@@ -1690,7 +1690,7 @@ sre.ClearspeakFrench = {
      '[t] "le vecteur ligne de dimension"; [t] count(children/*); ' +
      '[t] "par"; [t] count(children/*[1]/children/*);' +
      ' [p] (pause:long); [m] children/*[1]/children/* ' +
-     '(ctxtFunc:CTXFnodeCounter,context:"colonne-:",grammar:simpleDet);' +
+     '(ctxtFunc:CTFnodeCounter,context:"colonne-:",grammar:simpleDet);' +
      ' [p] (pause:long)',
      'self::matrix', '@role="rowvector"'],
     ['SpecializedRule',
@@ -1700,7 +1700,7 @@ sre.ClearspeakFrench = {
      '[t] "le vecteur ligne de dimension"; [t] count(children/*); ' +
      '[t] "par"; [t] count(children/*[1]/children/*);' +
      ' [p] (pause:long); [m] children/*[1]/children/* ' +
-     '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
+     '(sepFunc:CTFpauseSeparator,separator:"short",grammar:simpleDet);' +
      ' [p] (pause:long)',
      'self::matrix', '@role="rowvector"', 'count(children/*[1]/children/*)<4',
      'CQFcellsSimple'],
@@ -1769,8 +1769,8 @@ sre.ClearspeakFrench = {
     ['Rule',
      'lines', 'default',
      '[p] (pause:short);' +
-     ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Ligne-:",' + //
-     'sepFunc:CTXFpauseSeparator,separator:"long");' +
+     ' [m] children/* (ctxtFunc:CTFnodeCounter,context:"Ligne-:",' + //
+     'sepFunc:CTFpauseSeparator,separator:"long");' +
      ' [p] (pause:long)', 'self::table'],
     ['Aliases',
      'lines', 'self::multiline'],
@@ -1780,17 +1780,17 @@ sre.ClearspeakFrench = {
      '[n] children/*[1]', 'self::line'],
     ['Rule',
      'row-medium', 'default',
-     '[m] children/* (sepFunc:CTXFpauseSeparator,separator:"medium")',
+     '[m] children/* (sepFunc:CTFpauseSeparator,separator:"medium")',
      'self::row', '@role="table"'],
     ['Aliases', 'row-medium', 'self::row', '@role="cases"'],
     ['Rule',
      'row-long', 'MultiLinePausesBetweenColumns_Long',
-     '[m] children/* (sepFunc:CTXFpauseSeparator,separator:"long")',
+     '[m] children/* (sepFunc:CTFpauseSeparator,separator:"long")',
      'self::row', '@role="table"'],
     ['Aliases', 'row-long', 'self::row', '@role="cases"'],
     ['Rule',
      'row-short', 'MultiLinePausesBetweenColumns_Short',
-     '[m] children/* (sepFunc:CTXFpauseSeparator,separator:"short")',
+     '[m] children/* (sepFunc:CTFpauseSeparator,separator:"short")',
      'self::row', '@role="table"'],
     ['Aliases', 'row-short', 'self::row', '@role="cases"'],
     // TODO: Get rid of blank!
@@ -1805,8 +1805,8 @@ sre.ClearspeakFrench = {
     ['Rule',
      'cases', 'default',
      '[p] (pause:short); ' +
-     ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Cas-:",' +
-     'sepFunc:CTXFpauseSeparator,separator:"long");' +
+     ' [m] children/* (ctxtFunc:CTFnodeCounter,context:"Cas-:",' +
+     'sepFunc:CTFpauseSeparator,separator:"long");' +
      ' [p] (pause:long)', 'self::cases'],
 
     // Label Preferences:
@@ -1824,8 +1824,8 @@ sre.ClearspeakFrench = {
     ['Rule',
      'lines-cases', 'MultiLineLabel_Case',
      '[p] (pause:short);' +
-     ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Cas-:",' +
-     'sepFunc:CTXFpauseSeparator,separator:"long");' +
+     ' [m] children/* (ctxtFunc:CTFnodeCounter,context:"Cas-:",' +
+     'sepFunc:CTFpauseSeparator,separator:"long");' +
      ' [p] (pause:long)', 'self::table'],
     ['Aliases',
      'lines-cases', 'self::multiline'],
@@ -1844,8 +1844,8 @@ sre.ClearspeakFrench = {
     ['Rule',
      'lines-equations', 'MultiLineLabel_Equation',
      '[p] (pause:short);' +
-     ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Équation-:",' +
-     'sepFunc:CTXFpauseSeparator,separator:"long");' +
+     ' [m] children/* (ctxtFunc:CTFnodeCounter,context:"Équation-:",' +
+     'sepFunc:CTFpauseSeparator,separator:"long");' +
      ' [p] (pause:long)', 'self::table'],
     ['Aliases',
      'lines-equations', 'self::multiline'],
@@ -1864,8 +1864,8 @@ sre.ClearspeakFrench = {
     ['Rule',
      'lines-steps', 'MultiLineLabel_Step',
      '[p] (pause:short);' +
-     ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:" Étape-:",' +
-     'sepFunc:CTXFpauseSeparator,separator:"long");' +
+     ' [m] children/* (ctxtFunc:CTFnodeCounter,context:" Étape-:",' +
+     'sepFunc:CTFpauseSeparator,separator:"long");' +
      ' [p] (pause:long)', 'self::table'],
     ['Aliases',
      'lines-steps', 'self::multiline'],
@@ -1884,8 +1884,8 @@ sre.ClearspeakFrench = {
     ['Rule',
      'lines-rows', 'MultiLineLabel_Row',
      '[p] (pause:short);' +
-     ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"rangée-:",' +
-     'sepFunc:CTXFpauseSeparator,separator:"long");' +
+     ' [m] children/* (ctxtFunc:CTFnodeCounter,context:"rangée-:",' +
+     'sepFunc:CTFpauseSeparator,separator:"long");' +
      ' [p] (pause:long)', 'self::table'],
     ['Aliases',
      'lines-rows', 'self::multiline'],
@@ -1904,8 +1904,8 @@ sre.ClearspeakFrench = {
     ['Rule',
      'lines-constraints', 'MultiLineLabel_Constraint',
      '[p] (pause:short);' +
-     ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Contrainte-:",' +
-     'sepFunc:CTXFpauseSeparator,separator:"long");' +
+     ' [m] children/* (ctxtFunc:CTFnodeCounter,context:"Contrainte-:",' +
+     'sepFunc:CTFpauseSeparator,separator:"long");' +
      ' [p] (pause:long)', 'self::table'],
     ['Aliases',
      'lines-constraints', 'self::multiline'],
@@ -1914,7 +1914,7 @@ sre.ClearspeakFrench = {
     ['Rule',
      'lines-none', 'MultiLineLabel_None',
      '[p] (pause:short);' +
-     ' [m] children/* (sepFunc:CTXFpauseSeparator,separator:"long");' +
+     ' [m] children/* (sepFunc:CTFpauseSeparator,separator:"long");' +
      ' [p] (pause:long)', 'self::table',
      'contains(@grammar, "layoutSummary")'],
     ['Aliases', 'lines-none', 'self::multiline',

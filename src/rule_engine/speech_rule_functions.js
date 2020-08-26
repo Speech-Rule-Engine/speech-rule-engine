@@ -139,7 +139,7 @@ sre.SpeechRuleFunctions.ContextFunctions = function() {
       /** @type {!Object.<sre.SpeechRuleFunctions.ContextFunction>} */
       ({});
   sre.SpeechRuleFunctions.ContextFunctions.base(
-      this, 'constructor', 'CTXF', store);
+      this, 'constructor', 'CTF', store);
 };
 goog.inherits(sre.SpeechRuleFunctions.ContextFunctions,
               sre.SpeechRuleFunctions.Store_);
