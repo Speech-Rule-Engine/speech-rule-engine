@@ -1428,31 +1428,31 @@ sre.ClearspeakFrench = {
      'natural-numbers-super', 'default',
      '[t] "n" (join: "-"); [n] children/*[2] (grammar:numbers2alpha)',
      'self::superscript', 'children/*[1]/text()="\u2115"' +
-     ' or (children/*[1]/text()="N" and @font="double-struck")',
+     ' or (children/*[1]/text()="N" and children/*[1]/@font="double-struck")',
      'self::*', 'self::*', 'self::*'],
     ['Rule',
      'integers-super', 'default',
      '[t] "z" (join: "-"); [n] children/*[2] (grammar:numbers2alpha)',
      'self::superscript', 'children/*[1]/text()="\u2124"' +
-     ' or (children/*[1]/text()="Z" and @font="double-struck")',
+     ' or (children/*[1]/text()="Z" and children/*[1]/@font="double-struck")',
      'self::*', 'self::*', 'self::*'],
     ['Rule',
      'rational-numbers-super', 'default',
      '[t] "q" (join: "-"); [n] children/*[2] (grammar:numbers2alpha)',
      'self::superscript', 'children/*[1]/text()="\u211A"' +
-     ' or (children/*[1]/text()="Q" and @font="double-struck")',
+     ' or (children/*[1]/text()="Q" and children/*[1]/@font="double-struck")',
      'self::*', 'self::*', 'self::*'],
     ['Rule',
      'real-numbers-super', 'default',
      '[t] "r" (join:"-"); [n] children/*[2] (grammar:numbers2alpha)',
      'self::superscript', 'children/*[1]/text()="\u211D"' +
-     ' or (children/*[1]/text()="R" and @font="double-struck")',
+     ' or (children/*[1]/text()="R" and children/*[1]/@font="double-struck")',
      'self::*', 'self::*', 'self::*'],
     ['Rule',
      'complex-numbers-super', 'default',
      '[t] "c" (join:"-"); [n] children/*[2] (grammar:numbers2alpha)',
      'self::superscript', 'children/*[1]/text()="\u2102"' +
-     ' or (children/*[1]/text()="C" and @font="double-struck")',
+     ' or (children/*[1]/text()="C" and children/*[1]/@font="double-struck")',
      'self::*', 'self::*', 'self::*'],
 
     // Partial named sets.
@@ -1460,34 +1460,34 @@ sre.ClearspeakFrench = {
      'natural-numbers-with-zero', 'default',
      '[t] "les nombres entiers naturel avec zero"',
      'self::subscript', 'children/*[1]/text()="\u2115"' +
-     ' or (children/*[1]/text()="N" and @font="double-struck")',
+     ' or (children/*[1]/text()="N" and children/*[1]/@font="double-struck")',
      'children/*[2]/text()="0"'],
     ['Rule',
      'positive-integers', 'default',
      '[t] "les nombres entiers positif"',
      'self::superscript', 'children/*[1]/text()="\u2124"' +
-     ' or (children/*[1]/text()="Z" and @font="double-struck")',
+     ' or (children/*[1]/text()="Z" and children/*[1]/@font="double-struck")',
      'children/*[2]/text()="+"',
      'self::*', 'self::*', 'self::*'],
     ['Rule',
      'positive-integers', 'default',
      '[t] "les nombres entiers négatif"',
      'self::superscript', 'children/*[1]/text()="\u2124"' +
-     ' or (children/*[1]/text()="Z" and @font="double-struck")',
+     ' or (children/*[1]/text()="Z" and children/*[1]/@font="double-struck")',
      'children/*[2]/text()="-"',
      'self::*', 'self::*', 'self::*'],
     ['Rule',
      'positive-rational-numbers', 'default',
      '[t] "les nombres rationnels positif"',
      'self::superscript', 'children/*[1]/text()="\u211A"' +
-     ' or (children/*[1]/text()="Q" and @font="double-struck")',
+     ' or (children/*[1]/text()="Q" and children/*[1]/@font="double-struck")',
      'children/*[2]/text()="+"',
      'self::*', 'self::*', 'self::*'],
     ['Rule',
      'negative-rational-numbers', 'default',
      '[t] "les nombres rationnels négatif"',
      'self::superscript', 'children/*[1]/text()="\u211A"' +
-     ' or (children/*[1]/text()="Q" and @font="double-struck")',
+     ' or (children/*[1]/text()="Q" and children/*[1]/@font="double-struck")',
      'children/*[2]/text()="-"',
      'self::*', 'self::*', 'self::*'],
     // TODO: Do we need positive and negative real numbers. Usually they are
