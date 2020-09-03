@@ -1550,6 +1550,7 @@ sre.SemanticAttr.Role = {
   LATINLETTER: 'latinletter',
   GREEKLETTER: 'greekletter',
   OTHERLETTER: 'otherletter',
+  NUMBERSET: 'numberset',
 
   // Numbers.
   INTEGER: 'integer',
