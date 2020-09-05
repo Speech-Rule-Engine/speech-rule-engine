@@ -1654,6 +1654,9 @@
       "default": {
         "default": "bar",
         "alternative": "divides"
+      },
+      "clearspeak": {
+        "default": "divides"
       }
     },
     "key": "2223"
