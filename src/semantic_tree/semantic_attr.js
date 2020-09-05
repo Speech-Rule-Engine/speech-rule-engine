@@ -1750,6 +1750,15 @@ sre.SemanticAttr.invisibleTimes = function() {
 
 
 /**
+ * String representation of the invisible plus unicode character.
+ * @return {string} The invisible plus character.
+ */
+sre.SemanticAttr.invisiblePlus = function() {
+  return sre.SemanticAttr.getInstance().invisiblePlus_;
+};
+
+
+/**
  * String representation of the invisible comma unicode character.
  * @return {string} The invisible comma character.
  */
