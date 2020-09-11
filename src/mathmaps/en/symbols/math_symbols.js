@@ -245,9 +245,6 @@
     "mappings": {
       "default": {
         "default": "vertical bar"
-      },
-      "clearspeak": {
-        "default": "divides"
       }
     },
     "key": "007C"
@@ -1652,7 +1649,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "bar",
+        "default": "vertical bar",
         "alternative": "divides"
       }
     },

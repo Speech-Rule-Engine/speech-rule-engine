@@ -2305,3 +2305,20 @@ sre.RebuildStreeTest.prototype.testIssue383 = function() {
     '<mrow><mtext>-</mtext><mi mathvariant="normal">p</mi>' +
       '</mrow><mo>&#x2061;</mo><mi>&#x3C9;</mi>');
 };
+
+
+/**
+ * Issue 284: Explicitly given invisible plus.
+ */
+sre.RebuildStreeTest.prototype.testIssue284 = function() {
+  this.executeRebuildTest(
+    '<mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>');
+  this.executeRebuildTest(
+    '<mn>2</mn><mo>&#x2064;</mo><mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>');
+  this.executeRebuildTest(
+    '<mn>2</mn><mo>+</mo><mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>');
+  this.executeRebuildTest(
+    '<mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac><mo>+</mo><mn>2</mn>');
+  this.executeRebuildTest(
+    '<mn>a</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>');
+};

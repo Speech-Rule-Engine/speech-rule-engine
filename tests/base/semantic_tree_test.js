@@ -13036,3 +13036,30 @@ sre.SemanticTreeTest.prototype.testIssue383 = function() {
       '</children></appl>'
   );
 };
+
+
+/**
+ * Issue 284: Explicitly given invisible plus.
+ */
+sre.SemanticTreeTest.prototype.testIssue284 = function() {
+  this.executeTreeTest(
+    '<mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>',
+    '<number role="mixed" id="5"><children><number role="integer" font="normal" id="0">2</number><fraction role="division" id="4"><children><number role="integer" font="normal" id="2">3</number><identifier role="latinletter" font="italic" id="3">p</identifier></children></fraction></children></number>'
+  );
+  this.executeTreeTest(
+    '<mn>2</mn><mo>&#x2064;</mo><mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>',
+    '<infixop role="addition" id="8">⁤<content><operator role="addition" id="1">⁤</operator></content><children><number role="integer" font="normal" id="0">2</number><number role="mixed" id="7"><children><number role="integer" font="normal" id="2">2</number><fraction role="division" id="6"><children><number role="integer" font="normal" id="4">3</number><identifier role="latinletter" font="italic" id="5">p</identifier></children></fraction></children></number></children></infixop>'
+  );
+  this.executeTreeTest(
+    '<mn>2</mn><mo>+</mo><mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>',
+    '<infixop role="addition" id="8">+<content><operator role="addition" id="1">+</operator></content><children><number role="integer" font="normal" id="0">2</number><number role="mixed" id="7"><children><number role="integer" font="normal" id="2">2</number><fraction role="division" id="6"><children><number role="integer" font="normal" id="4">3</number><identifier role="latinletter" font="italic" id="5">p</identifier></children></fraction></children></number></children></infixop>'
+  );
+  this.executeTreeTest(
+    '<mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac><mo>+</mo><mn>2</mn>',
+    '<infixop role="addition" id="8">+<content><operator role="addition" id="5">+</operator></content><children><number role="mixed" id="7"><children><number role="integer" font="normal" id="0">2</number><fraction role="division" id="4"><children><number role="integer" font="normal" id="2">3</number><identifier role="latinletter" font="italic" id="3">p</identifier></children></fraction></children></number><number role="integer" font="normal" id="6">2</number></children></infixop>'
+  );
+  this.executeTreeTest(
+    '<mn>a</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>',
+    '<number role="mixed" id="5"><children><number role="latinletter" font="normal" id="0">a</number><fraction role="division" id="4"><children><number role="integer" font="normal" id="2">3</number><identifier role="latinletter" font="italic" id="3">p</identifier></children></fraction></children></number>'
+  );
+};
