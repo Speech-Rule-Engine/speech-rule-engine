@@ -56,9 +56,11 @@ sre.ClearspeakRules = {
     ['Rule',
      'collapsed', 'default',
      '[t] "collapsed"; [n] . (engine:modality=summary,grammar:collapsed)',
-     'self::*', '@alternative', 'not(contains(@grammar, "collapsed"))',
-     'self::*', 'self::*', 'self::*', 'self::*', 'self::*'
+     'self::*[@alternative]', 'not(contains(@grammar, "collapsed"))'
     ],
+    ['Rule',
+     'direct-speech', 'default',
+     '[t] @ext-speech', 'self::*[@ext-speech]'],
 
     // Initial rule
     ['Rule',
