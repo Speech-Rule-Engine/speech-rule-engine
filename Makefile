@@ -195,11 +195,10 @@ $(INTERACTIVE):
 	@echo "goog.require('sre.System');" >> $@
 	@echo "sre.System.setAsync()" >> $@
 
-clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax clean_iemaps
+clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax clean_iemaps clean_json
 	rm -f $(TARGET)
 	rm -f $(DEPS)
 	rm -f $(INTERACTIVE)
-	rm -rf $(JSON_DST)
 
 
 ##################################################################
@@ -351,3 +350,6 @@ clean_docs:
 
 clean_iemaps:
 	rm -f $(IEMAPS_FILE)
+
+clean_json:
+	rm -rf $(JSON_DST)
