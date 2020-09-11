@@ -2144,7 +2144,7 @@ sre.ClearspeakEnglishImpliedTimes.prototype.testExtra012 = function() {
  */
 sre.ClearspeakEnglishImpliedTimes.prototype.untestExtra013 = function() {
   var preference = 'ImpliedTimes_Auto';
-  var mathml = '<math><mrow><mi>B</mi><mrow><mo>(</mo><mrow><mn>2</mn><mo>,' +
+  var mathml = '<math><mrow><mi exact-speech="point B">B</mi><mrow><mo>(</mo><mrow><mn>2</mn><mo>,' +
       '</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'point B, open paren, 2 comma 6, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -2244,7 +2244,7 @@ sre.ClearspeakEnglishImpliedTimes.prototype.testExtra019 = function() {
 sre.ClearspeakEnglishImpliedTimes.prototype.untestExtra020 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>V</mi><mo>=</mo><mi mathvariant="script">l' +
-      '</mi><mi>w</mi><mrow><mo>(</mo><mn>8</mn><mo>)</mo></mrow></mrow>' +
+      '</mi><mi>w</mi><mrow exact-speech="times 8"><mo>(</mo><mn>8</mn><mo>)</mo></mrow></mrow>' +
       '</math>';
   var speech = 'V, equals, l w, times 8';
   this.executeRuleTest(mathml, speech, preference);
