@@ -3305,7 +3305,7 @@ sre.ClearspeakCharEnglishTest.prototype.testClearspeakChars = function() {
   this.executeCharTest('^', ['hat']);
   this.executeCharTest('_', ['bar']);
   this.executeCharTest('`', ['grave']);
-  this.executeCharTest('|', ['divides']);
+  this.executeCharTest('|', ['vertical bar']);
   this.executeCharTest('~', ['tilde']);
   this.executeCharTest('¡', ['inverted exclamation mark']);
   this.executeCharTest('¢', ['cent sign']);
@@ -3457,7 +3457,7 @@ sre.ClearspeakCharEnglishTest.prototype.testClearspeakChars = function() {
   this.executeCharTest('∠', ['angle']);
   this.executeCharTest('∡', ['measured angle']);
   this.executeCharTest('∢', ['spherical angle']);
-  this.executeCharTest('∣', ['bar']);
+  this.executeCharTest('∣', ['vertical bar']);
   this.executeCharTest('∤', ['does not divide']);
   this.executeCharTest('∥', ['parallel to']);
   this.executeCharTest('∦', ['not parallel to']);

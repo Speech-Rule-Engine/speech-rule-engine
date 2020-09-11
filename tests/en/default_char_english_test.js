@@ -3450,7 +3450,7 @@ sre.DefaultCharEnglishTest.prototype.testDefaultChars = function() {
   this.executeCharTest('∠', ['angle']);
   this.executeCharTest('∡', ['measured angle']);
   this.executeCharTest('∢', ['spherical angle']);
-  this.executeCharTest('∣', ['bar']);
+  this.executeCharTest('∣', ['vertical bar']);
   this.executeCharTest('∤', ['does not divide']);
   this.executeCharTest('∥', ['parallel to']);
   this.executeCharTest('∦', ['not parallel to']);
