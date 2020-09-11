@@ -11326,3 +11326,26 @@ sre.EnrichMathmlTest.prototype.testIssue383 = function() {
     '<math type="appl" role="simple function" id="7" children="3,5" content="6"><mrow type="punctuated" role="simple function" id="3" children="0,1" parent="7" collapsed="(3 (c 2) 0 1)"><mtext type="text" role="simple function" id="0" parent="3">-</mtext><mi mathvariant="normal" type="identifier" role="latinletter" id="1" parent="3">p</mi></mrow><mo type="punctuation" role="application" id="6" parent="7" added="true" operator="appl">⁡</mo><mi type="identifier" role="greekletter" id="5" parent="7">ω</mi></math>'
   );
 };
+
+
+/**
+ * Issue 284: Explicitly given invisible plus.
+ */
+sre.EnrichMathmlTest.prototype.testIssue284 = function() {
+  this.executeMathmlTest(
+    '<mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>',
+    '<math type="number" role="mixed" id="5" children="0,4"><mn type="number" role="integer" id="0" parent="5">2</mn><mo>⁤</mo><mfrac type="fraction" role="division" id="4" children="2,3" parent="5"><mn type="number" role="integer" id="2" parent="4">3</mn><mi type="identifier" role="latinletter" id="3" parent="4">p</mi></mfrac></math>');
+  this.executeMathmlTest(
+    '<mn>2</mn><mo>&#x2064;</mo><mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>',
+    '<math type="infixop" role="addition" id="8" children="0,7" content="1"><mn type="number" role="integer" id="0" parent="8">2</mn><mo type="operator" role="addition" id="1" parent="8" operator="infixop,⁤">⁤</mo><mrow type="number" role="mixed" id="7" children="2,6" parent="8"><mn type="number" role="integer" id="2" parent="7">2</mn><mo>⁤</mo><mfrac type="fraction" role="division" id="6" children="4,5" parent="7"><mn type="number" role="integer" id="4" parent="6">3</mn><mi type="identifier" role="latinletter" id="5" parent="6">p</mi></mfrac></mrow></math>');
+  this.executeMathmlTest(
+    '<mn>2</mn><mo>+</mo><mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>',
+    '<math type="infixop" role="addition" id="8" children="0,7" content="1"><mn type="number" role="integer" id="0" parent="8">2</mn><mo type="operator" role="addition" id="1" parent="8" operator="infixop,+">+</mo><mrow type="number" role="mixed" id="7" children="2,6" parent="8"><mn type="number" role="integer" id="2" parent="7">2</mn><mo>⁤</mo><mfrac type="fraction" role="division" id="6" children="4,5" parent="7"><mn type="number" role="integer" id="4" parent="6">3</mn><mi type="identifier" role="latinletter" id="5" parent="6">p</mi></mfrac></mrow></math>');
+  this.executeMathmlTest(
+    '<mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac><mo>+</mo><mn>2</mn>',
+    '<math type="infixop" role="addition" id="8" children="7,6" content="5"><mrow type="number" role="mixed" id="7" children="0,4" parent="8"><mn type="number" role="integer" id="0" parent="7">2</mn><mo>⁤</mo><mfrac type="fraction" role="division" id="4" children="2,3" parent="7"><mn type="number" role="integer" id="2" parent="4">3</mn><mi type="identifier" role="latinletter" id="3" parent="4">p</mi></mfrac></mrow><mo type="operator" role="addition" id="5" parent="8" operator="infixop,+">+</mo><mn type="number" role="integer" id="6" parent="8">2</mn></math>');
+  this.executeMathmlTest(
+    '<mn>a</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>',
+    '<math type="number" role="mixed" id="5" children="0,4"><mn type="number" role="latinletter" id="0" parent="5">a</mn><mo>⁤</mo><mfrac type="fraction" role="division" id="4" children="2,3" parent="5"><mn type="number" role="integer" id="2" parent="4">3</mn><mi type="identifier" role="latinletter" id="3" parent="4">p</mi></mfrac></math>'
+  );
+};

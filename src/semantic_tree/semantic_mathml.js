@@ -73,6 +73,16 @@ sre.SemanticMathml = function() {
     'MACTION': goog.bind(this.action_, this)
   };
 
+  let meaning = {
+    type: sre.SemanticAttr.Type.IDENTIFIER,
+    role: sre.SemanticAttr.Role.NUMBERSET,
+    font: sre.SemanticAttr.Font.DOUBLESTRUCK
+  };
+  ['C', 'H', 'N', 'P', 'Q', 'R', 'Z', 'ℂ', 'ℍ', 'ℕ', 'ℙ', 'ℚ', 'ℝ', 'ℤ'].
+    forEach(function(x) {
+     this.getFactory().defaultMap.add(x, meaning);
+    }.bind(this));
+
 };
 goog.inherits(sre.SemanticMathml, sre.SemanticAbstractParser);
 

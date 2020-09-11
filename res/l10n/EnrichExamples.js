@@ -473,4 +473,9 @@ Lab.Examples = ['<mrow><mrow><mi>a</mi></mrow></mrow><mrow><mi>b</mi></mrow>',
 '<msub><mrow><mo></mo><mo></mo><mo>|</mo></mrow><mi>t</mi></msub>',
 '<mo>=</mo><mo>&#x222B;</mo>',
 '<mo>&#x222B;</mo><mo>+</mo><mo>&#x222B;</mo>',
-'<mrow><mtext>-</mtext><mi mathvariant=\'normal\'>p</mi></mrow><mo>&#x2061;</mo><mi>&#x3C9;</mi>']
+'<mrow><mtext>-</mtext><mi mathvariant=\'normal\'>p</mi></mrow><mo>&#x2061;</mo><mi>&#x3C9;</mi>',
+'<mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>',
+'<mn>2</mn><mo>&#x2064;</mo><mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>',
+'<mn>2</mn><mo>+</mo><mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>',
+'<mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac><mo>+</mo><mn>2</mn>',
+'<mn>a</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>']

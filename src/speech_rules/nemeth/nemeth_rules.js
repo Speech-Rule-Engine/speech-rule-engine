@@ -802,7 +802,7 @@ sre.NemethRules = {
     ['Rule',
      'punctuation-comma', 'default', '[n] text(); [t] "⠀"',
      'self::punctuation' , 'parent::*/parent::punctuated',
-     'following-sibling::*', '@role!="fullstop"',
+     'following-sibling::*', '@role!="fullstop"', '@role!="vbar"'
     ],
 
     ['Rule',

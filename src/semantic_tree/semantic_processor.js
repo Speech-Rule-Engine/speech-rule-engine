@@ -140,6 +140,52 @@ sre.SemanticProcessor.prototype.infixNode_ = function(children, opNode) {
 };
 
 
+
+/**
+ * Finds mixed numbers that are explicitly given with invisible plus.
+ * @param {!Array.<!sre.SemanticNode>} nodes The list of nodes.
+ * @return {!Array.<!sre.SemanticNode>} The new list of nodes.
+ * @private
+ */
+sre.SemanticProcessor.prototype.explicitMixed_ = function(nodes) {
+  var partition = sre.SemanticProcessor.partitionNodes_(
+    nodes, function(x) {
+      return x.textContent === sre.SemanticAttr.invisiblePlus();});
+  if (!partition.rel.length) {
+    return nodes;
+  }
+  var result = [];
+  for (var i = 0, rel; rel = partition.rel[i]; i++) {
+    var prev = partition.comp[i];
+    var next = partition.comp[i + 1];
+    var last = prev.length - 1;
+    if (prev[last] && next[0] &&
+        sre.SemanticPred.isAttribute('type', 'NUMBER')(prev[last]) &&
+        !sre.SemanticPred.isAttribute('role', 'MIXED')(prev[last]) &&
+        sre.SemanticPred.isAttribute('type', 'FRACTION')(next[0])) {
+      var newNode = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
+          sre.SemanticAttr.Type.NUMBER, [prev[last], next[0]], []);
+      newNode.role = sre.SemanticAttr.Role.MIXED;
+      result = result.concat(prev.slice(0, last));
+      result.push(newNode);
+      next.shift();
+    } else {
+      result = result.concat(prev);
+      result.push(rel);
+    }
+  }
+  return result.concat(partition.comp[partition.comp.length - 1]);
+};
+
+//   if (sre.SemanticPred.isAttribute('type', 'NUMBER')(node.childNodes[0]) &&
+//       sre.SemanticPred.isAttribute('type', 'FRACTION')(node.childNodes[1])) {
+//     node.type = sre.SemanticAttr.Type.NUMBER;
+//     node.role = sre.SemanticAttr.Role.MIXED;
+//   }
+//   return node;
+// };
+
+
 /**
  * Creates a node of the specified type by collapsing the given node list into
  * one content (thereby concatenating the content of each node into a single
@@ -326,7 +372,7 @@ sre.SemanticProcessor.prototype.combineUnits_ = function(nodes) {
  * @param {!Array.<!sre.SemanticNode>} nodes The list of nodes.
  * @return {!Array.<!sre.SemanticNode>} The new list of nodes.
  * @private
- */
+ */ // Change that to compute mixed fractions.
 sre.SemanticProcessor.prototype.getMixedNumbers_ = function(nodes) {
   var partition = sre.SemanticProcessor.partitionNodes_(
       nodes, function(x) {
@@ -341,7 +387,7 @@ sre.SemanticProcessor.prototype.getMixedNumbers_ = function(nodes) {
     var last = comp.length - 1;
     if (comp[last] &&
         sre.SemanticPred.isAttribute('type', 'NUMBER')(comp[last]) &&
-        sre.SemanticPred.isAttribute('role', 'INTEGER')(comp[last])) {
+        sre.SemanticPred.isAttribute('role', 'INTEGER')(comp[last])) { // Change to allow float?
       var newNode = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
           sre.SemanticAttr.Type.NUMBER, [comp[last], rel], []);
       newNode.role = sre.SemanticAttr.Role.MIXED;
@@ -436,6 +482,9 @@ sre.SemanticProcessor.prototype.operationsInRow_ = function(nodes) {
   if (nodes.length === 0) {
     return sre.SemanticProcessor.getInstance().factory_.makeEmptyNode();
   }
+  // Get explicitly given mixed numbers
+  nodes = this.explicitMixed_(nodes);
+
   if (nodes.length === 1) {
     return nodes[0];
   }
