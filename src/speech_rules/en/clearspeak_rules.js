@@ -216,12 +216,18 @@ sre.ClearspeakRules = {
      'not(parent::*/parent::*[@embellished="punctuation"])'
     ],
     ['Rule',
-     'vbar-such-that', 'VerticalLine_Divides',
+     'vbar-divides', 'default',
+     '[t] "divides"', 'self::punctuation', '@role="vbar"',
+     'not(parent::*/parent::*[@embellished="punctuation"])',
+     'parent::*/parent::*[@role="sequence"]'
+    ],
+    ['Rule',
+     'vbar-divides', 'VerticalLine_Divides',
      '[t] "divides"', 'self::punctuation', '@role="vbar"',
      'not(parent::*/parent::*[@embellished="punctuation"])'
     ],
     ['Rule',
-     'vbar-such-that', 'VerticalLine_Given',
+     'vbar-given', 'VerticalLine_Given',
      '[t] "given"', 'self::punctuation', '@role="vbar"',
      'not(parent::*/parent::*[@embellished="punctuation"])'
     ],
