@@ -106,7 +106,12 @@ sre.SemanticMathml.prototype.parse = function(mml) {
 };
 
 
-sre.SemanticMathml.directSpeechKeys = ['aria-label', 'exact-speech'];
+/**
+ * List of potential attributes that should be used as speech directly.
+ * @type {Array.<string>}
+ */
+sre.SemanticMathml.directSpeechKeys = ['aria-label', 'exact-speech', 'alt'];
+
 
 /**
  * Retains external attributes from the source node to the semantic node.

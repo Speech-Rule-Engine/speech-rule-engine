@@ -100,7 +100,7 @@ sre.MathspeakRules = {
     // Direct speech rule
     ['Rule',
      'direct-speech', 'default',
-     '[t] @ext-speech', 'self::*', '@ext-speech'],
+     '[t] @ext-speech', 'self::*[@ext-speech]'],
 
     // Initial rule
     ['Rule',
