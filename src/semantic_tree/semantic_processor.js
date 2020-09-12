@@ -65,7 +65,8 @@ sre.SemanticProcessor.prototype.getNodeFactory = function() {
 /**
  * Processes an identifier node, with particular emphasis on font disambiguation.
  * @param {sre.SemanticNode} leaf The identifier node.
- * @param {sre.SemanticAttr.Font} font The font for the identifier.
+ * @param {sre.SemanticAttr.Font} font The original mml font for the
+ *     identifier. Could be empty if not font was given.
  * @param {string} unit The class of the identifier which is important if it is
  *     a unit.
  * @return {!sre.SemanticNode} The semantic identifier node.
@@ -275,20 +276,13 @@ sre.SemanticProcessor.prototype.postfixNode_ = function(node, postfixes) {
 
 /**
  * Create an text node, keeping string notation correct.
- * @param {string} content The text content.
- * @param {sre.SemanticAttr.Font} font The font for the text.
+ * @param {sre.SemanticNode} leaf The text node.
  * @param {string} type The type of the text node.
  * @return {!sre.SemanticNode} The new semantic text node.
  */
-sre.SemanticProcessor.prototype.text = function(content, font, type) {
-  if (!content) {
-    return sre.SemanticProcessor.getInstance().factory_.makeEmptyNode();
-  }
-  var leaf = sre.SemanticProcessor.getInstance().factory_.
-      makeLeafNode(content, font);
+sre.SemanticProcessor.prototype.text = function(leaf, type) {
   // TODO (simons): Here check if there is already a type or if we can compute
   // an interesting number role. Than use this.
-  leaf.updateContent(content, true);
   leaf.type = sre.SemanticAttr.Type.TEXT;
   if (type === 'MS') {
     leaf.role = sre.SemanticAttr.Role.STRING;

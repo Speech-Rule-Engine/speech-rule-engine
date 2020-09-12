@@ -325,10 +325,13 @@ sre.SemanticMathml.prototype.tableCell_ = function(node, children) {
  * @private
  */
 sre.SemanticMathml.prototype.text_ = function(node, children) {
+  var newNode = this.leaf_(node);
+  if (!node.textContent) {
+    return newNode;
+  }
+  newNode.updateContent(node.textContent, true);
   return sre.SemanticProcessor.getInstance().text(
-      node.textContent,
-      sre.SemanticProcessor.getInstance().font(
-          node.getAttribute('mathvariant')),
+      newNode,
       sre.DomUtil.tagName(node));
 };
 
