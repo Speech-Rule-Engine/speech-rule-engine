@@ -516,7 +516,9 @@ sre.SemanticMathml.prototype.action_ = function(node, children) {
  * @private
  */
 sre.SemanticMathml.prototype.dummy_ = function(node, children) {
-  return this.getFactory().makeUnprocessed(node);
+  let unknown = this.getFactory().makeUnprocessed(node);
+  unknown.role = /** @type {!sre.SemanticAttr.Role} */(node.tagName);
+  return unknown;
 };
 
 
