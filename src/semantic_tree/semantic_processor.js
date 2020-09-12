@@ -35,7 +35,7 @@ goog.require('sre.SemanticPred');
 sre.SemanticProcessor = function() {
 
   /**
-   * @type {sre.SemanticNodeFactory}
+   * @type {!sre.SemanticNodeFactory}
    * @private
    */
   this.factory_ = new sre.SemanticNodeFactory();
@@ -54,16 +54,23 @@ sre.SemanticProcessor.prototype.setNodeFactory = function(factory) {
 
 
 /**
- * Create an identifier node, with particular emphasis on font disambiguation.
- * @param {string} content The content of the identifier.
+ * Getter for the node factory.
+ * @return {!sre.SemanticNodeFactory} The node factory.
+ */
+sre.SemanticProcessor.prototype.getNodeFactory = function() {
+  return this.factory_;
+};
+
+
+/**
+ * Processes an identifier node, with particular emphasis on font disambiguation.
+ * @param {sre.SemanticNode} leaf The identifier node.
  * @param {sre.SemanticAttr.Font} font The font for the identifier.
  * @param {string} unit The class of the identifier which is important if it is
  *     a unit.
- * @return {!sre.SemanticNode} The new semantic identifier node.
+ * @return {!sre.SemanticNode} The semantic identifier node.
  */
-sre.SemanticProcessor.prototype.identifierNode = function(content, font, unit) {
-  var leaf = sre.SemanticProcessor.getInstance().factory_.
-      makeLeafNode(content, font);
+sre.SemanticProcessor.prototype.identifierNode = function(leaf, font, unit) {
   if (unit === 'MathML-Unit') {
     leaf.type = sre.SemanticAttr.Type.IDENTIFIER;
     leaf.role = sre.SemanticAttr.Role.UNIT;

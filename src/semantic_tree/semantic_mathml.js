@@ -341,8 +341,9 @@ sre.SemanticMathml.prototype.text_ = function(node, children) {
  * @private
  */
 sre.SemanticMathml.prototype.identifier_ = function(node, children) {
+  var newNode = this.leaf_(node);
   var sem = sre.SemanticProcessor.getInstance().identifierNode(
-      node.textContent,
+      newNode,
       sre.SemanticProcessor.getInstance().font(
       node.getAttribute('mathvariant')),
       node.getAttribute('class'));
