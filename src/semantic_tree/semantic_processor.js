@@ -63,7 +63,8 @@ sre.SemanticProcessor.prototype.getNodeFactory = function() {
 
 
 /**
- * Processes an identifier node, with particular emphasis on font disambiguation.
+ * Processes an identifier node, with particular emphasis on font
+ * disambiguation.
  * @param {sre.SemanticNode} leaf The identifier node.
  * @param {sre.SemanticAttr.Font} font The original mml font for the
  *     identifier. Could be empty if not font was given.
@@ -148,7 +149,6 @@ sre.SemanticProcessor.prototype.infixNode_ = function(children, opNode) {
 };
 
 
-
 /**
  * Finds mixed numbers that are explicitly given with invisible plus.
  * @param {!Array.<!sre.SemanticNode>} nodes The list of nodes.
@@ -157,8 +157,8 @@ sre.SemanticProcessor.prototype.infixNode_ = function(children, opNode) {
  */
 sre.SemanticProcessor.prototype.explicitMixed_ = function(nodes) {
   var partition = sre.SemanticProcessor.partitionNodes_(
-    nodes, function(x) {
-      return x.textContent === sre.SemanticAttr.invisiblePlus();});
+      nodes, function(x) {
+        return x.textContent === sre.SemanticAttr.invisiblePlus();});
   if (!partition.rel.length) {
     return nodes;
   }
@@ -1454,7 +1454,7 @@ sre.SemanticProcessor.prototype.getFunctionArgs_ = function(
   switch (heuristic) {
     case 'integral':
       var components = sre.SemanticProcessor.getInstance().
-            getIntegralArgs_(rest);
+          getIntegralArgs_(rest);
       if (!components.intvar && !components.integrand.length) {
         components.rest.unshift(func);
         return components.rest;
@@ -1574,7 +1574,7 @@ sre.SemanticProcessor.prototype.getIntegralArgs_ = function(nodes, opt_args) {
   }
   if (nodes[1] && sre.SemanticPred.isIntegralDxBoundary(firstNode, nodes[1])) {
     var intvar = sre.SemanticProcessor.getInstance().prefixNode_(
-      /** @type {!sre.SemanticNode} */(nodes[1]), [firstNode]);
+        /** @type {!sre.SemanticNode} */(nodes[1]), [firstNode]);
     intvar.role = sre.SemanticAttr.Role.INTEGRAL;
     return {integrand: args, intvar: intvar, rest: nodes.slice(2)};
   }

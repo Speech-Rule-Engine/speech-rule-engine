@@ -2278,13 +2278,12 @@ sre.RebuildStreeTest.prototype.testRebuildSets = function() {
   this.executeRebuildTest('<mo>{</mo><mi>x</mi><mo>*</mo><mi>y</mi><mo>}</mo>');
   // Test for issue #287
   this.executeRebuildTest(
-    '<msub><mi mathvariant="normal">&#x393;</mi><mrow>' +
+      '<msub><mi mathvariant="normal">&#x393;</mi><mrow>' +
       '<mo fence="false" stretchy="false">{</mo><msub><mrow>' +
       '<mi mathvariant="-tex-calligraphic">M</mi></mrow><mi>k</mi></msub>' +
       '<mo fence="false" stretchy="false">}</mo></mrow></msub>' +
       '<mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo>');
 };
-
 
 
 /**
@@ -2302,7 +2301,7 @@ sre.RebuildStreeTest.prototype.testIssue382 = function() {
  */
 sre.RebuildStreeTest.prototype.testIssue383 = function() {
   this.executeRebuildTest(
-    '<mrow><mtext>-</mtext><mi mathvariant="normal">p</mi>' +
+      '<mrow><mtext>-</mtext><mi mathvariant="normal">p</mi>' +
       '</mrow><mo>&#x2061;</mo><mi>&#x3C9;</mi>');
 };
 
@@ -2312,13 +2311,13 @@ sre.RebuildStreeTest.prototype.testIssue383 = function() {
  */
 sre.RebuildStreeTest.prototype.testIssue284 = function() {
   this.executeRebuildTest(
-    '<mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>');
+      '<mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>');
   this.executeRebuildTest(
-    '<mn>2</mn><mo>&#x2064;</mo><mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>');
+      '<mn>2</mn><mo>&#x2064;</mo><mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>');
   this.executeRebuildTest(
-    '<mn>2</mn><mo>+</mo><mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>');
+      '<mn>2</mn><mo>+</mo><mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>');
   this.executeRebuildTest(
-    '<mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac><mo>+</mo><mn>2</mn>');
+      '<mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac><mo>+</mo><mn>2</mn>');
   this.executeRebuildTest(
-    '<mn>a</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>');
+      '<mn>a</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>');
 };

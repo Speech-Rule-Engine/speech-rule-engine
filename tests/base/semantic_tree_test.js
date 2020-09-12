@@ -12847,8 +12847,8 @@ sre.SemanticTreeTest.prototype.testStreeSets = function() {
       '</appl>'
   );
   this.executeTreeTest(
-    '<mo>{</mo><mi>x</mi><mo>*</mo><mi>y</mi><mo>}</mo>',
-    '<fenced role="leftright" id="6">' +
+      '<mo>{</mo><mi>x</mi><mo>*</mo><mi>y</mi><mo>}</mo>',
+      '<fenced role="leftright" id="6">' +
       '<content>' +
       '<fence role="open" id="0">{</fence>' +
       '<fence role="close" id="4">}</fence>' +
@@ -12867,12 +12867,12 @@ sre.SemanticTreeTest.prototype.testStreeSets = function() {
   );
   // Test for issue #287
   this.executeTreeTest(
-    '<msub><mi mathvariant="normal">&#x393;</mi><mrow>' +
+      '<msub><mi mathvariant="normal">&#x393;</mi><mrow>' +
       '<mo fence="false" stretchy="false">{</mo><msub><mrow>' +
       '<mi mathvariant="-tex-calligraphic">M</mi></mrow><mi>k</mi></msub>' +
       '<mo fence="false" stretchy="false">}</mo></mrow></msub>' +
       '<mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo>',
-    '<appl role="simple function" id="13">' +
+      '<appl role="simple function" id="13">' +
       '<content>' +
       '<punctuation role="application" id="12">⁡</punctuation>' +
       '<identifier role="simple function" font="normal" id="0">Γ</identifier>' +
@@ -12997,16 +12997,16 @@ sre.SemanticTreeTest.prototype.testIssue376 = function() {
  */
 sre.SemanticTreeTest.prototype.testIssue382 = function() {
   this.executeTreeTest(
-    '<mo>=</mo><mo>&#x222B;</mo>',
-    '<relseq role="equality" id="3">=<content>' +
+      '<mo>=</mo><mo>&#x222B;</mo>',
+      '<relseq role="equality" id="3">=<content>' +
       '<relation role="equality" id="0">=</relation></content>' +
       '<children><empty role="unknown" id="2"/>' +
       '<largeop role="integral" id="1">∫</largeop></children></relseq>'
   );
   // TODO: This should be improved.
   this.executeTreeTest(
-    '<mo>&#x222B;</mo><mo>+</mo><mo>&#x222B;</mo>',
-    '<integral role="integral" id="5">' +
+      '<mo>&#x222B;</mo><mo>+</mo><mo>&#x222B;</mo>',
+      '<integral role="integral" id="5">' +
       '<content><largeop role="integral" id="0">∫</largeop></content>' +
       '<children><largeop role="integral" id="0">∫</largeop>' +
       '<prefixop role="positive" id="3">+<content>' +
@@ -13022,9 +13022,9 @@ sre.SemanticTreeTest.prototype.testIssue382 = function() {
  */
 sre.SemanticTreeTest.prototype.testIssue383 = function() {
   this.executeTreeTest(
-    '<mrow><mtext>-</mtext><mi mathvariant="normal">p</mi>' +
+      '<mrow><mtext>-</mtext><mi mathvariant="normal">p</mi>' +
       '</mrow><mo>&#x2061;</mo><mi>&#x3C9;</mi>',
-    '<appl role="simple function" id="7">' +
+      '<appl role="simple function" id="7">' +
       '<content><punctuation role="application" id="6">⁡' +
       '</punctuation></content><children>' +
       '<punctuated role="simple function" id="3">' +
@@ -13043,23 +13043,23 @@ sre.SemanticTreeTest.prototype.testIssue383 = function() {
  */
 sre.SemanticTreeTest.prototype.testIssue284 = function() {
   this.executeTreeTest(
-    '<mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>',
-    '<number role="mixed" id="5"><children><number role="integer" font="normal" id="0">2</number><fraction role="division" id="4"><children><number role="integer" font="normal" id="2">3</number><identifier role="latinletter" font="italic" id="3">p</identifier></children></fraction></children></number>'
+      '<mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>',
+      '<number role="mixed" id="5"><children><number role="integer" font="normal" id="0">2</number><fraction role="division" id="4"><children><number role="integer" font="normal" id="2">3</number><identifier role="latinletter" font="italic" id="3">p</identifier></children></fraction></children></number>'
   );
   this.executeTreeTest(
-    '<mn>2</mn><mo>&#x2064;</mo><mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>',
-    '<infixop role="addition" id="8">⁤<content><operator role="addition" id="1">⁤</operator></content><children><number role="integer" font="normal" id="0">2</number><number role="mixed" id="7"><children><number role="integer" font="normal" id="2">2</number><fraction role="division" id="6"><children><number role="integer" font="normal" id="4">3</number><identifier role="latinletter" font="italic" id="5">p</identifier></children></fraction></children></number></children></infixop>'
+      '<mn>2</mn><mo>&#x2064;</mo><mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>',
+      '<infixop role="addition" id="8">⁤<content><operator role="addition" id="1">⁤</operator></content><children><number role="integer" font="normal" id="0">2</number><number role="mixed" id="7"><children><number role="integer" font="normal" id="2">2</number><fraction role="division" id="6"><children><number role="integer" font="normal" id="4">3</number><identifier role="latinletter" font="italic" id="5">p</identifier></children></fraction></children></number></children></infixop>'
   );
   this.executeTreeTest(
-    '<mn>2</mn><mo>+</mo><mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>',
-    '<infixop role="addition" id="8">+<content><operator role="addition" id="1">+</operator></content><children><number role="integer" font="normal" id="0">2</number><number role="mixed" id="7"><children><number role="integer" font="normal" id="2">2</number><fraction role="division" id="6"><children><number role="integer" font="normal" id="4">3</number><identifier role="latinletter" font="italic" id="5">p</identifier></children></fraction></children></number></children></infixop>'
+      '<mn>2</mn><mo>+</mo><mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>',
+      '<infixop role="addition" id="8">+<content><operator role="addition" id="1">+</operator></content><children><number role="integer" font="normal" id="0">2</number><number role="mixed" id="7"><children><number role="integer" font="normal" id="2">2</number><fraction role="division" id="6"><children><number role="integer" font="normal" id="4">3</number><identifier role="latinletter" font="italic" id="5">p</identifier></children></fraction></children></number></children></infixop>'
   );
   this.executeTreeTest(
-    '<mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac><mo>+</mo><mn>2</mn>',
-    '<infixop role="addition" id="8">+<content><operator role="addition" id="5">+</operator></content><children><number role="mixed" id="7"><children><number role="integer" font="normal" id="0">2</number><fraction role="division" id="4"><children><number role="integer" font="normal" id="2">3</number><identifier role="latinletter" font="italic" id="3">p</identifier></children></fraction></children></number><number role="integer" font="normal" id="6">2</number></children></infixop>'
+      '<mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac><mo>+</mo><mn>2</mn>',
+      '<infixop role="addition" id="8">+<content><operator role="addition" id="5">+</operator></content><children><number role="mixed" id="7"><children><number role="integer" font="normal" id="0">2</number><fraction role="division" id="4"><children><number role="integer" font="normal" id="2">3</number><identifier role="latinletter" font="italic" id="3">p</identifier></children></fraction></children></number><number role="integer" font="normal" id="6">2</number></children></infixop>'
   );
   this.executeTreeTest(
-    '<mn>a</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>',
-    '<number role="mixed" id="5"><children><number role="latinletter" font="normal" id="0">a</number><fraction role="division" id="4"><children><number role="integer" font="normal" id="2">3</number><identifier role="latinletter" font="italic" id="3">p</identifier></children></fraction></children></number>'
+      '<mn>a</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>',
+      '<number role="mixed" id="5"><children><number role="latinletter" font="normal" id="0">a</number><fraction role="division" id="4"><children><number role="integer" font="normal" id="2">3</number><identifier role="latinletter" font="italic" id="3">p</identifier></children></fraction></children></number>'
   );
 };

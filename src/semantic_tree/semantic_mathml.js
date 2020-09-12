@@ -79,9 +79,9 @@ sre.SemanticMathml = function() {
     font: sre.SemanticAttr.Font.DOUBLESTRUCK
   };
   ['C', 'H', 'N', 'P', 'Q', 'R', 'Z', 'ℂ', 'ℍ', 'ℕ', 'ℙ', 'ℚ', 'ℝ', 'ℤ'].
-    forEach(function(x) {
-     this.getFactory().defaultMap.add(x, meaning);
-    }.bind(this));
+      forEach(function(x) {
+        this.getFactory().defaultMap.add(x, meaning);
+      }.bind(this));
 
 };
 goog.inherits(sre.SemanticMathml, sre.SemanticAbstractParser);
@@ -506,14 +506,15 @@ sre.SemanticMathml.prototype.dummy_ = function(node, children) {
  * @private
  */
 sre.SemanticMathml.prototype.leaf_ = function(mml, children) {
-  if (children.length === 1 && children[0].nodeType !== sre.DomUtil.NodeType.TEXT_NODE) {
+  if (children.length === 1 &&
+      children[0].nodeType !== sre.DomUtil.NodeType.TEXT_NODE) {
     let node = this.getFactory().makeUnprocessed(mml);
     sre.SemanticUtil.addAttributes(node, children[0]);
     return node;
   }
   return this.getFactory().makeLeafNode(
-    mml.textContent,
-    sre.SemanticProcessor.getInstance().font(
+      mml.textContent,
+      sre.SemanticProcessor.getInstance().font(
       mml.getAttribute('mathvariant')));
 };
 

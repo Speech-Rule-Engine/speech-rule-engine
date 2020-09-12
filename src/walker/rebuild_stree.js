@@ -114,7 +114,8 @@ sre.RebuildStree.prototype.assembleTree = function(node) {
       sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.CHILDREN));
   var content = sre.WalkerUtil.splitAttribute(
       sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.CONTENT));
-  sre.RebuildStree.addAttributes(snode, node, !(children.length || content.length));
+  sre.RebuildStree.addAttributes(
+      snode, node, !(children.length || content.length));
   if (content.length === 0 && children.length === 0) {
     snode.textContent = node.textContent;
     return snode;

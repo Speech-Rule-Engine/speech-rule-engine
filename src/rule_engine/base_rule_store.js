@@ -252,6 +252,7 @@ sre.BaseRuleStore.prototype.removeDuplicates = function(rule) {
  * @param {sre.SpeechRule} r1 Rule 1.
  * @param {sre.SpeechRule} r2 Rule 2.
  * @return {number} -1, 0, 1 depending on the comparison.
+ * @private
  */
 sre.BaseRuleStore.strongQuery_ = function(r1, r2) {
   var query1 = r1.precondition.query;
@@ -273,6 +274,7 @@ sre.BaseRuleStore.strongQuery_ = function(r1, r2) {
   stronger2 = query2.match(/^self::[\w-]+\[@[\w-]+\]$/);
   return (stronger1 && stronger2) ? 0 : (stronger1 ? -1 : (stronger2 ? 1 : 0));
 };
+
 
 /**
  * Picks the result of the most constraint rule by prefering those:
