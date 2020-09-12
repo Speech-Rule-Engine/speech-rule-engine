@@ -325,7 +325,7 @@ sre.SemanticMathml.prototype.tableCell_ = function(node, children) {
  * @private
  */
 sre.SemanticMathml.prototype.text_ = function(node, children) {
-  var newNode = this.leaf_(node);
+  var newNode = this.leaf_(node, children);
   if (!node.textContent) {
     return newNode;
   }
@@ -344,7 +344,7 @@ sre.SemanticMathml.prototype.text_ = function(node, children) {
  * @private
  */
 sre.SemanticMathml.prototype.identifier_ = function(node, children) {
-  var newNode = this.leaf_(node);
+  var newNode = this.leaf_(node, children);
   var sem = sre.SemanticProcessor.getInstance().identifierNode(
       newNode,
       sre.SemanticProcessor.getInstance().font(
@@ -370,7 +370,7 @@ sre.SemanticMathml.prototype.identifier_ = function(node, children) {
  * @private
  */
 sre.SemanticMathml.prototype.number_ = function(node, children) {
-  var newNode = this.leaf_(node);
+  var newNode = this.leaf_(node, children);
   sre.SemanticProcessor.number(newNode);
   return newNode;
 };
@@ -384,7 +384,7 @@ sre.SemanticMathml.prototype.number_ = function(node, children) {
  * @private
  */
 sre.SemanticMathml.prototype.operator_ = function(node, children) {
-  var newNode = this.leaf_(node);
+  var newNode = this.leaf_(node, children);
   if (newNode.type === sre.SemanticAttr.Type.UNKNOWN) {
     newNode.type = sre.SemanticAttr.Type.OPERATOR;
   }
@@ -527,16 +527,22 @@ sre.SemanticMathml.prototype.dummy_ = function(node, children) {
 
 
 /**
- * Creates a leaf node fro MathML node.
- * @param {Node} mml The MathML tree.
+ * Creates a leaf node from MathML node.
+ * @param {Node} mml The MathML node.
+ * @param {Array.<Node>} children Its child nodes.
  * @return {!sre.SemanticNode} The new node.
  * @private
  */
-sre.SemanticMathml.prototype.leaf_ = function(mml) {
+sre.SemanticMathml.prototype.leaf_ = function(mml, children) {
+  if (children.length === 1 && children[0].nodeType !== sre.DomUtil.NodeType.TEXT_NODE) {
+    let node = this.getFactory().makeUnprocessed(mml);
+    this.addAttributes(node, children[0]);
+    return node;
+  }
   return this.getFactory().makeLeafNode(
-      mml.textContent,
-      sre.SemanticProcessor.getInstance().font(
-          mml.getAttribute('mathvariant')));
+    mml.textContent,
+    sre.SemanticProcessor.getInstance().font(
+      mml.getAttribute('mathvariant')));
 };
 
 
