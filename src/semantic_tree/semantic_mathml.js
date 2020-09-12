@@ -96,41 +96,13 @@ sre.SemanticMathml.prototype.parse = function(mml) {
   var tag = sre.DomUtil.tagName(mml);
   var func = this.parseMap_[tag];
   var newNode = (func ? func : goog.bind(this.dummy_, this))(mml, children);
-  this.addAttributes(newNode, mml);
+  sre.SemanticUtil.addAttributes(newNode, mml);
   if (['MATH', 'MROW', 'MPADDED', 'MSTYLE', 'SEMANTICS'].indexOf(tag) !== -1) {
     return newNode;
   }
   newNode.mathml.unshift(mml);
   newNode.mathmlTree = mml;
   return newNode;
-};
-
-
-/**
- * List of potential attributes that should be used as speech directly.
- * @type {Array.<string>}
- */
-sre.SemanticMathml.directSpeechKeys = ['aria-label', 'exact-speech', 'alt'];
-
-
-/**
- * Retains external attributes from the source node to the semantic node.
- * @param {sre.SemanticNode} to The target node.
- * @param {Node} from The source node.
- */
-sre.SemanticMathml.prototype.addAttributes = function(to, from) {
-  if (from.hasAttributes()) {
-    var attrs = from.attributes;
-    for (var i = attrs.length - 1; i >= 0; i--) {
-      var key = attrs[i].name;
-      if (key.match(/^ext/)) {
-        to.attributes[key] = attrs[i].value;
-      }
-      if (sre.SemanticMathml.directSpeechKeys.indexOf(key) !== -1) {
-        to.attributes['ext-speech'] = attrs[i].value;
-      }
-    }
-  }
 };
 
 
@@ -536,7 +508,7 @@ sre.SemanticMathml.prototype.dummy_ = function(node, children) {
 sre.SemanticMathml.prototype.leaf_ = function(mml, children) {
   if (children.length === 1 && children[0].nodeType !== sre.DomUtil.NodeType.TEXT_NODE) {
     let node = this.getFactory().makeUnprocessed(mml);
-    this.addAttributes(node, children[0]);
+    sre.SemanticUtil.addAttributes(node, children[0]);
     return node;
   }
   return this.getFactory().makeLeafNode(
