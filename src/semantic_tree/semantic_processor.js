@@ -388,7 +388,8 @@ sre.SemanticProcessor.prototype.getMixedNumbers_ = function(nodes) {
     var last = comp.length - 1;
     if (comp[last] &&
         sre.SemanticPred.isAttribute('type', 'NUMBER')(comp[last]) &&
-        sre.SemanticPred.isAttribute('role', 'INTEGER')(comp[last])) { // Change to allow float?
+        (sre.SemanticPred.isAttribute('role', 'INTEGER')(comp[last]) ||
+         sre.SemanticPred.isAttribute('role', 'FLOAT')(comp[last]))) {
       var newNode = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
           sre.SemanticAttr.Type.NUMBER, [comp[last], rel], []);
       newNode.role = sre.SemanticAttr.Role.MIXED;

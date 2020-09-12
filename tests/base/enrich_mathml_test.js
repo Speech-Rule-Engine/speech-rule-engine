@@ -362,9 +362,18 @@ sre.EnrichMathmlTest.prototype.testMathmlMixedNumbers = function() {
   );
   this.executeMathmlTest(
       '<mn>3.0</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>',
+      '<math type="number" role="mixed" id="4" children="0,3">' +
+      '<mn type="number" role="float" id="0" parent="4">3.0</mn>' +
+      '<mfrac type="fraction" role="vulgar" id="3" children="1,2" parent="4">' +
+      '<mn type="number" role="integer" id="1" parent="3">1</mn>' +
+      '<mn type="number" role="integer" id="2" parent="3">2</mn>' +
+      '</mfrac></math>'
+  );
+  this.executeMathmlTest(
+      '<mn>3.0e</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>',
       '<math type="infixop" role="implicit" id="5" children="0,3"' +
       ' content="4">' +
-      '<mn type="number" role="float" id="0" parent="5">3.0</mn>' +
+      '<mn type="number" role="othernumber" id="0" parent="5">3.0e</mn>' +
       '<mo type="operator" role="multiplication" id="4" parent="5"' +
       ' added="true"' +
       ' operator="infixop,⁢">⁢</mo>' +

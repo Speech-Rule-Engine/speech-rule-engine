@@ -208,21 +208,38 @@ sre.SemanticTreeTest.prototype.testStreeMixedNumbers = function() {
       '</children>' +
       '</infixop>'
   );
+  this.brief = false;
   this.executeTreeTest(
       '<mn>3.0</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>',
-      '<infixop>\u2062' +
-          '<content><operator>\u2062</operator></content>' +
+      '<number role="mixed" id="4">' +
       '<children>' +
-      '<number>3.0</number>' +
-      '<fraction>' +
+      '<number role="float" font="normal" id="0">3.0</number>' +
+      '<fraction role="vulgar" id="3">' +
       '<children>' +
-      '<number>1</number>' +
-      '<number>2</number>' +
+      '<number role="integer" font="normal" id="1">1</number>' +
+      '<number role="integer" font="normal" id="2">2</number>' +
+      '</children>' +
+      '</fraction>' +
+      '</children>' +
+      '</number>'
+  );
+  this.executeTreeTest(
+      '<mn>3.0e</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>',
+      '<infixop role="implicit" id="5">\u2062' +
+      '<content><operator role="multiplication" id="4">' +
+      '\u2062</operator></content>' +
+      '<children>' +
+      '<number role="othernumber" font="normal" id="0">3.0e</number>' +
+      '<fraction role="vulgar" id="3">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="1">1</number>' +
+      '<number role="integer" font="normal" id="2">2</number>' +
       '</children>' +
       '</fraction>' +
       '</children>' +
       '</infixop>'
   );
+  this.brief = true;
   this.executeTreeTest(
       '<mfrac><mn>1</mn><mn>2</mn></mfrac><mn>3.0</mn>',
       '<infixop>\u2062' +

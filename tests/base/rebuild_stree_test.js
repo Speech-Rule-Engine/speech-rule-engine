@@ -134,6 +134,8 @@ sre.RebuildStreeTest.prototype.testRebuildMixedNumbers = function() {
   this.executeRebuildTest(
       '<mn>3.0</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>');
   this.executeRebuildTest(
+      '<mn>3.0e</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>');
+  this.executeRebuildTest(
       '<mfrac><mn>1</mn><mn>2</mn></mfrac><mn>3.0</mn>');
   this.executeRebuildTest(
       '<mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi>');
