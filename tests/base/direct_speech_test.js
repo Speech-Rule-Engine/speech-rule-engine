@@ -179,7 +179,7 @@ sre.EnrichMathmlTest.prototype.testMglyph = function() {
 };
 
 
-sre.RebuildStreeTest.prototype.untestMglyph = function() {
+sre.RebuildStreeTest.prototype.testMglyph = function() {
   var mml = '<mi><mglyph src="my-braid-23.png" alt="23braid"/></mi>' +
     '<mo>+</mo><mi><mglyph src="my-braid-132.png" alt="132braid"/></mi>' +
       '<mo>=</mo><mi><mglyph src="my-braid-13.png" alt="13braid"/></mi>';

@@ -478,4 +478,6 @@ Lab.Examples = ['<mrow><mrow><mi>a</mi></mrow></mrow><mrow><mi>b</mi></mrow>',
 '<mn>2</mn><mo>&#x2064;</mo><mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>',
 '<mn>2</mn><mo>+</mo><mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>',
 '<mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac><mo>+</mo><mn>2</mn>',
-'<mn>a</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>']
+'<mn>a</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>',
+'<mi><mglyph src=\'my-braid-23.png\' alt=\'23braid\'/></mi><mo>+</mo><mi><mglyph src=\'my-braid-132.png\' alt=\'132braid\'/></mi><mo>=</mo><mi><mglyph src=\'my-braid-13.png\' alt=\'13braid\'/></mi>',
+'<mrow><mi>N</mi><msub><mi>M</mi><mrow class=\'MJX-TeXAtom-ORD\'><mn>1</mn><mo>⊂</mo><mrow class=\'MJX-TeXAtom-VCENTER\'><mglyph src=\'Images/img64cf9bc6538bb7137dab7b360f92afb4.svg\' width=\'13pt\' height=\'6pt\' alt=\'mfin\'></mglyph></mrow></mrow></msub></mrow>']
