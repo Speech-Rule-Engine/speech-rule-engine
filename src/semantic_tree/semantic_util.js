@@ -229,3 +229,29 @@ sre.SemanticUtil.isZeroLength = function(length) {
 };
 
 
+/**
+ * List of potential attributes that should be used as speech directly.
+ * @type {Array.<string>}
+ */
+sre.SemanticUtil.directSpeechKeys = ['aria-label', 'exact-speech', 'alt'];
+
+
+/**
+ * Retains external attributes from the source node to the semantic node.
+ * @param {sre.SemanticNode} to The target node.
+ * @param {Node} from The source node.
+ */
+sre.SemanticUtil.addAttributes = function(to, from) {
+  if (from.hasAttributes()) {
+    var attrs = from.attributes;
+    for (var i = attrs.length - 1; i >= 0; i--) {
+      var key = attrs[i].name;
+      if (key.match(/^ext/)) {
+        to.attributes[key] = attrs[i].value;
+      }
+      if (sre.SemanticUtil.directSpeechKeys.indexOf(key) !== -1) {
+        to.attributes['ext-speech'] = attrs[i].value;
+      }
+    }
+  }
+};
