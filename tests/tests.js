@@ -46,12 +46,18 @@ sre.Tests.prototype.run = function() {
   var timeIn = (new Date()).getTime();
   for (var i = 0, test; test = sre.Tests.testList[i]; i++) {
     var obj = new test();
-    console.log(obj);
     this.runner.registerTest(obj);
   }
 
   test = new sre.ClearspeakRuleTest();
   test.jsonFile = 'en/clearspeak_english_absolute_value.json';
+  test.baseFile = 'src/clearspeak_absolute_value.json';
+  this.runner.registerTest(
+    test
+  );
+  test = new sre.ClearspeakRuleTest();
+  test.jsonFile = 'de/clearspeak_german_absolute_value.json';
+  test.baseFile = 'src/clearspeak_absolute_value.json';
   this.runner.registerTest(
     test
   );

@@ -96,10 +96,10 @@ sre.TestRunner.prototype.registerTest = function(test) {
  */
 sre.TestRunner.prototype.runTests = function() {
   for (var i = 0, test; test = this.testQueue_[i]; i++) {
-    this.output('\nRunning ' + test.information + '\n');
-    this.executeTests(test);
     if (test.jsonFile) {
       this.executeJsonTests(test);
+    } else {
+      this.executeTests(test);
     }
   }
 };
@@ -107,6 +107,7 @@ sre.TestRunner.prototype.runTests = function() {
 
 sre.TestRunner.prototype.executeJsonTests = function(testcase) {
   testcase.prepare();
+  this.output('\nRunning ' + testcase.information + '\n');
   testcase.setUpTest();
   for (var test of testcase.jsonTests) {
     this.executeJsonTest(test.name, goog.bind(testcase.method, testcase), testcase.pick(test));
@@ -123,6 +124,7 @@ sre.TestRunner.prototype.executeJsonTest = function(name, func, args) {
  * @param {sre.AbstractTest} testcase The current test case to run.
  */
 sre.TestRunner.prototype.executeTests = function(testcase) {
+  this.output('\nRunning ' + testcase.information + '\n');
   testcase.setUpTest();
   for (var propertyName in testcase) {
     if (propertyName.search('test') == 0) {

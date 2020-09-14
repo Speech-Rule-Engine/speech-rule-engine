@@ -59,28 +59,6 @@ sre.ClearspeakRuleTest.prototype.tearDownTest = function() {
 };
 
 
-sre.ClearspeakRuleTest.prototype.prepare = function() {
-  sre.ClearspeakRuleTest.base(this, 'prepare');
-  this.modality = this.jsonTests.modality || this.modality;
-  this.locale = this.jsonTests.locale || this.locale;
-  this.domain = this.jsonTests.domain || this.domain;
-  this.style = this.jsonTests.style || this.style;
-  this.actual = this.jsonTests.actual || this.actual;
-  this.compare = this.jsonTests.compare || this.compare;
-  this.information = this.jsonTests.information;
-  var results = [];
-  var tests = this.jsonTests.tests || {};
-  for (var key of Object.keys(tests)) {
-    if (key.match(/^_/)) continue;
-    var json = tests[key];
-    if (!json.test) continue;
-    json.name = key;
-    results.push(json);
-  }
-  this.jsonTests = results;
-};
-
-
 sre.ClearspeakRuleTest.prototype.pick = function(json) {
   return [json['mathml'], json['speech'], json['preference']];
 };

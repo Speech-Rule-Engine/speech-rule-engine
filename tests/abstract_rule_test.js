@@ -23,7 +23,7 @@ goog.provide('sre.AbstractRuleTest');
 
 goog.require('sre.AbstractExamples');
 goog.require('sre.DynamicCstr');
-
+goog.require('sre.TestUtil');
 
 
 /**
@@ -72,6 +72,8 @@ sre.AbstractRuleTest = function() {
    * @type {boolean}
    */
   this.compare = false;
+
+  this.baseFile = '';
 
 };
 goog.inherits(sre.AbstractRuleTest, sre.AbstractExamples);
@@ -226,3 +228,40 @@ sre.AbstractRuleTest.prototype.footer = function() {
   return '\n</body>\n</html>';
 };
 
+
+sre.AbstractRuleTest.prototype.prepare = function() {
+  sre.AbstractRuleTest.base(this, 'prepare');
+  var baseTests = this.baseFile ? sre.TestUtil.loadJson(this.baseFile) : [];
+  this.modality = this.jsonTests.modality || this.modality;
+  this.locale = this.jsonTests.locale || this.locale;
+  this.domain = this.jsonTests.domain || this.domain;
+  this.style = this.jsonTests.style || this.style;
+  this.actual = this.jsonTests.actual || this.actual;
+  this.compare = this.jsonTests.compare || this.compare;
+  this.information = this.jsonTests.information;
+  var results = [];
+  var input = baseTests.tests || {};
+  var output = this.jsonTests.tests || {};
+  // Combine
+  for (var key of Object.keys(input)) {
+    if (key.match(/^_/)) continue;
+    var json = input[key];
+    var speech = output[key];
+    if (!speech) {
+      console.warn('No results specified for test: ' + key);
+      continue;
+    }
+    if (!json.test) continue;
+    json.name = key;
+    results.push(Object.assign(json, speech));
+    delete output[key];
+  }
+  for (key of Object.keys(output)) {
+    if (key.match(/^_/)) continue;
+    json = output[key];
+    if (!json.test) continue;
+    json.name = key;
+    results.push(json);
+  }
+  this.jsonTests = results;
+};
