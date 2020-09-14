@@ -98,9 +98,25 @@ sre.TestRunner.prototype.runTests = function() {
   for (var i = 0, test; test = this.testQueue_[i]; i++) {
     this.output('\nRunning ' + test.information + '\n');
     this.executeTests(test);
+    if (test.jsonFile) {
+      this.executeJsonTests(test);
+    }
   }
 };
 
+
+sre.TestRunner.prototype.executeJsonTests = function(testcase) {
+  testcase.prepare();
+  testcase.setUpTest();
+  for (var test of testcase.jsonTests) {
+    this.executeJsonTest(test.name, goog.bind(testcase.method, testcase), testcase.pick(test));
+  }
+  testcase.tearDownTest();
+};
+
+sre.TestRunner.prototype.executeJsonTest = function(name, func, args) {
+  this.executeTest_(name, function() {func.apply(null, args);});
+};
 
 /**
  * Execute single tests.

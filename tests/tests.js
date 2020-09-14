@@ -27,6 +27,7 @@ goog.require('sre.SpeechGermanTest');
 goog.require('sre.SpeechSpanishTest');
 goog.require('sre.TestRunner');
 
+goog.require('sre.ClearspeakRuleTest');
 
 
 /**
@@ -44,14 +45,27 @@ goog.addSingletonGetter(sre.Tests);
 sre.Tests.prototype.run = function() {
   var timeIn = (new Date()).getTime();
   for (var i = 0, test; test = sre.Tests.testList[i]; i++) {
-    this.runner.registerTest(new test());
+    var obj = new test();
+    console.log(obj);
+    this.runner.registerTest(obj);
   }
+
+  test = new sre.ClearspeakRuleTest();
+  test.jsonFile = 'en/clearspeak_english_absolute_value.json';
+  this.runner.registerTest(
+    test
+  );
+
   this.runner.runTests();
   this.runner.summary();
   var timeOut = (new Date()).getTime();
   this.runner.output('Time for tests: ' + (timeOut - timeIn) + 'ms\n');
   // sre.AbstractCharacterTest.testOutput();
   process.exit(this.runner.success() ? 0 : 1);
+};
+
+
+sre.Tests.prototype.runJsonTest = function() {
 };
 
 

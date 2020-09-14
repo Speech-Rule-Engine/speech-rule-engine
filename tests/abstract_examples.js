@@ -19,7 +19,7 @@
 
 goog.provide('sre.AbstractExamples');
 
-goog.require('sre.AbstractTest');
+goog.require('sre.AbstractJsonTest');
 goog.require('sre.Engine');
 goog.require('sre.ExamplesOutput');
 
@@ -28,10 +28,11 @@ goog.require('sre.ExamplesOutput');
 /**
  * @constructor
  * @implements {sre.ExamplesOutput}
- * @extends {sre.AbstractTest}
+ * @extends {sre.AbstractJsonTest}
+ * @param {string=} opt_file The JSON file if necessary.
  */
-sre.AbstractExamples = function() {
-  sre.AbstractExamples.base(this, 'constructor');
+sre.AbstractExamples = function(opt_file) {
+  sre.AbstractExamples.base(this, 'constructor', opt_file ? opt_file : '');
 
   /**
    * @type {boolean}
@@ -82,7 +83,7 @@ sre.AbstractExamples = function() {
   this.examples_ = [];
 
 };
-goog.inherits(sre.AbstractExamples, sre.AbstractTest);
+goog.inherits(sre.AbstractExamples, sre.AbstractJsonTest);
 
 
 /**

@@ -18,8 +18,10 @@
  */
 
 goog.provide('sre.AbstractTest');
+goog.provide('sre.AbstractJsonTest');
 
 goog.require('sre.TestExternal');
+goog.require('sre.TestUtil');
 
 
 
@@ -51,3 +53,39 @@ sre.AbstractTest.prototype.setUpTest = function() { };
  * Finalises the test.
  */
 sre.AbstractTest.prototype.tearDownTest = function() { };
+
+
+/**
+ * @constructor
+ * @param {string} file The JSON file name.
+ * @extends {sre.AbstractTest}
+ */
+sre.AbstractJsonTest = function(file) {
+  sre.AbstractJsonTest.base(this, 'constructor');
+
+  this.jsonFile = file;
+
+  this.jsonTests = [];
+};
+goog.inherits(sre.AbstractJsonTest, sre.AbstractTest);
+
+
+/**
+ * Picks arguments from a JSON element.
+ * @param {Object} json The JSON element.
+ // TODO: Need to specify that further!
+ * @return {Array.<string>} The array of arguments for the test method.
+ */
+sre.AbstractJsonTest.prototype.pick = function(json) {
+  return [];
+};
+
+/**
+ * The actual test method.
+ * @param {...string} var_args Arguments for the test method.
+ */
+sre.AbstractJsonTest.prototype.method = function(var_args) {};
+
+sre.AbstractJsonTest.prototype.prepare = function() {
+  this.jsonTests = this.jsonFile ? sre.TestUtil.loadJson(this.jsonFile) : [];
+};
