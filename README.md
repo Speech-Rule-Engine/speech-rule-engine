@@ -4,7 +4,7 @@ Speech Rule Engine
 
 ***
 
-**Breaking Change:** Please move to v3.0.2 or above. [More info here.](#breaking-change)
+**Breaking Change:** Please move to v3.0.2 or later. [More info here.](#breaking-change)
 
 ***
 
