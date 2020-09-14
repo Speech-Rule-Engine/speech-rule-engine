@@ -4,7 +4,7 @@ Speech Rule Engine
 
 ***
 
-**Breaking Change:** Please move to v3.0.2 (master) or v3.1.0-beta.3 (develop). [More info here.](#breaking-change)
+**Breaking Change:** Please move to v3.0.2 or above. [More info here.](#breaking-change)
 
 ***
 
@@ -440,7 +440,7 @@ the [commander library](https://github.com/tj/commander.js/releases/tag/v6.0.0)
 old versions of SRE might break when newly installed from `npm`.  SRE relies on
 commander for running its command line interface.
 
-**Therefore, please move to SRE v3.0.2 (master) or v3.1.0-beta.3 (develop).**
+**Therefore, please move to SRE v3.0.2 or later.**
 
 
 If you want to run older versions of SRE, you need to manually downgrade the
