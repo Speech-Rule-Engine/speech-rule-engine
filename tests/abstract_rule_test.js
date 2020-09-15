@@ -243,9 +243,10 @@ sre.AbstractRuleTest.prototype.prepare = function() {
   var input = baseTests.tests || {};
   var output = this.jsonTests.tests || {};
   var warn = [];
+  var exclude = this.jsonTests.exclude || [];
   // Combine
   for (var key of Object.keys(input)) {
-    if (key.match(/^_/)) continue;
+    if (key.match(/^_/) || exclude.indexOf(key) !== -1) continue;
     var json = input[key];
     var speech = output[key];
     if (!speech) {
