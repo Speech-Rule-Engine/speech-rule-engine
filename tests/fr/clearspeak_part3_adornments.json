@@ -1,0 +1,292 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "FrenchPart3Adornments",
+  "locale": "fr",
+  "information": "ClearspeakFrenchPart3Adornments rule tests.",
+  "tests": {
+    "_comment1_": " Part 3: Adornments",
+    "_comment2_": " Prime, Double Prime, and Triple Prime",
+    "Prime001": {
+      "speech": "A prime, B prime"
+    },
+    "Prime002": {
+      "speech": "A double prime, B double prime"
+    },
+    "Prime003": {
+      "speech": "A triple prime, B triple prime"
+    },
+    "Prime004": {
+      "speech": "f prime de x"
+    },
+    "Prime005": {
+      "speech": "f double prime de x"
+    },
+    "Prime006": {
+      "speech": "f triple prime de x"
+    },
+    "Prime007": {
+      "speech": "1 foot"
+    },
+    "Prime008": {
+      "speech": "2 feet"
+    },
+    "Prime009": {
+      "speech": "1 inch"
+    },
+    "Prime010": {
+      "speech": "2 inches"
+    },
+    "Prime011": {
+      "speech": "16 feet, 10 inches"
+    },
+    "_comment3_": " TODO: (Simons) Better handling of degrees.",
+    "Prime012": {
+      "speech": "45 degrés, 10 minutes"
+    },
+    "Prime013": {
+      "speech": "x degrés, y minutes"
+    },
+    "Prime014": {
+      "speech": "XXXX"
+    },
+    "Prime015": {
+      "speech": "XXXX"
+    },
+    "Prime016": {
+      "speech": "1 minute"
+    },
+    "Prime017": {
+      "speech": "x minutes"
+    },
+    "Prime018": {
+      "speech": "2 minutes"
+    },
+    "Prime019": {
+      "speech": "1 second"
+    },
+    "Prime020": {
+      "speech": "x seconds"
+    },
+    "Prime021": {
+      "speech": "2 seconds"
+    },
+    "Prime022": {
+      "speech": "16 minutes, 10 seconds"
+    },
+    "Prime023": {
+      "speech": "x minutes, y seconds"
+    },
+    "Prime024": {
+      "speech": "45 degrees, 10 minutes"
+    },
+    "Prime025": {
+      "speech": "45 degrees, 10 minutes, 25 seconds"
+    },
+    "Prime026": {
+      "speech": "A prime, B prime"
+    },
+    "Prime027": {
+      "speech": "A double prime, B double prime"
+    },
+    "Prime028": {
+      "speech": "A triple prime, B triple prime"
+    },
+    "Prime029": {
+      "speech": "f prime de x"
+    },
+    "Prime030": {
+      "speech": "f double prime de x"
+    },
+    "Prime031": {
+      "speech": "f triple prime de x"
+    },
+    "Prime032": {
+      "speech": "1 foot"
+    },
+    "Prime033": {
+      "speech": "x feet"
+    },
+    "Prime034": {
+      "speech": "2 feet"
+    },
+    "Prime035": {
+      "speech": "1 inch"
+    },
+    "Prime036": {
+      "speech": "x inches"
+    },
+    "Prime037": {
+      "speech": "2 inches"
+    },
+    "_comment4_": " TODO: (Simons) Rewrite prime etc into superscript.",
+    "Prime038": {
+      "speech": "XXXX"
+    },
+    "Prime039": {
+      "speech": "XXXX"
+    },
+    "Prime040": {
+      "speech": "XXXX"
+    },
+    "Prime041": {
+      "speech": "XXXX"
+    },
+    "Prime042": {
+      "speech": "A prime, B prime"
+    },
+    "Prime043": {
+      "speech": "A double prime, B double prime"
+    },
+    "Prime044": {
+      "speech": "A triple prime, B triple prime"
+    },
+    "Prime045": {
+      "speech": "f prime de x"
+    },
+    "Prime046": {
+      "speech": "f double prime de x"
+    },
+    "Prime047": {
+      "speech": "f triple prime de x"
+    },
+    "_comment5_": " Combinations and Permutations",
+    "_comment6_": " These 8 tests come out of the clearspeak documents from MathType.  The MathML",
+    "_comment7_": " has a redundant use of subscripts leaving the actual correct placing of the",
+    "_comment8_": " right index in the multiscript empty.",
+    "_comment9_": " TODO: (Simons) Have a cleanup heuristic to combine multiscripts with",
+    "_comment10_": "                sub/superscripts.",
+    "CombPerm001": {
+      "speech": "XXXX"
+    },
+    "CombPerm002": {
+      "speech": "XXXX"
+    },
+    "CombPerm003": {
+      "speech": "XXXX"
+    },
+    "CombPerm004": {
+      "speech": "XXXX"
+    },
+    "CombPerm005": {
+      "speech": "XXXX"
+    },
+    "CombPerm006": {
+      "speech": "XXXX"
+    },
+    "CombPerm007": {
+      "speech": "XXXX"
+    },
+    "CombPerm008": {
+      "speech": "XXXX"
+    },
+    "_comment11_": " Cleaned up tests with the correct usage of multiscript elements.",
+    "CombPerm001a": {
+      "speech": "n C r"
+    },
+    "CombPerm002a": {
+      "speech": "n P r"
+    },
+    "CombPerm003a": {
+      "speech": "10 C 3"
+    },
+    "CombPerm004a": {
+      "speech": "10 P 3"
+    },
+    "CombPerm005a": {
+      "speech": "combinaison de; parmi r"
+    },
+    "CombPerm006a": {
+      "speech": "permutation de n parmi r"
+    },
+    "CombPerm007a": {
+      "speech": "combinaison de; parmi 3"
+    },
+    "CombPerm008a": {
+      "speech": "permutation de 10 parmi 3"
+    },
+    "_comment12_": " Bar",
+    "Bar001": {
+      "speech": "f macron"
+    },
+    "Bar002": {
+      "speech": "f macron de x"
+    },
+    "Bar003": {
+      "speech": "f sub 1, macron"
+    },
+    "Bar004": {
+      "speech": "f sub 1, macron de x"
+    },
+    "Bar005": {
+      "speech": "z macron"
+    },
+    "Bar006": {
+      "speech": "la décimale 0 virgule suivi par le chiffre répété 3"
+    },
+    "Bar007": {
+      "speech": "la décimale 0 virgule suivi par les chiffres répétés 1 2"
+    },
+    "Bar008": {
+      "speech": "la décimale 2 virgule suivi par les chiffres répétés 1 3 4"
+    },
+    "Bar009": {
+      "speech": "la décimale point 1 3 suivi par les chiffres répétés 4 6 7"
+    },
+    "Bar010": {
+      "speech": "la décimale 2 5 point 1 2 suivi par les chiffres répétés 6 3 2"
+    },
+    "Bar011": {
+      "speech": "z, z macron"
+    },
+    "Bar012": {
+      "speech": "le segment C D"
+    },
+    "Bar013": {
+      "speech": "le segment C prime D prime"
+    },
+    "Bar014": {
+      "speech": "le segment C double prime D double prime"
+    },
+    "Bar015": {
+      "speech": "le segment C triple prime D triple prime"
+    },
+    "Bar016": {
+      "speech": "le complexe conjugué de z"
+    },
+    "Bar017": {
+      "speech": "z, le complexe conjugué de z"
+    },
+    "Bar018": {
+      "speech": "le complexe conjugué de 3 moins 2 i, égale 3 plus 2 i"
+    },
+    "_comment13_": " Added! Test that still decimal period still works.",
+    "Bar006a": {
+      "speech": "la décimale 0 virgule suivi par le chiffre répété 3"
+    },
+    "Bar007a": {
+      "speech": "la décimale 0 virgule suivi par les chiffres répétés 1 2"
+    },
+    "Bar008a": {
+      "speech": "la décimale 2 virgule suivi par les chiffres répétés 1 3 4"
+    },
+    "Bar009a": {
+      "speech": "la décimale point 1 3 suivi par les chiffres répétés 4 6 7"
+    },
+    "Bar010a": {
+      "speech": "la décimale 2 5 point 1 2 suivi par les chiffres répétés 6 3 2"
+    },
+    "_comment14_": " Equals Sign with Adornments",
+    "Equal001": {
+      "speech": "est défini par"
+    },
+    "Equal002": {
+      "speech": "parenthèse gauche, f opérateur rond g, parenthèse droite, de x, est défini par, f de, g de x"
+    },
+    "Equal003": {
+      "speech": "signe égale avec point d'interrogation dessus"
+    },
+    "Equal004": {
+      "speech": "x plus 2 signe égale avec point d'interrogation dessus 4"
+    }
+  }
+}

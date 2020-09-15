@@ -1,0 +1,247 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "FrenchParentheses",
+  "locale": "fr",
+  "information": "ClearspeakFrenchParentheses rule tests.",
+  "tests": {
+    "_comment1_": " Parentheses",
+    "Paren001": {
+      "speech": "25"
+    },
+    "Paren002": {
+      "speech": "2 x"
+    },
+    "Paren003": {
+      "speech": "2 plus négatif 2"
+    },
+    "Paren004": {
+      "speech": "2 moins négatif 2"
+    },
+    "Paren004a": {
+      "test": true,
+      "preference": "Paren_Auto",
+      "mathml": "<math><mrow><mn>2</mn><mo>−</mo><mrow><mo>−</mo><mn>2</mn></mrow></mrow></math>",
+      "speech": "2 moins négatif 2"
+    },
+    "Paren005": {
+      "speech": "2 moins, parenthèse gauche, négatif 2, parenthèse droite, au cube"
+    },
+    "Paren006": {
+      "speech": "parenthèse gauche, 2 x, parenthèse droite, au carré"
+    },
+    "Paren007": {
+      "speech": "parenthèse gauche, 2 x, parenthèse droite, à la puissance y plus 1"
+    },
+    "Paren008": {
+      "speech": "négatif 2 x"
+    },
+    "Paren009": {
+      "speech": "parenthèse gauche, négatif 2 x, parenthèse droite, au carré"
+    },
+    "Paren010": {
+      "speech": "négatif, parenthèse gauche, 2 x, parenthèse droite, au carré"
+    },
+    "Paren011": {
+      "speech": "un-demi"
+    },
+    "Paren012": {
+      "_comment2_": " TODO: (QUESTION) This is against the Paren_Auto rules! (page 31)!",
+      "speech": "trois-quarts x"
+    },
+    "Paren013": {
+      "speech": "parenthèse gauche, 11 sur 22, parenthèse droite"
+    },
+    "Paren014": {
+      "speech": "un-demi à la puissance 4"
+    },
+    "Paren015": {
+      "speech": "parenthèse gauche, 11 sur 15, parenthèse droite, au carré"
+    },
+    "Paren016": {
+      "speech": "parenthèse gauche, 25, parenthèse droite"
+    },
+    "Paren017": {
+      "speech": "parenthèse gauche, 2 x, parenthèse droite"
+    },
+    "Paren018": {
+      "speech": "2 plus, parenthèse gauche, négatif 2, parenthèse droite"
+    },
+    "Paren019": {
+      "speech": "2 moins, parenthèse gauche, négatif 2, parenthèse droite"
+    },
+    "Paren020": {
+      "speech": "2 moins, parenthèse gauche, négatif 2, parenthèse droite, au cube"
+    },
+    "Paren021": {
+      "speech": "parenthèse gauche, 2 x, parenthèse droite, au carré"
+    },
+    "Paren022": {
+      "speech": "parenthèse gauche, 2 x, parenthèse droite, à la puissance y plus 1"
+    },
+    "Paren023": {
+      "speech": "parenthèse gauche, négatif 2 x, parenthèse droite"
+    },
+    "Paren024": {
+      "speech": "parenthèse gauche, négatif 2 x, parenthèse droite, au carré"
+    },
+    "Paren025": {
+      "speech": "négatif, parenthèse gauche, 2 x, parenthèse droite, au carré"
+    },
+    "Paren026": {
+      "speech": "parenthèse gauche, un-demi, parenthèse droite"
+    },
+    "Paren027": {
+      "speech": "parenthèse gauche, trois-quarts x, parenthèse droite"
+    },
+    "Paren028": {
+      "speech": "parenthèse gauche, 11 sur 22, parenthèse droite"
+    },
+    "Paren029": {
+      "speech": "parenthèse gauche, un-demi, parenthèse droite, à la puissance 4"
+    },
+    "Paren030": {
+      "speech": "parenthèse gauche, 11 sur 15, parenthèse droite, au carré"
+    },
+    "Paren031": {
+      "speech": "le point avec coordonées 1 virgule 2"
+    },
+    "Paren032": {
+      "speech": "le point avec coordonées x virgule y"
+    },
+    "Paren033": {
+      "speech": "le point avec coordonées 1 virgule 2 virgule 3"
+    },
+    "Paren034": {
+      "speech": "le point avec coordonées x virgule y virgule z"
+    },
+    "Paren035": {
+      "speech": "le point avec coordonées 1 virgule 2 virgule 386"
+    },
+    "Paren036": {
+      "speech": "un intervalle de a à b, sans inclure a ni b"
+    },
+    "Paren037": {
+      "speech": "un intervalle de 0 à 1, sans inclure 0 ni 1"
+    },
+    "Paren038": {
+      "speech": "un intervalle de a à b, avec a inclus, mais sans inclure b"
+    },
+    "Paren039": {
+      "speech": "un intervalle de 0 à 1, avec 0 inclus, mais sans inclure 1"
+    },
+    "Paren040": {
+      "speech": "un intervalle de a à b, sans inclure a, mais avec b inclus"
+    },
+    "Paren041": {
+      "speech": "un intervalle de 0 à 1, sans inclure 0, mais avec 1 inclus"
+    },
+    "Paren042": {
+      "speech": "un intervalle de a à b, avec a et b inclus"
+    },
+    "Paren043": {
+      "speech": "un intervalle de 0 à 1, avec 0 et 1 inclus"
+    },
+    "Paren044": {
+      "speech": "un intervalle de négatif infini à b, sans inclure b"
+    },
+    "Paren045": {
+      "speech": "un intervalle de négatif infini à 1, sans inclure 1"
+    },
+    "Paren046": {
+      "speech": "un intervalle de négatif infini à b, avec b inclus"
+    },
+    "Paren047": {
+      "speech": "un intervalle de négatif infini à 1, avec 1 inclus"
+    },
+    "Paren048": {
+      "speech": "un intervalle de a à infini, sans inclure a"
+    },
+    "Paren049": {
+      "speech": "un intervalle de 1 à infini, sans inclure 1"
+    },
+    "Paren050": {
+      "speech": "un intervalle de a à infini, avec a inclus"
+    },
+    "Paren051": {
+      "speech": "un intervalle de 1 à infini, avec 1 inclus"
+    },
+    "Paren052": {
+      "speech": "un intervalle de négatif infini à infini"
+    },
+    "Paren053": {
+      "speech": "un intervalle de négatif infini à positif infini"
+    },
+    "Nest001": {
+      "speech": "f de, g de x"
+    },
+    "Nest002": {
+      "speech": "f de, parenthèse gauche, g de, parenthèse gauche, x plus 1, parenthèse droite, parenthèse droite"
+    },
+    "Nest003": {
+      "speech": "6 moins, crochet gauche, 2 moins, parenthèse gauche, 3 plus 5, parenthèse droite, crochet droit"
+    },
+    "Nest004": {
+      "speech": "6 moins, parenthèse gauche, 2 moins, deuxième parenthèse gauche, 3 plus 5, deuxième parenthèse droite, parenthèse droite"
+    },
+    "Nest005": {
+      "speech": "4  , crochet gauche, x plus 3  , parenthèse gauche, 2 x, plus 1, parenthèse droite, crochet droit"
+    },
+    "Nest006": {
+      "speech": "4  , parenthèse gauche, x plus 3  , deuxième parenthèse gauche, 2 x, plus 1, deuxième parenthèse droite, parenthèse droite"
+    },
+    "Nest007": {
+      "speech": "1 plus, parenthèse gauche, 2 plus, deuxième parenthèse gauche, 3 plus 7, deuxième parenthèse droite, moins, deuxième parenthèse gauche, 2 plus 8, deuxième parenthèse droite, parenthèse droite"
+    },
+    "Nest008": {
+      "speech": "1 plus, parenthèse gauche, 2 plus, deuxième parenthèse gauche, 3 moins, troisième parenthèse gauche, 4 moins 5, troisième parenthèse droite, deuxième parenthèse droite, parenthèse droite"
+    },
+    "Nest009": {
+      "speech": "parenthèse gauche, deuxième parenthèse gauche, 2 plus, troisième parenthèse gauche, 3 plus 4, troisième parenthèse droite, plus 5, deuxième parenthèse droite, plus 6 plus, deuxième parenthèse gauche, troisième parenthèse gauche, 7 plus, quatrième parenthèse gauche, 8 plus 1, quatrième parenthèse droite, troisième parenthèse droite, plus 2, deuxième parenthèse droite, parenthèse droite"
+    },
+    "SilParen001": {
+      "speech": "25"
+    },
+    "SilParen002": {
+      "speech": "2 x"
+    },
+    "SilParen003": {
+      "speech": "2 plus, négatif 2"
+    },
+    "SilParen004": {
+      "speech": "2 moins, négatif 2"
+    },
+    "SilParen005": {
+      "speech": "2 moins, négatif 2, au cube"
+    },
+    "SilParen006": {
+      "speech": "2 x, au carré"
+    },
+    "SilParen007": {
+      "speech": "2 x, à la puissance y plus 1"
+    },
+    "SilParen008": {
+      "speech": "négatif 2 x"
+    },
+    "SilParen009": {
+      "speech": "négatif 2 x, au carré"
+    },
+    "SilParen010": {
+      "speech": "négatif, 2 x, au carré"
+    },
+    "SilParen011": {
+      "speech": "un-demi"
+    },
+    "SilParen012": {
+      "speech": "trois-quarts x"
+    },
+    "SilParen013": {
+      "speech": "11 sur 22"
+    },
+    "SilParen014": {
+      "speech": "un-demi, à la puissance 4"
+    },
+    "SilParen015": {
+      "speech": "11 sur 15, au carré"
+    }
+  }
+}

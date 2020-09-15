@@ -1,0 +1,127 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "FrenchLogarithms",
+  "locale": "fr",
+  "information": "ClearspeakFrenchLogarithms rule tests.",
+  "tests": {
+    "_comment1_": " Logarithms",
+    "Log001": {
+      "speech": "log x"
+    },
+    "Log002": {
+      "speech": "log base 10 de, x"
+    },
+    "Log003": {
+      "speech": "log base b de, a x, égale, log base b de, a, plus, log base b de, x"
+    },
+    "Log004": {
+      "speech": "log base b de, S sur T, égale, log base b de, S, moins, log base b de, T"
+    },
+    "Log005": {
+      "speech": "log base b de, parenthèse gauche, x à la puissance k; parenthèse droite, égale k, log base b de, x"
+    },
+    "Log006": {
+      "speech": "10 à la puissance log base 10 de, x; égale x"
+    },
+    "Log007": {
+      "speech": "log base 10 de, 10 à la puissance x; égale x"
+    },
+    "Log008": {
+      "speech": "10 à la puissance log base 10 de, 5; égale 5"
+    },
+    "Log009": {
+      "speech": "log base 10 de, 10 au cube, égale 3"
+    },
+    "Log010": {
+      "speech": "log base a de, x, égale, log base b de, x, sur, log base b de, a"
+    },
+    "Log011": {
+      "speech": "log base 10 de, 18, sur, log base 10 de, 3, égale, log base 3 de, 18"
+    },
+    "Log012": {
+      "speech": "log x sur log a"
+    },
+    "Log013": {
+      "speech": "log de, parenthèse gauche, x plus 1, parenthèse droite"
+    },
+    "Log014": {
+      "speech": "log de, parenthèse gauche, x plus 1, parenthèse droite, au carré"
+    },
+    "Log015": {
+      "speech": "log x y"
+    },
+    "Log016": {
+      "speech": "fraction avec numérateur, log de, parenthèse gauche, x plus 1, parenthèse droite, et dénominateur, log de, parenthèse gauche, x plus 2, parenthèse droite"
+    },
+    "Log017": {
+      "speech": "fraction avec numérateur, log base 6 de, parenthèse gauche, x plus 1, parenthèse droite, et dénominateur, log base 6 de, parenthèse gauche, x plus 2, parenthèse droite"
+    },
+    "Log018": {
+      "speech": "fraction avec numérateur log 40 plus log 60, et dénominateur log 5"
+    },
+    "Log019": {
+      "speech": "fraction avec numérateur, log base 3 de, 40, plus, log base 3 de, 60, et dénominateur, log base 3 de, 5"
+    },
+    "Log020": {
+      "speech": "log de, parenthèse gauche, 3 à la puissance 4; 12 à la puissance 9; parenthèse droite, égale 4 log 3, plus 9 log 12"
+    },
+    "Log021": {
+      "speech": "log de, parenthèse gauche, x sur y, parenthèse droite"
+    },
+    "_comment2_": " TODO: Fix the vulgar fraction predicate!",
+    "Log022": {
+      "speech": "log de, parenthèse gauche, fraction avec numérateur 3 à la puissance 4; et dénominateur 8 à la puissance 10; parenthèse droite, égale 4 log 3, moins 10 log 8"
+    },
+    "Log023": {
+      "speech": "10 à la puissance log x"
+    },
+    "NatLog001": {
+      "speech": "logarithme népérien x"
+    },
+    "NatLog002": {
+      "speech": "logarithme népérien x, moins logarithme népérien de, parenthèse gauche, x moins 1, parenthèse droite, égale logarithme népérien de, parenthèse gauche, fraction avec numérateur x, et dénominateur x moins 1, parenthèse droite"
+    },
+    "NatLog003": {
+      "speech": "logarithme népérien de, parenthèse gauche, e à la puissance x; parenthèse droite, égale x"
+    },
+    "NatLog004": {
+      "speech": "e à la puissance logarithme népérien x; égale x"
+    },
+    "NatLog005": {
+      "speech": "logarithme népérien de, parenthèse gauche, e à la puissance x; parenthèse droite, égale x"
+    },
+    "NatLog006": {
+      "speech": "e à la puissance logarithme népérien 4; égale 4"
+    },
+    "NatLog007": {
+      "speech": "logarithme népérien 40, sur logarithme népérien 5, égale, log base 5 de, 40"
+    },
+    "NatLog008": {
+      "speech": "fraction avec numérateur logarithme népérien 40, plus logarithme népérien 60, et dénominateur logarithme népérien 5"
+    },
+    "NatLog009": {
+      "speech": "logarithme népérien x"
+    },
+    "NatLog010": {
+      "speech": "logarithme népérien x, moins, logarithme népérien de, parenthèse gauche, x moins 1, parenthèse droite, égale, logarithme népérien de, parenthèse gauche, fraction avec numérateur x, et dénominateur x moins 1, parenthèse droite"
+    },
+    "NatLog011": {
+      "speech": "logarithme népérien de, parenthèse gauche, e à la puissance x; parenthèse droite, égale x"
+    },
+    "NatLog012": {
+      "speech": "e à la puissance logarithme népérien x; égale x"
+    },
+    "NatLog013": {
+      "speech": "logarithme népérien de, parenthèse gauche, e à la puissance x; parenthèse droite, égale x"
+    },
+    "NatLog014": {
+      "speech": "e à la puissance logarithme népérien 4; égale 4"
+    },
+    "NatLog015": {
+      "speech": "logarithme népérien 40, sur logarithme népérien 5, égale, log base 5 de, 40"
+    },
+    "NatLog016": {
+      "speech": "fraction avec numérateur logarithme népérien 40, plus logarithme népérien 60, et dénominateur logarithme népérien 5"
+    }
+  }
+}

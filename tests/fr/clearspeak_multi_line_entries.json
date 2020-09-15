@@ -1,0 +1,241 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "FrenchMultiLineEntries",
+  "locale": "fr",
+  "information": "ClearspeakFrenchMultiLineEntries rule tests.",
+  "tests": {
+    "_comment1_": " Multi-Line Entries Examples",
+    "Multiline001": {
+      "speech": "2 lignes, Ligne 1: x plus y égale 7. Ligne 2: 2 x, plus 3 y, égale 17"
+    },
+    "Multiline002": {
+      "speech": "2 lignes, Ligne 1: x plus y; égale; 7. Ligne 2: 2 x, plus 3 y; égale; 17"
+    },
+    "Multiline003": {
+      "speech": "2 lignes, Ligne 1: x; plus; y; égale; 7. Ligne 2: 2 x; plus; 3 y; égale; 17"
+    },
+    "Multiline004": {
+      "speech": "2 lignes, Ligne 1: Equation 1 deux points x plus y égale 7. Ligne 2: Equation 2 deux points 2 x, plus 3 y, égale 17"
+    },
+    "Multiline005": {
+      "speech": "2 lignes, Ligne 1: Equation 1 deux points; x plus y égale 7. Ligne 2: Equation 2 deux points; 2 x, plus 3 y, égale 17"
+    },
+    "Multiline006": {
+      "speech": "2 lignes, Ligne 1: Equation 1 deux points; x plus y; égale; 7. Ligne 2: Equation 2 deux points; 2 x, plus 3 y; égale; 17"
+    },
+    "Multiline007": {
+      "speech": "3 lignes, Ligne 1: 4 x, plus 3 y, plus 2 z, égale 17. Ligne 2: 2 x, plus 4 y, plus 6 z, égale 6. Ligne 3: 3 x, plus 2 y, plus 5 z, égale 1"
+    },
+    "Multiline008": {
+      "speech": "3 lignes, Ligne 1: 4 x; plus; 3 y; plus; 2 z; égale; 1. Ligne 2: 2 x; plus; 4 y; plus; 6 z; égale; 6. Ligne 3: 3 x; plus; 2 y; plus; 5 z; égale; 1"
+    },
+    "Multiline009": {
+      "speech": "3 lignes, Ligne 1: Equation 1 deux points 4 x, plus 3 y, plus 2 z, égale 17. Ligne 2: Equation 2 deux points 2 x, plus 4 y, plus 6 z, égale 6. Ligne 3: Equation 3 deux points 3 x, plus 2 y, plus 5 z, égale 1"
+    },
+    "Multiline010": {
+      "speech": "3 lignes, Ligne 1: x plus grand ou égal à 0. Ligne 2: y plus grand ou égal à 0. Ligne 3: 3 x, moins 5 y, plus petit ou égal à 30"
+    },
+    "Multiline011": {
+      "speech": "4 lignes, Ligne 1: 3 x, plus 8 égale 5 x. Ligne 2: 8 égale 5 x, moins 3 x. Ligne 3: 8 égale 2 x. Ligne 4: 4 égale x"
+    },
+    "Multiline012": {
+      "speech": "4 lignes, Ligne 1: 3 x; plus; 8; égale; 5 x; vide; vide. Ligne 2: vide; vide; 8; égale; 5 x; moins; 3 x. Ligne 3: vide; vide; 8; égale; 2 x; vide; vide. Ligne 4: vide; vide; 4; égale; x; vide; vide"
+    },
+    "Multiline013": {
+      "speech": "4 lignes, Ligne 1: Step 1 deux points 3 x, plus 8 égale 5 x. Ligne 2: Step 2 deux points 8 égale 5 x, moins 3 x. Ligne 3: Step 3 deux points 8 égale 2 x. Ligne 4: Step 4 deux points 4 égale x"
+    },
+    "Multiline014": {
+      "speech": "f de x, égale, 2 cas, Cas 1: négatif x if x inférieur à 0. Cas 2: x if x plus grand ou égal à 0"
+    },
+    "Multiline015": {
+      "speech": "f de x, égale, 2 cas, Cas 1: négatif x; if x inférieur à 0. Cas 2: x; if x plus grand ou égal à 0"
+    },
+    "Multiline016": {
+      "speech": "f de x, égale, 2 cas, Cas 1: négatif x if x inférieur à 0. Cas 2: x if x plus grand ou égal à 0"
+    },
+    "Multiline017": {
+      "speech": "f de x, égale, 2 cas, Cas 1: négatif x; if x inférieur à 0. Cas 2: x; if x plus grand ou égal à 0"
+    },
+    "Multiline018": {
+      "speech": "2 cas, Cas 1: f de x, égale négatif x; if x inférieur à 0. Cas 2: f de x, égale x; if x plus grand ou égal à 0"
+    },
+    "Multiline019": {
+      "speech": "2 équations, Équation 1: x plus y égale 7. Équation 2: 2 x, plus 3 y, égale 17"
+    },
+    "Multiline019a": {
+      "speech": "2 équations, Équation 1: x plus y; égale; 7. Équation 2: 2 x, plus 3 y; égale; 17"
+    },
+    "Multiline020": {
+      "speech": "2 lignes, Ligne 1: x plus y égale 7. Ligne 2: 2 x, plus 3 y, égale 17"
+    },
+    "Multiline021": {
+      "speech": "2 lignes, Ligne 1: x plus y; égale; 7. Ligne 2: 2 x, plus 3 y; égale; 17"
+    },
+    "Multiline022": {
+      "speech": "2 colonnes, rangée 1: x plus y égale 7. rangée 2: 2 x, plus 3 y, égale 17"
+    },
+    "Multiline023": {
+      "speech": "2 colonnes, rangée 1: x plus y; égale; 7. rangée 2: 2 x, plus 3 y; égale; 17"
+    },
+    "Multiline024": {
+      "speech": "4  étapes,  Étape 1: 3 x, plus 8 égale 5 x.  Étape 2: 8 égale 5 x, moins 3 x.  Étape 3: 8 égale 2 x.  Étape 4: 4 égale x"
+    },
+    "Multiline025": {
+      "speech": "4  étapes,  Étape 1: 3 x; plus; 8; égale; 5 x; vide; vide.  Étape 2: vide; vide; 8; égale; 5 x; moins; 3 x.  Étape 3: vide; vide; 8; égale; 2 x; vide; vide.  Étape 4: vide; vide; 4; égale; x; vide; vide"
+    },
+    "Multiline026": {
+      "speech": "3 contraintes, Contrainte 1: x plus grand ou égal à 0. Contrainte 2: y plus grand ou égal à 0. Contrainte 3: 3 x, moins 5 y, plus petit ou égal à 30"
+    },
+    "_comment2_": " Added examples for preference Label_None.",
+    "Multiline026a": {
+      "speech": "3 lignes, x plus grand ou égal à 0. y plus grand ou égal à 0. 3 x, moins 5 y, plus petit ou égal à 30"
+    },
+    "Multiline026b": {
+      "speech": "4 lignes, 3 x; plus; 8; égale; 5 x; vide; vide. vide; vide; 8; égale; 5 x; moins; 3 x. vide; vide; 8; égale; 2 x; vide; vide. vide; vide; 4; égale; x; vide; vide"
+    },
+    "Multiline026c": {
+      "speech": "f de x, égale, 2 cas, négatif x if x inférieur à 0. x if x plus grand ou égal à 0"
+    },
+    "Multiline027": {
+      "speech": "2 lignes, Ligne 1: x plus y égale 7. Ligne 2: 2 x, plus 3 y, égale 17"
+    },
+    "Multiline028": {
+      "speech": "2 lignes, Ligne 1: x plus y. égale. 7. Ligne 2: 2 x, plus 3 y. égale. 17"
+    },
+    "Multiline029": {
+      "speech": "2 lignes, Ligne 1: x. plus. y. égale. 7. Ligne 2: 2 x. plus. 3 y. égale. 17"
+    },
+    "Multiline030": {
+      "speech": "2 lignes, Ligne 1: Equation 1 deux points. x plus y égale 7. Ligne 2: Equation 2 deux points. 2 x, plus 3 y, égale 17"
+    },
+    "Multiline031": {
+      "speech": "2 lignes, Ligne 1: Equation 1 deux points. x plus y. égale. 7. Ligne 2: Equation 2 deux points. 2 x, plus 3 y. égale. 17"
+    },
+    "Multiline032": {
+      "speech": "3 lignes, Ligne 1: 4 x. plus. 3 y. plus. 2 z. égale. 1. Ligne 2: 2 x. plus. 4 y. plus. 6 z. égale. 6. Ligne 3: 3 x. plus. 2 y. plus. 5 z. égale. 1"
+    },
+    "Multiline033": {
+      "speech": "4 lignes, Ligne 1: 3 x. plus. 8. égale. 5 x. vide. vide. Ligne 2: vide. vide. 8. égale. 5 x. moins. 3 x. Ligne 3: vide. vide. 8. égale. 2 x. vide. vide. Ligne 4: vide. vide. 4. égale. x. vide. vide"
+    },
+    "Multiline034": {
+      "speech": "f de x, égale, 2 cas, Cas 1: négatif x. if x inférieur à 0. Cas 2: x. if x plus grand ou égal à 0"
+    },
+    "Multiline035": {
+      "speech": "f de x, égale, 2 cas, Cas 1: négatif x. if x inférieur à 0. Cas 2: x. if x plus grand ou égal à 0"
+    },
+    "Multiline036": {
+      "speech": "2 cas, Cas 1: f de x, égale négatif x. if x inférieur à 0. Cas 2: f de x, égale x. if x plus grand ou égal à 0"
+    },
+    "Multiline037": {
+      "speech": "2 équations, Équation 1: x plus y. égale. 7. Équation 2: 2 x, plus 3 y. égale. 17"
+    },
+    "Multiline038": {
+      "speech": "2 lignes, Ligne 1: x plus y. égale. 7. Ligne 2: 2 x, plus 3 y. égale. 17"
+    },
+    "Multiline039": {
+      "speech": "2 colonnes, rangée 1: x plus y. égale. 7. rangée 2: 2 x, plus 3 y. égale. 17"
+    },
+    "Multiline040": {
+      "speech": "4  étapes,  Étape 1: 3 x. plus. 8. égale. 5 x. vide. vide.  Étape 2: vide. vide. 8. égale. 5 x. moins. 3 x.  Étape 3: vide. vide. 8. égale. 2 x. vide. vide.  Étape 4: vide. vide. 4. égale. x. vide. vide"
+    },
+    "Multiline041": {
+      "speech": "2 lignes, Ligne 1: x plus y, égale, 7. Ligne 2: 2 x, plus 3 y, égale, 17"
+    },
+    "Multiline042": {
+      "speech": "2 lignes, Ligne 1: x, plus, y, égale, 7. Ligne 2: 2 x, plus, 3 y, égale, 17"
+    },
+    "Multiline043": {
+      "speech": "2 lignes, Ligne 1: Equation 1 deux points, x plus y égale 7. Ligne 2: Equation 2 deux points, 2 x, plus 3 y, égale 17"
+    },
+    "Multiline044": {
+      "speech": "2 lignes, Ligne 1: Equation 1 deux points, x plus y, égale, 7. Ligne 2: Equation 2 deux points, 2 x, plus 3 y, égale, 17"
+    },
+    "Multiline045": {
+      "speech": "3 lignes, Ligne 1: 4 x, plus, 3 y, plus, 2 z, égale, 1. Ligne 2: 2 x, plus, 4 y, plus, 6 z, égale, 6. Ligne 3: 3 x, plus, 2 y, plus, 5 z, égale, 1"
+    },
+    "Multiline046": {
+      "speech": "4 lignes, Ligne 1: 3 x, plus, 8, égale, 5 x, vide, vide. Ligne 2: vide, vide, 8, égale, 5 x, moins, 3 x. Ligne 3: vide, vide, 8, égale, 2 x, vide, vide. Ligne 4: vide, vide, 4, égale, x, vide, vide"
+    },
+    "Multiline047": {
+      "speech": "f de x, égale, 2 cas, Cas 1: négatif x, if x inférieur à 0. Cas 2: x, if x plus grand ou égal à 0"
+    },
+    "Multiline048": {
+      "speech": "f de x, égale, 2 cas, Cas 1: négatif x, if x inférieur à 0. Cas 2: x, if x plus grand ou égal à 0"
+    },
+    "Multiline049": {
+      "speech": "2 cas, Cas 1: f de x, égale négatif x, if x inférieur à 0. Cas 2: f de x, égale x, if x plus grand ou égal à 0"
+    },
+    "Multiline050": {
+      "speech": "2 équations, Équation 1: x plus y, égale, 7. Équation 2: 2 x, plus 3 y, égale, 17"
+    },
+    "Multiline051": {
+      "speech": "2 lignes, Ligne 1: x plus y, égale, 7. Ligne 2: 2 x, plus 3 y, égale, 17"
+    },
+    "Multiline052": {
+      "speech": "2 colonnes, rangée 1: x plus y, égale, 7. rangée 2: 2 x, plus 3 y, égale, 17"
+    },
+    "Multiline053": {
+      "speech": "4  étapes,  Étape 1: 3 x, plus, 8, égale, 5 x, vide, vide.  Étape 2: vide, vide, 8, égale, 5 x, moins, 3 x.  Étape 3: vide, vide, 8, égale, 2 x, vide, vide.  Étape 4: vide, vide, 4, égale, x, vide, vide"
+    },
+    "Multiline054": {
+      "speech": "Ligne 1: x plus y égale 7. Ligne 2: 2 x, plus 3 y, égale 17"
+    },
+    "Multiline055": {
+      "speech": "Ligne 1: x plus y; égale; 7. Ligne 2: 2 x, plus 3 y; égale; 17"
+    },
+    "Multiline056": {
+      "speech": "Ligne 1: x; plus; y; égale; 7. Ligne 2: 2 x; plus; 3 y; égale; 17"
+    },
+    "Multiline057": {
+      "speech": "Ligne 1: Equation 1 deux points x plus y égale 7. Ligne 2: Equation 2 deux points 2 x, plus 3 y, égale 17"
+    },
+    "Multiline058": {
+      "speech": "Ligne 1: Equation 1 deux points; x plus y égale 7. Ligne 2: Equation 2 deux points; 2 x, plus 3 y, égale 17"
+    },
+    "Multiline059": {
+      "speech": "Ligne 1: Equation 1 deux points; x plus y; égale; 7. Ligne 2: Equation 2 deux points; 2 x, plus 3 y; égale; 17"
+    },
+    "Multiline060": {
+      "speech": "Ligne 1: 4 x, plus 3 y, plus 2 z, égale 17. Ligne 2: 2 x, plus 4 y, plus 6 z, égale 6. Ligne 3: 3 x, plus 2 y, plus 5 z, égale 1"
+    },
+    "Multiline061": {
+      "speech": "Ligne 1: 4 x; plus; 3 y; plus; 2 z; égale; 1. Ligne 2: 2 x; plus; 4 y; plus; 6 z; égale; 6. Ligne 3: 3 x; plus; 2 y; plus; 5 z; égale; 1"
+    },
+    "Multiline062": {
+      "speech": "Ligne 1: Equation 1 deux points 4 x, plus 3 y, plus 2 z, égale 17. Ligne 2: Equation 2 deux points 2 x, plus 4 y, plus 6 z, égale 6. Ligne 3: Equation 3 deux points 3 x, plus 2 y, plus 5 z, égale 1"
+    },
+    "Multiline063": {
+      "speech": "Ligne 1: Step 1 deux points 3 x, plus 8 égale 5 x. Ligne 2: Step 2 deux points 8 égale 5 x, moins 3 x. Ligne 3: Step 3 deux points 8 égale 2 x. Ligne 4: Step 4 deux points 4 égale x"
+    },
+    "Multiline064": {
+      "speech": "f de x, égale, Cas 1: négatif x if x inférieur à 0. Cas 2: x if x plus grand ou égal à 0"
+    },
+    "Multiline065": {
+      "speech": "f de x, égale, Cas 1: négatif x; if x inférieur à 0. Cas 2: x; if x plus grand ou égal à 0"
+    },
+    "Multiline066": {
+      "speech": "f de x, égale, Cas 1: négatif x if x inférieur à 0. Cas 2: x if x plus grand ou égal à 0"
+    },
+    "Multiline067": {
+      "speech": "Cas 1: f de x, égale négatif x; if x inférieur à 0. Cas 2: f de x, égale x; if x plus grand ou égal à 0"
+    },
+    "Multiline068": {
+      "speech": "Équation 1: x plus y égale 7. Équation 2: 2 x, plus 3 y, égale 17"
+    },
+    "Multiline069": {
+      "speech": "Ligne 1: x plus y égale 7. Ligne 2: 2 x, plus 3 y, égale 17"
+    },
+    "Multiline070": {
+      "speech": "rangée 1: x plus y égale 7. rangée 2: 2 x, plus 3 y, égale 17"
+    },
+    "Multiline071": {
+      "speech": " Étape 1: 3 x, plus 8 égale 5 x.  Étape 2: 8 égale 5 x, moins 3 x.  Étape 3: 8 égale 2 x.  Étape 4: 4 égale x"
+    },
+    "Multiline072": {
+      "speech": " Étape 1: 3 x; plus; 8; égale; 5 x; vide; vide.  Étape 2: vide; vide; 8; égale; 5 x; moins; 3 x.  Étape 3: vide; vide; 8; égale; 2 x; vide; vide.  Étape 4: vide; vide; 4; égale; x; vide; vide"
+    },
+    "Multiline073": {
+      "speech": "Contrainte 1: x plus grand ou égal à 0. Contrainte 2: y plus grand ou égal à 0. Contrainte 3: 3 x, moins 5 y, plus petit ou égal à 30"
+    }
+  }
+}

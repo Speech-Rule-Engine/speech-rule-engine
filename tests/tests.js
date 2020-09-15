@@ -77,8 +77,8 @@ sre.Tests.prototype.addJsonTestsTmp = function() {
     'clearspeak_sets_enclosed_in_set_brackets.json',
     'clearspeak_trigometry.json'
   ];
-  let locales = ['en', 'de'];
-
+  let locales = ['en', 'de', 'fr'];
+  
   for (var locale of locales) {
     for (var file of files) {
       var test = new sre.ClearspeakRuleTest();

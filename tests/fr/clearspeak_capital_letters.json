@@ -1,0 +1,81 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "FrenchCapitalLetters",
+  "locale": "fr",
+  "information": "ClearspeakFrenchCapitalLetters rule tests.",
+  "tests": {
+    "_comment1_": " Capital Letters",
+    "_comment2_": " TODO: (QUESTION) This is does not seem to follow the fraction rules.",
+    "Cap001": {
+      "speech": "sinus A sur a, égale, sinus B sur b"
+    },
+    "Cap002": {
+      "speech": "c au carré égale a au carré plus b au carré moins 2 a b cosinus C"
+    },
+    "Cap003": {
+      "speech": "tangente A égale, a sur b"
+    },
+    "Cap004": {
+      "speech": "A B"
+    },
+    "Cap005": {
+      "speech": "a A"
+    },
+    "Cap006": {
+      "speech": "b A"
+    },
+    "Cap007": {
+      "speech": "B a"
+    },
+    "Cap008": {
+      "speech": "angle A B C"
+    },
+    "Cap009": {
+      "speech": "la mesure de l'angle A B C"
+    },
+    "Cap010": {
+      "speech": "la mesure de l'angle A"
+    },
+    "_comment3_": " TODO: (QUESTION) This is does not seem to follow the fraction rules.",
+    "Cap011": {
+      "speech": "sinus A majuscule sur a, égale, sinus B majuscule sur b"
+    },
+    "Cap012": {
+      "speech": "c au carré égale a au carré plus b au carré moins 2 a b cosinus C majuscule"
+    },
+    "Cap013": {
+      "speech": "tangente A majuscule égale, a sur b"
+    },
+    "Cap014": {
+      "speech": "A majuscule, B majuscule"
+    },
+    "Cap015": {
+      "speech": "a, A majuscule"
+    },
+    "Cap016": {
+      "speech": "b, A majuscule"
+    },
+    "Cap017": {
+      "speech": "B majuscule, a"
+    },
+    "Cap018": {
+      "speech": "angle A majuscule, B majuscule, C majuscule"
+    },
+    "Cap019": {
+      "speech": "la mesure de l'angle A majuscule, B majuscule, C majuscule"
+    },
+    "Cap020": {
+      "speech": "la mesure de l'angle A majuscule"
+    },
+    "Cap020a": {
+      "speech": "angle A majuscule"
+    },
+    "_comment4_": " /**",
+    "_comment5_": "  * Testing ClearspeakFrenchCapitalLetters Example Cap020 (extra)",
+    "_comment6_": "  */",
+    "_comment8_": "   var preference = 'Caps_SayCaps';",
+    "_comment9_": "   var mathml = '<math><mrow><mi>h</mi><mo>∠</mo><mi>A</mi></mrow></math>';",
+    "_comment10_": "   var speech = '';",
+    "_comment12_": " };"
+  }
+}

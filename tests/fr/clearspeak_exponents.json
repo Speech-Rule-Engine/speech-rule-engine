@@ -1,0 +1,323 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "FrenchExponents",
+  "locale": "fr",
+  "information": "ClearspeakFrenchExponents rule tests.",
+  "tests": {
+    "_comment1_": " Exponents",
+    "Exp001": {
+      "speech": "3 au carré"
+    },
+    "Exp002a": {
+      "speech": "3 au cube"
+    },
+    "Exp003": {
+      "speech": "3 à la puissance 5"
+    },
+    "Exp004": {
+      "speech": "3 à la puissance 1"
+    },
+    "Exp005": {
+      "speech": "b à la puissance 1"
+    },
+    "Exp006": {
+      "speech": "3 à la puissance 5,0"
+    },
+    "Exp007": {
+      "speech": "3 à la puissance 0"
+    },
+    "Exp008": {
+      "speech": "4 à la puissance 11"
+    },
+    "Exp009": {
+      "speech": "3 à la puissance négatif 2"
+    },
+    "Exp010a": {
+      "speech": "3 à la puissance négatif 2,0"
+    },
+    "Exp011": {
+      "speech": "4 à la puissance x"
+    },
+    "Exp012": {
+      "speech": "3 à la puissance y plus 2"
+    },
+    "Exp013": {
+      "speech": "parenthèse gauche, 2 y, moins 3, parenthèse droite, à la puissance 3 z, plus 8"
+    },
+    "Exp014": {
+      "speech": "p sub 1, au carré"
+    },
+    "Exp015": {
+      "speech": "p sub 1, au cube"
+    },
+    "Exp016": {
+      "speech": "p sub 1, à la puissance 4"
+    },
+    "Exp017": {
+      "speech": "p sub 1, à la puissance 10"
+    },
+    "Exp018": {
+      "speech": "p sub 1, à la puissance x plus 1"
+    },
+    "Exp019": {
+      "speech": "p sub, x sub 1, au carré"
+    },
+    "Exp010b": {
+      "speech": "p sub, x sub 1, au cube"
+    },
+    "Exp011b": {
+      "speech": "p sub, x sub 1, à la puissance 4"
+    },
+    "Exp012b": {
+      "speech": "p sub, x sub 1, à la puissance 10"
+    },
+    "Exp013b": {
+      "speech": "p sub, x sub 1, à la puissance y plus 1"
+    },
+    "Exp014b": {
+      "speech": "3 à la puissance 2 au carré"
+    },
+    "Exp015b": {
+      "speech": "3 à la puissance 2 x au carré"
+    },
+    "Exp016b": {
+      "speech": "5 à la puissance 2 au cube"
+    },
+    "Exp017b": {
+      "speech": "5 à la puissance 2 x au cube"
+    },
+    "Exp018b": {
+      "speech": "3 à l'exposant, 2 au carré plus 1, fin exposant"
+    },
+    "Exp019b": {
+      "speech": "3 à la puissance 2 au carré; plus 1"
+    },
+    "Exp020": {
+      "speech": "2 à l'exposant, x au carré plus 3 x au cube, fin exposant"
+    },
+    "Exp021": {
+      "speech": "3 à l'exposant, 3 à la puissance 4; fin exposant"
+    },
+    "Exp022": {
+      "speech": "3 à l'exposant, 3 à la puissance 4; plus 2, fin exposant"
+    },
+    "Exp023": {
+      "speech": "3 à l'exposant, 3 à la puissance 4; fin exposant, plus 2"
+    },
+    "Exp024": {
+      "speech": "2 à l'exposant, x à la puissance 4; fin exposant"
+    },
+    "Exp025": {
+      "speech": "2 à l'exposant, 10 à la puissance x plus 3; fin exposant"
+    },
+    "Exp026": {
+      "speech": "3 à l'exposant, 3 à la puissance 10; fin exposant"
+    },
+    "Exp027": {
+      "speech": "3 à l'exposant, 3 à la puissance 10; plus 1, fin exposant"
+    },
+    "Exp028": {
+      "speech": "3 à l'exposant, 3 à la puissance 10; fin exposant, plus 1"
+    },
+    "Exp029": {
+      "speech": "3 à l'exposant, parenthèse gauche, x plus 1, parenthèse droite, au carré, fin exposant"
+    },
+    "Exp030": {
+      "speech": "3 à l'exposant, parenthèse gauche, x plus 1, parenthèse droite, à la puissance 10; fin exposant"
+    },
+    "Exp031": {
+      "speech": "3 à l'exposant, parenthèse gauche, x plus 1, parenthèse droite, à la puissance y plus 2; fin exposant"
+    },
+    "Exp032": {
+      "speech": "3 à l'exposant, parenthèse gauche, x plus 1, parenthèse droite, à la puissance y; plus 2, fin exposant"
+    },
+    "Exp033": {
+      "speech": "3 à l'exposant, parenthèse gauche, x plus 1, parenthèse droite, à la puissance y; fin exposant, plus 2"
+    },
+    "_comment2_": " TODO: (Simons) This does not work as semantically we have a -(xy) rather than",
+    "_comment3_": "       (-x)(y).",
+    "Exp034": {
+      "speech": "XXXXX"
+    },
+    "Exp035": {
+      "speech": "e à l'exposant, négatif un-demi  , parenthèse gauche, fraction avec numérateur x moins mû, et dénominateur sigma, parenthèse droite, au carré, fin exposant"
+    },
+    "Exp036": {
+      "speech": "2 à la puissance n"
+    },
+    "Exp037": {
+      "speech": "2 à la puissance m"
+    },
+    "Exp038": {
+      "speech": "2 à la puissance i"
+    },
+    "Exp039": {
+      "speech": "2 à la puissance j"
+    },
+    "Exp40": {
+      "speech": "2 à la puissance a"
+    },
+    "Exp041": {
+      "speech": "3 au carré"
+    },
+    "Exp042": {
+      "speech": "3 au cube"
+    },
+    "Exp043": {
+      "speech": "3 à la puissance 0"
+    },
+    "Exp044": {
+      "speech": "3 à la puissance 1"
+    },
+    "Exp045": {
+      "speech": "3 à la puissance 5"
+    },
+    "Exp046": {
+      "speech": "4 à la puissance 3,0"
+    },
+    "Exp047": {
+      "speech": "4 à la puissance 11"
+    },
+    "Exp048": {
+      "speech": "3 à la puissance négatif 2"
+    },
+    "Exp049": {
+      "speech": "3 à la puissance négatif 2,0"
+    },
+    "Exp050": {
+      "speech": "4 à la x-ième puissance"
+    },
+    "Exp051": {
+      "speech": "3 à la puissance y plus 2"
+    },
+    "Exp052": {
+      "speech": "parenthèse gauche, 2 y, moins 3, parenthèse droite, à la puissance 3 z, plus 8"
+    },
+    "Exp053": {
+      "speech": "p sub 1, au carré"
+    },
+    "Exp054": {
+      "speech": "p sub 1, au cube"
+    },
+    "Exp055": {
+      "speech": "p sub 1, à la puissance 4"
+    },
+    "Exp056": {
+      "speech": "p sub 1, à la puissance 10"
+    },
+    "Exp057": {
+      "speech": "p sub 1, à la puissance x plus 1"
+    },
+    "Exp058": {
+      "speech": "p sub, x sub 1, au carré"
+    },
+    "Exp059": {
+      "speech": "p sub, x sub 1, au cube"
+    },
+    "Exp060": {
+      "speech": "p sub, x sub 1, à la puissance 4"
+    },
+    "Exp061": {
+      "speech": "p sub, x sub 1, à la puissance 10"
+    },
+    "Exp062": {
+      "speech": "p sub, x sub 1, à la puissance y plus 1"
+    },
+    "Exp063": {
+      "speech": "3 à la puissance 2 au carré"
+    },
+    "Exp064": {
+      "speech": "3 à la puissance 2 x au carré"
+    },
+    "Exp065": {
+      "speech": "5 à la puissance 2 au cube"
+    },
+    "Exp066": {
+      "speech": "5 à la puissance 2 x au cube"
+    },
+    "Exp067": {
+      "speech": "3 à l'exposant, 2 au carré plus 1, fin exposant"
+    },
+    "Exp068": {
+      "speech": "3 à la puissance 2 au carré; plus 1"
+    },
+    "Exp069": {
+      "speech": "2 à l'exposant, x au carré plus 3 x au cube, fin exposant"
+    },
+    "Exp070": {
+      "speech": "3 à l'exposant, 3 à la puissance 4; fin exposant"
+    },
+    "Exp071": {
+      "speech": "3 à l'exposant, 3 à la puissance 4; plus 2, fin exposant"
+    },
+    "Exp072": {
+      "speech": "3 à l'exposant, 3 à la puissance 4; fin exposant, plus 2"
+    },
+    "Exp073": {
+      "speech": "2 à l'exposant, x à la puissance 4; fin exposant"
+    },
+    "Exp074": {
+      "speech": "2 à l'exposant, 10 à la puissance x plus 3; fin exposant"
+    },
+    "Exp075": {
+      "speech": "3 à l'exposant, 3 à la puissance 10; fin exposant"
+    },
+    "Exp076": {
+      "speech": "3 à l'exposant, 3 à la puissance 10; plus 1, fin exposant"
+    },
+    "Exp077": {
+      "speech": "3 à l'exposant, 3 à la puissance 10; fin exposant, plus 1"
+    },
+    "Exp078": {
+      "speech": "3 à l'exposant, parenthèse gauche, x plus 1, parenthèse droite, au carré, fin exposant"
+    },
+    "Exp079": {
+      "speech": "3 à l'exposant, parenthèse gauche, x plus 1, parenthèse droite, à la puissance 10; fin exposant"
+    },
+    "Exp080": {
+      "speech": "3 à l'exposant, parenthèse gauche, x plus 1, parenthèse droite, à la puissance y plus 2; fin exposant"
+    },
+    "Exp081": {
+      "speech": "3 à l'exposant, parenthèse gauche, x plus 1, parenthèse droite, à la y-ième puissance; plus 2, fin exposant"
+    },
+    "Exp082": {
+      "speech": "3 à l'exposant, parenthèse gauche, x plus 1, parenthèse droite, à la y-ième puissance; fin exposant, plus 2"
+    },
+    "Exp083": {
+      "speech": "e à l'exposant, négatif un-demi x au carré, fin exposant"
+    },
+    "Exp084": {
+      "speech": "e à l'exposant, négatif un-demi  , parenthèse gauche, fraction avec numérateur x moins mû, et dénominateur sigma, parenthèse droite, au carré, fin exposant"
+    },
+    "Exp036a": {
+      "test": true,
+      "preference": "Exponent_Ordinal",
+      "mathml": "<math><mrow><msup><mn>2</mn><mi>n</mi></msup></mrow></math>",
+      "speech": "2 à la n-ième puissance"
+    },
+    "Exp037a": {
+      "test": true,
+      "preference": "Exponent_Ordinal",
+      "mathml": "<math><mrow><msup><mn>2</mn><mi>m</mi></msup></mrow></math>",
+      "speech": "2 à la m-ième puissance"
+    },
+    "Exp038a": {
+      "test": true,
+      "preference": "Exponent_Ordinal",
+      "mathml": "<math><mrow><msup><mn>2</mn><mi>i</mi></msup></mrow></math>",
+      "speech": "2 à la i-ième puissance"
+    },
+    "Exp039a": {
+      "test": true,
+      "preference": "Exponent_Ordinal",
+      "mathml": "<math><mrow><msup><mn>2</mn><mi>j</mi></msup></mrow></math>",
+      "speech": "2 à la j-ième puissance"
+    },
+    "Exp40a": {
+      "test": true,
+      "preference": "Exponent_Ordinal",
+      "mathml": "<math><mrow><msup><mn>2</mn><mi>a</mi></msup></mrow></math>",
+      "speech": "2 à la a-ième puissance"
+    }
+  }
+}

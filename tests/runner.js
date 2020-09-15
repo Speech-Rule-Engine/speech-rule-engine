@@ -105,9 +105,17 @@ sre.TestRunner.prototype.runTests = function() {
 };
 
 
+let html = {
+  'en': 'ClearspeakEnglish',
+  'de': 'ClearspeakGerman',
+  'fr': 'ClearspeakFrench'
+};
+
 sre.TestRunner.prototype.executeJsonTests = function(testcase) {
   testcase.prepare();
   this.output('\nRunning ' + testcase.information + '\n');
+  testcase.setActive(html[testcase.locale]);
+  testcase.startExamples();
   testcase.setUpTest();
   for (var test of testcase.jsonTests) {
     if (!test.test) continue;

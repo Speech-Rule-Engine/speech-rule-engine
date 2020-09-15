@@ -1,0 +1,82 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "FrenchAbsoluteValue",
+  "locale": "fr",
+  "information": "ClearspeakFrenchAbsoluteValue rule tests.",
+  "tests": {
+    "_comment1_": " Absolute Value",
+    "Abs01": {
+      "speech": "la valeur absolue de x"
+    },
+    "Abs02": {
+      "speech": "la valeur absolue de x plus 1"
+    },
+    "Abs03": {
+      "speech": "la valeur absolue de x, plus 1"
+    },
+    "Abs04": {
+      "speech": "la valeur absolue de x, plus, la valeur absolue de y, plus grand ou égal à, la valeur absolue de z"
+    },
+    "AbsEnd01": {
+      "speech": "la valeur absolue de x, fin de valeur absolue"
+    },
+    "AbsEnd02": {
+      "speech": "la valeur absolue de x plus 1, fin de valeur absolue"
+    },
+    "AbsEnd03": {
+      "speech": "la valeur absolue de x, fin de valeur absolue, plus 1"
+    },
+    "AbsEnd04": {
+      "speech": "la valeur absolue de x, fin de valeur absolue, plus, la valeur absolue de y, fin de valeur absolue, plus grand ou égal à, la valeur absolue de z, fin de valeur absolue"
+    },
+    "Card01": {
+      "speech": "la cardinalité de S"
+    },
+    "Determinant01": {
+      "speech": "le déterminant de M"
+    },
+    "_comment2_": " Absolute Value (Determinants)",
+    "AbsDet01": {
+      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5"
+    },
+    "AbsDet02": {
+      "speech": "le déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7"
+    },
+    "AbsDet03": {
+      "speech": "le déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0"
+    },
+    "AbsDet04": {
+      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x"
+    },
+    "AbsDet05": {
+      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5"
+    },
+    "AbsDet06": {
+      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers"
+    },
+    "AbsDet07": {
+      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième"
+    },
+    "AbsDet08": {
+      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5"
+    },
+    "AbsDet09": {
+      "speech": "le déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7"
+    },
+    "AbsDet10": {
+      "speech": "le déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0"
+    },
+    "AbsDet11": {
+      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x"
+    },
+    "AbsDet12": {
+      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5"
+    },
+    "AbsDet13": {
+      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers"
+    },
+    "AbsDet14": {
+      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième"
+    }
+  }
+}

@@ -1,0 +1,730 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "FrenchTrigometry",
+  "locale": "fr",
+  "information": "ClearspeakFrenchTrigometry rule tests.",
+  "tests": {
+    "_comment1_": " Trigonometry",
+    "_comment2_": " Table 1: Basic Trigonometric Functions",
+    "Trig001": {
+      "speech": "sinus x"
+    },
+    "Trig002": {
+      "speech": "cosinus x"
+    },
+    "Trig003": {
+      "speech": "tangente thêta"
+    },
+    "Trig004": {
+      "speech": "sécante thêta"
+    },
+    "Trig005": {
+      "speech": "cosécante x"
+    },
+    "Trig006": {
+      "speech": "cotangente x"
+    },
+    "Trig007": {
+      "speech": "sinus au carré x"
+    },
+    "Trig008": {
+      "speech": "cosinus au cube x"
+    },
+    "Trig009": {
+      "speech": "tangente au carré x"
+    },
+    "Trig010": {
+      "speech": "sécante au cube x"
+    },
+    "Trig011": {
+      "speech": "cosécante au carré x"
+    },
+    "Trig012": {
+      "speech": "cotangente au carré x"
+    },
+    "Trig013": {
+      "speech": "sinus 2 pi"
+    },
+    "Trig014": {
+      "speech": "sinus de, parenthèse gauche, pi k, plus, pi sur 2, parenthèse droite"
+    },
+    "Trig015": {
+      "speech": "cosinus de, pi sur 2"
+    },
+    "Trig016": {
+      "speech": "sinus de, pi sur 2"
+    },
+    "Trig017": {
+      "speech": "sinus pi sur 2"
+    },
+    "Trig018": {
+      "speech": "2 sur sinus pi"
+    },
+    "Trig019": {
+      "speech": "fraction avec numérateur, sinus de, pi sur 2, et dénominateur 3"
+    },
+    "Trig020": {
+      "speech": "tangente négatif pi"
+    },
+    "Trig021": {
+      "speech": "sinus de, parenthèse gauche, x plus pi, parenthèse droite"
+    },
+    "Trig022": {
+      "speech": "cosinus de, parenthèse gauche, x plus, pi sur 2, parenthèse droite"
+    },
+    "Trig023": {
+      "speech": "cosinus de, parenthèse gauche, pi sur 2, plus x, parenthèse droite"
+    },
+    "Trig024": {
+      "speech": "sinus au carré x, plus, cosinus au carré x, égale 1"
+    },
+    "Trig025": {
+      "speech": "sinus à la puissance 4; x"
+    },
+    "Trig026": {
+      "speech": "cosinus à la puissance 5; x"
+    },
+    "Trig027": {
+      "speech": "tangente à la puissance n; x"
+    },
+    "Trig028": {
+      "speech": "sinus x sur cosinus x"
+    },
+    "Trig029": {
+      "speech": "tangente 35 degrés"
+    },
+    "_comment3_": " TODO: (Simons) Handles degrees as a postfix function.",
+    "Trig030": {
+      "speech": "XXXX"
+    },
+    "Trig031": {
+      "speech": "tangente de, parenthèse gauche, angle D E F, parenthèse droite"
+    },
+    "Trig032": {
+      "speech": "tangente de, parenthèse gauche, angle D, parenthèse droite"
+    },
+    "Trig033": {
+      "speech": "sinus de, parenthèse gauche, x plus y, parenthèse droite, égale, sinus x cosinus y, plus, cosinus x sinus y"
+    },
+    "Trig034": {
+      "speech": "cosinus de, parenthèse gauche, x plus y, parenthèse droite, égale, cosinus x cosinus y, moins, sinus x sinus y"
+    },
+    "Trig035": {
+      "speech": "tangente de, parenthèse gauche, x plus y, parenthèse droite, égale, fraction avec numérateur tangente x moins tangente y, et dénominateur 1 moins, tangente x tangente y"
+    },
+    "_comment4_": " TODO: (Simons) Handle degrees as a postfix function.",
+    "Trig036": {
+      "speech": "XXXX"
+    },
+    "Trig037": {
+      "speech": "tangente de, parenthèse gauche, pi sur 6, plus, 2 pi sur 3, parenthèse droite, égale, fraction avec numérateur, tangente de, pi sur 6, moins, tangente de, 2 pi sur 3, et dénominateur 1 moins, tangente de, pi sur 6, tangente de, 2 pi sur 3"
+    },
+    "Trig038": {
+      "speech": "tangente 2 x, égale, fraction avec numérateur 2 tangente x, et dénominateur 1 moins, tangente au carré x"
+    },
+    "Trig039": {
+      "speech": "cosinus 2 x, égale 2, cosinus au carré x, moins 1"
+    },
+    "Trig040": {
+      "speech": "sinus de, x sur 2, égale plus ou moins la racine carrée de, fraction avec numérateur 1 moins cosinus x, et dénominateur 2"
+    },
+    "Trig041": {
+      "speech": "tangente de, x sur 2, égale plus ou moins la racine carrée de, fraction avec numérateur 1 moins cosinus x, et dénominateur 1 plus cosinus x"
+    },
+    "Trig042": {
+      "speech": "cosinus x cosinus y, égale 2, cosinus de, fraction avec numérateur x plus y, et dénominateur 2, cosinus de, fraction avec numérateur x moins y, et dénominateur 2"
+    },
+    "Trig043": {
+      "speech": "sinus de, parenthèse gauche, négatif, pi sur 8, parenthèse droite, égale négatif un-demi la racine carrée de 2 moins la racine carrée de 2, fin racine, fin racine"
+    },
+    "Trig044": {
+      "speech": "tangente de, 3 pi sur 8, égale, fraction avec numérateur la racine carrée de, la racine carrée de 2, fin racine, plus 1, fin racine, et dénominateur la racine carrée de, la racine carrée de 2, fin racine, moins 1, fin racine"
+    },
+    "Trig045": {
+      "speech": "tangente de, pi sur 12, égale un-demi la racine carrée de 2 moins la racine carrée de 3, fin racine, fin racine"
+    },
+    "_comment5_": " Table 2: Inverse Trigonometric Functions",
+    "TrigInvAuto001": {
+      "speech": "sinus inverse de x"
+    },
+    "TrigInvAuto002": {
+      "speech": "cosinus inverse de x"
+    },
+    "TrigInvAuto003": {
+      "speech": "tangente inverse de x"
+    },
+    "TrigInvAuto004": {
+      "speech": "cotangente inverse de x"
+    },
+    "TrigInvAuto005": {
+      "speech": "sécante inverse de x"
+    },
+    "TrigInvAuto006": {
+      "speech": "cosécante inverse de x"
+    },
+    "TrigInvAuto007": {
+      "speech": "sinus inverse de, fraction avec numérateur la racine carrée de 2, et dénominateur 2"
+    },
+    "TrigInvAuto008": {
+      "speech": "cosinus inverse de un-demi"
+    },
+    "TrigInvAuto009": {
+      "speech": "tangente inverse de 17"
+    },
+    "TrigInvAuto010": {
+      "speech": "cotangente inverse de 32"
+    },
+    "TrigInvAuto011": {
+      "speech": "sécante inverse de 100"
+    },
+    "TrigInvAuto012": {
+      "speech": "cosécante inverse de 85"
+    },
+    "TrigInvAuto013": {
+      "speech": "sinus inverse de négatif x"
+    },
+    "TrigInvAuto014": {
+      "speech": "cosinus inverse de négatif x"
+    },
+    "TrigInvAuto015": {
+      "speech": "tangente inverse de, parenthèse gauche, négatif x plus 12, parenthèse droite"
+    },
+    "TrigInvAuto016": {
+      "speech": "cotangente inverse de, parenthèse gauche, négatif x moins 1, parenthèse droite"
+    },
+    "TrigInvAuto017": {
+      "speech": "sinus inverse de sinus 0"
+    },
+    "TrigInvAuto018": {
+      "speech": "cosécante inverse de cosécante x"
+    },
+    "TrigInvAuto019": {
+      "speech": "cosinus de, parenthèse gauche, cosinus inverse de, parenthèse gauche, négatif, fraction avec numérateur la racine carrée de 2, et dénominateur 2, parenthèse droite, parenthèse droite"
+    },
+    "TrigInvAuto020": {
+      "speech": "cosinus de, parenthèse gauche, négatif, cosinus inverse de, parenthèse gauche, fraction avec numérateur la racine carrée de 2, et dénominateur 2, parenthèse droite, parenthèse droite"
+    },
+    "TrigInvAuto021": {
+      "speech": "sinus inverse de, parenthèse gauche, cosinus de, pi sur 4, parenthèse droite"
+    },
+    "TrigInvAuto022": {
+      "speech": "sinus, cosinus inverse de un-demi"
+    },
+    "TrigInvAuto023": {
+      "speech": "sinus, tangente inverse de 1"
+    },
+    "TrigInvAuto024": {
+      "speech": "sinus de, parenthèse gauche, négatif, tangente inverse de 1, parenthèse droite"
+    },
+    "TrigInvAuto025": {
+      "speech": "sinus de, parenthèse gauche, négatif, tangente inverse de négatif 1, parenthèse droite"
+    },
+    "TrigInvAuto026": {
+      "speech": "sécante inverse de sécante x"
+    },
+    "_comment6_": " New: Reciprocal",
+    "TrigReciprocal001": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>",
+      "speech": "la reciproque de sinus x"
+    },
+    "TrigReciprocal002": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>",
+      "speech": "la reciproque de cosinus x"
+    },
+    "TrigReciprocal003": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>",
+      "speech": "la reciproque de tangente x"
+    },
+    "TrigReciprocal004": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>",
+      "speech": "la reciproque de cotangente x"
+    },
+    "TrigReciprocal005": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>",
+      "speech": "la reciproque de sécante x"
+    },
+    "TrigReciprocal006": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>",
+      "speech": "la reciproque de cosécante x"
+    },
+    "TrigReciprocal007": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow></math>",
+      "speech": "la reciproque de sinus, fraction avec numérateur la racine carrée de 2, et dénominateur 2"
+    },
+    "TrigReciprocal008": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>",
+      "speech": "la reciproque de cosinus un-demi"
+    },
+    "TrigReciprocal009": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>17</mn></mrow></math>",
+      "speech": "la reciproque de tangente 17"
+    },
+    "TrigReciprocal010": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>32</mn></mrow></math>",
+      "speech": "la reciproque de cotangente 32"
+    },
+    "TrigReciprocal011": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>100</mn></mrow></math>",
+      "speech": "la reciproque de sécante 100"
+    },
+    "TrigReciprocal012": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>85</mn></mrow></math>",
+      "speech": "la reciproque de cosécante 85"
+    },
+    "TrigReciprocal013": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>",
+      "speech": "la reciproque de sinus, négatif x"
+    },
+    "TrigReciprocal014": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>",
+      "speech": "la reciproque de cosinus, négatif x"
+    },
+    "TrigReciprocal015": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi><mo>+</mo><mn>12</mn></mrow><mo>)</mo></mrow></mrow></math>",
+      "speech": "la reciproque de tangente, parenthèse gauche, négatif x plus 12, parenthèse droite"
+    },
+    "TrigReciprocal016": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>",
+      "speech": "la reciproque de cotangente, parenthèse gauche, négatif x moins 1, parenthèse droite"
+    },
+    "TrigReciprocal017": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sin</mi><mn>0</mn></mrow><mo>)</mo></mrow></mrow></math>",
+      "speech": "la reciproque de sinus, sinus 0"
+    },
+    "TrigReciprocal018": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>csc</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>",
+      "speech": "la reciproque de cosécante, cosécante x"
+    },
+    "TrigReciprocal019": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
+      "speech": "cosinus de, parenthèse gauche, la reciproque de cosinus, parenthèse gauche, négatif, fraction avec numérateur la racine carrée de 2, et dénominateur 2, parenthèse droite, parenthèse droite"
+    },
+    "TrigReciprocal020": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
+      "speech": "cosinus de, parenthèse gauche, négatif, la reciproque de cosinus, parenthèse gauche, fraction avec numérateur la racine carrée de 2, et dénominateur 2, parenthèse droite, parenthèse droite"
+    },
+    "TrigReciprocal021": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>cos</mi><mfrac><mi>π</mi><mn>4</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>",
+      "speech": "la reciproque de sinus, parenthèse gauche, cosinus de, pi sur 4, parenthèse droite"
+    },
+    "TrigReciprocal022": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>",
+      "speech": "sinus, la reciproque de cosinus un-demi"
+    },
+    "TrigReciprocal023": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>",
+      "speech": "sinus, la reciproque de tangente 1"
+    },
+    "TrigReciprocal024": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>",
+      "speech": "sinus de, parenthèse gauche, négatif, la reciproque de tangente 1, parenthèse droite"
+    },
+    "TrigReciprocal025": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
+      "speech": "sinus de, parenthèse gauche, négatif, la reciproque de tangente, négatif 1, parenthèse droite"
+    },
+    "TrigReciprocal026": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sec</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>",
+      "speech": "la reciproque de sécante, sécante x"
+    },
+    "TrigInverse001": {
+      "speech": "sinus inverse de x"
+    },
+    "TrigInverse002": {
+      "speech": "cosinus inverse de x"
+    },
+    "TrigInverse003": {
+      "speech": "tangente inverse de x"
+    },
+    "TrigInverse004": {
+      "speech": "cotangente inverse de x"
+    },
+    "TrigInverse005": {
+      "speech": "sécante inverse de x"
+    },
+    "TrigInverse006": {
+      "speech": "cosécante inverse de x"
+    },
+    "TrigInverse007": {
+      "speech": "sinus inverse de, fraction avec numérateur la racine carrée de 2, et dénominateur 2"
+    },
+    "TrigInverse008": {
+      "speech": "cosinus inverse de un-demi"
+    },
+    "TrigInverse009": {
+      "speech": "tangente inverse de 17"
+    },
+    "TrigInverse010": {
+      "speech": "cotangente inverse de 32"
+    },
+    "TrigInverse011": {
+      "speech": "sécante inverse de 100"
+    },
+    "TrigInverse012": {
+      "speech": "cosécante inverse de 85"
+    },
+    "TrigInverse013": {
+      "speech": "sinus inverse de négatif x"
+    },
+    "TrigInverse014": {
+      "speech": "cosinus inverse de négatif x"
+    },
+    "TrigInverse015": {
+      "speech": "tangente inverse de, parenthèse gauche, négatif x plus 12, parenthèse droite"
+    },
+    "TrigInverse016": {
+      "speech": "cotangente inverse de, parenthèse gauche, négatif x moins 1, parenthèse droite"
+    },
+    "TrigInverse017": {
+      "speech": "sinus inverse de sinus 0"
+    },
+    "TrigInverse018": {
+      "speech": "cosécante inverse de cosécante x"
+    },
+    "TrigInverse019": {
+      "speech": "cosinus de, parenthèse gauche, cosinus inverse de, parenthèse gauche, négatif, fraction avec numérateur la racine carrée de 2, et dénominateur 2, parenthèse droite, parenthèse droite"
+    },
+    "TrigInverse020": {
+      "speech": "cosinus de, parenthèse gauche, négatif, cosinus inverse de, parenthèse gauche, fraction avec numérateur la racine carrée de 2, et dénominateur 2, parenthèse droite, parenthèse droite"
+    },
+    "TrigInverse021": {
+      "speech": "sinus inverse de, parenthèse gauche, cosinus de, pi sur 4, parenthèse droite"
+    },
+    "TrigInverse022": {
+      "speech": "sinus, cosinus inverse de un-demi"
+    },
+    "TrigInverse023": {
+      "speech": "sinus, tangente inverse de 1"
+    },
+    "TrigInverse024": {
+      "speech": "sinus de, parenthèse gauche, négatif, tangente inverse de 1, parenthèse droite"
+    },
+    "TrigInverse025": {
+      "speech": "sinus de, parenthèse gauche, négatif, tangente inverse de négatif 1, parenthèse droite"
+    },
+    "TrigInverse026": {
+      "speech": "sécante inverse de sécante x"
+    },
+    "ArcTrig001": {
+      "speech": "arc sinus x"
+    },
+    "ArcTrig002": {
+      "speech": "arc cosinus x"
+    },
+    "ArcTrig003": {
+      "speech": "arc tangente x"
+    },
+    "ArcTrig004": {
+      "speech": "arc cotangente x"
+    },
+    "ArcTrig005": {
+      "speech": "arc sécante x"
+    },
+    "ArcTrig006": {
+      "speech": "arc cosécante x"
+    },
+    "ArcTrig007": {
+      "speech": "arc sinus de, fraction avec numérateur la racine carrée de 2, et dénominateur 2"
+    },
+    "ArcTrig008": {
+      "speech": "arc cosinus un-demi"
+    },
+    "ArcTrig009": {
+      "speech": "arc tangente 17"
+    },
+    "ArcTrig010": {
+      "speech": "arc cotangente 32"
+    },
+    "ArcTrig011": {
+      "speech": "arc sécante 100"
+    },
+    "ArcTrig012": {
+      "speech": "arc cosécante 85"
+    },
+    "ArcTrig013": {
+      "speech": "arc sinus négatif x"
+    },
+    "ArcTrig014": {
+      "speech": "arc cosinus négatif x"
+    },
+    "ArcTrig015": {
+      "speech": "arc tangente de, parenthèse gauche, négatif x plus 12, parenthèse droite"
+    },
+    "ArcTrig016": {
+      "speech": "arc cotangente de, parenthèse gauche, négatif x moins 1, parenthèse droite"
+    },
+    "ArcTrig017": {
+      "speech": "arc sinus, sinus 0"
+    },
+    "ArcTrig018": {
+      "speech": "arc cosécante, cosécante x"
+    },
+    "ArcTrig019": {
+      "speech": "cosinus de, parenthèse gauche, arc cosinus de, parenthèse gauche, négatif, fraction avec numérateur la racine carrée de 2, et dénominateur 2, parenthèse droite, parenthèse droite"
+    },
+    "ArcTrig020": {
+      "speech": "cosinus de, parenthèse gauche, négatif, arc cosinus de, parenthèse gauche, fraction avec numérateur la racine carrée de 2, et dénominateur 2, parenthèse droite, parenthèse droite"
+    },
+    "ArcTrig021": {
+      "speech": "arc sinus de, parenthèse gauche, cosinus de, pi sur 4, parenthèse droite"
+    },
+    "ArcTrig022": {
+      "speech": "sinus, arc cosinus un-demi"
+    },
+    "ArcTrig023": {
+      "speech": "sinus, arc tangente 1"
+    },
+    "ArcTrig024": {
+      "speech": "sinus de, parenthèse gauche, négatif, arc tangente 1, parenthèse droite"
+    },
+    "ArcTrig025": {
+      "speech": "sinus de, parenthèse gauche, négatif, arc tangente négatif 1, parenthèse droite"
+    },
+    "ArcTrig026": {
+      "speech": "arc sécante, sécante x"
+    },
+    "AllTrig01": {
+      "speech": "arc sinus x"
+    },
+    "AllTrig02": {
+      "speech": "arc cosinus x"
+    },
+    "AllTrig03": {
+      "speech": "arc tangente x"
+    },
+    "_comment7_": " Table 3: Hyperbolic Trigonometric Functions",
+    "HypTrig001": {
+      "speech": "sinus hyperbolique de x"
+    },
+    "HypTrig002": {
+      "speech": "cosinus hyperbolique de x"
+    },
+    "HypTrig003": {
+      "speech": "tangente hyperbolique de x"
+    },
+    "HypTrig004": {
+      "speech": "cotangente hyperbolique de x"
+    },
+    "HypTrig005": {
+      "speech": "sécante hyperbolique de x"
+    },
+    "HypTrig006": {
+      "speech": "cosécante hyperbolique de x"
+    },
+    "HypTrig007": {
+      "speech": "sinus hyperbolique inverse de x"
+    },
+    "HypTrig008": {
+      "speech": "cosinus hyperbolique inverse de x"
+    },
+    "HypTrig009": {
+      "speech": "tangente hyperbolique inverse de x"
+    },
+    "HypTrig010": {
+      "speech": "cotangente hyperbolique inverse de x"
+    },
+    "HypTrig011": {
+      "speech": "sécante hyperbolique inverse de x"
+    },
+    "HypTrig012": {
+      "speech": "cosécante hyperbolique inverse de x"
+    },
+    "HypTrig013": {
+      "speech": "sinus hyperbolique de, sinus hyperbolique inverse de x"
+    },
+    "HypTrig014": {
+      "speech": "cosinus hyperbolique de, cosinus hyperbolique inverse de x"
+    },
+    "HypTrig015": {
+      "speech": "tangente hyperbolique de, tangente hyperbolique inverse de x"
+    },
+    "HypTrig016": {
+      "speech": "cotangente hyperbolique de, cotangente hyperbolique inverse de x"
+    },
+    "HypTrig017": {
+      "speech": "sinus hyperbolique inverse de, sinus hyperbolique de x"
+    },
+    "HypTrig018": {
+      "speech": "cosinus hyperbolique inverse de, cosinus hyperbolique de x"
+    },
+    "HypTrig019": {
+      "speech": "tangente hyperbolique inverse de, tangente hyperbolique de x"
+    },
+    "HypTrig020": {
+      "speech": "cotangente hyperbolique inverse de, cotangente hyperbolique de x"
+    },
+    "_comment8_": " Reciprocal",
+    "HypTrigReciprocal001": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><mi>sinh</mi><mi>x</mi></mrow></math>",
+      "speech": "sinus hyperbolique de x"
+    },
+    "HypTrigReciprocal002": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><mi>cosh</mi><mi>x</mi></mrow></math>",
+      "speech": "cosinus hyperbolique de x"
+    },
+    "HypTrigReciprocal003": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><mi>tanh</mi><mi>x</mi></mrow></math>",
+      "speech": "tangente hyperbolique de x"
+    },
+    "HypTrigReciprocal004": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><mi>coth</mi><mi>x</mi></mrow></math>",
+      "speech": "cotangente hyperbolique de x"
+    },
+    "HypTrigReciprocal005": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><mi>sech</mi><mi>x</mi></mrow></math>",
+      "speech": "sécante hyperbolique de x"
+    },
+    "HypTrigReciprocal006": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><mi>csch</mi><mi>x</mi></mrow></math>",
+      "speech": "cosécante hyperbolique de x"
+    },
+    "HypTrigReciprocal007": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>sinh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>",
+      "speech": "la reciproque de sinus hyperbolique x"
+    },
+    "HypTrigReciprocal008": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>cosh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>",
+      "speech": "la reciproque de cosinus hyperbolique x"
+    },
+    "HypTrigReciprocal009": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>tanh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>",
+      "speech": "la reciproque de tangente hyperbolique x"
+    },
+    "HypTrigReciprocal010": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>coth</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>",
+      "speech": "la reciproque de cotangente hyperbolique x"
+    },
+    "HypTrigReciprocal011": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>sech</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>",
+      "speech": "la reciproque de sécante hyperbolique x"
+    },
+    "HypTrigReciprocal012": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>csch</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>",
+      "speech": "la reciproque de cosécante hyperbolique x"
+    },
+    "HypTrigReciprocal013": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><mi>sinh</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>sinh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>",
+      "speech": "sinus hyperbolique de, la reciproque de sinus hyperbolique x"
+    },
+    "HypTrigReciprocal014": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><mi>cosh</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>cosh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>",
+      "speech": "cosinus hyperbolique de, la reciproque de cosinus hyperbolique x"
+    },
+    "HypTrigReciprocal015": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><mi>tanh</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>tanh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>",
+      "speech": "tangente hyperbolique de, la reciproque de tangente hyperbolique x"
+    },
+    "HypTrigReciprocal016": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><mi>coth</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>coth</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>",
+      "speech": "cotangente hyperbolique de, la reciproque de cotangente hyperbolique x"
+    },
+    "HypTrigReciprocal017": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>sinh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sinh</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>",
+      "speech": "la reciproque de sinus hyperbolique, sinus hyperbolique de x"
+    },
+    "HypTrigReciprocal018": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>cosh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>cosh</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>",
+      "speech": "la reciproque de cosinus hyperbolique, cosinus hyperbolique de x"
+    },
+    "HypTrigReciprocal019": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>tanh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>tanh</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>",
+      "speech": "la reciproque de tangente hyperbolique, tangente hyperbolique de x"
+    },
+    "HypTrigReciprocal020": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "mathml": "<math><mrow><msup><mrow><mi>coth</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>coth</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>",
+      "speech": "la reciproque de cotangente hyperbolique, cotangente hyperbolique de x"
+    }
+  }
+}
