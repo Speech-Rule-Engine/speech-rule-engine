@@ -135,7 +135,10 @@ if (locale) {
 if (!sre.Tests.testList.length) {
   sre.Tests.testList = sre.Tests.testList.concat(sre.Tests.allTests);
 }
-
+var warn = sre.SystemExternal.process.env['WARN'];
+if (typeof warn !== 'undefined') {
+  sre.Tests.getInstance().runner.warn = parseInt(warn, 10);
+}
 
 /**
  * Execute tests.

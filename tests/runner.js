@@ -33,7 +33,7 @@ sre.TestRunner = function() {
    * @type {string}
    * @private
    */
-  this.status_ = sre.TestRunner.PASS;
+  this.status_ = sre.TestRunner.Results.PASS;
 
   /**
    * List of failed tests.
@@ -55,22 +55,36 @@ sre.TestRunner = function() {
    * @private
    */
   this.testQueue_ = [];
+
+  /**
+   * Warning level.
+   * @type {number}
+   */
+  this.warn = sre.TestRunner.Warning.WARN;
+
 };
 goog.addSingletonGetter(sre.TestRunner);
 
 
 /**
- * @type {string}
- * @const
+ * 
+ * @enum {number}
  */
-sre.TestRunner.PASS = 'pass';
+sre.TestRunner.Warning = {
+  NONE: 0,
+  WARN: 1,
+  ERROR: 2
+};
 
 
 /**
- * @type {string}
- * @const
+ * @enum {string}
  */
-sre.TestRunner.FAIL = 'fail';
+sre.TestRunner.Results = {
+  PASS: 'pass',
+  FAIL: 'fail',
+  WARN: 'warn'
+};
 
 
 /**
@@ -78,7 +92,7 @@ sre.TestRunner.FAIL = 'fail';
  * @return {boolean} True if tests have passed.
  */
 sre.TestRunner.prototype.success = function() {
-  return this.status_ == sre.TestRunner.PASS;
+  return this.status_ == sre.TestRunner.Results.PASS;
 };
 
 
@@ -112,8 +126,22 @@ let html = {
 };
 
 sre.TestRunner.prototype.executeJsonTests = function(testcase) {
-  testcase.prepare();
-  this.output('\nRunning ' + testcase.information + '\n');
+  try {
+    testcase.prepare();
+  } catch (e)
+  {
+    this.output('\nRunning ' + testcase.information + '\n');
+    if (this.warn) {
+      for (var warn of e) {
+        this.output('No results specified for test: ' + warn);
+        this.output('\t[WARN]\n', sre.TestRunner.color_.ORANGE);
+      }
+      if (this.warn == sre.TestRunner.Warning.ERROR) {
+        this.status_ = sre.TestRunner.Results.FAIL;
+        this.failedTests_ = this.failedTests_.concat(e);
+      }
+    }
+  }
   testcase.setActive(html[testcase.locale]);
   testcase.startExamples();
   testcase.setUpTest();
@@ -159,7 +187,7 @@ sre.TestRunner.prototype.executeTest_ = function(name, func) {
   {
     console.log(e);
     this.output('\t[FAIL]\n', sre.TestRunner.color_.RED);
-    this.status_ = sre.TestRunner.FAIL;
+    this.status_ = sre.TestRunner.Results.FAIL;
     this.failedTests_.push(name);
     return;
   }
@@ -192,6 +220,7 @@ sre.TestRunner.prototype.summary = function() {
 sre.TestRunner.color_ = {
   RED: '\u001B\u005B\u0033\u0031\u006D',
   GREEN: '\u001B\u005B\u0033\u0032\u006D',
+  ORANGE: '\u001B\u005B\u0033\u0033\u006D',
   WHITE: '\u001B\u005B\u0033\u0037\u006D'
 };
 

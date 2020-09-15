@@ -242,13 +242,14 @@ sre.AbstractRuleTest.prototype.prepare = function() {
   var results = [];
   var input = baseTests.tests || {};
   var output = this.jsonTests.tests || {};
+  var warn = [];
   // Combine
   for (var key of Object.keys(input)) {
     if (key.match(/^_/)) continue;
     var json = input[key];
     var speech = output[key];
     if (!speech) {
-      console.warn('No results specified for test: ' + key);
+      warn.push(key);
       continue;
     }
     json.name = key;
@@ -262,4 +263,5 @@ sre.AbstractRuleTest.prototype.prepare = function() {
     results.push(json);
   }
   this.jsonTests = results;
+  throw warn;
 };
