@@ -155,7 +155,7 @@
     "Exp039": {
       "speech": "2 à la puissance j"
     },
-    "Exp40": {
+    "Exp040": {
       "speech": "2 à la puissance a"
     },
     "Exp041": {
@@ -314,7 +314,7 @@
       "mathml": "<math><mrow><msup><mn>2</mn><mi>j</mi></msup></mrow></math>",
       "speech": "2 à la j-ième puissance"
     },
-    "Exp40a": {
+    "Exp040a": {
       "test": true,
       "preference": "Exponent_Ordinal",
       "mathml": "<math><mrow><msup><mn>2</mn><mi>a</mi></msup></mrow></math>",
