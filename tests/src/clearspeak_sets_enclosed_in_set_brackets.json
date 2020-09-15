@@ -1,0 +1,90 @@
+{
+  "tests": {
+    "_comment1_": " Sets Enclosed in Set Brackets",
+    "Set001": {
+      "test": true,
+      "preference": "Sets_Auto",
+      "mathml": "<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}</mo></mrow></math>"
+    },
+    "Set002": {
+      "test": true,
+      "preference": "Sets_Auto",
+      "mathml": "<math><mrow><mo>{</mo><mi>x</mi><mo>|</mo><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>></mo><mn>2</mn><mo>}</mo></mrow></math>"
+    },
+    "Set003": {
+      "test": true,
+      "preference": "Sets_Auto",
+      "mathml": "<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>:</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}</mo></mrow></math>"
+    },
+    "Set004": {
+      "test": true,
+      "preference": "Sets_Auto",
+      "mathml": "<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℕ</mi><mo>:</mo><mi>x</mi><mtext> is an even number</mtext><mo>}</mo></mrow></math>"
+    },
+    "Set005": {
+      "test": true,
+      "preference": "Sets_Auto",
+      "mathml": "<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mtext></mtext><mn>3</mn></mrow><mo>}</mo></mrow></mrow></math>"
+    },
+    "Set006": {
+      "test": true,
+      "preference": "Sets_Auto",
+      "mathml": "<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo><mn>112</mn><mo>,</mo><mtext></mtext><mn>1</mn><mo>,</mo><mn>253</mn></mrow><mo>}</mo></mrow></mrow></math>"
+    },
+    "Set007": {
+      "test": true,
+      "preference": "Sets_woAll",
+      "mathml": "<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}</mo></mrow></math>"
+    },
+    "Set008": {
+      "test": true,
+      "preference": "Sets_woAll",
+      "mathml": "<math><mrow><mo>{</mo><mi>x</mi><mo>|</mo><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>></mo><mn>2</mn><mo>}</mo></mrow></math>"
+    },
+    "Set009": {
+      "test": true,
+      "preference": "Sets_woAll",
+      "mathml": "<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>:</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}</mo></mrow></math>"
+    },
+    "Set010": {
+      "test": true,
+      "preference": "Sets_woAll",
+      "mathml": "<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mtext></mtext><mn>3</mn></mrow><mo>}</mo></mrow></mrow></math>"
+    },
+    "Set011": {
+      "test": true,
+      "preference": "Sets_woAll",
+      "mathml": "<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>112</mn><mo>,</mo><mtext></mtext><mn>1</mn><mo>,</mo><mtext></mtext><mn>253</mn></mrow><mo>}</mo></mrow></mrow></math>"
+    },
+    "Set012": {
+      "test": true,
+      "preference": "Sets_SilentBracket",
+      "mathml": "<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}</mo></mrow></math>"
+    },
+    "Set013": {
+      "test": true,
+      "preference": "Sets_SilentBracket",
+      "mathml": "<math><mrow><mo>{</mo><mi>x</mi><mo>|</mo><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>></mo><mn>2</mn><mo>}</mo></mrow></math>"
+    },
+    "Set014": {
+      "test": true,
+      "preference": "Sets_SilentBracket",
+      "mathml": "<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>:</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}</mo></mrow></math>"
+    },
+    "Set015": {
+      "test": true,
+      "preference": "Sets_SilentBracket",
+      "mathml": "<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℕ</mi><mo>:</mo><mi>x</mi><mtext> is an even number</mtext><mo>}</mo></mrow></math>"
+    },
+    "Set016": {
+      "test": true,
+      "preference": "Sets_SilentBracket",
+      "mathml": "<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mtext></mtext><mn>3</mn></mrow><mo>}</mo></mrow></mrow></math>"
+    },
+    "Set017": {
+      "test": true,
+      "preference": "Sets_SilentBracket",
+      "mathml": "<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>112</mn><mo>,</mo><mtext></mtext><mn>1</mn><mo>,</mo><mtext></mtext><mn>253</mn></mrow><mo>}</mo></mrow></mrow></math>"
+    }
+  }
+}

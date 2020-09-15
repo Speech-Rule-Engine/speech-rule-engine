@@ -1,0 +1,399 @@
+{
+  "tests": {
+    "_comment1_": " Parentheses",
+    "Paren001": {
+      "test": true,
+      "preference": "Paren_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mn>25</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren002": {
+      "test": true,
+      "preference": "Paren_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren003": {
+      "test": true,
+      "preference": "Paren_Auto",
+      "mathml": "<math><mrow><mn>2</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren004": {
+      "test": true,
+      "preference": "Paren_Auto",
+      "mathml": "<math><mrow><mn>2</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren004a": {
+      "test": true,
+      "preference": "Paren_Auto",
+      "mathml": "<math><mrow><mn>2</mn><mo>−</mo><mrow><mo>−</mo><mn>2</mn></mrow></mrow></math>"
+    },
+    "Paren005": {
+      "test": true,
+      "preference": "Paren_Auto",
+      "mathml": "<math><mrow><mn>2</mn><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow><mn>3</mn></msup></mrow></math>"
+    },
+    "Paren006": {
+      "test": true,
+      "preference": "Paren_Auto",
+      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
+    },
+    "Paren007": {
+      "test": true,
+      "preference": "Paren_Auto",
+      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
+    },
+    "Paren008": {
+      "test": true,
+      "preference": "Paren_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren009": {
+      "test": true,
+      "preference": "Paren_Auto",
+      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
+    },
+    "Paren010": {
+      "test": true,
+      "preference": "Paren_Auto",
+      "mathml": "<math><mrow><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
+    },
+    "Paren011": {
+      "test": true,
+      "preference": "Paren_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren012": {
+      "test": true,
+      "preference": "Paren_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>",
+      "_comment2_": " TODO: (QUESTION) This is against the Paren_Auto rules! (page 31)!",
+      "_comment3_": " var speech = 'open paren, three fourths, x, close paren';"
+    },
+    "Paren013": {
+      "test": true,
+      "preference": "Paren_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mn>11</mn></mrow><mrow><mn>22</mn></mrow></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren014": {
+      "test": true,
+      "preference": "Paren_Auto",
+      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mn>4</mn></msup></mrow></math>"
+    },
+    "Paren015": {
+      "test": true,
+      "preference": "Paren_Auto",
+      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mn>11</mn></mrow><mrow><mn>15</mn></mrow></mfrac></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
+    },
+    "Paren016": {
+      "test": true,
+      "preference": "Paren_Speak",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mn>25</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren017": {
+      "test": true,
+      "preference": "Paren_Speak",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren018": {
+      "test": true,
+      "preference": "Paren_Speak",
+      "mathml": "<math><mrow><mn>2</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren019": {
+      "test": true,
+      "preference": "Paren_Speak",
+      "mathml": "<math><mrow><mn>2</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren020": {
+      "test": true,
+      "preference": "Paren_Speak",
+      "mathml": "<math><mrow><mn>2</mn><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow><mn>3</mn></msup></mrow></math>"
+    },
+    "Paren021": {
+      "test": true,
+      "preference": "Paren_Speak",
+      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
+    },
+    "Paren022": {
+      "test": true,
+      "preference": "Paren_Speak",
+      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
+    },
+    "Paren023": {
+      "test": true,
+      "preference": "Paren_Speak",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren024": {
+      "test": true,
+      "preference": "Paren_Speak",
+      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
+    },
+    "Paren025": {
+      "test": true,
+      "preference": "Paren_Speak",
+      "mathml": "<math><mrow><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
+    },
+    "Paren026": {
+      "test": true,
+      "preference": "Paren_Speak",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren027": {
+      "test": true,
+      "preference": "Paren_Speak",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren028": {
+      "test": true,
+      "preference": "Paren_Speak",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mn>11</mn></mrow><mrow><mn>22</mn></mrow></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren029": {
+      "test": true,
+      "preference": "Paren_Speak",
+      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mn>4</mn></msup></mrow></math>"
+    },
+    "Paren030": {
+      "test": true,
+      "preference": "Paren_Speak",
+      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mn>11</mn></mrow><mrow><mn>15</mn></mrow></mfrac></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
+    },
+    "Paren031": {
+      "test": true,
+      "preference": "Paren_CoordPoint",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren032": {
+      "test": true,
+      "preference": "Paren_CoordPoint",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren033": {
+      "test": true,
+      "preference": "Paren_CoordPoint",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren034": {
+      "test": true,
+      "preference": "Paren_CoordPoint",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren035": {
+      "test": true,
+      "preference": "Paren_CoordPoint",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>386</mn></mrow><mo>)</mo></mrow></mrow></math>",
+      "_comment4_": " var speech = 'the point with coordinates 1 comma 2 comma three hundred",
+      "_comment5_": " eighty six';"
+    },
+    "Paren036": {
+      "test": true,
+      "preference": "Paren_Interval",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>,</mo><mtext></mtext><mi>b</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren037": {
+      "test": true,
+      "preference": "Paren_Interval",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mn>0</mn><mo>,</mo><mtext></mtext><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren038": {
+      "test": true,
+      "preference": "Paren_Interval",
+      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mi>a</mi><mo>,</mo><mtext></mtext><mi>b</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren039": {
+      "test": true,
+      "preference": "Paren_Interval",
+      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mn>0</mn><mo>,</mo><mtext></mtext><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren040": {
+      "test": true,
+      "preference": "Paren_Interval",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>,</mo><mtext></mtext><mi>b</mi></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Paren041": {
+      "test": true,
+      "preference": "Paren_Interval",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mn>0</mn><mo>,</mo><mtext></mtext><mn>1</mn></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Paren042": {
+      "test": true,
+      "preference": "Paren_Interval",
+      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mi>a</mi><mo>,</mo><mtext></mtext><mi>b</mi></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Paren043": {
+      "test": true,
+      "preference": "Paren_Interval",
+      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mn>0</mn><mo>,</mo><mtext></mtext><mn>1</mn></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Paren044": {
+      "test": true,
+      "preference": "Paren_Interval",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mi>∞</mi><mo>,</mo><mtext></mtext><mi>b</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren045": {
+      "test": true,
+      "preference": "Paren_Interval",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mi>∞</mi><mo>,</mo><mtext></mtext><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren046": {
+      "test": true,
+      "preference": "Paren_Interval",
+      "mathml": "<math><mrow><mo stretchy=\"false\">(</mo><mo>−</mo><mi>∞</mi><mo>,</mo><mi>b</mi><mo stretchy=\"false\">]</mo></mrow></math>"
+    },
+    "Paren047": {
+      "test": true,
+      "preference": "Paren_Interval",
+      "mathml": "<math><mrow><mo stretchy=\"false\">(</mo><mo>−</mo><mi>∞</mi><mo>,</mo><mn>1</mn><mo stretchy=\"false\">]</mo></mrow></math>"
+    },
+    "Paren048": {
+      "test": true,
+      "preference": "Paren_Interval",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>,</mo><mtext></mtext><mi>∞</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren049": {
+      "test": true,
+      "preference": "Paren_Interval",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mi>∞</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren050": {
+      "test": true,
+      "preference": "Paren_Interval",
+      "mathml": "<math><mrow><mo stretchy=\"false\">[</mo><mi>a</mi><mo>,</mo><mi>∞</mi><mo stretchy=\"false\">)</mo></mrow></math>"
+    },
+    "Paren051": {
+      "test": true,
+      "preference": "Paren_Interval",
+      "mathml": "<math><mrow><mo stretchy=\"false\">[</mo><mn>1</mn><mo>,</mo><mi>∞</mi><mo stretchy=\"false\">)</mo></mrow></math>"
+    },
+    "Paren052": {
+      "test": true,
+      "preference": "Paren_Interval",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mi>∞</mi><mo>,</mo><mtext></mtext><mi>∞</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Paren053": {
+      "test": true,
+      "preference": "Paren_Interval",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mi>∞</mi><mo>,</mo><mtext></mtext><mo>+</mo><mi>∞</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Nest001": {
+      "test": true,
+      "preference": "Paren_SpeakNestingLevel",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Nest002": {
+      "test": true,
+      "preference": "Paren_SpeakNestingLevel",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Nest003": {
+      "test": true,
+      "preference": "Paren_SpeakNestingLevel",
+      "mathml": "<math><mrow><mn>6</mn><mo>−</mo><mrow><mo>[</mo><mrow><mn>2</mn><mo>−</mo><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Nest004": {
+      "test": true,
+      "preference": "Paren_SpeakNestingLevel",
+      "mathml": "<math><mrow><mn>6</mn><mo>−</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>−</mo><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Nest005": {
+      "test": true,
+      "preference": "Paren_SpeakNestingLevel",
+      "mathml": "<math><mrow><mn>4</mn><mrow><mo>[</mo><mrow><mi>x</mi><mo>+</mo><mn>3</mn><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Nest006": {
+      "test": true,
+      "preference": "Paren_SpeakNestingLevel",
+      "mathml": "<math><mrow><mn>4</mn><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>3</mn><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Nest007": {
+      "test": true,
+      "preference": "Paren_SpeakNestingLevel",
+      "mathml": "<math><mrow><mn>1</mn><mo>+</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>+</mo><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow><mo>−</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>+</mo><mn>8</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Nest008": {
+      "test": true,
+      "preference": "Paren_SpeakNestingLevel",
+      "mathml": "<math><mrow><mn>1</mn><mo>+</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>+</mo><mrow><mo>(</mo><mrow><mn>3</mn><mo>−</mo><mrow><mo>(</mo><mrow><mn>4</mn><mo>−</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Nest009": {
+      "test": true,
+      "preference": "Paren_SpeakNestingLevel",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mo>+</mo><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn><mo>+</mo><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>7</mn><mo>+</mo><mrow><mo>(</mo><mrow><mn>8</mn><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow><mo>+</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "SilParen001": {
+      "test": true,
+      "preference": "Paren_Silent",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mn>25</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "SilParen002": {
+      "test": true,
+      "preference": "Paren_Silent",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "SilParen003": {
+      "test": true,
+      "preference": "Paren_Silent",
+      "mathml": "<math><mrow><mn>2</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "SilParen004": {
+      "test": true,
+      "preference": "Paren_Silent",
+      "mathml": "<math><mrow><mn>2</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "SilParen005": {
+      "test": true,
+      "preference": "Paren_Silent",
+      "mathml": "<math><mrow><mn>2</mn><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow><mn>3</mn></msup></mrow></math>"
+    },
+    "SilParen006": {
+      "test": true,
+      "preference": "Paren_Silent",
+      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
+    },
+    "SilParen007": {
+      "test": true,
+      "preference": "Paren_Silent",
+      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
+    },
+    "SilParen008": {
+      "test": true,
+      "preference": "Paren_Silent",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "SilParen009": {
+      "test": true,
+      "preference": "Paren_Silent",
+      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
+    },
+    "SilParen010": {
+      "test": true,
+      "preference": "Paren_Silent",
+      "mathml": "<math><mrow><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
+    },
+    "SilParen011": {
+      "test": true,
+      "preference": "Paren_Silent",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "SilParen012": {
+      "test": true,
+      "preference": "Paren_Silent",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "SilParen013": {
+      "test": true,
+      "preference": "Paren_Silent",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mn>11</mn></mrow><mrow><mn>22</mn></mrow></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "SilParen014": {
+      "test": true,
+      "preference": "Paren_Silent",
+      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mn>4</mn></msup></mrow></math>"
+    },
+    "SilParen015": {
+      "test": true,
+      "preference": "Paren_Silent",
+      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mn>11</mn></mrow><mrow><mn>15</mn></mrow></mfrac></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
+    }
+  }
+}

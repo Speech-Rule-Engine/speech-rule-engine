@@ -1,0 +1,952 @@
+{
+  "tests": {
+    "_comment1_": " ClearSpeak Rules and Preferences Examples: Matrices, Vectors, and",
+    "_comment2_": " Combinatorics",
+    "_comment3_": " Matrices, Vectors, and Combinatorics",
+    "Matrix001": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix002": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Matrix003": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix004": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Matrix005": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix006": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Matrix007": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix008": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Matrix008a": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mtable><mtr><mtd><mrow><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow></mtd></mtr></mtable></mrow></math>"
+    },
+    "Matrix008b": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mo>(</mo><mtable><mtr><mtd><mrow><mrow><mn>3</mn></mrow></mrow></mtd></mtr></mtable><mo>)</mo></mrow></math>"
+    },
+    "Matrix009": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix010": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix011": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix012": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>6</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix013": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix014": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>9</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix015": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix016": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix017": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix018": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix019": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix019b": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd></mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix020": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr><mtr><mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix021": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><msub><mi>b</mi><mrow><mn>1</mn><mn>1</mn></mrow></msub></mrow></mtd><mtd><mrow><msub><mi>b</mi><mrow><mn>1</mn><mn>2</mn></mrow></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>b</mi><mrow><mn>2</mn><mn>1</mn></mrow></msub></mrow></mtd><mtd><mrow><msub><mi>b</mi><mrow><mn>2</mn><mn>2</mn></mrow></msub></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix022": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>",
+      "_comment4_": " var speech = '3 times the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5. times the",
+      "_comment5_": " 2 by 3 matrix. Row 1: Column 1, 3; Column 2, 1; Column 3, 4. Row 2: Column",
+      "_comment6_": " 1, 0; Column 2, 2; Column 3, 6';"
+    },
+    "Matrix023": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr><mtr><mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix024": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mo></mo><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>9</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mo></mo><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix025": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix026": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix027": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix028": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix029": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>9</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix030": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>9</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix031": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix032": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix033": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix034": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix035": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd></mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix036": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd></mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix037": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr><mtr><mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix038": {
+      "test": true,
+      "preference": "Matrix_Auto",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr><mtr><mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix039": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix040": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Matrix041": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix042": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Matrix043": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix044": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Matrix045": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix046": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Matrix047": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix048": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Matrix049": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix050": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Matrix051": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix052": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix053": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix054": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>6</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix055": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix056": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>9</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix057": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix057a": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix058": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix059": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix060": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix061": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd></mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix062": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr><mtr><mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix063": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><msub><mi>b</mi><mrow><mn>1</mn><mn>1</mn></mrow></msub></mrow></mtd><mtd><mrow><msub><mi>b</mi><mrow><mn>1</mn><mn>2</mn></mrow></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>b</mi><mrow><mn>2</mn><mn>1</mn></mrow></msub></mrow></mtd><mtd><mrow><msub><mi>b</mi><mrow><mn>2</mn><mn>2</mn></mrow></msub></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix064": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix065": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr><mtr><mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix066": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mo></mo><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>9</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mo></mo><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix067": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix068": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix069": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix070": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix071": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>9</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix072": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>9</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix073": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix074": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix075": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix076": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix077": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd></mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix078": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd></mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix079": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr><mtr><mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix080": {
+      "test": true,
+      "preference": "Matrix_SpeakColNum",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr><mtr><mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix081": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix082": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Matrix083": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix084": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Matrix085": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix086": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Matrix087": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix088": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Matrix089": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix090": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix091": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix092": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>6</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix092a": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix093": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>9</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix094": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix095": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix096": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix097": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix098": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix099": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd></mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix100": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr><mtr><mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix101": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><msub><mi>b</mi><mrow><mn>1</mn><mn>1</mn></mrow></msub></mrow></mtd><mtd><mrow><msub><mi>b</mi><mrow><mn>1</mn><mn>2</mn></mrow></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>b</mi><mrow><mn>2</mn><mn>1</mn></mrow></msub></mrow></mtd><mtd><mrow><msub><mi>b</mi><mrow><mn>2</mn><mn>2</mn></mrow></msub></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix102": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix103": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr><mtr><mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix104": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mo></mo><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>9</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mo></mo><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix105": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix106": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix107": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix108": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix109": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>9</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix110": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>9</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix111": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix112": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix113": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix114": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix115": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd></mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix116": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd></mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix117": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr><mtr><mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix118": {
+      "test": true,
+      "preference": "Matrix_SilentColNum",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr><mtr><mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix119": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix120": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Matrix121": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix122": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Matrix123": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix124": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Matrix125": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix126": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Matrix127": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix128": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix129": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix130": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>6</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix131": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix132": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>9</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix133": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix134": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix135": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix136": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix137": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix138": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd></mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix139": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr><mtr><mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "_comment7_": " TODO: (Simons) Rewrite certain indices from implicit multiplication to",
+    "_comment8_": " punctuation.",
+    "Matrix140": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><msub><mi>b</mi><mrow><mn>1</mn><mn>1</mn></mrow></msub></mrow></mtd><mtd><mrow><msub><mi>b</mi><mrow><mn>1</mn><mn>2</mn></mrow></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>b</mi><mrow><mn>2</mn><mn>1</mn></mrow></msub></mrow></mtd><mtd><mrow><msub><mi>b</mi><mrow><mn>2</mn><mn>2</mn></mrow></msub></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix141": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix142": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr><mtr><mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix143": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mo></mo><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>9</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mo></mo><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix144": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix145": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix146": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix147": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix148": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>9</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix149": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>9</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix150": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix151": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix152": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix153": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix154": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd></mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix155": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd></mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix156": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr><mtr><mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>"
+    },
+    "Matrix157": {
+      "test": true,
+      "preference": "Matrix_EndMatrix",
+      "mathml": "<math><mrow><mi>det</mi><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr><mtr><mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix158": {
+      "test": true,
+      "preference": "Matrix_Vector",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix159": {
+      "test": true,
+      "preference": "Matrix_Vector",
+      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Matrix160": {
+      "test": true,
+      "preference": "Matrix_Vector",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix161": {
+      "test": true,
+      "preference": "Matrix_Vector",
+      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Matrix162": {
+      "test": true,
+      "preference": "Matrix_Vector",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix163": {
+      "test": true,
+      "preference": "Matrix_Vector",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix164": {
+      "test": true,
+      "preference": "Matrix_Vector",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix165": {
+      "test": true,
+      "preference": "Matrix_Vector",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>9</mn></mtd><mtd><mn>4</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix166": {
+      "test": true,
+      "preference": "Matrix_Vector",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>8</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix167": {
+      "test": true,
+      "preference": "Matrix_Vector",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>9</mn></mtd><mtd><mn>4</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix168": {
+      "test": true,
+      "preference": "Matrix_Vector",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>8</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix169": {
+      "test": true,
+      "preference": "Matrix_EndVector",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix170": {
+      "test": true,
+      "preference": "Matrix_EndVector",
+      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Matrix171": {
+      "test": true,
+      "preference": "Matrix_EndVector",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix172": {
+      "test": true,
+      "preference": "Matrix_EndVector",
+      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>"
+    },
+    "Matrix173": {
+      "test": true,
+      "preference": "Matrix_EndVector",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix174": {
+      "test": true,
+      "preference": "Matrix_EndVector",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix175": {
+      "test": true,
+      "preference": "Matrix_EndVector",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix176": {
+      "test": true,
+      "preference": "Matrix_EndVector",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>9</mn></mtd><mtd><mn>4</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix177": {
+      "test": true,
+      "preference": "Matrix_EndVector",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>8</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix178": {
+      "test": true,
+      "preference": "Matrix_EndVector",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>9</mn></mtd><mtd><mn>4</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix179": {
+      "test": true,
+      "preference": "Matrix_EndVector",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>8</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix180": {
+      "test": true,
+      "preference": "Matrix_Combinatoric",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mi>n</mi></mtd></mtr><mtr><mtd><mi>r</mi></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix181": {
+      "test": true,
+      "preference": "Matrix_Combinatoric",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mn>10</mn></mrow></mtd></mtr><mtr><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix182": {
+      "test": true,
+      "preference": "Matrix_Combinatoric",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mn>15</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Matrix183": {
+      "test": true,
+      "preference": "Matrix_Combinatoric",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>8</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+    }
+  }
+}

@@ -1,0 +1,1185 @@
+{
+  "tests": {
+    "_comment1_": " Functions",
+    "Function001": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function002": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function003": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mi>h</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function004": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function005": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function006": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function007": {
+      "test": true,
+      "_comment2_": " TODO: This throws a test exception.",
+      "_comment3_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "preference": "Fraction_Over",
+      "mathml": "<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function008": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>+</mo><mn>1</mn></mrow></math>"
+    },
+    "Function009": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function010": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function011": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function012": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function013": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function014": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function015": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function016": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function017": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function018": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function019": {
+      "test": true,
+      "_comment4_": " TODO: This throws a test exception.",
+      "_comment5_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "preference": "Fraction_Over",
+      "mathml": "<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function020": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function021": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function022": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function023": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function024": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function025": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function026": {
+      "test": true,
+      "_comment6_": " TODO: This throws a test exception.",
+      "_comment7_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "preference": "Fraction_Over",
+      "mathml": "<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function027": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow><mo>=</mo><mi>x</mi><mo>+</mo><mn>1</mn></mrow></math>"
+    },
+    "Function028": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function029": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function030": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function031": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function032": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function033": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function034": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function035": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function036": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function037": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function038": {
+      "test": true,
+      "_comment8_": " TODO: This throws a test exception.",
+      "_comment9_": " var preference = 'Functions_Auto:Fraction_FracOver';",
+      "preference": "Fraction_FracOver",
+      "mathml": "<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function039": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function040": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function041": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function042": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mfrac><mi>x</mi><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function043": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>+</mo><mi>g</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></mrow></math>"
+    },
+    "Function044": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>+</mo><mi>g</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function045": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>⋅</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function046": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>⋅</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function047": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mfrac><mi>f</mi><mi>g</mi></mfrac></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mfrac></mrow></math>"
+    },
+    "Function048": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mfrac><mi>f</mi><mi>g</mi></mfrac></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math>"
+    },
+    "Function049": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>∘</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function050": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mn>2</mn><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function051": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mi>c</mi><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function052": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>f</mi><mn>2</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function053": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>f</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function054": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>f</mi><mn>3</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function055": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>f</mi><mn>3</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function056": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>f</mi><mn>4</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function057": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>f</mi><mn>4</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function058": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>f</mi><mn>5</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function059": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>f</mi><mn>5</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function060": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>f</mi><mi>n</mi></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function061": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>f</mi><mi>n</mi></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function062": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>g</mi><mn>2</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function063": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>g</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function064": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>h</mi><mn>3</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function065": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>h</mi><mn>3</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function066": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>g</mi><mn>4</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function067": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>g</mi><mn>4</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function068": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>h</mi><mn>5</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function069": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>h</mi><mn>5</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function070": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>g</mi><mi>n</mi></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function071": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msup><mi>g</mi><mi>n</mi></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function072": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msub><mi>f</mi><mn>1</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function073": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msub><mi>g</mi><mn>2</mn></msub><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>3</mn></msup></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function074": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msub><mi>h</mi><mi>n</mi></msub><mrow><mo>(</mo><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function075": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msubsup><mi>f</mi><mn>1</mn><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function076": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msubsup><mi>g</mi><mn>2</mn><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function077": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msubsup><mi>h</mi><mi>n</mi><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function078": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msubsup><mi>g</mi><mn>1</mn><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mrow><msub><mi>g</mi><mn>2</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function079": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><msub><mi>f</mi><mn>1</mn></msub><mrow><mo>(</mo><mrow><msubsup><mi>g</mi><mn>2</mn><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function080": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function081": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function082": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn><mo>,</mo><mn>2</mn><mi>y</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function083": {
+      "test": true,
+      "preference": "Functions_Auto",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>,</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo>,</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function084": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function085": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function086": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mi>h</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function087": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function088": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function089": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function090": {
+      "test": false,
+      "preference": "Functions_None:Fraction_Over",
+      "mathml": "<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function091": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>+</mo><mn>1</mn></mrow></math>"
+    },
+    "Function092": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function093": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function094": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function095": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function096": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function097": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function098": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function099": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function100": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function101": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function102": {
+      "test": false,
+      "preference": "Functions_None:Fraction_Over",
+      "mathml": "<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function103": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function104": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function105": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function106": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function107": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function108": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function109": {
+      "test": false,
+      "preference": "Functions_None:Fraction_Over",
+      "mathml": "<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function110": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow><mo>=</mo><mi>x</mi><mo>+</mo><mn>1</mn></mrow></math>"
+    },
+    "Function111": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function112": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function113": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function114": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function115": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function116": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function117": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function118": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function119": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function120": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function121": {
+      "test": false,
+      "preference": "Functions_None:Fraction_Over",
+      "mathml": "<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function122": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function123": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function124": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function125": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mfrac><mi>x</mi><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function126": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>+</mo><mi>g</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></mrow></math>"
+    },
+    "Function127": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>+</mo><mi>g</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function128": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>⋅</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function129": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>⋅</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function130": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mfrac><mi>f</mi><mi>g</mi></mfrac></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mfrac></mrow></math>"
+    },
+    "Function131": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mfrac><mi>f</mi><mi>g</mi></mfrac></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math>"
+    },
+    "Function132": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mn>2</mn><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function133": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mi>c</mi><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function134": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>f</mi><mn>2</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function135": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>f</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function136": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>f</mi><mn>3</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function137": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>f</mi><mn>3</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function138": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>f</mi><mn>4</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function139": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>f</mi><mn>4</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function140": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>f</mi><mn>5</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function141": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>f</mi><mn>5</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function142": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>f</mi><mi>n</mi></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function143": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>f</mi><mi>n</mi></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function144": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>g</mi><mn>2</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function145": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>g</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function146": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>h</mi><mn>3</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function147": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>h</mi><mn>3</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function148": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>g</mi><mn>4</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function149": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>g</mi><mn>4</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function150": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>h</mi><mn>5</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function151": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>h</mi><mn>5</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function152": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>g</mi><mi>n</mi></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function153": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msup><mi>g</mi><mi>n</mi></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function154": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msub><mi>f</mi><mn>1</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function156": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msub><mi>g</mi><mn>2</mn></msub><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>3</mn></msup></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function157": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msub><mi>h</mi><mi>n</mi></msub><mrow><mo>(</mo><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function158": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msubsup><mi>f</mi><mn>1</mn><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function159": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msubsup><mi>g</mi><mn>2</mn><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function160": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msubsup><mi>h</mi><mi>n</mi><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function161": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msubsup><mi>g</mi><mn>1</mn><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mrow><msub><mi>g</mi><mn>2</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function162": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><msub><mi>f</mi><mn>1</mn></msub><mrow><mo>(</mo><mrow><msubsup><mi>g</mi><mn>2</mn><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function163": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function164": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function165": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn><mo>,</mo><mn>2</mn><mi>y</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function166": {
+      "test": true,
+      "preference": "Functions_None",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>,</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo>,</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function011b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function012b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function013b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function014b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function015b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function016b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function017b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function018b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function019b": {
+      "test": true,
+      "preference": "Fraction_Over:Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function020b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function021b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function022b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function023b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function024b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function025b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function026b": {
+      "test": true,
+      "preference": "Fraction_Over:Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function027b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow><mo>=</mo><mi>x</mi><mo>+</mo><mn>1</mn></mrow></math>"
+    },
+    "Function028b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function029b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function030b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function031b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function032b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function033b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function034b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function035b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function036b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function037b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function038b": {
+      "test": true,
+      "_comment15_": " TODO: This throws a test exception.",
+      "_comment16_": " var preference = 'Functions_Auto:Fraction_FracOver';",
+      "preference": "Fraction_FracOver:Functions_Reciprocal",
+      "mathml": "<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function039b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function040b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function041b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function042b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mfrac><mi>x</mi><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function043b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>+</mo><mi>g</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></mrow></math>"
+    },
+    "Function044b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>+</mo><mi>g</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function045b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>⋅</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function046b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>⋅</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function047b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mfrac><mi>f</mi><mi>g</mi></mfrac></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mfrac></mrow></math>"
+    },
+    "Function048b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mfrac><mi>f</mi><mi>g</mi></mfrac></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math>"
+    },
+    "Function049b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>∘</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function050b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><mn>2</mn><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function051b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><mi>c</mi><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function052b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>f</mi><mn>2</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function053b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>f</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function054b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>f</mi><mn>3</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function055b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>f</mi><mn>3</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function056b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>f</mi><mn>4</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function057b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>f</mi><mn>4</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function058b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>f</mi><mn>5</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function059b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>f</mi><mn>5</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function060b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>f</mi><mi>n</mi></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function061b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>f</mi><mi>n</mi></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function062b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>g</mi><mn>2</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function063b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>g</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function064b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>h</mi><mn>3</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function065b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>h</mi><mn>3</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function066b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>g</mi><mn>4</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function067b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>g</mi><mn>4</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function068b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>h</mi><mn>5</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function069b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>h</mi><mn>5</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function070b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>g</mi><mi>n</mi></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function071b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msup><mi>g</mi><mi>n</mi></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function072b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msub><mi>f</mi><mn>1</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function073b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msub><mi>g</mi><mn>2</mn></msub><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>3</mn></msup></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function074b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msub><mi>h</mi><mi>n</mi></msub><mrow><mo>(</mo><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function075b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msubsup><mi>f</mi><mn>1</mn><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function076b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msubsup><mi>g</mi><mn>2</mn><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function077b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msubsup><mi>h</mi><mi>n</mi><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function078b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msubsup><mi>g</mi><mn>1</mn><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mrow><msub><mi>g</mi><mn>2</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Function079b": {
+      "test": true,
+      "preference": "Functions_Reciprocal",
+      "mathml": "<math><mrow><msub><mi>f</mi><mn>1</mn></msub><mrow><mo>(</mo><mrow><msubsup><mi>g</mi><mn>2</mn><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    }
+  }
+}

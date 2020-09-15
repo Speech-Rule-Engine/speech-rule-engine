@@ -224,159 +224,81 @@
     },
     "_comment6_": " New: Reciprocal",
     "TrigReciprocal001": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>",
       "speech": "la reciproque de sinus x"
     },
     "TrigReciprocal002": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>",
       "speech": "la reciproque de cosinus x"
     },
     "TrigReciprocal003": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>",
       "speech": "la reciproque de tangente x"
     },
     "TrigReciprocal004": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>",
       "speech": "la reciproque de cotangente x"
     },
     "TrigReciprocal005": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>",
       "speech": "la reciproque de sécante x"
     },
     "TrigReciprocal006": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>",
       "speech": "la reciproque de cosécante x"
     },
     "TrigReciprocal007": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow></math>",
       "speech": "la reciproque de sinus, fraction avec numérateur la racine carrée de 2, et dénominateur 2"
     },
     "TrigReciprocal008": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>",
       "speech": "la reciproque de cosinus un-demi"
     },
     "TrigReciprocal009": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>17</mn></mrow></math>",
       "speech": "la reciproque de tangente 17"
     },
     "TrigReciprocal010": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>32</mn></mrow></math>",
       "speech": "la reciproque de cotangente 32"
     },
     "TrigReciprocal011": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>100</mn></mrow></math>",
       "speech": "la reciproque de sécante 100"
     },
     "TrigReciprocal012": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>85</mn></mrow></math>",
       "speech": "la reciproque de cosécante 85"
     },
     "TrigReciprocal013": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de sinus, négatif x"
     },
     "TrigReciprocal014": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de cosinus, négatif x"
     },
     "TrigReciprocal015": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi><mo>+</mo><mn>12</mn></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de tangente, parenthèse gauche, négatif x plus 12, parenthèse droite"
     },
     "TrigReciprocal016": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de cotangente, parenthèse gauche, négatif x moins 1, parenthèse droite"
     },
     "TrigReciprocal017": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sin</mi><mn>0</mn></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de sinus, sinus 0"
     },
     "TrigReciprocal018": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>csc</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de cosécante, cosécante x"
     },
     "TrigReciprocal019": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "cosinus de, parenthèse gauche, la reciproque de cosinus, parenthèse gauche, négatif, fraction avec numérateur la racine carrée de 2, et dénominateur 2, parenthèse droite, parenthèse droite"
     },
     "TrigReciprocal020": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "cosinus de, parenthèse gauche, négatif, la reciproque de cosinus, parenthèse gauche, fraction avec numérateur la racine carrée de 2, et dénominateur 2, parenthèse droite, parenthèse droite"
     },
     "TrigReciprocal021": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>cos</mi><mfrac><mi>π</mi><mn>4</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de sinus, parenthèse gauche, cosinus de, pi sur 4, parenthèse droite"
     },
     "TrigReciprocal022": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "sinus, la reciproque de cosinus un-demi"
     },
     "TrigReciprocal023": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "sinus, la reciproque de tangente 1"
     },
     "TrigReciprocal024": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "sinus de, parenthèse gauche, négatif, la reciproque de tangente 1, parenthèse droite"
     },
     "TrigReciprocal025": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "sinus de, parenthèse gauche, négatif, la reciproque de tangente, négatif 1, parenthèse droite"
     },
     "TrigReciprocal026": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sec</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de sécante, sécante x"
     },
     "TrigInverse001": {
@@ -607,123 +529,63 @@
     },
     "_comment8_": " Reciprocal",
     "HypTrigReciprocal001": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><mi>sinh</mi><mi>x</mi></mrow></math>",
       "speech": "sinus hyperbolique de x"
     },
     "HypTrigReciprocal002": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><mi>cosh</mi><mi>x</mi></mrow></math>",
       "speech": "cosinus hyperbolique de x"
     },
     "HypTrigReciprocal003": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><mi>tanh</mi><mi>x</mi></mrow></math>",
       "speech": "tangente hyperbolique de x"
     },
     "HypTrigReciprocal004": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><mi>coth</mi><mi>x</mi></mrow></math>",
       "speech": "cotangente hyperbolique de x"
     },
     "HypTrigReciprocal005": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><mi>sech</mi><mi>x</mi></mrow></math>",
       "speech": "sécante hyperbolique de x"
     },
     "HypTrigReciprocal006": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><mi>csch</mi><mi>x</mi></mrow></math>",
       "speech": "cosécante hyperbolique de x"
     },
     "HypTrigReciprocal007": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>sinh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>",
       "speech": "la reciproque de sinus hyperbolique x"
     },
     "HypTrigReciprocal008": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>cosh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>",
       "speech": "la reciproque de cosinus hyperbolique x"
     },
     "HypTrigReciprocal009": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>tanh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>",
       "speech": "la reciproque de tangente hyperbolique x"
     },
     "HypTrigReciprocal010": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>coth</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>",
       "speech": "la reciproque de cotangente hyperbolique x"
     },
     "HypTrigReciprocal011": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>sech</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>",
       "speech": "la reciproque de sécante hyperbolique x"
     },
     "HypTrigReciprocal012": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>csch</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>",
       "speech": "la reciproque de cosécante hyperbolique x"
     },
     "HypTrigReciprocal013": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><mi>sinh</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>sinh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "sinus hyperbolique de, la reciproque de sinus hyperbolique x"
     },
     "HypTrigReciprocal014": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><mi>cosh</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>cosh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "cosinus hyperbolique de, la reciproque de cosinus hyperbolique x"
     },
     "HypTrigReciprocal015": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><mi>tanh</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>tanh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "tangente hyperbolique de, la reciproque de tangente hyperbolique x"
     },
     "HypTrigReciprocal016": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><mi>coth</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>coth</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "cotangente hyperbolique de, la reciproque de cotangente hyperbolique x"
     },
     "HypTrigReciprocal017": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>sinh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sinh</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de sinus hyperbolique, sinus hyperbolique de x"
     },
     "HypTrigReciprocal018": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>cosh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>cosh</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de cosinus hyperbolique, cosinus hyperbolique de x"
     },
     "HypTrigReciprocal019": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>tanh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>tanh</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de tangente hyperbolique, tangente hyperbolique de x"
     },
     "HypTrigReciprocal020": {
-      "test": true,
-      "preference": "Trig_Reciprocal",
-      "mathml": "<math><mrow><msup><mrow><mi>coth</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>coth</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de cotangente hyperbolique, cotangente hyperbolique de x"
     }
   }

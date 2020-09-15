@@ -510,419 +510,210 @@
     },
     "_comment10_": " NEW: Reciprocal",
     "Function011b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de f de x"
     },
     "Function012b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de g de x"
     },
     "Function013b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de h de x"
     },
     "Function014b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de f de 2 x"
     },
     "Function015b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de g de négatif 2 x"
     },
     "Function016b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de f de, parenthèse gauche, 3 x, moins 1, parenthèse droite"
     },
     "Function017b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de g de, parenthèse gauche, x au carré, parenthèse droite"
     },
     "Function018b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de h de un-demi"
     },
     "Function019b": {
-      "test": true,
-      "preference": "Fraction_Over:Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de h de, 1 sur 2"
     },
     "Function020b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de f de, f de x"
     },
     "Function021b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de g de, g de x"
     },
     "Function022b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de h de, h de x"
     },
     "Function023b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de f de, f de 2 x"
     },
     "Function024b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de g de, g de négatif 2 x"
     },
     "Function025b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de h de, h de un-demi"
     },
     "Function026b": {
-      "test": true,
-      "preference": "Fraction_Over:Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de h de, h de, 1 sur 2"
     },
     "Function027b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow><mo>=</mo><mi>x</mi><mo>+</mo><mn>1</mn></mrow></math>",
       "speech": "la reciproque de f de, parenthèse gauche, f de, parenthèse gauche, x plus 1, parenthèse droite, parenthèse droite, égale x plus 1"
     },
     "Function028b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de g de, parenthèse gauche, g de, parenthèse gauche, 2 x, plus 1, parenthèse droite, parenthèse droite"
     },
     "Function029b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de g de, parenthèse gauche, g de, parenthèse gauche, x au carré, parenthèse droite, parenthèse droite"
     },
     "Function030b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "f de, la reciproque de f de x"
     },
     "Function031b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "g de, la reciproque de g de x"
     },
     "Function032b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "h de, la reciproque de h de x"
     },
     "Function033b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "f de, la reciproque de f de 2 x"
     },
     "Function034b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "g de, la reciproque de g de négatif 2 x"
     },
     "Function035b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "f de, parenthèse gauche, la reciproque de f de, parenthèse gauche, 3 x, moins 1, parenthèse droite, parenthèse droite"
     },
     "Function036b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "g de, la reciproque de g de, parenthèse gauche, x au carré, parenthèse droite"
     },
     "Function037b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "h de, la reciproque de h de un-demi"
     },
     "Function038b": {
-      "test": true,
-      "_comment15_": " TODO: This throws a test exception.",
-      "_comment16_": " var preference = 'Functions_Auto:Fraction_FracOver';",
-      "preference": "Fraction_FracOver:Functions_Reciprocal",
-      "mathml": "<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "h de, la reciproque de h de, fraction 1 sur 2"
     },
     "Function039b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "f de, g de x"
     },
     "Function040b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "f de, parenthèse gauche, g de, parenthèse gauche, x plus 1, parenthèse droite, parenthèse droite"
     },
     "Function041b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "h de, g de x"
     },
     "Function042b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mfrac><mi>x</mi><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "h de, parenthèse gauche, g de, parenthèse gauche, fraction avec numérateur x, et dénominateur x plus 1, parenthèse droite, parenthèse droite"
     },
     "Function043b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>+</mo><mi>g</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></mrow></math>",
       "speech": "parenthèse gauche, f plus g, parenthèse droite, de x, égale f de x, plus g de x"
     },
     "Function044b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>+</mo><mi>g</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "parenthèse gauche, f plus g, parenthèse droite, de, parenthèse gauche, x plus 1, parenthèse droite, égale f de, parenthèse gauche, x plus 1, parenthèse droite, plus g de, parenthèse gauche, x plus 1, parenthèse droite"
     },
     "Function045b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>⋅</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>",
       "speech": "parenthèse gauche, f opérateur point g, parenthèse droite, de x"
     },
     "Function046b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>⋅</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "parenthèse gauche, f opérateur point g, parenthèse droite, de, parenthèse gauche, 2 x, plus 5, parenthèse droite"
     },
     "Function047b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mfrac><mi>f</mi><mi>g</mi></mfrac></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mfrac></mrow></math>",
       "speech": "parenthèse gauche, f sur g, parenthèse droite, de x, égale, f de x, sur g de x"
     },
     "Function048b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mfrac><mi>f</mi><mi>g</mi></mfrac></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math>",
       "speech": "parenthèse gauche, f sur g, parenthèse droite, de, parenthèse gauche, 2 x, plus 5, parenthèse droite, égale, fraction avec numérateur f de, parenthèse gauche, 2 x, plus 5, parenthèse droite, et dénominateur g de, parenthèse gauche, 2 x, plus 5, parenthèse droite"
     },
     "Function049b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>∘</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "parenthèse gauche, f opérateur rond g, parenthèse droite, de x, égale f de, g de x"
     },
     "Function050b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><mn>2</mn><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>",
       "speech": "2 f de x"
     },
     "Function051b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><mi>c</mi><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>",
       "speech": "c f de x"
     },
     "Function052b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>f</mi><mn>2</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>",
       "speech": "f au carré de x"
     },
     "Function053b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>f</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "f au carré de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
     },
     "Function054b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>f</mi><mn>3</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>",
       "speech": "f au cube de x"
     },
     "Function055b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>f</mi><mn>3</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "f au cube de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
     },
     "Function056b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>f</mi><mn>4</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>",
       "speech": "f à la puissance 4; de x"
     },
     "Function057b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>f</mi><mn>4</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "f à la puissance 4; de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
     },
     "Function058b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>f</mi><mn>5</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>",
       "speech": "f à la puissance 5; de x"
     },
     "Function059b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>f</mi><mn>5</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "f à la puissance 5; de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
     },
     "Function060b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>f</mi><mi>n</mi></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>",
       "speech": "f à la puissance n; de x"
     },
     "Function061b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>f</mi><mi>n</mi></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "f à la puissance n; de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
     },
     "Function062b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>g</mi><mn>2</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>",
       "speech": "g au carré de x"
     },
     "Function063b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>g</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "g au carré de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
     },
     "Function064b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>h</mi><mn>3</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>",
       "speech": "h au cube de x"
     },
     "Function065b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>h</mi><mn>3</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "h au cube de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
     },
     "Function066b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>g</mi><mn>4</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>",
       "speech": "g à la puissance 4; de x"
     },
     "Function067b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>g</mi><mn>4</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "g à la puissance 4; de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
     },
     "Function068b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>h</mi><mn>5</mn></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>",
       "speech": "h à la puissance 5; de x"
     },
     "Function069b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>h</mi><mn>5</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "h à la puissance 5; de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
     },
     "Function070b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>g</mi><mi>n</mi></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>",
       "speech": "g à la puissance n; de x"
     },
     "Function071b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msup><mi>g</mi><mi>n</mi></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "g à la puissance n; de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
     },
     "Function072b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msub><mi>f</mi><mn>1</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>",
       "speech": "f sub 1, de x"
     },
     "Function073b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msub><mi>g</mi><mn>2</mn></msub><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>3</mn></msup></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "g sub 2, de, parenthèse gauche, x au cube, parenthèse droite"
     },
     "Function074b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msub><mi>h</mi><mi>n</mi></msub><mrow><mo>(</mo><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "h sub n, de, parenthèse gauche, 3 x, moins 2, parenthèse droite"
     },
     "Function075b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msubsup><mi>f</mi><mn>1</mn><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de, f sub 1, de x"
     },
     "Function076b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msubsup><mi>g</mi><mn>2</mn><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de, g sub 2, de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
     },
     "Function077b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msubsup><mi>h</mi><mi>n</mi><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de, h sub n, de x"
     },
     "Function078b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msubsup><mi>g</mi><mn>1</mn><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mrow><msub><mi>g</mi><mn>2</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "la reciproque de, g sub 1, de, g sub 2, de x"
     },
     "Function079b": {
-      "test": true,
-      "preference": "Functions_Reciprocal",
-      "mathml": "<math><mrow><msub><mi>f</mi><mn>1</mn></msub><mrow><mo>(</mo><mrow><msubsup><mi>g</mi><mn>2</mn><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>",
       "speech": "f sub 1, de, la reciproque de, g sub 2, de x"
     }
   }

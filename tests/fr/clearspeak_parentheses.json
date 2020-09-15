@@ -18,9 +18,6 @@
       "speech": "2 moins négatif 2"
     },
     "Paren004a": {
-      "test": true,
-      "preference": "Paren_Auto",
-      "mathml": "<math><mrow><mn>2</mn><mo>−</mo><mrow><mo>−</mo><mn>2</mn></mrow></mrow></math>",
       "speech": "2 moins négatif 2"
     },
     "Paren005": {
