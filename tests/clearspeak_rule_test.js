@@ -59,10 +59,17 @@ sre.ClearspeakRuleTest.prototype.tearDownTest = function() {
 };
 
 
+/**
+ * @override
+ */
 sre.ClearspeakRuleTest.prototype.pick = function(json) {
   return [json['mathml'], json['speech'], json['preference']];
 };
 
+
+/**
+ * @override
+ */
 sre.ClearspeakRuleTest.prototype.method = function(var_args) {
   let args = Array.prototype.slice.call(arguments, 0);
   this.executeRuleTest(args[0], args[1], args[2]);

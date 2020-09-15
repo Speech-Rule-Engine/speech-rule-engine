@@ -1,0 +1,563 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "EnglishExponents",
+  "locale": "en",
+  "information": "ClearspeakEnglishExponents rule tests.",
+  "tests": {
+    "_comment1_": " Exponents",
+    "Exp001": {
+      "speech": "3 squared"
+    },
+    "Exp002a": {
+      "speech": "3 cubed"
+    },
+    "Exp003": {
+      "speech": "3 to the fifth power"
+    },
+    "Exp004": {
+      "speech": "3 to the first power"
+    },
+    "Exp005": {
+      "speech": "b to the first power"
+    },
+    "Exp006": {
+      "speech": "3 raised to the 5.0 power"
+    },
+    "Exp007": {
+      "speech": "3 to the 0 power"
+    },
+    "Exp008": {
+      "speech": "4 to the 11th power"
+    },
+    "Exp009": {
+      "speech": "3 to the negative 2 power"
+    },
+    "Exp010a": {
+      "speech": "3 raised to the negative 2.0 power"
+    },
+    "Exp011": {
+      "speech": "4 to the x-th power"
+    },
+    "Exp012": {
+      "speech": "3 raised to the y plus 2 power"
+    },
+    "Exp013": {
+      "speech": "open paren, 2 y, minus 3, close paren, raised to the 3 z, plus 8 power"
+    },
+    "Exp014": {
+      "speech": "p sub 1, squared"
+    },
+    "Exp015": {
+      "speech": "p sub 1, cubed"
+    },
+    "Exp016": {
+      "speech": "p sub 1, to the fourth power"
+    },
+    "Exp017": {
+      "speech": "p sub 1, to the tenth power"
+    },
+    "Exp018": {
+      "speech": "p sub 1, raised to the x plus 1 power"
+    },
+    "Exp019": {
+      "speech": "p sub, x sub 1, squared"
+    },
+    "Exp010b": {
+      "speech": "p sub, x sub 1, cubed"
+    },
+    "Exp011b": {
+      "speech": "p sub, x sub 1, to the fourth power"
+    },
+    "Exp012b": {
+      "speech": "p sub, x sub 1, to the tenth power"
+    },
+    "Exp013b": {
+      "speech": "p sub, x sub 1, raised to the y plus 1 power"
+    },
+    "Exp014b": {
+      "speech": "3 raised to the 2 squared power"
+    },
+    "Exp015b": {
+      "speech": "3 raised to the 2 x squared power"
+    },
+    "Exp016b": {
+      "speech": "5 raised to the 2 cubed power"
+    },
+    "Exp017b": {
+      "speech": "5 raised to the 2 x cubed power"
+    },
+    "Exp018b": {
+      "speech": "3 raised to the exponent, 2 squared plus 1, end exponent"
+    },
+    "Exp019b": {
+      "speech": "3 raised to the 2 squared power, plus 1"
+    },
+    "Exp020": {
+      "speech": "2 raised to the exponent, x squared plus 3 x cubed, end exponent"
+    },
+    "Exp021": {
+      "speech": "3 raised to the exponent, 3 to the fourth power, end exponent"
+    },
+    "Exp022": {
+      "speech": "3 raised to the exponent, 3 to the fourth power, plus 2, end exponent"
+    },
+    "Exp023": {
+      "speech": "3 raised to the exponent, 3 to the fourth power, end exponent, plus 2"
+    },
+    "Exp024": {
+      "speech": "2 raised to the exponent, x to the fourth power, end exponent"
+    },
+    "Exp025": {
+      "speech": "2 raised to the exponent, 10 raised to the x plus 3 power, end exponent"
+    },
+    "Exp026": {
+      "speech": "3 raised to the exponent, 3 to the tenth power, end exponent"
+    },
+    "Exp027": {
+      "speech": "3 raised to the exponent, 3 to the tenth power, plus 1, end exponent"
+    },
+    "Exp028": {
+      "speech": "3 raised to the exponent, 3 to the tenth power, end exponent, plus 1"
+    },
+    "Exp029": {
+      "speech": "3 raised to the exponent, open paren, x plus 1, close paren, squared, end exponent"
+    },
+    "Exp030": {
+      "speech": "3 raised to the exponent, open paren, x plus 1, close paren, to the tenth power, end exponent"
+    },
+    "Exp031": {
+      "speech": "3 raised to the exponent, open paren, x plus 1, close paren, raised to the y plus 2 power, end exponent"
+    },
+    "Exp032": {
+      "speech": "3 raised to the exponent, open paren, x plus 1, close paren, to the y-th power, plus 2, end exponent"
+    },
+    "Exp033": {
+      "speech": "3 raised to the exponent, open paren, x plus 1, close paren, to the y-th power, end exponent, plus 2"
+    },
+    "_comment2_": " TODO: (Simons) This does not work as semantically we have a -(xy) rather than",
+    "_comment3_": "       (-x)(y).",
+    "Exp034": {
+      "speech": "e raised to the negative one half, x squared power"
+    },
+    "Exp035": {
+      "speech": "e raised to the exponent, negative one half times, open paren, the fraction with numerator x minus mu, and denominator sigma, close paren, squared, end exponent"
+    },
+    "Exp036": {
+      "speech": "2 to the n-th power"
+    },
+    "Exp037": {
+      "speech": "2 to the m-th power"
+    },
+    "Exp038": {
+      "speech": "2 to the i-th power"
+    },
+    "Exp039": {
+      "speech": "2 to the j-th power"
+    },
+    "Exp40": {
+      "speech": "2 to the a-th power"
+    },
+    "Exp041": {
+      "speech": "3 to the second"
+    },
+    "Exp042": {
+      "speech": "3 to the third"
+    },
+    "Exp043": {
+      "speech": "3 to the zero"
+    },
+    "Exp044": {
+      "speech": "3 to the first"
+    },
+    "Exp045": {
+      "speech": "3 to the fifth"
+    },
+    "Exp046": {
+      "speech": "4 raised to the 3.0 power"
+    },
+    "Exp047": {
+      "speech": "4 to the eleventh"
+    },
+    "Exp048": {
+      "speech": "3 to the negative 2"
+    },
+    "Exp049": {
+      "speech": "3 raised to the negative 2.0 power"
+    },
+    "Exp050": {
+      "speech": "4 to the x-th"
+    },
+    "Exp051": {
+      "speech": "3 raised to the y plus 2 power"
+    },
+    "Exp052": {
+      "speech": "open paren, 2 y, minus 3, close paren, raised to the 3 z, plus 8 power"
+    },
+    "Exp053": {
+      "speech": "p sub 1, to the second"
+    },
+    "Exp054": {
+      "speech": "p sub 1, to the third"
+    },
+    "Exp055": {
+      "speech": "p sub 1, to the fourth"
+    },
+    "Exp056": {
+      "speech": "p sub 1, to the tenth"
+    },
+    "Exp057": {
+      "speech": "p sub 1, raised to the x plus 1 power"
+    },
+    "Exp058": {
+      "speech": "p sub, x sub 1, to the second"
+    },
+    "Exp059": {
+      "speech": "p sub, x sub 1, to the third"
+    },
+    "Exp060": {
+      "speech": "p sub, x sub 1, to the fourth"
+    },
+    "Exp061": {
+      "speech": "p sub, x sub 1, to the tenth"
+    },
+    "Exp062": {
+      "speech": "p sub, x sub 1, raised to the y plus 1 power"
+    },
+    "Exp063": {
+      "speech": "3 raised to the exponent, 2 to the second, end exponent"
+    },
+    "Exp064": {
+      "speech": "3 raised to the exponent, 2 x to the second, end exponent"
+    },
+    "Exp065": {
+      "speech": "5 raised to the exponent, 2 to the third, end exponent"
+    },
+    "Exp066": {
+      "speech": "5 raised to the exponent, 2 x to the third, end exponent"
+    },
+    "Exp067": {
+      "speech": "3 raised to the exponent, 2 to the second, plus 1, end exponent"
+    },
+    "Exp068": {
+      "speech": "3 raised to the exponent, 2 to the second, end exponent, plus 1"
+    },
+    "Exp069": {
+      "speech": "2 raised to the exponent, x to the second, plus 3 x to the third, end exponent"
+    },
+    "Exp070": {
+      "speech": "3 raised to the exponent, 3 to the fourth, end exponent"
+    },
+    "Exp071": {
+      "speech": "3 raised to the exponent, 3 to the fourth, plus 2, end exponent"
+    },
+    "Exp072": {
+      "speech": "3 raised to the exponent, 3 to the fourth, end exponent, plus 2"
+    },
+    "Exp073": {
+      "speech": "2 raised to the exponent, x to the fourth, end exponent"
+    },
+    "Exp074": {
+      "speech": "2 raised to the exponent, 10 raised to the x plus 3 power, end exponent"
+    },
+    "Exp075": {
+      "speech": "3 raised to the exponent, 3 to the tenth, end exponent"
+    },
+    "Exp076": {
+      "speech": "3 raised to the exponent, 3 to the tenth, plus 1, end exponent"
+    },
+    "Exp077": {
+      "speech": "3 raised to the exponent, 3 to the tenth, end exponent, plus 1"
+    },
+    "Exp078": {
+      "speech": "3 raised to the exponent, open paren, x plus 1, close paren, to the second, end exponent"
+    },
+    "Exp079": {
+      "speech": "3 raised to the exponent, open paren, x plus 1, close paren, to the tenth, end exponent"
+    },
+    "Exp080": {
+      "speech": "3 raised to the exponent, open paren, x plus 1, close paren, raised to the y plus 2 power, end exponent"
+    },
+    "Exp081": {
+      "speech": "3 raised to the exponent, open paren, x plus 1, close paren, to the y-th, plus 2, end exponent"
+    },
+    "Exp082": {
+      "speech": "3 raised to the exponent, open paren, x plus 1, close paren, to the y-th, end exponent, plus 2"
+    },
+    "Exp083": {
+      "speech": "e raised to the exponent, negative one half x to the second, end exponent"
+    },
+    "Exp084": {
+      "speech": "e raised to the exponent, negative one half times, open paren, the fraction with numerator x minus mu, and denominator sigma, close paren, to the second, end exponent"
+    },
+    "Exp085": {
+      "speech": "3 to the second power"
+    },
+    "Exp086": {
+      "speech": "3 to the third power"
+    },
+    "Exp087": {
+      "speech": "3 to the zero power"
+    },
+    "Exp088": {
+      "speech": "3 to the first power"
+    },
+    "Exp089": {
+      "speech": "3 to the fifth power"
+    },
+    "Exp090": {
+      "speech": "3 raised to the 5.0 power"
+    },
+    "Exp091": {
+      "speech": "4 to the eleventh power"
+    },
+    "Exp092": {
+      "speech": "3 to the negative 2 power"
+    },
+    "Exp093": {
+      "speech": "3 raised to the negative 2.0 power"
+    },
+    "Exp094": {
+      "speech": "4 to the x-th power"
+    },
+    "Exp095": {
+      "speech": "3 raised to the y plus 2 power"
+    },
+    "Exp096": {
+      "speech": "open paren, 2 y, minus 3, close paren, raised to the 3 z, plus 8 power"
+    },
+    "Exp097": {
+      "speech": "p sub 1, to the second power"
+    },
+    "Exp098": {
+      "speech": "p sub 1, to the third power"
+    },
+    "Exp099": {
+      "speech": "p sub 1, to the fourth power"
+    },
+    "Exp100": {
+      "speech": "p sub 1, to the tenth power"
+    },
+    "Exp101": {
+      "speech": "p sub 1, raised to the x plus 1 power"
+    },
+    "Exp102": {
+      "speech": "p sub, x sub 1, to the second power"
+    },
+    "Exp103": {
+      "speech": "p sub, x sub 1, to the third power"
+    },
+    "Exp104": {
+      "speech": "p sub, x sub 1, to the fourth power"
+    },
+    "Exp105": {
+      "speech": "p sub, x sub 1, to the tenth power"
+    },
+    "Exp106": {
+      "speech": "p sub, x sub 1, raised to the y plus 1 power"
+    },
+    "Exp107": {
+      "speech": "3 raised to the exponent, 2 to the second power, end exponent"
+    },
+    "Exp108": {
+      "speech": "3 raised to the exponent, 2 x to the second power, end exponent"
+    },
+    "Exp109": {
+      "speech": "5 raised to the exponent, 2 to the third power, end exponent"
+    },
+    "Exp110": {
+      "speech": "5 raised to the exponent, 2 x to the third power, end exponent"
+    },
+    "Exp111": {
+      "speech": "3 raised to the exponent, 2 to the second power, plus 1, end exponent"
+    },
+    "Exp112": {
+      "speech": "3 raised to the exponent, 2 to the second power, end exponent, plus 1"
+    },
+    "Exp113": {
+      "speech": "2 raised to the exponent, x to the second power, plus 3 x to the third power, end exponent"
+    },
+    "Exp114": {
+      "speech": "3 raised to the exponent, 3 to the fourth power, end exponent"
+    },
+    "Exp115": {
+      "speech": "3 raised to the exponent, 3 to the fourth power, plus 2, end exponent"
+    },
+    "Exp116": {
+      "speech": "3 raised to the exponent, 3 to the fourth power, end exponent, plus 2"
+    },
+    "Exp117": {
+      "speech": "2 raised to the exponent, x to the fourth power, end exponent"
+    },
+    "Exp118": {
+      "speech": "2 raised to the exponent, 10 raised to the x plus 3 power, end exponent"
+    },
+    "Exp119": {
+      "speech": "3 raised to the exponent, 3 to the tenth power, end exponent"
+    },
+    "Exp120": {
+      "speech": "3 raised to the exponent, 3 to the tenth power, plus 1, end exponent"
+    },
+    "Exp121": {
+      "speech": "3 raised to the exponent, 3 to the tenth power, end exponent, plus 1"
+    },
+    "Exp122": {
+      "speech": "3 raised to the exponent, open paren, x plus 1, close paren, to the second power, end exponent"
+    },
+    "Exp123": {
+      "speech": "3 raised to the exponent, open paren, x plus 1, close paren, to the tenth power, end exponent"
+    },
+    "Exp124": {
+      "speech": "3 raised to the exponent, open paren, x plus 1, close paren, raised to the y plus 2 power, end exponent"
+    },
+    "Exp125": {
+      "speech": "3 raised to the exponent, open paren, x plus 1, close paren, to the y-th power, plus 2, end exponent"
+    },
+    "Exp126": {
+      "speech": "3 raised to the exponent, open paren, x plus 1, close paren, to the y-th power, end exponent, plus 2"
+    },
+    "Exp127": {
+      "speech": "e raised to the exponent, negative one half x to the second power, end exponent"
+    },
+    "Exp128": {
+      "speech": "e raised to the exponent, negative one half times, open paren, the fraction with numerator x minus mu, and denominator sigma, close paren, to the second power, end exponent"
+    },
+    "Exp129": {
+      "speech": "3 raised to the power 2"
+    },
+    "Exp130": {
+      "speech": "3 raised to the power 3"
+    },
+    "Exp131": {
+      "speech": "3 raised to the power 1"
+    },
+    "Exp132b": {
+      "speech": "3 raised to the power 0"
+    },
+    "Exp133": {
+      "speech": "3 raised to the power 5"
+    },
+    "Exp134": {
+      "speech": "3 raised to the power 5.0"
+    },
+    "Exp135": {
+      "speech": "4 raised to the power 11"
+    },
+    "Exp136": {
+      "speech": "3 raised to the power negative 2"
+    },
+    "Exp137": {
+      "speech": "3 raised to the power negative 2.0"
+    },
+    "Exp138": {
+      "speech": "4 raised to the power x"
+    },
+    "Exp139": {
+      "speech": "3 raised to the power y plus 2"
+    },
+    "Exp140": {
+      "speech": "open paren, 2 y, minus 3, close paren, raised to the power 3 z plus 8"
+    },
+    "Exp141": {
+      "speech": "p sub 1, raised to the power 2"
+    },
+    "Exp142": {
+      "speech": "p sub 1, raised to the power 3"
+    },
+    "Exp143": {
+      "speech": "p sub 1, raised to the power 4"
+    },
+    "Exp144": {
+      "speech": "p sub 1, raised to the power 10"
+    },
+    "Exp145": {
+      "speech": "p sub 1, raised to the power x plus 1"
+    },
+    "Exp146": {
+      "speech": "p sub, x sub 1, raised to the power 2"
+    },
+    "Exp147": {
+      "speech": "p sub, x sub 1, raised to the power 3"
+    },
+    "Exp148": {
+      "speech": "p sub, x sub 1, raised to the power 4"
+    },
+    "Exp149": {
+      "speech": "p sub, x sub 1, raised to the power 10"
+    },
+    "Exp150": {
+      "speech": "p sub, x sub 1, raised to the power y plus 1"
+    },
+    "Exp151": {
+      "speech": "3 raised to the exponent, 2 raised to the power 2, end exponent"
+    },
+    "Exp152": {
+      "speech": "3 raised to the exponent, 2 x raised to the power 2, end exponent"
+    },
+    "Exp153": {
+      "speech": "3 raised to the exponent, 2 raised to the power 2, end exponent"
+    },
+    "Exp154": {
+      "speech": "3 raised to the exponent, 2 x raised to the power 2, end exponent"
+    },
+    "Exp155": {
+      "speech": "5 raised to the exponent, 2 raised to the power 3, end exponent"
+    },
+    "Exp156": {
+      "speech": "5 raised to the exponent, 2 x raised to the power 3, end exponent"
+    },
+    "Exp157": {
+      "speech": "3 raised to the exponent, 2 raised to the power 2, plus 1, end exponent"
+    },
+    "Exp158": {
+      "speech": "3 raised to the exponent, 2 raised to the power 2, end exponent, plus 1"
+    },
+    "Exp159": {
+      "speech": "2 raised to the exponent, x raised to the power 2, plus 3 x raised to the power 3, end exponent"
+    },
+    "Exp160": {
+      "speech": "3 raised to the exponent, 3 raised to the power 4, end exponent"
+    },
+    "Exp161": {
+      "speech": "3 raised to the exponent, 3 raised to the power 4, plus 2, end exponent"
+    },
+    "Exp162": {
+      "speech": "3 raised to the exponent, 3 raised to the power 4, end exponent, plus 2"
+    },
+    "Exp163": {
+      "speech": "2 raised to the exponent, x raised to the power 4, end exponent"
+    },
+    "Exp164": {
+      "speech": "2 raised to the exponent, 10 raised to the power x plus 3, end exponent"
+    },
+    "Exp165": {
+      "speech": "3 raised to the exponent, 3 raised to the power 10, end exponent"
+    },
+    "Exp166": {
+      "speech": "3 raised to the exponent, 3 raised to the power 10, plus 1, end exponent"
+    },
+    "Exp167": {
+      "speech": "3 raised to the exponent, 3 raised to the power 10, end exponent, plus 1"
+    },
+    "Exp168": {
+      "speech": "3 raised to the exponent, open paren, x plus 1, close paren, raised to the power 2, end exponent"
+    },
+    "Exp169": {
+      "speech": "3 raised to the exponent, open paren, x plus 1, close paren, raised to the power 10, end exponent"
+    },
+    "Exp170": {
+      "speech": "3 raised to the exponent, open paren, x plus 1, close paren, raised to the power y plus 2, end exponent"
+    },
+    "Exp171": {
+      "speech": "3 raised to the exponent, open paren, x plus 1, close paren, raised to the power y, plus 2, end exponent"
+    },
+    "Exp172": {
+      "speech": "3 raised to the exponent, open paren, x plus 1, close paren, raised to the power y, end exponent, plus 2"
+    },
+    "Exp173": {
+      "speech": "e raised to the exponent, negative one half x raised to the power 2, end exponent"
+    },
+    "Exp174": {
+      "speech": "e raised to the exponent, negative one half times, open paren, the fraction with numerator x minus mu, and denominator sigma, close paren, raised to the power 2, end exponent"
+    }
+  }
+}

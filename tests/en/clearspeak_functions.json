@@ -1,0 +1,512 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "EnglishFunctions",
+  "locale": "en",
+  "information": "ClearspeakEnglishFunctions rule tests.",
+  "tests": {
+    "_comment1_": " Functions",
+    "Function001": {
+      "speech": "f of x"
+    },
+    "Function002": {
+      "speech": "g of x"
+    },
+    "Function003": {
+      "speech": "h of x"
+    },
+    "Function004": {
+      "speech": "f of 2 x"
+    },
+    "Function005": {
+      "speech": "g of negative 2 x"
+    },
+    "Function006": {
+      "speech": "h of one half"
+    },
+    "Function007": {
+      "_comment2_": " TODO: This throws a test exception.",
+      "_comment3_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "speech": "h of, open paren, 1 over 2, close paren"
+    },
+    "Function008": {
+      "speech": "f of, open paren, x plus 1, close paren, equals f of x, plus 1"
+    },
+    "Function009": {
+      "speech": "g of, open paren, 2 x, plus 1, close paren"
+    },
+    "Function010": {
+      "speech": "g of, open paren, x squared, close paren"
+    },
+    "Function011": {
+      "speech": "f inverse of x"
+    },
+    "Function012": {
+      "speech": "g inverse of x"
+    },
+    "Function013": {
+      "speech": "h inverse of x"
+    },
+    "Function014": {
+      "speech": "f inverse of 2 x"
+    },
+    "Function015": {
+      "speech": "g inverse of negative 2 x"
+    },
+    "Function016": {
+      "speech": "f inverse of, open paren, 3 x, minus 1, close paren"
+    },
+    "Function017": {
+      "speech": "g inverse of, open paren, x squared, close paren"
+    },
+    "Function018": {
+      "speech": "h inverse of one half"
+    },
+    "Function019": {
+      "_comment4_": " TODO: This throws a test exception.",
+      "_comment5_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "speech": "h inverse of, open paren, 1 over 2, close paren"
+    },
+    "Function020": {
+      "speech": "f inverse of, f of x"
+    },
+    "Function021": {
+      "speech": "g inverse of, g of x"
+    },
+    "Function022": {
+      "speech": "h inverse of, h of x"
+    },
+    "Function023": {
+      "speech": "f inverse of, f of 2 x"
+    },
+    "Function024": {
+      "speech": "g inverse of, g of negative 2 x"
+    },
+    "Function025": {
+      "speech": "h inverse of, h of one half"
+    },
+    "Function026": {
+      "_comment6_": " TODO: This throws a test exception.",
+      "_comment7_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "speech": "h inverse of, open paren, h of, open paren, 1 over 2, close paren, close paren"
+    },
+    "Function027": {
+      "speech": "f inverse of, open paren, f of, open paren, x plus 1, close paren, close paren, equals x plus 1"
+    },
+    "Function028": {
+      "speech": "g inverse of, open paren, g of, open paren, 2 x, plus 1, close paren, close paren"
+    },
+    "Function029": {
+      "speech": "g inverse of, open paren, g of, open paren, x squared, close paren, close paren"
+    },
+    "Function030": {
+      "speech": "f of, f inverse of x"
+    },
+    "Function031": {
+      "speech": "g of, g inverse of x"
+    },
+    "Function032": {
+      "speech": "h of, h inverse of x"
+    },
+    "Function033": {
+      "speech": "f of, f inverse of 2 x"
+    },
+    "Function034": {
+      "speech": "g of, g inverse of negative 2 x"
+    },
+    "Function035": {
+      "speech": "f of, open paren, f inverse of, open paren, 3 x, minus 1, close paren, close paren"
+    },
+    "Function036": {
+      "speech": "g of, g inverse of, open paren, x squared, close paren"
+    },
+    "Function037": {
+      "speech": "h of, h inverse of one half"
+    },
+    "Function038": {
+      "_comment8_": " TODO: This throws a test exception.",
+      "_comment9_": " var preference = 'Functions_Auto:Fraction_FracOver';",
+      "speech": "h of, h inverse of, open paren, the fraction 1 over 2, close paren"
+    },
+    "Function039": {
+      "speech": "f of, g of x"
+    },
+    "Function040": {
+      "speech": "f of, open paren, g of, open paren, x plus 1, close paren, close paren"
+    },
+    "Function041": {
+      "speech": "h of, g of x"
+    },
+    "Function042": {
+      "speech": "h of, open paren, g of, open paren, the fraction with numerator x, and denominator x plus 1, close paren, close paren"
+    },
+    "Function043": {
+      "speech": "open paren, f plus g, close paren, of x, equals f of x, plus g of x"
+    },
+    "Function044": {
+      "speech": "open paren, f plus g, close paren, of, open paren, x plus 1, close paren, equals f of, open paren, x plus 1, close paren, plus g of, open paren, x plus 1, close paren"
+    },
+    "Function045": {
+      "speech": "open paren, f times g, close paren, of x"
+    },
+    "Function046": {
+      "speech": "open paren, f times g, close paren, of, open paren, 2 x, plus 5, close paren"
+    },
+    "Function047": {
+      "speech": "open paren, f over g, close paren, of x, equals, f of x, over g of x"
+    },
+    "Function048": {
+      "speech": "open paren, f over g, close paren, of, open paren, 2 x, plus 5, close paren, equals, the fraction with numerator f of, open paren, 2 x, plus 5, close paren, and denominator g of, open paren, 2 x, plus 5, close paren"
+    },
+    "Function049": {
+      "speech": "open paren, f composed with g, close paren, of x, equals f of, g of x"
+    },
+    "Function050": {
+      "speech": "2 f of x"
+    },
+    "Function051": {
+      "speech": "c f of x"
+    },
+    "Function052": {
+      "speech": "f squared of x"
+    },
+    "Function053": {
+      "speech": "f squared of, open paren, 2 x, plus 1, close paren"
+    },
+    "Function054": {
+      "speech": "f cubed of x"
+    },
+    "Function055": {
+      "speech": "f cubed of, open paren, 2 x, plus 1, close paren"
+    },
+    "Function056": {
+      "speech": "the fourth power of, f of x"
+    },
+    "Function057": {
+      "speech": "the fourth power of, f of, open paren, 2 x, plus 1, close paren"
+    },
+    "Function058": {
+      "speech": "the fifth power of, f of x"
+    },
+    "Function059": {
+      "speech": "the fifth power of, f of, open paren, 2 x, plus 1, close paren"
+    },
+    "Function060": {
+      "speech": "the n-th power of, f of x"
+    },
+    "Function061": {
+      "speech": "the n-th power of, f of, open paren, 2 x, plus 1, close paren"
+    },
+    "Function062": {
+      "speech": "g squared of x"
+    },
+    "Function063": {
+      "speech": "g squared of, open paren, 2 x, plus 1, close paren"
+    },
+    "Function064": {
+      "speech": "h cubed of x"
+    },
+    "Function065": {
+      "speech": "h cubed of, open paren, 2 x, plus 1, close paren"
+    },
+    "Function066": {
+      "speech": "the fourth power of, g of x"
+    },
+    "Function067": {
+      "speech": "the fourth power of, g of, open paren, 2 x, plus 1, close paren"
+    },
+    "Function068": {
+      "speech": "the fifth power of, h of x"
+    },
+    "Function069": {
+      "speech": "the fifth power of, h of, open paren, 2 x, plus 1, close paren"
+    },
+    "Function070": {
+      "speech": "the n-th power of, g of x"
+    },
+    "Function071": {
+      "speech": "the n-th power of, g of, open paren, 2 x, plus 1, close paren"
+    },
+    "Function072": {
+      "speech": "f sub 1, of x"
+    },
+    "Function073": {
+      "speech": "g sub 2, of, open paren, x cubed, close paren"
+    },
+    "Function074": {
+      "speech": "h sub n, of, open paren, 3 x, minus 2, close paren"
+    },
+    "Function075": {
+      "speech": "f sub 1, inverse of x"
+    },
+    "Function076": {
+      "speech": "g sub 2, inverse of, open paren, 2 x, plus 1, close paren"
+    },
+    "Function077": {
+      "speech": "h sub n, inverse of x"
+    },
+    "Function078": {
+      "speech": "g sub 1, inverse of, g sub 2, of x"
+    },
+    "Function079": {
+      "speech": "f sub 1, of, g sub 2, inverse of x"
+    },
+    "Function080": {
+      "speech": "f of, open paren, x comma y, close paren"
+    },
+    "Function081": {
+      "speech": "f of, open paren, x comma y comma z, close paren"
+    },
+    "Function082": {
+      "speech": "f of, open paren, x plus 1, comma, 2 y, close paren"
+    },
+    "Function083": {
+      "speech": "f of, open paren, 2 x, comma, x plus 1, comma, x squared, close paren"
+    },
+    "Function084": {
+      "speech": "f times x"
+    },
+    "Function085": {
+      "speech": "g times x"
+    },
+    "Function086": {
+      "speech": "h times x"
+    },
+    "Function087": {
+      "speech": "f times 2 x"
+    },
+    "Function088": {
+      "speech": "g times negative 2 x"
+    },
+    "Function089": {
+      "speech": "h times one half"
+    },
+    "Function090": {
+      "speech": "h times, open paren, 1 over 2, close paren"
+    },
+    "Function091": {
+      "speech": "f times, open paren, x plus 1, close paren, equals, f times x, plus 1"
+    },
+    "Function092": {
+      "speech": "g times, open paren, 2 x, plus 1, close paren"
+    },
+    "Function093": {
+      "speech": "g times, open paren, x squared, close paren"
+    },
+    "Function094": {
+      "speech": "f to the negative 1 power, times x"
+    },
+    "Function095": {
+      "speech": "g to the negative 1 power, times x"
+    },
+    "Function096": {
+      "speech": "h to the negative 1 power, times x"
+    },
+    "Function097": {
+      "speech": "f to the negative 1 power, times 2 x"
+    },
+    "Function098": {
+      "speech": "g to the negative 1 power, times negative 2 x"
+    },
+    "Function099": {
+      "speech": "f to the negative 1 power, times, open paren, 3 x, minus 1, close paren"
+    },
+    "Function100": {
+      "speech": "g to the negative 1 power, times, open paren, x squared, close paren"
+    },
+    "Function101": {
+      "speech": "h to the negative 1 power, times one half"
+    },
+    "Function102": {
+      "speech": "h to the negative 1 power, times, open paren, 1 over 2, close paren"
+    },
+    "Function103": {
+      "speech": "f to the negative 1 power, times, f times x"
+    },
+    "Function104": {
+      "speech": "g to the negative 1 power, times, g times x"
+    },
+    "Function105": {
+      "speech": "h to the negative 1 power, times, h times x"
+    },
+    "Function106": {
+      "speech": "f to the negative 1 power, times, f times 2 x"
+    },
+    "Function107": {
+      "speech": "g to the negative 1 power, times, g times negative 2 x"
+    },
+    "Function108": {
+      "speech": "h to the negative 1 power, times, h times one half"
+    },
+    "Function109": {
+      "speech": "h to the negative 1 power, times, open paren, h times, open paren, 1 over 2, close paren, close paren"
+    },
+    "Function110": {
+      "speech": "f to the negative 1 power, times, open paren, f times, open paren, x plus 1, close paren, close paren, equals x plus 1"
+    },
+    "Function111": {
+      "speech": "g to the negative 1 power, times, open paren, g times, open paren, 2 x, plus 1, close paren, close paren"
+    },
+    "Function112": {
+      "speech": "g to the negative 1 power, times, open paren, g times, open paren, x squared, close paren, close paren"
+    },
+    "Function113": {
+      "speech": "f times, open paren, f to the negative 1 power, times x, close paren"
+    },
+    "Function114": {
+      "speech": "g times, open paren, g to the negative 1 power, times x, close paren"
+    },
+    "Function115": {
+      "speech": "h times, open paren, h to the negative 1 power, times x, close paren"
+    },
+    "Function116": {
+      "speech": "f times, open paren, f to the negative 1 power, times 2 x, close paren"
+    },
+    "Function117": {
+      "speech": "g times, open paren, g to the negative 1 power, times negative 2 x, close paren"
+    },
+    "Function118": {
+      "speech": "f times, open paren, f to the negative 1 power, times, open paren, 3 x, minus 1, close paren, close paren"
+    },
+    "Function119": {
+      "speech": "g times, open paren, g to the negative 1 power, times, open paren, x squared, close paren, close paren"
+    },
+    "Function120": {
+      "speech": "h times, open paren, h to the negative 1 power, times one half, close paren"
+    },
+    "Function121": {
+      "speech": "h times, open paren, h to the negative 1 power, times, open paren, 1 over 2, close paren, close paren"
+    },
+    "Function122": {
+      "speech": "f times, g times x"
+    },
+    "Function123": {
+      "speech": "f times, open paren, g times, open paren, x plus 1, close paren, close paren"
+    },
+    "Function124": {
+      "speech": "h times, g times x"
+    },
+    "Function125": {
+      "speech": "h times, open paren, g times, open paren, the fraction with numerator x, and denominator x plus 1, close paren, close paren"
+    },
+    "Function126": {
+      "speech": "open paren, f plus g, close paren, times x, equals, f times x, plus, g times x"
+    },
+    "Function127": {
+      "speech": "open paren, f plus g, close paren, times, open paren, x plus 1, close paren, equals, f times, open paren, x plus 1, close paren, plus, g times, open paren, x plus 1, close paren"
+    },
+    "Function128": {
+      "speech": "open paren, f times g, close paren, times x"
+    },
+    "Function129": {
+      "speech": "open paren, f times g, close paren, times, open paren, 2 x, plus 5, close paren"
+    },
+    "Function130": {
+      "speech": "open paren, f over g, close paren, times x, equals, the fraction with numerator, f times x, and denominator, g times x"
+    },
+    "Function131": {
+      "speech": "open paren, f over g, close paren, times, open paren, 2 x, plus 5, close paren, equals, the fraction with numerator, f times, open paren, 2 x, plus 5, close paren, and denominator, g times, open paren, 2 x, plus 5, close paren"
+    },
+    "Function132": {
+      "speech": "2, f times x"
+    },
+    "Function133": {
+      "speech": "c, f times x"
+    },
+    "Function134": {
+      "speech": "f squared times x"
+    },
+    "Function135": {
+      "speech": "f squared times, open paren, 2 x, plus 1, close paren"
+    },
+    "Function136": {
+      "speech": "f cubed times x"
+    },
+    "Function137": {
+      "speech": "f cubed times, open paren, 2 x, plus 1, close paren"
+    },
+    "Function138": {
+      "speech": "f to the fourth power, times x"
+    },
+    "Function139": {
+      "speech": "f to the fourth power, times, open paren, 2 x, plus 1, close paren"
+    },
+    "Function140": {
+      "speech": "f to the fifth power, times x"
+    },
+    "Function141": {
+      "speech": "f to the fifth power, times, open paren, 2 x, plus 1, close paren"
+    },
+    "Function142": {
+      "speech": "f to the n-th power, times x"
+    },
+    "Function143": {
+      "speech": "f to the n-th power, times, open paren, 2 x, plus 1, close paren"
+    },
+    "Function144": {
+      "speech": "g squared times x"
+    },
+    "Function145": {
+      "speech": "g squared times, open paren, 2 x, plus 1, close paren"
+    },
+    "Function146": {
+      "speech": "h cubed times x"
+    },
+    "Function147": {
+      "speech": "h cubed times, open paren, 2 x, plus 1, close paren"
+    },
+    "Function148": {
+      "speech": "g to the fourth power, times x"
+    },
+    "Function149": {
+      "speech": "g to the fourth power, times, open paren, 2 x, plus 1, close paren"
+    },
+    "Function150": {
+      "speech": "h to the fifth power, times x"
+    },
+    "Function151": {
+      "speech": "h to the fifth power, times, open paren, 2 x, plus 1, close paren"
+    },
+    "Function152": {
+      "speech": "g to the n-th power, times x"
+    },
+    "Function153": {
+      "speech": "g to the n-th power, times, open paren, 2 x, plus 1, close paren"
+    },
+    "Function154": {
+      "speech": "f sub 1, times x"
+    },
+    "Function156": {
+      "speech": "g sub 2, times, open paren, x cubed, close paren"
+    },
+    "Function157": {
+      "speech": "h sub n, times, open paren, 3 x, minus 2, close paren"
+    },
+    "Function158": {
+      "speech": "f sub 1, to the negative 1 power, times x"
+    },
+    "Function159": {
+      "speech": "g sub 2, to the negative 1 power, times, open paren, 2 x, plus 1, close paren"
+    },
+    "Function160": {
+      "speech": "h sub n, to the negative 1 power, times x"
+    },
+    "Function161": {
+      "speech": "g sub 1, to the negative 1 power, times, open paren, g sub 2, times x, close paren"
+    },
+    "Function162": {
+      "speech": "f sub 1, times, open paren, g sub 2, to the negative 1 power, times x, close paren"
+    },
+    "Function163": {
+      "speech": "f times, open paren, x comma y, close paren"
+    },
+    "Function164": {
+      "speech": "f times, open paren, x comma y comma z, close paren"
+    },
+    "Function165": {
+      "speech": "f times, open paren, x plus 1, comma, 2 y, close paren"
+    },
+    "Function166": {
+      "speech": "f times, open paren, 2 x, comma, x plus 1, comma, x squared, close paren"
+    }
+  }
+}

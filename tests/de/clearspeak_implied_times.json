@@ -1,0 +1,519 @@
+{
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "GermanImpliedTimes",
+  "locale": "de",
+  "information": "ClearspeakGermanImpliedTimes rule tests.",
+  "tests": {
+    "_comment1_": " Implied Times",
+    "ImpTimes001": {
+      "speech": "2   3"
+    },
+    "ImpTimes002": {
+      "speech": "2   3"
+    },
+    "ImpTimes003": {
+      "speech": "2 hoch 4,   3"
+    },
+    "ImpTimes004": {
+      "speech": "2  , Klammer auf, 3 plus 4, Klammer zu"
+    },
+    "ImpTimes005": {
+      "speech": "2  , eckige Klammer auf, 3 plus 4, eckige Klammer zu"
+    },
+    "ImpTimes006": {
+      "speech": "3   2"
+    },
+    "ImpTimes007": {
+      "speech": "2  , Klammer auf, 3 plus 4, Klammer zu, Quadrat"
+    },
+    "ImpTimes008": {
+      "speech": "Klammer auf, 2 plus 7, Klammer zu,  , Klammer auf, 3 minus 6, Klammer zu"
+    },
+    "ImpTimes009": {
+      "speech": "eckige Klammer auf, 2 plus 7, eckige Klammer zu,  , eckige Klammer auf, 3 minus 6, eckige Klammer zu"
+    },
+    "_comment2_": " TODO: (Simons) x is categorised as function!",
+    "ImpTimes010": {
+      "speech": "XXX"
+    },
+    "ImpTimes011": {
+      "speech": "x  , Klammer auf, y plus z, Klammer zu"
+    },
+    "ImpTimes012": {
+      "speech": "2  , Klammer auf, y plus 1, Klammer zu"
+    },
+    "ImpTimes013": {
+      "speech": "Klammer auf, 2 minus 1, Klammer zu,   x"
+    },
+    "ImpTimes014": {
+      "speech": "p Index 1,  , Klammer auf, 3 plus 7, Klammer zu"
+    },
+    "ImpTimes015": {
+      "speech": "p Index 1, hoch, a Index 1, p Index 2, hoch, a Index 2"
+    },
+    "ImpTimes016": {
+      "speech": "Klammer auf, x plus y, Klammer zu, hoch minus 4,  , Klammer auf, x minus y, Klammer zu, hoch minus 4"
+    },
+    "ImpTimes017": {
+      "speech": "2 hoch 4  , Klammer auf, x plus y, Klammer zu"
+    },
+    "ImpTimes018": {
+      "speech": "x y"
+    },
+    "ImpTimes019": {
+      "speech": "x Quadrat, y Kubik"
+    },
+    "ImpTimes020": {
+      "speech": "x hoch y plus 1, x hoch y plus 2"
+    },
+    "ImpTimes021": {
+      "speech": "Quadratwurzel aus a, Quadratwurzel aus b, ist gleich Quadratwurzel aus a b"
+    },
+    "ImpTimes022": {
+      "speech": "Quadratwurzel aus 3, Quadratwurzel aus 10, ist gleich Quadratwurzel aus 30"
+    },
+    "ImpTimes023": {
+      "speech": "2 Quadratwurzel aus 3"
+    },
+    "ImpTimes024": {
+      "speech": "1 plus 2 Quadratwurzel aus 3"
+    },
+    "ImpTimes025": {
+      "speech": "f von x, ist gleich x Quadrat  , Klammer auf, x plus 1, Klammer zu"
+    },
+    "ImpTimes026": {
+      "speech": "f mal x, ist gleich x Quadrat  , Klammer auf, x plus 1, Klammer zu"
+    },
+    "ImpTimes027": {
+      "speech": "Sinus x Kosinus y, plus, Kosinus x Sinus y"
+    },
+    "ImpTimes027a": {
+      "speech": "der Sinus von, Klammer auf, x plus y, Klammer zu, der Kosinus von, Klammer auf, x plus y, Klammer zu"
+    },
+    "ImpTimes028": {
+      "speech": "der Logarithmus Basis 10 von, x y"
+    },
+    "ImpTimes029": {
+      "speech": "der Logarithmus von, Klammer auf, x plus y, Klammer zu, ist gleich, Logarithmus x Logarithmus y"
+    },
+    "ImpTimes030": {
+      "speech": "die 2 mal 2 Matrize. Zeile 1: 1, 3 Zeile 2: 5, 2.   die 2 mal 2 Matrize. Zeile 1: 7, 4 Zeile 2: 0, 1"
+    },
+    "ImpTimes031": {
+      "speech": "2  , Klammer auf, 3  , Klammer auf, Klammer auf, 4 plus 5, Klammer zu, plus 6, Klammer zu, Klammer zu"
+    },
+    "ImpTimes032": {
+      "speech": "2  , Klammer auf, 3  , zweite Klammer auf, dritte Klammer auf, 4 plus 5, dritte Klammer zu, plus 6, zweite Klammer zu, Klammer zu"
+    },
+    "ImpTimes033": {
+      "speech": "2  , eckige Klammer auf, 3  , Klammer auf, Klammer auf, 4 plus 5, Klammer zu, plus 6, Klammer zu, eckige Klammer zu"
+    },
+    "ImpTimes034": {
+      "speech": "2  , eckige Klammer auf, 3  , Klammer auf, zweite Klammer auf, 4 plus 5, zweite Klammer zu, plus 6, Klammer zu, eckige Klammer zu"
+    },
+    "ImpTimes035": {
+      "speech": "2  , der Betrag von x"
+    },
+    "ImpTimes036": {
+      "speech": "der Betrag von x,  , der Betrag von y"
+    },
+    "ImpTimes037": {
+      "speech": "der Betrag von x plus 1,  , der Betrag von y minus 1"
+    },
+    "ImpTimes037a": {
+      "speech": "der Betrag von x plus 1, Ende Betrag,  , der Betrag von y minus 1, Ende Betrag"
+    },
+    "ImpTimes038": {
+      "speech": "der Betrag von x plus 1,  , der Betrag von y, minus 1"
+    },
+    "ImpTimes0381": {
+      "speech": "der Betrag von x plus 1, Ende Betrag,  , der Betrag von y, Ende Betrag, minus 1"
+    },
+    "ImpTimes039": {
+      "speech": "2   3"
+    },
+    "ImpTimes040": {
+      "speech": "2   3"
+    },
+    "ImpTimes041": {
+      "speech": "2 hoch 4,   3"
+    },
+    "ImpTimes042": {
+      "speech": "2  , Klammer auf, 3 plus 4, Klammer zu"
+    },
+    "ImpTimes043": {
+      "speech": "2  , eckige Klammer auf, 3 plus 4, eckige Klammer zu"
+    },
+    "ImpTimes044": {
+      "speech": "3   2"
+    },
+    "ImpTimes045": {
+      "speech": "2  , Klammer auf, 3 plus 4, Klammer zu, Quadrat"
+    },
+    "ImpTimes046": {
+      "speech": "Klammer auf, 2 plus 7, Klammer zu,  , Klammer auf, 3 minus 6, Klammer zu"
+    },
+    "ImpTimes047": {
+      "speech": "eckige Klammer auf, 2 plus 7, eckige Klammer zu,  , eckige Klammer auf, 3 minus 6, eckige Klammer zu"
+    },
+    "_comment3_": " TODO: (Simons) x is categorised as function!",
+    "ImpTimes048": {
+      "speech": "XXX"
+    },
+    "ImpTimes049": {
+      "speech": "x  , Klammer auf, y plus z, Klammer zu"
+    },
+    "ImpTimes050": {
+      "speech": "2  , Klammer auf, y plus 1, Klammer zu"
+    },
+    "ImpTimes051": {
+      "speech": "Klammer auf, 2 minus 1, Klammer zu,   x"
+    },
+    "ImpTimes052": {
+      "speech": "p Index 1,  , Klammer auf, 3 plus 7, Klammer zu"
+    },
+    "ImpTimes053": {
+      "speech": "p Index 1, hoch, a Index 1,  , p Index 2, hoch, a Index 2"
+    },
+    "ImpTimes054": {
+      "speech": "Klammer auf, x plus y, Klammer zu, hoch minus 4,  , Klammer auf, x minus y, Klammer zu, hoch minus 4"
+    },
+    "ImpTimes055": {
+      "speech": "2 hoch 4  , Klammer auf, x plus y, Klammer zu"
+    },
+    "ImpTimes056": {
+      "speech": "x   y"
+    },
+    "ImpTimes057": {
+      "speech": "x Quadrat   y Kubik"
+    },
+    "ImpTimes058": {
+      "speech": "x hoch y plus 1,   x hoch y plus 2"
+    },
+    "ImpTimes059": {
+      "speech": "Quadratwurzel aus a,   Quadratwurzel aus b, ist gleich Quadratwurzel aus a   b"
+    },
+    "ImpTimes060": {
+      "speech": "Quadratwurzel aus 3,   Quadratwurzel aus 10, ist gleich Quadratwurzel aus 30"
+    },
+    "ImpTimes061": {
+      "speech": "2   Quadratwurzel aus 3"
+    },
+    "ImpTimes062": {
+      "speech": "1 plus 2   Quadratwurzel aus 3"
+    },
+    "ImpTimes063": {
+      "speech": "f von x, ist gleich x Quadrat  , Klammer auf, x plus 1, Klammer zu"
+    },
+    "ImpTimes064": {
+      "speech": "f mal x, ist gleich x Quadrat  , Klammer auf, x plus 1, Klammer zu"
+    },
+    "ImpTimes065": {
+      "speech": "Sinus x,   Kosinus y plus Kosinus x,   Sinus y"
+    },
+    "ImpTimes065a": {
+      "speech": "der Sinus von, Klammer auf, x plus y, Klammer zu,  , der Kosinus von, Klammer auf, x plus y, Klammer zu"
+    },
+    "ImpTimes066": {
+      "speech": "der Logarithmus Basis 10 von, x   y"
+    },
+    "ImpTimes067": {
+      "speech": "der Logarithmus von, Klammer auf, x plus y, Klammer zu, ist gleich Logarithmus x,   Logarithmus y"
+    },
+    "ImpTimes068": {
+      "speech": "die 2 mal 2 Matrize. Zeile 1: 1, 3 Zeile 2: 5, 2.   die 2 mal 2 Matrize. Zeile 1: 7, 4 Zeile 2: 0, 1"
+    },
+    "ImpTimes069": {
+      "speech": "2  , Klammer auf, 3  , Klammer auf, Klammer auf, 4 plus 5, Klammer zu, plus 6, Klammer zu, Klammer zu"
+    },
+    "ImpTimes070": {
+      "speech": "2  , Klammer auf, 3  , zweite Klammer auf, dritte Klammer auf, 4 plus 5, dritte Klammer zu, plus 6, zweite Klammer zu, Klammer zu"
+    },
+    "ImpTimes070a": {
+      "speech": "2  , eckige Klammer auf, 3  , Klammer auf, Klammer auf, 4 plus 5, Klammer zu, plus 6, Klammer zu, eckige Klammer zu"
+    },
+    "ImpTimes071": {
+      "speech": "2  , eckige Klammer auf, 3  , Klammer auf, zweite Klammer auf, 4 plus 5, zweite Klammer zu, plus 6, Klammer zu, eckige Klammer zu"
+    },
+    "ImpTimes072": {
+      "speech": "2  , der Betrag von x"
+    },
+    "ImpTimes073": {
+      "speech": "der Betrag von x,  , der Betrag von y"
+    },
+    "ImpTimes074": {
+      "speech": "der Betrag von x plus 1,  , der Betrag von y minus 1"
+    },
+    "ImpTimes074a": {
+      "speech": "der Betrag von x plus 1, Ende Betrag,  , der Betrag von y minus 1, Ende Betrag"
+    },
+    "ImpTimes075": {
+      "speech": "der Betrag von x plus 1,  , der Betrag von y, minus 1"
+    },
+    "ImpTimes076": {
+      "speech": "der Betrag von x plus 1, Ende Betrag,  , der Betrag von y, Ende Betrag, minus 1"
+    },
+    "ImpTimes077": {
+      "speech": "2, Klammer auf, 3, Klammer zu"
+    },
+    "ImpTimes078": {
+      "speech": "2, eckige Klammer auf, 3, eckige Klammer zu"
+    },
+    "ImpTimes079": {
+      "speech": "2 hoch 4, Klammer auf, 3, Klammer zu"
+    },
+    "ImpTimes080": {
+      "speech": "2, Klammer auf, 3 plus 4, Klammer zu"
+    },
+    "ImpTimes081": {
+      "speech": "2, eckige Klammer auf, 3 plus 4, eckige Klammer zu"
+    },
+    "ImpTimes082": {
+      "speech": "Klammer auf, 3, Klammer zu, Klammer auf, 2, Klammer zu"
+    },
+    "ImpTimes083": {
+      "speech": "2, Klammer auf, 3 plus 4, Klammer zu, Quadrat"
+    },
+    "ImpTimes084": {
+      "speech": "Klammer auf, 2 plus 7, Klammer zu, Klammer auf, 3 minus 6, Klammer zu"
+    },
+    "ImpTimes085": {
+      "speech": "eckige Klammer auf, 2 plus 7, eckige Klammer zu, eckige Klammer auf, 3 minus 6, eckige Klammer zu"
+    },
+    "_comment4_": " TODO: (Simons) x is categorised as function!",
+    "ImpTimes086": {
+      "speech": "XXX"
+    },
+    "ImpTimes087": {
+      "speech": "x, Klammer auf, y plus z, Klammer zu"
+    },
+    "ImpTimes088": {
+      "speech": "2, Klammer auf, y plus 1, Klammer zu"
+    },
+    "ImpTimes089": {
+      "speech": "Klammer auf, 2 minus 1, Klammer zu, x"
+    },
+    "ImpTimes090": {
+      "speech": "p Index 1, Klammer auf, 3 plus 7, Klammer zu"
+    },
+    "ImpTimes091": {
+      "speech": "p Index 1, hoch, a Index 1, p Index 2, hoch, a Index 2"
+    },
+    "ImpTimes092": {
+      "speech": "Klammer auf, x plus y, Klammer zu, hoch minus 4, Klammer auf, x minus y, Klammer zu, hoch minus 4"
+    },
+    "ImpTimes093": {
+      "speech": "2 hoch 4, Klammer auf, x plus y, Klammer zu"
+    },
+    "ImpTimes094": {
+      "speech": "x y"
+    },
+    "ImpTimes095": {
+      "speech": "x Quadrat y Kubik"
+    },
+    "ImpTimes096": {
+      "speech": "x hoch y plus 1, x hoch y plus 2"
+    },
+    "ImpTimes097": {
+      "speech": "Quadratwurzel aus a, Quadratwurzel aus b, ist gleich Quadratwurzel aus a b"
+    },
+    "ImpTimes098": {
+      "speech": "Quadratwurzel aus 3, Quadratwurzel aus 10, ist gleich Quadratwurzel aus 30"
+    },
+    "ImpTimes099": {
+      "speech": "2 Quadratwurzel aus 3"
+    },
+    "ImpTimes100": {
+      "speech": "1 plus 2 Quadratwurzel aus 3"
+    },
+    "ImpTimes101": {
+      "speech": "f von x, ist gleich x Quadrat, Klammer auf, x plus 1, Klammer zu"
+    },
+    "_comment5_": " TODO: (Simons) Need to be able to specify excluded preferences.",
+    "ImpTimes102": {
+      "speech": "XXX"
+    },
+    "ImpTimes103": {
+      "speech": "Sinus x Kosinus y, plus, Kosinus x Sinus y"
+    },
+    "ImpTimes104": {
+      "speech": "der Logarithmus Basis 10 von, x y"
+    },
+    "ImpTimes105": {
+      "speech": "der Logarithmus von, Klammer auf, x plus y, Klammer zu, ist gleich, Logarithmus x Logarithmus y"
+    },
+    "ImpTimes106": {
+      "speech": "die 2 mal 2 Matrize. Zeile 1: 1, 3 Zeile 2: 5, 2. die 2 mal 2 Matrize. Zeile 1: 7, 4 Zeile 2: 0, 1"
+    },
+    "ImpTimes107": {
+      "speech": "2, Klammer auf, 3, Klammer auf, Klammer auf, 4 plus 5, Klammer zu, plus 6, Klammer zu, Klammer zu"
+    },
+    "ImpTimes108": {
+      "speech": "2, Klammer auf, 3, zweite Klammer auf, dritte Klammer auf, 4 plus 5, dritte Klammer zu, plus 6, zweite Klammer zu, Klammer zu"
+    },
+    "ImpTimes109": {
+      "speech": "2, eckige Klammer auf, 3, Klammer auf, Klammer auf, 4 plus 5, Klammer zu, plus 6, Klammer zu, eckige Klammer zu"
+    },
+    "ImpTimes110": {
+      "speech": "2, eckige Klammer auf, 3, Klammer auf, zweite Klammer auf, 4 plus 5, zweite Klammer zu, plus 6, Klammer zu, eckige Klammer zu"
+    },
+    "ImpTimes111": {
+      "speech": "2, der Betrag von x"
+    },
+    "ImpTimes112": {
+      "speech": "der Betrag von x, der Betrag von y"
+    },
+    "ImpTimes113": {
+      "speech": "der Betrag von x plus 1, der Betrag von y minus 1"
+    },
+    "ImpTimes114": {
+      "speech": "der Betrag von x plus 1, der Betrag von y, minus 1"
+    },
+    "_comment6_": " No Implied Times and Silent Parenthesis Preferences both set",
+    "ImpTimesSilPar001": {
+      "speech": "2, Klammer auf, 3, Klammer zu"
+    },
+    "ImpTimesSilPar002": {
+      "speech": "2, eckige Klammer auf, 3, eckige Klammer zu"
+    },
+    "ImpTimesSilPar003": {
+      "speech": "2 hoch 4, Klammer auf, 3, Klammer zu"
+    },
+    "ImpTimesSilPar004": {
+      "speech": "2, Klammer auf, 3 plus 4, Klammer zu"
+    },
+    "ImpTimesSilPar005": {
+      "speech": "2, eckige Klammer auf, 3 plus 4, eckige Klammer zu"
+    },
+    "ImpTimesSilPar006": {
+      "speech": "Klammer auf, 3, Klammer zu, Klammer auf, 2, Klammer zu"
+    },
+    "ImpTimesSilPar007": {
+      "speech": "2, Klammer auf, 3 plus 4, Klammer zu, Quadrat"
+    },
+    "ImpTimesSilPar008": {
+      "speech": "Klammer auf, 2 plus 7, Klammer zu, Klammer auf, 3 minus 6, Klammer zu"
+    },
+    "ImpTimesSilPar009": {
+      "speech": "eckige Klammer auf, 2 plus 7, eckige Klammer zu, eckige Klammer auf, 3 minus 6, eckige Klammer zu"
+    },
+    "_comment7_": " TODO: (Simons) x is categorised as function!",
+    "ImpTimesSilPar010": {
+      "speech": "XXX"
+    },
+    "ImpTimesSilPar011": {
+      "speech": "x, Klammer auf, y plus z, Klammer zu"
+    },
+    "ImpTimesSilPar012": {
+      "speech": "2, Klammer auf, y plus 1, Klammer zu"
+    },
+    "ImpTimesSilPar013": {
+      "speech": "Klammer auf, 2 minus 1, Klammer zu, x"
+    },
+    "ImpTimesSilPar014": {
+      "speech": "p Index 1, Klammer auf, 3 plus 7, Klammer zu"
+    },
+    "ImpTimesSilPar015": {
+      "speech": "Klammer auf, x plus y, Klammer zu, hoch minus 4, Klammer auf, x minus y, Klammer zu, hoch minus 4"
+    },
+    "ImpTimesSilPar016": {
+      "speech": "2 hoch 4, Klammer auf, x plus y, Klammer zu"
+    },
+    "ImpTimesSilPar017": {
+      "_comment8_": " preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!",
+      "speech": "f von x, ist gleich x Quadrat, Klammer auf, x plus 1, Klammer zu"
+    },
+    "_comment9_": " TODO: (Simons) Need to be able to specify excluded preferences.",
+    "ImpTimesSilPar018": {
+      "speech": "XXX"
+    },
+    "ImpTimesSilPar019": {
+      "_comment10_": " preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!",
+      "speech": "der Logarithmus von, Klammer auf, x plus y, Klammer zu, ist gleich, Logarithmus x Logarithmus y"
+    },
+    "ImpTimesSilPar020": {
+      "speech": "die 2 mal 2 Matrize. Zeile 1: 1, 3 Zeile 2: 5, 2. die 2 mal 2 Matrize. Zeile 1: 7, 4 Zeile 2: 0, 1"
+    },
+    "ImpTimesSilPar021": {
+      "speech": "2, Klammer auf, 3, Klammer auf, Klammer auf, 4 plus 5, Klammer zu, plus 6, Klammer zu, Klammer zu"
+    },
+    "ImpTimesSilPar022": {
+      "speech": "2, Klammer auf, 3, zweite Klammer auf, dritte Klammer auf, 4 plus 5, dritte Klammer zu, plus 6, zweite Klammer zu, Klammer zu"
+    },
+    "ImpTimesSilPar023": {
+      "speech": "2, eckige Klammer auf, 3, Klammer auf, Klammer auf, 4 plus 5, Klammer zu, plus 6, Klammer zu, eckige Klammer zu"
+    },
+    "ImpTimesSilPar024": {
+      "speech": "2, eckige Klammer auf, 3, Klammer auf, zweite Klammer auf, 4 plus 5, zweite Klammer zu, plus 6, Klammer zu, eckige Klammer zu"
+    },
+    "_comment11_": " Implied Times, Functions, or Something Else",
+    "_comment12_": " TODO: QUESTION What is exact speech? From MathType?",
+    "_comment13_": "       There is no preference ImpliedTimes_Rules. Reverted to Implied",
+    "_comment14_": "       Times_Auto.",
+    "Extra001": {
+      "speech": "A ist gleich h von, Klammer auf, Bruch mit Zähler, b Index 1, plus, b Index 2, und Nenner 2, Klammer zu"
+    },
+    "Extra002": {
+      "speech": "A ist gleich, h mal, Klammer auf, Bruch mit Zähler, b Index 1, plus, b Index 2, und Nenner 2, Klammer zu"
+    },
+    "Extra003": {
+      "speech": "a von 0, ist gleich 0   a ist gleich 0"
+    },
+    "Extra004": {
+      "speech": "a mal 0, ist gleich 0   a ist gleich 0"
+    },
+    "Extra005": {
+      "speech": "a mal minus 1, ist gleich minus a"
+    },
+    "Extra006": {
+      "speech": "a von minus 1, ist gleich minus a"
+    },
+    "_comment15_": " TODO: (Simons) a is categorised as function!",
+    "Extra007": {
+      "speech": "XXX"
+    },
+    "_comment16_": " TODO: (Simons) a is categorised as function!",
+    "Extra008": {
+      "speech": "XXX"
+    },
+    "Extra009": {
+      "test": true,
+      "speech": "minus u von v, ist gleich u von minus v, ist gleich minus u von v"
+    },
+    "Extra010": {
+      "speech": "B von, Klammer auf, 2 Komma 6, Klammer zu"
+    },
+    "Extra012": {
+      "speech": "B mal, Klammer auf, 2 Komma 6, Klammer zu"
+    },
+    "_comment17_": " TODO: (Simons) Explore exact speech.",
+    "Extra013": {
+      "speech": "XXX"
+    },
+    "Extra014": {
+      "speech": "p von w"
+    },
+    "Extra015": {
+      "speech": "x von t, ist gleich 2 t, plus 4"
+    },
+    "Extra016": {
+      "speech": "k von x, ist gleich, Klammer auf, x plus 3, Klammer zu,  , Klammer auf, x minus 5, Klammer zu"
+    },
+    "_comment18_": " TODO: (Simons) a is categorised as function!",
+    "Extra017": {
+      "speech": "XXX"
+    },
+    "Extra018": {
+      "speech": "T von t, ist gleich, T Index s, plus, Klammer auf, T Index 0, minus, T Index s, Klammer zu,   e hoch minus k t"
+    },
+    "Extra019": {
+      "speech": "V ist gleich Schreibschrift l, w von 8",
+      "_comment19_": " w is considered a simple function.",
+      "_comment20_": "var speech = '';"
+    },
+    "_comment21_": " TODO: (Simons) Explore exact speech.",
+    "Extra020": {
+      "speech": "XXX"
+    }
+  }
+}

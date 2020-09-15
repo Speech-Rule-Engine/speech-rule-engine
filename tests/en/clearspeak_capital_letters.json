@@ -1,0 +1,85 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "EnglishCapitalLetters",
+  "locale": "en",
+  "information": "ClearspeakEnglishCapitalLetters rule tests.",
+  "tests": {
+    "_comment1_": " Capital Letters",
+    "_comment2_": " TODO: (QUESTION) This is does not seem to follow the fraction rules.",
+    "Cap001": {
+      "_comment3_": " var speech = 'the fraction with numerator sine A, and denominator a,",
+      "_comment4_": " equals, the fraction with numerator sine B, and denominator b';",
+      "speech": "sine A over a, equals, sine B over b"
+    },
+    "Cap002": {
+      "speech": "c squared equals a squared plus b squared minus 2 a b cosine C"
+    },
+    "Cap003": {
+      "speech": "tangent A equals, a over b"
+    },
+    "Cap004": {
+      "speech": "A B"
+    },
+    "Cap005": {
+      "speech": "a A"
+    },
+    "Cap006": {
+      "speech": "b A"
+    },
+    "Cap007": {
+      "speech": "B a"
+    },
+    "Cap008": {
+      "speech": "angle A B C"
+    },
+    "Cap009": {
+      "speech": "the measure of angle A B C"
+    },
+    "Cap010": {
+      "speech": "the measure of angle A"
+    },
+    "_comment5_": " TODO: (QUESTION) This is does not seem to follow the fraction rules.",
+    "Cap011": {
+      "_comment6_": " var speech = 'the fraction with numerator sine cap A, and denominator a,",
+      "_comment7_": " equals, the fraction with numerator sine cap B, and denominator b';",
+      "speech": "sine cap A over a, equals, sine cap B over b"
+    },
+    "Cap012": {
+      "speech": "c squared equals a squared plus b squared minus 2 a b cosine cap C"
+    },
+    "Cap013": {
+      "speech": "tangent cap A equals, a over b"
+    },
+    "Cap014": {
+      "speech": "cap A, cap B"
+    },
+    "Cap015": {
+      "speech": "a, cap A"
+    },
+    "Cap016": {
+      "speech": "b, cap A"
+    },
+    "Cap017": {
+      "speech": "cap B, a"
+    },
+    "Cap018": {
+      "speech": "angle cap A, cap B, cap C"
+    },
+    "Cap019": {
+      "speech": "the measure of angle cap A, cap B, cap C"
+    },
+    "Cap020": {
+      "speech": "the measure of angle cap A"
+    },
+    "Cap020a": {
+      "speech": "angle cap A"
+    },
+    "_comment8_": " /**",
+    "_comment9_": "  * Testing ClearspeakEnglishCapitalLetters Example Cap020 (extra)",
+    "_comment10_": "  */",
+    "_comment12_": "   var preference = 'Caps_SayCaps';",
+    "_comment13_": "   var mathml = '<math><mrow><mi>h</mi><mo>∠</mo><mi>A</mi></mrow></math>';",
+    "_comment14_": "   var speech = 'angle cap A';",
+    "_comment16_": " };"
+  }
+}

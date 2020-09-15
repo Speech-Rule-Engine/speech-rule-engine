@@ -1,0 +1,693 @@
+{
+  "tests": {
+    "_comment1_": " Fractions",
+    "Frac001": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>"
+    },
+    "Frac002": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32</mn></mrow></mfrac></mrow></math>"
+    },
+    "Frac002a": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mi>x</mi><mi>y</mi></mfrac></mrow></math>"
+    },
+    "Frac002b": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mi>x</mi></mrow><mrow><mn>3</mn><mi>y</mi></mrow></mfrac></mrow></math>"
+    },
+    "Frac002c": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mi>y</mi></mrow><mrow><mi>c</mi><mi>d</mi></mrow></mfrac></mrow></math>"
+    },
+    "Frac002d": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "Frac002e": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mo>−</mo><mi>x</mi></mrow><mi>y</mi></mfrac></mrow></math>"
+    },
+    "Frac002f": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mrow><mn>3</mn><mi>y</mi></mrow></mfrac></mrow></math>"
+    },
+    "Frac002g": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mi>y</mi></mrow><mrow><mo>−</mo><mi>c</mi><mi>d</mi></mrow></mfrac></mrow></math>"
+    },
+    "Frac002h": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mrow><mo>−</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "Frac003": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn></mrow><mrow><mn>13</mn></mrow></mfrac></mrow></math>"
+    },
+    "Frac004": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mn>2</mn></mfrac></mrow></math>"
+    },
+    "Frac005": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></mrow></math>"
+    },
+    "Frac006": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></math>"
+    },
+    "Frac007": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mtext>miles</mtext></mrow><mrow><mtext>gallon</mtext></mrow></mfrac></mrow></math>"
+    },
+    "Frac008": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mtext>miles</mtext></mrow><mrow><mn>3</mn><mtext>gallons</mtext></mrow></mfrac></mrow></math>"
+    },
+    "Frac009": {
+      "test": true,
+      "preference": "Fraction_Over",
+      "mathml": "<math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>"
+    },
+    "Frac010": {
+      "test": true,
+      "preference": "Fraction_Over",
+      "mathml": "<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32</mn></mrow></mfrac></mrow></math>"
+    },
+    "Frac011": {
+      "test": true,
+      "preference": "Fraction_Over",
+      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn></mrow><mrow><mn>13</mn></mrow></mfrac></mrow></math>"
+    },
+    "Frac012": {
+      "test": true,
+      "preference": "Fraction_Over",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mn>2</mn></mfrac></mrow></math>"
+    },
+    "Frac013": {
+      "test": true,
+      "preference": "Fraction_Over",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></mrow></math>"
+    },
+    "Frac014": {
+      "test": true,
+      "preference": "Fraction_Over",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></math>"
+    },
+    "Frac015": {
+      "test": true,
+      "preference": "Fraction_Over",
+      "mathml": "<math><mrow><mfrac><mrow><mtext>miles</mtext></mrow><mrow><mtext>gallon</mtext></mrow></mfrac></mrow></math>"
+    },
+    "Frac016": {
+      "test": true,
+      "preference": "Fraction_Over",
+      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mtext>miles</mtext></mrow><mrow><mn>3</mn><mtext>gallons</mtext></mrow></mfrac></mrow></math>"
+    },
+    "Frac017": {
+      "test": true,
+      "preference": "Fraction_OverEndFrac",
+      "mathml": "<math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>"
+    },
+    "Frac018": {
+      "test": true,
+      "preference": "Fraction_OverEndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32</mn></mrow></mfrac></mrow></math>"
+    },
+    "Frac019": {
+      "test": true,
+      "preference": "Fraction_OverEndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn></mrow><mrow><mn>13</mn></mrow></mfrac></mrow></math>"
+    },
+    "Frac020": {
+      "test": true,
+      "preference": "Fraction_OverEndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mn>2</mn></mfrac></mrow></math>"
+    },
+    "Frac021": {
+      "test": true,
+      "preference": "Fraction_OverEndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></mrow></math>"
+    },
+    "Frac022": {
+      "test": true,
+      "preference": "Fraction_OverEndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></math>"
+    },
+    "Frac023": {
+      "test": true,
+      "preference": "Fraction_OverEndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mtext>miles</mtext></mrow><mrow><mtext>gallons</mtext></mrow></mfrac></mrow></math>"
+    },
+    "Frac024": {
+      "test": true,
+      "preference": "Fraction_OverEndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mtext>miles</mtext></mrow><mrow><mn>3</mn><mtext>gallons</mtext></mrow></mfrac></mrow></math>"
+    },
+    "Frac025": {
+      "test": true,
+      "preference": "Fraction_GeneralEndFrac",
+      "mathml": "<math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>"
+    },
+    "Frac026": {
+      "test": true,
+      "preference": "Fraction_GeneralEndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32</mn></mrow></mfrac></mrow></math>"
+    },
+    "Frac027": {
+      "test": true,
+      "preference": "Fraction_GeneralEndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn></mrow><mrow><mn>13</mn></mrow></mfrac></mrow></math>"
+    },
+    "Frac028": {
+      "test": true,
+      "preference": "Fraction_GeneralEndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mn>2</mn></mfrac></mrow></math>"
+    },
+    "Frac029": {
+      "test": true,
+      "preference": "Fraction_GeneralEndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></mrow></math>"
+    },
+    "Frac030": {
+      "test": true,
+      "preference": "Fraction_GeneralEndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></math>"
+    },
+    "Frac031": {
+      "test": true,
+      "preference": "Fraction_GeneralEndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mtext>miles</mtext></mrow><mrow><mtext>gallon</mtext></mrow></mfrac></mrow></math>"
+    },
+    "Frac032": {
+      "test": true,
+      "preference": "Fraction_General",
+      "mathml": "<math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>"
+    },
+    "Frac033": {
+      "test": true,
+      "preference": "Fraction_General",
+      "mathml": "<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32</mn></mrow></mfrac></mrow></math>"
+    },
+    "Frac034": {
+      "test": true,
+      "preference": "Fraction_General",
+      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn></mrow><mrow><mn>13</mn></mrow></mfrac></mrow></math>"
+    },
+    "Frac035": {
+      "test": true,
+      "preference": "Fraction_General",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mn>2</mn></mfrac></mrow></math>"
+    },
+    "Frac036": {
+      "test": true,
+      "preference": "Fraction_General",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></mrow></math>"
+    },
+    "Frac037": {
+      "test": true,
+      "preference": "Fraction_General",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></math>"
+    },
+    "Frac038": {
+      "test": true,
+      "preference": "Fraction_General",
+      "mathml": "<math><mrow><mfrac><mrow><mtext>miles</mtext></mrow><mrow><mtext>gallon</mtext></mrow></mfrac></mrow></math>"
+    },
+    "Frac039": {
+      "test": true,
+      "preference": "Fraction_General",
+      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mtext>miles</mtext></mrow><mrow><mn>3</mn><mtext>gallons</mtext></mrow></mfrac></mrow></math>"
+    },
+    "Frac040": {
+      "test": true,
+      "preference": "Fraction_FracOver",
+      "mathml": "<math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>"
+    },
+    "Frac041": {
+      "test": true,
+      "preference": "Fraction_FracOver",
+      "mathml": "<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32</mn></mrow></mfrac></mrow></math>"
+    },
+    "Frac042": {
+      "test": true,
+      "preference": "Fraction_FracOver",
+      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn></mrow><mrow><mn>13</mn></mrow></mfrac></mrow></math>"
+    },
+    "Frac043": {
+      "test": true,
+      "preference": "Fraction_FracOver",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mn>2</mn></mfrac></mrow></math>"
+    },
+    "Frac044": {
+      "test": true,
+      "preference": "Fraction_FracOver",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></mrow></math>"
+    },
+    "Frac045": {
+      "test": true,
+      "preference": "Fraction_FracOver",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></math>"
+    },
+    "Frac046": {
+      "test": true,
+      "preference": "Fraction_FracOver",
+      "mathml": "<math><mrow><mfrac><mrow><mtext>miles</mtext></mrow><mrow><mtext>gallon</mtext></mrow></mfrac></mrow></math>"
+    },
+    "Frac047": {
+      "test": true,
+      "preference": "Fraction_FracOver",
+      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mtext>miles</mtext></mrow><mrow><mn>3</mn><mtext>gallons</mtext></mrow></mfrac></mrow></math>"
+    },
+    "Frac048": {
+      "test": true,
+      "preference": "Fraction_Per",
+      "mathml": "<math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>"
+    },
+    "Frac049": {
+      "test": true,
+      "preference": "Fraction_Per",
+      "mathml": "<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32</mn></mrow></mfrac></mrow></math>"
+    },
+    "Frac050": {
+      "test": true,
+      "preference": "Fraction_Per",
+      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn></mrow><mrow><mn>13</mn></mrow></mfrac></mrow></math>"
+    },
+    "Frac051": {
+      "test": true,
+      "preference": "Fraction_Per",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mn>2</mn></mfrac></mrow></math>"
+    },
+    "Frac052": {
+      "test": true,
+      "preference": "Fraction_Per",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></mrow></math>"
+    },
+    "Frac053": {
+      "test": true,
+      "preference": "Fraction_Per",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></math>"
+    },
+    "Frac054": {
+      "test": true,
+      "preference": "Fraction_Per",
+      "mathml": "<math><mrow><mfrac><mrow><mtext>miles</mtext></mrow><mrow><mtext>gallon</mtext></mrow></mfrac></mrow></math>"
+    },
+    "Frac055": {
+      "test": true,
+      "preference": "Fraction_Per",
+      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mtext>miles</mtext></mrow><mrow><mn>3</mn><mtext>gallons</mtext></mrow></mfrac></mrow></math>"
+    },
+    "Frac056": {
+      "test": true,
+      "preference": "Fraction_Ordinal",
+      "mathml": "<math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>"
+    },
+    "Frac057": {
+      "test": true,
+      "preference": "Fraction_Ordinal",
+      "mathml": "<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32</mn></mrow></mfrac></mrow></math>"
+    },
+    "Frac058": {
+      "test": true,
+      "preference": "Fraction_Ordinal",
+      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn></mrow><mrow><mn>13</mn></mrow></mfrac></mrow></math>"
+    },
+    "Frac059": {
+      "test": true,
+      "preference": "Fraction_Ordinal",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mn>2</mn></mfrac></mrow></math>"
+    },
+    "Frac060": {
+      "test": true,
+      "preference": "Fraction_Ordinal",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></mrow></math>"
+    },
+    "Frac061": {
+      "test": true,
+      "preference": "Fraction_Ordinal",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></math>"
+    },
+    "Frac062": {
+      "test": true,
+      "preference": "Fraction_Ordinal",
+      "mathml": "<math><mrow><mfrac><mrow><mtext>miles</mtext></mrow><mrow><mtext>gallon</mtext></mrow></mfrac></mrow></math>"
+    },
+    "Frac063": {
+      "test": true,
+      "preference": "Fraction_Ordinal",
+      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mtext>miles</mtext></mrow><mrow><mn>3</mn><mtext>gallons</mtext></mrow></mfrac></mrow></math>"
+    },
+    "Frac064": {
+      "test": true,
+      "preference": "Fraction_EndFrac",
+      "mathml": "<math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>"
+    },
+    "Frac065": {
+      "test": true,
+      "preference": "Fraction_EndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32</mn></mrow></mfrac></mrow></math>"
+    },
+    "Frac066": {
+      "test": true,
+      "preference": "Fraction_EndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn></mrow><mrow><mn>13</mn></mrow></mfrac></mrow></math>"
+    },
+    "Frac067": {
+      "test": true,
+      "preference": "Fraction_EndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mn>2</mn></mfrac></mrow></math>"
+    },
+    "Frac068": {
+      "test": true,
+      "preference": "Fraction_EndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></mrow></math>"
+    },
+    "Frac069": {
+      "test": true,
+      "preference": "Fraction_EndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></math>"
+    },
+    "Frac070": {
+      "test": true,
+      "preference": "Fraction_EndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mtext>miles</mtext></mrow><mrow><mtext>gallons</mtext></mrow></mfrac></mrow></math>"
+    },
+    "Frac071": {
+      "test": true,
+      "preference": "Fraction_EndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mtext>miles</mtext></mrow><mrow><mn>3</mn><mtext>gallons</mtext></mrow></mfrac></mrow></math>"
+    },
+    "_comment2_": " Fraction (with Text in Numerator and/or denominator)",
+    "FrTxt001": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mtext></mtext><mtext>miles</mtext></mrow><mrow><mn>3</mn><mtext></mtext><mtext>gallons</mtext></mrow></mfrac></mrow></math>"
+    },
+    "FrTxt002": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mtext>rise</mtext></mrow><mrow><mtext>run</mtext></mrow></mfrac></mrow></math>"
+    },
+    "FrTxt003": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mfrac><mtext>successful outcomes</mtext><mtext>total outcomes</mtext></mfrac></math>"
+    },
+    "FrTxt004": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mn>6</mn><mtext>ways of rolling a 7</mtext></mrow><mrow><mn>36</mn><mtext>ways of rolling the pair of dice</mtext></mrow></mfrac></mrow></math>"
+    },
+    "_comment3_": " Nested Fractions",
+    "NestFrac001": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac002": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mn>1</mn><mrow><mfrac><mn>2</mn><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac003": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mn>3</mn></mfrac></mrow></math>"
+    },
+    "NestFrac004": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mn>1</mn><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac005": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mfrac><mrow><mn>11</mn></mrow><mrow><mn>32</mn></mrow></mfrac></mrow><mrow><mfrac><mrow><mn>16</mn></mrow><mrow><mn>51</mn></mrow></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac006": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mn>11</mn></mrow><mrow><mfrac><mrow><mn>32</mn></mrow><mrow><mfrac><mrow><mn>16</mn></mrow><mrow><mn>51</mn></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac007": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mfrac><mn>4</mn><mi>x</mi></mfrac></mrow><mn>2</mn></mfrac></mrow></math>"
+    },
+    "NestFrac008": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mn>3</mn><mrow><mn>2</mn><mo>+</mo><mfrac><mn>4</mn><mi>x</mi></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac009": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mfrac><mrow><mn>10</mn></mrow><mrow><mn>22</mn></mrow></mfrac></mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac010": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow><mrow><mn>1</mn><mo>−</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac011": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mfrac><mi>x</mi><mn>2</mn></mfrac></mrow><mrow><mn>1</mn><mo>−</mo><mfrac><mi>x</mi><mn>2</mn></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac012": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></mfrac><mo>+</mo><mn>1</mn></mrow><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac013": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mrow><mi>x</mi><mo>−</mo><mn>4</mn></mrow></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mrow><mi>x</mi><mo>+</mo><mfrac><mn>1</mn><mrow><mn>16</mn></mrow></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac014": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mn>1</mn><mo>+</mo><mfrac><mi>x</mi><mrow><mn>1</mn><mo>+</mo><mfrac><mn>2</mn><mi>x</mi></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac015": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mn>1</mn><mo>+</mo><mfrac><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow><mrow><mn>1</mn><mo>+</mo><mfrac><mn>2</mn><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac016": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac017": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mo>⋯</mo></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac018": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>+</mo><mo>⋯</mo></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac019": {
+      "test": true,
+      "preference": "Fraction_EndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac020": {
+      "test": true,
+      "preference": "Fraction_EndFrac",
+      "mathml": "<math><mrow><mfrac><mn>1</mn><mrow><mfrac><mn>2</mn><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac021": {
+      "test": true,
+      "preference": "Fraction_EndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mn>3</mn></mfrac></mrow></math>"
+    },
+    "NestFrac022": {
+      "test": true,
+      "preference": "Fraction_EndFrac",
+      "mathml": "<math><mrow><mfrac><mn>1</mn><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac023": {
+      "test": true,
+      "preference": "Fraction_EndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mfrac><mrow><mn>11</mn></mrow><mrow><mn>32</mn></mrow></mfrac></mrow><mrow><mfrac><mrow><mn>16</mn></mrow><mrow><mn>51</mn></mrow></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac024": {
+      "test": true,
+      "preference": "Fraction_EndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mn>11</mn></mrow><mrow><mfrac><mrow><mn>32</mn></mrow><mrow><mfrac><mrow><mn>16</mn></mrow><mrow><mn>51</mn></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac025": {
+      "test": true,
+      "preference": "Fraction_EndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mfrac><mn>4</mn><mi>x</mi></mfrac></mrow><mn>2</mn></mfrac></mrow></math>"
+    },
+    "NestFrac026": {
+      "test": true,
+      "preference": "Fraction_EndFrac",
+      "mathml": "<math><mrow><mfrac><mn>3</mn><mrow><mn>2</mn><mo>+</mo><mfrac><mn>4</mn><mi>x</mi></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac027": {
+      "test": true,
+      "preference": "Fraction_EndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mfrac><mrow><mn>10</mn></mrow><mrow><mn>22</mn></mrow></mfrac></mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac028": {
+      "test": true,
+      "preference": "Fraction_EndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow><mrow><mn>1</mn><mo>−</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac029": {
+      "test": true,
+      "preference": "Fraction_EndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mfrac><mi>x</mi><mn>2</mn></mfrac></mrow><mrow><mn>1</mn><mo>−</mo><mfrac><mi>x</mi><mn>2</mn></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac030": {
+      "test": true,
+      "preference": "Fraction_EndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></mfrac><mo>+</mo><mn>1</mn></mrow><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac031": {
+      "test": true,
+      "preference": "Fraction_EndFrac",
+      "mathml": "<math><mrow><mfrac><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mrow><mi>x</mi><mo>−</mo><mn>4</mn></mrow></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mrow><mi>x</mi><mo>+</mo><mfrac><mn>1</mn><mrow><mn>16</mn></mrow></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac032": {
+      "test": true,
+      "preference": "Fraction_EndFrac",
+      "mathml": "<math><mrow><mn>1</mn><mo>+</mo><mfrac><mi>x</mi><mrow><mn>1</mn><mo>+</mo><mfrac><mn>2</mn><mi>x</mi></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac033": {
+      "test": true,
+      "preference": "Fraction_EndFrac",
+      "mathml": "<math><mrow><mn>1</mn><mo>+</mo><mfrac><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow><mrow><mn>1</mn><mo>+</mo><mfrac><mn>2</mn><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac034": {
+      "test": true,
+      "preference": "Fraction_EndFrac",
+      "mathml": "<math><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac035": {
+      "test": true,
+      "preference": "Fraction_EndFrac",
+      "mathml": "<math><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mo>⋯</mo></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "NestFrac036": {
+      "test": true,
+      "preference": "Fraction_EndFrac",
+      "mathml": "<math><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>+</mo><mo>⋯</mo></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "_comment4_": " Fractions with Functions",
+    "Fracfunct001": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mfrac></mrow></math>"
+    },
+    "Fracfunct002": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>+</mo><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mfrac></mrow></math>"
+    },
+    "Fracfunct003": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mfrac></mrow></math>"
+    },
+    "Fracfunct004": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mn>2</mn></mfrac></mrow></math>"
+    },
+    "Fracfunct005": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mn>2</mn><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mfrac></mrow></math>"
+    },
+    "Fracfunct006": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mn>2</mn><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>+</mo><mi>g</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy=\"false\">)</mo></mrow></mfrac></mrow></math>"
+    },
+    "Fracfunct007": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mi>sin</mi><mi>x</mi></mrow><mrow><mi>cos</mi><mi>x</mi></mrow></mfrac></mrow></math>"
+    },
+    "Fracfunct008": {
+      "test": false,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo></mrow><mrow><mi>cos</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo></mrow></mfrac></mrow></math>"
+    },
+    "Fracfunct009": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mi>cos</mi><mi>x</mi></mrow><mrow><mi>cos</mi><mi>x</mi></mrow></mfrac></mrow></math>"
+    },
+    "Fracfunct010": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mi>sin</mi><mn>2</mn><mi>x</mi></mrow><mrow><mi>cos</mi><mn>3</mn><mi>x</mi></mrow></mfrac></mrow></math>"
+    },
+    "Fracfunct011": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math>"
+    },
+    "Fracfunct012": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mn>3</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math>"
+    },
+    "Fracfunct013": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mi>log</mi><mi>x</mi></mrow><mrow><mi>log</mi><mi>y</mi></mrow></mfrac></mrow></math>"
+    },
+    "Fracfunct014": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mi>log</mi><mn>2</mn><mi>x</mi></mrow><mrow><mi>log</mi><mn>3</mn><mi>y</mi></mrow></mfrac></mrow></math>"
+    },
+    "Fracfunct015": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mi>x</mi></mrow><mrow><msub><mrow><mi>log</mi></mrow><mn>5</mn></msub><mi>y</mi></mrow></mfrac></mrow></math>"
+    },
+    "Fracfunct016": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mn>2</mn><mi>x</mi></mrow><mrow><msub><mrow><mi>log</mi></mrow><mn>5</mn></msub><mn>3</mn><mi>y</mi></mrow></mfrac></mrow></math>"
+    },
+    "Fracfunct017": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>log</mi><mi>y</mi></mrow></mfrac></mrow></math>"
+    },
+    "Fracfunct018": {
+      "test": true,
+      "preference": "Fraction_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><msub><mi>f</mi><mn>1</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mrow><msub><mi>g</mi><mn>1</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mfrac></mrow></math>"
+    }
+  }
+}

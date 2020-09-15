@@ -19,23 +19,7 @@
 
 goog.provide('sre.ClearspeakEnglishTest');
 
-goog.require('sre.ClearspeakEnglishAbsoluteValue');
-goog.require('sre.ClearspeakEnglishCapitalLetters');
-goog.require('sre.ClearspeakEnglishExponents');
-goog.require('sre.ClearspeakEnglishFractions');
-goog.require('sre.ClearspeakEnglishFunctions');
-goog.require('sre.ClearspeakEnglishImpliedTimes');
 goog.require('sre.ClearspeakEnglishIssues');
-goog.require('sre.ClearspeakEnglishLogarithms');
-goog.require('sre.ClearspeakEnglishMatricesAndCombinatorics');
-goog.require('sre.ClearspeakEnglishMultiLineEntries');
-goog.require('sre.ClearspeakEnglishNamedSets');
-goog.require('sre.ClearspeakEnglishParentheses');
-goog.require('sre.ClearspeakEnglishPart2Symbols');
-goog.require('sre.ClearspeakEnglishPart3Adornments');
-goog.require('sre.ClearspeakEnglishRoots');
-goog.require('sre.ClearspeakEnglishSetsEnclosedInSetBrackets');
-goog.require('sre.ClearspeakEnglishTrigometry');
 
 
 
@@ -50,21 +34,5 @@ sre.ClearspeakEnglishTest = function() { };
  * @type {Array}
  */
 sre.ClearspeakEnglishTest.testList = [
-  sre.ClearspeakEnglishAbsoluteValue,
-  sre.ClearspeakEnglishCapitalLetters,
-  sre.ClearspeakEnglishExponents,
-  sre.ClearspeakEnglishFractions,
-  sre.ClearspeakEnglishFunctions,
-  sre.ClearspeakEnglishImpliedTimes,
   sre.ClearspeakEnglishIssues,
-  sre.ClearspeakEnglishLogarithms,
-  sre.ClearspeakEnglishMatricesAndCombinatorics,
-  sre.ClearspeakEnglishMultiLineEntries,
-  sre.ClearspeakEnglishNamedSets,
-  sre.ClearspeakEnglishParentheses,
-  sre.ClearspeakEnglishPart2Symbols,
-  sre.ClearspeakEnglishPart3Adornments,
-  sre.ClearspeakEnglishRoots,
-  sre.ClearspeakEnglishSetsEnclosedInSetBrackets,
-  sre.ClearspeakEnglishTrigometry
 ];

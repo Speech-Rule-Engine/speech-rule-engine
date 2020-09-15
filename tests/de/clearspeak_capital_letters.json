@@ -1,0 +1,112 @@
+{
+  "tests": {
+    "_comment1_": " Capital Letters",
+    "_comment2_": " TODO: (QUESTION) This is does not seem to follow the fraction rules.",
+    "Cap001": {
+      "test": true,
+      "preference": "Caps_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mi>sin</mi><mi>A</mi></mrow><mi>a</mi></mfrac><mo>=</mo><mfrac><mrow><mi>sin</mi><mi>B</mi></mrow><mi>b</mi></mfrac></mrow></math>"
+    },
+    "Cap002": {
+      "test": true,
+      "preference": "Caps_Auto",
+      "mathml": "<math><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>=</mo><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>2</mn><mi>a</mi><mi>b</mi><mi>cos</mi><mi>C</mi></mrow></math>"
+    },
+    "Cap003": {
+      "test": true,
+      "preference": "Caps_Auto",
+      "mathml": "<math><mrow><mi>tan</mi><mi>A</mi><mo>=</mo><mfrac><mi>a</mi><mi>b</mi></mfrac></mrow></math>"
+    },
+    "Cap004": {
+      "test": true,
+      "preference": "Caps_Auto",
+      "mathml": "<math><mrow><mi>A</mi><mi>B</mi></mrow></math>"
+    },
+    "Cap005": {
+      "test": true,
+      "preference": "Caps_Auto",
+      "mathml": "<math><mrow><mi>a</mi><mi>A</mi></mrow></math>"
+    },
+    "Cap006": {
+      "test": true,
+      "preference": "Caps_Auto",
+      "mathml": "<math><mrow><mi>b</mi><mi>A</mi></mrow></math>"
+    },
+    "Cap007": {
+      "test": true,
+      "preference": "Caps_Auto",
+      "mathml": "<math><mrow><mi>B</mi><mi>a</mi></mrow></math>"
+    },
+    "Cap008": {
+      "test": true,
+      "preference": "Caps_Auto",
+      "mathml": "<math><mrow><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C</mi></mrow></math>"
+    },
+    "Cap009": {
+      "test": true,
+      "preference": "Caps_Auto",
+      "mathml": "<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C</mi></mrow></math>"
+    },
+    "Cap010": {
+      "test": true,
+      "preference": "Caps_Auto",
+      "mathml": "<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi></mrow></math>"
+    },
+    "_comment3_": " TODO: (QUESTION) This is does not seem to follow the fraction rules.",
+    "Cap011": {
+      "test": true,
+      "preference": "Caps_SayCaps",
+      "mathml": "<math><mrow><mfrac><mrow><mi>sin</mi><mi>A</mi></mrow><mi>a</mi></mfrac><mo>=</mo><mfrac><mrow><mi>sin</mi><mi>B</mi></mrow><mi>b</mi></mfrac></mrow></math>"
+    },
+    "Cap012": {
+      "test": true,
+      "preference": "Caps_SayCaps",
+      "mathml": "<math><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>=</mo><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>2</mn><mi>a</mi><mi>b</mi><mi>cos</mi><mi>C</mi></mrow></math>"
+    },
+    "Cap013": {
+      "test": true,
+      "preference": "Caps_SayCaps",
+      "mathml": "<math><mrow><mi>tan</mi><mi>A</mi><mo>=</mo><mfrac><mi>a</mi><mi>b</mi></mfrac></mrow></math>"
+    },
+    "Cap014": {
+      "test": true,
+      "preference": "Caps_SayCaps",
+      "mathml": "<math><mrow><mi>A</mi><mi>B</mi></mrow></math>"
+    },
+    "Cap015": {
+      "test": true,
+      "preference": "Caps_SayCaps",
+      "mathml": "<math><mrow><mi>a</mi><mi>A</mi></mrow></math>"
+    },
+    "Cap016": {
+      "test": true,
+      "preference": "Caps_SayCaps",
+      "mathml": "<math><mrow><mi>b</mi><mi>A</mi></mrow></math>"
+    },
+    "Cap017": {
+      "test": true,
+      "preference": "Caps_SayCaps",
+      "mathml": "<math><mrow><mi>B</mi><mi>a</mi></mrow></math>"
+    },
+    "Cap018": {
+      "test": true,
+      "preference": "Caps_SayCaps",
+      "mathml": "<math><mrow><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C</mi></mrow></math>"
+    },
+    "Cap019": {
+      "test": true,
+      "preference": "Caps_SayCaps",
+      "mathml": "<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C</mi></mrow></math>"
+    },
+    "Cap020": {
+      "test": true,
+      "preference": "Caps_SayCaps",
+      "mathml": "<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi></mrow></math>"
+    },
+    "Cap020a": {
+      "test": true,
+      "preference": "Caps_SayCaps",
+      "mathml": "<math><mrow><mo>∠</mo><mi>A</mi></mrow></math>"
+    }
+  }
+}

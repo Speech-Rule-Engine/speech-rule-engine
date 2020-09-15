@@ -1,0 +1,452 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "EnglishTrigometry",
+  "locale": "en",
+  "information": "ClearspeakEnglishTrigometry rule tests.",
+  "tests": {
+    "_comment1_": " Trigonometry",
+    "_comment2_": " Table 1: Basic Trigonometric Functions",
+    "Trig001": {
+      "speech": "sine x"
+    },
+    "Trig002": {
+      "speech": "cosine x"
+    },
+    "Trig003": {
+      "speech": "tangent theta"
+    },
+    "Trig004": {
+      "speech": "secant theta"
+    },
+    "Trig005": {
+      "speech": "cosecant x"
+    },
+    "Trig006": {
+      "speech": "cotangent x"
+    },
+    "Trig007": {
+      "speech": "sine squared x"
+    },
+    "Trig008": {
+      "speech": "cosine cubed x"
+    },
+    "Trig009": {
+      "speech": "tangent squared x"
+    },
+    "Trig010": {
+      "speech": "secant cubed x"
+    },
+    "Trig011": {
+      "speech": "cosecant squared x"
+    },
+    "Trig012": {
+      "speech": "cotangent squared x"
+    },
+    "Trig013": {
+      "speech": "sine 2 pi"
+    },
+    "Trig014": {
+      "speech": "the sine of, open paren, pi k, plus, pi over 2, close paren"
+    },
+    "Trig015": {
+      "speech": "the cosine of, pi over 2"
+    },
+    "Trig016": {
+      "speech": "the sine of, pi over 2"
+    },
+    "Trig017": {
+      "speech": "sine pi over 2"
+    },
+    "Trig018": {
+      "speech": "2 over sine pi"
+    },
+    "Trig019": {
+      "speech": "the fraction with numerator, the sine of, pi over 2, and denominator 3"
+    },
+    "Trig020": {
+      "speech": "tangent negative pi"
+    },
+    "Trig021": {
+      "speech": "the sine of, open paren, x plus pi, close paren"
+    },
+    "Trig022": {
+      "speech": "the cosine of, open paren, x plus, pi over 2, close paren"
+    },
+    "Trig023": {
+      "speech": "the cosine of, open paren, pi over 2, plus x, close paren"
+    },
+    "Trig024": {
+      "speech": "sine squared x, plus, cosine squared x, equals 1"
+    },
+    "Trig025": {
+      "speech": "the fourth power of sine x"
+    },
+    "Trig026": {
+      "speech": "the fifth power of cosine x"
+    },
+    "Trig027": {
+      "speech": "the n-th power of tangent x"
+    },
+    "Trig028": {
+      "speech": "sine x over cosine x"
+    },
+    "Trig029": {
+      "speech": "tangent 35 degrees"
+    },
+    "_comment3_": " TODO: (Simons) Handles degrees as a postfix function.",
+    "Trig030": {
+      "speech": "the sine of, open paren, 45 degrees plus 30 degrees, close paren"
+    },
+    "Trig031": {
+      "speech": "the tangent of, open paren, angle D E F, close paren"
+    },
+    "Trig032": {
+      "speech": "the tangent of, open paren, angle D, close paren"
+    },
+    "Trig033": {
+      "speech": "the sine of, open paren, x plus y, close paren, equals, sine x cosine y, plus, cosine x sine y"
+    },
+    "Trig034": {
+      "speech": "the cosine of, open paren, x plus y, close paren, equals, cosine x cosine y, minus, sine x sine y"
+    },
+    "Trig035": {
+      "speech": "the tangent of, open paren, x plus y, close paren, equals, the fraction with numerator tangent x minus tangent y, and denominator 1 minus, tangent x tangent y"
+    },
+    "_comment4_": " TODO: (Simons) Handle degrees as a postfix function.",
+    "Trig036": {
+      "speech": "sine 30 degrees cosine 15 degrees, plus, cosine 30 degrees sine 15 degrees"
+    },
+    "Trig037": {
+      "speech": "the tangent of, open paren, pi over 6, plus, 2 pi over 3, close paren, equals, the fraction with numerator, the tangent of, pi over 6, minus, the tangent of, 2 pi over 3, and denominator 1 minus, the tangent of, pi over 6, the tangent of, 2 pi over 3"
+    },
+    "Trig038": {
+      "speech": "tangent 2 x, equals, the fraction with numerator 2 tangent x, and denominator 1 minus, tangent squared x"
+    },
+    "Trig039": {
+      "speech": "cosine 2 x, equals 2, cosine squared x, minus 1"
+    },
+    "Trig040": {
+      "speech": "the sine of, x over 2, equals plus or minus the square root of, the fraction with numerator 1 minus cosine x, and denominator 2"
+    },
+    "Trig041": {
+      "speech": "the tangent of, x over 2, equals plus or minus the square root of, the fraction with numerator 1 minus cosine x, and denominator 1 plus cosine x"
+    },
+    "Trig042": {
+      "speech": "cosine x cosine y, equals 2, the cosine of, the fraction with numerator x plus y, and denominator 2, the cosine of, the fraction with numerator x minus y, and denominator 2"
+    },
+    "Trig043": {
+      "speech": "the sine of, open paren, negative, pi over 8, close paren, equals negative one half the square root of 2 minus the square root of 2, end root, end root"
+    },
+    "Trig044": {
+      "speech": "the tangent of, 3 pi over 8, equals, the fraction with numerator the square root of, the square root of 2, end root, plus 1, end root, and denominator the square root of, the square root of 2, end root, minus 1, end root"
+    },
+    "Trig045": {
+      "speech": "the tangent of, pi over 12, equals one half the square root of 2 minus the square root of 3, end root, end root"
+    },
+    "_comment5_": " Table 2: Inverse Trigonometric Functions",
+    "TrigInvAuto001": {
+      "speech": "the inverse sine of x"
+    },
+    "TrigInvAuto002": {
+      "speech": "the inverse cosine of x"
+    },
+    "TrigInvAuto003": {
+      "speech": "the inverse tangent of x"
+    },
+    "TrigInvAuto004": {
+      "speech": "the inverse cotangent of x"
+    },
+    "TrigInvAuto005": {
+      "speech": "the inverse secant of x"
+    },
+    "TrigInvAuto006": {
+      "speech": "the inverse cosecant of x"
+    },
+    "TrigInvAuto007": {
+      "speech": "the inverse sine of, the fraction with numerator the square root of 2, and denominator 2"
+    },
+    "TrigInvAuto008": {
+      "speech": "the inverse cosine of one half"
+    },
+    "TrigInvAuto009": {
+      "speech": "the inverse tangent of 17"
+    },
+    "TrigInvAuto010": {
+      "speech": "the inverse cotangent of 32"
+    },
+    "TrigInvAuto011": {
+      "speech": "the inverse secant of 100"
+    },
+    "TrigInvAuto012": {
+      "speech": "the inverse cosecant of 85"
+    },
+    "TrigInvAuto013": {
+      "speech": "the inverse sine of negative x"
+    },
+    "TrigInvAuto014": {
+      "speech": "the inverse cosine of negative x"
+    },
+    "TrigInvAuto015": {
+      "speech": "the inverse tangent of, open paren, negative x plus 12, close paren"
+    },
+    "TrigInvAuto016": {
+      "speech": "the inverse cotangent of, open paren, negative x minus 1, close paren"
+    },
+    "TrigInvAuto017": {
+      "speech": "the inverse sine of sine 0"
+    },
+    "TrigInvAuto018": {
+      "speech": "the inverse cosecant of cosecant x"
+    },
+    "TrigInvAuto019": {
+      "speech": "the cosine of, open paren, the inverse cosine of, open paren, negative, the fraction with numerator the square root of 2, and denominator 2, close paren, close paren"
+    },
+    "TrigInvAuto020": {
+      "speech": "the cosine of, open paren, negative, the inverse cosine of, open paren, the fraction with numerator the square root of 2, and denominator 2, close paren, close paren"
+    },
+    "TrigInvAuto021": {
+      "speech": "the inverse sine of, open paren, the cosine of, pi over 4, close paren"
+    },
+    "TrigInvAuto022": {
+      "speech": "sine, the inverse cosine of one half"
+    },
+    "TrigInvAuto023": {
+      "speech": "sine, the inverse tangent of 1"
+    },
+    "TrigInvAuto024": {
+      "speech": "the sine of, open paren, negative, the inverse tangent of 1, close paren"
+    },
+    "TrigInvAuto025": {
+      "speech": "the sine of, open paren, negative, the inverse tangent of negative 1, close paren"
+    },
+    "TrigInvAuto026": {
+      "speech": "the inverse secant of secant x"
+    },
+    "TrigInverse001": {
+      "speech": "sine inverse of x"
+    },
+    "TrigInverse002": {
+      "speech": "cosine inverse of x"
+    },
+    "TrigInverse003": {
+      "speech": "tangent inverse of x"
+    },
+    "TrigInverse004": {
+      "speech": "cotangent inverse of x"
+    },
+    "TrigInverse005": {
+      "speech": "secant inverse of x"
+    },
+    "TrigInverse006": {
+      "speech": "cosecant inverse of x"
+    },
+    "TrigInverse007": {
+      "speech": "sine inverse of, the fraction with numerator the square root of 2, and denominator 2"
+    },
+    "TrigInverse008": {
+      "speech": "cosine inverse of one half"
+    },
+    "TrigInverse009": {
+      "speech": "tangent inverse of 17"
+    },
+    "TrigInverse010": {
+      "speech": "cotangent inverse of 32"
+    },
+    "TrigInverse011": {
+      "speech": "secant inverse of 100"
+    },
+    "TrigInverse012": {
+      "speech": "cosecant inverse of 85"
+    },
+    "TrigInverse013": {
+      "speech": "sine inverse of negative x"
+    },
+    "TrigInverse014": {
+      "speech": "cosine inverse of negative x"
+    },
+    "TrigInverse015": {
+      "speech": "tangent inverse of, open paren, negative x plus 12, close paren"
+    },
+    "TrigInverse016": {
+      "speech": "cotangent inverse of, open paren, negative x minus 1, close paren"
+    },
+    "TrigInverse017": {
+      "speech": "sine inverse of sine 0"
+    },
+    "TrigInverse018": {
+      "speech": "cosecant inverse of cosecant x"
+    },
+    "TrigInverse019": {
+      "speech": "the cosine of, open paren, cosine inverse of, open paren, negative, the fraction with numerator the square root of 2, and denominator 2, close paren, close paren"
+    },
+    "TrigInverse020": {
+      "speech": "the cosine of, open paren, negative, cosine inverse of, open paren, the fraction with numerator the square root of 2, and denominator 2, close paren, close paren"
+    },
+    "TrigInverse021": {
+      "speech": "sine inverse of, open paren, the cosine of, pi over 4, close paren"
+    },
+    "TrigInverse022": {
+      "speech": "sine, cosine inverse of one half"
+    },
+    "TrigInverse023": {
+      "speech": "sine, tangent inverse of 1"
+    },
+    "TrigInverse024": {
+      "speech": "the sine of, open paren, negative, tangent inverse of 1, close paren"
+    },
+    "TrigInverse025": {
+      "speech": "the sine of, open paren, negative, tangent inverse of negative 1, close paren"
+    },
+    "TrigInverse026": {
+      "speech": "secant inverse of secant x"
+    },
+    "ArcTrig001": {
+      "speech": "arc sine x"
+    },
+    "ArcTrig002": {
+      "speech": "arc cosine x"
+    },
+    "ArcTrig003": {
+      "speech": "arc tangent x"
+    },
+    "ArcTrig004": {
+      "speech": "arc cotangent x"
+    },
+    "ArcTrig005": {
+      "speech": "arc secant x"
+    },
+    "ArcTrig006": {
+      "speech": "arc cosecant x"
+    },
+    "ArcTrig007": {
+      "speech": "arc sine of, the fraction with numerator the square root of 2, and denominator 2"
+    },
+    "ArcTrig008": {
+      "speech": "arc cosine one half"
+    },
+    "ArcTrig009": {
+      "speech": "arc tangent 17"
+    },
+    "ArcTrig010": {
+      "speech": "arc cotangent 32"
+    },
+    "ArcTrig011": {
+      "speech": "arc secant 100"
+    },
+    "ArcTrig012": {
+      "speech": "arc cosecant 85"
+    },
+    "ArcTrig013": {
+      "speech": "arc sine negative x"
+    },
+    "ArcTrig014": {
+      "speech": "arc cosine negative x"
+    },
+    "ArcTrig015": {
+      "speech": "arc tangent of, open paren, negative x plus 12, close paren"
+    },
+    "ArcTrig016": {
+      "speech": "arc cotangent of, open paren, negative x minus 1, close paren"
+    },
+    "ArcTrig017": {
+      "speech": "arc sine, sine 0"
+    },
+    "ArcTrig018": {
+      "speech": "arc cosecant, cosecant x"
+    },
+    "ArcTrig019": {
+      "speech": "the cosine of, open paren, arc cosine of, open paren, negative, the fraction with numerator the square root of 2, and denominator 2, close paren, close paren"
+    },
+    "ArcTrig020": {
+      "speech": "the cosine of, open paren, negative, arc cosine of, open paren, the fraction with numerator the square root of 2, and denominator 2, close paren, close paren"
+    },
+    "ArcTrig021": {
+      "speech": "arc sine of, open paren, the cosine of, pi over 4, close paren"
+    },
+    "ArcTrig022": {
+      "speech": "sine, arc cosine one half"
+    },
+    "ArcTrig023": {
+      "speech": "sine, arc tangent 1"
+    },
+    "ArcTrig024": {
+      "speech": "the sine of, open paren, negative, arc tangent 1, close paren"
+    },
+    "ArcTrig025": {
+      "speech": "the sine of, open paren, negative, arc tangent negative 1, close paren"
+    },
+    "ArcTrig026": {
+      "speech": "arc secant, secant x"
+    },
+    "AllTrig01": {
+      "speech": "arc sine x"
+    },
+    "AllTrig02": {
+      "speech": "arc cosine x"
+    },
+    "AllTrig03": {
+      "speech": "arc tangent x"
+    },
+    "_comment6_": " Table 3: Hyperbolic Trigonometric Functions",
+    "HypTrig001": {
+      "speech": "hyperbolic sine of x"
+    },
+    "HypTrig002": {
+      "speech": "hyperbolic cosine of x"
+    },
+    "HypTrig003": {
+      "speech": "hyperbolic tangent of x"
+    },
+    "HypTrig004": {
+      "speech": "hyperbolic cotangent of x"
+    },
+    "HypTrig005": {
+      "speech": "hyperbolic secant of x"
+    },
+    "HypTrig006": {
+      "speech": "hyperbolic cosecant of x"
+    },
+    "HypTrig007": {
+      "speech": "the inverse hyperbolic sine of x"
+    },
+    "HypTrig008": {
+      "speech": "the inverse hyperbolic cosine of x"
+    },
+    "HypTrig009": {
+      "speech": "the inverse hyperbolic tangent of x"
+    },
+    "HypTrig010": {
+      "speech": "the inverse hyperbolic cotangent of x"
+    },
+    "HypTrig011": {
+      "speech": "the inverse hyperbolic secant of x"
+    },
+    "HypTrig012": {
+      "speech": "the inverse hyperbolic cosecant of x"
+    },
+    "HypTrig013": {
+      "speech": "hyperbolic sine of, the inverse hyperbolic sine of x"
+    },
+    "HypTrig014": {
+      "speech": "hyperbolic cosine of, the inverse hyperbolic cosine of x"
+    },
+    "HypTrig015": {
+      "speech": "hyperbolic tangent of, the inverse hyperbolic tangent of x"
+    },
+    "HypTrig016": {
+      "speech": "hyperbolic cotangent of, the inverse hyperbolic cotangent of x"
+    },
+    "HypTrig017": {
+      "speech": "the inverse hyperbolic sine of, hyperbolic sine of x"
+    },
+    "HypTrig018": {
+      "speech": "the inverse hyperbolic cosine of, hyperbolic cosine of x"
+    },
+    "HypTrig019": {
+      "speech": "the inverse hyperbolic tangent of, hyperbolic tangent of x"
+    },
+    "HypTrig020": {
+      "speech": "the inverse hyperbolic cotangent of, hyperbolic cotangent of x"
+    }
+  }
+}

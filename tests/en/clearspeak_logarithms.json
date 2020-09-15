@@ -1,0 +1,127 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "EnglishLogarithms",
+  "locale": "en",
+  "information": "ClearspeakEnglishLogarithms rule tests.",
+  "tests": {
+    "_comment1_": " Logarithms",
+    "Log001": {
+      "speech": "log x"
+    },
+    "Log002": {
+      "speech": "the log base 10 of, x"
+    },
+    "Log003": {
+      "speech": "the log base b of, a x, equals, the log base b of, a, plus, the log base b of, x"
+    },
+    "Log004": {
+      "speech": "the log base b of, S over T, equals, the log base b of, S, minus, the log base b of, T"
+    },
+    "Log005": {
+      "speech": "the log base b of, open paren, x to the k-th power, close paren, equals k, the log base b of, x"
+    },
+    "Log006": {
+      "speech": "10 raised to the log base 10 of, x, power, equals x"
+    },
+    "Log007": {
+      "speech": "the log base 10 of, 10 to the x-th power, equals x"
+    },
+    "Log008": {
+      "speech": "10 raised to the log base 10 of, 5, power, equals 5"
+    },
+    "Log009": {
+      "speech": "the log base 10 of, 10 cubed, equals 3"
+    },
+    "Log010": {
+      "speech": "the log base a of, x, equals, the log base b of, x, over, the log base b of, a"
+    },
+    "Log011": {
+      "speech": "the log base 10 of, 18, over, the log base 10 of, 3, equals, the log base 3 of, 18"
+    },
+    "Log012": {
+      "speech": "log x over log a"
+    },
+    "Log013": {
+      "speech": "the log of, open paren, x plus 1, close paren"
+    },
+    "Log014": {
+      "speech": "the log of, open paren, x plus 1, close paren, squared"
+    },
+    "Log015": {
+      "speech": "log x y"
+    },
+    "Log016": {
+      "speech": "the fraction with numerator, the log of, open paren, x plus 1, close paren, and denominator, the log of, open paren, x plus 2, close paren"
+    },
+    "Log017": {
+      "speech": "the fraction with numerator, the log base 6 of, open paren, x plus 1, close paren, and denominator, the log base 6 of, open paren, x plus 2, close paren"
+    },
+    "Log018": {
+      "speech": "the fraction with numerator log 40 plus log 60, and denominator log 5"
+    },
+    "Log019": {
+      "speech": "the fraction with numerator, the log base 3 of, 40, plus, the log base 3 of, 60, and denominator, the log base 3 of, 5"
+    },
+    "Log020": {
+      "speech": "the log of, open paren, 3 to the fourth power, 12 to the ninth power, close paren, equals 4 log 3, plus 9 log 12"
+    },
+    "Log021": {
+      "speech": "the log of, open paren, x over y, close paren"
+    },
+    "_comment2_": " TODO: Fix the vulgar fraction predicate!",
+    "Log022": {
+      "speech": "the log of, open paren, the fraction with numerator 3 to the fourth power, and denominator 8 to the tenth power, close paren, equals 4 log 3, minus 10 log 8"
+    },
+    "Log023": {
+      "speech": "10 raised to the log x power"
+    },
+    "NatLog001": {
+      "speech": "l n x"
+    },
+    "NatLog002": {
+      "speech": "l n x, minus l n of, open paren, x minus 1, close paren, equals l n of, open paren, the fraction with numerator x, and denominator x minus 1, close paren"
+    },
+    "NatLog003": {
+      "speech": "l n of, open paren, e to the x-th power, close paren, equals x"
+    },
+    "NatLog004": {
+      "speech": "e raised to the l n x power, equals x"
+    },
+    "NatLog005": {
+      "speech": "l n of, open paren, e to the x-th power, close paren, equals x"
+    },
+    "NatLog006": {
+      "speech": "e raised to the l n 4 power, equals 4"
+    },
+    "NatLog007": {
+      "speech": "l n 40, over l n 5, equals, the log base 5 of, 40"
+    },
+    "NatLog008": {
+      "speech": "the fraction with numerator l n 40, plus l n 60, and denominator l n 5"
+    },
+    "NatLog009": {
+      "speech": "natural log x"
+    },
+    "NatLog010": {
+      "speech": "natural log x, minus, the natural log of, open paren, x minus 1, close paren, equals, the natural log of, open paren, the fraction with numerator x, and denominator x minus 1, close paren"
+    },
+    "NatLog011": {
+      "speech": "the natural log of, open paren, e to the x-th power, close paren, equals x"
+    },
+    "NatLog012": {
+      "speech": "e raised to the natural log x power, equals x"
+    },
+    "NatLog013": {
+      "speech": "the natural log of, open paren, e to the x-th power, close paren, equals x"
+    },
+    "NatLog014": {
+      "speech": "e raised to the natural log 4 power, equals 4"
+    },
+    "NatLog015": {
+      "speech": "natural log 40, over natural log 5, equals, the log base 5 of, 40"
+    },
+    "NatLog016": {
+      "speech": "the fraction with numerator natural log 40, plus natural log 60, and denominator natural log 5"
+    }
+  }
+}

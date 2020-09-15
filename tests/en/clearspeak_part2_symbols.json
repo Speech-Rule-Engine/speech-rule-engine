@@ -1,0 +1,219 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "EnglishPart2Symbols",
+  "locale": "en",
+  "information": "ClearspeakEnglishPart2Symbols rule tests.",
+  "tests": {
+    "_comment1_": " Part 2: Symbols",
+    "_comment2_": " Multiplication Symbol",
+    "X001": {
+      "speech": "6 times 8"
+    },
+    "X002": {
+      "speech": "m times n"
+    },
+    "X003": {
+      "speech": "3 times 3"
+    },
+    "X004": {
+      "speech": "6 by 8"
+    },
+    "X005": {
+      "speech": "m by n"
+    },
+    "X006": {
+      "speech": "3 by 3"
+    },
+    "X007": {
+      "speech": "u cross v"
+    },
+    "_comment3_": " Multiplication Symbol",
+    "Dot001": {
+      "speech": "6 times 8"
+    },
+    "Dot002": {
+      "speech": "m times n"
+    },
+    "Dot003": {
+      "speech": "3 times 3"
+    },
+    "Dot004": {
+      "speech": "6 dot 8"
+    },
+    "Dot005": {
+      "speech": "m dot n"
+    },
+    "Dot006": {
+      "speech": "3 dot 3"
+    },
+    "_comment4_": " Triangle Symbol",
+    "Triangle001": {
+      "speech": "triangle A B C"
+    },
+    "Triangle002": {
+      "speech": "triangle D E F"
+    },
+    "Triangle003": {
+      "speech": "Delta x"
+    },
+    "Triangle004": {
+      "speech": "f of, open paren, x plus Delta x, close paren"
+    },
+    "_comment5_": " Ellipses",
+    "Ellipses001": {
+      "speech": "1 comma 2 comma 3 comma dot dot dot"
+    },
+    "Ellipses002": {
+      "speech": "1 comma 2 comma 3 comma dot dot dot comma 20"
+    },
+    "Ellipses003": {
+      "speech": "dot dot dot comma, negative 2, comma, negative 1, comma 0 comma 1 comma 2 comma dot dot dot"
+    },
+    "Ellipses004": {
+      "speech": "1 comma 2 comma 3 comma and so on"
+    },
+    "Ellipses005": {
+      "speech": "1 comma 2 comma 3 comma and so on up to comma 20"
+    },
+    "Ellipses006": {
+      "speech": "dot dot dot comma, negative 2, comma, negative 1, comma 0 comma 1 comma 2 comma dot dot dot"
+    },
+    "_comment6_": " Vertical Line",
+    "VertLine001": {
+      "speech": "3 divides 6"
+    },
+    "VertLine002": {
+      "speech": "the set of all x such that x is greater than 0"
+    },
+    "VertLine003": {
+      "speech": "the set of all x such that, the absolute value of x, is greater than 2"
+    },
+    "VertLine004": {
+      "speech": "f of x, evaluated at x equals 5"
+    },
+    "VertLine005": {
+      "speech": "x squared plus 2 x, evaluated at x equals 2"
+    },
+    "VertLine006": {
+      "speech": "x squared plus x, evaluated at 1, minus the same expression evaluated at 0"
+    },
+    "VertLine007": {
+      "speech": "the set of all x such that x is greater than 0"
+    },
+    "VertLine008": {
+      "speech": "3 divides 6"
+    },
+    "VertLine009": {
+      "speech": "P of, open paren, A given B, close paren"
+    },
+    "_comment7_": " Set Membership Symbols",
+    "MembSym001": {
+      "speech": "If x is a member of the integers then 2 x, is an even number period"
+    },
+    "MembSym002": {
+      "speech": "the set of all x in the integers such that x is greater than 5"
+    },
+    "MembSym003": {
+      "speech": "3 plus 2 i, is not a member of the real numbers"
+    },
+    "MembSym004": {
+      "speech": "If x is a member of the integers then 2 x, is an even number period"
+    },
+    "MembSym005": {
+      "speech": "the set of all x member of the integers such that x is greater than 5"
+    },
+    "MembSym006": {
+      "speech": "3 plus 2 i, is not a member of the real numbers"
+    },
+    "MembSym007": {
+      "speech": "If x is an element of the integers then 2 x, is an even number period"
+    },
+    "MembSym008": {
+      "speech": "the set of all x element of the integers such that x is greater than 5"
+    },
+    "MembSym009": {
+      "speech": "3 plus 2 i, is not an element of the real numbers"
+    },
+    "MembSym010": {
+      "_comment8_": " var mathml = '<math><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>';",
+      "speech": "If x belongs to the integers then 2 x, is an even number period"
+    },
+    "MembSym011": {
+      "speech": "the set of all x belonging to the integers such that x is greater than 5"
+    },
+    "MembSym012": {
+      "speech": "3 plus 2 i, does not belong to the real numbers"
+    },
+    "MembSym013": {
+      "speech": "If x belongs to the integers then 2 x, is an even number period"
+    },
+    "MembSym014": {
+      "speech": "the set of all x belonging to the integers such that x is greater than 5"
+    },
+    "MembSym015": {
+      "speech": "3 plus 2 i, does not belong to the real numbers"
+    },
+    "_comment9_": " Two preferences set: One for Sets and one for SetMemberSymbol",
+    "SetMemb001": {
+      "speech": "the set of x belonging to the integers such that 2 is less than x is less than 7"
+    },
+    "SetMemb002": {
+      "speech": "the set of x member of the integers such that x is greater than 5"
+    },
+    "_comment10_": " Sums, Products, Unions, Intersections, and Integrals",
+    "Sum001": {
+      "speech": "the sum from n equals 1 to 10 of n"
+    },
+    "Sum002": {
+      "speech": "the sum from n equals 1 to infinity of n"
+    },
+    "Sum003": {
+      "speech": "the sum over i is a member of the positive integers, of i"
+    },
+    "Sum004": {
+      "speech": "the sum over S, of i"
+    },
+    "Sum005": {
+      "speech": "the sum of, a sub i"
+    },
+    "Sum006": {
+      "speech": "the product from i equals 1 to 10 of i"
+    },
+    "Sum007": {
+      "speech": "the product over i is a member of the positive integers, of, the fraction with numerator i, and denominator i plus 1"
+    },
+    "Sum008": {
+      "speech": "the product over the positive integers, of, the fraction with numerator i, and denominator i plus 1"
+    },
+    "Sum009": {
+      "speech": "the product of, a sub i"
+    },
+    "Sum010": {
+      "speech": "the intersection from i equals 1 to 10 of, S sub i"
+    },
+    "Sum011": {
+      "speech": "the union from i equals 1 to 10 of, S sub i"
+    },
+    "Sum012": {
+      "speech": "the intersection of, S sub i"
+    },
+    "Sum013": {
+      "speech": "the union of, S sub i"
+    },
+    "Sum014": {
+      "speech": "the intersection over C, of, S sub i"
+    },
+    "Sum015": {
+      "speech": "the union over C, of, S sub i"
+    },
+    "Sum016": {
+      "speech": "the integral of f of x, d x"
+    },
+    "Sum017": {
+      "speech": "the integral from 0 to 1 of f of x, d x"
+    },
+    "Sum018": {
+      "speech": "the integral over the real numbers, of f of x, d x"
+    }
+  }
+}

@@ -1,0 +1,726 @@
+{
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "GermanFunctions",
+  "locale": "de",
+  "information": "ClearspeakGermanFunctions rule tests.",
+  "tests": {
+    "_comment1_": " Functions",
+    "Function001": {
+      "speech": "f von x"
+    },
+    "Function002": {
+      "speech": "g von x"
+    },
+    "Function003": {
+      "speech": "h von x"
+    },
+    "Function004": {
+      "speech": "f von 2 x"
+    },
+    "Function005": {
+      "speech": "g von minus 2 x"
+    },
+    "Function006": {
+      "speech": "h von ein halb"
+    },
+    "Function007": {
+      "_comment2_": " TODO: This throws a test exception.",
+      "_comment3_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "speech": "h von, Klammer auf, 1 geteilt durch 2, Klammer zu"
+    },
+    "Function008": {
+      "speech": "f von, Klammer auf, x plus 1, Klammer zu, ist gleich f von x, plus 1"
+    },
+    "Function009": {
+      "speech": "g von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function010": {
+      "speech": "g von, Klammer auf, x Quadrat, Klammer zu"
+    },
+    "Function011": {
+      "speech": "f invers von x"
+    },
+    "Function012": {
+      "speech": "g invers von x"
+    },
+    "Function013": {
+      "speech": "h invers von x"
+    },
+    "Function014": {
+      "speech": "f invers von 2 x"
+    },
+    "Function015": {
+      "speech": "g invers von minus 2 x"
+    },
+    "Function016": {
+      "speech": "f invers von, Klammer auf, 3 x, minus 1, Klammer zu"
+    },
+    "Function017": {
+      "speech": "g invers von, Klammer auf, x Quadrat, Klammer zu"
+    },
+    "Function018": {
+      "speech": "h invers von ein halb"
+    },
+    "Function019": {
+      "_comment4_": " TODO: This throws a test exception.",
+      "_comment5_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "speech": "h invers von, Klammer auf, 1 geteilt durch 2, Klammer zu"
+    },
+    "Function020": {
+      "speech": "f invers von, f von x"
+    },
+    "Function021": {
+      "speech": "g invers von, g von x"
+    },
+    "Function022": {
+      "speech": "h invers von, h von x"
+    },
+    "Function023": {
+      "speech": "f invers von, f von 2 x"
+    },
+    "Function024": {
+      "speech": "g invers von, g von minus 2 x"
+    },
+    "Function025": {
+      "speech": "h invers von, h von ein halb"
+    },
+    "Function026": {
+      "_comment6_": " TODO: This throws a test exception.",
+      "_comment7_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "speech": "h invers von, Klammer auf, h von, Klammer auf, 1 geteilt durch 2, Klammer zu, Klammer zu"
+    },
+    "Function027": {
+      "speech": "f invers von, Klammer auf, f von, Klammer auf, x plus 1, Klammer zu, Klammer zu, ist gleich x plus 1"
+    },
+    "Function028": {
+      "speech": "g invers von, Klammer auf, g von, Klammer auf, 2 x, plus 1, Klammer zu, Klammer zu"
+    },
+    "Function029": {
+      "speech": "g invers von, Klammer auf, g von, Klammer auf, x Quadrat, Klammer zu, Klammer zu"
+    },
+    "Function030": {
+      "speech": "f von, f invers von x"
+    },
+    "Function031": {
+      "speech": "g von, g invers von x"
+    },
+    "Function032": {
+      "speech": "h von, h invers von x"
+    },
+    "Function033": {
+      "speech": "f von, f invers von 2 x"
+    },
+    "Function034": {
+      "speech": "g von, g invers von minus 2 x"
+    },
+    "Function035": {
+      "speech": "f von, Klammer auf, f invers von, Klammer auf, 3 x, minus 1, Klammer zu, Klammer zu"
+    },
+    "Function036": {
+      "speech": "g von, g invers von, Klammer auf, x Quadrat, Klammer zu"
+    },
+    "Function037": {
+      "speech": "h von, h invers von ein halb"
+    },
+    "Function038": {
+      "_comment8_": " TODO: This throws a test exception.",
+      "_comment9_": " var preference = 'Functions_Auto:Fraction_FracOver';",
+      "speech": "h von, h invers von, Klammer auf, Bruch 1 geteilt durch 2, Klammer zu"
+    },
+    "Function039": {
+      "speech": "f von, g von x"
+    },
+    "Function040": {
+      "speech": "f von, Klammer auf, g von, Klammer auf, x plus 1, Klammer zu, Klammer zu"
+    },
+    "Function041": {
+      "speech": "h von, g von x"
+    },
+    "Function042": {
+      "speech": "h von, Klammer auf, g von, Klammer auf, Bruch mit Zähler x, und Nenner x plus 1, Klammer zu, Klammer zu"
+    },
+    "Function043": {
+      "speech": "Klammer auf, f plus g, Klammer zu, von x, ist gleich f von x, plus g von x"
+    },
+    "Function044": {
+      "speech": "Klammer auf, f plus g, Klammer zu, von, Klammer auf, x plus 1, Klammer zu, ist gleich f von, Klammer auf, x plus 1, Klammer zu, plus g von, Klammer auf, x plus 1, Klammer zu"
+    },
+    "Function045": {
+      "speech": "Klammer auf, f mal g, Klammer zu, von x"
+    },
+    "Function046": {
+      "speech": "Klammer auf, f mal g, Klammer zu, von, Klammer auf, 2 x, plus 5, Klammer zu"
+    },
+    "Function047": {
+      "speech": "Klammer auf, f geteilt durch g, Klammer zu, von x, ist gleich, f von x, geteilt durch g von x"
+    },
+    "Function048": {
+      "speech": "Klammer auf, f geteilt durch g, Klammer zu, von, Klammer auf, 2 x, plus 5, Klammer zu, ist gleich, Bruch mit Zähler f von, Klammer auf, 2 x, plus 5, Klammer zu, und Nenner g von, Klammer auf, 2 x, plus 5, Klammer zu"
+    },
+    "Function049": {
+      "speech": "Klammer auf, f verknüpft mit g, Klammer zu, von x, ist gleich f von, g von x"
+    },
+    "Function050": {
+      "speech": "2 f von x"
+    },
+    "Function051": {
+      "speech": "c f von x"
+    },
+    "Function052": {
+      "speech": "f Quadrat von x"
+    },
+    "Function053": {
+      "speech": "f Quadrat von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function054": {
+      "speech": "f Kubik von x"
+    },
+    "Function055": {
+      "speech": "f Kubik von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function056": {
+      "speech": "f hoch 4, von x"
+    },
+    "Function057": {
+      "speech": "f hoch 4, von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function058": {
+      "speech": "f hoch 5, von x"
+    },
+    "Function059": {
+      "speech": "f hoch 5, von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function060": {
+      "speech": "f hoch n, von x"
+    },
+    "Function061": {
+      "speech": "f hoch n, von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function062": {
+      "speech": "g Quadrat von x"
+    },
+    "Function063": {
+      "speech": "g Quadrat von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function064": {
+      "speech": "h Kubik von x"
+    },
+    "Function065": {
+      "speech": "h Kubik von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function066": {
+      "speech": "g hoch 4, von x"
+    },
+    "Function067": {
+      "speech": "g hoch 4, von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function068": {
+      "speech": "h hoch 5, von x"
+    },
+    "Function069": {
+      "speech": "h hoch 5, von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function070": {
+      "speech": "g hoch n, von x"
+    },
+    "Function071": {
+      "speech": "g hoch n, von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function072": {
+      "speech": "f Index 1, von x"
+    },
+    "Function073": {
+      "speech": "g Index 2, von, Klammer auf, x Kubik, Klammer zu"
+    },
+    "Function074": {
+      "speech": "h Index n, von, Klammer auf, 3 x, minus 2, Klammer zu"
+    },
+    "Function075": {
+      "speech": "f Index 1, invers von x"
+    },
+    "Function076": {
+      "speech": "g Index 2, invers von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function077": {
+      "speech": "h Index n, invers von x"
+    },
+    "Function078": {
+      "speech": "g Index 1, invers von, g Index 2, von x"
+    },
+    "Function079": {
+      "speech": "f Index 1, von, g Index 2, invers von x"
+    },
+    "Function080": {
+      "speech": "f von, Klammer auf, x Komma y, Klammer zu"
+    },
+    "Function081": {
+      "speech": "f von, Klammer auf, x Komma y Komma z, Klammer zu"
+    },
+    "Function082": {
+      "speech": "f von, Klammer auf, x plus 1, Komma, 2 y, Klammer zu"
+    },
+    "Function083": {
+      "speech": "f von, Klammer auf, 2 x, Komma, x plus 1, Komma, x Quadrat, Klammer zu"
+    },
+    "Function084": {
+      "speech": "f mal x"
+    },
+    "Function085": {
+      "speech": "g mal x"
+    },
+    "Function086": {
+      "speech": "h mal x"
+    },
+    "Function087": {
+      "speech": "f mal 2 x"
+    },
+    "Function088": {
+      "speech": "g mal minus 2 x"
+    },
+    "Function089": {
+      "speech": "h mal ein halb"
+    },
+    "Function090": {
+      "speech": "XXX"
+    },
+    "Function091": {
+      "speech": "f mal, Klammer auf, x plus 1, Klammer zu, ist gleich, f mal x, plus 1"
+    },
+    "Function092": {
+      "speech": "g mal, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function093": {
+      "speech": "g mal, Klammer auf, x Quadrat, Klammer zu"
+    },
+    "Function094": {
+      "speech": "f hoch minus 1, mal x"
+    },
+    "Function095": {
+      "speech": "g hoch minus 1, mal x"
+    },
+    "Function096": {
+      "speech": "h hoch minus 1, mal x"
+    },
+    "Function097": {
+      "speech": "f hoch minus 1, mal 2 x"
+    },
+    "Function098": {
+      "speech": "g hoch minus 1, mal minus 2 x"
+    },
+    "Function099": {
+      "speech": "f hoch minus 1, mal, Klammer auf, 3 x, minus 1, Klammer zu"
+    },
+    "Function100": {
+      "speech": "g hoch minus 1, mal, Klammer auf, x Quadrat, Klammer zu"
+    },
+    "Function101": {
+      "speech": "h hoch minus 1, mal ein halb"
+    },
+    "Function102": {
+      "speech": "XXX"
+    },
+    "Function103": {
+      "speech": "f hoch minus 1, mal, f mal x"
+    },
+    "Function104": {
+      "speech": "g hoch minus 1, mal, g mal x"
+    },
+    "Function105": {
+      "speech": "h hoch minus 1, mal, h mal x"
+    },
+    "Function106": {
+      "speech": "f hoch minus 1, mal, f mal 2 x"
+    },
+    "Function107": {
+      "speech": "g hoch minus 1, mal, g mal minus 2 x"
+    },
+    "Function108": {
+      "speech": "h hoch minus 1, mal, h mal ein halb"
+    },
+    "Function109": {
+      "speech": "XXX"
+    },
+    "Function110": {
+      "speech": "f hoch minus 1, mal, Klammer auf, f mal, Klammer auf, x plus 1, Klammer zu, Klammer zu, ist gleich x plus 1"
+    },
+    "Function111": {
+      "speech": "g hoch minus 1, mal, Klammer auf, g mal, Klammer auf, 2 x, plus 1, Klammer zu, Klammer zu"
+    },
+    "Function112": {
+      "speech": "g hoch minus 1, mal, Klammer auf, g mal, Klammer auf, x Quadrat, Klammer zu, Klammer zu"
+    },
+    "Function113": {
+      "speech": "f mal, Klammer auf, f hoch minus 1, mal x, Klammer zu"
+    },
+    "Function114": {
+      "speech": "g mal, Klammer auf, g hoch minus 1, mal x, Klammer zu"
+    },
+    "Function115": {
+      "speech": "h mal, Klammer auf, h hoch minus 1, mal x, Klammer zu"
+    },
+    "Function116": {
+      "speech": "f mal, Klammer auf, f hoch minus 1, mal 2 x, Klammer zu"
+    },
+    "Function117": {
+      "speech": "g mal, Klammer auf, g hoch minus 1, mal minus 2 x, Klammer zu"
+    },
+    "Function118": {
+      "speech": "f mal, Klammer auf, f hoch minus 1, mal, Klammer auf, 3 x, minus 1, Klammer zu, Klammer zu"
+    },
+    "Function119": {
+      "speech": "g mal, Klammer auf, g hoch minus 1, mal, Klammer auf, x Quadrat, Klammer zu, Klammer zu"
+    },
+    "Function120": {
+      "speech": "h mal, Klammer auf, h hoch minus 1, mal ein halb, Klammer zu"
+    },
+    "Function121": {
+      "speech": "XXX"
+    },
+    "Function122": {
+      "speech": "f mal, g mal x"
+    },
+    "Function123": {
+      "speech": "f mal, Klammer auf, g mal, Klammer auf, x plus 1, Klammer zu, Klammer zu"
+    },
+    "Function124": {
+      "speech": "h mal, g mal x"
+    },
+    "Function125": {
+      "speech": "h mal, Klammer auf, g mal, Klammer auf, Bruch mit Zähler x, und Nenner x plus 1, Klammer zu, Klammer zu"
+    },
+    "Function126": {
+      "speech": "Klammer auf, f plus g, Klammer zu, mal x, ist gleich, f mal x, plus, g mal x"
+    },
+    "Function127": {
+      "speech": "Klammer auf, f plus g, Klammer zu, mal, Klammer auf, x plus 1, Klammer zu, ist gleich, f mal, Klammer auf, x plus 1, Klammer zu, plus, g mal, Klammer auf, x plus 1, Klammer zu"
+    },
+    "Function128": {
+      "speech": "Klammer auf, f mal g, Klammer zu, mal x"
+    },
+    "Function129": {
+      "speech": "Klammer auf, f mal g, Klammer zu, mal, Klammer auf, 2 x, plus 5, Klammer zu"
+    },
+    "Function130": {
+      "speech": "Klammer auf, f geteilt durch g, Klammer zu, mal x, ist gleich, Bruch mit Zähler, f mal x, und Nenner, g mal x"
+    },
+    "Function131": {
+      "speech": "Klammer auf, f geteilt durch g, Klammer zu, mal, Klammer auf, 2 x, plus 5, Klammer zu, ist gleich, Bruch mit Zähler, f mal, Klammer auf, 2 x, plus 5, Klammer zu, und Nenner, g mal, Klammer auf, 2 x, plus 5, Klammer zu"
+    },
+    "Function132": {
+      "speech": "2, f mal x"
+    },
+    "Function133": {
+      "speech": "c, f mal x"
+    },
+    "Function134": {
+      "speech": "f Quadrat mal x"
+    },
+    "Function135": {
+      "speech": "f Quadrat mal, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function136": {
+      "speech": "f Kubik mal x"
+    },
+    "Function137": {
+      "speech": "f Kubik mal, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function138": {
+      "speech": "f hoch 4, mal x"
+    },
+    "Function139": {
+      "speech": "f hoch 4, mal, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function140": {
+      "speech": "f hoch 5, mal x"
+    },
+    "Function141": {
+      "speech": "f hoch 5, mal, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function142": {
+      "speech": "f hoch n, mal x"
+    },
+    "Function143": {
+      "speech": "f hoch n, mal, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function144": {
+      "speech": "g Quadrat mal x"
+    },
+    "Function145": {
+      "speech": "g Quadrat mal, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function146": {
+      "speech": "h Kubik mal x"
+    },
+    "Function147": {
+      "speech": "h Kubik mal, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function148": {
+      "speech": "g hoch 4, mal x"
+    },
+    "Function149": {
+      "speech": "g hoch 4, mal, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function150": {
+      "speech": "h hoch 5, mal x"
+    },
+    "Function151": {
+      "speech": "h hoch 5, mal, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function152": {
+      "speech": "g hoch n, mal x"
+    },
+    "Function153": {
+      "speech": "g hoch n, mal, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function154": {
+      "speech": "f Index 1, mal x"
+    },
+    "Function156": {
+      "speech": "g Index 2, mal, Klammer auf, x Kubik, Klammer zu"
+    },
+    "Function157": {
+      "speech": "h Index n, mal, Klammer auf, 3 x, minus 2, Klammer zu"
+    },
+    "Function158": {
+      "speech": "f Index 1, hoch minus 1, mal x"
+    },
+    "Function159": {
+      "speech": "g Index 2, hoch minus 1, mal, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function160": {
+      "speech": "h Index n, hoch minus 1, mal x"
+    },
+    "Function161": {
+      "speech": "g Index 1, hoch minus 1, mal, Klammer auf, g Index 2, mal x, Klammer zu"
+    },
+    "Function162": {
+      "speech": "f Index 1, mal, Klammer auf, g Index 2, hoch minus 1, mal x, Klammer zu"
+    },
+    "Function163": {
+      "speech": "f mal, Klammer auf, x Komma y, Klammer zu"
+    },
+    "Function164": {
+      "speech": "f mal, Klammer auf, x Komma y Komma z, Klammer zu"
+    },
+    "Function165": {
+      "speech": "f mal, Klammer auf, x plus 1, Komma, 2 y, Klammer zu"
+    },
+    "Function166": {
+      "speech": "f mal, Klammer auf, 2 x, Komma, x plus 1, Komma, x Quadrat, Klammer zu"
+    },
+    "_comment10_": " NEW: Reciprocal",
+    "Function011b": {
+      "speech": "f invers von x"
+    },
+    "Function012b": {
+      "speech": "g invers von x"
+    },
+    "Function013b": {
+      "speech": "h invers von x"
+    },
+    "Function014b": {
+      "speech": "f invers von 2 x"
+    },
+    "Function015b": {
+      "speech": "g invers von minus 2 x"
+    },
+    "Function016b": {
+      "speech": "f invers von, Klammer auf, 3 x, minus 1, Klammer zu"
+    },
+    "Function017b": {
+      "speech": "g invers von, Klammer auf, x Quadrat, Klammer zu"
+    },
+    "Function018b": {
+      "speech": "h invers von ein halb"
+    },
+    "Function019b": {
+      "_comment11_": " TODO: This throws a test exception.",
+      "_comment12_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "speech": "h invers von, 1 geteilt durch 2"
+    },
+    "Function020b": {
+      "speech": "f invers von, f von x"
+    },
+    "Function021b": {
+      "speech": "g invers von, g von x"
+    },
+    "Function022b": {
+      "speech": "h invers von, h von x"
+    },
+    "Function023b": {
+      "speech": "f invers von, f von 2 x"
+    },
+    "Function024b": {
+      "speech": "g invers von, g von minus 2 x"
+    },
+    "Function025b": {
+      "speech": "h invers von, h von ein halb"
+    },
+    "Function026b": {
+      "_comment13_": " TODO: This throws a test exception.",
+      "_comment14_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "speech": "h invers von, h von, 1 geteilt durch 2"
+    },
+    "Function027b": {
+      "speech": "f invers von, Klammer auf, f von, Klammer auf, x plus 1, Klammer zu, Klammer zu, ist gleich x plus 1"
+    },
+    "Function028b": {
+      "speech": "g invers von, Klammer auf, g von, Klammer auf, 2 x, plus 1, Klammer zu, Klammer zu"
+    },
+    "Function029b": {
+      "speech": "g invers von, Klammer auf, g von, Klammer auf, x Quadrat, Klammer zu, Klammer zu"
+    },
+    "Function030b": {
+      "speech": "f von, f invers von x"
+    },
+    "Function031b": {
+      "speech": "g von, g invers von x"
+    },
+    "Function032b": {
+      "speech": "h von, h invers von x"
+    },
+    "Function033b": {
+      "speech": "f von, f invers von 2 x"
+    },
+    "Function034b": {
+      "speech": "g von, g invers von minus 2 x"
+    },
+    "Function035b": {
+      "speech": "f von, Klammer auf, f invers von, Klammer auf, 3 x, minus 1, Klammer zu, Klammer zu"
+    },
+    "Function036b": {
+      "speech": "g von, g invers von, Klammer auf, x Quadrat, Klammer zu"
+    },
+    "Function037b": {
+      "speech": "h von, h invers von ein halb"
+    },
+    "Function038b": {
+      "_comment15_": " TODO: This throws a test exception.",
+      "_comment16_": " var preference = 'Functions_Auto:Fraction_FracOver';",
+      "speech": "h von, h invers von, Bruch 1 geteilt durch 2"
+    },
+    "Function039b": {
+      "speech": "f von, g von x"
+    },
+    "Function040b": {
+      "speech": "f von, Klammer auf, g von, Klammer auf, x plus 1, Klammer zu, Klammer zu"
+    },
+    "Function041b": {
+      "speech": "h von, g von x"
+    },
+    "Function042b": {
+      "speech": "h von, Klammer auf, g von, Klammer auf, Bruch mit Zähler x, und Nenner x plus 1, Klammer zu, Klammer zu"
+    },
+    "Function043b": {
+      "speech": "Klammer auf, f plus g, Klammer zu, von x, ist gleich f von x, plus g von x"
+    },
+    "Function044b": {
+      "speech": "Klammer auf, f plus g, Klammer zu, von, Klammer auf, x plus 1, Klammer zu, ist gleich f von, Klammer auf, x plus 1, Klammer zu, plus g von, Klammer auf, x plus 1, Klammer zu"
+    },
+    "Function045b": {
+      "speech": "Klammer auf, f mal g, Klammer zu, von x"
+    },
+    "Function046b": {
+      "speech": "Klammer auf, f mal g, Klammer zu, von, Klammer auf, 2 x, plus 5, Klammer zu"
+    },
+    "Function047b": {
+      "speech": "Klammer auf, f geteilt durch g, Klammer zu, von x, ist gleich, f von x, geteilt durch g von x"
+    },
+    "Function048b": {
+      "speech": "Klammer auf, f geteilt durch g, Klammer zu, von, Klammer auf, 2 x, plus 5, Klammer zu, ist gleich, Bruch mit Zähler f von, Klammer auf, 2 x, plus 5, Klammer zu, und Nenner g von, Klammer auf, 2 x, plus 5, Klammer zu"
+    },
+    "Function049b": {
+      "speech": "Klammer auf, f verknüpft mit g, Klammer zu, von x, ist gleich f von, g von x"
+    },
+    "Function050b": {
+      "speech": "2 f von x"
+    },
+    "Function051b": {
+      "speech": "c f von x"
+    },
+    "Function052b": {
+      "speech": "f Quadrat von x"
+    },
+    "Function053b": {
+      "speech": "f Quadrat von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function054b": {
+      "speech": "f Kubik von x"
+    },
+    "Function055b": {
+      "speech": "f Kubik von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function056b": {
+      "speech": "f hoch 4, von x"
+    },
+    "Function057b": {
+      "speech": "f hoch 4, von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function058b": {
+      "speech": "f hoch 5, von x"
+    },
+    "Function059b": {
+      "speech": "f hoch 5, von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function060b": {
+      "speech": "f hoch n, von x"
+    },
+    "Function061b": {
+      "speech": "f hoch n, von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function062b": {
+      "speech": "g Quadrat von x"
+    },
+    "Function063b": {
+      "speech": "g Quadrat von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function064b": {
+      "speech": "h Kubik von x"
+    },
+    "Function065b": {
+      "speech": "h Kubik von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function066b": {
+      "speech": "g hoch 4, von x"
+    },
+    "Function067b": {
+      "speech": "g hoch 4, von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function068b": {
+      "speech": "h hoch 5, von x"
+    },
+    "Function069b": {
+      "speech": "h hoch 5, von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function070b": {
+      "speech": "g hoch n, von x"
+    },
+    "Function071b": {
+      "speech": "g hoch n, von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function072b": {
+      "speech": "f Index 1, von x"
+    },
+    "Function073b": {
+      "speech": "g Index 2, von, Klammer auf, x Kubik, Klammer zu"
+    },
+    "Function074b": {
+      "speech": "h Index n, von, Klammer auf, 3 x, minus 2, Klammer zu"
+    },
+    "Function075b": {
+      "speech": "f Index 1, invers von x"
+    },
+    "Function076b": {
+      "speech": "g Index 2, invers von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function077b": {
+      "speech": "h Index n, invers von x"
+    },
+    "Function078b": {
+      "speech": "g Index 1, invers von, g Index 2, von x"
+    },
+    "Function079b": {
+      "speech": "f Index 1, von, g Index 2, invers von x"
+    }
+  }
+}

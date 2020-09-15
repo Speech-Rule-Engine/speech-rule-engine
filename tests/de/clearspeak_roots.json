@@ -1,0 +1,691 @@
+{
+  "tests": {
+    "_comment1_": " Roots",
+    "Root001": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<mrow><msqrt><mn>2</mn></msqrt></mrow>"
+    },
+    "Root002": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><mn>3</mn><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root003": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><mn>3</mn><mo>±</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root004": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><mn>3</mn><mo>∓</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root005": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root006": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><mn>3</mn><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root007": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><mn>3</mn><mo>+</mo><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root008": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><mn>3</mn><mo>−</mo><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root009": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><mn>3</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Root010": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><mn>3</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Root011": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msqrt></mrow></math>"
+    },
+    "Root011a": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><msqrt><mi>x</mi></msqrt><mo>+</mo><mn>1</mn></mrow></math>"
+    },
+    "Root012": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><mo>−</mo><msqrt><mi>x</mi></msqrt></mrow></math>"
+    },
+    "Root013": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
+    },
+    "Root014": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow><msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
+    },
+    "Root015": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><msup><mrow><msqrt><mi>x</mi></msqrt></mrow><mn>2</mn></msup></mrow></math>"
+    },
+    "Root016": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow></math>"
+    },
+    "Root017": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt></mrow></math>"
+    },
+    "Root018": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><msqrt><mrow><msub><mi>x</mi><mn>1</mn></msub><msup><mrow/><mn>2</mn></msup><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub><msup><mrow/><mn>2</mn></msup></mrow></msqrt></mrow></math>"
+    },
+    "Root019": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><msqrt><mrow><msup><mrow><mrow><mo>(</mo><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>−</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mrow><mo>(</mo><mrow><msub><mi>y</mi><mn>2</mn></msub><mo>−</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msqrt></mrow></math>"
+    },
+    "Root020": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><msqrt><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msqrt></mrow></math>"
+    },
+    "Root021": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><msqrt><mrow><mfrac><mrow><mn>23</mn></mrow><mrow><mn>66</mn></mrow></mfrac></mrow></msqrt></mrow></math>"
+    },
+    "Root022": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><msqrt><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow></mfrac></mrow></msqrt></mrow></math>"
+    },
+    "Root023": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><mfrac><mrow><mo>−</mo><mi>b</mi><mo>±</mo><msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mi>a</mi><mi>c</mi></mrow></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow></math>"
+    },
+    "Root024": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root025": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><mn>3</mn><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root026": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><mn>3</mn><mo>±</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root027": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><mn>3</mn><mo>∓</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root028": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root029": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><mn>3</mn><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root030": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><mn>3</mn><mo>+</mo><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root031": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><mn>3</mn><mo>−</mo><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root032": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><mn>3</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Root033": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><mn>3</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Root034": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msqrt></mrow></math>"
+    },
+    "Root034a": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><msqrt><mi>x</mi></msqrt><mo>+</mo><mn>1</mn></mrow></math>"
+    },
+    "Root035": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><mo>−</mo><msqrt><mi>x</mi></msqrt></mrow></math>"
+    },
+    "Root036": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
+    },
+    "Root037": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mo>−</mo><msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
+    },
+    "Root038": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow><msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
+    },
+    "Root039": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><msup><mrow><msqrt><mi>x</mi></msqrt></mrow><mn>2</mn></msup></mrow></math>"
+    },
+    "Root040": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow></math>"
+    },
+    "Root041": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt></mrow></math>"
+    },
+    "Root042": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><msqrt><mrow><msub><mi>x</mi><mn>1</mn></msub><msup><mrow/><mn>2</mn></msup><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub><msup><mrow/><mn>2</mn></msup></mrow></msqrt></mrow></math>"
+    },
+    "Root043": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><msqrt><mrow><msup><mrow><mrow><mo>(</mo><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>−</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mrow><mo>(</mo><mrow><msub><mi>y</mi><mn>2</mn></msub><mo>−</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msqrt></mrow></math>"
+    },
+    "Root044": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><msqrt><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msqrt></mrow></math>"
+    },
+    "Root045": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><msqrt><mrow><mfrac><mrow><mn>23</mn></mrow><mrow><mn>66</mn></mrow></mfrac></mrow></msqrt></mrow></math>"
+    },
+    "Root046": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><msqrt><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow></mfrac></mrow></msqrt></mrow></math>"
+    },
+    "Root047": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><mfrac><mrow><mo>−</mo><mi>b</mi><mo>±</mo><msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mi>a</mi><mi>c</mi></mrow></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow></math>"
+    },
+    "Root048": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root049": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><mn>3</mn><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root050": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><mn>3</mn><mo>±</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root051": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><mn>3</mn><mo>∓</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root052": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root053": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><mn>3</mn><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root054": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><mn>3</mn><mo>+</mo><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root055": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><mn>3</mn><mo>−</mo><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root056": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><mn>3</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Root057": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><mn>3</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Root058": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msqrt></mrow></math>"
+    },
+    "Root058a": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><msqrt><mi>x</mi></msqrt><mo>+</mo><mn>1</mn></mrow></math>"
+    },
+    "Root059": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><mo>−</mo><msqrt><mi>x</mi></msqrt></mrow></math>"
+    },
+    "Root060": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
+    },
+    "Root061": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow><msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
+    },
+    "Root062": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><msup><mrow><msqrt><mi>x</mi></msqrt></mrow><mn>2</mn></msup></mrow></math>"
+    },
+    "Root063": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow></math>"
+    },
+    "Root064": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt></mrow></math>"
+    },
+    "Root065": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><msqrt><mrow><msub><mi>x</mi><mn>1</mn></msub><msup><mrow/><mn>2</mn></msup><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub><msup><mrow/><mn>2</mn></msup></mrow></msqrt></mrow></math>"
+    },
+    "Root066": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><msqrt><mrow><msup><mrow><mrow><mo>(</mo><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>−</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mrow><mo>(</mo><mrow><msub><mi>y</mi><mn>2</mn></msub><mo>−</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msqrt></mrow></math>"
+    },
+    "Root067": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><msqrt><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msqrt></mrow></math>"
+    },
+    "Root068": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><msqrt><mrow><mfrac><mrow><mn>23</mn></mrow><mrow><mn>66</mn></mrow></mfrac></mrow></msqrt></mrow></math>"
+    },
+    "Root069": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><msqrt><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow></mfrac></mrow></msqrt></mrow></math>"
+    },
+    "Root070": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><mfrac><mrow><mo>−</mo><mi>b</mi><mo>±</mo><msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mi>a</mi><mi>c</mi></mrow></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow></math>"
+    },
+    "Root071": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root072": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><mn>3</mn><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root073": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><mn>3</mn><mo>±</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root074": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><mn>3</mn><mo>∓</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root075": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root076": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><mn>3</mn><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root077": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><mn>3</mn><mo>+</mo><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root078": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><mn>3</mn><mo>−</mo><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>"
+    },
+    "Root079": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><mn>3</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Root080": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><mn>3</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Root081": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msqrt></mrow></math>"
+    },
+    "Root081a": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><msqrt><mi>x</mi></msqrt><mo>+</mo><mn>1</mn></mrow></math>"
+    },
+    "Root082": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><mo>−</mo><msqrt><mi>x</mi></msqrt></mrow></math>"
+    },
+    "Root083": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
+    },
+    "Root084": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mo>−</mo><msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
+    },
+    "Root085": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><msup><mrow><msqrt><mi>x</mi></msqrt></mrow><mn>2</mn></msup></mrow></math>"
+    },
+    "Root086": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow></math>"
+    },
+    "Root087": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt></mrow></math>"
+    },
+    "Root088": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><msqrt><mrow><msub><mi>x</mi><mn>1</mn></msub><msup><mrow/><mn>2</mn></msup><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub><msup><mrow/><mn>2</mn></msup></mrow></msqrt></mrow></math>"
+    },
+    "Root089": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><msqrt><mrow><msup><mrow><mrow><mo>(</mo><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>−</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mrow><mo>(</mo><mrow><msub><mi>y</mi><mn>2</mn></msub><mo>−</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msqrt></mrow></math>"
+    },
+    "Root090": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><msqrt><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msqrt></mrow></math>"
+    },
+    "Root091": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><msqrt><mrow><mfrac><mrow><mn>23</mn></mrow><mrow><mn>66</mn></mrow></mfrac></mrow></msqrt></mrow></math>"
+    },
+    "Root092": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><msqrt><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow></mfrac></mrow></msqrt></mrow></math>"
+    },
+    "Root093": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><mfrac><mrow><mo>−</mo><mi>b</mi><mo>±</mo><msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mi>a</mi><mi>c</mi></mrow></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow></math>"
+    },
+    "_comment2_": " Higher order roots",
+    "HighRoot001": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><mroot><mi>y</mi><mn>3</mn></mroot></mrow></math>"
+    },
+    "HighRoot002": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>"
+    },
+    "HighRoot003": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn></mroot></mrow></math>"
+    },
+    "HighRoot004": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn></mroot></mrow></math>"
+    },
+    "HighRoot005": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><mroot><mi>d</mi><mi>n</mi></mroot></mrow></math>"
+    },
+    "HighRoot006": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi></mroot></mrow></math>"
+    },
+    "HighRoot007": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup></mrow><mi>i</mi></mroot></mrow></math>"
+    },
+    "HighRoot008": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi></mroot></mrow></math>"
+    },
+    "HighRoot009": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><mo>−</mo><mroot><mi>y</mi><mn>3</mn></mroot></mrow></math>"
+    },
+    "HighRoot010": {
+      "test": true,
+      "preference": "Roots_Auto",
+      "mathml": "<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>"
+    },
+    "HighRoot011": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><mroot><mi>y</mi><mn>3</mn></mroot></mrow></math>"
+    },
+    "HighRoot012": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>"
+    },
+    "HighRoot013": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn></mroot></mrow></math>"
+    },
+    "HighRoot014": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn></mroot></mrow></math>"
+    },
+    "HighRoot015": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><mroot><mi>d</mi><mi>n</mi></mroot></mrow></math>"
+    },
+    "HighRoot016": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi></mroot></mrow></math>"
+    },
+    "HighRoot017": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup></mrow><mi>i</mi></mroot></mrow></math>"
+    },
+    "HighRoot018": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi></mroot></mrow></math>"
+    },
+    "HighRoot019": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><mo>−</mo><mroot><mi>y</mi><mn>3</mn></mroot></mrow></math>"
+    },
+    "HighRoot020": {
+      "test": true,
+      "preference": "Roots_RootEnd",
+      "mathml": "<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>"
+    },
+    "HighRoot021": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><mroot><mi>y</mi><mn>3</mn></mroot></mrow></math>"
+    },
+    "HighRoot022": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>"
+    },
+    "HighRoot023": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn></mroot></mrow></math>"
+    },
+    "HighRoot024": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn></mroot></mrow></math>"
+    },
+    "HighRoot025": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><mroot><mi>d</mi><mi>n</mi></mroot></mrow></math>"
+    },
+    "HighRoot026": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi></mroot></mrow></math>"
+    },
+    "HighRoot027": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup></mrow><mi>i</mi></mroot></mrow></math>"
+    },
+    "HighRoot028": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi></mroot></mrow></math>"
+    },
+    "HighRoot029": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><mo>−</mo><mroot><mi>y</mi><mn>3</mn></mroot></mrow></math>"
+    },
+    "HighRoot030": {
+      "test": true,
+      "preference": "Roots_PosNegSqRoot",
+      "mathml": "<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>"
+    },
+    "HighRoot031": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><mroot><mi>y</mi><mn>3</mn></mroot></mrow></math>"
+    },
+    "HighRoot032": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>"
+    },
+    "HighRoot033": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn></mroot></mrow></math>"
+    },
+    "HighRoot034": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn></mroot></mrow></math>"
+    },
+    "HighRoot035": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><mroot><mi>d</mi><mi>n</mi></mroot></mrow></math>"
+    },
+    "HighRoot036": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi></mroot></mrow></math>"
+    },
+    "HighRoot037": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup></mrow><mi>i</mi></mroot></mrow></math>"
+    },
+    "HighRoot038": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi></mroot></mrow></math>"
+    },
+    "HighRoot039": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><mo>−</mo><mroot><mi>y</mi><mn>3</mn></mroot></mrow></math>"
+    },
+    "HighRoot040": {
+      "test": true,
+      "preference": "Roots_PosNegSqRootEnd",
+      "mathml": "<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>"
+    }
+  }
+}

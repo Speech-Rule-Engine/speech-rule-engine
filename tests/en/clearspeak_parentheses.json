@@ -1,0 +1,244 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "EnglishParentheses",
+  "locale": "en",
+  "information": "ClearspeakEnglishParentheses rule tests.",
+  "tests": {
+    "_comment1_": " Parentheses",
+    "Paren001": {
+      "speech": "25"
+    },
+    "Paren002": {
+      "speech": "2 x"
+    },
+    "Paren003": {
+      "speech": "2 plus negative 2"
+    },
+    "Paren004": {
+      "speech": "2 minus negative 2"
+    },
+    "Paren005": {
+      "speech": "2 minus, open paren, negative 2, close paren, cubed"
+    },
+    "Paren006": {
+      "speech": "open paren, 2 x, close paren, squared"
+    },
+    "Paren007": {
+      "speech": "open paren, 2 x, close paren, raised to the y plus 1 power"
+    },
+    "Paren008": {
+      "speech": "negative 2 x"
+    },
+    "Paren009": {
+      "speech": "open paren, negative 2 x, close paren, squared"
+    },
+    "Paren010": {
+      "speech": "negative, open paren, 2 x, close paren, squared"
+    },
+    "Paren011": {
+      "speech": "one half"
+    },
+    "Paren012": {
+      "_comment2_": " TODO: (QUESTION) This is against the Paren_Auto rules! (page 31)!",
+      "_comment3_": " var speech = 'open paren, three fourths, x, close paren';",
+      "speech": "three fourths x"
+    },
+    "Paren013": {
+      "speech": "open paren, 11 over 22, close paren"
+    },
+    "Paren014": {
+      "speech": "one half to the fourth power"
+    },
+    "Paren015": {
+      "speech": "open paren, 11 over 15, close paren, squared"
+    },
+    "Paren016": {
+      "speech": "open paren, 25, close paren"
+    },
+    "Paren017": {
+      "speech": "open paren, 2 x, close paren"
+    },
+    "Paren018": {
+      "speech": "2 plus, open paren, negative 2, close paren"
+    },
+    "Paren019": {
+      "speech": "2 minus, open paren, negative 2, close paren"
+    },
+    "Paren020": {
+      "speech": "2 minus, open paren, negative 2, close paren, cubed"
+    },
+    "Paren021": {
+      "speech": "open paren, 2 x, close paren, squared"
+    },
+    "Paren022": {
+      "speech": "open paren, 2 x, close paren, raised to the y plus 1 power"
+    },
+    "Paren023": {
+      "speech": "open paren, negative 2 x, close paren"
+    },
+    "Paren024": {
+      "speech": "open paren, negative 2 x, close paren, squared"
+    },
+    "Paren025": {
+      "speech": "negative, open paren, 2 x, close paren, squared"
+    },
+    "Paren026": {
+      "speech": "open paren, one half, close paren"
+    },
+    "Paren027": {
+      "speech": "open paren, three fourths x, close paren"
+    },
+    "Paren028": {
+      "speech": "open paren, 11 over 22, close paren"
+    },
+    "Paren029": {
+      "speech": "open paren, one half, close paren, to the fourth power"
+    },
+    "Paren030": {
+      "speech": "open paren, 11 over 15, close paren, squared"
+    },
+    "Paren031": {
+      "speech": "the point with coordinates 1 comma 2"
+    },
+    "Paren032": {
+      "speech": "the point with coordinates x comma y"
+    },
+    "Paren033": {
+      "speech": "the point with coordinates 1 comma 2 comma 3"
+    },
+    "Paren034": {
+      "speech": "the point with coordinates x comma y comma z"
+    },
+    "Paren035": {
+      "_comment4_": " var speech = 'the point with coordinates 1 comma 2 comma three hundred",
+      "_comment5_": " eighty six';",
+      "speech": "the point with coordinates 1 comma 2 comma 386"
+    },
+    "Paren036": {
+      "speech": "the interval from a to b, not including a or b"
+    },
+    "Paren037": {
+      "speech": "the interval from 0 to 1, not including 0 or 1"
+    },
+    "Paren038": {
+      "speech": "the interval from a to b, including a, but not including b"
+    },
+    "Paren039": {
+      "speech": "the interval from 0 to 1, including 0, but not including 1"
+    },
+    "Paren040": {
+      "speech": "the interval from a to b, not including a, but including b"
+    },
+    "Paren041": {
+      "speech": "the interval from 0 to 1, not including 0, but including 1"
+    },
+    "Paren042": {
+      "speech": "the interval from a to b, including a and b"
+    },
+    "Paren043": {
+      "speech": "the interval from 0 to 1, including 0 and 1"
+    },
+    "Paren044": {
+      "speech": "the interval from negative infinity to b, not including b"
+    },
+    "Paren045": {
+      "speech": "the interval from negative infinity to 1, not including 1"
+    },
+    "Paren046": {
+      "speech": "the interval from negative infinity to b, including b"
+    },
+    "Paren047": {
+      "speech": "the interval from negative infinity to 1, including 1"
+    },
+    "Paren048": {
+      "speech": "the interval from a to infinity, not including a"
+    },
+    "Paren049": {
+      "speech": "the interval from 1 to infinity, not including 1"
+    },
+    "Paren050": {
+      "speech": "the interval from a to infinity, including a"
+    },
+    "Paren051": {
+      "speech": "the interval from 1 to infinity, including 1"
+    },
+    "Paren052": {
+      "speech": "the interval from negative infinity to infinity"
+    },
+    "Paren053": {
+      "speech": "the interval from negative infinity to positive infinity"
+    },
+    "Nest001": {
+      "speech": "f of, g of x"
+    },
+    "Nest002": {
+      "speech": "f of, open paren, g of, open paren, x plus 1, close paren, close paren"
+    },
+    "Nest003": {
+      "speech": "6 minus, open bracket, 2 minus, open paren, 3 plus 5, close paren, close bracket"
+    },
+    "Nest004": {
+      "speech": "6 minus, open paren, 2 minus, open second paren, 3 plus 5, close second paren, close paren"
+    },
+    "Nest005": {
+      "speech": "4 times, open bracket, x plus 3 times, open paren, 2 x, plus 1, close paren, close bracket"
+    },
+    "Nest006": {
+      "speech": "4 times, open paren, x plus 3 times, open second paren, 2 x, plus 1, close second paren, close paren"
+    },
+    "Nest007": {
+      "speech": "1 plus, open paren, 2 plus, open second paren, 3 plus 7, close second paren, minus, open second paren, 2 plus 8, close second paren, close paren"
+    },
+    "Nest008": {
+      "speech": "1 plus, open paren, 2 plus, open second paren, 3 minus, open third paren, 4 minus 5, close third paren, close second paren, close paren"
+    },
+    "Nest009": {
+      "speech": "open paren, open second paren, 2 plus, open third paren, 3 plus 4, close third paren, plus 5, close second paren, plus 6 plus, open second paren, open third paren, 7 plus, open fourth paren, 8 plus 1, close fourth paren, close third paren, plus 2, close second paren, close paren"
+    },
+    "SilParen001": {
+      "speech": "25"
+    },
+    "SilParen002": {
+      "speech": "2 x"
+    },
+    "SilParen003": {
+      "speech": "2 plus, negative 2"
+    },
+    "SilParen004": {
+      "speech": "2 minus, negative 2"
+    },
+    "SilParen005": {
+      "speech": "2 minus, negative 2, cubed"
+    },
+    "SilParen006": {
+      "speech": "2 x, squared"
+    },
+    "SilParen007": {
+      "speech": "2 x, raised to the y plus 1 power"
+    },
+    "SilParen008": {
+      "speech": "negative 2 x"
+    },
+    "SilParen009": {
+      "speech": "negative 2 x, squared"
+    },
+    "SilParen010": {
+      "speech": "negative, 2 x, squared"
+    },
+    "SilParen011": {
+      "speech": "one half"
+    },
+    "SilParen012": {
+      "speech": "three fourths x"
+    },
+    "SilParen013": {
+      "speech": "11 over 22"
+    },
+    "SilParen014": {
+      "speech": "one half, to the fourth power"
+    },
+    "SilParen015": {
+      "speech": "11 over 15, squared"
+    }
+  }
+}

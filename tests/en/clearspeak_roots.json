@@ -1,0 +1,421 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "EnglishRoots",
+  "locale": "en",
+  "information": "ClearspeakEnglishRoots rule tests.",
+  "tests": {
+    "_comment1_": " Roots",
+    "Root001": {
+      "speech": "the square root of 2"
+    },
+    "Root002": {
+      "speech": "3 plus the square root of 2"
+    },
+    "Root003": {
+      "speech": "3 plus or minus the square root of 2"
+    },
+    "Root004": {
+      "speech": "3 minus or plus the square root of 2"
+    },
+    "Root005": {
+      "speech": "the negative square root of 2"
+    },
+    "Root006": {
+      "speech": "3 minus the square root of 2"
+    },
+    "Root007": {
+      "speech": "3 plus the negative square root of 2"
+    },
+    "Root008": {
+      "speech": "3 minus the negative square root of 2"
+    },
+    "Root009": {
+      "speech": "3 plus, open paren, the negative square root of 2, close paren"
+    },
+    "Root010": {
+      "speech": "3 minus, open paren, the negative square root of 2, close paren"
+    },
+    "Root011": {
+      "speech": "the square root of x plus 1"
+    },
+    "Root011a": {
+      "speech": "the square root of x, plus 1"
+    },
+    "Root012": {
+      "speech": "the negative square root of x"
+    },
+    "Root013": {
+      "speech": "open paren, the square root of x, close paren, squared"
+    },
+    "Root014": {
+      "speech": "negative, open paren, the square root of x, close paren, squared"
+    },
+    "Root015": {
+      "speech": "the square root of x, squared"
+    },
+    "Root016": {
+      "speech": "the square root of x squared"
+    },
+    "Root017": {
+      "speech": "the square root of x squared plus y squared"
+    },
+    "Root018": {
+      "speech": "the square root of, x sub 1, squared plus, x sub 2, squared"
+    },
+    "Root019": {
+      "speech": "the square root of, open paren, x sub 2, minus, x sub 1, close paren, squared plus, open paren, y sub 2, minus, y sub 1, close paren, squared"
+    },
+    "Root020": {
+      "speech": "the square root of one half"
+    },
+    "Root021": {
+      "speech": "the square root of, 23 over 66"
+    },
+    "Root022": {
+      "speech": "the square root of, the fraction with numerator x plus 1, and denominator 2 x, plus 5"
+    },
+    "Root023": {
+      "speech": "the fraction with numerator negative b plus or minus the square root of b squared minus 4 a c, and denominator 2 a"
+    },
+    "Root024": {
+      "speech": "the positive square root of 2"
+    },
+    "Root025": {
+      "speech": "3 plus the positive square root of 2"
+    },
+    "Root026": {
+      "speech": "3 plus or minus the square root of 2"
+    },
+    "Root027": {
+      "speech": "3 minus or plus the square root of 2"
+    },
+    "Root028": {
+      "speech": "the negative square root of 2"
+    },
+    "Root029": {
+      "speech": "3 minus the positive square root of 2"
+    },
+    "Root030": {
+      "speech": "3 plus the negative square root of 2"
+    },
+    "Root031": {
+      "speech": "3 minus the negative square root of 2"
+    },
+    "Root032": {
+      "speech": "3 plus, open paren, the negative square root of 2, close paren"
+    },
+    "Root033": {
+      "speech": "3 minus, open paren, the negative square root of 2, close paren"
+    },
+    "Root034": {
+      "speech": "the positive square root of x plus 1"
+    },
+    "Root034a": {
+      "speech": "the positive square root of x, plus 1"
+    },
+    "Root035": {
+      "speech": "the negative square root of x"
+    },
+    "Root036": {
+      "speech": "open paren, the positive square root of x, close paren, squared"
+    },
+    "Root037": {
+      "speech": "open paren, the negative square root of x, close paren, squared"
+    },
+    "Root038": {
+      "speech": "negative, open paren, the positive square root of x, close paren, squared"
+    },
+    "Root039": {
+      "speech": "the positive square root of x, squared"
+    },
+    "Root040": {
+      "speech": "the positive square root of x squared"
+    },
+    "Root041": {
+      "speech": "the positive square root of x squared plus y squared"
+    },
+    "Root042": {
+      "speech": "the positive square root of, x sub 1, squared plus, x sub 2, squared"
+    },
+    "Root043": {
+      "speech": "the positive square root of, open paren, x sub 2, minus, x sub 1, close paren, squared plus, open paren, y sub 2, minus, y sub 1, close paren, squared"
+    },
+    "Root044": {
+      "speech": "the positive square root of one half"
+    },
+    "Root045": {
+      "speech": "the positive square root of, 23 over 66"
+    },
+    "Root046": {
+      "speech": "the positive square root of, the fraction with numerator x plus 1, and denominator 2 x, plus 5"
+    },
+    "Root047": {
+      "speech": "the fraction with numerator negative b plus or minus the square root of b squared minus 4 a c, and denominator 2 a"
+    },
+    "Root048": {
+      "speech": "the square root of 2, end root"
+    },
+    "Root049": {
+      "speech": "3 plus the square root of 2, end root"
+    },
+    "Root050": {
+      "speech": "3 plus or minus the square root of 2, end root"
+    },
+    "Root051": {
+      "speech": "3 minus or plus the square root of 2, end root"
+    },
+    "Root052": {
+      "speech": "the negative square root of 2, end root"
+    },
+    "Root053": {
+      "speech": "3 minus the square root of 2, end root"
+    },
+    "Root054": {
+      "speech": "3 plus the negative square root of 2, end root"
+    },
+    "Root055": {
+      "speech": "3 minus the negative square root of 2, end root"
+    },
+    "Root056": {
+      "speech": "3 plus, open paren, the negative square root of 2, end root, close paren"
+    },
+    "Root057": {
+      "speech": "3 minus, open paren, the negative square root of 2, end root, close paren"
+    },
+    "Root058": {
+      "speech": "the square root of x plus 1, end root"
+    },
+    "Root058a": {
+      "speech": "the square root of x, end root, plus 1"
+    },
+    "Root059": {
+      "speech": "the negative square root of x, end root"
+    },
+    "Root060": {
+      "speech": "open paren, the square root of x, end root, close paren, squared"
+    },
+    "Root061": {
+      "speech": "negative, open paren, the square root of x, end root, close paren, squared"
+    },
+    "Root062": {
+      "speech": "the square root of x, end root, squared"
+    },
+    "Root063": {
+      "speech": "the square root of x squared, end root"
+    },
+    "Root064": {
+      "speech": "the square root of x squared plus y squared, end root"
+    },
+    "Root065": {
+      "speech": "the square root of, x sub 1, squared plus, x sub 2, squared, end root"
+    },
+    "Root066": {
+      "speech": "the square root of, open paren, x sub 2, minus, x sub 1, close paren, squared plus, open paren, y sub 2, minus, y sub 1, close paren, squared, end root"
+    },
+    "Root067": {
+      "speech": "the square root of one half, end root"
+    },
+    "Root068": {
+      "speech": "the square root of, 23 over 66, end root"
+    },
+    "Root069": {
+      "speech": "the square root of, the fraction with numerator x plus 1, and denominator 2 x, plus 5, end root"
+    },
+    "Root070": {
+      "speech": "the fraction with numerator negative b plus or minus the square root of b squared minus 4 a c, end root, and denominator 2 a"
+    },
+    "Root071": {
+      "speech": "the positive square root of 2, end root"
+    },
+    "Root072": {
+      "speech": "3 plus the positive square root of 2, end root"
+    },
+    "Root073": {
+      "speech": "3 plus or minus the square root of 2, end root"
+    },
+    "Root074": {
+      "speech": "3 minus or plus the square root of 2, end root"
+    },
+    "Root075": {
+      "speech": "the negative square root of 2, end root"
+    },
+    "Root076": {
+      "speech": "3 minus the positive square root of 2, end root"
+    },
+    "Root077": {
+      "speech": "3 plus the negative square root of 2, end root"
+    },
+    "Root078": {
+      "speech": "3 minus the negative square root of 2, end root"
+    },
+    "Root079": {
+      "speech": "3 plus, open paren, the negative square root of 2, end root, close paren"
+    },
+    "Root080": {
+      "speech": "3 minus, open paren, the negative square root of 2, end root, close paren"
+    },
+    "Root081": {
+      "speech": "the positive square root of x plus 1, end root"
+    },
+    "Root081a": {
+      "speech": "the positive square root of x, end root, plus 1"
+    },
+    "Root082": {
+      "speech": "the negative square root of x, end root"
+    },
+    "Root083": {
+      "speech": "open paren, the positive square root of x, end root, close paren, squared"
+    },
+    "Root084": {
+      "speech": "open paren, the negative square root of x, end root, close paren, squared"
+    },
+    "Root085": {
+      "speech": "the positive square root of x, end root, squared"
+    },
+    "Root086": {
+      "speech": "the positive square root of x squared, end root"
+    },
+    "Root087": {
+      "speech": "the positive square root of x squared plus y squared, end root"
+    },
+    "Root088": {
+      "speech": "the positive square root of, x sub 1, squared plus, x sub 2, squared, end root"
+    },
+    "Root089": {
+      "speech": "the positive square root of, open paren, x sub 2, minus, x sub 1, close paren, squared plus, open paren, y sub 2, minus, y sub 1, close paren, squared, end root"
+    },
+    "Root090": {
+      "speech": "the positive square root of one half, end root"
+    },
+    "Root091": {
+      "speech": "the positive square root of, 23 over 66, end root"
+    },
+    "Root092": {
+      "speech": "the positive square root of, the fraction with numerator x plus 1, and denominator 2 x, plus 5, end root"
+    },
+    "Root093": {
+      "speech": "the fraction with numerator negative b plus or minus the square root of b squared minus 4 a c, end root, and denominator 2 a"
+    },
+    "_comment2_": " Higher order roots",
+    "HighRoot001": {
+      "speech": "the cube root of y"
+    },
+    "HighRoot002": {
+      "speech": "the fourth root of n"
+    },
+    "HighRoot003": {
+      "speech": "the fifth root of 35"
+    },
+    "HighRoot004": {
+      "speech": "the ninth root of 146"
+    },
+    "HighRoot005": {
+      "speech": "the n-th root of d"
+    },
+    "HighRoot006": {
+      "speech": "the m-th root of 243"
+    },
+    "HighRoot007": {
+      "speech": "the i-th root of 2 to the i-th power"
+    },
+    "HighRoot008": {
+      "speech": "the j-th root of 125"
+    },
+    "HighRoot009": {
+      "speech": "negative the cube root of y"
+    },
+    "HighRoot010": {
+      "speech": "negative the fourth root of n"
+    },
+    "HighRoot011": {
+      "speech": "the cube root of y, end root"
+    },
+    "HighRoot012": {
+      "speech": "the fourth root of n, end root"
+    },
+    "HighRoot013": {
+      "speech": "the fifth root of 35, end root"
+    },
+    "HighRoot014": {
+      "speech": "the ninth root of 146, end root"
+    },
+    "HighRoot015": {
+      "speech": "the n-th root of d, end root"
+    },
+    "HighRoot016": {
+      "speech": "the m-th root of 243, end root"
+    },
+    "HighRoot017": {
+      "speech": "the i-th root of 2 to the i-th power, end root"
+    },
+    "HighRoot018": {
+      "speech": "the j-th root of 125, end root"
+    },
+    "HighRoot019": {
+      "speech": "negative the cube root of y, end root"
+    },
+    "HighRoot020": {
+      "speech": "negative the fourth root of n, end root"
+    },
+    "HighRoot021": {
+      "speech": "the cube root of y"
+    },
+    "HighRoot022": {
+      "speech": "the fourth root of n"
+    },
+    "HighRoot023": {
+      "speech": "the fifth root of 35"
+    },
+    "HighRoot024": {
+      "speech": "the ninth root of 146"
+    },
+    "HighRoot025": {
+      "speech": "the n-th root of d"
+    },
+    "HighRoot026": {
+      "speech": "the m-th root of 243"
+    },
+    "HighRoot027": {
+      "speech": "the i-th root of 2 to the i-th power"
+    },
+    "HighRoot028": {
+      "speech": "the j-th root of 125"
+    },
+    "HighRoot029": {
+      "speech": "negative the cube root of y"
+    },
+    "HighRoot030": {
+      "speech": "negative the fourth root of n"
+    },
+    "HighRoot031": {
+      "speech": "the cube root of y, end root"
+    },
+    "HighRoot032": {
+      "speech": "the fourth root of n, end root"
+    },
+    "HighRoot033": {
+      "speech": "the fifth root of 35, end root"
+    },
+    "HighRoot034": {
+      "speech": "the ninth root of 146, end root"
+    },
+    "HighRoot035": {
+      "speech": "the n-th root of d, end root"
+    },
+    "HighRoot036": {
+      "speech": "the m-th root of 243, end root"
+    },
+    "HighRoot037": {
+      "speech": "the i-th root of 2 to the i-th power, end root"
+    },
+    "HighRoot038": {
+      "speech": "the j-th root of 125, end root"
+    },
+    "HighRoot039": {
+      "speech": "negative the cube root of y, end root"
+    },
+    "HighRoot040": {
+      "speech": "negative the fourth root of n, end root"
+    }
+  }
+}
