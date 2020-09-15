@@ -1,693 +1,423 @@
 {
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "GermanFractions",
+  "locale": "de",
+  "information": "ClearspeakGermanFractions rule tests.",
   "tests": {
     "_comment1_": " Fractions",
     "Frac001": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>"
+      "speech": "ein halb"
     },
     "Frac002": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32</mn></mrow></mfrac></mrow></math>"
+      "speech": "12 geteilt durch 32"
     },
     "Frac002a": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mi>x</mi><mi>y</mi></mfrac></mrow></math>"
+      "speech": "x geteilt durch y"
     },
     "Frac002b": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mi>x</mi></mrow><mrow><mn>3</mn><mi>y</mi></mrow></mfrac></mrow></math>"
+      "speech": "2 x geteilt durch 3 y"
     },
     "Frac002c": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mi>y</mi></mrow><mrow><mi>c</mi><mi>d</mi></mrow></mfrac></mrow></math>"
+      "speech": "x y geteilt durch c d"
     },
     "Frac002d": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "ein halb geteilt durch ein drittel"
     },
     "Frac002e": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mo>−</mo><mi>x</mi></mrow><mi>y</mi></mfrac></mrow></math>"
+      "speech": "minus x geteilt durch y"
     },
     "Frac002f": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mrow><mn>3</mn><mi>y</mi></mrow></mfrac></mrow></math>"
+      "speech": "minus 2 x geteilt durch 3 y"
     },
     "Frac002g": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mi>y</mi></mrow><mrow><mo>−</mo><mi>c</mi><mi>d</mi></mrow></mfrac></mrow></math>"
+      "speech": "x y geteilt durch minus c d"
     },
     "Frac002h": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mrow><mo>−</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "ein halb geteilt durch minus ein drittel"
     },
     "Frac003": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn></mrow><mrow><mn>13</mn></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler 2 plus 3, und Nenner 13"
     },
     "Frac004": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mn>2</mn></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler x plus y, und Nenner 2"
     },
     "Frac005": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler x plus y, und Nenner x minus y"
     },
     "Frac006": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler x plus y, und Nenner x minus y, plus zwei drittel"
     },
     "Frac007": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mtext>miles</mtext></mrow><mrow><mtext>gallon</mtext></mrow></mfrac></mrow></math>"
+      "speech": "miles geteilt durch gallon"
     },
     "Frac008": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mtext>miles</mtext></mrow><mrow><mn>3</mn><mtext>gallons</mtext></mrow></mfrac></mrow></math>"
+      "speech": "2 miles geteilt durch 3 gallons"
     },
     "Frac009": {
-      "test": true,
-      "preference": "Fraction_Over",
-      "mathml": "<math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>"
+      "speech": "1 geteilt durch 2"
     },
     "Frac010": {
-      "test": true,
-      "preference": "Fraction_Over",
-      "mathml": "<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32</mn></mrow></mfrac></mrow></math>"
+      "speech": "12 geteilt durch 32"
     },
     "Frac011": {
-      "test": true,
-      "preference": "Fraction_Over",
-      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn></mrow><mrow><mn>13</mn></mrow></mfrac></mrow></math>"
+      "speech": "2 plus 3 geteilt durch 13"
     },
     "Frac012": {
-      "test": true,
-      "preference": "Fraction_Over",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mn>2</mn></mfrac></mrow></math>"
+      "speech": "x plus y geteilt durch 2"
     },
     "Frac013": {
-      "test": true,
-      "preference": "Fraction_Over",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></mrow></math>"
+      "speech": "x plus y geteilt durch x minus y"
     },
     "Frac014": {
-      "test": true,
-      "preference": "Fraction_Over",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></math>"
+      "speech": "x plus y geteilt durch x minus y, plus, 2 geteilt durch 3"
     },
     "Frac015": {
-      "test": true,
-      "preference": "Fraction_Over",
-      "mathml": "<math><mrow><mfrac><mrow><mtext>miles</mtext></mrow><mrow><mtext>gallon</mtext></mrow></mfrac></mrow></math>"
+      "speech": "miles geteilt durch gallon"
     },
     "Frac016": {
-      "test": true,
-      "preference": "Fraction_Over",
-      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mtext>miles</mtext></mrow><mrow><mn>3</mn><mtext>gallons</mtext></mrow></mfrac></mrow></math>"
+      "speech": "2 miles geteilt durch 3 gallons"
     },
     "Frac017": {
-      "test": true,
-      "preference": "Fraction_OverEndFrac",
-      "mathml": "<math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>"
+      "speech": "1 geteilt durch 2, Ende Bruch"
     },
     "Frac018": {
-      "test": true,
-      "preference": "Fraction_OverEndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32</mn></mrow></mfrac></mrow></math>"
+      "speech": "12 geteilt durch 32, Ende Bruch"
     },
     "Frac019": {
-      "test": true,
-      "preference": "Fraction_OverEndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn></mrow><mrow><mn>13</mn></mrow></mfrac></mrow></math>"
+      "speech": "2 plus 3 geteilt durch 13, Ende Bruch"
     },
     "Frac020": {
-      "test": true,
-      "preference": "Fraction_OverEndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mn>2</mn></mfrac></mrow></math>"
+      "speech": "x plus y geteilt durch 2, Ende Bruch"
     },
     "Frac021": {
-      "test": true,
-      "preference": "Fraction_OverEndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></mrow></math>"
+      "speech": "x plus y geteilt durch x minus y, Ende Bruch"
     },
     "Frac022": {
-      "test": true,
-      "preference": "Fraction_OverEndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></math>"
+      "speech": "x plus y geteilt durch x minus y, Ende Bruch, plus, 2 geteilt durch 3, Ende Bruch"
     },
     "Frac023": {
-      "test": true,
-      "preference": "Fraction_OverEndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mtext>miles</mtext></mrow><mrow><mtext>gallons</mtext></mrow></mfrac></mrow></math>"
+      "speech": "miles geteilt durch gallons, Ende Bruch"
     },
     "Frac024": {
-      "test": true,
-      "preference": "Fraction_OverEndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mtext>miles</mtext></mrow><mrow><mn>3</mn><mtext>gallons</mtext></mrow></mfrac></mrow></math>"
+      "speech": "2 miles geteilt durch 3 gallons, Ende Bruch"
     },
     "Frac025": {
-      "test": true,
-      "preference": "Fraction_GeneralEndFrac",
-      "mathml": "<math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler 1, und Nenner 2, Ende Bruch"
     },
     "Frac026": {
-      "test": true,
-      "preference": "Fraction_GeneralEndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32</mn></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler 12, und Nenner 32, Ende Bruch"
     },
     "Frac027": {
-      "test": true,
-      "preference": "Fraction_GeneralEndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn></mrow><mrow><mn>13</mn></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler 2 plus 3, und Nenner 13, Ende Bruch"
     },
     "Frac028": {
-      "test": true,
-      "preference": "Fraction_GeneralEndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mn>2</mn></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler x plus y, und Nenner 2, Ende Bruch"
     },
     "Frac029": {
-      "test": true,
-      "preference": "Fraction_GeneralEndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler x plus y, und Nenner x minus y, Ende Bruch"
     },
     "Frac030": {
-      "test": true,
-      "preference": "Fraction_GeneralEndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler x plus y, und Nenner x minus y, Ende Bruch, plus, Bruch mit Zähler 2, und Nenner 3, Ende Bruch"
     },
     "Frac031": {
-      "test": true,
-      "preference": "Fraction_GeneralEndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mtext>miles</mtext></mrow><mrow><mtext>gallon</mtext></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler miles, und Nenner gallon, Ende Bruch"
     },
     "Frac032": {
-      "test": true,
-      "preference": "Fraction_General",
-      "mathml": "<math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler 1, und Nenner 2"
     },
     "Frac033": {
-      "test": true,
-      "preference": "Fraction_General",
-      "mathml": "<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32</mn></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler 12, und Nenner 32"
     },
     "Frac034": {
-      "test": true,
-      "preference": "Fraction_General",
-      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn></mrow><mrow><mn>13</mn></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler 2 plus 3, und Nenner 13"
     },
     "Frac035": {
-      "test": true,
-      "preference": "Fraction_General",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mn>2</mn></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler x plus y, und Nenner 2"
     },
     "Frac036": {
-      "test": true,
-      "preference": "Fraction_General",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler x plus y, und Nenner x minus y"
     },
     "Frac037": {
-      "test": true,
-      "preference": "Fraction_General",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler x plus y, und Nenner x minus y, plus, Bruch mit Zähler 2, und Nenner 3"
     },
     "Frac038": {
-      "test": true,
-      "preference": "Fraction_General",
-      "mathml": "<math><mrow><mfrac><mrow><mtext>miles</mtext></mrow><mrow><mtext>gallon</mtext></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler miles, und Nenner gallon"
     },
     "Frac039": {
-      "test": true,
-      "preference": "Fraction_General",
-      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mtext>miles</mtext></mrow><mrow><mn>3</mn><mtext>gallons</mtext></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler 2 miles, und Nenner 3 gallons"
     },
     "Frac040": {
-      "test": true,
-      "preference": "Fraction_FracOver",
-      "mathml": "<math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>"
+      "speech": "Bruch 1 geteilt durch 2"
     },
     "Frac041": {
-      "test": true,
-      "preference": "Fraction_FracOver",
-      "mathml": "<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32</mn></mrow></mfrac></mrow></math>"
+      "speech": "Bruch 12 geteilt durch 32"
     },
     "Frac042": {
-      "test": true,
-      "preference": "Fraction_FracOver",
-      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn></mrow><mrow><mn>13</mn></mrow></mfrac></mrow></math>"
+      "speech": "Bruch 2 plus 3 geteilt durch 13"
     },
     "Frac043": {
-      "test": true,
-      "preference": "Fraction_FracOver",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mn>2</mn></mfrac></mrow></math>"
+      "speech": "Bruch x plus y geteilt durch 2"
     },
     "Frac044": {
-      "test": true,
-      "preference": "Fraction_FracOver",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></mrow></math>"
+      "speech": "Bruch x plus y geteilt durch x minus y"
     },
     "Frac045": {
-      "test": true,
-      "preference": "Fraction_FracOver",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></math>"
+      "speech": "Bruch x plus y geteilt durch x minus y, plus, Bruch 2 geteilt durch 3"
     },
     "Frac046": {
-      "test": true,
-      "preference": "Fraction_FracOver",
-      "mathml": "<math><mrow><mfrac><mrow><mtext>miles</mtext></mrow><mrow><mtext>gallon</mtext></mrow></mfrac></mrow></math>"
+      "speech": "Bruch miles geteilt durch gallon"
     },
     "Frac047": {
-      "test": true,
-      "preference": "Fraction_FracOver",
-      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mtext>miles</mtext></mrow><mrow><mn>3</mn><mtext>gallons</mtext></mrow></mfrac></mrow></math>"
+      "speech": "Bruch 2 miles geteilt durch 3 gallons"
     },
     "Frac048": {
-      "test": true,
-      "preference": "Fraction_Per",
-      "mathml": "<math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>"
+      "speech": "1 per 2"
     },
     "Frac049": {
-      "test": true,
-      "preference": "Fraction_Per",
-      "mathml": "<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32</mn></mrow></mfrac></mrow></math>"
+      "speech": "12 per 32"
     },
     "Frac050": {
-      "test": true,
-      "preference": "Fraction_Per",
-      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn></mrow><mrow><mn>13</mn></mrow></mfrac></mrow></math>"
+      "speech": "2 plus 3 per 13"
     },
     "Frac051": {
-      "test": true,
-      "preference": "Fraction_Per",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mn>2</mn></mfrac></mrow></math>"
+      "speech": "x plus y per 2"
     },
     "Frac052": {
-      "test": true,
-      "preference": "Fraction_Per",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></mrow></math>"
+      "speech": "x plus y per x minus y"
     },
     "Frac053": {
-      "test": true,
-      "preference": "Fraction_Per",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></math>"
+      "speech": "x plus y per x minus y, plus, 2 per 3"
     },
     "Frac054": {
-      "test": true,
-      "preference": "Fraction_Per",
-      "mathml": "<math><mrow><mfrac><mrow><mtext>miles</mtext></mrow><mrow><mtext>gallon</mtext></mrow></mfrac></mrow></math>"
+      "speech": "miles per gallon"
     },
     "Frac055": {
-      "test": true,
-      "preference": "Fraction_Per",
-      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mtext>miles</mtext></mrow><mrow><mn>3</mn><mtext>gallons</mtext></mrow></mfrac></mrow></math>"
+      "speech": "2 miles per 3 gallons"
     },
     "Frac056": {
-      "test": true,
-      "preference": "Fraction_Ordinal",
-      "mathml": "<math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>"
+      "speech": "ein halb"
     },
     "Frac057": {
-      "test": true,
-      "preference": "Fraction_Ordinal",
-      "mathml": "<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32</mn></mrow></mfrac></mrow></math>"
+      "speech": "zwölf zweiunddreißigstel"
     },
     "Frac058": {
-      "test": true,
-      "preference": "Fraction_Ordinal",
-      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn></mrow><mrow><mn>13</mn></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler 2 plus 3, und Nenner 13"
     },
     "Frac059": {
-      "test": true,
-      "preference": "Fraction_Ordinal",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mn>2</mn></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler x plus y, und Nenner 2"
     },
     "Frac060": {
-      "test": true,
-      "preference": "Fraction_Ordinal",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler x plus y, und Nenner x minus y"
     },
     "Frac061": {
-      "test": true,
-      "preference": "Fraction_Ordinal",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler x plus y, und Nenner x minus y, plus zwei drittel"
     },
     "Frac062": {
-      "test": true,
-      "preference": "Fraction_Ordinal",
-      "mathml": "<math><mrow><mfrac><mrow><mtext>miles</mtext></mrow><mrow><mtext>gallon</mtext></mrow></mfrac></mrow></math>"
+      "speech": "miles geteilt durch gallon"
     },
     "Frac063": {
-      "test": true,
-      "preference": "Fraction_Ordinal",
-      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mtext>miles</mtext></mrow><mrow><mn>3</mn><mtext>gallons</mtext></mrow></mfrac></mrow></math>"
+      "speech": "2 miles geteilt durch 3 gallons"
     },
     "Frac064": {
-      "test": true,
-      "preference": "Fraction_EndFrac",
-      "mathml": "<math><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>"
+      "speech": "ein halb"
     },
     "Frac065": {
-      "test": true,
-      "preference": "Fraction_EndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mn>12</mn></mrow><mrow><mn>32</mn></mrow></mfrac></mrow></math>"
+      "speech": "12 geteilt durch 32, Ende Bruch"
     },
     "Frac066": {
-      "test": true,
-      "preference": "Fraction_EndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>3</mn></mrow><mrow><mn>13</mn></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler 2 plus 3, und Nenner 13, Ende Bruch"
     },
     "Frac067": {
-      "test": true,
-      "preference": "Fraction_EndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mn>2</mn></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler x plus y, und Nenner 2, Ende Bruch"
     },
     "Frac068": {
-      "test": true,
-      "preference": "Fraction_EndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler x plus y, und Nenner x minus y, Ende Bruch"
     },
     "Frac069": {
-      "test": true,
-      "preference": "Fraction_EndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler x plus y, und Nenner x minus y, Ende Bruch, plus zwei drittel"
     },
     "Frac070": {
-      "test": true,
-      "preference": "Fraction_EndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mtext>miles</mtext></mrow><mrow><mtext>gallons</mtext></mrow></mfrac></mrow></math>"
+      "speech": "miles geteilt durch gallons"
     },
     "Frac071": {
-      "test": true,
-      "preference": "Fraction_EndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mtext>miles</mtext></mrow><mrow><mn>3</mn><mtext>gallons</mtext></mrow></mfrac></mrow></math>"
+      "speech": "2 miles geteilt durch 3 gallons"
     },
     "_comment2_": " Fraction (with Text in Numerator and/or denominator)",
     "FrTxt001": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mn>2</mn><mtext></mtext><mtext>miles</mtext></mrow><mrow><mn>3</mn><mtext></mtext><mtext>gallons</mtext></mrow></mfrac></mrow></math>"
+      "speech": "2 miles geteilt durch 3 gallons"
     },
     "FrTxt002": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mtext>rise</mtext></mrow><mrow><mtext>run</mtext></mrow></mfrac></mrow></math>"
+      "speech": "rise geteilt durch run"
     },
     "FrTxt003": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mfrac><mtext>successful outcomes</mtext><mtext>total outcomes</mtext></mfrac></math>"
+      "speech": "successful outcomes geteilt durch total outcomes"
     },
     "FrTxt004": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mn>6</mn><mtext>ways of rolling a 7</mtext></mrow><mrow><mn>36</mn><mtext>ways of rolling the pair of dice</mtext></mrow></mfrac></mrow></math>"
+      "speech": "6 ways of rolling a 7 geteilt durch 36 ways of rolling the pair of dice"
     },
     "_comment3_": " Nested Fractions",
     "NestFrac001": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "ein halb geteilt durch ein drittel"
     },
     "NestFrac002": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mn>1</mn><mrow><mfrac><mn>2</mn><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler 1, und Nenner, 2 geteilt durch ein drittel"
     },
     "NestFrac003": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mn>3</mn></mfrac></mrow></math>"
+      "speech": "ein halb geteilt durch 3"
     },
     "NestFrac004": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mn>1</mn><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "1 geteilt durch zwei drittel"
     },
     "NestFrac005": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mfrac><mrow><mn>11</mn></mrow><mrow><mn>32</mn></mrow></mfrac></mrow><mrow><mfrac><mrow><mn>16</mn></mrow><mrow><mn>51</mn></mrow></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler, 11 geteilt durch 32, und Nenner, 16 geteilt durch 51"
     },
     "NestFrac006": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mn>11</mn></mrow><mrow><mfrac><mrow><mn>32</mn></mrow><mrow><mfrac><mrow><mn>16</mn></mrow><mrow><mn>51</mn></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler 11, und Nenner, Bruch mit Zähler 32, und Nenner, 16 geteilt durch 51"
     },
     "NestFrac007": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mfrac><mn>4</mn><mi>x</mi></mfrac></mrow><mn>2</mn></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler 1 plus, 4 geteilt durch x, und Nenner 2"
     },
     "NestFrac008": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mn>3</mn><mrow><mn>2</mn><mo>+</mo><mfrac><mn>4</mn><mi>x</mi></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler 3, und Nenner 2 plus, 4 geteilt durch x"
     },
     "NestFrac009": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mfrac><mrow><mn>10</mn></mrow><mrow><mn>22</mn></mrow></mfrac></mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler, 10 geteilt durch 22, und Nenner ein halb"
     },
     "NestFrac010": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow><mrow><mn>1</mn><mo>−</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler 1 plus zwei drittel, und Nenner 1 minus zwei drittel"
     },
     "NestFrac011": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mfrac><mi>x</mi><mn>2</mn></mfrac></mrow><mrow><mn>1</mn><mo>−</mo><mfrac><mi>x</mi><mn>2</mn></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler 1 plus, x geteilt durch 2, und Nenner 1 minus, x geteilt durch 2"
     },
     "NestFrac012": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></mfrac><mo>+</mo><mn>1</mn></mrow><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler, Bruch mit Zähler x plus 1, und Nenner x minus 1, plus 1, und Nenner x plus 1"
     },
     "NestFrac013": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mrow><mi>x</mi><mo>−</mo><mn>4</mn></mrow></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mrow><mi>x</mi><mo>+</mo><mfrac><mn>1</mn><mrow><mn>16</mn></mrow></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler, Bruch mit Zähler x plus 1, und Nenner x minus 4, plus ein halb, und Nenner x plus, 1 geteilt durch 16"
     },
     "NestFrac014": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mn>1</mn><mo>+</mo><mfrac><mi>x</mi><mrow><mn>1</mn><mo>+</mo><mfrac><mn>2</mn><mi>x</mi></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "1 plus, Bruch mit Zähler x, und Nenner 1 plus, 2 geteilt durch x"
     },
     "NestFrac015": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mn>1</mn><mo>+</mo><mfrac><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow><mrow><mn>1</mn><mo>+</mo><mfrac><mn>2</mn><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "1 plus, Bruch mit Zähler x plus 3, und Nenner 1 plus, Bruch mit Zähler 2, und Nenner x plus 3"
     },
     "NestFrac016": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "1 plus, Bruch mit Zähler 1, und Nenner 1 plus, Bruch mit Zähler 1, und Nenner 1 plus, Bruch mit Zähler 1, und Nenner 1 plus 1"
     },
     "NestFrac017": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mo>⋯</mo></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "1 plus, Bruch mit Zähler 1, und Nenner 1 plus, Bruch mit Zähler 1, und Nenner 1 plus, Bruch mit Zähler 1, und Nenner 1 plus Zentrierte horizontale Ellipse"
     },
     "NestFrac018": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>+</mo><mo>⋯</mo></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "a Index 0, plus, Bruch mit Zähler 1, und Nenner, a Index 1, plus, Bruch mit Zähler 1, und Nenner, a Index 2, plus, Bruch mit Zähler 1, und Nenner, a Index 3, plus Zentrierte horizontale Ellipse"
     },
     "NestFrac019": {
-      "test": true,
-      "preference": "Fraction_EndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "ein halb geteilt durch ein drittel"
     },
     "NestFrac020": {
-      "test": true,
-      "preference": "Fraction_EndFrac",
-      "mathml": "<math><mrow><mfrac><mn>1</mn><mrow><mfrac><mn>2</mn><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler 1, und Nenner, 2 geteilt durch ein drittel, Ende Bruch"
     },
     "NestFrac021": {
-      "test": true,
-      "preference": "Fraction_EndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mn>3</mn></mfrac></mrow></math>"
+      "speech": "ein halb geteilt durch 3, Ende Bruch"
     },
     "NestFrac022": {
-      "test": true,
-      "preference": "Fraction_EndFrac",
-      "mathml": "<math><mrow><mfrac><mn>1</mn><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "1 geteilt durch zwei drittel, Ende Bruch"
     },
     "NestFrac023": {
-      "test": true,
-      "preference": "Fraction_EndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mfrac><mrow><mn>11</mn></mrow><mrow><mn>32</mn></mrow></mfrac></mrow><mrow><mfrac><mrow><mn>16</mn></mrow><mrow><mn>51</mn></mrow></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler, 11 geteilt durch 32, und Nenner, 16 geteilt durch 51, Ende Bruch"
     },
     "NestFrac024": {
-      "test": true,
-      "preference": "Fraction_EndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mn>11</mn></mrow><mrow><mfrac><mrow><mn>32</mn></mrow><mrow><mfrac><mrow><mn>16</mn></mrow><mrow><mn>51</mn></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler 11, und Nenner, Bruch mit Zähler 32, und Nenner, 16 geteilt durch 51, Ende Bruch"
     },
     "NestFrac025": {
-      "test": true,
-      "preference": "Fraction_EndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mfrac><mn>4</mn><mi>x</mi></mfrac></mrow><mn>2</mn></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler 1 plus, 4 geteilt durch x, und Nenner 2, Ende Bruch"
     },
     "NestFrac026": {
-      "test": true,
-      "preference": "Fraction_EndFrac",
-      "mathml": "<math><mrow><mfrac><mn>3</mn><mrow><mn>2</mn><mo>+</mo><mfrac><mn>4</mn><mi>x</mi></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler 3, und Nenner 2 plus, 4 geteilt durch x, Ende Bruch"
     },
     "NestFrac027": {
-      "test": true,
-      "preference": "Fraction_EndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mfrac><mrow><mn>10</mn></mrow><mrow><mn>22</mn></mrow></mfrac></mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler, 10 geteilt durch 22, und Nenner ein halb, Ende Bruch"
     },
     "NestFrac028": {
-      "test": true,
-      "preference": "Fraction_EndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow><mrow><mn>1</mn><mo>−</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler 1 plus zwei drittel, und Nenner 1 minus zwei drittel, Ende Bruch"
     },
     "NestFrac029": {
-      "test": true,
-      "preference": "Fraction_EndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mfrac><mi>x</mi><mn>2</mn></mfrac></mrow><mrow><mn>1</mn><mo>−</mo><mfrac><mi>x</mi><mn>2</mn></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler 1 plus, x geteilt durch 2, und Nenner 1 minus, x geteilt durch 2, Ende Bruch"
     },
     "NestFrac030": {
-      "test": true,
-      "preference": "Fraction_EndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></mfrac><mo>+</mo><mn>1</mn></mrow><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler, Bruch mit Zähler x plus 1, und Nenner x minus 1, plus 1, und Nenner x plus 1, Ende Bruch"
     },
     "NestFrac031": {
-      "test": true,
-      "preference": "Fraction_EndFrac",
-      "mathml": "<math><mrow><mfrac><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mrow><mi>x</mi><mo>−</mo><mn>4</mn></mrow></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mrow><mi>x</mi><mo>+</mo><mfrac><mn>1</mn><mrow><mn>16</mn></mrow></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler, Bruch mit Zähler x plus 1, und Nenner x minus 4, plus ein halb, und Nenner x plus, 1 geteilt durch 16, Ende Bruch"
     },
     "NestFrac032": {
-      "test": true,
-      "preference": "Fraction_EndFrac",
-      "mathml": "<math><mrow><mn>1</mn><mo>+</mo><mfrac><mi>x</mi><mrow><mn>1</mn><mo>+</mo><mfrac><mn>2</mn><mi>x</mi></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "1 plus, Bruch mit Zähler x, und Nenner 1 plus, 2 geteilt durch x, Ende Bruch"
     },
     "NestFrac033": {
-      "test": true,
-      "preference": "Fraction_EndFrac",
-      "mathml": "<math><mrow><mn>1</mn><mo>+</mo><mfrac><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow><mrow><mn>1</mn><mo>+</mo><mfrac><mn>2</mn><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "1 plus, Bruch mit Zähler x plus 3, und Nenner 1 plus, Bruch mit Zähler 2, und Nenner x plus 3, Ende Bruch"
     },
     "NestFrac034": {
-      "test": true,
-      "preference": "Fraction_EndFrac",
-      "mathml": "<math><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "1 plus, Bruch mit Zähler 1, und Nenner 1 plus, Bruch mit Zähler 1, und Nenner 1 plus, Bruch mit Zähler 1, und Nenner 1 plus 1, Ende Bruch"
     },
     "NestFrac035": {
-      "test": true,
-      "preference": "Fraction_EndFrac",
-      "mathml": "<math><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mo>⋯</mo></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "1 plus, Bruch mit Zähler 1, und Nenner 1 plus, Bruch mit Zähler 1, und Nenner 1 plus, Bruch mit Zähler 1, und Nenner 1 plus Zentrierte horizontale Ellipse, Ende Bruch"
     },
     "NestFrac036": {
-      "test": true,
-      "preference": "Fraction_EndFrac",
-      "mathml": "<math><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>+</mo><mo>⋯</mo></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow></math>"
+      "speech": "a Index 0, plus, Bruch mit Zähler 1, und Nenner, a Index 1, plus, Bruch mit Zähler 1, und Nenner, a Index 2, plus, Bruch mit Zähler 1, und Nenner, a Index 3, plus Zentrierte horizontale Ellipse, Ende Bruch"
     },
     "_comment4_": " Fractions with Functions",
     "Fracfunct001": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mfrac></mrow></math>"
+      "speech": "f von x, geteilt durch g von x"
     },
     "Fracfunct002": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>+</mo><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler f von x, plus g von x, und Nenner g von x"
     },
     "Fracfunct003": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler f von, Klammer auf, x plus 1, Klammer zu, und Nenner g von x"
     },
     "Fracfunct004": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mn>2</mn></mfrac></mrow></math>"
+      "speech": "f von x, geteilt durch 2"
     },
     "Fracfunct005": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mn>2</mn><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mfrac></mrow></math>"
+      "speech": "2 geteilt durch f von x"
     },
     "Fracfunct006": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mn>2</mn><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>+</mo><mi>g</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy=\"false\">)</mo></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler 2, und Nenner g von x, plus g von, Klammer auf, x plus 1, Klammer zu"
     },
     "Fracfunct007": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mi>sin</mi><mi>x</mi></mrow><mrow><mi>cos</mi><mi>x</mi></mrow></mfrac></mrow></math>"
+      "speech": "Sinus x geteilt durch Kosinus x"
     },
     "Fracfunct008": {
-      "test": false,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo></mrow><mrow><mi>cos</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo></mrow></mfrac></mrow></math>"
+      "speech": ""
     },
     "Fracfunct009": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mi>cos</mi><mi>x</mi></mrow><mrow><mi>cos</mi><mi>x</mi></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler Sinus x plus Kosinus x, und Nenner Kosinus x"
     },
     "Fracfunct010": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mi>sin</mi><mn>2</mn><mi>x</mi></mrow><mrow><mi>cos</mi><mn>3</mn><mi>x</mi></mrow></mfrac></mrow></math>"
+      "speech": "Sinus 2 x geteilt durch Kosinus 3 x"
     },
     "Fracfunct011": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler, der Sinus von, Klammer auf, x plus y, Klammer zu, und Nenner, der Kosinus von, Klammer auf, x plus y, Klammer zu"
     },
     "Fracfunct012": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mn>3</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math>"
+      "speech": "f von 2 x, geteilt durch g von 3 x"
     },
     "Fracfunct013": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mi>log</mi><mi>x</mi></mrow><mrow><mi>log</mi><mi>y</mi></mrow></mfrac></mrow></math>"
+      "speech": "Logarithmus x geteilt durch Logarithmus y"
     },
     "Fracfunct014": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mi>log</mi><mn>2</mn><mi>x</mi></mrow><mrow><mi>log</mi><mn>3</mn><mi>y</mi></mrow></mfrac></mrow></math>"
+      "speech": "Logarithmus 2 x geteilt durch Logarithmus 3 y"
     },
     "Fracfunct015": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mi>x</mi></mrow><mrow><msub><mrow><mi>log</mi></mrow><mn>5</mn></msub><mi>y</mi></mrow></mfrac></mrow></math>"
+      "speech": "der Logarithmus Basis 10 von, x, geteilt durch, der Logarithmus Basis 5 von, y"
     },
     "Fracfunct016": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mn>2</mn><mi>x</mi></mrow><mrow><msub><mrow><mi>log</mi></mrow><mn>5</mn></msub><mn>3</mn><mi>y</mi></mrow></mfrac></mrow></math>"
+      "speech": "der Logarithmus Basis 10 von, 2 x, geteilt durch, der Logarithmus Basis 5 von, 3 y"
     },
     "Fracfunct017": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>log</mi><mi>y</mi></mrow></mfrac></mrow></math>"
+      "speech": "Bruch mit Zähler, der Logarithmus von, Klammer auf, x plus 1, Klammer zu, und Nenner Logarithmus y"
     },
     "Fracfunct018": {
-      "test": true,
-      "preference": "Fraction_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><msub><mi>f</mi><mn>1</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mrow><msub><mi>g</mi><mn>1</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mfrac></mrow></math>"
+      "speech": "f Index 1, von x, geteilt durch, g Index 1, von x"
     }
   }
 }

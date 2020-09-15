@@ -110,6 +110,7 @@ sre.TestRunner.prototype.executeJsonTests = function(testcase) {
   this.output('\nRunning ' + testcase.information + '\n');
   testcase.setUpTest();
   for (var test of testcase.jsonTests) {
+    if (!test.test) continue;
     this.executeJsonTest(test.name, goog.bind(testcase.method, testcase), testcase.pick(test));
   }
   testcase.tearDownTest();

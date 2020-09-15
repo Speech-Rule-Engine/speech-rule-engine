@@ -1,126 +1,82 @@
 {
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "GermanNamedSets",
+  "locale": "de",
+  "information": "ClearspeakGermanNamedSets rule tests.",
   "tests": {
     "_comment1_": " ClearSpeak Rules and Preferences Examples: Named Sets (Number Systems)",
     "_comment2_": " Named Sets (Number Systems)",
     "NumSys001": {
-      "test": true,
-      "preference": "default",
-      "mathml": "<mi>ℝ</mi>"
+      "speech": "die reellen Zahlen"
     },
     "NumSys001a": {
-      "test": true,
-      "preference": "default",
-      "mathml": "<mi mathvariant=\"double-struck\">R</mi>"
+      "speech": "die reellen Zahlen"
     },
     "NumSys002": {
-      "test": true,
-      "preference": "default",
-      "mathml": "<mi>ℂ</mi>"
+      "speech": "die komplexen Zahlen"
     },
     "NumSys002a": {
-      "test": true,
-      "preference": "default",
-      "mathml": "<mi mathvariant=\"double-struck\">C</mi>"
+      "speech": "die komplexen Zahlen"
     },
     "NumSys003": {
-      "test": true,
-      "preference": "default",
-      "mathml": "<mi>ℤ</mi>"
+      "speech": "die ganzen Zahlen"
     },
     "NumSys003a": {
-      "test": true,
-      "preference": "default",
-      "mathml": "<mi mathvariant=\"double-struck\">Z</mi>"
+      "speech": "die ganzen Zahlen"
     },
     "NumSys004": {
-      "test": true,
-      "preference": "default",
-      "mathml": "<mi>ℚ</mi>"
+      "speech": "die rationalen Zahlen"
     },
     "NumSys004a": {
-      "test": true,
-      "preference": "default",
-      "mathml": "<mi mathvariant=\"double-struck\">Q</mi>"
+      "speech": "die rationalen Zahlen"
     },
     "NumSys005": {
-      "test": true,
-      "preference": "default",
-      "mathml": "<mi>ℕ</mi>"
+      "speech": "die natürlichen Zahlen"
     },
     "NumSys005a": {
-      "test": true,
-      "preference": "default",
-      "mathml": "<mi mathvariant=\"double-struck\">N</mi>"
+      "speech": "die natürlichen Zahlen"
     },
     "NumSys005_1": {
-      "test": true,
-      "preference": "default",
-      "mathml": "<msub><mi>ℕ</mi><mn>0</mn></msub>"
+      "speech": "die natürlichen Zahlen mit Null"
     },
     "NumSys005_1a": {
-      "test": true,
-      "preference": "default",
-      "mathml": "<msub><mi mathvariant=\"double-struck\">N</mi><mn>0</mn></msub>"
+      "speech": "die natürlichen Zahlen mit Null"
     },
     "NumSys006": {
-      "test": true,
-      "preference": "default",
-      "mathml": "<mrow><msup><mi>ℤ</mi><mo>+</mo></msup></mrow>"
+      "speech": "die positiven ganzen Zahlen"
     },
     "NumSys006a": {
-      "test": true,
-      "preference": "default",
-      "mathml": "<mrow><msup><mi mathvariant=\"double-struck\">Z</mi><mo>+</mo></msup></mrow>"
+      "speech": "die positiven ganzen Zahlen"
     },
     "NumSys006_1": {
-      "test": true,
-      "preference": "default",
-      "mathml": "<mrow><msup><mi>ℤ</mi><mo>-</mo></msup></mrow>"
+      "speech": "die negativen ganzen Zahlen"
     },
     "NumSys006_1a": {
-      "test": true,
-      "preference": "default",
-      "mathml": "<mrow><msup><mi mathvariant=\"double-struck\">Z</mi><mo>-</mo></msup></mrow>"
+      "speech": "die negativen ganzen Zahlen"
     },
     "NumSys007": {
-      "test": true,
-      "preference": "default",
-      "mathml": "<mrow><msup><mi>ℝ</mi><mn>2</mn></msup></mrow>"
+      "speech": "r-zwei"
     },
     "NumSys007a": {
-      "test": true,
-      "preference": "default",
-      "mathml": "<mrow><msup><mi mathvariant=\"double-struck\">R</mi><mn>2</mn></msup></mrow>"
+      "speech": "r-zwei"
     },
     "NumSys008": {
-      "test": true,
-      "preference": "default",
-      "mathml": "<mrow><msup><mi>ℤ</mi><mn>3</mn></msup></mrow>"
+      "speech": "z-drei"
     },
     "NumSys008a": {
-      "test": true,
-      "preference": "default",
-      "mathml": "<mrow><msup><mi mathvariant=\"double-struck\">Z</mi><mn>3</mn></msup></mrow>"
+      "speech": "z-drei"
     },
     "NumSys009": {
-      "test": true,
-      "preference": "default",
-      "mathml": "<mrow><msup><mi>ℂ</mi><mi>n</mi></msup></mrow>"
+      "speech": "c-n"
     },
     "NumSys009a": {
-      "test": true,
-      "preference": "default",
-      "mathml": "<mrow><msup><mi mathvariant=\"double-struck\">C</mi><mi>n</mi></msup></mrow>"
+      "speech": "c-n"
     },
     "NumSys010": {
-      "test": true,
-      "preference": "default",
-      "mathml": "<mrow><msup><mi>ℝ</mi><mi>∞</mi></msup></mrow>"
+      "speech": "r-unendlich"
     },
     "NumSys010a": {
-      "test": true,
-      "preference": "default",
-      "mathml": "<mrow><msup><mi mathvariant=\"double-struck\">R</mi><mi>∞</mi></msup></mrow>"
+      "speech": "r-unendlich"
     }
   }
 }

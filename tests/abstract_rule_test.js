@@ -251,7 +251,6 @@ sre.AbstractRuleTest.prototype.prepare = function() {
       console.warn('No results specified for test: ' + key);
       continue;
     }
-    if (!json.test) continue;
     json.name = key;
     results.push(Object.assign(json, speech));
     delete output[key];
@@ -259,7 +258,6 @@ sre.AbstractRuleTest.prototype.prepare = function() {
   for (key of Object.keys(output)) {
     if (key.match(/^_/)) continue;
     json = output[key];
-    if (!json.test) continue;
     json.name = key;
     results.push(json);
   }

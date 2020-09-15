@@ -1,112 +1,74 @@
 {
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "GermanCapitalLetters",
+  "locale": "de",
+  "information": "ClearspeakGermanCapitalLetters rule tests.",
   "tests": {
     "_comment1_": " Capital Letters",
     "_comment2_": " TODO: (QUESTION) This is does not seem to follow the fraction rules.",
     "Cap001": {
-      "test": true,
-      "preference": "Caps_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mi>sin</mi><mi>A</mi></mrow><mi>a</mi></mfrac><mo>=</mo><mfrac><mrow><mi>sin</mi><mi>B</mi></mrow><mi>b</mi></mfrac></mrow></math>"
+      "speech": "Sinus A geteilt durch a, ist gleich, Sinus B geteilt durch b"
     },
     "Cap002": {
-      "test": true,
-      "preference": "Caps_Auto",
-      "mathml": "<math><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>=</mo><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>2</mn><mi>a</mi><mi>b</mi><mi>cos</mi><mi>C</mi></mrow></math>"
+      "speech": "c Quadrat ist gleich a Quadrat plus b Quadrat minus 2 a b Kosinus C"
     },
     "Cap003": {
-      "test": true,
-      "preference": "Caps_Auto",
-      "mathml": "<math><mrow><mi>tan</mi><mi>A</mi><mo>=</mo><mfrac><mi>a</mi><mi>b</mi></mfrac></mrow></math>"
+      "speech": "Tangens A ist gleich, a geteilt durch b"
     },
     "Cap004": {
-      "test": true,
-      "preference": "Caps_Auto",
-      "mathml": "<math><mrow><mi>A</mi><mi>B</mi></mrow></math>"
+      "speech": "A B"
     },
     "Cap005": {
-      "test": true,
-      "preference": "Caps_Auto",
-      "mathml": "<math><mrow><mi>a</mi><mi>A</mi></mrow></math>"
+      "speech": "a A"
     },
     "Cap006": {
-      "test": true,
-      "preference": "Caps_Auto",
-      "mathml": "<math><mrow><mi>b</mi><mi>A</mi></mrow></math>"
+      "speech": "b A"
     },
     "Cap007": {
-      "test": true,
-      "preference": "Caps_Auto",
-      "mathml": "<math><mrow><mi>B</mi><mi>a</mi></mrow></math>"
+      "speech": "B a"
     },
     "Cap008": {
-      "test": true,
-      "preference": "Caps_Auto",
-      "mathml": "<math><mrow><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C</mi></mrow></math>"
+      "speech": "Winkel A B C"
     },
     "Cap009": {
-      "test": true,
-      "preference": "Caps_Auto",
-      "mathml": "<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C</mi></mrow></math>"
+      "speech": "das Maß des Winkels A B C"
     },
     "Cap010": {
-      "test": true,
-      "preference": "Caps_Auto",
-      "mathml": "<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi></mrow></math>"
+      "speech": "das Maß des Winkels A"
     },
     "_comment3_": " TODO: (QUESTION) This is does not seem to follow the fraction rules.",
     "Cap011": {
-      "test": true,
-      "preference": "Caps_SayCaps",
-      "mathml": "<math><mrow><mfrac><mrow><mi>sin</mi><mi>A</mi></mrow><mi>a</mi></mfrac><mo>=</mo><mfrac><mrow><mi>sin</mi><mi>B</mi></mrow><mi>b</mi></mfrac></mrow></math>"
+      "speech": "Sinus großes A geteilt durch a, ist gleich, Sinus großes B geteilt durch b"
     },
     "Cap012": {
-      "test": true,
-      "preference": "Caps_SayCaps",
-      "mathml": "<math><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>=</mo><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>2</mn><mi>a</mi><mi>b</mi><mi>cos</mi><mi>C</mi></mrow></math>"
+      "speech": "c Quadrat ist gleich a Quadrat plus b Quadrat minus 2 a b Kosinus großes C"
     },
     "Cap013": {
-      "test": true,
-      "preference": "Caps_SayCaps",
-      "mathml": "<math><mrow><mi>tan</mi><mi>A</mi><mo>=</mo><mfrac><mi>a</mi><mi>b</mi></mfrac></mrow></math>"
+      "speech": "Tangens großes A ist gleich, a geteilt durch b"
     },
     "Cap014": {
-      "test": true,
-      "preference": "Caps_SayCaps",
-      "mathml": "<math><mrow><mi>A</mi><mi>B</mi></mrow></math>"
+      "speech": "großes A, großes B"
     },
     "Cap015": {
-      "test": true,
-      "preference": "Caps_SayCaps",
-      "mathml": "<math><mrow><mi>a</mi><mi>A</mi></mrow></math>"
+      "speech": "a, großes A"
     },
     "Cap016": {
-      "test": true,
-      "preference": "Caps_SayCaps",
-      "mathml": "<math><mrow><mi>b</mi><mi>A</mi></mrow></math>"
+      "speech": "b, großes A"
     },
     "Cap017": {
-      "test": true,
-      "preference": "Caps_SayCaps",
-      "mathml": "<math><mrow><mi>B</mi><mi>a</mi></mrow></math>"
+      "speech": "großes B, a"
     },
     "Cap018": {
-      "test": true,
-      "preference": "Caps_SayCaps",
-      "mathml": "<math><mrow><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C</mi></mrow></math>"
+      "speech": "Winkel großes A, großes B, großes C"
     },
     "Cap019": {
-      "test": true,
-      "preference": "Caps_SayCaps",
-      "mathml": "<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C</mi></mrow></math>"
+      "speech": "das Maß des Winkels großes A, großes B, großes C"
     },
     "Cap020": {
-      "test": true,
-      "preference": "Caps_SayCaps",
-      "mathml": "<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi></mrow></math>"
+      "speech": "das Maß des Winkels großes A"
     },
     "Cap020a": {
-      "test": true,
-      "preference": "Caps_SayCaps",
-      "mathml": "<math><mrow><mo>∠</mo><mi>A</mi></mrow></math>"
+      "speech": "Winkel großes A"
     }
   }
 }
