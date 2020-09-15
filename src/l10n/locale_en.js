@@ -178,6 +178,10 @@ sre.Locale.en = {
     JOINER_FRAC: ''
   },
 
+  PLURAL: function(unit) {
+    return (/.*s$/.test(unit)) ? unit : unit + 's';
+  },
+
   PLURAL_UNIT: {
     'foot': 'feet',
     'inch': 'inches',
