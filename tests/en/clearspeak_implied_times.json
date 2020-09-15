@@ -3,6 +3,7 @@
   "name": "EnglishImpliedTimes",
   "locale": "en",
   "information": "ClearspeakEnglishImpliedTimes rule tests.",
+  "exclude": [],
   "tests": {
     "_comment1_": " Implied Times",
     "ImpTimes001": {

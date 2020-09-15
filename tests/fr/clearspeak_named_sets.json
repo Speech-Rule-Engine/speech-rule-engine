@@ -3,6 +3,7 @@
   "name": "FrenchNamedSets",
   "locale": "fr",
   "information": "ClearspeakFrenchNamedSets rule tests.",
+  "exclude": [],
   "tests": {
     "_comment1_": " ClearSpeak Rules and Preferences Examples: Named Sets (Number Systems)",
     "_comment2_": " Named Sets (Number Systems)",

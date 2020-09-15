@@ -3,6 +3,7 @@
   "name": "EnglishSetsEnclosedInSetBrackets",
   "locale": "en",
   "information": "ClearspeakEnglishSetsEnclosedInSetBrackets rule tests.",
+  "exclude": [],
   "tests": {
     "_comment1_": " Sets Enclosed in Set Brackets",
     "Set001": {

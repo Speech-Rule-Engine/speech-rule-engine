@@ -3,6 +3,7 @@
   "name": "EnglishAbsoluteValue",
   "locale": "en",
   "information": "ClearspeakEnglishAbsoluteValue rule tests.",
+  "exclude": [],
   "tests": {
     "_comment1_": " Absolute Value",
     "Abs01": {

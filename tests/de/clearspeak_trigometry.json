@@ -3,6 +3,7 @@
   "name": "GermanTrigometry",
   "locale": "de",
   "information": "ClearspeakGermanTrigometry rule tests.",
+  "exclude": [],
   "tests": {
     "_comment1_": " Trigonometry",
     "_comment2_": " Table 1: Basic Trigonometric Functions",

@@ -3,6 +3,7 @@
   "name": "FrenchExponents",
   "locale": "fr",
   "information": "ClearspeakFrenchExponents rule tests.",
+  "exclude": [],
   "tests": {
     "_comment1_": " Exponents",
     "Exp001": {

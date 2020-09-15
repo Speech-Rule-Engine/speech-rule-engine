@@ -3,6 +3,7 @@
   "name": "FrenchMultiLineEntries",
   "locale": "fr",
   "information": "ClearspeakFrenchMultiLineEntries rule tests.",
+  "exclude": [],
   "tests": {
     "_comment1_": " Multi-Line Entries Examples",
     "Multiline001": {

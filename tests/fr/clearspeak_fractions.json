@@ -3,6 +3,7 @@
   "name": "FrenchFractions",
   "locale": "fr",
   "information": "ClearspeakFrenchFractions rule tests.",
+  "exclude": [],
   "tests": {
     "_comment1_": " Fractions",
     "Frac001": {

@@ -3,6 +3,7 @@
   "name": "GermanAbsoluteValue",
   "locale": "de",
   "information": "ClearspeakGermanAbsoluteValue rule tests.",
+  "exclude": [],
   "tests": {
     "_comment1_": " Absolute Value",
     "Abs01": {

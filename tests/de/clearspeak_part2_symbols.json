@@ -3,6 +3,7 @@
   "name": "GermanPart2Symbols",
   "locale": "de",
   "information": "ClearspeakGermanPart2Symbols rule tests.",
+  "exclude": [],
   "tests": {
     "_comment1_": " Part 2: Symbols",
     "_comment2_": " Multiplication Symbol",

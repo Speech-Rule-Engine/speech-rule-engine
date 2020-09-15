@@ -3,6 +3,7 @@
   "name": "GermanLogarithms",
   "locale": "de",
   "information": "ClearspeakGermanLogarithms rule tests.",
+  "exclude": [],
   "tests": {
     "_comment1_": " Logarithms",
     "Log001": {

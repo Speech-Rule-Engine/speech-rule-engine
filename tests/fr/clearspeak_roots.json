@@ -3,6 +3,7 @@
   "name": "FrenchRoots",
   "locale": "fr",
   "information": "ClearspeakFrenchRoots rule tests.",
+  "exclude": [],
   "tests": {
     "_comment1_": " Roots",
     "Root001": {

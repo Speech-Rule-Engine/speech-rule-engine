@@ -3,6 +3,7 @@
   "name": "EnglishExponents",
   "locale": "en",
   "information": "ClearspeakEnglishExponents rule tests.",
+  "exclude": [],
   "tests": {
     "_comment1_": " Exponents",
     "Exp001": {

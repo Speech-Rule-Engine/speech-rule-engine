@@ -3,6 +3,7 @@
   "name": "FrenchParentheses",
   "locale": "fr",
   "information": "ClearspeakFrenchParentheses rule tests.",
+  "exclude": [],
   "tests": {
     "_comment1_": " Parentheses",
     "Paren001": {

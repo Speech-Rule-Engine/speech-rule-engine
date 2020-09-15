@@ -3,6 +3,7 @@
   "name": "FrenchLogarithms",
   "locale": "fr",
   "information": "ClearspeakFrenchLogarithms rule tests.",
+  "exclude": [],
   "tests": {
     "_comment1_": " Logarithms",
     "Log001": {

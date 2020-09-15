@@ -3,6 +3,7 @@
   "name": "GermanCapitalLetters",
   "locale": "de",
   "information": "ClearspeakGermanCapitalLetters rule tests.",
+  "exclude": [],
   "tests": {
     "_comment1_": " Capital Letters",
     "_comment2_": " TODO: (QUESTION) This is does not seem to follow the fraction rules.",

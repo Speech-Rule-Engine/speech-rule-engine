@@ -3,6 +3,7 @@
   "name": "FrenchMatricesAndCombinatorics",
   "locale": "fr",
   "information": "ClearspeakFrench Matrices, Vectors, and Combinatorics rule tests.",
+  "exclude": [],
   "tests": {
     "_comment1_": " ClearSpeak Rules and Preferences Examples: Matrices, Vectors, and",
     "_comment2_": " Combinatorics",

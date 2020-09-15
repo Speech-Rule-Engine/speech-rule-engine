@@ -3,6 +3,7 @@
   "name": "GermanPart3Adornments",
   "locale": "de",
   "information": "ClearspeakGermanPart3Adornments rule tests.",
+  "exclude": [],
   "tests": {
     "_comment1_": " Part 3: Adornments",
     "_comment2_": " Prime, Double Prime, and Triple Prime",

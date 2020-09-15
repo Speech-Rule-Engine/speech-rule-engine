@@ -3,6 +3,7 @@
   "name": "GermanMultiLineEntries",
   "locale": "de",
   "information": "ClearspeakGermanMultiLineEntries rule tests.",
+  "exclude": [],
   "tests": {
     "_comment1_": " Multi-Line Entries Examples",
     "Multiline001": {
