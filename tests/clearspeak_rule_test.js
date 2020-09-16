@@ -83,7 +83,7 @@ sre.ClearspeakRuleTest.locales = {
 };
 
 
-sre.ClearspeakRuleTest.baseDir = 'src';
+sre.ClearspeakRuleTest.baseDir = 'json/clearspeak';
 
 
 sre.ClearspeakRuleTest.tests = function() {
