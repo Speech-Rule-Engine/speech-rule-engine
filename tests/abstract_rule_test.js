@@ -229,6 +229,9 @@ sre.AbstractRuleTest.prototype.footer = function() {
 };
 
 
+/**
+ * @override
+ */
 sre.AbstractRuleTest.prototype.prepare = function() {
   sre.AbstractRuleTest.base(this, 'prepare');
   var baseTests = this.baseFile ? sre.TestUtil.loadJson(this.baseFile) : [];
@@ -264,5 +267,7 @@ sre.AbstractRuleTest.prototype.prepare = function() {
     results.push(json);
   }
   this.jsonTests = results;
-  throw warn;
+  if (warn.length) {
+    throw new sre.TestUtil.Error('Missing Results', warn);
+  }
 };

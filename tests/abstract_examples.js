@@ -20,7 +20,7 @@
 goog.provide('sre.AbstractExamples');
 
 goog.require('sre.AbstractJsonTest');
-goog.require('sre.Engine');
+goog.require('sre.TestUtil');
 goog.require('sre.ExamplesOutput');
 
 
@@ -104,7 +104,7 @@ sre.AbstractExamples.prototype.startExamples = function() {
     sre.SystemExternal.fs.openSync(this.examplesFile_, 'w+');
     sre.SystemExternal.fs.appendFileSync(this.examplesFile_, this.header());
   } catch (err) {
-    this.fileError_ = 'Bad file name ' + this.examplesFile_;
+    this.fileError_ = this.examplesFile_;
   }
 };
 
@@ -146,7 +146,7 @@ sre.AbstractExamples.prototype.endExamples = function() {
   this.examples_ = [];
   this.active_ = false;
   if (this.fileError_) {
-    throw new sre.Engine.Error(this.fileError_);
+    throw new sre.TestUtil.Error('Bad Filename', this.fileError_);
   }
 };
 
