@@ -130,7 +130,7 @@ sre.TestRunner.prototype.executeJsonTests = function(testcase) {
     }
     this.output('\nRunning ' + testcase.information + '\n');
     if (this.warn) {
-      for (var warn of e) {
+      for (var warn of e.value) {
         this.output('No results specified for test: ' + warn);
         this.output('\t[WARN]\n', sre.TestRunner.color_.ORANGE);
       }

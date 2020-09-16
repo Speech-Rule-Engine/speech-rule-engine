@@ -113,7 +113,7 @@ sre.ClearspeakRuleTest.tests = function() {
       test.jsonFile = locale + '/' + file;
       test.baseFile = sre.ClearspeakRuleTest.baseDir + '/' + file;
       test.locale = locale;
-      test.compare = locale === 'de';
+      test.compare = locale === 'de';  // tmp!
       test.setActive(sre.ClearspeakRuleTest.locales[locale]);
       test.startExamples();
       tests.push(test);

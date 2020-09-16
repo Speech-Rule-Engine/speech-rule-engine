@@ -16,7 +16,6 @@
 goog.provide('sre.SpeechEnglishTest');
 
 goog.require('sre.ClearspeakCharEnglishTest');
-goog.require('sre.ClearspeakEnglishTest');
 goog.require('sre.CollapseEnglishTest');
 goog.require('sre.DefaultCharEnglishTest');
 goog.require('sre.MathspeakCharEnglishTest');
@@ -46,5 +45,3 @@ sre.SpeechEnglishTest.testList = [
   sre.PrefixEnglishTest,
   sre.SummaryEnglishTest
 ];
-sre.SpeechEnglishTest.testList =
-    sre.SpeechEnglishTest.testList.concat(sre.ClearspeakEnglishTest.testList);
