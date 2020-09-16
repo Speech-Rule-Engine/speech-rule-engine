@@ -21,6 +21,7 @@ goog.provide('sre.Tests');
 
 goog.require('sre.BaseTests');
 goog.require('sre.BrailleNemethTest');
+goog.require('sre.ClearspeakRuleTest');
 goog.require('sre.SpeechEnglishTest');
 goog.require('sre.SpeechFrenchTest');
 goog.require('sre.SpeechGermanTest');
@@ -48,45 +49,12 @@ sre.Tests.prototype.run = function() {
     var obj = new test();
     this.runner.registerTest(obj);
   }
-  this.addJsonTestsTmp();
   this.runner.runTests();
   this.runner.summary();
   var timeOut = (new Date()).getTime();
   this.runner.output('Time for tests: ' + (timeOut - timeIn) + 'ms\n');
   // sre.AbstractCharacterTest.testOutput();
   process.exit(this.runner.success() ? 0 : 1);
-};
-
-
-sre.Tests.prototype.addJsonTestsTmp = function() {
-  let files = [
-    'clearspeak_absolute_value.json',
-    'clearspeak_capital_letters.json',
-    'clearspeak_exponents.json',
-    'clearspeak_fractions.json',
-    'clearspeak_functions.json',
-    'clearspeak_implied_times.json',
-    'clearspeak_logarithms.json',
-    'clearspeak_matrices_vectors_and_combinatorics.json',
-    'clearspeak_multi_line_entries.json',
-    'clearspeak_named_sets.json',
-    'clearspeak_parentheses.json',
-    'clearspeak_part2_symbols.json',
-    'clearspeak_part3_adornments.json',
-    'clearspeak_roots.json',
-    'clearspeak_sets_enclosed_in_set_brackets.json',
-    'clearspeak_trigometry.json'
-  ];
-  let locales = ['en', 'de', 'fr'];
-  
-  for (var locale of locales) {
-    for (var file of files) {
-      var test = new sre.ClearspeakRuleTest();
-      test.jsonFile = locale + '/' + file;
-      test.baseFile = 'src/' + file;
-      this.runner.registerTest(test);
-    }
-  }
 };
 
 
@@ -140,6 +108,9 @@ if (typeof warn !== 'undefined') {
   sre.Tests.getInstance().runner.warn = parseInt(warn, 10);
 }
 
+
+let tests = sre.ClearspeakRuleTest.tests();
+tests.forEach(x => sre.Tests.getInstance().runner.registerTest(x));
 /**
  * Execute tests.
  */

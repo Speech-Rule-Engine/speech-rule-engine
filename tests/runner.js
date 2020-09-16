@@ -119,17 +119,15 @@ sre.TestRunner.prototype.runTests = function() {
 };
 
 
-let html = {
-  'en': 'ClearspeakEnglish',
-  'de': 'ClearspeakGerman',
-  'fr': 'ClearspeakFrench'
-};
-
 sre.TestRunner.prototype.executeJsonTests = function(testcase) {
   try {
     testcase.prepare();
-  } catch (e)
-  {
+  } catch (e) {
+    if (e.message.match(/Bad\ filename/)) {
+      this.status_ = sre.TestRunner.Results.FAIL;
+      this.failedTests_.push(e.message + ' ' + e.value);
+      return;
+    }
     this.output('\nRunning ' + testcase.information + '\n');
     if (this.warn) {
       for (var warn of e) {
@@ -142,8 +140,6 @@ sre.TestRunner.prototype.executeJsonTests = function(testcase) {
       }
     }
   }
-  testcase.setActive(html[testcase.locale]);
-  testcase.startExamples();
   testcase.setUpTest();
   for (var test of testcase.jsonTests) {
     if (!test.test) continue;

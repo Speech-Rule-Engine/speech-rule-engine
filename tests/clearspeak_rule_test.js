@@ -74,3 +74,50 @@ sre.ClearspeakRuleTest.prototype.method = function(var_args) {
   let args = Array.prototype.slice.call(arguments, 0);
   this.executeRuleTest(args[0], args[1], args[2]);
 };
+
+
+sre.ClearspeakRuleTest.locales = {
+  'en': 'ClearspeakEnglish',
+  'de': 'ClearspeakGerman',
+  'fr': 'ClearspeakFrench'
+};
+
+
+sre.ClearspeakRuleTest.baseDir = 'src';
+
+
+sre.ClearspeakRuleTest.tests = function() {
+  let files = [
+    'clearspeak_absolute_value.json',
+    'clearspeak_capital_letters.json',
+    'clearspeak_exponents.json',
+    'clearspeak_fractions.json',
+    'clearspeak_functions.json',
+    'clearspeak_implied_times.json',
+    'clearspeak_issues.json',
+    'clearspeak_logarithms.json',
+    'clearspeak_matrices_vectors_and_combinatorics.json',
+    'clearspeak_multi_line_entries.json',
+    'clearspeak_named_sets.json',
+    'clearspeak_parentheses.json',
+    'clearspeak_part2_symbols.json',
+    'clearspeak_part3_adornments.json',
+    'clearspeak_roots.json',
+    'clearspeak_sets_enclosed_in_set_brackets.json',
+    'clearspeak_trigometry.json'
+  ];
+  var tests = [];
+  for (var locale of Object.keys(sre.ClearspeakRuleTest.locales)) {
+    for (var file of files) {
+      var test = new sre.ClearspeakRuleTest();
+      test.jsonFile = locale + '/' + file;
+      test.baseFile = sre.ClearspeakRuleTest.baseDir + '/' + file;
+      test.locale = locale;
+      test.compare = locale === 'de';
+      test.setActive(sre.ClearspeakRuleTest.locales[locale]);
+      test.startExamples();
+      tests.push(test);
+    }
+  }
+  return tests;
+};
