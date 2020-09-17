@@ -1,0 +1,1002 @@
+{
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "NobleGermanTest",
+  "information": "Steve Noble's samples German tests.",
+  "domain": "mathspeak",
+  "locale": "de",
+  "compare": true,
+  "active": "NobleSamplesGerman",
+  "exclude": [],
+  "tests": {
+    "Sample_1_default": {
+      "speech": "minus 5 ein fünftel minus 6 zwei drittel ist gleich"
+    },
+    "Sample_1_brief": {
+      "speech": "minus 5 ein fünftel minus 6 zwei drittel ist gleich"
+    },
+    "Sample_1_sbrief": {
+      "speech": "minus 5 ein fünftel minus 6 zwei drittel ist gleich"
+    },
+    "Sample_2_default": {
+      "speech": "minus 7 drei viertel minus Klammer auf minus 4 sieben achtel Klammer zu ist gleich"
+    },
+    "Sample_2_brief": {
+      "speech": "minus 7 drei viertel minus Klammer auf minus 4 sieben achtel Klammer zu ist gleich"
+    },
+    "Sample_2_sbrief": {
+      "speech": "minus 7 drei viertel minus Klammer auf minus 4 sieben achtel Klammer zu ist gleich"
+    },
+    "Sample_3_default": {
+      "speech": "minus 24,15 minus Klammer auf 13,7 Klammer zu ist gleich"
+    },
+    "Sample_3_brief": {
+      "speech": "minus 24,15 minus Klammer auf 13,7 Klammer zu ist gleich"
+    },
+    "Sample_3_sbrief": {
+      "speech": "minus 24,15 minus Klammer auf 13,7 Klammer zu ist gleich"
+    },
+    "Sample_4_default": {
+      "speech": "Klammer auf minus 4 Klammer zu mal 3 ist gleich minus 12"
+    },
+    "Sample_4_brief": {
+      "speech": "Klammer auf minus 4 Klammer zu mal 3 ist gleich minus 12"
+    },
+    "Sample_4_sbrief": {
+      "speech": "Klammer auf minus 4 Klammer zu mal 3 ist gleich minus 12"
+    },
+    "Sample_5_default": {
+      "speech": "minus 12 geteilt durch 3 ist gleich minus 4"
+    },
+    "Sample_5_brief": {
+      "speech": "minus 12 geteilt durch 3 ist gleich minus 4"
+    },
+    "Sample_5_sbrief": {
+      "speech": "minus 12 geteilt durch 3 ist gleich minus 4"
+    },
+    "Sample_6_default": {
+      "speech": "minus 12 geteilt durch Klammer auf minus 4 Klammer zu ist gleich 3"
+    },
+    "Sample_6_brief": {
+      "speech": "minus 12 geteilt durch Klammer auf minus 4 Klammer zu ist gleich 3"
+    },
+    "Sample_6_sbrief": {
+      "speech": "minus 12 geteilt durch Klammer auf minus 4 Klammer zu ist gleich 3"
+    },
+    "Sample_7_default": {
+      "speech": "6 mal 5"
+    },
+    "Sample_7_brief": {
+      "speech": "6 mal 5"
+    },
+    "Sample_7_sbrief": {
+      "speech": "6 mal 5"
+    },
+    "Sample_8_default": {
+      "speech": "6 mal Klammer auf minus 5 Klammer zu"
+    },
+    "Sample_8_brief": {
+      "speech": "6 mal Klammer auf minus 5 Klammer zu"
+    },
+    "Sample_8_sbrief": {
+      "speech": "6 mal Klammer auf minus 5 Klammer zu"
+    },
+    "Sample_9_default": {
+      "speech": "minus 6 mal 5"
+    },
+    "Sample_9_brief": {
+      "speech": "minus 6 mal 5"
+    },
+    "Sample_9_sbrief": {
+      "speech": "minus 6 mal 5"
+    },
+    "Sample_10_default": {
+      "speech": "minus 6 mal Klammer auf minus 5 Klammer zu"
+    },
+    "Sample_10_brief": {
+      "speech": "minus 6 mal Klammer auf minus 5 Klammer zu"
+    },
+    "Sample_10_sbrief": {
+      "speech": "minus 6 mal Klammer auf minus 5 Klammer zu"
+    },
+    "Sample_11_default": {
+      "speech": "minus 8 mal 7"
+    },
+    "Sample_11_brief": {
+      "speech": "minus 8 mal 7"
+    },
+    "Sample_11_sbrief": {
+      "speech": "minus 8 mal 7"
+    },
+    "Sample_12_default": {
+      "speech": "minus 8 mal Klammer auf minus 7 Klammer zu"
+    },
+    "Sample_12_brief": {
+      "speech": "minus 8 mal Klammer auf minus 7 Klammer zu"
+    },
+    "Sample_12_sbrief": {
+      "speech": "minus 8 mal Klammer auf minus 7 Klammer zu"
+    },
+    "Sample_13_default": {
+      "speech": "8 mal Klammer auf minus 7 Klammer zu"
+    },
+    "Sample_13_brief": {
+      "speech": "8 mal Klammer auf minus 7 Klammer zu"
+    },
+    "Sample_13_sbrief": {
+      "speech": "8 mal Klammer auf minus 7 Klammer zu"
+    },
+    "Sample_14_default": {
+      "speech": "8 mal 7"
+    },
+    "Sample_14_brief": {
+      "speech": "8 mal 7"
+    },
+    "Sample_14_sbrief": {
+      "speech": "8 mal 7"
+    },
+    "Sample_15_default": {
+      "speech": "m Winkel 1 ist gleich 30 Grad"
+    },
+    "Sample_15_brief": {
+      "speech": "m Winkel 1 ist gleich 30 Grad"
+    },
+    "Sample_15_sbrief": {
+      "speech": "m Winkel 1 ist gleich 30 Grad"
+    },
+    "Sample_16_default": {
+      "speech": "m Winkel 2 ist gleich 60 Grad"
+    },
+    "Sample_16_brief": {
+      "speech": "m Winkel 2 ist gleich 60 Grad"
+    },
+    "Sample_16_sbrief": {
+      "speech": "m Winkel 2 ist gleich 60 Grad"
+    },
+    "Sample_17_default": {
+      "speech": "m Winkel 1 plus m Winkel 2 ist gleich 90 Grad"
+    },
+    "Sample_17_brief": {
+      "speech": "m Winkel 1 plus m Winkel 2 ist gleich 90 Grad"
+    },
+    "Sample_17_sbrief": {
+      "speech": "m Winkel 1 plus m Winkel 2 ist gleich 90 Grad"
+    },
+    "Sample_18_default": {
+      "speech": "m Winkel großes M plus m Winkel großes N ist gleich 180 Grad"
+    },
+    "Sample_18_brief": {
+      "speech": "m Winkel großes M plus m Winkel großes N ist gleich 180 Grad"
+    },
+    "Sample_18_sbrief": {
+      "speech": "m Winkel großes M plus m Winkel großes N ist gleich 180 Grad"
+    },
+    "Sample_19_default": {
+      "speech": "großes A ist gleich ein halb b h"
+    },
+    "Sample_19_brief": {
+      "speech": "großes A ist gleich ein halb b h"
+    },
+    "Sample_19_sbrief": {
+      "speech": "großes A ist gleich ein halb b h"
+    },
+    "Sample_20_default": {
+      "speech": "Anfang Bruch area of triangle durch area of square Ende Bruch ist gleich Anfang Bruch 1 unit Quadrat durch 16 units Quadrat Ende Bruch"
+    },
+    "Sample_20_brief": {
+      "speech": "Anfang Bruch area of triangle durch area of square Ende Bruch ist gleich Anfang Bruch 1 unit Quadrat durch 16 units Quadrat Ende Bruch"
+    },
+    "Sample_20_sbrief": {
+      "speech": "Bruch area of triangle durch area of square Ende Bruch ist gleich Bruch 1 unit Quadrat durch 16 units Quadrat Ende Bruch"
+    },
+    "Sample_21_default": {
+      "speech": "0,6 Quadrat"
+    },
+    "Sample_21_brief": {
+      "speech": "0,6 Quadrat"
+    },
+    "Sample_21_sbrief": {
+      "speech": "0,6 Quadrat"
+    },
+    "Sample_22_default": {
+      "speech": "1,5 Quadrat"
+    },
+    "Sample_22_brief": {
+      "speech": "1,5 Quadrat"
+    },
+    "Sample_22_sbrief": {
+      "speech": "1,5 Quadrat"
+    },
+    "Sample_23_default": {
+      "speech": "4 Klammer auf 2 x plus 3 x Klammer zu"
+    },
+    "Sample_23_brief": {
+      "speech": "4 Klammer auf 2 x plus 3 x Klammer zu"
+    },
+    "Sample_23_sbrief": {
+      "speech": "4 Klammer auf 2 x plus 3 x Klammer zu"
+    },
+    "Sample_24_default": {
+      "speech": "36 plus 4 y minus 1 y Quadrat plus 5 y Quadrat minus 2"
+    },
+    "Sample_24_brief": {
+      "speech": "36 plus 4 y minus 1 y Quadrat plus 5 y Quadrat minus 2"
+    },
+    "Sample_24_sbrief": {
+      "speech": "36 plus 4 y minus 1 y Quadrat plus 5 y Quadrat minus 2"
+    },
+    "Sample_25_default": {
+      "speech": "Klammer auf 5 plus 9 Klammer zu minus 4 plus 3 ist gleich"
+    },
+    "Sample_25_brief": {
+      "speech": "Klammer auf 5 plus 9 Klammer zu minus 4 plus 3 ist gleich"
+    },
+    "Sample_25_sbrief": {
+      "speech": "Klammer auf 5 plus 9 Klammer zu minus 4 plus 3 ist gleich"
+    },
+    "Sample_26_default": {
+      "speech": "modifiziert oben großes B großes C mit Linker rechter Pfeil"
+    },
+    "Sample_26_brief": {
+      "speech": "mod oben großes B großes C mit Linker rechter Pfeil"
+    },
+    "Sample_26_sbrief": {
+      "speech": "mod oben großes B großes C mit Linker rechter Pfeil"
+    },
+    "Sample_27_default": {
+      "speech": "modifiziert oben großes P großes Q mit Pfeil nach rechts"
+    },
+    "Sample_27_brief": {
+      "speech": "mod oben großes P großes Q mit Pfeil nach rechts"
+    },
+    "Sample_27_sbrief": {
+      "speech": "mod oben großes P großes Q mit Pfeil nach rechts"
+    },
+    "Sample_28_default": {
+      "speech": "modifiziert oben großes G großes H mit Überstrich"
+    },
+    "Sample_28_brief": {
+      "speech": "mod oben großes G großes H mit Überstrich"
+    },
+    "Sample_28_sbrief": {
+      "speech": "mod oben großes G großes H mit Überstrich"
+    },
+    "Sample_29_default": {
+      "speech": "modifiziert oben großes W großes X mit Überstrich ungefähr gleich modifiziert oben großes Y großes Z mit Überstrich"
+    },
+    "Sample_29_brief": {
+      "speech": "mod oben großes W großes X mit Überstrich ungefähr gleich mod oben großes Y großes Z mit Überstrich"
+    },
+    "Sample_29_sbrief": {
+      "speech": "mod oben großes W großes X mit Überstrich ungefähr gleich mod oben großes Y großes Z mit Überstrich"
+    },
+    "Sample_30_default": {
+      "speech": "Winkel großes B großes E großes F"
+    },
+    "Sample_30_brief": {
+      "speech": "Winkel großes B großes E großes F"
+    },
+    "Sample_30_sbrief": {
+      "speech": "Winkel großes B großes E großes F"
+    },
+    "Sample_31_default": {
+      "speech": "Winkel großes B großes E großes D"
+    },
+    "Sample_31_brief": {
+      "speech": "Winkel großes B großes E großes D"
+    },
+    "Sample_31_sbrief": {
+      "speech": "Winkel großes B großes E großes D"
+    },
+    "Sample_32_default": {
+      "speech": "Winkel großes D großes E großes F"
+    },
+    "Sample_32_brief": {
+      "speech": "Winkel großes D großes E großes F"
+    },
+    "Sample_32_sbrief": {
+      "speech": "Winkel großes D großes E großes F"
+    },
+    "Sample_33_default": {
+      "speech": "x ist gleich Anfang Bruch minus b plus minus Anfang Quadratwurzel b Quadrat minus 4 a c Ende Quadratwurzel durch 2 a Ende Bruch"
+    },
+    "Sample_33_brief": {
+      "speech": "x ist gleich Anfang Bruch minus b plus minus Anfang Quadratwurzel b Quadrat minus 4 a c Ende Quadratwurzel durch 2 a Ende Bruch"
+    },
+    "Sample_33_sbrief": {
+      "speech": "x ist gleich Bruch minus b plus minus Quadratwurzel b Quadrat minus 4 a c Ende Quadratwurzel durch 2 a Ende Bruch"
+    },
+    "Sample_34_default": {
+      "speech": "y ist gleich x Quadrat plus 8 x plus 16"
+    },
+    "Sample_34_brief": {
+      "speech": "y ist gleich x Quadrat plus 8 x plus 16"
+    },
+    "Sample_34_sbrief": {
+      "speech": "y ist gleich x Quadrat plus 8 x plus 16"
+    },
+    "Sample_35_default": {
+      "speech": "y ist gleich ein drittel Klammer auf 3 hoch x Grundlinie Klammer zu"
+    },
+    "Sample_35_brief": {
+      "speech": "y ist gleich ein drittel Klammer auf 3 hoch x Grund Klammer zu"
+    },
+    "Sample_35_sbrief": {
+      "speech": "y ist gleich ein drittel Klammer auf 3 hoch x Grund Klammer zu"
+    },
+    "Sample_36_default": {
+      "speech": "y ist gleich 10 minus 2 x"
+    },
+    "Sample_36_brief": {
+      "speech": "y ist gleich 10 minus 2 x"
+    },
+    "Sample_36_sbrief": {
+      "speech": "y ist gleich 10 minus 2 x"
+    },
+    "Sample_37_default": {
+      "speech": "y ist gleich 2 x Kubik plus 5"
+    },
+    "Sample_37_brief": {
+      "speech": "y ist gleich 2 x Kubik plus 5"
+    },
+    "Sample_37_sbrief": {
+      "speech": "y ist gleich 2 x Kubik plus 5"
+    },
+    "Sample_38_default": {
+      "speech": "y ist gleich Klammer auf x Quadrat plus 1 Klammer zu Klammer auf x Quadrat plus 3 Klammer zu"
+    },
+    "Sample_38_brief": {
+      "speech": "y ist gleich Klammer auf x Quadrat plus 1 Klammer zu Klammer auf x Quadrat plus 3 Klammer zu"
+    },
+    "Sample_38_sbrief": {
+      "speech": "y ist gleich Klammer auf x Quadrat plus 1 Klammer zu Klammer auf x Quadrat plus 3 Klammer zu"
+    },
+    "Sample_39_default": {
+      "speech": "y ist gleich 0,5 hoch x"
+    },
+    "Sample_39_brief": {
+      "speech": "y ist gleich 0,5 hoch x"
+    },
+    "Sample_39_sbrief": {
+      "speech": "y ist gleich 0,5 hoch x"
+    },
+    "Sample_40_default": {
+      "speech": "y ist gleich 22 minus 2 x"
+    },
+    "Sample_40_brief": {
+      "speech": "y ist gleich 22 minus 2 x"
+    },
+    "Sample_40_sbrief": {
+      "speech": "y ist gleich 22 minus 2 x"
+    },
+    "Sample_41_default": {
+      "speech": "y ist gleich Anfang Bruch 3 durch x Ende Bruch"
+    },
+    "Sample_41_brief": {
+      "speech": "y ist gleich Anfang Bruch 3 durch x Ende Bruch"
+    },
+    "Sample_41_sbrief": {
+      "speech": "y ist gleich Bruch 3 durch x Ende Bruch"
+    },
+    "Sample_42_default": {
+      "speech": "y ist gleich Klammer auf x plus 4 Klammer zu Klammer auf x plus 4 Klammer zu"
+    },
+    "Sample_42_brief": {
+      "speech": "y ist gleich Klammer auf x plus 4 Klammer zu Klammer auf x plus 4 Klammer zu"
+    },
+    "Sample_42_sbrief": {
+      "speech": "y ist gleich Klammer auf x plus 4 Klammer zu Klammer auf x plus 4 Klammer zu"
+    },
+    "Sample_43_default": {
+      "speech": "y ist gleich Klammer auf 4 x minus 3 Klammer zu Klammer auf x plus 1 Klammer zu"
+    },
+    "Sample_43_brief": {
+      "speech": "y ist gleich Klammer auf 4 x minus 3 Klammer zu Klammer auf x plus 1 Klammer zu"
+    },
+    "Sample_43_sbrief": {
+      "speech": "y ist gleich Klammer auf 4 x minus 3 Klammer zu Klammer auf x plus 1 Klammer zu"
+    },
+    "Sample_44_default": {
+      "speech": "y ist gleich 20 x minus 4 x Quadrat"
+    },
+    "Sample_44_brief": {
+      "speech": "y ist gleich 20 x minus 4 x Quadrat"
+    },
+    "Sample_44_sbrief": {
+      "speech": "y ist gleich 20 x minus 4 x Quadrat"
+    },
+    "Sample_45_default": {
+      "speech": "y ist gleich x Quadrat"
+    },
+    "Sample_45_brief": {
+      "speech": "y ist gleich x Quadrat"
+    },
+    "Sample_45_sbrief": {
+      "speech": "y ist gleich x Quadrat"
+    },
+    "Sample_46_default": {
+      "speech": "y ist gleich 3 hoch x minus 1"
+    },
+    "Sample_46_brief": {
+      "speech": "y ist gleich 3 hoch x minus 1"
+    },
+    "Sample_46_sbrief": {
+      "speech": "y ist gleich 3 hoch x minus 1"
+    },
+    "Sample_47_default": {
+      "speech": "y ist gleich 16 minus 2 Klammer auf x plus 3 Klammer zu"
+    },
+    "Sample_47_brief": {
+      "speech": "y ist gleich 16 minus 2 Klammer auf x plus 3 Klammer zu"
+    },
+    "Sample_47_sbrief": {
+      "speech": "y ist gleich 16 minus 2 Klammer auf x plus 3 Klammer zu"
+    },
+    "Sample_48_default": {
+      "speech": "y ist gleich 4 x Quadrat minus x minus 3"
+    },
+    "Sample_48_brief": {
+      "speech": "y ist gleich 4 x Quadrat minus x minus 3"
+    },
+    "Sample_48_sbrief": {
+      "speech": "y ist gleich 4 x Quadrat minus x minus 3"
+    },
+    "Sample_49_default": {
+      "speech": "y ist gleich x plus Anfang Bruch 1 durch x Ende Bruch"
+    },
+    "Sample_49_brief": {
+      "speech": "y ist gleich x plus Anfang Bruch 1 durch x Ende Bruch"
+    },
+    "Sample_49_sbrief": {
+      "speech": "y ist gleich x plus Bruch 1 durch x Ende Bruch"
+    },
+    "Sample_50_default": {
+      "speech": "y ist gleich 4 x Klammer auf 5 minus x Klammer zu"
+    },
+    "Sample_50_brief": {
+      "speech": "y ist gleich 4 x Klammer auf 5 minus x Klammer zu"
+    },
+    "Sample_50_sbrief": {
+      "speech": "y ist gleich 4 x Klammer auf 5 minus x Klammer zu"
+    },
+    "Sample_51_default": {
+      "speech": "y ist gleich 2 Klammer auf x minus 3 Klammer zu plus 6 Klammer auf 1 minus x Klammer zu"
+    },
+    "Sample_51_brief": {
+      "speech": "y ist gleich 2 Klammer auf x minus 3 Klammer zu plus 6 Klammer auf 1 minus x Klammer zu"
+    },
+    "Sample_51_sbrief": {
+      "speech": "y ist gleich 2 Klammer auf x minus 3 Klammer zu plus 6 Klammer auf 1 minus x Klammer zu"
+    },
+    "Sample_52_default": {
+      "speech": "0,25 größer als fünf sechzehntel"
+    },
+    "Sample_52_brief": {
+      "speech": "0,25 größer als fünf sechzehntel"
+    },
+    "Sample_52_sbrief": {
+      "speech": "0,25 größer als fünf sechzehntel"
+    },
+    "Sample_53_default": {
+      "speech": "32 mal Klammer auf 5 mal 7 Klammer zu"
+    },
+    "Sample_53_brief": {
+      "speech": "32 mal Klammer auf 5 mal 7 Klammer zu"
+    },
+    "Sample_53_sbrief": {
+      "speech": "32 mal Klammer auf 5 mal 7 Klammer zu"
+    },
+    "Sample_54_default": {
+      "speech": "Klammer auf ein halb mal ein halb mal pi mal 2 Klammer zu plus Klammer auf 2 mal ein halb mal pi mal 5 Klammer zu"
+    },
+    "Sample_54_brief": {
+      "speech": "Klammer auf ein halb mal ein halb mal pi mal 2 Klammer zu plus Klammer auf 2 mal ein halb mal pi mal 5 Klammer zu"
+    },
+    "Sample_54_sbrief": {
+      "speech": "Klammer auf ein halb mal ein halb mal pi mal 2 Klammer zu plus Klammer auf 2 mal ein halb mal pi mal 5 Klammer zu"
+    },
+    "Sample_55_default": {
+      "speech": "Limes inferior Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift großes E Index n Grundlinie ist gleich N-stufige Vereinigung Unterschrift n größer oder gleich 1 Ende Unterschrift N-stufiger Durchschnitt Unterschrift k größer oder gleich n Ende Unterschrift großes E Index k Grundlinie Komma Limes superior Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift großes E Index n Grundlinie ist gleich N-stufiger Durchschnitt Unterschrift n größer oder gleich 1 Ende Unterschrift N-stufige Vereinigung Unterschrift k größer oder gleich n Ende Unterschrift großes E Index k Grundlinie Punkt"
+    },
+    "Sample_55_brief": {
+      "speech": "Limes inferior Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift großes E Index n Grund ist gleich N-stufige Vereinigung Unterschrift n größer oder gleich 1 Ende Unterschrift N-stufiger Durchschnitt Unterschrift k größer oder gleich n Ende Unterschrift großes E Index k Grund Komma Limes superior Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift großes E Index n Grund ist gleich N-stufiger Durchschnitt Unterschrift n größer oder gleich 1 Ende Unterschrift N-stufige Vereinigung Unterschrift k größer oder gleich n Ende Unterschrift großes E Index k Grund Punkt"
+    },
+    "Sample_55_sbrief": {
+      "speech": "Limes inferior Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift großes E Index n Grund ist gleich N-stufige Vereinigung Unterschrift n größer oder gleich 1 Ende Unterschrift N-stufiger Durchschnitt Unterschrift k größer oder gleich n Ende Unterschrift großes E Index k Grund Komma Limes superior Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift großes E Index n Grund ist gleich N-stufiger Durchschnitt Unterschrift n größer oder gleich 1 Ende Unterschrift N-stufige Vereinigung Unterschrift k größer oder gleich n Ende Unterschrift großes E Index k Grund Punkt"
+    },
+    "Sample_56_default": {
+      "speech": "Anfang Anordnung 1. Zeile 1. Spalte Klammer auf i Klammer zu 2. Spalte Schreibschrift großes S Element von Schreibschrift großes A Strichpunkt 2. Zeile 1. Spalte Klammer auf ii Klammer zu 2. Spalte if großes E Element von Schreibschrift großes A then großes E Überstrich Element von Schreibschrift großes A Strichpunkt 3. Zeile 1. Spalte Klammer auf iii Klammer zu 2. Spalte if großes E 1 Komma großes E 2 Element von Schreibschrift großes A then großes E 1 Vereinigung großes E 2 Element von Schreibschrift großes A Punkt Ende Anordnung"
+    },
+    "Sample_56_brief": {
+      "speech": "Anfang Anordnung 1. Zeile 1. Spalte Klammer auf i Klammer zu 2. Spalte Schreibschrift großes S Element von Schreibschrift großes A Strichpunkt 2. Zeile 1. Spalte Klammer auf ii Klammer zu 2. Spalte if großes E Element von Schreibschrift großes A then mod oben großes E mit Überschrift Element von Schreibschrift großes A Strichpunkt 3. Zeile 1. Spalte Klammer auf iii Klammer zu 2. Spalte if großes E 1 Komma großes E 2 Element von Schreibschrift großes A then großes E 1 Vereinigung großes E 2 Element von Schreibschrift großes A Punkt Ende Anordnung"
+    },
+    "Sample_56_sbrief": {
+      "speech": "Anordnung 1. Zeile 1. Spalte Klammer auf i Klammer zu 2. Spalte Schreibschrift großes S Element von Schreibschrift großes A Strichpunkt 2. Zeile 1. Spalte Klammer auf ii Klammer zu 2. Spalte if großes E Element von Schreibschrift großes A then mod oben großes E mit Überschrift Element von Schreibschrift großes A Strichpunkt 3. Zeile 1. Spalte Klammer auf iii Klammer zu 2. Spalte if großes E 1 Komma großes E 2 Element von Schreibschrift großes A then großes E 1 Vereinigung großes E 2 Element von Schreibschrift großes A Punkt Ende Anordnung"
+    },
+    "Sample_57_default": {
+      "speech": "Anfang Anordnung 1. Zeile 1. Spalte leer 2. Spalte leer 3. Spalte Klammer auf normales großes A Punkt 1 Klammer zu normales großes I f großes A Element von Schreibschrift großes F t h e n 0 kleiner oder gleich großes P geschwungene Klammer auf großes A geschwungene Klammer zu kleiner oder gleich 1 Punkt 4. Spalte Klammer auf 1 Klammer zu 2. Zeile 1. Spalte leer 2. Spalte leer 3. Spalte Klammer auf normales großes A Punkt 2 Klammer zu großes P geschwungene Klammer auf Schreibschrift großes S geschwungene Klammer zu ist gleich 1 Punkt 4. Spalte Klammer auf 2 Klammer zu 3. Zeile 1. Spalte leer 2. Spalte leer 3. Spalte Klammer auf normales großes A Punkt 3 Klammer zu normales großes I f geschwungene Klammer auf großes E Index n Grundlinie Komma n größer oder gleich 1 geschwungene Klammer zu Element von Schreibschrift großes F is a sequence of disjoint 4. Spalte Klammer auf 3 Klammer zu Ende Anordnung"
+    },
+    "Sample_57_brief": {
+      "speech": "Anfang Anordnung 1. Zeile 1. Spalte leer 2. Spalte leer 3. Spalte Klammer auf normales großes A Punkt 1 Klammer zu normales großes I f großes A Element von Schreibschrift großes F t h e n 0 kleiner oder gleich großes P geschwungene Klammer auf großes A geschwungene Klammer zu kleiner oder gleich 1 Punkt 4. Spalte Klammer auf 1 Klammer zu 2. Zeile 1. Spalte leer 2. Spalte leer 3. Spalte Klammer auf normales großes A Punkt 2 Klammer zu großes P geschwungene Klammer auf Schreibschrift großes S geschwungene Klammer zu ist gleich 1 Punkt 4. Spalte Klammer auf 2 Klammer zu 3. Zeile 1. Spalte leer 2. Spalte leer 3. Spalte Klammer auf normales großes A Punkt 3 Klammer zu normales großes I f geschwungene Klammer auf großes E Index n Grund Komma n größer oder gleich 1 geschwungene Klammer zu Element von Schreibschrift großes F is a sequence of disjoint 4. Spalte Klammer auf 3 Klammer zu Ende Anordnung"
+    },
+    "Sample_57_sbrief": {
+      "speech": "Anordnung 1. Zeile 1. Spalte leer 2. Spalte leer 3. Spalte Klammer auf normales großes A Punkt 1 Klammer zu normales großes I f großes A Element von Schreibschrift großes F t h e n 0 kleiner oder gleich großes P geschwungene Klammer auf großes A geschwungene Klammer zu kleiner oder gleich 1 Punkt 4. Spalte Klammer auf 1 Klammer zu 2. Zeile 1. Spalte leer 2. Spalte leer 3. Spalte Klammer auf normales großes A Punkt 2 Klammer zu großes P geschwungene Klammer auf Schreibschrift großes S geschwungene Klammer zu ist gleich 1 Punkt 4. Spalte Klammer auf 2 Klammer zu 3. Zeile 1. Spalte leer 2. Spalte leer 3. Spalte Klammer auf normales großes A Punkt 3 Klammer zu normales großes I f geschwungene Klammer auf großes E Index n Grund Komma n größer oder gleich 1 geschwungene Klammer zu Element von Schreibschrift großes F is a sequence of disjoint 4. Spalte Klammer auf 3 Klammer zu Ende Anordnung"
+    },
+    "Sample_58_default": {
+      "speech": "großes P geschwungene Klammer auf großes B Index j Grundlinie senkrechter Strich großes A geschwungene Klammer zu ist gleich Anfang Bruch großes P geschwungene Klammer auf großes B Index j Grundlinie geschwungene Klammer zu großes P geschwungene Klammer auf großes A senkrechter Strich großes B Index j Grundlinie geschwungene Klammer zu durch Summe Unterschrift j Strich Element von großes J Ende Unterschrift großes P geschwungene Klammer auf großes B Index j Strich Grundlinie geschwungene Klammer zu großes P geschwungene Klammer auf großes A senkrechter Strich großes B Index j Strich Grundlinie geschwungene Klammer zu Ende Bruch Punkt"
+    },
+    "Sample_58_brief": {
+      "speech": "großes P geschwungene Klammer auf großes B Index j Grund senkrechter Strich großes A geschwungene Klammer zu ist gleich Anfang Bruch großes P geschwungene Klammer auf großes B Index j Grund geschwungene Klammer zu großes P geschwungene Klammer auf großes A senkrechter Strich großes B Index j Grund geschwungene Klammer zu durch Summe Unterschrift j Strich Element von großes J Ende Unterschrift großes P geschwungene Klammer auf großes B Index j Strich Grund geschwungene Klammer zu großes P geschwungene Klammer auf großes A senkrechter Strich großes B Index j Strich Grund geschwungene Klammer zu Ende Bruch Punkt"
+    },
+    "Sample_58_sbrief": {
+      "speech": "großes P geschwungene Klammer auf großes B Index j Grund senkrechter Strich großes A geschwungene Klammer zu ist gleich Bruch großes P geschwungene Klammer auf großes B Index j Grund geschwungene Klammer zu großes P geschwungene Klammer auf großes A senkrechter Strich großes B Index j Grund geschwungene Klammer zu durch Summe Unterschrift j Strich Element von großes J Ende Unterschrift großes P geschwungene Klammer auf großes B Index j Strich Grund geschwungene Klammer zu großes P geschwungene Klammer auf großes A senkrechter Strich großes B Index j Strich Grund geschwungene Klammer zu Ende Bruch Punkt"
+    },
+    "Sample_59_default": {
+      "speech": "my 1 Klammer auf großes B Klammer zu ist gleich Integral Unterschrift großes B Ende Unterschrift f Klammer auf x Klammer zu d my 2 Klammer auf x Klammer zu"
+    },
+    "Sample_59_brief": {
+      "speech": "my 1 Klammer auf großes B Klammer zu ist gleich Integral Unterschrift großes B Ende Unterschrift f Klammer auf x Klammer zu d my 2 Klammer auf x Klammer zu"
+    },
+    "Sample_59_sbrief": {
+      "speech": "my 1 Klammer auf großes B Klammer zu ist gleich Integral Unterschrift großes B Ende Unterschrift f Klammer auf x Klammer zu d my 2 Klammer auf x Klammer zu"
+    },
+    "Sample_60_default": {
+      "speech": "Limes Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift großes E geschwungene Klammer auf Anfang Betrag großes X Index n Grundlinie minus großes X Ende Betrag geschwungene Klammer zu ist gleich großes E geschwungene Klammer auf Limes Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift Anfang Betrag großes X Index n Grundlinie minus großes X Ende Betrag geschwungene Klammer zu ist gleich 0 Punkt"
+    },
+    "Sample_60_brief": {
+      "speech": "Limes Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift großes E geschwungene Klammer auf Anfang Betrag großes X Index n Grund minus großes X Ende Betrag geschwungene Klammer zu ist gleich großes E geschwungene Klammer auf Limes Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift Anfang Betrag großes X Index n Grund minus großes X Ende Betrag geschwungene Klammer zu ist gleich 0 Punkt"
+    },
+    "Sample_60_sbrief": {
+      "speech": "Limes Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift großes E geschwungene Klammer auf Betrag großes X Index n Grund minus großes X Ende Betrag geschwungene Klammer zu ist gleich großes E geschwungene Klammer auf Limes Unterschrift n Pfeil nach rechts unendlich Ende Unterschrift Betrag großes X Index n Grund minus großes X Ende Betrag geschwungene Klammer zu ist gleich 0 Punkt"
+    },
+    "Sample_61_default": {
+      "speech": "Anfang Anordnung 1. Zeile 1. Spalte großes P Index my Komma sigma Grundlinie geschwungene Klammer auf großes Y größer oder gleich l Index beta Grundlinie Klammer auf großes Y Überstrich Index n Grundlinie Komma großes S Index n Grundlinie Klammer zu geschwungene Klammer zu ist gleich großes P Index my Komma sigma Grundlinie geschwungene Klammer auf Klammer auf großes Y minus großes Y Überstrich Index n Grundlinie Klammer zu Schrägstrich Klammer auf großes S mal Klammer auf 1 plus Anfang Bruch 1 durch n Ende Bruch Klammer zu hoch 1 Schrägstrich 2 Grundlinie Klammer zu größer oder gleich minus t Index beta Grundlinie eckige Klammer auf n minus 1 eckige Klammer zu geschwungene Klammer zu ist gleich beta Komma 2. Zeile 1. Spalte leer 2. Spalte Klammer auf 1 Klammer zu Ende Anordnung"
+    },
+    "Sample_61_brief": {
+      "speech": "Anfang Anordnung 1. Zeile 1. Spalte großes P Index my Komma sigma Grund geschwungene Klammer auf großes Y größer oder gleich l Index beta Grund Klammer auf mod oben großes Y mit Überschrift Index n Grund Komma großes S Index n Grund Klammer zu geschwungene Klammer zu ist gleich großes P Index my Komma sigma Grund geschwungene Klammer auf Klammer auf großes Y minus mod oben großes Y mit Überschrift Index n Grund Klammer zu Schrägstrich Klammer auf großes S mal Klammer auf 1 plus Anfang Bruch 1 durch n Ende Bruch Klammer zu hoch 1 Schrägstrich 2 Grund Klammer zu größer oder gleich minus t Index beta Grund eckige Klammer auf n minus 1 eckige Klammer zu geschwungene Klammer zu ist gleich beta Komma 2. Zeile 1. Spalte leer 2. Spalte Klammer auf 1 Klammer zu Ende Anordnung"
+    },
+    "Sample_61_sbrief": {
+      "speech": "Anordnung 1. Zeile 1. Spalte großes P Index my Komma sigma Grund geschwungene Klammer auf großes Y größer oder gleich l Index beta Grund Klammer auf mod oben großes Y mit Überschrift Index n Grund Komma großes S Index n Grund Klammer zu geschwungene Klammer zu ist gleich großes P Index my Komma sigma Grund geschwungene Klammer auf Klammer auf großes Y minus mod oben großes Y mit Überschrift Index n Grund Klammer zu Schrägstrich Klammer auf großes S mal Klammer auf 1 plus Bruch 1 durch n Ende Bruch Klammer zu hoch 1 Schrägstrich 2 Grund Klammer zu größer oder gleich minus t Index beta Grund eckige Klammer auf n minus 1 eckige Klammer zu geschwungene Klammer zu ist gleich beta Komma 2. Zeile 1. Spalte leer 2. Spalte Klammer auf 1 Klammer zu Ende Anordnung"
+    },
+    "Sample_62_default": {
+      "speech": "großes L ist gleich Anfang 5 mal 6 Matrize 1. Zeile 1. Spalte 1 2. Spalte minus 1 3. Spalte leer 4. Spalte leer 5. Spalte leer 6. Spalte leer 2. Zeile 1. Spalte leer 2. Spalte 1 3. Spalte minus 1 4. Spalte leer 5. Spalte 0 6. Spalte leer 3. Zeile 1. Spalte leer 2. Spalte leer 3. Spalte leer 4. Spalte leer 5. Spalte leer 6. Spalte leer 4. Zeile 1. Spalte leer 2. Spalte 0 3. Spalte leer 4. Spalte leer 5. Spalte leer 6. Spalte leer 5. Zeile 1. Spalte leer 2. Spalte leer 3. Spalte leer 4. Spalte leer 5. Spalte 1 6. Spalte minus 1 Ende Matrize Punkt"
+    },
+    "Sample_62_brief": {
+      "speech": "großes L ist gleich Anfang 5 mal 6 Matrize 1. Zeile 1. Spalte 1 2. Spalte minus 1 3. Spalte leer 4. Spalte leer 5. Spalte leer 6. Spalte leer 2. Zeile 1. Spalte leer 2. Spalte 1 3. Spalte minus 1 4. Spalte leer 5. Spalte 0 6. Spalte leer 3. Zeile 1. Spalte leer 2. Spalte leer 3. Spalte leer 4. Spalte leer 5. Spalte leer 6. Spalte leer 4. Zeile 1. Spalte leer 2. Spalte 0 3. Spalte leer 4. Spalte leer 5. Spalte leer 6. Spalte leer 5. Zeile 1. Spalte leer 2. Spalte leer 3. Spalte leer 4. Spalte leer 5. Spalte 1 6. Spalte minus 1 Ende Matrize Punkt"
+    },
+    "Sample_62_sbrief": {
+      "speech": "großes L ist gleich 5 mal 6 Matrize 1. Zeile 1. Spalte 1 2. Spalte minus 1 3. Spalte leer 4. Spalte leer 5. Spalte leer 6. Spalte leer 2. Zeile 1. Spalte leer 2. Spalte 1 3. Spalte minus 1 4. Spalte leer 5. Spalte 0 6. Spalte leer 3. Zeile 1. Spalte leer 2. Spalte leer 3. Spalte leer 4. Spalte leer 5. Spalte leer 6. Spalte leer 4. Zeile 1. Spalte leer 2. Spalte 0 3. Spalte leer 4. Spalte leer 5. Spalte leer 6. Spalte leer 5. Zeile 1. Spalte leer 2. Spalte leer 3. Spalte leer 4. Spalte leer 5. Spalte 1 6. Spalte minus 1 Ende Matrize Punkt"
+    },
+    "Sample_63_default": {
+      "speech": "Anfang Quadratwurzel n Ende Quadratwurzel eckige Klammer auf großes Y Überstrich Index n Grundlinie minus Klammer auf my plus z Index beta Grundlinie sigma Klammer zu eckige Klammer zu Schrägstrich großes S Index n Grundlinie tilde Anfang Bruch großes U plus Anfang Quadratwurzel n Ende Quadratwurzel z Index 1 minus beta Grundlinie durch Klammer auf chi Quadrat eckige Klammer auf n minus 1 eckige Klammer zu Schrägstrich Klammer auf n minus 1 Klammer zu Klammer zu hoch 1 Schrägstrich 2 Grundlinie Ende Bruch tilde t eckige Klammer auf n minus 1 Strichpunkt Anfang Quadratwurzel n Ende Quadratwurzel z Index 1 minus beta Grundlinie eckige Klammer zu Komma"
+    },
+    "Sample_63_brief": {
+      "speech": "Anfang Quadratwurzel n Ende Quadratwurzel eckige Klammer auf mod oben großes Y mit Überschrift Index n Grund minus Klammer auf my plus z Index beta Grund sigma Klammer zu eckige Klammer zu Schrägstrich großes S Index n Grund tilde Anfang Bruch großes U plus Anfang Quadratwurzel n Ende Quadratwurzel z Index 1 minus beta Grund durch Klammer auf chi Quadrat eckige Klammer auf n minus 1 eckige Klammer zu Schrägstrich Klammer auf n minus 1 Klammer zu Klammer zu hoch 1 Schrägstrich 2 Grund Ende Bruch tilde t eckige Klammer auf n minus 1 Strichpunkt Anfang Quadratwurzel n Ende Quadratwurzel z Index 1 minus beta Grund eckige Klammer zu Komma"
+    },
+    "Sample_63_sbrief": {
+      "speech": "Quadratwurzel n Ende Quadratwurzel eckige Klammer auf mod oben großes Y mit Überschrift Index n Grund minus Klammer auf my plus z Index beta Grund sigma Klammer zu eckige Klammer zu Schrägstrich großes S Index n Grund tilde Bruch großes U plus Quadratwurzel n Ende Quadratwurzel z Index 1 minus beta Grund durch Klammer auf chi Quadrat eckige Klammer auf n minus 1 eckige Klammer zu Schrägstrich Klammer auf n minus 1 Klammer zu Klammer zu hoch 1 Schrägstrich 2 Grund Ende Bruch tilde t eckige Klammer auf n minus 1 Strichpunkt Quadratwurzel n Ende Quadratwurzel z Index 1 minus beta Grund eckige Klammer zu Komma"
+    },
+    "Sample_64_default": {
+      "speech": "Anfang Anordnung 1. Zeile 1. Spalte gamma 2. Spalte ist gleich großes P geschwungene Klammer auf großes E Index p Komma q Grundlinie echte Teilmenge von Klammer auf großes X Index Klammer auf r Klammer zu Grundlinie Komma großes X Index Klammer auf s Klammer zu Grundlinie geschwungene Klammer zu 2. Zeile 1. Spalte leer 2. Spalte ist gleich Anfang Bruch n Fakultät durch Klammer auf r minus 1 Klammer zu Fakultät Ende Bruch Summe Unterschrift j ist gleich 0 Überschrift s minus r minus 1 Ende Überschrift Klammer auf minus 1 Klammer zu hoch j Grundlinie Anfang Bruch p hoch r plus j Grundlinie durch Klammer auf n minus r minus j Klammer zu Fakultät j Fakultät Ende Bruch großes I Index 1 minus q Grundlinie Klammer auf n minus s plus 1 Komma s minus r minus j Klammer zu Punkt Ende Anordnung"
+    },
+    "Sample_64_brief": {
+      "speech": "Anfang Anordnung 1. Zeile 1. Spalte gamma 2. Spalte ist gleich großes P geschwungene Klammer auf großes E Index p Komma q Grund echte Teilmenge von Klammer auf großes X Index Klammer auf r Klammer zu Grund Komma großes X Index Klammer auf s Klammer zu Grund geschwungene Klammer zu 2. Zeile 1. Spalte leer 2. Spalte ist gleich Anfang Bruch n Fakultät durch Klammer auf r minus 1 Klammer zu Fakultät Ende Bruch Summe Unterschrift j ist gleich 0 Überschrift s minus r minus 1 Ende Überschrift Klammer auf minus 1 Klammer zu hoch j Grund Anfang Bruch p hoch r plus j Grund durch Klammer auf n minus r minus j Klammer zu Fakultät j Fakultät Ende Bruch großes I Index 1 minus q Grund Klammer auf n minus s plus 1 Komma s minus r minus j Klammer zu Punkt Ende Anordnung"
+    },
+    "Sample_64_sbrief": {
+      "speech": "Anordnung 1. Zeile 1. Spalte gamma 2. Spalte ist gleich großes P geschwungene Klammer auf großes E Index p Komma q Grund echte Teilmenge von Klammer auf großes X Index Klammer auf r Klammer zu Grund Komma großes X Index Klammer auf s Klammer zu Grund geschwungene Klammer zu 2. Zeile 1. Spalte leer 2. Spalte ist gleich Bruch n Fakultät durch Klammer auf r minus 1 Klammer zu Fakultät Ende Bruch Summe Unterschrift j ist gleich 0 Überschrift s minus r minus 1 Ende Überschrift Klammer auf minus 1 Klammer zu hoch j Grund Bruch p hoch r plus j Grund durch Klammer auf n minus r minus j Klammer zu Fakultät j Fakultät Ende Bruch großes I Index 1 minus q Grund Klammer auf n minus s plus 1 Komma s minus r minus j Klammer zu Punkt Ende Anordnung"
+    },
+    "Sample_65_default": {
+      "speech": "großes S Index i Grundlinie Anfang Binomialkoeffizient x aus t Ende Binomialkoeffizient ist gleich Anfang 2 mal 2 Matrize 1. Zeile 1. Spalte 1 Schrägstrich m 2. Spalte 0 2. Zeile 1. Spalte a Index i Grundlinie 2. Spalte r Index i Grundlinie Ende Matrize Anfang Binomialkoeffizient x aus t Ende Binomialkoeffizient plus Anfang Binomialkoeffizient b Index i Grundlinie aus Klammer auf i minus 1 Klammer zu Schrägstrich m Ende Binomialkoeffizient Komma"
+    },
+    "Sample_65_brief": {
+      "speech": "großes S Index i Grund Anfang Binomial x aus t Ende Binomial ist gleich Anfang 2 mal 2 Matrize 1. Zeile 1. Spalte 1 Schrägstrich m 2. Spalte 0 2. Zeile 1. Spalte a Index i Grund 2. Spalte r Index i Grund Ende Matrize Anfang Binomial x aus t Ende Binomial plus Anfang Binomial b Index i Grund aus Klammer auf i minus 1 Klammer zu Schrägstrich m Ende Binomial Komma"
+    },
+    "Sample_65_sbrief": {
+      "speech": "großes S Index i Grund Binomial x aus t Ende Binomial ist gleich 2 mal 2 Matrize 1. Zeile 1. Spalte 1 Schrägstrich m 2. Spalte 0 2. Zeile 1. Spalte a Index i Grund 2. Spalte r Index i Grund Ende Matrize Binomial x aus t Ende Binomial plus Binomial b Index i Grund aus Klammer auf i minus 1 Klammer zu Schrägstrich m Ende Binomial Komma"
+    },
+    "Sample_66_default": {
+      "speech": "c 1 h hoch 4 minus 2 s Grundlinie kleiner oder gleich Anfang Bruch 1 durch 2 großes T Ende Bruch Integral Index minus großes T Hoch großes T Grundlinie Klammer auf f Klammer auf t plus h Klammer zu minus f Klammer auf t Klammer zu Klammer zu Quadrat normales d t kleiner oder gleich c 2 h hoch 4 minus 2 s"
+    },
+    "Sample_66_brief": {
+      "speech": "c 1 h hoch 4 minus 2 s Grund kleiner oder gleich Anfang Bruch 1 durch 2 großes T Ende Bruch Integral Index minus großes T Hoch großes T Base Klammer auf f Klammer auf t plus h Klammer zu minus f Klammer auf t Klammer zu Klammer zu Quadrat normales d t kleiner oder gleich c 2 h hoch 4 minus 2 s"
+    },
+    "Sample_66_sbrief": {
+      "speech": "c 1 h hoch 4 minus 2 s Grund kleiner oder gleich Bruch 1 durch 2 großes T Ende Bruch Integral Index minus großes T Hoch großes T Base Klammer auf f Klammer auf t plus h Klammer zu minus f Klammer auf t Klammer zu Klammer zu Quadrat normales d t kleiner oder gleich c 2 h hoch 4 minus 2 s"
+    },
+    "Sample_67_default": {
+      "speech": "großes C Klammer auf 0 Klammer zu minus großes C Klammer auf h Klammer zu asymptotisch gleich c h hoch 4 minus 2 s"
+    },
+    "Sample_67_brief": {
+      "speech": "großes C Klammer auf 0 Klammer zu minus großes C Klammer auf h Klammer zu asymptotisch gleich c h hoch 4 minus 2 s"
+    },
+    "Sample_67_sbrief": {
+      "speech": "großes C Klammer auf 0 Klammer zu minus großes C Klammer auf h Klammer zu asymptotisch gleich c h hoch 4 minus 2 s"
+    },
+    "Sample_68_default": {
+      "speech": "großes S Klammer auf omega Klammer zu ist gleich Limes Unterschrift großes T Pfeil nach rechts unendlich Ende Unterschrift Anfang Bruch 1 durch 2 großes T Ende Bruch Anfang Betrag Integral Index minus großes T Hoch großes T Grundlinie Komma f Komma Klammer auf Komma t Komma Klammer zu Komma normales e hoch i t omega Grundlinie Komma normales d Komma t Ende Betrag Quadrat Punkt"
+    },
+    "Sample_68_brief": {
+      "speech": "großes S Klammer auf omega Klammer zu ist gleich Limes Unterschrift großes T Pfeil nach rechts unendlich Ende Unterschrift Anfang Bruch 1 durch 2 großes T Ende Bruch Anfang Betrag Integral Index minus großes T Hoch großes T Base Komma f Komma Klammer auf Komma t Komma Klammer zu Komma normales e hoch i t omega Grund Komma normales d Komma t Ende Betrag Quadrat Punkt"
+    },
+    "Sample_68_sbrief": {
+      "speech": "großes S Klammer auf omega Klammer zu ist gleich Limes Unterschrift großes T Pfeil nach rechts unendlich Ende Unterschrift Bruch 1 durch 2 großes T Ende Bruch Betrag Integral Index minus großes T Hoch großes T Base Komma f Komma Klammer auf Komma t Komma Klammer zu Komma normales e hoch i t omega Grund Komma normales d Komma t Ende Betrag Quadrat Punkt"
+    },
+    "Sample_69_default": {
+      "speech": "Integral Index 0 Hoch 1 Grundlinie Integral Index 0 Hoch 1 Grundlinie eckige Klammer auf Anfang Betrag f Klammer auf t Klammer zu minus f Klammer auf u Klammer zu Ende Betrag Quadrat plus Anfang Betrag t minus u Ende Betrag Quadrat eckige Klammer zu hoch minus s Schrägstrich 2 Grundlinie normales d t normales d u kleiner als unendlich"
+    },
+    "Sample_69_brief": {
+      "speech": "Integral Index 0 Hoch 1 Base Integral Index 0 Hoch 1 Base eckige Klammer auf Anfang Betrag f Klammer auf t Klammer zu minus f Klammer auf u Klammer zu Ende Betrag Quadrat plus Anfang Betrag t minus u Ende Betrag Quadrat eckige Klammer zu hoch minus s Schrägstrich 2 Grund normales d t normales d u kleiner als unendlich"
+    },
+    "Sample_69_sbrief": {
+      "speech": "Integral Index 0 Hoch 1 Base Integral Index 0 Hoch 1 Base eckige Klammer auf Betrag f Klammer auf t Klammer zu minus f Klammer auf u Klammer zu Ende Betrag Quadrat plus Betrag t minus u Ende Betrag Quadrat eckige Klammer zu hoch minus s Schrägstrich 2 Grund normales d t normales d u kleiner als unendlich"
+    },
+    "Sample_70_default": {
+      "speech": "serifenloses großes E Klammer auf Summe Unterschrift großes I Element von großes E Index k plus 1 Grundlinie Ende Unterschrift Anfang Betrag großes I Ende Betrag hoch s Grundlinie Klammer zu ist gleich serifenloses großes E Klammer auf Summe Unterschrift großes I Element von großes E Index k Grundlinie Ende Unterschrift Anfang Betrag großes I Ende Betrag hoch s Grundlinie Klammer zu serifenloses großes E Klammer auf großes R 1 hoch s Grundlinie plus großes R 2 hoch s Grundlinie Klammer zu Punkt"
+    },
+    "Sample_70_brief": {
+      "speech": "serifenloses großes E Klammer auf Summe Unterschrift großes I Element von großes E Index k plus 1 Grund Ende Unterschrift Anfang Betrag großes I Ende Betrag hoch s Grund Klammer zu ist gleich serifenloses großes E Klammer auf Summe Unterschrift großes I Element von großes E Index k Grund Ende Unterschrift Anfang Betrag großes I Ende Betrag hoch s Grund Klammer zu serifenloses großes E Klammer auf großes R 1 hoch s Grund plus großes R 2 hoch s Grund Klammer zu Punkt"
+    },
+    "Sample_70_sbrief": {
+      "speech": "serifenloses großes E Klammer auf Summe Unterschrift großes I Element von großes E Index k plus 1 Grund Ende Unterschrift Betrag großes I Ende Betrag hoch s Grund Klammer zu ist gleich serifenloses großes E Klammer auf Summe Unterschrift großes I Element von großes E Index k Grund Ende Unterschrift Betrag großes I Ende Betrag hoch s Grund Klammer zu serifenloses großes E Klammer auf großes R 1 hoch s Grund plus großes R 2 hoch s Grund Klammer zu Punkt"
+    },
+    "Sample_71_default": {
+      "speech": "Klammer auf x 1 Komma y 1 Klammer zu"
+    },
+    "Sample_71_brief": {
+      "speech": "Klammer auf x 1 Komma y 1 Klammer zu"
+    },
+    "Sample_71_sbrief": {
+      "speech": "Klammer auf x 1 Komma y 1 Klammer zu"
+    },
+    "Sample_72_default": {
+      "speech": "Klammer auf x 2 Komma y 2 Klammer zu"
+    },
+    "Sample_72_brief": {
+      "speech": "Klammer auf x 2 Komma y 2 Klammer zu"
+    },
+    "Sample_72_sbrief": {
+      "speech": "Klammer auf x 2 Komma y 2 Klammer zu"
+    },
+    "Sample_73_default": {
+      "speech": "d ist gleich Anfang Quadratwurzel Klammer auf x 2 minus x 1 Klammer zu Quadrat plus Klammer auf y 2 minus y 1 Klammer zu Quadrat Ende Quadratwurzel"
+    },
+    "Sample_73_brief": {
+      "speech": "d ist gleich Anfang Quadratwurzel Klammer auf x 2 minus x 1 Klammer zu Quadrat plus Klammer auf y 2 minus y 1 Klammer zu Quadrat Ende Quadratwurzel"
+    },
+    "Sample_73_sbrief": {
+      "speech": "d ist gleich Quadratwurzel Klammer auf x 2 minus x 1 Klammer zu Quadrat plus Klammer auf y 2 minus y 1 Klammer zu Quadrat Ende Quadratwurzel"
+    },
+    "Sample_74_default": {
+      "speech": "großes R mit Doppelstrich"
+    },
+    "Sample_74_brief": {
+      "speech": "großes R mit Doppelstrich"
+    },
+    "Sample_74_sbrief": {
+      "speech": "großes R mit Doppelstrich"
+    },
+    "Sample_75_default": {
+      "speech": "großes R mit Doppelstrich ist gleich Klammer auf minus unendlich Komma unendlich Klammer zu"
+    },
+    "Sample_75_brief": {
+      "speech": "großes R mit Doppelstrich ist gleich Klammer auf minus unendlich Komma unendlich Klammer zu"
+    },
+    "Sample_75_sbrief": {
+      "speech": "großes R mit Doppelstrich ist gleich Klammer auf minus unendlich Komma unendlich Klammer zu"
+    },
+    "Sample_76_default": {
+      "speech": "Anfang Menge 1 Komma 2 Komma 3 Ende Menge"
+    },
+    "Sample_76_brief": {
+      "speech": "Anfang Menge 1 Komma 2 Komma 3 Ende Menge"
+    },
+    "Sample_76_sbrief": {
+      "speech": "Menge 1 Komma 2 Komma 3 Ende Menge"
+    },
+    "Sample_77_default": {
+      "speech": "1 Element von großes S"
+    },
+    "Sample_77_brief": {
+      "speech": "1 Element von großes S"
+    },
+    "Sample_77_sbrief": {
+      "speech": "1 Element von großes S"
+    },
+    "Sample_78_default": {
+      "speech": "3 Element von großes S"
+    },
+    "Sample_78_brief": {
+      "speech": "3 Element von großes S"
+    },
+    "Sample_78_sbrief": {
+      "speech": "3 Element von großes S"
+    },
+    "Sample_79_default": {
+      "speech": "4 nicht Element von großes S"
+    },
+    "Sample_79_brief": {
+      "speech": "4 nicht Element von großes S"
+    },
+    "Sample_79_sbrief": {
+      "speech": "4 nicht Element von großes S"
+    },
+    "Sample_80_default": {
+      "speech": "a ist gleich Anfang Quadratwurzel 3 x minus 1 Ende Quadratwurzel plus Klammer auf 1 plus x Klammer zu Quadrat"
+    },
+    "Sample_80_brief": {
+      "speech": "a ist gleich Anfang Quadratwurzel 3 x minus 1 Ende Quadratwurzel plus Klammer auf 1 plus x Klammer zu Quadrat"
+    },
+    "Sample_80_sbrief": {
+      "speech": "a ist gleich Quadratwurzel 3 x minus 1 Ende Quadratwurzel plus Klammer auf 1 plus x Klammer zu Quadrat"
+    },
+    "Sample_81_default": {
+      "speech": "a ist gleich Anfang Bruch Klammer auf b plus c Klammer zu Quadrat durch d Ende Bruch plus Anfang Bruch Klammer auf e plus f Klammer zu Quadrat durch g Ende Bruch"
+    },
+    "Sample_81_brief": {
+      "speech": "a ist gleich Anfang Bruch Klammer auf b plus c Klammer zu Quadrat durch d Ende Bruch plus Anfang Bruch Klammer auf e plus f Klammer zu Quadrat durch g Ende Bruch"
+    },
+    "Sample_81_sbrief": {
+      "speech": "a ist gleich Bruch Klammer auf b plus c Klammer zu Quadrat durch d Ende Bruch plus Bruch Klammer auf e plus f Klammer zu Quadrat durch g Ende Bruch"
+    },
+    "Sample_82_default": {
+      "speech": "x ist gleich eckige Klammer auf Klammer auf a plus b Klammer zu Quadrat Klammer auf c minus b Klammer zu Quadrat eckige Klammer zu plus eckige Klammer auf Klammer auf d plus e Klammer zu Quadrat Klammer auf f minus e Klammer zu Quadrat eckige Klammer zu"
+    },
+    "Sample_82_brief": {
+      "speech": "x ist gleich eckige Klammer auf Klammer auf a plus b Klammer zu Quadrat Klammer auf c minus b Klammer zu Quadrat eckige Klammer zu plus eckige Klammer auf Klammer auf d plus e Klammer zu Quadrat Klammer auf f minus e Klammer zu Quadrat eckige Klammer zu"
+    },
+    "Sample_82_sbrief": {
+      "speech": "x ist gleich eckige Klammer auf Klammer auf a plus b Klammer zu Quadrat Klammer auf c minus b Klammer zu Quadrat eckige Klammer zu plus eckige Klammer auf Klammer auf d plus e Klammer zu Quadrat Klammer auf f minus e Klammer zu Quadrat eckige Klammer zu"
+    },
+    "Sample_83_default": {
+      "speech": "x ist gleich eckige Klammer auf Klammer auf a plus b Klammer zu Quadrat eckige Klammer zu plus eckige Klammer auf Klammer auf f minus e Klammer zu Quadrat eckige Klammer zu"
+    },
+    "Sample_83_brief": {
+      "speech": "x ist gleich eckige Klammer auf Klammer auf a plus b Klammer zu Quadrat eckige Klammer zu plus eckige Klammer auf Klammer auf f minus e Klammer zu Quadrat eckige Klammer zu"
+    },
+    "Sample_83_sbrief": {
+      "speech": "x ist gleich eckige Klammer auf Klammer auf a plus b Klammer zu Quadrat eckige Klammer zu plus eckige Klammer auf Klammer auf f minus e Klammer zu Quadrat eckige Klammer zu"
+    },
+    "Sample_84_default": {
+      "speech": "x ist gleich eckige Klammer auf Klammer auf a plus b Klammer zu Quadrat eckige Klammer zu"
+    },
+    "Sample_84_brief": {
+      "speech": "x ist gleich eckige Klammer auf Klammer auf a plus b Klammer zu Quadrat eckige Klammer zu"
+    },
+    "Sample_84_sbrief": {
+      "speech": "x ist gleich eckige Klammer auf Klammer auf a plus b Klammer zu Quadrat eckige Klammer zu"
+    },
+    "Sample_85_default": {
+      "speech": "x ist gleich Klammer auf a plus b Klammer zu Quadrat"
+    },
+    "Sample_85_brief": {
+      "speech": "x ist gleich Klammer auf a plus b Klammer zu Quadrat"
+    },
+    "Sample_85_sbrief": {
+      "speech": "x ist gleich Klammer auf a plus b Klammer zu Quadrat"
+    },
+    "Sample_86_default": {
+      "speech": "x ist gleich a plus b Quadrat"
+    },
+    "Sample_86_brief": {
+      "speech": "x ist gleich a plus b Quadrat"
+    },
+    "Sample_86_sbrief": {
+      "speech": "x ist gleich a plus b Quadrat"
+    },
+    "Sample_87_default": {
+      "speech": "Anfang Bruch ein halb durch drei viertel Ende Bruch ist gleich zwei drittel"
+    },
+    "Sample_87_brief": {
+      "speech": "Anfang Bruch ein halb durch drei viertel Ende Bruch ist gleich zwei drittel"
+    },
+    "Sample_87_sbrief": {
+      "speech": "Bruch ein halb durch drei viertel Ende Bruch ist gleich zwei drittel"
+    },
+    "Sample_88_default": {
+      "speech": "2 Klammer auf Klammer auf x plus 1 Klammer zu Klammer auf x plus 3 Klammer zu minus 4 Klammer auf Klammer auf x minus 1 Klammer zu Klammer auf x plus 2 Klammer zu minus 3 Klammer zu Klammer zu ist gleich y"
+    },
+    "Sample_88_brief": {
+      "speech": "2 Klammer auf Klammer auf x plus 1 Klammer zu Klammer auf x plus 3 Klammer zu minus 4 Klammer auf Klammer auf x minus 1 Klammer zu Klammer auf x plus 2 Klammer zu minus 3 Klammer zu Klammer zu ist gleich y"
+    },
+    "Sample_88_sbrief": {
+      "speech": "2 Klammer auf Klammer auf x plus 1 Klammer zu Klammer auf x plus 3 Klammer zu minus 4 Klammer auf Klammer auf x minus 1 Klammer zu Klammer auf x plus 2 Klammer zu minus 3 Klammer zu Klammer zu ist gleich y"
+    },
+    "Sample_89_default": {
+      "speech": "Kosinus x ist gleich 1 minus Anfang Bruch x Quadrat durch 2 Fakultät Ende Bruch plus Anfang Bruch x hoch 4 Grundlinie durch 4 Fakultät Ende Bruch minus horizontale Ellipsis"
+    },
+    "Sample_89_brief": {
+      "speech": "Kosinus x ist gleich 1 minus Anfang Bruch x Quadrat durch 2 Fakultät Ende Bruch plus Anfang Bruch x hoch 4 Grund durch 4 Fakultät Ende Bruch minus horizontale Ellipsis"
+    },
+    "Sample_89_sbrief": {
+      "speech": "Kosinus x ist gleich 1 minus Bruch x Quadrat durch 2 Fakultät Ende Bruch plus Bruch x hoch 4 Grund durch 4 Fakultät Ende Bruch minus horizontale Ellipsis"
+    },
+    "Sample_90_default": {
+      "speech": "x ist gleich Anfang Bruch minus b plus minus Anfang Quadratwurzel b Quadrat minus 4 a c Ende Quadratwurzel durch 2 a Ende Bruch"
+    },
+    "Sample_90_brief": {
+      "speech": "x ist gleich Anfang Bruch minus b plus minus Anfang Quadratwurzel b Quadrat minus 4 a c Ende Quadratwurzel durch 2 a Ende Bruch"
+    },
+    "Sample_90_sbrief": {
+      "speech": "x ist gleich Bruch minus b plus minus Quadratwurzel b Quadrat minus 4 a c Ende Quadratwurzel durch 2 a Ende Bruch"
+    },
+    "Sample_91_default": {
+      "speech": "x plus y hoch Anfang Bruch 2 durch k plus 1 Ende Bruch"
+    },
+    "Sample_91_brief": {
+      "speech": "x plus y hoch Anfang Bruch 2 durch k plus 1 Ende Bruch"
+    },
+    "Sample_91_sbrief": {
+      "speech": "x plus y hoch Bruch 2 durch k plus 1 Ende Bruch"
+    },
+    "Sample_92_default": {
+      "speech": "Limes Unterschrift x Pfeil nach rechts 0 Ende Unterschrift Anfang Bruch Sinus x durch x Ende Bruch ist gleich 1"
+    },
+    "Sample_92_brief": {
+      "speech": "Limes Unterschrift x Pfeil nach rechts 0 Ende Unterschrift Anfang Bruch Sinus x durch x Ende Bruch ist gleich 1"
+    },
+    "Sample_92_sbrief": {
+      "speech": "Limes Unterschrift x Pfeil nach rechts 0 Ende Unterschrift Bruch Sinus x durch x Ende Bruch ist gleich 1"
+    },
+    "Sample_93_default": {
+      "speech": "d ist gleich Anfang Quadratwurzel Klammer auf x 2 minus x 1 Klammer zu Quadrat plus Klammer auf y 2 minus y 1 Klammer zu Quadrat Ende Quadratwurzel"
+    },
+    "Sample_93_brief": {
+      "speech": "d ist gleich Anfang Quadratwurzel Klammer auf x 2 minus x 1 Klammer zu Quadrat plus Klammer auf y 2 minus y 1 Klammer zu Quadrat Ende Quadratwurzel"
+    },
+    "Sample_93_sbrief": {
+      "speech": "d ist gleich Quadratwurzel Klammer auf x 2 minus x 1 Klammer zu Quadrat plus Klammer auf y 2 minus y 1 Klammer zu Quadrat Ende Quadratwurzel"
+    },
+    "Sample_94_default": {
+      "speech": "großes F Index n Grundlinie ist gleich großes F Index n minus 1 Grundlinie plus großes F Index n minus 2"
+    },
+    "Sample_94_brief": {
+      "speech": "großes F Index n Grund ist gleich großes F Index n minus 1 Grund plus großes F Index n minus 2"
+    },
+    "Sample_94_sbrief": {
+      "speech": "großes F Index n Grund ist gleich großes F Index n minus 1 Grund plus großes F Index n minus 2"
+    },
+    "Sample_95_default": {
+      "speech": "fettes großes Pi ist gleich Anfang 6 mal 6 Matrize 1. Zeile 1. Spalte pi 11 2. Spalte pi 12 3. Spalte pi 12 4. Spalte 0 5. Spalte 0 6. Spalte 0 2. Zeile 1. Spalte pi 12 2. Spalte pi 11 3. Spalte pi 12 4. Spalte 0 5. Spalte 0 6. Spalte 0 3. Zeile 1. Spalte pi 12 2. Spalte pi 12 3. Spalte pi 11 4. Spalte 0 5. Spalte 0 6. Spalte 0 4. Zeile 1. Spalte 0 2. Spalte 0 3. Spalte 0 4. Spalte pi 44 5. Spalte 0 6. Spalte 0 5. Zeile 1. Spalte 0 2. Spalte 0 3. Spalte 0 4. Spalte 0 5. Spalte pi 44 6. Spalte 0 6. Zeile 1. Spalte 0 2. Spalte 0 3. Spalte 0 4. Spalte 0 5. Spalte 0 6. Spalte pi 44 Ende Matrize"
+    },
+    "Sample_95_brief": {
+      "speech": "fettes großes Pi ist gleich Anfang 6 mal 6 Matrize 1. Zeile 1. Spalte pi 11 2. Spalte pi 12 3. Spalte pi 12 4. Spalte 0 5. Spalte 0 6. Spalte 0 2. Zeile 1. Spalte pi 12 2. Spalte pi 11 3. Spalte pi 12 4. Spalte 0 5. Spalte 0 6. Spalte 0 3. Zeile 1. Spalte pi 12 2. Spalte pi 12 3. Spalte pi 11 4. Spalte 0 5. Spalte 0 6. Spalte 0 4. Zeile 1. Spalte 0 2. Spalte 0 3. Spalte 0 4. Spalte pi 44 5. Spalte 0 6. Spalte 0 5. Zeile 1. Spalte 0 2. Spalte 0 3. Spalte 0 4. Spalte 0 5. Spalte pi 44 6. Spalte 0 6. Zeile 1. Spalte 0 2. Spalte 0 3. Spalte 0 4. Spalte 0 5. Spalte 0 6. Spalte pi 44 Ende Matrize"
+    },
+    "Sample_95_sbrief": {
+      "speech": "fettes großes Pi ist gleich 6 mal 6 Matrize 1. Zeile 1. Spalte pi 11 2. Spalte pi 12 3. Spalte pi 12 4. Spalte 0 5. Spalte 0 6. Spalte 0 2. Zeile 1. Spalte pi 12 2. Spalte pi 11 3. Spalte pi 12 4. Spalte 0 5. Spalte 0 6. Spalte 0 3. Zeile 1. Spalte pi 12 2. Spalte pi 12 3. Spalte pi 11 4. Spalte 0 5. Spalte 0 6. Spalte 0 4. Zeile 1. Spalte 0 2. Spalte 0 3. Spalte 0 4. Spalte pi 44 5. Spalte 0 6. Spalte 0 5. Zeile 1. Spalte 0 2. Spalte 0 3. Spalte 0 4. Spalte 0 5. Spalte pi 44 6. Spalte 0 6. Zeile 1. Spalte 0 2. Spalte 0 3. Spalte 0 4. Spalte 0 5. Spalte 0 6. Spalte pi 44 Ende Matrize"
+    },
+    "Sample_96_default": {
+      "speech": "s 11 ist gleich Anfang Bruch c 11 plus c 12 durch Klammer auf c 11 minus c 12 Klammer zu Klammer auf c 11 plus 2 c 12 Klammer zu Ende Bruch"
+    },
+    "Sample_96_brief": {
+      "speech": "s 11 ist gleich Anfang Bruch c 11 plus c 12 durch Klammer auf c 11 minus c 12 Klammer zu Klammer auf c 11 plus 2 c 12 Klammer zu Ende Bruch"
+    },
+    "Sample_96_sbrief": {
+      "speech": "s 11 ist gleich Bruch c 11 plus c 12 durch Klammer auf c 11 minus c 12 Klammer zu Klammer auf c 11 plus 2 c 12 Klammer zu Ende Bruch"
+    },
+    "Sample_97_default": {
+      "speech": "normales großes S i normales großes O 2 plus 6 normales großes H normales großes F Pfeil nach rechts normales großes H 2 normales großes S i normales großes F 6 plus 2 normales großes H 2 normales großes O"
+    },
+    "Sample_97_brief": {
+      "speech": "normales großes S i normales großes O 2 plus 6 normales großes H normales großes F Pfeil nach rechts normales großes H 2 normales großes S i normales großes F 6 plus 2 normales großes H 2 normales großes O"
+    },
+    "Sample_97_sbrief": {
+      "speech": "normales großes S i normales großes O 2 plus 6 normales großes H normales großes F Pfeil nach rechts normales großes H 2 normales großes S i normales großes F 6 plus 2 normales großes H 2 normales großes O"
+    },
+    "Sample_98_default": {
+      "speech": "Anfang Bruch d durch d x Ende Bruch Klammer auf großes E Klammer auf x Klammer zu großes A Klammer auf x Klammer zu Anfang Bruch d w Klammer auf x Klammer zu durch d x Ende Bruch Klammer zu plus p Klammer auf x Klammer zu ist gleich 0"
+    },
+    "Sample_98_brief": {
+      "speech": "Anfang Bruch d durch d x Ende Bruch Klammer auf großes E Klammer auf x Klammer zu großes A Klammer auf x Klammer zu Anfang Bruch d w Klammer auf x Klammer zu durch d x Ende Bruch Klammer zu plus p Klammer auf x Klammer zu ist gleich 0"
+    },
+    "Sample_98_sbrief": {
+      "speech": "Bruch d durch d x Ende Bruch Klammer auf großes E Klammer auf x Klammer zu großes A Klammer auf x Klammer zu Bruch d w Klammer auf x Klammer zu durch d x Ende Bruch Klammer zu plus p Klammer auf x Klammer zu ist gleich 0"
+    },
+    "Sample_99_default": {
+      "speech": "TCS Index gas Grundlinie ist gleich minus ein halb Klammer auf Anfang Bruch großes P Index seal Grundlinie durch großes P Index Maximum Grundlinie Ende Bruch Klammer zu Klammer auf Anfang Bruch 1 durch großes T Index seal Grundlinie Ende Bruch Klammer zu"
+    },
+    "Sample_99_brief": {
+      "speech": "TCS Index gas Grund ist gleich minus ein halb Klammer auf Anfang Bruch großes P Index seal Grund durch großes P Index Maximum Grund Ende Bruch Klammer zu Klammer auf Anfang Bruch 1 durch großes T Index seal Grund Ende Bruch Klammer zu"
+    },
+    "Sample_99_sbrief": {
+      "speech": "TCS Index gas Grund ist gleich minus ein halb Klammer auf Bruch großes P Index seal Grund durch großes P Index Maximum Grund Ende Bruch Klammer zu Klammer auf Bruch 1 durch großes T Index seal Grund Ende Bruch Klammer zu"
+    },
+    "Sample_100_default": {
+      "speech": "großes B Index p Grundlinie ist gleich Anfang Anfang Bruch Anfang Bruch 7 minus v Quadrat durch 3 Ende Bruch Klammer auf 1 plus Anfang Bruch c Quadrat durch a Quadrat Ende Bruch plus Anfang Bruch c hoch 4 Grundlinie durch a hoch 4 Grundlinie Ende Bruch Klammer zu plus Anfang Bruch Klammer auf 3 minus v Klammer zu Quadrat c Quadrat durch Klammer auf 1 plus v Klammer zu a Quadrat Ende Bruch durch durch Klammer auf 1 minus v Klammer zu Klammer auf 1 minus Anfang Bruch c hoch 4 Grundlinie durch a hoch 4 Grundlinie Ende Bruch Klammer zu Klammer auf 1 minus Anfang Bruch c Quadrat durch a Quadrat Ende Bruch Klammer zu Ende Ende Bruch"
+    },
+    "Sample_100_brief": {
+      "speech": "großes B Index p Grund ist gleich Anfang Anfang Bruch Anfang Bruch 7 minus v Quadrat durch 3 Ende Bruch Klammer auf 1 plus Anfang Bruch c Quadrat durch a Quadrat Ende Bruch plus Anfang Bruch c hoch 4 Grund durch a hoch 4 Grund Ende Bruch Klammer zu plus Anfang Bruch Klammer auf 3 minus v Klammer zu Quadrat c Quadrat durch Klammer auf 1 plus v Klammer zu a Quadrat Ende Bruch durch durch Klammer auf 1 minus v Klammer zu Klammer auf 1 minus Anfang Bruch c hoch 4 Grund durch a hoch 4 Grund Ende Bruch Klammer zu Klammer auf 1 minus Anfang Bruch c Quadrat durch a Quadrat Ende Bruch Klammer zu Ende Ende Bruch"
+    },
+    "Sample_100_sbrief": {
+      "speech": "großes B Index p Grund ist gleich geschachteltBruch Bruch 7 minus v Quadrat durch 3 Ende Bruch Klammer auf 1 plus Bruch c Quadrat durch a Quadrat Ende Bruch plus Bruch c hoch 4 Grund durch a hoch 4 Grund Ende Bruch Klammer zu plus Bruch Klammer auf 3 minus v Klammer zu Quadrat c Quadrat durch Klammer auf 1 plus v Klammer zu a Quadrat Ende Bruch geschachteltdurch Klammer auf 1 minus v Klammer zu Klammer auf 1 minus Bruch c hoch 4 Grund durch a hoch 4 Grund Ende Bruch Klammer zu Klammer auf 1 minus Bruch c Quadrat durch a Quadrat Ende Bruch Klammer zu geschachteltEnde Bruch"
+    },
+    "Sample_101_default": {
+      "speech": "großes Q Index tank hoch series Grundlinie ist gleich Anfang Bruch 1 durch großes R Index s Grundlinie Ende Bruch Anfang Quadratwurzel Anfang Bruch großes L Index s Grundlinie durch großes C Index s Grundlinie Ende Bruch Ende Quadratwurzel"
+    },
+    "Sample_101_brief": {
+      "speech": "großes Q Index tank hoch series Grund ist gleich Anfang Bruch 1 durch großes R Index s Grund Ende Bruch Anfang Quadratwurzel Anfang Bruch großes L Index s Grund durch großes C Index s Grund Ende Bruch Ende Quadratwurzel"
+    },
+    "Sample_101_sbrief": {
+      "speech": "großes Q Index tank hoch series Grund ist gleich Bruch 1 durch großes R Index s Grund Ende Bruch Quadratwurzel Bruch großes L Index s Grund durch großes C Index s Grund Ende Bruch Ende Quadratwurzel"
+    },
+    "Sample_102_default": {
+      "speech": "großes Delta phi Index peak Grundlinie ist gleich Tangens hoch minus 1 Grundlinie Klammer auf k Quadrat großes Q Index tank hoch series Grundlinie Klammer zu"
+    },
+    "Sample_102_brief": {
+      "speech": "großes Delta phi Index peak Grund ist gleich Tangens hoch minus 1 Grund Klammer auf k Quadrat großes Q Index tank hoch series Grund Klammer zu"
+    },
+    "Sample_102_sbrief": {
+      "speech": "großes Delta phi Index peak Grund ist gleich Tangens hoch minus 1 Grund Klammer auf k Quadrat großes Q Index tank hoch series Grund Klammer zu"
+    },
+    "Sample_103_default": {
+      "speech": "f ist gleich 1.013 Anfang Bruch großes W durch großes L Quadrat Ende Bruch Anfang Quadratwurzel Anfang Bruch großes E durch rho Ende Bruch Ende Quadratwurzel Anfang Quadratwurzel Klammer auf 1 plus 0.293 Anfang Bruch großes L Quadrat durch EW Quadrat Ende Bruch sigma Klammer zu Ende Quadratwurzel"
+    },
+    "Sample_103_brief": {
+      "speech": "f ist gleich 1.013 Anfang Bruch großes W durch großes L Quadrat Ende Bruch Anfang Quadratwurzel Anfang Bruch großes E durch rho Ende Bruch Ende Quadratwurzel Anfang Quadratwurzel Klammer auf 1 plus 0.293 Anfang Bruch großes L Quadrat durch EW Quadrat Ende Bruch sigma Klammer zu Ende Quadratwurzel"
+    },
+    "Sample_103_sbrief": {
+      "speech": "f ist gleich 1.013 Bruch großes W durch großes L Quadrat Ende Bruch Quadratwurzel Bruch großes E durch rho Ende Bruch Ende Quadratwurzel Quadratwurzel Klammer auf 1 plus 0.293 Bruch großes L Quadrat durch EW Quadrat Ende Bruch sigma Klammer zu Ende Quadratwurzel"
+    },
+    "Sample_104_default": {
+      "speech": "u Index n Grundlinie Klammer auf x Klammer zu ist gleich gamma Index n Grundlinie Klammer auf Kosinus hyperbolicus k Index n Grundlinie x minus Kosinus k Index n Grundlinie x Klammer zu plus Klammer auf Sinus hyperbolicus k Index n Grundlinie x minus Sinus k Index n Grundlinie x Klammer zu"
+    },
+    "Sample_104_brief": {
+      "speech": "u Index n Grund Klammer auf x Klammer zu ist gleich gamma Index n Grund Klammer auf Kosinus hyperbolicus k Index n Grund x minus Kosinus k Index n Grund x Klammer zu plus Klammer auf Sinus hyperbolicus k Index n Grund x minus Sinus k Index n Grund x Klammer zu"
+    },
+    "Sample_104_sbrief": {
+      "speech": "u Index n Grund Klammer auf x Klammer zu ist gleich gamma Index n Grund Klammer auf Kosinus hyperbolicus k Index n Grund x minus Kosinus k Index n Grund x Klammer zu plus Klammer auf Sinus hyperbolicus k Index n Grund x minus Sinus k Index n Grund x Klammer zu"
+    },
+    "Sample_105_default": {
+      "speech": "Anfang Anordnung 1. Zeile 1. Spalte großes B 2. Spalte ist gleich Anfang Anfang Bruch Anfang Bruch großes F 0 durch m Ende Bruch durch durch Anfang Quadratwurzel Klammer auf omega 0 Quadrat minus omega Quadrat Klammer zu Quadrat plus 4 n Quadrat omega Quadrat Ende Quadratwurzel Ende Ende Bruch 2. Zeile 1. Spalte leer 2. Spalte ist gleich Anfang Anfang Bruch Anfang Bruch großes F 0 durch k Ende Bruch durch durch Anfang Quadratwurzel Klammer auf 1 minus Klammer auf omega Schrägstrich omega 0 Quadrat Klammer zu Quadrat Klammer zu Quadrat plus 4 Klammer auf n Schrägstrich omega 0 Klammer zu Quadrat Klammer auf omega Schrägstrich omega 0 Klammer zu Quadrat Ende Quadratwurzel Ende Ende Bruch Ende Anordnung"
+    },
+    "Sample_105_brief": {
+      "speech": "Anfang Anordnung 1. Zeile 1. Spalte großes B 2. Spalte ist gleich Anfang Anfang Bruch Anfang Bruch großes F 0 durch m Ende Bruch durch durch Anfang Quadratwurzel Klammer auf omega 0 Quadrat minus omega Quadrat Klammer zu Quadrat plus 4 n Quadrat omega Quadrat Ende Quadratwurzel Ende Ende Bruch 2. Zeile 1. Spalte leer 2. Spalte ist gleich Anfang Anfang Bruch Anfang Bruch großes F 0 durch k Ende Bruch durch durch Anfang Quadratwurzel Klammer auf 1 minus Klammer auf omega Schrägstrich omega 0 Quadrat Klammer zu Quadrat Klammer zu Quadrat plus 4 Klammer auf n Schrägstrich omega 0 Klammer zu Quadrat Klammer auf omega Schrägstrich omega 0 Klammer zu Quadrat Ende Quadratwurzel Ende Ende Bruch Ende Anordnung"
+    },
+    "Sample_105_sbrief": {
+      "speech": "Anordnung 1. Zeile 1. Spalte großes B 2. Spalte ist gleich geschachteltBruch Bruch großes F 0 durch m Ende Bruch geschachteltdurch Quadratwurzel Klammer auf omega 0 Quadrat minus omega Quadrat Klammer zu Quadrat plus 4 n Quadrat omega Quadrat Ende Quadratwurzel geschachteltEnde Bruch 2. Zeile 1. Spalte leer 2. Spalte ist gleich geschachteltBruch Bruch großes F 0 durch k Ende Bruch geschachteltdurch Quadratwurzel Klammer auf 1 minus Klammer auf omega Schrägstrich omega 0 Quadrat Klammer zu Quadrat Klammer zu Quadrat plus 4 Klammer auf n Schrägstrich omega 0 Klammer zu Quadrat Klammer auf omega Schrägstrich omega 0 Klammer zu Quadrat Ende Quadratwurzel geschachteltEnde Bruch Ende Anordnung"
+    },
+    "Sample_106_default": {
+      "speech": "normales p Klammer auf großes A a n d großes B Klammer zu ist gleich normales p Klammer auf großes A Klammer zu normales p Klammer auf großes B senkrechter Strich großes A Klammer zu"
+    },
+    "Sample_106_brief": {
+      "speech": "normales p Klammer auf großes A a n d großes B Klammer zu ist gleich normales p Klammer auf großes A Klammer zu normales p Klammer auf großes B senkrechter Strich großes A Klammer zu"
+    },
+    "Sample_106_sbrief": {
+      "speech": "normales p Klammer auf großes A a n d großes B Klammer zu ist gleich normales p Klammer auf großes A Klammer zu normales p Klammer auf großes B senkrechter Strich großes A Klammer zu"
+    },
+    "Sample_107_default": {
+      "speech": "großes P großes M großes F Klammer auf x Klammer zu proportional zu Klammer auf Anfang Bruch 1 durch x Ende Bruch Klammer zu hoch alpha"
+    },
+    "Sample_107_brief": {
+      "speech": "großes P großes M großes F Klammer auf x Klammer zu proportional zu Klammer auf Anfang Bruch 1 durch x Ende Bruch Klammer zu hoch alpha"
+    },
+    "Sample_107_sbrief": {
+      "speech": "großes P großes M großes F Klammer auf x Klammer zu proportional zu Klammer auf Bruch 1 durch x Ende Bruch Klammer zu hoch alpha"
+    },
+    "Sample_108_default": {
+      "speech": "f Klammer auf x Klammer zu ist gleich Anfang Bruch 1 durch Anfang Quadratwurzel 2 pi Ende Quadratwurzel Ende Bruch exp Klammer auf minus x Quadrat Schrägstrich 2 Klammer zu"
+    },
+    "Sample_108_brief": {
+      "speech": "f Klammer auf x Klammer zu ist gleich Anfang Bruch 1 durch Anfang Quadratwurzel 2 pi Ende Quadratwurzel Ende Bruch exp Klammer auf minus x Quadrat Schrägstrich 2 Klammer zu"
+    },
+    "Sample_108_sbrief": {
+      "speech": "f Klammer auf x Klammer zu ist gleich Bruch 1 durch Quadratwurzel 2 pi Ende Quadratwurzel Ende Bruch exp Klammer auf minus x Quadrat Schrägstrich 2 Klammer zu"
+    },
+    "Sample_109_default": {
+      "speech": "Anfang Bruch d x durch d theta Ende Bruch ist gleich Anfang Bruch beta durch Kosinus Quadrat theta Ende Bruch"
+    },
+    "Sample_109_brief": {
+      "speech": "Anfang Bruch d x durch d theta Ende Bruch ist gleich Anfang Bruch beta durch Kosinus Quadrat theta Ende Bruch"
+    },
+    "Sample_109_sbrief": {
+      "speech": "Bruch d x durch d theta Ende Bruch ist gleich Bruch beta durch Kosinus Quadrat theta Ende Bruch"
+    },
+    "Sample_110_default": {
+      "speech": "s Schrägstrich Anfang Quadratwurzel 2 Klammer auf n minus 1 Klammer zu Ende Quadratwurzel"
+    },
+    "Sample_110_brief": {
+      "speech": "s Schrägstrich Anfang Quadratwurzel 2 Klammer auf n minus 1 Klammer zu Ende Quadratwurzel"
+    },
+    "Sample_110_sbrief": {
+      "speech": "s Schrägstrich Quadratwurzel 2 Klammer auf n minus 1 Klammer zu Ende Quadratwurzel"
+    }
+  }
+}

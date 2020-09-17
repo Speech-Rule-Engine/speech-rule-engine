@@ -1,0 +1,46 @@
+{
+  "_comment0_": " Tests from the issues discovered in ClearspeakGerman rules.",
+  "name": "GermanIssues",
+  "locale": "de",
+  "information": "ClearspeakGerman Issues tests.",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Issues",
+    "Issue230_1": {
+      "speech": "5, 3 geteilt durch 224"
+    },
+    "Issue230_2": {
+      "speech": "5 drei viertel"
+    },
+    "IssueNumbers_1": {
+      "speech": "Zahl t 2 e 4"
+    },
+    "IssueNumbers_2": {
+      "speech": "Zahl Nummernzeichen F F 0 0 0 0"
+    },
+    "IssueNumbers_3": {
+      "speech": "Zahl Nummernzeichen F F F F"
+    },
+    "Issue320_1": {
+      "speech": "partielle Ableitung"
+    },
+    "Issue320_2": {
+      "speech": "x Fakultät"
+    },
+    "Issue320_3": {
+      "speech": "minus minus x"
+    },
+    "Issue320_4": {
+      "speech": "plus plus x"
+    },
+    "Issue320_5": {
+      "speech": "Sinus Sinus x"
+    },
+    "Issue320_6": {
+      "speech": "partielle Ableitung partielle Ableitung x"
+    },
+    "Issue320_7": {
+      "speech": "Klammer auf, Bruch mit Zähler partielle Ableitung Quadrat, und Nenner partielle Ableitung x Quadrat, plus, Bruch mit Zähler partielle Ableitung Quadrat, und Nenner partielle Ableitung y Quadrat, Klammer zu,  , der Betrag von phi  , Klammer auf, x plus normales i, y, Klammer zu, Quadrat ist gleich 0"
+    }
+  }
+}

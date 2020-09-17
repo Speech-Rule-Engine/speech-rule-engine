@@ -1,0 +1,46 @@
+{
+  "_comment0_": " Tests from the issues discovered in ClearspeakFrench rules.",
+  "name": "FrenchIssues",
+  "locale": "fr",
+  "information": "ClearspeakFrench Issues tests.",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Issues",
+    "Issue230_1": {
+      "speech": "5 et, 3 sur 224"
+    },
+    "Issue230_2": {
+      "speech": "5 et trois-quarts"
+    },
+    "IssueNumbers_1": {
+      "speech": "nombre t 2 e 4"
+    },
+    "IssueNumbers_2": {
+      "speech": "nombre dièse F F 0 0 0 0"
+    },
+    "IssueNumbers_3": {
+      "speech": "nombre dièse F F F F"
+    },
+    "Issue320_1": {
+      "speech": "dérivée partielle"
+    },
+    "Issue320_2": {
+      "speech": "x factorielle"
+    },
+    "Issue320_3": {
+      "speech": "négatif négatif x"
+    },
+    "Issue320_4": {
+      "speech": "plus plus x"
+    },
+    "Issue320_5": {
+      "speech": "sinus sinus x"
+    },
+    "Issue320_6": {
+      "speech": "dérivée partielle dérivée partielle x"
+    },
+    "Issue320_7": {
+      "speech": "parenthèse gauche, fraction avec numérateur dérivée partielle au carré, et dénominateur dérivée partielle x au carré, plus, fraction avec numérateur dérivée partielle au carré, et dénominateur dérivée partielle y au carré, parenthèse droite,  , la valeur absolue de phi  , parenthèse gauche, x plus i en normal, y, parenthèse droite, au carré égale 0"
+    }
+  }
+}

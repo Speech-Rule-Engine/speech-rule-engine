@@ -256,7 +256,7 @@ sre.AbstractRuleTest.prototype.prepare = function() {
     if (key.match(/^_/) || exclude.indexOf(key) !== -1) continue;
     var json = input[key];
     var speech = output[key];
-    if (!speech) {
+    if (json.test && !speech) {
       warn.push(key);
       continue;
     }
