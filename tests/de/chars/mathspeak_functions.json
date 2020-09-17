@@ -1,0 +1,450 @@
+{
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "MathspeakFunctionGermanTest",
+  "locale": "de",
+  "domain": "mathspeak",
+  "styles": [
+    "default",
+    "brief",
+    "sbrief"
+  ],
+  "active": "MathspeakFunctionGerman",
+  "type": "function",
+  "information": "Mathspeak function test for German",
+  "tests": {
+    "deg": {
+      "speech": [
+        "Grad",
+        "Grad",
+        "Grad"
+      ]
+    },
+    "det": {
+      "speech": [
+        "Determinante",
+        "Determinante",
+        "Determinante"
+      ]
+    },
+    "dim": {
+      "speech": [
+        "Dimension",
+        "Dimension",
+        "Dimension"
+      ]
+    },
+    "hom": {
+      "speech": [
+        "hom",
+        "hom",
+        "hom"
+      ]
+    },
+    "Hom": {
+      "speech": [
+        "hom",
+        "hom",
+        "hom"
+      ]
+    },
+    "ker": {
+      "speech": [
+        "Kern",
+        "Kern",
+        "Kern"
+      ]
+    },
+    "Tr": {
+      "speech": [
+        "Spur",
+        "Spur",
+        "Spur"
+      ]
+    },
+    "tr": {
+      "speech": [
+        "Spur",
+        "Spur",
+        "Spur"
+      ]
+    },
+    "log": {
+      "speech": [
+        "Logarithmus",
+        "Logarithmus",
+        "Logarithmus"
+      ]
+    },
+    "ln": {
+      "speech": [
+        "natürlicher Logarithmus",
+        "natürlicher Logarithmus",
+        "natürlicher Logarithmus"
+      ]
+    },
+    "lg": {
+      "speech": [
+        "Logarithmus zur Basis 10",
+        "Logarithmus zur Basis 10",
+        "Logarithmus zur Basis 10"
+      ]
+    },
+    "exp": {
+      "speech": [
+        "exp",
+        "exp",
+        "exp"
+      ]
+    },
+    "expt": {
+      "speech": [
+        "exp",
+        "exp",
+        "exp"
+      ]
+    },
+    "gcd": {
+      "speech": [
+        "ggt",
+        "ggt",
+        "ggt"
+      ]
+    },
+    "lcm": {
+      "speech": [
+        "kgv",
+        "kgv",
+        "kgv"
+      ]
+    },
+    "arg": {
+      "speech": [
+        "Argument",
+        "Argument",
+        "Argument"
+      ]
+    },
+    "im": {
+      "speech": [
+        "der Imaginärteil der komplexen Zahl",
+        "der Imaginärteil der komplexen Zahl",
+        "der Imaginärteil der komplexen Zahl"
+      ]
+    },
+    "re": {
+      "speech": [
+        "der Realteil der komplexen Zahl",
+        "der Realteil der komplexen Zahl",
+        "der Realteil der komplexen Zahl"
+      ]
+    },
+    "inf": {
+      "speech": [
+        "Infimum",
+        "Infimum",
+        "Infimum"
+      ]
+    },
+    "lim": {
+      "speech": [
+        "Limes",
+        "Limes",
+        "Limes"
+      ]
+    },
+    "'": {
+      "speech": [
+        "projektiver Limes",
+        "projektiver Limes",
+        "projektiver Limes"
+      ]
+    },
+    "liminf": {
+      "speech": [
+        "Limes inferior",
+        "Limes inferior",
+        "Limes inferior"
+      ]
+    },
+    "limsup": {
+      "speech": [
+        "Limes superior",
+        "Limes superior",
+        "Limes superior"
+      ]
+    },
+    "max": {
+      "speech": [
+        "Maximum",
+        "Maximum",
+        "Maximum"
+      ]
+    },
+    "min": {
+      "speech": [
+        "Minimum",
+        "Minimum",
+        "Minimum"
+      ]
+    },
+    "sup": {
+      "speech": [
+        "Supremum",
+        "Supremum",
+        "Supremum"
+      ]
+    },
+    "injlim": {
+      "speech": [
+        "Colimes",
+        "Colimes",
+        "Colimes"
+      ]
+    },
+    "projlim": {
+      "speech": [
+        "projektiver Limes",
+        "projektiver Limes",
+        "projektiver Limes"
+      ]
+    },
+    "mod": {
+      "speech": [
+        "modulo",
+        "modulo",
+        "modulo"
+      ]
+    },
+    "Pr": {
+      "speech": [
+        "Wahrscheinlichkeit",
+        "Wahrscheinlichkeit",
+        "Wahrscheinlichkeit"
+      ]
+    },
+    "cosh": {
+      "speech": [
+        "Kosinus hyperbolicus",
+        "Kosinus hyperbolicus",
+        "Kosinus hyperbolicus"
+      ]
+    },
+    "coth": {
+      "speech": [
+        "Kotangens hyperbolicus",
+        "Kotangens hyperbolicus",
+        "Kotangens hyperbolicus"
+      ]
+    },
+    "csch": {
+      "speech": [
+        "Kosekans hyperbolicus",
+        "Kosekans hyperbolicus",
+        "Kosekans hyperbolicus"
+      ]
+    },
+    "sech": {
+      "speech": [
+        "Sekans hyperbolicus",
+        "Sekans hyperbolicus",
+        "Sekans hyperbolicus"
+      ]
+    },
+    "sinh": {
+      "speech": [
+        "Sinus hyperbolicus",
+        "Sinus hyperbolicus",
+        "Sinus hyperbolicus"
+      ]
+    },
+    "tanh": {
+      "speech": [
+        "Tangens hyperbolicus",
+        "Tangens hyperbolicus",
+        "Tangens hyperbolicus"
+      ]
+    },
+    "arcosh": {
+      "speech": [
+        "Areakosinus hyperbolicus",
+        "Areakosinus hyperbolicus",
+        "Areakosinus hyperbolicus"
+      ]
+    },
+    "arccosh": {
+      "speech": [
+        "Areakosinus hyperbolicus",
+        "Areakosinus hyperbolicus",
+        "Areakosinus hyperbolicus"
+      ]
+    },
+    "arcoth": {
+      "speech": [
+        "Areakotangens hyperbolicus",
+        "Areakotangens hyperbolicus",
+        "Areakotangens hyperbolicus"
+      ]
+    },
+    "arccoth": {
+      "speech": [
+        "Areakotangens hyperbolicus",
+        "Areakotangens hyperbolicus",
+        "Areakotangens hyperbolicus"
+      ]
+    },
+    "arcsch": {
+      "speech": [
+        "Areakosekans hyperbolicus",
+        "Areakosekans hyperbolicus",
+        "Areakosekans hyperbolicus"
+      ]
+    },
+    "arccsch": {
+      "speech": [
+        "Areakosekans hyperbolicus",
+        "Areakosekans hyperbolicus",
+        "Areakosekans hyperbolicus"
+      ]
+    },
+    "arsech": {
+      "speech": [
+        "Areasekans hyperbolicus",
+        "Areasekans hyperbolicus",
+        "Areasekans hyperbolicus"
+      ]
+    },
+    "arcsech": {
+      "speech": [
+        "Areasekans hyperbolicus",
+        "Areasekans hyperbolicus",
+        "Areasekans hyperbolicus"
+      ]
+    },
+    "arsinh": {
+      "speech": [
+        "Areasinus hyperbolicus",
+        "Areasinus hyperbolicus",
+        "Areasinus hyperbolicus"
+      ]
+    },
+    "arcsinh": {
+      "speech": [
+        "Areasinus hyperbolicus",
+        "Areasinus hyperbolicus",
+        "Areasinus hyperbolicus"
+      ]
+    },
+    "artanh": {
+      "speech": [
+        "Areatangens hyperbolicus ",
+        "Areatangens hyperbolicus ",
+        "Areatangens hyperbolicus "
+      ]
+    },
+    "arctanh": {
+      "speech": [
+        "Areatangens hyperbolicus ",
+        "Areatangens hyperbolicus ",
+        "Areatangens hyperbolicus "
+      ]
+    },
+    "cos": {
+      "speech": [
+        "Kosinus",
+        "Kosinus",
+        "Kosinus"
+      ]
+    },
+    "cosine": {
+      "speech": [
+        "Kosinus",
+        "Kosinus",
+        "Kosinus"
+      ]
+    },
+    "cot": {
+      "speech": [
+        "Kotangens",
+        "Kotangens",
+        "Kotangens"
+      ]
+    },
+    "csc": {
+      "speech": [
+        "Kosekans",
+        "Kosekans",
+        "Kosekans"
+      ]
+    },
+    "sec": {
+      "speech": [
+        "Sekans",
+        "Sekans",
+        "Sekans"
+      ]
+    },
+    "sin": {
+      "speech": [
+        "Sinus",
+        "Sinus",
+        "Sinus"
+      ]
+    },
+    "sine": {
+      "speech": [
+        "Sinus",
+        "Sinus",
+        "Sinus"
+      ]
+    },
+    "tan": {
+      "speech": [
+        "Tangens",
+        "Tangens",
+        "Tangens"
+      ]
+    },
+    "arccos": {
+      "speech": [
+        "Arkuskosinus",
+        "Arkuskosinus",
+        "Arkuskosinus"
+      ]
+    },
+    "arccot": {
+      "speech": [
+        "Arkuskotangens",
+        "Arkuskotangens",
+        "Arkuskotangens"
+      ]
+    },
+    "arccsc": {
+      "speech": [
+        "Arkuskosekans",
+        "Arkuskosekans",
+        "Arkuskosekans"
+      ]
+    },
+    "arcsec": {
+      "speech": [
+        "Arkussekans",
+        "Arkussekans",
+        "Arkussekans"
+      ]
+    },
+    "arcsin": {
+      "speech": [
+        "Arkussinus",
+        "Arkussinus",
+        "Arkussinus"
+      ]
+    },
+    "arctan": {
+      "speech": [
+        "Arkustangens",
+        "Arkustangens",
+        "Arkustangens"
+      ]
+    }
+  }
+}

@@ -115,6 +115,8 @@ let tests = sre.ClearspeakRuleTest.tests();
 tests.forEach(x => sre.Tests.getInstance().runner.registerTest(x));
 tests = sre.MathspeakRuleTest.tests();
 tests.forEach(x => sre.Tests.getInstance().runner.registerTest(x));
+tests = sre.AbstractCharacterTest.tests();
+tests.forEach(x => sre.Tests.getInstance().runner.registerTest(x));
 /**
  * Execute tests.
  */

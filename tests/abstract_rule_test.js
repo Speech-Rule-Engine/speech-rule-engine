@@ -320,7 +320,7 @@ sre.MathspeakRuleTest.tests = function() {
   for (var locale of sre.MathspeakRuleTest.locales) {
     for (var file of files) {
       var test = new sre.AbstractRuleTest();
-      test.jsonFile = locale + '/' + file;
+      test.jsonFile = locale + '/mathspeak/' + file;
       test.baseFile = sre.MathspeakRuleTest.baseDir + '/' + file;
       test.locale = locale;
       // test.setActive(test.active);

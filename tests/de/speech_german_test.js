@@ -19,11 +19,8 @@
 
 goog.provide('sre.SpeechGermanTest');
 
-goog.require('sre.ClearspeakCharGermanTest');
 goog.require('sre.ClearspeakGermanFontTest');
 goog.require('sre.CollapseGermanTest');
-goog.require('sre.DefaultCharGermanTest');
-goog.require('sre.MathspeakCharGermanTest');
 goog.require('sre.MathspeakEmbellishGermanTest');
 goog.require('sre.MathspeakGermanFontTest');
 goog.require('sre.MmlcloudGermanTest');
@@ -37,10 +34,7 @@ goog.require('sre.SummaryGermanTest');
  */
 sre.SpeechGermanTest.testList = [
   sre.CollapseGermanTest,
-  sre.ClearspeakCharGermanTest,
   sre.ClearspeakGermanFontTest,
-  sre.DefaultCharGermanTest,
-  sre.MathspeakCharGermanTest,
   sre.MathspeakEmbellishGermanTest,
   sre.MathspeakGermanFontTest,
   sre.MmlcloudGermanTest,

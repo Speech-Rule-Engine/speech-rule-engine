@@ -211,13 +211,17 @@ sre.AbstractCharacterTest.tests = function() {
     'default_units.json',
     'mathspeak_characters.json',
     'mathspeak_functions.json',
-    'mathspeak_units.json'
+    'mathspeak_units.json',
+    'clearspeak_characters.json',
+    'clearspeak_functions.json',
+    'clearspeak_units.json'
   ];
   var tests = [];
   for (var locale of sre.AbstractCharacterTest.locales) {
     for (var file of files) {
+      if (locale === 'es' && file.match(/^clearspeak/)) continue;
       var test = new sre.AbstractCharacterTest();
-      test.jsonFile = locale + '/' + file;
+      test.jsonFile = locale + '/chars/' + file;
       test.baseFile = sre.AbstractCharacterTest.baseDir + '/' + file.split('_')[1];
       test.locale = locale;
       tests.push(test);

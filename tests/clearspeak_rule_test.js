@@ -93,7 +93,7 @@ sre.ClearspeakRuleTest.tests = function() {
   for (var locale of Object.keys(sre.ClearspeakRuleTest.locales)) {
     for (var file of files) {
       var test = new sre.ClearspeakRuleTest();
-      test.jsonFile = locale + '/' + file;
+      test.jsonFile = locale + '/clearspeak/' + file;
       test.baseFile = sre.ClearspeakRuleTest.baseDir + '/' + file;
       test.locale = locale;
       test.compare = locale === 'de';  // tmp!

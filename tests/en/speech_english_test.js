@@ -15,10 +15,7 @@
 
 goog.provide('sre.SpeechEnglishTest');
 
-goog.require('sre.ClearspeakCharEnglishTest');
 goog.require('sre.CollapseEnglishTest');
-goog.require('sre.DefaultCharEnglishTest');
-goog.require('sre.MathspeakCharEnglishTest');
 goog.require('sre.MathspeakEmbellishEnglishTest');
 goog.require('sre.MathspeakEnglishFontTest');
 goog.require('sre.MmlcloudEnglishTest');
@@ -32,9 +29,6 @@ goog.require('sre.SummaryEnglishTest');
  */
 sre.SpeechEnglishTest.testList = [
   sre.CollapseEnglishTest,
-  sre.ClearspeakCharEnglishTest,
-  sre.DefaultCharEnglishTest,
-  sre.MathspeakCharEnglishTest,
   sre.MathspeakEmbellishEnglishTest,
   sre.MathspeakEnglishFontTest,
   sre.MmlcloudEnglishTest,

@@ -1,0 +1,323 @@
+{
+  "name": "DefaultFunctionEnglishTest",
+  "locale": "en",
+  "domain": "default",
+  "styles": [
+    "default"
+  ],
+  "active": "DefaultFunctionEnglish",
+  "type": "function",
+  "information": "Default function test for English",
+  "tests": {
+    "deg": {
+      "speech": [
+        "degree"
+      ]
+    },
+    "det": {
+      "speech": [
+        "determinant"
+      ]
+    },
+    "dim": {
+      "speech": [
+        "dimension"
+      ]
+    },
+    "hom": {
+      "speech": [
+        "homomorphism"
+      ]
+    },
+    "Hom": {
+      "speech": [
+        "homomorphism"
+      ]
+    },
+    "ker": {
+      "speech": [
+        "kernel"
+      ]
+    },
+    "Tr": {
+      "speech": [
+        "trace"
+      ]
+    },
+    "tr": {
+      "speech": [
+        "trace"
+      ]
+    },
+    "log": {
+      "speech": [
+        "log"
+      ]
+    },
+    "ln": {
+      "speech": [
+        "natural log"
+      ]
+    },
+    "lg": {
+      "speech": [
+        "log base 10"
+      ]
+    },
+    "exp": {
+      "speech": [
+        "exponential"
+      ]
+    },
+    "expt": {
+      "speech": [
+        "exponential"
+      ]
+    },
+    "gcd": {
+      "speech": [
+        "greatest common divisor"
+      ]
+    },
+    "lcm": {
+      "speech": [
+        "least common multiple"
+      ]
+    },
+    "arg": {
+      "speech": [
+        "argument"
+      ]
+    },
+    "im": {
+      "speech": [
+        "imaginary part"
+      ]
+    },
+    "re": {
+      "speech": [
+        "real part"
+      ]
+    },
+    "inf": {
+      "speech": [
+        "infimum"
+      ]
+    },
+    "lim": {
+      "speech": [
+        "limit"
+      ]
+    },
+    "'": {
+      "speech": [
+        "projective limit"
+      ]
+    },
+    "liminf": {
+      "speech": [
+        "limit inferior"
+      ]
+    },
+    "limsup": {
+      "speech": [
+        "limit superior"
+      ]
+    },
+    "max": {
+      "speech": [
+        "maximum"
+      ]
+    },
+    "min": {
+      "speech": [
+        "minimum"
+      ]
+    },
+    "sup": {
+      "speech": [
+        "supremum"
+      ]
+    },
+    "injlim": {
+      "speech": [
+        "colimit"
+      ]
+    },
+    "projlim": {
+      "speech": [
+        "projective limit"
+      ]
+    },
+    "mod": {
+      "speech": [
+        "modulo"
+      ]
+    },
+    "Pr": {
+      "speech": [
+        "probability"
+      ]
+    },
+    "cosh": {
+      "speech": [
+        "hyperbolic cosine"
+      ]
+    },
+    "coth": {
+      "speech": [
+        "hyperbolic cotangent"
+      ]
+    },
+    "csch": {
+      "speech": [
+        "hyperbolic cosecant"
+      ]
+    },
+    "sech": {
+      "speech": [
+        "hyperbolic secant"
+      ]
+    },
+    "sinh": {
+      "speech": [
+        "hyperbolic sine"
+      ]
+    },
+    "tanh": {
+      "speech": [
+        "hyperbolic tangent"
+      ]
+    },
+    "arcosh": {
+      "speech": [
+        "area hyperbolic cosine"
+      ]
+    },
+    "arccosh": {
+      "speech": [
+        "area hyperbolic cosine"
+      ]
+    },
+    "arcoth": {
+      "speech": [
+        "area hyperbolic cotangent"
+      ]
+    },
+    "arccoth": {
+      "speech": [
+        "area hyperbolic cotangent"
+      ]
+    },
+    "arcsch": {
+      "speech": [
+        "area hyperbolic cosecant"
+      ]
+    },
+    "arccsch": {
+      "speech": [
+        "area hyperbolic cosecant"
+      ]
+    },
+    "arsech": {
+      "speech": [
+        "area hyperbolic secant"
+      ]
+    },
+    "arcsech": {
+      "speech": [
+        "area hyperbolic secant"
+      ]
+    },
+    "arsinh": {
+      "speech": [
+        "area hyperbolic sine"
+      ]
+    },
+    "arcsinh": {
+      "speech": [
+        "area hyperbolic sine"
+      ]
+    },
+    "artanh": {
+      "speech": [
+        "area hyperbolic tangent"
+      ]
+    },
+    "arctanh": {
+      "speech": [
+        "area hyperbolic tangent"
+      ]
+    },
+    "cos": {
+      "speech": [
+        "cosine"
+      ]
+    },
+    "cosine": {
+      "speech": [
+        "cosine"
+      ]
+    },
+    "cot": {
+      "speech": [
+        "cotangent"
+      ]
+    },
+    "csc": {
+      "speech": [
+        "cosecant"
+      ]
+    },
+    "sec": {
+      "speech": [
+        "secant"
+      ]
+    },
+    "sin": {
+      "speech": [
+        "sine"
+      ]
+    },
+    "sine": {
+      "speech": [
+        "sine"
+      ]
+    },
+    "tan": {
+      "speech": [
+        "tangent"
+      ]
+    },
+    "arccos": {
+      "speech": [
+        "arc cosine"
+      ]
+    },
+    "arccot": {
+      "speech": [
+        "arc cotangent"
+      ]
+    },
+    "arccsc": {
+      "speech": [
+        "arc cosecant"
+      ]
+    },
+    "arcsec": {
+      "speech": [
+        "arc secant"
+      ]
+    },
+    "arcsin": {
+      "speech": [
+        "arc sine"
+      ]
+    },
+    "arctan": {
+      "speech": [
+        "arc tangent"
+      ]
+    }
+  }
+}
