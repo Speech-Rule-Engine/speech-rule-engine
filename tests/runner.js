@@ -122,6 +122,7 @@ sre.TestRunner.prototype.runTests = function() {
 sre.TestRunner.prototype.executeJsonTests = function(testcase) {
   try {
     testcase.prepare();
+    this.output('\nRunning ' + testcase.information + '\n');
   } catch (e) {
     if (e.message.match(/Bad\ filename/)) {
       this.status_ = sre.TestRunner.Results.FAIL;

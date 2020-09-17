@@ -20,6 +20,7 @@
  */
 
 goog.provide('sre.AbstractRuleTest');
+goog.provide('sre.MathspeakRuleTest');
 
 goog.require('sre.AbstractExamples');
 goog.require('sre.DynamicCstr');
@@ -242,6 +243,9 @@ sre.AbstractRuleTest.prototype.prepare = function() {
   this.actual = this.jsonTests.actual || this.actual;
   this.compare = this.jsonTests.compare || this.compare;
   this.information = this.jsonTests.information;
+  if (this.jsonTests.active) {
+    this.setActive(this.jsonTests.active);
+  }
   var results = [];
   var input = baseTests.tests || {};
   var output = this.jsonTests.tests || {};
@@ -270,4 +274,54 @@ sre.AbstractRuleTest.prototype.prepare = function() {
   if (warn.length) {
     throw new sre.TestUtil.Error('Missing Results', warn);
   }
+};
+
+// TODO: Make a non-abstract class.
+/**
+ * @override
+ */
+sre.AbstractRuleTest.prototype.pick = function(json) {
+  return [json['mathml'], json['speech'], json['preference']];
+};
+
+
+/**
+ * @override
+ */
+sre.AbstractRuleTest.prototype.method = function(var_args) {
+  let args = Array.prototype.slice.call(arguments, 0);
+  this.executeRuleTest(args[0], args[1], args[2]);
+};
+
+
+
+
+// sre.MathspeakRuleTest.locales = {
+//   'en': 'MathspeakEnglish',
+//   'de': 'MathspeakGerman',
+//   'fr': 'MathspeakFrench'
+// };
+
+sre.MathspeakRuleTest.locales = ['en', 'de', 'fr', 'es'];
+sre.MathspeakRuleTest.baseDir = 'json/mathspeak';
+
+
+sre.MathspeakRuleTest.tests = function() {
+  let files = [
+    'mathspeak_test.json',
+    'noble_test.json'
+  ];
+  var tests = [];
+  for (var locale of sre.MathspeakRuleTest.locales) {
+    for (var file of files) {
+      var test = new sre.AbstractRuleTest();
+      test.jsonFile = locale + '/' + file;
+      test.baseFile = sre.MathspeakRuleTest.baseDir + '/' + file;
+      test.locale = locale;
+      // test.setActive(test.active);
+      // test.startExamples();
+      tests.push(test);
+    }
+  }
+  return tests;
 };
