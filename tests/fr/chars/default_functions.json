@@ -1,0 +1,323 @@
+{
+  "name": "DefaultFunctionFrenchTest",
+  "locale": "fr",
+  "domain": "default",
+  "styles": [
+    "default"
+  ],
+  "active": "DefaultFunctionFrench",
+  "type": "function",
+  "information": "Default function test for French",
+  "tests": {
+    "deg": {
+      "speech": [
+        "degré"
+      ]
+    },
+    "det": {
+      "speech": [
+        "déterminant"
+      ]
+    },
+    "dim": {
+      "speech": [
+        "dimension"
+      ]
+    },
+    "hom": {
+      "speech": [
+        "homomorphisme"
+      ]
+    },
+    "Hom": {
+      "speech": [
+        "homomorphisme"
+      ]
+    },
+    "ker": {
+      "speech": [
+        "noyau"
+      ]
+    },
+    "Tr": {
+      "speech": [
+        "trace"
+      ]
+    },
+    "tr": {
+      "speech": [
+        "trace"
+      ]
+    },
+    "log": {
+      "speech": [
+        "log"
+      ]
+    },
+    "ln": {
+      "speech": [
+        "logarithme népérien"
+      ]
+    },
+    "lg": {
+      "speech": [
+        "logarithme décimal"
+      ]
+    },
+    "exp": {
+      "speech": [
+        "exponentielle"
+      ]
+    },
+    "expt": {
+      "speech": [
+        "exponentielle"
+      ]
+    },
+    "gcd": {
+      "speech": [
+        "plus grand commun diviseur"
+      ]
+    },
+    "lcm": {
+      "speech": [
+        "plus petit commun multiple"
+      ]
+    },
+    "arg": {
+      "speech": [
+        "argument"
+      ]
+    },
+    "im": {
+      "speech": [
+        "partie imaginaire"
+      ]
+    },
+    "re": {
+      "speech": [
+        "partie réelle"
+      ]
+    },
+    "inf": {
+      "speech": [
+        "borne inférieure"
+      ]
+    },
+    "lim": {
+      "speech": [
+        "limite"
+      ]
+    },
+    "'": {
+      "speech": [
+        "limite projective"
+      ]
+    },
+    "liminf": {
+      "speech": [
+        "limite inferior"
+      ]
+    },
+    "limsup": {
+      "speech": [
+        "limite superior"
+      ]
+    },
+    "max": {
+      "speech": [
+        "maximum"
+      ]
+    },
+    "min": {
+      "speech": [
+        "minimum"
+      ]
+    },
+    "sup": {
+      "speech": [
+        "borne supérieure"
+      ]
+    },
+    "injlim": {
+      "speech": [
+        "limite inductive"
+      ]
+    },
+    "projlim": {
+      "speech": [
+        "limite projective"
+      ]
+    },
+    "mod": {
+      "speech": [
+        "modulo"
+      ]
+    },
+    "Pr": {
+      "speech": [
+        "probabilité"
+      ]
+    },
+    "cosh": {
+      "speech": [
+        "cosinus hyperbolique"
+      ]
+    },
+    "coth": {
+      "speech": [
+        "cotangente hyperbolique"
+      ]
+    },
+    "csch": {
+      "speech": [
+        "cosécante hyperbolique"
+      ]
+    },
+    "sech": {
+      "speech": [
+        "sécante hyperbolique"
+      ]
+    },
+    "sinh": {
+      "speech": [
+        "sinus hyperbolique"
+      ]
+    },
+    "tanh": {
+      "speech": [
+        "tangente hyperbolique"
+      ]
+    },
+    "arcosh": {
+      "speech": [
+        "argument cosinus hyperbolique"
+      ]
+    },
+    "arccosh": {
+      "speech": [
+        "argument cosinus hyperbolique"
+      ]
+    },
+    "arcoth": {
+      "speech": [
+        "argument cotangente hyperbolique"
+      ]
+    },
+    "arccoth": {
+      "speech": [
+        "argument cotangente hyperbolique"
+      ]
+    },
+    "arcsch": {
+      "speech": [
+        "argument cosécante hyperbolique"
+      ]
+    },
+    "arccsch": {
+      "speech": [
+        "argument cosécante hyperbolique"
+      ]
+    },
+    "arsech": {
+      "speech": [
+        "argument sécante hyperbolique"
+      ]
+    },
+    "arcsech": {
+      "speech": [
+        "argument sécante hyperbolique"
+      ]
+    },
+    "arsinh": {
+      "speech": [
+        "argument sinus hyperbolique"
+      ]
+    },
+    "arcsinh": {
+      "speech": [
+        "argument sinus hyperbolique"
+      ]
+    },
+    "artanh": {
+      "speech": [
+        "argument tangente hyperbolique"
+      ]
+    },
+    "arctanh": {
+      "speech": [
+        "argument tangente hyperbolique"
+      ]
+    },
+    "cos": {
+      "speech": [
+        "cosinus"
+      ]
+    },
+    "cosine": {
+      "speech": [
+        "cosinus"
+      ]
+    },
+    "cot": {
+      "speech": [
+        "cotangente"
+      ]
+    },
+    "csc": {
+      "speech": [
+        "cosécante"
+      ]
+    },
+    "sec": {
+      "speech": [
+        "sécante"
+      ]
+    },
+    "sin": {
+      "speech": [
+        "sinus"
+      ]
+    },
+    "sine": {
+      "speech": [
+        "sinus"
+      ]
+    },
+    "tan": {
+      "speech": [
+        "tangente"
+      ]
+    },
+    "arccos": {
+      "speech": [
+        "arc cosinus"
+      ]
+    },
+    "arccot": {
+      "speech": [
+        "arc cotangente"
+      ]
+    },
+    "arccsc": {
+      "speech": [
+        "arc cosécante"
+      ]
+    },
+    "arcsec": {
+      "speech": [
+        "arc sécante"
+      ]
+    },
+    "arcsin": {
+      "speech": [
+        "arc sinus"
+      ]
+    },
+    "arctan": {
+      "speech": [
+        "arc tangente"
+      ]
+    }
+  }
+}

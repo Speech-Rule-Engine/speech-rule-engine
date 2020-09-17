@@ -1,0 +1,503 @@
+{
+  "name": "ClearspeakUnitFrenchTest",
+  "locale": "fr",
+  "domain": "clearspeak",
+  "styles": [
+    "default"
+  ],
+  "active": "ClearspeakUnitFrench",
+  "type": "unit",
+  "information": "Clearspeak unit test for French",
+  "tests": {
+    "W": {
+      "speech": [
+        "watts"
+      ]
+    },
+    "w": {
+      "speech": [
+        "watts"
+      ]
+    },
+    "kw": {
+      "speech": [
+        "kilowatt"
+      ]
+    },
+    "kW": {
+      "speech": [
+        "kilowatt"
+      ]
+    },
+    "mw": {
+      "speech": [
+        "milliwatt"
+      ]
+    },
+    "mW": {
+      "speech": [
+        "milliwatt"
+      ]
+    },
+    "kwh": {
+      "speech": [
+        "kilowatt hour"
+      ]
+    },
+    "kWh": {
+      "speech": [
+        "kilowatt hour"
+      ]
+    },
+    "J": {
+      "speech": [
+        "joules"
+      ]
+    },
+    "N": {
+      "speech": [
+        "newtons"
+      ]
+    },
+    "A": {
+      "speech": [
+        "ampères"
+      ]
+    },
+    "V": {
+      "speech": [
+        "volts"
+      ]
+    },
+    "µΩ": {
+      "speech": [
+        "microohm"
+      ]
+    },
+    "mΩ": {
+      "speech": [
+        "milliohm"
+      ]
+    },
+    "Ω": {
+      "speech": [
+        "ohms"
+      ]
+    },
+    "Ohm": {
+      "speech": [
+        "ohms"
+      ]
+    },
+    "kΩ": {
+      "speech": [
+        "kilohm"
+      ]
+    },
+    "KΩ": {
+      "speech": [
+        "kilohm"
+      ]
+    },
+    "MΩ": {
+      "speech": [
+        "megaohm"
+      ]
+    },
+    "GΩ": {
+      "speech": [
+        "gigaohm"
+      ]
+    },
+    "mm": {
+      "speech": [
+        "millimeter"
+      ]
+    },
+    "cm": {
+      "speech": [
+        "centimeter"
+      ]
+    },
+    "m": {
+      "speech": [
+        "mètres"
+      ]
+    },
+    "km": {
+      "speech": [
+        "kilometer"
+      ]
+    },
+    "ft": {
+      "speech": [
+        "pieds"
+      ]
+    },
+    "ft.": {
+      "speech": [
+        "pieds"
+      ]
+    },
+    "in": {
+      "speech": [
+        "pouces"
+      ]
+    },
+    "in.": {
+      "speech": [
+        "pouces"
+      ]
+    },
+    "mi": {
+      "speech": [
+        "miles"
+      ]
+    },
+    "mi.": {
+      "speech": [
+        "miles"
+      ]
+    },
+    "yd": {
+      "speech": [
+        "yards"
+      ]
+    },
+    "yd.": {
+      "speech": [
+        "yards"
+      ]
+    },
+    "n.m.": {
+      "speech": [
+        "nautical mile"
+      ]
+    },
+    "b": {
+      "speech": [
+        "bit"
+      ]
+    },
+    "B": {
+      "speech": [
+        "byte"
+      ]
+    },
+    "KB": {
+      "speech": [
+        "kilobyte"
+      ]
+    },
+    "MB": {
+      "speech": [
+        "megabyte"
+      ]
+    },
+    "GB": {
+      "speech": [
+        "gigabyte"
+      ]
+    },
+    "TB": {
+      "speech": [
+        "terabyte"
+      ]
+    },
+    "doz": {
+      "speech": [
+        "dozen"
+      ]
+    },
+    "doz.": {
+      "speech": [
+        "dozen"
+      ]
+    },
+    "dz": {
+      "speech": [
+        "dozen"
+      ]
+    },
+    "dz.": {
+      "speech": [
+        "dozen"
+      ]
+    },
+    "sq": {
+      "speech": [
+        "square"
+      ]
+    },
+    "sq.": {
+      "speech": [
+        "square"
+      ]
+    },
+    "ha": {
+      "speech": [
+        "hectare"
+      ]
+    },
+    "kt": {
+      "speech": [
+        "knot"
+      ]
+    },
+    "kt.": {
+      "speech": [
+        "knot"
+      ]
+    },
+    "mph": {
+      "speech": [
+        "miles par heure"
+      ]
+    },
+    "rpm": {
+      "speech": [
+        "revolutions per minute"
+      ]
+    },
+    "kmh": {
+      "speech": [
+        "kilometers per hour"
+      ]
+    },
+    "F": {
+      "speech": [
+        "farads"
+      ]
+    },
+    "F.": {
+      "speech": [
+        "farads"
+      ]
+    },
+    "°F": {
+      "speech": [
+        "farads"
+      ]
+    },
+    "C": {
+      "speech": [
+        "coulombs"
+      ]
+    },
+    "°C": {
+      "speech": [
+        "coulombs"
+      ]
+    },
+    "K": {
+      "speech": [
+        "kelvins"
+      ]
+    },
+    "°K": {
+      "speech": [
+        "kelvins"
+      ]
+    },
+    "ns": {
+      "speech": [
+        "nanosecond"
+      ]
+    },
+    "µs": {
+      "speech": [
+        "microsecond"
+      ]
+    },
+    "ms": {
+      "speech": [
+        "millisecond"
+      ]
+    },
+    "s": {
+      "speech": [
+        "secondes"
+      ]
+    },
+    "min": {
+      "speech": [
+        "minute"
+      ]
+    },
+    "h": {
+      "speech": [
+        "hour"
+      ]
+    },
+    "hr": {
+      "speech": [
+        "hour"
+      ]
+    },
+    "bbl.": {
+      "speech": [
+        "barils"
+      ]
+    },
+    "bbl": {
+      "speech": [
+        "barils"
+      ]
+    },
+    "cu": {
+      "speech": [
+        "cubic"
+      ]
+    },
+    "cu.": {
+      "speech": [
+        "cubic"
+      ]
+    },
+    "'": {
+      "speech": [
+        "fluid ounce"
+      ]
+    },
+    "gal": {
+      "speech": [
+        "gallons"
+      ]
+    },
+    "gal.": {
+      "speech": [
+        "gallons"
+      ]
+    },
+    "pt": {
+      "speech": [
+        "pintes"
+      ]
+    },
+    "pt.": {
+      "speech": [
+        "pintes"
+      ]
+    },
+    "qt": {
+      "speech": [
+        "quarts"
+      ]
+    },
+    "qt.": {
+      "speech": [
+        "quarts"
+      ]
+    },
+    "tbsp": {
+      "speech": [
+        "cuillères de table"
+      ]
+    },
+    "tbsp.": {
+      "speech": [
+        "cuillères de table"
+      ]
+    },
+    "tsp": {
+      "speech": [
+        "cuillèes à thé"
+      ]
+    },
+    "tsp.": {
+      "speech": [
+        "cuillèes à thé"
+      ]
+    },
+    "cc": {
+      "speech": [
+        "cubic centimeter"
+      ]
+    },
+    "kl": {
+      "speech": [
+        "kiloliter"
+      ]
+    },
+    "l": {
+      "speech": [
+        "litres"
+      ]
+    },
+    "ml": {
+      "speech": [
+        "milliliter"
+      ]
+    },
+    "lb": {
+      "speech": [
+        "livres"
+      ]
+    },
+    "lb.": {
+      "speech": [
+        "livres"
+      ]
+    },
+    "LT": {
+      "speech": [
+        "long ton"
+      ]
+    },
+    "L.T.": {
+      "speech": [
+        "long ton"
+      ]
+    },
+    "oz": {
+      "speech": [
+        "onces"
+      ]
+    },
+    "oz.": {
+      "speech": [
+        "onces"
+      ]
+    },
+    "g": {
+      "speech": [
+        "grains"
+      ]
+    },
+    "gr": {
+      "speech": [
+        "grains"
+      ]
+    },
+    "kg": {
+      "speech": [
+        "kilogram"
+      ]
+    },
+    "mcg": {
+      "speech": [
+        "microgram"
+      ]
+    },
+    "µg": {
+      "speech": [
+        "microgram"
+      ]
+    },
+    "mg": {
+      "speech": [
+        "milligram"
+      ]
+    },
+    "t": {
+      "speech": [
+        "tonnes"
+      ]
+    },
+    "T": {
+      "speech": [
+        "tonnes"
+      ]
+    }
+  }
+}
