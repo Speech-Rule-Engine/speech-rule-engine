@@ -1,0 +1,456 @@
+{
+  "name": "MathspeakFunctionSpanishTest",
+  "locale": "es",
+  "domain": "mathspeak",
+  "styles": [
+    "default",
+    "brief",
+    "sbrief"
+  ],
+  "active": "MathspeakFunctionsSpanish",
+  "type": "function",
+  "information": "MathspeakFunctionsSpanishTest",
+  "tests": {
+    "deg": {
+      "speech": [
+        "grados",
+        "grados",
+        "grados"
+      ]
+    },
+    "det": {
+      "speech": [
+        "determinante",
+        "determinante",
+        "determinante"
+      ]
+    },
+    "dim": {
+      "speech": [
+        "dimensión",
+        "dimensión",
+        "dimensión"
+      ]
+    },
+    "hom": {
+      "speech": [
+        "homomorfismo",
+        "homomorfismo",
+        "homomorfismo"
+      ]
+    },
+    "Hom": {
+      "speech": [
+        "homomorfismo",
+        "homomorfismo",
+        "homomorfismo"
+      ]
+    },
+    "ker": {
+      "speech": [
+        "kernel",
+        "kernel",
+        "kernel"
+      ]
+    },
+    "Tr": {
+      "speech": [
+        "traza",
+        "traza",
+        "traza"
+      ]
+    },
+    "tr": {
+      "speech": [
+        "traza",
+        "traza",
+        "traza"
+      ]
+    },
+    "log": {
+      "speech": [
+        "logaritmo",
+        "logaritmo",
+        "logaritmo"
+      ]
+    },
+    "ln": {
+      "speech": [
+        "logaritmo neperiano",
+        "logaritmo neperiano",
+        "logaritmo neperiano"
+      ]
+    },
+    "lg": {
+      "speech": [
+        "logaritmo base 10",
+        "logaritmo base 10",
+        "logaritmo base 10"
+      ]
+    },
+    "exp": {
+      "speech": [
+        "exponente",
+        "exponente",
+        "exponente"
+      ]
+    },
+    "expt": {
+      "speech": [
+        "exponente",
+        "exponente",
+        "exponente"
+      ]
+    },
+    "gcd": {
+      "speech": [
+        "MCD",
+        "MCD",
+        "MCD"
+      ]
+    },
+    "lcm": {
+      "speech": [
+        "mcm",
+        "mcm",
+        "mcm"
+      ]
+    },
+    "arg": {
+      "speech": [
+        "argumento",
+        "argumento",
+        "argumento"
+      ]
+    },
+    "im": {
+      "speech": [
+        "parte imaginaria",
+        "parte imaginaria",
+        "parte imaginaria"
+      ]
+    },
+    "re": {
+      "speech": [
+        "residuo",
+        "residuo",
+        "residuo"
+      ]
+    },
+    "inf": {
+      "speech": [
+        "extremo inferior",
+        "extremo inferior",
+        "extremo inferior"
+      ]
+    },
+    "lim": {
+      "speech": [
+        "límite",
+        "límite",
+        "límite"
+      ]
+    },
+    "'": {
+      "speech": [
+        "límite inverso",
+        "límite inverso",
+        "límite inverso"
+      ]
+    },
+    "liminf": {
+      "speech": [
+        "límite inferior",
+        "límite inferior",
+        "límite inferior"
+      ]
+    },
+    "limsup": {
+      "speech": [
+        "límite superior",
+        "límite superior",
+        "límite superior"
+      ]
+    },
+    "max": {
+      "speech": [
+        "máximo",
+        "máximo",
+        "máximo"
+      ]
+    },
+    "min": {
+      "speech": [
+        "mínimo",
+        "mínimo",
+        "mínimo"
+      ]
+    },
+    "sup": {
+      "speech": [
+        "superior",
+        "superior",
+        "superior"
+      ]
+    },
+    "injlim": {
+      "speech": [
+        "límite directo",
+        "límite directo",
+        "límite directo"
+      ]
+    },
+    "projlim": {
+      "speech": [
+        "límite inverso",
+        "límite inverso",
+        "límite inverso"
+      ]
+    },
+    "mod": {
+      "speech": [
+        "módulo",
+        "módulo",
+        "módulo"
+      ]
+    },
+    "Pr": {
+      "speech": [
+        "probabilidad",
+        "probabilidad",
+        "probabilidad"
+      ]
+    },
+    "cosh": {
+      "speech": [
+        "coseno hiperbólico",
+        "coseno hiperbólico",
+        "coseno hiperbólico"
+      ]
+    },
+    "coth": {
+      "speech": [
+        "cotangente hiperbólica",
+        "cotangente hiperbólica",
+        "cotangente hiperbólica"
+      ]
+    },
+    "csch": {
+      "speech": [
+        "cosecante hiperbólica",
+        "cosecante hiperbólica",
+        "cosecante hiperbólica"
+      ]
+    },
+    "sech": {
+      "speech": [
+        "secante hiperbólica",
+        "secante hiperbólica",
+        "secante hiperbólica"
+      ]
+    },
+    "sinh": {
+      "speech": [
+        "seno hiperbólico",
+        "seno hiperbólico",
+        "seno hiperbólico"
+      ]
+    },
+    "tanh": {
+      "speech": [
+        "tangente hiperbólica",
+        "tangente hiperbólica",
+        "tangente hiperbólica"
+      ]
+    },
+    "arcosh": {
+      "speech": [
+        "area coseno hiperbólico",
+        "area coseno hiperbólico",
+        "area coseno hiperbólico"
+      ]
+    },
+    "arccosh": {
+      "speech": [
+        "area coseno hiperbólico",
+        "area coseno hiperbólico",
+        "area coseno hiperbólico"
+      ]
+    },
+    "arcoth": {
+      "speech": [
+        "area cotangente hiperbólica",
+        "area cotangente hiperbólica",
+        "area cotangente hiperbólica"
+      ]
+    },
+    "arccoth": {
+      "speech": [
+        "area cotangente hiperbólica",
+        "area cotangente hiperbólica",
+        "area cotangente hiperbólica"
+      ]
+    },
+    "arcsch": {
+      "speech": [
+        "area cosecante hiperbólica",
+        "area cosecante hiperbólica",
+        "area cosecante hiperbólica"
+      ]
+    },
+    "arccsch": {
+      "speech": [
+        "area cosecante hiperbólica",
+        "area cosecante hiperbólica",
+        "area cosecante hiperbólica"
+      ]
+    },
+    "arsech": {
+      "speech": [
+        "area secante hiperbólica",
+        "area secante hiperbólica",
+        "area secante hiperbólica"
+      ]
+    },
+    "arcsech": {
+      "speech": [
+        "area secante hiperbólica",
+        "area secante hiperbólica",
+        "area secante hiperbólica"
+      ]
+    },
+    "arsinh": {
+      "speech": [
+        "area seno hiperbólico",
+        "area seno hiperbólico",
+        "area seno hiperbólico"
+      ]
+    },
+    "arcsinh": {
+      "speech": [
+        "area seno hiperbólico",
+        "area seno hiperbólico",
+        "area seno hiperbólico"
+      ]
+    },
+    "artanh": {
+      "speech": [
+        "area tangente hiperbólica",
+        "area tangente hiperbólica",
+        "area tangente hiperbólica"
+      ]
+    },
+    "arctanh": {
+      "speech": [
+        "area tangente hiperbólica",
+        "area tangente hiperbólica",
+        "area tangente hiperbólica"
+      ]
+    },
+    "cos": {
+      "speech": [
+        "coseno",
+        "coseno",
+        "coseno"
+      ]
+    },
+    "cosine": {
+      "speech": [
+        "coseno",
+        "coseno",
+        "coseno"
+      ]
+    },
+    "cot": {
+      "speech": [
+        "cotangente",
+        "cotangente",
+        "cotangente"
+      ]
+    },
+    "csc": {
+      "speech": [
+        "cosecante",
+        "cosecante",
+        "cosecante"
+      ]
+    },
+    "sec": {
+      "speech": [
+        "secant",
+        "secant",
+        "secant"
+      ]
+    },
+    "sin": {
+      "speech": [
+        "seno",
+        "seno",
+        "seno"
+      ]
+    },
+    "sine": {
+      "speech": [
+        "seno",
+        "seno",
+        "seno"
+      ]
+    },
+    "tan": {
+      "speech": [
+        "tangente",
+        "tangente",
+        "tangente"
+      ]
+    },
+    "arccos": {
+      "speech": [
+        "arco coseno",
+        "arco coseno",
+        "arco coseno"
+      ]
+    },
+    "arccot": {
+      "speech": [
+        "arco cotangente",
+        "arco cotangente",
+        "arco cotangente"
+      ]
+    },
+    "arccsc": {
+      "speech": [
+        "arco cosecante",
+        "arco cosecante",
+        "arco cosecante"
+      ]
+    },
+    "arcsec": {
+      "speech": [
+        "arco secante",
+        "arco secante",
+        "arco secante"
+      ]
+    },
+    "arcsin": {
+      "speech": [
+        "arco seno",
+        "arco seno",
+        "arco seno"
+      ]
+    },
+    "arctan": {
+      "speech": [
+        "arco tangente",
+        "arco tangente",
+        "arco tangente"
+      ]
+    },
+    "sen": {
+      "speech": [
+        "seno",
+        "seno",
+        "seno"
+      ]
+    }
+  }
+}

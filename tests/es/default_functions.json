@@ -1,0 +1,343 @@
+{
+  "name": "DefaultFunctionSpanishTest",
+  "locale": "es",
+  "domain": "default",
+  "styles": [
+    "default"
+  ],
+  "active": "DefaultFunctionSpanish",
+  "type": "function",
+  "information": "DefaultFunctionSpanishTest",
+  "tests": {
+    "deg": {
+      "speech": [
+        "grados"
+      ]
+    },
+    "det": {
+      "speech": [
+        "determinante"
+      ]
+    },
+    "dim": {
+      "speech": [
+        "dimensión"
+      ]
+    },
+    "hom": {
+      "speech": [
+        "homomorfismo"
+      ]
+    },
+    "Hom": {
+      "speech": [
+        "homomorfismo"
+      ]
+    },
+    "ker": {
+      "speech": [
+        "kernel"
+      ]
+    },
+    "Tr": {
+      "speech": [
+        "traza"
+      ]
+    },
+    "tr": {
+      "speech": [
+        "traza"
+      ]
+    },
+    "log": {
+      "speech": [
+        "logaritmo"
+      ]
+    },
+    "ln": {
+      "speech": [
+        "logaritmo neperiano"
+      ]
+    },
+    "lg": {
+      "speech": [
+        "logaritmo base 10"
+      ]
+    },
+    "exp": {
+      "speech": [
+        "exponente"
+      ]
+    },
+    "expt": {
+      "speech": [
+        "exponente"
+      ]
+    },
+    "gcd": {
+      "speech": [
+        "MCD"
+      ]
+    },
+    "lcm": {
+      "speech": [
+        "mcm"
+      ]
+    },
+    "arg": {
+      "speech": [
+        "argumento"
+      ]
+    },
+    "im": {
+      "speech": [
+        "parte imaginaria"
+      ]
+    },
+    "re": {
+      "speech": [
+        "residuo"
+      ]
+    },
+    "inf": {
+      "speech": [
+        "extremo inferior"
+      ]
+    },
+    "lim": {
+      "speech": [
+        "límite"
+      ]
+    },
+    "lim inf": {
+      "speech": [
+        "límite inferior"
+      ]
+    },
+    "liminf": {
+      "speech": [
+        "límite inferior"
+      ]
+    },
+    "lim sup": {
+      "speech": [
+        "límite superior"
+      ]
+    },
+    "limsup": {
+      "speech": [
+        "límite superior"
+      ]
+    },
+    "max": {
+      "speech": [
+        "máximo"
+      ]
+    },
+    "min": {
+      "speech": [
+        "mínimo"
+      ]
+    },
+    "sup": {
+      "speech": [
+        "superior"
+      ]
+    },
+    "injlim": {
+      "speech": [
+        "límite directo"
+      ]
+    },
+    "inj lim": {
+      "speech": [
+        "límite directo"
+      ]
+    },
+    "projlim": {
+      "speech": [
+        "límite inverso"
+      ]
+    },
+    "proj lim": {
+      "speech": [
+        "límite inverso"
+      ]
+    },
+    "mod": {
+      "speech": [
+        "módulo"
+      ]
+    },
+    "Pr": {
+      "speech": [
+        "probabilidad"
+      ]
+    },
+    "cosh": {
+      "speech": [
+        "coseno hiperbólico"
+      ]
+    },
+    "coth": {
+      "speech": [
+        "cotangente hiperbólica"
+      ]
+    },
+    "csch": {
+      "speech": [
+        "cosecante hiperbólica"
+      ]
+    },
+    "sech": {
+      "speech": [
+        "secante hiperbólica"
+      ]
+    },
+    "sinh": {
+      "speech": [
+        "seno hiperbólico"
+      ]
+    },
+    "tanh": {
+      "speech": [
+        "tangente hiperbólica"
+      ]
+    },
+    "arcosh": {
+      "speech": [
+        "area coseno hiperbólico"
+      ]
+    },
+    "arccosh": {
+      "speech": [
+        "area coseno hiperbólico"
+      ]
+    },
+    "arcoth": {
+      "speech": [
+        "area cotangente hiperbólica"
+      ]
+    },
+    "arccoth": {
+      "speech": [
+        "area cotangente hiperbólica"
+      ]
+    },
+    "arcsch": {
+      "speech": [
+        "area cosecante hiperbólica"
+      ]
+    },
+    "arccsch": {
+      "speech": [
+        "area cosecante hiperbólica"
+      ]
+    },
+    "arsech": {
+      "speech": [
+        "area secante hiperbólica"
+      ]
+    },
+    "arcsech": {
+      "speech": [
+        "area secante hiperbólica"
+      ]
+    },
+    "arsinh": {
+      "speech": [
+        "area seno hiperbólico"
+      ]
+    },
+    "arcsinh": {
+      "speech": [
+        "area seno hiperbólico"
+      ]
+    },
+    "artanh": {
+      "speech": [
+        "area tangente hiperbólica"
+      ]
+    },
+    "arctanh": {
+      "speech": [
+        "area tangente hiperbólica"
+      ]
+    },
+    "cos": {
+      "speech": [
+        "coseno"
+      ]
+    },
+    "cosine": {
+      "speech": [
+        "coseno"
+      ]
+    },
+    "cot": {
+      "speech": [
+        "cotangente"
+      ]
+    },
+    "csc": {
+      "speech": [
+        "cosecante"
+      ]
+    },
+    "sec": {
+      "speech": [
+        "secant"
+      ]
+    },
+    "sin": {
+      "speech": [
+        "seno"
+      ]
+    },
+    "sine": {
+      "speech": [
+        "seno"
+      ]
+    },
+    "tan": {
+      "speech": [
+        "tangente"
+      ]
+    },
+    "arccos": {
+      "speech": [
+        "arco coseno"
+      ]
+    },
+    "arccot": {
+      "speech": [
+        "arco cotangente"
+      ]
+    },
+    "arccsc": {
+      "speech": [
+        "arco cosecante"
+      ]
+    },
+    "arcsec": {
+      "speech": [
+        "arco secante"
+      ]
+    },
+    "arcsin": {
+      "speech": [
+        "arco seno"
+      ]
+    },
+    "arctan": {
+      "speech": [
+        "arco tangente"
+      ]
+    },
+    "sen": {
+      "speech": [
+        "seno"
+      ]
+    }
+  }
+}

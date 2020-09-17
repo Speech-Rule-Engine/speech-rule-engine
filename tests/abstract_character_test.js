@@ -36,6 +36,11 @@ sre.AbstractCharacterTest = function() {
    */
   this.styles = [];
 
+  /**
+   * @type {string}
+   */
+  this.type = 'character';
+
 };
 goog.inherits(sre.AbstractCharacterTest, sre.AbstractRuleTest);
 
@@ -104,6 +109,39 @@ sre.AbstractCharacterTest.prototype.getSpeech = function(text) {
 
 
 /**
+ * @override
+ */
+sre.AbstractCharacterTest.prototype.prepare = function() {
+  try {
+    sre.AbstractCharacterTest.base(this, 'prepare');
+  } catch (e) {
+    throw e;
+  } finally {
+    this.styles = this.jsonTests.styles || [];
+    this.type = this.baseTests.type || 'character';
+  }
+};
+
+
+/**
+ * @override
+ */
+sre.AbstractCharacterTest.prototype.pick = function(json) {
+  return [json['name'], json['speech']];
+};
+
+
+/**
+ * @override
+ */
+sre.AbstractCharacterTest.prototype.method = function(var_args) {
+  let args = Array.prototype.slice.call(arguments, 0);
+  this.type === 'unit' ? this.executeUnitTest(args[0], args[1]) :
+    this.executeCharTest(args[0], args[1]);
+};
+
+
+/**
  * Output all the character speech strings.
  * (Temporary Auxiliary Method.)
  */
@@ -162,3 +200,28 @@ sre.AbstractCharacterTest.testOutput = function() {
 };
 
 
+sre.AbstractCharacterTest.locales = ['en', 'de', 'fr', 'es'];
+sre.AbstractCharacterTest.baseDir = 'json/chars';
+
+
+sre.AbstractCharacterTest.tests = function() {
+  let files = [
+    'default_characters.json',
+    'default_functions.json',
+    'default_units.json',
+    'mathspeak_characters.json',
+    'mathspeak_functions.json',
+    'mathspeak_units.json'
+  ];
+  var tests = [];
+  for (var locale of sre.AbstractCharacterTest.locales) {
+    for (var file of files) {
+      var test = new sre.AbstractCharacterTest();
+      test.jsonFile = locale + '/' + file;
+      test.baseFile = sre.AbstractCharacterTest.baseDir + '/' + file.split('_')[1];
+      test.locale = locale;
+      tests.push(test);
+    }
+  }
+  return tests;
+};

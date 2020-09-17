@@ -76,6 +76,8 @@ sre.AbstractRuleTest = function() {
 
   this.baseFile = '';
 
+  this.baseTests = {};
+
 };
 goog.inherits(sre.AbstractRuleTest, sre.AbstractExamples);
 
@@ -235,7 +237,7 @@ sre.AbstractRuleTest.prototype.footer = function() {
  */
 sre.AbstractRuleTest.prototype.prepare = function() {
   sre.AbstractRuleTest.base(this, 'prepare');
-  var baseTests = this.baseFile ? sre.TestUtil.loadJson(this.baseFile) : [];
+  this.baseTests = this.baseFile ? sre.TestUtil.loadJson(this.baseFile) : [];
   this.modality = this.jsonTests.modality || this.modality;
   this.locale = this.jsonTests.locale || this.locale;
   this.domain = this.jsonTests.domain || this.domain;
@@ -247,7 +249,7 @@ sre.AbstractRuleTest.prototype.prepare = function() {
     this.setActive(this.jsonTests.active);
   }
   var results = [];
-  var input = baseTests.tests || {};
+  var input = this.baseTests.tests || {};
   var output = this.jsonTests.tests || {};
   var warn = [];
   var exclude = this.jsonTests.exclude || [];
@@ -256,6 +258,9 @@ sre.AbstractRuleTest.prototype.prepare = function() {
     if (key.match(/^_/) || exclude.indexOf(key) !== -1) continue;
     var json = input[key];
     var speech = output[key];
+    if (typeof json.test === 'undefined') {
+      json.test = true;
+    }
     if (json.test && !speech) {
       warn.push(key);
       continue;
@@ -270,7 +275,7 @@ sre.AbstractRuleTest.prototype.prepare = function() {
     json.name = key;
     results.push(json);
   }
-  this.jsonTests = results;
+  this.tests = results;
   if (warn.length) {
     throw new sre.TestUtil.Error('Missing Results', warn);
   }

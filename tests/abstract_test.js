@@ -65,7 +65,10 @@ sre.AbstractJsonTest = function(file) {
 
   this.jsonFile = file;
 
-  this.jsonTests = [];
+  this.jsonTests = {};
+
+  this.tests = [];
+
 };
 goog.inherits(sre.AbstractJsonTest, sre.AbstractTest);
 
@@ -87,5 +90,5 @@ sre.AbstractJsonTest.prototype.pick = function(json) {
 sre.AbstractJsonTest.prototype.method = function(var_args) {};
 
 sre.AbstractJsonTest.prototype.prepare = function() {
-  this.jsonTests = this.jsonFile ? sre.TestUtil.loadJson(this.jsonFile) : [];
+  this.jsonTests = this.jsonFile ? sre.TestUtil.loadJson(this.jsonFile) : {};
 };
