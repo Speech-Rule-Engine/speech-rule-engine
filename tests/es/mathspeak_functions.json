@@ -7,9 +7,9 @@
     "brief",
     "sbrief"
   ],
-  "active": "MathspeakFunctionsSpanish",
+  "active": "MathspeakFunctionSpanish",
   "type": "function",
-  "information": "MathspeakFunctionsSpanishTest",
+  "information": "MathspeakFunctionSpanishTest",
   "tests": {
     "deg": {
       "speech": [

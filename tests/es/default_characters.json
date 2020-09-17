@@ -5,7 +5,7 @@
   "styles": [
     "default"
   ],
-  "active": "DefaultCharactersSpanish",
+  "active": "DefaultCharacterSpanish",
   "type": "character",
   "information": "DefaultCharacterSpanishTest",
   "tests": {
