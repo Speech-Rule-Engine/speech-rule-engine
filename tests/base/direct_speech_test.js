@@ -184,10 +184,10 @@ sre.RebuildStreeTest.prototype.testMglyph = function() {
   var mml = '<mi><mglyph src="my-braid-23.png" alt="23braid"/></mi>' +
       '<mo>+</mo><mi><mglyph src="my-braid-132.png" alt="132braid"/></mi>' +
       '<mo>=</mo><mi><mglyph src="my-braid-13.png" alt="13braid"/></mi>';
-  this.executeRebuildTest(mml);
+  this.executeTest(mml);
   mml = '<mrow><mi>N</mi><msub><mi>M</mi><mrow class="MJX-TeXAtom-ORD">' +
       '<mn>1</mn><mo>⊂</mo><mrow class="MJX-TeXAtom-VCENTER">' +
       '<mglyph src="Images/img64cf9bc6538bb7137dab7b360f92afb4.svg" width="13pt"' +
       ' height="6pt" alt="mfin"></mglyph></mrow></mrow></msub></mrow>';
-  this.executeRebuildTest(mml);
+  this.executeTest(mml);
 };

@@ -240,7 +240,6 @@ sre.AbstractRuleTest.prototype.prepare = function() {
   this.style = this.jsonTests.style || this.style;
   this.actual = this.jsonTests.actual || this.actual;
   this.compare = this.jsonTests.compare || this.compare;
-  this.information = this.jsonTests.information;
   if (this.jsonTests.active) {
     this.setActive(this.jsonTests.active);
   }

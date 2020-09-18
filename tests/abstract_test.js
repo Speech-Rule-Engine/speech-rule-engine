@@ -92,6 +92,7 @@ sre.AbstractJsonTest.prototype.method = function(var_args) {};
 
 sre.AbstractJsonTest.prototype.prepare = function() {
   this.jsonTests = this.jsonFile ? sre.TestUtil.loadJson(this.jsonFile) : {};
+  this.information = this.jsonTests.information || 'Unnamed tests';
 };
 
 

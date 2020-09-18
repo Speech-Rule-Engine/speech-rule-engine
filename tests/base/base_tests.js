@@ -21,7 +21,6 @@ goog.require('sre.ColorPickerTest');
 goog.require('sre.DirectSpeechTest');
 goog.require('sre.DomTest');
 goog.require('sre.EnrichMathmlTest');
-goog.require('sre.EnrichSpeechTest');
 goog.require('sre.MarkupTest');
 goog.require('sre.MathAlphabetsTest');
 goog.require('sre.RebuildStreeTest');
@@ -44,7 +43,6 @@ sre.BaseTests.testList = [
   sre.DirectSpeechTest,
   sre.DomTest,
   sre.EnrichMathmlTest,
-  sre.EnrichSpeechTest,
   sre.MarkupTest,
   sre.MathAlphabetsTest,
   sre.RebuildStreeTest,

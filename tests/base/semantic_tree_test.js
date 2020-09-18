@@ -18,17 +18,24 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-goog.provide('sre.SemanticTreeTest');
+goog.provide('sre.EnrichSpeechTest');
+goog.provide('sre.RebuildStreeTest');
 goog.provide('sre.SemanticTest');
+goog.provide('sre.SemanticTreeTest');
 
 goog.require('sre.AbstractExamples');
 goog.require('sre.AbstractTest');
 goog.require('sre.DomUtil');
+goog.require('sre.Engine');
+goog.require('sre.Enrich');
+goog.require('sre.RebuildStree');
 goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticTree');
 goog.require('sre.SemanticUtil');
+goog.require('sre.System');
 goog.require('sre.SystemExternal');
 goog.require('sre.TestUtil');
+goog.require('sre.WalkerUtil');
 goog.require('sre.XpathUtil');
 
 
@@ -37,10 +44,10 @@ goog.require('sre.XpathUtil');
  * @constructor
  * @extends {sre.AbstractExamples}
  * @param {string} tests The json file with expected output and tests.
- * @param {string=} opt_base The file with basic tests.
+ * @param {string} base The file with basic tests.
  */
-sre.SemanticTest = function(tests, opt_base) {
-  sre.SemanticTest.base(this, 'constructor', tests, opt_base);
+sre.SemanticTest = function(tests, base) {
+  sre.SemanticTest.base(this, 'constructor', tests, base);
 };
 goog.inherits(sre.SemanticTest, sre.AbstractExamples);
 
@@ -56,7 +63,7 @@ sre.SemanticTest.prototype.pick = function(json) {
 sre.SemanticTest.prototype.prepare = function() {
   sre.SemanticTest.base(this, 'prepare');
   let [tests, warn] = sre.TestUtil.combineTests(
-    this.jsonTests.tests, this.jsonTests.tests, []);
+    this.jsonTests.tests, this.baseTests.tests, []);
   this.inputTests = tests;
   if (warn.length) {
     throw new sre.TestUtil.Error('Missing Results', warn);
@@ -80,6 +87,96 @@ sre.SemanticTest.prototype.method = function(var_args) {
  */
 sre.SemanticTest.prototype.executeTest = goog.abstractMethod;
 
+//
+// Rebuild Tests
+// 
+// Testcases for reconstructing semantic trees from enriched mathml.
+//
+
+/**
+ * @constructor
+ * @extends {sre.SemanticTest}
+ */
+sre.RebuildStreeTest = function(input, base) {
+  sre.RebuildStreeTest.base(this, 'constructor', input, base);
+};
+goog.inherits(sre.RebuildStreeTest, sre.SemanticTest);
+
+
+/**
+ * Tests if for a given mathml snippet results in a particular semantic tree.
+ * @param {string} expr MathML expression.
+ */
+sre.RebuildStreeTest.prototype.executeTest = function(expr) {
+  var mathMl = sre.Enrich.prepareMmlString(expr);
+  var mml = sre.DomUtil.parseInput(mathMl);
+  var stree = new sre.SemanticTree(mml);
+  var emml = sre.EnrichMathml.enrich(mml, stree);
+  var reass = (new sre.RebuildStree(emml)).getTree();
+  this.assert.equal(stree.toString(), reass.toString());
+};
+
+
+
+//
+// Enriched Speech Tests
+// 
+// Testcases for reconstructing semantic trees from enriched mathml.
+//
+
+/**
+ * @constructor
+ * @extends {sre.SemanticTest}
+ */
+sre.EnrichSpeechTest = function(input, base) {
+  sre.EnrichSpeechTest.base(this, 'constructor', input, base);
+};
+goog.inherits(sre.EnrichSpeechTest, sre.SemanticTest);
+
+
+/**
+ * @override
+ */
+sre.EnrichSpeechTest.prototype.setUpTest = function() {
+  sre.System.getInstance().setupEngine(
+      {domain: 'mathspeak',
+        style: 'default',
+        speech: sre.Engine.Speech.SHALLOW
+      });
+};
+
+
+/**
+ * @override
+ */
+sre.EnrichSpeechTest.prototype.tearDownTest = function() {
+  sre.System.getInstance().setupEngine(
+      {domain: 'default',
+        style: 'default',
+        speech: sre.Engine.Speech.NONE
+      });
+};
+
+
+
+/**
+ * Tests if speech strings computed directly for a MathML expression are
+ * equivalent to those computed for enriched expressions.
+ * @override
+ */
+sre.EnrichSpeechTest.prototype.executeTest = function(expr) {
+  var mml = sre.Enrich.prepareMmlString(expr);
+  var sysSpeech = sre.System.getInstance().toSpeech(mml);
+  var enr = sre.WalkerUtil.getSemanticRoot(
+      sre.System.getInstance().toEnriched(mml));
+  var enrSpeech = enr.getAttribute(sre.EnrichMathml.Attribute.SPEECH);
+  this.assert.equal(sysSpeech, enrSpeech);
+};
+
+
+//
+// Semantic Tree Tests
+//
 
 /**
  * @constructor
@@ -192,5 +289,9 @@ sre.SemanticTreeTest.prototype.executeTreeTest = function(mml, sml) {
 
 
 sre.SemanticTest.tests = function() {
-  return [new sre.SemanticTest('./json/base/stree.json')];
+  let base = './json/base/semantic.json';
+  return [
+    new sre.RebuildStreeTest('./base/rebuild_stree_test.json', base),
+    new sre.EnrichSpeechTest('./base/enrich_speech_test.json', base)
+  ];
 };

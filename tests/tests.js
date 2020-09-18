@@ -30,7 +30,7 @@ goog.require('sre.TestRunner');
 
 goog.require('sre.ClearspeakRuleTest');
 goog.require('sre.MathspeakRuleTest');
-goog.require('sre.RebuildStreeTest');
+goog.require('sre.SemanticTest');
 
 
 
@@ -112,11 +112,9 @@ if (typeof warn !== 'undefined') {
 }
 
 if (sre.SystemExternal.process.env['JSON']) {
-  var tests = sre.EnrichSpeechTest.tests();
+  var tests = sre.SemanticTest.tests();
   tests.forEach(x => sre.Tests.getInstance().runner.registerTest(x));
-  tests = sre.RebuildStreeTest.tests();
-  tests.forEach(x => sre.Tests.getInstance().runner.registerTest(x));
-// } else {
+} else {
   tests = sre.ClearspeakRuleTest.tests();
   tests.forEach(x => sre.Tests.getInstance().runner.registerTest(x));
   tests = sre.MathspeakRuleTest.tests();
