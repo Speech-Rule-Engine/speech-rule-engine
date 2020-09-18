@@ -22,9 +22,38 @@ sre.TestUtil.loadJson = function(file) {
   var path = sre.BaseUtil.makePath(sre.SystemExternal.jsonPath) +
       '../../tests/';
   try {
-    var struct = JSON.parse(sre.SystemExternal.fs.readFileSync(path + file));
-    return struct;
+    return JSON.parse(sre.SystemExternal.fs.readFileSync(path + file));
   } catch (e) {
-    throw new sre.TestUtil.Error('Bad filename', file);
+    throw new sre.TestUtil.Error('Bad filename or content', file);
   }
+};
+
+
+sre.TestUtil.combineTests = function(input, output, exclude) {
+  var warn = [];
+  var results = [];
+  var orig = output;
+  output = Object.assign({}, orig);
+  for (var key of Object.keys(input)) {
+    if (key.match(/^_/) || exclude.indexOf(key) !== -1) continue;
+    var json = input[key];
+    var expected = output[key];
+    if (typeof json.test === 'undefined') {
+      json.test = true;
+    }
+    if (json.test && !expected) {
+      warn.push(key);
+      continue;
+    }
+    json.name = key;
+    results.push(Object.assign(json, expected));
+    delete output[key];
+  }
+  for (key of Object.keys(output)) {
+    if (key.match(/^_/)) continue;
+    json = output[key];
+    json.name = key;
+    results.push(json);
+  }
+  return [results, warn];
 };

@@ -19,7 +19,7 @@
 
 goog.provide('sre.AbstractExamples');
 
-goog.require('sre.AbstractJsonTest');
+goog.require('sre.AbstractJsonMultiTest');
 goog.require('sre.TestUtil');
 goog.require('sre.ExamplesOutput');
 
@@ -28,11 +28,13 @@ goog.require('sre.ExamplesOutput');
 /**
  * @constructor
  * @implements {sre.ExamplesOutput}
- * @extends {sre.AbstractJsonTest}
- * @param {string=} opt_file The JSON file if necessary.
+ * @extends {sre.AbstractJsonMultiTest}
+ * @param {string=} opt_tests The JSON file if necessary for testing.
+ * @param {string=} opt_base The JSON file base for common base tests.
  */
-sre.AbstractExamples = function(opt_file) {
-  sre.AbstractExamples.base(this, 'constructor', opt_file ? opt_file : '');
+sre.AbstractExamples = function(opt_tests, opt_base) {
+  sre.AbstractExamples.base(
+    this, 'constructor', opt_tests ? opt_tests : '', opt_base ? opt_base : '');
 
   /**
    * @type {boolean}
@@ -83,7 +85,7 @@ sre.AbstractExamples = function(opt_file) {
   this.examples_ = [];
 
 };
-goog.inherits(sre.AbstractExamples, sre.AbstractJsonTest);
+goog.inherits(sre.AbstractExamples, sre.AbstractJsonMultiTest);
 
 
 /**

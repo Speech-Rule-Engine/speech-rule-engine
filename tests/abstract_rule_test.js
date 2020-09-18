@@ -74,10 +74,6 @@ sre.AbstractRuleTest = function() {
    */
   this.compare = false;
 
-  this.baseFile = '';
-
-  this.baseTests = {};
-
 };
 goog.inherits(sre.AbstractRuleTest, sre.AbstractExamples);
 
@@ -248,34 +244,11 @@ sre.AbstractRuleTest.prototype.prepare = function() {
   if (this.jsonTests.active) {
     this.setActive(this.jsonTests.active);
   }
-  var results = [];
   var input = this.baseTests.tests || {};
   var output = this.jsonTests.tests || {};
-  var warn = [];
   var exclude = this.jsonTests.exclude || [];
-  // Combine
-  for (var key of Object.keys(input)) {
-    if (key.match(/^_/) || exclude.indexOf(key) !== -1) continue;
-    var json = input[key];
-    var speech = output[key];
-    if (typeof json.test === 'undefined') {
-      json.test = true;
-    }
-    if (json.test && !speech) {
-      warn.push(key);
-      continue;
-    }
-    json.name = key;
-    results.push(Object.assign(json, speech));
-    delete output[key];
-  }
-  for (key of Object.keys(output)) {
-    if (key.match(/^_/)) continue;
-    json = output[key];
-    json.name = key;
-    results.push(json);
-  }
-  this.tests = results;
+  let [tests, warn] = sre.TestUtil.combineTests(input, output, exclude);
+  this.inputTests = tests;
   if (warn.length) {
     throw new sre.TestUtil.Error('Missing Results', warn);
   }

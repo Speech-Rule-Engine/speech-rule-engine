@@ -142,7 +142,7 @@ sre.TestRunner.prototype.executeJsonTests = function(testcase) {
     }
   }
   testcase.setUpTest();
-  for (var test of testcase.tests) {
+  for (var test of testcase.inputTests) {
     if (!test.test) continue;
     this.executeJsonTest(test.name, goog.bind(testcase.method, testcase), testcase.pick(test));
   }

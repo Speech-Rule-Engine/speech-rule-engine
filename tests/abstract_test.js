@@ -19,6 +19,7 @@
 
 goog.provide('sre.AbstractTest');
 goog.provide('sre.AbstractJsonTest');
+goog.provide('sre.AbstractJsonMultiTest');
 
 goog.require('sre.TestExternal');
 goog.require('sre.TestUtil');
@@ -67,7 +68,7 @@ sre.AbstractJsonTest = function(file) {
 
   this.jsonTests = {};
 
-  this.tests = [];
+  this.inputTests = [];
 
 };
 goog.inherits(sre.AbstractJsonTest, sre.AbstractTest);
@@ -91,4 +92,33 @@ sre.AbstractJsonTest.prototype.method = function(var_args) {};
 
 sre.AbstractJsonTest.prototype.prepare = function() {
   this.jsonTests = this.jsonFile ? sre.TestUtil.loadJson(this.jsonFile) : {};
+};
+
+
+
+/**
+ * Class for tests to share input values. E.g., if rules need to be tested for
+ * all locales they can share the same basic tests and only differ on the
+ * expected output.
+ *
+ * @constructor
+ * @param {string} tests The JSON file with expected values for the basic tests
+ *     and additional tests.
+ * @param {string} base The JSON file with basic tests.
+ * @extends {sre.AbstractJsonTest}
+ */
+sre.AbstractJsonMultiTest = function(tests, base) {
+  sre.AbstractJsonMultiTest.base(this, 'constructor', tests);
+
+  this.baseFile = base;
+
+  this.baseTests = {};
+
+};
+goog.inherits(sre.AbstractJsonMultiTest, sre.AbstractJsonTest);
+
+
+sre.AbstractJsonMultiTest.prototype.prepare = function() {
+  sre.AbstractJsonMultiTest.base(this, 'prepare');
+  this.baseTests = this.baseFile ? sre.TestUtil.loadJson(this.baseFile) : {};
 };

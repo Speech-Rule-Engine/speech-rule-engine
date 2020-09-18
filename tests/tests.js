@@ -30,6 +30,7 @@ goog.require('sre.TestRunner');
 
 goog.require('sre.ClearspeakRuleTest');
 goog.require('sre.MathspeakRuleTest');
+goog.require('sre.RebuildStreeTest');
 
 
 
@@ -110,13 +111,19 @@ if (typeof warn !== 'undefined') {
   sre.Tests.getInstance().runner.warn = parseInt(warn, 10);
 }
 
-
-let tests = sre.ClearspeakRuleTest.tests();
-tests.forEach(x => sre.Tests.getInstance().runner.registerTest(x));
-tests = sre.MathspeakRuleTest.tests();
-tests.forEach(x => sre.Tests.getInstance().runner.registerTest(x));
-tests = sre.AbstractCharacterTest.tests();
-tests.forEach(x => sre.Tests.getInstance().runner.registerTest(x));
+if (sre.SystemExternal.process.env['JSON']) {
+  var tests = sre.EnrichSpeechTest.tests();
+  tests.forEach(x => sre.Tests.getInstance().runner.registerTest(x));
+  tests = sre.RebuildStreeTest.tests();
+  tests.forEach(x => sre.Tests.getInstance().runner.registerTest(x));
+// } else {
+  tests = sre.ClearspeakRuleTest.tests();
+  tests.forEach(x => sre.Tests.getInstance().runner.registerTest(x));
+  tests = sre.MathspeakRuleTest.tests();
+  tests.forEach(x => sre.Tests.getInstance().runner.registerTest(x));
+  tests = sre.AbstractCharacterTest.tests();
+  tests.forEach(x => sre.Tests.getInstance().runner.registerTest(x));
+}
 /**
  * Execute tests.
  */
