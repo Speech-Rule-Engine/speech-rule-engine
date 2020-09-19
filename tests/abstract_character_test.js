@@ -30,7 +30,6 @@ goog.require('sre.AbstractRuleTest');
 sre.AbstractCharacterTest = function() {
   sre.AbstractCharacterTest.base(this, 'constructor');
 
-
   /**
    * @type {Array.<string>}
    */
@@ -40,6 +39,8 @@ sre.AbstractCharacterTest = function() {
    * @type {string}
    */
   this.type = 'character';
+
+  this.pickFields = ['name', 'expected'];
 
 };
 goog.inherits(sre.AbstractCharacterTest, sre.AbstractRuleTest);
@@ -120,14 +121,6 @@ sre.AbstractCharacterTest.prototype.prepare = function() {
     this.styles = this.jsonTests.styles || [];
     this.type = this.baseTests.type || 'character';
   }
-};
-
-
-/**
- * @override
- */
-sre.AbstractCharacterTest.prototype.pick = function(json) {
-  return [json['name'], json['expected']];
 };
 
 

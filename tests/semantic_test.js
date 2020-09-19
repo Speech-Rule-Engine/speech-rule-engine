@@ -52,14 +52,6 @@ sre.SemanticTest = function(tests, base) {
 goog.inherits(sre.SemanticTest, sre.AbstractExamples);
 
 
-/**
- * @override
- */
-sre.SemanticTest.prototype.pick = function(json) {
-  return [json.input];
-};
-
-
 sre.SemanticTest.prototype.prepare = function() {
   sre.SemanticTest.base(this, 'prepare');
   let [tests, warn] = sre.TestUtil.combineTests(
@@ -102,6 +94,7 @@ sre.SemanticTest.prototype.executeTest = goog.abstractMethod;
  */
 sre.RebuildStreeTest = function(tests, base) {
   sre.RebuildStreeTest.base(this, 'constructor', tests, base);
+  this.pickFields = ['input'];
 };
 goog.inherits(sre.RebuildStreeTest, sre.SemanticTest);
 
@@ -133,6 +126,7 @@ sre.RebuildStreeTest.prototype.executeTest = function(expr) {
  */
 sre.EnrichSpeechTest = function(tests, base) {
   sre.EnrichSpeechTest.base(this, 'constructor', tests, base);
+  this.pickFields = ['input'];
 };
 goog.inherits(sre.EnrichSpeechTest, sre.SemanticTest);
 
@@ -197,6 +191,8 @@ sre.SemanticTreeTest = function(tests, base) {
    * @type {Object.<sre.SemanticVisitor>}
    */
   this.visitors = null;
+
+  this.pickFields.push('brief');
 
 };
 goog.inherits(sre.SemanticTreeTest, sre.SemanticTest);
@@ -276,14 +272,6 @@ sre.SemanticTreeTest.prototype.method = function(var_args) {
 
 
 /**
- * @override
- */
-sre.SemanticTreeTest.prototype.pick = function(json) {
-  return [json.input, json['expected'], json['brief']];
-};
-
-
-/**
  * Tests if for a given mathml snippet results in a particular semantic tree.
  * @param {string} mml MathML expression.
  * @param {string} sml XML snippet for the semantic tree.
@@ -312,14 +300,6 @@ sre.EnrichMathmlTest = function(tests, base) {
   this.setActive('EnrichExamples', 'js');
 };
 goog.inherits(sre.EnrichMathmlTest, sre.SemanticTest);
-
-
-/**
- * @override
- */
-sre.EnrichMathmlTest.prototype.pick = function(json) {
-  return [json.input, json['expected']];
-};
 
 
 /**

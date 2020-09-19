@@ -70,6 +70,8 @@ sre.AbstractJsonTest = function(file) {
 
   this.inputTests = [];
 
+  this.pickFields = ['input', 'expected'];
+
 };
 goog.inherits(sre.AbstractJsonTest, sre.AbstractTest);
 
@@ -80,7 +82,10 @@ goog.inherits(sre.AbstractJsonTest, sre.AbstractTest);
  // TODO: Need to specify that further!
  * @return {Array.<string>} The array of arguments for the test method.
  */
-sre.AbstractJsonTest.prototype.pick = goog.abstractMethod;
+sre.AbstractJsonTest.prototype.pick = function(json) {
+  return this.pickFields.map(function(x) {return json[x];});
+};
+
 
 /**
  * The actual test method.

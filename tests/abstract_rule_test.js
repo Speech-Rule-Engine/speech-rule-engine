@@ -74,6 +74,8 @@ sre.AbstractRuleTest = function() {
    */
   this.compare = false;
 
+  this.pickFields.push('preference');
+
 };
 goog.inherits(sre.AbstractRuleTest, sre.AbstractExamples);
 
@@ -254,14 +256,6 @@ sre.AbstractRuleTest.prototype.prepare = function() {
 };
 
 // TODO: Make a non-abstract class.
-/**
- * @override
- */
-sre.AbstractRuleTest.prototype.pick = function(json) {
-  return [json['input'], json['expected'], json['preference']];
-};
-
-
 /**
  * @override
  */
