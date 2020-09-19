@@ -50,6 +50,13 @@ sre.TestRunner = function() {
   this.succeededTests_ = [];
 
   /**
+   * List of warnings.
+   * @type {Array.<string>}
+   * @private
+   */
+  this.warningTests_ = [];
+
+  /**
    * Queue of test objects.
    * @type {Array.<sre.AbstractTest>}
    * @private
@@ -134,10 +141,10 @@ sre.TestRunner.prototype.executeJsonTests = function(testcase) {
       for (var warn of e.value) {
         this.output('No results specified for test: ' + warn);
         this.output('\t[WARN]\n', sre.TestRunner.color_.ORANGE);
+        this.warningTests_.push(warn);
       }
       if (this.warn == sre.TestRunner.Warning.ERROR) {
         this.status_ = sre.TestRunner.Results.FAIL;
-        this.failedTests_ = this.failedTests_.concat(e);
       }
     }
   }
@@ -198,6 +205,11 @@ sre.TestRunner.prototype.executeTest_ = function(name, func) {
  * Prints a summary of the test runs.
  */
 sre.TestRunner.prototype.summary = function() {
+  if (this.warn && this.warningTests_.length) {
+    this.output('WARNING! ', sre.TestRunner.color_.ORANGE);
+    this.output('The following tests produced a warning:\n');
+    this.output(this.warningTests_.join(', ') + '\n');
+  }
   if (!this.success()) {
     this.output('FAILURE! ', sre.TestRunner.color_.RED);
     this.output('The following tests failed:\n');
@@ -205,7 +217,7 @@ sre.TestRunner.prototype.summary = function() {
   } else {
     this.output('SUCCESS!\n', sre.TestRunner.color_.GREEN);
   }
-  this.output(this.succeededTests_.length + ' test successful.\n');
+  this.output(this.succeededTests_.length + ' tests successful.\n');
 };
 
 
