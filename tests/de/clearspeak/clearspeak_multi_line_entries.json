@@ -7,236 +7,236 @@
   "tests": {
     "_comment1_": " Multi-Line Entries Examples",
     "Multiline001": {
-      "speech": "2 Zeilen, Zeile 1: x plus y ist gleich 7. Zeile 2: 2 x, plus 3 y, ist gleich 17"
+      "expected": "2 Zeilen, Zeile 1: x plus y ist gleich 7. Zeile 2: 2 x, plus 3 y, ist gleich 17"
     },
     "Multiline002": {
-      "speech": "2 Zeilen, Zeile 1: x plus y; ist gleich; 7. Zeile 2: 2 x, plus 3 y; ist gleich; 17"
+      "expected": "2 Zeilen, Zeile 1: x plus y; ist gleich; 7. Zeile 2: 2 x, plus 3 y; ist gleich; 17"
     },
     "Multiline003": {
-      "speech": "2 Zeilen, Zeile 1: x; plus; y; ist gleich; 7. Zeile 2: 2 x; plus; 3 y; ist gleich; 17"
+      "expected": "2 Zeilen, Zeile 1: x; plus; y; ist gleich; 7. Zeile 2: 2 x; plus; 3 y; ist gleich; 17"
     },
     "Multiline004": {
-      "speech": "2 Zeilen, Zeile 1: Equation 1 Doppelpunkt x plus y ist gleich 7. Zeile 2: Equation 2 Doppelpunkt 2 x, plus 3 y, ist gleich 17"
+      "expected": "2 Zeilen, Zeile 1: Equation 1 Doppelpunkt x plus y ist gleich 7. Zeile 2: Equation 2 Doppelpunkt 2 x, plus 3 y, ist gleich 17"
     },
     "Multiline005": {
-      "speech": "2 Zeilen, Zeile 1: Equation 1 Doppelpunkt; x plus y ist gleich 7. Zeile 2: Equation 2 Doppelpunkt; 2 x, plus 3 y, ist gleich 17"
+      "expected": "2 Zeilen, Zeile 1: Equation 1 Doppelpunkt; x plus y ist gleich 7. Zeile 2: Equation 2 Doppelpunkt; 2 x, plus 3 y, ist gleich 17"
     },
     "Multiline006": {
-      "speech": "2 Zeilen, Zeile 1: Equation 1 Doppelpunkt; x plus y; ist gleich; 7. Zeile 2: Equation 2 Doppelpunkt; 2 x, plus 3 y; ist gleich; 17"
+      "expected": "2 Zeilen, Zeile 1: Equation 1 Doppelpunkt; x plus y; ist gleich; 7. Zeile 2: Equation 2 Doppelpunkt; 2 x, plus 3 y; ist gleich; 17"
     },
     "Multiline007": {
-      "speech": "3 Zeilen, Zeile 1: 4 x, plus 3 y, plus 2 z, ist gleich 17. Zeile 2: 2 x, plus 4 y, plus 6 z, ist gleich 6. Zeile 3: 3 x, plus 2 y, plus 5 z, ist gleich 1"
+      "expected": "3 Zeilen, Zeile 1: 4 x, plus 3 y, plus 2 z, ist gleich 17. Zeile 2: 2 x, plus 4 y, plus 6 z, ist gleich 6. Zeile 3: 3 x, plus 2 y, plus 5 z, ist gleich 1"
     },
     "Multiline008": {
-      "speech": "3 Zeilen, Zeile 1: 4 x; plus; 3 y; plus; 2 z; ist gleich; 1. Zeile 2: 2 x; plus; 4 y; plus; 6 z; ist gleich; 6. Zeile 3: 3 x; plus; 2 y; plus; 5 z; ist gleich; 1"
+      "expected": "3 Zeilen, Zeile 1: 4 x; plus; 3 y; plus; 2 z; ist gleich; 1. Zeile 2: 2 x; plus; 4 y; plus; 6 z; ist gleich; 6. Zeile 3: 3 x; plus; 2 y; plus; 5 z; ist gleich; 1"
     },
     "Multiline009": {
-      "speech": "3 Zeilen, Zeile 1: Equation 1 Doppelpunkt 4 x, plus 3 y, plus 2 z, ist gleich 17. Zeile 2: Equation 2 Doppelpunkt 2 x, plus 4 y, plus 6 z, ist gleich 6. Zeile 3: Equation 3 Doppelpunkt 3 x, plus 2 y, plus 5 z, ist gleich 1"
+      "expected": "3 Zeilen, Zeile 1: Equation 1 Doppelpunkt 4 x, plus 3 y, plus 2 z, ist gleich 17. Zeile 2: Equation 2 Doppelpunkt 2 x, plus 4 y, plus 6 z, ist gleich 6. Zeile 3: Equation 3 Doppelpunkt 3 x, plus 2 y, plus 5 z, ist gleich 1"
     },
     "Multiline010": {
-      "speech": "3 Zeilen, Zeile 1: x größer oder gleich 0. Zeile 2: y größer oder gleich 0. Zeile 3: 3 x, minus 5 y, kleiner oder gleich 30"
+      "expected": "3 Zeilen, Zeile 1: x größer oder gleich 0. Zeile 2: y größer oder gleich 0. Zeile 3: 3 x, minus 5 y, kleiner oder gleich 30"
     },
     "Multiline011": {
-      "speech": "4 Zeilen, Zeile 1: 3 x, plus 8 ist gleich 5 x. Zeile 2: 8 ist gleich 5 x, minus 3 x. Zeile 3: 8 ist gleich 2 x. Zeile 4: 4 ist gleich x"
+      "expected": "4 Zeilen, Zeile 1: 3 x, plus 8 ist gleich 5 x. Zeile 2: 8 ist gleich 5 x, minus 3 x. Zeile 3: 8 ist gleich 2 x. Zeile 4: 4 ist gleich x"
     },
     "Multiline012": {
-      "speech": "4 Zeilen, Zeile 1: 3 x; plus; 8; ist gleich; 5 x; leer; leer. Zeile 2: leer; leer; 8; ist gleich; 5 x; minus; 3 x. Zeile 3: leer; leer; 8; ist gleich; 2 x; leer; leer. Zeile 4: leer; leer; 4; ist gleich; x; leer; leer"
+      "expected": "4 Zeilen, Zeile 1: 3 x; plus; 8; ist gleich; 5 x; leer; leer. Zeile 2: leer; leer; 8; ist gleich; 5 x; minus; 3 x. Zeile 3: leer; leer; 8; ist gleich; 2 x; leer; leer. Zeile 4: leer; leer; 4; ist gleich; x; leer; leer"
     },
     "Multiline013": {
-      "speech": "4 Zeilen, Zeile 1: Step 1 Doppelpunkt 3 x, plus 8 ist gleich 5 x. Zeile 2: Step 2 Doppelpunkt 8 ist gleich 5 x, minus 3 x. Zeile 3: Step 3 Doppelpunkt 8 ist gleich 2 x. Zeile 4: Step 4 Doppelpunkt 4 ist gleich x"
+      "expected": "4 Zeilen, Zeile 1: Step 1 Doppelpunkt 3 x, plus 8 ist gleich 5 x. Zeile 2: Step 2 Doppelpunkt 8 ist gleich 5 x, minus 3 x. Zeile 3: Step 3 Doppelpunkt 8 ist gleich 2 x. Zeile 4: Step 4 Doppelpunkt 4 ist gleich x"
     },
     "Multiline014": {
-      "speech": "f von x, ist gleich, 2 Fälle, Fall 1: minus x if x kleiner als 0. Fall 2: x if x größer oder gleich 0"
+      "expected": "f von x, ist gleich, 2 Fälle, Fall 1: minus x if x kleiner als 0. Fall 2: x if x größer oder gleich 0"
     },
     "Multiline015": {
-      "speech": "f von x, ist gleich, 2 Fälle, Fall 1: minus x; if x kleiner als 0. Fall 2: x; if x größer oder gleich 0"
+      "expected": "f von x, ist gleich, 2 Fälle, Fall 1: minus x; if x kleiner als 0. Fall 2: x; if x größer oder gleich 0"
     },
     "Multiline016": {
-      "speech": "f von x, ist gleich, 2 Fälle, Fall 1: minus x if x kleiner als 0. Fall 2: x if x größer oder gleich 0"
+      "expected": "f von x, ist gleich, 2 Fälle, Fall 1: minus x if x kleiner als 0. Fall 2: x if x größer oder gleich 0"
     },
     "Multiline017": {
-      "speech": "f von x, ist gleich, 2 Fälle, Fall 1: minus x; if x kleiner als 0. Fall 2: x; if x größer oder gleich 0"
+      "expected": "f von x, ist gleich, 2 Fälle, Fall 1: minus x; if x kleiner als 0. Fall 2: x; if x größer oder gleich 0"
     },
     "Multiline018": {
-      "speech": "2 Fälle, Fall 1: f von x, ist gleich minus x; if x kleiner als 0. Fall 2: f von x, ist gleich x; if x größer oder gleich 0"
+      "expected": "2 Fälle, Fall 1: f von x, ist gleich minus x; if x kleiner als 0. Fall 2: f von x, ist gleich x; if x größer oder gleich 0"
     },
     "Multiline019": {
-      "speech": "2 Gleichungen, Gleichung 1: x plus y ist gleich 7. Gleichung 2: 2 x, plus 3 y, ist gleich 17"
+      "expected": "2 Gleichungen, Gleichung 1: x plus y ist gleich 7. Gleichung 2: 2 x, plus 3 y, ist gleich 17"
     },
     "Multiline019a": {
-      "speech": "2 Gleichungen, Gleichung 1: x plus y; ist gleich; 7. Gleichung 2: 2 x, plus 3 y; ist gleich; 17"
+      "expected": "2 Gleichungen, Gleichung 1: x plus y; ist gleich; 7. Gleichung 2: 2 x, plus 3 y; ist gleich; 17"
     },
     "Multiline020": {
-      "speech": "2 Zeilen, Zeile 1: x plus y ist gleich 7. Zeile 2: 2 x, plus 3 y, ist gleich 17"
+      "expected": "2 Zeilen, Zeile 1: x plus y ist gleich 7. Zeile 2: 2 x, plus 3 y, ist gleich 17"
     },
     "Multiline021": {
-      "speech": "2 Zeilen, Zeile 1: x plus y; ist gleich; 7. Zeile 2: 2 x, plus 3 y; ist gleich; 17"
+      "expected": "2 Zeilen, Zeile 1: x plus y; ist gleich; 7. Zeile 2: 2 x, plus 3 y; ist gleich; 17"
     },
     "Multiline022": {
-      "speech": "2 Zeilen, Zeile 1: x plus y ist gleich 7. Zeile 2: 2 x, plus 3 y, ist gleich 17"
+      "expected": "2 Zeilen, Zeile 1: x plus y ist gleich 7. Zeile 2: 2 x, plus 3 y, ist gleich 17"
     },
     "Multiline023": {
-      "speech": "2 Zeilen, Zeile 1: x plus y; ist gleich; 7. Zeile 2: 2 x, plus 3 y; ist gleich; 17"
+      "expected": "2 Zeilen, Zeile 1: x plus y; ist gleich; 7. Zeile 2: 2 x, plus 3 y; ist gleich; 17"
     },
     "Multiline024": {
-      "speech": "4 Rechenschritte, Schritt 1: 3 x, plus 8 ist gleich 5 x. Schritt 2: 8 ist gleich 5 x, minus 3 x. Schritt 3: 8 ist gleich 2 x. Schritt 4: 4 ist gleich x"
+      "expected": "4 Rechenschritte, Schritt 1: 3 x, plus 8 ist gleich 5 x. Schritt 2: 8 ist gleich 5 x, minus 3 x. Schritt 3: 8 ist gleich 2 x. Schritt 4: 4 ist gleich x"
     },
     "Multiline025": {
-      "speech": "4 Rechenschritte, Schritt 1: 3 x; plus; 8; ist gleich; 5 x; leer; leer. Schritt 2: leer; leer; 8; ist gleich; 5 x; minus; 3 x. Schritt 3: leer; leer; 8; ist gleich; 2 x; leer; leer. Schritt 4: leer; leer; 4; ist gleich; x; leer; leer"
+      "expected": "4 Rechenschritte, Schritt 1: 3 x; plus; 8; ist gleich; 5 x; leer; leer. Schritt 2: leer; leer; 8; ist gleich; 5 x; minus; 3 x. Schritt 3: leer; leer; 8; ist gleich; 2 x; leer; leer. Schritt 4: leer; leer; 4; ist gleich; x; leer; leer"
     },
     "Multiline026": {
-      "speech": "3 Bedingungen, Bedingung 1: x größer oder gleich 0. Bedingung 2: y größer oder gleich 0. Bedingung 3: 3 x, minus 5 y, kleiner oder gleich 30"
+      "expected": "3 Bedingungen, Bedingung 1: x größer oder gleich 0. Bedingung 2: y größer oder gleich 0. Bedingung 3: 3 x, minus 5 y, kleiner oder gleich 30"
     },
     "_comment2_": " Added examples for preference Label_None.",
     "Multiline026a": {
-      "speech": "3 Zeilen, x größer oder gleich 0. y größer oder gleich 0. 3 x, minus 5 y, kleiner oder gleich 30"
+      "expected": "3 Zeilen, x größer oder gleich 0. y größer oder gleich 0. 3 x, minus 5 y, kleiner oder gleich 30"
     },
     "Multiline026b": {
-      "speech": "4 Zeilen, 3 x; plus; 8; ist gleich; 5 x; leer; leer. leer; leer; 8; ist gleich; 5 x; minus; 3 x. leer; leer; 8; ist gleich; 2 x; leer; leer. leer; leer; 4; ist gleich; x; leer; leer"
+      "expected": "4 Zeilen, 3 x; plus; 8; ist gleich; 5 x; leer; leer. leer; leer; 8; ist gleich; 5 x; minus; 3 x. leer; leer; 8; ist gleich; 2 x; leer; leer. leer; leer; 4; ist gleich; x; leer; leer"
     },
     "Multiline026c": {
-      "speech": "f von x, ist gleich, 2 Fälle, minus x if x kleiner als 0. x if x größer oder gleich 0"
+      "expected": "f von x, ist gleich, 2 Fälle, minus x if x kleiner als 0. x if x größer oder gleich 0"
     },
     "Multiline027": {
-      "speech": "2 Zeilen, Zeile 1: x plus y ist gleich 7. Zeile 2: 2 x, plus 3 y, ist gleich 17"
+      "expected": "2 Zeilen, Zeile 1: x plus y ist gleich 7. Zeile 2: 2 x, plus 3 y, ist gleich 17"
     },
     "Multiline028": {
-      "speech": "2 Zeilen, Zeile 1: x plus y. ist gleich. 7. Zeile 2: 2 x, plus 3 y. ist gleich. 17"
+      "expected": "2 Zeilen, Zeile 1: x plus y. ist gleich. 7. Zeile 2: 2 x, plus 3 y. ist gleich. 17"
     },
     "Multiline029": {
-      "speech": "2 Zeilen, Zeile 1: x. plus. y. ist gleich. 7. Zeile 2: 2 x. plus. 3 y. ist gleich. 17"
+      "expected": "2 Zeilen, Zeile 1: x. plus. y. ist gleich. 7. Zeile 2: 2 x. plus. 3 y. ist gleich. 17"
     },
     "Multiline030": {
-      "speech": "2 Zeilen, Zeile 1: Equation 1 Doppelpunkt. x plus y ist gleich 7. Zeile 2: Equation 2 Doppelpunkt. 2 x, plus 3 y, ist gleich 17"
+      "expected": "2 Zeilen, Zeile 1: Equation 1 Doppelpunkt. x plus y ist gleich 7. Zeile 2: Equation 2 Doppelpunkt. 2 x, plus 3 y, ist gleich 17"
     },
     "Multiline031": {
-      "speech": "2 Zeilen, Zeile 1: Equation 1 Doppelpunkt. x plus y. ist gleich. 7. Zeile 2: Equation 2 Doppelpunkt. 2 x, plus 3 y. ist gleich. 17"
+      "expected": "2 Zeilen, Zeile 1: Equation 1 Doppelpunkt. x plus y. ist gleich. 7. Zeile 2: Equation 2 Doppelpunkt. 2 x, plus 3 y. ist gleich. 17"
     },
     "Multiline032": {
-      "speech": "3 Zeilen, Zeile 1: 4 x. plus. 3 y. plus. 2 z. ist gleich. 1. Zeile 2: 2 x. plus. 4 y. plus. 6 z. ist gleich. 6. Zeile 3: 3 x. plus. 2 y. plus. 5 z. ist gleich. 1"
+      "expected": "3 Zeilen, Zeile 1: 4 x. plus. 3 y. plus. 2 z. ist gleich. 1. Zeile 2: 2 x. plus. 4 y. plus. 6 z. ist gleich. 6. Zeile 3: 3 x. plus. 2 y. plus. 5 z. ist gleich. 1"
     },
     "Multiline033": {
-      "speech": "4 Zeilen, Zeile 1: 3 x. plus. 8. ist gleich. 5 x. leer. leer. Zeile 2: leer. leer. 8. ist gleich. 5 x. minus. 3 x. Zeile 3: leer. leer. 8. ist gleich. 2 x. leer. leer. Zeile 4: leer. leer. 4. ist gleich. x. leer. leer"
+      "expected": "4 Zeilen, Zeile 1: 3 x. plus. 8. ist gleich. 5 x. leer. leer. Zeile 2: leer. leer. 8. ist gleich. 5 x. minus. 3 x. Zeile 3: leer. leer. 8. ist gleich. 2 x. leer. leer. Zeile 4: leer. leer. 4. ist gleich. x. leer. leer"
     },
     "Multiline034": {
-      "speech": "f von x, ist gleich, 2 Fälle, Fall 1: minus x. if x kleiner als 0. Fall 2: x. if x größer oder gleich 0"
+      "expected": "f von x, ist gleich, 2 Fälle, Fall 1: minus x. if x kleiner als 0. Fall 2: x. if x größer oder gleich 0"
     },
     "Multiline035": {
-      "speech": "f von x, ist gleich, 2 Fälle, Fall 1: minus x. if x kleiner als 0. Fall 2: x. if x größer oder gleich 0"
+      "expected": "f von x, ist gleich, 2 Fälle, Fall 1: minus x. if x kleiner als 0. Fall 2: x. if x größer oder gleich 0"
     },
     "Multiline036": {
-      "speech": "2 Fälle, Fall 1: f von x, ist gleich minus x. if x kleiner als 0. Fall 2: f von x, ist gleich x. if x größer oder gleich 0"
+      "expected": "2 Fälle, Fall 1: f von x, ist gleich minus x. if x kleiner als 0. Fall 2: f von x, ist gleich x. if x größer oder gleich 0"
     },
     "Multiline037": {
-      "speech": "2 Gleichungen, Gleichung 1: x plus y. ist gleich. 7. Gleichung 2: 2 x, plus 3 y. ist gleich. 17"
+      "expected": "2 Gleichungen, Gleichung 1: x plus y. ist gleich. 7. Gleichung 2: 2 x, plus 3 y. ist gleich. 17"
     },
     "Multiline038": {
-      "speech": "2 Zeilen, Zeile 1: x plus y. ist gleich. 7. Zeile 2: 2 x, plus 3 y. ist gleich. 17"
+      "expected": "2 Zeilen, Zeile 1: x plus y. ist gleich. 7. Zeile 2: 2 x, plus 3 y. ist gleich. 17"
     },
     "Multiline039": {
-      "speech": "2 Zeilen, Zeile 1: x plus y. ist gleich. 7. Zeile 2: 2 x, plus 3 y. ist gleich. 17"
+      "expected": "2 Zeilen, Zeile 1: x plus y. ist gleich. 7. Zeile 2: 2 x, plus 3 y. ist gleich. 17"
     },
     "Multiline040": {
-      "speech": "4 Rechenschritte, Schritt 1: 3 x. plus. 8. ist gleich. 5 x. leer. leer. Schritt 2: leer. leer. 8. ist gleich. 5 x. minus. 3 x. Schritt 3: leer. leer. 8. ist gleich. 2 x. leer. leer. Schritt 4: leer. leer. 4. ist gleich. x. leer. leer"
+      "expected": "4 Rechenschritte, Schritt 1: 3 x. plus. 8. ist gleich. 5 x. leer. leer. Schritt 2: leer. leer. 8. ist gleich. 5 x. minus. 3 x. Schritt 3: leer. leer. 8. ist gleich. 2 x. leer. leer. Schritt 4: leer. leer. 4. ist gleich. x. leer. leer"
     },
     "Multiline041": {
-      "speech": "2 Zeilen, Zeile 1: x plus y, ist gleich, 7. Zeile 2: 2 x, plus 3 y, ist gleich, 17"
+      "expected": "2 Zeilen, Zeile 1: x plus y, ist gleich, 7. Zeile 2: 2 x, plus 3 y, ist gleich, 17"
     },
     "Multiline042": {
-      "speech": "2 Zeilen, Zeile 1: x, plus, y, ist gleich, 7. Zeile 2: 2 x, plus, 3 y, ist gleich, 17"
+      "expected": "2 Zeilen, Zeile 1: x, plus, y, ist gleich, 7. Zeile 2: 2 x, plus, 3 y, ist gleich, 17"
     },
     "Multiline043": {
-      "speech": "2 Zeilen, Zeile 1: Equation 1 Doppelpunkt, x plus y ist gleich 7. Zeile 2: Equation 2 Doppelpunkt, 2 x, plus 3 y, ist gleich 17"
+      "expected": "2 Zeilen, Zeile 1: Equation 1 Doppelpunkt, x plus y ist gleich 7. Zeile 2: Equation 2 Doppelpunkt, 2 x, plus 3 y, ist gleich 17"
     },
     "Multiline044": {
-      "speech": "2 Zeilen, Zeile 1: Equation 1 Doppelpunkt, x plus y, ist gleich, 7. Zeile 2: Equation 2 Doppelpunkt, 2 x, plus 3 y, ist gleich, 17"
+      "expected": "2 Zeilen, Zeile 1: Equation 1 Doppelpunkt, x plus y, ist gleich, 7. Zeile 2: Equation 2 Doppelpunkt, 2 x, plus 3 y, ist gleich, 17"
     },
     "Multiline045": {
-      "speech": "3 Zeilen, Zeile 1: 4 x, plus, 3 y, plus, 2 z, ist gleich, 1. Zeile 2: 2 x, plus, 4 y, plus, 6 z, ist gleich, 6. Zeile 3: 3 x, plus, 2 y, plus, 5 z, ist gleich, 1"
+      "expected": "3 Zeilen, Zeile 1: 4 x, plus, 3 y, plus, 2 z, ist gleich, 1. Zeile 2: 2 x, plus, 4 y, plus, 6 z, ist gleich, 6. Zeile 3: 3 x, plus, 2 y, plus, 5 z, ist gleich, 1"
     },
     "Multiline046": {
-      "speech": "4 Zeilen, Zeile 1: 3 x, plus, 8, ist gleich, 5 x, leer, leer. Zeile 2: leer, leer, 8, ist gleich, 5 x, minus, 3 x. Zeile 3: leer, leer, 8, ist gleich, 2 x, leer, leer. Zeile 4: leer, leer, 4, ist gleich, x, leer, leer"
+      "expected": "4 Zeilen, Zeile 1: 3 x, plus, 8, ist gleich, 5 x, leer, leer. Zeile 2: leer, leer, 8, ist gleich, 5 x, minus, 3 x. Zeile 3: leer, leer, 8, ist gleich, 2 x, leer, leer. Zeile 4: leer, leer, 4, ist gleich, x, leer, leer"
     },
     "Multiline047": {
-      "speech": "f von x, ist gleich, 2 Fälle, Fall 1: minus x, if x kleiner als 0. Fall 2: x, if x größer oder gleich 0"
+      "expected": "f von x, ist gleich, 2 Fälle, Fall 1: minus x, if x kleiner als 0. Fall 2: x, if x größer oder gleich 0"
     },
     "Multiline048": {
-      "speech": "f von x, ist gleich, 2 Fälle, Fall 1: minus x, if x kleiner als 0. Fall 2: x, if x größer oder gleich 0"
+      "expected": "f von x, ist gleich, 2 Fälle, Fall 1: minus x, if x kleiner als 0. Fall 2: x, if x größer oder gleich 0"
     },
     "Multiline049": {
-      "speech": "2 Fälle, Fall 1: f von x, ist gleich minus x, if x kleiner als 0. Fall 2: f von x, ist gleich x, if x größer oder gleich 0"
+      "expected": "2 Fälle, Fall 1: f von x, ist gleich minus x, if x kleiner als 0. Fall 2: f von x, ist gleich x, if x größer oder gleich 0"
     },
     "Multiline050": {
-      "speech": "2 Gleichungen, Gleichung 1: x plus y, ist gleich, 7. Gleichung 2: 2 x, plus 3 y, ist gleich, 17"
+      "expected": "2 Gleichungen, Gleichung 1: x plus y, ist gleich, 7. Gleichung 2: 2 x, plus 3 y, ist gleich, 17"
     },
     "Multiline051": {
-      "speech": "2 Zeilen, Zeile 1: x plus y, ist gleich, 7. Zeile 2: 2 x, plus 3 y, ist gleich, 17"
+      "expected": "2 Zeilen, Zeile 1: x plus y, ist gleich, 7. Zeile 2: 2 x, plus 3 y, ist gleich, 17"
     },
     "Multiline052": {
-      "speech": "2 Zeilen, Zeile 1: x plus y, ist gleich, 7. Zeile 2: 2 x, plus 3 y, ist gleich, 17"
+      "expected": "2 Zeilen, Zeile 1: x plus y, ist gleich, 7. Zeile 2: 2 x, plus 3 y, ist gleich, 17"
     },
     "Multiline053": {
-      "speech": "4 Rechenschritte, Schritt 1: 3 x, plus, 8, ist gleich, 5 x, leer, leer. Schritt 2: leer, leer, 8, ist gleich, 5 x, minus, 3 x. Schritt 3: leer, leer, 8, ist gleich, 2 x, leer, leer. Schritt 4: leer, leer, 4, ist gleich, x, leer, leer"
+      "expected": "4 Rechenschritte, Schritt 1: 3 x, plus, 8, ist gleich, 5 x, leer, leer. Schritt 2: leer, leer, 8, ist gleich, 5 x, minus, 3 x. Schritt 3: leer, leer, 8, ist gleich, 2 x, leer, leer. Schritt 4: leer, leer, 4, ist gleich, x, leer, leer"
     },
     "Multiline054": {
-      "speech": "Zeile 1: x plus y ist gleich 7. Zeile 2: 2 x, plus 3 y, ist gleich 17"
+      "expected": "Zeile 1: x plus y ist gleich 7. Zeile 2: 2 x, plus 3 y, ist gleich 17"
     },
     "Multiline055": {
-      "speech": "Zeile 1: x plus y; ist gleich; 7. Zeile 2: 2 x, plus 3 y; ist gleich; 17"
+      "expected": "Zeile 1: x plus y; ist gleich; 7. Zeile 2: 2 x, plus 3 y; ist gleich; 17"
     },
     "Multiline056": {
-      "speech": "Zeile 1: x; plus; y; ist gleich; 7. Zeile 2: 2 x; plus; 3 y; ist gleich; 17"
+      "expected": "Zeile 1: x; plus; y; ist gleich; 7. Zeile 2: 2 x; plus; 3 y; ist gleich; 17"
     },
     "Multiline057": {
-      "speech": "Zeile 1: Equation 1 Doppelpunkt x plus y ist gleich 7. Zeile 2: Equation 2 Doppelpunkt 2 x, plus 3 y, ist gleich 17"
+      "expected": "Zeile 1: Equation 1 Doppelpunkt x plus y ist gleich 7. Zeile 2: Equation 2 Doppelpunkt 2 x, plus 3 y, ist gleich 17"
     },
     "Multiline058": {
-      "speech": "Zeile 1: Equation 1 Doppelpunkt; x plus y ist gleich 7. Zeile 2: Equation 2 Doppelpunkt; 2 x, plus 3 y, ist gleich 17"
+      "expected": "Zeile 1: Equation 1 Doppelpunkt; x plus y ist gleich 7. Zeile 2: Equation 2 Doppelpunkt; 2 x, plus 3 y, ist gleich 17"
     },
     "Multiline059": {
-      "speech": "Zeile 1: Equation 1 Doppelpunkt; x plus y; ist gleich; 7. Zeile 2: Equation 2 Doppelpunkt; 2 x, plus 3 y; ist gleich; 17"
+      "expected": "Zeile 1: Equation 1 Doppelpunkt; x plus y; ist gleich; 7. Zeile 2: Equation 2 Doppelpunkt; 2 x, plus 3 y; ist gleich; 17"
     },
     "Multiline060": {
-      "speech": "Zeile 1: 4 x, plus 3 y, plus 2 z, ist gleich 17. Zeile 2: 2 x, plus 4 y, plus 6 z, ist gleich 6. Zeile 3: 3 x, plus 2 y, plus 5 z, ist gleich 1"
+      "expected": "Zeile 1: 4 x, plus 3 y, plus 2 z, ist gleich 17. Zeile 2: 2 x, plus 4 y, plus 6 z, ist gleich 6. Zeile 3: 3 x, plus 2 y, plus 5 z, ist gleich 1"
     },
     "Multiline061": {
-      "speech": "Zeile 1: 4 x; plus; 3 y; plus; 2 z; ist gleich; 1. Zeile 2: 2 x; plus; 4 y; plus; 6 z; ist gleich; 6. Zeile 3: 3 x; plus; 2 y; plus; 5 z; ist gleich; 1"
+      "expected": "Zeile 1: 4 x; plus; 3 y; plus; 2 z; ist gleich; 1. Zeile 2: 2 x; plus; 4 y; plus; 6 z; ist gleich; 6. Zeile 3: 3 x; plus; 2 y; plus; 5 z; ist gleich; 1"
     },
     "Multiline062": {
-      "speech": "Zeile 1: Equation 1 Doppelpunkt 4 x, plus 3 y, plus 2 z, ist gleich 17. Zeile 2: Equation 2 Doppelpunkt 2 x, plus 4 y, plus 6 z, ist gleich 6. Zeile 3: Equation 3 Doppelpunkt 3 x, plus 2 y, plus 5 z, ist gleich 1"
+      "expected": "Zeile 1: Equation 1 Doppelpunkt 4 x, plus 3 y, plus 2 z, ist gleich 17. Zeile 2: Equation 2 Doppelpunkt 2 x, plus 4 y, plus 6 z, ist gleich 6. Zeile 3: Equation 3 Doppelpunkt 3 x, plus 2 y, plus 5 z, ist gleich 1"
     },
     "Multiline063": {
-      "speech": "Zeile 1: Step 1 Doppelpunkt 3 x, plus 8 ist gleich 5 x. Zeile 2: Step 2 Doppelpunkt 8 ist gleich 5 x, minus 3 x. Zeile 3: Step 3 Doppelpunkt 8 ist gleich 2 x. Zeile 4: Step 4 Doppelpunkt 4 ist gleich x"
+      "expected": "Zeile 1: Step 1 Doppelpunkt 3 x, plus 8 ist gleich 5 x. Zeile 2: Step 2 Doppelpunkt 8 ist gleich 5 x, minus 3 x. Zeile 3: Step 3 Doppelpunkt 8 ist gleich 2 x. Zeile 4: Step 4 Doppelpunkt 4 ist gleich x"
     },
     "Multiline064": {
-      "speech": "f von x, ist gleich, Fall 1: minus x if x kleiner als 0. Fall 2: x if x größer oder gleich 0"
+      "expected": "f von x, ist gleich, Fall 1: minus x if x kleiner als 0. Fall 2: x if x größer oder gleich 0"
     },
     "Multiline065": {
-      "speech": "f von x, ist gleich, Fall 1: minus x; if x kleiner als 0. Fall 2: x; if x größer oder gleich 0"
+      "expected": "f von x, ist gleich, Fall 1: minus x; if x kleiner als 0. Fall 2: x; if x größer oder gleich 0"
     },
     "Multiline066": {
-      "speech": "f von x, ist gleich, Fall 1: minus x if x kleiner als 0. Fall 2: x if x größer oder gleich 0"
+      "expected": "f von x, ist gleich, Fall 1: minus x if x kleiner als 0. Fall 2: x if x größer oder gleich 0"
     },
     "Multiline067": {
-      "speech": "Fall 1: f von x, ist gleich minus x; if x kleiner als 0. Fall 2: f von x, ist gleich x; if x größer oder gleich 0"
+      "expected": "Fall 1: f von x, ist gleich minus x; if x kleiner als 0. Fall 2: f von x, ist gleich x; if x größer oder gleich 0"
     },
     "Multiline068": {
-      "speech": "Gleichung 1: x plus y ist gleich 7. Gleichung 2: 2 x, plus 3 y, ist gleich 17"
+      "expected": "Gleichung 1: x plus y ist gleich 7. Gleichung 2: 2 x, plus 3 y, ist gleich 17"
     },
     "Multiline069": {
-      "speech": "Zeile 1: x plus y ist gleich 7. Zeile 2: 2 x, plus 3 y, ist gleich 17"
+      "expected": "Zeile 1: x plus y ist gleich 7. Zeile 2: 2 x, plus 3 y, ist gleich 17"
     },
     "Multiline070": {
-      "speech": "Zeile 1: x plus y ist gleich 7. Zeile 2: 2 x, plus 3 y, ist gleich 17"
+      "expected": "Zeile 1: x plus y ist gleich 7. Zeile 2: 2 x, plus 3 y, ist gleich 17"
     },
     "Multiline071": {
-      "speech": "Schritt 1: 3 x, plus 8 ist gleich 5 x. Schritt 2: 8 ist gleich 5 x, minus 3 x. Schritt 3: 8 ist gleich 2 x. Schritt 4: 4 ist gleich x"
+      "expected": "Schritt 1: 3 x, plus 8 ist gleich 5 x. Schritt 2: 8 ist gleich 5 x, minus 3 x. Schritt 3: 8 ist gleich 2 x. Schritt 4: 4 ist gleich x"
     },
     "Multiline072": {
-      "speech": "Schritt 1: 3 x; plus; 8; ist gleich; 5 x; leer; leer. Schritt 2: leer; leer; 8; ist gleich; 5 x; minus; 3 x. Schritt 3: leer; leer; 8; ist gleich; 2 x; leer; leer. Schritt 4: leer; leer; 4; ist gleich; x; leer; leer"
+      "expected": "Schritt 1: 3 x; plus; 8; ist gleich; 5 x; leer; leer. Schritt 2: leer; leer; 8; ist gleich; 5 x; minus; 3 x. Schritt 3: leer; leer; 8; ist gleich; 2 x; leer; leer. Schritt 4: leer; leer; 4; ist gleich; x; leer; leer"
     },
     "Multiline073": {
-      "speech": "Bedingung 1: x größer oder gleich 0. Bedingung 2: y größer oder gleich 0. Bedingung 3: 3 x, minus 5 y, kleiner oder gleich 30"
+      "expected": "Bedingung 1: x größer oder gleich 0. Bedingung 2: y größer oder gleich 0. Bedingung 3: 3 x, minus 5 y, kleiner oder gleich 30"
     }
   }
 }

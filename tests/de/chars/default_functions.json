@@ -11,312 +11,312 @@
   "information": "Default function test for German",
   "tests": {
     "deg": {
-      "speech": [
+      "expected": [
         "Grad"
       ]
     },
     "det": {
-      "speech": [
+      "expected": [
         "Determinante"
       ]
     },
     "dim": {
-      "speech": [
+      "expected": [
         "Dimension"
       ]
     },
     "hom": {
-      "speech": [
+      "expected": [
         "Homomorphismus"
       ]
     },
     "Hom": {
-      "speech": [
+      "expected": [
         "Homomorphismus"
       ]
     },
     "ker": {
-      "speech": [
+      "expected": [
         "Kern"
       ]
     },
     "Tr": {
-      "speech": [
+      "expected": [
         "Spur"
       ]
     },
     "tr": {
-      "speech": [
+      "expected": [
         "Spur"
       ]
     },
     "log": {
-      "speech": [
+      "expected": [
         "Logarithmus"
       ]
     },
     "ln": {
-      "speech": [
+      "expected": [
         "natürlicher Logarithmus"
       ]
     },
     "lg": {
-      "speech": [
+      "expected": [
         "Logarithmus zur Basis 10"
       ]
     },
     "exp": {
-      "speech": [
+      "expected": [
         "Exponent"
       ]
     },
     "expt": {
-      "speech": [
+      "expected": [
         "Exponent"
       ]
     },
     "gcd": {
-      "speech": [
+      "expected": [
         "größter gemeinsamer Teiler"
       ]
     },
     "lcm": {
-      "speech": [
+      "expected": [
         "kleinstes gemeinsames Vielfaches"
       ]
     },
     "arg": {
-      "speech": [
+      "expected": [
         "Argument"
       ]
     },
     "im": {
-      "speech": [
+      "expected": [
         "der Imaginärteil der komplexen Zahl"
       ]
     },
     "re": {
-      "speech": [
+      "expected": [
         "der Realteil der komplexen Zahl"
       ]
     },
     "inf": {
-      "speech": [
+      "expected": [
         "Infimum"
       ]
     },
     "lim": {
-      "speech": [
+      "expected": [
         "Limes"
       ]
     },
     "'": {
-      "speech": [
+      "expected": [
         "projektiver Limes"
       ]
     },
     "liminf": {
-      "speech": [
+      "expected": [
         "Limes inferior"
       ]
     },
     "limsup": {
-      "speech": [
+      "expected": [
         "Limes superior"
       ]
     },
     "max": {
-      "speech": [
+      "expected": [
         "Maximum"
       ]
     },
     "min": {
-      "speech": [
+      "expected": [
         "Minimum"
       ]
     },
     "sup": {
-      "speech": [
+      "expected": [
         "Supremum"
       ]
     },
     "injlim": {
-      "speech": [
+      "expected": [
         "Colimes"
       ]
     },
     "projlim": {
-      "speech": [
+      "expected": [
         "projektiver Limes"
       ]
     },
     "mod": {
-      "speech": [
+      "expected": [
         "modulo"
       ]
     },
     "Pr": {
-      "speech": [
+      "expected": [
         "Wahrscheinlichkeit"
       ]
     },
     "cosh": {
-      "speech": [
+      "expected": [
         "Kosinus hyperbolicus"
       ]
     },
     "coth": {
-      "speech": [
+      "expected": [
         "Kotangens hyperbolicus"
       ]
     },
     "csch": {
-      "speech": [
+      "expected": [
         "Kosekans hyperbolicus"
       ]
     },
     "sech": {
-      "speech": [
+      "expected": [
         "Sekans hyperbolicus"
       ]
     },
     "sinh": {
-      "speech": [
+      "expected": [
         "Sinus hyperbolicus"
       ]
     },
     "tanh": {
-      "speech": [
+      "expected": [
         "Tangens hyperbolicus"
       ]
     },
     "arcosh": {
-      "speech": [
+      "expected": [
         "Areakosinus hyperbolicus"
       ]
     },
     "arccosh": {
-      "speech": [
+      "expected": [
         "Areakosinus hyperbolicus"
       ]
     },
     "arcoth": {
-      "speech": [
+      "expected": [
         "Areakotangens hyperbolicus"
       ]
     },
     "arccoth": {
-      "speech": [
+      "expected": [
         "Areakotangens hyperbolicus"
       ]
     },
     "arcsch": {
-      "speech": [
+      "expected": [
         "Areakosekans hyperbolicus"
       ]
     },
     "arccsch": {
-      "speech": [
+      "expected": [
         "Areakosekans hyperbolicus"
       ]
     },
     "arsech": {
-      "speech": [
+      "expected": [
         "Areasekans hyperbolicus"
       ]
     },
     "arcsech": {
-      "speech": [
+      "expected": [
         "Areasekans hyperbolicus"
       ]
     },
     "arsinh": {
-      "speech": [
+      "expected": [
         "Areasinus hyperbolicus"
       ]
     },
     "arcsinh": {
-      "speech": [
+      "expected": [
         "Areasinus hyperbolicus"
       ]
     },
     "artanh": {
-      "speech": [
+      "expected": [
         "Areatangens hyperbolicus "
       ]
     },
     "arctanh": {
-      "speech": [
+      "expected": [
         "Areatangens hyperbolicus "
       ]
     },
     "cos": {
-      "speech": [
+      "expected": [
         "Kosinus"
       ]
     },
     "cosine": {
-      "speech": [
+      "expected": [
         "Kosinus"
       ]
     },
     "cot": {
-      "speech": [
+      "expected": [
         "Kotangens"
       ]
     },
     "csc": {
-      "speech": [
+      "expected": [
         "Kosekans"
       ]
     },
     "sec": {
-      "speech": [
+      "expected": [
         "Sekans"
       ]
     },
     "sin": {
-      "speech": [
+      "expected": [
         "Sinus"
       ]
     },
     "sine": {
-      "speech": [
+      "expected": [
         "Sinus"
       ]
     },
     "tan": {
-      "speech": [
+      "expected": [
         "Tangens"
       ]
     },
     "arccos": {
-      "speech": [
+      "expected": [
         "Arkuskosinus"
       ]
     },
     "arccot": {
-      "speech": [
+      "expected": [
         "Arkuskotangens"
       ]
     },
     "arccsc": {
-      "speech": [
+      "expected": [
         "Arkuskosekans"
       ]
     },
     "arcsec": {
-      "speech": [
+      "expected": [
         "Arkussekans"
       ]
     },
     "arcsin": {
-      "speech": [
+      "expected": [
         "Arkussinus"
       ]
     },
     "arctan": {
-      "speech": [
+      "expected": [
         "Arkustangens"
       ]
     }

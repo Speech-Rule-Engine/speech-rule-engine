@@ -9,570 +9,570 @@
     "_comment2_": " Combinatorics",
     "_comment3_": " Matrices, Vectors, and Combinatorics",
     "Matrix001": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5"
     },
     "Matrix002": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5"
     },
     "Matrix003": {
-      "speech": "la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6"
+      "expected": "la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6"
     },
     "Matrix004": {
-      "speech": "la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6"
+      "expected": "la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6"
     },
     "Matrix005": {
-      "speech": "la matrice colonne de dimension 3 par 1. 1, 2, 3"
+      "expected": "la matrice colonne de dimension 3 par 1. 1, 2, 3"
     },
     "Matrix006": {
-      "speech": "la matrice colonne de dimension 3 par 1. 1, 2, 3"
+      "expected": "la matrice colonne de dimension 3 par 1. 1, 2, 3"
     },
     "Matrix007": {
-      "speech": "la matrice ligne de dimension 1 par 2. 3, 5"
+      "expected": "la matrice ligne de dimension 1 par 2. 3, 5"
     },
     "Matrix008": {
-      "speech": "la matrice ligne de dimension 1 par 2. 3, 5"
+      "expected": "la matrice ligne de dimension 1 par 2. 3, 5"
     },
     "Matrix008a": {
-      "speech": "la matrice de dimension 1 par 1 avec élément 3"
+      "expected": "la matrice de dimension 1 par 1 avec élément 3"
     },
     "Matrix008b": {
-      "speech": "la matrice de dimension 1 par 1 avec élément 3"
+      "expected": "la matrice de dimension 1 par 1 avec élément 3"
     },
     "Matrix009": {
-      "speech": "la matrice colonne de dimension 2 par 1. rangée 1: x plus 1 rangée 2: x moins 1"
+      "expected": "la matrice colonne de dimension 2 par 1. rangée 1: x plus 1 rangée 2: x moins 1"
     },
     "Matrix010": {
-      "speech": "la matrice colonne de dimension 4 par 1. rangée 1: 3 rangée 2: 6 rangée 3: 1 rangée 4: 2"
+      "expected": "la matrice colonne de dimension 4 par 1. rangée 1: 3 rangée 2: 6 rangée 3: 1 rangée 4: 2"
     },
     "Matrix011": {
-      "speech": "la matrice ligne de dimension 1 par 2. colonne 1: x plus 1 colonne 2: 2 x"
+      "expected": "la matrice ligne de dimension 1 par 2. colonne 1: x plus 1 colonne 2: 2 x"
     },
     "Matrix012": {
-      "speech": "la matrice ligne de dimension 1 par 4. colonne 1: 3 colonne 2: 6 colonne 3: 1 colonne 4: 2"
+      "expected": "la matrice ligne de dimension 1 par 4. colonne 1: 3 colonne 2: 6 colonne 3: 1 colonne 4: 2"
     },
     "Matrix013": {
-      "speech": "la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7"
+      "expected": "la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7"
     },
     "Matrix014": {
-      "speech": "la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0"
+      "expected": "la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0"
     },
     "Matrix015": {
-      "speech": "la matrice de dimension 2 par 5. rangée 1: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 5; colonne 5, 3. rangée 2: colonne 1, 3; colonne 2, 4; colonne 3, 2; colonne 4, 7; colonne 5, 0"
+      "expected": "la matrice de dimension 2 par 5. rangée 1: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 5; colonne 5, 3. rangée 2: colonne 1, 3; colonne 2, 4; colonne 3, 2; colonne 4, 7; colonne 5, 0"
     },
     "Matrix016": {
-      "speech": "la matrice de dimension 4 par 2. rangée 1: colonne 1, 1; colonne 2, 3. rangée 2: colonne 1, 4; colonne 2, 2. rangée 3: colonne 1, 2; colonne 2, 1. rangée 4: colonne 1, 0; colonne 2, 5"
+      "expected": "la matrice de dimension 4 par 2. rangée 1: colonne 1, 1; colonne 2, 3. rangée 2: colonne 1, 4; colonne 2, 2. rangée 3: colonne 1, 2; colonne 2, 1. rangée 4: colonne 1, 0; colonne 2, 5"
     },
     "Matrix017": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x"
     },
     "Matrix018": {
-      "speech": "la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1 moins x; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6"
+      "expected": "la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1 moins x; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6"
     },
     "Matrix019": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5"
     },
     "Matrix019b": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers"
     },
     "Matrix020": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième"
     },
     "Matrix021": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: b sub 1 1, b sub 1 2 rangée 2: b sub 2 1, b sub 2 2"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: b sub 1 1, b sub 1 2 rangée 2: b sub 2 1, b sub 2 2"
     },
     "Matrix022": {
-      "speech": "3   la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5.   la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6"
+      "expected": "3   la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5.   la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6"
     },
     "Matrix023": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième.   la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1 moins x; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième.   la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1 moins x; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6"
     },
     "Matrix024": {
-      "speech": "la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0.   la matrice de dimension 4 par 2. rangée 1: colonne 1, 1; colonne 2, 3. rangée 2: colonne 1, 4; colonne 2, 2. rangée 3: colonne 1, 2; colonne 2, 1. rangée 4: colonne 1, 0; colonne 2, 5"
+      "expected": "la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0.   la matrice de dimension 4 par 2. rangée 1: colonne 1, 1; colonne 2, 3. rangée 2: colonne 1, 4; colonne 2, 2. rangée 3: colonne 1, 2; colonne 2, 1. rangée 4: colonne 1, 0; colonne 2, 5"
     },
     "Matrix025": {
-      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5"
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5"
     },
     "Matrix026": {
-      "speech": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5"
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5"
     },
     "Matrix027": {
-      "speech": "le déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7"
+      "expected": "le déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7"
     },
     "Matrix028": {
-      "speech": "déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7"
+      "expected": "déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7"
     },
     "Matrix029": {
-      "speech": "le déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0"
+      "expected": "le déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0"
     },
     "Matrix030": {
-      "speech": "déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0"
+      "expected": "déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0"
     },
     "Matrix031": {
-      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x"
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x"
     },
     "Matrix032": {
-      "speech": "déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x"
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x"
     },
     "Matrix033": {
-      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5"
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5"
     },
     "Matrix034": {
-      "speech": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5"
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5"
     },
     "Matrix035": {
-      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers"
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers"
     },
     "Matrix036": {
-      "speech": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers"
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers"
     },
     "Matrix037": {
-      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième"
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième"
     },
     "Matrix038": {
-      "speech": "déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième"
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième"
     },
     "Matrix039": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5"
     },
     "Matrix040": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5"
     },
     "Matrix041": {
-      "speech": "la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6"
+      "expected": "la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6"
     },
     "Matrix042": {
-      "speech": "la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6"
+      "expected": "la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6"
     },
     "Matrix043": {
-      "speech": "la matrice colonne de dimension 3 par 1. rangée 1: 1 rangée 2: 2 rangée 3: 3"
+      "expected": "la matrice colonne de dimension 3 par 1. rangée 1: 1 rangée 2: 2 rangée 3: 3"
     },
     "Matrix044": {
-      "speech": "la matrice colonne de dimension 3 par 1. rangée 1: 1 rangée 2: 2 rangée 3: 3"
+      "expected": "la matrice colonne de dimension 3 par 1. rangée 1: 1 rangée 2: 2 rangée 3: 3"
     },
     "Matrix045": {
-      "speech": "la matrice ligne de dimension 1 par 2. colonne 1: 3 colonne 2: 5"
+      "expected": "la matrice ligne de dimension 1 par 2. colonne 1: 3 colonne 2: 5"
     },
     "Matrix046": {
-      "speech": "la matrice ligne de dimension 1 par 2. colonne 1: 3 colonne 2: 5"
+      "expected": "la matrice ligne de dimension 1 par 2. colonne 1: 3 colonne 2: 5"
     },
     "Matrix047": {
-      "speech": "la matrice ligne de dimension 1 par 4. colonne 1: 1 colonne 2: 2 colonne 3: 3 colonne 4: 4"
+      "expected": "la matrice ligne de dimension 1 par 4. colonne 1: 1 colonne 2: 2 colonne 3: 3 colonne 4: 4"
     },
     "Matrix048": {
-      "speech": "la matrice ligne de dimension 1 par 4. colonne 1: 1 colonne 2: 2 colonne 3: 3 colonne 4: 4"
+      "expected": "la matrice ligne de dimension 1 par 4. colonne 1: 1 colonne 2: 2 colonne 3: 3 colonne 4: 4"
     },
     "Matrix049": {
-      "speech": "la matrice colonne de dimension 4 par 1. rangée 1: 1 rangée 2: 2 rangée 3: 3 rangée 4: 4"
+      "expected": "la matrice colonne de dimension 4 par 1. rangée 1: 1 rangée 2: 2 rangée 3: 3 rangée 4: 4"
     },
     "Matrix050": {
-      "speech": "la matrice colonne de dimension 4 par 1. rangée 1: 1 rangée 2: 2 rangée 3: 3 rangée 4: 4"
+      "expected": "la matrice colonne de dimension 4 par 1. rangée 1: 1 rangée 2: 2 rangée 3: 3 rangée 4: 4"
     },
     "Matrix051": {
-      "speech": "la matrice colonne de dimension 2 par 1. rangée 1: x plus 1 rangée 2: x moins 1"
+      "expected": "la matrice colonne de dimension 2 par 1. rangée 1: x plus 1 rangée 2: x moins 1"
     },
     "Matrix052": {
-      "speech": "la matrice colonne de dimension 4 par 1. rangée 1: 3 rangée 2: 6 rangée 3: 1 rangée 4: 2"
+      "expected": "la matrice colonne de dimension 4 par 1. rangée 1: 3 rangée 2: 6 rangée 3: 1 rangée 4: 2"
     },
     "Matrix053": {
-      "speech": "la matrice ligne de dimension 1 par 2. colonne 1: x plus 1 colonne 2: 2 x"
+      "expected": "la matrice ligne de dimension 1 par 2. colonne 1: x plus 1 colonne 2: 2 x"
     },
     "Matrix054": {
-      "speech": "la matrice ligne de dimension 1 par 4. colonne 1: 3 colonne 2: 6 colonne 3: 1 colonne 4: 2"
+      "expected": "la matrice ligne de dimension 1 par 4. colonne 1: 3 colonne 2: 6 colonne 3: 1 colonne 4: 2"
     },
     "Matrix055": {
-      "speech": "la matrice de dimension 3 par 3. rangée 1: colonne 1, 2; colonne 2, 4; colonne 3, 1. rangée 2: colonne 1, 3; colonne 2, 5; colonne 3, 2. rangée 3: colonne 1, 1; colonne 2, 4; colonne 3, 7"
+      "expected": "la matrice de dimension 3 par 3. rangée 1: colonne 1, 2; colonne 2, 4; colonne 3, 1. rangée 2: colonne 1, 3; colonne 2, 5; colonne 3, 2. rangée 3: colonne 1, 1; colonne 2, 4; colonne 3, 7"
     },
     "Matrix056": {
-      "speech": "la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0"
+      "expected": "la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0"
     },
     "Matrix057": {
-      "speech": "la matrice de dimension 2 par 5. rangée 1: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 5; colonne 5, 3. rangée 2: colonne 1, 3; colonne 2, 4; colonne 3, 2; colonne 4, 7; colonne 5, 0"
+      "expected": "la matrice de dimension 2 par 5. rangée 1: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 5; colonne 5, 3. rangée 2: colonne 1, 3; colonne 2, 4; colonne 3, 2; colonne 4, 7; colonne 5, 0"
     },
     "Matrix057a": {
-      "speech": "la matrice de dimension 4 par 2. rangée 1: colonne 1, 1; colonne 2, 3. rangée 2: colonne 1, 4; colonne 2, 2. rangée 3: colonne 1, 2; colonne 2, 1. rangée 4: colonne 1, 0; colonne 2, 5"
+      "expected": "la matrice de dimension 4 par 2. rangée 1: colonne 1, 1; colonne 2, 3. rangée 2: colonne 1, 4; colonne 2, 2. rangée 3: colonne 1, 2; colonne 2, 1. rangée 4: colonne 1, 0; colonne 2, 5"
     },
     "Matrix058": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x"
     },
     "Matrix059": {
-      "speech": "la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1 moins x; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6"
+      "expected": "la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1 moins x; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6"
     },
     "Matrix060": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: colonne 1, 2 x; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: colonne 1, 2 x; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5"
     },
     "Matrix061": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: colonne 1, 2 x; colonne 2, y. rangée 2: colonne 1, un-demi; colonne 2, deux-tiers"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: colonne 1, 2 x; colonne 2, y. rangée 2: colonne 1, un-demi; colonne 2, deux-tiers"
     },
     "Matrix062": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: colonne 1, un-demi; colonne 2, deux-tiers. rangée 2: colonne 1, trois-quarts; colonne 2, un-cinquième"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: colonne 1, un-demi; colonne 2, deux-tiers. rangée 2: colonne 1, trois-quarts; colonne 2, un-cinquième"
     },
     "Matrix063": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: colonne 1, b sub 1 1; colonne 2, b sub 1 2. rangée 2: colonne 1, b sub 2 1; colonne 2, b sub 2 2"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: colonne 1, b sub 1 1; colonne 2, b sub 1 2. rangée 2: colonne 1, b sub 2 1; colonne 2, b sub 2 2"
     },
     "Matrix064": {
-      "speech": "3   la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5.   la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6"
+      "expected": "3   la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5.   la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6"
     },
     "Matrix065": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: colonne 1, un-demi; colonne 2, deux-tiers. rangée 2: colonne 1, trois-quarts; colonne 2, un-cinquième.   la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1 moins x; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: colonne 1, un-demi; colonne 2, deux-tiers. rangée 2: colonne 1, trois-quarts; colonne 2, un-cinquième.   la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1 moins x; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6"
     },
     "Matrix066": {
-      "speech": "la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0.   la matrice de dimension 4 par 2. rangée 1: colonne 1, 1; colonne 2, 3. rangée 2: colonne 1, 4; colonne 2, 2. rangée 3: colonne 1, 2; colonne 2, 1. rangée 4: colonne 1, 0; colonne 2, 5"
+      "expected": "la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0.   la matrice de dimension 4 par 2. rangée 1: colonne 1, 1; colonne 2, 3. rangée 2: colonne 1, 4; colonne 2, 2. rangée 3: colonne 1, 2; colonne 2, 1. rangée 4: colonne 1, 0; colonne 2, 5"
     },
     "Matrix067": {
-      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5"
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5"
     },
     "Matrix068": {
-      "speech": "déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5"
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5"
     },
     "Matrix069": {
-      "speech": "le déterminant de la matrice de dimension 3 par 3. rangée 1: colonne 1, 2; colonne 2, 4; colonne 3, 1. rangée 2: colonne 1, 3; colonne 2, 5; colonne 3, 2. rangée 3: colonne 1, 1; colonne 2, 4; colonne 3, 7"
+      "expected": "le déterminant de la matrice de dimension 3 par 3. rangée 1: colonne 1, 2; colonne 2, 4; colonne 3, 1. rangée 2: colonne 1, 3; colonne 2, 5; colonne 3, 2. rangée 3: colonne 1, 1; colonne 2, 4; colonne 3, 7"
     },
     "Matrix070": {
-      "speech": "déterminant de la matrice de dimension 3 par 3. rangée 1: colonne 1, 2; colonne 2, 4; colonne 3, 1. rangée 2: colonne 1, 3; colonne 2, 5; colonne 3, 2. rangée 3: colonne 1, 1; colonne 2, 4; colonne 3, 7"
+      "expected": "déterminant de la matrice de dimension 3 par 3. rangée 1: colonne 1, 2; colonne 2, 4; colonne 3, 1. rangée 2: colonne 1, 3; colonne 2, 5; colonne 3, 2. rangée 3: colonne 1, 1; colonne 2, 4; colonne 3, 7"
     },
     "Matrix071": {
-      "speech": "le déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0"
+      "expected": "le déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0"
     },
     "Matrix072": {
-      "speech": "déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0"
+      "expected": "déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0"
     },
     "Matrix073": {
-      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x"
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x"
     },
     "Matrix074": {
-      "speech": "déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x"
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x"
     },
     "Matrix075": {
-      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2 x; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5"
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2 x; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5"
     },
     "Matrix076": {
-      "speech": "déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2 x; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5"
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2 x; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5"
     },
     "Matrix077": {
-      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2 x; colonne 2, y. rangée 2: colonne 1, un-demi; colonne 2, deux-tiers"
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2 x; colonne 2, y. rangée 2: colonne 1, un-demi; colonne 2, deux-tiers"
     },
     "Matrix078": {
-      "speech": "déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2 x; colonne 2, y. rangée 2: colonne 1, un-demi; colonne 2, deux-tiers"
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2 x; colonne 2, y. rangée 2: colonne 1, un-demi; colonne 2, deux-tiers"
     },
     "Matrix079": {
-      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, un-demi; colonne 2, deux-tiers. rangée 2: colonne 1, trois-quarts; colonne 2, un-cinquième"
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, un-demi; colonne 2, deux-tiers. rangée 2: colonne 1, trois-quarts; colonne 2, un-cinquième"
     },
     "Matrix080": {
-      "speech": "déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, un-demi; colonne 2, deux-tiers. rangée 2: colonne 1, trois-quarts; colonne 2, un-cinquième"
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, un-demi; colonne 2, deux-tiers. rangée 2: colonne 1, trois-quarts; colonne 2, un-cinquième"
     },
     "Matrix081": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5"
     },
     "Matrix082": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5"
     },
     "Matrix083": {
-      "speech": "la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6"
+      "expected": "la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6"
     },
     "Matrix084": {
-      "speech": "la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6"
+      "expected": "la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6"
     },
     "Matrix085": {
-      "speech": "la matrice colonne de dimension 3 par 1. 1, 2, 3"
+      "expected": "la matrice colonne de dimension 3 par 1. 1, 2, 3"
     },
     "Matrix086": {
-      "speech": "la matrice colonne de dimension 3 par 1. 1, 2, 3"
+      "expected": "la matrice colonne de dimension 3 par 1. 1, 2, 3"
     },
     "Matrix087": {
-      "speech": "la matrice ligne de dimension 1 par 2. 3, 5"
+      "expected": "la matrice ligne de dimension 1 par 2. 3, 5"
     },
     "Matrix088": {
-      "speech": "la matrice ligne de dimension 1 par 2. 3, 5"
+      "expected": "la matrice ligne de dimension 1 par 2. 3, 5"
     },
     "Matrix089": {
-      "speech": "la matrice colonne de dimension 2 par 1. x plus 1, x moins 1"
+      "expected": "la matrice colonne de dimension 2 par 1. x plus 1, x moins 1"
     },
     "Matrix090": {
-      "speech": "la matrice colonne de dimension 4 par 1. 3, 6, 1, 2"
+      "expected": "la matrice colonne de dimension 4 par 1. 3, 6, 1, 2"
     },
     "Matrix091": {
-      "speech": "la matrice ligne de dimension 1 par 2. x plus 1, 2 x"
+      "expected": "la matrice ligne de dimension 1 par 2. x plus 1, 2 x"
     },
     "Matrix092": {
-      "speech": "la matrice ligne de dimension 1 par 4. 3, 6, 1, 2"
+      "expected": "la matrice ligne de dimension 1 par 4. 3, 6, 1, 2"
     },
     "Matrix092a": {
-      "speech": "la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7"
+      "expected": "la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7"
     },
     "Matrix093": {
-      "speech": "la matrice de dimension 4 par 4. rangée 1: 0, 3, 4, 3 rangée 2: 2, 1, 0, 9 rangée 3: 3, 0, 2, 1 rangée 4: 6, 2, 9, 0"
+      "expected": "la matrice de dimension 4 par 4. rangée 1: 0, 3, 4, 3 rangée 2: 2, 1, 0, 9 rangée 3: 3, 0, 2, 1 rangée 4: 6, 2, 9, 0"
     },
     "Matrix094": {
-      "speech": "la matrice de dimension 2 par 5. rangée 1: 2, 1, 0, 5, 3 rangée 2: 3, 4, 2, 7, 0"
+      "expected": "la matrice de dimension 2 par 5. rangée 1: 2, 1, 0, 5, 3 rangée 2: 3, 4, 2, 7, 0"
     },
     "Matrix095": {
-      "speech": "la matrice de dimension 4 par 2. rangée 1: 1, 3 rangée 2: 4, 2 rangée 3: 2, 1 rangée 4: 0, 5"
+      "expected": "la matrice de dimension 4 par 2. rangée 1: 1, 3 rangée 2: 4, 2 rangée 3: 2, 1 rangée 4: 0, 5"
     },
     "Matrix096": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5 plus x"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5 plus x"
     },
     "Matrix097": {
-      "speech": "la matrice de dimension 2 par 3. rangée 1: 3, 1 moins x, 4 rangée 2: 0, 2, 6"
+      "expected": "la matrice de dimension 2 par 3. rangée 1: 3, 1 moins x, 4 rangée 2: 0, 2, 6"
     },
     "Matrix098": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5"
     },
     "Matrix099": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers"
     },
     "Matrix100": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième"
     },
     "Matrix101": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: b sub 1 1, b sub 1 2 rangée 2: b sub 2 1, b sub 2 2"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: b sub 1 1, b sub 1 2 rangée 2: b sub 2 1, b sub 2 2"
     },
     "Matrix102": {
-      "speech": "3   la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5.   la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6"
+      "expected": "3   la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5.   la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6"
     },
     "Matrix103": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième.   la matrice de dimension 2 par 3. rangée 1: 3, 1 moins x, 4 rangée 2: 0, 2, 6"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième.   la matrice de dimension 2 par 3. rangée 1: 3, 1 moins x, 4 rangée 2: 0, 2, 6"
     },
     "Matrix104": {
-      "speech": "la matrice de dimension 4 par 4. rangée 1: 0, 3, 4, 3 rangée 2: 2, 1, 0, 9 rangée 3: 3, 0, 2, 1 rangée 4: 6, 2, 9, 0.   la matrice de dimension 4 par 2. rangée 1: 1, 3 rangée 2: 4, 2 rangée 3: 2, 1 rangée 4: 0, 5"
+      "expected": "la matrice de dimension 4 par 4. rangée 1: 0, 3, 4, 3 rangée 2: 2, 1, 0, 9 rangée 3: 3, 0, 2, 1 rangée 4: 6, 2, 9, 0.   la matrice de dimension 4 par 2. rangée 1: 1, 3 rangée 2: 4, 2 rangée 3: 2, 1 rangée 4: 0, 5"
     },
     "Matrix105": {
-      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5"
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5"
     },
     "Matrix106": {
-      "speech": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5"
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5"
     },
     "Matrix107": {
-      "speech": "le déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7"
+      "expected": "le déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7"
     },
     "Matrix108": {
-      "speech": "déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7"
+      "expected": "déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7"
     },
     "Matrix109": {
-      "speech": "le déterminant de la matrice de dimension 4 par 4. rangée 1: 0, 3, 4, 3 rangée 2: 2, 1, 0, 9 rangée 3: 3, 0, 2, 1 rangée 4: 6, 2, 9, 0"
+      "expected": "le déterminant de la matrice de dimension 4 par 4. rangée 1: 0, 3, 4, 3 rangée 2: 2, 1, 0, 9 rangée 3: 3, 0, 2, 1 rangée 4: 6, 2, 9, 0"
     },
     "Matrix110": {
-      "speech": "déterminant de la matrice de dimension 4 par 4. rangée 1: 0, 3, 4, 3 rangée 2: 2, 1, 0, 9 rangée 3: 3, 0, 2, 1 rangée 4: 6, 2, 9, 0"
+      "expected": "déterminant de la matrice de dimension 4 par 4. rangée 1: 0, 3, 4, 3 rangée 2: 2, 1, 0, 9 rangée 3: 3, 0, 2, 1 rangée 4: 6, 2, 9, 0"
     },
     "Matrix111": {
-      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5 plus x"
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5 plus x"
     },
     "Matrix112": {
-      "speech": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5 plus x"
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5 plus x"
     },
     "Matrix113": {
-      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5"
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5"
     },
     "Matrix114": {
-      "speech": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5"
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5"
     },
     "Matrix115": {
-      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers"
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers"
     },
     "Matrix116": {
-      "speech": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers"
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers"
     },
     "Matrix117": {
-      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième"
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième"
     },
     "Matrix118": {
-      "speech": "déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième"
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième"
     },
     "Matrix119": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5. fin matrice"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5. fin matrice"
     },
     "Matrix120": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5. fin matrice"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5. fin matrice"
     },
     "Matrix121": {
-      "speech": "la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6. fin matrice"
+      "expected": "la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6. fin matrice"
     },
     "Matrix122": {
-      "speech": "la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6. fin matrice"
+      "expected": "la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6. fin matrice"
     },
     "Matrix123": {
-      "speech": "la matrice colonne de dimension 3 par 1. 1, 2, 3. fin matrice"
+      "expected": "la matrice colonne de dimension 3 par 1. 1, 2, 3. fin matrice"
     },
     "Matrix124": {
-      "speech": "la matrice colonne de dimension 3 par 1. 1, 2, 3. fin matrice"
+      "expected": "la matrice colonne de dimension 3 par 1. 1, 2, 3. fin matrice"
     },
     "Matrix125": {
-      "speech": "la matrice ligne de dimension 1 par 2. 3, 5. fin matrice"
+      "expected": "la matrice ligne de dimension 1 par 2. 3, 5. fin matrice"
     },
     "Matrix126": {
-      "speech": "la matrice ligne de dimension 1 par 2. 3, 5. fin matrice"
+      "expected": "la matrice ligne de dimension 1 par 2. 3, 5. fin matrice"
     },
     "Matrix127": {
-      "speech": "la matrice colonne de dimension 2 par 1. rangée 1: x plus 1 rangée 2: x moins 1. fin matrice"
+      "expected": "la matrice colonne de dimension 2 par 1. rangée 1: x plus 1 rangée 2: x moins 1. fin matrice"
     },
     "Matrix128": {
-      "speech": "la matrice colonne de dimension 4 par 1. rangée 1: 3 rangée 2: 6 rangée 3: 1 rangée 4: 2. fin matrice"
+      "expected": "la matrice colonne de dimension 4 par 1. rangée 1: 3 rangée 2: 6 rangée 3: 1 rangée 4: 2. fin matrice"
     },
     "Matrix129": {
-      "speech": "la matrice ligne de dimension 1 par 2. colonne 1: x plus 1 colonne 2: 2 x. fin matrice"
+      "expected": "la matrice ligne de dimension 1 par 2. colonne 1: x plus 1 colonne 2: 2 x. fin matrice"
     },
     "Matrix130": {
-      "speech": "la matrice ligne de dimension 1 par 4. colonne 1: 3 colonne 2: 6 colonne 3: 1 colonne 4: 2. fin matrice"
+      "expected": "la matrice ligne de dimension 1 par 4. colonne 1: 3 colonne 2: 6 colonne 3: 1 colonne 4: 2. fin matrice"
     },
     "Matrix131": {
-      "speech": "la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7. fin matrice"
+      "expected": "la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7. fin matrice"
     },
     "Matrix132": {
-      "speech": "la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0. fin matrice"
+      "expected": "la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0. fin matrice"
     },
     "Matrix133": {
-      "speech": "la matrice de dimension 2 par 5. rangée 1: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 5; colonne 5, 3. rangée 2: colonne 1, 3; colonne 2, 4; colonne 3, 2; colonne 4, 7; colonne 5, 0. fin matrice"
+      "expected": "la matrice de dimension 2 par 5. rangée 1: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 5; colonne 5, 3. rangée 2: colonne 1, 3; colonne 2, 4; colonne 3, 2; colonne 4, 7; colonne 5, 0. fin matrice"
     },
     "Matrix134": {
-      "speech": "la matrice de dimension 4 par 2. rangée 1: colonne 1, 1; colonne 2, 3. rangée 2: colonne 1, 4; colonne 2, 2. rangée 3: colonne 1, 2; colonne 2, 1. rangée 4: colonne 1, 0; colonne 2, 5. fin matrice"
+      "expected": "la matrice de dimension 4 par 2. rangée 1: colonne 1, 1; colonne 2, 3. rangée 2: colonne 1, 4; colonne 2, 2. rangée 3: colonne 1, 2; colonne 2, 1. rangée 4: colonne 1, 0; colonne 2, 5. fin matrice"
     },
     "Matrix135": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x. fin matrice"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x. fin matrice"
     },
     "Matrix136": {
-      "speech": "la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1 moins x; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6. fin matrice"
+      "expected": "la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1 moins x; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6. fin matrice"
     },
     "Matrix137": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5. fin matrice"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5. fin matrice"
     },
     "Matrix138": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers. fin matrice"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers. fin matrice"
     },
     "Matrix139": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième. fin matrice"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième. fin matrice"
     },
     "_comment4_": " TODO: (Simons) Rewrite certain indices from implicit multiplication to",
     "_comment5_": " punctuation.",
     "Matrix140": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: b sub 1 1, b sub 1 2 rangée 2: b sub 2 1, b sub 2 2. fin matrice"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: b sub 1 1, b sub 1 2 rangée 2: b sub 2 1, b sub 2 2. fin matrice"
     },
     "Matrix141": {
-      "speech": "3   la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5. fin matrice   la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6. fin matrice"
+      "expected": "3   la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5. fin matrice   la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6. fin matrice"
     },
     "Matrix142": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième. fin matrice   la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1 moins x; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6. fin matrice"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième. fin matrice   la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1 moins x; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6. fin matrice"
     },
     "Matrix143": {
-      "speech": "la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0. fin matrice   la matrice de dimension 4 par 2. rangée 1: colonne 1, 1; colonne 2, 3. rangée 2: colonne 1, 4; colonne 2, 2. rangée 3: colonne 1, 2; colonne 2, 1. rangée 4: colonne 1, 0; colonne 2, 5. fin matrice"
+      "expected": "la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0. fin matrice   la matrice de dimension 4 par 2. rangée 1: colonne 1, 1; colonne 2, 3. rangée 2: colonne 1, 4; colonne 2, 2. rangée 3: colonne 1, 2; colonne 2, 1. rangée 4: colonne 1, 0; colonne 2, 5. fin matrice"
     },
     "Matrix144": {
-      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5. fin déterminant"
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5. fin déterminant"
     },
     "Matrix145": {
-      "speech": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5. fin matrice"
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5. fin matrice"
     },
     "Matrix146": {
-      "speech": "le déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7. fin déterminant"
+      "expected": "le déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7. fin déterminant"
     },
     "Matrix147": {
-      "speech": "déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7. fin matrice"
+      "expected": "déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7. fin matrice"
     },
     "Matrix148": {
-      "speech": "le déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0. fin déterminant"
+      "expected": "le déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0. fin déterminant"
     },
     "Matrix149": {
-      "speech": "déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0. fin matrice"
+      "expected": "déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0. fin matrice"
     },
     "Matrix150": {
-      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x. fin déterminant"
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x. fin déterminant"
     },
     "Matrix151": {
-      "speech": "déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x. fin matrice"
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x. fin matrice"
     },
     "Matrix152": {
-      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5. fin déterminant"
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5. fin déterminant"
     },
     "Matrix153": {
-      "speech": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5. fin matrice"
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5. fin matrice"
     },
     "Matrix154": {
-      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers. fin déterminant"
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers. fin déterminant"
     },
     "Matrix155": {
-      "speech": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers. fin matrice"
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers. fin matrice"
     },
     "Matrix156": {
-      "speech": "le déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième. fin déterminant"
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième. fin déterminant"
     },
     "Matrix157": {
-      "speech": "déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième. fin matrice"
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième. fin matrice"
     },
     "Matrix158": {
-      "speech": "le vecteur colonne de dimension 3 par 1. 1, 2, 3"
+      "expected": "le vecteur colonne de dimension 3 par 1. 1, 2, 3"
     },
     "Matrix159": {
-      "speech": "le vecteur colonne de dimension 3 par 1. 1, 2, 3"
+      "expected": "le vecteur colonne de dimension 3 par 1. 1, 2, 3"
     },
     "Matrix160": {
-      "speech": "le vecteur ligne de dimension 1 par 2. 3, 5"
+      "expected": "le vecteur ligne de dimension 1 par 2. 3, 5"
     },
     "Matrix161": {
-      "speech": "le vecteur ligne de dimension 1 par 2. 3, 5"
+      "expected": "le vecteur ligne de dimension 1 par 2. 3, 5"
     },
     "Matrix162": {
-      "speech": "le vecteur colonne de dimension 2 par 1. rangée 1: x plus 1 rangée 2: x moins 1"
+      "expected": "le vecteur colonne de dimension 2 par 1. rangée 1: x plus 1 rangée 2: x moins 1"
     },
     "Matrix163": {
-      "speech": "le vecteur colonne de dimension 4 par 1. rangée 1: 3 rangée 2: 6 rangée 3: 1 rangée 4: 2"
+      "expected": "le vecteur colonne de dimension 4 par 1. rangée 1: 3 rangée 2: 6 rangée 3: 1 rangée 4: 2"
     },
     "Matrix164": {
-      "speech": "le vecteur ligne de dimension 1 par 2. colonne 1: x plus 1 colonne 2: 2 x"
+      "expected": "le vecteur ligne de dimension 1 par 2. colonne 1: x plus 1 colonne 2: 2 x"
     },
     "Matrix165": {
-      "speech": "le vecteur ligne de dimension 1 par 2. 3, 2.   la matrice de dimension 2 par 2. rangée 1: 0, 5 rangée 2: 9, 4"
+      "expected": "le vecteur ligne de dimension 1 par 2. 3, 2.   la matrice de dimension 2 par 2. rangée 1: 0, 5 rangée 2: 9, 4"
     },
     "Matrix166": {
-      "speech": "le vecteur ligne de dimension 1 par 3. 1, 2, 7.   la matrice de dimension 3 par 3. rangée 1: 3, 5, 4 rangée 2: 8, 0, 6 rangée 3: 1, 4, 2"
+      "expected": "le vecteur ligne de dimension 1 par 3. 1, 2, 7.   la matrice de dimension 3 par 3. rangée 1: 3, 5, 4 rangée 2: 8, 0, 6 rangée 3: 1, 4, 2"
     },
     "Matrix167": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: 0, 5 rangée 2: 9, 4.   le vecteur colonne de dimension 2 par 1. 3, 2"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 0, 5 rangée 2: 9, 4.   le vecteur colonne de dimension 2 par 1. 3, 2"
     },
     "Matrix168": {
-      "speech": "la matrice de dimension 3 par 3. rangée 1: 3, 5, 4 rangée 2: 8, 0, 6 rangée 3: 1, 4, 2.   le vecteur colonne de dimension 3 par 1. 1, 2, 7"
+      "expected": "la matrice de dimension 3 par 3. rangée 1: 3, 5, 4 rangée 2: 8, 0, 6 rangée 3: 1, 4, 2.   le vecteur colonne de dimension 3 par 1. 1, 2, 7"
     },
     "Matrix169": {
-      "speech": "le vecteur colonne de dimension 3 par 1. 1, 2, 3. fin vecteur"
+      "expected": "le vecteur colonne de dimension 3 par 1. 1, 2, 3. fin vecteur"
     },
     "Matrix170": {
-      "speech": "le vecteur colonne de dimension 3 par 1. 1, 2, 3. fin vecteur"
+      "expected": "le vecteur colonne de dimension 3 par 1. 1, 2, 3. fin vecteur"
     },
     "Matrix171": {
-      "speech": "le vecteur ligne de dimension 1 par 2. 3, 5. fin vecteur"
+      "expected": "le vecteur ligne de dimension 1 par 2. 3, 5. fin vecteur"
     },
     "Matrix172": {
-      "speech": "le vecteur ligne de dimension 1 par 2. 3, 5. fin vecteur"
+      "expected": "le vecteur ligne de dimension 1 par 2. 3, 5. fin vecteur"
     },
     "Matrix173": {
-      "speech": "le vecteur colonne de dimension 2 par 1. rangée 1: x plus 1 rangée 2: x moins 1. fin vecteur"
+      "expected": "le vecteur colonne de dimension 2 par 1. rangée 1: x plus 1 rangée 2: x moins 1. fin vecteur"
     },
     "Matrix174": {
-      "speech": "le vecteur colonne de dimension 4 par 1. rangée 1: 3 rangée 2: 6 rangée 3: 1 rangée 4: 2. fin vecteur"
+      "expected": "le vecteur colonne de dimension 4 par 1. rangée 1: 3 rangée 2: 6 rangée 3: 1 rangée 4: 2. fin vecteur"
     },
     "Matrix175": {
-      "speech": "le vecteur ligne de dimension 1 par 2. colonne 1: x plus 1 colonne 2: 2 x. fin vecteur"
+      "expected": "le vecteur ligne de dimension 1 par 2. colonne 1: x plus 1 colonne 2: 2 x. fin vecteur"
     },
     "Matrix176": {
-      "speech": "le vecteur ligne de dimension 1 par 2. 3, 2. fin vecteur   la matrice de dimension 2 par 2. rangée 1: 0, 5 rangée 2: 9, 4. fin matrice"
+      "expected": "le vecteur ligne de dimension 1 par 2. 3, 2. fin vecteur   la matrice de dimension 2 par 2. rangée 1: 0, 5 rangée 2: 9, 4. fin matrice"
     },
     "Matrix177": {
-      "speech": "le vecteur ligne de dimension 1 par 3. 1, 2, 7. fin vecteur   la matrice de dimension 3 par 3. rangée 1: 3, 5, 4 rangée 2: 8, 0, 6 rangée 3: 1, 4, 2. fin matrice"
+      "expected": "le vecteur ligne de dimension 1 par 3. 1, 2, 7. fin vecteur   la matrice de dimension 3 par 3. rangée 1: 3, 5, 4 rangée 2: 8, 0, 6 rangée 3: 1, 4, 2. fin matrice"
     },
     "Matrix178": {
-      "speech": "la matrice de dimension 2 par 2. rangée 1: 0, 5 rangée 2: 9, 4. fin matrice   le vecteur colonne de dimension 2 par 1. 3, 2. fin vecteur"
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 0, 5 rangée 2: 9, 4. fin matrice   le vecteur colonne de dimension 2 par 1. 3, 2. fin vecteur"
     },
     "Matrix179": {
-      "speech": "la matrice de dimension 3 par 3. rangée 1: 3, 5, 4 rangée 2: 8, 0, 6 rangée 3: 1, 4, 2. fin matrice   le vecteur colonne de dimension 3 par 1. 1, 2, 7. fin vecteur"
+      "expected": "la matrice de dimension 3 par 3. rangée 1: 3, 5, 4 rangée 2: 8, 0, 6 rangée 3: 1, 4, 2. fin matrice   le vecteur colonne de dimension 3 par 1. 1, 2, 7. fin vecteur"
     },
     "Matrix180": {
-      "speech": "r parmi n"
+      "expected": "r parmi n"
     },
     "Matrix181": {
-      "speech": "7 parmi 10"
+      "expected": "7 parmi 10"
     },
     "Matrix182": {
-      "speech": "0 parmi 15"
+      "expected": "0 parmi 15"
     },
     "Matrix183": {
-      "speech": "3 parmi 8"
+      "expected": "3 parmi 8"
     }
   }
 }

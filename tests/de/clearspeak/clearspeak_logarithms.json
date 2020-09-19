@@ -7,122 +7,122 @@
   "tests": {
     "_comment1_": " Logarithms",
     "Log001": {
-      "speech": "Logarithmus x"
+      "expected": "Logarithmus x"
     },
     "Log002": {
-      "speech": "der Logarithmus Basis 10 von, x"
+      "expected": "der Logarithmus Basis 10 von, x"
     },
     "Log003": {
-      "speech": "der Logarithmus Basis b von, a x, ist gleich, der Logarithmus Basis b von, a, plus, der Logarithmus Basis b von, x"
+      "expected": "der Logarithmus Basis b von, a x, ist gleich, der Logarithmus Basis b von, a, plus, der Logarithmus Basis b von, x"
     },
     "Log004": {
-      "speech": "der Logarithmus Basis b von, S geteilt durch T, ist gleich, der Logarithmus Basis b von, S, minus, der Logarithmus Basis b von, T"
+      "expected": "der Logarithmus Basis b von, S geteilt durch T, ist gleich, der Logarithmus Basis b von, S, minus, der Logarithmus Basis b von, T"
     },
     "Log005": {
-      "speech": "der Logarithmus Basis b von, Klammer auf, x hoch k, Klammer zu, ist gleich k, der Logarithmus Basis b von, x"
+      "expected": "der Logarithmus Basis b von, Klammer auf, x hoch k, Klammer zu, ist gleich k, der Logarithmus Basis b von, x"
     },
     "Log006": {
-      "speech": "10 hoch Logarithmus Basis 10 von, x, ist gleich x"
+      "expected": "10 hoch Logarithmus Basis 10 von, x, ist gleich x"
     },
     "Log007": {
-      "speech": "der Logarithmus Basis 10 von, 10 hoch x, ist gleich x"
+      "expected": "der Logarithmus Basis 10 von, 10 hoch x, ist gleich x"
     },
     "Log008": {
-      "speech": "10 hoch Logarithmus Basis 10 von, 5, ist gleich 5"
+      "expected": "10 hoch Logarithmus Basis 10 von, 5, ist gleich 5"
     },
     "Log009": {
-      "speech": "der Logarithmus Basis 10 von, 10 Kubik, ist gleich 3"
+      "expected": "der Logarithmus Basis 10 von, 10 Kubik, ist gleich 3"
     },
     "Log010": {
-      "speech": "der Logarithmus Basis a von, x, ist gleich, der Logarithmus Basis b von, x, geteilt durch, der Logarithmus Basis b von, a"
+      "expected": "der Logarithmus Basis a von, x, ist gleich, der Logarithmus Basis b von, x, geteilt durch, der Logarithmus Basis b von, a"
     },
     "Log011": {
-      "speech": "der Logarithmus Basis 10 von, 18, geteilt durch, der Logarithmus Basis 10 von, 3, ist gleich, der Logarithmus Basis 3 von, 18"
+      "expected": "der Logarithmus Basis 10 von, 18, geteilt durch, der Logarithmus Basis 10 von, 3, ist gleich, der Logarithmus Basis 3 von, 18"
     },
     "Log012": {
-      "speech": "Logarithmus x geteilt durch Logarithmus a"
+      "expected": "Logarithmus x geteilt durch Logarithmus a"
     },
     "Log013": {
-      "speech": "der Logarithmus von, Klammer auf, x plus 1, Klammer zu"
+      "expected": "der Logarithmus von, Klammer auf, x plus 1, Klammer zu"
     },
     "Log014": {
-      "speech": "der Logarithmus von, Klammer auf, x plus 1, Klammer zu, Quadrat"
+      "expected": "der Logarithmus von, Klammer auf, x plus 1, Klammer zu, Quadrat"
     },
     "Log015": {
-      "speech": "Logarithmus x y"
+      "expected": "Logarithmus x y"
     },
     "Log016": {
-      "speech": "Bruch mit Zähler, der Logarithmus von, Klammer auf, x plus 1, Klammer zu, und Nenner, der Logarithmus von, Klammer auf, x plus 2, Klammer zu"
+      "expected": "Bruch mit Zähler, der Logarithmus von, Klammer auf, x plus 1, Klammer zu, und Nenner, der Logarithmus von, Klammer auf, x plus 2, Klammer zu"
     },
     "Log017": {
-      "speech": "Bruch mit Zähler, der Logarithmus Basis 6 von, Klammer auf, x plus 1, Klammer zu, und Nenner, der Logarithmus Basis 6 von, Klammer auf, x plus 2, Klammer zu"
+      "expected": "Bruch mit Zähler, der Logarithmus Basis 6 von, Klammer auf, x plus 1, Klammer zu, und Nenner, der Logarithmus Basis 6 von, Klammer auf, x plus 2, Klammer zu"
     },
     "Log018": {
-      "speech": "Bruch mit Zähler Logarithmus 40 plus Logarithmus 60, und Nenner Logarithmus 5"
+      "expected": "Bruch mit Zähler Logarithmus 40 plus Logarithmus 60, und Nenner Logarithmus 5"
     },
     "Log019": {
-      "speech": "Bruch mit Zähler, der Logarithmus Basis 3 von, 40, plus, der Logarithmus Basis 3 von, 60, und Nenner, der Logarithmus Basis 3 von, 5"
+      "expected": "Bruch mit Zähler, der Logarithmus Basis 3 von, 40, plus, der Logarithmus Basis 3 von, 60, und Nenner, der Logarithmus Basis 3 von, 5"
     },
     "Log020": {
-      "speech": "der Logarithmus von, Klammer auf, 3 hoch 4, 12 hoch 9, Klammer zu, ist gleich 4 Logarithmus 3, plus 9 Logarithmus 12"
+      "expected": "der Logarithmus von, Klammer auf, 3 hoch 4, 12 hoch 9, Klammer zu, ist gleich 4 Logarithmus 3, plus 9 Logarithmus 12"
     },
     "Log021": {
-      "speech": "der Logarithmus von, Klammer auf, x geteilt durch y, Klammer zu"
+      "expected": "der Logarithmus von, Klammer auf, x geteilt durch y, Klammer zu"
     },
     "_comment2_": " TODO: Fix the vulgar fraction predicate!",
     "Log022": {
-      "speech": "der Logarithmus von, Klammer auf, Bruch mit Zähler 3 hoch 4, und Nenner 8 hoch 10, Klammer zu, ist gleich 4 Logarithmus 3, minus 10 Logarithmus 8"
+      "expected": "der Logarithmus von, Klammer auf, Bruch mit Zähler 3 hoch 4, und Nenner 8 hoch 10, Klammer zu, ist gleich 4 Logarithmus 3, minus 10 Logarithmus 8"
     },
     "Log023": {
-      "speech": "10 hoch Logarithmus x"
+      "expected": "10 hoch Logarithmus x"
     },
     "NatLog001": {
-      "speech": "natürlicher Logarithmus x"
+      "expected": "natürlicher Logarithmus x"
     },
     "NatLog002": {
-      "speech": "natürlicher Logarithmus x, minus natürlicher Logarithmus von, Klammer auf, x minus 1, Klammer zu, ist gleich natürlicher Logarithmus von, Klammer auf, Bruch mit Zähler x, und Nenner x minus 1, Klammer zu"
+      "expected": "natürlicher Logarithmus x, minus natürlicher Logarithmus von, Klammer auf, x minus 1, Klammer zu, ist gleich natürlicher Logarithmus von, Klammer auf, Bruch mit Zähler x, und Nenner x minus 1, Klammer zu"
     },
     "NatLog003": {
-      "speech": "natürlicher Logarithmus von, Klammer auf, e hoch x, Klammer zu, ist gleich x"
+      "expected": "natürlicher Logarithmus von, Klammer auf, e hoch x, Klammer zu, ist gleich x"
     },
     "NatLog004": {
-      "speech": "e hoch natürlicher Logarithmus x, ist gleich x"
+      "expected": "e hoch natürlicher Logarithmus x, ist gleich x"
     },
     "NatLog005": {
-      "speech": "natürlicher Logarithmus von, Klammer auf, e hoch x, Klammer zu, ist gleich x"
+      "expected": "natürlicher Logarithmus von, Klammer auf, e hoch x, Klammer zu, ist gleich x"
     },
     "NatLog006": {
-      "speech": "e hoch natürlicher Logarithmus 4, ist gleich 4"
+      "expected": "e hoch natürlicher Logarithmus 4, ist gleich 4"
     },
     "NatLog007": {
-      "speech": "natürlicher Logarithmus 40, geteilt durch natürlicher Logarithmus 5, ist gleich, der Logarithmus Basis 5 von, 40"
+      "expected": "natürlicher Logarithmus 40, geteilt durch natürlicher Logarithmus 5, ist gleich, der Logarithmus Basis 5 von, 40"
     },
     "NatLog008": {
-      "speech": "Bruch mit Zähler natürlicher Logarithmus 40, plus natürlicher Logarithmus 60, und Nenner natürlicher Logarithmus 5"
+      "expected": "Bruch mit Zähler natürlicher Logarithmus 40, plus natürlicher Logarithmus 60, und Nenner natürlicher Logarithmus 5"
     },
     "NatLog009": {
-      "speech": "natürlicher Logarithmus x"
+      "expected": "natürlicher Logarithmus x"
     },
     "NatLog010": {
-      "speech": "natürlicher Logarithmus x, minus, der natürlicher Logarithmus von, Klammer auf, x minus 1, Klammer zu, ist gleich, der natürlicher Logarithmus von, Klammer auf, Bruch mit Zähler x, und Nenner x minus 1, Klammer zu"
+      "expected": "natürlicher Logarithmus x, minus, der natürlicher Logarithmus von, Klammer auf, x minus 1, Klammer zu, ist gleich, der natürlicher Logarithmus von, Klammer auf, Bruch mit Zähler x, und Nenner x minus 1, Klammer zu"
     },
     "NatLog011": {
-      "speech": "der natürlicher Logarithmus von, Klammer auf, e hoch x, Klammer zu, ist gleich x"
+      "expected": "der natürlicher Logarithmus von, Klammer auf, e hoch x, Klammer zu, ist gleich x"
     },
     "NatLog012": {
-      "speech": "e hoch natürlicher Logarithmus x, ist gleich x"
+      "expected": "e hoch natürlicher Logarithmus x, ist gleich x"
     },
     "NatLog013": {
-      "speech": "der natürlicher Logarithmus von, Klammer auf, e hoch x, Klammer zu, ist gleich x"
+      "expected": "der natürlicher Logarithmus von, Klammer auf, e hoch x, Klammer zu, ist gleich x"
     },
     "NatLog014": {
-      "speech": "e hoch natürlicher Logarithmus 4, ist gleich 4"
+      "expected": "e hoch natürlicher Logarithmus 4, ist gleich 4"
     },
     "NatLog015": {
-      "speech": "natürlicher Logarithmus 40, geteilt durch natürlicher Logarithmus 5, ist gleich, der Logarithmus Basis 5 von, 40"
+      "expected": "natürlicher Logarithmus 40, geteilt durch natürlicher Logarithmus 5, ist gleich, der Logarithmus Basis 5 von, 40"
     },
     "NatLog016": {
-      "speech": "Bruch mit Zähler natürlicher Logarithmus 40, plus natürlicher Logarithmus 60, und Nenner natürlicher Logarithmus 5"
+      "expected": "Bruch mit Zähler natürlicher Logarithmus 40, plus natürlicher Logarithmus 60, und Nenner natürlicher Logarithmus 5"
     }
   }
 }

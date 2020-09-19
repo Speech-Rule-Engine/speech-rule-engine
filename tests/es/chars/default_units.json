@@ -10,492 +10,492 @@
   "information": "DefaultUnitSpanishTest",
   "tests": {
     "W": {
-      "speech": [
+      "expected": [
         "watt"
       ]
     },
     "w": {
-      "speech": [
+      "expected": [
         "watt"
       ]
     },
     "kw": {
-      "speech": [
+      "expected": [
         "kilowatt"
       ]
     },
     "kW": {
-      "speech": [
+      "expected": [
         "kilowatt"
       ]
     },
     "mw": {
-      "speech": [
+      "expected": [
         "miliwatt"
       ]
     },
     "mW": {
-      "speech": [
+      "expected": [
         "miliwatt"
       ]
     },
     "kwh": {
-      "speech": [
+      "expected": [
         "kilowatt hora"
       ]
     },
     "kWh": {
-      "speech": [
+      "expected": [
         "kilowatt hora"
       ]
     },
     "J": {
-      "speech": [
+      "expected": [
         "Joule"
       ]
     },
     "N": {
-      "speech": [
+      "expected": [
         "Newton"
       ]
     },
     "A": {
-      "speech": [
+      "expected": [
         "Ampere"
       ]
     },
     "V": {
-      "speech": [
+      "expected": [
         "Voltio"
       ]
     },
     "µΩ": {
-      "speech": [
+      "expected": [
         "microohmio"
       ]
     },
     "mΩ": {
-      "speech": [
+      "expected": [
         "miliohmio"
       ]
     },
     "Ω": {
-      "speech": [
+      "expected": [
         "ohmio"
       ]
     },
     "Ohm": {
-      "speech": [
+      "expected": [
         "ohmio"
       ]
     },
     "kΩ": {
-      "speech": [
+      "expected": [
         "kiloohmio"
       ]
     },
     "KΩ": {
-      "speech": [
+      "expected": [
         "kiloohmio"
       ]
     },
     "MΩ": {
-      "speech": [
+      "expected": [
         "megaohmio"
       ]
     },
     "GΩ": {
-      "speech": [
+      "expected": [
         "gigaohmio"
       ]
     },
     "mm": {
-      "speech": [
+      "expected": [
         "milímetro"
       ]
     },
     "cm": {
-      "speech": [
+      "expected": [
         "centímetro"
       ]
     },
     "m": {
-      "speech": [
+      "expected": [
         "metro"
       ]
     },
     "km": {
-      "speech": [
+      "expected": [
         "kilómetro"
       ]
     },
     "ft": {
-      "speech": [
+      "expected": [
         "pies"
       ]
     },
     "ft.": {
-      "speech": [
+      "expected": [
         "pies"
       ]
     },
     "in": {
-      "speech": [
+      "expected": [
         "pulgada"
       ]
     },
     "in.": {
-      "speech": [
+      "expected": [
         "pulgada"
       ]
     },
     "mi": {
-      "speech": [
+      "expected": [
         "milla"
       ]
     },
     "mi.": {
-      "speech": [
+      "expected": [
         "milla"
       ]
     },
     "yd": {
-      "speech": [
+      "expected": [
         "yarda"
       ]
     },
     "yd.": {
-      "speech": [
+      "expected": [
         "yarda"
       ]
     },
     "n.m.": {
-      "speech": [
+      "expected": [
         "millas náuticas"
       ]
     },
     "b": {
-      "speech": [
+      "expected": [
         "bit"
       ]
     },
     "B": {
-      "speech": [
+      "expected": [
         "byte"
       ]
     },
     "KB": {
-      "speech": [
+      "expected": [
         "kilobyte"
       ]
     },
     "MB": {
-      "speech": [
+      "expected": [
         "megabyte"
       ]
     },
     "GB": {
-      "speech": [
+      "expected": [
         "gigabyte"
       ]
     },
     "TB": {
-      "speech": [
+      "expected": [
         "terabyte"
       ]
     },
     "doz": {
-      "speech": [
+      "expected": [
         "docena"
       ]
     },
     "doz.": {
-      "speech": [
+      "expected": [
         "docena"
       ]
     },
     "dz": {
-      "speech": [
+      "expected": [
         "docena"
       ]
     },
     "dz.": {
-      "speech": [
+      "expected": [
         "docena"
       ]
     },
     "sq": {
-      "speech": [
+      "expected": [
         "al cuadrado"
       ]
     },
     "sq.": {
-      "speech": [
+      "expected": [
         "al cuadrado"
       ]
     },
     "ha": {
-      "speech": [
+      "expected": [
         "hectarea"
       ]
     },
     "kt": {
-      "speech": [
+      "expected": [
         "nudo"
       ]
     },
     "kt.": {
-      "speech": [
+      "expected": [
         "nudo"
       ]
     },
     "mph": {
-      "speech": [
+      "expected": [
         "millas por hora"
       ]
     },
     "rpm": {
-      "speech": [
+      "expected": [
         "revoluciones por minuto"
       ]
     },
     "kmh": {
-      "speech": [
+      "expected": [
         "kilómetros por hora"
       ]
     },
     "F": {
-      "speech": [
+      "expected": [
         "Fahrenheit"
       ]
     },
     "F.": {
-      "speech": [
+      "expected": [
         "Fahrenheit"
       ]
     },
     "°F": {
-      "speech": [
+      "expected": [
         "Fahrenheit"
       ]
     },
     "C": {
-      "speech": [
+      "expected": [
         "centígrados"
       ]
     },
     "°C": {
-      "speech": [
+      "expected": [
         "centígrados"
       ]
     },
     "K": {
-      "speech": [
+      "expected": [
         "Kelvin"
       ]
     },
     "°K": {
-      "speech": [
+      "expected": [
         "Kelvin"
       ]
     },
     "ns": {
-      "speech": [
+      "expected": [
         "nanosegundos"
       ]
     },
     "µs": {
-      "speech": [
+      "expected": [
         "microsegundos"
       ]
     },
     "ms": {
-      "speech": [
+      "expected": [
         "milisegundos"
       ]
     },
     "s": {
-      "speech": [
+      "expected": [
         "segundos"
       ]
     },
     "min": {
-      "speech": [
+      "expected": [
         "minutos"
       ]
     },
     "h": {
-      "speech": [
+      "expected": [
         "hora"
       ]
     },
     "hr": {
-      "speech": [
+      "expected": [
         "hora"
       ]
     },
     "bbl.": {
-      "speech": [
+      "expected": [
         "barrile"
       ]
     },
     "bbl": {
-      "speech": [
+      "expected": [
         "barrile"
       ]
     },
     "cu": {
-      "speech": [
+      "expected": [
         "cúbico"
       ]
     },
     "cu.": {
-      "speech": [
+      "expected": [
         "cúbico"
       ]
     },
     "fl. oz.": {
-      "speech": [
+      "expected": [
         "onzas líquidas"
       ]
     },
     "gal": {
-      "speech": [
+      "expected": [
         "galone"
       ]
     },
     "gal.": {
-      "speech": [
+      "expected": [
         "galone"
       ]
     },
     "pt": {
-      "speech": [
+      "expected": [
         "pinta"
       ]
     },
     "pt.": {
-      "speech": [
+      "expected": [
         "pinta"
       ]
     },
     "qt": {
-      "speech": [
+      "expected": [
         "quart"
       ]
     },
     "qt.": {
-      "speech": [
+      "expected": [
         "quart"
       ]
     },
     "tbsp": {
-      "speech": [
+      "expected": [
         "cuchara"
       ]
     },
     "tbsp.": {
-      "speech": [
+      "expected": [
         "cuchara"
       ]
     },
     "tsp": {
-      "speech": [
+      "expected": [
         "cucharilla"
       ]
     },
     "tsp.": {
-      "speech": [
+      "expected": [
         "cucharilla"
       ]
     },
     "cc": {
-      "speech": [
+      "expected": [
         "centímetros cúbicos"
       ]
     },
     "kl": {
-      "speech": [
+      "expected": [
         "kilolitro"
       ]
     },
     "l": {
-      "speech": [
+      "expected": [
         "litro"
       ]
     },
     "ml": {
-      "speech": [
+      "expected": [
         "mililitro"
       ]
     },
     "lb": {
-      "speech": [
+      "expected": [
         "libra"
       ]
     },
     "lb.": {
-      "speech": [
+      "expected": [
         "libra"
       ]
     },
     "LT": {
-      "speech": [
+      "expected": [
         "libras imperiales"
       ]
     },
     "L.T.": {
-      "speech": [
+      "expected": [
         "libras imperiales"
       ]
     },
     "oz": {
-      "speech": [
+      "expected": [
         "onza"
       ]
     },
     "oz.": {
-      "speech": [
+      "expected": [
         "onza"
       ]
     },
     "g": {
-      "speech": [
+      "expected": [
         "gramo"
       ]
     },
     "gr": {
-      "speech": [
+      "expected": [
         "gramo"
       ]
     },
     "kg": {
-      "speech": [
+      "expected": [
         "kilogramo"
       ]
     },
     "mcg": {
-      "speech": [
+      "expected": [
         "microgramo"
       ]
     },
     "µg": {
-      "speech": [
+      "expected": [
         "microgramo"
       ]
     },
     "mg": {
-      "speech": [
+      "expected": [
         "miligramo"
       ]
     },
     "t": {
-      "speech": [
+      "expected": [
         "tonelada"
       ]
     },
     "T": {
-      "speech": [
+      "expected": [
         "tonelada"
       ]
     }

@@ -7,472 +7,472 @@
   "tests": {
     "_comment1_": " Exponents",
     "Exp001": {
-      "speech": "3 Quadrat"
+      "expected": "3 Quadrat"
     },
     "Exp002a": {
-      "speech": "3 Kubik"
+      "expected": "3 Kubik"
     },
     "Exp003": {
-      "speech": "3 hoch 5"
+      "expected": "3 hoch 5"
     },
     "Exp004": {
-      "speech": "3 hoch 1"
+      "expected": "3 hoch 1"
     },
     "Exp005": {
-      "speech": "b hoch 1"
+      "expected": "b hoch 1"
     },
     "Exp006": {
-      "speech": "3 hoch 5,0"
+      "expected": "3 hoch 5,0"
     },
     "Exp007": {
-      "speech": "3 hoch 0"
+      "expected": "3 hoch 0"
     },
     "Exp008": {
-      "speech": "4 hoch 11"
+      "expected": "4 hoch 11"
     },
     "Exp009": {
-      "speech": "3 hoch minus 2"
+      "expected": "3 hoch minus 2"
     },
     "Exp010a": {
-      "speech": "3 hoch minus 2,0"
+      "expected": "3 hoch minus 2,0"
     },
     "Exp011": {
-      "speech": "4 hoch x"
+      "expected": "4 hoch x"
     },
     "Exp012": {
-      "speech": "3 hoch y plus 2"
+      "expected": "3 hoch y plus 2"
     },
     "Exp013": {
-      "speech": "Klammer auf, 2 y, minus 3, Klammer zu, hoch 3 z, plus 8"
+      "expected": "Klammer auf, 2 y, minus 3, Klammer zu, hoch 3 z, plus 8"
     },
     "Exp014": {
-      "speech": "p Index 1, Quadrat"
+      "expected": "p Index 1, Quadrat"
     },
     "Exp015": {
-      "speech": "p Index 1, Kubik"
+      "expected": "p Index 1, Kubik"
     },
     "Exp016": {
-      "speech": "p Index 1, hoch 4"
+      "expected": "p Index 1, hoch 4"
     },
     "Exp017": {
-      "speech": "p Index 1, hoch 10"
+      "expected": "p Index 1, hoch 10"
     },
     "Exp018": {
-      "speech": "p Index 1, hoch x plus 1"
+      "expected": "p Index 1, hoch x plus 1"
     },
     "Exp019": {
-      "speech": "p Index, x Index 1, Quadrat"
+      "expected": "p Index, x Index 1, Quadrat"
     },
     "Exp010b": {
-      "speech": "p Index, x Index 1, Kubik"
+      "expected": "p Index, x Index 1, Kubik"
     },
     "Exp011b": {
-      "speech": "p Index, x Index 1, hoch 4"
+      "expected": "p Index, x Index 1, hoch 4"
     },
     "Exp012b": {
-      "speech": "p Index, x Index 1, hoch 10"
+      "expected": "p Index, x Index 1, hoch 10"
     },
     "Exp013b": {
-      "speech": "p Index, x Index 1, hoch y plus 1"
+      "expected": "p Index, x Index 1, hoch y plus 1"
     },
     "Exp014b": {
-      "speech": "3 hoch 2 Quadrat"
+      "expected": "3 hoch 2 Quadrat"
     },
     "Exp015b": {
-      "speech": "3 hoch 2 x Quadrat"
+      "expected": "3 hoch 2 x Quadrat"
     },
     "Exp016b": {
-      "speech": "5 hoch 2 Kubik"
+      "expected": "5 hoch 2 Kubik"
     },
     "Exp017b": {
-      "speech": "5 hoch 2 x Kubik"
+      "expected": "5 hoch 2 x Kubik"
     },
     "Exp018b": {
-      "speech": "3 mit Exponent, 2 Quadrat plus 1, Ende Exponent"
+      "expected": "3 mit Exponent, 2 Quadrat plus 1, Ende Exponent"
     },
     "Exp019b": {
-      "speech": "3 hoch 2 Quadrat, plus 1"
+      "expected": "3 hoch 2 Quadrat, plus 1"
     },
     "Exp020": {
-      "speech": "2 mit Exponent, x Quadrat plus 3 x Kubik, Ende Exponent"
+      "expected": "2 mit Exponent, x Quadrat plus 3 x Kubik, Ende Exponent"
     },
     "Exp021": {
-      "speech": "3 mit Exponent, 3 hoch 4, Ende Exponent"
+      "expected": "3 mit Exponent, 3 hoch 4, Ende Exponent"
     },
     "Exp022": {
-      "speech": "3 mit Exponent, 3 hoch 4, plus 2, Ende Exponent"
+      "expected": "3 mit Exponent, 3 hoch 4, plus 2, Ende Exponent"
     },
     "Exp023": {
-      "speech": "3 mit Exponent, 3 hoch 4, Ende Exponent, plus 2"
+      "expected": "3 mit Exponent, 3 hoch 4, Ende Exponent, plus 2"
     },
     "Exp024": {
-      "speech": "2 mit Exponent, x hoch 4, Ende Exponent"
+      "expected": "2 mit Exponent, x hoch 4, Ende Exponent"
     },
     "Exp025": {
-      "speech": "2 mit Exponent, 10 hoch x plus 3, Ende Exponent"
+      "expected": "2 mit Exponent, 10 hoch x plus 3, Ende Exponent"
     },
     "Exp026": {
-      "speech": "3 mit Exponent, 3 hoch 10, Ende Exponent"
+      "expected": "3 mit Exponent, 3 hoch 10, Ende Exponent"
     },
     "Exp027": {
-      "speech": "3 mit Exponent, 3 hoch 10, plus 1, Ende Exponent"
+      "expected": "3 mit Exponent, 3 hoch 10, plus 1, Ende Exponent"
     },
     "Exp028": {
-      "speech": "3 mit Exponent, 3 hoch 10, Ende Exponent, plus 1"
+      "expected": "3 mit Exponent, 3 hoch 10, Ende Exponent, plus 1"
     },
     "Exp029": {
-      "speech": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, Quadrat, Ende Exponent"
+      "expected": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, Quadrat, Ende Exponent"
     },
     "Exp030": {
-      "speech": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, hoch 10, Ende Exponent"
+      "expected": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, hoch 10, Ende Exponent"
     },
     "Exp031": {
-      "speech": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, hoch y plus 2, Ende Exponent"
+      "expected": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, hoch y plus 2, Ende Exponent"
     },
     "Exp032": {
-      "speech": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, hoch y, plus 2, Ende Exponent"
+      "expected": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, hoch y, plus 2, Ende Exponent"
     },
     "Exp033": {
-      "speech": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, hoch y, Ende Exponent, plus 2"
+      "expected": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, hoch y, Ende Exponent, plus 2"
     },
     "_comment2_": " TODO: (Simons) This does not work as semantically we have a -(xy) rather than",
     "_comment3_": "       (-x)(y).",
     "Exp034": {
-      "speech": ""
+      "expected": ""
     },
     "Exp035": {
-      "speech": "e mit Exponent, minus ein halb  , Klammer auf, Bruch mit Zähler x minus my, und Nenner sigma, Klammer zu, Quadrat, Ende Exponent"
+      "expected": "e mit Exponent, minus ein halb  , Klammer auf, Bruch mit Zähler x minus my, und Nenner sigma, Klammer zu, Quadrat, Ende Exponent"
     },
     "Exp036": {
-      "speech": "2 hoch n"
+      "expected": "2 hoch n"
     },
     "Exp037": {
-      "speech": "2 hoch m"
+      "expected": "2 hoch m"
     },
     "Exp038": {
-      "speech": "2 hoch i"
+      "expected": "2 hoch i"
     },
     "Exp039": {
-      "speech": "2 hoch j"
+      "expected": "2 hoch j"
     },
     "Exp040": {
-      "speech": "2 hoch a"
+      "expected": "2 hoch a"
     },
     "Exp085": {
-      "speech": "3 zur zweiten Potenz"
+      "expected": "3 zur zweiten Potenz"
     },
     "Exp086": {
-      "speech": "3 zur dritten Potenz"
+      "expected": "3 zur dritten Potenz"
     },
     "Exp087": {
-      "speech": "3 zur nullten Potenz"
+      "expected": "3 zur nullten Potenz"
     },
     "Exp088": {
-      "speech": "3 zur ersten Potenz"
+      "expected": "3 zur ersten Potenz"
     },
     "Exp089": {
-      "speech": "3 zur fünften Potenz"
+      "expected": "3 zur fünften Potenz"
     },
     "Exp090": {
-      "speech": "3 potenziert mit 5,0"
+      "expected": "3 potenziert mit 5,0"
     },
     "Exp091": {
-      "speech": "4 zur elften Potenz"
+      "expected": "4 zur elften Potenz"
     },
     "Exp092": {
-      "speech": "3 zur negativ zweiten Potenz"
+      "expected": "3 zur negativ zweiten Potenz"
     },
     "Exp093": {
-      "speech": "3 potenziert mit minus 2,0"
+      "expected": "3 potenziert mit minus 2,0"
     },
     "Exp094": {
-      "speech": "4 zur xten Potenz"
+      "expected": "4 zur xten Potenz"
     },
     "Exp095": {
-      "speech": "3 potenziert mit y plus 2"
+      "expected": "3 potenziert mit y plus 2"
     },
     "Exp096": {
-      "speech": "Klammer auf, 2 y, minus 3, Klammer zu, potenziert mit 3 z, plus 8"
+      "expected": "Klammer auf, 2 y, minus 3, Klammer zu, potenziert mit 3 z, plus 8"
     },
     "Exp097": {
-      "speech": "p Index 1, zur zweiten Potenz"
+      "expected": "p Index 1, zur zweiten Potenz"
     },
     "Exp098": {
-      "speech": "p Index 1, zur dritten Potenz"
+      "expected": "p Index 1, zur dritten Potenz"
     },
     "Exp099": {
-      "speech": "p Index 1, zur vierten Potenz"
+      "expected": "p Index 1, zur vierten Potenz"
     },
     "Exp100": {
-      "speech": "p Index 1, zur zehnten Potenz"
+      "expected": "p Index 1, zur zehnten Potenz"
     },
     "Exp101": {
-      "speech": "p Index 1, potenziert mit x plus 1"
+      "expected": "p Index 1, potenziert mit x plus 1"
     },
     "Exp102": {
-      "speech": "p Index, x Index 1, zur zweiten Potenz"
+      "expected": "p Index, x Index 1, zur zweiten Potenz"
     },
     "Exp103": {
-      "speech": "p Index, x Index 1, zur dritten Potenz"
+      "expected": "p Index, x Index 1, zur dritten Potenz"
     },
     "Exp104": {
-      "speech": "p Index, x Index 1, zur vierten Potenz"
+      "expected": "p Index, x Index 1, zur vierten Potenz"
     },
     "Exp105": {
-      "speech": "p Index, x Index 1, zur zehnten Potenz"
+      "expected": "p Index, x Index 1, zur zehnten Potenz"
     },
     "Exp106": {
-      "speech": "p Index, x Index 1, potenziert mit y plus 1"
+      "expected": "p Index, x Index 1, potenziert mit y plus 1"
     },
     "Exp107": {
-      "speech": "3 potenziert mit 2 zur zweiten Potenz"
+      "expected": "3 potenziert mit 2 zur zweiten Potenz"
     },
     "Exp108": {
-      "speech": "3 potenziert mit 2 x zur zweiten Potenz"
+      "expected": "3 potenziert mit 2 x zur zweiten Potenz"
     },
     "Exp109": {
-      "speech": "5 potenziert mit 2 zur dritten Potenz"
+      "expected": "5 potenziert mit 2 zur dritten Potenz"
     },
     "Exp110": {
-      "speech": "5 potenziert mit 2 x zur dritten Potenz"
+      "expected": "5 potenziert mit 2 x zur dritten Potenz"
     },
     "Exp111": {
-      "speech": "3 mit Exponent, 2 zur zweiten Potenz, plus 1, Ende Exponent"
+      "expected": "3 mit Exponent, 2 zur zweiten Potenz, plus 1, Ende Exponent"
     },
     "Exp112": {
-      "speech": "3 potenziert mit 2 zur zweiten Potenz, plus 1"
+      "expected": "3 potenziert mit 2 zur zweiten Potenz, plus 1"
     },
     "Exp113": {
-      "speech": "2 mit Exponent, x zur zweiten Potenz, plus 3 x zur dritten Potenz, Ende Exponent"
+      "expected": "2 mit Exponent, x zur zweiten Potenz, plus 3 x zur dritten Potenz, Ende Exponent"
     },
     "Exp114": {
-      "speech": "3 mit Exponent, 3 zur vierten Potenz, Ende Exponent"
+      "expected": "3 mit Exponent, 3 zur vierten Potenz, Ende Exponent"
     },
     "Exp115": {
-      "speech": "3 mit Exponent, 3 zur vierten Potenz, plus 2, Ende Exponent"
+      "expected": "3 mit Exponent, 3 zur vierten Potenz, plus 2, Ende Exponent"
     },
     "Exp116": {
-      "speech": "3 mit Exponent, 3 zur vierten Potenz, Ende Exponent, plus 2"
+      "expected": "3 mit Exponent, 3 zur vierten Potenz, Ende Exponent, plus 2"
     },
     "Exp117": {
-      "speech": "2 mit Exponent, x zur vierten Potenz, Ende Exponent"
+      "expected": "2 mit Exponent, x zur vierten Potenz, Ende Exponent"
     },
     "Exp118": {
-      "speech": "2 mit Exponent, 10 potenziert mit x plus 3, Ende Exponent"
+      "expected": "2 mit Exponent, 10 potenziert mit x plus 3, Ende Exponent"
     },
     "Exp119": {
-      "speech": "3 mit Exponent, 3 zur zehnten Potenz, Ende Exponent"
+      "expected": "3 mit Exponent, 3 zur zehnten Potenz, Ende Exponent"
     },
     "Exp120": {
-      "speech": "3 mit Exponent, 3 zur zehnten Potenz, plus 1, Ende Exponent"
+      "expected": "3 mit Exponent, 3 zur zehnten Potenz, plus 1, Ende Exponent"
     },
     "Exp121": {
-      "speech": "3 mit Exponent, 3 zur zehnten Potenz, Ende Exponent, plus 1"
+      "expected": "3 mit Exponent, 3 zur zehnten Potenz, Ende Exponent, plus 1"
     },
     "Exp122": {
-      "speech": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, zur zweiten Potenz, Ende Exponent"
+      "expected": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, zur zweiten Potenz, Ende Exponent"
     },
     "Exp123": {
-      "speech": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, zur zehnten Potenz, Ende Exponent"
+      "expected": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, zur zehnten Potenz, Ende Exponent"
     },
     "Exp124": {
-      "speech": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, potenziert mit y plus 2, Ende Exponent"
+      "expected": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, potenziert mit y plus 2, Ende Exponent"
     },
     "Exp125": {
-      "speech": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, zur yten Potenz, plus 2, Ende Exponent"
+      "expected": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, zur yten Potenz, plus 2, Ende Exponent"
     },
     "Exp126": {
-      "speech": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, zur yten Potenz, Ende Exponent, plus 2"
+      "expected": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, zur yten Potenz, Ende Exponent, plus 2"
     },
     "Exp127": {
-      "speech": "e mit Exponent, minus ein halb x zur zweiten Potenz, Ende Exponent"
+      "expected": "e mit Exponent, minus ein halb x zur zweiten Potenz, Ende Exponent"
     },
     "Exp128": {
-      "speech": "e mit Exponent, minus ein halb  , Klammer auf, Bruch mit Zähler x minus my, und Nenner sigma, Klammer zu, zur zweiten Potenz, Ende Exponent"
+      "expected": "e mit Exponent, minus ein halb  , Klammer auf, Bruch mit Zähler x minus my, und Nenner sigma, Klammer zu, zur zweiten Potenz, Ende Exponent"
     },
     "Exp129": {
       "preference": "Exponent_Exponent",
-      "speech": "3 mit Exponent 2"
+      "expected": "3 mit Exponent 2"
     },
     "Exp130": {
       "preference": "Exponent_Exponent",
-      "speech": "3 mit Exponent 3"
+      "expected": "3 mit Exponent 3"
     },
     "Exp131": {
       "preference": "Exponent_Exponent",
-      "speech": "3 mit Exponent 1"
+      "expected": "3 mit Exponent 1"
     },
     "Exp132b": {
       "preference": "Exponent_Exponent",
-      "speech": "3 mit Exponent 0"
+      "expected": "3 mit Exponent 0"
     },
     "Exp133": {
       "preference": "Exponent_Exponent",
-      "speech": "3 mit Exponent 5"
+      "expected": "3 mit Exponent 5"
     },
     "Exp134": {
       "preference": "Exponent_Exponent",
-      "speech": "3 mit Exponent 5,0"
+      "expected": "3 mit Exponent 5,0"
     },
     "Exp135": {
       "preference": "Exponent_Exponent",
-      "speech": "4 mit Exponent 11"
+      "expected": "4 mit Exponent 11"
     },
     "Exp136": {
       "preference": "Exponent_Exponent",
-      "speech": "3 mit Exponent minus 2"
+      "expected": "3 mit Exponent minus 2"
     },
     "Exp137": {
       "preference": "Exponent_Exponent",
-      "speech": "3 mit Exponent minus 2,0"
+      "expected": "3 mit Exponent minus 2,0"
     },
     "Exp138": {
       "preference": "Exponent_Exponent",
-      "speech": "4 mit Exponent x"
+      "expected": "4 mit Exponent x"
     },
     "Exp139": {
       "preference": "Exponent_Exponent",
-      "speech": "3 mit Exponent y plus 2"
+      "expected": "3 mit Exponent y plus 2"
     },
     "Exp140": {
       "preference": "Exponent_Exponent",
-      "speech": "Klammer auf, 2 y, minus 3, Klammer zu, mit Exponent 3 z, plus 8"
+      "expected": "Klammer auf, 2 y, minus 3, Klammer zu, mit Exponent 3 z, plus 8"
     },
     "Exp141": {
       "preference": "Exponent_Exponent",
-      "speech": "p Index 1, mit Exponent 2"
+      "expected": "p Index 1, mit Exponent 2"
     },
     "Exp142": {
       "preference": "Exponent_Exponent",
-      "speech": "p Index 1, mit Exponent 3"
+      "expected": "p Index 1, mit Exponent 3"
     },
     "Exp143": {
       "preference": "Exponent_Exponent",
-      "speech": "p Index 1, mit Exponent 4"
+      "expected": "p Index 1, mit Exponent 4"
     },
     "Exp144": {
       "preference": "Exponent_Exponent",
-      "speech": "p Index 1, mit Exponent 10"
+      "expected": "p Index 1, mit Exponent 10"
     },
     "Exp145": {
       "preference": "Exponent_Exponent",
-      "speech": "p Index 1, mit Exponent x plus 1"
+      "expected": "p Index 1, mit Exponent x plus 1"
     },
     "Exp146": {
       "preference": "Exponent_Exponent",
-      "speech": "p Index, x Index 1, mit Exponent 2"
+      "expected": "p Index, x Index 1, mit Exponent 2"
     },
     "Exp147": {
       "preference": "Exponent_Exponent",
-      "speech": "p Index, x Index 1, mit Exponent 3"
+      "expected": "p Index, x Index 1, mit Exponent 3"
     },
     "Exp148": {
       "preference": "Exponent_Exponent",
-      "speech": "p Index, x Index 1, mit Exponent 4"
+      "expected": "p Index, x Index 1, mit Exponent 4"
     },
     "Exp149": {
       "preference": "Exponent_Exponent",
-      "speech": "p Index, x Index 1, mit Exponent 10"
+      "expected": "p Index, x Index 1, mit Exponent 10"
     },
     "Exp150": {
       "preference": "Exponent_Exponent",
-      "speech": "p Index, x Index 1, mit Exponent y plus 1"
+      "expected": "p Index, x Index 1, mit Exponent y plus 1"
     },
     "Exp151": {
       "preference": "Exponent_Exponent",
-      "speech": "3 mit Exponent 2 mit Exponent 2"
+      "expected": "3 mit Exponent 2 mit Exponent 2"
     },
     "Exp152": {
       "preference": "Exponent_Exponent",
-      "speech": "3 mit Exponent 2 x mit Exponent 2"
+      "expected": "3 mit Exponent 2 x mit Exponent 2"
     },
     "Exp153": {
       "preference": "Exponent_Exponent",
-      "speech": "3 mit Exponent 2 mit Exponent 2"
+      "expected": "3 mit Exponent 2 mit Exponent 2"
     },
     "Exp154": {
       "preference": "Exponent_Exponent",
-      "speech": "3 mit Exponent 2 x mit Exponent 2"
+      "expected": "3 mit Exponent 2 x mit Exponent 2"
     },
     "Exp155": {
       "preference": "Exponent_Exponent",
-      "speech": "5 mit Exponent 2 mit Exponent 3"
+      "expected": "5 mit Exponent 2 mit Exponent 3"
     },
     "Exp156": {
       "preference": "Exponent_Exponent",
-      "speech": "5 mit Exponent 2 x mit Exponent 3"
+      "expected": "5 mit Exponent 2 x mit Exponent 3"
     },
     "Exp157": {
       "preference": "Exponent_Exponent",
-      "speech": "3 mit Exponent, 2 mit Exponent 2, plus 1, Ende Exponent"
+      "expected": "3 mit Exponent, 2 mit Exponent 2, plus 1, Ende Exponent"
     },
     "Exp158": {
       "preference": "Exponent_Exponent",
-      "speech": "3 mit Exponent 2 mit Exponent 2, plus 1"
+      "expected": "3 mit Exponent 2 mit Exponent 2, plus 1"
     },
     "Exp159": {
       "preference": "Exponent_Exponent",
-      "speech": "2 mit Exponent, x mit Exponent 2, plus 3 x mit Exponent 3, Ende Exponent"
+      "expected": "2 mit Exponent, x mit Exponent 2, plus 3 x mit Exponent 3, Ende Exponent"
     },
     "Exp160": {
       "preference": "Exponent_Exponent",
-      "speech": "3 mit Exponent, 3 mit Exponent 4, Ende Exponent"
+      "expected": "3 mit Exponent, 3 mit Exponent 4, Ende Exponent"
     },
     "Exp161": {
       "preference": "Exponent_Exponent",
-      "speech": "3 mit Exponent, 3 mit Exponent 4, plus 2, Ende Exponent"
+      "expected": "3 mit Exponent, 3 mit Exponent 4, plus 2, Ende Exponent"
     },
     "Exp162": {
       "preference": "Exponent_Exponent",
-      "speech": "3 mit Exponent, 3 mit Exponent 4, Ende Exponent, plus 2"
+      "expected": "3 mit Exponent, 3 mit Exponent 4, Ende Exponent, plus 2"
     },
     "Exp163": {
       "preference": "Exponent_Exponent",
-      "speech": "2 mit Exponent, x mit Exponent 4, Ende Exponent"
+      "expected": "2 mit Exponent, x mit Exponent 4, Ende Exponent"
     },
     "Exp164": {
       "preference": "Exponent_Exponent",
-      "speech": "2 mit Exponent, 10 mit Exponent x plus 3, Ende Exponent"
+      "expected": "2 mit Exponent, 10 mit Exponent x plus 3, Ende Exponent"
     },
     "Exp165": {
       "preference": "Exponent_Exponent",
-      "speech": "3 mit Exponent, 3 mit Exponent 10, Ende Exponent"
+      "expected": "3 mit Exponent, 3 mit Exponent 10, Ende Exponent"
     },
     "Exp166": {
       "preference": "Exponent_Exponent",
-      "speech": "3 mit Exponent, 3 mit Exponent 10, plus 1, Ende Exponent"
+      "expected": "3 mit Exponent, 3 mit Exponent 10, plus 1, Ende Exponent"
     },
     "Exp167": {
       "preference": "Exponent_Exponent",
-      "speech": "3 mit Exponent, 3 mit Exponent 10, Ende Exponent, plus 1"
+      "expected": "3 mit Exponent, 3 mit Exponent 10, Ende Exponent, plus 1"
     },
     "Exp168": {
       "preference": "Exponent_Exponent",
-      "speech": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, mit Exponent 2, Ende Exponent"
+      "expected": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, mit Exponent 2, Ende Exponent"
     },
     "Exp169": {
       "preference": "Exponent_Exponent",
-      "speech": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, mit Exponent 10, Ende Exponent"
+      "expected": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, mit Exponent 10, Ende Exponent"
     },
     "Exp170": {
       "preference": "Exponent_Exponent",
-      "speech": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, mit Exponent y plus 2, Ende Exponent"
+      "expected": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, mit Exponent y plus 2, Ende Exponent"
     },
     "Exp171": {
       "preference": "Exponent_Exponent",
-      "speech": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, mit Exponent y, plus 2, Ende Exponent"
+      "expected": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, mit Exponent y, plus 2, Ende Exponent"
     },
     "Exp172": {
       "preference": "Exponent_Exponent",
-      "speech": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, mit Exponent y, Ende Exponent, plus 2"
+      "expected": "3 mit Exponent, Klammer auf, x plus 1, Klammer zu, mit Exponent y, Ende Exponent, plus 2"
     },
     "Exp173": {
       "preference": "Exponent_Exponent",
-      "speech": "e mit Exponent, minus ein halb x mit Exponent 2, Ende Exponent"
+      "expected": "e mit Exponent, minus ein halb x mit Exponent 2, Ende Exponent"
     },
     "Exp174": {
       "preference": "Exponent_Exponent",
-      "speech": "e mit Exponent, minus ein halb  , Klammer auf, Bruch mit Zähler x minus my, und Nenner sigma, Klammer zu, mit Exponent 2, Ende Exponent"
+      "expected": "e mit Exponent, minus ein halb  , Klammer auf, Bruch mit Zähler x minus my, und Nenner sigma, Klammer zu, mit Exponent 2, Ende Exponent"
     }
   }
 }

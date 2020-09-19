@@ -8,215 +8,215 @@
     "_comment1_": " Part 2: Symbols",
     "_comment2_": " Multiplication Symbol",
     "X001": {
-      "speech": "6 mal 8"
+      "expected": "6 mal 8"
     },
     "X002": {
-      "speech": "m mal n"
+      "expected": "m mal n"
     },
     "X003": {
-      "speech": "3 mal 3"
+      "expected": "3 mal 3"
     },
     "X004": {
-      "speech": "6 mal 8"
+      "expected": "6 mal 8"
     },
     "X005": {
-      "speech": "m mal n"
+      "expected": "m mal n"
     },
     "X006": {
-      "speech": "3 mal 3"
+      "expected": "3 mal 3"
     },
     "X007": {
-      "speech": "u mal v"
+      "expected": "u mal v"
     },
     "_comment3_": " Multiplication Symbol",
     "Dot001": {
-      "speech": "6 mal 8"
+      "expected": "6 mal 8"
     },
     "Dot002": {
-      "speech": "m mal n"
+      "expected": "m mal n"
     },
     "Dot003": {
-      "speech": "3 mal 3"
+      "expected": "3 mal 3"
     },
     "Dot004": {
-      "speech": "6 mal 8"
+      "expected": "6 mal 8"
     },
     "Dot005": {
-      "speech": "m mal n"
+      "expected": "m mal n"
     },
     "Dot006": {
-      "speech": "3 mal 3"
+      "expected": "3 mal 3"
     },
     "_comment4_": " Triangle Symbol",
     "Triangle001": {
-      "speech": "Dreieck A B C"
+      "expected": "Dreieck A B C"
     },
     "Triangle002": {
-      "speech": "Dreieck D E F"
+      "expected": "Dreieck D E F"
     },
     "Triangle003": {
-      "speech": "Delta x"
+      "expected": "Delta x"
     },
     "Triangle004": {
-      "speech": "f von, Klammer auf, x plus Delta x, Klammer zu"
+      "expected": "f von, Klammer auf, x plus Delta x, Klammer zu"
     },
     "_comment5_": " Ellipses",
     "Ellipses001": {
-      "speech": "1 Komma 2 Komma 3 Komma horizontale Ellipsis"
+      "expected": "1 Komma 2 Komma 3 Komma horizontale Ellipsis"
     },
     "Ellipses002": {
-      "speech": "1 Komma 2 Komma 3 Komma horizontale Ellipsis Komma 20"
+      "expected": "1 Komma 2 Komma 3 Komma horizontale Ellipsis Komma 20"
     },
     "Ellipses003": {
-      "speech": "horizontale Ellipsis Komma, minus 2, Komma, minus 1, Komma 0 Komma 1 Komma 2 Komma horizontale Ellipsis"
+      "expected": "horizontale Ellipsis Komma, minus 2, Komma, minus 1, Komma 0 Komma 1 Komma 2 Komma horizontale Ellipsis"
     },
     "Ellipses004": {
-      "speech": "1 Komma 2 Komma 3 Komma und so weiter"
+      "expected": "1 Komma 2 Komma 3 Komma und so weiter"
     },
     "Ellipses005": {
-      "speech": "1 Komma 2 Komma 3 Komma und so weiter bis Komma 20"
+      "expected": "1 Komma 2 Komma 3 Komma und so weiter bis Komma 20"
     },
     "Ellipses006": {
-      "speech": "horizontale Ellipsis Komma, minus 2, Komma, minus 1, Komma 0 Komma 1 Komma 2 Komma horizontale Ellipsis"
+      "expected": "horizontale Ellipsis Komma, minus 2, Komma, minus 1, Komma 0 Komma 1 Komma 2 Komma horizontale Ellipsis"
     },
     "_comment6_": " Vertical Line",
     "VertLine001": {
-      "speech": "3 senkrechter Strich 6"
+      "expected": "3 senkrechter Strich 6"
     },
     "VertLine002": {
-      "speech": "die Menge aller x mit x größer als 0"
+      "expected": "die Menge aller x mit x größer als 0"
     },
     "VertLine003": {
-      "speech": "die Menge aller x mit, der Betrag von x, größer als 2"
+      "expected": "die Menge aller x mit, der Betrag von x, größer als 2"
     },
     "VertLine004": {
-      "speech": "f von x, ausgewertet für x ist gleich 5"
+      "expected": "f von x, ausgewertet für x ist gleich 5"
     },
     "VertLine005": {
-      "speech": "x Quadrat plus 2 x, ausgewertet für x ist gleich 2"
+      "expected": "x Quadrat plus 2 x, ausgewertet für x ist gleich 2"
     },
     "VertLine006": {
-      "speech": "x Quadrat plus x, ausgewertet für 1, minus des gleichen Ausdrucks ausgewertet für 0"
+      "expected": "x Quadrat plus x, ausgewertet für 1, minus des gleichen Ausdrucks ausgewertet für 0"
     },
     "VertLine007": {
-      "speech": "die Menge aller x mit x größer als 0"
+      "expected": "die Menge aller x mit x größer als 0"
     },
     "VertLine008": {
-      "speech": "3 teilt 6"
+      "expected": "3 teilt 6"
     },
     "VertLine009": {
-      "speech": "P von, Klammer auf, A für die gilt B, Klammer zu"
+      "expected": "P von, Klammer auf, A für die gilt B, Klammer zu"
     },
     "_comment7_": " Set Membership Symbols",
     "MembSym001": {
-      "mathml": "<math><mtext>Wenn </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mtext> dann ist </mtext><mrow><mn>2</mn><mi>x</mi></mrow><mtext> eine gerade Zahl.</mtext></math>",
-      "speech": "Wenn x Element von die ganzen Zahlen dann ist 2 x, eine gerade Zahl Punkt"
+      "input": "<math><mtext>Wenn </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mtext> dann ist </mtext><mrow><mn>2</mn><mi>x</mi></mrow><mtext> eine gerade Zahl.</mtext></math>",
+      "expected": "Wenn x Element von die ganzen Zahlen dann ist 2 x, eine gerade Zahl Punkt"
     },
     "MembSym002": {
-      "speech": "die Menge aller x in die ganzen Zahlen mit x größer als 5"
+      "expected": "die Menge aller x in die ganzen Zahlen mit x größer als 5"
     },
     "MembSym003": {
-      "speech": "3 plus 2 i, nicht Element von die reellen Zahlen"
+      "expected": "3 plus 2 i, nicht Element von die reellen Zahlen"
     },
     "MembSym004": {
-      "mathml": "<math><mtext>Wenn </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mtext> dann ist </mtext><mrow><mn>2</mn><mi>x</mi></mrow><mtext> eine gerade Zahl.</mtext></math>",
-      "speech": "Wenn x Element von die ganzen Zahlen dann ist 2 x, eine gerade Zahl Punkt"
+      "input": "<math><mtext>Wenn </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mtext> dann ist </mtext><mrow><mn>2</mn><mi>x</mi></mrow><mtext> eine gerade Zahl.</mtext></math>",
+      "expected": "Wenn x Element von die ganzen Zahlen dann ist 2 x, eine gerade Zahl Punkt"
     },
     "MembSym005": {
-      "speech": "die Menge aller x in die ganzen Zahlen mit x größer als 5"
+      "expected": "die Menge aller x in die ganzen Zahlen mit x größer als 5"
     },
     "MembSym006": {
-      "speech": "3 plus 2 i, nicht Element von die reellen Zahlen"
+      "expected": "3 plus 2 i, nicht Element von die reellen Zahlen"
     },
     "MembSym007": {
-      "speech": "If x Element von die ganzen Zahlen then 2 x, is an even number Punkt"
+      "expected": "If x Element von die ganzen Zahlen then 2 x, is an even number Punkt"
     },
     "MembSym008": {
-      "speech": "die Menge aller x Element von die ganzen Zahlen mit x größer als 5"
+      "expected": "die Menge aller x Element von die ganzen Zahlen mit x größer als 5"
     },
     "MembSym009": {
-      "speech": "3 plus 2 i, nicht Element von die reellen Zahlen"
+      "expected": "3 plus 2 i, nicht Element von die reellen Zahlen"
     },
     "MembSym010": {
       "_comment8_": " var mathml = '<math><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>';",
-      "speech": "If x Element von die ganzen Zahlen then 2 x, is an even number Punkt"
+      "expected": "If x Element von die ganzen Zahlen then 2 x, is an even number Punkt"
     },
     "MembSym011": {
-      "speech": "die Menge aller x gehört zu die ganzen Zahlen mit x größer als 5"
+      "expected": "die Menge aller x gehört zu die ganzen Zahlen mit x größer als 5"
     },
     "MembSym012": {
-      "speech": "3 plus 2 i, nicht Element von die reellen Zahlen"
+      "expected": "3 plus 2 i, nicht Element von die reellen Zahlen"
     },
     "MembSym013": {
-      "speech": "If x Element von die ganzen Zahlen then 2 x, is an even number Punkt"
+      "expected": "If x Element von die ganzen Zahlen then 2 x, is an even number Punkt"
     },
     "MembSym014": {
-      "speech": "die Menge aller x gehört zu die ganzen Zahlen mit x größer als 5"
+      "expected": "die Menge aller x gehört zu die ganzen Zahlen mit x größer als 5"
     },
     "MembSym015": {
-      "speech": "3 plus 2 i, nicht Element von die reellen Zahlen"
+      "expected": "3 plus 2 i, nicht Element von die reellen Zahlen"
     },
     "_comment9_": " Two preferences set: One for Sets and one for SetMemberSymbol",
     "SetMemb001": {
-      "speech": "die Menge von x gehört zu die ganzen Zahlen mit 2 kleiner als x kleiner als 7"
+      "expected": "die Menge von x gehört zu die ganzen Zahlen mit 2 kleiner als x kleiner als 7"
     },
     "SetMemb002": {
-      "speech": "die Menge von x in die ganzen Zahlen mit x größer als 5"
+      "expected": "die Menge von x in die ganzen Zahlen mit x größer als 5"
     },
     "_comment10_": " Sums, Products, Unions, Intersections, and Integrals",
     "Sum001": {
-      "speech": "Summe von n ist gleich 1 bis 10 über n"
+      "expected": "Summe von n ist gleich 1 bis 10 über n"
     },
     "Sum002": {
-      "speech": "Summe von n ist gleich 1 bis unendlich über n"
+      "expected": "Summe von n ist gleich 1 bis unendlich über n"
     },
     "Sum003": {
-      "speech": "Summe über i Element von die positiven ganzen Zahlen, über i"
+      "expected": "Summe über i Element von die positiven ganzen Zahlen, über i"
     },
     "Sum004": {
-      "speech": "Summe über S, über i"
+      "expected": "Summe über S, über i"
     },
     "Sum005": {
-      "speech": "Summe über, a Index i"
+      "expected": "Summe über, a Index i"
     },
     "Sum006": {
-      "speech": "Produkt von i ist gleich 1 bis 10 über i"
+      "expected": "Produkt von i ist gleich 1 bis 10 über i"
     },
     "Sum007": {
-      "speech": "Produkt über i Element von die positiven ganzen Zahlen, über, Bruch mit Zähler i, und Nenner i plus 1"
+      "expected": "Produkt über i Element von die positiven ganzen Zahlen, über, Bruch mit Zähler i, und Nenner i plus 1"
     },
     "Sum008": {
-      "speech": "Produkt über die positiven ganzen Zahlen, über, Bruch mit Zähler i, und Nenner i plus 1"
+      "expected": "Produkt über die positiven ganzen Zahlen, über, Bruch mit Zähler i, und Nenner i plus 1"
     },
     "Sum009": {
-      "speech": "Produkt über, a Index i"
+      "expected": "Produkt über, a Index i"
     },
     "Sum010": {
-      "speech": "der Durchschnitt von i ist gleich 1 bis 10 von, S Index i"
+      "expected": "der Durchschnitt von i ist gleich 1 bis 10 von, S Index i"
     },
     "Sum011": {
-      "speech": "die Vereinigung von i ist gleich 1 bis 10 von, S Index i"
+      "expected": "die Vereinigung von i ist gleich 1 bis 10 von, S Index i"
     },
     "Sum012": {
-      "speech": "der Durchschnitt von, S Index i"
+      "expected": "der Durchschnitt von, S Index i"
     },
     "Sum013": {
-      "speech": "die Vereinigung von, S Index i"
+      "expected": "die Vereinigung von, S Index i"
     },
     "Sum014": {
-      "speech": "der Durchschnitt über C, von, S Index i"
+      "expected": "der Durchschnitt über C, von, S Index i"
     },
     "Sum015": {
-      "speech": "die Vereinigung über C, von, S Index i"
+      "expected": "die Vereinigung über C, von, S Index i"
     },
     "Sum016": {
-      "speech": "das Integral über f von x, d x"
+      "expected": "das Integral über f von x, d x"
     },
     "Sum017": {
-      "speech": "das Integral von 0 bis 1 über f von x, d x"
+      "expected": "das Integral von 0 bis 1 über f von x, d x"
     },
     "Sum018": {
-      "speech": "das Integral über die reellen Zahlen, über f von x, d x"
+      "expected": "das Integral über die reellen Zahlen, über f von x, d x"
     }
   }
 }

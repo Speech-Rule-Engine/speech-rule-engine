@@ -258,7 +258,7 @@ sre.AbstractRuleTest.prototype.prepare = function() {
  * @override
  */
 sre.AbstractRuleTest.prototype.pick = function(json) {
-  return [json['mathml'], json['speech'], json['preference']];
+  return [json['input'], json['expected'], json['preference']];
 };
 
 

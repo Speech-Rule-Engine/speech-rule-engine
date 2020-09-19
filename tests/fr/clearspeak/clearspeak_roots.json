@@ -7,416 +7,416 @@
   "tests": {
     "_comment1_": " Roots",
     "Root001": {
-      "speech": "la racine carrée de 2"
+      "expected": "la racine carrée de 2"
     },
     "Root002": {
-      "speech": "3 plus la racine carrée de 2"
+      "expected": "3 plus la racine carrée de 2"
     },
     "Root003": {
-      "speech": "3 plus ou moins la racine carrée de 2"
+      "expected": "3 plus ou moins la racine carrée de 2"
     },
     "Root004": {
-      "speech": "3 moins ou plus la racine carrée de 2"
+      "expected": "3 moins ou plus la racine carrée de 2"
     },
     "Root005": {
-      "speech": "la racine carrée négative de 2"
+      "expected": "la racine carrée négative de 2"
     },
     "Root006": {
-      "speech": "3 moins la racine carrée de 2"
+      "expected": "3 moins la racine carrée de 2"
     },
     "Root007": {
-      "speech": "3 plus la racine carrée négative de 2"
+      "expected": "3 plus la racine carrée négative de 2"
     },
     "Root008": {
-      "speech": "3 moins la racine carrée négative de 2"
+      "expected": "3 moins la racine carrée négative de 2"
     },
     "Root009": {
-      "speech": "3 plus, parenthèse gauche, la racine carrée négative de 2, parenthèse droite"
+      "expected": "3 plus, parenthèse gauche, la racine carrée négative de 2, parenthèse droite"
     },
     "Root010": {
-      "speech": "3 moins, parenthèse gauche, la racine carrée négative de 2, parenthèse droite"
+      "expected": "3 moins, parenthèse gauche, la racine carrée négative de 2, parenthèse droite"
     },
     "Root011": {
-      "speech": "la racine carrée de x plus 1"
+      "expected": "la racine carrée de x plus 1"
     },
     "Root011a": {
-      "speech": "la racine carrée de x, plus 1"
+      "expected": "la racine carrée de x, plus 1"
     },
     "Root012": {
-      "speech": "la racine carrée négative de x"
+      "expected": "la racine carrée négative de x"
     },
     "Root013": {
-      "speech": "parenthèse gauche, la racine carrée de x, parenthèse droite, au carré"
+      "expected": "parenthèse gauche, la racine carrée de x, parenthèse droite, au carré"
     },
     "Root014": {
-      "speech": "négatif, parenthèse gauche, la racine carrée de x, parenthèse droite, au carré"
+      "expected": "négatif, parenthèse gauche, la racine carrée de x, parenthèse droite, au carré"
     },
     "Root015": {
-      "speech": "la racine carrée de x, au carré"
+      "expected": "la racine carrée de x, au carré"
     },
     "Root016": {
-      "speech": "la racine carrée de x au carré"
+      "expected": "la racine carrée de x au carré"
     },
     "Root017": {
-      "speech": "la racine carrée de x au carré plus y au carré"
+      "expected": "la racine carrée de x au carré plus y au carré"
     },
     "Root018": {
-      "speech": "la racine carrée de, x sub 1, au carré plus, x sub 2, au carré"
+      "expected": "la racine carrée de, x sub 1, au carré plus, x sub 2, au carré"
     },
     "Root019": {
-      "speech": "la racine carrée de, parenthèse gauche, x sub 2, moins, x sub 1, parenthèse droite, au carré plus, parenthèse gauche, y sub 2, moins, y sub 1, parenthèse droite, au carré"
+      "expected": "la racine carrée de, parenthèse gauche, x sub 2, moins, x sub 1, parenthèse droite, au carré plus, parenthèse gauche, y sub 2, moins, y sub 1, parenthèse droite, au carré"
     },
     "Root020": {
-      "speech": "la racine carrée de un-demi"
+      "expected": "la racine carrée de un-demi"
     },
     "Root021": {
-      "speech": "la racine carrée de, 23 sur 66"
+      "expected": "la racine carrée de, 23 sur 66"
     },
     "Root022": {
-      "speech": "la racine carrée de, fraction avec numérateur x plus 1, et dénominateur 2 x, plus 5"
+      "expected": "la racine carrée de, fraction avec numérateur x plus 1, et dénominateur 2 x, plus 5"
     },
     "Root023": {
-      "speech": "fraction avec numérateur négatif b plus ou moins la racine carrée de b au carré moins 4 a c, et dénominateur 2 a"
+      "expected": "fraction avec numérateur négatif b plus ou moins la racine carrée de b au carré moins 4 a c, et dénominateur 2 a"
     },
     "Root024": {
-      "speech": "la racine carrée positive de 2"
+      "expected": "la racine carrée positive de 2"
     },
     "Root025": {
-      "speech": "3 plus la racine carrée positive de 2"
+      "expected": "3 plus la racine carrée positive de 2"
     },
     "Root026": {
-      "speech": "3 plus ou moins la racine carrée de 2"
+      "expected": "3 plus ou moins la racine carrée de 2"
     },
     "Root027": {
-      "speech": "3 moins ou plus la racine carrée de 2"
+      "expected": "3 moins ou plus la racine carrée de 2"
     },
     "Root028": {
-      "speech": "la racine carrée négative de 2"
+      "expected": "la racine carrée négative de 2"
     },
     "Root029": {
-      "speech": "3 moins la racine carrée positive de 2"
+      "expected": "3 moins la racine carrée positive de 2"
     },
     "Root030": {
-      "speech": "3 plus la racine carrée négative de 2"
+      "expected": "3 plus la racine carrée négative de 2"
     },
     "Root031": {
-      "speech": "3 moins la racine carrée négative de 2"
+      "expected": "3 moins la racine carrée négative de 2"
     },
     "Root032": {
-      "speech": "3 plus, parenthèse gauche, la racine carrée négative de 2, parenthèse droite"
+      "expected": "3 plus, parenthèse gauche, la racine carrée négative de 2, parenthèse droite"
     },
     "Root033": {
-      "speech": "3 moins, parenthèse gauche, la racine carrée négative de 2, parenthèse droite"
+      "expected": "3 moins, parenthèse gauche, la racine carrée négative de 2, parenthèse droite"
     },
     "Root034": {
-      "speech": "la racine carrée positive de x plus 1"
+      "expected": "la racine carrée positive de x plus 1"
     },
     "Root034a": {
-      "speech": "la racine carrée positive de x, plus 1"
+      "expected": "la racine carrée positive de x, plus 1"
     },
     "Root035": {
-      "speech": "la racine carrée négative de x"
+      "expected": "la racine carrée négative de x"
     },
     "Root036": {
-      "speech": "parenthèse gauche, la racine carrée positive de x, parenthèse droite, au carré"
+      "expected": "parenthèse gauche, la racine carrée positive de x, parenthèse droite, au carré"
     },
     "Root037": {
-      "speech": "parenthèse gauche, la racine carrée négative de x, parenthèse droite, au carré"
+      "expected": "parenthèse gauche, la racine carrée négative de x, parenthèse droite, au carré"
     },
     "Root038": {
-      "speech": "négatif, parenthèse gauche, la racine carrée positive de x, parenthèse droite, au carré"
+      "expected": "négatif, parenthèse gauche, la racine carrée positive de x, parenthèse droite, au carré"
     },
     "Root039": {
-      "speech": "la racine carrée positive de x, au carré"
+      "expected": "la racine carrée positive de x, au carré"
     },
     "Root040": {
-      "speech": "la racine carrée positive de x au carré"
+      "expected": "la racine carrée positive de x au carré"
     },
     "Root041": {
-      "speech": "la racine carrée positive de x au carré plus y au carré"
+      "expected": "la racine carrée positive de x au carré plus y au carré"
     },
     "Root042": {
-      "speech": "la racine carrée positive de, x sub 1, au carré plus, x sub 2, au carré"
+      "expected": "la racine carrée positive de, x sub 1, au carré plus, x sub 2, au carré"
     },
     "Root043": {
-      "speech": "la racine carrée positive de, parenthèse gauche, x sub 2, moins, x sub 1, parenthèse droite, au carré plus, parenthèse gauche, y sub 2, moins, y sub 1, parenthèse droite, au carré"
+      "expected": "la racine carrée positive de, parenthèse gauche, x sub 2, moins, x sub 1, parenthèse droite, au carré plus, parenthèse gauche, y sub 2, moins, y sub 1, parenthèse droite, au carré"
     },
     "Root044": {
-      "speech": "la racine carrée positive de un-demi"
+      "expected": "la racine carrée positive de un-demi"
     },
     "Root045": {
-      "speech": "la racine carrée positive de, 23 sur 66"
+      "expected": "la racine carrée positive de, 23 sur 66"
     },
     "Root046": {
-      "speech": "la racine carrée positive de, fraction avec numérateur x plus 1, et dénominateur 2 x, plus 5"
+      "expected": "la racine carrée positive de, fraction avec numérateur x plus 1, et dénominateur 2 x, plus 5"
     },
     "Root047": {
-      "speech": "fraction avec numérateur négatif b plus ou moins la racine carrée de b au carré moins 4 a c, et dénominateur 2 a"
+      "expected": "fraction avec numérateur négatif b plus ou moins la racine carrée de b au carré moins 4 a c, et dénominateur 2 a"
     },
     "Root048": {
-      "speech": "la racine carrée de 2, fin racine"
+      "expected": "la racine carrée de 2, fin racine"
     },
     "Root049": {
-      "speech": "3 plus la racine carrée de 2, fin racine"
+      "expected": "3 plus la racine carrée de 2, fin racine"
     },
     "Root050": {
-      "speech": "3 plus ou moins la racine carrée de 2, fin racine"
+      "expected": "3 plus ou moins la racine carrée de 2, fin racine"
     },
     "Root051": {
-      "speech": "3 moins ou plus la racine carrée de 2, fin racine"
+      "expected": "3 moins ou plus la racine carrée de 2, fin racine"
     },
     "Root052": {
-      "speech": "la racine carrée négative de 2, fin racine"
+      "expected": "la racine carrée négative de 2, fin racine"
     },
     "Root053": {
-      "speech": "3 moins la racine carrée de 2, fin racine"
+      "expected": "3 moins la racine carrée de 2, fin racine"
     },
     "Root054": {
-      "speech": "3 plus la racine carrée négative de 2, fin racine"
+      "expected": "3 plus la racine carrée négative de 2, fin racine"
     },
     "Root055": {
-      "speech": "3 moins la racine carrée négative de 2, fin racine"
+      "expected": "3 moins la racine carrée négative de 2, fin racine"
     },
     "Root056": {
-      "speech": "3 plus, parenthèse gauche, la racine carrée négative de 2, fin racine, parenthèse droite"
+      "expected": "3 plus, parenthèse gauche, la racine carrée négative de 2, fin racine, parenthèse droite"
     },
     "Root057": {
-      "speech": "3 moins, parenthèse gauche, la racine carrée négative de 2, fin racine, parenthèse droite"
+      "expected": "3 moins, parenthèse gauche, la racine carrée négative de 2, fin racine, parenthèse droite"
     },
     "Root058": {
-      "speech": "la racine carrée de x plus 1, fin racine"
+      "expected": "la racine carrée de x plus 1, fin racine"
     },
     "Root058a": {
-      "speech": "la racine carrée de x, fin racine, plus 1"
+      "expected": "la racine carrée de x, fin racine, plus 1"
     },
     "Root059": {
-      "speech": "la racine carrée négative de x, fin racine"
+      "expected": "la racine carrée négative de x, fin racine"
     },
     "Root060": {
-      "speech": "parenthèse gauche, la racine carrée de x, fin racine, parenthèse droite, au carré"
+      "expected": "parenthèse gauche, la racine carrée de x, fin racine, parenthèse droite, au carré"
     },
     "Root061": {
-      "speech": "négatif, parenthèse gauche, la racine carrée de x, fin racine, parenthèse droite, au carré"
+      "expected": "négatif, parenthèse gauche, la racine carrée de x, fin racine, parenthèse droite, au carré"
     },
     "Root062": {
-      "speech": "la racine carrée de x, fin racine, au carré"
+      "expected": "la racine carrée de x, fin racine, au carré"
     },
     "Root063": {
-      "speech": "la racine carrée de x au carré, fin racine"
+      "expected": "la racine carrée de x au carré, fin racine"
     },
     "Root064": {
-      "speech": "la racine carrée de x au carré plus y au carré, fin racine"
+      "expected": "la racine carrée de x au carré plus y au carré, fin racine"
     },
     "Root065": {
-      "speech": "la racine carrée de, x sub 1, au carré plus, x sub 2, au carré, fin racine"
+      "expected": "la racine carrée de, x sub 1, au carré plus, x sub 2, au carré, fin racine"
     },
     "Root066": {
-      "speech": "la racine carrée de, parenthèse gauche, x sub 2, moins, x sub 1, parenthèse droite, au carré plus, parenthèse gauche, y sub 2, moins, y sub 1, parenthèse droite, au carré, fin racine"
+      "expected": "la racine carrée de, parenthèse gauche, x sub 2, moins, x sub 1, parenthèse droite, au carré plus, parenthèse gauche, y sub 2, moins, y sub 1, parenthèse droite, au carré, fin racine"
     },
     "Root067": {
-      "speech": "la racine carrée de un-demi, fin racine"
+      "expected": "la racine carrée de un-demi, fin racine"
     },
     "Root068": {
-      "speech": "la racine carrée de, 23 sur 66, fin racine"
+      "expected": "la racine carrée de, 23 sur 66, fin racine"
     },
     "Root069": {
-      "speech": "la racine carrée de, fraction avec numérateur x plus 1, et dénominateur 2 x, plus 5, fin racine"
+      "expected": "la racine carrée de, fraction avec numérateur x plus 1, et dénominateur 2 x, plus 5, fin racine"
     },
     "Root070": {
-      "speech": "fraction avec numérateur négatif b plus ou moins la racine carrée de b au carré moins 4 a c, fin racine, et dénominateur 2 a"
+      "expected": "fraction avec numérateur négatif b plus ou moins la racine carrée de b au carré moins 4 a c, fin racine, et dénominateur 2 a"
     },
     "Root071": {
-      "speech": "la racine carrée positive de 2, fin racine"
+      "expected": "la racine carrée positive de 2, fin racine"
     },
     "Root072": {
-      "speech": "3 plus la racine carrée positive de 2, fin racine"
+      "expected": "3 plus la racine carrée positive de 2, fin racine"
     },
     "Root073": {
-      "speech": "3 plus ou moins la racine carrée de 2, fin racine"
+      "expected": "3 plus ou moins la racine carrée de 2, fin racine"
     },
     "Root074": {
-      "speech": "3 moins ou plus la racine carrée de 2, fin racine"
+      "expected": "3 moins ou plus la racine carrée de 2, fin racine"
     },
     "Root075": {
-      "speech": "la racine carrée négative de 2, fin racine"
+      "expected": "la racine carrée négative de 2, fin racine"
     },
     "Root076": {
-      "speech": "3 moins la racine carrée positive de 2, fin racine"
+      "expected": "3 moins la racine carrée positive de 2, fin racine"
     },
     "Root077": {
-      "speech": "3 plus la racine carrée négative de 2, fin racine"
+      "expected": "3 plus la racine carrée négative de 2, fin racine"
     },
     "Root078": {
-      "speech": "3 moins la racine carrée négative de 2, fin racine"
+      "expected": "3 moins la racine carrée négative de 2, fin racine"
     },
     "Root079": {
-      "speech": "3 plus, parenthèse gauche, la racine carrée négative de 2, fin racine, parenthèse droite"
+      "expected": "3 plus, parenthèse gauche, la racine carrée négative de 2, fin racine, parenthèse droite"
     },
     "Root080": {
-      "speech": "3 moins, parenthèse gauche, la racine carrée négative de 2, fin racine, parenthèse droite"
+      "expected": "3 moins, parenthèse gauche, la racine carrée négative de 2, fin racine, parenthèse droite"
     },
     "Root081": {
-      "speech": "la racine carrée positive de x plus 1, fin racine"
+      "expected": "la racine carrée positive de x plus 1, fin racine"
     },
     "Root081a": {
-      "speech": "la racine carrée positive de x, fin racine, plus 1"
+      "expected": "la racine carrée positive de x, fin racine, plus 1"
     },
     "Root082": {
-      "speech": "la racine carrée négative de x, fin racine"
+      "expected": "la racine carrée négative de x, fin racine"
     },
     "Root083": {
-      "speech": "parenthèse gauche, la racine carrée positive de x, fin racine, parenthèse droite, au carré"
+      "expected": "parenthèse gauche, la racine carrée positive de x, fin racine, parenthèse droite, au carré"
     },
     "Root084": {
-      "speech": "parenthèse gauche, la racine carrée négative de x, fin racine, parenthèse droite, au carré"
+      "expected": "parenthèse gauche, la racine carrée négative de x, fin racine, parenthèse droite, au carré"
     },
     "Root085": {
-      "speech": "la racine carrée positive de x, fin racine, au carré"
+      "expected": "la racine carrée positive de x, fin racine, au carré"
     },
     "Root086": {
-      "speech": "la racine carrée positive de x au carré, fin racine"
+      "expected": "la racine carrée positive de x au carré, fin racine"
     },
     "Root087": {
-      "speech": "la racine carrée positive de x au carré plus y au carré, fin racine"
+      "expected": "la racine carrée positive de x au carré plus y au carré, fin racine"
     },
     "Root088": {
-      "speech": "la racine carrée positive de, x sub 1, au carré plus, x sub 2, au carré, fin racine"
+      "expected": "la racine carrée positive de, x sub 1, au carré plus, x sub 2, au carré, fin racine"
     },
     "Root089": {
-      "speech": "la racine carrée positive de, parenthèse gauche, x sub 2, moins, x sub 1, parenthèse droite, au carré plus, parenthèse gauche, y sub 2, moins, y sub 1, parenthèse droite, au carré, fin racine"
+      "expected": "la racine carrée positive de, parenthèse gauche, x sub 2, moins, x sub 1, parenthèse droite, au carré plus, parenthèse gauche, y sub 2, moins, y sub 1, parenthèse droite, au carré, fin racine"
     },
     "Root090": {
-      "speech": "la racine carrée positive de un-demi, fin racine"
+      "expected": "la racine carrée positive de un-demi, fin racine"
     },
     "Root091": {
-      "speech": "la racine carrée positive de, 23 sur 66, fin racine"
+      "expected": "la racine carrée positive de, 23 sur 66, fin racine"
     },
     "Root092": {
-      "speech": "la racine carrée positive de, fraction avec numérateur x plus 1, et dénominateur 2 x, plus 5, fin racine"
+      "expected": "la racine carrée positive de, fraction avec numérateur x plus 1, et dénominateur 2 x, plus 5, fin racine"
     },
     "Root093": {
-      "speech": "fraction avec numérateur négatif b plus ou moins la racine carrée de b au carré moins 4 a c, fin racine, et dénominateur 2 a"
+      "expected": "fraction avec numérateur négatif b plus ou moins la racine carrée de b au carré moins 4 a c, fin racine, et dénominateur 2 a"
     },
     "_comment2_": " Higher order roots",
     "HighRoot001": {
-      "speech": "la racine cubique de y"
+      "expected": "la racine cubique de y"
     },
     "HighRoot002": {
-      "speech": "la quatrième racine de n"
+      "expected": "la quatrième racine de n"
     },
     "HighRoot003": {
-      "speech": "la cinquième racine de 35"
+      "expected": "la cinquième racine de 35"
     },
     "HighRoot004": {
-      "speech": "la neuvième racine de 146"
+      "expected": "la neuvième racine de 146"
     },
     "HighRoot005": {
-      "speech": "la n-ième racine de d"
+      "expected": "la n-ième racine de d"
     },
     "HighRoot006": {
-      "speech": "la m-ième racine de 243"
+      "expected": "la m-ième racine de 243"
     },
     "HighRoot007": {
-      "speech": "la i-ième racine de 2 à la puissance i"
+      "expected": "la i-ième racine de 2 à la puissance i"
     },
     "HighRoot008": {
-      "speech": "la j-ième racine de 125"
+      "expected": "la j-ième racine de 125"
     },
     "HighRoot009": {
-      "speech": "négatif la racine cubique de y"
+      "expected": "négatif la racine cubique de y"
     },
     "HighRoot010": {
-      "speech": "négatif la quatrième racine de n"
+      "expected": "négatif la quatrième racine de n"
     },
     "HighRoot011": {
-      "speech": "la racine cubique de y, fin racine"
+      "expected": "la racine cubique de y, fin racine"
     },
     "HighRoot012": {
-      "speech": "la quatrième racine de n, fin racine"
+      "expected": "la quatrième racine de n, fin racine"
     },
     "HighRoot013": {
-      "speech": "la cinquième racine de 35, fin racine"
+      "expected": "la cinquième racine de 35, fin racine"
     },
     "HighRoot014": {
-      "speech": "la neuvième racine de 146, fin racine"
+      "expected": "la neuvième racine de 146, fin racine"
     },
     "HighRoot015": {
-      "speech": "la n-ième racine de d, fin racine"
+      "expected": "la n-ième racine de d, fin racine"
     },
     "HighRoot016": {
-      "speech": "la m-ième racine de 243, fin racine"
+      "expected": "la m-ième racine de 243, fin racine"
     },
     "HighRoot017": {
-      "speech": "la i-ième racine de 2 à la puissance i; fin racine"
+      "expected": "la i-ième racine de 2 à la puissance i; fin racine"
     },
     "HighRoot018": {
-      "speech": "la j-ième racine de 125, fin racine"
+      "expected": "la j-ième racine de 125, fin racine"
     },
     "HighRoot019": {
-      "speech": "négatif la racine cubique de y, fin racine"
+      "expected": "négatif la racine cubique de y, fin racine"
     },
     "HighRoot020": {
-      "speech": "négatif la quatrième racine de n, fin racine"
+      "expected": "négatif la quatrième racine de n, fin racine"
     },
     "HighRoot021": {
-      "speech": "la racine cubique de y"
+      "expected": "la racine cubique de y"
     },
     "HighRoot022": {
-      "speech": "la quatrième racine de n"
+      "expected": "la quatrième racine de n"
     },
     "HighRoot023": {
-      "speech": "la cinquième racine de 35"
+      "expected": "la cinquième racine de 35"
     },
     "HighRoot024": {
-      "speech": "la neuvième racine de 146"
+      "expected": "la neuvième racine de 146"
     },
     "HighRoot025": {
-      "speech": "la n-ième racine de d"
+      "expected": "la n-ième racine de d"
     },
     "HighRoot026": {
-      "speech": "la m-ième racine de 243"
+      "expected": "la m-ième racine de 243"
     },
     "HighRoot027": {
-      "speech": "la i-ième racine de 2 à la puissance i"
+      "expected": "la i-ième racine de 2 à la puissance i"
     },
     "HighRoot028": {
-      "speech": "la j-ième racine de 125"
+      "expected": "la j-ième racine de 125"
     },
     "HighRoot029": {
-      "speech": "négatif la racine cubique de y"
+      "expected": "négatif la racine cubique de y"
     },
     "HighRoot030": {
-      "speech": "négatif la quatrième racine de n"
+      "expected": "négatif la quatrième racine de n"
     },
     "HighRoot031": {
-      "speech": "la racine cubique de y, fin racine"
+      "expected": "la racine cubique de y, fin racine"
     },
     "HighRoot032": {
-      "speech": "la quatrième racine de n, fin racine"
+      "expected": "la quatrième racine de n, fin racine"
     },
     "HighRoot033": {
-      "speech": "la cinquième racine de 35, fin racine"
+      "expected": "la cinquième racine de 35, fin racine"
     },
     "HighRoot034": {
-      "speech": "la neuvième racine de 146, fin racine"
+      "expected": "la neuvième racine de 146, fin racine"
     },
     "HighRoot035": {
-      "speech": "la n-ième racine de d, fin racine"
+      "expected": "la n-ième racine de d, fin racine"
     },
     "HighRoot036": {
-      "speech": "la m-ième racine de 243, fin racine"
+      "expected": "la m-ième racine de 243, fin racine"
     },
     "HighRoot037": {
-      "speech": "la i-ième racine de 2 à la puissance i; fin racine"
+      "expected": "la i-ième racine de 2 à la puissance i; fin racine"
     },
     "HighRoot038": {
-      "speech": "la j-ième racine de 125, fin racine"
+      "expected": "la j-ième racine de 125, fin racine"
     },
     "HighRoot039": {
-      "speech": "négatif la racine cubique de y, fin racine"
+      "expected": "négatif la racine cubique de y, fin racine"
     },
     "HighRoot040": {
-      "speech": "négatif la quatrième racine de n, fin racine"
+      "expected": "négatif la quatrième racine de n, fin racine"
     }
   }
 }

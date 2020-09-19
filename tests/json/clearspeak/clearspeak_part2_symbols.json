@@ -5,345 +5,345 @@
     "X001": {
       "test": true,
       "preference": "MultsymbolX_Auto",
-      "mathml": "<math><mrow><mn>6</mn><mo>×</mo><mn>8</mn></mrow></math>"
+      "input": "<math><mrow><mn>6</mn><mo>×</mo><mn>8</mn></mrow></math>"
     },
     "X002": {
       "test": true,
       "preference": "MultsymbolX_Auto",
-      "mathml": "<math><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></math>"
+      "input": "<math><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></math>"
     },
     "X003": {
       "test": true,
       "preference": "MultsymbolX_Auto",
-      "mathml": "<math><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></math>"
+      "input": "<math><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></math>"
     },
     "X004": {
       "test": true,
       "preference": "MultsymbolX_By",
-      "mathml": "<math><mrow><mn>6</mn><mo>×</mo><mn>8</mn></mrow></math>"
+      "input": "<math><mrow><mn>6</mn><mo>×</mo><mn>8</mn></mrow></math>"
     },
     "X005": {
       "test": true,
       "preference": "MultsymbolX_By",
-      "mathml": "<math><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></math>"
+      "input": "<math><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></math>"
     },
     "X006": {
       "test": true,
       "preference": "MultsymbolX_By",
-      "mathml": "<math><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></math>"
+      "input": "<math><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></math>"
     },
     "X007": {
       "test": true,
       "preference": "MultsymbolX_Cross",
-      "mathml": "<math><mrow><mstyle mathvariant=\"bold\" mathsize=\"normal\"><mi>u</mi></mstyle><mo>×</mo><mstyle mathvariant=\"bold\" mathsize=\"normal\"><mi>v</mi></mstyle></mrow></math>"
+      "input": "<math><mrow><mstyle mathvariant=\"bold\" mathsize=\"normal\"><mi>u</mi></mstyle><mo>×</mo><mstyle mathvariant=\"bold\" mathsize=\"normal\"><mi>v</mi></mstyle></mrow></math>"
     },
     "_comment3_": " Multiplication Symbol",
     "Dot001": {
       "test": true,
       "preference": "MultsymbolDot_Auto",
-      "mathml": "<math><mrow><mn>6</mn><mo>⋅</mo><mn>8</mn></mrow></math>"
+      "input": "<math><mrow><mn>6</mn><mo>⋅</mo><mn>8</mn></mrow></math>"
     },
     "Dot002": {
       "test": true,
       "preference": "MultsymbolDot_Auto",
-      "mathml": "<math><mrow><mi>m</mi><mo>⋅</mo><mi>n</mi></mrow></math>"
+      "input": "<math><mrow><mi>m</mi><mo>⋅</mo><mi>n</mi></mrow></math>"
     },
     "Dot003": {
       "test": true,
       "preference": "MultsymbolDot_Auto",
-      "mathml": "<math><mrow><mn>3</mn><mo>⋅</mo><mn>3</mn></mrow></math>"
+      "input": "<math><mrow><mn>3</mn><mo>⋅</mo><mn>3</mn></mrow></math>"
     },
     "Dot004": {
       "test": true,
       "preference": "MultsymbolDot_Dot",
-      "mathml": "<math><mrow><mn>6</mn><mo>⋅</mo><mn>8</mn></mrow></math>"
+      "input": "<math><mrow><mn>6</mn><mo>⋅</mo><mn>8</mn></mrow></math>"
     },
     "Dot005": {
       "test": true,
       "preference": "MultsymbolDot_Dot",
-      "mathml": "<math><mrow><mi>m</mi><mo>⋅</mo><mi>n</mi></mrow></math>"
+      "input": "<math><mrow><mi>m</mi><mo>⋅</mo><mi>n</mi></mrow></math>"
     },
     "Dot006": {
       "test": true,
       "preference": "MultsymbolDot_Dot",
-      "mathml": "<math><mrow><mn>3</mn><mo>⋅</mo><mn>3</mn></mrow></math>"
+      "input": "<math><mrow><mn>3</mn><mo>⋅</mo><mn>3</mn></mrow></math>"
     },
     "_comment4_": " Triangle Symbol",
     "Triangle001": {
       "test": true,
       "preference": "TriangleSymbol_Auto",
-      "mathml": "<math><mrow><mi>Δ</mi><mi>A</mi><mi>B</mi><mi>C</mi></mrow></math>"
+      "input": "<math><mrow><mi>Δ</mi><mi>A</mi><mi>B</mi><mi>C</mi></mrow></math>"
     },
     "Triangle002": {
       "test": true,
       "preference": "TriangleSymbol_Auto",
-      "mathml": "<math><mrow><mi>Δ</mi><mi>D</mi><mi>E</mi><mi>F</mi></mrow></math>"
+      "input": "<math><mrow><mi>Δ</mi><mi>D</mi><mi>E</mi><mi>F</mi></mrow></math>"
     },
     "Triangle003": {
       "test": true,
       "preference": "TriangleSymbol_Delta",
-      "mathml": "<math><mrow><mi>Δ</mi><mi>x</mi></mrow></math>"
+      "input": "<math><mrow><mi>Δ</mi><mi>x</mi></mrow></math>"
     },
     "Triangle004": {
       "test": true,
       "preference": "TriangleSymbol_Delta",
-      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>Δ</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>Δ</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "_comment5_": " Ellipses",
     "Ellipses001": {
       "test": true,
       "preference": "Ellipses_Auto",
-      "mathml": "<math><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mn>3</mn><mo>,</mo><mtext></mtext><mo>…</mo></mrow></math>"
+      "input": "<math><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mn>3</mn><mo>,</mo><mtext></mtext><mo>…</mo></mrow></math>"
     },
     "Ellipses002": {
       "test": true,
       "preference": "Ellipses_Auto",
-      "mathml": "<math><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mn>3</mn><mo>,</mo><mtext></mtext><mo>…</mo><mtext></mtext><mo>,</mo><mn>20</mn></mrow></math>"
+      "input": "<math><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mn>3</mn><mo>,</mo><mtext></mtext><mo>…</mo><mtext></mtext><mo>,</mo><mn>20</mn></mrow></math>"
     },
     "Ellipses003": {
       "test": true,
       "preference": "Ellipses_Auto",
-      "mathml": "<math><mrow><mo>…</mo><mtext></mtext><mo>,</mo><mo>−</mo><mn>2</mn><mo>,</mo><mtext></mtext><mo>−</mo><mn>1</mn><mo>,</mo><mtext></mtext><mn>0</mn><mo>,</mo><mtext></mtext><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mo>…</mo></mrow></math>"
+      "input": "<math><mrow><mo>…</mo><mtext></mtext><mo>,</mo><mo>−</mo><mn>2</mn><mo>,</mo><mtext></mtext><mo>−</mo><mn>1</mn><mo>,</mo><mtext></mtext><mn>0</mn><mo>,</mo><mtext></mtext><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mo>…</mo></mrow></math>"
     },
     "Ellipses004": {
       "test": true,
       "preference": "Ellipses_AndSoOn",
-      "mathml": "<math><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mn>3</mn><mo>,</mo><mtext></mtext><mo>…</mo></mrow></math>"
+      "input": "<math><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mn>3</mn><mo>,</mo><mtext></mtext><mo>…</mo></mrow></math>"
     },
     "Ellipses005": {
       "test": true,
       "preference": "Ellipses_AndSoOn",
-      "mathml": "<math><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mn>3</mn><mo>,</mo><mtext></mtext><mo>…</mo><mtext></mtext><mo>,</mo><mn>20</mn></mrow></math>"
+      "input": "<math><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mn>3</mn><mo>,</mo><mtext></mtext><mo>…</mo><mtext></mtext><mo>,</mo><mn>20</mn></mrow></math>"
     },
     "Ellipses006": {
       "test": true,
       "preference": "Ellipses_AndSoOn",
-      "mathml": "<math><mrow><mo>…</mo><mtext></mtext><mo>,</mo><mo>−</mo><mn>2</mn><mo>,</mo><mtext></mtext><mo>−</mo><mn>1</mn><mo>,</mo><mtext></mtext><mn>0</mn><mo>,</mo><mtext></mtext><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mo>…</mo></mrow></math>"
+      "input": "<math><mrow><mo>…</mo><mtext></mtext><mo>,</mo><mo>−</mo><mn>2</mn><mo>,</mo><mtext></mtext><mo>−</mo><mn>1</mn><mo>,</mo><mtext></mtext><mn>0</mn><mo>,</mo><mtext></mtext><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mo>…</mo></mrow></math>"
     },
     "_comment6_": " Vertical Line",
     "VertLine001": {
       "test": true,
       "preference": "VerticalLine_Auto",
-      "mathml": "<math><mrow><mn>3</mn><mo>|</mo><mn>6</mn></mrow></math>"
+      "input": "<math><mrow><mn>3</mn><mo>|</mo><mn>6</mn></mrow></math>"
     },
     "VertLine002": {
       "test": true,
       "preference": "VerticalLine_Auto",
-      "mathml": "<math><mrow><mrow><mo>{</mo><mrow><mi>x</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>0</mn></mrow><mo>}</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mrow><mo>{</mo><mrow><mi>x</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>0</mn></mrow><mo>}</mo></mrow></mrow></math>"
     },
     "VertLine003": {
       "test": true,
       "preference": "VerticalLine_Auto",
-      "mathml": "<math><mrow><mrow><mo>{</mo><mrow><mi>x</mi><mo>|</mo><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>></mo><mn>2</mn></mrow><mo>}</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mrow><mo>{</mo><mrow><mi>x</mi><mo>|</mo><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>></mo><mn>2</mn></mrow><mo>}</mo></mrow></mrow></math>"
     },
     "VertLine004": {
       "test": true,
       "preference": "VerticalLine_Auto",
-      "mathml": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><msub><mo>|</mo><mrow><mi>x</mi><mo>=</mo><mn>5</mn></mrow></msub></mrow></math>"
+      "input": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><msub><mo>|</mo><mrow><mi>x</mi><mo>=</mo><mn>5</mn></mrow></msub></mrow></math>"
     },
     "VertLine005": {
       "test": true,
       "preference": "VerticalLine_Auto",
-      "mathml": "<math><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mi>x</mi><msub><mo>|</mo><mrow><mi>x</mi><mo>=</mo><mn>2</mn></mrow></msub></mrow></math>"
+      "input": "<math><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mi>x</mi><msub><mo>|</mo><mrow><mi>x</mi><mo>=</mo><mn>2</mn></mrow></msub></mrow></math>"
     },
     "VertLine006": {
       "test": true,
       "preference": "VerticalLine_Auto",
-      "mathml": "<math><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>x</mi><msubsup><mstyle mathsize=\"140%\" displaystyle=\"true\"><mo>|</mo></mstyle><mn>0</mn><mn>1</mn></msubsup></mrow></math>"
+      "input": "<math><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>x</mi><msubsup><mstyle mathsize=\"140%\" displaystyle=\"true\"><mo>|</mo></mstyle><mn>0</mn><mn>1</mn></msubsup></mrow></math>"
     },
     "VertLine007": {
       "test": true,
       "preference": "VerticalLine_SuchThat",
-      "mathml": "<math><mrow><mrow><mo>{</mo><mrow><mi>x</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>0</mn></mrow><mo>}</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mrow><mo>{</mo><mrow><mi>x</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>0</mn></mrow><mo>}</mo></mrow></mrow></math>"
     },
     "VertLine008": {
       "test": true,
       "preference": "VerticalLine_Divides",
-      "mathml": "<math><mrow><mn>3</mn><mo>|</mo><mn>6</mn></mrow></math>"
+      "input": "<math><mrow><mn>3</mn><mo>|</mo><mn>6</mn></mrow></math>"
     },
     "VertLine009": {
       "test": true,
       "preference": "VerticalLine_Given",
-      "mathml": "<math><mrow><mi>P</mi><mtext></mtext><mrow><mo>(</mo><mrow><mi>A</mi><mo>|</mo><mi>B</mi></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>P</mi><mtext></mtext><mrow><mo>(</mo><mrow><mi>A</mi><mo>|</mo><mi>B</mi></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "_comment7_": " Set Membership Symbols",
     "MembSym001": {
       "test": true,
       "preference": "SetMemberSymbol_Auto",
-      "mathml": "<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow><mtext> is an even  number.</mtext></math>"
+      "input": "<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow><mtext> is an even  number.</mtext></math>"
     },
     "MembSym002": {
       "test": true,
       "preference": "SetMemberSymbol_Auto",
-      "mathml": "<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>"
+      "input": "<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>"
     },
     "MembSym003": {
       "test": true,
       "preference": "SetMemberSymbol_Auto",
-      "mathml": "<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉</mo><mi>ℝ</mi></mrow></math>"
+      "input": "<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉</mo><mi>ℝ</mi></mrow></math>"
     },
     "MembSym004": {
       "test": true,
       "preference": "SetMemberSymbol_Member",
-      "mathml": "<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow><mtext> is an even  number.</mtext></math>"
+      "input": "<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow><mtext> is an even  number.</mtext></math>"
     },
     "MembSym005": {
       "test": true,
       "preference": "SetMemberSymbol_Member",
-      "mathml": "<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>"
+      "input": "<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>"
     },
     "MembSym006": {
       "test": true,
       "preference": "SetMemberSymbol_Member",
-      "mathml": "<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉</mo><mi>ℝ</mi></mrow></math>"
+      "input": "<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉</mo><mi>ℝ</mi></mrow></math>"
     },
     "MembSym007": {
       "test": true,
       "preference": "SetMemberSymbol_Element",
-      "mathml": "<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow><mtext> is an even  number.</mtext></math>"
+      "input": "<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow><mtext> is an even  number.</mtext></math>"
     },
     "MembSym008": {
       "test": true,
       "preference": "SetMemberSymbol_Element",
-      "mathml": "<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>"
+      "input": "<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>"
     },
     "MembSym009": {
       "test": true,
       "preference": "SetMemberSymbol_Element",
-      "mathml": "<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉</mo><mi>ℝ</mi></mrow></math>"
+      "input": "<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉</mo><mi>ℝ</mi></mrow></math>"
     },
     "MembSym010": {
       "test": true,
       "preference": "SetMemberSymbol_Belongs",
-      "mathml": "<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow><mtext> is an even  number.</mtext></math>",
+      "input": "<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow><mtext> is an even  number.</mtext></math>",
       "_comment8_": " var mathml = '<math><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>';"
     },
     "MembSym011": {
       "test": true,
       "preference": "SetMemberSymbol_Belongs",
-      "mathml": "<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>"
+      "input": "<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>"
     },
     "MembSym012": {
       "test": true,
       "preference": "SetMemberSymbol_Belongs",
-      "mathml": "<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉</mo><mi>ℝ</mi></mrow></math>"
+      "input": "<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉</mo><mi>ℝ</mi></mrow></math>"
     },
     "MembSym013": {
       "test": true,
       "preference": "SetMemberSymbol_Belongs",
-      "mathml": "<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow><mtext> is an even  number.</mtext></math>"
+      "input": "<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow><mtext> is an even  number.</mtext></math>"
     },
     "MembSym014": {
       "test": true,
       "preference": "SetMemberSymbol_Belongs",
-      "mathml": "<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>"
+      "input": "<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>"
     },
     "MembSym015": {
       "test": true,
       "preference": "SetMemberSymbol_Belongs",
-      "mathml": "<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉</mo><mi>ℝ</mi></mrow></math>"
+      "input": "<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉</mo><mi>ℝ</mi></mrow></math>"
     },
     "_comment9_": " Two preferences set: One for Sets and one for SetMemberSymbol",
     "SetMemb001": {
       "test": true,
       "preference": "Sets_woAll:SetMemberSymbol_Belongs",
-      "mathml": "<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>:</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}</mo></mrow></math>"
+      "input": "<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>:</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}</mo></mrow></math>"
     },
     "SetMemb002": {
       "test": true,
       "preference": "Sets_woAll:SetMemberSymbol_Member",
-      "mathml": "<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>"
+      "input": "<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>"
     },
     "_comment10_": " Sums, Products, Unions, Intersections, and Integrals",
     "Sum001": {
       "test": true,
       "preference": "default",
-      "mathml": "<math><mrow><mstyle displaystyle=\"true\"><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn></mrow></munderover><mi>n</mi></mstyle></mrow></math>"
+      "input": "<math><mrow><mstyle displaystyle=\"true\"><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn></mrow></munderover><mi>n</mi></mstyle></mrow></math>"
     },
     "Sum002": {
       "test": true,
       "preference": "default",
-      "mathml": "<math><mrow><mstyle displaystyle=\"true\"><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi>∞</mi></munderover><mi>n</mi></mstyle></mrow></math>"
+      "input": "<math><mrow><mstyle displaystyle=\"true\"><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi>∞</mi></munderover><mi>n</mi></mstyle></mrow></math>"
     },
     "Sum003": {
       "test": true,
       "preference": "default",
-      "mathml": "<math><mrow><mstyle displaystyle=\"true\"><munder><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><msup><mi>ℤ</mi><mo>+</mo></msup></mrow></munder><mi>i</mi></mstyle></mrow></math>"
+      "input": "<math><mrow><mstyle displaystyle=\"true\"><munder><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><msup><mi>ℤ</mi><mo>+</mo></msup></mrow></munder><mi>i</mi></mstyle></mrow></math>"
     },
     "Sum004": {
       "test": true,
       "preference": "default",
-      "mathml": "<math><mrow><mstyle displaystyle=\"true\"><munder><mo>∑</mo><mi>S</mi></munder><mi>i</mi></mstyle></mrow></math>"
+      "input": "<math><mrow><mstyle displaystyle=\"true\"><munder><mo>∑</mo><mi>S</mi></munder><mi>i</mi></mstyle></mrow></math>"
     },
     "Sum005": {
       "test": true,
       "preference": "default",
-      "mathml": "<math><mrow><mstyle displaystyle=\"true\"><mo>∑</mo><mrow><msub><mi>a</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>"
+      "input": "<math><mrow><mstyle displaystyle=\"true\"><mo>∑</mo><mrow><msub><mi>a</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>"
     },
     "Sum006": {
       "test": true,
       "preference": "default",
-      "mathml": "<math><mrow><mstyle displaystyle=\"true\"><munderover><mo>∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn></mrow></munderover><mi>i</mi></mstyle></mrow></math>"
+      "input": "<math><mrow><mstyle displaystyle=\"true\"><munderover><mo>∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn></mrow></munderover><mi>i</mi></mstyle></mrow></math>"
     },
     "Sum007": {
       "test": true,
       "preference": "default",
-      "mathml": "<math><mrow><mstyle displaystyle=\"true\"><munder><mo>∏</mo><mrow><mi>i</mi><mo>∈</mo><msup><mi>ℤ</mi><mo>+</mo></msup></mrow></munder><mrow><mfrac><mi>i</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></mstyle></mrow></math>"
+      "input": "<math><mrow><mstyle displaystyle=\"true\"><munder><mo>∏</mo><mrow><mi>i</mi><mo>∈</mo><msup><mi>ℤ</mi><mo>+</mo></msup></mrow></munder><mrow><mfrac><mi>i</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></mstyle></mrow></math>"
     },
     "Sum008": {
       "test": true,
       "preference": "default",
-      "mathml": "<math><mrow><mstyle displaystyle=\"true\"><munder><mo>∏</mo><mrow><msup><mi>ℤ</mi><mo>+</mo></msup></mrow></munder><mrow><mfrac><mi>i</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></mstyle></mrow></math>"
+      "input": "<math><mrow><mstyle displaystyle=\"true\"><munder><mo>∏</mo><mrow><msup><mi>ℤ</mi><mo>+</mo></msup></mrow></munder><mrow><mfrac><mi>i</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></mstyle></mrow></math>"
     },
     "Sum009": {
       "test": true,
       "preference": "default",
-      "mathml": "<math><mrow><mstyle displaystyle=\"true\"><mo>∏</mo><mrow><msub><mi>a</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>"
+      "input": "<math><mrow><mstyle displaystyle=\"true\"><mo>∏</mo><mrow><msub><mi>a</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>"
     },
     "Sum010": {
       "test": true,
       "preference": "default",
-      "mathml": "<math><mrow><mstyle displaystyle=\"true\"><munderover><mo>∩</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn></mrow></munderover><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>"
+      "input": "<math><mrow><mstyle displaystyle=\"true\"><munderover><mo>∩</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn></mrow></munderover><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>"
     },
     "Sum011": {
       "test": true,
       "preference": "default",
-      "mathml": "<math><mrow><mstyle displaystyle=\"true\"><munderover><mo>∪</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn></mrow></munderover><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>"
+      "input": "<math><mrow><mstyle displaystyle=\"true\"><munderover><mo>∪</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn></mrow></munderover><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>"
     },
     "Sum012": {
       "test": true,
       "preference": "default",
-      "mathml": "<math><mrow><mstyle displaystyle=\"true\"><mo>∩</mo><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>"
+      "input": "<math><mrow><mstyle displaystyle=\"true\"><mo>∩</mo><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>"
     },
     "Sum013": {
       "test": true,
       "preference": "default",
-      "mathml": "<math><mrow><mstyle displaystyle=\"true\"><mo>∪</mo><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>"
+      "input": "<math><mrow><mstyle displaystyle=\"true\"><mo>∪</mo><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>"
     },
     "Sum014": {
       "test": true,
       "preference": "default",
-      "mathml": "<math><mrow><mstyle displaystyle=\"true\"><munder><mo>∩</mo><mi>C</mi></munder><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>"
+      "input": "<math><mrow><mstyle displaystyle=\"true\"><munder><mo>∩</mo><mi>C</mi></munder><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>"
     },
     "Sum015": {
       "test": true,
       "preference": "default",
-      "mathml": "<math><mrow><mstyle displaystyle=\"true\"><munder><mo>∪</mo><mi>C</mi></munder><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>"
+      "input": "<math><mrow><mstyle displaystyle=\"true\"><munder><mo>∪</mo><mi>C</mi></munder><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>"
     },
     "Sum016": {
       "test": true,
       "preference": "default",
-      "mathml": "<math><mrow><mstyle displaystyle=\"true\"><mrow><mo>∫</mo><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mtext></mtext></mrow></mrow></mstyle><mi>d</mi><mi>x</mi></mrow></math>"
+      "input": "<math><mrow><mstyle displaystyle=\"true\"><mrow><mo>∫</mo><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mtext></mtext></mrow></mrow></mstyle><mi>d</mi><mi>x</mi></mrow></math>"
     },
     "Sum017": {
       "test": true,
       "preference": "default",
-      "mathml": "<math><mrow><mstyle displaystyle=\"true\"><mrow><msubsup><mo>∫</mo><mn>0</mn><mn>1</mn></msubsup><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow></mstyle><mtext></mtext><mi>d</mi><mi>x</mi></mrow></math>"
+      "input": "<math><mrow><mstyle displaystyle=\"true\"><mrow><msubsup><mo>∫</mo><mn>0</mn><mn>1</mn></msubsup><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow></mstyle><mtext></mtext><mi>d</mi><mi>x</mi></mrow></math>"
     },
     "Sum018": {
       "test": true,
       "preference": "default",
-      "mathml": "<math><mrow><mstyle displaystyle=\"true\"><mrow><munder><mo>∫</mo><mi>ℝ</mi></munder><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow></mstyle><mtext></mtext><mi>d</mi><mi>x</mi></mrow></math>"
+      "input": "<math><mrow><mstyle displaystyle=\"true\"><mrow><munder><mo>∫</mo><mi>ℝ</mi></munder><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow></mstyle><mtext></mtext><mi>d</mi><mi>x</mi></mrow></math>"
     }
   }
 }

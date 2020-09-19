@@ -7,239 +7,239 @@
   "tests": {
     "_comment1_": " Parentheses",
     "Paren001": {
-      "speech": "25"
+      "expected": "25"
     },
     "Paren002": {
-      "speech": "2 x"
+      "expected": "2 x"
     },
     "Paren003": {
-      "speech": "2 plus minus 2"
+      "expected": "2 plus minus 2"
     },
     "Paren004": {
-      "speech": "2 minus minus 2"
+      "expected": "2 minus minus 2"
     },
     "Paren004a": {
-      "speech": "2 minus minus 2"
+      "expected": "2 minus minus 2"
     },
     "Paren005": {
-      "speech": "2 minus, Klammer auf, minus 2, Klammer zu, Kubik"
+      "expected": "2 minus, Klammer auf, minus 2, Klammer zu, Kubik"
     },
     "Paren006": {
-      "speech": "Klammer auf, 2 x, Klammer zu, Quadrat"
+      "expected": "Klammer auf, 2 x, Klammer zu, Quadrat"
     },
     "Paren007": {
-      "speech": "Klammer auf, 2 x, Klammer zu, hoch y plus 1"
+      "expected": "Klammer auf, 2 x, Klammer zu, hoch y plus 1"
     },
     "Paren008": {
-      "speech": "minus 2 x"
+      "expected": "minus 2 x"
     },
     "Paren009": {
-      "speech": "Klammer auf, minus 2 x, Klammer zu, Quadrat"
+      "expected": "Klammer auf, minus 2 x, Klammer zu, Quadrat"
     },
     "Paren010": {
-      "speech": "minus, Klammer auf, 2 x, Klammer zu, Quadrat"
+      "expected": "minus, Klammer auf, 2 x, Klammer zu, Quadrat"
     },
     "Paren011": {
-      "speech": "ein halb"
+      "expected": "ein halb"
     },
     "Paren012": {
       "_comment2_": " TODO: (QUESTION) This is against the Paren_Auto rules! (page 31)!",
-      "speech": "drei viertel x"
+      "expected": "drei viertel x"
     },
     "Paren013": {
-      "speech": "Klammer auf, 11 geteilt durch 22, Klammer zu"
+      "expected": "Klammer auf, 11 geteilt durch 22, Klammer zu"
     },
     "Paren014": {
-      "speech": "ein halb hoch 4"
+      "expected": "ein halb hoch 4"
     },
     "Paren015": {
-      "speech": "Klammer auf, 11 geteilt durch 15, Klammer zu, Quadrat"
+      "expected": "Klammer auf, 11 geteilt durch 15, Klammer zu, Quadrat"
     },
     "Paren016": {
-      "speech": "Klammer auf, 25, Klammer zu"
+      "expected": "Klammer auf, 25, Klammer zu"
     },
     "Paren017": {
-      "speech": "Klammer auf, 2 x, Klammer zu"
+      "expected": "Klammer auf, 2 x, Klammer zu"
     },
     "Paren018": {
-      "speech": "2 plus, Klammer auf, minus 2, Klammer zu"
+      "expected": "2 plus, Klammer auf, minus 2, Klammer zu"
     },
     "Paren019": {
-      "speech": "2 minus, Klammer auf, minus 2, Klammer zu"
+      "expected": "2 minus, Klammer auf, minus 2, Klammer zu"
     },
     "Paren020": {
-      "speech": "2 minus, Klammer auf, minus 2, Klammer zu, Kubik"
+      "expected": "2 minus, Klammer auf, minus 2, Klammer zu, Kubik"
     },
     "Paren021": {
-      "speech": "Klammer auf, 2 x, Klammer zu, Quadrat"
+      "expected": "Klammer auf, 2 x, Klammer zu, Quadrat"
     },
     "Paren022": {
-      "speech": "Klammer auf, 2 x, Klammer zu, hoch y plus 1"
+      "expected": "Klammer auf, 2 x, Klammer zu, hoch y plus 1"
     },
     "Paren023": {
-      "speech": "Klammer auf, minus 2 x, Klammer zu"
+      "expected": "Klammer auf, minus 2 x, Klammer zu"
     },
     "Paren024": {
-      "speech": "Klammer auf, minus 2 x, Klammer zu, Quadrat"
+      "expected": "Klammer auf, minus 2 x, Klammer zu, Quadrat"
     },
     "Paren025": {
-      "speech": "minus, Klammer auf, 2 x, Klammer zu, Quadrat"
+      "expected": "minus, Klammer auf, 2 x, Klammer zu, Quadrat"
     },
     "Paren026": {
-      "speech": "Klammer auf, ein halb, Klammer zu"
+      "expected": "Klammer auf, ein halb, Klammer zu"
     },
     "Paren027": {
-      "speech": "Klammer auf, drei viertel x, Klammer zu"
+      "expected": "Klammer auf, drei viertel x, Klammer zu"
     },
     "Paren028": {
-      "speech": "Klammer auf, 11 geteilt durch 22, Klammer zu"
+      "expected": "Klammer auf, 11 geteilt durch 22, Klammer zu"
     },
     "Paren029": {
-      "speech": "Klammer auf, ein halb, Klammer zu, hoch 4"
+      "expected": "Klammer auf, ein halb, Klammer zu, hoch 4"
     },
     "Paren030": {
-      "speech": "Klammer auf, 11 geteilt durch 15, Klammer zu, Quadrat"
+      "expected": "Klammer auf, 11 geteilt durch 15, Klammer zu, Quadrat"
     },
     "Paren031": {
-      "speech": "der Punkt mit Koordinaten 1 Komma 2"
+      "expected": "der Punkt mit Koordinaten 1 Komma 2"
     },
     "Paren032": {
-      "speech": "der Punkt mit Koordinaten x Komma y"
+      "expected": "der Punkt mit Koordinaten x Komma y"
     },
     "Paren033": {
-      "speech": "der Punkt mit Koordinaten 1 Komma 2 Komma 3"
+      "expected": "der Punkt mit Koordinaten 1 Komma 2 Komma 3"
     },
     "Paren034": {
-      "speech": "der Punkt mit Koordinaten x Komma y Komma z"
+      "expected": "der Punkt mit Koordinaten x Komma y Komma z"
     },
     "Paren035": {
-      "speech": "der Punkt mit Koordinaten 1 Komma 2 Komma 386"
+      "expected": "der Punkt mit Koordinaten 1 Komma 2 Komma 386"
     },
     "Paren036": {
-      "speech": "das Interval von a bis b, ohne a und b"
+      "expected": "das Interval von a bis b, ohne a und b"
     },
     "Paren037": {
-      "speech": "das Interval von 0 bis 1, ohne 0 und 1"
+      "expected": "das Interval von 0 bis 1, ohne 0 und 1"
     },
     "Paren038": {
-      "speech": "das Interval von a bis b, einschließlich a, aber ohne b"
+      "expected": "das Interval von a bis b, einschließlich a, aber ohne b"
     },
     "Paren039": {
-      "speech": "das Interval von 0 bis 1, einschließlich 0, aber ohne 1"
+      "expected": "das Interval von 0 bis 1, einschließlich 0, aber ohne 1"
     },
     "Paren040": {
-      "speech": "das Interval von a bis b, ohne a, aber einschließlich b"
+      "expected": "das Interval von a bis b, ohne a, aber einschließlich b"
     },
     "Paren041": {
-      "speech": "das Interval von 0 bis 1, ohne 0, aber einschließlich 1"
+      "expected": "das Interval von 0 bis 1, ohne 0, aber einschließlich 1"
     },
     "Paren042": {
-      "speech": "das Interval von a bis b, einschließlich a und b"
+      "expected": "das Interval von a bis b, einschließlich a und b"
     },
     "Paren043": {
-      "speech": "das Interval von 0 bis 1, einschließlich 0 und 1"
+      "expected": "das Interval von 0 bis 1, einschließlich 0 und 1"
     },
     "Paren044": {
-      "speech": "das Interval von minus unendlich bis b, ohne b"
+      "expected": "das Interval von minus unendlich bis b, ohne b"
     },
     "Paren045": {
-      "speech": "das Interval von minus unendlich bis 1, ohne 1"
+      "expected": "das Interval von minus unendlich bis 1, ohne 1"
     },
     "Paren046": {
-      "speech": "das Interval von minus unendlich bis b, einschließlich b"
+      "expected": "das Interval von minus unendlich bis b, einschließlich b"
     },
     "Paren047": {
-      "speech": "das Interval von minus unendlich bis 1, einschließlich 1"
+      "expected": "das Interval von minus unendlich bis 1, einschließlich 1"
     },
     "Paren048": {
-      "speech": "das Interval von a bis unendlich, ohne a"
+      "expected": "das Interval von a bis unendlich, ohne a"
     },
     "Paren049": {
-      "speech": "das Interval von 1 bis unendlich, ohne 1"
+      "expected": "das Interval von 1 bis unendlich, ohne 1"
     },
     "Paren050": {
-      "speech": "das Interval von a bis unendlich, einschließlich a"
+      "expected": "das Interval von a bis unendlich, einschließlich a"
     },
     "Paren051": {
-      "speech": "das Interval von 1 bis unendlich, einschließlich 1"
+      "expected": "das Interval von 1 bis unendlich, einschließlich 1"
     },
     "Paren052": {
-      "speech": "das Interval von minus unendlich bis unendlich"
+      "expected": "das Interval von minus unendlich bis unendlich"
     },
     "Paren053": {
-      "speech": "das Interval von minus unendlich bis plus unendlich"
+      "expected": "das Interval von minus unendlich bis plus unendlich"
     },
     "Nest001": {
-      "speech": "f von, g von x"
+      "expected": "f von, g von x"
     },
     "Nest002": {
-      "speech": "f von, Klammer auf, g von, Klammer auf, x plus 1, Klammer zu, Klammer zu"
+      "expected": "f von, Klammer auf, g von, Klammer auf, x plus 1, Klammer zu, Klammer zu"
     },
     "Nest003": {
-      "speech": "6 minus, eckige Klammer auf, 2 minus, Klammer auf, 3 plus 5, Klammer zu, eckige Klammer zu"
+      "expected": "6 minus, eckige Klammer auf, 2 minus, Klammer auf, 3 plus 5, Klammer zu, eckige Klammer zu"
     },
     "Nest004": {
-      "speech": "6 minus, Klammer auf, 2 minus, zweite Klammer auf, 3 plus 5, zweite Klammer zu, Klammer zu"
+      "expected": "6 minus, Klammer auf, 2 minus, zweite Klammer auf, 3 plus 5, zweite Klammer zu, Klammer zu"
     },
     "Nest005": {
-      "speech": "4  , eckige Klammer auf, x plus 3  , Klammer auf, 2 x, plus 1, Klammer zu, eckige Klammer zu"
+      "expected": "4  , eckige Klammer auf, x plus 3  , Klammer auf, 2 x, plus 1, Klammer zu, eckige Klammer zu"
     },
     "Nest006": {
-      "speech": "4  , Klammer auf, x plus 3  , zweite Klammer auf, 2 x, plus 1, zweite Klammer zu, Klammer zu"
+      "expected": "4  , Klammer auf, x plus 3  , zweite Klammer auf, 2 x, plus 1, zweite Klammer zu, Klammer zu"
     },
     "Nest007": {
-      "speech": "1 plus, Klammer auf, 2 plus, zweite Klammer auf, 3 plus 7, zweite Klammer zu, minus, zweite Klammer auf, 2 plus 8, zweite Klammer zu, Klammer zu"
+      "expected": "1 plus, Klammer auf, 2 plus, zweite Klammer auf, 3 plus 7, zweite Klammer zu, minus, zweite Klammer auf, 2 plus 8, zweite Klammer zu, Klammer zu"
     },
     "Nest008": {
-      "speech": "1 plus, Klammer auf, 2 plus, zweite Klammer auf, 3 minus, dritte Klammer auf, 4 minus 5, dritte Klammer zu, zweite Klammer zu, Klammer zu"
+      "expected": "1 plus, Klammer auf, 2 plus, zweite Klammer auf, 3 minus, dritte Klammer auf, 4 minus 5, dritte Klammer zu, zweite Klammer zu, Klammer zu"
     },
     "Nest009": {
-      "speech": "Klammer auf, zweite Klammer auf, 2 plus, dritte Klammer auf, 3 plus 4, dritte Klammer zu, plus 5, zweite Klammer zu, plus 6 plus, zweite Klammer auf, dritte Klammer auf, 7 plus, vierte Klammer auf, 8 plus 1, vierte Klammer zu, dritte Klammer zu, plus 2, zweite Klammer zu, Klammer zu"
+      "expected": "Klammer auf, zweite Klammer auf, 2 plus, dritte Klammer auf, 3 plus 4, dritte Klammer zu, plus 5, zweite Klammer zu, plus 6 plus, zweite Klammer auf, dritte Klammer auf, 7 plus, vierte Klammer auf, 8 plus 1, vierte Klammer zu, dritte Klammer zu, plus 2, zweite Klammer zu, Klammer zu"
     },
     "SilParen001": {
-      "speech": "25"
+      "expected": "25"
     },
     "SilParen002": {
-      "speech": "2 x"
+      "expected": "2 x"
     },
     "SilParen003": {
-      "speech": "2 plus, minus 2"
+      "expected": "2 plus, minus 2"
     },
     "SilParen004": {
-      "speech": "2 minus, minus 2"
+      "expected": "2 minus, minus 2"
     },
     "SilParen005": {
-      "speech": "2 minus, minus 2, Kubik"
+      "expected": "2 minus, minus 2, Kubik"
     },
     "SilParen006": {
-      "speech": "2 x, Quadrat"
+      "expected": "2 x, Quadrat"
     },
     "SilParen007": {
-      "speech": "2 x, hoch y plus 1"
+      "expected": "2 x, hoch y plus 1"
     },
     "SilParen008": {
-      "speech": "minus 2 x"
+      "expected": "minus 2 x"
     },
     "SilParen009": {
-      "speech": "minus 2 x, Quadrat"
+      "expected": "minus 2 x, Quadrat"
     },
     "SilParen010": {
-      "speech": "minus, 2 x, Quadrat"
+      "expected": "minus, 2 x, Quadrat"
     },
     "SilParen011": {
-      "speech": "ein halb"
+      "expected": "ein halb"
     },
     "SilParen012": {
-      "speech": "drei viertel x"
+      "expected": "drei viertel x"
     },
     "SilParen013": {
-      "speech": "11 geteilt durch 22"
+      "expected": "11 geteilt durch 22"
     },
     "SilParen014": {
-      "speech": "ein halb, hoch 4"
+      "expected": "ein halb, hoch 4"
     },
     "SilParen015": {
-      "speech": "11 geteilt durch 15, Quadrat"
+      "expected": "11 geteilt durch 15, Quadrat"
     }
   }
 }

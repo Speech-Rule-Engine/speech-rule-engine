@@ -7,40 +7,40 @@
   "tests": {
     "_comment1_": " Issues",
     "Issue230_1": {
-      "speech": "5, 3 geteilt durch 224"
+      "expected": "5, 3 geteilt durch 224"
     },
     "Issue230_2": {
-      "speech": "5 drei viertel"
+      "expected": "5 drei viertel"
     },
     "IssueNumbers_1": {
-      "speech": "Zahl t 2 e 4"
+      "expected": "Zahl t 2 e 4"
     },
     "IssueNumbers_2": {
-      "speech": "Zahl Nummernzeichen F F 0 0 0 0"
+      "expected": "Zahl Nummernzeichen F F 0 0 0 0"
     },
     "IssueNumbers_3": {
-      "speech": "Zahl Nummernzeichen F F F F"
+      "expected": "Zahl Nummernzeichen F F F F"
     },
     "Issue320_1": {
-      "speech": "partielle Ableitung"
+      "expected": "partielle Ableitung"
     },
     "Issue320_2": {
-      "speech": "x Fakultät"
+      "expected": "x Fakultät"
     },
     "Issue320_3": {
-      "speech": "minus minus x"
+      "expected": "minus minus x"
     },
     "Issue320_4": {
-      "speech": "plus plus x"
+      "expected": "plus plus x"
     },
     "Issue320_5": {
-      "speech": "Sinus Sinus x"
+      "expected": "Sinus Sinus x"
     },
     "Issue320_6": {
-      "speech": "partielle Ableitung partielle Ableitung x"
+      "expected": "partielle Ableitung partielle Ableitung x"
     },
     "Issue320_7": {
-      "speech": "Klammer auf, Bruch mit Zähler partielle Ableitung Quadrat, und Nenner partielle Ableitung x Quadrat, plus, Bruch mit Zähler partielle Ableitung Quadrat, und Nenner partielle Ableitung y Quadrat, Klammer zu,  , der Betrag von phi  , Klammer auf, x plus normales i, y, Klammer zu, Quadrat ist gleich 0"
+      "expected": "Klammer auf, Bruch mit Zähler partielle Ableitung Quadrat, und Nenner partielle Ableitung x Quadrat, plus, Bruch mit Zähler partielle Ableitung Quadrat, und Nenner partielle Ableitung y Quadrat, Klammer zu,  , der Betrag von phi  , Klammer auf, x plus normales i, y, Klammer zu, Quadrat ist gleich 0"
     }
   }
 }

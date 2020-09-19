@@ -4,731 +4,731 @@
     "ImpTimes001": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes002": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mn>3</mn><mo>]</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mn>3</mn><mo>]</mo></mrow></mrow></math>"
     },
     "ImpTimes003": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><msup><mn>2</mn><mn>4</mn></msup><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><msup><mn>2</mn><mn>4</mn></msup><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes004": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes005": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>]</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>]</mo></mrow></mrow></math>"
     },
     "ImpTimes006": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes007": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mn>2</mn><msup><mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><msup><mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
     },
     "ImpTimes008": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>−</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>−</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes009": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mn>2</mn><mo>+</mo><mn>7</mn></mrow><mo>]</mo></mrow><mrow><mo>[</mo><mrow><mn>3</mn><mo>−</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mrow><mo>[</mo><mrow><mn>2</mn><mo>+</mo><mn>7</mn></mrow><mo>]</mo></mrow><mrow><mo>[</mo><mrow><mn>3</mn><mo>−</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></math>"
     },
     "_comment2_": " TODO: (Simons) x is categorised as function!",
     "ImpTimes010": {
       "test": false,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes011": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mo>+</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mo>+</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes012": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes013": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mo stretchy=\"false\">(</mo><mn>2</mn><mo>−</mo><mn>1</mn><mo stretchy=\"false\">)</mo><mi>x</mi></mrow></math>"
+      "input": "<math><mrow><mo stretchy=\"false\">(</mo><mn>2</mn><mo>−</mo><mn>1</mn><mo stretchy=\"false\">)</mo><mi>x</mi></mrow></math>"
     },
     "ImpTimes014": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes015": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><msubsup><mi>p</mi><mn>1</mn><mrow><msub><mi>a</mi><mn>1</mn></msub></mrow></msubsup><msubsup><mi>p</mi><mn>2</mn><mrow><msub><mi>a</mi><mn>2</mn></msub></mrow></msubsup></mrow></math>"
+      "input": "<math><mrow><msubsup><mi>p</mi><mn>1</mn><mrow><msub><mi>a</mi><mn>1</mn></msub></mrow></msubsup><msubsup><mi>p</mi><mn>2</mn><mrow><msub><mi>a</mi><mn>2</mn></msub></mrow></msubsup></mrow></math>"
     },
     "ImpTimes016": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo><mn>4</mn></mrow></msup><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo><mn>4</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo><mn>4</mn></mrow></msup><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo><mn>4</mn></mrow></msup></mrow></math>"
     },
     "ImpTimes017": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><msup><mn>2</mn><mrow><mn>4</mn><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>2</mn><mrow><mn>4</mn><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></msup></mrow></math>"
     },
     "ImpTimes018": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mi>x</mi><mi>y</mi></mrow></math>"
+      "input": "<math><mrow><mi>x</mi><mi>y</mi></mrow></math>"
     },
     "ImpTimes019": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><msup><mi>x</mi><mn>2</mn></msup><msup><mi>y</mi><mn>3</mn></msup></mrow></math>"
+      "input": "<math><mrow><msup><mi>x</mi><mn>2</mn></msup><msup><mi>y</mi><mn>3</mn></msup></mrow></math>"
     },
     "ImpTimes020": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msup><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msup><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
     },
     "ImpTimes021": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><msqrt><mi>a</mi></msqrt><msqrt><mi>b</mi></msqrt><mo>=</mo><msqrt><mrow><mi>a</mi><mi>b</mi></mrow></msqrt></mrow></math>"
+      "input": "<math><mrow><msqrt><mi>a</mi></msqrt><msqrt><mi>b</mi></msqrt><mo>=</mo><msqrt><mrow><mi>a</mi><mi>b</mi></mrow></msqrt></mrow></math>"
     },
     "ImpTimes022": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><msqrt><mn>3</mn></msqrt><msqrt><mrow><mn>10</mn></mrow></msqrt><mo>=</mo><msqrt><mrow><mn>30</mn></mrow></msqrt></mrow></math>"
+      "input": "<math><mrow><msqrt><mn>3</mn></msqrt><msqrt><mrow><mn>10</mn></mrow></msqrt><mo>=</mo><msqrt><mrow><mn>30</mn></mrow></msqrt></mrow></math>"
     },
     "ImpTimes023": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mn>2</mn><msqrt><mn>3</mn></msqrt></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><msqrt><mn>3</mn></msqrt></mrow></math>"
     },
     "ImpTimes024": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mn>1</mn><mo>+</mo><mn>2</mn><msqrt><mn>3</mn></msqrt></mrow></math>"
+      "input": "<math><mrow><mn>1</mn><mo>+</mo><mn>2</mn><msqrt><mn>3</mn></msqrt></mrow></math>"
     },
     "ImpTimes025": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes026": {
       "test": true,
       "preference": "ImpliedTimes_Auto:Functions_None",
-      "mathml": "<math><mrow><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes027": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mi>sin</mi><mi>x</mi><mi>cos</mi><mi>y</mi><mo>+</mo><mi>cos</mi><mi>x</mi><mi>sin</mi><mi>y</mi></mrow></math>"
+      "input": "<math><mrow><mi>sin</mi><mi>x</mi><mi>cos</mi><mi>y</mi><mo>+</mo><mi>cos</mi><mi>x</mi><mi>sin</mi><mi>y</mi></mrow></math>"
     },
     "ImpTimes027a": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mi>cos</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mi>cos</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes028": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mi>x</mi><mi>y</mi></mrow></math>"
+      "input": "<math><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mi>x</mi><mi>y</mi></mrow></math>"
     },
     "ImpTimes029": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>log</mi><mi>x</mi><mi>log</mi><mi>y</mi></mrow></math>"
+      "input": "<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>log</mi><mi>x</mi><mi>log</mi><mi>y</mi></mrow></math>"
     },
     "ImpTimes030": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>7</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>7</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes031": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes032": {
       "test": true,
       "preference": "ImpliedTimes_Auto:Paren_SpeakNestingLevel",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes033": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>"
     },
     "ImpTimes034": {
       "test": true,
       "preference": "ImpliedTimes_Auto:Paren_SpeakNestingLevel",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>"
     },
     "ImpTimes035": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow></mrow></math>"
     },
     "ImpTimes036": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow></mrow></math>"
     },
     "ImpTimes037": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mrow><mi>y</mi><mo>−</mo><mn>1</mn></mrow><mo>|</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mrow><mi>y</mi><mo>−</mo><mn>1</mn></mrow><mo>|</mo></mrow></mrow></math>"
     },
     "ImpTimes037a": {
       "test": true,
       "preference": "ImpliedTimes_Auto:AbsoluteValue_AbsEnd",
-      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mrow><mi>y</mi><mo>−</mo><mn>1</mn></mrow><mo>|</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mrow><mi>y</mi><mo>−</mo><mn>1</mn></mrow><mo>|</mo></mrow></mrow></math>"
     },
     "ImpTimes038": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow><mo>−</mo><mn>1</mn></mrow></math>"
+      "input": "<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow><mo>−</mo><mn>1</mn></mrow></math>"
     },
     "ImpTimes0381": {
       "test": true,
       "preference": "ImpliedTimes_Auto:AbsoluteValue_AbsEnd",
-      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow><mo>−</mo><mn>1</mn></mrow></math>"
+      "input": "<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow><mo>−</mo><mn>1</mn></mrow></math>"
     },
     "ImpTimes039": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes040": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mn>3</mn><mo>]</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mn>3</mn><mo>]</mo></mrow></mrow></math>"
     },
     "ImpTimes041": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><msup><mn>2</mn><mn>4</mn></msup><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><msup><mn>2</mn><mn>4</mn></msup><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes042": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes043": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>]</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>]</mo></mrow></mrow></math>"
     },
     "ImpTimes044": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes045": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><mn>2</mn><msup><mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><msup><mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
     },
     "ImpTimes046": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>−</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>−</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes047": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mn>2</mn><mo>+</mo><mn>7</mn></mrow><mo>]</mo></mrow><mrow><mo>[</mo><mrow><mn>3</mn><mo>−</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mrow><mo>[</mo><mrow><mn>2</mn><mo>+</mo><mn>7</mn></mrow><mo>]</mo></mrow><mrow><mo>[</mo><mrow><mn>3</mn><mo>−</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></math>"
     },
     "_comment3_": " TODO: (Simons) x is categorised as function!",
     "ImpTimes048": {
       "test": false,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes049": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mo>+</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mo>+</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes050": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes051": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><mo stretchy=\"false\">(</mo><mn>2</mn><mo>−</mo><mn>1</mn><mo stretchy=\"false\">)</mo><mi>x</mi></mrow></math>"
+      "input": "<math><mrow><mo stretchy=\"false\">(</mo><mn>2</mn><mo>−</mo><mn>1</mn><mo stretchy=\"false\">)</mo><mi>x</mi></mrow></math>"
     },
     "ImpTimes052": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes053": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><msubsup><mi>p</mi><mn>1</mn><mrow><msub><mi>a</mi><mn>1</mn></msub></mrow></msubsup><msubsup><mi>p</mi><mn>2</mn><mrow><msub><mi>a</mi><mn>2</mn></msub></mrow></msubsup></mrow></math>"
+      "input": "<math><mrow><msubsup><mi>p</mi><mn>1</mn><mrow><msub><mi>a</mi><mn>1</mn></msub></mrow></msubsup><msubsup><mi>p</mi><mn>2</mn><mrow><msub><mi>a</mi><mn>2</mn></msub></mrow></msubsup></mrow></math>"
     },
     "ImpTimes054": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo><mn>4</mn></mrow></msup><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo><mn>4</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo><mn>4</mn></mrow></msup><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo><mn>4</mn></mrow></msup></mrow></math>"
     },
     "ImpTimes055": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><msup><mn>2</mn><mrow><mn>4</mn><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>2</mn><mrow><mn>4</mn><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></msup></mrow></math>"
     },
     "ImpTimes056": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><mi>x</mi><mi>y</mi></mrow></math>"
+      "input": "<math><mrow><mi>x</mi><mi>y</mi></mrow></math>"
     },
     "ImpTimes057": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><msup><mi>x</mi><mn>2</mn></msup><msup><mi>y</mi><mn>3</mn></msup></mrow></math>"
+      "input": "<math><mrow><msup><mi>x</mi><mn>2</mn></msup><msup><mi>y</mi><mn>3</mn></msup></mrow></math>"
     },
     "ImpTimes058": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msup><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msup><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
     },
     "ImpTimes059": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><msqrt><mi>a</mi></msqrt><msqrt><mi>b</mi></msqrt><mo>=</mo><msqrt><mrow><mi>a</mi><mi>b</mi></mrow></msqrt></mrow></math>"
+      "input": "<math><mrow><msqrt><mi>a</mi></msqrt><msqrt><mi>b</mi></msqrt><mo>=</mo><msqrt><mrow><mi>a</mi><mi>b</mi></mrow></msqrt></mrow></math>"
     },
     "ImpTimes060": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><msqrt><mn>3</mn></msqrt><msqrt><mrow><mn>10</mn></mrow></msqrt><mo>=</mo><msqrt><mrow><mn>30</mn></mrow></msqrt></mrow></math>"
+      "input": "<math><mrow><msqrt><mn>3</mn></msqrt><msqrt><mrow><mn>10</mn></mrow></msqrt><mo>=</mo><msqrt><mrow><mn>30</mn></mrow></msqrt></mrow></math>"
     },
     "ImpTimes061": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><mn>2</mn><msqrt><mn>3</mn></msqrt></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><msqrt><mn>3</mn></msqrt></mrow></math>"
     },
     "ImpTimes062": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><mn>1</mn><mo>+</mo><mn>2</mn><msqrt><mn>3</mn></msqrt></mrow></math>"
+      "input": "<math><mrow><mn>1</mn><mo>+</mo><mn>2</mn><msqrt><mn>3</mn></msqrt></mrow></math>"
     },
     "ImpTimes063": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes064": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimesAnd:Functions_None",
-      "mathml": "<math><mrow><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes065": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><mi>sin</mi><mi>x</mi><mi>cos</mi><mi>y</mi><mo>+</mo><mi>cos</mi><mi>x</mi><mi>sin</mi><mi>y</mi></mrow></math>"
+      "input": "<math><mrow><mi>sin</mi><mi>x</mi><mi>cos</mi><mi>y</mi><mo>+</mo><mi>cos</mi><mi>x</mi><mi>sin</mi><mi>y</mi></mrow></math>"
     },
     "ImpTimes065a": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mi>cos</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mi>cos</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes066": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mi>x</mi><mi>y</mi></mrow></math>"
+      "input": "<math><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mi>x</mi><mi>y</mi></mrow></math>"
     },
     "ImpTimes067": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>log</mi><mi>x</mi><mi>log</mi><mi>y</mi></mrow></math>"
+      "input": "<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>log</mi><mi>x</mi><mi>log</mi><mi>y</mi></mrow></math>"
     },
     "ImpTimes068": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>7</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>7</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes069": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes070": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes:Paren_SpeakNestingLevel",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes070a": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>"
     },
     "ImpTimes071": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes:Paren_SpeakNestingLevel",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>"
     },
     "ImpTimes072": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow></mrow></math>"
     },
     "ImpTimes073": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow></mrow></math>"
     },
     "ImpTimes074": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mrow><mi>y</mi><mo>−</mo><mn>1</mn></mrow><mo>|</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mrow><mi>y</mi><mo>−</mo><mn>1</mn></mrow><mo>|</mo></mrow></mrow></math>"
     },
     "ImpTimes074a": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes:AbsoluteValue_AbsEnd",
-      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mrow><mi>y</mi><mo>−</mo><mn>1</mn></mrow><mo>|</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mrow><mi>y</mi><mo>−</mo><mn>1</mn></mrow><mo>|</mo></mrow></mrow></math>"
     },
     "ImpTimes075": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes",
-      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow><mo>−</mo><mn>1</mn></mrow></math>"
+      "input": "<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow><mo>−</mo><mn>1</mn></mrow></math>"
     },
     "ImpTimes076": {
       "test": true,
       "preference": "ImpliedTimes_MoreImpliedTimes:AbsoluteValue_AbsEnd",
-      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow><mo>−</mo><mn>1</mn></mrow></math>"
+      "input": "<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow><mo>−</mo><mn>1</mn></mrow></math>"
     },
     "ImpTimes077": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes078": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mn>3</mn><mo>]</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mn>3</mn><mo>]</mo></mrow></mrow></math>"
     },
     "ImpTimes079": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><msup><mn>2</mn><mn>4</mn></msup><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><msup><mn>2</mn><mn>4</mn></msup><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes080": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes081": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>]</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>]</mo></mrow></mrow></math>"
     },
     "ImpTimes082": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes083": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><mn>2</mn><msup><mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><msup><mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
     },
     "ImpTimes084": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>−</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>−</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes085": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mn>2</mn><mo>+</mo><mn>7</mn></mrow><mo>]</mo></mrow><mrow><mo>[</mo><mrow><mn>3</mn><mo>−</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mrow><mo>[</mo><mrow><mn>2</mn><mo>+</mo><mn>7</mn></mrow><mo>]</mo></mrow><mrow><mo>[</mo><mrow><mn>3</mn><mo>−</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></math>"
     },
     "_comment4_": " TODO: (Simons) x is categorised as function!",
     "ImpTimes086": {
       "test": false,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes087": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mo>+</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mo>+</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes088": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes089": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><mo stretchy=\"false\">(</mo><mn>2</mn><mo>−</mo><mn>1</mn><mo stretchy=\"false\">)</mo><mi>x</mi></mrow></math>"
+      "input": "<math><mrow><mo stretchy=\"false\">(</mo><mn>2</mn><mo>−</mo><mn>1</mn><mo stretchy=\"false\">)</mo><mi>x</mi></mrow></math>"
     },
     "ImpTimes090": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes091": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><msubsup><mi>p</mi><mn>1</mn><mrow><msub><mi>a</mi><mn>1</mn></msub></mrow></msubsup><msubsup><mi>p</mi><mn>2</mn><mrow><msub><mi>a</mi><mn>2</mn></msub></mrow></msubsup></mrow></math>"
+      "input": "<math><mrow><msubsup><mi>p</mi><mn>1</mn><mrow><msub><mi>a</mi><mn>1</mn></msub></mrow></msubsup><msubsup><mi>p</mi><mn>2</mn><mrow><msub><mi>a</mi><mn>2</mn></msub></mrow></msubsup></mrow></math>"
     },
     "ImpTimes092": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo><mn>4</mn></mrow></msup><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo><mn>4</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo><mn>4</mn></mrow></msup><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo><mn>4</mn></mrow></msup></mrow></math>"
     },
     "ImpTimes093": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><msup><mn>2</mn><mrow><mn>4</mn><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>2</mn><mrow><mn>4</mn><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></msup></mrow></math>"
     },
     "ImpTimes094": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><mi>x</mi><mi>y</mi></mrow></math>"
+      "input": "<math><mrow><mi>x</mi><mi>y</mi></mrow></math>"
     },
     "ImpTimes095": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><msup><mi>x</mi><mn>2</mn></msup><msup><mi>y</mi><mn>3</mn></msup></mrow></math>"
+      "input": "<math><mrow><msup><mi>x</mi><mn>2</mn></msup><msup><mi>y</mi><mn>3</mn></msup></mrow></math>"
     },
     "ImpTimes096": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msup><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msup><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
     },
     "ImpTimes097": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><msqrt><mi>a</mi></msqrt><msqrt><mi>b</mi></msqrt><mo>=</mo><msqrt><mrow><mi>a</mi><mi>b</mi></mrow></msqrt></mrow></math>"
+      "input": "<math><mrow><msqrt><mi>a</mi></msqrt><msqrt><mi>b</mi></msqrt><mo>=</mo><msqrt><mrow><mi>a</mi><mi>b</mi></mrow></msqrt></mrow></math>"
     },
     "ImpTimes098": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><msqrt><mn>3</mn></msqrt><msqrt><mrow><mn>10</mn></mrow></msqrt><mo>=</mo><msqrt><mrow><mn>30</mn></mrow></msqrt></mrow></math>"
+      "input": "<math><mrow><msqrt><mn>3</mn></msqrt><msqrt><mrow><mn>10</mn></mrow></msqrt><mo>=</mo><msqrt><mrow><mn>30</mn></mrow></msqrt></mrow></math>"
     },
     "ImpTimes099": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><mn>2</mn><msqrt><mn>3</mn></msqrt></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><msqrt><mn>3</mn></msqrt></mrow></math>"
     },
     "ImpTimes100": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><mn>1</mn><mo>+</mo><mn>2</mn><msqrt><mn>3</mn></msqrt></mrow></math>"
+      "input": "<math><mrow><mn>1</mn><mo>+</mo><mn>2</mn><msqrt><mn>3</mn></msqrt></mrow></math>"
     },
     "ImpTimes101": {
       "test": true,
       "preference": "ImpliedTimes_None:Functions_Auto",
-      "mathml": "<math><mrow><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "_comment5_": " TODO: (Simons) Need to be able to specify excluded preferences.",
     "ImpTimes102": {
       "test": false,
       "preference": "ImpliedTimes_None:Functions_None",
-      "mathml": "<math><mrow><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes103": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><mi>sin</mi><mi>x</mi><mi>cos</mi><mi>y</mi><mo>+</mo><mi>cos</mi><mi>x</mi><mi>sin</mi><mi>y</mi></mrow></math>"
+      "input": "<math><mrow><mi>sin</mi><mi>x</mi><mi>cos</mi><mi>y</mi><mo>+</mo><mi>cos</mi><mi>x</mi><mi>sin</mi><mi>y</mi></mrow></math>"
     },
     "ImpTimes104": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mi>x</mi><mi>y</mi></mrow></math>"
+      "input": "<math><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mi>x</mi><mi>y</mi></mrow></math>"
     },
     "ImpTimes105": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>log</mi><mi>x</mi><mi>log</mi><mi>y</mi></mrow></math>"
+      "input": "<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>log</mi><mi>x</mi><mi>log</mi><mi>y</mi></mrow></math>"
     },
     "ImpTimes106": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>7</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>7</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes107": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes108": {
       "test": true,
       "preference": "ImpliedTimes_None:Paren_SpeakNestingLevel",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimes109": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>"
     },
     "ImpTimes110": {
       "test": true,
       "preference": "ImpliedTimes_None:Paren_SpeakNestingLevel",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>"
     },
     "ImpTimes111": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow></mrow></math>"
     },
     "ImpTimes112": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow></mrow></math>"
     },
     "ImpTimes113": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mrow><mi>y</mi><mo>−</mo><mn>1</mn></mrow><mo>|</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mrow><mi>y</mi><mo>−</mo><mn>1</mn></mrow><mo>|</mo></mrow></mrow></math>"
     },
     "ImpTimes114": {
       "test": true,
       "preference": "ImpliedTimes_None",
-      "mathml": "<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow><mo>−</mo><mn>1</mn></mrow></math>"
+      "input": "<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow><mo>−</mo><mn>1</mn></mrow></math>"
     },
     "_comment6_": " No Implied Times and Silent Parenthesis Preferences both set",
     "ImpTimesSilPar001": {
       "test": true,
       "preference": "ImpliedTimes_None:Paren_Silent",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimesSilPar002": {
       "test": true,
       "preference": "ImpliedTimes_None:Paren_Silent",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mn>3</mn><mo>]</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mn>3</mn><mo>]</mo></mrow></mrow></math>"
     },
     "ImpTimesSilPar003": {
       "test": true,
       "preference": "ImpliedTimes_None:Paren_Silent",
-      "mathml": "<math><mrow><msup><mn>2</mn><mn>4</mn></msup><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><msup><mn>2</mn><mn>4</mn></msup><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimesSilPar004": {
       "test": true,
       "preference": "ImpliedTimes_None:Paren_Silent",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimesSilPar005": {
       "test": true,
       "preference": "ImpliedTimes_None:Paren_Silent",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>]</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>]</mo></mrow></mrow></math>"
     },
     "ImpTimesSilPar006": {
       "test": true,
       "preference": "ImpliedTimes_None:Paren_Silent",
-      "mathml": "<math><mrow><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimesSilPar007": {
       "test": true,
       "preference": "ImpliedTimes_None:Paren_Silent",
-      "mathml": "<math><mrow><mn>2</mn><msup><mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><msup><mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>"
     },
     "ImpTimesSilPar008": {
       "test": true,
       "preference": "ImpliedTimes_None:Paren_Silent",
-      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>−</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>−</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimesSilPar009": {
       "test": true,
       "preference": "ImpliedTimes_None:Paren_Silent",
-      "mathml": "<math><mrow><mrow><mo>[</mo><mrow><mn>2</mn><mo>+</mo><mn>7</mn></mrow><mo>]</mo></mrow><mrow><mo>[</mo><mrow><mn>3</mn><mo>−</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mrow><mo>[</mo><mrow><mn>2</mn><mo>+</mo><mn>7</mn></mrow><mo>]</mo></mrow><mrow><mo>[</mo><mrow><mn>3</mn><mo>−</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></math>"
     },
     "_comment7_": " TODO: (Simons) x is categorised as function!",
     "ImpTimesSilPar010": {
       "test": false,
       "preference": "ImpliedTimes_None:Paren_Silent",
-      "mathml": "<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimesSilPar011": {
       "test": true,
       "preference": "ImpliedTimes_None:Paren_Silent",
-      "mathml": "<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mo>+</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mo>+</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimesSilPar012": {
       "test": true,
       "preference": "ImpliedTimes_None:Paren_Silent",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimesSilPar013": {
       "test": true,
       "preference": "ImpliedTimes_None:Paren_Silent",
-      "mathml": "<math><mrow><mo stretchy=\"false\">(</mo><mn>2</mn><mo>−</mo><mn>1</mn><mo stretchy=\"false\">)</mo><mi>x</mi></mrow></math>"
+      "input": "<math><mrow><mo stretchy=\"false\">(</mo><mn>2</mn><mo>−</mo><mn>1</mn><mo stretchy=\"false\">)</mo><mi>x</mi></mrow></math>"
     },
     "ImpTimesSilPar014": {
       "test": true,
       "preference": "ImpliedTimes_None:Paren_Silent",
-      "mathml": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimesSilPar015": {
       "test": true,
       "preference": "ImpliedTimes_None:Paren_Silent",
-      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo><mn>4</mn></mrow></msup><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo><mn>4</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo><mn>4</mn></mrow></msup><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo><mn>4</mn></mrow></msup></mrow></math>"
     },
     "ImpTimesSilPar016": {
       "test": true,
       "preference": "ImpliedTimes_None:Paren_Silent",
-      "mathml": "<math><mrow><msup><mn>2</mn><mrow><mn>4</mn><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>2</mn><mrow><mn>4</mn><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></msup></mrow></math>"
     },
     "ImpTimesSilPar017": {
       "test": true,
       "preference": "ImpliedTimes_None",
       "_comment8_": " preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!",
-      "mathml": "<math><mrow><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "_comment9_": " TODO: (Simons) Need to be able to specify excluded preferences.",
     "ImpTimesSilPar018": {
       "test": false,
       "preference": "ImpliedTimes_None:Paren_Silent:Functions_None",
-      "mathml": "<math><mrow><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimesSilPar019": {
       "test": true,
       "preference": "ImpliedTimes_None",
       "_comment10_": " preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!",
-      "mathml": "<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>log</mi><mi>x</mi><mi>log</mi><mi>y</mi></mrow></math>"
+      "input": "<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>log</mi><mi>x</mi><mi>log</mi><mi>y</mi></mrow></math>"
     },
     "ImpTimesSilPar020": {
       "test": true,
       "preference": "ImpliedTimes_None:Paren_Silent",
-      "mathml": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>7</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>7</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimesSilPar021": {
       "test": true,
       "preference": "ImpliedTimes_None:Paren_Silent",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimesSilPar022": {
       "test": true,
       "preference": "ImpliedTimes_None:Paren_SpeakNestingLevel",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "ImpTimesSilPar023": {
       "test": true,
       "preference": "ImpliedTimes_None:Paren_Silent",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>"
     },
     "ImpTimesSilPar024": {
       "test": true,
       "preference": "ImpliedTimes_None:Paren_SpeakNestingLevel",
-      "mathml": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>"
     },
     "_comment11_": " Implied Times, Functions, or Something Else",
     "_comment12_": " TODO: QUESTION What is exact speech? From MathType?",
@@ -737,97 +737,97 @@
     "Extra001": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mi>A</mi><mo>=</mo><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>+</mo><msub><mi>b</mi><mn>2</mn></msub></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>A</mi><mo>=</mo><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>+</mo><msub><mi>b</mi><mn>2</mn></msub></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "Extra002": {
       "test": true,
       "preference": "ImpliedTimes_Auto:Functions_None",
-      "mathml": "<math><mrow><mi>A</mi><mo>=</mo><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>+</mo><msub><mi>b</mi><mn>2</mn></msub></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>A</mi><mo>=</mo><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>+</mo><msub><mi>b</mi><mn>2</mn></msub></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "Extra003": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mi>a</mi><mrow><mo>(</mo><mn>0</mn><mo>)</mo></mrow><mo>=</mo><mn>0</mn><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow><mo>=</mo><mn>0</mn></mrow></math>"
+      "input": "<math><mrow><mi>a</mi><mrow><mo>(</mo><mn>0</mn><mo>)</mo></mrow><mo>=</mo><mn>0</mn><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow><mo>=</mo><mn>0</mn></mrow></math>"
     },
     "Extra004": {
       "test": true,
       "preference": "ImpliedTimes_Auto:Functions_None",
-      "mathml": "<math><mrow><mi>a</mi><mrow><mo>(</mo><mn>0</mn><mo>)</mo></mrow><mo>=</mo><mn>0</mn><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow><mo>=</mo><mn>0</mn></mrow></math>"
+      "input": "<math><mrow><mi>a</mi><mrow><mo>(</mo><mn>0</mn><mo>)</mo></mrow><mo>=</mo><mn>0</mn><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow><mo>=</mo><mn>0</mn></mrow></math>"
     },
     "Extra005": {
       "test": true,
       "preference": "ImpliedTimes_Auto:Functions_None",
-      "mathml": "<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mi>a</mi></mrow></math>"
+      "input": "<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mi>a</mi></mrow></math>"
     },
     "Extra006": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mi>a</mi></mrow></math>"
+      "input": "<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mi>a</mi></mrow></math>"
     },
     "_comment15_": " TODO: (Simons) a is categorised as function!",
     "Extra007": {
       "test": false,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mi>b</mi><mi>c</mi></mrow><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mrow><mi>a</mi><mi>b</mi></mrow><mo>)</mo></mrow><mi>c</mi></mrow></math>"
+      "input": "<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mi>b</mi><mi>c</mi></mrow><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mrow><mi>a</mi><mi>b</mi></mrow><mo>)</mo></mrow><mi>c</mi></mrow></math>"
     },
     "_comment16_": " TODO: (Simons) a is categorised as function!",
     "Extra008": {
       "test": false,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mi>a</mi></mfrac></mrow><mo>)</mo></mrow><mo>=</mo><mn>1</mn></mrow></math>"
+      "input": "<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mi>a</mi></mfrac></mrow><mo>)</mo></mrow><mo>=</mo><mn>1</mn></mrow></math>"
     },
     "_comment17_": " TODO: (Simons) a is categorised as function!",
     "Extra009": {
       "test": false,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math style=\"background-color:#\"><semantics><mrow><mo>−</mo><mi>u</mi><mrow><mo>(</mo><mi>v</mi><mo>)</mo></mrow><mo>=</mo><mi>u</mi><mrow><mo>(</mo><mrow><mo>−</mo><mi>v</mi></mrow><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mrow><mo>(</mo><mrow><mi>u</mi><mi>v</mi></mrow><mo>)</mo></mrow></mrow></semantics></math>"
+      "input": "<math style=\"background-color:#\"><semantics><mrow><mo>−</mo><mi>u</mi><mrow><mo>(</mo><mi>v</mi><mo>)</mo></mrow><mo>=</mo><mi>u</mi><mrow><mo>(</mo><mrow><mo>−</mo><mi>v</mi></mrow><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mrow><mo>(</mo><mrow><mi>u</mi><mi>v</mi></mrow><mo>)</mo></mrow></mrow></semantics></math>"
     },
     "Extra010": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mi>B</mi><mrow><mo>(</mo><mrow><mn>2</mn><mo>,</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>B</mi><mrow><mo>(</mo><mrow><mn>2</mn><mo>,</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "Extra012": {
       "test": true,
       "preference": "ImpliedTimes_Auto:Functions_None",
-      "mathml": "<math><mrow><mi>B</mi><mrow><mo>(</mo><mrow><mn>2</mn><mo>,</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>B</mi><mrow><mo>(</mo><mrow><mn>2</mn><mo>,</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "_comment18_": " TODO: (Simons) Explore exact speech.",
     "Extra013": {
       "test": false,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mi exact-speech=\"point B\">B</mi><mrow><mo>(</mo><mrow><mn>2</mn><mo>,</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi exact-speech=\"point B\">B</mi><mrow><mo>(</mo><mrow><mn>2</mn><mo>,</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "Extra014": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mi>p</mi><mrow><mo>(</mo><mi>w</mi><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>p</mi><mrow><mo>(</mo><mi>w</mi><mo>)</mo></mrow></mrow></math>"
     },
     "Extra015": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mi>x</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mn>2</mn><mi>t</mi><mo>+</mo><mn>4</mn></mrow></math>"
+      "input": "<math><mrow><mi>x</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mn>2</mn><mi>t</mi><mo>+</mo><mn>4</mn></mrow></math>"
     },
     "Extra016": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mi>k</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>−</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>k</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>−</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "_comment19_": " TODO: (Simons) a is categorised as function!",
     "Extra017": {
       "test": false,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mn>3</mn><msup><mi>a</mi><mn>2</mn></msup><mo>−</mo><mn>12</mn><mi>a</mi><mo>=</mo><mn>3</mn><mi>a</mi><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow><mo>−</mo><mn>3</mn><mi>a</mi><mrow><mo>(</mo><mn>4</mn><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mn>3</mn><msup><mi>a</mi><mn>2</mn></msup><mo>−</mo><mn>12</mn><mi>a</mi><mo>=</mo><mn>3</mn><mi>a</mi><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow><mo>−</mo><mn>3</mn><mi>a</mi><mrow><mo>(</mo><mn>4</mn><mo>)</mo></mrow></mrow></math>"
     },
     "Extra018": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mi>T</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><msub><mi>T</mi><mi>s</mi></msub><mo>+</mo><mrow><mo>(</mo><mrow><msub><mi>T</mi><mn>0</mn></msub><mo>−</mo><msub><mi>T</mi><mi>s</mi></msub></mrow><mo>)</mo></mrow><msup><mi>e</mi><mrow><mo>−</mo><mi>k</mi><mi>t</mi></mrow></msup></mrow></math>"
+      "input": "<math><mrow><mi>T</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><msub><mi>T</mi><mi>s</mi></msub><mo>+</mo><mrow><mo>(</mo><mrow><msub><mi>T</mi><mn>0</mn></msub><mo>−</mo><msub><mi>T</mi><mi>s</mi></msub></mrow><mo>)</mo></mrow><msup><mi>e</mi><mrow><mo>−</mo><mi>k</mi><mi>t</mi></mrow></msup></mrow></math>"
     },
     "Extra019": {
       "test": true,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mi>V</mi><mo>=</mo><mi mathvariant=\"script\">l</mi><mi>w</mi><mrow><mo>(</mo><mn>8</mn><mo>)</mo></mrow></mrow></math>",
+      "input": "<math><mrow><mi>V</mi><mo>=</mo><mi mathvariant=\"script\">l</mi><mi>w</mi><mrow><mo>(</mo><mn>8</mn><mo>)</mo></mrow></mrow></math>",
       "_comment20_": " w is considered a simple function.",
       "_comment21_": "var speech = 'V, equals, script l, w, times 8';"
     },
@@ -835,7 +835,7 @@
     "Extra020": {
       "test": false,
       "preference": "ImpliedTimes_Auto",
-      "mathml": "<math><mrow><mi>V</mi><mo>=</mo><mi mathvariant=\"script\">l</mi><mi>w</mi><mrow exact-speech=\"times 8\"><mo>(</mo><mn>8</mn><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>V</mi><mo>=</mo><mi mathvariant=\"script\">l</mi><mi>w</mi><mrow exact-speech=\"times 8\"><mo>(</mo><mn>8</mn><mo>)</mo></mrow></mrow></math>"
     }
   }
 }

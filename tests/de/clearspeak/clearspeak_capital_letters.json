@@ -8,68 +8,68 @@
     "_comment1_": " Capital Letters",
     "_comment2_": " TODO: (QUESTION) This is does not seem to follow the fraction rules.",
     "Cap001": {
-      "speech": "Sinus A geteilt durch a, ist gleich, Sinus B geteilt durch b"
+      "expected": "Sinus A geteilt durch a, ist gleich, Sinus B geteilt durch b"
     },
     "Cap002": {
-      "speech": "c Quadrat ist gleich a Quadrat plus b Quadrat minus 2 a b Kosinus C"
+      "expected": "c Quadrat ist gleich a Quadrat plus b Quadrat minus 2 a b Kosinus C"
     },
     "Cap003": {
-      "speech": "Tangens A ist gleich, a geteilt durch b"
+      "expected": "Tangens A ist gleich, a geteilt durch b"
     },
     "Cap004": {
-      "speech": "A B"
+      "expected": "A B"
     },
     "Cap005": {
-      "speech": "a A"
+      "expected": "a A"
     },
     "Cap006": {
-      "speech": "b A"
+      "expected": "b A"
     },
     "Cap007": {
-      "speech": "B a"
+      "expected": "B a"
     },
     "Cap008": {
-      "speech": "Winkel A B C"
+      "expected": "Winkel A B C"
     },
     "Cap009": {
-      "speech": "das Maß des Winkels A B C"
+      "expected": "das Maß des Winkels A B C"
     },
     "Cap010": {
-      "speech": "das Maß des Winkels A"
+      "expected": "das Maß des Winkels A"
     },
     "_comment3_": " TODO: (QUESTION) This is does not seem to follow the fraction rules.",
     "Cap011": {
-      "speech": "Sinus großes A geteilt durch a, ist gleich, Sinus großes B geteilt durch b"
+      "expected": "Sinus großes A geteilt durch a, ist gleich, Sinus großes B geteilt durch b"
     },
     "Cap012": {
-      "speech": "c Quadrat ist gleich a Quadrat plus b Quadrat minus 2 a b Kosinus großes C"
+      "expected": "c Quadrat ist gleich a Quadrat plus b Quadrat minus 2 a b Kosinus großes C"
     },
     "Cap013": {
-      "speech": "Tangens großes A ist gleich, a geteilt durch b"
+      "expected": "Tangens großes A ist gleich, a geteilt durch b"
     },
     "Cap014": {
-      "speech": "großes A, großes B"
+      "expected": "großes A, großes B"
     },
     "Cap015": {
-      "speech": "a, großes A"
+      "expected": "a, großes A"
     },
     "Cap016": {
-      "speech": "b, großes A"
+      "expected": "b, großes A"
     },
     "Cap017": {
-      "speech": "großes B, a"
+      "expected": "großes B, a"
     },
     "Cap018": {
-      "speech": "Winkel großes A, großes B, großes C"
+      "expected": "Winkel großes A, großes B, großes C"
     },
     "Cap019": {
-      "speech": "das Maß des Winkels großes A, großes B, großes C"
+      "expected": "das Maß des Winkels großes A, großes B, großes C"
     },
     "Cap020": {
-      "speech": "das Maß des Winkels großes A"
+      "expected": "das Maß des Winkels großes A"
     },
     "Cap020a": {
-      "speech": "Winkel großes A"
+      "expected": "Winkel großes A"
     }
   }
 }

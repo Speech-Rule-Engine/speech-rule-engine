@@ -8,76 +8,76 @@
     "_comment1_": " ClearSpeak Rules and Preferences Examples: Named Sets (Number Systems)",
     "_comment2_": " Named Sets (Number Systems)",
     "NumSys001": {
-      "speech": "les nombres réels"
+      "expected": "les nombres réels"
     },
     "NumSys001a": {
-      "speech": "les nombres réels"
+      "expected": "les nombres réels"
     },
     "NumSys002": {
-      "speech": "les nombres complexes"
+      "expected": "les nombres complexes"
     },
     "NumSys002a": {
-      "speech": "les nombres complexes"
+      "expected": "les nombres complexes"
     },
     "NumSys003": {
-      "speech": "les nombres entiers"
+      "expected": "les nombres entiers"
     },
     "NumSys003a": {
-      "speech": "les nombres entiers"
+      "expected": "les nombres entiers"
     },
     "NumSys004": {
-      "speech": "les Nombres rationnels"
+      "expected": "les Nombres rationnels"
     },
     "NumSys004a": {
-      "speech": "les Nombres rationnels"
+      "expected": "les Nombres rationnels"
     },
     "NumSys005": {
-      "speech": "les nombres entier naturel"
+      "expected": "les nombres entier naturel"
     },
     "NumSys005a": {
-      "speech": "les nombres entier naturel"
+      "expected": "les nombres entier naturel"
     },
     "NumSys005_1": {
-      "speech": "les nombres entiers naturel avec zero"
+      "expected": "les nombres entiers naturel avec zero"
     },
     "NumSys005_1a": {
-      "speech": "les nombres entiers naturel avec zero"
+      "expected": "les nombres entiers naturel avec zero"
     },
     "NumSys006": {
-      "speech": "les nombres entiers positif"
+      "expected": "les nombres entiers positif"
     },
     "NumSys006a": {
-      "speech": "les nombres entiers positif"
+      "expected": "les nombres entiers positif"
     },
     "NumSys006_1": {
-      "speech": "les nombres entiers négatif"
+      "expected": "les nombres entiers négatif"
     },
     "NumSys006_1a": {
-      "speech": "les nombres entiers négatif"
+      "expected": "les nombres entiers négatif"
     },
     "NumSys007": {
-      "speech": "r-deux"
+      "expected": "r-deux"
     },
     "NumSys007a": {
-      "speech": "r-deux"
+      "expected": "r-deux"
     },
     "NumSys008": {
-      "speech": "z-trois"
+      "expected": "z-trois"
     },
     "NumSys008a": {
-      "speech": "z-trois"
+      "expected": "z-trois"
     },
     "NumSys009": {
-      "speech": "c-n"
+      "expected": "c-n"
     },
     "NumSys009a": {
-      "speech": "c-n"
+      "expected": "c-n"
     },
     "NumSys010": {
-      "speech": "r-infini"
+      "expected": "r-infini"
     },
     "NumSys010a": {
-      "speech": "r-infini"
+      "expected": "r-infini"
     }
   }
 }

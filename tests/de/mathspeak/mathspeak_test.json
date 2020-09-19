@@ -9,660 +9,660 @@
   "exclude": [],
   "tests": {
     "Sample_1_1_1_default": {
-      "mathml": "<mrow><mi>π</mi><mo>≈</mo><mn>3,14159</mn></mrow>",
-      "speech": "pi beinahe gleich 3,141 59"
+      "input": "<mrow><mi>π</mi><mo>≈</mo><mn>3,14159</mn></mrow>",
+      "expected": "pi beinahe gleich 3,141 59"
     },
     "Sample_1_1_1_brief": {
-      "mathml": "<mrow><mi>π</mi><mo>≈</mo><mn>3,14159</mn></mrow>",
-      "speech": "pi beinahe gleich 3,141 59"
+      "input": "<mrow><mi>π</mi><mo>≈</mo><mn>3,14159</mn></mrow>",
+      "expected": "pi beinahe gleich 3,141 59"
     },
     "Sample_1_1_1_sbrief": {
-      "mathml": "<mrow><mi>π</mi><mo>≈</mo><mn>3,14159</mn></mrow>",
-      "speech": "pi beinahe gleich 3,141 59"
+      "input": "<mrow><mi>π</mi><mo>≈</mo><mn>3,14159</mn></mrow>",
+      "expected": "pi beinahe gleich 3,141 59"
     },
     "Sample_1_1_2_default": {
-      "mathml": "<mrow><mn>102</mn><mo>+</mo><mn>2214</mn><mo>+</mo><mn>15</mn><mo>=</mo><mn>2331</mn></mrow>",
-      "speech": "102 plus 2214 plus 15 ist gleich 2331"
+      "input": "<mrow><mn>102</mn><mo>+</mo><mn>2214</mn><mo>+</mo><mn>15</mn><mo>=</mo><mn>2331</mn></mrow>",
+      "expected": "102 plus 2214 plus 15 ist gleich 2331"
     },
     "Sample_1_1_2_brief": {
-      "mathml": "<mrow><mn>102</mn><mo>+</mo><mn>2214</mn><mo>+</mo><mn>15</mn><mo>=</mo><mn>2331</mn></mrow>",
-      "speech": "102 plus 2214 plus 15 ist gleich 2331"
+      "input": "<mrow><mn>102</mn><mo>+</mo><mn>2214</mn><mo>+</mo><mn>15</mn><mo>=</mo><mn>2331</mn></mrow>",
+      "expected": "102 plus 2214 plus 15 ist gleich 2331"
     },
     "Sample_1_1_2_sbrief": {
-      "mathml": "<mrow><mn>102</mn><mo>+</mo><mn>2214</mn><mo>+</mo><mn>15</mn><mo>=</mo><mn>2331</mn></mrow>",
-      "speech": "102 plus 2214 plus 15 ist gleich 2331"
+      "input": "<mrow><mn>102</mn><mo>+</mo><mn>2214</mn><mo>+</mo><mn>15</mn><mo>=</mo><mn>2331</mn></mrow>",
+      "expected": "102 plus 2214 plus 15 ist gleich 2331"
     },
     "Sample_1_1_3_default": {
-      "speech": "59 mal 0 ist gleich 0"
+      "expected": "59 mal 0 ist gleich 0"
     },
     "Sample_1_1_3_brief": {
-      "speech": "59 mal 0 ist gleich 0"
+      "expected": "59 mal 0 ist gleich 0"
     },
     "Sample_1_1_3_sbrief": {
-      "speech": "59 mal 0 ist gleich 0"
+      "expected": "59 mal 0 ist gleich 0"
     },
     "Sample_1_2_1_default": {
-      "speech": "3 minus minus 2"
+      "expected": "3 minus minus 2"
     },
     "Sample_1_2_1_brief": {
-      "speech": "3 minus minus 2"
+      "expected": "3 minus minus 2"
     },
     "Sample_1_2_1_sbrief": {
-      "speech": "3 minus minus 2"
+      "expected": "3 minus minus 2"
     },
     "Sample_1_2_2_default": {
-      "speech": "minus y"
+      "expected": "minus y"
     },
     "Sample_1_2_2_brief": {
-      "speech": "minus y"
+      "expected": "minus y"
     },
     "Sample_1_2_2_sbrief": {
-      "speech": "minus y"
+      "expected": "minus y"
     },
     "Sample_1_2_3_default": {
-      "speech": "minus 32"
+      "expected": "minus 32"
     },
     "Sample_1_2_3_brief": {
-      "speech": "minus 32"
+      "expected": "minus 32"
     },
     "Sample_1_2_3_sbrief": {
-      "speech": "minus 32"
+      "expected": "minus 32"
     },
     "Sample_1_4_1_default": {
-      "speech": "Zahl t 2 e 4"
+      "expected": "Zahl t 2 e 4"
     },
     "Sample_1_4_1_brief": {
-      "speech": "Zahl t 2 e 4"
+      "expected": "Zahl t 2 e 4"
     },
     "Sample_1_4_1_sbrief": {
-      "speech": "Zahl t 2 e 4"
+      "expected": "Zahl t 2 e 4"
     },
     "Sample_1_4_2_default": {
-      "speech": "Zahl Nummernzeichen F F 0 0 0 0"
+      "expected": "Zahl Nummernzeichen F F 0 0 0 0"
     },
     "Sample_1_4_2_brief": {
-      "speech": "Zahl Nummernzeichen F F 0 0 0 0"
+      "expected": "Zahl Nummernzeichen F F 0 0 0 0"
     },
     "Sample_1_4_2_sbrief": {
-      "speech": "Zahl Nummernzeichen F F 0 0 0 0"
+      "expected": "Zahl Nummernzeichen F F 0 0 0 0"
     },
     "Sample_1_4_3_default": {
-      "speech": "Zahl 0 x 1 5 F F plus Zahl 0 x 2 B 0 1 ist gleich Zahl 0 x 4 1 0 0"
+      "expected": "Zahl 0 x 1 5 F F plus Zahl 0 x 2 B 0 1 ist gleich Zahl 0 x 4 1 0 0"
     },
     "Sample_1_4_3_brief": {
-      "speech": "Zahl 0 x 1 5 F F plus Zahl 0 x 2 B 0 1 ist gleich Zahl 0 x 4 1 0 0"
+      "expected": "Zahl 0 x 1 5 F F plus Zahl 0 x 2 B 0 1 ist gleich Zahl 0 x 4 1 0 0"
     },
     "Sample_1_4_3_sbrief": {
-      "speech": "Zahl 0 x 1 5 F F plus Zahl 0 x 2 B 0 1 ist gleich Zahl 0 x 4 1 0 0"
+      "expected": "Zahl 0 x 1 5 F F plus Zahl 0 x 2 B 0 1 ist gleich Zahl 0 x 4 1 0 0"
     },
     "Sample_1_5_1_default": {
-      "speech": "großes I Komma Wort groß I I Komma Wort groß I I I Komma Wort groß I V Komma großes V Punkt"
+      "expected": "großes I Komma Wort groß I I Komma Wort groß I I I Komma Wort groß I V Komma großes V Punkt"
     },
     "Sample_1_5_1_brief": {
-      "speech": "großes I Komma Wort groß I I Komma Wort groß I I I Komma Wort groß I V Komma großes V Punkt"
+      "expected": "großes I Komma Wort groß I I Komma Wort groß I I I Komma Wort groß I V Komma großes V Punkt"
     },
     "Sample_1_5_1_sbrief": {
-      "speech": "großes I Komma Wort groß I I Komma Wort groß I I I Komma Wort groß I V Komma großes V Punkt"
+      "expected": "großes I Komma Wort groß I I Komma Wort groß I I I Komma Wort groß I V Komma großes V Punkt"
     },
     "Sample_2_1_1_default": {
-      "speech": "d ist gleich Anfang Quadratwurzel Klammer auf großes X minus x Klammer zu Quadrat minus Klammer auf großes Y minus y Klammer zu Quadrat Ende Quadratwurzel"
+      "expected": "d ist gleich Anfang Quadratwurzel Klammer auf großes X minus x Klammer zu Quadrat minus Klammer auf großes Y minus y Klammer zu Quadrat Ende Quadratwurzel"
     },
     "Sample_2_1_1_brief": {
-      "speech": "d ist gleich Anfang Quadratwurzel Klammer auf großes X minus x Klammer zu Quadrat minus Klammer auf großes Y minus y Klammer zu Quadrat Ende Quadratwurzel"
+      "expected": "d ist gleich Anfang Quadratwurzel Klammer auf großes X minus x Klammer zu Quadrat minus Klammer auf großes Y minus y Klammer zu Quadrat Ende Quadratwurzel"
     },
     "Sample_2_1_1_sbrief": {
-      "speech": "d ist gleich Quadratwurzel Klammer auf großes X minus x Klammer zu Quadrat minus Klammer auf großes Y minus y Klammer zu Quadrat Ende Quadratwurzel"
+      "expected": "d ist gleich Quadratwurzel Klammer auf großes X minus x Klammer zu Quadrat minus Klammer auf großes Y minus y Klammer zu Quadrat Ende Quadratwurzel"
     },
     "Sample_2_3_1_default": {
-      "mathml": "<mrow><mtext>Wenn</mtext><mspace width=\"4.pt\"/><mi>A</mi><mo>→</mo><mi>B</mi><mspace width=\"4.pt\"/><mtext>und</mtext><mspace width=\"4.pt\"/><mi>B</mi><mo>→</mo><mi>C</mi><mspace width=\"4.pt\"/><mtext>dann</mtext><mspace width=\"4.pt\"/><mi>A</mi><mo>→</mo><mi>C</mi><mo>.</mo></mrow>",
-      "speech": "Wenn großes A Pfeil nach rechts großes B und großes B Pfeil nach rechts großes C dann großes A Pfeil nach rechts großes C Punkt"
+      "input": "<mrow><mtext>Wenn</mtext><mspace width=\"4.pt\"/><mi>A</mi><mo>→</mo><mi>B</mi><mspace width=\"4.pt\"/><mtext>und</mtext><mspace width=\"4.pt\"/><mi>B</mi><mo>→</mo><mi>C</mi><mspace width=\"4.pt\"/><mtext>dann</mtext><mspace width=\"4.pt\"/><mi>A</mi><mo>→</mo><mi>C</mi><mo>.</mo></mrow>",
+      "expected": "Wenn großes A Pfeil nach rechts großes B und großes B Pfeil nach rechts großes C dann großes A Pfeil nach rechts großes C Punkt"
     },
     "Sample_2_3_1_brief": {
-      "mathml": "<mrow><mtext>Wenn</mtext><mspace width=\"4.pt\"/><mi>A</mi><mo>→</mo><mi>B</mi><mspace width=\"4.pt\"/><mtext>und</mtext><mspace width=\"4.pt\"/><mi>B</mi><mo>→</mo><mi>C</mi><mspace width=\"4.pt\"/><mtext>dann</mtext><mspace width=\"4.pt\"/><mi>A</mi><mo>→</mo><mi>C</mi><mo>.</mo></mrow>",
-      "speech": "Wenn großes A Pfeil nach rechts großes B und großes B Pfeil nach rechts großes C dann großes A Pfeil nach rechts großes C Punkt"
+      "input": "<mrow><mtext>Wenn</mtext><mspace width=\"4.pt\"/><mi>A</mi><mo>→</mo><mi>B</mi><mspace width=\"4.pt\"/><mtext>und</mtext><mspace width=\"4.pt\"/><mi>B</mi><mo>→</mo><mi>C</mi><mspace width=\"4.pt\"/><mtext>dann</mtext><mspace width=\"4.pt\"/><mi>A</mi><mo>→</mo><mi>C</mi><mo>.</mo></mrow>",
+      "expected": "Wenn großes A Pfeil nach rechts großes B und großes B Pfeil nach rechts großes C dann großes A Pfeil nach rechts großes C Punkt"
     },
     "Sample_2_3_1_sbrief": {
-      "mathml": "<mrow><mtext>Wenn</mtext><mspace width=\"4.pt\"/><mi>A</mi><mo>→</mo><mi>B</mi><mspace width=\"4.pt\"/><mtext>und</mtext><mspace width=\"4.pt\"/><mi>B</mi><mo>→</mo><mi>C</mi><mspace width=\"4.pt\"/><mtext>dann</mtext><mspace width=\"4.pt\"/><mi>A</mi><mo>→</mo><mi>C</mi><mo>.</mo></mrow>",
-      "speech": "Wenn großes A Pfeil nach rechts großes B und großes B Pfeil nach rechts großes C dann großes A Pfeil nach rechts großes C Punkt"
+      "input": "<mrow><mtext>Wenn</mtext><mspace width=\"4.pt\"/><mi>A</mi><mo>→</mo><mi>B</mi><mspace width=\"4.pt\"/><mtext>und</mtext><mspace width=\"4.pt\"/><mi>B</mi><mo>→</mo><mi>C</mi><mspace width=\"4.pt\"/><mtext>dann</mtext><mspace width=\"4.pt\"/><mi>A</mi><mo>→</mo><mi>C</mi><mo>.</mo></mrow>",
+      "expected": "Wenn großes A Pfeil nach rechts großes B und großes B Pfeil nach rechts großes C dann großes A Pfeil nach rechts großes C Punkt"
     },
     "Sample_2_6_1_default": {
-      "speech": "fettes eckige Klammer auf x fettes eckige Klammer zu"
+      "expected": "fettes eckige Klammer auf x fettes eckige Klammer zu"
     },
     "Sample_2_6_1_brief": {
-      "speech": "fettes eckige Klammer auf x fettes eckige Klammer zu"
+      "expected": "fettes eckige Klammer auf x fettes eckige Klammer zu"
     },
     "Sample_2_6_1_sbrief": {
-      "speech": "fettes eckige Klammer auf x fettes eckige Klammer zu"
+      "expected": "fettes eckige Klammer auf x fettes eckige Klammer zu"
     },
     "Sample_2_6_2_default": {
-      "speech": "Randintegral großes E mal d fettes l ist gleich minus Anfang Bruch d großes Phi großes B durch d t Ende Bruch"
+      "expected": "Randintegral großes E mal d fettes l ist gleich minus Anfang Bruch d großes Phi großes B durch d t Ende Bruch"
     },
     "Sample_2_6_2_brief": {
-      "speech": "Randintegral großes E mal d fettes l ist gleich minus Anfang Bruch d großes Phi großes B durch d t Ende Bruch"
+      "expected": "Randintegral großes E mal d fettes l ist gleich minus Anfang Bruch d großes Phi großes B durch d t Ende Bruch"
     },
     "Sample_2_6_2_sbrief": {
-      "speech": "Randintegral großes E mal d fettes l ist gleich minus Bruch d großes Phi großes B durch d t Ende Bruch"
+      "expected": "Randintegral großes E mal d fettes l ist gleich minus Bruch d großes Phi großes B durch d t Ende Bruch"
     },
     "NegativeVsMinus_0": {
-      "speech": "minus Anfang Bruch 1 durch b Ende Bruch"
+      "expected": "minus Anfang Bruch 1 durch b Ende Bruch"
     },
     "NegativeVsMinus_1": {
-      "speech": "minus Anfang Bruch a durch b Ende Bruch"
+      "expected": "minus Anfang Bruch a durch b Ende Bruch"
     },
     "NegativeVsMinus_2": {
-      "speech": "minus 3 ein halb"
+      "expected": "minus 3 ein halb"
     },
     "Sample_4_2_1_default": {
-      "mathml": "<mrow><mtext>Gross</mtext><mo>(</mo><mo>{</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo>,</mo><mi>γ</mi><mo>,</mo><mi>δ</mi><mo>,</mo><mi>ϵ</mi><mo>,</mo><mi>φ</mi><mo>}</mo><mo>)</mo><mo>=</mo><mo>{</mo><mi>Α</mi><mo>,</mo><mi>Β</mi><mo>,</mo><mi>Γ</mi><mo>,</mo><mi>Δ</mi><mo>,</mo><mi>Ε</mi><mo>,</mo><mi>Φ</mi><mo>}</mo></mrow>",
-      "speech": "Gross Klammer auf Anfang Menge alpha Komma beta Komma gamma Komma delta Komma epsilon Komma phi Ende Menge Klammer zu ist gleich Anfang Menge großes Alpha Komma großes Beta Komma großes Gamma Komma großes Delta Komma großes Epsilon Komma großes Phi Ende Menge"
+      "input": "<mrow><mtext>Gross</mtext><mo>(</mo><mo>{</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo>,</mo><mi>γ</mi><mo>,</mo><mi>δ</mi><mo>,</mo><mi>ϵ</mi><mo>,</mo><mi>φ</mi><mo>}</mo><mo>)</mo><mo>=</mo><mo>{</mo><mi>Α</mi><mo>,</mo><mi>Β</mi><mo>,</mo><mi>Γ</mi><mo>,</mo><mi>Δ</mi><mo>,</mo><mi>Ε</mi><mo>,</mo><mi>Φ</mi><mo>}</mo></mrow>",
+      "expected": "Gross Klammer auf Anfang Menge alpha Komma beta Komma gamma Komma delta Komma epsilon Komma phi Ende Menge Klammer zu ist gleich Anfang Menge großes Alpha Komma großes Beta Komma großes Gamma Komma großes Delta Komma großes Epsilon Komma großes Phi Ende Menge"
     },
     "Sample_4_2_1_brief": {
-      "mathml": "<mrow><mtext>Gross</mtext><mo>(</mo><mo>{</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo>,</mo><mi>γ</mi><mo>,</mo><mi>δ</mi><mo>,</mo><mi>ϵ</mi><mo>,</mo><mi>φ</mi><mo>}</mo><mo>)</mo><mo>=</mo><mo>{</mo><mi>Α</mi><mo>,</mo><mi>Β</mi><mo>,</mo><mi>Γ</mi><mo>,</mo><mi>Δ</mi><mo>,</mo><mi>Ε</mi><mo>,</mo><mi>Φ</mi><mo>}</mo></mrow>",
-      "speech": "Gross Klammer auf Anfang Menge alpha Komma beta Komma gamma Komma delta Komma epsilon Komma phi Ende Menge Klammer zu ist gleich Anfang Menge großes Alpha Komma großes Beta Komma großes Gamma Komma großes Delta Komma großes Epsilon Komma großes Phi Ende Menge"
+      "input": "<mrow><mtext>Gross</mtext><mo>(</mo><mo>{</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo>,</mo><mi>γ</mi><mo>,</mo><mi>δ</mi><mo>,</mo><mi>ϵ</mi><mo>,</mo><mi>φ</mi><mo>}</mo><mo>)</mo><mo>=</mo><mo>{</mo><mi>Α</mi><mo>,</mo><mi>Β</mi><mo>,</mo><mi>Γ</mi><mo>,</mo><mi>Δ</mi><mo>,</mo><mi>Ε</mi><mo>,</mo><mi>Φ</mi><mo>}</mo></mrow>",
+      "expected": "Gross Klammer auf Anfang Menge alpha Komma beta Komma gamma Komma delta Komma epsilon Komma phi Ende Menge Klammer zu ist gleich Anfang Menge großes Alpha Komma großes Beta Komma großes Gamma Komma großes Delta Komma großes Epsilon Komma großes Phi Ende Menge"
     },
     "Sample_4_2_1_sbrief": {
-      "mathml": "<mrow><mtext>Gross</mtext><mo>(</mo><mo>{</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo>,</mo><mi>γ</mi><mo>,</mo><mi>δ</mi><mo>,</mo><mi>ϵ</mi><mo>,</mo><mi>φ</mi><mo>}</mo><mo>)</mo><mo>=</mo><mo>{</mo><mi>Α</mi><mo>,</mo><mi>Β</mi><mo>,</mo><mi>Γ</mi><mo>,</mo><mi>Δ</mi><mo>,</mo><mi>Ε</mi><mo>,</mo><mi>Φ</mi><mo>}</mo></mrow>",
-      "speech": "Gross Klammer auf Menge alpha Komma beta Komma gamma Komma delta Komma epsilon Komma phi Ende Menge Klammer zu ist gleich Menge großes Alpha Komma großes Beta Komma großes Gamma Komma großes Delta Komma großes Epsilon Komma großes Phi Ende Menge"
+      "input": "<mrow><mtext>Gross</mtext><mo>(</mo><mo>{</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo>,</mo><mi>γ</mi><mo>,</mo><mi>δ</mi><mo>,</mo><mi>ϵ</mi><mo>,</mo><mi>φ</mi><mo>}</mo><mo>)</mo><mo>=</mo><mo>{</mo><mi>Α</mi><mo>,</mo><mi>Β</mi><mo>,</mo><mi>Γ</mi><mo>,</mo><mi>Δ</mi><mo>,</mo><mi>Ε</mi><mo>,</mo><mi>Φ</mi><mo>}</mo></mrow>",
+      "expected": "Gross Klammer auf Menge alpha Komma beta Komma gamma Komma delta Komma epsilon Komma phi Ende Menge Klammer zu ist gleich Menge großes Alpha Komma großes Beta Komma großes Gamma Komma großes Delta Komma großes Epsilon Komma großes Phi Ende Menge"
     },
     "Sample_5_1_1_default": {
-      "speech": "y minus 1"
+      "expected": "y minus 1"
     },
     "Sample_5_1_1_brief": {
-      "speech": "y minus 1"
+      "expected": "y minus 1"
     },
     "Sample_5_1_1_sbrief": {
-      "speech": "y minus 1"
+      "expected": "y minus 1"
     },
     "Sample_5_1_2_default": {
-      "mathml": "<mrow><mo>(</mo><mn>1</mn><mtext> zu </mtext><mn>1</mn><mo>)</mo></mrow>",
-      "speech": "Klammer auf 1 zu 1 Klammer zu"
+      "input": "<mrow><mo>(</mo><mn>1</mn><mtext> zu </mtext><mn>1</mn><mo>)</mo></mrow>",
+      "expected": "Klammer auf 1 zu 1 Klammer zu"
     },
     "Sample_5_1_2_brief": {
-      "mathml": "<mrow><mo>(</mo><mn>1</mn><mtext> zu </mtext><mn>1</mn><mo>)</mo></mrow>",
-      "speech": "Klammer auf 1 zu 1 Klammer zu"
+      "input": "<mrow><mo>(</mo><mn>1</mn><mtext> zu </mtext><mn>1</mn><mo>)</mo></mrow>",
+      "expected": "Klammer auf 1 zu 1 Klammer zu"
     },
     "Sample_5_1_2_sbrief": {
-      "mathml": "<mrow><mo>(</mo><mn>1</mn><mtext> zu </mtext><mn>1</mn><mo>)</mo></mrow>",
-      "speech": "Klammer auf 1 zu 1 Klammer zu"
+      "input": "<mrow><mo>(</mo><mn>1</mn><mtext> zu </mtext><mn>1</mn><mo>)</mo></mrow>",
+      "expected": "Klammer auf 1 zu 1 Klammer zu"
     },
     "Sample_5_1_3_default": {
-      "speech": "minus 1"
+      "expected": "minus 1"
     },
     "Sample_5_1_3_brief": {
-      "speech": "minus 1"
+      "expected": "minus 1"
     },
     "Sample_5_1_3_sbrief": {
-      "speech": "minus 1"
+      "expected": "minus 1"
     },
     "Sample_6_1_1_default": {
-      "mathml": "<mtext>Die Fibonaccizahlen sind: </mtext><mrow><mo>{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>8</mn><mo>,</mo><mo>&#x2026;</mo><mo>}</mo></mrow>",
-      "speech": "Die Fibonaccizahlen sind Doppelpunkt Anfang Menge 0 Komma 1 Komma 1 Komma 2 Komma 3 Komma 5 Komma 8 Komma horizontale Ellipsis Ende Menge"
+      "input": "<mtext>Die Fibonaccizahlen sind: </mtext><mrow><mo>{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>8</mn><mo>,</mo><mo>&#x2026;</mo><mo>}</mo></mrow>",
+      "expected": "Die Fibonaccizahlen sind Doppelpunkt Anfang Menge 0 Komma 1 Komma 1 Komma 2 Komma 3 Komma 5 Komma 8 Komma horizontale Ellipsis Ende Menge"
     },
     "Sample_6_1_1_brief": {
-      "mathml": "<mtext>Die Fibonaccizahlen sind: </mtext><mrow><mo>{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>8</mn><mo>,</mo><mo>&#x2026;</mo><mo>}</mo></mrow>",
-      "speech": "Die Fibonaccizahlen sind Doppelpunkt Anfang Menge 0 Komma 1 Komma 1 Komma 2 Komma 3 Komma 5 Komma 8 Komma horizontale Ellipsis Ende Menge"
+      "input": "<mtext>Die Fibonaccizahlen sind: </mtext><mrow><mo>{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>8</mn><mo>,</mo><mo>&#x2026;</mo><mo>}</mo></mrow>",
+      "expected": "Die Fibonaccizahlen sind Doppelpunkt Anfang Menge 0 Komma 1 Komma 1 Komma 2 Komma 3 Komma 5 Komma 8 Komma horizontale Ellipsis Ende Menge"
     },
     "Sample_6_1_1_sbrief": {
-      "mathml": "<mtext>Die Fibonaccizahlen sind: </mtext><mrow><mo>{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>8</mn><mo>,</mo><mo>&#x2026;</mo><mo>}</mo></mrow>",
-      "speech": "Die Fibonaccizahlen sind Doppelpunkt Menge 0 Komma 1 Komma 1 Komma 2 Komma 3 Komma 5 Komma 8 Komma horizontale Ellipsis Ende Menge"
+      "input": "<mtext>Die Fibonaccizahlen sind: </mtext><mrow><mo>{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>8</mn><mo>,</mo><mo>&#x2026;</mo><mo>}</mo></mrow>",
+      "expected": "Die Fibonaccizahlen sind Doppelpunkt Menge 0 Komma 1 Komma 1 Komma 2 Komma 3 Komma 5 Komma 8 Komma horizontale Ellipsis Ende Menge"
     },
     "Sample_6_2_1_default": {
-      "speech": "Anfang Betrag 4 minus 7 Ende Betrag ist gleich 3"
+      "expected": "Anfang Betrag 4 minus 7 Ende Betrag ist gleich 3"
     },
     "Sample_6_2_1_brief": {
-      "speech": "Anfang Betrag 4 minus 7 Ende Betrag ist gleich 3"
+      "expected": "Anfang Betrag 4 minus 7 Ende Betrag ist gleich 3"
     },
     "Sample_6_2_1_sbrief": {
-      "speech": "Betrag 4 minus 7 Ende Betrag ist gleich 3"
+      "expected": "Betrag 4 minus 7 Ende Betrag ist gleich 3"
     },
     "Sample_6_2_2_default": {
-      "speech": "Anfang Betrag a plus minus Anfang Betrag b minus c Ende Betrag Ende Betrag ungleich Anfang Betrag a Ende Betrag plus minus Anfang Betrag b minus c Ende Betrag"
+      "expected": "Anfang Betrag a plus minus Anfang Betrag b minus c Ende Betrag Ende Betrag ungleich Anfang Betrag a Ende Betrag plus minus Anfang Betrag b minus c Ende Betrag"
     },
     "Sample_6_2_2_brief": {
-      "speech": "Anfang Betrag a plus minus Anfang Betrag b minus c Ende Betrag Ende Betrag ungleich Anfang Betrag a Ende Betrag plus minus Anfang Betrag b minus c Ende Betrag"
+      "expected": "Anfang Betrag a plus minus Anfang Betrag b minus c Ende Betrag Ende Betrag ungleich Anfang Betrag a Ende Betrag plus minus Anfang Betrag b minus c Ende Betrag"
     },
     "Sample_6_2_2_sbrief": {
-      "speech": "Betrag a plus minus Betrag b minus c Ende Betrag Ende Betrag ungleich Betrag a Ende Betrag plus minus Betrag b minus c Ende Betrag"
+      "expected": "Betrag a plus minus Betrag b minus c Ende Betrag Ende Betrag ungleich Betrag a Ende Betrag plus minus Betrag b minus c Ende Betrag"
     },
     "Sample_7_1_1_default": {
-      "speech": "Anfang Bruch 1 durch x Ende Bruch"
+      "expected": "Anfang Bruch 1 durch x Ende Bruch"
     },
     "Sample_7_1_1_brief": {
-      "speech": "Anfang Bruch 1 durch x Ende Bruch"
+      "expected": "Anfang Bruch 1 durch x Ende Bruch"
     },
     "Sample_7_1_1_sbrief": {
-      "speech": "Bruch 1 durch x Ende Bruch"
+      "expected": "Bruch 1 durch x Ende Bruch"
     },
     "Sample_7_1_2_default": {
-      "speech": "a minus Anfang Bruch b plus c durch d minus e Ende Bruch mal f"
+      "expected": "a minus Anfang Bruch b plus c durch d minus e Ende Bruch mal f"
     },
     "Sample_7_1_2_brief": {
-      "speech": "a minus Anfang Bruch b plus c durch d minus e Ende Bruch mal f"
+      "expected": "a minus Anfang Bruch b plus c durch d minus e Ende Bruch mal f"
     },
     "Sample_7_1_2_sbrief": {
-      "speech": "a minus Bruch b plus c durch d minus e Ende Bruch mal f"
+      "expected": "a minus Bruch b plus c durch d minus e Ende Bruch mal f"
     },
     "Sample_7_2_1_default": {
-      "speech": "Anfang Anfang Bruch Anfang Bruch x durch y Ende Bruch durch durch z Ende Ende Bruch ungleich Anfang Anfang Bruch x durch durch Anfang Bruch y durch z Ende Bruch Ende Ende Bruch"
+      "expected": "Anfang Anfang Bruch Anfang Bruch x durch y Ende Bruch durch durch z Ende Ende Bruch ungleich Anfang Anfang Bruch x durch durch Anfang Bruch y durch z Ende Bruch Ende Ende Bruch"
     },
     "Sample_7_2_1_brief": {
-      "speech": "Anfang Anfang Bruch Anfang Bruch x durch y Ende Bruch durch durch z Ende Ende Bruch ungleich Anfang Anfang Bruch x durch durch Anfang Bruch y durch z Ende Bruch Ende Ende Bruch"
+      "expected": "Anfang Anfang Bruch Anfang Bruch x durch y Ende Bruch durch durch z Ende Ende Bruch ungleich Anfang Anfang Bruch x durch durch Anfang Bruch y durch z Ende Bruch Ende Ende Bruch"
     },
     "Sample_7_2_1_sbrief": {
-      "speech": "geschachteltBruch Bruch x durch y Ende Bruch geschachteltdurch z geschachteltEnde Bruch ungleich geschachteltBruch x geschachteltdurch Bruch y durch z Ende Bruch geschachteltEnde Bruch"
+      "expected": "geschachteltBruch Bruch x durch y Ende Bruch geschachteltdurch z geschachteltEnde Bruch ungleich geschachteltBruch x geschachteltdurch Bruch y durch z Ende Bruch geschachteltEnde Bruch"
     },
     "Sample_7_3_1_default": {
-      "speech": "Anfang Anfang Anfang Bruch Anfang Anfang Bruch Klammer auf 1 minus x Klammer zu Anfang Bruch d durch d x Ende Bruch Klammer auf 2 x Klammer zu minus 2 x Anfang Bruch d durch d x Ende Bruch Klammer auf 1 minus x Klammer zu durch durch Klammer auf 1 minus x Klammer zu Quadrat Ende Ende Bruch durch durch durch 1 plus Klammer auf Anfang Bruch 2 x durch 1 minus x Ende Bruch Klammer zu Quadrat Ende Ende Ende Bruch"
+      "expected": "Anfang Anfang Anfang Bruch Anfang Anfang Bruch Klammer auf 1 minus x Klammer zu Anfang Bruch d durch d x Ende Bruch Klammer auf 2 x Klammer zu minus 2 x Anfang Bruch d durch d x Ende Bruch Klammer auf 1 minus x Klammer zu durch durch Klammer auf 1 minus x Klammer zu Quadrat Ende Ende Bruch durch durch durch 1 plus Klammer auf Anfang Bruch 2 x durch 1 minus x Ende Bruch Klammer zu Quadrat Ende Ende Ende Bruch"
     },
     "Sample_7_3_1_brief": {
-      "speech": "Anfang Anfang Anfang Bruch Anfang Anfang Bruch Klammer auf 1 minus x Klammer zu Anfang Bruch d durch d x Ende Bruch Klammer auf 2 x Klammer zu minus 2 x Anfang Bruch d durch d x Ende Bruch Klammer auf 1 minus x Klammer zu durch durch Klammer auf 1 minus x Klammer zu Quadrat Ende Ende Bruch durch durch durch 1 plus Klammer auf Anfang Bruch 2 x durch 1 minus x Ende Bruch Klammer zu Quadrat Ende Ende Ende Bruch"
+      "expected": "Anfang Anfang Anfang Bruch Anfang Anfang Bruch Klammer auf 1 minus x Klammer zu Anfang Bruch d durch d x Ende Bruch Klammer auf 2 x Klammer zu minus 2 x Anfang Bruch d durch d x Ende Bruch Klammer auf 1 minus x Klammer zu durch durch Klammer auf 1 minus x Klammer zu Quadrat Ende Ende Bruch durch durch durch 1 plus Klammer auf Anfang Bruch 2 x durch 1 minus x Ende Bruch Klammer zu Quadrat Ende Ende Ende Bruch"
     },
     "Sample_7_3_1_sbrief": {
-      "speech": "geschachteltzweifachBruch geschachteltBruch Klammer auf 1 minus x Klammer zu Bruch d durch d x Ende Bruch Klammer auf 2 x Klammer zu minus 2 x Bruch d durch d x Ende Bruch Klammer auf 1 minus x Klammer zu geschachteltdurch Klammer auf 1 minus x Klammer zu Quadrat geschachteltEnde Bruch geschachteltzweifachdurch 1 plus Klammer auf Bruch 2 x durch 1 minus x Ende Bruch Klammer zu Quadrat geschachteltzweifachEnde Bruch"
+      "expected": "geschachteltzweifachBruch geschachteltBruch Klammer auf 1 minus x Klammer zu Bruch d durch d x Ende Bruch Klammer auf 2 x Klammer zu minus 2 x Bruch d durch d x Ende Bruch Klammer auf 1 minus x Klammer zu geschachteltdurch Klammer auf 1 minus x Klammer zu Quadrat geschachteltEnde Bruch geschachteltzweifachdurch 1 plus Klammer auf Bruch 2 x durch 1 minus x Ende Bruch Klammer zu Quadrat geschachteltzweifachEnde Bruch"
     },
     "Sample_7_3_2_default": {
-      "speech": "a 0 plus Anfang Anfang Anfang Anfang Bruch 1 durch durch durch durch a 1 plus Anfang Anfang Anfang Bruch 1 durch durch durch a 2 plus Anfang Anfang Bruch 1 durch durch horizontale Ellipsis plus Anfang Bruch 1 durch a Index n Grundlinie Ende Bruch Ende Ende Bruch Ende Ende Ende Bruch Ende Ende Ende Ende Bruch"
+      "expected": "a 0 plus Anfang Anfang Anfang Anfang Bruch 1 durch durch durch durch a 1 plus Anfang Anfang Anfang Bruch 1 durch durch durch a 2 plus Anfang Anfang Bruch 1 durch durch horizontale Ellipsis plus Anfang Bruch 1 durch a Index n Grundlinie Ende Bruch Ende Ende Bruch Ende Ende Ende Bruch Ende Ende Ende Ende Bruch"
     },
     "Sample_7_3_2_brief": {
-      "speech": "a 0 plus Anfang Anfang Anfang Anfang Bruch 1 durch durch durch durch a 1 plus Anfang Anfang Anfang Bruch 1 durch durch durch a 2 plus Anfang Anfang Bruch 1 durch durch horizontale Ellipsis plus Anfang Bruch 1 durch a Index n Grund Ende Bruch Ende Ende Bruch Ende Ende Ende Bruch Ende Ende Ende Ende Bruch"
+      "expected": "a 0 plus Anfang Anfang Anfang Anfang Bruch 1 durch durch durch durch a 1 plus Anfang Anfang Anfang Bruch 1 durch durch durch a 2 plus Anfang Anfang Bruch 1 durch durch horizontale Ellipsis plus Anfang Bruch 1 durch a Index n Grund Ende Bruch Ende Ende Bruch Ende Ende Ende Bruch Ende Ende Ende Ende Bruch"
     },
     "Sample_7_3_2_sbrief": {
-      "speech": "a 0 plus geschachteltdreifachBruch 1 geschachteltdreifachdurch a 1 plus geschachteltzweifachBruch 1 geschachteltzweifachdurch a 2 plus geschachteltBruch 1 geschachteltdurch horizontale Ellipsis plus Bruch 1 durch a Index n Grund Ende Bruch geschachteltEnde Bruch geschachteltzweifachEnde Bruch geschachteltdreifachEnde Bruch"
+      "expected": "a 0 plus geschachteltdreifachBruch 1 geschachteltdreifachdurch a 1 plus geschachteltzweifachBruch 1 geschachteltzweifachdurch a 2 plus geschachteltBruch 1 geschachteltdurch horizontale Ellipsis plus Bruch 1 durch a Index n Grund Ende Bruch geschachteltEnde Bruch geschachteltzweifachEnde Bruch geschachteltdreifachEnde Bruch"
     },
     "Sample_7_4_1_default": {
-      "speech": "ein halb plus zwei halbe plus drei halbe plus vier halbe plus horizontale Ellipsis ist gleich Summe Unterschrift n ist gleich 1 Überschrift unendlich Ende Überschrift Anfang Bruch n durch 2 Ende Bruch"
+      "expected": "ein halb plus zwei halbe plus drei halbe plus vier halbe plus horizontale Ellipsis ist gleich Summe Unterschrift n ist gleich 1 Überschrift unendlich Ende Überschrift Anfang Bruch n durch 2 Ende Bruch"
     },
     "Sample_7_4_1_brief": {
-      "speech": "ein halb plus zwei halbe plus drei halbe plus vier halbe plus horizontale Ellipsis ist gleich Summe Unterschrift n ist gleich 1 Überschrift unendlich Ende Überschrift Anfang Bruch n durch 2 Ende Bruch"
+      "expected": "ein halb plus zwei halbe plus drei halbe plus vier halbe plus horizontale Ellipsis ist gleich Summe Unterschrift n ist gleich 1 Überschrift unendlich Ende Überschrift Anfang Bruch n durch 2 Ende Bruch"
     },
     "Sample_7_4_1_sbrief": {
-      "speech": "ein halb plus zwei halbe plus drei halbe plus vier halbe plus horizontale Ellipsis ist gleich Summe Unterschrift n ist gleich 1 Überschrift unendlich Ende Überschrift Bruch n durch 2 Ende Bruch"
+      "expected": "ein halb plus zwei halbe plus drei halbe plus vier halbe plus horizontale Ellipsis ist gleich Summe Unterschrift n ist gleich 1 Überschrift unendlich Ende Überschrift Bruch n durch 2 Ende Bruch"
     },
     "Sample_7_4_2_default": {
-      "speech": "Anfang Bruch 20 durch 5 Ende Bruch mal Anfang Bruch 1 durch 100 Ende Bruch ist gleich ein fünfundzwanzigstel"
+      "expected": "Anfang Bruch 20 durch 5 Ende Bruch mal Anfang Bruch 1 durch 100 Ende Bruch ist gleich ein fünfundzwanzigstel"
     },
     "Sample_7_4_2_brief": {
-      "speech": "Anfang Bruch 20 durch 5 Ende Bruch mal Anfang Bruch 1 durch 100 Ende Bruch ist gleich ein fünfundzwanzigstel"
+      "expected": "Anfang Bruch 20 durch 5 Ende Bruch mal Anfang Bruch 1 durch 100 Ende Bruch ist gleich ein fünfundzwanzigstel"
     },
     "Sample_7_4_2_sbrief": {
-      "speech": "Bruch 20 durch 5 Ende Bruch mal Bruch 1 durch 100 Ende Bruch ist gleich ein fünfundzwanzigstel"
+      "expected": "Bruch 20 durch 5 Ende Bruch mal Bruch 1 durch 100 Ende Bruch ist gleich ein fünfundzwanzigstel"
     },
     "Sample_7_4_3_default": {
-      "speech": "Anfang Bruch drei fünftel durch 8 Ende Bruch ist gleich drei fünftel mal ein achtel"
+      "expected": "Anfang Bruch drei fünftel durch 8 Ende Bruch ist gleich drei fünftel mal ein achtel"
     },
     "Sample_7_4_3_brief": {
-      "speech": "Anfang Bruch drei fünftel durch 8 Ende Bruch ist gleich drei fünftel mal ein achtel"
+      "expected": "Anfang Bruch drei fünftel durch 8 Ende Bruch ist gleich drei fünftel mal ein achtel"
     },
     "Sample_7_4_3_sbrief": {
-      "speech": "Bruch drei fünftel durch 8 Ende Bruch ist gleich drei fünftel mal ein achtel"
+      "expected": "Bruch drei fünftel durch 8 Ende Bruch ist gleich drei fünftel mal ein achtel"
     },
     "Sample_7_5_1_default": {
-      "speech": "3 fünf achtel ist gleich Anfang Bruch 29 durch 8 Ende Bruch"
+      "expected": "3 fünf achtel ist gleich Anfang Bruch 29 durch 8 Ende Bruch"
     },
     "Sample_7_5_1_brief": {
-      "speech": "3 fünf achtel ist gleich Anfang Bruch 29 durch 8 Ende Bruch"
+      "expected": "3 fünf achtel ist gleich Anfang Bruch 29 durch 8 Ende Bruch"
     },
     "Sample_7_5_1_sbrief": {
-      "speech": "3 fünf achtel ist gleich Bruch 29 durch 8 Ende Bruch"
+      "expected": "3 fünf achtel ist gleich Bruch 29 durch 8 Ende Bruch"
     },
     "Sample_7_6_1_default": {
-      "speech": "a 0 plus Kettenbruch b 1 durch a 1 plus Anfang Bruch b 2 durch a 2 plus Anfang Bruch b 3 durch a 3 plus horizontale Ellipsis ist gleich a 0 plus Anfang Bruch b 1 durch a 1 Ende Bruch plus Anfang Bruch b 2 durch a 2 Ende Bruch plus horizontale Ellipsis"
+      "expected": "a 0 plus Kettenbruch b 1 durch a 1 plus Anfang Bruch b 2 durch a 2 plus Anfang Bruch b 3 durch a 3 plus horizontale Ellipsis ist gleich a 0 plus Anfang Bruch b 1 durch a 1 Ende Bruch plus Anfang Bruch b 2 durch a 2 Ende Bruch plus horizontale Ellipsis"
     },
     "Sample_7_6_1_brief": {
-      "speech": "a 0 plus Anfang Anfang Anfang Bruch b 1 durch durch durch a 1 plus Anfang Anfang Bruch b 2 durch durch a 2 plus Anfang Bruch b 3 durch a 3 plus horizontale Ellipsis Ende Bruch Ende Ende Bruch Ende Ende Ende Bruch ist gleich a 0 plus Anfang Bruch b 1 durch a 1 Ende Bruch plus Anfang Bruch b 2 durch a 2 Ende Bruch plus horizontale Ellipsis"
+      "expected": "a 0 plus Anfang Anfang Anfang Bruch b 1 durch durch durch a 1 plus Anfang Anfang Bruch b 2 durch durch a 2 plus Anfang Bruch b 3 durch a 3 plus horizontale Ellipsis Ende Bruch Ende Ende Bruch Ende Ende Ende Bruch ist gleich a 0 plus Anfang Bruch b 1 durch a 1 Ende Bruch plus Anfang Bruch b 2 durch a 2 Ende Bruch plus horizontale Ellipsis"
     },
     "Sample_7_6_1_sbrief": {
-      "speech": "a 0 plus geschachteltzweifachBruch b 1 geschachteltzweifachdurch a 1 plus Bruch b 2 durch a 2 plus Bruch b 3 durch a 3 plus horizontale Ellipsis geschachteltzweifachEnde Bruch ist gleich a 0 plus Bruch b 1 durch a 1 Ende Bruch plus Bruch b 2 durch a 2 Ende Bruch plus horizontale Ellipsis"
+      "expected": "a 0 plus geschachteltzweifachBruch b 1 geschachteltzweifachdurch a 1 plus Bruch b 2 durch a 2 plus Bruch b 3 durch a 3 plus horizontale Ellipsis geschachteltzweifachEnde Bruch ist gleich a 0 plus Bruch b 1 durch a 1 Ende Bruch plus Bruch b 2 durch a 2 Ende Bruch plus horizontale Ellipsis"
     },
     "Sample_8_1_1_default": {
-      "speech": "x Kubik plus 6 x Quadrat minus x ist gleich 30"
+      "expected": "x Kubik plus 6 x Quadrat minus x ist gleich 30"
     },
     "Sample_8_1_1_brief": {
-      "speech": "x Kubik plus 6 x Quadrat minus x ist gleich 30"
+      "expected": "x Kubik plus 6 x Quadrat minus x ist gleich 30"
     },
     "Sample_8_1_1_sbrief": {
-      "speech": "x Kubik plus 6 x Quadrat minus x ist gleich 30"
+      "expected": "x Kubik plus 6 x Quadrat minus x ist gleich 30"
     },
     "Sample_8_1_2_default": {
-      "speech": "Anfang Bruch d Quadrat y durch d x Quadrat Ende Bruch plus Klammer auf a x Quadrat plus b x plus c Klammer zu y ist gleich 0"
+      "expected": "Anfang Bruch d Quadrat y durch d x Quadrat Ende Bruch plus Klammer auf a x Quadrat plus b x plus c Klammer zu y ist gleich 0"
     },
     "Sample_8_1_2_brief": {
-      "speech": "Anfang Bruch d Quadrat y durch d x Quadrat Ende Bruch plus Klammer auf a x Quadrat plus b x plus c Klammer zu y ist gleich 0"
+      "expected": "Anfang Bruch d Quadrat y durch d x Quadrat Ende Bruch plus Klammer auf a x Quadrat plus b x plus c Klammer zu y ist gleich 0"
     },
     "Sample_8_1_2_sbrief": {
-      "speech": "Bruch d Quadrat y durch d x Quadrat Ende Bruch plus Klammer auf a x Quadrat plus b x plus c Klammer zu y ist gleich 0"
+      "expected": "Bruch d Quadrat y durch d x Quadrat Ende Bruch plus Klammer auf a x Quadrat plus b x plus c Klammer zu y ist gleich 0"
     },
     "Sample_8_2_1_default": {
-      "speech": "x hoch ein halb"
+      "expected": "x hoch ein halb"
     },
     "Sample_8_2_1_brief": {
-      "speech": "x hoch ein halb"
+      "expected": "x hoch ein halb"
     },
     "Sample_8_2_1_sbrief": {
-      "speech": "x hoch ein halb"
+      "expected": "x hoch ein halb"
     },
     "Sample_8_2_2_default": {
-      "speech": "x Index n"
+      "expected": "x Index n"
     },
     "Sample_8_2_2_brief": {
-      "speech": "x Index n"
+      "expected": "x Index n"
     },
     "Sample_8_2_2_sbrief": {
-      "speech": "x Index n"
+      "expected": "x Index n"
     },
     "Sample_8_2_3_default": {
-      "speech": "x hoch a"
+      "expected": "x hoch a"
     },
     "Sample_8_2_3_brief": {
-      "speech": "x hoch a"
+      "expected": "x hoch a"
     },
     "Sample_8_2_3_sbrief": {
-      "speech": "x hoch a"
+      "expected": "x hoch a"
     },
     "Sample_8_3_1_default": {
-      "speech": "x hoch m plus n"
+      "expected": "x hoch m plus n"
     },
     "Sample_8_3_1_brief": {
-      "speech": "x hoch m plus n"
+      "expected": "x hoch m plus n"
     },
     "Sample_8_3_1_sbrief": {
-      "speech": "x hoch m plus n"
+      "expected": "x hoch m plus n"
     },
     "Sample_8_3_2_default": {
-      "speech": "großes T Index n minus 1 Grundlinie plus 5 ist gleich 0"
+      "expected": "großes T Index n minus 1 Grundlinie plus 5 ist gleich 0"
     },
     "Sample_8_3_2_brief": {
-      "speech": "großes T Index n minus 1 Grund plus 5 ist gleich 0"
+      "expected": "großes T Index n minus 1 Grund plus 5 ist gleich 0"
     },
     "Sample_8_3_2_sbrief": {
-      "speech": "großes T Index n minus 1 Grund plus 5 ist gleich 0"
+      "expected": "großes T Index n minus 1 Grund plus 5 ist gleich 0"
     },
     "Sample_8_3_3_default": {
-      "speech": "x hoch m plus n Grundlinie ist gleich x hoch m Grundlinie x hoch n"
+      "expected": "x hoch m plus n Grundlinie ist gleich x hoch m Grundlinie x hoch n"
     },
     "Sample_8_3_3_brief": {
-      "speech": "x hoch m plus n Grund ist gleich x hoch m Grund x hoch n"
+      "expected": "x hoch m plus n Grund ist gleich x hoch m Grund x hoch n"
     },
     "Sample_8_3_3_sbrief": {
-      "speech": "x hoch m plus n Grund ist gleich x hoch m Grund x hoch n"
+      "expected": "x hoch m plus n Grund ist gleich x hoch m Grund x hoch n"
     },
     "Sample_8_4_1_default": {
-      "speech": "x hoch a hoch Index n hoch plus a hoch Index n minus 1"
+      "expected": "x hoch a hoch Index n hoch plus a hoch Index n minus 1"
     },
     "Sample_8_4_1_brief": {
-      "speech": "x hoch a hoch Index n hoch plus a hoch Index n minus 1"
+      "expected": "x hoch a hoch Index n hoch plus a hoch Index n minus 1"
     },
     "Sample_8_4_1_sbrief": {
-      "speech": "x hoch a hoch Index n hoch plus a hoch Index n minus 1"
+      "expected": "x hoch a hoch Index n hoch plus a hoch Index n minus 1"
     },
     "Sample_8_4_2_default": {
-      "speech": "x hoch a hoch Index b"
+      "expected": "x hoch a hoch Index b"
     },
     "Sample_8_4_2_brief": {
-      "speech": "x hoch a hoch Index b"
+      "expected": "x hoch a hoch Index b"
     },
     "Sample_8_4_2_sbrief": {
-      "speech": "x hoch a hoch Index b"
+      "expected": "x hoch a hoch Index b"
     },
     "Sample_8_4_3_default": {
-      "speech": "x Index a Index hoch b"
+      "expected": "x Index a Index hoch b"
     },
     "Sample_8_4_3_brief": {
-      "speech": "x Index a Index hoch b"
+      "expected": "x Index a Index hoch b"
     },
     "Sample_8_4_3_sbrief": {
-      "speech": "x Index a Index hoch b"
+      "expected": "x Index a Index hoch b"
     },
     "Sample_8_4_4_default": {
-      "speech": "y hoch a hoch hoch b hoch hoch Index c Grundlinie ungleich y hoch a hoch hoch b hoch c"
+      "expected": "y hoch a hoch hoch b hoch hoch Index c Grundlinie ungleich y hoch a hoch hoch b hoch c"
     },
     "Sample_8_4_4_brief": {
-      "speech": "y hoch a hoch hoch b hoch hoch Index c Grund ungleich y hoch a hoch hoch b hoch c"
+      "expected": "y hoch a hoch hoch b hoch hoch Index c Grund ungleich y hoch a hoch hoch b hoch c"
     },
     "Sample_8_4_4_sbrief": {
-      "speech": "y hoch a hoch hoch b hoch hoch Index c Grund ungleich y hoch a hoch hoch b hoch c"
+      "expected": "y hoch a hoch hoch b hoch hoch Index c Grund ungleich y hoch a hoch hoch b hoch c"
     },
     "Sample_8_4_5_default": {
-      "speech": "y hoch a hoch hoch Index c hoch hoch b"
+      "expected": "y hoch a hoch hoch Index c hoch hoch b"
     },
     "Sample_8_4_5_brief": {
-      "speech": "y hoch a hoch hoch Index c hoch hoch b"
+      "expected": "y hoch a hoch hoch Index c hoch hoch b"
     },
     "Sample_8_4_5_sbrief": {
-      "speech": "y hoch a hoch hoch Index c hoch hoch b"
+      "expected": "y hoch a hoch hoch Index c hoch hoch b"
     },
     "Sample_8_4_5Short_default": {
-      "speech": "y hoch a hoch hoch Index c"
+      "expected": "y hoch a hoch hoch Index c"
     },
     "Sample_8_4_5Short_brief": {
-      "speech": "y hoch a hoch hoch Index c"
+      "expected": "y hoch a hoch hoch Index c"
     },
     "Sample_8_4_5Short_sbrief": {
-      "speech": "y hoch a hoch hoch Index c"
+      "expected": "y hoch a hoch hoch Index c"
     },
     "Sample_8_4_5Inv_default": {
-      "speech": "y Index a Index Index hoch c"
+      "expected": "y Index a Index Index hoch c"
     },
     "Sample_8_4_5Inv_brief": {
-      "speech": "y Index a Index Index hoch c"
+      "expected": "y Index a Index Index hoch c"
     },
     "Sample_8_4_5Inv_sbrief": {
-      "speech": "y Index a Index Index hoch c"
+      "expected": "y Index a Index Index hoch c"
     },
     "Sample_8_4_5InvShort_default": {
-      "speech": "y Index a Index Index hoch c Index Index b"
+      "expected": "y Index a Index Index hoch c Index Index b"
     },
     "Sample_8_4_5InvShort_brief": {
-      "speech": "y Index a Index Index hoch c Index Index b"
+      "expected": "y Index a Index Index hoch c Index Index b"
     },
     "Sample_8_4_5InvShort_sbrief": {
-      "speech": "y Index a Index Index hoch c Index Index b"
+      "expected": "y Index a Index Index hoch c Index Index b"
     },
     "Sample_8_4_6_default": {
-      "speech": "x hoch a hoch hoch b"
+      "expected": "x hoch a hoch hoch b"
     },
     "Sample_8_4_6_brief": {
-      "speech": "x hoch a hoch hoch b"
+      "expected": "x hoch a hoch hoch b"
     },
     "Sample_8_4_6_sbrief": {
-      "speech": "x hoch a hoch hoch b"
+      "expected": "x hoch a hoch hoch b"
     },
     "Sample_8_4_7_default": {
-      "speech": "x Index a Index Index b"
+      "expected": "x Index a Index Index b"
     },
     "Sample_8_4_7_brief": {
-      "speech": "x Index a Index Index b"
+      "expected": "x Index a Index Index b"
     },
     "Sample_8_4_7_sbrief": {
-      "speech": "x Index a Index Index b"
+      "expected": "x Index a Index Index b"
     },
     "Sample_8_4_8_default": {
-      "speech": "großes T hoch Klammer auf x hoch hoch a hoch plus y hoch hoch b hoch Klammer zu"
+      "expected": "großes T hoch Klammer auf x hoch hoch a hoch plus y hoch hoch b hoch Klammer zu"
     },
     "Sample_8_4_8_brief": {
-      "speech": "großes T hoch Klammer auf x hoch hoch a hoch plus y hoch hoch b hoch Klammer zu"
+      "expected": "großes T hoch Klammer auf x hoch hoch a hoch plus y hoch hoch b hoch Klammer zu"
     },
     "Sample_8_4_8_sbrief": {
-      "speech": "großes T hoch Klammer auf x hoch hoch a hoch plus y hoch hoch b hoch Klammer zu"
+      "expected": "großes T hoch Klammer auf x hoch hoch a hoch plus y hoch hoch b hoch Klammer zu"
     },
     "Sample_8_5_1_default": {
-      "speech": "x 1"
+      "expected": "x 1"
     },
     "Sample_8_5_1_brief": {
-      "speech": "x 1"
+      "expected": "x 1"
     },
     "Sample_8_5_1_sbrief": {
-      "speech": "x 1"
+      "expected": "x 1"
     },
     "Sample_8_5_2_default": {
-      "speech": "x Index minus 1"
+      "expected": "x Index minus 1"
     },
     "Sample_8_5_2_brief": {
-      "speech": "x Index minus 1"
+      "expected": "x Index minus 1"
     },
     "Sample_8_5_2_sbrief": {
-      "speech": "x Index minus 1"
+      "expected": "x Index minus 1"
     },
     "Sample_8_5_3_default": {
-      "mathml": "<msub><mi>x</mi><mrow><mn>10000</mn></mrow></msub>",
-      "speech": "x 10000"
+      "input": "<msub><mi>x</mi><mrow><mn>10000</mn></mrow></msub>",
+      "expected": "x 10000"
     },
     "Sample_8_5_3_brief": {
-      "mathml": "<msub><mi>x</mi><mrow><mn>10000</mn></mrow></msub>",
-      "speech": "x 10000"
+      "input": "<msub><mi>x</mi><mrow><mn>10000</mn></mrow></msub>",
+      "expected": "x 10000"
     },
     "Sample_8_5_3_sbrief": {
-      "mathml": "<msub><mi>x</mi><mrow><mn>10000</mn></mrow></msub>",
-      "speech": "x 10000"
+      "input": "<msub><mi>x</mi><mrow><mn>10000</mn></mrow></msub>",
+      "expected": "x 10000"
     },
     "_comment1_": " TODO: 1,3 comes out as ,1,3,,,,,",
     "_comment2_": " There must be something wrong with the regexp.",
     "Sample_8_5_4_default": {
-      "mathml": "<msub><mi>x</mi><mrow><mn>1,3</mn></mrow></msub>",
-      "speech": "x 1,3"
+      "input": "<msub><mi>x</mi><mrow><mn>1,3</mn></mrow></msub>",
+      "expected": "x 1,3"
     },
     "Sample_8_5_4_brief": {
-      "mathml": "<msub><mi>x</mi><mrow><mn>1,3</mn></mrow></msub>",
-      "speech": "x 1,3"
+      "input": "<msub><mi>x</mi><mrow><mn>1,3</mn></mrow></msub>",
+      "expected": "x 1,3"
     },
     "Sample_8_5_4_sbrief": {
-      "mathml": "<msub><mi>x</mi><mrow><mn>1,3</mn></mrow></msub>",
-      "speech": "x 1,3"
+      "input": "<msub><mi>x</mi><mrow><mn>1,3</mn></mrow></msub>",
+      "expected": "x 1,3"
     },
     "Sample_8_5_5_default": {
-      "speech": "4 normales großes F e plus 3 großes O 2 Pfeil nach rechts 2 normales großes F e 2 großes O 3"
+      "expected": "4 normales großes F e plus 3 großes O 2 Pfeil nach rechts 2 normales großes F e 2 großes O 3"
     },
     "Sample_8_5_5_brief": {
-      "speech": "4 normales großes F e plus 3 großes O 2 Pfeil nach rechts 2 normales großes F e 2 großes O 3"
+      "expected": "4 normales großes F e plus 3 großes O 2 Pfeil nach rechts 2 normales großes F e 2 großes O 3"
     },
     "Sample_8_5_5_sbrief": {
-      "speech": "4 normales großes F e plus 3 großes O 2 Pfeil nach rechts 2 normales großes F e 2 großes O 3"
+      "expected": "4 normales großes F e plus 3 großes O 2 Pfeil nach rechts 2 normales großes F e 2 großes O 3"
     },
     "Sample_8_5_6_default": {
-      "speech": "a Index 2 Komma 3"
+      "expected": "a Index 2 Komma 3"
     },
     "Sample_8_5_6_brief": {
-      "speech": "a Index 2 Komma 3"
+      "expected": "a Index 2 Komma 3"
     },
     "Sample_8_5_6_sbrief": {
-      "speech": "a Index 2 Komma 3"
+      "expected": "a Index 2 Komma 3"
     },
     "Sample_8_5_7_default": {
-      "speech": "großes T Index n 1 plus n 0"
+      "expected": "großes T Index n 1 plus n 0"
     },
     "Sample_8_5_7_brief": {
-      "speech": "großes T Index n 1 plus n 0"
+      "expected": "großes T Index n 1 plus n 0"
     },
     "Sample_8_5_7_sbrief": {
-      "speech": "großes T Index n 1 plus n 0"
+      "expected": "großes T Index n 1 plus n 0"
     },
     "Sample_8_5_8_default": {
-      "speech": "Logarithmus Index 2 Grundlinie Klammer auf x Klammer zu ist gleich Anfang Bruch Logarithmus Index 10 Grundlinie Klammer auf x Klammer zu durch Logarithmus Index 10 Grundlinie Klammer auf 2 Klammer zu Ende Bruch"
+      "expected": "Logarithmus Index 2 Grundlinie Klammer auf x Klammer zu ist gleich Anfang Bruch Logarithmus Index 10 Grundlinie Klammer auf x Klammer zu durch Logarithmus Index 10 Grundlinie Klammer auf 2 Klammer zu Ende Bruch"
     },
     "Sample_8_5_8_brief": {
-      "speech": "Logarithmus Index 2 Grund Klammer auf x Klammer zu ist gleich Anfang Bruch Logarithmus Index 10 Grund Klammer auf x Klammer zu durch Logarithmus Index 10 Grund Klammer auf 2 Klammer zu Ende Bruch"
+      "expected": "Logarithmus Index 2 Grund Klammer auf x Klammer zu ist gleich Anfang Bruch Logarithmus Index 10 Grund Klammer auf x Klammer zu durch Logarithmus Index 10 Grund Klammer auf 2 Klammer zu Ende Bruch"
     },
     "Sample_8_5_8_sbrief": {
-      "speech": "Logarithmus Index 2 Grund Klammer auf x Klammer zu ist gleich Bruch Logarithmus Index 10 Grund Klammer auf x Klammer zu durch Logarithmus Index 10 Grund Klammer auf 2 Klammer zu Ende Bruch"
+      "expected": "Logarithmus Index 2 Grund Klammer auf x Klammer zu ist gleich Bruch Logarithmus Index 10 Grund Klammer auf x Klammer zu durch Logarithmus Index 10 Grund Klammer auf 2 Klammer zu Ende Bruch"
     },
     "Sample_8_5_9_default": {
-      "speech": "großes Phi 5"
+      "expected": "großes Phi 5"
     },
     "Sample_8_5_9_brief": {
-      "speech": "großes Phi 5"
+      "expected": "großes Phi 5"
     },
     "Sample_8_5_9_sbrief": {
-      "speech": "großes Phi 5"
+      "expected": "großes Phi 5"
     },
     "Sample_8_5_10_default": {
-      "speech": "natürlicher Logarithmus x ist gleich Integral Index 1 Hoch x Grundlinie Anfang Bruch d t durch t Ende Bruch"
+      "expected": "natürlicher Logarithmus x ist gleich Integral Index 1 Hoch x Grundlinie Anfang Bruch d t durch t Ende Bruch"
     },
     "Sample_8_5_10_brief": {
-      "speech": "natürlicher Logarithmus x ist gleich Integral Index 1 Hoch x Base Anfang Bruch d t durch t Ende Bruch"
+      "expected": "natürlicher Logarithmus x ist gleich Integral Index 1 Hoch x Base Anfang Bruch d t durch t Ende Bruch"
     },
     "Sample_8_5_10_sbrief": {
-      "speech": "natürlicher Logarithmus x ist gleich Integral Index 1 Hoch x Base Bruch d t durch t Ende Bruch"
+      "expected": "natürlicher Logarithmus x ist gleich Integral Index 1 Hoch x Base Bruch d t durch t Ende Bruch"
     },
     "Sample_8_6_1_default": {
-      "speech": "Dollar n Grundlinie 2 ist gleich 2 times Dollar n plus 1 Strichpunkt"
+      "expected": "Dollar n Grundlinie 2 ist gleich 2 times Dollar n plus 1 Strichpunkt"
     },
     "Sample_8_6_1_brief": {
-      "speech": "Dollar n Grund 2 ist gleich 2 times Dollar n plus 1 Strichpunkt"
+      "expected": "Dollar n Grund 2 ist gleich 2 times Dollar n plus 1 Strichpunkt"
     },
     "Sample_8_6_1_sbrief": {
-      "speech": "Dollar n Grund 2 ist gleich 2 times Dollar n plus 1 Strichpunkt"
+      "expected": "Dollar n Grund 2 ist gleich 2 times Dollar n plus 1 Strichpunkt"
     },
     "Sample_8_8_1_naive_default": {
-      "speech": "Index c d hoch a b Grundlinie x Index e f hoch g h"
+      "expected": "Index c d hoch a b Grundlinie x Index e f hoch g h"
     },
     "Sample_8_8_1_naive_brief": {
-      "speech": "Index c d hoch a b Grund x Index e f hoch g h"
+      "expected": "Index c d hoch a b Grund x Index e f hoch g h"
     },
     "Sample_8_8_1_naive_sbrief": {
-      "speech": "Index c d hoch a b Grund x Index e f hoch g h"
+      "expected": "Index c d hoch a b Grund x Index e f hoch g h"
     },
     "Sample_8_8_1_default": {
-      "speech": "Index c d hoch a b Grundlinie x Index e f hoch g h"
+      "expected": "Index c d hoch a b Grundlinie x Index e f hoch g h"
     },
     "Sample_8_8_1_brief": {
-      "speech": "Index c d hoch a b Grund x Index e f hoch g h"
+      "expected": "Index c d hoch a b Grund x Index e f hoch g h"
     },
     "Sample_8_8_1_sbrief": {
-      "speech": "Index c d hoch a b Grund x Index e f hoch g h"
+      "expected": "Index c d hoch a b Grund x Index e f hoch g h"
     },
     "SampleTensorMultiSimpleABC_default": {
-      "speech": "Index a hoch b Grundlinie x Index c Index hoch l"
+      "expected": "Index a hoch b Grundlinie x Index c Index hoch l"
     },
     "SampleTensorMultiSimpleABC_brief": {
-      "speech": "Index a hoch b Grund x Index c Index hoch l"
+      "expected": "Index a hoch b Grund x Index c Index hoch l"
     },
     "SampleTensorMultiSimpleABC_sbrief": {
-      "speech": "Index a hoch b Grund x Index c Index hoch l"
+      "expected": "Index a hoch b Grund x Index c Index hoch l"
     },
     "SampleTensorMultiSub_default": {
-      "speech": "Index a hoch b Grundlinie x Index c Index Index l hoch d"
+      "expected": "Index a hoch b Grundlinie x Index c Index Index l hoch d"
     },
     "SampleTensorMultiSub_brief": {
-      "speech": "Index a hoch b Grund x Index c Index Index l hoch d"
+      "expected": "Index a hoch b Grund x Index c Index Index l hoch d"
     },
     "SampleTensorMultiSub_sbrief": {
-      "speech": "Index a hoch b Grund x Index c Index Index l hoch d"
+      "expected": "Index a hoch b Grund x Index c Index Index l hoch d"
     },
     "SampleTensorMultiSubSup_default": {
-      "speech": "Index a hoch b Grundlinie x Index c Index Index l Index Index hoch k Index e hoch d"
+      "expected": "Index a hoch b Grundlinie x Index c Index Index l Index Index hoch k Index e hoch d"
     },
     "SampleTensorMultiSubSup_brief": {
-      "speech": "Index a hoch b Grund x Index c Index Index l Index Index hoch k Index e hoch d"
+      "expected": "Index a hoch b Grund x Index c Index Index l Index Index hoch k Index e hoch d"
     },
     "SampleTensorMultiSubSup_sbrief": {
-      "speech": "Index a hoch b Grund x Index c Index Index l Index Index hoch k Index e hoch d"
+      "expected": "Index a hoch b Grund x Index c Index Index l Index Index hoch k Index e hoch d"
     },
     "SampleTensorMultiSimple_default": {
-      "speech": "Index a hoch b Grundlinie x Index c Index hoch l hoch d"
+      "expected": "Index a hoch b Grundlinie x Index c Index hoch l hoch d"
     },
     "SampleTensorMultiSimple_brief": {
-      "speech": "Index a hoch b Grund x Index c Index hoch l hoch d"
+      "expected": "Index a hoch b Grund x Index c Index hoch l hoch d"
     },
     "SampleTensorMultiSimple_sbrief": {
-      "speech": "Index a hoch b Grund x Index c Index hoch l hoch d"
+      "expected": "Index a hoch b Grund x Index c Index hoch l hoch d"
     },
     "SampleTensorMultiComplex_default": {
-      "speech": "Index a hoch b Grundlinie x Index c k Index hoch l hoch d"
+      "expected": "Index a hoch b Grundlinie x Index c k Index hoch l hoch d"
     },
     "SampleTensorMultiComplex_brief": {
-      "speech": "Index a hoch b Grund x Index c k Index hoch l hoch d"
+      "expected": "Index a hoch b Grund x Index c k Index hoch l hoch d"
     },
     "SampleTensorMultiComplex_sbrief": {
-      "speech": "Index a hoch b Grund x Index c k Index hoch l hoch d"
+      "expected": "Index a hoch b Grund x Index c k Index hoch l hoch d"
     },
     "SampleTwoTensors_default": {
-      "speech": "Index a hoch b Grundlinie x Index c hoch d Grundlinie Index a hoch b Grundlinie x Index c hoch d"
+      "expected": "Index a hoch b Grundlinie x Index c hoch d Grundlinie Index a hoch b Grundlinie x Index c hoch d"
     },
     "SampleTwoTensors_brief": {
-      "speech": "Index a hoch b Grund x Index c hoch d Grund Index a hoch b Grund x Index c hoch d"
+      "expected": "Index a hoch b Grund x Index c hoch d Grund Index a hoch b Grund x Index c hoch d"
     },
     "SampleTwoTensors_sbrief": {
-      "speech": "Index a hoch b Grund x Index c hoch d Grund Index a hoch b Grund x Index c hoch d"
+      "expected": "Index a hoch b Grund x Index c hoch d Grund Index a hoch b Grund x Index c hoch d"
     },
     "_comment3_": " Tensor tests are named with the convention of including the indices that are",
     "_comment4_": " present:",
@@ -671,592 +671,592 @@
     "_comment7_": "   A      C",
     "_comment8_": "  Where R is the rest.",
     "SamplePartialTensorABCD_default": {
-      "speech": "Index a hoch b Grundlinie x Index c hoch d"
+      "expected": "Index a hoch b Grundlinie x Index c hoch d"
     },
     "SamplePartialTensorABCD_brief": {
-      "speech": "Index a hoch b Grund x Index c hoch d"
+      "expected": "Index a hoch b Grund x Index c hoch d"
     },
     "SamplePartialTensorABCD_sbrief": {
-      "speech": "Index a hoch b Grund x Index c hoch d"
+      "expected": "Index a hoch b Grund x Index c hoch d"
     },
     "SamplePartialTensorABC_default": {
-      "speech": "Index a hoch b Grundlinie x Index c"
+      "expected": "Index a hoch b Grundlinie x Index c"
     },
     "SamplePartialTensorABC_brief": {
-      "speech": "Index a hoch b Grund x Index c"
+      "expected": "Index a hoch b Grund x Index c"
     },
     "SamplePartialTensorABC_sbrief": {
-      "speech": "Index a hoch b Grund x Index c"
+      "expected": "Index a hoch b Grund x Index c"
     },
     "SamplePartialTensorABD_default": {
-      "speech": "Index a hoch b Grundlinie x hoch d"
+      "expected": "Index a hoch b Grundlinie x hoch d"
     },
     "SamplePartialTensorABD_brief": {
-      "speech": "Index a hoch b Grund x hoch d"
+      "expected": "Index a hoch b Grund x hoch d"
     },
     "SamplePartialTensorABD_sbrief": {
-      "speech": "Index a hoch b Grund x hoch d"
+      "expected": "Index a hoch b Grund x hoch d"
     },
     "SamplePartialTensorAB_default": {
-      "speech": "Index a hoch b Grundlinie x"
+      "expected": "Index a hoch b Grundlinie x"
     },
     "SamplePartialTensorAB_brief": {
-      "speech": "Index a hoch b Grund x"
+      "expected": "Index a hoch b Grund x"
     },
     "SamplePartialTensorAB_sbrief": {
-      "speech": "Index a hoch b Grund x"
+      "expected": "Index a hoch b Grund x"
     },
     "SamplePartialTensorABCR_default": {
-      "speech": "Index a hoch b Grundlinie x Index c Grundlinie r"
+      "expected": "Index a hoch b Grundlinie x Index c Grundlinie r"
     },
     "SamplePartialTensorABCR_brief": {
-      "speech": "Index a hoch b Grund x Index c Grund r"
+      "expected": "Index a hoch b Grund x Index c Grund r"
     },
     "SamplePartialTensorABCR_sbrief": {
-      "speech": "Index a hoch b Grund x Index c Grund r"
+      "expected": "Index a hoch b Grund x Index c Grund r"
     },
     "SamplePartialTensorABCDR_default": {
-      "speech": "Index a hoch b Grundlinie x Index c hoch d Grundlinie r"
+      "expected": "Index a hoch b Grundlinie x Index c hoch d Grundlinie r"
     },
     "SamplePartialTensorABCDR_brief": {
-      "speech": "Index a hoch b Grund x Index c hoch d Grund r"
+      "expected": "Index a hoch b Grund x Index c hoch d Grund r"
     },
     "SamplePartialTensorABCDR_sbrief": {
-      "speech": "Index a hoch b Grund x Index c hoch d Grund r"
+      "expected": "Index a hoch b Grund x Index c hoch d Grund r"
     },
     "SamplePartialTensorABCDRoot_default": {
-      "speech": "Anfang Quadratwurzel Index a hoch b Grundlinie x Index c hoch d Grundlinie Ende Quadratwurzel"
+      "expected": "Anfang Quadratwurzel Index a hoch b Grundlinie x Index c hoch d Grundlinie Ende Quadratwurzel"
     },
     "SamplePartialTensorABCDRoot_brief": {
-      "speech": "Anfang Quadratwurzel Index a hoch b Grund x Index c hoch d Grund Ende Quadratwurzel"
+      "expected": "Anfang Quadratwurzel Index a hoch b Grund x Index c hoch d Grund Ende Quadratwurzel"
     },
     "SamplePartialTensorABCDRoot_sbrief": {
-      "speech": "Quadratwurzel Index a hoch b Grund x Index c hoch d Grund Ende Quadratwurzel"
+      "expected": "Quadratwurzel Index a hoch b Grund x Index c hoch d Grund Ende Quadratwurzel"
     },
     "SamplePartialTensorABCDRootR_default": {
-      "speech": "Anfang Quadratwurzel Index a hoch b Grundlinie x Index c hoch d Grundlinie Ende Quadratwurzel r"
+      "expected": "Anfang Quadratwurzel Index a hoch b Grundlinie x Index c hoch d Grundlinie Ende Quadratwurzel r"
     },
     "SamplePartialTensorABCDRootR_brief": {
-      "speech": "Anfang Quadratwurzel Index a hoch b Grund x Index c hoch d Grund Ende Quadratwurzel r"
+      "expected": "Anfang Quadratwurzel Index a hoch b Grund x Index c hoch d Grund Ende Quadratwurzel r"
     },
     "SamplePartialTensorABCDRootR_sbrief": {
-      "speech": "Quadratwurzel Index a hoch b Grund x Index c hoch d Grund Ende Quadratwurzel r"
+      "expected": "Quadratwurzel Index a hoch b Grund x Index c hoch d Grund Ende Quadratwurzel r"
     },
     "SamplePartialTensorABCDFrac_default": {
-      "speech": "Anfang Bruch 1 durch Index a hoch b Grundlinie x Index c hoch d Grundlinie Ende Bruch"
+      "expected": "Anfang Bruch 1 durch Index a hoch b Grundlinie x Index c hoch d Grundlinie Ende Bruch"
     },
     "SamplePartialTensorABCDFrac_brief": {
-      "speech": "Anfang Bruch 1 durch Index a hoch b Grund x Index c hoch d Grund Ende Bruch"
+      "expected": "Anfang Bruch 1 durch Index a hoch b Grund x Index c hoch d Grund Ende Bruch"
     },
     "SamplePartialTensorABCDFrac_sbrief": {
-      "speech": "Bruch 1 durch Index a hoch b Grund x Index c hoch d Grund Ende Bruch"
+      "expected": "Bruch 1 durch Index a hoch b Grund x Index c hoch d Grund Ende Bruch"
     },
     "SamplePartialTensorABCDFracR_default": {
-      "speech": "Anfang Bruch 1 durch Index a hoch b Grundlinie x Index c hoch d Grundlinie Ende Bruch r"
+      "expected": "Anfang Bruch 1 durch Index a hoch b Grundlinie x Index c hoch d Grundlinie Ende Bruch r"
     },
     "SamplePartialTensorABCDFracR_brief": {
-      "speech": "Anfang Bruch 1 durch Index a hoch b Grund x Index c hoch d Grund Ende Bruch r"
+      "expected": "Anfang Bruch 1 durch Index a hoch b Grund x Index c hoch d Grund Ende Bruch r"
     },
     "SamplePartialTensorABCDFracR_sbrief": {
-      "speech": "Bruch 1 durch Index a hoch b Grund x Index c hoch d Grund Ende Bruch r"
+      "expected": "Bruch 1 durch Index a hoch b Grund x Index c hoch d Grund Ende Bruch r"
     },
     "SampleSimpleSquare_default": {
-      "speech": "großes T 0 Quadrat"
+      "expected": "großes T 0 Quadrat"
     },
     "SampleSimpleSquare_brief": {
-      "speech": "großes T 0 Quadrat"
+      "expected": "großes T 0 Quadrat"
     },
     "SampleSimpleSquare_sbrief": {
-      "speech": "großes T 0 Quadrat"
+      "expected": "großes T 0 Quadrat"
     },
     "SampleSimpleSquare_2_default": {
-      "speech": "großes T 0 Quadrat"
+      "expected": "großes T 0 Quadrat"
     },
     "SampleSimpleSquare_2_brief": {
-      "speech": "großes T 0 Quadrat"
+      "expected": "großes T 0 Quadrat"
     },
     "SampleSimpleSquare_2_sbrief": {
-      "speech": "großes T 0 Quadrat"
+      "expected": "großes T 0 Quadrat"
     },
     "SampleSimpleCube_default": {
-      "speech": "großes T 0 Kubik"
+      "expected": "großes T 0 Kubik"
     },
     "SampleSimpleCube_brief": {
-      "speech": "großes T 0 Kubik"
+      "expected": "großes T 0 Kubik"
     },
     "SampleSimpleCube_sbrief": {
-      "speech": "großes T 0 Kubik"
+      "expected": "großes T 0 Kubik"
     },
     "SampleSimpleCube_2_default": {
-      "speech": "großes T 0 Kubik"
+      "expected": "großes T 0 Kubik"
     },
     "SampleSimpleCube_2_sbrief": {
-      "speech": "großes T 0 Kubik"
+      "expected": "großes T 0 Kubik"
     },
     "SampleSimpleCube_2_brief": {
-      "speech": "großes T 0 Kubik"
+      "expected": "großes T 0 Kubik"
     },
     "Sample_8_8_2_default": {
-      "speech": "großes T Index n minus 1 hoch 2"
+      "expected": "großes T Index n minus 1 hoch 2"
     },
     "Sample_8_8_2_brief": {
-      "speech": "großes T Index n minus 1 hoch 2"
+      "expected": "großes T Index n minus 1 hoch 2"
     },
     "Sample_8_8_2_sbrief": {
-      "speech": "großes T Index n minus 1 hoch 2"
+      "expected": "großes T Index n minus 1 hoch 2"
     },
     "Sample_8_9_1_default": {
-      "speech": "x Hochkomma"
+      "expected": "x Hochkomma"
     },
     "Sample_8_9_1_brief": {
-      "speech": "x Hochkomma"
+      "expected": "x Hochkomma"
     },
     "Sample_8_9_1_sbrief": {
-      "speech": "x Hochkomma"
+      "expected": "x Hochkomma"
     },
     "Sample_8_9_2_default": {
-      "speech": "f drei Strich Klammer auf y Klammer zu ist gleich Anfang Bruch d f zwei Strich Klammer auf y Klammer zu durch d y Ende Bruch"
+      "expected": "f drei Strich Klammer auf y Klammer zu ist gleich Anfang Bruch d f zwei Strich Klammer auf y Klammer zu durch d y Ende Bruch"
     },
     "Sample_8_9_2_brief": {
-      "speech": "f drei Strich Klammer auf y Klammer zu ist gleich Anfang Bruch d f zwei Strich Klammer auf y Klammer zu durch d y Ende Bruch"
+      "expected": "f drei Strich Klammer auf y Klammer zu ist gleich Anfang Bruch d f zwei Strich Klammer auf y Klammer zu durch d y Ende Bruch"
     },
     "Sample_8_9_2_sbrief": {
-      "speech": "f drei Strich Klammer auf y Klammer zu ist gleich Bruch d f zwei Strich Klammer auf y Klammer zu durch d y Ende Bruch"
+      "expected": "f drei Strich Klammer auf y Klammer zu ist gleich Bruch d f zwei Strich Klammer auf y Klammer zu durch d y Ende Bruch"
     },
     "Sample_8_10_1_default": {
-      "speech": "rho Hochkomma ist gleich rho Hochkomma Index plus Grundlinie plus rho Hochkomma Index minus"
+      "expected": "rho Hochkomma ist gleich rho Hochkomma Index plus Grundlinie plus rho Hochkomma Index minus"
     },
     "Sample_8_10_1_brief": {
-      "speech": "rho Hochkomma ist gleich rho Hochkomma Index plus Grund plus rho Hochkomma Index minus"
+      "expected": "rho Hochkomma ist gleich rho Hochkomma Index plus Grund plus rho Hochkomma Index minus"
     },
     "Sample_8_10_1_sbrief": {
-      "speech": "rho Hochkomma ist gleich rho Hochkomma Index plus Grund plus rho Hochkomma Index minus"
+      "expected": "rho Hochkomma ist gleich rho Hochkomma Index plus Grund plus rho Hochkomma Index minus"
     },
     "Sample_8_10_2_default": {
-      "speech": "x Hochkomma 10"
+      "expected": "x Hochkomma 10"
     },
     "Sample_8_10_2_brief": {
-      "speech": "x Hochkomma 10"
+      "expected": "x Hochkomma 10"
     },
     "Sample_8_10_2_sbrief": {
-      "speech": "x Hochkomma 10"
+      "expected": "x Hochkomma 10"
     },
     "Sample_8_10_3_default": {
-      "speech": "großes T Hochkomma Index n"
+      "expected": "großes T Hochkomma Index n"
     },
     "Sample_8_10_3_brief": {
-      "speech": "großes T Hochkomma Index n"
+      "expected": "großes T Hochkomma Index n"
     },
     "Sample_8_10_3_sbrief": {
-      "speech": "großes T Hochkomma Index n"
+      "expected": "großes T Hochkomma Index n"
     },
     "Sample_8_11_1_default": {
-      "speech": "Anfang 2 mal 3 Matrize 1. Zeile 1. Spalte x hoch n 2. Spalte y hoch n 3. Spalte z hoch n 2. Zeile 1. Spalte x hoch n plus 1 2. Spalte y hoch n plus 1 3. Spalte z hoch n plus 1 Ende Matrize"
+      "expected": "Anfang 2 mal 3 Matrize 1. Zeile 1. Spalte x hoch n 2. Spalte y hoch n 3. Spalte z hoch n 2. Zeile 1. Spalte x hoch n plus 1 2. Spalte y hoch n plus 1 3. Spalte z hoch n plus 1 Ende Matrize"
     },
     "Sample_8_11_1_brief": {
-      "speech": "Anfang 2 mal 3 Matrize 1. Zeile 1. Spalte x hoch n 2. Spalte y hoch n 3. Spalte z hoch n 2. Zeile 1. Spalte x hoch n plus 1 2. Spalte y hoch n plus 1 3. Spalte z hoch n plus 1 Ende Matrize"
+      "expected": "Anfang 2 mal 3 Matrize 1. Zeile 1. Spalte x hoch n 2. Spalte y hoch n 3. Spalte z hoch n 2. Zeile 1. Spalte x hoch n plus 1 2. Spalte y hoch n plus 1 3. Spalte z hoch n plus 1 Ende Matrize"
     },
     "Sample_8_11_1_sbrief": {
-      "speech": "2 mal 3 Matrize 1. Zeile 1. Spalte x hoch n 2. Spalte y hoch n 3. Spalte z hoch n 2. Zeile 1. Spalte x hoch n plus 1 2. Spalte y hoch n plus 1 3. Spalte z hoch n plus 1 Ende Matrize"
+      "expected": "2 mal 3 Matrize 1. Zeile 1. Spalte x hoch n 2. Spalte y hoch n 3. Spalte z hoch n 2. Zeile 1. Spalte x hoch n plus 1 2. Spalte y hoch n plus 1 3. Spalte z hoch n plus 1 Ende Matrize"
     },
     "Sample_8_12_1_default": {
-      "speech": "x Index a Grundlinie hoch b"
+      "expected": "x Index a Grundlinie hoch b"
     },
     "Sample_8_12_1_brief": {
-      "speech": "x Index a Grund hoch b"
+      "expected": "x Index a Grund hoch b"
     },
     "Sample_8_12_1_sbrief": {
-      "speech": "x Index a Grund hoch b"
+      "expected": "x Index a Grund hoch b"
     },
     "Sample_8_12_2_default": {
-      "speech": "x hoch b Grundlinie Index a"
+      "expected": "x hoch b Grundlinie Index a"
     },
     "Sample_8_12_2_brief": {
-      "speech": "x hoch b Grund Index a"
+      "expected": "x hoch b Grund Index a"
     },
     "Sample_8_12_2_sbrief": {
-      "speech": "x hoch b Grund Index a"
+      "expected": "x hoch b Grund Index a"
     },
     "Sample_8_13_1_default": {
-      "speech": "Logarithmus hoch 4 hoch b Grundlinie x"
+      "expected": "Logarithmus hoch 4 hoch b Grundlinie x"
     },
     "Sample_8_13_1_brief": {
-      "speech": "Logarithmus hoch 4 hoch b Grund x"
+      "expected": "Logarithmus hoch 4 hoch b Grund x"
     },
     "Sample_8_13_1_sbrief": {
-      "speech": "Logarithmus hoch 4 hoch b Grund x"
+      "expected": "Logarithmus hoch 4 hoch b Grund x"
     },
     "Sample_8_13_2_default": {
-      "speech": "großes T Index n Index a Grundlinie y"
+      "expected": "großes T Index n Index a Grundlinie y"
     },
     "Sample_8_13_2_brief": {
-      "speech": "großes T Index n Index a Grund y"
+      "expected": "großes T Index n Index a Grund y"
     },
     "Sample_8_13_2_sbrief": {
-      "speech": "großes T Index n Index a Grund y"
+      "expected": "großes T Index n Index a Grund y"
     },
     "Sample_9_1_1_default": {
-      "speech": "Anfang Quadratwurzel 2 Ende Quadratwurzel"
+      "expected": "Anfang Quadratwurzel 2 Ende Quadratwurzel"
     },
     "Sample_9_1_1_brief": {
-      "speech": "Anfang Quadratwurzel 2 Ende Quadratwurzel"
+      "expected": "Anfang Quadratwurzel 2 Ende Quadratwurzel"
     },
     "Sample_9_1_1_sbrief": {
-      "speech": "Quadratwurzel 2 Ende Quadratwurzel"
+      "expected": "Quadratwurzel 2 Ende Quadratwurzel"
     },
     "_comment9_": " TODO: Get rid of indices for roots <= 10.",
     "_comment10_": " TODO: Check out blackboard R.",
     "Sample_9_1_2_default": {
-      "speech": "Anfang Quadratwurzel m plus n Ende Quadratwurzel"
+      "expected": "Anfang Quadratwurzel m plus n Ende Quadratwurzel"
     },
     "Sample_9_1_2_brief": {
-      "speech": "Anfang Quadratwurzel m plus n Ende Quadratwurzel"
+      "expected": "Anfang Quadratwurzel m plus n Ende Quadratwurzel"
     },
     "Sample_9_1_2_sbrief": {
-      "speech": "Quadratwurzel m plus n Ende Quadratwurzel"
+      "expected": "Quadratwurzel m plus n Ende Quadratwurzel"
     },
     "Sample_9_2_1_default": {
-      "speech": "Wurzelexponent m plus n Anfang Wurzel x plus y Ende Wurzel"
+      "expected": "Wurzelexponent m plus n Anfang Wurzel x plus y Ende Wurzel"
     },
     "Sample_9_2_1_brief": {
-      "speech": "Wurzelexponent m plus n Anfang Wurzel x plus y Ende Wurzel"
+      "expected": "Wurzelexponent m plus n Anfang Wurzel x plus y Ende Wurzel"
     },
     "Sample_9_2_1_sbrief": {
-      "speech": "Exponent m plus n Wurzel x plus y Ende Wurzel"
+      "expected": "Exponent m plus n Wurzel x plus y Ende Wurzel"
     },
     "Sample_9_2_2_default": {
-      "speech": "Wurzelexponent n Anfang Wurzel x hoch m Grundlinie Ende Wurzel ist gleich Klammer auf Wurzelexponent n Anfang Wurzel x Ende Wurzel Klammer zu hoch m Grundlinie ist gleich x hoch Anfang Bruch m durch n Ende Bruch Grundlinie Komma x größer als 0"
+      "expected": "Wurzelexponent n Anfang Wurzel x hoch m Grundlinie Ende Wurzel ist gleich Klammer auf Wurzelexponent n Anfang Wurzel x Ende Wurzel Klammer zu hoch m Grundlinie ist gleich x hoch Anfang Bruch m durch n Ende Bruch Grundlinie Komma x größer als 0"
     },
     "Sample_9_2_2_brief": {
-      "speech": "Wurzelexponent n Anfang Wurzel x hoch m Grund Ende Wurzel ist gleich Klammer auf Wurzelexponent n Anfang Wurzel x Ende Wurzel Klammer zu hoch m Grund ist gleich x hoch Anfang Bruch m durch n Ende Bruch Grund Komma x größer als 0"
+      "expected": "Wurzelexponent n Anfang Wurzel x hoch m Grund Ende Wurzel ist gleich Klammer auf Wurzelexponent n Anfang Wurzel x Ende Wurzel Klammer zu hoch m Grund ist gleich x hoch Anfang Bruch m durch n Ende Bruch Grund Komma x größer als 0"
     },
     "Sample_9_2_2_sbrief": {
-      "speech": "Exponent n Wurzel x hoch m Grund Ende Wurzel ist gleich Klammer auf Exponent n Wurzel x Ende Wurzel Klammer zu hoch m Grund ist gleich x hoch Bruch m durch n Ende Bruch Grund Komma x größer als 0"
+      "expected": "Exponent n Wurzel x hoch m Grund Ende Wurzel ist gleich Klammer auf Exponent n Wurzel x Ende Wurzel Klammer zu hoch m Grund ist gleich x hoch Bruch m durch n Ende Bruch Grund Komma x größer als 0"
     },
     "Sample_9_2_3_default": {
-      "speech": "Anfang Kubikwurzel x Ende Kubikwurzel ist gleich x hoch ein drittel"
+      "expected": "Anfang Kubikwurzel x Ende Kubikwurzel ist gleich x hoch ein drittel"
     },
     "Sample_9_2_3_brief": {
-      "speech": "Anfang Kubikwurzel x Ende Kubikwurzel ist gleich x hoch ein drittel"
+      "expected": "Anfang Kubikwurzel x Ende Kubikwurzel ist gleich x hoch ein drittel"
     },
     "Sample_9_2_3_sbrief": {
-      "speech": "Kubikwurzel x Ende Kubikwurzel ist gleich x hoch ein drittel"
+      "expected": "Kubikwurzel x Ende Kubikwurzel ist gleich x hoch ein drittel"
     },
     "Sample_9_3_1_default": {
-      "speech": "Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel x plus 1 Ende Quadratwurzel plus Anfang Quadratwurzel y plus 1 Ende Quadratwurzel Ende geschachtelte Quadratwurzel"
+      "expected": "Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel x plus 1 Ende Quadratwurzel plus Anfang Quadratwurzel y plus 1 Ende Quadratwurzel Ende geschachtelte Quadratwurzel"
     },
     "Sample_9_3_1_brief": {
-      "speech": "Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel x plus 1 Ende Quadratwurzel plus Anfang Quadratwurzel y plus 1 Ende Quadratwurzel Ende geschachtelte Quadratwurzel"
+      "expected": "Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel x plus 1 Ende Quadratwurzel plus Anfang Quadratwurzel y plus 1 Ende Quadratwurzel Ende geschachtelte Quadratwurzel"
     },
     "Sample_9_3_1_sbrief": {
-      "speech": "geschachtelte Quadratwurzel Quadratwurzel x plus 1 Ende Quadratwurzel plus Quadratwurzel y plus 1 Ende Quadratwurzel Ende geschachtelte Quadratwurzel"
+      "expected": "geschachtelte Quadratwurzel Quadratwurzel x plus 1 Ende Quadratwurzel plus Quadratwurzel y plus 1 Ende Quadratwurzel Ende geschachtelte Quadratwurzel"
     },
     "Sample_9_3_2_default": {
-      "speech": "geschachtelter Wurzelexponent n Anfang geschachtelte Wurzel Wurzelexponent m Anfang Wurzel x Ende Wurzel Ende geschachtelte Wurzel ist gleich geschachtelter Wurzelexponent m Anfang geschachtelte Wurzel Wurzelexponent n Anfang Wurzel x Ende Wurzel Ende geschachtelte Wurzel"
+      "expected": "geschachtelter Wurzelexponent n Anfang geschachtelte Wurzel Wurzelexponent m Anfang Wurzel x Ende Wurzel Ende geschachtelte Wurzel ist gleich geschachtelter Wurzelexponent m Anfang geschachtelte Wurzel Wurzelexponent n Anfang Wurzel x Ende Wurzel Ende geschachtelte Wurzel"
     },
     "Sample_9_3_2_brief": {
-      "speech": "geschachtelter Wurzelexponent n Anfang geschachtelte Wurzel Wurzelexponent m Anfang Wurzel x Ende Wurzel Ende geschachtelte Wurzel ist gleich geschachtelter Wurzelexponent m Anfang geschachtelte Wurzel Wurzelexponent n Anfang Wurzel x Ende Wurzel Ende geschachtelte Wurzel"
+      "expected": "geschachtelter Wurzelexponent n Anfang geschachtelte Wurzel Wurzelexponent m Anfang Wurzel x Ende Wurzel Ende geschachtelte Wurzel ist gleich geschachtelter Wurzelexponent m Anfang geschachtelte Wurzel Wurzelexponent n Anfang Wurzel x Ende Wurzel Ende geschachtelte Wurzel"
     },
     "Sample_9_3_2_sbrief": {
-      "speech": "geschachtelte Exponent n geschachtelte Wurzel Exponent m Wurzel x Ende Wurzel Ende geschachtelte Wurzel ist gleich geschachtelte Exponent m geschachtelte Wurzel Exponent n Wurzel x Ende Wurzel Ende geschachtelte Wurzel"
+      "expected": "geschachtelte Exponent n geschachtelte Wurzel Exponent m Wurzel x Ende Wurzel Ende geschachtelte Wurzel ist gleich geschachtelte Exponent m geschachtelte Wurzel Exponent n Wurzel x Ende Wurzel Ende geschachtelte Wurzel"
     },
     "Sample_9_3_3_default": {
-      "speech": "x hoch e minus 2 Grundlinie ist gleich Anfang dreifach geschachtelte Quadratwurzel x Anfang zweifach geschachtelte Kubikwurzel x geschachtelter Wurzelexponent 4 Anfang geschachtelte Wurzel x Wurzelexponent 5 Anfang Wurzel x horizontale Ellipsis Ende Wurzel Ende geschachtelte Wurzel Ende zweifach geschachtelte Kubikwurzel Ende dreifach geschachtelte Quadratwurzel Komma x Element von großes R mit Doppelstrich"
+      "expected": "x hoch e minus 2 Grundlinie ist gleich Anfang dreifach geschachtelte Quadratwurzel x Anfang zweifach geschachtelte Kubikwurzel x geschachtelter Wurzelexponent 4 Anfang geschachtelte Wurzel x Wurzelexponent 5 Anfang Wurzel x horizontale Ellipsis Ende Wurzel Ende geschachtelte Wurzel Ende zweifach geschachtelte Kubikwurzel Ende dreifach geschachtelte Quadratwurzel Komma x Element von großes R mit Doppelstrich"
     },
     "Sample_9_3_3_brief": {
-      "speech": "x hoch e minus 2 Grund ist gleich Anfang dreifach geschachtelte Quadratwurzel x Anfang zweifach geschachtelte Kubikwurzel x geschachtelter Wurzelexponent 4 Anfang geschachtelte Wurzel x Wurzelexponent 5 Anfang Wurzel x horizontale Ellipsis Ende Wurzel Ende geschachtelte Wurzel Ende zweifach geschachtelte Kubikwurzel Ende dreifach geschachtelte Quadratwurzel Komma x Element von großes R mit Doppelstrich"
+      "expected": "x hoch e minus 2 Grund ist gleich Anfang dreifach geschachtelte Quadratwurzel x Anfang zweifach geschachtelte Kubikwurzel x geschachtelter Wurzelexponent 4 Anfang geschachtelte Wurzel x Wurzelexponent 5 Anfang Wurzel x horizontale Ellipsis Ende Wurzel Ende geschachtelte Wurzel Ende zweifach geschachtelte Kubikwurzel Ende dreifach geschachtelte Quadratwurzel Komma x Element von großes R mit Doppelstrich"
     },
     "Sample_9_3_3_sbrief": {
-      "speech": "x hoch e minus 2 Grund ist gleich dreifach geschachtelte Quadratwurzel x zweifach geschachtelte Kubikwurzel x geschachtelte Exponent 4 geschachtelte Wurzel x Exponent 5 Wurzel x horizontale Ellipsis Ende Wurzel Ende geschachtelte Wurzel Ende zweifach geschachtelte Kubikwurzel Ende dreifach geschachtelte Quadratwurzel Komma x Element von großes R mit Doppelstrich"
+      "expected": "x hoch e minus 2 Grund ist gleich dreifach geschachtelte Quadratwurzel x zweifach geschachtelte Kubikwurzel x geschachtelte Exponent 4 geschachtelte Wurzel x Exponent 5 Wurzel x horizontale Ellipsis Ende Wurzel Ende geschachtelte Wurzel Ende zweifach geschachtelte Kubikwurzel Ende dreifach geschachtelte Quadratwurzel Komma x Element von großes R mit Doppelstrich"
     },
     "Sample_9_3_4_default": {
-      "speech": "Anfang Bruch 2 durch pi Ende Bruch ist gleich Anfang Bruch Anfang Quadratwurzel 2 Ende Quadratwurzel durch 2 Ende Bruch Anfang Bruch Anfang geschachtelte Quadratwurzel 2 plus Anfang Quadratwurzel 2 Ende Quadratwurzel Ende geschachtelte Quadratwurzel durch 2 Ende Bruch Anfang Bruch Anfang zweifach geschachtelte Quadratwurzel 2 plus Anfang geschachtelte Quadratwurzel 2 plus Anfang Quadratwurzel 2 Ende Quadratwurzel Ende geschachtelte Quadratwurzel Ende zweifach geschachtelte Quadratwurzel durch 2 Ende Bruch horizontale Ellipsis"
+      "expected": "Anfang Bruch 2 durch pi Ende Bruch ist gleich Anfang Bruch Anfang Quadratwurzel 2 Ende Quadratwurzel durch 2 Ende Bruch Anfang Bruch Anfang geschachtelte Quadratwurzel 2 plus Anfang Quadratwurzel 2 Ende Quadratwurzel Ende geschachtelte Quadratwurzel durch 2 Ende Bruch Anfang Bruch Anfang zweifach geschachtelte Quadratwurzel 2 plus Anfang geschachtelte Quadratwurzel 2 plus Anfang Quadratwurzel 2 Ende Quadratwurzel Ende geschachtelte Quadratwurzel Ende zweifach geschachtelte Quadratwurzel durch 2 Ende Bruch horizontale Ellipsis"
     },
     "Sample_9_3_4_brief": {
-      "speech": "Anfang Bruch 2 durch pi Ende Bruch ist gleich Anfang Bruch Anfang Quadratwurzel 2 Ende Quadratwurzel durch 2 Ende Bruch Anfang Bruch Anfang geschachtelte Quadratwurzel 2 plus Anfang Quadratwurzel 2 Ende Quadratwurzel Ende geschachtelte Quadratwurzel durch 2 Ende Bruch Anfang Bruch Anfang zweifach geschachtelte Quadratwurzel 2 plus Anfang geschachtelte Quadratwurzel 2 plus Anfang Quadratwurzel 2 Ende Quadratwurzel Ende geschachtelte Quadratwurzel Ende zweifach geschachtelte Quadratwurzel durch 2 Ende Bruch horizontale Ellipsis"
+      "expected": "Anfang Bruch 2 durch pi Ende Bruch ist gleich Anfang Bruch Anfang Quadratwurzel 2 Ende Quadratwurzel durch 2 Ende Bruch Anfang Bruch Anfang geschachtelte Quadratwurzel 2 plus Anfang Quadratwurzel 2 Ende Quadratwurzel Ende geschachtelte Quadratwurzel durch 2 Ende Bruch Anfang Bruch Anfang zweifach geschachtelte Quadratwurzel 2 plus Anfang geschachtelte Quadratwurzel 2 plus Anfang Quadratwurzel 2 Ende Quadratwurzel Ende geschachtelte Quadratwurzel Ende zweifach geschachtelte Quadratwurzel durch 2 Ende Bruch horizontale Ellipsis"
     },
     "Sample_9_3_4_sbrief": {
-      "speech": "Bruch 2 durch pi Ende Bruch ist gleich Bruch Quadratwurzel 2 Ende Quadratwurzel durch 2 Ende Bruch Bruch geschachtelte Quadratwurzel 2 plus Quadratwurzel 2 Ende Quadratwurzel Ende geschachtelte Quadratwurzel durch 2 Ende Bruch Bruch zweifach geschachtelte Quadratwurzel 2 plus geschachtelte Quadratwurzel 2 plus Quadratwurzel 2 Ende Quadratwurzel Ende geschachtelte Quadratwurzel Ende zweifach geschachtelte Quadratwurzel durch 2 Ende Bruch horizontale Ellipsis"
+      "expected": "Bruch 2 durch pi Ende Bruch ist gleich Bruch Quadratwurzel 2 Ende Quadratwurzel durch 2 Ende Bruch Bruch geschachtelte Quadratwurzel 2 plus Quadratwurzel 2 Ende Quadratwurzel Ende geschachtelte Quadratwurzel durch 2 Ende Bruch Bruch zweifach geschachtelte Quadratwurzel 2 plus geschachtelte Quadratwurzel 2 plus Quadratwurzel 2 Ende Quadratwurzel Ende geschachtelte Quadratwurzel Ende zweifach geschachtelte Quadratwurzel durch 2 Ende Bruch horizontale Ellipsis"
     },
     "Sample_10_1_1_default": {
-      "speech": "Anfang Bruch 5 x durchgestrichen y Ende duchgestrichen durch 2 durchgestrichen y Ende duchgestrichen Ende Bruch ist gleich fünf halbe x"
+      "expected": "Anfang Bruch 5 x durchgestrichen y Ende duchgestrichen durch 2 durchgestrichen y Ende duchgestrichen Ende Bruch ist gleich fünf halbe x"
     },
     "Sample_10_1_1_brief": {
-      "speech": "Anfang Bruch 5 x durchgestrichen y Ende duchgestrichen durch 2 durchgestrichen y Ende duchgestrichen Ende Bruch ist gleich fünf halbe x"
+      "expected": "Anfang Bruch 5 x durchgestrichen y Ende duchgestrichen durch 2 durchgestrichen y Ende duchgestrichen Ende Bruch ist gleich fünf halbe x"
     },
     "Sample_10_1_1_sbrief": {
-      "speech": "Bruch 5 x durchgestrichen y Ende duchgestrichen durch 2 durchgestrichen y Ende duchgestrichen Ende Bruch ist gleich fünf halbe x"
+      "expected": "Bruch 5 x durchgestrichen y Ende duchgestrichen durch 2 durchgestrichen y Ende duchgestrichen Ende Bruch ist gleich fünf halbe x"
     },
     "Sample_10_2_1_default": {
-      "speech": "Anfang Bruch 12 durch 18 Ende Bruch ist gleich Anfang Bruch durchgestrichen 12 mit 2 Ende duchgestrichen durch durchgestrichen 18 mit 3 Ende duchgestrichen Ende Bruch ist gleich zwei drittel"
+      "expected": "Anfang Bruch 12 durch 18 Ende Bruch ist gleich Anfang Bruch durchgestrichen 12 mit 2 Ende duchgestrichen durch durchgestrichen 18 mit 3 Ende duchgestrichen Ende Bruch ist gleich zwei drittel"
     },
     "Sample_10_2_1_brief": {
-      "speech": "Anfang Bruch 12 durch 18 Ende Bruch ist gleich Anfang Bruch durchgestrichen 12 mit 2 Ende duchgestrichen durch durchgestrichen 18 mit 3 Ende duchgestrichen Ende Bruch ist gleich zwei drittel"
+      "expected": "Anfang Bruch 12 durch 18 Ende Bruch ist gleich Anfang Bruch durchgestrichen 12 mit 2 Ende duchgestrichen durch durchgestrichen 18 mit 3 Ende duchgestrichen Ende Bruch ist gleich zwei drittel"
     },
     "Sample_10_2_1_sbrief": {
-      "speech": "Bruch 12 durch 18 Ende Bruch ist gleich Bruch durchgestrichen 12 mit 2 Ende duchgestrichen durch durchgestrichen 18 mit 3 Ende duchgestrichen Ende Bruch ist gleich zwei drittel"
+      "expected": "Bruch 12 durch 18 Ende Bruch ist gleich Bruch durchgestrichen 12 mit 2 Ende duchgestrichen durch durchgestrichen 18 mit 3 Ende duchgestrichen Ende Bruch ist gleich zwei drittel"
     },
     "Sample_10_2_2_default": {
-      "speech": "Anfang Bruch 12 durch 18 Ende Bruch ist gleich Anfang Bruch durchgestrichen 12 mit 2 Ende duchgestrichen durch durchgestrichen 18 mit 3 Ende duchgestrichen Ende Bruch ist gleich zwei drittel"
+      "expected": "Anfang Bruch 12 durch 18 Ende Bruch ist gleich Anfang Bruch durchgestrichen 12 mit 2 Ende duchgestrichen durch durchgestrichen 18 mit 3 Ende duchgestrichen Ende Bruch ist gleich zwei drittel"
     },
     "Sample_10_2_2_brief": {
-      "speech": "Anfang Bruch 12 durch 18 Ende Bruch ist gleich Anfang Bruch durchgestrichen 12 mit 2 Ende duchgestrichen durch durchgestrichen 18 mit 3 Ende duchgestrichen Ende Bruch ist gleich zwei drittel"
+      "expected": "Anfang Bruch 12 durch 18 Ende Bruch ist gleich Anfang Bruch durchgestrichen 12 mit 2 Ende duchgestrichen durch durchgestrichen 18 mit 3 Ende duchgestrichen Ende Bruch ist gleich zwei drittel"
     },
     "Sample_10_2_2_sbrief": {
-      "speech": "Bruch 12 durch 18 Ende Bruch ist gleich Bruch durchgestrichen 12 mit 2 Ende duchgestrichen durch durchgestrichen 18 mit 3 Ende duchgestrichen Ende Bruch ist gleich zwei drittel"
+      "expected": "Bruch 12 durch 18 Ende Bruch ist gleich Bruch durchgestrichen 12 mit 2 Ende duchgestrichen durch durchgestrichen 18 mit 3 Ende duchgestrichen Ende Bruch ist gleich zwei drittel"
     },
     "Sample_11_1_1_default": {
-      "speech": "modifiziert oben x mit diaeresis"
+      "expected": "modifiziert oben x mit diaeresis"
     },
     "Sample_11_1_1_brief": {
-      "speech": "mod oben x mit diaeresis"
+      "expected": "mod oben x mit diaeresis"
     },
     "Sample_11_1_1_sbrief": {
-      "speech": "mod oben x mit diaeresis"
+      "expected": "mod oben x mit diaeresis"
     },
     "Sample_11_1_2_default": {
-      "speech": "modifiziert oben x plus y mit Pfeil nach rechts"
+      "expected": "modifiziert oben x plus y mit Pfeil nach rechts"
     },
     "Sample_11_1_2_brief": {
-      "speech": "mod oben x plus y mit Pfeil nach rechts"
+      "expected": "mod oben x plus y mit Pfeil nach rechts"
     },
     "Sample_11_1_2_sbrief": {
-      "speech": "mod oben x plus y mit Pfeil nach rechts"
+      "expected": "mod oben x plus y mit Pfeil nach rechts"
     },
     "Sample_11_1_3_default": {
-      "speech": "modifiziert oben x mit circumflex"
+      "expected": "modifiziert oben x mit circumflex"
     },
     "Sample_11_1_3_brief": {
-      "speech": "mod oben x mit circumflex"
+      "expected": "mod oben x mit circumflex"
     },
     "Sample_11_1_3_sbrief": {
-      "speech": "mod oben x mit circumflex"
+      "expected": "mod oben x mit circumflex"
     },
     "Sample_11_2_1_default": {
-      "speech": "modifiziert unten x mit Überpunkt"
+      "expected": "modifiziert unten x mit Überpunkt"
     },
     "Sample_11_2_1_brief": {
-      "speech": "mod unten x mit Überpunkt"
+      "expected": "mod unten x mit Überpunkt"
     },
     "Sample_11_2_1_sbrief": {
-      "speech": "mod unten x mit Überpunkt"
+      "expected": "mod unten x mit Überpunkt"
     },
     "Sample_11_3_1_default": {
-      "speech": "x Tilde oben"
+      "expected": "x Tilde oben"
     },
     "Sample_11_3_1_brief": {
-      "speech": "mod oben x mit Tilde"
+      "expected": "mod oben x mit Tilde"
     },
     "Sample_11_3_1_sbrief": {
-      "speech": "mod oben x mit Tilde"
+      "expected": "mod oben x mit Tilde"
     },
     "Sample_11_3_2_default": {
-      "speech": "x Überstrich"
+      "expected": "x Überstrich"
     },
     "Sample_11_3_2_brief": {
-      "speech": "mod oben x mit Überstrich"
+      "expected": "mod oben x mit Überstrich"
     },
     "Sample_11_3_2_sbrief": {
-      "speech": "mod oben x mit Überstrich"
+      "expected": "mod oben x mit Überstrich"
     },
     "Sample_11_3_3_default": {
-      "speech": "y Tilde unten"
+      "expected": "y Tilde unten"
     },
     "Sample_11_3_3_brief": {
-      "speech": "mod unten y mit Tilde"
+      "expected": "mod unten y mit Tilde"
     },
     "Sample_11_3_3_sbrief": {
-      "speech": "mod unten y mit Tilde"
+      "expected": "mod unten y mit Tilde"
     },
     "Sample_11_4_1_default": {
-      "speech": "x Überstrich Überstrich"
+      "expected": "x Überstrich Überstrich"
     },
     "Sample_11_4_1_brief": {
-      "speech": "mod oben oben mod oben x mit Überstrich mit Überstrich"
+      "expected": "mod oben oben mod oben x mit Überstrich mit Überstrich"
     },
     "Sample_11_4_1_sbrief": {
-      "speech": "mod oben oben mod oben x mit Überstrich mit Überstrich"
+      "expected": "mod oben oben mod oben x mit Überstrich mit Überstrich"
     },
     "Sample_11_4_2_default": {
-      "speech": "y Überstrich Überstrich Unterstrich Unterstrich"
+      "expected": "y Überstrich Überstrich Unterstrich Unterstrich"
     },
     "Sample_11_4_2_brief": {
-      "speech": "mod unten unten mod unten mod oben oben mod oben y mit Überstrich mit Überstrich mit Unterstrich mit Unterstrich"
+      "expected": "mod unten unten mod unten mod oben oben mod oben y mit Überstrich mit Überstrich mit Unterstrich mit Unterstrich"
     },
     "Sample_11_4_2_sbrief": {
-      "speech": "mod unten unten mod unten mod oben oben mod oben y mit Überstrich mit Überstrich mit Unterstrich mit Unterstrich"
+      "expected": "mod unten unten mod unten mod oben oben mod oben y mit Überstrich mit Überstrich mit Unterstrich mit Unterstrich"
     },
     "Sample_11_6_1_default": {
-      "speech": "modifiziert unten unten modifiziert unten a plus b mit Unterstrich mit times"
+      "expected": "modifiziert unten unten modifiziert unten a plus b mit Unterstrich mit times"
     },
     "Sample_11_6_1_brief": {
-      "speech": "mod unten unten mod unten a plus b mit Unterstrich mit times"
+      "expected": "mod unten unten mod unten a plus b mit Unterstrich mit times"
     },
     "Sample_11_6_1_sbrief": {
-      "speech": "mod unten unten mod unten a plus b mit Unterstrich mit times"
+      "expected": "mod unten unten mod unten a plus b mit Unterstrich mit times"
     },
     "Sample_11_6_3_default": {
-      "speech": "modifiziert oben oben modifiziert oben x plus y mit Tilde mit Überstrich"
+      "expected": "modifiziert oben oben modifiziert oben x plus y mit Tilde mit Überstrich"
     },
     "Sample_11_6_3_brief": {
-      "speech": "mod oben oben mod oben x plus y mit Tilde mit Überstrich"
+      "expected": "mod oben oben mod oben x plus y mit Tilde mit Überstrich"
     },
     "Sample_11_6_3_sbrief": {
-      "speech": "mod oben oben mod oben x plus y mit Tilde mit Überstrich"
+      "expected": "mod oben oben mod oben x plus y mit Tilde mit Überstrich"
     },
     "Sample_11_7_1_default": {
-      "speech": "Summe Unterschrift n ist gleich 1 Überschrift unendlich Ende Überschrift a Index n"
+      "expected": "Summe Unterschrift n ist gleich 1 Überschrift unendlich Ende Überschrift a Index n"
     },
     "Sample_11_7_1_brief": {
-      "speech": "Summe Unterschrift n ist gleich 1 Überschrift unendlich Ende Überschrift a Index n"
+      "expected": "Summe Unterschrift n ist gleich 1 Überschrift unendlich Ende Überschrift a Index n"
     },
     "Sample_11_7_1_sbrief": {
-      "speech": "Summe Unterschrift n ist gleich 1 Überschrift unendlich Ende Überschrift a Index n"
+      "expected": "Summe Unterschrift n ist gleich 1 Überschrift unendlich Ende Überschrift a Index n"
     },
     "Sample_11_8_1_default": {
-      "speech": "modifiziert unten x plus y mit Unterstrich Unterschrift a ist gleich 5 UnterUnterschrift b ist gleich 3 Ende Unterschrift"
+      "expected": "modifiziert unten x plus y mit Unterstrich Unterschrift a ist gleich 5 UnterUnterschrift b ist gleich 3 Ende Unterschrift"
     },
     "Sample_11_8_1_brief": {
-      "speech": "mod unten x plus y mit Unterstrich Unterschrift a ist gleich 5 UnterUnterschrift b ist gleich 3 Ende Unterschrift"
+      "expected": "mod unten x plus y mit Unterstrich Unterschrift a ist gleich 5 UnterUnterschrift b ist gleich 3 Ende Unterschrift"
     },
     "Sample_11_8_1_sbrief": {
-      "speech": "mod unten x plus y mit Unterstrich Unterschrift a ist gleich 5 UnterUnterschrift b ist gleich 3 Ende Unterschrift"
+      "expected": "mod unten x plus y mit Unterstrich Unterschrift a ist gleich 5 UnterUnterschrift b ist gleich 3 Ende Unterschrift"
     },
     "Sample_11_8_2_default": {
-      "speech": "modifiziert oben x plus y mit Überstrich Überschrift n ist gleich 1 ÜberÜberschrift m ist gleich 2 Ende Überschrift"
+      "expected": "modifiziert oben x plus y mit Überstrich Überschrift n ist gleich 1 ÜberÜberschrift m ist gleich 2 Ende Überschrift"
     },
     "Sample_11_8_2_brief": {
-      "speech": "mod oben x plus y mit Überstrich Überschrift n ist gleich 1 ÜberÜberschrift m ist gleich 2 Ende Überschrift"
+      "expected": "mod oben x plus y mit Überstrich Überschrift n ist gleich 1 ÜberÜberschrift m ist gleich 2 Ende Überschrift"
     },
     "Sample_11_8_2_sbrief": {
-      "speech": "mod oben x plus y mit Überstrich Überschrift n ist gleich 1 ÜberÜberschrift m ist gleich 2 Ende Überschrift"
+      "expected": "mod oben x plus y mit Überstrich Überschrift n ist gleich 1 ÜberÜberschrift m ist gleich 2 Ende Überschrift"
     },
     "Sample_12_1_1_default": {
-      "speech": "Logarithmus Index b Grundlinie x"
+      "expected": "Logarithmus Index b Grundlinie x"
     },
     "Sample_12_1_1_brief": {
-      "speech": "Logarithmus Index b Grund x"
+      "expected": "Logarithmus Index b Grund x"
     },
     "Sample_12_1_1_sbrief": {
-      "speech": "Logarithmus Index b Grund x"
+      "expected": "Logarithmus Index b Grund x"
     },
     "Sample_12_1_2_default": {
-      "speech": "Kosinus y"
+      "expected": "Kosinus y"
     },
     "Sample_12_1_2_brief": {
-      "speech": "Kosinus y"
+      "expected": "Kosinus y"
     },
     "Sample_12_1_2_sbrief": {
-      "speech": "Kosinus y"
+      "expected": "Kosinus y"
     },
     "Sample_12_1_3_default": {
-      "speech": "Sinus x"
+      "expected": "Sinus x"
     },
     "Sample_12_1_3_brief": {
-      "speech": "Sinus x"
+      "expected": "Sinus x"
     },
     "Sample_12_1_3_sbrief": {
-      "speech": "Sinus x"
+      "expected": "Sinus x"
     },
     "Sample_13_1_1_default": {
-      "speech": "Anfang Bruch 60 durchgestrichen Meilen Ende duchgestrichen durch durchgestrichen Stunden Ende duchgestrichen Ende Bruch mal Anfang Bruch 5,280 Fuß durch 1 durchgestrichen Meilen Ende duchgestrichen Ende Bruch mal Anfang Bruch 1 durchgestrichen Stunden Ende duchgestrichen durch 60 Minuten Ende Bruch ist gleich Anfang Bruch 5,280 Fuß durch Minuten Ende Bruch"
+      "expected": "Anfang Bruch 60 durchgestrichen Meilen Ende duchgestrichen durch durchgestrichen Stunden Ende duchgestrichen Ende Bruch mal Anfang Bruch 5,280 Fuß durch 1 durchgestrichen Meilen Ende duchgestrichen Ende Bruch mal Anfang Bruch 1 durchgestrichen Stunden Ende duchgestrichen durch 60 Minuten Ende Bruch ist gleich Anfang Bruch 5,280 Fuß durch Minuten Ende Bruch"
     },
     "Sample_13_1_1_brief": {
-      "speech": "Anfang Bruch 60 durchgestrichen Meilen Ende duchgestrichen durch durchgestrichen Stunden Ende duchgestrichen Ende Bruch mal Anfang Bruch 5,280 Fuß durch 1 durchgestrichen Meilen Ende duchgestrichen Ende Bruch mal Anfang Bruch 1 durchgestrichen Stunden Ende duchgestrichen durch 60 Minuten Ende Bruch ist gleich Anfang Bruch 5,280 Fuß durch Minuten Ende Bruch"
+      "expected": "Anfang Bruch 60 durchgestrichen Meilen Ende duchgestrichen durch durchgestrichen Stunden Ende duchgestrichen Ende Bruch mal Anfang Bruch 5,280 Fuß durch 1 durchgestrichen Meilen Ende duchgestrichen Ende Bruch mal Anfang Bruch 1 durchgestrichen Stunden Ende duchgestrichen durch 60 Minuten Ende Bruch ist gleich Anfang Bruch 5,280 Fuß durch Minuten Ende Bruch"
     },
     "Sample_13_1_1_sbrief": {
-      "speech": "Bruch 60 durchgestrichen Meilen Ende duchgestrichen durch durchgestrichen Stunden Ende duchgestrichen Ende Bruch mal Bruch 5,280 Fuß durch 1 durchgestrichen Meilen Ende duchgestrichen Ende Bruch mal Bruch 1 durchgestrichen Stunden Ende duchgestrichen durch 60 Minuten Ende Bruch ist gleich Bruch 5,280 Fuß durch Minuten Ende Bruch"
+      "expected": "Bruch 60 durchgestrichen Meilen Ende duchgestrichen durch durchgestrichen Stunden Ende duchgestrichen Ende Bruch mal Bruch 5,280 Fuß durch 1 durchgestrichen Meilen Ende duchgestrichen Ende Bruch mal Bruch 1 durchgestrichen Stunden Ende duchgestrichen durch 60 Minuten Ende Bruch ist gleich Bruch 5,280 Fuß durch Minuten Ende Bruch"
     },
     "_comment11_": " TODO: Get the Units right!",
     "Sample_13_1_2_default": {
-      "speech": "1 Joules ist gleich 1 Kilogramm mal Meter Quadrat mal Sekunden hoch minus 2"
+      "expected": "1 Joules ist gleich 1 Kilogramm mal Meter Quadrat mal Sekunden hoch minus 2"
     },
     "Sample_13_1_2_brief": {
-      "speech": "1 Joules ist gleich 1 Kilogramm mal Meter Quadrat mal Sekunden hoch minus 2"
+      "expected": "1 Joules ist gleich 1 Kilogramm mal Meter Quadrat mal Sekunden hoch minus 2"
     },
     "Sample_13_1_2_sbrief": {
-      "speech": "1 Joules ist gleich 1 Kilogramm mal Meter Quadrat mal Sekunden hoch minus 2"
+      "expected": "1 Joules ist gleich 1 Kilogramm mal Meter Quadrat mal Sekunden hoch minus 2"
     },
     "Sample_13_1_3_default": {
-      "speech": "m Meter ist gleich 100 m Zentimeter ist gleich Anfang Bruch m durch 1,000 Ende Bruch Kilometer"
+      "expected": "m Meter ist gleich 100 m Zentimeter ist gleich Anfang Bruch m durch 1,000 Ende Bruch Kilometer"
     },
     "Sample_13_1_3_brief": {
-      "speech": "m Meter ist gleich 100 m Zentimeter ist gleich Anfang Bruch m durch 1,000 Ende Bruch Kilometer"
+      "expected": "m Meter ist gleich 100 m Zentimeter ist gleich Anfang Bruch m durch 1,000 Ende Bruch Kilometer"
     },
     "Sample_13_1_3_sbrief": {
-      "speech": "m Meter ist gleich 100 m Zentimeter ist gleich Bruch m durch 1,000 Ende Bruch Kilometer"
+      "expected": "m Meter ist gleich 100 m Zentimeter ist gleich Bruch m durch 1,000 Ende Bruch Kilometer"
     },
     "Sample_13_1_4_default": {
-      "speech": "1 Meilen beinahe gleich 1,6 Kilometer"
+      "expected": "1 Meilen beinahe gleich 1,6 Kilometer"
     },
     "Sample_13_1_4_brief": {
-      "speech": "1 Meilen beinahe gleich 1,6 Kilometer"
+      "expected": "1 Meilen beinahe gleich 1,6 Kilometer"
     },
     "Sample_13_1_4_sbrief": {
-      "speech": "1 Meilen beinahe gleich 1,6 Kilometer"
+      "expected": "1 Meilen beinahe gleich 1,6 Kilometer"
     },
     "Sample_13_1_5_default": {
-      "speech": "1 Zoll ist gleich 2,54 Zentimeter"
+      "expected": "1 Zoll ist gleich 2,54 Zentimeter"
     },
     "Sample_13_1_5_brief": {
-      "speech": "1 Zoll ist gleich 2,54 Zentimeter"
+      "expected": "1 Zoll ist gleich 2,54 Zentimeter"
     },
     "Sample_13_1_5_sbrief": {
-      "speech": "1 Zoll ist gleich 2,54 Zentimeter"
+      "expected": "1 Zoll ist gleich 2,54 Zentimeter"
     },
     "Sample_14_1_1_default": {
-      "speech": "Anfang Anordnung 1. Zeile 1. Spalte großes H 2 2. Spalte plus 3. Spalte großes F 2 4. Spalte Pfeil nach rechts 5. Spalte 2 großes H großes F 2. Zeile 1. Spalte hydrogen 2. Spalte leer 3. Spalte fluorine 4. Spalte leer 5. Spalte hydrogen fluoride Ende Anordnung"
+      "expected": "Anfang Anordnung 1. Zeile 1. Spalte großes H 2 2. Spalte plus 3. Spalte großes F 2 4. Spalte Pfeil nach rechts 5. Spalte 2 großes H großes F 2. Zeile 1. Spalte hydrogen 2. Spalte leer 3. Spalte fluorine 4. Spalte leer 5. Spalte hydrogen fluoride Ende Anordnung"
     },
     "Sample_14_1_1_brief": {
-      "speech": "Anfang Anordnung 1. Zeile 1. Spalte großes H 2 2. Spalte plus 3. Spalte großes F 2 4. Spalte Pfeil nach rechts 5. Spalte 2 großes H großes F 2. Zeile 1. Spalte hydrogen 2. Spalte leer 3. Spalte fluorine 4. Spalte leer 5. Spalte hydrogen fluoride Ende Anordnung"
+      "expected": "Anfang Anordnung 1. Zeile 1. Spalte großes H 2 2. Spalte plus 3. Spalte großes F 2 4. Spalte Pfeil nach rechts 5. Spalte 2 großes H großes F 2. Zeile 1. Spalte hydrogen 2. Spalte leer 3. Spalte fluorine 4. Spalte leer 5. Spalte hydrogen fluoride Ende Anordnung"
     },
     "Sample_14_1_1_sbrief": {
-      "speech": "Anordnung 1. Zeile 1. Spalte großes H 2 2. Spalte plus 3. Spalte großes F 2 4. Spalte Pfeil nach rechts 5. Spalte 2 großes H großes F 2. Zeile 1. Spalte hydrogen 2. Spalte leer 3. Spalte fluorine 4. Spalte leer 5. Spalte hydrogen fluoride Ende Anordnung"
+      "expected": "Anordnung 1. Zeile 1. Spalte großes H 2 2. Spalte plus 3. Spalte großes F 2 4. Spalte Pfeil nach rechts 5. Spalte 2 großes H großes F 2. Zeile 1. Spalte hydrogen 2. Spalte leer 3. Spalte fluorine 4. Spalte leer 5. Spalte hydrogen fluoride Ende Anordnung"
     },
     "Sample_14_3_1_default": {
-      "speech": "x ist gleich Anfang Fallunterscheidung große geschwungene Klammer auf 1. Zeile 1. Spalte y kleiner als 0 2. Spalte 0 2. Zeile 1. Spalte y größer oder gleich 0 2. Spalte 2 y Ende Fallunterscheidung"
+      "expected": "x ist gleich Anfang Fallunterscheidung große geschwungene Klammer auf 1. Zeile 1. Spalte y kleiner als 0 2. Spalte 0 2. Zeile 1. Spalte y größer oder gleich 0 2. Spalte 2 y Ende Fallunterscheidung"
     },
     "Sample_14_3_1_brief": {
-      "speech": "x ist gleich Anfang Fälle große geschwungene Klammer auf 1. Zeile 1. Spalte y kleiner als 0 2. Spalte 0 2. Zeile 1. Spalte y größer oder gleich 0 2. Spalte 2 y Ende Fälle"
+      "expected": "x ist gleich Anfang Fälle große geschwungene Klammer auf 1. Zeile 1. Spalte y kleiner als 0 2. Spalte 0 2. Zeile 1. Spalte y größer oder gleich 0 2. Spalte 2 y Ende Fälle"
     },
     "Sample_14_3_1_sbrief": {
-      "speech": "x ist gleich Fälle große geschwungene Klammer auf 1. Zeile 1. Spalte y kleiner als 0 2. Spalte 0 2. Zeile 1. Spalte y größer oder gleich 0 2. Spalte 2 y Ende Fälle"
+      "expected": "x ist gleich Fälle große geschwungene Klammer auf 1. Zeile 1. Spalte y kleiner als 0 2. Spalte 0 2. Zeile 1. Spalte y größer oder gleich 0 2. Spalte 2 y Ende Fälle"
     },
     "Sample_15_1_1_default": {
-      "speech": "Anfang 3 mal 3 Matrize 1. Zeile 1. Spalte x plus a 2. Spalte x plus b 3. Spalte x plus c 2. Zeile 1. Spalte y plus a 2. Spalte y plus b 3. Spalte y plus c 3. Zeile 1. Spalte z plus a 2. Spalte z plus b 3. Spalte z plus c Ende Matrize"
+      "expected": "Anfang 3 mal 3 Matrize 1. Zeile 1. Spalte x plus a 2. Spalte x plus b 3. Spalte x plus c 2. Zeile 1. Spalte y plus a 2. Spalte y plus b 3. Spalte y plus c 3. Zeile 1. Spalte z plus a 2. Spalte z plus b 3. Spalte z plus c Ende Matrize"
     },
     "Sample_15_1_1_brief": {
-      "speech": "Anfang 3 mal 3 Matrize 1. Zeile 1. Spalte x plus a 2. Spalte x plus b 3. Spalte x plus c 2. Zeile 1. Spalte y plus a 2. Spalte y plus b 3. Spalte y plus c 3. Zeile 1. Spalte z plus a 2. Spalte z plus b 3. Spalte z plus c Ende Matrize"
+      "expected": "Anfang 3 mal 3 Matrize 1. Zeile 1. Spalte x plus a 2. Spalte x plus b 3. Spalte x plus c 2. Zeile 1. Spalte y plus a 2. Spalte y plus b 3. Spalte y plus c 3. Zeile 1. Spalte z plus a 2. Spalte z plus b 3. Spalte z plus c Ende Matrize"
     },
     "Sample_15_1_1_sbrief": {
-      "speech": "3 mal 3 Matrize 1. Zeile 1. Spalte x plus a 2. Spalte x plus b 3. Spalte x plus c 2. Zeile 1. Spalte y plus a 2. Spalte y plus b 3. Spalte y plus c 3. Zeile 1. Spalte z plus a 2. Spalte z plus b 3. Spalte z plus c Ende Matrize"
+      "expected": "3 mal 3 Matrize 1. Zeile 1. Spalte x plus a 2. Spalte x plus b 3. Spalte x plus c 2. Zeile 1. Spalte y plus a 2. Spalte y plus b 3. Spalte y plus c 3. Zeile 1. Spalte z plus a 2. Spalte z plus b 3. Spalte z plus c Ende Matrize"
     },
     "Sample_15_2_1_default": {
-      "speech": "Anfang 2 mal 2 Determinante 1. Zeile 1. Spalte a plus 1 2. Spalte b 2. Zeile 1. Spalte c 2. Spalte d Ende Determinante ist gleich Klammer auf a plus 1 Klammer zu d minus b c"
+      "expected": "Anfang 2 mal 2 Determinante 1. Zeile 1. Spalte a plus 1 2. Spalte b 2. Zeile 1. Spalte c 2. Spalte d Ende Determinante ist gleich Klammer auf a plus 1 Klammer zu d minus b c"
     },
     "Sample_15_2_1_brief": {
-      "speech": "Anfang 2 mal 2 Determinante 1. Zeile 1. Spalte a plus 1 2. Spalte b 2. Zeile 1. Spalte c 2. Spalte d Ende Determinante ist gleich Klammer auf a plus 1 Klammer zu d minus b c"
+      "expected": "Anfang 2 mal 2 Determinante 1. Zeile 1. Spalte a plus 1 2. Spalte b 2. Zeile 1. Spalte c 2. Spalte d Ende Determinante ist gleich Klammer auf a plus 1 Klammer zu d minus b c"
     },
     "Sample_15_2_1_sbrief": {
-      "speech": "2 mal 2 Determinante 1. Zeile 1. Spalte a plus 1 2. Spalte b 2. Zeile 1. Spalte c 2. Spalte d Ende Determinante ist gleich Klammer auf a plus 1 Klammer zu d minus b c"
+      "expected": "2 mal 2 Determinante 1. Zeile 1. Spalte a plus 1 2. Spalte b 2. Zeile 1. Spalte c 2. Spalte d Ende Determinante ist gleich Klammer auf a plus 1 Klammer zu d minus b c"
     },
     "Sample_15_4_1_default": {
-      "speech": "Anfang 2 mal 2 Determinante 1. Zeile a b 2. Zeile c d Ende Determinante ist gleich a d minus b c"
+      "expected": "Anfang 2 mal 2 Determinante 1. Zeile a b 2. Zeile c d Ende Determinante ist gleich a d minus b c"
     },
     "Sample_15_4_1_brief": {
-      "speech": "Anfang 2 mal 2 Determinante 1. Zeile a b 2. Zeile c d Ende Determinante ist gleich a d minus b c"
+      "expected": "Anfang 2 mal 2 Determinante 1. Zeile a b 2. Zeile c d Ende Determinante ist gleich a d minus b c"
     },
     "Sample_15_4_1_sbrief": {
-      "speech": "2 mal 2 Determinante 1. Zeile a b 2. Zeile c d Ende Determinante ist gleich a d minus b c"
+      "expected": "2 mal 2 Determinante 1. Zeile a b 2. Zeile c d Ende Determinante ist gleich a d minus b c"
     },
     "Sample_15_6_1_default": {
-      "speech": "Anfang Binomialkoeffizient y aus x Ende Binomialkoeffizient"
+      "expected": "Anfang Binomialkoeffizient y aus x Ende Binomialkoeffizient"
     },
     "Sample_15_6_1_brief": {
-      "speech": "Anfang Binomial y aus x Ende Binomial"
+      "expected": "Anfang Binomial y aus x Ende Binomial"
     },
     "Sample_15_6_1_sbrief": {
-      "speech": "Binomial y aus x Ende Binomial"
+      "expected": "Binomial y aus x Ende Binomial"
     }
   }
 }

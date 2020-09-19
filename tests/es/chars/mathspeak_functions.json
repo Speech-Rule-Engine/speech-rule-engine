@@ -12,441 +12,441 @@
   "information": "MathspeakFunctionSpanishTest",
   "tests": {
     "deg": {
-      "speech": [
+      "expected": [
         "grados",
         "grados",
         "grados"
       ]
     },
     "det": {
-      "speech": [
+      "expected": [
         "determinante",
         "determinante",
         "determinante"
       ]
     },
     "dim": {
-      "speech": [
+      "expected": [
         "dimensión",
         "dimensión",
         "dimensión"
       ]
     },
     "hom": {
-      "speech": [
+      "expected": [
         "homomorfismo",
         "homomorfismo",
         "homomorfismo"
       ]
     },
     "Hom": {
-      "speech": [
+      "expected": [
         "homomorfismo",
         "homomorfismo",
         "homomorfismo"
       ]
     },
     "ker": {
-      "speech": [
+      "expected": [
         "kernel",
         "kernel",
         "kernel"
       ]
     },
     "Tr": {
-      "speech": [
+      "expected": [
         "traza",
         "traza",
         "traza"
       ]
     },
     "tr": {
-      "speech": [
+      "expected": [
         "traza",
         "traza",
         "traza"
       ]
     },
     "log": {
-      "speech": [
+      "expected": [
         "logaritmo",
         "logaritmo",
         "logaritmo"
       ]
     },
     "ln": {
-      "speech": [
+      "expected": [
         "logaritmo neperiano",
         "logaritmo neperiano",
         "logaritmo neperiano"
       ]
     },
     "lg": {
-      "speech": [
+      "expected": [
         "logaritmo base 10",
         "logaritmo base 10",
         "logaritmo base 10"
       ]
     },
     "exp": {
-      "speech": [
+      "expected": [
         "exponente",
         "exponente",
         "exponente"
       ]
     },
     "expt": {
-      "speech": [
+      "expected": [
         "exponente",
         "exponente",
         "exponente"
       ]
     },
     "gcd": {
-      "speech": [
+      "expected": [
         "MCD",
         "MCD",
         "MCD"
       ]
     },
     "lcm": {
-      "speech": [
+      "expected": [
         "mcm",
         "mcm",
         "mcm"
       ]
     },
     "arg": {
-      "speech": [
+      "expected": [
         "argumento",
         "argumento",
         "argumento"
       ]
     },
     "im": {
-      "speech": [
+      "expected": [
         "parte imaginaria",
         "parte imaginaria",
         "parte imaginaria"
       ]
     },
     "re": {
-      "speech": [
+      "expected": [
         "residuo",
         "residuo",
         "residuo"
       ]
     },
     "inf": {
-      "speech": [
+      "expected": [
         "extremo inferior",
         "extremo inferior",
         "extremo inferior"
       ]
     },
     "lim": {
-      "speech": [
+      "expected": [
         "límite",
         "límite",
         "límite"
       ]
     },
     "'": {
-      "speech": [
+      "expected": [
         "límite inverso",
         "límite inverso",
         "límite inverso"
       ]
     },
     "liminf": {
-      "speech": [
+      "expected": [
         "límite inferior",
         "límite inferior",
         "límite inferior"
       ]
     },
     "limsup": {
-      "speech": [
+      "expected": [
         "límite superior",
         "límite superior",
         "límite superior"
       ]
     },
     "max": {
-      "speech": [
+      "expected": [
         "máximo",
         "máximo",
         "máximo"
       ]
     },
     "min": {
-      "speech": [
+      "expected": [
         "mínimo",
         "mínimo",
         "mínimo"
       ]
     },
     "sup": {
-      "speech": [
+      "expected": [
         "superior",
         "superior",
         "superior"
       ]
     },
     "injlim": {
-      "speech": [
+      "expected": [
         "límite directo",
         "límite directo",
         "límite directo"
       ]
     },
     "projlim": {
-      "speech": [
+      "expected": [
         "límite inverso",
         "límite inverso",
         "límite inverso"
       ]
     },
     "mod": {
-      "speech": [
+      "expected": [
         "módulo",
         "módulo",
         "módulo"
       ]
     },
     "Pr": {
-      "speech": [
+      "expected": [
         "probabilidad",
         "probabilidad",
         "probabilidad"
       ]
     },
     "cosh": {
-      "speech": [
+      "expected": [
         "coseno hiperbólico",
         "coseno hiperbólico",
         "coseno hiperbólico"
       ]
     },
     "coth": {
-      "speech": [
+      "expected": [
         "cotangente hiperbólica",
         "cotangente hiperbólica",
         "cotangente hiperbólica"
       ]
     },
     "csch": {
-      "speech": [
+      "expected": [
         "cosecante hiperbólica",
         "cosecante hiperbólica",
         "cosecante hiperbólica"
       ]
     },
     "sech": {
-      "speech": [
+      "expected": [
         "secante hiperbólica",
         "secante hiperbólica",
         "secante hiperbólica"
       ]
     },
     "sinh": {
-      "speech": [
+      "expected": [
         "seno hiperbólico",
         "seno hiperbólico",
         "seno hiperbólico"
       ]
     },
     "tanh": {
-      "speech": [
+      "expected": [
         "tangente hiperbólica",
         "tangente hiperbólica",
         "tangente hiperbólica"
       ]
     },
     "arcosh": {
-      "speech": [
+      "expected": [
         "area coseno hiperbólico",
         "area coseno hiperbólico",
         "area coseno hiperbólico"
       ]
     },
     "arccosh": {
-      "speech": [
+      "expected": [
         "area coseno hiperbólico",
         "area coseno hiperbólico",
         "area coseno hiperbólico"
       ]
     },
     "arcoth": {
-      "speech": [
+      "expected": [
         "area cotangente hiperbólica",
         "area cotangente hiperbólica",
         "area cotangente hiperbólica"
       ]
     },
     "arccoth": {
-      "speech": [
+      "expected": [
         "area cotangente hiperbólica",
         "area cotangente hiperbólica",
         "area cotangente hiperbólica"
       ]
     },
     "arcsch": {
-      "speech": [
+      "expected": [
         "area cosecante hiperbólica",
         "area cosecante hiperbólica",
         "area cosecante hiperbólica"
       ]
     },
     "arccsch": {
-      "speech": [
+      "expected": [
         "area cosecante hiperbólica",
         "area cosecante hiperbólica",
         "area cosecante hiperbólica"
       ]
     },
     "arsech": {
-      "speech": [
+      "expected": [
         "area secante hiperbólica",
         "area secante hiperbólica",
         "area secante hiperbólica"
       ]
     },
     "arcsech": {
-      "speech": [
+      "expected": [
         "area secante hiperbólica",
         "area secante hiperbólica",
         "area secante hiperbólica"
       ]
     },
     "arsinh": {
-      "speech": [
+      "expected": [
         "area seno hiperbólico",
         "area seno hiperbólico",
         "area seno hiperbólico"
       ]
     },
     "arcsinh": {
-      "speech": [
+      "expected": [
         "area seno hiperbólico",
         "area seno hiperbólico",
         "area seno hiperbólico"
       ]
     },
     "artanh": {
-      "speech": [
+      "expected": [
         "area tangente hiperbólica",
         "area tangente hiperbólica",
         "area tangente hiperbólica"
       ]
     },
     "arctanh": {
-      "speech": [
+      "expected": [
         "area tangente hiperbólica",
         "area tangente hiperbólica",
         "area tangente hiperbólica"
       ]
     },
     "cos": {
-      "speech": [
+      "expected": [
         "coseno",
         "coseno",
         "coseno"
       ]
     },
     "cosine": {
-      "speech": [
+      "expected": [
         "coseno",
         "coseno",
         "coseno"
       ]
     },
     "cot": {
-      "speech": [
+      "expected": [
         "cotangente",
         "cotangente",
         "cotangente"
       ]
     },
     "csc": {
-      "speech": [
+      "expected": [
         "cosecante",
         "cosecante",
         "cosecante"
       ]
     },
     "sec": {
-      "speech": [
+      "expected": [
         "secant",
         "secant",
         "secant"
       ]
     },
     "sin": {
-      "speech": [
+      "expected": [
         "seno",
         "seno",
         "seno"
       ]
     },
     "sine": {
-      "speech": [
+      "expected": [
         "seno",
         "seno",
         "seno"
       ]
     },
     "tan": {
-      "speech": [
+      "expected": [
         "tangente",
         "tangente",
         "tangente"
       ]
     },
     "arccos": {
-      "speech": [
+      "expected": [
         "arco coseno",
         "arco coseno",
         "arco coseno"
       ]
     },
     "arccot": {
-      "speech": [
+      "expected": [
         "arco cotangente",
         "arco cotangente",
         "arco cotangente"
       ]
     },
     "arccsc": {
-      "speech": [
+      "expected": [
         "arco cosecante",
         "arco cosecante",
         "arco cosecante"
       ]
     },
     "arcsec": {
-      "speech": [
+      "expected": [
         "arco secante",
         "arco secante",
         "arco secante"
       ]
     },
     "arcsin": {
-      "speech": [
+      "expected": [
         "arco seno",
         "arco seno",
         "arco seno"
       ]
     },
     "arctan": {
-      "speech": [
+      "expected": [
         "arco tangente",
         "arco tangente",
         "arco tangente"
       ]
     },
     "sen": {
-      "speech": [
+      "expected": [
         "seno",
         "seno",
         "seno"

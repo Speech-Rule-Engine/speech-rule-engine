@@ -3,1083 +3,1083 @@
   "tests": {
     "Sample_1_1_1_default": {
       "test": true,
-      "mathml": "<mrow><mi>π</mi><mo>≈</mo><mn>3.14159</mn></mrow>",
+      "input": "<mrow><mi>π</mi><mo>≈</mo><mn>3.14159</mn></mrow>",
       "preference": "default"
     },
     "Sample_1_1_1_brief": {
       "test": true,
-      "mathml": "<mrow><mi>π</mi><mo>≈</mo><mn>3.14159</mn></mrow>",
+      "input": "<mrow><mi>π</mi><mo>≈</mo><mn>3.14159</mn></mrow>",
       "preference": "brief"
     },
     "Sample_1_1_1_sbrief": {
       "test": true,
-      "mathml": "<mrow><mi>π</mi><mo>≈</mo><mn>3.14159</mn></mrow>",
+      "input": "<mrow><mi>π</mi><mo>≈</mo><mn>3.14159</mn></mrow>",
       "preference": "sbrief"
     },
     "Sample_1_1_2_default": {
       "test": true,
-      "mathml": "<mrow><mn>102</mn><mo>+</mo><mn>2,214</mn><mo>+</mo><mn>15</mn><mo>=</mo><mn>2,331</mn></mrow>",
+      "input": "<mrow><mn>102</mn><mo>+</mo><mn>2,214</mn><mo>+</mo><mn>15</mn><mo>=</mo><mn>2,331</mn></mrow>",
       "preference": "default"
     },
     "Sample_1_1_2_brief": {
       "test": true,
-      "mathml": "<mrow><mn>102</mn><mo>+</mo><mn>2,214</mn><mo>+</mo><mn>15</mn><mo>=</mo><mn>2,331</mn></mrow>",
+      "input": "<mrow><mn>102</mn><mo>+</mo><mn>2,214</mn><mo>+</mo><mn>15</mn><mo>=</mo><mn>2,331</mn></mrow>",
       "preference": "brief"
     },
     "Sample_1_1_2_sbrief": {
       "test": true,
-      "mathml": "<mrow><mn>102</mn><mo>+</mo><mn>2,214</mn><mo>+</mo><mn>15</mn><mo>=</mo><mn>2,331</mn></mrow>",
+      "input": "<mrow><mn>102</mn><mo>+</mo><mn>2,214</mn><mo>+</mo><mn>15</mn><mo>=</mo><mn>2,331</mn></mrow>",
       "preference": "sbrief"
     },
     "Sample_1_1_3_default": {
       "test": true,
-      "mathml": "<mrow><mn>59</mn><mo>×</mo><mn>0</mn><mo>=</mo><mn>0</mn></mrow>",
+      "input": "<mrow><mn>59</mn><mo>×</mo><mn>0</mn><mo>=</mo><mn>0</mn></mrow>",
       "preference": "default"
     },
     "Sample_1_1_3_brief": {
       "test": true,
-      "mathml": "<mrow><mn>59</mn><mo>×</mo><mn>0</mn><mo>=</mo><mn>0</mn></mrow>",
+      "input": "<mrow><mn>59</mn><mo>×</mo><mn>0</mn><mo>=</mo><mn>0</mn></mrow>",
       "preference": "brief"
     },
     "Sample_1_1_3_sbrief": {
       "test": true,
-      "mathml": "<mrow><mn>59</mn><mo>×</mo><mn>0</mn><mo>=</mo><mn>0</mn></mrow>",
+      "input": "<mrow><mn>59</mn><mo>×</mo><mn>0</mn><mo>=</mo><mn>0</mn></mrow>",
       "preference": "sbrief"
     },
     "Sample_1_2_1_default": {
       "test": true,
-      "mathml": "<mrow><mn>3</mn><mo>-</mo><mo>-</mo><mn>2</mn></mrow>",
+      "input": "<mrow><mn>3</mn><mo>-</mo><mo>-</mo><mn>2</mn></mrow>",
       "preference": "default"
     },
     "Sample_1_2_1_brief": {
       "test": true,
-      "mathml": "<mrow><mn>3</mn><mo>-</mo><mo>-</mo><mn>2</mn></mrow>",
+      "input": "<mrow><mn>3</mn><mo>-</mo><mo>-</mo><mn>2</mn></mrow>",
       "preference": "brief"
     },
     "Sample_1_2_1_sbrief": {
       "test": true,
-      "mathml": "<mrow><mn>3</mn><mo>-</mo><mo>-</mo><mn>2</mn></mrow>",
+      "input": "<mrow><mn>3</mn><mo>-</mo><mo>-</mo><mn>2</mn></mrow>",
       "preference": "sbrief"
     },
     "Sample_1_2_2_default": {
       "test": true,
-      "mathml": "<mrow><mo>-</mo><mi>y</mi></mrow>",
+      "input": "<mrow><mo>-</mo><mi>y</mi></mrow>",
       "preference": "default"
     },
     "Sample_1_2_2_brief": {
       "test": true,
-      "mathml": "<mrow><mo>-</mo><mi>y</mi></mrow>",
+      "input": "<mrow><mo>-</mo><mi>y</mi></mrow>",
       "preference": "brief"
     },
     "Sample_1_2_2_sbrief": {
       "test": true,
-      "mathml": "<mrow><mo>-</mo><mi>y</mi></mrow>",
+      "input": "<mrow><mo>-</mo><mi>y</mi></mrow>",
       "preference": "sbrief"
     },
     "Sample_1_2_3_default": {
       "test": true,
-      "mathml": "<mrow><mo>-</mo><mn>32</mn></mrow>",
+      "input": "<mrow><mo>-</mo><mn>32</mn></mrow>",
       "preference": "default"
     },
     "Sample_1_2_3_brief": {
       "test": true,
-      "mathml": "<mrow><mo>-</mo><mn>32</mn></mrow>",
+      "input": "<mrow><mo>-</mo><mn>32</mn></mrow>",
       "preference": "brief"
     },
     "Sample_1_2_3_sbrief": {
       "test": true,
-      "mathml": "<mrow><mo>-</mo><mn>32</mn></mrow>",
+      "input": "<mrow><mo>-</mo><mn>32</mn></mrow>",
       "preference": "sbrief"
     },
     "Sample_1_4_1_default": {
       "test": true,
-      "mathml": "<mrow><mn>t2e4</mn></mrow>",
+      "input": "<mrow><mn>t2e4</mn></mrow>",
       "preference": "default"
     },
     "Sample_1_4_1_brief": {
       "test": true,
-      "mathml": "<mrow><mn>t2e4</mn></mrow>",
+      "input": "<mrow><mn>t2e4</mn></mrow>",
       "preference": "brief"
     },
     "Sample_1_4_1_sbrief": {
       "test": true,
-      "mathml": "<mrow><mn>t2e4</mn></mrow>",
+      "input": "<mrow><mn>t2e4</mn></mrow>",
       "preference": "sbrief"
     },
     "Sample_1_4_2_default": {
       "test": true,
-      "mathml": "<mrow><mn>#FF0000</mn></mrow>",
+      "input": "<mrow><mn>#FF0000</mn></mrow>",
       "preference": "default"
     },
     "Sample_1_4_2_brief": {
       "test": true,
-      "mathml": "<mrow><mn>#FF0000</mn></mrow>",
+      "input": "<mrow><mn>#FF0000</mn></mrow>",
       "preference": "brief"
     },
     "Sample_1_4_2_sbrief": {
       "test": true,
-      "mathml": "<mrow><mn>#FF0000</mn></mrow>",
+      "input": "<mrow><mn>#FF0000</mn></mrow>",
       "preference": "sbrief"
     },
     "Sample_1_4_3_default": {
       "test": true,
-      "mathml": "<mrow><mn>0x15FF</mn><mo>+</mo><mn>0x2B01</mn><mo>=</mo><mn>0x4100</mn></mrow>",
+      "input": "<mrow><mn>0x15FF</mn><mo>+</mo><mn>0x2B01</mn><mo>=</mo><mn>0x4100</mn></mrow>",
       "preference": "default"
     },
     "Sample_1_4_3_brief": {
       "test": true,
-      "mathml": "<mrow><mn>0x15FF</mn><mo>+</mo><mn>0x2B01</mn><mo>=</mo><mn>0x4100</mn></mrow>",
+      "input": "<mrow><mn>0x15FF</mn><mo>+</mo><mn>0x2B01</mn><mo>=</mo><mn>0x4100</mn></mrow>",
       "preference": "brief"
     },
     "Sample_1_4_3_sbrief": {
       "test": true,
-      "mathml": "<mrow><mn>0x15FF</mn><mo>+</mo><mn>0x2B01</mn><mo>=</mo><mn>0x4100</mn></mrow>",
+      "input": "<mrow><mn>0x15FF</mn><mo>+</mo><mn>0x2B01</mn><mo>=</mo><mn>0x4100</mn></mrow>",
       "preference": "sbrief"
     },
     "Sample_1_5_1_default": {
       "test": true,
-      "mathml": "<mrow><mn>I</mn><mo>,</mo><mn>II</mn><mo>,</mo><mn>III</mn><mo>,</mo><mn>IV</mn><mo>,</mo><mn>V</mn><mo>.</mo></mrow>",
+      "input": "<mrow><mn>I</mn><mo>,</mo><mn>II</mn><mo>,</mo><mn>III</mn><mo>,</mo><mn>IV</mn><mo>,</mo><mn>V</mn><mo>.</mo></mrow>",
       "preference": "default"
     },
     "Sample_1_5_1_brief": {
       "test": true,
-      "mathml": "<mrow><mn>I</mn><mo>,</mo><mn>II</mn><mo>,</mo><mn>III</mn><mo>,</mo><mn>IV</mn><mo>,</mo><mn>V</mn><mo>.</mo></mrow>",
+      "input": "<mrow><mn>I</mn><mo>,</mo><mn>II</mn><mo>,</mo><mn>III</mn><mo>,</mo><mn>IV</mn><mo>,</mo><mn>V</mn><mo>.</mo></mrow>",
       "preference": "brief"
     },
     "Sample_1_5_1_sbrief": {
       "test": true,
-      "mathml": "<mrow><mn>I</mn><mo>,</mo><mn>II</mn><mo>,</mo><mn>III</mn><mo>,</mo><mn>IV</mn><mo>,</mo><mn>V</mn><mo>.</mo></mrow>",
+      "input": "<mrow><mn>I</mn><mo>,</mo><mn>II</mn><mo>,</mo><mn>III</mn><mo>,</mo><mn>IV</mn><mo>,</mo><mn>V</mn><mo>.</mo></mrow>",
       "preference": "sbrief"
     },
     "Sample_1_6_1_default": {
       "test": false,
-      "mathml": "<mrow><mfrac><mn>22</mn><mn>7</mn></mfrac><mo>=</mo><mstack stackalign=\"right\"><msline length=\"6\"/><mn>3.142857</mn></mstack></mrow>",
+      "input": "<mrow><mfrac><mn>22</mn><mn>7</mn></mfrac><mo>=</mo><mstack stackalign=\"right\"><msline length=\"6\"/><mn>3.142857</mn></mstack></mrow>",
       "preference": "default"
     },
     "Sample_1_6_1_brief": {
       "test": false,
-      "mathml": "<mrow><mfrac><mn>22</mn><mn>7</mn></mfrac><mo>=</mo><mstack stackalign=\"right\"><msline length=\"6\"/><mn>3.142857</mn></mstack></mrow>",
+      "input": "<mrow><mfrac><mn>22</mn><mn>7</mn></mfrac><mo>=</mo><mstack stackalign=\"right\"><msline length=\"6\"/><mn>3.142857</mn></mstack></mrow>",
       "preference": "brief"
     },
     "Sample_1_6_1_sbrief": {
       "test": false,
-      "mathml": "<mrow><mfrac><mn>22</mn><mn>7</mn></mfrac><mo>=</mo><mstack stackalign=\"right\"><msline length=\"6\"/><mn>3.142857</mn></mstack></mrow>",
+      "input": "<mrow><mfrac><mn>22</mn><mn>7</mn></mfrac><mo>=</mo><mstack stackalign=\"right\"><msline length=\"6\"/><mn>3.142857</mn></mstack></mrow>",
       "preference": "sbrief"
     },
     "Sample_2_1_1_default": {
       "test": true,
-      "mathml": "<mrow><mi>d</mi><mo>=</mo><msqrt><mrow><msup><mrow><mo>(</mo><mi>X</mi><mo>-</mo><mi>x</mi><mo>)</mo></mrow><mn>2</mn></msup><mo>-</mo><msup><mrow><mo>(</mo><mi>Y</mi><mo>-</mo><mi>y</mi><mo>)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mrow>",
+      "input": "<mrow><mi>d</mi><mo>=</mo><msqrt><mrow><msup><mrow><mo>(</mo><mi>X</mi><mo>-</mo><mi>x</mi><mo>)</mo></mrow><mn>2</mn></msup><mo>-</mo><msup><mrow><mo>(</mo><mi>Y</mi><mo>-</mo><mi>y</mi><mo>)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mrow>",
       "preference": "default"
     },
     "Sample_2_1_1_brief": {
       "test": true,
-      "mathml": "<mrow><mi>d</mi><mo>=</mo><msqrt><mrow><msup><mrow><mo>(</mo><mi>X</mi><mo>-</mo><mi>x</mi><mo>)</mo></mrow><mn>2</mn></msup><mo>-</mo><msup><mrow><mo>(</mo><mi>Y</mi><mo>-</mo><mi>y</mi><mo>)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mrow>",
+      "input": "<mrow><mi>d</mi><mo>=</mo><msqrt><mrow><msup><mrow><mo>(</mo><mi>X</mi><mo>-</mo><mi>x</mi><mo>)</mo></mrow><mn>2</mn></msup><mo>-</mo><msup><mrow><mo>(</mo><mi>Y</mi><mo>-</mo><mi>y</mi><mo>)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mrow>",
       "preference": "brief"
     },
     "Sample_2_1_1_sbrief": {
       "test": true,
-      "mathml": "<mrow><mi>d</mi><mo>=</mo><msqrt><mrow><msup><mrow><mo>(</mo><mi>X</mi><mo>-</mo><mi>x</mi><mo>)</mo></mrow><mn>2</mn></msup><mo>-</mo><msup><mrow><mo>(</mo><mi>Y</mi><mo>-</mo><mi>y</mi><mo>)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mrow>",
+      "input": "<mrow><mi>d</mi><mo>=</mo><msqrt><mrow><msup><mrow><mo>(</mo><mi>X</mi><mo>-</mo><mi>x</mi><mo>)</mo></mrow><mn>2</mn></msup><mo>-</mo><msup><mrow><mo>(</mo><mi>Y</mi><mo>-</mo><mi>y</mi><mo>)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mrow>",
       "preference": "sbrief"
     },
     "Sample_2_3_1_default": {
       "test": true,
-      "mathml": "<mrow><mtext>If</mtext><mspace width=\"4.pt\"/><mi>A</mi><mo>→</mo><mi>B</mi><mspace width=\"4.pt\"/><mtext>and</mtext><mspace width=\"4.pt\"/><mi>B</mi><mo>→</mo><mi>C</mi><mspace width=\"4.pt\"/><mtext>then</mtext><mspace width=\"4.pt\"/><mi>A</mi><mo>→</mo><mi>C</mi><mo>.</mo></mrow>",
+      "input": "<mrow><mtext>If</mtext><mspace width=\"4.pt\"/><mi>A</mi><mo>→</mo><mi>B</mi><mspace width=\"4.pt\"/><mtext>and</mtext><mspace width=\"4.pt\"/><mi>B</mi><mo>→</mo><mi>C</mi><mspace width=\"4.pt\"/><mtext>then</mtext><mspace width=\"4.pt\"/><mi>A</mi><mo>→</mo><mi>C</mi><mo>.</mo></mrow>",
       "preference": "default"
     },
     "Sample_2_3_1_brief": {
       "test": true,
-      "mathml": "<mrow><mtext>If</mtext><mspace width=\"4.pt\"/><mi>A</mi><mo>→</mo><mi>B</mi><mspace width=\"4.pt\"/><mtext>and</mtext><mspace width=\"4.pt\"/><mi>B</mi><mo>→</mo><mi>C</mi><mspace width=\"4.pt\"/><mtext>then</mtext><mspace width=\"4.pt\"/><mi>A</mi><mo>→</mo><mi>C</mi><mo>.</mo></mrow>",
+      "input": "<mrow><mtext>If</mtext><mspace width=\"4.pt\"/><mi>A</mi><mo>→</mo><mi>B</mi><mspace width=\"4.pt\"/><mtext>and</mtext><mspace width=\"4.pt\"/><mi>B</mi><mo>→</mo><mi>C</mi><mspace width=\"4.pt\"/><mtext>then</mtext><mspace width=\"4.pt\"/><mi>A</mi><mo>→</mo><mi>C</mi><mo>.</mo></mrow>",
       "preference": "brief"
     },
     "Sample_2_3_1_sbrief": {
       "test": true,
-      "mathml": "<mrow><mtext>If</mtext><mspace width=\"4.pt\"/><mi>A</mi><mo>→</mo><mi>B</mi><mspace width=\"4.pt\"/><mtext>and</mtext><mspace width=\"4.pt\"/><mi>B</mi><mo>→</mo><mi>C</mi><mspace width=\"4.pt\"/><mtext>then</mtext><mspace width=\"4.pt\"/><mi>A</mi><mo>→</mo><mi>C</mi><mo>.</mo></mrow>",
+      "input": "<mrow><mtext>If</mtext><mspace width=\"4.pt\"/><mi>A</mi><mo>→</mo><mi>B</mi><mspace width=\"4.pt\"/><mtext>and</mtext><mspace width=\"4.pt\"/><mi>B</mi><mo>→</mo><mi>C</mi><mspace width=\"4.pt\"/><mtext>then</mtext><mspace width=\"4.pt\"/><mi>A</mi><mo>→</mo><mi>C</mi><mo>.</mo></mrow>",
       "preference": "sbrief"
     },
     "Sample_2_6_1_default": {
       "test": true,
-      "mathml": "<mrow><mo mathvariant=\"bold\">[</mo><mi>x</mi><mo mathvariant=\"bold\">]</mo></mrow>",
+      "input": "<mrow><mo mathvariant=\"bold\">[</mo><mi>x</mi><mo mathvariant=\"bold\">]</mo></mrow>",
       "preference": "default"
     },
     "Sample_2_6_1_brief": {
       "test": true,
-      "mathml": "<mrow><mo mathvariant=\"bold\">[</mo><mi>x</mi><mo mathvariant=\"bold\">]</mo></mrow>",
+      "input": "<mrow><mo mathvariant=\"bold\">[</mo><mi>x</mi><mo mathvariant=\"bold\">]</mo></mrow>",
       "preference": "brief"
     },
     "Sample_2_6_1_sbrief": {
       "test": true,
-      "mathml": "<mrow><mo mathvariant=\"bold\">[</mo><mi>x</mi><mo mathvariant=\"bold\">]</mo></mrow>",
+      "input": "<mrow><mo mathvariant=\"bold\">[</mo><mi>x</mi><mo mathvariant=\"bold\">]</mo></mrow>",
       "preference": "sbrief"
     },
     "Sample_2_6_2_default": {
       "test": true,
-      "mathml": "<mrow><mo>∮</mo><mi>E</mi><mo>·</mo><mi>d</mi><mi mathvariant=\"bold\">l</mi><mo>=</mo><mo>-</mo><mfrac><mrow><mi>d</mi><mi>Φ</mi><mi>B</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mrow>",
+      "input": "<mrow><mo>∮</mo><mi>E</mi><mo>·</mo><mi>d</mi><mi mathvariant=\"bold\">l</mi><mo>=</mo><mo>-</mo><mfrac><mrow><mi>d</mi><mi>Φ</mi><mi>B</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mrow>",
       "preference": "default"
     },
     "Sample_2_6_2_brief": {
       "test": true,
-      "mathml": "<mrow><mo>∮</mo><mi>E</mi><mo>·</mo><mi>d</mi><mi mathvariant=\"bold\">l</mi><mo>=</mo><mo>-</mo><mfrac><mrow><mi>d</mi><mi>Φ</mi><mi>B</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mrow>",
+      "input": "<mrow><mo>∮</mo><mi>E</mi><mo>·</mo><mi>d</mi><mi mathvariant=\"bold\">l</mi><mo>=</mo><mo>-</mo><mfrac><mrow><mi>d</mi><mi>Φ</mi><mi>B</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mrow>",
       "preference": "brief"
     },
     "Sample_2_6_2_sbrief": {
       "test": true,
-      "mathml": "<mrow><mo>∮</mo><mi>E</mi><mo>·</mo><mi>d</mi><mi mathvariant=\"bold\">l</mi><mo>=</mo><mo>-</mo><mfrac><mrow><mi>d</mi><mi>Φ</mi><mi>B</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mrow>",
+      "input": "<mrow><mo>∮</mo><mi>E</mi><mo>·</mo><mi>d</mi><mi mathvariant=\"bold\">l</mi><mo>=</mo><mo>-</mo><mfrac><mrow><mi>d</mi><mi>Φ</mi><mi>B</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mrow>",
       "preference": "sbrief"
     },
     "NegativeVsMinus_0": {
       "test": true,
-      "mathml": "<mrow><mo>-</mo><mfrac><mn>1</mn><mi>b</mi></mfrac></mrow>",
+      "input": "<mrow><mo>-</mo><mfrac><mn>1</mn><mi>b</mi></mfrac></mrow>",
       "preference": "default"
     },
     "NegativeVsMinus_1": {
   "test": true,
-      "mathml": "<mrow><mo>-</mo><mfrac><mi>a</mi><mi>b</mi></mfrac></mrow>",
+      "input": "<mrow><mo>-</mo><mfrac><mi>a</mi><mi>b</mi></mfrac></mrow>",
       "preference": "default"
     },
     "NegativeVsMinus_2": {
       "test": true,
-      "mathml": "<mrow><mo>-</mo><mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>",
+      "input": "<mrow><mo>-</mo><mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>",
       "preference": "default"
     },
     "Sample_4_2_1_default": {
       "test": true,
-      "mathml": "<mrow><mtext>Uppercase</mtext><mo>(</mo><mo>{</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo>,</mo><mi>γ</mi><mo>,</mo><mi>δ</mi><mo>,</mo><mi>ϵ</mi><mo>,</mo><mi>φ</mi><mo>}</mo><mo>)</mo><mo>=</mo><mo>{</mo><mi>Α</mi><mo>,</mo><mi>Β</mi><mo>,</mo><mi>Γ</mi><mo>,</mo><mi>Δ</mi><mo>,</mo><mi>Ε</mi><mo>,</mo><mi>Φ</mi><mo>}</mo></mrow>",
+      "input": "<mrow><mtext>Uppercase</mtext><mo>(</mo><mo>{</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo>,</mo><mi>γ</mi><mo>,</mo><mi>δ</mi><mo>,</mo><mi>ϵ</mi><mo>,</mo><mi>φ</mi><mo>}</mo><mo>)</mo><mo>=</mo><mo>{</mo><mi>Α</mi><mo>,</mo><mi>Β</mi><mo>,</mo><mi>Γ</mi><mo>,</mo><mi>Δ</mi><mo>,</mo><mi>Ε</mi><mo>,</mo><mi>Φ</mi><mo>}</mo></mrow>",
       "preference": "default"
     },
     "Sample_4_2_1_brief": {
       "test": true,
-      "mathml": "<mrow><mtext>Uppercase</mtext><mo>(</mo><mo>{</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo>,</mo><mi>γ</mi><mo>,</mo><mi>δ</mi><mo>,</mo><mi>ϵ</mi><mo>,</mo><mi>φ</mi><mo>}</mo><mo>)</mo><mo>=</mo><mo>{</mo><mi>Α</mi><mo>,</mo><mi>Β</mi><mo>,</mo><mi>Γ</mi><mo>,</mo><mi>Δ</mi><mo>,</mo><mi>Ε</mi><mo>,</mo><mi>Φ</mi><mo>}</mo></mrow>",
+      "input": "<mrow><mtext>Uppercase</mtext><mo>(</mo><mo>{</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo>,</mo><mi>γ</mi><mo>,</mo><mi>δ</mi><mo>,</mo><mi>ϵ</mi><mo>,</mo><mi>φ</mi><mo>}</mo><mo>)</mo><mo>=</mo><mo>{</mo><mi>Α</mi><mo>,</mo><mi>Β</mi><mo>,</mo><mi>Γ</mi><mo>,</mo><mi>Δ</mi><mo>,</mo><mi>Ε</mi><mo>,</mo><mi>Φ</mi><mo>}</mo></mrow>",
       "preference": "brief"
     },
     "Sample_4_2_1_sbrief": {
       "test": true,
-      "mathml": "<mrow><mtext>Uppercase</mtext><mo>(</mo><mo>{</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo>,</mo><mi>γ</mi><mo>,</mo><mi>δ</mi><mo>,</mo><mi>ϵ</mi><mo>,</mo><mi>φ</mi><mo>}</mo><mo>)</mo><mo>=</mo><mo>{</mo><mi>Α</mi><mo>,</mo><mi>Β</mi><mo>,</mo><mi>Γ</mi><mo>,</mo><mi>Δ</mi><mo>,</mo><mi>Ε</mi><mo>,</mo><mi>Φ</mi><mo>}</mo></mrow>",
+      "input": "<mrow><mtext>Uppercase</mtext><mo>(</mo><mo>{</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo>,</mo><mi>γ</mi><mo>,</mo><mi>δ</mi><mo>,</mo><mi>ϵ</mi><mo>,</mo><mi>φ</mi><mo>}</mo><mo>)</mo><mo>=</mo><mo>{</mo><mi>Α</mi><mo>,</mo><mi>Β</mi><mo>,</mo><mi>Γ</mi><mo>,</mo><mi>Δ</mi><mo>,</mo><mi>Ε</mi><mo>,</mo><mi>Φ</mi><mo>}</mo></mrow>",
       "preference": "sbrief"
     },
     "Sample_5_1_1_default": {
       "test": true,
-      "mathml": "<mrow><mi>y</mi><mo>-</mo><mn>1</mn></mrow>",
+      "input": "<mrow><mi>y</mi><mo>-</mo><mn>1</mn></mrow>",
       "preference": "default"
     },
     "Sample_5_1_1_brief": {
       "test": true,
-      "mathml": "<mrow><mi>y</mi><mo>-</mo><mn>1</mn></mrow>",
+      "input": "<mrow><mi>y</mi><mo>-</mo><mn>1</mn></mrow>",
       "preference": "brief"
     },
     "Sample_5_1_1_sbrief": {
       "test": true,
-      "mathml": "<mrow><mi>y</mi><mo>-</mo><mn>1</mn></mrow>",
+      "input": "<mrow><mi>y</mi><mo>-</mo><mn>1</mn></mrow>",
       "preference": "sbrief"
     },
     "Sample_5_1_2_default": {
       "test": true,
-      "mathml": "<mrow><mo>(</mo><mn>1</mn><mtext>-to-</mtext><mn>1</mn><mo>)</mo></mrow>",
+      "input": "<mrow><mo>(</mo><mn>1</mn><mtext>-to-</mtext><mn>1</mn><mo>)</mo></mrow>",
       "preference": "default"
     },
     "Sample_5_1_2_brief": {
       "test": true,
-      "mathml": "<mrow><mo>(</mo><mn>1</mn><mtext>-to-</mtext><mn>1</mn><mo>)</mo></mrow>",
+      "input": "<mrow><mo>(</mo><mn>1</mn><mtext>-to-</mtext><mn>1</mn><mo>)</mo></mrow>",
       "preference": "brief"
     },
     "Sample_5_1_2_sbrief": {
       "test": true,
-      "mathml": "<mrow><mo>(</mo><mn>1</mn><mtext>-to-</mtext><mn>1</mn><mo>)</mo></mrow>",
+      "input": "<mrow><mo>(</mo><mn>1</mn><mtext>-to-</mtext><mn>1</mn><mo>)</mo></mrow>",
       "preference": "sbrief"
     },
     "Sample_5_1_3_default": {
       "test": true,
-      "mathml": "<mrow><mo>-</mo><mn>1</mn></mrow>",
+      "input": "<mrow><mo>-</mo><mn>1</mn></mrow>",
       "preference": "default"
     },
     "Sample_5_1_3_brief": {
       "test": true,
-      "mathml": "<mrow><mo>-</mo><mn>1</mn></mrow>",
+      "input": "<mrow><mo>-</mo><mn>1</mn></mrow>",
       "preference": "brief"
     },
     "Sample_5_1_3_sbrief": {
       "test": true,
-      "mathml": "<mrow><mo>-</mo><mn>1</mn></mrow>",
+      "input": "<mrow><mo>-</mo><mn>1</mn></mrow>",
       "preference": "sbrief"
     },
     "Sample_6_1_1_default": {
       "test": true,
-      "mathml": "<mtext>The Fibonacci numbers are: </mtext><mrow><mo>{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>8</mn><mo>,</mo><mo>&#x2026;</mo><mo>}</mo></mrow>",
+      "input": "<mtext>The Fibonacci numbers are: </mtext><mrow><mo>{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>8</mn><mo>,</mo><mo>&#x2026;</mo><mo>}</mo></mrow>",
       "preference": "default"
     },
     "Sample_6_1_1_brief": {
       "test": true,
-      "mathml": "<mtext>The Fibonacci numbers are: </mtext><mrow><mo>{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>8</mn><mo>,</mo><mo>&#x2026;</mo><mo>}</mo></mrow>",
+      "input": "<mtext>The Fibonacci numbers are: </mtext><mrow><mo>{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>8</mn><mo>,</mo><mo>&#x2026;</mo><mo>}</mo></mrow>",
       "preference": "brief"
     },
     "Sample_6_1_1_sbrief": {
       "test": true,
-      "mathml": "<mtext>The Fibonacci numbers are: </mtext><mrow><mo>{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>8</mn><mo>,</mo><mo>&#x2026;</mo><mo>}</mo></mrow>",
+      "input": "<mtext>The Fibonacci numbers are: </mtext><mrow><mo>{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>8</mn><mo>,</mo><mo>&#x2026;</mo><mo>}</mo></mrow>",
       "preference": "sbrief"
     },
     "Sample_6_2_1_default": {
       "test": true,
-      "mathml": "<mrow><mo>|</mo><mn>4</mn><mo>-</mo><mn>7</mn><mo>|</mo><mo>=</mo><mn>3</mn></mrow>",
+      "input": "<mrow><mo>|</mo><mn>4</mn><mo>-</mo><mn>7</mn><mo>|</mo><mo>=</mo><mn>3</mn></mrow>",
       "preference": "default"
     },
     "Sample_6_2_1_brief": {
       "test": true,
-      "mathml": "<mrow><mo>|</mo><mn>4</mn><mo>-</mo><mn>7</mn><mo>|</mo><mo>=</mo><mn>3</mn></mrow>",
+      "input": "<mrow><mo>|</mo><mn>4</mn><mo>-</mo><mn>7</mn><mo>|</mo><mo>=</mo><mn>3</mn></mrow>",
       "preference": "brief"
     },
     "Sample_6_2_1_sbrief": {
       "test": true,
-      "mathml": "<mrow><mo>|</mo><mn>4</mn><mo>-</mo><mn>7</mn><mo>|</mo><mo>=</mo><mn>3</mn></mrow>",
+      "input": "<mrow><mo>|</mo><mn>4</mn><mo>-</mo><mn>7</mn><mo>|</mo><mo>=</mo><mn>3</mn></mrow>",
       "preference": "sbrief"
     },
     "_comment1_": " This equation does not make sense! We could do it purely syntactically!",
     "Sample_6_2_2_old_default": {
       "test": false,
-      "mathml": "<mrow><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>a</mi><mfenced separators=\"\" open=\"|\" close=\"|\"><mo>±</mo><mi>b</mi></mfenced><mo>-</mo><mn>15</mn></mfenced><mo>≠</mo><mfenced open=\"|\" close=\"|\"><mi>a</mi></mfenced><mo>±</mo><mi>b</mi><mfenced separators=\"\" open=\"|\" close=\"|\"><mo>-</mo><mn>15</mn></mfenced></mrow>",
+      "input": "<mrow><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>a</mi><mfenced separators=\"\" open=\"|\" close=\"|\"><mo>±</mo><mi>b</mi></mfenced><mo>-</mo><mn>15</mn></mfenced><mo>≠</mo><mfenced open=\"|\" close=\"|\"><mi>a</mi></mfenced><mo>±</mo><mi>b</mi><mfenced separators=\"\" open=\"|\" close=\"|\"><mo>-</mo><mn>15</mn></mfenced></mrow>",
       "preference": "default"
     },
     "Sample_6_2_2_old_brief": {
       "test": false,
-      "mathml": "<mrow><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>a</mi><mfenced separators=\"\" open=\"|\" close=\"|\"><mo>±</mo><mi>b</mi></mfenced><mo>-</mo><mn>15</mn></mfenced><mo>≠</mo><mfenced open=\"|\" close=\"|\"><mi>a</mi></mfenced><mo>±</mo><mi>b</mi><mfenced separators=\"\" open=\"|\" close=\"|\"><mo>-</mo><mn>15</mn></mfenced></mrow>",
+      "input": "<mrow><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>a</mi><mfenced separators=\"\" open=\"|\" close=\"|\"><mo>±</mo><mi>b</mi></mfenced><mo>-</mo><mn>15</mn></mfenced><mo>≠</mo><mfenced open=\"|\" close=\"|\"><mi>a</mi></mfenced><mo>±</mo><mi>b</mi><mfenced separators=\"\" open=\"|\" close=\"|\"><mo>-</mo><mn>15</mn></mfenced></mrow>",
       "preference": "brief"
     },
     "Sample_6_2_2_old_sbrief": {
       "test": false,
-      "mathml": "<mrow><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>a</mi><mfenced separators=\"\" open=\"|\" close=\"|\"><mo>±</mo><mi>b</mi></mfenced><mo>-</mo><mn>15</mn></mfenced><mo>≠</mo><mfenced open=\"|\" close=\"|\"><mi>a</mi></mfenced><mo>±</mo><mi>b</mi><mfenced separators=\"\" open=\"|\" close=\"|\"><mo>-</mo><mn>15</mn></mfenced></mrow>",
+      "input": "<mrow><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>a</mi><mfenced separators=\"\" open=\"|\" close=\"|\"><mo>±</mo><mi>b</mi></mfenced><mo>-</mo><mn>15</mn></mfenced><mo>≠</mo><mfenced open=\"|\" close=\"|\"><mi>a</mi></mfenced><mo>±</mo><mi>b</mi><mfenced separators=\"\" open=\"|\" close=\"|\"><mo>-</mo><mn>15</mn></mfenced></mrow>",
       "preference": "sbrief"
     },
     "Sample_6_2_2_default": {
       "test": true,
-      "mathml": "<mrow><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>a</mi><mo>&#xb1;</mo><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>b</mi><mo>-</mo><mi>c</mi></mfenced></mfenced><mo>&#x2260;</mo><mfenced open=\"|\" close=\"|\"><mi>a</mi></mfenced><mo>&#xb1;</mo><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>b</mi><mo>-</mo><mi>c</mi></mfenced></mrow>",
+      "input": "<mrow><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>a</mi><mo>&#xb1;</mo><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>b</mi><mo>-</mo><mi>c</mi></mfenced></mfenced><mo>&#x2260;</mo><mfenced open=\"|\" close=\"|\"><mi>a</mi></mfenced><mo>&#xb1;</mo><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>b</mi><mo>-</mo><mi>c</mi></mfenced></mrow>",
       "preference": "default"
     },
     "Sample_6_2_2_brief": {
       "test": true,
-      "mathml": "<mrow><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>a</mi><mo>&#xb1;</mo><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>b</mi><mo>-</mo><mi>c</mi></mfenced></mfenced><mo>&#x2260;</mo><mfenced open=\"|\" close=\"|\"><mi>a</mi></mfenced><mo>&#xb1;</mo><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>b</mi><mo>-</mo><mi>c</mi></mfenced></mrow>",
+      "input": "<mrow><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>a</mi><mo>&#xb1;</mo><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>b</mi><mo>-</mo><mi>c</mi></mfenced></mfenced><mo>&#x2260;</mo><mfenced open=\"|\" close=\"|\"><mi>a</mi></mfenced><mo>&#xb1;</mo><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>b</mi><mo>-</mo><mi>c</mi></mfenced></mrow>",
       "preference": "brief"
     },
     "Sample_6_2_2_sbrief": {
       "test": true,
-      "mathml": "<mrow><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>a</mi><mo>&#xb1;</mo><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>b</mi><mo>-</mo><mi>c</mi></mfenced></mfenced><mo>&#x2260;</mo><mfenced open=\"|\" close=\"|\"><mi>a</mi></mfenced><mo>&#xb1;</mo><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>b</mi><mo>-</mo><mi>c</mi></mfenced></mrow>",
+      "input": "<mrow><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>a</mi><mo>&#xb1;</mo><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>b</mi><mo>-</mo><mi>c</mi></mfenced></mfenced><mo>&#x2260;</mo><mfenced open=\"|\" close=\"|\"><mi>a</mi></mfenced><mo>&#xb1;</mo><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>b</mi><mo>-</mo><mi>c</mi></mfenced></mrow>",
       "preference": "sbrief"
     },
     "Sample_7_1_1_default": {
       "test": true,
-      "mathml": "<mfrac><mn>1</mn><mi>x</mi></mfrac>",
+      "input": "<mfrac><mn>1</mn><mi>x</mi></mfrac>",
       "preference": "default"
     },
     "Sample_7_1_1_brief": {
       "test": true,
-      "mathml": "<mfrac><mn>1</mn><mi>x</mi></mfrac>",
+      "input": "<mfrac><mn>1</mn><mi>x</mi></mfrac>",
       "preference": "brief"
     },
     "Sample_7_1_1_sbrief": {
       "test": true,
-      "mathml": "<mfrac><mn>1</mn><mi>x</mi></mfrac>",
+      "input": "<mfrac><mn>1</mn><mi>x</mi></mfrac>",
       "preference": "sbrief"
     },
     "Sample_7_1_2_default": {
       "test": true,
-      "mathml": "<mrow><mi>a</mi><mo>-</mo><mfrac><mrow><mi>b</mi><mo>+</mo><mi>c</mi></mrow><mrow><mi>d</mi><mo>-</mo><mi>e</mi></mrow></mfrac><mo>×</mo><mi>f</mi></mrow>",
+      "input": "<mrow><mi>a</mi><mo>-</mo><mfrac><mrow><mi>b</mi><mo>+</mo><mi>c</mi></mrow><mrow><mi>d</mi><mo>-</mo><mi>e</mi></mrow></mfrac><mo>×</mo><mi>f</mi></mrow>",
       "preference": "default"
     },
     "Sample_7_1_2_brief": {
       "test": true,
-      "mathml": "<mrow><mi>a</mi><mo>-</mo><mfrac><mrow><mi>b</mi><mo>+</mo><mi>c</mi></mrow><mrow><mi>d</mi><mo>-</mo><mi>e</mi></mrow></mfrac><mo>×</mo><mi>f</mi></mrow>",
+      "input": "<mrow><mi>a</mi><mo>-</mo><mfrac><mrow><mi>b</mi><mo>+</mo><mi>c</mi></mrow><mrow><mi>d</mi><mo>-</mo><mi>e</mi></mrow></mfrac><mo>×</mo><mi>f</mi></mrow>",
       "preference": "brief"
     },
     "Sample_7_1_2_sbrief": {
       "test": true,
-      "mathml": "<mrow><mi>a</mi><mo>-</mo><mfrac><mrow><mi>b</mi><mo>+</mo><mi>c</mi></mrow><mrow><mi>d</mi><mo>-</mo><mi>e</mi></mrow></mfrac><mo>×</mo><mi>f</mi></mrow>",
+      "input": "<mrow><mi>a</mi><mo>-</mo><mfrac><mrow><mi>b</mi><mo>+</mo><mi>c</mi></mrow><mrow><mi>d</mi><mo>-</mo><mi>e</mi></mrow></mfrac><mo>×</mo><mi>f</mi></mrow>",
       "preference": "sbrief"
     },
     "Sample_7_2_1_default": {
       "test": true,
-      "mathml": "<mrow><mfrac><mfrac><mi>x</mi><mi>y</mi></mfrac><mi>z</mi></mfrac><mo>≠</mo><mfrac><mi>x</mi><mfrac><mi>y</mi><mi>z</mi></mfrac></mfrac></mrow>",
+      "input": "<mrow><mfrac><mfrac><mi>x</mi><mi>y</mi></mfrac><mi>z</mi></mfrac><mo>≠</mo><mfrac><mi>x</mi><mfrac><mi>y</mi><mi>z</mi></mfrac></mfrac></mrow>",
       "preference": "default"
     },
     "Sample_7_2_1_brief": {
       "test": true,
-      "mathml": "<mrow><mfrac><mfrac><mi>x</mi><mi>y</mi></mfrac><mi>z</mi></mfrac><mo>≠</mo><mfrac><mi>x</mi><mfrac><mi>y</mi><mi>z</mi></mfrac></mfrac></mrow>",
+      "input": "<mrow><mfrac><mfrac><mi>x</mi><mi>y</mi></mfrac><mi>z</mi></mfrac><mo>≠</mo><mfrac><mi>x</mi><mfrac><mi>y</mi><mi>z</mi></mfrac></mfrac></mrow>",
       "preference": "brief"
     },
     "Sample_7_2_1_sbrief": {
       "test": true,
-      "mathml": "<mrow><mfrac><mfrac><mi>x</mi><mi>y</mi></mfrac><mi>z</mi></mfrac><mo>≠</mo><mfrac><mi>x</mi><mfrac><mi>y</mi><mi>z</mi></mfrac></mfrac></mrow>",
+      "input": "<mrow><mfrac><mfrac><mi>x</mi><mi>y</mi></mfrac><mi>z</mi></mfrac><mo>≠</mo><mfrac><mi>x</mi><mfrac><mi>y</mi><mi>z</mi></mfrac></mfrac></mrow>",
       "preference": "sbrief"
     },
     "Sample_7_3_1_default": {
       "test": true,
-      "mathml": "<mfrac><mfrac><mrow><mfenced separators=\"\" open=\"(\" close=\")\"><mn>1</mn><mo>-</mo><mi>x</mi></mfenced><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mfenced separators=\"\" open=\"(\" close=\")\"><mn>2</mn><mi>x</mi></mfenced><mo>-</mo><mn>2</mn><mi>x</mi><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mfenced separators=\"\" open=\"(\" close=\")\"><mn>1</mn><mo>-</mo><mi>x</mi></mfenced></mrow><msup><mfenced separators=\"\" open=\"(\" close=\")\"><mn>1</mn><mo>-</mo><mi>x</mi></mfenced><mn>2</mn></msup></mfrac><mrow><mn>1</mn><mo>+</mo><msup><mfenced separators=\"\" open=\"(\" close=\")\"><mfrac><mrow><mn>2</mn><mi>x</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow></mfrac></mfenced><mn>2</mn></msup></mrow></mfrac>",
+      "input": "<mfrac><mfrac><mrow><mfenced separators=\"\" open=\"(\" close=\")\"><mn>1</mn><mo>-</mo><mi>x</mi></mfenced><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mfenced separators=\"\" open=\"(\" close=\")\"><mn>2</mn><mi>x</mi></mfenced><mo>-</mo><mn>2</mn><mi>x</mi><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mfenced separators=\"\" open=\"(\" close=\")\"><mn>1</mn><mo>-</mo><mi>x</mi></mfenced></mrow><msup><mfenced separators=\"\" open=\"(\" close=\")\"><mn>1</mn><mo>-</mo><mi>x</mi></mfenced><mn>2</mn></msup></mfrac><mrow><mn>1</mn><mo>+</mo><msup><mfenced separators=\"\" open=\"(\" close=\")\"><mfrac><mrow><mn>2</mn><mi>x</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow></mfrac></mfenced><mn>2</mn></msup></mrow></mfrac>",
       "preference": "default"
     },
     "Sample_7_3_1_brief": {
       "test": true,
-      "mathml": "<mfrac><mfrac><mrow><mfenced separators=\"\" open=\"(\" close=\")\"><mn>1</mn><mo>-</mo><mi>x</mi></mfenced><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mfenced separators=\"\" open=\"(\" close=\")\"><mn>2</mn><mi>x</mi></mfenced><mo>-</mo><mn>2</mn><mi>x</mi><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mfenced separators=\"\" open=\"(\" close=\")\"><mn>1</mn><mo>-</mo><mi>x</mi></mfenced></mrow><msup><mfenced separators=\"\" open=\"(\" close=\")\"><mn>1</mn><mo>-</mo><mi>x</mi></mfenced><mn>2</mn></msup></mfrac><mrow><mn>1</mn><mo>+</mo><msup><mfenced separators=\"\" open=\"(\" close=\")\"><mfrac><mrow><mn>2</mn><mi>x</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow></mfrac></mfenced><mn>2</mn></msup></mrow></mfrac>",
+      "input": "<mfrac><mfrac><mrow><mfenced separators=\"\" open=\"(\" close=\")\"><mn>1</mn><mo>-</mo><mi>x</mi></mfenced><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mfenced separators=\"\" open=\"(\" close=\")\"><mn>2</mn><mi>x</mi></mfenced><mo>-</mo><mn>2</mn><mi>x</mi><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mfenced separators=\"\" open=\"(\" close=\")\"><mn>1</mn><mo>-</mo><mi>x</mi></mfenced></mrow><msup><mfenced separators=\"\" open=\"(\" close=\")\"><mn>1</mn><mo>-</mo><mi>x</mi></mfenced><mn>2</mn></msup></mfrac><mrow><mn>1</mn><mo>+</mo><msup><mfenced separators=\"\" open=\"(\" close=\")\"><mfrac><mrow><mn>2</mn><mi>x</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow></mfrac></mfenced><mn>2</mn></msup></mrow></mfrac>",
       "preference": "brief"
     },
     "Sample_7_3_1_sbrief": {
       "test": true,
-      "mathml": "<mfrac><mfrac><mrow><mfenced separators=\"\" open=\"(\" close=\")\"><mn>1</mn><mo>-</mo><mi>x</mi></mfenced><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mfenced separators=\"\" open=\"(\" close=\")\"><mn>2</mn><mi>x</mi></mfenced><mo>-</mo><mn>2</mn><mi>x</mi><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mfenced separators=\"\" open=\"(\" close=\")\"><mn>1</mn><mo>-</mo><mi>x</mi></mfenced></mrow><msup><mfenced separators=\"\" open=\"(\" close=\")\"><mn>1</mn><mo>-</mo><mi>x</mi></mfenced><mn>2</mn></msup></mfrac><mrow><mn>1</mn><mo>+</mo><msup><mfenced separators=\"\" open=\"(\" close=\")\"><mfrac><mrow><mn>2</mn><mi>x</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow></mfrac></mfenced><mn>2</mn></msup></mrow></mfrac>",
+      "input": "<mfrac><mfrac><mrow><mfenced separators=\"\" open=\"(\" close=\")\"><mn>1</mn><mo>-</mo><mi>x</mi></mfenced><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mfenced separators=\"\" open=\"(\" close=\")\"><mn>2</mn><mi>x</mi></mfenced><mo>-</mo><mn>2</mn><mi>x</mi><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mfenced separators=\"\" open=\"(\" close=\")\"><mn>1</mn><mo>-</mo><mi>x</mi></mfenced></mrow><msup><mfenced separators=\"\" open=\"(\" close=\")\"><mn>1</mn><mo>-</mo><mi>x</mi></mfenced><mn>2</mn></msup></mfrac><mrow><mn>1</mn><mo>+</mo><msup><mfenced separators=\"\" open=\"(\" close=\")\"><mfrac><mrow><mn>2</mn><mi>x</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow></mfrac></mfenced><mn>2</mn></msup></mrow></mfrac>",
       "preference": "sbrief"
     },
     "Sample_7_3_2_default": {
       "test": true,
-      "mathml": "<mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><mo>&#x2026;</mo><mo>+</mo><mfrac><mn>1</mn><msub><mi>a</mi><mi>n</mi></msub></mfrac></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow>",
+      "input": "<mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><mo>&#x2026;</mo><mo>+</mo><mfrac><mn>1</mn><msub><mi>a</mi><mi>n</mi></msub></mfrac></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow>",
       "preference": "default"
     },
     "Sample_7_3_2_brief": {
       "test": true,
-      "mathml": "<mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><mo>&#x2026;</mo><mo>+</mo><mfrac><mn>1</mn><msub><mi>a</mi><mi>n</mi></msub></mfrac></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow>",
+      "input": "<mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><mo>&#x2026;</mo><mo>+</mo><mfrac><mn>1</mn><msub><mi>a</mi><mi>n</mi></msub></mfrac></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow>",
       "preference": "brief"
     },
     "Sample_7_3_2_sbrief": {
       "test": true,
-      "mathml": "<mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><mo>&#x2026;</mo><mo>+</mo><mfrac><mn>1</mn><msub><mi>a</mi><mi>n</mi></msub></mfrac></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow>",
+      "input": "<mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><mo>&#x2026;</mo><mo>+</mo><mfrac><mn>1</mn><msub><mi>a</mi><mi>n</mi></msub></mfrac></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow>",
       "preference": "sbrief"
     },
     "Sample_7_4_1_default": {
       "test": true,
-      "mathml": "<mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>4</mn><mn>2</mn></mfrac><mo>+</mo><mo>&#x2026;</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mo movablelimits=\"true\" form=\"prefix\">∞</mo></munderover><mfrac><mi>n</mi><mn>2</mn></mfrac></mrow>",
+      "input": "<mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>4</mn><mn>2</mn></mfrac><mo>+</mo><mo>&#x2026;</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mo movablelimits=\"true\" form=\"prefix\">∞</mo></munderover><mfrac><mi>n</mi><mn>2</mn></mfrac></mrow>",
       "preference": "default"
     },
     "Sample_7_4_1_brief": {
       "test": true,
-      "mathml": "<mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>4</mn><mn>2</mn></mfrac><mo>+</mo><mo>&#x2026;</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mo movablelimits=\"true\" form=\"prefix\">∞</mo></munderover><mfrac><mi>n</mi><mn>2</mn></mfrac></mrow>",
+      "input": "<mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>4</mn><mn>2</mn></mfrac><mo>+</mo><mo>&#x2026;</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mo movablelimits=\"true\" form=\"prefix\">∞</mo></munderover><mfrac><mi>n</mi><mn>2</mn></mfrac></mrow>",
       "preference": "brief"
     },
     "Sample_7_4_1_sbrief": {
       "test": true,
-      "mathml": "<mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>4</mn><mn>2</mn></mfrac><mo>+</mo><mo>&#x2026;</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mo movablelimits=\"true\" form=\"prefix\">∞</mo></munderover><mfrac><mi>n</mi><mn>2</mn></mfrac></mrow>",
+      "input": "<mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>4</mn><mn>2</mn></mfrac><mo>+</mo><mo>&#x2026;</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mo movablelimits=\"true\" form=\"prefix\">∞</mo></munderover><mfrac><mi>n</mi><mn>2</mn></mfrac></mrow>",
       "preference": "sbrief"
     },
     "Sample_7_4_2_default": {
       "test": true,
-      "mathml": "<mrow><mfrac><mn>20</mn><mn>5</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>100</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>25</mn></mfrac></mrow>",
+      "input": "<mrow><mfrac><mn>20</mn><mn>5</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>100</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>25</mn></mfrac></mrow>",
       "preference": "default"
     },
     "Sample_7_4_2_brief": {
       "test": true,
-      "mathml": "<mrow><mfrac><mn>20</mn><mn>5</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>100</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>25</mn></mfrac></mrow>",
+      "input": "<mrow><mfrac><mn>20</mn><mn>5</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>100</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>25</mn></mfrac></mrow>",
       "preference": "brief"
     },
     "Sample_7_4_2_sbrief": {
       "test": true,
-      "mathml": "<mrow><mfrac><mn>20</mn><mn>5</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>100</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>25</mn></mfrac></mrow>",
+      "input": "<mrow><mfrac><mn>20</mn><mn>5</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>100</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>25</mn></mfrac></mrow>",
       "preference": "sbrief"
     },
     "Sample_7_4_3_default": {
       "test": true,
-      "mathml": "<mrow><mfrac><mfrac><mn>3</mn><mn>5</mn></mfrac><mn>8</mn></mfrac><mo>=</mo><mfrac><mn>3</mn><mn>5</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>8</mn></mfrac></mrow>",
+      "input": "<mrow><mfrac><mfrac><mn>3</mn><mn>5</mn></mfrac><mn>8</mn></mfrac><mo>=</mo><mfrac><mn>3</mn><mn>5</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>8</mn></mfrac></mrow>",
       "preference": "default"
     },
     "Sample_7_4_3_brief": {
       "test": true,
-      "mathml": "<mrow><mfrac><mfrac><mn>3</mn><mn>5</mn></mfrac><mn>8</mn></mfrac><mo>=</mo><mfrac><mn>3</mn><mn>5</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>8</mn></mfrac></mrow>",
+      "input": "<mrow><mfrac><mfrac><mn>3</mn><mn>5</mn></mfrac><mn>8</mn></mfrac><mo>=</mo><mfrac><mn>3</mn><mn>5</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>8</mn></mfrac></mrow>",
       "preference": "brief"
     },
     "Sample_7_4_3_sbrief": {
       "test": true,
-      "mathml": "<mrow><mfrac><mfrac><mn>3</mn><mn>5</mn></mfrac><mn>8</mn></mfrac><mo>=</mo><mfrac><mn>3</mn><mn>5</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>8</mn></mfrac></mrow>",
+      "input": "<mrow><mfrac><mfrac><mn>3</mn><mn>5</mn></mfrac><mn>8</mn></mfrac><mo>=</mo><mfrac><mn>3</mn><mn>5</mn></mfrac><mo>×</mo><mfrac><mn>1</mn><mn>8</mn></mfrac></mrow>",
       "preference": "sbrief"
     },
     "Sample_7_5_1_default": {
       "test": true,
-      "mathml": "<mrow><mn>3</mn><mfrac><mn>5</mn><mn>8</mn></mfrac><mo>=</mo><mfrac><mn>29</mn><mn>8</mn></mfrac></mrow>",
+      "input": "<mrow><mn>3</mn><mfrac><mn>5</mn><mn>8</mn></mfrac><mo>=</mo><mfrac><mn>29</mn><mn>8</mn></mfrac></mrow>",
       "preference": "default"
     },
     "Sample_7_5_1_brief": {
       "test": true,
-      "mathml": "<mrow><mn>3</mn><mfrac><mn>5</mn><mn>8</mn></mfrac><mo>=</mo><mfrac><mn>29</mn><mn>8</mn></mfrac></mrow>",
+      "input": "<mrow><mn>3</mn><mfrac><mn>5</mn><mn>8</mn></mfrac><mo>=</mo><mfrac><mn>29</mn><mn>8</mn></mfrac></mrow>",
       "preference": "brief"
     },
     "Sample_7_5_1_sbrief": {
       "test": true,
-      "mathml": "<mrow><mn>3</mn><mfrac><mn>5</mn><mn>8</mn></mfrac><mo>=</mo><mfrac><mn>29</mn><mn>8</mn></mfrac></mrow>",
+      "input": "<mrow><mn>3</mn><mfrac><mn>5</mn><mn>8</mn></mfrac><mo>=</mo><mfrac><mn>29</mn><mn>8</mn></mfrac></mrow>",
       "preference": "sbrief"
     },
     "Sample_7_6_1_default": {
       "test": true,
-      "mathml": "<mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>1</mn></msub><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>3</mn></msub><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>+</mo><mo>&#x2026;</mo></mrow></mfrac></mrow></mfrac></mrow></mfrac><mo>=</mo><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>1</mn></msub><msub><mi>a</mi><mn>1</mn></msub></mfrac><mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><msub><mi>a</mi><mn>2</mn></msub></mfrac><mo>+</mo><mo>&#x2026;</mo></mrow>",
+      "input": "<mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>1</mn></msub><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>3</mn></msub><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>+</mo><mo>&#x2026;</mo></mrow></mfrac></mrow></mfrac></mrow></mfrac><mo>=</mo><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>1</mn></msub><msub><mi>a</mi><mn>1</mn></msub></mfrac><mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><msub><mi>a</mi><mn>2</mn></msub></mfrac><mo>+</mo><mo>&#x2026;</mo></mrow>",
       "preference": "default"
     },
     "Sample_7_6_1_brief": {
       "test": true,
-      "mathml": "<mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>1</mn></msub><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>3</mn></msub><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>+</mo><mo>&#x2026;</mo></mrow></mfrac></mrow></mfrac></mrow></mfrac><mo>=</mo><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>1</mn></msub><msub><mi>a</mi><mn>1</mn></msub></mfrac><mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><msub><mi>a</mi><mn>2</mn></msub></mfrac><mo>+</mo><mo>&#x2026;</mo></mrow>",
+      "input": "<mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>1</mn></msub><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>3</mn></msub><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>+</mo><mo>&#x2026;</mo></mrow></mfrac></mrow></mfrac></mrow></mfrac><mo>=</mo><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>1</mn></msub><msub><mi>a</mi><mn>1</mn></msub></mfrac><mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><msub><mi>a</mi><mn>2</mn></msub></mfrac><mo>+</mo><mo>&#x2026;</mo></mrow>",
       "preference": "brief"
     },
     "Sample_7_6_1_sbrief": {
       "test": true,
-      "mathml": "<mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>1</mn></msub><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>3</mn></msub><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>+</mo><mo>&#x2026;</mo></mrow></mfrac></mrow></mfrac></mrow></mfrac><mo>=</mo><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>1</mn></msub><msub><mi>a</mi><mn>1</mn></msub></mfrac><mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><msub><mi>a</mi><mn>2</mn></msub></mfrac><mo>+</mo><mo>&#x2026;</mo></mrow>",
+      "input": "<mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>1</mn></msub><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>3</mn></msub><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>+</mo><mo>&#x2026;</mo></mrow></mfrac></mrow></mfrac></mrow></mfrac><mo>=</mo><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>1</mn></msub><msub><mi>a</mi><mn>1</mn></msub></mfrac><mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><msub><mi>a</mi><mn>2</mn></msub></mfrac><mo>+</mo><mo>&#x2026;</mo></mrow>",
       "preference": "sbrief"
     },
     "Sample_8_1_1_default": {
       "test": true,
-      "mathml": "<mrow><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mn>6</mn><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mi>x</mi><mo>=</mo><mn>30</mn></mrow>",
+      "input": "<mrow><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mn>6</mn><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mi>x</mi><mo>=</mo><mn>30</mn></mrow>",
       "preference": "default"
     },
     "Sample_8_1_1_brief": {
       "test": true,
-      "mathml": "<mrow><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mn>6</mn><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mi>x</mi><mo>=</mo><mn>30</mn></mrow>",
+      "input": "<mrow><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mn>6</mn><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mi>x</mi><mo>=</mo><mn>30</mn></mrow>",
       "preference": "brief"
     },
     "Sample_8_1_1_sbrief": {
       "test": true,
-      "mathml": "<mrow><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mn>6</mn><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mi>x</mi><mo>=</mo><mn>30</mn></mrow>",
+      "input": "<mrow><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mn>6</mn><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mi>x</mi><mo>=</mo><mn>30</mn></mrow>",
       "preference": "sbrief"
     },
     "Sample_8_1_2_default": {
       "test": true,
-      "mathml": "<mrow><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>y</mi></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mfenced separators=\"\" open=\"(\" close=\")\"><mi>a</mi><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi><mi>x</mi><mo>+</mo><mi>c</mi></mfenced><mi>y</mi><mo>=</mo><mn>0</mn></mrow>",
+      "input": "<mrow><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>y</mi></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mfenced separators=\"\" open=\"(\" close=\")\"><mi>a</mi><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi><mi>x</mi><mo>+</mo><mi>c</mi></mfenced><mi>y</mi><mo>=</mo><mn>0</mn></mrow>",
       "preference": "default"
     },
     "Sample_8_1_2_brief": {
       "test": true,
-      "mathml": "<mrow><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>y</mi></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mfenced separators=\"\" open=\"(\" close=\")\"><mi>a</mi><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi><mi>x</mi><mo>+</mo><mi>c</mi></mfenced><mi>y</mi><mo>=</mo><mn>0</mn></mrow>",
+      "input": "<mrow><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>y</mi></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mfenced separators=\"\" open=\"(\" close=\")\"><mi>a</mi><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi><mi>x</mi><mo>+</mo><mi>c</mi></mfenced><mi>y</mi><mo>=</mo><mn>0</mn></mrow>",
       "preference": "brief"
     },
     "Sample_8_1_2_sbrief": {
       "test": true,
-      "mathml": "<mrow><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>y</mi></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mfenced separators=\"\" open=\"(\" close=\")\"><mi>a</mi><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi><mi>x</mi><mo>+</mo><mi>c</mi></mfenced><mi>y</mi><mo>=</mo><mn>0</mn></mrow>",
+      "input": "<mrow><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>y</mi></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mfenced separators=\"\" open=\"(\" close=\")\"><mi>a</mi><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi><mi>x</mi><mo>+</mo><mi>c</mi></mfenced><mi>y</mi><mo>=</mo><mn>0</mn></mrow>",
       "preference": "sbrief"
     },
     "Sample_8_2_1_default": {
       "test": true,
-      "mathml": "<msup><mi>x</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup>",
+      "input": "<msup><mi>x</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup>",
       "preference": "default"
     },
     "Sample_8_2_1_brief": {
       "test": true,
-      "mathml": "<msup><mi>x</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup>",
+      "input": "<msup><mi>x</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup>",
       "preference": "brief"
     },
     "Sample_8_2_1_sbrief": {
       "test": true,
-      "mathml": "<msup><mi>x</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup>",
+      "input": "<msup><mi>x</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup>",
       "preference": "sbrief"
     },
     "Sample_8_2_2_default": {
       "test": true,
-      "mathml": "<msub><mi>x</mi><mi>n</mi></msub>",
+      "input": "<msub><mi>x</mi><mi>n</mi></msub>",
       "preference": "default"
     },
     "Sample_8_2_2_brief": {
       "test": true,
-      "mathml": "<msub><mi>x</mi><mi>n</mi></msub>",
+      "input": "<msub><mi>x</mi><mi>n</mi></msub>",
       "preference": "brief"
     },
     "Sample_8_2_2_sbrief": {
       "test": true,
-      "mathml": "<msub><mi>x</mi><mi>n</mi></msub>",
+      "input": "<msub><mi>x</mi><mi>n</mi></msub>",
       "preference": "sbrief"
     },
     "Sample_8_2_3_default": {
       "test": true,
-      "mathml": "<msup><mi>x</mi><mi>a</mi></msup>",
+      "input": "<msup><mi>x</mi><mi>a</mi></msup>",
       "preference": "default"
     },
     "Sample_8_2_3_brief": {
       "test": true,
-      "mathml": "<msup><mi>x</mi><mi>a</mi></msup>",
+      "input": "<msup><mi>x</mi><mi>a</mi></msup>",
       "preference": "brief"
     },
     "Sample_8_2_3_sbrief": {
       "test": true,
-      "mathml": "<msup><mi>x</mi><mi>a</mi></msup>",
+      "input": "<msup><mi>x</mi><mi>a</mi></msup>",
       "preference": "sbrief"
     },
     "Sample_8_3_1_default": {
       "test": true,
-      "mathml": "<msup><mi>x</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msup>",
+      "input": "<msup><mi>x</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msup>",
       "preference": "default"
     },
     "Sample_8_3_1_brief": {
       "test": true,
-      "mathml": "<msup><mi>x</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msup>",
+      "input": "<msup><mi>x</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msup>",
       "preference": "brief"
     },
     "Sample_8_3_1_sbrief": {
       "test": true,
-      "mathml": "<msup><mi>x</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msup>",
+      "input": "<msup><mi>x</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msup>",
       "preference": "sbrief"
     },
     "Sample_8_3_2_default": {
       "test": true,
-      "mathml": "<mrow><msub><mi>T</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>+</mo><mn>5</mn><mo>=</mo><mn>0</mn></mrow>",
+      "input": "<mrow><msub><mi>T</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>+</mo><mn>5</mn><mo>=</mo><mn>0</mn></mrow>",
       "preference": "default"
     },
     "Sample_8_3_2_brief": {
       "test": true,
-      "mathml": "<mrow><msub><mi>T</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>+</mo><mn>5</mn><mo>=</mo><mn>0</mn></mrow>",
+      "input": "<mrow><msub><mi>T</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>+</mo><mn>5</mn><mo>=</mo><mn>0</mn></mrow>",
       "preference": "brief"
     },
     "Sample_8_3_2_sbrief": {
       "test": true,
-      "mathml": "<mrow><msub><mi>T</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>+</mo><mn>5</mn><mo>=</mo><mn>0</mn></mrow>",
+      "input": "<mrow><msub><mi>T</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>+</mo><mn>5</mn><mo>=</mo><mn>0</mn></mrow>",
       "preference": "sbrief"
     },
     "Sample_8_3_3_default": {
       "test": true,
-      "mathml": "<mrow><msup><mi>x</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msup><mo>=</mo><msup><mi>x</mi><mi>m</mi></msup><msup><mi>x</mi><mi>n</mi></msup></mrow>",
+      "input": "<mrow><msup><mi>x</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msup><mo>=</mo><msup><mi>x</mi><mi>m</mi></msup><msup><mi>x</mi><mi>n</mi></msup></mrow>",
       "preference": "default"
     },
     "Sample_8_3_3_brief": {
       "test": true,
-      "mathml": "<mrow><msup><mi>x</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msup><mo>=</mo><msup><mi>x</mi><mi>m</mi></msup><msup><mi>x</mi><mi>n</mi></msup></mrow>",
+      "input": "<mrow><msup><mi>x</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msup><mo>=</mo><msup><mi>x</mi><mi>m</mi></msup><msup><mi>x</mi><mi>n</mi></msup></mrow>",
       "preference": "brief"
     },
     "Sample_8_3_3_sbrief": {
       "test": true,
-      "mathml": "<mrow><msup><mi>x</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msup><mo>=</mo><msup><mi>x</mi><mi>m</mi></msup><msup><mi>x</mi><mi>n</mi></msup></mrow>",
+      "input": "<mrow><msup><mi>x</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msup><mo>=</mo><msup><mi>x</mi><mi>m</mi></msup><msup><mi>x</mi><mi>n</mi></msup></mrow>",
       "preference": "sbrief"
     },
     "Sample_8_4_1_default": {
       "test": true,
-      "mathml": "<msup><mi>x</mi><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>+</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></msup>",
+      "input": "<msup><mi>x</mi><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>+</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></msup>",
       "preference": "default"
     },
     "Sample_8_4_1_brief": {
       "test": true,
-      "mathml": "<msup><mi>x</mi><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>+</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></msup>",
+      "input": "<msup><mi>x</mi><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>+</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></msup>",
       "preference": "brief"
     },
     "Sample_8_4_1_sbrief": {
       "test": true,
-      "mathml": "<msup><mi>x</mi><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>+</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></msup>",
+      "input": "<msup><mi>x</mi><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>+</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></msup>",
       "preference": "sbrief"
     },
     "Sample_8_4_2_default": {
       "test": true,
-      "mathml": "<msup><mi>x</mi><msub><mi>a</mi><mi>b</mi></msub></msup>",
+      "input": "<msup><mi>x</mi><msub><mi>a</mi><mi>b</mi></msub></msup>",
       "preference": "default"
     },
     "Sample_8_4_2_brief": {
       "test": true,
-      "mathml": "<msup><mi>x</mi><msub><mi>a</mi><mi>b</mi></msub></msup>",
+      "input": "<msup><mi>x</mi><msub><mi>a</mi><mi>b</mi></msub></msup>",
       "preference": "brief"
     },
     "Sample_8_4_2_sbrief": {
       "test": true,
-      "mathml": "<msup><mi>x</mi><msub><mi>a</mi><mi>b</mi></msub></msup>",
+      "input": "<msup><mi>x</mi><msub><mi>a</mi><mi>b</mi></msub></msup>",
       "preference": "sbrief"
     },
     "Sample_8_4_3_default": {
       "test": true,
-      "mathml": "<msub><mi>x</mi><msup><mi>a</mi><mi>b</mi></msup></msub>",
+      "input": "<msub><mi>x</mi><msup><mi>a</mi><mi>b</mi></msup></msub>",
       "preference": "default"
     },
     "Sample_8_4_3_brief": {
       "test": true,
-      "mathml": "<msub><mi>x</mi><msup><mi>a</mi><mi>b</mi></msup></msub>",
+      "input": "<msub><mi>x</mi><msup><mi>a</mi><mi>b</mi></msup></msub>",
       "preference": "brief"
     },
     "Sample_8_4_3_sbrief": {
       "test": true,
-      "mathml": "<msub><mi>x</mi><msup><mi>a</mi><mi>b</mi></msup></msub>",
+      "input": "<msub><mi>x</mi><msup><mi>a</mi><mi>b</mi></msup></msub>",
       "preference": "sbrief"
     },
     "Sample_8_4_4_default": {
       "test": true,
-      "mathml": "<mrow><msup><mi>y</mi><msup><mi>a</mi><msub><mi>b</mi><mi>c</mi></msub></msup></msup><mo>≠</mo><msup><mi>y</mi><mrow><msup><mi>a</mi><mi>b</mi></msup><mi>c</mi></mrow></msup></mrow>",
+      "input": "<mrow><msup><mi>y</mi><msup><mi>a</mi><msub><mi>b</mi><mi>c</mi></msub></msup></msup><mo>≠</mo><msup><mi>y</mi><mrow><msup><mi>a</mi><mi>b</mi></msup><mi>c</mi></mrow></msup></mrow>",
       "preference": "default"
     },
     "Sample_8_4_4_brief": {
       "test": true,
-      "mathml": "<mrow><msup><mi>y</mi><msup><mi>a</mi><msub><mi>b</mi><mi>c</mi></msub></msup></msup><mo>≠</mo><msup><mi>y</mi><mrow><msup><mi>a</mi><mi>b</mi></msup><mi>c</mi></mrow></msup></mrow>",
+      "input": "<mrow><msup><mi>y</mi><msup><mi>a</mi><msub><mi>b</mi><mi>c</mi></msub></msup></msup><mo>≠</mo><msup><mi>y</mi><mrow><msup><mi>a</mi><mi>b</mi></msup><mi>c</mi></mrow></msup></mrow>",
       "preference": "brief"
     },
     "Sample_8_4_4_sbrief": {
       "test": true,
-      "mathml": "<mrow><msup><mi>y</mi><msup><mi>a</mi><msub><mi>b</mi><mi>c</mi></msub></msup></msup><mo>≠</mo><msup><mi>y</mi><mrow><msup><mi>a</mi><mi>b</mi></msup><mi>c</mi></mrow></msup></mrow>",
+      "input": "<mrow><msup><mi>y</mi><msup><mi>a</mi><msub><mi>b</mi><mi>c</mi></msub></msup></msup><mo>≠</mo><msup><mi>y</mi><mrow><msup><mi>a</mi><mi>b</mi></msup><mi>c</mi></mrow></msup></mrow>",
       "preference": "sbrief"
     },
     "Sample_8_4_5_default": {
       "test": true,
-      "mathml": "<msup><mi>y</mi><msup><mi>a</mi><mrow><msub><mrow/><mi>c</mi></msub><mi>b</mi></mrow></msup></msup>",
+      "input": "<msup><mi>y</mi><msup><mi>a</mi><mrow><msub><mrow/><mi>c</mi></msub><mi>b</mi></mrow></msup></msup>",
       "preference": "default"
     },
     "Sample_8_4_5_brief": {
       "test": true,
-      "mathml": "<msup><mi>y</mi><msup><mi>a</mi><mrow><msub><mrow/><mi>c</mi></msub><mi>b</mi></mrow></msup></msup>",
+      "input": "<msup><mi>y</mi><msup><mi>a</mi><mrow><msub><mrow/><mi>c</mi></msub><mi>b</mi></mrow></msup></msup>",
       "preference": "brief"
     },
     "Sample_8_4_5_sbrief": {
       "test": true,
-      "mathml": "<msup><mi>y</mi><msup><mi>a</mi><mrow><msub><mrow/><mi>c</mi></msub><mi>b</mi></mrow></msup></msup>",
+      "input": "<msup><mi>y</mi><msup><mi>a</mi><mrow><msub><mrow/><mi>c</mi></msub><mi>b</mi></mrow></msup></msup>",
       "preference": "sbrief"
     },
     "Sample_8_4_5Short_default": {
       "test": true,
-      "mathml": "<msup><mi>y</mi><msup><mi>a</mi><mrow><msub><mrow/><mi>c</mi></msub></mrow></msup></msup>",
+      "input": "<msup><mi>y</mi><msup><mi>a</mi><mrow><msub><mrow/><mi>c</mi></msub></mrow></msup></msup>",
       "preference": "default"
     },
     "Sample_8_4_5Short_brief": {
       "test": true,
-      "mathml": "<msup><mi>y</mi><msup><mi>a</mi><mrow><msub><mrow/><mi>c</mi></msub></mrow></msup></msup>",
+      "input": "<msup><mi>y</mi><msup><mi>a</mi><mrow><msub><mrow/><mi>c</mi></msub></mrow></msup></msup>",
       "preference": "brief"
     },
     "Sample_8_4_5Short_sbrief": {
       "test": true,
-      "mathml": "<msup><mi>y</mi><msup><mi>a</mi><mrow><msub><mrow/><mi>c</mi></msub></mrow></msup></msup>",
+      "input": "<msup><mi>y</mi><msup><mi>a</mi><mrow><msub><mrow/><mi>c</mi></msub></mrow></msup></msup>",
       "preference": "sbrief"
     },
     "Sample_8_4_5Inv_default": {
       "test": true,
-      "mathml": "<msub><mi>y</mi><msub><mi>a</mi><mrow><msup><mrow/><mi>c</mi></msup></mrow></msub></msub>",
+      "input": "<msub><mi>y</mi><msub><mi>a</mi><mrow><msup><mrow/><mi>c</mi></msup></mrow></msub></msub>",
       "preference": "default"
     },
     "Sample_8_4_5Inv_brief": {
       "test": true,
-      "mathml": "<msub><mi>y</mi><msub><mi>a</mi><mrow><msup><mrow/><mi>c</mi></msup></mrow></msub></msub>",
+      "input": "<msub><mi>y</mi><msub><mi>a</mi><mrow><msup><mrow/><mi>c</mi></msup></mrow></msub></msub>",
       "preference": "brief"
     },
     "Sample_8_4_5Inv_sbrief": {
       "test": true,
-      "mathml": "<msub><mi>y</mi><msub><mi>a</mi><mrow><msup><mrow/><mi>c</mi></msup></mrow></msub></msub>",
+      "input": "<msub><mi>y</mi><msub><mi>a</mi><mrow><msup><mrow/><mi>c</mi></msup></mrow></msub></msub>",
       "preference": "sbrief"
     },
     "Sample_8_4_5InvShort_default": {
       "test": true,
-      "mathml": "<msub><mi>y</mi><msub><mi>a</mi><mrow><msup><mrow/><mi>c</mi></msup><mi>b</mi></mrow></msub></msub>",
+      "input": "<msub><mi>y</mi><msub><mi>a</mi><mrow><msup><mrow/><mi>c</mi></msup><mi>b</mi></mrow></msub></msub>",
       "preference": "default"
     },
     "Sample_8_4_5InvShort_brief": {
       "test": true,
-      "mathml": "<msub><mi>y</mi><msub><mi>a</mi><mrow><msup><mrow/><mi>c</mi></msup><mi>b</mi></mrow></msub></msub>",
+      "input": "<msub><mi>y</mi><msub><mi>a</mi><mrow><msup><mrow/><mi>c</mi></msup><mi>b</mi></mrow></msub></msub>",
       "preference": "brief"
     },
     "Sample_8_4_5InvShort_sbrief": {
       "test": true,
-      "mathml": "<msub><mi>y</mi><msub><mi>a</mi><mrow><msup><mrow/><mi>c</mi></msup><mi>b</mi></mrow></msub></msub>",
+      "input": "<msub><mi>y</mi><msub><mi>a</mi><mrow><msup><mrow/><mi>c</mi></msup><mi>b</mi></mrow></msub></msub>",
       "preference": "sbrief"
     },
     "Sample_8_4_6_default": {
       "test": true,
-      "mathml": "<msup><mi>x</mi><msup><mi>a</mi><mi>b</mi></msup></msup>",
+      "input": "<msup><mi>x</mi><msup><mi>a</mi><mi>b</mi></msup></msup>",
       "preference": "default"
     },
     "Sample_8_4_6_brief": {
       "test": true,
-      "mathml": "<msup><mi>x</mi><msup><mi>a</mi><mi>b</mi></msup></msup>",
+      "input": "<msup><mi>x</mi><msup><mi>a</mi><mi>b</mi></msup></msup>",
       "preference": "brief"
     },
     "Sample_8_4_6_sbrief": {
       "test": true,
-      "mathml": "<msup><mi>x</mi><msup><mi>a</mi><mi>b</mi></msup></msup>",
+      "input": "<msup><mi>x</mi><msup><mi>a</mi><mi>b</mi></msup></msup>",
       "preference": "sbrief"
     },
     "Sample_8_4_7_default": {
       "test": true,
-      "mathml": "<msub><mi>x</mi><msub><mi>a</mi><mi>b</mi></msub></msub>",
+      "input": "<msub><mi>x</mi><msub><mi>a</mi><mi>b</mi></msub></msub>",
       "preference": "default"
     },
     "Sample_8_4_7_brief": {
       "test": true,
-      "mathml": "<msub><mi>x</mi><msub><mi>a</mi><mi>b</mi></msub></msub>",
+      "input": "<msub><mi>x</mi><msub><mi>a</mi><mi>b</mi></msub></msub>",
       "preference": "brief"
     },
     "Sample_8_4_7_sbrief": {
       "test": true,
-      "mathml": "<msub><mi>x</mi><msub><mi>a</mi><mi>b</mi></msub></msub>",
+      "input": "<msub><mi>x</mi><msub><mi>a</mi><mi>b</mi></msub></msub>",
       "preference": "sbrief"
     },
     "Sample_8_4_8_default": {
       "test": true,
-      "mathml": "<msup><mi>T</mi><mfenced separators=\"\" open=\"(\" close=\")\"><msup><mi>x</mi><mi>a</mi></msup><mo>+</mo><msup><mi>y</mi><mi>b</mi></msup></mfenced></msup>",
+      "input": "<msup><mi>T</mi><mfenced separators=\"\" open=\"(\" close=\")\"><msup><mi>x</mi><mi>a</mi></msup><mo>+</mo><msup><mi>y</mi><mi>b</mi></msup></mfenced></msup>",
       "preference": "default"
     },
     "Sample_8_4_8_brief": {
       "test": true,
-      "mathml": "<msup><mi>T</mi><mfenced separators=\"\" open=\"(\" close=\")\"><msup><mi>x</mi><mi>a</mi></msup><mo>+</mo><msup><mi>y</mi><mi>b</mi></msup></mfenced></msup>",
+      "input": "<msup><mi>T</mi><mfenced separators=\"\" open=\"(\" close=\")\"><msup><mi>x</mi><mi>a</mi></msup><mo>+</mo><msup><mi>y</mi><mi>b</mi></msup></mfenced></msup>",
       "preference": "brief"
     },
     "Sample_8_4_8_sbrief": {
       "test": true,
-      "mathml": "<msup><mi>T</mi><mfenced separators=\"\" open=\"(\" close=\")\"><msup><mi>x</mi><mi>a</mi></msup><mo>+</mo><msup><mi>y</mi><mi>b</mi></msup></mfenced></msup>",
+      "input": "<msup><mi>T</mi><mfenced separators=\"\" open=\"(\" close=\")\"><msup><mi>x</mi><mi>a</mi></msup><mo>+</mo><msup><mi>y</mi><mi>b</mi></msup></mfenced></msup>",
       "preference": "sbrief"
     },
     "Sample_8_5_1_default": {
       "test": true,
-      "mathml": "<msub><mi>x</mi><mn>1</mn></msub>",
+      "input": "<msub><mi>x</mi><mn>1</mn></msub>",
       "preference": "default"
     },
     "Sample_8_5_1_brief": {
       "test": true,
-      "mathml": "<msub><mi>x</mi><mn>1</mn></msub>",
+      "input": "<msub><mi>x</mi><mn>1</mn></msub>",
       "preference": "brief"
     },
     "Sample_8_5_1_sbrief": {
       "test": true,
-      "mathml": "<msub><mi>x</mi><mn>1</mn></msub>",
+      "input": "<msub><mi>x</mi><mn>1</mn></msub>",
       "preference": "sbrief"
     },
     "Sample_8_5_2_default": {
       "test": true,
-      "mathml": "<msub><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub>",
+      "input": "<msub><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub>",
       "preference": "default"
     },
     "Sample_8_5_2_brief": {
       "test": true,
-      "mathml": "<msub><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub>",
+      "input": "<msub><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub>",
       "preference": "brief"
     },
     "Sample_8_5_2_sbrief": {
       "test": true,
-      "mathml": "<msub><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub>",
+      "input": "<msub><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub>",
       "preference": "sbrief"
     },
     "Sample_8_5_3_default": {
       "test": true,
-      "mathml": "<msub><mi>x</mi><mrow><mn>10,000</mn></mrow></msub>",
+      "input": "<msub><mi>x</mi><mrow><mn>10,000</mn></mrow></msub>",
       "preference": "default"
     },
     "Sample_8_5_3_brief": {
       "test": true,
-      "mathml": "<msub><mi>x</mi><mrow><mn>10,000</mn></mrow></msub>",
+      "input": "<msub><mi>x</mi><mrow><mn>10,000</mn></mrow></msub>",
       "preference": "brief"
     },
     "Sample_8_5_3_sbrief": {
       "test": true,
-      "mathml": "<msub><mi>x</mi><mrow><mn>10,000</mn></mrow></msub>",
+      "input": "<msub><mi>x</mi><mrow><mn>10,000</mn></mrow></msub>",
       "preference": "sbrief"
     },
     "Sample_8_5_4_default": {
       "test": true,
-      "mathml": "<msub><mi>x</mi><mrow><mn>1.3</mn></mrow></msub>",
+      "input": "<msub><mi>x</mi><mrow><mn>1.3</mn></mrow></msub>",
       "preference": "default"
     },
     "Sample_8_5_4_brief": {
       "test": true,
-      "mathml": "<msub><mi>x</mi><mrow><mn>1.3</mn></mrow></msub>",
+      "input": "<msub><mi>x</mi><mrow><mn>1.3</mn></mrow></msub>",
       "preference": "brief"
     },
     "Sample_8_5_4_sbrief": {
       "test": true,
-      "mathml": "<msub><mi>x</mi><mrow><mn>1.3</mn></mrow></msub>",
+      "input": "<msub><mi>x</mi><mrow><mn>1.3</mn></mrow></msub>",
       "preference": "sbrief"
     },
     "Sample_8_5_5_default": {
       "test": true,
-      "mathml": "<mrow><mn>4</mn><mi>Fe</mi><mo>+</mo><mn>3</mn><msub><mi>O</mi><mn>2</mn></msub><mo>→</mo><mn>2</mn><msub><mi>Fe</mi><mn>2</mn></msub><msub><mi>O</mi><mn>3</mn></msub></mrow>",
+      "input": "<mrow><mn>4</mn><mi>Fe</mi><mo>+</mo><mn>3</mn><msub><mi>O</mi><mn>2</mn></msub><mo>→</mo><mn>2</mn><msub><mi>Fe</mi><mn>2</mn></msub><msub><mi>O</mi><mn>3</mn></msub></mrow>",
       "preference": "default"
     },
     "Sample_8_5_5_brief": {
       "test": true,
-      "mathml": "<mrow><mn>4</mn><mi>Fe</mi><mo>+</mo><mn>3</mn><msub><mi>O</mi><mn>2</mn></msub><mo>→</mo><mn>2</mn><msub><mi>Fe</mi><mn>2</mn></msub><msub><mi>O</mi><mn>3</mn></msub></mrow>",
+      "input": "<mrow><mn>4</mn><mi>Fe</mi><mo>+</mo><mn>3</mn><msub><mi>O</mi><mn>2</mn></msub><mo>→</mo><mn>2</mn><msub><mi>Fe</mi><mn>2</mn></msub><msub><mi>O</mi><mn>3</mn></msub></mrow>",
       "preference": "brief"
     },
     "Sample_8_5_5_sbrief": {
       "test": true,
-      "mathml": "<mrow><mn>4</mn><mi>Fe</mi><mo>+</mo><mn>3</mn><msub><mi>O</mi><mn>2</mn></msub><mo>→</mo><mn>2</mn><msub><mi>Fe</mi><mn>2</mn></msub><msub><mi>O</mi><mn>3</mn></msub></mrow>",
+      "input": "<mrow><mn>4</mn><mi>Fe</mi><mo>+</mo><mn>3</mn><msub><mi>O</mi><mn>2</mn></msub><mo>→</mo><mn>2</mn><msub><mi>Fe</mi><mn>2</mn></msub><msub><mi>O</mi><mn>3</mn></msub></mrow>",
       "preference": "sbrief"
     },
     "Sample_8_5_6_default": {
       "test": true,
-      "mathml": "<msub><mi>a</mi><mrow><mn>2</mn><mo>,</mo><mn>3</mn></mrow></msub>",
+      "input": "<msub><mi>a</mi><mrow><mn>2</mn><mo>,</mo><mn>3</mn></mrow></msub>",
       "preference": "default"
     },
     "Sample_8_5_6_brief": {
       "test": true,
-      "mathml": "<msub><mi>a</mi><mrow><mn>2</mn><mo>,</mo><mn>3</mn></mrow></msub>",
+      "input": "<msub><mi>a</mi><mrow><mn>2</mn><mo>,</mo><mn>3</mn></mrow></msub>",
       "preference": "brief"
     },
     "Sample_8_5_6_sbrief": {
       "test": true,
-      "mathml": "<msub><mi>a</mi><mrow><mn>2</mn><mo>,</mo><mn>3</mn></mrow></msub>",
+      "input": "<msub><mi>a</mi><mrow><mn>2</mn><mo>,</mo><mn>3</mn></mrow></msub>",
       "preference": "sbrief"
     },
     "Sample_8_5_7_default": {
       "test": true,
-      "mathml": "<msub><mi>T</mi><mrow><msub><mi>n</mi><mn>1</mn></msub><mo>+</mo><msub><mi>n</mi><mn>0</mn></msub></mrow></msub>",
+      "input": "<msub><mi>T</mi><mrow><msub><mi>n</mi><mn>1</mn></msub><mo>+</mo><msub><mi>n</mi><mn>0</mn></msub></mrow></msub>",
       "preference": "default"
     },
     "Sample_8_5_7_brief": {
       "test": true,
-      "mathml": "<msub><mi>T</mi><mrow><msub><mi>n</mi><mn>1</mn></msub><mo>+</mo><msub><mi>n</mi><mn>0</mn></msub></mrow></msub>",
+      "input": "<msub><mi>T</mi><mrow><msub><mi>n</mi><mn>1</mn></msub><mo>+</mo><msub><mi>n</mi><mn>0</mn></msub></mrow></msub>",
       "preference": "brief"
     },
     "Sample_8_5_7_sbrief": {
       "test": true,
-      "mathml": "<msub><mi>T</mi><mrow><msub><mi>n</mi><mn>1</mn></msub><mo>+</mo><msub><mi>n</mi><mn>0</mn></msub></mrow></msub>",
+      "input": "<msub><mi>T</mi><mrow><msub><mi>n</mi><mn>1</mn></msub><mo>+</mo><msub><mi>n</mi><mn>0</mn></msub></mrow></msub>",
       "preference": "sbrief"
     },
     "Sample_8_5_8_default": {
       "test": true,
-      "mathml": "<mrow><msub><mo form=\"prefix\">log</mo><mn>2</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><msub><mo form=\"prefix\">log</mo><mn>10</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mrow><msub><mo form=\"prefix\">log</mo><mn>10</mn></msub><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow></mfrac></mrow>",
+      "input": "<mrow><msub><mo form=\"prefix\">log</mo><mn>2</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><msub><mo form=\"prefix\">log</mo><mn>10</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mrow><msub><mo form=\"prefix\">log</mo><mn>10</mn></msub><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow></mfrac></mrow>",
       "preference": "default"
     },
     "Sample_8_5_8_brief": {
       "test": true,
-      "mathml": "<mrow><msub><mo form=\"prefix\">log</mo><mn>2</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><msub><mo form=\"prefix\">log</mo><mn>10</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mrow><msub><mo form=\"prefix\">log</mo><mn>10</mn></msub><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow></mfrac></mrow>",
+      "input": "<mrow><msub><mo form=\"prefix\">log</mo><mn>2</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><msub><mo form=\"prefix\">log</mo><mn>10</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mrow><msub><mo form=\"prefix\">log</mo><mn>10</mn></msub><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow></mfrac></mrow>",
       "preference": "brief"
     },
     "Sample_8_5_8_sbrief": {
       "test": true,
-      "mathml": "<mrow><msub><mo form=\"prefix\">log</mo><mn>2</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><msub><mo form=\"prefix\">log</mo><mn>10</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mrow><msub><mo form=\"prefix\">log</mo><mn>10</mn></msub><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow></mfrac></mrow>",
+      "input": "<mrow><msub><mo form=\"prefix\">log</mo><mn>2</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><msub><mo form=\"prefix\">log</mo><mn>10</mn></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mrow><msub><mo form=\"prefix\">log</mo><mn>10</mn></msub><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow></mfrac></mrow>",
       "preference": "sbrief"
     },
     "Sample_8_5_9_default": {
       "test": true,
-      "mathml": "<msub><mi>Φ</mi><mn>5</mn></msub>",
+      "input": "<msub><mi>Φ</mi><mn>5</mn></msub>",
       "preference": "default"
     },
     "Sample_8_5_9_brief": {
       "test": true,
-      "mathml": "<msub><mi>Φ</mi><mn>5</mn></msub>",
+      "input": "<msub><mi>Φ</mi><mn>5</mn></msub>",
       "preference": "brief"
     },
     "Sample_8_5_9_sbrief": {
       "test": true,
-      "mathml": "<msub><mi>Φ</mi><mn>5</mn></msub>",
+      "input": "<msub><mi>Φ</mi><mn>5</mn></msub>",
       "preference": "sbrief"
     },
     "Sample_8_5_10_default": {
       "test": true,
-      "mathml": "<mrow><mo form=\"prefix\">ln</mo><mi>x</mi><mo>=</mo><msubsup><mo>∫</mo><mn>1</mn><mi>x</mi></msubsup><mfrac><mrow><mi>d</mi><mi>t</mi></mrow><mi>t</mi></mfrac></mrow>",
+      "input": "<mrow><mo form=\"prefix\">ln</mo><mi>x</mi><mo>=</mo><msubsup><mo>∫</mo><mn>1</mn><mi>x</mi></msubsup><mfrac><mrow><mi>d</mi><mi>t</mi></mrow><mi>t</mi></mfrac></mrow>",
       "preference": "default"
     },
     "Sample_8_5_10_brief": {
       "test": true,
-      "mathml": "<mrow><mo form=\"prefix\">ln</mo><mi>x</mi><mo>=</mo><msubsup><mo>∫</mo><mn>1</mn><mi>x</mi></msubsup><mfrac><mrow><mi>d</mi><mi>t</mi></mrow><mi>t</mi></mfrac></mrow>",
+      "input": "<mrow><mo form=\"prefix\">ln</mo><mi>x</mi><mo>=</mo><msubsup><mo>∫</mo><mn>1</mn><mi>x</mi></msubsup><mfrac><mrow><mi>d</mi><mi>t</mi></mrow><mi>t</mi></mfrac></mrow>",
       "preference": "brief"
     },
     "Sample_8_5_10_sbrief": {
       "test": true,
-      "mathml": "<mrow><mo form=\"prefix\">ln</mo><mi>x</mi><mo>=</mo><msubsup><mo>∫</mo><mn>1</mn><mi>x</mi></msubsup><mfrac><mrow><mi>d</mi><mi>t</mi></mrow><mi>t</mi></mfrac></mrow>",
+      "input": "<mrow><mo form=\"prefix\">ln</mo><mi>x</mi><mo>=</mo><msubsup><mo>∫</mo><mn>1</mn><mi>x</mi></msubsup><mfrac><mrow><mi>d</mi><mi>t</mi></mrow><mi>t</mi></mfrac></mrow>",
       "preference": "sbrief"
     },
     "Sample_8_6_1_default": {
       "test": true,
-      "mathml": "<mrow><mi>$</mi><mi>n</mi><mn>2</mn><mo>=</mo><mn>2</mn><mo>*</mo><mi>$</mi><mi>n</mi><mo>+</mo><mn>1</mn><mo>;</mo></mrow>",
+      "input": "<mrow><mi>$</mi><mi>n</mi><mn>2</mn><mo>=</mo><mn>2</mn><mo>*</mo><mi>$</mi><mi>n</mi><mo>+</mo><mn>1</mn><mo>;</mo></mrow>",
       "preference": "default"
     },
     "Sample_8_6_1_brief": {
       "test": true,
-      "mathml": "<mrow><mi>$</mi><mi>n</mi><mn>2</mn><mo>=</mo><mn>2</mn><mo>*</mo><mi>$</mi><mi>n</mi><mo>+</mo><mn>1</mn><mo>;</mo></mrow>",
+      "input": "<mrow><mi>$</mi><mi>n</mi><mn>2</mn><mo>=</mo><mn>2</mn><mo>*</mo><mi>$</mi><mi>n</mi><mo>+</mo><mn>1</mn><mo>;</mo></mrow>",
       "preference": "brief"
     },
     "Sample_8_6_1_sbrief": {
       "test": true,
-      "mathml": "<mrow><mi>$</mi><mi>n</mi><mn>2</mn><mo>=</mo><mn>2</mn><mo>*</mo><mi>$</mi><mi>n</mi><mo>+</mo><mn>1</mn><mo>;</mo></mrow>",
+      "input": "<mrow><mi>$</mi><mi>n</mi><mn>2</mn><mo>=</mo><mn>2</mn><mo>*</mo><mi>$</mi><mi>n</mi><mo>+</mo><mn>1</mn><mo>;</mo></mrow>",
       "preference": "sbrief"
     },
     "Sample_8_8_1_naive_default": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><mrow><mi>e</mi><mi>f</mi></mrow><mrow><mi>g</mi><mi>h</mi></mrow><mprescripts/><mrow><mi>c</mi><mi>d</mi></mrow><mrow><mi>a</mi><mi>b</mi></mrow></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><mrow><mi>e</mi><mi>f</mi></mrow><mrow><mi>g</mi><mi>h</mi></mrow><mprescripts/><mrow><mi>c</mi><mi>d</mi></mrow><mrow><mi>a</mi><mi>b</mi></mrow></mmultiscripts>",
       "preference": "default"
     },
     "Sample_8_8_1_naive_brief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><mrow><mi>e</mi><mi>f</mi></mrow><mrow><mi>g</mi><mi>h</mi></mrow><mprescripts/><mrow><mi>c</mi><mi>d</mi></mrow><mrow><mi>a</mi><mi>b</mi></mrow></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><mrow><mi>e</mi><mi>f</mi></mrow><mrow><mi>g</mi><mi>h</mi></mrow><mprescripts/><mrow><mi>c</mi><mi>d</mi></mrow><mrow><mi>a</mi><mi>b</mi></mrow></mmultiscripts>",
       "preference": "brief"
     },
     "Sample_8_8_1_naive_sbrief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><mrow><mi>e</mi><mi>f</mi></mrow><mrow><mi>g</mi><mi>h</mi></mrow><mprescripts/><mrow><mi>c</mi><mi>d</mi></mrow><mrow><mi>a</mi><mi>b</mi></mrow></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><mrow><mi>e</mi><mi>f</mi></mrow><mrow><mi>g</mi><mi>h</mi></mrow><mprescripts/><mrow><mi>c</mi><mi>d</mi></mrow><mrow><mi>a</mi><mi>b</mi></mrow></mmultiscripts>",
       "preference": "sbrief"
     },
     "Sample_8_8_1_default": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><mi>e</mi><mi>g</mi><mi>f</mi><mi>h</mi><mprescripts/><mi>c</mi><mi>a</mi><mi>d</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><mi>e</mi><mi>g</mi><mi>f</mi><mi>h</mi><mprescripts/><mi>c</mi><mi>a</mi><mi>d</mi><mi>b</mi></mmultiscripts>",
       "preference": "default"
     },
     "Sample_8_8_1_brief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><mi>e</mi><mi>g</mi><mi>f</mi><mi>h</mi><mprescripts/><mi>c</mi><mi>a</mi><mi>d</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><mi>e</mi><mi>g</mi><mi>f</mi><mi>h</mi><mprescripts/><mi>c</mi><mi>a</mi><mi>d</mi><mi>b</mi></mmultiscripts>",
       "preference": "brief"
     },
     "Sample_8_8_1_sbrief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><mi>e</mi><mi>g</mi><mi>f</mi><mi>h</mi><mprescripts/><mi>c</mi><mi>a</mi><mi>d</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><mi>e</mi><mi>g</mi><mi>f</mi><mi>h</mi><mprescripts/><mi>c</mi><mi>a</mi><mi>d</mi><mi>b</mi></mmultiscripts>",
       "preference": "sbrief"
     },
     "SampleTensorMultiSimpleABC_default": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><msup><mi>c</mi><mi>l</mi></msup><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><msup><mi>c</mi><mi>l</mi></msup><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "default"
     },
     "SampleTensorMultiSimpleABC_brief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><msup><mi>c</mi><mi>l</mi></msup><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><msup><mi>c</mi><mi>l</mi></msup><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "brief"
     },
     "SampleTensorMultiSimpleABC_sbrief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><msup><mi>c</mi><mi>l</mi></msup><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><msup><mi>c</mi><mi>l</mi></msup><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "sbrief"
     },
     "SampleTensorMultiSub_default": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><msub><mi>c</mi><mi>l</mi></msub><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><msub><mi>c</mi><mi>l</mi></msub><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "default"
     },
     "SampleTensorMultiSub_brief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><msub><mi>c</mi><mi>l</mi></msub><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><msub><mi>c</mi><mi>l</mi></msub><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "brief"
     },
     "SampleTensorMultiSub_sbrief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><msub><mi>c</mi><mi>l</mi></msub><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><msub><mi>c</mi><mi>l</mi></msub><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "sbrief"
     },
     "SampleTensorMultiSubSup_default": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><msub><mi>c</mi><msup><mi>l</mi><mi>k</mi></msup></msub><mi>d</mi><mi>e</mi><none/><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><msub><mi>c</mi><msup><mi>l</mi><mi>k</mi></msup></msub><mi>d</mi><mi>e</mi><none/><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "default"
     },
     "SampleTensorMultiSubSup_brief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><msub><mi>c</mi><msup><mi>l</mi><mi>k</mi></msup></msub><mi>d</mi><mi>e</mi><none/><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><msub><mi>c</mi><msup><mi>l</mi><mi>k</mi></msup></msub><mi>d</mi><mi>e</mi><none/><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "brief"
     },
     "SampleTensorMultiSubSup_sbrief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><msub><mi>c</mi><msup><mi>l</mi><mi>k</mi></msup></msub><mi>d</mi><mi>e</mi><none/><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><msub><mi>c</mi><msup><mi>l</mi><mi>k</mi></msup></msub><mi>d</mi><mi>e</mi><none/><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "sbrief"
     },
     "SampleTensorMultiSimple_default": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><msup><mi>c</mi><mi>l</mi></msup><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><msup><mi>c</mi><mi>l</mi></msup><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "default"
     },
     "SampleTensorMultiSimple_brief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><msup><mi>c</mi><mi>l</mi></msup><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><msup><mi>c</mi><mi>l</mi></msup><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "brief"
     },
     "SampleTensorMultiSimple_sbrief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><msup><mi>c</mi><mi>l</mi></msup><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><msup><mi>c</mi><mi>l</mi></msup><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "sbrief"
     },
     "SampleTensorMultiComplex_default": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><mrow><mi>c</mi><msup><mi>k</mi><mi>l</mi></msup></mrow><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><mrow><mi>c</mi><msup><mi>k</mi><mi>l</mi></msup></mrow><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "default"
     },
     "SampleTensorMultiComplex_brief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><mrow><mi>c</mi><msup><mi>k</mi><mi>l</mi></msup></mrow><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><mrow><mi>c</mi><msup><mi>k</mi><mi>l</mi></msup></mrow><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "brief"
     },
     "SampleTensorMultiComplex_sbrief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><mrow><mi>c</mi><msup><mi>k</mi><mi>l</mi></msup></mrow><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><mrow><mi>c</mi><msup><mi>k</mi><mi>l</mi></msup></mrow><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "sbrief"
     },
     "SampleTwoTensors_default": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "default"
     },
     "SampleTwoTensors_brief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "brief"
     },
     "SampleTwoTensors_sbrief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "sbrief"
     },
     "_comment2_": " Tensor tests are named with the convention of including the indices that are",
@@ -1090,707 +1090,707 @@
     "_comment7_": "  Where R is the rest.",
     "SamplePartialTensorABCD_default": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "default"
     },
     "SamplePartialTensorABCD_brief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "brief"
     },
     "SamplePartialTensorABCD_sbrief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "sbrief"
     },
     "SamplePartialTensorABC_default": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><mi>c</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "default"
     },
     "SamplePartialTensorABC_brief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><mi>c</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "brief"
     },
     "SamplePartialTensorABC_sbrief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><mi>c</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "sbrief"
     },
     "SamplePartialTensorABD_default": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "default"
     },
     "SamplePartialTensorABD_brief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "brief"
     },
     "SamplePartialTensorABD_sbrief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "sbrief"
     },
     "SamplePartialTensorAB_default": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "default"
     },
     "SamplePartialTensorAB_brief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "brief"
     },
     "SamplePartialTensorAB_sbrief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "input": "<mmultiscripts><mi>x</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
       "preference": "sbrief"
     },
     "SamplePartialTensorABCR_default": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><mi>c</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>",
       "preference": "default"
     },
     "SamplePartialTensorABCR_brief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><mi>c</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>",
       "preference": "brief"
     },
     "SamplePartialTensorABCR_sbrief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><mi>c</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>",
       "preference": "sbrief"
     },
     "SamplePartialTensorABCDR_default": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>",
       "preference": "default"
     },
     "SamplePartialTensorABCDR_brief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>",
       "preference": "brief"
     },
     "SamplePartialTensorABCDR_sbrief": {
       "test": true,
-      "mathml": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>",
       "preference": "sbrief"
     },
     "SamplePartialTensorABCDRoot_default": {
       "test": true,
-      "mathml": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt>",
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt>",
       "preference": "default"
     },
     "SamplePartialTensorABCDRoot_brief": {
       "test": true,
-      "mathml": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt>",
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt>",
       "preference": "brief"
     },
     "SamplePartialTensorABCDRoot_sbrief": {
       "test": true,
-      "mathml": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt>",
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt>",
       "preference": "sbrief"
     },
     "SamplePartialTensorABCDRootR_default": {
       "test": true,
-      "mathml": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>",
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>",
       "preference": "default"
     },
     "SamplePartialTensorABCDRootR_brief": {
       "test": true,
-      "mathml": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>",
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>",
       "preference": "brief"
     },
     "SamplePartialTensorABCDRootR_sbrief": {
       "test": true,
-      "mathml": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>",
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>",
       "preference": "sbrief"
     },
     "SamplePartialTensorABCDFrac_default": {
       "test": true,
-      "mathml": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac>",
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac>",
       "preference": "default"
     },
     "SamplePartialTensorABCDFrac_brief": {
       "test": true,
-      "mathml": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac>",
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac>",
       "preference": "brief"
     },
     "SamplePartialTensorABCDFrac_sbrief": {
       "test": true,
-      "mathml": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac>",
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac>",
       "preference": "sbrief"
     },
     "SamplePartialTensorABCDFracR_default": {
       "test": true,
-      "mathml": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>",
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>",
       "preference": "default"
     },
     "SamplePartialTensorABCDFracR_brief": {
       "test": true,
-      "mathml": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>",
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>",
       "preference": "brief"
     },
     "SamplePartialTensorABCDFracR_sbrief": {
       "test": true,
-      "mathml": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>",
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>",
       "preference": "sbrief"
     },
     "SampleSimpleSquare_default": {
       "test": true,
-      "mathml": "<msubsup><mi>T</mi><mn>0</mn><mn>2</mn></msubsup>",
+      "input": "<msubsup><mi>T</mi><mn>0</mn><mn>2</mn></msubsup>",
       "preference": "default"
     },
     "SampleSimpleSquare_brief": {
       "test": true,
-      "mathml": "<msubsup><mi>T</mi><mn>0</mn><mn>2</mn></msubsup>",
+      "input": "<msubsup><mi>T</mi><mn>0</mn><mn>2</mn></msubsup>",
       "preference": "brief"
     },
     "SampleSimpleSquare_sbrief": {
       "test": true,
-      "mathml": "<msubsup><mi>T</mi><mn>0</mn><mn>2</mn></msubsup>",
+      "input": "<msubsup><mi>T</mi><mn>0</mn><mn>2</mn></msubsup>",
       "preference": "sbrief"
     },
     "SampleSimpleSquare_2_default": {
       "test": true,
-      "mathml": "<msup><msub><mi>T</mi><mn>0</mn></msub><mn>2</mn></msup>",
+      "input": "<msup><msub><mi>T</mi><mn>0</mn></msub><mn>2</mn></msup>",
       "preference": "default"
     },
     "SampleSimpleSquare_2_brief": {
       "test": true,
-      "mathml": "<msup><msub><mi>T</mi><mn>0</mn></msub><mn>2</mn></msup>",
+      "input": "<msup><msub><mi>T</mi><mn>0</mn></msub><mn>2</mn></msup>",
       "preference": "brief"
     },
     "SampleSimpleSquare_2_sbrief": {
       "test": true,
-      "mathml": "<msup><msub><mi>T</mi><mn>0</mn></msub><mn>2</mn></msup>",
+      "input": "<msup><msub><mi>T</mi><mn>0</mn></msub><mn>2</mn></msup>",
       "preference": "sbrief"
     },
     "SampleSimpleCube_default": {
       "test": true,
-      "mathml": "<msubsup><mi>T</mi><mn>0</mn><mn>3</mn></msubsup>",
+      "input": "<msubsup><mi>T</mi><mn>0</mn><mn>3</mn></msubsup>",
       "preference": "default"
     },
     "SampleSimpleCube_brief": {
       "test": true,
-      "mathml": "<msubsup><mi>T</mi><mn>0</mn><mn>3</mn></msubsup>",
+      "input": "<msubsup><mi>T</mi><mn>0</mn><mn>3</mn></msubsup>",
       "preference": "brief"
     },
     "SampleSimpleCube_sbrief": {
       "test": true,
-      "mathml": "<msubsup><mi>T</mi><mn>0</mn><mn>3</mn></msubsup>",
+      "input": "<msubsup><mi>T</mi><mn>0</mn><mn>3</mn></msubsup>",
       "preference": "sbrief"
     },
     "SampleSimpleCube_2_default": {
       "test": true,
-      "mathml": "<msup><msub><mi>T</mi><mn>0</mn></msub><mn>3</mn></msup>",
+      "input": "<msup><msub><mi>T</mi><mn>0</mn></msub><mn>3</mn></msup>",
       "preference": "default"
     },
     "SampleSimpleCube_2_brief": {
       "test": true,
-      "mathml": "<msup><msub><mi>T</mi><mn>0</mn></msub><mn>3</mn></msup>",
+      "input": "<msup><msub><mi>T</mi><mn>0</mn></msub><mn>3</mn></msup>",
       "preference": "brief"
     },
     "SampleSimpleCube_2_sbrief": {
       "test": true,
-      "mathml": "<msup><msub><mi>T</mi><mn>0</mn></msub><mn>3</mn></msup>",
+      "input": "<msup><msub><mi>T</mi><mn>0</mn></msub><mn>3</mn></msup>",
       "preference": "sbrief"
     },
     "Sample_8_8_2_default": {
       "test": true,
-      "mathml": "<msubsup><mi>T</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mn>2</mn></msubsup>",
+      "input": "<msubsup><mi>T</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mn>2</mn></msubsup>",
       "preference": "default"
     },
     "Sample_8_8_2_brief": {
       "test": true,
-      "mathml": "<msubsup><mi>T</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mn>2</mn></msubsup>",
+      "input": "<msubsup><mi>T</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mn>2</mn></msubsup>",
       "preference": "brief"
     },
     "Sample_8_8_2_sbrief": {
       "test": true,
-      "mathml": "<msubsup><mi>T</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mn>2</mn></msubsup>",
+      "input": "<msubsup><mi>T</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mn>2</mn></msubsup>",
       "preference": "sbrief"
     },
     "Sample_8_9_1_default": {
       "test": true,
-      "mathml": "<msup><mi>x</mi><mo>'</mo></msup>",
+      "input": "<msup><mi>x</mi><mo>'</mo></msup>",
       "preference": "default"
     },
     "Sample_8_9_1_brief": {
       "test": true,
-      "mathml": "<msup><mi>x</mi><mo>'</mo></msup>",
+      "input": "<msup><mi>x</mi><mo>'</mo></msup>",
       "preference": "brief"
     },
     "Sample_8_9_1_sbrief": {
       "test": true,
-      "mathml": "<msup><mi>x</mi><mo>'</mo></msup>",
+      "input": "<msup><mi>x</mi><mo>'</mo></msup>",
       "preference": "sbrief"
     },
     "Sample_8_9_2_default": {
       "test": true,
-      "mathml": "<mrow><msup><mi>f</mi><mrow><mo>'</mo><mo>'</mo><mo>'</mo></mrow></msup><mrow><mo>(</mo><mi>y</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi>d</mi><msup><mi>f</mi><mrow><mo>'</mo><mo>'</mo></mrow></msup><mrow><mo>(</mo><mi>y</mi><mo>)</mo></mrow></mrow><mrow><mi>d</mi><mi>y</mi></mrow></mfrac></mrow>",
+      "input": "<mrow><msup><mi>f</mi><mrow><mo>'</mo><mo>'</mo><mo>'</mo></mrow></msup><mrow><mo>(</mo><mi>y</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi>d</mi><msup><mi>f</mi><mrow><mo>'</mo><mo>'</mo></mrow></msup><mrow><mo>(</mo><mi>y</mi><mo>)</mo></mrow></mrow><mrow><mi>d</mi><mi>y</mi></mrow></mfrac></mrow>",
       "preference": "default"
     },
     "Sample_8_9_2_brief": {
       "test": true,
-      "mathml": "<mrow><msup><mi>f</mi><mrow><mo>'</mo><mo>'</mo><mo>'</mo></mrow></msup><mrow><mo>(</mo><mi>y</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi>d</mi><msup><mi>f</mi><mrow><mo>'</mo><mo>'</mo></mrow></msup><mrow><mo>(</mo><mi>y</mi><mo>)</mo></mrow></mrow><mrow><mi>d</mi><mi>y</mi></mrow></mfrac></mrow>",
+      "input": "<mrow><msup><mi>f</mi><mrow><mo>'</mo><mo>'</mo><mo>'</mo></mrow></msup><mrow><mo>(</mo><mi>y</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi>d</mi><msup><mi>f</mi><mrow><mo>'</mo><mo>'</mo></mrow></msup><mrow><mo>(</mo><mi>y</mi><mo>)</mo></mrow></mrow><mrow><mi>d</mi><mi>y</mi></mrow></mfrac></mrow>",
       "preference": "brief"
     },
     "Sample_8_9_2_sbrief": {
       "test": true,
-      "mathml": "<mrow><msup><mi>f</mi><mrow><mo>'</mo><mo>'</mo><mo>'</mo></mrow></msup><mrow><mo>(</mo><mi>y</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi>d</mi><msup><mi>f</mi><mrow><mo>'</mo><mo>'</mo></mrow></msup><mrow><mo>(</mo><mi>y</mi><mo>)</mo></mrow></mrow><mrow><mi>d</mi><mi>y</mi></mrow></mfrac></mrow>",
+      "input": "<mrow><msup><mi>f</mi><mrow><mo>'</mo><mo>'</mo><mo>'</mo></mrow></msup><mrow><mo>(</mo><mi>y</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi>d</mi><msup><mi>f</mi><mrow><mo>'</mo><mo>'</mo></mrow></msup><mrow><mo>(</mo><mi>y</mi><mo>)</mo></mrow></mrow><mrow><mi>d</mi><mi>y</mi></mrow></mfrac></mrow>",
       "preference": "sbrief"
     },
     "Sample_8_10_1_default": {
       "test": true,
-      "mathml": "<mrow><msup><mi>ρ</mi><mo>'</mo></msup><mo>=</mo><msubsup><mi>ρ</mi><mo>+</mo><mo>'</mo></msubsup><mo>+</mo><msubsup><mi>ρ</mi><mo>-</mo><mo>'</mo></msubsup></mrow>",
+      "input": "<mrow><msup><mi>ρ</mi><mo>'</mo></msup><mo>=</mo><msubsup><mi>ρ</mi><mo>+</mo><mo>'</mo></msubsup><mo>+</mo><msubsup><mi>ρ</mi><mo>-</mo><mo>'</mo></msubsup></mrow>",
       "preference": "default"
     },
     "Sample_8_10_1_brief": {
       "test": true,
-      "mathml": "<mrow><msup><mi>ρ</mi><mo>'</mo></msup><mo>=</mo><msubsup><mi>ρ</mi><mo>+</mo><mo>'</mo></msubsup><mo>+</mo><msubsup><mi>ρ</mi><mo>-</mo><mo>'</mo></msubsup></mrow>",
+      "input": "<mrow><msup><mi>ρ</mi><mo>'</mo></msup><mo>=</mo><msubsup><mi>ρ</mi><mo>+</mo><mo>'</mo></msubsup><mo>+</mo><msubsup><mi>ρ</mi><mo>-</mo><mo>'</mo></msubsup></mrow>",
       "preference": "brief"
     },
     "Sample_8_10_1_sbrief": {
       "test": true,
-      "mathml": "<mrow><msup><mi>ρ</mi><mo>'</mo></msup><mo>=</mo><msubsup><mi>ρ</mi><mo>+</mo><mo>'</mo></msubsup><mo>+</mo><msubsup><mi>ρ</mi><mo>-</mo><mo>'</mo></msubsup></mrow>",
+      "input": "<mrow><msup><mi>ρ</mi><mo>'</mo></msup><mo>=</mo><msubsup><mi>ρ</mi><mo>+</mo><mo>'</mo></msubsup><mo>+</mo><msubsup><mi>ρ</mi><mo>-</mo><mo>'</mo></msubsup></mrow>",
       "preference": "sbrief"
     },
     "Sample_8_10_2_default": {
       "test": true,
-      "mathml": "<msubsup><mi>x</mi><mn>10</mn><mo>'</mo></msubsup>",
+      "input": "<msubsup><mi>x</mi><mn>10</mn><mo>'</mo></msubsup>",
       "preference": "default"
     },
     "Sample_8_10_2_brief": {
       "test": true,
-      "mathml": "<msubsup><mi>x</mi><mn>10</mn><mo>'</mo></msubsup>",
+      "input": "<msubsup><mi>x</mi><mn>10</mn><mo>'</mo></msubsup>",
       "preference": "brief"
     },
     "Sample_8_10_2_sbrief": {
       "test": true,
-      "mathml": "<msubsup><mi>x</mi><mn>10</mn><mo>'</mo></msubsup>",
+      "input": "<msubsup><mi>x</mi><mn>10</mn><mo>'</mo></msubsup>",
       "preference": "sbrief"
     },
     "Sample_8_10_3_default": {
       "test": true,
-      "mathml": "<msubsup><mi>T</mi><mi>n</mi><mo>'</mo></msubsup>",
+      "input": "<msubsup><mi>T</mi><mi>n</mi><mo>'</mo></msubsup>",
       "preference": "default"
     },
     "Sample_8_10_3_brief": {
       "test": true,
-      "mathml": "<msubsup><mi>T</mi><mi>n</mi><mo>'</mo></msubsup>",
+      "input": "<msubsup><mi>T</mi><mi>n</mi><mo>'</mo></msubsup>",
       "preference": "brief"
     },
     "Sample_8_10_3_sbrief": {
       "test": true,
-      "mathml": "<msubsup><mi>T</mi><mi>n</mi><mo>'</mo></msubsup>",
+      "input": "<msubsup><mi>T</mi><mi>n</mi><mo>'</mo></msubsup>",
       "preference": "sbrief"
     },
     "Sample_8_11_1_default": {
       "test": true,
-      "mathml": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><msup><mi>x</mi><mi>n</mi></msup></mtd><mtd><msup><mi>y</mi><mi>n</mi></msup></mtd><mtd><msup><mi>z</mi><mi>n</mi></msup></mtd></mtr><mtr><mtd><msup><mi>x</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mtd><mtd><msup><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mtd><mtd><msup><mi>z</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mtd></mtr></mtable></mfenced>",
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><msup><mi>x</mi><mi>n</mi></msup></mtd><mtd><msup><mi>y</mi><mi>n</mi></msup></mtd><mtd><msup><mi>z</mi><mi>n</mi></msup></mtd></mtr><mtr><mtd><msup><mi>x</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mtd><mtd><msup><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mtd><mtd><msup><mi>z</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mtd></mtr></mtable></mfenced>",
       "preference": "default"
     },
     "Sample_8_11_1_brief": {
       "test": true,
-      "mathml": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><msup><mi>x</mi><mi>n</mi></msup></mtd><mtd><msup><mi>y</mi><mi>n</mi></msup></mtd><mtd><msup><mi>z</mi><mi>n</mi></msup></mtd></mtr><mtr><mtd><msup><mi>x</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mtd><mtd><msup><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mtd><mtd><msup><mi>z</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mtd></mtr></mtable></mfenced>",
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><msup><mi>x</mi><mi>n</mi></msup></mtd><mtd><msup><mi>y</mi><mi>n</mi></msup></mtd><mtd><msup><mi>z</mi><mi>n</mi></msup></mtd></mtr><mtr><mtd><msup><mi>x</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mtd><mtd><msup><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mtd><mtd><msup><mi>z</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mtd></mtr></mtable></mfenced>",
       "preference": "brief"
     },
     "Sample_8_11_1_sbrief": {
       "test": true,
-      "mathml": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><msup><mi>x</mi><mi>n</mi></msup></mtd><mtd><msup><mi>y</mi><mi>n</mi></msup></mtd><mtd><msup><mi>z</mi><mi>n</mi></msup></mtd></mtr><mtr><mtd><msup><mi>x</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mtd><mtd><msup><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mtd><mtd><msup><mi>z</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mtd></mtr></mtable></mfenced>",
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><msup><mi>x</mi><mi>n</mi></msup></mtd><mtd><msup><mi>y</mi><mi>n</mi></msup></mtd><mtd><msup><mi>z</mi><mi>n</mi></msup></mtd></mtr><mtr><mtd><msup><mi>x</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mtd><mtd><msup><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mtd><mtd><msup><mi>z</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mtd></mtr></mtable></mfenced>",
       "preference": "sbrief"
     },
     "Sample_8_12_1_default": {
       "test": true,
-      "mathml": "<msup><mrow><msub><mi>x</mi><mi>a</mi></msub></mrow><mi>b</mi></msup>",
+      "input": "<msup><mrow><msub><mi>x</mi><mi>a</mi></msub></mrow><mi>b</mi></msup>",
       "preference": "default"
     },
     "Sample_8_12_1_brief": {
       "test": true,
-      "mathml": "<msup><mrow><msub><mi>x</mi><mi>a</mi></msub></mrow><mi>b</mi></msup>",
+      "input": "<msup><mrow><msub><mi>x</mi><mi>a</mi></msub></mrow><mi>b</mi></msup>",
       "preference": "brief"
     },
     "Sample_8_12_1_sbrief": {
       "test": true,
-      "mathml": "<msup><mrow><msub><mi>x</mi><mi>a</mi></msub></mrow><mi>b</mi></msup>",
+      "input": "<msup><mrow><msub><mi>x</mi><mi>a</mi></msub></mrow><mi>b</mi></msup>",
       "preference": "sbrief"
     },
     "Sample_8_12_2_default": {
       "test": true,
-      "mathml": "<msub><mrow><msup><mi>x</mi><mi>b</mi></msup></mrow><mi>a</mi></msub>",
+      "input": "<msub><mrow><msup><mi>x</mi><mi>b</mi></msup></mrow><mi>a</mi></msub>",
       "preference": "default"
     },
     "Sample_8_12_2_brief": {
       "test": true,
-      "mathml": "<msub><mrow><msup><mi>x</mi><mi>b</mi></msup></mrow><mi>a</mi></msub>",
+      "input": "<msub><mrow><msup><mi>x</mi><mi>b</mi></msup></mrow><mi>a</mi></msub>",
       "preference": "brief"
     },
     "Sample_8_12_2_sbrief": {
       "test": true,
-      "mathml": "<msub><mrow><msup><mi>x</mi><mi>b</mi></msup></mrow><mi>a</mi></msub>",
+      "input": "<msub><mrow><msup><mi>x</mi><mi>b</mi></msup></mrow><mi>a</mi></msub>",
       "preference": "sbrief"
     },
     "Sample_8_13_1_default": {
       "test": true,
-      "mathml": "<mrow><msup><mo form=\"prefix\">log</mo><mn>4</mn></msup><msup><mrow/><mi>b</mi></msup><mi>x</mi></mrow>",
+      "input": "<mrow><msup><mo form=\"prefix\">log</mo><mn>4</mn></msup><msup><mrow/><mi>b</mi></msup><mi>x</mi></mrow>",
       "preference": "default"
     },
     "Sample_8_13_1_brief": {
       "test": true,
-      "mathml": "<mrow><msup><mo form=\"prefix\">log</mo><mn>4</mn></msup><msup><mrow/><mi>b</mi></msup><mi>x</mi></mrow>",
+      "input": "<mrow><msup><mo form=\"prefix\">log</mo><mn>4</mn></msup><msup><mrow/><mi>b</mi></msup><mi>x</mi></mrow>",
       "preference": "brief"
     },
     "Sample_8_13_1_sbrief": {
       "test": true,
-      "mathml": "<mrow><msup><mo form=\"prefix\">log</mo><mn>4</mn></msup><msup><mrow/><mi>b</mi></msup><mi>x</mi></mrow>",
+      "input": "<mrow><msup><mo form=\"prefix\">log</mo><mn>4</mn></msup><msup><mrow/><mi>b</mi></msup><mi>x</mi></mrow>",
       "preference": "sbrief"
     },
     "Sample_8_13_2_default": {
       "test": true,
-      "mathml": "<mrow><msub><mi>T</mi><mi>n</mi></msub><msub><mrow/><mi>a</mi></msub><mi>y</mi></mrow>",
+      "input": "<mrow><msub><mi>T</mi><mi>n</mi></msub><msub><mrow/><mi>a</mi></msub><mi>y</mi></mrow>",
       "preference": "default"
     },
     "Sample_8_13_2_brief": {
       "test": true,
-      "mathml": "<mrow><msub><mi>T</mi><mi>n</mi></msub><msub><mrow/><mi>a</mi></msub><mi>y</mi></mrow>",
+      "input": "<mrow><msub><mi>T</mi><mi>n</mi></msub><msub><mrow/><mi>a</mi></msub><mi>y</mi></mrow>",
       "preference": "brief"
     },
     "Sample_8_13_2_sbrief": {
       "test": true,
-      "mathml": "<mrow><msub><mi>T</mi><mi>n</mi></msub><msub><mrow/><mi>a</mi></msub><mi>y</mi></mrow>",
+      "input": "<mrow><msub><mi>T</mi><mi>n</mi></msub><msub><mrow/><mi>a</mi></msub><mi>y</mi></mrow>",
       "preference": "sbrief"
     },
     "Sample_9_1_1_default": {
       "test": true,
-      "mathml": "<msqrt><mn>2</mn></msqrt>",
+      "input": "<msqrt><mn>2</mn></msqrt>",
       "preference": "default"
     },
     "Sample_9_1_1_brief": {
       "test": true,
-      "mathml": "<msqrt><mn>2</mn></msqrt>",
+      "input": "<msqrt><mn>2</mn></msqrt>",
       "preference": "brief"
     },
     "Sample_9_1_1_sbrief": {
       "test": true,
-      "mathml": "<msqrt><mn>2</mn></msqrt>",
+      "input": "<msqrt><mn>2</mn></msqrt>",
       "preference": "sbrief"
     },
     "Sample_9_1_2_default": {
       "test": true,
-      "mathml": "<msqrt><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msqrt>",
+      "input": "<msqrt><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msqrt>",
       "preference": "default"
     },
     "Sample_9_1_2_brief": {
       "test": true,
-      "mathml": "<msqrt><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msqrt>",
+      "input": "<msqrt><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msqrt>",
       "preference": "brief"
     },
     "Sample_9_1_2_sbrief": {
       "test": true,
-      "mathml": "<msqrt><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msqrt>",
+      "input": "<msqrt><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msqrt>",
       "preference": "sbrief"
     },
     "Sample_9_2_1_default": {
       "test": true,
-      "mathml": "<mroot><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></mroot>",
+      "input": "<mroot><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></mroot>",
       "preference": "default"
     },
     "Sample_9_2_1_brief": {
       "test": true,
-      "mathml": "<mroot><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></mroot>",
+      "input": "<mroot><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></mroot>",
       "preference": "brief"
     },
     "Sample_9_2_1_sbrief": {
       "test": true,
-      "mathml": "<mroot><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></mroot>",
+      "input": "<mroot><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></mroot>",
       "preference": "sbrief"
     },
     "Sample_9_2_2_default": {
       "test": true,
-      "mathml": "<mrow><mroot><msup><mi>x</mi><mi>m</mi></msup><mi>n</mi></mroot><mo>=</mo><msup><mfenced separators=\"\" open=\"(\" close=\")\"><mroot><mi>x</mi><mi>n</mi></mroot></mfenced><mi>m</mi></msup><mo>=</mo><msup><mi>x</mi><mfrac><mi>m</mi><mi>n</mi></mfrac></msup><mo>,</mo><mi>x</mi><mo>></mo><mn>0</mn></mrow>",
+      "input": "<mrow><mroot><msup><mi>x</mi><mi>m</mi></msup><mi>n</mi></mroot><mo>=</mo><msup><mfenced separators=\"\" open=\"(\" close=\")\"><mroot><mi>x</mi><mi>n</mi></mroot></mfenced><mi>m</mi></msup><mo>=</mo><msup><mi>x</mi><mfrac><mi>m</mi><mi>n</mi></mfrac></msup><mo>,</mo><mi>x</mi><mo>></mo><mn>0</mn></mrow>",
       "preference": "default"
     },
     "Sample_9_2_2_brief": {
       "test": true,
-      "mathml": "<mrow><mroot><msup><mi>x</mi><mi>m</mi></msup><mi>n</mi></mroot><mo>=</mo><msup><mfenced separators=\"\" open=\"(\" close=\")\"><mroot><mi>x</mi><mi>n</mi></mroot></mfenced><mi>m</mi></msup><mo>=</mo><msup><mi>x</mi><mfrac><mi>m</mi><mi>n</mi></mfrac></msup><mo>,</mo><mi>x</mi><mo>></mo><mn>0</mn></mrow>",
+      "input": "<mrow><mroot><msup><mi>x</mi><mi>m</mi></msup><mi>n</mi></mroot><mo>=</mo><msup><mfenced separators=\"\" open=\"(\" close=\")\"><mroot><mi>x</mi><mi>n</mi></mroot></mfenced><mi>m</mi></msup><mo>=</mo><msup><mi>x</mi><mfrac><mi>m</mi><mi>n</mi></mfrac></msup><mo>,</mo><mi>x</mi><mo>></mo><mn>0</mn></mrow>",
       "preference": "brief"
     },
     "Sample_9_2_2_sbrief": {
       "test": true,
-      "mathml": "<mrow><mroot><msup><mi>x</mi><mi>m</mi></msup><mi>n</mi></mroot><mo>=</mo><msup><mfenced separators=\"\" open=\"(\" close=\")\"><mroot><mi>x</mi><mi>n</mi></mroot></mfenced><mi>m</mi></msup><mo>=</mo><msup><mi>x</mi><mfrac><mi>m</mi><mi>n</mi></mfrac></msup><mo>,</mo><mi>x</mi><mo>></mo><mn>0</mn></mrow>",
+      "input": "<mrow><mroot><msup><mi>x</mi><mi>m</mi></msup><mi>n</mi></mroot><mo>=</mo><msup><mfenced separators=\"\" open=\"(\" close=\")\"><mroot><mi>x</mi><mi>n</mi></mroot></mfenced><mi>m</mi></msup><mo>=</mo><msup><mi>x</mi><mfrac><mi>m</mi><mi>n</mi></mfrac></msup><mo>,</mo><mi>x</mi><mo>></mo><mn>0</mn></mrow>",
       "preference": "sbrief"
     },
     "Sample_9_2_3_default": {
       "test": true,
-      "mathml": "<mrow><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><msup><mi>x</mi><mfrac><mn>1</mn><mn>3</mn></mfrac></msup></mrow>",
+      "input": "<mrow><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><msup><mi>x</mi><mfrac><mn>1</mn><mn>3</mn></mfrac></msup></mrow>",
       "preference": "default"
     },
     "Sample_9_2_3_brief": {
       "test": true,
-      "mathml": "<mrow><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><msup><mi>x</mi><mfrac><mn>1</mn><mn>3</mn></mfrac></msup></mrow>",
+      "input": "<mrow><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><msup><mi>x</mi><mfrac><mn>1</mn><mn>3</mn></mfrac></msup></mrow>",
       "preference": "brief"
     },
     "Sample_9_2_3_sbrief": {
       "test": true,
-      "mathml": "<mrow><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><msup><mi>x</mi><mfrac><mn>1</mn><mn>3</mn></mfrac></msup></mrow>",
+      "input": "<mrow><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><msup><mi>x</mi><mfrac><mn>1</mn><mn>3</mn></mfrac></msup></mrow>",
       "preference": "sbrief"
     },
     "Sample_9_3_1_default": {
       "test": true,
-      "mathml": "<msqrt><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msqrt><mo>+</mo><msqrt><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msqrt></mrow></msqrt>",
+      "input": "<msqrt><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msqrt><mo>+</mo><msqrt><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msqrt></mrow></msqrt>",
       "preference": "default"
     },
     "Sample_9_3_1_brief": {
       "test": true,
-      "mathml": "<msqrt><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msqrt><mo>+</mo><msqrt><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msqrt></mrow></msqrt>",
+      "input": "<msqrt><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msqrt><mo>+</mo><msqrt><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msqrt></mrow></msqrt>",
       "preference": "brief"
     },
     "Sample_9_3_1_sbrief": {
       "test": true,
-      "mathml": "<msqrt><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msqrt><mo>+</mo><msqrt><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msqrt></mrow></msqrt>",
+      "input": "<msqrt><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msqrt><mo>+</mo><msqrt><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msqrt></mrow></msqrt>",
       "preference": "sbrief"
     },
     "Sample_9_3_2_default": {
       "test": true,
-      "mathml": "<mrow><mroot><mroot><mi>x</mi><mi>m</mi></mroot><mi>n</mi></mroot><mo>=</mo><mroot><mroot><mi>x</mi><mi>n</mi></mroot><mi>m</mi></mroot></mrow>",
+      "input": "<mrow><mroot><mroot><mi>x</mi><mi>m</mi></mroot><mi>n</mi></mroot><mo>=</mo><mroot><mroot><mi>x</mi><mi>n</mi></mroot><mi>m</mi></mroot></mrow>",
       "preference": "default"
     },
     "Sample_9_3_2_brief": {
       "test": true,
-      "mathml": "<mrow><mroot><mroot><mi>x</mi><mi>m</mi></mroot><mi>n</mi></mroot><mo>=</mo><mroot><mroot><mi>x</mi><mi>n</mi></mroot><mi>m</mi></mroot></mrow>",
+      "input": "<mrow><mroot><mroot><mi>x</mi><mi>m</mi></mroot><mi>n</mi></mroot><mo>=</mo><mroot><mroot><mi>x</mi><mi>n</mi></mroot><mi>m</mi></mroot></mrow>",
       "preference": "brief"
     },
     "Sample_9_3_2_sbrief": {
       "test": true,
-      "mathml": "<mrow><mroot><mroot><mi>x</mi><mi>m</mi></mroot><mi>n</mi></mroot><mo>=</mo><mroot><mroot><mi>x</mi><mi>n</mi></mroot><mi>m</mi></mroot></mrow>",
+      "input": "<mrow><mroot><mroot><mi>x</mi><mi>m</mi></mroot><mi>n</mi></mroot><mo>=</mo><mroot><mroot><mi>x</mi><mi>n</mi></mroot><mi>m</mi></mroot></mrow>",
       "preference": "sbrief"
     },
     "Sample_9_3_3_default": {
       "test": true,
-      "mathml": "<mrow><msup><mi>x</mi><mrow><mi>e</mi><mo>-</mo><mn>2</mn></mrow></msup><mo>=</mo><msqrt><mrow><mi>x</mi><mroot><mrow><mi>x</mi><mroot><mrow><mi>x</mi><mroot><mrow><mi>x</mi><mo>&#x2026;</mo></mrow><mn>5</mn></mroot></mrow><mn>4</mn></mroot></mrow><mn>3</mn></mroot></mrow></msqrt><mo>,</mo><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow>",
+      "input": "<mrow><msup><mi>x</mi><mrow><mi>e</mi><mo>-</mo><mn>2</mn></mrow></msup><mo>=</mo><msqrt><mrow><mi>x</mi><mroot><mrow><mi>x</mi><mroot><mrow><mi>x</mi><mroot><mrow><mi>x</mi><mo>&#x2026;</mo></mrow><mn>5</mn></mroot></mrow><mn>4</mn></mroot></mrow><mn>3</mn></mroot></mrow></msqrt><mo>,</mo><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow>",
       "preference": "default"
     },
     "Sample_9_3_3_brief": {
       "test": true,
-      "mathml": "<mrow><msup><mi>x</mi><mrow><mi>e</mi><mo>-</mo><mn>2</mn></mrow></msup><mo>=</mo><msqrt><mrow><mi>x</mi><mroot><mrow><mi>x</mi><mroot><mrow><mi>x</mi><mroot><mrow><mi>x</mi><mo>&#x2026;</mo></mrow><mn>5</mn></mroot></mrow><mn>4</mn></mroot></mrow><mn>3</mn></mroot></mrow></msqrt><mo>,</mo><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow>",
+      "input": "<mrow><msup><mi>x</mi><mrow><mi>e</mi><mo>-</mo><mn>2</mn></mrow></msup><mo>=</mo><msqrt><mrow><mi>x</mi><mroot><mrow><mi>x</mi><mroot><mrow><mi>x</mi><mroot><mrow><mi>x</mi><mo>&#x2026;</mo></mrow><mn>5</mn></mroot></mrow><mn>4</mn></mroot></mrow><mn>3</mn></mroot></mrow></msqrt><mo>,</mo><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow>",
       "preference": "brief"
     },
     "Sample_9_3_3_sbrief": {
       "test": true,
-      "mathml": "<mrow><msup><mi>x</mi><mrow><mi>e</mi><mo>-</mo><mn>2</mn></mrow></msup><mo>=</mo><msqrt><mrow><mi>x</mi><mroot><mrow><mi>x</mi><mroot><mrow><mi>x</mi><mroot><mrow><mi>x</mi><mo>&#x2026;</mo></mrow><mn>5</mn></mroot></mrow><mn>4</mn></mroot></mrow><mn>3</mn></mroot></mrow></msqrt><mo>,</mo><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow>",
+      "input": "<mrow><msup><mi>x</mi><mrow><mi>e</mi><mo>-</mo><mn>2</mn></mrow></msup><mo>=</mo><msqrt><mrow><mi>x</mi><mroot><mrow><mi>x</mi><mroot><mrow><mi>x</mi><mroot><mrow><mi>x</mi><mo>&#x2026;</mo></mrow><mn>5</mn></mroot></mrow><mn>4</mn></mroot></mrow><mn>3</mn></mroot></mrow></msqrt><mo>,</mo><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow>",
       "preference": "sbrief"
     },
     "Sample_9_3_4_default": {
       "test": true,
-      "mathml": "<mrow><mfrac><mn>2</mn><mi>π</mi></mfrac><mo>=</mo><mfrac><msqrt><mn>2</mn></msqrt><mn>2</mn></mfrac><mfrac><msqrt><mrow><mn>2</mn><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow></msqrt><mn>2</mn></mfrac><mfrac><msqrt><mrow><mn>2</mn><mo>+</mo><msqrt><mrow><mn>2</mn><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow></msqrt></mrow></msqrt><mn>2</mn></mfrac><mo>&#x2026;</mo></mrow>",
+      "input": "<mrow><mfrac><mn>2</mn><mi>π</mi></mfrac><mo>=</mo><mfrac><msqrt><mn>2</mn></msqrt><mn>2</mn></mfrac><mfrac><msqrt><mrow><mn>2</mn><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow></msqrt><mn>2</mn></mfrac><mfrac><msqrt><mrow><mn>2</mn><mo>+</mo><msqrt><mrow><mn>2</mn><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow></msqrt></mrow></msqrt><mn>2</mn></mfrac><mo>&#x2026;</mo></mrow>",
       "preference": "default"
     },
     "Sample_9_3_4_brief": {
       "test": true,
-      "mathml": "<mrow><mfrac><mn>2</mn><mi>π</mi></mfrac><mo>=</mo><mfrac><msqrt><mn>2</mn></msqrt><mn>2</mn></mfrac><mfrac><msqrt><mrow><mn>2</mn><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow></msqrt><mn>2</mn></mfrac><mfrac><msqrt><mrow><mn>2</mn><mo>+</mo><msqrt><mrow><mn>2</mn><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow></msqrt></mrow></msqrt><mn>2</mn></mfrac><mo>&#x2026;</mo></mrow>",
+      "input": "<mrow><mfrac><mn>2</mn><mi>π</mi></mfrac><mo>=</mo><mfrac><msqrt><mn>2</mn></msqrt><mn>2</mn></mfrac><mfrac><msqrt><mrow><mn>2</mn><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow></msqrt><mn>2</mn></mfrac><mfrac><msqrt><mrow><mn>2</mn><mo>+</mo><msqrt><mrow><mn>2</mn><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow></msqrt></mrow></msqrt><mn>2</mn></mfrac><mo>&#x2026;</mo></mrow>",
       "preference": "brief"
     },
     "Sample_9_3_4_sbrief": {
       "test": true,
-      "mathml": "<mrow><mfrac><mn>2</mn><mi>π</mi></mfrac><mo>=</mo><mfrac><msqrt><mn>2</mn></msqrt><mn>2</mn></mfrac><mfrac><msqrt><mrow><mn>2</mn><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow></msqrt><mn>2</mn></mfrac><mfrac><msqrt><mrow><mn>2</mn><mo>+</mo><msqrt><mrow><mn>2</mn><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow></msqrt></mrow></msqrt><mn>2</mn></mfrac><mo>&#x2026;</mo></mrow>",
+      "input": "<mrow><mfrac><mn>2</mn><mi>π</mi></mfrac><mo>=</mo><mfrac><msqrt><mn>2</mn></msqrt><mn>2</mn></mfrac><mfrac><msqrt><mrow><mn>2</mn><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow></msqrt><mn>2</mn></mfrac><mfrac><msqrt><mrow><mn>2</mn><mo>+</mo><msqrt><mrow><mn>2</mn><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow></msqrt></mrow></msqrt><mn>2</mn></mfrac><mo>&#x2026;</mo></mrow>",
       "preference": "sbrief"
     },
     "Sample_10_1_1_default": {
       "test": true,
-      "mathml": "<mrow><mfrac><mrow><mn>5</mn><mi>x</mi><menclose notation=\"updiagonalstrike\"><mi>y</mi></menclose></mrow><mrow><mn>2</mn><menclose notation=\"updiagonalstrike\"><mi>y</mi></menclose></mrow></mfrac><mo>=</mo><mfrac><mn>5</mn><mn>2</mn></mfrac><mi>x</mi></mrow>",
+      "input": "<mrow><mfrac><mrow><mn>5</mn><mi>x</mi><menclose notation=\"updiagonalstrike\"><mi>y</mi></menclose></mrow><mrow><mn>2</mn><menclose notation=\"updiagonalstrike\"><mi>y</mi></menclose></mrow></mfrac><mo>=</mo><mfrac><mn>5</mn><mn>2</mn></mfrac><mi>x</mi></mrow>",
       "preference": "default"
     },
     "Sample_10_1_1_brief": {
       "test": true,
-      "mathml": "<mrow><mfrac><mrow><mn>5</mn><mi>x</mi><menclose notation=\"updiagonalstrike\"><mi>y</mi></menclose></mrow><mrow><mn>2</mn><menclose notation=\"updiagonalstrike\"><mi>y</mi></menclose></mrow></mfrac><mo>=</mo><mfrac><mn>5</mn><mn>2</mn></mfrac><mi>x</mi></mrow>",
+      "input": "<mrow><mfrac><mrow><mn>5</mn><mi>x</mi><menclose notation=\"updiagonalstrike\"><mi>y</mi></menclose></mrow><mrow><mn>2</mn><menclose notation=\"updiagonalstrike\"><mi>y</mi></menclose></mrow></mfrac><mo>=</mo><mfrac><mn>5</mn><mn>2</mn></mfrac><mi>x</mi></mrow>",
       "preference": "brief"
     },
     "Sample_10_1_1_sbrief": {
       "test": true,
-      "mathml": "<mrow><mfrac><mrow><mn>5</mn><mi>x</mi><menclose notation=\"updiagonalstrike\"><mi>y</mi></menclose></mrow><mrow><mn>2</mn><menclose notation=\"updiagonalstrike\"><mi>y</mi></menclose></mrow></mfrac><mo>=</mo><mfrac><mn>5</mn><mn>2</mn></mfrac><mi>x</mi></mrow>",
+      "input": "<mrow><mfrac><mrow><mn>5</mn><mi>x</mi><menclose notation=\"updiagonalstrike\"><mi>y</mi></menclose></mrow><mrow><mn>2</mn><menclose notation=\"updiagonalstrike\"><mi>y</mi></menclose></mrow></mfrac><mo>=</mo><mfrac><mn>5</mn><mn>2</mn></mfrac><mi>x</mi></mrow>",
       "preference": "sbrief"
     },
     "Sample_10_2_1_default": {
       "test": true,
-      "mathml": "<mrow><mfrac><mn>12</mn><mn>18</mn></mfrac><mo>=</mo><mfrac><mover><menclose notation=\"updiagonalstrike\"><mn>12</mn></menclose><mn>2</mn></mover><munder><menclose notation=\"updiagonalstrike\"><mn>18</mn></menclose><mn>3</mn></munder></mfrac><mo>=</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow>",
+      "input": "<mrow><mfrac><mn>12</mn><mn>18</mn></mfrac><mo>=</mo><mfrac><mover><menclose notation=\"updiagonalstrike\"><mn>12</mn></menclose><mn>2</mn></mover><munder><menclose notation=\"updiagonalstrike\"><mn>18</mn></menclose><mn>3</mn></munder></mfrac><mo>=</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow>",
       "preference": "default"
     },
     "Sample_10_2_1_brief": {
       "test": true,
-      "mathml": "<mrow><mfrac><mn>12</mn><mn>18</mn></mfrac><mo>=</mo><mfrac><mover><menclose notation=\"updiagonalstrike\"><mn>12</mn></menclose><mn>2</mn></mover><munder><menclose notation=\"updiagonalstrike\"><mn>18</mn></menclose><mn>3</mn></munder></mfrac><mo>=</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow>",
+      "input": "<mrow><mfrac><mn>12</mn><mn>18</mn></mfrac><mo>=</mo><mfrac><mover><menclose notation=\"updiagonalstrike\"><mn>12</mn></menclose><mn>2</mn></mover><munder><menclose notation=\"updiagonalstrike\"><mn>18</mn></menclose><mn>3</mn></munder></mfrac><mo>=</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow>",
       "preference": "brief"
     },
     "Sample_10_2_1_sbrief": {
       "test": true,
-      "mathml": "<mrow><mfrac><mn>12</mn><mn>18</mn></mfrac><mo>=</mo><mfrac><mover><menclose notation=\"updiagonalstrike\"><mn>12</mn></menclose><mn>2</mn></mover><munder><menclose notation=\"updiagonalstrike\"><mn>18</mn></menclose><mn>3</mn></munder></mfrac><mo>=</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow>",
+      "input": "<mrow><mfrac><mn>12</mn><mn>18</mn></mfrac><mo>=</mo><mfrac><mover><menclose notation=\"updiagonalstrike\"><mn>12</mn></menclose><mn>2</mn></mover><munder><menclose notation=\"updiagonalstrike\"><mn>18</mn></menclose><mn>3</mn></munder></mfrac><mo>=</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow>",
       "preference": "sbrief"
     },
     "Sample_10_2_2_default": {
       "test": true,
-      "mathml": "<mrow><mfrac><mn>12</mn><mn>18</mn></mfrac><mo>=</mo><mfrac><munder><mn>2</mn><menclose notation=\"updiagonalstrike\"><mn>12</mn></menclose></munder><mover><mn>3</mn><menclose notation=\"updiagonalstrike\"><mn>18</mn></menclose></mover></mfrac><mo>=</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow>",
+      "input": "<mrow><mfrac><mn>12</mn><mn>18</mn></mfrac><mo>=</mo><mfrac><munder><mn>2</mn><menclose notation=\"updiagonalstrike\"><mn>12</mn></menclose></munder><mover><mn>3</mn><menclose notation=\"updiagonalstrike\"><mn>18</mn></menclose></mover></mfrac><mo>=</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow>",
       "preference": "default"
     },
     "Sample_10_2_2_brief": {
       "test": true,
-      "mathml": "<mrow><mfrac><mn>12</mn><mn>18</mn></mfrac><mo>=</mo><mfrac><munder><mn>2</mn><menclose notation=\"updiagonalstrike\"><mn>12</mn></menclose></munder><mover><mn>3</mn><menclose notation=\"updiagonalstrike\"><mn>18</mn></menclose></mover></mfrac><mo>=</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow>",
+      "input": "<mrow><mfrac><mn>12</mn><mn>18</mn></mfrac><mo>=</mo><mfrac><munder><mn>2</mn><menclose notation=\"updiagonalstrike\"><mn>12</mn></menclose></munder><mover><mn>3</mn><menclose notation=\"updiagonalstrike\"><mn>18</mn></menclose></mover></mfrac><mo>=</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow>",
       "preference": "brief"
     },
     "Sample_10_2_2_sbrief": {
       "test": true,
-      "mathml": "<mrow><mfrac><mn>12</mn><mn>18</mn></mfrac><mo>=</mo><mfrac><munder><mn>2</mn><menclose notation=\"updiagonalstrike\"><mn>12</mn></menclose></munder><mover><mn>3</mn><menclose notation=\"updiagonalstrike\"><mn>18</mn></menclose></mover></mfrac><mo>=</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow>",
+      "input": "<mrow><mfrac><mn>12</mn><mn>18</mn></mfrac><mo>=</mo><mfrac><munder><mn>2</mn><menclose notation=\"updiagonalstrike\"><mn>12</mn></menclose></munder><mover><mn>3</mn><menclose notation=\"updiagonalstrike\"><mn>18</mn></menclose></mover></mfrac><mo>=</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow>",
       "preference": "sbrief"
     },
     "Sample_11_1_1_default": {
       "test": true,
-      "mathml": "<mover accent=\"true\"><mi>x</mi><mo>¨</mo></mover>",
+      "input": "<mover accent=\"true\"><mi>x</mi><mo>¨</mo></mover>",
       "preference": "default"
     },
     "Sample_11_1_1_brief": {
       "test": true,
-      "mathml": "<mover accent=\"true\"><mi>x</mi><mo>¨</mo></mover>",
+      "input": "<mover accent=\"true\"><mi>x</mi><mo>¨</mo></mover>",
       "preference": "brief"
     },
     "Sample_11_1_1_sbrief": {
       "test": true,
-      "mathml": "<mover accent=\"true\"><mi>x</mi><mo>¨</mo></mover>",
+      "input": "<mover accent=\"true\"><mi>x</mi><mo>¨</mo></mover>",
       "preference": "sbrief"
     },
     "Sample_11_1_2_default": {
       "test": true,
-      "mathml": "<mover accent=\"true\"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>→</mo></mover>",
+      "input": "<mover accent=\"true\"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>→</mo></mover>",
       "preference": "default"
     },
     "Sample_11_1_2_brief": {
       "test": true,
-      "mathml": "<mover accent=\"true\"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>→</mo></mover>",
+      "input": "<mover accent=\"true\"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>→</mo></mover>",
       "preference": "brief"
     },
     "Sample_11_1_2_sbrief": {
       "test": true,
-      "mathml": "<mover accent=\"true\"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>→</mo></mover>",
+      "input": "<mover accent=\"true\"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>→</mo></mover>",
       "preference": "sbrief"
     },
     "Sample_11_1_3_default": {
       "test": true,
-      "mathml": "<mover accent=\"true\"><mi>x</mi><mo>^</mo></mover>",
+      "input": "<mover accent=\"true\"><mi>x</mi><mo>^</mo></mover>",
       "preference": "default"
     },
     "Sample_11_1_3_brief": {
       "test": true,
-      "mathml": "<mover accent=\"true\"><mi>x</mi><mo>^</mo></mover>",
+      "input": "<mover accent=\"true\"><mi>x</mi><mo>^</mo></mover>",
       "preference": "brief"
     },
     "Sample_11_1_3_sbrief": {
       "test": true,
-      "mathml": "<mover accent=\"true\"><mi>x</mi><mo>^</mo></mover>",
+      "input": "<mover accent=\"true\"><mi>x</mi><mo>^</mo></mover>",
       "preference": "sbrief"
     },
     "Sample_11_2_1_default": {
       "test": true,
-      "mathml": "<munder accent=\"true\"><mi>x</mi><mi>˙</mi></munder>",
+      "input": "<munder accent=\"true\"><mi>x</mi><mi>˙</mi></munder>",
       "preference": "default"
     },
     "Sample_11_2_1_brief": {
       "test": true,
-      "mathml": "<munder accent=\"true\"><mi>x</mi><mi>˙</mi></munder>",
+      "input": "<munder accent=\"true\"><mi>x</mi><mi>˙</mi></munder>",
       "preference": "brief"
     },
     "Sample_11_2_1_sbrief": {
       "test": true,
-      "mathml": "<munder accent=\"true\"><mi>x</mi><mi>˙</mi></munder>",
+      "input": "<munder accent=\"true\"><mi>x</mi><mi>˙</mi></munder>",
       "preference": "sbrief"
     },
     "Sample_11_3_1_default": {
       "test": true,
-      "mathml": "<mover accent=\"true\"><mi>x</mi><mo>˜</mo></mover>",
+      "input": "<mover accent=\"true\"><mi>x</mi><mo>˜</mo></mover>",
       "preference": "default"
     },
     "Sample_11_3_1_brief": {
       "test": true,
-      "mathml": "<mover accent=\"true\"><mi>x</mi><mo>˜</mo></mover>",
+      "input": "<mover accent=\"true\"><mi>x</mi><mo>˜</mo></mover>",
       "preference": "brief"
     },
     "Sample_11_3_1_sbrief": {
       "test": true,
-      "mathml": "<mover accent=\"true\"><mi>x</mi><mo>˜</mo></mover>",
+      "input": "<mover accent=\"true\"><mi>x</mi><mo>˜</mo></mover>",
       "preference": "sbrief"
     },
     "Sample_11_3_2_default": {
       "test": true,
-      "mathml": "<mover accent=\"true\"><mi>x</mi><mo>¯</mo></mover>",
+      "input": "<mover accent=\"true\"><mi>x</mi><mo>¯</mo></mover>",
       "preference": "default"
     },
     "Sample_11_3_2_brief": {
       "test": true,
-      "mathml": "<mover accent=\"true\"><mi>x</mi><mo>¯</mo></mover>",
+      "input": "<mover accent=\"true\"><mi>x</mi><mo>¯</mo></mover>",
       "preference": "brief"
     },
     "Sample_11_3_2_sbrief": {
       "test": true,
-      "mathml": "<mover accent=\"true\"><mi>x</mi><mo>¯</mo></mover>",
+      "input": "<mover accent=\"true\"><mi>x</mi><mo>¯</mo></mover>",
       "preference": "sbrief"
     },
     "Sample_11_3_3_default": {
       "test": true,
-      "mathml": "<munder accentunder=\"true\"><mi>y</mi><mo>˜</mo></munder>",
+      "input": "<munder accentunder=\"true\"><mi>y</mi><mo>˜</mo></munder>",
       "preference": "default"
     },
     "Sample_11_3_3_brief": {
       "test": true,
-      "mathml": "<munder accentunder=\"true\"><mi>y</mi><mo>˜</mo></munder>",
+      "input": "<munder accentunder=\"true\"><mi>y</mi><mo>˜</mo></munder>",
       "preference": "brief"
     },
     "Sample_11_3_3_sbrief": {
       "test": true,
-      "mathml": "<munder accentunder=\"true\"><mi>y</mi><mo>˜</mo></munder>",
+      "input": "<munder accentunder=\"true\"><mi>y</mi><mo>˜</mo></munder>",
       "preference": "sbrief"
     },
     "Sample_11_4_1_default": {
       "test": true,
-      "mathml": "<mover accent=\"true\"><mover accent=\"true\"><mi>x</mi><mo>¯</mo></mover><mo>¯</mo></mover>",
+      "input": "<mover accent=\"true\"><mover accent=\"true\"><mi>x</mi><mo>¯</mo></mover><mo>¯</mo></mover>",
       "preference": "default"
     },
     "Sample_11_4_1_brief": {
       "test": true,
-      "mathml": "<mover accent=\"true\"><mover accent=\"true\"><mi>x</mi><mo>¯</mo></mover><mo>¯</mo></mover>",
+      "input": "<mover accent=\"true\"><mover accent=\"true\"><mi>x</mi><mo>¯</mo></mover><mo>¯</mo></mover>",
       "preference": "brief"
     },
     "Sample_11_4_1_sbrief": {
       "test": true,
-      "mathml": "<mover accent=\"true\"><mover accent=\"true\"><mi>x</mi><mo>¯</mo></mover><mo>¯</mo></mover>",
+      "input": "<mover accent=\"true\"><mover accent=\"true\"><mi>x</mi><mo>¯</mo></mover><mo>¯</mo></mover>",
       "preference": "sbrief"
     },
     "Sample_11_4_2_default": {
       "test": true,
-      "mathml": "<munder><munder><mover accent=\"true\"><mover accent=\"true\"><mi>y</mi><mo>¯</mo></mover><mo>¯</mo></mover><mo>_</mo></munder><mo>_</mo></munder>",
+      "input": "<munder><munder><mover accent=\"true\"><mover accent=\"true\"><mi>y</mi><mo>¯</mo></mover><mo>¯</mo></mover><mo>_</mo></munder><mo>_</mo></munder>",
       "preference": "default"
     },
     "Sample_11_4_2_brief": {
       "test": true,
-      "mathml": "<munder><munder><mover accent=\"true\"><mover accent=\"true\"><mi>y</mi><mo>¯</mo></mover><mo>¯</mo></mover><mo>_</mo></munder><mo>_</mo></munder>",
+      "input": "<munder><munder><mover accent=\"true\"><mover accent=\"true\"><mi>y</mi><mo>¯</mo></mover><mo>¯</mo></mover><mo>_</mo></munder><mo>_</mo></munder>",
       "preference": "brief"
     },
     "Sample_11_4_2_sbrief": {
       "test": true,
-      "mathml": "<munder><munder><mover accent=\"true\"><mover accent=\"true\"><mi>y</mi><mo>¯</mo></mover><mo>¯</mo></mover><mo>_</mo></munder><mo>_</mo></munder>",
+      "input": "<munder><munder><mover accent=\"true\"><mover accent=\"true\"><mi>y</mi><mo>¯</mo></mover><mo>¯</mo></mover><mo>_</mo></munder><mo>_</mo></munder>",
       "preference": "sbrief"
     },
     "Sample_11_6_1_default": {
       "test": true,
-      "mathml": "<munder accentunder=\"true\"><munder><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo>_</mo></munder><mo>*</mo></munder>",
+      "input": "<munder accentunder=\"true\"><munder><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo>_</mo></munder><mo>*</mo></munder>",
       "preference": "default"
     },
     "Sample_11_6_1_brief": {
       "test": true,
-      "mathml": "<munder accentunder=\"true\"><munder><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo>_</mo></munder><mo>*</mo></munder>",
+      "input": "<munder accentunder=\"true\"><munder><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo>_</mo></munder><mo>*</mo></munder>",
       "preference": "brief"
     },
     "Sample_11_6_1_sbrief": {
       "test": true,
-      "mathml": "<munder accentunder=\"true\"><munder><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo>_</mo></munder><mo>*</mo></munder>",
+      "input": "<munder accentunder=\"true\"><munder><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo>_</mo></munder><mo>*</mo></munder>",
       "preference": "sbrief"
     },
     "_comment8_": " This one is odd. This rule example seems to contradict Rule 11.2, where we",
@@ -1798,305 +1798,305 @@
     "_comment10_": " Over/Underscript. However, we express dot as a multi modifier.",
     "Sample_11_6_2_default": {
       "test": false,
-      "mathml": "<munder accentunder=\"true\"><munder accentunder=\"true\"><mover accent=\"true\"><mover accent=\"true\"><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo>→</mo></mover><mo>˙</mo></mover><mo>←</mo></munder><mo>˙</mo></munder>",
+      "input": "<munder accentunder=\"true\"><munder accentunder=\"true\"><mover accent=\"true\"><mover accent=\"true\"><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo>→</mo></mover><mo>˙</mo></mover><mo>←</mo></munder><mo>˙</mo></munder>",
       "preference": "default"
     },
     "Sample_11_6_2_brief": {
       "test": false,
-      "mathml": "<munder accentunder=\"true\"><munder accentunder=\"true\"><mover accent=\"true\"><mover accent=\"true\"><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo>→</mo></mover><mo>˙</mo></mover><mo>←</mo></munder><mo>˙</mo></munder>",
+      "input": "<munder accentunder=\"true\"><munder accentunder=\"true\"><mover accent=\"true\"><mover accent=\"true\"><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo>→</mo></mover><mo>˙</mo></mover><mo>←</mo></munder><mo>˙</mo></munder>",
       "preference": "brief"
     },
     "Sample_11_6_2_sbrief": {
       "test": false,
-      "mathml": "<munder accentunder=\"true\"><munder accentunder=\"true\"><mover accent=\"true\"><mover accent=\"true\"><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo>→</mo></mover><mo>˙</mo></mover><mo>←</mo></munder><mo>˙</mo></munder>",
+      "input": "<munder accentunder=\"true\"><munder accentunder=\"true\"><mover accent=\"true\"><mover accent=\"true\"><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo>→</mo></mover><mo>˙</mo></mover><mo>←</mo></munder><mo>˙</mo></munder>",
       "preference": "sbrief"
     },
     "Sample_11_6_3_default": {
       "test": true,
-      "mathml": "<mover><mover accent=\"true\"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>˜</mo></mover><mo>¯</mo></mover>",
+      "input": "<mover><mover accent=\"true\"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>˜</mo></mover><mo>¯</mo></mover>",
       "preference": "default"
     },
     "Sample_11_6_3_brief": {
       "test": true,
-      "mathml": "<mover><mover accent=\"true\"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>˜</mo></mover><mo>¯</mo></mover>",
+      "input": "<mover><mover accent=\"true\"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>˜</mo></mover><mo>¯</mo></mover>",
       "preference": "brief"
     },
     "Sample_11_6_3_sbrief": {
       "test": true,
-      "mathml": "<mover><mover accent=\"true\"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>˜</mo></mover><mo>¯</mo></mover>",
+      "input": "<mover><mover accent=\"true\"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>˜</mo></mover><mo>¯</mo></mover>",
       "preference": "sbrief"
     },
     "Sample_11_7_1_default": {
       "test": true,
-      "mathml": "<mrow><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi>∞</mi></munderover><msub><mi>a</mi><mi>n</mi></msub></mrow>",
+      "input": "<mrow><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi>∞</mi></munderover><msub><mi>a</mi><mi>n</mi></msub></mrow>",
       "preference": "default"
     },
     "Sample_11_7_1_brief": {
       "test": true,
-      "mathml": "<mrow><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi>∞</mi></munderover><msub><mi>a</mi><mi>n</mi></msub></mrow>",
+      "input": "<mrow><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi>∞</mi></munderover><msub><mi>a</mi><mi>n</mi></msub></mrow>",
       "preference": "brief"
     },
     "Sample_11_7_1_sbrief": {
       "test": true,
-      "mathml": "<mrow><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi>∞</mi></munderover><msub><mi>a</mi><mi>n</mi></msub></mrow>",
+      "input": "<mrow><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi>∞</mi></munderover><msub><mi>a</mi><mi>n</mi></msub></mrow>",
       "preference": "sbrief"
     },
     "Sample_11_8_1_default": {
       "test": true,
-      "mathml": "<mrow><munder><munder><munder><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow> <mo>_</mo></munder><mrow><mi>a</mi><mo>=</mo><mn>5</mn></mrow></munder><mrow><mi>b</mi><mo>=</mo><mn>3</mn></mrow></munder></mrow>",
+      "input": "<mrow><munder><munder><munder><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow> <mo>_</mo></munder><mrow><mi>a</mi><mo>=</mo><mn>5</mn></mrow></munder><mrow><mi>b</mi><mo>=</mo><mn>3</mn></mrow></munder></mrow>",
       "preference": "default"
     },
     "Sample_11_8_1_brief": {
       "test": true,
-      "mathml": "<mrow><munder><munder><munder><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow> <mo>_</mo></munder><mrow><mi>a</mi><mo>=</mo><mn>5</mn></mrow></munder><mrow><mi>b</mi><mo>=</mo><mn>3</mn></mrow></munder></mrow>",
+      "input": "<mrow><munder><munder><munder><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow> <mo>_</mo></munder><mrow><mi>a</mi><mo>=</mo><mn>5</mn></mrow></munder><mrow><mi>b</mi><mo>=</mo><mn>3</mn></mrow></munder></mrow>",
       "preference": "brief"
     },
     "Sample_11_8_1_sbrief": {
       "test": true,
-      "mathml": "<mrow><munder><munder><munder><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow> <mo>_</mo></munder><mrow><mi>a</mi><mo>=</mo><mn>5</mn></mrow></munder><mrow><mi>b</mi><mo>=</mo><mn>3</mn></mrow></munder></mrow>",
+      "input": "<mrow><munder><munder><munder><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow> <mo>_</mo></munder><mrow><mi>a</mi><mo>=</mo><mn>5</mn></mrow></munder><mrow><mi>b</mi><mo>=</mo><mn>3</mn></mrow></munder></mrow>",
       "preference": "sbrief"
     },
     "Sample_11_8_2_default": {
       "test": true,
-      "mathml": "<mrow><mover><mover><mover><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>¯</mo></mover><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></mover><mrow><mi>m</mi><mo>=</mo><mn>2</mn></mrow></mover></mrow>",
+      "input": "<mrow><mover><mover><mover><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>¯</mo></mover><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></mover><mrow><mi>m</mi><mo>=</mo><mn>2</mn></mrow></mover></mrow>",
       "preference": "default"
     },
     "Sample_11_8_2_brief": {
       "test": true,
-      "mathml": "<mrow><mover><mover><mover><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>¯</mo></mover><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></mover><mrow><mi>m</mi><mo>=</mo><mn>2</mn></mrow></mover></mrow>",
+      "input": "<mrow><mover><mover><mover><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>¯</mo></mover><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></mover><mrow><mi>m</mi><mo>=</mo><mn>2</mn></mrow></mover></mrow>",
       "preference": "brief"
     },
     "Sample_11_8_2_sbrief": {
       "test": true,
-      "mathml": "<mrow><mover><mover><mover><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>¯</mo></mover><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></mover><mrow><mi>m</mi><mo>=</mo><mn>2</mn></mrow></mover></mrow>",
+      "input": "<mrow><mover><mover><mover><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>¯</mo></mover><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></mover><mrow><mi>m</mi><mo>=</mo><mn>2</mn></mrow></mover></mrow>",
       "preference": "sbrief"
     },
     "_comment11_": " This rule is currently not possible. It needs an enhanced processing in the",
     "_comment12_": " semantic tree maybe together with a simultaneous treatment of mstacks.",
     "Sample_11_9_1_default": {
       "test": false,
-      "mathml": "<mrow><mfrac><mn>7</mn><mn>12</mn></mfrac><mo>=</mo><mn>.58</mn><mover accent=\"true\"><mn>3</mn><mo>˙</mo></mover><mover accent=\"true\"><mn>3</mn><mo>˙</mo></mover><mover accent=\"true\"><mn>3</mn><mo>˙</mo></mover></mrow>",
+      "input": "<mrow><mfrac><mn>7</mn><mn>12</mn></mfrac><mo>=</mo><mn>.58</mn><mover accent=\"true\"><mn>3</mn><mo>˙</mo></mover><mover accent=\"true\"><mn>3</mn><mo>˙</mo></mover><mover accent=\"true\"><mn>3</mn><mo>˙</mo></mover></mrow>",
       "preference": "default"
     },
     "Sample_11_9_1_brief": {
       "test": false,
-      "mathml": "<mrow><mfrac><mn>7</mn><mn>12</mn></mfrac><mo>=</mo><mn>.58</mn><mover accent=\"true\"><mn>3</mn><mo>˙</mo></mover><mover accent=\"true\"><mn>3</mn><mo>˙</mo></mover><mover accent=\"true\"><mn>3</mn><mo>˙</mo></mover></mrow>",
+      "input": "<mrow><mfrac><mn>7</mn><mn>12</mn></mfrac><mo>=</mo><mn>.58</mn><mover accent=\"true\"><mn>3</mn><mo>˙</mo></mover><mover accent=\"true\"><mn>3</mn><mo>˙</mo></mover><mover accent=\"true\"><mn>3</mn><mo>˙</mo></mover></mrow>",
       "preference": "brief"
     },
     "Sample_11_9_1_sbrief": {
       "test": false,
-      "mathml": "<mrow><mfrac><mn>7</mn><mn>12</mn></mfrac><mo>=</mo><mn>.58</mn><mover accent=\"true\"><mn>3</mn><mo>˙</mo></mover><mover accent=\"true\"><mn>3</mn><mo>˙</mo></mover><mover accent=\"true\"><mn>3</mn><mo>˙</mo></mover></mrow>",
+      "input": "<mrow><mfrac><mn>7</mn><mn>12</mn></mfrac><mo>=</mo><mn>.58</mn><mover accent=\"true\"><mn>3</mn><mo>˙</mo></mover><mover accent=\"true\"><mn>3</mn><mo>˙</mo></mover><mover accent=\"true\"><mn>3</mn><mo>˙</mo></mover></mrow>",
       "preference": "sbrief"
     },
     "Sample_12_1_1_default": {
       "test": true,
-      "mathml": "<mrow><msub><mo form=\"prefix\">log</mo><mi>b</mi></msub><mi>x</mi></mrow>",
+      "input": "<mrow><msub><mo form=\"prefix\">log</mo><mi>b</mi></msub><mi>x</mi></mrow>",
       "preference": "default"
     },
     "Sample_12_1_1_brief": {
       "test": true,
-      "mathml": "<mrow><msub><mo form=\"prefix\">log</mo><mi>b</mi></msub><mi>x</mi></mrow>",
+      "input": "<mrow><msub><mo form=\"prefix\">log</mo><mi>b</mi></msub><mi>x</mi></mrow>",
       "preference": "brief"
     },
     "Sample_12_1_1_sbrief": {
       "test": true,
-      "mathml": "<mrow><msub><mo form=\"prefix\">log</mo><mi>b</mi></msub><mi>x</mi></mrow>",
+      "input": "<mrow><msub><mo form=\"prefix\">log</mo><mi>b</mi></msub><mi>x</mi></mrow>",
       "preference": "sbrief"
     },
     "Sample_12_1_2_default": {
       "test": true,
-      "mathml": "<mrow><mo form=\"prefix\">cos</mo><mi>y</mi></mrow>",
+      "input": "<mrow><mo form=\"prefix\">cos</mo><mi>y</mi></mrow>",
       "preference": "default"
     },
     "Sample_12_1_2_brief": {
       "test": true,
-      "mathml": "<mrow><mo form=\"prefix\">cos</mo><mi>y</mi></mrow>",
+      "input": "<mrow><mo form=\"prefix\">cos</mo><mi>y</mi></mrow>",
       "preference": "brief"
     },
     "Sample_12_1_2_sbrief": {
       "test": true,
-      "mathml": "<mrow><mo form=\"prefix\">cos</mo><mi>y</mi></mrow>",
+      "input": "<mrow><mo form=\"prefix\">cos</mo><mi>y</mi></mrow>",
       "preference": "sbrief"
     },
     "Sample_12_1_3_default": {
       "test": true,
-      "mathml": "<mrow><mo form=\"prefix\">sin</mo><mi>x</mi></mrow>",
+      "input": "<mrow><mo form=\"prefix\">sin</mo><mi>x</mi></mrow>",
       "preference": "default"
     },
     "Sample_12_1_3_brief": {
       "test": true,
-      "mathml": "<mrow><mo form=\"prefix\">sin</mo><mi>x</mi></mrow>",
+      "input": "<mrow><mo form=\"prefix\">sin</mo><mi>x</mi></mrow>",
       "preference": "brief"
     },
     "Sample_12_1_3_sbrief": {
       "test": true,
-      "mathml": "<mrow><mo form=\"prefix\">sin</mo><mi>x</mi></mrow>",
+      "input": "<mrow><mo form=\"prefix\">sin</mo><mi>x</mi></mrow>",
       "preference": "sbrief"
     },
     "Sample_13_1_1_default": {
       "test": true,
-      "mathml": "<mrow><mfrac><mrow><mn>60</mn><menclose notation=\"updiagonalstrike\"><mi mathvariant=\"normal\" class=\"MathML-Unit\">mi</mi></menclose></mrow><menclose notation=\"updiagonalstrike\"><mi mathvariant=\"normal\" class=\"MathML-Unit\">hr</mi></menclose></mfrac><mo>×</mo><mfrac><mrow><mn>5,280</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">ft</mi></mrow><mrow><mn>1</mn><menclose notation=\"updiagonalstrike\"><mi mathvariant=\"normal\" class=\"MathML-Unit\">mi</mi></menclose></mrow></mfrac><mo>×</mo><mfrac><mrow><mn>1</mn><menclose notation=\"updiagonalstrike\"><mi mathvariant=\"normal\" class=\"MathML-Unit\">hr</mi></menclose></mrow><mrow><mn>60</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">min</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>5,280</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">ft</mi></mrow><mi mathvariant=\"normal\" class=\"MathML-Unit\">min</mi></mfrac></mrow>",
+      "input": "<mrow><mfrac><mrow><mn>60</mn><menclose notation=\"updiagonalstrike\"><mi mathvariant=\"normal\" class=\"MathML-Unit\">mi</mi></menclose></mrow><menclose notation=\"updiagonalstrike\"><mi mathvariant=\"normal\" class=\"MathML-Unit\">hr</mi></menclose></mfrac><mo>×</mo><mfrac><mrow><mn>5,280</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">ft</mi></mrow><mrow><mn>1</mn><menclose notation=\"updiagonalstrike\"><mi mathvariant=\"normal\" class=\"MathML-Unit\">mi</mi></menclose></mrow></mfrac><mo>×</mo><mfrac><mrow><mn>1</mn><menclose notation=\"updiagonalstrike\"><mi mathvariant=\"normal\" class=\"MathML-Unit\">hr</mi></menclose></mrow><mrow><mn>60</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">min</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>5,280</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">ft</mi></mrow><mi mathvariant=\"normal\" class=\"MathML-Unit\">min</mi></mfrac></mrow>",
       "preference": "default"
     },
     "Sample_13_1_1_brief": {
       "test": true,
-      "mathml": "<mrow><mfrac><mrow><mn>60</mn><menclose notation=\"updiagonalstrike\"><mi mathvariant=\"normal\" class=\"MathML-Unit\">mi</mi></menclose></mrow><menclose notation=\"updiagonalstrike\"><mi mathvariant=\"normal\" class=\"MathML-Unit\">hr</mi></menclose></mfrac><mo>×</mo><mfrac><mrow><mn>5,280</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">ft</mi></mrow><mrow><mn>1</mn><menclose notation=\"updiagonalstrike\"><mi mathvariant=\"normal\" class=\"MathML-Unit\">mi</mi></menclose></mrow></mfrac><mo>×</mo><mfrac><mrow><mn>1</mn><menclose notation=\"updiagonalstrike\"><mi mathvariant=\"normal\" class=\"MathML-Unit\">hr</mi></menclose></mrow><mrow><mn>60</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">min</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>5,280</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">ft</mi></mrow><mi mathvariant=\"normal\" class=\"MathML-Unit\">min</mi></mfrac></mrow>",
+      "input": "<mrow><mfrac><mrow><mn>60</mn><menclose notation=\"updiagonalstrike\"><mi mathvariant=\"normal\" class=\"MathML-Unit\">mi</mi></menclose></mrow><menclose notation=\"updiagonalstrike\"><mi mathvariant=\"normal\" class=\"MathML-Unit\">hr</mi></menclose></mfrac><mo>×</mo><mfrac><mrow><mn>5,280</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">ft</mi></mrow><mrow><mn>1</mn><menclose notation=\"updiagonalstrike\"><mi mathvariant=\"normal\" class=\"MathML-Unit\">mi</mi></menclose></mrow></mfrac><mo>×</mo><mfrac><mrow><mn>1</mn><menclose notation=\"updiagonalstrike\"><mi mathvariant=\"normal\" class=\"MathML-Unit\">hr</mi></menclose></mrow><mrow><mn>60</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">min</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>5,280</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">ft</mi></mrow><mi mathvariant=\"normal\" class=\"MathML-Unit\">min</mi></mfrac></mrow>",
       "preference": "brief"
     },
     "Sample_13_1_1_sbrief": {
       "test": true,
-      "mathml": "<mrow><mfrac><mrow><mn>60</mn><menclose notation=\"updiagonalstrike\"><mi mathvariant=\"normal\" class=\"MathML-Unit\">mi</mi></menclose></mrow><menclose notation=\"updiagonalstrike\"><mi mathvariant=\"normal\" class=\"MathML-Unit\">hr</mi></menclose></mfrac><mo>×</mo><mfrac><mrow><mn>5,280</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">ft</mi></mrow><mrow><mn>1</mn><menclose notation=\"updiagonalstrike\"><mi mathvariant=\"normal\" class=\"MathML-Unit\">mi</mi></menclose></mrow></mfrac><mo>×</mo><mfrac><mrow><mn>1</mn><menclose notation=\"updiagonalstrike\"><mi mathvariant=\"normal\" class=\"MathML-Unit\">hr</mi></menclose></mrow><mrow><mn>60</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">min</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>5,280</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">ft</mi></mrow><mi mathvariant=\"normal\" class=\"MathML-Unit\">min</mi></mfrac></mrow>",
+      "input": "<mrow><mfrac><mrow><mn>60</mn><menclose notation=\"updiagonalstrike\"><mi mathvariant=\"normal\" class=\"MathML-Unit\">mi</mi></menclose></mrow><menclose notation=\"updiagonalstrike\"><mi mathvariant=\"normal\" class=\"MathML-Unit\">hr</mi></menclose></mfrac><mo>×</mo><mfrac><mrow><mn>5,280</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">ft</mi></mrow><mrow><mn>1</mn><menclose notation=\"updiagonalstrike\"><mi mathvariant=\"normal\" class=\"MathML-Unit\">mi</mi></menclose></mrow></mfrac><mo>×</mo><mfrac><mrow><mn>1</mn><menclose notation=\"updiagonalstrike\"><mi mathvariant=\"normal\" class=\"MathML-Unit\">hr</mi></menclose></mrow><mrow><mn>60</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">min</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>5,280</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">ft</mi></mrow><mi mathvariant=\"normal\" class=\"MathML-Unit\">min</mi></mfrac></mrow>",
       "preference": "sbrief"
     },
     "_comment13_": " That should be negative 2!",
     "Sample_13_1_2_default": {
       "test": true,
-      "mathml": "<mrow><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">J</mi><mo>=</mo><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">kg</mi><mo>·</mo><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">m</mi><mn>2</mn></msup><mo>·</mo><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow>",
+      "input": "<mrow><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">J</mi><mo>=</mo><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">kg</mi><mo>·</mo><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">m</mi><mn>2</mn></msup><mo>·</mo><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow>",
       "preference": "default"
     },
     "Sample_13_1_2_brief": {
       "test": true,
-      "mathml": "<mrow><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">J</mi><mo>=</mo><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">kg</mi><mo>·</mo><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">m</mi><mn>2</mn></msup><mo>·</mo><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow>",
+      "input": "<mrow><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">J</mi><mo>=</mo><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">kg</mi><mo>·</mo><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">m</mi><mn>2</mn></msup><mo>·</mo><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow>",
       "preference": "brief"
     },
     "Sample_13_1_2_sbrief": {
       "test": true,
-      "mathml": "<mrow><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">J</mi><mo>=</mo><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">kg</mi><mo>·</mo><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">m</mi><mn>2</mn></msup><mo>·</mo><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow>",
+      "input": "<mrow><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">J</mi><mo>=</mo><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">kg</mi><mo>·</mo><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">m</mi><mn>2</mn></msup><mo>·</mo><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow>",
       "preference": "sbrief"
     },
     "Sample_13_1_3_default": {
       "test": true,
-      "mathml": "<mrow><mi>m</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">m</mi></mrow><mo>=</mo><mn>100</mn><mi>m</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">cm</mi><mo>=</mo><mrow><mfrac><mi>m</mi><mn>1,000</mn></mfrac><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi></mrow>",
+      "input": "<mrow><mi>m</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">m</mi></mrow><mo>=</mo><mn>100</mn><mi>m</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">cm</mi><mo>=</mo><mrow><mfrac><mi>m</mi><mn>1,000</mn></mfrac><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi></mrow>",
       "preference": "default"
     },
     "Sample_13_1_3_brief": {
       "test": true,
-      "mathml": "<mrow><mi>m</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">m</mi></mrow><mo>=</mo><mn>100</mn><mi>m</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">cm</mi><mo>=</mo><mrow><mfrac><mi>m</mi><mn>1,000</mn></mfrac><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi></mrow>",
+      "input": "<mrow><mi>m</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">m</mi></mrow><mo>=</mo><mn>100</mn><mi>m</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">cm</mi><mo>=</mo><mrow><mfrac><mi>m</mi><mn>1,000</mn></mfrac><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi></mrow>",
       "preference": "brief"
     },
     "Sample_13_1_3_sbrief": {
       "test": true,
-      "mathml": "<mrow><mi>m</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">m</mi></mrow><mo>=</mo><mn>100</mn><mi>m</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">cm</mi><mo>=</mo><mrow><mfrac><mi>m</mi><mn>1,000</mn></mfrac><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi></mrow>",
+      "input": "<mrow><mi>m</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">m</mi></mrow><mo>=</mo><mn>100</mn><mi>m</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">cm</mi><mo>=</mo><mrow><mfrac><mi>m</mi><mn>1,000</mn></mfrac><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi></mrow>",
       "preference": "sbrief"
     },
     "Sample_13_1_4_default": {
       "test": true,
-      "mathml": "<mrow><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">mi</mi></mrow><mo>≈</mo><mrow><mn>1.6</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi></mrow>",
+      "input": "<mrow><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">mi</mi></mrow><mo>≈</mo><mrow><mn>1.6</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi></mrow>",
       "preference": "default"
     },
     "Sample_13_1_4_brief": {
       "test": true,
-      "mathml": "<mrow><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">mi</mi></mrow><mo>≈</mo><mrow><mn>1.6</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi></mrow>",
+      "input": "<mrow><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">mi</mi></mrow><mo>≈</mo><mrow><mn>1.6</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi></mrow>",
       "preference": "brief"
     },
     "Sample_13_1_4_sbrief": {
       "test": true,
-      "mathml": "<mrow><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">mi</mi></mrow><mo>≈</mo><mrow><mn>1.6</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi></mrow>",
+      "input": "<mrow><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">mi</mi></mrow><mo>≈</mo><mrow><mn>1.6</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi></mrow>",
       "preference": "sbrief"
     },
     "Sample_13_1_5_default": {
       "test": true,
-      "mathml": "<mrow><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">in</mi><mo>=</mo><mn>2.54</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">cm</mi></mrow>",
+      "input": "<mrow><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">in</mi><mo>=</mo><mn>2.54</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">cm</mi></mrow>",
       "preference": "default"
     },
     "Sample_13_1_5_brief": {
       "test": true,
-      "mathml": "<mrow><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">in</mi><mo>=</mo><mn>2.54</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">cm</mi></mrow>",
+      "input": "<mrow><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">in</mi><mo>=</mo><mn>2.54</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">cm</mi></mrow>",
       "preference": "brief"
     },
     "Sample_13_1_5_sbrief": {
       "test": true,
-      "mathml": "<mrow><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">in</mi><mo>=</mo><mn>2.54</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">cm</mi></mrow>",
+      "input": "<mrow><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">in</mi><mo>=</mo><mn>2.54</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">cm</mi></mrow>",
       "preference": "sbrief"
     },
     "Sample_14_1_1_default": {
       "test": true,
-      "mathml": "<mtable><mtr><mtd><msub><mi>H</mi><mn>2</mn></msub></mtd><mtd><mo>+</mo></mtd><mtd><msub><mi>F</mi><mn>2</mn></msub></mtd><mtd><mo>→</mo></mtd><mtd><mrow><mn>2</mn><mi>H</mi><mi>F</mi></mrow></mtd></mtr><mtr><mtd><mtext>hydrogen</mtext></mtd><mtd/><mtd><mtext>fluorine</mtext></mtd><mtd/><mtd><mrow><mtext>hydrogen</mtext><mspace width=\"4.pt\"/><mtext>fluoride</mtext></mrow></mtd></mtr></mtable>",
+      "input": "<mtable><mtr><mtd><msub><mi>H</mi><mn>2</mn></msub></mtd><mtd><mo>+</mo></mtd><mtd><msub><mi>F</mi><mn>2</mn></msub></mtd><mtd><mo>→</mo></mtd><mtd><mrow><mn>2</mn><mi>H</mi><mi>F</mi></mrow></mtd></mtr><mtr><mtd><mtext>hydrogen</mtext></mtd><mtd/><mtd><mtext>fluorine</mtext></mtd><mtd/><mtd><mrow><mtext>hydrogen</mtext><mspace width=\"4.pt\"/><mtext>fluoride</mtext></mrow></mtd></mtr></mtable>",
       "preference": "default"
     },
     "Sample_14_1_1_brief": {
       "test": true,
-      "mathml": "<mtable><mtr><mtd><msub><mi>H</mi><mn>2</mn></msub></mtd><mtd><mo>+</mo></mtd><mtd><msub><mi>F</mi><mn>2</mn></msub></mtd><mtd><mo>→</mo></mtd><mtd><mrow><mn>2</mn><mi>H</mi><mi>F</mi></mrow></mtd></mtr><mtr><mtd><mtext>hydrogen</mtext></mtd><mtd/><mtd><mtext>fluorine</mtext></mtd><mtd/><mtd><mrow><mtext>hydrogen</mtext><mspace width=\"4.pt\"/><mtext>fluoride</mtext></mrow></mtd></mtr></mtable>",
+      "input": "<mtable><mtr><mtd><msub><mi>H</mi><mn>2</mn></msub></mtd><mtd><mo>+</mo></mtd><mtd><msub><mi>F</mi><mn>2</mn></msub></mtd><mtd><mo>→</mo></mtd><mtd><mrow><mn>2</mn><mi>H</mi><mi>F</mi></mrow></mtd></mtr><mtr><mtd><mtext>hydrogen</mtext></mtd><mtd/><mtd><mtext>fluorine</mtext></mtd><mtd/><mtd><mrow><mtext>hydrogen</mtext><mspace width=\"4.pt\"/><mtext>fluoride</mtext></mrow></mtd></mtr></mtable>",
       "preference": "brief"
     },
     "Sample_14_1_1_sbrief": {
       "test": true,
-      "mathml": "<mtable><mtr><mtd><msub><mi>H</mi><mn>2</mn></msub></mtd><mtd><mo>+</mo></mtd><mtd><msub><mi>F</mi><mn>2</mn></msub></mtd><mtd><mo>→</mo></mtd><mtd><mrow><mn>2</mn><mi>H</mi><mi>F</mi></mrow></mtd></mtr><mtr><mtd><mtext>hydrogen</mtext></mtd><mtd/><mtd><mtext>fluorine</mtext></mtd><mtd/><mtd><mrow><mtext>hydrogen</mtext><mspace width=\"4.pt\"/><mtext>fluoride</mtext></mrow></mtd></mtr></mtable>",
+      "input": "<mtable><mtr><mtd><msub><mi>H</mi><mn>2</mn></msub></mtd><mtd><mo>+</mo></mtd><mtd><msub><mi>F</mi><mn>2</mn></msub></mtd><mtd><mo>→</mo></mtd><mtd><mrow><mn>2</mn><mi>H</mi><mi>F</mi></mrow></mtd></mtr><mtr><mtd><mtext>hydrogen</mtext></mtd><mtd/><mtd><mtext>fluorine</mtext></mtd><mtd/><mtd><mrow><mtext>hydrogen</mtext><mspace width=\"4.pt\"/><mtext>fluoride</mtext></mrow></mtd></mtr></mtable>",
       "preference": "sbrief"
     },
     "Sample_14_3_1_default": {
       "test": true,
-      "mathml": "<mrow><mi>x</mi><mo>=</mo><mfenced separators=\"\" open=\"{\" close=\"\"><mtable><mtr><mtd><mrow><mi>y</mi><mo>&lt;</mo><mn>0</mn></mrow></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><mi>y</mi><mo>≥</mo><mn>0</mn></mrow></mtd><mtd><mrow><mn>2</mn><mi>y</mi></mrow></mtd></mtr></mtable></mfenced></mrow>",
+      "input": "<mrow><mi>x</mi><mo>=</mo><mfenced separators=\"\" open=\"{\" close=\"\"><mtable><mtr><mtd><mrow><mi>y</mi><mo>&lt;</mo><mn>0</mn></mrow></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><mi>y</mi><mo>≥</mo><mn>0</mn></mrow></mtd><mtd><mrow><mn>2</mn><mi>y</mi></mrow></mtd></mtr></mtable></mfenced></mrow>",
       "preference": "default"
     },
     "Sample_14_3_1_brief": {
       "test": true,
-      "mathml": "<mrow><mi>x</mi><mo>=</mo><mfenced separators=\"\" open=\"{\" close=\"\"><mtable><mtr><mtd><mrow><mi>y</mi><mo>&lt;</mo><mn>0</mn></mrow></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><mi>y</mi><mo>≥</mo><mn>0</mn></mrow></mtd><mtd><mrow><mn>2</mn><mi>y</mi></mrow></mtd></mtr></mtable></mfenced></mrow>",
+      "input": "<mrow><mi>x</mi><mo>=</mo><mfenced separators=\"\" open=\"{\" close=\"\"><mtable><mtr><mtd><mrow><mi>y</mi><mo>&lt;</mo><mn>0</mn></mrow></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><mi>y</mi><mo>≥</mo><mn>0</mn></mrow></mtd><mtd><mrow><mn>2</mn><mi>y</mi></mrow></mtd></mtr></mtable></mfenced></mrow>",
       "preference": "brief"
     },
     "Sample_14_3_1_sbrief": {
       "test": true,
-      "mathml": "<mrow><mi>x</mi><mo>=</mo><mfenced separators=\"\" open=\"{\" close=\"\"><mtable><mtr><mtd><mrow><mi>y</mi><mo>&lt;</mo><mn>0</mn></mrow></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><mi>y</mi><mo>≥</mo><mn>0</mn></mrow></mtd><mtd><mrow><mn>2</mn><mi>y</mi></mrow></mtd></mtr></mtable></mfenced></mrow>",
+      "input": "<mrow><mi>x</mi><mo>=</mo><mfenced separators=\"\" open=\"{\" close=\"\"><mtable><mtr><mtd><mrow><mi>y</mi><mo>&lt;</mo><mn>0</mn></mrow></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><mi>y</mi><mo>≥</mo><mn>0</mn></mrow></mtd><mtd><mrow><mn>2</mn><mi>y</mi></mrow></mtd></mtr></mtable></mfenced></mrow>",
       "preference": "sbrief"
     },
     "Sample_15_1_1_default": {
       "test": true,
-      "mathml": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo><mi>a</mi></mrow></mtd><mtd><mrow><mi>x</mi><mo>+</mo><mi>b</mi></mrow></mtd><mtd><mrow><mi>x</mi><mo>+</mo><mi>c</mi></mrow></mtd></mtr><mtr><mtd><mrow><mi>y</mi><mo>+</mo><mi>a</mi></mrow></mtd><mtd><mrow><mi>y</mi><mo>+</mo><mi>b</mi></mrow></mtd><mtd><mrow><mi>y</mi><mo>+</mo><mi>c</mi></mrow></mtd></mtr><mtr><mtd><mrow><mi>z</mi><mo>+</mo><mi>a</mi></mrow></mtd><mtd><mrow><mi>z</mi><mo>+</mo><mi>b</mi></mrow></mtd><mtd><mrow><mi>z</mi><mo>+</mo><mi>c</mi></mrow></mtd></mtr></mtable></mfenced>",
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo><mi>a</mi></mrow></mtd><mtd><mrow><mi>x</mi><mo>+</mo><mi>b</mi></mrow></mtd><mtd><mrow><mi>x</mi><mo>+</mo><mi>c</mi></mrow></mtd></mtr><mtr><mtd><mrow><mi>y</mi><mo>+</mo><mi>a</mi></mrow></mtd><mtd><mrow><mi>y</mi><mo>+</mo><mi>b</mi></mrow></mtd><mtd><mrow><mi>y</mi><mo>+</mo><mi>c</mi></mrow></mtd></mtr><mtr><mtd><mrow><mi>z</mi><mo>+</mo><mi>a</mi></mrow></mtd><mtd><mrow><mi>z</mi><mo>+</mo><mi>b</mi></mrow></mtd><mtd><mrow><mi>z</mi><mo>+</mo><mi>c</mi></mrow></mtd></mtr></mtable></mfenced>",
       "preference": "default"
     },
     "Sample_15_1_1_brief": {
       "test": true,
-      "mathml": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo><mi>a</mi></mrow></mtd><mtd><mrow><mi>x</mi><mo>+</mo><mi>b</mi></mrow></mtd><mtd><mrow><mi>x</mi><mo>+</mo><mi>c</mi></mrow></mtd></mtr><mtr><mtd><mrow><mi>y</mi><mo>+</mo><mi>a</mi></mrow></mtd><mtd><mrow><mi>y</mi><mo>+</mo><mi>b</mi></mrow></mtd><mtd><mrow><mi>y</mi><mo>+</mo><mi>c</mi></mrow></mtd></mtr><mtr><mtd><mrow><mi>z</mi><mo>+</mo><mi>a</mi></mrow></mtd><mtd><mrow><mi>z</mi><mo>+</mo><mi>b</mi></mrow></mtd><mtd><mrow><mi>z</mi><mo>+</mo><mi>c</mi></mrow></mtd></mtr></mtable></mfenced>",
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo><mi>a</mi></mrow></mtd><mtd><mrow><mi>x</mi><mo>+</mo><mi>b</mi></mrow></mtd><mtd><mrow><mi>x</mi><mo>+</mo><mi>c</mi></mrow></mtd></mtr><mtr><mtd><mrow><mi>y</mi><mo>+</mo><mi>a</mi></mrow></mtd><mtd><mrow><mi>y</mi><mo>+</mo><mi>b</mi></mrow></mtd><mtd><mrow><mi>y</mi><mo>+</mo><mi>c</mi></mrow></mtd></mtr><mtr><mtd><mrow><mi>z</mi><mo>+</mo><mi>a</mi></mrow></mtd><mtd><mrow><mi>z</mi><mo>+</mo><mi>b</mi></mrow></mtd><mtd><mrow><mi>z</mi><mo>+</mo><mi>c</mi></mrow></mtd></mtr></mtable></mfenced>",
       "preference": "brief"
     },
     "Sample_15_1_1_sbrief": {
       "test": true,
-      "mathml": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo><mi>a</mi></mrow></mtd><mtd><mrow><mi>x</mi><mo>+</mo><mi>b</mi></mrow></mtd><mtd><mrow><mi>x</mi><mo>+</mo><mi>c</mi></mrow></mtd></mtr><mtr><mtd><mrow><mi>y</mi><mo>+</mo><mi>a</mi></mrow></mtd><mtd><mrow><mi>y</mi><mo>+</mo><mi>b</mi></mrow></mtd><mtd><mrow><mi>y</mi><mo>+</mo><mi>c</mi></mrow></mtd></mtr><mtr><mtd><mrow><mi>z</mi><mo>+</mo><mi>a</mi></mrow></mtd><mtd><mrow><mi>z</mi><mo>+</mo><mi>b</mi></mrow></mtd><mtd><mrow><mi>z</mi><mo>+</mo><mi>c</mi></mrow></mtd></mtr></mtable></mfenced>",
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo><mi>a</mi></mrow></mtd><mtd><mrow><mi>x</mi><mo>+</mo><mi>b</mi></mrow></mtd><mtd><mrow><mi>x</mi><mo>+</mo><mi>c</mi></mrow></mtd></mtr><mtr><mtd><mrow><mi>y</mi><mo>+</mo><mi>a</mi></mrow></mtd><mtd><mrow><mi>y</mi><mo>+</mo><mi>b</mi></mrow></mtd><mtd><mrow><mi>y</mi><mo>+</mo><mi>c</mi></mrow></mtd></mtr><mtr><mtd><mrow><mi>z</mi><mo>+</mo><mi>a</mi></mrow></mtd><mtd><mrow><mi>z</mi><mo>+</mo><mi>b</mi></mrow></mtd><mtd><mrow><mi>z</mi><mo>+</mo><mi>c</mi></mrow></mtd></mtr></mtable></mfenced>",
       "preference": "sbrief"
     },
     "Sample_15_2_1_default": {
       "test": true,
-      "mathml": "<mrow><mfenced open=\"|\" close=\"|\"><mtable><mtr><mtd><mrow><mi>a</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable></mfenced><mo>=</mo><mrow><mo>(</mo><mi>a</mi><mo>+</mo><mn>1</mn><mo>)</mo></mrow><mi>d</mi><mo>-</mo><mi>b</mi><mi>c</mi></mrow>",
+      "input": "<mrow><mfenced open=\"|\" close=\"|\"><mtable><mtr><mtd><mrow><mi>a</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable></mfenced><mo>=</mo><mrow><mo>(</mo><mi>a</mi><mo>+</mo><mn>1</mn><mo>)</mo></mrow><mi>d</mi><mo>-</mo><mi>b</mi><mi>c</mi></mrow>",
       "preference": "default"
     },
     "Sample_15_2_1_brief": {
       "test": true,
-      "mathml": "<mrow><mfenced open=\"|\" close=\"|\"><mtable><mtr><mtd><mrow><mi>a</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable></mfenced><mo>=</mo><mrow><mo>(</mo><mi>a</mi><mo>+</mo><mn>1</mn><mo>)</mo></mrow><mi>d</mi><mo>-</mo><mi>b</mi><mi>c</mi></mrow>",
+      "input": "<mrow><mfenced open=\"|\" close=\"|\"><mtable><mtr><mtd><mrow><mi>a</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable></mfenced><mo>=</mo><mrow><mo>(</mo><mi>a</mi><mo>+</mo><mn>1</mn><mo>)</mo></mrow><mi>d</mi><mo>-</mo><mi>b</mi><mi>c</mi></mrow>",
       "preference": "brief"
     },
     "Sample_15_2_1_sbrief": {
       "test": true,
-      "mathml": "<mrow><mfenced open=\"|\" close=\"|\"><mtable><mtr><mtd><mrow><mi>a</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable></mfenced><mo>=</mo><mrow><mo>(</mo><mi>a</mi><mo>+</mo><mn>1</mn><mo>)</mo></mrow><mi>d</mi><mo>-</mo><mi>b</mi><mi>c</mi></mrow>",
+      "input": "<mrow><mfenced open=\"|\" close=\"|\"><mtable><mtr><mtd><mrow><mi>a</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable></mfenced><mo>=</mo><mrow><mo>(</mo><mi>a</mi><mo>+</mo><mn>1</mn><mo>)</mo></mrow><mi>d</mi><mo>-</mo><mi>b</mi><mi>c</mi></mrow>",
       "preference": "sbrief"
     },
     "Sample_15_4_1_default": {
       "test": true,
-      "mathml": "<mrow><mfenced open=\"|\" close=\"|\"><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable></mfenced><mo>=</mo><mi>a</mi><mi>d</mi><mo>-</mo><mi>b</mi><mi>c</mi></mrow>",
+      "input": "<mrow><mfenced open=\"|\" close=\"|\"><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable></mfenced><mo>=</mo><mi>a</mi><mi>d</mi><mo>-</mo><mi>b</mi><mi>c</mi></mrow>",
       "preference": "default"
     },
     "Sample_15_4_1_brief": {
       "test": true,
-      "mathml": "<mrow><mfenced open=\"|\" close=\"|\"><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable></mfenced><mo>=</mo><mi>a</mi><mi>d</mi><mo>-</mo><mi>b</mi><mi>c</mi></mrow>",
+      "input": "<mrow><mfenced open=\"|\" close=\"|\"><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable></mfenced><mo>=</mo><mi>a</mi><mi>d</mi><mo>-</mo><mi>b</mi><mi>c</mi></mrow>",
       "preference": "brief"
     },
     "Sample_15_4_1_sbrief": {
       "test": true,
-      "mathml": "<mrow><mfenced open=\"|\" close=\"|\"><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable></mfenced><mo>=</mo><mi>a</mi><mi>d</mi><mo>-</mo><mi>b</mi><mi>c</mi></mrow>",
+      "input": "<mrow><mfenced open=\"|\" close=\"|\"><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable></mfenced><mo>=</mo><mi>a</mi><mi>d</mi><mo>-</mo><mi>b</mi><mi>c</mi></mrow>",
       "preference": "sbrief"
     },
     "Sample_15_6_1_default": {
       "test": true,
-      "mathml": "<mfenced open=\"(\" close=\")\"><mtable><mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd></mtr></mtable></mfenced>",
+      "input": "<mfenced open=\"(\" close=\")\"><mtable><mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd></mtr></mtable></mfenced>",
       "preference": "default"
     },
     "Sample_15_6_1_brief": {
       "test": true,
-      "mathml": "<mfenced open=\"(\" close=\")\"><mtable><mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd></mtr></mtable></mfenced>",
+      "input": "<mfenced open=\"(\" close=\")\"><mtable><mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd></mtr></mtable></mfenced>",
       "preference": "brief"
     },
     "Sample_15_6_1_sbrief": {
       "test": true,
-      "mathml": "<mfenced open=\"(\" close=\")\"><mtable><mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd></mtr></mtable></mfenced>",
+      "input": "<mfenced open=\"(\" close=\")\"><mtable><mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd></mtr></mtable></mfenced>",
       "preference": "sbrief"
     }
   }

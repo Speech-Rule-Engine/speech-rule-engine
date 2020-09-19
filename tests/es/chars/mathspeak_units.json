@@ -12,686 +12,686 @@
   "information": "MathspeakUnitSpanishTest",
   "tests": {
     "W": {
-      "speech": [
+      "expected": [
         "watt",
         "watt",
         "watt"
       ]
     },
     "w": {
-      "speech": [
+      "expected": [
         "watt",
         "watt",
         "watt"
       ]
     },
     "kw": {
-      "speech": [
+      "expected": [
         "kilowatt",
         "kilowatt",
         "kilowatt"
       ]
     },
     "kW": {
-      "speech": [
+      "expected": [
         "kilowatt",
         "kilowatt",
         "kilowatt"
       ]
     },
     "mw": {
-      "speech": [
+      "expected": [
         "miliwatt",
         "miliwatt",
         "miliwatt"
       ]
     },
     "mW": {
-      "speech": [
+      "expected": [
         "miliwatt",
         "miliwatt",
         "miliwatt"
       ]
     },
     "kwh": {
-      "speech": [
+      "expected": [
         "kilowatt hora",
         "kilowatt hora",
         "kilowatt hora"
       ]
     },
     "kWh": {
-      "speech": [
+      "expected": [
         "kilowatt hora",
         "kilowatt hora",
         "kilowatt hora"
       ]
     },
     "J": {
-      "speech": [
+      "expected": [
         "Joule",
         "Joule",
         "Joule"
       ]
     },
     "N": {
-      "speech": [
+      "expected": [
         "Newton",
         "Newton",
         "Newton"
       ]
     },
     "A": {
-      "speech": [
+      "expected": [
         "Ampere",
         "Ampere",
         "Ampere"
       ]
     },
     "V": {
-      "speech": [
+      "expected": [
         "Voltio",
         "Voltio",
         "Voltio"
       ]
     },
     "µΩ": {
-      "speech": [
+      "expected": [
         "microohmio",
         "microohmio",
         "microohmio"
       ]
     },
     "mΩ": {
-      "speech": [
+      "expected": [
         "miliohmio",
         "miliohmio",
         "miliohmio"
       ]
     },
     "Ω": {
-      "speech": [
+      "expected": [
         "ohmio",
         "ohmio",
         "ohmio"
       ]
     },
     "Ohm": {
-      "speech": [
+      "expected": [
         "ohmio",
         "ohmio",
         "ohmio"
       ]
     },
     "kΩ": {
-      "speech": [
+      "expected": [
         "kiloohmio",
         "kiloohmio",
         "kiloohmio"
       ]
     },
     "KΩ": {
-      "speech": [
+      "expected": [
         "kiloohmio",
         "kiloohmio",
         "kiloohmio"
       ]
     },
     "MΩ": {
-      "speech": [
+      "expected": [
         "megaohmio",
         "megaohmio",
         "megaohmio"
       ]
     },
     "GΩ": {
-      "speech": [
+      "expected": [
         "gigaohmio",
         "gigaohmio",
         "gigaohmio"
       ]
     },
     "mm": {
-      "speech": [
+      "expected": [
         "milímetro",
         "milímetro",
         "milímetro"
       ]
     },
     "cm": {
-      "speech": [
+      "expected": [
         "centímetro",
         "centímetro",
         "centímetro"
       ]
     },
     "m": {
-      "speech": [
+      "expected": [
         "metro",
         "metro",
         "metro"
       ]
     },
     "km": {
-      "speech": [
+      "expected": [
         "kilómetro",
         "kilómetro",
         "kilómetro"
       ]
     },
     "ft": {
-      "speech": [
+      "expected": [
         "pies",
         "pies",
         "pies"
       ]
     },
     "ft.": {
-      "speech": [
+      "expected": [
         "pies",
         "pies",
         "pies"
       ]
     },
     "in": {
-      "speech": [
+      "expected": [
         "pulgada",
         "pulgada",
         "pulgada"
       ]
     },
     "in.": {
-      "speech": [
+      "expected": [
         "pulgada",
         "pulgada",
         "pulgada"
       ]
     },
     "mi": {
-      "speech": [
+      "expected": [
         "milla",
         "milla",
         "milla"
       ]
     },
     "mi.": {
-      "speech": [
+      "expected": [
         "milla",
         "milla",
         "milla"
       ]
     },
     "yd": {
-      "speech": [
+      "expected": [
         "yarda",
         "yarda",
         "yarda"
       ]
     },
     "yd.": {
-      "speech": [
+      "expected": [
         "yarda",
         "yarda",
         "yarda"
       ]
     },
     "n.m.": {
-      "speech": [
+      "expected": [
         "millas náuticas",
         "millas náuticas",
         "millas náuticas"
       ]
     },
     "b": {
-      "speech": [
+      "expected": [
         "bit",
         "bit",
         "bit"
       ]
     },
     "B": {
-      "speech": [
+      "expected": [
         "byte",
         "byte",
         "byte"
       ]
     },
     "KB": {
-      "speech": [
+      "expected": [
         "kilobyte",
         "kilobyte",
         "kilobyte"
       ]
     },
     "MB": {
-      "speech": [
+      "expected": [
         "megabyte",
         "megabyte",
         "megabyte"
       ]
     },
     "GB": {
-      "speech": [
+      "expected": [
         "gigabyte",
         "gigabyte",
         "gigabyte"
       ]
     },
     "TB": {
-      "speech": [
+      "expected": [
         "terabyte",
         "terabyte",
         "terabyte"
       ]
     },
     "doz": {
-      "speech": [
+      "expected": [
         "docena",
         "docena",
         "docena"
       ]
     },
     "doz.": {
-      "speech": [
+      "expected": [
         "docena",
         "docena",
         "docena"
       ]
     },
     "dz": {
-      "speech": [
+      "expected": [
         "docena",
         "docena",
         "docena"
       ]
     },
     "dz.": {
-      "speech": [
+      "expected": [
         "docena",
         "docena",
         "docena"
       ]
     },
     "sq": {
-      "speech": [
+      "expected": [
         "al cuadrado",
         "al cuadrado",
         "al cuadrado"
       ]
     },
     "sq.": {
-      "speech": [
+      "expected": [
         "al cuadrado",
         "al cuadrado",
         "al cuadrado"
       ]
     },
     "ha": {
-      "speech": [
+      "expected": [
         "hectarea",
         "hectarea",
         "hectarea"
       ]
     },
     "kt": {
-      "speech": [
+      "expected": [
         "nudo",
         "nudo",
         "nudo"
       ]
     },
     "kt.": {
-      "speech": [
+      "expected": [
         "nudo",
         "nudo",
         "nudo"
       ]
     },
     "mph": {
-      "speech": [
+      "expected": [
         "millas por hora",
         "millas por hora",
         "millas por hora"
       ]
     },
     "rpm": {
-      "speech": [
+      "expected": [
         "revoluciones por minuto",
         "revoluciones por minuto",
         "revoluciones por minuto"
       ]
     },
     "kmh": {
-      "speech": [
+      "expected": [
         "kilómetros por hora",
         "kilómetros por hora",
         "kilómetros por hora"
       ]
     },
     "F": {
-      "speech": [
+      "expected": [
         "Fahrenheit",
         "Fahrenheit",
         "Fahrenheit"
       ]
     },
     "F.": {
-      "speech": [
+      "expected": [
         "Fahrenheit",
         "Fahrenheit",
         "Fahrenheit"
       ]
     },
     "°F": {
-      "speech": [
+      "expected": [
         "Fahrenheit",
         "Fahrenheit",
         "Fahrenheit"
       ]
     },
     "C": {
-      "speech": [
+      "expected": [
         "centígrados",
         "centígrados",
         "centígrados"
       ]
     },
     "°C": {
-      "speech": [
+      "expected": [
         "centígrados",
         "centígrados",
         "centígrados"
       ]
     },
     "K": {
-      "speech": [
+      "expected": [
         "Kelvin",
         "Kelvin",
         "Kelvin"
       ]
     },
     "°K": {
-      "speech": [
+      "expected": [
         "Kelvin",
         "Kelvin",
         "Kelvin"
       ]
     },
     "ns": {
-      "speech": [
+      "expected": [
         "nanosegundos",
         "nanosegundos",
         "nanosegundos"
       ]
     },
     "µs": {
-      "speech": [
+      "expected": [
         "microsegundos",
         "microsegundos",
         "microsegundos"
       ]
     },
     "ms": {
-      "speech": [
+      "expected": [
         "milisegundos",
         "milisegundos",
         "milisegundos"
       ]
     },
     "s": {
-      "speech": [
+      "expected": [
         "segundos",
         "segundos",
         "segundos"
       ]
     },
     "min": {
-      "speech": [
+      "expected": [
         "minutos",
         "minutos",
         "minutos"
       ]
     },
     "h": {
-      "speech": [
+      "expected": [
         "hora",
         "hora",
         "hora"
       ]
     },
     "hr": {
-      "speech": [
+      "expected": [
         "hora",
         "hora",
         "hora"
       ]
     },
     "bbl.": {
-      "speech": [
+      "expected": [
         "barrile",
         "barrile",
         "barrile"
       ]
     },
     "bbl": {
-      "speech": [
+      "expected": [
         "barrile",
         "barrile",
         "barrile"
       ]
     },
     "cu": {
-      "speech": [
+      "expected": [
         "cúbico",
         "cúbico",
         "cúbico"
       ]
     },
     "cu.": {
-      "speech": [
+      "expected": [
         "cúbico",
         "cúbico",
         "cúbico"
       ]
     },
     "'": {
-      "speech": [
+      "expected": [
         "onzas líquidas",
         "onzas líquidas",
         "onzas líquidas"
       ]
     },
     "gal": {
-      "speech": [
+      "expected": [
         "galone",
         "galone",
         "galone"
       ]
     },
     "gal.": {
-      "speech": [
+      "expected": [
         "galone",
         "galone",
         "galone"
       ]
     },
     "pt": {
-      "speech": [
+      "expected": [
         "pinta",
         "pinta",
         "pinta"
       ]
     },
     "pt.": {
-      "speech": [
+      "expected": [
         "pinta",
         "pinta",
         "pinta"
       ]
     },
     "qt": {
-      "speech": [
+      "expected": [
         "quart",
         "quart",
         "quart"
       ]
     },
     "qt.": {
-      "speech": [
+      "expected": [
         "quart",
         "quart",
         "quart"
       ]
     },
     "tbsp": {
-      "speech": [
+      "expected": [
         "cuchara",
         "cuchara",
         "cuchara"
       ]
     },
     "tbsp.": {
-      "speech": [
+      "expected": [
         "cuchara",
         "cuchara",
         "cuchara"
       ]
     },
     "tsp": {
-      "speech": [
+      "expected": [
         "cucharilla",
         "cucharilla",
         "cucharilla"
       ]
     },
     "tsp.": {
-      "speech": [
+      "expected": [
         "cucharilla",
         "cucharilla",
         "cucharilla"
       ]
     },
     "cc": {
-      "speech": [
+      "expected": [
         "centímetros cúbicos",
         "centímetros cúbicos",
         "centímetros cúbicos"
       ]
     },
     "kl": {
-      "speech": [
+      "expected": [
         "kilolitro",
         "kilolitro",
         "kilolitro"
       ]
     },
     "l": {
-      "speech": [
+      "expected": [
         "litro",
         "litro",
         "litro"
       ]
     },
     "ml": {
-      "speech": [
+      "expected": [
         "mililitro",
         "mililitro",
         "mililitro"
       ]
     },
     "lb": {
-      "speech": [
+      "expected": [
         "libra",
         "libra",
         "libra"
       ]
     },
     "lb.": {
-      "speech": [
+      "expected": [
         "libra",
         "libra",
         "libra"
       ]
     },
     "LT": {
-      "speech": [
+      "expected": [
         "libras imperiales",
         "libras imperiales",
         "libras imperiales"
       ]
     },
     "L.T.": {
-      "speech": [
+      "expected": [
         "libras imperiales",
         "libras imperiales",
         "libras imperiales"
       ]
     },
     "oz": {
-      "speech": [
+      "expected": [
         "onza",
         "onza",
         "onza"
       ]
     },
     "oz.": {
-      "speech": [
+      "expected": [
         "onza",
         "onza",
         "onza"
       ]
     },
     "g": {
-      "speech": [
+      "expected": [
         "gramo",
         "gramo",
         "gramo"
       ]
     },
     "gr": {
-      "speech": [
+      "expected": [
         "gramo",
         "gramo",
         "gramo"
       ]
     },
     "kg": {
-      "speech": [
+      "expected": [
         "kilogramo",
         "kilogramo",
         "kilogramo"
       ]
     },
     "mcg": {
-      "speech": [
+      "expected": [
         "microgramo",
         "microgramo",
         "microgramo"
       ]
     },
     "µg": {
-      "speech": [
+      "expected": [
         "microgramo",
         "microgramo",
         "microgramo"
       ]
     },
     "mg": {
-      "speech": [
+      "expected": [
         "miligramo",
         "miligramo",
         "miligramo"
       ]
     },
     "t": {
-      "speech": [
+      "expected": [
         "tonelada",
         "tonelada",
         "tonelada"
       ]
     },
     "T": {
-      "speech": [
+      "expected": [
         "tonelada",
         "tonelada",
         "tonelada"

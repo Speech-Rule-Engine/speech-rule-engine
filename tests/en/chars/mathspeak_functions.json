@@ -12,434 +12,434 @@
   "information": "Mathspeak function test for English",
   "tests": {
     "deg": {
-      "speech": [
+      "expected": [
         "degree",
         "degree",
         "degree"
       ]
     },
     "det": {
-      "speech": [
+      "expected": [
         "det",
         "det",
         "det"
       ]
     },
     "dim": {
-      "speech": [
+      "expected": [
         "dimension",
         "dimension",
         "dimension"
       ]
     },
     "hom": {
-      "speech": [
+      "expected": [
         "hom",
         "hom",
         "hom"
       ]
     },
     "Hom": {
-      "speech": [
+      "expected": [
         "hom",
         "hom",
         "hom"
       ]
     },
     "ker": {
-      "speech": [
+      "expected": [
         "kernel",
         "kernel",
         "kernel"
       ]
     },
     "Tr": {
-      "speech": [
+      "expected": [
         "trace",
         "trace",
         "trace"
       ]
     },
     "tr": {
-      "speech": [
+      "expected": [
         "trace",
         "trace",
         "trace"
       ]
     },
     "log": {
-      "speech": [
+      "expected": [
         "log",
         "log",
         "log"
       ]
     },
     "ln": {
-      "speech": [
+      "expected": [
         "ln",
         "ln",
         "ln"
       ]
     },
     "lg": {
-      "speech": [
+      "expected": [
         "log base 10",
         "log base 10",
         "log base 10"
       ]
     },
     "exp": {
-      "speech": [
+      "expected": [
         "exp",
         "exp",
         "exp"
       ]
     },
     "expt": {
-      "speech": [
+      "expected": [
         "exp",
         "exp",
         "exp"
       ]
     },
     "gcd": {
-      "speech": [
+      "expected": [
         "gcd",
         "gcd",
         "gcd"
       ]
     },
     "lcm": {
-      "speech": [
+      "expected": [
         "lcm",
         "lcm",
         "lcm"
       ]
     },
     "arg": {
-      "speech": [
+      "expected": [
         "arg",
         "arg",
         "arg"
       ]
     },
     "im": {
-      "speech": [
+      "expected": [
         "im",
         "im",
         "im"
       ]
     },
     "re": {
-      "speech": [
+      "expected": [
         "re",
         "re",
         "re"
       ]
     },
     "inf": {
-      "speech": [
+      "expected": [
         "inf",
         "inf",
         "inf"
       ]
     },
     "lim": {
-      "speech": [
+      "expected": [
         "limit",
         "limit",
         "limit"
       ]
     },
     "'": {
-      "speech": [
+      "expected": [
         "projective limit",
         "projective limit",
         "projective limit"
       ]
     },
     "liminf": {
-      "speech": [
+      "expected": [
         "liminf",
         "liminf",
         "liminf"
       ]
     },
     "limsup": {
-      "speech": [
+      "expected": [
         "limsup",
         "limsup",
         "limsup"
       ]
     },
     "max": {
-      "speech": [
+      "expected": [
         "max",
         "max",
         "max"
       ]
     },
     "min": {
-      "speech": [
+      "expected": [
         "min",
         "min",
         "min"
       ]
     },
     "sup": {
-      "speech": [
+      "expected": [
         "sup",
         "sup",
         "sup"
       ]
     },
     "injlim": {
-      "speech": [
+      "expected": [
         "colimit",
         "colimit",
         "colimit"
       ]
     },
     "projlim": {
-      "speech": [
+      "expected": [
         "projective limit",
         "projective limit",
         "projective limit"
       ]
     },
     "mod": {
-      "speech": [
+      "expected": [
         "mod",
         "mod",
         "mod"
       ]
     },
     "Pr": {
-      "speech": [
+      "expected": [
         "probability",
         "probability",
         "probability"
       ]
     },
     "cosh": {
-      "speech": [
+      "expected": [
         "hyperbolic cosine",
         "hyperbolic cosine",
         "hyperbolic cosine"
       ]
     },
     "coth": {
-      "speech": [
+      "expected": [
         "hyperbolic cotangent",
         "hyperbolic cotangent",
         "hyperbolic cotangent"
       ]
     },
     "csch": {
-      "speech": [
+      "expected": [
         "hyperbolic cosecant",
         "hyperbolic cosecant",
         "hyperbolic cosecant"
       ]
     },
     "sech": {
-      "speech": [
+      "expected": [
         "hyperbolic secant",
         "hyperbolic secant",
         "hyperbolic secant"
       ]
     },
     "sinh": {
-      "speech": [
+      "expected": [
         "hyperbolic sine",
         "hyperbolic sine",
         "hyperbolic sine"
       ]
     },
     "tanh": {
-      "speech": [
+      "expected": [
         "hyperbolic tangent",
         "hyperbolic tangent",
         "hyperbolic tangent"
       ]
     },
     "arcosh": {
-      "speech": [
+      "expected": [
         "area hyperbolic cosine",
         "area hyperbolic cosine",
         "area hyperbolic cosine"
       ]
     },
     "arccosh": {
-      "speech": [
+      "expected": [
         "area hyperbolic cosine",
         "area hyperbolic cosine",
         "area hyperbolic cosine"
       ]
     },
     "arcoth": {
-      "speech": [
+      "expected": [
         "area hyperbolic cotangent",
         "area hyperbolic cotangent",
         "area hyperbolic cotangent"
       ]
     },
     "arccoth": {
-      "speech": [
+      "expected": [
         "area hyperbolic cotangent",
         "area hyperbolic cotangent",
         "area hyperbolic cotangent"
       ]
     },
     "arcsch": {
-      "speech": [
+      "expected": [
         "area hyperbolic cosecant",
         "area hyperbolic cosecant",
         "area hyperbolic cosecant"
       ]
     },
     "arccsch": {
-      "speech": [
+      "expected": [
         "area hyperbolic cosecant",
         "area hyperbolic cosecant",
         "area hyperbolic cosecant"
       ]
     },
     "arsech": {
-      "speech": [
+      "expected": [
         "area hyperbolic secant",
         "area hyperbolic secant",
         "area hyperbolic secant"
       ]
     },
     "arcsech": {
-      "speech": [
+      "expected": [
         "area hyperbolic secant",
         "area hyperbolic secant",
         "area hyperbolic secant"
       ]
     },
     "arsinh": {
-      "speech": [
+      "expected": [
         "area hyperbolic sine",
         "area hyperbolic sine",
         "area hyperbolic sine"
       ]
     },
     "arcsinh": {
-      "speech": [
+      "expected": [
         "area hyperbolic sine",
         "area hyperbolic sine",
         "area hyperbolic sine"
       ]
     },
     "artanh": {
-      "speech": [
+      "expected": [
         "area hyperbolic tangent",
         "area hyperbolic tangent",
         "area hyperbolic tangent"
       ]
     },
     "arctanh": {
-      "speech": [
+      "expected": [
         "area hyperbolic tangent",
         "area hyperbolic tangent",
         "area hyperbolic tangent"
       ]
     },
     "cos": {
-      "speech": [
+      "expected": [
         "cosine",
         "cosine",
         "cosine"
       ]
     },
     "cosine": {
-      "speech": [
+      "expected": [
         "cosine",
         "cosine",
         "cosine"
       ]
     },
     "cot": {
-      "speech": [
+      "expected": [
         "cotangent",
         "cotangent",
         "cotangent"
       ]
     },
     "csc": {
-      "speech": [
+      "expected": [
         "cosecant",
         "cosecant",
         "cosecant"
       ]
     },
     "sec": {
-      "speech": [
+      "expected": [
         "secant",
         "secant",
         "secant"
       ]
     },
     "sin": {
-      "speech": [
+      "expected": [
         "sine",
         "sine",
         "sine"
       ]
     },
     "sine": {
-      "speech": [
+      "expected": [
         "sine",
         "sine",
         "sine"
       ]
     },
     "tan": {
-      "speech": [
+      "expected": [
         "tangent",
         "tangent",
         "tangent"
       ]
     },
     "arccos": {
-      "speech": [
+      "expected": [
         "arc cosine",
         "arc cosine",
         "arc cosine"
       ]
     },
     "arccot": {
-      "speech": [
+      "expected": [
         "arc cotangent",
         "arc cotangent",
         "arc cotangent"
       ]
     },
     "arccsc": {
-      "speech": [
+      "expected": [
         "arc cosecant",
         "arc cosecant",
         "arc cosecant"
       ]
     },
     "arcsec": {
-      "speech": [
+      "expected": [
         "arc secant",
         "arc secant",
         "arc secant"
       ]
     },
     "arcsin": {
-      "speech": [
+      "expected": [
         "arc sine",
         "arc sine",
         "arc sine"
       ]
     },
     "arctan": {
-      "speech": [
+      "expected": [
         "arc tangent",
         "arc tangent",
         "arc tangent"

@@ -56,7 +56,7 @@ goog.inherits(sre.SemanticTest, sre.AbstractExamples);
  * @override
  */
 sre.SemanticTest.prototype.pick = function(json) {
-  return [json.mathml];
+  return [json.input];
 };
 
 
@@ -279,7 +279,7 @@ sre.SemanticTreeTest.prototype.method = function(var_args) {
  * @override
  */
 sre.SemanticTreeTest.prototype.pick = function(json) {
-  return [json.mathml, json['expected'], json['brief']];
+  return [json.input, json['expected'], json['brief']];
 };
 
 
@@ -318,7 +318,7 @@ goog.inherits(sre.EnrichMathmlTest, sre.SemanticTest);
  * @override
  */
 sre.EnrichMathmlTest.prototype.pick = function(json) {
-  return [json.mathml, json['expected']];
+  return [json.input, json['expected']];
 };
 
 

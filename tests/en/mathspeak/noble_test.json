@@ -7,994 +7,994 @@
   "exclude": [],
   "tests": {
     "Sample_1_default": {
-      "speech": "negative 5 and one fifth minus 6 and two thirds equals"
+      "expected": "negative 5 and one fifth minus 6 and two thirds equals"
     },
     "Sample_1_brief": {
-      "speech": "negative 5 and one fifth minus 6 and two thirds equals"
+      "expected": "negative 5 and one fifth minus 6 and two thirds equals"
     },
     "Sample_1_sbrief": {
-      "speech": "negative 5 and one fifth minus 6 and two thirds equals"
+      "expected": "negative 5 and one fifth minus 6 and two thirds equals"
     },
     "Sample_2_default": {
-      "speech": "negative 7 and three fourths minus left parenthesis negative 4 and seven eighths right parenthesis equals"
+      "expected": "negative 7 and three fourths minus left parenthesis negative 4 and seven eighths right parenthesis equals"
     },
     "Sample_2_brief": {
-      "speech": "negative 7 and three fourths minus left p'ren negative 4 and seven eighths right p'ren equals"
+      "expected": "negative 7 and three fourths minus left p'ren negative 4 and seven eighths right p'ren equals"
     },
     "Sample_2_sbrief": {
-      "speech": "negative 7 and three fourths minus L p'ren negative 4 and seven eighths R p'ren equals"
+      "expected": "negative 7 and three fourths minus L p'ren negative 4 and seven eighths R p'ren equals"
     },
     "Sample_3_default": {
-      "speech": "negative 24.15 minus left parenthesis 13.7 right parenthesis equals"
+      "expected": "negative 24.15 minus left parenthesis 13.7 right parenthesis equals"
     },
     "Sample_3_brief": {
-      "speech": "negative 24.15 minus left p'ren 13.7 right p'ren equals"
+      "expected": "negative 24.15 minus left p'ren 13.7 right p'ren equals"
     },
     "Sample_3_sbrief": {
-      "speech": "negative 24.15 minus L p'ren 13.7 R p'ren equals"
+      "expected": "negative 24.15 minus L p'ren 13.7 R p'ren equals"
     },
     "Sample_4_default": {
-      "speech": "left parenthesis negative 4 right parenthesis times 3 equals negative 12"
+      "expected": "left parenthesis negative 4 right parenthesis times 3 equals negative 12"
     },
     "Sample_4_brief": {
-      "speech": "left p'ren negative 4 right p'ren times 3 equals negative 12"
+      "expected": "left p'ren negative 4 right p'ren times 3 equals negative 12"
     },
     "Sample_4_sbrief": {
-      "speech": "L p'ren negative 4 R p'ren times 3 equals negative 12"
+      "expected": "L p'ren negative 4 R p'ren times 3 equals negative 12"
     },
     "Sample_5_default": {
-      "speech": "negative 12 division sign 3 equals negative 4"
+      "expected": "negative 12 division sign 3 equals negative 4"
     },
     "Sample_5_brief": {
-      "speech": "negative 12 division sign 3 equals negative 4"
+      "expected": "negative 12 division sign 3 equals negative 4"
     },
     "Sample_5_sbrief": {
-      "speech": "negative 12 division sign 3 equals negative 4"
+      "expected": "negative 12 division sign 3 equals negative 4"
     },
     "Sample_6_default": {
-      "speech": "negative 12 division sign left parenthesis negative 4 right parenthesis equals 3"
+      "expected": "negative 12 division sign left parenthesis negative 4 right parenthesis equals 3"
     },
     "Sample_6_brief": {
-      "speech": "negative 12 division sign left p'ren negative 4 right p'ren equals 3"
+      "expected": "negative 12 division sign left p'ren negative 4 right p'ren equals 3"
     },
     "Sample_6_sbrief": {
-      "speech": "negative 12 division sign L p'ren negative 4 R p'ren equals 3"
+      "expected": "negative 12 division sign L p'ren negative 4 R p'ren equals 3"
     },
     "Sample_7_default": {
-      "speech": "6 times 5"
+      "expected": "6 times 5"
     },
     "Sample_7_brief": {
-      "speech": "6 times 5"
+      "expected": "6 times 5"
     },
     "Sample_7_sbrief": {
-      "speech": "6 times 5"
+      "expected": "6 times 5"
     },
     "Sample_8_default": {
-      "speech": "6 times left parenthesis negative 5 right parenthesis"
+      "expected": "6 times left parenthesis negative 5 right parenthesis"
     },
     "Sample_8_brief": {
-      "speech": "6 times left p'ren negative 5 right p'ren"
+      "expected": "6 times left p'ren negative 5 right p'ren"
     },
     "Sample_8_sbrief": {
-      "speech": "6 times L p'ren negative 5 R p'ren"
+      "expected": "6 times L p'ren negative 5 R p'ren"
     },
     "Sample_9_default": {
-      "speech": "negative 6 times 5"
+      "expected": "negative 6 times 5"
     },
     "Sample_9_brief": {
-      "speech": "negative 6 times 5"
+      "expected": "negative 6 times 5"
     },
     "Sample_9_sbrief": {
-      "speech": "negative 6 times 5"
+      "expected": "negative 6 times 5"
     },
     "Sample_10_default": {
-      "speech": "negative 6 times left parenthesis negative 5 right parenthesis"
+      "expected": "negative 6 times left parenthesis negative 5 right parenthesis"
     },
     "Sample_10_brief": {
-      "speech": "negative 6 times left p'ren negative 5 right p'ren"
+      "expected": "negative 6 times left p'ren negative 5 right p'ren"
     },
     "Sample_10_sbrief": {
-      "speech": "negative 6 times L p'ren negative 5 R p'ren"
+      "expected": "negative 6 times L p'ren negative 5 R p'ren"
     },
     "Sample_11_default": {
-      "speech": "negative 8 times 7"
+      "expected": "negative 8 times 7"
     },
     "Sample_11_brief": {
-      "speech": "negative 8 times 7"
+      "expected": "negative 8 times 7"
     },
     "Sample_11_sbrief": {
-      "speech": "negative 8 times 7"
+      "expected": "negative 8 times 7"
     },
     "Sample_12_default": {
-      "speech": "negative 8 times left parenthesis negative 7 right parenthesis"
+      "expected": "negative 8 times left parenthesis negative 7 right parenthesis"
     },
     "Sample_12_brief": {
-      "speech": "negative 8 times left p'ren negative 7 right p'ren"
+      "expected": "negative 8 times left p'ren negative 7 right p'ren"
     },
     "Sample_12_sbrief": {
-      "speech": "negative 8 times L p'ren negative 7 R p'ren"
+      "expected": "negative 8 times L p'ren negative 7 R p'ren"
     },
     "Sample_13_default": {
-      "speech": "8 times left parenthesis negative 7 right parenthesis"
+      "expected": "8 times left parenthesis negative 7 right parenthesis"
     },
     "Sample_13_brief": {
-      "speech": "8 times left p'ren negative 7 right p'ren"
+      "expected": "8 times left p'ren negative 7 right p'ren"
     },
     "Sample_13_sbrief": {
-      "speech": "8 times L p'ren negative 7 R p'ren"
+      "expected": "8 times L p'ren negative 7 R p'ren"
     },
     "Sample_14_default": {
-      "speech": "8 times 7"
+      "expected": "8 times 7"
     },
     "Sample_14_brief": {
-      "speech": "8 times 7"
+      "expected": "8 times 7"
     },
     "Sample_14_sbrief": {
-      "speech": "8 times 7"
+      "expected": "8 times 7"
     },
     "Sample_15_default": {
-      "speech": "m angle 1 equals 30 degree"
+      "expected": "m angle 1 equals 30 degree"
     },
     "Sample_15_brief": {
-      "speech": "m angle 1 equals 30 degree"
+      "expected": "m angle 1 equals 30 degree"
     },
     "Sample_15_sbrief": {
-      "speech": "m angle 1 equals 30 degree"
+      "expected": "m angle 1 equals 30 degree"
     },
     "Sample_16_default": {
-      "speech": "m angle 2 equals 60 degree"
+      "expected": "m angle 2 equals 60 degree"
     },
     "Sample_16_brief": {
-      "speech": "m angle 2 equals 60 degree"
+      "expected": "m angle 2 equals 60 degree"
     },
     "Sample_16_sbrief": {
-      "speech": "m angle 2 equals 60 degree"
+      "expected": "m angle 2 equals 60 degree"
     },
     "Sample_17_default": {
-      "speech": "m angle 1 plus m angle 2 equals 90 degree"
+      "expected": "m angle 1 plus m angle 2 equals 90 degree"
     },
     "Sample_17_brief": {
-      "speech": "m angle 1 plus m angle 2 equals 90 degree"
+      "expected": "m angle 1 plus m angle 2 equals 90 degree"
     },
     "Sample_17_sbrief": {
-      "speech": "m angle 1 plus m angle 2 equals 90 degree"
+      "expected": "m angle 1 plus m angle 2 equals 90 degree"
     },
     "Sample_18_default": {
-      "speech": "m angle upper M plus m angle upper N equals 180 degree"
+      "expected": "m angle upper M plus m angle upper N equals 180 degree"
     },
     "Sample_18_brief": {
-      "speech": "m angle upper M plus m angle upper N equals 180 degree"
+      "expected": "m angle upper M plus m angle upper N equals 180 degree"
     },
     "Sample_18_sbrief": {
-      "speech": "m angle upper M plus m angle upper N equals 180 degree"
+      "expected": "m angle upper M plus m angle upper N equals 180 degree"
     },
     "Sample_19_default": {
-      "speech": "upper A equals one half b h"
+      "expected": "upper A equals one half b h"
     },
     "Sample_19_brief": {
-      "speech": "upper A equals one half b h"
+      "expected": "upper A equals one half b h"
     },
     "Sample_19_sbrief": {
-      "speech": "upper A equals one half b h"
+      "expected": "upper A equals one half b h"
     },
     "Sample_20_default": {
-      "speech": "StartFraction area of triangle Over area of square EndFraction equals StartFraction 1 unit squared Over 16 units squared EndFraction"
+      "expected": "StartFraction area of triangle Over area of square EndFraction equals StartFraction 1 unit squared Over 16 units squared EndFraction"
     },
     "Sample_20_brief": {
-      "speech": "StartFrac area of triangle Over area of square EndFrac equals StartFrac 1 unit squared Over 16 units squared EndFrac"
+      "expected": "StartFrac area of triangle Over area of square EndFrac equals StartFrac 1 unit squared Over 16 units squared EndFrac"
     },
     "Sample_20_sbrief": {
-      "speech": "Frac area of triangle Over area of square EndFrac equals Frac 1 unit squared Over 16 units squared EndFrac"
+      "expected": "Frac area of triangle Over area of square EndFrac equals Frac 1 unit squared Over 16 units squared EndFrac"
     },
     "Sample_21_default": {
-      "speech": "0.6 squared"
+      "expected": "0.6 squared"
     },
     "Sample_21_brief": {
-      "speech": "0.6 squared"
+      "expected": "0.6 squared"
     },
     "Sample_21_sbrief": {
-      "speech": "0.6 squared"
+      "expected": "0.6 squared"
     },
     "Sample_22_default": {
-      "speech": "1.5 squared"
+      "expected": "1.5 squared"
     },
     "Sample_22_brief": {
-      "speech": "1.5 squared"
+      "expected": "1.5 squared"
     },
     "Sample_22_sbrief": {
-      "speech": "1.5 squared"
+      "expected": "1.5 squared"
     },
     "Sample_23_default": {
-      "speech": "4 left parenthesis 2 x plus 3 x right parenthesis"
+      "expected": "4 left parenthesis 2 x plus 3 x right parenthesis"
     },
     "Sample_23_brief": {
-      "speech": "4 left p'ren 2 x plus 3 x right p'ren"
+      "expected": "4 left p'ren 2 x plus 3 x right p'ren"
     },
     "Sample_23_sbrief": {
-      "speech": "4 L p'ren 2 x plus 3 x R p'ren"
+      "expected": "4 L p'ren 2 x plus 3 x R p'ren"
     },
     "Sample_24_default": {
-      "speech": "36 plus 4 y minus 1 y squared plus 5 y squared minus 2"
+      "expected": "36 plus 4 y minus 1 y squared plus 5 y squared minus 2"
     },
     "Sample_24_brief": {
-      "speech": "36 plus 4 y minus 1 y squared plus 5 y squared minus 2"
+      "expected": "36 plus 4 y minus 1 y squared plus 5 y squared minus 2"
     },
     "Sample_24_sbrief": {
-      "speech": "36 plus 4 y minus 1 y squared plus 5 y squared minus 2"
+      "expected": "36 plus 4 y minus 1 y squared plus 5 y squared minus 2"
     },
     "Sample_25_default": {
-      "speech": "left parenthesis 5 plus 9 right parenthesis minus 4 plus 3 equals"
+      "expected": "left parenthesis 5 plus 9 right parenthesis minus 4 plus 3 equals"
     },
     "Sample_25_brief": {
-      "speech": "left p'ren 5 plus 9 right p'ren minus 4 plus 3 equals"
+      "expected": "left p'ren 5 plus 9 right p'ren minus 4 plus 3 equals"
     },
     "Sample_25_sbrief": {
-      "speech": "L p'ren 5 plus 9 R p'ren minus 4 plus 3 equals"
+      "expected": "L p'ren 5 plus 9 R p'ren minus 4 plus 3 equals"
     },
     "Sample_26_default": {
-      "speech": "ModifyingAbove upper B upper C With left right arrow"
+      "expected": "ModifyingAbove upper B upper C With left right arrow"
     },
     "Sample_26_brief": {
-      "speech": "ModAbove upper B upper C With left right arrow"
+      "expected": "ModAbove upper B upper C With left right arrow"
     },
     "Sample_26_sbrief": {
-      "speech": "ModAbove upper B upper C With L R arrow"
+      "expected": "ModAbove upper B upper C With L R arrow"
     },
     "Sample_27_default": {
-      "speech": "ModifyingAbove upper P upper Q With right arrow"
+      "expected": "ModifyingAbove upper P upper Q With right arrow"
     },
     "Sample_27_brief": {
-      "speech": "ModAbove upper P upper Q With right arrow"
+      "expected": "ModAbove upper P upper Q With right arrow"
     },
     "Sample_27_sbrief": {
-      "speech": "ModAbove upper P upper Q With R arrow"
+      "expected": "ModAbove upper P upper Q With R arrow"
     },
     "Sample_28_default": {
-      "speech": "ModifyingAbove upper G upper H With bar"
+      "expected": "ModifyingAbove upper G upper H With bar"
     },
     "Sample_28_brief": {
-      "speech": "ModAbove upper G upper H With bar"
+      "expected": "ModAbove upper G upper H With bar"
     },
     "Sample_28_sbrief": {
-      "speech": "ModAbove upper G upper H With bar"
+      "expected": "ModAbove upper G upper H With bar"
     },
     "Sample_29_default": {
-      "speech": "ModifyingAbove upper W upper X With bar approximately equals ModifyingAbove upper Y upper Z With bar"
+      "expected": "ModifyingAbove upper W upper X With bar approximately equals ModifyingAbove upper Y upper Z With bar"
     },
     "Sample_29_brief": {
-      "speech": "ModAbove upper W upper X With bar approximately equals ModAbove upper Y upper Z With bar"
+      "expected": "ModAbove upper W upper X With bar approximately equals ModAbove upper Y upper Z With bar"
     },
     "Sample_29_sbrief": {
-      "speech": "ModAbove upper W upper X With bar approximately equals ModAbove upper Y upper Z With bar"
+      "expected": "ModAbove upper W upper X With bar approximately equals ModAbove upper Y upper Z With bar"
     },
     "Sample_30_default": {
-      "speech": "angle upper B upper E upper F"
+      "expected": "angle upper B upper E upper F"
     },
     "Sample_30_brief": {
-      "speech": "angle upper B upper E upper F"
+      "expected": "angle upper B upper E upper F"
     },
     "Sample_30_sbrief": {
-      "speech": "angle upper B upper E upper F"
+      "expected": "angle upper B upper E upper F"
     },
     "Sample_31_default": {
-      "speech": "angle upper B upper E upper D"
+      "expected": "angle upper B upper E upper D"
     },
     "Sample_31_brief": {
-      "speech": "angle upper B upper E upper D"
+      "expected": "angle upper B upper E upper D"
     },
     "Sample_31_sbrief": {
-      "speech": "angle upper B upper E upper D"
+      "expected": "angle upper B upper E upper D"
     },
     "Sample_32_default": {
-      "speech": "angle upper D upper E upper F"
+      "expected": "angle upper D upper E upper F"
     },
     "Sample_32_brief": {
-      "speech": "angle upper D upper E upper F"
+      "expected": "angle upper D upper E upper F"
     },
     "Sample_32_sbrief": {
-      "speech": "angle upper D upper E upper F"
+      "expected": "angle upper D upper E upper F"
     },
     "Sample_33_default": {
-      "speech": "x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction"
+      "expected": "x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction"
     },
     "Sample_33_brief": {
-      "speech": "x equals StartFrac negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFrac"
+      "expected": "x equals StartFrac negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFrac"
     },
     "Sample_33_sbrief": {
-      "speech": "x equals Frac negative b plus or minus Root b squared minus 4 a c EndRoot Over 2 a EndFrac"
+      "expected": "x equals Frac negative b plus or minus Root b squared minus 4 a c EndRoot Over 2 a EndFrac"
     },
     "Sample_34_default": {
-      "speech": "y equals x squared plus 8 x plus 16"
+      "expected": "y equals x squared plus 8 x plus 16"
     },
     "Sample_34_brief": {
-      "speech": "y equals x squared plus 8 x plus 16"
+      "expected": "y equals x squared plus 8 x plus 16"
     },
     "Sample_34_sbrief": {
-      "speech": "y equals x squared plus 8 x plus 16"
+      "expected": "y equals x squared plus 8 x plus 16"
     },
     "Sample_35_default": {
-      "speech": "y equals one third left parenthesis 3 Superscript x Baseline right parenthesis"
+      "expected": "y equals one third left parenthesis 3 Superscript x Baseline right parenthesis"
     },
     "Sample_35_brief": {
-      "speech": "y equals one third left p'ren 3 Sup x Base right p'ren"
+      "expected": "y equals one third left p'ren 3 Sup x Base right p'ren"
     },
     "Sample_35_sbrief": {
-      "speech": "y equals one third L p'ren 3 Sup x Base R p'ren"
+      "expected": "y equals one third L p'ren 3 Sup x Base R p'ren"
     },
     "Sample_36_default": {
-      "speech": "y equals 10 minus 2 x"
+      "expected": "y equals 10 minus 2 x"
     },
     "Sample_36_brief": {
-      "speech": "y equals 10 minus 2 x"
+      "expected": "y equals 10 minus 2 x"
     },
     "Sample_36_sbrief": {
-      "speech": "y equals 10 minus 2 x"
+      "expected": "y equals 10 minus 2 x"
     },
     "Sample_37_default": {
-      "speech": "y equals 2 x cubed plus 5"
+      "expected": "y equals 2 x cubed plus 5"
     },
     "Sample_37_brief": {
-      "speech": "y equals 2 x cubed plus 5"
+      "expected": "y equals 2 x cubed plus 5"
     },
     "Sample_37_sbrief": {
-      "speech": "y equals 2 x cubed plus 5"
+      "expected": "y equals 2 x cubed plus 5"
     },
     "Sample_38_default": {
-      "speech": "y equals left parenthesis x squared plus 1 right parenthesis left parenthesis x squared plus 3 right parenthesis"
+      "expected": "y equals left parenthesis x squared plus 1 right parenthesis left parenthesis x squared plus 3 right parenthesis"
     },
     "Sample_38_brief": {
-      "speech": "y equals left p'ren x squared plus 1 right p'ren left p'ren x squared plus 3 right p'ren"
+      "expected": "y equals left p'ren x squared plus 1 right p'ren left p'ren x squared plus 3 right p'ren"
     },
     "Sample_38_sbrief": {
-      "speech": "y equals L p'ren x squared plus 1 R p'ren L p'ren x squared plus 3 R p'ren"
+      "expected": "y equals L p'ren x squared plus 1 R p'ren L p'ren x squared plus 3 R p'ren"
     },
     "Sample_39_default": {
-      "speech": "y equals 0.5 Superscript x"
+      "expected": "y equals 0.5 Superscript x"
     },
     "Sample_39_brief": {
-      "speech": "y equals 0.5 Sup x"
+      "expected": "y equals 0.5 Sup x"
     },
     "Sample_39_sbrief": {
-      "speech": "y equals 0.5 Sup x"
+      "expected": "y equals 0.5 Sup x"
     },
     "Sample_40_default": {
-      "speech": "y equals 22 minus 2 x"
+      "expected": "y equals 22 minus 2 x"
     },
     "Sample_40_brief": {
-      "speech": "y equals 22 minus 2 x"
+      "expected": "y equals 22 minus 2 x"
     },
     "Sample_40_sbrief": {
-      "speech": "y equals 22 minus 2 x"
+      "expected": "y equals 22 minus 2 x"
     },
     "Sample_41_default": {
-      "speech": "y equals StartFraction 3 Over x EndFraction"
+      "expected": "y equals StartFraction 3 Over x EndFraction"
     },
     "Sample_41_brief": {
-      "speech": "y equals StartFrac 3 Over x EndFrac"
+      "expected": "y equals StartFrac 3 Over x EndFrac"
     },
     "Sample_41_sbrief": {
-      "speech": "y equals Frac 3 Over x EndFrac"
+      "expected": "y equals Frac 3 Over x EndFrac"
     },
     "Sample_42_default": {
-      "speech": "y equals left parenthesis x plus 4 right parenthesis left parenthesis x plus 4 right parenthesis"
+      "expected": "y equals left parenthesis x plus 4 right parenthesis left parenthesis x plus 4 right parenthesis"
     },
     "Sample_42_brief": {
-      "speech": "y equals left p'ren x plus 4 right p'ren left p'ren x plus 4 right p'ren"
+      "expected": "y equals left p'ren x plus 4 right p'ren left p'ren x plus 4 right p'ren"
     },
     "Sample_42_sbrief": {
-      "speech": "y equals L p'ren x plus 4 R p'ren L p'ren x plus 4 R p'ren"
+      "expected": "y equals L p'ren x plus 4 R p'ren L p'ren x plus 4 R p'ren"
     },
     "Sample_43_default": {
-      "speech": "y equals left parenthesis 4 x minus 3 right parenthesis left parenthesis x plus 1 right parenthesis"
+      "expected": "y equals left parenthesis 4 x minus 3 right parenthesis left parenthesis x plus 1 right parenthesis"
     },
     "Sample_43_brief": {
-      "speech": "y equals left p'ren 4 x minus 3 right p'ren left p'ren x plus 1 right p'ren"
+      "expected": "y equals left p'ren 4 x minus 3 right p'ren left p'ren x plus 1 right p'ren"
     },
     "Sample_43_sbrief": {
-      "speech": "y equals L p'ren 4 x minus 3 R p'ren L p'ren x plus 1 R p'ren"
+      "expected": "y equals L p'ren 4 x minus 3 R p'ren L p'ren x plus 1 R p'ren"
     },
     "Sample_44_default": {
-      "speech": "y equals 20 x minus 4 x squared"
+      "expected": "y equals 20 x minus 4 x squared"
     },
     "Sample_44_brief": {
-      "speech": "y equals 20 x minus 4 x squared"
+      "expected": "y equals 20 x minus 4 x squared"
     },
     "Sample_44_sbrief": {
-      "speech": "y equals 20 x minus 4 x squared"
+      "expected": "y equals 20 x minus 4 x squared"
     },
     "Sample_45_default": {
-      "speech": "y equals x squared"
+      "expected": "y equals x squared"
     },
     "Sample_45_brief": {
-      "speech": "y equals x squared"
+      "expected": "y equals x squared"
     },
     "Sample_45_sbrief": {
-      "speech": "y equals x squared"
+      "expected": "y equals x squared"
     },
     "Sample_46_default": {
-      "speech": "y equals 3 Superscript x minus 1"
+      "expected": "y equals 3 Superscript x minus 1"
     },
     "Sample_46_brief": {
-      "speech": "y equals 3 Sup x minus 1"
+      "expected": "y equals 3 Sup x minus 1"
     },
     "Sample_46_sbrief": {
-      "speech": "y equals 3 Sup x minus 1"
+      "expected": "y equals 3 Sup x minus 1"
     },
     "Sample_47_default": {
-      "speech": "y equals 16 minus 2 left parenthesis x plus 3 right parenthesis"
+      "expected": "y equals 16 minus 2 left parenthesis x plus 3 right parenthesis"
     },
     "Sample_47_brief": {
-      "speech": "y equals 16 minus 2 left p'ren x plus 3 right p'ren"
+      "expected": "y equals 16 minus 2 left p'ren x plus 3 right p'ren"
     },
     "Sample_47_sbrief": {
-      "speech": "y equals 16 minus 2 L p'ren x plus 3 R p'ren"
+      "expected": "y equals 16 minus 2 L p'ren x plus 3 R p'ren"
     },
     "Sample_48_default": {
-      "speech": "y equals 4 x squared minus x minus 3"
+      "expected": "y equals 4 x squared minus x minus 3"
     },
     "Sample_48_brief": {
-      "speech": "y equals 4 x squared minus x minus 3"
+      "expected": "y equals 4 x squared minus x minus 3"
     },
     "Sample_48_sbrief": {
-      "speech": "y equals 4 x squared minus x minus 3"
+      "expected": "y equals 4 x squared minus x minus 3"
     },
     "Sample_49_default": {
-      "speech": "y equals x plus StartFraction 1 Over x EndFraction"
+      "expected": "y equals x plus StartFraction 1 Over x EndFraction"
     },
     "Sample_49_brief": {
-      "speech": "y equals x plus StartFrac 1 Over x EndFrac"
+      "expected": "y equals x plus StartFrac 1 Over x EndFrac"
     },
     "Sample_49_sbrief": {
-      "speech": "y equals x plus Frac 1 Over x EndFrac"
+      "expected": "y equals x plus Frac 1 Over x EndFrac"
     },
     "Sample_50_default": {
-      "speech": "y equals 4 x left parenthesis 5 minus x right parenthesis"
+      "expected": "y equals 4 x left parenthesis 5 minus x right parenthesis"
     },
     "Sample_50_brief": {
-      "speech": "y equals 4 x left p'ren 5 minus x right p'ren"
+      "expected": "y equals 4 x left p'ren 5 minus x right p'ren"
     },
     "Sample_50_sbrief": {
-      "speech": "y equals 4 x L p'ren 5 minus x R p'ren"
+      "expected": "y equals 4 x L p'ren 5 minus x R p'ren"
     },
     "Sample_51_default": {
-      "speech": "y equals 2 left parenthesis x minus 3 right parenthesis plus 6 left parenthesis 1 minus x right parenthesis"
+      "expected": "y equals 2 left parenthesis x minus 3 right parenthesis plus 6 left parenthesis 1 minus x right parenthesis"
     },
     "Sample_51_brief": {
-      "speech": "y equals 2 left p'ren x minus 3 right p'ren plus 6 left p'ren 1 minus x right p'ren"
+      "expected": "y equals 2 left p'ren x minus 3 right p'ren plus 6 left p'ren 1 minus x right p'ren"
     },
     "Sample_51_sbrief": {
-      "speech": "y equals 2 L p'ren x minus 3 R p'ren plus 6 L p'ren 1 minus x R p'ren"
+      "expected": "y equals 2 L p'ren x minus 3 R p'ren plus 6 L p'ren 1 minus x R p'ren"
     },
     "Sample_52_default": {
-      "speech": "0.25 greater than five sixteenths"
+      "expected": "0.25 greater than five sixteenths"
     },
     "Sample_52_brief": {
-      "speech": "0.25 greater than five sixteenths"
+      "expected": "0.25 greater than five sixteenths"
     },
     "Sample_52_sbrief": {
-      "speech": "0.25 greater than five sixteenths"
+      "expected": "0.25 greater than five sixteenths"
     },
     "Sample_53_default": {
-      "speech": "32 dot left parenthesis 5 dot 7 right parenthesis"
+      "expected": "32 dot left parenthesis 5 dot 7 right parenthesis"
     },
     "Sample_53_brief": {
-      "speech": "32 dot left p'ren 5 dot 7 right p'ren"
+      "expected": "32 dot left p'ren 5 dot 7 right p'ren"
     },
     "Sample_53_sbrief": {
-      "speech": "32 dot L p'ren 5 dot 7 R p'ren"
+      "expected": "32 dot L p'ren 5 dot 7 R p'ren"
     },
     "Sample_54_default": {
-      "speech": "left parenthesis one half times one half times pi times 2 right parenthesis plus left parenthesis 2 times one half times pi times 5 right parenthesis"
+      "expected": "left parenthesis one half times one half times pi times 2 right parenthesis plus left parenthesis 2 times one half times pi times 5 right parenthesis"
     },
     "Sample_54_brief": {
-      "speech": "left p'ren one half times one half times pi times 2 right p'ren plus left p'ren 2 times one half times pi times 5 right p'ren"
+      "expected": "left p'ren one half times one half times pi times 2 right p'ren plus left p'ren 2 times one half times pi times 5 right p'ren"
     },
     "Sample_54_sbrief": {
-      "speech": "L p'ren one half times one half times pi times 2 R p'ren plus L p'ren 2 times one half times pi times 5 R p'ren"
+      "expected": "L p'ren one half times one half times pi times 2 R p'ren plus L p'ren 2 times one half times pi times 5 R p'ren"
     },
     "Sample_55_default": {
-      "speech": "liminf Underscript n right arrow infinity Endscripts upper E Subscript n Baseline equals union Underscript n greater than or equals 1 Endscripts intersection Underscript k greater than or equals n Endscripts upper E Subscript k Baseline comma limsup Underscript n right arrow infinity Endscripts upper E Subscript n Baseline equals intersection Underscript n greater than or equals 1 Endscripts union Underscript k greater than or equals n Endscripts upper E Subscript k Baseline period"
+      "expected": "liminf Underscript n right arrow infinity Endscripts upper E Subscript n Baseline equals union Underscript n greater than or equals 1 Endscripts intersection Underscript k greater than or equals n Endscripts upper E Subscript k Baseline comma limsup Underscript n right arrow infinity Endscripts upper E Subscript n Baseline equals intersection Underscript n greater than or equals 1 Endscripts union Underscript k greater than or equals n Endscripts upper E Subscript k Baseline period"
     },
     "Sample_55_brief": {
-      "speech": "liminf Underscript n right arrow infinity Endscripts upper E Sub n Base equals union Underscript n greater than or equals 1 Endscripts intersection Underscript k greater than or equals n Endscripts upper E Sub k Base comma limsup Underscript n right arrow infinity Endscripts upper E Sub n Base equals intersection Underscript n greater than or equals 1 Endscripts union Underscript k greater than or equals n Endscripts upper E Sub k Base period"
+      "expected": "liminf Underscript n right arrow infinity Endscripts upper E Sub n Base equals union Underscript n greater than or equals 1 Endscripts intersection Underscript k greater than or equals n Endscripts upper E Sub k Base comma limsup Underscript n right arrow infinity Endscripts upper E Sub n Base equals intersection Underscript n greater than or equals 1 Endscripts union Underscript k greater than or equals n Endscripts upper E Sub k Base period"
     },
     "Sample_55_sbrief": {
-      "speech": "liminf Underscript n R arrow infinity Endscripts upper E Sub n Base equals union Underscript n greater than or equals 1 Endscripts intersection Underscript k greater than or equals n Endscripts upper E Sub k Base comma limsup Underscript n R arrow infinity Endscripts upper E Sub n Base equals intersection Underscript n greater than or equals 1 Endscripts union Underscript k greater than or equals n Endscripts upper E Sub k Base period"
+      "expected": "liminf Underscript n R arrow infinity Endscripts upper E Sub n Base equals union Underscript n greater than or equals 1 Endscripts intersection Underscript k greater than or equals n Endscripts upper E Sub k Base comma limsup Underscript n R arrow infinity Endscripts upper E Sub n Base equals intersection Underscript n greater than or equals 1 Endscripts union Underscript k greater than or equals n Endscripts upper E Sub k Base period"
     },
     "Sample_56_default": {
-      "speech": "StartLayout 1st Row 1st Column left parenthesis i right parenthesis 2nd Column script upper S element of script upper A semicolon 2nd Row 1st Column left parenthesis ii right parenthesis 2nd Column if upper E element of script upper A then upper E overbar element of script upper A semicolon 3rd Row 1st Column left parenthesis iii right parenthesis 2nd Column if upper E 1 comma upper E 2 element of script upper A then upper E 1 union upper E 2 element of script upper A period EndLayout"
+      "expected": "StartLayout 1st Row 1st Column left parenthesis i right parenthesis 2nd Column script upper S element of script upper A semicolon 2nd Row 1st Column left parenthesis ii right parenthesis 2nd Column if upper E element of script upper A then upper E overbar element of script upper A semicolon 3rd Row 1st Column left parenthesis iii right parenthesis 2nd Column if upper E 1 comma upper E 2 element of script upper A then upper E 1 union upper E 2 element of script upper A period EndLayout"
     },
     "Sample_56_brief": {
-      "speech": "StartLayout 1st Row 1st Column left p'ren i right p'ren 2nd Column script upper S element of script upper A semicolon 2nd Row 1st Column left p'ren ii right p'ren 2nd Column if upper E element of script upper A then upper E overBar element of script upper A semicolon 3rd Row 1st Column left p'ren iii right p'ren 2nd Column if upper E 1 comma upper E 2 element of script upper A then upper E 1 union upper E 2 element of script upper A period EndLayout"
+      "expected": "StartLayout 1st Row 1st Column left p'ren i right p'ren 2nd Column script upper S element of script upper A semicolon 2nd Row 1st Column left p'ren ii right p'ren 2nd Column if upper E element of script upper A then upper E overBar element of script upper A semicolon 3rd Row 1st Column left p'ren iii right p'ren 2nd Column if upper E 1 comma upper E 2 element of script upper A then upper E 1 union upper E 2 element of script upper A period EndLayout"
     },
     "Sample_56_sbrief": {
-      "speech": "Layout 1st Row 1st Column L p'ren i R p'ren 2nd Column script upper S element of script upper A semicolon 2nd Row 1st Column L p'ren ii R p'ren 2nd Column if upper E element of script upper A then upper E overBar element of script upper A semicolon 3rd Row 1st Column L p'ren iii R p'ren 2nd Column if upper E 1 comma upper E 2 element of script upper A then upper E 1 union upper E 2 element of script upper A period EndLayout"
+      "expected": "Layout 1st Row 1st Column L p'ren i R p'ren 2nd Column script upper S element of script upper A semicolon 2nd Row 1st Column L p'ren ii R p'ren 2nd Column if upper E element of script upper A then upper E overBar element of script upper A semicolon 3rd Row 1st Column L p'ren iii R p'ren 2nd Column if upper E 1 comma upper E 2 element of script upper A then upper E 1 union upper E 2 element of script upper A period EndLayout"
     },
     "Sample_57_default": {
-      "speech": "StartLayout 1st Row 1st Column Blank 2nd Column Blank 3rd Column left parenthesis normal upper A period 1 right parenthesis upper I f upper A element of script upper F t h e n 0 less than or equals upper P left brace upper A right brace less than or equals 1 period 4th Column left parenthesis 1 right parenthesis 2nd Row 1st Column Blank 2nd Column Blank 3rd Column left parenthesis normal upper A period 2 right parenthesis upper P left brace script upper S right brace equals 1 period 4th Column left parenthesis 2 right parenthesis 3rd Row 1st Column Blank 2nd Column Blank 3rd Column left parenthesis normal upper A period 3 right parenthesis upper I f left brace upper E Subscript n Baseline comma n greater than or equals 1 right brace element of script upper F is a sequence of disjoint 4th Column left parenthesis 3 right parenthesis EndLayout"
+      "expected": "StartLayout 1st Row 1st Column Blank 2nd Column Blank 3rd Column left parenthesis normal upper A period 1 right parenthesis upper I f upper A element of script upper F t h e n 0 less than or equals upper P left brace upper A right brace less than or equals 1 period 4th Column left parenthesis 1 right parenthesis 2nd Row 1st Column Blank 2nd Column Blank 3rd Column left parenthesis normal upper A period 2 right parenthesis upper P left brace script upper S right brace equals 1 period 4th Column left parenthesis 2 right parenthesis 3rd Row 1st Column Blank 2nd Column Blank 3rd Column left parenthesis normal upper A period 3 right parenthesis upper I f left brace upper E Subscript n Baseline comma n greater than or equals 1 right brace element of script upper F is a sequence of disjoint 4th Column left parenthesis 3 right parenthesis EndLayout"
     },
     "Sample_57_brief": {
-      "speech": "StartLayout 1st Row 1st Column Blank 2nd Column Blank 3rd Column left p'ren normal upper A period 1 right p'ren upper I f upper A element of script upper F t h e n 0 less than or equals upper P left brace upper A right brace less than or equals 1 period 4th Column left p'ren 1 right p'ren 2nd Row 1st Column Blank 2nd Column Blank 3rd Column left p'ren normal upper A period 2 right p'ren upper P left brace script upper S right brace equals 1 period 4th Column left p'ren 2 right p'ren 3rd Row 1st Column Blank 2nd Column Blank 3rd Column left p'ren normal upper A period 3 right p'ren upper I f left brace upper E Sub n Base comma n greater than or equals 1 right brace element of script upper F is a sequence of disjoint 4th Column left p'ren 3 right p'ren EndLayout"
+      "expected": "StartLayout 1st Row 1st Column Blank 2nd Column Blank 3rd Column left p'ren normal upper A period 1 right p'ren upper I f upper A element of script upper F t h e n 0 less than or equals upper P left brace upper A right brace less than or equals 1 period 4th Column left p'ren 1 right p'ren 2nd Row 1st Column Blank 2nd Column Blank 3rd Column left p'ren normal upper A period 2 right p'ren upper P left brace script upper S right brace equals 1 period 4th Column left p'ren 2 right p'ren 3rd Row 1st Column Blank 2nd Column Blank 3rd Column left p'ren normal upper A period 3 right p'ren upper I f left brace upper E Sub n Base comma n greater than or equals 1 right brace element of script upper F is a sequence of disjoint 4th Column left p'ren 3 right p'ren EndLayout"
     },
     "Sample_57_sbrief": {
-      "speech": "Layout 1st Row 1st Column Blank 2nd Column Blank 3rd Column L p'ren normal upper A period 1 R p'ren upper I f upper A element of script upper F t h e n 0 less than or equals upper P L brace upper A R brace less than or equals 1 period 4th Column L p'ren 1 R p'ren 2nd Row 1st Column Blank 2nd Column Blank 3rd Column L p'ren normal upper A period 2 R p'ren upper P L brace script upper S R brace equals 1 period 4th Column L p'ren 2 R p'ren 3rd Row 1st Column Blank 2nd Column Blank 3rd Column L p'ren normal upper A period 3 R p'ren upper I f L brace upper E Sub n Base comma n greater than or equals 1 R brace element of script upper F is a sequence of disjoint 4th Column L p'ren 3 R p'ren EndLayout"
+      "expected": "Layout 1st Row 1st Column Blank 2nd Column Blank 3rd Column L p'ren normal upper A period 1 R p'ren upper I f upper A element of script upper F t h e n 0 less than or equals upper P L brace upper A R brace less than or equals 1 period 4th Column L p'ren 1 R p'ren 2nd Row 1st Column Blank 2nd Column Blank 3rd Column L p'ren normal upper A period 2 R p'ren upper P L brace script upper S R brace equals 1 period 4th Column L p'ren 2 R p'ren 3rd Row 1st Column Blank 2nd Column Blank 3rd Column L p'ren normal upper A period 3 R p'ren upper I f L brace upper E Sub n Base comma n greater than or equals 1 R brace element of script upper F is a sequence of disjoint 4th Column L p'ren 3 R p'ren EndLayout"
     },
     "Sample_58_default": {
-      "speech": "upper P left brace upper B Subscript j Baseline vertical bar upper A right brace equals StartFraction upper P left brace upper B Subscript j Baseline right brace upper P left brace upper A vertical bar upper B Subscript j Baseline right brace Over sigma summation Underscript j prime element of upper J Endscripts upper P left brace upper B Subscript j prime Baseline right brace upper P left brace upper A vertical bar upper B Subscript j prime Baseline right brace EndFraction period"
+      "expected": "upper P left brace upper B Subscript j Baseline vertical bar upper A right brace equals StartFraction upper P left brace upper B Subscript j Baseline right brace upper P left brace upper A vertical bar upper B Subscript j Baseline right brace Over sigma summation Underscript j prime element of upper J Endscripts upper P left brace upper B Subscript j prime Baseline right brace upper P left brace upper A vertical bar upper B Subscript j prime Baseline right brace EndFraction period"
     },
     "Sample_58_brief": {
-      "speech": "upper P left brace upper B Sub j Base vertical bar upper A right brace equals StartFrac upper P left brace upper B Sub j Base right brace upper P left brace upper A vertical bar upper B Sub j Base right brace Over sigma summation Underscript j prime element of upper J Endscripts upper P left brace upper B Sub j prime Base right brace upper P left brace upper A vertical bar upper B Sub j prime Base right brace EndFrac period"
+      "expected": "upper P left brace upper B Sub j Base vertical bar upper A right brace equals StartFrac upper P left brace upper B Sub j Base right brace upper P left brace upper A vertical bar upper B Sub j Base right brace Over sigma summation Underscript j prime element of upper J Endscripts upper P left brace upper B Sub j prime Base right brace upper P left brace upper A vertical bar upper B Sub j prime Base right brace EndFrac period"
     },
     "Sample_58_sbrief": {
-      "speech": "upper P L brace upper B Sub j Base vertical bar upper A R brace equals Frac upper P L brace upper B Sub j Base R brace upper P L brace upper A vertical bar upper B Sub j Base R brace Over sigma summation Underscript j prime element of upper J Endscripts upper P L brace upper B Sub j prime Base R brace upper P L brace upper A vertical bar upper B Sub j prime Base R brace EndFrac period"
+      "expected": "upper P L brace upper B Sub j Base vertical bar upper A R brace equals Frac upper P L brace upper B Sub j Base R brace upper P L brace upper A vertical bar upper B Sub j Base R brace Over sigma summation Underscript j prime element of upper J Endscripts upper P L brace upper B Sub j prime Base R brace upper P L brace upper A vertical bar upper B Sub j prime Base R brace EndFrac period"
     },
     "Sample_59_default": {
-      "speech": "mu 1 left parenthesis upper B right parenthesis equals integral Underscript upper B Endscripts f left parenthesis x right parenthesis d mu 2 left parenthesis x right parenthesis"
+      "expected": "mu 1 left parenthesis upper B right parenthesis equals integral Underscript upper B Endscripts f left parenthesis x right parenthesis d mu 2 left parenthesis x right parenthesis"
     },
     "Sample_59_brief": {
-      "speech": "mu 1 left p'ren upper B right p'ren equals integral Underscript upper B Endscripts f left p'ren x right p'ren d mu 2 left p'ren x right p'ren"
+      "expected": "mu 1 left p'ren upper B right p'ren equals integral Underscript upper B Endscripts f left p'ren x right p'ren d mu 2 left p'ren x right p'ren"
     },
     "Sample_59_sbrief": {
-      "speech": "mu 1 L p'ren upper B R p'ren equals integral Underscript upper B Endscripts f L p'ren x R p'ren d mu 2 L p'ren x R p'ren"
+      "expected": "mu 1 L p'ren upper B R p'ren equals integral Underscript upper B Endscripts f L p'ren x R p'ren d mu 2 L p'ren x R p'ren"
     },
     "Sample_60_default": {
-      "speech": "limit Underscript n right arrow infinity Endscripts upper E left brace StartAbsoluteValue upper X Subscript n Baseline minus upper X EndAbsoluteValue right brace equals upper E left brace limit Underscript n right arrow infinity Endscripts StartAbsoluteValue upper X Subscript n Baseline minus upper X EndAbsoluteValue right brace equals 0 period"
+      "expected": "limit Underscript n right arrow infinity Endscripts upper E left brace StartAbsoluteValue upper X Subscript n Baseline minus upper X EndAbsoluteValue right brace equals upper E left brace limit Underscript n right arrow infinity Endscripts StartAbsoluteValue upper X Subscript n Baseline minus upper X EndAbsoluteValue right brace equals 0 period"
     },
     "Sample_60_brief": {
-      "speech": "limit Underscript n right arrow infinity Endscripts upper E left brace StartAbsoluteValue upper X Sub n Base minus upper X EndAbsoluteValue right brace equals upper E left brace limit Underscript n right arrow infinity Endscripts StartAbsoluteValue upper X Sub n Base minus upper X EndAbsoluteValue right brace equals 0 period"
+      "expected": "limit Underscript n right arrow infinity Endscripts upper E left brace StartAbsoluteValue upper X Sub n Base minus upper X EndAbsoluteValue right brace equals upper E left brace limit Underscript n right arrow infinity Endscripts StartAbsoluteValue upper X Sub n Base minus upper X EndAbsoluteValue right brace equals 0 period"
     },
     "Sample_60_sbrief": {
-      "speech": "limit Underscript n R arrow infinity Endscripts upper E L brace AbsoluteValue upper X Sub n Base minus upper X EndAbsoluteValue R brace equals upper E L brace limit Underscript n R arrow infinity Endscripts AbsoluteValue upper X Sub n Base minus upper X EndAbsoluteValue R brace equals 0 period"
+      "expected": "limit Underscript n R arrow infinity Endscripts upper E L brace AbsoluteValue upper X Sub n Base minus upper X EndAbsoluteValue R brace equals upper E L brace limit Underscript n R arrow infinity Endscripts AbsoluteValue upper X Sub n Base minus upper X EndAbsoluteValue R brace equals 0 period"
     },
     "Sample_61_default": {
-      "speech": "StartLayout 1st Row 1st Column upper P Subscript mu comma sigma Baseline left brace upper Y greater than or equals l Subscript beta Baseline left parenthesis upper Y overbar Subscript n Baseline comma upper S Subscript n Baseline right parenthesis right brace equals upper P Subscript mu comma sigma Baseline left brace left parenthesis upper Y minus upper Y overbar Subscript n Baseline right parenthesis slash left parenthesis upper S dot left parenthesis 1 plus StartFraction 1 Over n EndFraction right parenthesis Superscript 1 slash 2 Baseline right parenthesis greater than or equals minus t Subscript beta Baseline left bracket n minus 1 right bracket right brace equals beta comma 2nd Row 1st Column Blank 2nd Column left parenthesis 1 right parenthesis EndLayout"
+      "expected": "StartLayout 1st Row 1st Column upper P Subscript mu comma sigma Baseline left brace upper Y greater than or equals l Subscript beta Baseline left parenthesis upper Y overbar Subscript n Baseline comma upper S Subscript n Baseline right parenthesis right brace equals upper P Subscript mu comma sigma Baseline left brace left parenthesis upper Y minus upper Y overbar Subscript n Baseline right parenthesis slash left parenthesis upper S dot left parenthesis 1 plus StartFraction 1 Over n EndFraction right parenthesis Superscript 1 slash 2 Baseline right parenthesis greater than or equals minus t Subscript beta Baseline left bracket n minus 1 right bracket right brace equals beta comma 2nd Row 1st Column Blank 2nd Column left parenthesis 1 right parenthesis EndLayout"
     },
     "Sample_61_brief": {
-      "speech": "StartLayout 1st Row 1st Column upper P Sub mu comma sigma Base left brace upper Y greater than or equals l Sub beta Base left p'ren upper Y overBar Sub n Base comma upper S Sub n Base right p'ren right brace equals upper P Sub mu comma sigma Base left brace left p'ren upper Y minus upper Y overBar Sub n Base right p'ren slash left p'ren upper S dot left p'ren 1 plus StartFrac 1 Over n EndFrac right p'ren Sup 1 slash 2 Base right p'ren greater than or equals minus t Sub beta Base left brack n minus 1 right brack right brace equals beta comma 2nd Row 1st Column Blank 2nd Column left p'ren 1 right p'ren EndLayout"
+      "expected": "StartLayout 1st Row 1st Column upper P Sub mu comma sigma Base left brace upper Y greater than or equals l Sub beta Base left p'ren upper Y overBar Sub n Base comma upper S Sub n Base right p'ren right brace equals upper P Sub mu comma sigma Base left brace left p'ren upper Y minus upper Y overBar Sub n Base right p'ren slash left p'ren upper S dot left p'ren 1 plus StartFrac 1 Over n EndFrac right p'ren Sup 1 slash 2 Base right p'ren greater than or equals minus t Sub beta Base left brack n minus 1 right brack right brace equals beta comma 2nd Row 1st Column Blank 2nd Column left p'ren 1 right p'ren EndLayout"
     },
     "Sample_61_sbrief": {
-      "speech": "Layout 1st Row 1st Column upper P Sub mu comma sigma Base L brace upper Y greater than or equals l Sub beta Base L p'ren upper Y overBar Sub n Base comma upper S Sub n Base R p'ren R brace equals upper P Sub mu comma sigma Base L brace L p'ren upper Y minus upper Y overBar Sub n Base R p'ren slash L p'ren upper S dot L p'ren 1 plus Frac 1 Over n EndFrac R p'ren Sup 1 slash 2 Base R p'ren greater than or equals minus t Sub beta Base L brack n minus 1 R brack R brace equals beta comma 2nd Row 1st Column Blank 2nd Column L p'ren 1 R p'ren EndLayout"
+      "expected": "Layout 1st Row 1st Column upper P Sub mu comma sigma Base L brace upper Y greater than or equals l Sub beta Base L p'ren upper Y overBar Sub n Base comma upper S Sub n Base R p'ren R brace equals upper P Sub mu comma sigma Base L brace L p'ren upper Y minus upper Y overBar Sub n Base R p'ren slash L p'ren upper S dot L p'ren 1 plus Frac 1 Over n EndFrac R p'ren Sup 1 slash 2 Base R p'ren greater than or equals minus t Sub beta Base L brack n minus 1 R brack R brace equals beta comma 2nd Row 1st Column Blank 2nd Column L p'ren 1 R p'ren EndLayout"
     },
     "Sample_62_default": {
-      "speech": "upper L equals Start 5 By 6 Matrix 1st Row 1st Column 1 2nd Column negative 1 3rd Column Blank 4th Column Blank 5th Column Blank 6th Column Blank 2nd Row 1st Column Blank 2nd Column 1 3rd Column negative 1 4th Column Blank 5th Column 0 6th Column Blank 3rd Row 1st Column Blank 2nd Column Blank 3rd Column Blank 4th Column Blank 5th Column Blank 6th Column Blank 4th Row 1st Column Blank 2nd Column 0 3rd Column Blank 4th Column Blank 5th Column Blank 6th Column Blank 5th Row 1st Column Blank 2nd Column Blank 3rd Column Blank 4th Column Blank 5th Column 1 6th Column negative 1 EndMatrix period"
+      "expected": "upper L equals Start 5 By 6 Matrix 1st Row 1st Column 1 2nd Column negative 1 3rd Column Blank 4th Column Blank 5th Column Blank 6th Column Blank 2nd Row 1st Column Blank 2nd Column 1 3rd Column negative 1 4th Column Blank 5th Column 0 6th Column Blank 3rd Row 1st Column Blank 2nd Column Blank 3rd Column Blank 4th Column Blank 5th Column Blank 6th Column Blank 4th Row 1st Column Blank 2nd Column 0 3rd Column Blank 4th Column Blank 5th Column Blank 6th Column Blank 5th Row 1st Column Blank 2nd Column Blank 3rd Column Blank 4th Column Blank 5th Column 1 6th Column negative 1 EndMatrix period"
     },
     "Sample_62_brief": {
-      "speech": "upper L equals Start 5 By 6 Matrix 1st Row 1st Column 1 2nd Column negative 1 3rd Column Blank 4th Column Blank 5th Column Blank 6th Column Blank 2nd Row 1st Column Blank 2nd Column 1 3rd Column negative 1 4th Column Blank 5th Column 0 6th Column Blank 3rd Row 1st Column Blank 2nd Column Blank 3rd Column Blank 4th Column Blank 5th Column Blank 6th Column Blank 4th Row 1st Column Blank 2nd Column 0 3rd Column Blank 4th Column Blank 5th Column Blank 6th Column Blank 5th Row 1st Column Blank 2nd Column Blank 3rd Column Blank 4th Column Blank 5th Column 1 6th Column negative 1 EndMatrix period"
+      "expected": "upper L equals Start 5 By 6 Matrix 1st Row 1st Column 1 2nd Column negative 1 3rd Column Blank 4th Column Blank 5th Column Blank 6th Column Blank 2nd Row 1st Column Blank 2nd Column 1 3rd Column negative 1 4th Column Blank 5th Column 0 6th Column Blank 3rd Row 1st Column Blank 2nd Column Blank 3rd Column Blank 4th Column Blank 5th Column Blank 6th Column Blank 4th Row 1st Column Blank 2nd Column 0 3rd Column Blank 4th Column Blank 5th Column Blank 6th Column Blank 5th Row 1st Column Blank 2nd Column Blank 3rd Column Blank 4th Column Blank 5th Column 1 6th Column negative 1 EndMatrix period"
     },
     "Sample_62_sbrief": {
-      "speech": "upper L equals 5 By 6 Matrix 1st Row 1st Column 1 2nd Column negative 1 3rd Column Blank 4th Column Blank 5th Column Blank 6th Column Blank 2nd Row 1st Column Blank 2nd Column 1 3rd Column negative 1 4th Column Blank 5th Column 0 6th Column Blank 3rd Row 1st Column Blank 2nd Column Blank 3rd Column Blank 4th Column Blank 5th Column Blank 6th Column Blank 4th Row 1st Column Blank 2nd Column 0 3rd Column Blank 4th Column Blank 5th Column Blank 6th Column Blank 5th Row 1st Column Blank 2nd Column Blank 3rd Column Blank 4th Column Blank 5th Column 1 6th Column negative 1 EndMatrix period"
+      "expected": "upper L equals 5 By 6 Matrix 1st Row 1st Column 1 2nd Column negative 1 3rd Column Blank 4th Column Blank 5th Column Blank 6th Column Blank 2nd Row 1st Column Blank 2nd Column 1 3rd Column negative 1 4th Column Blank 5th Column 0 6th Column Blank 3rd Row 1st Column Blank 2nd Column Blank 3rd Column Blank 4th Column Blank 5th Column Blank 6th Column Blank 4th Row 1st Column Blank 2nd Column 0 3rd Column Blank 4th Column Blank 5th Column Blank 6th Column Blank 5th Row 1st Column Blank 2nd Column Blank 3rd Column Blank 4th Column Blank 5th Column 1 6th Column negative 1 EndMatrix period"
     },
     "Sample_63_default": {
-      "speech": "StartRoot n EndRoot left bracket upper Y overbar Subscript n Baseline minus left parenthesis mu plus z Subscript beta Baseline sigma right parenthesis right bracket slash upper S Subscript n Baseline tilde StartFraction upper U plus StartRoot n EndRoot z Subscript 1 minus beta Baseline Over left parenthesis chi squared left bracket n minus 1 right bracket slash left parenthesis n minus 1 right parenthesis right parenthesis Superscript 1 slash 2 Baseline EndFraction tilde t left bracket n minus 1 semicolon StartRoot n EndRoot z Subscript 1 minus beta Baseline right bracket comma"
+      "expected": "StartRoot n EndRoot left bracket upper Y overbar Subscript n Baseline minus left parenthesis mu plus z Subscript beta Baseline sigma right parenthesis right bracket slash upper S Subscript n Baseline tilde StartFraction upper U plus StartRoot n EndRoot z Subscript 1 minus beta Baseline Over left parenthesis chi squared left bracket n minus 1 right bracket slash left parenthesis n minus 1 right parenthesis right parenthesis Superscript 1 slash 2 Baseline EndFraction tilde t left bracket n minus 1 semicolon StartRoot n EndRoot z Subscript 1 minus beta Baseline right bracket comma"
     },
     "Sample_63_brief": {
-      "speech": "StartRoot n EndRoot left brack upper Y overBar Sub n Base minus left p'ren mu plus z Sub beta Base sigma right p'ren right brack slash upper S Sub n Base tilde StartFrac upper U plus StartRoot n EndRoot z Sub 1 minus beta Base Over left p'ren chi squared left brack n minus 1 right brack slash left p'ren n minus 1 right p'ren right p'ren Sup 1 slash 2 Base EndFrac tilde t left brack n minus 1 semicolon StartRoot n EndRoot z Sub 1 minus beta Base right brack comma"
+      "expected": "StartRoot n EndRoot left brack upper Y overBar Sub n Base minus left p'ren mu plus z Sub beta Base sigma right p'ren right brack slash upper S Sub n Base tilde StartFrac upper U plus StartRoot n EndRoot z Sub 1 minus beta Base Over left p'ren chi squared left brack n minus 1 right brack slash left p'ren n minus 1 right p'ren right p'ren Sup 1 slash 2 Base EndFrac tilde t left brack n minus 1 semicolon StartRoot n EndRoot z Sub 1 minus beta Base right brack comma"
     },
     "Sample_63_sbrief": {
-      "speech": "Root n EndRoot L brack upper Y overBar Sub n Base minus L p'ren mu plus z Sub beta Base sigma R p'ren R brack slash upper S Sub n Base tilde Frac upper U plus Root n EndRoot z Sub 1 minus beta Base Over L p'ren chi squared L brack n minus 1 R brack slash L p'ren n minus 1 R p'ren R p'ren Sup 1 slash 2 Base EndFrac tilde t L brack n minus 1 semicolon Root n EndRoot z Sub 1 minus beta Base R brack comma"
+      "expected": "Root n EndRoot L brack upper Y overBar Sub n Base minus L p'ren mu plus z Sub beta Base sigma R p'ren R brack slash upper S Sub n Base tilde Frac upper U plus Root n EndRoot z Sub 1 minus beta Base Over L p'ren chi squared L brack n minus 1 R brack slash L p'ren n minus 1 R p'ren R p'ren Sup 1 slash 2 Base EndFrac tilde t L brack n minus 1 semicolon Root n EndRoot z Sub 1 minus beta Base R brack comma"
     },
     "Sample_64_default": {
-      "speech": "StartLayout 1st Row 1st Column gamma 2nd Column equals upper P left brace upper E Subscript p comma q Baseline subset of left parenthesis upper X Subscript left parenthesis r right parenthesis Baseline comma upper X Subscript left parenthesis s right parenthesis Baseline right brace 2nd Row 1st Column Blank 2nd Column equals StartFraction n factorial Over left parenthesis r minus 1 right parenthesis factorial EndFraction sigma summation Underscript j equals 0 Overscript s minus r minus 1 Endscripts left parenthesis negative 1 right parenthesis Superscript j Baseline StartFraction p Superscript r plus j Baseline Over left parenthesis n minus r minus j right parenthesis factorial j factorial EndFraction upper I Subscript 1 minus q Baseline left parenthesis n minus s plus 1 comma s minus r minus j right parenthesis period EndLayout"
+      "expected": "StartLayout 1st Row 1st Column gamma 2nd Column equals upper P left brace upper E Subscript p comma q Baseline subset of left parenthesis upper X Subscript left parenthesis r right parenthesis Baseline comma upper X Subscript left parenthesis s right parenthesis Baseline right brace 2nd Row 1st Column Blank 2nd Column equals StartFraction n factorial Over left parenthesis r minus 1 right parenthesis factorial EndFraction sigma summation Underscript j equals 0 Overscript s minus r minus 1 Endscripts left parenthesis negative 1 right parenthesis Superscript j Baseline StartFraction p Superscript r plus j Baseline Over left parenthesis n minus r minus j right parenthesis factorial j factorial EndFraction upper I Subscript 1 minus q Baseline left parenthesis n minus s plus 1 comma s minus r minus j right parenthesis period EndLayout"
     },
     "Sample_64_brief": {
-      "speech": "StartLayout 1st Row 1st Column gamma 2nd Column equals upper P left brace upper E Sub p comma q Base subset of left p'ren upper X Sub left p'ren r right p'ren Base comma upper X Sub left p'ren s right p'ren Base right brace 2nd Row 1st Column Blank 2nd Column equals StartFrac n factorial Over left p'ren r minus 1 right p'ren factorial EndFrac sigma summation Underscript j equals 0 Overscript s minus r minus 1 Endscripts left p'ren negative 1 right p'ren Sup j Base StartFrac p Sup r plus j Base Over left p'ren n minus r minus j right p'ren factorial j factorial EndFrac upper I Sub 1 minus q Base left p'ren n minus s plus 1 comma s minus r minus j right p'ren period EndLayout"
+      "expected": "StartLayout 1st Row 1st Column gamma 2nd Column equals upper P left brace upper E Sub p comma q Base subset of left p'ren upper X Sub left p'ren r right p'ren Base comma upper X Sub left p'ren s right p'ren Base right brace 2nd Row 1st Column Blank 2nd Column equals StartFrac n factorial Over left p'ren r minus 1 right p'ren factorial EndFrac sigma summation Underscript j equals 0 Overscript s minus r minus 1 Endscripts left p'ren negative 1 right p'ren Sup j Base StartFrac p Sup r plus j Base Over left p'ren n minus r minus j right p'ren factorial j factorial EndFrac upper I Sub 1 minus q Base left p'ren n minus s plus 1 comma s minus r minus j right p'ren period EndLayout"
     },
     "Sample_64_sbrief": {
-      "speech": "Layout 1st Row 1st Column gamma 2nd Column equals upper P L brace upper E Sub p comma q Base subset of L p'ren upper X Sub L p'ren r R p'ren Base comma upper X Sub L p'ren s R p'ren Base R brace 2nd Row 1st Column Blank 2nd Column equals Frac n factorial Over L p'ren r minus 1 R p'ren factorial EndFrac sigma summation Underscript j equals 0 Overscript s minus r minus 1 Endscripts L p'ren negative 1 R p'ren Sup j Base Frac p Sup r plus j Base Over L p'ren n minus r minus j R p'ren factorial j factorial EndFrac upper I Sub 1 minus q Base L p'ren n minus s plus 1 comma s minus r minus j R p'ren period EndLayout"
+      "expected": "Layout 1st Row 1st Column gamma 2nd Column equals upper P L brace upper E Sub p comma q Base subset of L p'ren upper X Sub L p'ren r R p'ren Base comma upper X Sub L p'ren s R p'ren Base R brace 2nd Row 1st Column Blank 2nd Column equals Frac n factorial Over L p'ren r minus 1 R p'ren factorial EndFrac sigma summation Underscript j equals 0 Overscript s minus r minus 1 Endscripts L p'ren negative 1 R p'ren Sup j Base Frac p Sup r plus j Base Over L p'ren n minus r minus j R p'ren factorial j factorial EndFrac upper I Sub 1 minus q Base L p'ren n minus s plus 1 comma s minus r minus j R p'ren period EndLayout"
     },
     "Sample_65_default": {
-      "speech": "upper S Subscript i Baseline StartBinomialOrMatrix t Choose x EndBinomialOrMatrix equals Start 2 By 2 Matrix 1st Row 1st Column 1 slash m 2nd Column 0 2nd Row 1st Column a Subscript i Baseline 2nd Column r Subscript i Baseline EndMatrix StartBinomialOrMatrix t Choose x EndBinomialOrMatrix plus StartBinomialOrMatrix left parenthesis i minus 1 right parenthesis slash m Choose b Subscript i Baseline EndBinomialOrMatrix comma"
+      "expected": "upper S Subscript i Baseline StartBinomialOrMatrix t Choose x EndBinomialOrMatrix equals Start 2 By 2 Matrix 1st Row 1st Column 1 slash m 2nd Column 0 2nd Row 1st Column a Subscript i Baseline 2nd Column r Subscript i Baseline EndMatrix StartBinomialOrMatrix t Choose x EndBinomialOrMatrix plus StartBinomialOrMatrix left parenthesis i minus 1 right parenthesis slash m Choose b Subscript i Baseline EndBinomialOrMatrix comma"
     },
     "Sample_65_brief": {
-      "speech": "upper S Sub i Base StartBinomialOrMatrix t Choose x EndBinomialOrMatrix equals Start 2 By 2 Matrix 1st Row 1st Column 1 slash m 2nd Column 0 2nd Row 1st Column a Sub i Base 2nd Column r Sub i Base EndMatrix StartBinomialOrMatrix t Choose x EndBinomialOrMatrix plus StartBinomialOrMatrix left p'ren i minus 1 right p'ren slash m Choose b Sub i Base EndBinomialOrMatrix comma"
+      "expected": "upper S Sub i Base StartBinomialOrMatrix t Choose x EndBinomialOrMatrix equals Start 2 By 2 Matrix 1st Row 1st Column 1 slash m 2nd Column 0 2nd Row 1st Column a Sub i Base 2nd Column r Sub i Base EndMatrix StartBinomialOrMatrix t Choose x EndBinomialOrMatrix plus StartBinomialOrMatrix left p'ren i minus 1 right p'ren slash m Choose b Sub i Base EndBinomialOrMatrix comma"
     },
     "Sample_65_sbrief": {
-      "speech": "upper S Sub i Base BinomialOrMatrix t Choose x EndBinomialOrMatrix equals 2 By 2 Matrix 1st Row 1st Column 1 slash m 2nd Column 0 2nd Row 1st Column a Sub i Base 2nd Column r Sub i Base EndMatrix BinomialOrMatrix t Choose x EndBinomialOrMatrix plus BinomialOrMatrix L p'ren i minus 1 R p'ren slash m Choose b Sub i Base EndBinomialOrMatrix comma"
+      "expected": "upper S Sub i Base BinomialOrMatrix t Choose x EndBinomialOrMatrix equals 2 By 2 Matrix 1st Row 1st Column 1 slash m 2nd Column 0 2nd Row 1st Column a Sub i Base 2nd Column r Sub i Base EndMatrix BinomialOrMatrix t Choose x EndBinomialOrMatrix plus BinomialOrMatrix L p'ren i minus 1 R p'ren slash m Choose b Sub i Base EndBinomialOrMatrix comma"
     },
     "Sample_66_default": {
-      "speech": "c 1 h Superscript 4 minus 2 s Baseline less than or equals StartFraction 1 Over 2 upper T EndFraction integral Subscript negative upper T Superscript upper T Baseline left parenthesis f left parenthesis t plus h right parenthesis minus f left parenthesis t right parenthesis right parenthesis squared normal d t less than or equals c 2 h Superscript 4 minus 2 s"
+      "expected": "c 1 h Superscript 4 minus 2 s Baseline less than or equals StartFraction 1 Over 2 upper T EndFraction integral Subscript negative upper T Superscript upper T Baseline left parenthesis f left parenthesis t plus h right parenthesis minus f left parenthesis t right parenthesis right parenthesis squared normal d t less than or equals c 2 h Superscript 4 minus 2 s"
     },
     "Sample_66_brief": {
-      "speech": "c 1 h Sup 4 minus 2 s Base less than or equals StartFrac 1 Over 2 upper T EndFrac integral Sub negative upper T Sup upper T Base left p'ren f left p'ren t plus h right p'ren minus f left p'ren t right p'ren right p'ren squared normal d t less than or equals c 2 h Sup 4 minus 2 s"
+      "expected": "c 1 h Sup 4 minus 2 s Base less than or equals StartFrac 1 Over 2 upper T EndFrac integral Sub negative upper T Sup upper T Base left p'ren f left p'ren t plus h right p'ren minus f left p'ren t right p'ren right p'ren squared normal d t less than or equals c 2 h Sup 4 minus 2 s"
     },
     "Sample_66_sbrief": {
-      "speech": "c 1 h Sup 4 minus 2 s Base less than or equals Frac 1 Over 2 upper T EndFrac integral Sub negative upper T Sup upper T Base L p'ren f L p'ren t plus h R p'ren minus f L p'ren t R p'ren R p'ren squared normal d t less than or equals c 2 h Sup 4 minus 2 s"
+      "expected": "c 1 h Sup 4 minus 2 s Base less than or equals Frac 1 Over 2 upper T EndFrac integral Sub negative upper T Sup upper T Base L p'ren f L p'ren t plus h R p'ren minus f L p'ren t R p'ren R p'ren squared normal d t less than or equals c 2 h Sup 4 minus 2 s"
     },
     "Sample_67_default": {
-      "speech": "upper C left parenthesis 0 right parenthesis minus upper C left parenthesis h right parenthesis asymptotically equals c h Superscript 4 minus 2 s"
+      "expected": "upper C left parenthesis 0 right parenthesis minus upper C left parenthesis h right parenthesis asymptotically equals c h Superscript 4 minus 2 s"
     },
     "Sample_67_brief": {
-      "speech": "upper C left p'ren 0 right p'ren minus upper C left p'ren h right p'ren asymptotically equals c h Sup 4 minus 2 s"
+      "expected": "upper C left p'ren 0 right p'ren minus upper C left p'ren h right p'ren asymptotically equals c h Sup 4 minus 2 s"
     },
     "Sample_67_sbrief": {
-      "speech": "upper C L p'ren 0 R p'ren minus upper C L p'ren h R p'ren asymptotically equals c h Sup 4 minus 2 s"
+      "expected": "upper C L p'ren 0 R p'ren minus upper C L p'ren h R p'ren asymptotically equals c h Sup 4 minus 2 s"
     },
     "Sample_68_default": {
-      "speech": "upper S left parenthesis omega right parenthesis equals limit Underscript upper T right arrow infinity Endscripts StartFraction 1 Over 2 upper T EndFraction StartAbsoluteValue integral Subscript negative upper T Superscript upper T Baseline comma f comma left parenthesis comma t comma right parenthesis comma normal e Superscript italic i t omega Baseline comma normal d comma t EndAbsoluteValue squared period"
+      "expected": "upper S left parenthesis omega right parenthesis equals limit Underscript upper T right arrow infinity Endscripts StartFraction 1 Over 2 upper T EndFraction StartAbsoluteValue integral Subscript negative upper T Superscript upper T Baseline comma f comma left parenthesis comma t comma right parenthesis comma normal e Superscript italic i t omega Baseline comma normal d comma t EndAbsoluteValue squared period"
     },
     "Sample_68_brief": {
-      "speech": "upper S left p'ren omega right p'ren equals limit Underscript upper T right arrow infinity Endscripts StartFrac 1 Over 2 upper T EndFrac StartAbsoluteValue integral Sub negative upper T Sup upper T Base comma f comma left p'ren comma t comma right p'ren comma normal e Sup italic i t omega Base comma normal d comma t EndAbsoluteValue squared period"
+      "expected": "upper S left p'ren omega right p'ren equals limit Underscript upper T right arrow infinity Endscripts StartFrac 1 Over 2 upper T EndFrac StartAbsoluteValue integral Sub negative upper T Sup upper T Base comma f comma left p'ren comma t comma right p'ren comma normal e Sup italic i t omega Base comma normal d comma t EndAbsoluteValue squared period"
     },
     "Sample_68_sbrief": {
-      "speech": "upper S L p'ren omega R p'ren equals limit Underscript upper T R arrow infinity Endscripts Frac 1 Over 2 upper T EndFrac AbsoluteValue integral Sub negative upper T Sup upper T Base comma f comma L p'ren comma t comma R p'ren comma normal e Sup italic i t omega Base comma normal d comma t EndAbsoluteValue squared period"
+      "expected": "upper S L p'ren omega R p'ren equals limit Underscript upper T R arrow infinity Endscripts Frac 1 Over 2 upper T EndFrac AbsoluteValue integral Sub negative upper T Sup upper T Base comma f comma L p'ren comma t comma R p'ren comma normal e Sup italic i t omega Base comma normal d comma t EndAbsoluteValue squared period"
     },
     "Sample_69_default": {
-      "speech": "integral Subscript 0 Superscript 1 Baseline integral Subscript 0 Superscript 1 Baseline left bracket StartAbsoluteValue f left parenthesis t right parenthesis minus f left parenthesis u right parenthesis EndAbsoluteValue squared plus StartAbsoluteValue t minus u EndAbsoluteValue squared right bracket Superscript negative s slash 2 Baseline normal d t normal d u less than infinity"
+      "expected": "integral Subscript 0 Superscript 1 Baseline integral Subscript 0 Superscript 1 Baseline left bracket StartAbsoluteValue f left parenthesis t right parenthesis minus f left parenthesis u right parenthesis EndAbsoluteValue squared plus StartAbsoluteValue t minus u EndAbsoluteValue squared right bracket Superscript negative s slash 2 Baseline normal d t normal d u less than infinity"
     },
     "Sample_69_brief": {
-      "speech": "integral Sub 0 Sup 1 Base integral Sub 0 Sup 1 Base left brack StartAbsoluteValue f left p'ren t right p'ren minus f left p'ren u right p'ren EndAbsoluteValue squared plus StartAbsoluteValue t minus u EndAbsoluteValue squared right brack Sup negative s slash 2 Base normal d t normal d u less than infinity"
+      "expected": "integral Sub 0 Sup 1 Base integral Sub 0 Sup 1 Base left brack StartAbsoluteValue f left p'ren t right p'ren minus f left p'ren u right p'ren EndAbsoluteValue squared plus StartAbsoluteValue t minus u EndAbsoluteValue squared right brack Sup negative s slash 2 Base normal d t normal d u less than infinity"
     },
     "Sample_69_sbrief": {
-      "speech": "integral Sub 0 Sup 1 Base integral Sub 0 Sup 1 Base L brack AbsoluteValue f L p'ren t R p'ren minus f L p'ren u R p'ren EndAbsoluteValue squared plus AbsoluteValue t minus u EndAbsoluteValue squared R brack Sup negative s slash 2 Base normal d t normal d u less than infinity"
+      "expected": "integral Sub 0 Sup 1 Base integral Sub 0 Sup 1 Base L brack AbsoluteValue f L p'ren t R p'ren minus f L p'ren u R p'ren EndAbsoluteValue squared plus AbsoluteValue t minus u EndAbsoluteValue squared R brack Sup negative s slash 2 Base normal d t normal d u less than infinity"
     },
     "Sample_70_default": {
-      "speech": "sans serif upper E left parenthesis sigma summation Underscript upper I element of upper E Subscript k plus 1 Baseline Endscripts StartAbsoluteValue upper I EndAbsoluteValue Superscript s Baseline right parenthesis equals sans serif upper E left parenthesis sigma summation Underscript upper I element of upper E Subscript k Baseline Endscripts StartAbsoluteValue upper I EndAbsoluteValue Superscript s Baseline right parenthesis sans serif upper E left parenthesis upper R 1 Superscript s Baseline plus upper R 2 Superscript s Baseline right parenthesis period"
+      "expected": "sans serif upper E left parenthesis sigma summation Underscript upper I element of upper E Subscript k plus 1 Baseline Endscripts StartAbsoluteValue upper I EndAbsoluteValue Superscript s Baseline right parenthesis equals sans serif upper E left parenthesis sigma summation Underscript upper I element of upper E Subscript k Baseline Endscripts StartAbsoluteValue upper I EndAbsoluteValue Superscript s Baseline right parenthesis sans serif upper E left parenthesis upper R 1 Superscript s Baseline plus upper R 2 Superscript s Baseline right parenthesis period"
     },
     "Sample_70_brief": {
-      "speech": "sans serif upper E left p'ren sigma summation Underscript upper I element of upper E Sub k plus 1 Base Endscripts StartAbsoluteValue upper I EndAbsoluteValue Sup s Base right p'ren equals sans serif upper E left p'ren sigma summation Underscript upper I element of upper E Sub k Base Endscripts StartAbsoluteValue upper I EndAbsoluteValue Sup s Base right p'ren sans serif upper E left p'ren upper R 1 Sup s Base plus upper R 2 Sup s Base right p'ren period"
+      "expected": "sans serif upper E left p'ren sigma summation Underscript upper I element of upper E Sub k plus 1 Base Endscripts StartAbsoluteValue upper I EndAbsoluteValue Sup s Base right p'ren equals sans serif upper E left p'ren sigma summation Underscript upper I element of upper E Sub k Base Endscripts StartAbsoluteValue upper I EndAbsoluteValue Sup s Base right p'ren sans serif upper E left p'ren upper R 1 Sup s Base plus upper R 2 Sup s Base right p'ren period"
     },
     "Sample_70_sbrief": {
-      "speech": "sans serif upper E L p'ren sigma summation Underscript upper I element of upper E Sub k plus 1 Base Endscripts AbsoluteValue upper I EndAbsoluteValue Sup s Base R p'ren equals sans serif upper E L p'ren sigma summation Underscript upper I element of upper E Sub k Base Endscripts AbsoluteValue upper I EndAbsoluteValue Sup s Base R p'ren sans serif upper E L p'ren upper R 1 Sup s Base plus upper R 2 Sup s Base R p'ren period"
+      "expected": "sans serif upper E L p'ren sigma summation Underscript upper I element of upper E Sub k plus 1 Base Endscripts AbsoluteValue upper I EndAbsoluteValue Sup s Base R p'ren equals sans serif upper E L p'ren sigma summation Underscript upper I element of upper E Sub k Base Endscripts AbsoluteValue upper I EndAbsoluteValue Sup s Base R p'ren sans serif upper E L p'ren upper R 1 Sup s Base plus upper R 2 Sup s Base R p'ren period"
     },
     "Sample_71_default": {
-      "speech": "left parenthesis x 1 comma y 1 right parenthesis"
+      "expected": "left parenthesis x 1 comma y 1 right parenthesis"
     },
     "Sample_71_brief": {
-      "speech": "left p'ren x 1 comma y 1 right p'ren"
+      "expected": "left p'ren x 1 comma y 1 right p'ren"
     },
     "Sample_71_sbrief": {
-      "speech": "L p'ren x 1 comma y 1 R p'ren"
+      "expected": "L p'ren x 1 comma y 1 R p'ren"
     },
     "Sample_72_default": {
-      "speech": "left parenthesis x 2 comma y 2 right parenthesis"
+      "expected": "left parenthesis x 2 comma y 2 right parenthesis"
     },
     "Sample_72_brief": {
-      "speech": "left p'ren x 2 comma y 2 right p'ren"
+      "expected": "left p'ren x 2 comma y 2 right p'ren"
     },
     "Sample_72_sbrief": {
-      "speech": "L p'ren x 2 comma y 2 R p'ren"
+      "expected": "L p'ren x 2 comma y 2 R p'ren"
     },
     "Sample_73_default": {
-      "speech": "d equals StartRoot left parenthesis x 2 minus x 1 right parenthesis squared plus left parenthesis y 2 minus y 1 right parenthesis squared EndRoot"
+      "expected": "d equals StartRoot left parenthesis x 2 minus x 1 right parenthesis squared plus left parenthesis y 2 minus y 1 right parenthesis squared EndRoot"
     },
     "Sample_73_brief": {
-      "speech": "d equals StartRoot left p'ren x 2 minus x 1 right p'ren squared plus left p'ren y 2 minus y 1 right p'ren squared EndRoot"
+      "expected": "d equals StartRoot left p'ren x 2 minus x 1 right p'ren squared plus left p'ren y 2 minus y 1 right p'ren squared EndRoot"
     },
     "Sample_73_sbrief": {
-      "speech": "d equals Root L p'ren x 2 minus x 1 R p'ren squared plus L p'ren y 2 minus y 1 R p'ren squared EndRoot"
+      "expected": "d equals Root L p'ren x 2 minus x 1 R p'ren squared plus L p'ren y 2 minus y 1 R p'ren squared EndRoot"
     },
     "Sample_74_default": {
-      "speech": "double struck upper R"
+      "expected": "double struck upper R"
     },
     "Sample_74_brief": {
-      "speech": "double struck upper R"
+      "expected": "double struck upper R"
     },
     "Sample_74_sbrief": {
-      "speech": "double struck upper R"
+      "expected": "double struck upper R"
     },
     "Sample_75_default": {
-      "speech": "double struck upper R equals left parenthesis negative infinity comma infinity right parenthesis"
+      "expected": "double struck upper R equals left parenthesis negative infinity comma infinity right parenthesis"
     },
     "Sample_75_brief": {
-      "speech": "double struck upper R equals left p'ren negative infinity comma infinity right p'ren"
+      "expected": "double struck upper R equals left p'ren negative infinity comma infinity right p'ren"
     },
     "Sample_75_sbrief": {
-      "speech": "double struck upper R equals L p'ren negative infinity comma infinity R p'ren"
+      "expected": "double struck upper R equals L p'ren negative infinity comma infinity R p'ren"
     },
     "Sample_76_default": {
-      "speech": "StartSet 1 comma 2 comma 3 EndSet"
+      "expected": "StartSet 1 comma 2 comma 3 EndSet"
     },
     "Sample_76_brief": {
-      "speech": "StartSet 1 comma 2 comma 3 EndSet"
+      "expected": "StartSet 1 comma 2 comma 3 EndSet"
     },
     "Sample_76_sbrief": {
-      "speech": "Set 1 comma 2 comma 3 EndSet"
+      "expected": "Set 1 comma 2 comma 3 EndSet"
     },
     "Sample_77_default": {
-      "speech": "1 element of upper S"
+      "expected": "1 element of upper S"
     },
     "Sample_77_brief": {
-      "speech": "1 element of upper S"
+      "expected": "1 element of upper S"
     },
     "Sample_77_sbrief": {
-      "speech": "1 element of upper S"
+      "expected": "1 element of upper S"
     },
     "Sample_78_default": {
-      "speech": "3 element of upper S"
+      "expected": "3 element of upper S"
     },
     "Sample_78_brief": {
-      "speech": "3 element of upper S"
+      "expected": "3 element of upper S"
     },
     "Sample_78_sbrief": {
-      "speech": "3 element of upper S"
+      "expected": "3 element of upper S"
     },
     "Sample_79_default": {
-      "speech": "4 not an element of upper S"
+      "expected": "4 not an element of upper S"
     },
     "Sample_79_brief": {
-      "speech": "4 not an element of upper S"
+      "expected": "4 not an element of upper S"
     },
     "Sample_79_sbrief": {
-      "speech": "4 not an element of upper S"
+      "expected": "4 not an element of upper S"
     },
     "Sample_80_default": {
-      "speech": "a equals StartRoot 3 x minus 1 EndRoot plus left parenthesis 1 plus x right parenthesis squared"
+      "expected": "a equals StartRoot 3 x minus 1 EndRoot plus left parenthesis 1 plus x right parenthesis squared"
     },
     "Sample_80_brief": {
-      "speech": "a equals StartRoot 3 x minus 1 EndRoot plus left p'ren 1 plus x right p'ren squared"
+      "expected": "a equals StartRoot 3 x minus 1 EndRoot plus left p'ren 1 plus x right p'ren squared"
     },
     "Sample_80_sbrief": {
-      "speech": "a equals Root 3 x minus 1 EndRoot plus L p'ren 1 plus x R p'ren squared"
+      "expected": "a equals Root 3 x minus 1 EndRoot plus L p'ren 1 plus x R p'ren squared"
     },
     "Sample_81_default": {
-      "speech": "a equals StartFraction left parenthesis b plus c right parenthesis squared Over d EndFraction plus StartFraction left parenthesis e plus f right parenthesis squared Over g EndFraction"
+      "expected": "a equals StartFraction left parenthesis b plus c right parenthesis squared Over d EndFraction plus StartFraction left parenthesis e plus f right parenthesis squared Over g EndFraction"
     },
     "Sample_81_brief": {
-      "speech": "a equals StartFrac left p'ren b plus c right p'ren squared Over d EndFrac plus StartFrac left p'ren e plus f right p'ren squared Over g EndFrac"
+      "expected": "a equals StartFrac left p'ren b plus c right p'ren squared Over d EndFrac plus StartFrac left p'ren e plus f right p'ren squared Over g EndFrac"
     },
     "Sample_81_sbrief": {
-      "speech": "a equals Frac L p'ren b plus c R p'ren squared Over d EndFrac plus Frac L p'ren e plus f R p'ren squared Over g EndFrac"
+      "expected": "a equals Frac L p'ren b plus c R p'ren squared Over d EndFrac plus Frac L p'ren e plus f R p'ren squared Over g EndFrac"
     },
     "Sample_82_default": {
-      "speech": "x equals left bracket left parenthesis a plus b right parenthesis squared left parenthesis c minus b right parenthesis squared right bracket plus left bracket left parenthesis d plus e right parenthesis squared left parenthesis f minus e right parenthesis squared right bracket"
+      "expected": "x equals left bracket left parenthesis a plus b right parenthesis squared left parenthesis c minus b right parenthesis squared right bracket plus left bracket left parenthesis d plus e right parenthesis squared left parenthesis f minus e right parenthesis squared right bracket"
     },
     "Sample_82_brief": {
-      "speech": "x equals left brack left p'ren a plus b right p'ren squared left p'ren c minus b right p'ren squared right brack plus left brack left p'ren d plus e right p'ren squared left p'ren f minus e right p'ren squared right brack"
+      "expected": "x equals left brack left p'ren a plus b right p'ren squared left p'ren c minus b right p'ren squared right brack plus left brack left p'ren d plus e right p'ren squared left p'ren f minus e right p'ren squared right brack"
     },
     "Sample_82_sbrief": {
-      "speech": "x equals L brack L p'ren a plus b R p'ren squared L p'ren c minus b R p'ren squared R brack plus L brack L p'ren d plus e R p'ren squared L p'ren f minus e R p'ren squared R brack"
+      "expected": "x equals L brack L p'ren a plus b R p'ren squared L p'ren c minus b R p'ren squared R brack plus L brack L p'ren d plus e R p'ren squared L p'ren f minus e R p'ren squared R brack"
     },
     "Sample_83_default": {
-      "speech": "x equals left bracket left parenthesis a plus b right parenthesis squared right bracket plus left bracket left parenthesis f minus e right parenthesis squared right bracket"
+      "expected": "x equals left bracket left parenthesis a plus b right parenthesis squared right bracket plus left bracket left parenthesis f minus e right parenthesis squared right bracket"
     },
     "Sample_83_brief": {
-      "speech": "x equals left brack left p'ren a plus b right p'ren squared right brack plus left brack left p'ren f minus e right p'ren squared right brack"
+      "expected": "x equals left brack left p'ren a plus b right p'ren squared right brack plus left brack left p'ren f minus e right p'ren squared right brack"
     },
     "Sample_83_sbrief": {
-      "speech": "x equals L brack L p'ren a plus b R p'ren squared R brack plus L brack L p'ren f minus e R p'ren squared R brack"
+      "expected": "x equals L brack L p'ren a plus b R p'ren squared R brack plus L brack L p'ren f minus e R p'ren squared R brack"
     },
     "Sample_84_default": {
-      "speech": "x equals left bracket left parenthesis a plus b right parenthesis squared right bracket"
+      "expected": "x equals left bracket left parenthesis a plus b right parenthesis squared right bracket"
     },
     "Sample_84_brief": {
-      "speech": "x equals left brack left p'ren a plus b right p'ren squared right brack"
+      "expected": "x equals left brack left p'ren a plus b right p'ren squared right brack"
     },
     "Sample_84_sbrief": {
-      "speech": "x equals L brack L p'ren a plus b R p'ren squared R brack"
+      "expected": "x equals L brack L p'ren a plus b R p'ren squared R brack"
     },
     "Sample_85_default": {
-      "speech": "x equals left parenthesis a plus b right parenthesis squared"
+      "expected": "x equals left parenthesis a plus b right parenthesis squared"
     },
     "Sample_85_brief": {
-      "speech": "x equals left p'ren a plus b right p'ren squared"
+      "expected": "x equals left p'ren a plus b right p'ren squared"
     },
     "Sample_85_sbrief": {
-      "speech": "x equals L p'ren a plus b R p'ren squared"
+      "expected": "x equals L p'ren a plus b R p'ren squared"
     },
     "Sample_86_default": {
-      "speech": "x equals a plus b squared"
+      "expected": "x equals a plus b squared"
     },
     "Sample_86_brief": {
-      "speech": "x equals a plus b squared"
+      "expected": "x equals a plus b squared"
     },
     "Sample_86_sbrief": {
-      "speech": "x equals a plus b squared"
+      "expected": "x equals a plus b squared"
     },
     "Sample_87_default": {
-      "speech": "StartFraction one half Over three fourths EndFraction equals two thirds"
+      "expected": "StartFraction one half Over three fourths EndFraction equals two thirds"
     },
     "Sample_87_brief": {
-      "speech": "StartFrac one half Over three fourths EndFrac equals two thirds"
+      "expected": "StartFrac one half Over three fourths EndFrac equals two thirds"
     },
     "Sample_87_sbrief": {
-      "speech": "Frac one half Over three fourths EndFrac equals two thirds"
+      "expected": "Frac one half Over three fourths EndFrac equals two thirds"
     },
     "Sample_88_default": {
-      "speech": "2 left parenthesis left parenthesis x plus 1 right parenthesis left parenthesis x plus 3 right parenthesis minus 4 left parenthesis left parenthesis x minus 1 right parenthesis left parenthesis x plus 2 right parenthesis minus 3 right parenthesis right parenthesis equals y"
+      "expected": "2 left parenthesis left parenthesis x plus 1 right parenthesis left parenthesis x plus 3 right parenthesis minus 4 left parenthesis left parenthesis x minus 1 right parenthesis left parenthesis x plus 2 right parenthesis minus 3 right parenthesis right parenthesis equals y"
     },
     "Sample_88_brief": {
-      "speech": "2 left p'ren left p'ren x plus 1 right p'ren left p'ren x plus 3 right p'ren minus 4 left p'ren left p'ren x minus 1 right p'ren left p'ren x plus 2 right p'ren minus 3 right p'ren right p'ren equals y"
+      "expected": "2 left p'ren left p'ren x plus 1 right p'ren left p'ren x plus 3 right p'ren minus 4 left p'ren left p'ren x minus 1 right p'ren left p'ren x plus 2 right p'ren minus 3 right p'ren right p'ren equals y"
     },
     "Sample_88_sbrief": {
-      "speech": "2 L p'ren L p'ren x plus 1 R p'ren L p'ren x plus 3 R p'ren minus 4 L p'ren L p'ren x minus 1 R p'ren L p'ren x plus 2 R p'ren minus 3 R p'ren R p'ren equals y"
+      "expected": "2 L p'ren L p'ren x plus 1 R p'ren L p'ren x plus 3 R p'ren minus 4 L p'ren L p'ren x minus 1 R p'ren L p'ren x plus 2 R p'ren minus 3 R p'ren R p'ren equals y"
     },
     "Sample_89_default": {
-      "speech": "cosine x equals 1 minus StartFraction x squared Over 2 factorial EndFraction plus StartFraction x Superscript 4 Baseline Over 4 factorial EndFraction minus ellipsis"
+      "expected": "cosine x equals 1 minus StartFraction x squared Over 2 factorial EndFraction plus StartFraction x Superscript 4 Baseline Over 4 factorial EndFraction minus ellipsis"
     },
     "Sample_89_brief": {
-      "speech": "cosine x equals 1 minus StartFrac x squared Over 2 factorial EndFrac plus StartFrac x Sup 4 Base Over 4 factorial EndFrac minus ellipsis"
+      "expected": "cosine x equals 1 minus StartFrac x squared Over 2 factorial EndFrac plus StartFrac x Sup 4 Base Over 4 factorial EndFrac minus ellipsis"
     },
     "Sample_89_sbrief": {
-      "speech": "cosine x equals 1 minus Frac x squared Over 2 factorial EndFrac plus Frac x Sup 4 Base Over 4 factorial EndFrac minus ellipsis"
+      "expected": "cosine x equals 1 minus Frac x squared Over 2 factorial EndFrac plus Frac x Sup 4 Base Over 4 factorial EndFrac minus ellipsis"
     },
     "Sample_90_default": {
-      "speech": "x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction"
+      "expected": "x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction"
     },
     "Sample_90_brief": {
-      "speech": "x equals StartFrac negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFrac"
+      "expected": "x equals StartFrac negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFrac"
     },
     "Sample_90_sbrief": {
-      "speech": "x equals Frac negative b plus or minus Root b squared minus 4 a c EndRoot Over 2 a EndFrac"
+      "expected": "x equals Frac negative b plus or minus Root b squared minus 4 a c EndRoot Over 2 a EndFrac"
     },
     "Sample_91_default": {
-      "speech": "x plus y Superscript StartFraction 2 Over k plus 1 EndFraction"
+      "expected": "x plus y Superscript StartFraction 2 Over k plus 1 EndFraction"
     },
     "Sample_91_brief": {
-      "speech": "x plus y Sup StartFrac 2 Over k plus 1 EndFrac"
+      "expected": "x plus y Sup StartFrac 2 Over k plus 1 EndFrac"
     },
     "Sample_91_sbrief": {
-      "speech": "x plus y Sup Frac 2 Over k plus 1 EndFrac"
+      "expected": "x plus y Sup Frac 2 Over k plus 1 EndFrac"
     },
     "Sample_92_default": {
-      "speech": "limit Underscript x right arrow 0 Endscripts StartFraction sine x Over x EndFraction equals 1"
+      "expected": "limit Underscript x right arrow 0 Endscripts StartFraction sine x Over x EndFraction equals 1"
     },
     "Sample_92_brief": {
-      "speech": "limit Underscript x right arrow 0 Endscripts StartFrac sine x Over x EndFrac equals 1"
+      "expected": "limit Underscript x right arrow 0 Endscripts StartFrac sine x Over x EndFrac equals 1"
     },
     "Sample_92_sbrief": {
-      "speech": "limit Underscript x R arrow 0 Endscripts Frac sine x Over x EndFrac equals 1"
+      "expected": "limit Underscript x R arrow 0 Endscripts Frac sine x Over x EndFrac equals 1"
     },
     "Sample_93_default": {
-      "speech": "d equals StartRoot left parenthesis x 2 minus x 1 right parenthesis squared plus left parenthesis y 2 minus y 1 right parenthesis squared EndRoot"
+      "expected": "d equals StartRoot left parenthesis x 2 minus x 1 right parenthesis squared plus left parenthesis y 2 minus y 1 right parenthesis squared EndRoot"
     },
     "Sample_93_brief": {
-      "speech": "d equals StartRoot left p'ren x 2 minus x 1 right p'ren squared plus left p'ren y 2 minus y 1 right p'ren squared EndRoot"
+      "expected": "d equals StartRoot left p'ren x 2 minus x 1 right p'ren squared plus left p'ren y 2 minus y 1 right p'ren squared EndRoot"
     },
     "Sample_93_sbrief": {
-      "speech": "d equals Root L p'ren x 2 minus x 1 R p'ren squared plus L p'ren y 2 minus y 1 R p'ren squared EndRoot"
+      "expected": "d equals Root L p'ren x 2 minus x 1 R p'ren squared plus L p'ren y 2 minus y 1 R p'ren squared EndRoot"
     },
     "Sample_94_default": {
-      "speech": "upper F Subscript n Baseline equals upper F Subscript n minus 1 Baseline plus upper F Subscript n minus 2"
+      "expected": "upper F Subscript n Baseline equals upper F Subscript n minus 1 Baseline plus upper F Subscript n minus 2"
     },
     "Sample_94_brief": {
-      "speech": "upper F Sub n Base equals upper F Sub n minus 1 Base plus upper F Sub n minus 2"
+      "expected": "upper F Sub n Base equals upper F Sub n minus 1 Base plus upper F Sub n minus 2"
     },
     "Sample_94_sbrief": {
-      "speech": "upper F Sub n Base equals upper F Sub n minus 1 Base plus upper F Sub n minus 2"
+      "expected": "upper F Sub n Base equals upper F Sub n minus 1 Base plus upper F Sub n minus 2"
     },
     "Sample_95_default": {
-      "speech": "bold upper Pi equals Start 6 By 6 Matrix 1st Row 1st Column pi 11 2nd Column pi 12 3rd Column pi 12 4th Column 0 5th Column 0 6th Column 0 2nd Row 1st Column pi 12 2nd Column pi 11 3rd Column pi 12 4th Column 0 5th Column 0 6th Column 0 3rd Row 1st Column pi 12 2nd Column pi 12 3rd Column pi 11 4th Column 0 5th Column 0 6th Column 0 4th Row 1st Column 0 2nd Column 0 3rd Column 0 4th Column pi 44 5th Column 0 6th Column 0 5th Row 1st Column 0 2nd Column 0 3rd Column 0 4th Column 0 5th Column pi 44 6th Column 0 6th Row 1st Column 0 2nd Column 0 3rd Column 0 4th Column 0 5th Column 0 6th Column pi 44 EndMatrix"
+      "expected": "bold upper Pi equals Start 6 By 6 Matrix 1st Row 1st Column pi 11 2nd Column pi 12 3rd Column pi 12 4th Column 0 5th Column 0 6th Column 0 2nd Row 1st Column pi 12 2nd Column pi 11 3rd Column pi 12 4th Column 0 5th Column 0 6th Column 0 3rd Row 1st Column pi 12 2nd Column pi 12 3rd Column pi 11 4th Column 0 5th Column 0 6th Column 0 4th Row 1st Column 0 2nd Column 0 3rd Column 0 4th Column pi 44 5th Column 0 6th Column 0 5th Row 1st Column 0 2nd Column 0 3rd Column 0 4th Column 0 5th Column pi 44 6th Column 0 6th Row 1st Column 0 2nd Column 0 3rd Column 0 4th Column 0 5th Column 0 6th Column pi 44 EndMatrix"
     },
     "Sample_95_brief": {
-      "speech": "bold upper Pi equals Start 6 By 6 Matrix 1st Row 1st Column pi 11 2nd Column pi 12 3rd Column pi 12 4th Column 0 5th Column 0 6th Column 0 2nd Row 1st Column pi 12 2nd Column pi 11 3rd Column pi 12 4th Column 0 5th Column 0 6th Column 0 3rd Row 1st Column pi 12 2nd Column pi 12 3rd Column pi 11 4th Column 0 5th Column 0 6th Column 0 4th Row 1st Column 0 2nd Column 0 3rd Column 0 4th Column pi 44 5th Column 0 6th Column 0 5th Row 1st Column 0 2nd Column 0 3rd Column 0 4th Column 0 5th Column pi 44 6th Column 0 6th Row 1st Column 0 2nd Column 0 3rd Column 0 4th Column 0 5th Column 0 6th Column pi 44 EndMatrix"
+      "expected": "bold upper Pi equals Start 6 By 6 Matrix 1st Row 1st Column pi 11 2nd Column pi 12 3rd Column pi 12 4th Column 0 5th Column 0 6th Column 0 2nd Row 1st Column pi 12 2nd Column pi 11 3rd Column pi 12 4th Column 0 5th Column 0 6th Column 0 3rd Row 1st Column pi 12 2nd Column pi 12 3rd Column pi 11 4th Column 0 5th Column 0 6th Column 0 4th Row 1st Column 0 2nd Column 0 3rd Column 0 4th Column pi 44 5th Column 0 6th Column 0 5th Row 1st Column 0 2nd Column 0 3rd Column 0 4th Column 0 5th Column pi 44 6th Column 0 6th Row 1st Column 0 2nd Column 0 3rd Column 0 4th Column 0 5th Column 0 6th Column pi 44 EndMatrix"
     },
     "Sample_95_sbrief": {
-      "speech": "bold upper Pi equals 6 By 6 Matrix 1st Row 1st Column pi 11 2nd Column pi 12 3rd Column pi 12 4th Column 0 5th Column 0 6th Column 0 2nd Row 1st Column pi 12 2nd Column pi 11 3rd Column pi 12 4th Column 0 5th Column 0 6th Column 0 3rd Row 1st Column pi 12 2nd Column pi 12 3rd Column pi 11 4th Column 0 5th Column 0 6th Column 0 4th Row 1st Column 0 2nd Column 0 3rd Column 0 4th Column pi 44 5th Column 0 6th Column 0 5th Row 1st Column 0 2nd Column 0 3rd Column 0 4th Column 0 5th Column pi 44 6th Column 0 6th Row 1st Column 0 2nd Column 0 3rd Column 0 4th Column 0 5th Column 0 6th Column pi 44 EndMatrix"
+      "expected": "bold upper Pi equals 6 By 6 Matrix 1st Row 1st Column pi 11 2nd Column pi 12 3rd Column pi 12 4th Column 0 5th Column 0 6th Column 0 2nd Row 1st Column pi 12 2nd Column pi 11 3rd Column pi 12 4th Column 0 5th Column 0 6th Column 0 3rd Row 1st Column pi 12 2nd Column pi 12 3rd Column pi 11 4th Column 0 5th Column 0 6th Column 0 4th Row 1st Column 0 2nd Column 0 3rd Column 0 4th Column pi 44 5th Column 0 6th Column 0 5th Row 1st Column 0 2nd Column 0 3rd Column 0 4th Column 0 5th Column pi 44 6th Column 0 6th Row 1st Column 0 2nd Column 0 3rd Column 0 4th Column 0 5th Column 0 6th Column pi 44 EndMatrix"
     },
     "Sample_96_default": {
-      "speech": "s 11 equals StartFraction c 11 plus c 12 Over left parenthesis c 11 minus c 12 right parenthesis left parenthesis c 11 plus 2 c 12 right parenthesis EndFraction"
+      "expected": "s 11 equals StartFraction c 11 plus c 12 Over left parenthesis c 11 minus c 12 right parenthesis left parenthesis c 11 plus 2 c 12 right parenthesis EndFraction"
     },
     "Sample_96_brief": {
-      "speech": "s 11 equals StartFrac c 11 plus c 12 Over left p'ren c 11 minus c 12 right p'ren left p'ren c 11 plus 2 c 12 right p'ren EndFrac"
+      "expected": "s 11 equals StartFrac c 11 plus c 12 Over left p'ren c 11 minus c 12 right p'ren left p'ren c 11 plus 2 c 12 right p'ren EndFrac"
     },
     "Sample_96_sbrief": {
-      "speech": "s 11 equals Frac c 11 plus c 12 Over L p'ren c 11 minus c 12 R p'ren L p'ren c 11 plus 2 c 12 R p'ren EndFrac"
+      "expected": "s 11 equals Frac c 11 plus c 12 Over L p'ren c 11 minus c 12 R p'ren L p'ren c 11 plus 2 c 12 R p'ren EndFrac"
     },
     "Sample_97_default": {
-      "speech": "upper S i normal upper O 2 plus 6 normal upper H normal upper F right arrow normal upper H 2 upper S i normal upper F 6 plus 2 normal upper H 2 normal upper O"
+      "expected": "upper S i normal upper O 2 plus 6 normal upper H normal upper F right arrow normal upper H 2 upper S i normal upper F 6 plus 2 normal upper H 2 normal upper O"
     },
     "Sample_97_brief": {
-      "speech": "upper S i normal upper O 2 plus 6 normal upper H normal upper F right arrow normal upper H 2 upper S i normal upper F 6 plus 2 normal upper H 2 normal upper O"
+      "expected": "upper S i normal upper O 2 plus 6 normal upper H normal upper F right arrow normal upper H 2 upper S i normal upper F 6 plus 2 normal upper H 2 normal upper O"
     },
     "Sample_97_sbrief": {
-      "speech": "upper S i normal upper O 2 plus 6 normal upper H normal upper F R arrow normal upper H 2 upper S i normal upper F 6 plus 2 normal upper H 2 normal upper O"
+      "expected": "upper S i normal upper O 2 plus 6 normal upper H normal upper F R arrow normal upper H 2 upper S i normal upper F 6 plus 2 normal upper H 2 normal upper O"
     },
     "Sample_98_default": {
-      "speech": "StartFraction d Over d x EndFraction left parenthesis upper E left parenthesis x right parenthesis upper A left parenthesis x right parenthesis StartFraction d w left parenthesis x right parenthesis Over d x EndFraction right parenthesis plus p left parenthesis x right parenthesis equals 0"
+      "expected": "StartFraction d Over d x EndFraction left parenthesis upper E left parenthesis x right parenthesis upper A left parenthesis x right parenthesis StartFraction d w left parenthesis x right parenthesis Over d x EndFraction right parenthesis plus p left parenthesis x right parenthesis equals 0"
     },
     "Sample_98_brief": {
-      "speech": "StartFrac d Over d x EndFrac left p'ren upper E left p'ren x right p'ren upper A left p'ren x right p'ren StartFrac d w left p'ren x right p'ren Over d x EndFrac right p'ren plus p left p'ren x right p'ren equals 0"
+      "expected": "StartFrac d Over d x EndFrac left p'ren upper E left p'ren x right p'ren upper A left p'ren x right p'ren StartFrac d w left p'ren x right p'ren Over d x EndFrac right p'ren plus p left p'ren x right p'ren equals 0"
     },
     "Sample_98_sbrief": {
-      "speech": "Frac d Over d x EndFrac L p'ren upper E L p'ren x R p'ren upper A L p'ren x R p'ren Frac d w L p'ren x R p'ren Over d x EndFrac R p'ren plus p L p'ren x R p'ren equals 0"
+      "expected": "Frac d Over d x EndFrac L p'ren upper E L p'ren x R p'ren upper A L p'ren x R p'ren Frac d w L p'ren x R p'ren Over d x EndFrac R p'ren plus p L p'ren x R p'ren equals 0"
     },
     "Sample_99_default": {
-      "speech": "TCS Subscript gas Baseline equals minus one half left parenthesis StartFraction upper P Subscript seal Baseline Over upper P Subscript max Baseline EndFraction right parenthesis left parenthesis StartFraction 1 Over upper T Subscript seal Baseline EndFraction right parenthesis"
+      "expected": "TCS Subscript gas Baseline equals minus one half left parenthesis StartFraction upper P Subscript seal Baseline Over upper P Subscript max Baseline EndFraction right parenthesis left parenthesis StartFraction 1 Over upper T Subscript seal Baseline EndFraction right parenthesis"
     },
     "Sample_99_brief": {
-      "speech": "TCS Sub gas Base equals minus one half left p'ren StartFrac upper P Sub seal Base Over upper P Sub max Base EndFrac right p'ren left p'ren StartFrac 1 Over upper T Sub seal Base EndFrac right p'ren"
+      "expected": "TCS Sub gas Base equals minus one half left p'ren StartFrac upper P Sub seal Base Over upper P Sub max Base EndFrac right p'ren left p'ren StartFrac 1 Over upper T Sub seal Base EndFrac right p'ren"
     },
     "Sample_99_sbrief": {
-      "speech": "TCS Sub gas Base equals minus one half L p'ren Frac upper P Sub seal Base Over upper P Sub max Base EndFrac R p'ren L p'ren Frac 1 Over upper T Sub seal Base EndFrac R p'ren"
+      "expected": "TCS Sub gas Base equals minus one half L p'ren Frac upper P Sub seal Base Over upper P Sub max Base EndFrac R p'ren L p'ren Frac 1 Over upper T Sub seal Base EndFrac R p'ren"
     },
     "Sample_100_default": {
-      "speech": "upper B Subscript p Baseline equals StartStartFraction StartFraction 7 minus v squared Over 3 EndFraction left parenthesis 1 plus StartFraction c squared Over a squared EndFraction plus StartFraction c Superscript 4 Baseline Over a Superscript 4 Baseline EndFraction right parenthesis plus StartFraction left parenthesis 3 minus v right parenthesis squared c squared Over left parenthesis 1 plus v right parenthesis a squared EndFraction OverOver left parenthesis 1 minus v right parenthesis left parenthesis 1 minus StartFraction c Superscript 4 Baseline Over a Superscript 4 Baseline EndFraction right parenthesis left parenthesis 1 minus StartFraction c squared Over a squared EndFraction right parenthesis EndEndFraction"
+      "expected": "upper B Subscript p Baseline equals StartStartFraction StartFraction 7 minus v squared Over 3 EndFraction left parenthesis 1 plus StartFraction c squared Over a squared EndFraction plus StartFraction c Superscript 4 Baseline Over a Superscript 4 Baseline EndFraction right parenthesis plus StartFraction left parenthesis 3 minus v right parenthesis squared c squared Over left parenthesis 1 plus v right parenthesis a squared EndFraction OverOver left parenthesis 1 minus v right parenthesis left parenthesis 1 minus StartFraction c Superscript 4 Baseline Over a Superscript 4 Baseline EndFraction right parenthesis left parenthesis 1 minus StartFraction c squared Over a squared EndFraction right parenthesis EndEndFraction"
     },
     "Sample_100_brief": {
-      "speech": "upper B Sub p Base equals StartStartFrac StartFrac 7 minus v squared Over 3 EndFrac left p'ren 1 plus StartFrac c squared Over a squared EndFrac plus StartFrac c Sup 4 Base Over a Sup 4 Base EndFrac right p'ren plus StartFrac left p'ren 3 minus v right p'ren squared c squared Over left p'ren 1 plus v right p'ren a squared EndFrac OverOver left p'ren 1 minus v right p'ren left p'ren 1 minus StartFrac c Sup 4 Base Over a Sup 4 Base EndFrac right p'ren left p'ren 1 minus StartFrac c squared Over a squared EndFrac right p'ren EndEndFrac"
+      "expected": "upper B Sub p Base equals StartStartFrac StartFrac 7 minus v squared Over 3 EndFrac left p'ren 1 plus StartFrac c squared Over a squared EndFrac plus StartFrac c Sup 4 Base Over a Sup 4 Base EndFrac right p'ren plus StartFrac left p'ren 3 minus v right p'ren squared c squared Over left p'ren 1 plus v right p'ren a squared EndFrac OverOver left p'ren 1 minus v right p'ren left p'ren 1 minus StartFrac c Sup 4 Base Over a Sup 4 Base EndFrac right p'ren left p'ren 1 minus StartFrac c squared Over a squared EndFrac right p'ren EndEndFrac"
     },
     "Sample_100_sbrief": {
-      "speech": "upper B Sub p Base equals NestFrac Frac 7 minus v squared Over 3 EndFrac L p'ren 1 plus Frac c squared Over a squared EndFrac plus Frac c Sup 4 Base Over a Sup 4 Base EndFrac R p'ren plus Frac L p'ren 3 minus v R p'ren squared c squared Over L p'ren 1 plus v R p'ren a squared EndFrac NestOver L p'ren 1 minus v R p'ren L p'ren 1 minus Frac c Sup 4 Base Over a Sup 4 Base EndFrac R p'ren L p'ren 1 minus Frac c squared Over a squared EndFrac R p'ren NestEndFrac"
+      "expected": "upper B Sub p Base equals NestFrac Frac 7 minus v squared Over 3 EndFrac L p'ren 1 plus Frac c squared Over a squared EndFrac plus Frac c Sup 4 Base Over a Sup 4 Base EndFrac R p'ren plus Frac L p'ren 3 minus v R p'ren squared c squared Over L p'ren 1 plus v R p'ren a squared EndFrac NestOver L p'ren 1 minus v R p'ren L p'ren 1 minus Frac c Sup 4 Base Over a Sup 4 Base EndFrac R p'ren L p'ren 1 minus Frac c squared Over a squared EndFrac R p'ren NestEndFrac"
     },
     "Sample_101_default": {
-      "speech": "upper Q Subscript tank Superscript series Baseline equals StartFraction 1 Over upper R Subscript s Baseline EndFraction StartRoot StartFraction upper L Subscript s Baseline Over upper C Subscript s Baseline EndFraction EndRoot"
+      "expected": "upper Q Subscript tank Superscript series Baseline equals StartFraction 1 Over upper R Subscript s Baseline EndFraction StartRoot StartFraction upper L Subscript s Baseline Over upper C Subscript s Baseline EndFraction EndRoot"
     },
     "Sample_101_brief": {
-      "speech": "upper Q Sub tank Sup series Base equals StartFrac 1 Over upper R Sub s Base EndFrac StartRoot StartFrac upper L Sub s Base Over upper C Sub s Base EndFrac EndRoot"
+      "expected": "upper Q Sub tank Sup series Base equals StartFrac 1 Over upper R Sub s Base EndFrac StartRoot StartFrac upper L Sub s Base Over upper C Sub s Base EndFrac EndRoot"
     },
     "Sample_101_sbrief": {
-      "speech": "upper Q Sub tank Sup series Base equals Frac 1 Over upper R Sub s Base EndFrac Root Frac upper L Sub s Base Over upper C Sub s Base EndFrac EndRoot"
+      "expected": "upper Q Sub tank Sup series Base equals Frac 1 Over upper R Sub s Base EndFrac Root Frac upper L Sub s Base Over upper C Sub s Base EndFrac EndRoot"
     },
     "Sample_102_default": {
-      "speech": "upper Delta phi Subscript peak Baseline equals tangent Superscript negative 1 Baseline left parenthesis k squared upper Q Subscript tank Superscript series Baseline right parenthesis"
+      "expected": "upper Delta phi Subscript peak Baseline equals tangent Superscript negative 1 Baseline left parenthesis k squared upper Q Subscript tank Superscript series Baseline right parenthesis"
     },
     "Sample_102_brief": {
-      "speech": "upper Delta phi Sub peak Base equals tangent Sup negative 1 Base left p'ren k squared upper Q Sub tank Sup series Base right p'ren"
+      "expected": "upper Delta phi Sub peak Base equals tangent Sup negative 1 Base left p'ren k squared upper Q Sub tank Sup series Base right p'ren"
     },
     "Sample_102_sbrief": {
-      "speech": "upper Delta phi Sub peak Base equals tangent Sup negative 1 Base L p'ren k squared upper Q Sub tank Sup series Base R p'ren"
+      "expected": "upper Delta phi Sub peak Base equals tangent Sup negative 1 Base L p'ren k squared upper Q Sub tank Sup series Base R p'ren"
     },
     "Sample_103_default": {
-      "speech": "f equals 1.013 StartFraction upper W Over upper L squared EndFraction StartRoot StartFraction upper E Over rho EndFraction EndRoot StartRoot left parenthesis 1 plus 0.293 StartFraction upper L squared Over EW squared EndFraction sigma right parenthesis EndRoot"
+      "expected": "f equals 1.013 StartFraction upper W Over upper L squared EndFraction StartRoot StartFraction upper E Over rho EndFraction EndRoot StartRoot left parenthesis 1 plus 0.293 StartFraction upper L squared Over EW squared EndFraction sigma right parenthesis EndRoot"
     },
     "Sample_103_brief": {
-      "speech": "f equals 1.013 StartFrac upper W Over upper L squared EndFrac StartRoot StartFrac upper E Over rho EndFrac EndRoot StartRoot left p'ren 1 plus 0.293 StartFrac upper L squared Over EW squared EndFrac sigma right p'ren EndRoot"
+      "expected": "f equals 1.013 StartFrac upper W Over upper L squared EndFrac StartRoot StartFrac upper E Over rho EndFrac EndRoot StartRoot left p'ren 1 plus 0.293 StartFrac upper L squared Over EW squared EndFrac sigma right p'ren EndRoot"
     },
     "Sample_103_sbrief": {
-      "speech": "f equals 1.013 Frac upper W Over upper L squared EndFrac Root Frac upper E Over rho EndFrac EndRoot Root L p'ren 1 plus 0.293 Frac upper L squared Over EW squared EndFrac sigma R p'ren EndRoot"
+      "expected": "f equals 1.013 Frac upper W Over upper L squared EndFrac Root Frac upper E Over rho EndFrac EndRoot Root L p'ren 1 plus 0.293 Frac upper L squared Over EW squared EndFrac sigma R p'ren EndRoot"
     },
     "Sample_104_default": {
-      "speech": "u Subscript n Baseline left parenthesis x right parenthesis equals gamma Subscript n Baseline left parenthesis hyperbolic cosine k Subscript n Baseline x minus cosine k Subscript n Baseline x right parenthesis plus left parenthesis hyperbolic sine k Subscript n Baseline x minus sine k Subscript n Baseline x right parenthesis"
+      "expected": "u Subscript n Baseline left parenthesis x right parenthesis equals gamma Subscript n Baseline left parenthesis hyperbolic cosine k Subscript n Baseline x minus cosine k Subscript n Baseline x right parenthesis plus left parenthesis hyperbolic sine k Subscript n Baseline x minus sine k Subscript n Baseline x right parenthesis"
     },
     "Sample_104_brief": {
-      "speech": "u Sub n Base left p'ren x right p'ren equals gamma Sub n Base left p'ren hyperbolic cosine k Sub n Base x minus cosine k Sub n Base x right p'ren plus left p'ren hyperbolic sine k Sub n Base x minus sine k Sub n Base x right p'ren"
+      "expected": "u Sub n Base left p'ren x right p'ren equals gamma Sub n Base left p'ren hyperbolic cosine k Sub n Base x minus cosine k Sub n Base x right p'ren plus left p'ren hyperbolic sine k Sub n Base x minus sine k Sub n Base x right p'ren"
     },
     "Sample_104_sbrief": {
-      "speech": "u Sub n Base L p'ren x R p'ren equals gamma Sub n Base L p'ren hyperbolic cosine k Sub n Base x minus cosine k Sub n Base x R p'ren plus L p'ren hyperbolic sine k Sub n Base x minus sine k Sub n Base x R p'ren"
+      "expected": "u Sub n Base L p'ren x R p'ren equals gamma Sub n Base L p'ren hyperbolic cosine k Sub n Base x minus cosine k Sub n Base x R p'ren plus L p'ren hyperbolic sine k Sub n Base x minus sine k Sub n Base x R p'ren"
     },
     "Sample_105_default": {
-      "speech": "StartLayout 1st Row 1st Column upper B 2nd Column equals StartStartFraction StartFraction upper F 0 Over m EndFraction OverOver StartRoot left parenthesis omega 0 squared minus omega squared right parenthesis squared plus 4 n squared omega squared EndRoot EndEndFraction 2nd Row 1st Column Blank 2nd Column equals StartStartFraction StartFraction upper F 0 Over k EndFraction OverOver StartRoot left parenthesis 1 minus left parenthesis omega slash omega 0 squared right parenthesis squared right parenthesis squared plus 4 left parenthesis n slash omega 0 right parenthesis squared left parenthesis omega slash omega 0 right parenthesis squared EndRoot EndEndFraction EndLayout"
+      "expected": "StartLayout 1st Row 1st Column upper B 2nd Column equals StartStartFraction StartFraction upper F 0 Over m EndFraction OverOver StartRoot left parenthesis omega 0 squared minus omega squared right parenthesis squared plus 4 n squared omega squared EndRoot EndEndFraction 2nd Row 1st Column Blank 2nd Column equals StartStartFraction StartFraction upper F 0 Over k EndFraction OverOver StartRoot left parenthesis 1 minus left parenthesis omega slash omega 0 squared right parenthesis squared right parenthesis squared plus 4 left parenthesis n slash omega 0 right parenthesis squared left parenthesis omega slash omega 0 right parenthesis squared EndRoot EndEndFraction EndLayout"
     },
     "Sample_105_brief": {
-      "speech": "StartLayout 1st Row 1st Column upper B 2nd Column equals StartStartFrac StartFrac upper F 0 Over m EndFrac OverOver StartRoot left p'ren omega 0 squared minus omega squared right p'ren squared plus 4 n squared omega squared EndRoot EndEndFrac 2nd Row 1st Column Blank 2nd Column equals StartStartFrac StartFrac upper F 0 Over k EndFrac OverOver StartRoot left p'ren 1 minus left p'ren omega slash omega 0 squared right p'ren squared right p'ren squared plus 4 left p'ren n slash omega 0 right p'ren squared left p'ren omega slash omega 0 right p'ren squared EndRoot EndEndFrac EndLayout"
+      "expected": "StartLayout 1st Row 1st Column upper B 2nd Column equals StartStartFrac StartFrac upper F 0 Over m EndFrac OverOver StartRoot left p'ren omega 0 squared minus omega squared right p'ren squared plus 4 n squared omega squared EndRoot EndEndFrac 2nd Row 1st Column Blank 2nd Column equals StartStartFrac StartFrac upper F 0 Over k EndFrac OverOver StartRoot left p'ren 1 minus left p'ren omega slash omega 0 squared right p'ren squared right p'ren squared plus 4 left p'ren n slash omega 0 right p'ren squared left p'ren omega slash omega 0 right p'ren squared EndRoot EndEndFrac EndLayout"
     },
     "Sample_105_sbrief": {
-      "speech": "Layout 1st Row 1st Column upper B 2nd Column equals NestFrac Frac upper F 0 Over m EndFrac NestOver Root L p'ren omega 0 squared minus omega squared R p'ren squared plus 4 n squared omega squared EndRoot NestEndFrac 2nd Row 1st Column Blank 2nd Column equals NestFrac Frac upper F 0 Over k EndFrac NestOver Root L p'ren 1 minus L p'ren omega slash omega 0 squared R p'ren squared R p'ren squared plus 4 L p'ren n slash omega 0 R p'ren squared L p'ren omega slash omega 0 R p'ren squared EndRoot NestEndFrac EndLayout"
+      "expected": "Layout 1st Row 1st Column upper B 2nd Column equals NestFrac Frac upper F 0 Over m EndFrac NestOver Root L p'ren omega 0 squared minus omega squared R p'ren squared plus 4 n squared omega squared EndRoot NestEndFrac 2nd Row 1st Column Blank 2nd Column equals NestFrac Frac upper F 0 Over k EndFrac NestOver Root L p'ren 1 minus L p'ren omega slash omega 0 squared R p'ren squared R p'ren squared plus 4 L p'ren n slash omega 0 R p'ren squared L p'ren omega slash omega 0 R p'ren squared EndRoot NestEndFrac EndLayout"
     },
     "Sample_106_default": {
-      "speech": "normal p left parenthesis upper A a n d upper B right parenthesis equals normal p left parenthesis upper A right parenthesis normal p left parenthesis upper B vertical bar upper A right parenthesis"
+      "expected": "normal p left parenthesis upper A a n d upper B right parenthesis equals normal p left parenthesis upper A right parenthesis normal p left parenthesis upper B vertical bar upper A right parenthesis"
     },
     "Sample_106_brief": {
-      "speech": "normal p left p'ren upper A a n d upper B right p'ren equals normal p left p'ren upper A right p'ren normal p left p'ren upper B vertical bar upper A right p'ren"
+      "expected": "normal p left p'ren upper A a n d upper B right p'ren equals normal p left p'ren upper A right p'ren normal p left p'ren upper B vertical bar upper A right p'ren"
     },
     "Sample_106_sbrief": {
-      "speech": "normal p L p'ren upper A a n d upper B R p'ren equals normal p L p'ren upper A R p'ren normal p L p'ren upper B vertical bar upper A R p'ren"
+      "expected": "normal p L p'ren upper A a n d upper B R p'ren equals normal p L p'ren upper A R p'ren normal p L p'ren upper B vertical bar upper A R p'ren"
     },
     "Sample_107_default": {
-      "speech": "upper P upper M upper F left parenthesis x right parenthesis proportional to left parenthesis StartFraction 1 Over x EndFraction right parenthesis Superscript alpha"
+      "expected": "upper P upper M upper F left parenthesis x right parenthesis proportional to left parenthesis StartFraction 1 Over x EndFraction right parenthesis Superscript alpha"
     },
     "Sample_107_brief": {
-      "speech": "upper P upper M upper F left p'ren x right p'ren proportional to left p'ren StartFrac 1 Over x EndFrac right p'ren Sup alpha"
+      "expected": "upper P upper M upper F left p'ren x right p'ren proportional to left p'ren StartFrac 1 Over x EndFrac right p'ren Sup alpha"
     },
     "Sample_107_sbrief": {
-      "speech": "upper P upper M upper F L p'ren x R p'ren proportional to L p'ren Frac 1 Over x EndFrac R p'ren Sup alpha"
+      "expected": "upper P upper M upper F L p'ren x R p'ren proportional to L p'ren Frac 1 Over x EndFrac R p'ren Sup alpha"
     },
     "Sample_108_default": {
-      "speech": "f left parenthesis x right parenthesis equals StartFraction 1 Over StartRoot 2 pi EndRoot EndFraction exp left parenthesis minus x squared slash 2 right parenthesis"
+      "expected": "f left parenthesis x right parenthesis equals StartFraction 1 Over StartRoot 2 pi EndRoot EndFraction exp left parenthesis minus x squared slash 2 right parenthesis"
     },
     "Sample_108_brief": {
-      "speech": "f left p'ren x right p'ren equals StartFrac 1 Over StartRoot 2 pi EndRoot EndFrac exp left p'ren minus x squared slash 2 right p'ren"
+      "expected": "f left p'ren x right p'ren equals StartFrac 1 Over StartRoot 2 pi EndRoot EndFrac exp left p'ren minus x squared slash 2 right p'ren"
     },
     "Sample_108_sbrief": {
-      "speech": "f L p'ren x R p'ren equals Frac 1 Over Root 2 pi EndRoot EndFrac exp L p'ren minus x squared slash 2 R p'ren"
+      "expected": "f L p'ren x R p'ren equals Frac 1 Over Root 2 pi EndRoot EndFrac exp L p'ren minus x squared slash 2 R p'ren"
     },
     "Sample_109_default": {
-      "speech": "StartFraction d x Over d theta EndFraction equals StartFraction beta Over cosine squared theta EndFraction"
+      "expected": "StartFraction d x Over d theta EndFraction equals StartFraction beta Over cosine squared theta EndFraction"
     },
     "Sample_109_brief": {
-      "speech": "StartFrac d x Over d theta EndFrac equals StartFrac beta Over cosine squared theta EndFrac"
+      "expected": "StartFrac d x Over d theta EndFrac equals StartFrac beta Over cosine squared theta EndFrac"
     },
     "Sample_109_sbrief": {
-      "speech": "Frac d x Over d theta EndFrac equals Frac beta Over cosine squared theta EndFrac"
+      "expected": "Frac d x Over d theta EndFrac equals Frac beta Over cosine squared theta EndFrac"
     },
     "Sample_110_default": {
-      "speech": "s slash StartRoot 2 left parenthesis n minus 1 right parenthesis EndRoot"
+      "expected": "s slash StartRoot 2 left parenthesis n minus 1 right parenthesis EndRoot"
     },
     "Sample_110_brief": {
-      "speech": "s slash StartRoot 2 left p'ren n minus 1 right p'ren EndRoot"
+      "expected": "s slash StartRoot 2 left p'ren n minus 1 right p'ren EndRoot"
     },
     "Sample_110_sbrief": {
-      "speech": "s slash Root 2 L p'ren n minus 1 R p'ren EndRoot"
+      "expected": "s slash Root 2 L p'ren n minus 1 R p'ren EndRoot"
     }
   }
 }

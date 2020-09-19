@@ -10,70 +10,70 @@
     "Cap001": {
       "_comment3_": " var speech = 'the fraction with numerator sine A, and denominator a,",
       "_comment4_": " equals, the fraction with numerator sine B, and denominator b';",
-      "speech": "sine A over a, equals, sine B over b"
+      "expected": "sine A over a, equals, sine B over b"
     },
     "Cap002": {
-      "speech": "c squared equals a squared plus b squared minus 2 a b cosine C"
+      "expected": "c squared equals a squared plus b squared minus 2 a b cosine C"
     },
     "Cap003": {
-      "speech": "tangent A equals, a over b"
+      "expected": "tangent A equals, a over b"
     },
     "Cap004": {
-      "speech": "A B"
+      "expected": "A B"
     },
     "Cap005": {
-      "speech": "a A"
+      "expected": "a A"
     },
     "Cap006": {
-      "speech": "b A"
+      "expected": "b A"
     },
     "Cap007": {
-      "speech": "B a"
+      "expected": "B a"
     },
     "Cap008": {
-      "speech": "angle A B C"
+      "expected": "angle A B C"
     },
     "Cap009": {
-      "speech": "the measure of angle A B C"
+      "expected": "the measure of angle A B C"
     },
     "Cap010": {
-      "speech": "the measure of angle A"
+      "expected": "the measure of angle A"
     },
     "_comment5_": " TODO: (QUESTION) This is does not seem to follow the fraction rules.",
     "Cap011": {
       "_comment6_": " var speech = 'the fraction with numerator sine cap A, and denominator a,",
       "_comment7_": " equals, the fraction with numerator sine cap B, and denominator b';",
-      "speech": "sine cap A over a, equals, sine cap B over b"
+      "expected": "sine cap A over a, equals, sine cap B over b"
     },
     "Cap012": {
-      "speech": "c squared equals a squared plus b squared minus 2 a b cosine cap C"
+      "expected": "c squared equals a squared plus b squared minus 2 a b cosine cap C"
     },
     "Cap013": {
-      "speech": "tangent cap A equals, a over b"
+      "expected": "tangent cap A equals, a over b"
     },
     "Cap014": {
-      "speech": "cap A, cap B"
+      "expected": "cap A, cap B"
     },
     "Cap015": {
-      "speech": "a, cap A"
+      "expected": "a, cap A"
     },
     "Cap016": {
-      "speech": "b, cap A"
+      "expected": "b, cap A"
     },
     "Cap017": {
-      "speech": "cap B, a"
+      "expected": "cap B, a"
     },
     "Cap018": {
-      "speech": "angle cap A, cap B, cap C"
+      "expected": "angle cap A, cap B, cap C"
     },
     "Cap019": {
-      "speech": "the measure of angle cap A, cap B, cap C"
+      "expected": "the measure of angle cap A, cap B, cap C"
     },
     "Cap020": {
-      "speech": "the measure of angle cap A"
+      "expected": "the measure of angle cap A"
     },
     "Cap020a": {
-      "speech": "angle cap A"
+      "expected": "angle cap A"
     },
     "_comment8_": " /**",
     "_comment9_": "  * Testing ClearspeakEnglishCapitalLetters Example Cap020 (extra)",

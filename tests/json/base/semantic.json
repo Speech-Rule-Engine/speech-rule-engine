@@ -3,1883 +3,1883 @@
   "_comment_1": " Test for empty wrapping elements.",
   "tests": {
     "Wrappers_0": {
-      "mathml": "<mrow><mrow><mi>a</mi></mrow></mrow><mrow><mi>b</mi></mrow>"
+      "input": "<mrow><mrow><mi>a</mi></mrow></mrow><mrow><mi>b</mi></mrow>"
     },
     "Wrappers_1": {
-      "mathml": "<mstyle><mi>q</mi><mpadded><mstyle><mrow><mi>x</mi><mo>+</mo></mrow></mstyle><mpadded><mrow><mi>a</mi></mrow><mrow><mi>a</mi></mrow></mpadded><mtext>nix</mtext></mpadded></mstyle>"
+      "input": "<mstyle><mi>q</mi><mpadded><mstyle><mrow><mi>x</mi><mo>+</mo></mrow></mstyle><mpadded><mrow><mi>a</mi></mrow><mrow><mi>a</mi></mrow></mpadded><mtext>nix</mtext></mpadded></mstyle>"
     },
     "Wrappers_2": {
-      "mathml": "<mrow class=\"MJX-TeXAtom-ORD\"><mo stretchy=\"false\">|</mo></mrow><mi>x</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo stretchy=\"false\">|</mo></mrow>"
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mo stretchy=\"false\">|</mo></mrow><mi>x</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo stretchy=\"false\">|</mo></mrow>"
     },
     "_comment_2": " Sub, Superscripts.",
     "_comment_3": " Test for sub super and subsuper scripts.",
     "Scripts_0": {
-      "mathml": "<msub><mi>a</mi><mi>b</mi></msub>"
+      "input": "<msub><mi>a</mi><mi>b</mi></msub>"
     },
     "Scripts_1": {
-      "mathml": "<msup><mi>a</mi><mi>b</mi></msup>"
+      "input": "<msup><mi>a</mi><mi>b</mi></msup>"
     },
     "Scripts_2": {
-      "mathml": "<msubsup><mi>a</mi><mi>b</mi><mi>c</mi></msubsup>"
+      "input": "<msubsup><mi>a</mi><mi>b</mi><mi>c</mi></msubsup>"
     },
     "Scripts_3": {
-      "mathml": "<mphantom/><msub><mi>a</mi><mpadded><mi>b</mi></mpadded></msub><merror/>"
+      "input": "<mphantom/><msub><mi>a</mi><mpadded><mi>b</mi></mpadded></msub><merror/>"
     },
     "Scripts_4": {
-      "mathml": "<mphantom/><msup><mi>a</mi><mpadded><mi>b</mi></mpadded></msup><merror/>"
+      "input": "<mphantom/><msup><mi>a</mi><mpadded><mi>b</mi></mpadded></msup><merror/>"
     },
     "Scripts_5": {
-      "mathml": "<mphantom/><msubsup><mi>a</mi><mpadded><mi>b</mi></mpadded><mpadded><mi>c</mi></mpadded></msubsup><merror/>"
+      "input": "<mphantom/><msubsup><mi>a</mi><mpadded><mi>b</mi></mpadded><mpadded><mi>c</mi></mpadded></msubsup><merror/>"
     },
     "Scripts_6": {
-      "mathml": "<mphantom/><msubsup><mpadded><mi>a</mi></mpadded><mi>b</mi><mpadded><mi>c</mi></mpadded></msubsup><merror/>"
+      "input": "<mphantom/><msubsup><mpadded><mi>a</mi></mpadded><mi>b</mi><mpadded><mi>c</mi></mpadded></msubsup><merror/>"
     },
     "Scripts_7": {
-      "mathml": "<mphantom/><msubsup><mi>a</mi><mpadded><mi>b</mi><mi>d</mi></mpadded><mpadded><mi>c</mi></mpadded></msubsup><merror/>"
+      "input": "<mphantom/><msubsup><mi>a</mi><mpadded><mi>b</mi><mi>d</mi></mpadded><mpadded><mi>c</mi></mpadded></msubsup><merror/>"
     },
     "_comment_4": " Numbers.",
     "_comment_5": " Test number representations.",
     "Numbers_0": {
-      "mathml": "<mn>2</mn>"
+      "input": "<mn>2</mn>"
     },
     "Numbers_1": {
-      "mathml": "<mn>2.0</mn>"
+      "input": "<mn>2.0</mn>"
     },
     "Numbers_2": {
-      "mathml": "<mn>2t3</mn>"
+      "input": "<mn>2t3</mn>"
     },
     "Numbers_3": {
-      "mathml": "<mfrac><mn>1</mn><mn>2</mn></mfrac>"
+      "input": "<mfrac><mn>1</mn><mn>2</mn></mfrac>"
     },
     "Numbers_4": {
-      "mathml": "<mfrac><mn>1</mn><mn>2.5</mn></mfrac>"
+      "input": "<mfrac><mn>1</mn><mn>2.5</mn></mfrac>"
     },
     "_comment_6": " Test mixed number representations.",
     "MixedNumbers_0": {
-      "mathml": "<mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>"
+      "input": "<mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>"
     },
     "MixedNumbers_1": {
-      "mathml": "<mfrac><mn>1</mn><mn>2</mn></mfrac><mn>3</mn>"
+      "input": "<mfrac><mn>1</mn><mn>2</mn></mfrac><mn>3</mn>"
     },
     "MixedNumbers_2": {
-      "mathml": "<mn>3.0</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>"
+      "input": "<mn>3.0</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>"
     },
     "MixedNumbers_3": {
-      "mathml": "<mn>3.0e</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>"
+      "input": "<mn>3.0e</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>"
     },
     "MixedNumbers_4": {
-      "mathml": "<mfrac><mn>1</mn><mn>2</mn></mfrac><mn>3.0</mn>"
+      "input": "<mfrac><mn>1</mn><mn>2</mn></mfrac><mn>3.0</mn>"
     },
     "MixedNumbers_5": {
-      "mathml": "<mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi>"
+      "input": "<mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi>"
     },
     "MixedNumbers_6": {
-      "mathml": "<mi>b</mi><mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi>"
+      "input": "<mi>b</mi><mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi>"
     },
     "_comment_7": " Relations.",
     "_comment_8": " Test relation trees.",
     "Relations_0": {
-      "mathml": "<mo>=</mo>"
+      "input": "<mo>=</mo>"
     },
     "Relations_1": {
-      "mathml": "<mi>a</mi><mo>=</mo><mi>b</mi>"
+      "input": "<mi>a</mi><mo>=</mo><mi>b</mi>"
     },
     "Relations_2": {
-      "mathml": "<mi>a</mi><mo>=</mo><mi>b</mi><mo>=</mo><mi>c</mi>"
+      "input": "<mi>a</mi><mo>=</mo><mi>b</mi><mo>=</mo><mi>c</mi>"
     },
     "Relations_3": {
-      "mathml": "<mi>a</mi><mo>=</mo><mi>b</mi><mo>=</mo><mi>c</mi><mo>&#x2264;</mo><mi>d</mi>"
+      "input": "<mi>a</mi><mo>=</mo><mi>b</mi><mo>=</mo><mi>c</mi><mo>&#x2264;</mo><mi>d</mi>"
     },
     "_comment_9": " Operators.",
     "_comment_10": " Test operator trees with pre- and postfixes.",
     "_comment_11": " Pathological operator only case.",
     "PrePostfixOperators_0": {
-      "mathml": "<mo>+</mo><mo>-</mo><mo>+</mo>"
+      "input": "<mo>+</mo><mo>-</mo><mo>+</mo>"
     },
     "_comment_12": " Single identifier with prefixes.",
     "PrePostfixOperators_1": {
-      "mathml": "<mo>+</mo><mo>+</mo><mi>a</mi>"
+      "input": "<mo>+</mo><mo>+</mo><mi>a</mi>"
     },
     "_comment_13": " Single identifier with prefix and negative.",
     "PrePostfixOperators_2": {
-      "mathml": "<mo>+</mo><mo>-</mo><mi>a</mi>"
+      "input": "<mo>+</mo><mo>-</mo><mi>a</mi>"
     },
     "_comment_14": " Single identifier with postfixes.",
     "PrePostfixOperators_3": {
-      "mathml": "<mi>a</mi><mo>+</mo><mo>-</mo>"
+      "input": "<mi>a</mi><mo>+</mo><mo>-</mo>"
     },
     "_comment_15": " Single identifier with pre- and postfixes.",
     "PrePostfixOperators_4": {
-      "mathml": "<mo>+</mo><mo>+</mo><mi>a</mi><mo>+</mo><mo>+</mo>"
+      "input": "<mo>+</mo><mo>+</mo><mi>a</mi><mo>+</mo><mo>+</mo>"
     },
     "_comment_16": " Single identifier with mixed pre- and postfixes.",
     "PrePostfixOperators_5": {
-      "mathml": "<mo>&#x2213;</mo><mo>+</mo><mi>a</mi><mo>&#x2213;</mo><mo>+</mo>"
+      "input": "<mo>&#x2213;</mo><mo>+</mo><mi>a</mi><mo>&#x2213;</mo><mo>+</mo>"
     },
     "_comment_17": " Two identifiers with pre- and postfixes.",
     "PrePostfixOperators_6": {
-      "mathml": "<mo>+</mo><mo>+</mo><mi>a</mi><mo>&#x2213;</mo><mo>+</mo><mi>b</mi><mo>+</mo>"
+      "input": "<mo>+</mo><mo>+</mo><mi>a</mi><mo>&#x2213;</mo><mo>+</mo><mi>b</mi><mo>+</mo>"
     },
     "_comment_18": " Three identifiers with pre- and postfixes.",
     "PrePostfixOperators_7": {
-      "mathml": "<mo>+</mo><mo>+</mo><mi>a</mi><mo>&#x2213;</mo><mo>+</mo><mi>b</mi><mo>+</mo><mo>&#x2213;</mo><mi>c</mi><mo>+</mo>"
+      "input": "<mo>+</mo><mo>+</mo><mi>a</mi><mo>&#x2213;</mo><mo>+</mo><mi>b</mi><mo>+</mo><mo>&#x2213;</mo><mi>c</mi><mo>+</mo>"
     },
     "_comment_19": " Test operator trees with single operator.",
     "_comment_20": " Single identifier.",
     "SingleOperators_0": {
-      "mathml": "<mi>a</mi>"
+      "input": "<mi>a</mi>"
     },
     "_comment_21": " Single implicit node.",
     "SingleOperators_1": {
-      "mathml": "<mi>a</mi><mi>b</mi>"
+      "input": "<mi>a</mi><mi>b</mi>"
     },
     "_comment_22": " Implicit multi node.",
     "SingleOperators_2": {
-      "mathml": "<mi>a</mi><mi>b</mi><mi>c</mi>"
+      "input": "<mi>a</mi><mi>b</mi><mi>c</mi>"
     },
     "_comment_23": " Single addition.",
     "SingleOperators_3": {
-      "mathml": "<mi>a</mi><mo>+</mo><mi>b</mi>"
+      "input": "<mi>a</mi><mo>+</mo><mi>b</mi>"
     },
     "_comment_24": " Multi addition.",
     "SingleOperators_4": {
-      "mathml": "<mi>a</mi><mo>+</mo><mi>b</mi><mo>+</mo><mi>c</mi>"
+      "input": "<mi>a</mi><mo>+</mo><mi>b</mi><mo>+</mo><mi>c</mi>"
     },
     "_comment_25": " Multi addition with implicit node.",
     "SingleOperators_5": {
-      "mathml": "<mi>a</mi><mo>+</mo><mi>b</mi><mi>c</mi><mo>+</mo><mi>d</mi>"
+      "input": "<mi>a</mi><mo>+</mo><mi>b</mi><mi>c</mi><mo>+</mo><mi>d</mi>"
     },
     "_comment_26": " Test operator trees with multiple operators.",
     "_comment_27": " Addition and subtraction.",
     "MultipleOperators_0": {
-      "mathml": "<mi>a</mi><mo>+</mo><mi>b</mi><mo>-</mo><mi>c</mi><mo>+</mo><mi>d</mi>"
+      "input": "<mi>a</mi><mo>+</mo><mi>b</mi><mo>-</mo><mi>c</mi><mo>+</mo><mi>d</mi>"
     },
     "_comment_28": " Addition and subtraction.",
     "MultipleOperators_1": {
-      "mathml": "<mi>a</mi><mo>+</mo><mi>b</mi><mo>+</mo><mi>c</mi><mo>-</mo><mi>d</mi><mo>-</mo><mi>e</mi>"
+      "input": "<mi>a</mi><mo>+</mo><mi>b</mi><mo>+</mo><mi>c</mi><mo>-</mo><mi>d</mi><mo>-</mo><mi>e</mi>"
     },
     "_comment_29": " Addition and explicit multiplication.",
     "MultipleOperators_2": {
-      "mathml": "<mi>a</mi><mo>+</mo><mi>b</mi><mo>&#x2218;</mo><mi>c</mi><mo>+</mo><mi>d</mi>"
+      "input": "<mi>a</mi><mo>+</mo><mi>b</mi><mo>&#x2218;</mo><mi>c</mi><mo>+</mo><mi>d</mi>"
     },
     "_comment_30": " Addition with explicit and implicit multiplication.",
     "MultipleOperators_3": {
-      "mathml": "<mi>a</mi><mo>+</mo><mi>b</mi><mo>&#x2218;</mo><mi>c</mi><mi>d</mi><mo>+</mo><mi>e</mi><mo>&#x2218;</mo><mi>f</mi>"
+      "input": "<mi>a</mi><mo>+</mo><mi>b</mi><mo>&#x2218;</mo><mi>c</mi><mi>d</mi><mo>+</mo><mi>e</mi><mo>&#x2218;</mo><mi>f</mi>"
     },
     "_comment_31": " Two Additions, subtraction plus explicit and implicit multiplication,",
     "_comment_32": " one prefix and one postfix.",
     "MultipleOperators_4": {
-      "mathml": "<mi>a</mi><mo>+</mo><mi>b</mi><mo>+</mo><mi>c</mi><mi>d</mi><mo>+</mo><mi>e</mi><mo>&#x2218;</mo><mi>f</mi><mo>-</mo><mi>g</mi><mo>+</mo><mo>+</mo><mi>h</mi><mo>&#x2295;</mo><mi>i</mi><mo>&#x2295;</mo><mi>j</mi><mo>+</mo><mo>+</mo>"
+      "input": "<mi>a</mi><mo>+</mo><mi>b</mi><mo>+</mo><mi>c</mi><mi>d</mi><mo>+</mo><mi>e</mi><mo>&#x2218;</mo><mi>f</mi><mo>-</mo><mi>g</mi><mo>+</mo><mo>+</mo><mi>h</mi><mo>&#x2295;</mo><mi>i</mi><mo>&#x2295;</mo><mi>j</mi><mo>+</mo><mo>+</mo>"
     },
     "_comment_33": " Test operator trees with multiplication operators.",
     "_comment_34": " Addition and subtraction.",
     "MultiplicationOperators_0": {
-      "mathml": "<mi>a</mi><mo>*</mo><mi>b</mi><mo>*</mo><mi>c</mi><mo>*</mo><mi>d</mi>"
+      "input": "<mi>a</mi><mo>*</mo><mi>b</mi><mo>*</mo><mi>c</mi><mo>*</mo><mi>d</mi>"
     },
     "MultiplicationOperators_1": {
-      "mathml": "<mrow><mn>1</mn><mi>a</mi><mo>&#x00B7;</mo><mi>m</mi></mrow>"
+      "input": "<mrow><mn>1</mn><mi>a</mi><mo>&#x00B7;</mo><mi>m</mi></mrow>"
     },
     "MultiplicationOperators_2": {
-      "mathml": "<mrow><mn>1</mn><mi>a</mi><mo>&#x00B7;</mo><mi>m</mi><mo>&#x00B7;</mo><mi>s</mi></mrow>"
+      "input": "<mrow><mn>1</mn><mi>a</mi><mo>&#x00B7;</mo><mi>m</mi><mo>&#x00B7;</mo><mi>s</mi></mrow>"
     },
     "MultiplicationOperators_3": {
-      "mathml": "<mrow><mn>1</mn><mi>a</mi><mo>&#x00B7;</mo><mi>m</mi><mo>&#x00B7;</mo><mi>s</mi><mo>&#x00B7;</mo><mi>c</mi><mi>b</mi><mo>&#x00B7;</mo><mi>k</mi></mrow>"
+      "input": "<mrow><mn>1</mn><mi>a</mi><mo>&#x00B7;</mo><mi>m</mi><mo>&#x00B7;</mo><mi>s</mi><mo>&#x00B7;</mo><mi>c</mi><mi>b</mi><mo>&#x00B7;</mo><mi>k</mi></mrow>"
     },
     "MultiplicationOperators_4": {
-      "mathml": "<mrow><mn>1</mn><mi>a</mi><mo>&#x00B7;</mo><msup><mi>m</mi><mn>2</mn></msup><mo>&#x00B7;</mo><msup><mi>s</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow>"
+      "input": "<mrow><mn>1</mn><mi>a</mi><mo>&#x00B7;</mo><msup><mi>m</mi><mn>2</mn></msup><mo>&#x00B7;</mo><msup><mi>s</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow>"
     },
     "MultiplicationOperators_5": {
-      "mathml": "<mrow><mn>1</mn><mi>J</mi><mo>=</mo><mn>1</mn><mi>a</mi><mo>&#x00B7;</mo><msup><mi>m</mi><mn>2</mn></msup><mo>&#x00B7;</mo><msup><mi>s</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow>"
+      "input": "<mrow><mn>1</mn><mi>J</mi><mo>=</mo><mn>1</mn><mi>a</mi><mo>&#x00B7;</mo><msup><mi>m</mi><mn>2</mn></msup><mo>&#x00B7;</mo><msup><mi>s</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow>"
     },
     "_comment_35": " Fences.",
     "_comment_36": " Test regular directed fences.",
     "_comment_37": " No fence.",
     "RegularFences_0": {
-      "mathml": "<mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow>"
+      "input": "<mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow>"
     },
     "_comment_38": " Empty parentheses.",
     "RegularFences_1": {
-      "mathml": "<mo>(</mo><mo>)</mo>"
+      "input": "<mo>(</mo><mo>)</mo>"
     },
     "_comment_39": " Single Fenced Expression.",
     "RegularFences_2": {
-      "mathml": "<mrow><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo></mrow>"
+      "input": "<mrow><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo></mrow>"
     },
     "_comment_40": " Single Fenced Expression and operators.",
     "RegularFences_3": {
-      "mathml": "<mrow><mi>a</mi><mo>+</mo><mo>(</mo><mi>b</mi><mo>+</mo><mi>c</mi><mo>)</mo><mo>+</mo><mi>d</mi></mrow>"
+      "input": "<mrow><mi>a</mi><mo>+</mo><mo>(</mo><mi>b</mi><mo>+</mo><mi>c</mi><mo>)</mo><mo>+</mo><mi>d</mi></mrow>"
     },
     "_comment_41": " Parallel Parenthesis.",
     "RegularFences_4": {
-      "mathml": "<mrow><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo><mo>(</mo><mi>c</mi><mo>+</mo><mi>d</mi><mo>)</mo></mrow>"
+      "input": "<mrow><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo><mo>(</mo><mi>c</mi><mo>+</mo><mi>d</mi><mo>)</mo></mrow>"
     },
     "_comment_42": " Nested Parenthesis.",
     "RegularFences_5": {
-      "mathml": "<mrow><mo>(</mo><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo><mo>(</mo><mi>c</mi><mo>+</mo><mi>d</mi><mo>)</mo><mo>)</mo></mrow>"
+      "input": "<mrow><mo>(</mo><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo><mo>(</mo><mi>c</mi><mo>+</mo><mi>d</mi><mo>)</mo><mo>)</mo></mrow>"
     },
     "_comment_43": " Nested parenthesis and brackets.",
     "RegularFences_6": {
-      "mathml": "<mrow><mo>(</mo><mo>[</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>+</mo><mi>c</mi><mo>]</mo><mo>+</mo><mi>d</mi><mo>)</mo></mrow>"
+      "input": "<mrow><mo>(</mo><mo>[</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>+</mo><mi>c</mi><mo>]</mo><mo>+</mo><mi>d</mi><mo>)</mo></mrow>"
     },
     "_comment_44": " Nested parenthesis, brackets, braces and superscript operator.",
     "RegularFences_7": {
-      "mathml": "<mrow><mo>(</mo><msup><mi>a</mi><mrow><mn>2</mn><mo>[</mo><mi>i</mi><mo>+</mo><mi>n</mi><mo>]</mo></mrow></msup><mo>+</mo><mi>b</mi><mo>)</mo><mo>+</mo><mo>{</mo><mi>c</mi><mi>d</mi><mo>-</mo><mo>[</mo><mi>e</mi><mo>+</mo><mi>f</mi><mo>]</mo><mo>}</mo></mrow>"
+      "input": "<mrow><mo>(</mo><msup><mi>a</mi><mrow><mn>2</mn><mo>[</mo><mi>i</mi><mo>+</mo><mi>n</mi><mo>]</mo></mrow></msup><mo>+</mo><mi>b</mi><mo>)</mo><mo>+</mo><mo>{</mo><mi>c</mi><mi>d</mi><mo>-</mo><mo>[</mo><mi>e</mi><mo>+</mo><mi>f</mi><mo>]</mo><mo>}</mo></mrow>"
     },
     "_comment_45": " Test neutral fences.",
     "_comment_46": " Empty bars.",
     "NeutralFences_0": {
-      "mathml": "<mrow><mo>|</mo><mo>|</mo></mrow>"
+      "input": "<mrow><mo>|</mo><mo>|</mo></mrow>"
     },
     "_comment_47": " Simple bar fence.",
     "NeutralFences_1": {
-      "mathml": "<mrow><mo>|</mo><mi>a</mi><mo>|</mo></mrow>"
+      "input": "<mrow><mo>|</mo><mi>a</mi><mo>|</mo></mrow>"
     },
     "_comment_48": " Parallel bar fences.",
     "NeutralFences_2": {
-      "mathml": "<mrow><mo>|</mo><mi>a</mi><mo>|</mo><mi>b</mi><mo>+</mo><mo>&#x00A6;</mo><mi>c</mi><mo>&#x00A6;</mo></mrow>"
+      "input": "<mrow><mo>|</mo><mi>a</mi><mo>|</mo><mi>b</mi><mo>+</mo><mo>&#x00A6;</mo><mi>c</mi><mo>&#x00A6;</mo></mrow>"
     },
     "_comment_49": " Nested bar fences.",
     "NeutralFences_3": {
-      "mathml": "<mrow><mo>&#x00A6;</mo><mo>|</mo><mi>a</mi><mo>|</mo><mi>b</mi><mo>+</mo><mi>c</mi><mo>&#x00A6;</mo></mrow>"
+      "input": "<mrow><mo>&#x00A6;</mo><mo>|</mo><mi>a</mi><mo>|</mo><mi>b</mi><mo>+</mo><mi>c</mi><mo>&#x00A6;</mo></mrow>"
     },
     "_comment_50": " Mixed neutral and regular fences.",
     "_comment_51": " Empty parenthsis inside bars.",
     "MixedFences_0": {
-      "mathml": "<mrow><mo>|</mo><mo>(</mo><mo>)</mo><mo>|</mo></mrow>"
+      "input": "<mrow><mo>|</mo><mo>(</mo><mo>)</mo><mo>|</mo></mrow>"
     },
     "_comment_52": " Bars inside parentheses.",
     "MixedFences_1": {
-      "mathml": "<mrow><mo>(</mo><mo>|</mo><mi>a</mi><mo>|</mo><mi>b</mi><mo>&#x00A6;</mo><mi>c</mi><mo>&#x00A6;</mo><mi>d</mi><mo>)</mo></mrow>"
+      "input": "<mrow><mo>(</mo><mo>|</mo><mi>a</mi><mo>|</mo><mi>b</mi><mo>&#x00A6;</mo><mi>c</mi><mo>&#x00A6;</mo><mi>d</mi><mo>)</mo></mrow>"
     },
     "_comment_53": " Parentheses inside bards.",
     "MixedFences_2": {
-      "mathml": "<mrow><mo>|</mo><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo><mo>&#x00A6;</mo><mi>c</mi><mo>&#x00A6;</mo><mi>d</mi><mo>|</mo></mrow>"
+      "input": "<mrow><mo>|</mo><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo><mo>&#x00A6;</mo><mi>c</mi><mo>&#x00A6;</mo><mi>d</mi><mo>|</mo></mrow>"
     },
     "_comment_54": " Parentheses inside bards.",
     "MixedFences_3": {
-      "mathml": "<mrow><mo>[</mo><mo>|</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>|</mo><mo>+</mo><mi>c</mi><mo>]</mo><mo>+</mo><mo>&#x00A6;</mo><mi>d</mi><mo>+</mo><mo>(</mo><mi>e</mi><mo>+</mo><mi>f</mi><mo>)</mo><mo>&#x00A6;</mo></mrow>"
+      "input": "<mrow><mo>[</mo><mo>|</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>|</mo><mo>+</mo><mi>c</mi><mo>]</mo><mo>+</mo><mo>&#x00A6;</mo><mi>d</mi><mo>+</mo><mo>(</mo><mi>e</mi><mo>+</mo><mi>f</mi><mo>)</mo><mo>&#x00A6;</mo></mrow>"
     },
     "_comment_55": " Mixed with isolated bars.",
     "_comment_56": " Set notation.",
     "MixedFencesWithBars_0": {
-      "mathml": "<mrow><mo>{</mo><mo>(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>)</mo><mo>|</mo><mi>x</mi><mi>y</mi><mo>=</mo><mo>z</mo><mo>}</mo></mrow>"
+      "input": "<mrow><mo>{</mo><mo>(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>)</mo><mo>|</mo><mi>x</mi><mi>y</mi><mo>=</mo><mo>z</mo><mo>}</mo></mrow>"
     },
     "_comment_57": " Disjunction of bracketed parallel statements.",
     "MixedFencesWithBars_1": {
-      "mathml": "<mrow><mo>[</mo><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>]</mo><mo>|</mo><mo>[</mo><mi>x</mi><mo>&#x2016;</mo><mi>y</mi><mo>]</mo></mrow>"
+      "input": "<mrow><mo>[</mo><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>]</mo><mo>|</mo><mo>[</mo><mi>x</mi><mo>&#x2016;</mo><mi>y</mi><mo>]</mo></mrow>"
     },
     "_comment_58": " Metric over the above.",
     "MixedFencesWithBars_2": {
-      "mathml": "<mrow><mo>&#x2016;</mo><mo>[</mo><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>]</mo><mo>|</mo><mo>[</mo><mi>x</mi><mo>&#x2016;</mo><mi>y</mi><mo>]</mo><mo>&#x2016;</mo></mrow>"
+      "input": "<mrow><mo>&#x2016;</mo><mo>[</mo><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>]</mo><mo>|</mo><mo>[</mo><mi>x</mi><mo>&#x2016;</mo><mi>y</mi><mo>]</mo><mo>&#x2016;</mo></mrow>"
     },
     "_comment_59": " Mix of metrics and bracketed expression and single bars.",
     "MixedFencesWithBars_3": {
-      "mathml": "<mrow><mo>&#x2016;</mo><mo>[</mo><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>]</mo><mo>|</mo><mo>[</mo><mi>c</mi><mo>&#x2016;</mo><mo>&#x00A6;</mo><mi>d</mi><mo>]</mo><mo>&#x2016;</mo><mo>[</mo><mi>u</mi><mo>&#x2016;</mo><mi>v</mi><mo>]</mo><mo>|</mo><mi>x</mi><mo>&#x2016;</mo><mi>y</mi><mo>&#x00A6;</mo><mi>z</mi></mrow>"
+      "input": "<mrow><mo>&#x2016;</mo><mo>[</mo><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>]</mo><mo>|</mo><mo>[</mo><mi>c</mi><mo>&#x2016;</mo><mo>&#x00A6;</mo><mi>d</mi><mo>]</mo><mo>&#x2016;</mo><mo>[</mo><mi>u</mi><mo>&#x2016;</mo><mi>v</mi><mo>]</mo><mo>|</mo><mi>x</mi><mo>&#x2016;</mo><mi>y</mi><mo>&#x00A6;</mo><mi>z</mi></mrow>"
     },
     "_comment_60": " Pathological cases with only opening fences.",
     "_comment_61": " Single.",
     "OpeningFencesOnly_0": {
-      "mathml": "<mrow><mo>[</mo></mrow>"
+      "input": "<mrow><mo>[</mo></mrow>"
     },
     "_comment_62": " Single right.",
     "OpeningFencesOnly_1": {
-      "mathml": "<mrow><mi>a</mi><mo>[</mo></mrow>"
+      "input": "<mrow><mi>a</mi><mo>[</mo></mrow>"
     },
     "_comment_63": " Single middle.",
     "OpeningFencesOnly_2": {
-      "mathml": "<mrow><mi>a</mi><mo>[</mo><mi>b</mi></mrow>"
+      "input": "<mrow><mi>a</mi><mo>[</mo><mi>b</mi></mrow>"
     },
     "_comment_64": " Single left.",
     "OpeningFencesOnly_3": {
-      "mathml": "<mrow><mo>[</mo><mi>b</mi></mrow>"
+      "input": "<mrow><mo>[</mo><mi>b</mi></mrow>"
     },
     "_comment_65": " Multiple.",
     "OpeningFencesOnly_4": {
-      "mathml": "<mrow><mi>a</mi><mo>[</mo><mi>b</mi><mi>c</mi><mo>(</mo><mi>d</mi><mo>{</mo><mi>e</mi><mo>&#x3008;</mo><mi>f</mi></mrow>"
+      "input": "<mrow><mi>a</mi><mo>[</mo><mi>b</mi><mi>c</mi><mo>(</mo><mi>d</mi><mo>{</mo><mi>e</mi><mo>&#x3008;</mo><mi>f</mi></mrow>"
     },
     "_comment_66": " Multiple plus inner fenced.",
     "OpeningFencesOnly_5": {
-      "mathml": "<mrow><mi>a</mi><mo>[</mo><mi>b</mi><mo>[</mo><mo>(</mo><mo>(</mo><mi>c</mi><mo>)</mo><mi>d</mi><mo>{</mo><mi>e</mi><mo>&#x3008;</mo><mi>f</mi></mrow>"
+      "input": "<mrow><mi>a</mi><mo>[</mo><mi>b</mi><mo>[</mo><mo>(</mo><mo>(</mo><mi>c</mi><mo>)</mo><mi>d</mi><mo>{</mo><mi>e</mi><mo>&#x3008;</mo><mi>f</mi></mrow>"
     },
     "_comment_67": " Pathological cases with only closing fences.",
     "_comment_68": " Single.",
     "ClosingFencesOnly_0": {
-      "mathml": "<mrow><mo>]</mo></mrow>"
+      "input": "<mrow><mo>]</mo></mrow>"
     },
     "_comment_69": " Single right.",
     "ClosingFencesOnly_1": {
-      "mathml": "<mrow><mi>a</mi><mo>]</mo></mrow>"
+      "input": "<mrow><mi>a</mi><mo>]</mo></mrow>"
     },
     "_comment_70": " Single middle.",
     "ClosingFencesOnly_2": {
-      "mathml": "<mrow><mi>a</mi><mo>]</mo><mi>b</mi></mrow>"
+      "input": "<mrow><mi>a</mi><mo>]</mo><mi>b</mi></mrow>"
     },
     "_comment_71": " Single left.",
     "ClosingFencesOnly_3": {
-      "mathml": "<mrow><mo>]</mo><mi>b</mi></mrow>"
+      "input": "<mrow><mo>]</mo><mi>b</mi></mrow>"
     },
     "_comment_72": " Multiple.",
     "ClosingFencesOnly_4": {
-      "mathml": "<mrow><mi>a</mi><mo>]</mo><mi>b</mi><mi>c</mi><mo>)</mo><mi>d</mi><mo>}</mo><mi>e</mi><mo>&#x3009;</mo><mi>f</mi></mrow>"
+      "input": "<mrow><mi>a</mi><mo>]</mo><mi>b</mi><mi>c</mi><mo>)</mo><mi>d</mi><mo>}</mo><mi>e</mi><mo>&#x3009;</mo><mi>f</mi></mrow>"
     },
     "_comment_73": " Multiple plus inner fenced.",
     "ClosingFencesOnly_5": {
-      "mathml": "<mrow><mi>a</mi><mo>]</mo><mi>b</mi><mo>]</mo><mo>(</mo><mi>c</mi><mo>)</mo><mo>)</mo><mi>d</mi><mo>}</mo><mi>e</mi><mo>&#x3009;</mo><mi>f</mi></mrow>"
+      "input": "<mrow><mi>a</mi><mo>]</mo><mi>b</mi><mo>]</mo><mo>(</mo><mi>c</mi><mo>)</mo><mo>)</mo><mi>d</mi><mo>}</mo><mi>e</mi><mo>&#x3009;</mo><mi>f</mi></mrow>"
     },
     "_comment_74": " Pathological cases with only neutral fences.",
     "_comment_75": " Single.",
     "NeutralFencesOnly_0": {
-      "mathml": "<mrow><mo>|</mo></mrow>"
+      "input": "<mrow><mo>|</mo></mrow>"
     },
     "_comment_76": " Single right.",
     "NeutralFencesOnly_1": {
-      "mathml": "<mrow><mi>a</mi><mo>|</mo></mrow>"
+      "input": "<mrow><mi>a</mi><mo>|</mo></mrow>"
     },
     "_comment_77": " Single middle.",
     "NeutralFencesOnly_2": {
-      "mathml": "<mrow><mi>a</mi><mo>|</mo><mi>b</mi></mrow>"
+      "input": "<mrow><mi>a</mi><mo>|</mo><mi>b</mi></mrow>"
     },
     "_comment_78": " Single left.",
     "NeutralFencesOnly_3": {
-      "mathml": "<mrow><mo>|</mo><mi>b</mi></mrow>"
+      "input": "<mrow><mo>|</mo><mi>b</mi></mrow>"
     },
     "_comment_79": " Two different bars.",
     "NeutralFencesOnly_4": {
-      "mathml": "<mrow><mi>a</mi><mo>|</mo><mi>b</mi><mo>&#x00A6;</mo><mi>c</mi></mrow>"
+      "input": "<mrow><mi>a</mi><mo>|</mo><mi>b</mi><mo>&#x00A6;</mo><mi>c</mi></mrow>"
     },
     "_comment_80": " Three different bars.",
     "NeutralFencesOnly_5": {
-      "mathml": "<mrow><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>|</mo><mi>c</mi><mo>&#x00A6;</mo><mi>d</mi></mrow>"
+      "input": "<mrow><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>|</mo><mi>c</mi><mo>&#x00A6;</mo><mi>d</mi></mrow>"
     },
     "_comment_81": " Multiple plus inner fenced.",
     "NeutralFencesOnly_6": {
-      "mathml": "<mrow><mo>&#x2016;</mo><mo>[</mo><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>]</mo><mo>&#x2016;</mo><mo>|</mo><mi>x</mi><mo>&#x2016;</mo><mi>y</mi><mo>&#x00A6;</mo><mi>z</mi></mrow>"
+      "input": "<mrow><mo>&#x2016;</mo><mo>[</mo><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>]</mo><mo>&#x2016;</mo><mo>|</mo><mi>x</mi><mo>&#x2016;</mo><mi>y</mi><mo>&#x00A6;</mo><mi>z</mi></mrow>"
     },
     "_comment_82": " Pathological cases with mixed fences.",
     "_comment_83": " Close, },",
     "_comment_84": " Neutrals and close.",
     "MixedUnmatchedFences_0": {
-      "mathml": "<mrow><mo>]</mo><mo>&#x2016;</mo><mi>b</mi><mo>|</mo><mi>c</mi><mo>(</mo></mrow>"
+      "input": "<mrow><mo>]</mo><mo>&#x2016;</mo><mi>b</mi><mo>|</mo><mi>c</mi><mo>(</mo></mrow>"
     },
     "_comment_80": " Neutrals and close.",
     "MixedUnmatchedFences_1": {
-      "mathml": "<mrow><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>|</mo><mi>c</mi><mo>&#x00A6;</mo><mi>d</mi><mo>]</mo><mi>e</mi></mrow>"
+      "input": "<mrow><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>|</mo><mi>c</mi><mo>&#x00A6;</mo><mi>d</mi><mo>]</mo><mi>e</mi></mrow>"
     },
     "_comment_81": " Neutrals and open.",
     "MixedUnmatchedFences_2": {
-      "mathml": "<mrow><mo>[</mo><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>|</mo><mi>c</mi><mo>&#x00A6;</mo><mi>d</mi></mrow>"
+      "input": "<mrow><mo>[</mo><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>|</mo><mi>c</mi><mo>&#x00A6;</mo><mi>d</mi></mrow>"
     },
     "_comment_82": " Multiple fences, fenced and operations",
     "MixedUnmatchedFences_3": {
-      "mathml": "<mrow><mo>&#x2016;</mo><mo>[</mo><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>]</mo><mo>|</mo><mo>[</mo><mi>c</mi><mo>&#x2016;</mo><mo>&#x00A6;</mo><mi>d</mi><mo>]</mo><mo>&#x2016;</mo><mo>|</mo><mi>x</mi><mo>&#x2016;</mo><mi>y</mi><mo>&#x00A6;</mo><mi>z</mi><mo>]</mo></mrow>"
+      "input": "<mrow><mo>&#x2016;</mo><mo>[</mo><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>]</mo><mo>|</mo><mo>[</mo><mi>c</mi><mo>&#x2016;</mo><mo>&#x00A6;</mo><mi>d</mi><mo>]</mo><mo>&#x2016;</mo><mo>|</mo><mi>x</mi><mo>&#x2016;</mo><mi>y</mi><mo>&#x00A6;</mo><mi>z</mi><mo>]</mo></mrow>"
     },
     "_comment_83": " Multiple fences, fenced and operations",
     "MixedUnmatchedFences_4": {
-      "mathml": "<mrow><mo>&#x2016;</mo><mo>]</mo><mo>&#x00A6;</mo><mo>&#x2016;</mo><mo>[</mo><mo>|</mo><mo>[</mo><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>]</mo><mo>&#x2016;</mo><mo>|</mo><mi>[</mi><mo>&#x2016;</mo><mi>y</mi><mo>&#x00A6;</mo><mi>z</mi></mrow>"
+      "input": "<mrow><mo>&#x2016;</mo><mo>]</mo><mo>&#x00A6;</mo><mo>&#x2016;</mo><mo>[</mo><mo>|</mo><mo>[</mo><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>]</mo><mo>&#x2016;</mo><mo>|</mo><mi>[</mi><mo>&#x2016;</mo><mi>y</mi><mo>&#x00A6;</mo><mi>z</mi></mrow>"
     },
     "_comment_84": " Multiple fences, fenced and operations",
     "MixedUnmatchedFences_5": {
-      "mathml": "<mrow><mo>&#x2016;</mo><mo>[</mo><mi>a</mi><mo>&#x00A6;</mo><mo>&#x2016;</mo><mo>[</mo><mo>+</mo><mo>[</mo><mi>b</mi><mo>&#x2016;</mo><mi>c</mi><mo>]</mo><mo>+</mo><mo>&#x2016;</mo><mo>|</mo><mi>d</mi><mo>+</mo><mi>e</mi><mi>[</mi><mo>&#x2016;</mo><mi>y</mi><mo>&#x00A6;</mo><mo>+</mo><mi>z</mi></mrow>"
+      "input": "<mrow><mo>&#x2016;</mo><mo>[</mo><mi>a</mi><mo>&#x00A6;</mo><mo>&#x2016;</mo><mo>[</mo><mo>+</mo><mo>[</mo><mi>b</mi><mo>&#x2016;</mo><mi>c</mi><mo>]</mo><mo>+</mo><mo>&#x2016;</mo><mo>|</mo><mi>d</mi><mo>+</mo><mi>e</mi><mi>[</mi><mo>&#x2016;</mo><mi>y</mi><mo>&#x00A6;</mo><mo>+</mo><mi>z</mi></mrow>"
     },
     "_comment_89": " Square roots",
     "SquareRoots_0": {
-      "mathml": "<msqrt></msqrt>"
+      "input": "<msqrt></msqrt>"
     },
     "SquareRoots_1": {
-      "mathml": "<msqrt><mi>x</mi></msqrt>"
+      "input": "<msqrt><mi>x</mi></msqrt>"
     },
     "SquareRoots_2": {
-      "mathml": "<msqrt><msqrt><mi>x</mi></msqrt></msqrt>"
+      "input": "<msqrt><msqrt><mi>x</mi></msqrt></msqrt>"
     },
     "SquareRoots_3": {
-      "mathml": "<msqrt><mi>x</mi><mi>n</mi></msqrt>"
+      "input": "<msqrt><mi>x</mi><mi>n</mi></msqrt>"
     },
     "SquareRoots_4": {
-      "mathml": "<msqrt><msqrt><msqrt><mi>x</mi></msqrt></msqrt><mi>y</mi></msqrt>"
+      "input": "<msqrt><msqrt><msqrt><mi>x</mi></msqrt></msqrt><mi>y</mi></msqrt>"
     },
     "_comment_90": " Regular roots",
     "RegularRoots_0": {
-      "mathml": "<mroot><mi>x</mi><mi>n</mi></mroot>"
+      "input": "<mroot><mi>x</mi><mi>n</mi></mroot>"
     },
     "RegularRoots_1": {
-      "mathml": "<mroot><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></mroot>"
+      "input": "<mroot><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></mroot>"
     },
     "RegularRoots_2": {
-      "mathml": "<mroot><mroot><mi>x</mi><mi>n</mi></mroot><mi>m</mi></mroot>"
+      "input": "<mroot><mroot><mi>x</mi><mi>n</mi></mroot><mi>m</mi></mroot>"
     },
     "RegularRoots_3": {
-      "mathml": "<mroot><mrow><mroot><mi>x</mi><mi>n</mi></mroot><mroot><mi>y</mi><mi>l</mi></mroot></mrow><mi>m</mi></mroot>"
+      "input": "<mroot><mrow><mroot><mi>x</mi><mi>n</mi></mroot><mroot><mi>y</mi><mi>l</mi></mroot></mrow><mi>m</mi></mroot>"
     },
     "_comment_91": " Mixed roots",
     "MixedRoots_0": {
-      "mathml": "<msqrt><mroot><mi>x</mi><mi>n</mi></mroot></msqrt>"
+      "input": "<msqrt><mroot><mi>x</mi><mi>n</mi></mroot></msqrt>"
     },
     "MixedRoots_1": {
-      "mathml": "<mroot><msqrt><mi>x</mi></msqrt><mi>n</mi></mroot>"
+      "input": "<mroot><msqrt><mi>x</mi></msqrt><mi>n</mi></mroot>"
     },
     "MixedRoots_2": {
-      "mathml": "<mroot><msqrt><mi>x</mi><mi>y</mi></msqrt><mi>n</mi></mroot>"
+      "input": "<mroot><msqrt><mi>x</mi><mi>y</mi></msqrt><mi>n</mi></mroot>"
     },
     "_comment_92": " Simple function applications",
     "SimpleFuncsSingle_0": {
-      "mathml": "<mrow><mi>f</mi></mrow>"
+      "input": "<mrow><mi>f</mi></mrow>"
     },
     "SimpleFuncsSingle_1": {
-      "mathml": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+      "input": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
     },
     "SimpleFuncsSingle_2": {
-      "mathml": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mi>y</mi><mo>)</mo></mrow>"
+      "input": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mi>y</mi><mo>)</mo></mrow>"
     },
     "SimpleFuncsSingle_3": {
-      "mathml": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>)</mo></mrow>"
+      "input": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>)</mo></mrow>"
     },
     "SimpleFuncsSingle_4": {
-      "mathml": "<mrow><mi>f</mi><mo>(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>)</mo></mrow>"
+      "input": "<mrow><mi>f</mi><mo>(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>)</mo></mrow>"
     },
     "SimpleFuncsSingle_5": {
-      "mathml": "<mrow><mi>f</mi><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>)</mo></mrow>"
+      "input": "<mrow><mi>f</mi><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>)</mo></mrow>"
     },
     "SimpleFuncsSingle_6": {
-      "mathml": "<mrow><mi>f</mi><mo>(</mo><msubsup><mi>x</mi><mn>2</mn><mn>1</mn></msubsup><mo>)</mo></mrow>"
+      "input": "<mrow><mi>f</mi><mo>(</mo><msubsup><mi>x</mi><mn>2</mn><mn>1</mn></msubsup><mo>)</mo></mrow>"
     },
     "SimpleFuncsSingle_7": {
-      "mathml": "<mrow><mi>f</mi><mo>(</mo><mover><mi>x</mi><mn>2</mn></mover><mo>)</mo></mrow>"
+      "input": "<mrow><mi>f</mi><mo>(</mo><mover><mi>x</mi><mn>2</mn></mover><mo>)</mo></mrow>"
     },
     "SimpleFuncsSingle_8": {
-      "mathml": "<mrow><mi>f</mi><mo>(</mo><munder><mi>x</mi><mn>2</mn></munder><mo>)</mo></mrow>"
+      "input": "<mrow><mi>f</mi><mo>(</mo><munder><mi>x</mi><mn>2</mn></munder><mo>)</mo></mrow>"
     },
     "SimpleFuncsSingle_9": {
-      "mathml": "<mrow><mi>f</mi><mo>(</mo><munderover><mi>x</mi><mn>2</mn><mn>1</mn></munderover><mo>)</mo></mrow>"
+      "input": "<mrow><mi>f</mi><mo>(</mo><munderover><mi>x</mi><mn>2</mn><mn>1</mn></munderover><mo>)</mo></mrow>"
     },
     "SimpleFuncsSingle_10": {
-      "mathml": "<mrow><mi>f</mi><mo>(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>)</mo></mrow>"
+      "input": "<mrow><mi>f</mi><mo>(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>)</mo></mrow>"
     },
     "SimpleFuncsSingle_11": {
-      "mathml": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo></mrow>"
+      "input": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo></mrow>"
     },
     "_comment_93": " Simple functions with surrounding operators.",
     "SimpleFuncsWithOps_0": {
-      "mathml": "<mrow><mn>1</mn><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+      "input": "<mrow><mn>1</mn><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
     },
     "SimpleFuncsWithOps_1": {
-      "mathml": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mn>2</mn></mrow>"
+      "input": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mn>2</mn></mrow>"
     },
     "SimpleFuncsWithOps_2": {
-      "mathml": "<mrow><mn>1</mn><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mn>2</mn></mrow>"
+      "input": "<mrow><mn>1</mn><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mn>2</mn></mrow>"
     },
     "SimpleFuncsWithOps_3": {
-      "mathml": "<mrow><mo>a</mo><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+      "input": "<mrow><mo>a</mo><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
     },
     "SimpleFuncsWithOps_4": {
-      "mathml": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mo>b</mo></mrow>"
+      "input": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mo>b</mo></mrow>"
     },
     "SimpleFuncsWithOps_5": {
-      "mathml": "<mrow><mo>a</mo><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mo>b</mo></mrow>"
+      "input": "<mrow><mo>a</mo><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mo>b</mo></mrow>"
     },
     "SimpleFuncsWithOps_6": {
-      "mathml": "<mrow><mo>a</mo><mo>=</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+      "input": "<mrow><mo>a</mo><mo>=</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
     },
     "SimpleFuncsWithOps_7": {
-      "mathml": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mo>b</mo></mrow>"
+      "input": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mo>b</mo></mrow>"
     },
     "SimpleFuncsWithOps_8": {
-      "mathml": "<mrow><mo>a</mo><mo>=</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mo>b</mo></mrow>"
+      "input": "<mrow><mo>a</mo><mo>=</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mo>b</mo></mrow>"
     },
     "_comment_94": " Multiple simple functions.",
     "SimpleFuncsMulti_0": {
-      "mathml": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>g</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+      "input": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>g</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
     },
     "SimpleFuncsMulti_1": {
-      "mathml": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>g</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mi>h</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+      "input": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>g</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mi>h</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
     },
     "SimpleFuncsMulti_2": {
-      "mathml": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>g</mi><mo>(</mo><mi>y</mi><mo>)</mo><mo>=</mo><mi>h</mi><mo>(</mo><mi>x</mi><mi>y</mi><mo>)</mo></mrow>"
+      "input": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>g</mi><mo>(</mo><mi>y</mi><mo>)</mo><mo>=</mo><mi>h</mi><mo>(</mo><mi>x</mi><mi>y</mi><mo>)</mo></mrow>"
     },
     "_comment_95": " Nested simple functions.",
     "SimpleFuncsNested_0": {
-      "mathml": "<mrow><mi>g</mi><mo>(</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>)</mo></mrow>"
+      "input": "<mrow><mi>g</mi><mo>(</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>)</mo></mrow>"
     },
     "SimpleFuncsNested_1": {
-      "mathml": "<mrow><mi>h</mi><mo>(</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mi>g</mi><mo>(</mo><mi>y</mi><mo>)</mo><mo>)</mo></mrow>"
+      "input": "<mrow><mi>h</mi><mo>(</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mi>g</mi><mo>(</mo><mi>y</mi><mo>)</mo><mo>)</mo></mrow>"
     },
     "SimpleFuncsNested_2": {
-      "mathml": "<mrow><mi>h</mi><mo>(</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>g</mi><mo>(</mo><mi>y</mi><mo>)</mo><mo>)</mo></mrow>"
+      "input": "<mrow><mi>h</mi><mo>(</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>g</mi><mo>(</mo><mi>y</mi><mo>)</mo><mo>)</mo></mrow>"
     },
     "SimpleFuncsNested_3": {
-      "mathml": "<mi>P</mi><mo>[</mo><mi>x</mi><mo>=</mo><mn>2</mn><mo>]</mo>"
+      "input": "<mi>P</mi><mo>[</mo><mi>x</mi><mo>=</mo><mn>2</mn><mo>]</mo>"
     },
     "_comment_96": " Simple functions with explicit function application.",
     "SimpleFuncsExplicitApp_0": {
-      "mathml": "<mi>f</mi><mo>&#x2061;</mo><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo>"
+      "input": "<mi>f</mi><mo>&#x2061;</mo><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo>"
     },
     "SimpleFuncsExplicitApp_1": {
-      "mathml": "<mi>f</mi><mo>&#x2061;</mo><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo>"
+      "input": "<mi>f</mi><mo>&#x2061;</mo><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo>"
     },
     "SimpleFuncsExplicitApp_2": {
-      "mathml": "<msub><mi>f</mi><mn>1</mn></msub><mo>&#x2061;</mo><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo>"
+      "input": "<msub><mi>f</mi><mn>1</mn></msub><mo>&#x2061;</mo><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo>"
     },
     "SimpleFuncsExplicitApp_3": {
-      "mathml": "<msup><msub><mi>f</mi><mi>n</mi></msub><mn>2</mn></msup><mo>&#x2061;</mo><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo><mo>+</mo><msup><msub><mi>f</mi><mi>m</mi></msub><mn>2</mn></msup><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo>"
+      "input": "<msup><msub><mi>f</mi><mi>n</mi></msub><mn>2</mn></msup><mo>&#x2061;</mo><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo><mo>+</mo><msup><msub><mi>f</mi><mi>m</mi></msub><mn>2</mn></msup><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo>"
     },
     "_comment_97": " Prefix function applications",
     "PrefixFuncsSingle_0": {
-      "mathml": "<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+      "input": "<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
     },
     "PrefixFuncsSingle_1": {
-      "mathml": "<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mi>y</mi><mo>)</mo></mrow>"
+      "input": "<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mi>y</mi><mo>)</mo></mrow>"
     },
     "PrefixFuncsSingle_2": {
-      "mathml": "<mrow><mi>sin</mi><mo>(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>)</mo></mrow>"
+      "input": "<mrow><mi>sin</mi><mo>(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>)</mo></mrow>"
     },
     "PrefixFuncsSingle_3": {
-      "mathml": "<mrow><mi>sin</mi><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>)</mo></mrow>"
+      "input": "<mrow><mi>sin</mi><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>)</mo></mrow>"
     },
     "PrefixFuncsSingle_4": {
-      "mathml": "<mrow><mi>sin</mi><mo>(</mo><msubsup><mi>x</mi><mn>2</mn><mn>1</mn></msubsup><mo>)</mo></mrow>"
+      "input": "<mrow><mi>sin</mi><mo>(</mo><msubsup><mi>x</mi><mn>2</mn><mn>1</mn></msubsup><mo>)</mo></mrow>"
     },
     "PrefixFuncsSingle_5": {
-      "mathml": "<mrow><mi>sin</mi><mo>(</mo><mover><mi>x</mi><mn>2</mn></mover><mo>)</mo></mrow>"
+      "input": "<mrow><mi>sin</mi><mo>(</mo><mover><mi>x</mi><mn>2</mn></mover><mo>)</mo></mrow>"
     },
     "PrefixFuncsSingle_6": {
-      "mathml": "<mrow><mi>sin</mi><mo>(</mo><munder><mi>x</mi><mn>2</mn></munder><mo>)</mo></mrow>"
+      "input": "<mrow><mi>sin</mi><mo>(</mo><munder><mi>x</mi><mn>2</mn></munder><mo>)</mo></mrow>"
     },
     "PrefixFuncsSingle_7": {
-      "mathml": "<mrow><mi>sin</mi><mo>(</mo><munderover><mi>x</mi><mn>2</mn><mn>1</mn></munderover><mo>)</mo></mrow>"
+      "input": "<mrow><mi>sin</mi><mo>(</mo><munderover><mi>x</mi><mn>2</mn><mn>1</mn></munderover><mo>)</mo></mrow>"
     },
     "PrefixFuncsSingle_8": {
-      "mathml": "<mrow><mi>sin</mi><mo>(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>)</mo></mrow>"
+      "input": "<mrow><mi>sin</mi><mo>(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>)</mo></mrow>"
     },
     "PrefixFuncsSingle_9": {
-      "mathml": "<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo></mrow>"
+      "input": "<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo></mrow>"
     },
     "_comment_98": " Prefix functions applications with surrounding operators.",
     "PrefixFuncsWithOps_0": {
-      "mathml": "<mrow><mn>1</mn><mo>+</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+      "input": "<mrow><mn>1</mn><mo>+</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
     },
     "PrefixFuncsWithOps_1": {
-      "mathml": "<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mn>2</mn></mrow>"
+      "input": "<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mn>2</mn></mrow>"
     },
     "PrefixFuncsWithOps_2": {
-      "mathml": "<mrow><mn>1</mn><mo>+</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mn>2</mn></mrow>"
+      "input": "<mrow><mn>1</mn><mo>+</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mn>2</mn></mrow>"
     },
     "PrefixFuncsWithOps_3": {
-      "mathml": "<mrow><mo>a</mo><mo>+</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+      "input": "<mrow><mo>a</mo><mo>+</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
     },
     "PrefixFuncsWithOps_4": {
-      "mathml": "<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mo>b</mo></mrow>"
+      "input": "<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mo>b</mo></mrow>"
     },
     "PrefixFuncsWithOps_5": {
-      "mathml": "<mrow><mo>a</mo><mo>+</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mo>b</mo></mrow>"
+      "input": "<mrow><mo>a</mo><mo>+</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mo>b</mo></mrow>"
     },
     "PrefixFuncsWithOps_6": {
-      "mathml": "<mrow><mo>a</mo><mo>=</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+      "input": "<mrow><mo>a</mo><mo>=</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
     },
     "PrefixFuncsWithOps_7": {
-      "mathml": "<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mo>b</mo></mrow>"
+      "input": "<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mo>b</mo></mrow>"
     },
     "PrefixFuncsWithOps_8": {
-      "mathml": "<mrow><mo>a</mo><mo>=</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mo>b</mo></mrow>"
+      "input": "<mrow><mo>a</mo><mo>=</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mo>b</mo></mrow>"
     },
     "_comment_99": " Multiple prefix function applications.",
     "PrefixFuncsMulti_0": {
-      "mathml": "<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>cos</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+      "input": "<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>cos</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
     },
     "PrefixFuncsMulti_1": {
-      "mathml": "<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>cos</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mi>tan</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+      "input": "<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>cos</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mi>tan</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
     },
     "PrefixFuncsMulti_2": {
-      "mathml": "<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>cos</mi><mo>(</mo><mi>y</mi><mo>)</mo><mo>=</mo><mi>tan</mi><mo>(</mo><mi>x</mi><mi>y</mi><mo>)</mo></mrow>"
+      "input": "<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>cos</mi><mo>(</mo><mi>y</mi><mo>)</mo><mo>=</mo><mi>tan</mi><mo>(</mo><mi>x</mi><mi>y</mi><mo>)</mo></mrow>"
     },
     "_comment_100": " Prefix function applications with sub- and superscripts.",
     "PrefixFuncsScripts_0": {
-      "mathml": "<mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+      "input": "<mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
     },
     "PrefixFuncsScripts_1": {
-      "mathml": "<mrow><msub><mi>sin</mi><mn>1</mn></msub><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+      "input": "<mrow><msub><mi>sin</mi><mn>1</mn></msub><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
     },
     "PrefixFuncsScripts_2": {
-      "mathml": "<mrow><msubsup><mi>sin</mi><mn>2</mn><mn>1</mn></msubsup><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+      "input": "<mrow><msubsup><mi>sin</mi><mn>2</mn><mn>1</mn></msubsup><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
     },
     "PrefixFuncsScripts_3": {
-      "mathml": "<mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><msup><mi>cos</mi><mn>2</mn></msup><mo>(</mo><mi>y</mi><mo>)</mo><mo>=</mo><mn>1</mn></mrow>"
+      "input": "<mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><msup><mi>cos</mi><mn>2</mn></msup><mo>(</mo><mi>y</mi><mo>)</mo><mo>=</mo><mn>1</mn></mrow>"
     },
     "_comment_101": " Prefix function applications with unfenced arguments.",
     "PrefixFuncsUnfenced_0": {
-      "mathml": "<mrow><mi>sin</mi><mi>x</mi></mrow>"
+      "input": "<mrow><mi>sin</mi><mi>x</mi></mrow>"
     },
     "PrefixFuncsUnfenced_1": {
-      "mathml": "<mrow><mi>sin</mi><mi>x</mi><mi>y</mi></mrow>"
+      "input": "<mrow><mi>sin</mi><mi>x</mi><mi>y</mi></mrow>"
     },
     "PrefixFuncsUnfenced_2": {
-      "mathml": "<mrow><mi>sin</mi><msup><mi>x</mi><mn>2</mn></msup></mrow>"
+      "input": "<mrow><mi>sin</mi><msup><mi>x</mi><mn>2</mn></msup></mrow>"
     },
     "PrefixFuncsUnfenced_3": {
-      "mathml": "<mrow><mi>sin</mi><msub><mi>x</mi><mn>2</mn></msub></mrow>"
+      "input": "<mrow><mi>sin</mi><msub><mi>x</mi><mn>2</mn></msub></mrow>"
     },
     "PrefixFuncsUnfenced_4": {
-      "mathml": "<mrow><mi>sin</mi><msubsup><mi>x</mi><mn>2</mn><mn>1</mn></msubsup></mrow>"
+      "input": "<mrow><mi>sin</mi><msubsup><mi>x</mi><mn>2</mn><mn>1</mn></msubsup></mrow>"
     },
     "PrefixFuncsUnfenced_5": {
-      "mathml": "<mrow><mi>sin</mi><mover><mi>x</mi><mn>2</mn></mover></mrow>"
+      "input": "<mrow><mi>sin</mi><mover><mi>x</mi><mn>2</mn></mover></mrow>"
     },
     "PrefixFuncsUnfenced_6": {
-      "mathml": "<mrow><mi>sin</mi><munder><mi>x</mi><mn>2</mn></munder></mrow>"
+      "input": "<mrow><mi>sin</mi><munder><mi>x</mi><mn>2</mn></munder></mrow>"
     },
     "PrefixFuncsUnfenced_7": {
-      "mathml": "<mrow><mi>sin</mi><munderover><mi>x</mi><mn>2</mn><mn>1</mn></munderover></mrow>"
+      "input": "<mrow><mi>sin</mi><munderover><mi>x</mi><mn>2</mn><mn>1</mn></munderover></mrow>"
     },
     "PrefixFuncsUnfenced_8": {
-      "mathml": "<mrow><mi>sin</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>"
+      "input": "<mrow><mi>sin</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>"
     },
     "_comment_102": " Prefix function applications with unfenced arguments in an operator",
     "_comment_103": " expression.",
     "PrefixFuncsUnfencedOps_0": {
-      "mathml": "<mrow><mn>1</mn><mo>+</mo><mi>sin</mi><mi>x</mi></mrow>"
+      "input": "<mrow><mn>1</mn><mo>+</mo><mi>sin</mi><mi>x</mi></mrow>"
     },
     "PrefixFuncsUnfencedOps_1": {
-      "mathml": "<mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mn>2</mn></mrow>"
+      "input": "<mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mn>2</mn></mrow>"
     },
     "PrefixFuncsUnfencedOps_2": {
-      "mathml": "<mrow><mn>1</mn><mo>+</mo><mi>sin</mi><mi>x</mi><mo>+</mo><mn>2</mn></mrow>"
+      "input": "<mrow><mn>1</mn><mo>+</mo><mi>sin</mi><mi>x</mi><mo>+</mo><mn>2</mn></mrow>"
     },
     "PrefixFuncsUnfencedOps_3": {
-      "mathml": "<mrow><mo>a</mo><mo>+</mo><mi>sin</mi><mi>x</mi></mrow>"
+      "input": "<mrow><mo>a</mo><mo>+</mo><mi>sin</mi><mi>x</mi></mrow>"
     },
     "PrefixFuncsUnfencedOps_4": {
-      "mathml": "<mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mo>b</mo></mrow>"
+      "input": "<mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mo>b</mo></mrow>"
     },
     "PrefixFuncsUnfencedOps_5": {
-      "mathml": "<mrow><mo>a</mo><mo>+</mo><mi>sin</mi><mi>x</mi><mo>+</mo><mo>b</mo></mrow>"
+      "input": "<mrow><mo>a</mo><mo>+</mo><mi>sin</mi><mi>x</mi><mo>+</mo><mo>b</mo></mrow>"
     },
     "PrefixFuncsUnfencedOps_6": {
-      "mathml": "<mrow><mo>a</mo><mo>=</mo><mi>sin</mi><mi>x</mi></mrow>"
+      "input": "<mrow><mo>a</mo><mo>=</mo><mi>sin</mi><mi>x</mi></mrow>"
     },
     "PrefixFuncsUnfencedOps_7": {
-      "mathml": "<mrow><mi>sin</mi><mi>x</mi><mo>=</mo><mo>b</mo></mrow>"
+      "input": "<mrow><mi>sin</mi><mi>x</mi><mo>=</mo><mo>b</mo></mrow>"
     },
     "PrefixFuncsUnfencedOps_8": {
-      "mathml": "<mrow><mo>a</mo><mo>=</mo><mi>sin</mi><mi>x</mi><mo>=</mo><mo>b</mo></mrow>"
+      "input": "<mrow><mo>a</mo><mo>=</mo><mi>sin</mi><mi>x</mi><mo>=</mo><mo>b</mo></mrow>"
     },
     "_comment_104": " Multiple prefix function applications with unfenced arguments.",
     "PrefixFuncsMultiUnfenced_0": {
-      "mathml": "<mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mi>cos</mi><mi>x</mi></mrow>"
+      "input": "<mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mi>cos</mi><mi>x</mi></mrow>"
     },
     "PrefixFuncsMultiUnfenced_1": {
-      "mathml": "<mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mi>cos</mi><mi>x</mi><mo>=</mo><mi>tan</mi><mi>x</mi></mrow>"
+      "input": "<mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mi>cos</mi><mi>x</mi><mo>=</mo><mi>tan</mi><mi>x</mi></mrow>"
     },
     "PrefixFuncsMultiUnfenced_2": {
-      "mathml": "<mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mi>cos</mi><mi>y</mi><mo>=</mo><mi>tan</mi><mi>x</mi><mi>y</mi></mrow>"
+      "input": "<mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mi>cos</mi><mi>y</mi><mo>=</mo><mi>tan</mi><mi>x</mi><mi>y</mi></mrow>"
     },
     "_comment_105": " Prefix function applications with sub- and superscripts and unfenced",
     "_comment_106": " arguments.",
     "PrefixFuncsScriptUnfenced_0": {
-      "mathml": "<mrow><msup><mi>sin</mi><mn>2</mn></msup><mi>x</mi></mrow>"
+      "input": "<mrow><msup><mi>sin</mi><mn>2</mn></msup><mi>x</mi></mrow>"
     },
     "PrefixFuncsScriptUnfenced_1": {
-      "mathml": "<mrow><msub><mi>sin</mi><mn>1</mn></msub><mi>x</mi></mrow>"
+      "input": "<mrow><msub><mi>sin</mi><mn>1</mn></msub><mi>x</mi></mrow>"
     },
     "PrefixFuncsScriptUnfenced_2": {
-      "mathml": "<mrow><msubsup><mi>sin</mi><mn>2</mn><mn>1</mn></msubsup><mi>x</mi></mrow>"
+      "input": "<mrow><msubsup><mi>sin</mi><mn>2</mn><mn>1</mn></msubsup><mi>x</mi></mrow>"
     },
     "PrefixFuncsScriptUnfenced_3": {
-      "mathml": "<mrow><msup><mi>sin</mi><mn>2</mn></msup><mi>x</mi><mo>+</mo><msup><mi>cos</mi><mn>2</mn></msup><mi>y</mi><mo>=</mo><mn>1</mn></mrow>"
+      "input": "<mrow><msup><mi>sin</mi><mn>2</mn></msup><mi>x</mi><mo>+</mo><msup><mi>cos</mi><mn>2</mn></msup><mi>y</mi><mo>=</mo><mn>1</mn></mrow>"
     },
     "PrefixFuncsScriptUnfenced_4": {
-      "mathml": "<mrow><msubsup><msubsup><mi>sin</mi><mn>2</mn><mn>1</mn></msubsup><mi>n</mi><mi>m</mi></msubsup><mi>x</mi></mrow>"
+      "input": "<mrow><msubsup><msubsup><mi>sin</mi><mn>2</mn><mn>1</mn></msubsup><mi>n</mi><mi>m</mi></msubsup><mi>x</mi></mrow>"
     },
     "_comment_107": " Prefix functions without arguments.",
     "PrefixFuncsNoArgs_0": {
-      "mathml": "<mi>sin</mi>"
+      "input": "<mi>sin</mi>"
     },
     "PrefixFuncsNoArgs_1": {
-      "mathml": "<msup><mi>sin</mi><mn>2</mn></msup>"
+      "input": "<msup><mi>sin</mi><mn>2</mn></msup>"
     },
     "PrefixFuncsNoArgs_2": {
-      "mathml": "<msup><mi>sin</mi><mn>2</mn></msup><mo>+</mo><msup><mi>cos</mi><mn>2</mn></msup>"
+      "input": "<msup><mi>sin</mi><mn>2</mn></msup><mo>+</mo><msup><mi>cos</mi><mn>2</mn></msup>"
     },
     "PrefixFuncsNoArgs_3": {
-      "mathml": "<mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>+</mo><msup><mi>cos</mi><mn>2</mn></msup><mo>=</mo><mn>1</mn></mrow>"
+      "input": "<mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>+</mo><msup><mi>cos</mi><mn>2</mn></msup><mo>=</mo><mn>1</mn></mrow>"
     },
     "PrefixFuncsNoArgs_4": {
-      "mathml": "<mrow><mi>sin</mi><mo>=</mo><mfrac><mn>1</mn><mi>csc</mi></mfrac></mrow>"
+      "input": "<mrow><mi>sin</mi><mo>=</mo><mfrac><mn>1</mn><mi>csc</mi></mfrac></mrow>"
     },
     "_comment_108": " Nested prefix function applications, both with and without fenced arguments.",
     "PrefixFuncsNested_0": {
-      "mathml": "<mrow><mi>log</mi><mi>cos</mi><mi>x</mi></mrow>"
+      "input": "<mrow><mi>log</mi><mi>cos</mi><mi>x</mi></mrow>"
     },
     "PrefixFuncsNested_1": {
-      "mathml": "<mrow><mi>ln</mi><mo>(</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>)</mo></mrow>"
+      "input": "<mrow><mi>ln</mi><mo>(</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>)</mo></mrow>"
     },
     "PrefixFuncsNested_2": {
-      "mathml": "<mrow><mi>log</mi><mi>cos</mi><mi>x</mi><mo>=</mo><mi>ln</mi><mo>(</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>)</mo></mrow>"
+      "input": "<mrow><mi>log</mi><mi>cos</mi><mi>x</mi><mo>=</mo><mi>ln</mi><mo>(</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>)</mo></mrow>"
     },
     "_comment_109": " Variations of matrices and their roles as determinants, square matrices or",
     "_comment_110": " rowvectors.",
     "Matrices_0": {
-      "mathml": "<mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">A</mi><mo>=</mo><mo>[</mo><mtable rowspacing=\"4pt\" columnspacing=\"1em\"><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow>"
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">A</mi><mo>=</mo><mo>[</mo><mtable rowspacing=\"4pt\" columnspacing=\"1em\"><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow>"
     },
     "Matrices_1": {
-      "mathml": "<mo>[</mo><mtable rowspacing=\"4pt\" columnspacing=\"1em\"><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable><mo>]</mo>"
+      "input": "<mo>[</mo><mtable rowspacing=\"4pt\" columnspacing=\"1em\"><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable><mo>]</mo>"
     },
     "Matrices_2": {
-      "mathml": "<mo>[</mo><mtable rowspacing=\"4pt\" columnspacing=\"1em\"><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo>"
+      "input": "<mo>[</mo><mtable rowspacing=\"4pt\" columnspacing=\"1em\"><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo>"
     },
     "Matrices_3": {
-      "mathml": "<mfenced open=\"|\" close=\"|\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mfenced>"
+      "input": "<mfenced open=\"|\" close=\"|\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mfenced>"
     },
     "Matrices_4": {
-      "mathml": "<mfenced open=\"|\" close=\"|\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>"
+      "input": "<mfenced open=\"|\" close=\"|\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>"
     },
     "Matrices_5": {
-      "mathml": "<mfenced open=\"(\" close=\")\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>"
+      "input": "<mfenced open=\"(\" close=\")\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>"
     },
     "_comment_111": " Variations of vectors and their roles as determinants or binomial",
     "_comment_112": " coefficients.",
     "Vectors_0": {
-      "mathml": "<mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">V</mi><mo>=</mo><mo>[</mo><mtable rowspacing=\"4pt\" columnspacing=\"1em\"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow>"
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">V</mi><mo>=</mo><mo>[</mo><mtable rowspacing=\"4pt\" columnspacing=\"1em\"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow>"
     },
     "Vectors_1": {
-      "mathml": "<mo>[</mo><mtable rowspacing=\"4pt\" columnspacing=\"1em\"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo>"
+      "input": "<mo>[</mo><mtable rowspacing=\"4pt\" columnspacing=\"1em\"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo>"
     },
     "Vectors_2": {
-      "mathml": "<mfenced open=\"(\" close=\")\"><mtable><mtr><mtd><mi>n</mi></mtd></mtr><mtr><mtd><mi>k</mi></mtd></mtr></mtable></mfenced>"
+      "input": "<mfenced open=\"(\" close=\")\"><mtable><mtr><mtd><mi>n</mi></mtd></mtr><mtr><mtd><mi>k</mi></mtd></mtr></mtable></mfenced>"
     },
     "Vectors_3": {
-      "mathml": "<mfenced open=\"|\" close=\"|\"><mtable><mtr><mtd><mi>n</mi></mtd></mtr></mtable></mfenced>"
+      "input": "<mfenced open=\"|\" close=\"|\"><mtable><mtr><mtd><mi>n</mi></mtd></mtr></mtable></mfenced>"
     },
     "Vectors_4": {
-      "mathml": "<mfenced open=\"(\" close=\")\"><mtable><mtr><mtd><mi>n</mi></mtd></mtr></mtable></mfenced>"
+      "input": "<mfenced open=\"(\" close=\")\"><mtable><mtr><mtd><mi>n</mi></mtd></mtr></mtable></mfenced>"
     },
     "_comment_113": " Variations of tables representing case statements,",
     "_comment_114": " multiline equations and regular tables.",
     "Tables_0": {
-      "mathml": "<mrow><mo>{</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mtext>often</mtext></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mtext>sometimes</mtext></mtd></mtr></mtable></mrow>"
+      "input": "<mrow><mo>{</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mtext>often</mtext></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mtext>sometimes</mtext></mtd></mtr></mtable></mrow>"
     },
     "Tables_1": {
-      "mathml": "<mrow><mi mathvariant=\"bold\">A</mi><mo>=</mo><mo>{</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mtext>often</mtext></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mtext>sometimes</mtext></mtd></mtr></mtable></mrow>"
+      "input": "<mrow><mi mathvariant=\"bold\">A</mi><mo>=</mo><mo>{</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mtext>often</mtext></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mtext>sometimes</mtext></mtd></mtr></mtable></mrow>"
     },
     "Tables_2": {
-      "mathml": "<mrow><mo>{</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mtext>often</mtext></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mtext>sometimes</mtext></mtd></mtr></mtable><mo>.</mo></mrow>"
+      "input": "<mrow><mo>{</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mtext>often</mtext></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mtext>sometimes</mtext></mtd></mtr></mtable><mo>.</mo></mrow>"
     },
     "Tables_3": {
-      "mathml": "<mrow><mo>{</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mtext>often</mtext></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mtext>sometimes</mtext></mtd></mtr></mtable><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>.</mo></mrow>"
+      "input": "<mrow><mo>{</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mtext>often</mtext></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mtext>sometimes</mtext></mtd></mtr></mtable><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>.</mo></mrow>"
     },
     "Tables_4": {
-      "mathml": "<mrow><mo>{</mo><mtable><mtr><mtd><mi>a</mi><mo>,</mo><mtext>often</mtext></mtd></mtr><mtr><mtd><mi>b</mi><mo>,</mo><mtext>sometimes</mtext></mtd></mtr></mtable><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>.</mo></mrow>"
+      "input": "<mrow><mo>{</mo><mtable><mtr><mtd><mi>a</mi><mo>,</mo><mtext>often</mtext></mtd></mtr><mtr><mtd><mi>b</mi><mo>,</mo><mtext>sometimes</mtext></mtd></mtr></mtable><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>.</mo></mrow>"
     },
     "Tables_5": {
-      "mathml": "<mtable><mtr><mtd><mi>x</mi><maligngroup/><mo>=</mo><mn>4</mn></mtd></mtr><mtr><mtd><mi>y</mi><maligngroup/><mo>=</mo><mn>2</mn></mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi><maligngroup/><mo>+</mo><mn>6</mn></mtd></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>x</mi><maligngroup/><mo>=</mo><mn>4</mn></mtd></mtr><mtr><mtd><mi>y</mi><maligngroup/><mo>=</mo><mn>2</mn></mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi><maligngroup/><mo>+</mo><mn>6</mn></mtd></mtr></mtable>"
     },
     "_comment_111": " Multline with empty row!",
     "Tables_6": {
-      "mathml": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr/><mtr><mtd><mi>b</mi></mtd></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr/><mtr><mtd><mi>b</mi></mtd></mtr></mtable>"
     },
     "Tables_7": {
-      "mathml": "<mtable><mtr><mtd><mi>x</mi></mtd><mtd><mo>=</mo></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mi>y</mi></mtd><mtd><mo>=</mo></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi></mtd><mtd><mo>+</mo></mtd><mtd><mn>6</mn></mtd></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>x</mi></mtd><mtd><mo>=</mo></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mi>y</mi></mtd><mtd><mo>=</mo></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi></mtd><mtd><mo>+</mo></mtd><mtd><mn>6</mn></mtd></mtr></mtable>"
     },
     "_comment_115": " Tabular structures with fences that have are interspersed with ignored",
     "_comment_116": " elements, like merror.",
     "MatricesWithIgnores_0": {
-      "mathml": "<mi>A</mi><mo>=</mo><mrow><mpadded><mo>[</mo></mpadded><mrow><mtable rowspacing=\"4pt\" columnspacing=\"1em\"><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mrow><merror><mtext>nothing</mtext></merror><mo>]</mo></mrow>"
+      "input": "<mi>A</mi><mo>=</mo><mrow><mpadded><mo>[</mo></mpadded><mrow><mtable rowspacing=\"4pt\" columnspacing=\"1em\"><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mrow><merror><mtext>nothing</mtext></merror><mo>]</mo></mrow>"
     },
     "MatricesWithIgnores_1": {
-      "mathml": "<mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">V</mi><mo>=</mo><mpadded><mo>[</mo></mpadded><mtable rowspacing=\"4pt\" columnspacing=\"1em\"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable><merror><mtext>nothing</mtext></merror><mo>]</mo></mrow>"
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">V</mi><mo>=</mo><mpadded><mo>[</mo></mpadded><mtable rowspacing=\"4pt\" columnspacing=\"1em\"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable><merror><mtext>nothing</mtext></merror><mo>]</mo></mrow>"
     },
     "MatricesWithIgnores_2": {
-      "mathml": "<mi>f</mi><mo>=</mo><mrow><mpadded><mo>{</mo></mpadded><merror><mtext>nothing</mtext></merror><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mtext>often</mtext></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mtext>sometimes</mtext></mtd></mtr></mtable></mrow>"
+      "input": "<mi>f</mi><mo>=</mo><mrow><mpadded><mo>{</mo></mpadded><merror><mtext>nothing</mtext></merror><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mtext>often</mtext></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mtext>sometimes</mtext></mtd></mtr></mtable></mrow>"
     },
     "MatricesWithIgnores_3": {
-      "mathml": "<mi>f</mi><mo>=</mo><mpadded><mo>{</mo></mpadded><merror><mtext>nothing</mtext></merror><mtable><mtr><mtd><mi>x</mi><maligngroup/><mo>=</mo><mn>4</mn></mtd></mtr><mtr><mtd><mi>y</mi><maligngroup/><mo>=</mo><mn>2</mn></mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi><maligngroup/><mo>=</mo><mn>6</mn></mtd></mtr></mtable>"
+      "input": "<mi>f</mi><mo>=</mo><mpadded><mo>{</mo></mpadded><merror><mtext>nothing</mtext></merror><mtable><mtr><mtd><mi>x</mi><maligngroup/><mo>=</mo><mn>4</mn></mtd></mtr><mtr><mtd><mi>y</mi><maligngroup/><mo>=</mo><mn>2</mn></mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi><maligngroup/><mo>=</mo><mn>6</mn></mtd></mtr></mtable>"
     },
     "_comment_117": " Limit functions.",
     "LimitFunctions_0": {
-      "mathml": "<mrow><munder><mi>lim</mi><mrow><mi>x</mi><mo>&#x2192;</mo><mi>&#x221E;</mi></mrow></munder><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+      "input": "<mrow><munder><mi>lim</mi><mrow><mi>x</mi><mo>&#x2192;</mo><mi>&#x221E;</mi></mrow></munder><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
     },
     "LimitFunctions_1": {
-      "mathml": "<mrow><mi>a</mi><mo>+</mo><munder><mi>lim</mi><mrow><mi>x</mi><mo>&#x2192;</mo><mi>&#x221E;</mi></mrow></munder><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>b</mi></mrow>"
+      "input": "<mrow><mi>a</mi><mo>+</mo><munder><mi>lim</mi><mrow><mi>x</mi><mo>&#x2192;</mo><mi>&#x221E;</mi></mrow></munder><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>b</mi></mrow>"
     },
     "LimitFunctions_2": {
-      "mathml": "<mrow><msup><munder><mi>lim</mi><mrow><mi>x</mi><mo>&#x2192;</mo><mi>&#x221E;</mi></mrow></munder><mo>+</mo></msup><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+      "input": "<mrow><msup><munder><mi>lim</mi><mrow><mi>x</mi><mo>&#x2192;</mo><mi>&#x221E;</mi></mrow></munder><mo>+</mo></msup><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
     },
     "LimitFunctions_3": {
-      "mathml": "<mrow><munderover><mi>lim</mi><mo>&#x2015;</mo><mrow><mi>x</mi><mo>&#x2192;</mo><mi>&#x221E;</mi></mrow></munderover><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+      "input": "<mrow><munderover><mi>lim</mi><mo>&#x2015;</mo><mrow><mi>x</mi><mo>&#x2192;</mo><mi>&#x221E;</mi></mrow></munderover><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
     },
     "LimitFunctions_4": {
-      "mathml": "<mrow><munder><mi>liminf</mi><mrow><mi>x</mi><mo>&#x2192;</mo><mi>&#x221E;</mi></mrow></munder><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><munder><mi>limsup</mi><mrow><mi>y</mi><mo>&#x2192;</mo><mi>&#x221E;</mi></mrow></munder><mo>(</mo><mi>y</mi><mo>)</mo></mrow>"
+      "input": "<mrow><munder><mi>liminf</mi><mrow><mi>x</mi><mo>&#x2192;</mo><mi>&#x221E;</mi></mrow></munder><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><munder><mi>limsup</mi><mrow><mi>y</mi><mo>&#x2192;</mo><mi>&#x221E;</mi></mrow></munder><mo>(</mo><mi>y</mi><mo>)</mo></mrow>"
     },
     "LimitFunctions_5": {
-      "mathml": "<mrow><mi>a</mi><mo>+</mo><munder><mi>lim</mi><mrow><mi>x</mi><mo>&#x2192;</mo><mi>&#x221E;</mi></mrow></munder><mi>x</mi><mo>+</mo><mi>b</mi></mrow>"
+      "input": "<mrow><mi>a</mi><mo>+</mo><munder><mi>lim</mi><mrow><mi>x</mi><mo>&#x2192;</mo><mi>&#x221E;</mi></mrow></munder><mi>x</mi><mo>+</mo><mi>b</mi></mrow>"
     },
     "LimitFunctions_6": {
-      "mathml": "<mrow><munder><mi>lim</mi><mrow><mi>x</mi><mo>&#x2192;</mo><mi>&#x221E;</mi></mrow></munder><munder><mi>lim</mi><mrow><mi>y</mi><mo>&#x2192;</mo><mi>&#x221E;</mi></mrow></munder><mi>x</mi><mi>y</mi></mrow>"
+      "input": "<mrow><munder><mi>lim</mi><mrow><mi>x</mi><mo>&#x2192;</mo><mi>&#x221E;</mi></mrow></munder><munder><mi>lim</mi><mrow><mi>y</mi><mo>&#x2192;</mo><mi>&#x221E;</mi></mrow></munder><mi>x</mi><mi>y</mi></mrow>"
     },
     "_comment_118": " Limit functions without arguments.",
     "LimitFunctionsNoArgs_0": {
-      "mathml": "<mi>liminf</mi>"
+      "input": "<mi>liminf</mi>"
     },
     "LimitFunctionsNoArgs_1": {
-      "mathml": "<munder><mi>lim</mi><mrow><mi>x</mi><mo>&#x2192;</mo><mi>&#x221E;</mi></mrow></munder>"
+      "input": "<munder><mi>lim</mi><mrow><mi>x</mi><mo>&#x2192;</mo><mi>&#x221E;</mi></mrow></munder>"
     },
     "LimitFunctionsNoArgs_2": {
-      "mathml": "<mi>liminf</mi><mo>+</mo><mi>limsup</mi><mo>=</mo><mi>lim</mi>"
+      "input": "<mi>liminf</mi><mo>+</mo><mi>limsup</mi><mo>=</mo><mi>lim</mi>"
     },
     "_comment_119": " Variations of big operators.",
     "BigOps_0": {
-      "mathml": "<mrow><munderover><mi>&#x2211;</mi><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi>&#x221E;</mi></munderover><msup><mi>n</mi><mn>2</mn></msup></mrow>"
+      "input": "<mrow><munderover><mi>&#x2211;</mi><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi>&#x221E;</mi></munderover><msup><mi>n</mi><mn>2</mn></msup></mrow>"
     },
     "BigOps_1": {
-      "mathml": "<mrow><munderover><mi>&#x2211;</mi><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi>&#x221E;</mi></munderover><munderover><mi>&#x2211;</mi><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mi>&#x221E;</mi></munderover><msup><mi>n</mi><mi>m</mi></msup></mrow>"
+      "input": "<mrow><munderover><mi>&#x2211;</mi><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi>&#x221E;</mi></munderover><munderover><mi>&#x2211;</mi><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mi>&#x221E;</mi></munderover><msup><mi>n</mi><mi>m</mi></msup></mrow>"
     },
     "BigOps_2": {
-      "mathml": "<mrow><munder><mi>&#x2211;</mi><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow></munder><msup><mi>n</mi><mn>2</mn></msup></mrow>"
+      "input": "<mrow><munder><mi>&#x2211;</mi><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow></munder><msup><mi>n</mi><mn>2</mn></msup></mrow>"
     },
     "_comment_120": " Big operators without Arguments.",
     "BigOpsNoArgs_0": {
-      "mathml": "<mi>&#x2211;</mi>"
+      "input": "<mi>&#x2211;</mi>"
     },
     "BigOpsNoArgs_1": {
-      "mathml": "<munder><mi>&#x220F;</mi><mi>n</mi></munder>"
+      "input": "<munder><mi>&#x220F;</mi><mi>n</mi></munder>"
     },
     "BigOpsNoArgs_2": {
-      "mathml": "<munderover><mi>&#x2211;</mi><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi>&#x221E;</mi></munderover>"
+      "input": "<munderover><mi>&#x2211;</mi><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi>&#x221E;</mi></munderover>"
     },
     "BigOpsNoArgs_3": {
-      "mathml": "<mi>&#x2211;</mi><mo>+</mo><mi>&#x2211;</mi><mo>=</mo><mi>&#x2211;</mi>"
+      "input": "<mi>&#x2211;</mi><mo>+</mo><mi>&#x2211;</mi><mo>=</mo><mi>&#x2211;</mi>"
     },
     "BigOpsNoArgs_4": {
-      "mathml": "<munder><mi>&#x220F;</mi><mi>n</mi></munder><mo>+</mo><munder><mi>&#x220F;</mi><mi>m</mi></munder><mo>=</mo><munder><mi>&#x220F;</mi><mrow><mi>n</mi><mo>,</mo><mi>m</mi></mrow></munder>"
+      "input": "<munder><mi>&#x220F;</mi><mi>n</mi></munder><mo>+</mo><munder><mi>&#x220F;</mi><mi>m</mi></munder><mo>=</mo><munder><mi>&#x220F;</mi><mrow><mi>n</mi><mo>,</mo><mi>m</mi></mrow></munder>"
     },
     "BigOpsNoArgs_5": {
-      "mathml": "<mrow><munderover><mi>&#x2211;</mi><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi>&#x221E;</mi></munderover><mo>+</mo><munderover><mi>&#x2211;</mi><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mi>&#x221E;</mi></munderover><mo>=</mo><munderover><mi>&#x2211;</mi><mrow><mi>n</mi><mo>,</mo><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mi>&#x221E;</mi></munderover></mrow>"
+      "input": "<mrow><munderover><mi>&#x2211;</mi><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi>&#x221E;</mi></munderover><mo>+</mo><munderover><mi>&#x2211;</mi><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mi>&#x221E;</mi></munderover><mo>=</mo><munderover><mi>&#x2211;</mi><mrow><mi>n</mi><mo>,</mo><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mi>&#x221E;</mi></munderover></mrow>"
     },
     "_comment_121": " Variations of integrals.",
     "Integrals_0": {
-      "mathml": "<mi>&#x222B;</mi>"
+      "input": "<mi>&#x222B;</mi>"
     },
     "Integrals_1": {
-      "mathml": "<mi>&#x222B;</mi><mi>dx</mi>"
+      "input": "<mi>&#x222B;</mi><mi>dx</mi>"
     },
     "Integrals_2": {
-      "mathml": "<mrow><mi>&#x222B;</mi><mi>x</mi><mi>dx</mi></mrow>"
+      "input": "<mrow><mi>&#x222B;</mi><mi>x</mi><mi>dx</mi></mrow>"
     },
     "Integrals_3": {
-      "mathml": "<mrow><mi>&#x222B;</mi><mi>x</mi><mi>d</mi><mi>x</mi></mrow>"
+      "input": "<mrow><mi>&#x222B;</mi><mi>x</mi><mi>d</mi><mi>x</mi></mrow>"
     },
     "Integrals_4": {
-      "mathml": "<mrow><mi>&#x222B;</mi><mi>x</mi><mo>+</mo><mi>y</mi><mi>d</mi><mi>x</mi></mrow>"
+      "input": "<mrow><mi>&#x222B;</mi><mi>x</mi><mo>+</mo><mi>y</mi><mi>d</mi><mi>x</mi></mrow>"
     },
     "Integrals_5": {
-      "mathml": "<munderover><mi>&#x222B;</mi><mn>0</mn><mn>10</mn></munderover>"
+      "input": "<munderover><mi>&#x222B;</mi><mn>0</mn><mn>10</mn></munderover>"
     },
     "Integrals_6": {
-      "mathml": "<munder><mi>&#x222B;</mi><mi>X</mi></munder>"
+      "input": "<munder><mi>&#x222B;</mi><mi>X</mi></munder>"
     },
     "Integrals_7": {
-      "mathml": "<munderover><mi>&#x222B;</mi><mn>0</mn><mn>10</mn></munderover><mi>x</mi><mi>d</mi><mi>x</mi>"
+      "input": "<munderover><mi>&#x222B;</mi><mn>0</mn><mn>10</mn></munderover><mi>x</mi><mi>d</mi><mi>x</mi>"
     },
     "Integrals_8": {
-      "mathml": "<munder><mi>&#x222B;</mi><mi>X</mi></munder><mi>x</mi><mi>dx</mi>"
+      "input": "<munder><mi>&#x222B;</mi><mi>X</mi></munder><mi>x</mi><mi>dx</mi>"
     },
     "Integrals_9": {
-      "mathml": "<munderover><mi>&#x222B;</mi><mn>0</mn><mn>10</mn></munderover><mi>x</mi><mi>dx</mi><mo>+</mo><munderover><mi>&#x222B;</mi><mn>10</mn><mn>20</mn></munderover><mi>x</mi><mi>dx</mi><mo>=</mo><munderover><mi>&#x222B;</mi><mn>0</mn><mn>20</mn></munderover><mi>x</mi><mi>dx</mi>"
+      "input": "<munderover><mi>&#x222B;</mi><mn>0</mn><mn>10</mn></munderover><mi>x</mi><mi>dx</mi><mo>+</mo><munderover><mi>&#x222B;</mi><mn>10</mn><mn>20</mn></munderover><mi>x</mi><mi>dx</mi><mo>=</mo><munderover><mi>&#x222B;</mi><mn>0</mn><mn>20</mn></munderover><mi>x</mi><mi>dx</mi>"
     },
     "Integrals_10": {
-      "mathml": "<mi>&#x222B;</mi><mi>&#x222B;</mi><mi>&#x222B;</mi><mi>dx</mi><mi>dy</mi><mi>dz</mi>"
+      "input": "<mi>&#x222B;</mi><mi>&#x222B;</mi><mi>&#x222B;</mi><mi>dx</mi><mi>dy</mi><mi>dz</mi>"
     },
     "_comment_122": " Translation of text elements.",
     "Text_0": {
-      "mathml": "<mtext>text only</mtext>"
+      "input": "<mtext>text only</mtext>"
     },
     "Text_1": {
-      "mathml": "<mi>a</mi><mtext>to</mtext>"
+      "input": "<mi>a</mi><mtext>to</mtext>"
     },
     "Text_2": {
-      "mathml": "<mtext>to</mtext><mi>b</mi>"
+      "input": "<mtext>to</mtext><mi>b</mi>"
     },
     "Text_3": {
-      "mathml": "<mi>a</mi><mtext>to</mtext><mi>b</mi><mtext>to</mtext><mi>c</mi>"
+      "input": "<mi>a</mi><mtext>to</mtext><mi>b</mi><mtext>to</mtext><mi>c</mi>"
     },
     "Text_4": {
-      "mathml": "<mrow><mi>a</mi><mo>+</mo><mi>b</mi><mtext>is generally not the same as</mtext><mi>a</mi><mi>b</mi><mo>.</mo></mrow>"
+      "input": "<mrow><mi>a</mi><mo>+</mo><mi>b</mi><mtext>is generally not the same as</mtext><mi>a</mi><mi>b</mi><mo>.</mo></mrow>"
     },
     "Text_5": {
-      "mathml": "<mrow><mi>a</mi><mo>+</mo><mi>b</mi><mtext>is not the same as</mtext><mi>a</mi><mi>b</mi><mtext>in general.</mtext></mrow>"
+      "input": "<mrow><mi>a</mi><mo>+</mo><mi>b</mi><mtext>is not the same as</mtext><mi>a</mi><mi>b</mi><mtext>in general.</mtext></mrow>"
     },
     "_comment_123": " Translation of mfenced elements.",
     "Mfenced_0": {
-      "mathml": "<mfenced open=\"[\" close=\"]\" separators=\"+ - ;\"/>"
+      "input": "<mfenced open=\"[\" close=\"]\" separators=\"+ - ;\"/>"
     },
     "Mfenced_1": {
-      "mathml": "<mfenced open=\"[\" separators=\"\"/>"
+      "input": "<mfenced open=\"[\" separators=\"\"/>"
     },
     "Mfenced_2": {
-      "mathml": "<mfenced open=\"[\" close=\"]\"/>"
+      "input": "<mfenced open=\"[\" close=\"]\"/>"
     },
     "Mfenced_3": {
-      "mathml": "<mfenced close=\")\"/>"
+      "input": "<mfenced close=\")\"/>"
     },
     "Mfenced_4": {
-      "mathml": "<mfenced open=\"[\" close=\"]\" separators=\"+\"><mi>x</mi><mfrac><mi>x</mi><mi>y</mi></mfrac><mn>5</mn></mfenced>"
+      "input": "<mfenced open=\"[\" close=\"]\" separators=\"+\"><mi>x</mi><mfrac><mi>x</mi><mi>y</mi></mfrac><mn>5</mn></mfenced>"
     },
     "Mfenced_5": {
-      "mathml": "<mfenced open=\"[\" close=\"]\" separators=\"+ - ;\"><mi>x</mi><mfrac><mi>x</mi><mi>y</mi></mfrac><mn>5</mn><mn>5</mn><mn>5</mn><mn>5</mn></mfenced>"
+      "input": "<mfenced open=\"[\" close=\"]\" separators=\"+ - ;\"><mi>x</mi><mfrac><mi>x</mi><mi>y</mi></mfrac><mn>5</mn><mn>5</mn><mn>5</mn><mn>5</mn></mfenced>"
     },
     "Mfenced_6": {
-      "mathml": "<mfenced open=\"[\" close=\"]\"><mi>x</mi><mfrac><mi>x</mi><mi>y</mi></mfrac><mn>5</mn><mn>5</mn><mn>5</mn><mn>5</mn></mfenced>"
+      "input": "<mfenced open=\"[\" close=\"]\"><mi>x</mi><mfrac><mi>x</mi><mi>y</mi></mfrac><mn>5</mn><mn>5</mn><mn>5</mn><mn>5</mn></mfenced>"
     },
     "Mfenced_7": {
-      "mathml": "<mfenced close=\"]\" separators=\" \"><mi>x</mi><mfrac><mi>x</mi><mi>y</mi></mfrac><mn>5</mn><mn>5</mn><mn>5</mn><mn>5</mn></mfenced>"
+      "input": "<mfenced close=\"]\" separators=\" \"><mi>x</mi><mfrac><mi>x</mi><mi>y</mi></mfrac><mn>5</mn><mn>5</mn><mn>5</mn><mn>5</mn></mfenced>"
     },
     "Mfenced_8": {
-      "mathml": "<mfenced close=\"]\"><mn>1</mn><mn>2</mn><mn>3</mn><mn>4</mn></mfenced>"
+      "input": "<mfenced close=\"]\"><mn>1</mn><mn>2</mn><mn>3</mn><mn>4</mn></mfenced>"
     },
     "Mfenced_9": {
-      "mathml": "<mfenced><mn>1</mn><mn>2</mn><mn>3</mn><mn>4</mn></mfenced>"
+      "input": "<mfenced><mn>1</mn><mn>2</mn><mn>3</mn><mn>4</mn></mfenced>"
     },
     "Mfenced_10": {
-      "mathml": "<mfenced open=\"[\"><mn>1</mn><mn>2</mn><mn>3</mn><mn>4</mn></mfenced>"
+      "input": "<mfenced open=\"[\"><mn>1</mn><mn>2</mn><mn>3</mn><mn>4</mn></mfenced>"
     },
     "Mfenced_11": {
-      "mathml": "<mfenced open=\"[\" close=\"\"><mn>1</mn><mn>2</mn><mn>3</mn><mn>4</mn></mfenced>"
+      "input": "<mfenced open=\"[\" close=\"\"><mn>1</mn><mn>2</mn><mn>3</mn><mn>4</mn></mfenced>"
     },
     "Mfenced_12": {
-      "mathml": "<mfenced open=\"\" close=\"]\"><mn>1</mn><mn>2</mn><mn>3</mn><mn>4</mn></mfenced>"
+      "input": "<mfenced open=\"\" close=\"]\"><mn>1</mn><mn>2</mn><mn>3</mn><mn>4</mn></mfenced>"
     },
     "Mfenced_13": {
-      "mathml": "<mfenced open=\" \" close=\" \" separators=\" \"><mn>1</mn><mn>2</mn><mn>3</mn><mn>4</mn></mfenced>"
+      "input": "<mfenced open=\" \" close=\" \" separators=\" \"><mn>1</mn><mn>2</mn><mn>3</mn><mn>4</mn></mfenced>"
     },
     "Mfenced_14": {
-      "mathml": "<mfenced open=\"55\" close=\" \"><mn>1</mn><mn>2</mn><mn>3</mn><mn>4</mn></mfenced>"
+      "input": "<mfenced open=\"55\" close=\" \"><mn>1</mn><mn>2</mn><mn>3</mn><mn>4</mn></mfenced>"
     },
     "Mfenced_15": {
-      "mathml": "<mfenced open=\"\" close=\"\" separators=\"\"><mn>1</mn><mn>2</mn><mn>3</mn><mn>4</mn></mfenced>"
+      "input": "<mfenced open=\"\" close=\"\" separators=\"\"><mn>1</mn><mn>2</mn><mn>3</mn><mn>4</mn></mfenced>"
     },
     "Mfenced_16": {
-      "mathml": "<mrow><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>a</mi><mo>&#xb1;</mo><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>b</mi><mo>-</mo><mi>c</mi></mfenced></mfenced><mo>&#x2260;</mo><mfenced open=\"|\" close=\"|\"><mi>a</mi></mfenced><mo>&#xb1;</mo><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>b</mi><mo>-</mo><mi>c</mi></mfenced></mrow>"
+      "input": "<mrow><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>a</mi><mo>&#xb1;</mo><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>b</mi><mo>-</mo><mi>c</mi></mfenced></mfenced><mo>&#x2260;</mo><mfenced open=\"|\" close=\"|\"><mi>a</mi></mfenced><mo>&#xb1;</mo><mfenced separators=\"\" open=\"|\" close=\"|\"><mi>b</mi><mo>-</mo><mi>c</mi></mfenced></mrow>"
     },
     "_comment_124": " Punctuated elements.",
     "Punctuated_0": {
-      "mathml": "<mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi>"
+      "input": "<mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi>"
     },
     "Punctuated_1": {
-      "mathml": "<mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi>"
+      "input": "<mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi>"
     },
     "Punctuated_2": {
-      "mathml": "<msub><mi>b</mi><mn>1</mn></msub><mo>!</mo>"
+      "input": "<msub><mi>b</mi><mn>1</mn></msub><mo>!</mo>"
     },
     "Punctuated_3": {
-      "mathml": "<mo>:</mo><msub><mi>b</mi><mn>1</mn></msub>"
+      "input": "<mo>:</mo><msub><mi>b</mi><mn>1</mn></msub>"
     },
     "Punctuated_4": {
-      "mathml": "<mo>:</mo><msub><mi>b</mi><mn>1</mn></msub><mo>!</mo>"
+      "input": "<mo>:</mo><msub><mi>b</mi><mn>1</mn></msub><mo>!</mo>"
     },
     "Punctuated_5": {
-      "mathml": "<mo>,</mo><mo>,</mo><mo>,</mo><mo>!</mo>"
+      "input": "<mo>,</mo><mo>,</mo><mo>,</mo><mo>!</mo>"
     },
     "Punctuated_6": {
-      "mathml": "<mo>,</mo><mo>,</mo><mo>,</mo><mo>,</mo>"
+      "input": "<mo>,</mo><mo>,</mo><mo>,</mo><mo>,</mo>"
     },
     "Punctuated_7": {
-      "mathml": "<mo>'</mo><mo>'</mo><mo>'</mo><mo>'</mo>"
+      "input": "<mo>'</mo><mo>'</mo><mo>'</mo><mo>'</mo>"
     },
     "Punctuated_8": {
-      "mathml": "<mo>'</mo><mo>'</mo><mo>,</mo><mo>'</mo>"
+      "input": "<mo>'</mo><mo>'</mo><mo>,</mo><mo>'</mo>"
     },
     "Punctuated_9": {
-      "mathml": "<mo>!</mo><mo>!</mo><mo>!</mo><mo>!</mo>"
+      "input": "<mo>!</mo><mo>!</mo><mo>!</mo><mo>!</mo>"
     },
     "_comment_125": " Units.",
     "_comment_126": " Tests simple expressions containing units.",
     "SimpleUnits_0": {
-      "mathml": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi>"
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi>"
     },
     "SimpleUnits_1": {
-      "mathml": "<mi>min</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">min</mi>"
+      "input": "<mi>min</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">min</mi>"
     },
     "SimpleUnits_2": {
-      "mathml": "<msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mn>2</mn></msup>"
+      "input": "<msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mn>2</mn></msup>"
     },
     "SimpleUnits_3": {
-      "mathml": "<mfrac><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">h</mi></mfrac>"
+      "input": "<mfrac><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">h</mi></mfrac>"
     },
     "SimpleUnits_4": {
-      "mathml": "<mfrac><mi>m</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi></mfrac>"
+      "input": "<mfrac><mi>m</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi></mfrac>"
     },
     "SimpleUnits_5": {
-      "mathml": "<mn>3</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi>"
+      "input": "<mn>3</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi>"
     },
     "SimpleUnits_6": {
-      "mathml": "<mn>3</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">h</mi>"
+      "input": "<mn>3</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">h</mi>"
     },
     "_comment_127": " Tests more complex expressions containing units.",
     "ComplexUnits_0": {
-      "mathml": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mn>3</mn><mi>m</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">h</mi>"
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mn>3</mn><mi>m</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">h</mi>"
     },
     "ComplexUnits_1": {
-      "mathml": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mn>2</mn></msup><mn>3</mn><mi>m</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">h</mi>"
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mn>2</mn></msup><mn>3</mn><mi>m</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">h</mi>"
     },
     "ComplexUnits_2": {
-      "mathml": "<mn>3</mn><mi>m</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">h</mi><mfrac><mi>N</mi><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mn>2</mn></msup></mfrac>"
+      "input": "<mn>3</mn><mi>m</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">h</mi><mfrac><mi>N</mi><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mn>2</mn></msup></mfrac>"
     },
     "ComplexUnits_3": {
-      "mathml": "<mn>3</mn><mi>m</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">h</mi><mfrac><mi mathvariant=\"normal\" class=\"MathML-Unit\">N</mi><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mn>2</mn></msup></mfrac>"
+      "input": "<mn>3</mn><mi>m</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">h</mi><mfrac><mi mathvariant=\"normal\" class=\"MathML-Unit\">N</mi><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mn>2</mn></msup></mfrac>"
     },
     "_comment_128": " Tensors.",
     "_comment_129": " Pathological multiscripts expressions that are actually empty.",
     "EmptyTensors_0": {
-      "mathml": "<mmultiscripts></mmultiscripts>"
+      "input": "<mmultiscripts></mmultiscripts>"
     },
     "EmptyTensors_1": {
-      "mathml": "<mmultiscripts><none/></mmultiscripts>"
+      "input": "<mmultiscripts><none/></mmultiscripts>"
     },
     "EmptyTensors_2": {
-      "mathml": "<mmultiscripts><none/><mprescripts/></mmultiscripts>"
+      "input": "<mmultiscripts><none/><mprescripts/></mmultiscripts>"
     },
     "EmptyTensors_3": {
-      "mathml": "<mmultiscripts><none/><mprescripts/><none/></mmultiscripts>"
+      "input": "<mmultiscripts><none/><mprescripts/><none/></mmultiscripts>"
     },
     "EmptyTensors_4": {
-      "mathml": "<mmultiscripts><none/><none/><mprescripts/><none/></mmultiscripts>"
+      "input": "<mmultiscripts><none/><none/><mprescripts/><none/></mmultiscripts>"
     },
     "EmptyTensors_5": {
-      "mathml": "<mmultiscripts><none/><none/><none/><mprescripts/><none/></mmultiscripts>"
+      "input": "<mmultiscripts><none/><none/><none/><mprescripts/><none/></mmultiscripts>"
     },
     "EmptyTensors_6": {
-      "mathml": "<mmultiscripts><none/><none/><none/><mprescripts/><none/><mpadded/></mmultiscripts>"
+      "input": "<mmultiscripts><none/><none/><none/><mprescripts/><none/><mpadded/></mmultiscripts>"
     },
     "_comment_130": " Pathological multiscript expressions that are just the base element.",
     "BaseTensors_0": {
-      "mathml": "<mmultiscripts><mi>X</mi></mmultiscripts>"
+      "input": "<mmultiscripts><mi>X</mi></mmultiscripts>"
     },
     "BaseTensors_1": {
-      "mathml": "<mmultiscripts><mi>X</mi><none/></mmultiscripts>"
+      "input": "<mmultiscripts><mi>X</mi><none/></mmultiscripts>"
     },
     "BaseTensors_2": {
-      "mathml": "<mmultiscripts><mi>X</mi><none/><mprescripts/></mmultiscripts>"
+      "input": "<mmultiscripts><mi>X</mi><none/><mprescripts/></mmultiscripts>"
     },
     "BaseTensors_3": {
-      "mathml": "<mmultiscripts><mi>X</mi><none/><mprescripts/><none/></mmultiscripts>"
+      "input": "<mmultiscripts><mi>X</mi><none/><mprescripts/><none/></mmultiscripts>"
     },
     "BaseTensors_4": {
-      "mathml": "<mmultiscripts><mi>X</mi><none/><none/><none/><mprescripts/><none/></mmultiscripts>"
+      "input": "<mmultiscripts><mi>X</mi><none/><none/><none/><mprescripts/><none/></mmultiscripts>"
     },
     "BaseTensors_5": {
-      "mathml": "<mmultiscripts><mrow><mi>X</mi><mo>+</mo><mi>Y</mi></mrow><none/><mpadded/></mmultiscripts>"
+      "input": "<mmultiscripts><mrow><mi>X</mi><mo>+</mo><mi>Y</mi></mrow><none/><mpadded/></mmultiscripts>"
     },
     "_comment_131": " Pathological multiscript expressions that are actually on right",
     "_comment_132": " sub/superscripts.",
     "RightScriptTensors_0": {
-      "mathml": "<mmultiscripts><mi>X</mi><mi>i</mi></mmultiscripts>"
+      "input": "<mmultiscripts><mi>X</mi><mi>i</mi></mmultiscripts>"
     },
     "RightScriptTensors_1": {
-      "mathml": "<mmultiscripts><mi>X</mi><mi>i</mi><none/></mmultiscripts>"
+      "input": "<mmultiscripts><mi>X</mi><mi>i</mi><none/></mmultiscripts>"
     },
     "RightScriptTensors_2": {
-      "mathml": "<mmultiscripts><mi>X</mi><none/><mi>i</mi></mmultiscripts>"
+      "input": "<mmultiscripts><mi>X</mi><none/><mi>i</mi></mmultiscripts>"
     },
     "RightScriptTensors_3": {
-      "mathml": "<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi></mmultiscripts>"
+      "input": "<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi></mmultiscripts>"
     },
     "RightScriptTensors_4": {
-      "mathml": "<mmultiscripts><mpadded><mi>X</mi></mpadded><mi>i</mi><mpadded><mi>j</mi></mpadded></mmultiscripts>"
+      "input": "<mmultiscripts><mpadded><mi>X</mi></mpadded><mi>i</mi><mpadded><mi>j</mi></mpadded></mmultiscripts>"
     },
     "RightScriptTensors_5": {
-      "mathml": "<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi><mprescripts/><none/></mmultiscripts>"
+      "input": "<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi><mprescripts/><none/></mmultiscripts>"
     },
     "RightScriptTensors_6": {
-      "mathml": "<mmultiscripts><mi>X</mi><mi>i</mi><none/><none/><mi>l</mi></mmultiscripts>"
+      "input": "<mmultiscripts><mi>X</mi><mi>i</mi><none/><none/><mi>l</mi></mmultiscripts>"
     },
     "RightScriptTensors_7": {
-      "mathml": "<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi><mprescripts/><none/></mmultiscripts>"
+      "input": "<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi><mprescripts/><none/></mmultiscripts>"
     },
     "RightScriptTensors_8": {
-      "mathml": "<mmultiscripts><mi>X</mi><mi>i</mi><none/><mi>j</mi><none/><mprescripts/><none/></mmultiscripts>"
+      "input": "<mmultiscripts><mi>X</mi><mi>i</mi><none/><mi>j</mi><none/><mprescripts/><none/></mmultiscripts>"
     },
     "RightScriptTensors_9": {
-      "mathml": "<mmultiscripts><mi>X</mi><none/><mi>i</mi><none/><mi>j</mi><mprescripts/><none/></mmultiscripts>"
+      "input": "<mmultiscripts><mi>X</mi><none/><mi>i</mi><none/><mi>j</mi><mprescripts/><none/></mmultiscripts>"
     },
     "_comment_133": " Simple multiscript expressions with some scripts on the left.",
     "SimpleTensors_0": {
-      "mathml": "<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn><mprescripts/><mn>3</mn><mn>4</mn></mmultiscripts>"
+      "input": "<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn><mprescripts/><mn>3</mn><mn>4</mn></mmultiscripts>"
     },
     "SimpleTensors_1": {
-      "mathml": "<mmultiscripts><mi>A</mi><mn>1</mn><none/><mprescripts/><mn>3</mn><mn>4</mn></mmultiscripts>"
+      "input": "<mmultiscripts><mi>A</mi><mn>1</mn><none/><mprescripts/><mn>3</mn><mn>4</mn></mmultiscripts>"
     },
     "SimpleTensors_2": {
-      "mathml": "<mmultiscripts><mi>A</mi><mn>1</mn><mprescripts/><mn>3</mn><mn>4</mn></mmultiscripts>"
+      "input": "<mmultiscripts><mi>A</mi><mn>1</mn><mprescripts/><mn>3</mn><mn>4</mn></mmultiscripts>"
     },
     "SimpleTensors_3": {
-      "mathml": "<mmultiscripts><mi>A</mi><none/><mn>2</mn><mprescripts/><mn>3</mn><mn>4</mn></mmultiscripts>"
+      "input": "<mmultiscripts><mi>A</mi><none/><mn>2</mn><mprescripts/><mn>3</mn><mn>4</mn></mmultiscripts>"
     },
     "SimpleTensors_4": {
-      "mathml": "<mmultiscripts><mi>A</mi><none/><none/><mprescripts/><mn>3</mn><mn>4</mn></mmultiscripts>"
+      "input": "<mmultiscripts><mi>A</mi><none/><none/><mprescripts/><mn>3</mn><mn>4</mn></mmultiscripts>"
     },
     "SimpleTensors_5": {
-      "mathml": "<mmultiscripts><mi>A</mi><mpadded/><mprescripts/><mn>3</mn><mn>4</mn></mmultiscripts>"
+      "input": "<mmultiscripts><mi>A</mi><mpadded/><mprescripts/><mn>3</mn><mn>4</mn></mmultiscripts>"
     },
     "SimpleTensors_6": {
-      "mathml": "<mmultiscripts><mi>A</mi><mprescripts/><mn>3</mn><mn>4</mn></mmultiscripts>"
+      "input": "<mmultiscripts><mi>A</mi><mprescripts/><mn>3</mn><mn>4</mn></mmultiscripts>"
     },
     "SimpleTensors_7": {
-      "mathml": "<mmultiscripts><mi>A</mi><mprescripts/><mn>3</mn></mmultiscripts>"
+      "input": "<mmultiscripts><mi>A</mi><mprescripts/><mn>3</mn></mmultiscripts>"
     },
     "SimpleTensors_8": {
-      "mathml": "<mmultiscripts><mi>A</mi><mprescripts/><none/><mn>4</mn></mmultiscripts>"
+      "input": "<mmultiscripts><mi>A</mi><mprescripts/><none/><mn>4</mn></mmultiscripts>"
     },
     "SimpleTensors_9": {
-      "mathml": "<mmultiscripts><mi>A</mi><mn>1</mn><mprescripts/><none/><mn>4</mn></mmultiscripts>"
+      "input": "<mmultiscripts><mi>A</mi><mn>1</mn><mprescripts/><none/><mn>4</mn></mmultiscripts>"
     },
     "SimpleTensors_10": {
-      "mathml": "<mmultiscripts><mi>A</mi><none/><mn>2</mn><mprescripts/><mn>3</mn></mmultiscripts>"
+      "input": "<mmultiscripts><mi>A</mi><none/><mn>2</mn><mprescripts/><mn>3</mn></mmultiscripts>"
     },
     "SimpleTensors_11": {
-      "mathml": "<mmultiscripts><mpadded><mi>A</mi></mpadded><none/><mpadded><mn>2</mn></mpadded><mprescripts/><mn>3</mn></mmultiscripts>"
+      "input": "<mmultiscripts><mpadded><mi>A</mi></mpadded><none/><mpadded><mn>2</mn></mpadded><mprescripts/><mn>3</mn></mmultiscripts>"
     },
     "_comment_134": " Complex multiscript expressions with some scripts on the left.",
     "ComplexTensors_0": {
-      "mathml": "<mmultiscripts><mi>A</mi><mn>3</mn><mn>4</mn><mi>k</mi><mi>l</mi><mprescripts/><mn>1</mn><mn>2</mn><mi>i</mi><mi>j</mi></mmultiscripts>"
+      "input": "<mmultiscripts><mi>A</mi><mn>3</mn><mn>4</mn><mi>k</mi><mi>l</mi><mprescripts/><mn>1</mn><mn>2</mn><mi>i</mi><mi>j</mi></mmultiscripts>"
     },
     "ComplexTensors_1": {
-      "mathml": "<mmultiscripts><mi>A</mi><mn>3</mn><none/><mi>k</mi><mi>l</mi><mprescripts/><mn>1</mn><none/><none/><mi>j</mi></mmultiscripts>"
+      "input": "<mmultiscripts><mi>A</mi><mn>3</mn><none/><mi>k</mi><mi>l</mi><mprescripts/><mn>1</mn><none/><none/><mi>j</mi></mmultiscripts>"
     },
     "ComplexTensors_2": {
-      "mathml": "<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn><mn>3</mn><mprescripts/><mn>4</mn></mmultiscripts>"
+      "input": "<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn><mn>3</mn><mprescripts/><mn>4</mn></mmultiscripts>"
     },
     "ComplexTensors_3": {
-      "mathml": "<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn><mn>3</mn><mprescripts/><mn>5</mn><mn>4</mn><mn>6</mn></mmultiscripts>"
+      "input": "<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn><mn>3</mn><mprescripts/><mn>5</mn><mn>4</mn><mn>6</mn></mmultiscripts>"
     },
     "ComplexTensors_4": {
-      "mathml": "<mmultiscripts><mpadded><mi>A</mi></mpadded><mpadded><mn>1</mn></mpadded><mpadded><mn>2</mn></mpadded><mpadded><mn>3</mn></mpadded><mprescripts/><mpadded><mn>5</mn></mpadded><mpadded><mn>4</mn></mpadded><mpadded><mn>6</mn></mpadded></mmultiscripts>"
+      "input": "<mmultiscripts><mpadded><mi>A</mi></mpadded><mpadded><mn>1</mn></mpadded><mpadded><mn>2</mn></mpadded><mpadded><mn>3</mn></mpadded><mprescripts/><mpadded><mn>5</mn></mpadded><mpadded><mn>4</mn></mpadded><mpadded><mn>6</mn></mpadded></mmultiscripts>"
     },
     "ComplexTensors_5": {
-      "mathml": "<mmultiscripts><mrow><mi>X</mi><mo>+</mo><mi>Y</mi></mrow><mn>1</mn><mn>2</mn><mprescripts/><none/><mn>3</mn></mmultiscripts>"
+      "input": "<mmultiscripts><mrow><mi>X</mi><mo>+</mo><mi>Y</mi></mrow><mn>1</mn><mn>2</mn><mprescripts/><none/><mn>3</mn></mmultiscripts>"
     },
     "_comment_135": " Expressions containing ignored tags.",
     "_comment_136": " Expressions containing pseudo unit children, i.e., children whose only",
     "_comment_137": " siblings are ignored nodes.",
     "PseudoUnitChildren_0": {
-      "mathml": "<mi>a</mi><mspace/>"
+      "input": "<mi>a</mi><mspace/>"
     },
     "PseudoUnitChildren_1": {
-      "mathml": "<mi>i</mi><merror><mi>Y</mi></merror>"
+      "input": "<mi>i</mi><merror><mi>Y</mi></merror>"
     },
     "PseudoUnitChildren_2": {
-      "mathml": "<mphantom><mtext>nix</mtext></mphantom><mi>i</mi><merror><mi>Y</mi></merror>"
+      "input": "<mphantom><mtext>nix</mtext></mphantom><mi>i</mi><merror><mi>Y</mi></merror>"
     },
     "PseudoUnitChildren_3": {
-      "mathml": "<mrow><mphantom><mtext>nix</mtext></mphantom><mi>i</mi><merror><mi>Y</mi></merror></mrow>"
+      "input": "<mrow><mphantom><mtext>nix</mtext></mphantom><mi>i</mi><merror><mi>Y</mi></merror></mrow>"
     },
     "PseudoUnitChildren_4": {
-      "mathml": "<mrow><mphantom><mtext>nix</mtext></mphantom><mi>i</mi><merror><mi>Y</mi></merror></mrow><merror><mtext>nothing</mtext></merror>"
+      "input": "<mrow><mphantom><mtext>nix</mtext></mphantom><mi>i</mi><merror><mi>Y</mi></merror></mrow><merror><mtext>nothing</mtext></merror>"
     },
     "PseudoUnitChildren_5": {
-      "mathml": "<mrow><mphantom><mtext>nix</mtext></mphantom><mrow><mi>i</mi></mrow><merror><mi>Y</mi></merror></mrow><merror><mtext>nothing</mtext></merror>"
+      "input": "<mrow><mphantom><mtext>nix</mtext></mphantom><mrow><mi>i</mi></mrow><merror><mi>Y</mi></merror></mrow><merror><mtext>nothing</mtext></merror>"
     },
     "PseudoUnitChildren_6": {
-      "mathml": "<mrow><mphantom><mtext>nix</mtext></mphantom><mrow><mi>i</mi><mi>j</mi></mrow><merror><mi>Y</mi></merror></mrow><merror><mtext>nothing</mtext></merror>"
+      "input": "<mrow><mphantom><mtext>nix</mtext></mphantom><mrow><mi>i</mi><mi>j</mi></mrow><merror><mi>Y</mi></merror></mrow><merror><mtext>nothing</mtext></merror>"
     },
     "_comment_138": " Expressions with ignore tags, introducing a new mrow.",
     "InterspersedIgnore_0": {
-      "mathml": "<mphantom><mtext>nix</mtext></mphantom><mi>i</mi><mi>j</mi><merror><mi>Y</mi></merror>"
+      "input": "<mphantom><mtext>nix</mtext></mphantom><mi>i</mi><mi>j</mi><merror><mi>Y</mi></merror>"
     },
     "InterspersedIgnore_1": {
-      "mathml": "<mphantom><mtext>nix</mtext></mphantom><mi>i</mi><mo>+</mo><mi>j</mi><merror><mi>Y</mi></merror>"
+      "input": "<mphantom><mtext>nix</mtext></mphantom><mi>i</mi><mo>+</mo><mi>j</mi><merror><mi>Y</mi></merror>"
     },
     "InterspersedIgnore_2": {
-      "mathml": "<mi>i</mi><merror><mtext>nothing</mtext></merror><mo>+</mo><mi>j</mi>"
+      "input": "<mi>i</mi><merror><mtext>nothing</mtext></merror><mo>+</mo><mi>j</mi>"
     },
     "InterspersedIgnore_3": {
-      "mathml": "<mi>i</mi><merror><mtext>nothing</mtext></merror><mi>j</mi>"
+      "input": "<mi>i</mi><merror><mtext>nothing</mtext></merror><mi>j</mi>"
     },
     "InterspersedIgnore_4": {
-      "mathml": "<mphantom><mtext>nix</mtext></mphantom><mi>i</mi><merror><mtext>nothing</mtext></merror><mo>+</mo><mi>j</mi><merror><mi>Y</mi></merror>"
+      "input": "<mphantom><mtext>nix</mtext></mphantom><mi>i</mi><merror><mtext>nothing</mtext></merror><mo>+</mo><mi>j</mi><merror><mi>Y</mi></merror>"
     },
     "_comment_139": " Expressions with over and under scores.",
     "MunderOver_0": {
-      "mathml": "<munder><mo>&#x2192;</mo><mi>n</mi></munder>"
+      "input": "<munder><mo>&#x2192;</mo><mi>n</mi></munder>"
     },
     "MunderOver_1": {
-      "mathml": "<mover><mo>&#x2192;</mo><mtext>above</mtext></mover>"
+      "input": "<mover><mo>&#x2192;</mo><mtext>above</mtext></mover>"
     },
     "MunderOver_2": {
-      "mathml": "<munderover><mo>&#x2192;</mo><mi>n</mi><mtext>above</mtext></munderover>"
+      "input": "<munderover><mo>&#x2192;</mo><mi>n</mi><mtext>above</mtext></munderover>"
     },
     "_comment_140": " Embellished operators.",
     "_comment_141": " Simple embellished arguments.",
     "SimpleEmbellishment_0": {
-      "mathml": "<msup><mi>∫</mi><mn>2</mn></msup>"
+      "input": "<msup><mi>∫</mi><mn>2</mn></msup>"
     },
     "SimpleEmbellishment_1": {
-      "mathml": "<msup><mi>f</mi><mn>2</mn></msup>"
+      "input": "<msup><mi>f</mi><mn>2</mn></msup>"
     },
     "SimpleEmbellishment_2": {
-      "mathml": "<msup><mo>(</mo><mn>2</mn></msup>"
+      "input": "<msup><mo>(</mo><mn>2</mn></msup>"
     },
     "SimpleEmbellishment_3": {
-      "mathml": "<msup><mo>=</mo><mn>2</mn></msup>"
+      "input": "<msup><mo>=</mo><mn>2</mn></msup>"
     },
     "SimpleEmbellishment_4": {
-      "mathml": "<msup><mo>+</mo><mn>2</mn></msup>"
+      "input": "<msup><mo>+</mo><mn>2</mn></msup>"
     },
     "SimpleEmbellishment_5": {
-      "mathml": "<msup><mo>,</mo><mn>2</mn></msup>"
+      "input": "<msup><mo>,</mo><mn>2</mn></msup>"
     },
     "_comment_142": " Multi embellished arguments.",
     "MultiEmbellishment_0": {
-      "mathml": "<msub><msup><mo>+</mo><mn>2</mn></msup><mi>x</mi></msub>"
+      "input": "<msub><msup><mo>+</mo><mn>2</mn></msup><mi>x</mi></msub>"
     },
     "MultiEmbellishment_1": {
-      "mathml": "<mmultiscripts><mo>+</mo><mn>2</mn><mi>x</mi></mmultiscripts>"
+      "input": "<mmultiscripts><mo>+</mo><mn>2</mn><mi>x</mi></mmultiscripts>"
     },
     "MultiEmbellishment_2": {
-      "mathml": "<mover><msub><msup><mo>+</mo><mn>2</mn></msup><mi>x</mi></msub><mo>-</mo></mover>"
+      "input": "<mover><msub><msup><mo>+</mo><mn>2</mn></msup><mi>x</mi></msub><mo>-</mo></mover>"
     },
     "MultiEmbellishment_3": {
-      "mathml": "<msup><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub></msup>"
+      "input": "<msup><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub></msup>"
     },
     "MultiEmbellishment_4": {
-      "mathml": "<msub><munder><mo>+</mo><mn>2</mn></munder><mi>x</mi></msub>"
+      "input": "<msub><munder><mo>+</mo><mn>2</mn></munder><mi>x</mi></msub>"
     },
     "MultiEmbellishment_5": {
-      "mathml": "<mmultiscripts><mi>(</mi><none/><none/><mprescripts/><mn>1</mn><mi>j</mi></mmultiscripts>"
+      "input": "<mmultiscripts><mi>(</mi><none/><none/><mprescripts/><mn>1</mn><mi>j</mi></mmultiscripts>"
     },
     "MultiEmbellishment_6": {
-      "mathml": "<mmultiscripts><mi>(</mi><none/><mi>K</mi><mprescripts/><mn>1</mn><mi>j</mi></mmultiscripts>"
+      "input": "<mmultiscripts><mi>(</mi><none/><mi>K</mi><mprescripts/><mn>1</mn><mi>j</mi></mmultiscripts>"
     },
     "MultiEmbellishment_7": {
-      "mathml": "<mmultiscripts><mi>(</mi><mn>1</mn><mi>j</mi></mmultiscripts>"
+      "input": "<mmultiscripts><mi>(</mi><mn>1</mn><mi>j</mi></mmultiscripts>"
     },
     "_comment_143": " Expressions with embellished operators and relations.",
     "ComplexEmbellishment_0": {
-      "mathml": "<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>x</mi><msub><mo>=</mo><mn>2</mn></msub><mi>z</mi>"
+      "input": "<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>x</mi><msub><mo>=</mo><mn>2</mn></msub><mi>z</mi>"
     },
     "ComplexEmbellishment_1": {
-      "mathml": "<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>x</mi><msub><mo>=</mo><mn>4</mn></msub><mi>z</mi>"
+      "input": "<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>x</mi><msub><mo>=</mo><mn>4</mn></msub><mi>z</mi>"
     },
     "ComplexEmbellishment_2": {
-      "mathml": "<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>x</mi><msub><mo>≤</mo><mn>4</mn></msub><mi>z</mi>"
+      "input": "<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>x</mi><msub><mo>≤</mo><mn>4</mn></msub><mi>z</mi>"
     },
     "ComplexEmbellishment_3": {
-      "mathml": "<mi>a</mi><msub><mo>+</mo><mn>2</mn></msub><mi>x</mi><msub><mo>+</mo><mn>2</mn></msub><mi>z</mi>"
+      "input": "<mi>a</mi><msub><mo>+</mo><mn>2</mn></msub><mi>x</mi><msub><mo>+</mo><mn>2</mn></msub><mi>z</mi>"
     },
     "ComplexEmbellishment_4": {
-      "mathml": "<mi>a</mi><msub><mo>+</mo><mn>2</mn></msub><mi>x</mi><msub><mo>+</mo><mn>4</mn></msub><mi>z</mi>"
+      "input": "<mi>a</mi><msub><mo>+</mo><mn>2</mn></msub><mi>x</mi><msub><mo>+</mo><mn>4</mn></msub><mi>z</mi>"
     },
     "ComplexEmbellishment_5": {
-      "mathml": "<mi>a</mi><msub><mo>+</mo><mn>2</mn></msub><mi>b</mi><msup><mo>=</mo><mo>'</mo></msup><mi>x</mi><msub><mo>+</mo><mn>4</mn></msub><mi>z</mi>"
+      "input": "<mi>a</mi><msub><mo>+</mo><mn>2</mn></msub><mi>b</mi><msup><mo>=</mo><mo>'</mo></msup><mi>x</mi><msub><mo>+</mo><mn>4</mn></msub><mi>z</mi>"
     },
     "ComplexEmbellishment_6": {
-      "mathml": "<mi>a</mi><msub><mo>:</mo><mn>2</mn></msub><mi>b</mi><msup><mo>,</mo><mo>'</mo></msup><mi>x</mi><msub><mo>:</mo><mn>4</mn></msub><mi>z</mi>"
+      "input": "<mi>a</mi><msub><mo>:</mo><mn>2</mn></msub><mi>b</mi><msup><mo>,</mo><mo>'</mo></msup><mi>x</mi><msub><mo>:</mo><mn>4</mn></msub><mi>z</mi>"
     },
     "ComplexEmbellishment_7": {
-      "mathml": "<msub><mo>+</mo><mn>2</mn></msub><msub><mo>+</mo><mn>3</mn></msub><mi>x</mi>"
+      "input": "<msub><mo>+</mo><mn>2</mn></msub><msub><mo>+</mo><mn>3</mn></msub><mi>x</mi>"
     },
     "ComplexEmbellishment_8": {
-      "mathml": "<mi>x</mi><msub><mo>+</mo><mn>2</mn></msub><msub><mo>+</mo><mn>3</mn></msub>"
+      "input": "<mi>x</mi><msub><mo>+</mo><mn>2</mn></msub><msub><mo>+</mo><mn>3</mn></msub>"
     },
     "_comment_144": " Embellished Fences",
     "_comment_145": " Expressions with embellished fences right.",
     "EmbellishedRightFence_0": {
-      "mathml": "<mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup>"
+      "input": "<mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup>"
     },
     "EmbellishedRightFence_1": {
-      "mathml": "<mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup><mo>+</mo><mo>(</mo><mi>y</mi><msup><mo>)</mo><mn>3</mn></msup>"
+      "input": "<mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup><mo>+</mo><mo>(</mo><mi>y</mi><msup><mo>)</mo><mn>3</mn></msup>"
     },
     "EmbellishedRightFence_2": {
-      "mathml": "<mo>(</mo><mi>x</mi><msub><msup><mo>)</mo><mn>4</mn></msup><mn>2</mn></msub>"
+      "input": "<mo>(</mo><mi>x</mi><msub><msup><mo>)</mo><mn>4</mn></msup><mn>2</mn></msub>"
     },
     "EmbellishedRightFence_3": {
-      "mathml": "<mo>(</mo><mi>x</mi><msubsup><mo>)</mo><mn>4</mn><mn>2</mn></msubsup>"
+      "input": "<mo>(</mo><mi>x</mi><msubsup><mo>)</mo><mn>4</mn><mn>2</mn></msubsup>"
     },
     "EmbellishedRightFence_4": {
-      "mathml": "<mo>(</mo><mi>x</mi><mmultiscripts><mo>)</mo><mn>4</mn><mn>2</mn></mmultiscripts>"
+      "input": "<mo>(</mo><mi>x</mi><mmultiscripts><mo>)</mo><mn>4</mn><mn>2</mn></mmultiscripts>"
     },
     "EmbellishedRightFence_5": {
-      "mathml": "<mo>(</mo><mi>x</mi><msup><munder><msub><mover><mo>)</mo><mo>^</mo></mover><mn>2</mn></msub><mo>~</mo></munder><mn>1</mn></msup>"
+      "input": "<mo>(</mo><mi>x</mi><msup><munder><msub><mover><mo>)</mo><mo>^</mo></mover><mn>2</mn></msub><mo>~</mo></munder><mn>1</mn></msup>"
     },
     "EmbellishedRightFence_6": {
-      "mathml": "<mo>(</mo><mi>x</mi><mpadded><msup><munder><msub><mover><mo>)</mo><mo>^</mo></mover><mn>2</mn></msub><mo>~</mo></munder><mn>3</mn></msup></mpadded>"
+      "input": "<mo>(</mo><mi>x</mi><mpadded><msup><munder><msub><mover><mo>)</mo><mo>^</mo></mover><mn>2</mn></msub><mo>~</mo></munder><mn>3</mn></msup></mpadded>"
     },
     "_comment_146": " Expressions with embellished fences left.",
     "EmbellishedLeftFence_0": {
-      "mathml": "<msup><mo>(</mo><mn>4</mn></msup><mi>x</mi><mo>)</mo>"
+      "input": "<msup><mo>(</mo><mn>4</mn></msup><mi>x</mi><mo>)</mo>"
     },
     "EmbellishedLeftFence_1": {
-      "mathml": "<mmultiscripts><mo>(</mo><mn>4</mn></mmultiscripts><mi>x</mi><mo>)</mo>"
+      "input": "<mmultiscripts><mo>(</mo><mn>4</mn></mmultiscripts><mi>x</mi><mo>)</mo>"
     },
     "EmbellishedLeftFence_2": {
-      "mathml": "<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn></mmultiscripts><mi>x</mi><mo>)</mo>"
+      "input": "<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn></mmultiscripts><mi>x</mi><mo>)</mo>"
     },
     "EmbellishedLeftFence_3": {
-      "mathml": "<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><mo>)</mo>"
+      "input": "<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><mo>)</mo>"
     },
     "EmbellishedLeftFence_4": {
-      "mathml": "<mmultiscripts><mo>(</mo><mn>2</mn><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><mo>)</mo>"
+      "input": "<mmultiscripts><mo>(</mo><mn>2</mn><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><mo>)</mo>"
     },
     "EmbellishedLeftFence_5": {
-      "mathml": "<mmultiscripts><munder><mo>(</mo><mo>~</mo></munder><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><mo>)</mo>"
+      "input": "<mmultiscripts><munder><mo>(</mo><mo>~</mo></munder><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><mo>)</mo>"
     },
     "EmbellishedLeftFence_6": {
-      "mathml": "<mmultiscripts><mover><mmultiscripts><munder><mo>(</mo><mo>~</mo></munder><mprescripts/><none/><mn>3</mn></mmultiscripts><mo>^</mo></mover><mprescripts/><mn>4</mn></mmultiscripts><mi>x</mi><mo>)</mo>"
+      "input": "<mmultiscripts><mover><mmultiscripts><munder><mo>(</mo><mo>~</mo></munder><mprescripts/><none/><mn>3</mn></mmultiscripts><mo>^</mo></mover><mprescripts/><mn>4</mn></mmultiscripts><mi>x</mi><mo>)</mo>"
     },
     "_comment_147": " Expressions with embellished fences on both sides.",
     "EmbellishedBothFences_0": {
-      "mathml": "<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn></mmultiscripts><mi>x</mi><msup><mo>)</mo><mn>2</mn></msup>"
+      "input": "<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn></mmultiscripts><mi>x</mi><msup><mo>)</mo><mn>2</mn></msup>"
     },
     "EmbellishedBothFences_1": {
-      "mathml": "<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><msubsup><mo>)</mo><mn>1</mn><mn>2</mn></msubsup>"
+      "input": "<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><msubsup><mo>)</mo><mn>1</mn><mn>2</mn></msubsup>"
     },
     "EmbellishedBothFences_2": {
-      "mathml": "<munder><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mo>~</mo></munder><mi>x</mi><mover><msubsup><mo>)</mo><mn>1</mn><mn>2</mn></msubsup><mo>^</mo></mover>"
+      "input": "<munder><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mo>~</mo></munder><mi>x</mi><mover><msubsup><mo>)</mo><mn>1</mn><mn>2</mn></msubsup><mo>^</mo></mover>"
     },
     "_comment_148": " Expressions with padded background.",
     "EmbellishedPaddedFences_0": {
-      "mathml": "<mo>(</mo><mi>x</mi><mpadded mathbackground=\"red\"><msup><munder><msub><mover><mo>)</mo><mo>^</mo></mover><mn>2</mn></msub><mo>~</mo></munder><mn>3</mn></msup></mpadded>"
+      "input": "<mo>(</mo><mi>x</mi><mpadded mathbackground=\"red\"><msup><munder><msub><mover><mo>)</mo><mo>^</mo></mover><mn>2</mn></msub><mo>~</mo></munder><mn>3</mn></msup></mpadded>"
     },
     "EmbellishedPaddedFences_1": {
-      "mathml": "<mpadded mathbackground=\"red\"><mmultiscripts><mover><mmultiscripts><munder><mo>(</mo><mo>~</mo></munder><mprescripts/><none/><mn>3</mn></mmultiscripts><mo>^</mo></mover><mprescripts/><mn>4</mn></mmultiscripts></mpadded><mi>x</mi><mo>)</mo>"
+      "input": "<mpadded mathbackground=\"red\"><mmultiscripts><mover><mmultiscripts><munder><mo>(</mo><mo>~</mo></munder><mprescripts/><none/><mn>3</mn></mmultiscripts><mo>^</mo></mover><mprescripts/><mn>4</mn></mmultiscripts></mpadded><mi>x</mi><mo>)</mo>"
     },
     "EmbellishedPaddedFences_2": {
-      "mathml": "<mpadded mathbackground=\"blue\"><munder><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mo>~</mo></munder></mpadded><mi>x</mi><mpadded mathbackground=\"red\"><mover><msubsup><mo>)</mo><mn>1</mn><mn>2</mn></msubsup><mo>^</mo></mover></mpadded>"
+      "input": "<mpadded mathbackground=\"blue\"><munder><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mo>~</mo></munder></mpadded><mi>x</mi><mpadded mathbackground=\"red\"><mover><msubsup><mo>)</mo><mn>1</mn><mn>2</mn></msubsup><mo>^</mo></mover></mpadded>"
     },
     "_comment_149": " Expressions with embellished right fences as a sub-expression.",
     "EmbellRightSubexpr_0": {
-      "mathml": "<mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup><mo>+</mo><mn>1</mn>"
+      "input": "<mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup><mo>+</mo><mn>1</mn>"
     },
     "EmbellRightSubexpr_1": {
-      "mathml": "<mn>2</mn><mo>+</mo><mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup><mo>+</mo><mn>1</mn>"
+      "input": "<mn>2</mn><mo>+</mo><mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup><mo>+</mo><mn>1</mn>"
     },
     "EmbellRightSubexpr_2": {
-      "mathml": "<mo>-</mo><mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup><mo>+</mo><mn>1</mn>"
+      "input": "<mo>-</mo><mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup><mo>+</mo><mn>1</mn>"
     },
     "_comment_150": " Expressions with embellished left fences as a sub-expression.",
     "EmbellLeftSubexpr_0": {
-      "mathml": "<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><mo>)</mo><mo>+</mo><mn>1</mn>"
+      "input": "<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><mo>)</mo><mo>+</mo><mn>1</mn>"
     },
     "EmbellLeftSubexpr_1": {
-      "mathml": "<mo>-</mo><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><mo>)</mo><mo>+</mo><mn>1</mn>"
+      "input": "<mo>-</mo><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><mo>)</mo><mo>+</mo><mn>1</mn>"
     },
     "EmbellLeftSubexpr_2": {
-      "mathml": "<mi>k</mi><mo>+</mo><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><mo>)</mo><mo>+</mo><mn>1</mn>"
+      "input": "<mi>k</mi><mo>+</mo><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><mo>)</mo><mo>+</mo><mn>1</mn>"
     },
     "_comment_151": " Expressions with embellished both fences as a sub-expression.",
     "EmbellBothSubexpr_0": {
-      "mathml": "<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><msubsup><mo>)</mo><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><mn>1</mn>"
+      "input": "<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><msubsup><mo>)</mo><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><mn>1</mn>"
     },
     "EmbellBothSubexpr_1": {
-      "mathml": "<mo>-</mo><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><msubsup><mo>)</mo><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><mn>1</mn>"
+      "input": "<mo>-</mo><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><msubsup><mo>)</mo><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><mn>1</mn>"
     },
     "EmbellBothSubexpr_2": {
-      "mathml": "<mi>k</mi><mo>-</mo><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><msubsup><mo>)</mo><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><mn>1</mn>"
+      "input": "<mi>k</mi><mo>-</mo><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><msubsup><mo>)</mo><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><mn>1</mn>"
     },
     "_comment_152": " Expressions with embellished fences right and complex content.",
     "ComplexEmbellRight_0": {
-      "mathml": "<mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><msup><mo>)</mo><mn>4</mn></msup>"
+      "input": "<mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><msup><mo>)</mo><mn>4</mn></msup>"
     },
     "ComplexEmbellRight_1": {
-      "mathml": "<mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><msub><mo>)</mo><mn>4</mn></msub>"
+      "input": "<mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><msub><mo>)</mo><mn>4</mn></msub>"
     },
     "_comment_153": " Actions.",
     "_comment_154": " Currently foreign Mactions do not work with the enrichment.",
     "_comment_155": " untest Actions",
     "Actions_0": {
-      "mathml": "<maction><mtext>something</mtext><mn>2</mn></maction>"
+      "input": "<maction><mtext>something</mtext><mn>2</mn></maction>"
     },
     "Actions_1": {
-      "mathml": "<maction><mtext>something</mtext><mi>a</mi></maction>"
+      "input": "<maction><mtext>something</mtext><mi>a</mi></maction>"
     },
     "_comment_156": " Semantics, annotation, annotation-xml",
     "_comment_157": " Expressions with semantic elements.",
     "SemanticsElement_0": {
-      "mathml": "<semantics></semantics>"
+      "input": "<semantics></semantics>"
     },
     "SemanticsElement_1": {
-      "mathml": "<semantics><mi>a</mi></semantics>"
+      "input": "<semantics><mi>a</mi></semantics>"
     },
     "SemanticsElement_2": {
-      "mathml": "<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></semantics>"
+      "input": "<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></semantics>"
     },
     "SemanticsElement_3": {
-      "mathml": "<mi>a</mi><mo>+</mo><semantics><mi>b</mi></semantics>"
+      "input": "<mi>a</mi><mo>+</mo><semantics><mi>b</mi></semantics>"
     },
     "SemanticsElement_4": {
-      "mathml": "<semantics><msubsup><mi>p</mi><mn>1</mn><mi>x</mi></msubsup></semantics>"
+      "input": "<semantics><msubsup><mi>p</mi><mn>1</mn><mi>x</mi></msubsup></semantics>"
     },
     "_comment_158": " Expressions with semantic elements and annotations.",
     "_comment_159": " This is not really legal markup.",
     "SemanticsAnnotation_0": {
-      "mathml": "<semantics><annotation>something</annotation></semantics>"
+      "input": "<semantics><annotation>something</annotation></semantics>"
     },
     "SemanticsAnnotation_1": {
-      "mathml": "<mi>a</mi><semantics><annotation><content>something</content></annotation></semantics>"
+      "input": "<mi>a</mi><semantics><annotation><content>something</content></annotation></semantics>"
     },
     "SemanticsAnnotation_2": {
-      "mathml": "<semantics><mi>a</mi><annotation>something</annotation></semantics>"
+      "input": "<semantics><mi>a</mi><annotation>something</annotation></semantics>"
     },
     "SemanticsAnnotation_3": {
-      "mathml": "<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><annotation>something</annotation></semantics>"
+      "input": "<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><annotation>something</annotation></semantics>"
     },
     "SemanticsAnnotation_4": {
-      "mathml": "<mi>a</mi><mo>+</mo><semantics><mi>b</mi><annotation>something</annotation></semantics>"
+      "input": "<mi>a</mi><mo>+</mo><semantics><mi>b</mi><annotation>something</annotation></semantics>"
     },
     "_comment_160": " Expressions with semantic elements and xml annotations.",
     "_comment_161": " This is not really legal markup.",
     "SemanticsAnnotationXml_0": {
-      "mathml": "<semantics><annotation-xml><content>something</content></annotation-xml></semantics>"
+      "input": "<semantics><annotation-xml><content>something</content></annotation-xml></semantics>"
     },
     "SemanticsAnnotationXml_1": {
-      "mathml": "<mi>a</mi><semantics><annotation-xml><content>something</content></annotation-xml></semantics>"
+      "input": "<mi>a</mi><semantics><annotation-xml><content>something</content></annotation-xml></semantics>"
     },
     "SemanticsAnnotationXml_2": {
-      "mathml": "<semantics><mi>a</mi><annotation-xml><content>something</content></annotation-xml></semantics>"
+      "input": "<semantics><mi>a</mi><annotation-xml><content>something</content></annotation-xml></semantics>"
     },
     "SemanticsAnnotationXml_3": {
-      "mathml": "<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><annotation-xml><content>something</content></annotation-xml></semantics>"
+      "input": "<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><annotation-xml><content>something</content></annotation-xml></semantics>"
     },
     "SemanticsAnnotationXml_4": {
-      "mathml": "<mi>a</mi><mo>+</mo><semantics><mi>b</mi><annotation-xml><content>something</content></annotation-xml></semantics>"
+      "input": "<mi>a</mi><mo>+</mo><semantics><mi>b</mi><annotation-xml><content>something</content></annotation-xml></semantics>"
     },
     "_comment_162": " Binomial coefficients generated with fractions.",
     "Binomial_0": {
-      "mathml": "<mfenced open=\"(\" close=\")\"><mfrac linethickness=\"0\"><mi>n</mi><mi>k</mi></mfrac></mfenced>"
+      "input": "<mfenced open=\"(\" close=\")\"><mfrac linethickness=\"0\"><mi>n</mi><mi>k</mi></mfrac></mfenced>"
     },
     "Binomial_1": {
-      "mathml": "<mrow><mrow><mo>(</mo></mrow><mfrac linethickness=\"0\"><mi>n</mi><mi>k</mi></mfrac><mrow><mo>)</mo></mrow></mrow>"
+      "input": "<mrow><mrow><mo>(</mo></mrow><mfrac linethickness=\"0\"><mi>n</mi><mi>k</mi></mfrac><mrow><mo>)</mo></mrow></mrow>"
     },
     "Binomial_2": {
-      "mathml": "<mrow><mrow><mo>(</mo></mrow><mfrac linethickness=\"0\"><mi>n</mi><mrow><mi>k</mi><mo>+</mo><mi>l</mi></mrow></mfrac><mrow><mo>)</mo></mrow></mrow>"
+      "input": "<mrow><mrow><mo>(</mo></mrow><mfrac linethickness=\"0\"><mi>n</mi><mrow><mi>k</mi><mo>+</mo><mi>l</mi></mrow></mfrac><mrow><mo>)</mo></mrow></mrow>"
     },
     "Binomial_3": {
-      "mathml": "<mrow><mrow><mo>(</mo></mrow><mfrac linethickness=\"0\"><mrow><mi>n</mi><mo>+</mo><mi>k</mi><mo>+</mo><mi>l</mi></mrow><mrow><mi>k</mi><mo>+</mo><mi>l</mi><mo>-</mo><mn>1</mn></mrow></mfrac><mrow><mo>)</mo></mrow></mrow>"
+      "input": "<mrow><mrow><mo>(</mo></mrow><mfrac linethickness=\"0\"><mrow><mi>n</mi><mo>+</mo><mi>k</mi><mo>+</mo><mi>l</mi></mrow><mrow><mi>k</mi><mo>+</mo><mi>l</mi><mo>-</mo><mn>1</mn></mrow></mfrac><mrow><mo>)</mo></mrow></mrow>"
     },
     "Binomial_4": {
-      "mathml": "<mrow><mo>(</mo><mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd></mtr></mtable><mo>)</mo></mrow>"
+      "input": "<mrow><mo>(</mo><mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd></mtr></mtable><mo>)</mo></mrow>"
     },
     "_comment_163": " Binomial coefficients generated with fractions and redundant elements.",
     "BinomialWithIgnores_0": {
-      "mathml": "<mfenced open=\"(\" close=\")\"><mfrac linethickness=\"0\"><mrow><mi>n</mi></mrow><mi>k</mi></mfrac></mfenced>"
+      "input": "<mfenced open=\"(\" close=\")\"><mfrac linethickness=\"0\"><mrow><mi>n</mi></mrow><mi>k</mi></mfrac></mfenced>"
     },
     "BinomialWithIgnores_1": {
-      "mathml": "<mfenced open=\"(\" close=\")\"><mfrac linethickness=\"0\"><mrow><mi>n</mi></mrow><mpadded><mi>k</mi></mpadded></mfrac></mfenced>"
+      "input": "<mfenced open=\"(\" close=\")\"><mfrac linethickness=\"0\"><mrow><mi>n</mi></mrow><mpadded><mi>k</mi></mpadded></mfrac></mfenced>"
     },
     "BinomialWithIgnores_2": {
-      "mathml": "<mfenced open=\"(\" close=\")\"><mfrac linethickness=\"0\"><mi>n</mi><mpadded><mi>k</mi></mpadded></mfrac></mfenced>"
+      "input": "<mfenced open=\"(\" close=\")\"><mfrac linethickness=\"0\"><mi>n</mi><mpadded><mi>k</mi></mpadded></mfrac></mfenced>"
     },
     "BinomialWithIgnores_3": {
-      "mathml": "<mrow><mrow><mo>(</mo></mrow><mfrac linethickness=\"0\"><mrow><mi>n</mi></mrow><mi>k</mi></mfrac><mrow><mo>)</mo></mrow></mrow>"
+      "input": "<mrow><mrow><mo>(</mo></mrow><mfrac linethickness=\"0\"><mrow><mi>n</mi></mrow><mi>k</mi></mfrac><mrow><mo>)</mo></mrow></mrow>"
     },
     "BinomialWithIgnores_4": {
-      "mathml": "<mrow><mrow><mo>(</mo></mrow><mfrac linethickness=\"0\"><mrow><mi>n</mi></mrow><mpadded><mi>k</mi></mpadded></mfrac><mrow><mo>)</mo></mrow></mrow>"
+      "input": "<mrow><mrow><mo>(</mo></mrow><mfrac linethickness=\"0\"><mrow><mi>n</mi></mrow><mpadded><mi>k</mi></mpadded></mfrac><mrow><mo>)</mo></mrow></mrow>"
     },
     "BinomialWithIgnores_5": {
-      "mathml": "<mrow><mrow><mo>(</mo></mrow><mfrac linethickness=\"0\"><mi>n</mi><mpadded><mi>k</mi></mpadded></mfrac><mrow><mo>)</mo></mrow></mrow>"
+      "input": "<mrow><mrow><mo>(</mo></mrow><mfrac linethickness=\"0\"><mi>n</mi><mpadded><mi>k</mi></mpadded></mfrac><mrow><mo>)</mo></mrow></mrow>"
     },
     "_comment_164": " Binomial coefficient like elements, without fences.",
     "BinomialOther_0": {
-      "mathml": "<mfrac linethickness=\"0\"><mi>n</mi><mi>k</mi></mfrac>"
+      "input": "<mfrac linethickness=\"0\"><mi>n</mi><mi>k</mi></mfrac>"
     },
     "BinomialOther_1": {
-      "mathml": "<mfrac linethickness=\"0\"><mrow><mi>n</mi></mrow><mi>k</mi></mfrac>"
+      "input": "<mfrac linethickness=\"0\"><mrow><mi>n</mi></mrow><mi>k</mi></mfrac>"
     },
     "BinomialOther_2": {
-      "mathml": "<mfrac linethickness=\"0\"><mi>n</mi><mpadded><mi>k</mi></mpadded></mfrac>"
+      "input": "<mfrac linethickness=\"0\"><mi>n</mi><mpadded><mi>k</mi></mpadded></mfrac>"
     },
     "BinomialOther_3": {
-      "mathml": "<mfrac linethickness=\"0\"><mrow><mi>n</mi></mrow><mpadded><mi>k</mi></mpadded></mfrac>"
+      "input": "<mfrac linethickness=\"0\"><mrow><mi>n</mi></mrow><mpadded><mi>k</mi></mpadded></mfrac>"
     },
     "BinomialOther_4": {
-      "mathml": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd></mtr></mtable>"
     },
     "_comment_151a": " Trivially punctuated elements.",
     "TrivialPunctuated_0": {
-      "mathml": "<mo>,</mo>"
+      "input": "<mo>,</mo>"
     },
     "TrivialPunctuated_1": {
-      "mathml": "<mo>,</mo><mo>,</mo>"
+      "input": "<mo>,</mo><mo>,</mo>"
     },
     "TrivialPunctuated_2": {
-      "mathml": "<mo>,</mo><mo>;</mo>"
+      "input": "<mo>,</mo><mo>;</mo>"
     },
     "TrivialPunctuated_3": {
-      "mathml": "<mo>{</mo><mo>,</mo><mo>}</mo>"
+      "input": "<mo>{</mo><mo>,</mo><mo>}</mo>"
     },
     "TrivialPunctuated_4": {
-      "mathml": "<mo>{</mo><mo>,</mo><mo>,</mo><mo>}</mo>"
+      "input": "<mo>{</mo><mo>,</mo><mo>,</mo><mo>}</mo>"
     },
     "_comment_152a": " Trivially punctuated elements.",
     "Fonts_0": {
-      "mathml": "<mi>A</mi>"
+      "input": "<mi>A</mi>"
     },
     "Fonts_1": {
-      "mathml": "<mi mathvariant=\"italic\">A</mi>"
+      "input": "<mi mathvariant=\"italic\">A</mi>"
     },
     "Fonts_2": {
-      "mathml": "<mi mathvariant=\"bold\">A</mi>"
+      "input": "<mi mathvariant=\"bold\">A</mi>"
     },
     "Fonts_3": {
-      "mathml": "<mi mathvariant=\"-tex-caligraphic\">A</mi>"
+      "input": "<mi mathvariant=\"-tex-caligraphic\">A</mi>"
     },
     "Fonts_4": {
-      "mathml": "<mi mathvariant=\"-tex-oldstyle\">A</mi>"
+      "input": "<mi mathvariant=\"-tex-oldstyle\">A</mi>"
     },
     "Fonts_5": {
-      "mathml": "<mi>𝝖</mi>"
+      "input": "<mi>𝝖</mi>"
     },
     "_comment_165": " Tests for dealing with empty accents and embellishments.",
     "EmptyAccents_0": {
-      "mathml": "<munderover><mo>→</mo><mo>≅</mo><mrow/></munderover>"
+      "input": "<munderover><mo>→</mo><mo>≅</mo><mrow/></munderover>"
     },
     "EmptyAccents_1": {
-      "mathml": "<munderover><mo>→</mo><mrow/><mo>≅</mo></munderover>"
+      "input": "<munderover><mo>→</mo><mrow/><mo>≅</mo></munderover>"
     },
     "EmptyAccents_2": {
-      "mathml": "<munderover><mo>→</mo><mo>≅</mo><mo>=</mo></munderover>"
+      "input": "<munderover><mo>→</mo><mo>≅</mo><mo>=</mo></munderover>"
     },
     "EmptyAccents_3": {
-      "mathml": "<munderover><mi>A</mi><mo>≅</mo><mrow/></munderover>"
+      "input": "<munderover><mi>A</mi><mo>≅</mo><mrow/></munderover>"
     },
     "EmptyAccents_4": {
-      "mathml": "<munderover><mi>A</mi><mrow/><mo>≅</mo></munderover>"
+      "input": "<munderover><mi>A</mi><mrow/><mo>≅</mo></munderover>"
     },
     "EmptyAccents_5": {
-      "mathml": "<munderover><mi>A</mi><mo>≅</mo><mo>=</mo></munderover>"
+      "input": "<munderover><mi>A</mi><mo>≅</mo><mo>=</mo></munderover>"
     },
     "EmptyAccents_6": {
-      "mathml": "<msubsup><mo>)</mo><mo>≅</mo><mrow/></msubsup>"
+      "input": "<msubsup><mo>)</mo><mo>≅</mo><mrow/></msubsup>"
     },
     "EmptyAccents_7": {
-      "mathml": "<msubsup><mo>)</mo><mrow/><mo>≅</mo></msubsup>"
+      "input": "<msubsup><mo>)</mo><mrow/><mo>≅</mo></msubsup>"
     },
     "EmptyAccents_8": {
-      "mathml": "<msubsup><mo>)</mo><mo>≅</mo><mo>=</mo></msubsup>"
+      "input": "<msubsup><mo>)</mo><mo>≅</mo><mo>=</mo></msubsup>"
     },
     "_comment_166": " Ellipses and explicit spacing.",
     "EllipsesExplicitSpacing_0": {
-      "mathml": "<mtext>&#xA0;</mtext><mo>&#x2026;</mo>"
+      "input": "<mtext>&#xA0;</mtext><mo>&#x2026;</mo>"
     },
     "EllipsesExplicitSpacing_1": {
-      "mathml": "<mo>&#x2026;</mo><mtext>&#xA0;</mtext>"
+      "input": "<mo>&#x2026;</mo><mtext>&#xA0;</mtext>"
     },
     "EllipsesExplicitSpacing_2": {
-      "mathml": "<mo>&#x2026;</mo><mtext>&#xA0;</mtext><mo>&#x2026;</mo>"
+      "input": "<mo>&#x2026;</mo><mtext>&#xA0;</mtext><mo>&#x2026;</mo>"
     },
     "EllipsesExplicitSpacing_3": {
-      "mathml": "<mtext>&#xA0;</mtext><mo>&#x2026;</mo><mtext>&#xA0;</mtext>"
+      "input": "<mtext>&#xA0;</mtext><mo>&#x2026;</mo><mtext>&#xA0;</mtext>"
     },
     "_comment_155a": " Labels in multiline expressions.",
     "LabelledLines_0": {
-      "mathml": "<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd></mlabeledtr></mtable>"
+      "input": "<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd></mlabeledtr></mtable>"
     },
     "LabelledLines_1": {
-      "mathml": "<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd><mi>a</mi></mtd></mlabeledtr></mtable>"
+      "input": "<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd><mi>a</mi></mtd></mlabeledtr></mtable>"
     },
     "LabelledLines_2": {
-      "mathml": "<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd><mi>a</mi></mtd></mlabeledtr><mlabeledtr><mtd><mtext>(2)</mtext></mtd></mlabeledtr><mlabeledtr><mtd><mtext>(3)</mtext></mtd><mtd><mi>b</mi></mtd></mlabeledtr></mtable>"
+      "input": "<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd><mi>a</mi></mtd></mlabeledtr><mlabeledtr><mtd><mtext>(2)</mtext></mtd></mlabeledtr><mlabeledtr><mtd><mtext>(3)</mtext></mtd><mtd><mi>b</mi></mtd></mlabeledtr></mtable>"
     },
     "LabelledLines_3": {
-      "mathml": "<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd><mi>a</mi></mtd></mlabeledtr><mtr><mtd><mi>b</mi></mtd></mtr></mtable>"
+      "input": "<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd><mi>a</mi></mtd></mlabeledtr><mtr><mtd><mi>b</mi></mtd></mtr></mtable>"
     },
     "_comment_156a": " Labels in tables expressions.",
     "LabelledRows_0": {
-      "mathml": "<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd/><mtd/></mlabeledtr></mtable>"
+      "input": "<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd/><mtd/></mlabeledtr></mtable>"
     },
     "LabelledRows_1": {
-      "mathml": "<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mlabeledtr></mtable>"
+      "input": "<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mlabeledtr></mtable>"
     },
     "LabelledRows_2": {
-      "mathml": "<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mlabeledtr><mlabeledtr><mtd><mtext>(2)</mtext></mtd></mlabeledtr><mlabeledtr><mtd><mtext>(3)</mtext></mtd><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mlabeledtr></mtable>"
+      "input": "<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mlabeledtr><mlabeledtr><mtd><mtext>(2)</mtext></mtd></mlabeledtr><mlabeledtr><mtd><mtext>(3)</mtext></mtd><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mlabeledtr></mtable>"
     },
     "LabelledRows_3": {
-      "mathml": "<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mlabeledtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable>"
+      "input": "<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mlabeledtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable>"
     },
     "_comment_157a": " Classified tables",
     "_comment_158a": " Multiline equality systems.",
     "MultilineEqualities_0": {
-      "mathml": "<mfrac linethickness=\"0\"><mrow><mn>2</mn><mo>=</mo><mi>n</mi></mrow><mrow><mi>k</mi><mo>=</mo><mn>3</mn></mrow></mfrac>"
+      "input": "<mfrac linethickness=\"0\"><mrow><mn>2</mn><mo>=</mo><mi>n</mi></mrow><mrow><mi>k</mi><mo>=</mo><mn>3</mn></mrow></mfrac>"
     },
     "MultilineEqualities_1": {
-      "mathml": "<mfrac linethickness=\"0\"><mrow><mn>2</mn><mo>=</mo><mi>n</mi></mrow><mrow><mo>=</mo></mrow></mfrac>"
+      "input": "<mfrac linethickness=\"0\"><mrow><mn>2</mn><mo>=</mo><mi>n</mi></mrow><mrow><mo>=</mo></mrow></mfrac>"
     },
     "MultilineEqualities_2": {
-      "mathml": "<mtable><mtr><mtd><mi>&#x03BB;</mi><mo>=</mo><mi>a</mi></mtd></mtr><mtr><mtd><mi></mi><mo>=</mo><mi>b</mi></mtd></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>&#x03BB;</mi><mo>=</mo><mi>a</mi></mtd></mtr><mtr><mtd><mi></mi><mo>=</mo><mi>b</mi></mtd></mtr></mtable>"
     },
     "MultilineEqualities_3": {
-      "mathml": "<mtable><mtr><mtd><mi>&#x03BB;</mi><mo>=</mo><mi>a</mi></mtd></mtr><mtr/><mtr><mtd><mi></mi><mo>=</mo><mi>b</mi></mtd></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>&#x03BB;</mi><mo>=</mo><mi>a</mi></mtd></mtr><mtr/><mtr><mtd><mi></mi><mo>=</mo><mi>b</mi></mtd></mtr></mtable>"
     },
     "MultilineEqualities_4": {
-      "mathml": "<mtable><mtr><mtd><mi>&#x03BB;</mi><mo>=</mo><mi>a</mi></mtd></mtr><mtr><mtd><mo>=</mo></mtd></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>&#x03BB;</mi><mo>=</mo><mi>a</mi></mtd></mtr><mtr><mtd><mo>=</mo></mtd></mtr></mtable>"
     },
     "_comment_159a": " The next table has role binomial.",
     "MultilineEqualities_5": {
-      "mathml": "<mtable><mtr><mtd><mi>&#x03BB;</mi><mo>=</mo><mi>a</mi></mtd></mtr><mtr><mtd><mo>+</mo></mtd></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>&#x03BB;</mi><mo>=</mo><mi>a</mi></mtd></mtr><mtr><mtd><mo>+</mo></mtd></mtr></mtable>"
     },
     "_comment_160a": " The next table has role unknown.",
     "MultilineEqualities_6": {
-      "mathml": "<mtable><mtr><mtd><mi>&#x03BB;</mi><mo>=</mo><mi>a</mi></mtd></mtr><mtr><mtd><mo>+</mo></mtd></mtr><mtr/></mtable>"
+      "input": "<mtable><mtr><mtd><mi>&#x03BB;</mi><mo>=</mo><mi>a</mi></mtd></mtr><mtr><mtd><mo>+</mo></mtd></mtr><mtr/></mtable>"
     },
     "MultilineEqualities_7": {
-      "mathml": "<mtable><mtr><mtd><mi>&#x03BB;</mi><mo>=</mo><mi>a</mi></mtd></mtr><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd><mi></mi><mo>=</mo><mi>b</mi></mtd></mlabeledtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>&#x03BB;</mi><mo>=</mo><mi>a</mi></mtd></mtr><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd><mi></mi><mo>=</mo><mi>b</mi></mtd></mlabeledtr></mtable>"
     },
     "MultilineEqualities_8": {
-      "mathml": "<mtable><mtr><mtd><mi>x</mi><maligngroup/><mo>=</mo><mn>4</mn></mtd></mtr><mtr><mtd><mi>y</mi><maligngroup/><mo>=</mo><mn>2</mn></mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi><maligngroup/><mo>=</mo><mn>6</mn></mtd></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>x</mi><maligngroup/><mo>=</mo><mn>4</mn></mtd></mtr><mtr><mtd><mi>y</mi><maligngroup/><mo>=</mo><mn>2</mn></mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi><maligngroup/><mo>=</mo><mn>6</mn></mtd></mtr></mtable>"
     },
     "_comment_161a": " Table layout equality systems.",
     "_comment_162a": " Right Relation.",
     "TableEqualities_0": {
-      "mathml": "<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd><mtd><mi></mi><mo>=</mo><mi>a</mi></mtd></mtr><mtr><mtd /><mtd><mi></mi><mo>=</mo><mi>b</mi></mtd></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd><mtd><mi></mi><mo>=</mo><mi>a</mi></mtd></mtr><mtr><mtd /><mtd><mi></mi><mo>=</mo><mi>b</mi></mtd></mtr></mtable>"
     },
     "_comment_163a": " Empty cells.",
     "TableEqualities_1": {
-      "mathml": "<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd><mtd><mi></mi><mo>=</mo><mi>a</mi></mtd></mtr><mtr><mtd /><mtd><mi></mi><mo>=</mo><mi>b</mi></mtd></mtr><mtr><mtd /><mtd /></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd><mtd><mi></mi><mo>=</mo><mi>a</mi></mtd></mtr><mtr><mtd /><mtd><mi></mi><mo>=</mo><mi>b</mi></mtd></mtr><mtr><mtd /><mtd /></mtr></mtable>"
     },
     "_comment_164a": " Empty row.",
     "TableEqualities_2": {
-      "mathml": "<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd><mtd><mi></mi><mo>=</mo><mi>a</mi></mtd></mtr><mtr/><mtr><mtd /><mtd><mi></mi><mo>=</mo><mi>b</mi></mtd></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd><mtd><mi></mi><mo>=</mo><mi>a</mi></mtd></mtr><mtr/><mtr><mtd /><mtd><mi></mi><mo>=</mo><mi>b</mi></mtd></mtr></mtable>"
     },
     "_comment_165a": " Singleton equation.",
     "TableEqualities_3": {
-      "mathml": "<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd><mtd><mi></mi><mo>=</mo><mi>a</mi></mtd></mtr><mtr><mtd /><mtd><mo>=</mo></mtd></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd><mtd><mi></mi><mo>=</mo><mi>a</mi></mtd></mtr><mtr><mtd /><mtd><mo>=</mo></mtd></mtr></mtable>"
     },
     "_comment_166a": " The next table has role unknown.",
     "TableEqualities_4": {
-      "mathml": "<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd><mtd><mi></mi><mo>=</mo><mi>a</mi></mtd></mtr><mtr><mtd><mo>=</mo></mtd><mtd /></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd><mtd><mi></mi><mo>=</mo><mi>a</mi></mtd></mtr><mtr><mtd><mo>=</mo></mtd><mtd /></mtr></mtable>"
     },
     "_comment_167a": " Row with label.",
     "TableEqualities_5": {
-      "mathml": "<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd><mtd><mi></mi><mo>=</mo><mi>a</mi></mtd></mtr><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd /><mtd><mi></mi><mo>=</mo><mi>b</mi></mtd></mlabeledtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd><mtd><mi></mi><mo>=</mo><mi>a</mi></mtd></mtr><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd /><mtd><mi></mi><mo>=</mo><mi>b</mi></mtd></mlabeledtr></mtable>"
     },
     "_comment_168a": " Single relation column.",
     "TableEqualities_6": {
-      "mathml": "<mtable><mtr><mtd><mi>x</mi></mtd><mtd><mo>=</mo></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mi>y</mi></mtd><mtd><mo>=</mo></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi></mtd><mtd><mo>=</mo></mtd><mtd><mn>6</mn></mtd></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>x</mi></mtd><mtd><mo>=</mo></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mi>y</mi></mtd><mtd><mo>=</mo></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi></mtd><mtd><mo>=</mo></mtd><mtd><mn>6</mn></mtd></mtr></mtable>"
     },
     "_comment_169a": " Center relation.",
     "TableEqualities_7": {
-      "mathml": "<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd><mtd><mo>=</mo></mtd><mtd><mi>a</mi></mtd></mtr><mtr><mtd /><mtd><mo>=</mo></mtd><mtd><mi>b</mi></mtd></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd><mtd><mo>=</mo></mtd><mtd><mi>a</mi></mtd></mtr><mtr><mtd /><mtd><mo>=</mo></mtd><mtd><mi>b</mi></mtd></mtr></mtable>"
     },
     "_comment_170a": " Left relation.",
     "TableEqualities_8": {
-      "mathml": "<mtable><mtr><mtd><mi>&#x03BB;</mi><mo>=</mo></mtd><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mo>=</mo></mtd><mtd><mi>b</mi></mtd></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>&#x03BB;</mi><mo>=</mo></mtd><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mo>=</mo></mtd><mtd><mi>b</mi></mtd></mtr></mtable>"
     },
     "_comment_171a": " Multiline (non-equality) relation systems.",
     "RelationMultilines_0": {
-      "mathml": "<mfrac linethickness=\"0\"><mrow><mn>2</mn><mo>&#x2264;</mo><mi>n</mi></mrow><mrow><mi>k</mi><mo>&#x2265;</mo><mn>3</mn></mrow></mfrac>"
+      "input": "<mfrac linethickness=\"0\"><mrow><mn>2</mn><mo>&#x2264;</mo><mi>n</mi></mrow><mrow><mi>k</mi><mo>&#x2265;</mo><mn>3</mn></mrow></mfrac>"
     },
     "RelationMultilines_1": {
-      "mathml": "<mtable><mtr><mtd><mi>&#x03BB;</mi><mo>&#x2265;</mo><mi>a</mi></mtd></mtr><mtr/><mtr><mtd><mi></mi><mo>&#x2265;</mo><mi>b</mi></mtd></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>&#x03BB;</mi><mo>&#x2265;</mo><mi>a</mi></mtd></mtr><mtr/><mtr><mtd><mi></mi><mo>&#x2265;</mo><mi>b</mi></mtd></mtr></mtable>"
     },
     "RelationMultilines_2": {
-      "mathml": "<mtable><mtr><mtd><mi>&#x03BB;</mi><mo>&#x2265;</mo><mi>a</mi></mtd></mtr><mtr><mtd><mo>&#x2264;</mo></mtd></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>&#x03BB;</mi><mo>&#x2265;</mo><mi>a</mi></mtd></mtr><mtr><mtd><mo>&#x2264;</mo></mtd></mtr></mtable>"
     },
     "RelationMultilines_3": {
-      "mathml": "<mfrac linethickness=\"0\"><mrow><mn>2</mn><mo>&#x2192;</mo><mi>n</mi></mrow><mrow><mi>k</mi><mo>&#x2190;</mo><mn>3</mn></mrow></mfrac>"
+      "input": "<mfrac linethickness=\"0\"><mrow><mn>2</mn><mo>&#x2192;</mo><mi>n</mi></mrow><mrow><mi>k</mi><mo>&#x2190;</mo><mn>3</mn></mrow></mfrac>"
     },
     "RelationMultilines_4": {
-      "mathml": "<mtable><mtr><mtd><mi>&#x03BB;</mi><mo>&#x2190;</mo><mi>a</mi></mtd></mtr><mtr/><mtr><mtd><mi></mi><mo>&#x2190;</mo><mi>b</mi></mtd></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>&#x03BB;</mi><mo>&#x2190;</mo><mi>a</mi></mtd></mtr><mtr/><mtr><mtd><mi></mi><mo>&#x2190;</mo><mi>b</mi></mtd></mtr></mtable>"
     },
     "RelationMultilines_5": {
-      "mathml": "<mtable><mtr><mtd><mi>&#x03BB;</mi><mo>&#x2190;</mo><mi>a</mi></mtd></mtr><mtr><mtd><mo>&#x2192;</mo></mtd></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>&#x03BB;</mi><mo>&#x2190;</mo><mi>a</mi></mtd></mtr><mtr><mtd><mo>&#x2192;</mo></mtd></mtr></mtable>"
     },
     "_comment_172a": " Table layout (non-equality) relation systems.",
     "_comment_173a": " Right Relation.",
     "RelationTables_0": {
-      "mathml": "<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd><mtd><mi></mi><mo>&#x2265;</mo><mi>a</mi></mtd></mtr><mtr><mtd /><mtd><mi></mi><mo>&#x2264;</mo><mi>b</mi></mtd></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd><mtd><mi></mi><mo>&#x2265;</mo><mi>a</mi></mtd></mtr><mtr><mtd /><mtd><mi></mi><mo>&#x2264;</mo><mi>b</mi></mtd></mtr></mtable>"
     },
     "_comment_174a": " Center relation.",
     "RelationTables_1": {
-      "mathml": "<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd><mtd><mo>&#x2265;</mo></mtd><mtd><mi>a</mi></mtd></mtr><mtr><mtd /><mtd><mo>&#x2264;</mo></mtd><mtd><mi>b</mi></mtd></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd><mtd><mo>&#x2265;</mo></mtd><mtd><mi>a</mi></mtd></mtr><mtr><mtd /><mtd><mo>&#x2264;</mo></mtd><mtd><mi>b</mi></mtd></mtr></mtable>"
     },
     "_comment_175a": " Left relation.",
     "RelationTables_2": {
-      "mathml": "<mtable><mtr><mtd><mi>&#x03BB;</mi><mo>&#x2265;</mo></mtd><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mo>&#x2264;</mo></mtd><mtd><mi>b</mi></mtd></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>&#x03BB;</mi><mo>&#x2265;</mo></mtd><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mo>&#x2264;</mo></mtd><mtd><mi>b</mi></mtd></mtr></mtable>"
     },
     "_comment_176a": " Right Relation.",
     "RelationTables_3": {
-      "mathml": "<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd><mtd><mi></mi><mo>&#x2190;</mo><mi>a</mi></mtd></mtr><mtr><mtd /><mtd><mi></mi><mo>&#x2192;</mo><mi>b</mi></mtd></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd><mtd><mi></mi><mo>&#x2190;</mo><mi>a</mi></mtd></mtr><mtr><mtd /><mtd><mi></mi><mo>&#x2192;</mo><mi>b</mi></mtd></mtr></mtable>"
     },
     "_comment_177a": " Center relation.",
     "RelationTables_4": {
-      "mathml": "<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd><mtd><mo>&#x2190;</mo></mtd><mtd><mi>a</mi></mtd></mtr><mtr><mtd /><mtd><mo>&#x2192;</mo></mtd><mtd><mi>b</mi></mtd></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd><mtd><mo>&#x2190;</mo></mtd><mtd><mi>a</mi></mtd></mtr><mtr><mtd /><mtd><mo>&#x2192;</mo></mtd><mtd><mi>b</mi></mtd></mtr></mtable>"
     },
     "_comment_178a": " Left relation.",
     "RelationTables_5": {
-      "mathml": "<mtable><mtr><mtd><mi>&#x03BB;</mi><mo>&#x2190;</mo></mtd><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mo>&#x2192;</mo></mtd><mtd><mi>b</mi></mtd></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>&#x03BB;</mi><mo>&#x2190;</mo></mtd><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mo>&#x2192;</mo></mtd><mtd><mi>b</mi></mtd></mtr></mtable>"
     },
     "_comment_167": " Tests originating from issue #134. Odd distribution of mrows etc.",
     "SwapElementLayers_0": {
-      "mathml": "<mrow><mi>n</mi><mo mathvariant=\"normal\">/</mo><mi>ϕ</mi></mrow><mo mathvariant=\"italic\">⁢</mo><mi>m</mi>"
+      "input": "<mrow><mi>n</mi><mo mathvariant=\"normal\">/</mo><mi>ϕ</mi></mrow><mo mathvariant=\"italic\">⁢</mo><mi>m</mi>"
     },
     "SwapElementLayers_1": {
-      "mathml": "<mrow><mpadded><mi>n</mi><mo mathvariant=\"normal\">/</mo><mi>ϕ</mi></mpadded></mrow><mo mathvariant=\"italic\">⁢</mo><mi>m</mi>"
+      "input": "<mrow><mpadded><mi>n</mi><mo mathvariant=\"normal\">/</mo><mi>ϕ</mi></mpadded></mrow><mo mathvariant=\"italic\">⁢</mo><mi>m</mi>"
     },
     "SwapElementLayers_2": {
-      "mathml": "<mrow><merror><mi>a</mi></merror><mi>n</mi><mo mathvariant=\"normal\">/</mo><mi>ϕ</mi></mrow><mo mathvariant=\"italic\">⁢</mo><mi>m</mi>"
+      "input": "<mrow><merror><mi>a</mi></merror><mi>n</mi><mo mathvariant=\"normal\">/</mo><mi>ϕ</mi></mrow><mo mathvariant=\"italic\">⁢</mo><mi>m</mi>"
     },
     "SwapElementLayers_3": {
-      "mathml": "<mrow><mrow><mi>n</mi><mo mathvariant=\"normal\">/</mo><mi>ϕ</mi></mrow><mo mathvariant=\"italic\">⁢</mo><mi>m</mi></mrow>"
+      "input": "<mrow><mrow><mi>n</mi><mo mathvariant=\"normal\">/</mo><mi>ϕ</mi></mrow><mo mathvariant=\"italic\">⁢</mo><mi>m</mi></mrow>"
     },
     "SwapElementLayers_4": {
-      "mathml": "<mrow><mrow><mrow><mi>n</mi><mo mathvariant=\"normal\">/</mo><mi>ϕ</mi></mrow><mo mathvariant=\"italic\">⁢</mo><mi>m</mi></mrow></mrow>"
+      "input": "<mrow><mrow><mrow><mi>n</mi><mo mathvariant=\"normal\">/</mo><mi>ϕ</mi></mrow><mo mathvariant=\"italic\">⁢</mo><mi>m</mi></mrow></mrow>"
     },
     "SwapElementLayers_5": {
-      "mathml": "<mi>a</mi><mrow><mrow><mi>n</mi><mo mathvariant=\"normal\">/</mo><mi>ϕ</mi></mrow><mo>*</mo><mi>b</mi></mrow><mo mathvariant=\"italic\">⁢</mo><mi>m</mi>"
+      "input": "<mi>a</mi><mrow><mrow><mi>n</mi><mo mathvariant=\"normal\">/</mo><mi>ϕ</mi></mrow><mo>*</mo><mi>b</mi></mrow><mo mathvariant=\"italic\">⁢</mo><mi>m</mi>"
     },
     "_comment_168": " Tests originating from issue #186. Incorrectly reordering elements.",
     "SpacesAndEmptyFences_0": {
-      "mathml": "<mrow><mo fence=\"true\"></mo></mrow><mspace width=\"2em\"/><mi>v</mi>"
+      "input": "<mrow><mo fence=\"true\"></mo></mrow><mspace width=\"2em\"/><mi>v</mi>"
     },
     "SpacesAndEmptyFences_1": {
-      "mathml": "<mrow><mo>{</mo><mo fence=\"true\"></mo></mrow><mspace width=\"2em\"/><mi>v</mi>"
+      "input": "<mrow><mo>{</mo><mo fence=\"true\"></mo></mrow><mspace width=\"2em\"/><mi>v</mi>"
     },
     "SpacesAndEmptyFences_2": {
-      "mathml": "<mrow><mi>a</mi><mo fence=\"true\"></mo></mrow><mspace width=\"2em\"/><mi>v</mi>"
+      "input": "<mrow><mi>a</mi><mo fence=\"true\"></mo></mrow><mspace width=\"2em\"/><mi>v</mi>"
     },
     "SpacesAndEmptyFences_3": {
-      "mathml": "<mrow><mo>{</mo><mi>a</mi><mo fence=\"true\"></mo></mrow><mspace width=\"2em\"/><mi>v</mi>"
+      "input": "<mrow><mo>{</mo><mi>a</mi><mo fence=\"true\"></mo></mrow><mspace width=\"2em\"/><mi>v</mi>"
     },
     "SpacesAndEmptyFences_4": {
-      "mathml": "<mrow><mo>{</mo><mtable><mtr><mtd><mi>u</mi></mtd></mtr></mtable><mo fence=\"true\"></mo></mrow><mspace width=\"2em\"/><mi>v</mi>"
+      "input": "<mrow><mo>{</mo><mtable><mtr><mtd><mi>u</mi></mtd></mtr></mtable><mo fence=\"true\"></mo></mrow><mspace width=\"2em\"/><mi>v</mi>"
     },
     "_comment_169": " Set expressions.",
     "Sets_0": {
-      "mathml": "<mo>{</mo><mo>}</mo>"
+      "input": "<mo>{</mo><mo>}</mo>"
     },
     "Sets_1": {
-      "mathml": "<mo>{</mo><mi>x</mi><mo>}</mo>"
+      "input": "<mo>{</mo><mi>x</mi><mo>}</mo>"
     },
     "Sets_2": {
-      "mathml": "<mo>{</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>}</mo>"
+      "input": "<mo>{</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>}</mo>"
     },
     "Sets_3": {
-      "mathml": "<mo>{</mo><mi>x</mi><mo>|</mo><mi>y</mi><mo>}</mo>"
+      "input": "<mo>{</mo><mi>x</mi><mo>|</mo><mi>y</mi><mo>}</mo>"
     },
     "Sets_4": {
-      "mathml": "<mo>{</mo><mi>x</mi><mo>:</mo><mi>y</mi><mo>}</mo>"
+      "input": "<mo>{</mo><mi>x</mi><mo>:</mo><mi>y</mi><mo>}</mo>"
     },
     "Sets_5": {
-      "mathml": "<mo>{</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>}</mo>"
+      "input": "<mo>{</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>}</mo>"
     },
     "Sets_6": {
-      "mathml": "<mo>{</mo><mi>x</mi><mi>y</mi><mo>}</mo>"
+      "input": "<mo>{</mo><mi>x</mi><mi>y</mi><mo>}</mo>"
     },
     "Sets_7": {
-      "mathml": "<mo>{</mo><mfrac><mi>x</mi><mi>y</mi></mfrac><mo>}</mo>"
+      "input": "<mo>{</mo><mfrac><mi>x</mi><mi>y</mi></mfrac><mo>}</mo>"
     },
     "Sets_8": {
-      "mathml": "<mi>P</mi><mo>{</mo><mi>x</mi><mo>}</mo>"
+      "input": "<mi>P</mi><mo>{</mo><mi>x</mi><mo>}</mo>"
     },
     "Sets_9": {
-      "mathml": "<mo>{</mo><mi>x</mi><mo>*</mo><mi>y</mi><mo>}</mo>"
+      "input": "<mo>{</mo><mi>x</mi><mo>*</mo><mi>y</mi><mo>}</mo>"
     },
     "_comment_170": " Test for issue #287",
     "Sets_10": {
-      "mathml": "<msub><mi mathvariant=\"normal\">&#x393;</mi><mrow><mo fence=\"false\" stretchy=\"false\">{</mo><msub><mrow><mi mathvariant=\"-tex-calligraphic\">M</mi></mrow><mi>k</mi></msub><mo fence=\"false\" stretchy=\"false\">}</mo></mrow></msub><mo stretchy=\"false\">(</mo><mi>X</mi><mo stretchy=\"false\">)</mo>"
+      "input": "<msub><mi mathvariant=\"normal\">&#x393;</mi><mrow><mo fence=\"false\" stretchy=\"false\">{</mo><msub><mrow><mi mathvariant=\"-tex-calligraphic\">M</mi></mrow><mi>k</mi></msub><mo fence=\"false\" stretchy=\"false\">}</mo></mrow></msub><mo stretchy=\"false\">(</mo><mi>X</mi><mo stretchy=\"false\">)</mo>"
     },
     "_comment_171": " Tests originating from issue #219. Incorrectly reordering elements.",
     "HiddenIgnoreElements_0": {
-      "mathml": "<mfrac><mrow><mi>a</mi><mrow><mphantom><mi>c</mi></mphantom></mrow></mrow><mi>b</mi></mfrac>"
+      "input": "<mfrac><mrow><mi>a</mi><mrow><mphantom><mi>c</mi></mphantom></mrow></mrow><mi>b</mi></mfrac>"
     },
     "HiddenIgnoreElements_1": {
-      "mathml": "<mfrac><mrow><mi>a</mi><mrow><mi>d</mi><mphantom><mi>c</mi></mphantom></mrow></mrow><mi>b</mi></mfrac>"
+      "input": "<mfrac><mrow><mi>a</mi><mrow><mi>d</mi><mphantom><mi>c</mi></mphantom></mrow></mrow><mi>b</mi></mfrac>"
     },
     "HiddenIgnoreElements_2": {
-      "mathml": "<mfrac><mrow><mi>a</mi><mstyle><mrow><mrow><mphantom><mi>c</mi></mphantom></mrow></mrow></mstyle><mstyle><merror><mi>x</mi></merror></mstyle></mrow><mi>b</mi></mfrac>"
+      "input": "<mfrac><mrow><mi>a</mi><mstyle><mrow><mrow><mphantom><mi>c</mi></mphantom></mrow></mrow></mstyle><mstyle><merror><mi>x</mi></merror></mstyle></mrow><mi>b</mi></mfrac>"
     },
     "_comment_172": " Tests originating from issue #227. Ignore empty token elements.",
     "HiddenEmptyTokens_0": {
-      "mathml": "<msub><mrow><mo></mo><mo>|</mo></mrow><mi>t</mi></msub>"
+      "input": "<msub><mrow><mo></mo><mo>|</mo></mrow><mi>t</mi></msub>"
     },
     "HiddenEmptyTokens_1": {
-      "mathml": "<msub><mrow><mi></mi><mo>|</mo></mrow><mi>t</mi></msub>"
+      "input": "<msub><mrow><mi></mi><mo>|</mo></mrow><mi>t</mi></msub>"
     },
     "HiddenEmptyTokens_2": {
-      "mathml": "<msub><mrow><mo></mo><mo></mo><mo>|</mo></mrow><mi>t</mi></msub>"
+      "input": "<msub><mrow><mo></mo><mo></mo><mo>|</mo></mrow><mi>t</mi></msub>"
     },
     "_comment_181a": " Tests for vulgar fractions.",
     "VulgarFractions_0": {
-      "mathml": "<mfrac><mn>1</mn><mn>2</mn></mfrac>"
+      "input": "<mfrac><mn>1</mn><mn>2</mn></mfrac>"
     },
     "VulgarFractions_1": {
-      "mathml": "<mfrac><mn>1.5</mn><mn>2</mn></mfrac>"
+      "input": "<mfrac><mn>1.5</mn><mn>2</mn></mfrac>"
     },
     "VulgarFractions_2": {
-      "mathml": "<mfrac><mn>1</mn><mn>2.5</mn></mfrac>"
+      "input": "<mfrac><mn>1</mn><mn>2.5</mn></mfrac>"
     },
     "VulgarFractions_3": {
-      "mathml": "<mfrac><msup><mn>3</mn><mn>4</mn></msup><msup><mn>8</mn><mn>10</mn></msup></mfrac>"
+      "input": "<mfrac><msup><mn>3</mn><mn>4</mn></msup><msup><mn>8</mn><mn>10</mn></msup></mfrac>"
     },
     "_comment_182a": " Issue 376: Division treated similar to multiplication.",
     "Issue376_0": {
-      "mathml": "<mn>2</mn><mo>+</mo><mn>27</mn><mo>÷</mo><mn>9</mn>"
+      "input": "<mn>2</mn><mo>+</mo><mn>27</mn><mo>÷</mo><mn>9</mn>"
     },
     "_comment_173": " Issue 382: Singleton integral in expression",
     "Issue382_0": {
-      "mathml": "<mo>=</mo><mo>&#x222B;</mo>"
+      "input": "<mo>=</mo><mo>&#x222B;</mo>"
     },
     "_comment_174": " TODO: This should be improved.",
     "Issue382_1": {
-      "mathml": "<mo>&#x222B;</mo><mo>+</mo><mo>&#x222B;</mo>"
+      "input": "<mo>&#x222B;</mo><mo>+</mo><mo>&#x222B;</mo>"
     },
     "_comment_175": " Issue 383: Mathoperator with dash",
     "Issue383_0": {
-      "mathml": "<mrow><mtext>-</mtext><mi mathvariant=\"normal\">p</mi></mrow><mo>&#x2061;</mo><mi>&#x3C9;</mi>"
+      "input": "<mrow><mtext>-</mtext><mi mathvariant=\"normal\">p</mi></mrow><mo>&#x2061;</mo><mi>&#x3C9;</mi>"
     },
     "_comment_176": " Issue 284: Explicitly given invisible plus.",
     "Issue284_0": {
-      "mathml": "<mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>"
+      "input": "<mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>"
     },
     "Issue284_1": {
-      "mathml": "<mn>2</mn><mo>&#x2064;</mo><mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>"
+      "input": "<mn>2</mn><mo>&#x2064;</mo><mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>"
     },
     "Issue284_2": {
-      "mathml": "<mn>2</mn><mo>+</mo><mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>"
+      "input": "<mn>2</mn><mo>+</mo><mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>"
     },
     "Issue284_3": {
-      "mathml": "<mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac><mo>+</mo><mn>2</mn>"
+      "input": "<mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac><mo>+</mo><mn>2</mn>"
     },
     "Issue284_4": {
-      "mathml": "<mn>a</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>"
+      "input": "<mn>a</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>"
     },
     "_comment_directspeech": "Direct speech related expressions",
     "_comment_mg1": "mi",
     "MglyphTokens_0": {
-      "mathml": "<mi><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mi>"
+      "input": "<mi><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mi>"
     },
     "MglyphToken_1": {
-      "mathml": "<mi aria-label=\"your glyph\"><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mi>"
+      "input": "<mi aria-label=\"your glyph\"><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mi>"
     },
     "_comment_mg1": "mo",
     "MglyphToken_2": {
-    "mathml": "<mo><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mo>"
+    "input": "<mo><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mo>"
     },
     "MglyphToken_3": {
-      "mathml": "<mo aria-label=\"your glyph\"><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mo>"
+      "input": "<mo aria-label=\"your glyph\"><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mo>"
     },
     "_comment_mg2": "mn",
     "MglyphToken_4": {
-      "mathml": "<mn><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mn>"
+      "input": "<mn><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mn>"
     },
     "MglyphToken_5": {
-      "mathml": "<mn aria-label=\"your glyph\"><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mn>"
+      "input": "<mn aria-label=\"your glyph\"><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mn>"
     },
     "_comment_mg3": "mtext",
     "MglyphToken_6": {
-      "mathml": "<mtext><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mtext>"
+      "input": "<mtext><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mtext>"
     },
     "MglyphToken_7": {
-      "mathml": "<mtext aria-label=\"your glyph\"><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mtext>"
+      "input": "<mtext aria-label=\"your glyph\"><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mtext>"
     },
     "_comment_mg4": "ms",
     "MglyphToken_8": {
-      "mathml": "<ms><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></ms>"
+      "input": "<ms><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></ms>"
     },
     "MglyphToken_9": {
-      "mathml": "<ms aria-label=\"your glyph\"><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></ms>"
+      "input": "<ms aria-label=\"your glyph\"><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></ms>"
     },
     "MglyphGeneral_0": {
-      "mathml": "<mi><mglyph src=\"my-braid-23.png\" alt=\"23braid\"/></mi><mo>+</mo><mi><mglyph src=\"my-braid-132.png\" alt=\"132braid\"/></mi><mo>=</mo><mi><mglyph src=\"my-braid-13.png\" alt=\"13braid\"/></mi>"
+      "input": "<mi><mglyph src=\"my-braid-23.png\" alt=\"23braid\"/></mi><mo>+</mo><mi><mglyph src=\"my-braid-132.png\" alt=\"132braid\"/></mi><mo>=</mo><mi><mglyph src=\"my-braid-13.png\" alt=\"13braid\"/></mi>"
     },
     "MglyphGeneral_1": {
-      "mathml": "<mrow><mi>N</mi><msub><mi>M</mi><mrow class=\"MJX-TeXAtom-ORD\"><mn>1</mn><mo>⊂</mo><mrow class=\"MJX-TeXAtom-VCENTER\"><mglyph src=\"Images/img64cf9bc6538bb7137dab7b360f92afb4.svg\" width=\"13pt\" height=\"6pt\" alt=\"mfin\"></mglyph></mrow></mrow></msub></mrow>"
+      "input": "<mrow><mi>N</mi><msub><mi>M</mi><mrow class=\"MJX-TeXAtom-ORD\"><mn>1</mn><mo>⊂</mo><mrow class=\"MJX-TeXAtom-VCENTER\"><mglyph src=\"Images/img64cf9bc6538bb7137dab7b360f92afb4.svg\" width=\"13pt\" height=\"6pt\" alt=\"mfin\"></mglyph></mrow></mrow></msub></mrow>"
     }
   }
 }

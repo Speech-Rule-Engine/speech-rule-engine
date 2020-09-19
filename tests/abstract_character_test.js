@@ -127,7 +127,7 @@ sre.AbstractCharacterTest.prototype.prepare = function() {
  * @override
  */
 sre.AbstractCharacterTest.prototype.pick = function(json) {
-  return [json['name'], json['speech']];
+  return [json['name'], json['expected']];
 };
 
 

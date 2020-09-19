@@ -4,198 +4,198 @@
     "Log001": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><mi>log</mi><mi>x</mi></mrow></math>"
+      "input": "<math><mrow><mi>log</mi><mi>x</mi></mrow></math>"
     },
     "Log002": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mi>x</mi></mrow></math>"
+      "input": "<math><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mi>x</mi></mrow></math>"
     },
     "Log003": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><msub><mrow><mi>log</mi></mrow><mi>b</mi></msub><mi>a</mi><mi>x</mi><mo>=</mo><msub><mrow><mi>log</mi></mrow><mi>b</mi></msub><mi>a</mi><mo>+</mo><msub><mrow><mi>log</mi></mrow><mi>b</mi></msub><mi>x</mi></mrow></math>"
+      "input": "<math><mrow><msub><mrow><mi>log</mi></mrow><mi>b</mi></msub><mi>a</mi><mi>x</mi><mo>=</mo><msub><mrow><mi>log</mi></mrow><mi>b</mi></msub><mi>a</mi><mo>+</mo><msub><mrow><mi>log</mi></mrow><mi>b</mi></msub><mi>x</mi></mrow></math>"
     },
     "Log004": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><msub><mrow><mi>log</mi></mrow><mi>b</mi></msub><mfrac><mi>S</mi><mi>T</mi></mfrac><mo>=</mo><msub><mrow><mi>log</mi></mrow><mi>b</mi></msub><mi>S</mi><mo>−</mo><msub><mrow><mi>log</mi></mrow><mi>b</mi></msub><mi>T</mi></mrow></math>"
+      "input": "<math><mrow><msub><mrow><mi>log</mi></mrow><mi>b</mi></msub><mfrac><mi>S</mi><mi>T</mi></mfrac><mo>=</mo><msub><mrow><mi>log</mi></mrow><mi>b</mi></msub><mi>S</mi><mo>−</mo><msub><mrow><mi>log</mi></mrow><mi>b</mi></msub><mi>T</mi></mrow></math>"
     },
     "Log005": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><msub><mrow><mi>log</mi></mrow><mi>b</mi></msub><mrow><mo>(</mo><mrow><msup><mi>x</mi><mi>k</mi></msup></mrow><mo>)</mo></mrow><mo>=</mo><mi>k</mi><msub><mrow><mi>log</mi></mrow><mi>b</mi></msub><mi>x</mi></mrow></math>"
+      "input": "<math><mrow><msub><mrow><mi>log</mi></mrow><mi>b</mi></msub><mrow><mo>(</mo><mrow><msup><mi>x</mi><mi>k</mi></msup></mrow><mo>)</mo></mrow><mo>=</mo><mi>k</mi><msub><mrow><mi>log</mi></mrow><mi>b</mi></msub><mi>x</mi></mrow></math>"
     },
     "Log006": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><msup><mrow><mn>10</mn></mrow><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mi>x</mi></mrow></msup><mo>=</mo><mi>x</mi></mrow></math>"
+      "input": "<math><mrow><msup><mrow><mn>10</mn></mrow><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mi>x</mi></mrow></msup><mo>=</mo><mi>x</mi></mrow></math>"
     },
     "Log007": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><msup><mrow><mn>10</mn></mrow><mi>x</mi></msup><mo>=</mo><mi>x</mi></mrow></math>"
+      "input": "<math><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><msup><mrow><mn>10</mn></mrow><mi>x</mi></msup><mo>=</mo><mi>x</mi></mrow></math>"
     },
     "Log008": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><msup><mrow><mn>10</mn></mrow><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mn>5</mn></mrow></msup><mo>=</mo><mn>5</mn></mrow></math>"
+      "input": "<math><mrow><msup><mrow><mn>10</mn></mrow><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mn>5</mn></mrow></msup><mo>=</mo><mn>5</mn></mrow></math>"
     },
     "Log009": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><msup><mrow><mn>10</mn></mrow><mn>3</mn></msup><mo>=</mo><mn>3</mn></mrow></math>"
+      "input": "<math><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><msup><mrow><mn>10</mn></mrow><mn>3</mn></msup><mo>=</mo><mn>3</mn></mrow></math>"
     },
     "Log010": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><msub><mrow><mi>log</mi></mrow><mi>a</mi></msub><mi>x</mi><mo>=</mo><mfrac><mrow><msub><mrow><mi>log</mi></mrow><mi>b</mi></msub><mi>x</mi></mrow><mrow><msub><mrow><mi>log</mi></mrow><mi>b</mi></msub><mi>a</mi></mrow></mfrac></mrow></math>"
+      "input": "<math><mrow><msub><mrow><mi>log</mi></mrow><mi>a</mi></msub><mi>x</mi><mo>=</mo><mfrac><mrow><msub><mrow><mi>log</mi></mrow><mi>b</mi></msub><mi>x</mi></mrow><mrow><msub><mrow><mi>log</mi></mrow><mi>b</mi></msub><mi>a</mi></mrow></mfrac></mrow></math>"
     },
     "Log011": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mn>18</mn></mrow><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mn>3</mn></mrow></mfrac><mo>=</mo><msub><mrow><mi>log</mi></mrow><mn>3</mn></msub><mn>18</mn></mrow></math>"
+      "input": "<math><mrow><mfrac><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mn>18</mn></mrow><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mn>3</mn></mrow></mfrac><mo>=</mo><msub><mrow><mi>log</mi></mrow><mn>3</mn></msub><mn>18</mn></mrow></math>"
     },
     "Log012": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mi>log</mi><mi>x</mi></mrow><mrow><mi>log</mi><mi>a</mi></mrow></mfrac></mrow></math>"
+      "input": "<math><mrow><mfrac><mrow><mi>log</mi><mi>x</mi></mrow><mrow><mi>log</mi><mi>a</mi></mrow></mfrac></mrow></math>"
     },
     "Log013": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><mi>log</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy=\"false\">)</mo></mrow></math>"
+      "input": "<math><mrow><mi>log</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy=\"false\">)</mo></mrow></math>"
     },
     "Log014": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><mi>log</mi><msup><mrow><mo stretchy=\"false\">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy=\"false\">)</mo></mrow><mn>2</mn></msup></mrow></math>"
+      "input": "<math><mrow><mi>log</mi><msup><mrow><mo stretchy=\"false\">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy=\"false\">)</mo></mrow><mn>2</mn></msup></mrow></math>"
     },
     "Log015": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><mi>log</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mi>y</mi><mo stretchy=\"false\">)</mo></mrow></math>"
+      "input": "<math><mrow><mi>log</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mi>y</mi><mo stretchy=\"false\">)</mo></mrow></math>"
     },
     "Log016": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math>"
+      "input": "<math><mrow><mfrac><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math>"
     },
     "Log017": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><msub><mrow><mi>log</mi></mrow><mn>6</mn></msub><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><msub><mrow><mi>log</mi></mrow><mn>6</mn></msub><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math>"
+      "input": "<math><mrow><mfrac><mrow><msub><mrow><mi>log</mi></mrow><mn>6</mn></msub><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><msub><mrow><mi>log</mi></mrow><mn>6</mn></msub><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math>"
     },
     "Log018": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mi>log</mi><mn>40</mn><mo>+</mo><mi>log</mi><mn>60</mn></mrow><mrow><mi>log</mi><mn>5</mn></mrow></mfrac></mrow></math>"
+      "input": "<math><mrow><mfrac><mrow><mi>log</mi><mn>40</mn><mo>+</mo><mi>log</mi><mn>60</mn></mrow><mrow><mi>log</mi><mn>5</mn></mrow></mfrac></mrow></math>"
     },
     "Log019": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><msub><mrow><mi>log</mi></mrow><mn>3</mn></msub><mn>40</mn><mo>+</mo><msub><mrow><mi>log</mi></mrow><mn>3</mn></msub><mn>60</mn></mrow><mrow><msub><mrow><mi>log</mi></mrow><mn>3</mn></msub><mn>5</mn></mrow></mfrac></mrow></math>"
+      "input": "<math><mrow><mfrac><mrow><msub><mrow><mi>log</mi></mrow><mn>3</mn></msub><mn>40</mn><mo>+</mo><msub><mrow><mi>log</mi></mrow><mn>3</mn></msub><mn>60</mn></mrow><mrow><msub><mrow><mi>log</mi></mrow><mn>3</mn></msub><mn>5</mn></mrow></mfrac></mrow></math>"
     },
     "Log020": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><mi>log</mi><mo stretchy=\"false\">(</mo><msup><mn>3</mn><mn>4</mn></msup><msup><mrow><mn>12</mn></mrow><mn>9</mn></msup><mo stretchy=\"false\">)</mo><mo>=</mo><mn>4</mn><mi>log</mi><mn>3</mn><mo>+</mo><mn>9</mn><mi>log</mi><mn>12</mn></mrow></math>"
+      "input": "<math><mrow><mi>log</mi><mo stretchy=\"false\">(</mo><msup><mn>3</mn><mn>4</mn></msup><msup><mrow><mn>12</mn></mrow><mn>9</mn></msup><mo stretchy=\"false\">)</mo><mo>=</mo><mn>4</mn><mi>log</mi><mn>3</mn><mo>+</mo><mn>9</mn><mi>log</mi><mn>12</mn></mrow></math>"
     },
     "Log021": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mfrac><mi>x</mi><mi>y</mi></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mfrac><mi>x</mi><mi>y</mi></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "_comment2_": " TODO: Fix the vulgar fraction predicate!",
     "Log022": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mfrac><mrow><msup><mn>3</mn><mn>4</mn></msup></mrow><mrow><msup><mn>8</mn><mrow><mn>10</mn></mrow></msup></mrow></mfrac></mrow><mo>)</mo></mrow><mo>=</mo><mn>4</mn><mi>log</mi><mn>3</mn><mo>−</mo><mn>10</mn><mi>log</mi><mn>8</mn></mrow></math>"
+      "input": "<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mfrac><mrow><msup><mn>3</mn><mn>4</mn></msup></mrow><mrow><msup><mn>8</mn><mrow><mn>10</mn></mrow></msup></mrow></mfrac></mrow><mo>)</mo></mrow><mo>=</mo><mn>4</mn><mi>log</mi><mn>3</mn><mo>−</mo><mn>10</mn><mi>log</mi><mn>8</mn></mrow></math>"
     },
     "Log023": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><msup><mrow><mn>10</mn></mrow><mrow><mi>log</mi><mi>x</mi></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mrow><mn>10</mn></mrow><mrow><mi>log</mi><mi>x</mi></mrow></msup></mrow></math>"
     },
     "NatLog001": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><mi>ln</mi><mi>x</mi></mrow></math>"
+      "input": "<math><mrow><mi>ln</mi><mi>x</mi></mrow></math>"
     },
     "NatLog002": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><mi>ln</mi><mi>x</mi><mo>−</mo><mi>ln</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy=\"false\">)</mo><mo>=</mo><mi>ln</mi><mrow><mo>(</mo><mrow><mfrac><mi>x</mi><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>ln</mi><mi>x</mi><mo>−</mo><mi>ln</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy=\"false\">)</mo><mo>=</mo><mi>ln</mi><mrow><mo>(</mo><mrow><mfrac><mi>x</mi><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "NatLog003": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><mi>ln</mi><mrow><mo>(</mo><mrow><msup><mi>e</mi><mi>x</mi></msup></mrow><mo>)</mo></mrow><mo>=</mo><mi>x</mi></mrow></math>"
+      "input": "<math><mrow><mi>ln</mi><mrow><mo>(</mo><mrow><msup><mi>e</mi><mi>x</mi></msup></mrow><mo>)</mo></mrow><mo>=</mo><mi>x</mi></mrow></math>"
     },
     "NatLog004": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><msup><mi>e</mi><mrow><mi>ln</mi><mi>x</mi></mrow></msup><mo>=</mo><mi>x</mi></mrow></math>"
+      "input": "<math><mrow><msup><mi>e</mi><mrow><mi>ln</mi><mi>x</mi></mrow></msup><mo>=</mo><mi>x</mi></mrow></math>"
     },
     "NatLog005": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><mi>ln</mi><mrow><mo>(</mo><mrow><msup><mi>e</mi><mi>x</mi></msup></mrow><mo>)</mo></mrow><mo>=</mo><mi>x</mi></mrow></math>"
+      "input": "<math><mrow><mi>ln</mi><mrow><mo>(</mo><mrow><msup><mi>e</mi><mi>x</mi></msup></mrow><mo>)</mo></mrow><mo>=</mo><mi>x</mi></mrow></math>"
     },
     "NatLog006": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><msup><mi>e</mi><mrow><mi>ln</mi><mn>4</mn></mrow></msup><mo>=</mo><mn>4</mn></mrow></math>"
+      "input": "<math><mrow><msup><mi>e</mi><mrow><mi>ln</mi><mn>4</mn></mrow></msup><mo>=</mo><mn>4</mn></mrow></math>"
     },
     "NatLog007": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mi>ln</mi><mn>40</mn></mrow><mrow><mi>ln</mi><mn>5</mn></mrow></mfrac><mo>=</mo><msub><mrow><mi>log</mi></mrow><mn>5</mn></msub><mn>40</mn></mrow></math>"
+      "input": "<math><mrow><mfrac><mrow><mi>ln</mi><mn>40</mn></mrow><mrow><mi>ln</mi><mn>5</mn></mrow></mfrac><mo>=</mo><msub><mrow><mi>log</mi></mrow><mn>5</mn></msub><mn>40</mn></mrow></math>"
     },
     "NatLog008": {
       "test": true,
       "preference": "Log_Auto",
-      "mathml": "<math><mrow><mfrac><mrow><mi>ln</mi><mn>40</mn><mo>+</mo><mi>ln</mi><mn>60</mn></mrow><mrow><mi>ln</mi><mn>5</mn></mrow></mfrac></mrow></math>"
+      "input": "<math><mrow><mfrac><mrow><mi>ln</mi><mn>40</mn><mo>+</mo><mi>ln</mi><mn>60</mn></mrow><mrow><mi>ln</mi><mn>5</mn></mrow></mfrac></mrow></math>"
     },
     "NatLog009": {
       "test": true,
       "preference": "Log_LnAsNaturalLog",
-      "mathml": "<math><mrow><mi>ln</mi><mi>x</mi></mrow></math>"
+      "input": "<math><mrow><mi>ln</mi><mi>x</mi></mrow></math>"
     },
     "NatLog010": {
       "test": true,
       "preference": "Log_LnAsNaturalLog",
-      "mathml": "<math><mrow><mi>ln</mi><mi>x</mi><mo>−</mo><mi>ln</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy=\"false\">)</mo><mo>=</mo><mi>ln</mi><mrow><mo>(</mo><mrow><mfrac><mi>x</mi><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+      "input": "<math><mrow><mi>ln</mi><mi>x</mi><mo>−</mo><mi>ln</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy=\"false\">)</mo><mo>=</mo><mi>ln</mi><mrow><mo>(</mo><mrow><mfrac><mi>x</mi><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
     },
     "NatLog011": {
       "test": true,
       "preference": "Log_LnAsNaturalLog",
-      "mathml": "<math><mrow><mi>ln</mi><mrow><mo>(</mo><mrow><msup><mi>e</mi><mi>x</mi></msup></mrow><mo>)</mo></mrow><mo>=</mo><mi>x</mi></mrow></math>"
+      "input": "<math><mrow><mi>ln</mi><mrow><mo>(</mo><mrow><msup><mi>e</mi><mi>x</mi></msup></mrow><mo>)</mo></mrow><mo>=</mo><mi>x</mi></mrow></math>"
     },
     "NatLog012": {
       "test": true,
       "preference": "Log_LnAsNaturalLog",
-      "mathml": "<math><mrow><msup><mi>e</mi><mrow><mi>ln</mi><mi>x</mi></mrow></msup><mo>=</mo><mi>x</mi></mrow></math>"
+      "input": "<math><mrow><msup><mi>e</mi><mrow><mi>ln</mi><mi>x</mi></mrow></msup><mo>=</mo><mi>x</mi></mrow></math>"
     },
     "NatLog013": {
       "test": true,
       "preference": "Log_LnAsNaturalLog",
-      "mathml": "<math><mrow><mi>ln</mi><mrow><mo>(</mo><mrow><msup><mi>e</mi><mi>x</mi></msup></mrow><mo>)</mo></mrow><mo>=</mo><mi>x</mi></mrow></math>"
+      "input": "<math><mrow><mi>ln</mi><mrow><mo>(</mo><mrow><msup><mi>e</mi><mi>x</mi></msup></mrow><mo>)</mo></mrow><mo>=</mo><mi>x</mi></mrow></math>"
     },
     "NatLog014": {
       "test": true,
       "preference": "Log_LnAsNaturalLog",
-      "mathml": "<math><mrow><msup><mi>e</mi><mrow><mi>ln</mi><mn>4</mn></mrow></msup><mo>=</mo><mn>4</mn></mrow></math>"
+      "input": "<math><mrow><msup><mi>e</mi><mrow><mi>ln</mi><mn>4</mn></mrow></msup><mo>=</mo><mn>4</mn></mrow></math>"
     },
     "NatLog015": {
       "test": true,
       "preference": "Log_LnAsNaturalLog",
-      "mathml": "<math><mrow><mfrac><mrow><mi>ln</mi><mn>40</mn></mrow><mrow><mi>ln</mi><mn>5</mn></mrow></mfrac><mo>=</mo><msub><mrow><mi>log</mi></mrow><mn>5</mn></msub><mn>40</mn></mrow></math>"
+      "input": "<math><mrow><mfrac><mrow><mi>ln</mi><mn>40</mn></mrow><mrow><mi>ln</mi><mn>5</mn></mrow></mfrac><mo>=</mo><msub><mrow><mi>log</mi></mrow><mn>5</mn></msub><mn>40</mn></mrow></math>"
     },
     "NatLog016": {
       "test": true,
       "preference": "Log_LnAsNaturalLog",
-      "mathml": "<math><mrow><mfrac><mrow><mi>ln</mi><mn>40</mn><mo>+</mo><mi>ln</mi><mn>60</mn></mrow><mrow><mi>ln</mi><mn>5</mn></mrow></mfrac></mrow></math>"
+      "input": "<math><mrow><mfrac><mrow><mi>ln</mi><mn>40</mn><mo>+</mo><mi>ln</mi><mn>60</mn></mrow><mrow><mi>ln</mi><mn>5</mn></mrow></mfrac></mrow></math>"
     }
   }
 }

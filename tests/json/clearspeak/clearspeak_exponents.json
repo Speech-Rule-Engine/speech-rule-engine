@@ -4,924 +4,924 @@
     "Exp001": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>3</mn><mn>2</mn></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mn>2</mn></msup></mrow></math>"
     },
     "Exp002a": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>3</mn><mn>3</mn></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mn>3</mn></msup></mrow></math>"
     },
     "Exp003": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>3</mn><mn>5</mn></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mn>5</mn></msup></mrow></math>"
     },
     "Exp004": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>3</mn><mn>1</mn></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mn>1</mn></msup></mrow></math>"
     },
     "Exp005": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mi>b</mi><mn>1</mn></msup></mrow></math>"
+      "input": "<math><mrow><msup><mi>b</mi><mn>1</mn></msup></mrow></math>"
     },
     "Exp006": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><mn>5.0</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><mn>5.0</mn></mrow></msup></mrow></math>"
     },
     "Exp007": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>3</mn><mn>0</mn></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mn>0</mn></msup></mrow></math>"
     },
     "Exp008": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>4</mn><mrow><mn>11</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>4</mn><mrow><mn>11</mn></mrow></msup></mrow></math>"
     },
     "Exp009": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow></math>"
     },
     "Exp010a": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2.0</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2.0</mn></mrow></msup></mrow></math>"
     },
     "Exp011": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>4</mn><mi>x</mi></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>4</mn><mi>x</mi></msup></mrow></math>"
     },
     "Exp012": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
     },
     "Exp013": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>y</mi><mo>−</mo><mn>3</mn></mrow><mo>)</mo></mrow></mrow><mrow><mn>3</mn><mi>z</mi><mo>+</mo><mn>8</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>y</mi><mo>−</mo><mn>3</mn></mrow><mo>)</mo></mrow></mrow><mrow><mn>3</mn><mi>z</mi><mo>+</mo><mn>8</mn></mrow></msup></mrow></math>"
     },
     "Exp014": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msubsup><mi>p</mi><mn>1</mn><mn>2</mn></msubsup></mrow></math>"
+      "input": "<math><mrow><msubsup><mi>p</mi><mn>1</mn><mn>2</mn></msubsup></mrow></math>"
     },
     "Exp015": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msubsup><mi>p</mi><mn>1</mn><mn>3</mn></msubsup></mrow></math>"
+      "input": "<math><mrow><msubsup><mi>p</mi><mn>1</mn><mn>3</mn></msubsup></mrow></math>"
     },
     "Exp016": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msubsup><mi>p</mi><mn>1</mn><mn>4</mn></msubsup></mrow></math>"
+      "input": "<math><mrow><msubsup><mi>p</mi><mn>1</mn><mn>4</mn></msubsup></mrow></math>"
     },
     "Exp017": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msubsup><mi>p</mi><mn>1</mn><mrow><mn>10</mn></mrow></msubsup></mrow></math>"
+      "input": "<math><mrow><msubsup><mi>p</mi><mn>1</mn><mrow><mn>10</mn></mrow></msubsup></mrow></math>"
     },
     "Exp018": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msubsup><mi>p</mi><mn>1</mn><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msubsup></mrow></math>"
+      "input": "<math><mrow><msubsup><mi>p</mi><mn>1</mn><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msubsup></mrow></math>"
     },
     "Exp019": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msubsup><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow><mn>2</mn></msubsup></mrow></math>"
+      "input": "<math><mrow><msubsup><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow><mn>2</mn></msubsup></mrow></math>"
     },
     "Exp010b": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msubsup><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow><mn>3</mn></msubsup></mrow></math>"
+      "input": "<math><mrow><msubsup><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow><mn>3</mn></msubsup></mrow></math>"
     },
     "Exp011b": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msubsup><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow><mn>4</mn></msubsup></mrow></math>"
+      "input": "<math><mrow><msubsup><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow><mn>4</mn></msubsup></mrow></math>"
     },
     "Exp012b": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msubsup><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow><mrow><mn>10</mn></mrow></msubsup></mrow></math>"
+      "input": "<math><mrow><msubsup><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow><mrow><mn>10</mn></mrow></msubsup></mrow></math>"
     },
     "Exp013b": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msubsup><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msubsup></mrow></math>"
+      "input": "<math><mrow><msubsup><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msubsup></mrow></math>"
     },
     "Exp014b": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp015b": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp016b": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>5</mn><mrow><msup><mn>2</mn><mn>3</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>5</mn><mrow><msup><mn>2</mn><mn>3</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp017b": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>5</mn><mrow><mn>2</mn><msup><mi>x</mi><mn>3</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>5</mn><mrow><mn>2</mn><msup><mi>x</mi><mn>3</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp018b": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
     },
     "Exp019b": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow></math>"
     },
     "Exp020": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>3</mn><msup><mi>x</mi><mn>3</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>3</mn><msup><mi>x</mi><mn>3</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp021": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp022": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
     },
     "Exp023": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow></math>"
     },
     "Exp024": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>4</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>4</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp025": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>2</mn><mrow><msup><mrow><mn>10</mn></mrow><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>2</mn><mrow><msup><mrow><mn>10</mn></mrow><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow></msup></mrow></msup></mrow></math>"
     },
     "Exp026": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup></mrow></msup></mrow></math>"
     },
     "Exp027": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
     },
     "Exp028": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow></math>"
     },
     "Exp029": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp030": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mn>10</mn></mrow></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mn>10</mn></mrow></msup></mrow></msup></mrow></math>"
     },
     "Exp031": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow></msup></mrow></math>"
     },
     "Exp032": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mi>y</mi></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mi>y</mi></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
     },
     "Exp033": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mi>y</mi></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mi>y</mi></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow></math>"
     },
     "_comment2_": " TODO: (Simons) This does not work as semantically we have a -(xy) rather than",
     "_comment3_": "       (-x)(y).",
     "Exp034": {
       "test": false,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp035": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><mi>σ</mi></mfrac></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><mi>σ</mi></mfrac></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp036": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>2</mn><mi>n</mi></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>2</mn><mi>n</mi></msup></mrow></math>"
     },
     "Exp037": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>2</mn><mi>m</mi></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>2</mn><mi>m</mi></msup></mrow></math>"
     },
     "Exp038": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>2</mn><mi>i</mi></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>2</mn><mi>i</mi></msup></mrow></math>"
     },
     "Exp039": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>2</mn><mi>j</mi></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>2</mn><mi>j</mi></msup></mrow></math>"
     },
     "Exp040": {
       "test": true,
       "preference": "Exponent_Auto",
-      "mathml": "<math><mrow><msup><mn>2</mn><mi>a</mi></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>2</mn><mi>a</mi></msup></mrow></math>"
     },
     "Exp041": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>3</mn><mn>2</mn></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mn>2</mn></msup></mrow></math>"
     },
     "Exp042": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>3</mn><mn>3</mn></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mn>3</mn></msup></mrow></math>"
     },
     "Exp043": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>3</mn><mn>0</mn></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mn>0</mn></msup></mrow></math>"
     },
     "Exp044": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>3</mn><mn>1</mn></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mn>1</mn></msup></mrow></math>"
     },
     "Exp045": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>3</mn><mn>5</mn></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mn>5</mn></msup></mrow></math>"
     },
     "Exp046": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>4</mn><mrow><mn>3.0</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>4</mn><mrow><mn>3.0</mn></mrow></msup></mrow></math>"
     },
     "Exp047": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>4</mn><mrow><mn>11</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>4</mn><mrow><mn>11</mn></mrow></msup></mrow></math>"
     },
     "Exp048": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow></math>"
     },
     "Exp049": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2.0</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2.0</mn></mrow></msup></mrow></math>"
     },
     "Exp050": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>4</mn><mi>x</mi></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>4</mn><mi>x</mi></msup></mrow></math>"
     },
     "Exp051": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
     },
     "Exp052": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>y</mi><mo>−</mo><mn>3</mn></mrow><mo>)</mo></mrow></mrow><mrow><mn>3</mn><mi>z</mi><mo>+</mo><mn>8</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>y</mi><mo>−</mo><mn>3</mn></mrow><mo>)</mo></mrow></mrow><mrow><mn>3</mn><mi>z</mi><mo>+</mo><mn>8</mn></mrow></msup></mrow></math>"
     },
     "Exp053": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mn>2</mn></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mn>2</mn></msup></mrow></math>"
     },
     "Exp054": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mn>3</mn></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mn>3</mn></msup></mrow></math>"
     },
     "Exp055": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mn>4</mn></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mn>4</mn></msup></mrow></math>"
     },
     "Exp056": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mrow><mn>10</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mrow><mn>10</mn></mrow></msup></mrow></math>"
     },
     "Exp057": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
     },
     "Exp058": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mn>2</mn></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mn>2</mn></msup></mrow></math>"
     },
     "Exp059": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mn>3</mn></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mn>3</mn></msup></mrow></math>"
     },
     "Exp060": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mn>4</mn></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mn>4</mn></msup></mrow></math>"
     },
     "Exp061": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mrow><mn>10</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mrow><mn>10</mn></mrow></msup></mrow></math>"
     },
     "Exp062": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
     },
     "Exp063": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp064": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp065": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>5</mn><mrow><msup><mn>2</mn><mn>3</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>5</mn><mrow><msup><mn>2</mn><mn>3</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp066": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>5</mn><mrow><mn>2</mn><msup><mi>x</mi><mn>3</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>5</mn><mrow><mn>2</mn><msup><mi>x</mi><mn>3</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp067": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
     },
     "Exp068": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow></math>"
     },
     "Exp069": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>3</mn><msup><mi>x</mi><mn>3</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>3</mn><msup><mi>x</mi><mn>3</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp070": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp071": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
     },
     "Exp072": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow></math>"
     },
     "Exp073": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>4</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>4</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp074": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>2</mn><mrow><msup><mrow><mn>10</mn></mrow><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>2</mn><mrow><msup><mrow><mn>10</mn></mrow><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow></msup></mrow></msup></mrow></math>"
     },
     "Exp075": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup></mrow></msup></mrow></math>"
     },
     "Exp076": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
     },
     "Exp077": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow></math>"
     },
     "Exp078": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp079": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mn>10</mn></mrow></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mn>10</mn></mrow></msup></mrow></msup></mrow></math>"
     },
     "Exp080": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow></msup></mrow></math>"
     },
     "Exp081": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mi>y</mi></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mi>y</mi></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
     },
     "Exp082": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mi>y</mi></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mi>y</mi></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow></math>"
     },
     "Exp083": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp084": {
       "test": true,
       "preference": "Exponent_Ordinal",
-      "mathml": "<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><mi>σ</mi></mfrac></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><mi>σ</mi></mfrac></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp085": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mn>2</mn></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mn>2</mn></msup></mrow></math>"
     },
     "Exp086": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mn>3</mn></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mn>3</mn></msup></mrow></math>"
     },
     "Exp087": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mn>0</mn></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mn>0</mn></msup></mrow></math>"
     },
     "Exp088": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mn>1</mn></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mn>1</mn></msup></mrow></math>"
     },
     "Exp089": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mn>5</mn></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mn>5</mn></msup></mrow></math>"
     },
     "Exp090": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><mn>5.0</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><mn>5.0</mn></mrow></msup></mrow></math>"
     },
     "Exp091": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>4</mn><mrow><mn>11</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>4</mn><mrow><mn>11</mn></mrow></msup></mrow></math>"
     },
     "Exp092": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow></math>"
     },
     "Exp093": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2.0</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2.0</mn></mrow></msup></mrow></math>"
     },
     "Exp094": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>4</mn><mi>x</mi></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>4</mn><mi>x</mi></msup></mrow></math>"
     },
     "Exp095": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
     },
     "Exp096": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>y</mi><mo>−</mo><mn>3</mn></mrow><mo>)</mo></mrow></mrow><mrow><mn>3</mn><mi>z</mi><mo>+</mo><mn>8</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>y</mi><mo>−</mo><mn>3</mn></mrow><mo>)</mo></mrow></mrow><mrow><mn>3</mn><mi>z</mi><mo>+</mo><mn>8</mn></mrow></msup></mrow></math>"
     },
     "Exp097": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mn>2</mn></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mn>2</mn></msup></mrow></math>"
     },
     "Exp098": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mn>3</mn></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mn>3</mn></msup></mrow></math>"
     },
     "Exp099": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mn>4</mn></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mn>4</mn></msup></mrow></math>"
     },
     "Exp100": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mrow><mn>10</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mrow><mn>10</mn></mrow></msup></mrow></math>"
     },
     "Exp101": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
     },
     "Exp102": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mn>2</mn></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mn>2</mn></msup></mrow></math>"
     },
     "Exp103": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mn>3</mn></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mn>3</mn></msup></mrow></math>"
     },
     "Exp104": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mn>4</mn></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mn>4</mn></msup></mrow></math>"
     },
     "Exp105": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mrow><mn>10</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mrow><mn>10</mn></mrow></msup></mrow></math>"
     },
     "Exp106": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
     },
     "Exp107": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp108": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp109": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>5</mn><mrow><msup><mn>2</mn><mn>3</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>5</mn><mrow><msup><mn>2</mn><mn>3</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp110": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>5</mn><mrow><mn>2</mn><msup><mi>x</mi><mn>3</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>5</mn><mrow><mn>2</mn><msup><mi>x</mi><mn>3</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp111": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
     },
     "Exp112": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow></math>"
     },
     "Exp113": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>3</mn><msup><mi>x</mi><mn>3</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>3</mn><msup><mi>x</mi><mn>3</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp114": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp115": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
     },
     "Exp116": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow></math>"
     },
     "Exp117": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>4</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>4</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp118": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>2</mn><mrow><msup><mrow><mn>10</mn></mrow><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>2</mn><mrow><msup><mrow><mn>10</mn></mrow><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow></msup></mrow></msup></mrow></math>"
     },
     "Exp119": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup></mrow></msup></mrow></math>"
     },
     "Exp120": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
     },
     "Exp121": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow></math>"
     },
     "Exp122": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp123": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mn>10</mn></mrow></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mn>10</mn></mrow></msup></mrow></msup></mrow></math>"
     },
     "Exp124": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow></msup></mrow></math>"
     },
     "Exp125": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mi>y</mi></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mi>y</mi></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
     },
     "Exp126": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mi>y</mi></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mi>y</mi></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow></math>"
     },
     "Exp127": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp128": {
       "test": true,
       "preference": "Exponent_OrdinalPower",
-      "mathml": "<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><mi>σ</mi></mfrac></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><mi>σ</mi></mfrac></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp129": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mn>2</mn></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mn>2</mn></msup></mrow></math>"
     },
     "Exp130": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mn>3</mn></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mn>3</mn></msup></mrow></math>"
     },
     "Exp131": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mn>1</mn></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mn>1</mn></msup></mrow></math>"
     },
     "Exp132b": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mn>0</mn></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mn>0</mn></msup></mrow></math>"
     },
     "Exp133": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mn>5</mn></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mn>5</mn></msup></mrow></math>"
     },
     "Exp134": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><mn>5.0</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><mn>5.0</mn></mrow></msup></mrow></math>"
     },
     "Exp135": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>4</mn><mrow><mn>11</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>4</mn><mrow><mn>11</mn></mrow></msup></mrow></math>"
     },
     "Exp136": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow></math>"
     },
     "Exp137": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2.0</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2.0</mn></mrow></msup></mrow></math>"
     },
     "Exp138": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>4</mn><mi>x</mi></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>4</mn><mi>x</mi></msup></mrow></math>"
     },
     "Exp139": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
     },
     "Exp140": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>y</mi><mo>−</mo><mn>3</mn></mrow><mo>)</mo></mrow></mrow><mrow><mn>3</mn><mi>z</mi><mo>+</mo><mn>8</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>y</mi><mo>−</mo><mn>3</mn></mrow><mo>)</mo></mrow></mrow><mrow><mn>3</mn><mi>z</mi><mo>+</mo><mn>8</mn></mrow></msup></mrow></math>"
     },
     "Exp141": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mn>2</mn></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mn>2</mn></msup></mrow></math>"
     },
     "Exp142": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mn>3</mn></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mn>3</mn></msup></mrow></math>"
     },
     "Exp143": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mn>4</mn></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mn>4</mn></msup></mrow></math>"
     },
     "Exp144": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mrow><mn>10</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mrow><mn>10</mn></mrow></msup></mrow></math>"
     },
     "Exp145": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
     },
     "Exp146": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mn>2</mn></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mn>2</mn></msup></mrow></math>"
     },
     "Exp147": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mn>3</mn></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mn>3</mn></msup></mrow></math>"
     },
     "Exp148": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mn>4</mn></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mn>4</mn></msup></mrow></math>"
     },
     "Exp149": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mrow><mn>10</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mrow><mn>10</mn></mrow></msup></mrow></math>"
     },
     "Exp150": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
     },
     "Exp151": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp152": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp153": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp154": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp155": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>5</mn><mrow><msup><mn>2</mn><mn>3</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>5</mn><mrow><msup><mn>2</mn><mn>3</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp156": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>5</mn><mrow><mn>2</mn><msup><mi>x</mi><mn>3</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>5</mn><mrow><mn>2</mn><msup><mi>x</mi><mn>3</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp157": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
     },
     "Exp158": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow></math>"
     },
     "Exp159": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>3</mn><msup><mi>x</mi><mn>3</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>3</mn><msup><mi>x</mi><mn>3</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp160": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp161": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
     },
     "Exp162": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow></math>"
     },
     "Exp163": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>4</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>4</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp164": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>2</mn><mrow><msup><mrow><mn>10</mn></mrow><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>2</mn><mrow><msup><mrow><mn>10</mn></mrow><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow></msup></mrow></msup></mrow></math>"
     },
     "Exp165": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup></mrow></msup></mrow></math>"
     },
     "Exp166": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>"
     },
     "Exp167": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow></math>"
     },
     "Exp168": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp169": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mn>10</mn></mrow></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mn>10</mn></mrow></msup></mrow></msup></mrow></math>"
     },
     "Exp170": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow></msup></mrow></math>"
     },
     "Exp171": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mi>y</mi></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mi>y</mi></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>"
     },
     "Exp172": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mi>y</mi></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow></math>"
+      "input": "<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mi>y</mi></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow></math>"
     },
     "Exp173": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow></math>"
     },
     "Exp174": {
       "test": true,
       "preference": "Exponent_AfterPower",
-      "mathml": "<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><mi>σ</mi></mfrac></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msup></mrow></math>"
+      "input": "<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><mi>σ</mi></mfrac></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msup></mrow></math>"
     }
   }
 }

@@ -7,514 +7,514 @@
   "tests": {
     "_comment1_": " Implied Times",
     "ImpTimes001": {
-      "speech": "2 times 3"
+      "expected": "2 times 3"
     },
     "ImpTimes002": {
-      "speech": "2 times 3"
+      "expected": "2 times 3"
     },
     "ImpTimes003": {
-      "speech": "2 to the fourth power, times 3"
+      "expected": "2 to the fourth power, times 3"
     },
     "ImpTimes004": {
-      "speech": "2 times, open paren, 3 plus 4, close paren"
+      "expected": "2 times, open paren, 3 plus 4, close paren"
     },
     "ImpTimes005": {
-      "speech": "2 times, open bracket, 3 plus 4, close bracket"
+      "expected": "2 times, open bracket, 3 plus 4, close bracket"
     },
     "ImpTimes006": {
-      "speech": "3 times 2"
+      "expected": "3 times 2"
     },
     "ImpTimes007": {
-      "speech": "2 times, open paren, 3 plus 4, close paren, squared"
+      "expected": "2 times, open paren, 3 plus 4, close paren, squared"
     },
     "ImpTimes008": {
-      "speech": "open paren, 2 plus 7, close paren, times, open paren, 3 minus 6, close paren"
+      "expected": "open paren, 2 plus 7, close paren, times, open paren, 3 minus 6, close paren"
     },
     "ImpTimes009": {
-      "speech": "open bracket, 2 plus 7, close bracket, times, open bracket, 3 minus 6, close bracket"
+      "expected": "open bracket, 2 plus 7, close bracket, times, open bracket, 3 minus 6, close bracket"
     },
     "_comment2_": " TODO: (Simons) x is categorised as function!",
     "ImpTimes010": {
-      "speech": "x times, y z"
+      "expected": "x times, y z"
     },
     "ImpTimes011": {
-      "speech": "x times, open paren, y plus z, close paren"
+      "expected": "x times, open paren, y plus z, close paren"
     },
     "ImpTimes012": {
-      "speech": "2 times, open paren, y plus 1, close paren"
+      "expected": "2 times, open paren, y plus 1, close paren"
     },
     "ImpTimes013": {
-      "speech": "open paren, 2 minus 1, close paren, times x"
+      "expected": "open paren, 2 minus 1, close paren, times x"
     },
     "ImpTimes014": {
-      "speech": "p sub 1, times, open paren, 3 plus 7, close paren"
+      "expected": "p sub 1, times, open paren, 3 plus 7, close paren"
     },
     "ImpTimes015": {
-      "speech": "p sub 1, raised to the, a sub 1, power, p sub 2, raised to the, a sub 2, power"
+      "expected": "p sub 1, raised to the, a sub 1, power, p sub 2, raised to the, a sub 2, power"
     },
     "ImpTimes016": {
-      "speech": "open paren, x plus y, close paren, to the negative 4 power, times, open paren, x minus y, close paren, to the negative 4 power"
+      "expected": "open paren, x plus y, close paren, to the negative 4 power, times, open paren, x minus y, close paren, to the negative 4 power"
     },
     "ImpTimes017": {
-      "speech": "2 raised to the 4 times, open paren, x plus y, close paren, power"
+      "expected": "2 raised to the 4 times, open paren, x plus y, close paren, power"
     },
     "ImpTimes018": {
-      "speech": "x y"
+      "expected": "x y"
     },
     "ImpTimes019": {
-      "speech": "x squared, y cubed"
+      "expected": "x squared, y cubed"
     },
     "ImpTimes020": {
-      "speech": "x raised to the y plus 1 power, x raised to the y plus 2 power"
+      "expected": "x raised to the y plus 1 power, x raised to the y plus 2 power"
     },
     "ImpTimes021": {
-      "speech": "the square root of a, the square root of b, equals the square root of a b"
+      "expected": "the square root of a, the square root of b, equals the square root of a b"
     },
     "ImpTimes022": {
-      "speech": "the square root of 3, the square root of 10, equals the square root of 30"
+      "expected": "the square root of 3, the square root of 10, equals the square root of 30"
     },
     "ImpTimes023": {
-      "speech": "2 the square root of 3"
+      "expected": "2 the square root of 3"
     },
     "ImpTimes024": {
-      "speech": "1 plus 2 the square root of 3"
+      "expected": "1 plus 2 the square root of 3"
     },
     "ImpTimes025": {
-      "speech": "f of x, equals x squared times, open paren, x plus 1, close paren"
+      "expected": "f of x, equals x squared times, open paren, x plus 1, close paren"
     },
     "ImpTimes026": {
-      "speech": "f times x, equals x squared times, open paren, x plus 1, close paren"
+      "expected": "f times x, equals x squared times, open paren, x plus 1, close paren"
     },
     "ImpTimes027": {
-      "speech": "sine x cosine y, plus, cosine x sine y"
+      "expected": "sine x cosine y, plus, cosine x sine y"
     },
     "ImpTimes027a": {
-      "speech": "the sine of, open paren, x plus y, close paren, the cosine of, open paren, x plus y, close paren"
+      "expected": "the sine of, open paren, x plus y, close paren, the cosine of, open paren, x plus y, close paren"
     },
     "ImpTimes028": {
-      "speech": "the log base 10 of, x y"
+      "expected": "the log base 10 of, x y"
     },
     "ImpTimes029": {
-      "speech": "the log of, open paren, x plus y, close paren, equals, log x log y"
+      "expected": "the log of, open paren, x plus y, close paren, equals, log x log y"
     },
     "ImpTimes030": {
-      "speech": "the 2 by 2 matrix. Row 1: 1, 3 Row 2: 5, 2. times the 2 by 2 matrix. Row 1: 7, 4 Row 2: 0, 1"
+      "expected": "the 2 by 2 matrix. Row 1: 1, 3 Row 2: 5, 2. times the 2 by 2 matrix. Row 1: 7, 4 Row 2: 0, 1"
     },
     "ImpTimes031": {
-      "speech": "2 times, open paren, 3 times, open paren, open paren, 4 plus 5, close paren, plus 6, close paren, close paren"
+      "expected": "2 times, open paren, 3 times, open paren, open paren, 4 plus 5, close paren, plus 6, close paren, close paren"
     },
     "ImpTimes032": {
-      "speech": "2 times, open paren, 3 times, open second paren, open third paren, 4 plus 5, close third paren, plus 6, close second paren, close paren"
+      "expected": "2 times, open paren, 3 times, open second paren, open third paren, 4 plus 5, close third paren, plus 6, close second paren, close paren"
     },
     "ImpTimes033": {
-      "speech": "2 times, open bracket, 3 times, open paren, open paren, 4 plus 5, close paren, plus 6, close paren, close bracket"
+      "expected": "2 times, open bracket, 3 times, open paren, open paren, 4 plus 5, close paren, plus 6, close paren, close bracket"
     },
     "ImpTimes034": {
-      "speech": "2 times, open bracket, 3 times, open paren, open second paren, 4 plus 5, close second paren, plus 6, close paren, close bracket"
+      "expected": "2 times, open bracket, 3 times, open paren, open second paren, 4 plus 5, close second paren, plus 6, close paren, close bracket"
     },
     "ImpTimes035": {
-      "speech": "2 times, the absolute value of x"
+      "expected": "2 times, the absolute value of x"
     },
     "ImpTimes036": {
-      "speech": "the absolute value of x, times, the absolute value of y"
+      "expected": "the absolute value of x, times, the absolute value of y"
     },
     "ImpTimes037": {
-      "speech": "the absolute value of x plus 1, times, the absolute value of y minus 1"
+      "expected": "the absolute value of x plus 1, times, the absolute value of y minus 1"
     },
     "ImpTimes037a": {
-      "speech": "the absolute value of x plus 1, end absolute value, times, the absolute value of y minus 1, end absolute value"
+      "expected": "the absolute value of x plus 1, end absolute value, times, the absolute value of y minus 1, end absolute value"
     },
     "ImpTimes038": {
-      "speech": "the absolute value of x plus 1, times, the absolute value of y, minus 1"
+      "expected": "the absolute value of x plus 1, times, the absolute value of y, minus 1"
     },
     "ImpTimes0381": {
-      "speech": "the absolute value of x plus 1, end absolute value, times, the absolute value of y, end absolute value, minus 1"
+      "expected": "the absolute value of x plus 1, end absolute value, times, the absolute value of y, end absolute value, minus 1"
     },
     "ImpTimes039": {
-      "speech": "2 times 3"
+      "expected": "2 times 3"
     },
     "ImpTimes040": {
-      "speech": "2 times 3"
+      "expected": "2 times 3"
     },
     "ImpTimes041": {
-      "speech": "2 to the fourth power, times 3"
+      "expected": "2 to the fourth power, times 3"
     },
     "ImpTimes042": {
-      "speech": "2 times, open paren, 3 plus 4, close paren"
+      "expected": "2 times, open paren, 3 plus 4, close paren"
     },
     "ImpTimes043": {
-      "speech": "2 times, open bracket, 3 plus 4, close bracket"
+      "expected": "2 times, open bracket, 3 plus 4, close bracket"
     },
     "ImpTimes044": {
-      "speech": "3 times 2"
+      "expected": "3 times 2"
     },
     "ImpTimes045": {
-      "speech": "2 times, open paren, 3 plus 4, close paren, squared"
+      "expected": "2 times, open paren, 3 plus 4, close paren, squared"
     },
     "ImpTimes046": {
-      "speech": "open paren, 2 plus 7, close paren, times, open paren, 3 minus 6, close paren"
+      "expected": "open paren, 2 plus 7, close paren, times, open paren, 3 minus 6, close paren"
     },
     "ImpTimes047": {
-      "speech": "open bracket, 2 plus 7, close bracket, times, open bracket, 3 minus 6, close bracket"
+      "expected": "open bracket, 2 plus 7, close bracket, times, open bracket, 3 minus 6, close bracket"
     },
     "_comment3_": " TODO: (Simons) x is categorised as function!",
     "ImpTimes048": {
-      "speech": "x times y times z"
+      "expected": "x times y times z"
     },
     "ImpTimes049": {
-      "speech": "x times, open paren, y plus z, close paren"
+      "expected": "x times, open paren, y plus z, close paren"
     },
     "ImpTimes050": {
-      "speech": "2 times, open paren, y plus 1, close paren"
+      "expected": "2 times, open paren, y plus 1, close paren"
     },
     "ImpTimes051": {
-      "speech": "open paren, 2 minus 1, close paren, times x"
+      "expected": "open paren, 2 minus 1, close paren, times x"
     },
     "ImpTimes052": {
-      "speech": "p sub 1, times, open paren, 3 plus 7, close paren"
+      "expected": "p sub 1, times, open paren, 3 plus 7, close paren"
     },
     "ImpTimes053": {
-      "speech": "p sub 1, raised to the, a sub 1, power, times, p sub 2, raised to the, a sub 2, power"
+      "expected": "p sub 1, raised to the, a sub 1, power, times, p sub 2, raised to the, a sub 2, power"
     },
     "ImpTimes054": {
-      "speech": "open paren, x plus y, close paren, to the negative 4 power, times, open paren, x minus y, close paren, to the negative 4 power"
+      "expected": "open paren, x plus y, close paren, to the negative 4 power, times, open paren, x minus y, close paren, to the negative 4 power"
     },
     "ImpTimes055": {
-      "speech": "2 raised to the 4 times, open paren, x plus y, close paren, power"
+      "expected": "2 raised to the 4 times, open paren, x plus y, close paren, power"
     },
     "ImpTimes056": {
-      "speech": "x times y"
+      "expected": "x times y"
     },
     "ImpTimes057": {
-      "speech": "x squared times y cubed"
+      "expected": "x squared times y cubed"
     },
     "ImpTimes058": {
-      "speech": "x raised to the y plus 1 power, times x raised to the y plus 2 power"
+      "expected": "x raised to the y plus 1 power, times x raised to the y plus 2 power"
     },
     "ImpTimes059": {
-      "speech": "the square root of a, times the square root of b, equals the square root of a times b"
+      "expected": "the square root of a, times the square root of b, equals the square root of a times b"
     },
     "ImpTimes060": {
-      "speech": "the square root of 3, times the square root of 10, equals the square root of 30"
+      "expected": "the square root of 3, times the square root of 10, equals the square root of 30"
     },
     "ImpTimes061": {
-      "speech": "2 times the square root of 3"
+      "expected": "2 times the square root of 3"
     },
     "ImpTimes062": {
-      "speech": "1 plus 2 times the square root of 3"
+      "expected": "1 plus 2 times the square root of 3"
     },
     "ImpTimes063": {
-      "speech": "f of x, equals x squared times, open paren, x plus 1, close paren"
+      "expected": "f of x, equals x squared times, open paren, x plus 1, close paren"
     },
     "ImpTimes064": {
-      "speech": "f times x, equals x squared times, open paren, x plus 1, close paren"
+      "expected": "f times x, equals x squared times, open paren, x plus 1, close paren"
     },
     "ImpTimes065": {
-      "speech": "sine x, times cosine y plus cosine x, times sine y"
+      "expected": "sine x, times cosine y plus cosine x, times sine y"
     },
     "ImpTimes065a": {
-      "speech": "the sine of, open paren, x plus y, close paren, times, the cosine of, open paren, x plus y, close paren"
+      "expected": "the sine of, open paren, x plus y, close paren, times, the cosine of, open paren, x plus y, close paren"
     },
     "ImpTimes066": {
-      "speech": "the log base 10 of, x times y"
+      "expected": "the log base 10 of, x times y"
     },
     "ImpTimes067": {
-      "speech": "the log of, open paren, x plus y, close paren, equals log x, times log y"
+      "expected": "the log of, open paren, x plus y, close paren, equals log x, times log y"
     },
     "ImpTimes068": {
-      "speech": "the 2 by 2 matrix. Row 1: 1, 3 Row 2: 5, 2. times the 2 by 2 matrix. Row 1: 7, 4 Row 2: 0, 1"
+      "expected": "the 2 by 2 matrix. Row 1: 1, 3 Row 2: 5, 2. times the 2 by 2 matrix. Row 1: 7, 4 Row 2: 0, 1"
     },
     "ImpTimes069": {
-      "speech": "2 times, open paren, 3 times, open paren, open paren, 4 plus 5, close paren, plus 6, close paren, close paren"
+      "expected": "2 times, open paren, 3 times, open paren, open paren, 4 plus 5, close paren, plus 6, close paren, close paren"
     },
     "ImpTimes070": {
-      "speech": "2 times, open paren, 3 times, open second paren, open third paren, 4 plus 5, close third paren, plus 6, close second paren, close paren"
+      "expected": "2 times, open paren, 3 times, open second paren, open third paren, 4 plus 5, close third paren, plus 6, close second paren, close paren"
     },
     "ImpTimes070a": {
-      "speech": "2 times, open bracket, 3 times, open paren, open paren, 4 plus 5, close paren, plus 6, close paren, close bracket"
+      "expected": "2 times, open bracket, 3 times, open paren, open paren, 4 plus 5, close paren, plus 6, close paren, close bracket"
     },
     "ImpTimes071": {
-      "speech": "2 times, open bracket, 3 times, open paren, open second paren, 4 plus 5, close second paren, plus 6, close paren, close bracket"
+      "expected": "2 times, open bracket, 3 times, open paren, open second paren, 4 plus 5, close second paren, plus 6, close paren, close bracket"
     },
     "ImpTimes072": {
-      "speech": "2 times, the absolute value of x"
+      "expected": "2 times, the absolute value of x"
     },
     "ImpTimes073": {
-      "speech": "the absolute value of x, times, the absolute value of y"
+      "expected": "the absolute value of x, times, the absolute value of y"
     },
     "ImpTimes074": {
-      "speech": "the absolute value of x plus 1, times, the absolute value of y minus 1"
+      "expected": "the absolute value of x plus 1, times, the absolute value of y minus 1"
     },
     "ImpTimes074a": {
-      "speech": "the absolute value of x plus 1, end absolute value, times, the absolute value of y minus 1, end absolute value"
+      "expected": "the absolute value of x plus 1, end absolute value, times, the absolute value of y minus 1, end absolute value"
     },
     "ImpTimes075": {
-      "speech": "the absolute value of x plus 1, times, the absolute value of y, minus 1"
+      "expected": "the absolute value of x plus 1, times, the absolute value of y, minus 1"
     },
     "ImpTimes076": {
-      "speech": "the absolute value of x plus 1, end absolute value, times, the absolute value of y, end absolute value, minus 1"
+      "expected": "the absolute value of x plus 1, end absolute value, times, the absolute value of y, end absolute value, minus 1"
     },
     "ImpTimes077": {
-      "speech": "2, open paren, 3, close paren"
+      "expected": "2, open paren, 3, close paren"
     },
     "ImpTimes078": {
-      "speech": "2, open bracket, 3, close bracket"
+      "expected": "2, open bracket, 3, close bracket"
     },
     "ImpTimes079": {
-      "speech": "2 to the fourth power, open paren, 3, close paren"
+      "expected": "2 to the fourth power, open paren, 3, close paren"
     },
     "ImpTimes080": {
-      "speech": "2, open paren, 3 plus 4, close paren"
+      "expected": "2, open paren, 3 plus 4, close paren"
     },
     "ImpTimes081": {
-      "speech": "2, open bracket, 3 plus 4, close bracket"
+      "expected": "2, open bracket, 3 plus 4, close bracket"
     },
     "ImpTimes082": {
-      "speech": "open paren, 3, close paren, open paren, 2, close paren"
+      "expected": "open paren, 3, close paren, open paren, 2, close paren"
     },
     "ImpTimes083": {
-      "speech": "2, open paren, 3 plus 4, close paren, squared"
+      "expected": "2, open paren, 3 plus 4, close paren, squared"
     },
     "ImpTimes084": {
-      "speech": "open paren, 2 plus 7, close paren, open paren, 3 minus 6, close paren"
+      "expected": "open paren, 2 plus 7, close paren, open paren, 3 minus 6, close paren"
     },
     "ImpTimes085": {
-      "speech": "open bracket, 2 plus 7, close bracket, open bracket, 3 minus 6, close bracket"
+      "expected": "open bracket, 2 plus 7, close bracket, open bracket, 3 minus 6, close bracket"
     },
     "_comment4_": " TODO: (Simons) x is categorised as function!",
     "ImpTimes086": {
-      "speech": "x, open paren, y z, close paren"
+      "expected": "x, open paren, y z, close paren"
     },
     "ImpTimes087": {
-      "speech": "x, open paren, y plus z, close paren"
+      "expected": "x, open paren, y plus z, close paren"
     },
     "ImpTimes088": {
-      "speech": "2, open paren, y plus 1, close paren"
+      "expected": "2, open paren, y plus 1, close paren"
     },
     "ImpTimes089": {
-      "speech": "open paren, 2 minus 1, close paren, x"
+      "expected": "open paren, 2 minus 1, close paren, x"
     },
     "ImpTimes090": {
-      "speech": "p sub 1, open paren, 3 plus 7, close paren"
+      "expected": "p sub 1, open paren, 3 plus 7, close paren"
     },
     "ImpTimes091": {
-      "speech": "p sub 1, raised to the, a sub 1, power, p sub 2, raised to the, a sub 2, power"
+      "expected": "p sub 1, raised to the, a sub 1, power, p sub 2, raised to the, a sub 2, power"
     },
     "ImpTimes092": {
-      "speech": "open paren, x plus y, close paren, to the negative 4 power, open paren, x minus y, close paren, to the negative 4 power"
+      "expected": "open paren, x plus y, close paren, to the negative 4 power, open paren, x minus y, close paren, to the negative 4 power"
     },
     "ImpTimes093": {
-      "speech": "2 raised to the 4, open paren, x plus y, close paren, power"
+      "expected": "2 raised to the 4, open paren, x plus y, close paren, power"
     },
     "ImpTimes094": {
-      "speech": "x y"
+      "expected": "x y"
     },
     "ImpTimes095": {
-      "speech": "x squared y cubed"
+      "expected": "x squared y cubed"
     },
     "ImpTimes096": {
-      "speech": "x raised to the y plus 1 power, x raised to the y plus 2 power"
+      "expected": "x raised to the y plus 1 power, x raised to the y plus 2 power"
     },
     "ImpTimes097": {
-      "speech": "the square root of a, the square root of b, equals the square root of a b"
+      "expected": "the square root of a, the square root of b, equals the square root of a b"
     },
     "ImpTimes098": {
-      "speech": "the square root of 3, the square root of 10, equals the square root of 30"
+      "expected": "the square root of 3, the square root of 10, equals the square root of 30"
     },
     "ImpTimes099": {
-      "speech": "2 the square root of 3"
+      "expected": "2 the square root of 3"
     },
     "ImpTimes100": {
-      "speech": "1 plus 2 the square root of 3"
+      "expected": "1 plus 2 the square root of 3"
     },
     "ImpTimes101": {
-      "speech": "f of x, equals x squared, open paren, x plus 1, close paren"
+      "expected": "f of x, equals x squared, open paren, x plus 1, close paren"
     },
     "_comment5_": " TODO: (Simons) Need to be able to specify excluded preferences.",
     "ImpTimes102": {
-      "speech": "f, open paren, x, close paren, equals x squared, open paren, x plus 1, close paren"
+      "expected": "f, open paren, x, close paren, equals x squared, open paren, x plus 1, close paren"
     },
     "ImpTimes103": {
-      "speech": "sine x cosine y, plus, cosine x sine y"
+      "expected": "sine x cosine y, plus, cosine x sine y"
     },
     "ImpTimes104": {
-      "speech": "the log base 10 of, x y"
+      "expected": "the log base 10 of, x y"
     },
     "ImpTimes105": {
-      "speech": "the log of, open paren, x plus y, close paren, equals, log x log y"
+      "expected": "the log of, open paren, x plus y, close paren, equals, log x log y"
     },
     "ImpTimes106": {
-      "speech": "the 2 by 2 matrix. Row 1: 1, 3 Row 2: 5, 2. the 2 by 2 matrix. Row 1: 7, 4 Row 2: 0, 1"
+      "expected": "the 2 by 2 matrix. Row 1: 1, 3 Row 2: 5, 2. the 2 by 2 matrix. Row 1: 7, 4 Row 2: 0, 1"
     },
     "ImpTimes107": {
-      "speech": "2, open paren, 3, open paren, open paren, 4 plus 5, close paren, plus 6, close paren, close paren"
+      "expected": "2, open paren, 3, open paren, open paren, 4 plus 5, close paren, plus 6, close paren, close paren"
     },
     "ImpTimes108": {
-      "speech": "2, open paren, 3, open second paren, open third paren, 4 plus 5, close third paren, plus 6, close second paren, close paren"
+      "expected": "2, open paren, 3, open second paren, open third paren, 4 plus 5, close third paren, plus 6, close second paren, close paren"
     },
     "ImpTimes109": {
-      "speech": "2, open bracket, 3, open paren, open paren, 4 plus 5, close paren, plus 6, close paren, close bracket"
+      "expected": "2, open bracket, 3, open paren, open paren, 4 plus 5, close paren, plus 6, close paren, close bracket"
     },
     "ImpTimes110": {
-      "speech": "2, open bracket, 3, open paren, open second paren, 4 plus 5, close second paren, plus 6, close paren, close bracket"
+      "expected": "2, open bracket, 3, open paren, open second paren, 4 plus 5, close second paren, plus 6, close paren, close bracket"
     },
     "ImpTimes111": {
-      "speech": "2, the absolute value of x"
+      "expected": "2, the absolute value of x"
     },
     "ImpTimes112": {
-      "speech": "the absolute value of x, the absolute value of y"
+      "expected": "the absolute value of x, the absolute value of y"
     },
     "ImpTimes113": {
-      "speech": "the absolute value of x plus 1, the absolute value of y minus 1"
+      "expected": "the absolute value of x plus 1, the absolute value of y minus 1"
     },
     "ImpTimes114": {
-      "speech": "the absolute value of x plus 1, the absolute value of y, minus 1"
+      "expected": "the absolute value of x plus 1, the absolute value of y, minus 1"
     },
     "_comment6_": " No Implied Times and Silent Parenthesis Preferences both set",
     "ImpTimesSilPar001": {
-      "speech": "2, open paren, 3, close paren"
+      "expected": "2, open paren, 3, close paren"
     },
     "ImpTimesSilPar002": {
-      "speech": "2, open bracket, 3, close bracket"
+      "expected": "2, open bracket, 3, close bracket"
     },
     "ImpTimesSilPar003": {
-      "speech": "2 to the fourth power, open paren, 3, close paren"
+      "expected": "2 to the fourth power, open paren, 3, close paren"
     },
     "ImpTimesSilPar004": {
-      "speech": "2, open paren, 3 plus 4, close paren"
+      "expected": "2, open paren, 3 plus 4, close paren"
     },
     "ImpTimesSilPar005": {
-      "speech": "2, open bracket, 3 plus 4, close bracket"
+      "expected": "2, open bracket, 3 plus 4, close bracket"
     },
     "ImpTimesSilPar006": {
-      "speech": "open paren, 3, close paren, open paren, 2, close paren"
+      "expected": "open paren, 3, close paren, open paren, 2, close paren"
     },
     "ImpTimesSilPar007": {
-      "speech": "2, open paren, 3 plus 4, close paren, squared"
+      "expected": "2, open paren, 3 plus 4, close paren, squared"
     },
     "ImpTimesSilPar008": {
-      "speech": "open paren, 2 plus 7, close paren, open paren, 3 minus 6, close paren"
+      "expected": "open paren, 2 plus 7, close paren, open paren, 3 minus 6, close paren"
     },
     "ImpTimesSilPar009": {
-      "speech": "open bracket, 2 plus 7, close bracket, open bracket, 3 minus 6, close bracket"
+      "expected": "open bracket, 2 plus 7, close bracket, open bracket, 3 minus 6, close bracket"
     },
     "_comment7_": " TODO: (Simons) x is categorised as function!",
     "ImpTimesSilPar010": {
-      "speech": "x, open paren, y z, close paren"
+      "expected": "x, open paren, y z, close paren"
     },
     "ImpTimesSilPar011": {
-      "speech": "x, open paren, y plus z, close paren"
+      "expected": "x, open paren, y plus z, close paren"
     },
     "ImpTimesSilPar012": {
-      "speech": "2, open paren, y plus 1, close paren"
+      "expected": "2, open paren, y plus 1, close paren"
     },
     "ImpTimesSilPar013": {
-      "speech": "open paren, 2 minus 1, close paren, x"
+      "expected": "open paren, 2 minus 1, close paren, x"
     },
     "ImpTimesSilPar014": {
-      "speech": "p sub 1, open paren, 3 plus 7, close paren"
+      "expected": "p sub 1, open paren, 3 plus 7, close paren"
     },
     "ImpTimesSilPar015": {
-      "speech": "open paren, x plus y, close paren, to the negative 4 power, open paren, x minus y, close paren, to the negative 4 power"
+      "expected": "open paren, x plus y, close paren, to the negative 4 power, open paren, x minus y, close paren, to the negative 4 power"
     },
     "ImpTimesSilPar016": {
-      "speech": "2 raised to the 4, open paren, x plus y, close paren, power"
+      "expected": "2 raised to the 4, open paren, x plus y, close paren, power"
     },
     "ImpTimesSilPar017": {
       "_comment8_": " preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!",
-      "speech": "f of x, equals x squared, open paren, x plus 1, close paren"
+      "expected": "f of x, equals x squared, open paren, x plus 1, close paren"
     },
     "_comment9_": " TODO: (Simons) Need to be able to specify excluded preferences.",
     "ImpTimesSilPar018": {
-      "speech": "f, open paren, x, close paren, equals, x squared, open paren, x plus 1"
+      "expected": "f, open paren, x, close paren, equals, x squared, open paren, x plus 1"
     },
     "ImpTimesSilPar019": {
       "_comment10_": " preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!",
-      "speech": "the log of, open paren, x plus y, close paren, equals, log x log y"
+      "expected": "the log of, open paren, x plus y, close paren, equals, log x log y"
     },
     "ImpTimesSilPar020": {
-      "speech": "the 2 by 2 matrix. Row 1: 1, 3 Row 2: 5, 2. the 2 by 2 matrix. Row 1: 7, 4 Row 2: 0, 1"
+      "expected": "the 2 by 2 matrix. Row 1: 1, 3 Row 2: 5, 2. the 2 by 2 matrix. Row 1: 7, 4 Row 2: 0, 1"
     },
     "ImpTimesSilPar021": {
-      "speech": "2, open paren, 3, open paren, open paren, 4 plus 5, close paren, plus 6, close paren, close paren"
+      "expected": "2, open paren, 3, open paren, open paren, 4 plus 5, close paren, plus 6, close paren, close paren"
     },
     "ImpTimesSilPar022": {
-      "speech": "2, open paren, 3, open second paren, open third paren, 4 plus 5, close third paren, plus 6, close second paren, close paren"
+      "expected": "2, open paren, 3, open second paren, open third paren, 4 plus 5, close third paren, plus 6, close second paren, close paren"
     },
     "ImpTimesSilPar023": {
-      "speech": "2, open bracket, 3, open paren, open paren, 4 plus 5, close paren, plus 6, close paren, close bracket"
+      "expected": "2, open bracket, 3, open paren, open paren, 4 plus 5, close paren, plus 6, close paren, close bracket"
     },
     "ImpTimesSilPar024": {
-      "speech": "2, open bracket, 3, open paren, open second paren, 4 plus 5, close second paren, plus 6, close paren, close bracket"
+      "expected": "2, open bracket, 3, open paren, open second paren, 4 plus 5, close second paren, plus 6, close paren, close bracket"
     },
     "_comment11_": " Implied Times, Functions, or Something Else",
     "_comment12_": " TODO: QUESTION What is exact speech? From MathType?",
     "_comment13_": "       There is no preference ImpliedTimes_Rules. Reverted to Implied",
     "_comment14_": "       Times_Auto.",
     "Extra001": {
-      "speech": "A equals h of, open paren, the fraction with numerator, b sub 1, plus, b sub 2, and denominator 2, close paren"
+      "expected": "A equals h of, open paren, the fraction with numerator, b sub 1, plus, b sub 2, and denominator 2, close paren"
     },
     "Extra002": {
-      "speech": "A equals, h times, open paren, the fraction with numerator, b sub 1, plus, b sub 2, and denominator 2, close paren"
+      "expected": "A equals, h times, open paren, the fraction with numerator, b sub 1, plus, b sub 2, and denominator 2, close paren"
     },
     "Extra003": {
-      "speech": "a of 0, equals 0 times a equals 0"
+      "expected": "a of 0, equals 0 times a equals 0"
     },
     "Extra004": {
-      "speech": "a times 0, equals 0 times a equals 0"
+      "expected": "a times 0, equals 0 times a equals 0"
     },
     "Extra005": {
-      "speech": "a times negative 1, equals negative a"
+      "expected": "a times negative 1, equals negative a"
     },
     "Extra006": {
-      "speech": "a of negative 1, equals negative a"
+      "expected": "a of negative 1, equals negative a"
     },
     "_comment15_": " TODO: (Simons) a is categorised as function!",
     "Extra007": {
-      "speech": "a times b c, equals, a b times c"
+      "expected": "a times b c, equals, a b times c"
     },
     "_comment16_": " TODO: (Simons) a is categorised as function!",
     "Extra008": {
-      "speech": "a times, open paren, 1 over a, close paren, equals, 1"
+      "expected": "a times, open paren, 1 over a, close paren, equals, 1"
     },
     "_comment17_": " TODO: (Simons) a is categorised as function!",
     "Extra009": {
-      "speech": "negative u times v, equals u times negative v, equals negative u v"
+      "expected": "negative u times v, equals u times negative v, equals negative u v"
     },
     "Extra010": {
-      "speech": "B of, open paren, 2 comma 6, close paren"
+      "expected": "B of, open paren, 2 comma 6, close paren"
     },
     "Extra012": {
-      "speech": "B times, open paren, 2 comma 6, close paren"
+      "expected": "B times, open paren, 2 comma 6, close paren"
     },
     "_comment18_": " TODO: (Simons) Explore exact speech.",
     "Extra013": {
-      "speech": "point B, open paren, 2 comma 6, close paren"
+      "expected": "point B, open paren, 2 comma 6, close paren"
     },
     "Extra014": {
-      "speech": "p of w"
+      "expected": "p of w"
     },
     "Extra015": {
-      "speech": "x of t, equals 2 t, plus 4"
+      "expected": "x of t, equals 2 t, plus 4"
     },
     "Extra016": {
-      "speech": "k of x, equals, open paren, x plus 3, close paren, times, open paren, x minus 5, close paren"
+      "expected": "k of x, equals, open paren, x plus 3, close paren, times, open paren, x minus 5, close paren"
     },
     "_comment19_": " TODO: (Simons) a is categorised as function!",
     "Extra017": {
-      "speech": "3 a squared minus 12 a, equals, 3 a, times a, minus 3 a, times 4"
+      "expected": "3 a squared minus 12 a, equals, 3 a, times a, minus 3 a, times 4"
     },
     "Extra018": {
-      "speech": "T of t, equals, T sub s, plus, open paren, T sub 0, minus, T sub s, close paren, times e raised to the negative k t, power"
+      "expected": "T of t, equals, T sub s, plus, open paren, T sub 0, minus, T sub s, close paren, times e raised to the negative k t, power"
     },
     "Extra019": {
-      "speech": "V equals script l, w of 8",
+      "expected": "V equals script l, w of 8",
       "_comment20_": " w is considered a simple function.",
       "_comment21_": "var speech = 'V, equals, script l, w, times 8';"
     },
     "_comment22_": " TODO: (Simons) Explore exact speech.",
     "Extra020": {
-      "speech": "V, equals, l w, times 8"
+      "expected": "V, equals, l w, times 8"
     }
   }
 }

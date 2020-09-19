@@ -8,147 +8,147 @@
     "_comment1_": " Part 3: Adornments",
     "_comment2_": " Prime, Double Prime, and Triple Prime",
     "Prime001": {
-      "speech": "A Strich, B Strich"
+      "expected": "A Strich, B Strich"
     },
     "Prime002": {
-      "speech": "A zwei Strich, B zwei Strich"
+      "expected": "A zwei Strich, B zwei Strich"
     },
     "Prime003": {
-      "speech": "A drei Strich, B drei Strich"
+      "expected": "A drei Strich, B drei Strich"
     },
     "Prime004": {
-      "speech": "f Strich von x"
+      "expected": "f Strich von x"
     },
     "Prime005": {
-      "speech": "f zwei Strich von x"
+      "expected": "f zwei Strich von x"
     },
     "Prime006": {
-      "speech": "f drei Strich von x"
+      "expected": "f drei Strich von x"
     },
     "Prime007": {
-      "speech": "1 Fuß"
+      "expected": "1 Fuß"
     },
     "Prime008": {
-      "speech": "2 Fuß"
+      "expected": "2 Fuß"
     },
     "Prime009": {
-      "speech": "1 Zoll"
+      "expected": "1 Zoll"
     },
     "Prime010": {
-      "speech": "2 Zoll"
+      "expected": "2 Zoll"
     },
     "Prime011": {
-      "speech": "16 Fuß, 10 Zoll"
+      "expected": "16 Fuß, 10 Zoll"
     },
     "_comment3_": " TODO: (Simons) Better handling of degrees.",
     "Prime012": {
-      "speech": "45 Grad, 10 Minuten"
+      "expected": "45 Grad, 10 Minuten"
     },
     "Prime013": {
-      "speech": "x Grad, y Minuten"
+      "expected": "x Grad, y Minuten"
     },
     "Prime014": {
-      "speech": ""
+      "expected": ""
     },
     "Prime015": {
-      "speech": ""
+      "expected": ""
     },
     "Prime016": {
-      "speech": "1 Minute"
+      "expected": "1 Minute"
     },
     "Prime017": {
-      "speech": "x Minuten"
+      "expected": "x Minuten"
     },
     "Prime018": {
-      "speech": "2 Minuten"
+      "expected": "2 Minuten"
     },
     "Prime019": {
-      "speech": "1 Sekunde"
+      "expected": "1 Sekunde"
     },
     "Prime020": {
-      "speech": "x Sekunden"
+      "expected": "x Sekunden"
     },
     "Prime021": {
-      "speech": "2 Sekunden"
+      "expected": "2 Sekunden"
     },
     "Prime022": {
-      "speech": "16 Minuten, 10 Sekunden"
+      "expected": "16 Minuten, 10 Sekunden"
     },
     "Prime023": {
-      "speech": "x Minuten, y Sekunden"
+      "expected": "x Minuten, y Sekunden"
     },
     "Prime024": {
-      "speech": "45 Grad, 10 Minuten"
+      "expected": "45 Grad, 10 Minuten"
     },
     "Prime025": {
-      "speech": "45 Grad, 10 Minuten, 25 Sekunden"
+      "expected": "45 Grad, 10 Minuten, 25 Sekunden"
     },
     "Prime026": {
-      "speech": "A Strich, B Strich"
+      "expected": "A Strich, B Strich"
     },
     "Prime027": {
-      "speech": "A zwei Strich, B zwei Strich"
+      "expected": "A zwei Strich, B zwei Strich"
     },
     "Prime028": {
-      "speech": "A drei Strich, B drei Strich"
+      "expected": "A drei Strich, B drei Strich"
     },
     "Prime029": {
-      "speech": "f Strich von x"
+      "expected": "f Strich von x"
     },
     "Prime030": {
-      "speech": "f zwei Strich von x"
+      "expected": "f zwei Strich von x"
     },
     "Prime031": {
-      "speech": "f drei Strich von x"
+      "expected": "f drei Strich von x"
     },
     "Prime032": {
-      "speech": "1 Fuß"
+      "expected": "1 Fuß"
     },
     "Prime033": {
-      "speech": "x Fuß"
+      "expected": "x Fuß"
     },
     "Prime034": {
-      "speech": "2 Fuß"
+      "expected": "2 Fuß"
     },
     "Prime035": {
-      "speech": "1 Zoll"
+      "expected": "1 Zoll"
     },
     "Prime036": {
-      "speech": "x Zoll"
+      "expected": "x Zoll"
     },
     "Prime037": {
-      "speech": "2 Zoll"
+      "expected": "2 Zoll"
     },
     "_comment4_": " TODO: (Simons) Rewrite prime etc into superscript.",
     "Prime038": {
-      "speech": ""
+      "expected": ""
     },
     "Prime039": {
-      "speech": ""
+      "expected": ""
     },
     "Prime040": {
-      "speech": ""
+      "expected": ""
     },
     "Prime041": {
-      "speech": ""
+      "expected": ""
     },
     "Prime042": {
-      "speech": "A Strich, B Strich"
+      "expected": "A Strich, B Strich"
     },
     "Prime043": {
-      "speech": "A zwei Strich, B zwei Strich"
+      "expected": "A zwei Strich, B zwei Strich"
     },
     "Prime044": {
-      "speech": "A drei Strich, B drei Strich"
+      "expected": "A drei Strich, B drei Strich"
     },
     "Prime045": {
-      "speech": "f Strich von x"
+      "expected": "f Strich von x"
     },
     "Prime046": {
-      "speech": "f zwei Strich von x"
+      "expected": "f zwei Strich von x"
     },
     "Prime047": {
-      "speech": "f drei Strich von x"
+      "expected": "f drei Strich von x"
     },
     "_comment5_": " Combinations and Permutations",
     "_comment6_": " These 8 tests come out of the clearspeak documents from MathType.  The MathML",
@@ -157,137 +157,137 @@
     "_comment9_": " TODO: (Simons) Have a cleanup heuristic to combine multiscripts with",
     "_comment10_": "                sub/superscripts.",
     "CombPerm001": {
-      "speech": ""
+      "expected": ""
     },
     "CombPerm002": {
-      "speech": ""
+      "expected": ""
     },
     "CombPerm003": {
-      "speech": ""
+      "expected": ""
     },
     "CombPerm004": {
-      "speech": ""
+      "expected": ""
     },
     "CombPerm005": {
-      "speech": ""
+      "expected": ""
     },
     "CombPerm006": {
-      "speech": ""
+      "expected": ""
     },
     "CombPerm007": {
-      "speech": ""
+      "expected": ""
     },
     "CombPerm008": {
-      "speech": ""
+      "expected": ""
     },
     "_comment11_": " Cleaned up tests with the correct usage of multiscript elements.",
     "CombPerm001a": {
-      "speech": "n C r"
+      "expected": "n C r"
     },
     "CombPerm002a": {
-      "speech": "n P r"
+      "expected": "n P r"
     },
     "CombPerm003a": {
-      "speech": "10 C 3"
+      "expected": "10 C 3"
     },
     "CombPerm004a": {
-      "speech": "10 P 3"
+      "expected": "10 P 3"
     },
     "CombPerm005a": {
-      "speech": "r aus n"
+      "expected": "r aus n"
     },
     "CombPerm006a": {
-      "speech": "r Permutionen von n"
+      "expected": "r Permutionen von n"
     },
     "CombPerm007a": {
-      "speech": "3 aus 10"
+      "expected": "3 aus 10"
     },
     "CombPerm008a": {
-      "speech": "3 Permutionen von 10"
+      "expected": "3 Permutionen von 10"
     },
     "_comment12_": " Bar",
     "Bar001": {
-      "speech": "f Überstrich"
+      "expected": "f Überstrich"
     },
     "Bar002": {
-      "speech": "f Überstrich von x"
+      "expected": "f Überstrich von x"
     },
     "Bar003": {
-      "speech": "f Index 1, Überstrich"
+      "expected": "f Index 1, Überstrich"
     },
     "Bar004": {
-      "speech": "f Index 1, Überstrich von x"
+      "expected": "f Index 1, Überstrich von x"
     },
     "Bar005": {
-      "speech": "z Überstrich"
+      "expected": "z Überstrich"
     },
     "Bar006": {
-      "speech": "Dezimalbruch 0 Komma mit Periode 3"
+      "expected": "Dezimalbruch 0 Komma mit Periode 3"
     },
     "Bar007": {
-      "speech": "Dezimalbruch 0 Komma mit Periode 1 2"
+      "expected": "Dezimalbruch 0 Komma mit Periode 1 2"
     },
     "Bar008": {
-      "speech": "Dezimalbruch 2 Komma mit Periode 1 3 4"
+      "expected": "Dezimalbruch 2 Komma mit Periode 1 3 4"
     },
     "Bar009": {
-      "speech": "Dezimalbruch Komma 1 3 mit Periode 4 6 7"
+      "expected": "Dezimalbruch Komma 1 3 mit Periode 4 6 7"
     },
     "Bar010": {
-      "speech": "Dezimalbruch 2 5 Komma 1 2 mit Periode 6 3 2"
+      "expected": "Dezimalbruch 2 5 Komma 1 2 mit Periode 6 3 2"
     },
     "Bar011": {
-      "speech": "z, z Überstrich"
+      "expected": "z, z Überstrich"
     },
     "Bar012": {
-      "speech": "die Strecke C D"
+      "expected": "die Strecke C D"
     },
     "Bar013": {
-      "speech": "die Strecke C Strich D Strich"
+      "expected": "die Strecke C Strich D Strich"
     },
     "Bar014": {
-      "speech": "die Strecke C zwei Strich D zwei Strich"
+      "expected": "die Strecke C zwei Strich D zwei Strich"
     },
     "Bar015": {
-      "speech": "die Strecke C drei Strich D drei Strich"
+      "expected": "die Strecke C drei Strich D drei Strich"
     },
     "Bar016": {
-      "speech": "die komplexe Konjugation von z"
+      "expected": "die komplexe Konjugation von z"
     },
     "Bar017": {
-      "speech": "z, die komplexe Konjugation von z"
+      "expected": "z, die komplexe Konjugation von z"
     },
     "Bar018": {
-      "speech": "die komplexe Konjugation von 3 minus 2 i, ist gleich 3 plus 2 i"
+      "expected": "die komplexe Konjugation von 3 minus 2 i, ist gleich 3 plus 2 i"
     },
     "_comment13_": " Added! Test that still decimal period still works.",
     "Bar006a": {
-      "speech": "Dezimalbruch 0 Komma mit Periode 3"
+      "expected": "Dezimalbruch 0 Komma mit Periode 3"
     },
     "Bar007a": {
-      "speech": "Dezimalbruch 0 Komma mit Periode 1 2"
+      "expected": "Dezimalbruch 0 Komma mit Periode 1 2"
     },
     "Bar008a": {
-      "speech": "Dezimalbruch 2 Komma mit Periode 1 3 4"
+      "expected": "Dezimalbruch 2 Komma mit Periode 1 3 4"
     },
     "Bar009a": {
-      "speech": "Dezimalbruch Komma 1 3 mit Periode 4 6 7"
+      "expected": "Dezimalbruch Komma 1 3 mit Periode 4 6 7"
     },
     "Bar010a": {
-      "speech": "Dezimalbruch 2 5 Komma 1 2 mit Periode 6 3 2"
+      "expected": "Dezimalbruch 2 5 Komma 1 2 mit Periode 6 3 2"
     },
     "_comment14_": " Equals Sign with Adornments",
     "Equal001": {
-      "speech": "ist definiert als"
+      "expected": "ist definiert als"
     },
     "Equal002": {
-      "speech": "Klammer auf, f verknüpft mit g, Klammer zu, von x, ist definiert als, f von, g von x"
+      "expected": "Klammer auf, f verknüpft mit g, Klammer zu, von x, ist definiert als, f von, g von x"
     },
     "Equal003": {
-      "speech": "ist gleich Zeichen mit darüberstehendem Fragezeichen"
+      "expected": "ist gleich Zeichen mit darüberstehendem Fragezeichen"
     },
     "Equal004": {
-      "speech": "x plus 2 ist gleich Zeichen mit darüberstehendem Fragezeichen 4"
+      "expected": "x plus 2 ist gleich Zeichen mit darüberstehendem Fragezeichen 4"
     }
   }
 }

@@ -7,55 +7,55 @@
   "tests": {
     "_comment1_": " Sets Enclosed in Set Brackets",
     "Set001": {
-      "speech": "ensemble des x est un les nombres entiers tel que 2 inférieur à x inférieur à 7"
+      "expected": "ensemble des x est un les nombres entiers tel que 2 inférieur à x inférieur à 7"
     },
     "Set002": {
-      "speech": "ensemble des x tel que, la valeur absolue de x, supérieur à 2"
+      "expected": "ensemble des x tel que, la valeur absolue de x, supérieur à 2"
     },
     "Set003": {
-      "speech": "ensemble des x est un les nombres entiers tel que 2 inférieur à x inférieur à 7"
+      "expected": "ensemble des x est un les nombres entiers tel que 2 inférieur à x inférieur à 7"
     },
     "Set004": {
-      "speech": "ensemble des x est un les nombres entier naturel tel que x is an even number"
+      "expected": "ensemble des x est un les nombres entier naturel tel que x is an even number"
     },
     "Set005": {
-      "speech": "ensemble 1 virgule 2 virgule 3"
+      "expected": "ensemble 1 virgule 2 virgule 3"
     },
     "Set006": {
-      "speech": "ensemble 1 virgule 112 virgule 1 virgule 253"
+      "expected": "ensemble 1 virgule 112 virgule 1 virgule 253"
     },
     "Set007": {
-      "speech": "ensemble de x est un les nombres entiers tel que 2 inférieur à x inférieur à 7"
+      "expected": "ensemble de x est un les nombres entiers tel que 2 inférieur à x inférieur à 7"
     },
     "Set008": {
-      "speech": "ensemble de x tel que, la valeur absolue de x, supérieur à 2"
+      "expected": "ensemble de x tel que, la valeur absolue de x, supérieur à 2"
     },
     "Set009": {
-      "speech": "ensemble de x est un les nombres entiers tel que 2 inférieur à x inférieur à 7"
+      "expected": "ensemble de x est un les nombres entiers tel que 2 inférieur à x inférieur à 7"
     },
     "Set010": {
-      "speech": "ensemble 1 virgule 2 virgule 3"
+      "expected": "ensemble 1 virgule 2 virgule 3"
     },
     "Set011": {
-      "speech": "ensemble 1 virgule 112 virgule 1 virgule 253"
+      "expected": "ensemble 1 virgule 112 virgule 1 virgule 253"
     },
     "Set012": {
-      "speech": "ensemble des x est un les nombres entiers tel que 2 inférieur à x inférieur à 7"
+      "expected": "ensemble des x est un les nombres entiers tel que 2 inférieur à x inférieur à 7"
     },
     "Set013": {
-      "speech": "ensemble des x tel que, la valeur absolue de x, supérieur à 2"
+      "expected": "ensemble des x tel que, la valeur absolue de x, supérieur à 2"
     },
     "Set014": {
-      "speech": "ensemble des x est un les nombres entiers tel que 2 inférieur à x inférieur à 7"
+      "expected": "ensemble des x est un les nombres entiers tel que 2 inférieur à x inférieur à 7"
     },
     "Set015": {
-      "speech": "ensemble des x est un les nombres entier naturel tel que x is an even number"
+      "expected": "ensemble des x est un les nombres entier naturel tel que x is an even number"
     },
     "Set016": {
-      "speech": "1 virgule 2 virgule 3"
+      "expected": "1 virgule 2 virgule 3"
     },
     "Set017": {
-      "speech": "1 virgule 112 virgule 1 virgule 253"
+      "expected": "1 virgule 112 virgule 1 virgule 253"
     }
   }
 }

@@ -7,418 +7,418 @@
   "tests": {
     "_comment1_": " Fractions",
     "Frac001": {
-      "speech": "one half"
+      "expected": "one half"
     },
     "Frac002": {
-      "speech": "12 over 32"
+      "expected": "12 over 32"
     },
     "Frac002a": {
-      "speech": "x over y"
+      "expected": "x over y"
     },
     "Frac002b": {
-      "speech": "2 x over 3 y"
+      "expected": "2 x over 3 y"
     },
     "Frac002c": {
-      "speech": "x y over c d"
+      "expected": "x y over c d"
     },
     "Frac002d": {
-      "speech": "one half over one third"
+      "expected": "one half over one third"
     },
     "Frac002e": {
-      "speech": "negative x over y"
+      "expected": "negative x over y"
     },
     "Frac002f": {
-      "speech": "negative 2 x over 3 y"
+      "expected": "negative 2 x over 3 y"
     },
     "Frac002g": {
-      "speech": "x y over negative c d"
+      "expected": "x y over negative c d"
     },
     "Frac002h": {
-      "speech": "one half over negative one third"
+      "expected": "one half over negative one third"
     },
     "Frac003": {
-      "speech": "the fraction with numerator 2 plus 3, and denominator 13"
+      "expected": "the fraction with numerator 2 plus 3, and denominator 13"
     },
     "Frac004": {
-      "speech": "the fraction with numerator x plus y, and denominator 2"
+      "expected": "the fraction with numerator x plus y, and denominator 2"
     },
     "Frac005": {
-      "speech": "the fraction with numerator x plus y, and denominator x minus y"
+      "expected": "the fraction with numerator x plus y, and denominator x minus y"
     },
     "Frac006": {
-      "speech": "the fraction with numerator x plus y, and denominator x minus y, plus two thirds"
+      "expected": "the fraction with numerator x plus y, and denominator x minus y, plus two thirds"
     },
     "Frac007": {
-      "speech": "miles over gallon"
+      "expected": "miles over gallon"
     },
     "Frac008": {
-      "speech": "2 miles over 3 gallons"
+      "expected": "2 miles over 3 gallons"
     },
     "Frac009": {
-      "speech": "1 over 2"
+      "expected": "1 over 2"
     },
     "Frac010": {
-      "speech": "12 over 32"
+      "expected": "12 over 32"
     },
     "Frac011": {
-      "speech": "2 plus 3 over 13"
+      "expected": "2 plus 3 over 13"
     },
     "Frac012": {
-      "speech": "x plus y over 2"
+      "expected": "x plus y over 2"
     },
     "Frac013": {
-      "speech": "x plus y over x minus y"
+      "expected": "x plus y over x minus y"
     },
     "Frac014": {
-      "speech": "x plus y over x minus y, plus, 2 over 3"
+      "expected": "x plus y over x minus y, plus, 2 over 3"
     },
     "Frac015": {
-      "speech": "miles over gallon"
+      "expected": "miles over gallon"
     },
     "Frac016": {
-      "speech": "2 miles over 3 gallons"
+      "expected": "2 miles over 3 gallons"
     },
     "Frac017": {
-      "speech": "1 over 2, end fraction"
+      "expected": "1 over 2, end fraction"
     },
     "Frac018": {
-      "speech": "12 over 32, end fraction"
+      "expected": "12 over 32, end fraction"
     },
     "Frac019": {
-      "speech": "2 plus 3 over 13, end fraction"
+      "expected": "2 plus 3 over 13, end fraction"
     },
     "Frac020": {
-      "speech": "x plus y over 2, end fraction"
+      "expected": "x plus y over 2, end fraction"
     },
     "Frac021": {
-      "speech": "x plus y over x minus y, end fraction"
+      "expected": "x plus y over x minus y, end fraction"
     },
     "Frac022": {
-      "speech": "x plus y over x minus y, end fraction, plus, 2 over 3, end fraction"
+      "expected": "x plus y over x minus y, end fraction, plus, 2 over 3, end fraction"
     },
     "Frac023": {
-      "speech": "miles over gallons, end fraction"
+      "expected": "miles over gallons, end fraction"
     },
     "Frac024": {
-      "speech": "2 miles over 3 gallons, end fraction"
+      "expected": "2 miles over 3 gallons, end fraction"
     },
     "Frac025": {
-      "speech": "the fraction with numerator 1, and denominator 2, end fraction"
+      "expected": "the fraction with numerator 1, and denominator 2, end fraction"
     },
     "Frac026": {
-      "speech": "the fraction with numerator 12, and denominator 32, end fraction"
+      "expected": "the fraction with numerator 12, and denominator 32, end fraction"
     },
     "Frac027": {
-      "speech": "the fraction with numerator 2 plus 3, and denominator 13, end fraction"
+      "expected": "the fraction with numerator 2 plus 3, and denominator 13, end fraction"
     },
     "Frac028": {
-      "speech": "the fraction with numerator x plus y, and denominator 2, end fraction"
+      "expected": "the fraction with numerator x plus y, and denominator 2, end fraction"
     },
     "Frac029": {
-      "speech": "the fraction with numerator x plus y, and denominator x minus y, end fraction"
+      "expected": "the fraction with numerator x plus y, and denominator x minus y, end fraction"
     },
     "Frac030": {
-      "speech": "the fraction with numerator x plus y, and denominator x minus y, end fraction, plus, the fraction with numerator 2, and denominator 3, end fraction"
+      "expected": "the fraction with numerator x plus y, and denominator x minus y, end fraction, plus, the fraction with numerator 2, and denominator 3, end fraction"
     },
     "Frac031": {
-      "speech": "the fraction with numerator miles, and denominator gallon, end fraction"
+      "expected": "the fraction with numerator miles, and denominator gallon, end fraction"
     },
     "Frac032": {
-      "speech": "the fraction with numerator 1, and denominator 2"
+      "expected": "the fraction with numerator 1, and denominator 2"
     },
     "Frac033": {
-      "speech": "the fraction with numerator 12, and denominator 32"
+      "expected": "the fraction with numerator 12, and denominator 32"
     },
     "Frac034": {
-      "speech": "the fraction with numerator 2 plus 3, and denominator 13"
+      "expected": "the fraction with numerator 2 plus 3, and denominator 13"
     },
     "Frac035": {
-      "speech": "the fraction with numerator x plus y, and denominator 2"
+      "expected": "the fraction with numerator x plus y, and denominator 2"
     },
     "Frac036": {
-      "speech": "the fraction with numerator x plus y, and denominator x minus y"
+      "expected": "the fraction with numerator x plus y, and denominator x minus y"
     },
     "Frac037": {
-      "speech": "the fraction with numerator x plus y, and denominator x minus y, plus, the fraction with numerator 2, and denominator 3"
+      "expected": "the fraction with numerator x plus y, and denominator x minus y, plus, the fraction with numerator 2, and denominator 3"
     },
     "Frac038": {
-      "speech": "the fraction with numerator miles, and denominator gallon"
+      "expected": "the fraction with numerator miles, and denominator gallon"
     },
     "Frac039": {
-      "speech": "the fraction with numerator 2 miles, and denominator 3 gallons"
+      "expected": "the fraction with numerator 2 miles, and denominator 3 gallons"
     },
     "Frac040": {
-      "speech": "the fraction 1 over 2"
+      "expected": "the fraction 1 over 2"
     },
     "Frac041": {
-      "speech": "the fraction 12 over 32"
+      "expected": "the fraction 12 over 32"
     },
     "Frac042": {
-      "speech": "the fraction 2 plus 3 over 13"
+      "expected": "the fraction 2 plus 3 over 13"
     },
     "Frac043": {
-      "speech": "the fraction x plus y over 2"
+      "expected": "the fraction x plus y over 2"
     },
     "Frac044": {
-      "speech": "the fraction x plus y over x minus y"
+      "expected": "the fraction x plus y over x minus y"
     },
     "Frac045": {
-      "speech": "the fraction x plus y over x minus y, plus, the fraction 2 over 3"
+      "expected": "the fraction x plus y over x minus y, plus, the fraction 2 over 3"
     },
     "Frac046": {
-      "speech": "the fraction miles over gallon"
+      "expected": "the fraction miles over gallon"
     },
     "Frac047": {
-      "speech": "the fraction 2 miles over 3 gallons"
+      "expected": "the fraction 2 miles over 3 gallons"
     },
     "Frac048": {
-      "speech": "1 per 2"
+      "expected": "1 per 2"
     },
     "Frac049": {
-      "speech": "12 per 32"
+      "expected": "12 per 32"
     },
     "Frac050": {
-      "speech": "2 plus 3 per 13"
+      "expected": "2 plus 3 per 13"
     },
     "Frac051": {
-      "speech": "x plus y per 2"
+      "expected": "x plus y per 2"
     },
     "Frac052": {
-      "speech": "x plus y per x minus y"
+      "expected": "x plus y per x minus y"
     },
     "Frac053": {
-      "speech": "x plus y per x minus y, plus, 2 per 3"
+      "expected": "x plus y per x minus y, plus, 2 per 3"
     },
     "Frac054": {
-      "speech": "miles per gallon"
+      "expected": "miles per gallon"
     },
     "Frac055": {
-      "speech": "2 miles per 3 gallons"
+      "expected": "2 miles per 3 gallons"
     },
     "Frac056": {
-      "speech": "one half"
+      "expected": "one half"
     },
     "Frac057": {
-      "speech": "twelve thirty seconds"
+      "expected": "twelve thirty seconds"
     },
     "Frac058": {
-      "speech": "the fraction with numerator 2 plus 3, and denominator 13"
+      "expected": "the fraction with numerator 2 plus 3, and denominator 13"
     },
     "Frac059": {
-      "speech": "the fraction with numerator x plus y, and denominator 2"
+      "expected": "the fraction with numerator x plus y, and denominator 2"
     },
     "Frac060": {
-      "speech": "the fraction with numerator x plus y, and denominator x minus y"
+      "expected": "the fraction with numerator x plus y, and denominator x minus y"
     },
     "Frac061": {
-      "speech": "the fraction with numerator x plus y, and denominator x minus y, plus two thirds"
+      "expected": "the fraction with numerator x plus y, and denominator x minus y, plus two thirds"
     },
     "Frac062": {
-      "speech": "miles over gallon"
+      "expected": "miles over gallon"
     },
     "Frac063": {
-      "speech": "2 miles over 3 gallons"
+      "expected": "2 miles over 3 gallons"
     },
     "Frac064": {
-      "speech": "one half"
+      "expected": "one half"
     },
     "Frac065": {
-      "speech": "12 over 32, end fraction"
+      "expected": "12 over 32, end fraction"
     },
     "Frac066": {
-      "speech": "the fraction with numerator 2 plus 3, and denominator 13, end fraction"
+      "expected": "the fraction with numerator 2 plus 3, and denominator 13, end fraction"
     },
     "Frac067": {
-      "speech": "the fraction with numerator x plus y, and denominator 2, end fraction"
+      "expected": "the fraction with numerator x plus y, and denominator 2, end fraction"
     },
     "Frac068": {
-      "speech": "the fraction with numerator x plus y, and denominator x minus y, end fraction"
+      "expected": "the fraction with numerator x plus y, and denominator x minus y, end fraction"
     },
     "Frac069": {
-      "speech": "the fraction with numerator x plus y, and denominator x minus y, end fraction, plus two thirds"
+      "expected": "the fraction with numerator x plus y, and denominator x minus y, end fraction, plus two thirds"
     },
     "Frac070": {
-      "speech": "miles over gallons"
+      "expected": "miles over gallons"
     },
     "Frac071": {
-      "speech": "2 miles over 3 gallons"
+      "expected": "2 miles over 3 gallons"
     },
     "_comment2_": " Fraction (with Text in Numerator and/or denominator)",
     "FrTxt001": {
-      "speech": "2 miles over 3 gallons"
+      "expected": "2 miles over 3 gallons"
     },
     "FrTxt002": {
-      "speech": "rise over run"
+      "expected": "rise over run"
     },
     "FrTxt003": {
-      "speech": "successful outcomes over total outcomes"
+      "expected": "successful outcomes over total outcomes"
     },
     "FrTxt004": {
-      "speech": "6 ways of rolling a 7 over 36 ways of rolling the pair of dice"
+      "expected": "6 ways of rolling a 7 over 36 ways of rolling the pair of dice"
     },
     "_comment3_": " Nested Fractions",
     "NestFrac001": {
-      "speech": "one half over one third"
+      "expected": "one half over one third"
     },
     "NestFrac002": {
-      "speech": "the fraction with numerator 1, and denominator, 2 over one third"
+      "expected": "the fraction with numerator 1, and denominator, 2 over one third"
     },
     "NestFrac003": {
-      "speech": "one half over 3"
+      "expected": "one half over 3"
     },
     "NestFrac004": {
-      "speech": "1 over two thirds"
+      "expected": "1 over two thirds"
     },
     "NestFrac005": {
-      "speech": "the fraction with numerator, 11 over 32, and denominator, 16 over 51"
+      "expected": "the fraction with numerator, 11 over 32, and denominator, 16 over 51"
     },
     "NestFrac006": {
-      "speech": "the fraction with numerator 11, and denominator, the fraction with numerator 32, and denominator, 16 over 51"
+      "expected": "the fraction with numerator 11, and denominator, the fraction with numerator 32, and denominator, 16 over 51"
     },
     "NestFrac007": {
-      "speech": "the fraction with numerator 1 plus, 4 over x, and denominator 2"
+      "expected": "the fraction with numerator 1 plus, 4 over x, and denominator 2"
     },
     "NestFrac008": {
-      "speech": "the fraction with numerator 3, and denominator 2 plus, 4 over x"
+      "expected": "the fraction with numerator 3, and denominator 2 plus, 4 over x"
     },
     "NestFrac009": {
-      "speech": "the fraction with numerator, 10 over 22, and denominator one half"
+      "expected": "the fraction with numerator, 10 over 22, and denominator one half"
     },
     "NestFrac010": {
-      "speech": "the fraction with numerator 1 plus two thirds, and denominator 1 minus two thirds"
+      "expected": "the fraction with numerator 1 plus two thirds, and denominator 1 minus two thirds"
     },
     "NestFrac011": {
-      "speech": "the fraction with numerator 1 plus, x over 2, and denominator 1 minus, x over 2"
+      "expected": "the fraction with numerator 1 plus, x over 2, and denominator 1 minus, x over 2"
     },
     "NestFrac012": {
-      "speech": "the fraction with numerator, the fraction with numerator x plus 1, and denominator x minus 1, plus 1, and denominator x plus 1"
+      "expected": "the fraction with numerator, the fraction with numerator x plus 1, and denominator x minus 1, plus 1, and denominator x plus 1"
     },
     "NestFrac013": {
-      "speech": "the fraction with numerator, the fraction with numerator x plus 1, and denominator x minus 4, plus one half, and denominator x plus, 1 over 16"
+      "expected": "the fraction with numerator, the fraction with numerator x plus 1, and denominator x minus 4, plus one half, and denominator x plus, 1 over 16"
     },
     "NestFrac014": {
-      "speech": "1 plus, the fraction with numerator x, and denominator 1 plus, 2 over x"
+      "expected": "1 plus, the fraction with numerator x, and denominator 1 plus, 2 over x"
     },
     "NestFrac015": {
-      "speech": "1 plus, the fraction with numerator x plus 3, and denominator 1 plus, the fraction with numerator 2, and denominator x plus 3"
+      "expected": "1 plus, the fraction with numerator x plus 3, and denominator 1 plus, the fraction with numerator 2, and denominator x plus 3"
     },
     "NestFrac016": {
-      "speech": "1 plus, the fraction with numerator 1, and denominator 1 plus, the fraction with numerator 1, and denominator 1 plus, the fraction with numerator 1, and denominator 1 plus 1"
+      "expected": "1 plus, the fraction with numerator 1, and denominator 1 plus, the fraction with numerator 1, and denominator 1 plus, the fraction with numerator 1, and denominator 1 plus 1"
     },
     "NestFrac017": {
-      "speech": "1 plus, the fraction with numerator 1, and denominator 1 plus, the fraction with numerator 1, and denominator 1 plus, the fraction with numerator 1, and denominator 1 plus dot dot dot"
+      "expected": "1 plus, the fraction with numerator 1, and denominator 1 plus, the fraction with numerator 1, and denominator 1 plus, the fraction with numerator 1, and denominator 1 plus dot dot dot"
     },
     "NestFrac018": {
-      "speech": "a sub 0, plus, the fraction with numerator 1, and denominator, a sub 1, plus, the fraction with numerator 1, and denominator, a sub 2, plus, the fraction with numerator 1, and denominator, a sub 3, plus dot dot dot"
+      "expected": "a sub 0, plus, the fraction with numerator 1, and denominator, a sub 1, plus, the fraction with numerator 1, and denominator, a sub 2, plus, the fraction with numerator 1, and denominator, a sub 3, plus dot dot dot"
     },
     "NestFrac019": {
-      "speech": "one half over one third"
+      "expected": "one half over one third"
     },
     "NestFrac020": {
-      "speech": "the fraction with numerator 1, and denominator, 2 over one third, end fraction"
+      "expected": "the fraction with numerator 1, and denominator, 2 over one third, end fraction"
     },
     "NestFrac021": {
-      "speech": "one half over 3, end fraction"
+      "expected": "one half over 3, end fraction"
     },
     "NestFrac022": {
-      "speech": "1 over two thirds, end fraction"
+      "expected": "1 over two thirds, end fraction"
     },
     "NestFrac023": {
-      "speech": "the fraction with numerator, 11 over 32, and denominator, 16 over 51, end fraction"
+      "expected": "the fraction with numerator, 11 over 32, and denominator, 16 over 51, end fraction"
     },
     "NestFrac024": {
-      "speech": "the fraction with numerator 11, and denominator, the fraction with numerator 32, and denominator, 16 over 51, end fraction"
+      "expected": "the fraction with numerator 11, and denominator, the fraction with numerator 32, and denominator, 16 over 51, end fraction"
     },
     "NestFrac025": {
-      "speech": "the fraction with numerator 1 plus, 4 over x, and denominator 2, end fraction"
+      "expected": "the fraction with numerator 1 plus, 4 over x, and denominator 2, end fraction"
     },
     "NestFrac026": {
-      "speech": "the fraction with numerator 3, and denominator 2 plus, 4 over x, end fraction"
+      "expected": "the fraction with numerator 3, and denominator 2 plus, 4 over x, end fraction"
     },
     "NestFrac027": {
-      "speech": "the fraction with numerator, 10 over 22, and denominator one half, end fraction"
+      "expected": "the fraction with numerator, 10 over 22, and denominator one half, end fraction"
     },
     "NestFrac028": {
-      "speech": "the fraction with numerator 1 plus two thirds, and denominator 1 minus two thirds, end fraction"
+      "expected": "the fraction with numerator 1 plus two thirds, and denominator 1 minus two thirds, end fraction"
     },
     "NestFrac029": {
-      "speech": "the fraction with numerator 1 plus, x over 2, and denominator 1 minus, x over 2, end fraction"
+      "expected": "the fraction with numerator 1 plus, x over 2, and denominator 1 minus, x over 2, end fraction"
     },
     "NestFrac030": {
-      "speech": "the fraction with numerator, the fraction with numerator x plus 1, and denominator x minus 1, plus 1, and denominator x plus 1, end fraction"
+      "expected": "the fraction with numerator, the fraction with numerator x plus 1, and denominator x minus 1, plus 1, and denominator x plus 1, end fraction"
     },
     "NestFrac031": {
-      "speech": "the fraction with numerator, the fraction with numerator x plus 1, and denominator x minus 4, plus one half, and denominator x plus, 1 over 16, end fraction"
+      "expected": "the fraction with numerator, the fraction with numerator x plus 1, and denominator x minus 4, plus one half, and denominator x plus, 1 over 16, end fraction"
     },
     "NestFrac032": {
-      "speech": "1 plus, the fraction with numerator x, and denominator 1 plus, 2 over x, end fraction"
+      "expected": "1 plus, the fraction with numerator x, and denominator 1 plus, 2 over x, end fraction"
     },
     "NestFrac033": {
-      "speech": "1 plus, the fraction with numerator x plus 3, and denominator 1 plus, the fraction with numerator 2, and denominator x plus 3, end fraction"
+      "expected": "1 plus, the fraction with numerator x plus 3, and denominator 1 plus, the fraction with numerator 2, and denominator x plus 3, end fraction"
     },
     "NestFrac034": {
-      "speech": "1 plus, the fraction with numerator 1, and denominator 1 plus, the fraction with numerator 1, and denominator 1 plus, the fraction with numerator 1, and denominator 1 plus 1, end fraction"
+      "expected": "1 plus, the fraction with numerator 1, and denominator 1 plus, the fraction with numerator 1, and denominator 1 plus, the fraction with numerator 1, and denominator 1 plus 1, end fraction"
     },
     "NestFrac035": {
-      "speech": "1 plus, the fraction with numerator 1, and denominator 1 plus, the fraction with numerator 1, and denominator 1 plus, the fraction with numerator 1, and denominator 1 plus dot dot dot, end fraction"
+      "expected": "1 plus, the fraction with numerator 1, and denominator 1 plus, the fraction with numerator 1, and denominator 1 plus, the fraction with numerator 1, and denominator 1 plus dot dot dot, end fraction"
     },
     "NestFrac036": {
-      "speech": "a sub 0, plus, the fraction with numerator 1, and denominator, a sub 1, plus, the fraction with numerator 1, and denominator, a sub 2, plus, the fraction with numerator 1, and denominator, a sub 3, plus dot dot dot, end fraction"
+      "expected": "a sub 0, plus, the fraction with numerator 1, and denominator, a sub 1, plus, the fraction with numerator 1, and denominator, a sub 2, plus, the fraction with numerator 1, and denominator, a sub 3, plus dot dot dot, end fraction"
     },
     "_comment4_": " Fractions with Functions",
     "Fracfunct001": {
-      "speech": "f of x, over g of x"
+      "expected": "f of x, over g of x"
     },
     "Fracfunct002": {
-      "speech": "the fraction with numerator f of x, plus g of x, and denominator g of x"
+      "expected": "the fraction with numerator f of x, plus g of x, and denominator g of x"
     },
     "Fracfunct003": {
-      "speech": "the fraction with numerator f of, open paren, x plus 1, close paren, and denominator g of x"
+      "expected": "the fraction with numerator f of, open paren, x plus 1, close paren, and denominator g of x"
     },
     "Fracfunct004": {
-      "speech": "f of x, over 2"
+      "expected": "f of x, over 2"
     },
     "Fracfunct005": {
-      "speech": "2 over f of x"
+      "expected": "2 over f of x"
     },
     "Fracfunct006": {
-      "speech": "the fraction with numerator 2, and denominator g of x, plus g of, open paren, x plus 1, close paren"
+      "expected": "the fraction with numerator 2, and denominator g of x, plus g of, open paren, x plus 1, close paren"
     },
     "Fracfunct007": {
-      "speech": "sine x over cosine x"
+      "expected": "sine x over cosine x"
     },
     "Fracfunct008": {
-      "speech": "sine, open paren, x plus y, close paren, over, cosine, open paren, x plus y, close paren"
+      "expected": "sine, open paren, x plus y, close paren, over, cosine, open paren, x plus y, close paren"
     },
     "Fracfunct009": {
-      "speech": "the fraction with numerator sine x plus cosine x, and denominator cosine x"
+      "expected": "the fraction with numerator sine x plus cosine x, and denominator cosine x"
     },
     "Fracfunct010": {
-      "speech": "sine 2 x over cosine 3 x"
+      "expected": "sine 2 x over cosine 3 x"
     },
     "Fracfunct011": {
-      "speech": "the fraction with numerator, the sine of, open paren, x plus y, close paren, and denominator, the cosine of, open paren, x plus y, close paren"
+      "expected": "the fraction with numerator, the sine of, open paren, x plus y, close paren, and denominator, the cosine of, open paren, x plus y, close paren"
     },
     "Fracfunct012": {
-      "speech": "f of 2 x, over g of 3 x"
+      "expected": "f of 2 x, over g of 3 x"
     },
     "Fracfunct013": {
-      "speech": "log x over log y"
+      "expected": "log x over log y"
     },
     "Fracfunct014": {
-      "speech": "log 2 x over log 3 y"
+      "expected": "log 2 x over log 3 y"
     },
     "Fracfunct015": {
-      "speech": "the log base 10 of, x, over, the log base 5 of, y"
+      "expected": "the log base 10 of, x, over, the log base 5 of, y"
     },
     "Fracfunct016": {
-      "speech": "the log base 10 of, 2 x, over, the log base 5 of, 3 y"
+      "expected": "the log base 10 of, 2 x, over, the log base 5 of, 3 y"
     },
     "Fracfunct017": {
-      "speech": "the fraction with numerator, the log of, open paren, x plus 1, close paren, and denominator log y"
+      "expected": "the fraction with numerator, the log of, open paren, x plus 1, close paren, and denominator log y"
     },
     "Fracfunct018": {
-      "speech": "f sub 1, of x, over, g sub 1, of x"
+      "expected": "f sub 1, of x, over, g sub 1, of x"
     }
   }
 }

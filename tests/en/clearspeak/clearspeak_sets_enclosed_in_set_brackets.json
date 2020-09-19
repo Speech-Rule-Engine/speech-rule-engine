@@ -7,55 +7,55 @@
   "tests": {
     "_comment1_": " Sets Enclosed in Set Brackets",
     "Set001": {
-      "speech": "the set of all x in the integers such that 2 is less than x is less than 7"
+      "expected": "the set of all x in the integers such that 2 is less than x is less than 7"
     },
     "Set002": {
-      "speech": "the set of all x such that, the absolute value of x, is greater than 2"
+      "expected": "the set of all x such that, the absolute value of x, is greater than 2"
     },
     "Set003": {
-      "speech": "the set of all x in the integers such that 2 is less than x is less than 7"
+      "expected": "the set of all x in the integers such that 2 is less than x is less than 7"
     },
     "Set004": {
-      "speech": "the set of all x in the natural numbers such that x is an even number"
+      "expected": "the set of all x in the natural numbers such that x is an even number"
     },
     "Set005": {
-      "speech": "the set 1 comma 2 comma 3"
+      "expected": "the set 1 comma 2 comma 3"
     },
     "Set006": {
-      "speech": "the set 1 comma 112 comma 1 comma 253"
+      "expected": "the set 1 comma 112 comma 1 comma 253"
     },
     "Set007": {
-      "speech": "the set of x in the integers such that 2 is less than x is less than 7"
+      "expected": "the set of x in the integers such that 2 is less than x is less than 7"
     },
     "Set008": {
-      "speech": "the set of x such that, the absolute value of x, is greater than 2"
+      "expected": "the set of x such that, the absolute value of x, is greater than 2"
     },
     "Set009": {
-      "speech": "the set of x in the integers such that 2 is less than x is less than 7"
+      "expected": "the set of x in the integers such that 2 is less than x is less than 7"
     },
     "Set010": {
-      "speech": "the set 1 comma 2 comma 3"
+      "expected": "the set 1 comma 2 comma 3"
     },
     "Set011": {
-      "speech": "the set 1 comma 112 comma 1 comma 253"
+      "expected": "the set 1 comma 112 comma 1 comma 253"
     },
     "Set012": {
-      "speech": "the set of all x in the integers such that 2 is less than x is less than 7"
+      "expected": "the set of all x in the integers such that 2 is less than x is less than 7"
     },
     "Set013": {
-      "speech": "the set of all x such that, the absolute value of x, is greater than 2"
+      "expected": "the set of all x such that, the absolute value of x, is greater than 2"
     },
     "Set014": {
-      "speech": "the set of all x in the integers such that 2 is less than x is less than 7"
+      "expected": "the set of all x in the integers such that 2 is less than x is less than 7"
     },
     "Set015": {
-      "speech": "the set of all x in the natural numbers such that x is an even number"
+      "expected": "the set of all x in the natural numbers such that x is an even number"
     },
     "Set016": {
-      "speech": "1 comma 2 comma 3"
+      "expected": "1 comma 2 comma 3"
     },
     "Set017": {
-      "speech": "1 comma 112 comma 1 comma 253"
+      "expected": "1 comma 112 comma 1 comma 253"
     }
   }
 }

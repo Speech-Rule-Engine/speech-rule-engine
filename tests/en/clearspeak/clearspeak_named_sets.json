@@ -8,76 +8,76 @@
     "_comment1_": " ClearSpeak Rules and Preferences Examples: Named Sets (Number Systems)",
     "_comment2_": " Named Sets (Number Systems)",
     "NumSys001": {
-      "speech": "the real numbers"
+      "expected": "the real numbers"
     },
     "NumSys001a": {
-      "speech": "the real numbers"
+      "expected": "the real numbers"
     },
     "NumSys002": {
-      "speech": "the complex numbers"
+      "expected": "the complex numbers"
     },
     "NumSys002a": {
-      "speech": "the complex numbers"
+      "expected": "the complex numbers"
     },
     "NumSys003": {
-      "speech": "the integers"
+      "expected": "the integers"
     },
     "NumSys003a": {
-      "speech": "the integers"
+      "expected": "the integers"
     },
     "NumSys004": {
-      "speech": "the rational numbers"
+      "expected": "the rational numbers"
     },
     "NumSys004a": {
-      "speech": "the rational numbers"
+      "expected": "the rational numbers"
     },
     "NumSys005": {
-      "speech": "the natural numbers"
+      "expected": "the natural numbers"
     },
     "NumSys005a": {
-      "speech": "the natural numbers"
+      "expected": "the natural numbers"
     },
     "NumSys005_1": {
-      "speech": "the natural numbers with zero"
+      "expected": "the natural numbers with zero"
     },
     "NumSys005_1a": {
-      "speech": "the natural numbers with zero"
+      "expected": "the natural numbers with zero"
     },
     "NumSys006": {
-      "speech": "the positive integers"
+      "expected": "the positive integers"
     },
     "NumSys006a": {
-      "speech": "the positive integers"
+      "expected": "the positive integers"
     },
     "NumSys006_1": {
-      "speech": "the negative integers"
+      "expected": "the negative integers"
     },
     "NumSys006_1a": {
-      "speech": "the negative integers"
+      "expected": "the negative integers"
     },
     "NumSys007": {
-      "speech": "r-two"
+      "expected": "r-two"
     },
     "NumSys007a": {
-      "speech": "r-two"
+      "expected": "r-two"
     },
     "NumSys008": {
-      "speech": "z-three"
+      "expected": "z-three"
     },
     "NumSys008a": {
-      "speech": "z-three"
+      "expected": "z-three"
     },
     "NumSys009": {
-      "speech": "c-n"
+      "expected": "c-n"
     },
     "NumSys009a": {
-      "speech": "c-n"
+      "expected": "c-n"
     },
     "NumSys010": {
-      "speech": "r-infinity"
+      "expected": "r-infinity"
     },
     "NumSys010a": {
-      "speech": "r-infinity"
+      "expected": "r-infinity"
     }
   }
 }

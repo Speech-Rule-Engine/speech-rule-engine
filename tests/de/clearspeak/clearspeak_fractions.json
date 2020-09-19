@@ -7,418 +7,418 @@
   "tests": {
     "_comment1_": " Fractions",
     "Frac001": {
-      "speech": "ein halb"
+      "expected": "ein halb"
     },
     "Frac002": {
-      "speech": "12 geteilt durch 32"
+      "expected": "12 geteilt durch 32"
     },
     "Frac002a": {
-      "speech": "x geteilt durch y"
+      "expected": "x geteilt durch y"
     },
     "Frac002b": {
-      "speech": "2 x geteilt durch 3 y"
+      "expected": "2 x geteilt durch 3 y"
     },
     "Frac002c": {
-      "speech": "x y geteilt durch c d"
+      "expected": "x y geteilt durch c d"
     },
     "Frac002d": {
-      "speech": "ein halb geteilt durch ein drittel"
+      "expected": "ein halb geteilt durch ein drittel"
     },
     "Frac002e": {
-      "speech": "minus x geteilt durch y"
+      "expected": "minus x geteilt durch y"
     },
     "Frac002f": {
-      "speech": "minus 2 x geteilt durch 3 y"
+      "expected": "minus 2 x geteilt durch 3 y"
     },
     "Frac002g": {
-      "speech": "x y geteilt durch minus c d"
+      "expected": "x y geteilt durch minus c d"
     },
     "Frac002h": {
-      "speech": "ein halb geteilt durch minus ein drittel"
+      "expected": "ein halb geteilt durch minus ein drittel"
     },
     "Frac003": {
-      "speech": "Bruch mit Zähler 2 plus 3, und Nenner 13"
+      "expected": "Bruch mit Zähler 2 plus 3, und Nenner 13"
     },
     "Frac004": {
-      "speech": "Bruch mit Zähler x plus y, und Nenner 2"
+      "expected": "Bruch mit Zähler x plus y, und Nenner 2"
     },
     "Frac005": {
-      "speech": "Bruch mit Zähler x plus y, und Nenner x minus y"
+      "expected": "Bruch mit Zähler x plus y, und Nenner x minus y"
     },
     "Frac006": {
-      "speech": "Bruch mit Zähler x plus y, und Nenner x minus y, plus zwei drittel"
+      "expected": "Bruch mit Zähler x plus y, und Nenner x minus y, plus zwei drittel"
     },
     "Frac007": {
-      "speech": "miles geteilt durch gallon"
+      "expected": "miles geteilt durch gallon"
     },
     "Frac008": {
-      "speech": "2 miles geteilt durch 3 gallons"
+      "expected": "2 miles geteilt durch 3 gallons"
     },
     "Frac009": {
-      "speech": "1 geteilt durch 2"
+      "expected": "1 geteilt durch 2"
     },
     "Frac010": {
-      "speech": "12 geteilt durch 32"
+      "expected": "12 geteilt durch 32"
     },
     "Frac011": {
-      "speech": "2 plus 3 geteilt durch 13"
+      "expected": "2 plus 3 geteilt durch 13"
     },
     "Frac012": {
-      "speech": "x plus y geteilt durch 2"
+      "expected": "x plus y geteilt durch 2"
     },
     "Frac013": {
-      "speech": "x plus y geteilt durch x minus y"
+      "expected": "x plus y geteilt durch x minus y"
     },
     "Frac014": {
-      "speech": "x plus y geteilt durch x minus y, plus, 2 geteilt durch 3"
+      "expected": "x plus y geteilt durch x minus y, plus, 2 geteilt durch 3"
     },
     "Frac015": {
-      "speech": "miles geteilt durch gallon"
+      "expected": "miles geteilt durch gallon"
     },
     "Frac016": {
-      "speech": "2 miles geteilt durch 3 gallons"
+      "expected": "2 miles geteilt durch 3 gallons"
     },
     "Frac017": {
-      "speech": "1 geteilt durch 2, Ende Bruch"
+      "expected": "1 geteilt durch 2, Ende Bruch"
     },
     "Frac018": {
-      "speech": "12 geteilt durch 32, Ende Bruch"
+      "expected": "12 geteilt durch 32, Ende Bruch"
     },
     "Frac019": {
-      "speech": "2 plus 3 geteilt durch 13, Ende Bruch"
+      "expected": "2 plus 3 geteilt durch 13, Ende Bruch"
     },
     "Frac020": {
-      "speech": "x plus y geteilt durch 2, Ende Bruch"
+      "expected": "x plus y geteilt durch 2, Ende Bruch"
     },
     "Frac021": {
-      "speech": "x plus y geteilt durch x minus y, Ende Bruch"
+      "expected": "x plus y geteilt durch x minus y, Ende Bruch"
     },
     "Frac022": {
-      "speech": "x plus y geteilt durch x minus y, Ende Bruch, plus, 2 geteilt durch 3, Ende Bruch"
+      "expected": "x plus y geteilt durch x minus y, Ende Bruch, plus, 2 geteilt durch 3, Ende Bruch"
     },
     "Frac023": {
-      "speech": "miles geteilt durch gallons, Ende Bruch"
+      "expected": "miles geteilt durch gallons, Ende Bruch"
     },
     "Frac024": {
-      "speech": "2 miles geteilt durch 3 gallons, Ende Bruch"
+      "expected": "2 miles geteilt durch 3 gallons, Ende Bruch"
     },
     "Frac025": {
-      "speech": "Bruch mit Zähler 1, und Nenner 2, Ende Bruch"
+      "expected": "Bruch mit Zähler 1, und Nenner 2, Ende Bruch"
     },
     "Frac026": {
-      "speech": "Bruch mit Zähler 12, und Nenner 32, Ende Bruch"
+      "expected": "Bruch mit Zähler 12, und Nenner 32, Ende Bruch"
     },
     "Frac027": {
-      "speech": "Bruch mit Zähler 2 plus 3, und Nenner 13, Ende Bruch"
+      "expected": "Bruch mit Zähler 2 plus 3, und Nenner 13, Ende Bruch"
     },
     "Frac028": {
-      "speech": "Bruch mit Zähler x plus y, und Nenner 2, Ende Bruch"
+      "expected": "Bruch mit Zähler x plus y, und Nenner 2, Ende Bruch"
     },
     "Frac029": {
-      "speech": "Bruch mit Zähler x plus y, und Nenner x minus y, Ende Bruch"
+      "expected": "Bruch mit Zähler x plus y, und Nenner x minus y, Ende Bruch"
     },
     "Frac030": {
-      "speech": "Bruch mit Zähler x plus y, und Nenner x minus y, Ende Bruch, plus, Bruch mit Zähler 2, und Nenner 3, Ende Bruch"
+      "expected": "Bruch mit Zähler x plus y, und Nenner x minus y, Ende Bruch, plus, Bruch mit Zähler 2, und Nenner 3, Ende Bruch"
     },
     "Frac031": {
-      "speech": "Bruch mit Zähler miles, und Nenner gallon, Ende Bruch"
+      "expected": "Bruch mit Zähler miles, und Nenner gallon, Ende Bruch"
     },
     "Frac032": {
-      "speech": "Bruch mit Zähler 1, und Nenner 2"
+      "expected": "Bruch mit Zähler 1, und Nenner 2"
     },
     "Frac033": {
-      "speech": "Bruch mit Zähler 12, und Nenner 32"
+      "expected": "Bruch mit Zähler 12, und Nenner 32"
     },
     "Frac034": {
-      "speech": "Bruch mit Zähler 2 plus 3, und Nenner 13"
+      "expected": "Bruch mit Zähler 2 plus 3, und Nenner 13"
     },
     "Frac035": {
-      "speech": "Bruch mit Zähler x plus y, und Nenner 2"
+      "expected": "Bruch mit Zähler x plus y, und Nenner 2"
     },
     "Frac036": {
-      "speech": "Bruch mit Zähler x plus y, und Nenner x minus y"
+      "expected": "Bruch mit Zähler x plus y, und Nenner x minus y"
     },
     "Frac037": {
-      "speech": "Bruch mit Zähler x plus y, und Nenner x minus y, plus, Bruch mit Zähler 2, und Nenner 3"
+      "expected": "Bruch mit Zähler x plus y, und Nenner x minus y, plus, Bruch mit Zähler 2, und Nenner 3"
     },
     "Frac038": {
-      "speech": "Bruch mit Zähler miles, und Nenner gallon"
+      "expected": "Bruch mit Zähler miles, und Nenner gallon"
     },
     "Frac039": {
-      "speech": "Bruch mit Zähler 2 miles, und Nenner 3 gallons"
+      "expected": "Bruch mit Zähler 2 miles, und Nenner 3 gallons"
     },
     "Frac040": {
-      "speech": "Bruch 1 geteilt durch 2"
+      "expected": "Bruch 1 geteilt durch 2"
     },
     "Frac041": {
-      "speech": "Bruch 12 geteilt durch 32"
+      "expected": "Bruch 12 geteilt durch 32"
     },
     "Frac042": {
-      "speech": "Bruch 2 plus 3 geteilt durch 13"
+      "expected": "Bruch 2 plus 3 geteilt durch 13"
     },
     "Frac043": {
-      "speech": "Bruch x plus y geteilt durch 2"
+      "expected": "Bruch x plus y geteilt durch 2"
     },
     "Frac044": {
-      "speech": "Bruch x plus y geteilt durch x minus y"
+      "expected": "Bruch x plus y geteilt durch x minus y"
     },
     "Frac045": {
-      "speech": "Bruch x plus y geteilt durch x minus y, plus, Bruch 2 geteilt durch 3"
+      "expected": "Bruch x plus y geteilt durch x minus y, plus, Bruch 2 geteilt durch 3"
     },
     "Frac046": {
-      "speech": "Bruch miles geteilt durch gallon"
+      "expected": "Bruch miles geteilt durch gallon"
     },
     "Frac047": {
-      "speech": "Bruch 2 miles geteilt durch 3 gallons"
+      "expected": "Bruch 2 miles geteilt durch 3 gallons"
     },
     "Frac048": {
-      "speech": "1 per 2"
+      "expected": "1 per 2"
     },
     "Frac049": {
-      "speech": "12 per 32"
+      "expected": "12 per 32"
     },
     "Frac050": {
-      "speech": "2 plus 3 per 13"
+      "expected": "2 plus 3 per 13"
     },
     "Frac051": {
-      "speech": "x plus y per 2"
+      "expected": "x plus y per 2"
     },
     "Frac052": {
-      "speech": "x plus y per x minus y"
+      "expected": "x plus y per x minus y"
     },
     "Frac053": {
-      "speech": "x plus y per x minus y, plus, 2 per 3"
+      "expected": "x plus y per x minus y, plus, 2 per 3"
     },
     "Frac054": {
-      "speech": "miles per gallon"
+      "expected": "miles per gallon"
     },
     "Frac055": {
-      "speech": "2 miles per 3 gallons"
+      "expected": "2 miles per 3 gallons"
     },
     "Frac056": {
-      "speech": "ein halb"
+      "expected": "ein halb"
     },
     "Frac057": {
-      "speech": "zwölf zweiunddreißigstel"
+      "expected": "zwölf zweiunddreißigstel"
     },
     "Frac058": {
-      "speech": "Bruch mit Zähler 2 plus 3, und Nenner 13"
+      "expected": "Bruch mit Zähler 2 plus 3, und Nenner 13"
     },
     "Frac059": {
-      "speech": "Bruch mit Zähler x plus y, und Nenner 2"
+      "expected": "Bruch mit Zähler x plus y, und Nenner 2"
     },
     "Frac060": {
-      "speech": "Bruch mit Zähler x plus y, und Nenner x minus y"
+      "expected": "Bruch mit Zähler x plus y, und Nenner x minus y"
     },
     "Frac061": {
-      "speech": "Bruch mit Zähler x plus y, und Nenner x minus y, plus zwei drittel"
+      "expected": "Bruch mit Zähler x plus y, und Nenner x minus y, plus zwei drittel"
     },
     "Frac062": {
-      "speech": "miles geteilt durch gallon"
+      "expected": "miles geteilt durch gallon"
     },
     "Frac063": {
-      "speech": "2 miles geteilt durch 3 gallons"
+      "expected": "2 miles geteilt durch 3 gallons"
     },
     "Frac064": {
-      "speech": "ein halb"
+      "expected": "ein halb"
     },
     "Frac065": {
-      "speech": "12 geteilt durch 32, Ende Bruch"
+      "expected": "12 geteilt durch 32, Ende Bruch"
     },
     "Frac066": {
-      "speech": "Bruch mit Zähler 2 plus 3, und Nenner 13, Ende Bruch"
+      "expected": "Bruch mit Zähler 2 plus 3, und Nenner 13, Ende Bruch"
     },
     "Frac067": {
-      "speech": "Bruch mit Zähler x plus y, und Nenner 2, Ende Bruch"
+      "expected": "Bruch mit Zähler x plus y, und Nenner 2, Ende Bruch"
     },
     "Frac068": {
-      "speech": "Bruch mit Zähler x plus y, und Nenner x minus y, Ende Bruch"
+      "expected": "Bruch mit Zähler x plus y, und Nenner x minus y, Ende Bruch"
     },
     "Frac069": {
-      "speech": "Bruch mit Zähler x plus y, und Nenner x minus y, Ende Bruch, plus zwei drittel"
+      "expected": "Bruch mit Zähler x plus y, und Nenner x minus y, Ende Bruch, plus zwei drittel"
     },
     "Frac070": {
-      "speech": "miles geteilt durch gallons"
+      "expected": "miles geteilt durch gallons"
     },
     "Frac071": {
-      "speech": "2 miles geteilt durch 3 gallons"
+      "expected": "2 miles geteilt durch 3 gallons"
     },
     "_comment2_": " Fraction (with Text in Numerator and/or denominator)",
     "FrTxt001": {
-      "speech": "2 miles geteilt durch 3 gallons"
+      "expected": "2 miles geteilt durch 3 gallons"
     },
     "FrTxt002": {
-      "speech": "rise geteilt durch run"
+      "expected": "rise geteilt durch run"
     },
     "FrTxt003": {
-      "speech": "successful outcomes geteilt durch total outcomes"
+      "expected": "successful outcomes geteilt durch total outcomes"
     },
     "FrTxt004": {
-      "speech": "6 ways of rolling a 7 geteilt durch 36 ways of rolling the pair of dice"
+      "expected": "6 ways of rolling a 7 geteilt durch 36 ways of rolling the pair of dice"
     },
     "_comment3_": " Nested Fractions",
     "NestFrac001": {
-      "speech": "ein halb geteilt durch ein drittel"
+      "expected": "ein halb geteilt durch ein drittel"
     },
     "NestFrac002": {
-      "speech": "Bruch mit Zähler 1, und Nenner, 2 geteilt durch ein drittel"
+      "expected": "Bruch mit Zähler 1, und Nenner, 2 geteilt durch ein drittel"
     },
     "NestFrac003": {
-      "speech": "ein halb geteilt durch 3"
+      "expected": "ein halb geteilt durch 3"
     },
     "NestFrac004": {
-      "speech": "1 geteilt durch zwei drittel"
+      "expected": "1 geteilt durch zwei drittel"
     },
     "NestFrac005": {
-      "speech": "Bruch mit Zähler, 11 geteilt durch 32, und Nenner, 16 geteilt durch 51"
+      "expected": "Bruch mit Zähler, 11 geteilt durch 32, und Nenner, 16 geteilt durch 51"
     },
     "NestFrac006": {
-      "speech": "Bruch mit Zähler 11, und Nenner, Bruch mit Zähler 32, und Nenner, 16 geteilt durch 51"
+      "expected": "Bruch mit Zähler 11, und Nenner, Bruch mit Zähler 32, und Nenner, 16 geteilt durch 51"
     },
     "NestFrac007": {
-      "speech": "Bruch mit Zähler 1 plus, 4 geteilt durch x, und Nenner 2"
+      "expected": "Bruch mit Zähler 1 plus, 4 geteilt durch x, und Nenner 2"
     },
     "NestFrac008": {
-      "speech": "Bruch mit Zähler 3, und Nenner 2 plus, 4 geteilt durch x"
+      "expected": "Bruch mit Zähler 3, und Nenner 2 plus, 4 geteilt durch x"
     },
     "NestFrac009": {
-      "speech": "Bruch mit Zähler, 10 geteilt durch 22, und Nenner ein halb"
+      "expected": "Bruch mit Zähler, 10 geteilt durch 22, und Nenner ein halb"
     },
     "NestFrac010": {
-      "speech": "Bruch mit Zähler 1 plus zwei drittel, und Nenner 1 minus zwei drittel"
+      "expected": "Bruch mit Zähler 1 plus zwei drittel, und Nenner 1 minus zwei drittel"
     },
     "NestFrac011": {
-      "speech": "Bruch mit Zähler 1 plus, x geteilt durch 2, und Nenner 1 minus, x geteilt durch 2"
+      "expected": "Bruch mit Zähler 1 plus, x geteilt durch 2, und Nenner 1 minus, x geteilt durch 2"
     },
     "NestFrac012": {
-      "speech": "Bruch mit Zähler, Bruch mit Zähler x plus 1, und Nenner x minus 1, plus 1, und Nenner x plus 1"
+      "expected": "Bruch mit Zähler, Bruch mit Zähler x plus 1, und Nenner x minus 1, plus 1, und Nenner x plus 1"
     },
     "NestFrac013": {
-      "speech": "Bruch mit Zähler, Bruch mit Zähler x plus 1, und Nenner x minus 4, plus ein halb, und Nenner x plus, 1 geteilt durch 16"
+      "expected": "Bruch mit Zähler, Bruch mit Zähler x plus 1, und Nenner x minus 4, plus ein halb, und Nenner x plus, 1 geteilt durch 16"
     },
     "NestFrac014": {
-      "speech": "1 plus, Bruch mit Zähler x, und Nenner 1 plus, 2 geteilt durch x"
+      "expected": "1 plus, Bruch mit Zähler x, und Nenner 1 plus, 2 geteilt durch x"
     },
     "NestFrac015": {
-      "speech": "1 plus, Bruch mit Zähler x plus 3, und Nenner 1 plus, Bruch mit Zähler 2, und Nenner x plus 3"
+      "expected": "1 plus, Bruch mit Zähler x plus 3, und Nenner 1 plus, Bruch mit Zähler 2, und Nenner x plus 3"
     },
     "NestFrac016": {
-      "speech": "1 plus, Bruch mit Zähler 1, und Nenner 1 plus, Bruch mit Zähler 1, und Nenner 1 plus, Bruch mit Zähler 1, und Nenner 1 plus 1"
+      "expected": "1 plus, Bruch mit Zähler 1, und Nenner 1 plus, Bruch mit Zähler 1, und Nenner 1 plus, Bruch mit Zähler 1, und Nenner 1 plus 1"
     },
     "NestFrac017": {
-      "speech": "1 plus, Bruch mit Zähler 1, und Nenner 1 plus, Bruch mit Zähler 1, und Nenner 1 plus, Bruch mit Zähler 1, und Nenner 1 plus Zentrierte horizontale Ellipse"
+      "expected": "1 plus, Bruch mit Zähler 1, und Nenner 1 plus, Bruch mit Zähler 1, und Nenner 1 plus, Bruch mit Zähler 1, und Nenner 1 plus Zentrierte horizontale Ellipse"
     },
     "NestFrac018": {
-      "speech": "a Index 0, plus, Bruch mit Zähler 1, und Nenner, a Index 1, plus, Bruch mit Zähler 1, und Nenner, a Index 2, plus, Bruch mit Zähler 1, und Nenner, a Index 3, plus Zentrierte horizontale Ellipse"
+      "expected": "a Index 0, plus, Bruch mit Zähler 1, und Nenner, a Index 1, plus, Bruch mit Zähler 1, und Nenner, a Index 2, plus, Bruch mit Zähler 1, und Nenner, a Index 3, plus Zentrierte horizontale Ellipse"
     },
     "NestFrac019": {
-      "speech": "ein halb geteilt durch ein drittel"
+      "expected": "ein halb geteilt durch ein drittel"
     },
     "NestFrac020": {
-      "speech": "Bruch mit Zähler 1, und Nenner, 2 geteilt durch ein drittel, Ende Bruch"
+      "expected": "Bruch mit Zähler 1, und Nenner, 2 geteilt durch ein drittel, Ende Bruch"
     },
     "NestFrac021": {
-      "speech": "ein halb geteilt durch 3, Ende Bruch"
+      "expected": "ein halb geteilt durch 3, Ende Bruch"
     },
     "NestFrac022": {
-      "speech": "1 geteilt durch zwei drittel, Ende Bruch"
+      "expected": "1 geteilt durch zwei drittel, Ende Bruch"
     },
     "NestFrac023": {
-      "speech": "Bruch mit Zähler, 11 geteilt durch 32, und Nenner, 16 geteilt durch 51, Ende Bruch"
+      "expected": "Bruch mit Zähler, 11 geteilt durch 32, und Nenner, 16 geteilt durch 51, Ende Bruch"
     },
     "NestFrac024": {
-      "speech": "Bruch mit Zähler 11, und Nenner, Bruch mit Zähler 32, und Nenner, 16 geteilt durch 51, Ende Bruch"
+      "expected": "Bruch mit Zähler 11, und Nenner, Bruch mit Zähler 32, und Nenner, 16 geteilt durch 51, Ende Bruch"
     },
     "NestFrac025": {
-      "speech": "Bruch mit Zähler 1 plus, 4 geteilt durch x, und Nenner 2, Ende Bruch"
+      "expected": "Bruch mit Zähler 1 plus, 4 geteilt durch x, und Nenner 2, Ende Bruch"
     },
     "NestFrac026": {
-      "speech": "Bruch mit Zähler 3, und Nenner 2 plus, 4 geteilt durch x, Ende Bruch"
+      "expected": "Bruch mit Zähler 3, und Nenner 2 plus, 4 geteilt durch x, Ende Bruch"
     },
     "NestFrac027": {
-      "speech": "Bruch mit Zähler, 10 geteilt durch 22, und Nenner ein halb, Ende Bruch"
+      "expected": "Bruch mit Zähler, 10 geteilt durch 22, und Nenner ein halb, Ende Bruch"
     },
     "NestFrac028": {
-      "speech": "Bruch mit Zähler 1 plus zwei drittel, und Nenner 1 minus zwei drittel, Ende Bruch"
+      "expected": "Bruch mit Zähler 1 plus zwei drittel, und Nenner 1 minus zwei drittel, Ende Bruch"
     },
     "NestFrac029": {
-      "speech": "Bruch mit Zähler 1 plus, x geteilt durch 2, und Nenner 1 minus, x geteilt durch 2, Ende Bruch"
+      "expected": "Bruch mit Zähler 1 plus, x geteilt durch 2, und Nenner 1 minus, x geteilt durch 2, Ende Bruch"
     },
     "NestFrac030": {
-      "speech": "Bruch mit Zähler, Bruch mit Zähler x plus 1, und Nenner x minus 1, plus 1, und Nenner x plus 1, Ende Bruch"
+      "expected": "Bruch mit Zähler, Bruch mit Zähler x plus 1, und Nenner x minus 1, plus 1, und Nenner x plus 1, Ende Bruch"
     },
     "NestFrac031": {
-      "speech": "Bruch mit Zähler, Bruch mit Zähler x plus 1, und Nenner x minus 4, plus ein halb, und Nenner x plus, 1 geteilt durch 16, Ende Bruch"
+      "expected": "Bruch mit Zähler, Bruch mit Zähler x plus 1, und Nenner x minus 4, plus ein halb, und Nenner x plus, 1 geteilt durch 16, Ende Bruch"
     },
     "NestFrac032": {
-      "speech": "1 plus, Bruch mit Zähler x, und Nenner 1 plus, 2 geteilt durch x, Ende Bruch"
+      "expected": "1 plus, Bruch mit Zähler x, und Nenner 1 plus, 2 geteilt durch x, Ende Bruch"
     },
     "NestFrac033": {
-      "speech": "1 plus, Bruch mit Zähler x plus 3, und Nenner 1 plus, Bruch mit Zähler 2, und Nenner x plus 3, Ende Bruch"
+      "expected": "1 plus, Bruch mit Zähler x plus 3, und Nenner 1 plus, Bruch mit Zähler 2, und Nenner x plus 3, Ende Bruch"
     },
     "NestFrac034": {
-      "speech": "1 plus, Bruch mit Zähler 1, und Nenner 1 plus, Bruch mit Zähler 1, und Nenner 1 plus, Bruch mit Zähler 1, und Nenner 1 plus 1, Ende Bruch"
+      "expected": "1 plus, Bruch mit Zähler 1, und Nenner 1 plus, Bruch mit Zähler 1, und Nenner 1 plus, Bruch mit Zähler 1, und Nenner 1 plus 1, Ende Bruch"
     },
     "NestFrac035": {
-      "speech": "1 plus, Bruch mit Zähler 1, und Nenner 1 plus, Bruch mit Zähler 1, und Nenner 1 plus, Bruch mit Zähler 1, und Nenner 1 plus Zentrierte horizontale Ellipse, Ende Bruch"
+      "expected": "1 plus, Bruch mit Zähler 1, und Nenner 1 plus, Bruch mit Zähler 1, und Nenner 1 plus, Bruch mit Zähler 1, und Nenner 1 plus Zentrierte horizontale Ellipse, Ende Bruch"
     },
     "NestFrac036": {
-      "speech": "a Index 0, plus, Bruch mit Zähler 1, und Nenner, a Index 1, plus, Bruch mit Zähler 1, und Nenner, a Index 2, plus, Bruch mit Zähler 1, und Nenner, a Index 3, plus Zentrierte horizontale Ellipse, Ende Bruch"
+      "expected": "a Index 0, plus, Bruch mit Zähler 1, und Nenner, a Index 1, plus, Bruch mit Zähler 1, und Nenner, a Index 2, plus, Bruch mit Zähler 1, und Nenner, a Index 3, plus Zentrierte horizontale Ellipse, Ende Bruch"
     },
     "_comment4_": " Fractions with Functions",
     "Fracfunct001": {
-      "speech": "f von x, geteilt durch g von x"
+      "expected": "f von x, geteilt durch g von x"
     },
     "Fracfunct002": {
-      "speech": "Bruch mit Zähler f von x, plus g von x, und Nenner g von x"
+      "expected": "Bruch mit Zähler f von x, plus g von x, und Nenner g von x"
     },
     "Fracfunct003": {
-      "speech": "Bruch mit Zähler f von, Klammer auf, x plus 1, Klammer zu, und Nenner g von x"
+      "expected": "Bruch mit Zähler f von, Klammer auf, x plus 1, Klammer zu, und Nenner g von x"
     },
     "Fracfunct004": {
-      "speech": "f von x, geteilt durch 2"
+      "expected": "f von x, geteilt durch 2"
     },
     "Fracfunct005": {
-      "speech": "2 geteilt durch f von x"
+      "expected": "2 geteilt durch f von x"
     },
     "Fracfunct006": {
-      "speech": "Bruch mit Zähler 2, und Nenner g von x, plus g von, Klammer auf, x plus 1, Klammer zu"
+      "expected": "Bruch mit Zähler 2, und Nenner g von x, plus g von, Klammer auf, x plus 1, Klammer zu"
     },
     "Fracfunct007": {
-      "speech": "Sinus x geteilt durch Kosinus x"
+      "expected": "Sinus x geteilt durch Kosinus x"
     },
     "Fracfunct008": {
-      "speech": ""
+      "expected": ""
     },
     "Fracfunct009": {
-      "speech": "Bruch mit Zähler Sinus x plus Kosinus x, und Nenner Kosinus x"
+      "expected": "Bruch mit Zähler Sinus x plus Kosinus x, und Nenner Kosinus x"
     },
     "Fracfunct010": {
-      "speech": "Sinus 2 x geteilt durch Kosinus 3 x"
+      "expected": "Sinus 2 x geteilt durch Kosinus 3 x"
     },
     "Fracfunct011": {
-      "speech": "Bruch mit Zähler, der Sinus von, Klammer auf, x plus y, Klammer zu, und Nenner, der Kosinus von, Klammer auf, x plus y, Klammer zu"
+      "expected": "Bruch mit Zähler, der Sinus von, Klammer auf, x plus y, Klammer zu, und Nenner, der Kosinus von, Klammer auf, x plus y, Klammer zu"
     },
     "Fracfunct012": {
-      "speech": "f von 2 x, geteilt durch g von 3 x"
+      "expected": "f von 2 x, geteilt durch g von 3 x"
     },
     "Fracfunct013": {
-      "speech": "Logarithmus x geteilt durch Logarithmus y"
+      "expected": "Logarithmus x geteilt durch Logarithmus y"
     },
     "Fracfunct014": {
-      "speech": "Logarithmus 2 x geteilt durch Logarithmus 3 y"
+      "expected": "Logarithmus 2 x geteilt durch Logarithmus 3 y"
     },
     "Fracfunct015": {
-      "speech": "der Logarithmus Basis 10 von, x, geteilt durch, der Logarithmus Basis 5 von, y"
+      "expected": "der Logarithmus Basis 10 von, x, geteilt durch, der Logarithmus Basis 5 von, y"
     },
     "Fracfunct016": {
-      "speech": "der Logarithmus Basis 10 von, 2 x, geteilt durch, der Logarithmus Basis 5 von, 3 y"
+      "expected": "der Logarithmus Basis 10 von, 2 x, geteilt durch, der Logarithmus Basis 5 von, 3 y"
     },
     "Fracfunct017": {
-      "speech": "Bruch mit Zähler, der Logarithmus von, Klammer auf, x plus 1, Klammer zu, und Nenner Logarithmus y"
+      "expected": "Bruch mit Zähler, der Logarithmus von, Klammer auf, x plus 1, Klammer zu, und Nenner Logarithmus y"
     },
     "Fracfunct018": {
-      "speech": "f Index 1, von x, geteilt durch, g Index 1, von x"
+      "expected": "f Index 1, von x, geteilt durch, g Index 1, von x"
     }
   }
 }
