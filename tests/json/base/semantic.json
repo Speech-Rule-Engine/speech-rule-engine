@@ -359,8 +359,6 @@
     "_comment_83": " Close, },",
     "_comment_84": " Neutrals and close.",
     "MixedUnmatchedFences_0": {
-      "xpathBlacklist": [],
-      "brief": true,
       "mathml": "<mrow><mo>]</mo><mo>&#x2016;</mo><mi>b</mi><mo>|</mo><mi>c</mi><mo>(</mo></mrow>"
     },
     "_comment_80": " Neutrals and close.",
@@ -837,7 +835,6 @@
     },
     "_comment_120": " Big operators without Arguments.",
     "BigOpsNoArgs_0": {
-      "brief": true,
       "mathml": "<mi>&#x2211;</mi>"
     },
     "BigOpsNoArgs_1": {
@@ -1210,7 +1207,6 @@
     "_comment_140": " Embellished operators.",
     "_comment_141": " Simple embellished arguments.",
     "SimpleEmbellishment_0": {
-      "brief": false,
       "mathml": "<msup><mi>∫</mi><mn>2</mn></msup>"
     },
     "SimpleEmbellishment_1": {
@@ -1230,7 +1226,6 @@
     },
     "_comment_142": " Multi embellished arguments.",
     "MultiEmbellishment_0": {
-      "brief": false,
       "mathml": "<msub><msup><mo>+</mo><mn>2</mn></msup><mi>x</mi></msub>"
     },
     "MultiEmbellishment_1": {
@@ -1462,7 +1457,6 @@
     },
     "_comment_163": " Binomial coefficients generated with fractions and redundant elements.",
     "BinomialWithIgnores_0": {
-      "brief": false,
       "mathml": "<mfenced open=\"(\" close=\")\"><mfrac linethickness=\"0\"><mrow><mi>n</mi></mrow><mi>k</mi></mfrac></mfenced>"
     },
     "BinomialWithIgnores_1": {
@@ -1482,7 +1476,6 @@
     },
     "_comment_164": " Binomial coefficient like elements, without fences.",
     "BinomialOther_0": {
-      "brief": false,
       "mathml": "<mfrac linethickness=\"0\"><mi>n</mi><mi>k</mi></mfrac>"
     },
     "BinomialOther_1": {
@@ -1499,7 +1492,6 @@
     },
     "_comment_151a": " Trivially punctuated elements.",
     "TrivialPunctuated_0": {
-      "brief": false,
       "mathml": "<mo>,</mo>"
     },
     "TrivialPunctuated_1": {
@@ -1576,7 +1568,6 @@
     },
     "_comment_155a": " Labels in multiline expressions.",
     "LabelledLines_0": {
-      "brief": false,
       "mathml": "<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd></mlabeledtr></mtable>"
     },
     "LabelledLines_1": {
@@ -1590,7 +1581,6 @@
     },
     "_comment_156a": " Labels in tables expressions.",
     "LabelledRows_0": {
-      "brief": false,
       "mathml": "<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd/><mtd/></mlabeledtr></mtable>"
     },
     "LabelledRows_1": {
@@ -1848,6 +1838,48 @@
     },
     "Issue284_4": {
       "mathml": "<mn>a</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>"
+    },
+    "_comment_directspeech": "Direct speech related expressions",
+    "_comment_mg1": "mi",
+    "MglyphTokens_0": {
+      "mathml": "<mi><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mi>"
+    },
+    "MglyphToken_1": {
+      "mathml": "<mi aria-label=\"your glyph\"><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mi>"
+    },
+    "_comment_mg1": "mo",
+    "MglyphToken_2": {
+    "mathml": "<mo><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mo>"
+    },
+    "MglyphToken_3": {
+      "mathml": "<mo aria-label=\"your glyph\"><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mo>"
+    },
+    "_comment_mg2": "mn",
+    "MglyphToken_4": {
+      "mathml": "<mn><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mn>"
+    },
+    "MglyphToken_5": {
+      "mathml": "<mn aria-label=\"your glyph\"><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mn>"
+    },
+    "_comment_mg3": "mtext",
+    "MglyphToken_6": {
+      "mathml": "<mtext><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mtext>"
+    },
+    "MglyphToken_7": {
+      "mathml": "<mtext aria-label=\"your glyph\"><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mtext>"
+    },
+    "_comment_mg4": "ms",
+    "MglyphToken_8": {
+      "mathml": "<ms><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></ms>"
+    },
+    "MglyphToken_9": {
+      "mathml": "<ms aria-label=\"your glyph\"><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></ms>"
+    },
+    "MglyphGeneral_0": {
+      "mathml": "<mi><mglyph src=\"my-braid-23.png\" alt=\"23braid\"/></mi><mo>+</mo><mi><mglyph src=\"my-braid-132.png\" alt=\"132braid\"/></mi><mo>=</mo><mi><mglyph src=\"my-braid-13.png\" alt=\"13braid\"/></mi>"
+    },
+    "MglyphGeneral_1": {
+      "mathml": "<mrow><mi>N</mi><msub><mi>M</mi><mrow class=\"MJX-TeXAtom-ORD\"><mn>1</mn><mo>⊂</mo><mrow class=\"MJX-TeXAtom-VCENTER\"><mglyph src=\"Images/img64cf9bc6538bb7137dab7b360f92afb4.svg\" width=\"13pt\" height=\"6pt\" alt=\"mfin\"></mglyph></mrow></mrow></msub></mrow>"
     }
   }
 }

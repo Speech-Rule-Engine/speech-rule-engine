@@ -114,7 +114,6 @@ if (typeof warn !== 'undefined') {
 if (sre.SystemExternal.process.env['JSON']) {
   var tests = sre.SemanticTest.tests();
   tests.forEach(x => sre.Tests.getInstance().runner.registerTest(x));
-} else {
   tests = sre.ClearspeakRuleTest.tests();
   tests.forEach(x => sre.Tests.getInstance().runner.registerTest(x));
   tests = sre.MathspeakRuleTest.tests();

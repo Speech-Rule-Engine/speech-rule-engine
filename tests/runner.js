@@ -177,7 +177,7 @@ sre.TestRunner.prototype.executeTests = function(testcase) {
  * @private
  */
 sre.TestRunner.prototype.executeTest_ = function(name, func) {
-  this.output('Running ' + name);
+  this.output('Testing ' + name);
   try {
     func.apply();
   } catch (e)
@@ -228,10 +228,13 @@ sre.TestRunner.color_ = {
  * @param {sre.TestRunner.color_=} opt_color An optional color argument.
  */
 sre.TestRunner.prototype.output = function(output, opt_color) {
-  opt_color = opt_color || sre.TestRunner.color_.WHITE;
-  sre.TestExternal.process.stdout.write(opt_color +
-      output +
-      sre.TestRunner.color_.WHITE);
+  if (!opt_color) {
+    sre.TestExternal.process.stdout.write(output);
+    return;
+  }
+  var match = output.match(/^(\s*)([^\s]*)(\s*)$/);
+  sre.TestExternal.process.stdout.write(
+    match[1] + opt_color + match[2] + sre.TestRunner.color_.WHITE + match[3]);
 };
 
 

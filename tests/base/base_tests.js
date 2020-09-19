@@ -20,13 +20,10 @@ goog.require('sre.ClearspeakAnnotationTest');
 goog.require('sre.ColorPickerTest');
 goog.require('sre.DirectSpeechTest');
 goog.require('sre.DomTest');
-goog.require('sre.EnrichMathmlTest');
 goog.require('sre.MarkupTest');
 goog.require('sre.MathAlphabetsTest');
-goog.require('sre.RebuildStreeTest');
 goog.require('sre.SemanticApiTest');
 goog.require('sre.SemanticRuleTest');
-goog.require('sre.SemanticTreeTest');
 goog.require('sre.SpeechRuleTest');
 goog.require('sre.WalkerMarkupTest');
 goog.require('sre.WalkerTest');
@@ -42,13 +39,10 @@ sre.BaseTests.testList = [
   sre.ColorPickerTest,
   sre.DirectSpeechTest,
   sre.DomTest,
-  sre.EnrichMathmlTest,
   sre.MarkupTest,
   sre.MathAlphabetsTest,
-  sre.RebuildStreeTest,
   sre.SemanticApiTest,
   sre.SemanticRuleTest,
-  sre.SemanticTreeTest,
   sre.SpeechRuleTest,
   sre.WalkerMarkupTest,
   sre.WalkerTest

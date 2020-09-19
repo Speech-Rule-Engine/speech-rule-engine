@@ -30,16 +30,12 @@ sre.TestUtil.loadJson = function(file) {
 
 
 sre.TestUtil.combineTests = function(input, output, exclude) {
-  console.log(input);
-  console.log(output);
   var warn = [];
   var results = [];
-  var orig = output;
-  output = Object.assign({}, orig);
-  if (input === 'ALL') {
-    for (var key of Object.keys(output)) {
+  if (output === 'ALL') {
+    for (var key of Object.keys(input)) {
       if (key.match(/^_/) || exclude.indexOf(key) !== -1) continue;
-      var json = output[key];
+      var json = input[key];
       if (typeof json.test === 'undefined') {
         json.test = true;
       }

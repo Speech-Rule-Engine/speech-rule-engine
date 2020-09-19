@@ -20,9 +20,6 @@
 goog.provide('sre.DirectSpeechTest');
 
 goog.require('sre.AbstractRuleTest');
-goog.require('sre.EnrichMathmlTest');
-goog.require('sre.RebuildStreeTest');
-goog.require('sre.SemanticTreeTest');
 
 
 
@@ -151,43 +148,4 @@ sre.DirectSpeechTest.prototype.testMglyphGeneral = function() {
       '<mglyph src="Images/img64cf9bc6538bb7137dab7b360f92afb4.svg" width="13pt"' +
       ' height="6pt" alt="mfin"></mglyph></mrow></mrow></msub></mrow>';
   this.executeRuleTest(mml, 'upper N upper M Subscript 1 subset of mfin');
-};
-
-
-sre.SemanticTreeTest.prototype.testMglyph = function() {
-  var mml = '<mi><mglyph src="my-braid-23.png" alt="23braid"/></mi>' +
-      '<mo>+</mo><mi><mglyph src="my-braid-132.png" alt="132braid"/></mi>' +
-      '<mo>=</mo><mi><mglyph src="my-braid-13.png" alt="13braid"/></mi>';
-  this.executeTreeTest(mml, '<relseq role="equality" id="6">=<content><relation role="equality" id="3">=</relation></content><children><infixop role="addition" id="5">+<content><operator role="addition" id="1">+</operator></content><children><identifier role="unknown" id="0" ext-speech="23braid"/><identifier role="unknown" id="2" ext-speech="132braid"/></children></infixop><identifier role="unknown" id="4" ext-speech="13braid"/></children></relseq>');
-  mml = '<mrow><mi>N</mi><msub><mi>M</mi><mrow class="MJX-TeXAtom-ORD">' +
-      '<mn>1</mn><mo>⊂</mo><mrow class="MJX-TeXAtom-VCENTER">' +
-      '<mglyph src="Images/img64cf9bc6538bb7137dab7b360f92afb4.svg" width="13pt"' +
-      ' height="6pt" alt="mfin"></mglyph></mrow></mrow></msub></mrow>';
-  this.executeTreeTest(mml, '<infixop role="implicit" id="8">⁢<content><operator role="multiplication" id="7">⁢</operator></content><children><identifier role="latinletter" font="italic" id="0">N</identifier><subscript role="latinletter" id="6"><children><identifier role="latinletter" font="italic" id="1">M</identifier><infixop role="unknown" id="5">⊂<content><operator role="unknown" id="3">⊂</operator></content><children><number role="integer" font="normal" id="2">1</number><unknown role="mglyph" id="4" ext-speech="mfin"/></children></infixop></subscript></infixop>');
-};
-
-
-sre.EnrichMathmlTest.prototype.testMglyph = function() {
-  var mml = '<mi><mglyph src="my-braid-23.png" alt="23braid"/></mi>' +
-      '<mo>+</mo><mi><mglyph src="my-braid-132.png" alt="132braid"/></mi>' +
-      '<mo>=</mo><mi><mglyph src="my-braid-13.png" alt="13braid"/></mi>';
-  this.executeMathmlTest(mml, '<math type="relseq" role="equality" id="6" children="5,4" content="3"><mrow type="infixop" role="addition" id="5" children="0,2" content="1" parent="6"><mi type="identifier" role="unknown" id="0" parent="5"><mglyph src="my-braid-23.png" alt="23braid"/></mi><mo type="operator" role="addition" id="1" parent="5" operator="infixop,+">+</mo><mi type="identifier" role="unknown" id="2" parent="5"><mglyph src="my-braid-132.png" alt="132braid"/></mi></mrow><mo type="relation" role="equality" id="3" parent="6" operator="relseq,=">=</mo><mi type="identifier" role="unknown" id="4" parent="6"><mglyph src="my-braid-13.png" alt="13braid"/></mi></math>');
-  mml = '<mrow><mi>N</mi><msub><mi>M</mi><mrow class="MJX-TeXAtom-ORD">' +
-      '<mn>1</mn><mo>⊂</mo><mrow class="MJX-TeXAtom-VCENTER">' +
-      '<mglyph src="Images/img64cf9bc6538bb7137dab7b360f92afb4.svg" width="13pt"' +
-      ' height="6pt" alt="mfin"></mglyph></mrow></mrow></msub></mrow>';
-  this.executeMathmlTest(mml, '<math><mrow type="infixop" role="implicit" id="8" children="0,6" content="7"><mi type="identifier" role="latinletter" id="0" parent="8">N</mi><mo type="operator" role="multiplication" id="7" parent="8" added="true" operator="infixop,⁢">⁢</mo><msub type="subscript" role="latinletter" id="6" children="1,5" parent="8"><mi type="identifier" role="latinletter" id="1" parent="6">M</mi><mrow class="MJX-TeXAtom-ORD" type="infixop" role="unknown" id="5" children="2,4" content="3" parent="6"><mn type="number" role="integer" id="2" parent="5">1</mn><mo type="operator" role="unknown" id="3" parent="5" operator="infixop,⊂">⊂</mo><mrow class="MJX-TeXAtom-VCENTER"><mglyph src="Images/img64cf9bc6538bb7137dab7b360f92afb4.svg" width="13pt" height="6pt" alt="mfin" type="unknown" role="mglyph" id="4" parent="5"/></mrow></mrow></msub></mrow></math>');
-};
-
-
-sre.RebuildStreeTest.prototype.testMglyph = function() {
-  var mml = '<mi><mglyph src="my-braid-23.png" alt="23braid"/></mi>' +
-      '<mo>+</mo><mi><mglyph src="my-braid-132.png" alt="132braid"/></mi>' +
-      '<mo>=</mo><mi><mglyph src="my-braid-13.png" alt="13braid"/></mi>';
-  this.executeTest(mml);
-  mml = '<mrow><mi>N</mi><msub><mi>M</mi><mrow class="MJX-TeXAtom-ORD">' +
-      '<mn>1</mn><mo>⊂</mo><mrow class="MJX-TeXAtom-VCENTER">' +
-      '<mglyph src="Images/img64cf9bc6538bb7137dab7b360f92afb4.svg" width="13pt"' +
-      ' height="6pt" alt="mfin"></mglyph></mrow></mrow></msub></mrow>';
-  this.executeTest(mml);
 };

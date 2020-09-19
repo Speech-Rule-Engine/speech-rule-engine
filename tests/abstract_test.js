@@ -80,15 +80,13 @@ goog.inherits(sre.AbstractJsonTest, sre.AbstractTest);
  // TODO: Need to specify that further!
  * @return {Array.<string>} The array of arguments for the test method.
  */
-sre.AbstractJsonTest.prototype.pick = function(json) {
-  return [];
-};
+sre.AbstractJsonTest.prototype.pick = goog.abstractMethod;
 
 /**
  * The actual test method.
  * @param {...string} var_args Arguments for the test method.
  */
-sre.AbstractJsonTest.prototype.method = function(var_args) {};
+sre.AbstractJsonTest.prototype.method = goog.abstractMethod;
 
 sre.AbstractJsonTest.prototype.prepare = function() {
   this.jsonTests = this.jsonFile ? sre.TestUtil.loadJson(this.jsonFile) : {};
