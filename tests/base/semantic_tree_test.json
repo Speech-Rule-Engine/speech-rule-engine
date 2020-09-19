@@ -4,6 +4,39 @@
   "_comment_1": " Test number representations.",
   "exclude": [],
   "tests": {
+    "Wrappers_0": {
+      "expected": "<infixop role=\"implicit\" id=\"3\">⁢<content><operator role=\"multiplication\" id=\"2\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier></children></infixop>"
+    },
+    "Wrappers_1": {
+      "expected": "<infixop role=\"implicit\" id=\"14\">⁢<content><operator role=\"multiplication\" id=\"13\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">q</identifier><punctuated role=\"text\" id=\"12\"><content><punctuation role=\"dummy\" id=\"11\">⁣</punctuation></content><children><infixop role=\"implicit\" id=\"10\">⁢<content><operator role=\"multiplication\" id=\"9\">⁢</operator></content><children><postfixop role=\"addition\" id=\"3\">+<content><operator role=\"addition\" id=\"2\">+</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"1\">x</identifier></children></postfixop><infixop role=\"implicit\" id=\"7\">⁢<content><operator role=\"multiplication\" id=\"6\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"4\">a</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"5\">a</identifier></children></infixop></children></infixop><text role=\"unknown\" font=\"normal\" id=\"8\">nix</text></children></punctuated></children></infixop>"
+    },
+    "Wrappers_2": {
+      "expected": "<fenced role=\"neutral\" id=\"3\"><content><fence role=\"neutral\" id=\"0\">|</fence><fence role=\"neutral\" id=\"2\">|</fence></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"1\">x</identifier></children></fenced>"
+    },
+    "Scripts_0": {
+      "expected": "<subscript role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier></children></subscript>"
+    },
+    "Scripts_1": {
+      "expected": "<superscript role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier></children></superscript>"
+    },
+    "Scripts_2": {
+      "expected": "<superscript role=\"latinletter\" id=\"4\"><children><subscript role=\"subsup\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier></children></subscript><identifier role=\"latinletter\" font=\"italic\" id=\"2\">c</identifier></children></superscript>"
+    },
+    "Scripts_3": {
+      "expected": "<subscript role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier></children></subscript>"
+    },
+    "Scripts_4": {
+      "expected": "<superscript role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier></children></superscript>"
+    },
+    "Scripts_5": {
+      "expected": "<superscript role=\"latinletter\" id=\"4\"><children><subscript role=\"subsup\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier></children></subscript><identifier role=\"latinletter\" font=\"italic\" id=\"2\">c</identifier></children></superscript>"
+    },
+    "Scripts_6": {
+      "expected": "<superscript role=\"latinletter\" id=\"4\"><children><subscript role=\"subsup\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier></children></subscript><identifier role=\"latinletter\" font=\"italic\" id=\"2\">c</identifier></children></superscript>"
+    },
+    "Scripts_7": {
+      "expected": "<superscript role=\"latinletter\" id=\"7\"><children><subscript role=\"subsup\" id=\"6\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier><infixop role=\"implicit\" id=\"4\">⁢<content><operator role=\"multiplication\" id=\"3\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"2\">d</identifier></children></infixop></children></subscript><identifier role=\"latinletter\" font=\"italic\" id=\"5\">c</identifier></children></superscript>"
+    },
     "Numbers_0": {
       "expected": "<number role=\"integer\" font=\"normal\" id=\"0\">2</number>"
     },
@@ -147,13 +180,13 @@
       "brief": true,
       "expected": "<infixop>-<content><operator>-</operator><operator>-</operator></content><children><infixop>+<content><operator>+</operator><operator>+</operator></content><children><identifier>a</identifier><identifier>b</identifier><identifier>c</identifier></children></infixop><identifier>d</identifier><identifier>e</identifier></children></infixop>"
     },
-      "brief": true,
+    "brief": true,
     "_comment_25": " Addition and explicit multiplication.",
     "MultipleOperators_2": {
       "brief": true,
       "expected": "<infixop>+<content><operator>+</operator><operator>+</operator></content><children><identifier>a</identifier><infixop>∘<content><operator>∘</operator></content><children><identifier>b</identifier><identifier>c</identifier></children></infixop><identifier>d</identifier></children></infixop>"
     },
-      "brief": true,
+    "brief": true,
     "_comment_26": " Addition with explicit and implicit multiplication.",
     "MultipleOperators_3": {
       "brief": true,
@@ -203,13 +236,13 @@
       "brief": true,
       "expected": "<fenced><content><fence>(</fence><fence>)</fence></content><children><empty/></children></fenced>"
     },
-      "brief": true,
+    "brief": true,
     "_comment_35": " Single Fenced Expression.",
     "RegularFences_2": {
       "brief": true,
       "expected": "<fenced><content><fence>(</fence><fence>)</fence></content><children><infixop>+<content><operator>+</operator></content><children><identifier>a</identifier><identifier>b</identifier></children></infixop></children></fenced>"
     },
-      "brief": true,
+    "brief": true,
     "_comment_36": " Single Fenced Expression and operators.",
     "RegularFences_3": {
       "brief": true,
@@ -897,7 +930,19 @@
     "Tables_7": {
       "expected": "<table role=\"unknown\" id=\"24\"><children><row role=\"table\" id=\"6\"><children><cell role=\"table\" id=\"1\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">x</identifier></children></cell><cell role=\"table\" id=\"3\"><children><relation role=\"equality\" id=\"2\">=</relation></children></cell><cell role=\"table\" id=\"5\"><children><number role=\"integer\" font=\"normal\" id=\"4\">4</number></children></cell></children></row><row role=\"table\" id=\"13\"><children><cell role=\"table\" id=\"8\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"7\">y</identifier></children></cell><cell role=\"table\" id=\"10\"><children><relation role=\"equality\" id=\"9\">=</relation></children></cell><cell role=\"table\" id=\"12\"><children><number role=\"integer\" font=\"normal\" id=\"11\">2</number></children></cell></children></row><row role=\"table\" id=\"23\"><children><cell role=\"table\" id=\"18\"><children><infixop role=\"implicit\" id=\"17\">⁢<content><operator role=\"multiplication\" id=\"16\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"14\">x</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"15\">y</identifier></children></infixop></children></cell><cell role=\"table\" id=\"20\"><children><operator role=\"addition\" id=\"19\">+</operator></children></cell><cell role=\"table\" id=\"22\"><children><number role=\"integer\" font=\"normal\" id=\"21\">6</number></children></cell></children></row></children></table>"
     },
-    "_comment_112": " Missing: MatricesWithIgnores",
+    "_comment_112": " MatricesWithIgnores",
+    "MatricesWithIgnores_0": {
+      "expected": "<relseq role=\"equality\" id=\"16\">=<content><relation role=\"equality\" id=\"1\">=</relation></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">A</identifier><matrix role=\"squarematrix\" id=\"13\"><content><fence role=\"open\" id=\"2\">[</fence><fence role=\"close\" id=\"14\">]</fence></content><children><row role=\"squarematrix\" id=\"7\"><children><cell role=\"squarematrix\" id=\"4\"><children><number role=\"integer\" font=\"normal\" id=\"3\">0</number></children></cell><cell role=\"squarematrix\" id=\"6\"><children><number role=\"integer\" font=\"normal\" id=\"5\">1</number></children></cell></children></row><row role=\"squarematrix\" id=\"12\"><children><cell role=\"squarematrix\" id=\"9\"><children><number role=\"integer\" font=\"normal\" id=\"8\">2</number></children></cell><cell role=\"squarematrix\" id=\"11\"><children><number role=\"integer\" font=\"normal\" id=\"10\">3</number></children></cell></children></row></children></matrix></children></relseq>"
+    },
+    "MatricesWithIgnores_1": {
+      "expected": "<relseq role=\"equality\" id=\"15\">=<content><relation role=\"equality\" id=\"1\">=</relation></content><children><identifier role=\"latinletter\" font=\"bold\" id=\"0\">V</identifier><vector role=\"unknown\" id=\"12\"><content><fence role=\"open\" id=\"2\">[</fence><fence role=\"close\" id=\"13\">]</fence></content><children><line role=\"vector\" id=\"5\"><children><number role=\"integer\" font=\"normal\" id=\"3\">1</number></children></line><line role=\"vector\" id=\"8\"><children><number role=\"integer\" font=\"normal\" id=\"6\">2</number></children></line><line role=\"vector\" id=\"11\"><children><number role=\"integer\" font=\"normal\" id=\"9\">3</number></children></line></children></vector></children></relseq>"
+    },
+    "MatricesWithIgnores_2": {
+      "expected": "<relseq role=\"equality\" id=\"14\">=<content><relation role=\"equality\" id=\"1\">=</relation></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">f</identifier><cases role=\"unknown\" id=\"13\"><content><punctuation role=\"openfence\" id=\"2\">{</punctuation></content><children><row role=\"cases\" id=\"7\"><children><cell role=\"cases\" id=\"4\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"3\">a</identifier></children></cell><cell role=\"cases\" id=\"6\"><children><text role=\"unknown\" font=\"normal\" id=\"5\">often</text></children></cell></children></row><row role=\"cases\" id=\"12\"><children><cell role=\"cases\" id=\"9\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"8\">b</identifier></children></cell><cell role=\"cases\" id=\"11\"><children><text role=\"unknown\" font=\"normal\" id=\"10\">sometimes</text></children></cell></children></row></children></cases></children></relseq>"
+    },
+    "MatricesWithIgnores_3": {
+      "expected": "<relseq role=\"equality\" id=\"25\">=<content><relation role=\"equality\" id=\"1\">=</relation></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">f</identifier><cases role=\"equality\" id=\"24\"><content><punctuation role=\"openfence\" id=\"2\">{</punctuation></content><children><line role=\"cases\" id=\"8\"><children><relseq role=\"equality\" id=\"6\">=<content><relation role=\"equality\" id=\"4\">=</relation></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"3\">x</identifier><number role=\"integer\" font=\"normal\" id=\"5\">4</number></children></relseq></children></line><line role=\"cases\" id=\"14\"><children><relseq role=\"equality\" id=\"12\">=<content><relation role=\"equality\" id=\"10\">=</relation></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"9\">y</identifier><number role=\"integer\" font=\"normal\" id=\"11\">2</number></children></relseq></children></line><line role=\"cases\" id=\"23\"><children><relseq role=\"equality\" id=\"21\">=<content><relation role=\"equality\" id=\"17\">=</relation></content><children><infixop role=\"implicit\" id=\"20\">⁢<content><operator role=\"multiplication\" id=\"19\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"15\">x</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"16\">y</identifier></children></infixop><number role=\"integer\" font=\"normal\" id=\"18\">6</number></children></relseq></children></line></children></cases></children></relseq>"
+    },
     "_comment_113": " Limit functions.",
     "LimitFunctions_0": {
       "brief": true,
@@ -1256,6 +1301,15 @@
     "RightScriptTensors_6": {
       "expected": "<superscript role=\"latinletter\" id=\"10\"><children><subscript role=\"subsup\" id=\"9\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">X</identifier><punctuated role=\"rightsub\" id=\"6\"><content><punctuation role=\"dummy\" id=\"5\">⁣</punctuation></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"1\">i</identifier><empty role=\"unknown\" id=\"2\"/></children></punctuated></children></subscript><punctuated role=\"rightsuper\" id=\"8\"><content><punctuation role=\"dummy\" id=\"7\">⁣</punctuation></content><children><empty role=\"unknown\" id=\"3\"/><identifier role=\"latinletter\" font=\"italic\" id=\"4\">l</identifier></children></punctuated></children></superscript>"
     },
+    "RightScriptTensors_7": {
+      "expected": "<superscript role=\"latinletter\" id=\"10\"><children><subscript role=\"subsup\" id=\"9\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">X</identifier><punctuated role=\"rightsub\" id=\"6\"><content><punctuation role=\"dummy\" id=\"5\">⁣</punctuation></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"1\">i</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"2\">k</identifier></children></punctuated></children></subscript><punctuated role=\"rightsuper\" id=\"8\"><content><punctuation role=\"dummy\" id=\"7\">⁣</punctuation></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"3\">j</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"4\">l</identifier></children></punctuated></children></superscript>"
+    },
+    "RightScriptTensors_8": {
+      "expected": "<subscript role=\"latinletter\" id=\"7\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">X</identifier><punctuated role=\"rightsub\" id=\"6\"><content><punctuation role=\"dummy\" id=\"5\">⁣</punctuation></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"1\">i</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"2\">j</identifier></children></punctuated></children></subscript>"
+    },
+    "RightScriptTensors_9": {
+      "expected": "<superscript role=\"latinletter\" id=\"7\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">X</identifier><punctuated role=\"rightsuper\" id=\"6\"><content><punctuation role=\"dummy\" id=\"5\">⁣</punctuation></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"3\">i</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"4\">j</identifier></children></punctuated></children></superscript>"
+    },
     "_comment_129": " Simple multiscript expressions with some scripts on the left.",
     "SimpleTensors_0": {
       "brief": false,
@@ -1291,12 +1345,72 @@
     "SimpleTensors_10": {
       "expected": "<tensor role=\"latinletter\" id=\"5\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">A</identifier><number role=\"leftsub\" font=\"normal\" id=\"1\">3</number><empty role=\"leftsuper\" id=\"4\"></empty><empty role=\"rightsub\" id=\"2\"></empty><number role=\"rightsuper\" font=\"normal\" id=\"3\">2</number></children></tensor>"
     },
+    "SimpleTensors_11": {
+      "expected": "<tensor role=\"latinletter\" id=\"5\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">A</identifier><number role=\"leftsub\" font=\"normal\" id=\"1\">3</number><empty role=\"leftsuper\" id=\"4\"/><empty role=\"rightsub\" id=\"2\"/><number role=\"rightsuper\" font=\"normal\" id=\"3\">2</number></children></tensor>"
+    },
     "_comment_130": " Complex multiscript expressions with some scripts on the left.",
     "ComplexTensors_0": {
       "expected": "<tensor role=\"latinletter\" id=\"17\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">A</identifier><punctuated role=\"leftsub\" id=\"10\"><content><punctuation role=\"dummy\" id=\"9\">⁣</punctuation></content><children><number role=\"integer\" font=\"normal\" id=\"1\">1</number><identifier role=\"latinletter\" font=\"italic\" id=\"2\">i</identifier></children></punctuated><punctuated role=\"leftsuper\" id=\"12\"><content><punctuation role=\"dummy\" id=\"11\">⁣</punctuation></content><children><number role=\"integer\" font=\"normal\" id=\"3\">2</number><identifier role=\"latinletter\" font=\"italic\" id=\"4\">j</identifier></children></punctuated><punctuated role=\"rightsub\" id=\"14\"><content><punctuation role=\"dummy\" id=\"13\">⁣</punctuation></content><children><number role=\"integer\" font=\"normal\" id=\"5\">3</number><identifier role=\"latinletter\" font=\"italic\" id=\"6\">k</identifier></children></punctuated><punctuated role=\"rightsuper\" id=\"16\"><content><punctuation role=\"dummy\" id=\"15\">⁣</punctuation></content><children><number role=\"integer\" font=\"normal\" id=\"7\">4</number><identifier role=\"latinletter\" font=\"italic\" id=\"8\">l</identifier></children></punctuated></children></tensor>"
     },
     "ComplexTensors_1": {
       "expected": "<tensor role=\"latinletter\" id=\"17\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">A</identifier><punctuated role=\"leftsub\" id=\"10\"><content><punctuation role=\"dummy\" id=\"9\">⁣</punctuation></content><children><number role=\"integer\" font=\"normal\" id=\"1\">1</number><empty role=\"unknown\" id=\"2\"></empty></children></punctuated><punctuated role=\"leftsuper\" id=\"12\"><content><punctuation role=\"dummy\" id=\"11\">⁣</punctuation></content><children><empty role=\"unknown\" id=\"3\"></empty><identifier role=\"latinletter\" font=\"italic\" id=\"4\">j</identifier></children></punctuated><punctuated role=\"rightsub\" id=\"14\"><content><punctuation role=\"dummy\" id=\"13\">⁣</punctuation></content><children><number role=\"integer\" font=\"normal\" id=\"5\">3</number><identifier role=\"latinletter\" font=\"italic\" id=\"6\">k</identifier></children></punctuated><punctuated role=\"rightsuper\" id=\"16\"><content><punctuation role=\"dummy\" id=\"15\">⁣</punctuation></content><children><empty role=\"unknown\" id=\"7\"></empty><identifier role=\"latinletter\" font=\"italic\" id=\"8\">l</identifier></children></punctuated></children></tensor>"
+    },
+    "ComplexTensors_2": {
+      "expected": "<tensor role=\"latinletter\" id=\"8\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">A</identifier><number role=\"leftsub\" font=\"normal\" id=\"1\">4</number><empty role=\"leftsuper\" id=\"5\"/><punctuated role=\"rightsub\" id=\"7\"><content><punctuation role=\"dummy\" id=\"6\">⁣</punctuation></content><children><number role=\"integer\" font=\"normal\" id=\"2\">1</number><number role=\"integer\" font=\"normal\" id=\"3\">3</number></children></punctuated><number role=\"rightsuper\" font=\"normal\" id=\"4\">2</number></children></tensor>"
+    },
+    "ComplexTensors_3": {
+      "expected": "<tensor role=\"latinletter\" id=\"11\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">A</identifier><punctuated role=\"leftsub\" id=\"8\"><content><punctuation role=\"dummy\" id=\"7\">⁣</punctuation></content><children><number role=\"integer\" font=\"normal\" id=\"1\">5</number><number role=\"integer\" font=\"normal\" id=\"2\">6</number></children></punctuated><number role=\"leftsuper\" font=\"normal\" id=\"3\">4</number><punctuated role=\"rightsub\" id=\"10\"><content><punctuation role=\"dummy\" id=\"9\">⁣</punctuation></content><children><number role=\"integer\" font=\"normal\" id=\"4\">1</number><number role=\"integer\" font=\"normal\" id=\"5\">3</number></children></punctuated><number role=\"rightsuper\" font=\"normal\" id=\"6\">2</number></children></tensor>"
+    },
+    "ComplexTensors_4": {
+      "expected": "<tensor role=\"latinletter\" id=\"11\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">A</identifier><punctuated role=\"leftsub\" id=\"8\"><content><punctuation role=\"dummy\" id=\"7\">⁣</punctuation></content><children><number role=\"integer\" font=\"normal\" id=\"1\">5</number><number role=\"integer\" font=\"normal\" id=\"2\">6</number></children></punctuated><number role=\"leftsuper\" font=\"normal\" id=\"3\">4</number><punctuated role=\"rightsub\" id=\"10\"><content><punctuation role=\"dummy\" id=\"9\">⁣</punctuation></content><children><number role=\"integer\" font=\"normal\" id=\"4\">1</number><number role=\"integer\" font=\"normal\" id=\"5\">3</number></children></punctuated><number role=\"rightsuper\" font=\"normal\" id=\"6\">2</number></children></tensor>"
+    },
+    "ComplexTensors_5": {
+      "expected": "<tensor role=\"addition\" id=\"8\"><children><infixop role=\"addition\" id=\"3\">+<content><operator role=\"addition\" id=\"1\">+</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">X</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"2\">Y</identifier></children></infixop><empty role=\"leftsub\" id=\"4\"/><number role=\"leftsuper\" font=\"normal\" id=\"5\">3</number><number role=\"rightsub\" font=\"normal\" id=\"6\">1</number><number role=\"rightsuper\" font=\"normal\" id=\"7\">2</number></children></tensor>"
+    },
+    "PseudoUnitChildren_0": {
+      "expected": "<identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier>"
+    },
+    "PseudoUnitChildren_1": {
+      "expected": "<identifier role=\"latinletter\" font=\"italic\" id=\"0\">i</identifier>"
+    },
+    "PseudoUnitChildren_2": {
+      "expected": "<identifier role=\"latinletter\" font=\"italic\" id=\"0\">i</identifier>"
+    },
+    "PseudoUnitChildren_3": {
+      "expected": "<identifier role=\"latinletter\" font=\"italic\" id=\"0\">i</identifier>"
+    },
+    "PseudoUnitChildren_4": {
+      "expected": "<identifier role=\"latinletter\" font=\"italic\" id=\"0\">i</identifier>"
+    },
+    "PseudoUnitChildren_5": {
+      "expected": "<identifier role=\"latinletter\" font=\"italic\" id=\"0\">i</identifier>"
+    },
+    "PseudoUnitChildren_6": {
+      "expected": "<infixop role=\"implicit\" id=\"3\">⁢<content><operator role=\"multiplication\" id=\"2\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">i</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"1\">j</identifier></children></infixop>"
+    },
+    "InterspersedIgnore_0": {
+      "expected": "<infixop role=\"implicit\" id=\"3\">⁢<content><operator role=\"multiplication\" id=\"2\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">i</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"1\">j</identifier></children></infixop>"
+    },
+    "InterspersedIgnore_1": {
+      "expected": "<infixop role=\"addition\" id=\"3\">+<content><operator role=\"addition\" id=\"1\">+</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">i</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"2\">j</identifier></children></infixop>"
+    },
+    "InterspersedIgnore_2": {
+      "expected": "<infixop role=\"addition\" id=\"3\">+<content><operator role=\"addition\" id=\"1\">+</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">i</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"2\">j</identifier></children></infixop>"
+    },
+    "InterspersedIgnore_3": {
+      "expected": "<infixop role=\"implicit\" id=\"3\">⁢<content><operator role=\"multiplication\" id=\"2\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">i</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"1\">j</identifier></children></infixop>"
+    },
+    "InterspersedIgnore_4": {
+      "expected": "<infixop role=\"addition\" id=\"3\">+<content><operator role=\"addition\" id=\"1\">+</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">i</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"2\">j</identifier></children></infixop>"
+    },
+    "MunderOver_0": {
+      "expected": "<underscore role=\"arrow\" embellished=\"relation\" id=\"2\"><children><relation role=\"arrow\" id=\"0\">→</relation><identifier role=\"latinletter\" font=\"italic\" id=\"1\">n</identifier></children></underscore>"
+    },
+    "MunderOver_1": {
+      "expected": "<overscore role=\"arrow\" embellished=\"relation\" id=\"2\"><children><relation role=\"arrow\" id=\"0\">→</relation><text role=\"unknown\" font=\"normal\" id=\"1\">above</text></children></overscore>"
+    },
+    "MunderOver_2": {
+      "expected": "<overscore role=\"arrow\" embellished=\"relation\" id=\"4\"><children><underscore role=\"underover\" embellished=\"relation\" id=\"3\"><children><relation role=\"arrow\" id=\"0\">→</relation><identifier role=\"latinletter\" font=\"italic\" id=\"1\">n</identifier></children></underscore><text role=\"unknown\" font=\"normal\" id=\"2\">above</text></children></overscore>"
     },
     "_comment_131": " Simple embellished arguments.",
     "SimpleEmbellishment_0": {
@@ -1437,6 +1551,39 @@
     "EmbellishedPaddedFences_2": {
       "expected": "<superscript role=\"leftright\" fencepointer=\"9\" id=\"13\"><children><subscript role=\"subsup\" fencepointer=\"9\" id=\"12\"><children><tensor role=\"leftright\" fencepointer=\"0\" id=\"5\"><children><fenced role=\"leftright\" id=\"16\"><content><underscore role=\"open\" embellished=\"fence\" id=\"7\"><children><fence role=\"open\" id=\"0\">(</fence><relation role=\"underaccent\" id=\"6\">~</relation></children></underscore><overscore role=\"close\" embellished=\"fence\" id=\"15\"><children><fence role=\"close\" id=\"9\">)</fence><operator role=\"overaccent\" id=\"14\">^</operator></children></overscore></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"8\">x</identifier></children></fenced><number role=\"leftsub\" font=\"normal\" id=\"1\">4</number><number role=\"leftsuper\" font=\"normal\" id=\"2\">3</number><empty role=\"rightsub\" id=\"3\"/><empty role=\"rightsuper\" id=\"4\"/></children></tensor><number role=\"integer\" font=\"normal\" id=\"10\">1</number></children></subscript><number role=\"integer\" font=\"normal\" id=\"11\">2</number></children></superscript>"
     },
+    "EmbellRightSubexpr_0": {
+      "expected": "<infixop role=\"addition\" id=\"8\">+<content><operator role=\"addition\" id=\"5\">+</operator></content><children><superscript role=\"leftright\" fencepointer=\"2\" id=\"4\"><children><fenced role=\"leftright\" id=\"7\"><content><fence role=\"open\" id=\"0\">(</fence><fence role=\"close\" id=\"2\">)</fence></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"1\">x</identifier></children></fenced><number role=\"integer\" font=\"normal\" id=\"3\">4</number></children></superscript><number role=\"integer\" font=\"normal\" id=\"6\">1</number></children></infixop>"
+    },
+    "EmbellRightSubexpr_1": {
+      "expected": "<infixop role=\"addition\" id=\"10\">+<content><operator role=\"addition\" id=\"1\">+</operator><operator role=\"addition\" id=\"7\">+</operator></content><children><number role=\"integer\" font=\"normal\" id=\"0\">2</number><superscript role=\"leftright\" fencepointer=\"4\" id=\"6\"><children><fenced role=\"leftright\" id=\"9\"><content><fence role=\"open\" id=\"2\">(</fence><fence role=\"close\" id=\"4\">)</fence></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"3\">x</identifier></children></fenced><number role=\"integer\" font=\"normal\" id=\"5\">4</number></children></superscript><number role=\"integer\" font=\"normal\" id=\"8\">1</number></children></infixop>"
+    },
+    "EmbellRightSubexpr_2": {
+      "expected": "<infixop role=\"addition\" id=\"10\">+<content><operator role=\"addition\" id=\"6\">+</operator></content><children><prefixop role=\"negative\" id=\"9\">-<content><operator role=\"subtraction\" id=\"0\">-</operator></content><children><superscript role=\"leftright\" fencepointer=\"3\" id=\"5\"><children><fenced role=\"leftright\" id=\"8\"><content><fence role=\"open\" id=\"1\">(</fence><fence role=\"close\" id=\"3\">)</fence></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"2\">x</identifier></children></fenced><number role=\"integer\" font=\"normal\" id=\"4\">4</number></children></superscript></children></prefixop><number role=\"integer\" font=\"normal\" id=\"7\">1</number></children></infixop>"
+    },
+    "EmbellLeftSubexpr_0": {
+      "expected": "<infixop role=\"addition\" id=\"11\">+<content><operator role=\"addition\" id=\"8\">+</operator></content><children><tensor role=\"leftright\" fencepointer=\"0\" id=\"5\"><children><fenced role=\"leftright\" id=\"10\"><content><fence role=\"open\" id=\"0\">(</fence><fence role=\"close\" id=\"7\">)</fence></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"6\">x</identifier></children></fenced><number role=\"leftsub\" font=\"normal\" id=\"1\">4</number><number role=\"leftsuper\" font=\"normal\" id=\"2\">3</number><empty role=\"rightsub\" id=\"3\"/><empty role=\"rightsuper\" id=\"4\"/></children></tensor><number role=\"integer\" font=\"normal\" id=\"9\">1</number></children></infixop>"
+    },
+    "EmbellLeftSubexpr_1": {
+      "expected": "<infixop role=\"addition\" id=\"13\">+<content><operator role=\"addition\" id=\"9\">+</operator></content><children><prefixop role=\"negative\" id=\"12\">-<content><operator role=\"subtraction\" id=\"0\">-</operator></content><children><tensor role=\"leftright\" fencepointer=\"1\" id=\"6\"><children><fenced role=\"leftright\" id=\"11\"><content><fence role=\"open\" id=\"1\">(</fence><fence role=\"close\" id=\"8\">)</fence></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"7\">x</identifier></children></fenced><number role=\"leftsub\" font=\"normal\" id=\"2\">4</number><number role=\"leftsuper\" font=\"normal\" id=\"3\">3</number><empty role=\"rightsub\" id=\"4\"/><empty role=\"rightsuper\" id=\"5\"/></children></tensor></children></prefixop><number role=\"integer\" font=\"normal\" id=\"10\">1</number></children></infixop>"
+    },
+    "EmbellLeftSubexpr_2": {
+      "expected": "<infixop role=\"addition\" id=\"13\">+<content><operator role=\"addition\" id=\"1\">+</operator><operator role=\"addition\" id=\"10\">+</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">k</identifier><tensor role=\"leftright\" fencepointer=\"2\" id=\"7\"><children><fenced role=\"leftright\" id=\"12\"><content><fence role=\"open\" id=\"2\">(</fence><fence role=\"close\" id=\"9\">)</fence></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"8\">x</identifier></children></fenced><number role=\"leftsub\" font=\"normal\" id=\"3\">4</number><number role=\"leftsuper\" font=\"normal\" id=\"4\">3</number><empty role=\"rightsub\" id=\"5\"/><empty role=\"rightsuper\" id=\"6\"/></children></tensor><number role=\"integer\" font=\"normal\" id=\"11\">1</number></children></infixop>"
+    },
+    "EmbellBothSubexpr_0": {
+      "expected": "<infixop role=\"addition\" id=\"15\">+<content><operator role=\"addition\" id=\"12\">+</operator></content><children><superscript role=\"leftright\" fencepointer=\"7\" id=\"11\"><children><subscript role=\"subsup\" fencepointer=\"7\" id=\"10\"><children><tensor role=\"leftright\" fencepointer=\"0\" id=\"5\"><children><fenced role=\"leftright\" id=\"14\"><content><fence role=\"open\" id=\"0\">(</fence><fence role=\"close\" id=\"7\">)</fence></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"6\">x</identifier></children></fenced><number role=\"leftsub\" font=\"normal\" id=\"1\">4</number><number role=\"leftsuper\" font=\"normal\" id=\"2\">3</number><empty role=\"rightsub\" id=\"3\"/><empty role=\"rightsuper\" id=\"4\"/></children></tensor><number role=\"integer\" font=\"normal\" id=\"8\">1</number></children></subscript><number role=\"integer\" font=\"normal\" id=\"9\">2</number></children></superscript><number role=\"integer\" font=\"normal\" id=\"13\">1</number></children></infixop>"
+    },
+    "EmbellBothSubexpr_1": {
+      "expected": "<infixop role=\"addition\" id=\"17\">+<content><operator role=\"addition\" id=\"13\">+</operator></content><children><prefixop role=\"negative\" id=\"16\">-<content><operator role=\"subtraction\" id=\"0\">-</operator></content><children><superscript role=\"leftright\" fencepointer=\"8\" id=\"12\"><children><subscript role=\"subsup\" fencepointer=\"8\" id=\"11\"><children><tensor role=\"leftright\" fencepointer=\"1\" id=\"6\"><children><fenced role=\"leftright\" id=\"15\"><content><fence role=\"open\" id=\"1\">(</fence><fence role=\"close\" id=\"8\">)</fence></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"7\">x</identifier></children></fenced><number role=\"leftsub\" font=\"normal\" id=\"2\">4</number><number role=\"leftsuper\" font=\"normal\" id=\"3\">3</number><empty role=\"rightsub\" id=\"4\"/><empty role=\"rightsuper\" id=\"5\"/></children></tensor><number role=\"integer\" font=\"normal\" id=\"9\">1</number></children></subscript><number role=\"integer\" font=\"normal\" id=\"10\">2</number></children></superscript></children></prefixop><number role=\"integer\" font=\"normal\" id=\"14\">1</number></children></infixop>"
+    },
+    "EmbellBothSubexpr_2": {
+      "expected": "<infixop role=\"addition\" id=\"18\">+<content><operator role=\"addition\" id=\"14\">+</operator></content><children><infixop role=\"subtraction\" id=\"17\">-<content><operator role=\"subtraction\" id=\"1\">-</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">k</identifier><superscript role=\"leftright\" fencepointer=\"9\" id=\"13\"><children><subscript role=\"subsup\" fencepointer=\"9\" id=\"12\"><children><tensor role=\"leftright\" fencepointer=\"2\" id=\"7\"><children><fenced role=\"leftright\" id=\"16\"><content><fence role=\"open\" id=\"2\">(</fence><fence role=\"close\" id=\"9\">)</fence></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"8\">x</identifier></children></fenced><number role=\"leftsub\" font=\"normal\" id=\"3\">4</number><number role=\"leftsuper\" font=\"normal\" id=\"4\">3</number><empty role=\"rightsub\" id=\"5\"/><empty role=\"rightsuper\" id=\"6\"/></children></tensor><number role=\"integer\" font=\"normal\" id=\"10\">1</number></children></subscript><number role=\"integer\" font=\"normal\" id=\"11\">2</number></children></superscript></children></infixop><number role=\"integer\" font=\"normal\" id=\"15\">1</number></children></infixop>"
+    },
+    "ComplexEmbellRight_0": {
+      "expected": "<superscript role=\"leftright\" fencepointer=\"4\" id=\"6\"><children><fenced role=\"leftright\" id=\"8\"><content><fence role=\"open\" id=\"0\">(</fence><fence role=\"close\" id=\"4\">)</fence></content><children><infixop role=\"addition\" id=\"7\">+<content><operator role=\"addition\" id=\"2\">+</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"1\">x</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"3\">y</identifier></children></infixop></children></fenced><number role=\"integer\" font=\"normal\" id=\"5\">4</number></children></superscript>"
+    },
+    "ComplexEmbellRight_1": {
+      "expected": "<subscript role=\"leftright\" fencepointer=\"4\" id=\"6\"><children><fenced role=\"leftright\" id=\"8\"><content><fence role=\"open\" id=\"0\">(</fence><fence role=\"close\" id=\"4\">)</fence></content><children><infixop role=\"addition\" id=\"7\">+<content><operator role=\"addition\" id=\"2\">+</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"1\">x</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"3\">y</identifier></children></infixop></children></fenced><number role=\"integer\" font=\"normal\" id=\"5\">4</number></children></subscript>"
+    },
     "_comment_139": " Expressions with embellished fences right.",
     "EmbellishedNeutralFences_0": {
       "expected": "<superscript role=\"neutral\" fencepointer=\"2\" id=\"4\"><children><fenced role=\"neutral\" id=\"5\"><content><fence role=\"neutral\" id=\"0\">|</fence><fence role=\"neutral\" id=\"2\">|</fence></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"1\">x</identifier></children></fenced><number role=\"integer\" font=\"normal\" id=\"3\">4</number></children></superscript>"
@@ -1486,6 +1633,9 @@
     "SemanticsElement_3": {
       "brief": true,
       "expected": "<infixop>+<content><operator>+</operator></content><children><identifier>a</identifier><identifier>b</identifier></children></infixop>"
+    },
+    "SemanticsElement_4": {
+      "expected": "<superscript role=\"latinletter\" id=\"4\"><children><subscript role=\"subsup\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">p</identifier><number role=\"integer\" font=\"normal\" id=\"1\">1</number></children></subscript><identifier role=\"latinletter\" font=\"italic\" id=\"2\">x</identifier></children></superscript>"
     },
     "_comment_144": " Expressions with semantic elements and annotations.",
     "_comment_145": " This is not really legal markup.",
@@ -1802,6 +1952,39 @@
     "RelationTables_5": {
       "expected": "<table role=\"arrow\" id=\"13\"><children><row role=\"table\" id=\"7\"><children><cell role=\"table\" id=\"4\"><children><relseq role=\"arrow\" id=\"3\">←<content><relation role=\"arrow\" id=\"1\">←</relation></content><children><identifier role=\"greekletter\" font=\"italic\" id=\"0\">λ</identifier><empty role=\"unknown\" id=\"2\"/></children></relseq></children></cell><cell role=\"table\" id=\"6\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"5\">a</identifier></children></cell></children></row><row role=\"table\" id=\"12\"><children><cell role=\"table\" id=\"9\"><children><relation role=\"arrow\" id=\"8\">→</relation></children></cell><cell role=\"table\" id=\"11\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"10\">b</identifier></children></cell></children></row></children></table>"
     },
+    "SwapElementLayers_0": {
+      "expected": "<infixop role=\"implicit\" id=\"6\">⁢<content><operator role=\"multiplication\" font=\"italic\" id=\"4\">⁢</operator></content><children><infixop role=\"division\" id=\"3\">/<content><operator role=\"division\" font=\"normal\" id=\"1\">/</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">n</identifier><identifier role=\"greekletter\" font=\"italic\" id=\"2\">ϕ</identifier></children></infixop><identifier role=\"latinletter\" font=\"italic\" id=\"5\">m</identifier></children></infixop>"
+    },
+    "SwapElementLayers_1": {
+      "expected": "<infixop role=\"implicit\" id=\"6\">⁢<content><operator role=\"multiplication\" font=\"italic\" id=\"4\">⁢</operator></content><children><infixop role=\"division\" id=\"3\">/<content><operator role=\"division\" font=\"normal\" id=\"1\">/</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">n</identifier><identifier role=\"greekletter\" font=\"italic\" id=\"2\">ϕ</identifier></children></infixop><identifier role=\"latinletter\" font=\"italic\" id=\"5\">m</identifier></children></infixop>"
+    },
+    "SwapElementLayers_2": {
+      "expected": "<infixop role=\"implicit\" id=\"6\">⁢<content><operator role=\"multiplication\" font=\"italic\" id=\"4\">⁢</operator></content><children><infixop role=\"division\" id=\"3\">/<content><operator role=\"division\" font=\"normal\" id=\"1\">/</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">n</identifier><identifier role=\"greekletter\" font=\"italic\" id=\"2\">ϕ</identifier></children></infixop><identifier role=\"latinletter\" font=\"italic\" id=\"5\">m</identifier></children></infixop>"
+    },
+    "SwapElementLayers_3": {
+      "expected": "<infixop role=\"implicit\" id=\"6\">⁢<content><operator role=\"multiplication\" font=\"italic\" id=\"4\">⁢</operator></content><children><infixop role=\"division\" id=\"3\">/<content><operator role=\"division\" font=\"normal\" id=\"1\">/</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">n</identifier><identifier role=\"greekletter\" font=\"italic\" id=\"2\">ϕ</identifier></children></infixop><identifier role=\"latinletter\" font=\"italic\" id=\"5\">m</identifier></children></infixop>"
+    },
+    "SwapElementLayers_4": {
+      "expected": "<infixop role=\"implicit\" id=\"6\">⁢<content><operator role=\"multiplication\" font=\"italic\" id=\"4\">⁢</operator></content><children><infixop role=\"division\" id=\"3\">/<content><operator role=\"division\" font=\"normal\" id=\"1\">/</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">n</identifier><identifier role=\"greekletter\" font=\"italic\" id=\"2\">ϕ</identifier></children></infixop><identifier role=\"latinletter\" font=\"italic\" id=\"5\">m</identifier></children></infixop>"
+    },
+    "SwapElementLayers_5": {
+      "expected": "<infixop role=\"implicit\" id=\"12\">⁢<content><operator role=\"multiplication\" font=\"italic\" id=\"8\">⁢</operator></content><children><infixop role=\"implicit\" id=\"11\">⁢<content><operator role=\"multiplication\" id=\"10\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier><infixop role=\"multiplication\" id=\"7\">*<content><operator role=\"multiplication\" id=\"5\">*</operator></content><children><infixop role=\"division\" id=\"4\">/<content><operator role=\"division\" font=\"normal\" id=\"2\">/</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"1\">n</identifier><identifier role=\"greekletter\" font=\"italic\" id=\"3\">ϕ</identifier></children></infixop><identifier role=\"latinletter\" font=\"italic\" id=\"6\">b</identifier></children></infixop></children></infixop><identifier role=\"latinletter\" font=\"italic\" id=\"9\">m</identifier></children></infixop>"
+    },
+    "SpacesAndEmptyFences_0": {
+      "expected": "<identifier role=\"latinletter\" font=\"italic\" id=\"1\">v</identifier>"
+    },
+    "SpacesAndEmptyFences_1": {
+      "expected": "<punctuated role=\"startpunct\" id=\"3\"><content><punctuation role=\"openfence\" id=\"0\">{</punctuation></content><children><punctuation role=\"openfence\" id=\"0\">{</punctuation><identifier role=\"latinletter\" font=\"italic\" id=\"2\">v</identifier></children></punctuated>"
+    },
+    "SpacesAndEmptyFences_2": {
+      "expected": "<infixop role=\"implicit\" id=\"4\">⁢<content><operator role=\"multiplication\" id=\"3\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"2\">v</identifier></children></infixop>"
+    },
+    "SpacesAndEmptyFences_3": {
+      "expected": "<infixop role=\"implicit\" id=\"6\">⁢<content><operator role=\"multiplication\" id=\"5\">⁢</operator></content><children><punctuated role=\"startpunct\" id=\"3\"><content><punctuation role=\"openfence\" id=\"0\">{</punctuation></content><children><punctuation role=\"openfence\" id=\"0\">{</punctuation><identifier role=\"latinletter\" font=\"italic\" id=\"1\">a</identifier></children></punctuated><identifier role=\"latinletter\" font=\"italic\" id=\"4\">v</identifier></children></infixop>"
+    },
+    "SpacesAndEmptyFences_4": {
+      "expected": "<infixop role=\"implicit\" id=\"8\">⁢<content><operator role=\"multiplication\" id=\"7\">⁢</operator></content><children><cases role=\"unknown\" id=\"4\"><content><punctuation role=\"openfence\" id=\"0\">{</punctuation></content><children><line role=\"cases\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"1\">u</identifier></children></line></children></cases><identifier role=\"latinletter\" font=\"italic\" id=\"6\">v</identifier></children></infixop>"
+    },
     "_comment_179": " Set expressions.",
     "Sets_0": {
       "expected": "<fenced role=\"set empty\" id=\"3\"><content><fence role=\"open\" id=\"0\">{</fence><fence role=\"close\" id=\"1\">}</fence></content><children><empty role=\"unknown\" id=\"2\"/></children></fenced>"
@@ -1836,6 +2019,24 @@
     "_comment_180": " Test for issue #287",
     "Sets_10": {
       "expected": "<appl role=\"simple function\" id=\"13\"><content><punctuation role=\"application\" id=\"12\">⁡</punctuation><identifier role=\"simple function\" font=\"normal\" id=\"0\">Γ</identifier></content><children><subscript role=\"simple function\" id=\"7\"><children><identifier role=\"simple function\" font=\"normal\" id=\"0\">Γ</identifier><fenced role=\"set singleton\" id=\"6\"><content><fence role=\"open\" id=\"1\">{</fence><fence role=\"close\" id=\"5\">}</fence></content><children><subscript role=\"latinletter\" id=\"4\"><children><identifier role=\"latinletter\" font=\"caligraphic\" id=\"2\">M</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"3\">k</identifier></children></subscript></children></fenced></children></subscript><fenced role=\"leftright\" id=\"11\"><content><fence role=\"open\" id=\"8\">(</fence><fence role=\"close\" id=\"10\">)</fence></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"9\">X</identifier></children></fenced></children></appl>"
+    },
+    "HiddenIgnoreElements_0": {
+      "expected": "<fraction role=\"division\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"2\">b</identifier></children></fraction>"
+    },
+    "HiddenIgnoreElements_1": {
+      "expected": "<fraction role=\"division\" id=\"5\"><children><infixop role=\"implicit\" id=\"3\">⁢<content><operator role=\"multiplication\" id=\"2\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"1\">d</identifier></children></infixop><identifier role=\"latinletter\" font=\"italic\" id=\"4\">b</identifier></children></fraction>"
+    },
+    "HiddenIgnoreElements_2": {
+      "expected": "<fraction role=\"division\" id=\"4\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"3\">b</identifier></children></fraction>"
+    },
+    "HiddenEmptyTokens_0": {
+      "expected": "<subscript role=\"vbar\" embellished=\"punctuation\" id=\"3\"><children><punctuation role=\"vbar\" id=\"1\">|</punctuation><identifier role=\"latinletter\" font=\"italic\" id=\"2\">t</identifier></children></subscript>"
+    },
+    "HiddenEmptyTokens_1": {
+      "expected": "<subscript role=\"vbar\" embellished=\"punctuation\" id=\"3\"><children><punctuation role=\"vbar\" id=\"1\">|</punctuation><identifier role=\"latinletter\" font=\"italic\" id=\"2\">t</identifier></children></subscript>"
+    },
+    "HiddenEmptyTokens_2": {
+      "expected": "<subscript role=\"vbar\" embellished=\"punctuation\" id=\"4\"><children><punctuation role=\"vbar\" id=\"2\">|</punctuation><identifier role=\"latinletter\" font=\"italic\" id=\"3\">t</identifier></children></subscript>"
     },
     "_comment_181": " Tests for vulgar fractions.",
     "VulgarFractions_0": {
@@ -1881,6 +2082,42 @@
     },
     "Issue284_4": {
       "expected": "<number role=\"mixed\" id=\"5\"><children><number role=\"latinletter\" font=\"normal\" id=\"0\">a</number><fraction role=\"division\" id=\"4\"><children><number role=\"integer\" font=\"normal\" id=\"2\">3</number><identifier role=\"latinletter\" font=\"italic\" id=\"3\">p</identifier></children></fraction></children></number>"
+    },
+    "MglyphTokens_0": {
+      "expected": "<identifier role=\"unknown\" id=\"0\" ext-speech=\"my glyph\"/>"
+    },
+    "MglyphToken_1": {
+      "expected": "<identifier role=\"unknown\" id=\"0\" ext-speech=\"your glyph\"/>"
+    },
+    "MglyphToken_2": {
+      "expected": "<operator role=\"unknown\" id=\"0\" ext-speech=\"my glyph\"/>"
+    },
+    "MglyphToken_3": {
+      "expected": "<operator role=\"unknown\" id=\"0\" ext-speech=\"your glyph\"/>"
+    },
+    "MglyphToken_4": {
+      "expected": "<number role=\"integer\" id=\"0\" ext-speech=\"my glyph\"/>"
+    },
+    "MglyphToken_5": {
+      "expected": "<number role=\"integer\" id=\"0\" ext-speech=\"your glyph\"/>"
+    },
+    "MglyphToken_6": {
+      "expected": "<unknown role=\"unknown\" id=\"0\" ext-speech=\"my glyph\"/>"
+    },
+    "MglyphToken_7": {
+      "expected": "<unknown role=\"unknown\" id=\"0\" ext-speech=\"your glyph\"/>"
+    },
+    "MglyphToken_8": {
+      "expected": "<unknown role=\"unknown\" id=\"0\" ext-speech=\"my glyph\"/>"
+    },
+    "MglyphToken_9": {
+      "expected": "<unknown role=\"unknown\" id=\"0\" ext-speech=\"your glyph\"/>"
+    },
+    "MglyphGeneral_0": {
+      "expected": "<relseq role=\"equality\" id=\"6\">=<content><relation role=\"equality\" id=\"3\">=</relation></content><children><infixop role=\"addition\" id=\"5\">+<content><operator role=\"addition\" id=\"1\">+</operator></content><children><identifier role=\"unknown\" id=\"0\" ext-speech=\"23braid\"/><identifier role=\"unknown\" id=\"2\" ext-speech=\"132braid\"/></children></infixop><identifier role=\"unknown\" id=\"4\" ext-speech=\"13braid\"/></children></relseq>"
+    },
+    "MglyphGeneral_1": {
+      "expected": "<infixop role=\"implicit\" id=\"8\">⁢<content><operator role=\"multiplication\" id=\"7\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">N</identifier><subscript role=\"latinletter\" id=\"6\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"1\">M</identifier><infixop role=\"unknown\" id=\"5\">⊂<content><operator role=\"unknown\" id=\"3\">⊂</operator></content><children><number role=\"integer\" font=\"normal\" id=\"2\">1</number><unknown role=\"mglyph\" id=\"4\" ext-speech=\"mfin\"/></children></infixop></children></subscript></children></infixop>"
     }
   }
 }
