@@ -36,7 +36,7 @@ goog.require('sre.System');
 goog.require('sre.SystemExternal');
 goog.require('sre.TestUtil');
 goog.require('sre.WalkerUtil');
-goog.require('sre.XpathUtil');
+
 
 
 /**
@@ -202,7 +202,7 @@ goog.inherits(sre.SemanticTreeTest, sre.SemanticTest);
  * @override
  */
 sre.SemanticTreeTest.prototype.setUpTest = function() {
-  this.xpathBlacklist = [];
+  // this.xpathBlacklist = [];
   this.annotations = sre.SemanticAnnotations.getInstance().annotators;
   this.visitors = sre.SemanticAnnotations.getInstance().visitors;
   sre.SemanticAnnotations.getInstance().annotators = {};
@@ -247,22 +247,6 @@ sre.SemanticTreeTest.setupAttributes = function() {
 
 
 /**
- * Removes XML nodes according to the XPath elements in the blacklist.
- * @param {Node} xml Xml representation of the semantic node.
- */
-sre.SemanticTreeTest.prototype.customizeXml = function(xml) {
-  this.xpathBlacklist.forEach(
-      function(xpath) {
-        var removes = sre.XpathUtil.evalXPath(xpath, xml);
-        removes.forEach(
-            function(node) {
-              node.parentNode.removeChild(node);
-            });
-      });
-};
-
-
-/**
  * @override
  */
 sre.SemanticTreeTest.prototype.method = function(var_args) {
@@ -282,7 +266,6 @@ sre.SemanticTreeTest.prototype.executeTest = function(mml, sml, opt_brief) {
           mml + '</math>';
   var node = sre.DomUtil.parseInput(mathMl);
   var sxml = new sre.SemanticTree(node).xml(opt_brief);
-  this.customizeXml(sxml);
   var dp = new sre.SystemExternal.xmldom.DOMParser();
   var xml = dp.parseFromString('<stree>' + sml + '</stree>', 'text/xml');
   var xmls = new sre.SystemExternal.xmldom.XMLSerializer();
@@ -297,6 +280,7 @@ sre.SemanticTreeTest.prototype.executeTest = function(mml, sml, opt_brief) {
  */
 sre.EnrichMathmlTest = function(tests, base) {
   sre.EnrichMathmlTest.base(this, 'constructor', tests, base);
+  this.attrBlacklist = [];
   this.setActive('EnrichExamples', 'js');
 };
 goog.inherits(sre.EnrichMathmlTest, sre.SemanticTest);
