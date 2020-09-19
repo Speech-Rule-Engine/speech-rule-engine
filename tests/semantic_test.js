@@ -311,13 +311,13 @@ sre.EnrichMathmlTest.prototype.executeTest = function(mml, smml) {
   var mathMl = sre.Enrich.prepareMmlString(mml);
   var node = sre.Enrich.semanticMathmlSync(mathMl);
   var dp = new sre.SystemExternal.xmldom.DOMParser();
-  var xml = dp.parseFromString(smml);
+  var xml = smml ? dp.parseFromString(smml) : '';
   var xmls = new sre.SystemExternal.xmldom.XMLSerializer();
   this.customizeXml(node);
   this.appendExamples('', mml);
   var cleaned = sre.EnrichMathml.removeAttributePrefix(
       xmls.serializeToString(node));
-  this.assert.equal(cleaned, xmls.serializeToString(xml));
+  this.assert.equal(xmls.serializeToString(xml), cleaned);
 };
 
 
