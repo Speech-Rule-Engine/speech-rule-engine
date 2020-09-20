@@ -1379,6 +1379,27 @@
     "ComplexEmbellRight_1": {
       "input": "<mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><msub><mo>)</mo><mn>4</mn></msub>"
     },
+    "EmbellishedNeutralFences_0": {
+      "input": "<mo>|</mo><mi>x</mi><msup><mo>|</mo><mn>4</mn></msup>"
+    },
+    "EmbellishedNeutralFences_1": {
+      "input": "<mo>|</mo><mi>x</mi><msup><mo>|</mo><mn>4</mn></msup><mo>+</mo><mo>|</mo><mi>y</mi><msup><mo>|</mo><mn>3</mn></msup>"
+    },
+    "EmbellishedNeutralFences_2": {
+      "input": "<mo>|</mo><mi>x</mi><msub><msup><mo>|</mo><mn>4</mn></msup><mn>2</mn></msub>"
+    },
+    "EmbellishedNeutralFences_3": {
+      "input": "<mo>|</mo><mi>x</mi><mpadded mathbackground=\"blue\"><msup><mo>|</mo><mn>4</mn></msup></mpadded>"
+    },
+    "EmbellishedNeutralFences_4": {
+      "input": "<mmultiscripts><mo>|</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><mo>|</mo>"
+    },
+    "EmbellishedNeutralFences_5": {
+      "input": "<mmultiscripts><mo>|</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><msubsup><mo>|</mo><mn>1</mn><mn>2</mn></msubsup>"
+    },
+    "EmbellishedNeutralFences_6": {
+      "input": "<mo>|</mo><mi>x</mi><mo>¦</mo><mi>y</mi><msup><mo>|</mo><mn>4</mn></msup>"
+    },
     "_comment_153": " Actions.",
     "_comment_154": " Currently foreign Mactions do not work with the enrichment.",
     "_comment_155": " untest Actions",
