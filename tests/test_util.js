@@ -63,6 +63,9 @@ sre.TestUtil.combineTests = function(input, output, exclude) {
     if (key.match(/^_/)) continue;
     json = output[key];
     json.name = key;
+    if (typeof json.test === 'undefined') {
+      json.test = true;
+    }
     results.push(json);
   }
   return [results, warn];

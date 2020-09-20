@@ -152,11 +152,11 @@
         "Limes"
       ]
     },
-    "'": {
+    "lim inf": {
       "expected": [
-        "projektiver Limes",
-        "projektiver Limes",
-        "projektiver Limes"
+        "Limes inferior",
+        "Limes inferior",
+        "Limes inferior"
       ]
     },
     "liminf": {
@@ -164,6 +164,13 @@
         "Limes inferior",
         "Limes inferior",
         "Limes inferior"
+      ]
+    },
+    "lim sup": {
+      "expected": [
+        "Limes superior",
+        "Limes superior",
+        "Limes superior"
       ]
     },
     "limsup": {
@@ -194,11 +201,25 @@
         "Supremum"
       ]
     },
+    "inj lim": {
+      "expected": [
+        "Colimes",
+        "Colimes",
+        "Colimes"
+      ]
+    },
     "injlim": {
       "expected": [
         "Colimes",
         "Colimes",
         "Colimes"
+      ]
+    },
+    "proj lim": {
+      "expected": [
+        "projektiver Limes",
+        "projektiver Limes",
+        "projektiver Limes"
       ]
     },
     "projlim": {

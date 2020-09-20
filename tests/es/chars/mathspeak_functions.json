@@ -151,11 +151,11 @@
         "límite"
       ]
     },
-    "'": {
+    "lim inf": {
       "expected": [
-        "límite inverso",
-        "límite inverso",
-        "límite inverso"
+        "límite inferior",
+        "límite inferior",
+        "límite inferior"
       ]
     },
     "liminf": {
@@ -163,6 +163,13 @@
         "límite inferior",
         "límite inferior",
         "límite inferior"
+      ]
+    },
+    "lim sup": {
+      "expected": [
+        "límite superior",
+        "límite superior",
+        "límite superior"
       ]
     },
     "limsup": {
@@ -193,11 +200,25 @@
         "superior"
       ]
     },
+    "inj lim": {
+      "expected": [
+        "límite directo",
+        "límite directo",
+        "límite directo"
+      ]
+    },
     "injlim": {
       "expected": [
         "límite directo",
         "límite directo",
         "límite directo"
+      ]
+    },
+    "proj lim": {
+      "expected": [
+        "límite inverso",
+        "límite inverso",
+        "límite inverso"
       ]
     },
     "projlim": {

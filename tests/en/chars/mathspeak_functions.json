@@ -151,11 +151,11 @@
         "limit"
       ]
     },
-    "'": {
+    "lim inf": {
       "expected": [
-        "projective limit",
-        "projective limit",
-        "projective limit"
+        "liminf",
+        "liminf",
+        "liminf"
       ]
     },
     "liminf": {
@@ -163,6 +163,13 @@
         "liminf",
         "liminf",
         "liminf"
+      ]
+    },
+    "lim sup": {
+      "expected": [
+        "limsup",
+        "limsup",
+        "limsup"
       ]
     },
     "limsup": {
@@ -193,11 +200,25 @@
         "sup"
       ]
     },
+    "inj lim": {
+      "expected": [
+        "colimit",
+        "colimit",
+        "colimit"
+      ]
+    },
     "injlim": {
       "expected": [
         "colimit",
         "colimit",
         "colimit"
+      ]
+    },
+    "proj lim": {
+      "expected": [
+        "projective limit",
+        "projective limit",
+        "projective limit"
       ]
     },
     "projlim": {

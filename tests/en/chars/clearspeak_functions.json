@@ -109,14 +109,19 @@
         "lim"
       ]
     },
-    "'": {
+    "lim inf": {
       "expected": [
-        "projective limit"
+        "liminf"
       ]
     },
     "liminf": {
       "expected": [
         "liminf"
+      ]
+    },
+    "lim sup": {
+      "expected": [
+        "limsup"
       ]
     },
     "limsup": {
@@ -139,9 +144,19 @@
         "sup"
       ]
     },
+    "inj lim": {
+      "expected": [
+        "colimit"
+      ]
+    },
     "injlim": {
       "expected": [
         "colimit"
+      ]
+    },
+    "proj lim": {
+      "expected": [
+        "projective limit"
       ]
     },
     "projlim": {

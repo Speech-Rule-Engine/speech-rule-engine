@@ -110,14 +110,19 @@
         "Limes"
       ]
     },
-    "'": {
+    "lim inf": {
       "expected": [
-        "projektiver Limes"
+        "Limes inferior"
       ]
     },
     "liminf": {
       "expected": [
         "Limes inferior"
+      ]
+    },
+    "lim sup": {
+      "expected": [
+        "Limes superior"
       ]
     },
     "limsup": {
@@ -140,9 +145,19 @@
         "Supremum"
       ]
     },
+    "inj lim": {
+      "expected": [
+        "Colimes"
+      ]
+    },
     "injlim": {
       "expected": [
         "Colimes"
+      ]
+    },
+    "proj lim": {
+      "expected": [
+        "projektiver Limes"
       ]
     },
     "projlim": {

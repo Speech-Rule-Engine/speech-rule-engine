@@ -151,11 +151,11 @@
         "limite"
       ]
     },
-    "'": {
+    "lim inf": {
       "expected": [
-        "limite projective",
-        "limite projective",
-        "limite projective"
+        "limite inferior",
+        "limite inferior",
+        "limite inferior"
       ]
     },
     "liminf": {
@@ -163,6 +163,13 @@
         "limite inferior",
         "limite inferior",
         "limite inferior"
+      ]
+    },
+    "lim sup": {
+      "expected": [
+        "limite superior",
+        "limite superior",
+        "limite superior"
       ]
     },
     "limsup": {
@@ -193,11 +200,25 @@
         "borne supérieure"
       ]
     },
+    "inj lim": {
+      "expected": [
+        "limite inductive",
+        "limite inductive",
+        "limite inductive"
+      ]
+    },
     "injlim": {
       "expected": [
         "limite inductive",
         "limite inductive",
         "limite inductive"
+      ]
+    },
+    "proj lim": {
+      "expected": [
+        "limite projective",
+        "limite projective",
+        "limite projective"
       ]
     },
     "projlim": {
