@@ -269,7 +269,7 @@ sre.SemanticTreeTest.prototype.executeTest = function(mml, sml, opt_brief) {
   var dp = new sre.SystemExternal.xmldom.DOMParser();
   var xml = dp.parseFromString('<stree>' + sml + '</stree>', 'text/xml');
   var xmls = new sre.SystemExternal.xmldom.XMLSerializer();
-  this.assert.equal(xmls.serializeToString(xml), xmls.serializeToString(sxml));
+  this.assert.equal(xmls.serializeToString(sxml), xmls.serializeToString(xml));
 };
 
 
@@ -317,7 +317,7 @@ sre.EnrichMathmlTest.prototype.executeTest = function(mml, smml) {
   this.appendExamples('', mml);
   var cleaned = sre.EnrichMathml.removeAttributePrefix(
       xmls.serializeToString(node));
-  this.assert.equal(xmls.serializeToString(xml), cleaned);
+  this.assert.equal(cleaned, xmls.serializeToString(xml));
 };
 
 

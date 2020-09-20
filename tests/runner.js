@@ -187,10 +187,10 @@ sre.TestRunner.prototype.executeTest_ = function(name, func) {
   this.output('Testing ' + name);
   try {
     func.apply();
-  } catch (e)
-  {
-    console.log(e);
-    this.output('\t[FAIL]\n', sre.TestRunner.color_.RED);
+  } catch (e) {
+    this.output('\t[FAIL]', sre.TestRunner.color_.RED);
+    this.output('\nExpected: ' + (e.expected || ''));
+    this.output('\nActual: ' + (e.actual || '') + '\n');
     this.status_ = sre.TestRunner.Results.FAIL;
     this.failedTests_.push(name);
     return;

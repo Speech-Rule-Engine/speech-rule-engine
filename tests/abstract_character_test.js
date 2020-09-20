@@ -92,9 +92,9 @@ sre.AbstractCharacterTest.prototype.executeRuleTest = function(text, answer, opt
       {domain: this.domain, style: style,
         modality: this.modality, rules: this.rules, locale: this.locale});
   var result = this.getSpeech(text);
-  var actual = this.actual ? result : answer;
-  this.appendRuleExample(text, actual, style);
-  this.assert.equal(actual, result);
+  var expected = this.actual ? result : answer;
+  this.appendRuleExample(text, expected, style);
+  this.assert.equal(result, expected);
 };
 
 
