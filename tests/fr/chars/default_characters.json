@@ -20404,6 +20404,11 @@
         "cercle blanc"
       ]
     },
+    " ": {
+      "expected": [
+        "espace"
+      ]
+    },
     " ": {
       "expected": [
         " "

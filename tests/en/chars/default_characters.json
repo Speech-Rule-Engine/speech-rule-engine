@@ -20404,6 +20404,11 @@
         "halfwidth white circle"
       ]
     },
+    " ": {
+      "expected": [
+        "space"
+      ]
+    },
     " ": {
       "expected": [
         "no break space"

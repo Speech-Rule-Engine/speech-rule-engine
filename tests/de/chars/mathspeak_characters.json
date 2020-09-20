@@ -28761,6 +28761,13 @@
         "Weißer Kreis mit halber Breite"
       ]
     },
+    " ": {
+      "expected": [
+        "Leerzeichen",
+        "Leerzeichen",
+        "Leerzeichen"
+      ]
+    },
     " ": {
       "expected": [
         " ",

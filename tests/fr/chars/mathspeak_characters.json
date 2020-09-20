@@ -28564,6 +28564,13 @@
         "cercle blanc"
       ]
     },
+    " ": {
+      "expected": [
+        "espace",
+        "espace",
+        "espace"
+      ]
+    },
     " ": {
       "expected": [
         " ",

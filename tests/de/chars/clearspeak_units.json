@@ -10,6 +10,16 @@
   "type": "unit",
   "information": "Clearspeak unit test for German",
   "tests": {
+    "sq": {
+      "expected": [
+        "Quadrat"
+      ]
+    },
+    "sq.": {
+      "expected": [
+        "Quadrat"
+      ]
+    },
     "ha": {
       "expected": [
         "Hektar"
@@ -345,7 +355,12 @@
         "Fass"
       ]
     },
-    "'": {
+    "fl oz": {
+      "expected": [
+        "Fluid ounce"
+      ]
+    },
+    "fl. oz.": {
       "expected": [
         "Fluid ounce"
       ]

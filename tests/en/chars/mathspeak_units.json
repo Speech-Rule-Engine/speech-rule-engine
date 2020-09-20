@@ -494,7 +494,14 @@
         "cubic"
       ]
     },
-    "'": {
+    "fl oz": {
+      "expected": [
+        "fluid ounce",
+        "fluid ounce",
+        "fluid ounce"
+      ]
+    },
+    "fl. oz.": {
       "expected": [
         "fluid ounce",
         "fluid ounce",

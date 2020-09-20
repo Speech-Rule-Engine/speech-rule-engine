@@ -886,6 +886,9 @@
     "Integrals_10": {
       "input": "<mi>&#x222B;</mi><mi>&#x222B;</mi><mi>&#x222B;</mi><mi>dx</mi><mi>dy</mi><mi>dz</mi>"
     },
+    "Integrals_11": {
+      "input": "<msub><mo>\u222B</mo><mi>X</mi></msub><mrow><msub><mo>\u2211</mo><mi>Y</mi></msub><mi>a</mi></mrow><mi>dx</mi>"
+    },
     "_comment_122": " Translation of text elements.",
     "Text_0": {
       "input": "<mtext>text only</mtext>"

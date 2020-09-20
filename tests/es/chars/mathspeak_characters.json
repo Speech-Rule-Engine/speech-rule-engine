@@ -28564,6 +28564,13 @@
         "círculo blanco de medio ancho"
       ]
     },
+    " ": {
+      "expected": [
+        "espacio",
+        "espacio",
+        "espacio"
+      ]
+    },
     " ": {
       "expected": [
         " ",

@@ -20545,6 +20545,11 @@
         "Weißer Kreis mit halber Breite"
       ]
     },
+    " ": {
+      "expected": [
+        "Leerzeichen"
+      ]
+    },
     " ": {
       "expected": [
         " "

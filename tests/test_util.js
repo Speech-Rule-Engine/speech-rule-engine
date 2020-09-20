@@ -51,21 +51,21 @@ sre.TestUtil.combineTests = function(input, output, exclude) {
     if (typeof json.test === 'undefined') {
       json.test = true;
     }
+    json.name = key;
     if (json.test && !expected) {
       warn.push(key);
       continue;
     }
-    json.name = key;
     results.push(Object.assign(json, expected));
     delete output[key];
   }
   for (key of Object.keys(output)) {
     if (key.match(/^_/)) continue;
     json = output[key];
-    json.name = key;
     if (typeof json.test === 'undefined') {
       json.test = true;
     }
+    json.name = key;
     results.push(json);
   }
   return [results, warn];

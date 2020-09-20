@@ -494,7 +494,14 @@
         "cúbico"
       ]
     },
-    "'": {
+    "fl oz": {
+      "expected": [
+        "onzas líquidas",
+        "onzas líquidas",
+        "onzas líquidas"
+      ]
+    },
+    "fl. oz.": {
       "expected": [
         "onzas líquidas",
         "onzas líquidas",

@@ -28620,6 +28620,13 @@
         "halfwidth white circle"
       ]
     },
+    " ": {
+      "expected": [
+        "space",
+        "space",
+        "space"
+      ]
+    },
     " ": {
       "expected": [
         "no break space",
@@ -29305,6 +29312,67 @@
         "shadowed white circle",
         "shadowed white circle"
       ]
+    },
+    "_comment_new": "Added later.",
+    "𝜭": {
+      "expected": ["bold italic upper Theta", "bold italic upper Theta", "bold italic upper Theta"]
+    },
+    "𝜵": {
+      "expected": ["bold italic nabla", "bold italic nabla", "bold italic nabla"]
+    },
+    "𝝏": {
+      "expected": ["bold italic partial differential", "bold italic partial differential", "bold italic partial differential"]
+    },
+    "𝝐": {
+      "expected": ["bold italic epsilon", "bold italic epsilon", "bold italic epsilon"]
+    },
+    "𝝑": {
+      "expected": ["bold italic theta", "bold italic theta", "bold italic theta"]
+    },
+    "𝝒": {
+      "expected": ["bold italic kappa", "bold italic kappa", "bold italic kappa"]
+    },
+    "𝝓": {
+      "expected": ["bold italic phi", "bold italic phi", "bold italic phi"]
+    },
+    "𝝔": {
+      "expected": ["bold italic rho", "bold italic rho", "bold italic rho"]
+    },
+    "𝝕": {
+      "expected": ["bold italic pi", "bold italic pi", "bold italic pi"]
+    },
+    "𝞡": {
+      "expected": ["sans serif bold italic upper Theta", "sans serif bold italic upper Theta", "sans serif bold italic upper Theta"]
+    },
+    "𝞩": {
+      "expected": ["sans serif bold italic nabla", "sans serif bold italic nabla", "sans serif bold italic nabla"]
+    },
+    "𝟃": {
+      "expected": ["sans serif bold italic partial differential", "sans serif bold italic partial differential", "sans serif bold italic partial differential"]
+    },
+    "𝟄": {
+      "expected": ["sans serif bold italic epsilon", "sans serif bold italic epsilon", "sans serif bold italic epsilon"]
+    },
+    "𝟅": {
+      "expected": ["sans serif bold italic theta", "sans serif bold italic theta", "sans serif bold italic theta"]
+    },
+    "𝟆": {
+      "expected": ["sans serif bold italic kappa", "sans serif bold italic kappa", "sans serif bold italic kappa"]
+    },
+    "𝟇": {
+      "expected": ["sans serif bold italic phi", "sans serif bold italic phi", "sans serif bold italic phi"]
+    },
+    "𝟈": {
+      "expected": ["sans serif bold italic rho", "sans serif bold italic rho", "sans serif bold italic rho"]
+    },
+    "𝟉": {
+      "expected": ["sans serif bold italic pi", "sans serif bold italic pi", "sans serif bold italic pi"]
+    },
+    "🄋": {
+      "expected": ["circled sans serif 0", "circled sans serif 0", "circled sans serif 0"]
+    },
+    "🄌": {
+      "expected": ["black circled sans serif 0", "black circled sans serif 0", "black circled sans serif 0"]
     }
   }
 }

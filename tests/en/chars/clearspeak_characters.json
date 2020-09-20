@@ -16189,6 +16189,11 @@
         "exclamation mark"
       ]
     },
+    "\"": {
+      "expected": [
+        "quotation mark"
+      ]
+    },
     "#": {
       "expected": [
         "number sign"
@@ -20439,6 +20444,11 @@
         "halfwidth white circle"
       ]
     },
+    " ": {
+      "expected": [
+        "space"
+      ]
+    },
     " ": {
       "expected": [
         "no break space"
@@ -20928,6 +20938,67 @@
       "expected": [
         "shadowed white circle"
       ]
+    },
+    "_comment_new": "Added later.",
+    "𝜭": {
+      "expected": ["bold italic cap Theta"]
+    },
+    "𝜵": {
+      "expected": ["bold italic nabla"]
+    },
+    "𝝏": {
+      "expected": ["bold italic partial differential"]
+    },
+    "𝝐": {
+      "expected": ["bold italic epsilon"]
+    },
+    "𝝑": {
+      "expected": ["bold italic theta"]
+    },
+    "𝝒": {
+      "expected": ["bold italic kappa"]
+    },
+    "𝝓": {
+      "expected": ["bold italic phi"]
+    },
+    "𝝔": {
+      "expected": ["bold italic rho"]
+    },
+    "𝝕": {
+      "expected": ["bold italic pi"]
+    },
+    "𝞡": {
+      "expected": ["sans serif bold italic cap Theta"]
+    },
+    "𝞩": {
+      "expected": ["sans serif bold italic nabla"]
+    },
+    "𝟃": {
+      "expected": ["sans serif bold italic partial differential"]
+    },
+    "𝟄": {
+      "expected": ["sans serif bold italic epsilon"]
+    },
+    "𝟅": {
+      "expected": ["sans serif bold italic theta"]
+    },
+    "𝟆": {
+      "expected": ["sans serif bold italic kappa"]
+    },
+    "𝟇": {
+      "expected": ["sans serif bold italic phi"]
+    },
+    "𝟈": {
+      "expected": ["sans serif bold italic rho"]
+    },
+    "𝟉": {
+      "expected": ["sans serif bold italic pi"]
+    },
+    "🄋": {
+      "expected": ["circled sans serif 0"]
+    },
+    "🄌": {
+      "expected": ["black circled sans serif 0"]
     }
   }
 }
