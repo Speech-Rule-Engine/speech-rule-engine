@@ -1,0 +1,501 @@
+{
+  "name": "DefaultUnitNemethTest",
+  "locale": "nemeth",
+  "domain": "default",
+  "modality": "braille",
+  "styles": [
+    "default"
+  ],
+  "compare": true,
+  "active": "DefaultUnitNemeth",
+  "type": "unit",
+  "base": "json/common/units.json",
+  "information": "Default unit test for Nemeth",
+  "tests": {
+    "W": {
+      "expected": [
+        "⠠⠺"
+      ]
+    },
+    "w": {
+      "expected": [
+        "⠠⠺"
+      ]
+    },
+    "kw": {
+      "expected": [
+        "⠅⠠⠺"
+      ]
+    },
+    "kW": {
+      "expected": [
+        "⠅⠠⠺"
+      ]
+    },
+    "mw": {
+      "expected": [
+        "⠍⠠⠺"
+      ]
+    },
+    "mW": {
+      "expected": [
+        "⠍⠠⠺"
+      ]
+    },
+    "kwh": {
+      "expected": [
+        "⠅⠺⠓"
+      ]
+    },
+    "kWh": {
+      "expected": [
+        "⠅⠺⠓"
+      ]
+    },
+    "J": {
+      "expected": [
+        "⠠⠚"
+      ]
+    },
+    "N": {
+      "expected": [
+        "⠠⠝"
+      ]
+    },
+    "A": {
+      "expected": [
+        "⠠⠁"
+      ]
+    },
+    "V": {
+      "expected": [
+        "⠠⠧"
+      ]
+    },
+    "µΩ": {
+      "expected": [
+        "⠨⠍⠨⠠⠺"
+      ]
+    },
+    "mΩ": {
+      "expected": [
+        "⠍⠨⠠⠺"
+      ]
+    },
+    "Ω": {
+      "expected": [
+        "⠨⠠⠺"
+      ]
+    },
+    "Ohm": {
+      "expected": [
+        "⠨⠠⠺"
+      ]
+    },
+    "kΩ": {
+      "expected": [
+        "⠅⠨⠠⠺"
+      ]
+    },
+    "KΩ": {
+      "expected": [
+        "⠅⠨⠠⠺"
+      ]
+    },
+    "MΩ": {
+      "expected": [
+        "⠍⠨⠠⠺"
+      ]
+    },
+    "GΩ": {
+      "expected": [
+        "⠛⠨⠠⠺"
+      ]
+    },
+    "mm": {
+      "expected": [
+        "⠍⠍"
+      ]
+    },
+    "cm": {
+      "expected": [
+        "⠉⠍"
+      ]
+    },
+    "m": {
+      "expected": [
+        "⠍"
+      ]
+    },
+    "km": {
+      "expected": [
+        "⠅⠍"
+      ]
+    },
+    "ft": {
+      "expected": [
+        "⠋⠞"
+      ]
+    },
+    "ft.": {
+      "expected": [
+        "⠋⠞"
+      ]
+    },
+    "in": {
+      "expected": [
+        "⠊⠝"
+      ]
+    },
+    "in.": {
+      "expected": [
+        "⠊⠝"
+      ]
+    },
+    "mi": {
+      "expected": [
+        "⠍⠊"
+      ]
+    },
+    "mi.": {
+      "expected": [
+        "⠍⠊"
+      ]
+    },
+    "yd": {
+      "expected": [
+        "⠽⠙"
+      ]
+    },
+    "yd.": {
+      "expected": [
+        "⠽⠙"
+      ]
+    },
+    "n.m.": {
+      "expected": [
+        "⠝⠲⠍⠸⠲"
+      ]
+    },
+    "b": {
+      "expected": [
+        "⠃"
+      ]
+    },
+    "B": {
+      "expected": [
+        "⠠⠃"
+      ]
+    },
+    "KB": {
+      "expected": [
+        "⠅⠃"
+      ]
+    },
+    "MB": {
+      "expected": [
+        "⠍⠃"
+      ]
+    },
+    "GB": {
+      "expected": [
+        "⠛⠃"
+      ]
+    },
+    "TB": {
+      "expected": [
+        "⠞⠃"
+      ]
+    },
+    "doz": {
+      "expected": [
+        "⠙⠕⠵"
+      ]
+    },
+    "doz.": {
+      "expected": [
+        "⠙⠕⠵"
+      ]
+    },
+    "dz": {
+      "expected": [
+        "⠙⠕⠵"
+      ]
+    },
+    "dz.": {
+      "expected": [
+        "⠙⠕⠵"
+      ]
+    },
+    "sq": {
+      "expected": [
+        "⠎⠟"
+      ]
+    },
+    "sq.": {
+      "expected": [
+        "⠎⠟"
+      ]
+    },
+    "ha": {
+      "expected": [
+        "⠓⠁"
+      ]
+    },
+    "kt": {
+      "expected": [
+        "⠅⠞"
+      ]
+    },
+    "kt.": {
+      "expected": [
+        "⠅⠞"
+      ]
+    },
+    "mph": {
+      "expected": [
+        "⠍⠏⠓"
+      ]
+    },
+    "rpm": {
+      "expected": [
+        "⠗⠏⠍"
+      ]
+    },
+    "kmh": {
+      "expected": [
+        "⠅⠍⠓"
+      ]
+    },
+    "F": {
+      "expected": [
+        "⠠⠋"
+      ]
+    },
+    "F.": {
+      "expected": [
+        "⠠⠋"
+      ]
+    },
+    "°F": {
+      "expected": [
+        "⠠⠋"
+      ]
+    },
+    "C": {
+      "expected": [
+        "⠠⠉"
+      ]
+    },
+    "°C": {
+      "expected": [
+        "⠠⠉"
+      ]
+    },
+    "K": {
+      "expected": [
+        "⠠⠅"
+      ]
+    },
+    "°K": {
+      "expected": [
+        "⠠⠅"
+      ]
+    },
+    "ns": {
+      "expected": [
+        "⠝⠎"
+      ]
+    },
+    "µs": {
+      "expected": [
+        "⠨⠍⠎"
+      ]
+    },
+    "ms": {
+      "expected": [
+        "⠍⠎"
+      ]
+    },
+    "s": {
+      "expected": [
+        "⠎"
+      ]
+    },
+    "min": {
+      "expected": [
+        "⠍⠊⠝⠀"
+      ]
+    },
+    "h": {
+      "expected": [
+        "⠓"
+      ]
+    },
+    "hr": {
+      "expected": [
+        "⠓"
+      ]
+    },
+    "bbl.": {
+      "expected": [
+        "⠃⠃⠇"
+      ]
+    },
+    "bbl": {
+      "expected": [
+        "⠃⠃⠇"
+      ]
+    },
+    "cu": {
+      "expected": [
+        "⠉⠥"
+      ]
+    },
+    "cu.": {
+      "expected": [
+        "⠉⠥"
+      ]
+    },
+    "gal": {
+      "expected": [
+        "⠛⠁⠇"
+      ]
+    },
+    "gal.": {
+      "expected": [
+        "⠛⠁⠇"
+      ]
+    },
+    "pt": {
+      "expected": [
+        "⠏⠞"
+      ]
+    },
+    "pt.": {
+      "expected": [
+        "⠏⠞"
+      ]
+    },
+    "qt": {
+      "expected": [
+        "⠟⠞"
+      ]
+    },
+    "qt.": {
+      "expected": [
+        "⠟⠞"
+      ]
+    },
+    "tbsp": {
+      "expected": [
+        "⠞⠃⠎⠏"
+      ]
+    },
+    "tbsp.": {
+      "expected": [
+        "⠞⠃⠎⠏"
+      ]
+    },
+    "tsp": {
+      "expected": [
+        "⠞⠎⠏"
+      ]
+    },
+    "tsp.": {
+      "expected": [
+        "⠞⠎⠏"
+      ]
+    },
+    "cc": {
+      "expected": [
+        "⠉⠉"
+      ]
+    },
+    "kl": {
+      "expected": [
+        "⠅⠇"
+      ]
+    },
+    "l": {
+      "expected": [
+        "⠇"
+      ]
+    },
+    "ml": {
+      "expected": [
+        "⠍⠇"
+      ]
+    },
+    "lb": {
+      "expected": [
+        "⠇⠃"
+      ]
+    },
+    "lb.": {
+      "expected": [
+        "⠇⠃"
+      ]
+    },
+    "LT": {
+      "expected": [
+        "⠇⠞"
+      ]
+    },
+    "L.T.": {
+      "expected": [
+        "⠇⠞"
+      ]
+    },
+    "oz": {
+      "expected": [
+        "⠕⠵"
+      ]
+    },
+    "oz.": {
+      "expected": [
+        "⠕⠵"
+      ]
+    },
+    "g": {
+      "expected": [
+        "⠛⠗"
+      ]
+    },
+    "gr": {
+      "expected": [
+        "⠛⠗"
+      ]
+    },
+    "kg": {
+      "expected": [
+        "⠅⠛"
+      ]
+    },
+    "mcg": {
+      "expected": [
+        "⠨⠍⠛"
+      ]
+    },
+    "µg": {
+      "expected": [
+        "⠍⠉⠛"
+      ]
+    },
+    "mg": {
+      "expected": [
+        "⠍⠛"
+      ]
+    },
+    "t": {
+      "expected": [
+        "⠞"
+      ]
+    },
+    "T": {
+      "expected": [
+        "⠞"
+      ]
+    }
+  }
+}
