@@ -99,6 +99,15 @@ sre.AbstractJsonTest.prototype.prepare = function() {
 };
 
 
+sre.AbstractJsonTest.prototype.exists = function() {
+  var file = sre.TestUtil.fileExists(this.jsonFile);
+  if (!file) {
+    return false;
+  }
+  this.jsonFile = file;
+  return true;
+};
+
 
 /**
  * Class for tests to share input values. E.g., if rules need to be tested for
@@ -123,6 +132,12 @@ goog.inherits(sre.AbstractJsonMultiTest, sre.AbstractJsonTest);
 
 sre.AbstractJsonMultiTest.prototype.prepare = function() {
   sre.AbstractJsonMultiTest.base(this, 'prepare');
-  this.baseFile = this.jsonTests['base'];
+  this.addBase_();
   this.baseTests = this.baseFile ? sre.TestUtil.loadJson(this.baseFile) : {};
+};
+
+
+sre.AbstractJsonMultiTest.prototype.addBase_ = function() {
+  let file = this.jsonTests['base'];
+  this.baseFile = sre.TestUtil.fileExists(file);
 };

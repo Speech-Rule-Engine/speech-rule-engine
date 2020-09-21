@@ -1,6 +1,11 @@
 goog.provide('sre.TestUtil');
 
 goog.require('sre.Engine.Error');
+goog.require('sre.BaseUtil');
+
+
+sre.TestUtil.TEST_PATH =
+    sre.BaseUtil.makePath(sre.SystemExternal.jsonPath) + '../../tests/';
 
 
 /**
@@ -19,13 +24,23 @@ goog.inherits(sre.TestUtil.Error, sre.Engine.Error);
 
 
 sre.TestUtil.loadJson = function(file) {
-  var path = sre.BaseUtil.makePath(sre.SystemExternal.jsonPath) +
-      '../../tests/';
   try {
-    return JSON.parse(sre.SystemExternal.fs.readFileSync(path + file));
+    return JSON.parse(sre.SystemExternal.fs.readFileSync(file));
   } catch (e) {
     throw new sre.TestUtil.Error('Bad filename or content', file);
   }
+};
+
+
+sre.TestUtil.fileExists = function(file) {
+  if (sre.SystemExternal.fs.existsSync(file)) {
+    return file;
+  }
+  let newFile = sre.TestUtil.TEST_PATH + file;
+  if (sre.SystemExternal.fs.existsSync(newFile)) {
+    return newFile;
+  };
+  return '';
 };
 
 

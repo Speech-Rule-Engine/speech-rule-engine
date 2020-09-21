@@ -91,10 +91,10 @@ sre.AbstractCharacterTest.prototype.executeRuleTest = function(text, answer, opt
   sre.System.getInstance().setupEngine(
       {domain: this.domain, style: style,
         modality: this.modality, rules: this.rules, locale: this.locale});
-  var result = this.getSpeech(text);
-  var expected = this.actual ? result : answer;
+  var actual = this.getSpeech(text);
+  var expected = this.actual ? actual : answer;
   this.appendRuleExample(text, expected, style);
-  this.assert.equal(result, expected);
+  this.assert.equal(actual, expected);
 };
 
 
@@ -193,9 +193,6 @@ sre.AbstractCharacterTest.testOutput = function() {
 };
 
 
-sre.AbstractCharacterTest.locales = ['en', 'de', 'fr', 'es'];
-
-
 sre.AbstractCharacterTest.tests = function() {
   let files = [
     'default_characters.json',
@@ -208,15 +205,12 @@ sre.AbstractCharacterTest.tests = function() {
     'clearspeak_functions.json',
     'clearspeak_units.json'
   ];
-  var tests = [];
-  for (var locale of sre.AbstractCharacterTest.locales) {
+  for (var locale of sre.Variables.LOCALES) {
     for (var file of files) {
-      if (locale === 'es' && file.match(/^clearspeak/)) continue;
       var test = new sre.AbstractCharacterTest();
       test.jsonFile = locale + '/chars/' + file;
       test.locale = locale;
-      tests.push(test);
+      sre.TestRegister.add(test);
     }
   }
-  return tests;
 };

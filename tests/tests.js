@@ -28,10 +28,11 @@ goog.require('sre.SpeechGermanTest');
 goog.require('sre.SpeechSpanishTest');
 goog.require('sre.TestRunner');
 
+goog.require('sre.AbstractCharacterTest');
 goog.require('sre.ClearspeakRuleTest');
 goog.require('sre.MathspeakRuleTest');
 goog.require('sre.SemanticTest');
-
+goog.require('sre.TestRegister');
 
 
 /**
@@ -67,6 +68,21 @@ sre.Tests.prototype.run = function() {
  */
 sre.Tests.testList = [];
 
+sre.Tests.environment = {};
+sre.Tests.environmentVars = ['FILE', 'LOCALE', 'BLOCK', 'JSON', 'VERBOSE'];
+sre.Tests.getEnvironment = function(variable) {
+  var env = sre.SystemExternal.process.env[variable];
+  // Process here.
+  if (!env) return;
+  if (env === 'true' || env === 'false') {
+    sre.Tests.environment[variable] = JSON.parse(env);
+    return;
+  }
+  sre.Tests.environment[variable] = env.split(',');
+};
+sre.Tests.environmentVars.forEach(sre.Tests.getEnvironment);
+
+console.log(sre.Tests.environment);
 
 /**
  * @type {Array}
@@ -79,15 +95,14 @@ sre.Tests.allTests = sre.Tests.allTests.concat(sre.SpeechGermanTest.testList);
 sre.Tests.allTests = sre.Tests.allTests.concat(sre.SpeechSpanishTest.testList);
 sre.Tests.allTests = sre.Tests.allTests.concat(sre.BrailleNemethTest.testList);
 
-var file = sre.SystemExternal.process.env['FILE'];
-var locale = sre.SystemExternal.process.env['LOCALE'];
+var file = sre.Tests.environment['FILE'];
+var locale = sre.Tests.environment['LOCALE'];
 if (file) {
-  sre.Tests.testList =
-      sre.Tests.testList.concat(file.split(',').map(
-      function(x) {return sre[x];}));
+  sre.Tests.testList = file.map(function(x) {return sre[x];});
 }
 if (locale) {
-  console.log(locale);
+  locale = locale[0];
+  // console.log(locale);
   if (locale === 'Base') {
     sre.Tests.testList = sre.Tests.testList.concat(sre.BaseTests.testList);
   } else {
@@ -106,20 +121,25 @@ if (locale) {
 if (!sre.Tests.testList.length) {
   sre.Tests.testList = sre.Tests.testList.concat(sre.Tests.allTests);
 }
-var warn = sre.SystemExternal.process.env['WARN'];
-if (typeof warn !== 'undefined') {
-  sre.Tests.getInstance().runner.warn = parseInt(warn, 10);
-}
 
-if (sre.SystemExternal.process.env['JSON']) {
-  var tests = sre.SemanticTest.tests();
-  tests.forEach(x => sre.Tests.getInstance().runner.registerTest(x));
-  tests = sre.ClearspeakRuleTest.tests();
-  tests.forEach(x => sre.Tests.getInstance().runner.registerTest(x));
-  tests = sre.MathspeakRuleTest.tests();
-  tests.forEach(x => sre.Tests.getInstance().runner.registerTest(x));
-  tests = sre.AbstractCharacterTest.tests();
-  tests.forEach(x => sre.Tests.getInstance().runner.registerTest(x));
+sre.Tests.getInstance().runner.warn = sre.Tests.environment['WARN'] || 1;
+
+sre.Tests.getInstance().runner.verbose = sre.Tests.environment['VERBOSE'];
+
+if (sre.Tests.environment['JSON']) {
+  sre.SemanticTest.tests();
+  sre.ClearspeakRuleTest.tests();
+  sre.MathspeakRuleTest.tests();
+  sre.AbstractCharacterTest.tests();
+  let files = sre.Tests.environment['FILE'] || Object.keys(sre.TestRegister.map);
+  for (var key of files) {
+    // let [locale, block, file] = key;
+    // TODO: Filter for file or locale or category
+    var test = sre.TestRegister.map[key];
+    if (test) {
+      sre.Tests.getInstance().runner.registerTest(test);
+    }
+  }
 }
 /**
  * Execute tests.

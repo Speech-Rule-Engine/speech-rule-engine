@@ -4,3 +4,4 @@ var assert;
 assert.deepEqual;
 assert.equal;
 assert.fail;
+fs.existsSync = function(name) { };

@@ -25,6 +25,7 @@ goog.provide('sre.MathspeakRuleTest');
 goog.require('sre.AbstractExamples');
 goog.require('sre.DynamicCstr');
 goog.require('sre.TestUtil');
+goog.require('sre.TestRegister');
 
 
 /**
@@ -105,10 +106,10 @@ sre.AbstractRuleTest.prototype.executeRuleTest = function(mml, answer,
   sre.System.getInstance().setupEngine(
       {domain: this.domain, style: style,
         modality: this.modality, rules: this.rules, locale: this.locale});
-  var result = this.getSpeech(mathMl);
-  var actual = this.actual ? result : answer;
-  this.appendRuleExample(mathMl, actual, style);
-  this.assert.equal(actual, result);
+  var actual = this.getSpeech(mathMl);
+  var expected = this.actual ? actual : answer;
+  this.appendRuleExample(mathMl, expected, style);
+  this.assert.equal(actual, expected);
 };
 
 
@@ -265,30 +266,17 @@ sre.AbstractRuleTest.prototype.method = function(var_args) {
 };
 
 
-
-
-// sre.MathspeakRuleTest.locales = {
-//   'en': 'MathspeakEnglish',
-//   'de': 'MathspeakGerman',
-//   'fr': 'MathspeakFrench'
-// };
-
-sre.MathspeakRuleTest.locales = ['en', 'de', 'fr', 'es'];
-
-
 sre.MathspeakRuleTest.tests = function() {
   let files = [
     'mathspeak_test.json',
     'noble_test.json'
   ];
-  var tests = [];
-  for (var locale of sre.MathspeakRuleTest.locales) {
+  for (var locale of sre.Variables.LOCALES) {
     for (var file of files) {
       var test = new sre.AbstractRuleTest();
       test.jsonFile = locale + '/mathspeak/' + file;
       test.locale = locale;
-      tests.push(test);
+      sre.TestRegister.add(test);
     }
   }
-  return tests;
 };

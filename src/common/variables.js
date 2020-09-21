@@ -39,9 +39,9 @@ sre.Variables.VERSION = '3.1.1';
 /**
  * List of locales to load.
  * @const
- * @type {Array.<string>}
+ * @type {!Array.<string>}
  */
-sre.Variables.LOCALES = ['de', 'en', 'es', 'fr', 'nemeth'];
+sre.Variables.LOCALES = ['en', 'de', 'fr', 'es', 'nemeth'];
 
 
 /**

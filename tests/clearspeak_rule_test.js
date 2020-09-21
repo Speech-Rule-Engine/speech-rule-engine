@@ -21,6 +21,7 @@
 goog.provide('sre.ClearspeakRuleTest');
 
 goog.require('sre.AbstractRuleTest');
+goog.require('sre.TestRegister');
 
 
 
@@ -86,7 +87,6 @@ sre.ClearspeakRuleTest.tests = function() {
     'clearspeak_sets_enclosed_in_set_brackets.json',
     'clearspeak_trigometry.json'
   ];
-  var tests = [];
   for (var locale of Object.keys(sre.ClearspeakRuleTest.locales)) {
     for (var file of files) {
       var test = new sre.ClearspeakRuleTest();
@@ -95,8 +95,7 @@ sre.ClearspeakRuleTest.tests = function() {
       test.compare = locale === 'de';  // tmp!
       test.setActive(sre.ClearspeakRuleTest.locales[locale]);
       test.startExamples();
-      tests.push(test);
+      sre.TestRegister.add(test);
     }
   }
-  return tests;
 };

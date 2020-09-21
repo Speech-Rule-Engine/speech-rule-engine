@@ -69,6 +69,8 @@ sre.TestRunner = function() {
    */
   this.warn = sre.TestRunner.Warning.WARN;
 
+  this.verbose = false;
+  
 };
 goog.addSingletonGetter(sre.TestRunner);
 
@@ -205,6 +207,7 @@ sre.TestRunner.prototype.executeTest_ = function(name, func) {
  * Prints a summary of the test runs.
  */
 sre.TestRunner.prototype.summary = function() {
+  this.verbose = true;
   if (this.warn && this.warningTests_.length) {
     this.output('WARNING! ', sre.TestRunner.color_.ORANGE);
     this.output('The following tests produced a warning:\n');
@@ -240,6 +243,7 @@ sre.TestRunner.color_ = {
  * @param {sre.TestRunner.color_=} opt_color An optional color argument.
  */
 sre.TestRunner.prototype.output = function(output, opt_color) {
+  if (!this.verbose) return;
   if (!opt_color) {
     sre.TestExternal.process.stdout.write(output);
     return;
