@@ -10,7 +10,7 @@
   "active": "MathspeakUnitSpanish",
   "type": "unit",
   "base": "json/common/units.json",
-  "information": "MathspeakUnitSpanishTest",
+  "information": "Mathspeak Unit Test for Spanish",
   "tests": {
     "W": {
       "expected": [

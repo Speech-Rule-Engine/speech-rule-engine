@@ -8,7 +8,7 @@
   "active": "DefaultFunctionSpanish",
   "type": "function",
   "base": "json/common/functions.json",
-  "information": "DefaultFunctionSpanishTest",
+  "information": "Default function test for Spanish",
   "tests": {
     "deg": {
       "expected": [

@@ -8,7 +8,7 @@
   "active": "DefaultUnitSpanish",
   "type": "unit",
   "base": "json/common/units.json",
-  "information": "DefaultUnitSpanishTest",
+  "information": "Default unit test for Spanish",
   "tests": {
     "W": {
       "expected": [
