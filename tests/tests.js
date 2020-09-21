@@ -69,7 +69,7 @@ sre.Tests.prototype.run = function() {
 sre.Tests.testList = [];
 
 sre.Tests.environment = {};
-sre.Tests.environmentVars = ['FILE', 'LOCALE', 'BLOCK', 'JSON', 'VERBOSE'];
+sre.Tests.environmentVars = ['FILE', 'FILES', 'LOCALE', 'BLOCK', 'JSON', 'VERBOSE'];
 sre.Tests.getEnvironment = function(variable) {
   var env = sre.SystemExternal.process.env[variable];
   // Process here.
@@ -131,7 +131,7 @@ if (sre.Tests.environment['JSON']) {
   sre.ClearspeakRuleTest.tests();
   sre.MathspeakRuleTest.tests();
   sre.AbstractCharacterTest.tests();
-  let files = sre.Tests.environment['FILE'] || Object.keys(sre.TestRegister.map);
+  let files = sre.Tests.environment['FILES'] || Object.keys(sre.TestRegister.map);
   for (var key of files) {
     // let [locale, block, file] = key;
     // TODO: Filter for file or locale or category

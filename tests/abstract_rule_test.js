@@ -269,7 +269,8 @@ sre.AbstractRuleTest.prototype.method = function(var_args) {
 sre.MathspeakRuleTest.tests = function() {
   let files = [
     'mathspeak_test.json',
-    'noble_test.json'
+    'noble_test.json',
+    'mathspeak_embellish_test.json'
   ];
   for (var locale of sre.Variables.LOCALES) {
     for (var file of files) {
