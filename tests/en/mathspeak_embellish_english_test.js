@@ -45,14 +45,6 @@ sre.MathspeakEmbellishEnglishTest = function() {
 goog.inherits(sre.MathspeakEmbellishEnglishTest, sre.AbstractRuleTest);
 
 
-// mml = '<mi>a</mi><msubsup><mo>+</mo><mn>m</mn><mn>\'</mn>' +
-//   '</msubsup><mi>b</mi><msubsup><mo>+</mo><mn>m</mn><mn>\'</mn>' +
-//   '</msubsup><mi>c</mi>';
-// this.executeRuleTest(mml, 'a plus prime Subscript m Baseline b', 'default');
-// this.executeRuleTest(mml, 'a plus prime Sub m Base b', 'brief');
-// this.executeRuleTest(mml, 'a plus prime Sub m Base b', 'sbrief');
-
-
 /**
  * Testing operator embellished with subscript.
  */
@@ -114,6 +106,12 @@ sre.MathspeakEmbellishEnglishTest.prototype.testEmbellOpSubSuper = function() {
   this.executeRuleTest(mml, 'a plus prime Subscript m Baseline b', 'default');
   this.executeRuleTest(mml, 'a plus prime Sub m Base b', 'brief');
   this.executeRuleTest(mml, 'a plus prime Sub m Base b', 'sbrief');
+  mml = '<mi>a</mi><msubsup><mo>+</mo><mn>m</mn><mn>\'</mn>' +
+    '</msubsup><mi>b</mi><msubsup><mo>+</mo><mn>m</mn><mn>\'</mn>' +
+    '</msubsup><mi>c</mi>';
+  this.executeRuleTest(mml, 'a plus prime Subscript m Baseline b plus prime Subscript m Baseline c', 'default');
+  this.executeRuleTest(mml, 'a plus prime Sub m Base b plus prime Sub m Base c', 'brief');
+  this.executeRuleTest(mml, 'a plus prime Sub m Base b plus prime Sub m Base c', 'sbrief');
 };
 
 
