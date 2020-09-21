@@ -9,7 +9,7 @@
   ],
   "active": "MathspeakFunctionFrench",
   "type": "function",
-  "base": "json/chars/functions.json",
+  "base": "json/common/functions.json",
   "information": "Mathspeak function test for French",
   "tests": {
     "deg": {

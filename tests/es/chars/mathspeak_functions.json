@@ -9,7 +9,7 @@
   ],
   "active": "MathspeakFunctionSpanish",
   "type": "function",
-  "base": "json/chars/functions.json",
+  "base": "json/common/functions.json",
   "information": "MathspeakFunctionSpanishTest",
   "tests": {
     "deg": {

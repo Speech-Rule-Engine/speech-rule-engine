@@ -10,7 +10,7 @@
   ],
   "active": "MathspeakCharacterGerman",
   "type": "character",
-  "base": "json/chars/characters.json",
+  "base": "json/common/characters.json",
   "information": "Mathspeak Character Test for German",
   "tests": {
     "0": {

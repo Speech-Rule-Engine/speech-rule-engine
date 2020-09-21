@@ -7,7 +7,7 @@
   ],
   "active": "DefaultFunctionSpanish",
   "type": "function",
-  "base": "json/chars/functions.json",
+  "base": "json/common/functions.json",
   "information": "DefaultFunctionSpanishTest",
   "tests": {
     "deg": {

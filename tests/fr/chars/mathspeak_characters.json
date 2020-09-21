@@ -9,7 +9,7 @@
   ],
   "active": "MathspeakCharacterFrench",
   "type": "character",
-  "base": "json/chars/characters.json",
+  "base": "json/common/characters.json",
   "information": "Mathspeak Character Test for French",
   "tests": {
     "0": {

@@ -9,7 +9,7 @@
   ],
   "active": "MathspeakCharacterSpanish",
   "type": "character",
-  "base": "json/chars/characters.json",
+  "base": "json/common/characters.json",
   "information": "MathspeakCharacterSpanishTest",
   "tests": {
     "0": {

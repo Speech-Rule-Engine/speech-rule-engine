@@ -8,7 +8,7 @@
   ],
   "active": "DefaultUnitGerman",
   "type": "unit",
-  "base": "json/chars/units.json",
+  "base": "json/common/units.json",
   "information": "Default unit test for German",
   "tests": {
     "sq": {

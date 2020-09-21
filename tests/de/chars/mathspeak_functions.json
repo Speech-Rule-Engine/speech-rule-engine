@@ -10,7 +10,7 @@
   ],
   "active": "MathspeakFunctionGerman",
   "type": "function",
-  "base": "json/chars/functions.json",
+  "base": "json/common/functions.json",
   "information": "Mathspeak function test for German",
   "tests": {
     "deg": {

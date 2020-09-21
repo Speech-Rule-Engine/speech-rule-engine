@@ -7,7 +7,7 @@
   ],
   "active": "DefaultCharacterFrench",
   "type": "character",
-  "base": "json/chars/characters.json",
+  "base": "json/common/characters.json",
   "information": "Default Character Test for French",
   "tests": {
     "0": {
