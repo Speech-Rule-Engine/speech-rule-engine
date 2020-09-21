@@ -30,11 +30,10 @@ goog.require('sre.ExamplesOutput');
  * @implements {sre.ExamplesOutput}
  * @extends {sre.AbstractJsonMultiTest}
  * @param {string=} opt_tests The JSON file if necessary for testing.
- * @param {string=} opt_base The JSON file base for common base tests.
  */
-sre.AbstractExamples = function(opt_tests, opt_base) {
+sre.AbstractExamples = function(opt_tests) {
   sre.AbstractExamples.base(
-    this, 'constructor', opt_tests ? opt_tests : '', opt_base ? opt_base : '');
+    this, 'constructor', opt_tests ? opt_tests : '');
 
   /**
    * @type {boolean}

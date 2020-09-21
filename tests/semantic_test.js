@@ -44,10 +44,9 @@ goog.require('sre.WalkerUtil');
  * @constructor
  * @extends {sre.AbstractExamples}
  * @param {string} tests The json file with expected output and tests.
- * @param {string} base The file with basic tests.
  */
-sre.SemanticTest = function(tests, base) {
-  sre.SemanticTest.base(this, 'constructor', tests, base);
+sre.SemanticTest = function(tests) {
+  sre.SemanticTest.base(this, 'constructor', tests);
 };
 goog.inherits(sre.SemanticTest, sre.AbstractExamples);
 
@@ -92,8 +91,8 @@ sre.SemanticTest.prototype.executeTest = goog.abstractMethod;
  * @constructor
  * @extends {sre.SemanticTest}
  */
-sre.RebuildStreeTest = function(tests, base) {
-  sre.RebuildStreeTest.base(this, 'constructor', tests, base);
+sre.RebuildStreeTest = function(tests) {
+  sre.RebuildStreeTest.base(this, 'constructor', tests);
   this.pickFields = ['input'];
 };
 goog.inherits(sre.RebuildStreeTest, sre.SemanticTest);
@@ -124,8 +123,8 @@ sre.RebuildStreeTest.prototype.executeTest = function(expr) {
  * @constructor
  * @extends {sre.SemanticTest}
  */
-sre.EnrichSpeechTest = function(tests, base) {
-  sre.EnrichSpeechTest.base(this, 'constructor', tests, base);
+sre.EnrichSpeechTest = function(tests) {
+  sre.EnrichSpeechTest.base(this, 'constructor', tests);
   this.pickFields = ['input'];
 };
 goog.inherits(sre.EnrichSpeechTest, sre.SemanticTest);
@@ -179,8 +178,8 @@ sre.EnrichSpeechTest.prototype.executeTest = function(expr) {
  * @constructor
  * @extends {sre.SemanticTest}
  */
-sre.SemanticTreeTest = function(tests, base) {
-  sre.SemanticTreeTest.base(this, 'constructor', tests, base);
+sre.SemanticTreeTest = function(tests) {
+  sre.SemanticTreeTest.base(this, 'constructor', tests);
 
   /**
    * @type {Object.<sre.SemanticAnnotator>}
@@ -278,8 +277,8 @@ sre.SemanticTreeTest.prototype.executeTest = function(mml, sml, opt_brief) {
  * @constructor
  * @extends {sre.SemanticTest}
  */
-sre.EnrichMathmlTest = function(tests, base) {
-  sre.EnrichMathmlTest.base(this, 'constructor', tests, base);
+sre.EnrichMathmlTest = function(tests) {
+  sre.EnrichMathmlTest.base(this, 'constructor', tests);
   this.attrBlacklist = [];
   this.setActive('EnrichExamples', 'js');
 };
@@ -343,11 +342,10 @@ sre.EnrichMathmlTest.prototype.customizeXml = function(xml) {
 
 // Putting it all together! 
 sre.SemanticTest.tests = function() {
-  let base = './json/base/semantic.json';
   return [
-    new sre.RebuildStreeTest('./base/rebuild_stree_test.json', base),
-    new sre.EnrichSpeechTest('./base/enrich_speech_test.json', base),
-    new sre.SemanticTreeTest('./base/semantic_tree_test.json', base),
-    new sre.EnrichMathmlTest('./base/enrich_mathml_test.json', base)
+    new sre.RebuildStreeTest('./base/rebuild_stree_test.json'),
+    new sre.EnrichSpeechTest('./base/enrich_speech_test.json'),
+    new sre.SemanticTreeTest('./base/semantic_tree_test.json'),
+    new sre.EnrichMathmlTest('./base/enrich_mathml_test.json')
   ];
 };

@@ -108,13 +108,12 @@ sre.AbstractJsonTest.prototype.prepare = function() {
  * @constructor
  * @param {string} tests The JSON file with expected values for the basic tests
  *     and additional tests.
- * @param {string} base The JSON file with basic tests.
  * @extends {sre.AbstractJsonTest}
  */
-sre.AbstractJsonMultiTest = function(tests, base) {
+sre.AbstractJsonMultiTest = function(tests) {
   sre.AbstractJsonMultiTest.base(this, 'constructor', tests);
 
-  this.baseFile = base;
+  this.baseFile = '';
 
   this.baseTests = {};
 

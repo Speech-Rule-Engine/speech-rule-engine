@@ -66,9 +66,6 @@ sre.ClearspeakRuleTest.locales = {
 };
 
 
-sre.ClearspeakRuleTest.baseDir = 'json/clearspeak';
-
-
 sre.ClearspeakRuleTest.tests = function() {
   let files = [
     'clearspeak_absolute_value.json',
@@ -94,7 +91,6 @@ sre.ClearspeakRuleTest.tests = function() {
     for (var file of files) {
       var test = new sre.ClearspeakRuleTest();
       test.jsonFile = locale + '/clearspeak/' + file;
-      test.baseFile = sre.ClearspeakRuleTest.baseDir + '/' + file;
       test.locale = locale;
       test.compare = locale === 'de';  // tmp!
       test.setActive(sre.ClearspeakRuleTest.locales[locale]);

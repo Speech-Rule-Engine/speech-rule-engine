@@ -274,7 +274,6 @@ sre.AbstractRuleTest.prototype.method = function(var_args) {
 // };
 
 sre.MathspeakRuleTest.locales = ['en', 'de', 'fr', 'es'];
-sre.MathspeakRuleTest.baseDir = 'json/mathspeak';
 
 
 sre.MathspeakRuleTest.tests = function() {
@@ -287,10 +286,7 @@ sre.MathspeakRuleTest.tests = function() {
     for (var file of files) {
       var test = new sre.AbstractRuleTest();
       test.jsonFile = locale + '/mathspeak/' + file;
-      test.baseFile = sre.MathspeakRuleTest.baseDir + '/' + file;
       test.locale = locale;
-      // test.setActive(test.active);
-      // test.startExamples();
       tests.push(test);
     }
   }
