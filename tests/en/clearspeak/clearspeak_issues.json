@@ -2,6 +2,7 @@
   "_comment0_": " Tests from the issues discovered in ClearspeakEnglish rules.",
   "name": "EnglishIssues",
   "locale": "en",
+  "base": "json/clearspeak/clearspeak_issues.json",
   "information": "ClearspeakEnglish Issues tests.",
   "exclude": [],
   "tests": {

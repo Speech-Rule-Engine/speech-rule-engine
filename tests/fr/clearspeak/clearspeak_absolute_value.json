@@ -2,6 +2,7 @@
   "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
   "name": "FrenchAbsoluteValue",
   "locale": "fr",
+  "base": "json/clearspeak/clearspeak_absolute_value.json",
   "information": "ClearspeakFrenchAbsoluteValue rule tests.",
   "exclude": [],
   "tests": {

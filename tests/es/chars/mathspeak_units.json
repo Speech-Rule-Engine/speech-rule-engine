@@ -9,6 +9,7 @@
   ],
   "active": "MathspeakUnitSpanish",
   "type": "unit",
+  "base": "json/chars/units.json",
   "information": "MathspeakUnitSpanishTest",
   "tests": {
     "W": {

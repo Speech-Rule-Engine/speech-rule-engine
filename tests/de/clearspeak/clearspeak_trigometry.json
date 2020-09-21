@@ -2,6 +2,7 @@
   "_comment0_": " This work was sponsored by ETH Zurich",
   "name": "GermanTrigometry",
   "locale": "de",
+  "base": "json/clearspeak/clearspeak_trigometry.json",
   "information": "ClearspeakGermanTrigometry rule tests.",
   "exclude": [],
   "tests": {

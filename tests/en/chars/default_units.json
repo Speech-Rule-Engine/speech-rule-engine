@@ -7,6 +7,7 @@
   ],
   "active": "DefaultUnitEnglish",
   "type": "unit",
+  "base": "json/chars/units.json",
   "information": "Default unit test for English",
   "tests": {
     "W": {

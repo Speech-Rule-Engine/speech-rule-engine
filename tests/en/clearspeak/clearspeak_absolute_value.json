@@ -2,6 +2,7 @@
   "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
   "name": "EnglishAbsoluteValue",
   "locale": "en",
+  "base": "json/clearspeak/clearspeak_absolute_value.json",
   "information": "ClearspeakEnglishAbsoluteValue rule tests.",
   "exclude": [],
   "tests": {

@@ -1,5 +1,6 @@
 {
   "name": "NobleFrenchTest",
+  "base": "json/mathspeak/noble_test.json",
   "information": "Steve Noble's samples French tests.",
   "domain": "mathspeak",
   "locale": "fr",

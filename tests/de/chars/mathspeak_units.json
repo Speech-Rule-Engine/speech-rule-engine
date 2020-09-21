@@ -10,6 +10,7 @@
   ],
   "active": "MathspeakUnitGerman",
   "type": "unit",
+  "base": "json/chars/units.json",
   "information": "Mathspeak unit test for German",
   "tests": {
     "sq": {

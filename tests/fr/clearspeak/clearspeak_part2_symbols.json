@@ -2,6 +2,7 @@
   "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
   "name": "FrenchPart2Symbols",
   "locale": "fr",
+  "base": "json/clearspeak/clearspeak_part2_symbols.json",
   "information": "ClearspeakFrenchPart2Symbols rule tests.",
   "exclude": [],
   "tests": {

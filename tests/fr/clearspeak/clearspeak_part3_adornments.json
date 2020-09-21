@@ -2,6 +2,7 @@
   "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
   "name": "FrenchPart3Adornments",
   "locale": "fr",
+  "base": "json/clearspeak/clearspeak_part3_adornments.json",
   "information": "ClearspeakFrenchPart3Adornments rule tests.",
   "exclude": [],
   "tests": {

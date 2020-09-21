@@ -8,6 +8,7 @@
   ],
   "active": "ClearspeakCharacterGerman",
   "type": "character",
+  "base": "json/chars/characters.json",
   "information": "Clearspeak Character Test for German",
   "tests": {
     "0": {

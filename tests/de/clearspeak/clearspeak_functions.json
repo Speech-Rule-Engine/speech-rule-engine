@@ -2,6 +2,7 @@
   "_comment0_": " This work was sponsored by ETH Zurich",
   "name": "GermanFunctions",
   "locale": "de",
+  "base": "json/clearspeak/clearspeak_functions.json",
   "information": "ClearspeakGermanFunctions rule tests.",
   "exclude": [],
   "tests": {

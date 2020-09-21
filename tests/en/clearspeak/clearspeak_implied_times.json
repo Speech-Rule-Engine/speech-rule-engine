@@ -2,6 +2,7 @@
   "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
   "name": "EnglishImpliedTimes",
   "locale": "en",
+  "base": "json/clearspeak/clearspeak_implied_times.json",
   "information": "ClearspeakEnglishImpliedTimes rule tests.",
   "exclude": [],
   "tests": {

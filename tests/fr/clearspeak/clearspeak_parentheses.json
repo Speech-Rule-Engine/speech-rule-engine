@@ -2,6 +2,7 @@
   "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
   "name": "FrenchParentheses",
   "locale": "fr",
+  "base": "json/clearspeak/clearspeak_parentheses.json",
   "information": "ClearspeakFrenchParentheses rule tests.",
   "exclude": [],
   "tests": {

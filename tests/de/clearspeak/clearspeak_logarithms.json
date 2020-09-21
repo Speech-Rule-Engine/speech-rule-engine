@@ -2,6 +2,7 @@
   "_comment0_": " This work was sponsored by ETH Zurich",
   "name": "GermanLogarithms",
   "locale": "de",
+  "base": "json/clearspeak/clearspeak_logarithms.json",
   "information": "ClearspeakGermanLogarithms rule tests.",
   "exclude": [],
   "tests": {

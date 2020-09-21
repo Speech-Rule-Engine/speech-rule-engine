@@ -1,4 +1,5 @@
 {
+  "base": "json/base/semantic.json",
   "information": "Semantic enrichment tests.",
   "_comment_0": " Empty wrappers.",
   "_comment_1": " Test for empty wrapping elements.",

@@ -7,6 +7,7 @@
   ],
   "active": "DefaultCharacterEnglish",
   "type": "character",
+  "base": "json/chars/characters.json",
   "information": "Default Character Test for English",
   "tests": {
     "0": {

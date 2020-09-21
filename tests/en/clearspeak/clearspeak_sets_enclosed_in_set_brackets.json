@@ -2,6 +2,7 @@
   "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
   "name": "EnglishSetsEnclosedInSetBrackets",
   "locale": "en",
+  "base": "json/clearspeak/clearspeak_sets_enclosed_in_set_brackets.json",
   "information": "ClearspeakEnglishSetsEnclosedInSetBrackets rule tests.",
   "exclude": [],
   "tests": {

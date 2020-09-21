@@ -8,6 +8,7 @@
   ],
   "active": "DefaultCharacterGerman",
   "type": "character",
+  "base": "json/chars/characters.json",
   "information": "Default Character Test for German",
   "tests": {
     "0": {

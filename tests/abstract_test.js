@@ -124,5 +124,6 @@ goog.inherits(sre.AbstractJsonMultiTest, sre.AbstractJsonTest);
 
 sre.AbstractJsonMultiTest.prototype.prepare = function() {
   sre.AbstractJsonMultiTest.base(this, 'prepare');
+  this.baseFile = this.jsonTests['base'];
   this.baseTests = this.baseFile ? sre.TestUtil.loadJson(this.baseFile) : {};
 };

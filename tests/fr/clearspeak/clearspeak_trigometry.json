@@ -2,6 +2,7 @@
   "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
   "name": "FrenchTrigometry",
   "locale": "fr",
+  "base": "json/clearspeak/clearspeak_trigometry.json",
   "information": "ClearspeakFrenchTrigometry rule tests.",
   "exclude": [],
   "tests": {

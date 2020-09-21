@@ -2,6 +2,7 @@
   "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
   "name": "FrenchMatricesAndCombinatorics",
   "locale": "fr",
+  "base": "json/clearspeak/clearspeak_matrices_vectors_and_combinatorics.json",
   "information": "ClearspeakFrench Matrices, Vectors, and Combinatorics rule tests.",
   "exclude": [],
   "tests": {

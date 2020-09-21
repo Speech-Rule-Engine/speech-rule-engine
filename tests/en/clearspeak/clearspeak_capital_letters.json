@@ -2,6 +2,7 @@
   "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
   "name": "EnglishCapitalLetters",
   "locale": "en",
+  "base": "json/clearspeak/clearspeak_capital_letters.json",
   "information": "ClearspeakEnglishCapitalLetters rule tests.",
   "exclude": [],
   "tests": {

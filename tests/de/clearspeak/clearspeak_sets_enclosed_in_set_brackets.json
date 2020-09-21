@@ -2,6 +2,7 @@
   "_comment0_": " This work was sponsored by ETH Zurich",
   "name": "GermanSetsEnclosedInSetBrackets",
   "locale": "de",
+  "base": "json/clearspeak/clearspeak_sets_enclosed_in_set_brackets.json",
   "information": "ClearspeakGermanSetsEnclosedInSetBrackets rule tests.",
   "exclude": [],
   "tests": {

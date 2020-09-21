@@ -2,6 +2,7 @@
   "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
   "name": "EnglishParentheses",
   "locale": "en",
+  "base": "json/clearspeak/clearspeak_parentheses.json",
   "information": "ClearspeakEnglishParentheses rule tests.",
   "exclude": [],
   "tests": {

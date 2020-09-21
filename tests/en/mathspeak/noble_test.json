@@ -1,6 +1,7 @@
 {
   "name": "NobleEnglishTest",
   "locale": "en",
+  "base": "json/mathspeak/noble_test.json",
   "information": "Steve Noble's samples English tests.",
   "domain": "mathspeak",
   "active": "NobleSamplesEnglish",

@@ -2,6 +2,7 @@
   "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
   "name": "EnglishFunctions",
   "locale": "en",
+  "base": "json/clearspeak/clearspeak_functions.json",
   "information": "ClearspeakEnglishFunctions rule tests.",
   "exclude": ["Function011b", "Function012b", "Function013b", "Function014b", "Function015b", "Function016b", "Function017b", "Function018b", "Function019b", "Function020b", "Function021b", "Function022b", "Function023b", "Function024b", "Function025b", "Function026b", "Function027b", "Function028b", "Function029b", "Function030b", "Function031b", "Function032b", "Function033b", "Function034b", "Function035b", "Function036b", "Function037b", "Function038b", "Function039b", "Function040b", "Function041b", "Function042b", "Function043b", "Function044b", "Function045b", "Function046b", "Function047b", "Function048b", "Function049b", "Function050b", "Function051b", "Function052b", "Function053b", "Function054b", "Function055b", "Function056b", "Function057b", "Function058b", "Function059b", "Function060b", "Function061b", "Function062b", "Function063b", "Function064b", "Function065b", "Function066b", "Function067b", "Function068b", "Function069b", "Function070b", "Function071b", "Function072b", "Function073b", "Function074b", "Function075b", "Function076b", "Function077b", "Function078b", "Function079b"],
   "tests": {

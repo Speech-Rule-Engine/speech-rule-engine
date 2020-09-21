@@ -7,6 +7,7 @@
   ],
   "active": "ClearspeakFunctionFrench",
   "type": "function",
+  "base": "json/chars/functions.json",
   "information": "Clearspeak function test for French",
   "tests": {
     "deg": {

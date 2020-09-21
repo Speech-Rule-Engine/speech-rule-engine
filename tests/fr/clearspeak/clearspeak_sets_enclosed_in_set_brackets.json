@@ -2,6 +2,7 @@
   "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
   "name": "FrenchSetsEnclosedInSetBrackets",
   "locale": "fr",
+  "base": "json/clearspeak/clearspeak_sets_enclosed_in_set_brackets.json",
   "information": "ClearspeakFrenchSetsEnclosedInSetBrackets rule tests.",
   "exclude": [],
   "tests": {

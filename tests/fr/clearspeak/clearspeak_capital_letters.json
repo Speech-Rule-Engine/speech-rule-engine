@@ -2,6 +2,7 @@
   "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
   "name": "FrenchCapitalLetters",
   "locale": "fr",
+  "base": "json/clearspeak/clearspeak_capital_letters.json",
   "information": "ClearspeakFrenchCapitalLetters rule tests.",
   "exclude": [],
   "tests": {
