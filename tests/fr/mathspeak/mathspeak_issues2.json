@@ -1,0 +1,155 @@
+{
+  "name": "MathspeakIssues2French",
+  "base": "json/mathspeak/mathspeak_issues2.json",
+  "information": "Mathml Cloud French tests.",
+  "domain": "mathspeak",
+  "locale": "fr",
+  "active": "MathspeakIssues2French",
+  "exclude": [],
+  "tests": {
+    "HtmlEntities_0": {
+      "expected": "inférieur à"
+    },
+    "HtmlEntities_1": {
+      "expected": "supérieur à"
+    },
+    "HtmlEntities_2": {
+      "expected": "n"
+    },
+    "HtmlEntities_3": {
+      "expected": "m"
+    },
+    "HtmlEntities_4": {
+      "expected": "n m"
+    },
+    "HtmlEntities_5": {
+      "expected": "n m"
+    },
+    "BinomialFromFrac_0": {
+      "expected": "début binomiale k parmi n fin binomiale"
+    },
+    "BinomialFromFrac_1": {
+      "expected": "début binomiale k parmi n fin binomiale"
+    },
+    "BinomialFromFrac_2": {
+      "expected": "début binomiale k parmi n fin binomiale"
+    },
+    "BinomialFromFrac_3": {
+      "expected": "parenthèse gauche début fraction n sur k fin fraction parenthèse droite"
+    },
+    "BinomialFromFrac_4": {
+      "expected": "parenthèse gauche début fraction n sur k fin fraction parenthèse droite"
+    },
+    "BinomialFromFrac_5": {
+      "expected": "parenthèse gauche début fraction n sur k fin fraction parenthèse droite"
+    },
+    "UnnecessarySpaces_0": {
+      "expected": "5"
+    },
+    "UnnecessarySpaces_1": {
+      "expected": "5"
+    },
+    "AbsValueVsNeutral_0": {
+      "expected": "barre verticale a double ligne verticale"
+    },
+    "AbsValueVsNeutral_1": {
+      "expected": "double ligne verticale a double ligne verticale"
+    },
+    "AbsValueVsNeutral_2": {
+      "expected": "barre déjointe a barre déjointe"
+    },
+    "NegativeVulgarFraction_0": {
+      "expected": "un-demi moins cinq-dix-huitièmes"
+    },
+    "NegativeVulgarFraction_1": {
+      "expected": "négatif début fraction 5,2 sur a fin fraction"
+    },
+    "NegativeVulgarFraction_2": {
+      "expected": "négatif début fraction 5,2 sur 18 fin fraction"
+    },
+    "TrivialStuff_0": {
+      "expected": "a égale b"
+    },
+    "TrivialStuff_1": {
+      "expected": "petit guillemet"
+    },
+    "TrivialStuff_2": {
+      "expected": "petit guillemet x petit guillemet"
+    },
+    "TrivialStuff_3": {
+      "expected": "prime"
+    },
+    "GermanFonts_0": {
+      "expected": "A majuscule en gothique"
+    },
+    "GermanFonts_1": {
+      "expected": "A majuscule en gothique gras"
+    },
+    "GermanFonts_2": {
+      "expected": "A majuscule en gothique"
+    },
+    "GermanFonts_3": {
+      "expected": "A majuscule en gothique gras"
+    },
+    "GermanFonts_4": {
+      "expected": "abc en gothique gras"
+    },
+    "GermanFonts_5": {
+      "expected": "ABC en gothique gras"
+    },
+    "GermanFonts_6": {
+      "expected": "A majuscule B majuscule C majuscule en gothique gras"
+    },
+    "OtherFonts_0": {
+      "expected": "m"
+    },
+    "OtherFonts_1": {
+      "expected": "m en normal"
+    },
+    "OtherFonts_2": {
+      "expected": "m i"
+    },
+    "OtherFonts_3": {
+      "expected": "m i en italique"
+    },
+    "OtherFonts_4": {
+      "expected": "30"
+    },
+    "OtherFonts_5": {
+      "expected": "3 en italique"
+    },
+    "OtherFonts_6": {
+      "expected": "30 degrés"
+    },
+    "OtherFonts_7": {
+      "expected": "3 0 m A majuscule"
+    },
+    "Multiline_0": {
+      "expected": "début tableau 1re rangée  a 2e rangée  b fin tableau"
+    },
+    "Multiline_1": {
+      "expected": "début tableau 1re rangée 1re colonne a 2e colonne c 2e rangée 1re colonne b 2e colonne d fin tableau"
+    },
+    "RelationsWithEmpty_0": {
+      "expected": "plus petit ou égal à 2"
+    },
+    "RelationsWithEmpty_1": {
+      "expected": "égale 2 égale"
+    },
+    "RelationsWithEmpty_2": {
+      "expected": "plus petit ou égal à 2 égale"
+    },
+    "RelationsWithEmpty_3": {
+      "expected": "début tableau 1re rangée 1re colonne 1 2e colonne plus petit ou égal à 2 fin tableau"
+    },
+    "EncloseGeneral": {
+      "expected": ""
+    },
+    "EncloseLeftbar": {
+      "expected": "barre verticale a"
+    },
+    "EncloseRightbar": {
+      "expected": "a barre verticale"
+    }
+  }
+}

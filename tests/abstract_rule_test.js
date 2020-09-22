@@ -271,7 +271,8 @@ sre.MathspeakRuleTest.tests = function() {
     'mathspeak_test.json',
     'noble_test.json',
     'mathspeak_embellish_test.json',
-    'mathspeak_issues1.json'
+    'mathspeak_issues1.json',
+    'mathspeak_issues2.json'
   ];
   for (var locale of sre.Variables.LOCALES) {
     for (var file of files) {

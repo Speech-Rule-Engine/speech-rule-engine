@@ -1,0 +1,198 @@
+{
+  "_": " This work was sponsored by ETH Zurich",
+  "name": "MathspeakIssues2German",
+  "base": "json/mathspeak/mathspeak_issues2.json",
+  "information": "Mathml Cloud German tests.",
+  "domain": "mathspeak",
+  "locale": "de",
+  "active": "MathspeakIssues2German",
+  "exclude": [],
+  "tests": {
+    "MathspeakRoots_0": {
+      "expected": "Anfang Quadratwurzel a Ende Quadratwurzel"
+    },
+    "MathspeakRoots_1": {
+      "expected": "Anfang Quadratwurzel a Ende Quadratwurzel"
+    },
+    "MathspeakRoots_2": {
+      "expected": "Anfang Kubikwurzel a Ende Kubikwurzel"
+    },
+    "MathspeakRoots_3": {
+      "expected": "Wurzelexponent 4 Anfang Wurzel a Ende Wurzel"
+    },
+    "MathspeakRoots_4": {
+      "expected": "Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Quadratwurzel"
+    },
+    "MathspeakRoots_5": {
+      "expected": "Anfang zweifach geschachtelte Quadratwurzel Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Quadratwurzel Ende zweifach geschachtelte Quadratwurzel"
+    },
+    "MathspeakRoots_6": {
+      "expected": "Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Quadratwurzel"
+    },
+    "MathspeakRoots_7": {
+      "expected": "Anfang zweifach geschachtelte Quadratwurzel Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Quadratwurzel Ende zweifach geschachtelte Quadratwurzel"
+    },
+    "MathspeakRoots_8": {
+      "expected": "Anfang geschachtelte Kubikwurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Kubikwurzel"
+    },
+    "MathspeakRoots_9": {
+      "expected": "Anfang zweifach geschachtelte Kubikwurzel Anfang geschachtelte Kubikwurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Kubikwurzel Ende zweifach geschachtelte Kubikwurzel"
+    },
+    "MathspeakRoots_10": {
+      "expected": "geschachtelter Wurzelexponent 4 Anfang geschachtelte Wurzel Wurzelexponent 4 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "MathspeakRoots_11": {
+      "expected": "zweifach geschachtelter Wurzelexponent 4 Anfang zweifach geschachtelte Wurzel geschachtelter Wurzelexponent 4 Anfang geschachtelte Wurzel Wurzelexponent 4 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel Ende zweifach geschachtelte Wurzel"
+    },
+    "MathspeakRoots_12": {
+      "expected": "Anfang zweifach geschachtelte Quadratwurzel Anfang geschachtelte Kubikwurzel Wurzelexponent 4 Anfang Wurzel a Ende Wurzel Ende geschachtelte Kubikwurzel Ende zweifach geschachtelte Quadratwurzel"
+    },
+    "MathspeakRoots_13": {
+      "expected": "zweifach geschachtelter Wurzelexponent 4 Anfang zweifach geschachtelte Wurzel Anfang geschachtelte Kubikwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Kubikwurzel Ende zweifach geschachtelte Wurzel"
+    },
+    "HtmlEntities_0": {
+      "expected": "kleiner als"
+    },
+    "HtmlEntities_1": {
+      "expected": "größer als"
+    },
+    "HtmlEntities_2": {
+      "expected": "n"
+    },
+    "HtmlEntities_3": {
+      "expected": "m"
+    },
+    "HtmlEntities_4": {
+      "expected": "n m"
+    },
+    "HtmlEntities_5": {
+      "expected": "n m"
+    },
+    "BinomialFromFrac_0": {
+      "expected": "Anfang Binomialkoeffizient k aus n Ende Binomialkoeffizient"
+    },
+    "BinomialFromFrac_1": {
+      "expected": "Anfang Binomialkoeffizient k aus n Ende Binomialkoeffizient"
+    },
+    "BinomialFromFrac_2": {
+      "expected": "Anfang Binomialkoeffizient k aus n Ende Binomialkoeffizient"
+    },
+    "BinomialFromFrac_3": {
+      "expected": "Klammer auf Anfang Bruch n durch k Ende Bruch Klammer zu"
+    },
+    "BinomialFromFrac_4": {
+      "expected": "Klammer auf Anfang Bruch n durch k Ende Bruch Klammer zu"
+    },
+    "BinomialFromFrac_5": {
+      "expected": "Klammer auf Anfang Bruch n durch k Ende Bruch Klammer zu"
+    },
+    "UnnecessarySpaces_0": {
+      "expected": "5"
+    },
+    "UnnecessarySpaces_1": {
+      "expected": "5"
+    },
+    "AbsValueVsNeutral_0": {
+      "expected": "vollbreites Vertikale Linie a Doppelte vertikale Linie"
+    },
+    "AbsValueVsNeutral_1": {
+      "expected": "Doppelte vertikale Linie a Doppelte vertikale Linie"
+    },
+    "AbsValueVsNeutral_2": {
+      "expected": "gebrochene Linie a gebrochene Linie"
+    },
+    "NegativeVulgarFraction_0": {
+      "expected": "ein halb minus fünf achtzehntel"
+    },
+    "NegativeVulgarFraction_1": {
+      "expected": "minus Anfang Bruch 5,2 durch a Ende Bruch"
+    },
+    "NegativeVulgarFraction_2": {
+      "expected": "minus Anfang Bruch 5,2 durch 18 Ende Bruch"
+    },
+    "TrivialStuff_0": {
+      "expected": "a ist gleich b"
+    },
+    "TrivialStuff_1": {
+      "expected": "Anführungszeichen"
+    },
+    "TrivialStuff_2": {
+      "expected": "Anführungszeichen x Anführungszeichen"
+    },
+    "TrivialStuff_3": {
+      "expected": "Hochkomma"
+    },
+    "GermanFonts_0": {
+      "expected": "Fraktur großes A"
+    },
+    "GermanFonts_1": {
+      "expected": "fettes Fraktur großes A"
+    },
+    "GermanFonts_2": {
+      "expected": "Fraktur großes A"
+    },
+    "GermanFonts_3": {
+      "expected": "fettes Fraktur großes A"
+    },
+    "GermanFonts_4": {
+      "expected": "fettes Fraktur abc"
+    },
+    "GermanFonts_5": {
+      "expected": "fettes Fraktur ABC"
+    },
+    "GermanFonts_6": {
+      "expected": "fettes Fraktur großes A großes B großes C"
+    },
+    "OtherFonts_0": {
+      "expected": "m"
+    },
+    "OtherFonts_1": {
+      "expected": "normales m"
+    },
+    "OtherFonts_2": {
+      "expected": "normales m i"
+    },
+    "OtherFonts_3": {
+      "expected": "m i"
+    },
+    "OtherFonts_4": {
+      "expected": "normales 30"
+    },
+    "OtherFonts_5": {
+      "expected": "kursive 3"
+    },
+    "OtherFonts_6": {
+      "expected": "30 Grad"
+    },
+    "OtherFonts_7": {
+      "expected": "3 0 m großes A"
+    },
+    "Multiline_0": {
+      "expected": "Anfang Anordnung 1. Zeile  a 2. Zeile  b Ende Anordnung"
+    },
+    "Multiline_1": {
+      "expected": "Anfang Anordnung 1. Zeile 1. Spalte a 2. Spalte c 2. Zeile 1. Spalte b 2. Spalte d Ende Anordnung"
+    },
+    "RelationsWithEmpty_0": {
+      "expected": "kleiner oder gleich 2"
+    },
+    "RelationsWithEmpty_1": {
+      "expected": "ist gleich 2 ist gleich"
+    },
+    "RelationsWithEmpty_2": {
+      "expected": "kleiner oder gleich 2 ist gleich"
+    },
+    "RelationsWithEmpty_3": {
+      "expected": "Anfang Anordnung 1. Zeile 1. Spalte 1 2. Spalte kleiner oder gleich 2 Ende Anordnung"
+    },
+    "EncloseGeneral": {
+      "expected": "Anfang Umschließung kreisähnliche Umrandung a Ende Umschließung"
+    },
+    "EncloseLeftbar": {
+      "expected": "senkrechter Strich a"
+    },
+    "EncloseRightbar": {
+      "expected": "a senkrechter Strich"
+    }
+  }
+}
