@@ -1,0 +1,521 @@
+{
+  "name": "MathspeakEmbellishEnglishTest",
+  "base": "json/mathspeak/mathspeak_embellish_test.json",
+  "information": "Mathspeak Embellished Symbols tests.",
+  "domain": "mathspeak",
+  "locale": "en",
+  "active": "EmbellishedSymbolsEnglish",
+  "exclude": [],
+  "tests": {
+    "EmbellOpSubscript_default": {
+      "expected": "a plus Subscript 2 Baseline b"
+    },
+    "EmbellOpSubscript_brief": {
+      "expected": "a plus Sub 2 Base b"
+    },
+    "EmbellOpSubscript_sbrief": {
+      "expected": "a plus Sub 2 Base b"
+    },
+    "EmbellOpSuperscript_0_default": {
+      "expected": "a plus Superscript 2 Baseline b"
+    },
+    "EmbellOpSuperscript_0_brief": {
+      "expected": "a plus Sup 2 Base b"
+    },
+    "EmbellOpSuperscript_0_sbrief": {
+      "expected": "a plus Sup 2 Base b"
+    },
+    "EmbellOpSuperscript_1_default": {
+      "expected": "a plus Superscript 3 Baseline b"
+    },
+    "EmbellOpSuperscript_1_brief": {
+      "expected": "a plus Sup 3 Base b"
+    },
+    "EmbellOpSuperscript_1_sbrief": {
+      "expected": "a plus Sup 3 Base b"
+    },
+    "EmbellOpSuperscript_2_default": {
+      "expected": "a plus Superscript n Baseline b"
+    },
+    "EmbellOpSuperscript_2_brief": {
+      "expected": "a plus Sup n Base b"
+    },
+    "EmbellOpSuperscript_2_sbrief": {
+      "expected": "a plus Sup n Base b"
+    },
+    "EmbellOpSuperscript_3_default": {
+      "expected": "a plus prime b"
+    },
+    "EmbellOpSuperscript_3_brief": {
+      "expected": "a plus prime b"
+    },
+    "EmbellOpSuperscript_3_sbrief": {
+      "expected": "a plus prime b"
+    },
+    "EmbellOpSubSuper_0_default": {
+      "expected": "a plus Subscript m Superscript 2 Baseline b"
+    },
+    "EmbellOpSubSuper_0_brief": {
+      "expected": "a plus Sub m Sup 2 Base b"
+    },
+    "EmbellOpSubSuper_0_sbrief": {
+      "expected": "a plus Sub m Sup 2 Base b"
+    },
+    "EmbellOpSubSuper_1_default": {
+      "expected": "a plus Subscript m Superscript 3 Baseline b"
+    },
+    "EmbellOpSubSuper_1_brief": {
+      "expected": "a plus Sub m Sup 3 Base b"
+    },
+    "EmbellOpSubSuper_1_sbrief": {
+      "expected": "a plus Sub m Sup 3 Base b"
+    },
+    "EmbellOpSubSuper_2_default": {
+      "expected": "a plus Subscript m Superscript n Baseline b"
+    },
+    "EmbellOpSubSuper_2_brief": {
+      "expected": "a plus Sub m Sup n Base b"
+    },
+    "EmbellOpSubSuper_2_sbrief": {
+      "expected": "a plus Sub m Sup n Base b"
+    },
+    "EmbellOpSubSuper_3_default": {
+      "expected": "a plus prime Subscript m Baseline b"
+    },
+    "EmbellOpSubSuper_3_brief": {
+      "expected": "a plus prime Sub m Base b"
+    },
+    "EmbellOpSubSuper_3_sbrief": {
+      "expected": "a plus prime Sub m Base b"
+    },
+    "EmbellOpSubSuper_4_default": {
+      "expected": "a plus prime Subscript m Baseline b plus prime Subscript m Baseline c"
+    },
+    "EmbellOpSubSuper_4_brief": {
+      "expected": "a plus prime Sub m Base b plus prime Sub m Base c"
+    },
+    "EmbellOpSubSuper_4_sbrief": {
+      "expected": "a plus prime Sub m Base b plus prime Sub m Base c"
+    },
+    "EmbellOpTensor_0_default": {
+      "expected": "a plus Subscript m Superscript 2 Baseline b"
+    },
+    "EmbellOpTensor_0_brief": {
+      "expected": "a plus Sub m Sup 2 Base b"
+    },
+    "EmbellOpTensor_0_sbrief": {
+      "expected": "a plus Sub m Sup 2 Base b"
+    },
+    "EmbellOpTensor_1_default": {
+      "expected": "a Superscript 3 Baseline plus Subscript m Superscript 2 Baseline b"
+    },
+    "EmbellOpTensor_1_brief": {
+      "expected": "a Sup 3 Base plus Sub m Sup 2 Base b"
+    },
+    "EmbellOpTensor_1_sbrief": {
+      "expected": "a Sup 3 Base plus Sub m Sup 2 Base b"
+    },
+    "EmbellOpTensor_2_default": {
+      "expected": "a Subscript 3 Baseline plus Subscript m Superscript 2 Baseline b"
+    },
+    "EmbellOpTensor_2_brief": {
+      "expected": "a Sub 3 Base plus Sub m Sup 2 Base b"
+    },
+    "EmbellOpTensor_2_sbrief": {
+      "expected": "a Sub 3 Base plus Sub m Sup 2 Base b"
+    },
+    "EmbellOpTensor_3_default": {
+      "expected": "a Subscript 3 Superscript n Baseline plus Subscript m Superscript 2 Baseline b"
+    },
+    "EmbellOpTensor_3_brief": {
+      "expected": "a Sub 3 Sup n Base plus Sub m Sup 2 Base b"
+    },
+    "EmbellOpTensor_3_sbrief": {
+      "expected": "a Sub 3 Sup n Base plus Sub m Sup 2 Base b"
+    },
+    "EmbellRelSubscript_default": {
+      "expected": "a equals Subscript 2 Baseline b"
+    },
+    "EmbellRelSubscript_brief": {
+      "expected": "a equals Sub 2 Base b"
+    },
+    "EmbellRelSubscript_sbrief": {
+      "expected": "a equals Sub 2 Base b"
+    },
+    "EmbellRelSuperscript_0_default": {
+      "expected": "a equals Superscript 2 Baseline b"
+    },
+    "EmbellRelSuperscript_0_brief": {
+      "expected": "a equals Sup 2 Base b"
+    },
+    "EmbellRelSuperscript_0_sbrief": {
+      "expected": "a equals Sup 2 Base b"
+    },
+    "EmbellRelSuperscript_1_default": {
+      "expected": "a equals Superscript 3 Baseline b"
+    },
+    "EmbellRelSuperscript_1_brief": {
+      "expected": "a equals Sup 3 Base b"
+    },
+    "EmbellRelSuperscript_1_sbrief": {
+      "expected": "a equals Sup 3 Base b"
+    },
+    "EmbellRelSuperscript_2_default": {
+      "expected": "a equals Superscript n Baseline b"
+    },
+    "EmbellRelSuperscript_2_brief": {
+      "expected": "a equals Sup n Base b"
+    },
+    "EmbellRelSuperscript_2_sbrief": {
+      "expected": "a equals Sup n Base b"
+    },
+    "EmbellRelSuperscript_3_default": {
+      "expected": "a equals prime b"
+    },
+    "EmbellRelSuperscript_3_brief": {
+      "expected": "a equals prime b"
+    },
+    "EmbellRelSuperscript_3_sbrief": {
+      "expected": "a equals prime b"
+    },
+    "EmbellRelSubSuper_0_default": {
+      "expected": "a equals Subscript m Superscript 2 Baseline b"
+    },
+    "EmbellRelSubSuper_0_brief": {
+      "expected": "a equals Sub m Sup 2 Base b"
+    },
+    "EmbellRelSubSuper_0_sbrief": {
+      "expected": "a equals Sub m Sup 2 Base b"
+    },
+    "EmbellRelSubSuper_1_default": {
+      "expected": "a equals Subscript m Superscript 3 Baseline b"
+    },
+    "EmbellRelSubSuper_1_brief": {
+      "expected": "a equals Sub m Sup 3 Base b"
+    },
+    "EmbellRelSubSuper_1_sbrief": {
+      "expected": "a equals Sub m Sup 3 Base b"
+    },
+    "EmbellRelSubSuper_2_default": {
+      "expected": "a equals Subscript m Superscript n Baseline b"
+    },
+    "EmbellRelSubSuper_2_brief": {
+      "expected": "a equals Sub m Sup n Base b"
+    },
+    "EmbellRelSubSuper_2_sbrief": {
+      "expected": "a equals Sub m Sup n Base b"
+    },
+    "EmbellRelSubSuper_3_default": {
+      "expected": "a equals prime Subscript m Baseline b"
+    },
+    "EmbellRelSubSuper_3_brief": {
+      "expected": "a equals prime Sub m Base b"
+    },
+    "EmbellRelSubSuper_3_sbrief": {
+      "expected": "a equals prime Sub m Base b"
+    },
+    "EmbellRelTensor_0_default": {
+      "expected": "a equals Subscript m Superscript 2 Baseline b"
+    },
+    "EmbellRelTensor_0_brief": {
+      "expected": "a equals Sub m Sup 2 Base b"
+    },
+    "EmbellRelTensor_0_sbrief": {
+      "expected": "a equals Sub m Sup 2 Base b"
+    },
+    "EmbellRelTensor_1_default": {
+      "expected": "a Superscript 3 Baseline equals Subscript m Superscript 2 Baseline b"
+    },
+    "EmbellRelTensor_1_brief": {
+      "expected": "a Sup 3 Base equals Sub m Sup 2 Base b"
+    },
+    "EmbellRelTensor_1_sbrief": {
+      "expected": "a Sup 3 Base equals Sub m Sup 2 Base b"
+    },
+    "EmbellRelTensor_2_default": {
+      "expected": "a Subscript 3 Baseline equals Subscript m Superscript 2 Baseline b"
+    },
+    "EmbellRelTensor_2_brief": {
+      "expected": "a Sub 3 Base equals Sub m Sup 2 Base b"
+    },
+    "EmbellRelTensor_2_sbrief": {
+      "expected": "a Sub 3 Base equals Sub m Sup 2 Base b"
+    },
+    "EmbellRelTensor_3_default": {
+      "expected": "a Subscript 3 Superscript n Baseline equals Subscript m Superscript 2 Baseline b"
+    },
+    "EmbellRelTensor_3_brief": {
+      "expected": "a Sub 3 Sup n Base equals Sub m Sup 2 Base b"
+    },
+    "EmbellRelTensor_3_sbrief": {
+      "expected": "a Sub 3 Sup n Base equals Sub m Sup 2 Base b"
+    },
+    "EmbellMultRelSubscript_default": {
+      "expected": "a equals Subscript 2 Baseline b equals c"
+    },
+    "EmbellMultRelSubscript_brief": {
+      "expected": "a equals Sub 2 Base b equals c"
+    },
+    "EmbellMultRelSubscript_sbrief": {
+      "expected": "a equals Sub 2 Base b equals c"
+    },
+    "EmbellPunctSubscript_default": {
+      "expected": "a colon Subscript 2 Baseline b"
+    },
+    "EmbellPunctSubscript_brief": {
+      "expected": "a colon Sub 2 Base b"
+    },
+    "EmbellPunctSubscript_sbrief": {
+      "expected": "a colon Sub 2 Base b"
+    },
+    "EmbellPunctSuperscript_0_default": {
+      "expected": "a colon Superscript 2 Baseline b"
+    },
+    "EmbellPunctSuperscript_0_brief": {
+      "expected": "a colon Sup 2 Base b"
+    },
+    "EmbellPunctSuperscript_0_sbrief": {
+      "expected": "a colon Sup 2 Base b"
+    },
+    "EmbellPunctSuperscript_1_default": {
+      "expected": "a colon Superscript 3 Baseline b"
+    },
+    "EmbellPunctSuperscript_1_brief": {
+      "expected": "a colon Sup 3 Base b"
+    },
+    "EmbellPunctSuperscript_1_sbrief": {
+      "expected": "a colon Sup 3 Base b"
+    },
+    "EmbellPunctSuperscript_2_default": {
+      "expected": "a colon Superscript n Baseline b"
+    },
+    "EmbellPunctSuperscript_2_brief": {
+      "expected": "a colon Sup n Base b"
+    },
+    "EmbellPunctSuperscript_2_sbrief": {
+      "expected": "a colon Sup n Base b"
+    },
+    "EmbellPunctSuperscript_3_default": {
+      "expected": "a colon prime b"
+    },
+    "EmbellPunctSuperscript_3_brief": {
+      "expected": "a colon prime b"
+    },
+    "EmbellPunctSuperscript_3_sbrief": {
+      "expected": "a colon prime b"
+    },
+    "EmbellPunctSubSuper_0_default": {
+      "expected": "a colon Subscript m Superscript 2 Baseline b"
+    },
+    "EmbellPunctSubSuper_0_brief": {
+      "expected": "a colon Sub m Sup 2 Base b"
+    },
+    "EmbellPunctSubSuper_0_sbrief": {
+      "expected": "a colon Sub m Sup 2 Base b"
+    },
+    "EmbellPunctSubSuper_1_default": {
+      "expected": "a colon Subscript m Superscript 3 Baseline b"
+    },
+    "EmbellPunctSubSuper_1_brief": {
+      "expected": "a colon Sub m Sup 3 Base b"
+    },
+    "EmbellPunctSubSuper_1_sbrief": {
+      "expected": "a colon Sub m Sup 3 Base b"
+    },
+    "EmbellPunctSubSuper_2_default": {
+      "expected": "a colon Subscript m Superscript n Baseline b"
+    },
+    "EmbellPunctSubSuper_2_brief": {
+      "expected": "a colon Sub m Sup n Base b"
+    },
+    "EmbellPunctSubSuper_2_sbrief": {
+      "expected": "a colon Sub m Sup n Base b"
+    },
+    "EmbellPunctSubSuper_3_default": {
+      "expected": "a colon prime Subscript m Baseline b"
+    },
+    "EmbellPunctSubSuper_3_brief": {
+      "expected": "a colon prime Sub m Base b"
+    },
+    "EmbellPunctSubSuper_3_sbrief": {
+      "expected": "a colon prime Sub m Base b"
+    },
+    "EmbellPunctTensor_0_default": {
+      "expected": "a colon Subscript m Superscript 2 Baseline b"
+    },
+    "EmbellPunctTensor_0_brief": {
+      "expected": "a colon Sub m Sup 2 Base b"
+    },
+    "EmbellPunctTensor_0_sbrief": {
+      "expected": "a colon Sub m Sup 2 Base b"
+    },
+    "EmbellPunctTensor_1_default": {
+      "expected": "a Superscript 3 Baseline colon Subscript m Superscript 2 Baseline b"
+    },
+    "EmbellPunctTensor_1_brief": {
+      "expected": "a Sup 3 Base colon Sub m Sup 2 Base b"
+    },
+    "EmbellPunctTensor_1_sbrief": {
+      "expected": "a Sup 3 Base colon Sub m Sup 2 Base b"
+    },
+    "EmbellPunctTensor_2_default": {
+      "expected": "a Subscript 3 Baseline colon Subscript m Superscript 2 Baseline b"
+    },
+    "EmbellPunctTensor_2_brief": {
+      "expected": "a Sub 3 Base colon Sub m Sup 2 Base b"
+    },
+    "EmbellPunctTensor_2_sbrief": {
+      "expected": "a Sub 3 Base colon Sub m Sup 2 Base b"
+    },
+    "EmbellPunctTensor_3_default": {
+      "expected": "a Subscript 3 Superscript n Baseline colon Subscript m Superscript 2 Baseline b"
+    },
+    "EmbellPunctTensor_3_brief": {
+      "expected": "a Sub 3 Sup n Base colon Sub m Sup 2 Base b"
+    },
+    "EmbellPunctTensor_3_sbrief": {
+      "expected": "a Sub 3 Sup n Base colon Sub m Sup 2 Base b"
+    },
+    "EmbellMultPunctSubscript_default": {
+      "expected": "a colon Subscript 2 Baseline b colon c"
+    },
+    "EmbellMultPunctSubscript_brief": {
+      "expected": "a colon Sub 2 Base b colon c"
+    },
+    "EmbellMultPunctSubscript_sbrief": {
+      "expected": "a colon Sub 2 Base b colon c"
+    },
+    "SemanticsElement_0_default": {
+      "expected": ""
+    },
+    "SemanticsElement_0_brief": {
+      "expected": ""
+    },
+    "SemanticsElement_0_sbrief": {
+      "expected": ""
+    },
+    "SemanticsElement_1_default": {
+      "expected": "a"
+    },
+    "SemanticsElement_1_brief": {
+      "expected": "a"
+    },
+    "SemanticsElement_1_sbrief": {
+      "expected": "a"
+    },
+    "SemanticsElement_2_default": {
+      "expected": "a plus b"
+    },
+    "SemanticsElement_2_brief": {
+      "expected": "a plus b"
+    },
+    "SemanticsElement_2_sbrief": {
+      "expected": "a plus b"
+    },
+    "SemanticsElement_3_default": {
+      "expected": "a plus b"
+    },
+    "SemanticsElement_3_brief": {
+      "expected": "a plus b"
+    },
+    "SemanticsElement_3_sbrief": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotation_0_default": {
+      "_comment0_": " This is not really legal markup.",
+      "expected": ""
+    },
+    "SemanticsAnnotation_0_brief": {
+      "_comment0_": " This is not really legal markup.",
+      "expected": ""
+    },
+    "SemanticsAnnotation_0_sbrief": {
+      "_comment0_": " This is not really legal markup.",
+      "expected": ""
+    },
+    "SemanticsAnnotation_1_default": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_1_brief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_1_sbrief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_2_default": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_2_brief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_2_sbrief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_3_default": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotation_3_brief": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotation_3_sbrief": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotation_4_default": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotation_4_brief": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotation_4_sbrief": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotationXml_0_default": {
+      "_comment1_": " This is not really legal markup.",
+      "expected": "something"
+    },
+    "SemanticsAnnotationXml_0_brief": {
+      "_comment1_": " This is not really legal markup.",
+      "expected": "something"
+    },
+    "SemanticsAnnotationXml_0_sbrief": {
+      "_comment1_": " This is not really legal markup.",
+      "expected": "something"
+    },
+    "SemanticsAnnotationXml_1_default": {
+      "expected": "a something"
+    },
+    "SemanticsAnnotationXml_1_brief": {
+      "expected": "a something"
+    },
+    "SemanticsAnnotationXml_1_sbrief": {
+      "expected": "a something"
+    },
+    "SemanticsAnnotationXml_2_default": {
+      "expected": "a"
+    },
+    "SemanticsAnnotationXml_2_brief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotationXml_2_sbrief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotationXml_3_default": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotationXml_3_brief": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotationXml_3_sbrief": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotationXml_4_default": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotationXml_4_brief": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotationXml_4_sbrief": {
+      "expected": "a plus b"
+    }
+  }
+}

@@ -1,0 +1,513 @@
+{
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "MathspeakEmbellishGermanTest",
+  "base": "json/mathspeak/mathspeak_embellish_test.json",
+  "information": "Mathspeak Embellished Symbols tests.",
+  "domain": "mathspeak",
+  "locale": "de",
+  "active": "EmbellishedSymbolsGerman",
+  "exclude": [],
+  "tests": {
+    "EmbellOpSubscript_default": {
+      "expected": "a plus Index 2 Grundlinie b"
+    },
+    "EmbellOpSubscript_brief": {
+      "expected": "a plus Index 2 Grund b"
+    },
+    "EmbellOpSubscript_sbrief": {
+      "expected": "a plus Index 2 Grund b"
+    },
+    "EmbellOpSuperscript_0_default": {
+      "expected": "a plus hoch 2 Grundlinie b"
+    },
+    "EmbellOpSuperscript_0_brief": {
+      "expected": "a plus hoch 2 Grund b"
+    },
+    "EmbellOpSuperscript_0_sbrief": {
+      "expected": "a plus hoch 2 Grund b"
+    },
+    "EmbellOpSuperscript_1_default": {
+      "expected": "a plus hoch 3 Grundlinie b"
+    },
+    "EmbellOpSuperscript_1_brief": {
+      "expected": "a plus hoch 3 Grund b"
+    },
+    "EmbellOpSuperscript_1_sbrief": {
+      "expected": "a plus hoch 3 Grund b"
+    },
+    "EmbellOpSuperscript_2_default": {
+      "expected": "a plus hoch n Grundlinie b"
+    },
+    "EmbellOpSuperscript_2_brief": {
+      "expected": "a plus hoch n Grund b"
+    },
+    "EmbellOpSuperscript_2_sbrief": {
+      "expected": "a plus hoch n Grund b"
+    },
+    "EmbellOpSuperscript_3_default": {
+      "expected": "a plus Hochkomma b"
+    },
+    "EmbellOpSuperscript_3_brief": {
+      "expected": "a plus Hochkomma b"
+    },
+    "EmbellOpSuperscript_3_sbrief": {
+      "expected": "a plus Hochkomma b"
+    },
+    "EmbellOpSubSuper_0_default": {
+      "expected": "a plus Index m hoch 2 Grundlinie b"
+    },
+    "EmbellOpSubSuper_0_brief": {
+      "expected": "a plus Index m hoch 2 Grund b"
+    },
+    "EmbellOpSubSuper_0_sbrief": {
+      "expected": "a plus Index m hoch 2 Grund b"
+    },
+    "EmbellOpSubSuper_1_default": {
+      "expected": "a plus Index m hoch 3 Grundlinie b"
+    },
+    "EmbellOpSubSuper_1_brief": {
+      "expected": "a plus Index m hoch 3 Grund b"
+    },
+    "EmbellOpSubSuper_1_sbrief": {
+      "expected": "a plus Index m hoch 3 Grund b"
+    },
+    "EmbellOpSubSuper_2_default": {
+      "expected": "a plus Index m hoch n Grundlinie b"
+    },
+    "EmbellOpSubSuper_2_brief": {
+      "expected": "a plus Index m hoch n Grund b"
+    },
+    "EmbellOpSubSuper_2_sbrief": {
+      "expected": "a plus Index m hoch n Grund b"
+    },
+    "EmbellOpSubSuper_3_default": {
+      "expected": "a plus Hochkomma Index m Grundlinie b"
+    },
+    "EmbellOpSubSuper_3_brief": {
+      "expected": "a plus Hochkomma Index m Grund b"
+    },
+    "EmbellOpSubSuper_3_sbrief": {
+      "expected": "a plus Hochkomma Index m Grund b"
+    },
+    "EmbellOpTensor_0_default": {
+      "expected": "a plus Index m hoch 2 Grundlinie b"
+    },
+    "EmbellOpTensor_0_brief": {
+      "expected": "a plus Index m hoch 2 Grund b"
+    },
+    "EmbellOpTensor_0_sbrief": {
+      "expected": "a plus Index m hoch 2 Grund b"
+    },
+    "EmbellOpTensor_1_default": {
+      "expected": "a hoch 3 Grundlinie plus Index m hoch 2 Grundlinie b"
+    },
+    "EmbellOpTensor_1_brief": {
+      "expected": "a hoch 3 Grund plus Index m hoch 2 Grund b"
+    },
+    "EmbellOpTensor_1_sbrief": {
+      "expected": "a hoch 3 Grund plus Index m hoch 2 Grund b"
+    },
+    "EmbellOpTensor_2_default": {
+      "expected": "a Index 3 Grundlinie plus Index m hoch 2 Grundlinie b"
+    },
+    "EmbellOpTensor_2_brief": {
+      "expected": "a Index 3 Grund plus Index m hoch 2 Grund b"
+    },
+    "EmbellOpTensor_2_sbrief": {
+      "expected": "a Index 3 Grund plus Index m hoch 2 Grund b"
+    },
+    "EmbellOpTensor_3_default": {
+      "expected": "a Index 3 hoch n Grundlinie plus Index m hoch 2 Grundlinie b"
+    },
+    "EmbellOpTensor_3_brief": {
+      "expected": "a Index 3 hoch n Grund plus Index m hoch 2 Grund b"
+    },
+    "EmbellOpTensor_3_sbrief": {
+      "expected": "a Index 3 hoch n Grund plus Index m hoch 2 Grund b"
+    },
+    "EmbellRelSubscript_default": {
+      "expected": "a ist gleich Index 2 Grundlinie b"
+    },
+    "EmbellRelSubscript_brief": {
+      "expected": "a ist gleich Index 2 Grund b"
+    },
+    "EmbellRelSubscript_sbrief": {
+      "expected": "a ist gleich Index 2 Grund b"
+    },
+    "EmbellRelSuperscript_0_default": {
+      "expected": "a ist gleich hoch 2 Grundlinie b"
+    },
+    "EmbellRelSuperscript_0_brief": {
+      "expected": "a ist gleich hoch 2 Grund b"
+    },
+    "EmbellRelSuperscript_0_sbrief": {
+      "expected": "a ist gleich hoch 2 Grund b"
+    },
+    "EmbellRelSuperscript_1_default": {
+      "expected": "a ist gleich hoch 3 Grundlinie b"
+    },
+    "EmbellRelSuperscript_1_brief": {
+      "expected": "a ist gleich hoch 3 Grund b"
+    },
+    "EmbellRelSuperscript_1_sbrief": {
+      "expected": "a ist gleich hoch 3 Grund b"
+    },
+    "EmbellRelSuperscript_2_default": {
+      "expected": "a ist gleich hoch n Grundlinie b"
+    },
+    "EmbellRelSuperscript_2_brief": {
+      "expected": "a ist gleich hoch n Grund b"
+    },
+    "EmbellRelSuperscript_2_sbrief": {
+      "expected": "a ist gleich hoch n Grund b"
+    },
+    "EmbellRelSuperscript_3_default": {
+      "expected": "a ist gleich Hochkomma b"
+    },
+    "EmbellRelSuperscript_3_brief": {
+      "expected": "a ist gleich Hochkomma b"
+    },
+    "EmbellRelSuperscript_3_sbrief": {
+      "expected": "a ist gleich Hochkomma b"
+    },
+    "EmbellRelSubSuper_0_default": {
+      "expected": "a ist gleich Index m hoch 2 Grundlinie b"
+    },
+    "EmbellRelSubSuper_0_brief": {
+      "expected": "a ist gleich Index m hoch 2 Grund b"
+    },
+    "EmbellRelSubSuper_0_sbrief": {
+      "expected": "a ist gleich Index m hoch 2 Grund b"
+    },
+    "EmbellRelSubSuper_1_default": {
+      "expected": "a ist gleich Index m hoch 3 Grundlinie b"
+    },
+    "EmbellRelSubSuper_1_brief": {
+      "expected": "a ist gleich Index m hoch 3 Grund b"
+    },
+    "EmbellRelSubSuper_1_sbrief": {
+      "expected": "a ist gleich Index m hoch 3 Grund b"
+    },
+    "EmbellRelSubSuper_2_default": {
+      "expected": "a ist gleich Index m hoch n Grundlinie b"
+    },
+    "EmbellRelSubSuper_2_brief": {
+      "expected": "a ist gleich Index m hoch n Grund b"
+    },
+    "EmbellRelSubSuper_2_sbrief": {
+      "expected": "a ist gleich Index m hoch n Grund b"
+    },
+    "EmbellRelSubSuper_3_default": {
+      "expected": "a ist gleich Hochkomma Index m Grundlinie b"
+    },
+    "EmbellRelSubSuper_3_brief": {
+      "expected": "a ist gleich Hochkomma Index m Grund b"
+    },
+    "EmbellRelSubSuper_3_sbrief": {
+      "expected": "a ist gleich Hochkomma Index m Grund b"
+    },
+    "EmbellRelTensor_0_default": {
+      "expected": "a ist gleich Index m hoch 2 Grundlinie b"
+    },
+    "EmbellRelTensor_0_brief": {
+      "expected": "a ist gleich Index m hoch 2 Grund b"
+    },
+    "EmbellRelTensor_0_sbrief": {
+      "expected": "a ist gleich Index m hoch 2 Grund b"
+    },
+    "EmbellRelTensor_1_default": {
+      "expected": "a hoch 3 Grundlinie ist gleich Index m hoch 2 Grundlinie b"
+    },
+    "EmbellRelTensor_1_brief": {
+      "expected": "a hoch 3 Grund ist gleich Index m hoch 2 Grund b"
+    },
+    "EmbellRelTensor_1_sbrief": {
+      "expected": "a hoch 3 Grund ist gleich Index m hoch 2 Grund b"
+    },
+    "EmbellRelTensor_2_default": {
+      "expected": "a Index 3 Grundlinie ist gleich Index m hoch 2 Grundlinie b"
+    },
+    "EmbellRelTensor_2_brief": {
+      "expected": "a Index 3 Grund ist gleich Index m hoch 2 Grund b"
+    },
+    "EmbellRelTensor_2_sbrief": {
+      "expected": "a Index 3 Grund ist gleich Index m hoch 2 Grund b"
+    },
+    "EmbellRelTensor_3_default": {
+      "expected": "a Index 3 hoch n Grundlinie ist gleich Index m hoch 2 Grundlinie b"
+    },
+    "EmbellRelTensor_3_brief": {
+      "expected": "a Index 3 hoch n Grund ist gleich Index m hoch 2 Grund b"
+    },
+    "EmbellRelTensor_3_sbrief": {
+      "expected": "a Index 3 hoch n Grund ist gleich Index m hoch 2 Grund b"
+    },
+    "EmbellMultRelSubscript_default": {
+      "expected": "a ist gleich Index 2 Grundlinie b ist gleich c"
+    },
+    "EmbellMultRelSubscript_brief": {
+      "expected": "a ist gleich Index 2 Grund b ist gleich c"
+    },
+    "EmbellMultRelSubscript_sbrief": {
+      "expected": "a ist gleich Index 2 Grund b ist gleich c"
+    },
+    "EmbellPunctSubscript_default": {
+      "expected": "a Doppelpunkt Index 2 Grundlinie b"
+    },
+    "EmbellPunctSubscript_brief": {
+      "expected": "a Doppelpunkt Index 2 Grund b"
+    },
+    "EmbellPunctSubscript_sbrief": {
+      "expected": "a Doppelpunkt Index 2 Grund b"
+    },
+    "EmbellPunctSuperscript_0_default": {
+      "expected": "a Doppelpunkt hoch 2 Grundlinie b"
+    },
+    "EmbellPunctSuperscript_0_brief": {
+      "expected": "a Doppelpunkt hoch 2 Grund b"
+    },
+    "EmbellPunctSuperscript_0_sbrief": {
+      "expected": "a Doppelpunkt hoch 2 Grund b"
+    },
+    "EmbellPunctSuperscript_1_default": {
+      "expected": "a Doppelpunkt hoch 3 Grundlinie b"
+    },
+    "EmbellPunctSuperscript_1_brief": {
+      "expected": "a Doppelpunkt hoch 3 Grund b"
+    },
+    "EmbellPunctSuperscript_1_sbrief": {
+      "expected": "a Doppelpunkt hoch 3 Grund b"
+    },
+    "EmbellPunctSuperscript_2_default": {
+      "expected": "a Doppelpunkt hoch n Grundlinie b"
+    },
+    "EmbellPunctSuperscript_2_brief": {
+      "expected": "a Doppelpunkt hoch n Grund b"
+    },
+    "EmbellPunctSuperscript_2_sbrief": {
+      "expected": "a Doppelpunkt hoch n Grund b"
+    },
+    "EmbellPunctSuperscript_3_default": {
+      "expected": "a Doppelpunkt Hochkomma b"
+    },
+    "EmbellPunctSuperscript_3_brief": {
+      "expected": "a Doppelpunkt Hochkomma b"
+    },
+    "EmbellPunctSuperscript_3_sbrief": {
+      "expected": "a Doppelpunkt Hochkomma b"
+    },
+    "EmbellPunctSubSuper_0_default": {
+      "expected": "a Doppelpunkt Index m hoch 2 Grundlinie b"
+    },
+    "EmbellPunctSubSuper_0_brief": {
+      "expected": "a Doppelpunkt Index m hoch 2 Grund b"
+    },
+    "EmbellPunctSubSuper_0_sbrief": {
+      "expected": "a Doppelpunkt Index m hoch 2 Grund b"
+    },
+    "EmbellPunctSubSuper_1_default": {
+      "expected": "a Doppelpunkt Index m hoch 3 Grundlinie b"
+    },
+    "EmbellPunctSubSuper_1_brief": {
+      "expected": "a Doppelpunkt Index m hoch 3 Grund b"
+    },
+    "EmbellPunctSubSuper_1_sbrief": {
+      "expected": "a Doppelpunkt Index m hoch 3 Grund b"
+    },
+    "EmbellPunctSubSuper_2_default": {
+      "expected": "a Doppelpunkt Index m hoch n Grundlinie b"
+    },
+    "EmbellPunctSubSuper_2_brief": {
+      "expected": "a Doppelpunkt Index m hoch n Grund b"
+    },
+    "EmbellPunctSubSuper_2_sbrief": {
+      "expected": "a Doppelpunkt Index m hoch n Grund b"
+    },
+    "EmbellPunctSubSuper_3_default": {
+      "expected": "a Doppelpunkt Hochkomma Index m Grundlinie b"
+    },
+    "EmbellPunctSubSuper_3_brief": {
+      "expected": "a Doppelpunkt Hochkomma Index m Grund b"
+    },
+    "EmbellPunctSubSuper_3_sbrief": {
+      "expected": "a Doppelpunkt Hochkomma Index m Grund b"
+    },
+    "EmbellPunctTensor_0_default": {
+      "expected": "a Doppelpunkt Index m hoch 2 Grundlinie b"
+    },
+    "EmbellPunctTensor_0_brief": {
+      "expected": "a Doppelpunkt Index m hoch 2 Grund b"
+    },
+    "EmbellPunctTensor_0_sbrief": {
+      "expected": "a Doppelpunkt Index m hoch 2 Grund b"
+    },
+    "EmbellPunctTensor_1_default": {
+      "expected": "a hoch 3 Grundlinie Doppelpunkt Index m hoch 2 Grundlinie b"
+    },
+    "EmbellPunctTensor_1_brief": {
+      "expected": "a hoch 3 Grund Doppelpunkt Index m hoch 2 Grund b"
+    },
+    "EmbellPunctTensor_1_sbrief": {
+      "expected": "a hoch 3 Grund Doppelpunkt Index m hoch 2 Grund b"
+    },
+    "EmbellPunctTensor_2_default": {
+      "expected": "a Index 3 Grundlinie Doppelpunkt Index m hoch 2 Grundlinie b"
+    },
+    "EmbellPunctTensor_2_brief": {
+      "expected": "a Index 3 Grund Doppelpunkt Index m hoch 2 Grund b"
+    },
+    "EmbellPunctTensor_2_sbrief": {
+      "expected": "a Index 3 Grund Doppelpunkt Index m hoch 2 Grund b"
+    },
+    "EmbellPunctTensor_3_default": {
+      "expected": "a Index 3 hoch n Grundlinie Doppelpunkt Index m hoch 2 Grundlinie b"
+    },
+    "EmbellPunctTensor_3_brief": {
+      "expected": "a Index 3 hoch n Grund Doppelpunkt Index m hoch 2 Grund b"
+    },
+    "EmbellPunctTensor_3_sbrief": {
+      "expected": "a Index 3 hoch n Grund Doppelpunkt Index m hoch 2 Grund b"
+    },
+    "EmbellMultPunctSubscript_default": {
+      "expected": "a Doppelpunkt Index 2 Grundlinie b Doppelpunkt c"
+    },
+    "EmbellMultPunctSubscript_brief": {
+      "expected": "a Doppelpunkt Index 2 Grund b Doppelpunkt c"
+    },
+    "EmbellMultPunctSubscript_sbrief": {
+      "expected": "a Doppelpunkt Index 2 Grund b Doppelpunkt c"
+    },
+    "SemanticsElement_0_default": {
+      "expected": ""
+    },
+    "SemanticsElement_0_brief": {
+      "expected": ""
+    },
+    "SemanticsElement_0_sbrief": {
+      "expected": ""
+    },
+    "SemanticsElement_1_default": {
+      "expected": "a"
+    },
+    "SemanticsElement_1_brief": {
+      "expected": "a"
+    },
+    "SemanticsElement_1_sbrief": {
+      "expected": "a"
+    },
+    "SemanticsElement_2_default": {
+      "expected": "a plus b"
+    },
+    "SemanticsElement_2_brief": {
+      "expected": "a plus b"
+    },
+    "SemanticsElement_2_sbrief": {
+      "expected": "a plus b"
+    },
+    "SemanticsElement_3_default": {
+      "expected": "a plus b"
+    },
+    "SemanticsElement_3_brief": {
+      "expected": "a plus b"
+    },
+    "SemanticsElement_3_sbrief": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotation_0_default": {
+      "_comment1_": " This is not really legal markup.",
+      "expected": ""
+    },
+    "SemanticsAnnotation_0_brief": {
+      "_comment1_": " This is not really legal markup.",
+      "expected": ""
+    },
+    "SemanticsAnnotation_0_sbrief": {
+      "_comment1_": " This is not really legal markup.",
+      "expected": ""
+    },
+    "SemanticsAnnotation_1_default": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_1_brief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_1_sbrief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_2_default": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_2_brief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_2_sbrief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_3_default": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotation_3_brief": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotation_3_sbrief": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotation_4_default": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotation_4_brief": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotation_4_sbrief": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotationXml_0_default": {
+      "_comment2_": " This is not really legal markup.",
+      "expected": "something"
+    },
+    "SemanticsAnnotationXml_0_brief": {
+      "_comment2_": " This is not really legal markup.",
+      "expected": "something"
+    },
+    "SemanticsAnnotationXml_0_sbrief": {
+      "_comment2_": " This is not really legal markup.",
+      "expected": "something"
+    },
+    "SemanticsAnnotationXml_1_default": {
+      "expected": "a something"
+    },
+    "SemanticsAnnotationXml_1_brief": {
+      "expected": "a something"
+    },
+    "SemanticsAnnotationXml_1_sbrief": {
+      "expected": "a something"
+    },
+    "SemanticsAnnotationXml_2_default": {
+      "expected": "a"
+    },
+    "SemanticsAnnotationXml_2_brief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotationXml_2_sbrief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotationXml_3_default": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotationXml_3_brief": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotationXml_3_sbrief": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotationXml_4_default": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotationXml_4_brief": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotationXml_4_sbrief": {
+      "expected": "a plus b"
+    }
+  }
+}
